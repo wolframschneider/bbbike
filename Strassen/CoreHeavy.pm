@@ -109,6 +109,17 @@ sub new_with_removed_points {
 sub agrep {
     my($self, $pattern, %arg) = @_;
 
+    my $utf8_database = 1;
+    my $debug = 0;
+
+    if ($utf8_database && !Encode::is_utf8($pattern)) {
+	   require HTML::Entities;
+           $pattern = Encode::encode("utf-8", $pattern);
+	   $pattern = HTML::Entities::decode($pattern);
+    }
+
+    warn qq{pattern: "$pattern", file: $file\n} if $debug;
+
     my @paths;
     my @files;
     my $file = $self->{File};
@@ -138,6 +149,8 @@ sub agrep {
 	}
 	CORE::push(@paths, $path);
     }
+
+    warn "@paths" if $debug;
 
     my $grep_type;
     my @data;
@@ -175,6 +188,7 @@ sub agrep {
 	    $grep_type = 'perl';
 	}
     }
+return () if !@data;
     my @def;
     if ($arg{ErrorDef}) {
 	@def = @{$arg{ErrorDef}};
@@ -211,8 +225,11 @@ sub agrep {
 	} elsif ($grep_type eq 'approx' && $err) {
 	    next if $begin || $err > 2; # Bug bei $err == 3
 	    $grep_pattern =~ s/[()]/./g; # String::Approx-Bug?
+warn "greppat=$grep_pattern" if $debug;
+warn "e " . scalar(@data) if $debug;
 	    @this_res = String::Approx::amatch
 	      ($grep_pattern, ['i', $err], @data);
+warn "done " . scalar(@data) if $debug;
 	} else { # weder agrep noch String::Approx
 	    $grep_pattern = ($begin ? "^$grep_pattern" : $grep_pattern);
 	    if ($err == 0) {
