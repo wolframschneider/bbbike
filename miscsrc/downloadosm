@@ -43,6 +43,7 @@ $OSM_API_URL = "http://www.openstreetmap.org/api/0.6";
 my $ua = eval {
     require LWP::UserAgent;
     my $ua = LWP::UserAgent->new;
+    $ua->agent("The Hare and the Hedgehog");
     ## the download server seems to block this user agent --- use the LWP default
     #$ua->agent("downloadosm/$VERSION LWP/$LWP::VERSION [part of BBBike]");
     $ua->default_headers->push_header("Accept-Encoding" => "gzip");
@@ -180,6 +181,20 @@ if (@reload) {
 	    download_osm_tile($x_fix->numify,$y_fix->numify,$xend_fix->numify,$yend_fix->numify, 0);
 	} 
     }
+}
+
+sub osm_round {
+    my $real = shift;
+
+    my $number = shift || 100_000;
+ 
+    my $round = int($real * $number + 0.5) / $number;
+
+    if ($debug >= 3) {	
+    	warn "$real <-> $round ", $real - $round, "\n" if $real != $round;
+    }
+
+    return $round;
 }
 
 sub download_osm_tile {
