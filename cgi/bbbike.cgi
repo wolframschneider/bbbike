@@ -866,6 +866,14 @@ use vars qw(%handicap_speed);
 CGI->import('-no_xhtml');
 
 $q = new CGI;
+
+# Stopp user to bookmark bbbike.cgi?begin=1
+if (defined $q->param('begin')) {
+    $q->delete('begin');
+    print $q->redirect($q->url);
+    exit(0);
+}
+
 # Used for $use_utf8=1
 eval{BBBikeCGIUtil::encode_possible_utf8_params($q);};warn $@ if $@;
 
