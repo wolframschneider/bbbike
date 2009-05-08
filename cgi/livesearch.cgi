@@ -5,10 +5,12 @@ use warnings;
 
 use CGI;
 
+my $home = -e '/home/wosch' ? '/home/wosch' : '/Users/wosch';
+
 my $q = new CGI;
 
 my $stat_file = "/tmp/log.html.$$";
-system("env HOME=/home/wosch max_pictures=128 log_html=$stat_file logfiles=bbbike.log bbbike_host='http://recv.de:8080' /home/wosch/bin/bbbike-log");
+system("env HOME=$home max_pictures=128 log_html=$stat_file bbbike_host='' ../../bbbike-macos/bin/bbbike-log");
 
 print $q->header();
 
