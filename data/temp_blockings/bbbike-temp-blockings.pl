@@ -6726,7 +6726,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004175',
        data  => <<EOF,
-userdel	1::inwork 5533,19811 5476,19450
+userdel	1::inwork 5533,19811 5495,19571 5476,19450
 EOF
      },
      { from  => 1156629600, # 2006-08-27 00:00
@@ -13912,8 +13912,25 @@ EOF
        until => 1304200800, # 2011-05-01 00:00
        text  => 'Kantstr. zwischen Hardebergstr. und Joachimstaler Str. gesperrt (bis 2011)',
        type  => 'gesperrt',
+       source_id => 'IM_012523',
        data  => <<EOF,
 userdel	2::inwork 5652,11004 5613,10963 5494,10973
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Bauarbeiten in der Pasewalker Str., Marienstraße ist eine Sackgasse, aber Radfahrer können passieren',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q2::inwork 12095,20832 11686,21058
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Bauarbeiten in der Pasewalker Str., eingeschränkter Zugang zur Eweststr., aber Radfahrer können passieren',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q3::inwork 12121,20969 12189,20959
 EOF
      },
     );
