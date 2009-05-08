@@ -118,7 +118,7 @@ sub agrep {
 	   $pattern = HTML::Entities::decode($pattern);
     }
 
-    warn qq{pattern: "$pattern", file: $file\n} if $debug;
+    #warn qq{pattern: "$pattern", file: $file\n} if $debug;
 
     my @paths;
     my @files;
