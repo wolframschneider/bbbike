@@ -10,7 +10,7 @@ my $home = -e '/home/wosch' ? '/home/wosch' : '/Users/wosch';
 my $q = new CGI;
 
 my $stat_file = "/tmp/log.html.$$";
-system("env HOME=$home max_pictures=128 log_html=$stat_file bbbike_host='' ../../bbbike-macos/bin/bbbike-log");
+system("env HOME=$home max_pictures=32 log_html=$stat_file bbbike_host='' ../../bbbike-macos/bin/bbbike-log");
 
 print $q->header();
 
