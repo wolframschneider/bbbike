@@ -25,7 +25,7 @@ sub ascii2unicode {
 
     my ( $ascii, $unicode ) = split( /\t/, $string );
 
-    warn "ascii2unicode: $unicode\n" if $debug >= 1;
+    warn "ascii2unicode: $unicode\n" if $debug >= 2;
     return $unicode;
 }
 
