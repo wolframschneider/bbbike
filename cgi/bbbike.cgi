@@ -26,6 +26,7 @@ BEGIN {
 	if $ENV{SERVER_NAME} =~ /sourceforge/ && -w "/home/groups/b/bb/bbbike";
     $^W = 1 if $ENV{SERVER_NAME} =~ /herceg\.de/i;
     $main::datadir = $ENV{'DATA_DIR'} || "data";
+    $ENV{LANG} = 'C'; 
 }
 use vars qw(@extra_libs);
 BEGIN { delete $INC{"FindBin.pm"} } # causes warnings, maybe try FindBin->again if available?
