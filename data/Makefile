@@ -790,7 +790,7 @@ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd ${PERSISTENTTMPDIR}/.check_fragez
 	echo "#: line_dash: 8, 5" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
 	echo "#: line_width: 5" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
 	echo "#:" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
-.for i in ampeln-orig fragezeichen-orig gesperrt-orig qualitaet_s-orig qualitaet_l-orig handicap_s-orig handicap_l-orig
+.for i in ampeln-orig fragezeichen-orig gesperrt-orig qualitaet_s-orig qualitaet_l-orig handicap_s-orig handicap_l-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
 	echo "############################################################" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
 	echo "# source: $(i)" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
 	${GREPSTRASSEN} -directive last_checked~. -special nextcheck $(i) > /dev/null
@@ -992,7 +992,8 @@ ${PERSISTENTTMPDIR}/fragezeichen-matches.bbd:	fragezeichen ${DATADIR}/strassen $
 # CHECKS
 
 # allow one error, and fail if the 2nd one is encountered
-FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  'open LOCK, ">", ".check_forever.lck" or die $$!; flock LOCK, LOCK_EX|LOCK_NB or die $$!; $$cmd=shift; while() { system($$cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; sleep 30 } END { unlink ".check_forever.lck" }'
+FOREVER_INTERVAL?=	30
+FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  'open LOCK, ">", ".check_forever.lck" or die $$!; flock LOCK, LOCK_EX|LOCK_NB or die $$!; $$cmd=shift; while() { system($$cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; sleep $(FOREVER_INTERVAL) } END { unlink ".check_forever.lck" }'
 
 check-forever:
 	-nice ${FOREVER_TWO_ERRORS} ${MAKE} check all
@@ -1579,13 +1580,16 @@ sort-$(city).coords.data:
 ######################################################################
 # TEMPORARY BLOCKINGS LAYER
 
-temp_blockings/bbbike-temp-blockings.yml: temp_blockings/bbbike-temp-blockings.pl
+TEMP_BLOCKINGS_PL_TO_YML=\
 	$(PERL) -MYAML -e '\
 	    $$YAML::UseBlock = 1;\
 	    do $$ARGV[0];\
 	    die 1 if not @temp_blocking;\
 	    YAML::DumpFile($$ARGV[1], \@temp_blocking);\
-	' $> $@~
+	'
+
+temp_blockings/bbbike-temp-blockings.yml: temp_blockings/bbbike-temp-blockings.pl
+	$(TEMP_BLOCKINGS_PL_TO_YML) $> $@~
 	$(PERL) -MData::Compare -MData::Dumper -MYAML -e '\
 	    do $$ARGV[0];\
 	    $$y = YAML::LoadFile($$ARGV[1]);\
@@ -1600,18 +1604,29 @@ temp_blockings/bbbike-temp-blockings.yml: temp_blockings/bbbike-temp-blockings.p
 	mv -f $@~ $@
 	@$(READABLE) $@
 
-$(PERSISTENTTMPDIR)/bbbike-temp-blockings.bbd: temp_blockings/bbbike-temp-blockings.yml
+$(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.yml: temp_blockings/bbbike-temp-blockings-optimized.pl
+	$(TEMP_BLOCKINGS_PL_TO_YML) $> $@~
+	mv -f $@~ $@
+	@$(READABLE) $@
+
+TEMP_BLOCKINGS_YML_TO_BBD=\
 	$(PERL) -MYAML -e '\
-		$$x = YAML::LoadFile($$ARGV[0]);\
-		for (@$$x) {\
-		    $$d = $$_->{data};\
-		    next if not $$d;\
-		    $$t = $$_->{text};\
-		    $$t =~ s/[\n\t]/ /g;\
-		    $$d =~ s/^/$$t /gm;\
-		    print $$d;\
-		}\
-	' $> > $@
+	    $$x = YAML::LoadFile($$ARGV[0]);\
+	    for (@$$x) {\
+	        $$d = $$_->{data};\
+	        next if not $$d;\
+	        $$t = $$_->{text};\
+	        $$t =~ s/[\n\t]/ /g;\
+	        $$d =~ s/^(?!\#)/$$t /gm;\
+	        print $$d;\
+	    }\
+	    '
+
+$(PERSISTENTTMPDIR)/bbbike-temp-blockings.bbd: temp_blockings/bbbike-temp-blockings.yml
+	$(TEMP_BLOCKINGS_YML_TO_BBD) $> > $@
+
+$(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.bbd: $(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.yml
+	$(TEMP_BLOCKINGS_YML_TO_BBD) $> > $@
 
 ######################################################################
 # This will be removed someday if convert_orig_to_bbd is good enough

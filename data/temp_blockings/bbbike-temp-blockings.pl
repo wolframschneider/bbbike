@@ -809,7 +809,7 @@ EOF
        text  => 'Lückstr. Richtung stadteinwärts zwischen Schlichtallee und Wönnichstr. Baustelle, Straße gesperrt (bis Mitte 10.2004) ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1 16699,10611 16588,10655 16460,10699 16316,10755 16153,10818 16032,10842
+userdel	1 16699,10611 16647,10632 16588,10655 16460,10699 16316,10755 16153,10818 16032,10842
 EOF
      },
      { from  => 1094627730, # 2004-09-08 09:15
@@ -962,7 +962,7 @@ EOF
        text  => 'L 78; (Potsdamer Str.); OD Saarmund, Eisenbahnbrücke Brückensanierung Vollsperrung 04.10.2004-15.10.2004 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -9626,-6603 -9301,-7466 -8492,-9628 -8331,-9887
+userdel	2 -9626,-6603 -9500,-6933 -9301,-7466 -8492,-9628 -8331,-9887
 EOF
      },
      { from  => 1096754400, # 2004-10-03 00:00
@@ -1698,9 +1698,9 @@ EOF
        text  => 'Wilhelmstraße, Straße gesperrt bis 03.04.2005 23:00 Uhr (Frühlingsfest zwischen Pichelsdorfer Straße und Adamstraße). ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -3913,13054 -3886,13120 -3791,13357
+userdel	2 -3913,13054 -3886,13120 -3824,13350
 userdel	2 -3913,13054 -3962,12973 -3999,12912 -4043,12833
-userdel	2 -4043,12833 -4099,12763 -4163,12691
+userdel	2 -4043,12833 -4099,12763 -4174,12683
 EOF
      },
      { from  => 1111960800, # 2005-03-28 00:00
@@ -2201,7 +2201,7 @@ userdel auto	3 7039,12314 7383,12095 7460,12054 7663,11946
 EOF
      },
      { from  => undef, # 
-       until => 1148937435, # XXX zuletzt gesehen: 2006-03-19, laut http://archiv.tagesspiegel.de/archiv/29.05.2006/2555791.asp vorbei?
+       until => 1148937435, # 
        text  => 'Rosa-Luxemburg-Str. Richtung Schönhauser Tor wegen Bauarbeiten gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -2278,8 +2278,8 @@ EOF
        text  => 'Pichelsdorfer Straße, zwischen Kreuzung Wilhelmstraße und Kreuzung Weißenburger Str. gesperrt bis 02.07.2006 (Sommerfest Wilhelmstadt) ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -3650,12929 -3669,13015 -3764,13270 -3791,13357
-userdel	2 -3650,12929 -3641,12861 -3629,12781
+userdel	2 -3667,12919 -3693,13012 -3783,13261 -3824,13350
+userdel	2 -3667,12919 -3658,12854 -3650,12762
 EOF
      },
      { from  => 1121032800, # 2005-07-11 00:00
@@ -3266,7 +3266,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_77722',
        data  => <<EOF,
-userdel	1 12693,16700 12874,16631 13131,16525
+userdel	1 12693,16700 12857,16627 13104,16522
 EOF
      },
      { from  => 1138319651, # 2006-01-27 00:54
@@ -4062,7 +4062,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_002598',
        data  => <<EOF,
-userdel	2 13131,16525 13045,16368
+userdel	2 13104,16522 13033,16387
 EOF
      },
      { from  => 1144339200, # 2006-04-06 18:00
@@ -4161,10 +4161,10 @@ EOF
        source_id => 'IM_002648',
        data  => <<EOF,
 userdel	2 -4167,12554 -4239,12626
-userdel	2 -4167,12554 -4069,12558
-userdel	2 -3621,12575 -3738,12572
-userdel	2 -3738,12572 -3876,12567
-userdel	2 -3876,12567 -4069,12558
+userdel	2 -4167,12554 -4084,12557
+userdel	2 -3635,12572 -3753,12563
+userdel	2 -3753,12563 -3892,12560
+userdel	2 -3892,12560 -4084,12557
 EOF
      },
      { from  => 1145397600, # 2006-04-19 00:00
@@ -4367,7 +4367,7 @@ EOF
        text  => 'Wilhelmstraße Richtung Pichelsdorf zwischen Einmündung Pichelsdorfer Straße und Einmündung Gatower Straße Baustelle, gesperrt bis 08.05.2006 13:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1 -3791,13357 -3886,13120 -3913,13054 -3962,12973 -3999,12912 -4043,12833 -4099,12763 -4163,12691 -4239,12626 -4300,12571 -4335,12465
+userdel	1 -3824,13350 -3886,13120 -3913,13054 -3962,12973 -3999,12912 -4043,12833 -4099,12763 -4174,12683 -4239,12626 -4300,12571 -4351,12460
 EOF
      },
      { from  => 1146801600, # 2006-05-05 06:00
@@ -4978,7 +4978,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_004456',
        data  => <<EOF,
-userdel	q4::inwork; 13131,16525 13331,16424
+userdel	q4::inwork; 13104,16522 13331,16424
 EOF
      },
      { from  => 1153000800, # 2006-07-16 00:00
@@ -5093,7 +5093,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_84075',
        data  => <<EOF,
-userdel	q4::inwork; 18191,6363 18343,6318 18423,6285 18473,6265 18574,6197 18670,6132 18766,6067 18853,6009
+userdel	q4::inwork; 18191,6363 18343,6318 18423,6285 18473,6265 18574,6197 18670,6132 18766,6067 18861,6000
 EOF
      },
      { from  => 1154642400, # 2006-08-04 00:00
@@ -5557,7 +5557,7 @@ EOF
        text  => 'Hegemeisterweg ist vom 7. August 2006 bis zum 30. November 2006 nicht benutzbar. ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 17775,7874 17987,7973 18325,7778 18387,7742
+userdel	2::inwork 17775,7874 17987,7973 18287,7815 18325,7778 18378,7727
 EOF
      },
      { from  => 1156975200, # 2006-08-31 00:00
@@ -5615,7 +5615,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003370',
        data  => <<EOF,
-userdel	1::inwork 18853,6009 18766,6067 18670,6132 18574,6197 18473,6265 18423,6285 18343,6318 18191,6363 17992,6436
+userdel	1::inwork 18861,6000 18766,6067 18670,6132 18574,6197 18473,6265 18423,6285 18343,6318 18191,6363 17992,6436
 EOF
      },
      { from  => 1160949600, # 2006-10-16 00:00
@@ -5665,7 +5665,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_77722',
        data  => <<EOF,
-userdel	1::inwork 12693,16700 12874,16631 13131,16525
+userdel	1::inwork 12693,16700 12857,16627 13104,16522
 EOF
      },
      { from  => 1156976256, # 2006-08-31 00:17
@@ -6153,7 +6153,7 @@ EOF
        text  => 'Ehrlichstraße zwischen Trautenauerstraße und Blockdammweg gesperrt. Dauer 07.10.2006 06:00 Uhr bis 20.10.2006 18:00 Uhr. ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 17729,8850 17879,8773 17929,8737 18005,8681 18080,8626 18147,8583
+userdel	2::inwork 17729,8850 17879,8773 17929,8737 17993,8689 18005,8681 18080,8626 18147,8583
 EOF
      },
      { from  => 1160107200, # 2006-10-06 06:00
@@ -7188,7 +7188,7 @@ EOF
        text  => 'K 6905 Langerwisch-B 2 Potsdam Bahnübergang in der OD Wilhelmshorst Markierungsarbeiten Vollsperrung 08.03.2007-09.03.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -12451,-9641 -12751,-8997 -12835,-8819
+userdel	2::inwork -12401,-9721 -12751,-8997 -12835,-8819
 EOF
      },
      { from  => 1173567600, # 2007-03-11 00:00
@@ -7861,7 +7861,7 @@ userdel	2::inwork 9670,5728 9457,5641 9357,5601 9147,5534
 EOF
      },
      { from  => undef, # 
-       until => 1214463306, # undef last-checked 2007-11-28 # war, ist nicht mehr: Abbiegen in Kleine Auguststr. und Joachimstr. nicht möglich;	3 9996,13678 10085,13684 10142,13556; 	3 10142,13556 10085,13684 10220,13691
+       until => 1214463306, # undef # war, ist nicht mehr: Abbiegen in Kleine Auguststr. und Joachimstr. nicht möglich;	3 9996,13678 10085,13684 10142,13556; 	3 10142,13556 10085,13684 10220,13691
        text  => 'Linienstr.: Baustelle zwischen Koppenplatz (östliche Straße) und Rosenthaler Str., Einbahnstraße',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -8130,7 +8130,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005487',
        data  => <<EOF,
-userdel	1::inwork 18853,6009 19024,5830
+userdel	1::inwork 18861,6000 19024,5830
 EOF
      },
      { from  => 1178402400, # 2007-05-06 00:00
@@ -8411,7 +8411,7 @@ userdel	1::inwork 9000,11727 8837,11676 8553,11638
 EOF
      },
      { from  => 1195515804, #  undef
-       until => 1195515809, # XXX last_checked: 2007-08-04
+       until => 1195515809, #
        text  => 'Simon-Dach-Str./Wühlischstr.: Bauarbeiten, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
@@ -8513,7 +8513,7 @@ userdel	2::temp 14500,9856 14483,9843
 EOF
      },
      { from  => 1189968907, # 
-       until => 1189968910, # XXX last_checked: 2007-08-05
+       until => 1189968910, #
        text  => 'Holteistraße: Bauarbeiten, Fahrbahn ist nicht benutzbar',
        type  => 'handicap',
        data  => <<EOF,
@@ -10166,7 +10166,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006856',
        data  => <<EOF,
-userdel	2::temp -3629,12781 -3641,12861 -3650,12929 -3669,13015 -3764,13270 -3791,13357
+userdel	2::temp -3650,12762 -3658,12854 -3667,12919 -3693,13012 -3783,13261 -3824,13350
 EOF
      },
      { from  => 1192310039, # 2007-10-13 23:13
@@ -10671,7 +10671,7 @@ userdel	2::inwork 10023,-8859 10115,-8276
 EOF
      },
      { from  => 1197233736, # 
-       until => 1199903161, # XXX last_checked: 2007-12-09 XXX nach den Bauarbeiten asphaltiert?
+       until => 1199903161, # XXX
        text  => 'Holteistraße: Bauarbeiten zwischen Sonntagstr. und Wühlischstr., Fahrbahn ist nicht benutzbar',
        type  => 'handicap',
        data  => <<EOF,
@@ -13241,10 +13241,11 @@ userdel	1::inwork -25441,21563 -25466,21523 -25542,21416
 EOF
      },
      { from  => undef, # 
-       until => undef, # last-checked. 2009-04-15
+       until => undef, #
        text  => 'Reichenberger Str., Einbahnstraße Richtung Kottbusser Tor',
        type  => 'gesperrt',
        data  => <<EOF,
+#: last_checked: 2009-04-15
 userdel	1::inwork 12229,10014 12398,9938 12556,9862
 EOF
      },
@@ -13524,12 +13525,14 @@ userdel	q4::inwork 57976,-10623 57656,-10684 57418,-10618 56989,-10997
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX last_checked: 2009-04-26
+       until => undef, # XXX
        text  => 'Bauarbeiten in der Simplonstr., Straße gesperrt',
        type  => 'handicap',
        data  => <<EOF,
+#: last_checked: 2009-05-08 vvv
 userdel	q4::inwork; 14597,11069 14530,11137
 userdel	q4::inwork 14530,11137 14465,11195
+#: last_checked ^^^
 EOF
      },
      { from  => undef, # 
@@ -13537,6 +13540,7 @@ EOF
        text  => 'Jessnerstr. wegen Bauarbeiten in Richtung Süden nicht befahrbar',
        type  => 'handicap',
        data  => <<EOF,
+#: last_checked: 2009-04-25
 userdel	q4::inwork; 15080,11905 14977,11754 14941,11689
 EOF
      },
@@ -13816,8 +13820,8 @@ userdel	q4::inwork 30179,13667 30795,13191
 EOF
      },
      { from  => 1240696800, # 2009-04-26 00:00
-       until => 1241820000, # 2009-05-09 00:00
-       text  => 'L 075 Mahlow - Großziethen zw. Kreuzg. B96A u. Kleinziethen Deckeninstandsetzung Vollsperrung 27.04.2009-08.05.2009 ',
+       until => 1242424800, # 2009-05-16 00:00
+       text  => 'L 075 Mahlow - Großziethen zw. Kreuzg. B96A u. Kleinziethen Deckeninstandsetzung Vollsperrung 27.04.2009-15.05.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork 13506,-2809 13348,-3283 13289,-4660
@@ -13922,15 +13926,76 @@ EOF
        text  => 'Bauarbeiten in der Pasewalker Str., Marienstraße ist eine Sackgasse, aber Radfahrer können passieren',
        type  => 'handicap',
        data  => <<EOF,
+#: by: Axel Schumacher:
+#: last_checked: 2009-05
 userdel	q2::inwork 12095,20832 11686,21058
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1241972889, #  undef
+       until => 1241972895, # undef -> Axel meint, dass hier kein Problem wäre
        text  => 'Bauarbeiten in der Pasewalker Str., eingeschränkter Zugang zur Eweststr., aber Radfahrer können passieren',
        type  => 'handicap',
        data  => <<EOF,
 userdel	q3::inwork 12121,20969 12189,20959
+EOF
+     },
+     { from  => undef, # 
+       until => undef, #
+       text  => 'Bauarbeiten in der Wühlischstraße (Einbahnstraße Richtung Osten) und Holteistraße (Kreuzungsbereich zur Wühlischstraße ist gesperrt).',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2009-05-09 vvv
+userdel	q4::inwork 14639,11512 14575,11407
+userdel	q4::inwork; 14759,11339 14674,11370 14575,11407
+#: last_checked: ^^^
+EOF
+     },
+     { from  => 1241647200, # 2009-05-07 00:00
+       until => 1241992800, # 2009-05-11 00:00
+       text  => 'B 112 Guben - Neuzelle zw. Abzw. Streichwitz u. Abzw. Wellmitz Arbeiten a. d. Erdgasleitung Vollsperrung 08.05.2009-10.05.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 97032,-36743 97016,-36424 96951,-34887
+EOF
+     },
+     { from  => 1242338400, # 2009-05-15 00:00
+       until => 1242597600, # 2009-05-18 00:00
+       text  => 'L 743 Motzen - Bestensee OL Motzen, Töpchiner Str. Straßenbau Vollsperrung 16.05.2009-17.05.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 23485,-22730 23239,-23484
+EOF
+     },
+     { from  => 1244066400, # 2009-06-04 00:00
+       until => 1244498400, # 2009-06-09 00:00
+       text  => 'B 087 Beeskow - Lübben zw. Birkenhainichen u. Biebersdorf Deckschichteinbau Vollsperrung 05.06.2009-08.06.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 52695,-45345 53268,-45117 55628,-43569
+EOF
+     },
+     { from  => 1241906400, # 2009-05-10 00:00
+       until => 1248300000, # 2009-07-23 00:00
+       text  => 'B 102 Wildberg - Neustadt-Dosse zw. Bückwitz u. Neustadt-Dosse Straßenbau Vollsperrung 11.05.2009-22.07.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -53139,50022 -54295,49682 -54769,49740 -54942,49716
+EOF
+     },
+     { from  => 1241906400, # 2009-05-10 00:00
+       until => 1242424800, # 2009-05-16 00:00
+       text  => 'K 7312 Passow - Fredersdorf zw. Passow u. Briest, Höhe Briester Weg Bau eines Durchlasses Vollsperrung 11.05.2009-15.05.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 55392,83218 55901,83313
+EOF
+     },
+     { from  => 1241906400, # 2009-05-10 00:00
+       until => 1253916000, # 2009-09-26 00:00
+       text  => 'L 029 E.-Thälmann-Straße OL Liepe, Erneuerung Stützmauer Vollsperrung 11.05.2009-25.09.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 48662,51337 49039,51453
 EOF
      },
     );

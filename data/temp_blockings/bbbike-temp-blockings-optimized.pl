@@ -601,7 +601,8 @@ userdel	1::inwork 10614,19907 10742,19632
          'text' => 'Reichenberger Str., Einbahnstraße Richtung Kottbusser Tor',
          'from' => undef,
          'id' => 1563,
-         'data' => 'userdel	1::inwork 12229,10014 12398,9938 12556,9862
+         'data' => '#: last_checked: 2009-04-15
+userdel	1::inwork 12229,10014 12398,9938 12556,9862
 ',
          'type' => 'gesperrt'
        },
@@ -760,8 +761,10 @@ userdel	q4::inwork; 15681,10801 15674,10851
          'text' => 'Bauarbeiten in der Simplonstr., Straße gesperrt',
          'from' => undef,
          'id' => 1597,
-         'data' => 'userdel	q4::inwork; 14597,11069 14530,11137
+         'data' => '#: last_checked: 2009-05-08 vvv
+userdel	q4::inwork; 14597,11069 14530,11137
 userdel	q4::inwork 14530,11137 14465,11195
+#: last_checked ^^^
 ',
          'type' => 'handicap'
        },
@@ -770,7 +773,8 @@ userdel	q4::inwork 14530,11137 14465,11195
          'text' => 'Jessnerstr. wegen Bauarbeiten in Richtung Süden nicht befahrbar',
          'from' => undef,
          'id' => 1598,
-         'data' => 'userdel	q4::inwork; 15080,11905 14977,11754 14941,11689
+         'data' => '#: last_checked: 2009-04-25
+userdel	q4::inwork; 15080,11905 14977,11754 14941,11689
 ',
          'type' => 'handicap'
        },
@@ -814,15 +818,7 @@ userdel	q4::inwork 14530,11137 14465,11195
          'type' => 'handicap'
        },
        undef,
-       {
-         'until' => 1241820000,
-         'text' => 'K 6304 Chaussee OD Priort, Bahnübergang Gleisbauarbeiten Vollsperrung 27.04.2009-08.05.2009 ',
-         'from' => 1240696800,
-         'id' => 1606,
-         'data' => 'userdel	2::inwork -19058,11636 -19029,11660 -18750,11919
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1243634400,
          'text' => 'L 063 Finsterwalder Straße OD Lauchhammer, zw. Bockwitzer Str. u. Neue Schehlenstraße Kanalarbeiten Vollsperrung 14.04.2009-29.05.2009 ',
@@ -940,8 +936,8 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        },
        undef,
        {
-         'until' => 1241820000,
-         'text' => 'L 075 Mahlow - Großziethen zw. Kreuzg. B96A u. Kleinziethen Deckeninstandsetzung Vollsperrung 27.04.2009-08.05.2009 ',
+         'until' => 1242424800,
+         'text' => 'L 075 Mahlow - Großziethen zw. Kreuzg. B96A u. Kleinziethen Deckeninstandsetzung Vollsperrung 27.04.2009-15.05.2009 ',
          'from' => 1240696800,
          'id' => 1632,
          'data' => 'userdel	2::inwork 13506,-2809 13348,-3283 13289,-4660
@@ -969,15 +965,7 @@ userdel	q4::inwork; 9008,12485 9018,12400 9028,12307
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1241820000,
-         'text' => 'B 087 zw. Abzw. Freiimfelde und Luckau Straßenbau Vollsperrung 04.05.2009-08.05.2009 ',
-         'from' => 1241301600,
-         'id' => 1636,
-         'data' => 'userdel	2::inwork 37549,-57430 36050,-58754
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1246053600,
          'text' => 'K 6315 Nennhausen - Rhinsmühlen zw. Nennhausen und Kotzen Straßenbau Vollsperrung 04.05.2009-26.06.2009 ',
@@ -988,15 +976,7 @@ userdel	2::inwork -50149,24689 -50048,24475 -49883,24097
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1241906400,
-         'text' => 'L 023 Ringenwalde - Milmersdorf OD Götschendorf Deckeneinbau Vollsperrung 08.05.2009-09.05.2009 ',
-         'from' => 1241647200,
-         'id' => 1638,
-         'data' => 'userdel	q4::inwork 28003,76731 27309,76652 26735,76914
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => 1243634400,
@@ -1024,18 +1004,78 @@ userdel	2::inwork -50149,24689 -50048,24475 -49883,24097
          'text' => 'Bauarbeiten in der Pasewalker Str., Marienstraße ist eine Sackgasse, aber Radfahrer können passieren',
          'from' => undef,
          'id' => 1644,
-         'data' => 'userdel	q2::inwork 12095,20832 11686,21058
+         'data' => '#: by: Axel Schumacher:
+#: last_checked: 2009-05
+userdel	q2::inwork 12095,20832 11686,21058
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'until' => undef,
+         'text' => 'Bauarbeiten in der Wühlischstraße (Einbahnstraße Richtung Osten) und Holteistraße (Kreuzungsbereich zur Wühlischstraße ist gesperrt).',
+         'from' => undef,
+         'id' => 1646,
+         'data' => '#: last_checked: 2009-05-09 vvv
+userdel	q4::inwork 14639,11512 14575,11407
+userdel	q4::inwork; 14759,11339 14674,11370 14575,11407
+#: last_checked: ^^^
 ',
          'type' => 'handicap'
        },
        {
-         'until' => undef,
-         'text' => 'Bauarbeiten in der Pasewalker Str., eingeschränkter Zugang zur Eweststr., aber Radfahrer können passieren',
-         'from' => undef,
-         'id' => 1645,
-         'data' => 'userdel	q3::inwork 12121,20969 12189,20959
+         'until' => 1241992800,
+         'text' => 'B 112 Guben - Neuzelle zw. Abzw. Streichwitz u. Abzw. Wellmitz Arbeiten a. d. Erdgasleitung Vollsperrung 08.05.2009-10.05.2009 ',
+         'from' => 1241647200,
+         'id' => 1647,
+         'data' => 'userdel	2::inwork 97032,-36743 97016,-36424 96951,-34887
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1242597600,
+         'text' => 'L 743 Motzen - Bestensee OL Motzen, Töpchiner Str. Straßenbau Vollsperrung 16.05.2009-17.05.2009 ',
+         'from' => 1242338400,
+         'id' => 1648,
+         'data' => 'userdel	q4::inwork 23485,-22730 23239,-23484
 ',
          'type' => 'handicap'
+       },
+       {
+         'until' => 1244498400,
+         'text' => 'B 087 Beeskow - Lübben zw. Birkenhainichen u. Biebersdorf Deckschichteinbau Vollsperrung 05.06.2009-08.06.2009 ',
+         'from' => 1244066400,
+         'id' => 1649,
+         'data' => 'userdel	2::inwork 52695,-45345 53268,-45117 55628,-43569
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1248300000,
+         'text' => 'B 102 Wildberg - Neustadt-Dosse zw. Bückwitz u. Neustadt-Dosse Straßenbau Vollsperrung 11.05.2009-22.07.2009 ',
+         'from' => 1241906400,
+         'id' => 1650,
+         'data' => 'userdel	2::inwork -53139,50022 -54295,49682 -54769,49740 -54942,49716
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1242424800,
+         'text' => 'K 7312 Passow - Fredersdorf zw. Passow u. Briest, Höhe Briester Weg Bau eines Durchlasses Vollsperrung 11.05.2009-15.05.2009 ',
+         'from' => 1241906400,
+         'id' => 1651,
+         'data' => 'userdel	2::inwork 55392,83218 55901,83313
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1253916000,
+         'text' => 'L 029 E.-Thälmann-Straße OL Liepe, Erneuerung Stützmauer Vollsperrung 11.05.2009-25.09.2009 ',
+         'from' => 1241906400,
+         'id' => 1652,
+         'data' => 'userdel	2::inwork 48662,51337 49039,51453
+',
+         'type' => 'gesperrt'
        }
      
 );
