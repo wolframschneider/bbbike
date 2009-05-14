@@ -102,6 +102,7 @@ Alexanderufer
 Alexandrinenstr.
 Alfelder Str.
 Alfons-Loewe-Str.
+Alfred-Balen-Weg
 Alfred-Doeblin-Str.	Alfred-Döblin-Str.
 Alfred-Doblin-Str.	Alfred-Döblin-Str.
 Alfred-Jung-Str.
@@ -249,6 +250,7 @@ Am Eichenhain
 Am Eichenquast
 Am Eichgarten
 Am Erlenbusch
+Am Ernst-Grube-Park
 Am Espenpfuhl
 Am Falkenberg
 Am Falkplatz
@@ -304,6 +306,7 @@ Am Kanal
 Am Karlsbad
 Am Kesselpfuhl
 Am Kiesteich
+Am Kietzer Feld
 Am Kleinen Wannsee
 Am Koeltzepark
 Am Kornfeld
@@ -427,6 +430,7 @@ Am Weihenhorst
 Am Weinhang
 Am Westkreuz
 Am Wieselbau
+Am Wiesengraben
 Am Wiesenrain
 Am Wriezener Bahnhof
 Am Zeughaus
@@ -522,6 +526,8 @@ Angermuender Str. (Lichtenrade)	Angermünder Str. (Lichtenrade)
 Angermunder Str. (Lichtenrade)	Angermünder Str. (Lichtenrade)
 Angermunder Str. (Prenzlauer Berg)	Angermünder Str. (Prenzlauer Berg)
 Angermuender Str. (Prenzlauer Berg)	Angermünder Str. (Prenzlauer Berg)
+Angersteinweg
+Angersteinweg [Eiselenweg - Spindlersfelder Str.]
 Angerweg
 Anhalter Bahnhof
 Anhalter Str.
@@ -679,6 +685,7 @@ Bahnstr.
 Bahrendorfer Str.
 Bahrfeldtstr.
 Baikalstr.
+Balatonstr.
 Balbronner Str.
 Baldersheimer Weg
 Ballenstedter Str.
@@ -1123,6 +1130,7 @@ Brehmestr.
 Brehmstr.
 Breisacher Str.
 Breisgauer Str.
+Breite Gasse
 Breite Str. (Mitte)
 Breite Str. (Pankow)
 Breite Str. (Schmargendorf)
@@ -1821,6 +1829,7 @@ Eichkampstr.
 Eichkatzweg
 Eiergasse
 Eigene Scholle
+Eilveser Str.
 Einbecker Str.
 Einemstr.
 Einhornstr.
@@ -2048,6 +2057,7 @@ Fahrlander Weg
 Falckensteinstr. (Kreuzberg)
 Falkenberger Chaussee
 Falkenberger Str.
+Falkendamm
 Falkenhagener Str.
 Falkenhagener Tor
 Falkenhausenweg
@@ -2120,6 +2130,7 @@ Filandastr.
 Filehner Str.
 Finchleystr.
 Finckensteinallee
+Finkeldeweg
 Finkenkruger Weg
 Finkenschlag
 Finkensteig
@@ -2382,6 +2393,7 @@ Funkturm
 Furkastr.
 Furtwanglerstr.	Furtwänglerstr.
 Furtwaenglerstr.	Furtwänglerstr.
+Fuststr.
 Futranplatz
 Fahlmannweg	Fählmannweg
 Faehlmannweg	Fählmannweg
@@ -2502,6 +2514,7 @@ GeiBlerpfad	Geißlerpfad
 Geisslerpfad	Geißlerpfad
 Gelfertstr.
 Gelieustr.
+Gellertstr. (Adlershof)
 Gelnitzstr.
 Gelsenkircher Str.
 Gembitzer Str.
@@ -2712,6 +2725,7 @@ Gottschalkstr.
 Gottschedstr.
 Gotzkowskystr.
 Gounodstr.
+Goyastr.
 GoBlerstr. (Dahlem)	Goßlerstr. (Dahlem)
 Gosslerstr. (Dahlem)	Goßlerstr. (Dahlem)
 Gosslerstr. (Friedenau)	Goßlerstr. (Friedenau)
@@ -2761,6 +2775,8 @@ Grenzburgstr.
 Grenzstr. (Mahlsdorf)
 Grenzstr. (Wedding)
 Grenzweg (Lichtenrade)
+Grenzweg (Oberschoeneweide)	Grenzweg (Oberschöneweide)
+Grenzweg (Oberschoneweide)	Grenzweg (Oberschöneweide)
 Greta-Garbo-Str.
 Gretelstr.
 Grethe-Weiser-Weg
@@ -2784,6 +2800,7 @@ Grimmingweg
 Grimmstr. (Kreuzberg)
 Grimmstr. (Lichtenrade)
 Grimnitzseeweg
+Grimnitzstr. (Karlshorst)
 Grimnitzstr. (Spandau)
 Gritznerstr.
 Groenerstr.
@@ -3459,6 +3476,7 @@ Hohenzollernstr. (Lichtenrade)
 Hohenzollernstr. (Wannsee)
 Hoher Bogen
 Hoher Steinweg
+Hoher Wallgraben
 Hohmannstr.
 Holbeinstr. (Lichterfelde)
 Holenbrunner Weg
@@ -3607,6 +3625,7 @@ Idunastr.
 Ifenpfad
 Ifflandstr. (Mahlsdorf)
 Ifflandstr. (Mitte)
+Igelsteig
 Ihnestr.
 Illerzeile
 Illigstr.
@@ -3734,6 +3753,7 @@ Jeanne-Mammen-Bogen
 Jebensstr.
 Jenaer Str. (Hellersdorf)
 Jenaer Str. (Wilmersdorf)
+Jenbacher Weg
 Jenny-Lind-Str.
 Jerusalemer Str.
 Jesse-Owens-Allee
@@ -3807,6 +3827,7 @@ Junker-Joerg-Str.	Junker-Jörg-Str.
 Junostr.
 Jupiterstr. (Neukolln)	Jupiterstr. (Neukölln)
 Jupiterstr. (Neukoelln)	Jupiterstr. (Neukölln)
+Jupiterstr. (Reinickendorf)
 Justus-von-Liebig-Str.
 Juttastr.
 Jagerallee	Jägerallee
@@ -3955,7 +3976,7 @@ Katzwanger Steig
 Kaubstr.
 Kaulbachstr. (Lankwitz)
 Kaulsdorfer Str.
-Kaumannsgasse
+Kaumanns Gasse
 Kaunstr.
 Kauschstr.
 Kavalierstr.
@@ -4077,6 +4098,7 @@ Kleine Auguststr.
 Kleine Eiswerderstr.
 Kleine Gertraudenstr.
 Kleine Hamburger Str.
+Kleine Hege
 Kleine Innstr.
 Kleine Jaegerstr.	Kleine Jägerstr.
 Kleine Jagerstr.	Kleine Jägerstr.
@@ -4497,6 +4519,7 @@ Lambertstr.
 Lammersdorfer Weg
 Landauer Str.
 Landecker Str.
+Landgartenweg
 Landgrafenstr.
 Landhausstr.
 Landhausweg
@@ -4711,6 +4734,7 @@ Lise-Meitner-Str.
 Liselotte-Herrmann-Str.
 Lissabonallee
 Lissaer Str.
+Lisztstr. (Karlshorst)
 Littenstr.
 Liviusstr.
 Livlandische Str.	Livländische Str.
@@ -5014,6 +5038,7 @@ Marlenestr.
 Marmaraweg
 Marschnerstr.
 Marshallstr.
+Marsstr.
 Martha-Arendsee-Str.
 Marthastr. (Lichterfelde)
 Martin-Buber-Str.
@@ -5127,6 +5152,7 @@ Menzelstr. (Mahlsdorf)
 Meraner Str.
 Mercatorweg
 Mergenthalerring
+Merkurstr. (Reinickendorf)
 Merler Weg
 Merlinweg
 Merowingerweg
@@ -5181,6 +5207,7 @@ Mimosenweg
 Mindener Str.
 Minheimer Str.
 Miningstr.
+Minkwitzweg
 Minna-Cauer-Str.
 Miquelstr.
 Miraustr.
@@ -5317,6 +5344,8 @@ Mowenweg (Buckow)	Möwenweg (Buckow)
 Moewenweg (Buckow)	Möwenweg (Buckow)
 Muggelbergallee	Müggelbergallee
 Mueggelbergallee	Müggelbergallee
+Muggelbergplatz	Müggelbergplatz
+Mueggelbergplatz	Müggelbergplatz
 Muggelheimer Damm	Müggelheimer Damm
 Mueggelheimer Damm	Müggelheimer Damm
 Muggelheimer Str.	Müggelheimer Str.
@@ -5384,6 +5413,8 @@ Munstersche Str.	Münstersche Str.
 Muenstersche Str.	Münstersche Str.
 Munzstr.	Münzstr.
 Muenzstr.	Münzstr.
+Muritzstr.	Müritzstr.
+Mueritzstr.	Müritzstr.
 Murwiker Str.	Mürwiker Str.
 Muerwiker Str.	Mürwiker Str.
 Nachodstr.
@@ -5697,6 +5728,7 @@ Ossastr.
 Ossietzkystr.
 Ostburger Weg
 Ostender Str.
+Ostendorfstr.
 Ostendstr. (Oberschoneweide)	Ostendstr. (Oberschöneweide)
 Ostendstr. (Oberschoeneweide)	Ostendstr. (Oberschöneweide)
 Osteweg
@@ -5707,6 +5739,7 @@ Ostritzer Str.
 Ostseeplatz
 Ostseestr.
 Oststr. (Johannisthal)
+Oststr. (Reinickendorf)
 Oswaldstr.
 Otawistr.
 Otisstr.
@@ -6260,6 +6293,7 @@ Riemannstr.
 Riemeisterstr.
 Riemenschneiderweg
 Riensbergstr.
+Rienzistr.
 Rieppelstr.
 Riesaer Str.
 Riesestr.
@@ -6271,6 +6305,7 @@ Ringbahnstr. (Neukolln)	Ringbahnstr. (Neukölln)
 Ringbahnstr. (Neukoelln)	Ringbahnstr. (Neukölln)
 Ringbahnstr. (Tempelhof)
 Ringbahnstr. (Wilmersdorf)
+Ringelnatzstr.
 Ringenwalder Str.
 Ringslebenstr.
 Ringstr. (Hermsdorf)
@@ -6590,6 +6625,7 @@ Sarner Weg
 Sarrazinstr.
 Sasarsteig
 Sattlerstr.
+Saturnstr.
 Saubuchtweg
 Sauerbruchweg
 Savignyplatz
@@ -6616,6 +6652,8 @@ Scharnweberstr. (Hohenschoenhausen)	Scharnweberstr. (Hohenschönhausen)
 Scharnweberstr. (Oberschoeneweide)	Scharnweberstr. (Oberschöneweide)
 Scharnweberstr. (Oberschoneweide)	Scharnweberstr. (Oberschöneweide)
 Scharnweberstr. (Reinickendorf, Wedding)
+Scharnweberstr. (Weissensee)	Scharnweberstr. (Weißensee)
+Scharnweberstr. (WeiBensee)	Scharnweberstr. (Weißensee)
 Scharounstr.
 Scharrenstr.
 Schauensteiner Weg
@@ -6718,6 +6756,7 @@ Schmetterlingsplatz
 Schmidstr.
 Schmidt-Knobelsdorf-Str.
 Schmidt-Ott-Str.
+Schmiedeberger Weg
 Schmiedehof
 Schmiljanstr.
 Schmitzweg
@@ -6951,6 +6990,8 @@ Schuetzenstr. (Mitte)	Schützenstr. (Mitte)
 Schuetzenstr. (Niederschoenhausen)	Schützenstr. (Niederschönhausen)
 Schutzenstr. (Niederschönhausen)	Schützenstr. (Niederschönhausen)
 Schutzenstr. (Niederschonhausen)	Schützenstr. (Niederschönhausen)
+Schuetzenstr. (Spandau)	Schützenstr. (Spandau)
+Schutzenstr. (Spandau)	Schützenstr. (Spandau)
 Schutzenstr. (Steglitz)	Schützenstr. (Steglitz)
 Schuetzenstr. (Steglitz)	Schützenstr. (Steglitz)
 Schuesslerplatz	Schüßlerplatz
@@ -7052,6 +7093,7 @@ Siegessaule	Siegessäule
 Siegfried-Aufhauser-Platz	Siegfried-Aufhäuser-Platz
 Siegfried-Aufhaeuser-Platz	Siegfried-Aufhäuser-Platz
 Siegfried-Baruch-Weg
+Siegfried-Berger-Str.
 Siegfriedstr. (Lichtenberg)
 Siegfriedstr. (Neukoelln)	Siegfriedstr. (Neukölln)
 Siegfriedstr. (Neukolln)	Siegfriedstr. (Neukölln)
@@ -7102,6 +7144,7 @@ Skutaristr.
 Slabystr. (Oberschoeneweide)	Slabystr. (Oberschöneweide)
 Slabystr. (Oberschoneweide)	Slabystr. (Oberschöneweide)
 Sleipnerstr.
+Slevogtweg
 Smetanastr.
 Sobernheimer Str.
 Sodener Str.
@@ -7790,6 +7833,8 @@ Treskowstr. (Heinersdorf)
 Treskowstr. (Mahlsdorf)
 Treskowstr. (Niederschonhausen)	Treskowstr. (Niederschönhausen)
 Treskowstr. (Niederschoenhausen)	Treskowstr. (Niederschönhausen)
+Treskowstr. (Oberschoeneweide)	Treskowstr. (Oberschöneweide)
+Treskowstr. (Oberschoneweide)	Treskowstr. (Oberschöneweide)
 Treskowstr. (Tegel)
 Trettachzeile
 Treuchtlinger Str.
@@ -7900,11 +7945,13 @@ Veilchenstr.
 Veitstr.
 Veltheimstr.
 Venusstr. (Altglienicke)
+Venusstr. (Reinickendorf)
 Verbindungschaussee
 Vereinssteg
 Vereinsweg (Steglitz)
 Verl. Pucklerstr. (?)	Verl. Pücklerstr. (?)
 Verl. Puecklerstr. (?)	Verl. Pücklerstr. (?)
+Verl. Rathenaustr.
 Verlangerte Koloniestr.	Verlängerte Koloniestr.
 Verlaengerte Koloniestr.	Verlängerte Koloniestr.
 Verlangerte Schulzendorfer Str. (?)	Verlängerte Schulzendorfer Str. (?)
@@ -8002,6 +8049,8 @@ Waldowstr. (Hohenschonhausen)	Waldowstr. (Hohenschönhausen)
 Waldowstr. (Mahlsdorf)
 Waldowstr. (Niederschoenhausen)	Waldowstr. (Niederschönhausen)
 Waldowstr. (Niederschonhausen)	Waldowstr. (Niederschönhausen)
+Waldowstr. (Oberschoeneweide)	Waldowstr. (Oberschöneweide)
+Waldowstr. (Oberschoneweide)	Waldowstr. (Oberschöneweide)
 Waldowstr. (Reinickendorf)
 Waldsassener Str.
 Waldschluchtpfad
@@ -8098,6 +8147,8 @@ Wassermannstr.
 Wassersportallee
 Wasserstadtbruecke	Wasserstadtbrücke
 Wasserstadtbrucke	Wasserstadtbrücke
+Wasserstr. (Oberschoeneweide)	Wasserstr. (Oberschöneweide)
+Wasserstr. (Oberschoneweide)	Wasserstr. (Oberschöneweide)
 Wasserstr. (Spandau)
 Wassertorplatz
 Wassertorstr.
@@ -8590,6 +8641,7 @@ Zur Haveldune	Zur Haveldüne
 Zur Havelduene	Zur Haveldüne
 Zur Innung
 Zur Marktflagge
+Zur Nachtheide
 Zur Revaler Str.
 Zur Rinderauktionshalle
 Zur Sonnenhohe	Zur Sonnenhöhe
