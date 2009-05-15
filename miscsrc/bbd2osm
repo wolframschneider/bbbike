@@ -1,0 +1,124 @@
+#!/usr/bin/perl -w
+# -*- perl -*-
+
+#
+# Author: Slaven Rezic
+#
+# Copyright (C) 2009 Slaven Rezic. All rights reserved.
+# This program is free software; you can redistribute it and/or
+# modify it under the same terms as Perl itself.
+#
+# Mail: slaven@rezic.de
+# WWW:  http://www.rezic.de/eserte/
+#
+
+use strict;
+use FindBin;
+use lib ("$FindBin::RealBin/..",
+	 "$FindBin::RealBin/../lib",
+	);
+
+use Fcntl qw(SEEK_SET);
+use File::Temp qw(tempfile);
+use Karte::Polar;
+use Karte::Standard;
+use Strassen::Core;
+
+my $datadir = shift || "$FindBin::RealBin/../data";
+
+my($nodefh, $nodefile) = tempfile(UNLINK => 1, SUFFIX => "_node.xml");
+binmode $nodefh, ':utf8';
+my($wayfh, $wayfile) = tempfile(UNLINK => 1, SUFFIX => "_way.xml");
+binmode $wayfh, ':utf8';
+
+my $next_node_id = 1;
+my $next_way_id = 1;
+my %node_id;
+
+my %gesperrt;
+
+my %cat_to_highway = ('B' => 'primary',
+		      'HH' => 'primary',
+		      'H' => 'secondary',
+		      'N' => 'residential',
+		      'NN' => 'cycleway', # XXX
+		      '?' => 'trunk', # cheating
+		     );
+
+my $gesperrt = Strassen->new_stream("$datadir/gesperrt");
+$gesperrt->read_stream
+    (sub {
+	 my($r, $dir) = @_;
+	 my($cat) = $r->[Strassen::CAT] =~ m{^([^:]+)};
+	 my @node_ids = map {
+	     my($px,$py) = $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(split /,/, $_));
+	     my $node_id = maybe_add_node($px,$py);
+	     $node_id;
+	 } @{ $r->[Strassen::COORDS] };
+	 for my $node_id_i (1 .. $#node_ids) {
+	     if ($cat eq '1' || $cat eq '2') {
+		 $gesperrt{$node_ids[$node_id_i-1].' '.$node_ids[$node_id_i]} = $cat;
+	     }
+	 }
+     });
+
+Strassen->new_stream("$datadir/strassen")->read_stream(\&handle_strassen_like);
+Strassen->new_stream("$datadir/landstrassen")->read_stream(\&handle_strassen_like);
+Strassen->new_stream("$datadir/landstrassen2")->read_stream(\&handle_strassen_like);
+Strassen->new_stream("$datadir/../tmp/fragezeichen-nextcheck.bbd")->read_stream(\&handle_strassen_like);
+
+sub handle_strassen_like {
+    my($r, $dir) = @_;
+
+    # XXX split street according to oneway tag
+    # XXX reverse street coords if needed
+
+    my @node_ids;
+    for my $sxy (@{ $r->[Strassen::COORDS] }) {
+	my($px,$py) = $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(split /,/, $sxy));
+	my $this_node_id = maybe_add_node($px, $py);
+	push @node_ids, $this_node_id;
+    }
+
+    if (@node_ids) {
+	print $wayfh qq{<way id="$next_way_id" visible="true">\n};
+	for my $node_id (@node_ids) {
+	    print $wayfh qq{  <nd ref="$node_id"/>\n};
+	}
+	(my $name = $r->[Strassen::NAME]) =~ s{"}{&#34;}g; # XXX hack
+	$name =~ s{<}{&#60;}g;
+	$name =~ s{>}{&#62;}g;
+	print $wayfh qq{  <tag k="name" v="$name" />\n};
+	print $wayfh qq{  <tag k="highway" v="$cat_to_highway{$r->[Strassen::CAT]}" />\n};
+	print $wayfh qq{</way>\n};
+	$next_way_id++;
+    }
+}
+
+seek $nodefh, 0, SEEK_SET
+    or die $!;
+seek $wayfh, 0, SEEK_SET
+    or die $!;
+
+binmode STDOUT, ':utf8';
+print qq{<osm version="0.6" generator="bbd2osm">\n};
+while(<$nodefh>) {
+    print $_;
+}
+while(<$wayfh>) {
+    print $_;
+}
+print qq{</osm>\n};
+
+sub maybe_add_node {
+    my($px, $py) = @_;
+    my $pxy = $px.','.$py;
+    my $this_node_id = $node_id{$pxy};
+    if (!defined $this_node_id) {
+	$this_node_id = $node_id{$pxy} = $next_node_id++;
+	print $nodefh qq{<node id="$this_node_id" lat="$py" lon="$px" user="eserte" visible="true" />\n};
+    }
+    $this_node_id;
+}
+
+__END__
