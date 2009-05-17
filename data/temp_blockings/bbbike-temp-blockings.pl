@@ -9831,8 +9831,8 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006666',
        data  => <<EOF,
-userdel	2::temp 8374,11477 8479,11490 8542,11502
-userdel	2::temp 8226,11458 8301,11469 8358,11475
+userdel	2::temp 8374,11479 8479,11493 8542,11502
+userdel	2::temp 8226,11458 8301,11469 8358,11477
 EOF
      },
      { from  => 1189842239, # 2007-09-15 09:43
@@ -11735,8 +11735,8 @@ EOF
        text  => 'CSD am 28.6.2008',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 8358,11475 8301,11469 8226,11458 8145,11438 8083,11381 8065,11349 8031,11249 8000,11137 7980,11070 7968,11048 7912,10945 7820,10768 7689,10514 7633,10394 7579,10183 7413,10244 7245,10297 7131,10331 7033,10328 6971,10346 6937,10363 6851,10416 6753,10446 6636,10492 6532,10529 6685,10690 6740,10755 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936
-userdel	2::temp 8553,11630 8548,11552 8542,11502 8479,11490 8374,11477
+userdel	2::temp 8358,11477 8301,11469 8226,11458 8145,11438 8083,11381 8065,11349 8031,11249 8000,11137 7980,11070 7968,11048 7912,10945 7820,10768 7689,10514 7633,10394 7579,10183 7413,10244 7245,10297 7131,10331 7033,10328 6971,10346 6937,10363 6851,10416 6753,10446 6636,10492 6532,10529 6685,10690 6740,10755 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936
+userdel	2::temp 8553,11630 8548,11552 8542,11502 8479,11493 8374,11479
 userdel	2::temp 9984,12426 9915,12417 9852,12409 9780,12401 9771,12400 9679,12388 9601,12380 9475,12365 9358,12351 9141,12320 9164,12172 9064,12156
 userdel	2::temp 8553,11638 8567,11799 8571,11846 8581,11896 8595,12066 8737,12098 8861,12125 9054,12154
 userdel auto	3 6972,10665 6740,10755 6607,10801
@@ -12080,7 +12080,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_009457',
        data  => <<EOF,
-userdel	q4::inwork; 11772,13624 11723,13630
+userdel	q4::inwork; 11785,13625 11762,13619 11723,13630
 EOF
      },
      { from  => undef, # 
@@ -13331,11 +13331,11 @@ userdel	q4::inwork; 16196,10911 16153,10818
 userdel	q4::inwork; 15681,10801 15674,10851
 EOF
      },
-     { from  => 1241158590, # 2009-05-01 08:16
+     { from  => 1242281854, # 2009-05-14 08:17
        until => 1257029999, # 2009-10-31 23:59
        text  => 'Pappelallee (Prenzlauer Berg) Richtung Wisbyer Str. zwischen Stargarder Str. und Wichertstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 10.2009)',
        type  => 'handicap',
-       source_id => 'IM_011726',
+       source_id => 'IM_012654',
        data  => <<EOF,
 userdel	q4::inwork; 11301,15668 11373,15789 11393,15823 11455,15916
 EOF
@@ -13821,7 +13821,7 @@ userdel	q4::inwork 30179,13667 30795,13191
 EOF
      },
      { from  => 1240696800, # 2009-04-26 00:00
-       until => 1242424800, # 2009-05-16 00:00
+       until => 1242368265, # 2009-05-16 00:00 1242424800
        text  => 'L 075 Mahlow - Großziethen zw. Kreuzg. B96A u. Kleinziethen Deckeninstandsetzung Vollsperrung 27.04.2009-15.05.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -14013,6 +14013,35 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork 29103,24437 29528,24348 29791,24336 31905,25433 32229,25382
+EOF
+     },
+     { from  => 1242281874, # 2009-05-14 08:17
+       until => 1243807199, # 2009-05-31 23:59
+       text  => 'Pappelallee (Prenzlauer Berg) in Richtung Schönhauser Allee zwischen Gneiststr. und Schönhauser Alllee Baustelle, Fahrtrichtung gesperrt (bis Ende 05.2009)',
+       type  => 'handicap',
+       source_id => 'IM_012659',
+       data  => <<EOF,
+userdel	q4::inwork; 11119,15385 10881,15047
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Straße der Pariser Kommune (Friedrichshain) in beiden Richtungen zwischen Karl-Marx-Allee und Rüdersdorfer Str. geplatzte Wasserleitung, gesperrt',
+       type  => 'handicap',
+       source_id => 'IM_012636',
+       data  => <<EOF,
+#: last_checked: 2009-05-15
+#: check_frequency: 7d
+userdel	q4::inwork 12822,12067 12852,12306 12869,12425
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2009-05-16
+userdel	q4::inwork 8389,11378 8374,11479
 EOF
      },
     );

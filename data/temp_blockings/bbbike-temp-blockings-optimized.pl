@@ -624,23 +624,12 @@ userdel	1::inwork 12229,10014 12398,9938 12556,9862
          'type' => 'handicap'
        },
        undef,
+       undef,
        {
-         'source_id' => 'IM_011767',
-         'until' => 1242424799,
-         'text' => 'Lückstr. (Lichtenberg) Richtung Nöldnerstr. zwischen Giselastr. und Nöldnerplatz Baustelle, Fahrtrichtung gesperrt; sowie Einbahnstraßenregelungen in der Giselastr. und Stadthausstr. (bis Mitte 05.09)',
-         'from' => 1240517859,
-         'id' => 1572,
-         'data' => 'userdel	q4::inwork; 16153,10818 16032,10842
-userdel	q4::inwork; 16196,10911 16153,10818
-userdel	q4::inwork; 15681,10801 15674,10851
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'IM_011726',
+         'source_id' => 'IM_012654',
          'until' => 1257029999,
          'text' => 'Pappelallee (Prenzlauer Berg) Richtung Wisbyer Str. zwischen Stargarder Str. und Wichertstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 10.2009)',
-         'from' => 1241158590,
+         'from' => 1242281854,
          'id' => 1573,
          'data' => 'userdel	q4::inwork; 11301,15668 11373,15789 11393,15823 11455,15916
 ',
@@ -678,15 +667,7 @@ userdel	q4::inwork; 15681,10801 15674,10851
          'type' => 'handicap'
        },
        undef,
-       {
-         'until' => 1242424800,
-         'text' => 'K 7234 Goethestraße OD Dabendorf Kanalarbeiten halbseitig gesperrt; Einbahnstraße 14.03.2009-15.05.2009 ',
-         'from' => 1236898800,
-         'id' => 1582,
-         'data' => 'userdel	q4::inwork; 14153,-17829 13282,-18250
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1243720800,
          'text' => 'L 015 Fürstenberg - Menz OD Fürstenberg, Krz. B 96 Straßenbau Vollsperrung 01.05.2009-30.05.2009 ',
@@ -729,15 +710,7 @@ userdel	q4::inwork; 15681,10801 15674,10851
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1242424800,
-         'text' => 'L 171 Kurt-Tucholsky-Str. OL Hohen Neuendorf, zw. Karl-Marx-Str. und Eichenallee Neubau Nebenanlagen halbseitig gesperrt; Einbahnstraße 22.10.2008-15.05.2009 ',
-         'from' => 1224540000,
-         'id' => 1593,
-         'data' => 'userdel	q4::inwork; 1366,29416 1304,29256 1234,29120 1124,28923 1078,28830 1020,28712 1009,28662 1007,28446 978,28400 938,28349
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => 1251756000,
@@ -864,16 +837,7 @@ userdel	q4::inwork; 15080,11905 14977,11754 14941,11689
        },
        undef,
        undef,
-       {
-         'source_id' => 'IM_011757',
-         'until' => 1242424799,
-         'text' => 'Schlichtallee (Lichtenberg) Richtung Nöldnerplatz zwischen beiden Einmündungen Fischerstr. Baustelle, gesperrt (Umfahrung über Fischerstr.) (bis Mitte 05.2009)',
-         'from' => 1239912224,
-         'id' => 1619,
-         'data' => 'userdel	1::inwork 15982,10765 16032,10842
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'until' => 1247263200,
@@ -928,15 +892,7 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'until' => 1242424800,
-         'text' => 'L 075 Mahlow - Großziethen zw. Kreuzg. B96A u. Kleinziethen Deckeninstandsetzung Vollsperrung 27.04.2009-15.05.2009 ',
-         'from' => 1240696800,
-         'id' => 1632,
-         'data' => 'userdel	2::inwork 13506,-2809 13348,-3283 13289,-4660
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'until' => 1251756000,
@@ -1036,15 +992,7 @@ userdel	q4::inwork; 14759,11339 14674,11370 14575,11407
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'until' => 1242424800,
-         'text' => 'K 7312 Passow - Fredersdorf zw. Passow u. Briest, Höhe Briester Weg Bau eines Durchlasses Vollsperrung 11.05.2009-15.05.2009 ',
-         'from' => 1241906400,
-         'id' => 1651,
-         'data' => 'userdel	2::inwork 55392,83218 55901,83313
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1253916000,
          'text' => 'L 029 Oderberg - Niederfinow OD Liepe, E.-Thälmann-Straße Erneuerung Stützmauer Vollsperrung 11.05.2009-25.09.2009 ',
@@ -1071,6 +1019,38 @@ userdel	q4::inwork; 14759,11339 14674,11370 14575,11407
          'data' => 'userdel	2::inwork 29103,24437 29528,24348 29791,24336 31905,25433 32229,25382
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_012659',
+         'until' => 1243807199,
+         'text' => 'Pappelallee (Prenzlauer Berg) in Richtung Schönhauser Allee zwischen Gneiststr. und Schönhauser Alllee Baustelle, Fahrtrichtung gesperrt (bis Ende 05.2009)',
+         'from' => 1242281874,
+         'id' => 1655,
+         'data' => 'userdel	q4::inwork; 11119,15385 10881,15047
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_012636',
+         'until' => undef,
+         'text' => 'Straße der Pariser Kommune (Friedrichshain) in beiden Richtungen zwischen Karl-Marx-Allee und Rüdersdorfer Str. geplatzte Wasserleitung, gesperrt',
+         'from' => undef,
+         'id' => 1656,
+         'data' => '#: last_checked: 2009-05-15
+#: check_frequency: 7d
+userdel	q4::inwork 12822,12067 12852,12306 12869,12425
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt',
+         'from' => undef,
+         'id' => 1657,
+         'data' => '#: last_checked: 2009-05-16
+userdel	q4::inwork 8389,11378 8374,11479
+',
+         'type' => 'handicap'
        }
      
 );
