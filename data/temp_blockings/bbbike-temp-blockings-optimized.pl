@@ -108,9 +108,12 @@ push @temp_blocking,
          'text' => 'Glinkastr. (Mitte) in beiden Richtungen zwischen Jägerstr. und Taubenstr. Baustelle, Straße vollständig gesperrt (bis Ende 05.2009)',
          'from' => 1231707233,
          'id' => 1171,
-         'data' => 'userdel	2::inwork 9208,11872 9201,11968
+         'data' => '#: last_checked: 2009-05-18
+userdel	q4::inwork 9208,11872 9201,11968
+userdel	q4::inwork; 9208,11872 9218,11793
+userdel	q4::inwork; 9183,12076 9201,11968
 ',
-         'type' => 'gesperrt'
+         'type' => 'handicap'
        },
        undef,
        undef,
@@ -755,10 +758,11 @@ userdel	q4::inwork; 15080,11905 14977,11754 14941,11689
        {
          'source_id' => 'IM_012052',
          'until' => 1243807199,
-         'text' => 'Glinkastr. (Mitte) Richtung Leipziger Str. zwischen Behrenstr. und Französische Str. Baustelle, Fahrtrichtung gesperrt (bis Ende 05.2009)',
+         'text' => 'Glinkastr. (Mitte) Baustelle, Fahrbahn gesperrt (bis Ende 05.2009)',
          'from' => 1238954738,
          'id' => 1599,
-         'data' => 'userdel	q4::inwork; 9164,12172 9183,12076
+         'data' => '#: last_checked: 2009-05-18
+userdel	q4::inwork 9164,12172 9183,12076
 ',
          'type' => 'handicap'
        },
@@ -973,15 +977,7 @@ userdel	q4::inwork; 14759,11339 14674,11370 14575,11407
          'type' => 'handicap'
        },
        undef,
-       {
-         'until' => 1242597600,
-         'text' => 'L 743 Motzen - Bestensee OL Motzen, Töpchiner Str. Straßenbau Vollsperrung 16.05.2009-17.05.2009 ',
-         'from' => 1242338400,
-         'id' => 1648,
-         'data' => 'userdel	q4::inwork 23485,-22730 23239,-23484
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1244498400,
          'text' => 'B 087 Beeskow - Lübben zw. Birkenhainichen u. Biebersdorf Deckschichteinbau Vollsperrung 05.06.2009-08.06.2009 ',
@@ -1036,7 +1032,7 @@ userdel	q4::inwork; 14759,11339 14674,11370 14575,11407
          'text' => 'Straße der Pariser Kommune (Friedrichshain) in beiden Richtungen zwischen Karl-Marx-Allee und Rüdersdorfer Str. geplatzte Wasserleitung, gesperrt',
          'from' => undef,
          'id' => 1656,
-         'data' => '#: last_checked: 2009-05-15
+         'data' => '#: last_checked: 2009-05-18
 #: check_frequency: 7d
 userdel	q4::inwork 12822,12067 12852,12306 12869,12425
 ',
@@ -1051,6 +1047,24 @@ userdel	q4::inwork 12822,12067 12852,12306 12869,12425
 userdel	q4::inwork 8389,11378 8374,11479
 ',
          'type' => 'handicap'
+       },
+       {
+         'until' => 1244325600,
+         'text' => 'B 096 Luckau - Baruth zw. Gießmannsdorf und Rüdingsdorf Straßenbauarbeiten Vollsperrung 05.06.2009-06.06.2009 ',
+         'from' => 1244066400,
+         'id' => 1658,
+         'data' => 'userdel	2::inwork 31525,-58272 31401,-57829 31077,-57151 30859,-56304
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1249077600,
+         'text' => 'L 025 Prenzlau - Fürstenwerder zw. OA Schönermark u. OE Kraatz Straßenbauarbeiten Vollsperrung 25.05.2009-31.07.2009 ',
+         'from' => 1243116000,
+         'id' => 1659,
+         'data' => 'userdel	2::inwork 28511,103728 28338,104176 27732,105878 27213,107158 25934,109206 25606,109314
+',
+         'type' => 'gesperrt'
        }
      
 );

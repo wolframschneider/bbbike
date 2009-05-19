@@ -269,6 +269,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10437,12703
 	X 10601,12521
 	X 11134,12793
+	F 11105,12764
 	X 11228,12951
 	F 10740,12960
 	F 10781,13002
@@ -1232,7 +1233,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5271,4547
 	X 5671,3987
 	X 4807,5131
-	X 25512,4842
+	X 25519,4830
 	X 990,14062
 	X 6497,16652
 	X 6704,16898
@@ -2151,7 +2152,6 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	B0 14641,1771
 	F 18177,-449
 	X 17855,1629
-	F 11105,12764
 	X 21789,5427
 	X 21088,9175
 	F 4650,18817

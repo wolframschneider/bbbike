@@ -4,8 +4,8 @@
 #: note: XXX_* categorization done 2008-01-26
 #:
 #: temporary vvv
-#: last_checked: 2009-03
-#: next_check: 2009-06-15
+#: last_checked: 2009-05-17
+#: next_check: 2009-09-15
 Hauptstr. (Friedrichshain-Kreuzberg) in beiden Richtungen zwischen Markgrafendamm und untere Kynaststr. Baustelle, Radfahrer können nur langsam passieren bzw. müssen schieben	q4::inwork 14906,10820 14794,10844 14717,10855
 #: temporary ^^^
 #: XXX es ist zu erwarten, dass hier der Wuhlewanderweg verbessert wird: vvv
@@ -32,12 +32,13 @@ Gorkistr.: reger Fußgängerverkehr (Fußgängerzone)	q3 2049,20292 2116,20314 2295,
 Breitscheidplatz: starker Fußgängerverkehr, oft Veranstaltungen	q4 5656,10876 5652,11004
 Breitscheidplatz: starker Fußgängerverkehr, oft Veranstaltungen	q4 5782,10884 5829,10964
 Wilmersdorfer Str.: starker Fußgängerverkehr (Fußgängerzone), nachts und sonntags Radfahren erlaubt	q4 3723,11457 3751,11334 3770,11231 3795,11098 3827,10980
-(An der Müggelspree): fester Waldweg, aber Fußgänger	q2 23451,4877 23441,4956 23468,5075 23620,5096 23776,5040 23982,5030 24233,4878 24398,4842 24834,4541 25023,4441 25102,4408 25427,4482 25479,4540 25565,4549
-Am Müggelsee: Fußgänger	q2 26006,2615 26151,2624 26339,2667 26457,2660 26627,2610 26868,2580 27135,2500 27173,2444 27267,2414 27372,2434 27517,2523 27565,2569 27743,2842 27822,2910 27945,3006 28292,3150 28496,3253
+(An der Müggelspree): Fußgänger	q2 23451,4877 23441,4956 23468,5075 23620,5096 23776,5040 23982,5030 24233,4878 24398,4842 24834,4541 25023,4441 25102,4408 25427,4482 25479,4540 25565,4549
+Am Müggelsee: Fußgänger	q2 25474,2848 25667,2787 25857,2654 26006,2615 26151,2624 26339,2667 26457,2660 26627,2610 26868,2580 27135,2500 27173,2444 27267,2414 27372,2434 27517,2523 27565,2569 27743,2842 27822,2910 27945,3006 28292,3150 28496,3253
 Pestalozzistr.: Fußgängerzone	q3 3721,11230 3770,11231 3822,11224
 (Zufahrt am NKZ): Bordsteine, Fußgänger/Lieferverkehr	q3 11291,10438 11311,10505 11343,10528
 Alexanderplatz: Fußgängerverkehr	q2 11139,13008 10970,12822 10923,12779
 Dircksenstr.: langsame Straßenbahnen, Fußgänger	q2 10970,12822 10849,12944
+Dircksenstr.: Fußgänger	q2 10970,12822 11030,12741 11087,12780 11105,12764
 Gontardstr.: langsame Straßenbahnen, Fußgänger	q2 10740,12960 10793,12906 10923,12779
 Uferweg im Treptower Park: Fußgänger, besonders an schönen Tagen	q2 15793,8984 15653,8989 15527,9096 15513,9144 15432,9322 15321,9448 15140,9566 14910,9643 14697,9726 14671,9759 14500,9856 14483,9843 14451,9927
 (S-Bahnhof - Treptower Hafen): Fußgänger, besonders an schönen Tagen	q2 14351,9757 14436,9784 14483,9843
@@ -469,6 +470,9 @@ Dora-Benjamin-Park: Bordstein bei der Einfahrt	q1 14705,10149 14621,10062
 Dora-Benjamin-Park: Bordstein bei der Einfahrt	q1 14747,10108 14702,10020
 (Hoher Wallgraben - Hegemeisterweg): eng, Fußgänger	q2 18099,8048 18119,7996 18287,7815
 Kleine Hege: sehr eng	q3- 22334,4383 22382,4361
+Schmaler Weg: eng, Fußgängerweg nicht für Radfahrer freigegeben, ggfs. schieben	q3 25571,5829 25442,5813 25294,5761
+(Bölschestr. - Scharnweberstr.): eng, Fußgängerweg nicht für Radfahrer freigegeben, ggfs. schieben	q3 25524,5011 25729,5002
+Rosmarienstr.: Fußgängerzone, ggfs. schieben	q3 9369,12253 9487,12263
 ######################### User Contributions #################################
 #: by: Steini
 Ebersstr.: Schüler	q2 7245,8583 7292,8631
@@ -920,7 +924,7 @@ Bootshausweg: Fußgänger, eng	q2 -1073,16610 -1067,16635 -1092,16659 -1156,16689 
 #: corrected_by: srt (q4 -> q2) (common sense!)
 Nelly-Sachs-Str.: Verkehrsberuhigter Bereich	q2 24061,14801 24115,14828 24191,14866 24253,14888 24349,14922
 #: by: torsten albrecht [AM]
-Karl-Pokern-Str.: spielende Kinder	q1 26079,5057 26034,5056 25984,5070 25860,5067 25732,5065
+Karl-Pokern-Str.: spielende Kinder	q1 26079,5057 26034,5056 25984,5070 25941,5069 25860,5067 25732,5065
 #: by: ingo [AM]
 (Plantagenstr. - Ruheplatzstr.): Gehweg, Fußgänger	q4 7595,15596 7540,15566
 #XXX duplicate: Goerdelersteg: steile Fußgängerwendel zur Autobahnbrücke	q3 3619,14183 3601,14284 3595,14277
@@ -1448,3 +1452,6 @@ Erna-Sack-Str.: enge Straße	q1 -7486,13321 -7496,13214
 Treutelstr.: enge Straße	q1 5422,19725 5345,19734 5318,19723
 #: by: Franz Puder:
 Jenbacher Weg: enge Straße	q1 6402,578 6411,533 6180,376 5987,256 5800,138 5703,74 5671,52
+#: by: M.Laufmann:
+#: corrected_by: srt/policy (q4 -> q3)
+(Charlottenstr. - Allee der Kosmonauten/Fußgängerampel): Gehweg, für Radfahrer freigegeben	q3 20505,14350 20474,14442
