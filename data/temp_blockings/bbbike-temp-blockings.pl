@@ -4782,7 +4782,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_82301_COPY_1',
        data  => <<EOF,
-userdel	2::inwork -915,22935 -596,23009
+userdel	2::inwork -915,22935 -760,22980 -728,22990 -656,23011
 EOF
      },
      { from  => 1149976800, # 2006-06-11 00:00
@@ -13249,7 +13249,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: last_checked: 2009-05-11
-#: check_frequency: 14d
+#: check_frequency: 7d
 userdel	1::inwork 12229,10014 12398,9938 12556,9862
 EOF
      },
@@ -13324,8 +13324,8 @@ userdel	q4::inwork 8536,11063 8483,10900
 EOF
      },
      { from  => 1240517859, # 2009-04-23 22:17
-       until => 1242424799, # 2009-05-15 23:59
-       text  => 'Lückstr. (Lichtenberg) Richtung Nöldnerstr. zwischen Giselastr. und Nöldnerplatz Baustelle, Fahrtrichtung gesperrt; sowie Einbahnstraßenregelungen in der Giselastr. und Stadthausstr. (bis Mitte 05.09)',
+       until => 1243807199, # 2009-05-31 23:59
+       text  => 'Lückstr. (Lichtenberg) Richtung Nöldnerstr. zwischen Giselastr. und Nöldnerplatz Baustelle, Fahrtrichtung gesperrt; sowie Einbahnstraßenregelungen in der Giselastr. und Stadthausstr. (bis Ende 05.09)',
        type  => 'handicap',
        source_id => 'IM_011767',
        data  => <<EOF,
@@ -13533,7 +13533,7 @@ EOF
        text  => 'Bauarbeiten in der Simplonstr., Straße gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2009-05-12 vvv
+#: last_checked: 2009-05-18 vvv
 userdel	q4::inwork; 14597,11069 14530,11137
 userdel	q4::inwork 14530,11137 14465,11195
 #: last_checked ^^^
@@ -13782,13 +13782,13 @@ EOF
 userdel	q4::temp 22196,4847 22175,4730 22138,4661 22111,4562 22093,4499
 EOF
      },
-     { from  => 1240517963, # 2009-04-23 22:19
-       until => 1243807199, # 2009-05-31 23:59
-       text  => 'Rathausstr. (Mitte) Richtung Alexanderplatz zwischen Breitestr. und Spandauer Str. Baustelle, Fahrtrichtung gesperrt (bis Ende 05.09)',
+     { from  => 1242770815, # 2009-05-20 00:06
+       until => 1301608800, # 2011-04-01 00:00
+       text  => 'Rathausstr. (Mitte) Richtung Alexanderplatz zwischen Breitestr. und Spandauer Str. Baustelle, Straße vollständig gesperrt (bis März 2011)',
        type  => 'handicap',
        source_id => 'IM_012342',
        data  => <<EOF,
-userdel	q4::inwork; 10267,12305 10362,12351 10422,12395 10476,12432 10584,12507
+userdel	q4::inwork 10267,12305 10362,12351 10422,12395 10476,12432 10584,12507
 EOF
      },
      { from  => 1240518036, # 2009-04-23 22:20
@@ -13949,10 +13949,12 @@ EOF
        text  => 'Bauarbeiten in der Wühlischstraße (Einbahnstraße Richtung Osten) und Holteistraße (Kreuzungsbereich zur Wühlischstraße ist gesperrt).',
        type  => 'handicap',
        data  => <<EOF,
+#: check_frequency: 7d vvv
 #: last_checked: 2009-05-09 vvv
 userdel	q4::inwork 14639,11512 14575,11407
 userdel	q4::inwork; 14759,11339 14674,11370 14575,11407
 #: last_checked: ^^^
+#: check_frequency ^^^
 EOF
      },
      { from  => 1241647200, # 2009-05-07 00:00
@@ -14062,6 +14064,82 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork 28511,103728 28338,104176 27732,105878 27213,107158 25934,109206 25606,109314
+EOF
+     },
+     { from  => 1242712036, # 2009-05-19 07:47
+       until => 1243288800, # 2009-05-26 00:00
+       text  => 'Ebertstr. (Tiergarten) in beiden Richtungen zwischen Behrenstr. und Scheidemannstr. Veranstaltung, Straße vollständig gesperrt (bis 25.05.2009) ',
+       type  => 'gesperrt',
+       source_id => 'IM_012693',
+       data  => <<EOF,
+userdel	2::temp 8595,12066 8600,12165 8515,12242 8539,12286 8560,12326 8540,12420
+EOF
+     },
+     { from  => 1242712062, # 2009-05-19 07:47
+       until => 1245103199, # 2009-06-15 23:59
+       text  => 'Gartenstr. (Mitte) Richtung Torstr. vor der Einmündung in die Torstr. Baustelle, Fahrtrichtung gesperrt (bis Mitte 06.2009)',
+       type  => 'handicap',
+       source_id => 'IM_012706',
+       data  => <<EOF,
+userdel	q4::inwork; 9531,13797 9668,13629
+EOF
+     },
+     { from  => 1242712177, # 2009-05-19 07:49
+       until => 1243288800, # 2009-05-26 00:00
+       text  => 'Str. des 17. Juni (Tiergarten) in beiden Richtungen zwischen Großer Stern und Brandenburger Tor Veranstaltung, Straße vollständig gesperrt (bis 25.05.2009)',
+       type  => 'gesperrt',
+       source_id => 'IM_012692',
+       data  => <<EOF,
+userdel	2::temp 8515,12242 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 6828,12031
+EOF
+     },
+     { from  => 1242712208, # 2009-05-19 07:50
+       until => 1243288800, # 2009-05-26 00:00
+       text  => 'Yitzhak-Rabin-Str. (Tiergarten) in beiden Richtungen zwischen Scheidemannstr. und Str. des 17. Juni Veranstaltung, Straße vollständig gesperrt (bis 25.05.2009)',
+       type  => 'gesperrt',
+       source_id => 'IM_012694',
+       data  => <<EOF,
+userdel	2::temp 8055,12186 8119,12414
+EOF
+     },
+     { from  => 1242770400, # 2009-05-20 00:00
+       until => 1242943200, # 2009-05-22 00:00
+       text  => 'B 112 Frankfurter-, Bahnhofstraße OD Neuzelle 16. Bibulibustag Vollsperrung 21.05.2009-21.05.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::temp 96017,-33547 96014,-33803
+EOF
+     },
+     { from  => 1243116000, # 2009-05-24 00:00
+       until => 1254348000, # 2009-10-01 00:00
+       text  => 'B 087 Luckau - Herzberg OD Schlieben Deckenerneuerung Vollsperrung 25.05.2009-30.09.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 10533,-76130 10891,-76066
+EOF
+     },
+     { from  => 1247954400, # 2009-07-19 00:00
+       until => 1253311200, # 2009-09-19 00:00
+       text  => 'L 014 Kyritz - Wittstock OD Herzsprung grundhafter Straßenausbau Vollsperrung 20.07.2009-18.09.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -54249,73343 -54091,72917 -54034,72687
+EOF
+     },
+     { from  => 1243116000, # 2009-05-24 00:00
+       until => 1248127200, # 2009-07-21 00:00
+       text  => 'L 014 Kyritz - Wittstock OD Herzsprung grundhafter Straßenausbau Vollsperrung 25.05.2009-20.07.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -54338,71670 -54116,72465
+EOF
+     },
+     { from  => 1244498400, # 2009-06-09 00:00
+       until => 1245362400, # 2009-06-19 00:00
+       text  => 'L 144 Herzsprung - Blumenthal OD Herzsprung grundhafter Straßenausbau Vollsperrung 10.06.2009-18.06.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -54665,72030 -54116,72465
 EOF
      },
     );
