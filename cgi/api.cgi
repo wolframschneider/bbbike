@@ -105,12 +105,12 @@ sub streetnames_suggestions {
     my ( $d, $d2 ) = &street_match( $file, $street, $limit );
 
     # no prefix match, try again with prefix match only
-    if ( scalar(@$d) == 0 && scalar(@$d2) == 0 ) {
+    if ( defined $d && scalar(@$d) == 0 && scalar(@$d2) == 0 ) {
         ( $d, $d2 ) = &street_match( $file, "^$street", $limit );
     }
 
-    my @data  = @$d;
-    my @data2 = @$d2;
+    my @data  = defined $d ? @$d : ();
+    my @data2 = defined $d2 ? @$d2 : ();
 
     warn "Len1: ", scalar(@data), " ", join( " ", @data ), "\n" if $debug >= 2;
     warn "Len2: ", scalar(@data2), " ", join( " ", @data2 ), "\n"
