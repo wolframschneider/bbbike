@@ -5002,7 +5002,7 @@ EOF
        text  => 'L 029 Bahnhofstr. Bahnübergang in Biesenthal Umbau Bahnübergang Vollsperrung 12.07.2006-30.08.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 28993,38709 28248,39107 26237,40190
+userdel	2::inwork 28993,38709 28199,39134 26237,40190
 EOF
      },
      { from  => 1152223200, # 2006-07-07 00:00
@@ -8038,7 +8038,7 @@ EOF
        text  => 'L 029 Grüntal-B 2 Biesenthal OD Biesenthal Deckenerneuerung mit Entwäss. Vollsperrung 10.04.2007-30.09.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 28993,38709 28248,39107 26237,40190
+userdel	2::inwork 28993,38709 28199,39134 26237,40190
 EOF
      },
      { from  => 1178402400, # 2007-05-06 00:00
@@ -8275,7 +8275,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005623',
        data  => <<EOF,
-userdel	2::temp 8098,13419 8102,13304 8107,13146 8110,13042
+userdel	2::temp 8098,13419 8102,13304 8106,13130 8110,13042
 EOF
      },
      { from  => undef, # 
@@ -13248,7 +13248,7 @@ EOF
        text  => 'Reichenberger Str., Einbahnstraße Richtung Kottbusser Tor',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2009-05-11
+#: last_checked: 2009-05-20
 #: check_frequency: 7d
 userdel	1::inwork 12229,10014 12398,9938 12556,9862
 EOF
@@ -13784,11 +13784,11 @@ EOF
      },
      { from  => 1242770815, # 2009-05-20 00:06
        until => 1301608800, # 2011-04-01 00:00
-       text  => 'Rathausstr. (Mitte) Richtung Alexanderplatz zwischen Breitestr. und Spandauer Str. Baustelle, Straße vollständig gesperrt (bis März 2011)',
+       text  => 'Rathausstr. (Mitte) Richtung Alexanderplatz zwischen Breitestr. und Poststr. Baustelle, Straße vollständig gesperrt (bis März 2011)',
        type  => 'handicap',
        source_id => 'IM_012342',
        data  => <<EOF,
-userdel	q4::inwork 10267,12305 10362,12351 10422,12395 10476,12432 10584,12507
+userdel	q4::inwork 10267,12305 10362,12351 10422,12395 10476,12432
 EOF
      },
      { from  => 1240518036, # 2009-04-23 22:20
@@ -13855,7 +13855,8 @@ EOF
        source_id => 'IM_012427',
        data  => <<EOF,
 #userdel	q4::inwork; 8804,12280 8775,12457
-userdel	q4::inwork; 9008,12485 9018,12400 9028,12307
+#: last_checked: 2009-05-21
+userdel	q4::inwork; 9018,12400 9028,12307
 EOF
      },
      { from  => 1241301600, # 2009-05-03 00:00
@@ -13944,8 +13945,8 @@ EOF
 userdel	q3::inwork 12121,20969 12189,20959
 EOF
      },
-     { from  => undef, # 
-       until => undef, #
+     { from  => 1242840466, # 
+       until => 1242840469, #
        text  => 'Bauarbeiten in der Wühlischstraße (Einbahnstraße Richtung Osten) und Holteistraße (Kreuzungsbereich zur Wühlischstraße ist gesperrt).',
        type  => 'handicap',
        data  => <<EOF,
@@ -14030,14 +14031,13 @@ EOF
 userdel	q4::inwork; 11119,15385 10881,15047
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1242982031, # 
+       until => 1242982046, # XXX
        text  => 'Straße der Pariser Kommune (Friedrichshain) in beiden Richtungen zwischen Karl-Marx-Allee und Rüdersdorfer Str. geplatzte Wasserleitung, gesperrt',
        type  => 'handicap',
        source_id => 'IM_012636',
        data  => <<EOF,
-#: last_checked: 2009-05-18
-#: check_frequency: 7d
+#: last_checked: 2009-05-21
 userdel	q4::inwork 12822,12067 12852,12306 12869,12425
 EOF
      },
@@ -14050,8 +14050,8 @@ EOF
 userdel	q4::inwork 8389,11378 8374,11479
 EOF
      },
-     { from  => 1244066400, # 2009-06-04 00:00
-       until => 1244325600, # 2009-06-07 00:00
+     { from  => 1242852079, # 2009-06-04 00:00 1244066400
+       until => 1242852084, # 2009-06-07 00:00 1244325600
        text  => 'B 096 Luckau - Baruth zw. Gießmannsdorf und Rüdingsdorf Straßenbauarbeiten Vollsperrung 05.06.2009-06.06.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -14140,6 +14140,73 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::inwork -54665,72030 -54116,72465
+EOF
+     },
+     { from  => 1242851109, # 2009-05-20 22:25
+       until => 1243256400, # 2009-05-25 15:00
+       text  => 'Oberfeldstr. (Marzahn) in beiden Richtungen zwischen Schulstr. und Nordpromenade Veranstaltung, gesperrt. Ebenso ist die Nordpromenade gesperrt. (bis 25.05.09, 15 Uhr)',
+       type  => 'gesperrt',
+       source_id => 'IM_012746',
+       data  => <<EOF,
+userdel	2::temp 20599,11938 20610,12050
+EOF
+     },
+     { from  => 1242851164, # 2009-05-20 22:26
+       until => 1243202400, # 2009-05-25 00:00
+       text  => 'Scheidemannstr. (Tiergarten) in beiden Richtungen zwischen Yitzhak-Rabin-Str. und Ebertstr. Veranstaltung, Straße vollständig gesperrt (bis 24.05.09 nachts)',
+       type  => 'gesperrt',
+       source_id => 'IM_012708',
+       data  => <<EOF,
+userdel	2::temp 8540,12420 8400,12417 8374,12416 8119,12414
+EOF
+     },
+     { from  => 1243116000, # 2009-05-24 00:00
+       until => 1245621600, # 2009-06-22 00:00
+       text  => 'B 103 Kyritz - Pritzwalk zw. Kyritz u. Gantikow, Bahnübergang Erneuerung Bahnübergang Vollsperrung 25.05.2009-21.06.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -60072,61047 -61764,62280
+EOF
+     },
+     { from  => 1243116000, # 2009-05-24 00:00
+       until => 1243807200, # 2009-06-01 00:00
+       text  => 'L 014 Rosa-Luxemburg-Straße OL Wittstock, Kreuzungsberereich Bohnekampweg Bau Kreisverkehr Vollsperrung 25.05.2009-31.05.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -53648,82294 -53491,81954 -53248,81574
+EOF
+     },
+     { from  => 1243116000, # 2009-05-24 00:00
+       until => 1245448800, # 2009-06-20 00:00
+       text  => 'L 015 Menz - Rheinsberg OD Menz Straßenbau Vollsperrung 25.05.2009-19.06.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -15379,77129 -17592,77812
+EOF
+     },
+     { from  => 1244412000, # 2009-06-08 00:00
+       until => 1248127200, # 2009-07-21 00:00
+       text  => 'L 015 Menz - Rheinsberg zw. Menz u. Rheinsberg Straßenbau Vollsperrung 09.06.2009-20.07.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -24815,76635 -23305,77059 -22937,77020 -22504,76981 -21965,77030 -21728,77161 -21621,77313 -20227,77714 -19875,77881 -19494,78080 -19300,78146 -18544,78020 -17592,77812
+EOF
+     },
+     { from  => 1248559200, # 2009-07-26 00:00
+       until => 1249682400, # 2009-08-08 00:00
+       text  => 'L 141 B5 - Neustadt OD Dreetz Straßenbauarbeiten Vollsperrung 27.07.2009-07.08.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -54456,42981 -53872,42916
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Mittelstr. zwischen Friedrichstraße und Neustädtische Kirchstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg offen',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2009-05-21
+userdel	q4::inwork 9126,12413 9345,12443
 EOF
      },
     );

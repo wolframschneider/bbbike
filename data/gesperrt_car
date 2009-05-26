@@ -2,7 +2,7 @@ Mittelweg	1 12335,7770 12224,7799 12176,7811
 Privatweg (Kronenstr.)	2 10124,11806 10112,11796 10042,11755 9907,11752 9892,11752
 Maulbronner Ufer	1 7161,4091 7308,4080 7487,4104 7546,4112 7589,4147 7676,4216
 Reichstagufer	1 9098,12687 8892,12576 8766,12541
-Bunsenstr.	1 8907,12472 8892,12576
+Bunsenstr.	1 8892,12576 8907,12472
 Heimstr.	1 9973,9232 9962,9151 9959,9050 9958,8966
 Südstern	1 10705,9234 10547,9233
 Warschauer/Gubener	3nocross::ignrte 13651,11731 13597,11526 13588,11490
@@ -426,8 +426,8 @@ Bornitzstr.	1 15645,12864 15543,12856
 Straßenbahntrasse	3nocross::ignrte 18890,9529 18834,9256 18809,9133
 Rolandseck -> Treskowallee: Straßenbahntrasse	3::igndisp 18903,9244 18834,9256 18809,9133
 Treskowallee -> Rolandseck: Straßenbahntrasse	3::igndisp 18890,9529 18834,9256 18903,9244
-Washingtonplatz: nur für Taxis	2 8107,13146 7938,13135
-Ella-Trebe-Str.: nur für Taxis	2 7938,13135 7938,13302
+Washingtonplatz: nur für Taxis	2 8106,13130 7937,13126
+Ella-Trebe-Str.: nur für Taxis	2 7937,13126 7938,13150 7938,13302
 Straßenbahntrasse	3nocross::ignrte 20352,5877 20428,5841 20536,5789
 Nixenstr. -> An der Wuhlheide: Straßenbahntrasse	3::igndisp 20371,5753 20428,5841 20352,5877
 An der Wuhlheide -> Nixenstr.: Straßenbahntrasse	3::igndisp 20536,5789 20428,5841 20371,5753

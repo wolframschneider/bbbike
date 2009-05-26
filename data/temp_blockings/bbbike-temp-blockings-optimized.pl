@@ -604,8 +604,8 @@ userdel	1::inwork 10614,19907 10742,19632
          'text' => 'Reichenberger Str., Einbahnstraße Richtung Kottbusser Tor',
          'from' => undef,
          'id' => 1563,
-         'data' => '#: last_checked: 2009-05-11
-#: check_frequency: 14d
+         'data' => '#: last_checked: 2009-05-20
+#: check_frequency: 7d
 userdel	1::inwork 12229,10014 12398,9938 12556,9862
 ',
          'type' => 'gesperrt'
@@ -749,7 +749,7 @@ userdel	q4::inwork; 15681,10801 15674,10851
          'text' => 'Bauarbeiten in der Simplonstr., Straße gesperrt',
          'from' => undef,
          'id' => 1597,
-         'data' => '#: last_checked: 2009-05-12 vvv
+         'data' => '#: last_checked: 2009-05-18 vvv
 userdel	q4::inwork; 14597,11069 14530,11137
 userdel	q4::inwork 14530,11137 14465,11195
 #: last_checked ^^^
@@ -788,15 +788,7 @@ userdel	q4::inwork 9164,12172 9183,12076
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1243202400,
-         'text' => 'B 102 Große Milower Str. OD Rathenow, zw. Wolzenstr. und Heidefeldstr. Neubau Kreisverkehr Vollsperrung 02.03.2009-24.05.2009 ',
-         'from' => 1235862000,
-         'id' => 1603,
-         'data' => 'userdel	q4::inwork -62269,19881 -62333,20390
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1244930400,
          'text' => 'B 112 Forst - Guben OD Grießen Derny-Rennen Vollsperrung 13.06.2009-13.06.2009 ',
@@ -841,15 +833,7 @@ userdel	q4::inwork 9164,12172 9183,12076
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1243029600,
-         'text' => 'L 161 bei Vehlefanz Straßen- u. Durchlassbau Vollsperrung 14.04.2009-22.05.2009 ',
-         'from' => 1239573600,
-         'id' => 1616,
-         'data' => 'userdel	2::inwork -11367,34034 -11282,34185 -10702,34336
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -888,10 +872,10 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        {
          'source_id' => 'IM_012342',
          'until' => 1301608800,
-         'text' => 'Rathausstr. (Mitte) Richtung Alexanderplatz zwischen Breitestr. und Spandauer Str. Baustelle, Straße vollständig gesperrt (bis März 2011)',
+         'text' => 'Rathausstr. (Mitte) Richtung Alexanderplatz zwischen Breitestr. und Poststr. Baustelle, Straße vollständig gesperrt (bis März 2011)',
          'from' => 1242770815,
          'id' => 1627,
-         'data' => 'userdel	q4::inwork 10267,12305 10362,12351 10422,12395 10476,12432 10584,12507
+         'data' => 'userdel	q4::inwork 10267,12305 10362,12351 10422,12395 10476,12432
 ',
          'type' => 'handicap'
        },
@@ -925,7 +909,8 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
          'from' => 1240953370,
          'id' => 1635,
          'data' => '#userdel	q4::inwork; 8804,12280 8775,12457
-userdel	q4::inwork; 9008,12485 9018,12400 9028,12307
+#: last_checked: 2009-05-21
+userdel	q4::inwork; 9018,12400 9028,12307
 ',
          'type' => 'handicap'
        },
@@ -975,18 +960,7 @@ userdel	q2::inwork 12095,20832 11686,21058
          'type' => 'handicap'
        },
        undef,
-       {
-         'until' => undef,
-         'text' => 'Bauarbeiten in der Wühlischstraße (Einbahnstraße Richtung Osten) und Holteistraße (Kreuzungsbereich zur Wühlischstraße ist gesperrt).',
-         'from' => undef,
-         'id' => 1646,
-         'data' => '#: last_checked: 2009-05-09 vvv
-userdel	q4::inwork 14639,11512 14575,11407
-userdel	q4::inwork; 14759,11339 14674,11370 14575,11407
-#: last_checked: ^^^
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1037,18 +1011,7 @@ userdel	q4::inwork; 14759,11339 14674,11370 14575,11407
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_012636',
-         'until' => undef,
-         'text' => 'Straße der Pariser Kommune (Friedrichshain) in beiden Richtungen zwischen Karl-Marx-Allee und Rüdersdorfer Str. geplatzte Wasserleitung, gesperrt',
-         'from' => undef,
-         'id' => 1656,
-         'data' => '#: last_checked: 2009-05-18
-#: check_frequency: 7d
-userdel	q4::inwork 12822,12067 12852,12306 12869,12425
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt',
@@ -1059,15 +1022,7 @@ userdel	q4::inwork 8389,11378 8374,11479
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1244325600,
-         'text' => 'B 096 Luckau - Baruth zw. Gießmannsdorf und Rüdingsdorf Straßenbauarbeiten Vollsperrung 05.06.2009-06.06.2009 ',
-         'from' => 1244066400,
-         'id' => 1658,
-         'data' => 'userdel	2::inwork 31525,-58272 31401,-57829 31077,-57151 30859,-56304
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1249077600,
          'text' => 'L 025 Prenzlau - Fürstenwerder zw. OA Schönermark u. OE Kraatz Straßenbauarbeiten Vollsperrung 25.05.2009-31.07.2009 ',
@@ -1117,15 +1072,7 @@ userdel	q4::inwork 8389,11378 8374,11479
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1242943200,
-         'text' => 'B 112 Frankfurter-, Bahnhofstraße OD Neuzelle 16. Bibulibustag Vollsperrung 21.05.2009-21.05.2009 ',
-         'from' => 1242770400,
-         'id' => 1664,
-         'data' => 'userdel	q4::temp 96017,-33547 96014,-33803
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1254348000,
          'text' => 'B 087 Luckau - Herzberg OD Schlieben Deckenerneuerung Vollsperrung 25.05.2009-30.09.2009 ',
@@ -1159,6 +1106,63 @@ userdel	q4::inwork 8389,11378 8374,11479
          'from' => 1244498400,
          'id' => 1668,
          'data' => 'userdel	q4::inwork -54665,72030 -54116,72465
+',
+         'type' => 'handicap'
+       },
+       undef,
+       undef,
+       {
+         'until' => 1245621600,
+         'text' => 'B 103 Kyritz - Pritzwalk zw. Kyritz u. Gantikow, Bahnübergang Erneuerung Bahnübergang Vollsperrung 25.05.2009-21.06.2009 ',
+         'from' => 1243116000,
+         'id' => 1671,
+         'data' => 'userdel	2::inwork -60072,61047 -61764,62280
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1243807200,
+         'text' => 'L 014 Rosa-Luxemburg-Straße OL Wittstock, Kreuzungsberereich Bohnekampweg Bau Kreisverkehr Vollsperrung 25.05.2009-31.05.2009 ',
+         'from' => 1243116000,
+         'id' => 1672,
+         'data' => 'userdel	q4::inwork -53648,82294 -53491,81954 -53248,81574
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1245448800,
+         'text' => 'L 015 Menz - Rheinsberg OD Menz Straßenbau Vollsperrung 25.05.2009-19.06.2009 ',
+         'from' => 1243116000,
+         'id' => 1673,
+         'data' => 'userdel	q4::inwork -15379,77129 -17592,77812
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1248127200,
+         'text' => 'L 015 Menz - Rheinsberg zw. Menz u. Rheinsberg Straßenbau Vollsperrung 09.06.2009-20.07.2009 ',
+         'from' => 1244412000,
+         'id' => 1674,
+         'data' => 'userdel	2::inwork -24815,76635 -23305,77059 -22937,77020 -22504,76981 -21965,77030 -21728,77161 -21621,77313 -20227,77714 -19875,77881 -19494,78080 -19300,78146 -18544,78020 -17592,77812
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1249682400,
+         'text' => 'L 141 B5 - Neustadt OD Dreetz Straßenbauarbeiten Vollsperrung 27.07.2009-07.08.2009 ',
+         'from' => 1248559200,
+         'id' => 1675,
+         'data' => 'userdel	q4::inwork -54456,42981 -53872,42916
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Mittelstr. zwischen Friedrichstraße und Neustädtische Kirchstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg offen',
+         'from' => undef,
+         'id' => 1676,
+         'data' => '#: last_checked: 2009-05-21
+userdel	q4::inwork 9126,12413 9345,12443
 ',
          'type' => 'handicap'
        }

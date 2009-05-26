@@ -7,7 +7,7 @@ Mittelweg	1 12335,7770 12224,7799 12176,7811
 Privatweg (Kronenstr.)	2 10124,11806 10112,11796 10042,11755 9907,11752 9892,11752
 Maulbronner Ufer	1 7161,4091 7308,4080 7487,4104 7546,4112 7589,4147 7676,4216
 Reichstagufer	1 9098,12687 8892,12576 8766,12541
-Bunsenstr.	1 8907,12472 8892,12576
+Bunsenstr.	1 8892,12576 8907,12472
 Heimstr.	1 9973,9232 9962,9151 9959,9050 9958,8966
 Südstern	1 10705,9234 10547,9233
 Warschauer/Gubener	3nocross 13651,11731 13597,11526 13588,11490
@@ -280,8 +280,8 @@ Saarstr.: Durchfahrt für Autofahrer per Poller gesperrt	3nocross 5972,6756 5897,
 Putlitzstr.	1 6210,13939 6205,14216
 Bornitzstr.	1 15645,12864 15543,12856
 Treskowallee: Straßenbahntrasse	3nocross 18890,9529 18834,9256 18809,9133
-Washingtonplatz: nur für Taxis	2 8107,13146 7938,13135
-Ella-Trebe-Str.: nur für Taxis	2 7938,13135 7938,13302
+Washingtonplatz: nur für Taxis	2 8106,13130 7937,13126
+Ella-Trebe-Str.: nur für Taxis	2 7937,13126 7938,13150 7938,13302
 An der Wuhlheide: Straßenbahntrasse	3nocross 20352,5877 20428,5841 20536,5789
 #: by: Torsten Franik: vvv
 Gürtelstr. - Lehderstr.: nur rechts abbiegen erlaubt	3 13409,15687 13316,15758 13214,15830
@@ -517,3 +517,4 @@ An der Wuhlheide: Mittelstreifen	3nocross 19405,6276 19276,6359 19245,6379
 Kiautschoustr.	1 7020,14897 7199,14978
 Rochstr.: Barriere	3 10418,12922 10535,13006 10571,13034
 Rochstr.: Barriere	3 10571,13034 10535,13006 10418,12922
+Rahel-Hirsch-Str.: Mittelstreifen	3nocross 7936,129067948,129188039,13009
