@@ -1,6 +1,221 @@
-$#temp_blocking = 1078;
+$#temp_blocking = 872;
 push @temp_blocking,
 (
+       {
+         'until' => undef,
+         'text' => 'Reichstagufer (Mitte) in beiden Richtungen Baustelle, Straße vollständig gesperrt, Fußgänger können passieren',
+         'from' => undef,
+         'id' => 873,
+         'data' => '#: last_checked: 2009-05-27
+userdel	q4::inwork 9209,12795 9283,12856
+',
+         'type' => 'handicap'
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'source_id' => 'IM_006107',
          'until' => 1270065106,
@@ -108,10 +323,9 @@ push @temp_blocking,
          'text' => 'Glinkastr. (Mitte) in beiden Richtungen zwischen Jägerstr. und Taubenstr. Baustelle, Straße vollständig gesperrt (bis Ende 05.2009)',
          'from' => 1231707233,
          'id' => 1171,
-         'data' => '#: last_checked: 2009-05-18
-userdel	q4::inwork 9208,11872 9201,11968
+         'data' => '#: last_checked: 2009-05-27
+userdel	q4::inwork; 9201,11968 9208,11872
 userdel	q4::inwork; 9208,11872 9218,11793
-userdel	q4::inwork; 9183,12076 9201,11968
 ',
          'type' => 'handicap'
        },
@@ -320,15 +534,7 @@ userdel	q4::inwork; 9183,12076 9201,11968
        undef,
        undef,
        undef,
-       {
-         'until' => 1243548000,
-         'text' => 'B 246 R.-Breitscheid-, E.-Thälmann-, Schauener Str. OD Storkow Deckenerneuerung Vollsperrung 30.03.2009-28.05.2009 ',
-         'from' => 1238277600,
-         'id' => 1369,
-         'data' => 'userdel	q4::inwork 46518,-16240 46409,-16251 46004,-16440
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -604,7 +810,7 @@ userdel	1::inwork 10614,19907 10742,19632
          'text' => 'Reichenberger Str., Einbahnstraße Richtung Kottbusser Tor',
          'from' => undef,
          'id' => 1563,
-         'data' => '#: last_checked: 2009-05-20
+         'data' => '#: last_checked: 2009-05-26
 #: check_frequency: 7d
 userdel	1::inwork 12229,10014 12398,9938 12556,9862
 ',
@@ -749,7 +955,7 @@ userdel	q4::inwork; 15681,10801 15674,10851
          'text' => 'Bauarbeiten in der Simplonstr., Straße gesperrt',
          'from' => undef,
          'id' => 1597,
-         'data' => '#: last_checked: 2009-05-18 vvv
+         'data' => '#: last_checked: 2009-05-24 vvv
 userdel	q4::inwork; 14597,11069 14530,11137
 userdel	q4::inwork 14530,11137 14465,11195
 #: last_checked ^^^
@@ -761,8 +967,8 @@ userdel	q4::inwork 14530,11137 14465,11195
          'text' => 'Jessnerstr. wegen Bauarbeiten in Richtung Süden nicht befahrbar',
          'from' => undef,
          'id' => 1598,
-         'data' => '#: last_checked: 2009-04-25
-userdel	q4::inwork; 15080,11905 14977,11754 14941,11689
+         'data' => '#: last_checked: 2009-05-26
+userdel	q4::inwork; 15080,11905 14977,11754 14941,11689 14849,11539
 ',
          'type' => 'handicap'
        },
@@ -772,8 +978,8 @@ userdel	q4::inwork; 15080,11905 14977,11754 14941,11689
          'text' => 'Glinkastr. (Mitte) Baustelle, Fahrbahn gesperrt (bis Ende 05.2009)',
          'from' => 1238954738,
          'id' => 1599,
-         'data' => '#: last_checked: 2009-05-18
-userdel	q4::inwork 9164,12172 9183,12076
+         'data' => '#: last_checked: 2009-05-27
+userdel	q4::inwork; 9164,12172 9183,12076
 ',
          'type' => 'handicap'
        },
@@ -836,7 +1042,16 @@ userdel	q4::inwork 9164,12172 9183,12076
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_011757',
+         'until' => 1243807199,
+         'text' => 'Schlichtallee (Lichtenberg) Richtung Nöldnerplatz zwischen beiden Einmündungen Fischerstr. Baustelle, gesperrt (Umfahrung über Fischerstr.) (bis Ende 05.09)',
+         'from' => 1243371742,
+         'id' => 1619,
+         'data' => 'userdel	1::inwork 15982,10765 16032,10842
+',
+         'type' => 'gesperrt'
+       },
        undef,
        {
          'until' => 1247263200,
@@ -1032,46 +1247,20 @@ userdel	q4::inwork 8389,11378 8374,11479
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_012693',
-         'until' => 1243288800,
-         'text' => 'Ebertstr. (Tiergarten) in beiden Richtungen zwischen Behrenstr. und Scheidemannstr. Veranstaltung, Straße vollständig gesperrt (bis 25.05.2009) ',
-         'from' => 1242712036,
-         'id' => 1660,
-         'data' => 'userdel	2::temp 8595,12066 8600,12165 8515,12242 8539,12286 8560,12326 8540,12420
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'IM_012706',
          'until' => 1245103199,
-         'text' => 'Gartenstr. (Mitte) Richtung Torstr. vor der Einmündung in die Torstr. Baustelle, Fahrtrichtung gesperrt (bis Mitte 06.2009)',
+         'text' => 'Gartenstr. (Mitte) vor der Einmündung in die Torstr. Baustelle, Fahrbahn gesperrt (bis Mitte 06.2009)',
          'from' => 1242712062,
          'id' => 1661,
-         'data' => 'userdel	q4::inwork; 9531,13797 9668,13629
+         'data' => '#: last_checked: 2009-05-28
+userdel	q4::inwork 9531,13797 9668,13629
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_012692',
-         'until' => 1243288800,
-         'text' => 'Str. des 17. Juni (Tiergarten) in beiden Richtungen zwischen Großer Stern und Brandenburger Tor Veranstaltung, Straße vollständig gesperrt (bis 25.05.2009)',
-         'from' => 1242712177,
-         'id' => 1662,
-         'data' => 'userdel	2::temp 8515,12242 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 6828,12031
-',
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'IM_012694',
-         'until' => 1243288800,
-         'text' => 'Yitzhak-Rabin-Str. (Tiergarten) in beiden Richtungen zwischen Scheidemannstr. und Str. des 17. Juni Veranstaltung, Straße vollständig gesperrt (bis 25.05.2009)',
-         'from' => 1242712208,
-         'id' => 1663,
-         'data' => 'userdel	2::temp 8055,12186 8119,12414
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        undef,
        {
          'until' => 1254348000,
@@ -1163,6 +1352,54 @@ userdel	q4::inwork 8389,11378 8374,11479
          'id' => 1676,
          'data' => '#: last_checked: 2009-05-21
 userdel	q4::inwork 9126,12413 9345,12443
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_012809',
+         'until' => 1262300399,
+         'text' => 'Blockdammweg (Lichtenberg) Richtung Karlshorst zwischen Hönower Wiesenweg und Ehrlichstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 12/2009)',
+         'from' => 1243370925,
+         'id' => 1677,
+         'data' => 'userdel	q4::inwork; 17375,8847 17729,8850
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_012799',
+         'until' => 1370037599,
+         'text' => 'Glienicker Weg/Glienicker Str. (Treptow) Richtung Köpenick zwischen Adlergestell und Spindlersfelder Str. (DB-Brücke) Baustelle, Fahrtrichtung gesperrt (bis Ende 05.2013)',
+         'from' => 1243371263,
+         'id' => 1678,
+         'data' => 'userdel	q4::inwork; 21244,3571 21308,3680
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_012764',
+         'until' => 1254347999,
+         'text' => 'Glinkastr. (Mitte) Richtung Leipziger Str. zwischen Französische Str. und Jägerstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 09.2009)',
+         'from' => 1243371714,
+         'id' => 1679,
+         'data' => 'userdel	q4::inwork; 9183,12076 9201,11968
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1246831200,
+         'text' => 'L 171 Kurt-Tucholsky-Straße Ol Hohen Neuendorf, zw. Höhe E.-Toller-Str. u. OA Neubau Straßenbordanlage halbseitig gesperrt; Einbahnstraße 25.05.2009-05.07.2009 ',
+         'from' => 1243116000,
+         'id' => 1680,
+         'data' => 'userdel	q4::inwork 1366,29416 1304,29256 1234,29120 1124,28923 1078,28830 1020,28712 1009,28662 1007,28446
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1244239200,
+         'text' => 'L 303 Umgehungsstraße OD Eggersdorf, Krz. E.-Thälmann-Str. Deckenerneuerung Vollsperrung 25.05.2009-05.06.2009 ',
+         'from' => 1243116000,
+         'id' => 1681,
+         'data' => 'userdel	q4::inwork 38771,14926 38637,14790
 ',
          'type' => 'handicap'
        }

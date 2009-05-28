@@ -611,6 +611,7 @@ Ekhofplatz	1 23382,1429 23360,1390 23325,1418 23343,1454 23382,1429
 Müggelbergplatz	1 23293,1697 23321,1678 23303,1650 23278,1668 23293,1697
 #: by: Jessica (prusseit):
 Ingridpfad	1 6357,2863 6304,2825 6182,2727
+Georgenstr.	1 9313,12662 9108,12635
 ######################################################################
 #
 # Potsdam
@@ -1368,8 +1369,8 @@ Kleiststr.: schwierig zu querender Mittelstreifen	3nocross 6532,10529 6636,10492
 Bundesallee: Queren nicht möglich	3nocross 5360,8197 5359,8140 5357,8005
 (Los-Angeles-Platz)	1s:q3 5681,10696 5822,10609
 Bregenzer Str.	1 4278,10262 4227,10014
-Mollstr.: Straßenbahn	3nocross 11839,13083 11881,13072 11905,13069
-Mollstr.: Straßenbahn	3nocross 11881,13072 11839,13083 11739,13131 11723,13139
+Mollstr.: Straßenbahntrasse	3nocross 11905,13069 11881,13072 11839,13083 11739,13131 11723,13139
+Mollstr.: Straßenbahntrasse	3nocross 11881,13072 11905,13069 11966,13074 11985,13075
 (Berolinastr.): Tor zum Spielplatz	BNP:10 11865,13027
 (Berolinastr.): Tor zum Spielplatz	BNP:10 11874,13048
 (Berolinastr.): Tor zum Spielplatz	BNP:10 11815,13045
