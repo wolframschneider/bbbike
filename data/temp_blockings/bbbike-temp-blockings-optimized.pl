@@ -319,8 +319,8 @@ userdel	q4::inwork 9209,12795 9283,12856
        undef,
        {
          'source_id' => 'IM_009496',
-         'until' => 1243807199,
-         'text' => 'Glinkastr. (Mitte) in beiden Richtungen zwischen Jägerstr. und Taubenstr. Baustelle, Straße vollständig gesperrt (bis Ende 05.2009)',
+         'until' => 1245016800,
+         'text' => 'Glinkastr. (Mitte) in beiden Richtungen zwischen Jägerstr. und Taubenstr. Baustelle, Straße vollständig gesperrt (bis Mitte 06.2009)',
          'from' => 1231707233,
          'id' => 1171,
          'data' => '#: last_checked: 2009-05-27
@@ -523,7 +523,19 @@ userdel	q4::inwork; 9208,11872 9218,11793
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_012868',
+         'until' => 1243911600,
+         'text' => 'Straßen um den Blücherplatz Kreuzberg Blücherplatz, Waterlooufer: Mehringdamm - Zossener Str., Blücherstr.: Mehringdamm - Zossener Str., Zossener Str.: Waterlooufer-Blücherstr. gesperrt (bis 02.06.07, 05 Uhr)',
+         'from' => 1243578210,
+         'id' => 1358,
+         'data' => 'userdel	2::temp 9521,10010 9448,10014
+userdel	2::temp 9858,10199 9837,10117 9827,10051 9521,10010 9536,10064 9579,10122 9599,10175 9687,10180 9825,10206 9865,10227
+userdel	2::temp 9416,10196 9599,10175
+userdel	2::temp 9579,10122 9631,10142 9689,10124 9827,10051
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -835,8 +847,8 @@ userdel	1::inwork 12229,10014 12398,9938 12556,9862
        undef,
        {
          'source_id' => 'IM_011767',
-         'until' => 1243807199,
-         'text' => 'Lückstr. (Lichtenberg) Richtung Nöldnerstr. zwischen Giselastr. und Nöldnerplatz Baustelle, Fahrtrichtung gesperrt; sowie Einbahnstraßenregelungen in der Giselastr. und Stadthausstr. (bis Ende 05.09)',
+         'until' => 1243893599,
+         'text' => 'Lückstr. (Lichtenberg) Richtung Nöldnerstr. zwischen Giselastr. und Nöldnerplatz Baustelle, Fahrtrichtung gesperrt; sowie Einbahnstraßenregelungen in der Giselastr. und Stadthausstr. (bis Anfang 06.09)',
          'from' => 1240517859,
          'id' => 1572,
          'data' => 'userdel	q4::inwork; 16153,10818 16032,10842
@@ -955,7 +967,7 @@ userdel	q4::inwork; 15681,10801 15674,10851
          'text' => 'Bauarbeiten in der Simplonstr., Straße gesperrt',
          'from' => undef,
          'id' => 1597,
-         'data' => '#: last_checked: 2009-05-24 vvv
+         'data' => '#: last_checked: 2009-05-28 vvv
 userdel	q4::inwork; 14597,11069 14530,11137
 userdel	q4::inwork 14530,11137 14465,11195
 #: last_checked ^^^
@@ -1006,26 +1018,10 @@ userdel	q4::inwork; 9164,12172 9183,12076
        },
        undef,
        undef,
-       {
-         'until' => 1243634400,
-         'text' => 'L 063 Finsterwalder Straße OD Lauchhammer, zw. Bockwitzer Str. u. Neue Schehlenstraße Kanalarbeiten Vollsperrung 14.04.2009-29.05.2009 ',
-         'from' => 1239573600,
-         'id' => 1607,
-         'data' => 'userdel	q4::inwork 35072,-102150 35379,-103141
-',
-         'type' => 'handicap'
-       },
        undef,
        undef,
-       {
-         'until' => 1243634400,
-         'text' => 'B 102 Belziger Straße OD Treuenbrietzen, Kreisverkehr Ri. Belzig Sanierung Kreisverkehr Vollsperrung 15.04.2009-29.05.2009 ',
-         'from' => 1239660000,
-         'id' => 1610,
-         'data' => 'userdel	q4::inwork -25627,-35335 -25322,-35457
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1142,15 +1138,7 @@ userdel	2::inwork -50149,24689 -50048,24475 -49883,24097
        },
        undef,
        undef,
-       {
-         'until' => 1243634400,
-         'text' => 'L 712 Kemlitz-Paplitz zw. B115 und Paplitz, bei Baruth Straßenbau Vollsperrung 13.05.2009-29.05.2009 ',
-         'from' => 1242079200,
-         'id' => 1640,
-         'data' => 'userdel	2::inwork 15938,-42195 16017,-39838 15876,-39330
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1216,16 +1204,7 @@ userdel	q2::inwork 12095,20832 11686,21058
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_012659',
-         'until' => 1243807199,
-         'text' => 'Pappelallee (Prenzlauer Berg) in Richtung Schönhauser Allee zwischen Gneiststr. und Schönhauser Alllee Baustelle, Fahrtrichtung gesperrt (bis Ende 05.2009)',
-         'from' => 1242281874,
-         'id' => 1655,
-         'data' => 'userdel	q4::inwork; 11119,15385 10881,15047
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => undef,
@@ -1400,6 +1379,16 @@ userdel	q4::inwork 9126,12413 9345,12443
          'from' => 1243116000,
          'id' => 1681,
          'data' => 'userdel	q4::inwork 38771,14926 38637,14790
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_012806',
+         'until' => 1243893600,
+         'text' => 'Stendaler Str. (Hellersdorf) Richtung Riesaer Str. zwischen Janusz-Korczak-Str. und Hellersdorfer Str. Veranstaltung, gesperrt (bis 01.06.09 nachts)',
+         'from' => 1243578195,
+         'id' => 1682,
+         'data' => 'userdel	q4::inwork; 23960,15021 23993,14797
 ',
          'type' => 'handicap'
        }
