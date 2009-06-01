@@ -126,7 +126,7 @@ if (@reload) {
     }
     for my $reload (@reload) {
 	my $ltlnqr = qr{[-+]?\d+\.\d+};
-	if ($reload !~ m{($ltlnqr),($ltlnqr),($ltlnqr),($ltlnqr)\.osm$}) {
+	if ($reload !~ m{($ltlnqr),($ltlnqr),($ltlnqr),($ltlnqr)\.osm(?:\.gz)?$}) {
 	    die "The file name <$reload> does not look correct, i.e. created by this tool.\n";
 	}
 	my($x,$y,$xend,$yend) = ($1,$2,$3,$4);
@@ -215,6 +215,7 @@ sub download_osm_tile {
 		if (!$resp->is_success) {
 		    die "No success while mirroring '$url' to '$dest': " . $resp->status_line;
 		} else {
+		    no warnings 'uninitialized'; # content-encoding header may be missing
 		    if ($resp->header('content-encoding') eq 'gzip' && $dest !~ m{\.gz$}) {
 			if ($debug >= 1) {
 			    warn "Rename $dest -> $dest.gz...\n";

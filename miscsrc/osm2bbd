@@ -184,6 +184,7 @@ my %place_to_population;
 		   # Z5: gibt's in NRW
 		   (map { "line_dash.Z$_: 8,5,2,5" } (1 .. 10)),
 		  ],
+     'zebrastreifen' => ['category_image.Zs: ../misc/verkehrszeichen/Zeichen_350.svg:24x24=1:12000,xxx'],
     );
 
 # see http://www.mail-archive.com/talk@openstreetmap.org/msg06041.html
@@ -505,6 +506,11 @@ for my $osm_file (@osm_files) {
 		    push @or, ["ampeln", "X"];
 		} elsif ($highway_cat eq 'bus_stop') {
 		    add_underline(\@or, "_oepnv", "Bus");
+		} elsif ($highway_cat eq 'crossing' &&
+			 ((exists $tag{crossing} && ($tag{crossing} eq 'uncontrolled' || $tag{crossing} eq 'zebra')) ||
+			  (exists $tag{crossing_ref} && $tag{crossing_ref} eq 'zebra'))
+			) {
+		    push @or, ["zebrastreifen", "Zs"];
 		} else {
 		    $unhandled{"node-highway=$highway_cat"}++;
 		}
@@ -1407,6 +1413,18 @@ sub output_meta {
 			    wasserumland => 1,
 			    wideregion   => 1,
 			   };
+    for my $def (['u-bahn', ['ubahn', 'ubahnhof']],
+		 ['s-bahn', ['sbahn', 'sbahnhof']],
+		 ['r-bahn', ['rbahn', 'rbahnhof']],
+		) {
+	my($feature_name, $layers) = @$def;
+    CHECK_EMPTY_LAYER: {
+	    for my $layer (@$layers) {
+		last CHECK_EMPTY_LAYER if -s $layer;
+	    }
+	    $meta{skip_features}->{$feature_name} = 1;
+	}
+    }
 
     open my $ofh, ">", $meta_file_dd."~"
 	or die "Cannot write to $meta_file_dd~: $!";
