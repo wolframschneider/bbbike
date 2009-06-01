@@ -1337,7 +1337,9 @@ sub _outer_berlin_hack {
     $normalized_bezirk = lc $normalized_bezirk;
     my $outer_berlin_file = "$tmp_dir/" . $Strassen::Util::cacheprefix . "_" . $< . "_" . $normalized_bezirk . "_strassen";
     my $outer_berlin_str = eval { Strassen->new($outer_berlin_file) };
-    if (!$outer_berlin_str) {
+    my $landstr0 = Strassen->new("landstrassen", NoRead => 1);
+    my $plaetze0 = Strassen->new("plaetze", NoRead => 1);
+    if (!$outer_berlin_str || -M $outer_berlin_file > -M $landstr0->file || -M $outer_berlin_file > -M $plaetze0->file) {
 	$outer_berlin_str = Strassen->new;
 	my $landstr = MultiStrassen->new("landstrassen", "plaetze");
 	$landstr->init;
@@ -7326,7 +7328,7 @@ EOF
     print <<EOF;
 Verwendete Software:
 <ul>
-<li><a href="$perl_url">perl $]</a><a href="$perl_url"><img border=0 align=right src="http://www.perlfoundation.org//data/workspaces/perlfoundation/attachments/perl_trademark:20061112062117-1-29352/files/perl_powered-1.png" alt="Perl"></a>
+<li><a href="$perl_url">perl $]</a><a href="$perl_url"><img border=0 align=right src="http://www.perlfoundation.org/attachment/perl_trademark/perl_powered-1.png" alt="Perl"></a>
 <li>perl-Module:<a href="$cpan"><img border=0 align=right src="http://theoryx5.uwinnipeg.ca/images/cpan.jpg" alt="CPAN"></a>
 <ul>
 <li><a href="${scpan}CGI">CGI $CGI::VERSION</a>

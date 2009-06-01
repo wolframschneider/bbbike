@@ -147,7 +147,16 @@ userdel	q4::inwork 9209,12795 9283,12856
        undef,
        undef,
        undef,
-       undef,
+       {
+         'until' => 1244411999,
+         'text' => 'Treptower Festtage 5. Juni 2009 - 7. Juni 2009',
+         'from' => 1244066400,
+         'id' => 1010,
+         'data' => 'userdel	2::temp 14464,9927 14500,9856 14671,9759 14697,9726 14910,9643
+userdel	2::temp 14500,9856 14483,9843
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -258,7 +267,18 @@ userdel	q4::inwork 9209,12795 9283,12856
        undef,
        undef,
        undef,
-       undef,
+       {
+         'until' => 1249250399,
+         'text' => 'Berliner Gauklerfest vom 24. Juli 2009 bis 2. August 2009, einige Straßen am Opernpalais sind vollständig gesperrt',
+         'from' => 1248386400,
+         'id' => 1112,
+         'data' => 'userdel	2::temp 9890,12161 9869,12297 9795,12293 9780,12401
+userdel	2::temp 9869,12297 9852,12409
+userdel	2::temp 9986,12375 9926,12368 9972,12184
+userdel	2::temp 9915,12417 9926,12368
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -734,16 +754,7 @@ userdel	2::temp 9579,10122 9631,10142 9689,10124 9827,10051
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_010519',
-         'until' => 1243807199,
-         'text' => 'Gubitzstr. (Prenzlauer Berg) in beiden Richtungen zwischen Küselstr. und Scheritzstr. Bauarbeiten, Straße vollständig gesperrt (bis Ende 05.2009)',
-         'from' => 1231707258,
-         'id' => 1524,
-         'data' => 'userdel	2::inwork 12463,15774 12384,15618 12299,15463
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -834,16 +845,7 @@ userdel	1::inwork 12229,10014 12398,9938 12556,9862
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_012479',
-         'until' => 1243807199,
-         'text' => 'Köpenicker Str. (Kreuzberg) Richtung Engeldamm zwischen Heinrich-Heine-Str. und Michaelkirchstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 05.2009)',
-         'from' => 1241158705,
-         'id' => 1570,
-         'data' => 'userdel	q4::inwork; 11242,11720 11324,11689 11574,11594
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'source_id' => 'IM_011767',
@@ -900,15 +902,7 @@ userdel	q4::inwork; 15681,10801 15674,10851
        },
        undef,
        undef,
-       {
-         'until' => 1243720800,
-         'text' => 'L 015 Fürstenberg - Menz OD Fürstenberg, Krz. B 96 Straßenbau Vollsperrung 01.05.2009-30.05.2009 ',
-         'from' => 1241042400,
-         'id' => 1583,
-         'data' => 'userdel	q4::inwork -8775,85947 -8893,85743
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1246399200,
          'text' => 'L 015 Fürstenberg - Menz zw. Fürstenberg und Abzw. Altglobsow Straßenbau Vollsperrung 09.03.2009-30.06.2009 ',
@@ -918,15 +912,7 @@ userdel	q4::inwork; 15681,10801 15674,10851
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1246399200,
-         'text' => 'L 016 Flatow - Fehrbellin zw. Tarmow und Hakenberg Deckenerneuerung Vollsperrung 23.03.2009-30.06.2009 ',
-         'from' => 1237676400,
-         'id' => 1585,
-         'data' => 'userdel	2::inwork -29100,40590 -29745,41348 -30926,42438
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -984,17 +970,7 @@ userdel	q4::inwork; 15080,11905 14977,11754 14941,11689 14849,11539
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_012052',
-         'until' => 1243807199,
-         'text' => 'Glinkastr. (Mitte) Baustelle, Fahrbahn gesperrt (bis Ende 05.2009)',
-         'from' => 1238954738,
-         'id' => 1599,
-         'data' => '#: last_checked: 2009-05-27
-userdel	q4::inwork; 9164,12172 9183,12076
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1038,16 +1014,7 @@ userdel	q4::inwork; 9164,12172 9183,12076
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_011757',
-         'until' => 1243807199,
-         'text' => 'Schlichtallee (Lichtenberg) Richtung Nöldnerplatz zwischen beiden Einmündungen Fischerstr. Baustelle, gesperrt (Umfahrung über Fischerstr.) (bis Ende 05.09)',
-         'from' => 1243371742,
-         'id' => 1619,
-         'data' => 'userdel	1::inwork 15982,10765 16032,10842
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'until' => 1247263200,
@@ -1113,18 +1080,7 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_012427',
-         'until' => 1243807199,
-         'text' => 'Schadowstr. Richtung Unter den Linden Fahrtrichtung gesperrt (bis Ende 05.2009)',
-         'from' => 1240953370,
-         'id' => 1635,
-         'data' => '#userdel	q4::inwork; 8804,12280 8775,12457
-#: last_checked: 2009-05-21
-userdel	q4::inwork; 9018,12400 9028,12307
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => 1246053600,
@@ -1288,15 +1244,7 @@ userdel	q4::inwork 9531,13797 9668,13629
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1243807200,
-         'text' => 'L 014 Rosa-Luxemburg-Straße OL Wittstock, Kreuzungsberereich Bohnekampweg Bau Kreisverkehr Vollsperrung 25.05.2009-31.05.2009 ',
-         'from' => 1243116000,
-         'id' => 1672,
-         'data' => 'userdel	q4::inwork -53648,82294 -53491,81954 -53248,81574
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1245448800,
          'text' => 'L 015 Menz - Rheinsberg OD Menz Straßenbau Vollsperrung 25.05.2009-19.06.2009 ',
@@ -1391,6 +1339,33 @@ userdel	q4::inwork 9126,12413 9345,12443
          'data' => 'userdel	q4::inwork; 23960,15021 23993,14797
 ',
          'type' => 'handicap'
+       },
+       {
+         'until' => 1245103200,
+         'text' => 'B 096 Baruth - Wünsdorf OL Neuhof, Bahnübergang Reperaturarb. am Bahnübergang halbseitig gesperrt; Einbahnstraße 12.06.2009-15.06.2009 ',
+         'from' => 1244671200,
+         'id' => 1683,
+         'data' => 'userdel	q4::inwork 16360,-29489 16379,-29446
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1264978800,
+         'text' => 'L 076 Mahlow - Teltow zw. Abzw. Birkholz und Abzw. Großbeeren Straßenbau Vollsperrung 02.06.2009-31.01.2010 ',
+         'from' => 1243807200,
+         'id' => 1684,
+         'data' => 'userdel	2::inwork 7955,-4250 7790,-3985 6012,-3393 5394,-3053
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1245103200,
+         'text' => 'K 6304 Priort - B5, Elstal OL Priort, Bahnübergang Gleisbauarbeiten Vollsperrung 02.06.2009-15.06.2009 ',
+         'from' => 1243807200,
+         'id' => 1685,
+         'data' => 'userdel	2::inwork -19058,11636 -19029,11660 -18750,11919
+',
+         'type' => 'gesperrt'
        }
      
 );
