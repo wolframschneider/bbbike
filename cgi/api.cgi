@@ -12,7 +12,7 @@ my $opensearch_file = 'opensearch.streetnames';
 my $opensearch_dir  = '../data-osm';
 my $opensearch_dir2  = '../data-opensearch';
 
-my $debug         = 1;
+my $debug         = 2;
 my $match_anyware = 1;
 
 # performance tuning, egrep may be faster than perl regex
@@ -21,12 +21,10 @@ my $use_egrep = 1;
 sub ascii2unicode {
     my $string = shift;
 
-    return $string if $string !~ /\t/;
-
-    my ( $ascii, $unicode ) = split( /\t/, $string );
+    my ( $ascii, $unicode, @rest ) = split( /\t/, $string );
 
     warn "ascii2unicode: $unicode\n" if $debug >= 2;
-    return $unicode;
+    return $unicode ? $unicode : $ascii ;
 }
 
 sub street_match {
@@ -163,16 +161,17 @@ sub strip_list {
 my $q = new MyCgiSimple;
 
 my $action    = 'opensearch';
-my $street    = $q->param('search') || $q->param('q') || 'borsig';
-my $city      = $q->param('city') || 'bbbike';
+my $street    = $q->param('search') || $q->param('q') || 'garib';
+my $city      = $q->param('city') || 'germany';
 my $namespace = $q->param('namespace') || '0';
 
 binmode( \*STDERR, ":utf8" ) if $debug >= 1;
 
+my $expire = $debug ? '+1s' : '+1d';
 print $q->header(
     -type    => 'application/json',
     -charset => 'utf8',
-    -expires => '+1d'
+    -expires => $expire,
 );
 
 my @suggestion =
