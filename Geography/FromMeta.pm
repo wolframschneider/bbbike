@@ -1,7 +1,7 @@
 # -*- perl -*-
 
 #
-# $Id: FromMeta.pm,v 1.3 2009/02/27 22:46:35 eserte Exp $
+# $Id: FromMeta.pm,v 1.6 2009/06/02 05:34:04 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 2009 Slaven Rezic. All rights reserved.
@@ -59,6 +59,42 @@ sub center {
 
 sub bbox { shift->{bbox} }
 sub skip_features { %{ shift->{skip_features} || {} } }
+
+sub is_osm_source { (shift->{source}||'') eq 'osm' }
+
+sub coord_to_standard {
+    my($self, $x, $y) = @_;
+    if (($self->{coordsys}||'') eq 'wgs84') {
+	require Karte::Polar;
+	$Karte::Polar::obj->map2standard($x,$y);
+    } else {
+	($x, $y);
+    }
+}
+
+sub coord_s_to_standard {
+    my($self, $xy) = @_;
+    if (($self->{coordsys}||'') eq 'wgs84') {
+	require Karte::Polar;
+	join ",", $Karte::Polar::obj->map2standard(split /,/, $xy);
+    } else {
+	$xy;
+    }
+}
+
+sub _bbox_standard_coordsys {
+    my $self = shift;
+    my($x1,$y1,$x2,$y2) = @{ $self->bbox };
+    ($x1,$y1) = $self->coord_to_standard($x1,$y1);
+    ($x2,$y2) = $self->coord_to_standard($x2,$y2);
+    [$x1, $y1, $x2, $y2];
+}
+
+sub _center_standard_coordsys {
+    my $self = shift;
+    my $xy = $self->center;
+    $self->coord_s_to_standard($xy);
+}
 
 # sub datadir {
 #     require File::Basename;

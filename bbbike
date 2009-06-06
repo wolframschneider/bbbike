@@ -691,7 +691,7 @@ if ($city_obj) {
 	%skip_features = map{($_,1)} $city_obj->skip_features;
     }
     # XXX nicer solution?
-    if (($city_obj->{source}||'') eq 'osm') {
+    if ($city_obj->is_osm_source) {
 	$sBAB_two_track_width = 9999; # effectively turning off
     }
 }
@@ -1884,8 +1884,12 @@ unless($skip_features{"strassen"}) {
 	 -accelerator => 'S',
 	 -strchooseortargs =>
 	 {'-markstartifactive' => 1,
-	  -completelistbutton => sub { choose_from_plz(-interactive => 1) },
-	  -completelistbuttonlabel => M"Alle Straßen",
+	  (!$city_obj || !$city_obj->is_osm_source
+	   ? (-completelistbutton => sub { choose_from_plz(-interactive => 1) },
+	      -completelistbuttonlabel => M"Alle Straßen"
+	     )
+	   : ()
+	  ),
 	 },
 	 -strextrachoosemenuaction =>
 	 sub {
@@ -2522,13 +2526,13 @@ unless ($skip_features{"wasser"}) {
 			  pending(1, 'replot-str-w');
 		      },
 		     );
-    $wcm->checkbutton(-label => M"Gewässer in der Stadt zeichnen",
-		      -variable => \$wasserstadt,
-		      -command => sub {
-			  pending(1, 'replot-str-w');
-		      },
-		     );
     unless ($skip_features{"wasserumland"}) {
+	$wcm->checkbutton(-label => M"Gewässer in der Stadt zeichnen",
+			  -variable => \$wasserstadt,
+			  -command => sub {
+			      pending(1, 'replot-str-w');
+			  },
+			 );
 	$wcm->checkbutton(-label => M"Gewässer im Umland zeichnen",
 			  -variable => \$wasserumland,
 			  -command => sub {
@@ -2656,7 +2660,7 @@ unless ($skip_features{"sehenswuerdigkeiten"}) {
 
     if ($advanced) {
 	$knm->separator;
-	if (($city_obj->{source}||'') ne 'osm') {
+	if (!$city_obj->is_osm_source) {
 	    $knm->command(-label => M("Nicht mehr gepflegt").":",
 			  -state => 'disabled',
 			  -font => $font{'bold'},
@@ -3769,7 +3773,7 @@ if (!$MM_DRAG_IS_OBSOLETE) {
 			       $replotsub->();
 			   });
     }
-    if (($city_obj->{source}||'') ne 'osm') { # no scope with osm data
+    if (!$city_obj->is_osm_source) { # no scope with osm data
 	$opbm->cascade(-label => M('Scope').' ...');
 	{
 	    my $sbm = $opbm->Menu(-title => M('Scope').' ...');
@@ -4428,10 +4432,7 @@ if ($top->{initial_iconic}) {
     $top->deiconify;
 }
 
-if ($city_obj && $city_obj->bbox) {
-    require BBBikeAdvanced;
-    enlarge_scrollregion(@{ $city_obj->bbox });
-}
+scrollregion_best();
 
 # XXX should be after deiconify, otherwise center does not work (?)
 center_best();
@@ -6534,7 +6535,7 @@ sub generate_plot_functions {
 			       -tags      => ["$abk-out",
 					      "$abk-$cat_hin-out"],
                                ($line_dash_hin ? (-dash => $line_dash_hin) : ()),
-			       ($line_dash_rueck ? (-capstyle => $line_dash_rueck) : ()),
+			       ($line_capstyle_hin ? (-capstyle => $line_capstyle_hin) : ()),
 			       ($stipple ? (-stipple => $stipple) : ()),
 			       (exists $layer_category_line_arrow{$abk} && exists $layer_category_line_arrow{$abk}{$cat_hin} ? (-arrow => $layer_category_line_arrow{$abk}{$cat_hin})
 				: exists $layer_line_arrow{$abk} ? (-arrow => $layer_line_arrow{$abk})
@@ -11552,8 +11553,12 @@ sub choose_ort {
 sub choose_streets {
     choose_ort(qw(s s),
 	       -markstartifactive => 1,
-	       -completelistbutton => sub { choose_from_plz(-interactive => 1) },
-	       -completelistbuttonlabel => "Alle Straßen",
+	       (!$city_obj || !$city_obj->is_osm_source
+		? (-completelistbutton => sub { choose_from_plz(-interactive => 1) },
+		   -completelistbuttonlabel => "Alle Straßen"
+		  )
+		: ()
+	       )
 	      );
 }
 
@@ -15482,6 +15487,13 @@ sub scale_maps {
     }
 }
 
+sub scrollregion_best {
+    if ($city_obj && $city_obj->bbox) {
+	require BBBikeAdvanced;
+	set_scrollregion(@{ $city_obj->_bbox_standard_coordsys });
+    }
+}
+
 # Zentriert entweder auf eine Straße oder Koordinaten oder auf die Mitte
 # Berlins.
 ### AutoLoad Sub
@@ -15495,7 +15507,9 @@ sub center_best {
 	    return;
 	}
     }
-    if ($city_obj && $city_obj->center) {
+    if ($city_obj && $city_obj->_center_standard_coordsys) {
+	$c->center_view(transpose(split /,/, $city_obj->_center_standard_coordsys));
+    } elsif ($city_obj && $city_obj->center) {
 	$c->center_view(transpose(split /,/, $city_obj->center));
     } else {
 	$c->center_view;
