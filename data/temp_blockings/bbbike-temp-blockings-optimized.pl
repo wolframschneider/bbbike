@@ -543,19 +543,7 @@ userdel	q4::inwork; 9208,11872 9218,11793
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_012868',
-         'until' => 1243911600,
-         'text' => 'Straßen um den Blücherplatz Kreuzberg Blücherplatz, Waterlooufer: Mehringdamm - Zossener Str., Blücherstr.: Mehringdamm - Zossener Str., Zossener Str.: Waterlooufer-Blücherstr. gesperrt (bis 02.06.07, 05 Uhr)',
-         'from' => 1243578210,
-         'id' => 1358,
-         'data' => 'userdel	2::temp 9521,10010 9448,10014
-userdel	2::temp 9858,10199 9837,10117 9827,10051 9521,10010 9536,10064 9579,10122 9599,10175 9687,10180 9825,10206 9865,10227
-userdel	2::temp 9416,10196 9599,10175
-userdel	2::temp 9579,10122 9631,10142 9689,10124 9827,10051
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -722,7 +710,7 @@ userdel	2::temp 9579,10122 9631,10142 9689,10124 9827,10051
          'text' => 'Unterführung unter Adlergestell und Bahn wegen Brückenerneuerung gesperrt',
          'from' => undef,
          'id' => 1495,
-         'data' => 'userdel	2::inwork 20810,2398 20928,2412
+         'data' => 'userdel	2::inwork 20810,2398 20939,2413
 ',
          'type' => 'gesperrt'
        },
@@ -754,7 +742,16 @@ userdel	2::temp 9579,10122 9631,10142 9689,10124 9827,10051
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_010519',
+         'until' => 1245103199,
+         'text' => 'Gubitzstr. (Prenzlauer Berg) in beiden Richtungen zwischen Küselstr. und Scheritzstr. Bauarbeiten, Straße vollständig gesperrt (bis Mitte 06.2009)',
+         'from' => 1243972540,
+         'id' => 1524,
+         'data' => 'userdel	q4::inwork 12463,15774 12384,15618 12299,15463
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        undef,
@@ -845,13 +842,22 @@ userdel	1::inwork 12229,10014 12398,9938 12556,9862
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_012479',
+         'until' => 1245103199,
+         'text' => 'Köpenicker Str. (Kreuzberg) Richtung Engeldamm zwischen Heinrich-Heine-Str. und Michaelkirchstr. Baustelle, Fahrtrichtung gesperrt (bis Mitte 06.2009)',
+         'from' => 1244065297,
+         'id' => 1570,
+         'data' => 'userdel	q4::inwork; 11242,11720 11324,11689 11574,11594
+',
+         'type' => 'handicap'
+       },
        undef,
        {
          'source_id' => 'IM_011767',
-         'until' => 1243893599,
-         'text' => 'Lückstr. (Lichtenberg) Richtung Nöldnerstr. zwischen Giselastr. und Nöldnerplatz Baustelle, Fahrtrichtung gesperrt; sowie Einbahnstraßenregelungen in der Giselastr. und Stadthausstr. (bis Anfang 06.09)',
-         'from' => 1240517859,
+         'until' => 1246399199,
+         'text' => 'Lückstr. (Lichtenberg) Richtung Nöldnerstr. zwischen Giselastr. und Nöldnerplatz Baustelle, Fahrtrichtung gesperrt; sowie Einbahnstraßenregelungen in der Giselastr. und Stadthausstr. (bis Ende 06.2009)',
+         'from' => 1244065177,
          'id' => 1572,
          'data' => 'userdel	q4::inwork; 16153,10818 16032,10842
 userdel	q4::inwork; 16196,10911 16153,10818
@@ -939,21 +945,13 @@ userdel	q4::inwork; 15681,10801 15674,10851
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1262300400,
-         'text' => 'L 412 Bad Saarow - Alt Golm OD Neu Golm Kanal- und Straßenbau Vollsperrung 26.03.2009-31.12.2009 ',
-         'from' => 1237935600,
-         'id' => 1596,
-         'data' => 'userdel	q4::inwork 57976,-10623 57656,-10684 57418,-10618 56989,-10997
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Bauarbeiten in der Simplonstr., Straße gesperrt',
          'from' => undef,
          'id' => 1597,
-         'data' => '#: last_checked: 2009-05-28 vvv
+         'data' => '#: last_checked: 2009-06-01 vvv
 userdel	q4::inwork; 14597,11069 14530,11137
 userdel	q4::inwork 14530,11137 14465,11195
 #: last_checked ^^^
@@ -1330,16 +1328,7 @@ userdel	q4::inwork 9126,12413 9345,12443
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_012806',
-         'until' => 1243893600,
-         'text' => 'Stendaler Str. (Hellersdorf) Richtung Riesaer Str. zwischen Janusz-Korczak-Str. und Hellersdorfer Str. Veranstaltung, gesperrt (bis 01.06.09 nachts)',
-         'from' => 1243578195,
-         'id' => 1682,
-         'data' => 'userdel	q4::inwork; 23960,15021 23993,14797
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1245103200,
          'text' => 'B 096 Baruth - Wünsdorf OL Neuhof, Bahnübergang Reperaturarb. am Bahnübergang halbseitig gesperrt; Einbahnstraße 12.06.2009-15.06.2009 ',
@@ -1366,6 +1355,91 @@ userdel	q4::inwork 9126,12413 9345,12443
          'data' => 'userdel	2::inwork -19058,11636 -19029,11660 -18750,11919
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_012907',
+         'until' => 1298934000,
+         'text' => 'Pasewalker Str. (Pankow) stadteinwärts zwischen Marienstr. und Anschlussstelle A114 Baustelle, Fahrtrichtung gesperrt ist eingerichtet (bis Frühjahr 2011)',
+         'from' => 1243886249,
+         'id' => 1686,
+         'data' => 'userdel	q4::inwork; 12095,20832 12030,20490 12008,20368 11963,20136 11931,19965 11907,19838 11907,19749
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_012896',
+         'until' => 1245103199,
+         'text' => 'Sakrower Landstr. (Kladow) in beiden Richtungen zwischen Krampnitzer Weg und Kindlebenstr. Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei (bis Mitte 06.2009)',
+         'from' => 1243972705,
+         'id' => 1687,
+         'data' => 'userdel	q3::inwork -7710,4771 -7519,4843
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_012890',
+         'until' => 1246485599,
+         'text' => 'Bahnhofstr. (Pankow) in beiden Richtungen zwischen Mönchmühler Str. und Bahnübergang Baustelle, Straße vollständig gesperrt (bis Anfang 07.2009)',
+         'from' => 1244065266,
+         'id' => 1688,
+         'data' => 'userdel	q4::inwork 8626,23432 8803,23478 8909,23506
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_009958',
+         'until' => 1249077599,
+         'text' => 'Durchfahrt Bayreuther Str. gesperrt (bis Ende 07.2009)',
+         'from' => 1244065335,
+         'id' => 1689,
+         'data' => 'userdel	q4::inwork 6380,10704 6353,10583
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1245362400,
+         'text' => 'B 096 Löwenberg - Gransee OD Löwenberg Deckeneinbau Vollsperrung 16.06.2009-18.06.2009 ',
+         'from' => 1245016800,
+         'id' => 1690,
+         'data' => 'userdel	q4::inwork -7387,54453 -7352,54661
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1245103200,
+         'text' => 'B 096 Nassenheide - Löwenberg OD Löwenberg Deckeneinbau Vollsperrung 11.06.2009-15.06.2009 ',
+         'from' => 1244584800,
+         'id' => 1691,
+         'data' => 'userdel	q4::inwork -7665,54237 -6983,52753
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1245103200,
+         'text' => 'B 096 Nassenheide - Löwenberg OD Löwenberg, Friedrich-Ebert-Str. Deckeneinbau Vollsperrung 11.06.2009-15.06.2009 ',
+         'from' => 1244584800,
+         'id' => 1692,
+         'data' => 'userdel	q4::inwork -7665,54237 -7387,54453
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1244671200,
+         'text' => 'B 167 Liebenberg - Löwenberg OD Löwenberg Deckeneinbau Vollsperrung 08.06.2009-10.06.2009 ',
+         'from' => 1244325600,
+         'id' => 1693,
+         'data' => 'userdel	q4::inwork -7114,54591 -7387,54453
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1244325600,
+         'text' => 'B 167 Löwenberg - Grieben OD Löwenberg Deckeneinbau Vollsperrung 06.06.2009-06.06.2009 ',
+         'from' => 1244152800,
+         'id' => 1694,
+         'data' => 'userdel	q4::inwork -7665,54237 -7918,54138 -8307,53883
+',
+         'type' => 'handicap'
        }
      
 );

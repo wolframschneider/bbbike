@@ -12675,7 +12675,7 @@ EOF
        text  => 'Unterführung unter Adlergestell und Bahn wegen Brückenerneuerung gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 20810,2398 20928,2412
+userdel	2::inwork 20810,2398 20939,2413
 EOF
      },
      { from  => 1223320498, # 2008-10-06 21:14
@@ -12911,13 +12911,13 @@ EOF
 userdel	2::inwork 22172,194 22168,-71 22177,-137
 EOF
      },
-     { from  => 1231707258, # 2009-01-11 21:54
-       until => 1243807199, # 2009-05-31 23:59
-       text  => 'Gubitzstr. (Prenzlauer Berg) in beiden Richtungen zwischen Küselstr. und Scheritzstr. Bauarbeiten, Straße vollständig gesperrt (bis Ende 05.2009)',
-       type  => 'gesperrt',
+     { from  => 1243972540, # 2009-06-02 21:55
+       until => 1245103199, # 2009-06-15 23:59
+       text  => 'Gubitzstr. (Prenzlauer Berg) in beiden Richtungen zwischen Küselstr. und Scheritzstr. Bauarbeiten, Straße vollständig gesperrt (bis Mitte 06.2009)',
+       type  => 'handicap',
        source_id => 'IM_010519',
        data  => <<EOF,
-userdel	2::inwork 12463,15774 12384,15618 12299,15463
+userdel	q4::inwork 12463,15774 12384,15618 12299,15463
 EOF
      },
      { from  => 1230474690, # 2008-12-28 15:31
@@ -13304,9 +13304,9 @@ EOF
 userdel	q4::inwork; 15052,14585 15272,14691 15383,14759
 EOF
      },
-     { from  => 1241158705, # 2009-05-01 08:18
-       until => 1243636837, # 2009-05-31 23:59 1243807199
-       text  => 'Köpenicker Str. (Kreuzberg) Richtung Engeldamm zwischen Heinrich-Heine-Str. und Michaelkirchstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 05.2009)',
+     { from  => 1244065297, # 2009-06-03 23:41
+       until => 1245103199, # 2009-06-15 23:59
+       text  => 'Köpenicker Str. (Kreuzberg) Richtung Engeldamm zwischen Heinrich-Heine-Str. und Michaelkirchstr. Baustelle, Fahrtrichtung gesperrt (bis Mitte 06.2009)',
        type  => 'handicap',
        source_id => 'IM_012479',
        data  => <<EOF,
@@ -13322,9 +13322,9 @@ EOF
 userdel	q4::inwork 8536,11063 8483,10900
 EOF
      },
-     { from  => 1240517859, # 2009-04-23 22:17
-       until => 1243893599, # 2009-06-01 23:59
-       text  => 'Lückstr. (Lichtenberg) Richtung Nöldnerstr. zwischen Giselastr. und Nöldnerplatz Baustelle, Fahrtrichtung gesperrt; sowie Einbahnstraßenregelungen in der Giselastr. und Stadthausstr. (bis Anfang 06.09)',
+     { from  => 1244065177, # 2009-06-03 23:39
+       until => 1246399199, # 2009-06-30 23:59
+       text  => 'Lückstr. (Lichtenberg) Richtung Nöldnerstr. zwischen Giselastr. und Nöldnerplatz Baustelle, Fahrtrichtung gesperrt; sowie Einbahnstraßenregelungen in der Giselastr. und Stadthausstr. (bis Ende 06.2009)',
        type  => 'handicap',
        source_id => 'IM_011767',
        data  => <<EOF,
@@ -13520,7 +13520,7 @@ userdel	2::inwork 22467,-7066 21783,-6875 21527,-6853
 EOF
      },
      { from  => 1237935600, # 2009-03-25 00:00
-       until => 1262300400, # 2010-01-01 00:00
+       until => 1244150009, # 2010-01-01 00:00 1262300400
        text  => 'L 412 Bad Saarow - Alt Golm OD Neu Golm Kanal- und Straßenbau Vollsperrung 26.03.2009-31.12.2009 ',
        type  => 'handicap',
        data  => <<EOF,
@@ -13532,7 +13532,7 @@ EOF
        text  => 'Bauarbeiten in der Simplonstr., Straße gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2009-05-28 vvv
+#: last_checked: 2009-06-01 vvv
 userdel	q4::inwork; 14597,11069 14530,11137
 userdel	q4::inwork 14530,11137 14465,11195
 #: last_checked ^^^
@@ -14283,6 +14283,82 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork -19058,11636 -19029,11660 -18750,11919
+EOF
+     },
+     { from  => 1243886249, # 2009-06-01 21:57
+       until => 1298934000, # 2011-03-01 00:00
+       text  => 'Pasewalker Str. (Pankow) stadteinwärts zwischen Marienstr. und Anschlussstelle A114 Baustelle, Fahrtrichtung gesperrt ist eingerichtet (bis Frühjahr 2011)',
+       type  => 'handicap',
+       source_id => 'IM_012907',
+       data  => <<EOF,
+userdel	q4::inwork; 12095,20832 12030,20490 12008,20368 11963,20136 11931,19965 11907,19838 11907,19749
+EOF
+     },
+     { from  => 1243972705, # 2009-06-02 21:58
+       until => 1245103199, # 2009-06-15 23:59
+       text  => 'Sakrower Landstr. (Kladow) in beiden Richtungen zwischen Krampnitzer Weg und Kindlebenstr. Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei (bis Mitte 06.2009)',
+       type  => 'handicap',
+       source_id => 'IM_012896',
+       data  => <<EOF,
+userdel	q3::inwork -7710,4771 -7519,4843
+EOF
+     },
+     { from  => 1244065266, # 2009-06-03 23:41
+       until => 1246485599, # 2009-07-01 23:59
+       text  => 'Bahnhofstr. (Pankow) in beiden Richtungen zwischen Mönchmühler Str. und Bahnübergang Baustelle, Straße vollständig gesperrt (bis Anfang 07.2009)',
+       type  => 'handicap',
+       source_id => 'IM_012890',
+       data  => <<EOF,
+userdel	q4::inwork 8626,23432 8803,23478 8909,23506
+EOF
+     },
+     { from  => 1244065335, # 2009-06-03 23:42
+       until => 1249077599, # 2009-07-31 23:59
+       text  => 'Durchfahrt Bayreuther Str. gesperrt (bis Ende 07.2009)',
+       type  => 'handicap',
+       source_id => 'IM_009958',
+       data  => <<EOF,
+userdel	q4::inwork 6380,10704 6353,10583
+EOF
+     },
+     { from  => 1245016800, # 2009-06-15 00:00
+       until => 1245362400, # 2009-06-19 00:00
+       text  => 'B 096 Löwenberg - Gransee OD Löwenberg Deckeneinbau Vollsperrung 16.06.2009-18.06.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -7387,54453 -7352,54661
+EOF
+     },
+     { from  => 1244584800, # 2009-06-10 00:00
+       until => 1245103200, # 2009-06-16 00:00
+       text  => 'B 096 Nassenheide - Löwenberg OD Löwenberg Deckeneinbau Vollsperrung 11.06.2009-15.06.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -7665,54237 -6983,52753
+EOF
+     },
+     { from  => 1244584800, # 2009-06-10 00:00
+       until => 1245103200, # 2009-06-16 00:00
+       text  => 'B 096 Nassenheide - Löwenberg OD Löwenberg, Friedrich-Ebert-Str. Deckeneinbau Vollsperrung 11.06.2009-15.06.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -7665,54237 -7387,54453
+EOF
+     },
+     { from  => 1244325600, # 2009-06-07 00:00
+       until => 1244671200, # 2009-06-11 00:00
+       text  => 'B 167 Liebenberg - Löwenberg OD Löwenberg Deckeneinbau Vollsperrung 08.06.2009-10.06.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -7114,54591 -7387,54453
+EOF
+     },
+     { from  => 1244152800, # 2009-06-05 00:00
+       until => 1244325600, # 2009-06-07 00:00
+       text  => 'B 167 Löwenberg - Grieben OD Löwenberg Deckeneinbau Vollsperrung 06.06.2009-06.06.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -7665,54237 -7918,54138 -8307,53883
 EOF
      },
     );
