@@ -51,7 +51,7 @@ div#main { } // width: 600px; }
 
 
 /* ************************************************************ */
-div#htmltagcloud {
+div.htmltagcloud {
   text-align:  center; 
   line-height: 1; 
 }
