@@ -52,6 +52,7 @@ div#htmltagcloud {
   text-align:  center; 
   line-height: 1; 
 }
+
 span.tagcloud0 { font-size: 12px;}
 span.tagcloud0 a {text-decoration: none;}
 span.tagcloud1 { font-size: 13px;}
@@ -104,4 +105,6 @@ span.tagcloud24 { font-size: 36px;}
 span.tagcloud24 a {text-decoration: none;}
 
 .gml_tiny   { border-width: 0px; height: 18px; width: 50px;  margin-left: 10px; }
+
+
 
