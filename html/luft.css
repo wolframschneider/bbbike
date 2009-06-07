@@ -19,12 +19,14 @@ body {
 
 div#border { 
 	padding: 10px; 
-	background-color: #FFFFED; 
+	// background-color: #FFFFED; 
+	background-color: #FFF; 
 }
 
 div#all {
 	max-width: 48em;
 	background-color: #669966;
+	// background-color: #9c9;
 	margin: 1em;
 	margin: 0px auto; /* Right And Left Margin Widths To Auto */
 	position: relative;
@@ -109,4 +111,6 @@ span.tagcloud24 a {text-decoration: none;}
 
 table tr td { padding: 5px; }
 
-
+table td#cell_germany { background-color: #FFC }
+table td#cell_europe  { background-color: #CCF }
+table td#cell_other   { background-color: #AFA }
