@@ -309,7 +309,7 @@ Wehlener Str.	1 14673,17003 14535,17003
 Riastr.	1 18247,9158 18201,8984
 Karl-Bonhoeffer-Nervenklinik: für Unbefugte nicht befahrbar, Strafvollzug	2 5001,19832 5079,19635 5124,19634 5228,19320 5246,19244 5429,19165
 Schöneberger Südgelände: Radfahren verboten, Eintritt 1 Euro	2 7605,7109 7621,7105 7655,7096 7666,7093
-Schöneberger Südgelände: Radfahren verboten, Eintritt 1 Euro	2 7666,7093 7335,5807
+Schöneberger Südgelände: Radfahren verboten, Eintritt 1 Euro	2 7666,7093 7344,6104 7296,5872
 Prießnitzstr.	1 11549,19258 11407,19186 11351,19169
 Klaustaler Str.	1 11439,18890 11384,19067
 Paracelsusstr.	1 11599,19171 11549,19258 11543,19279 11575,19296 11613,19312 11671,19204
@@ -488,6 +488,7 @@ Müggelbergplatz	1 23293,1697 23321,1678 23303,1650 23278,1668 23293,1697
 Ingridpfad	1 6357,2863 6304,2825 6182,2727
 Georgenstr.	1 9313,12662 9108,12635
 Schulstr. (Tegel)	1 1953,20149 1794,20110
+Natalissteig	1 1202,14935 1223,14824 1226,14714
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718 -12323,635 -12332,585 -12582,127
 Leistikowstr.	1 -12512,810 -12302,718
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -1402,13 +1403,15 @@ tragen (Treppe)	0:30:-97 6172,12878
 tragen (Treppe)	0:40:-184 2921,13606
 tragen (Treppe)	0:40:-262 3016,13615
 tragen (Treppe, 32 Stufen)	0:40:-7 3054,13638
-tragen (Treppe, ca. 10 Stufen)	0:30:-12 20933,2390
+tragen (Treppe, ca. 10 Stufen)	0:30:41 20939,2389
 tragen (Treppe)	0:30:-43 -633,12739
 tragen (Treppe)	0:30:-118 -7418,181
-tragen (Treppe)	0:30:-64 -6933,14317
-tragen (Treppe)	0:30:2 -6934,14291
+tragen (Treppe, ca. 50 Stufen)	0:50:-64 -6933,14317
+tragen (Treppe, ca. 50 Stufen)	0:50:2 -6934,14291
 tragen (Treppe)	0:30:-237 20673,7260
 tragen (Treppe, ca. 6 Stufen)	0:15:-222 15488,8508
+Drängelgitter, für Anhänger nicht passierbar	BNP:5:-206 2009,3362
+Drängelgitter, für Anhänger nicht passierbar	BNP:5:-211 1980,3409
 Schwingtor	BNP:5:-153 15054,10168
 Schwingtor	BNP:5:-153 15097,10255
 Schranke, sehr enge Durchfahrt, nicht anhängertauglich	BNP:5:-135 14658,7513
