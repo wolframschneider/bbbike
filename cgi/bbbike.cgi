@@ -6114,8 +6114,10 @@ sub header {
     my(%args) = @_;
     my $from = delete $args{-from};
     if (!exists $args{-title}) {
-	$args{-title} = "BBBike";
+        my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
+	$args{-title} = "BBBike \@ $city";
     }
+
     no strict;
     local *cgilink = ($CGI::VERSION <= 2.36
 		      ? \&CGI::link
@@ -6213,6 +6215,7 @@ sub header {
     $args{-head} = $head if $head && @$head;
 
     if (!$smallform) {
+
 	print $q->start_html
 	    (%args,
 	     -lang => 'de-DE',
