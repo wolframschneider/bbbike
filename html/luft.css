@@ -32,7 +32,8 @@ div#all {
 	padding: 10px; 
 }
 
-div#footer { font-size: small; }
+div#footer { font-size: small; text-align: center; }
+div#footer_top { text-align: left; }
 
 /* ************************************************************ */
 /*Win IE fix \*/
@@ -44,7 +45,7 @@ h2 { text-align: center; }
 div#copyright { text-align: center; padding-top: 0.7em; font-size: small; }
 div#wetter { padding-left: 10px; }
 
-div#main { width: 500px; }
+div#main { } // width: 600px; }
 
 
 /* ************************************************************ */
