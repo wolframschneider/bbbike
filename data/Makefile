@@ -446,6 +446,12 @@ orte_city: orte_city-orig
 	mv orte_city~ orte_city
 	-@$(READONLY) $@
 
+ortsschilder: ortsschilder-orig
+	-@$(WRITEABLE) $@
+	$(CONVERT_ORIG) -unutf8ify ortsschilder-orig > ortsschilder~
+	mv ortsschilder~ ortsschilder
+	-@$(READONLY) $@
+
 ampeln:	ampeln-orig
 	-@$(WRITEABLE) $@
 	$(CONVERT_ORIG) ampeln-orig > ampeln~
@@ -1090,7 +1096,8 @@ do-checks:	.check_empty_lines \
 	.check_comments_scenic_2 \
 	.check_exits \
 	.check_temp_blockings .check_grenzuebergaenge \
-	.check_berlin .check_potsdam
+	.check_berlin .check_potsdam \
+	.check_ortsschilder .check_ortsschilder2
 
 .check_empty_lines:	*-orig
 	for i in *-orig; do $(PERL) -nle '$$_ eq q{} and die $$ARGV' $$i; done
@@ -1169,6 +1176,18 @@ check-disabled:
 .check_ampelschaltung:	ampelschaltung-orig ampeln-orig
 	$(CHECK_POINTS) -ampelschaltung ampelschaltung-orig ampeln-orig
 	@touch $@
+
+.check_ortsschilder:	ortsschilder .strassen.tmp landstrassen landstrassen2 fragezeichen
+	$(CHECK_POINTS) -catrx '^OS$$' ortsschilder .strassen.tmp landstrassen landstrassen2 fragezeichen
+	@touch $@
+
+.check_ortsschilder2:	orte orte2 ortsschilder
+	perl -MData::Dumper -I.. -I../lib -MStrassen::Core -e 'for $$o (qw(orte orte2)) { Strassen->new_stream($$o)->read_stream(sub { $$seen{$$_[0]->[0]}++ }) }; Strassen->new_stream("ortsschilder")->read_stream(sub { $$seen{$$_[0]->[0]}++ or $$error{$$_[0]->[0]}++ }); if (%error) { die Dumper(\%error) }' 
+	@touch $@
+
+# Interactive test
+.check_ortsschilder_dist:	orte orte2 ortsschilder
+	perl -Mopen=:locale  -MData::Dumper -I.. -I../lib -MStrassen::Util -MStrassen::Core -e 'for $$o (qw(orte orte2)) { Strassen->new_stream($$o)->read_stream(sub { $$pos{$$_[0]->[0]} = $$_[0]->[1][0]; $$cat{$$_[0]->[0]} = $$_[0]->[2] }) }; Strassen->new_stream("ortsschilder")->read_stream(sub { $$pos = $$_[0]->[1][0]; print int(Strassen::Util::strecke_s($$pos, $$pos{$$_[0]->[0]})) . " " . $$cat{$$_[0]->[0]} . " " . $$_[0]->[0] . "\n" }) ' | sort -nr | less
 
 # XXX Information duplicated in Strassen::Cat
 GESPERRT_CATRX='^(0:\d+(:-?\d+)?|1|1s(:q\d)?|2|3|3nocross|BNP:\d+(:-?\d+)?)(:inwork)?(::(igndisp|ignrte))?$$'

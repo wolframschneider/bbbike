@@ -66,9 +66,12 @@ Kutzow	0 56782,165441
 Bossin	0 54686,164527
 Suckow	0 44942,168115
 Usedom	3 42397,163738
-Seebad Ahlbeck	2 60383,171530
-Seebad Heringsdorf	2 58620,173512
-Seebad Bansin	2 57031,174737
+#: alias: Seebad Ahlbeck
+Ahlbeck	2 60383,171530
+#: alias: Seebad Heringsdorf
+Heringsdorf	2 58620,173512
+#: alias: Seebad Bansin
+Bansin	2 57031,174737
 Bansin Dorf	0 56493,173943
 Zirchow	2 57330,166095
 Benz	2 52675,171473
@@ -91,6 +94,7 @@ Klein Friedenwalde	0 33769,80829
 Friedenfelde	1 31236,81841
 Neudorf|(Friedenfelde)	0 30311,82061
 Milmersdorf	2 25146,78471
+Ahlimbsmühle	0 23991,74613
 Mittenwalde|b. Templin	2 26483,86997
 Netzow	0 15425,83562
 Metzelthin	0 15563,86309
@@ -144,6 +148,7 @@ Repente	0 -30917,83823
 Priepert	0 -16013,89972
 Drosedow	0 -24662,92304
 Wustrow	2 -20726,90673
+Lüttenhagen	0 7027,103533
 Feldberg	3 10780,103541
 Weggun	1 20367,102950
 Parmen	1 20924,105178
@@ -151,7 +156,7 @@ Arendsee	1 23320,103731
 Bergfeld	0 93,105239
 Wittenhagen	0 13185,104051
 Fürstenhagen	1 15430,103770
-Gützkow	3 7587,170583
+Gützkow	3 7521,170447
 Möllenbeck	2 4003,109246
 Karstädt	2 -103601,81383
 Prenzlau	4 39682,101543
@@ -160,8 +165,9 @@ Wollenthin	0 43200,102737
 Seelübbe	1 42432,96312
 Kietz Modderort|(bei Seelübbe)	0 42049,95965
 Brüssow	3 57405,111424
-Moor|(Brüssow)	0 55287,109712
+Moor|(Brüssow)	0 55319,109799
 Hammelstall|(Brüssow)	0 56821,109071
+Frauenhagen|(bei Brüssow)	0 59020,109268
 Woddow	1 61054,109046
 Bagemühl	1 62612,106709
 Damme|(Uckermark)	1 49971,99565
@@ -179,7 +185,7 @@ Wallmow	1 54861,105010
 Wendtshof|(Wallmow)	0 53669,106653
 Drense	1 47800,101393
 Ziemkendorf	1 50581,102443
-Grenz	0 51138,104355
+Grenz	0 51128,104358
 Cremzow	0 51391,106540
 Kleptow	0 49103,107584
 Carmzow	2 52178,109771
@@ -217,7 +223,7 @@ Kleinow|(Falkenwalde)	0 50846,97187
 Neu-Kleinow	0 49890,95231
 Weselitz	0 47542,95568
 Bertikow	1 45236,93922
-Bertikow Ausbau	0 43295,94461
+Bertikow Ausbau	0 43441,94555
 Bietikow	1 44950,96796
 Hohengüstow	1 48068,93338
 Lützlow	1 52103,93487
@@ -242,20 +248,20 @@ Kratzeburg	1 -23056,113208
 Wesenberg	3 -21335,96890
 Ducherow	2 32990,151593
 Heidberg	0 35410,151307
-Jarmen	3 3419,168376
-Helmshagen 1	1 5163,182985
+Jarmen	3 3323,168341
+Helmshagen 1	1 5053,182913
 Grubenhagen	0 4561,181118
 Dargelin	1 3708,178802
 Stresow|(bei Jarmen)	1 4853,175901
-Bandelin	1 5085,173318
+Bandelin	1 5064,173254
 Breechen	1 3842,169625
 Völschow	1 2684,163628
-Hedwigshof	0 1879,159948
-Groß Below	1 1355,156572
+Hedwigshof	0 1855,159950
+Groß Below	1 1311,156569
 Klempenow	0 1270,154159
 Rohrsoll	0 3,153427
-Klatzow	1 -2847,144949
-Neddemin	1 -657,138212
+Klatzow	1 -2882,144951
+Neddemin	1 -712,138233
 Groß Nemerow	1 -3982,118497
 Krickow	0 -5615,117023
 Usadel	0 -7210,114810
@@ -267,7 +273,7 @@ Grabow|(Mecklenburg)	3 -116692,94946
 Schwedt|/Oder	4 69238,73315
 Strasburg	3 31214,122842
 #: note eigentlich cat=3, aber ich möchte einen prominenten Ort auf/vor Usedom in der Übersichtskarte haben
-Wolgast	4 31756,183490
+Wolgast	4 32071,183630
 Zinnowitz	2 41450,186687
 Greifswald	5 5585,187733
 Vierraden	3 69901,77877
@@ -278,7 +284,7 @@ Burg Stargard	3 1763,120930
 Bargensdorf	1 -121,122847
 Neubrandenburg	5 -1725,127713
 Altentreptow	3 -2694,142835
-Burow	2 -1737,151716
+Burow	2 -1783,151713
 Lassan	3 37090,171843
 Peenemünde	1 31413,192783
 Greiffenberg	3 46564,76483
@@ -315,7 +321,7 @@ Bergen|auf Rügen	4 7796,223783
 Prohn	2 -19939,217939
 Rambin	1 -7477,216462
 Lychen	3 2797,89387
-Brüsenwalde	0 13427,93659
+Brüsenwalde	0 13327,93666
 Dreiseen	0 5272,90803
 Haßleben	1 28544,90574
 Petznick	1 23701,84425
@@ -385,7 +391,7 @@ Glinde	3 -209252,122140
 Reinbek	4 -206074,119025
 Bergedorf	0 -209464,116390
 Lenzen	3 -122199,74069
-Penkun	3 65441,100173
+Penkun	3 64957,100289
 Storkow|(bei Penkun)	1 68140,101615
 Büssow	0 67815,99673
 Wollin|(Penkun)	1 64241,102111
@@ -400,7 +406,7 @@ Löcknitz|(Vorpommern)	2 63078,117525
 Boock	1 65271,121596
 Rothenklempenow	1 62390,124403
 Dorotheenwalde	0 60269,123495
-Breitenstein	0 58638,125057
+Breitenstein	0 58633,125070
 Koblentz	0 57622,126012
 Krugsdorf	1 54341,125283
 Rothenburg|(bei Pasewalk)	1 52985,125809
@@ -499,7 +505,7 @@ Puttgarden	0 -140707,228954
 Landkirchen|a. Fehmarn	3 -145249,223995
 Großenbrode	2 -149473,215268
 Oldenburg|i. Holstein	3 -164504,205797
-Schönberg (Holstein)	3 -199259,218123
+Schönberg|(Holstein)	3 -199259,218123
 Heiligenhafen	3 -158722,214977
 Lütjenburg	3 -185716,205664
 Mustin	1 -163452,139247
@@ -531,15 +537,15 @@ Dresden	6 36012,-150175
 Prettin	3 -20307,-83384
 Strehla	3 838,-117208
 Nienburg	3 -99329,-65133
-Bernburg| (Saale)	4 -100606,-69760
+Bernburg|(Saale)	4 -100606,-69760
 Aschersleben	4 -120131,-74464
 Ermsleben	3 -128061,-77502
 Köthen	4 -85143,-74737
 Quellendorf	2 -74525,-74893
 Prosigk	2 -79460,-80066
 Libbesdorf	1 -75991,-72165
-Kochstedt (Dessau)	0 -71143,-69262
-Mosigkau (Dessau)	0 -73018,-68393
+Kochstedt|(Dessau)	0 -71143,-69262
+Mosigkau|(Dessau)	0 -73018,-68393
 Reupzig	1 -78953,-76175
 Scheuder	1 -78219,-72693
 Lausigk	0 -77648,-73754
@@ -549,10 +555,10 @@ Reppichau	1 -77937,-67763
 Grossbadegast	1 -81506,-76736
 Chorau	1 -75093,-67200
 Osternienburg	2 -81406,-69725
-Elsdorf (Köthen)	0 -84651,-71297
+Elsdorf|(Köthen)	0 -84651,-71297
 Micheln	1 -85307,-68008
 Klietzen	0 -85381,-69741
-Porst (Köthen)	0 -83331,-72431
+Porst|(Köthen)	0 -83331,-72431
 Dohndorf	1 -92206,-77781
 Biendorf	1 -93381,-74606
 Preußlitz	1 -96035,-76870
@@ -600,6 +606,12 @@ Drebkau	3 68184,-82563
 Casel	1 61438,-79059
 Ogrosen	1 55401,-76161
 Annaburg	3 -12151,-75427
+Groß Naundorf	1 -15300,-79584
+Löben	1 -10176,-71616
+Labrun	0 -17601,-82194
+Seydewitz	1 -2221,-109797
+Schirmenitz	1 -1950,-113206
+Neuseußlitz	1 14450,-128440
 Falkenberg|(Elster)	3 1142,-91254
 Uebigau	3 5358,-90502
 Herzberg|(Elster)	3 717,-79591
@@ -612,6 +624,7 @@ Lauchhammer	3 37087,-100932
 Doberlug-Kirchhain	3 23255,-86184
 Finsterwalde	3 32963,-85912
 Lichterfeld	1 37906,-89609
+Schacksdorf	1 36830,-87509
 Klettwitz	1 46184,-95755
 Lutherstadt Wittenberg	4 -40362,-60940
 Rehsen	1 -49722,-65491
@@ -785,7 +798,7 @@ Hoym	3 -130310,-71988
 Güsten	3 -110187,-70353
 Hecklingen	3 -115298,-64647
 Stassfurt	4 -111971,-63365
-Osterburg	3 -101651,40695
+Osterburg	3 -102482,40713
 Gommern	3 -95650,-38950
 Möckern	3 -87458,-31318
 Ziesar	3 -64739,-16816
@@ -799,14 +812,14 @@ Magdeburg	6 -109192,-32688
 Pechau	1 -103431,-37806
 Calenberge	1 -101621,-39969
 Elbenau	2 -100015,-42075
-Plotzky	2 -97377,-41357
+Plötzky	2 -97377,-41357
 Pretzien	1 -95892,-41945
 Dornburg	1 -92077,-43102
-Prödel	1 -89299,-42835
+Prödel	1 -89513,-42858
 Lübs	1 -87870,-44640
 Gehrden	1 -86670,-45979
 Güterglück	1 -84237,-48234
-Trebnitz (bei Zerbst)	0 -82189,-49677
+Trebnitz|(bei Zerbst)	0 -82189,-49677
 Wolmirstedt	3 -108659,-19330
 Schönebeck	4 -101869,-44835
 Burg|bei Magdeburg	4 -94732,-16773
@@ -869,7 +882,7 @@ Osterweddingen	1 -112727,-43035
 Gröningen	3 -136910,-54468
 Kroppenstedt	3 -130834,-54265
 Harsleben	2 -144837,-62705
-Tangermünde	4 -86172,13797
+Tangermünde	4 -86896,13725
 Tangerhütte	3 -97328,1281
 Stendal	4 -94596,20606
 Jerichow	3 -83453,8828
@@ -973,7 +986,8 @@ Koserow	2 47500,183223
 Loddin	2 47917,180585
 Kölpinsee	0 49060,182334
 Stubbenfelde	0 49675,181384
-Pudagla	1 52328,174629
+Pudagla	1 52336,174618
+Neu Pudagla	0 51558,178115
 Stoben	0 52203,172708
 Labömitz	0 52937,169481
 Stolpe|auf Usedom	1 47071,163315
@@ -1064,6 +1078,7 @@ Hohenselchow	2 68363,89887
 Hohenreinkendorf	1 71721,92864
 Geesow	1 75347,95511
 Mescherin	1 78564,94756
+Staffelde|(bei Mescherin)	0 78555,97379
 Tantow	1 73017,97449
 Keesow	0 72032,97559
 Schönfeld|(bei Penkun)	1 68964,97629
@@ -1089,9 +1104,8 @@ Sommersdorf	1 61351,98696
 Neuhof|bei Sommersdorf	0 62324,97382
 Grünz	1 58202,98423
 Radewitz	0 59670,99855
-Celle	5 -215735,20890
+Celle	5 -215501,20762
 Groß Rietz	1 65774,-20483
-Bornow	1 64929,-25152
 Birkholz|bei Beeskow	0 65076,-22519
 Görzig	1 65558,-17515
 Sauen	1 66048,-15160
@@ -1128,7 +1142,7 @@ Altwriezener Losse	0 63577,39781
 Ferdinandshof|(Oderbruch)	0 66154,42219
 Neureetz	1 59730,42362
 Altreetzer Losse	0 62066,41901
-Neuküstrinchen	1 60992,43905
+Neuküstrinchen	1 61012,43853
 Neurüdnitz	1 62672,43860
 Neuranft	1 59375,45180
 #: XXX_prog: beides zusammen ist Wustrow:

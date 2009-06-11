@@ -197,6 +197,7 @@ Kreisverkehr	Roundabout 4842,11679 4897,11727 4906,11772 4867,11835 4770,11820 4
 Kreisverkehr	Roundabout 8663,14960 8656,14947 8660,14929 8671,14919 8692,14923 8701,14932 8700,14956 8685,14966 8663,14960
 Kreisverkehr	Roundabout 23382,1429 23360,1390 23325,1418 23343,1454 23382,1429
 Kreisverkehr	Roundabout 23293,1697 23321,1678 23303,1650 23278,1668 23293,1697
+Kreisverkehr	Roundabout 59806,35893
 #: XXX_prog ^^^
 #: section ^^^
 #: by: Dagmar Schilka
@@ -226,7 +227,7 @@ Uferweg am Plötzensee	CS 5618,14981 5518,15236 5291,15424 5050,15643 5084,15415 
 (Eichborndamm - General-Woyna-Str.): Weg parallel zur S-Bahn-Trasse	CS 4232,18981 4285,18983 4353,18986 4475,18998 4577,19009
 #: by: Tom Urig
 Paul-Franke-Str.: Privatstraße durch die Genossenschaftssiedlung des Beamtenwohnungsvereins	CS 9901,18522 10006,18502 10013,18545 9994,18595 9916,18610
-Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52468,174931 52407,174744 52263,174673
+Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52468,174931 52439,174817 52407,174744 52263,174673
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52263,174673 52064,174635 52129,174507
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52056,174462 52129,174507 52064,174635
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52129,174507 52064,174635 52263,174673
@@ -253,4 +254,4 @@ ausgeschildert als "Köllnischer Platz"	CP2; 21796,4517 21775,4470
 ausgeschildert als "Köllnischer Platz"	CP2; 21796,4517 22071,4501
 #: by: Dennis Lucke-Schenk:
 Kambergstr. - Mauerweg: Achtung, scharfkantiges Metallteil in der Erde, Gefahr einer Reifenpanne	CS 11677,-58 11746,-62
-Moor: Achtung, schlechte Ausschilderung der Radroute! Nicht in die Sackgasse fahren!	CP; 55650,109962 55319,109799 55317,109697
+Moor: Achtung, schlechte Ausschilderung der Radroute! Nicht in die Sackgasse fahren!	CP; 55650,109962 55319,109799 55318,109732 55317,109697
