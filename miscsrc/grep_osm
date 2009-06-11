@@ -29,23 +29,26 @@ eval {
 if ($@) {
     warn "langinfo and/or CODESET probably not available, assuming iso-8859-1.\n";
     $codeset = 'iso-8859-1';
-}    
+}
+$codeset = lc $codeset; # 'UTF-8' is not recognized by emacs, but 'utf-8' is
 
 use DB_File;
 use Encode qw(decode encode);
 use Getopt::Long;
 use XML::LibXML;
 
-use constant CONTEXT_LINES => 30; # to be on the safe side...
+use constant DEFAULT_CONTEXT_LINES => 30; # to be on the safe side...
 use constant OSM_FILE_ENCODING => 'utf-8'; # assume all XML files are utf8
 
+my $context_lines = DEFAULT_CONTEXT_LINES;
+
 sub usage {
-    die "usage: $0 searchterm osmfile ...\n";
+    die "usage: $0 [-coordsys bbbike] [-context nr_of_lines] searchterm osmfile ...\n";
 }
 
 sub grep_osm_fh {
     my($search_term, $osm_file) = @_;
-    my @common_opts = ('-i', -A => CONTEXT_LINES, -B => CONTEXT_LINES);
+    my @common_opts = ('-i', -A => $context_lines, -B => $context_lines);
     $search_term = encode OSM_FILE_ENCODING, $search_term;
     my @cmd;
     if ($osm_file =~ m{\.bz2$}) {
@@ -72,7 +75,24 @@ sub set_info_handler {
     };
 }
 
-GetOptions() or usage;
+my $coordsys;
+GetOptions("coordsys=s" => \$coordsys,
+	   "context=i" => \$context_lines,
+	  ) or usage;
+
+my $out_conv;
+my $coordsys_map = 'polar';
+if ($coordsys) {
+    if ($coordsys eq 'bbbike') {
+	require Karte::Polar;
+	require Karte::Standard;
+	no warnings 'once';
+	$out_conv = sub { join ",", $Karte::Standard::obj->trim_accuracy($Karte::Polar::obj->map2standard(split /,/, $_[0])) };
+	$coordsys_map = 'standard'; # XXX can I use 'bbbike' instead?
+    } else {
+	die "Only -coordsys bbbike allowed";
+    }
+}
 
 my $index_dir = "$ENV{HOME}/.bbbike/cache";
 if (!-d $index_dir) {
@@ -81,7 +101,7 @@ if (!-d $index_dir) {
 my $index_file = $index_dir . '/osm_nodes_lonlat.db' . ($DB_File::db_version eq '' || $DB_File::db_version <= 1 ? '' : int($DB_File::db_version));
 
 tie my %nodes_lonlat, 'DB_File', $index_file, O_RDONLY, 0644
-    or die "Cannot tie '$index_file': $!";
+    or die "Cannot tie '$index_file' ($!), maybe you need to run cache_osm_nodes first?\n";
 
 my $search_term = shift @ARGV;
 usage if !defined $search_term;
@@ -106,61 +126,66 @@ for my $osm_file (@osm_files) {
 
     # Hack to find way and node elements in XML. Ignores
     # empty-elements (because they cannot have "name" tags, anyway).
-    while ($buf =~ m{(<(?:way|node) [^>]+(?<!/)>.*?</(?:way|node)>)}gs) {
-	my $xml_frag = $1;
-	if ($xml_frag =~ m{$search_term}i) {
-	    my $frag = eval { $p->parse_string($xml_frag) };
-	    if ($@) {
-		warn "Cannot parse\n$xml_frag\n$@";
-		next;
-	    }
-	    $frag = $frag->documentElement;
-	    my @coords;
-	    if ($frag->nodeName eq 'way') {
-		for my $nd_ref (map { $_->getAttribute('ref') } $frag->findnodes('//nd')) {
-		    my $lonlat = $nodes_lonlat{$nd_ref};
-		    if (defined $lonlat) {
-			push @coords, $lonlat;
-		    }
+    my @bufs = split /^--$/m, $buf;
+    for my $buf (@bufs) {
+	while ($buf =~ m{(<(?:way|node) [^>]+(?<!/)>.*?</(?:way|node)>)}gs) {
+	    my $xml_frag = $1;
+	    if ($xml_frag =~ m{$search_term}i) {
+		my $frag = eval { $p->parse_string($xml_frag) };
+		if ($@) {
+		    warn "Cannot parse\n$xml_frag\n$@";
+		    next;
 		}
-	    } else { # node
-		push @coords, join ',', $frag->getAttribute('lon'), $frag->getAttribute('lat');
-	    }
-	    if (!@coords) {
-		warn "No coords found in $xml_frag";
-		next;
-	    }
+		$frag = $frag->documentElement;
+		my @coords;
+		if ($frag->nodeName eq 'way') {
+		    for my $nd_ref (map { $_->getAttribute('ref') } $frag->findnodes('//nd')) {
+			my $lonlat = $nodes_lonlat{$nd_ref};
+			if (defined $lonlat) {
+			    push @coords, $lonlat;
+			} else {
+			    warn "WARN: Node $nd_ref cannot be resolved.\n";
+			}
+		    }
+		} else {	# node
+		    push @coords, join ',', $frag->getAttribute('lon'), $frag->getAttribute('lat');
+		}
+		if (!@coords) {
+		    warn "No coords found in $xml_frag";
+		    next;
+		}
 
-	    my @tags;
-	    for my $tag ($frag->findnodes('//tag')) {
-		my $k = $tag->getAttribute('k');
-		my $v = $tag->getAttribute('v');
-		s{[\t\n]}{ }g for $k, $v;
-		push @tags, "$k=$v";
-	    }
-	    for my $k (qw(user timestamp id)) {
-		my $v = $frag->getAttribute($k);
-		if (defined $v) {
-		    s{[\t\n]}{ }g for $v;
+		my @tags;
+		for my $tag ($frag->findnodes('//tag')) {
+		    my $k = $tag->getAttribute('k');
+		    my $v = $tag->getAttribute('v');
+		    s{[\t\n]}{ }g for $k, $v;
 		    push @tags, "$k=$v";
 		}
-	    }
+		for my $k (qw(user timestamp id)) {
+		    my $v = $frag->getAttribute($k);
+		    if (defined $v) {
+			s{[\t\n]}{ }g for $v;
+			push @tags, "$k=$v";
+		    }
+		}
 
-	    # re-sort, name= first, created_by last
-	    @tags = map { $_->[1] } sort { $a->[0] <=> $b->[0] } map { [m{^name=} ? 0 : m{^created_by=} ? 2 : 1, $_] } @tags;
+		# re-sort, name= first, created_by last
+		@tags = map { $_->[1] } sort { $a->[0] <=> $b->[0] } map { [m{^name=} ? 0 : m{^created_by=} ? 2 : 1, $_] } @tags;
 
-	    if ($needs_header) {
-		print <<EOF;
+		if ($needs_header) {
+		    print <<EOF;
 #: #: -*- coding: $codeset -*-
 #: encoding: $codeset
-#: map: polar
+#: map: $coordsys_map
 #: note: filtered '$search_term' in '@osm_files'
 #:
 EOF
-		$needs_header = 0;
-	    }
+		    $needs_header = 0;
+		}
 
-	    print join(" ", @tags) . "\tX " . join(" ", @coords), "\n";
+		print join(" ", @tags) . "\tX " . ($out_conv ? join(' ', map { $out_conv->($_) } @coords) : join(' ', @coords)), "\n";
+	    }
 	}
     }
 }
@@ -172,7 +197,7 @@ grep_osm - find nodes and ways in osm data by name
 
 =head1 SYNOPSIS
 
-    ./grep_osm searchregexp osmfile ...
+    ./grep_osm [-coordsys bbbike] [-context lines] searchregexp osmfile ...
 
 =head1 DESCRIPTION
 
@@ -185,6 +210,14 @@ L<cache_osm_nodes>, otherwise no coordinate mapping is possible.
 
 Output is in a bbd-like format, which can be loaded into L<bbbike>.
 
+By default the coordinates are in WGS84 format (lon, lat), but by
+specifying C<-coordsys bbbike> the old BBBike standard coordinates may
+be returned.
+
+If the feature is large, then the default number of context lines for
+the internal 'grep' (default is 30) is not large enough. With the
+C<-context> switch the number of context lines may be increased.
+
 =head1 BUGS
 
 Search is case-insensitive, but only for ASCII characters.
@@ -192,6 +225,9 @@ Search is case-insensitive, but only for ASCII characters.
 The search regexp is internally used by C<egrep> and C<perl>. Try to
 use only regular expression constructs which are compatible with both
 programs.
+
+The usage of context lines is a hack. Especially for large features it
+is necessary to use a larger C<-context> value.
 
 =head1 SEE ALSO
 

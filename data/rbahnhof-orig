@@ -104,7 +104,7 @@ Nauen	R -25037,22273
 Golm	RC -18752,-155
 Marquardt	RC -18868,5376
 Priort	RC -19003,11857
-Fürstenwalde (Spree) Süd	R 57365,-6202
+Fürstenwalde (Spree) Süd	R 57300,-6161
 Bad Saarow-Pieskow	R 55840,-11737
 Bad Saarow-Pieskow Süd	R0 56271,-14149
 Pfaffendorf (Mark)	R0 61919,-15513
@@ -201,7 +201,7 @@ Schneeberg	R 74244,-25777
 Grunow (Niederlausitz)	R 77470,-25460
 Mixdorf	R 78476,-21816
 Müllrose	R 81032,-17104
-Helenesee	R 83614,-13193
+Helenesee	R 83667,-13242
 Frankfurt (O)-Neuberesinchen	R 88647,-7503
 Kraftwerk Finkenheerd	R 90604,-14439
 Finkenheerd	R 90262,-16029
@@ -268,12 +268,12 @@ Werder (b Neuruppin)	R -37715,55491
 Wildberg (b Neuruppin)	R -42493,51900
 Dessow (Mark)	R -48066,53112
 Seelow	R 77633,16073
-Werbig	R 78270,18887
-Letschin	R 74222,26381
-Neutrebbin	R 66715,31243
-Wriezen	R 59972,35483
+Werbig	R 78342,18886
+Letschin	R 74233,26397
+Neutrebbin	R 66639,31097
+Wriezen	R 60002,35438
 Altranft	R 55935,40605
-Bad Freienwalde	R 52840,43690
+Bad Freienwalde	R 52760,43485
 Falkenberg (Mark)	R 47413,45515
 Niederfinow	R 45214,47941
 Zühlsdorf	RC 9929,36358
@@ -346,7 +346,7 @@ Großräschen	R 54031,-89812
 Seditz Ost	R 56844,-94111
 Senftenberg	R 53602,-96980
 Gollmitz	R 44819,-77554
-Weisen	R -100716,67070
+Weisen	R -100641,66986
 Perleberg	R -96458,72069
 Groß Pankow	R -83113,78142
 Pritzwalk	R -73845,80916

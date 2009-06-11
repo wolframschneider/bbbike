@@ -21,8 +21,8 @@ Rathenow	4 -62285,21020
 Premnitz	4 -61511,12174
 Pritzerbe	3 -53807,9077
 Perleberg	4 -95514,72399
-Wittenberge	4 -102912,64025
-Bad Wilsnack	3 -89647,59213
+Wittenberge	4 -102833,64013
+Bad Wilsnack	3 -89568,59293
 Rhinow	3 -62234,37103
 Havelberg	3 -80704,45488
 Sandau	2 -82358,41074
@@ -65,15 +65,17 @@ Blütenberg	0 34326,54103
 Joachimsthal	3 32966,64019
 Angermünde	4 49728,68465
 Oderberg	3 53187,51918
-Bad Freienwalde	4 52806,42862
-Wriezen	3 59454,35356
+Bad Freienwalde	4 52674,42805
+Wriezen	3 59489,35263
 Werneuchen	3 32444,25291
 Bernau|b. Berlin	4 22541,30476
 Buckow|(Märkische Schweiz)	3 55786,18881
 Seelow	3 76771,15413
+Buschdorf|bei Seelow	1 80636,23136
+Golzow|, Oderbruch	1 84414,20110
 #: XXX_prog Großgemeinde ohne Ortskern?
 Vierlinden	1 73372,12848
-Diedersdorf (Vierlinden)	1 73372,12848
+Diedersdorf|(Vierlinden)	1 73372,12848
 Müncheberg	3 60197,12001
 #: alias: Fürstenwalde/Spree
 Fürstenwalde	4 55562,-4726
@@ -131,9 +133,9 @@ Halbe	2 31700,-32810
 Teupitz	3 25240,-29746
 Lindow	3 -18915,62574
 Lübben	4 44683,-51759
-Manschnow	2 88251,18156
+Manschnow	2 88364,18251
 Küstrin-Kietz	2 92618,19763
-Lebus	3 87351,3652
+Lebus	3 87344,3693
 Frankfurt|(Oder)	5 88747,-5231
 Pagram	0 82557,-7615
 Rosengarten	0 83401,-5959
@@ -190,7 +192,7 @@ Beerbaum	0 36307,36503
 Heckelberg	1 39402,37410
 Freudenberg	1 38168,33025
 Beiersdorf	1 35737,32393
-Schönfeld (Barnim)	1 32703,30932
+Schönfeld|(Barnim)	1 32703,30932
 Kruge	0 42064,39744
 Börnicke|b. Bernau	1 25977,28869
 Birkenhöhe	0 22580,27309
@@ -204,7 +206,7 @@ Elisenau	0 24231,26525
 Helenenau	0 25801,25947
 Birkholzaue	0 24244,25405
 Birkholz	1 21730,24751
-Seefeld (Mark)	1 28531,24375
+Seefeld|(Mark)	1 28531,24375
 Löhme	1 29028,25240
 Werftpfuhl	0 36557,28789
 Tiefensee	1 39375,30937
@@ -223,7 +225,7 @@ Vorwerk	0 34568,19778
 Neuhönow	0 32882,19988
 Buchholz|b. Altlandsberg	1 36353,20334
 Wesendahl	1 37994,22152
-Spitzmühle	0 39123,19746
+Spitzmühle	0 39057,19770
 Eggersdorf b. Strausberg	2 38451,15268
 # um Oderberg herum
 Hohensaaten	2 59786,52928
@@ -343,17 +345,17 @@ Obersdorf	1 62416,15883
 #: alias: Altrosenthal
 Alt Rosenthal	0 69731,16901
 Gusow	2 74810,19707
-Neulangsow	0 78129,19465
+Neulangsow	0 78175,19383
 Werbig	1 76876,18431
 Friedersdorf|b. Seelow	1 77759,12767
 Dolgelin	2 78805,11331
-Lietzen	1 74262,8140
+Lietzen	1 74186,8159
 Libbenichen	1 80731,9206
 #: XXX_prog: Großgemeinde ohne Ortskern?
 Fichtenhöhe	1 79462,7750
 Alt Mahlisch	1 79462,7750
 Neu Mahlisch	1 77250,9375
-Falkenhagen|bei Seelow	2 72616,3728
+Falkenhagen|bei Seelow	2 72607,3668
 Petershagen	1 74246,584
 Treplin	1 78034,231
 Alt Zeschdorf	2 81214,3649
@@ -362,7 +364,7 @@ Niederjesar	1 80191,5813
 Hohenjesar	1 80606,3482
 Mallnow	1 84204,6898
 Schönfließ	1 83067,3018
-Podelzig	2 87415,9018
+Podelzig	2 87372,9073
 Sachsendorf	1 83638,12853
 Alt Tucheband	2 85619,15869
 Rathstock	1 87143,14501
@@ -403,16 +405,16 @@ Zinndorf	1 45725,11270
 Rehfelde	2 45732,14245
 Dorf Rehfelde	0 43972,12473
 Prötzel	2 49984,26511
-Prädikow	0 51587,25613
+Prädikow	0 51562,25643
 Kähnsdorf|(bei Strausberg)	0 49101,24195
-Sternebeck-Harnekop	2 50180,30446
+Sternebeck-Harnekop	2 50141,30438
 Haselberg	1 52842,34058
 Lüdersdorf-Biesdorf	1 56175,33010
 Frankenfelde|b. Wriezen	1 53780,31698
 Schulzendorf|b. Wriezen	1 57178,32115
 Herzhorn	0 52892,28720
 Bliesdorf	1 61267,33065
-Rathsdorf	1 57262,39111
+Rathsdorf	1 57248,38977
 Platzfelde	0 48887,39276
 Sonnenburg	0 53394,38301
 Dannenberg	1 47381,41481
@@ -430,7 +432,7 @@ Senftenhütte	1 40389,59318
 Golzow|b. Chorin	1 37029,56698
 Großziethen|(Uckermark)	1 42681,62073
 Althüttendorf	1 36731,62356
-Eichenbrandt	0 40714,25770
+Eichenbrandt	0 40655,25779
 Biesow	0 45810,31127
 Gielsdorf	1 41887,22959
 Radebrück	0 35225,17557
@@ -557,12 +559,14 @@ Neudorf	0 17394,43597
 Stolzenhagen|b. Wandlitz	1 12212,41512
 Zehlendorf	1 8696,42028
 Hammer|b. Liebenwalde	1 12018,52781
+Kreuzbruch	0 9925,47831
 Böhmerheide	0 14396,53646
 Zerpenschleuse	2 16526,50265
 Klandorf	1 20503,52217
 Groß Schönebeck	2 18156,55883
 Marienwerder	2 22912,48759
 Eichhorst	1 25465,54223
+Wildau|b. Eichhorst	0 26159,55831
 Rosenbeck	0 24390,52287
 Werbellin	0 29858,54346
 Lichterfelde	2 33021,51828
@@ -576,7 +580,10 @@ Vietmannsdorf	2 17761,71916
 Bebersee	0 21905,68583
 Friedrichswalde	1 29831,69617
 Reiersdorf	0 25875,71662
-Parlow-Glambeck	1 33657,69333
+#: XXX_prog: Teil von Parlow-Glambeck:
+#: alias: Parlow-Glambeck
+Parlow	1 33657,69333
+#: XXX_prog: Teil von Parlow-Glambeck:
 Glambeck	0 37292,68602
 Wolletz	1 43089,69480
 Altkünkendorf	1 41260,67587
@@ -726,7 +733,7 @@ Caputh	2 -17034,-6950
 Golm	1 -19324,-225
 Schlänitzsee|(Potsdam)	0 -19309,4359
 Eiche|b. Potsdam	1 -17444,-628
-Deetz (Havel)	1 -32448,3678
+Deetz|(Havel)	1 -32448,3678
 Phöben	1 -24894,1733
 Krielow	1 -30298,479
 Schmergow	1 -29389,4787
@@ -771,8 +778,8 @@ Garz|b. Warnau	0 -71888,37145
 Kuhlhausen	1 -72402,40484
 Jederitz	1 -76638,42698
 Legde	2 -88591,55191
-Weisen	2 -100690,66901
-Breese	2 -100570,64492
+Weisen	2 -100699,66850
+Breese	2 -100441,64350
 Cumlosen	2 -109431,67869
 Buckwitz	1 -52519,49887
 Großderschau	2 -60554,41573
@@ -786,7 +793,8 @@ Großmachnow	1 15088,-14222
 Schönefeld	2 17647,-1890
 # oldposition: -2006 18598,-4119
 Diepensee	1 23141,-11550
-Kienberg|(Diepensee)	0 20056,-2896
+Kienberg|(bei Waltersdorf)	0 20056,-2896
+Hubertussiedlung	0 21071,-2228
 Rotberg	1 18005,-6959
 Tollkrug	0 17278,-7925
 Karlshof	0 20255,-7591
@@ -808,11 +816,13 @@ Senzig	1 28816,-12940
 Neu Zittau	2 33628,-1509
 Burig	0 35164,-1870
 Wernsdorf	2 30900,-3682
-Dannenreich	1 34366,-9747
+Ziegenhals	0 29555,-4881
+Dannenreich	1 34301,-9750
 Kablow Ziegelei	0 32241,-9372
 Zernsdorf	2 30668,-11608
 Kablow	1 32409,-11596
-Friedrichshof	0 35679,-9355
+Friedrichshof	0 35666,-9320
+Wenzlow|(bei Friedersdorf)	0 36651,-9617
 Bindow	1 33989,-13281
 Gussow	1 33283,-16204
 Blossin	1 37885,-16100
@@ -944,7 +954,7 @@ Görsdorf	1 57979,-27501
 Wulfersdorf	0 59508,-28416
 Falkenberg|b. Beeskow	1 60443,-26427
 Buckow	2 62701,-23737
-Bornow|b. Beeskow	1 64929,-25152
+Bornow	1 64908,-25046
 Radinkendorf	0 69971,-20711
 Raßmannsdorf	0 68961,-15535
 Tauche	1 62742,-27242
@@ -966,7 +976,7 @@ Neuenhagen|bei Berlin	3 29743,14143
 Fredersdorf Süd	0 34139,13113
 Krausnick	1 40863,-40904
 Petkamsberg	0 43695,-43899
-Kietz|(Beeskow)	0 69290,-25534
+Kietz|(Beeskow)	0 69306,-25497
 Friedland	2 69851,-32733
 Neuendorf|b. Willmersdorf	1 81217,-65010
 Willmersdorf|b. Cottbus	1 78761,-65071
@@ -1034,6 +1044,7 @@ Linthe	1 -30746,-28772
 Kemnitz|b. Derwitz	1 -25815,-298
 Neuplötzin	0 -26272,-3095
 Bliesendorf	1 -26796,-8144
+Vevais	0 59941,33004
 Resau	0 -28040,-11038
 Busendorf	1 -28396,-13652
 Kanin	0 -27607,-13946
@@ -1149,10 +1160,10 @@ Vehlgast-Kümmernitz	1 -71873,42367
 Lohm	1 -64276,49280
 Schönholz-Neuwerder	1 -56900,35737
 Wutzetz	1 -46337,43157
-Seehausen|(Altmark)	3 -102836,52161
+Seehausen|(Altmark)	3 -102640,52303
 Werben|bei Havelberg	2 -87160,48933
 Räbel	0 -83861,46158
-Geestgottberg	1 -104795,59354
+Geestgottberg	1 -104645,59293
 Wulkau	1 -80644,37834
 Schollene	2 -70547,28822
 Bensdorf	1 -60954,-801

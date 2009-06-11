@@ -16,7 +16,7 @@ Neuer Garten: Fuﬂg‰nger	q2 -11510,810 -11231,696
 Am Waldessaum: Fuﬂg‰nger, enger Weg	q2 -12825,1284 -12709,1106
 Heiliger See, Ostufer: Schiebestrecke	q3 -11650,590 -11603,721 -11615,853
 Uferpromenade Caputh: Fuﬂg‰nger	q3 -17643,-7028 -17703,-7228 -18009,-7528
-Uferweg am Straussee: viele Fuﬂg‰nger, enger Weg	q2 41668,17984 41612,18287 41675,18462 41953,19137 42031,19131 42181,19212 42409,19193 42578,19587
+Uferweg am Straussee: viele Fuﬂg‰nger, enger Weg	q2 41668,17984 41612,18287 41699,18454 41913,19064 42031,19131 42148,19199 42341,19200 42488,19363 42578,19587
 Am Schafgraben: enger Parkweg	q2 -14500,-2012 -14536,-1943 -14571,-1881 -14612,-1809
 Gesundheitsweg: enger Parkweg	q2 -14351,-1882 -14571,-1881
 Holzmarktstr - Humboldtbr¸cke: steile Rampe	q4 -11910,-945 -11875,-925
@@ -44,7 +44,7 @@ Uferpromenade Neppermin: eng und kurvenreich	q2 49978,171395 50057,171489 50243,
 Strandpromenade Bansin: viele Fuﬂg‰nger	q2 57035,175688 57193,175474 57378,175225
 Strandpromenade Bansin: sehr viele Fuﬂg‰nger	q3 57378,175225 57443,175137
 Seestr. - Strandpromenade: sehr viele Fuﬂg‰nger	q3 57406,175093 57443,175137
-Strandpromenade Bansin - Ahlbeck: viele Fuﬂg‰nger	q2 57443,175137 57550,175037 57685,174859 57875,174609 58506,173987 58839,173686 59067,173452 59064,173400 59087,173312 59259,173132 59375,172964 60568,171806 61037,171450 61559,171081 62458,170493 62629,170390
+Strandpromenade Bansin - Ahlbeck: viele Fuﬂg‰nger	q2 57443,175137 57550,175037 57685,174859 57875,174609 58506,173987 58839,173686 59067,173452 59064,173400 59087,173312 59259,173132 59375,172964 60568,171806 61037,171450 61559,171081 61861,170883 62458,170493 62629,170390
 #: by: Ricarda Mache
 #: unsure: sieht auf dem Sattellitenbild wie eine normale Nebenstrasse aus [AM]
 Bahnhofstr.: schmale Straﬂe	q1 -2657,-2907 -2720,-2937 -2817,-2967 -2878,-3004 -2918,-3010 -3004,-3000 -3159,-2968 -3235,-2953 -3356,-2926 -3451,-2906 -3475,-2884 -3528,-2810 -3650,-2609
@@ -127,3 +127,6 @@ Wockninstr. (‹ckeritz): enge Straﬂe	q1 51229,179229 51270,179246 51327,179272 51
 #: by: anonymous
 Kiefernring (Potsdam): parkende Autos	q1 -10519,-5173 -10618,-4998 -10685,-5022 -10740,-5048 -10770,-5062 -10862,-5108 -10836,-5170 -10795,-5257 -10773,-5294
 Am Sportplatz - Marktplatz: eng, Fuﬂg‰nger	q2 57188,111478 57226,111462 57256,111391 57292,111423
+(Am Jungfernsee): steile Stelle, schieben	q4 -12586,2373 -12609,2364 -12637,2348
+(Dennis-Gabor-Str. - Pappelallee): ‹berquerung von Tramgleisen	q3 -14534,434 -14547,388
+Wriezen, Innenstadt: Fuﬂg‰ngerzone, Radfahren erlaubt	q1 59806,35893 59689,35457 59740,35420
