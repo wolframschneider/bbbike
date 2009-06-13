@@ -899,7 +899,7 @@ EOF
        text  => 'L 40; (Großbeeren-Güterfelde); zw. Großbeeren u. Neubeeren Neubau Bauwerk Vollsperrung 24.09.2004-31.05.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 2443,-6309 2715,-6365
+userdel	2 2423,-6303 2715,-6365
 EOF
      },
      { from  => 1096754400, # 2004-10-03 00:00
@@ -2329,7 +2329,7 @@ EOF
        text  => 'B 87; zw. Hohenwalde und Müllrose Munitionsbergung Vollsperrung 29.07.2005-06.08.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 81697,-12826 81362,-13667 81278,-13886
+userdel	2 81697,-12826 81362,-13667 81274,-13843
 EOF
      },
      { from  => 1121896800, # 2005-07-21 00:00
@@ -3590,7 +3590,7 @@ EOF
        text  => 'B 112 Guben-Frankfurt (O) Kreuz. L 45/B 112/K6702 in Steinsdorf Bau der Kreuzung Vollsperrung 04.04.2006-18.06.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	2 91858,-18170 90698,-16886
+userdel	2 91858,-18170 90615,-16871
 EOF
      },
      { from  => undef, # 
@@ -3691,7 +3691,7 @@ EOF
        text  => 'L 401 Richard-Sorge-Str./ Bergstr. OL Wildau, Bahnübergang Bergstr. Gleisbauarbeiten Einmünd. gesp. 05.03.2006-10.03.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 26381,-9962 26339,-9943 25700,-9502
+userdel	2 26432,-10043 26285,-10054 26262,-10015 26262,-9880 26174,-9760 26093,-9701 25991,-9671 25805,-9553
 EOF
      },
      { from  => 1141254000, # 2006-03-02 00:00
@@ -4026,7 +4026,7 @@ EOF
        text  => 'B 112 Ziltendorf-Brieskow Finkenheerd OD Wiesenau Straßenbauarbeiten Vollsperrung; Umleitung 07.04.2006-09.04.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 91858,-18170 90698,-16886
+userdel	q4 91858,-18170 90615,-16871
 EOF
      },
      { from  => 1145743200, # 2006-04-23 00:00
@@ -4219,8 +4219,8 @@ EOF
        data  => <<EOF,
 userdel	2 9383,13978 9203,13953
 userdel	2 9151,13941 9203,13953
-userdel	2 9151,13941 9076,13915
-userdel	2 9076,13915 8935,13844
+userdel	2 9151,13941 9085,13919
+userdel	2 9085,13919 8935,13844
 EOF
      },
      { from  => 1145430358, # 2006-04-19 09:05
@@ -4359,7 +4359,7 @@ EOF
        text  => 'L 401 R.-Sorge-/ Bergstr. Bahnübergang Bergstraße Gleisbauarbeiten Zufahrt gesperrt 07.05.2006-12.05.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 26381,-9962 26339,-9943 25700,-9502
+userdel	2 26432,-10043 26285,-10054 26262,-10015 26262,-9880 26174,-9760 26093,-9701 25991,-9671 25805,-9553
 EOF
      },
      { from  => 1146897090, # 2006-05-06 08:31
@@ -4455,7 +4455,7 @@ EOF
        text  => 'Straße am Nordbahnhof zwischen Invalidenstraße und Zinnowitzer Veranstaltung, Straße gesperrt. Dauer: 18.05.2006, 06:00 Uhr bis 21.05.2006 12:00 Uhr. ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 9076,13915 9006,14005
+userdel	2 9085,13919 9015,14014
 EOF
      },
      { from  => 1148162400, # 2006-05-21 00:00
@@ -5483,7 +5483,7 @@ EOF
        text  => 'L 401 Königs Wusterhausen-Wildau OL Königs Wusterhausen, Höhe Neue Ziegelei Deckeneinbau Vollsperrung 31.08.2006-01.09.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 26434,-10443 26418,-10758 26407,-10986
+userdel	2::inwork 26446,-10394 26418,-10758 26407,-10986
 EOF
      },
      { from  => 1156024800, # 2006-08-20 00:00
@@ -5756,7 +5756,7 @@ EOF
        text  => 'L 401 R.-Sorge-Str./ Bergstr. Bahnübergang Bergstr. in OL Wildau Arbeiten am BÜ Vollsperrung; Umleitung 04.09.2006-06.09.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 26381,-9962 26339,-9943 25700,-9502
+userdel	2::inwork 26432,-10043 26285,-10054 26262,-10015 26262,-9880 26174,-9760 26093,-9701 25991,-9671 25805,-9553
 EOF
      },
      { from  => 1157576473, # 2006-09-06 23:01
@@ -6119,7 +6119,7 @@ EOF
        text  => 'L 037 Frankfurter Straße Brücke, Oder-Spree-Kanal Brückensanierungsarbeiten Vollsperrung 05.10.2006-14.10.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 80143,-15900 79825,-16575
+userdel	2::inwork 80122,-15845 80061,-15988 79932,-16207 79861,-16543
 EOF
      },
      { from  => 1164916572, # 2006-11-30 20:56
@@ -6659,7 +6659,7 @@ EOF
        text  => 'L 338 Rosa-Luxemburg-Damm/ Hauptstr. Bahnübergang in der OL Neuenhagen Erneu. Gleisanlagen Vollsperrung 18.11.2006-21.11.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 30179,13667 30795,13191 30815,13170 30975,12918
+userdel	2::inwork 30179,13667 30795,13191 30815,13170 30910,13101 30982,12947
 EOF
      },
      { from  => undef, # 
@@ -9077,7 +9077,7 @@ EOF
        text  => 'L 338 R.-Luxemburg-Damm, Hauptstr. Bahnübergang in der OL Neuenhagen Erneuerung Bahnübergang halbseitig gesperrt; Einbahnstraße 16.07.2007-31.08.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 30795,13191 30815,13170 30975,12918
+userdel	2::inwork 30795,13191 30815,13170 30910,13101 30982,12947
 EOF
      },
      { from  => 1185055200, # 2007-07-22 00:00
@@ -10151,7 +10151,7 @@ EOF
        text  => 'L 037 zw. Schernsdorf und Müllrose Straßensanierungsarbeiten Vollsperrung 15.10.2007-16.10.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 80237,-17646 80679,-17994 82000,-19505
+userdel	2::inwork 80307,-17691 80679,-17994 82000,-19505
 EOF
      },
      { from  => 1192399200, # 2007-10-15 00:00
@@ -12394,7 +12394,7 @@ EOF
        text  => 'L 373 B112 - Müllrose OL Bri.-Finkenheerd ab KP Bhf-/Sonnenburgstr., 500m Ri. OA Kanal- und Straßenbau Vollsperrung 29.09.2008-30.11.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 89098,-16962 90109,-16411
+userdel	2::inwork 89098,-16962 89237,-16878 89435,-16834 90073,-16502 90164,-16382
 EOF
      },
      { from  => 1220035590, # 2008-08-29 20:46
@@ -12912,7 +12912,7 @@ userdel	2::inwork 22172,194 22168,-71 22177,-137
 EOF
      },
      { from  => 1243972540, # 2009-06-02 21:55
-       until => 1245103199, # 2009-06-15 23:59
+       until => 1244786221, # 2009-06-15 23:59 1245103199
        text  => 'Gubitzstr. (Prenzlauer Berg) in beiden Richtungen zwischen Küselstr. und Scheritzstr. Bauarbeiten, Straße vollständig gesperrt (bis Mitte 06.2009)',
        type  => 'handicap',
        source_id => 'IM_010519',
@@ -13032,7 +13032,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010718',
        data  => <<EOF,
-userdel	2::inwork 9076,13915 8935,13844
+userdel	2::inwork 9085,13919 8935,13844
 EOF
      },
      { from  => 1227353511, # 2008-11-22 12:31
@@ -13576,8 +13576,8 @@ userdel	q4::inwork; 7378,14559 7180,14419 7132,14375 6992,14251 6807,14093 6730,
 EOF
      },
      { from  => 1238450400, # 2009-03-31 00:00
-       until => 1254348000, # 2009-10-01 00:00
-       text  => 'B 002 Wittenberg - LG - Treuenbrietzen OD Marzahna Kanal- und Straßenbau halbseitig gesperrt; Einbahnstraße 01.04.2009-30.09.2009 ',
+       until => 1261177200, # 2009-12-19 00:00
+       text  => 'B 002 Wittenberg - LG - Treuenbrietzen OD Marzahna Kanal- und Straßenbau halbseitig gesperrt; Einbahnstraße 01.04.2009-18.12.2009 ',
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::inwork; -32313,-49192 -31201,-45781
@@ -14370,13 +14370,13 @@ EOF
 userdel	q4::inwork 9516,12010 9504,12108
 EOF
      },
-     { from  => 1244584654, # 2009-06-09 23:57
+     { from  => 1244785956, # 2009-06-12 07:52
        until => 1244865600, # 2009-06-13 06:00
-       text  => 'John-Foster-Dulles-Allee (Tiergarten) in beiden Richtungen zwischen Große Querallee und Yitzhak-Rabin-Str. Veranstaltung, Straße vollständig gesperrt (bis 13.06.2009, ca. 6 Uhr)',
+       text  => 'John-Foster-Dulles-Allee (Tiergarten) in beiden Richtungen zwischen Spreeweg und Yitzhak-Rabin-Str. Veranstaltung, Straße vollständig gesperrt (bis 13.06.2009, ca. 6 Uhr)',
        type  => 'gesperrt',
        source_id => 'IM_012990',
        data  => <<EOF,
-userdel	2::temp 8119,12414 8070,12409 8017,12359 7875,12363
+userdel	2::temp 7039,12314 7215,12295 7437,12368 7514,12387 7875,12363 8017,12359 8070,12409 8119,12414
 EOF
      },
      { from  => 1244930400, # 2009-06-14 00:00
@@ -14417,6 +14417,65 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork 26001,-6257 26057,-6241 26146,-6218
+EOF
+     },
+     { from  => 1244786065, # 2009-06-12 07:54
+       until => 1245103200, # 2009-06-16 00:00
+       text  => 'Altstadt Köpenick Köpenick Veranstaltung, folgende Straßen sind gesperrt: Alt-Köpenick, Schlossplatz, Grünstr. - Jägerstr. - Schüßlerplatz, Schlossinsel und Luisenhain (bis 15.06.2009 abends)',
+       type  => 'gesperrt',
+       source_id => 'IM_013024',
+       data  => <<EOF,
+userdel	2::temp 22111,4562 22093,4499 22076,4422
+userdel	2::temp 22071,4501 22057,4531 22043,4562 22147,4831 22196,4847 22175,4730 22138,4661 22111,4562 22162,4546 22214,4548 22312,4593 22355,4660 22383,4703
+EOF
+     },
+     { from  => 1244786167, # 2009-06-12 07:56
+       until => 1245880800, # 2009-06-25 00:00
+       text  => 'Damerowstr./Breite Str. (Pankow) Richtung Schönholzer Str. nach Mendelstr. Baustelle, Fahrtrichtung gesperrt (bis ca. 24.06.2009)',
+       type  => 'handicap',
+       source_id => 'IM_013029',
+       data  => <<EOF,
+userdel	q4::inwork; 11357,18598 11204,18545 11025,18531
+EOF
+     },
+     { from  => 1244930400, # 2009-06-14 00:00
+       until => 1272664800, # 2010-05-01 00:00
+       text  => 'K 6422 Eggersdorfer Str. OL Petershagen, zw. Gravenhainstr. u. Johannesstr. Straßenausbau Vollsperrung 15.06.2009-30.04.2010 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 36654,13977 35900,13643
+EOF
+     },
+     { from  => 1244757600, # 2009-06-12 00:00
+       until => 1244930400, # 2009-06-14 00:00
+       text  => 'K 6905 Langerwisch - Wilhelmshorst - B 2 OD Langerwisch, Abzw. Wilhelmshorst Straßenbau Vollsperrung 13.06.2009-13.06.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -12312,-10337 -12337,-10735
+EOF
+     },
+     { from  => 1245103200, # 2009-06-16 00:00
+       until => 1270072800, # 2010-04-01 00:00
+       text  => 'L 077 Langerwisch - Saarmund OD Langerwisch Straßenbau Vollsperrung 17.06.2009-31.03.2010 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -12915,-10753 -12337,-10735
+EOF
+     },
+     { from  => 1244584800, # 2009-06-10 00:00
+       until => 1246658400, # 2009-07-04 00:00
+       text  => 'L 082 Zeudener Str. OD Marzahna Kanal- und Straßenbau Vollsperrung 11.06.2009-03.07.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -33582,-43378 -32661,-44144
+EOF
+     },
+     { from  => 1244844000, # 2009-06-13 00:00
+       until => 1245016800, # 2009-06-15 00:00
+       text  => 'L 513 Bahnhofstraße OL Burg, zw. Hauptstraße u. Am Bahndamm Intern. Folklorelawine Vollsperrung 14.06.2009-14.06.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp 62010,-62330 62522,-62647
 EOF
      },
     );
