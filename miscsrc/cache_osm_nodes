@@ -24,7 +24,7 @@ use Getopt::Long;
 use XML::LibXML::Reader;
 
 sub usage {
-    die "usage: $0 osmfile ...\n";
+    die "usage: $0 [-o indexfile] osmfile ...\n";
 }
 
 sub open_osm {
@@ -81,18 +81,110 @@ sub set_info_handler {
     };
 }
 
-GetOptions() or usage;
+my $index_file;
+my $dbfiletype;
+GetOptions("o=s" => \$index_file,
+	   "dbfiletype=s" => \$dbfiletype,
+	  )
+    or usage;
 
-my $index_dir = "$ENV{HOME}/.bbbike/cache";
-if (!-d $index_dir) {
-    die "Please create directory '$index_dir' manually";
+if (!defined $index_file) {
+    my $index_dir = "$ENV{HOME}/.bbbike/cache";
+    if (!-d $index_dir) {
+	die "Please create directory '$index_dir' manually";
+    }
+    $index_file = $index_dir . '/osm_nodes_lonlat.db';
 }
-my $index_file = $index_dir . '/osm_nodes_lonlat.db' . ($DB_File::db_version eq '' || $DB_File::db_version <= 1 ? '' : int($DB_File::db_version));
 
-tie my %nodes_lonlat, 'DB_File', $index_file, O_RDWR|O_CREAT, 0644
-    or die "Cannot tie '$index_file': $!";
+my @tie_args;
+if (!$dbfiletype) { $dbfiletype = 'DB_HASH' }
+if ($dbfiletype eq 'DB_BTREE') {
+    @tie_args = ('DB_File', $index_file."_btree", O_RDWR|O_CREAT, 0644, $DB_BTREE);
+} elsif ($dbfiletype eq 'DB_HASH') {
+    @tie_args = ('DB_File', $index_file, O_RDWR|O_CREAT, 0644, $DB_HASH);
+} elsif ($dbfiletype eq 'GDBM') {
+    require GDBM_File;
+    import GDBM_File;
+    @tie_args = ('GDBM_File', $index_file."_gdbm", &GDBM_WRCREAT, 0644);
+} elsif ($dbfiletype eq 'StdHash') {
+    require Tie::Hash;
+    @tie_args = ('Tie::StdHash');
+} elsif ($dbfiletype eq 'SQLite') {
+    require DBI;
+    require DBD::SQLite;
+    {
+	package Tie::SQLite::Experiment;
+	sub TIEHASH {
+	    my($class, $filename) = @_;
+	    my $need_create_table = !-e $filename;
+	    my $dbh = DBI->connect("dbi:SQLite:dbname=$filename","","", { RaiseError => 1, AutoCommit => 0 });
+	    if ($need_create_table) {
+		$dbh->do(<<EOF);
+create table map (k varchar(255) primary key, v varchar(255))
+EOF
+	    }
+	    my $insert_sth = $dbh->prepare(<<EOF);
+insert into map (v, k) values (?, ?)
+EOF
+	    my $update_sth = $dbh->prepare(<<EOF);
+update map set v=? where k=?
+EOF
+	    my $exists_sth = $dbh->prepare(<<EOF);
+select count(*) from map where k=?
+EOF
+	    bless {
+		   dbh => $dbh,
+		   insert_sth => $insert_sth,
+		   update_sth => $update_sth,
+		   exists_sth => $exists_sth,
+		  }, $class;
+	}
+	sub STORE {
+	    my($self, $key, $value) = @_;
+	    my($exists) = $self->EXISTS($key);
+	    if ($exists) {
+		$self->{update_sth}->execute($value, $key);
+	    } else {
+		$self->{insert_sth}->execute($value, $key);
+	    }
+	}
+	sub EXISTS {
+	    my($self, $key) = @_;
+	    my $exists_sth = $self->{exists_sth};
+	    $exists_sth->execute($key);
+	    my($exists) = $exists_sth->fetchrow_array;
+	    $exists_sth->finish;
+	    $exists;
+	}
+	sub DESTROY {
+	    my($self) = @_;
+	    $self->{dbh}->commit;
+	}
+    }
+    @tie_args = ('Tie::SQLite::Experiment', $index_file."_sqlite");
+} else {
+    die "Unhandled -dbfiletype $dbfiletype";
+}
 
-my @osm_files = @ARGV;
+if ($tie_args[0] eq 'DB_File') {
+    # amend filename, maybe
+    if ($DB_File::db_version ne '' && $DB_File::db_version > 1) {
+	$tie_args[1] .= int($DB_File::db_version);
+    }
+}
+
+tie my %nodes_lonlat, $tie_args[0], @tie_args[1..$#tie_args]
+    or die "Cannot tie @tie_args: $!";
+
+my @orig_osm_files = @ARGV;
+my @osm_files;
+for my $osm_file (@orig_osm_files) {
+    if (-d $osm_file) {
+	push @osm_files, grep { -f $_ && -s $_ } glob(File::Spec->catfile($osm_file,"*.{osm,osm.gz,osm.bz2}")); # XXX argh, duplicated functionality, see grep_osm
+    } else {
+	push @osm_files, $osm_file;
+    }
+}
 
 my $osm_file_i = 0;
 for my $osm_file (@osm_files) {
@@ -116,7 +208,179 @@ cache_osm_nodes - create a node id to lon/lat cache from osm data
 
 =head1 SYNOPSIS
 
-    ./cache_osm_nodes osmfile ...
+    ./cache_osm_nodes [-o indexfile] osmfile ...
+
+=head1 DESCRIPTION
+
+Create a cached mapping from osm node ids to lon/lat for the named osm
+files. This command can be run multiple times; the cached mapping will
+grow larger or replace existing node ids, if necessary. Note that
+there's no means to delete outdated node ids.
+
+By default the cache file is created in the F<.bbbike/cache>
+subdirectory of the user's home directory. This subdirectory needs to
+be created manually, if it does not exist already. An alternative
+location for the cache file may be specified with the C<-o> option.
+Note that the cache filename will be get additional suffixes depending
+on the berkeley db version and the db file type used.
+
+=head1 BENCHMARKS
+
+The following are benchmarks on a 1.73 GHz Pentium system running
+Debian/lenny (perl 5.10.0, DB_File 1.816_1, libdb4.7, default db file
+type is $DB_HASH). The three osm data sets are:
+
+=over
+
+=item dalmatia: tiled files (gzipped) with 118211 nodes
+
+=item berlin: tiled files (gzipped) with 428870 nodes
+
+=item brandenburg: single bzip2ed osm file with 1565392 nodes
+
+=back
+
+Every set has its own cache file.
+
+Note that the single bzip2ed file need more time for decompression,
+but also wins time because every node exists exactly once, unlike in
+the tiled data sets.
+
+Resultung file sizes are compared below.
+
+=head2 DB_HASH
+
+First run for the dalmatia set:
+
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache ~/src/bbbike/misc/download/osm/dalmatien 
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache   18.34s user 1.79s system 90% cpu 22.271 total
+
+Rerun the same command on the existing cache, twice:
+
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache ~/src/bbbike/misc/download/osm/dalmatien 
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache   18.10s user 1.68s system 94% cpu 20.906 total
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache   17.84s user 1.98s system 94% cpu 21.031 total
+
+Now the berlin set:
+
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache2 ~/src/bbbike/misc/download/osm/berlin  
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache2   60.08s user 6.17s system 89% cpu 1:13.98 total
+
+And at last the brandenburg set:
+
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache3 ~/src/bbbike/misc/download/osm/brandenburg.osm.bz2 
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache3   95.73s user 13.57s system 95% cpu 1:54.25 total
+
+About memory consumption: seems to be low, about 11MB throughout all
+the time.
+
+=head2 DB_BTREE
+
+Now the same tests with $DB_BTREE:
+
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype DB_BTREE ~/src/bbbike/misc/download/osm/dalmatien
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache4 -dbfiletype DB_BTREE   17.56s user 0.31s system 93% cpu 19.052 total
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype DB_BTREE ~/src/bbbike/misc/download/osm/dalmatien
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache4 -dbfiletype DB_BTREE   17.23s user 0.39s system 94% cpu 18.653 total
+
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache2 -dbfiletype DB_BTREE ~/src/bbbike/misc/download/osm/berlin  
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache5 -dbfiletype DB_BTREE   56.33s user 1.46s system 91% cpu 1:03.12 total
+
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache3 -dbfiletype DB_BTREE ~/src/bbbike/misc/download/osm/brandenburg.osm.bz2 
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache6 -dbfiletype DB_BTREE   91.11s user 2.45s system 97% cpu 1:36.38 total
+
+Surprisingly, DB_BTREE seems to be somewhat better. File size is
+better for the smaller sets and much worse for the larger set.
+
+=head2 GDBM_File
+
+The next benchmarks are with L<GDBM_File> (option C<-dbfiletype GDBM>):
+
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype GDBM ~/src/bbbike/misc/download/osm/dalmatien
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype GDBM   15.68s user 2.85s system 92% cpu 20.138 total
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype GDBM ~/src/bbbike/misc/download/osm/dalmatien
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype GDBM   15.95s user 2.86s system 92% cpu 20.319 total
+
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache2 -dbfiletype GDBM ~/src/bbbike/misc/download/osm/berlin  
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache2 -dbfiletype GDBM   51.77s user 8.74s system 87% cpu 1:08.92 total
+
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache3 -dbfiletype GDBM ~/src/bbbike/misc/download/osm/brandenburg.osm.bz2 
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache3 -dbfiletype GDBM   87.86s user 25.14s system 34% cpu 5:28.30 total
+
+The last benchmark looks quite bad, so I did another run, which was
+slightly better, but still not good enough:
+
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache3 -dbfiletype GDBM   85.98s user 24.43s system 38% cpu 4:46.94 total
+
+C<GDBM_File> seems to be between the C<DB_HASH> and C<DB_BTREE> times
+for the smaller sets and began to trash (mainly disk wait time) for
+the larger set.
+
+About memory consumption: seems to be low and constant, all the time,
+even during the trashing period.
+
+=head2 Tie::StdHash
+
+The C<StdHash> dbfiletype just uses C<Tie::StdHash> (see L<Tie::Hash>)
+as the tie backend, effectively benchmarking just the XML reading
+overhead and the overhead of a minimal (pure-perl) tie implementation.
+This is near the minimum times which can be expected here:
+
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype StdHash ~/src/bbbike/misc/download/osm/dalmatien
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype StdHash   14.63s user 0.08s system 98% cpu 14.965 total
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype StdHash ~/src/bbbike/misc/download/osm/dalmatien
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype StdHash   14.38s user 0.04s system 97% cpu 14.788 total
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache2 -dbfiletype StdHash ~/src/bbbike/misc/download/osm/berlin  
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache2 -dbfiletype StdHash   48.21s user 0.18s system 96% cpu 50.111 total
+    $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache3 -dbfiletype StdHash ~/src/bbbike/misc/download/osm/brandenburg.osm.bz2 
+    ./miscsrc/cache_osm_nodes -o /tmp/testcache3 -dbfiletype StdHash   79.78s user 1.08s system 98% cpu 1:22.33 total
+
+Note that memory grows here, because C<Tie::StdHash> works with
+in-memory hashes. No file sizes here, for obvious reasons.
+
+=head2 SQLite
+
+A very experimental DBM-like tie interface using SQLite. It seems to
+be much slower than the others, but then, this is without any
+optimization (using varchar for generality, where it could use char
+type).
+
+     $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype SQLite ~/src/bbbike/misc/download/osm/dalmatien
+     ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype SQLite   39.61s user 0.14s system 95% cpu 41.538 total
+     $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype SQLite ~/src/bbbike/misc/download/osm/dalmatien
+     ./miscsrc/cache_osm_nodes -o /tmp/testcache -dbfiletype SQLite   40.13s user 0.17s system 92% cpu 43.798 total
+     $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache2 -dbfiletype SQLite ~/src/bbbike/misc/download/osm/berlin  
+     ./miscsrc/cache_osm_nodes -o /tmp/testcache2 -dbfiletype SQLite   122.69s user 1.23s system 92% cpu 2:14.17 total
+     $ time ./miscsrc/cache_osm_nodes -o /tmp/testcache3 -dbfiletype SQLite ~/src/bbbike/misc/download/osm/brandenburg.osm.bz2 
+     ./miscsrc/cache_osm_nodes -o /tmp/testcache3 -dbfiletype SQLite   192.15s user 2.49s system 98% cpu 3:17.71 total
+
+File sizes are significantly better, expect for the largest file.
+
+RAM consumption is constant, about 40 MB.
+
+=head2 FILE SIZES
+
+ |           | dalmatia | berlin | brandenburg |
+ +-----------+----------+--------+-------------+
+ | nodes     |   118211 | 428870 |     1565392 |
+ +-----------+----------+--------+-------------+
+ | DB_HASH   |     10.1 |     39 |          85 |
+ | DB_BTREE  |      9.1 |     31 |         138 |
+ | GDBM_File |     11.6 |   42.5 |         146 |
+ | SQLite    |      7.1 |   26.4 |        93.6 |
+
+=head2 BENCHMARK HINT
+
+To rerun the benchmarks, just filter out the commands out of this Pod:
+
+    cd ..../src/bbbike
+    perl -nle 'm{^    \$ (time .*)} and print $1' ./miscsrc/cache_osm_nodes  
+
+Check the output, and then rerun the one-liner and pipe to shell (and
+before that, delete any existing test caches):
+
+    rm /tmp/testcache*
+    perl -nle 'm{^    \$ (time .*)} and print $1' ./miscsrc/cache_osm_nodes | sh -x -
 
 =head1 SEE ALSO
 

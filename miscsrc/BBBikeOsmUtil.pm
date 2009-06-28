@@ -24,6 +24,7 @@ use vars qw($osm_layer $osm_layer_area $osm_layer_landuse $osm_layer_cover
 
 use Cwd qw(realpath);
 use File::Basename qw(dirname);
+use File::Glob qw(bsd_glob);
 
 use VectorUtil qw(enclosed_rectangle intersect_rectangles normalize_rectangle);
 
@@ -183,10 +184,9 @@ sub osm_files_in_grid {
     my($x0,$y0,$x1,$y1) = @_;
 
     my $osm_download_dir = dirname(dirname(realpath(__FILE__))) . "/misc/download/osm";
-    my $berlin_dir = "$osm_download_dir/berlin";
-    my @osm_files = glob("$berlin_dir/download_*.osm*");
+    my @osm_files = bsd_glob("$osm_download_dir/*/download_*.osm*");
     if (!@osm_files) {
-	die "No osm files in $berlin_dir found. Did you run downloadosm?\n";
+	die "No osm tiles in $osm_download_dir found. Did you run downloadosm?\n";
     }
 
     my @res_files;
@@ -352,7 +352,7 @@ sub plot_osm_files {
 		my @tags = ((exists $tag{name} ? $tag{name}.' ' : '') . $tags, $uninteresting_tags, 'osm', 'osm-way-' . $id);
 		my $is_area = (exists $tag{'area'} ? $tag{'area'} eq 'yes' :
 			       exists $tag{'landuse'} ? 1 :
-			       $nodes[0] eq $nodes[-1]
+			       $nodes[0] eq $nodes[-1] && ($tag{'junction'}||'') ne 'roundabout'
 			      );
 		if ($is_area) {
 		    my $light_color = '#a0b0a0';

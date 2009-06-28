@@ -183,6 +183,13 @@ sub add_button {
 		   main::special_lower($points_layer . "-fg", 0);
 	       }
 	      ],
+	      [Button => "Add points-symbols.bbd (with symbols)",
+	       -command => sub {
+		   my $f = "$bbbike_rootdir/tmp/points-symbols.bbd";
+		   my $points_layer = add_new_layer("p", $f, Width => 20);
+		   main::special_lower($points_layer . "-fg", 0);
+	       }
+	      ],
 	      [Cascade => 'Add layer', -menuitems =>
 	       [
 		[Button => "hm96.bbd (Höhenpunkte)",
@@ -247,12 +254,12 @@ sub add_button {
 	      ],
 	      [Cascade => 'OSM', -menuitems =>
 	       [
-		[Button => "Display (and refresh) downloaded OSM Berlin",
+		[Button => "Display (and refresh) downloaded OSM tiles",
 		 -command => sub {
 		     _require_BBBikeOsmUtil();
 		     BBBikeOsmUtil::mirror_and_plot_visible_area();
 		 }],
-		[Button => "Display (without refresh) downloaded OSM Berlin",
+		[Button => "Display (without refresh) downloaded OSM tiles",
 		 -command => sub {
 		     _require_BBBikeOsmUtil();
 		     BBBikeOsmUtil::plot_visible_area();

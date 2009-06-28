@@ -37,6 +37,11 @@ if (SORTED_TAGS) {
     require Tie::IxHash;
 }
 
+# Same as in Strassen::Core, which is coincidence.
+use constant STRASSEN_NAME   => 0;
+use constant STRASSEN_COORDS => 1;
+use constant STRASSEN_CAT    => 2;
+
 my $o;
 my $f;
 my $v;
@@ -57,7 +62,7 @@ my $splitlonglines = 1; # XXX this may change once BBBikeXS has no length restri
 my $xmlparser;
 
 my %experiments;
-my %known_experiments = map {($_,1)} qw(add_postal_code);
+my %known_experiments = map {($_,1)} qw(add_postal_code coastline_hack polar_coord_hack);
 
 sub usage () {
     <<EOF;
@@ -185,9 +190,11 @@ my %place_to_population;
 		   (map { "line_dash.Z$_: 8,5,2,5" } (1 .. 10)),
 		  ],
      'zebrastreifen' => ['category_image.Zs: ../misc/verkehrszeichen/Zeichen_350.svg:24x24=1:12000,xxx'],
+     'grenzuebergaenge' => ['category_image.GU: grenzuebergang_16'],
     );
 
 # see http://www.mail-archive.com/talk@openstreetmap.org/msg06041.html
+# XXX does not match very well with the tracks around Baska Voda --- maybe grade1 should match Q1 at most?
 my %grade_to_Q = (1 => "Q0",
 		  2 => "Q1",
 		  3 => "Q2",
@@ -236,6 +243,14 @@ my $do_amenity = sub {
 	add_underline(\@or, "_education", $F."X");
     } elsif ($amenity =~ m{^(?:parking|car_rental)$}) {
 	add_underline(\@or, "_motortraffic", $F."#f0f0f0|IMG:Parking");
+    } elsif ($amenity eq 'border_control') {
+	push @or, ['grenzuebergaenge', 'GU'];
+    } elsif ($amenity eq 'grave_yard') {
+	if ($is_area) {
+	    push @or, ['sehenswuerdigkeit', 'F:Cemetery'];
+	} else {
+	    push @or, ['sehenswuerdigkeit', 'SW'];
+	}
     } else {
 	$unhandled{"amenity-$amenity"}++;
     }
@@ -270,6 +285,17 @@ my $do_tourism = sub {
     @or;
 };
 
+my $do_fixme = sub {
+    my($tagref) = @_;
+    my @or;
+    if (exists $tagref->{fixme}) {
+	push @or, ['fragezeichen', '?', name => $tagref->{fixme}];
+    } elsif (exists $tagref->{note} && $tagref->{note} =~ m{^fixme\s*(.*)}i) {
+	push @or, ['fragezeichen', '?', name => $1];
+    }
+    @or;
+};
+
 my $do_unhandled = sub {
     my($name_ref, $tagref) = @_;
 
@@ -286,13 +312,86 @@ my $do_unhandled = sub {
     }
 };
 
+{
+    # expand directories
+    # XXX Should be really a recursive function, probably
+    my @new_osm_files;
+    for my $osm_file (@osm_files) {
+	if (-d $osm_file) {
+	    push @new_osm_files, grep { -f $_ && -s $_ } glob(File::Spec->catfile($osm_file,"*.{osm,osm.gz,osm.bz2}")); # XXX argh, grep duplicates functionality, see "recursive" suggestion above
+	} elsif (-z $osm_file) {
+	    # May happen while loading data, so ignore this
+	    warn "Ignore empty file <$osm_file>...\n";
+	} else {
+	    push @new_osm_files, $osm_file;
+	}
+    }
+    @osm_files = @new_osm_files;
+}
+
+# Conversion function
 my $conv = sub {
     my($lon,$lat) = @_;
     "$lon,$lat";
 };
+if (!$experiments{'polar_coord_hack'}) {
+    die "Should never happen: -o is missing?" if !$o;
+    if (-e "$o/Karte/Polar.pm") {
+	unlink "$o/Karte/Polar.pm"
+	    or die "Cannot remove $o/Karte/Polar.pm: $!";
+    }
+}
 if ($map) {
     if ($map ne 'bbbike') {
 	die "Only -map bbbike is supported.\n";
+    }
+    if ($experiments{'polar_coord_hack'}) {
+	require Math::Trig;
+	my $lat;
+	if ($center) {
+	    (undef, $lat) = split /,/, $center;
+	} else {
+	    my($min_lat, $max_lat);
+	    # XXX taken from BBBikeOsmUtil.pm
+	    my $osm_download_file_qr = qr{/download_(\d+\.\d+),(\d+\.\d+),(\d+\.\d+),(\d+\.\d+)\.osm(?:\.gz|\.bz2)?$}; # XXX no support for south and west
+	    # XXX it would be better to read the bboxes of all XML files
+	    for my $osm_file (@osm_files) {
+		if ($osm_file =~ $osm_download_file_qr) {
+		    if (!defined $min_lat || $2 < $min_lat) {
+			$min_lat = $2;
+		    }
+		    if (!defined $max_lat || $4 > $max_lat) {
+			$max_lat = $4;
+		    }
+		}
+	    }
+	    if (defined $min_lat && defined $max_lat) {
+		$lat = ($max_lat - $min_lat)/2 + $min_lat;
+	    }
+	}
+	if (!defined $lat) {
+	    die "Cannot apply polar_coord_hack experiment, because the center could not be determined";
+	    # XXX should read the bboxes of all files
+	}
+	my $newx1 = cos(Math::Trig::deg2rad($lat))*111_000; # XXX 111km is rough for one degree
+
+	mkdir $o if !-d $o; # does not exist yet, see below the OUTPUT section
+	mkdir "$o/Karte" if !-d "$o/Karte";
+	open my $ifh, "<", "$FindBin::RealBin/../Karte/Polar.pm"
+	    or die "Cannot open $FindBin::RealBin/../Karte/Polar.pm: $!";
+	open my $ofh, ">", "$o/Karte/Polar.pm~"
+	    or die "Cannot write to $o/Karte/Polar.pm~: $!";
+	print $ofh q{warn "Using corrected Karte::Polar for latitude } . $lat . q{...\n";} . "\n";
+	while(<$ifh>) {
+	    s{^(\s*X1\s*=>\s*)[0-9.-]+}{$1$newx1};
+	    print $ofh $_;
+	}
+	close $ofh
+	    or die "Error while writing to Polar.pm~: $!";
+	rename "$o/Karte/Polar.pm~", "$o/Karte/Polar.pm"
+	    or die "Error while renaming Polar.pm~: $!";
+
+	lib->import($o); # so the hacked Karte::Polar is in front of @INC
     }
     require Karte::Polar;
     require Karte::Standard;
@@ -312,23 +411,6 @@ if ($map) {
 
 if ($center) {
     $center = $conv->(split /,/, $center);
-}
-
-{
-    # expand directories
-    # XXX Should be really a recursive function, probably
-    my @new_osm_files;
-    for my $osm_file (@osm_files) {
-	if (-d $osm_file) {
-	    push @new_osm_files, grep { -f $_ && -s $_ } glob(File::Spec->catfile($osm_file,"*.{osm,osm.gz}")); # XXX argh, grep duplicates functionality, see "recursive" suggestion above
-	} elsif (-z $osm_file) {
-	    # May happen while loading data, so ignore this
-	    warn "Ignore empty file <$osm_file>...\n";
-	} else {
-	    push @new_osm_files, $osm_file;
-	}
-    }
-    @osm_files = @new_osm_files;
 }
 
 my $tp;
@@ -517,7 +599,7 @@ for my $osm_file (@osm_files) {
 	    } elsif (exists $tag{'place'}) {
 		my $place = $tag{'place'};
 		my $population = exists $tag{'population'} ? $tag{'population'} : $tag{'openGeoDB:population'};
-		if ($population && $place ne 'suburb') { # "Mahlsdorf" is a suburb, but with a population tag
+		if ($population && $place !~ m{^(suburb|state)$}) { # "Mahlsdorf" is a suburb, but with a population tag; "Sachsen" has place=state
 		    my $cat;
 		    if ($population >= 200000) {
 			$cat = 6;
@@ -560,6 +642,8 @@ for my $osm_file (@osm_files) {
 		push @or, $do_historic->(0, $tag{'historic'}, \%tag);
 	    } elsif (exists $tag{'tourism'}) {
 		push @or, $do_tourism->(0, $tag{'tourism'}, \%tag);
+	    } elsif (exists $tag{'aeroway'} && $tag{'aeroway'} eq 'aerodrome') {
+		push @or, ['sehenswuerdigkeit', 'SW|IMG:airport'];
 	    } elsif (exists $tag{'power'}) {
 		add_underline(\@or, "_power", "X");
 	    }
@@ -578,6 +662,8 @@ for my $osm_file (@osm_files) {
 		    push @or, ["_unhandled", "X"];
 		}
 	    }
+
+	    push @or, $do_fixme->(\%tag);
 
 	    for my $or (@or) {
 		my($out_file, $cat, %args) = @$or;
@@ -821,6 +907,9 @@ for my $osm_file (@osm_files) {
 		    push @or, ["strassen", "H".$addcat];
 		} elsif ($highway_cat =~ m{^(?:residential|unclassified|service|minor)$}) {
 		    push @or, ["strassen", "N".$addcat];
+		} elsif ($highway_cat eq 'road') {
+		    push @or, ['strassen', "N".$addcat];
+		    push @or, ['fragezeichen', '?', name => 'road category missing'];
 		} elsif ($highway_cat eq 'cycleway') {
 		    push @or, ["strassen", "NN".$addcat];
 		CYCLEWAY_KEY: {
@@ -891,7 +980,18 @@ for my $osm_file (@osm_files) {
 		    }
 		} elsif ($highway_cat eq 'steps') {
 		    push @or, ["strassen", "NN".$addcat];
-		    push @or, ["gesperrt", "0:30", name => ($lang eq 'en' ? $highway_cat : 'Treppe')]; # XXX really should be only one point, or maybe better, change bbbike to handle line features for "Treppe"; lost time is guessed, maybe determine from length of feature? Also missing: precalculated angle.
+		    my $name       = $lang eq 'en' ? 'steps' : 'Treppe';
+		    my $lost_time  = 30; # an average if a step_count is missing
+		    my $step_count = $tag{'step_count'};
+		    if (defined $step_count) {
+			if ($lang eq 'en') {
+			    $name = $step_count . ' steps'; # XXX singular case? yes, it can happen!
+			} else {
+			    $name .= " ($step_count Stufen)"; # XXX singular?
+			}
+			$lost_time = int($step_count * 0.7); # XXX need more scientific background for the coefficient
+		    }
+		    push @or, ["gesperrt", "0:$lost_time", name => $name]; # XXX really should be only one point, or maybe better, change bbbike to handle line features for "Treppe"; Also missing: precalculated angle. In case of a line feature I need to think something else...
 		} elsif ($highway_cat eq 'cycleroad') { # It seems that this tag is not anymore in use
 		    push @or, ["strassen", "N".$addcat];
 		    push @or, ["radwege_exact", "RW7;RW7"];
@@ -899,7 +999,7 @@ for my $osm_file (@osm_files) {
 		    $unhandled{"highway=$highway_cat"}++;
 		}
 		my $oneway = $tag{'oneway'};
-		if ($oneway && !$is_motorway) {
+		if ($oneway) {
 		    my $reversed = 1;
 		    # Special case -1, see
 		    # http://wiki.openstreetmap.org/index.php/Key:oneway
@@ -908,7 +1008,7 @@ for my $osm_file (@osm_files) {
 			$reversed = 0;
 		    }
 		    if ($oneway =~ m{^(?:yes|true)$}) {
-			if (exists $tag{'bicycle'} && $tag{'bicycle'} eq 'opposite') { # seen in Würzburg, Äußere Pleich, but no documentation/discussion for it
+			if ($is_motorway || (exists $tag{'bicycle'} && $tag{'bicycle'} eq 'opposite')) { # seen in Würzburg, Äußere Pleich, but no documentation/discussion for it
 			    push @or, ['gesperrt_car', '1', reversed => $reversed];
 			} else {
 			    if ($highway_cat eq 'cycleway') {
@@ -982,8 +1082,13 @@ for my $osm_file (@osm_files) {
 			push @or, ["wasserstrassen", "F:I"];
 		    }
 		} elsif ($natural eq 'coastline') {
-		    push @or, ["wasserstrassen", "W"]; # XXX This should be fixed!
-		    warn_once("Found natural=coastline, sorry cannot use it, fallback to line plotting...\n");
+		    if ($experiments{coastline_hack}) {
+			push @or, ["_coastline", "W"];
+			warn_once("Moving natural=coastline into _coastline file, for proceeding with the coastline hack...\n");
+		    } else {
+			push @or, ["wasserstrassen", "W"]; # XXX This should be fixed!
+			warn_once("Found natural=coastline, sorry cannot use it, fallback to line plotting...\n");
+		    }
 		} else {
 		    $unhandled{"natural=$natural"}++;
 		}
@@ -1007,7 +1112,7 @@ for my $osm_file (@osm_files) {
 		    }
 		} else {
 		    $unhandled{"boundary=$boundary"}++;
-		}   
+		}
 	    } elsif ($place) {
 		if      ($place eq 'airport') {
 		    push @or, ["flaechen", "F:Ae"];
@@ -1102,13 +1207,22 @@ for my $osm_file (@osm_files) {
 		add_underline(\@or, "_power", "X");
 	    }
 
-
 	    if (!@or && !$ignore_unhandled && !$ignore_underline) {
 		$do_unhandled->(\$name, \%tag);
 		if ($name ne "") {
-		    push @or, ["_unhandled", "X"];
+		    my $cat;
+		    if (exists $tag{'landuse'} &&
+			$tag{'landuse'} =~ m{^(farm|farmland)$}
+		       ) {
+			$cat = 'F:#ffdead';
+		    } else {
+			$cat = 'X';
+		    }
+		    push @or, ["_unhandled", $cat];
 		}
 	    }
+
+	    push @or, $do_fixme->(\%tag);
 
 	    for my $or (@or) {
 		my($out_file, $cat, %args) = @$or;
@@ -1127,6 +1241,19 @@ for my $osm_file (@osm_files) {
 		if (exists $tag{'url'}) {
 		    push @{$out{$out_file}}, ["#: url: $tag{url}"];
 		}
+##XXX check first how it's meant. I find in the Berlin data:
+## wikipedia:de=yes and wikipedia:de=basename_of_page and wikipedia:de="basename of page"
+## And sometimes it's duplicated: there's url=... and wikipedia:..=....
+## Maybe I have to filter duplicates out here?
+## Also, it's not lear how to handle all the possible languages. Now
+## the compromise is to use the english entry and the language specified
+## while doing the conversion. Not ideal.
+# 		if (exists $tag{'wikipedia:en'}) {
+# 		    push @{$out{$out_file}}, ["#: url: http://en.wikipedia.org/wiki/" . $tag{"wikipedia:en"}];
+# 		}
+# 		if ($lang ne 'en' && exists $tag{"wikipedia:$lang"}) {
+# 		    push @{$out{$out_file}}, ["#: url: http://$lang.wikipedia.org/wiki/" . $tag{"wikipedia:$lang"}];
+# 		}
 		if (exists $tag{'old_name'}) {
 		    push @{$out{$out_file}}, ["#: oldname: $tag{old_name}"];
 		}
@@ -1155,7 +1282,7 @@ for my $osm_file (@osm_files) {
 }
 
 resolve_node_fallback();
-sort_by_population();
+sort_by_population_and_category();
 
 ######################################################################
 # OUTPUT
@@ -1305,13 +1432,14 @@ sub normalize_name_sbahnhof {
     $name;
 }
 
-sub sort_by_population {
+sub sort_by_population_and_category {
     @{$out{"orte"}} = map {
 	$_->[1]
     } sort {
-	$b->[0] <=> $a->[0]
+	(defined $b->[0] && defined $a->[0] && $b->[0] <=> $a->[0]) ||
+	    $b->[1][STRASSEN_CAT] <=> $a->[1][STRASSEN_CAT]
     } map {
-	[$place_to_population{$_->[1][0]} || 0, $_]
+	[$place_to_population{$_->[1][STRASSEN_NAME]} || undef, $_]
     } @{$out{"orte"}};
 }
 

@@ -4,7 +4,7 @@
 
 PERL=			perl
 
-BBBIKEDIR?=		..
+BBBIKEDIR?=		${.CURDIR}/..
 MISCSRCDIR?=		${BBBIKEDIR}/miscsrc
 DATADIR?=		${BBBIKEDIR}/data
 CONVERT2HAFAS=		${MISCSRCDIR}/convert2hafas
@@ -57,10 +57,12 @@ rsync-uaprof:
 	rsync -avz root@bbbike.de:/var/www/domains/radzeit.de/www/BBBike/tmp/uaprof/ ../tmp/uaprof/
 
 sparkassen_osm.bbd:	../data_berlin_osm_bbbike/_unhandled
-	perl -nle '/(^Sparkasse|Berliner Sparkasse|operator:Sparkasse)/ and do { s{\tX }{\tIMG:/home/e/eserte/images/icons/sparkasse.gif }; print }' ../data_berlin_osm_bbbike/_unhandled > sparkassen_osm.bbd
+	perl -nle '/(^Sparkasse|Berliner Sparkasse|operator:Sparkasse)/ and do { s{\tX }{\tIMG:/home/e/eserte/images/icons/sparkasse.gif }; print }' ../data_berlin_osm_bbbike/_unhandled > sparkassen_osm.bbd~
+	mv sparkassen_osm.bbd~ sparkassen_osm.bbd
 
 citibank_osm.bbd:	../data_berlin_osm_bbbike/_unhandled
-	perl -nle '/citibank/i and do { s{\tX }{\tIMG:/home/e/eserte/images/icons/citibank.gif }; print }' ../data_berlin_osm_bbbike/_unhandled > citibank_osm.bbd
+	perl -nle '/citibank/i and do { s{\tX }{\tIMG:/home/e/eserte/images/icons/citibank.gif }; print }' ../data_berlin_osm_bbbike/_unhandled > citibank_osm.bbd~
+	mv citibank_osm.bbd~ citibank_osm.bbd
 
 ######################################################################
 # OSM downloads
@@ -71,7 +73,9 @@ GERMANY_STATES_RULES=	${GERMANY_STATES:S/^/download-/:S/$/.osm.bz2/}
 EUROPE_COUNTRIES=	germany croatia
 EUROPE_COUNTRIES_RULES=	${EUROPE_COUNTRIES:S/^/download-/:S/$/.osm.bz2/}
 
-osm-download-all:	${GERMANY_STATES_RULES} ${EUROPE_COUNTRIES_RULES}
+osm-download-all:	osm-download-geofabrik reload-tiled-berlin
+
+osm-download-geofabrik:	${GERMANY_STATES_RULES} ${EUROPE_COUNTRIES_RULES}
 
 .for land in ${GERMANY_STATES}
 download-${land}.osm.bz2:
@@ -134,3 +138,20 @@ data_berlin_osm_bbbike:
 data_berlin_osm_bbbike_untiled:
 	${MISCSRCDIR}/osm2bbd -map bbbike -v -f -o ../data_berlin_osm_bbbike download/osm/berlin.osm.bz2
 	${MISCSRCDIR}/osm2bbd-postprocess ../data_berlin_osm_bbbike
+
+######################################################################
+# Testing for dalmatia
+dalmatia-test:	dalmatia-test-osm2bbd \
+		dalmatia-test-osm2bbd-postprocess1 \
+		dalmatia-test-osm2bbd-postprocess2
+
+dalmatia-test-osm2bbd:
+	${MISCSRCDIR}/osm2bbd -map bbbike -country hr -o /tmp/data_dalmatien download/osm/dalmatien -f \
+	    -nosplitlonglines -experiment coastline_hack \
+	    -experiment polar_coord_hack
+
+dalmatia-test-osm2bbd-postprocess1:
+	${MISCSRCDIR}/osm2bbd-postprocess /tmp/data_dalmatien -only-coastline-hack -coastline-hack-anchor sw
+
+dalmatia-test-osm2bbd-postprocess2:
+	${MISCSRCDIR}/osm2bbd-postprocess /tmp/data_dalmatien -dataset-title Dalmatia
