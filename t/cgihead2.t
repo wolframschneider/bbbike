@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: cgihead2.t,v 1.25 2009/02/02 22:56:29 eserte Exp $
+# $Id: cgihead2.t,v 1.27 2009/06/30 21:03:58 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -30,6 +30,11 @@ BEGIN {
 }
 
 use constant MSDOS_MIME_TYPE => qr{^application/(octet-stream|x-msdos-program|x-msdownload)$};
+
+{
+    use POSIX qw(strftime);
+    use constant TODO_ADFC_ERRORS => "2009-07-31T12:00:00" gt strftime("%FT%T", localtime) && 'Redirects on adfc server do not work';
+}
 
 my @var;
 push @var, (qw(
@@ -86,6 +91,7 @@ $ua->agent('BBBike-Test/1.0');
 $ENV{FTP_PASSIVE} = 1;
 
 for my $url (@compat_urls) {
+    local $TODO = TODO_ADFC_ERRORS;
     check_url($url);
 }
 
@@ -131,7 +137,7 @@ sub check_url {
  SKIP: {
 	my $no_tests = 2;
 	skip("No internet available", $no_tests)
-	    if ($resp->code == 500 && $resp->message =~ /Bad hostname|No route to host/i);
+	    if ($resp->code == 500 && $resp->message =~ /No route to host/i); # 'Bad hostname' was part of this regexp, but this mask a real test failure!
 	#warn $resp->content;
 	ok($resp->is_success, "Successful request of $url")
 	    or diag $resp->status_line . " " . $resp->content;
