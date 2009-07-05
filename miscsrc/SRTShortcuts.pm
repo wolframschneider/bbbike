@@ -264,6 +264,16 @@ sub add_button {
 		     _require_BBBikeOsmUtil();
 		     BBBikeOsmUtil::plot_visible_area();
 		 }],
+		[Button => "Constrained download of OSM tiles (and refresh)",
+		 -command => sub {
+		     _require_BBBikeOsmUtil();
+		     BBBikeOsmUtil::mirror_and_plot_visible_area_constrained(refreshdays => 0.5);
+		 }],
+		[Button => "Constrained download of OSM tiles (without refresh)",
+		 -command => sub {
+		     _require_BBBikeOsmUtil();
+		     BBBikeOsmUtil::mirror_and_plot_visible_area_constrained(refreshdays => 999999);
+		 }],
 		[Button => "Download and display any OSM data",
 		 -command => sub {
 		     _require_BBBikeOsmUtil();
@@ -281,6 +291,13 @@ sub add_button {
 		     my $url2 =BBBikeOsmUtil::get_fallback_download_url(BBBikeOsmUtil::get_visible_area());
 		     main::status_message("Official URL: $url\nFallback URL: $url2", "infodlg");
 		 }],
+		"-",
+		[Button => 'Set Merkaartor Icon Style',
+		 -command => sub {
+		     _require_BBBikeOsmUtil();
+		     BBBikeOsmUtil::choose_merkaartor_icon_style();
+		 },
+		],
 		"-",
 		[Button => 'OSM-converted layer',
 		 -state => 'disabled',

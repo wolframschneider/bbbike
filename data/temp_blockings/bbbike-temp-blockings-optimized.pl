@@ -183,7 +183,16 @@ userdel	q4::inwork 9209,12795 9280,12883
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_013416',
+         'until' => 1246831200,
+         'text' => 'Badstraße (Wedding) in beiden Richtungen zwischen Pankstr. und Behmstr. Veranstaltung, Straße gesperrt bis Mo 00:00 ',
+         'from' => undef,
+         'id' => 1046,
+         'data' => 'userdel	2::temp 8788,16264 8862,16208 8928,16158 8993,16100 9059,16038 9134,15953
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -890,7 +899,8 @@ userdel	q4::inwork 14530,11137 14465,11195
          'text' => 'Jessnerstr. wegen Bauarbeiten in Richtung Süden nicht befahrbar',
          'from' => undef,
          'id' => 1598,
-         'data' => '#: last_checked: 2009-05-26
+         'data' => '#: last_checked: 2009-07-03
+#: XXX nach Beendigung der Bauarbeiten ist wahrscheinlich die gesamte Straße asphaltiert, mit einigen Aufpflasterungen
 userdel	q4::inwork; 15080,11905 14977,11754 14941,11689 14849,11539
 ',
          'type' => 'handicap'
@@ -1049,7 +1059,7 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
          'text' => 'Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt',
          'from' => undef,
          'id' => 1657,
-         'data' => '#: last_checked: 2009-05-16
+         'data' => '#: last_checked: 2009-07-02 by rjoop
 userdel	q4::inwork 8389,11378 8374,11479
 ',
          'type' => 'handicap'
@@ -1185,16 +1195,7 @@ userdel	q4::inwork 9126,12413 9345,12443
          'type' => 'handicap'
        },
        undef,
-       {
-         'source_id' => 'IM_012890',
-         'until' => 1246485599,
-         'text' => 'Bahnhofstr. (Pankow) in beiden Richtungen zwischen Mönchmühler Str. und Bahnübergang Baustelle, Straße vollständig gesperrt (bis Anfang 07.2009)',
-         'from' => 1244065266,
-         'id' => 1688,
-         'data' => 'userdel	q4::inwork 8626,23432 8803,23478 8909,23506
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_009958',
          'until' => 1249077599,
@@ -1217,7 +1218,7 @@ userdel	q4::inwork 9126,12413 9345,12443
          'text' => 'B 102 Treuenbrietzener Str. OD Jüterbog, zw. Parkstr. und Bülowstr. Straßenausbau Vollsperrung 15.06.2009-30.09.2009 ',
          'from' => 1244930400,
          'id' => 1697,
-         'data' => 'userdel	q4::inwork -13089,-46170 -12581,-46124
+         'data' => 'userdel	q4::inwork -13108,-46122 -12541,-46115
 ',
          'type' => 'handicap'
        },
@@ -1250,16 +1251,7 @@ userdel	q4::inwork 9126,12413 9345,12443
        },
        undef,
        undef,
-       {
-         'source_id' => 'IM_013029',
-         'until' => 1246485599,
-         'text' => 'Damerowstr. / Breite Str. (Pankow) Richtung Schönholzer Str. nach Mendelstr. Baustelle, Fahrtrichtung gesperrt (bis Anfang 07.2009)',
-         'from' => 1246207038,
-         'id' => 1703,
-         'data' => 'userdel	q4::inwork; 11357,18598 11204,18545 11025,18531
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1272664800,
          'text' => 'K 6422 Eggersdorfer Str. OL Petershagen, zw. Gravenhainstr. u. Johannesstr. Straßenausbau Vollsperrung 15.06.2009-30.04.2010 ',
@@ -1279,15 +1271,7 @@ userdel	q4::inwork 9126,12413 9345,12443
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1246658400,
-         'text' => 'L 082 Zeudener Str. OD Marzahna Kanal- und Straßenbau Vollsperrung 11.06.2009-03.07.2009 ',
-         'from' => 1244584800,
-         'id' => 1707,
-         'data' => 'userdel	q4::inwork -33582,-43378 -32661,-44144
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => undef,
@@ -1465,6 +1449,43 @@ userdel	q4::inwork; 15698,8191 15561,8072
          'from' => 1246398785,
          'id' => 1727,
          'data' => 'userdel	1::inwork 15382,5687 15183,5480
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_013407',
+         'until' => 1246831199,
+         'text' => 'Residenzstr. (Reinickendorf) in beiden Richtungen zwischen Pankower Allee und Emmentaler Str. Veranstaltung, Straße vollständig gesperrt (Residenzstraßenfest)',
+         'from' => undef,
+         'id' => 1728,
+         'data' => 'userdel	2::temp 7587,17532 7500,17796 7487,17836 7466,17904 7445,17968 7439,17985 7418,18051 7350,18262
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1257030000,
+         'text' => 'B 112 OU Guben - OU Neuzelle zw. Abzw.Wellmitz und Neuzelle Straßenneubau Vollsperrung 07.07.2009-31.10.2009 ',
+         'from' => 1246831200,
+         'id' => 1729,
+         'data' => 'userdel	2::inwork 96951,-34887 97016,-36424 97032,-36743 97476,-37327 97680,-37821
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1251842400,
+         'text' => 'K 6910 Am Wasser OD Schwielowsee, zw. Baumgartenbrück u. B 1 Kanal- u. Straßenbau Vollsperrung 16.07.2009-01.09.2009 ',
+         'from' => 1247608800,
+         'id' => 1730,
+         'data' => 'userdel	q4::inwork -19332,-5240 -19112,-5226 -19013,-5247
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1254348000,
+         'text' => 'L 015 Fürstenberg - Menz OD Fürstenberg, zw. Bergstr. und OA Ri. Menz Straßenbau, Brückenabriss Vollsperrung 06.07.2009-30.09.2009 ',
+         'from' => 1246744800,
+         'id' => 1731,
+         'data' => 'userdel	2::inwork -8893,85743 -9850,84800
 ',
          'type' => 'gesperrt'
        }

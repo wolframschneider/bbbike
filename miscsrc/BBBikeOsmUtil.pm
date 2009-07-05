@@ -23,23 +23,33 @@ use vars qw($osm_layer $osm_layer_area $osm_layer_landuse $osm_layer_cover
 	  );
 
 use Cwd qw(realpath);
-use File::Basename qw(dirname);
+use File::Basename qw(dirname basename);
 use File::Glob qw(bsd_glob);
 
+use BBBikeUtil qw(bbbike_root);
 use VectorUtil qw(enclosed_rectangle intersect_rectangles normalize_rectangle);
 
 use vars qw($UNINTERESTING_TAGS);
 $UNINTERESTING_TAGS = qr{^(name|created_by|source|url)$};
 
-my $osm_download_file_qr = qr{/download_(-?\d+\.\d+),(-?\d+\.\d+),(-?\d+\.\d+),(-?\d+\.\d+)\.osm(?:\.gz|\.bz2)?$};
+my $ltlnqr = qr{([-+]?\d+(?:\.\d+)?)};
+my $osm_download_file_qr       = qr{/download_$ltlnqr,$ltlnqr,$ltlnqr,$ltlnqr\.osm(?:\.gz|\.bz2)?$};
 
 use vars qw($OSM_API_URL $OSM_FALLBACK_API_URL);
 #$OSM_API_URL = "http://www.openstreetmap.org/api/0.5";
 $OSM_API_URL = "http://www.openstreetmap.org/api/0.6";
 $OSM_FALLBACK_API_URL = "http://www.informationfreeway.org/api/0.6";
 
+use vars qw($MERKAARTOR_MAS_BASE $MERKAARTOR_MAS $ALLICONS_QRC $USE_MERKAARTOR_ICONS %ICON_NAME_TO_PHOTO);
+
+use constant XSTEP => 0.1;
+use constant YSTEP => 0.1;
+use constant MARGIN_X => 0.11; # MARGIN... needs to be larger than ...STEP
+use constant MARGIN_Y => 0.11;
+
 sub register {
     _create_images();
+    _find_merkaartor_data();
 }
 
 {
@@ -70,47 +80,87 @@ sub mirror_and_plot_visible_area {
     my($x0,$y0,$x1,$y1) = get_visible_area();
     my @osm_files = osm_files_in_grid($x0,$y0,$x1,$y1);
     if (@osm_files) {
-	_filter_seen_grids(\@osm_files);
-	if (@osm_files) {
-	    my $ua = _get_ua();
-	    $main::progress->Init(-label => "Mirroring...", -visible => 1);
-	    my $file_i = -1;
-	    for my $file (@osm_files) {
-		$file_i++;
-		$main::progress->Update($file_i/@osm_files);
-		if (do { local $^T = time; -M $file > 0.5 }) { # mirror at most every 12 hours once
-		    if ($file !~ $osm_download_file_qr) {
-			main::status_message("File '$file' does not have the expected pattern '$osm_download_file_qr'", "die");
-		    }
-		    my($this_x0,$this_y0,$this_x1,$this_y1) = ($1, $2, $3, $4);
-		    my $url = "$OSM_API_URL/map?bbox=$this_x0,$this_y0,$this_x1,$this_y1";
-		    main::status_message("Mirror $url ...", "info"); $main::top->update;
-		    main::IncBusy($main::top);
-		    eval {
-			my $resp = $ua->mirror($url, $file);
-			if (!$resp->is_success) {
-			    die "Could not mirror $url: " . $resp->status_line . "\n";
-			}
-		    };
-		    my $err = $@;
-		    main::DecBusy($main::top);
-		    if ($err) {
-			main::status_message($err, 'die');
-		    }
-		}
-	    }
-	    main::status_message("Mirroring successful, now plotting...", "info"); $main::top->update;
-	    local $defer_restacking = 1;
-	    plot_osm_files(\@osm_files);    
-	    _mark_grids_as_seen(\@osm_files);
-	    plot_osm_cover_by_files(\@osm_files);
-	    main::restack();
-	    $main::progress->Finish;
-	    main::status_message("", "info");
-	}
+	mirror_and_plot_osm_files(\@osm_files);
     } else {
 	main::status_message("No OSM tiles available in visible area");
     }
+}
+
+sub mirror_and_plot_osm_files {
+    my($osm_files_ref, %args) = @_;
+
+    my $refresh_days = $args{refreshdays};
+    if (!defined $refresh_days) { $refresh_days = 0.5 } # mirror at most every 12 hours once
+
+    _filter_seen_grids($osm_files_ref);
+    if (@$osm_files_ref) {
+	my $ua = _get_ua();
+	$main::progress->Init(-label => "Mirroring...", -visible => 1);
+	my $file_i = -1;
+	for my $file (@$osm_files_ref) {
+	    $file_i++;
+	    $main::progress->Update($file_i/@$osm_files_ref);
+	    if (do { local $^T = time; !-e $file || -M $file > $refresh_days }) {
+		if ($file !~ $osm_download_file_qr) {
+		    main::status_message("File '$file' does not have the expected pattern '$osm_download_file_qr'", "die");
+		}
+		my($this_x0,$this_y0,$this_x1,$this_y1) = ($1, $2, $3, $4);
+		my $url = "$OSM_API_URL/map?bbox=$this_x0,$this_y0,$this_x1,$this_y1";
+		main::status_message("Mirror $url ...", "info"); $main::top->update;
+		main::IncBusy($main::top);
+		eval {
+		    my $resp = $ua->mirror($url, $file);
+		    if (!$resp->is_success) {
+			die "Could not mirror $url: " . $resp->status_line . "\n";
+		    }
+		};
+		my $err = $@;
+		main::DecBusy($main::top);
+		if ($err) {
+		    main::status_message($err, 'die');
+		}
+	    }
+	}
+	main::status_message("Mirroring successful, now plotting...", "info"); $main::top->update;
+	local $defer_restacking = 1;
+	plot_osm_files($osm_files_ref);    
+	_mark_grids_as_seen($osm_files_ref);
+	plot_osm_cover_by_files($osm_files_ref);
+	main::restack();
+	$main::progress->Finish;
+	main::status_message("", "info");
+    }
+}
+
+sub mirror_and_plot_visible_area_constrained {
+    my(%args) = @_;
+
+    my($x0,$y0,$x1,$y1) = get_visible_area();
+
+    my $osm_download_dir = bbbike_root() . "/misc/download/osm";
+    my $berlin_dir = "$osm_download_dir/berlin";
+    my $elsewhere_dir = "$osm_download_dir/elsewhere";
+
+    my @berlin_tiles;
+    my @elsewhere_tiles;
+
+    open my $fh, "-|",
+	$^X, bbbike_root() . "/miscsrc/downloadosm", "-xstep", XSTEP, "-ystep", YSTEP, "-round", "-report", "-o", $berlin_dir, $x0,$y0,$x1,$y1
+	    or die "Can't run downloadosm: $!";
+    while(<$fh>) {
+	chomp;
+	my($file, undef, $exists) = split /\t/, $_;
+	if ($exists) {
+	    push @berlin_tiles, "$berlin_dir/$file";
+	} else {
+	    push @elsewhere_tiles, "$elsewhere_dir/$file";
+	}
+    }
+
+require Data::Dumper; print STDERR "Line " . __LINE__ . ", File: " . __FILE__ . "\n" . Data::Dumper->new([$x0,$y0,$x1,$y1],[qw()])->Indent(1)->Useqq(1)->Dump; # XXX
+require Data::Dumper; print STDERR "Line " . __LINE__ . ", File: " . __FILE__ . "\n" . Data::Dumper->new([\@berlin_tiles, \@elsewhere_tiles],[qw(berlin elsewhere)])->Indent(1)->Useqq(1)->Dump; # XXX
+
+    mirror_and_plot_osm_files([@berlin_tiles, @elsewhere_tiles], %args);
 }
 
 sub get_download_url {
@@ -183,7 +233,7 @@ sub get_visible_area {
 sub osm_files_in_grid {
     my($x0,$y0,$x1,$y1) = @_;
 
-    my $osm_download_dir = dirname(dirname(realpath(__FILE__))) . "/misc/download/osm";
+    my $osm_download_dir = bbbike_root() . "/misc/download/osm";
     my $berlin_dir = "$osm_download_dir/berlin";
     my @osm_files = bsd_glob("$berlin_dir/download_*.osm*");
     if (!@osm_files) {
@@ -229,6 +279,7 @@ sub plot_osm_files {
                          # this is also supposed to work for small
                          # files only
     my $c = $main::c;
+    my $c_bg = $c->cget('-background');
     my $map_conv = _get_map_conv();
 
     if (!$osm_layer) {
@@ -263,6 +314,13 @@ sub plot_osm_files {
 	Hooks::get_hooks("after_new_layer")->execute;
     }
 
+    my $node_attr_to_icon = {};
+    if ($USE_MERKAARTOR_ICONS) {
+	require Cwd; require File::Basename; local @INC = (@INC, Cwd::realpath(File::Basename::dirname(__FILE__)));
+	require MerkaartorMas;
+	$node_attr_to_icon = MerkaartorMas::parse_icons_from_mas($MERKAARTOR_MAS, $ALLICONS_QRC);
+    }
+
     my %node2ll;
     for my $osm_file (@$osm_files) {
 	my $root = XML::LibXML->new->parse_file($osm_file)->documentElement;
@@ -287,12 +345,37 @@ sub plot_osm_files {
 					      "timestamp=" . $node->getAttribute("timestamp"),
 					      (map { "$_=$tag{$_}" } keys %tag)
 					     );
-		$c->createLine($cx,$cy,$cx,$cy,
-			       -fill => '#800000',
-			       -width => 4,
-			       -capstyle => $main::capstyle_round,
-			       -tags => [$osm_layer, $tag{name}||$tag{amenity}, $uninteresting_tags, 'osm', 'osm-node-' . $id],
-			      );
+		my $photo;
+		if ($USE_MERKAARTOR_ICONS) {
+		    my $photo_file;
+		    for my $tag_key (keys %tag) {
+			my $match_key = $tag_key . ':' . $tag{$tag_key};
+			if (exists $node_attr_to_icon->{$match_key}) {
+			    $photo_file = $node_attr_to_icon->{$match_key};
+			    last;
+			}
+		    }
+		    if ($photo_file) {
+			if (!exists $ICON_NAME_TO_PHOTO{$photo_file}) {
+			    $ICON_NAME_TO_PHOTO{$photo_file} = main::load_photo($main::top, $photo_file);
+			}
+			$photo = $ICON_NAME_TO_PHOTO{$photo_file};
+		    }
+		}
+		my @tags = ($osm_layer, $tag{name}||$tag{amenity}, $uninteresting_tags, 'osm', 'osm-node-' . $id);
+		if ($photo) {
+		    $c->createImage($cx,$cy,
+				    -image => $photo,
+				    -tags => [@tags],
+				   );
+		} else {
+		    $c->createLine($cx,$cy,$cx,$cy,
+				   -fill => '#800000',
+				   -width => 4,
+				   -capstyle => $main::capstyle_round,
+				   -tags => [@tags],
+				  );
+		}
 	    }
 	}
     }
@@ -363,14 +446,24 @@ sub plot_osm_files {
 		       ) {
 			$light_color = '#a0a0b0';
 			$dark_color = '#6060a0';
-		    } elsif (exists $tag{'building'} && $tag{'building'} eq 'yes') {
+		    } elsif (exists $tag{'landuse'} && $tag{'landuse'} eq 'farm') {
+			$light_color = '#b2aa5f';
+		    } elsif (exists $tag{'landuse'} && $tag{'landuse'} eq 'grass') {
+			$light_color = '#b2b75f';
+		    } elsif (exists $tag{'landuse'} && $tag{'landuse'} eq 'residential') {
+			$light_color = '#b99a68';
+		    } elsif (exists $tag{'landuse'} && $tag{'landuse'} =~ m{^(?:industrial|commercial)$}) {
 			$light_color = '#b0a0b0';
 			$dark_color = '#a060a0';
+		    } elsif (exists $tag{'building'} && $tag{'building'} eq 'yes') {
+			$light_color = '#b98a68';
 		    } elsif ((exists $tag{'amenity'} && $tag{'amenity'} eq 'parking') ||
 			     (exists $tag{'highway'})
 			    ) {
 			$light_color = '#b0b2b2';
 			$dark_color = '#707272';
+		    } elsif (!%tag || (keys %tag == 1 && exists $tag{'created_by'})) { # means basically: item without meaningful tags
+			$light_color = $c_bg;
 		    }
 		    $c->createPolygon(@coordlist,
 				      -fill => $light_color,
@@ -472,8 +565,6 @@ sub _draw_cover_grids {
     return if !@cover_grids;
     _sort_cover_grids();
     use List::Util qw(reduce);
-    use constant MARGIN_X => 0.05;
-    use constant MARGIN_Y => 0.05;
     my $max_y = (reduce { $a->[1] > $b->[1] ? $a : $b } @cover_grids)->[1] + MARGIN_Y;
     my $min_y = (reduce { $a->[3] < $b->[3] ? $a : $b } @cover_grids)->[3] - MARGIN_Y;
     my @c = ([$cover_grids[0]->[0] - MARGIN_X,
@@ -590,10 +681,152 @@ sub _get_map_conv {
     $map_conv;
 }
 
+sub _best_merkaartor_work_dir {
+    for my $merkaartor_work_dir
+	("/usr/local/src/work/merkaartor",
+	 "$ENV{HOME}/work/merkaartor", # use 'svn co http://svn.openstreetmap.org/applications/editors/merkaartor/' in ~/work
+	 "$ENV{HOME}/work2/merkaartor",
+	 "/usr/ports/astro/merkaartor/work/merkaartor-0.13.2", # for FreeBSD port
+	) {
+	if (-r "$merkaartor_work_dir/Icons/AllIcons.qrc" &&
+	    bsd_glob("$merkaartor_work_dir/Styles/*.mas")
+	   ) {
+	    return $merkaartor_work_dir;
+	}
+    }
+}
+
+sub _find_merkaartor_data {
+    my $merkaartor_work_dir = _best_merkaartor_work_dir();
+    if (!$merkaartor_work_dir) {
+	warn "No Merkaartor source directory found, cannot use Merkaartor icons...\n";
+	$USE_MERKAARTOR_ICONS = 0;
+	return;
+    }
+
+    $ALLICONS_QRC = "$merkaartor_work_dir/Icons/AllIcons.qrc";
+    if (!-r $ALLICONS_QRC) {
+	warn "File '$ALLICONS_QRC' not existent or not readable, cannot use Merkaartor icons...\n";
+	$USE_MERKAARTOR_ICONS = 0;
+	return;
+    }
+
+    if (!$MERKAARTOR_MAS_BASE) {
+	for my $mas_candidate ("$merkaartor_work_dir/Styles/MapnikPlus.mas",
+			       bsd_glob("$merkaartor_work_dir/Styles/*.mas"),
+			      ) {
+	    if (-r $mas_candidate) {
+		$MERKAARTOR_MAS = $mas_candidate;
+		warn "Found Merkaartor style $MERKAARTOR_MAS...\n";
+		$MERKAARTOR_MAS_BASE = basename $MERKAARTOR_MAS;
+		$USE_MERKAARTOR_ICONS = 1;
+		return;
+	    }
+	}
+    }
+
+    {
+	my $mas_candidate = "$merkaartor_work_dir/Styles/$MERKAARTOR_MAS_BASE";
+	if (-r $mas_candidate) {
+	    $MERKAARTOR_MAS = $mas_candidate;
+	    warn "Use Merkaartor style $MERKAARTOR_MAS...\n";
+	    $USE_MERKAARTOR_ICONS = 1;
+	    return;
+	}
+    }
+
+    warn "No usable Merkaartor style found, cannot use Merkaartor icons...\n";
+
+    $USE_MERKAARTOR_ICONS = 0;
+}
+
+sub choose_merkaartor_icon_style {
+    my $merkaartor_work_dir = _best_merkaartor_work_dir();
+    if (!$merkaartor_work_dir) {
+	main::status_message("Cannot find suitable Merkaartor source directory.", "err");
+	return;
+    }
+    my @styles = map { basename $_ } bsd_glob("$merkaartor_work_dir/Styles/*.mas");
+    if (!@styles) {
+	main::status_message("No Merkaartor styles found in directory $merkaartor_work_dir/Styles.", "err");
+	return;
+    }
+    my $t = $main::top->Toplevel(-title => 'Choose Merkaartor Icon Style');
+    $t->transient($main::top) if $main::transient;
+    my $current_merkaartor_mas_base = $MERKAARTOR_MAS_BASE;
+    for my $style (@styles) {
+	$t->Radiobutton(-variable => \$current_merkaartor_mas_base,
+			-value => $style,
+			-text => $style,
+		       )->pack;
+    }
+    {
+	my $f = $t->Frame->pack(qw(-fill x));
+	$f->Button(-text => "OK",
+		   -command => sub {
+		       $MERKAARTOR_MAS_BASE = $current_merkaartor_mas_base;
+		       _find_merkaartor_data();
+		       $t->destroy;
+		   }
+		  )->pack(qw(-side left));
+	$f->Button(-text => "Cancel",
+		   -command => sub {
+		       $t->destroy;
+		   }
+		  )->pack(qw(-side left));
+    }
+}
+
+sub cleanup_photos {
+    for my $p (values %ICON_NAME_TO_PHOTO) {
+	if ($p) {
+	    $p->delete;
+	}
+    }
+    %ICON_NAME_TO_PHOTO = ();
+}
+
 # TODO:
 # support for main::show_info to show way xml and history xml:
 #  GET http://www.openstreetmap.org/api/0.5/way/22495210/history
 #  GET http://www.openstreetmap.org/api/0.5/way/22495210
+
+# Osm Menu in SRTShortcuts should be created here and changed to the
+# following layout:
+#
+#  Download visible area as tiles
+#  Delete OSM layer
+#  -
+#  [ ] Offline mode
+#  [x] Load non-existing tiles only
+#  [ ] Refresh daily
+#  [ ] Refresh always
+#  -
+#  Show download URL
+#  Set Merkaartor Icon Style
+#  Download visible area without store
+#
+# The osm-converted layer menu items can reside in SRTShortcuts, for
+# now.
+
+# Download directory should be in ~/.bbbike/osm/<region> by default,
+# to avoid problems with read-only installations.
+
+# Download strategy looks like following:
+# - All tiles are round to 0.01 (see -round option in downloadosm)
+#   (Maybe I can use downloadosm, to avoid duplication of code? Or
+#   downloadosm should be implemented in BBBikeOsmUtil.pm?)
+# - First it is searched if there's an existing tile (regardless
+#   whether "refresh always" is turned on or not). Prefer
+#   ~/.bbbike/osm/berlin/<tilefile> first, then choose the other
+#   directories.
+# - If found:
+#   - in Offline mode, or if no refresh should be done: use it
+#   - if a refresh should be done: mirror to the existing file
+# - If not found:
+#   - in Offline mode -> blank/do nothing/warning message
+#   - if a refresh should be done: mirror to
+#     ~/.bbbike/osm/berlin/elsewhere (create directory if necessary)
 
 1;
 
