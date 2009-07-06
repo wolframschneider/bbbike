@@ -4674,7 +4674,7 @@ EOF
 	    print " <label><input type=checkbox name=outputtarget value='print' " . ($default_print?"checked":"") . "> " . M("f&uuml;r Druck optimieren") . "</label>";
 #XXX not yet	    print " <input type=checkbox name='cb_attachment'> als Download";
 	    print "&nbsp;&nbsp; <span class=nobr>" . M("Ausgabe als") . ": <select name=imagetype " . ($bi->{'can_javascript'} ? "onchange='enable_size_details_buttons()'" : "") . ">\n";
-	    print " <option " . $imagetype_checked->("png") . ">PNG\n" if $graphic_format eq 'png' && !$cannot_gif_png;
+	    print " <option " . $imagetype_checked->("png") . ">PNG (" . M('Grafik') . ")\n" if $graphic_format eq 'png' && !$cannot_gif_png;
 	    print " <option " . $imagetype_checked->("gif") . ">GIF\n" if ($graphic_format eq 'gif' || $can_gif) && !$cannot_gif_png;
 	    print " <option " . $imagetype_checked->("jpeg") . ">JPEG\n" unless $cannot_jpeg;
 	    print " <option " . $imagetype_checked->("wbmp") . ">WBMP\n" if $can_wbmp;
