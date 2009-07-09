@@ -1653,7 +1653,7 @@ nur Richtung O	X 8142,7221
 	X 11629,9086
 	X 15681,10801
 geschlossen jede volle Stunde	Zbr 28482,-26163
-geschlossen bei Bedarf	Zbr 45301,48132
+geschlossen bei Bedarf	Zbr 45321,48142
 geschlossen 5x täglich für max. 20 Minuten	Zbr 36080,162883
 geschlossen 5x täglich für max. 30 Minuten	Zbr 32848,183868
 Ziegelgrabenklappbrücke, geschlossen 5x täglich für ca. 20 Minuten	Zbr -12373,212278
@@ -1743,10 +1743,10 @@ UBB, halbstündlich	B 51270,179246
 	X 16861,5935
 	B 29553,41441
 	B 28199,39134
-	B 26666,36512
+	B 26674,36559
 	B 23549,31301
 	B 43581,57725
-	B 37961,52548
+	B 37940,52528
 	B 46718,60855
 	B 48516,64085
 	B 42250,115925
@@ -2224,6 +2224,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	B 59937,36197
 	B 26057,-6241
 	X 18777,-1298
+	B 45406,47877
 	X -13051,-3101
 	X -12839,-1342
 	X -12833,-1365
@@ -2334,6 +2335,15 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -13067,-706
 Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	X 56461,82273
+	X 23024,30523
+	X 37151,48074
+	X 37391,48095
+	X 36581,48125
+	X 37128,48358
+	X 36937,48074
+	X 38008,48114
+	X 38240,47851
+	X 38504,47638
 Aderluch (Oranienburg)	F -435,39823
 André-Pican-Str. / Bernauer Str. (Oranienburg)	X -292,39051
 André-Pican-Str. / Saarlandstr. / Lehnitzstr. (Oranienburg)	X -234,37510

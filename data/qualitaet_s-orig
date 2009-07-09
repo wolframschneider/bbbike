@@ -291,7 +291,7 @@ Luzerner Str.: Kopfsteinpflaster	Q2 3251,1881 3148,1888 3044,1890
 Carstennstr.: Kopfsteinpflaster	Q2 3044,1890 2992,2018 2951,2112 2852,2342 2831,2390 2810,2439 2791,2484 2746,2590 2638,2843
 Ringstr.: Kopfsteinpflaster	Q2 2638,2843 2637,2973 2661,3021 2701,3064
 Alt-Reinickendorf: Kopfsteinpflaster	Q2 7217,18681 7003,18715 6879,18737 6801,18761 6716,18788 6572,18793 6442,18839
-Alt-Reinickendorf: Kopfsteinpflaster	Q2 6572,18793 6734,18728 6869,18721 7003,18715
+Alt-Reinickendorf: Kopfsteinpflaster	Q2 6572,18793 6734,18728 6775,18726 6869,18721 7003,18715
 Edelhofdamm: Kopfsteinpflaster (?)	Q2 3463,25611 3273,25516 3171,25495
 Zepernicker Str: Kopfsteinpflaster, OK (?)	Q1 17218,26121 17013,25874
 #: confirmed_by: Torsten Fleischmann:
@@ -1348,7 +1348,7 @@ Nobelstr.: Betonstraße	Q0 14133,6187 14398,6184 14784,6169 14961,6162 15146,6154
 (Karlsgartenstr. - Hasenheide): asphaltiert	Q0 11627,8485 11508,8491 11333,8582 11250,8585
 (Am Rixdorfer Teich): guter Parkweg	Q1 11250,8585 11104,8559 11020,8596 10957,8573 10911,8457
 Schmiedehof: Kopfsteinpflaster	Q2 8988,8990 8990,8915
-Sixtusgarten: Kopfsteinpflaster	Q2 8988,8990 9115,9046
+Sixtusgarten: Kopfsteinpflaster	Q2 8988,8990 9091,9054
 Ottomar-Geschke-Str.: Kopfsteinpflaster	Q2 21332,4655 21376,4748
 Ottomar-Geschke-Str.: Asphalt	Q0 21376,4748 21454,4928
 Ottomar-Geschke-Str.: Kopfsteinpflaster	Q2 21454,4928 21498,5023
@@ -1901,13 +1901,13 @@ Salzmannstr.: mäßiger Beton	Q2+ 16847,10092 16855,10127 16887,10271 16941,10487
 Kohlweißlingstr.: Asphalt	Q0 21537,11256 21598,11190 21640,11107 21677,11017 21723,10920
 #: add_fragezeichen: Qualität: Verbundsteinpflaster oder Asphalt?
 Kohlweißlingstr.: Verbundsteinpflaster	Q0- 21723,10920 21765,10834
-Augenfalterstr.: Asphalt	Q0 21492,11120 21598,11190 21733,11278
+Augenfalterstr.: Asphalt	Q0 21513,11137 21598,11190 21733,11278
 Zitronenfalterweg: Asphalt	Q0 21820,11069 21677,11017
 Distelfalterstr.: Asphalt	Q0 21856,10981 21723,10920
 #: add_fragezeichen: Qualität: Verbundsteinpflaster oder Asphalt?
 Distelfalterstr.: Verbundsteinpflaster	Q0- 21723,10920 21605,10866
 Schillerfalterstr.: Asphalt	Q0 21733,11278 21776,11179 21820,11069 21856,10981 21862,10965
-Schillerfalterstr.: Verbundsteinpflaster	Q0- 21862,10965 21950,10776
+Schillerfalterstr.: Verbundsteinpflaster	Q0- 21862,10965 21899,10885 21950,10776
 Wuhletal: unbefestigter Weg	Q2 21950,10863 21896,10978 21750,11319
 Zu den Faltern: unbefestigter Weg	Q2 21862,10965 21896,10978 21931,10992
 Zu den Faltern: Asphalt	Q0 21931,10992 22006,11019
@@ -2533,7 +2533,7 @@ Buschiner Str.: Asphalt	Q0 20160,13287 20263,13271 20364,13255 20482,13241 20600
 Stangeweg: Beton	Q0 21407,16257 21473,16238 21534,16188 21598,16055
 Anemonenstr.: asphaltiert	Q0 23439,4420 23651,4467 23809,4533 23934,4661
 Sella-Hasse-Str.: Asphalt	Q0 20901,16916 20843,16829 20771,16690 20948,16612
-Eisfalterweg: Asphalt	Q0 21518,11051 21640,11107
+Eisfalterweg: Asphalt	Q0 21543,11064 21640,11107
 #: corrected_by: srt (Asphalt Q0 -> Verbundsteinpflaster Q0-)
 Eisfalterweg: Verbundsteinpflaster	Q0- 21640,11107 21776,11179
 #: by: ^^^
@@ -4960,7 +4960,7 @@ Herkomerstr.: guter Asphalt	Q0 14563,9106 14446,8983
 #: by: R. Bensmann:
 Beckumer Str.: mäßiges Kopfsteinpflaster	Q2 2460,19083 2358,19209 2294,19328 2268,19402
 #: by: Anne (popanne) vvv
-Donizettistr.: guter Asphalt	Q0 24727,12027 24936,12071 25068,12099 25167,12119 25290,12088 25365,12069 25455,12047 25524,12062 25863,11965
+Donizettistr.: guter Asphalt	Q0 24727,12027 24936,12071 25068,12099 25167,12119 25290,12088 25365,12069 25455,12047 25524,12062 25617,12035 25863,11965
 An der Schule: mäßiges Kopfsteinpflaster	Q2 24716,12081 24727,12027 24739,11968 24747,11929
 An der Schule: guter Beton	Q0 24747,11929 24769,11819 24759,11666
 An der Schule: schlechter holpriger Sandweg	Q3 24759,11666 24760,11503 24815,11329 24824,11256
@@ -6232,7 +6232,7 @@ Laböer Str.: Asphalt	Q0 9487,16395 9594,16384
 #: note: 13 km/h als Höchstgeschwindigkeit angegeben
 Forchheimer Str.: mäßiges Kopfsteinpflaster	Q2- 11489,17980 11488,17946 11540,17684
 #: by: Güntert Eisert
-An der Nordbahn: asphaltiert	Q0 7184,19663 6669,20129
+An der Nordbahn: asphaltiert	Q0 7184,19663 7125,19717 6669,20129
 #: by: joachim fischer:
 Hardangerstr.: schlechtes Kopfsteinpflaster	Q3 11720,16752 11725,16626
 #: by: bölinger, gerhard:
@@ -9836,7 +9836,7 @@ Zeiler Weg: Kopfsteinpflaster	Q2 11495,18129 11579,18184 11665,18237 11750,18273
 #: by: axel bindrich [AM]
 Stuckstr.: Asphalt	Q2 14446,8983 14525,8894 14619,8794
 #: by: Detlef Neubauer [AM] vvv
-Gotlindestr.: Asphalt	Q0 16859,12613 16957,12599 17088,12617 17357,12566
+Gotlindestr.: Asphalt	Q0 16859,12613 16957,12599 17088,12617 17234,12607 17357,12566
 #: confirmed_by: srt
 Gotlindestr.: Beton mit Ausbesserungen	Q1 15947,12626 16284,12616 16409,12612 16576,12612 16720,12614 16859,12613
 Dietlindestr.: Asphalt	Q0 17056,12304 17087,12501 17088,12617

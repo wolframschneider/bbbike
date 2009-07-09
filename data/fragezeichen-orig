@@ -52,6 +52,9 @@ Chausseestr.	? 9212,13471 9094,13641 9042,13707 8935,13844 8879,13913 8831,13973
 Kniprodestr.	? 13838,15113 13749,15013 13649,14899 13453,14678
 #: by: Tagesspiegel vom 2009-04-12, soll 2009 realisiert werden
 Streitstr. (werden die vorhandenen Bordsteinradwege ersetzt)?	? -3040,16246 -3050,16429 -3046,16548 -3043,16601 -3031,16807 -3023,16925 -3018,16974 -3017,16984 -3009,17090 -3006,17128 -2959,17507 -2934,17594
+#: by: http://www.berlin.de/ba-pankow/presse/archiv/20081128.1050.115446.html
+#: next_check: 2010-01-01
+Blankenburger Str. erhält beiderseitig Radfahrstreifen zwischen Dietzgen- und Siegfriedstr.	?::inwork 10249,19541 10377,19565 10742,19632
 #: section ^^^
 #: section ^^^
 #
@@ -112,8 +115,9 @@ Alt-Blankenburg: Bau von Radwegen	?::inwork; 13592,20785 13576,20849 13915,20944
 #: next_check ^^^
 #: by ^^^
 #: by: http://www.berlin.de/ba-neukoelln/presse/archiv/20081118.1520.114696.html
-#: next_check: 2009-06-01
-Schwarzer Weg: Wiedereröffnung im Frühjahr 2009 (im März aber noch keine Anzeichen zu sehen)	?::inwork 13938,7938 13957,8209 13939,8228
+#: last_checked: 2009-07-07
+#: next_check: 2010-03-01
+Schwarzer Weg: Wiedereröffnung im Frühjahr 2009 (im Juli aber noch keinerlei Anzeichen zu sehen)	?::projected 13938,7938 13957,8209 13939,8228
 #XXX del An der Spandauer Brücke: neue Straßenführung	?::inwork 10309,12854 10398,12903 10427,12921 10371,13006
 #XXXdel : by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0802/nachricht2958.html;#: note: laut daniel.geraskov noch eine Baustelle;#: last_checked: 2008-06-23;Oranienburger Str.: Existiert in Richtung Hackescher Markt zwischen Friedrichstraße und Linienstraße eine Radspur?	?; 9215,13392 9281,13374
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0803/nachricht2984.html
@@ -125,14 +129,13 @@ B96a: Neubau der Radwege (gemeinsam mit Gehweg); wahrscheinlich wird der Radstre
 Ahrensfelder Chaussee: Radstreifen in Bau, bis 2008-10	? 20160,18301 20460,18420 20582,18468 20624,18485 20915,18601 21143,18704 21278,18786 21332,18819
 #: by: http://www.reinickendorf.de/index_8368_de.html
 Wittenauer Str.: Ausbau zum verkehrsberuhigten Bereich, außerdem Ersetzen des Pflasters durch eine Betonpflasterfahrbahn (Verbundsteinpflaster?), bis 2009-03-01 (Frühjahr 2009)	? 6666,22988 6651,23020 6644,23036 6634,23076 6712,23252 6727,23287 6770,23417
-Blankenfelde, Berliner Str. und Hauptstr: nach Bauarbeiten (bis 2009-04-01) vielleicht bessere Fahrbahnqualität?	?::inwork 9528,23240 9490,23531 9425,23693 9625,23781 9774,23936
 #: by: http://www.berliner-stadtplan.com/topic/bln/str/x_wgs/22.04/y_wgs/28.92/from/form.html
 #: by: http://www.morgenpost.de/content/2006/09/20/bezirke/855150.html
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20060915.1800.47562.html
-#: XXX Name der Straße? Der Pharus-Verlag meint "Wilhelm-Kabus-Str."
-#: last_checked: 2009-03-16 (Bäume sind gerodet, aber mehr ist noch nicht zu sehen)
-#: next_check: 2009-06-01
-Kolonnenstr. - Südkreuz: Bauarbeiten beginnen 2007, die Naumannstr. wird später verkehrsberuhigt	?::projected 7716,8048 7844,8049 7861,8217 7893,8327 7942,8380 8078,8772
+#: XXX Name der Straße? Der Pharus-Verlag meint "Wilhelm-Kabus-Str."; hier auch erwähnt: http://spdnet.sozi.info/berlin/thf-schoeneberg/fraktempschoen/dl/aktinfo0706.pdf und http://www.spd-fraktion-tempelhof-schoeneberg.de/index.php?seite=522&s=1&menu=1
+#: last_checked: 2009-07-07 (Bäume sind gerodet, aber mehr ist noch nicht zu sehen)
+#: next_check: 2009-11-01
+Wilhelm-Kabus-Str.: Bauarbeiten beginnen 2007, die Naumannstr. wird später verkehrsberuhigt	?::projected 7716,8048 7844,8049 7861,8217 7893,8327 7942,8380 8078,8772
 #: next_check: 2010-12-31
 Verbindung zwischen Leuthener Platz und General-Pape-Str. (evtl. mit Verlängerung) inkl. Brücke über die Bahnstrecke für Fußgänger und Radfahrer, Realisierung bis 2010-12-31	?::projected 7716,8356 7837,8354 7893,8327 8088,8283 8264,8289
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20060109.1050.33932.html
@@ -156,11 +159,6 @@ Grenzweg: Brücke über die Spree bzw. Straßenverbindung zwischen Rummelsburger La
 #: by: http://www.nationaler-radverkehrsplan.de/neuigkeiten/news.php?id=1370
 #: note: Havelradweg
 Werder - Phöben: Radweg in Planung, Realisierung bis 2007-12-31	? -22206,-1693 -22672,-1511 -23124,-1235 -23199,-903 -23175,-350 -23411,15 -23896,653 -24509,1607 -24680,1670 -24894,1733
-Reiterhof, Phöben - Havelfähre: Radweg in Planung auf dem Deich, Realisierung bis 2007-12-31	? -25787,3228 -25765,3246 -25530,3223 -25511,3313 -25425,3364 -25345,3389 -25282,3433 -25191,3442 -25198,3540 -25262,3561 -25373,3653 -25460,3795 -25563,3940 -25592,3985 -25578,4203 -25471,4332 -25506,4488 -25723,4736 -25725,4734 -25726,4734 -25855,4868 -25942,5010 -26073,5175 -26215,5272 -26647,5444 -26755,5459 -26918,5525
-#: XXX mit Streckenführung in osm vergleichen
-Havelfähre - Trebelberg: Radweg in Planung, teilweise auf dem Deich, Realisierung bis 2007-12-31	? -26918,5525 -27169,5667 -27239,5694 -27344,5769 -27537,5873 -27679,5929 -27873,6033 -28007,6147 -28158,6227 -28398,6324 -28418,6351 -28778,6516 -28755,6544 -28757,6542 -29169,6718 -29225,6532 -29272,6453 -29279,6367 -29507,6251 -29501,6153 -29526,6093 -29580,6051 -29618,5962 -29969,5876 -29960,5808 -29883,5747 -29792,5636 -30714,5328 -30571,4759 -30814,4732 -30785,4243
-#: XXX mit Streckenführung in osm vergleichen
-Trebelberg - Götz: Radweg in Planung, teilweise auf dem Deich, Realisierung bis 2007-12-31	? -30785,4243 -31154,4222 -32084,4555 -31797,4911 -31914,4963 -31987,4900 -32261,4875 -32525,4957 -32836,4701 -32854,4530 -32897,4268 -33031,4079 -33335,3994 -33545,3812 -33724,3833 -33810,3769 -33846,3529 -34021,3446 -34198,3561 -34399,3482 -34754,3547 -34644,3235 -34804,3090 -35063,1837 -35855,561
 #: by: http://www.nationaler-radverkehrsplan.de/neuigkeiten/news.php?id=1370
 #: XXX mit Streckenführung in osm vergleichen
 Havelfähre - Brandenburg: Planung des Havelradwegs, genaue Strecke, Realisierung bis 2007-12-31?	? -35855,561 -40569,935
@@ -186,6 +184,8 @@ Fritz-von-der-Lancken-Str - Höhenweg: Straße in Bau	?::inwork -12766,1932 -12636
 # Das heißt diese Strecken werden nicht bei einer erweiterten Suche aufgenommen
 # und dem CGI-Benutzer auch nicht präsentiert.
 # 
+#: by: Carsten Schulz:
+Wilmersdorf, am Hohen Bogen: Irgendwo hier gibt es ein neues Drängelgitter und erhöhten Fußgängerverkehr, wo genau?	? 3665,8131 3676,8394 3618,8447 3713,8578 3489,8839 3388,8958
 #: XXX_indoor:
 eigentlich ein Knoten	? -9586,13296
 #: XXX_indoor:
@@ -559,6 +559,7 @@ Am Trebelsee: Deich, Qualität?	? -32200,5825 -31812,6387 -31525,6962 -31087,7275
 Am Havelufer: teilweise sehr sandige Stellen, Q3	? -4072,5227 -3956,4875 -4062,4487 -4693,4431 -4881,4093 -4964,4100
 Waldbühne - Havelchaussee: Qualität (wahrscheinlich Waldwege, Q2 bis Q3)? noch immer durchgängig befahrbar?	? -1356,12093 -1531,12043 -2050,12675 -1950,12925 -2076,13060
 Fährweg - Niederneuendorfer Allee (Kleingartenanlage): Qualität?	? -1864,17785 -1854,17805 -1871,17842 -1914,17899 -2011,17986 -2039,18049 -2066,18097 -2105,18119 -2143,18153 -2166,18199 -2177,18279 -2197,18307 -2229,18312 -2750,18333
+Elkartweg - Uferweg: Qualität?	? -2082,17918 -2011,17986
 Steinhöfel - Poratz - Ringenwalde: Qualität?	? 37482,74476 37025,74400 36800,74137 36612,74162 35775,73750 35469,73594 35125,73487 33687,73037 33075,72750 32750,72787 32600,73062 31862,73112 30712,72625 30244,72598
 Am Neuen Garten: Qualität zwischen Glumestr. und Cecilienhof?	? -12302,718 -12276,831 -12212,1201
 Verlängerte Amtsstr.: Qualität? 	? -15251,1200 -15161,1780
@@ -867,7 +868,7 @@ Entlang des Wandlitzsees: Qualität?	? 14498,38870 14400,39325 13687,39975 13100,
 Eiche - Mehrow: Qualität?	? 22803,17756 23187,17900 23578,18189 24540,18556
 Mehrow - Trappenfelde (langer Weg): Qualität?	? 24996,18937 25675,19887 26262,20037 26717,20063 26800,20075 27256,19887
 Hirschfelde - Tiefensee: Qualität?	? 36528,26746 36987,26462 37337,26575 38500,28387 39155,29093 39750,29812 39662,30500 39298,30797
-Niederfinow - Eberswalde [am Finowkanal entlang]: Qualität?	? 43225,49300 43062,49475 42662,49587 42512,49787 42312,49900 42250,50037 41175,50200 41100,50050 40700,49837 40475,49987 40212,49975 40200,49862 39862,49700 39750,49512 39100,49312 38950,48787 38162,48400 37900,48350 37712,48350 37162,48462 37137,48362 36987,48362 36612,48200 36403,48168
+#XXX del: Finowkanal - Eberswalde Bhf.	? 37217,48445 37159,48481 37128,48358 36987,48362 36612,48200 36581,48125 36522,48019 36469,47975 36401,48025
 Strausberg, an der S-Bahn entlang: Qualität?	? 41396,16324 41725,16362 42262,17487 42650,17962 42837,18038
 Hennickendorf - Strausberg, östliche Route: Qualität?	? 40747,11863 41300,12400 41562,12900 41875,12875 42412,13837 42850,14400 43162,14428 43839,15716 43737,16362 43450,16950 43587,17012 43612,17175 43512,17250 43312,17750 43250,17737 43050,18137 43062,18362 42975,18637 42815,18713
 Fürstenwalde - ... [Spreeradweg]: Qualität?	? 55549,-4992 56050,-5037 56725,-5300 56825,-5212 57775,-5300 58059,-5432 58287,-5650 59537,-5725 60250,-5487 60875,-5575 62175,-6512 62100,-6612 62237,-6825 62250,-7200 62399,-7465
@@ -925,9 +926,9 @@ Schmargendorf - Angermünde: Qualität?	? 47045,64773 47328,65204 47831,65501 4843
 Albertshof, Alternative: Qualität?	? 24376,31986 24478,31918 25240,31808 25630,31782 26022,31789 27434,32400
 #: XXX laut osm track
 Niederfinow - Bralitz: Qualität?	? 46094,49871 46368,49825 46909,49947 47183,50000 47511,50259 47641,50237 47999,50427 48143,50747 48237,50875
-Am Finowkanal: Qualität (In Höhe Bahnbrücke asphaltiert)?	? 37162,48462 36969,48599 36816,48645 36367,48561 35986,48591 35742,48774
-Am Finowkanal: Qualität?	? 35659,48744 35575,48942 35377,49117 35270,49300 34966,49422 34745,49323 34630,49178 34547,49193 34478,49056 34349,48972 33937,48866 33701,49041 33526,49025 33221,48820 32696,48706 32391,48706 32162,48797 32002,48904 31820,48919 31455,49067
-Am Finowkanal: Qualität?	? 31507,49193 31317,49216 31043,49307 30654,49330 30426,49216 30296,49224 29999,49300 29375,49269 29176,49323 28895,49277 28712,49399 28658,49391 28643,49498 27508,49376 27341,49383 26945,49262 26670,49231 26450,49284 26442,49414 26594,49734 26587,49894 26693,50084 26000,50214 24583,49825 24461,49041 24393,48972
+Am Finowkanal: Qualität?	? 36364,48599 35933,48623 35742,48774
+Am Finowkanal: Qualität?	? 35659,48744 35575,48942 35377,49117 35256,49291 34926,49455 34716,49330 34630,49178 34522,49218 34478,49056 34305,48961 33957,48882 33701,49041 33526,49025 33221,48820 32696,48706 32391,48706 32162,48797 32002,48904 31820,48919 31482,49109
+Am Finowkanal: Qualität?	? 31495,49233 31320,49232 31043,49307 30654,49330 30426,49216 30296,49224 29999,49300 29375,49269 29176,49323 28895,49277 28712,49399 28634,49403 28618,49522 27508,49376 27341,49383 26945,49262 26670,49231 26450,49284 26442,49414 26594,49734 26587,49894 26693,50084 26000,50214 24583,49825 24461,49041 24393,48972
 Ützdorf - Bogensee: Qualität?	? 18337,39131 18345,39215 18503,39436 18534,39567 18733,39862 19076,40228 19213,40479 19053,40540 18784,40575 18665,40616 18519,40801 18124,40730 18048,40906 17964,40999 18022,41084 17879,41267
 Am Neuen Kanal/Trappenallee: Qualität?	? -3996,22969 -3994,23162 -3503,23811
 Dorfstr. Stolpe-Dorf: Qualität?	? -25,27812 237,28184 524,28171
@@ -985,8 +986,8 @@ Schönholz - Spechthausen: Qualität? Ausschilderung? Ist die "Eiszeittour" ausges
 #: XXX: laut "Berliner Umland" mäßig geeignet (Autoverkehr?)
 #: XXX: laut osm: unclassified
 Grüntal - Melchow: Qualität?	? 32000,38200 32099,38418 31773,39105 31727,39438 31297,39883 31261,40051 31057,40384 30993,41018
-#: XXX: laut osm: track und residential
-Tempelfelde: Qualität?	? 30694,33698 30837,34162 31057,34421
+#: XXX: laut osm: residential
+Tempelfelde: Qualität?	? 30837,34162 31057,34421
 #: XXX: laut "Berliner Umland" gut geeignet; bei osm gibt es diesen Weg nicht
 Bei Börnicke: Qualität?	? 26930,28875 27084,29356
 #: XXX: laut "Berliner Umland" gut geeignet
@@ -1436,7 +1437,7 @@ Lotosweg - Alt-Hermsdorf: besteht eine Verbindung zwischen Lotosweg und Alt-Herm
 Steinförder Str. - Menz: Qualität? Teil des Radwegs Berlin - Kopenhagen?	? -10475,85837 -10453,85639 -10301,85444 -10356,85146 -9850,84800
 Steinförde - Großmenow: Qualität?	? -12573,86500 -12599,86520 -13025,86596 -13293,86590 -13519,86715 -13924,86895 -14177,87056 -14445,87123 -14762,87137
 Gartenstr. (Elstal): Qualität?	? -18164,14194 -18123,14276 -18017,14480 -17979,14574 -17937,14727 -17871,14855 -17821,14925 -17763,15004
-Spechthausener Str. (Eberswalde): Qualität?	? 34356,48775 34378,48552 34354,48308 34372,48205 34451,47693 34518,47449 34475,47425
+Spechthausener Str. (Eberswalde): Qualität?	? 34334,48750 34378,48552 34354,48308 34372,48205 34451,47693 34518,47449 34475,47425
 Zoostr. (Eberswalde): Qualität?	? 34475,47425 34603,47145 34622,46834 34939,46907 35030,47010 35172,47111
 Falkenberger Chaussee - Pablo-Picasso-Str.: Weg asphaltiert oder betoniert (laut ADFC-Karte "gut geeignet")? Fußgängerfrequenz?	? 17703,17990 17906,17746 17973,17772
 Oderfähre: ab 2007-06-30 in Betrieb	? 71946,40655 72361,41057
@@ -1970,21 +1971,7 @@ Am Rudower Fließ: wassergebundene Decke? nachts beleuchtet?	? 16230,655 16269,73
 Nackthalsweg - Am Rudower Fließ: Qualität (evtl. Holzbohlen?)	? 16135,473 16148,458
 Erlenbruchring - Groß-Ziether Chaussee: Qualität?	? 16339,827 16320,834 16287,908
 Erlenbruchring - Groß-Ziether Chaussee/Eilenburger Weg: Qualität?	? 16339,827 16320,834 16287,908
-Turmschanzstr. (Magdeburg): Qualität?	? -107171,-32374 -107351,-32648 -107527,-32781 -107588,-32906 -107695,-33032 -107729,-33168 -107741,-33359
-Cracauer Str. (Magdeburg): Qualität?	? -107741,-33359 -107718,-33404 -107578,-33627 -107255,-33928 -107151,-34027
-Genthiner Str. (Magdeburg): Qualität?	? -107151,-34027 -106929,-34249
-Pechauer Str./Alt Prester (Magdeburg): Qualität?	? -106929,-34249 -106986,-34385 -106973,-34418 -106564,-34659 -106471,-34722 -106192,-35714 -106177,-35768 -106127,-35904
-Magdeburg - Pechau: Qualität?	? -106192,-35714 -106088,-35683 -105929,-35852 -105840,-35926 -105336,-36115 -105201,-36280 -105059,-36668 -104937,-36797 -104771,-36783 -104609,-36827 -104293,-37188 -104092,-37572 -103908,-37762 -103800,-37877 -103569,-37905 -103431,-37806
-Pechau - Calenberge: Qualität?	? -103431,-37806 -103223,-37958 -103040,-37931 -102849,-37981 -102682,-38151 -102618,-38176 -102543,-38826 -102307,-39377 -102263,-39537 -102044,-39533 -101985,-39565 -101919,-39666 -101697,-39890 -101621,-39969
-Calenberge - Elbenau: Qualität?	? -101621,-39969 -101519,-39938 -101433,-39980 -100906,-40244 -100855,-40316 -100945,-41580 -100875,-41671 -100491,-41721 -100426,-41777 -100358,-41989 -100325,-42097 -100263,-42065 -100015,-42075
-Elbenau - Plötzky: Qualität?	? -100015,-42075 -99900,-41989 -99893,-41910 -99837,-41877 -99805,-41829 -99681,-41642 -99112,-41184 -98997,-40874 -98934,-40582 -98941,-40549 -99014,-40492 -99035,-40405 -98909,-40147 -98754,-40129 -98543,-40181 -98339,-40192 -98102,-40370 -97749,-40918 -97680,-41120 -97567,-41229 -97377,-41357
-Plötzky - Pretzien: Qualität?	? -97377,-41357 -97186,-41478 -97065,-41532 -97019,-41629 -96551,-41842 -96342,-41891 -95892,-41945
-Pretzien - Dannigkow: Qualität?	? -95892,-41945 -95838,-42012 -95781,-41984 -95703,-41883 -95559,-41840 -95465,-41574 -95008,-41629 -94954,-41506 -94345,-40832 -93579,-39887 -93557,-39865 -93420,-39681 -92714,-39445 -92506,-39233
-Pretzien - Dornburg: Qualität?	? -93579,-39887 -93457,-39994 -93471,-41291 -93251,-41378 -92667,-41549 -92657,-41604 -92278,-41863 -92071,-42535 -92118,-42698 -92091,-42858 -92077,-43102
-Dornburg - Prödel: Qualität?	? -92077,-43102 -92028,-43101 -92019,-43180 -91995,-43219 -91923,-43219 -91436,-43214 -91356,-43246 -91285,-43220 -91196,-43120 -89932,-42866 -89777,-42832 -89700,-42822 -89513,-42858 -89299,-42835
-Prödel - Lübs: Qualität?	? -89299,-42835 -89340,-43361 -88957,-43828 -88332,-44145 -88292,-44262 -87832,-44198 -87800,-44480 -87878,-44502 -87870,-44640
-Lübs - Gehrden: Qualität?	? -87870,-44640 -87861,-44695 -87811,-44906 -86866,-45565 -86726,-45659 -86705,-45691 -86753,-45707 -86670,-45979
-Gehrden - Güterglück: Qualität?	? -86670,-45979 -86472,-46031 -86219,-46273 -85807,-46872 -84976,-47415 -84994,-47451 -85012,-47484 -84978,-47520 -84788,-47735 -84602,-47959 -84307,-48208 -84237,-48234
+Turmschanzenstr. (Magdeburg): Qualität?	? -107171,-32374 -107351,-32648 -107527,-32781 -107588,-32906 -107695,-33032 -107729,-33168
 #: XXX ein anonymer Kommentar war nicht klar genug ("gute Qualität", "Einbahnstraße ohne Richtungsangabe")
 Harzburger Str. (Pankow): Qualität? Gilt die Einbahnstraßenregelung auch für Radfahrer?	? 11442,18736 11419,18801
 Straßen in Burg: Qualität? Straßennamen?	? -93908,-17453 -94037,-17167 -94087,-16909 -94238,-16923 -94539,-16859 -94732,-16773
@@ -3322,7 +3309,6 @@ Reifenträgerweg: Qualität?	? -2367,3006 -2529,3220 -2638,3281 -2763,3359
 Waldsängerpfad: Qualität?	? -2638,3281 -2745,3182 -2890,3135
 #: XXX: laut OSM ein footway
 Strömannstr.: Ist die Strömannstr. zwischen Achillesstr. und Zum Kappgraben für Autofahrer gesperrt?	? 15899,23508 15963,23632
-ehem. Güterbahnhof Beusselstr.: existiert hier eine neue Erschließungsstraße?	? 7104,14403 7092,14471 7012,14508 6869,14493 6745,14433 6112,14288 6089,14197
 #: by: Prenzlauer Zeitung, 2009-03-19
 Seelübber Weg: ab Kreisel 135 Meter Kopfsteinpflaster mit begleitendem Radweg; danach weitere 650 Meter asphaltiert. Ist das tatsächlich die Straße nach Prenzlau?	? 42938,96695 42474,97313
 #: XXX ein anonymer Eintrag mit "sehr guter fester Sandweg, Schlaglöcher" existiert, aber vielleicht war der Möllersfelder Weg damit gemeint?
@@ -3410,6 +3396,12 @@ Gluckstr. (Potsdam): Qualität?	? -7832,-2864 -7491,-2904
 #: XXX unklarer Eintrag von Oliver Haase, "Bordsteinkanten"
 Mottlaupfad: Schrittgeschwindigkeit, vielleicht weil Spielstraße?	? -1901,23554 -2070,23631
 Zitronenfalterweg: geht der Weg bis an die Grünanlage heran?	? 21677,11017 21578,10977
+Dukatenfalterweg: Qualität?	? 21899,10885 21765,10834 21649,10777
+Feuerfalterstr.: Qualität?	? 21578,10977 21543,11064 21513,11137
+Rapsweißlingstr.: Qualität?	? 21249,11042 21284,10956 21324,10859 21368,10768
+Aurorafalterweg: Qualität?	? 21132,10880 21284,10956 21402,11009
+Mohrenfalterstr.: Qualität?	? 21184,10673 21368,10768 21397,10768 21491,10815
+Dramburger Str.: Qualität? Gibt es eine Verbindung zum Wuhlewanderweg? Wenn ja, wie ist die Qualität?	? 21495,10600 21560,10471
 Kemberger Str.: Gibt es einen Radweg in der Kemberger Straße? Ist dieser benutzungspflichtig?	? 22314,17916 22215,17784 22191,17751 22148,17687 22022,17519 22002,17492 21913,17376
 Scharfschwerdtstr. (Hohen Neuendorf): Qualität?	? 1364,27953 1426,28065 1456,28125 1453,28175 1448,28276 1432,28356 1489,28451 1536,28550 1698,28742 1838,28808
 Upstallweg: Qualität? Für Radfahrer befahrbar? Genaue Wegführung? Nachts beleuchtet?	? 17946,10344 17954,10367 18039,10398 18200,10387 18245,10398 18332,10434
@@ -3580,3 +3572,47 @@ Stachelbartweg: Qualität?	? 20713,10982 20659,11076 20645,11127 20646,11237
 Wettersternweg: Qualität?	? 20719,11101 20708,11145 20710,11234
 Rauhkopfweg: Qualität?	? 20602,11050 20582,11120 20580,11169 20585,11240
 Brandorfer Weg: Qualität?	? 20536,11022 20524,11016 20365,11025
+#: XXX zumindest das westliche Ende: Waldweg
+ausgeschilderte Radroute nach Cöthen: Qualität?	? 43189,42418 43891,42361 44539,42934 45390,43772 45812,43789
+Finowfurt - BU: Qualität? Teilweise für Autos gesperrt?	? 28634,49403 28574,48974 28325,48447 28042,48274 27854,47964 27438,47613 26932,47448 26862,47407 26769,47441 26568,47355 26396,47344 26297,47286
+Am Finowkanal - B2: Qualität des Zugangs? Wie lauten die Straßennamen?	? 38104,48410 38067,48461 38036,48441 37978,48486 37906,48495
+#: XXX Stimmt "Langerönner Mühle" als Ausgangspunkt? Oder besser Rüdnitz?
+Langerönner Mühle - Biesenthal: Qualität?	? 24208,35707 23784,36844 23713,37031 23610,39318
+Lobetal - Lanke: Qualität? Wie ist die genaue Wegführung (GPS-Track?)	? 23278,36072 23060,36601 23294,38443 22801,38830 22666,38835 22557,38801 21236,39862
+Bergerstr. (Eberswalde): Qualität? Gibt es hier einen Radweg?	? 37731,48228 37525,48270 37418,48290 37128,48358
+Wilhelmstr. (Eberswalde): Qualität? Gibt es hier einen Radweg?	? 37128,48358 37138,48216 37151,48074
+#: XXX von Klobbicke aus: schlechtes Kopfsteinpflaster, Q3; von Tuchen aus: asphaltiert, Q0:
+Mühlenweg: Qualität?	? 36640,39793 36556,39917 36030,39721 35641,39643
+#: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20090706.1100.131656.html
+Lindauer Allee/Aroser Allee - Luisenweg: Fahrbahnbeschaffenheit der Radfahrverbindung?	? 6720,18616 6740,18644 6770,18670 6775,18726 6801,18761
+Markscheiderstr.: Qualität?	? 6960,19047 7105,19677
+#: XXX laut osm: ja
+Markscheiderstr. - An der Nordbahn: Existiert hier eine direkte Verbindung für Radfahrer? Qualität?	? 7105,19677 7125,19717
+#: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20090504.1220.126942.html vvv
+#: XXX vielleicht können Teilstücke als "grüner Weg" gekennzeichnet werden
+#: XXX wird die RR8 hier entlang geführt?
+Siegfriedstr. - Herzbergstr.: Qualität des Radwegs im Landschaftspark Herzberge? Nachts beleuchtet?	? 16860,12996 17041,12989 17114,13019 17170,13070 17234,13081 17215,13416 17194,13519
+Siegfriedstr. - Herzbergstr.: Qualität des Radwegs im Landschaftspark Herzberge? Nachts beleuchtet?	? 17215,13416 17292,13478
+#: by: ^^^
+Fischerstr. - Lückstr.: Qualität des Weges durch den Blockpark? Für Radfahrer befahrbar? Nachts beleuchtet?	? 16246,10641 16303,10760
+#: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20090220.1035.120888.html (Einbahnstraßen)
+Pestalozzistr. (Mahlsdorf): Qualität? Wo besteht die Einbahnstraßenregelung? Gilt die Einbahnstraßenregelung nur für Autofahrer oder auch für Radfahrer?	? 25258,11705 25130,11737 24999,11766 24919,11783 24769,11819 24704,11830 24652,11794
+Beethovenstr. (Mahlsdorf): Qualität?	? 25290,12088 25340,12149 25436,12162 25466,12187 25512,12183 25854,12238 25999,12269 26099,12285
+Landvogtstr.: Qualität?	? 25771,11626 25735,11639 25526,11703 25279,11774
+Bachstr. (Mahlsdorf): Qualität?	? 25783,11759 25556,11826 25315,11895
+Hummelstr.: Qualität?	? 25290,11816 25186,11853 25060,11898 24969,11932 24905,11952 24747,11929
+Schubertstr. (Mahlsdorf): Qualität?	? 25130,11737 25186,11853 25290,12088
+Mozartstr. (Mahlsdorf): Qualität?	? 24999,11766 25060,11898 25167,12119
+Straußstr. (Mahlsdorf): Qualität?	? 25490,11578 25526,11703 25556,11826 25594,11939 25617,12035
+Kuhnaustr.: Qualität?	? 24919,11783 24969,11932 24936,12071
+Händelstr. (Mahlsdorf): Qualität?	? 25512,12183 25814,12090 25911,12062
+Lisztstr. (Mahlsdorf): Qualität?	? 25814,12090 25857,12206 25854,12238
+Blankenfelde, Berliner Str. und Hauptstr: Ist die Fahrbahnqualität nach den Bauarbeiten (bis Mai 2009) besser geworden?	? 9528,23240 9490,23531 9425,23693 9625,23781 9774,23936
+Havelschanze - Schützenstr.: Existiert eine Verbindung für Radfahrer? Wenn ja, wie ist die Qualität?	? -2560,16212 -2551,16199 -2570,16192 -2531,16113 -2533,16056 -2624,16049
+Weg an der Havel: Für Radfahrer befahrbar? Qualität?	? -3370,14115 -3312,14036 -3353,13990 -3493,13782 -3543,13691 -3566,13580 -3555,13485
+#: XXX_indoor mit Streckenführung in osm vergleichen
+Reiterhof, Phöben - Havelfähre: Qualität des Radwegs?	? -25787,3228 -25765,3246 -25530,3223 -25511,3313 -25425,3364 -25345,3389 -25282,3433 -25191,3442 -25198,3540 -25262,3561 -25373,3653 -25460,3795 -25563,3940 -25592,3985 -25578,4203 -25471,4332 -25506,4488 -25723,4736 -25725,4734 -25726,4734 -25855,4868 -25942,5010 -26073,5175 -26215,5272 -26647,5444 -26755,5459 -26918,5525
+#: XXX_indoor mit Streckenführung in osm vergleichen
+Havelfähre - Trebelberg: Qualität des Radwegs?	? -26918,5525 -27169,5667 -27239,5694 -27344,5769 -27537,5873 -27679,5929 -27873,6033 -28007,6147 -28158,6227 -28398,6324 -28418,6351 -28778,6516 -28755,6544 -28757,6542 -29169,6718 -29225,6532 -29272,6453 -29279,6367 -29507,6251 -29501,6153 -29526,6093 -29580,6051 -29618,5962 -29969,5876 -29960,5808 -29883,5747 -29792,5636 -30714,5328 -30571,4759 -30814,4732 -30785,4243
+#: XXX_indoor mit Streckenführung in osm vergleichen
+Trebelberg - Götz: Qualität des Radwegs?	? -30785,4243 -31154,4222 -32084,4555 -31797,4911 -31914,4963 -31987,4900 -32261,4875 -32525,4957 -32836,4701 -32854,4530 -32897,4268 -33031,4079 -33335,3994 -33545,3812 -33724,3833 -33810,3769 -33846,3529 -34021,3446 -34198,3561 -34399,3482 -34754,3547 -34644,3235 -34804,3090 -35063,1837 -35855,561

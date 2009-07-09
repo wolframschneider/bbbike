@@ -183,16 +183,7 @@ userdel	q4::inwork 9209,12795 9280,12883
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_013416',
-         'until' => 1246831200,
-         'text' => 'Badstraße (Wedding) in beiden Richtungen zwischen Pankstr. und Behmstr. Veranstaltung, Straße gesperrt bis Mo 00:00 ',
-         'from' => undef,
-         'id' => 1046,
-         'data' => 'userdel	2::temp 8788,16264 8862,16208 8928,16158 8993,16100 9059,16038 9134,15953
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -887,7 +878,7 @@ userdel	1::inwork 12229,10014 12398,9938 12556,9862
          'text' => 'Bauarbeiten in der Simplonstr., Straße gesperrt',
          'from' => undef,
          'id' => 1597,
-         'data' => '#: last_checked: 2009-06-01 vvv
+         'data' => '#: last_checked: 2009-07-05 vvv
 userdel	q4::inwork; 14597,11069 14530,11137
 userdel	q4::inwork 14530,11137 14465,11195
 #: last_checked ^^^
@@ -1162,15 +1153,7 @@ userdel	q4::inwork 9126,12413 9345,12443
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1246831200,
-         'text' => 'L 171 Kurt-Tucholsky-Straße Ol Hohen Neuendorf, zw. Höhe E.-Toller-Str. u. OA Neubau Straßenbordanlage halbseitig gesperrt; Einbahnstraße 25.05.2009-05.07.2009 ',
-         'from' => 1243116000,
-         'id' => 1680,
-         'data' => 'userdel	q4::inwork 1366,29416 1304,29256 1234,29120 1124,28923 1078,28830 1020,28712 1009,28662 1007,28446
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1323,16 +1306,7 @@ userdel	2::inwork 7160,11225 6851,11346
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1247695199,
-         'text' => 'Dammweg Richtung Köpenicker Landstr. gesperrt (bis Mitte Juli 2009)',
-         'from' => 1246398622,
-         'id' => 1714,
-         'data' => '#: last_checked: 2009-06-27
-userdel	q4::inwork; 15698,8191 15561,8072
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1247349600,
          'text' => 'B 198 zw. Kerkow u. Greiffenberg Deckenerneuerung Vollsperrung 22.06.2009-11.07.2009 ',
@@ -1360,15 +1334,7 @@ userdel	q4::inwork; 15698,8191 15561,8072
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1246831200,
-         'text' => 'L 026 Wollschow - Prenzlau OD Brüssow 750 Jahre Brüssow Vollsperrung 04.07.2009-05.07.2009 ',
-         'from' => 1246572000,
-         'id' => 1718,
-         'data' => 'userdel	q4::temp 57672,111590 57565,111511 57477,111392
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1247263200,
          'text' => 'L 073 Baruth - Luckenwalde zw. OA Baruth u. OE Paplitz Fahrbahnsanierung Vollsperrung 25.06.2009-10.07.2009 ',
@@ -1378,15 +1344,7 @@ userdel	q4::inwork; 15698,8191 15561,8072
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1246917600,
-         'text' => 'L 086 Bahnhofstraße OD Groß Kreutz, Bahnübergang Gleisbauarbeiten Vollsperrung 03.07.2009-06.07.2009 ',
-         'from' => 1246485600,
-         'id' => 1720,
-         'data' => 'userdel	2::inwork -31993,-726 -32143,-211
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1251324000,
          'text' => 'L 086 Bahnhofstraße OD Groß Kreutz, Bahnübergang Gleisbauarbeiten Vollsperrung 25.08.2009-26.08.2009 ',
@@ -1405,15 +1363,7 @@ userdel	q4::inwork; 15698,8191 15561,8072
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1246831200,
-         'text' => 'L 251 Frauenhagen - Brüssow OD Brüssow 750 Jahre Brüssow Vollsperrung 04.07.2009-05.07.2009 ',
-         'from' => 1246572000,
-         'id' => 1723,
-         'data' => 'userdel	q4::temp 57568,111045 57559,111267 57445,111340 57391,111374 57405,111424
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1247263200,
          'text' => 'L 303 Umgehungsstr. OD Eggersdorf, zw. K.-Liebknecht-Str. u. Landhausstr. Straßenbauarbeiten Vollsperrung 23.06.2009-10.07.2009 ',
@@ -1452,16 +1402,7 @@ userdel	q4::inwork; 15698,8191 15561,8072
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_013407',
-         'until' => 1246831199,
-         'text' => 'Residenzstr. (Reinickendorf) in beiden Richtungen zwischen Pankower Allee und Emmentaler Str. Veranstaltung, Straße vollständig gesperrt (Residenzstraßenfest)',
-         'from' => undef,
-         'id' => 1728,
-         'data' => 'userdel	2::temp 7587,17532 7500,17796 7487,17836 7466,17904 7445,17968 7439,17985 7418,18051 7350,18262
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1257030000,
          'text' => 'B 112 OU Guben - OU Neuzelle zw. Abzw.Wellmitz und Neuzelle Straßenneubau Vollsperrung 07.07.2009-31.10.2009 ',
@@ -1488,6 +1429,52 @@ userdel	q4::inwork; 15698,8191 15561,8072
          'data' => 'userdel	2::inwork -8893,85743 -9850,84800
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_013316',
+         'until' => 1262300400,
+         'text' => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Mohrenstr. und Behrenstr. Baustelle, Fahrtrichtung gesperrt (bis Dezember 2009)',
+         'from' => 1246916833,
+         'id' => 1732,
+         'data' => 'userdel	q4::inwork; 9672,11833 9663,11927 9651,12020 9636,12126 9626,12227
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1257030000,
+         'text' => 'K 6145 Drahnsdorf - Golßen OD Landwehr Straßenbau Vollsperrung 13.07.2009-31.10.2009 ',
+         'from' => 1247349600,
+         'id' => 1733,
+         'data' => 'userdel	q4::inwork 24326,-50111 24264,-49146
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1247090400,
+         'text' => 'L 021 Mühlenbecker Str. OL Schildow, Nr. 89 Kranarbeiten Vollsperrung 08.07.2009-08.07.2009 ',
+         'from' => 1246917600,
+         'id' => 1734,
+         'data' => 'userdel	q4::inwork 8103,27587 8189,26883
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1248991199,
+         'text' => 'Bauarbeiten in der Frohnauer Straße zwischen den Kreuzungsbereichen Alemannenstraße und Karmeliterweg, 16.07.-30.07.2009, Anliegerverkehr möglich',
+         'from' => 1247608800,
+         'id' => 1735,
+         'data' => 'userdel	q4::inwork 1868,24633 1838,24675 1802,24707 1736,24722
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1248991199,
+         'text' => 'Bauarbeiten in der Alemannenstraße, Einbahnstraßenregelung zwischen Frohnauer Str. und Maximiliankorso Richtung Norden, 16.07.-30.07.2009',
+         'from' => 1247608800,
+         'id' => 1736,
+         'data' => 'userdel	q4::inwork; 1738,25243 1767,25098 1775,25019 1750,24942 1730,24860 1732,24798 1735,24738
+',
+         'type' => 'handicap'
        }
      
 );

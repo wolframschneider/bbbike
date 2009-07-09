@@ -61,7 +61,7 @@ Liebenwalde	3 8919,51778
 Eberswalde	4 37391,48095
 Finow	0 32189,48528
 Buckow|b. Lichterfelde	0 31944,53710
-Blütenberg	0 34326,54103
+Blütenberg	0 34322,53968
 Joachimsthal	3 32966,64019
 Angermünde	4 49728,68465
 Oderberg	3 53187,51918
@@ -180,13 +180,14 @@ Rangsdorf	2 11753,-12794
 Dahlewitz	2 13503,-9528
 # um Bernau herum
 Ladeburg	2 22512,33312
-Rüdnitz	2 24915,35340
+Rüdnitz	2 24930,35363
 Lobetal	1 23232,36004
 Albertshof	0 27237,32838
 Tempelfelde	1 31377,34072
+Friedrich-Wilhelms-Hof	0 32345,35048
 Sydow	0 30769,37588
 Grüntal	1 31581,37911
-Danewitz	1 27866,36818
+Danewitz	1 27786,36831
 Gratze	0 34072,36841
 Beerbaum	0 36307,36503
 Heckelberg	1 39402,37410
@@ -194,6 +195,7 @@ Freudenberg	1 38168,33025
 Beiersdorf	1 35737,32393
 Schönfeld|(Barnim)	1 32801,30994
 Kruge	0 42064,39744
+Gersdorf	1 42833,41088
 Börnicke|b. Bernau	1 25977,28869
 Birkenhöhe	0 22580,27309
 Willmersdorf	1 29267,28985
@@ -236,7 +238,7 @@ Gabow	1 55418,46718
 Neuenhagen|(Oderbruch)	2 53784,48650
 Altglietzen	1 55403,48222
 Liepe	1 47975,51325
-Niederfinow	1 45332,48212
+Niederfinow	1 45328,48225
 # nördl. von Oranienburg
 Nassenheide	1 -3022,45291
 Friedrichsthal	2 1125,43221
@@ -421,6 +423,7 @@ Dannenberg	1 47381,41481
 Rädikow	0 50258,34962
 Cöthen	0 46094,43714
 Hohenfinow	2 45150,45562
+Struwenberg|(Hohenfinow)	0 45440,47840
 Falkenberg|(Oderbruch)	2 47628,44635
 Bralitz	1 50572,48457
 Altranft	2 55627,41154
@@ -458,7 +461,6 @@ Melchow	1 30409,41559
 Schönholz	0 33918,41987
 Spechthausen	1 35066,45479
 Trampe	1 39137,42103
-Kruge-Gersdorf	1 42838,41111
 Tornow	1 42478,46377
 Sommerfelde	2 40820,47166
 Müllrose	3 79678,-16613
@@ -767,6 +769,7 @@ Damme	2 -46559,22302
 Stechow	2 -53929,23776
 Mögelin	2 -62686,15832
 Golßen	3 25192,-48055
+Landwehr	1 24205,-49455
 Freiwalde	1 34777,-48468
 Lubolz	2 40568,-47982
 Hartmannsdorf|(Spreewald)	1 44440,-47966
@@ -1199,8 +1202,10 @@ Rießen	2 87812,-22670
 Kötzlin	1 -70240,54199
 #: note: Gemeinde Neißemünde
 Ratzdorf	2 103154,-35833
+#: XXX_prog: Teil von Tuchen-Klobbicke
+#: alias: Tuchen-Klobbicke
 Tuchen	1 36037,39137
-Klobbicke	1 36650,39800
+Klobbicke	1 36640,39793
 Hobrechtsfelde	0 16301,29192
 Waldsiedlung	0 16132,36512
 Jühnsdorf	1 9345,-11425
