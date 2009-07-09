@@ -107,6 +107,7 @@ EOF
     if (!@multi_c) {
 	print $fh hidden("wpt", join(",", $self->get_map_center));
     }
+    print $fh hidden("coordsystem", "polar");    
     print $fh hidden("oldcoords", $oldcoords) if $oldcoords;
     print $fh hidden("maptype", $maptype);
     for my $wpt (@wpt) {
