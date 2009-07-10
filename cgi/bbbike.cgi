@@ -1,4 +1,3 @@
-#!/usr/bin/env perl
 #!/usr/local/bin/perl
 # -*- perl -*-
 
@@ -116,7 +115,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $include_outer_region @outer_berlin_places $outer_berlin_qr
 	    $osm_data $datadir $show_mini_map $no_input_streetname
 	    $enable_opensearch_suggestions
-	    $warn_message $use_utf8
+	    $warn_message $use_utf8 $use_via
 	    $enable_google_analytics
 	    $with_green_ways
 	   );
@@ -668,9 +667,13 @@ generated HTML pages. Highly recommended for non-latin1 data.
 
 $use_utf8 = 0;
 
-=back
+=item $use_via
+
+Set to a true value if the you want show a via search field.
 
 =cut
+
+$use_via = '';
 
 # XXX document: # show max n matches in start form
 $max_matches = 20;
@@ -1385,7 +1388,7 @@ sub choose_form {
 
     my $vianame   = $q->param('vianame')   || '';
     my $via2      = $q->param('via2')      || '';
-    my $via       = $q->param('via')       || ($osm_data ? 'NO' : '');
+    my $via       = $q->param('via')       || ($use_via ? 'YES' : 'NO');
     my $viaplz    = $q->param('viaplz')    || '';
     my $viahnr    = $q->param('viahnr')    || '';
     my $viac      = $q->param('viac')      || '';
