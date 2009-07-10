@@ -22,6 +22,9 @@ my $force_utf8 = 1;
 # performance tuning, egrep may be faster than perl regex
 my $use_egrep = 1;
 
+# look(1) is faster than egrep
+my $use_look = 0;
+
 sub ascii2unicode {
     my $string = shift;
 
@@ -41,7 +44,12 @@ sub street_match {
         return;
     }
 
-    if ($use_egrep) {
+    if ($use_look) {
+        open( IN, '-|' ) || exec 'look', '-fb', $street,
+          $file;
+    }
+
+    elsif ($use_egrep) {
         open( IN, '-|' ) || exec 'egrep', '-s', '-m', '2000', '-i', $street,
           $file;
     }
@@ -172,7 +180,7 @@ my $q = new MyCgiSimple;
 
 my $action    = 'opensearch';
 my $street    = $q->param('search') || $q->param('q') || 'gari';
-my $city      = $q->param('city') || 'germany';
+my $city      = $q->param('city') || 'planet';
 my $namespace = $q->param('namespace') || '0';
 
 binmode( \*STDERR, ":utf8" ) if $debug >= 1;
