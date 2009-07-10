@@ -10,11 +10,11 @@ $ENV{LANG} = 'C';
 
 my $opensearch_file = 'opensearch.streetnames';
 my $opensearch_dir  = '../data-osm';
-my $opensearch_dir2  = '../data-opensearch';
+my $opensearch_dir2 = '../data-opensearch';
 
 my $debug         = 2;
 my $match_anyware = 0;
-my $match_words = 1;
+my $match_words   = 1;
 
 # performance tuning, egrep may be faster than perl regex
 my $use_egrep = 1;
@@ -25,7 +25,7 @@ sub ascii2unicode {
     my ( $ascii, $unicode, @rest ) = split( /\t/, $string );
 
     warn "ascii2unicode: $unicode\n" if $debug >= 2;
-    return $unicode ? $unicode : $ascii ;
+    return $unicode ? $unicode : $ascii;
 }
 
 sub street_match {
@@ -60,11 +60,10 @@ sub street_match {
             push( @data, &ascii2unicode($_) );
         }
 
-        elsif ($match_words && /\b$street/i) {
+        elsif ( $match_words && /\b$street/i ) {
             chomp;
             push( @data, &ascii2unicode($_) );
         }
-
 
         # or for long words anyware, second class matches
         elsif ( $match_anyware && $len >= 2 && /$street/i ) {
@@ -103,8 +102,8 @@ sub streetnames_suggestions {
       ? "../data/$opensearch_file"
       : "$opensearch_dir/$city/$opensearch_file";
 
-    if (! -f $file && -f "$opensearch_dir2/$city/$opensearch_file") {
-	$file = "$opensearch_dir2/$city/$opensearch_file";
+    if ( !-f $file && -f "$opensearch_dir2/$city/$opensearch_file" ) {
+        $file = "$opensearch_dir2/$city/$opensearch_file";
     }
 
     my ( $d, $d2 ) = &street_match( $file, $street, $limit );
@@ -114,7 +113,7 @@ sub streetnames_suggestions {
         ( $d, $d2 ) = &street_match( $file, "^$street", $limit );
     }
 
-    my @data  = defined $d ? @$d : ();
+    my @data  = defined $d  ? @$d  : ();
     my @data2 = defined $d2 ? @$d2 : ();
 
     warn "Len1: ", scalar(@data), " ", join( " ", @data ), "\n" if $debug >= 2;
