@@ -13,7 +13,8 @@ my $opensearch_dir  = '../data-osm';
 my $opensearch_dir2  = '../data-opensearch';
 
 my $debug         = 2;
-my $match_anyware = 1;
+my $match_anyware = 0;
+my $match_words = 1;
 
 # performance tuning, egrep may be faster than perl regex
 my $use_egrep = 1;
@@ -58,6 +59,12 @@ sub street_match {
             chomp;
             push( @data, &ascii2unicode($_) );
         }
+
+        elsif ($match_words && /\b$street/i) {
+            chomp;
+            push( @data, &ascii2unicode($_) );
+        }
+
 
         # or for long words anyware, second class matches
         elsif ( $match_anyware && $len >= 2 && /$street/i ) {
