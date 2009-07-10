@@ -673,7 +673,7 @@ Set to a true value if the you want show a via search field.
 
 =cut
 
-$use_via = '';
+$use_via = 1;
 
 # XXX document: # show max n matches in start form
 $max_matches = 20;
@@ -1388,7 +1388,7 @@ sub choose_form {
 
     my $vianame   = $q->param('vianame')   || '';
     my $via2      = $q->param('via2')      || '';
-    my $via       = $q->param('via')       || ($use_via ? 'YES' : 'NO');
+    my $via       = $q->param('via')       || ($use_via ? '' : 'NO');
     my $viaplz    = $q->param('viaplz')    || '';
     my $viahnr    = $q->param('viahnr')    || '';
     my $viac      = $q->param('viac')      || '';
