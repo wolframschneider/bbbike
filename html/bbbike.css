@@ -186,3 +186,9 @@ a.ms:visited { color:#333333; }
   font-weight:bold;
   font-size:larger;
 }
+
+
+input#suggest_start:focus, 
+input#suggest_via:focus, 
+input#suggest_ziel:focus { background-color: #FFC }
+
