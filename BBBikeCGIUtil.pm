@@ -26,16 +26,21 @@ sub encode_possible_utf8_params {
 	Encode->VERSION(2.08); # "Süd" gets destroyed in older versions
 	my %new_param;
 	for my $key ($q->param) {
+#warn $key;
 	    next if $q->upload($key);
 	    my @vals;
 	    for my $val ($q->param($key)) {
+#warn $val;
 		eval {
 		    my $test_val = $val;
 		    Encode::decode("utf-8", $test_val, Encode::FB_CROAK());
 		};
 		if (!$@) {
 		    $val = Encode::decode("utf-8", $val);
-		    utf8::downgrade($val);
+                    if ($val =~ m{^[\0-\xff]+$}) {
+                        utf8::downgrade($val);
+                    }
+#		    utf8::downgrade($val);
 		}
 		push @vals, $val;
 	    }
