@@ -2318,6 +2318,13 @@ function " . $type . "char_init() {}
 	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
 
     print "</form>\n";
+
+print <<EOF;
+<script type="text/javascript">
+    document.BBBikeForm.start.focus();
+</script><br>
+EOF
+
     print "</td></tr></table>\n" if $bi->{'can_table'};
 
     print "<hr>";
