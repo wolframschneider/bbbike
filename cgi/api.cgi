@@ -12,9 +12,12 @@ my $opensearch_file = 'opensearch.streetnames';
 my $opensearch_dir  = '../data-osm';
 my $opensearch_dir2 = '../data-opensearch';
 
-my $debug         = 2;
+my $debug         = 0;
 my $match_anyware = 0;
 my $match_words   = 1;
+
+# word matching for utf8 data
+my $force_utf8 = 1;
 
 # performance tuning, egrep may be faster than perl regex
 my $use_egrep = 1;
@@ -47,7 +50,7 @@ sub street_match {
     }
 
     # to slow
-    # binmode(\*IN, ":utf8");
+    binmode(\*IN, ":utf8") if $force_utf8;
 
     my @data;
     my @data2;
@@ -165,9 +168,10 @@ sub strip_list {
 # GET /w/api.php?action=opensearch&search=berlin&namespace=0 HTTP/1.1
 
 my $q = new MyCgiSimple;
+#use CGI; my $q = new CGI;
 
 my $action    = 'opensearch';
-my $street    = $q->param('search') || $q->param('q') || 'garib';
+my $street    = $q->param('search') || $q->param('q') || 'gari';
 my $city      = $q->param('city') || 'germany';
 my $namespace = $q->param('namespace') || '0';
 
@@ -179,6 +183,8 @@ print $q->header(
     -charset => 'utf8',
     -expires => $expire,
 );
+
+binmode(\*STDOUT, ":utf8") if $force_utf8;
 
 my @suggestion =
   &streetnames_suggestions_unique( 'city' => $city, 'street' => $street );
