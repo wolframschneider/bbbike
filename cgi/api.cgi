@@ -12,18 +12,19 @@ my $opensearch_file = 'opensearch.streetnames';
 my $opensearch_dir  = '../data-osm';
 my $opensearch_dir2 = '../data-opensearch';
 
-my $debug         = 0;
+my $debug         = 2;
 my $match_anyware = 0;
 my $match_words   = 1;
 
 # word matching for utf8 data
 my $force_utf8 = 1;
 
+# look(1) is faster than egrep, override use_egrep option
+my $use_look = 1;
+
 # performance tuning, egrep may be faster than perl regex
 my $use_egrep = 1;
 
-# look(1) is faster than egrep
-my $use_look = 0;
 
 sub ascii2unicode {
     my $string = shift;
