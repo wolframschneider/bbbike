@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# linux wrapper for bzip2
+
+PATH=/bin:/usr/bin; export PATH
+
+if which buffer >/dev/null; then
+	bzip2 -dc "$@" | buffer -m 6400k
+else
+	bzip2 -dc "$@"
+fi
+

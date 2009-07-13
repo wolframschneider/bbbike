@@ -1,0 +1,12 @@
+#!/bin/sh
+#
+# linux wrapper for gzip
+
+PATH=/bin:/usr/bin; export PATH
+
+if which buffer >/dev/null; then
+	gzip -dc "$@" | buffer -m 6400k
+else
+	gzip -dc "$@"
+fi
+
