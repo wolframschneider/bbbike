@@ -198,10 +198,15 @@ sub get_html {
 	 'slaven1.bbbike.de'  => "ABQIAAAAidl4U46XIm-bi0ECbPGe5hRQAqip6zVbHiluFa7rPMSCpIxbfxQLz2YdzoN6O1jXFDkco3rJ_Ry2DA",
 	 '78.47.225.30'	      => "ABQIAAAACNG-XP3VVgdpYda6EwQUyhTTdIcL8tflEzX084lXqj663ODsaRSCKugGasYn0ZdJkWoEtD-oJeRhNw",
 	 'bbbike.de'	      => 'ABQIAAAACNG-XP3VVgdpYda6EwQUyhRfQt6AwvKXAVZ7ZsvglWYeC-xX5BROlXoba_KenDFQUtSEB_RJPUVetw',
+	 'recv.de'	      => 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShRZGykBMsY0k7_NlhmXv25sysVkvhRDhtTAHMlTJtehYN7xeJ9lvP8RZw',
+	 'bbbike.elsif.de'    => 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShQYKE6detmKRWDQHmeaoEIvpzlZTxSp-OhMdXTigI71vlN3iIVxDx0XhQ',
 	);
     my $full = URI->new(BBBikeCGIUtil::my_url(CGI->new, -full => 1));
     my $fallback_host = "bbbike.de";
     my $host = eval { $full->host } || $fallback_host;
+
+    # warn "Google maps API: host: $host, full: $full\n";
+
     my $google_api_key = $google_api_keys{$host} || $google_api_keys{$fallback_host};
     my $cgi_reldir = dirname($full->path);
     my $is_beta = $full =~ m{bbikegooglemap2.cgi};
