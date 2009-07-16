@@ -24,7 +24,7 @@ use vars qw($VERSION);
 $VERSION = 0.1;
 
 # unicode sort(1) mess
-$ENV{'LC_ALL'} = 'C';
+$ENV{'LANG'} = 'C';
 
 my $debug  = 1;    # 0: quiet, 1: normal, 2: verbose
 my $sort   = 0;
@@ -101,6 +101,10 @@ sub extract_nodes {
                 $name .= ' [ZIP ' . $tag{'postal_code'} . ']'
                   if exists $tag{'postal_code'} && $name;
 
+                $name =~ s/^\s+//;
+                $name =~ s/\s+$//;
+                $name =~ s/\t/ /g;
+
                 if ($name) {
                     print $fd_streets $nodes[0], "\t", $name, "\n";
                 }
@@ -123,7 +127,12 @@ sub street_names {
     while (<$s>) {
         chomp;
         my ( $point, $street ) = split(/\t/);
-        push( @{ $hash{$point} }, $street );
+        # requires twice the memory, too much for the planet file (>3.8GB) and will
+        # crash 4GB RAM machines
+        #push( @{ $hash{$point} }, $street ); 
+
+	next if !$street;
+        $hash{$point} .= exists $hash{$point} ? "\t" . $street : $street;
     }
 
     my $p = new IO::File $points, "r" or die "open $points: $!\n";
@@ -141,7 +150,7 @@ sub street_names {
         my ( $point, $coords ) = split(/\t/);
 
         if ( exists $hash{$point} ) {
-            foreach my $street ( @{ $hash{$point} } ) {
+            foreach my $street ( split(/\t/, $hash{$point} ) ) {
                 next if $uniq && exists $streets{$street};
 
                 print $street, "\t", $coords, "\n";

@@ -8,7 +8,7 @@
 
 
 MAX_PARALLELS_OSM_DOWNLOADS=	3
-NICE=		nice -n 0
+NICE=		nice -n 5
 DOWNLOADOSM=	./miscsrc/downloadosm --debug=2 --step=0.02
 OSMBIKE_DATA=	data-osm.tgz
 OSM2BBD_MAPTYPE=	-map bbbike	
@@ -112,17 +112,16 @@ CITIES=		\
 	Colmar \
 	Kassel \
 
-OSM_AREAS_OPENSEARCH=data-opensearch3
-OSM_AREAS= africa.osm.bz2 \
-	australia-oceania.osm.bz2 \
-	europe.osm.bz2 \
+OSM_AREAS_OPENSEARCH=data-opensearch5
+OSM_AREAS= \
+	planet.osm.bz2 \
 	germany.osm.bz2 \
 	north-america.osm.bz2 \
-	planet.osm.bz2 \
-	south-america.osm.bz2
-
-# OSM_AREAS= africa.osm.bz2 australia-oceania.osm.bz2  germany.osm.bz2  south-america.osm.bz2
-
+	australia-oceania.osm.bz2 \
+	south-america.osm.bz2 \
+	sachsen.osm.bz2 \
+	africa.osm.bz2 \
+	europe.osm.bz2 \
 
 
 all: help
