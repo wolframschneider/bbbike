@@ -846,6 +846,58 @@ sub get_html {
 	showLink(center, 'Link to map center: ');
     });
 
+
+    var copyright = new GCopyright(1,
+        new GLatLngBounds(new GLatLng(-90,-180), new GLatLng(90,180)), 0,
+        '(<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>)');
+    var copyrightCollection =
+        new GCopyrightCollection('Kartendaten &copy; 2009 <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors');
+    copyrightCollection.addCopyright(copyright);
+
+    var tilelayers_mapnik = new Array();
+    tilelayers_mapnik[0] = new GTileLayer(copyrightCollection, 0, 18);
+    tilelayers_mapnik[0].getTileUrl = GetTileUrl_Mapnik;
+    tilelayers_mapnik[0].isPng = function () { return true; };
+    tilelayers_mapnik[0].getOpacity = function () { return 1.0; };
+    var mapnik_map = new GMapType(tilelayers_mapnik,
+        new GMercatorProjection(19), "Mapnik",
+        { urlArg: 'mapnik', linkColor: '#000000' });
+    map.addMapType(mapnik_map);
+
+    var tilelayers_tah = new Array();
+    tilelayers_tah[0] = new GTileLayer(copyrightCollection, 0, 17);
+    tilelayers_tah[0].getTileUrl = GetTileUrl_TaH;
+    tilelayers_tah[0].isPng = function () { return true; };
+    tilelayers_tah[0].getOpacity = function () { return 1.0; };
+    var tah_map = new GMapType(tilelayers_tah,
+        new GMercatorProjection(19), "T\@H",
+        { urlArg: 'tah', linkColor: '#000000' });
+    map.addMapType(tah_map);
+
+    map.setMapType(mapnik_map);
+
+    var marker_icon = new GIcon();
+    marker_icon.image = "/img/pin-32x32.png";
+    marker_icon.iconSize = new GSize(32, 32)
+    marker_icon.iconAnchor = new GPoint(22, 30);
+
+    var mlon = 13.3776;
+    var mlat = 52.5162;
+    var marker = new GMarker(new GLatLng(mlat, mlon),
+        { icon: marker_icon,
+          zIndexProcess: function() { return 200; } });
+    map.addOverlay(marker);
+
+function GetTileUrl_Mapnik(a, z) {
+    return "http://tile.openstreetmap.org/" +
+                z + "/" + a.x + "/" + a.y + ".png";
+}
+
+function GetTileUrl_TaH(a, z) {
+    return "http://tah.openstreetmap.org/Tiles/tile/" +
+                z + "/" + a.x + "/" + a.y + ".png";
+}
+
 EOF
     for my $def ([$feeble_paths_polar, '#ff00ff', 5,  0.4],
 		 [$paths_polar,        '#ff0000', 10, undef],
