@@ -301,12 +301,12 @@ sub get_html {
     }
 
     function setwpt(x,y) {
-        map.recenterOrPanToLatLng(new GPoint(x, y));
+        map.panTo(new GPoint(x, y));
     }
 
     function setwptAndMark(x,y) {
 	var pt = new GPoint(x, y);
-	map.recenterOrPanToLatLng(pt);
+	map.panTo(pt);
 	if (currentPointMarker) {
 	    map.removeOverlay(currentPointMarker);
 	}
@@ -421,7 +421,7 @@ sub get_html {
 	for(var i = 0; i < addRoute.length; i++) {
 	    if (i == 0) {
 		addRouteText = routeLabel;
-		addRouteLink = routeLinkLabel + "@{[ $get_public_link->() ]}?zoom=" + map.getZoomLevel() + "&coordsystem=polar" + "&maptype=" + mapTypeToString() + "&wpt_or_trk=";
+		addRouteLink = routeLinkLabel + "@{[ $get_public_link->() ]}?zoom=" + map.getZoom() + "&coordsystem=polar" + "&maptype=" + mapTypeToString() + "&wpt_or_trk=";
 	    } else if (i > 0) {
 		addRouteText += " ";
 		addRouteLink += "+";
@@ -598,7 +598,7 @@ sub get_html {
 
     function showLink(point, message) {
 	var mapType = mapTypeToString();
-        var latLngStr = message + "@{[ $get_public_link->() ]}?zoom=" + map.getZoomLevel() + "&wpt=" + formatPoint(point) + "&coordsystem=polar" + "&maptype=" + mapType;
+        var latLngStr = message + "@{[ $get_public_link->() ]}?zoom=" + map.getZoom() + "&wpt=" + formatPoint(point) + "&coordsystem=polar" + "&maptype=" + mapType;
         document.getElementById("permalink").innerHTML = latLngStr;
     }
 
@@ -612,11 +612,11 @@ sub get_html {
     }
 
     function setZoomInForm() {
-	document.googlemap.zoom.value = map.getZoomLevel();
+	document.googlemap.zoom.value = map.getZoom();
     }
 
     function setZoomInUploadForm() {
-	document.upload.zoom.value = map.getZoomLevel();
+	document.upload.zoom.value = map.getZoom();
     }
 
     function waitMode() {
@@ -736,7 +736,7 @@ sub get_html {
 
     function init() {
         var frm = document.forms.commentform;
-        get_and_set_email_author_from_cookie(frm);
+        // get_and_set_email_author_from_cookie(frm);
         var initial_mapmode = "$self->{initial_mapmode}";
 	if (initial_mapmode) {
 	    var elem = document.getElementById("mapmode_" + initial_mapmode);
@@ -826,20 +826,22 @@ sub get_html {
     }
 
     if (GBrowserIsCompatible() ) {
-        var map = new GMap(document.getElementById("map"));
+        var map = new GMap2(document.getElementById("map") );
 	map.disableDoubleClickZoom();
         map.addControl(new GLargeMapControl());
         map.addControl(new GMapTypeControl());
         map.addControl(new GOverviewMapControl ());
- 	map.setMapType($self->{maptype});
-        map.centerAndZoom(new GPoint($centerx, $centery), $zoom);
+ 	// map.setMapType($self->{maptype});
+
+        // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
+        map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom, G_NORMAL_MAP);
 	new GKeyboardHandler(map);
     } else {
         document.getElementById("map").innerHTML = '<p class="large-error">Sorry, your browser is not supported by <a href="http://maps.google.com/support">Google Maps</a></p>';
     }
 
     GEvent.addListener(map, "moveend", function() {
-        var center = map.getCenterLatLng();
+        var center = map.getCenter();
 	showCoords(center, 'Center of map: ');
 	showLink(center, 'Link to map center: ');
     });
