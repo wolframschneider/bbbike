@@ -851,7 +851,7 @@ sub get_html {
         new GLatLngBounds(new GLatLng(-90,-180), new GLatLng(90,180)), 0,
         '(<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>)');
     var copyrightCollection =
-        new GCopyrightCollection('Kartendaten &copy; 2009 <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors');
+        new GCopyrightCollection('Map data &copy; 2009 <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors');
     copyrightCollection.addCopyright(copyright);
 
     var tilelayers_mapnik = new Array();
