@@ -229,12 +229,13 @@ sub get_html {
     }
 
     my $html = <<EOF;
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>BBBike data presented with Googlemap</title>
-    <link rel="stylesheet" type="text/css" href="$bbbikeroot/html/bbbike.css"><!-- XXX only for radzeit -->
-    <link type="image/gif" rel="shortcut icon" href="$bbbikeroot/images/bbbike_google.gif"><!-- XXX only for radzeit -->
+    <link rel="stylesheet" type="text/css" href="$bbbikeroot/html/bbbike.css" /><!-- XXX only for radzeit -->
+    <link type="image/gif" rel="shortcut icon" href="$bbbikeroot/images/bbbike_google.gif" /><!-- XXX only for radzeit -->
 <!--    <script src="http://maps.google.com/maps?file=api&v=2&key=$google_api_key" type="text/javascript"></script>-->
     <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
     <script type="text/javascript">
@@ -972,7 +973,7 @@ EOF
    <tr style="vertical-align:top;">
     <td><input onchange="currentModeChange()" 
 	       id="mapmode_browse"
-               type="radio" name="mapmode" value="browse" checked /></td>
+               type="radio" name="mapmode" value="browse" checked="checked" /></td>
     <td><label for="mapmode_browse">Scrollen/Bewegen/Zoomen</label></td>
    </tr>
    <tr style="vertical-align:top;">
@@ -1042,8 +1043,8 @@ EOF
   <br />
   <div class="sml">
     Koordinatensystem:<br />
-    <label><input type="radio" name="coordsystem" value="polar" @{[ $coordsystem eq 'polar' ? 'checked' : '' ]} /> WGS84-Koordinaten (DDD)</label>
-    <label><input type="radio" name="coordsystem" value="bbbike" @{[ $coordsystem eq 'bbbike' ? 'checked' : '' ]} /> BBBike</label>
+    <label><input type="radio" name="coordsystem" value="polar" @{[ $coordsystem eq 'polar' ? 'checked="checked"' : '' ]} /> WGS84-Koordinaten (DDD)</label>
+    <label><input type="radio" name="coordsystem" value="bbbike" @{[ $coordsystem eq 'bbbike' ? 'checked="checked"' : '' ]} /> BBBike</label>
   </div>
   
 </form>
@@ -1052,8 +1053,8 @@ EOF
   <table>
     <tr><td>Kommentar zur Route:</td><td> <textarea cols="40" rows="4" name="comment"></textarea></td></tr>
     <tr id="hasuserwpts" style="visibility:hidden;"><td colspan="2">(Kommentare für Waypoints werden angehängt)</td></tr>
-    <tr><td>Dein Name:</td><td><input name="author"></td></tr>
-    <tr><td>Deine E-Mail:</td><td> <input name="email"></td></tr>
+    <tr><td>Dein Name:</td><td><input name="author" /></td></tr>
+    <tr><td>Deine E-Mail:</td><td> <input name="email" /></td></tr>
     <tr><td></td><td><a href="#" onclick="send_via_post(); return false;">Senden</a>
                      <a href="#" onclick="close_commentform(); return false;">Abbrechen</a>
                  </td></tr>
