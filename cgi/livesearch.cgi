@@ -20,7 +20,7 @@ if ( $q->param('max') && $q->param('max') && $bbbike_host ) {
 
 my $stat_file = "/tmp/log.html.$$";
 system(
-qq{env HOME=$home max_pictures="$max" log_html=$stat_file bbbike_host="$bbbike_host" ../../bbbike-macos/bin/bbbike-log}
+qq{env HOME=$home max_pictures="$max" log_html=$stat_file bbbike_host="$bbbike_host" ../world/bin/bbbike-log}
 );
 
 print $q->header();
