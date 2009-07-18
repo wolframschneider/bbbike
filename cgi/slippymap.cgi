@@ -235,15 +235,15 @@ sub get_html {
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>BBBike data presented with Googlemap</title>
-    <link rel="stylesheet" type="text/css" href="$bbbikeroot/html/bbbike.css" /><!-- XXX only for radzeit -->
-    <link type="image/gif" rel="shortcut icon" href="$bbbikeroot/images/bbbike_google.gif" /><!-- XXX only for radzeit -->
+    <link rel="stylesheet" type="text/css" href="../html/bbbike.css" /><!-- XXX only for radzeit -->
+    <link type="image/gif" rel="shortcut icon" href="../images/bbbike_google.gif" /><!-- XXX only for radzeit -->
 <!--    <script src="http://maps.google.com/maps?file=api&v=2&key=$google_api_key" type="text/javascript"></script>-->
     <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
     <script type="text/javascript">
       google.load("maps", "2");
     </script>
-    <script src="$bbbikeroot/html/sprintf.js" type="text/javascript"></script>
-    <script src="$bbbikeroot/html/bbbike_util.js" type="text/javascript"></script>
+    <script src="../html/sprintf.js" type="text/javascript"></script>
+    <script src="../html/bbbike_util.js" type="text/javascript"></script>
     <style type="text/css"><!--
         .sml          { font-size:x-small; }
 	.rght	      { text-align:right; }
@@ -275,12 +275,12 @@ sub get_html {
     var searchStage = 0;
 
     var isGecko = navigator && navigator.product == "Gecko" ? true : false;
-    var dragCursor = isGecko ? '-moz-grab' : 'url("$bbbikeroot/images/moz_grab.gif"), auto';
+    var dragCursor = isGecko ? '-moz-grab' : 'url("../images/moz_grab.gif"), auto';
 
-    var startIcon = new GIcon(G_DEFAULT_ICON, "$bbbikeroot/images/flag2_bl_centered.png");
+    var startIcon = new GIcon(G_DEFAULT_ICON, "../images/flag2_bl_centered.png");
     startIcon.iconAnchor = new GPoint(16,16);
     startIcon.iconSize = new GSize(32,32);
-    var goalIcon = new GIcon(G_DEFAULT_ICON, "$bbbikeroot/images/flag_ziel_centered.png");
+    var goalIcon = new GIcon(G_DEFAULT_ICON, "../images/flag_ziel_centered.png");
     goalIcon.iconAnchor = new GPoint(16,16);
     goalIcon.iconSize = new GSize(32,32);
     var currentPointMarker = null;
@@ -341,9 +341,9 @@ sub get_html {
 	var dragObj = map.getDragObject();
         if (currentMode == "search") {
 	    if (searchStage == 0) {
-		dragObj.setDraggableCursor('url("$bbbikeroot/images/start_ptr.png"), url("$bbbikeroot/images/flag2_bl.png"), ' + dragCursor);
+		dragObj.setDraggableCursor('url("../images/start_ptr.png"), url("../images/flag2_bl.png"), ' + dragCursor);
 	    } else {
-		dragObj.setDraggableCursor('url("$bbbikeroot/images/ziel_ptr.png"), url("$bbbikeroot/images/flag_ziel.png"), ' + dragCursor);
+		dragObj.setDraggableCursor('url("../images/ziel_ptr.png"), url("../images/flag_ziel.png"), ' + dragCursor);
 	    }
         } else {
 	    if (currentMode == "addroute" || currentMode == "addwpt") {
