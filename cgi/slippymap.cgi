@@ -229,6 +229,13 @@ sub get_html {
 	};
     }
 
+
+    my $script;
+    {
+	my $q = new CGI;
+        $script = $q->param('source_script') || 'bbbike.cgi';
+    }
+
     my $html = <<EOF;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -631,7 +638,7 @@ sub get_html {
 
     function searchRoute(startPoint, goalPoint) {
 	var requestLine =
-	    "@{[ $cgi_reldir ]}/bbbike.cgi?startpolar=" + startPoint.x + "x" + startPoint.y + "&zielpolar=" + goalPoint.x + "x" + goalPoint.y + commonSearchParams;
+	    "@{[ $cgi_reldir ]}/$script?startpolar=" + startPoint.x + "x" + startPoint.y + "&zielpolar=" + goalPoint.x + "x" + goalPoint.y + commonSearchParams;
 	var routeRequest = GXmlHttp.create();
 	routeRequest.open("GET", requestLine, true);
 	routeRequest.onreadystatechange = function() {
