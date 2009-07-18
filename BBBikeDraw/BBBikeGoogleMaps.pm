@@ -101,7 +101,7 @@ function init() {
 }
 EOF
     print $fh start_form(-action => $bbbike_googlemaps_url,
-			 -method => "POST");
+			 -method => "GET");
     for my $c (@multi_c) {
 	my $coords = join "!", @$c;
 	print $fh hidden("coords", $coords);
@@ -112,6 +112,7 @@ EOF
     print $fh hidden("coordsystem", "polar");    
     print $fh hidden("oldcoords", $oldcoords) if $oldcoords;
     print $fh hidden("maptype", $maptype);
+    print $fh hidden("source_script", $q->url(url(-relative=>1)));
     print $fh hidden("coordsystem", $self->guess_coord_system());
     for my $wpt (@wpt) {
 	print $fh hidden("wpt", $wpt);
