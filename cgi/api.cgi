@@ -46,7 +46,12 @@ sub street_match {
     }
 
     if ($use_look) {
-        open( IN, '-|' ) || exec 'look', '-fb', $street,
+	my $look_opt = '-f';
+
+	# linux only
+        $look_opt .= 'b' if -e '/proc';
+
+        open( IN, '-|' ) || exec 'look', $look_opt, $street,
           $file;
     }
 
