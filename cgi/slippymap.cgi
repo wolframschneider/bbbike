@@ -200,6 +200,7 @@ sub get_html {
 	 'bbbike.de'	      => 'ABQIAAAACNG-XP3VVgdpYda6EwQUyhRfQt6AwvKXAVZ7ZsvglWYeC-xX5BROlXoba_KenDFQUtSEB_RJPUVetw',
 	 'recv.de'	      => 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShRZGykBMsY0k7_NlhmXv25sysVkvhRDhtTAHMlTJtehYN7xeJ9lvP8RZw',
 	 'bbbike.elsif.de'    => 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShQYKE6detmKRWDQHmeaoEIvpzlZTxSp-OhMdXTigI71vlN3iIVxDx0XhQ',
+	 'localhost'		=> 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTN4WPiGfl2FX2PYZt6wyT5v7xqcg',
 	);
     my $full = URI->new(BBBikeCGIUtil::my_url(CGI->new, -full => 1));
     my $fallback_host = "bbbike.de";
