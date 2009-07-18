@@ -1066,19 +1066,16 @@ EOF
   <div id="answer"></div>
 </div>
 
-<table width="100%" style="clear:left;">
- <tr>
-  <td colspan="3">
-      <p class="ftr">
-       <a id="bbbikemail" href="mailto:$BBBike::EMAIL">E-Mail</a> |
-       <a id="bbbikeurl" href="$BBBike::BBBIKE_DIRECT_WWW">BBBike</a> |
-       <a href="@{[ $cgi_reldir ]}/mapserver_address.cgi?usemap=googlemaps">Adresssuche</a>
-       | <a href="http://maps.google.com/maps?ll=52.515385,13.381004&amp;spn=0.146083,0.229288&amp;t=k">Google Maps</a>
-      </p>
-  </td>
- </tr>
 
-</table>
+        <div id="footer" style="clear:left;">
+	<br />
+	<hr />
+<div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em; " >
+(&copy;) 2008-2009 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> 
+// <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br/>
+  Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br />
+
+</div>
 
   </body>
 </html>
