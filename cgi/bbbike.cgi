@@ -4150,7 +4150,7 @@ sub display_route {
 	    print XML::Simple->new
 		(NoAttr => 1,
 		 RootName => "BBBikeRoute",
-		 XMLDecl => "<?xml version='1.0' encoding='iso-8859-1' standalone='yes'?>",
+		 XMLDecl => "<?xml version='1.0' encoding='$xml_encoding' standalone='yes'?>",
 		)->XMLout($new_res);
 	}
 	return;
