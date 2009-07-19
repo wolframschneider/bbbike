@@ -909,7 +909,7 @@ function GetTileUrl_TaH(a, z) {
 
 EOF
     for my $def ([$feeble_paths_polar, '#ff00ff', 5,  0.4],
-		 [$paths_polar,        '#ff0000', 10, undef],
+		 [$paths_polar,        '#ff00ff', 10, undef],
 		) {
 	my($paths_polar, $color, $width, $opacity) = @$def;
 
