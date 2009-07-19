@@ -113,7 +113,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $newstreetform_encoding
 	    $use_region_image
 	    $include_outer_region @outer_berlin_places $outer_berlin_qr
-	    $osm_data $datadir $show_mini_map $no_input_streetname
+	    $osm_data $datadir $show_mini_map $show_mini_googlemap $no_input_streetname
 	    $enable_opensearch_suggestions
 	    $warn_message $use_utf8 $use_via
 	    $enable_google_analytics
@@ -4689,7 +4689,9 @@ EOF
   		print " onsubmit='return show_map(\"$bbbike_html\");'";
   	    }
 	    print ">\n";
+
 	    print qq{<table><tr><td><a href="$ENV{'SCRIPT_NAME'}?center=&interactive=Show+map&imagetype=pdf-auto&coords=$string_rep&startname=}. CGI::escape($startname) . q{&zielname=} . CGI::escape($zielname) . qq{&geometry=240x180&draw=str&draw=sbahn&draw=ubahn&draw=wasser&draw=flaechen&draw=strname&draw=title&outputtarget=print&scope=" style="border=0;"><img  title="printable PDF map and route list" alt="" width="240" height="180" scrolling="no" border="0" src="$ENV{'SCRIPT_NAME'}?center=&interactive=Show+map&imagetype=png&coords=$string_rep&startname=}. CGI::escape($startname) . q{&zielname=} . CGI::escape($zielname) . qq{&geometry=240x180&draw=str&draw=sbahn&draw=wasser&draw=flaechen&draw=title&scope="></img></a></td><td>\n} if  $show_mini_map;
+	    print qq{<iframe src="http://localhost/~wosch/bbbike/cgi/slippymap.cgi?coords=$string_rep&amp;coordsystem=polar&amp;maptype=hybrid&amp;source_script=Basel.cgi&amp;coordsystem=wgs84&amp;zoom=3" title="slippy map" width="100%" height="505" scrolling="no" border="0"></iframe><p/>} if $show_mini_googlemap;
 
 	    print "<input type=hidden name=center value=''>\n";
 #XXX not yet	    print "<input type=hidden name='as_attachment' value=''>\n";
@@ -4826,6 +4828,7 @@ EOF
 			      "dependent,height=392,resizable" .
 			      "screenX=400,screenY=80,scrollbars,width=440")
 		. M("Legende") . ".</a>\n";
+
 
 
 	    print "</div>";
@@ -6228,7 +6231,7 @@ sub header {
 
 <script src="../html/jquery.js" type="text/javascript"></script>
 <script src="../html/jquery.suggest.js" type="text/javascript"></script>
-<script src="../html/jquery.dimensions.js" type="text/javascript"></script></p>
+<script src="../html/jquery.dimensions.js" type="text/javascript"></script>
 <link href="../html/jquery.suggest.css" rel="stylesheet" type="text/css">
 
 |);
