@@ -3613,7 +3613,10 @@ sub display_route {
 	my $s = Strassen->new_from_data("$startname - $zielname\tX " .
 					join(" ", map { "$_->[0],$_->[1]" }
 					     @{ $r->path }) . "\n");
+
 	my $s_gpx = Strassen::GPX->new($s);
+	$s_gpx->{"GlobalDirectives"}->{"map"}[0] = "polar";
+
 	print $s_gpx->bbd2gpx(-as => "track");
 	return;
     }
@@ -4062,6 +4065,7 @@ sub display_route {
 	for my $tb (@affecting_blockings) {
 	    $tb->{longlathop} = [ map { join ",", $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(split /,/, $_)) } @{ $tb->{hop} || [] } ];
 	}
+
 	my $res = {
 		   Route => \@out_route,
 		   Len   => $r->len, # in meters
@@ -4070,11 +4074,11 @@ sub display_route {
 		   Power => \%power_map,
 		   ($sess ? (Session => $sess->{_session_id}) : ()),
 		   Path => [ map { join ",", @$_ } @{ $r->path }],
-		   LongLatPath => [ map {
-		       join ",", $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(@$_))
-		   } @{ $r->path }],
+		   LongLatPath => [ map { join ",", $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(@$_)) } @{ $r->path }],
+		   # LongLatPath => [ map { join ",", $Karte::Polar::obj->trim_accuracy(@$_) } @{ $r->path }],
 		   AffectingBlockings => \@affecting_blockings,
 		  };
+
 	if ($output_as eq 'perldump') {
 	    require Data::Dumper;
 	    my $filename = filename_from_route($startname, $zielname) . ".txt";
@@ -4111,8 +4115,13 @@ sub display_route {
 		push @data, $pt->{Strname} . "\tX " . $pt->{Coord} . "\n";
 	    }
 	    my $s = Strassen->new_from_data(@data);
+
 	    my $s_gpx = Strassen::GPX->new($s);
+	    $s_gpx->{"GlobalDirectives"}->{"map"}[0] = "polar";
+
 	    print $s_gpx->bbd2gpx(-as => "route");
+            # use Data::Dumper; warn "gpx-route: ", Dumper($s_gpx->bbd2gpx(-as => "route")), "\n";
+
 	} else { # xml
 	    require XML::Simple;
 	    my $filename = filename_from_route($startname, $zielname) . ".xml";
