@@ -4140,6 +4140,13 @@ sub display_route {
 		    $new_res->{$k} = $v;
 		}
 	    }
+
+	    my $xml_encoding = 'iso-8859-1';
+            if ($use_utf8) {
+	        binmode STDOUT, ":utf8";
+		$xml_encoding = 'UTF-8';
+            }
+
 	    print XML::Simple->new
 		(NoAttr => 1,
 		 RootName => "BBBikeRoute",
