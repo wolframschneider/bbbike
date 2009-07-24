@@ -7,6 +7,7 @@ Neuer Garten: bei Dunkelheit geschlossen	CS -11650,590 -11603,721 -11615,853
 Neuer Garten: bei Dunkelheit geschlossen	CS -11510,810 -11562,918 -11575,1031 -11537,1206 -11568,1287 -11871,1185 -11990,1214 -12124,1359 -12141,1357
 Neuer Garten: bei Dunkelheit geschlossen	CS -11615,853 -11510,810 -11231,696
 Schloßpark Charlottenburg: bei Dunkelheit geschlossen, Ausweichen über Tegeler Weg und Fußgängerbrücke an der S-Bahn möglich	CS 3296,12719 3231,12749 3127,12793 3055,12973 2997,13402 2950,13552
+(Neue Grünstr. - Alte Jakobstr.): Der Hofdurchgang ist nachts zwischen 23 und 6 Uhr sowie an Sonn- und Feiertagen geschlossen	CS 10624,11548 10534,11609
 #: XXX_prog ^^^
 Unterführung ist nur 2,10m hoch	CS 21306,-975 21393,-871
 Einbahnstr., aber Radweg vorhanden	CS; 23109,30968 23103,30923 22922,30640
@@ -180,7 +181,7 @@ Petriplatz: zusätzliche Ausschilderung "Zur Brüderstr."	CS; 10431,11945 10385,11
 DB-Gelände: bei starken Regenfällen regelmäßig eine große und tiefe Pfütze, die die Durchfahrt erschwert	CS 14093,10909 14043,10928
 Straße 77: die Straße ist nicht ausgeschildert	CS 15402,12390 15315,12360
 #: by: antje weiss dorn:
-Drosselbartweg: Radfahren erlaubt	CS 13899,18833 13953,18842 13967,18842 13993,18833 14061,18791 14206,18700 14222,18666
+Drosselbartweg: Radfahren erlaubt	CS 13899,18833 13909,18835 13953,18842 13967,18842 13993,18833 14061,18791 14206,18700 14218,18674 14222,18666
 (Seeburger Str./Seecktstr. - Bullengraben): Zufahrt über Supermarktparkplart	CS; -4299,13304 -4354,13377
 #: by: Ralf Henze vvv
 #: note: das gilt für alle Straßen von R bis Z vvv
@@ -245,6 +246,8 @@ Uferpromenade und Invalidenfriedhof nachts geschlossen, Öffnungszeiten Winter (1
 Park Biesdorf nachts geschlossen, Öffnungszeiten 6.00-23.00	CS 21150,11925 21132,11943 21100,11960 20862,12027 20810,12031
 Park Biesdorf nachts geschlossen, Öffnungszeiten 6.00-23.00	CS 20862,12027 20836,11768
 Breite Gasse: nur von 9 Uhr bis zum Einschalten der Straßenbeleuchtung geöffnet	CS 22312,4329 22252,4362
+Park am Nordbahnhof: im Sommer zwischen 6.30 und 22.00 Uhr geöffnet, im Winterhalbjahr sind die Öffnungszeiten kürzer	CS 8825,14401 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
+Park am Nordbahnhof: im Sommer zwischen 6.30 und 22.00 Uhr geöffnet, im Winterhalbjahr sind die Öffnungszeiten kürzer	CS 8913,14485 9176,14181 9147,14151 9224,14169
 #: XXX_prog ^^^
 Als Wiesenweg ausgeschildert	CS; 52215,83681 52346,83150
 Am Gutshof (Gramzow): Privatstraße, Durchfahrt verboten	CS 50364,89561 50337,90193 50346,90286 50278,90449
@@ -260,3 +263,4 @@ ausgeschildert als "Köllnischer Platz"	CP2; 21796,4517 22071,4501
 Kambergstr. - Mauerweg: Achtung, scharfkantiges Metallteil in der Erde, Gefahr einer Reifenpanne	CS 11677,-58 11746,-62
 Moor: Achtung, schlechte Ausschilderung der Radroute! Nicht in die Sackgasse fahren!	CP; 55650,109962 55319,109799 55318,109732 55317,109697
 Zum Uferweg: als Privatweg gekennzeichnet	CP2; 4751,13245 4742,13157
+(Bleicheroder Str. - Pasewalker Str.): entlang der Straßenbahntrasse	CS 11805,19071 11937,19175

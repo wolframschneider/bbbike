@@ -83,8 +83,9 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $g_str $orte $orte2 $multiorte
 	    $ampeln $qualitaet_net $handicap_net
 	    $strcat_net $radwege_strcat_net $radwege_net $routen_net $comments_net
-	    $comments_points $green_net $unlit_streets_net
+	    $green_net $unlit_streets_net
 	    $crossings $kr %cached_plz $net $multi_bez_str
+	    $sperre_tragen $sperre_narrowpassage
 	    $overview_map $city
 	    $use_umland $use_umland_jwd $use_special_destinations
 	    $use_fragezeichen $use_fragezeichen_routelist
@@ -94,8 +95,8 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $graphic_format $use_mysql_db $use_exact_streetchooser
 	    $use_module
 	    $cannot_gif_png $cannot_jpeg $cannot_pdf $cannot_svg $can_gif
-	    $can_wbmp $can_palmdoc $can_gpx $can_kml $can_berliner_stadtplan_post
-	    $can_google_maps
+	    $can_wbmp $can_palmdoc $can_gpx $can_kml
+	    $can_google_maps $can_berliner_stadtplan_post
 	    $can_mapserver $mapserver_address_url
 	    $mapserver_init_url $no_berlinmap $max_plz_streets $with_comments
 	    $with_cat_display
@@ -865,7 +866,7 @@ use vars qw(%handicap_speed);
 		   "q1" => 25,
 		  );
 
-@pref_keys = qw/speed cat quality ampel green unlit winter fragezeichen/;
+@pref_keys = qw/speed cat quality ampel green specialvehicle unlit winter fragezeichen/;
 
 CGI->import('-no_xhtml');
 
@@ -2917,7 +2918,7 @@ sub set_cookie {
 }
 
 use vars qw($default_speed $default_cat $default_quality
-	    $default_ampel $default_routen $default_green $default_unlit $default_winter
+	    $default_ampel $default_routen $default_green $default_specialvehicle $default_unlit $default_winter
 	    $default_fragezeichen);
 
 sub get_settings_defaults {
@@ -2933,6 +2934,7 @@ sub get_settings_defaults {
     if ($default_green eq 'yes') {
 	$default_green = 2;
     }
+    $default_specialvehicle = (defined $c{"pref_specialvehicle"} ? $c{"pref_specialvehicle"} : '');
     $default_unlit   = (defined $c{"pref_unlit"}   ? $c{"pref_unlit"}   : "");
     $default_winter  = (defined $c{"pref_winter"}  ? $c{"pref_winter"}  : "");
     $default_fragezeichen = (defined $c{"pref_fragezeichen"} ? $c{"pref_fragezeichen"} : "");
@@ -2944,6 +2946,7 @@ sub reset_html {
 	my(%strqual)   = ("" => 0, "Q0" => 1, "Q2" => 2);
 	my(%strrouten) = ("" => 0, "RR" => 1);
 	my(%strgreen)  = ("" => 0, "GR1" => 1, "GR2" => 2);
+	my(%strspecialvehicle) = ('' => 0, 'trailer' => 1, 'childseat' => 2);
 	my(%strunlit)  = ("" => 0, "NL" => 1);
 	my(%strwinter) = ("" => 0, "WI1" => 1, "WI2" => 2);
 
@@ -2957,6 +2960,7 @@ sub reset_html {
 		   qq'@{[defined $strrouten{$default_routen} ? $strrouten{$default_routen} : 0]},',
 		   qq'@{[ $default_ampel?"true":"false" ]},',
 		   qq'@{[defined $strgreen{$default_green} ? $strgreen{$default_green} : 0]},',
+		   qq'@{[defined $strspecialvehicle{$default_specialvehicle} ? $strspecialvehicle{$default_specialvehicle} : 0]}',
 		   qq'@{[defined $strunlit{$default_unlit} ? $strunlit{$default_unlit} : 0]},',
 		   qq'@{[defined $strwinter{$default_winter} ? $strwinter{$default_winter} : 0]}',
 		   qq'); enable_settings_buttons(); return false;">',
@@ -2991,6 +2995,10 @@ sub settings_html {
 			      'value="' . $val . '" ' .
 			      ($default_green eq $val ? "selected" : "")
 			};
+    my $specialvehicle_checked = sub { my $val = shift;
+				       'value="' . $val . '" ' .
+				       ($default_specialvehicle eq $val ? "selected" : "")
+				   };
     my $unlit_checked = sub { my $val = shift;
 			      'value="' . $val . '" ' .
 			      ($default_unlit eq $val ? "selected" : "")
@@ -3063,6 +3071,13 @@ EOF
 EOF
     }
 
+    print <<EOF;
+<tr><td>@{[ M("Unterwegs mit") ]}:</td><td><select $bi->{hfill} name="pref_specialvehicle">
+<option @{[ $specialvehicle_checked->("")          ]}>@{[ M("nichts weiter") ]} <!-- expr? XXX -->
+<option @{[ $specialvehicle_checked->("trailer")   ]}>@{[ M("Anhänger") ]}
+<option @{[ $specialvehicle_checked->("childseat") ]}>@{[ M("Kindersitz mit Kind") ]}
+</select></td></tr>
+EOF
     if ($use_winter_optimization) {
 	print <<EOF;
 <tr>
@@ -3118,6 +3133,7 @@ sub via_not_needed {
 sub make_netz {
     my $lite = shift;
     if (!$net) {
+	my $special_vehicle = defined $q->param('pref_specialvehicle') ? $q->param('pref_specialvehicle') : '';
 	my $str = get_streets();
 	$net = new StrassenNetz $str;
 	# XXX This change should also go into radlstadtplan.cgi!!!
@@ -3129,6 +3145,8 @@ sub make_netz {
 			  );
 	    $net->make_sperre('gesperrt',
 			      Type => [qw(wegfuehrung)],
+			      SpecialVehicle => $special_vehicle,
+			      # XXX What about $special_vehicle? Is it correct here, or not possible because of the static net?
 			     );
 	} else {
 	    # XXX überprüfen, ob sich der Cache lohnt...
@@ -3136,7 +3154,9 @@ sub make_netz {
 	    $net->make_net(UseCache => 1);
 	    if (!$lite) {
 		$net->make_sperre('gesperrt',
-				  Type => [qw(einbahn sperre wegfuehrung)]);
+				  Type => [qw(einbahn sperre wegfuehrung)],
+				  SpecialVehicle => $special_vehicle,
+				 );
 	    }
 	}
     }
@@ -3684,6 +3704,7 @@ sub display_route {
     my %power_map;
     my @strnames;
     my @path;
+    my $penalty_lost = 0;
  CALC_ROUTE_TEXT: {
 	last CALC_ROUTE_TEXT if (!$r || !$r->path_list);
 
@@ -3817,35 +3838,13 @@ sub display_route {
 						-multiple => 1);
 		}
 	    }
-	    if (!$comments_points) {
-		$comments_points = {};
+
+	    if (!$sperre_tragen || !$sperre_narrowpassage) {
 		eval {
-		    my $gesperrt_cat_rx = "^(?:" . join("|", map { quotemeta $_ }
-							(StrassenNetz::BLOCKED_CARRY(),
-							 StrassenNetz::BLOCKED_NARROWPASSAGE(),
-							)) . ")(?::(\\d+))?";
-		    $gesperrt_cat_rx = qr{$gesperrt_cat_rx};
-		    my $s = Strassen->new("gesperrt");
-		    $s->init;
-		    while(1) {
-			my $rec = $s->next;
-			last if !@{ $rec->[Strassen::COORDS] };
-			if ($rec->[Strassen::CAT] =~ $gesperrt_cat_rx) {
-			    my $name = $rec->[Strassen::NAME];
-			    if (defined $1) {
-				my $verlust = $1;
-				if ($verlust == 0) {
-				    $name .= " (" . M("kein Zeitverlust") . ")";
-				} elsif ($verlust == 1) {
-				    $name .= " (" . M("ca. eine Sekunde Zeitverlust") . ")";
-				} else {
-				    $name .= " (" . sprintf(M("ca. %s Sekunden Zeitverlust"), $verlust) . ")";
-				}
-			    }
-			    $comments_points->{$rec->[Strassen::COORDS][0]}
-				= $name;
-			}
-		    }
+		    my $special_vehicle = $q->param('pref_specialvehicle') || '';
+		    $sperre_tragen = {};
+		    $sperre_narrowpassage = {};
+		    StrassenNetz::make_sperre_tragen('gesperrt', $special_vehicle, $sperre_tragen, $sperre_narrowpassage, -extended => 1);
 		};
 		warn $@ if $@;
 	    }
@@ -3966,17 +3965,46 @@ sub display_route {
 		    }
 		} @comment_objs;
 
-		for my $i ($strnames[$i]->[4][0] .. $strnames[$i]->[4][1]) {
-		    my $point = join ",", @{ $path[$i] };
-		    if (exists $comments_points->{$point}) {
-			my $etappe_comment = $comments_points->{$point};
-			# XXX not yet: problems with ... Sekunden Zeitverlust
-			#if (!exists $seen_comments_in_this_etappe{$etappe_comment}) {
-			push @comments, $etappe_comment;
-			push @comments_html, $etappe_comment;
-			# XXX missing: push @comments_html, $etappe_comment_html;
-			#} else {
-			#} # XXX better solution for multiple point comments: use (2x), (3x) ...
+		{
+		    my @penalty_comments_name;
+		    my %penalty_comments_penalty;
+		    my %penalty_comments_count;
+		    for my $i ($strnames[$i]->[4][0] .. $strnames[$i]->[4][1]) {
+			my $point = join ",", @{ $path[$i] };
+			for my $sperre_hash ($sperre_tragen, $sperre_narrowpassage) {
+			    if (exists $sperre_hash->{$point}) {
+				my($name, $penalty) = @{ $sperre_hash->{$point} };
+				push @penalty_comments_name, $name;
+				$penalty_comments_penalty{$name} += $penalty;
+				$penalty_comments_count{$name}++;
+				last; # anyway, no point should appear in tragen AND narrowpassage
+			    }
+			}
+		    }
+
+		    my %seen_penalty_name;
+		    for my $penalty_name (@penalty_comments_name) {
+			next if $seen_penalty_name{$penalty_name};
+			$seen_penalty_name{$penalty_name} = 1;
+
+			my $label = $penalty_name;
+			if ($penalty_comments_count{$penalty_name} >= 2) {
+			    $label .= ' (' . $penalty_comments_count{$penalty_name} . 'x)';
+			}
+
+			my $penalty = $penalty_comments_penalty{$penalty_name};
+			if ($penalty == 0) {
+			    $label .= " (" . M("kein Zeitverlust") . ")";
+			} elsif ($penalty == 1) {
+			    $label .= " (" . M("ca. eine Sekunde Zeitverlust") . ")";
+			} elsif ($penalty < 120) {
+			    $label .= " (" . sprintf(M("ca. %s Sekunden Zeitverlust"), $penalty) . ")";
+			} else {
+			    $label .= " (" . sprintf(M("ca. %s Minuten Zeitverlust"), $penalty/60) . ")";
+			}
+			push @comments, $label;
+			push @comments_html, $label;
+			$penalty_lost += $penalty;
 		    }
 		}
 		$etappe_comment = join("; ", @comments) if @comments;
@@ -4324,7 +4352,7 @@ EOF
 		my $def = $speed_map{$speed};
 		my $bold = $def->{Pref};
 		my $time = $def->{Time};
-		print "<td>$fontstr" . make_time($time + $ampel_lost/3600)
+		print "<td>$fontstr" . make_time($time + $ampel_lost/3600 + $penalty_lost/3600)
 		    . "h (" . ($bold ? "<b>" : "") . M("bei")." $speed km/h" . ($bold ? "</b>" : "") . ")";
 		print "," if $speed != $speeds[-1];
 		print "$fontend</td>";
@@ -4345,7 +4373,7 @@ EOF
 		} else {
 		    $is_first = 0;
 		}
-		print $fontstr,  make_time(($power_map{$power}->{Time} + $ampel_lost)/3600) . "h (" . M("bei") . " $power W)", $fontend, "</td>"
+		print $fontstr,  make_time(($power_map{$power}->{Time} + $ampel_lost + $penalty_lost)/3600) . "h (" . M("bei") . " $power W)", $fontend, "</td>"
 	    }
 	    print "</tr>\n";
 	}
@@ -4723,6 +4751,7 @@ EOF
 	    print " <option " . $imagetype_checked->("svg") . ">SVG\n" unless $cannot_svg;
 	    print " <option " . $imagetype_checked->("mapserver") . ">MapServer\n" if $can_mapserver;
 	    print " <option " . $imagetype_checked->("berlinerstadtplan") . ">www.berliner-stadtplan.com\n" if $can_berliner_stadtplan_post;
+	    print " <option " . $imagetype_checked->("googlemaps") . ">Google Maps\n" if $can_google_maps;
 	    #XXX print " <option " . $imagetype_checked->("googlemapsstatic") . ">Google Maps (static)\n" if 1;#XXXXXXXXXXXXXXXXXX
 	    print " </select></span>\n";
 	    print "<br>\n";
@@ -5201,6 +5230,11 @@ sub draw_route {
 	} elsif ($q->param('imagetype') eq 'googlemapsstatic') {
 	    $bbbikedraw_args{Module} = "GoogleMapsStatic";
 	    $q->param('imagetype', 'png'); # XXX hacky...
+	} elsif ($q->param('imagetype') =~ m{^(gif|png)$}) {
+	    # XXX Outline=1 looks good with smale scales, but very bad
+	    # with large scales (try Friedrichshain -> Potsdam). Maybe
+	    # I should introduce something like Outline=>best?
+	    # $bbbikedraw_args{Outline} = 1;
 	}
     }
 
@@ -5227,11 +5261,6 @@ sub draw_route {
 	    $q->param('geometry', $1);
 	    $q->param('imagetype', 'pdf');
 	}
-    }
-
-    if (defined $q->param('imagetype') &&
-	$q->param('imagetype') eq 'berlinerstadtplan') {
-	$q->param("module", "BerlinerStadtplan"); # XXX change!
     }
 
     if (defined $use_module && !$bbbikedraw_args{Module}) {

@@ -31,7 +31,7 @@ use vars qw(%filetype_to_cat %file_to_cat);
      # XXX Information duplicated in data/Makefile
      "gesperrt"	      => [qw(1 2 3 3nocross),
 			  sub { /^0:\d+(:-?\d+)?$/ },
-			  sub { /^BNP:\d+(:-?\d+)?$/ },
+			  sub { /^BNP:\d+(:-?\d+(:trailer=(no|\d+))?)?$/ },
 			  sub { /^1s(:q\d)?$/ },
 			 ],
      "fragezeichen"   => [qw(? ?? F:? F:??)],
@@ -244,6 +244,40 @@ sub check_file {
     }
 
     $errors ? 0 : 1;
+}
+
+sub carry_penalty_for_special_vehicle {
+    my($penalty, $special_vehicle) = @_;
+    # XXX currently assume a constant factor for all carry
+    # situations. Maybe this should be overridable using
+    # addinfo?
+    if ($special_vehicle eq 'trailer') {
+	$penalty * 5;
+    } elsif ($special_vehicle eq 'childseat') {
+	$penalty * 3;
+    } else {
+	$penalty;
+    }
+}
+
+sub change_bnp_penalty_for_special_vehicle {
+    my($addinfo_ref, $special_vehicle, $category_ref, $penalty_ref) = @_;
+    if (@$addinfo_ref >= 2) {
+	# first addinfo is angle, following are possible special vehicle penalties
+	for my $addinfo (@{$addinfo_ref}[1 .. $#$addinfo_ref]) {
+	    my($key,$val) = split /=/, $addinfo;
+	    if ($key eq $special_vehicle) {
+		if ($val eq 'no') {
+		    $$category_ref = StrassenNetz::BLOCKED_ROUTE();
+		} elsif ($val =~ m{^\d+$}) {
+		    $$penalty_ref = $val;
+		} else {
+		    warn "Unexpected value '$val'";
+		}
+		last;
+	    }
+	}
+    }
 }
 
 1;

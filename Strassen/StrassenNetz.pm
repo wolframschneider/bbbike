@@ -49,6 +49,7 @@ $FMT_MMAP  = 4;
 $VERBOSE     = 0         if !defined $VERBOSE;
 $data_format = $FMT_HASH if !defined $data_format;
 
+require Strassen::Cat;
 require Strassen::Generated;
 
 use vars qw($AUTOLOAD);
@@ -194,6 +195,7 @@ sub make_sperre_1 {
     my($self, $sperre_file, %args) = @_;
 
     my $del_token = $args{DelToken};
+    my $special_vehicle = $args{SpecialVehicle} || '';
 
     my %sperre_type;
     if (exists $args{Type}) {
@@ -237,7 +239,18 @@ sub make_sperre_1 {
     while(1) {
 	my $ret = $sperre_obj->next;
 	last if !@{$ret->[Strassen::COORDS()]};
-	my($category,$penalty) = split /:/, $ret->[Strassen::CAT()]; # ignore @addinfo
+	my($category,$penalty,@addinfo) = split /:/, $ret->[Strassen::CAT()];
+
+	# Fix penalty or propagate to other category for special
+	# vehicles, currently only for BNP and CARRY:
+	if ($special_vehicle ne '') {
+	    if ($category eq BLOCKED_NARROWPASSAGE) {
+		Strassen::Cat::change_bnp_penalty_for_special_vehicle(\@addinfo, $special_vehicle, \$category, \$penalty);
+	    } elsif ($category eq BLOCKED_CARRY) {
+		$penalty = Strassen::Cat::carry_penalty_for_special_vehicle($penalty, $special_vehicle);
+	    }
+	}
+
 	if (exists $sperre_type{$category}) {
 	    if ($category eq BLOCKED_ROUTE) {
 		# Aufzeichnen der nicht erlaubten Wegführung
@@ -269,6 +282,31 @@ sub make_sperre_1 {
 }
 
 *make_sperre = \&make_sperre_1;
+
+sub make_sperre_tragen {
+    my($sperre_file, $special_vehicle, $sperre_tragen_ref, $sperre_narrowpassage_ref, %args) = @_;
+    %$sperre_tragen_ref        = ();
+    %$sperre_narrowpassage_ref = ();
+    my $extended = $args{'-extended'} || 0;
+    my $s = Strassen->new($sperre_file);
+    $s->init;
+    while(1) {
+	my $r = $s->next;
+	last if !@{ $r->[Strassen::COORDS()] };
+	my($cat,@addinfo) = split /:/, $r->[Strassen::CAT()];
+	if ($cat eq StrassenNetz::BLOCKED_CARRY &&
+	    defined $addinfo[0] && $addinfo[0] ne '') {
+	    my $penalty = Strassen::Cat::carry_penalty_for_special_vehicle($addinfo[0], $special_vehicle);
+	    $sperre_tragen_ref->{$r->[Strassen::COORDS()][0]} = $extended ? [$r->[Strassen::NAME()], $penalty] : $penalty;
+	} elsif ($cat eq StrassenNetz::BLOCKED_NARROWPASSAGE &&
+		 defined $addinfo[0] && $addinfo[0] ne '') {
+	    my $penalty = $addinfo[0];
+	    my $dummy;
+	    Strassen::Cat::change_bnp_penalty_for_special_vehicle(\@addinfo, $special_vehicle, \$dummy, \$penalty);
+	    $sperre_narrowpassage_ref->{$r->[Strassen::COORDS()][0]} = $extended ? [$r->[Strassen::NAME()], $penalty] : $penalty;
+	}
+    }
+}
 
 # erstellt ein Netz mit der Steigung als Value
 # Argumente:

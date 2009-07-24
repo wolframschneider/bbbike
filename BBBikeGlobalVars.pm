@@ -57,6 +57,7 @@ use vars qw(
      $search_photo $search_pref_photo $steigung_photo $gefaelle_photo
      $inwork_photo $achtung_photo $cal_photo $star_photo $newlayer_photo
      $menuarrow_photo $ferry_photo $ferry_klein_photo $blocked_photo
+     $notrailer_photo
      $google_photo $bbbike_google_photo $wikipedia_photo
      %photo
 );
@@ -216,6 +217,7 @@ use vars qw($handicap_s_optimierung %handicap_s_speed
 
 use vars qw($radwege_optimierung $radwege_net $N_RW_optimization $N_RW_net
 	    %radwege_speed $green_optimization $green_net
+	    $special_vehicle_rb
 	    $unlit_streets_optimization $unlit_streets_net
 	   );
 use vars qw($strcat_optimierung $strcat_net %strcat_speed
