@@ -843,7 +843,7 @@ sub get_html {
  	// map.setMapType($self->{maptype});
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
-        map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom, G_NORMAL_MAP);
+        map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
 	new GKeyboardHandler(map);
     } else {
         document.getElementById("map").innerHTML = '<p class="large-error">Sorry, your browser is not supported by <a href="http://maps.google.com/support">Google Maps</a></p>';
@@ -896,6 +896,7 @@ sub get_html {
         { icon: marker_icon,
           zIndexProcess: function() { return 200; } });
     map.addOverlay(marker);
+
 
 function GetTileUrl_Mapnik(a, z) {
     return "http://tile.openstreetmap.org/" +
