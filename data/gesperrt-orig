@@ -624,6 +624,8 @@ Alt-Biesdorf	1 21108,11628 20963,11618 20549,11659 20375,11694
 Privatstr. 14	1s:q3 13159,17196 13103,17280
 #: by: Ilka Gomoll, osm
 Bernkasteler Str.	1 15208,16939 15015,16908 14923,16901 14923,16914
+#: add_fragezeichen: Ist der Wiedenbrücker Weg eine Einbahnstraße? Wenn ja, gilt die Einbahnstraßenregelung nur für Autofahrer oder auch für Radfahrer?
+Wiedenbrücker Weg	1 4207,1113 4220,1175 4148,1275
 ######################################################################
 #
 # Potsdam
@@ -1109,7 +1111,7 @@ tragen (Mühsamstr.)	0:30 13253,12625
 tragen (34 Stufen)	0:40 14787,10972
 #: XXX analog zur Südseite
 tragen (ca. 35 Stufen)	0:40 14764,10877
-tragen (Durchgang unter der U-Bahn zur Warschauer Str.)	0:30 13437,10992
+tragen (Durchgang unter der U-Bahn zur Warschauer Str., 15 Stufen)	0:20 13437,10992
 tragen (Treppe, 12 Stufen)	0:20 7370,6451
 tragen (Bahnübergang ehem. Bhf. Satzkorn)	0:60 -19150,7320
 tragen (Bahnübergang ehem. Bhf. Satzkorn)	0:60 -19183,7299
@@ -1124,7 +1126,10 @@ tragen (Treppe)	0:30 9983,16561
 tragen (Treppe)	0:30 9982,16527
 tragen (Treppe)	0:30 3756,12614
 tragen (Treppe)	0:30 4334,12551
-tragen (Jungfernbrücke, ungefähr 2 x 10 Stufen)	0:30 10213,12003
+#: note: http://www.flickr.com/photos/berolino/524778263/
+tragen (Jungfernbrücke, 10 Stufen)	0:15 10206,11997
+#: note: http://www.panoramio.com/photo/8007884
+tragen (Jungfernbrücke, 4 Stufen)	0:10 10223,12010
 tragen (Treppe, 26 Stufen)	0:30 10583,12206
 tragen (Treppe und Rampe)	0:30 39281,17353
 tragen (Treppe oder sehr steile, sandige Rampe)	0:60 41715,18446
@@ -1376,8 +1381,7 @@ Am Pankepark: z.Zt. noch Baustraße, Fertigstellung um 2011-01-01	2:inwork 8290,1
 Rückbau der Fr.-Ebert-Str. zwischen Breite Str. und Platz der Einheit, Bauarbeiten bis Ende 2009. Umfahrung über Alten Markt notwendig.	1:inwork -12719,-1661 -12755,-1585 -12773,-1544
 #: last_checked: 2009-06-05
 Rückbau der Fr.-Ebert-Str., kein Zugang zur Schwertfegerstr.	2:inwork -12870,-1493 -12795,-1499
-#: by: http://www.maerkischeallgemeine.de/cms/beitrag/10670763/60889/, auch Tagesspiegel - Märkische Schlösser - Tour 1
-Brücke über den Torfgraben/Phöben gesperrt, Neubau voraussichtlich bis 2006-12-31	2:inwork -25539,2641 -25453,2418
+#XXX wahrscheinlich fertig, immerhin ist die Radroute eröffnet...: by: http://www.maerkischeallgemeine.de/cms/beitrag/10670763/60889/, auch Tagesspiegel - Märkische Schlösser - Tour 1: Brücke über den Torfgraben/Phöben gesperrt, Neubau voraussichtlich bis 2006-12-31	2:inwork -25539,2641 -25453,2418
 #: section ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #: temporary ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #: section ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

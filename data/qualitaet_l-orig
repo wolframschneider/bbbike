@@ -482,8 +482,13 @@ Johannes-Lepsius-Str.: Asphalt	Q0 -13240,32 -13225,179 -13209,260
 Johannes-Lepsius-Str.: Verbundsteinpflaster	Q0- -13209,260 -13244,281
 (Johannes-Lepsius-Str. - Kiepenheuerallee): Asphalt	Q0 -13244,281 -13203,434
 Eduard-Engel-Str.: gutes Kopfsteinpflaster	Q1 -13367,66 -13344,160 -13322,259
-Betonplatten	Q2 -27127,5270 -26196,4769 -25787,3228 -25669,2939 -25664,2840 -25662,2746
-Feldweg	Q2 -25662,2746 -25539,2641 -25453,2418 -25110,2303
+Betonplatten	Q2 -27127,5270 -26196,4769 -25787,3228
+#: note: war früher Betonplatten, Q2
+#: by: osm (guessed from "paved")
+Asphalt	Q0 -25787,3228 -25669,2939 -25664,2840 -25662,2746
+#: note: war früher ein Feldweg, Q2
+#: by: osm (guessed from "paved")
+Asphalt	Q0 -25662,2746 -25539,2641 -25453,2418 -25110,2303
 am Havellandkanal: Feldweg, Wurzeln	Q3 -24240,6075 -24325,6138 -23186,7432
 am Havellandkanal: Feldweg	Q2 -23186,7432 -21843,8484 -21796,8450 -21662,8537
 Karower Weg: schlechtes Kopfsteinpflaster mit Betonbanketten	Q2 17825,21931 17537,22168
@@ -2628,6 +2633,7 @@ Stormstr.: Beton	Q1 -15206,-2695 -15270,-2639 -15300,-2670 -15331,-2700
 Stormstr.: Beton	Q1 -15239,-2728 -15300,-2670
 #: by: ^^^
 #: by: Sandy Kusche:
+#: note: inkew@... meint Q1, keine genauere Angabe
 Mahlsdorfer Allee (Waldesruh, Hoppegarten): sehr guter Asphalt	Q0 25272,9022 25756,9073 25892,9098
 #: by: olli (bolliolli):
 Pilsener Str. (Waldesruh): Asphalt	Q0 25169,9114 25211,9085 25235,9068 25265,9045 25272,9022
@@ -3282,9 +3288,9 @@ Seenpromenade (Groß Glienicke): sehr guter Asphalt	Q0 -9642,6538 -9703,6278 -972
 In der Aue: Kopfsteinpflaster	Q2 -8189,-2569 -8107,-2600 -8099,-2590 -8018,-2585 -7999,-2585 -7782,-2572 -7373,-2539
 #: by: Anna Buchholz:
 Im Blumenhag: Asphalt	Q0 21172,29984 21637,30946
-#: by: anonymous
-#: note: "q2, enge Straße" ignoriert
-Friedhofsweg: Asphalt	Q0 13648,-928 13391,-707 13225,-681
+#: by: Nadine (h.nadineheinz):
+#: note anonymous meinte auch "q2, enge Straße", ignoriert
+Friedhofsweg: guter Asphalt	Q0 13648,-928 13391,-707 13225,-681
 #: by: osm (paved)
 Am Bahnhof: befestigt	Q0 72646,12808 72617,12199
 #: by: osm (cobblestone)

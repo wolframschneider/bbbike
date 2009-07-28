@@ -492,6 +492,7 @@ Alt-Biesdorf	1 20375,11694 20435,11698 20575,11698 21108,11628
 Alt-Biesdorf	1 21108,11628 20963,11618 20549,11659 20375,11694
 Privatstr. 14	1s 13159,17196 13103,17280
 Bernkasteler Str.	1 15208,16939 15015,16908 14923,16901 14923,16914
+Wiedenbrücker Weg	1 4207,1113 4220,1175 4148,1275
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718 -12323,635 -12332,585 -12582,127
 Leistikowstr.	1 -12512,810 -12302,718
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -1395,7 +1396,7 @@ tragen (zum Uferweg an den Treptowers)	0:60:-45 14383,10036
 tragen (Mühsamstr.)	0:30:-117 13253,12625
 tragen (34 Stufen)	0:40:40 14787,10972
 tragen (ca. 35 Stufen)	0:40:13 14764,10877
-tragen (Durchgang unter der U-Bahn zur Warschauer Str.)	0:30:-255 13437,10992
+tragen (Durchgang unter der U-Bahn zur Warschauer Str., 15 Stufen)	0:20:-255 13437,10992
 tragen (Treppe, 12 Stufen)	0:20:-87 7370,6451
 tragen (Bahnübergang ehem. Bhf. Satzkorn)	0:60:89 -19150,7320
 tragen (Bahnübergang ehem. Bhf. Satzkorn)	0:60:57 -19183,7299
@@ -1408,7 +1409,8 @@ tragen (Treppe)	0:30:-226 9983,16561
 tragen (Treppe)	0:30:38 9982,16527
 tragen (Treppe)	0:30:-115 3756,12614
 tragen (Treppe)	0:30:-267 4334,12551
-tragen (Jungfernbrücke, ungefähr 2 x 10 Stufen)	0:30:54 10213,12003
+tragen (Jungfernbrücke, 10 Stufen)	0:15:52 10206,11997
+tragen (Jungfernbrücke, 4 Stufen)	0:10:53 10223,12010
 tragen (Treppe, 26 Stufen)	0:30 10583,12206
 tragen (Treppe und Rampe)	0:30:-154 39281,17353
 tragen (Treppe oder sehr steile, sandige Rampe)	0:60:-255 41715,18446
@@ -1557,7 +1559,6 @@ Am Pankepark: z.Zt. noch Baustraße, Fertigstellung um 2011-01-01, dann als Fußgä
 Am Pankepark: z.Zt. noch Baustraße, Fertigstellung um 2011-01-01	2:inwork 8290,14119 8246,14201 8138,14148
 Rückbau der Fr.-Ebert-Str. zwischen Breite Str. und Platz der Einheit, Bauarbeiten bis Ende 2009. Umfahrung über Alten Markt notwendig.	1:inwork -12719,-1661 -12755,-1585 -12773,-1544
 Rückbau der Fr.-Ebert-Str., kein Zugang zur Schwertfegerstr.	2:inwork -12870,-1493 -12795,-1499
-Brücke über den Torfgraben/Phöben gesperrt, Neubau voraussichtlich bis 2006-12-31	2:inwork -25539,2641 -25453,2418
 Behlertstr.	1 -12370,-354 -12500,-339 -12621,-359 -12821,-417 -12865,-425
 tragen (Treppe)	0:30:-73 2247,5068
 tragen (Treppe)	0:15 2204,5081
