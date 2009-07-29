@@ -1080,8 +1080,8 @@ Föhrer Str. -> Augustenburger Pl.: Mittelstreifen	3::igndisp 6528,15000 6561,150
 unbequem passierbarer Mittelstreifen	3nocross::ignrte 14208,12235 14291,12220 14381,12205
 Kreutzigerstr. -> Frankfurter Allee: unbequem passierbarer Mittelstreifen	3::igndisp 14285,12190 14291,12220 14208,12235
 Frankfurter Allee -> Kreutzigerstr.: unbequem passierbarer Mittelstreifen	3::igndisp 14381,12205 14291,12220 14285,12190
-unbequem passierbarer Mittelstreifen	3nocross::ignrte 14381,12205 14427,12197 14488,12189
-Frankfurter Allee -> Mainzer Str.: unbequem passierbarer Mittelstreifen	3::igndisp 14488,12189 14427,12197 14357,12011
+unbequem passierbarer Mittelstreifen	3nocross::ignrte 14381,12205 14427,12197 14488,12188
+Frankfurter Allee -> Mainzer Str.: unbequem passierbarer Mittelstreifen	3::igndisp 14488,12188 14427,12197 14357,12011
 Mainzer Str. -> Frankfurter Allee: unbequem passierbarer Mittelstreifen	3::igndisp 14357,12011 14427,12197 14381,12205
 unbequem passierbarer Mittelstreifen	3nocross::ignrte 13785,12292 13885,12279 14208,12235
 Liebigstr. -> Frankfurter Allee: unbequem passierbarer Mittelstreifen	3::igndisp 13905,12374 13885,12279 14208,12235
@@ -1378,7 +1378,8 @@ tragen (Eisenbahnbrücke Caputh)	0:60 -18009,-7528
 tragen (Eisenbahnbrücke Caputh)	0:60:-168 -17978,-7375
 tragen (Eisenbahnbrücke Werder)	0:60:-61 -21048,-2029
 tragen (Eisenbahnbrücke Werder)	0:60:79 -21210,-2058
-tragen (Elsenbrücke, ungefähr 2 x 15 Stufen)	0:60:-142 13383,8716
+tragen (Elsensteg, 6 Stufen)	0:10:-137 13376,8705
+tragen (Elsensteg, 6 Stufen)	0:10:-144 13394,8730
 tragen (Gerickesteg, ungefähr 20 Stufen)	0:30:-128 6748,12669
 tragen (Gerickesteg, ungefähr 20 Stufen)	0:30:-126 6702,12633
 tragen (Spreetunnel, ca. 50 Stufen)	0:60:17 25658,4619
@@ -1392,7 +1393,7 @@ tragen (20 Stufen)	0:25:16 13138,9897
 unter der S-Bahn-Brücke tragen	0:30:-172 3730,18992
 tragen oder Aufzug (Storkower Str.)	0:60:-161 14528,13241
 tragen oder Aufzug (Storkower Str.)	0:60:-114 14503,13167
-tragen (zum Uferweg an den Treptowers)	0:60:-45 14383,10036
+tragen (zum Uferweg an den Treptowers, 24 Stufen)	0:35:-45 14383,10036
 tragen (Mühsamstr.)	0:30:-117 13253,12625
 tragen (34 Stufen)	0:40:40 14787,10972
 tragen (ca. 35 Stufen)	0:40:13 14764,10877
@@ -1416,7 +1417,7 @@ tragen (Treppe und Rampe)	0:30:-154 39281,17353
 tragen (Treppe oder sehr steile, sandige Rampe)	0:60:-255 41715,18446
 tragen (Treppe am Körnerpark)	0:30:-114 12734,7384
 tragen (mehrere Treppen mit insgesamt ca. 25 Stufen und Kinderwagenrampe)	0:30:-261 12115,8556
-tragen (Treppe mit Kinderwagenrampe)	0:30:-135 13960,9365
+tragen (Treppe, 5 x 3 Stufen mit Kinderwagenrampe)	0:25:-110 13953,9372
 tragen (Treppe)	0:30:-225 8014,12846
 tragen (Treppe)	0:30:-4 8428,12859
 tragen (Treppe)	0:30:-265 8445,12755
@@ -1439,6 +1440,7 @@ tragen (Treppe, 50 Stufen)	0:50:-151 -12328,1941
 tragen (Treppe, 18 Stufen)	0:18:-72 8709,12605
 tragen (Treppe)	0:30:-7 6017,12931
 tragen (Treppe, 4 Stufen)	0:10:86 38056,48407
+Schranke	BNP:0:-63:trailer=3 9920,11074
 Drängelgitter	BNP:5:-164 4258,2693
 Drängelgitter	BNP:5:-123 4202,2622
 Drängelgitter, für Anhänger nicht passierbar	BNP:5:-206:trailer=no 2009,3362
@@ -1801,19 +1803,19 @@ Heilsberger Allee -> Heerstr.: Heerstr.	3::igndisp -391,11322 -420,11110 -346,11
 Heerstr. -> Heilsberger Allee: Heerstr.	3::igndisp -535,11096 -420,11110 -391,11322
 Rauschener Allee -> Heerstr.: Heerstr.	3::igndisp -328,10971 -346,11121 -420,11110
 Heerstr. -> Rauschener Allee: Heerstr.	3::igndisp -68,11156 -346,11121 -328,10971
-Heerstr.	3nocross::ignrte -68,11156 21,11167 232,11190 439,11228 456,11233
+Heerstr.	3nocross::ignrte -68,11156 21,11167 231,11198 439,11228 456,11233
+Heerstr. -> Parkweg Ortelsburger Allee: Heerstr.	3::igndisp 231,11198 21,11167 23,11137
 Heerstr. -> Pillkaller Allee: Heerstr.	3::igndisp -68,11156 21,11167 14,11215
-Pillkaller Allee -> Heerstr.: Heerstr.	3::igndisp 14,11215 21,11167 232,11190
+Pillkaller Allee -> Heerstr.: Heerstr.	3::igndisp 14,11215 21,11167 231,11198
 Pillkaller Allee -> Parkweg Ortelsburger Allee: Heerstr.	3::igndisp 14,11215 21,11167 23,11137
-Heerstr. -> Parkweg Ortelsburger Allee: Heerstr.	3::igndisp 232,11190 21,11167 23,11137
 Parkweg Ortelsburger Allee -> Heerstr.: Heerstr.	3::igndisp 23,11137 21,11167 -68,11156
 Parkweg Ortelsburger Allee -> Pillkaller Allee: Heerstr.	3::igndisp 23,11137 21,11167 14,11215
-Insterburgallee -> Heerstr.: Heerstr.	3::igndisp 200,11428 232,11190 439,11228
-Insterburgallee -> Insterburgallee: Heerstr.	3::igndisp 200,11428 232,11190 251,11039
-Heerstr. -> Insterburgallee: Heerstr.	3::igndisp 21,11167 232,11190 200,11428
-Heerstr. -> Insterburgallee: Heerstr.	3::igndisp 439,11228 232,11190 251,11039
-Insterburgallee -> Insterburgallee: Heerstr.	3::igndisp 251,11039 232,11190 200,11428
-Insterburgallee -> Heerstr.: Heerstr.	3::igndisp 251,11039 232,11190 21,11167
+Insterburgallee -> Heerstr.: Heerstr.	3::igndisp 200,11428 231,11198 439,11228
+Insterburgallee -> Insterburgallee: Heerstr.	3::igndisp 200,11428 231,11198 251,11039
+Heerstr. -> Insterburgallee: Heerstr.	3::igndisp 21,11167 231,11198 200,11428
+Heerstr. -> Insterburgallee: Heerstr.	3::igndisp 439,11228 231,11198 251,11039
+Insterburgallee -> Insterburgallee: Heerstr.	3::igndisp 251,11039 231,11198 200,11428
+Insterburgallee -> Heerstr.: Heerstr.	3::igndisp 251,11039 231,11198 21,11167
 Heerstr. -> Teufelsseestr.: Heerstr.	3::igndisp 456,11233 439,11228 454,11159
 tragen (20 Stufen)	0:30:-186 23,11137
 Oldenburgallee	1 454,11670 461,11455
