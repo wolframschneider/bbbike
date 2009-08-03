@@ -39,6 +39,12 @@ sub new { bless {}, shift }
 sub run {
     my($self) = @_;
 
+    my $q = new CGI;
+    my $city = $q->param('city') || "";
+    if ($city) {
+	$ENV{DATA_DIR}= $ENV{BBBIKE_DATADIR}= "data-osm/$city";
+    }
+
     local $CGI::POST_MAX = 2_000_000;
 
     my @polylines_polar;
