@@ -4755,7 +4755,6 @@ EOF
 	    print " <option " . $imagetype_checked->("svg") . ">SVG\n" unless $cannot_svg;
 	    print " <option " . $imagetype_checked->("mapserver") . ">MapServer\n" if $can_mapserver;
 	    print " <option " . $imagetype_checked->("berlinerstadtplan") . ">www.berliner-stadtplan.com\n" if $can_berliner_stadtplan_post;
-	    print " <option " . $imagetype_checked->("googlemaps") . ">Google Maps\n" if $can_google_maps;
 	    #XXX print " <option " . $imagetype_checked->("googlemapsstatic") . ">Google Maps (static)\n" if 1;#XXXXXXXXXXXXXXXXXX
 	    print " </select></span>\n";
 	    print "<br>\n";
