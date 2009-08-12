@@ -4,7 +4,10 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
-Hauptstr. (Friedrichshain-Kreuzberg) in beiden Richtungen zwischen Markgrafendamm und untere Kynaststr. Baustelle, Radfahrer kˆnnen nur langsam passieren bzw. m¸ssen schieben	q4::inwork 14906,10820 14794,10844 14717,10855
+Simplonstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork; 14597,11069 14530,11137
+Simplonstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 14530,11137 14465,11195
+Reichstagufer (Mitte): Baustelle, Fahrbahn gesperrt, Fuﬂg‰nger kˆnnen passieren	q4::inwork 9209,12795 9280,12883
+Hauptstr. (Friedrichshain-Kreuzberg): Baustelle, Radfahrer kˆnnen nur langsam passieren bzw. m¸ssen schieben	q4::inwork 14906,10820 14794,10844 14717,10855
 Wuhlewanderweg: steiler Anstieg, Fuﬂg‰nger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gef‰lle, Fuﬂg‰nger	q4; 21970,12153 21998,12204
 Caroline-Michaelis-Str.: Bordsteine	q3 9125,13973 9151,13941
@@ -221,7 +224,7 @@ Barsekowstr.: Fuﬂg‰nger	q1 5344,4672 5417,4647 5476,4626 5589,4617
 (Stadtpark Steglitz): Fuﬂg‰nger	q1 5589,4617 5582,4675 5555,4743
 (Stadtpark Steglitz): Fuﬂg‰nger	q1 5509,4773 5453,4665 5417,4647
 (Stadtpark Steglitz): Fuﬂg‰nger	q1 5797,4846 5826,4819 5909,4798 5945,4828 6018,4850
-Dieffenbach.: Bodenschwellen	q1 11141,9732 11346,9655 11541,9576
+Dieffenbachstr.: Bodenschwellen	q1 11141,9732 11346,9655 11541,9576
 Schˆnleinstr.: Bodenschwellen	q1 11560,9524 11541,9576 11594,9604
 Hoffmannstr.: Bodenschwellen	q1 14289,9870 14076,10011
 Lausitzer Platz: zahlreiche Bodenschwellen	q2 12212,10440 12172,10585
@@ -915,7 +918,7 @@ Senheimer Str.: enge Straﬂe	q1 2519,25353 2506,25398 2505,25538 2515,25666 2519,
 Romanshorner Weg: enge Straﬂe	q1 6709,17466 6679,17568 6631,17721 6578,17898 6550,17988 6577,17998
 Wegerichstr.: enge Straﬂe	q1 16678,2330 16666,2437 16663,2450 16538,2543
 (Hanns-Eisler-Str. - Thomas-Mann-Str.): breit, wenig Fuﬂg‰nger	q0 13550,14973 13324,15109 13328,15127 13132,15239
-Siegfried-Baruch-Weg: einige Fuﬂg‰nger, recht eng	q2 7868,19692 8030,19762
+Siegfried-Baruch-Weg: einige Fuﬂg‰nger, recht eng	q2 7857,19693 8030,19762
 Fehrbelliner Str. (Spandau): Gehweg mit Bordsteinen am Anfang und am Ende	q2 -3778,15520 -3761,15604 -3727,15695
 Remscheider Str.: wechselseitiges Parken	q1 -5251,15185 -5240,15288 -5226,15367 -5208,15460 -5192,15517 -5154,15651
 Starkenburger Str.: enge Straﬂe	q1 -575,4319 -441,4354 -380,4376 -324,4410 -277,4442
@@ -1076,6 +1079,11 @@ Schlierbacher Weg: enge Straﬂe	q1 10734,1178 10685,1159 10450,1202 10453,1242 10
 Fritz-K¸hn-Str.: enge Straﬂe	q1 21681,-589 21666,-657 21479,-925 21445,-963
 Mittelstr. (Hohenschˆnhausen): enge Straﬂe	q1 15543,14491 15647,14693 15706,14752 15769,14815 15856,14915
 Nantesstr.: enge Straﬂe	q1 11200,21689 11251,22022 11231,22065 11077,22236
+Helgiweg: enge Straﬂe	q1 14459,18589 14517,18410
+Helgiweg: enge Straﬂe	q1 14533,18413 14565,18226 14576,18163 14595,18050
+Lummenweg: eng durch parkende Autos	q1 21879,2592 21919,2510 21936,2388
+Hermannstr. (Zehlendorf): enge Straﬂe	q1 -1093,4529 -1025,4422 -947,4303 -851,4148 -843,4116
+Groﬂkopfstr.: enge Straﬂe (parkende Autos)	q1 5167,17725 5363,17667
 Eichborndamm: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 4240,19019 4232,18981
 Revaler Str. (Straﬂenbahn): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 13588,11490 13473,11456
 Stiftsweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 11025,18531 11268,18851
@@ -1107,6 +1115,7 @@ Atzpodienstr. (Umgehung auf Gehweg mˆglich): gegen die Einbahnstraﬂenrichtung, g
 Behrenstr./Bebelplatz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 9801,12245 9743,12239 9700,12234 9631,12227
 Halenseestr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 2277,9801 2167,10004 2121,10089 1988,10328 1951,10435
 Zeltinger Platz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 2404,25187 2355,25252 2395,25273 2446,25265 2490,25211 2486,25156 2451,25123 2404,25187
+Ludolfinger Platz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 2277,25033 2245,25016 2205,25042 2192,25083 2216,25117 2277,25094 2285,25059 2277,25033
 Sewanstr. - Balatonstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 17705,10232 17741,10386
 Hˆnower Str. (Karlshorst) (Ausweichen auf Sandbankette mˆglich): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
 (Los-Angeles-Platz): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 5681,10696 5822,10609
