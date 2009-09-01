@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: cgihead2.t,v 1.27 2009/06/30 21:03:58 eserte Exp $
+# $Id: cgihead2.t,v 1.28 2009/09/01 21:52:12 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -33,7 +33,7 @@ use constant MSDOS_MIME_TYPE => qr{^application/(octet-stream|x-msdos-program|x-
 
 {
     use POSIX qw(strftime);
-    use constant TODO_ADFC_ERRORS => "2009-07-31T12:00:00" gt strftime("%FT%T", localtime) && 'Redirects on adfc server do not work';
+    use constant TODO_ADFC_ERRORS => "2009-09-10T12:00:00" gt strftime("%FT%T", localtime) && 'Redirects on adfc server do not work';
 }
 
 my @var;

@@ -11,7 +11,13 @@
 
 (defconst bbbike-font-lock-defaults
   '(bbbike-font-lock-keywords t nil nil nil (font-lock-multiline . nil)))
-  
+
+(defadvice switch-to-buffer (after bbbike-revert last act)
+  "Make sure bbbike buffers are up-to-date"
+  (if (and (eq major-mode 'bbbike-mode)
+	   (not (buffer-modified-p)))
+      (revert-buffer)))
+
 ;;; reverses the current region
 (defun bbbike-reverse-street ()
   (interactive)
@@ -57,6 +63,14 @@
       (insert coord)
       )
     ))
+
+(defun bbbike-split-directions ()
+  (interactive)
+  (shell-command-on-region (save-excursion (beginning-of-line) (point))
+			   (save-excursion (end-of-line) (point))
+			   "perl -e '$in=<>; if (($name,$catfw,$catbw,$coord)=$in=~m{^([^\\t]*)\\t([^;]*);([^ ]*) (.*)}) { print qq{$name\\t$catfw; $coord\\n$name\\t$catbw; } . join(qq{ },reverse(split / /, $coord)) } else { print $in }'"
+			   nil t)
+  )
 
 (defun bbbike-join-street ()
   (interactive)

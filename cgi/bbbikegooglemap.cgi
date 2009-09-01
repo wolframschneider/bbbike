@@ -255,7 +255,8 @@ sub get_html {
 
     var routeLinkLabel = "Link to route: ";
     var routeLabel = "Route: ";
-    var commonSearchParams = "&pref_seen=1&pref_speed=20&pref_cat=&pref_quality=&pref_green=&scope=;output_as=xml;referer=bbbikegooglemap";
+    var commonSearchParams    = "&pref_seen=1&pref_speed=20&pref_cat=&pref_quality=&pref_green=&scope=;referer=bbbikegooglemap;output_as=xml";
+    var commonWebSearchParams = "&pref_seen=1&pref_speed=20&pref_cat=&pref_quality=&pref_green=&scope=;referer=bbbikegooglemap";
     var routePostParam = "";
 
     var addRoute = [];
@@ -333,12 +334,14 @@ sub get_html {
         var currentMode = getCurrentMode();
 	var dragObj = map.getDragObject();
         if (currentMode == "search") {
+	    map.disableDoubleClickZoom();
 	    if (searchStage == 0) {
 		dragObj.setDraggableCursor('url("$bbbikeroot/images/start_ptr.png"), url("$bbbikeroot/images/flag2_bl.png"), ' + dragCursor);
 	    } else {
 		dragObj.setDraggableCursor('url("$bbbikeroot/images/ziel_ptr.png"), url("$bbbikeroot/images/flag_ziel.png"), ' + dragCursor);
 	    }
         } else {
+	    map.enableDoubleClickZoom();
 	    if (currentMode == "addroute" || currentMode == "addwpt") {
 		dragObj.setDraggableCursor("default");
 	    } else {
@@ -522,6 +525,7 @@ sub get_html {
 	}
 	wptHTML += "Gesamtlänge: " + pointElements[pointElements.length-1].getElementsByTagName("TotalDistString")[0].textContent + "<br />\\n";
 	wptHTML += "<a href=\\"javascript:wayBack()\\">Rückweg</a><br />\\n";
+	wptHTML += "<a href=\\"javascript:searchRouteInBBBike()\\">gleiche Suche in BBBike</a><br />\\n";
 	document.getElementById("wpt").innerHTML = wptHTML;
     }
 
@@ -622,9 +626,14 @@ sub get_html {
         document.getElementsByTagName("body")[0].className = "nonWaitMode";
     }
 
+    function getSearchCoordParams(startPoint, goalPoint) {
+        return "startc_wgs84=" + startPoint.x + "," + startPoint.y + "&zielc_wgs84=" + goalPoint.x + "," + goalPoint.y;
+    }
+
     function searchRoute(startPoint, goalPoint) {
+        var searchCoordParams = getSearchCoordParams(startPoint, goalPoint);
 	var requestLine =
-	    "@{[ $cgi_reldir ]}/bbbike.cgi?startpolar=" + startPoint.x + "x" + startPoint.y + "&zielpolar=" + goalPoint.x + "x" + goalPoint.y + commonSearchParams;
+	    "@{[ $cgi_reldir ]}/bbbike.cgi?" + searchCoordParams + commonSearchParams;
 	var routeRequest = GXmlHttp.create();
 	routeRequest.open("GET", requestLine, true);
 	routeRequest.onreadystatechange = function() {
@@ -632,6 +641,13 @@ sub get_html {
 	};
 	waitMode();
 	routeRequest.send(null);
+    }
+
+    function searchRouteInBBBike() {
+        var searchCoordParams = getSearchCoordParams(startPoint, goalPoint);
+	var url =
+	    "@{[ $cgi_reldir ]}/bbbike.cgi?" + searchCoordParams + commonWebSearchParams;
+	location.href = url;
     }
 
     function showRouteResult(request) {
@@ -684,6 +700,10 @@ sub get_html {
 	    searchStage = 1;
 	    currentModeChange();
 	} else if (searchStage == 1) { // set goal
+	    // XXX hack to avoid empty searches, this happens if the user does a double click in search/edit mode
+	    if (startPoint.x == point.x && startPoint.y == point.y) {
+		return;
+	    }
 	    setGoalMarker(point);
 	    searchStage = 0;
 	    currentModeChange();
@@ -822,7 +842,7 @@ sub get_html {
 
     if (GBrowserIsCompatible() ) {
         var map = new GMap(document.getElementById("map"));
-	map.disableDoubleClickZoom();
+	//map.disableDoubleClickZoom();
         map.addControl(new GLargeMapControl());
         map.addControl(new GMapTypeControl());
         map.addControl(new GOverviewMapControl ());
@@ -926,7 +946,7 @@ EOF
     <td><input onchange="currentModeChange()" 
 	       id="mapmode_addroute"
                type="radio" name="mapmode" value="addroute" /></td>
-    <td><label for="mapmode_addroute">Mit Maus<span style="color:red;">klicks</span> eine Route erstellen</label><br/><!-- XXX remove colored "klicks" some time -->
+    <td><label for="mapmode_addroute">Mit Mausklicks eine Route erstellen</label><br/><!-- XXX remove colored "klicks" some time -->
         <a href="javascript:deleteLastPoint()">Letzten Punkt löschen</a>
         <a href="javascript:resetOrUndoRoute()" id="routedellink">Route löschen</a></td>
    </tr>

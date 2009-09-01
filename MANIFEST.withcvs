@@ -212,6 +212,7 @@ cgi/README
 cgi/bbbike-data.cgi
 cgi/bbbike-snapshot.cgi
 cgi/bbbike-teaser.pl
+cgi/bbbike-test.cgi.config
 cgi/bbbike.cgi
 cgi/bbbikegooglemap.cgi
 cgi/berlinmap.cgi
@@ -275,6 +276,7 @@ data/obst
 data/orte
 data/orte2
 data/orte_city
+data/ortsschilder
 data/plaetze
 data/plz
 data/potsdam
@@ -708,6 +710,9 @@ images/museum.xpm
 images/newlayer.gif
 images/newlayer.png
 images/newlayer.xpm
+images/notrailer.gif
+images/notrailer.png
+images/notrailer.xpm
 images/open.gif
 images/open.xpm
 images/open_ovl.gif
@@ -949,6 +954,7 @@ lib/Tk/RotX11Font.pm
 lib/Tk/Ruler.pm
 lib/Tk/SRTProgress.pm
 lib/Tk/SRTScrollbar.pm
+lib/Tk/SmoothShow.pm
 lib/Tk/Splash.pm
 lib/Tk/StippleLine.pm
 lib/Tk/TextProgress.pm
@@ -1569,11 +1575,13 @@ t/bbbikedraw.t
 t/bbbikegooglemap.t
 t/bbbikerouting.t
 t/bbbikesoap.t
+t/bbbikeutil.t
 t/bbbikevar.t
 t/browserinfo.t
 t/cgi-cookie.t
 t/cgi-mechanize-upload.t
 t/cgi-mechanize.t
+t/cgi-test.t
 t/cgi-validator.t
 t/cgi.t
 t/cgihead.t
@@ -1619,6 +1627,7 @@ t/strassen-lazy.t
 t/strassen-storable.t
 t/strassen-stream.t
 t/strassen-tie.t
+t/strassen-util.t
 t/strassen.t
 t/strassennetz.t
 t/temp_blockings_dates.t

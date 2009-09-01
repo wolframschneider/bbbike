@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: strassen-dbfile-btree.t,v 1.5 2009/02/25 23:41:49 eserte Exp $
+# $Id: strassen-dbfile-btree.t,v 1.6 2009/09/01 21:52:12 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -27,7 +27,7 @@ BEGIN {
 
 BEGIN {
     if (!eval q{
-	require Object::Iterate
+	require Object::Iterate;
 	1;
     }) {
 	print "1..0 # skip: no Object::Iterate module, needed for convert() method\n";
