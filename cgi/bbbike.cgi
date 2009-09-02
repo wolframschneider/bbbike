@@ -4731,8 +4731,10 @@ EOF
   	    }
 	    print ">\n";
 
+            my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
+
             if ($show_mini_googlemap) {
-	         print qq{<iframe src="slippymap.cgi?coords=$string_rep&amp;coordsystem=polar&amp;maptype=hybrid&amp;source_script=Basel.cgi&amp;coordsystem=wgs84&amp;zoom=3" title="slippy map" width="100%" height="505" scrolling="no" border="0"></iframe><p/>} if $show_mini_googlemap;
+	         print qq{<iframe src="slippymap.cgi?coords=$string_rep&amp;coordsystem=polar&amp;maptype=hybrid&amp;city=$cityname&amp;source_script=$cityname.cgi&amp;coordsystem=wgs84&amp;zoom=3" title="slippy map" width="100%" height="505" scrolling="no" border="0"></iframe><p/>} if $show_mini_googlemap;
 	    } elsif ($show_mini_map) {
 	    	print qq{<table><tr><td><a href="$ENV{'SCRIPT_NAME'}?center=&interactive=Show+map&imagetype=pdf-auto&coords=$string_rep&startname=}. CGI::escape($startname) . q{&zielname=} . CGI::escape($zielname) . qq{&geometry=240x180&draw=str&draw=sbahn&draw=ubahn&draw=wasser&draw=flaechen&draw=strname&draw=title&outputtarget=print&scope=" style="border=0;"><img  title="printable PDF map and route list" alt="" width="240" height="180" scrolling="no" border="0" src="$ENV{'SCRIPT_NAME'}?center=&interactive=Show+map&imagetype=png&coords=$string_rep&startname=}. CGI::escape($startname) . q{&zielname=} . CGI::escape($zielname) . qq{&geometry=240x180&draw=str&draw=sbahn&draw=wasser&draw=flaechen&draw=title&scope="></img></a></td><td>\n};
 
@@ -4755,7 +4757,6 @@ EOF
 	    print " <option " . $imagetype_checked->("svg") . ">SVG\n" unless $cannot_svg;
 	    print " <option " . $imagetype_checked->("mapserver") . ">MapServer\n" if $can_mapserver;
 	    print " <option " . $imagetype_checked->("berlinerstadtplan") . ">www.berliner-stadtplan.com\n" if $can_berliner_stadtplan_post;
-	    print " <option " . $imagetype_checked->("googlemaps") . ">Google Maps\n" if $can_google_maps;
 	    #XXX print " <option " . $imagetype_checked->("googlemapsstatic") . ">Google Maps (static)\n" if 1;#XXXXXXXXXXXXXXXXXX
 	    print " </select></span>\n";
 	    print "<br>\n";

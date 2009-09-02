@@ -17,14 +17,16 @@ package BBBikeGooglemap;
 
 use strict;
 use FindBin;
-use lib (grep { -d }
-	 ("$FindBin::RealBin/..",
-	  "$FindBin::RealBin/../lib",
-	  # für Radzeit:
-	  "$FindBin::RealBin/../BBBike",
-	  "$FindBin::RealBin/../BBBike/lib",
-	 )
-	);
+use lib (
+    grep { -d } (
+        "$FindBin::RealBin/..",
+        "$FindBin::RealBin/../lib",
+
+        # für Radzeit:
+        "$FindBin::RealBin/../BBBike",
+        "$FindBin::RealBin/../BBBike/lib",
+    )
+);
 use CGI qw(:standard);
 use CGI::Carp;
 use File::Basename qw(dirname);
@@ -37,7 +39,13 @@ use Karte::Polar;
 sub new { bless {}, shift }
 
 sub run {
-    my($self) = @_;
+    my ($self) = @_;
+
+    my $q = new CGI;
+    my $city = $q->param('city') || "";
+    if ($city) {
+        $ENV{DATA_DIR} = $ENV{BBBIKE_DATADIR} = "data-osm/$city";
+    }
 
     local $CGI::POST_MAX = 2_000_000;
 
@@ -47,92 +55,107 @@ sub run {
 
     my $coordsystem = param("coordsystem") || "bbbike";
     my $converter;
-    if ($coordsystem =~ m{^(wgs84|polar)$}) {
-	$converter = \&polar_converter;
-	$coordsystem = 'polar'; # normalize XXX should be wgs84 some day?
-    } else { # bbbike or standard
-	$converter = \&bbbike_converter;
+    if ( $coordsystem =~ m{^(wgs84|polar)$} ) {
+        $converter = \&polar_converter;
+        $coordsystem = 'polar';    # normalize XXX should be wgs84 some day?
+    }
+    else {                         # bbbike or standard
+        $converter = \&bbbike_converter;
     }
 
-    if (param("wpt_or_trk")) {
-	my $wpt_or_trk = trim(param("wpt_or_trk"));
-	if ($wpt_or_trk =~ / /) {
-	    param("coords", join("!",
-				 param("coords"),
-				 split(/ /, $wpt_or_trk))
-		 );
-	} else {
-	    param("wpt", $wpt_or_trk);
-	}
+    if ( param("wpt_or_trk") ) {
+        my $wpt_or_trk = trim( param("wpt_or_trk") );
+        if ( $wpt_or_trk =~ / / ) {
+            param( "coords",
+                join( "!", param("coords"), split( / /, $wpt_or_trk ) ) );
+        }
+        else {
+            param( "wpt", $wpt_or_trk );
+        }
     }
 
     my $filename = param("gpxfile");
-    if (defined $filename) {
-	(my $ext = $filename) =~ s{^.*\.}{.};
-	require Strassen::Core;
-	require File::Temp;
-	my $fh = upload("gpxfile");
-	if (!$fh) {
-	    $self->{errormessageupload} = "Upload-Datei fehlt!";
-	} else {
-	    my($tmpfh,$tmpfile) = File::Temp::tempfile(UNLINK => 1,
-						       SUFFIX => $ext);
-	    while (<$fh>) {
-		print $tmpfh $_;
-	    }
-	    close $fh;
-	    close $tmpfh;
+    if ( defined $filename ) {
+        ( my $ext = $filename ) =~ s{^.*\.}{.};
+        require Strassen::Core;
+        require File::Temp;
+        my $fh = upload("gpxfile");
+        if ( !$fh ) {
+            $self->{errormessageupload} = "Upload-Datei fehlt!";
+        }
+        else {
+            my ( $tmpfh, $tmpfile ) = File::Temp::tempfile(
+                UNLINK => 1,
+                SUFFIX => $ext
+            );
+            while (<$fh>) {
+                print $tmpfh $_;
+            }
+            close $fh;
+            close $tmpfh;
 
-	    my $gpx = Strassen->new($tmpfile, name => "Uploaded GPX file");
-	    $gpx->init;
-	    while (1) {
-		my $r = $gpx->next;
-		if (!$r || !UNIVERSAL::isa($r->[Strassen::COORDS()], "ARRAY")) {
-		    warn "Parse error in line " . $gpx->pos . ", skipping...";
-		    next;
-		}
-		last if !@{ $r->[Strassen::COORDS()] };
-		if (@{ $r->[Strassen::COORDS()] } == 1) { # treat as waypoint
-		    # XXX hack --- should append recognise self_or_default?
-		    $CGI::Q->append(-name   => 'wpt',
-				    -values => $r->[Strassen::NAME()] . "!" . $r->[Strassen::COORDS()][0]
-				   );
-		} else {
-		    # XXX hack --- should append recognise self_or_default?
-		    $CGI::Q->append(-name   => 'coords',
-				    -values => [join "!", @{ $r->[Strassen::COORDS()] }],
-				   );
-		}
-	    }
-	}
+            my $gpx = Strassen->new( $tmpfile, name => "Uploaded GPX file" );
+            $gpx->init;
+            while (1) {
+                my $r = $gpx->next;
+                if (   !$r
+                    || !UNIVERSAL::isa( $r->[ Strassen::COORDS() ], "ARRAY" ) )
+                {
+                    warn "Parse error in line " . $gpx->pos . ", skipping...";
+                    next;
+                }
+                last if !@{ $r->[ Strassen::COORDS() ] };
+                if ( @{ $r->[ Strassen::COORDS() ] } == 1 )
+                {    # treat as waypoint
+                        # XXX hack --- should append recognise self_or_default?
+                    $CGI::Q->append(
+                        -name   => 'wpt',
+                        -values => $r->[ Strassen::NAME() ] . "!"
+                          . $r->[ Strassen::COORDS() ][0]
+                    );
+                }
+                else {
+
+                    # XXX hack --- should append recognise self_or_default?
+                    $CGI::Q->append(
+                        -name => 'coords',
+                        -values =>
+                          [ join "!", @{ $r->[ Strassen::COORDS() ] } ],
+                    );
+                }
+            }
+        }
     }
 
-    for my $def (['coords',    \@polylines_polar],
-		 ['oldcoords', \@polylines_polar_feeble],
-		) {
-	my($cgiparam, $polylines_ref) = @$def;
+    for my $def (
+        [ 'coords',    \@polylines_polar ],
+        [ 'oldcoords', \@polylines_polar_feeble ],
+      )
+    {
+        my ( $cgiparam, $polylines_ref ) = @$def;
 
-	for my $coords (param($cgiparam)) {
-	    my(@coords) = split /[!;]/, $coords;
-	    my(@coords_polar) = map {
-		my($x,$y) = split /,/, $_;
-		join ",", $converter->($x,$y);
-	    } @coords;
-	    push @$polylines_ref, \@coords_polar;
-	}
+        for my $coords ( param($cgiparam) ) {
+            my (@coords) = split /[!;]/, $coords;
+            my (@coords_polar) = map {
+                my ( $x, $y ) = split /,/, $_;
+                join ",", $converter->( $x, $y );
+            } @coords;
+            push @$polylines_ref, \@coords_polar;
+        }
     }
 
-    for my $wpt (param("wpt")) {
-	my($name,$coord);
-	if ($wpt =~ /[!;]/) {
-	    ($name,$coord) = split /[!;]/, $wpt;
-	} else {
-	    $name = "";
-	    $coord = $wpt;
-	}
-	my($x,$y) = split /,/, $coord;
-	($x, $y) = $converter->($x,$y);
-	push @wpt, [$x,$y,$name];
+    for my $wpt ( param("wpt") ) {
+        my ( $name, $coord );
+        if ( $wpt =~ /[!;]/ ) {
+            ( $name, $coord ) = split /[!;]/, $wpt;
+        }
+        else {
+            $name  = "";
+            $coord = $wpt;
+        }
+        my ( $x, $y ) = split /,/, $coord;
+        ( $x, $y ) = $converter->( $x, $y );
+        push @wpt, [ $x, $y, $name ];
     }
 
     my $zoom = param("zoom");
@@ -142,97 +165,124 @@ sub run {
     $self->{autosel} = $autosel && $autosel ne 'false' ? "true" : "false";
 
     my $maptype = param("maptype") || "";
-    $self->{maptype} = ($maptype =~ /hybrid/i ? 'G_HYBRID_MAP' :
-			$maptype =~ /normal/i ? 'G_NORMAL_MAP' :
-			'G_SATELLITE_MAP');
+    $self->{maptype} = (
+          $maptype =~ /hybrid/i ? 'G_HYBRID_MAP'
+        : $maptype =~ /normal/i ? 'G_NORMAL_MAP'
+        : 'G_SATELLITE_MAP'
+    );
 
     my $mapmode = param("mapmode") || "";
-    ($self->{initial_mapmode}) = $mapmode =~ m{^(search|addroute|browse|addwpt)$};
+    ( $self->{initial_mapmode} ) =
+      $mapmode =~ m{^(search|addroute|browse|addwpt)$};
     $self->{initial_mapmode} ||= "";
 
     my $center = param("center") || "";
 
-    $self->{converter} = $converter;
+    $self->{converter}   = $converter;
     $self->{coordsystem} = $coordsystem;
 
     print header;
-    print $self->get_html(\@polylines_polar, \@polylines_polar_feeble, \@wpt, $zoom, $center);
+    print $self->get_html( \@polylines_polar, \@polylines_polar_feeble, \@wpt,
+        $zoom, $center );
 }
 
 sub bbbike_converter {
-    my($x,$y) = @_;
-    local $^W; # avoid non-numeric warnings...
-    $Karte::Polar::obj->standard2map($x,$y);
+    my ( $x, $y ) = @_;
+    local $^W;    # avoid non-numeric warnings...
+    $Karte::Polar::obj->standard2map( $x, $y );
 }
 
-sub polar_converter { @_[0,1] }
+sub polar_converter { @_[ 0, 1 ] }
 
 sub get_html {
-    my($self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center) = @_;
+    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center ) = @_;
 
-    my $converter = $self->{converter};
+    my $converter   = $self->{converter};
     my $coordsystem = $self->{coordsystem};
 
-    my($centerx,$centery);
+    my ( $centerx, $centery );
     if ($center) {
-	($centerx,$centery) = map { sprintf "%.5f", $_ } split /,/, $center;
-    } elsif ($paths_polar && @$paths_polar) {
-	($centerx,$centery) = map { sprintf "%.5f", $_ } split /,/, $paths_polar->[0][0];
-    } elsif ($wpts && @$wpts) {
-	($centerx,$centery) = map { sprintf "%.5f", $_ } $wpts->[0][0], $wpts->[0][1];
-    } else {
-	require Geography::Berlin_DE;
-	($centerx,$centery) = $converter->(split /,/, Geography::Berlin_DE->center());
+        ( $centerx, $centery ) = map { sprintf "%.5f", $_ } split /,/, $center;
+    }
+    elsif ( $paths_polar && @$paths_polar ) {
+        ( $centerx, $centery ) = map { sprintf "%.5f", $_ } split /,/,
+          $paths_polar->[0][0];
+    }
+    elsif ( $wpts && @$wpts ) {
+        ( $centerx, $centery ) = map { sprintf "%.5f", $_ } $wpts->[0][0],
+          $wpts->[0][1];
+    }
+    else {
+        require Geography::Berlin_DE;
+        ( $centerx, $centery ) =
+          $converter->( split /,/, Geography::Berlin_DE->center() );
     }
 
-    my %google_api_keys =
-	('www.radzeit.de'     => "ABQIAAAAidl4U46XIm-bi0ECbPGe5hR1DE4tk8nUxq5ddnsWMNnWMRHPuxTzJuNOAmRUyOC19LbqHh-nYAhakg",
-	 'slaven1.radzeit.de' => "ABQIAAAAidl4U46XIm-bi0ECbPGe5hTS_eeuTgvlotSiRSnbEXbHuw72JhQv5zsHIwt9pt-xa1jQybMfG07nnw",
-	 'bbbike.radzeit.de'  => "ABQIAAAAidl4U46XIm-bi0ECbPGe5hS6wT240HZyk82lqsABWbmUCmE0QhQkWx8v-NluR6PNjW3O3dGEjh16GA",
-	 'bbbike2.radzeit.de' => "ABQIAAAAJEpwLJEnjBq8azKO6edvZhTVOBsDIw_K6AwUqiwPnLrAK56XrRT9Hcfdh86z8Tt62SrscN1BOkEPUg",
-	 'bbbike.dyndns.org'  => "ABQIAAAAidl4U46XIm-bi0ECbPGe5hSLqR5A2UGypn5BXWnifa_ooUsHQRSCfjJjmO9rJsmHNGaXSFEFrCsW4A",
-	 # temporary
-	 'srand.de'	      => "ABQIAAAAJEpwLJEnjBq8azKO6edvZhSaoDeIPWe_eenmgYXVZinATdYRPhRaxtajxwqk10x-j6wAGQPTERtEEQ",
-	 'www.srand.de'	      => "ABQIAAAAJEpwLJEnjBq8azKO6edvZhQcuFdDaAeyxk8HEJsg2LO6FXA-0BSfij-GORz-Y3oODCTRrbrFTCsdpw",
-	 # Versehen, Host existiert nicht:
-	 'slaven1.bbbike.de'  => "ABQIAAAAidl4U46XIm-bi0ECbPGe5hRQAqip6zVbHiluFa7rPMSCpIxbfxQLz2YdzoN6O1jXFDkco3rJ_Ry2DA",
-	 '78.47.225.30'	      => "ABQIAAAACNG-XP3VVgdpYda6EwQUyhTTdIcL8tflEzX084lXqj663ODsaRSCKugGasYn0ZdJkWoEtD-oJeRhNw",
-	 'bbbike.de'	      => 'ABQIAAAACNG-XP3VVgdpYda6EwQUyhRfQt6AwvKXAVZ7ZsvglWYeC-xX5BROlXoba_KenDFQUtSEB_RJPUVetw',
-	 'recv.de'	      => 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShRZGykBMsY0k7_NlhmXv25sysVkvhRDhtTAHMlTJtehYN7xeJ9lvP8RZw',
-	 'bbbike.elsif.de'    => 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShQYKE6detmKRWDQHmeaoEIvpzlZTxSp-OhMdXTigI71vlN3iIVxDx0XhQ',
-	 'localhost'		=> 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTN4WPiGfl2FX2PYZt6wyT5v7xqcg',
-	);
-    my $full = URI->new(BBBikeCGIUtil::my_url(CGI->new, -full => 1));
+    my %google_api_keys = (
+        'www.radzeit.de' =>
+"ABQIAAAAidl4U46XIm-bi0ECbPGe5hR1DE4tk8nUxq5ddnsWMNnWMRHPuxTzJuNOAmRUyOC19LbqHh-nYAhakg",
+        'slaven1.radzeit.de' =>
+"ABQIAAAAidl4U46XIm-bi0ECbPGe5hTS_eeuTgvlotSiRSnbEXbHuw72JhQv5zsHIwt9pt-xa1jQybMfG07nnw",
+        'bbbike.radzeit.de' =>
+"ABQIAAAAidl4U46XIm-bi0ECbPGe5hS6wT240HZyk82lqsABWbmUCmE0QhQkWx8v-NluR6PNjW3O3dGEjh16GA",
+        'bbbike2.radzeit.de' =>
+"ABQIAAAAJEpwLJEnjBq8azKO6edvZhTVOBsDIw_K6AwUqiwPnLrAK56XrRT9Hcfdh86z8Tt62SrscN1BOkEPUg",
+        'bbbike.dyndns.org' =>
+"ABQIAAAAidl4U46XIm-bi0ECbPGe5hSLqR5A2UGypn5BXWnifa_ooUsHQRSCfjJjmO9rJsmHNGaXSFEFrCsW4A",
+
+        # temporary
+        'srand.de' =>
+"ABQIAAAAJEpwLJEnjBq8azKO6edvZhSaoDeIPWe_eenmgYXVZinATdYRPhRaxtajxwqk10x-j6wAGQPTERtEEQ",
+        'www.srand.de' =>
+"ABQIAAAAJEpwLJEnjBq8azKO6edvZhQcuFdDaAeyxk8HEJsg2LO6FXA-0BSfij-GORz-Y3oODCTRrbrFTCsdpw",
+
+        # Versehen, Host existiert nicht:
+        'slaven1.bbbike.de' =>
+"ABQIAAAAidl4U46XIm-bi0ECbPGe5hRQAqip6zVbHiluFa7rPMSCpIxbfxQLz2YdzoN6O1jXFDkco3rJ_Ry2DA",
+        '78.47.225.30' =>
+"ABQIAAAACNG-XP3VVgdpYda6EwQUyhTTdIcL8tflEzX084lXqj663ODsaRSCKugGasYn0ZdJkWoEtD-oJeRhNw",
+        'bbbike.de' =>
+'ABQIAAAACNG-XP3VVgdpYda6EwQUyhRfQt6AwvKXAVZ7ZsvglWYeC-xX5BROlXoba_KenDFQUtSEB_RJPUVetw',
+        'recv.de' =>
+'ABQIAAAAX99Vmq6XHlL56h0rQy6IShRZGykBMsY0k7_NlhmXv25sysVkvhRDhtTAHMlTJtehYN7xeJ9lvP8RZw',
+        'bbbike.elsif.de' =>
+'ABQIAAAAX99Vmq6XHlL56h0rQy6IShQYKE6detmKRWDQHmeaoEIvpzlZTxSp-OhMdXTigI71vlN3iIVxDx0XhQ',
+        'localhost' =>
+'ABQIAAAAX99Vmq6XHlL56h0rQy6IShT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTN4WPiGfl2FX2PYZt6wyT5v7xqcg',
+    );
+    my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new, -full => 1 ) );
     my $fallback_host = "bbbike.de";
     my $host = eval { $full->host } || $fallback_host;
 
     # warn "Google maps API: host: $host, full: $full\n";
 
-    my $google_api_key = $google_api_keys{$host} || $google_api_keys{$fallback_host};
-    my $cgi_reldir = dirname($full->path);
+    my $google_api_key = $google_api_keys{$host}
+      || $google_api_keys{$fallback_host};
+    my $cgi_reldir = dirname( $full->path );
     my $is_beta = $full =~ m{bbikegooglemap2.cgi};
 
-    my $bbbikeroot = "/BBBike";
+    my $bbbikeroot      = "/BBBike";
     my $get_public_link = sub {
-	BBBikeCGIUtil::my_url(CGI->new(), -full => 1);
+        BBBikeCGIUtil::my_url( CGI->new(), -full => 1 );
     };
-    if ($host eq 'bbbike.dyndns.org') {
-	$bbbikeroot = "/bbbike";
-    } elsif ($host =~ m{srand\.de}) {
-	$bbbikeroot = dirname(dirname($full->path));
-    } elsif ($host eq 'localhost') {
-	$bbbikeroot = "/bbbike";
-	$get_public_link = sub {
-	    my $link = BBBikeCGIUtil::my_url(CGI->new(), -full => 1);
-	    $link =~ s{localhost$bbbikeroot/cgi}{bbbike.de/cgi-bin};
-	    $link;
-	};
+    if ( $host eq 'bbbike.dyndns.org' ) {
+        $bbbikeroot = "/bbbike";
     }
-
+    elsif ( $host =~ m{srand\.de} ) {
+        $bbbikeroot = dirname( dirname( $full->path ) );
+    }
+    elsif ( $host eq 'localhost' ) {
+        $bbbikeroot      = "/bbbike";
+        $get_public_link = sub {
+            my $link = BBBikeCGIUtil::my_url( CGI->new(), -full => 1 );
+            $link =~ s{localhost$bbbikeroot/cgi}{bbbike.de/cgi-bin};
+            $link;
+        };
+    }
 
     my $script;
     {
-	my $q = new CGI;
+        my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
     }
 
@@ -909,39 +959,43 @@ function GetTileUrl_TaH(a, z) {
 }
 
 EOF
-    for my $def ([$feeble_paths_polar, '#ff00ff', 5,  0.4],
-		 [$paths_polar,        '#ff00ff', 10, undef],
-		) {
-	my($paths_polar, $color, $width, $opacity) = @$def;
+    for my $def (
+        [ $feeble_paths_polar, '#ff00ff', 5,  0.4 ],
+        [ $paths_polar,        '#ff00ff', 10, undef ],
+      )
+    {
+        my ( $paths_polar, $color, $width, $opacity ) = @$def;
 
-	for my $path_polar (@$paths_polar) {
-	    my $route_js_code = <<EOF;
+        for my $path_polar (@$paths_polar) {
+            my $route_js_code = <<EOF;
     var route = new GPolyline([
 EOF
-	    $route_js_code .= join(",\n",
-				   map {
-				       my($x,$y) = split /,/, $_;
-				       sprintf 'new GPoint(%.5f, %.5f)', $x, $y;
-				   } @$path_polar
-				  );
-	    $route_js_code .= qq{], "$color", $width};
-	    if (defined $opacity) {
-		$route_js_code .= qq{, $opacity};
-	    }
-	    $route_js_code .= qq{);};
+            $route_js_code .= join(
+                ",\n",
+                map {
+                    my ( $x, $y ) = split /,/, $_;
+                    sprintf 'new GPoint(%.5f, %.5f)', $x, $y;
+                  } @$path_polar
+            );
+            $route_js_code .= qq{], "$color", $width};
+            if ( defined $opacity ) {
+                $route_js_code .= qq{, $opacity};
+            }
+            $route_js_code .= qq{);};
 
-	    $html .= <<EOF;
+            $html .= <<EOF;
 $route_js_code
     map.addOverlay(route);
 EOF
-	}
+        }
     }
 
     for my $wpt (@$wpts) {
-	my($x,$y,$name) = @$wpt;
-	#my $html_name = escapeHTML($name);
-	my $html_name = hrefify($name);
-	$html .= <<EOF;
+        my ( $x, $y, $name ) = @$wpt;
+
+        #my $html_name = escapeHTML($name);
+        my $html_name = hrefify($name);
+        $html .= <<EOF;
     var point = new GPoint($x,$y);
     var marker = createMarker(point, '$html_name');
     map.addOverlay(marker);
@@ -964,9 +1018,10 @@ EOF
     <div class="sml" id="wpt">
 EOF
     for my $wpt (@$wpts) {
-	my($x,$y,$name) = @$wpt;
-	next if $name eq '';
-	$html .= qq{<a href="#map" onclick="setwpt($x,$y);return true;">$name</a><br />\n};
+        my ( $x, $y, $name ) = @$wpt;
+        next if $name eq '';
+        $html .=
+qq{<a href="#map" onclick="setwpt($x,$y);return true;">$name</a><br />\n};
     }
     $html .= <<EOF;
     </div>
@@ -1001,7 +1056,7 @@ EOF
    </tr>
 EOF
     if ($is_beta) {
-	$html .= <<EOF;
+        $html .= <<EOF;
    <tr style="vertical-align:top;">
     <td><input onchange="currentModeChange()" 
 	       id="mapmode_addwpt"
@@ -1017,8 +1072,8 @@ EOF
 
 <form name="upload" onsubmit='setZoomInUploadForm()' class="boxed" style="margin-top:0.3cm; " method="post" enctype="multipart/form-data">
 EOF
-    if ($self->{errormessageupload}) {
-	$html .= <<EOF;
+    if ( $self->{errormessageupload} ) {
+        $html .= <<EOF;
   <div class="error">@{[ escapeHTML($self->{errormessageupload}) ]}</div>
 EOF
     }
@@ -1093,7 +1148,7 @@ EOF
 }
 
 # REPO BEGIN
-# REPO NAME hrefify /home/e/eserte/work/srezic-repository 
+# REPO NAME hrefify /home/e/eserte/work/srezic-repository
 # REPO MD5 10b14ef52873d9c6b53d959919cbcf54
 
 # hrefify($text)
@@ -1101,32 +1156,36 @@ EOF
 # and HTML-escape everything else.
 
 sub hrefify {
-    my($text) = @_;
+    my ($text) = @_;
 
     require HTML::Entities;
     my $enc = sub {
-	HTML::Entities::encode_entities_numeric($_[0], q{<>&"'\\\\\177-\x{fffd}});
+        HTML::Entities::encode_entities_numeric( $_[0],
+            q{<>&"'\\\\\177-\x{fffd}} );
     };
 
     my $lastpos;
     my $ret = "";
-    while($text =~ m{(.*)((?:https?|ftp)://\S+)}g) {
-	my($plain, $href) = ($1, $2);
-	$ret .= $enc->($plain);
-	$ret .= qq{<a href="} . $enc->($href) . qq{">} . $enc->($href) . qq{</a>};
-	$lastpos = pos($text);
+    while ( $text =~ m{(.*)((?:https?|ftp)://\S+)}g ) {
+        my ( $plain, $href ) = ( $1, $2 );
+        $ret .= $enc->($plain);
+        $ret .=
+          qq{<a href="} . $enc->($href) . qq{">} . $enc->($href) . qq{</a>};
+        $lastpos = pos($text);
     }
-    if (!defined $lastpos) {
-	$ret .= $enc->($text);
-    } else {
-	$ret .= $enc->(substr($text, $lastpos));
+    if ( !defined $lastpos ) {
+        $ret .= $enc->($text);
+    }
+    else {
+        $ret .= $enc->( substr( $text, $lastpos ) );
     }
     $ret;
 }
+
 # REPO END
 
 # REPO BEGIN
-# REPO NAME trim /home/e/eserte/work/srezic-repository 
+# REPO NAME trim /home/e/eserte/work/srezic-repository
 # REPO MD5 ab2f7dfb13418299d79662fba10590a1
 
 # trim($string)
@@ -1141,10 +1200,12 @@ sub trim ($) {
     $s =~ s/\s+/ /;
     $s;
 }
+
 # REPO END
 
-return 1 if ((caller() and (caller())[0] ne 'Apache::Registry')
-	     or keys %Devel::Trace::); # XXX Tracer bug
+return 1
+  if ( ( caller() and ( caller() )[0] ne 'Apache::Registry' )
+    or keys %Devel::Trace:: );    # XXX Tracer bug
 
 my $o = BBBikeGooglemap->new;
 $o->run;

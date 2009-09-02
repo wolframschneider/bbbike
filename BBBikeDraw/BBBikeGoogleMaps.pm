@@ -113,6 +113,11 @@ EOF
     print $fh hidden("oldcoords", $oldcoords) if $oldcoords;
     print $fh hidden("maptype", $maptype);
     print $fh hidden("source_script", $q->url(url(-relative=>1)));
+
+    my $city = $q->url(url(-relative=>1));
+    $city =~ s/(\.en)?\.cgi$//;
+
+    print $fh hidden("city", $city);
     print $fh hidden("coordsystem", $self->guess_coord_system());
     for my $wpt (@wpt) {
 	print $fh hidden("wpt", $wpt);

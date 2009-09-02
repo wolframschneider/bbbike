@@ -7340,8 +7340,8 @@ EOF
 userdel	2::inwork 38475,90762 38637,91275 38612,91950
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1249152327, # 
+       until => 1249152331, # XXX -> handicap_s-orig
        text  => 'Reichstagufer (Mitte) in beiden Richtungen Baustelle, Straße vollständig gesperrt, Fußgänger können passieren',
        type  => 'handicap',
        data  => <<EOF,
@@ -13528,8 +13528,8 @@ EOF
 userdel	q4::inwork 58018,-10573 57882,-10535 57752,-10566 57479,-10535 57371,-10550 57225,-10700
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1249152434, # 
+       until => 1249152439, # XXX -> handicap_s-orig
        text  => 'Bauarbeiten in der Simplonstr., Straße gesperrt',
        type  => 'handicap',
        data  => <<EOF,
@@ -14544,7 +14544,7 @@ userdel	2::inwork 48951,71593 48164,72815 47908,73136 47297,73550 47223,73677 46
 EOF
      },
      { from  => 1245535200, # 2009-06-21 00:00
-       until => 1252188000, # 2009-09-06 00:00
+       until => 1249107177, # 2009-09-06 00:00 1252188000
        text  => 'K 6722 B246, Bornow - Groß Rietz zw. Bornow und Birkholz Straßenneubau Vollsperrung 22.06.2009-05.09.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -14945,7 +14945,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013726',
        data  => <<EOF,
-userdel	q4::inwork; 21534,-262 21968,-15 22108,82 22145,208
+userdel	q4::inwork; 21968,-15 22108,82 22145,208
 EOF
      },
      { from  => 1248559200, # 2009-07-26 00:00
@@ -15028,6 +15028,193 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork 39155,29093 38087,29075 36975,29112
+EOF
+     },
+     { from  => 1249106357, # 2009-08-01 07:59
+       until => 1249304400, # 2009-08-03 15:00
+       text  => 'Am Ostbahnhof (Friedrichshain) in beiden Richtungen zwischen Andreasstr. und Koppenstr. Veranstaltung, gesperrt (bis 03.08.09, ca. 15 Uhr)',
+       type  => 'handicap',
+       source_id => 'IM_013842',
+       data  => <<EOF,
+userdel	q4::temp 12310,11682 12208,11746
+EOF
+     },
+     { from  => 1249106389, # 2009-08-01 07:59
+       until => 1249250400, # 2009-08-03 00:00
+       text  => 'Badstr. (Wedding) in beiden Richtungen zwischen Pankstr. und Behmstr. Veranstaltung, Straße vollständig gesperrt (bis 02.08.09, nachts)',
+       type  => 'gesperrt',
+       source_id => 'IM_013799',
+       data  => <<EOF,
+userdel	2::temp 9134,15953 9059,16038 8993,16100 8928,16158 8862,16208 8788,16264
+EOF
+     },
+     { from  => 1249106497, # 2009-08-01 08:01
+       until => 1249279200, # 2009-08-03 08:00
+       text  => 'Hüttenweg (Grunewald) in beiden Richtungen zwischen A115 und Koenigsallee Bauarbeiten, Straße vollständig gesperrt (bis 03.08.2009 morgens)',
+       type  => 'gesperrt',
+       source_id => 'IM_013853',
+       data  => <<EOF,
+userdel	2::inwork -130,6694 -739,6838 -927,6888
+EOF
+     },
+     { from  => 1249106526, # 2009-08-01 08:02
+       until => 1251755999, # 2009-08-31 23:59
+       text  => 'Köpenicker Str. (Marzahn) in beiden Richtungen zwischen Heesestr. und Alfelder Str. Baustelle, gesperrt (bis Ende 08/2009)',
+       type  => 'handicap',
+       source_id => 'IM_013806',
+       data  => <<EOF,
+userdel	q4::inwork 21164,9960 21115,9842
+EOF
+     },
+     { from  => 1248904800, # 2009-07-30 00:00
+       until => 1249268400, # 2009-08-03 05:00
+       text  => 'Salzufer (Charlottenburg) ebenso Gutenbergstr., Margarete-Kühn-Str., Hannah-Karminski-Str. Veranstaltung (31.07.09 - 02.08.09), gesperrt (bis 03.08.09, ca. 5 Uhr)',
+       type  => 'gesperrt',
+       source_id => 'IM_013844',
+       data  => <<EOF,
+userdel	2::temp 5253,12079 5231,12122 5194,12176 5250,12296 5325,12234
+userdel	2::temp 5194,12176 5133,12240 5203,12387 5250,12296
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Schlichtallee (Lichtenberg) in beiden Richtungen zwischen Lückstr. und Hauptstr. Straßenschäden, Straße vollständig gesperrt',
+       type  => 'handicap',
+       source_id => 'IM_013849',
+       data  => <<EOF,
+userdel	q4::inwork 15639,10469 15758,10578 15982,10765 16032,10842
+EOF
+     },
+     { from  => 1249768800, # 2009-08-09 00:00
+       until => 1251496800, # 2009-08-29 00:00
+       text  => 'B 246 zw. Glienicke und Wendisch Rietz Deckenerneuerung Vollsperrung 10.08.2009-28.08.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 53048,-21761 53596,-21448 54370,-20977 55783,-21082 57404,-20885
+EOF
+     },
+     { from  => 1249768800, # 2009-08-09 00:00
+       until => 1250546400, # 2009-08-18 00:00
+       text  => 'B 246 zw. Schönhagen und Löwendorf Deckenerneuerung Vollsperrung 10.08.2009-17.08.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -3076,-20676 -4099,-20574
+EOF
+     },
+     { from  => 1248732000, # 2009-07-28 00:00
+       until => 1254348000, # 2009-10-01 00:00
+       text  => 'K 6722 Bornow - Groß Rietz zw. Birkholz und Groß Rietz Straßenneubau Vollsperrung 29.07.2009-30.09.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 65774,-20483 65659,-21355 65445,-21565 65314,-22074 65076,-22519
+EOF
+     },
+     { from  => 1249336800, # 2009-08-04 00:00
+       until => 1259967600, # 2009-12-05 00:00
+       text  => 'K 7346 Rudolf-Breitscheid-Str. OL Angermünde, zw. Pestalozzistr. u. Sternefelder Weg Kanal- und Straßenbau Vollsperrung 05.08.2009-04.12.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 48657,68265 49566,68311
+EOF
+     },
+     { from  => 1248559200, # 2009-07-26 00:00
+       until => 1261177200, # 2009-12-19 00:00
+       text  => 'L 015 Schloßstr., Menzer Str. OD Rheinsberg, zw. Berliner Str. u. Kiefernweg Straßenbauarbeiten Vollsperrung 27.07.2009-18.12.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -24965,76568 -25211,76393 -25508,76444
+EOF
+     },
+     { from  => 1249164000, # 2009-08-02 00:00
+       until => 1251583200, # 2009-08-30 00:00
+       text  => 'L 023 Britz - Joachimsthal Bereich AS Chorin Grundhafter Ausbau Vollsperrung 03.08.2009-29.08.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 35405,59832 35962,59463
+EOF
+     },
+     { from  => 1249113600, # 2009-08-01 10:00
+       until => 1249243200, # 2009-08-02 22:00
+       text  => 'Oberbaumbrücke: gesperrt wegen der 7. Open-Air-Gallery, am 2. August 2009 von 10.00 Uhr bis 22.00 Uhr',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::temp 13178,10623 13206,10651 13305,10789 13332,10832
+EOF
+     },
+     { from  => 1249153223, # 2009-08-01 21:00
+       until => 1251496799, # 2009-08-28 23:59
+       text  => 'Erwin-Bock-Straße zwischen Alfred-Randt-Straße und Müggelschlößchenweg: von der 30. bis 35. Kalenderwoche wird abschnittsweise unter einer halbseitigen bzw. Vollsperrung die Betonfahrbahn abgefräst und durch eine bituminöse Dechschicht erneuert.',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20090722.1425.132805.html',
+       data  => <<EOF,
+userdel	q4::inwork 23749,3868 23749,3883 23753,4218
+EOF
+     },
+     { from  => 1248559200, # 2009-07-26 00:00
+       until => 1249941599, # 2009-08-10 23:59
+       text  => 'Bellevuestraße und Seelenbinderstraße von Bahnhofstraße bis Bellevuestraße: Einbahnstraße in Richtung Fürstenwalder Damm vom 27.7. bis zum 10.8.2009',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork; 22294,5777 22513,5747 22608,5732 22696,5728 22798,5731 22897,5740 23092,5762 23333,5710 23402,5483
+EOF
+     },
+     { from  => 1249768800, # 2009-08-09 00:00
+       until => 1250978399, # 2009-08-22 23:59
+       text  => 'Bellevuestraße und Seelenbinderstraße von Bahnhofstraße bis Bellevuestraße: Einbahnstraße in Richtung Bahnhofstr. vom 10.8. bis zum 22.8.2009',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/',
+       data  => <<EOF,
+userdel	q4::inwork; 23402,5483 23333,5710 23092,5762 22897,5740 22798,5731 22696,5728 22608,5732 22513,5747 22294,5777
+EOF
+     },
+     { from  => 1252879200, # 2009-09-14 00:00
+       until => 1254347999, # 2009-09-30 23:59
+       text  => 'Bauarbeiten in der Buntzelstr. zwischen Parchwitzer Str. und Paradiesstr., Einbahnstraßenregelung, etwa vom 15.9. bis zum 30.9.2009',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/',
+       data  => <<EOF,
+userdel	q4::inwork; 21118,-459 21355,-309
+EOF
+     },
+     { from  => 1249154403, # 2009-08-01 21:20
+       until => 1252965600, # 2009-09-15 00:00
+       text  => 'Hebbelstraße - Trinkwasserverlegung Voraussichtlich bis Anfang September werden Bauarbeiten zur Verlegung einer Trinkwasserleitung in der westlichen Hebbelstraße zwischen Mittelstraße und Kurfürstenstraße durchgeführt. Während der Bauzeit wird in der Hebbelstraße eine Einbahnstraße in Richtung Kurfürstenstraße eingerichtet. ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork; -12571,-581 -12545,-698
+EOF
+     },
+     { from  => 1247349600, # 2009-07-12 00:00
+       until => 1255384800, # 2009-10-13 00:00
+       text  => 'Seit dem 13.07.2009 erfolgt der Bau einer Regenwasserleitung in der Steinstraße zwischen Großbeerenstraße und Hubertusdamm. Die Arbeiten werden unter Vollsperrung der Steinstraße durchgeführt. Die Arbeiten werden voraussichtlich drei Monate andauern. ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -7060,-3124 -7266,-2736
+EOF
+     },
+     { from  => 1249164000, # 2009-08-02 00:00
+       until => 1251064800, # 2009-08-24 00:00
+       text  => 'Ab 03.08.2009 muss die Fr.-Ebert-Straße in Höhe Stadthaus wegen Gleisbauarbeiten und Leitungsarbeiten für den Verkehr gesperrt werden. Die Arbeiten dauern vorausichtlich bis 24.08.2009.',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -12872,-565 -12865,-425
+EOF
+     },
+     { from  => 1246140000, # 2009-06-28 00:00
+       until => 1262214000, # 2009-12-31 00:00
+       text  => 'Aufgrund der Arbeiten zum Straßenneubau und der Verlegung von Schmutz- und Regenwasserleitungen kommt es ab dem 29.06.2009 zu Vollsperrungen der Otto-Nagel-Straße. Begonnen wird an der Kreuzung Berliner Straße. Die gesamte Maßnahme wir voraussichtlich zum Ende des 4. Quartals abgeschlossen werden. ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -12064,-284 -11978,-348 -11877,-478
+EOF
+     },
+     { from  => 1251756000, # 2009-09-01 00:00
+       until => 1260831600, # 2009-12-15 00:00
+       text  => 'Fußgängertunnel Lange Brücke: unter Umständen vollständig gesperrt (September 2009 - Dezember 2009)',
+       type  => 'gesperrt',
+       source_id => 'http://www.potsdam.de/cms/beitrag/10051448/757395/',
+       data  => <<EOF,
+userdel	2::inwork -12669,-1768 -12608,-1715
 EOF
      },
     );
