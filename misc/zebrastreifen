@@ -11,7 +11,7 @@ Grünberger Str. am Boxhagener Platz	Zs 14253,11779
 am U-Bhf. Friedrichsfelde is IMHO auch noch einer	Zs 17737,11384
 S Grünau, auf der Bohnsdorfer Seite	Zs 22093,996
 # nicht mehr: Treskowallee	Zs 18750,8653
-Na dann noch einen neuen: Friedrichshagener Str.	Zs 22731,5331
+Friedrichshagener Str.	Zs 22731,5331
 Schimidt-Ott-Str./Rothenburgstr.	Zs 4548,5530
 Bergstr. (ganz in der Nähe der Kieler Str....)	Zs 5265,5693
 Ebersstr.	Zs 7087,8391
@@ -260,7 +260,7 @@ Chausseestr./Kohlhasenbrücker Str.	Zs -7173,386
 Am Kleinen Wannsee/Conradstr.	Zs -5717,1155
 Wühlischstr./Böcklinstr.	Zs 14683,11366
 Am Neuen Garten/Bertha-von-Suttner-Str. (Potsdam)	Zs -12432,-228
-Kurfürstenstr./Frobenstr.	Zs 7448,10477
+Kurfürstenstr./Frobenstr.	Zs 7457,10471
 #: note: Tsp-Foto
 Parkstr./Amalienstr.	Zs 13998,16649
 Bernau, Richtung Ladeburg	Zs 22315,31106
@@ -279,9 +279,12 @@ Ludolfingerplatz/Maximiliankorso	Zs 2216,25117
 #: by: ^^^
 #: note: Luftbild
 Damerowstr./S Heinersdorf	Zs 11913,19146
-#: note: am 2009-07-29 noch nicht aktiv gewesen
-Fehrbelliner/Templiner	Zs 10596,14011
-#: note: am 2009-08-02 noch nicht aktiv gewesen
+#: note: am 2009-07-29 noch nicht aktiv gewesen, mittlerweile aber: http://www.berlin.de/ba-pankow/presse/archiv/20090828.1330.136793.html
+Fehrbelliner/Templiner Str.	Zs 10596,14011
+#: note: seit 2009-08
 Kreuzbergstr./Möckernstr.	Zs 8778,9291
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20090716.1225.132353.html
 Seeburger Str./Seecktstr.	Zs -4299,13304
+Hämmerlingstr./Annenallee	Zs 22097,5592
+Schnellerstr./Bruno-Bürgel-Weg	Zs 19273,5304
+Alt-Müggelheim/Sobernheimer Str.	Zs 28207,953

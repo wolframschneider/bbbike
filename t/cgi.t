@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: cgi.t,v 1.66 2009/07/26 21:06:36 eserte Exp $
+# $Id: cgi.t,v 1.67 2009/09/01 21:52:12 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 1998,2000,2003,2004,2006 Slaven Rezic. All rights reserved.
@@ -817,7 +817,7 @@ sub display {
 sub uncompr {
     my $res = shift;
     if ($res->can("decoded_content")) {
-	$res->decoded_content;
+	$res->decoded_content(charset => 'none');
     } else {
 	# When was decoded_content part of LWP?
 	if (defined $res->header('Content_Encoding') &&

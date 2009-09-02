@@ -1128,6 +1128,7 @@ if (defined $q->param('PLZ')) {
 if (defined $q->param('LL')) {
     $set_anyc->($q->param('LL'), "ziel");
 }
+# XXX The following two are deprecated and will be removed some day.
 if (defined $q->param('startpolar')) {
     $set_anyc->($q->param('startpolar'), "start");
 }
@@ -1828,7 +1829,7 @@ EOF
 EOF
 	# Eine Addition aller aktuellen Straßen, die bei luise-berlin
 	# aufgeführt sind, ergibt als Summe 10129
-	my($bln_str, $all_bln_str, $pdm_str) = (7500, 10000, 300);
+	my($bln_str, $all_bln_str, $pdm_str) = (8000, 10000, 390);
 	# XXX Use format number to get a comma in between.
 
 	my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
@@ -4000,7 +4001,7 @@ sub display_route {
 			} elsif ($penalty < 120) {
 			    $label .= " (" . sprintf(M("ca. %s Sekunden Zeitverlust"), $penalty) . ")";
 			} else {
-			    $label .= " (" . sprintf(M("ca. %s Minuten Zeitverlust"), $penalty/60) . ")";
+			    $label .= " (" . sprintf(M("ca. %s Minuten Zeitverlust"), int($penalty/60+0.5)) . ")";
 			}
 			push @comments, $label;
 			push @comments_html, $label;

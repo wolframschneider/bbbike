@@ -70,7 +70,7 @@ citibank_osm.bbd:	../data_berlin_osm_bbbike/_unhandled
 OSM_DOWNLOAD_DIR=	download/osm
 GERMANY_STATES=		berlin brandenburg hamburg hessen mecklenburg-vorpommern sachsen sachsen-anhalt
 GERMANY_STATES_RULES=	${GERMANY_STATES:S/^/download-/:S/$/.osm.bz2/}
-EUROPE_COUNTRIES=	germany croatia bosnia-herzegovina
+EUROPE_COUNTRIES=	germany croatia bosnia-herzegovina czech_republic
 EUROPE_COUNTRIES_RULES=	${EUROPE_COUNTRIES:S/^/download-/:S/$/.osm.bz2/}
 
 osm-download-all:	osm-download-geofabrik reload-tiled-berlin
@@ -180,6 +180,22 @@ dalmatia-test-osm2bbd-postprocess1:
 
 dalmatia-test-osm2bbd-postprocess2:
 	${MISCSRCDIR}/osm2bbd-postprocess /tmp/data_dalmatia -dataset-title Dalmatia
+
+######################################################################
+# Testing for saechsische schweiz
+saechsische-schweiz-test:	saechsische-schweiz-test-osm2bbd \
+		saechsische-schweiz-test-osm2bbd-postprocess
+
+download-tiled-saechsische-schweiz:
+	cd download/osm && mkdir -p saechsische-schweiz && cd saechsische-schweiz && \
+	    ${MISCSRCDIR}/downloadosm -step 0.1 13.8 51 14.5 50.7 -o .
+
+saechsische-schweiz-test-osm2bbd:
+	${MISCSRCDIR}/osm2bbd -map bbbike -country de -o /tmp/data_saechsische-schweiz download/osm/saechsische-schweiz -f \
+	    -experiment polar_coord_hack
+
+saechsische-schweiz-test-osm2bbd-postprocess:
+	${MISCSRCDIR}/osm2bbd-postprocess /tmp/data_saechsische-schweiz -dataset-title "Sächsische Schweiz"
 
 ######################################################################
 # Testing for berlin

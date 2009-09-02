@@ -4,18 +4,21 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
+######################################################################
+# Vorübergehende Einschränkungen
+#
 #: temporary vvv
-#: last_checked: 2009-08-01 vvv
-Simplonstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork; 14597,11069 14530,11137
+#: last_checked: 2009-08-28 vvv
 Simplonstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 14530,11137 14465,11195
 #: last_checked ^^^
 #: last_checked: 2009-08-01
 #: next_check: 2009-10-01
 Reichstagufer (Mitte): Baustelle, Fahrbahn gesperrt, Fußgänger können passieren	q4::inwork 9209,12795 9280,12883
 #: last_checked: 2009-05-17
-#: next_check: 2009-09-15
+#: next_check: 2009-09-30
 Hauptstr. (Friedrichshain-Kreuzberg): Baustelle, Radfahrer können nur langsam passieren bzw. müssen schieben	q4::inwork 14906,10820 14794,10844 14717,10855
 #: temporary ^^^
+######################################################################
 #: XXX es ist zu erwarten, dass hier der Wuhlewanderweg verbessert wird: vvv
 Wuhlewanderweg: steiler Anstieg, Fußgänger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gefälle, Fußgänger	q4; 21970,12153 21998,12204
@@ -26,7 +29,9 @@ Pappelplatz (Mitte): gemeinsamer Fuß- und Radweg	q2 9750,14132 9663,14036
 Otto-Ludwig-Str.: Fußgängerzone	q2 4862,10881 4954,10876
 Mauerstr. (Mitte): Fußgänger, Bordsteine	q3 9405,11413 9474,11360
 Georgenstr.: Fußgänger	q1 9434,12669 9313,12662
-Neue Promenade: Fußgängerzone, Radfahren erlaubt	q2 10294,13070 10185,12982 10132,12941
+#: note: besonders in der Touristenhochsaison sehr eng
+Neue Promenade: Fußgängerzone, Radfahren erlaubt, aber nur langsam möglich	q4 10294,13070 10185,12982
+Neue Promenade: Fußgängerzone, Radfahren erlaubt	q2 10185,12982 10132,12941
 Pariser Platz/Brandenburger Tor: Fußgänger	q2 8804,12280 8731,12270 8610,12254 8538,12245
 Potsdamer Platz: Fußgänger	q3 8542,11502 8462,11538
 Blücherplatz: reger Fußgängerverkehr	q3 9579,10122 9599,10175
@@ -40,7 +45,7 @@ Gorkistr.: reger Fußgängerverkehr (Fußgängerzone)	q3 2049,20292 2116,20314 2295,
 Breitscheidplatz: starker Fußgängerverkehr, oft Veranstaltungen	q4 5656,10876 5652,11004
 Breitscheidplatz: starker Fußgängerverkehr, oft Veranstaltungen	q4 5782,10884 5829,10964
 Wilmersdorfer Str.: starker Fußgängerverkehr (Fußgängerzone), nachts und sonntags Radfahren erlaubt	q4 3723,11457 3751,11334 3770,11231 3795,11098 3827,10980
-(An der Müggelspree): Fußgänger	q2 23451,4877 23441,4956 23468,5075 23620,5096 23776,5040 23982,5030 24233,4878 24398,4842 24834,4541 25023,4441 25102,4408 25427,4482 25479,4540 25565,4549
+(An der Müggelspree): Fußgänger	q2 23451,4877 23441,4956 23461,5054 23620,5096 23776,5040 23982,5030 24233,4878 24398,4842 24834,4541 25030,4421 25131,4400 25200,4420 25315,4474 25403,4480 25479,4540 25565,4549
 Am Müggelsee: Fußgänger	q2 25474,2848 25667,2787 25857,2654 26006,2615 26151,2624 26339,2667 26457,2660 26627,2610 26868,2580 27135,2500 27173,2444 27267,2414 27372,2434 27517,2523 27565,2569 27743,2842 27822,2910 27945,3006 28292,3150 28496,3253
 Pestalozzistr.: Fußgängerzone	q3 3721,11230 3770,11231 3822,11224
 (Zufahrt am NKZ): Bordsteine, Fußgänger/Lieferverkehr	q3 11291,10438 11311,10505 11343,10528
@@ -179,7 +184,7 @@ Brücke Schönfließer Str.: Fußgänger	q3 10593,16037 10581,15936
 #: corrected_by: Sven Reimann ("Radfahren nicht erlaubt")
 (Kolonie Bornholm 1 und 2): Fußgänger, enger Weg, Radfahren nicht erlaubt, ggfs. schieben	q3+ 10209,16674 10198,16929
 (zum Rolandufer): Gehweg	q2 11351,12221 11278,12185
-Rolandufer: Gehweg, viele Fußgänger 	q3 10837,12158 10660,12176 10583,12206
+Rolandufer: Gehweg, viele Fußgänger 	q3 10837,12158 10660,12176 10591,12203 10583,12206
 Spreeufer: Gehweg, viele Fußgänger, im Sommer Straßencafe 	q4 10583,12206 10492,12289 10424,12364 10422,12395
 Herthastr.: Gehweg, Bordsteine	q4 1935,9239 1932,9263
 Fuggerstr.: Gehweg	q2 6128,10319 6020,10351
@@ -223,6 +228,7 @@ Am Zeughaus: Fußgänger, am Wochenende Flohmarkt	q3 9912,12623 9950,12522 9984,12
 Steinmetzstr.: Fußgängerzone, Radfahren erlaubt	q1 7625,9771 7648,9944 7698,10147
 Lützowplatz: Einbahnstraße, Ausweichen auf Gehweg	q3; 7002,11034 6873,11011
 Zauritzweg: Fußgänger	q1 4199,11819 4195,11690
+#: XXX_prog: Radfahren nicht erlaubt, rjoop möchte hier nicht geroutet werden, wenn "strikt befolgen" eingeschaltet ist
 (Blücherplatz - Zossener Str.): Fußgänger, Bordsteine	q2 9689,10124 9827,10051
 Hebbelstr.: Fußgänger	q2 3117,11852 3251,12025 3258,12035 3295,12068
 Spreewaldplatz: Fußgänger	q1 12341,10218 12292,10374
@@ -297,7 +303,9 @@ Spreeuferweg: besonders an Wochenenden tagsüber viele Fußgänger	q1 8277,13032 83
 Spreeuferweg: besonders an Wochenenden tagsüber viele Fußgänger	q1 8635,12629 8709,12605 8756,12608
 Helenenhof: enge Tore, Fußgänger	q3 14495,11261 14395,11356
 Färberstr. - Uferweg: sehr eng	q2 21675,4989 21665,5035 21684,5079
-Uferweg, Mentzelpark: Fußgänger	q1 21487,5425 21600,5221 21684,5079 21735,5003 21821,4918 21845,4875
+Uferweg, Mentzelpark: Fußgänger	q1 21487,5425 21600,5221 21684,5079 21735,5003 21769,4973
+Uferweg, Mentzelpark: Fußgänger, eng	q3 21769,4973 21821,4918 21834,4889
+(Mentzelpark): Fußgänger	q1 21769,4973 21778,4916 21834,4889 21848,4882
 (Verlängerte Französische Str.): nur langsam passierbar	q4 8901,12008 9076,12054
 Heinrich-Lassen-Park: Fußgänger (aber Radfahren ist erlaubt!)	q1 6664,8787 6740,8682 6815,8691 6912,8617
 (Uferweg am Nordhafen): Fußgänger	q1 7753,14528 7695,14545 7498,14658
@@ -358,7 +366,7 @@ Sebastianstr.: Absperrung für Autos, mit Anhänger unbequem passierbar	q1 10918,1
 Tasdorfer Str. - Wilhelm-Guddorf-Str.: Fußgänger	q1 15393,11590 15418,11662
 (Grünanlage): Radfahren erlaubt, Fußgänger haben Vorrang	q1 15339,11912 15298,11892 15327,11724 15328,11636 15377,11555
 Am Bahndamm: Radfahren offiziell nicht erlaubt	q2 7662,4529 7772,4306
-Am Bahndamm: Fußgänger	q1 7772,4306 7795,4242 8103,3354 8173,3299
+Am Bahndamm: Fußgänger	q1 7772,4306 7795,4242 8106,3410 8259,3349
 Edenkobener Steg: Fußgänger	q1 6627,4187 6645,4254
 Teltowkanalpromenade: enge und kurvige Unterführung	q2 4261,2703 4258,2693 4247,2652 4202,2622 4193,2616
 Heinrich-Laehr-Park: Fußgänger	q1 1527,574 1258,1674
@@ -443,7 +451,8 @@ Friedrichsbrücke: Fußgänger	q1 10086,12725 10171,12769
 Nollendorfplatz: Gehweg oder Parkplatz Richtung Motzstr. benutzen	q3; 7033,10328 6971,10346
 (Blücherplatz - Waterlooufer): Fußgänger, Bordsteine	q2 9631,10142 9687,10180
 Arenholzsteig: Bordsteine	q2 8481,6900 8496,6919
-Mergenthalerring: Asphaltschwellen, können umfahren werden	q1+ 14382,8058 14563,8243
+#: XXX_prog: für Anhänger vielleicht q2
+Mergenthalerring: Asphaltschwellen, können umfahren werden	q1 14395,8071 14563,8243
 Grazer Platz: Fußgänger, Bordsteine	q2 6546,6720 6530,6786 6529,6798
 (Vorarlberger Damm - Kleingartenkolonie): Fußgänger	q1 6817,7101 6852,7246 6841,7283
 (Nordmannzeile - Kleingartenkolonie): Fußgänger	q1 6807,7262 6809,7272 6841,7283
@@ -510,6 +519,10 @@ Bouchéstr.: Bodenschwellen	q0 13645,9621 13867,9864
 Cuvrystr.: Bodenschwellen	q1 13053,10088 13132,10239
 Elsensteg: Fußgänger	q3 13366,8694 13376,8705 13394,8730 13402,8741
 Elsenstr. - Bahndamm: enger Weg	q2 13923,9405 13953,9372
+(Blockpark): Fußgänger	q1 16303,10760 16246,10641 16187,10587
+Upstallweg (Lichtenberg): gemeinsamer Rad- und Gehweg	q1 17946,10344 17954,10367 18039,10398 18200,10387 18245,10398 18332,10434
+Mayschweg: Fußgänger (Radfahrer frei), eng	q1 23064,3614 23012,3598 23007,3597
+Spreetunnel: Fußgänger	q2 25571,4553 25658,4619
 ######################### User Contributions #################################
 #: by: Michael Kiekbusch
 #: corrected_by: srt/policy (q4 -> q3-)
@@ -625,7 +638,8 @@ Prettauer Pfad: enge Straße	q1 3358,1331 3384,1297 3437,1218
 #: by: superillu:
 Hempstücken: kurvenreich	q2 -7506,126 -7542,201 -7632,204
 #: by: Michael Korok:
-Joachimstr. (Köpenick): zwei Bodenschwellen	q2 21907,5517 22009,5593
+#: XXX_prog: für Anhänger q2
+Joachimstr. (Köpenick): Bodenschwellen	q1 21907,5517 22009,5593
 #: by: Christian Grosch
 Jeanne-Mammen-Bogen: Fußgängerzone	q3 4954,10876 5090,10868
 #: by: Hans-Joachim Lagermann:
@@ -635,7 +649,7 @@ Holwedestr.: schmale Straße	q1 1128,20525 1203,20553 1264,20575 1326,20600 1387,
 #: by: garci
 Am Schloßpark: eng bei Autoverkehr	q1 10775,19054 10712,18975 10625,18831 10496,18704
 #: by: anonymous
-(Karl-Bonhoeffer-Nervenklinik zwischen Hermann-Piper-Str. und U-Bahnhof): Krankenhausgelände	q1 5001,19832 5079,19635 5124,19634 5228,19320 5246,19244 5429,19165
+(Karl-Bonhoeffer-Nervenklinik zwischen Hermann-Piper-Str. und U-Bahnhof): Krankenhausgelände	q1 4997,19849 5021,19840 5077,19654 5111,19656 5183,19454 5239,19274 5429,19165
 #: by: Daniel (dan.berlin):
 Poschingerstr.: enge Straße	q1 5697,6276 5754,6238 5824,6240 5875,6262 5925,6311 5971,6343 6095,6358 6261,6391
 #: by: Manfred Köhnen:
@@ -988,10 +1002,7 @@ Wittenberger Str. (Einkaufzentrum): Fußgänger	q3 21590,17918 21647,17889
 Wuhlewanderweg: Spaziergänger	q1 22313,18595 22332,18496 22391,18349 22395,18313 22367,18226 22341,18091 22324,18030 22327,17997 22343,17960 22353,17940 22353,17920 22365,17864 22381,17811 22384,17764 22333,17664 22329,17644 22364,17323
 Wuhlewanderweg: Spaziergänger	q1 22314,17916 22365,17864
 #: by: ^^^
-#: by: kathrin dorenburg-bunn [AM] vvv
-Erich-Kurz-Str.: viele Fußgänger	q2 18354,10600 18345,10575 18285,10550 18232,10532 18150,10543 18120,10532 18104,10482
-Erich-Kurz-Str.: viele Fußgänger	q2 18285,10550 18332,10434 18342,10384 18326,10362 18264,10343
-#: by: ^^^
+# del by srt: #: by: kathrin dorenburg-bunn [AM] vvv Erich-Kurz-Str.: viele Fußgänger	q2 18354,10600 18345,10575 18285,10550 18232,10532 18150,10543 18120,10532 18104,10482 Erich-Kurz-Str.: viele Fußgänger	q2 18285,10550 18332,10434 18342,10384 18326,10362 18264,10343 #: by: ^^^
 #: by: Matha Wimmer [AM] vvv
 Widderstr.: enge Straße	q2 14853,7451 14997,7240
 Krebsgang: enge Straße	q2 15085,7258 14997,7240 14878,7211 14792,7192 14693,7168
@@ -1459,7 +1470,7 @@ Waldstr.: Bodenschwellen vor der Schule	q2 20540,4285 20623,4227
 #: by: Thomas Müller-Burdack:
 #: corrected_by: srt/policy (q2 -> q1)
 Janitzkystr.: Siedlung, eng	q1 22763,6398 22889,6428 23002,6428 23027,6425 23131,6398 23192,6362 23242,6308
-Kaiser-Wilhelm-Str. - Langkofelweg: Fußgänger	q2 6961,3687 6998,3596
+Kaiser-Wilhelm-Str. - Langkofelweg: Fußgänger	q2 6957,3699 6998,3596
 #: by: Franziska (ushuaia): vvv
 (Uferweg im Wröhmännerpark): Fußgänger, für Radfahrer nicht freigegeben, ggfs. schieben	q3 -3066,14718 -3006,14774 -2992,14850 -3008,14910 -3008,14992 -2965,15053 -2929,15082 -2955,15129
 #: note: "ruhige Wohnstraße, mehr oder weniger einspurig"

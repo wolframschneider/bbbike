@@ -26,7 +26,9 @@ PERSISTENTTMPDIR=	$(BBBIKEDIR)/tmp
 PERL?=			perl
 # assume we have a modern perl (> 5.8.0, which has utf8 bugs) installed...
 PERL_UTF8?=		${PERL}
-SED?=			env LANG=C LC_ALL=C sed
+NO_LOCALE=		env LANG=C LC_ALL=C LC_CTYPE=C
+SED?=			${NO_LOCALE} sed
+CUT?=			${NO_LOCALE} cut
 
 HAFAS2HAFAS=		${PERL} ${MISCSRCDIR}/hafas2hafas -strict
 CONVERT2HAFAS=		${PERL} ${MISCSRCDIR}/convert2hafas -strict
@@ -50,6 +52,7 @@ REPLACESTRASSEN=	${PERL} ${MISCSRCDIR}/replacestrassen
 GREPSTRASSEN_UTF8=	${PERL_UTF8} ${MISCSRCDIR}/grepstrassen
 COMBINE_STREETS=	${PERL} ${MISCSRCDIR}/combine_streets.pl
 COMBINE_OSM=		${PERL} ${MISCSRCDIR}/combineosm
+TEMP_BLOCKINGS_TASKS=	${PERL} ${MISCSRCDIR}/temp_blockings_tasks
 
 COMMENTS_PARTIAL=	comments_cyclepath comments_danger comments_ferry comments_misc \
 			comments_mount comments_path comments_route \
@@ -106,7 +109,7 @@ GERMAN_LOCALE=de_DE.ISO8859-1
 GERMAN_LOCALE=de_DE.ISO-8859-1
 .endif
 SORT_GERMAN_LOCALE=	env LANG=${GERMAN_LOCALE} LC_CTYPE=${GERMAN_LOCALE} LC_ALL=${GERMAN_LOCALE} sort
-SORT_NO_LOCALE=		env LANG=C LC_CTYPE=C LC_ALL=C sort
+SORT_NO_LOCALE=		env ${NO_LOCALE} sort
 
 ## This seems to generate better results:
 COORDS_DATA_SORT_OPTS=	-f -t "|" -k 1,3
@@ -1030,7 +1033,7 @@ FOREVER_INTERVAL?=	30
 FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  'open LOCK, ">", ".check_forever.lck" or die $$!; flock LOCK, LOCK_EX|LOCK_NB or die $$!; $$cmd=shift; while() { system($$cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; sleep $(FOREVER_INTERVAL) } END { unlink ".check_forever.lck" }'
 
 check-forever:
-	-nice ${FOREVER_TWO_ERRORS} ${MAKE} check all
+	-nice ${FOREVER_TWO_ERRORS} ${MAKE} check all ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd
 	@-alarm -nicedown
 	@-xterm-conf -deiconify -raise
 	xmessage "check-forever failed"
@@ -1140,9 +1143,9 @@ check-disabled:
 	@touch $@
 
 .check_strassen_plaetze_unique:	strassen-orig plaetze-orig
-	cut -d"	" -f1 strassen-orig | sort -u > /tmp/strassen-names
-	cut -d"	" -f1 plaetze-orig  | sort -u > /tmp/plaetze-names
-	duplicates=`sort /tmp/strassen-names /tmp/plaetze-names | grep -v '^#' | uniq -d`; \
+	${CUT} -d"	" -f1 strassen-orig | sort -u > /tmp/strassen-names
+	${CUT} -d"	" -f1 plaetze-orig  | sort -u > /tmp/plaetze-names
+	duplicates=`sort /tmp/strassen-names /tmp/plaetze-names | grep -v '^#' | $(NO_LOCALE) uniq -d`; \
 	if [ "$$duplicates" != "" ]; then \
 	    echo "Found duplicates:"; \
 	    echo "$$duplicates"; \
@@ -1237,7 +1240,6 @@ GESPERRT_CATRX='^(0:\d+(:-?\d+)?|1|1s(:q\d)?|2|3|3nocross|BNP:\d+(:-?\d+(:traile
 	    $(SORT_GERMAN_LOCALE) -u > /tmp/$(i)bahnhof1
 	grep -i '^$(i)-Bhf' Berlin.coords.data |\
 	    egrep -v 'S-Bhf (Fürstenbrunn)' |\
-	    egrep -v 'U-Bhf (Hauptbahnhof|Unter den Linden|Bundestag)' |\
 	    $(SED) -e 's/ *(.*)//' -e 's/S-Bhf //' -e 's/U-Bhf //' -e 's/|.*//' |\
 	    $(SORT_GERMAN_LOCALE) -u > /tmp/$(i)bahnhof2
 	diff /tmp/$(i)bahnhof1 /tmp/$(i)bahnhof2
@@ -1435,10 +1437,10 @@ check-line-lengths:	.check_line_lengths
 	@touch $@
 
 count-streets:
-	@echo -n "Berlin:        "; grep -v "^(" strassen | cut -f1 -d"(" | sort -u | wc -l
-	@echo -n "Landstraßen:   "; grep -v "^#" landstrassen landstrassen2 | cut -f1 | sort -u | wc -l
-	@echo -n "  Potsdam:     "; fgrep "(Potsdam)" landstrassen | grep -v "^(" | cut -f1 -d"(" | sort -u | wc -l
-	@echo -n "  Oranienburg: "; grep -v "^#" landstrassen | fgrep "(Oranienburg" | cut -f1 -d"(" | sort -u | wc -l
+	@echo -n "Berlin:        "; grep -v "^(" strassen | ${CUT} -f1 -d"(" | sort -u | wc -l
+	@echo -n "Landstraßen:   "; grep -v "^#" landstrassen landstrassen2 | ${CUT} -f1 | sort -u | wc -l
+	@echo -n "  Potsdam:     "; fgrep "(Potsdam)" landstrassen | grep -v "^(" | ${CUT} -f1 -d"(" | sort -u | wc -l
+	@echo -n "  Oranienburg: "; grep -v "^#" landstrassen | fgrep "(Oranienburg" | ${CUT} -f1 -d"(" | sort -u | wc -l
 
 check-dates:	.check_dates
 
@@ -1536,13 +1538,13 @@ check-Berlin.coords.data: .check_Berlin_coords_data_cityparts \
 			  .check_Berlin_coords_data_zip
 
 .check_Berlin_coords_data_cityparts: Berlin.coords.data
-	cut -d'|' -f2 Berlin.coords.data | sort -u |\
+	${CUT} -d'|' -f2 Berlin.coords.data | sort -u |\
 	    $(PERL) -I.. -MGeography::Berlin_DE -nle \
 		'BEGIN { %cp = map {($$_,1)} Geography::Berlin_DE->get_all_subparts } !exists $$cp{$$_} and die "<$$_> not a citypart of Berlin"'
 	@touch $@
 
 .check_Berlin_coords_data_zip: Berlin.coords.data
-	cut -d'|' -f3 Berlin.coords.data | sort -u |\
+	${CUT} -d'|' -f3 Berlin.coords.data | sort -u |\
 	    $(PERL) -nle '($$_ < 10000 || $$_ > 15000) and die "<$$_> unexpected ZIP in Berlin"'
 	@touch $@
 
@@ -1633,53 +1635,28 @@ sort-$(city).coords.data:
 ######################################################################
 # TEMPORARY BLOCKINGS LAYER
 
-TEMP_BLOCKINGS_PL_TO_YML=\
-	$(PERL) -MYAML -e '\
-	    $$YAML::UseBlock = 1;\
-	    do $$ARGV[0];\
-	    die 1 if not @temp_blocking;\
-	    YAML::DumpFile($$ARGV[1], \@temp_blocking);\
-	'
-
 temp_blockings/bbbike-temp-blockings.yml: temp_blockings/bbbike-temp-blockings.pl
-	$(TEMP_BLOCKINGS_PL_TO_YML) $> $@~
-	$(PERL) -MData::Compare -MData::Dumper -MYAML -e '\
-	    do $$ARGV[0];\
-	    $$y = YAML::LoadFile($$ARGV[1]);\
-	    die 2 if not @temp_blocking;\
-	    $$Data::Dumper::Sortkeys = 1;\
-	    if (not Compare(\@temp_blocking, $$y)) {\
-	        open(F1, "> /tmp/1"); print F1 Data::Dumper->new([\@temp_blocking],[])->Dump; \
-	        open(F2, "> /tmp/2"); print F2 Data::Dumper->new([$$y],[])->Dump; \
-		system("diff -u /tmp/1 /tmp/2 | less"); \
-	    }\
-	' $> $@~
+	$(TEMP_BLOCKINGS_TASKS) pl_to_yml $> $@~
+	$(TEMP_BLOCKINGS_TASKS) cmp_pl_and_yml $> $@~
 	mv -f $@~ $@
 	@$(READABLE) $@
 
 $(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.yml: temp_blockings/bbbike-temp-blockings-optimized.pl
-	$(TEMP_BLOCKINGS_PL_TO_YML) $> $@~
+	$(TEMP_BLOCKINGS_TASKS) pl_to_yml $> $@~
 	mv -f $@~ $@
 	@$(READABLE) $@
 
-TEMP_BLOCKINGS_YML_TO_BBD=\
-	$(PERL) -MYAML -e '\
-	    $$x = YAML::LoadFile($$ARGV[0]);\
-	    for (@$$x) {\
-	        $$d = $$_->{data};\
-	        next if not $$d;\
-	        $$t = $$_->{text};\
-	        $$t =~ s/[\n\t]/ /g;\
-	        $$d =~ s/^(?!\#)/$$t /gm;\
-	        print $$d;\
-	    }\
-	    '
-
 $(PERSISTENTTMPDIR)/bbbike-temp-blockings.bbd: temp_blockings/bbbike-temp-blockings.yml
-	$(TEMP_BLOCKINGS_YML_TO_BBD) $> > $@
+	$(TEMP_BLOCKINGS_TASKS) yml_to_bbd $> > $@~
+	mv -f $@~ $@
 
 $(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.bbd: $(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.yml
-	$(TEMP_BLOCKINGS_YML_TO_BBD) $> > $@
+	$(TEMP_BLOCKINGS_TASKS) yml_to_nonpermanent_bbd $> > $@~
+	mv -f $@~ $@
+
+$(PERSISTENTTMPDIR)/bbbike-temp-blockings-permanent.bbd: $(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.yml
+	$(TEMP_BLOCKINGS_TASKS) yml_to_permanent_bbd $> > $@~
+	mv -f $@~ $@
 
 ######################################################################
 # This will be removed someday if convert_orig_to_bbd is good enough

@@ -297,3 +297,4 @@ index.html
 osm
 streets.html
 *.bak
+/ChangeLog

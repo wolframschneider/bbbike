@@ -5002,6 +5002,7 @@ Jochen-Nüßler-Str.|Britz|12359|13522,4653
 Johann-Ewald-Weg|Kladow|14089|-8409,5824
 Johann-Georg-Str.|Wilmersdorf|10709|3186,9999
 Johann-Hittorf-Str.|Adlershof|12489|18865,2978
+Johann-Jacob-Baeyer-Str.|Müggelheim|12559|27810,987
 Johann-Sigismund-Str.|Wilmersdorf|10711|2972,9807
 Johanna-Spyri-Weg|Lichterfelde|12205|3229,2327
 Johanna-Stegen-Str.|Steglitz|12167|5638,4446
@@ -6430,6 +6431,7 @@ Lutizenstr.|Altglienicke|12524|20491,836
 Lutoner Str.|Spandau|13581|-5108,12973
 Lüttichauweg|Friedrichsfelde|10319|18436,10789
 Lütticher Str.|Wedding|13353|6733,15277
+Lutz-Schmidt-Str.|Altglienicke|12524|18836,234
 Lützelsteiner Weg|Dahlem|14195|1474,4299
 Lützenstr.|Wilmersdorf|10711|2609,10229
 Lützowplatz|Tiergarten|10785|6841,10941
@@ -7749,6 +7751,7 @@ Petzower Str.|Wannsee|14109|-6263,971
 Pfabener Weg|Marienfelde|12279|6995,126
 Pfadfinderweg|Frohnau|13465|1144,24426
 Pfahlerstr.|Reinickendorf|13403|5547,18364
+Pfalz-Zweibrücker Weg|Müggelheim|12559|27280,1119
 Pfalzburger Str.|Wilmersdorf|10717|4857,9164
 Pfalzburger Str.|Wilmersdorf|10719|4857,9164
 Pfalzgrafenweg|Mahlsdorf|12623|25532,11950
@@ -7795,6 +7798,7 @@ Pforzheimer Str.|Waidmannslust|13469|5189,22804
 Pfuelstr.|Kreuzberg|10997|12920,10788
 Philipp-Franck-Weg|Wannsee|14109|-6582,527
 Philipp-Gerlach-Weg|Spandau|13591|-7651,13922
+Philipp-Jacob-Rauch-Str.|Müggelheim|12559|27516,1300
 Philippistr.|Charlottenburg|14059|2485,11551
 Philippstr.|Mitte|10115|8903,13437
 Phloxstr.|Mahlsdorf|12623|23928,10060
@@ -8653,6 +8657,7 @@ S-Bhf Biesdorf|Biesdorf|12683|20766,12124
 S-Bhf Blankenburg|Blankenburg|13129|12918,20692
 S-Bhf Bornholmer Str.|Prenzlauer Berg|10439|9860,16507
 S-Bhf Botanischer Garten|Lichterfelde|12203|3926,4532
+S-Bhf Brandenburger Tor|Mitte|10117|8838,12259
 S-Bhf Buch|Buch|13125|16101,25760
 S-Bhf Buckower Chaussee|Marienfelde|12277|9173,512
 S-Bhf Bundesplatz|Wilmersdorf|10715|5404,7902
@@ -8751,7 +8756,6 @@ S-Bhf Tegel|Tegel|13509|2471,20090
 S-Bhf Tempelhof|Tempelhof|12099|9120,7225
 S-Bhf Tiergarten|Tiergarten|10557|5814,11967
 S-Bhf Treptower Park|Treptow|12435|14325,9793
-S-Bhf Unter den Linden|Mitte|10117|8838,12259
 S-Bhf Waidmannslust|Waidmannslust|13469|4544,22215
 S-Bhf Wannsee|Wannsee|14109|-4677,1420
 S-Bhf Warschauer Str.|Friedrichshain|10243|13571,11234
@@ -9892,7 +9896,6 @@ Straße 167|Französisch Buchholz|13127|12834,22112
 Straße 167|Waidmannslust|13469|5124,22019
 Straße 16|Heinersdorf|13089|13077,17790
 Straße 171|Französisch Buchholz|13127|12728,22518
-Straße 174|Altglienicke|12524|
 Straße 175|Französisch Buchholz|13127|12642,22914
 Straße 178|Kladow|14089|-6704,5553
 Straße 179|Französisch Buchholz|13127|12160,23621
@@ -10607,6 +10610,7 @@ U-Bhf Blaschkoallee|Britz|12359|13592,5253
 U-Bhf Blissestr.|Wilmersdorf|10715|4911,8866
 U-Bhf Boddinstr.|Neukölln|12053|11942,8248
 U-Bhf Borsigwerke|Tegel|13509|2586,19374
+U-Bhf Brandenburger Tor|Mitte|10117|8852,12293
 U-Bhf Breitenbachplatz|Schmargendorf|14195|3998,6655
 U-Bhf Britz-Süd|Britz|12351|13582,3543
 U-Bhf Bülowstr.|Schöneberg|10783|7658,10160
@@ -10740,7 +10744,6 @@ U-Bhf Tierpark|Friedrichsfelde|10319|18481,10468
 U-Bhf Turmstr.|Moabit|10551|6122,13261
 U-Bhf Uhlandstr.|Charlottenburg|10719|5157,10657
 U-Bhf Ullsteinstr.|Mariendorf|12109|9180,5376
-U-Bhf Unter den Linden|Mitte|10117|8852,12293
 U-Bhf Viktoria-Luise-Platz|Schöneberg|10777|6270,9939
 U-Bhf Vinetastr.|Pankow|13189|10934,17049
 U-Bhf Voltastr.|Wedding|13355|9602,15110

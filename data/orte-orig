@@ -132,7 +132,7 @@ Neuendorf|am See	1 45100,-32612
 Halbe	2 31700,-32810
 Teupitz	3 25240,-29746
 Lindow	3 -18915,62574
-Lübben	4 44683,-51759
+Lübben	4 44768,-51510
 Manschnow	2 88364,18251
 Küstrin-Kietz	2 92618,19763
 Lebus	3 87344,3693
@@ -161,7 +161,7 @@ Neu-Lübbenau	2 44781,-36070
 Schlepzig	2 45182,-41534
 Diedersdorf	1 7506,-7471
 Blankenfelde	2 10115,-8276
-Mahlow	2 11186,-5297
+Mahlow	2 11165,-5318
 Waldblick	0 10184,-3499
 Klein Kienitz	0 16026,-10830
 Brusendorf	1 18213,-10597
@@ -176,7 +176,7 @@ Kaniswall	0 32909,50
 Fürstenberg	3 -8711,86273
 Steinförde	1 -12573,86500
 Großmenow	1 -15637,87287
-Rangsdorf	2 11753,-12794
+Rangsdorf	2 11781,-12789
 Dahlewitz	2 13503,-9528
 # um Bernau herum
 Ladeburg	2 22512,33312
@@ -788,7 +788,7 @@ Cumlosen	2 -109431,67869
 Buckwitz	1 -52519,49887
 Großderschau	2 -60554,41573
 Stölln	1 -59829,37409
-Glasow	0 12873,-6928
+Glasow	0 12877,-6903
 Großziethen	1 13090,205
 Kleinziethen	0 13506,-2809
 Waßmannsdorf	1 15175,-3731
@@ -816,14 +816,15 @@ Zeuthen	2 26146,-6218
 Miersdorfer Werder	0 28059,-7381
 Niederlehme	2 27565,-9557
 Zeesen	1 27088,-14471
-Senzig	1 28816,-12940
+Senzig	1 28831,-12986
 Neu Zittau	2 33628,-1509
 Burig	0 35164,-1870
-Wernsdorf	2 30900,-3682
+Wernsdorf	2 30893,-3670
 Ziegenhals	0 29555,-4881
+Neue Mühle	1 27661,-11738
 Dannenreich	1 34301,-9750
 Kablow Ziegelei	0 32241,-9372
-Zernsdorf	2 30668,-11608
+Zernsdorf	2 30667,-11599
 Kablow	1 32409,-11596
 Friedrichshof	0 35666,-9320
 Wenzlow|(bei Friedersdorf)	0 36651,-9617
@@ -898,7 +899,7 @@ Motzenmühle	0 23239,-23484
 Töpchin	1 22943,-25968
 Waldeck	0 23668,-27231
 Egsdorf	0 23518,-29525
-Bestensee	2 26220,-17796
+Bestensee	2 26204,-17794
 Körbiskrug	0 27905,-16137
 Pätz	1 28071,-19862
 Liepe|bei Pätz	0 27486,-20131

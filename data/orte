@@ -31,7 +31,7 @@ Fürstenwalde	4 55562,-4726
 Strausberg	4 42709,19940
 Königs Wusterhausen	4 25859,-11559
 Ludwigsfelde	4 798,-11586
-Lübben	4 44683,-51759
+Lübben	4 44768,-51510
 Lübbenau	4 50275,-59112
 Templin	4 15881,79303
 Guben	4 99929,-48156
@@ -119,9 +119,9 @@ Straupitz	2 60493,-54009
 Neu-Lübbenau	2 44781,-36070
 Schlepzig	2 45182,-41534
 Blankenfelde	2 10115,-8276
-Mahlow	2 11186,-5297
+Mahlow	2 11165,-5318
 Górzyca	2 95420,11244
-Rangsdorf	2 11753,-12794
+Rangsdorf	2 11781,-12789
 Dahlewitz	2 13503,-9528
 Ladeburg	2 22512,33312
 Rüdnitz	2 24930,35363
@@ -235,8 +235,8 @@ Waltersdorf	2 21084,-4728
 Zeuthen	2 26146,-6218
 Niederlehme	2 27565,-9557
 Neu Zittau	2 33628,-1509
-Wernsdorf	2 30900,-3682
-Zernsdorf	2 30668,-11608
+Wernsdorf	2 30893,-3670
+Zernsdorf	2 30667,-11599
 Friedersdorf	2 37150,-12020
 Spreehagen	2 42992,-6640
 Markgrafpieske	2 47945,-8201
@@ -244,7 +244,7 @@ Hangelsberg	2 46462,-409
 Bad Saarow-Mitte	2 55365,-11620
 Rauen	2 53062,-7973
 Sperenberg	2 8576,-29378
-Bestensee	2 26220,-17796
+Bestensee	2 26204,-17794
 Trebatsch	2 63520,-34874
 Wendisch Rietz	2 52007,-20883
 Glienicke	2 57404,-20885
@@ -663,7 +663,8 @@ Schulzendorf|b. Eichwalde	1 22269,-4937
 Kiekebusch	1 20618,-6506
 Schenkendorf	1 23872,-13855
 Zeesen	1 27088,-14471
-Senzig	1 28816,-12940
+Senzig	1 28831,-12986
+Neue Mühle	1 27661,-11738
 Dannenreich	1 34301,-9750
 Kablow	1 32409,-11596
 Bindow	1 33989,-13281
@@ -1031,7 +1032,7 @@ Georgenthal	0 71337,1315
 Bamme	0 -55780,18604
 Mützlitz	0 -50268,15901
 Garz|b. Warnau	0 -71888,37145
-Glasow	0 12873,-6928
+Glasow	0 12877,-6903
 Kleinziethen	0 13506,-2809
 Kienberg|(bei Waltersdorf)	0 20056,-2896
 Hubertussiedlung	0 21071,-2228
