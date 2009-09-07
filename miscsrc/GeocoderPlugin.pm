@@ -109,7 +109,9 @@ sub geocoder_dialog {
 				      chomp;
 				      $_;
 				  };
-				  Geo::Coder::Google->new(apikey => $apikey);
+				  my $google = Geo::Coder::Google->new(apikey => $apikey);
+				  $google->ua->agent("Mozilla/5.0 (compatible; Geo::Coder::Google/$Geo::Coder::Google::VERSION; Google, please stop smoking crack; http://rt.cpan.org/Public/Bug/Display.html?id=35173)");
+				  $google;
 			      },
 			      'extract_loc' => sub {
 				  my $location = shift;
@@ -122,6 +124,32 @@ sub geocoder_dialog {
 			      },
 			      'label' => 'Google (needs API key)',
 			    },
+		'GoogleMaps' => { 'new' => sub {
+				      my $apikey = do {
+					  my $file = "$ENV{HOME}/.googlemapsapikey";
+					  open my $fh, $file
+					      or main::status_message("Cannot get key from $file: $!", "die");
+					  local $_ = <$fh>;
+					  chomp;
+					  $_;
+				      };
+				      require LWP::UserAgent; # should be already loaded anyway
+				      Geo::Coder::GoogleMaps->new(apikey => $apikey,
+								  ua => LWP::UserAgent->new(agent => "Mozilla/5.0 (compatible; Geo::Coder::GoogleMaps/$Geo::Coder::GoogleMaps::VERSION; Google, please stop smoking crack; http://rt.cpan.org/Public/Bug/Display.html?id=49483)"),
+								 );
+				  },
+				  'extract_loc' => sub {
+				      my $location = shift;
+				      @{$location->{data}{Point}{coordinates}};
+				  },
+				  'extract_addr' => sub {
+				      my $location = shift;
+				      $location->{data}{address} . "\n" .
+					  join(",", @{$location->{data}{Point}{coordinates}});
+				  },
+				  'label' => 'Google (alternative implementation, needs API key)',
+				},
+		
 		'Yahoo' => { 'new' => sub {
 				 Geo::Coder::Yahoo->new(appid => 'bbbike');
 			     },

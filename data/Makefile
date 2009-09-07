@@ -395,6 +395,7 @@ ubahnhof:	ubahnhof-orig
 .for i in u s
 $(i)bahnhof_bg:	$(i)bahnhof-orig
 	-@$(WRITEABLE) $@
+# XXX :U modifier does not work with older pmakes, need a workaround...
 	(echo "#: title: Fahrradfreundliche Zugänge bei der $(i:U)-Bahn"; \
 	 [ "$(i)" = "s" ] && echo "#: note: http://www.s-bahn-berlin.de/fahrplanundnetz/sbahnhof_anzeige.php?ID=103"; \
 	 echo "#:") > $@~
@@ -1030,7 +1031,7 @@ ${PERSISTENTTMPDIR}/fragezeichen-matches.bbd:	fragezeichen ${DATADIR}/strassen $
 
 # allow one error, and fail if the 2nd one is encountered
 FOREVER_INTERVAL?=	30
-FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  'open LOCK, ">", ".check_forever.lck" or die $$!; flock LOCK, LOCK_EX|LOCK_NB or die $$!; $$cmd=shift; while() { system($$cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; sleep $(FOREVER_INTERVAL) } END { unlink ".check_forever.lck" }'
+FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  'open LOCK, ">", ".check_forever.lck" or die $$!; flock LOCK, LOCK_EX|LOCK_NB or die $$!; $$cmd=shift; while() { system($$cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; sleep $(FOREVER_INTERVAL) } unlink ".check_forever.lck }'
 
 check-forever:
 	-nice ${FOREVER_TWO_ERRORS} ${MAKE} check all ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd

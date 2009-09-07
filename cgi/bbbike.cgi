@@ -869,10 +869,10 @@ if (!defined $bbbike_html) {
     $bbbike_html   = "$bbbike_root/" . ($use_cgi_bin_layout ? "BBBike/" : "") .
 	"html";
 }
-$is_beta = $bbbike_url =~ m{bbbike\d\.cgi}; # bbbike2.cgi ...
+$is_beta = $bbbike_url =~ m{bbbike\d(\.en)?\.cgi}; # bbbike2.cgi ...
 $bbbike2_url = $bbbike_url;
 if (!$is_beta) {
-    $bbbike2_url =~ s{bbbike\.cgi}{bbbike2.cgi};
+    $bbbike2_url =~ s{bbbike(\.en)?\.cgi}{bbbike2$1.cgi};
 }
 
 $bbbike_script = $bbbike_url;
@@ -949,6 +949,12 @@ $q->delete('Dummy');
 $smallform = $q->param('smallform') || $bi->{'mobile_device'};
 $got_cookie = 0;
 %c = ();
+
+if (defined $q->param('api')) {
+    require BBBikeCGIAPI;
+    BBBikeCGIAPI::action($q->param('api'), $q);
+    my_exit(0);
+}
 
 foreach my $type (qw(start via ziel)) {
     if (defined $q->param($type . "charimg.x") and
@@ -1746,9 +1752,12 @@ sub choose_form {
 	$onloadscript .= "init_hi(); window.onresize = init_hi; "
     }
     $onloadscript .= "focus_first(); ";
+    if ($is_beta) {
+	$onloadscript .= "check_locate_me(); ";
+    }
     if ($nice_berlinmap || $nice_abcmap) {
 	push @extra_headers, -onLoad => $onloadscript,
-	     -script => [{-src => $bbbike_html . "/bbbike_start.js?v=1.14"},
+	     -script => [{-src => $bbbike_html . "/bbbike_start.js?v=1.16"},
 			 ($nice_berlinmap
 			  ? {-code => qq{set_bbbike_images_dir('$bbbike_images')}}
 			  : ()
@@ -2168,6 +2177,19 @@ EOF
 </select>
 };
 		    }
+		}
+
+		if ($type eq 'start' && $bi->{'can_css'} && $is_beta) {
+		    my $transpose_dot_func = "transpose_dot_func = " . overview_map()->{TransposeJS};
+		    print <<EOF;
+<div id="locateme" style="visibility:hidden;">
+  <a href="javascript:locate_me()">@{[ M("Aktuelle Position verwenden") ]}</a>
+</div>
+<div id="locateme_marker" style="position:absolute; visibility:hidden;"><img src="$bbbike_images/bluedot.png" border=0 width=8 height=8></div>
+<script type="text/javascript"><!--
+ $transpose_dot_func
+// --></script>
+EOF
 		}
 
 		print "</td><td>" if $bi->{'can_table'};

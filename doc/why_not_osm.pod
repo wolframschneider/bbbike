@@ -1,0 +1,235 @@
+=head1 Warum BBBike nicht OSM-Daten verwendet
+
+Vorab: warum importiere ich die BBBike-Daten nicht nach OSM? Weil es
+eine nicht-triviale Aufgabe ist, eine automatischen Importer zu
+schreiben, und ein manuelles Importieren ist zu langwierig. Außerdem
+gibt es einige strukturelle Probleme, die ich unten auflisten werde.
+
+=over
+
+=item * Separate Ways für straßenbegleitende Radwege innerorts
+(Beispiele: Warschauer Straße, Mehringdamm) sind problematisch für das
+Routing. Solche Radwege haben meist keinen Namen; im Routing würde
+also statt E<quot>Warschauer StraßeE<quot> nur E<quot>RadwegE<quot>
+erscheinen.
+
+Weiterhin kann es zu problematischen Routingtexten kommen, wenn
+zwischen Straße und Radweg gewechselt wird. Zum Beispiel:
+E<quot>Oberbaumbrücke, rechts in das Gröbenufer, nach vier Metern
+links in die OberbaumstraßeE<quot>.
+
+Es müsste erst einmal auch untersucht werden, ob alle Radwege mit dem
+übrigen Straßennetz verknüpft sind oder ob Verknüpfungs-Nodes fehlen
+(diese fehlen auch bei Fußwegen oft).
+
+Theoretisch könnte man das vermeiden, indem man erkennt, dass ein
+Radweg zu einer Straße gehört (da parallel verlaufend in geringer
+Entfernung), aber das muss erst einmal geschrieben werden. Oder man
+erzeugt entsprechende Relationen.
+
+=item * surface=* wird in Berlin kaum verwendet. Die meisten
+Kopfsteinpflasterstraßen sind nicht als solche getaggt. Es wird leider
+auch häufig surface=paved verwendet, aber eine genauere
+Aufschlüsselung (asphalt, concrete, compacted ...) wäre besser.
+
+=item * cycleway=opposite in Einbahnstraße wird kaum verwendet.
+
+=item * Uneinheitliches Tagging. Teilweise erkennt man keine
+Systematik, wann highway=track oder highway=cycleway etc. verwendet
+wird. Werte für tracktype werden uneinheitlich vergeben. Für
+smoothness würde ich dasselbe Problem erwarten, wobei smoothness
+leider noch kaum verwendet wird.
+
+=item * Ein Tag für E<quot>handicapE<quot> ist nicht definiert. In
+osm2bbd kann ich nur einige implizite Werte setzen, wie z.B. q4 (=
+Schrittgeschwindigkeit) für Fußgängerzonen.
+
+=item * Straßenabschnitte zwischen zwei Fahrbahnen einer Straße haben
+oft keinen sinnvollen Namen.
+
+=item * Es ist oft schwierig, alle möglichen Tag-Kombinationen richtig
+anzuwenden. Normalerweise werden Kfz-Straßen mit motorroad
+gekennzeichnet. Der Tiergartentunnel ist aber mit bicycle=no foot=no
+gekennzeichnet.
+
+=item * Oft stolpert man über Editier-Unfälle in den osm-Daten. Gerade
+habe ich gesehen, dass ein Teil der Kopernikusstraße mit dem
+Straßennamen E<quot>Tram M13E<quot> gekennzeichnet war. Das wurde zwar
+später korrigiert, aber falsch, nämlich zu
+E<quot>WühlischstraßeE<quot>.
+
+=item * Im BBBike-System gibt es viele Skripte, die die
+Datenintegrität garantieren. Bei osm gibt es zwar Maplint,
+Openstreetbugs u.a., aber: bei BBBike werden Daten erst
+veröffentlicht, wenn alle Kontrollskripte erfolgreich durchgelaufen
+sind. Bei osm sind editierte Daten immer sofort öffentlich. Die
+QA-Systeme von osm können erst nachträglich in Aktion treten.
+
+=item * In den BBBike-Daten kann ich auch subjektive Daten einbringen,
+z.B. E<quot>grüne WegeE<quot> (mit mehreren Stufen). osm kennt so
+etwas nicht und es ist zweifelhaft, ob es dort auch Platz hat.
+
+=item * Soweit mir bekannt ist, gibt es bei osm keine Zuordnung
+zwischen Straßen und Bezirken/Ortsteilen. Das ist aber in Berlin
+notwendig, weil viele Straßennamen mehrfach vergeben sind und deshalb
+bei der Straßenauswahl eine Unterscheidung getroffen werden muss.
+Vielleicht ist es möglich, über eine Analyse der Lage von Straßen
+innerhalb der administrativen Grenzen die Zuordnung zu einem Ortsteil
+durchzuführen, aber dieses Programm muss erst einmal geschrieben
+werden.
+
+=item * osm erlaubt nicht das Offline-Arbeiten. Zwar gibt es bei
+Merkaartor einen Menüpunkt "Work offline", aber diesen sollte man
+besser nicht benutzen.
+
+=item * Ampeln sind bei osm sehr detailliert aufgeführt: bei
+Kreuzungen mit zweibahnigen Straßen sind dann vier Ampeln
+eingezeichnet. Das heißt aber auch, dass beim Linksabbiegen an einer
+solchen Kreuzung drei Ampeln gezählt werden würden. Damit würde die
+Anzeige der Ampeln an der Route sowie die Ampeloptimierung nicht ohne
+zusätzliche Heuristiken zurechtkommen.
+
+=back
+
+=head2 Beispielrouten
+
+Hier sind einige Beispielrouten, von BBBike berechnet anhand von
+osm-Daten. Die Probleme hier sind nicht notwendigerweise echte
+Probleme bei osm, sondern können auch durch schlechte Konvertierung
+von osm2bbd oder durch falsche Annahmen in der Routingsoftware
+entstanden sein.
+
+=over
+
+=item * Seumestraße - Methfesselstraße (Viktoria-Quartier)
+
+=over
+
+=item * Das erwähnte Wechseln zwischen Straße und Radweg sieht so aus:
+Warschauer Straße, nach 120m rechts in die Helsingforser Straße, nach
+0m (wahrscheinlich abgerundet) links in einen Weg ohne Namen (der
+parallele Radweg).
+
+=item * Am Halleschen Tor: Straßenname fehlt.
+
+=item * Die Kreuzung Blücherstraße/Mehringdamm ist problematisch:
+Blücherstraße, nach 70m Mehringdamm, nach 10m Obentrautstraße, nach 0m
+links in einen Weg ohne Namen (wieder ein paralleler Radweg). Richtig
+hätte es einfach sein müssen: Blücherstraße, nach 70m links in den
+Mehringdamm, fertig.
+
+=item * Es fehlt ein Hinweis, dass die Zufahrt zum Viktoria-Quartier
+genommen werden muss; die Straße heißt hier auch nur Methfesselstraße
+(was streng genommen richtig ist, aber nicht hilfreich).
+
+=back
+
+=item * Methfesselstraße - Hoeppnerstraße
+
+=over
+
+=item * Treppen haben keine Straßennamen, müssten also von osm2bbd
+besonders behandelt werden. Zurzeit sieht es so aus: Methfesselstraße,
+nach 0m rechts auf namenslosen Weg (nämlich eine Treppe), nach 10m
+rechts auf Methfesselstraße.
+
+=item * Fußwege haben oft keinen Namen, hier müsste man einen
+E<quot>künstlichenE<quot> Namen für die Routenliste oder einfach nur
+E<quot>FußwegE<quot> verwenden. Beispiel: Badener Ring, nach 10m links
+in namenslosen Weg, nach 90m rechts in den Wolffring.
+
+=back
+
+=item * Lüderitzstraße - Seumestraße
+
+=over
+
+=item * Problematische Straßennamen an Querstraßen zwischen zwei
+Fahrbahnen einer Hauptstraße. Das Abbiegen von Lüderitzstraße in die
+Seestraße sieht so aus: Lüderitzstraße, nach 90m Seestraße. Wie man
+sieht, fehlt hier E<quot>linksE<quot>. Das Straßenstück zwischen
+Lüderitzstraße und Genter Straße trägt hier den Namen Seestraße. Damit
+wird auch eine Schwäche bei BBBike aufgedeckt (Abbiegevorgänge werden
+nicht dargestellt wenn sich der Straßenname nicht ändert). Weiterhin
+hat dieses Straßenstück die Kategorie primary, was sich wahrscheinlich
+bei der Routingoption E<quot>Hauptstraßen vermeidenE<quot> auswürden
+würde, obwohl hier ja nur eine Hauptstraße überquert wird.
+
+=item * Unnötige mehrfach genannte gleiche Straßennamen: Müllerstraße,
+nach 1480m Müllerstraße, nach 180m Müllerstraße, nach 10m links in die
+Müllerstraße. Unklar, warum das passiert. Die zweite Müllerstraße
+fängt bei der Fennstraße an. Man fährt weiterhin geradeaus, keine
+versteckten Leerzeichen, keine Straßenkategorieänderung. Die dritte
+Müllerstraße befindet sich an der Kreuzung Schulzendorfer Straße. Und
+die letzte Müllerstraße ist wieder das gleiche Problem wie im Absatz
+vorher beschrieben.
+
+=item * Zwischen Grenzstraße und Liesenstraße wird ein Fußweg gewählt.
+Beim näheren Hinschauen ist das ein Friedhofsweg. Also eher kein guter
+Weg zum Radfahren. Vielleicht sollte ich Fußwege, soweit sie kein
+bicycle=yes haben, bei der Konvertierung mit q2 oder q3 taggen?
+
+Nachdem ich das so geändert habe (Fußwege können je nach bicycle-Tag
+q1 bis q4 haben), verläuft die Route nicht mehr über diesen Weg.
+
+=item * Mollstraße - Otto-Braun-Straße - Mollstraße: sogar hier, wo
+die Situation eindeutig ist, nämlich der Straßenname ist auf beiden
+Seiten gleich, gibt es einen Bruch.
+
+=item * Zwischen Straße der Pariser Kommune und
+Hildegard-Jadamowitz-Straße ist der Platz vor dem Hochhaus auch als
+Platz gekennzeichnet. osm2bbd kann damit nicht gut umgehen und erkennt
+nicht, dass man diagonal über den Platz fahren kann (und
+wahrscheinlich sind die Nodes des Platzes nicht mit dem restlichen
+Straßennetz verbunden). Stattdessen wird ein Umweg hinter der
+Feuerwache vorgeschlagen.
+
+=item * Es wird die Route Marchlewskistraße - Torellstraße statt der
+Gubener Straße vorgeschlagen, weil Einträge für Kopfsteinpflaster
+fehlen.
+
+=item * "Tram M13" wurde oben schon erwähnt.
+
+=back
+
+=item * Mehringdamm - Lüderitzstraße
+
+=over
+
+=item * Mehringdamm verläuft bei osm bis zur Stresemannstraße. Ich bin
+mir aber ziemlich sicher, dass der Mehringdamm nur bis zur Kanalbrücke
+geht. Ein Ortstermin wird es feststellen.
+
+=item * Die Route verläuft über die Friedrichstraße und Müllerstraße.
+Ich würde gerne die Route am Schiffahrtskanal sehen, also "sperre" ich
+die Chausseestraße für den nächsten Versuch. Dieser verläuft komplett
+über die Wilhelmstraße und Luisenstraße. Hier sehe ich an einer
+Stelle: Luisenstraße, nach 90m Weg ohne Namen, nach 20m Luisenstraße.
+An der Stelle ist ein Fußweg über der Luisenstraße bei osm gezeichnet.
+
+=item * "Seller Brücke" - sieht offenkundig falsch aus, wenn die
+Straße dazu "Sellerstraße" geschrieben wird.
+
+=back
+
+=item * Kreuzberg - Potsdam
+
+=over
+
+=item * Ohne weitere Optimierungseinstellungen wird die "langweilige"
+Route über die B1 genommen, wie es auch BBBike machen würde. Mit der
+Einstellung "Hauptstraßen ohne Radwege meiden" bekommt man eine sehr
+interessante Route, die etwa 20% länger ist. Teilweise offensichtliche
+Empfehlungen (Monumentenstraße, Langenscheidtstraße), dann wird das
+Kopfsteinpflaster in der Belziger Straße zugunsten von anderen
+Kopfsteinpflasterstraßen (Apostel-Paulus-Straße, Merseburger Straße)
+umfahren (nur bei der Belziger ist das Kopfsteinpflaster getaggt). Es
+geht durch den Volkspark Wilmersdorf, weiter am Rand des Grunewalds
+entlang, durch Nikolassee und dann weiter am Griebnitzsee, zum Schluss
+ganz viel Zickzack, weil die Radwege an der B1 nicht eingetragen sind.
+
+Die Suche hat mehr als eine Minute gedauert!
+
+=back
+
+=back

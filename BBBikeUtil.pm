@@ -4,12 +4,12 @@
 # $Id: BBBikeUtil.pm,v 1.32 2008/12/30 15:41:26 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2009 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
-# Mail: eserte@cs.tu-berlin.de
-# WWW:  http://user.cs.tu-berlin.de/~eserte/
+# Mail: slaven@rezic.de
+# WWW:  http://bbbike.sourceforge.net
 #
 
 package BBBikeUtil;
@@ -28,7 +28,7 @@ require Exporter;
 	     cp850_iso iso_cp850 nil
 	     kmh2ms
 	     STAT_MODTIME);
-@EXPORT_OK = qw(min max first sum ms2kmh clone bbbike_root s2hms);
+@EXPORT_OK = qw(min max first sum ms2kmh clone bbbike_root s2hms save_pwd);
 
 use constant STAT_MODTIME => 9;
 
@@ -133,17 +133,25 @@ sub h2hm {
     sprintf "%d:%02d", $s, 60*($s - int($s));
 }
 
-# Meter in Kilometer umwandeln. $dig gibt die Anzahl der Nachkommastellen
-# (Default: 1) an. Mit $sigdig (optional) kann die Anzahl der
-# signifikaten Nachkommastellen angegeben werden (um Scheingenauigkeiten
-# zu vermeiden): Beispiel m2km(1234,3,2) => 1.230. Dabei wird nicht gerundet.
+# Meter in Kilometer umwandeln. $dig gibt die Anzahl der
+# Nachkommastellen (Default: 1) an. Mit $sigdig (optional) kann die
+# Anzahl der signifikaten Nachkommastellen angegeben werden (um
+# Scheingenauigkeiten zu vermeiden): Beispiel m2km(1234,3,2) => 1.230.
+# Dabei wird nicht gerundet. $sigdig wird nicht verwendet, wenn
+# dadurch 0.000 als Ergebnis herauskommen würde.
 sub m2km {
     my($s, $dig, $sigdig) = @_;
     return 0 unless $s =~ /\d/;
     $dig = 1 unless defined $dig;
     my $r = sprintf "%." . $dig . "f", $s/1000;
     if (defined $sigdig) {
-	$r =~ s/\.(\d{$sigdig})(.*)/".$1" . ("0"x length($2))/e;
+	if ($sigdig == 2 && $s < 10) {
+	    # do nothing
+	} elsif ($sigdig == 1 && $s < 100) {
+	    # do nothing
+	} else {
+	    $r =~ s/\.(\d{$sigdig})(.*)/".$1" . ("0"x length($2))/e;
+	}
     }
     $r . " km";
 }
@@ -338,6 +346,21 @@ BEGIN {
     }
 }
     
+# REPO BEGIN
+# REPO NAME save_pwd /home/e/eserte/work/srezic-repository 
+# REPO MD5 0f7791cf8e3b62744d7d5cfbd9ddcb07
+sub save_pwd (&) {
+    my $code = shift;
+    require Cwd;
+    my $pwd = Cwd::cwd();
+    eval {
+	$code->();
+    };
+    my $err = $@;
+    chdir $pwd or die "Can't chdir back to $pwd: $!";
+    die $err if $err;
+}
+# REPO END
 
 1;
 

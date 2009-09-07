@@ -1,7 +1,7 @@
-CGI_SCRIPTS=		bbbike.cgi bbbikegooglemap.cgi mapserver_address.cgi \
+CGI_SCRIPTS=		bbbike.cgi bbbike.en.cgi bbbikegooglemap.cgi mapserver_address.cgi \
 			mapserver_comment.cgi mapserver_setcoord.cgi \
 			wapbbbike.cgi bbbiketile.cgi
-DEVEL_CGI_SCRIPTS=	bbbike2.cgi bbbikegooglemap2.cgi
+DEVEL_CGI_SCRIPTS=	bbbike2.cgi bbbike2.en.cgi bbbikegooglemap2.cgi bbbike-test.cgi
 ROOT_URL?=		/bbbike
 # Set this to "cgi" or "Apache::Registry"
 CGI_TYPE?=		cgi
@@ -13,10 +13,10 @@ all:	rights symlinks
 	@echo "You may run $(MAKE) httpd.conf to create a default apache configuration for inclusion"
 
 symlinks:
-	[ -e bbbike.en.cgi   ] || ln -s bbbike.cgi  bbbike.en.cgi
-	[ -e bbbike2.cgi     ] || ln -s bbbike.cgi  bbbike2.cgi
-	[ -e bbbike2.en.cgi  ] || ln -s bbbike2.cgi bbbike2.en.cgi
-	[ -e bbbike-test.cgi ] || ln -s bbbike.cgi  bbbike-test.cgi
+	[ -e bbbike.en.cgi   ] || ln -s bbbike.cgi bbbike.en.cgi
+	[ -e bbbike2.cgi     ] || ln -s bbbike.cgi bbbike2.cgi
+	[ -e bbbike2.en.cgi  ] || ln -s bbbike.cgi bbbike2.en.cgi
+	[ -e bbbike-test.cgi ] || ln -s bbbike.cgi bbbike-test.cgi
 
 biokovo.conf:
 	$(MAKE) \
