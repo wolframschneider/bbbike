@@ -1532,6 +1532,25 @@ sub choose_form {
 	# Darstellung eines Vias nicht erwünscht
 	next if ($type eq 'via' and $$oneref eq 'NO');
 
+	if ($$nameref eq '' && $$oneref eq '' && defined $ort && $ort =~ $outer_berlin_qr) {
+	    my $orte = get_orte();
+	    my $coords;
+	    eval {
+		$orte->grepstreets(sub {
+				       my($name) = $_->[Strassen::NAME] =~ m{^([^|]+)};
+				       if ($name eq $ort) {
+					   $coords = $_->[Strassen::COORDS][0];
+					   die "break loop";
+				       }
+				   });
+	    };
+	    if ($coords) {
+		$q->param($type.'c', $coords);
+		$$nameref = $ort;
+		next;
+	    }
+	}
+
 	# Überprüfen, ob eine Straße in PLZ vorhanden ist.
 	if ($$nameref eq '' && $$oneref ne '') {
 	    my $plz_scope = (defined $ort && $ort =~ $outer_berlin_qr ? $ort : "Berlin/Potsdam");
@@ -2183,7 +2202,7 @@ EOF
 		    my $transpose_dot_func = "transpose_dot_func = " . overview_map()->{TransposeJS};
 		    print <<EOF;
 <div id="locateme" style="visibility:hidden;">
-  <a href="javascript:locate_me()">@{[ M("Aktuelle Position verwenden") ]}</a>
+  <a href="javascript:locate_me()">@{[ M("Aktuelle Position verwenden") ]}</a> @{[ experimental_label() ]}
 </div>
 <div id="locateme_marker" style="position:absolute; visibility:hidden;"><img src="$bbbike_images/bluedot.png" border=0 width=8 height=8></div>
 <script type="text/javascript"><!--
@@ -3013,7 +3032,7 @@ EOF
 <option @{[ $winter_checked->("WI1") ]}>@{[ M("schwach") ]}
 <option @{[ $winter_checked->("WI2") ]}>@{[ M("stark") ]}
 </select></td>
- <td style="vertical-align:bottom"><span class="experimental">@{[ M("Experimentell") ]}</span><small><a target="BBBikeHelp" href="$bbbike_html/help.html#winteroptimization" onclick=show_help@{[ $lang ? "_$lang" : "" ]}('winteroptimization'); return false;">@{[ M("Was ist das?") ]}</a></small></td>
+ <td style="vertical-align:bottom">@{[ experimental_label() ]}<small><a target="BBBikeHelp" href="$bbbike_html/help.html#winteroptimization" onclick=show_help@{[ $lang ? "_$lang" : "" ]}('winteroptimization'); return false;">@{[ M("Was ist das?") ]}</a></small></td>
 </tr>
 EOF
     }
@@ -4547,7 +4566,7 @@ EOF
 		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">KML</a>};
 		}
 		if ($can_gpx || $can_kml) {
-		    print qq{<span class="experimental">} . M("Experimentell") . qq{</span>};
+		    print experimental_label();
 		}
 		if (0) { # XXX not yet
 		    my $qq2 = CGI->new({});
@@ -6954,6 +6973,10 @@ sub diff_from_old_route {
     }
     $diff->{different} = 0;
     return $diff;
+}
+
+sub experimental_label {
+    qq{<span class="experimental">} . M("Experimentell") . qq{</span>};
 }
 
 ######################################################################
