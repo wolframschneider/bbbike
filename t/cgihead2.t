@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: cgihead2.t,v 1.29 2009/09/07 22:06:44 eserte Exp $
+# $Id: cgihead2.t,v 1.30 2009/09/12 06:53:36 eserte Exp $
 # Author: Slaven Rezic
 #
 

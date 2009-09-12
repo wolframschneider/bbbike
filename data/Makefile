@@ -144,6 +144,7 @@ fix-permissions:
 # Useful checks, but normally too slow for a quick build
 # XXX merge with sort-Berlin.coords.data rule below?
 slow-checks:	check-categories \
+		check-names \
 		.check_targets \
 		inaccessible_strassen inaccessible_landstrassen \
 		check-line-lengths check-dates \
@@ -968,7 +969,8 @@ ${PERSISTENTTMPDIR}/.fragezeichen-other-source:	${DATADIR}/qualitaet_s-orig ${DA
 			    if ($$l[$$i-1] =~ /\#:\s+unverified_by\s+(.*?):?\s*$$/i) {\
 				my $$comment = "laut $$1";\
 				my $$x = Strassen::parse($$l[$$i]);\
-				$$x->[Strassen::NAME()] .= " ($$comment)";\
+				$$x->[Strassen::NAME()] .= " " if $$x->[Strassen::NAME()] ne "";\
+				$$x->[Strassen::NAME()] .= "($$comment)";\
 				$$x->[Strassen::CAT()] = "?";\
 				print Strassen::arr2line2($$x),"\n"\
 			    }\
@@ -1475,6 +1477,20 @@ check-categories:	.check_categories
 	@$(PERL_UTF8) -I../lib -I.. -MStrassen::Cat -e '\
 	    exit !Strassen::Cat::check_file($$ARGV[0], BBBikeVersion => "3.16");\
 	' ${target}
+.endfor
+	touch $@
+
+check-names:	.check_names
+
+.check_names:	${BBD_TARGETS}
+	@echo "Check names..."
+.for target in ${BBD_TARGETS}
+	@echo " ${target}"
+	@$(PERL_UTF8) -I../lib -I.. -MStrassen::Core -e '\
+	    Strassen->new_stream(shift)->read_stream(sub { \
+		die qq{Whitespace in "$$_[0]->[Strassen::NAME]"} \
+		    if $$_[0]->[Strassen::NAME] =~ m{(^\s|\s$$)} \
+	    })' ${target}
 .endfor
 	touch $@
 
