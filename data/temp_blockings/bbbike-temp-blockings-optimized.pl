@@ -604,7 +604,7 @@ userdel	1::inwork 12229,10014 12398,9938 12556,9862
          'text' => 'Jessnerstr. wegen Bauarbeiten in Richtung Süden nicht befahrbar',
          'from' => undef,
          'id' => 1598,
-         'data' => '#: last_checked: 2009-09-01
+         'data' => '#: last_checked: 2009-09-13
 #: XXX nach Beendigung der Bauarbeiten bleibt wahrscheinlich die gesamte Straße asphaltiert, mit einigen Aufpflasterungen
 userdel	q4::inwork; 15080,11905 14977,11754 14941,11689 14849,11539
 ',
@@ -728,16 +728,7 @@ userdel	q4::inwork 10422,12395 10476,12432
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt',
-         'from' => undef,
-         'id' => 1657,
-         'data' => '#: last_checked: 2009-08-04
-userdel	q4::inwork 8389,11378 8374,11479
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1491,16 +1482,7 @@ Neuer Garten (am Portierhaus) - Weinmeisterstr.: Weg ist nur zwischen 6 Uhr bis 
        },
        undef,
        undef,
-       {
-         'source_id' => 'IM_013939',
-         'until' => 1253051999,
-         'text' => 'Päwesiner Weg (Spandau) Richtung Brunsbütteler Damm zwischen Lazarusstr. und Brunsbütteler Damm Baustelle, Fahrtrichtung gesperrt (bis Mitte 09.2009)',
-         'from' => 1251530442,
-         'id' => 1853,
-         'data' => 'userdel	q4::inwork; -4922,13609 -4922,13641 -4932,13887 -4926,13971
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_013990',
          'until' => 1253051999,
@@ -1738,6 +1720,29 @@ d Breitenbachstr. Baustelle, Fahrtrichtung gesperrt (bis Anfang 05/2010)',
          'from' => 1252738143,
          'id' => 1883,
          'data' => 'userdel	q4::temp; 5817,7223 5654,6941
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'permanent' => 1,
+         'text' => 'Breslauer Platz: Wochenmarkt Mittwoch 8-13 Uhr, Donnerstag 12-17 Uhr, Samstag 8-14 Uhr, Behinderungen möglich',
+         'from' => undef,
+         'id' => 1884,
+         'data' => '	q4::temp 5902,7334 5810,7337 5817,7223
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20090903.1100.137516.html',
+         'until' => undef,
+         'text' => 'Bauarbeiten in der Berliner Straße in Pankow ab Anfang Oktober 2009, Einbahnstraße Richtung Breite Str.; die Hadlichstr. ab Damerowstraße Einbahnstraße in Richtung Berliner Straße',
+         'from' => 1254261600,
+         'id' => 1885,
+         'data' => '#: XXX nach den Bauarbeiten fällt evtl. das Kopfsteinpflaster weg
+#: next_check: 2010-03-01
+userdel	q4::inwork; 10680,18380 10755,18231 10829,18083 10846,17992
+userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 11025,18531
 ',
          'type' => 'handicap'
        }
