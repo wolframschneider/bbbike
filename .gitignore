@@ -1,10 +1,12 @@
 # ignore all non-Berlin data directories
 /.prove
+/ChangeLog
 /Makefile
 /Makefile.old
 /blib
 /cache/
 /data_*
+/distfiles
 /tmp/
 cgi/Aachen.cgi
 cgi/Aachen.cgi.config

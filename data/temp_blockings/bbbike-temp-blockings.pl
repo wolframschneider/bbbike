@@ -1724,7 +1724,7 @@ EOF
        text  => 'L 711; (Krausnick-AS Stakow); zw. Krausnick u. Bahnhof Brand Einschränkung Tragfähigkeit Vollsperrung, Dauer unbekannt ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 35178,-41015 37450,-41050 37950,-41275 38512,-41000 40390,-41069
+userdel	2 35214,-41158 35289,-41439 35915,-41259 36010,-41272 36387,-40961 36499,-41097 37581,-41158 37950,-41275 38512,-41000 40390,-41069
 EOF
      },
      { from  => 1113256800, # 2005-04-12 00:00
@@ -1732,7 +1732,7 @@ EOF
        text  => 'L 30; (Bernauer Str.); OL Altlandsberg zw. Strausberger Str. u. Buchholzer Str. Kanalarbeiten Vollsperrung 13.04.2005-16.04.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 32665,17841 32985,17127 33589,15778
+userdel	q4 32665,17841 32933,17242 32945,17123 33016,17059 33589,15778
 EOF
      },
      { from  => 1113084000, # 2005-04-10 00:00
@@ -2245,7 +2245,7 @@ EOF
        text  => 'B 109; (Prenzlauer Str.); OD Basdorf, Kno. Dimitroff-/Waldheimstr. Straßen-,Geh- u.Radwegbau Vollsperrung 04.07.2005-08.08.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 12193,34683 12635,32221
+userdel	q4 12160,34668 12224,34508 12635,32221
 EOF
      },
      { from  => 1122415200, # 2005-07-27 00:00
@@ -4404,7 +4404,7 @@ EOF
        text  => 'K 6503 KG Lubowsee-L211 nördl. Summt Kreuzung Zühlslake Vorber. Kreiselneubau Vollsperrung 11.05.2006-12.05.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 7435,34963 7070,34665
+userdel	q4 7431,34989 7073,34715
 EOF
      },
      { from  => 1147384800, # 2006-05-12 00:00
@@ -4806,8 +4806,8 @@ EOF
        text  => 'K 6503 B273-Zühlsdorf-L211 (Summt-Lehnitz) Kreuzung. Summter Chaussee bei Zühlslake Neubau Kreisverkehr Vollsperrung 06.07.2006-19.08.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 7346,32257 7435,34963 8115,35387
-userdel	q4::inwork 7070,34665 7435,34963 7443,36175
+userdel	q4::inwork 7346,32257 7431,34989 8115,35387
+userdel	q4::inwork 7073,34715 7431,34989 7456,36042 7454,36156
 EOF
      },
      { from  => 1149026400, # 2006-05-31 00:00
@@ -6071,7 +6071,7 @@ EOF
        text  => 'L 021 Zühlslake-Wensickendorf Kreuzung. Summter Chaussee bei Zühlslake Neubau Kreisverkehr Vollsperrung 20.08.2006-30.10.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 7435,34963 7443,36175
+userdel	q4::inwork 7431,34989 7456,36042 7454,36156
 EOF
      },
      { from  => 1159653600, # 2006-10-01 00:00
@@ -6589,7 +6589,7 @@ EOF
        text  => 'L 030 zw. Ortsumgehung Altlandsberg und OE Altlandsberg Deckenerneuerung Vollsperrung 13.11.2006-08.12.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 33589,15778 32985,17127 32665,17841
+userdel	2::inwork 33589,15778 33016,17059 32945,17123 32933,17242 32665,17841
 EOF
      },
      { from  => 1162767600, # 2006-11-06 00:00
@@ -7665,7 +7665,7 @@ EOF
        text  => 'L 033 Eggersdorf-Altlandsberg Brücke über den Graben in der OD Radebrück Brückenneubau Vollsperrung 10.04.2007-26.07.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 36768,17309 35618,17440 35225,17557
+userdel	2::inwork 36768,17309 35728,17428 35618,17440 35225,17557
 EOF
      },
      { from  => 1175810400, # 2007-04-06 00:00
@@ -11156,7 +11156,7 @@ EOF
        text  => 'B 109 Schönwalde - Wandlitz OD Wandlitz, zw. Kreisel und Berliner Weg Kanalarbeiten Vollsperrung 25.03.2008-20.04.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 13556,37493 12887,36543
+userdel	q4::inwork 13546,37474 12887,36543
 EOF
      },
      { from  => 1207173600, # 2008-04-03 00:00
@@ -12265,7 +12265,7 @@ EOF
        text  => 'B 273 A 11 - Wandlitz zw. Abzw. Bernau und Wandlitz Rückau u. Erneuerung B273 Vollsperrung 18.08.2008-30.06.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 16953,35907 16653,35993 16132,36512 15491,37176 15385,37268 15253,37443 14909,37400 14477,37252 13556,37493
+userdel	2::inwork 16953,35907 16653,35993 16132,36512 15491,37176 15387,37252 15201,37349 14948,37315 14703,37197 14470,37191 13546,37474
 EOF
      },
      { from  => 1218924000, # 2008-08-17 00:00
@@ -13543,7 +13543,7 @@ EOF
        text  => 'Jessnerstr. wegen Bauarbeiten in Richtung Süden nicht befahrbar',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2009-09-01
+#: last_checked: 2009-09-13
 #: XXX nach Beendigung der Bauarbeiten bleibt wahrscheinlich die gesamte Straße asphaltiert, mit einigen Aufpflasterungen
 userdel	q4::inwork; 15080,11905 14977,11754 14941,11689 14849,11539
 EOF
@@ -14042,12 +14042,11 @@ EOF
 userdel	q4::inwork 12822,12067 12852,12306 12869,12425
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1252767974, # undef
+       until => 1252767981, # XXX undef -> nach handicap_s-orig gewandert
        text  => 'Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2009-08-04
 userdel	q4::inwork 8389,11378 8374,11479
 EOF
      },
@@ -14441,8 +14440,8 @@ userdel	q4::inwork; 11357,18598 11204,18545 11168,18542 11025,18531
 EOF
      },
      { from  => 1244930400, # 2009-06-14 00:00
-       until => 1272664800, # 2010-05-01 00:00
-       text  => 'K 6422 Eggersdorfer Str. OL Petershagen, zw. Gravenhainstr. u. Johannesstr. Straßenausbau Vollsperrung 15.06.2009-30.04.2010 ',
+       until => 1252706400, # 2009-09-12 00:00
+       text  => 'K 6422 Eggersdorfer Str. OL Petershagen, zw. Gravenhainstr. u. Johannesstr. Straßenausbau Vollsperrung 15.06.2009-11.09.2009 ',
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::inwork 36654,13977 35900,13643
@@ -14611,7 +14610,7 @@ EOF
        text  => 'L 303 Umgehungsstr. OD Eggersdorf, zw. K.-Liebknecht-Str. u. Landhausstr. Straßenbauarbeiten Vollsperrung 23.06.2009-10.07.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 39052,15115 38771,14926
+userdel	q4::inwork 38983,15053 38771,14926
 EOF
      },
      { from  => 1245708000, # 2009-06-23 00:00
@@ -15597,7 +15596,7 @@ userdel	q4::temp 45023,-51268 44951,-51018
 EOF
      },
      { from  => 1251756000, # 2009-09-01 00:00
-       until => 1253311200, # 2009-09-19 00:00
+       until => 1252440991, # 2009-09-19 00:00 1253311200
        text  => 'B 158 Bad Freienwalde - Werneuchen zw. L236, Ri. Freudenberg u. OE Tiefensee Deckschichterneuerung Vollsperrung 02.09.2009-18.09.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -15661,7 +15660,7 @@ userdel	2::inwork -42002,19243 -42106,18923 -42484,18388 -42920,17788 -43042,173
 EOF
      },
      { from  => 1251064800, # 2009-08-24 00:00
-       until => 1253311200, # 2009-09-19 00:00
+       until => 1252441079, # 2009-09-19 00:00 1253311200
        text  => 'L 144 Herzsprung - Blumenthal OD Herzsprung grundhafter Straßenausbau Vollsperrung 25.08.2009-18.09.2009 ',
        type  => 'handicap',
        data  => <<EOF,
@@ -15673,7 +15672,7 @@ EOF
        text  => 'L 303 Brücke über die DB AG bei Eggersdorf Brückenersatzneubau Vollsperrung 07.09.2009-31.05.2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 38553,14142 38637,14790
+userdel	2::inwork 38540,14138 38569,14332 38535,14602 38637,14790
 EOF
      },
      { from  => 1250978400, # 2009-08-23 00:00
@@ -15711,7 +15710,7 @@ userdel	q4::inwork 3092,9886 3108,10069 3111,10116
 EOF
      },
      { from  => 1251833196, # 2009-09-01 21:26
-       until => 1252101599, # 2009-09-04 23:59
+       until => 1252010774, # 2009-09-04 23:59 1252101599
        text  => 'Proskauer Str. (Friedrichshain) in beiden Richtungen zwischen Rigaer Str. und Bänschstr. geplatzte Wasserleitung, Straße vollständig gesperrt (bis Anfang 09/2009)',
        type  => 'handicap',
        source_id => 'IM_013998',
@@ -15720,7 +15719,7 @@ userdel	q4::inwork 14266,12446 14298,12553 14319,12629
 EOF
      },
      { from  => 1251530442, # 2009-08-29 09:20
-       until => 1253051999, # 2009-09-15 23:59
+       until => 1252790612, # 2009-09-15 23:59 1253051999
        text  => 'Päwesiner Weg (Spandau) Richtung Brunsbütteler Damm zwischen Lazarusstr. und Brunsbütteler Damm Baustelle, Fahrtrichtung gesperrt (bis Mitte 09.2009)',
        type  => 'handicap',
        source_id => 'IM_013939',
@@ -15728,9 +15727,9 @@ EOF
 userdel	q4::inwork; -4922,13609 -4922,13641 -4932,13887 -4926,13971
 EOF
      },
-     { from  => 1251530600, # 2009-08-29 09:23
-       until => 1251842399, # 2009-09-01 23:59
-       text  => 'Schönhauser Allee (Prenzlauer Berg) in beiden Richtungen im Kreuzungsbereich Schivelbeiner Str. - Wichertstr. Baustelle, Brückendurchfahrt gesperrt, aus allen Richtungen kein Linksabbiegen möglich (bis Anfang 09/2009)',
+     { from  => 1252010710, # 2009-09-03 22:45
+       until => 1253051999, # 2009-09-15 23:59
+       text  => 'Schönhauser Allee (Prenzlauer Berg) in beiden Richtungen im Kreuzungsbereich Schivelbeiner Str. - Wichertstr. Baustelle, Brückendurchfahrt gesperrt, aus allen Richtungen kein Linksabbiegen möglich (bis Mitte 09.2009)',
        type  => 'gesperrt',
        source_id => 'IM_013990',
        data  => <<EOF,
@@ -15787,13 +15786,225 @@ EOF
 userdel	q4::inwork 17746,11748 17744,11703 17741,11607
 EOF
      },
-     { from  => 1252188000, # 2009-09-06 00:00
-       until => 1280613600, # 2010-08-01 00:00
-       text  => 'Neubau der Miraustraße von Innungsstraße bis Breitenbachstraße in Berlin-Wittenau, vom 7.09.2009 bis ca. Juli 2010',
+     { from  => 1252440431, # 2009-09-08 22:07
+       until => 1272751199, # 2010-05-01 23:59
+       text  => 'Miraustr. (Reinickendorf) stadteinwärts zwischen Innungsstr. un
+d Breitenbachstr. Baustelle, Fahrtrichtung gesperrt (bis Anfang 05/2010)',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20090831.1205.137093.html',
+       source_id => 'IM_014098', # auch: http://www.berlin.de/ba-reinickendorf/presse/archiv/20090831.1205.137093.html
        data  => <<EOF,
 userdel	q4::inwork; 4014,19433 4170,19079 4195,19043
+EOF
+     },
+     { from  => 1252010752, # 2009-09-03 22:45
+       until => 1254347999, # 2009-09-30 23:59
+       text  => 'Böttgerstr. (Wedding) in beiden Richtungen zwischen Badstr. und Hochstr. Bauarbeiten, Straße vollständig gesperrt (bis Ende 09/2009)',
+       type  => 'handicap',
+       source_id => 'IM_014062',
+       data  => <<EOF,
+userdel	q4::inwork 8923,15850 9134,15953
+EOF
+     },
+     { from  => 1252014436, # 2009-09-04 00:00 1252015200
+       until => 1252014437, # 2009-09-07 00:00 1252274400
+       text  => 'B 087 Frankfurt/Oder - Müllrose zw. Markendorf u. Hohenwalde Durchlassneubau Vollsperrung 05.09.2009-06.09.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 82521,-12031 82191,-12275
+EOF
+     },
+     { from  => 1251410400, # 2009-08-28 00:00
+       until => 1254348000, # 2009-10-01 00:00
+       text  => 'B 167 Marienwerderstr. OD Finowfurt, zw. Zum Krugacker u. Aral-Tankstelle Straßenerneuerung Vollsperrung 29.08.2009-30.09.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 28575,49756 27626,49928
+EOF
+     },
+     { from  => 1252533600, # 2009-09-10 00:00
+       until => 1252965600, # 2009-09-15 00:00
+       text  => 'L 373 B112 - Müllrose OL Brieskow-Finkenheerd, R.-Sonnenburg-Str. Deckenerneuerung Vollsperrung 11.09.2009-14.09.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 89435,-16834 90073,-16502 90164,-16382
+EOF
+     },
+     { from  => 1252015200, # 2009-09-04 00:00
+       until => 1252274400, # 2009-09-07 00:00
+       text  => 'K 6303 Brieselang - L161 Bredow bei Bredow am Abzw. Brieselang Brücken-, Radweg u. Straßenbau Vollsperrung 05.09.2009-06.09.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -20109,20341 -20850,20447
+EOF
+     },
+     { from  => 1252879200, # 2009-09-14 00:00
+       until => 1253052000, # 2009-09-16 00:00
+       text  => 'L 015 Berliner Straße OL Lychen, zw. Brücke Nesselpfuhlfließ u. Schlüßstr. Kanal- u. Straßenausbau Vollsperrung 15.09.2009-15.09.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 1544,89701 1907,89597
+EOF
+     },
+     { from  => 1252015200, # 2009-09-04 00:00
+       until => 1252188000, # 2009-09-06 00:00
+       text  => 'L 030 Gerichtsstr. OL Königs Wusterhausen, zw. Schloßplatz u. Brückenstr. Schlossfest Vollsperrung 05.09.2009-05.09.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::temp 25859,-11559 26177,-11648
+EOF
+     },
+     { from  => 1252188000, # 2009-09-06 00:00
+       until => 1253570400, # 2009-09-22 00:00
+       text  => 'L 074 Sperenberger Str. OL Klausdorf, zw. Zossener Str. und Am Park Kanalarbeiten Vollsperrung 07.09.2009-21.09.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 11017,-27817 11325,-27743
+EOF
+     },
+     { from  => 1252274400, # 2009-09-07 00:00
+       until => 1252533600, # 2009-09-10 00:00
+       text  => 'L 711 Krausnick - AS Staakow zw. Krausnick und Brand Straßenbauarbeiten Vollsperrung 08.09.2009-09.09.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 35214,-41158 35289,-41439 35915,-41259 36010,-41272 36387,-40961 36499,-41097 37581,-41158
+EOF
+     },
+     { from  => 1252274400, # 2009-09-07 00:00
+       until => 1259622000, # 2009-12-01 00:00
+       text  => 'L 792 Dorfstraße OD Blankenfelde, zw. Zossener Damm u. H.-Heine-Str. Straßenausbau halbseitig gesperrt; Einbahnstraße 08.09.2009-30.11.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork; 10448,-7582 10115,-8276
+EOF
+     },
+     { from  => 1242684000, # 2009-05-19 00:00
+       until => 1252440968, # 2010-01-01 00:00 1262300400
+       text  => 'B 102 Große Milower Str. OD Rathenow, zw. Wolzenstr. und Körgraben Neubau Kreisverkehr Vollsperrung 20.05.2009-31.12.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -62269,19881 -62333,20390
+EOF
+     },
+     { from  => 1252188000, # 2009-09-06 00:00
+       until => 1275343200, # 2010-06-01 00:00
+       text  => 'B 087 Leipziger Straße Brücke über den Elsterkolk in Herzberg Brückenneubau halbseitig gesperrt; Einbahnstraße 07.09.2009-31.05.2010 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 1327,-79312 1746,-79119
+EOF
+     },
+     { from  => 1252188000, # 2009-09-06 00:00
+       until => 1253397600, # 2009-09-20 00:00
+       text  => 'B 112 Eisenhüttenstadt - Brieskow-Finenheerd Brücke über DB u. Oder-Spree-Kanal bei Zilten Belagserneuerung Vollasperrung 07.09.2009-19.09.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 93494,-21221 93192,-21578
+EOF
+     },
+     { from  => 1252447200, # 2009-09-09 00:00
+       until => 1254348000, # 2009-10-01 00:00
+       text  => 'L 068 Oelsig - Schlieben OD Schlieben, Am Mühlenberg Deckenerneuerung Vollsperrung 10.09.2009-30.09.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 10891,-76066 10533,-76130 10302,-76088
+EOF
+     },
+     { from  => 1252620000, # 2009-09-11 00:00
+       until => 1252965600, # 2009-09-15 00:00
+       text  => 'L 338 Rosa-Luxemburg-Damm, Hauptstraße Bahnübergang in Neuenhagen Gleiserneuerung Vollsperrung 12.09.2009-14.09.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 30910,13101 30815,13170 30795,13191
+EOF
+     },
+     { from  => 1252792800, # 2009-09-13 00:00
+       until => 1267398000, # 2010-03-01 00:00
+       text  => 'B 005 Friesack - Wusterhausen OD Bückwitz, Kreuzung B167, Ruppiner Str. Kreiselneubau Vollsperrung 14.09.2009-28.02.2010 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -52519,49887 -52595,49993
+EOF
+     },
+     { from  => 1252792800, # 2009-09-13 00:00
+       until => 1272664800, # 2010-05-01 00:00
+       text  => 'K 6422 Eggersdorfer Str. OL Petershagen, zw. Ebereschenstr. u. Kreisverkehr Straßenausbau Vollsperrung 14.09.2009-30.04.2010 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 35900,13643 36654,13977
+EOF
+     },
+     { from  => 1252533600, # 2009-09-10 00:00
+       until => 1252879200, # 2009-09-14 00:00
+       text  => 'K 6422 Eggersdorfer Str. OL Petershagen, zw. Elbestr. und Clara-Zetkin-Str. Straßenausbau Vollsperrung 11.09.2009-13.09.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 35900,13643 36654,13977
+EOF
+     },
+     { from  => 1252651373, # 2009-09-11 08:42
+       until => 1252886400, # 2009-09-14 02:00
+       text  => 'Ossietzkystr. (Pankow) in beiden Richtungen zwischen Breite Str. und Pestalozzistr. Veranstaltung, Straße vollständig gesperrt (bis Montag, 2 Uhr)',
+       type  => 'handicap',
+       source_id => 'IM_014139',
+       data  => <<EOF,
+userdel	q4::temp 10609,18384 10565,18507 10532,18601
+EOF
+     },
+     { from  => 1252651497, # 2009-09-11 08:44
+       until => 1252886400, # 2009-09-14 02:00
+       text  => 'Bahnhofstr. (Lichtenrade) in beiden Richtungen zwischen Goltzstr. und Steinstr. Veranstaltung, Straße vollständig gesperrt bis Mo 02:30 ',
+       type  => 'handicap',
+       source_id => 'IM_014144',
+       data  => <<EOF,
+userdel	q4::temp 10983,-2116 10747,-2129 10631,-2130 10509,-2131 10453,-2133 10310,-2136
+EOF
+     },
+     { from  => 1252651568, # 2009-09-11 08:46
+       until => 1252886400, # 2009-09-14 02:00
+       text  => 'Breite Str. (Pankow) in beiden Richtungen zwischen Berliner Str. und Mühlenstr. Veranstaltung, Straße vollständig gesperrt (bis Montag, 2 Uhr)',
+       type  => 'handicap',
+       source_id => 'IM_014138',
+       data  => <<EOF,
+userdel	q4::temp 10240,18193 10327,18177 10669,18336 10680,18380 10609,18384 10567,18366 10502,18338 10281,18241
+EOF
+     },
+     { from  => 1252651605, # 2009-09-11 08:46
+       until => 1252886400, # 2009-09-14 02:00
+       text  => 'Bölschestr. (Köpenick) in beiden Richtungen zwischen Fürstenwalder Damm und Müggelseedamm Veranstaltung, Straße vollständig gesperrt (15:29) ',
+       type  => 'handicap',
+       source_id => 'IM_014140',
+       data  => <<EOF,
+userdel	q4::temp 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+EOF
+     },
+     { from  => 1252738143, # 2009-09-12 08:49
+       until => 1252879199, # 2009-09-13 23:59
+       text  => 'Rheinstr. (Schöneberg) stadtauswärts zwischen Schmargendorfer Str. und Schmiljanstr. Veranstaltung, Fahrtrichtung gesperrt (bis 13.09., 24 Uhr)',
+       type  => 'handicap',
+       source_id => 'IM_014142',
+       data  => <<EOF,
+userdel	q4::temp; 5817,7223 5654,6941
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Breslauer Platz: Wochenmarkt Mittwoch 8-13 Uhr, Donnerstag 12-17 Uhr, Samstag 8-14 Uhr, Behinderungen möglich',
+       type  => 'gesperrt',
+       permanent => 1,
+       data  => <<EOF,
+	q4::temp 5902,7334 5810,7337 5817,7223
+EOF
+     },
+     { from  => 1254261600, # 2009-09-30 00:00
+       until => undef, # XXX
+       text  => 'Bauarbeiten in der Berliner Straße in Pankow ab Anfang Oktober 2009, Einbahnstraße Richtung Breite Str.; die Hadlichstr. ab Damerowstraße Einbahnstraße in Richtung Berliner Straße',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20090903.1100.137516.html',
+       data  => <<EOF,
+#: XXX nach den Bauarbeiten fällt evtl. das Kopfsteinpflaster weg
+#: next_check: 2010-03-01
+userdel	q4::inwork; 10680,18380 10755,18231 10829,18083 10846,17992
+userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 11025,18531
 EOF
      },
     );

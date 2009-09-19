@@ -909,10 +909,10 @@ if (!defined $bbbike_html) {
     $bbbike_html   = "$bbbike_root/" . ($use_cgi_bin_layout ? "BBBike/" : "") .
 	"html";
 }
-$is_beta = $bbbike_url =~ m{bbbike\d\.cgi}; # bbbike2.cgi ...
+$is_beta = $bbbike_url =~ m{bbbike\d(\.en)?\.cgi}; # bbbike2.cgi ...
 $bbbike2_url = $bbbike_url;
 if (!$is_beta) {
-    $bbbike2_url =~ s{bbbike\.cgi}{bbbike2.cgi};
+    $bbbike2_url =~ s{bbbike(\.en)?\.cgi}{bbbike2$1.cgi};
 }
 
 $bbbike_script = $bbbike_url;
@@ -991,6 +991,12 @@ $q->delete('Dummy');
 $smallform = $q->param('smallform') || $bi->{'mobile_device'};
 $got_cookie = 0;
 %c = ();
+
+if (defined $q->param('api')) {
+    require BBBikeCGIAPI;
+    BBBikeCGIAPI::action($q->param('api'), $q);
+    my_exit(0);
+}
 
 foreach my $type (qw(start via ziel)) {
     if (defined $q->param($type . "charimg.x") and
@@ -1573,6 +1579,25 @@ sub choose_form {
 	# Darstellung eines Vias nicht erwünscht
 	next if ($type eq 'via' and $$oneref eq 'NO');
 
+	if ($$nameref eq '' && $$oneref eq '' && defined $ort && $ort =~ $outer_berlin_qr) {
+	    my $orte = get_orte();
+	    my $coords;
+	    eval {
+		$orte->grepstreets(sub {
+				       my($name) = $_->[Strassen::NAME] =~ m{^([^|]+)};
+				       if ($name eq $ort) {
+					   $coords = $_->[Strassen::COORDS][0];
+					   die "break loop";
+				       }
+				   });
+	    };
+	    if ($coords) {
+		$q->param($type.'c', $coords);
+		$$nameref = $ort;
+		next;
+	    }
+	}
+
 	# Überprüfen, ob eine Straße in PLZ vorhanden ist.
 	if ($$nameref eq '' && $$oneref ne '') {
 	    my $plz_scope = (defined $ort && $ort =~ $outer_berlin_qr ? $ort : "Berlin/Potsdam");
@@ -1794,9 +1819,12 @@ sub choose_form {
 	$onloadscript .= "init_hi(); window.onresize = init_hi; "
     }
     $onloadscript .= "focus_first(); ";
+    if ($is_beta) {
+	$onloadscript .= "check_locate_me(); ";
+    }
     if ($nice_berlinmap || $nice_abcmap) {
 	push @extra_headers, -onLoad => $onloadscript,
-	     -script => [{-src => $bbbike_html . "/bbbike_start.js?v=1.14"},
+	     -script => [{-src => $bbbike_html . "/bbbike_start.js?v=1.16"},
 			 ($nice_berlinmap
 			  ? {-code => qq{set_bbbike_images_dir('$bbbike_images')}}
 			  : ()
@@ -2252,6 +2280,19 @@ EOF
 </select>
 };
 		    }
+		}
+
+		if ($type eq 'start' && $bi->{'can_css'} && $is_beta) {
+		    my $transpose_dot_func = "transpose_dot_func = " . overview_map()->{TransposeJS};
+		    print <<EOF;
+<div id="locateme" style="visibility:hidden;">
+  <a href="javascript:locate_me()">@{[ M("Aktuelle Position verwenden") ]}</a> @{[ experimental_label() ]}
+</div>
+<div id="locateme_marker" style="position:absolute; visibility:hidden;"><img src="$bbbike_images/bluedot.png" border=0 width=8 height=8></div>
+<script type="text/javascript"><!--
+ $transpose_dot_func
+// --></script>
+EOF
 		}
 
 		print "</td><td>" if $bi->{'can_table'};
@@ -3087,7 +3128,7 @@ EOF
 <option @{[ $winter_checked->("WI1") ]}>@{[ M("schwach") ]}
 <option @{[ $winter_checked->("WI2") ]}>@{[ M("stark") ]}
 </select></td>
- <td style="vertical-align:bottom"><span class="experimental">@{[ M("Experimentell") ]}</span><small><a target="BBBikeHelp" href="$bbbike_html/help.html#winteroptimization" onclick=show_help@{[ $lang ? "_$lang" : "" ]}('winteroptimization'); return false;">@{[ M("Was ist das?") ]}</a></small></td>
+ <td style="vertical-align:bottom">@{[ experimental_label() ]}<small><a target="BBBikeHelp" href="$bbbike_html/help.html#winteroptimization" onclick=show_help@{[ $lang ? "_$lang" : "" ]}('winteroptimization'); return false;">@{[ M("Was ist das?") ]}</a></small></td>
 </tr>
 EOF
     }
@@ -4639,7 +4680,7 @@ EOF
 		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">KML</a>};
 		}
 		if ($can_gpx || $can_kml) {
-		    print qq{<span class="experimental">} . M("Experimentell") . qq{</span>};
+		    print experimental_label();
 		}
 		if (0) { # XXX not yet
 		    my $qq2 = CGI->new({});
@@ -7139,6 +7180,10 @@ sub diff_from_old_route {
     return $diff;
 }
 
+sub experimental_label {
+    qq{<span class="experimental">} . M("Experimentell") . qq{</span>};
+}
+
 ######################################################################
 #
 # Information
@@ -7161,6 +7206,7 @@ sub show_info {
    <li><a href="#beta">Beta-Version</a>
 <!--   <li><a href="#pda">PDA-Version</a>-->
    <li><a href="#wap">WAP</a>
+   <li><a href="#iphone">iPhone</a>
    <li><a href="#gpsupload">GPS-Upload</a>
    <li><a href="#opensearch">Suchplugin für Firefox und IE</a>
 @{[ $can_palmdoc ? qq{<li><a href="#palmexport">Palm-Export</a>} : qq{} ]}
@@ -7268,6 +7314,8 @@ Für iPAQ-Handhelds mit Familiar Linux gibt es eine kleine Version von BBBike: <a
 <h4 id="wap">WAP</h4>
 BBBike kann man per WAP-Handy unter der Adresse <a href="@{[ $BBBike::BBBIKE_WAP ]}">@{[ $BBBike::BBBIKE_WAP ]}</a> nutzen.
 <p>
+<h4 id="iphone">iPhone</h4>
+Eine Anregung, wie man BBBike auf dem iPhone verwenden kann, findet man <a href="$bbbike_html/bbbike_tracks_iphone.html">hier</a>.
 <h4 id="gpsupload">GPS-Upload</h4>
 Es besteht die experimentelle Möglichkeit, sich <a href="@{[ $bbbike_url ]}?uploadpage=1">GPS-Tracks oder bbr-Dateien</a> anzeigen zu lassen.<p>
 <h4 id="diplom">Diplomarbeit</h4>

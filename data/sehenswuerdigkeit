@@ -454,7 +454,7 @@ Krankenhaus Spandau	SW|IMG:hospital -3161,15738
 Stadtbad Wilmersdorf II	SW 3478,8782
 Horst-Dohm-Eisstadion	F:SW 3448,8719 3405,8633 3405,8619 3423,8607 3442,8614 3486,8701 3482,8719 3466,8727
 Stadion Wilmersdorf	F:SW 3537,8692 3494,8606 3494,8592 3512,8580 3531,8587 3575,8674 3571,8692 3555,8700
-Sommerbad Wilmersdorf	F:SW 3618,8447 3635,8388 3620,8223 3556,8232 3553,8277 3429,8296 3440,8429
+Sommerbad Wilmersdorf	F:SW 3644,8425 3635,8388 3620,8223 3556,8232 3553,8277 3429,8296 3440,8429
 Sommerbad Kreuzberg	SW 10560,10280
 Sommerbad Neukölln	SW 11307,8290
 St.-Matthias-Kirche	SW|IMG:church 7084,9877
@@ -624,7 +624,7 @@ Stern-Center	F:Shop -7704,-4330 -7638,-4330 -7599,-4364 -7566,-4330 -7502,-4328 
 #: section: Brandenburg vvv
 Schloß Rheinsberg	SW -25852,76666
 Schloß Diedersdorf	SW 7420,-7598
-Denkmal (?) 	SW|IMG:monument -29249,39712
+Denkmal (?)	SW|IMG:monument -29249,39712
 Schloß Oranienburg	SW -1559,38608
 Schloß Teupitz (?)	SW 24950,-29407
 Schloß Branitz	SW 77500,-72834
@@ -660,7 +660,7 @@ Flughafen Finow	F:SW|IMG:airport 29800,47050
 Müncheberg, Turm	SW 60803,11559
 Müncheberg, Turm	SW 60306,11906
 Schloss Neuhardenberg	SW 67128,21979
-Schloss Wulkow 	SW 66358,19376
+Schloss Wulkow	SW 66358,19376
 Schloss Steinhöfel	SW 62739,317
 Schloss Trebnitz	SW 65639,15551
 Sauener Herrenhaus	SW 66048,-15160

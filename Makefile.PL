@@ -89,7 +89,7 @@ my @req_table =
    'CPAN.pm kann XML::SAX nicht über XML::Simple automatisch installieren'],
   [qw/XML::Simple	0	all	2	cgi/,
    'optional für XML-Dumps der BBBike-Route'],
-  [qw/XML::Parser	0	all	2|4	cgi/,
+  [qw/XML::Parser	0	all	2	cgi/,
    'optional für UAProf parsing (alternative wäre XML::SAX::PurePerl)'],
   [qw/XML::LibXML	0	all	0	base/,
    'optional für das Parsen und Erzeugen von GPX-Dateien'],
@@ -202,6 +202,8 @@ my @req_table =
    'Intelligentere Labelplatzierung, bei der PDF-Ausgabe verwendet'],
   [qw/Geo::Distance::XS	0	all	0	base/,
    'Berechnung von Entfernungen für polare Koordinaten, möglicherweise schneller als Math::Trig'],
+  [qw/Geo::Distance	0.16	all	0	base/,
+   'Prereq für Geo::Distance::XS'], # diese Version ohne Warnungen
   [qw/Tk::ExecuteCommand	0	all	1	base/,
    'Bessere Fehlerberichte im temp_blockings-Editor'],
   [qw/Algorithm::Diff	0	all	1	base/,
