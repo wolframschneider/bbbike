@@ -88,7 +88,7 @@ Tiergarten: Parkweg	q1 7663,11946 7570,11855 7223,11897 7073,11798 6778,11742 65
 Tiergarten: Parkweg	q1 7816,12150 7827,12105 7832,12036 7822,11952 7801,11875 7795,11823 7777,11787 7772,11749 7796,11681 7816,11571
 (Bremer Weg - Fasanerieallee): Parkweg	q1 6342,11878 6379,11843 6406,11784 6467,11780 6540,11754
 Parkweg: enge Br¸cke, Fuﬂweg	q2 14310,9692 14351,9757 14448,9922 14453,9929 14558,10082 14597,10129 14626,10162 14652,10201
-#: last_checked: 2009-09-02
+#: last_checked: 2009-09-24
 #: next_check: 2010-09-01
 #: note: Erˆffnung des Hotels im Dezember 2010
 Spittelmarkt: Gehweg, wegen Bauarbeiten eng	q3::inwork 10166,11592 10153,11666 10213,11728
@@ -160,7 +160,7 @@ Markgrafenstr.: Gehweg	q2 9737,11546 9732,11574 9707,11596 9701,11656
 Gendarmenmarkt: Fuﬂg‰nger	q1 9526,11911 9668,11928
 Gendarmenmarkt: Fuﬂg‰nger	q1 9516,12010 9656,12021
 Am Volkspark: Parkweg	q1 5745,8194 5934,8220
-Karl-Marx-Str. - Marchlewskistr.: Gehweg	q2 12869,12425 12985,12303
+Karl-Marx-Str. - Marchlewskistr.: Gehweg	q2 12869,12425 12950,12340 12985,12303
 Lange Str. [vor Kaufhof]: Fuﬂg‰nger	q2 12409,11902 12522,11837
 Gotenstr. - Kolonnenstr.: Fuﬂg‰nger	q2 7488,8768 7548,8879
 Nettelbeckplatz: Fuﬂg‰nger	q2 8035,15411 7989,15412 7891,15417
@@ -291,7 +291,7 @@ Karl-Marx-Allee - Kadiner Str.: Fuﬂg‰nger	q1 13543,12326 13556,12302 13555,12259
 Spreeuferweg - Elisabeth-Abegg-Str.: Rampe	q3 7923,12872 7885,12821
 (s¸dliche Fahrbahn des Sachsendamms - Naturpark Schˆneberg): Rampe	q2 7696,7562 7744,7538 7710,7547 7750,7528
 Heidenfeldstr.: Gehweg	q1 13433,13346 13393,13326
-(Gudrunstr. - Lichtenberger Br¸cke): Gehweg, Bordsteine	q2 16870,11920 16884,11889 16858,11860
+(Gudrunstr. - Lichtenberger Br¸cke): Gehweg, Bordsteine	q2 16870,11920 16884,11889 16851,11852
 Gr¸nstr.: Fuﬂg‰ngerzone	q2 22111,4562 22162,4546 22214,4548 22312,4593
 Schloﬂplatz Kˆpenick: Fuﬂg‰nger, Straﬂenbahn, Lieferverkehr	q2 22111,4562 22093,4499
 (Karlsgartenstr. - Hasenheide): Parkweg, Fuﬂg‰nger	q1 11627,8485 11508,8491 11333,8582 11250,8585
@@ -330,7 +330,7 @@ Hildburghauser Str.: Bahnunterf¸hrung f¸r Fuﬂg‰nger und Radfahrer	q1 4595,1387 4
 (B¸rgipfad - Jenbacher Weg): Fuﬂg‰nger	q2 5591,240 5671,118 5703,74
 Langhoffstr.: enge Straﬂe, Gegenverkehr	q1 19817,14454 19818,14064
 (Kolonie Friedrichsfelde Nord, entlang der Fernw‰rmeleitung): Fuﬂg‰nger	q1 17774,12244 18129,12245 18180,12262 18216,12262
-(Frankfurter Allee, Nebenfahrbahn zur Hauptfahrbahn): Bordsteinabsenkung, aber eng	q3 16553,11921 16514,11911
+(Frankfurter Allee, Nebenfahrbahn zur Hauptfahrbahn): Bordsteinabsenkung, aber eng	q3 16535,11920 16512,11894
 Zum Schlachtensee: wegen der groﬂen Steigung/Gef‰lles nur Schrittgeschwindigkeit mˆglich	q4 -1663,4218 -1592,4268
 (Treseburger Ufer - Rungiusstr.): nur f¸r Fuﬂg‰nger erlaubt	q4 12699,5909 13064,5953
 (Bellevuepark): nur f¸r Fuﬂg‰nger erlaubt	q4 22798,5731 22790,5568 22733,5569 22701,5428 22628,5340
@@ -534,6 +534,7 @@ Stendaler Platz: Fuﬂg‰nger, Spielplatz	q2 6394,14085 6489,14071
 Washingtonplatz: querende Fuﬂg‰nger, Taxis	q2; 7937,13126 8106,13130
 Washingtonplatz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 8106,13130 7937,13126
 s¸dliches Spreeufer: besonders an Wochenenden tags¸ber sehr viele Fuﬂg‰nger	q2 7437,12368 7529,12496 7670,12576
+(Ruwersteig - Kl¸sserather Weg): gemeinsamer Rad- und Gehweg, eng und kurvig	q2 19364,13033 19376,13092 19425,13089
 ######################### User Contributions #################################
 #: by: Michael Kiekbusch
 #: corrected_by: srt/policy (q4 -> q3-)
@@ -564,7 +565,7 @@ S¸ltstr.: enge Straﬂe, beidseitiges Parken	q1 12094,15598 12171,15737 12247,1586
 #: by: frau heilmann:
 Junker-Jˆrg-Str.: eng, parkende Autos	q1 18447,8818 18471,8957 18511,9185 18545,9395
 #: by: Thomas (nawrot):
-Windsteiner Weg: Bodenschwellen	q1 914,598 856,546 790,527 712,517 635,511 585,505 501,501
+Windsteiner Weg: Bodenschwellen	q1 914,598 856,546 790,527 712,517 635,511 585,505 501,493 284,470
 #: by: Fodor (sutyi):
 Liviusstr.: eng, parkende Autos	q1 10743,4515 10499,4542 10453,4518
 #: by: anonymous vvv
@@ -1000,7 +1001,7 @@ Bruno-Apitz-Str.: viele Fuﬂg‰nger	q1 16329,24865 16304,24825
 #: by: Karsten [AM]
 Scherenbergstr.: enge Straﬂe	q2 11307,15995 11358,16067 11404,16140 11464,16232 11542,16384
 #: by: Peter Friede [AM]
-Lupsteiner Weg: eng durch parkende KfZ	q1 264,227 489,296 521,332 521,360 501,501 489,587 428,656 393,704 400,765 460,812 739,885
+Lupsteiner Weg: eng durch parkende KfZ	q1 264,227 489,296 521,332 521,360 501,493 489,587 428,656 393,704 400,765 460,812 739,885
 #: by: Christine Ziegler [AM]
 Gertraudstr.: enge Straﬂe	q2 196,1657 79,1992
 #: by: christel lehmann [AM] vvv
@@ -1442,7 +1443,7 @@ M¸hlbergstr.: enge Straﬂe	q1 17187,3988 17288,4026 17341,4046
 M¸hlbergstr.: enge Straﬂe	q1 17346,4031 17402,4050 17405,4151
 #: by: ^^^
 #: confirmed_by: Daniel Prusseit:
-Hohenschˆnhausener Weg: Fuﬂg‰nger haben Vorrang	q1+ 15611,18547 16317,18020
+Hohenschˆnhausener Weg: Fuﬂg‰nger haben Vorrang	q1+ 15600,18551 16317,18020
 #: by: anonymous (q1 ohne genauere Kommentierung, aber auf dem Luftbild sieht es eng aus)
 Murtzaner Ring: enge Straﬂe	q1 19593,14472 19593,14405 19595,14348 19599,14273 19634,14171 19692,14082 19731,14061 19770,14060 19818,14064 19921,14064 19951,14083 20051,14191 20061,14220 20056,14373 20059,14441
 #XXX: P. Loll:, corrected_by: Uwe Borgenhagen (not mentioned): Windenweg: enge Straﬂe	q1 16306,2364 16106,2514 16012,2592 15923,2667 15870,2768 15785,2900 15751,2936 15602,3099
@@ -1578,3 +1579,19 @@ Kulmseestr.: einige Fuﬂg‰nger	q1 20252,12262 20303,12230
 (Kniprodestr./Michelangelostr. - Puccinistr.): Fuﬂweg mit Bordsteinkanten	q2- 13830,15138 13874,15137 13962,15238 13955,15274 13809,15370 13667,15464 13700,15501
 #: by: Sebastian Koch:
 (Gartenstr. - Tychyer Str.): sehr enger Trampelpfad	q2 21217,11328 21255,11314 21286,11319 21305,11363
+#: by: Elke Ortloff:
+Eisweg: enge Straﬂe	q1 23562,10934 23577,10915 23608,10902 23596,10848 23561,10712 23569,10693
+#: by: Manuela Baumg‰rtel:
+Lauxweg: enge Straﬂe	q1 8979,3347 8921,3208
+#: by: Esther Helmert:
+Martinstr.: enge Straﬂe	q1 4956,5121 5102,5031
+#: by: franziska (...ringleb...):
+#: corrected_by: srt/policy (q3 -> q1)
+Straﬂe 113: enge Straﬂe	q1 9931,20952 9897,21035 9852,21151
+#: by: Nikola Notz:
+Schnepfenreuther Weg: enge Straﬂe	q1 -3495,16393 -3466,16455 -3444,16576 -3426,16837 -3404,17147
+#: by: anne schotte: vvv
+#: corrected_by: srt/policy (q2 -> q1)
+Hohenzollernstr. (Zehlendorf): enge Straﬂe	q1 21,2728 53,2708 226,2752 322,2772 475,2811 492,2813 537,2843
+Hohenzollernstr. (Zehlendorf): enge Straﬂe	q1 492,2813 522,2802 537,2772
+#: by: ^^^

@@ -363,8 +363,8 @@ Zinnowitzer Str. - Friedrichstr.:	3 9015,14014 8879,13913 8935,13844
 Zimbelstr.: Poller	3 11959,20365 11924,20399 11879,20466
 Zimbelstr.: Poller	3 11879,20466 11924,20399 11959,20365
 #: note: Luftbild: vvv
-Knollstr.: Poller	3 17609,164 17558,126 17242,-80
-Knollstr.: Poller	3 17242,-80 17558,126 17609,164
+Knollstr.: Poller	3 17609,164 17558,126 17488,80 17429,42 17362,-1 17242,-80
+Knollstr.: Poller	3 17242,-80 17362,-1 17429,42 17488,80 17558,126 17609,164
 #: note: ^^^
 #: note: Luftbild: 
 Neumannstr.: Mittelstreifen	3nocross 11549,17154 11531,17250 11519,17316
@@ -553,3 +553,6 @@ Südwestkorso: Mittelstreifen	3nocross 5083,7682 5066,7668 5045,7635
 Dominicusstr.: Überqueren verboten	3nocross 6687,8385 6807,8309 6935,8208
 Schranke	3 9061,14050 8825,14401 8776,14364
 Schranke	3 8776,14364 8825,14401 9061,14050
+Plonzstr.	1 16227,12280 16252,12411
+Seddiner -> Hohenschönhausener Weg: Poller	3 * 18408,12105 18422,11837
+Hohenschönhausener Weg -> Seddiner: Poller	3 18422,11837 18408,12105 *

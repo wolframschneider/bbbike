@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: plz.t,v 1.40 2009/04/22 19:53:51 eserte Exp $
+# $Id: plz.t,v 1.41 2009/10/02 18:05:28 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 1998,2002,2003,2004,2006,2007 Slaven Rezic. All rights reserved.
@@ -119,7 +119,7 @@ if (defined $in_str) {
 	print "# Test files are written to $tmpdir.\n";
     } else {
 	print "# Test files read from $tmpdir.\n";
-	print "# If there are non-fatal errors, try to re-run this script with -create\n";
+	print "# If there are errors due to data changes then re-run this script with -create\n";
     }
 }
 

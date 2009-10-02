@@ -1,5 +1,5 @@
 #
-# $Id: Makefile,v 1.74 2009/06/07 21:08:29 eserte Exp $
+# $Id: Makefile,v 1.75 2009/10/02 18:05:28 eserte Exp $
 #
 
 # Please run this file with BSD make (often called pmake).
@@ -33,6 +33,8 @@ VPATH=		${BRBDIR}
 
 # TARGET: set to destination system to build mapserver for
 TARGET?=	local
+
+OSNAME!=	uname
 
 # Auto-set TARGET for some well-known rules
 .if make(dist-radzeit)
@@ -576,12 +578,13 @@ permissions:
 	chmod ugo+rx,ug+w .
 .if exists(/etc/debian_version)
 	[ "`stat --format=%G tmp`" = "www-data" ] || sudo chgrp www-data tmp && true
+	[ "`stat --format=%G .`"   = "www-data" ] || sudo chgrp www-data .   && true
 .endif
 
 # XXX not used by default, because it disturbs the normal deployment
 # process
 permissions-FreeBSD:
-.if ${.FreeBSD} == true
+.if ${OSNAME} == FreeBSD
 	[ "`stat -f %Sg tmp`" = "www" ] || sudo chgrp www tmp && true
 	[ "`stat -f %Sg .`"   = "www" ] || sudo chgrp www .   && true
 .endif

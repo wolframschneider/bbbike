@@ -137,6 +137,7 @@ Karte/T99.pm
 Karte/Tk50.pm
 Karte/UTM.pm
 MANIFEST
+MANIFEST.SKIP
 Makefile.PL
 MasterPunkte.pm
 MasterStrassen.pm
@@ -991,6 +992,7 @@ lib/parse_wetterkarte
 lib/savevars.pm
 lib/wettermeldung2
 lib/your.pm
+miscsrc/bbbike_chooser.pl
 msg/bbbike/en
 msg/install/en
 smsbbbike

@@ -1,5 +1,5 @@
-# ignore all non-Berlin data directories
 /.prove
+/BBBikeVar.tpl
 /ChangeLog
 /Makefile
 /Makefile.old

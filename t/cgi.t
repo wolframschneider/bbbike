@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: cgi.t,v 1.69 2009/09/13 10:17:06 eserte Exp $
+# $Id: cgi.t,v 1.70 2009/10/02 18:05:28 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 1998,2000,2003,2004,2006 Slaven Rezic. All rights reserved.
@@ -102,7 +102,7 @@ for my $cgiurl (@urls) {
     ok($res->is_success, "Simple $cgiurl request")
 	or diag(Dumper($res));
     like($res->header('Content_Type'),
-	 qr|^text/html(?:; charset=ISO-8859-1)?$|, "Expect text/html");
+	 qr{^text/html(?:; charset=(?:ISO-8859-1|utf-8))?$}, "Expect text/html (regardless which charset)");
     $content = uncompr($res);
     like($content, qr/Dieses Programm sucht .*Fahrrad-.*Routen in Berlin/,
 	 "Expected introduction text in body");
@@ -365,7 +365,6 @@ for my $cgiurl (@urls) {
 	}
     }
 
-    XXX: 
     {
 	my $content;
 
@@ -750,6 +749,7 @@ for my $cgiurl (@urls) {
 	BBBikeTest::like_long_data($resp->content, qr{Genaue Kreuzung angeben});
     }
 
+    XXX: 
     {
 	if ($CGI::VERSION == 3.33) {
 	    diag <<EOF;
@@ -769,13 +769,15 @@ EOF
 		      zielname=>"Neustädtische Kirchstr./Mittelstr. (Mitte)",
 		      pref_seen=>1,
 		     );
-	$resp = $ua->get($cgiurl . "?" . join("&", map { "$_=" . my_uri_escape($params{$_}) } keys %params));
-	ok($resp->is_success, "Request with latin1")
+	my $url = $cgiurl . "?" . join("&", map { "$_=" . my_uri_escape($params{$_}) } keys %params);
+	$resp = $ua->get($url);
+	diag "URL: $url" if $v;
+	ok($resp->is_success, "Request with latin1 incoming CGI params")
 	    or diag $resp->as_string;
 	my $content = uncompr($resp);
-	BBBikeTest::like_long_data($content, qr{Neust%e4dtische}i, "Found iso-8859-1 encoding");
-	BBBikeTest::unlike_long_data($content, qr{Neust%C3%A4dtische}i, "No single encoded utf-8");
-	BBBikeTest::unlike_long_data($content, qr{Neust%C3%83%C2%A4dtische}i, "No double encoded utf-8");
+	BBBikeTest::like_long_data($content, qr{Neust%e4dtische}i, "Found iso-8859-1 encoding in CGI params in links");
+	BBBikeTest::unlike_long_data($content, qr{Neust%C3%A4dtische}i, "No single encoded utf-8 in CGI params in links");
+	BBBikeTest::unlike_long_data($content, qr{Neust%C3%83%C2%A4dtische}i, "No double encoded utf-8 in CGI params in links");
     }
 
     {
@@ -817,9 +819,11 @@ sub display {
 sub uncompr {
     my $res = shift;
     if ($res->can("decoded_content")) {
-	$res->decoded_content(charset => 'none');
+	$res->decoded_content;
     } else {
 	# When was decoded_content part of LWP?
+	# XXX without decoded_content charset-related errors are possible,
+	# especially if utf-8 is used
 	if (defined $res->header('Content_Encoding') &&
 	    $res->header('Content_Encoding') eq 'gzip') {
 	    Compress::Zlib::memGunzip($res->content);

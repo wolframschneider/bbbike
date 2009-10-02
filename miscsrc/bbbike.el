@@ -1,7 +1,18 @@
 (setq bbbike-el-file-name load-file-name)
 
+(defvar bbbike-font-lock-trailing-whitespace-face 'bbbike-font-lock-trailing-whitespace-face
+  "Face name to use for highlightning trailing whitespace.")
+(defface bbbike-font-lock-trailing-whitespace-face
+  '((((class color) (min-colors 88)) (:foreground "Red1" :weight bold :underline t))
+    (((class color) (min-colors 16)) (:foreground "Red1" :weight bold :underline t))
+    (((class color) (min-colors 8)) (:foreground "red" :underline t))
+    (t (:underline t)))
+  "Font Lock mode face used to highlight trailing whitespace."
+  :group 'font-lock-faces)
+
 (defvar bbbike-font-lock-keywords
-  '(("^\\(#[^:].*\\)" (1 font-lock-comment-face))                 ;; comments
+  '(("\\( +\\)\t" (1 bbbike-font-lock-trailing-whitespace-face)) ;; trailing whitespace after names. works only partially, but at least it disturbs the fontification
+    ("^\\(#[^:].*\\)" (1 font-lock-comment-face))                 ;; comments
     ("\\(#:.*\\)"  (1 font-lock-warning-face))	            ;; directives
     ("^\\([^\t\n]+\\)" (1 font-lock-constant-face))           ;; name
     ("^[^#][^\t\n:]+: \\([^\t\n]+\\)" (1 font-lock-string-face t)) ;; colon separated part of name
@@ -244,11 +255,14 @@
 
 (defun bbbike-set-grep-command ()
   (set (make-local-variable 'grep-command)
-       (if (not is-windowsnt)
-	   (concat (if (string-match "csh" (getenv "SHELL"))
-		       "" "2>/dev/null ")
-		   "grep -ins *-orig *.coords.data -e ")
-	 "grep -ni ")))
+       (let ((is-windowsnt (and (or (string-match "i386-.*-windows.*" system-configuration)
+				    (string-match "i386-.*-nt" system-configuration))
+				t)))
+	 (if (not is-windowsnt)
+	     (concat (if (string-match "csh" (getenv "SHELL"))
+			 "" "2>/dev/null ")
+		     "grep -ins *-orig *.coords.data -e ")
+	   "grep -ni "))))
 
 (fset 'bbbike-cons25-format-answer
    "\C-[[H\C-sCc:\C-a\C-@\C-[[B\C-w\C-s--text\C-[[B\C-a\C-@\C-s\\$strname\C-u10\C-[[D\C-w\C-[[C\C-[[C\C-u11\C-d\C-a\C-s\"\C-[[D\C-@\C-e\C-r\"\C-[[C\C-u\370shell-command-on-region\C-mperl -e 'print eval <>'\C-m\C-e\C-?\C-[[B\C-a\C-@\C-[[F\C-r^--\C-[[A\C-w\C-[[A\C-[[B\C-m\C-[[H\C-ssubject.* by \C-@\C-s \C-[[D\C-[w\C-[[F\C-r^--\C-[[AHallo \C-y,\C-m\C-m\C-mGru\337,\C-m    Slaven\C-m\C-[[A\C-[[A\C-[[A")
