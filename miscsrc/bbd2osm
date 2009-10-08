@@ -77,8 +77,6 @@ my %cat_to_highway = ('B'  => 'primary',
 		      'H'  => 'secondary',
 		      'N'  => 'residential',
 		      'NN' => 'cycleway', # XXX
-		      '?'  => 'motorway', # cheating
-		      '??' => 'motorway', # cheating
 		     );
 
 my %cat_to_railway = ('U' => 'subway',
@@ -112,6 +110,14 @@ if ($single_file) {
 } else {
     # NODE-like
     do_file("$datadir/ampeln", \&handle_trafficsignals_like);
+    if (-r "$datadir/zebrastreifen") { # path for osm data
+	do_file("$datadir/zebrastreifen", \&handle_zebrastreifen_like);
+    } elsif (-r "$datadir/../misc/zebrastreifen") { # path for bbbike data (will be moved some day XXX)
+	do_file("$datadir/../misc/zebrastreifen", \&handle_zebrastreifen_like);
+    }
+    do_file("$datadir/ubahnhof", \&handle_railway_stations_like);
+    do_file("$datadir/sbahnhof", \&handle_railway_stations_like);
+    do_file("$datadir/rbahnhof", \&handle_railway_stations_like);
     do_file("$datadir/gesperrt", \&handle_blocked_node_like);
 
     # WAY-like
@@ -135,7 +141,7 @@ if ($single_file) {
     if (!$fragezeichen_file) {
 	$fragezeichen_file = -r "$datadir/../tmp/fragezeichen-nextcheck.bbd" ? "$datadir/../tmp/fragezeichen-nextcheck.bbd" : "$datadir/fragezeichen";
     }
-    do_file($fragezeichen_file, \&handle_highway_like);
+    do_file($fragezeichen_file, \&handle_fixme_like);
 
     do_file("$datadir/ubahn", \&handle_railway_like);
     do_file("$datadir/sbahn", \&handle_railway_like);
@@ -327,6 +333,23 @@ sub handle_highway_like {
     }
 }
 
+sub handle_fixme_like {
+    my($r, $dir) = @_;
+
+    my @node_ids = get_node_ids($r);
+
+    my $name = $r->[Strassen::NAME] || 'FIXME';
+    _xmlify($name);
+
+    print $wayfh qq{<way id="$next_way_id" visible="true">\n};
+    for my $node_id (@node_ids) {
+	print $wayfh qq{  <nd ref="$node_id"/>\n};
+    }
+    print $wayfh qq{  <tag k="FIXME" v="$name" />\n};
+    print $wayfh qq{</way>\n};
+    $next_way_id++;
+}
+
 sub handle_railway_like {
     my($r, $dir) = @_;
 
@@ -454,6 +477,35 @@ sub handle_trafficsignals_like {
     get_node_ids($r, $attribs); # as a side-effect, create the nodes
 }
 
+sub handle_zebrastreifen_like {
+    my($r) = @_;
+    get_node_ids($r, { highway => 'crossing',
+		       crossing => 'uncontrolled',
+		       crossing_ref => 'zebra',
+		     });
+}
+
+sub handle_railway_stations_like {
+    my($r) = @_;
+    my $is_ubahn = $r->[Strassen::CAT] =~ m{^U};
+    my $is_sbahn = $r->[Strassen::CAT] =~ m{^S};
+    my $attribs = { railway => 'station', # no distinction between halt and station
+		    name => ($is_ubahn ? 'U ' : $is_sbahn ? 'S ' : '') . $r->[Strassen::NAME],
+		  };
+    if      ($is_ubahn) {
+	$attribs->{station} = 'subway';
+    } elsif ($is_sbahn) {
+	$attribs->{station} = 'light_rail';
+    } elsif ($r->[Strassen::CAT] =~ m{^R}) {
+	# Regional/Fernbahnhof
+    } else {
+	warn "Unhandled railway station-like category $r->[Strassen::CAT]\n";
+	return;
+    }
+
+    get_node_ids($r, $attribs);
+}
+
 seek $nodefh, 0, SEEK_SET
     or die $!;
 seek $wayfh, 0, SEEK_SET
@@ -489,12 +541,16 @@ sub maybe_add_node {
 	$this_node_id = $node_id{$pxy} = $next_node_id++;
 	print $nodefh qq{<node id="$this_node_id" lat="$py" lon="$px" user="eserte" visible="true" };
 	if ($attribs) {
+	    print $nodefh qq{>\n};
 	    while(my($k,$v) = each %$attribs) {
+		_xmlify($k);
 		_xmlify($v);
-		print $nodefh qq{$k="$v" };
+		print $nodefh qq{  <tag k="$k" v="$v"/>\n};
 	    }
+	    print $nodefh qq{</node>\n};
+	} else {
+	    print $nodefh qq{/>\n};
 	}
-	print $nodefh qq{/>\n};
 
 	$min_lon = $px if !defined $min_lon || $min_lon > $px;
 	$max_lon = $px if !defined $max_lon || $max_lon < $px;
@@ -542,12 +598,7 @@ means clashes are possible if these data and "real" osm is mixed.
 Maybe I should check if the various osm tools can handle negative or
 non-numeric ids, or if there's a private id range documented.
 
-Implement handling of stations (ubahnhof, sbahnhof, rbahnhof).
-
 Implement handling of BNP:...
-
-Both need the handling of stand-alone nodes -> add additional
-attributes to %node_id.
 
 =head1 AUTHOR
 

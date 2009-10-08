@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: to_koord1.t,v 1.8 2008/01/17 23:07:30 eserte Exp $
+# $Id: to_koord1.t,v 1.9 2009/10/08 06:23:45 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -15,7 +15,7 @@ BEGIN {
 	use Test::More;
 	1;
     }) {
-	print "1..0 # skip: no Test::More module\n";
+	print "1..0 # skip no Test::More module\n";
 	exit;
     }
 }

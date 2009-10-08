@@ -5,7 +5,6 @@
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
 Jägerstr.: Bauarbeiten, Fahrbahn Richtung Westen gesperrt	q4::inwork; 9394,11996 9201,11968
-Simplonstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 14530,11137 14465,11195
 Reichstagufer (Mitte): Baustelle, Fahrbahn gesperrt, Fußgänger können passieren	q4::inwork 9209,12795 9280,12883
 Hauptstr. (Friedrichshain-Kreuzberg): Baustelle, Radfahrer können langsam passieren	q3::inwork 14906,10820 14794,10844
 Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt	q4::inwork 8389,11378 8374,11479
@@ -484,6 +483,7 @@ Washingtonplatz: querende Fußgänger, Taxis	q2; 7937,13126 8106,13130
 Washingtonplatz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 8106,13130 7937,13126
 südliches Spreeufer: besonders an Wochenenden tagsüber sehr viele Fußgänger	q2 7437,12368 7529,12496 7670,12576
 (Ruwersteig - Klüsserather Weg): gemeinsamer Rad- und Gehweg, eng und kurvig	q2 19364,13033 19376,13092 19425,13089
+(Fontanestr. - Kopenhagener Str.): Fußgänger	q2 7522,19804 7518,19762 7617,19748
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q3 11805,19071 11937,19175
 Ebersstr.: Schüler	q2 7245,8583 7292,8631
 Straße 103 (Niederschönhausen): enge Straße	q1 10914,20065 11051,19789
@@ -918,7 +918,7 @@ Wolmirstedter Weg: enge Straße	q1 -4143,15639 -4216,15635 -4283,15639
 (Im Amtmannsgarten - Alt-Buckow): Bordsteine, Fußgänger	q2 12487,1727 12452,1808
 Hans-Fallada-Str.: enge Straße	q1 21931,13724 21960,13776 21977,13942 22007,14209
 Dudweiler Str.: enge Straße	q1 21766,13995 21809,13973 21885,13954 21977,13942 22042,13942 22118,13954
-Cevennenstr.: enge Straße	q1 11175,21571 11175,21572 11204,21567 11217,21565 11308,21550 11408,21537 11522,21519 11696,21493 11831,21469
+Cevennenstr.: enge Straße	q1 11175,21571 11204,21567 11217,21565 11308,21550 11408,21537 11522,21519 11696,21493 11831,21469
 Reihersteg: enge Straße	q1 22471,-591 22462,-671 22458,-742 22451,-927 22442,-1093
 Grässeweg: enge Straße	q1 -5510,13326 -5295,13415 -5217,13446
 Schieritzstr.: enge Straße	q1 12463,15774 12642,15668 12821,15565 12966,15478

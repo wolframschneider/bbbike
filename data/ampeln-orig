@@ -2200,8 +2200,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 11616,30519
 	B 64421,117480
 #: note: Luftbild
 	B 63034,90338
-#: note: Luftbild
-	X 7496,19388
+	X 7487,19406
 #: note: Luftbild
 	X 19809,15676
 #: note: Luftbild
@@ -2458,6 +2457,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	B 27647,-11196
 	B 26373,-12553
 	X 24321,14410
+	B -26873,-34493
 ################################################################################
 # note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10044614/620526/
