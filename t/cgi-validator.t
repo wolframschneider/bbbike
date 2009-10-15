@@ -18,6 +18,10 @@ use Getopt::Long;
 use BBBikeUtil qw(is_in_path);
 
 BEGIN {
+    if (($ENV{USER}||'') ne 'eserte' || do { require Sys::Hostname; Sys::Hostname::hostname() !~ m{biokovo}}) {
+	print "1..0 # skip Should not be used everywhere...\n";
+	exit;
+    }
     if (!eval q{
 	use Test::More;
         use W3C::LogValidator::HTMLValidator;
@@ -25,12 +29,12 @@ BEGIN {
 	use W3C::LogValidator::LinkChecker 1.005;
 	1;
     }) {
-	print "1..0 # skip: no Test::More and/or W3C::LogValidator modules\n";
+	print "1..0 # skip no Test::More and/or W3C::LogValidator modules\n";
 	exit;
     }
 
     if (!is_in_path("checklink")) {
-	print "1..0 # skip: W3C::LogValidator::LinkChecker needs the checklink program\n";
+	print "1..0 # skip W3C::LogValidator::LinkChecker needs the checklink program\n";
 	exit;
     }
 }
