@@ -95,6 +95,7 @@ $lang_messages = {
 #  ' => '',
 'Der Zielort ist nicht erreichbar' => 'Destination is not reachable',
 'Derzeitige Position markieren' => 'Mark current position',
+'Detaillierte GIT-Information' => 'Detailed GIT information',
 'Dialog zeigen' => 'Show dialog',
 'Die Karte kann nur im Landscape-Modus gezeichnet werden.' => 'Cannot draw map in portrait mode.',
 #  'Die interne Straßennetz-Struktur wird als MLDBM-Hash
@@ -694,6 +695,7 @@ Warning:
 "Punkt einfügen" => "Insert point",
 "Mehrere Punkte einfügen" => "Insert multiple points",
 "Punkt ändern" => "Change point",
+"Punkt auswählen" => "Choose point",
 "Punkt bewegen (F3)" => "Move point (F3)",
 "Linie bewegen" => "Move line",
 "Linie glätten" => "Smooth line",
@@ -701,6 +703,7 @@ Warning:
 "Linie suchen" => "Search line",
 "Neu hinzufügen zu: " => "Add new to: ",
 "Neu hinzufügen" => "Add new",
+"Hinzufügen" => "Add",
 "Punkt löschen" => "Delete point",
 "Linien löschen" => "Delete lines",
 "Keine Dateien in %s gefunden" => "No files in %s found",
@@ -974,4 +977,7 @@ Warning:
 'nichts weiter' => 'nothing special',
 'Anhänger' => 'trailer',
 'Kindersitz mit Kind' => 'child seat',
+"Namen ändern" => "Change name",
+"Löschen" => "Delete",
+"Alle zeigen" => "Show all",
 };

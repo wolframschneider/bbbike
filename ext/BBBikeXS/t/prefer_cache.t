@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: prefer_cache.t,v 1.3 2003/06/23 22:09:37 eserte Exp $
+# $Id: prefer_cache.t,v 1.4 2009/10/08 06:23:45 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -16,15 +16,22 @@ BEGIN {
 }
 use Strassen;
 use BBBikeXS 0.10;
+use Getopt::Long;
 
-$Strassen::VERBOSE = $StrassenNetz::VERBOSE = $Strassen::Util::VERBOSE = 1;
+my $v;
+GetOptions("v" => \$v)
+    or die "usage: $0 [-v]";
+
+if ($v) {
+    $Strassen::VERBOSE = $StrassenNetz::VERBOSE = $Strassen::Util::VERBOSE = 1;
+}
 
 BEGIN {
     if (!eval q{
 	use Test;
 	1;
     }) {
-	print "1..0 # skip: no Test module\n";
+	print "1..0 # skip no Test module\n";
 	exit;
     }
 }

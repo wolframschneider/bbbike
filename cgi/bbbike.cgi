@@ -684,7 +684,8 @@ $newstreetform_encoding = "";
 @outer_berlin_places = (qw(Potsdam Oranienburg Birkenwerder Kleinmachnow Stahnsdorf Teltow Bernau Strausberg Falkensee Mahlow Erkner
 			   Dahlwitz-Hoppegarten Woltersdorf Rüdersdorf Werder Hennigsdorf Schwanebeck Hönow Ahrensfelde Großziethen
 		          ), "Hohen Neuendorf", "Königs Wusterhausen", "Schöneiche bei Berlin", "Neuenhagen bei Berlin",
-			"Petershagen bei Berlin", 'Dallgow-Döberitz',
+			"Petershagen bei Berlin", 'Dallgow-Döberitz', "Schönefeld", "Gosen", "Zepernick", "Röntgental",
+			"Glienicke/Nordbahn",
 		       );
 $outer_berlin_qr = "^(?:" . join("|", map { quotemeta } @outer_berlin_places) . ")\$"; $outer_berlin_qr = qr{$outer_berlin_qr};
 
@@ -4201,6 +4202,7 @@ sub display_route {
 	    my $filename = filename_from_route($startname, $zielname) . ".xml";
 	    http_header
 		(-type => "text/xml",
+		 -charset => '', # to suppress default of iso-8859-1
 		 @no_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
 		);
@@ -4560,7 +4562,7 @@ EOF
 			    $rw = $longest_rw || "";
 			}
 			if ($cat) {
-			    my $cat_title = { NN => "Nebenstraße ohne Kfz",
+			    my $cat_title = { NN => "Weg ohne Kfz",
 					      N  => "Nebenstraße",
 					      H  => "Hauptstraße",
 					      HH => "wichtige Hauptstraße",
@@ -4571,7 +4573,7 @@ EOF
 			    if ($rw) {
 				$rw_title = { RW => "Radweg/spur",
 					      BS => "Busspur",
-					      NS => "Nebenstraße",
+					      NS => "Nebenstraße", # XXX bessere Bezeichnung? Nebenfahrbahn? Separate Fahrbahn?
 					    }->{$rw};
 			    }
 			    my $title = $cat_title;
@@ -6252,16 +6254,9 @@ sub header {
     # XXX check the standards:
     push @$head, $q->meta({-name => 'revisit-after',
 			   -content => "7 days"});
-    # For http://geourl.org/: vvv --- seems to be dead
-    my($my_lat, $my_long) = (52.507377, 13.460589);
-    push @$head, $q->meta({-name => 'ICBM',
-			   -content => "$my_lat, $my_long"});
     push @$head, $q->meta({-name => 'DC.title',
 			   -content => "BBBike - Routenplaner für Radfahrer in Berlin und Brandenburg"});
     # ^^^
-    # Another one: http://geotags.com/geobot/add-tags.html --- is up again
-    push @$head, $q->meta({-name => "geo.position",
-			   -content => "$my_lat;$my_long"});
     push @$head, "<base target='_top'>"; # Can't use -target option here
     push @$head, cgilink({-rel  => "shortcut icon",
   			  -href => "$bbbike_images/srtbike.ico",

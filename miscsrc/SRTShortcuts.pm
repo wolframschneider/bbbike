@@ -44,6 +44,7 @@ my $other_tracks                     = "$bbbike_rootdir/tmp/other-tracks.bbd";
 use vars qw($hm_layer);
 
 use vars qw($show_situation_at_point_for_route);
+use vars qw(%want_plot_type_file %layer_for_type_file);
 
 sub register {
     my $pkg = __PACKAGE__;
@@ -192,58 +193,42 @@ sub add_button {
 	      ],
 	      [Cascade => 'Add layer', -menuitems =>
 	       [
-		[Button => "hm96.bbd (Höhenpunkte)",
-		 -command => sub {
-		     my $f = "$bbbike_rootdir/misc/senat_b/hm96.bbd";
-		     $hm_layer = add_new_layer("p", $f);
-		     $main::top->bind("<F12>"=> \&find_nearest_hoehe);
-		 }
-		],
-		[Button => "Zebrastreifen",
-		 -command => sub {
-		     local $main::lazy_plot = 0; # lazy mode does not support bbd images yet
-		     if (-e "$main::datadir/zebrastreifen") {
-			 # osm2bbd generated directories have it here:
-			 add_new_nonlazy_layer("p", "$main::datadir/zebrastreifen");
-		     } else {
-			 # the original Berlin data has it here:
-			 add_new_nonlazy_layer("p", "$bbbike_rootdir/misc/zebrastreifen");
-		     }
-		 }
-		],
-		[Button => "Ortsschilder",
-		 -command => sub {
-		     local $main::lazy_plot = 0; # lazy mode does not support bbd images yet
-		     add_new_nonlazy_layer("p", _maybe_orig_file("$main::datadir/ortsschilder"));
-		 }
-		],
-		[Button => "routing_helper", -command => sub { add_new_nonlazy_maybe_orig_layer("str", "routing_helper") }],
+		layer_checkbutton('hm96.bbd (Höhenpunkte)', 'p',
+				  "$bbbike_rootdir/misc/senat_b/hm96.bbd",
+				  oncallback  => sub { $main::top->bind("<F12>"=> \&find_nearest_hoehe) },
+				  offcallback => sub { $main::top->bind("<F12>"=> '') },
+				 ),
+		layer_checkbutton('Zebrastreifen', 'p',
+				  (-e "$main::datadir/zebrastreifen"
+				   ? "$main::datadir/zebrastreifen" # osm2bbd generated directories have it here
+				   : "$bbbike_rootdir/misc/zebrastreifen" # the original Berlin data has it here
+				  ),
+				  method => 'add_new_nonlazy_layer', # lazy mode does not support bbd images yet
+				 ),
+		layer_checkbutton('Ortsschilder', 'p',
+				  _maybe_orig_file("$main::datadir/ortsschilder"),
+				  method => 'add_new_nonlazy_layer', # lazy mode does not support bbd images yet
+				 ),
+		layer_checkbutton('routing_helper', 'str',
+				  _maybe_orig_file('routing_helper')),
 		[Button => "gesperrt_car", -command => sub { add_new_nonlazy_maybe_orig_layer("sperre", "gesperrt_car") }],
-		[Button => "brunnels", -command => sub { add_new_data_layer("str", "brunnels") }],
-		[Button => "geocoded images",
-		 -command => sub {
-		     add_new_layer("str", "$ENV{HOME}/.bbbike/geocoded_images.bbd");
-		 }],
-		[Button => "fragezeichen-outdoor-nextcheck",
-		 -command => sub {
-		     add_new_layer("str", "$bbbike_rootdir/tmp/fragezeichen-outdoor-nextcheck.bbd");
-		 }],
-		[Button => "fragezeichen-indoor-nextcheck",
-		 -command => sub {
-		     add_new_layer("str", "$bbbike_rootdir/tmp/fragezeichen-indoor-nextcheck.bbd");
-		 }],
-		[Button => "fragezeichen-nextcheck",
-		 -command => sub {
-		     add_new_layer("str", "$bbbike_rootdir/tmp/fragezeichen-nextcheck.bbd");
-		 }],
-		[Button => "Unique matches",
-		 -command => sub {
-		     add_new_layer("str", "$bbbike_rootdir/tmp/unique-matches.bbd");
-		 }],
-		[Button => "Unique matches since 2008",
-		 -command => sub {
-		     add_new_layer("str", "$bbbike_rootdir/tmp/unique-matches-since2008.bbd");
-		 }],
+## XXX no support for "sperre" type yet:
+#		layer_checkbutton('gesperrt_cat', 'sperre',
+#				  _maybe_orig_file('gesperrt_car')),
+		layer_checkbutton('brunnels', 'str',
+				  _maybe_orig_file("$main::datadir/brunnels")),
+		layer_checkbutton('geocoded images', 'str',
+				  "$ENV{HOME}/.bbbike/geocoded_images.bbd"),
+		layer_checkbutton('fragezeichen-outdoor-nextcheck', 'str',
+				  "$bbbike_rootdir/tmp/fragezeichen-outdoor-nextcheck.bbd"),
+		layer_checkbutton('fragezeichen-indoor-nextcheck', 'str',
+				  "$bbbike_rootdir/tmp/fragezeichen-indoor-nextcheck.bbd"),
+		layer_checkbutton('fragezeichen-nextcheck', 'str',
+				  "$bbbike_rootdir/tmp/fragezeichen-nextcheck.bbd"),
+		layer_checkbutton('Unique matches', 'str',
+				  "$bbbike_rootdir/tmp/unique-matches.bbd"),
+		layer_checkbutton('Unique matches since 2008', 'str',
+				  "$bbbike_rootdir/tmp/unique-matches-since2008.bbd"),
 		[Button => "Abdeckung",
 		 -command => sub {
 		     local $main::p_draw{'pp-all'} = 1;
@@ -408,6 +393,14 @@ sub add_button {
 	     __PACKAGE__."_menu",
 	     -title => "SRT Shortcuts",
 	    );
+
+#     if ($devel_host) {
+# 	for my $keysym (qw(question slash ssharp)) { # all possible and impossible places for C-?
+# 	    bind_nomod($top, "<Control-$keysym>" => sub { warn "? of @_" });
+# $t->bind("<Control-slash>" => sub { warn "? of @_"; Tk->break });
+# $t->bind("<Control-ssharp>" => sub { warn "? of @_"; Tk->break });
+
+
     my $menu = $mmf->Subwidget(__PACKAGE__ . "_menu_menu");
     $menu->configure(-disabledforeground => "black");
     if ($main::devel_host) {
@@ -558,6 +551,7 @@ sub add_new_layer {
     if (exists $args{Width}) {
 	$main::p_width{$free_layer} = $args{Width};
     }
+    $layer_for_type_file{"$type $file"} = $free_layer;
     if (!$BBBikeLazy::mode) {
 	require BBBikeLazy;
 	BBBikeLazy::bbbikelazy_empty_setup();
@@ -572,6 +566,57 @@ sub add_new_layer {
     $free_layer;
 }
 
+sub toggle_new_layer {
+    my($type, $file, %args) = @_;
+    my $method = delete $args{method} || 'add_new_layer';
+    if (!$layer_for_type_file{"$type $file"}) {
+	eval {
+	    no strict 'refs';
+	    &{$method}($type, $file, %args);
+	};
+	if ($@) {
+	    $want_plot_type_file{"$type $file"} = 0;
+	    main::status_message("Cannot toggle layer: $@", 'die');
+	}
+    } else {
+	eval {
+	    my $layer = $layer_for_type_file{"$type $file"};
+	    delete $main::str_draw{$layer};
+	    delete $main::p_draw{$layer};
+	    if ($type eq 'p') {
+		$main::c->delete($layer.'-fg');
+		$main::c->delete($layer.'-img');
+	    } else {
+		$main::c->delete($layer);
+	    }
+	    delete $layer_for_type_file{"$type $file"};
+	    BBBikeLazy::bbbikelazy_remove_data($type, $layer);
+	};
+	if ($@) {
+	    $want_plot_type_file{"$type $file"} = 1;
+	    main::status_message("Cannot toggle layer: $@", 'die');
+	}
+    }
+}
+
+sub layer_checkbutton {
+    my($label, $type, $file, %args) = @_;
+    my $oncallback  = delete $args{oncallback};
+    my $offcallback = delete $args{offcallback};
+    [Checkbutton => $label,
+     -variable => "$type $file",
+     -command => sub {
+	 my $key = "$type $file";
+	 my $layer = toggle_new_layer($type, $file);
+	 if ($oncallback && $layer_for_type_file{"$key"}) {
+	     $oncallback->($layer, $type, $file);
+	 } elsif ($offcallback && !$layer_for_type_file{"$key"}) {
+	     $offcallback->($layer, $type, $file);
+	 }   
+     },
+    ];
+}
+
 sub add_new_nonlazy_maybe_orig_layer {
     my($type, $file, %args) = @_;
     add_new_nonlazy_layer($type, _maybe_orig_file($file), %args);
@@ -580,6 +625,7 @@ sub add_new_nonlazy_maybe_orig_layer {
 sub add_new_nonlazy_layer {
     my($type, $file, %args) = @_;
     require BBBikeAdvanced;
+    local $main::lazy_plot = 0; # lazy mode does not support bbd images yet
     main::plot_additional_layer($type, $file, %args);
 }
 

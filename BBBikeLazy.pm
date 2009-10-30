@@ -1,7 +1,7 @@
 # -*- perl -*-
 
 #
-# $Id: BBBikeLazy.pm,v 1.37 2009/06/07 21:07:44 eserte Exp $
+# $Id: BBBikeLazy.pm,v 1.39 2009/10/02 18:05:27 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 1999,2003 Slaven Rezic. All rights reserved.
@@ -545,6 +545,15 @@ sub BBBikeLazy::plotstr_on_demand {
 				       $a{-width}/2 }
 				: 0);
 	    # ^^^
+	    # XXX Duplikate in plot_point:
+	    my($ampel_photo, $ampelf_photo, $andreaskr_photo, $zugbruecke_photo);
+	    if ($abk eq 'lsa') {
+		$ampel_photo      = get_symbol_scale('lsa-X');
+		$ampelf_photo     = get_symbol_scale('lsa-F');
+		$andreaskr_photo  = get_symbol_scale('lsa-B');
+		$zugbruecke_photo = get_symbol_scale('lsa-Zbr');
+	    }
+	    # ^^^
 	    my $xadd_anchor = $xadd_anchor_type->{'u'};
 	    my $yadd_anchor = $yadd_anchor_type->{'u'};
 	    my $label_spaceadd = ''; # XXX?
@@ -644,7 +653,7 @@ sub BBBikeLazy::plotstr_on_demand {
 		$gx-=5; $gy-=0;
 		warn $grid; $grid = "$gx,$gy"; warn $grid;
 		if ($lazy_p{$abk}->{Grid}{$grid}) {
-		    warn "Drawing new grid for p/$abk: $grid\n" if $verbose;
+		    warn "Drawing new grid for p/$abk: $grid [subs])\n" if $verbose;
 		    $something_new++;
 		    foreach my $strpos (@{ $lazy_p{$abk}->{Grid}{$grid} }) {
 			if (!$lazy_p_drawn{$abk}->{$strpos}) {

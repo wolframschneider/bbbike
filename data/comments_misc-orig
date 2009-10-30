@@ -1,6 +1,8 @@
 #:# -*- coding: iso-8859-1 -*-
 #: title: sonstige Kommentare
 #:
+als Zionskirchstr. ausgeschildert	CS 10306,14247 10389,14274
+als Zionskirchstr. ausgeschildert	CS 10306,14247 10277,14350 10315,14386 10365,14372 10389,14274
 Unterführung ist nur 2,10m hoch	CS 21306,-975 21393,-871
 Einbahnstr., aber Radweg vorhanden	CS; 23109,30968 23103,30923 22922,30640
 Gillweg: entlang der Autobahn	CS 2585,9653 2485,9682 2382,9722
@@ -37,7 +39,6 @@ Sellin - Benz: schwierig zu findender Waldweg	CS 53932,172900 53868,172725 53906
 Tor (Sperrung möglich?)	CP 58324,164202
 Alternativ auch Fahrt auf dem Lärmschutzwall möglich	CS 17557,17999 16990,18694
 Keine Straße ausgeschildert, am Bahndamm halten	CS; 12645,11673 12596,11696
-Erich-Steinfurth-Str.: Markt am Wochenende	CS 12596,11696 12453,11790 12366,11808
 Am Schloß Bellevue: kann bei Staatsbesuchen gesperrt sein	CS 6694,12627 7039,12314
 Paralleler Uferweg an der Spree nur über zwei Treppen erreichbar	CS 10300,12587 10355,12551 10411,12471 10422,12395
 # XXX: gibt es noch Veranstaltungen hier?
@@ -81,7 +82,7 @@ Sauerbruchweg: Gelände der Charité	CS 8487,13351 8631,13159
 (Reichsstr. - Westendallee): Privatstraße	CS 269,12576 151,12541
 (Guerickestr. - Einsteinufer): Privatstraße	CS 4642,12275 4711,12411
 Stromstr: kann über schmale Furt (keine Anhänger!) gequert werden	CS 6218,12975 6190,12978 6165,12985 6106,12989
-Am Wriezener Bahnhof: Privatstr. zu diversen Märkten	CS 12794,11893 12953,11727
+Am Wriezener Bahnhof: Privatstraße zu diversen Märkten	CS 12794,11893 12953,11727
 #: XXX_prog wird irgendwann mal zu "BS" vvv
 Bordstein	CP 12054,12903 11983,12949 11921,12990
 Bordstein	CP2; 12483,12682 12594,12866
@@ -224,3 +225,5 @@ Moor: Achtung, schlechte Ausschilderung der Radroute! Nicht in die Sackgasse fah
 Zum Uferweg: als Privatweg gekennzeichnet	CP2; 4751,13245 4742,13157
 (Bleicheroder Str. - Pasewalker Str.): entlang der Straßenbahntrasse	CS 11805,19071 11937,19175
 ausgeschildert zum Reichpietschufer 22	CP2; 8102,11099 8184,11160
+#: by: Malte Wollitz
+Gluckweg: Spazierweg längs des Bahndamms für Radfahrer befahrbar	CS 6039,3275 6171,3400

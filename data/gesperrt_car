@@ -565,8 +565,8 @@ Zinnowitzer Str. - Friedrichstr.:	3 9015,14014 8879,13913 8935,13844
 (Kastanienallee - Friedrich-Engels-Str.)	1 8789,20763 8692,20698 8717,20584
 Zimbelstr.: Poller	3 11959,20365 11924,20399 11879,20466
 Zimbelstr.: Poller	3 11879,20466 11924,20399 11959,20365
-Knollstr.: Poller	3 17609,164 17558,126 17242,-80
-Knollstr.: Poller	3 17242,-80 17558,126 17609,164
+Knollstr.: Poller	3 17609,164 17558,126 17488,80 17429,42 17362,-1 17242,-80
+Knollstr.: Poller	3 17242,-80 17362,-1 17429,42 17488,80 17558,126 17609,164
 Mittelstreifen	3nocross::ignrte 11549,17154 11531,17250 11519,17316
 Neumannstr. -> Jenny-Lind-Str.: Mittelstreifen	3::igndisp 11519,17316 11531,17250 11645,17271
 Jenny-Lind-Str. -> Neumannstr.: Mittelstreifen	3::igndisp 11645,17271 11531,17250 11549,17154
@@ -582,8 +582,12 @@ Berliner Allee -> Streustr.: Straßenbahn	3::igndisp 13401,15821 13432,15843 1326
 Talsandweg: Einbahnstraße	1 3206,21179 3138,21372
 Mittelstreifen	3nocross::ignrte 10047,813 10187,872 10269,906
 Mittelstreifen	3nocross::ignrte 10485,807 10539,662 10590,525
+Feldstedter Weg -> Reichnerweg: Mittelstreifen	3::igndisp 10423,636 10539,662 10726,739
+Feldstedter Weg -> Lichtenrader Damm: Mittelstreifen	3::igndisp 10423,636 10539,662 10485,807
+Reichnerweg -> Feldstedter Weg: Mittelstreifen	3::igndisp 10726,739 10539,662 10423,636
 Reichnerweg -> Lichtenrader Damm: Mittelstreifen	3::igndisp 10726,739 10539,662 10590,525
 Lichtenrader Damm -> Reichnerweg: Mittelstreifen	3::igndisp 10485,807 10539,662 10726,739
+Lichtenrader Damm -> Feldstedter Weg: Mittelstreifen	3::igndisp 10590,525 10539,662 10423,636
 Mittelstreifen	3nocross::ignrte 10425,971 10485,807 10539,662
 Lichtenrader Damm -> Baldersheimer Weg: Mittelstreifen	3::igndisp 10425,971 10485,807 10674,882
 Baldersheimer Weg -> Lichtenrader Damm: Mittelstreifen	3::igndisp 10674,882 10485,807 10539,662
@@ -820,10 +824,10 @@ Am Kanal -> Joliot-Curie-Str.: verboten	3::igndisp -12317,-1212 -12549,-1277 -12
 Am Kanal -> Am Kanal: verboten	3::igndisp -12317,-1212 -12549,-1277 -12666,-1311
 Mittelstr. (Potsdam)	1 -12884,-769 -12712,-734
 Emma-Herwegh-Str.	1 7791,13166 7595,12980
-Margarete-Kühn-Str.: Poller am Salzufer	3 5203,12387 5133,12240 5018,12322
 Margarete-Kühn-Str.: Poller am Salzufer	3 5203,12387 5133,12240 5194,12176
-Margarete-Kühn-Str.: Poller am Salzufer	3 5018,12322 5133,12240 5203,12387
+Margarete-Kühn-Str.: Poller am Salzufer	3 5203,12387 5133,12240 5018,12322
 Margarete-Kühn-Str.: Poller am Salzufer	3 5194,12176 5133,12240 5203,12387
+Margarete-Kühn-Str.: Poller am Salzufer	3 5018,12322 5133,12240 5203,12387
 Eberswalder Str. (Bernau)	1 23109,30968 23103,30923 22922,30640
 Rutnikstr. - Möllendorffstr.: Abbiegen verboten	3 15648,12687 15546,12690 15550,12625
 Torgauer Str.: nur für Anlieger	2:Anlieger 7446,8200 7268,8225 7005,8150
@@ -858,3 +862,11 @@ Feurigstr. -> Gustav-Freytag-Str.: Überqueren verboten	3::igndisp 7012,8511 6807
 Feurigstr. -> Dominicusstr.: Überqueren verboten	3::igndisp 7012,8511 6807,8309 6935,8208
 Dominicusstr. -> Gustav-Freytag-Str.: Überqueren verboten	3::igndisp 6935,8208 6807,8309 6779,8279
 Dominicusstr. -> Feurigstr.: Überqueren verboten	3::igndisp 6687,8385 6807,8309 7012,8511
+Schranke	3 9061,14050 8825,14401 8776,14364
+Schranke	3 8776,14364 8825,14401 9061,14050
+Plonzstr.	1 16227,12280 16252,12411
+Seddiner -> Hohenschönhausener Weg: Poller	3 18559,12105 18408,12105 18422,11837
+Seddiner -> Hohenschönhausener Weg: Poller	3 18215,12132 18408,12105 18422,11837
+Hohenschönhausener Weg -> Seddiner: Poller	3 18422,11837 18408,12105 18559,12105
+Hohenschönhausener Weg -> Seddiner: Poller	3 18422,11837 18408,12105 18215,12132
+Gluckweg	1 6039,3275 5853,3050

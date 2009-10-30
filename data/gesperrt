@@ -39,9 +39,9 @@ Breitenbachplatz (Westseite)	1 4292,6558 4218,6583 4111,6651 4089,6668 4021,6729
 Breitenbachplatz (Ostseite)	1 4000,6852 4084,6766 4125,6728 4153,6703 4250,6625 4292,6558
 Inselstr. Schwanenwerder	1 -5310,4216 -5393,4211 -5453,4274 -5471,4412 -5442,4526 -5386,4539 -5341,4511 -5358,4404 -5356,4296 -5310,4216
 Bayerischer Platz	1 6063,9106 6053,9224 6084,9242 6131,9241 6161,9128 6152,9091 6118,9078 6083,9082 6063,9106
-orthodoxe Kirche (unsicher)	1 3952,8980 3932,8989 3835,9044
+orthodoxe Kirche	1 3952,8980 3932,8989 3835,9044
 U-Bahn Dahlem	1 3216,6393 3123,6318 3023,6246 2950,6141 2898,5947 2823,5672 2797,5624 2746,5537 2523,5114 2469,5043 2313,4901 2190,4823 2079,4769 2027,4792
-U-Bahn Dahlem	1 2027,4792 2095,4805 2169,4854 2217,4884 2262,4914 2288,4932 2454,5067 2499,5144 2717,5578
+U-Bahn Dahlem	1 2027,4792 2095,4805 2169,4854 2217,4884 2288,4932 2454,5067 2499,5144 2717,5578
 Am Großen Wannsee	1 -5869,1261 -5848,1379 -5867,1449 -5901,1562 -5929,1649 -5961,1767 -6025,1991 -6021,2068 -5945,2381 -5749,2701 -5722,2714 -5663,2609 -5653,2481 -5719,2323 -5836,2119 -5883,1948 -5885,1786 -5815,1649 -5645,1504 -5588,1454 -5518,1396 -5499,1349
 Wilhelplatz	1 -7232,445 -7219,454 -7059,578
 Wilhelplatz	1 -7059,578 -7089,472 -7122,439 -7180,378
@@ -83,8 +83,8 @@ Alt-Müggelheim	1 28317,891 28188,962 28094,1090 28218,1017 28317,891
 Prenzlauer Promenade	2 12008,19613 12040,19725 11907,19749
 Prenzlauer Promenade	2 12165,19600 12008,19613 11953,19363 12003,18896 11984,18771 11950,18529
 Prenzlauer Promenade	2 11927,19308 12020,19333
-Breite Str. Pankow	1 10240,18193 10281,18241 10502,18338 10567,18366 10609,18384
-Breite Str. Pankow	1 10680,18380 10669,18336 10327,18177 10240,18193
+Breite Str. (Pankow)	1 10240,18193 10281,18241 10463,18321 10502,18338 10567,18366 10609,18384
+Breite Str. (Pankow)	1 10680,18380 10660,18345 10487,18270 10320,18197 10240,18193
 Heinrich-Mann-Platz.	1 9565,18555 9524,18531 9480,18539 9454,18570 9457,18612 9495,18639 9542,18634 9567,18599 9565,18555
 Edelweißstr.	1 8234,19936 7993,19953 7885,19975 7748,20040
 Angerburger Allee	1 -1524,11108 -1608,11133 -1885,11392 -1931,11437 -1986,11487
@@ -171,7 +171,7 @@ Gutsmuthsstr.	1 5311,6383 5075,6509
 Bornstr.	1 5210,6522 5347,6443
 Schildhornstr.	1 4903,6221 4962,6218 5165,6119
 Schildhornstr.	1 5137,6066 5047,6116 4903,6221
-Atzpodienstr.	1 16485,12384 16445,12193 16415,11926
+Atzpodienstr.	1 16485,12384 16445,12193 16413,11906
 Alt-Lietzow	1 4219,12324 4116,12349 4066,12368 4079,12411 4137,12411 4250,12390
 Martin-Wagner-Ring	1 12796,3821 12895,3991 12941,4015 12995,4003 13007,3949 12913,3743
 Wilskistr.	1 -402,4012 -303,4086 -219,4149 -151,4228 21,4434 207,4575 301,4643 418,4696 528,4747 636,4765 798,4766
@@ -194,9 +194,7 @@ Lietzenseeufer	1 2871,11211 2806,11241 2748,11206 2621,11190 2621,11065
 Gervinusstr.	1 3587,10768 3631,10784
 (Friedrich-Ludwig-Jahn-Sportpark)	2 10473,15549 10607,15142
 Darßer Str.	1 15000,18056 15031,18106 15181,18137
-Schottstr.	1 16276,12273 16389,12394
-Rüdigerstr.	1 16389,12394 16485,12384
-Alfredstr.	1 16211,11951 16246,12177 16261,12224 16276,12273
+Alfredstr.	1 16207,11937 16246,12177 16261,12224
 Fanningerstr.	1 17139,12100 17092,12107 16994,12122 16890,12135 16794,12144
 Gierkeplatz	1 3447,12269 3456,12296 3478,12306 3510,12301 3528,12276 3521,12243 3493,12228 3463,12237 3447,12269
 Knaackstr.	1 11056,15009 11030,14979 11101,14768
@@ -241,13 +239,13 @@ Anton-Saefkow-Str.	1 13202,14388 13084,14472 13013,14523 12885,14616 12782,14676
 Spilstr.	1 3865,6758 3826,6656 3836,6550
 Wöhlertstr.	1 8442,14456 8669,14550
 Pflugstr.	1 8669,14550 8776,14364
-Schwartzkopffstr.	1 8776,14364 8607,14253
+Schwartzkopffstr.	1s 8776,14364 8607,14253
 Strausberger Str.	1 12416,13045 12368,13031
 Große Präsidentenstr.	1 10097,12997 10220,13098
 Naumannstr.	1 7709,8777 7707,8915
 Gritznerstr.	1 4507,6320 4555,6403
-Duisburger Str.:	1 4183,10144 3874,10153
-Majakowskiring	1 10373,18889 10354,18814 10203,18762 10041,18697 9987,18757 10055,18831 10184,18875 10307,18915 10373,18889
+Duisburger Str.	1 4183,10144 3874,10153
+Majakowskiring	1 10373,18889 10354,18814 10203,18762 10041,18697 9987,18757 10055,18831 10162,18867 10184,18875 10307,18915 10373,18889
 Straße 462	1 4914,17399 5068,17384
 Havensteinstr.	1 6293,2583 6463,2724 6593,2831
 Worpsweder Str.	1 6191,4923 6203,5138
@@ -261,7 +259,7 @@ Braillestr.	1 4430,5324 4477,5250 4512,5199
 Mudrackzeile	1 6985,17812 7020,17690
 Gustav-Müller-Str.	1 7643,8634 7642,8815
 Gustav-Müller-Platz	1 7644,8560 7614,8599 7643,8634 7682,8598 7644,8560
-Niederlagstr.	1 9972,12184 9926,12368 9915,12417
+Niederlagstr.	1 9972,12184 9939,12296 9951,12318 9943,12364 9934,12418
 Kolk/Behnitz/Möllentordamm	1 -3042,14682 -3028,14640 -2951,14617 -2942,14666 -3027,14689 -3042,14682
 Hertelstr.	1 4893,6900 4787,6899
 Karl-Marx-Platz	1 12980,7597 13100,7626
@@ -290,7 +288,6 @@ Leipziger Platz	1 8572,11506 8580,11468 8624,11436 8703,11441 8735,11474 8733,11
 Crusemarkstr.	1 10825,18634 10712,18975
 Kavalierstr.	1 10625,18831 10721,18575
 Luitpoldstr., Verlängerung über Schulhof, nicht immer geöffnet!	2 6611,9879 6670,9887
-Haßfurter Weg	1 11796,18482 11835,18301
 Kattegatstr.	1 9323,17667 9475,17557
 Waldhüterpfad	1 510,4202 371,4453 301,4643
 Amalienpark	1 10905,18671 10950,18499 10860,18650
@@ -372,7 +369,6 @@ Spitzerstr.	1 22319,4197 22358,4282 22425,4370 22451,4441
 Zitadellenweg/BMW-Betriebswerk	2 -1993,14594 -1768,14605 -1616,14527
 Tassostr.	1 13679,16286 13645,16192 13659,16151 13642,16118 13625,16054 13621,15990 13630,15956
 Heimat	1 1032,1325 994,1485 968,1479 941,1603
-Plonzstr.	1 16227,12280 16252,12411
 Techowpromenade	1 5219,20467 5185,20358 5173,20275 5170,20182
 (Kastanienallee - Schönhauser Allee)	1 10884,14952 10838,14962
 Lossebergplatz	1 16070,23566 16094,23554 16095,23539 16079,23535 16064,23547 16070,23566
@@ -495,6 +491,16 @@ Am Langen Weg:	1 -7033,14984 -7024,14880 -7015,14772 -7011,14693 -7013,14578
 Hans-Sachs-Str.	1 3141,4023 3214,4066
 Wehneltsteig	1 1256,14217 1305,14384
 Bernhard-Bästlein-Str.	1 15595,14041 15593,13768
+(Fredersdorfer Str. - Hildegard-Jadamowitz-Str.)	1 12908,12280 12883,12118 12893,12077 12923,12043
+Washingtonplatz	1s 8106,13130 7937,13126
+(Vorfahrt HdKdW)	1 7627,12380 7654,12464 7687,12477 7778,12470 7813,12427 7821,12367
+Pfarrer-Lüdtkehaus-Platz	1 10220,-2137 10231,-2159 10318,-2156
+Radebeuler Str.	1 19067,13818 19025,14037
+Beilsteiner Str.	1 18749,12413 18800,12838 18832,13099 18852,13269
+Am Rosengarten	2 18707,12225 18834,12228 18867,12265
+(Breite Str., Verbindung)	1s 10463,18321 10487,18270
+Thuner Platz	1 3251,1881 3263,1904 3286,1912 3307,1904 3317,1884 3312,1866 3297,1845
+Lappiner Str.	1 20418,12699 20545,12683
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718 -12323,635 -12332,585 -12582,127
 Leistikowstr.	1 -12512,810 -12302,718
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -640,6 +646,7 @@ Billerbecker Weg	1s 1230,18698 1229,18750
 Alt-Tegel	1s 1668,20156 1753,20191 1907,20265
 Alt-Tegel	1s 1668,20156 1529,20131 1543,20060 1630,20097 1668,20156
 Am Treptower Park: entgegen der Richtung auf dem Parkstreifen	1s 14739,8919 14614,9052 14563,9106 14529,9141 14443,9233 14382,9299 14242,9448 14179,9515 14089,9610
+Groebenufer	1s 13206,10651 13077,10747
 Jahnstr. (KW)	1s 26243,-12300 26028,-12312
 Seestr. (Potsdam)	1s -11581,559 -11584,452
 Tizianstr. (Potsdam)	1s -11424,542 -11480,621 -11581,559
@@ -714,6 +721,8 @@ Mittelstreifen	3nocross::ignrte 20260,15434 20525,15571 20641,15622
 Rebhuhnweg -> Landsberger Allee: Mittelstreifen	3::igndisp 20550,15551 20525,15571 20260,15434
 Landsberger Allee -> Rebhuhnweg: Mittelstreifen	3::igndisp 20641,15622 20525,15571 20550,15551
 Mittelstreifen	3nocross::ignrte 15256,14237 15430,14262 15838,14319
+Mittelstr./Altenhofer Str. -> Landsberger Allee: Mittelstreifen	3::igndisp 15430,14272 15430,14262 15838,14319
+Landsberger Allee -> Mittelstr./Altenhofer Str.: Mittelstreifen	3::igndisp 15256,14237 15430,14262 15430,14272
 Mittelstreifen	3nocross::ignrte 1133,14387 1057,14389 999,14390 937,14391 889,14392
 Mittelstreifen	3nocross::ignrte 22484,11270 22756,11268 22937,11265
 Mittelstreifen	3nocross::ignrte 24175,11265 24019,11264 23848,11264 23648,11265
@@ -1231,9 +1240,13 @@ Indira-Gandhi-Str. -> Orankeweg: Straßenbahntrasse	3::igndisp 14597,15970 14609,
 Straßenbahntrasse	3nocross::ignrte 14550,16161 14522,16260 14499,16341
 Gartenstr. -> Indira-Gandhi-Str.: Straßenbahntrasse	3::igndisp 14628,16249 14522,16260 14550,16161
 Indira-Gandhi-Str. -> Gartenstr.: Straßenbahntrasse	3::igndisp 14499,16341 14522,16260 14628,16249
-unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3nocross::ignrte 16738,11878 16858,11860 16964,11845
-Frankfurter Allee -> Gudrunstr.: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16738,11878 16858,11860 16884,11889
-Gudrunstr. -> Frankfurter Allee: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16884,11889 16858,11860 16964,11845
+unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3nocross::ignrte 16737,11866 16851,11852 16962,11833 17037,11820 17151,11801
+Frankfurter Allee -> Gudrunstr.: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16737,11866 16851,11852 16884,11889
+Gudrunstr. -> Frankfurter Allee: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16884,11889 16851,11852 16962,11833
+Skandinavische Str. -> Frankfurter Allee: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16998,11861 16962,11833 17037,11820
+Frankfurter Allee -> Skandinavische Str.: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16851,11852 16962,11833 16998,11861
+Weitlingstr. -> Frankfurter Allee: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 17026,11810 17037,11820 16962,11833
+Frankfurter Allee -> Weitlingstr.: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 17151,11801 17037,11820 17026,11810
 Mittelinsel mit Geländer	3nocross::ignrte 7709,8777 7642,8815 7563,8871
 Kolonnenstr. -> Gustav-Müller-Str.: Mittelinsel mit Geländer	3::igndisp 7709,8777 7642,8815 7643,8634
 schlecht passierbar	3nocross::ignrte -4063,11805 -4009,11789 -3707,11693
@@ -1280,11 +1293,11 @@ Birkbuschstr.: unbequem zu passieren, aber Ausweichen auf linken Gehweg möglich	
 Metallgitter auf dem Mittelstreifen	3nocross::ignrte 4807,5131 4846,5069 4879,5017
 Oberlinstr. -> Birkbuschstr.: Metallgitter auf dem Mittelstreifen	3::igndisp 4732,4939 4846,5069 4807,5131
 Birkbuschstr. -> Oberlinstr.: Metallgitter auf dem Mittelstreifen	3::igndisp 4879,5017 4846,5069 4732,4939
-Linksabbiegen in den Wolfensteindamm gefährlich / unbequem	3nocross::ignrte 4789,5079 4692,4997 4675,4983 4517,4853
-Oberlinstr. -> Wolfensteindamm: Linksabbiegen in den Wolfensteindamm gefährlich / unbequem	3::igndisp 4732,4939 4692,4997 4675,4983
-Wolfensteindamm -> Oberlinstr.: Linksabbiegen in den Wolfensteindamm gefährlich / unbequem	3::igndisp 4789,5079 4692,4997 4732,4939
-Gehweg Gelieustr. -> Wolfensteindamm: Linksabbiegen in den Wolfensteindamm gefährlich / unbequem	3::igndisp 4725,4876 4675,4983 4517,4853
-Wolfensteindamm -> Gehweg Gelieustr.: Linksabbiegen in den Wolfensteindamm gefährlich / unbequem	3::igndisp 4692,4997 4675,4983 4725,4876
+Linksabbiegen in den Wolfensteindamm gefährlich/unbequem	3nocross::ignrte 4789,5079 4692,4997 4675,4983 4517,4853
+Oberlinstr. -> Wolfensteindamm: Linksabbiegen in den Wolfensteindamm gefährlich/unbequem	3::igndisp 4732,4939 4692,4997 4675,4983
+Wolfensteindamm -> Oberlinstr.: Linksabbiegen in den Wolfensteindamm gefährlich/unbequem	3::igndisp 4789,5079 4692,4997 4732,4939
+Gehweg Gelieustr. -> Wolfensteindamm: Linksabbiegen in den Wolfensteindamm gefährlich/unbequem	3::igndisp 4725,4876 4675,4983 4517,4853
+Wolfensteindamm -> Gehweg Gelieustr.: Linksabbiegen in den Wolfensteindamm gefährlich/unbequem	3::igndisp 4692,4997 4675,4983 4725,4876
 Mittelstreifen	3nocross::ignrte 6687,8385 6765,8480 6912,8617 6990,8685
 Parkweg Heinrich-Lassen-Park -> Hauptstr.: Mittelstreifen	3::igndisp 6815,8691 6912,8617 6990,8685
 Hauptstr. -> Parkweg Heinrich-Lassen-Park: Mittelstreifen	3::igndisp 6765,8480 6912,8617 6815,8691
@@ -1343,6 +1356,9 @@ Kleine Gertraudenstr. -> Gertraudenstr.: Mittelstreifen	3::igndisp 10364,11896 1
 breiter Mittelstreifen, enge Querungsmöglichkeit nur für Fußgänger, Bordsteine	3nocross::ignrte 6181,8181 6246,8222 6325,8259
 Nymphenburger Str. -> Heylstr.: breiter Mittelstreifen, enge Querungsmöglichkeit nur für Fußgänger, Bordsteine	3::igndisp 6163,8398 6246,8222 6325,8259
 Heylstr. -> Nymphenburger Str.: breiter Mittelstreifen, enge Querungsmöglichkeit nur für Fußgänger, Bordsteine	3::igndisp 6181,8181 6246,8222 6163,8398
+tragen (ca. 30 Stufen)	0:35:-219 19976,5
+tragen (ca. 30 Stufen)	0:35:-221 19932,61
+tragen (43 Stufen)	0:35:-231 16998,11861
 tragen (8 Stufen)	0:14:-35 10286,11869
 tragen (14 Stufen)	0:25:-197 -6972,1029
 tragen (Treppe)	0:30:-24 22057,4531
@@ -1359,24 +1375,24 @@ tragen (ca. 10 Stufen)	0:20:-198 26407,161781
 tragen (Treppe oder steile Kinderwagenrampe)	0:30:55 2956,24373
 tragen (Treppe)	0:30:-96 2854,23062
 tragen (ca. 30 Stufen)	0:30:-173 8773,10399
-tragen (Treppe)	0:30:-14 -18702,4551
+tragen (ca. 25 Stufen)	0:30:-14 -18702,4551
 tragen (Treppe)	0:20:-195 -12681,-1726
 tragen (ca. 30 Stufen)	0:30:-246 -13802,-1856
 tragen (ca. 30 Stufen)	0:30:-90 -13733,-1856
-tragen (Treppe)	0:30:-127 15091,21172
+tragen (21 Stufen)	0:30:-127 15091,21172
 tragen (Treppe)	0:30:-267 1471,-311
 tragen (ca. 20 Stufen)	0:30:-221 730,13286
 tragen (Treppe)	0:30:-90 3281,15792
 tragen (Treppe)	0:30:-235 3361,15784
 tragen (ca. 40 Stufen)	0:30:56 1761,3208
-tragen (Treppe)	0:30:53 17757,11761
+tragen (ca. 30 Stufen)	0:30:53 17757,11761
 tragen (15 Stufen)	0:30:-198 4710,23263
 tragen (Treppe)	0:30:-65 1179,13532
 tragen (7 Stufen)	0:20:-7 9762,16119
 tragen (ca. 10 Stufen)	0:20:-257 -6442,14286
-tragen (Treppe)	0:30:-75 7621,7105
-tragen (Treppe)	0:30:-75 7655,7096
-tragen (Treppe)	0:30:-53 15571,4168
+tragen (ca. 35 Stufen)	0:30:-75 7621,7105
+tragen (ca. 35 Stufen)	0:30:-75 7655,7096
+tragen (30 Stufen)	0:30:-53 15571,4168
 tragen (steile Treppe)	0:30:-213 15156,6034
 tragen (Treppe)	0:30:-117 4808,3404
 tragen (zwei Treppen, je ca. 10 Stufen)	0:30:-246 8822,16873
@@ -1432,13 +1448,13 @@ tragen (Jungfernbrücke, 4 Stufen)	0:10:53 10223,12010
 tragen (Treppe, 26 Stufen)	0:30:-248 10591,12203
 tragen (Treppe und Rampe)	0:30:-154 39281,17353
 tragen (Treppe oder sehr steile, sandige Rampe)	0:60:-255 41715,18446
-tragen (Treppe am Körnerpark)	0:30:-114 12734,7384
+tragen (Treppe am Körnerpark, 16 Stufen)	0:30:-114 12734,7384
 tragen (mehrere Treppen mit insgesamt ca. 25 Stufen und Kinderwagenrampe)	0:30:-261 12115,8556
 tragen (Treppe, 5 x 3 Stufen mit Kinderwagenrampe)	0:25:-110 13953,9372
 tragen (Treppe)	0:30:-225 8014,12846
 tragen (Treppe)	0:30:-4 8428,12859
 tragen (Treppe)	0:30:-265 8445,12755
-tragen (Treppe)	0:30:28 17026,11810
+tragen (Treppe)	0:35:47 17026,11810
 tragen (S-Bhf. Raoul-Wallenberg-Str.)	0:30:-244 20041,16296
 tragen (ca. 40 Stufen)	0:59:-124 1659,3226
 tragen (Treppe)	0:30:-114 1715,3257
@@ -1533,7 +1549,8 @@ Barriere, kann auf dem Gehweg umfahren werden	BNP:3:28:trailer=6 12186,9205
 Schranke (Griesinger-Krankenhaus)	BNP:5:-169 21581,12182
 Schranke	BNP:5:-106 9410,21680
 Drängelgitter	BNP:5:48 3831,8674
-Schranke (Krankenhaus Herzberge)	BNP:5:88 17247,13519
+Schranke (Krankenhaus Herzberge)	BNP:1:88 17247,13519
+Schranke (Krankenhaus Herzberge)	BNP:2:-219 17780,13468
 Drängelgitter (S-Bhf. Grunewald)	BNP:10:-55 731,9103
 Drängelgitter (vor der Straßenbahnhaltestelle)	BNP:5:-115 29092,4761
 Schranke	BNP:5:-108 32192,5915
@@ -1578,16 +1595,13 @@ Vicki-Baum-Str.: noch in Bau, gesperrt	2:inwork 15823,10300 15753,10353 15688,10
 Alice-und-Hella-Hirsch-Ring: noch in Bau, gesperrt	2:inwork 15788,10252 15823,10300
 Lina-Morgenstern-Str.: noch in Bau, gesperrt	2:inwork 15716,10303 15753,10353
 Zur Boyenstr.: Bauarbeiten	2:inwork 7925,14442 7828,14405
-Brücke über Panke: zur Zeit Bauarbeiten, keine Durchfahrt möglich	2:inwork 7753,14528 7807,14441
 Kynaststraße: Abriss und Neubau bis ca. 2010-03-01	2:inwork 14988,11130 14897,10935 14881,10864 14867,10802 14828,10628 14802,10505 14795,10473 14766,10372 14724,10297
-Am Pankepark: z.Zt. noch Baustraße, Fertigstellung um 2011-01-01, dann als Fußgänger/Radweg konzipiert	2:inwork 8184,14052 8290,14119
-Am Pankepark: z.Zt. noch Baustraße, Fertigstellung um 2011-01-01	2:inwork 8290,14119 8246,14201 8138,14148
 Brücke im Tiergarten: gesperrt	2:inwork 6406,11784 6467,11780
 Rückbau der Fr.-Ebert-Str. zwischen Breite Str. und Platz der Einheit, Bauarbeiten bis Ende 2009. Umfahrung über Alten Markt notwendig.	1:inwork -12659,-1700 -12719,-1661 -12755,-1585 -12773,-1544
 Rückbau der Fr.-Ebert-Str., kein Zugang zur Schwertfegerstr.	2:inwork -12870,-1493 -12795,-1499
 Behlertstr.	1 -12370,-354 -12500,-339 -12621,-359 -12821,-417
-tragen (Treppe)	0:30:-73 2247,5068
-tragen (Treppe)	0:15 2204,5081
+tragen (Treppe)	0:30:-82 2279,5112
+tragen (Treppe)	0:15:-136 2211,5120
 tragen (Treppe)	0:30:-206 17626,-1847
 tragen (Treppe)	0:30:-208 17602,-1803
 Drängelgitter	BNP:5:-241 4386,6288
@@ -1747,7 +1761,7 @@ Volkspark Anton Saefkow -> Kniprodestr.: schlecht zu querender Mittelstreifen (B
 Kniprodestr. -> Volkspark Anton Saefkow: schlecht zu querender Mittelstreifen (Bordsteine, Verkehr)	3::igndisp 13202,14388 13261,14456 13243,14470
 Kniprodestr. -> Volkspark Anton Saefkow: schlecht zu querender Mittelstreifen (Bordsteine, Verkehr)	3::igndisp 13261,14456 13318,14517 13281,14540
 Volkspark Anton Saefkow -> Kniprodestr.: schlecht zu querender Mittelstreifen (Bordsteine, Verkehr)	3::igndisp 13281,14540 13318,14517 13374,14581
-(Treppe zur Putlitzbrücke): tragen	0:40:90 6253,14184
+(Treppe zur Putlitzbrücke): tragen, ca. 35 Stufen	0:40:90 6253,14184
 (Treppe zur Putlitzbrücke): tragen, 35 Stufen	0:40:-172 6209,14245
 Mittelstreifen schlecht zu überqueren	3nocross::ignrte 6226,13951 6230,14184 6234,14247 6237,14309
 An der Putlitzbrücke -> Treppe zur Putlitzbrücke: Mittelstreifen schlecht zu überqueren	3::igndisp 6234,14247 6230,14184 6253,14184
@@ -2134,3 +2148,4 @@ An den Kanalwiesen (Wendisch Rietz)	1 51857,-20420 51900,-20326 51916,-20240
 Kreuzung Sewanstr./Am Tierpark	1::igndisp 18647,10172 18631,10167
 Am Tierpark, linker Gehweg	1::igndisp 18715,10003 18647,10172
 Alt-Friedrichsfelde, linker Gehweg	1::igndisp 18228,11656 18556,11688 18778,11742 19005,11767 19750,11730
+Landsberger Allee, linker Gehweg	1::igndisp 15430,14272 15256,14237

@@ -717,12 +717,15 @@ make_misc:
 	cd $(MISCDIR) && ${MAKE} ${MAKEFLAGS} 
 
 # create Storable versions of data files
-# handling of Storable files is slower, so it is not done by default
-storable:	${TARGETS}
-	for i in $(TARGETS); do \
-	    $(PERL) -I.. -I../lib ../Strassen/Storable.pm -v -u -f $$i $$i.st; \
-	    $(READABLE) $$i.st; \
-	done
+# handling of Storable files is up to twice as fast as normal bbd files, but not well-tested, so it is not done by default
+STORABLE_TARGETS=${BBD_TARGETS:S/$/.st/}
+storable:	${STORABLE_TARGETS}
+
+.for i in ${BBD_TARGETS}
+$i.st: $i
+	$(PERL) -I.. -I../lib ../Strassen/Storable.pm -v -u -f $i $i.st
+	$(READABLE) $i.st
+.endfor
 
 ######################################################################
 # FRAGEZEICHEN LAYER
@@ -1016,7 +1019,7 @@ ${PERSISTENTTMPDIR}/my-upload-fragezeichen.wpt:	fragezeichen Makefile
 temp_blockings/bbbike-temp-blockings-optimized.pl:	temp_blockings/bbbike-temp-blockings.pl .check_bbbike-temp-blockings-optimized
 	-@$(WRITEABLE) $@
 	${PERL} $(MISCSRCDIR)/check_bbbike_temp_blockings \
-	    -action output_future \
+	    -action output_future_nonpermanent \
 	    -action dump_future_as_perl > $@
 	touch .check_bbbike-temp-blockings-optimized
 	-@$(READONLY) $@
@@ -1033,7 +1036,7 @@ ${PERSISTENTTMPDIR}/fragezeichen-matches.bbd:	fragezeichen ${DATADIR}/strassen $
 
 # allow one error, and fail if the 2nd one is encountered
 FOREVER_INTERVAL?=	30
-FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  'open LOCK, ">", ".check_forever.lck" or die $$!; flock LOCK, LOCK_EX|LOCK_NB or die $$!; $$cmd=shift; while() { system($$cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; sleep $(FOREVER_INTERVAL) } unlink ".check_forever.lck"'
+FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  'open LOCK, ">", ".check_forever.lck" or die $$!; flock LOCK, LOCK_EX|LOCK_NB or die $$!; @cmd=@ARGV; while() { system(@cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; sleep $(FOREVER_INTERVAL) } unlink ".check_forever.lck"'
 
 check-forever:
 	-nice ${FOREVER_TWO_ERRORS} ${MAKE} check all ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd

@@ -189,13 +189,13 @@ Borgsdorf|/Nordbahn	2 1246,34168
 Schmachtenhagen	2 4411,40157
 Basdorf	2 12006,35572
 Birkenwerder|b. Berlin	2 1738,31301
-Zepernick	2 19475,27877
+Zepernick	2 19534,27833
 Lindenberg|b. Berlin	2 18356,22225
 Klosterfelde	2 14941,42957
 Zerpenschleuse	2 16526,50265
 Groß Schönebeck	2 18156,55883
 Marienwerder	2 22912,48759
-Lichterfelde	2 33021,51828
+Lichterfelde	2 33044,51831
 Finowfurt	2 28575,49756
 Altenhof|bei Eberswalde	2 30762,56847
 Groß Dölln	2 17513,65469
@@ -652,7 +652,7 @@ Kuhlhausen	1 -72402,40484
 Jederitz	1 -76638,42698
 Buckwitz	1 -52519,49887
 Stölln	1 -59829,37409
-Großziethen	1 13090,205
+Großziethen	1 13124,216
 Waßmannsdorf	1 15175,-3731
 Selchow|b. Waßmannsdorf	1 15355,-5280
 Großmachnow	1 15088,-14222
@@ -868,7 +868,7 @@ Jühnsdorf	1 9345,-11425
 Gantikow	1 -62223,62702
 Beelitz Heilstätten	0 -21587,-16648
 Falkenhagen	0 -10163,17584
-Finow	0 32189,48528
+Finow	0 32139,48523
 Buckow|b. Lichterfelde	0 31944,53710
 Blütenberg	0 34322,53968
 Karutzhöhe	0 34993,630
@@ -899,7 +899,7 @@ Sydow	0 30769,37588
 Gratze	0 34072,36841
 Beerbaum	0 36307,36503
 Kruge	0 42064,39744
-Birkenhöhe	0 22580,27309
+Birkenhöhe	0 22612,27360
 Elisenau	0 24231,26525
 Helenenau	0 25801,25947
 Birkholzaue	0 24244,25405
@@ -1179,7 +1179,7 @@ Rübehorst	0 -63673,41697
 Kümmernitz	0 -70882,48469
 Räbel	0 -83861,46158
 Aurith	0 99112,-16886
-Hobrechtsfelde	0 16301,29192
+Hobrechtsfelde	0 16279,29196
 Waldsiedlung	0 16132,36512
 Nattwerder	0 -21043,1586
 Gladowshöhe	0 46852,16883

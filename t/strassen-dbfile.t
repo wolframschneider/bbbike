@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: strassen-dbfile.t,v 1.7 2005/08/15 05:59:23 eserte Exp $
+# $Id: strassen-dbfile.t,v 1.8 2009/10/02 18:05:29 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -105,6 +105,7 @@ is given.
 =cut
 
 sub currmem {
+    no warnings "portable"; # hex numbers may grow large on 64bit machines
     my $pid = shift || $$;
     if (open(MAP, "/proc/$pid/map")) { # FreeBSD
 	my $mem = 0;

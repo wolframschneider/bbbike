@@ -14,9 +14,10 @@
 
 use strict;
 use warnings;
+use FindBin;
+use lib ("$FindBin::RealBin/../lib");
 
 use Cwd qw(realpath);
-use FindBin;
 use File::Basename qw(basename);
 use File::Glob qw(bsd_glob);
 use File::Spec qw();
@@ -28,8 +29,30 @@ use Tk::Pane;
 BEGIN {
     eval q{ use YAML::Syck qw(LoadFile); 1 } ||
 	eval q{ use YAML qw(LoadFile); 1 } ||
-	    die "Can't load a YAML loader: $@";
+	    eval q{ use Safe; 1 } ||
+		die "ERROR: Can't load any YAML parser (tried YAML::Syck and YAML) and also no success loading Safe.pm: $@";
 }
+
+use Msg qw(M Mfmt noautosetup);
+
+my $lang = Msg::get_lang() || 'en';
+if ($lang !~ m{^(en|de)$}) {
+    $lang = 'en';
+}
+
+$Msg::messages =
+    { en => {}, # default language
+      de => {
+	     'Sorry, no data directories found in %s' => 'Sorry, keine Datenverzeichnisse in %s gefunden',
+	     'Exit' => 'Beenden',
+	     'Lazy drawing (experimental, faster startup)' => 'Verzögertes Zeichnen (experimentell, schnellerer Start)',
+	     'Warnings in a window' => 'Warnungen in ein eigenes Fenster',
+	     'Advanced mode' => 'Fortgeschrittener Modus',
+	     'Choose city/region:' => 'Stadt/Region auswählen:',
+	     '(original BBBike data)' => '(originale BBBike-Daten)',
+	     'Options' => 'Optionen',
+	    },
+    }->{$lang};
 
 sub usage ();
 sub guess_dataset_title_from_dir ($);
@@ -48,53 +71,36 @@ my $mw = tkinit;
 
 my @bbbike_datadirs;
 
-for my $dir (bsd_glob(File::Spec->catfile($rootdir, '*'))) {
-    if (-d $dir) {
-	my $meta_yml = File::Spec->catfile($dir, 'meta.yml');
-	if (-f $meta_yml) {
-	    my $meta = eval { LoadFile $meta_yml };
-	    if (!$meta) {
-		warn "WARN: Cannot load $meta_yml: $!, skipping this possible data directory...\n";
-	    } else {
-		$meta->{datadir} = $dir;
-		$meta->{dataset_title} = guess_dataset_title_from_dir($dir)
-		    if !$meta->{dataset_title};
-		push @bbbike_datadirs, $meta;
-	    }
-	} elsif (basename($dir) =~ m{^data}) {
-	    push @bbbike_datadirs, { datadir => $dir,
-				     dataset_title => guess_dataset_title_from_dir($dir),
-				   };
-	}
-    }
-}
+find_datadirs($rootdir);
 
 if (!@bbbike_datadirs) {
-    $mw->messageBox(-message => "Sorry, no data directories found in $rootdir");
+    $mw->messageBox(-message => Mfmt('Sorry, no data directories found in %s', $rootdir));
     exit;
 }
 
-my $xb = $mw->Button(-text => 'Exit',
+uniquify_titles();
+
+my $xb = $mw->Button(-text => M"Exit",
 		     -command => sub { $mw->destroy },
 		    )->pack(-side => 'bottom');
 $mw->bind('<Escape>' => sub { $xb->invoke });
 
 my %opt;
-$mw->Menubutton(-text => 'Options',
-		-menuitems => [[Checkbutton => 'Lazy drawing (experimental, faster startup)',
+$mw->Menubutton(-text => M"Options",
+		-menuitems => [[Checkbutton => M"Lazy drawing (experimental, faster startup)",
 				-variable => \$opt{'-lazy'},
 			       ],
-			       [Checkbutton => 'Warnings in a window',
+			       [Checkbutton => M"Warnings in a window",
 				-variable => \$opt{'-stderrwindow'},
 			       ],
-			       [Checkbutton => 'Advanced mode',
+			       [Checkbutton => M"Advanced mode",
 				-variable => \$opt{'-advanced'},
 			       ],
 			      ]
 	       )->pack(-side => 'bottom', -anchor => 'e');
 
 my $bln = $mw->Balloon;
-$mw->Label(-text => 'Choose your city/region:')->pack;
+$mw->Label(-text => M"Choose city/region:")->pack;
 my $p = $mw->Scrolled("Pane", -sticky => 'nw', -scrollbars => 'ose')->pack(qw(-fill both));
 my $adjust_geometry_cb;
 for my $bbbike_datadir (sort { $a->{dataset_title} cmp $b->{dataset_title} } @bbbike_datadirs) {
@@ -105,12 +111,19 @@ for my $bbbike_datadir (sort { $a->{dataset_title} cmp $b->{dataset_title} } @bb
 				    my @cmd = ($^X, File::Spec->catfile($this_rootdir, 'bbbike'), '-datadir', $datadir,
 					       (grep { $opt{$_} } keys %opt),
 					      );
-				    if (fork == 0) {
-					exec @cmd;
-					warn "Cannot start @cmd: $!";
-					CORE::exit(1);
+				    if ($^O eq 'MSWin32') {
+					# no forking here
+					{ exec @cmd }
+					$mw->messageBox(-message => "Can't execute @cmd: $!",
+							-icon => 'error');
+				    } else {
+					if (fork == 0) {
+					    exec @cmd;
+					    warn "Cannot start @cmd: $!";
+					    CORE::exit(1);
+					}
+					$mw->destroy;
 				    }
-				    $mw->destroy;
 				},
 			       ), -sticky => 'ew');
     $bln->attach($b, -msg => $datadir);
@@ -122,11 +135,35 @@ for my $bbbike_datadir (sort { $a->{dataset_title} cmp $b->{dataset_title} } @bb
 
 MainLoop;
 
+sub find_datadirs {
+    my($startdir) = @_;
+    for my $dir (bsd_glob(File::Spec->catfile($startdir, '*'))) {
+	if (-d $dir) {
+	    my $meta = load_meta($dir);
+	    if ($meta) {
+		$meta->{datadir} = $dir;
+		$meta->{dataset_title} = guess_dataset_title_from_dir($dir)
+		    if !$meta->{dataset_title};
+		push @bbbike_datadirs, $meta;
+	    } else {
+		my $base_dir = basename($dir);
+		if ($base_dir eq 'data-osm') { # Wolfram's convention
+		    find_datadirs($dir); # XXX no recursion detection (possible with recursive symlinks...)
+		} elsif ($base_dir =~ m{^data}) {
+		    push @bbbike_datadirs, { datadir => $dir,
+					     dataset_title => guess_dataset_title_from_dir($dir),
+					   };
+		}
+	    }
+	}
+    }
+}
+
 sub guess_dataset_title_from_dir ($) {
     my $dir = shift;
     $dir = basename $dir;
     if ($dir eq 'data') {
-	'Berlin (original BBBike data)';
+	'Berlin ' . M"(original BBBike data)";
     } else {
 	my $city = $dir;
 	$city =~ s{^data}{};
@@ -134,6 +171,50 @@ sub guess_dataset_title_from_dir ($) {
 	$city = ucfirst $city;
 	$city;
     }
+}
+
+sub uniquify_titles {
+    my %seen_title;
+    for my $def (@bbbike_datadirs) {
+	push @{ $seen_title{$def->{dataset_title}} }, $def;
+    }
+    while(my($title, $v) = each %seen_title) {
+	if (@$v > 1) {
+	    for my $rec (@$v) {
+		$rec->{dataset_title} .= " (" . basename($rec->{datadir}) . ")"; # XXX should try harder if the basenames are also same
+	    }
+	}
+    }
+}
+
+sub load_meta {
+    my $dir = shift;
+
+    my $meta_yml = File::Spec->catfile($dir, 'meta.yml');
+    if (-f $meta_yml && defined &LoadFile) {
+	my $meta = eval { LoadFile $meta_yml };
+	if (!$meta) {
+	    warn "WARN: Cannot load $meta_yml: $!, will try another fallback...\n";
+	} else {
+	    return $meta;
+	}
+    }
+
+    my $meta_dd = File::Spec->catfile($dir, 'meta.dd');
+    if (-f $meta_dd) {
+	my $c = Safe->new;
+	my $meta = $c->rdo($meta_dd);
+	if (!$meta) {
+	    warn "WARN: Also cannot load $meta_dd: $!, skipping this possible data directory...\n";
+	    return;
+	} else {
+	    return $meta;
+	}
+    }
+
+    # Don't warn, we're usually trying every directory under
+    # $bbbike_root...
+    undef;
 }
 
 sub usage () {
@@ -146,7 +227,6 @@ __END__
 
 =head2 TODO
 
- * german localization
  * store list of lru items into a config file
  * store options into a config file
  * get path to config file (~/.bbbike/bbbike_chooser_options) from a yet-to-written BBBikeUtil function

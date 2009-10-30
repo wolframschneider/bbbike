@@ -205,12 +205,14 @@ tmp/streets-accurate.bbd
 
 =item C<line_width.I<category>: I<width>>
 
-Define the width of line items.
+Define the width of line items. The width should either be one value,
+or six comma-separated values. If it's only one value, then it is
+taken as the width at approx. 1:17000, and other widths are calculated
+proportionally to $line_width{default}. If it's six values, then this
+should represent the widths for the six standard scales defined by
+bbbike.
 
 XXX: The form with category is NYI!
-
-XXX: Maybe this should make it possible to define widths for specific
-zoom levels, like in the bbbike standard definitions.
 
 =item C<line_length: I<length>>
 
@@ -469,6 +471,30 @@ data.
 
 A free text note, which refers to more information. This should be
 typically a URL.
+
+=item C<last_checked: I<date>>
+
+=item C<last_checked: I<date> (by: I<name>)>
+
+Date (and optionally surveyor) of the last check for a feature. This
+is useful in conjunction with C<XXX> or C<add_fragezeichen>
+directives, to generate automatic list of streets to be surveyed
+again.
+
+=item C<next_check: I<date>>
+
+Recommended date for a next survey for a feature. This could be for
+instance the intended finish date of road construction.
+
+For generating survey lists, it could also be useful to generate
+synthetic C<next_check> directives out of C<last_checked> value, e.g.
+one month after the last check. The default interval could be set by
+the C<check_frequency> directive.
+
+=item C<check_frequency>: I<days>C<d>
+
+Set a check frequency for the synthetic generationg of C<next_check>
+directives. If not set, then the default could be one month or so.
 
 =item C<as_of: I<date>>
 

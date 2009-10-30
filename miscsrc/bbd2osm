@@ -77,8 +77,6 @@ my %cat_to_highway = ('B'  => 'primary',
 		      'H'  => 'secondary',
 		      'N'  => 'residential',
 		      'NN' => 'cycleway', # XXX
-		      '?'  => 'motorway', # cheating
-		      '??' => 'motorway', # cheating
 		     );
 
 my %cat_to_railway = ('U' => 'subway',
@@ -112,10 +110,18 @@ if ($single_file) {
 } else {
     # NODE-like
     do_file("$datadir/ampeln", \&handle_trafficsignals_like);
+    if (-r "$datadir/zebrastreifen") { # path for osm data
+	do_file("$datadir/zebrastreifen", \&handle_zebrastreifen_like);
+    } elsif (-r "$datadir/../misc/zebrastreifen") { # path for bbbike data (will be moved some day XXX)
+	do_file("$datadir/../misc/zebrastreifen", \&handle_zebrastreifen_like);
+    }
+    do_file("$datadir/ubahnhof", \&handle_railway_stations_like);
+    do_file("$datadir/sbahnhof", \&handle_railway_stations_like);
+    do_file("$datadir/rbahnhof", \&handle_railway_stations_like);
+    do_file("$datadir/gesperrt", \&handle_blocked_node_like);
 
     # WAY-like
-    do_file("$datadir/gesperrt", \&handle_blocked_like);
-
+    do_file("$datadir/gesperrt", \&handle_blocked_way_like);
     do_file("$datadir/handicap_s", \&handle_handicap_like);
     do_file("$datadir/handicap_l", \&handle_handicap_like);
     do_file("$datadir/qualitaet_s", \&handle_handicap_like);
@@ -135,11 +141,19 @@ if ($single_file) {
     if (!$fragezeichen_file) {
 	$fragezeichen_file = -r "$datadir/../tmp/fragezeichen-nextcheck.bbd" ? "$datadir/../tmp/fragezeichen-nextcheck.bbd" : "$datadir/fragezeichen";
     }
-    do_file($fragezeichen_file, \&handle_highway_like);
+    do_file($fragezeichen_file, \&handle_fixme_like);
 
     do_file("$datadir/ubahn", \&handle_railway_like);
     do_file("$datadir/sbahn", \&handle_railway_like);
     do_file("$datadir/rbahn", \&handle_railway_like);
+
+    # Use -orig files here, because it has more information (RW? etc.)
+    if (-r "$datadir/radwege-orig") {
+	do_file("$datadir/radwege-orig", \&handle_cycleway_like);
+    }
+    if (-r "$datadir/comments_cyclepath-orig") {
+	do_file("$datadir/comments_cyclepath-orig", \&handle_cycleway_like);
+    }
 }
 
 sub do_file {
@@ -157,7 +171,28 @@ sub do_file {
     }
 }
 
-sub handle_blocked_like {
+sub handle_blocked_node_like {
+    my($r, $dir) = @_;
+    my($cat) = $r->[Strassen::CAT] =~ m{^([^:]+)};
+    my $attribs;
+    if ($cat eq 'BNP') {
+	if ($r->[Strassen::NAME] =~ m{dr‰ngelgitter}i) {
+	    $attribs = { barrier => 'cycle_barrier' };
+	} else {
+	    $attribs = { barrier => 'bollard' }; #  (which is a quite bold assumption)
+	}
+    } elsif ($cat eq '0') {
+	if ($r->[Strassen::NAME] =~ m{(\d+)\s+Stufe}) { # XXX see steps_stats.pl for more possible regexps, should go into a module!
+	    $attribs->{step_count} = $1;
+	}
+	$attribs->{highway} = 'steps'; # not good: steps are in osm usually lines, not nodes!
+    }
+    if ($attribs) {
+	get_node_ids($r, $attribs); # as a side-effect, create the nodes
+    }
+}
+
+sub handle_blocked_way_like {
     my($r, $dir) = @_;
     my($cat) = $r->[Strassen::CAT] =~ m{^([^:]+)};
     my @node_ids = map {
@@ -171,12 +206,6 @@ sub handle_blocked_like {
 	} elsif ($cat eq '2') {
 	    $no_access{$node_ids[$node_id_i-1].' '.$node_ids[$node_id_i]} = 1;
 	    $no_access{$node_ids[$node_id_i].' '.$node_ids[$node_id_i-1]} = 1;
-	} elsif ($cat =~ m{^BNP}) {
-	    if ($r->[Strassen::NAME] =~ m{dr‰ngelgitter}i) {
-		# XXX add node barrier=cycle_barrier
-	    } else {
-		# XXX add node barrier=bollard (which is a quite bold assumption)
-	    }
 	}
     }
 }
@@ -190,7 +219,9 @@ sub handle_handicap_like {
 	($cat_hin, $cat_rueck) = ($r->[Strassen::CAT], $r->[Strassen::CAT]);
     }
     for ($cat_hin, $cat_rueck) {
-	($_) = $_ =~ m{^([^:]+)};
+	if (defined $_) {
+	    ($_) = $_ =~ m{^([^:]+)};
+	}
     }
     my @node_ids = map {
 	my($px,$py) = $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(split /,/, $_));
@@ -201,7 +232,7 @@ sub handle_handicap_like {
 	if ($cat_hin =~ m{^[qQ][34]$}) {
 	    $speed0{$node_ids[$node_id_i-1].' '.$node_ids[$node_id_i]} = 1; # XXX correct direction
 	}
-	if ($cat_rueck =~ m{^[qQ][34]$}) {
+	if (defined $cat_rueck && $cat_rueck =~ m{^[qQ][34]$}) {
 	    $speed0{$node_ids[$node_id_i].' '.$node_ids[$node_id_i-1]} = 1;
 	}
     }
@@ -308,6 +339,23 @@ sub handle_highway_like {
 	print $wayfh qq{</way>\n};
 	$next_way_id++;
     }
+}
+
+sub handle_fixme_like {
+    my($r, $dir) = @_;
+
+    my @node_ids = get_node_ids($r);
+
+    my $name = $r->[Strassen::NAME] || 'FIXME';
+    _xmlify($name);
+
+    print $wayfh qq{<way id="$next_way_id" visible="true">\n};
+    for my $node_id (@node_ids) {
+	print $wayfh qq{  <nd ref="$node_id"/>\n};
+    }
+    print $wayfh qq{  <tag k="FIXME" v="$name" />\n};
+    print $wayfh qq{</way>\n};
+    $next_way_id++;
 }
 
 sub handle_railway_like {
@@ -437,6 +485,110 @@ sub handle_trafficsignals_like {
     get_node_ids($r, $attribs); # as a side-effect, create the nodes
 }
 
+sub handle_zebrastreifen_like {
+    my($r) = @_;
+    get_node_ids($r, { highway => 'crossing',
+		       crossing => 'uncontrolled',
+		       crossing_ref => 'zebra',
+		     });
+}
+
+sub handle_railway_stations_like {
+    my($r) = @_;
+    my $is_ubahn = $r->[Strassen::CAT] =~ m{^U};
+    my $is_sbahn = $r->[Strassen::CAT] =~ m{^S};
+    my $attribs = { railway => 'station', # no distinction between halt and station
+		    name => ($is_ubahn ? 'U ' : $is_sbahn ? 'S ' : '') . $r->[Strassen::NAME],
+		  };
+    if      ($is_ubahn) {
+	$attribs->{station} = 'subway';
+    } elsif ($is_sbahn) {
+	$attribs->{station} = 'light_rail';
+    } elsif ($r->[Strassen::CAT] =~ m{^R}) {
+	# Regional/Fernbahnhof
+    } else {
+	warn "Unhandled railway station-like category $r->[Strassen::CAT]\n";
+	return;
+    }
+
+    get_node_ids($r, $attribs);
+}
+
+sub handle_cycleway_like {
+    my($r, $dir) = @_;
+    my($cat_hin, $cat_rueck);
+    if ($r->[Strassen::CAT] =~ /^(.*);(.*)$/) {
+	($cat_hin, $cat_rueck) = ($1, $2);
+    } else {
+	($cat_hin, $cat_rueck) = ($r->[Strassen::CAT], $r->[Strassen::CAT]);
+    }
+    for ($cat_hin, $cat_rueck) {
+	if (defined $_) {
+	    ($_) = $_ =~ m{^([^:]+)};
+	}
+    }
+    my @node_ids = map {
+	my($px,$py) = $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(split /,/, $_));
+	my $node_id = maybe_add_node($px,$py);
+	$node_id;
+    } @{ $r->[Strassen::COORDS] };
+
+    for my $def ([$cat_hin, +1], [$cat_rueck, -1]) {
+	my($cat, $direction) = @$def;
+	next if !defined $cat || $cat eq '';
+	my $extra_tags;
+	if ($cat eq 'RW' || $cat eq 'RW?' || $cat eq 'RW8?') {
+	    $extra_tags .= qq{  <tag k="cycleway" v="track" />\n};
+	    $extra_tags .= qq{  <tag k="bbbike:usage" v="unknown" />\n};
+	} elsif ($cat eq 'RW1' || $cat eq 'RW9') {
+	    $extra_tags .= qq{  <tag k="cycleway" v="track" />\n};
+	    $extra_tags .= qq{  <tag k="bbbike:usage" v="optional" />\n};
+	} elsif ($cat eq 'RW2' || $cat eq 'RW8') {
+	    $extra_tags .= qq{  <tag k="cycleway" v="track" />\n};
+	    $extra_tags .= qq{  <tag k="bbbike:usage" v="mandatory" />\n};
+	} elsif ($cat eq 'RW3') {
+	    $extra_tags .= qq{  <tag k="cycleway" v="lane" />\n};
+	    $extra_tags .= qq{  <tag k="bbbike:usage" v="optional" />\n};
+	} elsif ($cat eq 'RW4') {
+	    $extra_tags .= qq{  <tag k="cycleway" v="lane" />\n};
+	    $extra_tags .= qq{  <tag k="bbbike:usage" v="mandatory" />\n};
+	} elsif ($cat eq 'RW4?') {
+	    $extra_tags .= qq{  <tag k="cycleway" v="lane" />\n};
+	    $extra_tags .= qq{  <tag k="bbbike:usage" v="unknown" />\n};
+	} elsif ($cat eq 'RW5') {
+	    $extra_tags .= qq{  <tag k="psv" v="yes" />\n};
+	} elsif ($cat eq 'RW5?') {
+	    $extra_tags .= qq{  <tag k="psv" v="yes" />\n};
+	    $extra_tags .= qq{  <tag k="bbbike:times" v="unknown" />\n};
+	} elsif ($cat eq 'RW6') {
+	    # living street XXX
+	} elsif ($cat eq 'RW7') {
+	    # Fahrradstraﬂe XXX
+	} elsif ($cat eq 'RW10') {
+	    # Nebenfahrbahn XXX
+	} elsif ($cat eq 'RW0') {
+	    # kein Radweg
+	} else {
+	    warn "Unexpected category '$cat'...";
+	}
+	if ($extra_tags) {
+	    print $wayfh qq{<way id="$next_way_id" visible="true">\n};
+	    my @node_ids = $direction == +1 ? @node_ids : reverse(@node_ids);
+	    for my $node_id (@node_ids) {
+		print $wayfh qq{  <nd ref="$node_id"/>\n};
+	    }
+	    my $name = $r->[Strassen::NAME];
+	    if (defined $name && $name ne '') {
+		_xmlify($name);
+		print $wayfh qq{  <tag k="name" v="$name" />\n};
+	    }
+	    print $wayfh $extra_tags;
+	    print $wayfh qq{</way>\n};
+	    $next_way_id++;
+	}
+    }
+}
+
 seek $nodefh, 0, SEEK_SET
     or die $!;
 seek $wayfh, 0, SEEK_SET
@@ -472,12 +624,16 @@ sub maybe_add_node {
 	$this_node_id = $node_id{$pxy} = $next_node_id++;
 	print $nodefh qq{<node id="$this_node_id" lat="$py" lon="$px" user="eserte" visible="true" };
 	if ($attribs) {
+	    print $nodefh qq{>\n};
 	    while(my($k,$v) = each %$attribs) {
+		_xmlify($k);
 		_xmlify($v);
-		print $nodefh qq{$k="$v" };
+		print $nodefh qq{  <tag k="$k" v="$v"/>\n};
 	    }
+	    print $nodefh qq{</node>\n};
+	} else {
+	    print $nodefh qq{/>\n};
 	}
-	print $nodefh qq{/>\n};
 
 	$min_lon = $px if !defined $min_lon || $min_lon > $px;
 	$max_lon = $px if !defined $max_lon || $max_lon < $px;
@@ -525,12 +681,7 @@ means clashes are possible if these data and "real" osm is mixed.
 Maybe I should check if the various osm tools can handle negative or
 non-numeric ids, or if there's a private id range documented.
 
-Implement handling of stations (ubahnhof, sbahnhof, rbahnhof).
-
 Implement handling of BNP:...
-
-Both need the handling of stand-alone nodes -> add additional
-attributes to %node_id.
 
 =head1 AUTHOR
 

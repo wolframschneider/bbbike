@@ -59,7 +59,7 @@ Gransee	3 -7451,66527
 Zehdenick	4 4273,63382
 Liebenwalde	3 8919,51778
 Eberswalde	4 37391,48095
-Finow	0 32189,48528
+Finow	0 32139,48523
 Buckow|b. Lichterfelde	0 31944,53710
 Blütenberg	0 34322,53968
 Joachimsthal	3 32966,64019
@@ -197,7 +197,7 @@ Schönfeld|(Barnim)	1 32801,30994
 Kruge	0 42064,39744
 Gersdorf	1 42833,41088
 Börnicke|b. Bernau	1 25977,28869
-Birkenhöhe	0 22580,27309
+Birkenhöhe	0 22612,27360
 Willmersdorf	1 29267,28985
 Leuenberg	1 42781,33687
 Brunow	1 41618,36515
@@ -542,7 +542,7 @@ Summt	0 7562,31439
 Schönwalde	1 12466,30452
 Gorinsee	0 14341,30839
 Schönerlinde	1 12931,27643
-Zepernick	2 19475,27877
+Zepernick	2 19534,27833
 Schönow	1 18900,30531
 Schwanebeck|b. Berlin	1 19658,24589
 Lindenberg|b. Berlin	2 18356,22225
@@ -571,7 +571,7 @@ Eichhorst	1 25465,54223
 Wildau|b. Eichhorst	0 26159,55831
 Rosenbeck	0 24390,52287
 Werbellin	0 29858,54346
-Lichterfelde	2 33021,51828
+Lichterfelde	2 33044,51831
 Finowfurt	2 28575,49756
 Altenhof|bei Eberswalde	2 30762,56847
 Liebenthal	1 13370,56440
@@ -789,7 +789,7 @@ Buckwitz	1 -52519,49887
 Großderschau	2 -60554,41573
 Stölln	1 -59829,37409
 Glasow	0 12877,-6903
-Großziethen	1 13090,205
+Großziethen	1 13124,216
 Kleinziethen	0 13506,-2809
 Waßmannsdorf	1 15175,-3731
 Selchow|b. Waßmannsdorf	1 15355,-5280
@@ -1208,7 +1208,7 @@ Ratzdorf	2 103154,-35833
 #: alias: Tuchen-Klobbicke
 Tuchen	1 36037,39137
 Klobbicke	1 36640,39793
-Hobrechtsfelde	0 16301,29192
+Hobrechtsfelde	0 16279,29196
 Waldsiedlung	0 16132,36512
 Jühnsdorf	1 9345,-11425
 Nattwerder	0 -21043,1586

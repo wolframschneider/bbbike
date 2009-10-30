@@ -81,11 +81,14 @@ use Getopt::Long;
 
 my @browsers;
 my $v;
+my %do_xxx;
 		
 if (!GetOptions(get_std_opts("cgiurl", "xxx"),
 		"v" => \$v,
-		'browser=s@' => \@browsers)) {
-    die "usage: $0 [-cgiurl url] [-xxx] [-v] [-browser ...]";
+		'browser=s@' => \@browsers,
+		'xxx-petri-dank' => \$do_xxx{PETRI_DANK},
+	       )) {
+    die "usage: $0 [-cgiurl url] [-xxx|-xxx-petri-dank] [-v] [-browser ...]";
 }
 
 if (!@browsers) {
@@ -160,6 +163,12 @@ for my $browser (@browsers) {
 	$like_long_data->(qr/Bevorzugte Geschwindigkeit/i, "Einstellungen page");
     };
 
+    # -xxx... handling
+    for my $key (keys %do_xxx) {
+	if ($do_xxx{$key}) {
+	    eval 'goto XXX_' . $key; die $@ if $@;
+	}
+    }
     if ($do_xxx) {
 	goto XXX;
     }
@@ -283,7 +292,7 @@ for my $browser (@browsers) {
     ######################################################################
     # A street in Potsdam but not in "landstrassen"
 
-    {
+ XXX_PETRI_DANK: {
 
 	$get_agent->();
 
@@ -305,7 +314,11 @@ for my $browser (@browsers) {
 	# $use_exact_streetchooser=1. Actually the correct crossing in this case
 	# should be the end of "Lennéstr.", but the find-nearest-crossing code finds
 	# only real crossing, not endpoints of streets.
-	$like_long_data->(
+	{
+	    local $TODO;
+	    $TODO = "Known to fail with perl 5.10.0 (regexp problem)"
+		if $] == 5.010;
+	    $like_long_data->(
 	     qr{(\QHans-Sachs-Str. (Potsdam)/Meistersingerstr. (Potsdam)\E
 		|\QCarl-von-Ossietzky-Str. (Potsdam)/Lennéstr. (Potsdam)\E
 		|\Q(Ökonomieweg, Sanssouci) (Potsdam)/(Lennéstr. - Ökonomieweg, Sanssouci)\E
@@ -314,6 +327,7 @@ for my $browser (@browsers) {
 		|\Q(Lennéstr. - Ökonomieweg, Sanssouci) (Potsdam)/(Hans-Sachs-Str. - Lennéstr.) (Potsdam)/Lennéstr. (Potsdam)\E
 		|\Q(Lennéstr. - Ökonomieweg, Sanssouci)/(Hans-Sachs-Str. - Lennéstr.)/Lennéstr. (Potsdam)\E
 	       )}ix,  "Correct goal resolution (Hans-Sachs-Str. ... or Lennéstr. ... or Ökonomieweg ...)");
+	}
 	$like_long_data->(qr{(\QMarquardter Damm (Marquardt)/Schlänitzseer Weg (Marquardt)\E
 			     |\QMarquardter Damm/Schlänitzseer Weg (Marquardt)\E
 			    )}ix,  "Correct goal resolution (Marquardt ...)");
@@ -443,7 +457,7 @@ for my $browser (@browsers) {
 		cmp_ok($length, "<=", 1, "Short path (got $length km)")
 		    or diag $content;
 	    } else {
-		fail("Cannot get length from content");
+		fail("Cannot get length from content, URL is <" . $agent->uri . ">");
 		diag $content;
 	    }
 	}
@@ -470,7 +484,8 @@ for my $browser (@browsers) {
 
 	my_tidy_check($agent);
 	$like_long_data->(qr{M.*gliche Ausweichroute}, "Using Ausweichroute");
-	$like_long_data->(qr{\(um \d+ Meter l.*nger\)}, "Info: längere Route");
+	$like_long_data->(qr{\(um \d+ Meter l.*nger\)}, "Info: längere Route")
+	    or diag("Test is known to fail if Apache::Session::Counted is not available");
 	if (get_ct($agent) =~ /L.*?nge:.*([\d\.]+)\s*km/) {
 	    my $length = $1;
 	    cmp_ok($length, ">=", 1, "Longer path ($length km)");
