@@ -103,7 +103,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    @weak_cache @no_cache %proc
 	    $bbbike_script $cgi $port
 	    $search_algorithm $use_background_image
-	    $use_apache_session $apache_session_module $cookiename
+	    $use_apache_session $now_use_apache_session $apache_session_module $cookiename
 	    $bbbike_temp_blockings_file $bbbike_temp_blockings_optimized_file
 	    @temp_blocking $temp_blocking_epoch
 	    $use_cgi_compress_gzip $use_bbbikedraw_compress $max_matches
@@ -848,6 +848,9 @@ undef $net; # dito
 undef $kr;
 undef $comments_net; # XXX because it may or may not contain qualitaet_l
 
+# reset per request
+$now_use_apache_session = $use_apache_session;
+
 #$str = new Strassen "strassen" unless defined $str;
 #$str = new Strassen::Lazy "strassen" unless defined $str;
 $cookiename = "bbbike";
@@ -873,6 +876,7 @@ if (!defined $bbbike_html) {
 $is_beta = $bbbike_url =~ m{bbbike\d(\.en)?\.cgi}; # bbbike2.cgi ...
 $bbbike2_url = $bbbike_url;
 if (!$is_beta) {
+    local $^W; # $1 may be undef
     $bbbike2_url =~ s{bbbike(\.en)?\.cgi}{bbbike2$1.cgi};
 }
 
@@ -3420,7 +3424,6 @@ sub search_coord {
 		 (!defined $tb->{until} || $t <= $tb->{until})) ||
 		$is_test_mode
 		) {
-		#XXX del: my $type = $tb->{type} || 'gesperrt';
 		push @current_temp_blocking, $tb;
 		$tb->{'index'} = $index;
 	    }
@@ -3456,8 +3459,25 @@ sub search_coord {
 		$tb->{strobj} = $strobj;
 		if (@custom) {
 		    if (exists $custom{'temp-blocking-' . $tb->{'index'}}) {
-			my $type = $tb->{type} || 'gesperrt';
-			push @{ $custom_s{$type} }, $strobj;
+			my %strobj_per_type;
+			$strobj->init;
+			while(1) {
+			    my $r = $strobj->next;
+			    last if !@{ $r->[Strassen::COORDS] };
+			    my $type;
+			    if ($r->[Strassen::CAT] =~ m{^q}) {
+				$type = 'handicap';
+			    } else {
+				$type = 'gesperrt';
+			    }
+			    if (!$strobj_per_type{$type}) {
+				$strobj_per_type{$type} = Strassen->new;
+			    }
+			    $strobj_per_type{$type}->push($r);
+			}
+			while(my($type, $strobj_per_type) = each %strobj_per_type) {
+			    push @{ $custom_s{$type} }, $strobj_per_type;
+			}
 		    }
 		} else {
 		    $tb->{net} = StrassenNetz->new($strobj);
@@ -6729,10 +6749,10 @@ sub upload_button_html {
 
 sub tie_session {
     my $id = shift;
-    return unless $use_apache_session;
+    return unless $now_use_apache_session;
 
     if (!eval qq{ require $apache_session_module }) {
-	$use_apache_session = undef;
+	$now_use_apache_session = $use_apache_session = undef; # permanent error
 	warn $@ if $debug;
 	return;
     }
@@ -6741,14 +6761,27 @@ sub tie_session {
 	return tie_session_counted($id);
     }
 
-    tie my %sess, $apache_session_module, $id,
-	{ FileName => "/tmp/bbbike_sessions_" . $< . ".db", # XXX make configurable
-	  LockDirectory => '/tmp',
-	} or do {
-	    $use_apache_session = undef;
-	    warn $! if $debug;
-	    return;
-	};
+    my %sess;
+    eval {
+	tie %sess, $apache_session_module, $id,
+	    { FileName => "/tmp/bbbike_sessions_" . $< . ".db", # XXX make configurable
+	      LockDirectory => '/tmp',
+	    } or do {
+		$use_apache_session = undef; # possibly transient error
+		warn $! if $debug;
+		return;
+	    };
+    };
+    if ($@) {
+	if (!defined $id) {
+	    # this is fatal
+	    die "Cannot create new session: $@";
+	} else {
+	    # may happen for old sessions, e.g. in links, so
+	    # do not die
+	    warn "Cannot load old session, maybe already garbage-collected: $@";
+	}
+    }
 
     return \%sess;
 }
@@ -6779,19 +6812,37 @@ sub tie_session_counted {
 #     close STDOUT;
 #     open(STDOUT, ">&OLDOUT") or die $!;
 
-    tie my %sess, $apache_session_module, $id,
-	{ Directory => $directory,
-	  DirLevels => $dirlevels,
-	  CounterFile => $counterfile,
-	  AlwaysSave => 1,
-	  #HostID => undef,
-	  #HostURL => sub { undef },
-	  Timeout => 10,
-	} or do {
-	    $use_apache_session = undef;
-	    warn $! if $debug;
-	    return;
-	};
+    my %sess;
+    eval {
+	tie %sess, $apache_session_module, $id,
+	    { Directory => $directory,
+	      DirLevels => $dirlevels,
+	      CounterFile => $counterfile,
+	      AlwaysSave => 1,
+	      #HostID => undef,
+	      #HostURL => sub { undef },
+	      Timeout => 10,
+	    } or do {
+		$use_apache_session = undef; # possibly transient error
+		warn $! if $debug;
+		return;
+	    };
+    };
+    if ($@) { # I think this normally does not happen
+	if (!defined $id) {
+	    # this is fatal
+	    die "Cannot create new session: $@";
+	} else {
+	    # may happen for old sessions, e.g. in links, so
+	    # do not die
+	    warn "Cannot load old session, maybe already garbage-collected: $@";
+	}
+    }
+    if (defined $id && keys %sess == 1) {
+	# we silently assume that the session is invalid
+	$use_apache_session = undef;
+	return undef;
+    }
 
     return \%sess;
 }

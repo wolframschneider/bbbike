@@ -1,7 +1,7 @@
 # -*- perl -*-
 
 #
-# $Id: BBBikeLazy.pm,v 1.39 2009/10/02 18:05:27 eserte Exp $
+# $Id: BBBikeLazy.pm,v 1.40 2009/10/31 08:40:15 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 1999,2003 Slaven Rezic. All rights reserved.
@@ -476,7 +476,7 @@ sub BBBikeLazy::plotstr_on_demand {
 				      my $cat = $rec->[Strassen::CAT()];
 				      return if $cat =~ m{::igndisp};
 				      return if ($rec->[Strassen::NAME()] =~ m{\s+-\s+}); # ignore everything looking like "A - B"
-				      my $use_bold = 1 if $cat =~ m{^(H|HH|B)$};
+				      my $use_bold; $use_bold = 1 if $cat =~ m{^(H|HH|B)$};
 				      SRTShortcuts::street_name_experiment_one($rec->[Strassen::NAME()], $rec->[Strassen::COORDS()], $use_bold);
 				  };
 		$draw_sub = sub { my $r = shift;

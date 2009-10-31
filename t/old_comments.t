@@ -83,7 +83,7 @@ EOF
 	     # Hagelberger/Yorck
 	     ["8773,9524", "8595,9495", <<EOF, "PI"],
 - Kopfsteinpflaster: 1
-- Straßenseite an der Fußgängerampel Yorckstr./Katzbachstr. wechseln: 1
+- auf linken Gehweg fahren, Straßenseite an der Fußgängerampel Yorckstr./Katzbachstr. wechseln: 1
 - {}
 EOF
 	     ["8777,9601", "8595,9495", <<EOF, "No PI, starting point outside"],
@@ -111,12 +111,12 @@ EOF
 - {}
 EOF
 
-	     # Rathenauplatz
-	     [qw(2392,9715 2379,9665), <<EOF, "CP2; am Startpunkt"],
-- als Rathenauplatz ausgeschildert: 1
+	     # CP2; check
+	     [qw(8102,11099 8184,11160), <<EOF, "CP2; am Startpunkt"],
+- ausgeschildert zum Reichpietschufer 22: 1
 - {}
 EOF
-	     [qw(2379,9665 2392,9715), <<EOF, "Rückweg ohne Kommentare"],
+	     [qw(8184,11160 8102,11099), <<EOF, "Rückweg ohne Kommentare"],
 - {}
 - {}
 EOF

@@ -1910,6 +1910,12 @@ sub advanced_coord_menu {
 	     $main::global_draw_gpsman_data_s = 0;
 	     BBBikeEdit::show_gps_track_mode();
 	 });
+    $bpcm->command
+	(-label => M"GPS-Track in GPS Data Viewer anzeigen",
+	 -command => sub {
+	     require BBBikeEdit;
+	     BBBikeEdit::show_gps_data_viewer_mode();
+	 });
     $bpcm->checkbutton
 	(-label => M"Bahn-Tracks bevorzugen",
 	 -variable => \$BBBikeEdit::prefer_tracks,
@@ -2681,13 +2687,15 @@ sub buttonpoint {
 		}
 		# XXX verallgemeinern!!!
 		my $crossing = "?";
-		if ($edit_mode) { # XXX $edit_normal_mode too?
-		    all_crossings();
-		}
-		if (exists $crossings->{$tags[1]}) {
-		    $crossing = join("/", map { Strassen::strip_bezirk($_) }
-				              @{ $crossings->{$tags[1]} });
-		}
+## XXX crossings were not used for a long time
+## so may be disabled and deleted forever
+# 		if ($edit_mode) { # XXX $edit_normal_mode too?
+# 		    all_crossings();
+# 		}
+# 		if (exists $crossings->{$tags[1]}) {
+# 		    $crossing = join("/", map { Strassen::strip_bezirk($_) }
+# 				              @{ $crossings->{$tags[1]} });
+# 		}
 		$s = prepare_selection_line
 		    (-name => $crossing,
 		     -coord1 => $tags[1],
@@ -3099,16 +3107,6 @@ sub choose_edit_any_mode {
 	$t->bind("<Escape>" => sub { $cb->invoke });
     }
     $t->Popup(@popup_style);
-}
-
-# Erzeugt einen Hash aller Kreuzungen
-### AutoLoad Sub
-sub all_crossings {
-    if (!keys %$crossings) {
-	my $s = new Strassen "strassen-orig";
-	$crossings = $s->all_crossings(RetType => 'hash',
-				       UseCache => 1);
-    }
 }
 
 use vars qw(@search_anything_history);

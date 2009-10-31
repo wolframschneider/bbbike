@@ -171,6 +171,20 @@ BEGIN {
     }
 }
 
+# Add ...\c\bin directory for Strawberry Perl on Windows.
+# This directory contains shared libraries e.g. libxml2.
+# Also the ...\perl\bin may be missing.
+if ($^O eq 'MSWin32' && $^X =~ m{(.*)(\\perl\\bin)\\}) {
+    my $c_bin_dir = "$1\\c\\bin";
+    my $perl_bin_dir = "$1$2";
+    if (-d $c_bin_dir) {
+	$ENV{PATH} .= ";$c_bin_dir";
+    }
+    if (-d $perl_bin_dir) {
+	$ENV{PATH} .= ";$perl_bin_dir";
+    }
+}
+
 #XXX for now disabled ... still too many bugs floating around -> what bugs?
 #use Tk::ErrorDialog; # XXX is this OK?
 use Tk::Canvas;
@@ -457,6 +471,7 @@ $mark_color_overview = 'blue'; # better than red because it does not conflict wi
 $gps_waypoints = 50;
 $gps_waypointlength = 10;
 $gps_waypointcharset = 'ascii';
+$gps_needuniqueroutenumber = 0;
 
 ### Fonts
 $standard_height = 12;
@@ -5117,6 +5132,11 @@ dazu verwendet wird",
 	  label => M"Waypointsymbol",
 	  longhelp => M"Garmin-Symbol-ID. Falls leer gelassen, wird das Summit-Symbol verwendet",
 	  var => \$gps_waypointsymbol,
+	 ],
+	 ['gpsneeduniqueroutenumber','!',0,
+	  label => M"GPS-Gerät benötigt eindeutige Routennummern",
+	  longhelp => M"Laut Garmin-Spezifikationen müssen übetragene Routen mit einer eindeutigen Routennummer versehen werden.\nExperimente haben aber gezeigt, dass die meisten (oder alle?) Garmin-Geräte dieses nicht benötigen.",
+	  var => \$gps_needuniqueroutenumber,
 	 ],
 	 ['gpsdevice','=s',($os eq 'win'   ? "USB" :
 			    $os_bsd        ? '/dev/cuaa0' :
@@ -16336,7 +16356,7 @@ sub search_route {
     my($start, $ziel, $via_arr, $continue, %args) = @_;
     return if $in_search;
     $in_search++;
-    my(@via) = @$via_arr if defined $via_arr;
+    my @via; @via = @$via_arr if defined $via_arr;
 
     destroy_delayed_restack();
 
@@ -17036,6 +17056,24 @@ sub show_route_strname {
 		       ) {
 			my $name = $etappe_comment_obj->[Strassen::NAME()];
 			$name =~ s{.*:\s+}{}; # strip street part
+## The following is not needed if the comments are specific enough, i.e.
+## "An der Ampel Voltairestr. die Gehwegseite wechseln" instead of
+## "An der Ampel die Gehwegseite wechseln". As most comments are in this
+## form already I will try to be consistent and have everything like
+## this (of course, with osm data this would be another story, but
+## currently CP/CP2/PI comments are not created by osm2bbd)
+#			# If the special comment is not at beginning
+#			# of an etappe, then it is useful to have the
+#			# exact crossing displayed.
+#			if ($i != $index_arr->[0] && $etappe_comment_obj->[Strassen::CAT()] =~ m{^(CP|CP2|PI)(;|$)?}) {
+#			    my $crossings = all_crossings();
+#			    my $c = join ',', @{ $realcoords[$i] };
+#			    if ($crossings && exists $crossings->{$c}) {
+#				# XXX strip also "current" street
+#				my $cr_name = join '/', map { Strassen::strip_bezirk($_) } @{ $crossings->{$c} };
+#				$name .= " (Kreuzung $cr_name)";
+#			    }
+#			}
 			push @comments, $name;
 		    }
 		}
@@ -17358,6 +17396,7 @@ sub make_net {
     undef $green_net;
     undef $unlit_streets_net;
     undef $steigung_net;
+    undef $crossings;
 
     eval {
 	my $add_temp_blockings;
@@ -17632,6 +17671,18 @@ sub make_comments_net {
 				    -multiple => 1,
 				    -obeydir => 1);
     }
+}
+
+# Erzeugt einen Hash aller Kreuzungen
+### AutoLoad Sub
+sub all_crossings {
+    if (!keys %$crossings) {
+	my $s = $multistrassen ? $multistrassen : $str_obj{'s'};
+	return if !$s;
+	$crossings = $s->all_crossings(RetType => 'hash',
+				       UseCache => 1);
+    }
+    $crossings;
 }
 
 # User definable blockings
@@ -19191,7 +19242,7 @@ sub show_logo { # und About
 	}
 	# Are we running an emulation?
 	# This could be wrong, e.g. if cygwin's uname is
-	# in the PATH, but Winn32 perl is running,
+	# in the PATH, but Win32 perl is running,
 	# hence the "maybe"
 	if (is_in_path("uname")) {
 	    chomp(my $real_os = `uname`);

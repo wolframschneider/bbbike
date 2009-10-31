@@ -2344,11 +2344,17 @@ sub send_comment {
 }
 
 sub init_with_edittools {
+    my $wm_border = 5; # XXX needed for fvwm2
     require BBBikeAdvanced;
-    main::set_line_coord_interactive(-geometry => "-0+0");
+    main::set_line_coord_interactive(-geometry => "-$wm_border+0");
     ## I don't use this anymore:
-    #main::coord_to_markers_dialog(-geometry => "-0+120");
-    editmenu($main::top, -geometry => "-0-0");
+    #main::coord_to_markers_dialog(-geometry => "-$wm_border+120");
+    editmenu($main::top, -geometry => "-$wm_border-0");
+    if (eval { require SRTShortcuts; 1 }) {
+	SRTShortcuts::show_bbbike_suggest_toplevel(-geometry => "-$wm_border+200");
+    } else {
+	warn "SRTShortcuts cannot be loaded, cannot show suggest window";
+    }
 }
 
 sub editmenu {
@@ -3400,27 +3406,33 @@ sub show_gps_track_mode {
     $main::c->configure(-cursor => defined $cursorfile ? $cursorfile : "hand2");
     main::status_message(M("Track zum Anzeigen auswählen"), "info");
     $main::customchoosecmd = sub {
-	my($c,$e) = @_;
-	my(@tags) = $c->gettags("current");
-	my $base;
-	for (@tags) {
-	    if (/(.*\.trk)/) {
-		$base = $1;
-		last;
-	    } elsif (/^(L\d+)$/ && exists $main::str_file{$1} &&
-		     $main::str_file{$1} =~ /(\d+\.trk)/) {
-		$base = $1;
-		last;
-	    }
+	my $file = _find_track_file(@_);
+	if (!$file) {
+	    main::status_message(M("Keine Track-Datei gefunden"));
+	    return;
 	}
-	if ($base) {
-	    my $file = find_gpsman_file($base);
-	    if (!$file) {
-		main::status_message(M("Keine Datei zu $base gefunden"));
-		return;
-	    }
-	    BBBikeGPS::do_draw_gpsman_data($main::top, $file, -solidcoloring => 1);
+	BBBikeGPS::do_draw_gpsman_data($main::top, $file, -solidcoloring => 1);
 
+	if (defined $remember_map_mode_for_edit_gps_track) {
+	    undef $main::customchoosecmd;
+	    main::set_map_mode($remember_map_mode_for_edit_gps_track);
+	    undef $remember_map_mode_for_edit_gps_track;
+	}
+    };
+}
+
+sub show_gps_data_viewer_mode {
+    $remember_map_mode_for_edit_gps_track = $main::map_mode
+	if $main::map_mode ne main::MM_CUSTOMCHOOSE_TAG();
+    $main::map_mode = main::MM_CUSTOMCHOOSE_TAG();
+    my $cursorfile = main::build_text_cursor("GPS trk");
+    $main::c->configure(-cursor => defined $cursorfile ? $cursorfile : "hand2");
+    main::status_message(M("Track für GPS Data Viewer auswählen"), "info");
+    $main::customchoosecmd = sub {
+	my $file = _find_track_file(@_);
+	if ($file) {
+	    require SRTShortcuts; # XXX would require use lib miscsrc
+	    SRTShortcuts::gps_data_viewer($file);
 	    if (defined $remember_map_mode_for_edit_gps_track) {
 		undef $main::customchoosecmd;
 		main::set_map_mode($remember_map_mode_for_edit_gps_track);
@@ -3428,6 +3440,25 @@ sub show_gps_track_mode {
 	    }
 	}
     };
+}
+
+sub _find_track_file {
+    my($c,$e) = @_;
+    my(@tags) = $c->gettags("current");
+    my $base;
+    for (@tags) {
+	if (/(.*\.trk)/) {
+	    $base = $1;
+	    last;
+	} elsif (/^(L\d+)$/ && exists $main::str_file{$1} &&
+		 $main::str_file{$1} =~ /(\d+\.trk)/) {
+	    $base = $1;
+	    last;
+	}
+    }
+    if ($base) {
+	return find_gpsman_file($base);
+    }
 }
 
 use vars qw($prefer_tracks); # "bahn" or "street"
@@ -4410,7 +4441,7 @@ sub add_cross_road_blockings {
 	Karte::preload(":all");
 	require BBBikeEditUtil;
 	$map = $Karte::map{$maptoken};
-	my $mapprefix = $map->coordsys if $map;
+	my $mapprefix; $mapprefix = $map->coordsys if $map;
 	for my $f (@orig_files) {
 	    my $baseprefix = { BBBikeEditUtil::base() }->{$f};
 	    if (defined $mapprefix && $mapprefix ne $baseprefix) {
