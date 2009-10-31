@@ -126,7 +126,7 @@ EOF
 my(@bundled_perl_module_dists) =
     qw(Tk-ContextHelp Tk-Enscript Tk-Getopt Tk-Autoscroll Tk-PathEntry
        Tk-CanvasFig BikePower savevars GD-Convert Tk-Splash
-       Http Msg
+       Algorithm-GooglePolylineEncoding Http Msg
        Tk-SREZIC Tk-CanvasBalloon Tk-CanvasUtil Tk-LogScale
        Tk-ColorFlowChooser Tk-LayerEditor Tk-Placement
        Tk-StippleLine Tk-WidgetDump Win32Util WWWBrowser
@@ -476,7 +476,7 @@ predist:
 	cd data && ${MAKE}
 	${MAKE} generatemods
 	${MAKE} extmod
-	${MAKE} linkextmod
+	${MAKE} copyextmod
 	${MAKE} bbbikedoc
 	${MAKE} distcheck
 	${MAKE} distdir
@@ -754,8 +754,8 @@ extmod:
 EOF
 . <<EOF
 
-linkextmod:
-	$^X ./miscsrc/link_ext_mod.pl -v
+copyextmod:
+	$^X ./miscsrc/link_ext_mod.pl -copy -v
 EOF
 . <<'EOF'
 

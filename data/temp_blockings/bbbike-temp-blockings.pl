@@ -1007,7 +1007,7 @@ EOF
        text  => 'Werner-Voß-Damm (Tempelhof) in beidenRichtungen zwischen Boelckestraße und Bäumerplan Verkehrsbehinderung durch geplatzte Wasserleitung, Straße ind beiden Richtungen gesperrt.',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 8553,7795 8637,7871
+userdel	q4 8553,7795 8642,7876
 userdel	q4 8553,7795 8512,7757
 EOF
      },
@@ -3266,7 +3266,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_77722',
        data  => <<EOF,
-userdel	1 12693,16700 12857,16627 13104,16522
+userdel	1 12713,16682 12857,16627 13104,16522
 EOF
      },
      { from  => 1138319651, # 2006-01-27 00:54
@@ -4340,7 +4340,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LMS_1146113785841',
        data  => <<EOF,
-userdel	2 9098,12687 9209,12795
+userdel	2 9098,12687 9117,12705 9209,12795
 userdel	2 9280,12883 9209,12795
 EOF
      },
@@ -5665,7 +5665,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_77722',
        data  => <<EOF,
-userdel	1::inwork 12693,16700 12857,16627 13104,16522
+userdel	1::inwork 12713,16682 12857,16627 13104,16522
 EOF
      },
      { from  => 1156976256, # 2006-08-31 00:17
@@ -6650,7 +6650,7 @@ EOF
 userdel	2::temp 9890,12161 9869,12297 9795,12293 9780,12401
 userdel	2::temp 9869,12297 9852,12409
 userdel	2::temp 9801,12245 9812,12145
-userdel	2::temp 9986,12375 9943,12364 9951,12318 9939,12296 9972,12184
+userdel	2::temp 9994,12368 9943,12364 9951,12318 9939,12296 9972,12184
 userdel	2::temp 9934,12418 9943,12364
 EOF
      },
@@ -7857,7 +7857,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005266',
        data  => <<EOF,
-userdel	2::inwork 9670,5728 9457,5641 9357,5601 9147,5534
+userdel	2::inwork 9670,5728 9457,5641 9368,5608 9147,5534
 EOF
      },
      { from  => undef, # 
@@ -8960,7 +8960,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20070703.1505.81257.html',
        data  => <<EOF,
-userdel	1::inwork 12693,16700 12604,16731 12486,16791 12257,16876 12241,16900
+userdel	1::inwork 12667,16699 12604,16731 12486,16791 12257,16876 12241,16900
 EOF
      },
      { from  => 1183704492, # 2007-07-06 08:48
@@ -9272,7 +9272,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006204',
        data  => <<EOF,
-userdel	2::inwork 9357,5601 9147,5534
+userdel	2::inwork 9368,5608 9147,5534
 EOF
      },
      { from  => 1186869600, # 2007-08-12 00:00
@@ -9381,7 +9381,7 @@ EOF
        data  => <<EOF,
 userdel	2::temp 9890,12161 9869,12297 9795,12293 9780,12401
 userdel	2::temp 9869,12297 9852,12409
-userdel	2::temp 9986,12375 9943,12364 9951,12318 9939,12296 9972,12184
+userdel	2::temp 9994,12368 9943,12364 9951,12318 9939,12296 9972,12184
 userdel	2::temp 9934,12418 9943,12364
 EOF
      },
@@ -10795,7 +10795,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_007651',
        data  => <<EOF,
-userdel	1::inwork 10309,12854 10264,12826 10171,12769
+userdel	1::inwork 10309,12854 10264,12826 10166,12777
 EOF
      },
      { from  => 1198018800, # 2007-12-19 00:00
@@ -10812,7 +10812,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006024',
        data  => <<EOF,
-userdel	1::inwork 12257,16876 12486,16791 12604,16731 12693,16700
+userdel	1::inwork 12257,16876 12486,16791 12604,16731 12667,16699
 EOF
      },
      { from  => 1201647600, # 2008-01-30 00:00
@@ -11976,7 +11976,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009406',
        data  => <<EOF,
-userdel	2::inwork 9357,5601 9147,5534 8955,5549 8870,5557 8767,5571
+userdel	2::inwork 9368,5608 9147,5534 8955,5549 8870,5557 8767,5571
 EOF
      },
      { from  => 1216504800, # 2008-07-20 00:00
@@ -12694,7 +12694,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010086',
        data  => <<EOF,
-userdel	1::inwork 9789,5767 9670,5728 9457,5641 9357,5601
+userdel	1::inwork 9789,5767 9670,5728 9457,5641 9368,5608
 EOF
      },
      { from  => 1223320675, # 2008-10-06 21:17
@@ -12900,7 +12900,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010086',
        data  => <<EOF,
-userdel	1::inwork 9357,5601 9147,5534
+userdel	1::inwork 9368,5608 9147,5534
 EOF
      },
      { from  => 1226267441, # 2008-11-09 22:50
@@ -13223,7 +13223,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009603',
        data  => <<EOF,
-userdel	1::inwork 2186,9612 2122,9539 2046,9429 1932,9263
+userdel	1::inwork 2186,9612 2122,9539 2056,9446 1932,9263
 EOF
      },
      { from  => 1233088186, # 2009-01-27 21:29
@@ -13541,8 +13541,8 @@ EOF
        text  => 'Jessnerstr. wegen Bauarbeiten in Richtung Süden nicht befahrbar, bis Oktober 2009',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2009-09-26
-#: next_check: 2009-10-05
+#: last_checked: 2009-10-15
+#: next_check: 2009-11-01
 #: XXX nach Beendigung der Bauarbeiten bleibt wahrscheinlich die gesamte Straße asphaltiert, mit einigen Aufpflasterungen
 userdel	q4::inwork; 15080,11905 14977,11754 14941,11689 14849,11539
 EOF
@@ -13563,7 +13563,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012064',
        data  => <<EOF,
-userdel	q4::inwork; 9457,5641 9357,5601 9147,5534
+userdel	q4::inwork; 9457,5641 9368,5608 9147,5534
 EOF
      },
      { from  => 1238954845, # 2009-04-05 20:07
@@ -13710,7 +13710,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012244',
        data  => <<EOF,
-userdel	q4::inwork 9457,5641 9357,5601 9147,5534
+userdel	q4::inwork 9457,5641 9368,5608 9147,5534
 EOF
      },
      { from  => 1243371742, # 2009-05-26 23:02
@@ -14673,11 +14673,11 @@ EOF
      },
      { from  => 1246916833, # 2009-07-06 23:47
        until => 1262300400, # 2010-01-01 00:00
-       text  => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Taubenstr. und Behrenstr. Baustelle, Fahrtrichtung gesperrt (bis Dezember 2009)',
+       text  => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Mohrenstr. und Behrenstr. Baustelle, Fahrtrichtung gesperrt (bis Dezember 2009)',
        type  => 'handicap',
        source_id => 'IM_013316',
        data  => <<EOF,
-userdel	q4::inwork; 9668,11928 9656,12021 9643,12127 9631,12227
+userdel	q4::inwork; 9679,11834 9668,11928 9656,12021 9643,12127 9631,12227
 EOF
      },
      { from  => 1247349600, # 2009-07-12 00:00
@@ -14913,18 +14913,20 @@ userdel	2::inwork 12383,-99327 12173,-99115
 EOF
      },
      { from  => 1248200556, # 2009-07-21 20:22
-       until => 1257030000, # 2009-11-01 00:00
-       text  => 'Fahrbahn der Mauerstr. wegen Bauarbeiten bis Oktober 2009 gesperrt ',
+       until => undef, # was 1257030000, 2009-11-01 00:00, bis Oktober 2009, but seems to be more work...
+       text  => 'Fahrbahn der Mauerstr. wegen Bauarbeiten gesperrt ',
        type  => 'handicap',
        data  => <<EOF,
+#: last_checked: 2009-10-16
 userdel	q4::inwork 9405,11413 9331,11497
 EOF
      },
      { from  => 1248200777, # 2009-07-21 20:26
-       until => 1254348000, # 2009-10-01 00:00
-       text  => 'Bauarbeiten in der Mohrenstraße, Fahrbahn bis September 2009 gesperrt ',
+       until => undef, # was 2009-10-01 00:00, 1254348000, bis September 2009, but seems to be more work...
+       text  => 'Bauarbeiten in der Mohrenstraße, Fahrbahn gesperrt ',
        type  => 'handicap',
        data  => <<EOF,
+#: last_checked: 2009-10-21
 userdel	q4::inwork 9418,11804 9220,11781
 EOF
      },
@@ -14933,7 +14935,7 @@ EOF
        text  => 'Die Charlottenstraße ist wegen Bauarbeiten eine Einbahnstraße Richtung Süden',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check: 2009-09-27
+#: last_checked: 2009-10-16
 userdel	q4::inwork; 9475,12365 9462,12481 9454,12558
 EOF
      },
@@ -16023,7 +16025,7 @@ EOF
        permanent => 1,
        data  => <<EOF,
 	q4::temp 9754,12775 9661,12876 9618,12907 9529,12925
-	q4::temp 9912,12623 9950,12522 9984,12426
+	q4::temp 9919,12613 9950,12522 9984,12426
 EOF
      },
      { from  => 1253224800, # 2009-09-18 00:00
@@ -16317,7 +16319,7 @@ userdel	2::inwork -19162,-33731 -18692,-33299
 EOF
      },
      { from  => 1254981556, # 2009-10-08 07:59
-       until => 1257029999, # 2009-10-31 23:59
+       until => 1256194316, # 2009-10-31 23:59 1257029999
        text  => 'Erkstr. (Neukölln) in beiden Richtungen zwischen Sonnenallee und Donaustr. Baustelle, Straße vollständig gesperrt (bis Ende 10.2009)',
        type  => 'handicap',
        source_id => 'IM_014353',
@@ -16536,7 +16538,7 @@ EOF
        text  => 'Verkehreinschränkungen in der Magdalenenstraße und am Roedeliusplatz bis Mai 2010, Einbahnstraßenregelung in Fahrtrichtung Normannenstraße ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork; 16159,12301 16158,12191
+userdel	q4::inwork; 16159,12301 16158,12191 16127,11950
 EOF
      },
      { from  => 1255384800, # 2009-10-13 00:00
@@ -16547,8 +16549,8 @@ EOF
 userdel	2::inwork 30781,60566 30784,60950 30960,61370 31147,61555 31880,61589 32748,62327
 EOF
      },
-     { from  => 1255539600, # 2009-10-14 19:00
-       until => 1255921200, # 2009-10-19 05:00
+     { from  => 1255812887, # 2009-10-14 19:00 1255539600
+       until => 1255812894, # 2009-10-19 05:00 1255921200 verschoben um eine Woche!
        text  => 'Sperrungen an der Kreuzung Karl-Marx-Allee/Otto-Braun-Straße einschließlich Grunerstraße bis Alexanderstraße, 16.10.2009, 19.00 Uhr bis 19.10.2009, 05.00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -16563,6 +16565,87 @@ EOF
        data  => <<EOF,
 userdel	2::inwork 11275,13026 11228,12951 11134,12793
 userdel	3 11139,13008 11228,12951 11295,12915
+EOF
+     },
+     { from  => 1256752800, # 2009-10-28 19:00
+       until => 1257134400, # 2009-11-02 05:00
+       text  => 'Sperrungen an der Kreuzung Karl-Marx-Allee/Otto-Braun-Straße einschließlich Grunerstraße bis Alexanderstraße, 30.10.2009, 19.00 Uhr bis 2.11.2009, 05.00 Uhr ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 11275,13026 11228,12951 11134,12793
+userdel	3 11139,13008 11228,12951 11295,12915
+EOF
+     },
+     { from  => 1254891600, # 2009-10-07 07:00
+       until => 1261177200, # 2009-12-19 00:00
+       text  => 'Naumannstraße zwischen Leuthener Straße und Tempelhofer Weg gesperrt, Baustelle, Dauer: 08.10.2009 07:00 Uhr bis 18.12.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 7716,8356 7716,8048 7717,7879
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Universitätsstraße Richtung Unter den Linden gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2009-10-18
+#: XXX oder ist das eine permanente Sperrung?
+userdel	q4::inwork; 9574,12578 9601,12380
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => '(Drorystr. - Braunschweiger Str., Spielplatz): nachts werden die Tore geschlossen',
+       type  => 'gesperrt',
+       permanent => 1,
+       data  => <<EOF,
+	2::temp 13520,7485 13601,7366
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Friedrich-Ludwig-Jahn-Sportpark: während Veranstaltungen und nachts von ca. 22 bis 7 Uhr gesperrt, mit Anhänger wegen des engen Südeinganges ggfs. nicht befahrbar',
+       type  => 'gesperrt',
+       permanent => 1,
+       data  => <<EOF,
+	2::temp 10473,15549 10607,15142
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Luitpoldstr., Durchfahrt über Schulhof: nicht immer geöffnet!',
+       type  => 'gesperrt',
+       permanent => 1,
+       data  => <<EOF,
+	2::temp 6611,9879 6670,9887
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Rutherfordstr.: nicht permanent geöffnet',
+       type  => 'gesperrt',
+       permanent => 1,
+       data  => <<EOF,
+	2::temp 19071,2746 19136,2673 19207,2592
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Uferweg am Schloß Bellevue: kann bei Staatsbesuchen gesperrt sein',
+       type  => 'gesperrt',
+       permanent => 1,
+       data  => <<EOF,
+	2::temp 6694,12627 7039,12314
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Glasbläserallee wegen Bauarbeiten gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: last_checked: 2009-10-26
+userdel	2::inwork 14835,10272 14888,10385
 EOF
      },
     );

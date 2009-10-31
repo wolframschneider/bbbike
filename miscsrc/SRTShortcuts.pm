@@ -362,6 +362,9 @@ sub add_button {
 	      [Button => 'Search while type',
 	       -command => sub { tk_suggest() },
 	      ],
+	      [Button => 'Search while type (using BBBikeSuggest)',
+	       -command => sub { show_bbbike_suggest_toplevel() },
+	      ],
 	      [Cascade => 'Situation at point', -menuitems =>
 	       [
 		[Button => 'For three points',
@@ -378,6 +381,9 @@ sub add_button {
 	      ],
 	      [Button => "GPS data viewer",
 	       -command => sub { gps_data_viewer() },
+	      ],
+	      [Button => "Set Garmin device defaults",
+	       -command => sub { garmin_devcap() },
 	      ],
 	      "-",
 	      [Cascade => "Rare or old", -menu => $rare_or_old_menu],
@@ -1360,6 +1366,8 @@ sub street_name_experiment_one {
 ######################################################################
 # GPS data viewer
 sub gps_data_viewer {
+    my($gps_file) = @_;
+
     require BBBikeEdit;
     require BBBikeUtil;
     require GPS::GpsmanData::Any;
@@ -1372,19 +1380,33 @@ sub gps_data_viewer {
     my $gps_view;
     my $gps;
 
-    {
-	use vars qw($gps_data_viewer_file);
-	$gps_data_viewer_file = "$FindBin::RealBin/misc/gps_data" if !defined $gps_data_viewer_file;
-	$gps_data_viewer_file = $FindBin::RealBin                 if !defined $gps_data_viewer_file;
+    use vars qw($gps_data_viewer_file);
+    $gps_data_viewer_file = "$FindBin::RealBin/misc/gps_data" if !defined $gps_data_viewer_file;
+    $gps_data_viewer_file = $FindBin::RealBin                 if !defined $gps_data_viewer_file;
 
-	my $show_file = sub {
-	    if (defined $gps_data_viewer_file) {
-		#XXX do it as late as possible, before the first edit operation: BBBikeEdit::ask_for_co($main::top, $gps_data_viewer_file);
-		$gps = GPS::GpsmanData::Any->load($gps_data_viewer_file, -editable => 1);
-		$gps_view->associate_object($gps);
+    my $show_file = sub {
+	if (defined $gps_data_viewer_file) {
+	    #XXX do it as late as possible, before the first edit operation: BBBikeEdit::ask_for_co($main::top, $gps_data_viewer_file);
+	    $gps = GPS::GpsmanData::Any->load($gps_data_viewer_file, -editable => 1);
+	    $gps_view->associate_object($gps);
+	}
+    };
+    my $show_and_plot_file = sub {
+	if (defined $gps_data_viewer_file) {
+	    $show_file->();
+	    if ($BBBikeEdit::recent_gps_point_layer) {
+		main::delete_layer($BBBikeEdit::recent_gps_point_layer);
+		undef $BBBikeEdit::recent_gps_point_layer;
 	    }
-	};
-
+	    if ($BBBikeEdit::recent_gps_street_layer) {
+		main::delete_layer($BBBikeEdit::recent_gps_street_layer);
+		undef $BBBikeEdit::recent_gps_street_layer;
+	    }
+	    BBBikeEdit::edit_gps_track($gps_data_viewer_file);
+	}
+    };
+    
+    {
 	my $f = $t->Frame->pack(qw(-fill x));
 	$f->Label(-text => "File:")->pack(qw(-side left));
 	my $pe =
@@ -1402,18 +1424,7 @@ sub gps_data_viewer {
 	my $plotandshowb =
 	    $f->Button(-text => "Show & Plot",
 		       -command => sub {
-			   if (defined $gps_data_viewer_file) {
-			       $show_file->();
-			       if ($BBBikeEdit::recent_gps_point_layer) {
-				   main::delete_layer($BBBikeEdit::recent_gps_point_layer);
-				   undef $BBBikeEdit::recent_gps_point_layer;
-			       }
-			       if ($BBBikeEdit::recent_gps_street_layer) {
-				   main::delete_layer($BBBikeEdit::recent_gps_street_layer);
-				   undef $BBBikeEdit::recent_gps_street_layer;
-			       }
-			       BBBikeEdit::edit_gps_track($gps_data_viewer_file);
-			   }
+			   $show_and_plot_file->();
 		       }
 		      )->pack(-side => "left");
 	$pe->configure(-selectcmd => sub {
@@ -1513,6 +1524,11 @@ sub gps_data_viewer {
 		       $txt->insert('end', YAML::Syck::Dump($stats->human_readable));
 		       $tt->Button(-text => 'Close', -command => sub { $tt->destroy })->pack;
 		   })->pack(-side => 'left');
+    }
+
+    if (defined $gps_file) {
+	$gps_data_viewer_file = $gps_file;
+	$show_and_plot_file->();
     }
 }
 
@@ -1897,6 +1913,71 @@ sub visualize_N_RW_net {
     my $err = $@;
     main::DecBusy($main::top);
     main::status_message($err, "die") if $err;
+}
+
+######################################################################
+# BBBikeSuggest
+
+sub show_bbbike_suggest_toplevel {
+    my(%args) = @_;
+    require "$FindBin::RealBin/babybike/lib/BBBikeSuggest.pm";
+    require BBBikeRouting;
+    my $suggest = BBBikeSuggest->new;
+    $suggest->set_zipfile("$main::datadir/Berlin.coords.data");
+    my $t = main::redisplay_top($main::top, 'bbbike_suggest', -force => 1, -title => 'Search street', %args);
+    main::set_as_toolwindow($t);
+    my $w = $suggest->suggest_widget($t, -selectcmd => sub {
+					 my $w = shift;
+					 my $routing = BBBikeRouting->new->init_context;
+					 $routing->Start->Street($w->get);
+					 $routing->get_start_position;
+					 warn $routing->Start->Coord;
+					 main::mark_point(-coords => [[[ main::transpose(split /,/, $routing->Start->Coord) ]]],
+							  -clever_center => 1,
+							  -inactive => 1);
+				     });
+    $w->pack;
+    $w->focus;
+}
+
+######################################################################
+# Garmin devcap
+
+sub garmin_devcap {
+    require YAML::Syck;
+    my $devcap_data = YAML::Syck::LoadFile("$FindBin::RealBin/misc/garmin_devcap.yaml");
+    my $t = $main::top->Toplevel(-title => 'Garmin devices');
+    my $lb = $t->Scrolled('Listbox', -scrollbars => 'osoe', -selectmode => 'single')->pack(qw(-fill both -expand 1));
+    my @data;
+    for my $prod_id (sort { $b <=> $a } keys %$devcap_data) { # younger devices (with larger product ids) first
+	my $name = $devcap_data->{$prod_id}->{name};
+	push @data, [$name, $prod_id];
+	$lb->insert('end', $name);
+    }
+    my $f = $t->Frame->pack(qw(-fill x));
+    $f->Button(-text => 'Use device',
+	       -command => sub {
+		   my($sel) = $lb->curselection;
+		   if (!defined $sel) {
+		       main::status_message('Please select a device', 'err');
+		       return;
+		   }
+		   my $device_data = $devcap_data->{$data[$sel]->[1]};
+		   for my $def (['wpts_in_route',       \$main::gps_waypoints],
+				['wpt_length',          \$main::gps_waypointlength],
+				['wpt_charset',         \$main::gps_waypointcharset],
+				['unique_route_number', \$main::gps_needuniqueroutenumber],
+			       ) {
+		       my($data_key, $ref) = @$def;
+		       if (exists $device_data->{$data_key}) {
+			   $$ref = $device_data->{$data_key};
+		       }
+		   }
+	       })->pack(qw(-side left));
+    $f->Button(-text => 'Cancel',
+	       -command => sub {
+		   $t->destroy;
+	       })->pack(qw(-side left));
 }
 
 1;

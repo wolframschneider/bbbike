@@ -1466,7 +1466,7 @@ sub simplify_route_to_name {
     my($route_to_name_ref, %args) = @_;
     my @new_route_to_name;
     for(my $i=0; $i<=$#$route_to_name_ref; $i++) {
-	my $e0 = $route_to_name_ref->[$i-1] if $i > 0;
+	my $e0; $e0 = $route_to_name_ref->[$i-1] if $i > 0;
 	my $e = $route_to_name_ref->[$i];
 	my $combine = 0;
     CHECK_COMBINE: {
@@ -1799,11 +1799,11 @@ sub get_point_comment {
 		}
 	    }
 	} elsif ($r->[Strassen::CAT()] =~ /^PI;?(:|$)/) {
-	CHECK: {
+	CHECK_PI: {
 		for my $i (0 .. $#{$r->[Strassen::COORDS()]}) {
-		    last CHECK if !defined $routeref->[$routeinx+$i];
+		    last CHECK_PI if !defined $routeref->[$routeinx+$i];
 		    my $xy = join ",", @{ $routeref->[$routeinx+$i] };
-		    last CHECK if ($r->[Strassen::COORDS()][$i] ne $xy);
+		    last CHECK_PI if ($r->[Strassen::COORDS()][$i] ne $xy);
 		}
 		$seen->{$pos1}++ if $seen;
 		push @res, $r;

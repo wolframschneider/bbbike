@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: cgi2.pl,v 1.10 2009/02/25 23:46:23 eserte Exp $
+# $Id: cgi2.pl,v 1.11 2009/10/31 08:40:17 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 1998 Slaven Rezic. All rights reserved.
@@ -161,7 +161,7 @@ while(defined($_ = $nextline->())) {
 	next if $only_result && (!has_params_for_search($qs) || $qs =~ /output_as=print/);
 
 	my $request = $qs; #XXX? uri_unescape($1);
-	my $req_line = $_ if $netscape;
+	my $req_line; $req_line = $_ if $netscape;
 
 	my $req_url_part = $request;
 	if (keys %add_param) {
