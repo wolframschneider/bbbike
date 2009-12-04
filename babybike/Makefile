@@ -117,6 +117,7 @@ images: image_berlin image_brb image_small_berlin image_berlin_tiles image_brb_t
 image_berlin_tiles:	do-image-berlin tile-image-berlin
 
 do-image-berlin:
+	[ -d images/berlin_tiles ] || mkdir images/berlin_tiles
 	../miscsrc/bbbikedraw.pl -datadirs data \
 	    -outtype png \
 	    -mapserver \
@@ -127,7 +128,7 @@ do-image-berlin:
 	pngtopnm /tmp/berlin.png > /tmp/berlin.ppm
 
 tile-image-berlin:
-	-mkdir images/berlin_tiles
+	[ -d images/berlin_tiles ] || mkdir images/berlin_tiles
 	../miscsrc/tilemap -hardlink -image /tmp/berlin.ppm -destdir images/berlin_tiles -geometry 100x100 -conf /tmp/berlin.conf
 
 cleanup-berlin-tiles:
@@ -206,7 +207,7 @@ image_brb:
 ######################################################################
 # Overview button
 image_small_berlin:
-	../miscsrc/small_berlinmap.pl -geometry 60x45 -normbg '#c0c0c0' -includepotsdam
+	../miscsrc/small_berlinmap.pl -geometry 60x45 -normbg '#c0c0c0' -fill -includepotsdam
 	cp /tmp/berlin_small.dim images
 	giftopnm /tmp/berlin_small.gif | ppmtoxpm > images/berlin_small.xpm
 

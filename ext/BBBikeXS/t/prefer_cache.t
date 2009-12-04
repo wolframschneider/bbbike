@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: prefer_cache.t,v 1.4 2009/10/08 06:23:45 eserte Exp $
+# $Id: prefer_cache.t,v 1.5 2009/12/04 20:34:40 eserte Exp $
 # Author: Slaven Rezic
 #
 

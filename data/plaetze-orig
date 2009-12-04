@@ -37,7 +37,7 @@ Lohmühlenplatz	Pl 12871,9356
 Hertzbergplatz	Pl 13474,8060
 Weichselplatz	Pl 12761,9190
 Wühlischplatz	Pl 14575,11407
-Loeperplatz	Pl 15543,12856
+Loeperplatz	Pl 15563,12860
 Boxhagener Platz	Pl 14272,11775
 Wismarplatz	Pl 14449,11742
 Forckenbeckplatz	Pl 14058,12709
@@ -76,7 +76,6 @@ Brunnenplatz	Pl 8582,16052
 Falkplatz	Pl 10122,15647
 Humannplatz	Pl 11455,15916
 Antonplatz	Pl 13540,15928
-Solonplatz	Pl 14296,16065
 Arnold-Schönberg-Platz	Pl 14063,15976
 Köllnischer Platz	Pl 21796,4517
 Mandrellaplatz	Pl 22513,5747
@@ -129,7 +128,7 @@ Schmetterlingsplatz	Pl 693,9129
 Rankeplatz	Pl 5529,10453
 Herbert-Lewin-Platz	Pl 5518,12159
 Inge-Beisheim-Platz	Pl 8473,11634
-Platz am Königstor	Pl 11723,13630
+Platz am Königstor	Pl 11706,13635
 Akademieplatz	Pl 19206,2848
 Dorothea-Schlegel-Platz	Pl 9108,12635
 Heiligengeistkirchplatz	Pl 10360,12793
@@ -143,7 +142,6 @@ Ludwig-Beck-Platz	Pl 4385,4032 4234,4020 4293,3951
 Freiaplatz	Pl 16685,12358 16694,12422 16826,12408 16820,12339
 Johanneskirchplatz	Pl 3050,3333
 Scholzplatz	Pl -1499,10990
-Jochemplatz	Pl 5367,6054
 Dennewitzplatz	Pl 7906,10098
 Peter-Weiss-Platz	Pl 24226,15121 24232,15060 24303,15070 24281,15138
 Otto-Rosenberg-Platz	Pl 19991,16322 20056,16447
@@ -157,7 +155,7 @@ Charitéplatz	Pl 8538,13388
 Königin-Luise-Platz	Pl 3707,5758
 Rudolf-Mosse-Platz	Pl 3639,7590
 Leo-Blech-Platz	Pl 1606,8239
-Paul-Henckels-Platz	Pl 4283,5694
+Paul-Henckels-Platz	Pl 4255,5712
 #: oldname: -200910: Hohenzollernplatz (Lichtenrade)
 Hermione-von-Preuschen-Platz	Pl 9756,-2415 9864,-2411
 Platz an der Eiche	Pl 19898,8410
@@ -198,6 +196,7 @@ Siegessäule	Pl 6828,12031
 Insel der Jugend	Pl 15675,9090
 #: note: der Punkt ist der gegenüberliegende auf dem Festland
 Pfaueninsel	Pl -8564,2276
+Museumsinsel	Pl 9948,12631
 #: append_comment Potsdam vvvvv
 Potsdam Hauptbahnhof	Pl -12493,-1896
 Potsdam Hbhf	Pl -12493,-1896
