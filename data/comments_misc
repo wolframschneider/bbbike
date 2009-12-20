@@ -30,7 +30,7 @@ Richtung Teufelssee/Saubucht	CP2; -3475,6780 -3418,6747
 ausgeschildert Richtung Breitenbachplatz	CP2; 3349,7361 3374,7322
 als Ganghoferstr. ausgeschildert	CP2; 12960,8246 12918,8232
 Sredzkistr. - Christburger Str.: Drängelgitter auf dem Mittelstreifen	CP 11526,14693 11642,14625 11920,14468
-Christburger Str. - Pasteurstr.: Drängelgitter auf dem Mittelstreifen	CP 11920,14468 12188,14321 12307,14246
+Christburger Str. - Pasteurstr.: Drängelgitter auf dem Mittelstreifen	CP 11920,14468 12177,14335 12307,14246
 Sellin - Benz: schwierig zu findender Waldweg	CS 53932,172900 53868,172725 53906,172550 53574,172367 53383,171931 53203,171896 52806,171507
 Tor (Sperrung möglich?)	CP 58041,164268 58324,164202 59544,164184
 Alternativ auch Fahrt auf dem Lärmschutzwall möglich	CS 17557,17999 16990,18694
@@ -51,7 +51,7 @@ Kreisverkehr	Roundabout 26302,-11712
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 332,22372 742,22666
 Privatstraße der DB	CS 5710,7820 6275,7847
 Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	CS 3347,6460 3449,6863
-(Weg über das Sportgelände): evtl. nachts geschlossen	CS 13252,14179 13375,13986
+(Weg über das Sportgelände): evtl. nachts geschlossen	CS 13252,14179 13385,13992
 Borgmannstr.: Bodenschwellen, rechs vorbei fahren	CS 22513,5747 22531,5871
 Hermann-Blankenstein-Str.: Tor für Kfz evtl. geschlossen, auf Gehweg ausweichen	CS 13886,13668 13858,13719
 Georg-Wilhelm-Str.: 3 Bodenschwellen, rechts vorbei fahren	CS 2708,10245 2691,10047
@@ -90,7 +90,7 @@ Kein MIV-Durchgangsverkehr, nur Anlieger	CS -13036,342 -12947,106 -12862,-27
 Teltower Weg: nicht ausgeschildert	CP2; -107,5880 -174,5941
 Kreisverkehr	Roundabout 19907,12501
 Röntgentaler Weg: durch den Schloßpark	CS 16166,25767 16532,26174
-(Autobahnzubringer): Fahrbahn ist Kraftfahrzeugstraße	CS 18036,2531 18503,2449
+(Autobahnzubringer): Fahrbahn ist Kraftfahrzeugstraße	CS 18036,2531 18247,2490 18496,2471
 (In den Gärten - Hochspannungsweg): Privatweg	CS 11713,1622 11689,1687 11709,1761 11659,1943
 Privatweg, Durchfahrt eigentlich verboten, aber möglich	CS 19726,11743 19750,11730 19827,11686 19881,11591
 Dreipfuhlpark: Freigegeben für Radfahrer	CS 1536,3780 1523,3904 1520,4006 1524,4054 1548,4168 1608,4313 1670,4477 1692,4575 1682,4607 1689,4630 1698,4653
@@ -122,7 +122,7 @@ Drosselbartweg: Radfahren erlaubt	CS 13899,18833 13909,18835 13953,18842 13967,1
 (Seeburger Str./Seecktstr. - Bullengraben): Zufahrt über Supermarktparkplatz	CS; -4299,13304 -4354,13377
 Straße R: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -198,16187 -629,16546 -698,16603 -786,16666
 Straße Y: Privatstraße, Höchstgeschwindigkeit 20 km/h	CS -629,16546 -671,16488
-Zur Pariser Str.: Hausdurchfahrt benutzen	CS; 5475,9914 5416,9928
+Zur Pariser Str.: Hausdurchfahrt benutzen	CS; 5464,9914 5416,9928
 Kreisverkehr	Roundabout 11393,10390
 (Spießweg - Hermsdorfer Str.): Rad- und Fußweg	CS 4827,20862 4644,20952
 (Erbendorfer Weg - Lichterfelder Ring): markierter Radweg	CS 7131,694 7117,725 7023,694 6941,690
@@ -187,3 +187,6 @@ Ausgeschildert als Matheshöher Weg	CP2; 49488,96427 49056,96700
 Ausgeschildert als Britzer Str.	CP2; 33044,51831 33415,51839
 Ausgeschildert als Blütenberger Weg	CP2; 36914,54197 34819,54697
 (Lauterberger Str. - Andreasberger Str.): Privatstraße	CS 12053,6042 12154,6063
+ausgeschildert "zum Sportplatz"	CP2; 16136,7886 16534,8182
+ausgeschildert "zu den Häusern Gubitzstr. 18 - 20a"	CP2; 12463,15774 12642,15668
+ausgeschildert "zu den Häusern Hosemannstr. 50 - 39"	CP2; 12642,15668 12463,15774

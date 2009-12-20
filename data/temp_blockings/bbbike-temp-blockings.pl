@@ -1262,7 +1262,7 @@ EOF
        text  => 'Sophienstraße, zwischen Große Hamburger Straße und Rosenthaler Straße, für den Fahrzeugverkehr gesperrt (9. Umwelt- und Weihnachtsmarkt). Dauer: 11.12.2004 06:00 Uhr bis 12.12.2004 24:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 9982,13411 10317,13248
+userdel	2 9986,13412 10317,13248
 EOF
      },
      { from  => 1102050000, # 2004-12-03 06:00
@@ -1642,7 +1642,7 @@ EOF
        text  => 'Pistoriusstr. (Weissensee) Richtung Berliner Allee zwischen Mirbachplatz und Parkstr. Baustelle, Fahrtrichtung gesperrt (bis 30.06.2005)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1 13400,16395 13485,16362 13544,16339 13632,16305 13652,16297 13679,16286 13797,16237
+userdel	1 13400,16395 13485,16362 13544,16339 13632,16305 13652,16297 13679,16286 13788,16240
 EOF
      },
      { from  => 1111960800, # 2005-03-28 00:00
@@ -1830,7 +1830,7 @@ EOF
        text  => 'Berliner Allee Richtung stadtauwärts, zwischen Langhanstr. und Lindenallee Baustelle, Fahrtrichtung gesperrt (bis Ende 2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 13540,15928 13623,15954 13630,15956 13753,16000 13826,16026 14014,16106 14067,16127 14248,16202 14371,16252
+userdel	q4; 13540,15928 13623,15954 13630,15956 13737,15994 13826,16026 14014,16106 14067,16127 14248,16202 14371,16252
 EOF
      },
      { from  => 1138319749, # 2006-01-27 00:55
@@ -1839,7 +1839,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_77420',
        data  => <<EOF,
-userdel	q4; 15838,14319 15871,14106 15897,13942 15896,13594 15896,13547
+userdel	q4; 15838,14319 15855,14207 15871,14106 15897,13942 15896,13760 15896,13594 15896,13547
 EOF
      },
      { from  => 1114466400, # 2005-04-26 00:00
@@ -2669,7 +2669,7 @@ EOF
        text  => 'Wegedornstraße (Adlershof) Richtung Rudow, zwischen Rudower Chaussee und Ernst-Ruska-Ufer Baustelle, Fahrtrichtung gesperrt (bis Ende 2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 18929,2454 18925,2700
+userdel	q4 18929,2454 18941,2609 18934,2703
 EOF
      },
      { from  => 1125957600, # 2005-09-06 00:00
@@ -3001,7 +3001,7 @@ EOF
        text  => 'Prenzlauer Berg: Richtung Prenzlauer Allee gesperrt (Kopfsteinpflaster wird durch Asphalt ersetzt)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1 11723,13630 11545,13690 11257,13647
+userdel	1 11706,13635 11545,13690 11257,13647
 EOF
      },
      { from  => undef, # 
@@ -3057,7 +3057,7 @@ EOF
        text  => 'Universitätsstr., Richtung Dorotheenstr. gesperrt (bis 2010) ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork; 9601,12380 9574,12578
+userdel	q4::inwork; 9601,12380 9580,12581
 EOF
      },
      { from  => undef, # 
@@ -3065,7 +3065,7 @@ EOF
        text  => 'Universitätsstr., Richtung Dorotheenstr. gesperrt (bis 2010)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork; 9561,12687 9574,12578
+userdel	q4::inwork; 9568,12688 9580,12581
 EOF
      },
      { from  => 1129413600, # 2005-10-16 00:00
@@ -3130,7 +3130,7 @@ userdel	2 -12693,-827 -12804,-854
 userdel	2 -12712,-734 -12884,-769
 userdel	2 -12730,-627 -12712,-734
 userdel	2 -12804,-854 -12886,-869
-userdel	2 -12718,-1327 -12755,-1131 -12768,-1069
+userdel	2 -12718,-1327 -12741,-1197 -12755,-1131 -12768,-1069
 EOF
      },
      { from  => 1130277600, # 2005-10-26 00:00
@@ -3210,7 +3210,7 @@ EOF
        source_id => 'IM_002329',
        data  => <<EOF,
 userdel	q4 13300,17726 13214,17742 13031,17775 12928,17801 12856,17825
-userdel	q4 12856,17825 12736,17998
+userdel	q4 12856,17825 12825,17870 12736,17998
 EOF
      },
      { from  => undef, # 
@@ -3556,7 +3556,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002437',
        data  => <<EOF,
-userdel	q4; 14067,16127 13797,16237
+userdel	q4; 14067,16127 13788,16240
 EOF
      },
      { from  => 1138319443, # 2006-01-27 00:50
@@ -4421,7 +4421,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_002776',
        data  => <<EOF,
-userdel	1 15388,16502 15134,16499 14809,16525 14621,16563
+userdel	1 15388,16502 15142,16499 15134,16499 14809,16525 14621,16563
 EOF
      },
      { from  => 1147721063, # 2006-05-15 21:24
@@ -5084,7 +5084,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_84063',
        data  => <<EOF,
-userdel	1::inwork 14621,16563 14809,16525 15134,16499 15388,16502
+userdel	1::inwork 14621,16563 14809,16525 15134,16499 15142,16499 15388,16502
 EOF
      },
      { from  => 1152566231, # 2006-07-10 23:17
@@ -5323,7 +5323,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003144',
        data  => <<EOF,
-userdel	1::inwork 11323,12484 11209,12430 11092,12375 11056,12461 10954,12635
+userdel	1::inwork 11323,12484 11209,12430 11092,12375 11084,12395 11056,12461 10954,12635
 userdel	1::inwork 10954,12635 11057,12715 11105,12764 11134,12793
 EOF
      },
@@ -5533,7 +5533,7 @@ EOF
        text  => 'Berlin Weißensee, Buschallee, Weißensee Richtung Ahrensfelde Zwischen Einmündung Berliner Allee und Kreuzung Hansastraße Baustelle, gesperrt bis 15.09.2006 18:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 14621,16563 14809,16525 15134,16499 15388,16502 15432,16500
+userdel	1::inwork 14621,16563 14809,16525 15134,16499 15142,16499 15388,16502 15432,16500
 EOF
      },
      { from  => 1156478400, # 2006-08-25 06:00
@@ -8293,11 +8293,11 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp -12139,1325 -12094,1273 -12081,1168
-userdel	2::temp -12166,1384 -12141,1357 -12139,1325 -12144,1255 -12186,1118 -12182,816
+userdel	2::temp -12166,1384 -12141,1357 -12139,1325 -12148,1245 -12186,1118 -12154,963 -12182,816
 userdel	2::temp -11818,993 -11871,1087 -12081,1168
 userdel	2::temp -11887,837 -11856,950
 userdel	2::temp -11581,559 -11650,590 -11603,721 -11615,853 -11715,959
-userdel	2::temp -11990,1214 -11871,1185 -11568,1287 -11537,1206 -11575,1031 -11562,918 -11510,810 -11231,696
+userdel	2::temp -11990,1214 -11871,1185 -11580,1281 -11544,1262 -11537,1206 -11575,1031 -11562,918 -11510,810 -11412,784 -11392,762
 EOF
      },
      { from  => 1180567260, # 2007-05-31 01:21
@@ -8868,7 +8868,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_005905',
        data  => <<EOF,
-userdel	q4::inwork; 17388,3576 17490,3637 17522,3653 17593,3748
+userdel	q4::inwork; 17388,3576 17491,3627 17522,3653 17593,3748
 EOF
      },
      { from  => 1184191200, # 2007-07-12 00:00
@@ -9061,7 +9061,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006088',
        data  => <<EOF,
-userdel	2::inwork 15774,14992 15856,14915 15941,14834 16037,14747
+userdel	2::inwork 15774,14992 15856,14915 15941,14834 16035,14748
 EOF
      },
      { from  => 1184450400, # 2007-07-15 00:00
@@ -9229,7 +9229,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006190',
        data  => <<EOF,
-userdel	1::inwork 5468,10442 5479,10719 5484,10810
+userdel	1::inwork 5458,10443 5479,10719 5484,10810
 EOF
      },
      { from  => 1185833959, # 2007-07-31 00:19
@@ -9673,7 +9673,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006391',
        data  => <<EOF,
-userdel	2::inwork 16843,14420 16881,14063
+userdel	2::inwork 16843,14420 16864,14226 16881,14063
 EOF
      },
      { from  => 1188424800, # 2007-08-30 00:00
@@ -10003,7 +10003,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006088',
        data  => <<EOF,
-userdel	2::inwork 15774,14992 15856,14915 15941,14834 16037,14747
+userdel	2::inwork 15774,14992 15856,14915 15941,14834 16035,14748
 EOF
      },
      { from  => 1191532907, # 2007-10-04 23:21
@@ -10086,7 +10086,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006820',
        data  => <<EOF,
-userdel	1::inwork 16861,5935 16987,5838 17331,5571 17586,5374
+userdel	1::inwork 16861,5935 16993,5841 17337,5574 17366,5551 17586,5374
 EOF
      },
      { from  => 1191708000, # 2007-10-07 00:00
@@ -10778,7 +10778,7 @@ EOF
        text  => 'Einbahnstraße Richtung Westen wegen Bauarbeiten',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 5149,7012 5251,6949 5374,6932
+userdel	1::inwork 5149,7012 5251,6949 5357,6932
 EOF
      },
      { from  => 1200438000, # 2008-01-16 00:00
@@ -10969,7 +10969,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_008076',
        data  => <<EOF,
-userdel	2::inwork 9982,13411 10317,13248
+userdel	2::inwork 9986,13412 10317,13248
 EOF
      },
      { from  => 1205622000, # 2008-03-16 00:00
@@ -11091,7 +11091,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_008152',
        data  => <<EOF,
-userdel	2::inwork 9982,13411 10317,13248
+userdel	2::inwork 9986,13412 10317,13248
 EOF
      },
      { from  => 1206313200, # 2008-03-24 00:00
@@ -11107,7 +11107,7 @@ EOF
        text  => 'Rückbau der Fr.-Ebert-Str. zwischen Breite Str. und Platz der Einheit, Bauarbeiten bis Ende 2009. Unter Umständen Umfahrung über Alten Markt notwendig. ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -12719,-1661 -12755,-1585 -12773,-1544
+userdel	2::inwork -12758,-1654 -12755,-1585 -12773,-1544
 EOF
      },
      { from  => 1211228399, # 2008-05-19 22:19
@@ -11246,7 +11246,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_008378',
        data  => <<EOF,
-userdel	q4::inwork 7497,5610 7599,5553 7669,5536 7816,5519 8038,5521
+userdel	q4::inwork 7497,5610 7599,5553 7669,5536 7816,5519 7857,5519 8038,5521
 EOF
      },
      { from  => 1208546801, # 2008-04-18 21:26
@@ -12065,7 +12065,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009449',
        data  => <<EOF,
-userdel	1::inwork 13098,15592 12966,15478 12880,15335
+userdel	1::inwork 13098,15592 12966,15478 12870,15342
 EOF
      },
      { from  => 1216591200, # 2008-07-21 00:00
@@ -12082,7 +12082,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_009457',
        data  => <<EOF,
-userdel	q4::inwork; 11785,13625 11762,13619 11723,13630
+userdel	q4::inwork; 11785,13625 11762,13619 11706,13635
 EOF
      },
      { from  => undef, # 
@@ -12353,7 +12353,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009790',
        data  => <<EOF,
-userdel	1::inwork 16654,16167 16961,16042
+userdel	1::inwork 16660,16165 16961,16042
 EOF
      },
      { from  => 1247724607, # 2009-07-16 08:10
@@ -12610,7 +12610,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009965',
        data  => <<EOF,
-userdel	1::inwork 13727,16085 13753,16000
+userdel	1::inwork 13712,16089 13737,15994
 EOF
      },
      { from  => 1221775200, # 2008-09-19 00:00
@@ -12936,7 +12936,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010408',
        data  => <<EOF,
-userdel	1::inwork 13453,14678 13151,14855 13110,14879 12812,15053 12722,15105
+userdel	1::inwork 13438,14675 13151,14855 13110,14879 12812,15053 12709,15112
 EOF
      },
      { from  => 1224626400, # 2008-10-22 00:00
@@ -13223,7 +13223,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009603',
        data  => <<EOF,
-userdel	1::inwork 2186,9612 2122,9539 2056,9446 1932,9263
+userdel	1::inwork 2186,9612 2122,9539 2065,9459 2056,9446 1932,9263
 EOF
      },
      { from  => 1233088186, # 2009-01-27 21:29
@@ -13248,7 +13248,7 @@ EOF
        text  => 'Reichenberger Str., Einbahnstraße Richtung Kottbusser Tor',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2009-09-22
+#: last_checked: 2009-11-10
 userdel	1::inwork 12229,10014 12398,9938 12556,9862
 EOF
      },
@@ -13301,7 +13301,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_011938',
        data  => <<EOF,
-userdel	q4::inwork; 15052,14585 15272,14691 15383,14759
+userdel	q4::inwork; 15052,14585 15272,14691 15345,14736 15383,14759
 EOF
      },
      { from  => 1244065297, # 2009-06-03 23:41
@@ -13314,12 +13314,12 @@ userdel	q4::inwork; 11242,11720 11324,11689 11574,11594
 EOF
      },
      { from  => 1238347506, # 2009-03-29 19:25
-       until => 1239657424, # 2010-01-01 00:00 1262300400
-       text  => 'Köthener Str. (Kreuzberg) in beiden Richtungen zwischen Bernburger Str. und Hafenplatz Baustelle, Straße vollständig gesperrt (bis Anfang 2010)',
+       until => 1262300400, # 2010-01-01 00:00
+       text  => 'Köthener Str. (Kreuzberg) zwischen Bernburger Str. und Hallesches Ufer Baustelle, Einbahnstraße Richtung Norden (bis Anfang 2010)',
        type  => 'handicap',
        source_id => 'IM_011637',
        data  => <<EOF,
-userdel	q4::inwork 8536,11063 8483,10900
+userdel	q4::inwork; 8536,11063 8483,10900 8443,10777
 EOF
      },
      { from  => 1244065177, # 2009-06-03 23:39
@@ -13537,13 +13537,10 @@ userdel	q4::inwork 14530,11137 14465,11195
 EOF
      },
      { from  => undef, # 
-       until => Time::Local::timelocal(reverse(2009-1900,10-1,31,23,59,59)), # XXX
+       until => 1257190766, # Time::Local::timelocal(reverse(2009-1900,10-1,31,23,59,59)), # XXX
        text  => 'Jessnerstr. wegen Bauarbeiten in Richtung Süden nicht befahrbar, bis Oktober 2009',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2009-10-15
-#: next_check: 2009-11-01
-#: XXX nach Beendigung der Bauarbeiten bleibt wahrscheinlich die gesamte Straße asphaltiert, mit einigen Aufpflasterungen
 userdel	q4::inwork; 15080,11905 14977,11754 14941,11689 14849,11539
 EOF
      },
@@ -14673,11 +14670,11 @@ EOF
      },
      { from  => 1246916833, # 2009-07-06 23:47
        until => 1262300400, # 2010-01-01 00:00
-       text  => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Mohrenstr. und Behrenstr. Baustelle, Fahrtrichtung gesperrt (bis Dezember 2009)',
+       text  => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Mohrenstr. und Französische Str. Baustelle, Fahrtrichtung gesperrt (bis Dezember 2009)',
        type  => 'handicap',
        source_id => 'IM_013316',
        data  => <<EOF,
-userdel	q4::inwork; 9679,11834 9668,11928 9656,12021 9643,12127 9631,12227
+userdel	q4::inwork; 9679,11834 9668,11928 9656,12021 9643,12127
 EOF
      },
      { from  => 1247349600, # 2009-07-12 00:00
@@ -14848,8 +14845,8 @@ userdel	2::inwork 12431,52894 12615,52952 13967,53380 15301,53802 15886,54280 17
 EOF
      },
      { from  => 1247954400, # 2009-07-19 00:00
-       until => 1258326000, # 2009-11-16 00:00
-       text  => 'B 102 Treuenbrietzener Str. OD Jüterbog, zw. Mendelsohnstr. und Bülowstr. Straßenausbau Vollsperrung 20.07.2009-15.11.2009 ',
+       until => 1260658800, # 2009-12-13 00:00
+       text  => 'B 102 Treuenbrietzener Str. OD Jüterbog, zw. Mendelsohnstr. und Bülowstr. Straßenausbau Vollsperrung 20.07.2009-12.12.2009 ',
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::inwork -12541,-46115 -13108,-46122
@@ -14905,24 +14902,23 @@ userdel	q4::inwork 61432,38883 61546,39041 61413,39860
 EOF
      },
      { from  => 1248213600, # 2009-07-22 00:00
-       until => 1259622000, # 2009-12-01 00:00
-       text  => 'L 059 Hainschestraße Brücke über den Binnengraben in Bad Liebenwerda Brückenneubau Vollsperrung 23.07.2009-30.11.2009 ',
+       until => 1260572400, # 2009-12-12 00:00
+       text  => 'L 059 Hainschestraße Brücke über den Binnengraben in Bad Liebenwerda Brückenneubau Vollsperrung 23.07.2009-11.12.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork 12383,-99327 12173,-99115
 EOF
      },
      { from  => 1248200556, # 2009-07-21 20:22
-       until => undef, # was 1257030000, 2009-11-01 00:00, bis Oktober 2009, but seems to be more work...
+       until => 1258131416, # was 1257030000, 2009-11-01 00:00, bis Oktober 2009, but seems to be more work...; -> nach handicap_s-orig gewandert
        text  => 'Fahrbahn der Mauerstr. wegen Bauarbeiten gesperrt ',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2009-10-16
 userdel	q4::inwork 9405,11413 9331,11497
 EOF
      },
      { from  => 1248200777, # 2009-07-21 20:26
-       until => undef, # was 2009-10-01 00:00, 1254348000, bis September 2009, but seems to be more work...
+       until => 1258131029, # was 2009-10-01 00:00, 1254348000, bis September 2009, but seems to be more work... 
        text  => 'Bauarbeiten in der Mohrenstraße, Fahrbahn gesperrt ',
        type  => 'handicap',
        data  => <<EOF,
@@ -14930,8 +14926,8 @@ EOF
 userdel	q4::inwork 9418,11804 9220,11781
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1259937995, # 
+       until => 1259937999, # XXX -> nach handicap_s-orig gewandert
        text  => 'Die Charlottenstraße ist wegen Bauarbeiten eine Einbahnstraße Richtung Süden',
        type  => 'handicap',
        data  => <<EOF,
@@ -15333,11 +15329,12 @@ EOF
        data  => <<EOF,
 	2::temp -11615,853 -11715,959 -11818,993 -11871,1087 -12081,1168 -12094,1273 -12139,1325
 	2::temp -11650,590 -11603,721 -11615,853
-	2::temp -11510,810 -11562,918 -11575,1031 -11537,1206 -11568,1287 -11871,1185 -11990,1214 -12124,1359 -12141,1357
-	2::temp -11615,853 -11510,810 -11231,696
-(Ökonomieweg, Neuer Garten): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -12557,11 -12479,97 -12467,215 -12373,288 -12182,816 -12186,1118 -12144,1255 -12139,1325 -12141,1357 -12166,1384
+	2::temp -11510,810 -11562,918 -11575,1031 -11537,1206 -11544,1262 -11580,1281 -11871,1185 -11990,1214 -12124,1359 -12141,1357
+	2::temp -11615,853 -11510,810 -11412,784 -11392,762 -11231,696
+(Ökonomieweg, Neuer Garten): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -12528,-11 -12518,13 -12537,48 -12531,75 -12475,116 -12448,246 -12373,288 -12276,554 -12182,816 -12154,963 -12186,1118 -12148,1245 -12139,1325 -12141,1357 -12166,1384
 Neuer Garten, Westufer des Heiligen Sees: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -12265,-418 -12262,-362 -12328,-212 -12331,-131 -12321,9 -12278,134 -12156,193 -12103,315 -12143,353 -12115,409 -12068,384 -11990,790 -11950,781 -11887,837 -11856,950 -11818,993
-Neuer Garten (am Portierhaus) - Weinmeisterstr.: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -12331,-131 -12412,-118 -12450,-34 -12557,11
+Neuer Garten (am Portierhaus) - Weinmeisterstr.: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -12331,-131 -12412,-118 -12450,-34 -12528,-11
+Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::temp -12332,585 -12276,554 -12115,409
 EOF
      },
      { from  => undef, #
@@ -15346,7 +15343,7 @@ EOF
        type  => 'gesperrt',
        permanent => 1,
        data  => <<EOF,
-(Am Neuen Palais, direkter Weg):  	2::temp -15810,-1274 -15820,-1146 -15854,-656
+(Am Neuen Palais, direkter Weg) 	2::temp -15810,-1274 -15820,-1146 -15854,-656
 (Am Grünen Gitter, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -13857,-1040 -14153,-1135 -14171,-1026
 (Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -14171,-1026 -14482,-1043 -14622,-1138 -14865,-1118 -15025,-1096 -15553,-1139 -15651,-1137 -15820,-1146
 (Lennestr. - Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -14614,-1342 -14856,-1223 -14865,-1118
@@ -15871,12 +15868,12 @@ EOF
 userdel	2::inwork 35214,-41158 35289,-41439 35915,-41259 36010,-41272 36387,-40961 36499,-41097 37581,-41158
 EOF
      },
-     { from  => 1252274400, # 2009-09-07 00:00
+     { from  => 1254952800, # 2009-10-08 00:00
        until => 1259622000, # 2009-12-01 00:00
-       text  => 'L 792 Dorfstraße OD Blankenfelde, zw. Zossener Damm u. H.-Heine-Str. Straßenausbau halbseitig gesperrt; Einbahnstraße 08.09.2009-30.11.2009 ',
+       text  => 'L 792 Dorfstraße OD Blankenfelde, zw. Zossener Damm u. H.-Heine-Str. Straßenausbau Vollsperrung 09.10.2009-30.11.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork; 10448,-7582 10115,-8276
+userdel	q4::inwork 10448,-7582 10115,-8276
 EOF
      },
      { from  => 1242684000, # 2009-05-19 00:00
@@ -15919,9 +15916,9 @@ EOF
 userdel	2::inwork 30910,13101 30815,13170 30795,13191
 EOF
      },
-     { from  => 1252792800, # 2009-09-13 00:00
+     { from  => 1258844400, # 2009-11-22 00:00
        until => 1267398000, # 2010-03-01 00:00
-       text  => 'B 005 Friesack - Wusterhausen OD Bückwitz, Kreuzung B167, Ruppiner Str. Kreiselneubau Vollsperrung 14.09.2009-28.02.2010 ',
+       text  => 'B 167 Ruppiner Str. OD Bückwitz, Einmünd. B 5 Kreiselneubau Vollsperrung 23.11.2009-28.02.2010 ',
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::inwork -52519,49887 -52595,49993
@@ -16128,7 +16125,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014223',
        data  => <<EOF,
-userdel	q4::inwork 15838,14319 15871,14106 15897,13942
+userdel	q4::inwork 15838,14319 15855,14207 15871,14106 15897,13942
 EOF
      },
      { from  => 1254980700, # 2009-10-08 07:45
@@ -16270,8 +16267,8 @@ EOF
 userdel	2::inwork 82521,-12031 82191,-12275
 EOF
      },
-     { from  => 1257462000, # 2009-11-06 00:00
-       until => 1257721200, # 2009-11-09 00:00
+     { from  => 1257195560, # 2009-11-06 00:00 1257462000
+       until => 1257195564, # 2009-11-09 00:00 1257721200
        text  => 'B 087 Frankfurt/Oder - Müllrose zw. Markendorf u. Hohenwalde Straßenbau Durchlass Vollsperrung 07.11.2009-08.11.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -16361,8 +16358,8 @@ userdel	q4::inwork 31377,34072 31293,33987
 EOF
      },
      { from  => 1254607200, # 2009-10-04 00:00
-       until => 1256335200, # 2009-10-24 00:00
-       text  => 'L 339 Neuer Hönower Weg OD Hoppegarten, zw. Berliner Str. u. Industriestr. Deckenerneuerung Vollsperrung 05.10.2009-23.10.2009 ',
+       until => 1257548400, # 2009-11-07 00:00
+       text  => 'L 339 Neuer Hönower Weg OD Hoppegarten, zw. Berliner Str. u. Industriestr. Deckenerneuerung Vollsperrung 05.10.2009-06.11.2009 ',
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::inwork 26880,11479 26625,10953
@@ -16516,9 +16513,9 @@ EOF
 userdel	2::inwork 3314,15782 3564,16294
 EOF
      },
-     { from  => 1255383595, # 2009-10-12 23:39
-       until => 1258325999, # 2009-11-15 23:59
-       text  => 'Neustädtische Kirchstr. (Mitte) in beiden Richtungen zwischen Dorotheenstr. und Unter den Linden Baustelle, Straße vollständig gesperrt. Ebenfalls in beiden Richtungen gesperrt: Dorotheenstr. zwischen Neustädtische Kirchstr. und Schadowstr (bis Mitte 11/2009)',
+     { from  => 1258835854, # 2009-11-21 21:37
+       until => 1270072799, # 2010-03-31 23:59
+       text  => 'Neustädtische Kirchstr. (Mitte) in beiden Richtungen zwischen Dorotheenstr. und Unter den Linden Baustelle, Straße vollständig gesperrt. Ebenfalls in beiden Richtungen gesperrt: Dorotheenstr. zwischen Neustädtische Kirchstr. und Schadowstr (bis Ende 03/2010)',
        type  => 'handicap',
        source_id => 'IM_014421',
        data  => <<EOF,
@@ -16554,7 +16551,7 @@ EOF
        text  => 'Sperrungen an der Kreuzung Karl-Marx-Allee/Otto-Braun-Straße einschließlich Grunerstraße bis Alexanderstraße, 16.10.2009, 19.00 Uhr bis 19.10.2009, 05.00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 11275,13026 11228,12951 11134,12793
+userdel	2::inwork 11267,13012 11228,12951 11134,12793
 userdel	3 11139,13008 11228,12951 11295,12915
 EOF
      },
@@ -16563,7 +16560,7 @@ EOF
        text  => 'Sperrungen an der Kreuzung Karl-Marx-Allee/Otto-Braun-Straße einschließlich Grunerstraße bis Alexanderstraße, 23.10.2009, 19.00 Uhr bis 26.10.2009, 05.00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 11275,13026 11228,12951 11134,12793
+userdel	2::inwork 11267,13012 11228,12951 11134,12793
 userdel	3 11139,13008 11228,12951 11295,12915
 EOF
      },
@@ -16572,7 +16569,7 @@ EOF
        text  => 'Sperrungen an der Kreuzung Karl-Marx-Allee/Otto-Braun-Straße einschließlich Grunerstraße bis Alexanderstraße, 30.10.2009, 19.00 Uhr bis 2.11.2009, 05.00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 11275,13026 11228,12951 11134,12793
+userdel	2::inwork 11267,13012 11228,12951 11134,12793
 userdel	3 11139,13008 11228,12951 11295,12915
 EOF
      },
@@ -16584,14 +16581,14 @@ EOF
 userdel	q4::inwork 7716,8356 7716,8048 7717,7879
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1259938062, # 
+       until => 1259938066, # XXX -> nach handicap_s-orig gewandert
        text  => 'Universitätsstraße Richtung Unter den Linden gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: last_checked: 2009-10-18
 #: XXX oder ist das eine permanente Sperrung?
-userdel	q4::inwork; 9574,12578 9601,12380
+userdel	q4::inwork; 9580,12581 9601,12380
 EOF
      },
      { from  => undef, #
@@ -16646,6 +16643,313 @@ EOF
        data  => <<EOF,
 #: last_checked: 2009-10-26
 userdel	2::inwork 14835,10272 14888,10385
+EOF
+     },
+     { from  => 1257194796, # 2009-11-02 21:46
+       until => 1258325999, # 2009-11-15 23:59
+       text  => 'Edisonstr. (Köpenick) Richtung Süden zwischen Helmholtzstr. und Siemensstr. Bauarbeiten, Fahrtrichtung gesperrt (bis Mitte 11/2009)',
+       type  => 'handicap',
+       source_id => 'IM_014548',
+       data  => <<EOF,
+userdel	q4::inwork; 17919,6968 17962,6674
+EOF
+     },
+     { from  => 1257194861, # 2009-11-02 21:47
+       until => 1259708399, # 2009-12-01 23:59
+       text  => 'Friedrichstr. (Mitte) Richtung Wedding zwischen Dorotheenstr. und Georgenstr. Baustelle, Fahrtrichtung gesperrt (bis Anfang 12.2009)',
+       type  => 'handicap',
+       source_id => 'IM_014503',
+       data  => <<EOF,
+userdel	q4::inwork; 9330,12529 9314,12652
+EOF
+     },
+     { from  => 1255212000, # 2009-10-11 00:00
+       until => 1259190000, # 2009-11-26 00:00
+       text  => 'B 101 Zinnaer Str. OD Luckenwalde, zw. Kirchstr. und Am Nuthefließ Straßenbau Vollsperrung 12.10.2009-25.11.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -4630,-36012 -4603,-35730
+EOF
+     },
+     { from  => 1255816800, # 2009-10-18 00:00
+       until => 1257980400, # 2009-11-12 00:00
+       text  => 'B 179 zw. Gröditsch u. Neu Lübbenau, ab OL Kuschkow Deckeneinbau Vollsperrung 19.10.2009-11.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 46830,-37598 47572,-37563 48907,-37829
+EOF
+     },
+     { from  => 1256684400, # 2009-10-28 00:00
+       until => 1257634800, # 2009-11-08 00:00
+       text  => 'B 103 Kyritz - Pritzwalk zw. Kollrep u. Abzw. K7012 Deckenerneuerung Vollsperrung 29.10.2009-07.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -67657,68360 -67922,68633 -69298,70111 -70126,70529 -70280,70719 -70377,70966 -70384,71350
+EOF
+     },
+     { from  => 1257634800, # 2009-11-08 00:00
+       until => 1259362800, # 2009-11-28 00:00
+       text  => 'B 103 Meyenburg - Plau am See zw. Meyenburg und Ganzlin Deckenerneuerung Vollsperrung 09.11.2009-27.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -70491,100364 -70046,101896
+EOF
+     },
+     { from  => 1257030000, # 2009-11-01 00:00
+       until => 1262300400, # 2010-01-01 00:00
+       text  => 'B 112 OU Guben - OU Neuzelle zw. Abzw.Wellmitz und Abzw. Streichwitz Straßenneubau Vollsperrung 02.11.2009-31.12.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 96951,-34887 97016,-36424 97032,-36743 97476,-37327 97680,-37821
+EOF
+     },
+     { from  => 1258239600, # 2009-11-15 00:00
+       until => 1261177200, # 2009-12-19 00:00
+       text  => 'B 122 Zechlinerhütte - Wesenberg zw. Abzw. Kleinzerlang und Prebelowbrücke Deckenerneuerung Vollsperrung 16.11.2009-18.12.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -26520,83231 -26098,84240 -26120,84667 -26316,84900
+EOF
+     },
+     { from  => 1256425200, # 2009-10-25 01:00
+       until => 1257634800, # 2009-11-08 00:00
+       text  => 'B 158 Oderberg - Angermünde zw. OA Parstein u. OE Neuendorf Straßenbau Vollsperrung 26.10.2009-07.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 54050,56075 53725,56812 53450,57200 53250,57425 52950,58000 52740,58576 52499,58861
+EOF
+     },
+     { from  => 1256598000, # 2009-10-27 00:00
+       until => 1257548400, # 2009-11-07 00:00
+       text  => 'K 6303 Brücke zw. Brieselang und Nauen Straßenerneuerung Vollsperrung 28.10.2009-06.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -20109,20341 -19128,19920
+EOF
+     },
+     { from  => 1257030000, # 2009-11-01 00:00
+       until => 1258326000, # 2009-11-16 00:00
+       text  => 'L 049 Berliner Straße OL Lübbenau, Bahnübergang, zw. Bahnhofstr. u. Berl. Str. Gleisbauarbeiten Vollsperrung 02.11.2009-15.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 49774,-59756 49226,-59451 47862,-59500
+EOF
+     },
+     { from  => 1257404794, # 2009-11-05 08:06
+       until => 1257980400, # 2009-11-12 00:00
+       text  => 'Str. des 17. Juni und Ebertstr. (Tiergarten) in beiden Richtungen zwischen Y.-Rabin-Str. und Brandenburger Tor Veranstaltung, Straße vollständig gesperrt, auch Ebertstr. zwischen Dorotheenstr. und Behrenstr. (bis 11.11.2009 nachts)',
+       type  => 'gesperrt',
+       source_id => 'IM_014555',
+       data  => <<EOF,
+userdel	2::temp 8610,12254 8538,12245 8214,12205 8089,12190
+userdel	2::temp 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165
+EOF
+     },
+     { from  => 1257404868, # 2009-11-05 08:07
+       until => 1257980400, # 2009-11-12 00:00
+       text  => 'Ebertstr. (Mitte) in beiden Richtungen zwischen Hannah-Arendt-Str. und Behrenstr. Veranstaltung, Straße vollständig gesperrt (auch im weiteren Verlauf bis Dorotheenstr.) (bis 11.11.2009 nachts)',
+       type  => 'gesperrt',
+       source_id => 'IM_014557',
+       data  => <<EOF,
+userdel	2::temp 8581,11896 8595,12066 8600,12165
+EOF
+     },
+     { from  => 1259276400, # 2009-11-27 00:00
+       until => 1259535600, # 2009-11-30 00:00
+       text  => 'L 060 Ringstr. OD Uebigau, Bereich Markt Weihnachtsmarkt Vollsperrung 28.11.2009-29.11.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::temp 5358,-90502 5798,-90075
+EOF
+     },
+     { from  => 1257375600, # 2009-11-05 00:00
+       until => 1257807600, # 2009-11-10 00:00
+       text  => 'L 239 Kerkow - Joachimsthal Bahnübergang Kerkow Gleiserneuerung Vollsperrung 06.11.2009, 08.11.2009 und 09.11.2009',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 48237,70892 48147,70935 48092,70962
+EOF
+     },
+     { from  => 1259967600, # 2009-12-05 00:00
+       until => 1260313200, # 2009-12-09 00:00
+       text  => 'L 239 Kerkow - Joachimsthal Bahnübergang Kerkow Gleiserneuerung Vollsperrung 06.12.2009 und 08.12.2009',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 48237,70892 48147,70935 48092,70962
+EOF
+     },
+     { from  => 1258066800, # 2009-11-13 00:00
+       until => 1258326000, # 2009-11-16 00:00
+       text  => 'L 239 Kerkow - Joachimsthal Bahnübergang Kerkow Gleiserneuerung Vollsperrung 14.11.2009-15.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 48237,70892 48147,70935 48092,70962
+EOF
+     },
+     { from  => 1257202800, # 2009-11-03 00:00
+       until => 1258498800, # 2009-11-18 00:00
+       text  => 'L 704 B 87 - Lebusa zw. B 87 und Krassig Radwegneubau an B 87 Vollsperrung 04.11.2009-17.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 6325,-75436 6892,-75008
+EOF
+     },
+     { from  => 1257721200, # 2009-11-09 00:00
+       until => 1262214000, # 2009-12-31 00:00
+       text  => 'Aufgrund einer Veranstaltung sind in der Zeit von 10.11.2009 bis 30.12.2009, 24:00 Uhr folgende Straßenzüge gesperrt: Niederlagstr. zwischen Am Schinkelplatz und Französische Str. Oberwallstr. zwischen Unter den Linden und Französische Str. Bebelplatz zwischen Unter den Linden und Behrenstr.',
+       type  => 'gesperrt',
+       source_id => 'IM_014608',
+       data  => <<EOF,
+userdel	2::temp 9943,12364 9951,12318 9939,12296 9972,12184
+userdel	2::temp 9780,12401 9795,12293 9801,12245 9812,12145
+userdel	2::temp 9852,12409 9869,12297 9890,12161
+EOF
+     },
+     { from  => 1258239600, # 2009-11-15 00:00
+       until => 1258412400, # 2009-11-17 00:00
+       text  => 'B 087 Frankfurt/Oder - Müllrose zw. Markendorf u. Hohenwalde Deckeneinbau Vollsperrung 16.11.2009-16.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 83389,-11087 82521,-12031 82191,-12275 81697,-12826
+EOF
+     },
+     { from  => 1257634800, # 2009-11-08 00:00
+       until => 1259362756, # 2009-11-28 00:00 1259362800
+       text  => 'B 109 Schönwalde - Wandlitz OD Schönwalde Durchlasssanierung Vollsperrung 09.11.2009-27.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 12635,32221 12466,30452
+EOF
+     },
+     { from  => 1257462000, # 2009-11-06 00:00
+       until => 1258758000, # 2009-11-21 00:00
+       text  => 'B 115 Baruth - Jüterbog zw. Charlottenfelde und Markendorf Straßenbauarbeiten Vollsperrung 07.11.2009-20.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -1480,-46978 897,-46109
+EOF
+     },
+     { from  => 1258585200, # 2009-11-19 00:00
+       until => 1258844400, # 2009-11-22 00:00
+       text  => 'B 115 Baruth - Jüterbog zw. Jüterbog und Markendorf Deckschichteinbau Vollsperrung 20.11.2009-21.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -4289,-47091 -5760,-46987 -6787,-46974 -6986,-46942 -7582,-46937 -7831,-47100
+EOF
+     },
+     { from  => 1257807600, # 2009-11-10 00:00
+       until => 1258585200, # 2009-11-19 00:00
+       text  => 'B 158 Bad Freienwalde - Berlin zw. Bad Freienwalde, Abzw. Waldstadt und Forsthaus Deckenerneuerung Vollsperrung 11.11.2009-18.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 51252,41977 51162,41743 50650,41400 50271,41315
+EOF
+     },
+     { from  => 1257375600, # 2009-11-05 00:00
+       until => 1258239600, # 2009-11-15 00:00
+       text  => 'B 179 zw. OL Kuschkow u. Neu Lübbenau Deckeneinbau Vollsperrung 06.11.2009-14.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 46362,-37400 46830,-37598 47572,-37563 48907,-37829 49139,-37938 49667,-38348
+EOF
+     },
+     { from  => 1254607200, # 2009-10-04 00:00
+       until => 1258326000, # 2009-11-16 00:00
+       text  => 'B 198 zw. Prenzlau und Dedelow grundh. Straßebau, Radwegbau Vollsperrung 05.10.2009-15.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 36927,105345 36726,106236 36665,106354 36137,106832 35674,106889
+EOF
+     },
+     { from  => 1257634800, # 2009-11-08 00:00
+       until => 1259967600, # 2009-12-05 00:00
+       text  => 'L 601 Finsterwalde - Doberlug-Kirchhain OD Lugau, zw. Abzw. Hennersdorfer Str. u. Abzw. Ha Straßenbauarbeiten Vollsperrung 09.11.2009-04.12.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998 24927,-87720
+EOF
+     },
+     { from  => 1258045387, # 2009-11-12 18:03
+       until => 1262300399, # 2009-12-31 23:59
+       text  => 'Voltairestr.: Durchfahrt wegen des Weihnachtsmarkts am Alexanderplatz nicht oder nur schwer möglich',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp 11209,12430 11323,12484
+EOF
+     },
+     { from  => 1258207217, # 2009-11-14 15:00
+       until => 1262300399, # 2009-12-31 23:59
+       text  => 'Gendarmenmarkt: Weihnachtsmarkt, gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp 9526,11911 9668,11928
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Asphaltierung der Belziger Str., Einbahnstraße Richtung Westen',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork; 7110,9024 7315,9156
+EOF
+     },
+     { from  => 1258836011, # 2009-11-21 21:40
+       until => 1259017199, # 2009-11-23 23:59
+       text  => 'Tiergartenstr. (Tiergarten) in beiden Richtungen zwischen Hildebrandtsr. und Hiroshimastr. Baustelle, Straße vollständig gesperrt (bis 23.11. 18 Uhr)',
+       type  => 'handicap',
+       source_id => 'IM_014662',
+       data  => <<EOF,
+userdel	q4::inwork 7435,11514 7356,11517
+EOF
+     },
+     { from  => 1259104057, # 2009-11-25 00:07
+       until => 1259518702, # 2009-11-30 23:59 1259621999
+       text  => 'Einsteinufer (Charlottenburg) Richtung Marchstr. zwischen Str. des 17. Juni und Marchstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 11/2009)',
+       type  => 'handicap',
+       source_id => 'IM_014681',
+       data  => <<EOF,
+userdel	q4::inwork; 5361,11910 5229,12001 5128,12149 4981,12252
+EOF
+     },
+     { from  => 1258239600, # 2009-11-15 00:00
+       until => 1259535600, # 2009-11-30 00:00
+       text  => 'B 167 Neuruppin - AS Neuruppin zw. Bechlin u. AS Neuruppin Straßenbauarbeiten Vollsperrung 16.11.2009-29.11.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -35577,54824 -35059,54768 -34499,54966 -33922,55483
+EOF
+     },
+     { from  => 1259276209, # 2009-11-26 23:56
+       until => 1259553600, # 2009-11-30 05:00
+       text  => 'Baumschulenstr. (Treptow) in beiden Richtungen zwischen Kiefholzstr. und Köpenicker Landstr. Baustelle, Straße vollständig gesperrt (bis Montag, 5 Uhr) (10:27) ',
+       type  => 'gesperrt',
+       source_id => 'IM_014707',
+       data  => <<EOF,
+userdel	2::inwork 16286,6946 16323,6998
+EOF
+     },
+     { from  => 1259622000, # 2009-12-01 00:00
+       until => 1260054000, # 2009-12-06 00:00
+       text  => 'B 096 Luckau - Baruth Brücke über die Schuge bei Rüdingsdorf Brückenneubau Vollsperrung 02.12.2009-05.12.2009 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 29918,-54610 30409,-55818
+EOF
+     },
+     { from  => 1259103600, # 2009-11-25 00:00
+       until => 1259449200, # 2009-11-29 00:00
+       text  => 'B 101 Zinnaer Str. OD Luckenwalde, zw. Heidestr. u. R.-Breitscheid-Str. Straßenbau Vollsperrung 26.11.2009-28.11.2009 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -4630,-36012 -4603,-35730
+EOF
+     },
+     { from  => undef, # 
+       until => 1262300399, # 2009-12-31 23:59
+       text  => 'Weihnachtsmarkt am Potsdamer Platz',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp 8479,11493 8481,11447 8389,11378
 EOF
      },
     );

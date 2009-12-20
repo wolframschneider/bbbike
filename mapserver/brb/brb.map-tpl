@@ -3,6 +3,8 @@
 #
 # Start of map file
 #
+MAP
+
 NAME [% MAPNAME %]
 STATUS ON
 SIZE [% IMGWIDTH %] [% IMGHEIGHT %]
@@ -14,25 +16,28 @@ FONTSET "[% MAPSERVER_DIR %]/[% FONTS_LIST %]"
 
 [%# NOTE: IMAGE_SUFFIX => type of *input* images -%]
 [%#       IMAGE_TYPE   => type of *output* image -%]
-[% IF 1 %]
+[% IF NEED_PNG_NOALPHA_HACK %]
 # you may need to change this to match your MapServer build
 [% UNLESS IMAGE_TYPE.defined; IMAGE_TYPE = "png"; END -%]
 [%# some (all?) GD versions cannot handle alpha channels well ... -%]
 [% IF IMAGE_SUFFIX == "png"; SET NOALPHA = "_noalpha"; ELSE; SET NOALPHA = ""; END -%]
+[% SET TRANSPARENCY_ALPHA = "" -%]
 IMAGETYPE [% IMAGE_TYPE %]
 
 [% ELSE %]
-# I thought this could be a good fix for the alpha problem.
-# But it did not work...
+
 OUTPUTFORMAT
-  NAME pnga
-  DRIVER "GD/PNG"
-  MIMETYPE "image/gif"
-  IMAGEMODE RGBA
-  TRANSPARENT ON
-  EXTENSION "png"
+  NAME png
+  MIMETYPE image/png
+  DRIVER GD/PNG
+  EXTENSION png
+  IMAGEMODE RGB
+  TRANSPARENT FALSE
 END
-IMAGETYPE pnga
+IMAGETYPE png
+
+[% SET TRANSPARENCY_ALPHA = "TRANSPARENCY ALPHA" -%]
+
 [% END %]
 
 #
@@ -329,7 +334,7 @@ SYMBOL
   TYPE TRUETYPE
   FONT 'lucida'
   FILLED true
-  GAP 20
+  GAP -20
   ANTIALIAS true
   CHARACTER "[% LEFTARROW %]"
 END
@@ -343,37 +348,41 @@ END
 #  STYLE 1 20 END
 #END
 
+[% IF NEED_ONEWAY_RIGHT_HACK -%]
 ## Does not work with mapserver-3.6.6, but with mapserver-4.01-tobe
 SYMBOL
   NAME 'oneway_right'
   TYPE TRUETYPE
   FONT 'lucida'
   FILLED true
-  GAP 20
+  GAP -20
   ANTIALIAS true
   CHARACTER "[% RIGHTARROW %]"
 END
+[% END -%]
 
 SYMBOL
   NAME 'oneway_left_small'
   TYPE TRUETYPE
   FONT 'lucida'
   FILLED true
-  GAP 10
+  GAP -10
   ANTIALIAS true
   CHARACTER "[% LEFTARROW %]"
 END
 
+[% IF NEED_ONEWAY_RIGHT_HACK -%]
 ## XXX geht nicht in mapserver-3.6.6!
 SYMBOL
   NAME 'oneway_right_small'
   TYPE TRUETYPE
   FONT 'lucida'
   FILLED true
-  GAP 10
+  GAP -10
   ANTIALIAS true
   CHARACTER "[% RIGHTARROW %]"
 END
+[% END -%]
 
 SYMBOL
   NAME 'point'
@@ -809,7 +818,7 @@ LAYER
   STATUS [% ON_SEHENSWUERDIGKEIT %]
   GROUP sehenswuerdigkeit
   DATA sehenswuerdigkeit_polygon
-  
+ 
   LABELITEM "NAME"
 
   CLASSITEM 'CAT'
@@ -1716,7 +1725,11 @@ LAYER
   CLASS
     EXPRESSION '1_right'
     COLOR 0 0 200
+[% IF NEED_ONEWAY_RIGHT_HACK -%]
     SYMBOL 'oneway_right'
+[% ELSE -%]
+    SYMBOL 'oneway_left'
+[% END -%]
     SIZE 10
     MAXSCALE 30000
   END
@@ -1731,7 +1744,11 @@ LAYER
   CLASS
     EXPRESSION '1_right'
     COLOR 0 0 200
+[% IF NEED_ONEWAY_RIGHT_HACK -%]
     SYMBOL 'oneway_right_small'
+[% ELSE -%]
+    SYMBOL 'oneway_left_small'
+[% END -%]
     SIZE 7
     MINSCALE 30000
     MAXSCALE 60000
@@ -1754,6 +1771,7 @@ LAYER
   DATA gesperrt_point
   GROUP blocked
 
+[% TRANSPARENCY_ALPHA -%] 
   CLASSITEM 'CAT'
   CLASS
     EXPRESSION 'BNP'
@@ -2191,6 +2209,7 @@ LAYER
   DATA sehenswuerdigkeit_point
   MAXSCALE 30000
   
+[% TRANSPARENCY_ALPHA -%] 
   LABELITEM "NAME"
 
   CLASSITEM "CAT"
@@ -2238,7 +2257,8 @@ LAYER
   STATUS [% ON_AMPELN %]
   GROUP ampeln
   DATA ampeln
- 
+
+[% TRANSPARENCY_ALPHA -%]
   CLASSITEM "CAT" 
 
   CLASS

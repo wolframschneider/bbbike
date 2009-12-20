@@ -39,7 +39,7 @@ Treskowbrücke	Br 17900,6072 17930,6175 17952,6246
 Stubenrauchbrücke (Schöneweide)	Br 17447,6367 17492,6462
 Grünstraßenbrücke	Br 10517,11795 10528,11729
 Boelcketunnel	Tu 8716,7323 8718,7095
-Kiefholzbrücke	Br 16429,6440 16485,6377
+Kiefholzbrücke	Br 16425,6445 16485,6377
 Südostalleebrücke	Br 16044,6120 16116,6080
 Baumschulenbrücke	Br 15584,5946 15628,6009
 #: XXX: kommt im RV-Plan und beim Städte-Verlag vor: http://www.staedte-verlag.de/utcms/de-karten-karte.html?linkid=4288445
@@ -147,7 +147,7 @@ Pappelallee, S-Bahnbrücke	Br 11373,15789 11393,15823
 Schönhauser Allee, S-Bahnbrücke	Br 10975,16010 10971,15944
 Dunckerstr., S-Bahnbrücke	Br 11662,15568 11698,15627
 Prenzlauer Allee, S-Bahnbrücke	Br 11891,15413 11906,15462
-Kniprodestr., S-Bahnbrücke	Br 13318,14517 13374,14581
+Kniprodestr., S-Bahnbrücke	Br 13301,14516 13367,14588
 Landsberger Allee, S-Bahnbrücke	Br 13862,13688 14011,13750
 Thaerstraßenbrücke	Br 14056,13386 14109,13449
 Eldenaer Brücke	Br 14906,12837 14940,12843
@@ -301,7 +301,7 @@ Märkische Allee	Br 19918,11891 19896,11688
 Gensinger Str.	Br 19135,11713 19142,11804
 Lichtenberger Brücke	Br 17037,11820 16962,11833 16851,11852 16737,11866 16512,11894 16413,11906
 Über den Britzer Damm	Br 12634,6304 12629,6320 12613,6319 12618,6308 12586,6304 12555,6284
-S-Bhf. Storkower Str.	Br 14503,13167 14528,13241
+S-Bhf. Storkower Str.	Br 14481,13143 14524,13271 14530,13269
 Volksparksteg	Br 5531,8458 5417,8519
 Bösebrücke	Br 9998,16547 9883,16557 9816,16565
 Hinckeldeybrücke	Br 3314,15782 3257,15666
@@ -376,7 +376,7 @@ Nuthestr./Havel	Br -11613,-1125 -11875,-925 -12045,-757
 Nuthestr./Neuendorfer Str.	Br -8128,-4073 -7426,-4035 -7187,-4049 -6787,-4026 -6426,-4014
 Heinrich-Mann-Allee (Bahnbrücke)	Br -12431,-2096 -12493,-1896
 Lange Brücke (Potsdam)	Br -12493,-1896 -12567,-1817
-Lange Brücke (Potsdam)	Br -12567,-1817 -12659,-1700 -12719,-1661
+Lange Brücke (Potsdam)	Br -12567,-1817 -12659,-1700 -12758,-1654
 Inselbrücke (Potsdam)	Br -12256,-1456 -12260,-1503
 Brüssower Str. (Prenzlau)	Br 39830,101921 40025,101987
 	Br 7399,-7001 7558,-7093
@@ -389,7 +389,7 @@ Knesebeckbrücke	Br 1453,-306 1460,-372
 Wublitzbrücke	Br -21300,767 -21221,764
 B101 (Elsterwerda)	Br 20772,-104623 20533,-104646
 ## wieder Berlin ...
-(Güterbahnhof Greifswalder Str.)	Br 12540,15063 12734,14943
+(Güterbahnhof Greifswalder Str.)	Br 12540,15063 12727,14929
 Hermann-Blankenstein-Str.	Tu 13886,13668 13858,13719
 (Fußgängertunnel Sybelstr.)	Tu 3800,10580 3781,10569 3731,10563 3712,10566
 (Durchfahrt Böschung Spreeufer)	Tu 8032,12889 8053,12871
@@ -489,7 +489,7 @@ Brücke über den Rossiter Weg	Br -155,12198 -153,12183 -145,12151
 Brücke über den Rossiter Weg	Br -212,12095 -247,12117
 Bahnbrücke	Br 18578,-1130 18539,-1021
 Brücke über Mauerweg	Br 11709,-3382 11686,-3321
-Brücke über den Heidekampgraben	Br 15361,7014 15289,7010
+Brücke über den Heidekampgraben	Br 15368,7023 15289,7010
 Brücke über die Wezlarer Str. und Eisenbahn	Br -9062,-3853 -8981,-3896
 Brücke über die Nuthe	Br -9531,-3917 -9461,-3879
 Brücke über die Nuthe	Br -9306,-4259 -9267,-4231

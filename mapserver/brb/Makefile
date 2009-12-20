@@ -1,5 +1,5 @@
 #
-# $Id: Makefile,v 1.75 2009/10/02 18:05:28 eserte Exp $
+# $Id: Makefile,v 1.76 2009/12/04 20:34:40 eserte Exp $
 #
 
 # Please run this file with BSD make (often called pmake).
@@ -68,6 +68,25 @@ IMAGECOLOR?=	225 225 225
 
 RADZEIT_APACHE_DIR_LOCAL=	$(ABS_LOCAL_BBBIKE_DIR)/projects/www.radzeit.de
 
+.if ${TARGET} == "automatic"
+BBBIKECGI_CONFIG_LOCAL=	../../cgi/bbbike.cgi.config
+WWW_HOST?=		localhost
+BBBIKE_CGI_RELURL?=	/bbbike/cgi
+BBBIKE_HTML_RELURL?=	/bbbike/html
+MAPSERVER_RELURL?=	/bbbike/mapserver/brb
+BBBIKE_URL?=		http://$(WWW_HOST)$(BBBIKE_CGI_RELURL)/bbbike.cgi
+MAPSERVER_URL?=		http://$(WWW_HOST)$(MAPSERVER_RELURL)
+BBBIKE_IMAGES_RELURL?=	/bbbike/images
+MAPSERVER_DIR=		$(LOCAL_BBBIKE_DIR)/mapserver/brb
+IMAGE_DIR=		$(LOCAL_BBBIKE_DIR)/images
+IMAGE_SUFFIX=		gif
+.if exists(/etc/debian_version)
+FONTS_LIST?=		fonts-debian.list
+.else
+FONTS_LIST?=		fonts-biokovo.list
+.endif
+.endif
+
 .if ${TARGET} == "radzeit.herceg.de"
 
 RADZEIT_HOST=		radzeit.herceg.de
@@ -133,24 +152,6 @@ FONTS_LIST?=		fonts-biokovo.list					# ***
 # The unix user of the webserver process:
 WWW_USER=		eserte						# ***
 TARGET_DIR=		${.CURDIR}
-
-.elif ${TARGET} == "spiff"
-
-HOST=			spiff
-MAPSERVER_DIR=		$(LOCAL_BBBIKE_DIR)/mapserver/brb-spiff
-MAPSERVER_RELURL=	/~eserte/mapserver/brb-spiff
-MAPSERVER_URL=		http://$(HOST)$(MAPSERVER_RELURL)
-MAPSERVER_PROG_RELURL=	/~eserte/cgi/mapserv-linux.cgi
-MAPSERVER_PROG_URL=	http://$(HOST)$(MAPSERVER_PROG_RELURL)
-IMAGE_DIR=		$(LOCAL_BBBIKE_DIR)/images
-BBBIKE_HTML_RELURL=	/~eserte/bbbike/html
-BBBIKE_CGI_RELURL=	/~eserte/bbbike/cgi
-BBBIKE_IMAGES_RELURL=	/~eserte/bbbike/images
-BBBIKE_URL=		http://$(HOST)$(BBBIKE_CGI_RELURL)/bbbike.cgi
-IMAGE_SUFFIX=		png
-FONTS_LIST=		fonts-spiff.list
-WWW_USER=		eserte
-TARGET_DIR=		${.CURDIR:H}/brb-spiff
 
 .elif ${TARGET} == "radzeit" || ${TARGET} == "radzeit.herceg.de" || ${TARGET} == "radzeit-old"
 
@@ -294,7 +295,6 @@ DISTFILES_STERNFAHRT_2007=\
 	sternfahrt2007/sternfahrt2007.inc
 
 RADZEIT_DIST_DIR=/tmp/radzeit_mapserver_dist
-SPIFF_DIST_DIR=/home/e/eserte/src/bbbike/mapserver/brb-spiff
 
 # Variables slurped in from bbbike/Makefile.PL
 ADD_MAKEFILE_VARS=\
@@ -653,16 +653,6 @@ rsync-radzeit:
 	[ ! -d $(RADZEIT_DIST_DIR) ] && ( echo Please execute ${MAKE} dist-radzeit first; false ) || true
 	cd $(RADZEIT_DIST_DIR) && rsync -Pvzrt . $(BBBIKE_RADZEIT_USER)@$(BBBIKE_RADZEIT_HOST):$(RADZEIT_APACHE_DIR)/$(HTDOCS)/mapserver/brb/
 
-dist-spiff:
-	[ ! -d $(SPIFF_DIST_DIR) ] && mkdir $(SPIFF_DIST_DIR) || true
-	chmod ugo+rx $(SPIFF_DIST_DIR)
-	cp -pf $(DISTFILES) fonts-spiff.list $(SPIFF_DIST_DIR)
-	cp -pR data $(SPIFF_DIST_DIR)
-	cp -pR graphics $(SPIFF_DIST_DIR)
-	-mkdir $(SPIFF_DIST_DIR)/tmp
-	chmod ugo+rx $(SPIFF_DIST_DIR)/tmp
-	cd $(SPIFF_DIST_DIR) && $(MAKE) $(MAKEFLAGS) TARGET=spiff
-
 ######################################################################
 # Download: http://mapserver.gis.umn.edu/dist/mapserver-3.6.4.tar.gz
 
@@ -672,7 +662,6 @@ dist-spiff:
 # Um mapserver zu bauen, sind folgende configure-Aufrufe notwendig:
 # vran:              sh configure --with-freetype=/usr/local --with-jpeg=/usr/local --with-gd=/usr/local
 # bbbike.radzeit.de: sh configure --with-jpeg=/usr/src/jpeg-6b --with-freetype=/usr/X11R6
-# spiff:             sh configure
 
 # GD 2.0.x ist bevorzugt zu verwenden, da die Textausgabe dort
 # wesentlich besser funktioniert.
