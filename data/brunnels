@@ -127,7 +127,7 @@ Borussenstr., Autobahnbrücke	Br -3907,2416 -3780,2523
 Spanische Allee, Autobahnbrücke	Br -3861,2837 -3736,2849
 Schönerlinder Str., S- und Autobahnbrücke	Br 11965,24188 12177,24684
 Bucher Str., S- und Autobahnbrücke	Br 12986,23392 13220,23679
-Friedrichsbrücke	Br 10171,12769 10086,12725
+Friedrichsbrücke	Br 10166,12777 10086,12725
 Wiesenbrücke	Br 8607,15426 8683,15354
 Grenzstr., S-Bahnbrücke	Br 8654,15201 8614,15156
 Hochstraßenbrücke	Br 8886,15799 8923,15850
@@ -146,7 +146,7 @@ Landsberger Allee, S-Bahnbrücke	Br 13862,13688 14011,13750
 Thaerstraßenbrücke	Br 14056,13386 14109,13449
 Eldenaer Brücke	Br 14906,12837 14940,12843
 Scheffelstraßenbrücke	Br 14940,12843 15010,12855
-Rhinstr., S-Bahnbrücke	Br 18216,12262 18215,12132
+Rhinstr., S-Bahnbrücke	Br 18216,12262 18216,12239 18215,12132
 Falkenberger Chaussee, S-Bahnbrücke	Br 17400,17790 17703,17990
 S-Bahnunterführung Wartenberg	Tu 16990,18694 17114,18775
 Gehrenseestr., S-Bahnbrücke	Br 18313,16643 18465,16761 18738,16957
@@ -214,7 +214,7 @@ General-Ganeval-Brücke	Br 2996,15771 3033,15694
 Moabiter Brücke	Br 6580,12775 6608,12858
 Marggraffbrücke	Br 16677,6892 16720,6845
 Monbijoubrücke	Br 9661,12876 9680,12916 9707,12974
-Eiserne Brücke	Br 9912,12623 9943,12642
+Eiserne Brücke	Br 9919,12613 9948,12631
 Schloßbrücke	Br 9984,12426 10024,12431
 Inselbrücke	Br 10869,11949 10824,11992
 Roßstraßenbrücke	Br 10687,11853 10672,11870
@@ -255,7 +255,7 @@ Brücke über Sachsendamm und Autobahn	Br 7772,7610 7750,7528 7707,7415
 Tiburtiusbrücke	Br 4903,6221 5330,6001 5414,5939 5574,5819 5681,5743
 Cordestunnel	Tu 1511,10051 1382,10124
 Zufahrt Rasthof Avus	Tu 1700,10339 1580,10429
-Trabener Steg	Br 2269,10080 2162,10018
+Trabener Steg	Br 2228,10078 2142,10027
 Friedhofsbrücke	Br 2406,10093 2405,10131
 Löwenbrücke	Br 6358,11724 6411,11678
 Schöneberger Brücke	Br 8525,10626 8578,10672
@@ -298,6 +298,7 @@ Volksparksteg	Br 5531,8458 5417,8519
 Bösebrücke	Br 9998,16547 9883,16557 9816,16565
 Hinckeldeybrücke	Br 3314,15782 3257,15666
 Hinckeldeybrücke	Br 3358,15794 3299,15668 3282,15632
+Schleife am Kurt-Schumacher-Damm	Br 3328,15595 3290,15604 3282,15632
 Stößenseebrücke	Br -2476,11301 -2413,11283 -2317,11254
 Freybrücke	Br -3308,11565 -3202,11532
 B96a	Br 21656,989 21536,801
@@ -350,6 +351,9 @@ Elbebrücke	Br -108535,-32884 -108293,-33023
 Brücke über die Alte Elbe	Br -107949,-33102 -107748,-33161
 Brücke über die Hohensaaten-Friedrichsthaler-Wasserstraße	Br 69465,72943 69331,73165
 Brücke der B2	Br 54530,74354 54577,74390
+Brücke der B96	Br 13972,-9073 13886,-8957
+Brücke über Finowkanal	Br 37909,48248 37900,48350
+Brücke über Finowkanal	Br 37128,48358 37159,48481
 Baumgartenbrücke	Br -19189,-5697 -19449,-5977
 Brücke über Eisenbahn	Br 54135,73581 54142,73542
 Brücke über B2	Br 55014,74593 54996,74647

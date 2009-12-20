@@ -587,8 +587,8 @@ userdel	1::inwork 12229,10014 12398,9938 12556,9862
          'text' => 'Jessnerstr. wegen Bauarbeiten in Richtung Süden nicht befahrbar, bis Oktober 2009',
          'from' => undef,
          'id' => 1598,
-         'data' => '#: last_checked: 2009-09-26
-#: next_check: 2009-10-05
+         'data' => '#: last_checked: 2009-10-15
+#: next_check: 2009-11-01
 #: XXX nach Beendigung der Bauarbeiten bleibt wahrscheinlich die gesamte Straße asphaltiert, mit einigen Aufpflasterungen
 userdel	q4::inwork; 15080,11905 14977,11754 14941,11689 14849,11539
 ',
@@ -850,10 +850,10 @@ userdel	2::inwork 7160,11225 6851,11346
        {
          'source_id' => 'IM_013316',
          'until' => 1262300400,
-         'text' => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Taubenstr. und Behrenstr. Baustelle, Fahrtrichtung gesperrt (bis Dezember 2009)',
+         'text' => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Mohrenstr. und Behrenstr. Baustelle, Fahrtrichtung gesperrt (bis Dezember 2009)',
          'from' => 1246916833,
          'id' => 1732,
-         'data' => 'userdel	q4::inwork; 9668,11928 9656,12021 9643,12127 9631,12227
+         'data' => 'userdel	q4::inwork; 9679,11834 9668,11928 9656,12021 9643,12127 9631,12227
 ',
          'type' => 'handicap'
        },
@@ -927,21 +927,31 @@ userdel	2::inwork 7160,11225 6851,11346
          'type' => 'gesperrt'
        },
        {
-         'until' => 1257030000,
-         'text' => 'Fahrbahn der Mauerstr. wegen Bauarbeiten bis Oktober 2009 gesperrt ',
+         'until' => undef,
+         'text' => 'Fahrbahn der Mauerstr. wegen Bauarbeiten gesperrt ',
          'from' => 1248200556,
          'id' => 1761,
-         'data' => 'userdel	q4::inwork 9405,11413 9331,11497
+         'data' => '#: last_checked: 2009-10-16
+userdel	q4::inwork 9405,11413 9331,11497
 ',
          'type' => 'handicap'
        },
-       undef,
+       {
+         'until' => undef,
+         'text' => 'Bauarbeiten in der Mohrenstraße, Fahrbahn gesperrt ',
+         'from' => 1248200777,
+         'id' => 1762,
+         'data' => '#: last_checked: 2009-10-21
+userdel	q4::inwork 9418,11804 9220,11781
+',
+         'type' => 'handicap'
+       },
        {
          'until' => undef,
          'text' => 'Die Charlottenstraße ist wegen Bauarbeiten eine Einbahnstraße Richtung Süden',
          'from' => undef,
          'id' => 1763,
-         'data' => '#: next_check: 2009-09-27
+         'data' => '#: last_checked: 2009-10-16
 userdel	q4::inwork; 9475,12365 9462,12481 9454,12558
 ',
          'type' => 'handicap'
@@ -1477,7 +1487,7 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
          'from' => undef,
          'id' => 1887,
          'data' => '	q4::temp 9754,12775 9661,12876 9618,12907 9529,12925
-	q4::temp 9912,12623 9950,12522 9984,12426
+	q4::temp 9919,12613 9950,12522 9984,12426
 ',
          'type' => 'gesperrt'
        },
@@ -1507,16 +1517,7 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
          'type' => 'handicap'
        },
        undef,
-       {
-         'source_id' => 'IM_014217',
-         'until' => 1255643999,
-         'text' => 'Bahnhofstr. (Pankow) in beiden Richtungen zwischen Mönchmühler Str. und Bahnübergang (ehemaliger Bahnhof Blankenfelde) Baustelle, Straße vollständig gesperrt (bis Mitte 10.2009)',
-         'from' => 1253730664,
-         'id' => 1898,
-         'data' => 'userdel	q4::inwork 8909,23506 8803,23478 8626,23432
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'source_id' => 'IM_014235',
@@ -1558,15 +1559,7 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1255903200,
-         'text' => 'B 087 Frankfurt/Oder - Müllrose zw. Markendorf u. Hohenwalde Durchlassneubau Montagearb. Vollsperrung 17.10.2009-18.10.2009 ',
-         'from' => 1255644000,
-         'id' => 1915,
-         'data' => 'userdel	2::inwork 82521,-12031 82191,-12275
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1257721200,
          'text' => 'B 087 Frankfurt/Oder - Müllrose zw. Markendorf u. Hohenwalde Straßenbau Durchlass Vollsperrung 07.11.2009-08.11.2009 ',
@@ -1613,16 +1606,7 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_014353',
-         'until' => 1257029999,
-         'text' => 'Erkstr. (Neukölln) in beiden Richtungen zwischen Sonnenallee und Donaustr. Baustelle, Straße vollständig gesperrt (bis Ende 10.2009)',
-         'from' => 1254981556,
-         'id' => 1922,
-         'data' => 'userdel	q4::inwork 12902,8470 12771,8439
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => 1257030000,
@@ -1651,15 +1635,7 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1256335200,
-         'text' => 'L 339 Neuer Hönower Weg OD Hoppegarten, zw. Berliner Str. u. Industriestr. Deckenerneuerung Vollsperrung 05.10.2009-23.10.2009 ',
-         'from' => 1254607200,
-         'id' => 1927,
-         'data' => 'userdel	q4::inwork 26880,11479 26625,10953
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1258153200,
          'text' => 'L 339 Neuer Hönower Weg OD Hoppegarten, zw. Industriestr. u. Wiesenstr. Deckenerneuerung Vollsperrung 26.10.2009-13.11.2009 ',
@@ -1669,15 +1645,7 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1255644000,
-         'text' => 'L 412 Bad Saarow - Alt Golm OD Neu Golm Einbau Deckschicht Vollsperrung 12.10.2009-15.10.2009 ',
-         'from' => 1255212000,
-         'id' => 1929,
-         'data' => 'userdel	q4::inwork 57225,-10700 57371,-10550 57479,-10535 57752,-10566 57882,-10535 58018,-10573
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => 1256943600,
@@ -1697,15 +1665,7 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1255989600,
-         'text' => 'B 101 Zinnaer Str. OD Luckenwalde, zw. Kirchstr. und Am Nuthefließ Straßenbau Vollsperrung 12.10.2009-19.10.2009 ',
-         'from' => 1255212000,
-         'id' => 1933,
-         'data' => 'userdel	q4::inwork -4630,-36012 -4603,-35730
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => 1257030000,
@@ -1719,15 +1679,7 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
        undef,
        undef,
        undef,
-       {
-         'until' => 1255903200,
-         'text' => 'L 070 Stülpe - Sperenberg OD Kummersdorf-Gut Straßenausbau Vollsperrung 17.10.2009-18.10.2009 ',
-         'from' => 1255644000,
-         'id' => 1939,
-         'data' => 'userdel	q4::inwork 8564,-34625 9068,-34115 9300,-34066
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => 1257030000,
@@ -1757,15 +1709,7 @@ userdel	2::inwork -7582,-46937 -7831,-47100 -7975,-47313 -8299,-47368
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1256421600,
-         'text' => 'B 115 Baruth - Petkus OD Merzdorf Deckenerneuerung Vollsperrung 17.10.2009-24.10.2009 ',
-         'from' => 1255644000,
-         'id' => 1944,
-         'data' => 'userdel	q4::inwork 12648,-45054 12332,-44991 12078,-45032 11929,-45268
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'Message-ID: <001e01ca4b11$15559d20$4000d760$@grittner@adfc-berlin.de>',
          'until' => 1258369200,
@@ -1787,21 +1731,13 @@ userdel	2::inwork 3314,15782 3564,16294
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1256076000,
-         'text' => 'Vom 6.10.2009 bis 20.10.2009 ist der Königsweg zwischen Eichkampstraße und Hüttenweg wegen Straßenbauarbeiten komplett gesperrt ',
-         'from' => 1255467829,
-         'id' => 1947,
-         'data' => 'userdel	2::inwork -903,6923 -643,7252 -348,7641 425,8766
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1275343200,
          'text' => 'Verkehreinschränkungen in der Magdalenenstraße und am Roedeliusplatz bis Mai 2010, Einbahnstraßenregelung in Fahrtrichtung Normannenstraße ',
          'from' => 1255468338,
          'id' => 1948,
-         'data' => 'userdel	q4::inwork; 16159,12301 16158,12191
+         'data' => 'userdel	q4::inwork; 16159,12301 16158,12191 16127,11950
 ',
          'type' => 'handicap'
        },
@@ -1814,23 +1750,95 @@ userdel	2::inwork 3314,15782 3564,16294
 ',
          'type' => 'gesperrt'
        },
+       undef,
+       undef,
        {
-         'until' => 1255921200,
-         'text' => 'Sperrungen an der Kreuzung Karl-Marx-Allee/Otto-Braun-Straße einschließlich Grunerstraße bis Alexanderstraße, 16.10.2009, 19.00 Uhr bis 19.10.2009, 05.00 Uhr ',
-         'from' => 1255539600,
-         'id' => 1950,
+         'until' => 1257134400,
+         'text' => 'Sperrungen an der Kreuzung Karl-Marx-Allee/Otto-Braun-Straße einschließlich Grunerstraße bis Alexanderstraße, 30.10.2009, 19.00 Uhr bis 2.11.2009, 05.00 Uhr ',
+         'from' => 1256752800,
+         'id' => 1952,
          'data' => 'userdel	2::inwork 11275,13026 11228,12951 11134,12793
 userdel	3 11139,13008 11228,12951 11295,12915
 ',
          'type' => 'gesperrt'
        },
        {
-         'until' => 1256529600,
-         'text' => 'Sperrungen an der Kreuzung Karl-Marx-Allee/Otto-Braun-Straße einschließlich Grunerstraße bis Alexanderstraße, 23.10.2009, 19.00 Uhr bis 26.10.2009, 05.00 Uhr ',
-         'from' => 1256144400,
-         'id' => 1951,
-         'data' => 'userdel	2::inwork 11275,13026 11228,12951 11134,12793
-userdel	3 11139,13008 11228,12951 11295,12915
+         'until' => 1261177200,
+         'text' => 'Naumannstraße zwischen Leuthener Straße und Tempelhofer Weg gesperrt, Baustelle, Dauer: 08.10.2009 07:00 Uhr bis 18.12.2009 ',
+         'from' => 1254891600,
+         'id' => 1953,
+         'data' => 'userdel	q4::inwork 7716,8356 7716,8048 7717,7879
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Universitätsstraße Richtung Unter den Linden gesperrt',
+         'from' => undef,
+         'id' => 1954,
+         'data' => '#: last_checked: 2009-10-18
+#: XXX oder ist das eine permanente Sperrung?
+userdel	q4::inwork; 9574,12578 9601,12380
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'permanent' => 1,
+         'text' => '(Drorystr. - Braunschweiger Str., Spielplatz): nachts werden die Tore geschlossen',
+         'from' => undef,
+         'id' => 1955,
+         'data' => '	2::temp 13520,7485 13601,7366
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'permanent' => 1,
+         'text' => 'Friedrich-Ludwig-Jahn-Sportpark: während Veranstaltungen und nachts von ca. 22 bis 7 Uhr gesperrt, mit Anhänger wegen des engen Südeinganges ggfs. nicht befahrbar',
+         'from' => undef,
+         'id' => 1956,
+         'data' => '	2::temp 10473,15549 10607,15142
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'permanent' => 1,
+         'text' => 'Luitpoldstr., Durchfahrt über Schulhof: nicht immer geöffnet!',
+         'from' => undef,
+         'id' => 1957,
+         'data' => '	2::temp 6611,9879 6670,9887
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'permanent' => 1,
+         'text' => 'Rutherfordstr.: nicht permanent geöffnet',
+         'from' => undef,
+         'id' => 1958,
+         'data' => '	2::temp 19071,2746 19136,2673 19207,2592
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'permanent' => 1,
+         'text' => 'Uferweg am Schloß Bellevue: kann bei Staatsbesuchen gesperrt sein',
+         'from' => undef,
+         'id' => 1959,
+         'data' => '	2::temp 6694,12627 7039,12314
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'text' => 'Glasbläserallee wegen Bauarbeiten gesperrt',
+         'from' => undef,
+         'id' => 1960,
+         'data' => '#: last_checked: 2009-10-26
+userdel	2::inwork 14835,10272 14888,10385
 ',
          'type' => 'gesperrt'
        }

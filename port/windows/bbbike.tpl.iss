@@ -37,12 +37,79 @@ OutputManifestFile=SETUP-MANIFEST
 
 [Files]
 [% IF use_strawberry -%]
-;;; XXX should contain only a MANIFEST copy of bbbike
+;;;
+;;; This contains a MANIFEST copy of bbbike after running "make make-bbbike-dist"
 Source: "C:\cygwin\home\eserte\bbbikewindist\bbbike\*"; DestDir: "{app}\bbbike"; Flags: ignoreversion recursesubdirs createallsubdirs
-;;; XXX should contain a minimal set of gpsbabel, i.e. without doc, and maybe additional a notice where to get the complete distro and sources
-Source: "C:\cygwin\home\eserte\bbbikewindist\gpsbabel\*"; DestDir: "{app}\gpsbabel"; Flags: ignoreversion recursesubdirs createallsubdirs
+;;;
+;;; XXX should contain an additional a notice where to get the complete distro and sources
+;;; Note: libexpat.dll also exists in perl\bin (part of XML::Parser), so no
+;;; duplication necessary
+Source: "C:\cygwin\home\eserte\bbbikewindist\gpsbabel\*"; DestDir: "{app}\gpsbabel"; [% -%]
+    Excludes: "gpsbabel.html,libexpat.dll"; Flags: ignoreversion recursesubdirs createallsubdirs
+;;;
 ;;; XXX should contain a rather minimal strawberry. maybe strip some default modules there, but add essential like Tk and some nice-to-haves
-Source: "C:\cygwin\home\eserte\bbbikewindist\perl\*"; DestDir: "{app}\perl"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "C:\cygwin\home\eserte\bbbikewindist\perl\*"; DestDir: "{app}\perl"; [% ~%]
+    Excludes: "[% ~%]
+         .packlist				[%~ # packlists are not needed ~%]
+        ,*.pod					[%~ # no need for documentation  ~%]
+        ,\lib\auto\Encode\JP\*			[%~ # no need for east asian encodings ~%]
+        ,\lib\Encode\JP\*			[%~ ~%]
+        ,\lib\Encode\JP.pm			[%~ ~%]
+        ,\lib\auto\Encode\KR\*			[%~ ~%]
+        ,\lib\Encode\KR\*			[%~ ~%]
+        ,\lib\Encode\KR.pm			[%~ ~%]
+        ,\lib\auto\Encode\TW\*			[%~ ~%]
+        ,\lib\Encode\TW\*			[%~ ~%]
+        ,\lib\Encode\TW.pm			[%~ ~%]
+        ,\lib\auto\Encode\CN\*			[%~ ~%]
+        ,\lib\Encode\CN\*			[%~ ~%]
+        ,\lib\Encode\CN.pm			[%~ ~%]
+        ,\lib\auto\Encode\EBCDIC\*		[%~ ~%]
+        ,\lib\Encode\EBCDIC.pm			[%~ ~%]
+        ,\lib\unicore\*.txt			[%~ # the .txt files seem to be there for reference only ~%]
+        ,\lib\Unicode\Collate\*			[%~ ~%]
+        ,\lib\auto\Storable\Storable.dll.AAA[%~ # this looks like an packing accident in strawberry ~%]
+        ,\lib\auto\Devel\*			[%~ # no need for development stuff ~%]
+        ,\lib\CORE\*.a				[%~ ~%]
+        ,\lib\CORE\*.h				[%~ ~%]
+        ,\lib\CPANPLUS\*			[%~ ~%]
+        ,\lib\CPAN\*				[%~ ~%]
+        ,\lib\ExtUtils\*			[%~ ~%]
+        ,\lib\Module\Build\*			[%~ ~%]
+        ,\lib\Module\Build.pm			[%~ ~%]
+        ,\lib\TAP\*				[%~ ~%]
+        ,\lib\Test\*				[%~ ~%]
+	,\lib\App\Prove.pm			[%~ ~%]
+	,\lib\App\Prove\*			[%~ ~%]
+	,\site\lib\auto\DBD\*			[%~ # currently no database-like things are needed ~%]
+	,\site\lib\DBD\*			[%~ ~%]
+	,\site\lib\DBI.pm			[%~ ~%]
+	,\site\lib\DBI\*			[%~ ~%]
+	,\site\lib\Bundle\*			[%~ ~%]
+	,\site\lib\auto\Math\Pari\*		[%~ # large and unused ~%]
+	,\site\lib\Math\Pari.pm			[%~ ~%]
+	,\site\lib\XML\Twig.pm			[%~ # XML::LibXML is enough ~%]
+	,\site\lib\XML\Twig\*			[%~ ~%]
+	,\site\lib\PAR\*			[%~ ~%]
+	,\site\lib\PAR.pm			[%~ ~%]
+	,\site\lib\CPAN\*			[%~ ~%]
+	,\site\lib\Tk\demos\*			[%~ ~%]
+	,\site\lib\Tk\*.h			[%~ ~%]
+	,\site\lib\Tk\*.m			[%~ ~%]
+	,\site\lib\Tk\*.t			[%~ ~%]
+	,\bin\a2p.exe				[%~ ~%]
+	,\bin\h2xs.bat				[%~ ~%]
+	,\bin\cpan				[%~ ~%]
+	,\bin\cpan.bat				[%~ ~%]
+	,\bin\cpan2dist.bat			[%~ ~%]
+	,\bin\dprofpp.bat			[%~ ~%]
+    "; Flags: ignoreversion recursesubdirs createallsubdirs
+;;;
+;;; additional files in c\bin required by XML::LibXML
+;;; currently not in bbbikewindist, only in strawberry directory
+Source: "C:\cygwin\home\eserte\strawberry\c\bin\libxml2.dll"; DestDir: "{app}\c\bin"; Flags: ignoreversion
+Source: "C:\cygwin\home\eserte\strawberry\c\bin\iconv.dll"; DestDir: "{app}\c\bin"; Flags: ignoreversion
+Source: "C:\cygwin\home\eserte\strawberry\c\bin\zlib1.dll"; DestDir: "{app}\c\bin"; Flags: ignoreversion
 [% ELSE -%]
 [%
 	FOR f = files

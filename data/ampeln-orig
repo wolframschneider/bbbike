@@ -1,6 +1,5 @@
 #: #: -*- coding: iso-8859-1 -*-
 #: title: Ampeln, Bahnübergänge und Zugbrücken
-#: version: $Id: ampeln-orig,v 4.148 2009/01/03 20:31:54 eserte Exp eserte $
 #: note: XXX_* categorization done 2008-01-26
 #:
 	X 9229,8785
@@ -315,7 +314,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6389,7196
 	X 8319,7084
 	X 8625,8174
-	X 8637,7871
+	X 8642,7876
 	X 9240,8028
 	X 8715,7384
 	X 9242,6962
@@ -390,7 +389,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2770,10024
 	X 3111,10116
 	X 3374,10201
-	X 2410,9777
+	X 2369,9779
+	X 2360,9754
+	X 2415,9765
 	X 2366,9664
 	X 1928,10728
 	X 2016,11034
@@ -495,7 +496,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9410,3793
 	X 9440,3665
 	X 9934,3802
-	X 10273,6457
+	X 10294,6440
 	X 10254,5921
 	X 11322,5989
 	X 11456,6103
@@ -549,7 +550,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12560,4290
 	X 12731,4841
 	X 12883,5257
-	X 12499,5226
+	X 12507,5228
 	X 14010,4475
 	X 14119,4153
 	X 13796,5262
@@ -1671,8 +1672,8 @@ nur Richtung O	X 8142,7221
 	X 6454,8653
 	X 14652,10201
 	F 13030,7346
-	X 12498,6531
-	X 12545,6436
+#XXX del:	X 12510,6508
+#XXX del:	X 12553,6423
 	X 13261,6456
 	X 13294,6386
 	X 8715,12956
@@ -1716,7 +1717,7 @@ geschlossen bei Bedarf (?)	Zbr 27657,-11741
 	X 20530,11471
 S-Bahn und Regionalbahn	B 21562,12088
 	X 11940,22587
-	X 2382,9722
+	X 2394,9714
 	F 6277,10924
 #: by: Olaf Schulz vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 	F 11310,14953
@@ -1752,7 +1753,7 @@ S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?)	B 40248,14503
 Bahn kommt ca. halbstündlich	B 43081,77252
 Bahn kommt ca. halbstündlich	B 41387,91306
 Bahn kommt ca. halbstündlich oder öfter	B 27139,37340
-Bahn kommt ca. halbstündlich, mit Aufforderungsknopf zum Öffnen der Schranke	B 42128,79453
+Bahn kommt ca. halbstündlich, mit Aufforderungsknopf zum Öffnen der Schranke	B 42086,79436
 Bahn kommt ca. halbstündlich, mit Aufforderungsknopf zum Öffnen der Schranke	B 41323,96820
 Bahn kommt ca. halbstündlich, mit Aufforderungsknopf zum Öffnen der Schranke	B 41197,98927
 Bahn kommt ca. halbstündlich	B 41840,89712
@@ -2460,6 +2461,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	B -26873,-34493
 #: XXX_prog: nur in Richtung Westen
 	X 585,11256
+	F 18343,11041
+	F 11021,13271
 ################################################################################
 # note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10044614/620526/
