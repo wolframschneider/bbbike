@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: strassen-stream.t,v 1.1 2009/05/05 22:22:28 eserte Exp $
+# $Id: strassen-stream.t,v 1.2 2009/12/22 11:30:17 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -23,7 +23,7 @@ BEGIN {
 	use File::Temp qw(tempfile);
 	1;
     }) {
-	print "1..0 # skip: no Test::More and/or File::Temp module\n";
+	print "1..0 # skip no Test::More and/or File::Temp module\n";
 	exit;
     }
 }

@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: plz2.t,v 1.3 2009/06/30 21:03:24 eserte Exp $
+# $Id: plz2.t,v 1.4 2009/12/22 11:30:17 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -17,7 +17,7 @@ BEGIN {
 	use Test;
 	1;
     }) {
-	print "1..0 # skip: no Test module\n";
+	print "1..0 # skip no Test module\n";
 	exit;
     }
 }

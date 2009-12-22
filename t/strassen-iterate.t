@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: strassen-iterate.t,v 1.2 2003/06/23 22:04:48 eserte Exp $
+# $Id: strassen-iterate.t,v 1.3 2009/12/22 11:30:17 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -20,7 +20,7 @@ BEGIN {
 	use Object::Iterate 0.05 qw(iterate);
 	1;
     }) {
-	print "1..0 # skip: no Test and/or Object::Iterate modules\n";
+	print "1..0 # skip no Test and/or Object::Iterate modules\n";
 	exit;
     }
 }

@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: wapcgi.t,v 1.24 2009/02/25 23:46:23 eserte Exp $
+# $Id: wapcgi.t,v 1.25 2009/12/22 11:30:18 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -14,14 +14,14 @@ use File::Temp qw(tempfile);
 use URI;
 
 use vars qw($VERSION);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.24 $ =~ /(\d+)\.(\d+)/);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.25 $ =~ /(\d+)\.(\d+)/);
 
 BEGIN {
     if (!eval q{
 	use Test::More;
 	1;
     }) {
-	print "1..0 # skip: no Test module\n";
+	print "1..0 # skip no Test module\n";
 	exit;
     }
 

@@ -30,20 +30,6 @@ use vars qw(@extra_libs);
 BEGIN { delete $INC{"FindBin.pm"} } # causes warnings, maybe try FindBin->again if available?
 use FindBin;
 BEGIN {
-#     if ($ENV{SERVER_NAME} =~ /(radzeit\.de|radzeit.herceg.de)$/) {
-# 	# Make it easy to switch between versions:
-# 	if ($FindBin::Script =~ /bbbike2/) {
-# 	    @extra_libs =
-# 		("$FindBin::RealBin/../BBBike2",
-# 		 "$FindBin::RealBin/../BBBike2/lib",
-# 		);
-# 	} else {
-# 	    @extra_libs =
-# 		("$FindBin::RealBin/../BBBike",
-# 		 "$FindBin::RealBin/../BBBike/lib",
-# 		);
-# 	}
-#     } else
     {
 	# Achtung: evtl. ist auch ~/lib/ für GD.pm notwendig (z.B. CS)
 	@extra_libs =
@@ -1231,6 +1217,14 @@ if (defined $q->param('begin')) {
     get_kreuzung();
 } elsif (defined $q->param('browser')) {
     show_user_agent_info();
+} elsif (defined $q->param('init_environment')) {
+    http_header(-type => 'text/plain', @no_cache);
+    if ($apache_session_module eq 'Apache::Session::Counted') {
+	require Apache::Session::Counted;
+	# XXX make configurable, see below
+	Apache::Session::CountedStore->tree_init("/tmp/bbbike-sessions-$<","1");
+    }
+    my_exit(0);
 } else {
     choose_form();
 }
@@ -4112,7 +4106,7 @@ sub display_route {
 	    require XML::Simple;
 	    my $filename = filename_from_route($startname, $zielname) . ".xml";
 	    http_header
-		(-type => "text/xml",
+		(-type => 'application/xml',
 		 -charset => '', # to suppress default of iso-8859-1
 		 @no_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
@@ -4147,6 +4141,7 @@ sub display_route {
 		(NoAttr => 1,
 		 RootName => "BBBikeRoute",
 		 XMLDecl => "<?xml version='1.0' encoding='$xml_encoding' standalone='yes'?>",
+		 SuppressEmpty => 1, # e.g. Trafficlights may be undefined
 		)->XMLout($new_res);
 	}
 	return;
@@ -6279,10 +6274,6 @@ EOF
     } elsif (defined $mapserver_init_url) {
         $s .= "<td><a href=\"$mapserver_init_url\">Mapserver</a></td>";
     }
-## no sponsoring, no link
-#     if ($ENV{SERVER_NAME} =~ /radzeit/i) {
-#         $s .= "<td><a href=\"http://www.radzeit.de\">Radzeit.de</a></td>";
-#     }
     $s .= <<EOF;
 </tr>
 </table>

@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: strassen-tie.t,v 1.3 2004/08/27 07:23:52 eserte Exp $
+# $Id: strassen-tie.t,v 1.4 2009/12/22 11:30:17 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -23,7 +23,7 @@ BEGIN {
 	use Test;
 	1;
     }) {
-	print "1..0 # skip: no Test module\n";
+	print "1..0 # skip no Test module\n";
 	exit;
     }
 }

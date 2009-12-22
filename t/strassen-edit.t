@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: strassen-edit.t,v 1.4 2005/07/26 19:30:43 eserte Exp $
+# $Id: strassen-edit.t,v 1.5 2009/12/22 11:30:17 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -21,7 +21,7 @@ BEGIN {
 	use Test::More;
 	1;
     }) {
-	print "1..0 # skip: no Test::More module\n";
+	print "1..0 # skip no Test::More module\n";
 	exit;
     }
 }

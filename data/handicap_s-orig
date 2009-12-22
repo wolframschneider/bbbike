@@ -7,11 +7,10 @@
 # Vor¸bergehende Einschr‰nkungen
 #
 #: temporary vvv
-#: last_checked: 2009-11-13
-J‰gerstr.: Bauarbeiten, Fahrbahn Richtung Westen gesperrt	q4::inwork; 9394,11996 9201,11968
-#: last_checked: 2009-11-13
-Glinkastr.: Bauarbeiten, Fahrbahn Richtung S¸den gesperrt	q4::inwork; 9201,11968 9208,11872
-#: last_checked: 2009-11-13
+# 
+# XXX del Einbahnstraﬂe aufgehoben: #: last_checked: 2009-11-13 J‰gerstr.: Bauarbeiten, Fahrbahn Richtung Westen gesperrt	q4::inwork; 9394,11996 9201,11968
+# XXX del #: last_checked: 2009-11-13 Glinkastr.: Bauarbeiten, Fahrbahn Richtung S¸den gesperrt	q4::inwork; 9201,11968 9208,11872
+#: last_checked: 2009-12-08
 Fahrbahn der Mauerstr. wegen Bauarbeiten gesperrt	q4::inwork 9405,11413 9331,11497
 #: last_checked: 2009-10-18
 #: next_check: 2010-01-01
@@ -23,14 +22,19 @@ Hauptstr. (Friedrichshain-Kreuzberg): Baustelle, Radfahrer kˆnnen langsam passie
 Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt	q4::inwork 8389,11378 8374,11479
 #: last_checked: 2009-11-08
 General-Pape-Str.: Baustelle, Fahrbahn Richtung Norden gesperrt	q4::inwork; 7959,7609 7921,7728 7950,7840
-#: last_checked: 2009-11-08
-Matkowskystr.: Baustelle, Fahrbahn gesperrt	q4::inwork 14530,11137 14509,11060
-#: last_checked: 2009-12-04
-Franzˆsische Str.: Bauarbeiten, Gehweg ist schon passierbar	q4::inwork 8901,12008 9076,12054
+# XXX del #: last_checked: 2009-11-08 Matkowskystr.: Baustelle, Fahrbahn gesperrt	q4::inwork 14530,11137 14509,11060
+# XXX del : last_checked: 2009-12-15 #: XXX: am 2009-12-15 wird die Straﬂe erˆffnet! #: XXX Steht die Ampel an der Wilhelmstr. schon? Franzˆsische Str.: Bauarbeiten, Gehweg ist schon passierbar	q4::inwork 8901,12008 9076,12054
 #: last_checked: 2009-12-04
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraﬂe Richtung S¸den	q4::inwork; 9475,12365 9462,12481 9454,12558
 #: last_checked: 2009-12-04
 Universit‰tsstr.: wegen Bauarbeiten Richtung Unter den Linden gesperrt	q4::inwork; 9580,12581 9601,12380
+#: by: Uta Rahmann vvv
+#: next_check: 2010-10-01 vvv
+Varziner Str.: Bauarbeiten, Einbahnstraﬂenregelung zwischen Bundesallee und Varziner Platz (offen Richtung S¸dwestkorso)	q4::inwork; 5458,7866 5356,7862
+Varziner Platz: Bauarbeiten, es muss geschoben werden	q4::inwork 5458,7866 5492,7868 5517,7869
+#: next_check ^^^
+#: by: ^^^
+# 
 #: temporary ^^^
 ######################################################################
 #: XXX es ist zu erwarten, dass hier der Wuhlewanderweg verbessert wird: vvv
@@ -177,7 +181,7 @@ Gendarmenmarkt: Fuﬂg‰ngerzone, ggfs. schieben	q3 9516,12010 9656,12021
 Am Volkspark: Parkweg	q1 5745,8194 5934,8220
 Karl-Marx-Str. - Marchlewskistr.: Gehweg	q2 12869,12425 12950,12340 12985,12303
 Lange Str. [vor Kaufhof]: Fuﬂg‰nger	q2 12409,11902 12522,11837
-Gotenstr. - Kolonnenstr.: Fuﬂg‰nger	q2 7488,8768 7548,8879
+Gotenstr./Cheruskerstr. - Kolonnenstr.: Fuﬂg‰nger	q2 7488,8768 7548,8879
 Nettelbeckplatz: Fuﬂg‰nger	q2 8035,15411 7989,15412 7891,15417
 Nettelbeckplatz: Fuﬂg‰nger	q2 7953,15362 7989,15412
 Nettelbeckplatz: Fuﬂg‰nger	q2 7987,15501 7989,15412
@@ -384,7 +388,7 @@ Cecilieng‰rten: schmale Rampe oder Treppe	q3 6356,7479 6289,7472
 Sebastianstr.: Absperrung f¸r Autos, mit Anh‰nger unbequem passierbar	q1 10918,11084 10939,11045
 (Weg am Humboldthain): Radfahren erlaubt, Fuﬂg‰nger haben Vorrang	q1 9255,15816 9092,15789 8934,15740
 Tasdorfer Str. - Wilhelm-Guddorf-Str.: Fuﬂg‰nger	q1 15393,11590 15418,11662
-(Gr¸nanlage): Radfahren erlaubt, Fuﬂg‰nger haben Vorrang	q1 15339,11912 15298,11892 15327,11724 15328,11636 15377,11555
+(Gr¸nes Band): Radfahren erlaubt, Fuﬂg‰nger haben Vorrang	q1 15349,11911 15298,11892 15327,11724 15328,11636 15377,11555 15412,11510 15414,11487 15445,11455 15515,11416
 Am Bahndamm: Radfahren offiziell nicht erlaubt	q2 7662,4529 7772,4306
 Am Bahndamm: Fuﬂg‰nger	q1 7772,4306 7795,4242 8106,3410 8259,3349
 Edenkobener Steg: Fuﬂg‰nger	q1 6627,4187 6645,4254
@@ -441,7 +445,7 @@ Teltowkanalpromenade: eng, nicht anh‰ngertauglich	q2 2079,-12 1924,-188 1593,-31
 (Eitelstr. - Bahnhof Lichtenberg): Fuﬂg‰nger	q3 16727,11611 16766,11603
 Bennigsenstr.: enge Straﬂe	q1 5807,7771 5957,7765 6225,7776
 Perelsplatz: Fuﬂg‰nger, Park	q2 5809,7712 5636,7709
-Gustav-Rickelt-Weg: eng, Fuﬂg‰nger	q2 4226,6712 4223,6796 4206,6820
+Gustav-Rickelt-Weg: eng, Fuﬂg‰nger, Bordsteine	q2 4226,6712 4223,6796 4206,6820
 Unterf¸hrung unter der Stromstr.: Fuﬂg‰nger, eng	q2 6218,12975 6180,12972
 nˆrdliches Spreeufer: drei niedrige Stufen, Fuﬂg‰nger	q2 6180,12972 6102,12960 6064,12950
 #: by: Mirko Grammel (Bordsteine):
@@ -611,6 +615,8 @@ Gounodstr.: Fuﬂg‰nger	q1 14259,15816 14272,15837 14366,15877
 Seidenberger Str.: Bordstein, Gel‰nder	q3 12379,16998 12373,17007
 Mulackstr.: enge Straﬂe	q1 10640,13471 10535,13509 10406,13543 10304,13575
 R¸ckerstr.: enge Straﬂe	q1 10597,13647 10535,13509
+Cheruskerpark: Fuﬂg‰nger	q1 7437,8712 7403,8693 7369,8583 7352,8390 7283,8265 7250,8223
+(Bernhardstr. - Varziner Platz): S-Bahnunterf¸hrung, Fuﬂg‰nger	q4 5471,7915 5475,7906 5492,7868
 ######################### User Contributions #################################
 #: by: Michael Kiekbusch
 #: corrected_by: srt/policy (q4 -> q3-)
@@ -848,7 +854,7 @@ LefËvrestr.: enge Straﬂe	q1 4987,6902 4993,6812 5014,6752 5040,6706 5137,6651 52
 #: by: Michael Heckner:
 Robert-von-Ostertag-Str.: Pferde und Reiter	q1 -613,1949 -745,2320
 #: by: Jens Wesendrup:
-Hackerstr.: schmale Straﬂe, schlecht einzusehen	q1 5017,6387 5034,6425 5075,6509 5101,6579 5137,6651 5184,6723
+Hackerstr.: schmale Straﬂe, schlecht einzusehen	q1 4999,6397 5020,6434 5065,6515 5101,6579 5137,6651 5184,6723
 #: by: Jochen LIedtke:
 Grafenwalder Weg: schmale Fahrbahn	q1 -3312,16425 -3319,16572
 #: by: Katrin Kroschk:
@@ -980,7 +986,7 @@ Sesenheimer Str.: Fuﬂg‰nger, Bordsteine	q2 3866,11473 3874,11380
 (s¸dliches Spreeufer): Fuﬂg‰nger	q2 5186,12843 5173,12973 5128,13012 4973,13083 4837,13091 4733,13076 4711,13055 4644,13003 4627,12951 4599,12789 4759,12681
 (Heisenbergstr. - s¸dliches Spreeufer): Fuﬂg‰nger	q2 5065,13010 5128,13012
 (Kucharskistr. - s¸dliches Spreeufer): Fuﬂg‰nger	q2 4848,13066 4837,13091
-(Straﬂe 244 - s¸dliches Spreeufer): Fuﬂg‰nger	q2 4732,13030 4711,13055
+(Clara-von-Simson-Str. - s¸dliches Spreeufer): Fuﬂg‰nger	q2 4732,13030 4711,13055
 (Carnotstr. - s¸dliches Spreeufer): Fuﬂg‰nger	q2 4678,12938 4627,12951
 Schleswiger Ufer: schmal, Fuﬂg‰nger	q2 5862,12385 5904,12438 5967,12525
 Cuxhavener Str.: Wohngebiet, Fuﬂg‰nger	q2 5904,12438 5931,12396
@@ -1703,3 +1709,10 @@ Zwingenberger Weg: enge Straﬂe	q1 -519,4737 -552,4698 -581,4662
 Gliensteig: enge Straﬂe	q1 -5119,16813 -5097,17003
 #: by: anonymous:
 Kr‰merweg: enge Straﬂe	q1 -5267,16871 -5224,17046 -5178,17258
+#: by: Peter Heibel:
+#: corrected_by: srt/policy (q3 -> q1)
+Seidenbaustr.: enge Straﬂe	q1 19857,3514 19966,3596
+#: by: Ulrike Herwig:
+Gerstenweg: enge Straﬂe	q1 21262,13517 21214,13126 21168,12794 21101,12661 21053,12582 21028,12536 20952,12407 20943,12376 20923,12194
+#: by: Katja Frenzel:
+Genfer Weg: Fuﬂg‰nger	q1 2995,2119 3150,2113

@@ -19,7 +19,7 @@ BEGIN {
 	use Test::More;
 	1;
     }) {
-	print "1..0 # skip: no Test::More, URI::URL and/or WWW::Mechanize modules\n";
+	print "1..0 # skip no Test::More, URI::URL and/or WWW::Mechanize modules\n";
 	exit;
     }
 }
@@ -725,8 +725,8 @@ EOF
 	$agent->field("strname", "TEST IGNORE");
 	$agent->field("author",  "TEST IGNORE");
     SKIP: {
-	    skip("URL is hardcoded and not valid on radzeit.herceg.de", 2)
-		if $cgiurl =~ /radzeit.herceg.de/;
+	    skip("URL is hardcoded and not valid on bbbike.hosteurope.herceg.de or radzeit.herceg.de", 2)
+		if $cgiurl =~ /(bbbike.hosteurope|radzeit).herceg.de/;
 	    $agent->submit;
 	    my_tidy_check($agent);
 
@@ -743,8 +743,8 @@ EOF
 	$agent->field("comments", "TEST IGNORE with umlauts äöüß");
 	$agent->field("author",   "TEST IGNORE");
     SKIP: {
-	    skip("URL is hardcoded and not valid on radzeit.herceg.de", 2)
-		if $cgiurl =~ /radzeit.herceg.de/;
+	    skip("URL is hardcoded and not valid on bbbike.hosteurope.herceg.de or radzeit.herceg.de", 2)
+		if $cgiurl =~ /(bbbike.hosteurope|radzeit).herceg.de/;
 	    $agent->submit;
 	    my_tidy_check($agent);
 

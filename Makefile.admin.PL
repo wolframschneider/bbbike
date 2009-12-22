@@ -184,7 +184,8 @@ BBBIKE_SF_DIR=${.CURDIR}/projects/bbbike.sourceforge.net
 
 BBBIKE_RADZEIT_USER=		root
 #BBBIKE_RADZEIT_HOST=		bbbike.radzeit.de
-BBBIKE_RADZEIT_HOST=		bbbike.de
+#BBBIKE_RADZEIT_HOST=		bbbike.de
+BBBIKE_RADZEIT_HOST=		78.47.225.30
 BBBIKE_RADZEIT_OLD_APACHE_DIR=	/usr/local/apache/radzeit
 BBBIKE_RADZEIT_APACHE_DIR=	/var/www/domains/radzeit.de/www/
 BBBIKE_RADZEIT_CGI_DIR=		$(BBBIKE_RADZEIT_APACHE_DIR)/cgi-bin
@@ -194,12 +195,19 @@ BBBIKE_RADZEIT_DIR2=		$(BBBIKE_RADZEIT_APACHE_DIR)/BBBike2
 BBBIKE_RADZEIT_DEST=		$(BBBIKE_RADZEIT_USER)@$(BBBIKE_RADZEIT_HOST):$(BBBIKE_RADZEIT_DIR)
 BBBIKE_RADZEIT_DEST2=		$(BBBIKE_RADZEIT_USER)@$(BBBIKE_RADZEIT_HOST):$(BBBIKE_RADZEIT_DIR2)
 
+BBBIKE_HOSTEUROPE_USER=	root
+# XXX change this!
+#BBBIKE_HOSTEUROPE_HOST=	bbbike.lvps83-169-19-137.dedicated.hosteurope.de
+BBBIKE_HOSTEUROPE_HOST=	bbbike.de
+BBBIKE_HOSTEUROPE_APACHE_DIR=/root/work/bbbike-webserver/
+
 RSYNC=rsync
 RSYNC_DATA_CMD=cd data && \
-	    $(RSYNC) --verbose --progress --compress --backup --perms --times \
+	    $(RSYNC) --verbose --progress --recursive --compress --backup --perms --times \
 		--exclude "*~" --exclude "RCS/" --exclude "*.st" \
-		--exclude "*-orig" --exclude "*.inx" --exclude ".*" --exclude "Makefile*" \
-		*
+		--exclude "*-orig" --exclude "*.inx" --exclude ".check*" \
+		--exclude ".*.tmp" --exclude ".create_fragezeichen" --exclude ".???ignore" --exclude "Makefile*" \
+		* .modified
 RSYNC_RADZEIT_DATA=cd data_berlin_and_potsdam && $(RSYNC) -Pvzr . $(BBBIKE_RADZEIT_DEST)/data/
 RSYNC_RADZEIT_TEST_DATA=cd data_berlin_and_potsdam && $(RSYNC) -Pvzr . $(BBBIKE_RADZEIT_DEST2)/data/
 
@@ -630,7 +638,7 @@ DEB_DATA=	libstring-approx-perl libdbd-xbase-perl libxml-parser-perl \
 		libclass-accessor-perl libarchive-zip-perl \
 		libtemplate-perl libxml-libxml-perl libxml-simple-perl \
 		libyaml-perl libyaml-syck-perl libjson-xs-perl \
-		libtext-unidecode-perl libdata-compare-perl
+		libtext-unidecode-perl libdata-compare-perl agrep
 DEB_MISC=	libdate-calc-perl
 # If apache2 is installed, then do not install apache-perl!
 DEB_CGI=	libapache-session-perl apache-perl libfile-counterfile-perl
@@ -653,12 +661,18 @@ DEB_ALL_CGI=	$(DEB_DEVEL)      \
 		$(DEB_MAPSERVER)  
 
 install-debian-for-cgi:	install-debian-packages-for-cgi \
-			install-debian-perlmods-for-cgi
+			install-debian-owndebs-for-cgi
 
 install-debian-packages-for-cgi:
-	apt-get install ${DEB_ALL_CGI}
+	aptitude install ${DEB_ALL_CGI}
 
-install-debian-perlmods-for-cgi:
+# Assumes own deb packages are in ~/work/mydebs
+install-debian-owndebs-for-cgi:
+	cd ${HOME}/work/mydebs && \
+	    dpkg --install ${OWN_DEB}
+
+# Not used:
+install-debian-perlmods-for-cgi-via-cpan:
 	cpan CPAN
 	cpan PDF::Image::GIFImage Apache::Session::Counted \
 	     Object::Iterate Palm::PalmDoc SVG WWW::Mechanize::FormFiller

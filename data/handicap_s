@@ -3,17 +3,15 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
-Jägerstr.: Bauarbeiten, Fahrbahn Richtung Westen gesperrt	q4::inwork; 9394,11996 9201,11968
-Glinkastr.: Bauarbeiten, Fahrbahn Richtung Süden gesperrt	q4::inwork; 9201,11968 9208,11872
 Fahrbahn der Mauerstr. wegen Bauarbeiten gesperrt	q4::inwork 9405,11413 9331,11497
 Reichstagufer (Mitte): Baustelle, Fahrbahn gesperrt, Fußgänger können passieren	q4::inwork 9209,12795 9280,12883
 Hauptstr. (Friedrichshain-Kreuzberg): Baustelle, Radfahrer können langsam passieren	q3::inwork 14906,10820 14794,10844
 Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt	q4::inwork 8389,11378 8374,11479
 General-Pape-Str.: Baustelle, Fahrbahn Richtung Norden gesperrt	q4::inwork; 7959,7609 7921,7728 7950,7840
-Matkowskystr.: Baustelle, Fahrbahn gesperrt	q4::inwork 14530,11137 14509,11060
-Französische Str.: Bauarbeiten, Gehweg ist schon passierbar	q4::inwork 8901,12008 9076,12054
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
 Universitätsstr.: wegen Bauarbeiten Richtung Unter den Linden gesperrt	q4::inwork; 9580,12581 9601,12380
+Varziner Str.: Bauarbeiten, Einbahnstraßenregelung zwischen Bundesallee und Varziner Platz (offen Richtung Südwestkorso)	q4::inwork; 5458,7866 5356,7862
+Varziner Platz: Bauarbeiten, es muss geschoben werden	q4::inwork 5458,7866 5492,7868 5517,7869
 Wuhlewanderweg: steiler Anstieg, Fußgänger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gefälle, Fußgänger	q4; 21970,12153 21998,12204
 Caroline-Michaelis-Str.: Bordsteine	q3 9125,13973 9151,13941
@@ -142,7 +140,7 @@ Gendarmenmarkt: Fußgängerzone, ggfs. schieben	q3 9516,12010 9656,12021
 Am Volkspark: Parkweg	q1 5745,8194 5934,8220
 Karl-Marx-Str. - Marchlewskistr.: Gehweg	q2 12869,12425 12950,12340 12985,12303
 Lange Str. [vor Kaufhof]: Fußgänger	q2 12409,11902 12522,11837
-Gotenstr. - Kolonnenstr.: Fußgänger	q2 7488,8768 7548,8879
+Gotenstr./Cheruskerstr. - Kolonnenstr.: Fußgänger	q2 7488,8768 7548,8879
 Nettelbeckplatz: Fußgänger	q2 8035,15411 7989,15412 7891,15417
 Nettelbeckplatz: Fußgänger	q2 7953,15362 7989,15412
 Nettelbeckplatz: Fußgänger	q2 7987,15501 7989,15412
@@ -333,7 +331,7 @@ Ceciliengärten: schmale Rampe oder Treppe	q3 6356,7479 6289,7472
 Sebastianstr.: Absperrung für Autos, mit Anhänger unbequem passierbar	q1 10918,11084 10939,11045
 (Weg am Humboldthain): Radfahren erlaubt, Fußgänger haben Vorrang	q1 9255,15816 9092,15789 8934,15740
 Tasdorfer Str. - Wilhelm-Guddorf-Str.: Fußgänger	q1 15393,11590 15418,11662
-(Grünanlage): Radfahren erlaubt, Fußgänger haben Vorrang	q1 15339,11912 15298,11892 15327,11724 15328,11636 15377,11555
+(Grünes Band): Radfahren erlaubt, Fußgänger haben Vorrang	q1 15349,11911 15298,11892 15327,11724 15328,11636 15377,11555 15412,11510 15414,11487 15445,11455 15515,11416
 Am Bahndamm: Radfahren offiziell nicht erlaubt	q2 7662,4529 7772,4306
 Am Bahndamm: Fußgänger	q1 7772,4306 7795,4242 8106,3410 8259,3349
 Edenkobener Steg: Fußgänger	q1 6627,4187 6645,4254
@@ -386,7 +384,7 @@ Teltowkanalpromenade: eng, nicht anhängertauglich	q2 2079,-12 1924,-188 1593,-31
 (Eitelstr. - Bahnhof Lichtenberg): Fußgänger	q3 16727,11611 16766,11603
 Bennigsenstr.: enge Straße	q1 5807,7771 5957,7765 6225,7776
 Perelsplatz: Fußgänger, Park	q2 5809,7712 5636,7709
-Gustav-Rickelt-Weg: eng, Fußgänger	q2 4226,6712 4223,6796 4206,6820
+Gustav-Rickelt-Weg: eng, Fußgänger, Bordsteine	q2 4226,6712 4223,6796 4206,6820
 Unterführung unter der Stromstr.: Fußgänger, eng	q2 6218,12975 6180,12972
 nördliches Spreeufer: drei niedrige Stufen, Fußgänger	q2 6180,12972 6102,12960 6064,12950
 Wustermarker Str.: Fußgänger, Bordsteine	q2 -4750,14393 -4678,14382
@@ -541,6 +539,8 @@ Gounodstr.: Fußgänger	q1 14259,15816 14272,15837 14366,15877
 Seidenberger Str.: Bordstein, Geländer	q3 12379,16998 12373,17007
 Mulackstr.: enge Straße	q1 10640,13471 10535,13509 10406,13543 10304,13575
 Rückerstr.: enge Straße	q1 10597,13647 10535,13509
+Cheruskerpark: Fußgänger	q1 7437,8712 7403,8693 7369,8583 7352,8390 7283,8265 7250,8223
+(Bernhardstr. - Varziner Platz): S-Bahnunterführung, Fußgänger	q4 5471,7915 5475,7906 5492,7868
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q3 11805,19071 11937,19175
 Ebersstr.: Schüler	q2 7245,8583 7292,8631
 Straße 103 (Niederschönhausen): enge Straße	q1 10914,20065 11051,19789
@@ -669,7 +669,7 @@ Lefèvrestr.: enge Straße	q1 4987,6902 4993,6812 5014,6752 5040,6706 5137,6651 52
 (Paul-Löbe-Allee - südl. Spreeufer): Biergarten am HDKDW	q4 7741,12581 7670,12576
 (südliches Spreeufer): Biergarten am HDKDW	q4 7745,12603 7710,12585 7670,12576
 Robert-von-Ostertag-Str.: Pferde und Reiter	q1 -613,1949 -745,2320
-Hackerstr.: schmale Straße, schlecht einzusehen	q1 5017,6387 5034,6425 5075,6509 5101,6579 5137,6651 5184,6723
+Hackerstr.: schmale Straße, schlecht einzusehen	q1 4999,6397 5020,6434 5065,6515 5101,6579 5137,6651 5184,6723
 Grafenwalder Weg: schmale Fahrbahn	q1 -3312,16425 -3319,16572
 (Wuhlewanderweg - Teterower Ring): Fußgänger	q1 22199,12955 22444,12990
 (Dahrendorfzeile - Kurt-Schumacher-Damm): enger Weg, Fußgänger, Bordsteine	q2 2709,14284 2803,14288
@@ -787,7 +787,7 @@ Sesenheimer Str.: Fußgänger, Bordsteine	q2 3866,11473 3874,11380
 (südliches Spreeufer): Fußgänger	q2 5186,12843 5173,12973 5128,13012 4973,13083 4837,13091 4733,13076 4711,13055 4644,13003 4627,12951 4599,12789 4759,12681
 (Heisenbergstr. - südliches Spreeufer): Fußgänger	q2 5065,13010 5128,13012
 (Kucharskistr. - südliches Spreeufer): Fußgänger	q2 4848,13066 4837,13091
-(Straße 244 - südliches Spreeufer): Fußgänger	q2 4732,13030 4711,13055
+(Clara-von-Simson-Str. - südliches Spreeufer): Fußgänger	q2 4732,13030 4711,13055
 (Carnotstr. - südliches Spreeufer): Fußgänger	q2 4678,12938 4627,12951
 Schleswiger Ufer: schmal, Fußgänger	q2 5862,12385 5904,12438 5967,12525
 Cuxhavener Str.: Wohngebiet, Fußgänger	q2 5904,12438 5931,12396
@@ -1183,6 +1183,9 @@ Kolibriweg: breiter Fußweg, ggfs. schieben	q1 13822,3494 13775,3500
 Zwingenberger Weg: enge Straße	q1 -519,4737 -552,4698 -581,4662
 Gliensteig: enge Straße	q1 -5119,16813 -5097,17003
 Krämerweg: enge Straße	q1 -5267,16871 -5224,17046 -5178,17258
+Seidenbaustr.: enge Straße	q1 19857,3514 19966,3596
+Gerstenweg: enge Straße	q1 21262,13517 21214,13126 21168,12794 21101,12661 21053,12582 21028,12536 20952,12407 20943,12376 20923,12194
+Genfer Weg: Fußgänger	q1 2995,2119 3150,2113
 Dennewitzplatz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 7906,10098 7866,9918
 Eichborndamm: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 4240,19019 4232,18981
 Dorotheenstr. (Straßenbahn): gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 9454,12558 9330,12529

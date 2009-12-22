@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: cgihead2.t,v 1.35 2009/12/04 20:34:40 eserte Exp $
+# $Id: cgihead2.t,v 1.36 2009/12/22 11:30:17 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -24,7 +24,7 @@ BEGIN {
 	use LWP::UserAgent;
 	1;
     }) {
-	print "1..0 # skip: no Test::More and/or LWP::UserAgent module\n";
+	print "1..0 # skip no Test::More and/or LWP::UserAgent module\n";
 	exit;
     }
 }

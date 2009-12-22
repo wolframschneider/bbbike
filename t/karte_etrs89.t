@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: karte_etrs89.t,v 1.4 2003/11/16 20:42:39 eserte Exp $
+# $Id: karte_etrs89.t,v 1.5 2009/12/22 11:30:17 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -18,7 +18,7 @@ BEGIN {
 	use Test;
 	1;
     }) {
-	print "1..0 # skip: no Test module\n";
+	print "1..0 # skip no Test module\n";
 	exit;
     }
 }

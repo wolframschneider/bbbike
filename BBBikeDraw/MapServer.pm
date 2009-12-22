@@ -196,7 +196,7 @@ $VERSION = sprintf("%d.%02d", q$Revision: 1.45 $ =~ /(\d+)\.(\d+)/);
 	    }
 	}
 	if (!defined $self->MapserverBinDir || ! -e $self->MapserverBinDir) {
-	    die "Please define \$mapserver_bin_dir in $bbbike_cgi_conf_path";
+	    die "Please define \$mapserver_bin_dir in $bbbike_cgi_conf_path. Or maybe shp2img is not installed in one of the standard paths?";
 	}
 
 	$self->MapserverCgiBinDir($ms->{MAPSERVER_CGI_BIN_DIR}) if defined $ms->{MAPSERVER_CGI_BIN_DIR};
@@ -273,7 +273,7 @@ $VERSION = sprintf("%d.%02d", q$Revision: 1.45 $ =~ /(\d+)\.(\d+)/);
 		    $conf = BBBikeDraw::MapServer::Conf->radzeit_default;
 		} elsif (defined $ENV{SERVER_NAME} &&
 			 $ENV{SERVER_NAME} =~ /bbbike\.de$/) {
-		    $conf = BBBikeDraw::MapServer::Conf->radzeit_default;
+		    $conf = BBBikeDraw::MapServer::Conf->bbbike_cgi_conf;
 		} elsif (defined $ENV{SERVER_NAME} &&
 			 $ENV{SERVER_NAME} =~ /radzeit\.herceg\.(de|local)$/) {
 		    $conf = BBBikeDraw::MapServer::Conf->radzeit_herceg_de_default;
