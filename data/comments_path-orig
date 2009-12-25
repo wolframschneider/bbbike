@@ -32,7 +32,7 @@ bereits bei der Fußgängerampel am Lützowplatz die Straßenseite wechseln	PI; 6824
 bereits bei der Ampel an der Corneliusstr. die Straßenseite wechseln	PI; 6880,11110 6882,11061 6873,11011 7002,11034
 auf linken Gehweg fahren, Straßenseite an der Corneliusstr. wechseln	CP; 6732,11106 6873,11011 6882,11061
 bereits an der Kreuzung An der Urania/Kurfürstenstr. die Straßenseite wechseln	PI; 6740,10755 6685,10690 6745,10619
-bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	PI; 6935,8208 7005,8150 7268,8225
+bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	PI; 6935,8208 7005,8150 7250,8223
 #: XXX_prog: RL:ja, GPS:nein
 am Domäne-Markt Richtung Hochbahnhof Hallesches Tor abbiegen	CP; 9536,10064 9579,10122 9599,10175
 #: XXX_prog: RL:ja, GPS:nein
@@ -173,7 +173,7 @@ Falkenwalde - Eickstedt: nicht den Eickstädter Weg nehmen, sondern erst den näch
 #: XXX_prog: RL:ja, GPS:nein
 Spreeufer: durch das Tor der Kleingartenkolonie	CP2; -307,13279 -278,13322
 #: XXX_prog: RL:ja, GPS:nein
-Lefèvrestr. - Bundesallee: Fußgängerfurt benutzen	CP; 5215,6643 5360,6642 5358,6745
+Lefèvrestr. - Bundesallee: Fußgängerfurt benutzen	CP; 5215,6643 5360,6642 5358,6725
 #: XXX_indoor: sollte in eine 3nocross+routing_helper-Kombination umgeschrieben werden, außerdem auch die Verbindung Zolastr. - Straßburger sollte beachtet werden
 Straßburger Str. - Torstr.: Fußgängerfurt (Drängelgitter) ca. 50m westlich der Kreuzung benutzen	CP; 11060,13865 10902,13604 11108,13513
 #: XXX_indoor: sollte in eine 3nocross+routing_helper-Kombination umgeschrieben werden
@@ -198,7 +198,7 @@ Griembergweg - Lichtenrader Damm: Überquerungsmöglichkeit nördlich der Kreuzung	
 Richtung Bellevuestr. und Kemperplatz	CS; 8548,11552 8505,11544 8462,11538
 Richtung Linkstr.	CS; 8573,11404 8554,11386 8474,11350
 Einfahrt gegenüber Waldcafe	CP2; 30021,5322 27096,5828
-Zur Hackerstr.: Hausdurchgang benutzen	CP2; 4987,6336 5017,6387
+Zur Hackerstr.: Hausdurchgang benutzen	CP2; 4971,6345 4999,6397
 Lützowplatz - Wichmannstr.: Fußgängerampel links benutzen	CP; 6918,10854 6824,10904 6681,10959
 Lützowplatz - Schillstr.: Fußgängerampel links benutzen	CP; 6918,10854 6824,10904 6740,10755
 Ausschilderung: Alter Markt	CP2; -11875,-925 -11910,-945
@@ -302,7 +302,7 @@ Sonnenallee - Anzengruberstr.: Sonnenallee schon an Innstr. oder erst an der Fin
 Rudower Chaussee - Max-Born-Str.: Rudower Chaussee kann über Fußgängerfurt gequert werden	CP; 19071,2746 19111,2777 19064,2867
 Max-Born-Str. - Rudower Chaussee: Rudower Chaussee kann über Fußgängerfurt gequert werden	CP; 19064,2867 19111,2777 19206,2848
 Kulmer Str./Goebenstr.: Fußgängerampel an der linken Seite zum Überqueren der Goebenstr. benutzen	CP; 7771,9479 7829,9723 7848,9814
-zur Kietzer Str.: gegenüber der Mauritiuskirchstr. in die Grünanlage einfahren	CP2; 15339,11912 15298,11892
+zur Kietzer Str.: gegenüber der Mauritiuskirchstr. in die Grünanlage einfahren	CP2; 15349,11911 15298,11892
 Zufahrt zum Gartenbauamt	CP2; 9150,9152 9080,9163
 Ellwanger Str. - Attilastr.: Attilastr. in Höhe der Neckarsulmer Str. überqueren	CP; 7382,4503 7450,4397 7482,4416 7601,4485
 Attilastr. - Ellwanger Str.: bereits an der Rottweiler Str. die Straßenseite wechseln	PI; 7368,4342 7410,4373 7450,4397 7382,4503
@@ -368,8 +368,8 @@ Müllerstr. - Kongostr.: an der Türkenstr. oder an der Fußgängerampel die Straßen
 #Nollendorfplatz: Richtung Maaßenstr. fahren	CP2; 7291,10506 7033,10396 7033,10328
 Eichborndamm - Weg parallel zur S-Bahn: an der Ampel Miraustr. auf den linken Gehweg des Eichborndamms wechseln	PI; 4240,19019 4232,18981 4285,18983 4353,18986
 Prenzlauer Promenade - Brauhausstr.: bereits an der Ampel Thulestr./Am Steinberg auf den linken Gehweg wechseln	PI; 12010,16774 12017,16734 12211,16688
-Karl-Marx-Allee - Krautstr.: bereits an der Ampel Andreasstr. auf den linken Gehweg wechseln oder am Strausberger Platz die Karl-Marx-Allee überqueren und einige Meter zurückfahren	PI; 12360,12505 12134,12540 12118,12462
-Krautstr. - Karl-Marx-Allee: auf dem linken Gehweg bis zur Ampel am Strausberger Platz fahren und ggfs. die Straßenseite wechseln	CP; 12118,12462 12134,12540 12114,12546
+Karl-Marx-Allee - Krautstr.: bereits an der Ampel Andreasstr. auf den linken Gehweg wechseln oder am Strausberger Platz die Karl-Marx-Allee überqueren und einige Meter zurückfahren	PI; 12360,12505 12134,12540 12125,12490
+Krautstr. - Karl-Marx-Allee: auf dem linken Gehweg bis zur Ampel am Strausberger Platz fahren und ggfs. die Straßenseite wechseln	CP; 12125,12490 12134,12540 12114,12546
 Blücherplatz - Waterlooufer: vor der Amerikagedenkbibliothek Richtung Waterlooufer abbiegen	CP2; 9631,10142 9687,10180
 Blücherplatz: an der Ampel Richtung Amerikagedenkbibliothek halten	CP2; 9599,10175 9631,10142
 Blücherplatz: Richtung Hochbahnhof Hallesches Tor halten	CP2; 9631,10142 9599,10175

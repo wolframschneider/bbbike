@@ -475,15 +475,7 @@ userdel	2::inwork 20810,2398 20939,2413
        undef,
        undef,
        undef,
-       {
-         'until' => 1262300400,
-         'text' => 'L 060 Schipkau-Lichterfeld zw. Lichterfeld und Lauchhammer-Nord grundhafter Straßenbau Vollsperrung 01.05.2006-31.12.2009 ',
-         'from' => 1146348000,
-         'id' => 1534,
-         'data' => 'userdel	2::inwork 37797,-89881 37187,-90210 37102,-90307 37059,-90429 37023,-90770 37078,-90978 37419,-91709 37675,-92038 37809,-92300 37918,-93202 37419,-94853 37230,-95682 37151,-95962 37151,-96145
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -522,16 +514,7 @@ userdel	1::inwork 10614,19907 10742,19632
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Reichenberger Str., Einbahnstraße Richtung Kottbusser Tor',
-         'from' => undef,
-         'id' => 1563,
-         'data' => '#: last_checked: 2009-11-10
-userdel	1::inwork 12229,10014 12398,9938 12556,9862
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -642,7 +625,15 @@ userdel	q4::inwork 10422,12395 10476,12432
        },
        undef,
        undef,
-       undef,
+       {
+         'until' => 1261436400,
+         'text' => 'B 198 Neubrandenburger Straße OD Prenzlau, Brücke über die Ücker Brückenneubau Vollsperrung 04.05.2009-21.12.2009 ',
+         'from' => 1241301600,
+         'id' => 1630,
+         'data' => 'userdel	2::inwork 39239,101950 39066,102017
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -714,15 +705,7 @@ userdel	q4::inwork 10422,12395 10476,12432
        undef,
        undef,
        undef,
-       {
-         'until' => 1264978800,
-         'text' => 'L 076 Mahlow - Teltow zw. Abzw. Birkholz und Abzw. Großbeeren Straßenbau Vollsperrung 02.06.2009-31.01.2010 ',
-         'from' => 1243807200,
-         'id' => 1684,
-         'data' => 'userdel	2::inwork 7955,-4250 7790,-3985 6012,-3393 5394,-3053
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'source_id' => 'IM_012907',
@@ -853,8 +836,8 @@ userdel	2::inwork 7160,11225 6851,11346
        undef,
        undef,
        {
-         'until' => 1260658800,
-         'text' => 'B 102 Treuenbrietzener Str. OD Jüterbog, zw. Mendelsohnstr. und Bülowstr. Straßenausbau Vollsperrung 20.07.2009-12.12.2009 ',
+         'until' => 1292972400,
+         'text' => 'B 102 Treuenbrietzener Str. OD Jüterbog, zw. Dammtor und Bülowstr. Straßenausbau Vollsperrung 20.07.2009-21.12.2010 ',
          'from' => 1247954400,
          'id' => 1753,
          'data' => 'userdel	q4::inwork -12541,-46115 -13108,-46122
@@ -867,15 +850,6 @@ userdel	2::inwork 7160,11225 6851,11346
        undef,
        undef,
        undef,
-       {
-         'until' => 1260572400,
-         'text' => 'L 059 Hainschestraße Brücke über den Binnengraben in Bad Liebenwerda Brückenneubau Vollsperrung 23.07.2009-11.12.2009 ',
-         'from' => 1248213600,
-         'id' => 1760,
-         'data' => 'userdel	2::inwork 12383,-99327 12173,-99115
-',
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
@@ -899,15 +873,8 @@ userdel	2::inwork 7160,11225 6851,11346
        undef,
        undef,
        undef,
-       {
-         'until' => 1259967600,
-         'text' => 'K 7346 Rudolf-Breitscheid-Str. OL Angermünde, zw. Pestalozzistr. u. Sternefelder Weg Kanal- und Straßenbau Vollsperrung 05.08.2009-04.12.2009 ',
-         'from' => 1249336800,
-         'id' => 1784,
-         'data' => 'userdel	q4::inwork 48657,68265 49566,68311
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        {
          'until' => 1261177200,
          'text' => 'L 015 Schloßstr., Menzer Str. OD Rheinsberg, zw. Berliner Str. u. Kiefernweg Straßenbauarbeiten Vollsperrung 27.07.2009-18.12.2009 ',
@@ -935,16 +902,7 @@ userdel	2::inwork 7160,11225 6851,11346
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.potsdam.de/cms/beitrag/10051448/757395/',
-         'until' => 1260831600,
-         'text' => 'Fußgängertunnel Lange Brücke: vollständig gesperrt (September 2009 - Dezember 2009)',
-         'from' => 1251756000,
-         'id' => 1796,
-         'data' => 'userdel	2::inwork -12669,-1768 -12608,-1715
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1196,8 +1154,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'type' => 'gesperrt'
        },
        {
-         'until' => 1262300400,
-         'text' => 'B 005 Frankfurter Straße OL Heinersdorf Kanal- u. Straßenbauarbeiten Vollsperrung 07.09.2009-31.12.2009 ',
+         'until' => 1261436400,
+         'text' => 'B 005 Frankfurter Straße OL Heinersdorf Kanal- u. Straßenbauarbeiten Vollsperrung 07.09.2009-21.12.2009 ',
          'from' => 1252188000,
          'id' => 1835,
          'data' => 'userdel	q4::inwork 66009,6118 65618,6296 65528,6253 65365,6281 65225,6403
@@ -1233,8 +1191,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'type' => 'gesperrt'
        },
        {
-         'until' => 1261436400,
-         'text' => 'L 621 Döllinger Straße OL Hohenleipisch, zw. Goethestr. u. Abzw. L62 Berliner Str. Straßen- und Kanalarbeiten Vollsperrung 24.08.2009-21.12.2009 ',
+         'until' => 1270072800,
+         'text' => 'L 621 Döllinger Straße OL Hohenleipisch, zw. Goethestr. u. Abzw. L62 Berliner Str. Straßen- und Kanalarbeiten Vollsperrung 24.08.2009-31.03.2010 ',
          'from' => 1250978400,
          'id' => 1848,
          'data' => 'userdel	q4::inwork 23464,-101227 23305,-100904 23220,-100874
@@ -1257,16 +1215,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_013929',
-         'until' => 1260917999,
-         'text' => 'Winckelmannstr. (Johannisthal) Richtung Stubenrauchstr. zwischen Sterndamm und Köpenicker Str. Baustelle, Fahrtrichtung gesperrt (bis Mitte 12.2009)',
-         'from' => 1251833280,
-         'id' => 1856,
-         'data' => 'userdel	q4::inwork; 17428,4503 17476,4337 17507,4216
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_014045',
          'until' => 1293836399,
@@ -1464,15 +1413,7 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1260918000,
-         'text' => 'L 812 B102 - Kemnitz Brücke über den Arm der Nieplitz zw. Bardenitz u. Kemnitz Brückenneubau Vollsperrung 28.09.2009-15.12.2009 ',
-         'from' => 1254002400,
-         'id' => 1921,
-         'data' => 'userdel	2::inwork -19162,-33731 -18692,-33299
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1516,10 +1457,10 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
        {
          'source_id' => 'IM_014421',
          'until' => 1270072799,
-         'text' => 'Neustädtische Kirchstr. (Mitte) in beiden Richtungen zwischen Dorotheenstr. und Unter den Linden Baustelle, Straße vollständig gesperrt. Ebenfalls in beiden Richtungen gesperrt: Dorotheenstr. zwischen Neustädtische Kirchstr. und Schadowstr (bis Ende 03/2010)',
-         'from' => 1258835854,
+         'text' => 'Neustädtische Kirchstr. (Mitte) Richtung Reichtagsufer zwischen Dorotheenstr. und Unter den Linden Baustelle, Fahrtrichtung gesperrt (bis Ende 03/2010)',
+         'from' => 1260481458,
          'id' => 1946,
-         'data' => 'userdel	q4::inwork 9141,12320 9130,12433 9123,12500 9008,12485
+         'data' => 'userdel	q4::inwork; 9141,12320 9130,12433 9123,12500
 ',
          'type' => 'handicap'
        },
@@ -1546,11 +1487,12 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
        undef,
        undef,
        {
-         'until' => 1261177200,
-         'text' => 'Naumannstraße zwischen Leuthener Straße und Tempelhofer Weg gesperrt, Baustelle, Dauer: 08.10.2009 07:00 Uhr bis 18.12.2009 ',
+         'source_id' => 'IM_014786',
+         'until' => 1267397999,
+         'text' => 'Naumannstraße zwischen Leuthener Straße und Tempelhofer Weg in Richtung Sachsendamm gesperrt, Baustelle, Dauer: 08.10.2009 07:00 Uhr bis Ende 02.2010',
          'from' => 1254891600,
          'id' => 1953,
-         'data' => 'userdel	q4::inwork 7716,8356 7716,8048 7717,7879
+         'data' => 'userdel	q4::inwork; 7716,8356 7716,8048 7717,7879
 ',
          'type' => 'handicap'
        },
@@ -1621,15 +1563,7 @@ userdel	2::inwork 14835,10272 14888,10385
        undef,
        undef,
        undef,
-       {
-         'until' => 1262300400,
-         'text' => 'B 112 OU Guben - OU Neuzelle zw. Abzw.Wellmitz und Abzw. Streichwitz Straßenneubau Vollsperrung 02.11.2009-31.12.2009 ',
-         'from' => 1257030000,
-         'id' => 1967,
-         'data' => 'userdel	2::inwork 96951,-34887 97016,-36424 97032,-36743 97476,-37327 97680,-37821
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1261177200,
          'text' => 'B 122 Zechlinerhütte - Wesenberg zw. Abzw. Kleinzerlang und Prebelowbrücke Deckenerneuerung Vollsperrung 16.11.2009-18.12.2009 ',
@@ -1646,15 +1580,7 @@ userdel	2::inwork 14835,10272 14888,10385
        undef,
        undef,
        undef,
-       {
-         'until' => 1260313200,
-         'text' => 'L 239 Kerkow - Joachimsthal Bahnübergang Kerkow Gleiserneuerung Vollsperrung 06.12.2009 und 08.12.2009',
-         'from' => 1259967600,
-         'id' => 1976,
-         'data' => 'userdel	2::inwork 48237,70892 48147,70935 48092,70962
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1676,15 +1602,7 @@ userdel	2::temp 9852,12409 9869,12297 9890,12161
        undef,
        undef,
        undef,
-       {
-         'until' => 1259967600,
-         'text' => 'L 601 Finsterwalde - Doberlug-Kirchhain OD Lugau, zw. Abzw. Hennersdorfer Str. u. Abzw. Ha Straßenbauarbeiten Vollsperrung 09.11.2009-04.12.2009 ',
-         'from' => 1257634800,
-         'id' => 1987,
-         'data' => 'userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998 24927,-87720
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1262300399,
          'text' => 'Voltairestr.: Durchfahrt wegen des Weihnachtsmarkts am Alexanderplatz nicht oder nur schwer möglich',
@@ -1696,10 +1614,11 @@ userdel	2::temp 9852,12409 9869,12297 9890,12161
        },
        {
          'until' => 1262300399,
-         'text' => 'Gendarmenmarkt: Weihnachtsmarkt, gesperrt',
+         'text' => 'Gendarmenmarkt: Weihnachtsmarkt, Durchfahrt nicht oder nur schwer möglich',
          'from' => 1258207217,
          'id' => 1989,
          'data' => 'userdel	2::temp 9526,11911 9668,11928
+userdel	2::temp 9516,12010 9656,12021
 ',
          'type' => 'gesperrt'
        },
@@ -1716,15 +1635,7 @@ userdel	2::temp 9852,12409 9869,12297 9890,12161
        undef,
        undef,
        undef,
-       {
-         'until' => 1260054000,
-         'text' => 'B 096 Luckau - Baruth Brücke über die Schuge bei Rüdingsdorf Brückenneubau Vollsperrung 02.12.2009-05.12.2009 ',
-         'from' => 1259622000,
-         'id' => 1995,
-         'data' => 'userdel	2::inwork 29918,-54610 30409,-55818
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'until' => 1262300399,
@@ -1732,6 +1643,35 @@ userdel	2::temp 9852,12409 9869,12297 9890,12161
          'from' => undef,
          'id' => 1997,
          'data' => 'userdel	2::temp 8479,11493 8481,11447 8389,11378
+',
+         'type' => 'gesperrt'
+       },
+       undef,
+       {
+         'until' => 1264978800,
+         'text' => 'L 030 Bahnhofstraße OL Erkner, Erneuerung Eisenbahnbrücke Vollsperrung 09.06.2008-31.01.2010 ',
+         'from' => 1212876000,
+         'id' => 1999,
+         'data' => 'userdel	2::inwork 34326,2915 34142,2742
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1261609200,
+         'text' => 'L 792 Dorfstraße OD Blankenfelde, zw. Zossener Damm u. H.-Heine-Str. Straßenausbau Vollsperrung 09.10.2009-23.12.2009 ',
+         'from' => 1254952800,
+         'id' => 2000,
+         'data' => 'userdel	q4::inwork 10115,-8276 10448,-7582
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'until' => 1272664800,
+         'text' => 'Baumaßnahmen in der Parkanlage am Schlachtensee, teilweise ist der Uferweg gesperrt (bis zum Frühjahr 2010)',
+         'from' => undef,
+         'id' => 2002,
+         'data' => 'userdel	2::inwork -2521,3637 -2396,3666 -2174,3718 -2014,3826 -1980,3872 -1974,3933 -1996,4063 -1944,4140 -1706,3971 -1624,3956 -1558,3965 -1468,3995 -1380,4108
 ',
          'type' => 'gesperrt'
        }

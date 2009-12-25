@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: strassen-lazy.t,v 1.11 2005/04/06 21:03:03 eserte Exp $
+# $Id: strassen-lazy.t,v 1.12 2009/12/22 11:30:17 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -21,7 +21,7 @@ BEGIN {
 	1;
     }) {
 	warn $@;
-	print "1..0 # skip: no Test/Object::Realize::Later modules\n";
+	print "1..0 # skip no Test/Object::Realize::Later modules\n";
 	exit;
     }
 }

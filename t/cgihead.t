@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: cgihead.t,v 1.20 2009/02/25 23:46:23 eserte Exp $
+# $Id: cgihead.t,v 1.21 2009/12/22 11:30:17 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -16,7 +16,7 @@ BEGIN {
 	use LWP::UserAgent;
 	1;
     }) {
-	print "1..0 # skip: no Test::More and/or LWP::UserAgent module\n";
+	print "1..0 # skip no Test::More and/or LWP::UserAgent module\n";
 	exit;
     }
 }
@@ -49,7 +49,7 @@ my @prog = qw(
 	      bbbike-snapshot.cgi
 	      bbbikegooglemap.cgi
 	     );
-if ($cgi_dir !~ m{\Qradzeit.herceg.de}) {
+if ($cgi_dir !~ m{(bbbike.hosteurope|radzeit)\Q.herceg.de}) {
     push @prog, "bbbikegooglemap2.cgi";
 }
 

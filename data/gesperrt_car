@@ -85,7 +85,7 @@ Karl-Marx-Str. -> Schönstedtstr.: Karl-Marx-Str./Schönstedt	3::igndisp 12500,850
 Schönstedtstr. -> Karl-Marx-Str.: Karl-Marx-Str./Schönstedt	3::igndisp 12649,8535 12540,8458 12582,8408
 Hoffmannstr./Elsenstr.	3 14076,10011 14289,9870 14405,10027
 Jerusalemer/Leipziger	3 9892,11752 9898,11679 9981,11689
-Behren/Ebert	3 8861,12125 8737,12098 8595,12066 8581,11896 8571,11846
+Behren/Ebert	3 8861,12125 8743,12099 8737,12098 8595,12066 8581,11896 8571,11846
 UdL => Universitätsstr.	3 9475,12365 9601,12380 9580,12581
 Universitätsstr. => UdL	3 9580,12581 9601,12380 9679,12388 9771,12400 9780,12401
 Kolonnenstr. -> Hohenfriedbergstr.	3 7709,8777 7795,8765 7791,8882
@@ -715,8 +715,8 @@ Straßenbahntrasse	3nocross::ignrte 12010,16774 12017,16734 12046,16568
 Brauhausstr. -> Prenzlauer Promenade: Straßenbahntrasse	3::igndisp 12211,16688 12017,16734 12046,16568
 Prenzlauer Promenade -> Brauhausstr.: Straßenbahntrasse	3::igndisp 12010,16774 12017,16734 12211,16688
 Mittelstreifen	3nocross::ignrte 12114,12546 12134,12540 12360,12505
-Krautstr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 12118,12462 12134,12540 12114,12546
-Karl-Marx-Allee -> Krautstr.: Mittelstreifen	3::igndisp 12360,12505 12134,12540 12118,12462
+Karl-Marx-Allee -> Krautstr./Blumenstr.: Mittelstreifen	3::igndisp 12360,12505 12134,12540 12125,12490
+Krautstr./Blumenstr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 12125,12490 12134,12540 12114,12546
 Mittelstreifen	3nocross::ignrte 10240,11740 10213,11728 9981,11689
 Gertraudenstr. -> Beuthstr.: Mittelstreifen	3::igndisp 10240,11740 10213,11728 10229,11618
 Gertraudenstr. -> Spittelmarkt: Mittelstreifen	3::igndisp 10240,11740 10213,11728 10153,11666
@@ -831,7 +831,7 @@ Margarete-Kühn-Str.: Poller am Salzufer	3 5018,12322 5133,12240 5203,12387
 Margarete-Kühn-Str.: Poller am Salzufer	3 5194,12176 5133,12240 5203,12387
 Eberswalder Str. (Bernau)	1 23109,30968 23103,30923 22922,30640
 Rutnikstr. - Möllendorffstr.: Abbiegen verboten	3 15648,12687 15546,12690 15550,12625
-Torgauer Str.: nur für Anlieger	2:Anlieger 7446,8200 7268,8225 7005,8150
+Torgauer Str.: nur für Anlieger	2:Anlieger 7446,8200 7250,8223 7005,8150
 Hermannswerder	1 -14301,-2871 -13718,-2991
 Neue Schönholzer Str.	1 10089,18180 10140,18080 10179,17772
 Kleine Kurstr.	1 10230,11839 10183,11770
@@ -929,3 +929,9 @@ Brandenburger Str. -> Jägerstr.: Fußgängerzone	3::igndisp -12883,-976 -13005,-10
 Jägerstr. -> Jägerstr.: Fußgängerzone	3::igndisp -13025,-901 -13005,-1002 -12984,-1110
 Jägerstr. -> Brandenburger Str.: Fußgängerzone	3::igndisp -13025,-901 -13005,-1002 -12883,-976
 Eichhornstr. - Potsdamer: abbiegen verboten	3 8232,11414 8226,11458 8145,11438
+Mittelstreifen	3nocross::ignrte 11543,10015 11623,9841 11673,9720
+Kottbusser Damm -> Schinkestr.: Mittelstreifen	3::igndisp 11543,10015 11623,9841 11734,9856
+Schinkestr. -> Kottbusser Damm: Mittelstreifen	3::igndisp 11734,9856 11623,9841 11673,9720
+Mittelstreifen	3nocross::ignrte 19735,3643 19676,3705 19633,3751
+Mittelstreifen	3nocross::ignrte 19472,3922 19587,3801 19633,3751
+Adlergestell -> Steinbachstr.: Mittelstreifen	3::igndisp 19472,3922 19587,3801 19673,3888

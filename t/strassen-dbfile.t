@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: strassen-dbfile.t,v 1.10 2009/12/04 20:34:40 eserte Exp $
+# $Id: strassen-dbfile.t,v 1.11 2009/12/22 11:30:17 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -19,7 +19,7 @@ BEGIN {
 	use Strassen::DB_File;
 	1;
     }) {
-	print "1..0 # skip: no DB_File and/or Test::More modules\n";
+	print "1..0 # skip no DB_File and/or Test::More modules\n";
 	exit;
     }
 }

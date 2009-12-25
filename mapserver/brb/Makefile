@@ -1,5 +1,5 @@
 #
-# $Id: Makefile,v 1.76 2009/12/04 20:34:40 eserte Exp $
+# $Id: Makefile,v 1.77 2009/12/22 11:30:16 eserte Exp $
 #
 
 # Please run this file with BSD make (often called pmake).
@@ -35,13 +35,6 @@ VPATH=		${BRBDIR}
 TARGET?=	local
 
 OSNAME!=	uname
-
-# Auto-set TARGET for some well-known rules
-.if make(dist-radzeit)
-TARGET=		radzeit
-.elif make(dist-radzeit.herceg.de)
-TARGET=		radzeit.herceg.de
-.endif
 
 # XXX Hmmm. This should be done automatically somehow.
 .if !exists(Makefile.${TARGET}.inc)
@@ -91,54 +84,42 @@ FONTS_LIST?=		fonts-biokovo.list
 
 RADZEIT_HOST=		radzeit.herceg.de
 RADZEIT_APACHE_DIR=	$(RADZEIT_APACHE_DIR_LOCAL)
-BBBIKE_MAPSERVER_URL=	http://radzeit.herceg.de/cgi-bin/mapserv
-BBBIKECGI_CONFIG=	$(RADZEIT_APACHE_DIR)/cgi-bin/bbbike.cgi.config
-BBBIKECGI_CONFIG_LOCAL=	$(BBBIKECGI_CONFIG)
+BBBIKE_MAPSERVER_URL=	http://$(RADZEIT_HOST)/cgi-bin/mapserv
+
+.elif ${TARGET} == "bbbike.hosteurope.herceg.de"
+
+RADZEIT_HOST=		bbbike.hosteurope.herceg.de
+RADZEIT_APACHE_DIR_LOCAL=	$(ABS_LOCAL_BBBIKE_DIR)/projects/bbbike.de-hosteurope
+RADZEIT_APACHE_DIR=	$(RADZEIT_APACHE_DIR_LOCAL)
+BBBIKE_MAPSERVER_URL=	http://$(RADZEIT_HOST)/cgi-bin/mapserv
+
+.elif ${TARGET} == "hosteurope"
+
+# compatibility with usage of old ...RADZEIT... vars
+BBBIKE_RADZEIT_USER=	${BBBIKE_HOSTEUROPE_USER}
+BBBIKE_RADZEIT_HOST=	${BBBIKE_HOSTEUROPE_HOST}
+BBBIKE_RADZEIT_APACHE_DIR=${BBBIKE_HOSTEUROPE_APACHE_DIR}
 
 .endif
 
-.if ${TARGET} == "devpc01"
-ABS_LOCAL_BBBIKE_DIR=	/home/slavenr/work2/bbbike
-MAPSERVER_PROG_FSPATH=	/home/slavenr/work2/mapserver/mapserv.cgi
-#MAPSERVER_PROG_FSPATH=	/home/slavenr/mapserver-3.6.6/mapserv
-#MAPSERVER_PROG_FSPATH=	/home/slavenr/mapserver-3.6.4/mapserv
-# XXX port number or not?
-LOCAL_HOST=		localhost:8080
-FONTS_LIST=		fonts-devpc01.list
-BBBIKECGI_CONFIG=	$(ABS_LOCAL_BBBIKE_DIR)/cgi/bbbike-icm.cgi.config
-BBBIKECGI_CONFIG_LOCAL=	$(BBBIKECGI_CONFIG)
-.endif
-
-.if ${TARGET} == "local" || ${TARGET} == "devpc01"
+.if ${TARGET} == "local"
 
 HOST=			$(LOCAL_HOST)
 MAPSERVER_DIR=		$(LOCAL_BBBIKE_DIR)/mapserver/brb
 # Relative URL to this directory and to the mapserv binary:
-.if ${TARGET} == "local"
 MAPSERVER_RELURL=	/bbbike/mapserver/brb				# ***
 MAPSERVER_PROG_RELURL?=	/cgi/mapserv.cgi				# ***
-.elif ${TARGET} == "devpc01"
-MAPSERVER_RELURL=	/bbbike/mapserver/brb				# ***
-MAPSERVER_PROG_RELURL?=	/mapserver/cgi/mapserv.cgi			# ***
-MAPSERVER_PROG_RELURL?=	/mapserver/cgi/mapserv				# ***
-.endif
 MAPSERVER_URL=		http://$(HOST)$(MAPSERVER_RELURL)
 MAPSERVER_PROG_URL?=	http://$(HOST)$(MAPSERVER_PROG_RELURL)
 # Filesystem path of the mapserv binary:
 MAPSERVER_PROG_FSPATH?=	/home/e/eserte/www/cgi/mapserv.cgi		# ***
 IMAGE_DIR=		$(LOCAL_BBBIKE_DIR)/images
 # Relative URL to the bbbike html and cgi directories:
-.if ${TARGET} == "local"
 BBBIKE_HTML_RELURL=	/bbbike/html					# ***
 BBBIKE_CGI_RELURL=	/bbbike/cgi					# ***
 BBBIKE_IMAGES_RELURL=	/bbbike/images					# ***
 BBBIKECGI_CONFIG=	$(ABS_LOCAL_BBBIKE_DIR)/cgi/bbbike.cgi.config
 BBBIKECGI_CONFIG_LOCAL=	$(BBBIKECGI_CONFIG)
-.elif ${TARGET} == "devpc01"
-BBBIKE_HTML_RELURL=	/bbbike/html					# ***
-BBBIKE_CGI_RELURL=	/bbbike/cgi					# ***
-BBBIKE_IMAGES_RELURL=	/bbbike/images					# ***
-.endif
 BBBIKE_URL=		http://$(HOST)$(BBBIKE_CGI_RELURL)/bbbike.cgi
 # Which kind of images should be generated:
 IMAGE_SUFFIX=		gif # was: png					# ***
@@ -146,21 +127,15 @@ IMAGE_SUFFIX=		gif # was: png					# ***
 .if exists(/etc/debian_version)
 FONTS_LIST?=		fonts-debian.list
 .else
-#FONTS_LIST?=		fonts-vran.list					# ***
-FONTS_LIST?=		fonts-biokovo.list					# ***
+FONTS_LIST?=		fonts-biokovo.list				# ***
 .endif
 # The unix user of the webserver process:
 WWW_USER=		eserte						# ***
-TARGET_DIR=		${.CURDIR}
 
-.elif ${TARGET} == "radzeit" || ${TARGET} == "radzeit.herceg.de" || ${TARGET} == "radzeit-old"
+.elif ${TARGET} == "radzeit" || ${TARGET} == "radzeit.herceg.de"
 
 HOST=			$(RADZEIT_HOST)
-.if ${TARGET} == "radzeit-old"
-HTDOCS=			htdocs
-.else
 HTDOCS=			public
-.endif
 MAPSERVER_DIR=		$(RADZEIT_APACHE_DIR)/$(HTDOCS)/mapserver/brb
 MAPSERVER_RELURL=	/mapserver/brb
 MAPSERVER_URL=		http://$(HOST)$(MAPSERVER_RELURL)
@@ -168,13 +143,9 @@ MAPSERVER_URL=		http://$(HOST)$(MAPSERVER_RELURL)
 #MAPSERVER_PROG_URL=	http://$(HOST)$(MAPSERVER_PROG_RELURL)
 BBBIKECGI_CONFIG=	$(RADZEIT_APACHE_DIR)/cgi-bin/bbbike.cgi.config
 BBBIKECGI_CONFIG_LOCAL=	$(RADZEIT_APACHE_DIR_LOCAL)/cgi-bin/bbbike.cgi.config
-.if ${TARGET} == "radzeit.herceg.de"
-BBBIKE_MAPSERVER_URL=	http://radzeit.herceg.de/cgi-bin/mapserv
-.endif
 MAPSERVER_PROG_RELURL=	$(BBBIKE_MAPSERVER_URL:C/^http:\/\/[^\/]+//)
 MAPSERVER_PROG_URL=	$(BBBIKE_MAPSERVER_URL)
 MAPSERVER_VERSION=	3.6.6
-# XXX should be changed to BBBike for real production
 IMAGE_DIR=		$(RADZEIT_APACHE_DIR)/BBBike/images
 BBBIKE_HTML_RELURL=	/BBBike/html
 BBBIKE_CGI_RELURL=	/cgi-bin
@@ -182,22 +153,52 @@ BBBIKE_IMAGES_RELURL=	/BBBike/images
 BBBIKE_URL=		http://$(HOST)$(BBBIKE_CGI_RELURL)/bbbike.cgi
 IMAGE_SUFFIX=		gif
 
-.if ${TARGET} == "radzeit" || ${TARGET} == "radzeit-old"
+.if ${TARGET} == "radzeit"
 WWW_USER=		www
-TARGET_DIR=		${.CURDIR:H}/brb-radzeit
 .elif ${TARGET} == "radzeit.herceg.de"
 WWW_USER=		eserte
-TARGET_DIR=		${.CURDIR:H}/brb-radzeit.herceg.de
 .endif
 
-.if ${TARGET} == "radzeit-old"
-FONTS_LIST=		fonts-radzeit-old.list
-.elif ${TARGET} == "radzeit"
+.if ${TARGET} == "radzeit"
 FONTS_LIST=		fonts-radzeit.list
 .elif ${TARGET} == "radzeit.herceg.de" && exists(/etc/debian_version)
 FONTS_LIST=		fonts-debian.list
 .elif ${TARGET} == "radzeit.herceg.de"
-#FONTS_LIST=		fonts-vran.list
+FONTS_LIST=		fonts-biokovo.list
+.endif
+
+.elif ${TARGET} == "hosteurope" || ${TARGET} == "bbbike.hosteurope.herceg.de"
+
+HOST=			$(RADZEIT_HOST)
+HTDOCS=			public
+MAPSERVER_DIR=		$(RADZEIT_APACHE_DIR)/$(HTDOCS)/mapserver/brb
+MAPSERVER_RELURL=	/mapserver/brb
+MAPSERVER_URL=		http://$(HOST)$(MAPSERVER_RELURL)
+#MAPSERVER_PROG_RELURL=	/cgi-bin/mapserv
+#MAPSERVER_PROG_URL=	http://$(HOST)$(MAPSERVER_PROG_RELURL)
+BBBIKECGI_CONFIG=	$(RADZEIT_APACHE_DIR)/cgi-bin/bbbike.cgi.config
+BBBIKECGI_CONFIG_LOCAL=	$(RADZEIT_APACHE_DIR_LOCAL)/cgi-bin/bbbike.cgi.config
+MAPSERVER_PROG_RELURL=	$(BBBIKE_MAPSERVER_URL:C/^http:\/\/[^\/]+//)
+MAPSERVER_PROG_URL=	$(BBBIKE_MAPSERVER_URL)
+MAPSERVER_VERSION=	5
+IMAGE_DIR=		$(RADZEIT_APACHE_DIR)/BBBike/images
+BBBIKE_HTML_RELURL=	/BBBike/html
+BBBIKE_CGI_RELURL=	/cgi-bin
+BBBIKE_IMAGES_RELURL=	/BBBike/images
+BBBIKE_URL=		http://$(HOST)$(BBBIKE_CGI_RELURL)/bbbike.cgi
+IMAGE_SUFFIX=		png
+
+.if ${TARGET} == "hosteurope"
+WWW_USER=		www-data
+.elif ${TARGET} == "bbbike.hosteurope.herceg.de"
+WWW_USER=		eserte
+.endif
+
+.if ${TARGET} == "hosteurope"
+FONTS_LIST=		fonts-debian.list
+.elif ${TARGET} == "bbbike.hosteurope.herceg.de" && exists(/etc/debian_version)
+FONTS_LIST=		fonts-debian.list
+.elif ${TARGET} == "bbbike.hosteurope.herceg.de"
 FONTS_LIST=		fonts-biokovo.list
 .endif
 
@@ -205,11 +206,7 @@ FONTS_LIST=		fonts-biokovo.list
 
 ######################################################################
 
-.if ${TARGET} != "devpc01"
-TPAGE?=			tpage --compile_ext=.ttc --compile_dir=/tmp/bbbikettc
-.else
-TPAGE?=			tpage
-.endif
+TPAGE?=		tpage --compile_ext=.ttc --compile_dir=/tmp/bbbikettc-${TARGET}
 
 SCOPES=		brb b inner-b wide p
 
@@ -221,6 +218,7 @@ ALL_TPL_DEFINES=\
 	--define MAPSERVER_PROG_RELURL="$(MAPSERVER_PROG_RELURL)" \
 	--define MAPSERVER_PROG_URL="$(MAPSERVER_PROG_URL)" \
 	--define MAPSERVER_PROG_FSPATH="$(MAPSERVER_PROG_FSPATH)" \
+	--define MAPSERVER_VERSION="$(MAPSERVER_VERSION)" \
 	--define IMAGE_DIR="$(IMAGE_DIR)" \
 	--define BBBIKE_HTML_RELURL="$(BBBIKE_HTML_RELURL)" \
 	--define BBBIKE_URL="$(BBBIKE_URL)" \
@@ -300,6 +298,7 @@ RADZEIT_DIST_DIR=/tmp/radzeit_mapserver_dist
 ADD_MAKEFILE_VARS=\
 	RSYNC \
 	BBBIKE_RADZEIT_USER BBBIKE_RADZEIT_HOST BBBIKE_RADZEIT_APACHE_DIR \
+	BBBIKE_HOSTEUROPE_USER BBBIKE_HOSTEUROPE_HOST BBBIKE_HOSTEUROPE_APACHE_DIR \
 
 # Variables slurped in from BBBikeVar.pm
 ADD_BBBIKEVAR_VARS=\
@@ -359,20 +358,10 @@ Makefile.${TARGET}.inc:	${ABS_LOCAL_BBBIKE_DIR}/Makefile \
 	touch $@
 	chmod ugo+r $@
 	echo "### DO NOT EDIT. Automatically created by Makefile" >> $@
-.if ${TARGET} == "radzeit-old"
-.error not supported anymore
-	echo "RSYNC=	rsync" >> $@
-	echo "BBBIKE_RADZEIT_USER=	root" >> $@
-#	echo "BBBIKE_RADZEIT_HOST=	130.149.231.37" >> $@
-## Only with faked /etc/hosts entry:
-	echo "BBBIKE_RADZEIT_HOST=	bbbike.radzeit.de" >> $@
-	echo "BBBIKE_RADZEIT_APACHE_DIR=	/var/www/domains/radzeit.de/www/" >> $@
-.else
 .for makefile_var in $(ADD_MAKEFILE_VARS)
 	echo -n "$(makefile_var)=	" >> $@
 	${MAKE} -f ${ABS_LOCAL_BBBIKE_DIR}/Makefile -V $(makefile_var) >> $@
 .endfor
-.endif
 .for bbbikevar_var in $(ADD_BBBIKEVAR_VARS)
 	echo -n "$(bbbikevar_var)=	" >> $@
 	perl -I${ABS_LOCAL_BBBIKE_DIR} -MBBBikeVar -e 'print $$BBBike::$(bbbikevar_var), "\n"' >> $@
@@ -501,11 +490,6 @@ sternfahrt2007/sternfahrt2007.map:	sternfahrt2007/sternfahrt2007-brb.map
 sternfahrt2007.map: sternfahrt2007/sternfahrt2007.map
 	[ -L $@ ] || ln -s sternfahrt2007/sternfahrt2007.map
 
-# XXX del:
-# sternfahrt2007/sternfahrt2007.map:	sternfahrt2007/.sternfahrt2007.map mkroutemap
-# 	${BRBDIR}/mkroutemap -force -scope region sternfahrt2007/.sternfahrt2007.map sternfahrt2007/sternfahrt2007.map || rm -f $@
-# 	chmod ugo+r $@
-
 sternfahrt2007/sternfahrt2007.html:	brb.html-tpl sternfahrt2007/sternfahrt2007.inc Makefile Makefile.${TARGET}.inc
 	$(TPAGE) $(ALL_TPL_DEFINES) --define INCLUDE_FILE=sternfahrt2007/sternfahrt2007.inc brb.html-tpl > $@
 	chmod ugo+r $@
@@ -605,7 +589,6 @@ check-crontab:
 ######################################################################
 # dists
 
-# this obsoletes dist-radzeit and dist-radzeit.herceg.de
 #XXX remove the sternfahrt2005 productions to own rule
 dist-any:	# build-all
 	[ ! -d $(RADZEIT_DIST_DIR) ] || \
@@ -624,43 +607,13 @@ dist-any:	# build-all
 	cd $(RADZEIT_DIST_DIR) && \
 	    $(MAKE) $(MAKEFLAGS) TARGET=$(TARGET) ABS_LOCAL_BBBIKE_DIR=$(ABS_LOCAL_BBBIKE_DIR) all sternfahrt2007
 
-#XXX obsolete
-dist-radzeit:	# build-all
-	[ ${TARGET} = "radzeit" ]
-	[ ! -d $(RADZEIT_DIST_DIR) ] && mkdir $(RADZEIT_DIST_DIR) || true
-	chmod ugo+rx $(RADZEIT_DIST_DIR)
-	cp -pf $(DISTFILES) fonts-radzeit.list $(RADZEIT_DIST_DIR)
-	cp -pR data $(RADZEIT_DIST_DIR)
-	cp -pR graphics $(RADZEIT_DIST_DIR)
-	-mkdir $(RADZEIT_DIST_DIR)/tmp
-	chmod ugo+rx $(RADZEIT_DIST_DIR)/tmp
-	cd $(RADZEIT_DIST_DIR) && $(MAKE) $(MAKEFLAGS) TARGET=radzeit
-
-#XXX obsolete
-dist-radzeit.herceg.de:	# build-all
-	[ ${TARGET} = "radzeit.herceg.de" ]
-	[ ! -d $(RADZEIT_DIST_DIR) ] && mkdir $(RADZEIT_DIST_DIR) || true
-	chmod ugo+rx $(RADZEIT_DIST_DIR)
-#	cp -pf $(DISTFILES) fonts-vran.list $(RADZEIT_DIST_DIR)
-	cp -pf $(DISTFILES) fonts-biokovo.list $(RADZEIT_DIST_DIR)
-	cp -pR data $(RADZEIT_DIST_DIR)
-	cp -pR graphics $(RADZEIT_DIST_DIR)
-	-mkdir $(RADZEIT_DIST_DIR)/tmp
-	chmod ugo+rx $(RADZEIT_DIST_DIR)/tmp
-	cd $(RADZEIT_DIST_DIR) && $(MAKE) $(MAKEFLAGS) TARGET=radzeit.herceg.de
-
-rsync-radzeit:
-	[ ! -d $(RADZEIT_DIST_DIR) ] && ( echo Please execute ${MAKE} dist-radzeit first; false ) || true
-	cd $(RADZEIT_DIST_DIR) && rsync -Pvzrt . $(BBBIKE_RADZEIT_USER)@$(BBBIKE_RADZEIT_HOST):$(RADZEIT_APACHE_DIR)/$(HTDOCS)/mapserver/brb/
-
 ######################################################################
 # Download: http://mapserver.gis.umn.edu/dist/mapserver-3.6.4.tar.gz
 
 # Patches für 3.6.3/3.6.4 sind unter
-# vran:/usr/local/src/mapserver/private-patches* vorhanden
+# /mnt/i386/usr/local/src/from_vran/mapserver/private-patches* vorhanden
 
 # Um mapserver zu bauen, sind folgende configure-Aufrufe notwendig:
-# vran:              sh configure --with-freetype=/usr/local --with-jpeg=/usr/local --with-gd=/usr/local
 # bbbike.radzeit.de: sh configure --with-jpeg=/usr/src/jpeg-6b --with-freetype=/usr/X11R6
 
 # GD 2.0.x ist bevorzugt zu verwenden, da die Textausgabe dort
@@ -669,19 +622,6 @@ rsync-radzeit:
 # Freetype 2.1.2 sollte nicht verwendet werden, da Textwinkel dort
 # falsch berechnet werden (benötigt ein Minus in Zeile 404 von
 # maplabel.c, mapserver 3.6.3)
-
-# To compile 3.7 from CVS
-# vran:           sh configure --with-freetype=/usr/local --with-jpeg=/usr/local --with-gd=/usr/local --with-png=/usr/local --with-xpm=/usr/X11R6 --with-ming=/usr/local
-# then hand-edit Makefile: MING_INC=-I/usr/local/include/ming
-# and add -lming to MING_LIB
-
-# To build mapserver on devpc01, use:
-# ./configure --with-gd=static,/home/slavenr/tmp/gd-2.0.12/ --enable-debug
-# However, the newest mapserver seems to be buggy. I had more succes with mapserver-3.6.4.
-# The configure line was:
-# ./configure  --without-ogr --with-gd=static,/home/slavenr/tmp/gd-2.0.23 --enable-debug
-# Another problem is the single .cpp file in the code. I just renamed it to .c and
-# removed the mapogr.cpp rule from the Makefile.
 
 # On bbbike.radzeit.de, use the mapserv-3.6.6 binary instead of the
 # mapserv-3.6.4 binary. The latter seems to segfault more often.

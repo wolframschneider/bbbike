@@ -81,7 +81,7 @@ Puschkin/Bulgarische	1 13829,9905 13884,9882 13995,9834 14193,9746 14310,9692 14
 Karl-Marx-Str./Schönstedt	3nocross 12500,8504 12540,8458 12582,8408
 Hoffmannstr./Elsenstr.	3 14076,10011 14289,9870 14405,10027
 Jerusalemer/Leipziger	3 9892,11752 9898,11679 9981,11689
-Behren/Ebert	3 8861,12125 8737,12098 8595,12066 8581,11896 8571,11846
+Behren/Ebert	3 8861,12125 8743,12099 8737,12098 8595,12066 8581,11896 8571,11846
 UdL => Universitätsstr.	3 9475,12365 9601,12380 9580,12581
 Universitätsstr. => UdL	3 9580,12581 9601,12380 9679,12388 9771,12400 9780,12401
 Kolonnenstr. -> Hohenfriedbergstr.	3 7709,8777 7795,8765 7791,8882
@@ -524,7 +524,7 @@ Margarete-Kühn-Str.: Poller am Salzufer	3 5203,12387 5133,12240 *
 Margarete-Kühn-Str.: Poller am Salzufer	3 * 5133,12240 5203,12387
 Eberswalder Str. (Bernau)	1 23109,30968 23103,30923 22922,30640
 Rutnikstr. - Möllendorffstr.: Abbiegen verboten	3 15648,12687 15546,12690 15550,12625
-Torgauer Str.: nur für Anlieger	2:Anlieger 7446,8200 7268,8225 7005,8150
+Torgauer Str.: nur für Anlieger	2:Anlieger 7446,8200 7250,8223 7005,8150
 #: by: Aaron Schaar, osm:
 Hermannswerder	1 -14301,-2871 -13718,-2991
 #: by: Ulf Lenski:
@@ -571,3 +571,8 @@ Paulsborner Str.: Mittelstreifen	3nocross 3620,9936 3706,10039 3747,10094 3852,1
 Eisenhartstr.	1 -12637,-8 -12779,-294 -12821,-417
 Brandenburger Str. (Potsdam): Fußgängerzone	3nocross -13556,-1140 -13410,-1101 -13289,-1071 -13173,-1039 -13005,-1002 -12883,-976
 Eichhornstr. - Potsdamer: abbiegen verboten	3 8232,11414 8226,11458 8145,11438
+Kottbusser Damm/Schinkestr.: Mittelstreifen	3nocross 11543,10015 11623,9841 11673,9720
+#: note: Luftbild:
+Adlergestell: Mittelstreifen	3nocross 19735,3643 19676,3705 19633,3751
+#: note: Luftbild:
+Adlergestell: Mittelstreifen	3nocross 19472,3922 19587,3801 19633,3751

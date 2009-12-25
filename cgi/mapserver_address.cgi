@@ -23,9 +23,18 @@ BEGIN { # XXX do not hardcode
 	$BBBIKE_ROOT = "/home/e/eserte/src/bbbike/projects/www.radzeit.de/BBBike";
 	$BBBIKE_URL = "/BBBike";
 	@Strassen::datadirs = "$BBBIKE_ROOT/data";
+    } elsif ($ENV{SERVER_NAME} eq 'bbbike.hosteurope.herceg.de') {
+	$BBBIKE_ROOT = "/home/e/eserte/src/bbbike/projects/bbbike.de-hosteurope/BBBike";
+	$BBBIKE_URL = "/BBBike";
+	@Strassen::datadirs = "$BBBIKE_ROOT/data";
     } elsif ($ENV{SERVER_NAME} eq 'vran.herceg.de') {
 	$BBBIKE_URL = "/~eserte/bbbike";
-    } elsif ($ENV{SERVER_NAME} =~ /(radzeit|bbbike\.de)/i) {
+    } elsif ($ENV{SERVER_NAME} =~ /bbbike\.de$/i ||
+	     eval { require Sys::Hostname; 1 } && Sys::Hostname::hostname() eq 'lvps83-169-19-137.dedicated.hosteurope.de'
+	    ) {
+	$BBBIKE_ROOT = "/root/work/bbbike-webserver/BBBike";
+	$BBBIKE_URL = "/BBBike";
+    } elsif ($ENV{SERVER_NAME} =~ /radzeit/i) {
 	if (-d "/var/www/domains/radzeit.de/www/BBBike") {
 	    $BBBIKE_ROOT = "/var/www/domains/radzeit.de/www/BBBike";
 	} else {
