@@ -145,6 +145,11 @@ data_berlin_osm_bbbike_untiled:
 	${MISCSRCDIR}/osm2bbd -map bbbike -v -f -o ../data_berlin_osm_bbbike download/osm/berlin.osm.bz2
 	${MISCSRCDIR}/osm2bbd-postprocess ../data_berlin_osm_bbbike
 
+# WGS84 version - note that still bbbike and bbbike.cgi cannot handled this correctly
+data_berlin_osm_untiled:
+	${MISCSRCDIR}/osm2bbd -experiment add_postal_code -v -f -o ../data_berlin_osm download/osm/berlin.osm.bz2
+	${MISCSRCDIR}/osm2bbd-postprocess ../data_berlin_osm
+
 ######################################################################
 # Various downloads
 
@@ -220,7 +225,8 @@ berlin-test-osm2bbd-postprocess2:
 # Currently works only on mosor
 
 bbbikemap-for-garmin:	/tmp/gmapsupp.img
-	@echo "Now do:"
+	@echo "Set the garmin device into USB mass storage mode."
+	@echo "Then execute:"
 	@echo "   mount /mnt/garmin"
 	@echo "   cp /tmp/gmapsupp.img /mnt/garmin/garmin/gmapsupp.img"
 	@echo "   umount /mnt/garmin"

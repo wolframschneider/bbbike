@@ -248,6 +248,7 @@ Alte Jakobstr.|Mitte|10179|10755,11635
 Alte Kaulsdorfer Str.|Köpenick|12555|22123,6399
 Alte Leipziger Str.|Mitte|10117|10076,11840
 Alte Potsdamer Str.|Tiergarten|10785|8384,11359
+Alte Rhinstr.|Marzahn|12681|18225,14398
 Alte Schönhauser Str.|Mitte|10119|10580,13242
 Alte Ziegenweide (Kolonie)|Friedenau|12157|7151,6215
 Altenauer Weg|Lichterfelde|12209|5364,1470
@@ -1973,6 +1974,7 @@ Claire-Waldoff-Weg|Schmargendorf|14199|3635,8099
 Clara-Grunwald-Str.|Lichtenberg|10317|15578,10250
 Clara-Jaschke-Str.|Moabit|10557|7779,13012
 Clara-von-Simson-Str.|Charlottenburg|10587|4732,13030
+Clara-Wieck-Str.|Tiergarten|10785|7103,11247
 Clara-Zetkin-Weg|Kaulsdorf|12619|22647,12993
 Claszeile|Zehlendorf|14165|712,1478
 Claudiusstr.|Hansaviertel|10557|6358,12840
@@ -3155,6 +3157,7 @@ Frieden (Kolonie)|Weißensee|13086|13297,16847
 Friedenfelser Str.|Marienfelde|12279|7680,914
 Friedenhorster Str.|Friedrichsfelde|10319|18264,9990
 Friedensgarten (Kolonie)|Britz|12359|14617,4581
+Friedensplatz|Tempelhof|12103|8952,6109
 Friedenssteg|Niederschönhausen|13158|
 Friedenstal (Kolonie)|Neukölln|12057|14521,7602
 Friedenstr.|Adlershof|12489|20213,3608
@@ -4432,7 +4435,7 @@ Herderstr.|Charlottenburg|10625|4506,11364
 Herderstr.|Mahlsdorf|12623|23452,8714
 Herderstr.|Steglitz|12163|4441,6230
 Heribaldstr.|Mahlsdorf|12623|24934,10601
-Heringerstr.|Lichtenberg|10367|15648,12687
+Heringer Str.|Lichtenberg|10367|15648,12687
 Heringsdorfer Str.|Kaulsdorf|12619|22565,12659
 Herkomerstr.|Treptow|12435|14447,9023
 Herkulesufer|Tiergarten|10785|7575,11076
@@ -4717,7 +4720,7 @@ Hornetweg|Marzahn|12685|20217,14791
 Hornkleepfad|Altglienicke|12524|
 Hornsteiner Weg|Kaulsdorf|12621|23479,11441
 Hornstr.|Kreuzberg|10963|8840,9837
-Hornungsweg|Mahlsdorf|12623|
+Hornungsweg|Mahlsdorf|12623|23715,10665
 Hörselbergstr.|Mahlsdorf|12623|24170,12328
 Horst-Caspar-Steig|Rudow|12353|15545,2148
 Horst-Kohl-Str.|Steglitz|12157|6448,6097
@@ -6765,6 +6768,7 @@ Mecklenburgische Str.|Wilmersdorf|10713|3521,7490
 Mecklenburgische Str.|Wilmersdorf|14197|3521,7490
 Medaillonplatz|Lichtenberg|10317|15706,10142
 Medebacher Weg|Tegel|13507|1963,19951
+Meeraner Str.|Marzahn|12681|18486,13819
 Meerscheidtstr.|Charlottenburg|14050|2042,11321
 Meerscheidtstr.|Charlottenburg|14057|2042,11321
 Megedestr.|Johannisthal|12487|16949,4375

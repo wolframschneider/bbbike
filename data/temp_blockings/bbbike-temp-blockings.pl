@@ -1156,8 +1156,8 @@ EOF
        text  => 'Lennéstr. zwischen Bellvuestr. und Eberstr. Baustelle, Straße gesperrt Richtung Ebertstr. (bis 15.11.2004) ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 8489,11782 8436,11766 8326,11732
-userdel	2 8326,11732 8223,11700
+userdel	2 8489,11782 8438,11753 8335,11718
+userdel	2 8335,11718 8225,11692
 EOF
      },
      { from  => 1092520800, # 2004-08-15 00:00
@@ -1559,7 +1559,7 @@ EOF
        text  => 'Sterndamm (Treptow) in Richtung Rudow zwischen Königsheideweg und Winckelmannstr. Baustelle, Fahrtrichtung gesperrt, eine Umleitung ist eingerichtet (bis 24.03.2005)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1 17518,4644 17471,4570 17428,4503
+userdel	1 17520,4649 17471,4570 17428,4503
 EOF
      },
      { from  => 1110235074, # 2005-03-07 23:37
@@ -3009,7 +3009,7 @@ EOF
        text  => 'Mahlsdorfer Str. (Köpenick) Richtung Köpenick, zwischen Hultischiner Damm und Genovevastr. Baustelle, Fahrtrichtung gesperrt (bis 15.10.)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 23799,7877 23774,7803 23701,7772 23223,7493 23145,7429 23066,7355
+userdel	q4; 23792,7861 23764,7815 23701,7772 23223,7493 23145,7429 23066,7355
 EOF
      },
      { from  => 1129327200, # 2005-10-15 00:00
@@ -3530,7 +3530,7 @@ EOF
        text  => 'Bellevuestraße, Presseball, Straße in beide Richtungen gesperrt, Dauer: 13.01.2006 19:00 Uhr bis 15.01.2006 06:00 Uhr ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 8462,11538 8209,11671 8202,11691
+userdel	q4 8462,11538 8209,11671 8203,11686
 EOF
      },
      { from  => 1137548634, # 2006-01-18 02:43
@@ -3890,7 +3890,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002552',
        data  => <<EOF,
-userdel	q4 3349,7361 3314,7269
+userdel	q4 3346,7369 3314,7269
 EOF
      },
      { from  => 1143928800, # 2006-04-02 00:00
@@ -4698,7 +4698,7 @@ userdel	2::temp 7073,11798 6778,11742
 userdel	2::temp 8374,12416 8546,12279
 userdel	2::temp 7382,11588 7356,11517
 userdel	2::temp 6809,11979 7073,11798
-userdel	2::temp 8223,11700 8223,11796 8222,11881 8215,12156 8214,12205
+userdel	2::temp 8225,11692 8223,11796 8222,11881 8215,12156 8214,12205
 userdel	2::temp 8119,12414 8055,12186
 userdel	2::temp 8055,12186 8048,12135 8034,12093 8006,12074 7999,12049 8022,12016 8048,12033 8057,12059 8034,12093
 userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
@@ -8467,7 +8467,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004688',
        data  => <<EOF,
-userdel	1::inwork 23891,8780 23946,8909 24001,9037 24051,9156 24085,9237 24143,9371 24190,9484 24205,9520 24227,9574 24250,9629 24291,9727 24299,9746 24337,9835
+userdel	1::inwork 23891,8780 23927,8864 23946,8909 23982,8994 24001,9037 24032,9111 24051,9156 24085,9237 24143,9371 24190,9484 24205,9520 24227,9574 24250,9629 24291,9727 24299,9746 24337,9835
 EOF
      },
      { from  => 1182636000, # 2007-06-24 00:00
@@ -8517,7 +8517,7 @@ EOF
        text  => 'Holteistraße: Bauarbeiten, Fahrbahn ist nicht benutzbar',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 14535,11327 14495,11261 14465,11195
+userdel	q4::inwork 14535,11327 14499,11259 14465,11195
 EOF
      },
      { from  => 1181768521, # 
@@ -9002,7 +9002,7 @@ EOF
        text  => 'L 033 zw. Kreuz. Hönow und Krz. Landsberger Ch./ Stendaler Str. Deckeninstandsetzung Vollsperrung 06.08.2007-17.08.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 25506,15585 25955,15531 26117,15452
+userdel	2::inwork 25506,15585 25955,15531 26071,15470
 EOF
      },
      { from  => 1184709600, # 2007-07-18 00:00
@@ -9118,7 +9118,7 @@ EOF
        text  => 'L 033 zw. Kreuz. Hönow und Krz. Landsberger Ch./ Stendaler Str. Deckeninstandsetzung Vollsperrung 06.08.2007-17.08.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 26328,15462 26232,15444 26117,15452 25955,15531 25506,15585 25342,15609 25007,15650 23893,15893
+userdel	2::inwork 26333,15481 26175,15461 26071,15470 25955,15531 25506,15585 25342,15609 25007,15650 23893,15893
 EOF
      },
      { from  => 1186092000, # 2007-08-03 00:00
@@ -10319,7 +10319,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_006985',
        data  => <<EOF,
-userdel	q4::inwork; 22967,7252 22869,7095 22785,6984 22758,6944 22748,6714 22745,6657 22724,6608
+userdel	q4::inwork; 22960,7215 22869,7095 22785,6984 22758,6944 22748,6714 22745,6657 22724,6608
 EOF
      },
      { from  => 1193482855, # 2007-10-27 13:00
@@ -11405,7 +11405,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_008688',
        data  => <<EOF,
-userdel	q4; 17115,4757 17266,4720 17518,4644
+userdel	q4; 17115,4757 17266,4720 17520,4649
 EOF
      },
      { from  => 1211580000, # 2008-05-24 00:00
@@ -11752,12 +11752,12 @@ userdel auto	3 6681,10959 6824,10904 6918,10854
 userdel auto	3 6980,11583 6809,11570 6524,11583
 userdel auto	3 7215,10203 7245,10297 7281,10418
 userdel auto	3 7963,10716 7820,10768 7534,10850
-userdel auto	3 7873,11142 8000,11137 8102,11099
+userdel auto	3 7828,11133 8000,11137 8102,11099
 userdel auto	3 6732,11106 6873,11011 7002,11034
 userdel auto	3 6607,10801 6740,10755 6972,10665
 userdel auto	3 8572,11506 8542,11502 8573,11404
 userdel auto	3 8572,11506 8542,11502 8462,11538
-userdel auto	3 6692,11365 6851,11346 7160,11225
+userdel auto	3 6692,11365 6851,11346 7103,11247 7160,11225
 userdel auto	3 8573,11404 8542,11502 8462,11538
 userdel auto	3 8573,11404 8542,11502 8572,11506
 userdel auto	3 7478,10612 7689,10514 7849,10488
@@ -11770,16 +11770,16 @@ userdel auto	3 8172,11679 8226,11458 8232,11414
 userdel auto	3 7444,10479 7633,10394 7744,10372
 userdel auto	3 9028,12307 9141,12320 9130,12433
 userdel auto	3 7744,10372 7633,10394 7444,10479
-userdel auto	3 7293,11519 6825,11486 6716,11439
+userdel auto	3 7293,11519 7171,11510 6825,11486 6716,11439
 userdel auto	3 9869,12297 9852,12409 9842,12506
 userdel auto	3 7849,10488 7689,10514 7478,10612
-userdel auto	3 7160,11225 6851,11346 6692,11365
-userdel auto	3 8102,11099 8000,11137 7873,11142
+userdel auto	3 7160,11225 7103,11247 6851,11346 6692,11365
+userdel auto	3 8102,11099 8000,11137 7828,11133
 userdel auto	3 7073,11798 6778,11742 6540,11754
 userdel auto	3 7539,9970 7579,10183 7698,10147
 userdel auto	3 6745,10619 6753,10446 6719,10347
 userdel auto	3 9373,12197 9164,12172 9183,12076
-userdel auto	3 6494,10542 6532,10529 6494,10440
+userdel auto	3 6468,10550 6532,10529 6494,10440
 userdel auto	3 7747,11075 7980,11070 8104,11037 8205,10979
 userdel auto	3 6918,10854 6824,10904 6681,10959
 userdel auto	3 9462,12481 9475,12365 9487,12263
@@ -11792,11 +11792,11 @@ userdel auto	3 8232,11414 8226,11458 8172,11679
 userdel auto	3 9369,12253 9358,12351 9343,12464
 userdel auto	3 9842,12506 9852,12409 9869,12297
 userdel auto	3 8205,10979 8104,11037 7980,11070 7747,11075
-userdel auto	3 6494,10440 6532,10529 6494,10542
+userdel auto	3 6494,10440 6532,10529 6468,10550
 userdel auto	3 9343,12464 9358,12351 9369,12253
 userdel auto	3 7002,11034 6873,11011 6732,11106
 userdel auto	3 9130,12433 9141,12320 9028,12307
-userdel auto	3 6716,11439 6825,11486 7293,11519
+userdel auto	3 6716,11439 6825,11486 7171,11510 7293,11519
 userdel auto	3 8804,12280 8861,12125 8901,12008
 userdel auto	3 7291,10506 7245,10499 7033,10396 7003,10513
 EOF
@@ -11807,7 +11807,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009262',
        data  => <<EOF,
-userdel	1::inwork 10294,13070 10336,13037 10371,13006 10418,12922 10398,12903 10309,12854
+userdel	1::inwork 10298,13076 10349,13043 10371,13006 10418,12922 10398,12903 10309,12854
 EOF
      },
      { from  => 1215112739, # 
@@ -11957,7 +11957,7 @@ EOF
        source_id => 'IM_009394',
        data  => <<EOF,
 userdel	2::inwork 4280,8188 4325,8229 4423,8315 4473,8351 4623,8457 4783,8557
-userdel	2::inwork 4772,8599 4456,8584
+userdel	2::inwork 4772,8599 4456,8598
 userdel	2::inwork 4473,8351 4457,8372 4457,8484
 EOF
      },
@@ -12273,7 +12273,7 @@ EOF
        text  => 'L 033 Strausberg - Berlin zw. AS Berlin-Marzahn und Hönow, Mahlsdorfer Str. Deckenerneuerung Vollsperrung 18.08.2008-26.08.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 27328,15740 26908,15630 26538,15523 26328,15462
+userdel	2::inwork 27328,15740 26908,15630 26538,15523 26333,15481
 EOF
      },
      { from  => 1219183200, # 2008-08-20 00:00
@@ -13487,7 +13487,7 @@ userdel	2::inwork -5575,-6838 -6043,-7395 -6319,-7823
 EOF
      },
      { from  => 1237676400, # 2009-03-22 00:00
-       until => 1262300400, # 2010-01-01 00:00
+       until => 1261770596, # 2010-01-01 00:00 1262300400
        text  => 'L 086 Belziger Straße OD Lehnin Kreuzungsbereich Gohlitzstraße Straßenbau Vollsperrung 23.03.2009-31.12.2009 ',
        type  => 'handicap',
        data  => <<EOF,
@@ -14474,13 +14474,12 @@ EOF
 userdel	2::temp 62010,-62330 62522,-62647
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1261827633, #  undef
+       until => 1261827641, # XXX undef
        text  => 'Köbisstr.: Zugang zum Reichpietschufer wegen Bauarbeiten nicht möglich',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2009-06-28
-userdel	2::inwork 7160,11225 6851,11346
+userdel	2::inwork 7160,11225 7103,11247 6851,11346
 EOF
      },
      { from  => 1246206950, # 2009-06-28 18:35
@@ -14667,9 +14666,9 @@ EOF
 userdel	2::inwork -8893,85743 -9850,84800
 EOF
      },
-     { from  => 1246916833, # 2009-07-06 23:47
-       until => 1262300400, # 2010-01-01 00:00
-       text  => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Mohrenstr. und Französische Str. Baustelle, Fahrtrichtung gesperrt (bis Dezember 2009)',
+     { from  => 1261769245, # 2009-12-25 20:27
+       until => 1277935199, # 2010-06-30 23:59
+       text  => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Mohrenstr. und Französische Str. Baustelle, Fahrtrichtung gesperrt (bis Ende 06.10)',
        type  => 'handicap',
        source_id => 'IM_013316',
        data  => <<EOF,
@@ -15315,7 +15314,7 @@ EOF
        permanent => 1,
        data  => <<EOF,
 #: note: Sperrung bestätigt von Stefan (s.sms): vvv
-Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts und am Wochenende gesperrt	2::temp 21677,6952 21498,7153 21475,7500 21497,7597 21546,7635
+Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts und am Wochenende gesperrt	2::temp 21683,6946 21498,7153 21475,7500 21497,7597 21546,7635
 Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts und am Wochenende gesperrt	2::temp 21475,7500 21341,7487 21025,7349
 #: note: ^^^
 EOF
@@ -15518,7 +15517,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013892',
        data  => <<EOF,
-userdel	q4::inwork; 17364,3565 17053,3971 17108,4049
+userdel	q4::inwork; 17364,3565 17219,3795 17053,3971 17108,4049
 EOF
      },
      { from  => 1249768800, # 2009-08-09 00:00
@@ -15570,8 +15569,8 @@ userdel	2::inwork 92955,20065 93405,20640
 EOF
      },
      { from  => 1252188000, # 2009-09-06 00:00
-       until => 1261436400, # 2009-12-22 00:00
-       text  => 'B 005 Frankfurter Straße OL Heinersdorf Kanal- u. Straßenbauarbeiten Vollsperrung 07.09.2009-21.12.2009 ',
+       until => 1264978800, # 2010-02-01 00:00
+       text  => 'B 005 Frankfurter Straße OL Heinersdorf Kanal- u. Straßenbauarbeiten Vollsperrung 07.09.2009-31.01.2010 ',
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::inwork 66009,6118 65618,6296 65528,6253 65365,6281 65225,6403
@@ -15924,7 +15923,7 @@ userdel	q4::inwork -52519,49887 -52595,49993
 EOF
      },
      { from  => 1252792800, # 2009-09-13 00:00
-       until => 1272664800, # 2010-05-01 00:00
+       until => 1261770537, # 2010-05-01 00:00 1272664800
        text  => 'K 6422 Eggersdorfer Str. OL Petershagen, zw. Ebereschenstr. u. Kreisverkehr Straßenausbau Vollsperrung 14.09.2009-30.04.2010 ',
        type  => 'handicap',
        data  => <<EOF,
@@ -16062,7 +16061,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014203',
        data  => <<EOF,
-userdel	q4::inwork; 18234,13500 18783,13469 18875,13467 19059,13474 19173,13478
+userdel	q4::inwork; 18234,13500 18382,13492 18783,13469 18875,13467 19059,13474 19173,13478
 EOF
      },
      { from  => undef, # 
@@ -16162,7 +16161,7 @@ userdel	1::inwork 28404,-104242 29283,-103951 32685,-103832 33348,-104123 33767,
 EOF
      },
      { from  => 1253397600, # 2009-09-20 00:00
-       until => 1293750000, # 2010-12-31 00:00
+       until => 1261769610, # 2010-12-31 00:00 1293750000
        text  => 'L 026 Brüssow - Prenzlau zw. Baumgarten und Prenzlau Grundhafter Straßenbau Vollsperrung 21.09.2009-30.12.2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -16538,7 +16537,7 @@ userdel	q4::inwork; 16159,12301 16158,12191 16127,11950
 EOF
      },
      { from  => 1255384800, # 2009-10-13 00:00
-       until => 1262300400, # 2010-01-01 00:00
+       until => 1261769627, # 2010-01-01 00:00 1262300400
        text  => 'L 220 B167 - Joachimsthal zw. Eichhorst u. Joachimsthal, Chausseestr. Deckenerneuerung Vollsperrung 14.10.2009-31.12.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -16641,7 +16640,7 @@ EOF
        text  => 'Glasbläserallee wegen Bauarbeiten gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2009-10-26
+#: last_checked: 2009-12-27
 userdel	2::inwork 14835,10272 14888,10385
 EOF
      },
@@ -17032,6 +17031,34 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork 18702,39267 19045,39387
+EOF
+     },
+     { from  => 1261682930, # 2009-12-24 20:28
+       until => 1308175199, # 2011-06-15 23:59
+       text  => 'Eisenhutweg (Adlershof) Richtung Rudower Chaussee zwischen Stubenrauchstr. und Rudower Chaussee Baustelle, Fahrtrichtung gesperrt (bis Mitte 2011)',
+       type  => 'handicap',
+       source_id => 'IM_014849',
+       data  => <<EOF,
+userdel	q4::inwork; 17142,3393 17274,3267 17525,3029 17741,2824 17894,2783
+EOF
+     },
+     { from  => 1260745200, # 2009-12-14 00:00
+       until => 1272664800, # 2010-05-01 00:00
+       text  => 'L 601 Finsterwalde - Doberlug-Kirchhain OD Lugau, zw. Abzw. Hennersdorfer Str. u. Abzw. Ha Straßenbauarbeiten Vollsperrung 15.12.2009-30.04.2010 ',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998
+EOF
+     },
+     { from  => 1261945758, # 2009-12-27 21:29
+       until => 1262494800, # 2010-01-03 06:00
+       text  => 'Straße des 17. Juni (Tiergarten) in beiden Richtungen zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr. (bis 03.01., 6 Uhr)',
+       type  => 'gesperrt',
+       source_id => 'IM_014856',
+       data  => <<EOF,
+userdel	2::temp 8731,12270 8610,12254 8538,12245 8214,12205 8089,12190 8055,12186 8119,12414
+userdel	2::temp 8522,12239 8466,12197
+userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 EOF
      },
     );

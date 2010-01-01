@@ -1622,10 +1622,22 @@ sub choose_form {
 			warn "Suche $$oneref in der $label.\n" if $debug;
 			my @res = $str->agrep($$oneref);
 			if (@res) {
-			    my $ret = $str->get_by_name($res[0]);
-			    if ($ret) {
-				$$nameref = $res[0];
-				$q->param($type . 'c', $ret->[1][0]);
+			    my @matches;
+			    for my $res (@res) {
+				my $ret = $str->get_by_name($res);
+				if ($ret) {
+				    my($street, $citypart) = Strasse::split_street_citypart($res);
+				    push @matches, [$street, $citypart, undef, $ret->[1][0]];
+				}
+			    }
+			    if (@matches == 1) {
+				$$nameref = $matches[0]->[PLZ::LOOK_NAME()];
+				$q->param($type . 'c', $matches[0]->[PLZ::LOOK_COORD()]);
+			    } else {
+				@$matchref = @matches;
+			    }
+
+			    if (@matches) {
 				last;
 			    }
 			}
@@ -1973,9 +1985,11 @@ EOF
 		print "in <i>$$ortref</i> ";
 	    }
 	    print M("ist nicht bekannt") . ".<br>\n";
-	    if (!$shown_unknown_street_helper) {
-		if ($lang eq 'en') {
-		    print <<EOF;
+	    my $geo = get_geography_object();
+	    if (!$geo || !$geo->is_osm_source) {
+		if (!$shown_unknown_street_helper) {
+		    if ($lang eq 'en') {
+			print <<EOF;
 <p>
 Checklist:
 <ul>
@@ -1987,8 +2001,8 @@ Checklist:
 Nothing applies?
 </p>
 EOF
-		} else {
-		    print <<EOF;
+		    } else {
+			print <<EOF;
 <p>
 Checkliste:
 <ul>
@@ -2000,15 +2014,18 @@ Checkliste:
 Ansonsten:
 </p>
 EOF
+		    }
+		    $shown_unknown_street_helper = 1;
 		}
-		$shown_unknown_street_helper = 1;
-	    }
 
-	    my $qs = CGI->new({strname => $$oneref,
-			       ($$ortref ? (ort => $$ortref) : ()),
-			      })->query_string;
-	    print qq{<a target="newstreetform" href="$bbbike_html/newstreetform${newstreetform_encoding}.html?$qs">} . M("Diese Straﬂe neu in die BBBike-Datenbank eintragen") . qq{</a><br><br>\n};
-	    print M(qq{Oder einen anderen Straﬂennamen versuchen}) . qq{:<br>\n};
+		my $qs = CGI->new({strname => $$oneref,
+				   ($$ortref ? (ort => $$ortref) : ()),
+				  })->query_string;
+		print qq{<a target="newstreetform" href="$bbbike_html/newstreetform${newstreetform_encoding}.html?$qs">} . M("Diese Straﬂe neu in die BBBike-Datenbank eintragen") . qq{</a><br><br>\n};
+		print M(qq{Oder einen anderen Straﬂennamen versuchen}) . qq{:<br>\n};
+	    } else {
+		print M(qq{Einen anderen Straﬂennamen versuchen}) . qq{:<br>\n};
+	    }
 	    $no_td = 1;
 	    $tryempty = 1;
 	} elsif ($$tworef ne '') {
@@ -5213,6 +5230,7 @@ sub draw_route {
 					 MakeNet => \&make_netz,
 					 Bg => '#c5c5c5',
 					 Lang => $lang,
+					 Geo => get_geography_object(),
 					 %bbbikedraw_args,
 					);
 	die $@ if !$draw;
@@ -5357,6 +5375,7 @@ sub create_map {
 						Fh => \*IMG,
 						Bg => '#c5c5c5',
 						Lang => $lang,
+						Geo => get_geography_object(),
 					       );
 	    $draw->set_dimension(@dim);
 	    $draw->create_transpose();
@@ -6131,6 +6150,18 @@ sub header {
     push @$head, $q->meta({-name => 'DC.title',
 			   -content => "BBBike - Routenplaner f¸r Radfahrer in Berlin und Brandenburg"});
     # ^^^
+    # Hint for search engines, to canonify the start URL
+    # This handles the ?begin=1 case and bbbike.de vs. www.bbbike.de
+    if (defined $from && $from eq 'chooseform-start' &&
+	BBBikeCGIUtil::my_server_name($q) =~ m{^(
+						   \Qwww.bbbike.de\E
+					       |
+						   \Qbbbike.de\E
+					       )$}x) {
+	push @$head, cgilink({-rel => 'canonical',
+			      -href => 'http://www.bbbike.de',
+			     });
+    }
     push @$head, "<base target='_top'>"; # Can't use -target option here
     push @$head, cgilink({-rel  => "shortcut icon",
   			  -href => "$bbbike_images/srtbike.ico",
@@ -6190,7 +6221,7 @@ sub header {
 	     -lang => 'de-DE',
 	     -BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
-	     -meta=>{'keywords'=>'berlin fahrrad route bike karte suche cycling route routing routenplaner routenplanung fahrradroutenplaner radroutenplaner',
+	     -meta=>{'keywords'=>'berlin fahrrad route bike karte suche cycling route routing routenplaner routenplanung fahrradroutenplaner radroutenplaner entfernungsrechner',
 		     'copyright'=>'(c) 1998-2009 Slaven Rezic',
 		    },
 	     -author => $BBBike::EMAIL,
@@ -6904,7 +6935,18 @@ sub outside_berlin {
 }
 
 sub get_geography_object {
+    my $maybe_meta_file = "$Strassen::datadirs[0]/meta.dd";
+    if (-r $maybe_meta_file) {
+	my $geo = eval {
+	    require Geography::FromMeta;
+	    Geography::FromMeta->load_meta($maybe_meta_file);
+	};
+	warn $@ if $@;
+	return $geo if $geo;
+    }
+
     return if !defined $city;
+
     my $geo_mod = "Geography::" . $city;
     if (eval qq{ require $geo_mod; }) {
 	$geo_mod->new;
