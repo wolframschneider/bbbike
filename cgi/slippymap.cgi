@@ -249,6 +249,8 @@ sub get_html {
 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShQYKE6detmKRWDQHmeaoEIvpzlZTxSp-OhMdXTigI71vlN3iIVxDx0XhQ',
         'bbbike.org' =>
 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShRC_6-KTdKUFGO0FTIV9HYn6k4jEBS45YeLakLQU48-9GshjYiSza7RMg',
+        'www.bbbike.org' =>
+'ABQIAAAAX99Vmq6XHlL56h0rQy6IShRC_6-KTdKUFGO0FTIV9HYn6k4jEBS45YeLakLQU48-9GshjYiSza7RMg',
         'dev.bbbike.org' =>
 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShQGl2ahQNKygvI--_E2nchLqmbBhxRLXr4pQqVNorfON2MgRTxoThX1iw',
         'localhost' =>
