@@ -933,7 +933,17 @@ sub get_html {
         { urlArg: 'tah', linkColor: '#000000' });
     map.addMapType(tah_map);
 
-    map.setMapType(mapnik_map);
+    var tilelayers_cycle = new Array();
+    tilelayers_cycle[0] = new GTileLayer(copyrightCollection, 0, 16);
+    tilelayers_cycle[0].getTileUrl = GetTileUrl_cycle;
+    tilelayers_cycle[0].isPng = function () { return true; };
+    tilelayers_cycle[0].getOpacity = function () { return 1.0; };
+    var cycle_map = new GMapType(tilelayers_cycle,
+        new GMercatorProjection(19), "Cycle",
+        { urlArg: 'cycle', linkColor: '#000000' });
+    map.addMapType(cycle_map);
+
+    map.setMapType(cycle_map);
 
     var marker_icon = new GIcon();
     marker_icon.image = "/img/pin-32x32.png";
@@ -957,6 +967,12 @@ function GetTileUrl_TaH(a, z) {
     return "http://tah.openstreetmap.org/Tiles/tile/" +
                 z + "/" + a.x + "/" + a.y + ".png";
 }
+
+function GetTileUrl_cycle(a, z) {
+    return "http://a.andy.sandbox.cloudmade.com/tiles/cycle/" +
+                z + "/" + a.x + "/" + a.y + ".png";
+}
+
 
 EOF
     for my $def (
