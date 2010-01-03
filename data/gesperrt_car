@@ -132,13 +132,13 @@ Roennebergstr.	1 5533,6753 5357,6932
 Matternstr.	1 13798,13003 13579,12904
 Ebelingstr.	1 13707,13206 13610,13169 13487,13115
 John-Schehr-Str. - Greifswalder Str.	3 12573,14581 12422,14692 12403,14663 12371,14615 12317,14535
-Prenzlauer Allee	3nocross::ignrte 11822,15193 11798,15133 11776,15060 11712,14868
-Prenzlauer Allee -> Stubbenkammerstr.: Prenzlauer Allee	3::igndisp 11776,15060 11798,15133 11643,15189
+Prenzlauer Allee	3nocross::ignrte 11822,15193 11801,15132 11776,15060 11712,14868
+Prenzlauer Allee -> Stubbenkammerstr.: Prenzlauer Allee	3::igndisp 11776,15060 11801,15132 11643,15189
 Fröbelstr. -> Raumerstr.: Prenzlauer Allee	3::igndisp 11870,15004 11776,15060 11623,15108
 Fröbelstr. -> Prenzlauer Allee: Prenzlauer Allee	3::igndisp 11870,15004 11776,15060 11712,14868
-Prenzlauer Allee -> Fröbelstr.: Prenzlauer Allee	3::igndisp 11798,15133 11776,15060 11870,15004
+Prenzlauer Allee -> Fröbelstr.: Prenzlauer Allee	3::igndisp 11801,15132 11776,15060 11870,15004
 Raumerstr. -> Fröbelstr.: Prenzlauer Allee	3::igndisp 11623,15108 11776,15060 11870,15004
-Raumerstr. -> Prenzlauer Allee: Prenzlauer Allee	3::igndisp 11623,15108 11776,15060 11798,15133
+Raumerstr. -> Prenzlauer Allee: Prenzlauer Allee	3::igndisp 11623,15108 11776,15060 11801,15132
 Prenzlauer Allee -> Raumerstr.: Prenzlauer Allee	3::igndisp 11712,14868 11776,15060 11623,15108
 Große Weinmeisterstr. (Potsdam)	1 -12557,11 -12582,127 -12618,296
 Stellmacherweg	1 13151,2958 13453,2930
@@ -170,7 +170,7 @@ Leuthener Str.	1 7716,8356 7640,8359
 Lüdenscheider Weg	1 -1389,15285 -1037,15482
 Büsingstr.	1 5215,6643 5210,6522
 Schrammstr.	1 4960,8440 4958,8344
-Stubbenkammerstr.	1 11643,15189 11798,15133
+Stubbenkammerstr.	1 11643,15189 11801,15132
 Templiner Str.	1 10725,14189 10751,14229
 Heylstr.	1 6459,8281 6385,8274 6325,8259
 Fritz-Reuter-Str. (Schöneberg)	1 6621,8221 6779,8279
@@ -236,13 +236,13 @@ Erich-Weinert-Str. -> Paul-Robeson-Str.: U-Bahnviadukt und Straßenbahn	3::igndis
 Erich-Weinert-Str. -> Schönhauser Allee: U-Bahnviadukt und Straßenbahn	3::igndisp 11295,16199 10997,16280 10990,16197
 Schönhauser Allee -> Rodenbergstr.: U-Bahnviadukt und Straßenbahn	3::igndisp 10997,16280 10990,16197 11253,16118
 Rodenbergstr. -> Schönhauser Allee: U-Bahnviadukt und Straßenbahn	3::igndisp 11253,16118 10990,16197 10982,16121
-Straßenbahn	3nocross::ignrte 11860,15309 11882,15384 11891,15413
-Prenzlauer Allee -> Lilli-Henoch-Str.: Straßenbahn	3::igndisp 11891,15413 11882,15384 11952,15374
-Ahlbecker Str. -> Prenzlauer Allee: Straßenbahn	3::igndisp 11638,15522 11882,15384 11891,15413
-Ahlbecker Str. -> Lilli-Henoch-Str.: Straßenbahn	3::igndisp 11638,15522 11882,15384 11952,15374
-Lilli-Henoch-Str. -> Ahlbecker Str.: Straßenbahn	3::igndisp 11952,15374 11882,15384 11638,15522
-Lilli-Henoch-Str. -> Prenzlauer Allee: Straßenbahn	3::igndisp 11952,15374 11882,15384 11860,15309
-Prenzlauer Allee -> Ahlbecker Str.: Straßenbahn	3::igndisp 11860,15309 11882,15384 11638,15522
+Straßenbahn	3nocross::ignrte 11860,15309 11877,15366 11891,15413
+Prenzlauer Allee -> Lilli-Henoch-Str.: Straßenbahn	3::igndisp 11891,15413 11877,15366 11942,15358
+Lilli-Henoch-Str. -> Ahlbecker Str.: Straßenbahn	3::igndisp 11942,15358 11877,15366 11638,15522
+Lilli-Henoch-Str. -> Prenzlauer Allee: Straßenbahn	3::igndisp 11942,15358 11877,15366 11860,15309
+Ahlbecker Str. -> Prenzlauer Allee: Straßenbahn	3::igndisp 11638,15522 11877,15366 11891,15413
+Ahlbecker Str. -> Lilli-Henoch-Str.: Straßenbahn	3::igndisp 11638,15522 11877,15366 11942,15358
+Prenzlauer Allee -> Ahlbecker Str.: Straßenbahn	3::igndisp 11860,15309 11877,15366 11638,15522
 Straßenbahn	3nocross::ignrte 12473,14763 12422,14692 12403,14663 12371,14615
 Greifswalder Str. -> John-Schehr-Str.: Straßenbahn	3::igndisp 12473,14763 12422,14692 12573,14581
 John-Schehr-Str. -> Greifswalder Str.: Straßenbahn	3::igndisp 12573,14581 12422,14692 12403,14663
@@ -363,8 +363,8 @@ Kleinmachnower Weg: Sa und So ist die Schranke an der Kreuzung Sachlebenstraße z
 Hentigstr.	1 18514,8773 18548,8942 18586,9172 18621,9404
 Grottewitzstr.	1 21933,152 22145,208
 Schlichtallee	3nocross::ignrte 15639,10469 15758,10578 15982,10765
-Zobtener Str. -> Schlichtallee: Schlichtallee	3::igndisp 16157,10342 15758,10578 15639,10469
-Schlichtallee -> Zobtener Str.: Schlichtallee	3::igndisp 15982,10765 15758,10578 16157,10342
+Zobtener Str. -> Schlichtallee: Schlichtallee	3::igndisp 16148,10329 15758,10578 15639,10469
+Schlichtallee -> Zobtener Str.: Schlichtallee	3::igndisp 15982,10765 15758,10578 16148,10329
 Hindenburgdamm	3nocross::ignrte 4507,4755 4515,4581 4521,4484
 Hindenburgdamm -> Flotowstr.: Hindenburgdamm	3::igndisp 4507,4755 4515,4581 4651,4638
 Roonstr. -> Hindenburgdamm: Hindenburgdamm	3::igndisp 4265,4484 4515,4581 4507,4755
@@ -375,7 +375,7 @@ Flotowstr. -> Hindenburgdamm: Hindenburgdamm	3::igndisp 4651,4638 4515,4581 4521
 Mariannenplatz - Bethaniendamm	1 11984,11130 12012,11235
 Ballonfahrerweg - Werner-Voß-Damm	3 7979,7525 7959,7609 8263,7611
 General-Pape-Str. - Werner-Voß-Damm	3 7921,7728 7959,7609 8263,7611
-Rubensstr. - Baumeisterstr.	3 6389,7196 6367,7356 6277,7220
+Rubensstr. - Baumeisterstr.	3 6389,7196 6367,7356 6283,7231
 Mittelstreifen	3nocross::ignrte 13010,8422 13042,8395 13107,8343
 Sonnenallee -> Anzengruberstr.: Mittelstreifen	3::igndisp 13107,8343 13042,8395 12865,8346
 Anzengruberstr. -> Sonnenallee: Mittelstreifen	3::igndisp 12865,8346 13042,8395 13010,8422
@@ -420,7 +420,7 @@ Fregestr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp
 Fregestr. -> Saarstr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5957,6889 5897,6799 5972,6756
 Saarstr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5972,6756 5897,6799 5777,6628
 Putlitzstr.	1 6210,13939 6205,14216
-Bornitzstr.	1 15645,12864 15563,12860
+Bornitzstr.	1 15643,12875 15563,12860
 Straßenbahntrasse	3nocross::ignrte 18890,9529 18834,9256 18809,9133
 Rolandseck -> Treskowallee: Straßenbahntrasse	3::igndisp 18903,9244 18834,9256 18809,9133
 Treskowallee -> Rolandseck: Straßenbahntrasse	3::igndisp 18890,9529 18834,9256 18903,9244
@@ -701,13 +701,13 @@ Weddingstr. -> Reinickendorfer Str.: Mittelstreifen	3::igndisp 8053,15598 7974,1
 Reinickendorfer Str. -> Weddingstr.: Mittelstreifen	3::igndisp 7960,15801 7974,15634 8053,15598
 Zeisigweg	1 5178,1499 5153,1534 5148,1559 5145,1611 5132,1672 5087,1807
 Nollendorfplatz	1 7033,10328 6971,10346
-Mittelstreifen	3nocross::ignrte 5902,9083 5995,9098 6063,9106
-Stübbenstr. -> Bozener Str.: Mittelstreifen	3::igndisp 5993,9128 5995,9098 5995,8926
-Stübbenstr. -> Grunewaldstr.: Mittelstreifen	3::igndisp 5993,9128 5995,9098 6063,9106
-Bozener Str. -> Stübbenstr.: Mittelstreifen	3::igndisp 5995,8926 5995,9098 5993,9128
-Bozener Str. -> Grunewaldstr.: Mittelstreifen	3::igndisp 5995,8926 5995,9098 5902,9083
-Grunewaldstr. -> Bozener Str.: Mittelstreifen	3::igndisp 6063,9106 5995,9098 5995,8926
-Grunewaldstr. -> Stübbenstr.: Mittelstreifen	3::igndisp 5902,9083 5995,9098 5993,9128
+Mittelstreifen	3nocross::ignrte 5902,9083 5975,9094 6063,9106
+Bozener Str. -> Stübbenstr.: Mittelstreifen	3::igndisp 5971,8926 5975,9094 5965,9131
+Bozener Str. -> Grunewaldstr.: Mittelstreifen	3::igndisp 5971,8926 5975,9094 5902,9083
+Stübbenstr. -> Bozener Str.: Mittelstreifen	3::igndisp 5965,9131 5975,9094 5971,8926
+Stübbenstr. -> Grunewaldstr.: Mittelstreifen	3::igndisp 5965,9131 5975,9094 6063,9106
+Grunewaldstr. -> Bozener Str.: Mittelstreifen	3::igndisp 6063,9106 5975,9094 5971,8926
+Grunewaldstr. -> Stübbenstr.: Mittelstreifen	3::igndisp 5902,9083 5975,9094 5965,9131
 Stavenhagener Str.	1 13534,5111 13634,5126
 Küsterstr.	1 -624,15494 -593,15300 -569,15167
 Berliner Allee -> Rossinistr.	3 13432,15843 13401,15821 13456,15760
@@ -935,3 +935,6 @@ Schinkestr. -> Kottbusser Damm: Mittelstreifen	3::igndisp 11734,9856 11623,9841 
 Mittelstreifen	3nocross::ignrte 19735,3643 19676,3705 19633,3751
 Mittelstreifen	3nocross::ignrte 19472,3922 19587,3801 19633,3751
 Adlergestell -> Steinbachstr.: Mittelstreifen	3::igndisp 19472,3922 19587,3801 19673,3888
+Überqueren des Mittelstreifens verboten	3nocross::ignrte 18057,14549 18183,14573 18365,14607
+Landsberger Allee -> Alte Rhinstr.: Überqueren des Mittelstreifens verboten	3::igndisp 18365,14607 18183,14573 18225,14398
+Alte Rhinstr. -> Landsberger Allee: Überqueren des Mittelstreifens verboten	3::igndisp 18225,14398 18183,14573 18057,14549

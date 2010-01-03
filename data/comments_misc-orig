@@ -54,7 +54,7 @@ Richtung S-Bhf. Nikolassee	CP2; -2834,5578 -3605,4520
 Richtung S-Bhf. Grunewald	CP2; -2834,5578 -1925,6790
 Richtung S-Bhf.	CP2; -4001,2858 -3956,2787
 Richtung Teufelssee/Saubucht	CP2; -3475,6780 -3418,6747
-ausgeschildert Richtung Breitenbachplatz	CP2; 3349,7361 3374,7322
+ausgeschildert Richtung Breitenbachplatz	CP2; 3346,7369 3397,7333
 als Ganghoferstr. ausgeschildert	CP2; 12960,8246 12918,8232
 #: XXX_prog: sollte besser als eine Art gerichteter BNP dargestellt werden
 Sredzkistr. - Christburger Str.: Drängelgitter auf dem Mittelstreifen	CP 11526,14693 11642,14625 11920,14468
@@ -131,7 +131,7 @@ Durch Toreinfahrt (immer offen)	CP2; 14043,10928 14093,10909
 als Sackgasse ausgeschildert	CP2; 14680,10758 14564,10792
 Radfahren durch den Park erlaubt	CS 6542,1674 6679,1734 6848,1809
 #: XXX_indoor: vielleicht nach comments_kfzverkehr verschieben?
-Kein MIV-Durchgangsverkehr, nur Anlieger	CS -13036,342 -12947,106 -12862,-27
+Kein MIV-Durchgangsverkehr, nur Anlieger und Linienverkehr	CS -13036,342 -12947,106 -12862,-27
 #: by: Ingrid Beese:
 Teltower Weg: nicht ausgeschildert	CP2; -107,5880 -174,5941
 Kreisverkehr	Roundabout 19907,12501
@@ -301,3 +301,4 @@ Ausgeschildert als Blütenberger Weg	CP2; 36914,54197 34819,54697
 ausgeschildert "zum Sportplatz"	CP2; 16136,7886 16534,8182
 ausgeschildert "zu den Häusern Gubitzstr. 18 - 20a"	CP2; 12463,15774 12642,15668
 ausgeschildert "zu den Häusern Hosemannstr. 50 - 39"	CP2; 12642,15668 12463,15774
+Philosophenweg: Privatstraße	CS 16073,12883 16074,12778
