@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: strassen-tie.t,v 1.4 2009/12/22 11:30:17 eserte Exp $
+# $Id: strassen-tie.t,v 1.5 2010/01/09 17:42:33 eserte Exp $
 # Author: Slaven Rezic
 #
 

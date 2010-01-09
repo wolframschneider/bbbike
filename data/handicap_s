@@ -284,9 +284,9 @@ Gerlachsheimer Weg: Fuﬂg‰nger	q2 13151,7914 13251,7972
 Wanzlikpfad: eng und kurvig, Fuﬂg‰nger	q3 13268,7801 13311,7915
 (Tunnelstr. - Uferweg): Fuﬂg‰nger	q1 15662,9501 15749,9558
 (Fischzug - Uferweg): Spielplatz, zwei Schwinggitter	q4 15219,10079 15260,10048
-(Alt Stralau - Spreeufer): Fuﬂg‰nger, Radfahren erlaubt	q1 14652,10201 14581,10067 14582,10048
+(Alt-Stralau - Spreeufer): Fuﬂg‰nger, Radfahren erlaubt	q1 14652,10201 14581,10067 14582,10048
 (Spreeufer): Fuﬂg‰nger	q1 14582,10048 14599,10039 14776,9949 14996,9809
-(Alt Stralau - Spreeufer): Fuﬂg‰nger, Radfahren erlaubt, kurze Rampe	q2 15020,9875 14996,9809
+(Alt-Stralau - Spreeufer): Fuﬂg‰nger, Radfahren erlaubt, kurze Rampe	q2 15020,9875 14996,9809
 (Strela-Park): Fuﬂg‰nger	q1 15400,9742 15465,9860
 Hildburghauser Str.: Bahnunterf¸hrung f¸r Fuﬂg‰nger und Radfahrer	q1 4595,1387 4514,1402
 (zur Pfaueninself‰hre): an schˆnen Tagen viele Fuﬂg‰nger	q3 -8540,2209 -8561,2236 -8564,2276
@@ -462,7 +462,7 @@ Dora-Benjamin-Park: Bordstein bei der Einfahrt	q1 14747,10108 14702,10020
 Kleine Hege: sehr eng	q3 22334,4383 22382,4361
 Schmaler Weg: eng, Fuﬂg‰ngerweg nicht f¸r Radfahrer freigegeben, ggfs. schieben	q3 25571,5829 25442,5813 25294,5761
 (Bˆlschestr. - Scharnweberstr.): eng, Fuﬂg‰ngerweg nicht f¸r Radfahrer freigegeben, ggfs. schieben	q3 25524,5011 25729,5002
-Rosmarienstr.: Fuﬂg‰ngerzone, ggfs. schieben	q3 9369,12253 9487,12263
+Rosmarinstr.: Fuﬂg‰ngerzone, ggfs. schieben	q3 9369,12253 9487,12263
 Uferweg: Fuﬂg‰nger	q1 3444,12804 3510,12809
 Uferweg: Fuﬂg‰nger, enge Kurven	q2 3510,12809 3547,12864 3572,12866 3559,12793
 Uferweg: Fuﬂg‰nger	q1 3559,12793 3641,12753 3747,12679
@@ -803,7 +803,7 @@ Holsteiner Ufer: schmal, Fuﬂg‰nger	q2 6580,12775 6495,12854 6452,12828
 (Teufelsseechaussee - Maik‰ferpfad): Fuﬂg‰nger	q1 556,10122 460,10193 332,10286 41,10501
 Gutsmuthsweg: Fuﬂg‰nger (nur bei Veranstaltungen ein Problem)	q1 -505,11882 -503,11782 -496,11714
 S¸dtorweg: Fuﬂg‰nger (nur bei Veranstaltungen ein Problem)	q1 -503,11782 -750,11740
-Rossiter Weg: Fuﬂg‰nger (nur bei Veranstaltungen ein Problem)	q0 -107,12220 -122,12197 -212,12126 -272,12039
+Rossitter Weg: Fuﬂg‰nger (nur bei Veranstaltungen ein Problem)	q0 -107,12220 -122,12197 -212,12126 -272,12039
 (Fuﬂg‰ngertunnel S-Bhf Jungfernheide): Fuﬂg‰nger	q3 3320,13796 3365,13695
 (Olbestr. - Lamberstr.): Fuﬂg‰nger	q2 3292,13622 3304,13685 3365,13695
 (Goslarer Ufer - Am Bahnhof Jungfernheide): Fuﬂg‰nger	q1 4195,13695 4156,13914 4151,13961 4076,14203 4011,14245
@@ -827,7 +827,7 @@ Merowingerweg: Fuﬂg‰nger, schmal	q2 1041,11169 1065,11216
 Wandalenallee: Fuﬂg‰nger	q1 736,11206 711,11199
 Flinsberger Platz: Fuﬂg‰nger	q1 2919,8582 2973,8569
 (Wacholderweg - Rominterallee): Fuﬂg‰nger	q1 -365,12788 -396,12749
-(Machandelweg - Rossiter Weg): Fuﬂg‰nger	q2 -45,12243 -76,12236 -107,12220
+(Machandelweg - Rossitter Weg): Fuﬂg‰nger	q2 -45,12243 -76,12236 -107,12220
 Frauenburger Pfad: Fuﬂg‰nger, schmal	q2 474,10869 579,10864 677,10864 775,10864
 Willenberger Pfad: Fuﬂg‰nger, schmal	q2 576,10729 673,10724
 (Uferweg Hubertussee): Fuﬂg‰nger, schmal	q3 2190,8903 2170,8841 2155,8793 2214,8752 2268,8746 2298,8712 2279,8674 2233,8670 2153,8693 1949,8788 1902,8814 1834,8893 1809,8916 1761,8936
@@ -857,11 +857,11 @@ Am Nuﬂbaum: Touristen	q3 10644,12469 10626,12455 10611,12444 10597,12405 10611,1
 Kleine Gertraudenstr.: Fuﬂg‰nger	q1 10332,11929 10364,11896 10391,11898
 Tharauer Allee: Bauarbeiten	q1::inwork -1483,11283 -1679,11336 -1818,11466 -1885,11392
 (Scottweg - Tharauer Allee): Fuﬂg‰nger	q1 -1403,11279 -1483,11283
-Zimmerstr. (Spandau): Fuﬂg‰nger	q1 -3962,12973 -3942,12957
-Br¸derstr. (Spandau): Fuﬂg‰nger	q1 -3999,12912 -3967,12891
+Zimmerstr. (Wilhelmstadt): Fuﬂg‰nger	q1 -3962,12973 -3942,12957
+Br¸derstr. (Wilhelmstadt): Fuﬂg‰nger	q1 -3999,12912 -3967,12891
 Weiﬂenburger Str.: Fuﬂg‰nger	q1 -3984,12812 -4043,12833
-Sprengelstr. (Spandau): Fuﬂg‰nger	q1 -4026,12720 -4099,12763
-J‰gerstr. (Spandau): Fuﬂg‰nger	q3 -3753,12563 -3729,12669
+Sprengelstr. (Wilhelmstadt): Fuﬂg‰nger	q1 -4026,12720 -4099,12763
+J‰gerstr. (Wilhelmstadt): Fuﬂg‰nger	q3 -3753,12563 -3729,12669
 Ziegelhof: Fuﬂg‰nger	q3 -3789,13519 -3685,13504
 (Wachheimer Weg - Gˆtelstr.): Fuﬂg‰nger	q2 -3437,12258 -3350,12260 -3349,12213
 (Neuenburger Str. - Lindenstr.): Fuﬂg‰nger	q2 9853,10543 9848,10526 9795,10512
@@ -931,7 +931,7 @@ Seeweg (Weiﬂensee): Fuﬂg‰nger	q1 14610,16522 14581,16529 14510,16549
 (Dinnendahlstr. - Schichauweg): kaum Fuﬂg‰nger	q1 9123,-1321 8953,-1184 8882,-1142 8873,-1118
 K¸hleweinstr.: Autos und Schule	q1 8088,17218 8043,17282 8014,17475 7998,17564 7973,17732 7948,17895
 (Weg an der Markuskirche): viele Fuﬂg‰nger, Bordsteinkanten	q3 6342,4783 6288,4704
-Allee der Kosmonauten - Biesdorfer Promenade: Fuﬂg‰nger	q1 19821,13604 19826,13444 19835,13152 20076,13034
+Allee der Kosmonauten - Biesdorfer Promenade: Fuﬂg‰nger	q1 19821,13604 19826,13444 19835,13152 20068,13036
 Rathener Str.: enge Straﬂe	q1 24228,14644 24271,14576 24362,14542
 Tr¸tzschlerstr.: enge Straﬂe	q1 17471,4570 17612,4460 17745,4351
 (Paster-Behrens-Str. - H¸sung): Fuﬂg‰nger	q3 13394,4735 13397,4762
@@ -976,7 +976,7 @@ Wolmirstedter Weg: enge Straﬂe	q1 -4143,15639 -4216,15635 -4283,15639
 (Im Amtmannsgarten - Alt-Buckow): Bordsteine, Fuﬂg‰nger	q2 12609,1780 12574,1866
 (Im Amtmannsgarten - Alt-Buckow): Bordsteine, Fuﬂg‰nger	q2 12487,1727 12452,1808
 Hans-Fallada-Str.: enge Straﬂe	q1 21931,13724 21960,13776 21977,13942 22007,14209
-Dudweiler Str.: enge Straﬂe	q1 21766,13995 21809,13973 21885,13954 21977,13942 22042,13942 22118,13954
+Dudweilerstr.: enge Straﬂe	q1 21766,13995 21809,13973 21885,13954 21977,13942 22042,13942 22118,13954
 Cevennenstr.: enge Straﬂe	q1 11175,21571 11204,21567 11217,21565 11308,21550 11408,21537 11522,21519 11696,21493 11831,21469
 Reihersteg: enge Straﬂe	q1 22471,-591 22462,-671 22458,-742 22451,-927 22442,-1093
 Gr‰sseweg: enge Straﬂe	q1 -5510,13326 -5295,13415 -5217,13446
@@ -1051,7 +1051,7 @@ Im Lesachtal: enge Straﬂe	q1 10549,2257 10526,2282
 Im Lesachtal: enge Straﬂe	q1 10526,2282 10504,2321
 Rotdornstr.: enge Straﬂe	q1 5139,7206 5141,7158 5121,7132 5085,7109
 Im Eichengrund: enger Weg mit B‰umen mitten auf dem Weg	q3 976,15195 921,15359 901,15386 885,15435 877,15474
-Hedwigstr. (Hohenschˆnhausen): enge Straﬂe	q1 16616,16046 16505,16096 16515,16207
+Hedwigstr. (Alt-Hohenschˆnhausen): enge Straﬂe	q1 16616,16046 16505,16096 16515,16207
 Hopfenweg: enge Straﬂe	q1 15745,2294 15745,2320 15593,2495 15588,2520 15590,2724
 Kasinoweg: enge Straﬂe	q1 2624,24710 2444,24950 2364,24886
 Knappenpfad: enge Straﬂe	q1 2471,24709 2410,24837 2364,24886 2340,24884
@@ -1148,7 +1148,7 @@ Dinkelsb¸hler Steig: enge Straﬂe	q1 2616,25218 2649,25170 2694,25132 2775,25092 
 ÷tztaler Str.: enge Straﬂe	q1 10690,17420 10630,17421
 Schlierbacher Weg: enge Straﬂe	q1 10734,1178 10685,1159 10450,1202 10453,1242 10440,1283
 Fritz-K¸hn-Str.: enge Straﬂe	q1 21681,-589 21666,-657 21479,-925 21445,-963
-Mittelstr. (Hohenschˆnhausen): enge Straﬂe	q1 15543,14491 15647,14693 15706,14752 15769,14815 15856,14915
+Mittelstr. (Alt-Hohenschˆnhausen): enge Straﬂe	q1 15543,14491 15647,14693 15706,14752 15769,14815 15856,14915
 Nantesstr.: enge Straﬂe	q1 11200,21689 11251,22022 11231,22065 11077,22236
 Helgiweg: enge Straﬂe	q1 14459,18589 14517,18410
 Helgiweg: enge Straﬂe	q1 14533,18413 14565,18226 14576,18163 14595,18050

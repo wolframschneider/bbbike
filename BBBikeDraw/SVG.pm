@@ -23,7 +23,7 @@ use Carp qw(confess);
 
 use vars qw($VERSION @colors %color %style %width %outline_color $sansserif);
 BEGIN { @colors =
-         qw($grey_bg $white $yellow $red $green $middlegreen $darkgreen
+         qw($grey_bg $white $yellow $lightyellow $red $green $middlegreen $darkgreen
 	    $darkblue $lightblue $rose $black $darkgrey $lightgreen);
 }
 use vars @colors;
@@ -113,7 +113,7 @@ sub cat2svgrgb {
 sub set_category_styles {
     my($self) = @_;
     %style = ();
-    for my $cat (qw(B HH H N NN
+    for my $cat (qw(B HH H NH N NN
 		    S SA SB SC S0 SBau
 		    R RA RB RC R0 RBau RG RP
 		    U UA UB    U0 UBau

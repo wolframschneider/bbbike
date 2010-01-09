@@ -771,6 +771,7 @@ sub default_cat_stack_mapping {
 	    'B'            => 20,
 	    'HH'           => 15,
 	    'H'            => 10,
+	    'NH'	   => 7,
 	    'N'            => 5,
 	    'NN'           => 1,
 	    'Pl'	    => 0,

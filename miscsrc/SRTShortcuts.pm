@@ -322,6 +322,12 @@ sub add_button {
 # 		[Button => "Add Berlin.coords.data with labels",
 # 		 -command => sub { add_coords_data("Berlin.coords.bbd", 1) },
 # 		],
+		[Button => "Add Berlin-by-citypart data",
+		 -command => sub { choose_Berlin_by_data("$bbbike_rootdir/tmp/Berlin.coords-by-citypart") },
+		],
+		[Button => "Add Berlin-by-zip data",
+		 -command => sub { choose_Berlin_by_data("$bbbike_rootdir/tmp/Berlin.coords-by-zip") },
+		],
 		[Button => "Add Potsdam.coords.data",
 		 -command => sub { add_coords_data("Potsdam.coords.bbd") },
 		],
@@ -957,7 +963,25 @@ sub set_penalty_fragezeichen {
 # XXX $namedraw does not work
 sub add_coords_data {
     my($file, $namedraw) = @_;
-    add_new_layer("p", _maybe_orig_file("$bbbike_rootdir/tmp/$file"), NameDraw => $namedraw);
+    require File::Spec;
+    my $abs_file = File::Spec->file_name_is_absolute($file) ? $file : _maybe_orig_file("$bbbike_rootdir/tmp/$file");
+    add_new_layer("p", $abs_file, NameDraw => $namedraw);
+}
+
+sub choose_Berlin_by_data {
+    my($directory) = @_;
+    require Encode;
+    require File::Basename;
+    require File::Glob;
+    my $t = $main::top->Toplevel;
+    my $lb = $t->Scrolled('Listbox', -scrollbars => "osoe")->pack(qw(-fill both -expand 1));
+    $lb->insert("end", map { File::Basename::basename($_) } File::Glob::bsd_glob("$directory/*"));
+    $lb->bind("<Double-1>" => sub {
+		  my(@cursel) = $lb->curselection;
+		  my $basename = $lb->get($cursel[0]);
+		  $basename = Encode::encode("iso-8859-1", $basename);
+		  add_coords_data("$directory/$basename");
+	      });
 }
 
 sub add_any_streets_bbd {
@@ -1629,6 +1653,7 @@ sub real_street_widths {
     my %cat_to_width = ('B'  => 6 * LANE_WIDTH + PEDESTRIAN_PATHS_WIDTH + MEDIAL_STRIP_WIDTH,
 			'HH' => 6 * LANE_WIDTH + PEDESTRIAN_PATHS_WIDTH + MEDIAL_STRIP_WIDTH,
 			'H'  => 6 * LANE_WIDTH + PEDESTRIAN_PATHS_WIDTH,
+			'NH' => 4 * LANE_WIDTH + PEDESTRIAN_PATHS_WIDTH,
 			'N'  => 4 * LANE_WIDTH + PEDESTRIAN_PATHS_WIDTH,
 			'NN' => 2 * LANE_WIDTH,
 		       );

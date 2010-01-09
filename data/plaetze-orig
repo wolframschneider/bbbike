@@ -1,5 +1,10 @@
 #: #: -*- coding: iso-8859-1 -*-
-#: title: Plätze in Berlin und Potsdam
+#: title: Plätze in Berlin
+#
+# note: Plätze in Potsdam sollen in landstrassen-orig eingetragen werden,
+#       Potsdamer Sehenswürdigkeiten als "Pseudo-Plätze aber weiterhin
+#       hier
+#
 #:
 Hackescher Markt	Pl 10264,13097
 Rosenthaler Platz	Pl 10177,13766
@@ -108,13 +113,12 @@ Garbátyplatz	Pl 10705,17931
 Platz des 23. April	Pl 21954,5229
 Sickingenplatz	Pl 4587,13837
 Goslarer Platz	Pl 4296,13228
-Freiaplatz	Pl 16820,12339
 Ottoplatz	Pl 5692,13141
 Sandmeyerplatz	Pl 653,1540
 Esperantoplatz	Pl 13761,7328
 Andreasplatz	Pl 12295,12197
 Grieser Platz	Pl 2947,9367
-# XXX ist es OK, zwei Punkte für einen Platz zu haben?
+#: XXX_prog: ist es OK, mehr als einen Punkt für einen Platz zu haben?
 Traveplatz	Pl 14835,11840 14802,11784 14794,11770 14855,11737 14941,11689 14977,11754 14897,11801 14835,11840
 Wilhelmplatz	Pl -7232,445 -7180,378
 Leon-Jessel-Platz	Pl 4700,9179
@@ -172,6 +176,7 @@ Bernhard-Lichtenberg-Platz	Pl 2821,18831
 Caroline-Herschel-Platz	Pl 14759,11339
 #: note: es existieren keine Straßenschilder oder sonstige Hinweise auf den Platz
 O2-Platz	Pl 12990,11006
+Schloßplatz (Hermsdorf)	Pl 3953,23401
 ######################################################################
 #: section faked_plaetze vvv
 # Keine offiziellen Straßennamen, sondern
@@ -233,7 +238,6 @@ Böhmischer Platz	Pl 13546,7600
 Falkenplatz	Pl -1787,19341
 Teutoburger Platz	Pl 10695,13952
 Platz am Spreetunnel	Pl 15383,9191
-Max-Josef-Metzger-Platz	Pl 7474,15408
 Navarraplatz	Pl 11940,22587
 Cardinalplatz	Pl 21901,5728
 Klinkeplatz	Pl -3665,16378

@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: bbbikerouting.t,v 1.33 2009/01/03 20:46:11 eserte Exp $
+# $Id: bbbikerouting.t,v 1.34 2010/01/09 17:42:33 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -465,8 +465,8 @@ sub do_tests {
 	ok(!defined $start_coord, "We have probably multiple choices for start");
 	cmp_ok(scalar(@{ $routing2->StartChoices}), ">", 1, "Yes, we have");
 	is($routing2->StartChoicesIsCrossings, 0, "But it is not crossings");
-	($start_pos) = grep { $_->Citypart eq 'Charlottenburg' } @{ $routing2->StartChoices };
-	ok($start_pos, "Choose Charlottenburg");
+	($start_pos) = grep { $_->Citypart eq 'Westend' } @{ $routing2->StartChoices };
+	ok($start_pos, "Choose Westend");
 
 	$goal_coord = $routing2->get_goal_position;
 	ok(!defined $goal_coord, "We have probably multiple choices for goal");

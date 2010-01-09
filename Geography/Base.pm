@@ -1,7 +1,7 @@
 # -*- perl -*-
 
 #
-# $Id: Base.pm,v 1.5 2010/01/01 17:53:02 eserte Exp $
+# $Id: Base.pm,v 1.6 2010/01/09 17:42:31 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 2009 Slaven Rezic. All rights reserved.
@@ -16,7 +16,7 @@ package Geography::Base;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.5 $ =~ /(\d+)\.(\d+)/);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.6 $ =~ /(\d+)\.(\d+)/);
 
 sub new                  { bless {}, shift }
 sub cityname             { undef }

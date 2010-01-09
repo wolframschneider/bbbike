@@ -193,7 +193,8 @@ strassen:	.strassen.tmp plaetze routing_helper-orig
 	-@$(READONLY) $@
 
 .strassen.tmp: strassen-orig
-	$(CONVERT_ORIG) -keep-directive alias strassen-orig > $@~
+	$(CONVERT_ORIG) -keep-directive alias strassen-orig |\
+	    ${REPLACESTRASSEN} -catexpr 's/NH/N/' > $@~
 	mv $@~ $@
 
 .for f in ${COOKED_TARGETS}
@@ -921,6 +922,28 @@ $(PERSISTENTTMPDIR)/plz.zip:
 ${PERSISTENTTMPDIR}/Berlin.coords.bbd: Berlin.coords.data
 	$(PERL) -F'\|' -nale 'print "@F[0,1,2]\tX $$F[3]" if $$F[3]' Berlin.coords.data > $@
 
+Berlin.coords-by-citypart:
+	mkdir -p ${PERSISTENTTMPDIR}/Berlin.coords-by-citypart
+	$(PERL) -F'\|' -nale '\
+	    if ($$F[3] && $$F[1]) {\
+		my $$fh = $$fh{$$F[1]} || do {\
+		    open $$fh{$$F[1]}, ">", "${PERSISTENTTMPDIR}/Berlin.coords-by-citypart/$$F[1]" or die $$!;\
+		    $$fh{$$F[1]}\
+		};\
+		print $$fh "@F[0,1,2]\tX $$F[3]";\
+	    }' Berlin.coords.data
+
+Berlin.coords-by-zip:
+	mkdir -p ${PERSISTENTTMPDIR}/Berlin.coords-by-zip
+	$(PERL) -F'\|' -nale '\
+	    if ($$F[3] && $$F[2]) {\
+		my $$fh = $$fh{$$F[2]} || do {\
+		    open $$fh{$$F[2]}, ">", "${PERSISTENTTMPDIR}/Berlin.coords-by-zip/$$F[2]" or die $$!;\
+		    $$fh{$$F[2]}\
+		};\
+		print $$fh "@F[0,1,2]\tX $$F[3]";\
+	    }' Berlin.coords.data
+
 ${PERSISTENTTMPDIR}/Potsdam.coords.bbd: Potsdam.coords.data
 	$(PERL) -F'\|' -nale 'print "@F[0,1,2]\tX $$F[3]" if $$F[3]' Potsdam.coords.data > $@
 
@@ -1097,7 +1120,7 @@ report-checks:
 	@echo Now doing checks...
 
 do-checks:	.check_empty_lines \
-	.check_strassen1 .check_strassen2 .check_strassen_potsdam .check_strassen_cont \
+	.check_strassen1 .check_strassen2 .check_strassen_potsdam .check_strassen_cont .check_strassen_consecutive \
 	.check_plaetze1 .check_plaetze2 .check_strassen_plaetze_unique \
 	.check_hoehe .check_hoehe2 \
 	.check_ampeln .check_ampeln2 \
@@ -1153,6 +1176,23 @@ check-disabled:
 
 .check_strassen_cont:	.strassen.tmp str_cont_ausnahme
 	$(CHECK_CONT) -data .strassen.tmp
+	@touch $@
+
+.check_strassen_consecutive: strassen
+	@${PERL} -nle '\
+	    next if /^(#|\()/; m{([^\t]+)} and do {\
+		if ($$1 ne $$last && $$seen{$$1}) {\
+		    if (!$$error_header_printed) {\
+			print "*** The following streets are not consecutive in strassen";\
+			$$error_header_printed = 1;\
+		    }\
+		    print "$$1";\
+		}\
+		$$last = $$1;\
+		$$seen{$$1}++;\
+	    };\
+	    END { exit 1 if $$error_header_printed }\
+	' strassen
 	@touch $@
 
 .check_plaetze1: plaetze .strassen.tmp landstrassen

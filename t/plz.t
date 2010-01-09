@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: plz.t,v 1.42 2009/12/04 20:34:40 eserte Exp $
+# $Id: plz.t,v 1.43 2010/01/09 17:42:33 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 1998,2002,2003,2004,2006,2007 Slaven Rezic. All rights reserved.
@@ -229,14 +229,14 @@ for my $noextern (@extern_order) {
 	}
 	
 	@res = $plz->look("Hauptstr.", MultiZIP => 1);
-	is(scalar @res, 8, "Hits for Hauptstr.")
+	is(scalar @res, 9, "Hits for Hauptstr.")
 	    or diag $dump->(\@res);
 	@res = map { $plz->combined_elem_to_string_form($_) } $plz->combine(@res);
 	is(scalar @res, 7, "Combine hits")
 	    or diag $dump->(\@res);
 
 	@res = $plz->look("Hauptstr.", MultiCitypart => 1, MultiZIP => 1);
-	is(scalar @res, 9, "Hits for Hauptstr. with MultiCitypart")
+	is(scalar @res, 11, "Hits for Hauptstr. with MultiCitypart")
 	    or diag $dump->(\@res);
 	@res = map { $plz->combined_elem_to_string_form($_) } $plz->combine(@res);
 	is(scalar @res, 7, "Combine hits")
@@ -247,7 +247,7 @@ for my $noextern (@extern_order) {
 	is($friedenau_schoeneberg->[PLZ::LOOK_ZIP], "10827, 12159", "Check PLZ");
 
 	@res = grep { defined $_->[PLZ::LOOK_COORD] } $plz->look("Am Nordgraben", MultiCitypart => 1, MultiZIP => 1);
-	is(scalar @res, 3, "Hits for Am Nordgraben. with MultiCitypart")
+	is(scalar @res, 4, "Hits for Am Nordgraben. with MultiCitypart")
 	    or diag $dump->(\@res);
 	@res = map { $plz->combined_elem_to_string_form($_) } $plz->combine(@res);
 	is(scalar @res, 2, "Combine hits")
@@ -275,12 +275,12 @@ for my $noextern (@extern_order) {
 
 	@res = $plz->look_loop(PLZ::split_street("Straße des 17. Juni"),
 			       @standard_look_loop_args);
-	is(scalar @{$res[0]}, 2, "Hits for Straße des 17. Juni")
+	is(scalar @{$res[0]}, 4, "Hits for Straße des 17. Juni")
 	    or diag $dump->(\@res);
 
 	@res = $plz->look_loop(PLZ::split_street("str.des 17.Juni"),
 			       @standard_look_loop_args);
-	is(scalar @{$res[0]}, 2, "Hits for Straße des 17. Juni (missing spaces)")
+	is(scalar @{$res[0]}, 4, "Hits for Straße des 17. Juni (missing spaces)")
 	    or diag $dump->(\@res);
 
 	@res = $plz->look_loop(PLZ::split_street("  Str. des 17. Juni 153  "),
