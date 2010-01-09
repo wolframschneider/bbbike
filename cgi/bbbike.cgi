@@ -4758,7 +4758,7 @@ EOF
 
 	    my(%c) = %persistent;
 
-	    my $default_imagetype = (defined $c{"imagetype"} ? $c{"imagetype"} : "png");
+	    my $default_imagetype = (defined $c{"imagetype"} ? $c{"imagetype"} : ($show_mini_googlemap ? "pdf-auto" : "png"));
 	    if (($default_imagetype eq 'jpeg' && $cannot_jpeg) ||
 		($default_imagetype =~ /^pdf/ && $cannot_pdf) ||
 		($default_imagetype =~ /^svg$/ && $cannot_svg)) {
