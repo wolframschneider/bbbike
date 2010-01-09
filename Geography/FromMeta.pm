@@ -1,7 +1,7 @@
 # -*- perl -*-
 
 #
-# $Id: FromMeta.pm,v 1.8 2010/01/01 17:53:02 eserte Exp $
+# $Id: FromMeta.pm,v 1.9 2010/01/09 17:42:31 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 2009 Slaven Rezic. All rights reserved.
@@ -115,7 +115,7 @@ sub _bbox_standard_coordsys {
 sub _center_standard_coordsys {
     my $self = shift;
     my $xy = $self->center;
-    $self->coord_s_to_standard($xy);
+    $self->coord_to_standard_s($xy);
 }
 
 # sub datadir {

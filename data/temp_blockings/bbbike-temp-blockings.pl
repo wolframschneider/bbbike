@@ -6909,7 +6909,7 @@ EOF
      },
      { from  => 1182281811, # 2007-06-19 21:36
        until => 1184018400, # 2007-07-10 00:00
-       text  => 'Kaulsdorfer Brücke (Hellerdorf) in beiden Richtungen Baustelle, Brücke gesperrt (bis 09.07.2007)',
+       text  => 'Kaulsdorfer Brücke (Hellersdorf) in beiden Richtungen Baustelle, Brücke gesperrt (bis 09.07.2007)',
        type  => 'gesperrt',
        source_id => 'IM_004489',
        data  => <<EOF,
@@ -8978,7 +8978,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006015',
        data  => <<EOF,
-userdel	2::temp 6442,22240 6492,22113 6485,21955 6373,21810 6320,21777 6093,21648 5934,21513
+userdel	2::temp 6442,22240 6492,22113 6485,21955 6373,21810 6320,21777 6269,21748 6093,21648 5934,21513
 EOF
      },
      { from  => 1184018400, # 2007-07-10 00:00
@@ -12362,7 +12362,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_009763',
        data  => <<EOF,
-userdel	q4::inwork 22740,4415 22832,4491 22862,4511 22893,4532 23363,4846 23451,4877
+userdel	q4::inwork 22740,4415 22832,4491 22862,4511 22893,4532 22959,4576 23363,4846 23451,4877
 EOF
      },
      { from  => 1219528800, # 2008-08-24 00:00
@@ -15756,13 +15756,13 @@ EOF
 userdel	q4::inwork; 17428,4503 17476,4337 17507,4216
 EOF
      },
-     { from  => 1251833331, # 2009-09-01 21:28
-       until => 1293836399, # 2010-12-31 23:59
-       text  => 'Wendenschloßstr. (Köpenick) Richtung Müggelheimer Str. zwischen Salvador-Allende-Str. und Landjägerstr. Baustelle, Fahrtrichtung gesperrt (bis 12.2010)',
+     { from  => undef, # 
+       until => 1278021599, # 2010-07-01 23:59
+       text  => 'Wendenschloßstr. (Köpenick) Richtung Müggelheimer Str. zwischen Salvador-Allende-Str. und Landjägerstr. Baustelle, Fahrtrichtung gesperrt (bis Mitte 2010)',
        type  => 'handicap',
        source_id => 'IM_014045',
        data  => <<EOF,
-userdel	q4::inwork; 23451,4877 23363,4846 22893,4532 22862,4511 22832,4491 22740,4415
+userdel	q4::inwork; 23451,4877 23363,4846 22959,4576 22893,4532 22862,4511 22832,4491 22740,4415
 EOF
      },
      { from  => 1250978400, # 2009-08-23 00:00
@@ -16885,8 +16885,8 @@ userdel	2::temp 9526,11911 9668,11928
 userdel	2::temp 9516,12010 9656,12021
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1262990710, #  undef
+       until => 1262990714, # XXX undef
        text  => 'Asphaltierung der Belziger Str., Einbahnstraße Richtung Westen',
        type  => 'handicap',
        data  => <<EOF,
@@ -17059,6 +17059,15 @@ EOF
 userdel	2::temp 8731,12270 8610,12254 8538,12245 8214,12205 8089,12190 8055,12186 8119,12414
 userdel	2::temp 8522,12239 8466,12197
 userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+EOF
+     },
+     { from  => 1262821467, # 2010-01-07 00:44
+       until => 1280613599, # 2010-07-31 23:59
+       text  => 'Tucholskystr. (Mitte) in beiden Richtungen zwischen Oranienburger Str. und Auguststr. Baustelle, gesperrt (bis Ende 07/2010)',
+       type  => 'handicap',
+       source_id => 'IM_014885',
+       data  => <<EOF,
+userdel	q4::inwork 9605,13248 9651,13406
 EOF
      },
     );

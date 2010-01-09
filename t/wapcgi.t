@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: wapcgi.t,v 1.25 2009/12/22 11:30:18 eserte Exp $
+# $Id: wapcgi.t,v 1.26 2010/01/09 17:42:33 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -14,7 +14,7 @@ use File::Temp qw(tempfile);
 use URI;
 
 use vars qw($VERSION);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.25 $ =~ /(\d+)\.(\d+)/);
+$VERSION = sprintf("%d.%02d", q$Revision: 1.26 $ =~ /(\d+)\.(\d+)/);
 
 BEGIN {
     if (!eval q{

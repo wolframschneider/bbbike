@@ -1,5 +1,5 @@
 #: #: -*- coding: iso-8859-1 -*-
-#: title: Plätze in Berlin und Potsdam
+#: title: Plätze in Berlin
 #:
 Hackescher Markt	Pl 10264,13097
 Rosenthaler Platz	Pl 10177,13766
@@ -108,7 +108,6 @@ Garbátyplatz	Pl 10705,17931
 Platz des 23. April	Pl 21954,5229
 Sickingenplatz	Pl 4587,13837
 Goslarer Platz	Pl 4296,13228
-Freiaplatz	Pl 16820,12339
 Ottoplatz	Pl 5692,13141
 Sandmeyerplatz	Pl 653,1540
 Esperantoplatz	Pl 13761,7328
@@ -165,6 +164,7 @@ Hahn-Meitner-Platz	Pl -8013,255
 Bernhard-Lichtenberg-Platz	Pl 2821,18831
 Caroline-Herschel-Platz	Pl 14759,11339
 O2-Platz	Pl 12990,11006
+Schloßplatz (Hermsdorf)	Pl 3953,23401
 Kottbusser Tor	Pl 11393,10390
 Anhalter Bahnhof	Pl 8947,10956
 Flughafen Tempelhof	Pl 9401,8510
@@ -213,7 +213,6 @@ Böhmischer Platz	Pl 13546,7600
 Falkenplatz	Pl -1787,19341
 Teutoburger Platz	Pl 10695,13952
 Platz am Spreetunnel	Pl 15383,9191
-Max-Josef-Metzger-Platz	Pl 7474,15408
 Navarraplatz	Pl 11940,22587
 Cardinalplatz	Pl 21901,5728
 Klinkeplatz	Pl -3665,16378

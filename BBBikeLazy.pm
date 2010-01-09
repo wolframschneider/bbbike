@@ -1,7 +1,7 @@
 # -*- perl -*-
 
 #
-# $Id: BBBikeLazy.pm,v 1.41 2009/12/04 20:34:38 eserte Exp $
+# $Id: BBBikeLazy.pm,v 1.42 2010/01/09 17:42:30 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 1999,2003 Slaven Rezic. All rights reserved.
@@ -464,7 +464,7 @@ sub BBBikeLazy::plotstr_on_demand {
 	    my $restrict = undef; #XXX
 	    my $coordsys = $coord_system_obj->coordsys;
 	    my $use_stippleline = decide_stippleline($abk);
-	    my $label_spaceadd = ''; # XXX?
+	    my $label_spaceadd = undef; # XXX? note that "" is special
 	    my $transpose = \&transpose;
 	    my $conv = $lazy_str{$abk}->get_conversion;
 	    my $draw_sub;

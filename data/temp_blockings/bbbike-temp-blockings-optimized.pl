@@ -1115,11 +1115,11 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'source_id' => 'IM_014045',
-         'until' => 1293836399,
-         'text' => 'Wendenschloßstr. (Köpenick) Richtung Müggelheimer Str. zwischen Salvador-Allende-Str. und Landjägerstr. Baustelle, Fahrtrichtung gesperrt (bis 12.2010)',
-         'from' => 1251833331,
+         'until' => 1278021599,
+         'text' => 'Wendenschloßstr. (Köpenick) Richtung Müggelheimer Str. zwischen Salvador-Allende-Str. und Landjägerstr. Baustelle, Fahrtrichtung gesperrt (bis Mitte 2010)',
+         'from' => undef,
          'id' => 1857,
-         'data' => 'userdel	q4::inwork; 23451,4877 23363,4846 22893,4532 22862,4511 22832,4491 22740,4415
+         'data' => 'userdel	q4::inwork; 23451,4877 23363,4846 22959,4576 22893,4532 22862,4511 22832,4491 22740,4415
 ',
          'type' => 'handicap'
        },
@@ -1417,15 +1417,7 @@ userdel	2::inwork 14835,10272 14888,10385
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Asphaltierung der Belziger Str., Einbahnstraße Richtung Westen',
-         'from' => undef,
-         'id' => 1990,
-         'data' => 'userdel	q4::inwork; 7110,9024 7315,9156
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1478,17 +1470,16 @@ userdel	2::inwork 14835,10272 14888,10385
 ',
          'type' => 'gesperrt'
        },
+       undef,
        {
-         'source_id' => 'IM_014856',
-         'until' => 1262494800,
-         'text' => 'Straße des 17. Juni (Tiergarten) in beiden Richtungen zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr. (bis 03.01., 6 Uhr)',
-         'from' => 1261945758,
-         'id' => 2010,
-         'data' => 'userdel	2::temp 8731,12270 8610,12254 8538,12245 8214,12205 8089,12190 8055,12186 8119,12414
-userdel	2::temp 8522,12239 8466,12197
-userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+         'source_id' => 'IM_014885',
+         'until' => 1280613599,
+         'text' => 'Tucholskystr. (Mitte) in beiden Richtungen zwischen Oranienburger Str. und Auguststr. Baustelle, gesperrt (bis Ende 07/2010)',
+         'from' => 1262821467,
+         'id' => 2011,
+         'data' => 'userdel	q4::inwork 9605,13248 9651,13406
 ',
-         'type' => 'gesperrt'
+         'type' => 'handicap'
        }
      
 );

@@ -23,46 +23,24 @@ use vars qw(%subcityparts %cityparts %subcitypart_to_citypart %properties);
 
 use base qw(Geography::Base);
 
-######################################################################
-# Der Superbezirk Lichtenberg wird voraussichtlich folgende Stadtteile
-# bekommen (siehe
-# http://www.berlin.de/ba-lichtenberg/buergerdienste/stadtteilprofil1.html)
-#
-# 1 Malchow, Wartenberg, Falkenberg
-# 2 Neu-Hohenschönhausen Nord
-# 3 Neu-Hohenschönhausen Süd
-# 
-# 4 Alt-Hohenschönhausen Nord
-# 5 Alt-Hohenschönhausen Süd
-#
-# 6 Fennpfuhl
-# 7 Alt-Lichtenberg
-# 
-# 8 Frankfurter Allee Süd
-# 9 Neu-Lichtenberg
-# 10 Friedrichsfelde Nord
-# 11 Friedrichsfelde Süd
-#
-# 12 Rummelsburger Bucht
-# 13 Karlshorst
-
-# (alte) Bezirke => Bezirksteile
+# (alte) Bezirke => Bezirksteile (Ortsteile oder -lagen)
 %subcityparts =
     (
      'Charlottenburg'	 => [qw/Charlottenburg-Nord Pichelsberg Westend
-			        Witzleben/],
+			        Witzleben/], # "Pichelsberg" und "Witzleben" sind nur Ortslagen
      'Friedrichshain'	 => [],
      'Hellersdorf'	 => [qw/Kaulsdorf Mahlsdorf/],
      'Hohenschönhausen'	 => [qw/Falkenberg Margaretenhöhe Wartenberg Malchow/,
-			     "Alt-Hohenschönhausen", "Neu-Hohenschönhausen"],
+			     "Alt-Hohenschönhausen", "Neu-Hohenschönhausen"], # "Margaretenhöhe" ist nur eine Ortslage in Malchow
      'Kreuzberg'	 => [],
-     # XXX Karolinenhof ist eine Ortslage in Schmöckwitz (siehe http://de.wikipedia.org/wiki/Berlin-Schm%C3%B6ckwitz)
+     # Karolinenhof ist eine Ortslage in Schmöckwitz (siehe http://de.wikipedia.org/wiki/Berlin-Schm%C3%B6ckwitz)
+     # Hessenwinkel und Wilhelmshagen sind ebenfalls nur Ortslagen
      'Köpenick'		 => [qw/Friedrichshagen Grünau Hessenwinkel
 			        Karolinenhof
 			        Müggelheim Oberschöneweide Rahnsdorf
 			        Schmöckwitz Wilhelmshagen/],
      'Lichtenberg'	 => [qw/Friedrichsfelde Karlshorst Rummelsburg
-				Fennpfuhl/],
+				Fennpfuhl/], # auf http://www.berlin.de/ba-lichtenberg/derbezirk/zeitreise.html wird auch "Alt-Lichtenberg" statt "Lichtenberg" erwähnt
      'Marzahn'		 => [qw/Biesdorf/],
      'Mitte'		 => [],
      'Neukölln'		 => [qw/Britz Buckow Rudow Gropiusstadt/],
@@ -74,7 +52,7 @@ use base qw(Geography::Base);
      'Prenzlauer Berg'	 => [],
      'Reinickendorf'	 => [qw/Borsigwalde Frohnau Heiligensee Hermsdorf
 			        Konradshöhe Lübars Tegel Waidmannslust
-			        Wittenau/, 'Märkisches Viertel'],
+			        Wittenau/, 'Märkisches Viertel'], # Borsigwalde ist nur eine Ortslage in Wittenau
      'Schöneberg'	 => [qw/Friedenau Schöneberg-Nord/],
      'Spandau'		 => [qw/Gatow Kladow Siemensstadt Haselhorst Staaken
 				Wilhelmstadt Hakenfelde/,
@@ -257,7 +235,9 @@ sub parse_street_type_nr {
     ($type, undef, $do_round, $image);
 }
 
-sub cgi_list_all_size { "(ca. 150 kB)" }
+# Feststellbar mit:
+#    GET 'http://localhost/bbbike/cgi/bbbike.cgi?all=1' | wc
+sub cgi_list_all_size { "(ca. 180 kB)" }
 
 1;
 

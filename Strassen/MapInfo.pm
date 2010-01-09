@@ -1,7 +1,7 @@
 # -*- perl -*-
 
 #
-# $Id: MapInfo.pm,v 1.17 2007/07/21 22:09:23 eserte Exp $
+# $Id: MapInfo.pm,v 1.18 2010/01/09 17:42:31 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (c) 2004 Slaven Rezic. All rights reserved.
@@ -465,6 +465,7 @@ sub create_mif_mid_from_data_directory {
 	(B  => $rgb->(255,0,0), # red
 	 HH => $rgb->(255,255,0),
 	 H  => $rgb->(255,255,0),
+	 NH => $rgb->(120,120,120),
 	 N  => $rgb->(120,120,120),
 	 NN => $rgb->(0,200,0),
 
@@ -486,6 +487,7 @@ sub create_mif_mid_from_data_directory {
 	 B  => 4,
 	 HH => 4,
 	 H  => 3,
+	 NH => 3,
 	 N  => 3,
 	 NN => 3,
 

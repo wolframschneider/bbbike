@@ -489,9 +489,9 @@ sub get_color_values {
     if ($self->can('imagetype') && $self->imagetype eq 'wbmp') {
 	# black-white image for WAP
 	$c{black} = $c{grey_bg} = $c{darkgrey} = [0, 0, 0];
-	$c{white} = $c{yellow} = $c{red} = $c{green} = $c{darkgreen} =
+	$c{white} = $c{yellow} = $c{lightyellow} = $c{red} = $c{green} = $c{darkgreen} =
 	    $c{darkblue} = $c{lightblue} = $c{middlegreen} = $c{lightgreen} = $c{rose} = [255,255,255];
-	@c = qw(black grey_bg white yellow red green darkgreen
+	@c = qw(black grey_bg white yellow lightyellow red green darkgreen
 		darkblue lightblue middlegreen lightgreen rose darkgrey);
 	return (\%c, \@c);
     }
@@ -504,7 +504,8 @@ sub get_color_values {
 			 $self->{'Bg'} =~ /transparent$/ ? 1 : 0];
 	$c{white}     = [$GREY,$GREY,$GREY];
 	$c{yellow}    = [180,180,0];
-	@c = qw(grey_bg white yellow);
+	$c{lightyellow}    = [180,180,100];
+	@c = qw(grey_bg white yellow lightyellow);
     } elsif ($self->{'Bg'} =~ /^\#([a-f0-9]{2})([a-f0-9]{2})([a-f0-9]{2})/i) {
 	my($r,$g,$b) = (hex($1), hex($2), hex($3));
 	$c{grey_bg}   = [$r,$g,$b,
@@ -523,6 +524,10 @@ sub get_color_values {
     if (!defined $c{yellow}) {
 	$c{yellow}  = [255,255,0];
 	push @c, "yellow";
+    }
+    if (!defined $c{lightyellow}) {
+	$c{lightyellow} = [0xff, 0xff, 0x90];
+	push @c, 'lightyellow';
     }
     $c{red}         = [255,0,0];
     $c{green}       = [0,255,0];
@@ -554,8 +559,9 @@ sub set_category_colors {
     my $code = "package $pkg;\n" . <<'EOF';
 
     %color = (B  => $red,
-	      H  => $yellow,
 	      HH => $yellow,
+	      H  => $yellow,
+	      NH => $lightyellow,
 	      N  => $white,
 	      NN => $lightgreen,
 	      S  => $darkgreen,
@@ -619,8 +625,9 @@ sub set_category_outline_colors {
     my $code = "package $pkg;\n" . <<'EOF';
 
     %outline_color = (B  => $black,
-		      H  => $black,
 		      HH => $black,
+		      H  => $black,
+		      NH => $darkgrey,
 		      N  => $darkgrey,
 		      NN => $darkgrey,
 		      W  => $darkblue,
@@ -666,8 +673,9 @@ sub set_category_widths {
     my $code = "package $pkg;\n" . <<'EOF';
 
     %width = (B  => 3*$m,
-	      H  => 3*$m,
 	      HH => 3*$m,
+	      H  => 3*$m,
+	      NH => 2*$m,
 	      N  => 2*$m,
 	      NN => 2*$m,
 	      S  => 2*$m,
