@@ -2223,11 +2223,11 @@ EOF
 	if ($tryempty) {
 	    if (!$no_td) {
 		# align=center was a mistake
-		print "<td XXX=1 align=left>" if $bi->{'can_table'};
+		print "<td align=left>" if $bi->{'can_table'};
 	    }
 
 	    my $searchinput = 'suggest_' . $type;
-	    print qq{<input id="$searchinput" size="40" XXX="Foo" type="text" name="$type" autocomplete="yes">}; # if !$no_input_streetname;
+	    print qq{<input id="$searchinput" size="40" type="text" name="$type" autocomplete="yes">}; # if !$no_input_streetname;
 
 	   if ($enable_opensearch_suggestions) { 
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
@@ -6480,7 +6480,7 @@ EOF
 my $s_copyright = <<EOF;
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
-(&copy;) 2008-2009 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br/>
+(&copy;) 2008-2009 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br />
   Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br />
 </div>
 
