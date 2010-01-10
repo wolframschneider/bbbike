@@ -4703,13 +4703,13 @@ EOF
 			my $qq2 = CGI->new($q->query_string);
 			$qq2->param('output_as', "gpx-route");
 			my $href = $bbbike_script;
-			print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Route)</a>};
+			print qq{<a title="GPX route with waypoints for navigation, up to 256 points" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Route)</a>};
 		    }
 		    {
 			my $qq2 = CGI->new($q->query_string);
 			$qq2->param('output_as', "gpx-track");
 			my $href = $bbbike_script;
-			print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Track)</a>};
+			print qq{<a title="GPX with up to 1024 points, no navigation" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Track)</a>};
 		    }
 		}
 		if ($can_kml) {
@@ -4719,7 +4719,7 @@ EOF
 		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">KML</a>};
 		}
 		if ($can_gpx || $can_kml) {
-		    print experimental_label();
+		    #print experimental_label();
 		}
 		if (0) { # XXX not yet
 		    my $qq2 = CGI->new({});
