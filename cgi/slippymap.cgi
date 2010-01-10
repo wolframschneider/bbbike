@@ -287,10 +287,13 @@ sub get_html {
     }
 
     my $script;
+    my $nomap = "";
     {
         my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
+        $nomap = qq|<style type="text/css"> div#nomap { display: none } </style>\n| if $q->param("nomap");
     }
+
 
     my $html = <<EOF;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -306,7 +309,6 @@ sub get_html {
     </script>
     <script src="../html/sprintf.js" type="text/javascript"></script>
     <script src="../html/bbbike_util.js" type="text/javascript"></script>
-<!--
     <style type="text/css">
         .sml          { font-size:x-small; }
 	.rght	      { text-align:right; }
@@ -316,8 +318,7 @@ sub get_html {
 	#commentlink  { background-color:yellow; }
 	body.nonWaitMode * { }
 	body.waitMode *    { cursor:wait; }
-    </style>
--->
+    </style>$nomap
   </head>
 
   <body onload="init()" onunload="GUnload()" class="nonWaitMode">
