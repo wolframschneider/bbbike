@@ -952,6 +952,7 @@ sub get_html {
     map.addMapType(cycle_map);
 
     map.setMapType(cycle_map);
+    map.enableScrollWheelZoom();
 
     var marker_icon = new GIcon();
     marker_icon.image = "/img/pin-32x32.png";
