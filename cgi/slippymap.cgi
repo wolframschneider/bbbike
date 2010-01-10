@@ -181,7 +181,7 @@ sub run {
     $self->{converter}   = $converter;
     $self->{coordsystem} = $coordsystem;
 
-    print header; # ("-type" => "text/html; charset=utf-8");
+    print header ("-type" => "text/html; charset=utf-8");
     print $self->get_html( \@polylines_polar, \@polylines_polar_feeble, \@wpt,
         $zoom, $center );
 }
@@ -468,7 +468,7 @@ sub get_html {
 	if (addRoute.length == 0 && undoRoute.length != 0) {
 	    routeDelLink.innerHTML = "Route wiederherstellen";
 	} else {
-	    routeDelLink.innerHTML = "Route löschen"; // see also HTML label!
+	    routeDelLink.innerHTML = "Route l&ouml;schen"; // see also HTML label!
 	}
     }
 
@@ -592,8 +592,8 @@ sub get_html {
 		wptHTML += "<a href='#map' onclick='setwptAndMark(" + xy[0] + "," + xy[1] + ");return true;'>" + pe.getElementsByTagName("DistString")[0].textContent + " " + pe.getElementsByTagName("DirectionString")[0].textContent + " " + pe.getElementsByTagName("Strname")[0].textContent + "</a><br />\\n";
 	    }
 	}
-	wptHTML += "Gesamtlänge: " + pointElements[pointElements.length-1].getElementsByTagName("TotalDistString")[0].textContent + "<br />\\n";
-	wptHTML += "<a href=\\"javascript:wayBack()\\">Rückweg</a><br />\\n";
+	wptHTML += "Gesamtl&auml;nge: " + pointElements[pointElements.length-1].getElementsByTagName("TotalDistString")[0].textContent + "<br />\\n";
+	wptHTML += "<a href=\\"javascript:wayBack()\\">R&uuml;ckweg</a><br />\\n";
 	document.getElementById("wpt").innerHTML = wptHTML;
     }
 
@@ -615,7 +615,7 @@ sub get_html {
 	var userWpt = { index:userWpts.length };
 	var marker = new GMarker(point);
 	var preHtml = '<form>Kommentar:<br/><textarea id="userWptComment" cols="25" rows=4">';
-	var postHtml = '</textarea></form><br/><a href="javascript:deleteUserWpt(' + userWpt.index + ')">Waypoint löschen</a>';
+	var postHtml = '</textarea></form><br/><a href="javascript:deleteUserWpt(' + userWpt.index + ')">Waypoint l&ouml;schen</a>';
 	var html = preHtml + postHtml;
 	var htmlElem = document.createElement("div");
 	htmlElem.innerHTML = html;
@@ -842,7 +842,7 @@ sub get_html {
         http.send(postContent);
         var strResult=http.responseText;
         if (http.status != 200) {
-          strResult = "Die Übertragung ist mit dem Fehlercode <" + http.status + "> fehlgeschlagen.\\n\\n" + strResult;
+          strResult = "Die &Uuml;bertragung ist mit dem Fehlercode <" + http.status + "> fehlgeschlagen.\\n\\n" + strResult;
         }
         var answerBoxDiv = document.getElementById("answerbox");
         var answerDiv = document.getElementById("answer");
@@ -1076,8 +1076,8 @@ qq{<a href="#map" onclick="setwpt($x,$y);return true;">$name</a><br />\n};
 	       id="mapmode_addroute"
                type="radio" name="mapmode" value="addroute" /></td>
     <td><label for="mapmode_addroute">Mit Maus<span style="color:red;">klicks</span> eine Route erstellen</label><br/><!-- XXX remove colored "klicks" some time -->
-        <a href="javascript:deleteLastPoint()">Letzten Punkt löschen</a>
-        <a href="javascript:resetOrUndoRoute()" id="routedellink">Route löschen</a></td>
+        <a href="javascript:deleteLastPoint()">Letzten Punkt l&ouml;schen</a>
+        <a href="javascript:resetOrUndoRoute()" id="routedellink">Route l&ouml;schen</a></td>
    </tr>
 EOF
     if ($is_beta) {
@@ -1087,7 +1087,7 @@ EOF
 	       id="mapmode_addwpt"
                type="radio" name="mapmode" value="addwpt" /></td>
     <td><label for="mapmode_addwpt">Waypoints erstellen</label><br/>
-        <a href="javascript:deleteAllUserWpts()">Alle Waypoints löschen</a></td>
+        <a href="javascript:deleteAllUserWpts()">Alle Waypoints l&ouml;schen</a></td>
    </tr>
 EOF
     }
@@ -1141,7 +1141,7 @@ EOF
 <form id="commentform" style="position:absolute; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;">
   <table>
     <tr><td>Kommentar zur Route:</td><td> <textarea cols="40" rows="4" name="comment"></textarea></td></tr>
-    <tr id="hasuserwpts" style="visibility:hidden;"><td colspan="2">(Kommentare für Waypoints werden angehängt)</td></tr>
+    <tr id="hasuserwpts" style="visibility:hidden;"><td colspan="2">(Kommentare f&uuml;r Waypoints werden angeh&auml;ngt)</td></tr>
     <tr><td>Dein Name:</td><td><input name="author" /></td></tr>
     <tr><td>Deine E-Mail:</td><td> <input name="email" /></td></tr>
     <tr><td></td><td><a href="#" onclick="send_via_post(); return false;">Senden</a>
