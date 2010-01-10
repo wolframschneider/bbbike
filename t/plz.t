@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: plz.t,v 1.43 2010/01/09 17:42:33 eserte Exp $
+# $Id: plz.t,v 1.40 2009/04/22 19:53:51 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 1998,2002,2003,2004,2006,2007 Slaven Rezic. All rights reserved.

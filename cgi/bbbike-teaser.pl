@@ -161,8 +161,6 @@ sub teaser_mapserver {
         $mapserver_url = $mapserver_init_url;
     }
     return undef if !$mapserver_url;
-    return if $osm_data;
-
     if ($lang eq 'en') {
 	<<EOF;
 <div class="teaser">The BBBike map data visualized with <a href="@{[ CGI::escapeHTML($mapserver_url) ]}">Mapserver</a>.</div>

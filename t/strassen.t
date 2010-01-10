@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: strassen.t,v 1.24 2010/01/09 17:42:33 eserte Exp $
+# $Id: strassen.t,v 1.22 2008/09/26 20:31:44 eserte Exp $
 # Author: Slaven Rezic
 #
 

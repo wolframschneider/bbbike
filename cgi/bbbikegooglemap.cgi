@@ -198,8 +198,6 @@ sub get_html {
 	 'slaven1.bbbike.de'  => "ABQIAAAAidl4U46XIm-bi0ECbPGe5hRQAqip6zVbHiluFa7rPMSCpIxbfxQLz2YdzoN6O1jXFDkco3rJ_Ry2DA",
 	 '78.47.225.30'	      => "ABQIAAAACNG-XP3VVgdpYda6EwQUyhTTdIcL8tflEzX084lXqj663ODsaRSCKugGasYn0ZdJkWoEtD-oJeRhNw",
 	 'bbbike.de'	      => 'ABQIAAAACNG-XP3VVgdpYda6EwQUyhRfQt6AwvKXAVZ7ZsvglWYeC-xX5BROlXoba_KenDFQUtSEB_RJPUVetw',
-	 'recv.de'	      => 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShRZGykBMsY0k7_NlhmXv25sysVkvhRDhtTAHMlTJtehYN7xeJ9lvP8RZw',
-	 'bbbike.elsif.de'    => 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShQYKE6detmKRWDQHmeaoEIvpzlZTxSp-OhMdXTigI71vlN3iIVxDx0XhQ',
 	 '83.169.19.137'      => 'ABQIAAAACNG-XP3VVgdpYda6EwQUyhSIqv_shXeYhPRHJYvhhlve40RasBRI6WpGYyWT9EJigb4eNrqNhQkqSQ',
 	 'bbbike.lvps83-169-19-137.dedicated.hosteurope.de' => 'ABQIAAAACNG-XP3VVgdpYda6EwQUyhQzU4FpitV0WsqI42ZHyXuB_4og4xSjtsqjECenvg7m7jSSPGu1rc1w4A',
 	);

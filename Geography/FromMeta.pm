@@ -1,7 +1,7 @@
 # -*- perl -*-
 
 #
-# $Id: FromMeta.pm,v 1.9 2010/01/09 17:42:31 eserte Exp $
+# $Id: FromMeta.pm,v 1.7 2009/06/27 15:34:38 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 2009 Slaven Rezic. All rights reserved.

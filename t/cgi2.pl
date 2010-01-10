@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# $Id: cgi2.pl,v 1.12 2009/12/04 20:34:40 eserte Exp $
+# $Id: cgi2.pl,v 1.10 2009/02/25 23:46:23 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 1998 Slaven Rezic. All rights reserved.
