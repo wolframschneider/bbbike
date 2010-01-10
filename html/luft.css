@@ -19,14 +19,14 @@ body {
 
 div#border { 
 	padding: 10px; 
-	// background-color: #FFFFED; 
+	/* background-color: #FFFFED; */
 	background-color: #FFF; 
 }
 
 div#all {
 	max-width: 48em;
 	background-color: #669966;
-	// background-color: #9c9;
+	/* background-color: #9c9; */
 	margin: 1em;
 	margin: 0px auto; /* Right And Left Margin Widths To Auto */
 	position: relative;
@@ -47,7 +47,7 @@ h2 { text-align: center; }
 div#copyright { text-align: center; padding-top: 0.7em; font-size: small; }
 div#wetter { padding-left: 10px; }
 
-div#main { } // width: 600px; }
+div#main { } /* width: 600px; } */
 
 
 /* ************************************************************ */
