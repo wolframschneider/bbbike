@@ -288,11 +288,14 @@ sub get_html {
 
     my $script;
     my $maponly = "";
+    my $slippymap_size  = qq{width: 100%; height: 500px;};
     {
         my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
         $maponly = qq|<style type="text/css"> div#nomap { display: none } </style>\n| if $q->param("maponly");
+        $slippymap_size .= qq{ max-width: 800px;} if $q->param("maponly");
     }
+
 
 
     my $html = <<EOF;
@@ -322,7 +325,7 @@ sub get_html {
   </head>
 
   <body onload="init()" onunload="GUnload()" class="nonWaitMode">
-    <div id="map" style="width: 100%; height: 500px"></div>
+    <div id="map" style="$slippymap_size"></div>
     <div id="nomap">
     <script type="text/javascript">
     //<![CDATA[
