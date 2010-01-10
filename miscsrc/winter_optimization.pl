@@ -5,7 +5,7 @@
 # $Id: winter_optimization.pl,v 1.4 2005/03/15 20:49:53 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2004 Slaven Rezic. All rights reserved.
+# Copyright (C) 2004,2010 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -35,12 +35,31 @@ use Fcntl qw(LOCK_EX LOCK_NB);
 
 my $do_display = 0;
 my $one_instance = 0;
+my $winter_hardness = 1;
 
 if (!GetOptions("display" => \$do_display,
 		"one-instance" => \$one_instance,
+		"winter-hardness=i" => \$winter_hardness,
 	       )) {
     die "usage: $0 [-display] [-one-instance]\n";
 }
+
+my %cat_to_usability = ($winter_hardness == 1 ? (NN => 1,
+						 N  => 3,
+						 NH => 4,
+						 H  => 5,
+						 HH => 6,
+						 B  => 6,
+						)
+			: $winter_hardness == 2 ? (NN => 1,
+						   N  => 2,
+						   NH => 4,
+						   H  => 5,
+						   HH => 6,
+						   B  => 6,
+						  )
+			: die "winter-hardness may be 1 or 2"
+		       );
 
 my $outfile = "$FindBin::RealBin/../tmp/winter_optimization.st";
 
@@ -59,10 +78,14 @@ if ($one_instance) {
 }
 
 my %str;
-$str{"s"} = Strassen->new("strassen");
-$str{"br"} = Strassen->new("brunnels");
+#$str{"s"} = Strassen->new("strassen");
+my($strassen_with_NH_file) = create_strassen_with_NH();
+$str{"s"} = Strassen->new($strassen_with_NH_file);
+## I don't think bridges are critical (and mostly if you have to use one, then usually you cannot avoid it at all)
+#$str{"br"} = Strassen->new("brunnels");
 $str{"qs"} = Strassen->new("qualitaet_s");
-$str{"rw"} = Strassen->new("radwege_exact");
+## Bei Winterwetter können Radwege komplett ignoriert werden
+#$str{"rw"} = Strassen->new("radwege_exact");
 $str{"kfz"} = Strassen->new("comments_kfzverkehr");
 $str{"tram"} = Strassen->new("comments_tram");
 #lock_keys %str;
@@ -140,13 +163,7 @@ while(my($k1,$v) = each %{ $net{"s"}->{Net} }) {
 		}
 	    };
 
-	    my $cat_num = {NN => 1,
-			   N  => 3,
-			   NH => 4,
-			   H  => 5,
-			   HH => 6,
-			   B  => 6,
-			  }->{$main_cat};
+	    my $cat_num = $cat_to_usability{$main_cat};
 	    if (!defined $cat_num) {
 		my $rec = $net{"s"}->get_street_record($k1, $k2);
 		require Data::Dumper;
@@ -214,5 +231,23 @@ store($net, "$outfile~");
 chmod 0644, "$outfile~";
 rename "$outfile~", $outfile
     or die "Can't rename from $outfile~ to $outfile: $!";
+
+# The data/Makefile rules .strassen.tmp and strassen,
+# without the NH replacement
+sub create_strassen_with_NH {
+    use File::Temp qw(tempfile);
+    use IPC::Run qw(run);
+    my($tmpfh,$tmpfile) = tempfile(SUFFIX => ".bbd", UNLINK => 1);
+    run(["$FindBin::RealBin/convert_orig_to_bbd", "-keep-directive", "alias",
+	 "$FindBin::RealBin/../data/strassen-orig"],
+	">", $tmpfile) or die $!;
+    run(["$FindBin::RealBin/grepstrassen", "-v", "--namerx", ' \(Potsdam\)', 'plaetze'],
+	">>", $tmpfile) or die $!;
+    run(["$FindBin::RealBin/grepstrassen", "-ignoreglobaldirectives", "-catrx", ".", "routing_helper-orig"],
+	"|",
+	["$FindBin::RealBin/replacestrassen", "-catexpr", 's/.*/NN::igndisp/'],
+	">>", $tmpfile) or die $!;
+    $tmpfile
+}
 
 __END__
