@@ -322,6 +322,7 @@ sub get_html {
 
   <body onload="init()" onunload="GUnload()" class="nonWaitMode">
     <div id="map" style="width: 100%; height: 500px"></div>
+    <div id="nomap">
     <script type="text/javascript">
     //<![CDATA[
 
@@ -1165,7 +1166,7 @@ EOF
   Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br />
   </div>
 </div>
-
+  </div> <!-- nomap -->
   </body>
 </html>
 EOF
