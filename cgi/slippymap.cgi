@@ -181,7 +181,7 @@ sub run {
     $self->{converter}   = $converter;
     $self->{coordsystem} = $coordsystem;
 
-    print header;
+    print header; # ("-type" => "text/html; charset=utf-8");
     print $self->get_html( \@polylines_polar, \@polylines_polar_feeble, \@wpt,
         $zoom, $center );
 }
