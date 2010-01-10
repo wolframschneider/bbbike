@@ -287,11 +287,11 @@ sub get_html {
     }
 
     my $script;
-    my $nomap = "";
+    my $maponly = "";
     {
         my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
-        $nomap = qq|<style type="text/css"> div#nomap { display: none } </style>\n| if $q->param("nomap");
+        $maponly = qq|<style type="text/css"> div#nomap { display: none } </style>\n| if $q->param("maponly");
     }
 
 
@@ -318,7 +318,7 @@ sub get_html {
 	#commentlink  { background-color:yellow; }
 	body.nonWaitMode * { }
 	body.waitMode *    { cursor:wait; }
-    </style>$nomap
+    </style>$maponly
   </head>
 
   <body onload="init()" onunload="GUnload()" class="nonWaitMode">

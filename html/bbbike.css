@@ -195,3 +195,5 @@ input#suggest_start:focus,
 input#suggest_via:focus, 
 input#suggest_ziel:focus { background-color: #FFC }
 
+span.slippymaplink { font-size: small; }
+
