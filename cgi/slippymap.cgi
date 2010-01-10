@@ -300,14 +300,14 @@ sub get_html {
     <title>BBBike data presented with Googlemap</title>
     <link rel="stylesheet" type="text/css" href="../html/bbbike.css" /><!-- XXX only for radzeit -->
     <link type="image/gif" rel="shortcut icon" href="../images/bbbike_google.gif" /><!-- XXX only for radzeit -->
-<!--    <script src="http://maps.google.com/maps?file=api&v=2&key=$google_api_key" type="text/javascript"></script>-->
     <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
     <script type="text/javascript">
       google.load("maps", "2");
     </script>
     <script src="../html/sprintf.js" type="text/javascript"></script>
     <script src="../html/bbbike_util.js" type="text/javascript"></script>
-    <style type="text/css"><!--
+<!--
+    <style type="text/css">
         .sml          { font-size:x-small; }
 	.rght	      { text-align:right; }
 	#permalink    { color:red; }
@@ -316,8 +316,10 @@ sub get_html {
 	#commentlink  { background-color:yellow; }
 	body.nonWaitMode * { }
 	body.waitMode *    { cursor:wait; }
-    --></style>
+    </style>
+-->
   </head>
+
   <body onload="init()" onunload="GUnload()" class="nonWaitMode">
     <div id="map" style="width: 100%; height: 500px"></div>
     <script type="text/javascript">
@@ -1153,14 +1155,14 @@ EOF
 </div>
 
 
-        <div id="footer" style="clear:left;">
-	<br />
-	<hr />
-<div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em; " >
+<div id="footer" style="clear:left;">
+<br />
+<hr />
+  <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em; " >
 (&copy;) 2008-2009 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> 
 // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br/>
   Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br />
-
+  </div>
 </div>
 
   </body>
