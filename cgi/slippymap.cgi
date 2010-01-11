@@ -949,6 +949,7 @@ sub get_html {
     map.setMapType(cycle_map);
     map.enableScrollWheelZoom();
 
+    /*
     var marker_icon = new GIcon();
     marker_icon.image = "../images/pin-32x32.png";
     marker_icon.iconSize = new GSize(32, 32)
@@ -960,6 +961,7 @@ sub get_html {
         { icon: marker_icon,
           zIndexProcess: function() { return 200; } });
     map.addOverlay(marker);
+    */
 
 
 function GetTileUrl_Mapnik(a, z) {
