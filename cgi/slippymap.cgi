@@ -950,7 +950,7 @@ sub get_html {
     map.enableScrollWheelZoom();
 
     var marker_icon = new GIcon();
-    marker_icon.image = "/img/pin-32x32.png";
+    marker_icon.image = "../images/pin-32x32.png";
     marker_icon.iconSize = new GSize(32, 32)
     marker_icon.iconAnchor = new GPoint(22, 30);
 
