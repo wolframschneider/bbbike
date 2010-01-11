@@ -289,6 +289,9 @@ cgi/Zagreb.en.cgi
 cgi/Zuerich.cgi
 cgi/Zuerich.cgi.config
 cgi/Zuerich.en.cgi
+cgi/Lissabon.cgi
+cgi/Lissabon.cgi.config
+cgi/Lissabon.en.cgi
 .DS_Store
 Makefile.osm
 bbbike-world.kml
