@@ -1079,8 +1079,10 @@ ${PERSISTENTTMPDIR}/fragezeichen-matches.bbd:	fragezeichen ${DATADIR}/strassen $
 FOREVER_INTERVAL?=	30
 FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  'open LOCK, ">", ".check_forever.lck" or die $$!; flock LOCK, LOCK_EX|LOCK_NB or die $$!; @cmd=@ARGV; while() { system(@cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; sleep $(FOREVER_INTERVAL) } unlink ".check_forever.lck"'
 
+# Specify ADDITIONAL_CHECK_FOREVER_TARGETS make variable on command
+# line for more things to do...
 check-forever:
-	-nice ${FOREVER_TWO_ERRORS} ${MAKE} check all ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd
+	-nice ${FOREVER_TWO_ERRORS} ${MAKE} check all ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd ${ADDITIONAL_CHECK_FOREVER_TARGETS}
 	@-alarm -nicedown
 	@-xterm-conf -deiconify -raise
 	xmessage "check-forever failed"
@@ -1596,7 +1598,7 @@ ${PERSISTENTTMPDIR}/naked-fragezeichen:	fragezeichen-orig
 .for plz in ${BERLIN_PLZ_RANGES}
 ${PERSISTENTTMPDIR}/Berlin$(plz)XXX.coords.data:	Berlin.coords.data
 	${PERL} -F'\|' -nale '$$F[2] =~ m{^$(plz)} and print' Berlin.coords.data |\
-	    grep -v '[US]-Bhf ' | egrep -v ' \(Kolonie|Gaststätte|Insel\)' | egrep -v '^(Kolonie |KGA |Siedlung| Güterbahnhof )' \
+	    grep -v '[US]-Bhf ' | egrep -v ' \(Kolonie|Siedlung|Gaststätte|Insel|geplant\)' | egrep -v '^(Kolonie |KGA |Siedlung |Güterbahnhof )' \
 		> ${PERSISTENTTMPDIR}/Berlin$(plz)XXX.coords.data~
 	mv ${PERSISTENTTMPDIR}/Berlin$(plz)XXX.coords.data~ ${PERSISTENTTMPDIR}/Berlin$(plz)XXX.coords.data
 
