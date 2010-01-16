@@ -1222,7 +1222,7 @@ if (defined $q->param('begin')) {
 		       '-logging'  => 1,
 		       '-strlabel' => 1,
 		       '-force'    => 0,
-		      );
+		     );
 	}
     }
     my_exit(0);
@@ -5133,6 +5133,10 @@ sub coord_link {
     my $strname_esc = CGI::escapeHTML($strname);
     my $jslink = $args{-jslink};
     my $out = qq{<a };
+
+    # no links for OSM 
+    return $strname_esc if $osm_data;
+
     if ($jslink) {
 	$out .= qq{ class="ms" onclick="return ms($coords)"};
     }
