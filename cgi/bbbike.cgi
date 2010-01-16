@@ -2826,7 +2826,7 @@ sub get_kreuzung {
 	    foreach (@coords) {
 		unless ($ecke_printed) {
 		    if ($use_select) {
-			print " " . M("Ecke") . " ";
+			print " <i>" . M("Ecke") . " </i>";
 			if ($bi->{'can_table'}) {
 			    print "</td><td>";
 			}
