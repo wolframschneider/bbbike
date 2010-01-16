@@ -6460,17 +6460,19 @@ sub footer_as_string {
     $s .= "cellpadding=3>\n";
     $s .= <<EOF;
 <tr>
-<td align=center>${fontstr}<a href="../">BBBike @ world</a>${fontend}</td>
+<!-- <td align=center>${fontstr}<a href="../">BBBike @ world</a>${fontend}</td> -->
 <!-- <td align=center>${fontstr}bbbike.cgi $VERSION${fontend}</td> -->
 <!-- <td align=center>${fontstr} <a target="_top" href="mailto:@{[ $BBBike::EMAIL ]}?subject=BBBike">@{[ M("E-Mail") ]}</a>${fontend}</td> -->
-<td align=center>$fontstr<a target="_top" href="$bbbike_script?begin=1$smallformstr">@{[ M("Neue Anfrage") ]}</a>${fontend}</td>
+<!-- <td align=center>$fontstr<a target="_top" href="$bbbike_script?begin=1$smallformstr">@{[ M("Neue Anfrage") ]}</a>${fontend}</td> -->
 EOF
     $s .= <<EOF;
-<td align=center>$fontstr<a target="_top" href="$bbbike_script?info=1$smallformstr">@{[ M("Kontakt, Info &amp; Disclaimer") ]}</a>${fontend}</td>
+<!-- <td align=center>$fontstr<a target="_top" href="$bbbike_script?info=1$smallformstr">@{[ M("Kontakt, Info &amp; Disclaimer") ]}</a>${fontend}</td> -->
 EOF
+    if (0) {
     $s .= "<td align=center>$fontstr";
     $s .= complete_link_to_einstellungen();
     $s .= "${fontend}</td>\n";
+    }
     if ($can_mapserver) {
         $s .= "<td><a href=\"$bbbike_script?mapserver=1\">Mapserver</a></td>";
     } elsif (defined $mapserver_init_url && !$osm_data) {
@@ -6483,8 +6485,17 @@ EOF
 </center>
 EOF
 
+my $neue_anfrage = M("neue Anfrage");
 my $s_copyright = <<EOF;
 
+<div id="footer_links">
+<br/>
+<a href="../">home</a> |
+<a href="$bbbike_script?begin=1$smallformstr">$neue_anfrage</a>
+<hr noshade="noshade" />
+</div>
+
+</div>
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 (&copy;) 2008-2010 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br />
   Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br />

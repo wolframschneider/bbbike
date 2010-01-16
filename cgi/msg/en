@@ -117,6 +117,7 @@ Bildgr&ouml;&szlig;e, Bildformat und Detailreichtum %s bis %s kB. PDFs sind %s b
      "Zurück zur Hauptseite" => "Back to main page",
      "R&uuml;ckweg" => "Way back",
      "Neue Anfrage" => "New search",
+     "neue Anfrage" => "new search",
      "Start beibehalten" => "Keep start",
      "Ziel beibehalten" => "Keep destination",
      "Start und Ziel neu eingeben" => "Change start and destination",
