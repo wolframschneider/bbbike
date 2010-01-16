@@ -105,6 +105,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $warn_message $use_utf8 $use_via
 	    $enable_google_analytics
 	    $with_green_ways
+            $no_teaser
 	   );
 
 # XXX This may be removed one day
@@ -1860,7 +1861,7 @@ sub choose_form {
 <tr>
 EOF
 
-    if ($show_introduction) {
+    if ($show_introduction && !$no_teaser) {
 	load_teaser();
 	# use "make count-streets" in ../data
 	print <<EOF if ($bi->{'can_table'});
