@@ -2407,7 +2407,8 @@ EOF
 	}
  
        $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'Berlin und Potsdam';
-       print q{<div style="text-align:right;">};
+       print q{<div id="footer_links">};
+       print qq{<a href="../">Home</a> |\n};
        print window_open("$bbbike_script?all=1", "BBBikeAll",
                          "dependent,height=500,resizable," .
                          "screenX=500,screenY=30,scrollbars,width=250")
@@ -6485,15 +6486,7 @@ EOF
 </center>
 EOF
 
-my $neue_anfrage = M("neue Anfrage");
 my $s_copyright = <<EOF;
-
-<div id="footer_links">
-<br/>
-<a href="../">home</a> |
-<a href="$bbbike_script?begin=1$smallformstr">$neue_anfrage</a>
-<hr noshade="noshade" />
-</div>
 
 </div>
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
