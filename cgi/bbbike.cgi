@@ -6477,7 +6477,7 @@ EOF
         $s .= "<td><a href=\"$mapserver_init_url\">Mapserver</a></td>";
     }
     $s .= <<EOF;
-<td align=center>${fontstr}<a href="./livesearch.cgi">livesearch</a>${fontend}</td>
+<!-- <td align=center>${fontstr}<a href="./livesearch.cgi">livesearch</a>${fontend}</td> -->
 </tr>
 </table>
 </center>
