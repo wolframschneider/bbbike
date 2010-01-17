@@ -1079,8 +1079,10 @@ ${PERSISTENTTMPDIR}/fragezeichen-matches.bbd:	fragezeichen ${DATADIR}/strassen $
 FOREVER_INTERVAL?=	30
 FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  'open LOCK, ">", ".check_forever.lck" or die $$!; flock LOCK, LOCK_EX|LOCK_NB or die $$!; @cmd=@ARGV; while() { system(@cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; sleep $(FOREVER_INTERVAL) } unlink ".check_forever.lck"'
 
+# Specify ADDITIONAL_CHECK_FOREVER_TARGETS make variable on command
+# line for more things to do...
 check-forever:
-	-nice ${FOREVER_TWO_ERRORS} ${MAKE} check all ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd
+	-nice ${FOREVER_TWO_ERRORS} ${MAKE} check all ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd ${ADDITIONAL_CHECK_FOREVER_TARGETS}
 	@-alarm -nicedown
 	@-xterm-conf -deiconify -raise
 	xmessage "check-forever failed"
@@ -1583,8 +1585,36 @@ ${PERSISTENTTMPDIR}/crossings_gewaesser_ignore.bbd:	\
 	    strassen wasserstrassen
 	mv $@~ $@
 
+######################################################################
+# Checks for unhandled streets
+BERLIN_PLZ_RANGES=10 12 13 14
+
+unhandled-streets:	${BERLIN_PLZ_RANGES:S/^/${PERSISTENTTMPDIR}\/unhandled_streets_/:S/$/XXX.bbd/}
+
+${PERSISTENTTMPDIR}/naked-fragezeichen:	fragezeichen-orig
+	${REPLACESTRASSEN} -nameexpr 's{:.*}{}' < fragezeichen-orig > ${PERSISTENTTMPDIR}/naked-fragezeichen~
+	mv ${PERSISTENTTMPDIR}/naked-fragezeichen~ ${PERSISTENTTMPDIR}/naked-fragezeichen
+
+.for plz in ${BERLIN_PLZ_RANGES}
+${PERSISTENTTMPDIR}/Berlin$(plz)XXX.coords.data:	Berlin.coords.data
+	${PERL} -F'\|' -nale '$$F[2] =~ m{^$(plz)} and print' Berlin.coords.data |\
+	    grep -v '[US]-Bhf ' | egrep -v ' \(Kolonie|Siedlung|Gaststätte|Insel|geplant\)' | egrep -v '^(Kolonie |KGA |Siedlung |Güterbahnhof )' \
+		> ${PERSISTENTTMPDIR}/Berlin$(plz)XXX.coords.data~
+	mv ${PERSISTENTTMPDIR}/Berlin$(plz)XXX.coords.data~ ${PERSISTENTTMPDIR}/Berlin$(plz)XXX.coords.data
+
+${PERSISTENTTMPDIR}/unhandled_streets_$(plz)XXX.bbd:	${PERSISTENTTMPDIR}/Berlin$(plz)XXX.coords.data \
+							strassen flaechen sehenswuerdigkeit brunnels \
+							${PERSISTENTTMPDIR}/naked-fragezeichen
+	-${CHECK_STR_PLZ} -plzdata ${PERSISTENTTMPDIR}/Berlin$(plz)XXX.coords.data -reversecheck \
+		-data strassen -data flaechen -data sehenswuerdigkeit -data brunnels \
+		-data ${PERSISTENTTMPDIR}/naked-fragezeichen > ${PERSISTENTTMPDIR}/unhandled_streets_$(plz)XXX.bbd~
+	mv ${PERSISTENTTMPDIR}/unhandled_streets_$(plz)XXX.bbd~ ${PERSISTENTTMPDIR}/unhandled_streets_$(plz)XXX.bbd
+.endfor
+
 ## Einzeiler zum Extrahieren einer Postleitzahl:
 # perl -F'\|' -nale '$F[2] == 12489 and $F[3] and print "$F[0] $F[1]\tX $F[3]"' Berlin.coords.data > /tmp/12489.bbd
+
+######################################################################
 
 .ifdef .FreeBSD
 check-coords.data:	check-Berlin.coords.data check-Potsdam.coords.data

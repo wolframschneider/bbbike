@@ -105,6 +105,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $warn_message $use_utf8 $use_via
 	    $enable_google_analytics
 	    $with_green_ways
+            $no_teaser
 	   );
 
 # XXX This may be removed one day
@@ -1222,7 +1223,7 @@ if (defined $q->param('begin')) {
 		       '-logging'  => 1,
 		       '-strlabel' => 1,
 		       '-force'    => 0,
-		      );
+		     );
 	}
     }
     my_exit(0);
@@ -1860,7 +1861,7 @@ sub choose_form {
 <tr>
 EOF
 
-    if ($show_introduction) {
+    if ($show_introduction && !$no_teaser) {
 	load_teaser();
 	# use "make count-streets" in ../data
 	print <<EOF if ($bi->{'can_table'});
@@ -2407,7 +2408,8 @@ EOF
 	}
  
        $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'Berlin und Potsdam';
-       print q{<div style="text-align:right;">};
+       print q{<div id="footer_links">};
+       print qq{<a href="../">Home</a> |\n};
        print window_open("$bbbike_script?all=1", "BBBikeAll",
                          "dependent,height=500,resizable," .
                          "screenX=500,screenY=30,scrollbars,width=250")
@@ -2826,7 +2828,7 @@ sub get_kreuzung {
 	    foreach (@coords) {
 		unless ($ecke_printed) {
 		    if ($use_select) {
-			print " " . M("Ecke") . " ";
+			print " <i>" . M("Ecke") . " </i>";
 			if ($bi->{'can_table'}) {
 			    print "</td><td>";
 			}
@@ -5133,6 +5135,10 @@ sub coord_link {
     my $strname_esc = CGI::escapeHTML($strname);
     my $jslink = $args{-jslink};
     my $out = qq{<a };
+
+    # no links for OSM 
+    return $strname_esc if $osm_data;
+
     if ($jslink) {
 	$out .= qq{ class="ms" onclick="return ms($coords)"};
     }
@@ -6456,24 +6462,26 @@ sub footer_as_string {
     $s .= "cellpadding=3>\n";
     $s .= <<EOF;
 <tr>
-<td align=center>${fontstr}<a href="../">BBBike @ world</a>${fontend}</td>
+<!-- <td align=center>${fontstr}<a href="../">BBBike @ world</a>${fontend}</td> -->
 <!-- <td align=center>${fontstr}bbbike.cgi $VERSION${fontend}</td> -->
 <!-- <td align=center>${fontstr} <a target="_top" href="mailto:@{[ $BBBike::EMAIL ]}?subject=BBBike">@{[ M("E-Mail") ]}</a>${fontend}</td> -->
-<td align=center>$fontstr<a target="_top" href="$bbbike_script?begin=1$smallformstr">@{[ M("Neue Anfrage") ]}</a>${fontend}</td>
+<!-- <td align=center>$fontstr<a target="_top" href="$bbbike_script?begin=1$smallformstr">@{[ M("Neue Anfrage") ]}</a>${fontend}</td> -->
 EOF
     $s .= <<EOF;
-<td align=center>$fontstr<a target="_top" href="$bbbike_script?info=1$smallformstr">@{[ M("Kontakt, Info &amp; Disclaimer") ]}</a>${fontend}</td>
+<!-- <td align=center>$fontstr<a target="_top" href="$bbbike_script?info=1$smallformstr">@{[ M("Kontakt, Info &amp; Disclaimer") ]}</a>${fontend}</td> -->
 EOF
+    if (0) {
     $s .= "<td align=center>$fontstr";
     $s .= complete_link_to_einstellungen();
     $s .= "${fontend}</td>\n";
+    }
     if ($can_mapserver) {
         $s .= "<td><a href=\"$bbbike_script?mapserver=1\">Mapserver</a></td>";
     } elsif (defined $mapserver_init_url && !$osm_data) {
         $s .= "<td><a href=\"$mapserver_init_url\">Mapserver</a></td>";
     }
     $s .= <<EOF;
-<td align=center>${fontstr}<a href="./livesearch.cgi">livesearch</a>${fontend}</td>
+<!-- <td align=center>${fontstr}<a href="./livesearch.cgi">livesearch</a>${fontend}</td> -->
 </tr>
 </table>
 </center>
@@ -6481,6 +6489,7 @@ EOF
 
 my $s_copyright = <<EOF;
 
+</div>
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 (&copy;) 2008-2010 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br />
   Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br />
