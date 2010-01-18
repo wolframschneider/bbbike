@@ -651,7 +651,7 @@ userdel	q4::inwork 10422,12395 10476,12432
          'text' => 'Pasewalker Str. (Pankow) stadteinwärts zwischen Marienstr. und Anschlussstelle A114 Baustelle, Fahrtrichtung gesperrt ist eingerichtet (bis Frühjahr 2011)',
          'from' => 1243886249,
          'id' => 1686,
-         'data' => 'userdel	q4::inwork; 12095,20832 12076,20731 12030,20490 12008,20368 11963,20136 11931,19965 11907,19838 11907,19749
+         'data' => 'userdel	q4::inwork; 12095,20832 12076,20731 12030,20490 12008,20368 12000,20327 11984,20246 11963,20136 11931,19965 11907,19838 11907,19749
 ',
          'type' => 'handicap'
        },
@@ -686,7 +686,7 @@ userdel	q4::inwork 10422,12395 10476,12432
          'text' => 'Kastanienallee (Rosenthal) Richtung Dietzgenstr. zwischen Hauptstr. und Friedrich-Engels-Str. Baustelle, Fahrtrichtung gesperrt (bis 04.2011)',
          'from' => 1246207933,
          'id' => 1712,
-         'data' => 'userdel	q4::inwork; 7992,20515 8344,20548 8411,20554 8481,20561 8543,20567 8717,20584 8900,20601
+         'data' => 'userdel	q4::inwork; 7992,20515 8344,20548 8411,20554 8481,20561 8543,20567 8561,20569 8717,20584 8900,20601
 ',
          'type' => 'handicap'
        },
@@ -1161,7 +1161,7 @@ d Breitenbachstr. Baustelle, Fahrtrichtung gesperrt (bis Anfang 05/2010)',
        undef,
        {
          'until' => 1267398000,
-         'text' => 'B 167 Ruppiner Str. OD Bückwitz, Einmünd. B 5 Kreiselneubau Vollsperrung 23.11.2009-28.02.2010 ',
+         'text' => 'B 167 Ruppiner Str. OD Bückwitz, Einmünd. B 5 Kreiselneubau gesperrt 23.11.2009-28.02.2010 ',
          'from' => 1258844400,
          'id' => 1876,
          'data' => 'userdel	q4::inwork -52519,49887 -52595,49993
@@ -1480,6 +1480,43 @@ userdel	2::inwork 14835,10272 14888,10385
          'data' => 'userdel	q4::inwork 9605,13248 9651,13406
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_014905',
+         'until' => 1272664799,
+         'text' => 'Lahnstr. (Neukölln) Richtung Grenzallee zwischen Naumburger Str. und Mierstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 04.2010)',
+         'from' => 1263844274,
+         'id' => 2012,
+         'data' => 'userdel	q4::inwork; 13278,6967 13500,7018 13627,7047
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1282946400,
+         'text' => 'B 246 Clara-Zetkin-Straße OD Beelitz, zw. Trebbiner Str. u. Brücker Str. Kanal- u. Straßenbauarbeiten halbseitig gesperrt; Einbahnstraße 29.05.2009-27.08.2010 ',
+         'from' => 1243461600,
+         'id' => 2013,
+         'data' => 'userdel	q4::inwork -17930,-19476 -18615,-19264
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1275343200,
+         'text' => 'L 090 Eisenbahnstraße OD Werder, zw. Kesselgrund- u. Gartenstraße Rohrleit.-,Straßen-u.Gehwegbau halbseitig gesperrt; Einbahnstraße 24.04.2009-31.05.2010 ',
+         'from' => 1240437600,
+         'id' => 2014,
+         'data' => 'userdel	q4::inwork -21524,-2998 -22042,-2060
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1277935200,
+         'text' => 'L 092 AS Potsdam-Nord - Ketzin Brücke über den Schleusenkanal bei Paretz Brückenneubau, Straßenbau Vollsperrung 15.09.2009-30.06.2010 ',
+         'from' => 1252879200,
+         'id' => 2015,
+         'data' => 'userdel	2::inwork -24240,6075 -24731,6194
+',
+         'type' => 'gesperrt'
        }
      
 );

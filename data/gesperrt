@@ -222,7 +222,7 @@ Boddinstr.	1 12582,8408 12368,8356 12216,8323 12104,8299 11920,8252
 Schlangenbader Str.	1 3968,7906 3964,7742
 Tannenweg	1 -3023,17889 -3012,17940 -3028,18024
 Erlenweg	1 -3228,18103 -3327,18007
-Aspenweg	1 -3000,18192 -3020,18188 -3050,18164 -3111,18105 -3168,18051 -3203,18014 -3224,17943
+Aspenweg	1 -3000,18192 -3020,18188 -3050,18164 -3096,18119 -3111,18105 -3168,18051 -3203,18014 -3224,17943
 Aspenweg	1 -3288,17831 -3244,17883 -3224,17943
 Pintschstr.	1 13342,13185 13438,12965
 Dievenowstr.	1 3228,7401 3208,7328 3189,7249 3206,7109
@@ -251,7 +251,7 @@ Havensteinstr.	1 6293,2583 6463,2724 6593,2831
 Worpsweder Str.	1 6191,4923 6203,5138
 Wilseder Str.	1 6295,5132 6288,4906
 Dickhardtstr.	1 5817,7223 5824,6974 5828,6839 5778,6754 5604,6709 5533,6753
-Schmitzweg	1 5879,19352 5831,19547 5731,19824
+Schmitzweg	1 5879,19352 5858,19437 5831,19547 5731,19824
 Barbarossaplatz	1 6731,9559 6746,9540 6743,9523 6728,9515 6704,9537 6712,9557 6731,9559
 Otto-von-Simson-Str.	1 2560,5044 2627,5095 2835,5410
 In den neuen G‰rten	1 7111,3432 7318,3306 7359,3349 7472,3308
@@ -726,9 +726,9 @@ Attilastr. -> Ludwigsburger Weg: Mittelstreifen	3::igndisp 7263,4281 7310,4308 7
 Straﬂenbahn	3nocross::ignrte 18003,7144 17934,7029 17919,6978
 Edisonstr. -> Fuststr.: Straﬂenbahn	3::igndisp 17919,6978 17934,7029 17823,7203
 Fuststr. -> Edisonstr.: Straﬂenbahn	3::igndisp 17823,7203 17934,7029 18003,7144
-Mittelstreifen	3nocross::ignrte -5039,15618 -5154,15651 -5473,15742
+Mittelstreifen	3nocross::ignrte -5039,15618 -5154,15651 -5373,15714 -5473,15742
 Falkenseer Chaussee -> Remscheider Str.: Mittelstreifen	3::igndisp -5039,15618 -5154,15651 -5192,15517
-Remscheider Str. -> Falkenseer Chaussee: Mittelstreifen	3::igndisp -5192,15517 -5154,15651 -5473,15742
+Remscheider Str. -> Falkenseer Chaussee: Mittelstreifen	3::igndisp -5192,15517 -5154,15651 -5373,15714
 Straﬂenbahntrasse	3nocross::ignrte 20269,14256 20241,14016 20210,13776
 Cecilienstr. -> Allee der Kosmonauten: Straﬂenbahntrasse	3::igndisp 20281,14012 20241,14016 20210,13776
 Allee der Kosmonauten -> Cecilienstr.: Straﬂenbahntrasse	3::igndisp 20269,14256 20241,14016 20281,14012
@@ -1634,7 +1634,7 @@ Schranke, meistens offen	BNP:3:-256:trailer=6 7707,16543
 Barriere	BNP:10:-12 12178,7985
 Dr‰ngelgitter	BNP:0:52:trailer=3 10535,13006
 Dr‰ngelgitter	BNP:10:-84 7158,9509
-Dr‰ngelgitter	BNP:5:-70 -6162,16287
+Dr‰ngelgitter	BNP:5:-51 -6162,16287
 Dr‰ngelgitter	BNP:5:-193 38562,100725
 Dr‰ngelgitter	BNP:5:3 38662,97200
 Schwingtor an der Luiseninsel	BNP:10:-142 7696,11621
