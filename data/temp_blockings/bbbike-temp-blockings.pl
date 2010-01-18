@@ -550,7 +550,7 @@ EOF
      { from  => undef,
        until => 1092439940,
        data => <<EOF,
-userdel	2 9457,18612 9279,18724
+userdel	2 9457,18612 9366,18669 9279,18724
 userdel	2 9565,18555 9821,18392 9881,18354
 EOF
        text  => 'Heinrich-Mann-Straße Berlin-Reinickendorf Richtung Berlin-Pankow Zwischen Heinrich-Mann-Straße und Grabbeallee Störungen durch geplatzte Wasserleitung, Straße gesperrt',
@@ -1059,7 +1059,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_82',
        data  => <<EOF,
-userdel	1 12442,20805 12030,20490
+userdel	1 12442,20805 12222,20637 12118,20557 12030,20490
 EOF
      },
      { from  => 1098309600, # 2004-10-21 00:00
@@ -2394,7 +2394,7 @@ EOF
        text  => 'Rudower Str. (Treptow) Richtung stadteinwärts zwischen Köpenicker Str. und Wegedornstr. Baustelle, Fahrtrichtung gesperrt, Einbahnstraße in Richtung Köpenicker Str. (bis 05.08.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 19771,1793 19564,1871 19266,1968 19055,2037 18881,2062
+userdel	q4; 19771,1793 19743,1804 19564,1871 19266,1968 19181,1996 19164,2001 19055,2037 18985,2047 18881,2062
 EOF
      },
      { from  => 1122415200, # 2005-07-27 00:00
@@ -3836,7 +3836,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS_1142967727545',
        data  => <<EOF,
-userdel	q4 25012,5754 24700,5633 23950,5342
+userdel	q4 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 23950,5342
 userdel	q4 25012,5754 25018,5756 25121,5799
 userdel	q4 25579,5958 25121,5799
 EOF
@@ -5999,7 +5999,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003701',
        data  => <<EOF,
-userdel	2::temp 7587,17532 7540,17675 7500,17796 7487,17836 7466,17904 7445,17968 7439,17985 7418,18051 7350,18262 7232,18572
+userdel	2::temp 7587,17532 7540,17675 7500,17796 7487,17836 7466,17904 7445,17968 7439,17985 7418,18051 7350,18262 7299,18395 7274,18462 7232,18572
 EOF
      },
      { from  => 1221024854, #  undef
@@ -6631,7 +6631,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004066',
        data  => <<EOF,
-userdel	2::inwork 25585,6050 25776,6054 26221,6229 28794,7219 29168,7350
+userdel	2::inwork 25585,6050 25776,6054 25967,6125 26139,6188 26247,6228 28794,7219 29168,7350
 EOF
      },
      { from  => 1163286000, # 2006-11-12 00:00
@@ -7122,7 +7122,7 @@ EOF
        text  => 'Fürstenwalder Damm, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Baustelle bis 30.03.2007 (im Bereich Einmündung Mühlweg) ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 25012,5754 24700,5633 23950,5342
+userdel	q4::inwork 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 23950,5342
 EOF
      },
      { from  => 1172530621, # 2007-02-26 23:57
@@ -8424,7 +8424,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005680',
        data  => <<EOF,
-userdel	1::inwork 2029,20331 2241,20487
+userdel	1::inwork 2029,20331 2131,20406 2241,20487
 EOF
      },
      { from  => 1181165074, # undef
@@ -9028,7 +9028,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006066',
        data  => <<EOF,
-userdel	2::inwork 30087,5448 30021,5322
+userdel	2::inwork 30090,5436 30041,5329
 EOF
      },
      { from  => 1184450400, # 2007-07-15 00:00
@@ -9202,7 +9202,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006194',
        data  => <<EOF,
-userdel	1::inwork 10138,20840 10119,20731 10063,20493
+userdel	1::inwork 10138,20840 10119,20731 10115,20714 10063,20493
 EOF
      },
      { from  => 1185833817, # 2007-07-31 00:16
@@ -9238,7 +9238,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006189',
        data  => <<EOF,
-userdel	1::inwork 5320,21432 5311,21495 5136,21738
+userdel	1::inwork 5320,21432 5311,21495 5210,21636 5136,21738
 EOF
      },
      { from  => 1187647200, # 2007-08-21 00:00
@@ -9518,7 +9518,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006352',
        data  => <<EOF,
-userdel	1::inwork 5320,21432 5311,21495 5136,21738
+userdel	1::inwork 5320,21432 5311,21495 5210,21636 5136,21738
 EOF
      },
      { from  => 1188240671, # 
@@ -11890,7 +11890,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009340',
        data  => <<EOF,
-userdel	1::inwork 9279,18724 9457,18612
+userdel	1::inwork 9279,18724 9366,18669 9457,18612
 EOF
      },
      { from  => 1216159200, # 2008-07-16 00:00
@@ -12511,7 +12511,7 @@ EOF
        data  => <<EOF,
 userdel	2::inwork 20673,-31 20590,-120 20519,-198
 userdel	2::inwork 20688,-10 20684,105 20719,140
-userdel	2::inwork 20161,-487 20348,-380 20476,-279 20505,-217
+userdel	2::inwork 20161,-487 20300,-416 20348,-380 20476,-279 20505,-217
 EOF
      },
      { from  => 1217714400, # 2008-08-03 00:00
@@ -12703,7 +12703,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010134',
        data  => <<EOF,
-userdel	2::inwork 22172,194 22168,-71 22177,-137 22190,-228
+userdel	2::inwork 22172,194 22169,14 22168,-71 22177,-137 22190,-228
 EOF
      },
      { from  => 1224799200, # 2008-10-24 00:00
@@ -12909,7 +12909,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010134',
        data  => <<EOF,
-userdel	2::inwork 22172,194 22168,-71 22177,-137
+userdel	2::inwork 22172,194 22169,14 22168,-71 22177,-137
 EOF
      },
      { from  => 1243972540, # 2009-06-02 21:55
@@ -13633,7 +13633,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012136',
        data  => <<EOF,
-userdel	q4::inwork; 2241,20487 2029,20331
+userdel	q4::inwork; 2241,20487 2131,20406 2029,20331
 EOF
      },
      { from  => 1239660000, # 2009-04-14 00:00
@@ -14287,7 +14287,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012907',
        data  => <<EOF,
-userdel	q4::inwork; 12095,20832 12076,20731 12030,20490 12008,20368 11963,20136 11931,19965 11907,19838 11907,19749
+userdel	q4::inwork; 12095,20832 12076,20731 12030,20490 12008,20368 12000,20327 11984,20246 11963,20136 11931,19965 11907,19838 11907,19749
 EOF
      },
      { from  => 1243972705, # 2009-06-02 21:58
@@ -14506,7 +14506,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013223',
        data  => <<EOF,
-userdel	q4::inwork; 7992,20515 8344,20548 8411,20554 8481,20561 8543,20567 8717,20584 8900,20601
+userdel	q4::inwork; 7992,20515 8344,20548 8411,20554 8481,20561 8543,20567 8561,20569 8717,20584 8900,20601
 EOF
      },
      { from  => 1246208018, # 2009-06-28 18:53
