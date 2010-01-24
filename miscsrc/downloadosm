@@ -46,9 +46,10 @@ my $short_osm_download_file_qr =           qr{$ltlnqr,$ltlnqr,$ltlnqr,$ltlnqr\.o
 my $ua = eval {
     require LWP::UserAgent;
     my $ua = LWP::UserAgent->new;
-    $ua->agent("The Hare and the Hedgehog");
+    #$ua->agent("The Hare and the Hedgehog");
+
     ## the download server seems to block this user agent -> use the LWP default
-    #$ua->agent("downloadosm/$VERSION LWP/$LWP::VERSION [part of BBBike]");
+    $ua->agent("downloadosm/$VERSION LWP/$LWP::VERSION [part of BBBike]");
     $ua->default_headers->push_header("Accept-Encoding" => "gzip");
     $ua->timeout(TIMEOUT);
     $ua;
@@ -66,6 +67,7 @@ my $xstep = 0.01;
 my $ystep = 0.01;
 my $do_round;
 my $do_report;
+my $socksproxy;
 
 sub usage () {
     die <<EOF;
@@ -84,6 +86,8 @@ Second form: refresh existing osm files downloaded with this tool
 -round:    make sure bbox is rounded to 1/10 or 1/100 degree
            NOTE: works only with -x/ystep 0.1 or 0.01!
 -report:   just report what URLs would be loaded to STDOUT
+
+-socksproxy=socks://host:port 	set socks proxy
 
 With -reload:
 -minage days: download only files which are older than days days
@@ -107,8 +111,12 @@ GetOptions("reload!" => \$do_reload,
 	   },
 	   "round!" => \$do_round,
 	   "report!" => \$do_report,
+	   "socksproxy=s" => \$socksproxy,
 	  )
     or usage;
+
+&activate_socksproxy($socksproxy) if $socksproxy;
+
 my @reload;
 if ($do_reload) {
     @reload = @ARGV;
@@ -235,6 +243,25 @@ if (@reload) {
 	    my $yend_fix = $y_fix+$ystep_fix;
 	    download_osm_tile($x_fix->numify,$y_fix->numify,$xend_fix->numify,$yend_fix->numify, 0);
 	} 
+    }
+}
+
+sub activate_socksproxy {
+    my $socksproxy = shift;
+
+    if (!$ua) {
+	warn "LWP::UserAgent is not set, ignore socks proxy!\n";
+	return;
+    }
+
+    eval {
+    	require LWP::Protocol::socks;
+    	$ua->proxy([qw(http https)] => $socksproxy);
+    };
+
+    if ($@) {
+    	warn "Cannot load LWP::Protocol::socks, ignore socks proxy...\n";
+	return;
     }
 }
 
