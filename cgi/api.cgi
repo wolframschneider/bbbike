@@ -10,7 +10,7 @@ $ENV{LANG} = 'C';
 
 my $opensearch_file = 'opensearch.streetnames';
 my $opensearch_dir  = '../data-osm';
-my $opensearch_dir2 = '../data-opensearch';
+my $opensearch_dir2 = '../data-opensearch-places';
 
 my $debug         = 2;
 my $match_anyware = 0;
