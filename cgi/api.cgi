@@ -12,7 +12,7 @@ my $opensearch_file = 'opensearch.streetnames';
 my $opensearch_dir  = '../data-osm';
 my $opensearch_dir2 = '../data-opensearch-places';
 
-my $debug         = 2;
+my $debug         = 1;
 my $match_anyware = 0;
 my $match_words   = 1;
 
@@ -191,7 +191,7 @@ my $namespace = $q->param('namespace') || '0';
 
 binmode( \*STDERR, ":utf8" ) if $debug >= 1;
 
-my $expire = $debug ? '+1s' : '+1d';
+my $expire = $debug >=2 ? '+1s' : '+1d';
 print $q->header(
     -type    => 'application/json',
     -charset => 'utf8',
