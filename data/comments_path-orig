@@ -245,7 +245,7 @@ Zufahrt zur Kolonie ist schwierig zu finden (enges Tor)	CP2; 10198,16929 10209,1
 Drängelgitter auf der linken Seite unter der Hochbahn	CP; 10754,16305 10997,16280 11295,16199
 Drängelgitter auf der rechten Seite unter der Hochbahn	CP; 11295,16199 10997,16280 10754,16305
 #: XXX_prog ^^^
-(Scottweg - Tharauer Allee): Weg beginnt links neben dem Garagenparkplatz	CP2; -1403,11279 -1483,11283
+(Scottweg - Tharauer Allee): Weg beginnt links neben dem Garagenparkplatz	CP2; -1403,11279 -1505,11307
 Alexandrinenstr.: Gehweg benutzen, nicht die Straße zu den Parkplätzen	CP2; 10678,11172 10818,11269
 Spreehagen - Langendamm: der Weg startet etwas versteckt direkt hinter dem Ortsausgang Spreenhagen an einer großen Bushaltestelle auf der linken Seite.	CP; 43593,-6607 43695,-6701 43738,-6684
 Ella-Kay-Str. - Danziger Str.: zunächst den linken Gehweg bis zur Ampel an der Winsstr. benutzen	CP; 12089,14891 11990,14714 12040,14688
@@ -311,7 +311,7 @@ Wuhlewanderweg/Landsberger Allee: bereits an der Ringenwalder Str. die Landsberg
 #XXX experiment! Sewanstr. - Bahndamm: An der Kreuzung Am Tierpark/Sewanstr. auf die "Tierpark"-Straßenseite wechseln	PI; 18631,10167 18690,10016 18698,9996 18715,10003 18773,10028
 Bahndamm - Am Tierpark: auf dem linken Gehweg bis zur Ampel Gregoroviusweg fahren	CP; 18773,10028 18715,10003 18698,9996 18737,9901
 #XXX del (lohnt sich nicht; erheblicher Umweg, und wird leider nicht im Routing gut reflektiert) nach links zum Bahndamm abbiegen: bis zur Kreuzung Gregoroviusweg vorfahren und dort die Straße überqueren	PI; 18577,10023 18690,10016 18698,9996 18715,10003 18773,10028
-Treskowallee - Römerweg: bereits an der Ampel Römerweg die Straßenseite wechseln	PI; 18800,9743 18816,9705 19042,9708
+Treskowallee - Römerweg: bereits an der Ampel Römerweg die Straßenseite wechseln	PI; 18800,9743 18816,9705 18994,9707 19042,9708
 #: by: Thiemo Guenther:
 Cyclopstr. - Blomberger Weg: Einfahrt zum Parkplatz OSZ Enährungs-, Hauswirtschaft u. Drucktechnik nehmen	CP2; 5106,21418 5041,21343
 Gürtelstr. - Lehderstr.: Fußgängerampel zum Überqueren der Berliner Allee/Greifswalder Str. benutzen	CP; 13409,15687 13316,15758 13214,15830

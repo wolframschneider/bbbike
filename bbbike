@@ -13694,9 +13694,7 @@ sub show_info {
 	    my(@y) = Karte::Polar::ddd2dms($py);
 	    push @x, $x[0] < 0 ? "W" : "E";
 	    push @y, $y[0] < 0 ? "S" : "N";
-	    my $url = "http://tools.wikimedia.de/~magnus/geo/geohack.php?params=" . join("_", @y, @x) . "_type:landmark_region:DE-BE";
-	    ## Old, not functional anymore:
-	    #my $url = "http://kvaleberg.com/extensions/mapsources/?params=" . join("_", @y, @x) . "_type:landmark_region:DE-BE";
+	    my $url = "http://stable.toolserver.org/geohack/geohack.php?params=" . join("_", @y, @x) . "_type:landmark_region:DE-BE";
 
 	    my $need_indentation;
 	    if ($wikipedia_photo) {
@@ -15922,7 +15920,7 @@ sub show_overview_populate {
 	$overview_canvas->configure(-scrollregion => [@s]);
     }
 
-    $overview_canvas->createLine(0,0,0,0,-tags => 'zoomrect');
+    $overview_canvas->createLine(0,0,0,0,-fill => 'red', -tags => 'zoomrect');
     $overview_top->gridColumnconfigure(0, -weight => 1);
     $overview_top->gridRowconfigure(0, -weight => 1);
     $overview_canvas->grid(-row => 0, -column => 0, -sticky => 'eswn');
