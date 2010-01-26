@@ -8,6 +8,9 @@ use strict;
 
 $ENV{LANG} = 'C';
 
+# how many streets to suggestest
+my $max_suggestions = 32;
+
 my $opensearch_file = 'opensearch.streetnames';
 my $opensearch_dir  = '../data-osm';
 my $opensearch_dir2 = '../data-opensearch-places';
@@ -110,7 +113,7 @@ sub streetnames_suggestions {
     my %args   = @_;
     my $city   = $args{'city'};
     my $street = $args{'street'};
-    my $limit  = 16;
+    my $limit  = $max_suggestions;
 
     $street =~ s/([()|{}\]\[])/\\$1/;
 
