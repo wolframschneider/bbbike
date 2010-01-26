@@ -1249,11 +1249,17 @@ if (defined $q->param('begin')) {
     }
 } elsif (((defined $q->param('startname') and $q->param('startname') ne '')
 	  or
-	  (defined $q->param('startc') and $q->param('startc') ne ''))
+	  (defined $q->param('startc') and $q->param('startc') ne '')
+ 	  or
+	  (defined $q->param('start') and $q->param('start') ne '')
+	)
 	 and
 	 ((defined $q->param('zielname')  and $q->param('zielname')  ne '')
 	  or
-	  (defined $q->param('zielc') and $q->param('zielc') ne ''))
+	  (defined $q->param('zielc') and $q->param('zielc') ne '')
+	  or
+	  (defined $q->param('ziel') and $q->param('ziel') ne '')
+	 )
 	 and
 	 via_not_needed()
 	) {
@@ -2593,7 +2599,7 @@ sub choose_ch_form {
 sub get_kreuzung {
     my($start_str, $via_str, $ziel_str) = @_;
     if (!defined $start_str) {
-	$start_str = $q->param('startname');
+	$start_str = $q->param('startname') || $q->param('start');
     }
     if (!defined $via_str) {
 	$via_str = $q->param('vianame');
@@ -2602,8 +2608,9 @@ sub get_kreuzung {
 	undef $via_str;
     }
     if (!defined $ziel_str) {
-	$ziel_str  = $q->param('zielname');
+	$ziel_str  = $q->param('zielname') ||  $q->param('ziel');
     }
+
     my $start_plz = $q->param('startplz');
     my $via_plz   = $q->param('viaplz');
     my $ziel_plz  = $q->param('zielplz');
