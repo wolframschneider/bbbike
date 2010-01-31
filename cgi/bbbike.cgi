@@ -6431,7 +6431,7 @@ sub header {
 	print "<h1>BBBike</h1>";
     }
     if ($with_lang_switch) { # && defined $from && $from eq 'chooseform-start') {
-        my $query_string = CGI->new($q)->query_string;
+        my $query_string = $q->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
 	print qq{<div style="position:absolute; top:5px; right:10px;">};
