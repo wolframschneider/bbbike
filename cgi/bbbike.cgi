@@ -5582,6 +5582,7 @@ EOF
     # Browsern.
     header(#-script => $script,
 	   #-onLoad => 'jump_to_map()'
+	   -from => 'map',
 	  );
     if ($lang eq 'en') {
 	print "Choose <b><a name='mapbegin'>" . M(ucfirst($type)) . "</a></b>:<br>\n";
@@ -6430,7 +6431,7 @@ sub header {
 	print $q->start_html;
 	print "<h1>BBBike</h1>";
     }
-    if ($with_lang_switch) { # && defined $from && $from eq 'chooseform-start') {
+    if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$})) {
         my $query_string = $q->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
@@ -6842,23 +6843,35 @@ sub get_nearest_crossing_coords {
 		    # Hopefully we'll get one after incrementing the scope,
 		    # see below.
 		} else {
-		    my $delta = 1;
-		    while() {
-			my $before_xy = $street_coords[$start_index-$delta];
-			my $after_xy  = $street_coords[$start_index+$delta];
-			if (!$before_xy && !$after_xy) {
-			    warn "Harmless? Cannot find any real crossing in <@street_coords>, scope is <@{[ $q->param('scope') ]}>";
+		    my $before_xy;
+		    my $after_xy;
+		    for(my $i=$start_index-1; $i >= 0; $i--) {
+			if ($kr->crossing_exists($street_coords[$i])) {
+			    $before_xy = $street_coords[$i];
 			    last;
 			}
-			if ($before_xy && $kr->crossing_exists($before_xy)) {
+		    }
+		    for(my $i=$start_index+1; $i <= $#street_coords; $i++) {
+			if ($kr->crossing_exists($street_coords[$i])) {
+			    $after_xy = $street_coords[$i];
+			    last;
+			}
+		    }
+		    if (!$before_xy && !$after_xy) {
+			warn "Harmless? Cannot find any real crossing in <@street_coords>, scope is <@{[ $q->param('scope') ]}>";
+		    } else {
+			if ($after_xy && $before_xy) {
+			    # choose nearest
+			    if (Strassen::Util::strecke_s("$x,$y", $before_xy) < Strassen::Util::strecke_s("$x,$y", $after_xy)) {
+				$xy = $before_xy;
+			    } else {
+				$xy = $after_xy;
+			    }
+			} elsif ($before_xy) {
 			    $xy = $before_xy;
-			    last;
-			}
-			if ($after_xy && $kr->crossing_exists($after_xy)) {
+			} elsif ($after_xy) {
 			    $xy = $after_xy;
-			    last;
 			}
-			$delta++;
 		    }
 		}
 
@@ -7293,7 +7306,7 @@ sub experimental_label {
 #
 sub show_info {
     http_header(@weak_cache);
-    header();
+    header(-from => 'info');
     my $perl_url = "http://www.perl.org/";
     my $cpan = "http://www.cpan.org/";
     my $scpan = "http://search.cpan.org/search?mode=module&amp;query=";
