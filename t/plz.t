@@ -2,10 +2,9 @@
 # -*- perl -*-
 
 #
-# $Id: plz.t,v 1.40 2009/04/22 19:53:51 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998,2002,2003,2004,2006,2007 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998,2002,2003,2004,2006,2007,2010 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -87,7 +86,7 @@ if (!GetOptions("create!" => \$create,
 if ($create) {
     plan 'no_plan';
 } else {
-    plan tests => 162 + scalar(@approx_tests)*4;
+    plan tests => 166 + scalar(@approx_tests)*4;
 }
 
 # XXX auch Test mit ! -small
@@ -267,6 +266,14 @@ for my $noextern (@extern_order) {
 	is($res[0]->[PLZ::LOOK_CITYPART], 'Mitte');
 	is($res[0]->[PLZ::LOOK_ZIP], 10117);
 
+	{
+	    my $utf8_citypart = "Weißensee";
+	    utf8::upgrade($utf8_citypart);
+	    @res = $plz->look("Gustav-Adolf-Str.", Citypart => $utf8_citypart, Max => 1);
+	    is($res[0]->[PLZ::LOOK_NAME], 'Gustav-Adolf-Str.', "utf8-ified citypart");
+	    is(scalar @res, 1, 'Max limit');
+	}
+
 	@res = $plz->look_loop(PLZ::split_street("Heerstr. 1"),
 			       @standard_look_loop_args);
 	is(scalar @{$res[0]}, 7, "Hits for Heerstr.")
@@ -368,20 +375,13 @@ for my $noextern (@extern_order) {
 	   "U-Bahnhof")
 	    or diag $dump->(\@res);
 
-    XXX:
 	@res = $plz->look_loop("S-Bhf. Grünau",
 			       @standard_look_loop_args);
 	is(!!(grep { $_->[PLZ::LOOK_NAME] eq 'S-Bhf Grünau' } @{$res[0]}), 1,
 	   "S-Bhf with dot, should find Grünau")
 	    or diag $dump->(\@res);
-	{
-	    local $TODO = <<EOF;
-The S-Bhf. -> S-Bhf translation exists in PLZ.pm, but is called to late.
-Maybe unambiguous translations (= normalizations) should be done quite
-early?
-EOF
-	    is(scalar(@res), 1, "S-Bhf with dot, should be exact");
-	}
+	is(scalar(@{$res[0]}), 1, "S-Bhf with dot, should be exact")
+	    or diag $dump->(\@res);
 
 	@res = $plz->look_loop("u weberwiese",
 			       @standard_look_loop_args);
@@ -425,14 +425,11 @@ EOF
 	   "U+S-Bahnhof, long form (unusual order)")
 	    or diag $dump->(\@res);
 
-	{
-	    local $TODO = "Does not work yet";
-	    @res = $plz->look_loop("u+s bahnhof friedrichstr.",
-				   @standard_look_loop_args);
-	    is(!!(grep { $_->[PLZ::LOOK_NAME] eq 'S-Bhf Friedrichstr.' } @{$res[0]}), 1,
-	       "U+S Bahnhof, long form with space (unusual order)")
-		or diag $dump->(\@res);
-	}
+	@res = $plz->look_loop("u+s bahnhof friedrichstr.",
+			       @standard_look_loop_args);
+	is(!!(grep { $_->[PLZ::LOOK_NAME] eq 'S-Bhf Friedrichstr.' } @{$res[0]}), 1,
+	   "U+S Bahnhof, long form with space (unusual order)")
+	    or diag $dump->(\@res);
 
 	@res = $plz->look_loop("s-bahnhof heerstr",
 			       @standard_look_loop_args);
@@ -446,14 +443,11 @@ EOF
 	   "S-Bahnhof (Grunewald), long form")
 	    or diag $dump->(\@res);
 
-	{
-	    local $TODO = "Does not work yet";
-	    @res = $plz->look_loop("s bahnhof grunewald",
-				   @standard_look_loop_args);
-	    is(!!(grep { $_->[PLZ::LOOK_NAME] eq 'S-Bhf Grunewald' } @{$res[0]}), 1,
-	       "S Bahnhof (Grunewald), long form with space")
-		or diag $dump->(\@res);
-	}
+	@res = $plz->look_loop("s bahnhof grunewald",
+			       @standard_look_loop_args);
+	is(!!(grep { $_->[PLZ::LOOK_NAME] eq 'S-Bhf Grunewald' } @{$res[0]}), 1,
+	   "S Bahnhof (Grunewald), long form with space")
+	    or diag $dump->(\@res);
 
 	# A complaint by alh (but obsolete now):
 	@res = $plz->look_loop("lehrter bahnhof",
@@ -556,12 +550,13 @@ EOF
 	cmp_ok($hits, "<=", 4, "not too much hits ($hits)")
 	    or diag $dump->(\@res);
 
+    XXX:
 	{
-	    local $TODO = "Should get all four Eichenstr. in Berlin";
+	    local $TODO = "But gets only two which have an 'a' near the beginning of the citypart name";
 
 	    @res = $plz->look_loop("Eichenstraße 1 A", @standard_look_loop_args);
 	    my $hits = scalar @{$res[0]};
-	    cmp_ok($hits, ">=", 4, "Should get not only Eichenstraße in Mahlsdorf (hits=$hits)")
+	    cmp_ok($hits, ">=", 4, "Should get all four Eichenstr. in Berlin (hits=$hits)")
 		or diag $dump->(\@res);
 	}
 
