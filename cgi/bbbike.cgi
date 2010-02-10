@@ -968,6 +968,12 @@ if (0 && $bi->{'wap_browser'}) {
     print $q->redirect($WAP_URL || $BBBike::BBBIKE_WAP);
     my_exit(0);
 }
+# Die nervigen Java-Robots... wenn sie wenigstens korrekt crawlen
+# würden und robots.txt beachten würden...
+if ($q->user_agent =~ m{^Java/1\.} && ($q->query_string||'') eq '') {
+    print $q->redirect("$BBBike::BBBIKE_WWW/BBBike/html/bbbike_small.html");
+    my_exit(0);
+}
 
 undef $bp_obj;
 init_bikepower($q);
@@ -4479,7 +4485,11 @@ EOF
 	    } else {
 		print $ampel_count . " " . M("Ampel" . ($ampel_count == 1 ? "" : "n"));
 	    }
-	    print " " . M("auf der Strecke") . " (" . M("in die Fahrzeit einbezogen") . ").$fontend<br>\n";
+	    print " " . M("auf der Strecke");
+	    if ($ampel_count) {
+		print " (" . M("in die Fahrzeit einbezogen") . ")";
+	    }
+	    print ".$fontend<br>\n";
 	}
 	print "</center>\n" unless $printmode;
 	print "<hr>";
