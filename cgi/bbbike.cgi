@@ -106,7 +106,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_google_analytics
 	    $with_green_ways
             $no_teaser
-            $slippymap_zoom
+            $slippymap_zoom $slippymap_zoom_maponly
 	   );
 
 # XXX This may be removed one day
@@ -716,7 +716,8 @@ eval { local $SIG{'__DIE__'};
 $no_berlinmap = 1 if $osm_data;
 warn "osm_data: $osm_data, show_mini_map: $show_mini_map/$show_mini_googlemap, no_berlin_map: $no_berlinmap, enable_opensearch_suggestions: $enable_opensearch_suggestions\n" if $VERBOSE; 
 
-$slippymap_zoom = 3 if $slippymap_zoom <= 0;
+$slippymap_zoom = 5 if $slippymap_zoom <= 0;
+$slippymap_zoom_maponly = 4 if $slippymap_zoom <= 0;
 
 
 # Post-config adjustments:
@@ -4837,7 +4838,7 @@ EOF
 
             my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
 
-	    print qq{<span class="slippymaplink"><a target="_slippymap" href="slippymap.cgi?maponly=0&amp;coordsystem=polar&amp;maptype=hybrid&amp;city=$cityname&amp;source_script=$cityname.cgi&amp;coordsystem=wgs84&amp;zoom=$slippymap_zoom&amp;coords=$string_rep" title="Open slippy map in external window">Map only</a></span>} if $show_mini_googlemap;
+	    print qq{<span class="slippymaplink"><a target="_slippymap" href="slippymap.cgi?maponly=0&amp;coordsystem=polar&amp;maptype=hybrid&amp;city=$cityname&amp;source_script=$cityname.cgi&amp;coordsystem=wgs84&amp;zoom=$slippymap_zoom_maponly&amp;coords=$string_rep" title="Open slippy map in external window">Map only</a></span>} if $show_mini_googlemap;
 
             if ($show_mini_googlemap) {
 	         print qq{<iframe src="slippymap.cgi?maponly=1&amp;coordsystem=polar&amp;maptype=hybrid&amp;city=$cityname&amp;source_script=$cityname.cgi&amp;coordsystem=wgs84&amp;zoom=$slippymap_zoom&amp;coords=$string_rep" title="slippy map" width="100%" height="505" scrolling="no" border="0"></iframe><p/>} if $show_mini_googlemap;
