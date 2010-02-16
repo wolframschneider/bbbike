@@ -4605,7 +4605,7 @@ EOF
 					} elsif ($rw_rec eq 'RW5') {
 					    $rw = "BS"; # Busspur
 					} elsif ($rw_rec eq 'RW10') {
-					    $rw = "NS"; # Nebenstraße
+					    $rw = "NF"; # Nebenfahrbahn
 					}
 				    }
 				    $longest_rw = $rw;
@@ -4620,7 +4620,7 @@ EOF
 			if ($cat) {
 			    my $cat_title = { NN => "Weg ohne Kfz",
 					      N  => "Nebenstraße",
-					      NH => "wichtige Hauptstraße",
+					      NH => "wichtige Nebenstraße",
 					      H  => "Hauptstraße",
 					      HH => "wichtige Hauptstraße",
 					      B  => "Bundesstraße",
@@ -4630,7 +4630,7 @@ EOF
 			    if ($rw) {
 				$rw_title = { RW => "Radweg/spur",
 					      BS => "Busspur",
-					      NS => "Nebenstraße", # XXX bessere Bezeichnung? Nebenfahrbahn? Separate Fahrbahn?
+					      NF => "Nebenfahrbahn",
 					    }->{$rw};
 			    }
 			    my $title = $cat_title;

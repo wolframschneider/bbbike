@@ -1,4 +1,4 @@
-# -*- bbbike -*-
+# -*- mode: bbbike; coding: iso-8859-1 -*-
 # temp-blocking
 # XXX undef old entries
 # iso2epoch: date -j 2004MMDDhhmm +%s
@@ -3573,7 +3573,7 @@ EOF
        text  => 'B 096 a Brücke über DB AG zw. Glasower Str. u. Waßmannsdorfer Ch. Brückenneubau Vollsperrung * 29.01.2006-29.01.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 13289,-4660 13655,-4831
+	2 13237,-4511 13677,-4801
 EOF
      },
      { from  => 1141340400, # 2006-03-03 00:00
@@ -4728,7 +4728,7 @@ EOF
        text  => 'K 6162 OL Waltersdorf, Siedlung Kienberg, Bau der BAB 113n, Vollsperrung 19.06.2006-30.06.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 20575,-3680 20265,-3849
+userdel	2 20367,-3844 20265,-3849
 EOF
      },
      { from  => 1150395890, # 2006-06-15 20:24
@@ -5546,7 +5546,7 @@ EOF
      },
      { from  => 1156454823, # 2006-08-24 23:27
        until => 1156802399, # 2006-08-28 23:59
-       text  => 'Vom 26. August 2006, 13 Uhr bis zum 28. August 2006, 4 Uhr ist der Verkehr in der Möllendorffstraße im Abschnitt zwischen der Straße Am Containerbahnhof und der Frankfurter Allee gesperrt.',
+       text  => 'Vom 26. August 2006, 13 Uhr bis zum 28. August 2006, 4 Uhr ist der Verkehr in der Möllendorffstraße im Abschnitt zwischen der Straße Am Containerbahnhof und der Frankfurter Allee gesperrt.',
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::inwork; 15361,12071
@@ -11017,7 +11017,8 @@ EOF
        text  => 'L 075 Tollkrug - Selchow - Waßmannsdorf OD Selchow Straßenbauarbeiten Vollsperrung 25.03.2008-01.07.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 15355,-5280 15568,-5323 15771,-5575 15867,-5823 15987,-6248 16190,-6406
+userdel	q4::inwork 15355,-5280 15568,-5323 15771,-5575 15867,-5823 15889,-5898
+#XXX del wegen BBI: userdel	q4::inwork 15889,-5898 15987,-6248 16190,-6406
 EOF
      },
      { from  => 1205017200, # 2008-03-09 00:00
@@ -13825,7 +13826,7 @@ EOF
        text  => 'L 075 Mahlow - Großziethen zw. Kreuzg. B96A u. Kleinziethen Deckeninstandsetzung Vollsperrung 27.04.2009-15.05.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 13506,-2809 13373,-3234 13321,-3678 13301,-4355 13215,-4564 13289,-4660
+userdel	2::inwork 13506,-2809 13373,-3234 13321,-3678 13301,-4355 13237,-4511 13215,-4564 13289,-4660
 EOF
      },
      { from  => 1240783200, # 2009-04-27 00:00
@@ -16635,12 +16636,11 @@ EOF
 	2::temp 6694,12627 7039,12314
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1266162973, # 
+       until => 1266162978, # XXX undef
        text  => 'Glasbläserallee wegen Bauarbeiten gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2009-12-27
 userdel	2::inwork 14835,10272 14888,10385
 EOF
      },
