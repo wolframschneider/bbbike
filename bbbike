@@ -10474,8 +10474,9 @@ sub _line_shorten {
     }
 }
 
-sub line_shorten     { _line_shorten(shift, 1, 1) }
-sub line_shorten_end { _line_shorten(shift, 0, 1) }
+sub line_shorten_begin { _line_shorten(shift, 1, 0) }
+sub line_shorten       { _line_shorten(shift, 1, 1) }
+sub line_shorten_end   { _line_shorten(shift, 0, 1) }
 
 sub get_temp_blockings_files {
     my $temp_blockings_dir = "$datadir/temp_blockings";
@@ -15971,7 +15972,7 @@ sub show_overview_populate {
 			 -tags => 'berlinarrow');
 		    $overview_canvas->createText
 			($ix1, $iy1,
-			 -anchor => BBBikeCalc::opposite_direction(BBBikeCalc::line_to_canvas_direction
+			 -anchor => BBBikeCalc::canvas_translation(BBBikeCalc::line_to_canvas_direction
 								   ($ix1,$iy1,$ix2,$iy2)),
 			 -text => "$center_name\n".sprintf("%d km", $entf/1000),
 			 -fill => "red",

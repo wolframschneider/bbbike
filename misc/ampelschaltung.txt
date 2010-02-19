@@ -80,7 +80,7 @@ Sa, 24.10.1998
 9229,8785     Te-Damm/Columbiadamm (Auto)        S->N   70  19:20:34  19:21:01
 9229,8785     Te-Damm/Columbiadamm (Rad)         S->N                 +5/10s?
 9229,8718     Te-Damm/Manfred-v.-Richthofens.    N->S   70  19:21:31  19:21:04
-              Mehringdamm/Fidicinstr.            S->N   ?   19:23:17  19:23:42
+9225,9038     Mehringdamm/Fidicinstr.            S->N       19:23:17  19:23:42
 9248,9350     Mehringdamm/Kreuzbergs. (Auto)     S->N   70  19:24:38  19:25:10
 9248,9350     Mehringdamm/Kreuzbergs. (Rad)      S->N                 +5s
 9793,9241     Bergmannstr./Friesenstr.           W->S   70  19:31:20  19:28:21
@@ -231,7 +231,7 @@ Di, 27.10.1998
 # Punkt	      Kreuzung                           Dir    Zyk grün      rot
 # ----------------------------------------------------------------------------
 Do, 29.10.1998
-              Mehringdamm/Fidicinstr.            S->N       14:25:49  14:25:15
+9225,9038     Mehringdamm/Fidicinstr.            S->N       14:25:49  14:25:15
 9248,9350     Mehringdamm/Kreuzbergstr.          S->N       14:26:12
 9334,9670     Mehringdamm/Gneisenaustr.          S->N       14:27:53  14:27:13
 9448,10014    Mehringdamm/Blücherstr.            S->N       14:28:52
@@ -257,7 +257,7 @@ Do, 29.10.1998
 9334,9670     Mehringdamm/Gneisenaustr.          S->N       19:53:54
 9552,9602     Gneisenaustr/Nostitzstr            W->O       19:54:38
 9790,9528     Gneisenaustr/Zossener Str.         W->O                 19:55:23
-	      Gneisenaustr/Mittenwalder Str.	 W->O		      19:55:35
+9937,9484     Gneisenaustr/Mittenwalder Str.     W->O                 19:55:35
 10198,9405    Gneisenaustr/Baerwaldstr.          W->O       19:56:25
 10564,9292    Gneisenaustr/Südstern 1            W->O       19:57:53  19:57:20
 10713,9260    Gneisenaustr/Südstern 2            W->O                 19:58:25
@@ -451,7 +451,7 @@ Di, 10.11.1998
 6223,10634    Wittenbergplatz                    W->O       18:18:23  18:17:54
 6353,10583    Kleiststr/Bayreuther Str.          W->O       18:18:34
 6532,10529    Kleiststr/An der Urania            W->O       18:19:31  18:18:49
-	      Kleiststr/Motzstr.		 W->O	    18:20:49
+6937,10363    Kleiststr/Motzstr.                 W->O       18:20:49
 7033,10328    Kleiststr/Maaßenstr.               W->O   60  18:21:09  18:21:24
 7413,10244    Bülowstr/Frobenstr.                W->O       18:22:36
 7866,9918     Dennewitzplatz                     N->S       18:25:10
@@ -1413,12 +1413,214 @@ Mi, 09.12.2009
 13919,10583   Stralauer Allee/Modersohnstr.      W->O   90? 42        48
 
 # Punkt	      Kreuzung                           Dir    Zyk grün      rot
-#
-----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 Fr, 11.12.2009
 # ca. 09:20
 # Sekunden gezählt
 11768,12006   Holzmarktstr/Lichtenberger         N->S   55? 10        45
+
+#WPTFILE: /home/e/eserte/src/bbbike/misc/gps_data/ampelschaltung/20100216.wpt
+# Punkt       Kreuzung                           Dir    Zyk grün      rot
+# ----------------------------------------------------------------------------
+Di, 16.02.2010
+14024,10861                                      N->S                 10:35:40
+13596,10722   Stralauer Allee/Ehrenbergstr.      N->S       10:37:57
+13332,10832   Am Oberbaum/Stralauer Allee/Warsc  O->W                 10:38:25
+12985,10665   Skalitzer Str./Oberbaumstr./Schle  O->W       10:39:56
+11949,10414   Skalitzer Str./Oranienstr./Manteu  O->W       10:42:57
+11671,10402   Skalitzer Str./Mariannenstr.       O->W                 10:43:37
+11671,10402   Skalitzer Str./Mariannenstr.       O->W       10:44:13
+11393,10390   Skalitzer Str./Reichenberger Str.  O->W       10:45:20
+10605,10312   Gitschiner Str./Prinzenstr.        O->W       10:46:42
+10605,10312   Gitschiner Str./Prinzenstr.        O->W                 10:47:14
+10122,10294   Gitschiner Str./Alexandrinenstr.   O->W       10:48:29
+9873,10285    Zossener Str./(Zossener Brücke -   O->W       10:48:56
+9865,10227    Zossener Str./Waterloo-Ufer/Gitsc  N->S       10:49:43
+9827,10051    Blücherstr./(Blücherplatz - Zosse  N->S       10:50:08
+9790,9528     Gneisenaustr./Zossener Str.        N->S       10:51:28
+9753,9252     Bergmannstr./Zossener Str.         N->S                 10:51:48
+9753,9252     Bergmannstr./Zossener Str.         N->S       10:52:37
+9489,9309                                        O->W       10:53:10
+9248,9350     Mehringdamm/Kreuzbergstr./Bergman  O->W       10:53:35
+9248,9350     Mehringdamm/Kreuzbergstr./Bergman  O->W                 10:53:50
+9248,9350     Mehringdamm/Kreuzbergstr./Bergman  O->W       10:54:45
+9489,9309                                        W->O                 18:46:07
+9489,9309                                        W->O       18:46:30
+9753,9252     Bergmannstr./Zossener Str.         W->O                 18:46:43
+9753,9252     Bergmannstr./Zossener Str.         W->O       18:47:19
+10713,9260    Lilienthalstr./Südstern/Körtestr.  SW->NO               18:51:26
+11141,9732    Grimmstr./Dieffenbachstr.          SW->NO     18:54:21
+11543,10015   Kottbusser Brücke/Kottbusser Damm  W->O                 18:56:32
+11543,10015   Kottbusser Brücke/Kottbusser Damm  W->O       18:57:30
+11616,10288   Reichenberger Str./Mariannenstr.   S->N       18:58:33
+11616,10288   Reichenberger Str./Mariannenstr.   S->N       18:59:07
+11671,10402   Skalitzer Str./Mariannenstr.       S->N       18:59:37
+11949,10414   Skalitzer Str./Oranienstr./Manteu  W->O                 19:01:03
+12731,10547   Skalitzer Str./Lübbener Str./Wran  W->O       19:04:30
+13028,10629   Oberbaumstr./Schlesische Str./Opp  SW->NO     19:05:21
+13332,10832   Am Oberbaum/Stralauer Allee/Warsc  S->N       19:06:43
+13596,10722   Stralauer Allee/Ehrenbergstr.      W->O                 19:06:59
+13596,10722   Stralauer Allee/Ehrenbergstr.      W->O       19:07:44
+13596,10722   Stralauer Allee/Ehrenbergstr.      W->N       19:08:18
+14007,10802   Modersohnstr./Corinthstr./Am Rudo  W->O       19:09:32
+14139,11269   Revaler Str./Modersohnstr.         S->N                 19:11:30
+14139,11269   Revaler Str./Modersohnstr.         S->N       19:12:17
+14211,11552   Wühlischstr./Gärtnerstr.           S->N                 19:12:43
+
+#WPTFILE: /home/e/eserte/src/bbbike/misc/gps_data/ampelschaltung/20100217.wpt
+# Punkt       Kreuzung                           Dir    Zyk grün      rot
+# ----------------------------------------------------------------------------
+Mi, 17.02.2010
+14139,11269   Revaler Str./Modersohnstr.         N->S       09:30:07
+13596,10722   Stralauer Allee/Ehrenbergstr.      N->S                 09:33:38
+13596,10722   Stralauer Allee/Ehrenbergstr.      N->S       09:34:37
+13332,10832   Am Oberbaum/Stralauer Allee/Warsc  O->W                 09:35:05
+12985,10665   Skalitzer Str./Oberbaumstr./Schle  O->W       09:37:17
+12274,10436   Skalitzer Str./Spreewaldplatz      O->W                 09:38:41
+12274,10436   Skalitzer Str./Spreewaldplatz      O->W       09:39:09
+11949,10414   Skalitzer Str./Oranienstr./Manteu  O->W       09:40:19
+11671,10402   Skalitzer Str./Mariannenstr.       O->W       09:40:53
+11616,10288   Reichenberger Str./Mariannenstr.   N->S                 09:41:52
+11616,10288   Reichenberger Str./Mariannenstr.   N->S       09:42:18
+11512,10105   Kottbusser Str./Mariannenstr./Pau  NO->S      09:42:53
+11543,10015   Kottbusser Brücke/Kottbusser Damm  N->S       09:43:23
+11089,9751    Grimmstr./Dieffenbachstr.          N->S       09:45:41
+11023,9597    Körtestr./Urbanstr./Grimmstr.      N->S       09:46:06
+9753,9252     Bergmannstr./Zossener Str.         N->S       09:51:37
+9489,9309                                        O->W                 09:52:06
+9248,9350     Mehringdamm/Kreuzbergstr./Bergman  O->W       09:52:44
+9248,9350     Mehringdamm/Kreuzbergstr./Bergman  O->W       09:54:04
+9248,9350     Mehringdamm/Kreuzbergstr./Bergman  W->O       12:30:05
+9248,9350     Mehringdamm/Kreuzbergstr./Bergman  W->O                 12:30:20
+9248,9350     Mehringdamm/Kreuzbergstr./Bergman  W->O       12:31:15
+9753,9252     Bergmannstr./Zossener Str.         W->O       18:58:39
+9753,9252     Bergmannstr./Zossener Str.         W->O       18:59:49
+10713,9260    Lilienthalstr./Südstern/Körtestr.  S->N       19:04:31
+11075,9576    Urbanstr./Grimmstr./Fichtestr.     S->N       19:06:05
+11141,9732    Grimmstr./Dieffenbachstr.          S->N                 19:06:22
+11141,9732    Grimmstr./Dieffenbachstr.          S->N       19:06:50
+11543,10015   Kottbusser Brücke/Kottbusser Damm  W->O       19:09:59
+11512,10105   Kottbusser Str./Mariannenstr./Pau  S->N       19:10:21
+11616,10288   Reichenberger Str./Mariannenstr.   S->N       19:11:37
+11671,10402   Skalitzer Str./Mariannenstr.       S->N       19:12:08
+11949,10414   Skalitzer Str./Oranienstr./Manteu  W->O       19:13:11
+13028,10629   Oberbaumstr./Schlesische Str./Opp  SW->O      19:16:41
+13332,10832   Am Oberbaum/Stralauer Allee/Warsc  S->N       19:18:44
+13596,10722   Stralauer Allee/Ehrenbergstr.      W->O       19:19:43
+13596,10722   Stralauer Allee/Ehrenbergstr.      W->N       19:20:18
+14007,10802   Modersohnstr./Corinthstr./Am Rudo  W->O       19:26:01
+14007,10802   Modersohnstr./Corinthstr./Am Rudo  W->O                 19:26:15
+14007,10802   Modersohnstr./Corinthstr./Am Rudo  W->O       19:27:34
+14007,10802   Modersohnstr./Corinthstr./Am Rudo  W->O                 19:27:45
+14139,11269   Revaler Str./Modersohnstr.         S->N                 19:31:01
+14139,11269   Revaler Str./Modersohnstr.         S->N       19:31:47
+14139,11269   Revaler Str./Modersohnstr.         S->N                 19:32:31
+14211,11552   Wühlischstr./Gärtnerstr.           S->N                 19:33:49
+14211,11552   Wühlischstr./Gärtnerstr.           S->N       19:34:26
+14211,11552   Wühlischstr./Gärtnerstr.           S->N                 19:35:13
+
+#WPTFILE: /home/e/eserte/src/bbbike/misc/gps_data/ampelschaltung/20100218.wpt
+# Punkt       Kreuzung                           Dir    Zyk grün      rot
+# ----------------------------------------------------------------------------
+Do, 18.02.2010
+15361,12071   Frankfurter Allee/Möllendorffstr.  S->N       15:54:54
+15361,12071   Frankfurter Allee/Möllendorffstr.  S->N                 15:55:11
+15361,12071   Frankfurter Allee/Möllendorffstr.  S->N       15:56:33
+15361,12071   Frankfurter Allee/Möllendorffstr.  S->N                 15:56:52
+15117,12106   Frankfurter Allee/Pettenkoferstr.  O->W                 15:57:54
+15117,12106   Frankfurter Allee/Pettenkoferstr.  O->W       15:58:27
+15117,12106   Frankfurter Allee/Pettenkoferstr.  O->W                 15:59:34
+15117,12106   Frankfurter Allee/Pettenkoferstr.  O->W       16:00:07
+15361,12071   Frankfurter Allee/Möllendorffstr.  W->O                 16:27:44
+15361,12071   Frankfurter Allee/Möllendorffstr.  W->O       16:28:45
+15361,12071   Frankfurter Allee/Möllendorffstr.  W->N       16:29:29
+15361,12071   Frankfurter Allee/Möllendorffstr.  W->O       16:30:22
+15361,12071   Frankfurter Allee/Möllendorffstr.  W->O                 16:31:09
+15248,11880   Gürtelstr./Scharnweberstr.         N->S       16:31:44
+15248,11880   Gürtelstr./Scharnweberstr.         N->S                 16:32:12
+15248,11880   Gürtelstr./Scharnweberstr.         N->S       16:32:43
+15080,11905   Scharnweberstr./Jessnerstr.        O->W       16:33:40
+15080,11905   Scharnweberstr./Jessnerstr.        O->W                 16:34:03
+15080,11905   Scharnweberstr./Jessnerstr.        O->W       16:34:45
+15248,11880   Gürtelstr./Scharnweberstr.         W->O                 16:35:01
+15248,11880   Gürtelstr./Scharnweberstr.         W->O       16:35:43
+15361,12071   Frankfurter Allee/Möllendorffstr.  S->N       16:36:37
+15361,12071   Frankfurter Allee/Möllendorffstr.  S->N                 16:36:52
+15080,11905   Scharnweberstr./Jessnerstr.        O->W       17:05:25
+
+#WPTFILE: /home/e/eserte/src/bbbike/misc/gps_data/ampelschaltung/20100219.wpt:track1
+# Punkt       Kreuzung                           Dir    Zyk grün      rot
+# ----------------------------------------------------------------------------
+Fr, 19.02.2010
+13541,11355   Warschauer Str./Helsingforser Str  NO->SW     08:52:24
+13454,11119                                      NO->SW               08:55:16
+13332,10832   Am Oberbaum/Stralauer Allee/Warsc  NO->SW     09:00:46
+13332,10832   Am Oberbaum/Stralauer Allee/Warsc  NO->SW               09:01:05
+8982,8781     Dudenstr./Methfesselstr./Mussehls  O->W       09:24:43
+8982,8781     Dudenstr./Methfesselstr./Mussehls  O->W       09:25:53
+8982,8781     Dudenstr./Methfesselstr./Mussehls  O->W                 09:26:26
+
+#WPTFILE: /home/e/eserte/src/bbbike/misc/gps_data/ampelschaltung/20100219.wpt:track2
+# Punkt       Kreuzung                           Dir    Zyk grün      rot
+# ----------------------------------------------------------------------------
+Fr, 19.02.2010
+8625,8174     Loewenhardtdamm/Boelckestr.        N->S       13:13:23
+8625,8174     Loewenhardtdamm/Boelckestr.        N->S                 13:13:39
+8625,8174     Loewenhardtdamm/Boelckestr.        N->S       13:14:13
+8625,8174     Loewenhardtdamm/Boelckestr.        N->S                 13:14:28
+8625,8174     Loewenhardtdamm/Boelckestr.        N->S       13:15:03
+8642,7876     Werner-Voß-Damm/Boelckestr.        N->S                 13:15:44
+8642,7876     Werner-Voß-Damm/Boelckestr.        N->S       13:16:20
+8642,7876     Werner-Voß-Damm/Boelckestr.        N->S                 13:16:35
+8642,7876     Werner-Voß-Damm/Boelckestr.        N->S       13:17:10
+8642,7876     Werner-Voß-Damm/Boelckestr.        N->S                 13:17:24
+8642,7876     Werner-Voß-Damm/Boelckestr.        N->S       13:18:00
+
+#WPTFILE: /home/e/eserte/src/bbbike/misc/gps_data/ampelschaltung/20100219.wpt:track3
+# Punkt       Kreuzung                           Dir    Zyk grün      rot
+# ----------------------------------------------------------------------------
+Fr, 19.02.2010
+8642,7876     Werner-Voß-Damm/Boelckestr.        SW->NO     14:10:56
+8642,7876     Werner-Voß-Damm/Boelckestr.        SW->NO               14:11:06
+8625,8174     Loewenhardtdamm/Boelckestr.        S->N                 14:11:58
+8625,8174     Loewenhardtdamm/Boelckestr.        S->N       14:12:33
+8625,8174     Loewenhardtdamm/Boelckestr.        S->N                 14:12:49
+8625,8174     Loewenhardtdamm/Boelckestr.        S->N       14:13:23
+8625,8174     Loewenhardtdamm/Boelckestr.        S->N                 14:13:38
+8616,8605     Boelckestr./Bayernring             S->N       14:16:12
+8616,8605     Boelckestr./Bayernring             S->N                 14:16:44
+8616,8605     Boelckestr./Bayernring             S->N       14:17:22
+8982,8781     Dudenstr./Methfesselstr./Mussehls  SW->NO     14:19:29
+8982,8781     Dudenstr./Methfesselstr./Mussehls  SW->NO               14:19:41
+8982,8781     Dudenstr./Methfesselstr./Mussehls  SW->NO     14:20:39
+8982,8781     Dudenstr./Methfesselstr./Mussehls  SW->NO               14:20:52
+8982,8781     Dudenstr./Methfesselstr./Mussehls  SW->NO     14:21:49
+8982,8781     Dudenstr./Methfesselstr./Mussehls  SW->NO               14:22:01
+
+#WPTFILE: /home/e/eserte/src/bbbike/misc/gps_data/ampelschaltung/20100219.wpt:track4
+# Punkt       Kreuzung                           Dir    Zyk grün      rot
+# ----------------------------------------------------------------------------
+Fr, 19.02.2010
+8982,8781     Dudenstr./Methfesselstr./Mussehls  NO->SW               19:38:12
+8982,8781     Dudenstr./Methfesselstr./Mussehls  NO->SW     19:39:09
+8982,8781     Dudenstr./Methfesselstr./Mussehls  NO->SW               19:39:21
+9229,8785     Dudenstr./Mehringdamm/Platz der L  W->O       19:40:57
+9229,8785     Dudenstr./Mehringdamm/Platz der L  W->O                 19:41:14
+9229,8785     Dudenstr./Mehringdamm/Platz der L  W->O       19:42:16
+13541,11355   Warschauer Str./Helsingforser Str  S->N       20:09:47
+13541,11355   Warschauer Str./Helsingforser Str  S->N                 20:10:26
+13588,11490   Warschauer Str./Revaler Str.       S->N       20:10:56
+13588,11490   Warschauer Str./Revaler Str.       S->N                 20:11:28
+13588,11490   Warschauer Str./Revaler Str.       S->N       20:12:06
+14139,11269   Revaler Str./Modersohnstr.         W->O                 20:15:38
+14139,11269   Revaler Str./Modersohnstr.         W->O       20:16:32
+14139,11269   Revaler Str./Modersohnstr.         W->O                 20:16:50
+14139,11269   Revaler Str./Modersohnstr.         W->O       20:17:42
+14139,11269   Revaler Str./Modersohnstr.         W->O                 20:17:58
+14211,11552   Wühlischstr./Gärtnerstr.           S->N                 20:18:34
+14211,11552   Wühlischstr./Gärtnerstr.           S->N       20:19:25
+14211,11552   Wühlischstr./Gärtnerstr.           S->N                 20:19:44
+14211,11552   Wühlischstr./Gärtnerstr.           S->N       20:20:19
 
 # Anmerkungen:
 #  Kreuzung:
