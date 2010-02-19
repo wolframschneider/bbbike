@@ -29,7 +29,6 @@ my $use_look = 1;
 # performance tuning, egrep may be faster than perl regex
 my $use_egrep = 1;
 
-
 sub ascii2unicode {
     my $string = shift;
 
@@ -50,21 +49,21 @@ sub street_match {
     }
 
     if ($use_look) {
-	my $look_opt = '-f';
+        my $look_opt = '-f';
 
-	# linux only
+        # linux only
         $look_opt .= 'b' if -e '/proc';
 
-        my @command = ('look', $look_opt, $street, $file);
+        my @command = ( 'look', $look_opt, $street, $file );
 
-        warn join(" ", @command), "\n" if $debug >= 2;
+        warn join( " ", @command ), "\n" if $debug >= 2;
         open( IN, '-|' ) || exec @command;
     }
 
     elsif ($use_egrep) {
-        my @command = ('egrep', '-s', '-m', '2000', '-i', $street, $file);
+        my @command = ( 'egrep', '-s', '-m', '2000', '-i', $street, $file );
 
-        warn join(" ", @command), "\n" if $debug >= 2;
+        warn join( " ", @command ), "\n" if $debug >= 2;
         open( IN, '-|' ) || exec @command;
     }
     else {
@@ -72,33 +71,33 @@ sub street_match {
     }
 
     # to slow
-    binmode(\*IN, ":utf8") if $force_utf8;
+    binmode( \*IN, ":utf8" ) if $force_utf8;
 
     my @data;
     my @data2;
     my $len = length($street);
 
-    my $s = lc($street);
+    my $s        = lc($street);
     my $s_length = length($s);
-    
+
     while (<IN>) {
         chomp;
         my $line = lc($_);
 
         # match from beginning
-        if ($s eq substr($line, 0, $s_length)) {
-	    warn "Prefix streetname match: $street\n" if $debug >= 2;
+        if ( $s eq substr( $line, 0, $s_length ) ) {
+            warn "Prefix streetname match: $street\n" if $debug >= 2;
             push( @data, &ascii2unicode($_) );
         }
 
         elsif ( $match_words && /\b$street/i ) {
-	    warn "Word streetname match: $street\n" if $debug >= 2;
+            warn "Word streetname match: $street\n" if $debug >= 2;
             push( @data, &ascii2unicode($_) );
         }
 
         # or for long words anyware, second class matches
         elsif ( $match_anyware && $len >= 2 && /$s/ ) {
-	    warn "Anywhere streetname match: $street\n" if $debug >= 2;
+            warn "Anywhere streetname match: $street\n" if $debug >= 2;
             push( @data2, &ascii2unicode($_) ) if scalar(@data2) <= $limit * 90;
         }
 
@@ -107,7 +106,8 @@ sub street_match {
 
     close IN;
 
-    warn "data: ", join(" ", @data), " data2: ", join(" ", @data2), "\n" if $debug >= 2;
+    warn "data: ", join( " ", @data ), " data2: ", join( " ", @data2 ), "\n"
+      if $debug >= 2;
     return ( \@data, \@data2 );
 }
 
@@ -197,6 +197,7 @@ sub strip_list {
 # GET /w/api.php?action=opensearch&search=berlin&namespace=0 HTTP/1.1
 
 my $q = new MyCgiSimple;
+
 #use CGI; my $q = new CGI;
 
 my $action    = 'opensearch';
@@ -204,20 +205,23 @@ my $street    = $q->param('search') || $q->param('q') || 'Zähringe';
 my $city      = $q->param('city') || 'Berlin';
 my $namespace = $q->param('namespace') || '0';
 
-if (defined $q->param('debug') && $q->param('debug') >= 0 && $q->param('debug') <= 3) {
-   $debug = $q->param('debug');
+if (   defined $q->param('debug')
+    && $q->param('debug') >= 0
+    && $q->param('debug') <= 3 )
+{
+    $debug = $q->param('debug');
 }
 
 binmode( \*STDERR, ":utf8" ) if $debug >= 1;
 
-my $expire = $debug >=2 ? '+1s' : '+1d';
+my $expire = $debug >= 2 ? '+1s' : '+1d';
 print $q->header(
     -type    => 'application/json',
     -charset => 'utf8',
     -expires => $expire,
 );
 
-binmode(\*STDOUT, ":utf8") if $force_utf8;
+binmode( \*STDOUT, ":utf8" ) if $force_utf8;
 
 my @suggestion =
   &streetnames_suggestions_unique( 'city' => $city, 'street' => $street );
