@@ -4,6 +4,7 @@ use MyCgiSimple;
 
 # use warnings make the script 20% slower!
 #use warnings;
+
 use strict;
 
 $ENV{LANG} = 'C';
@@ -20,7 +21,7 @@ my $match_anyware = 0;
 my $match_words   = 1;
 
 # word matching for utf8 data
-my $force_utf8 = 1;
+my $force_utf8 = 0;
 
 # look(1) is faster than egrep, override use_egrep option
 my $use_look = 1;
@@ -54,13 +55,17 @@ sub street_match {
 	# linux only
         $look_opt .= 'b' if -e '/proc';
 
-        open( IN, '-|' ) || exec 'look', $look_opt, $street,
-          $file;
+        my @command = ('look', $look_opt, $street, $file);
+
+        warn join(" ", @command), "\n" if $debug >= 2;
+        open( IN, '-|' ) || exec @command;
     }
 
     elsif ($use_egrep) {
-        open( IN, '-|' ) || exec 'egrep', '-s', '-m', '2000', '-i', $street,
-          $file;
+        my @command = ('egrep', '-s', '-m', '2000', '-i', $street, $file);
+
+        warn join(" ", @command), "\n" if $debug >= 2;
+        open( IN, '-|' ) || exec @command;
     }
     else {
         if ( !open( IN, $file ) ) { warn "$!: $file\n"; return; }
@@ -72,22 +77,28 @@ sub street_match {
     my @data;
     my @data2;
     my $len = length($street);
+
+    my $s = lc($street);
+    my $s_length = length($s);
+    
     while (<IN>) {
+        chomp;
+        my $line = lc($_);
 
         # match from beginning
-        if (/^$street/i) {
-            chomp;
+        if ($s eq substr($line, 0, $s_length)) {
+	    warn "Prefix streetname match: $street\n" if $debug >= 2;
             push( @data, &ascii2unicode($_) );
         }
 
         elsif ( $match_words && /\b$street/i ) {
-            chomp;
+	    warn "Word streetname match: $street\n" if $debug >= 2;
             push( @data, &ascii2unicode($_) );
         }
 
         # or for long words anyware, second class matches
-        elsif ( $match_anyware && $len >= 2 && /$street/i ) {
-            chomp;
+        elsif ( $match_anyware && $len >= 2 && /$s/ ) {
+	    warn "Anywhere streetname match: $street\n" if $debug >= 2;
             push( @data2, &ascii2unicode($_) ) if scalar(@data2) <= $limit * 90;
         }
 
@@ -96,6 +107,7 @@ sub street_match {
 
     close IN;
 
+    warn "data: ", join(" ", @data), " data2: ", join(" ", @data2), "\n" if $debug >= 2;
     return ( \@data, \@data2 );
 }
 
@@ -188,9 +200,13 @@ my $q = new MyCgiSimple;
 #use CGI; my $q = new CGI;
 
 my $action    = 'opensearch';
-my $street    = $q->param('search') || $q->param('q') || 'gari';
-my $city      = $q->param('city') || 'planet';
+my $street    = $q->param('search') || $q->param('q') || 'Zähringe';
+my $city      = $q->param('city') || 'Berlin';
 my $namespace = $q->param('namespace') || '0';
+
+if (defined $q->param('debug') && $q->param('debug') >= 0 && $q->param('debug') <= 3) {
+   $debug = $q->param('debug');
+}
 
 binmode( \*STDERR, ":utf8" ) if $debug >= 1;
 
