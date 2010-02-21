@@ -282,7 +282,7 @@ sub get_html {
     {
         my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
-        $maponly = qq|<style type="text/css"> div#nomap { display: none } </style>\n| if $q->param("maponly");
+        $maponly = qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n| if $q->param("maponly");
         $slippymap_size = qq{ width: 100%; height: 100%; max-width: 800px;} if $q->param("maponly");
     }
 
@@ -311,7 +311,8 @@ sub get_html {
 	#commentlink  { background-color:yellow; }
 	body.nonWaitMode * { }
 	body.waitMode *    { cursor:wait; }
-    </style>$maponly
+        $maponly
+    </style>
   </head>
 
   <body onload="init()" onunload="GUnload()" class="nonWaitMode">
