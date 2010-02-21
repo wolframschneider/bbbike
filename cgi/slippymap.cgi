@@ -278,12 +278,12 @@ sub get_html {
 
     my $script;
     my $maponly = "";
-    my $slippymap_size  = qq{width: 100%; height: 500px;};
+    my $slippymap_size  = qq{width: 100%; height: 75%;};
     {
         my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
         $maponly = qq|<style type="text/css"> div#nomap { display: none } </style>\n| if $q->param("maponly");
-        $slippymap_size .= qq{ max-width: 800px;} if $q->param("maponly");
+        $slippymap_size = qq{ width: 100%; height: 100%; max-width: 800px;} if $q->param("maponly");
     }
 
 
