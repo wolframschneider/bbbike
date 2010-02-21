@@ -2425,7 +2425,7 @@ EOF
  
        $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'Berlin und Potsdam';
        print q{<div id="footer_links">};
-       print qq{<a href="../">Home</a> |\n};
+       print qq{<!-- <a href="../">Home</a> | -->\n};
        print window_open("$bbbike_script?all=1", "BBBikeAll",
                          "dependent,height=500,resizable," .
                          "screenX=500,screenY=30,scrollbars,width=250")
@@ -6512,6 +6512,11 @@ EOF
 EOF
 
 my $s_copyright = <<EOF;
+
+<div id="footer_top">
+<p><a href="../">home</a></p>
+</div>
+<hr />
 
 </div>
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
