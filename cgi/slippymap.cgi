@@ -1155,6 +1155,7 @@ EOF
 
 <div id="footer" style="clear:left;">
 <br />
+<a href="../">home</a>
 <hr />
   <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em; " >
 (&copy;) 2008-2010 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> 
