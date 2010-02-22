@@ -618,6 +618,8 @@ for my $osm_file (@osm_files) {
 		    }
 		} elsif ($railway_cat =~ m{^(?:crossing|level_crossing)$}) {
 		    push @or, ["ampeln", "B"];
+		} elsif ($railway_cat eq 'tram_stop') { # takes precedence over highway=bus_stop
+		    add_underline(\@or, '_oepnv', 'Tram');
 		} else {
 		    $unhandled{"node-railway=$railway_cat"}++;
 		}
@@ -1752,7 +1754,7 @@ sub open_osm {
     my $fh;
     if ($osm_file =~ m{\.gz$}) {
 	if (!eval { require PerlIO::gzip; 1 }) {
-	    open $fh, '-|', 'zcat', $osm_file
+	    open $fh, '-|', 'gzip', '-dc', $osm_file
 		or die "Can't run zcat on $osm_file: $!";
 	} else {
 	    open $fh, "<:gzip", $osm_file
