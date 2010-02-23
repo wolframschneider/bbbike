@@ -4870,6 +4870,14 @@ EOF
 
 	    print qq{<span class="slippymaplink"><a target="_slippymap" href="slippymap.cgi?maponly=0&amp;coordsystem=polar&amp;maptype=hybrid&amp;city=$cityname&amp;source_script=$cityname.cgi&amp;coordsystem=wgs84&amp;zoom=$slippymap_zoom_maponly&amp;coords=$string_rep" title="Open slippy map in external window">Map only</a></span>} if $show_mini_googlemap;
 
+            my $pdf_url = CGI->new($q);
+            $pdf_url->param('imagetype', 'pdf');
+	    $pdf_url->param( 'coords', $string_rep);
+	    $pdf_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
+	
+
+	    print qq{ | <span class="slippymaplink"><a target="_slippymap" href="}, $pdf_url->url(-full=>1,-query=>1), qq{" title="PDF hand out">print map route</a></span>} if $show_mini_googlemap;
+
             if ($show_mini_googlemap) {
 	         print qq{<iframe src="slippymap.cgi?maponly=1&amp;coordsystem=polar&amp;maptype=hybrid&amp;city=$cityname&amp;source_script=$cityname.cgi&amp;coordsystem=wgs84&amp;zoom=$slippymap_zoom&amp;coords=$string_rep" title="slippy map" width="100%" height="505" scrolling="no" border="0"></iframe><p/>} if $show_mini_googlemap;
 	    } elsif ($show_mini_map) {
