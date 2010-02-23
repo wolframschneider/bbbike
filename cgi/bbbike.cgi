@@ -6573,7 +6573,11 @@ EOF
 
     $s .= $s_copyright;
 
-    $s .= $s_google_analytics if $enable_google_analytics;
+    use URI;
+    my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new, -full => 1 ) );
+    my $host = eval { $full->host } || "";
+
+    $s .= $s_google_analytics if $enable_google_analytics && $host eq 'www.bbbike.org';
 
     if ($bi->{'css_buggy'}) {
 	$s .= "</font>\n";
