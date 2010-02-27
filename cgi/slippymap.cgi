@@ -35,6 +35,7 @@ use BBBikeCGIUtil qw();
 use BBBikeVar;
 use Karte;
 use Karte::Polar;
+use Encode;
 
 sub new { bless {}, shift }
 
@@ -1089,6 +1090,22 @@ EOF
    </tr>
 EOF
     }
+
+    my $pdf_url = CGI->new();            
+    $pdf_url->param('imagetype', 'pdf-auto');
+    #$pdf_url->param( 'coords', $string_rep);
+    $pdf_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
+
+    my $startname = Encode::decode( utf8 => $pdf_url->param('startname'));
+    my $zielname = Encode::decode( utf8 => $pdf_url->param('zielname'));
+    $pdf_url->param( 'startname', $startname);
+    $pdf_url->param( 'zielname', $zielname);
+
+
+    my $print_link = $pdf_url->url(-relative=>1,-query=>1);
+    $print_link =~ s,^slippymap\.cgi,,;
+    $print_link = $pdf_url->param('source_script') . $print_link;
+
     $html .= <<EOF;
  </table>
 </form>
@@ -1156,7 +1173,8 @@ EOF
 
 <div id="footer" style="clear:left;">
 <br />
-<a href="../">home</a>
+<a href="../">home</a> 
+| <a href="$print_link">print</a> 
 <hr />
   <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em; " >
 (&copy;) 2008-2010 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> 
