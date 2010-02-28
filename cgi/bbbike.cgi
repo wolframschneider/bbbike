@@ -724,6 +724,7 @@ if ($osm_data) {
     my $city = $1;
 
     unshift (@INC, "../data-osm/$city") if $city;
+    require Karte::Polar;
 }
 
 # Post-config adjustments:
