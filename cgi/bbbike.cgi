@@ -6438,6 +6438,23 @@ sub header {
 	    push @$head, cgilink({-rel => 'Contents',
 				  -href => $args{'-contents'}});
 	}
+
+        my $opensearch_url = $q->url();
+	$opensearch_url =~ s,[^/]+/[^/]+$,,;
+        $opensearch_url .= 'osp';
+
+        my $city2 = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
+	push @$head, 
+		cgilink({-rel  => 'search',
+		         -type => "application/opensearchdescription+xml",
+			 -href => "$opensearch_url/$city2-en.xml",
+			 -title=> "$city2 (en)"});
+	push @$head, 
+		cgilink({-rel  => 'search',
+		         -type => "application/opensearchdescription+xml",
+			 -href => "$opensearch_url/$city2-de.xml",
+			 -title=> "$city2 (de)"});
+
     }
     delete @args{qw(-contents -up)};
     my $printmode = delete $args{-printmode};
@@ -6470,6 +6487,7 @@ sub header {
     $args{-head} = $head if $head && @$head;
 
     if (!$smallform) {
+
 
 	print $q->start_html
 	    (%args,
