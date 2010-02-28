@@ -719,6 +719,12 @@ warn "osm_data: $osm_data, show_mini_map: $show_mini_map/$show_mini_googlemap, n
 $slippymap_zoom = 5 if $slippymap_zoom <= 0;
 $slippymap_zoom_maponly = 4 if $slippymap_zoom <= 0;
 
+if ($osm_data) {
+    $datadir =~ m,data-osm/(.+),;
+    my $city = $1;
+
+    unshift (@INC, "../data-osm/$city") if $city;
+}
 
 # Post-config adjustments:
 $can_berliner_stadtplan_post = 0; # API does not work since 2007-08-01
