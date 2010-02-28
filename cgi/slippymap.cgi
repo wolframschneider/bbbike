@@ -1,8 +1,6 @@
 #!/usr/bin/perl -w
 # -*- perl -*-
 
-#
-# $Id: bbbikegooglemap.cgi,v 2.36 2009/04/04 11:14:43 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 2005,2006,2007,2008 Slaven Rezic. All rights reserved.
