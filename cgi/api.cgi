@@ -201,7 +201,7 @@ my $q = new MyCgiSimple;
 #use CGI; my $q = new CGI;
 
 my $action    = 'opensearch';
-my $street    = $q->param('search') || $q->param('q') || 'Zähringe';
+my $street    = $q->param('search') || $q->param('q') || 'Haupt' || 'Zähringe';
 my $city      = $q->param('city') || 'Berlin';
 my $namespace = $q->param('namespace') || '0';
 
@@ -214,9 +214,9 @@ if (   defined $q->param('debug')
 
 binmode( \*STDERR, ":utf8" ) if $debug >= 1;
 
-my $expire = $debug >= 2 ? '+1s' : '+1d';
+my $expire = $debug >= 2 ? '+1s' : '+1h';
 print $q->header(
-    -type    => 'application/json',
+    -type    => 'text/javascript',
     -charset => 'utf8',
     -expires => $expire,
 );
