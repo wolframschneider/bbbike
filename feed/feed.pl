@@ -61,5 +61,18 @@ $feed->add_entry(
     category => 'News',
 );
 
+$feed->add_entry(
+    title => 'Slippymap supports cycle map',
+    id    => '81ebeaf0506f9d6a518be2ab38ec242d',
+
+    content => {
+        type    => 'text',
+        content => qq{Added support for cycle map layer.},
+    },
+
+    updated  => '2010-01-03T18:30:02Z',
+    category => 'News',
+);
+
 $feed->print;
 

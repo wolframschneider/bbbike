@@ -41,4 +41,11 @@
     <updated>2010-03-05T18:30:02Z</updated>
     <category term="News" />
   </entry>
+  <entry>
+    <title>Slippymap supports cycle map</title>
+    <id>81ebeaf0506f9d6a518be2ab38ec242d</id>
+    <content>Added support for cycle map layer.</content>
+    <updated>2010-01-03T18:30:02Z</updated>
+    <category term="News" />
+  </entry>
 </feed>
