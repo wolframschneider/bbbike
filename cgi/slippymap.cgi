@@ -127,9 +127,9 @@ sub run {
     }
 
     for my $def (
-        [ 'coords',    \@polylines_polar ],
-        [ 'city_center',    \@polylines_polar ],
-        [ 'oldcoords', \@polylines_polar_feeble ],
+        [ 'coords',      \@polylines_polar ],
+        [ 'city_center', \@polylines_polar ],
+        [ 'oldcoords',   \@polylines_polar_feeble ],
       )
     {
         my ( $cgiparam, $polylines_ref ) = @$def;
@@ -166,11 +166,11 @@ sub run {
 
     my $maptype = param("maptype") || "";
     $self->{maptype} = (
-          $maptype =~ /hybrid/i ? 'G_HYBRID_MAP'
-        : $maptype =~ /normal/i ? 'G_NORMAL_MAP'
-        : $maptype =~ /^cycle$/ ? 'cycle_map'
+          $maptype =~ /hybrid/i  ? 'G_HYBRID_MAP'
+        : $maptype =~ /normal/i  ? 'G_NORMAL_MAP'
+        : $maptype =~ /^cycle$/  ? 'cycle_map'
         : $maptype =~ /^mapnik$/ ? 'mapnik_map'
-        : $maptype =~ /^tah$/ ? 'tah_map'
+        : $maptype =~ /^tah$/    ? 'tah_map'
         : 'G_SATELLITE_MAP'
     );
 
@@ -184,7 +184,7 @@ sub run {
     $self->{converter}   = $converter;
     $self->{coordsystem} = $coordsystem;
 
-    print header ("-type" => "text/html; charset=utf-8");
+    print header ( "-type" => "text/html; charset=utf-8" );
     print $self->get_html( \@polylines_polar, \@polylines_polar_feeble, \@wpt,
         $zoom, $center );
 }
@@ -280,16 +280,17 @@ sub get_html {
     }
 
     my $script;
-    my $maponly = "";
-    my $slippymap_size  = qq{width: 100%; height: 75%;};
+    my $maponly        = "";
+    my $slippymap_size = qq{width: 100%; height: 75%;};
     {
         my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
-        $maponly = qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n| if $q->param("maponly");
-        $slippymap_size = qq{ width: 100%; height: 100%; max-width: 800px;} if $q->param("maponly");
+        $maponly =
+qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
+          if $q->param("maponly");
+        $slippymap_size = qq{ width: 100%; height: 100%; max-width: 800px;}
+          if $q->param("maponly");
     }
-
-
 
     my $html = <<EOF;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -1094,22 +1095,25 @@ EOF
 EOF
     }
 
-    my $pdf_url = CGI->new();            
-    $pdf_url->param('imagetype', 'pdf-auto');
+    my $pdf_url = CGI->new();
+    $pdf_url->param( 'imagetype', 'pdf-auto' );
+
     #$pdf_url->param( 'coords', $string_rep);
-    $pdf_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
+    $pdf_url->param(
+        -name  => 'draw',
+        -value => [qw/str strname sbahn wasser flaechen title/]
+    );
 
-    my $startname = Encode::decode( utf8 => $pdf_url->param('startname'));
-    my $zielname = Encode::decode( utf8 => $pdf_url->param('zielname'));
-    $pdf_url->param( 'startname', $startname);
-    $pdf_url->param( 'zielname', $zielname);
+    my $startname = Encode::decode( utf8 => $pdf_url->param('startname') );
+    my $zielname  = Encode::decode( utf8 => $pdf_url->param('zielname') );
+    $pdf_url->param( 'startname', $startname );
+    $pdf_url->param( 'zielname',  $zielname );
 
+    my $print_link = $pdf_url->url( -relative => 1, -query => 1 );
 
-    my $print_link = $pdf_url->url(-relative=>1,-query=>1);
-
-    if ($pdf_url->param('source_script')) {
-    $print_link =~ s,^slippymap\.cgi,,;
-    $print_link = $pdf_url->param('source_script') . $print_link;
+    if ( $pdf_url->param('source_script') ) {
+        $print_link =~ s,^slippymap\.cgi,,;
+        $print_link = $pdf_url->param('source_script') . $print_link;
     }
 
     $html .= <<EOF;
