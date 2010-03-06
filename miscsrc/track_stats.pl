@@ -22,6 +22,7 @@ use lib ("$FindBin::RealBin/..",
 	);
 
 use Getopt::Long;
+use POSIX qw(strftime);
 use Text::Table;
 use Tie::IxHash;
 use Statistics::Descriptive;
@@ -35,6 +36,8 @@ use VectorUtil;
 
 my @stages = qw(filtertracks trackdata statistics output);
 my %stages = map {($_,1)} @stages;
+
+my @cols_sorted = qw(file fromtime vehicles device diffalt mount velocity length difftime);
 
 #my $tracks_file = "$FindBin::RealBin/../tmp/streets-accurate-categorized-split.bbd";
 my $tracks_file = "$FindBin::RealBin/../tmp/streets-polar.bbd";
@@ -110,19 +113,15 @@ sub stage_filtertracks {
     $trks->make_grid(#Exact => 1, # XXX Eats a lot of memory, so better not use it yet...
 		     UseCache => 1);
 
-    my %from_candidates;
-    my %to_candidates;
     my @included;
 
-    for my $def ([1, @from],
-		 [2, @to]) {
-	my($pass, @p) = @$def;
-
+    my %ns;
+    for my $def (\@from, \@to) {
+	my @p = @$def;
 	for my $p_i (0 .. $#p-1) {
 	    my($p1, $p2) = ($p[$p_i], $p[$p_i+1]);
 
 	    # Get all records in the selected grids.
-	    my %ns;
 	    my(@grids) = $trks->get_new_grids((split /,/, $p1), (split /,/, $p2));
 	    for my $grid (@grids) {
 		next if !exists $trks->{Grid}{$grid};
@@ -130,29 +129,39 @@ sub stage_filtertracks {
 		    $ns{$n} = 1;
 		}
 	    }
-	    # Order records by appearance in file. Note: order is
-	    # important, so the last records in the first pass and the
-	    # first record in the 2nd pass is found.
-	    #
-	    # XXX probably this is violated if @p > 2 ?!
-	    for my $n (sort { $a <=> $b } keys %ns) {
-		my $r = $trks->get($n);
-		my $deb_r; # = $r XXX
-		next if $ignore_rx && $r->[Strassen::NAME] =~ $ignore_rx;
-		my($file) = $r->[Strassen::NAME] =~ m{^(\S+)};
-	    RECORD: for my $r_i (1 .. $#{ $r->[Strassen::COORDS] }) {
-		    my($r1,$r2) = @{$r->[Strassen::COORDS]}[$r_i-1,$r_i];
+	}
+    }
+
+    use constant STAGE_SEARCH_FROM => 1;
+    use constant STAGE_SEARCH_TO  => 2;
+    my $stage = STAGE_SEARCH_FROM;
+    my %found_from;
+    # Order records by appearance in file
+    for my $n (sort { $a <=> $b } keys %ns) {
+	my $r = $trks->get($n);
+	my $deb_r; # = $r; # XXX
+	next if $ignore_rx && $r->[Strassen::NAME] =~ $ignore_rx;
+	my($file) = $r->[Strassen::NAME] =~ m{^(\S+)};
+    RECORD: for my $r_i (1 .. $#{ $r->[Strassen::COORDS] }) {
+	    my($r1,$r2) = @{$r->[Strassen::COORDS]}[$r_i-1,$r_i];
+	    for my $stage (STAGE_SEARCH_FROM, STAGE_SEARCH_TO) {
+		my $fence_coords = $stage == STAGE_SEARCH_FROM ? \@from : \@to;
+	    FENCE_CHECK: for my $p_i (0 .. $#$fence_coords-1) {
+		    my($p1, $p2) = ($fence_coords->[$p_i],$fence_coords->[$p_i+1]);
 		    for my $checks ([$r1, $p1],
 				    [$r1, $p2],
 				    [$r2, $p1],
 				    [$r2, $p2],
 				   ) {
 			if ($checks->[0] eq $checks->[1]) {
-			    if ($pass == 1) {
-				push @{ $from_candidates{$file} }, [$deb_r, [$checks->[0]], [$checks->[1]], [$n,$r_i-1]];
-			    } elsif ($pass == 2) {
-				push @{ $to_candidates{$file}   }, [$deb_r, [$checks->[0]], [$checks->[1]], [$n,$r_i-1]];
-				
+			    if ($stage == STAGE_SEARCH_FROM) {
+				$found_from{$file} = [$deb_r, [$checks->[0]], [$checks->[1]], [$n,$r_i-1]];
+			    } else { # STAGE_SEARCH_TO
+				if ($found_from{$file}) {
+				    my $found_to = [$deb_r, [$checks->[0]], [$checks->[1]], [$n,$r_i-1]];
+				    push @included, [$file, $found_from{$file}, $found_to];
+				    delete $found_from{$file};
+				}
 			    }
 			    next RECORD;
 			}
@@ -162,48 +171,19 @@ sub stage_filtertracks {
 						    split(/,/, $r1),
 						    split(/,/, $r2),
 						   )) {
-			if ($pass == 1) {
-			    push @{ $from_candidates{$file} }, [$deb_r, [$r1,$r2], [$p1,$p2], [$n,$r_i-1]];
-			} elsif ($pass == 2) {
-			    push @{ $to_candidates{$file}   }, [$deb_r, [$r1,$r2], [$p1,$p2], [$n,$r_i-1]];
+			if ($stage == STAGE_SEARCH_FROM) {
+			    $found_from{$file} = [$deb_r, [$r1,$r2], [$p1,$p2], [$n,$r_i-1]];
+			} else { # STAGE_SEARCH_TO
+			    if ($found_from{$file}) {
+				my $found_to = [$deb_r, [$r1,$r2], [$p1,$p2], [$n,$r_i-1]];
+				push @included, [$file, $found_from{$file}, $found_to];
+				delete $found_from{$file};
+			    }
 			}
+			next RECORD;
 		    }
 		}
 	    }
-	}
-    }
-
-    for my $file (keys %from_candidates) {
-	my $from_candidates = $from_candidates{$file};
-	my $to_candidates   = $to_candidates{$file};
-	next if !$to_candidates;
-	my($from, $to);
-	my $from_i = -1;
-	my $to_i = -1;
-	while () {
-	    last if $from_i >= $#$from_candidates && $to_i >= $#$to_candidates;
-	    if ($from_i >= $#$from_candidates) {
-		$to_i++;
-	    } elsif ($to_i >= $#$to_candidates) {
-		$from_i++;
-	    } elsif ($from_candidates->[$from_i+1][3][0] < $to_candidates->[$to_i+1][3][0] ||
-		     ($from_candidates->[$from_i+1][3][0] == $to_candidates->[$to_i+1][3][0] &&
-		      $from_candidates->[$from_i+1][3][1] < $to_candidates->[$to_i+1][3][1])
-		    ) {
-		$from_i++;
-	    } else {
-		$to_i++;
-	    }
-	    if ($from_i > -1) {
-		$from = $from_candidates->[$from_i];
-	    }
-	    if ($to_i > -1) {
-		$to = $to_candidates->[$to_i];
-		last;
-	    }
-	}
-	if ($from && $to) {
-	    push @included, [$file, $from, $to];
 	}
     }
 
@@ -223,6 +203,8 @@ sub stage_trackdata {
 	my($file, $fromdef, $todef) = @$trackdef;
 	my($from1,$from2) = @{ $fromdef->[1] };
 	my($to1,  $to2)   = @{ $todef->[1] };
+	my($from_fence1,$from_fence2) = @{ $fromdef->[2] };
+	my($to_fence1,  $to_fence2)   = @{ $todef->[2] };
 	my $gps = eval { GPS::GpsmanData::Any->load("$gpsman_dir/$file") };
 	if ($@) {
 	    my $save_err = $@; # first error is best
@@ -241,9 +223,10 @@ sub stage_trackdata {
 	my %vehicle_to_brand;
     PARSE_TRACK: for my $chunk (@{ $gps->Chunks }) {
 	    no warnings 'once';
+	    my @point_objs = @{ $chunk->Points };
 	    my @points = map {
 		join(",", $Karte::Polar::obj->trim_accuracy($_->Longitude, $_->Latitude));
-	    } @{ $chunk->Points };
+	    } @point_objs;
 
 	    my $track_attrs = $chunk->TrackAttrs;
 	    if ($track_attrs->{'srt:vehicle'}) {
@@ -267,7 +250,7 @@ sub stage_trackdata {
 	    }
 	    for my $wpt_i (1 .. $#points) {
 		if ($v && $v >= 2) {
-		    warn "$file $stage $from1 $from2 $points[$wpt_i-1] $points[$wpt_i]" . join(" ", map { Karte::Polar::ddd2dms($_) } map { split /,/ } $points[$wpt_i-1], $points[$wpt_i])."\n";
+		    warn "$file $stage " . $point_objs[$wpt_i]->Comment . " | $from1 $from2 | $points[$wpt_i-1] $points[$wpt_i] | " . join(" ", map { Karte::Polar::ddd2dms($_) } map { split /,/ } $points[$wpt_i-1], $points[$wpt_i])."\n";
 		}
 		if ($stage eq 'from') {
 		    if (($points[$wpt_i-1] eq $from1 &&
@@ -276,9 +259,22 @@ sub stage_trackdata {
 			 $points[$wpt_i  ] eq $from1)) {
 			tie my %vehicles, 'Tie::IxHash';
 			$vehicles{$vehicle_label} = 1;
-			$result = {from1    => $chunk->Points->[$wpt_i-1],
-				   from2    => $chunk->Points->[$wpt_i  ],
-				   fromtime => $chunk->Points->[$wpt_i]->Comment_to_unixtime($chunk),
+			my($wpt1,$wpt2) = ($chunk->Points->[$wpt_i-1], $chunk->Points->[$wpt_i]);
+			my($epoch1,$epoch2) = ($wpt1->Comment_to_unixtime($chunk), $wpt2->Comment_to_unixtime($chunk));
+			my $epoch;
+			my($intersect_wpt) = eval { _schnittpunkt_as_wpt([$from1,$from2],[$from_fence1,$from_fence2]) };
+			if ($@) {
+			    warn "$@...";
+			    $epoch = $epoch2;
+			} else {
+			    $epoch = $epoch1 + ($epoch2-$epoch1)*_fraction($wpt1, $intersect_wpt, $wpt2);
+			    $length = $chunk->wpt_dist($intersect_wpt,$wpt2);
+#XXX warn "length corr: $length    epoch corr: " . ($epoch2-$epoch1)*_fraction($wpt1, $intersect_wpt, $wpt2) . " $from1 $from2 $epoch1 $epoch2\n";
+			}
+			$result = {from1    => $wpt1,
+				   from2    => $wpt2,
+				   from     => $intersect_wpt,
+				   fromtime => $epoch,
 				   vehicles => \%vehicles,
 				  };
 			$stage = 'to';
@@ -289,9 +285,22 @@ sub stage_trackdata {
 			 $points[$wpt_i  ] eq $to2) ||
 			($points[$wpt_i-1] eq $to2 &&
 			 $points[$wpt_i  ] eq $to1)) {
-			$result->{to1} = $chunk->Points->[$wpt_i-1];
-			$result->{to2} = $chunk->Points->[$wpt_i  ];
-			$result->{totime} = $chunk->Points->[$wpt_i]->Comment_to_unixtime($chunk);
+			my($wpt1,$wpt2) = ($chunk->Points->[$wpt_i-1], $chunk->Points->[$wpt_i]);
+			my($epoch1,$epoch2) = ($wpt1->Comment_to_unixtime($chunk), $wpt2->Comment_to_unixtime($chunk));
+			my $epoch;
+			my($intersect_wpt) = eval { _schnittpunkt_as_wpt([$to1,$to2],[$to_fence1,$to_fence2]) };
+			if ($@) {
+			    warn "$@...";
+			    $epoch = $epoch1;
+			} else {
+			    $epoch = $epoch1 + ($epoch2-$epoch1)*_fraction($wpt1, $intersect_wpt, $wpt2);
+#XXX warn "length corr: " . $chunk->wpt_dist($wpt1,$intersect_wpt) . "   epoch corr: " . ($epoch2-$epoch1)*_fraction($wpt1, $intersect_wpt, $wpt2). " $to1 $to2 $epoch1 $epoch2\n";
+			    $length += $chunk->wpt_dist($wpt1,$intersect_wpt);
+			}
+			$result->{to1} = $wpt1;
+			$result->{to2} = $wpt2;
+			$result->{to} = $intersect_wpt;
+			$result->{totime} = $epoch;
 			$result->{difftime} = $result->{totime} - $result->{fromtime};
 			$result->{length} = $length;
 			$result->{velocity} = $result->{length} / $result->{difftime};
@@ -306,7 +315,7 @@ sub stage_trackdata {
 			}
 			$result->{date} = guess_date($result);
 
-			for my $field (qw(velocity vehicles length difftime file diffalt mount device)) {
+			for my $field (@cols_sorted) {
 			    no strict 'refs';
 			    $result->{'!' . $field} = &{"format_$field"}($result->{$field});
 			}
@@ -330,7 +339,8 @@ sub stage_statistics {
     my @results = @{ $state->{results} };
     my %seen_device = %{ $state->{seen_device} };
 
-    my @cols = grep { /^!/ } keys %{ $results[0] };
+    #my @cols = grep { /^!/ } keys %{ $results[0] };
+    my @cols = map { "!$_" } @cols_sorted;
 
     my %stats;
     my %count_per_device;
@@ -424,6 +434,7 @@ sub save_state {
     sub format_vehicles { join(", ", keys %{ $_[0] }) }
     sub format_length   { sprintf "%.2f", $_[0]/1000 }
     sub format_difftime { sprintf "%8s", s2hms($_[0]) }
+    sub format_fromtime { strftime("%T", localtime $_[0]) }
     sub format_file     { $_[0] }
     sub format_diffalt  { sprintf "%.1f", $_[0] }
     sub format_mount    { defined $_[0] ? sprintf "%.1f", $_[0] : undef }
@@ -517,6 +528,43 @@ sub next_stage {
     undef;
 }
 
+# XXX will fail if $m1 or $m2 is senkrecht :-(
+sub _schnittpunkt {
+    my($l1, $l2) = @_;
+
+    my($x11,$y11,$x12,$y12) = map { split/,/ } @$l1;
+    my($x21,$y21,$x22,$y22) = map { split/,/ } @$l2;
+
+    my $m1 = ($y12-$y11)/($x12-$x11);
+    my $m2 = ($y22-$y21)/($x22-$x21);
+
+    my $x = ($m1*$x11-$m2*$x21+$y21-$y11)/($m1-$m2);
+    # XXX check if $x is really between $x11..$x12 and $x21..$x22
+    my $y = ($x-$x11)*$m1+$y11;
+    # the same: my $y = ($x-$x21)*$m2+$y21;
+    ($x, $y);
+}
+
+sub _schnittpunkt_as_wpt {
+    my($l1, $l2) = @_;
+    my($x, $y) = _schnittpunkt($l1, $l2);
+    my $wpt = GPS::Gpsman::Waypoint->new;
+    $wpt->Latitude($y);
+    $wpt->Longitude($x);
+    $wpt;
+}
+
+sub _fraction {
+    my($first,$middle,$last) = @_;
+    my $delta = $last->Latitude - $first->Latitude;
+    if ($delta == 0) {
+	my $delta = $last->Longitude - $first->Longitude;
+	return 0 if ($delta == 0);
+	return ($middle->Longitude-$first->Longitude)/$delta;
+    }
+    return ($middle->Latitude-$first->Latitude)/$delta;
+}
+
 __END__
 
 =head1 HOWTO
@@ -551,6 +599,11 @@ __END__
    consecutive starts without a goal in between would remove the
    former start. In the "symmetric" mode for mount detection, the
    detection for goal - start sequences could also be done here.
+
+   UPDATE: the stage_filtertracks algorithm is now better. What still
+   may happen: a relation may be covered multiple times in one track
+   file. Currently stage_filtertracks might handle this, but
+   stage_trackdata probably not.
 
  * [#B] For better statistics for the mount value both directions should be
    covered, not only one direction (of course, this is mostly
