@@ -6456,6 +6456,14 @@ sub header {
 			 -href => "$opensearch_url/$city2-de.xml",
 			 -title=> "$city2 (de)"});
 
+
+	push @$head, 
+		cgilink({-rel  => 'alternate',
+		         -type => 'application/atom+xml',
+			 -href => '../feed/bbbike-world.xml',
+			 -title=> 'BBBike @ World RSS feed'});
+
+
     }
     delete @args{qw(-contents -up)};
     my $printmode = delete $args{-printmode};
