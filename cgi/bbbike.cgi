@@ -110,6 +110,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
             $slippymap_zoom $slippymap_zoom_maponly $slippymap_zoom_city
 	    $enable_opensearch_plugin $enable_rss_feed
 	    $nice_abc_list
+	    $warn_message $use_utf8 $data_is_wgs84
 	   );
 
 # XXX This may be removed one day
@@ -663,6 +664,18 @@ $use_utf8 = 0;
 
 Set to a true value if the you want show a via search field.
 
+=item $data_is_wgs84
+
+Set to a true value if the data is using wgs84 coordinates instead of
+the home-brew bbbike format. Probably only useful for data converted
+from OpenStreetMap.
+
+=cut
+
+$data_is_wgs84 = 0;
+
+=back
+
 =cut
 
 $use_via = 1;
@@ -1025,10 +1038,15 @@ foreach my $type (qw(start via ziel)) {
 	$q->delete($type . "charimg.y");
     } elsif (defined $q->param($type . 'c_wgs84') and
 	     $q->param($type . 'c_wgs84') ne '') {
-	require Karte;
-	Karte::preload('Standard', 'Polar');
-	$Karte::Standard::obj = $Karte::Standard::obj if 0; # cease -w
-	my($x, $y) = $Karte::Standard::obj->trim_accuracy($Karte::Polar::obj->map2standard(split /,/, $q->param($type . 'c_wgs84')));
+	my($x,$y);
+	if (!$data_is_wgs84) {
+	    require Karte;
+	    Karte::preload('Standard', 'Polar');
+	    $Karte::Standard::obj = $Karte::Standard::obj if 0; # cease -w
+	    ($x, $y) = $Karte::Standard::obj->trim_accuracy($Karte::Polar::obj->map2standard(split /,/, $q->param($type . 'c_wgs84')));
+	} else {
+	    ($x, $y) = split /,/, $q->param($type . 'c_wgs84');
+	}
 	$q->param($type . 'c', "$x,$y");
 	$q->delete($type . 'c_wgs84');
     }
