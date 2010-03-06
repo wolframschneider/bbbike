@@ -6,14 +6,14 @@ my $homepage = $ENV{'BBBIKE_HOMEPAGE'} || 'http://www.bbbike.org';
 
 my $feed = XML::Atom::SimpleFeed->new(
     title => 'BBBike @ World - a Cycle Route Planner',
-    link  =>  $homepage,
+    link  => $homepage,
     link  => {
         rel  => 'self',
         href => $homepage . '/feed/bbbike-world.xml',
     },
-    icon     => $homepage . '/images/srtbike.ico',
-    updated  => '2010-03-13T18:30:02Z',
-    author   => 'Wolfram Schneider',
+    icon    => $homepage . '/images/srtbike.ico',
+    updated => '2010-03-13T18:30:02Z',
+    author  => 'Wolfram Schneider',
     subtitle =>
 'BBBike is a route planner for cyclists in Berlin. It is now ported to other cities around the world - thanks to the OpenStreetMap project!',
     id => 'urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af6',
@@ -21,11 +21,11 @@ my $feed = XML::Atom::SimpleFeed->new(
 
 $feed->add_entry(
     title => 'New cities for BBBike @ world',
-    link  =>  $homepage,
+    link  => $homepage,
     id    => '81ebeaf0506f9d6a518be2ab38ec243f',
 
     content => {
-        type => 'text',
+        type    => 'text',
         content => qq{BBBike @ World supports now 125 cities world wide.}
     },
 
@@ -35,11 +35,11 @@ $feed->add_entry(
 
 $feed->add_entry(
     title => 'Updated BBBike @ Berlin packages for MacOS',
-    link  =>  'http://bbbike.sourceforge.net/downloads.en.html',
+    link  => 'http://bbbike.sourceforge.net/downloads.en.html',
     id    => '81ebeaf0506f9d6a518be2ab38ec243e',
 
     content => {
-        type => 'text',
+        type    => 'text',
         content => qq{The BBBike @ Berlin package for MacOS are updated.}
     },
 
@@ -53,7 +53,8 @@ $feed->add_entry(
 
     content => {
         type => 'text',
-        content => qq{Added support for OpenSearch search plugins for all cities.},
+        content =>
+          qq{Added support for OpenSearch search plugins for all cities.},
     },
 
     updated  => '2010-03-05T18:30:02Z',
