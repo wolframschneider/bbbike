@@ -107,7 +107,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_google_analytics
 	    $with_green_ways
             $no_teaser
-            $slippymap_zoom $slippymap_zoom_maponly
+            $slippymap_zoom $slippymap_zoom_maponly $slippymap_zoom_city
 	    $enable_opensearch_plugin $enable_rss_feed
 	    $nice_abc_list
 	   );
@@ -721,6 +721,7 @@ warn "osm_data: $osm_data, show_mini_map: $show_mini_map/$show_mini_googlemap, n
 
 $slippymap_zoom = 5 if $slippymap_zoom <= 0;
 $slippymap_zoom_maponly = 4 if $slippymap_zoom <= 0;
+$slippymap_zoom_city = 6 if $slippymap_zoom_city <= 0;
 
 if ($osm_data) {
     $datadir =~ m,data-osm/(.+),;
@@ -2407,7 +2408,7 @@ function " . $type . "char_init() {}
             my $slippymap_url = CGI->new($q);
             $slippymap_url->param('maponly', '1');
             $slippymap_url->param('maptype', 'mapnik');
-            $slippymap_url->param('zoom', 7);
+            $slippymap_url->param('zoom', $slippymap_zoom_city);
 	    $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) );
 
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
