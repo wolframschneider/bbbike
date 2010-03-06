@@ -42,6 +42,8 @@ sub run {
     local $CGI::POST_MAX = 2_000_000;
 
     my $coordsystem = param("coordsystem") || "bbbike";
+    my $source_script = param("source_script") || "bbbike.cgi";
+
     my $converter;
     if ($coordsystem =~ m{^(wgs84|polar)$}) {
 	$converter = \&polar_converter;
@@ -139,6 +141,7 @@ sub run {
 
     $self->{converter} = $converter;
     $self->{coordsystem} = $coordsystem;
+    $self->{source_script} = $source_script;
 
     print header;
     print $self->get_html(\@polylines_polar, \@polylines_polar_feeble, \@wpt, $zoom, $center);
@@ -157,6 +160,7 @@ sub get_html {
 
     my $converter = $self->{converter};
     my $coordsystem = $self->{coordsystem};
+    my $source_script = $self->{source_script};
 
     my($centerx,$centery);
     if ($center) {
@@ -642,7 +646,7 @@ sub get_html {
     function searchRoute(startPoint, goalPoint) {
         var searchCoordParams = getSearchCoordParams(startPoint, goalPoint);
 	var requestLine =
-	    "@{[ $cgi_reldir ]}/bbbike.cgi?" + searchCoordParams + commonSearchParams;
+	    "@{[ $cgi_reldir ]}/$source_script?" + searchCoordParams + commonSearchParams;
 	var routeRequest = GXmlHttp.create();
 	routeRequest.open("GET", requestLine, true);
 	routeRequest.onreadystatechange = function() {
@@ -655,7 +659,7 @@ sub get_html {
     function searchRouteInBBBike() {
         var searchCoordParams = getSearchCoordParams(startPoint, goalPoint);
 	var url =
-	    "@{[ $cgi_reldir ]}/bbbike.cgi?" + searchCoordParams + commonWebSearchParams;
+	    "@{[ $cgi_reldir ]}/Basel.cgi?" + searchCoordParams + commonWebSearchParams;
 	location.href = url;
     }
 
