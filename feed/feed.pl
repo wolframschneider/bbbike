@@ -26,24 +26,37 @@ $feed->add_entry(
 
     content => {
         type => 'text',
-        content => qq{BBBike @ world supports now 125 cities world wide.}
+        content => qq{BBBike @ World supports now 125 cities world wide.}
     },
 
-    updated  => '2010-03-13T18:30:02Z',
+    updated  => '2010-03-06T18:30:02Z',
     category => 'News',
 );
 
 $feed->add_entry(
     title => 'Updated BBBike @ Berlin packages for MacOS',
     link  =>  'http://bbbike.sourceforge.net/downloads.en.html',
-    id    => '81ebeaf0506f9d6a518be2ab38ec243f',
+    id    => '81ebeaf0506f9d6a518be2ab38ec243e',
 
     content => {
         type => 'text',
-        content => qq{The BBBike @ Berlin package for MacOS are updated. See http://bbbike.sourceforge.net/downloads.en.html}
+        content => qq{The BBBike @ Berlin package for MacOS are updated.}
     },
 
-    updated  => '2010-03-13T18:30:02Z',
+    updated  => '2010-03-06T18:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title => 'OpenSearch search plugins',
+    id    => '81ebeaf0506f9d6a518be2ab38ec243d',
+
+    content => {
+        type => 'text',
+        content => qq{Added support for OpenSearch search plugins for all cities.},
+    },
+
+    updated  => '2010-03-05T18:30:02Z',
     category => 'News',
 );
 
