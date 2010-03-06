@@ -100,7 +100,8 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $newstreetform_encoding
 	    $use_region_image
 	    $include_outer_region @outer_berlin_places $outer_berlin_qr
-	    $osm_data $datadir $show_mini_map $show_mini_googlemap $no_input_streetname
+	    $osm_data $datadir $show_mini_map $show_mini_googlemap $show_mini_googlemap_city
+	    $no_input_streetname
 	    $enable_opensearch_suggestions
 	    $warn_message $use_utf8 $use_via
 	    $enable_google_analytics
@@ -108,6 +109,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
             $no_teaser
             $slippymap_zoom $slippymap_zoom_maponly
 	    $enable_opensearch_plugin $enable_rss_feed
+	    $nice_abc_list
 	   );
 
 # XXX This may be removed one day
@@ -1347,10 +1349,11 @@ function ${type}char_detail(Evt) { return any_detail("${type}char", Evt); }
 // --></script>
 
 EOF
-
-    } else {
+    } elsif ($nice_abc_list) {
 	print "<input type=image name=" . $type
 	  . "charimg src=\"$bbbike_images/abc.gif\" class=\"charmap\" alt=\"A..Z\">";
+    } else {
+
     }
 }
 
@@ -2397,6 +2400,22 @@ function " . $type . "char_init() {}
     }
 
     print "</table>\n" if $bi->{'can_table'};
+
+    if ($show_mini_googlemap_city) {
+	    my $geo = get_geography_object();
+
+            my $slippymap_url = CGI->new($q);
+            $slippymap_url->param('maponly', '1');
+            $slippymap_url->param('maptype', 'mapnik');
+            $slippymap_url->param('zoom', 7);
+	    $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) );
+
+            my $smu = $slippymap_url->url(-query=>1, -relative=>1);
+            $smu =~ s/.*?\?//;
+
+	    print "<p />\n";
+	    print qq{<iframe src="slippymap.cgi?$smu" title="slippy map" width="800" height="300" scrolling="no" border="0"></iframe>\n};
+    }
 
     print "<input type=hidden name=scope value='" .
 	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
