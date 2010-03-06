@@ -107,6 +107,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $with_green_ways
             $no_teaser
             $slippymap_zoom $slippymap_zoom_maponly
+	    $enable_opensearch_plugin $enable_rss_feed
 	   );
 
 # XXX This may be removed one day
@@ -6440,6 +6441,7 @@ sub header {
 				  -href => $args{'-contents'}});
 	}
 
+    if ($enable_opensearch_plugin) {
         my $opensearch_url = $q->url();
 	$opensearch_url =~ s,[^/]+/[^/]+$,,;
         $opensearch_url .= 'osp';
@@ -6455,13 +6457,15 @@ sub header {
 		         -type => "application/opensearchdescription+xml",
 			 -href => "$opensearch_url/$city2-de.xml",
 			 -title=> "$city2 (de)"});
+    }
 
-
+    if ($enable_rss_feed) {
 	push @$head, 
 		cgilink({-rel  => 'alternate',
 		         -type => 'application/atom+xml',
 			 -href => '../feed/bbbike-world.xml',
 			 -title=> 'BBBike @ World RSS feed'});
+    }
 
 
     }
