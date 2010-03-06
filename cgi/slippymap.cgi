@@ -167,6 +167,9 @@ sub run {
     $self->{maptype} = (
           $maptype =~ /hybrid/i ? 'G_HYBRID_MAP'
         : $maptype =~ /normal/i ? 'G_NORMAL_MAP'
+        : $maptype =~ /^cycle$/ ? 'cycle_map'
+        : $maptype =~ /^mapnik$/ ? 'mapnik_map'
+        : $maptype =~ /^tah$/ ? 'tah_map'
         : 'G_SATELLITE_MAP'
     );
 
@@ -946,7 +949,8 @@ sub get_html {
         { urlArg: 'cycle', linkColor: '#000000' });
     map.addMapType(cycle_map);
 
-    map.setMapType(cycle_map);
+    // map.setMapType(cycle_map);
+    map.setMapType($self->{maptype});
     map.enableScrollWheelZoom();
 
     /*
