@@ -128,6 +128,7 @@ sub run {
 
     for my $def (
         [ 'coords',    \@polylines_polar ],
+        [ 'city_center',    \@polylines_polar ],
         [ 'oldcoords', \@polylines_polar_feeble ],
       )
     {
@@ -1105,8 +1106,11 @@ EOF
 
 
     my $print_link = $pdf_url->url(-relative=>1,-query=>1);
+
+    if ($pdf_url->param('source_script')) {
     $print_link =~ s,^slippymap\.cgi,,;
     $print_link = $pdf_url->param('source_script') . $print_link;
+    }
 
     $html .= <<EOF;
  </table>
