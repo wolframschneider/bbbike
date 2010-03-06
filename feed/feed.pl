@@ -20,6 +20,20 @@ my $feed = XML::Atom::SimpleFeed->new(
 );
 
 $feed->add_entry(
+    title => 'New design for BBBike @ world search',
+    link  => $homepage,
+    id    => '81ebeaf0506f9d6a518be2ab34ec243f',
+
+    content => {
+        type    => 'text',
+        content => qq{New design for BBBike @ world search}
+    },
+
+    updated  => '2010-03-06T18:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
     title => 'New cities for BBBike @ world',
     link  => $homepage,
     id    => '81ebeaf0506f9d6a518be2ab38ec243f',
