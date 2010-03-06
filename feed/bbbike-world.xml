@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>BBBike @ World - a Cycle Route Planner</title>
+  <link href="http://www.bbbike.org" />
+  <link href="http://www.bbbike.org/feed/bbbike-world.xml"
+  rel="self" />
+  <icon>http://www.bbbike.org/images/srtbike.ico</icon>
+  <updated>2010-03-13T18:30:02Z</updated>
+  <author>
+    <name>Wolfram Schneider</name>
+  </author>
+  <subtitle>BBBike is a route planner for cyclists in Berlin. It is
+  now ported to other cities around the world - thanks to the
+  OpenStreetMap project!</subtitle>
+  <id>urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af6</id>
+  <generator uri="http://search.cpan.org/dist/XML-Atom-SimpleFeed/"
+  version="0.86">XML::Atom::SimpleFeed</generator>
+  <entry>
+    <title>New cities for BBBike @ world</title>
+    <link href="http://www.bbbike.org" />
+    <id>81ebeaf0506f9d6a518be2ab38ec243f</id>
+    <content>BBBike @ world supports now 125 cities world
+    wide.</content>
+    <updated>2010-03-13T18:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
+    <title>Updated BBBike @ Berlin packages for MacOS</title>
+    <link href="http://bbbike.sourceforge.net/downloads.en.html" />
+    <id>81ebeaf0506f9d6a518be2ab38ec243f</id>
+    <content>The BBBike @ Berlin package for MacOS are updated. See
+    http://bbbike.sourceforge.net/downloads.en.html</content>
+    <updated>2010-03-13T18:30:02Z</updated>
+    <category term="News" />
+  </entry>
+</feed>
