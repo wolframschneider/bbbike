@@ -52,7 +52,7 @@ sub run {
     my @polylines_polar_feeble;
     my @wpt;
 
-    my $coordsystem = param("coordsystem") || "bbbike";
+    my $coordsystem = param("coordsystem") || "wgs84";
     my $converter;
     if ( $coordsystem =~ m{^(wgs84|polar)$} ) {
         $converter = \&polar_converter;
