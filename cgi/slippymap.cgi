@@ -168,10 +168,11 @@ sub run {
     $self->{maptype} = (
           $maptype =~ /hybrid/i  ? 'G_HYBRID_MAP'
         : $maptype =~ /normal/i  ? 'G_NORMAL_MAP'
+        : $maptype =~ /^satelite/i  ? 'G_SATELLITE_MAP'
         : $maptype =~ /^cycle$/  ? 'cycle_map'
         : $maptype =~ /^mapnik$/ ? 'mapnik_map'
         : $maptype =~ /^tah$/    ? 'tah_map'
-        : 'G_SATELLITE_MAP'
+        : 'cycle_map'
     );
 
     my $mapmode = param("mapmode") || "";
