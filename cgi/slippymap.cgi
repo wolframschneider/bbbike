@@ -35,11 +35,10 @@ use Karte;
 use Karte::Polar;
 use Encode;
 
-
 ############################################################
-my $lang    = "de";
-my $msg     = "";
-my $VERBOSE = 1;
+my $lang             = "de";
+my $msg              = "";
+my $VERBOSE          = 1;
 my $with_lang_switch = 1;
 ############################################################
 
@@ -1228,26 +1227,27 @@ EOF
 </div>
 EOF
 
-    if ($with_lang_switch) { 
-	my $bbbike_images = '../images';
-        my $q = new CGI;
+    if ($with_lang_switch) {
+        my $bbbike_images = '../images';
+        my $q             = new CGI;
 
-        $q->param('lang', $lang eq 'en' ? "de" : "en");
-        my $url = $q->url(-full => 1, -query_string => 1);
+        $q->param( 'lang', $lang eq 'en' ? "de" : "en" );
+        my $url = $q->url( -full => 1, -query_string => 1 );
 
         $html .= qq{<div style="position:absolute; top:40px; right:15px;">};
-        if ($lang eq 'en') {
+        if ( $lang eq 'en' ) {
             $html .= <<EOF;
 <a href="$url"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a>
 <img class="selectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0">
 EOF
-        } else {
+        }
+        else {
             $html .= <<EOF;
 <img class="selectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" border="0" title="Deutsch">
 <a href="$url"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>
 EOF
         }
-        $html .=  qq{</div>\n};
+        $html .= qq{</div>\n};
     }
 
     $html .= <<EOF;
