@@ -518,7 +518,7 @@ $with_cat_display = 0;
 =item $use_coord_link
 
 Use an own exact coordinate link (i.e. to Mapserver) instead of a
-"Stadtplan" link. Default: true:
+"Stadtplan" link. Default: true.
 
 =cut
 
@@ -785,7 +785,15 @@ sub my_exit {
     exit @_;
 }
 
-$VERSION = sprintf("%d.%02d", q$Revision: 9.30 $ =~ /(\d+)\.(\d+)/);
+use vars qw($require_Karte);
+$require_Karte = sub {
+    require Karte;
+    Karte::preload('Standard', 'Polar');
+    $Karte::Standard::obj = $Karte::Standard::obj if 0; # cease -w
+    undef $require_Karte;
+};
+
+$VERSION = 10.001;
 
 use vars qw($font $delim);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
@@ -1038,15 +1046,7 @@ foreach my $type (qw(start via ziel)) {
 	$q->delete($type . "charimg.y");
     } elsif (defined $q->param($type . 'c_wgs84') and
 	     $q->param($type . 'c_wgs84') ne '') {
-	my($x,$y);
-	if (!$data_is_wgs84) {
-	    require Karte;
-	    Karte::preload('Standard', 'Polar');
-	    $Karte::Standard::obj = $Karte::Standard::obj if 0; # cease -w
-	    ($x, $y) = $Karte::Standard::obj->trim_accuracy($Karte::Polar::obj->map2standard(split /,/, $q->param($type . 'c_wgs84')));
-	} else {
-	    ($x, $y) = split /,/, $q->param($type . 'c_wgs84');
-	}
+	my($x,$y) = convert_wgs84_to_data(split /,/, $q->param($type . 'c_wgs84'));
 	$q->param($type . 'c', "$x,$y");
 	$q->delete($type . 'c_wgs84');
     }
@@ -1139,8 +1139,6 @@ if (defined $q->param('detailmapx') and
 # Ziel für stadtplandienst-kompatible Koordinaten setzen
 my $set_anyc = sub {
     my($ll, $what) = @_;
-    require Karte;
-    Karte::preload("Standard", "Polar");
     # Ob die alte ...x...-Syntax noch unterstützt wird, ist fraglich...
     my($long,$lat) = ($ll =~ /^[\+\ ]/
 		      ? $ll =~ /^[\+\-\ ]([0-9.]+)[\+\-\ ]([0-9.]+)/
@@ -1148,7 +1146,7 @@ my $set_anyc = sub {
 		     );
     if (defined $long && defined $lat) {
 	local $^W;
-	my($x, $y) = $Karte::Polar::obj->map2standard($long, $lat);
+	my($x, $y) = convert_wgs84_to_data($long, $lat);
 	new_kreuzungen(); # XXX needed in munich, here too?
 	$q->param($what . "c", get_nearest_crossing_coords($x,$y));
     }
@@ -4261,25 +4259,32 @@ sub display_route {
     }
 
  OUTPUT_DISPATCHER:
-    if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|perldump|gpx-route)$/ && $r && $r->path) {
-	require Karte;
-	Karte::preload(qw(Polar Standard));
+    if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|perldump|gpx-route)$/) {
 	for my $tb (@affecting_blockings) {
-	    $tb->{longlathop} = [ map { join ",", $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(split /,/, $_)) } @{ $tb->{hop} || [] } ];
+	    $tb->{longlathop} = [ map { join ",", convert_data_to_wgs84(split /,/, $_) } @{ $tb->{hop} || [] } ];
 	}
 
-	my $res = {
+	my $res;
+	if ($r && $r->path) {
+	    $res = {
 		   Route => \@out_route,
 		   Len   => $r->len, # in meters
 		   Trafficlights => $r->trafficlights,
 		   Speed => \%speed_map,
 		   Power => \%power_map,
 		   ($sess ? (Session => $sess->{_session_id}) : ()),
-		   Path => [ map { join ",", @$_ } @{ $r->path }],
-		   LongLatPath => [ map { join ",", $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(@$_)) } @{ $r->path }],
-		   # LongLatPath => [ map { join ",", $Karte::Polar::obj->trim_accuracy(@$_) } @{ $r->path }],
+		   (!$data_is_wgs84 ? (Path => [ map { join ",", @$_ } @{ $r->path }]) : ()), # 
+		   LongLatPath => [ map {
+		       join ",", convert_data_to_wgs84(@$_)
+		   } @{ $r->path }],
 		   AffectingBlockings => \@affecting_blockings,
 		  };
+	} else {
+	    $res = {
+		    Error => 'No route found',
+		    LongLatPath => [],
+		  };
+	}
 
 	if ($output_as eq 'perldump') {
 	    require Data::Dumper;
@@ -5258,6 +5263,9 @@ sub coord_link {
     my($strname, $coords, %args) = @_;
     my $coords_esc = CGI::escape($coords);
     my $strname_esc = CGI::escapeHTML($strname);
+    if ($data_is_wgs84) {
+	return $strname_esc; # XXX currently not useful with wgs84 data
+    }
     my $jslink = $args{-jslink};
     my $out = qq{<a };
 
@@ -6095,9 +6103,7 @@ sub crossing_text {
 	if (!@nearest || !exists $crossings->{$nearest[0]}) {
 	    # Should not happen, but try to be smart
 	    my $crossing_text = eval {
-		require Karte;
-		Karte::preload('Standard', 'Polar');
-		my($px,$py) = $Karte::Polar::obj->standard2map(split /,/, $c);
+		my($px,$py) = convert_data_to_wgs84(split /,/, $c);
 		"N $py / O $px";
 	    };
 	    if ($@) {
@@ -7452,6 +7458,30 @@ sub diff_from_old_route {
 
 sub experimental_label {
     qq{<span class="experimental">} . M("Experimentell") . qq{</span>};
+}
+
+# Make sure the supplied "data" coordinates are converted to wgs84
+# coordinates
+sub convert_data_to_wgs84 {
+    my($x,$y) = @_;
+    if ($data_is_wgs84) {
+	($x,$y);
+    } else {
+	$require_Karte->() if $require_Karte;
+	$Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map($x,$y));
+    }
+}
+
+# Make sure the supplied wgs84 coordinates are converted to "data"
+# coordinates
+sub convert_wgs84_to_data {
+    my($x,$y) = @_;
+    if ($data_is_wgs84) {
+	($x,$y);
+    } else {
+	$require_Karte->() if $require_Karte;
+	$Karte::Standard::obj->trim_accuracy($Karte::Polar::obj->map2standard($x,$y));
+    }
 }
 
 ######################################################################
