@@ -144,6 +144,11 @@ sub run {
         }
     }
 
+    # center defaults to Berlin
+    if (scalar(@polylines_polar) == 0) {
+	push @polylines_polar, ["13.376431,52.516172"];
+    }
+
     for my $wpt ( param("wpt") ) {
         my ( $name, $coord );
         if ( $wpt =~ /[!;]/ ) {
