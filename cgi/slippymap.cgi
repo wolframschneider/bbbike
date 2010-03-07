@@ -369,11 +369,11 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
     }
 
     function setwpt(x,y) {
-        map.panTo(new GPoint(x, y));
+        map.panTo(new GLatLng(y, x));
     }
 
     function setwptAndMark(x,y) {
-	var pt = new GPoint(x, y);
+	var pt = new GLatLng(y, x);
 	map.panTo(pt);
 	if (currentPointMarker) {
 	    map.removeOverlay(currentPointMarker);
@@ -566,7 +566,7 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
 		    if (textElements && textElements.length) {
 			text = textElements[0].textContent;
 		    }
-		    var point = new GPoint(xy[0], xy[1]);
+		    var point = new GLatLng(xy[1], xy[0]);
 	    	    var marker = createMarker(point, text);
 		    map.addOverlay(marker);
 		    currentTempBlockingMarkers[currentTempBlockingMarkers.length] = marker;
@@ -721,7 +721,7 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
 	    for (var i = 0; i < pointElements.length; i++) {
 	    	var xy = pointElements[i].textContent.split(",");
 		if (i == 0) setwpt(xy[0],xy[1]);
-	    	var p = new GPoint(xy[0],xy[1]);
+	    	var p = new GLatLng(xy[1],xy[0]);
 	    	addRoute[addRoute.length] = p;
             }
 	    //updateRouteDiv();
@@ -1003,7 +1003,7 @@ EOF
                 ",\n",
                 map {
                     my ( $x, $y ) = split /,/, $_;
-                    sprintf 'new GPoint(%.5f, %.5f)', $x, $y;
+                    sprintf 'new GLatLng(%.5f, %.5f)', $y, $x;
                   } @$path_polar
             );
             $route_js_code .= qq{], "$color", $width};
@@ -1025,7 +1025,7 @@ EOF
         #my $html_name = escapeHTML($name);
         my $html_name = hrefify($name);
         $html .= <<EOF;
-    var point = new GPoint($x,$y);
+    var point = new GLatLng($y,$x);
     var marker = createMarker(point, '$html_name');
     map.addOverlay(marker);
 EOF
