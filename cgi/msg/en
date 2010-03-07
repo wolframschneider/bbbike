@@ -149,4 +149,16 @@ Bildgr&ouml;&szlig;e, Bildformat und Detailreichtum %s bis %s kB. PDFs sind %s b
      'Kindersitz mit Kind' => 'child seat',
      'Aktuelle Position verwenden' => 'Locate me',
      'Straße ohne Namen' => 'street without name',
+
+     'Adresse' => 'address',
+     'Koordinate(n) (x,y bzw. lon,lat)' => 'coordinates (n) (x,y or. lon,lat)',
+     'Koordinatensystem' => 'coordinate system',
+     'Letzten Punkt l&ouml;schen' => 'delete last point',
+     'Mit Maus<span style="color:red;">klicks</span> eine Route erstellen' => 'create a route with mouse <span style="color:red;">clicks</span>',
+     'Mit Mausklicks Start- und Zielpunkt festlegen' => 'set start and destination points with mouse clicks',
+     'Route l&ouml;schen' => 'delete route',
+     'Scrollen/Bewegen/Zoomen' => 'scroll/move/zoom',
+     'Upload einer GPX-Datei' => 'upload of a GPX file',
+     'WGS84-Koordinaten' => 'WGS84-coordinates',
+     'Zeigen' => 'show',
     };
