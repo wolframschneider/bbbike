@@ -1174,7 +1174,7 @@ EOF
   <input type="hidden" name="zoom" value="@{[ $zoom ]}" />
   @{[ M("Upload einer GPX-Datei") ]}: <input type="file" name="gpxfile" />
   <br />
-  <button>Zeigen</button>
+  <button>@{[ M("Zeigen") ]}</button>
 </form>
 
 </div>
