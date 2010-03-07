@@ -35,11 +35,15 @@ use Karte;
 use Karte::Polar;
 use Encode;
 
-sub new { bless {}, shift }
 
+############################################################
 my $lang    = "de";
 my $msg     = "";
 my $VERBOSE = 1;
+my $with_lang_switch = 1;
+############################################################
+
+sub new { bless {}, shift }
 
 sub M ($) {
     my $key = shift;
@@ -1222,8 +1226,31 @@ EOF
   <a href="#" onclick="close_answerbox(); return false;">[x]</a>
   <div id="answer"></div>
 </div>
+EOF
 
+    if ($with_lang_switch) { 
+	my $bbbike_images = '../images';
+        my $q = new CGI;
 
+        $q->param('lang', $lang eq 'en' ? "de" : "en");
+        my $url = $q->url(-full => 1, -query_string => 1);
+
+        $html .= qq{<div style="position:absolute; top:40px; right:15px;">};
+        if ($lang eq 'en') {
+            $html .= <<EOF;
+<a href="$url"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a>
+<img class="selectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0">
+EOF
+        } else {
+            $html .= <<EOF;
+<img class="selectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" border="0" title="Deutsch">
+<a href="$url"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>
+EOF
+        }
+        $html .=  qq{</div>\n};
+    }
+
+    $html .= <<EOF;
 <div id="footer" style="clear:left;">
 <br />
 <a href="../">home</a> 
