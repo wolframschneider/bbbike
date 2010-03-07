@@ -2420,12 +2420,14 @@ function " . $type . "char_init() {}
 
     if ($show_mini_googlemap_city) {
 	    my $geo = get_geography_object();
+            my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
 
             my $slippymap_url = CGI->new($q);
             $slippymap_url->param('maponly', '1');
             $slippymap_url->param('maptype', 'mapnik');
             $slippymap_url->param('zoom', $slippymap_zoom_city);
 	    $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) );
+            $slippymap_url->param('source_script', "$cityname.cgi");
 
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
             $smu =~ s/.*?\?//;
