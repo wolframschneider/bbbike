@@ -37,6 +37,29 @@ use Encode;
 
 sub new { bless {}, shift }
 
+my $lang = "de";
+my $msg = "";
+my $VERBOSE = 1;
+
+
+sub M ($) {
+    my $key = shift;
+
+    my $text;
+    if ($msg && exists $msg->{$key}) {
+        $text = $msg->{$key};
+    } else {
+        warn "Unknown translation: $key\n" if $VERBOSE && $msg;
+        $text = $key;
+    }
+
+    # if (!Encode::is_utf8($text)) { $text = Encode::encode("utf-8", $text); }
+
+    return $text;
+}
+
+
+
 sub run {
     my ($self) = @_;
 
@@ -44,6 +67,18 @@ sub run {
     my $city = $q->param('city') || "";
     if ($city) {
         $ENV{DATA_DIR} = $ENV{BBBIKE_DATADIR} = "data-osm/$city";
+    }
+
+    { 
+	my $l = $q->param('lang') || "";
+	$lang = $l if $l eq 'de' || $l eq 'en';
+    }
+
+    if ($lang ne "") {
+        $msg = eval { do "$FindBin::RealBin/msg/$lang" };
+    	if ($msg && ref $msg ne 'HASH') {
+            undef $msg;
+    	}
     }
 
     local $CGI::POST_MAX = 2_000_000;
@@ -1076,21 +1111,21 @@ qq{<a href="#map" onclick="setwpt($x,$y);return true;">$name</a><br />\n};
     <td><input onchange="currentModeChange()" 
 	       id="mapmode_browse"
                type="radio" name="mapmode" value="browse" checked="checked" /></td>
-    <td><label for="mapmode_browse">Scrollen/Bewegen/Zoomen</label></td>
+    <td><label for="mapmode_browse">@{[ M("Scrollen/Bewegen/Zoomen") ]}</label></td>
    </tr>
    <tr style="vertical-align:top;">
     <td><input onchange="currentModeChange()" 
 	       id="mapmode_search"
                type="radio" name="mapmode" value="search" /></td>
-    <td><label for="mapmode_search">Mit Mausklicks Start- und Zielpunkt festlegen</label></td>
+    <td><label for="mapmode_search">@{[ M("Mit Mausklicks Start- und Zielpunkt festlegen") ]}</label></td>
    </tr>
    <tr style="vertical-align:top;">
     <td><input onchange="currentModeChange()" 
 	       id="mapmode_addroute"
                type="radio" name="mapmode" value="addroute" /></td>
-    <td><label for="mapmode_addroute">Mit Maus<span style="color:red;">klicks</span> eine Route erstellen</label><br/><!-- XXX remove colored "klicks" some time -->
-        <a href="javascript:deleteLastPoint()">Letzten Punkt l&ouml;schen</a>
-        <a href="javascript:resetOrUndoRoute()" id="routedellink">Route l&ouml;schen</a></td>
+    <td><label for="mapmode_addroute">@{[ M('Mit Maus<span style="color:red;">klicks</span> eine Route erstellen') ]}</label><br/><!-- XXX remove colored "klicks" some time -->
+        <a href="javascript:deleteLastPoint()">@{[ M("Letzten Punkt l&ouml;schen") ]}</a>
+        <a href="javascript:resetOrUndoRoute()" id="routedellink">@{[ M("Route l&ouml;schen") ]}</a></td>
    </tr>
 EOF
     if ($is_beta) {
@@ -1139,7 +1174,7 @@ EOF
     }
     $html .= <<EOF;
   <input type="hidden" name="zoom" value="@{[ $zoom ]}" />
-  Upload einer GPX-Datei: <input type="file" name="gpxfile" />
+  @{[ M("Upload einer GPX-Datei") ]}: <input type="file" name="gpxfile" />
   <br />
   <button>Zeigen</button>
 </form>
@@ -1150,10 +1185,10 @@ EOF
   <table style="width:100%;">
     <colgroup><col width="0*" /><col width="1*" /><col width="0*" /></colgroup>
     <tr>
-      <td>Adresse:</td>
+      <td>@{[ M("Adresse") ]}:</td>
 <!-- first width is needed for firefox, 2nd for seamonkey -->
       <td style="width:100%;"><input style="width:100%;" name="geocodeAddress" /></td>
-      <td><button>Zeigen</button></td>
+      <td><button>@{[ M("Zeigen") ]}</button></td>
     </tr>
   </table>
 </form>
@@ -1162,12 +1197,12 @@ EOF
   <input type="hidden" name="zoom" value="@{[ $zoom ]}" />
   <input type="hidden" name="autosel" value="@{[ $self->{autosel} ]}" />
   <input type="hidden" name="maptype" value="@{[ $self->{maptype} ]}" />
-  <label>Koordinate(n) (x,y bzw. lon,lat): <input name="wpt_or_trk" size="17" /></label>
-  <button>Zeigen</button>
+  <label>@{[ M("Koordinate(n) (x,y bzw. lon,lat)") ]}: <input name="wpt_or_trk" size="17" /></label>
+  <button>@{[ M("Zeigen") ]}</button>
   <br />
   <div class="sml">
-    Koordinatensystem:<br />
-    <label><input type="radio" name="coordsystem" value="polar" @{[ $coordsystem eq 'polar' ? 'checked="checked"' : '' ]} /> WGS84-Koordinaten (DDD)</label>
+    @{[ M("Koordinatensystem") ]}:<br />
+    <label><input type="radio" name="coordsystem" value="polar" @{[ $coordsystem eq 'polar' ? 'checked="checked"' : '' ]} /> @{[ M("WGS84-Koordinaten") ]} (DDD)</label>
     <label><input type="radio" name="coordsystem" value="bbbike" @{[ $coordsystem eq 'bbbike' ? 'checked="checked"' : '' ]} /> BBBike</label>
   </div>
   
