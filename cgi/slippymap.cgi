@@ -580,12 +580,13 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
     }
 
     function updateWptDiv(resultXml) {
+	var Path = "Path"
         if (!resultXml.documentElement.getElementsByTagName("Path")[0]) {
-		return;
+		Path = "LongLatPath";
 	}
 
 	var polarElements = resultXml.documentElement.getElementsByTagName("LongLatPath")[0].getElementsByTagName("XY");
-	var bbbikeElements = resultXml.documentElement.getElementsByTagName("Path")[0].getElementsByTagName("XY");
+	var bbbikeElements = resultXml.documentElement.getElementsByTagName(Path)[0].getElementsByTagName("XY");
 	var bbbike2polar = {};
 	for(var i = 0; i < polarElements.length; i++) {
 	    bbbike2polar[bbbikeElements[i].textContent] = polarElements[i].textContent;
