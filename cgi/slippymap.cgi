@@ -538,8 +538,7 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
 	    opts.clickable = false;
 	    addRouteOverlay = new GPolyline(addRoute, null, null, null, opts);
 	}
-	map.addOverlay(addRouteOverlay);
-
+	map.addOverlay(addRouteOverlay); 
 	if (false) { // experiment: draw geodesic lines
 	    if (addRouteOverlay2) {
 		map.removeOverlay(addRouteOverlay2);
@@ -576,6 +575,10 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
     }
 
     function updateWptDiv(resultXml) {
+        if (!resultXml.documentElement.getElementsByTagName("Path")[0]) {
+		return;
+	}
+
 	var polarElements = resultXml.documentElement.getElementsByTagName("LongLatPath")[0].getElementsByTagName("XY");
 	var bbbikeElements = resultXml.documentElement.getElementsByTagName("Path")[0].getElementsByTagName("XY");
 	var bbbike2polar = {};
