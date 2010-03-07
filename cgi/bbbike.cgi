@@ -4921,11 +4921,12 @@ EOF
 
             my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
 
+
             my $pdf_url = CGI->new($q);
             $pdf_url->param('imagetype', 'pdf-auto');
 	    $pdf_url->param( 'coords', $string_rep);
-	    $pdf_url->param( 'startname', $startname);
-	    $pdf_url->param( 'zielname', $zielname);
+	    $pdf_url->param( 'startname', Encode::encode( utf8 => $startname));
+	    $pdf_url->param( 'zielname', Encode::encode( utf8 => $zielname));
 	    $pdf_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 
             my $slippymap_url = CGI->new($q);
@@ -4936,8 +4937,8 @@ EOF
             $slippymap_url->param('source_script', "$cityname.cgi");
             $slippymap_url->param('zoom', $slippymap_zoom_maponly);
 	    $slippymap_url->param( 'coords', $string_rep);
-	    $slippymap_url->param( 'startname', $startname);
-	    $slippymap_url->param( 'zielname', $zielname);
+	    $slippymap_url->param( 'startname', Encode::encode( $startname));
+	    $slippymap_url->param( 'zielname', Encode::encode( $zielname));
 	    $slippymap_url->param( 'lang', $lang);
 	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 
