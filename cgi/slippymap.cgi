@@ -37,18 +37,18 @@ use Encode;
 
 sub new { bless {}, shift }
 
-my $lang = "de";
-my $msg = "";
+my $lang    = "de";
+my $msg     = "";
 my $VERBOSE = 1;
-
 
 sub M ($) {
     my $key = shift;
 
     my $text;
-    if ($msg && exists $msg->{$key}) {
+    if ( $msg && exists $msg->{$key} ) {
         $text = $msg->{$key};
-    } else {
+    }
+    else {
         warn "Unknown translation: $key\n" if $VERBOSE && $msg;
         $text = $key;
     }
@@ -57,8 +57,6 @@ sub M ($) {
 
     return $text;
 }
-
-
 
 sub run {
     my ($self) = @_;
@@ -69,16 +67,16 @@ sub run {
         $ENV{DATA_DIR} = $ENV{BBBIKE_DATADIR} = "data-osm/$city";
     }
 
-    { 
-	my $l = $q->param('lang') || "";
-	$lang = $l if $l eq 'de' || $l eq 'en';
+    {
+        my $l = $q->param('lang') || "";
+        $lang = $l if $l eq 'de' || $l eq 'en';
     }
 
-    if ($lang ne "") {
+    if ( $lang ne "" ) {
         $msg = eval { do "$FindBin::RealBin/msg/$lang" };
-    	if ($msg && ref $msg ne 'HASH') {
+        if ( $msg && ref $msg ne 'HASH' ) {
             undef $msg;
-    	}
+        }
     }
 
     local $CGI::POST_MAX = 2_000_000;
@@ -180,8 +178,8 @@ sub run {
     }
 
     # center defaults to Berlin
-    if (scalar(@polylines_polar) == 0) {
-	push @polylines_polar, ["13.376431,52.516172"];
+    if ( scalar(@polylines_polar) == 0 ) {
+        push @polylines_polar, ["13.376431,52.516172"];
     }
 
     for my $wpt ( param("wpt") ) {
