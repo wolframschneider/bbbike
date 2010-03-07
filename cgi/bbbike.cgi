@@ -4938,6 +4938,7 @@ EOF
 	    $slippymap_url->param( 'coords', $string_rep);
 	    $slippymap_url->param( 'startname', $startname);
 	    $slippymap_url->param( 'zielname', $zielname);
+	    $slippymap_url->param( 'lang', $lang);
 	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
