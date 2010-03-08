@@ -3744,6 +3744,7 @@ sub display_route {
     my $vianame     = name_from_cgi($q, 'via');
     my $zielname    = name_from_cgi($q, 'ziel');
 
+    #warn "YYY: startname: $startname, utf8: ", Encode::is_utf8($startname), " zielname: $zielname, ", Encode::is_utf8($zielname), "\n" ;
     my $real_zielname;
     if ($r && $r->nearest_node) {
 	$real_zielname = crossing_text($r->nearest_node);
@@ -4921,7 +4922,6 @@ EOF
 
             my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
 
-
             my $pdf_url = CGI->new($q);
             $pdf_url->param('imagetype', 'pdf-auto');
 	    $pdf_url->param( 'coords', $string_rep);
@@ -4937,8 +4937,8 @@ EOF
             $slippymap_url->param('source_script', "$cityname.cgi");
             $slippymap_url->param('zoom', $slippymap_zoom_maponly);
 	    $slippymap_url->param( 'coords', $string_rep);
-	    $slippymap_url->param( 'startname', Encode::encode( $startname));
-	    $slippymap_url->param( 'zielname', Encode::encode( $zielname));
+	    $slippymap_url->param( 'startname', Encode::encode( utf8 => $startname));
+	    $slippymap_url->param( 'zielname', Encode::encode( utf8 => $zielname));
 	    $slippymap_url->param( 'lang', $lang);
 	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 
