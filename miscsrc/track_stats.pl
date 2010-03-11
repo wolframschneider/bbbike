@@ -47,6 +47,8 @@ my $start_stage;
 my $state_file;
 my $sortby = "difftime";
 my $outbbd;
+my $detect_pause;
+my @filter_stat;
 my $v;
 GetOptions("stage=s" => \$start_stage,
 	   "state=s" => \$state_file,
@@ -59,6 +61,9 @@ GetOptions("stage=s" => \$start_stage,
 	   "sortby=s" => \$sortby,
 
 	   "outbbd=s" => \$outbbd,
+	   "detectpause=i" => \$detect_pause,
+
+	   'filterstat=s@' => \@filter_stat,
 
 	   "v+" => \$v,
 	  ) or die "usage?";
@@ -109,8 +114,8 @@ if (!$stages{$start_stage}) {
 
 # Get tracks intersecting both lines
 sub stage_filtertracks {
-    my(@from, @to);
-    parse_intersection_lines(\@from, \@to);
+    my(@from, @vias, @to);
+    parse_intersection_lines(\@from, \@vias, \@to);
 
     my $trks = Strassen->new($tracks_file);
     $trks->make_grid(#Exact => 1, # XXX Eats a lot of memory, so better not use it yet...
@@ -119,7 +124,8 @@ sub stage_filtertracks {
     my @included;
 
     my %ns;
-    for my $def (\@from, \@to) {
+    my @fences = (\@from, @vias, \@to);
+    for my $def (@fences) {
 	my @p = @$def;
 	for my $p_i (0 .. $#p-1) {
 	    my($p1, $p2) = ($p[$p_i], $p[$p_i+1]);
@@ -135,10 +141,9 @@ sub stage_filtertracks {
 	}
     }
 
-    use constant STAGE_SEARCH_FROM => 1;
-    use constant STAGE_SEARCH_TO  => 2;
-    my $stage = STAGE_SEARCH_FROM;
+    my $stage = 0;
     my %found_from;
+    my %found_via;
     # Order records by appearance in file
     for my $n (sort { $a <=> $b } keys %ns) {
 	my $r = $trks->get($n);
@@ -147,44 +152,37 @@ sub stage_filtertracks {
 	my($file) = $r->[Strassen::NAME] =~ m{^(\S+)};
     RECORD: for my $r_i (1 .. $#{ $r->[Strassen::COORDS] }) {
 	    my($r1,$r2) = @{$r->[Strassen::COORDS]}[$r_i-1,$r_i];
-	    for my $stage (STAGE_SEARCH_FROM, STAGE_SEARCH_TO) {
-		my $fence_coords = $stage == STAGE_SEARCH_FROM ? \@from : \@to;
-	    FENCE_CHECK: for my $p_i (0 .. $#$fence_coords-1) {
-		    my($p1, $p2) = ($fence_coords->[$p_i],$fence_coords->[$p_i+1]);
-		    for my $checks ([$r1, $p1],
-				    [$r1, $p2],
-				    [$r2, $p1],
-				    [$r2, $p2],
-				   ) {
-			if ($checks->[0] eq $checks->[1]) {
-			    if ($stage == STAGE_SEARCH_FROM) {
-				$found_from{$file} = [$deb_r, [$checks->[0]], [$checks->[1]], [$n,$r_i-1]];
-			    } else { # STAGE_SEARCH_TO
-				if ($found_from{$file}) {
-				    my $found_to = [$deb_r, [$checks->[0]], [$checks->[1]], [$n,$r_i-1]];
-				    push @included, [$file, $found_from{$file}, $found_to];
-				    delete $found_from{$file};
+	    for my $stage (0 .. $#fences) {
+		my $fence_coords = $fences[$stage];
+		my $res_coords = is_crossing_fence($r1,$r2,$fence_coords);
+		if ($res_coords) {
+		    my $res = [$deb_r, @$res_coords, [$n,$r_i-1]];
+		    if ($stage == 0) { # STAGE_SEARCH_FROM
+			$found_from{$file} = $res;
+		    } elsif ($stage > 0 && $stage < $#fences) {
+			if ($found_from{$file}) {
+			    # XXX streng genommen müssten auch alle anderen vias vorher geprüft werden...!
+			    $found_via{$file}{$stage} = 1;
+			}
+		    } elsif ($stage == $#fences) { # STAGE_SEARCH_TO
+			if ($found_from{$file}) {
+			    my $found_all_vias = 1;
+			    for (1 .. $#fences-1) {
+				if (!$found_via{$file}{$_}) {
+				    if ($v && $v >= 2) {
+					warn "Did not found via nr. $_ for $file, skipping...\n";
+				    }
+				    $found_all_vias = 0;
+				    last;
 				}
 			    }
-			    next RECORD;
+			    next if !$found_all_vias;
+			    my $found_to = $res;
+			    push @included, [$file, $found_from{$file}, $found_to];
+			    delete $found_from{$file};
 			}
 		    }
-		    if (VectorUtil::intersect_lines(split(/,/, $p1),
-						    split(/,/, $p2),
-						    split(/,/, $r1),
-						    split(/,/, $r2),
-						   )) {
-			if ($stage == STAGE_SEARCH_FROM) {
-			    $found_from{$file} = [$deb_r, [$r1,$r2], [$p1,$p2], [$n,$r_i-1]];
-			} else { # STAGE_SEARCH_TO
-			    if ($found_from{$file}) {
-				my $found_to = [$deb_r, [$r1,$r2], [$p1,$p2], [$n,$r_i-1]];
-				push @included, [$file, $found_from{$file}, $found_to];
-				delete $found_from{$file};
-			    }
-			}
-			next RECORD;
-		    }
+		    next RECORD;
 		}
 	    }
 	}
@@ -192,8 +190,9 @@ sub stage_filtertracks {
 
     $state->{included} = \@included;
     $state->{stage} = 'filtertracks';
-    $state->{from} = \@from,
-    $state->{to}   = \@to,
+    $state->{from} = \@from;
+    $state->{vias} = \@vias;
+    $state->{to}   = \@to;
     save_state();
 }
 
@@ -226,8 +225,22 @@ sub stage_trackdata {
 	my $current_vehicle;
 	my $current_brand;
 	my %vehicle_to_brand;
-    PARSE_TRACK: for my $chunk (@{ $gps->Chunks }) {
-	    no warnings 'once';
+	my $altimeter_is_broken = ($gps->Chunks->[0]->TrackAttrs->{'srt:altimeter'}||'') =~ /broken/;
+    PARSE_TRACK: for my $chunk_i (0 .. $#{ $gps->Chunks }) {
+	    my $chunk = $gps->Chunks->[$chunk_i];
+	    if ($detect_pause && $chunk_i >= 1 && $result) {
+		my $last_chunk = $gps->Chunks->[$chunk_i-1];
+		my $last_wpt = $last_chunk->Points->[-1];
+		my $this_wpt = $chunk->Points->[0];
+		my $diff_epoch = $this_wpt->Comment_to_unixtime($chunk) - $last_wpt->Comment_to_unixtime($last_chunk);
+		if ($diff_epoch >= $detect_pause) {
+		    if ($v) {
+			warn "Pause detection fired for file $file (between chunk borders)...\n";
+		    }
+		    $result = undef;
+		    $stage = 'from'; # restart search...
+		}
+	    }
 	    my @point_objs = @{ $chunk->Points };
 	    my @points = map {
 		join(",", $Karte::Polar::obj->trim_accuracy($_->Longitude, $_->Latitude));
@@ -254,7 +267,7 @@ sub stage_trackdata {
 		$result->{vehicles}->{$vehicle_label}++;
 	    }
 	    for my $wpt_i (1 .. $#points) {
-		if ($v && $v >= 2) {
+		if ($v && $v >= 3) {
 		    warn "$file $stage " . $point_objs[$wpt_i]->Comment . " | $from1 $from2 | $points[$wpt_i-1] $points[$wpt_i] | " . join(" ", map { Karte::Polar::ddd2dms($_) } map { split /,/ } $points[$wpt_i-1], $points[$wpt_i])."\n";
 		}
 		if ($stage eq 'from') {
@@ -293,13 +306,21 @@ sub stage_trackdata {
 		    }
 		} else {	# $stage eq 'to'
 		    my($wpt1,$wpt2) = ($chunk->Points->[$wpt_i-1], $chunk->Points->[$wpt_i]);
+		    my($epoch1,$epoch2) = ($wpt1->Comment_to_unixtime($chunk), $wpt2->Comment_to_unixtime($chunk));
+		    if ($detect_pause && $epoch2-$epoch1 >= $detect_pause) {
+			if ($v) {
+			    warn "Pause detection fired for file $file (within a chunk)...\n";
+			}
+			$result = undef;
+			$stage = 'from'; # restart search
+			next;
+		    }
 		    $length += $chunk->wpt_dist($wpt1, $wpt2);
 		    push @outbbd_coords, $wpt1->Longitude.",".$wpt1->Latitude if $outbbd;
 		    if (($points[$wpt_i-1] eq $to1 &&
 			 $points[$wpt_i  ] eq $to2) ||
 			($points[$wpt_i-1] eq $to2 &&
 			 $points[$wpt_i  ] eq $to1)) {
-			my($epoch1,$epoch2) = ($wpt1->Comment_to_unixtime($chunk), $wpt2->Comment_to_unixtime($chunk));
 			my $epoch;
 			my($intersect_wpt) = eval { _schnittpunkt_as_wpt([$to1,$to2],[$to_fence1,$to_fence2]) };
 			if ($@) {
@@ -320,8 +341,8 @@ sub stage_trackdata {
 			$result->{file} = $file;
 			$result->{device} = guess_device($result);
 			$seen_device{$result->{device}} = 1;
-			$result->{diffalt} = $chunk->Points->[$wpt_i]->Altitude - $result->{from2}->Altitude;
-			if ($length) {
+			$result->{diffalt} = !$altimeter_is_broken ? $chunk->Points->[$wpt_i]->Altitude - $result->{from2}->Altitude : undef;
+			if ($length and defined $result->{diffalt}) {
 			    $result->{mount} = 100 * $result->{diffalt} / $length;
 			} else {
 			    $result->{mount} = undef;
@@ -356,7 +377,7 @@ sub stage_trackdata {
 	print $ofh "#: map: polar\n#:\n";
 	for my $outbbd_record (@outbbd_records) {
 	    my($result, $coords) = @{$outbbd_record}{qw(result coords)};
-	    print $ofh "difftime=$result->{difftime} length=$result->{length}\tX @$coords\n";
+	    print $ofh "$result->{file} difftime=$result->{difftime} length=$result->{length}\tX @$coords\n";
 	}
 	close $ofh
 	    or die "Error while closing $outbbd: $!";
@@ -371,6 +392,19 @@ sub stage_trackdata {
 # Calculate statistics on data, total and per-device
 sub stage_statistics {
     my @results = @{ $state->{results} };
+    for my $filter_stat_rule (@filter_stat) {
+	if (my($key, $op, $val) = $filter_stat_rule =~ m{^(.*?)(==|!=|=~|!~|<|<=|>|>=)(.*)$}) {
+	    my $code = '$_->{' . $key . '} ' . $op . ' ' . $val;
+	    warn "code: $code\n" if $v;
+	    @results = grep {
+		my $rv = eval $code;
+		die $@ if $@;
+		$rv;
+	    } @results;
+	} else {
+	    die "Cannot parse filterstat rule '$filter_stat_rule'";
+	}	
+    }
     my %seen_device = %{ $state->{seen_device} };
 
     #my @cols = grep { /^!/ } keys %{ $results[0] };
@@ -384,16 +418,20 @@ sub stage_statistics {
 
 	my %s;
 	$s{ALL} = Statistics::Descriptive::Full->new;
-	$s{ALL}->add_data(map { $_->{$numeric_field} } @results);
+	$s{ALL}->add_data(grep { defined } map { $_->{$numeric_field} } @results);
 
 	for my $device (keys %seen_device) {
-	    $s{$device} = Statistics::Descriptive::Full->new;
 	    my @filtered_results = grep { $_->{device} eq $device } @results;
-	    $s{$device}->add_data(map { $_->{$numeric_field} } @filtered_results);
-	    $count_per_device{$device} = scalar @filtered_results;
+	    my @vals = grep { defined } map { $_->{$numeric_field} } @filtered_results;
+	    if (@vals) {
+		$s{$device} = Statistics::Descriptive::Full->new;
+		$s{$device}->add_data(@vals);
+		$count_per_device{$device} = scalar @vals;
+	    }
 	}
 
 	for my $device ('ALL', keys %seen_device) {
+	    next if !$s{$device};
 	    no strict 'refs';
 	    $stats{$device}->{median}->{$col}             = &{"format_" . $numeric_field}($s{$device}->median);
 	    $stats{$device}->{mean}->{$col}               = &{"format_" . $numeric_field}($s{$device}->mean);
@@ -407,7 +445,8 @@ sub stage_statistics {
     $state->{cols}  = \@cols;
     $state->{count_per_device} = \%count_per_device;
     $state->{stage} = 'statistics';
-    save_state();
+
+    save_state() unless @filter_stat;
 }
 
 # Sort and print table
@@ -470,7 +509,7 @@ sub save_state {
     sub format_difftime { sprintf "%8s", s2hms($_[0]) }
     sub format_fromtime { strftime("%T", localtime $_[0]) }
     sub format_file     { $_[0] }
-    sub format_diffalt  { sprintf "%.1f", $_[0] }
+    sub format_diffalt  { defined $_[0] ? sprintf "%.1f", $_[0] : undef }
     sub format_mount    { defined $_[0] ? sprintf "%.1f", $_[0] : undef }
     sub format_device   { $_[0] }
 }
@@ -510,12 +549,12 @@ sub guess_date {
 }
 
 sub parse_intersection_lines {
-    my($from_ref, $to_ref) = @_;
+    my($from_ref, $vias_ref, $to_ref) = @_;
 
     my $usage = sub {
 	my $msg = shift;
 	if ($msg) { warn $msg . "\n" }
-	die "usage: $0 [options] from1 from2 ... : to1 to2 ...";
+	die "usage: $0 [options] from1 from2 ... : [via1 via2 ... : ] to1 to2 ...";
     };
     if (!@ARGV) {
 	# get from state
@@ -525,30 +564,34 @@ sub parse_intersection_lines {
 	    $usage->("Cannot get from/to points from state file, please specify on command line.");
 	}
 	@$from_ref = @{ $state->{from} };
+	@$vias_ref = @{ $state->{vias} || [] }; # may be empty
 	@$to_ref   = @{ $state->{to} };
     } else {
-	my $var = $from_ref;
-	my $colon_seen;
+	my @fences = []; # from, vias, to
+	my $var = $fences[-1];
 	for my $i (0 .. $#ARGV) {
 	    if ($ARGV[$i] eq ':') {
-		if ($colon_seen) {
-		    $usage->("Colon have to appear exactly once.");
+		if (@$var < 2) {
+		    $usage->("At least two points need to be supplied per from/via/to.");
 		}
-		$colon_seen = 1;
-		if (@$from_ref < 2) {
-		    $usage->("At least two from points need to be supplied.");
-		}
-		$var = $to_ref;
+		push @fences, [];
+		$var = $fences[-1];
 		next;
 	    }
 	    push @$var, $ARGV[$i];
 	}
-	if (!$colon_seen) {
+	if (@fences < 2) {
 	    $usage->("Colon have to be used to separate from and to points.");
 	}
-	if (@$to_ref < 2) {
+	if (@{$fences[-1]} < 2) {
 	    $usage->("At least two to points need to be supplied.");
 	}
+
+	@$from_ref = @{$fences[0]};
+	if (@fences >= 3) {
+	    @$vias_ref = @fences[1..$#fences-1];
+	}
+	@$to_ref   = @{$fences[-1]};
     }
 }
 
@@ -562,6 +605,30 @@ sub next_stage {
     undef;
 }
 
+sub is_crossing_fence {
+    my($r1, $r2, $fence_coords) = @_;
+    for my $p_i (0 .. $#$fence_coords-1) {
+	my($p1, $p2) = ($fence_coords->[$p_i],$fence_coords->[$p_i+1]);
+	for my $checks ([$r1, $p1],
+			[$r1, $p2],
+			[$r2, $p1],
+			[$r2, $p2],
+		       ) {
+	    if ($checks->[0] eq $checks->[1]) {
+		return [[$checks->[0]], [$checks->[1]]];
+	    }
+	}
+	if (VectorUtil::intersect_lines(split(/,/, $p1),
+					split(/,/, $p2),
+					split(/,/, $r1),
+					split(/,/, $r2),
+				       )) {
+	    return [[$r1,$r2], [$p1,$p2]];
+	}
+    }
+    undef;
+}
+
 # XXX will fail if $m1 or $m2 is senkrecht :-(
 sub _schnittpunkt {
     my($l1, $l2) = @_;
@@ -569,14 +636,25 @@ sub _schnittpunkt {
     my($x11,$y11,$x12,$y12) = map { split/,/ } @$l1;
     my($x21,$y21,$x22,$y22) = map { split/,/ } @$l2;
 
-    my $m1 = ($y12-$y11)/($x12-$x11);
-    my $m2 = ($y22-$y21)/($x22-$x21);
+    my $x1_delta = $x12-$x11;
+    my $x2_delta = $x22-$x21;
 
-    my $x = ($m1*$x11-$m2*$x21+$y21-$y11)/($m1-$m2);
-    # XXX check if $x is really between $x11..$x12 and $x21..$x22
-    my $y = ($x-$x11)*$m1+$y11;
-    # the same: my $y = ($x-$x21)*$m2+$y21;
-    ($x, $y);
+    if ($x1_delta == 0) {
+	my $y2_delta = $y22-$y21;
+	($x11, $y21 + ($x11-$x21)*$y2_delta/$x2_delta);
+    } elsif ($x2_delta == 0) {
+	my $y1_delta = $y12-$y11;
+	($x21, $y11 + ($x21-$x11)*$y1_delta/$x1_delta);
+    } else {
+	my $m1 = ($y12-$y11)/$x1_delta;
+	my $m2 = ($y22-$y21)/$x2_delta;
+
+	my $x = ($m1*$x11-$m2*$x21+$y21-$y11)/($m1-$m2);
+	# XXX check if $x is really between $x11..$x12 and $x21..$x22
+	my $y = ($x-$x11)*$m1+$y11;
+	# the same: my $y = ($x-$x21)*$m2+$y21;
+	($x, $y);
+    }
 }
 
 sub _schnittpunkt_as_wpt {
@@ -611,13 +689,17 @@ __END__
 
  Select two points forming the "start line" and two points forming the "goal line"
 
- Run the stage 1 of the programm (may take longer to create the grid):
+ Run the programm:
 
-   ./track_stats.pl <coord1> <coord2> <coord3> <coord4> -stage1 /tmp/something
+   ./track_stats.pl <coord1> <coord2> : <coord3> <coord4> -state cache/somefile -state output
 
- Run the stage 2 of the programm
+ Force recalculation (or just delete the cached state file):
 
-   ./track_stats.pl -stage2 /tmp/something
+   ./track_stats.pl <coord1> <coord2> : <coord3> <coord4> -state cache/somefile -state begin
+
+ Add some filters on the statistics:
+
+   ./track_stats.pl <coord1> <coord2> : <coord3> <coord4> -state cache/somefile -state statistics -filterstat 'file=~/2010/'
 
 =head1 TODO
 
