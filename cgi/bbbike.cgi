@@ -2426,7 +2426,11 @@ function " . $type . "char_init() {}
             $slippymap_url->param('maponly', '1');
             $slippymap_url->param('maptype', 'mapnik');
             $slippymap_url->param('zoom', $slippymap_zoom_city);
-	    $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) );
+	    if (exists $geo->{'center'}) {
+	       $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) ) 
+            } else {
+	       warn "Cannot determine city center for '$cityname', maybe data-osm/<city>/meta.dd does not exists?\n"; 
+	    }
             $slippymap_url->param('source_script', "$cityname.cgi");
 
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
