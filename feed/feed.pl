@@ -85,5 +85,19 @@ $feed->add_entry(
     category => 'News',
 );
 
+$feed->add_entry(
+    title => 'More cities supported',
+    id    => '82ebeaf0506f9d6a518be2ab38ec242d',
+
+    content => {
+        type    => 'text',
+        content => qq{Added new cities: Nuernberg, Muenchen, Kiel, Oldenburg, Genf, Warschau, Magdeburg.},
+    },
+
+    updated  => '2010-01-12T18:30:02Z',
+    category => 'News',
+);
+
+
 $feed->print;
 
