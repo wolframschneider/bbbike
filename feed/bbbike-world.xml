@@ -5,7 +5,7 @@
   <link href="http://www.bbbike.org/feed/bbbike-world.xml"
   rel="self" />
   <icon>http://www.bbbike.org/images/srtbike.ico</icon>
-  <updated>2010-03-13T18:30:02Z</updated>
+  <updated>2010-03-03T18:30:02Z</updated>
   <author>
     <name>Wolfram Schneider</name>
   </author>
@@ -18,7 +18,7 @@
   <entry>
     <title>New design for BBBike @ world search</title>
     <link href="http://www.bbbike.org" />
-    <id>81ebeaf0506f9d6a518be2ab34ec243f</id>
+    <id>81ebeaf0506f9d6a518be2ab34ed243f</id>
     <content>New design for BBBike @ world search</content>
     <updated>2010-03-06T18:30:02Z</updated>
     <category term="News" />
@@ -29,7 +29,7 @@
     <id>81ebeaf0506f9d6a518be2ab38ec243f</id>
     <content>BBBike @ World supports now 125 cities world
     wide.</content>
-    <updated>2010-03-06T18:30:02Z</updated>
+    <updated>2010-03-06T18:30:03Z</updated>
     <category term="News" />
   </entry>
   <entry>
@@ -38,7 +38,7 @@
     <id>81ebeaf0506f9d6a518be2ab38ec243e</id>
     <content>The BBBike @ Berlin package for MacOS are
     updated.</content>
-    <updated>2010-03-06T18:30:02Z</updated>
+    <updated>2010-03-06T18:30:04Z</updated>
     <category term="News" />
   </entry>
   <entry>
