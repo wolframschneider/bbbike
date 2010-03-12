@@ -16,6 +16,14 @@
   <generator uri="http://search.cpan.org/dist/XML-Atom-SimpleFeed/"
   version="0.86">XML::Atom::SimpleFeed</generator>
   <entry>
+    <title>More cities supported</title>
+    <id>82ebeaf0506f9d6a518be2ab38ec242d</id>
+    <content>Added new cities: Nuernberg, Muenchen, Kiel,
+    Oldenburg, Genf, Warschau, and Magdeburg.</content>
+    <updated>2010-03-12T18:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
     <title>New design for BBBike @ world search</title>
     <link href="http://www.bbbike.org" />
     <id>81ebeaf0506f9d6a518be2ab34ed243f</id>
@@ -54,14 +62,6 @@
     <id>81ebeaf0506f9d6a518be2ab38ec242d</id>
     <content>Added support for cycle map layer.</content>
     <updated>2010-01-03T18:30:02Z</updated>
-    <category term="News" />
-  </entry>
-  <entry>
-    <title>More cities supported</title>
-    <id>82ebeaf0506f9d6a518be2ab38ec242d</id>
-    <content>Added new cities: Nuernberg, Muenchen, Kiel,
-    Oldenburg, Genf, Warschau, Magdeburg.</content>
-    <updated>2010-01-12T18:30:02Z</updated>
     <category term="News" />
   </entry>
 </feed>
