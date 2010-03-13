@@ -323,15 +323,17 @@ sub get_html {
 
     my $script;
     my $maponly        = "";
+    my $wheelzoom      = "";
     my $slippymap_size = qq{width: 100%; height: 75%;};
     {
         my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
-        $maponly =
-qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
-          if $q->param("maponly");
-        $slippymap_size = qq{ width: 100%; height: 100%; max-width: 800px;}
-          if $q->param("maponly");
+        if ($q->param("maponly")) {
+            $maponly = qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|;
+            $slippymap_size = qq{ width: 100%; height: 100%; max-width: 800px;};
+	} else {
+            $wheelzoom = qq|map.enableScrollWheelZoom();|;
+        }
     }
 
     my $html = <<EOF;
@@ -999,7 +1001,8 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
 
     // map.setMapType(cycle_map);
     map.setMapType($self->{maptype});
-    map.enableScrollWheelZoom();
+    // map.enableScrollWheelZoom();
+    $wheelzoom
 
     /*
     var marker_icon = new GIcon();
