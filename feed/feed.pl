@@ -23,7 +23,7 @@ $feed->add_entry(
     content => {
         type => 'text',
         content =>
-qq{Added new cities: Nuernberg, Muenchen, Kiel, Oldenburg, Genf, Warschau, and Magdeburg.},
+qq{Added new cities: Nuernberg, Muenchen, Kiel, Oldenburg, Genf, Warschau, Magdeburg, Posen, Breslau, Kattowitz, and Gleiwitz.},
     },
 
     updated  => '2010-03-12T18:30:02Z',
