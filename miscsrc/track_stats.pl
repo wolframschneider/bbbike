@@ -182,6 +182,7 @@ sub stage_filtertracks {
 			    my $found_to = $res;
 			    push @included, [$file, $found_from{$file}, $found_to];
 			    delete $found_from{$file};
+			    delete $found_via{$file};
 			}
 		    }
 		    next RECORD;
@@ -223,7 +224,6 @@ sub stage_trackdata {
 	my $stage = 'from';
 	my $result;
 	my $length = 0;
-	my @vehicles;
 	my $current_vehicle;
 	my $current_brand;
 	my %vehicle_to_brand;
