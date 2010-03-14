@@ -2436,7 +2436,7 @@ function " . $type . "char_init() {}
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
             $smu =~ s/.*?\?//;
 
-	    print "<p />\n";
+	    print "<p></p>\n";
 	    print qq{<iframe src="homemap.cgi?$smu" title="slippy map" width="800" height="300" scrolling="no" border="0"></iframe>\n};
     }
 
@@ -6631,6 +6631,7 @@ sub footer_as_string {
     $s .= "cellpadding=3>\n";
     $s .= <<EOF;
 <tr>
+<td></td>
 <!-- <td align=center>${fontstr}<a href="../">BBBike @ world</a>${fontend}</td> -->
 <!-- <td align=center>${fontstr}bbbike.cgi $VERSION${fontend}</td> -->
 <!-- <td align=center>${fontstr} <a target="_top" href="mailto:@{[ $BBBike::EMAIL ]}?subject=BBBike">@{[ M("E-Mail") ]}</a>${fontend}</td> -->
@@ -6661,9 +6662,8 @@ my $s_copyright = <<EOF;
 <div id="footer_top">
 <p><a href="../">home</a></p>
 </div>
-<hr />
+<hr>
 
-</div>
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 (&copy;) 2008-2010 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br />
   Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br />
