@@ -6631,7 +6631,7 @@ sub footer_as_string {
     $s .= "cellpadding=3>\n";
     $s .= <<EOF;
 <tr>
-<td></td>
+<!-- <td></td> -->
 <!-- <td align=center>${fontstr}<a href="../">BBBike @ world</a>${fontend}</td> -->
 <!-- <td align=center>${fontstr}bbbike.cgi $VERSION${fontend}</td> -->
 <!-- <td align=center>${fontstr} <a target="_top" href="mailto:@{[ $BBBike::EMAIL ]}?subject=BBBike">@{[ M("E-Mail") ]}</a>${fontend}</td> -->
