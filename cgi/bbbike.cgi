@@ -2436,8 +2436,11 @@ function " . $type . "char_init() {}
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
             $smu =~ s/.*?\?//;
 
+            my $ie6hack = $slippymap_url->url(-absolute=>1);
+            $ie6hack =~ s,/+[^/]+$,,;
+
 	    print "<p></p>\n";
-	    print qq{<iframe src="./homemap.cgi?$smu" title="slippy map" width="800" height="300" scrolling="no" border="0"></iframe>\n};
+	    print qq{<iframe src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="800" height="300" scrolling="no" border="0"></iframe>\n};
     }
 
     print "<input type=hidden name=scope value='" .
