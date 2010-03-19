@@ -6677,9 +6677,13 @@ EOF
 EOF
 
 my $s_copyright = <<EOF;
-
+<div id="footer">
 <div id="footer_top">
-<p><a href="../">home</a></p>
+<p>
+<a href="../">home</a> |
+<a href="../doc.html">help</a>
+</p>
+</div>
 </div>
 <hr>
 
