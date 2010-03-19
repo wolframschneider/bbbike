@@ -271,7 +271,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2 6606,11222 6582,11202
-userdel	2 6447,11144 6168,11042
+userdel	2 6447,11144 6438,11141 6168,11042
 userdel	2 6447,11144 6582,11202
 EOF
      },
@@ -2077,7 +2077,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2 9643,12127 9756,12139 9812,12145
-userdel	2 10084,12228 9972,12184
+userdel	2 10091,12232 10035,12209 9972,12184
 userdel	2 9812,12145 9890,12161
 userdel	2 9890,12161 9972,12184
 userdel	2 10170,12261 10109,12238
@@ -8433,7 +8433,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005699',
        data  => <<EOF,
-userdel	2::temp 6145,10975 6168,11042 6447,11144 6582,11202
+userdel	2::temp 6145,10975 6168,11042 6438,11141 6447,11144 6582,11202
 EOF
      },
      { from  => 1181024556, # 2007-06-05 08:22
@@ -17142,10 +17142,20 @@ EOF
      },
      { from  => 1268521200, # 2010-03-14 00:00
        until => 1276898399, # 2010-06-18 23:59
-       text  => 'Die Leipziger Str. ist zwischen Mauerstr. und Charlottenstr. Richtung Alexanderstr. wegen Bauarbeiten gesperrt. Zu Einbahnstraßen werden Mauer-, Krausen- und Charlottenstr. Dauer: 15. März 2010 bis 18. Juni 2010 ',
+       text  => 'Die Leipziger Str. ist zwischen Mauerstr. und Charlottenstr. Richtung Alexanderstr. wegen Bauarbeiten gesperrt. Zu Einbahnstraßen werden Teile der Mauer-, Krausen-, Charlottenstr. und Friedrichstr. Dauer: 15. März 2010 bis 18. Juni 2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	q4::inwork; 9268,11590 9444,11616 9569,11631 9581,11523 9456,11513 9331,11497 9268,11590
+userdel	q3::inwork; 9456,11513 9444,11616
+EOF
+     },
+     { from  => undef, # 
+       until => undef, #
+       text  => 'Friedrich-Ebert-Platz: bei Bundestagssitzungen gesperrt',
+       type  => 'gesperrt',
+       permanent => 1,
+       data  => <<EOF,
+	2::temp 8554,12593 8540,12420
 EOF
      },
     );
