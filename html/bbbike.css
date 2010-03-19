@@ -215,3 +215,6 @@ div#nomap {
         bottom: 0;
 }
 
+div#footer { font-size: small; text-align: center; }
+div#footer_top { text-align: left; }
+
