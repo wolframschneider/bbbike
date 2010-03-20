@@ -1259,6 +1259,7 @@ EOF
 <br/>
 <p>
 <a href="../">home</a> 
+| <a href="../doc.html">help</a> 
 | <a href="$print_link">print</a> 
 </p>
 </div>
