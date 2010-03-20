@@ -949,7 +949,15 @@ sub get_html {
  	// map.setMapType($self->{maptype});
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
-        map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
+	if (marker_list.length > 0) {
+	     var bounds = new GLatLngBounds;
+	     for (var i=0; i<marker_list.length; i++) {
+    		bounds.extend(new GPoint( marker_list[i][1], marker_list[i][0]));
+  	     }
+            map.setZoom(map.getBoundsZoomLevel(bounds));
+	} else {
+            map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
+	}
 	new GKeyboardHandler(map);
     } else {
         document.getElementById("map").innerHTML = '<p class="large-error">Sorry, your browser is not supported by <a href="http://maps.google.com/support">Google Maps</a></p>';
@@ -1036,6 +1044,8 @@ function GetTileUrl_cycle(a, z) {
 
 
 EOF
+
+    my @route = ();
     for my $def (
         [ $feeble_paths_polar, '#ff00ff', 5,  0.4 ],
         [ $paths_polar,        '#ff00ff', 10, undef ],
@@ -1054,6 +1064,12 @@ EOF
                     sprintf 'new GLatLng(%.5f, %.5f)', $y, $x;
                   } @$path_polar
             );
+	    push(@route, 
+		  map {
+                    my ( $x, $y ) = split /,/, $_;
+                    [sprintf('%.5f', $y), sprintf('%.5f', $x)]
+                  } @$path_polar );
+
             $route_js_code .= qq{], "$color", $width};
             if ( defined $opacity ) {
                 $route_js_code .= qq{, $opacity};
@@ -1078,6 +1094,12 @@ EOF
     map.addOverlay(marker);
 EOF
     }
+
+    $html .= qq{var marker_list = [\n};
+    foreach my $i (@route) {
+	$html .= qq{[$i->[0],$i->[1]],\n};
+    }
+    $html =~ s/,\n$/];\n/;
 
     $html .= <<EOF;
 
