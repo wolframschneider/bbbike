@@ -336,6 +336,51 @@ sub get_html {
         }
     }
 
+
+    my $zoom_code = '';
+    my @route = ();
+    for my $def (
+        [ $feeble_paths_polar, '#ff00ff', 5,  0.4 ],
+        [ $paths_polar,        '#ff00ff', 10, undef ],
+      )
+    {
+        my ( $paths_polar, $color, $width, $opacity ) = @$def;
+
+        for my $path_polar (@$paths_polar) {
+            my $route_js_code = <<EOF;
+    var route = new GPolyline([
+EOF
+            $route_js_code .= join(
+                ",\n",
+                map {
+                    my ( $x, $y ) = split /,/, $_;
+                    sprintf 'new GLatLng(%.5f, %.5f)', $y, $x;
+                  } @$path_polar
+            );
+	    push(@route, 
+		  map {
+                    my ( $x, $y ) = split /,/, $_;
+                    [sprintf('%.5f', $y), sprintf('%.5f', $x)]
+                  } @$path_polar );
+
+            $route_js_code .= qq{], "$color", $width};
+            if ( defined $opacity ) {
+                $route_js_code .= qq{, $opacity};
+            }
+            $route_js_code .= qq{);};
+
+            $zoom_code .= <<EOF;
+$route_js_code
+EOF
+        }
+    }
+    $zoom_code .= qq{var marker_list = [\n};
+    foreach my $i (@route) {
+	$zoom_code .= qq{[$i->[0],$i->[1]],\n};
+    }
+    $zoom_code =~ s/,\n$/];\n/;
+
+
     my $html = <<EOF;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -394,6 +439,8 @@ sub get_html {
     goalIcon.iconSize = new GSize(32,32);
     var currentPointMarker = null;
     var currentTempBlockingMarkers = [];
+
+    $zoom_code
 
     function createMarker(point, html_name) {
 	var marker = new GMarker(point);
@@ -949,15 +996,21 @@ sub get_html {
  	// map.setMapType($self->{maptype});
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
-	if (marker_list.length > 0) {
+        if (marker_list.length > 0) {
 	     var bounds = new GLatLngBounds;
 	     for (var i=0; i<marker_list.length; i++) {
-    		bounds.extend(new GPoint( marker_list[i][1], marker_list[i][0]));
+    		bounds.extend(new GLatLng( marker_list[i][0], marker_list[i][1]));
   	     }
-            map.setZoom(map.getBoundsZoomLevel(bounds));
-	} else {
+	    map.setCenter(bounds.getCenter());
+	    var zoom = map.getBoundsZoomLevel(bounds);
+
+	    // no zoom level higher than 15
+            map.setZoom( zoom < 16 ? zoom : 15);
+        } else {
+	    // use default zoom level
             map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
-	}
+        }
+
 	new GKeyboardHandler(map);
     } else {
         document.getElementById("map").innerHTML = '<p class="large-error">Sorry, your browser is not supported by <a href="http://maps.google.com/support">Google Maps</a></p>';
@@ -1043,45 +1096,8 @@ function GetTileUrl_cycle(a, z) {
 }
 
 
-EOF
-
-    my @route = ();
-    for my $def (
-        [ $feeble_paths_polar, '#ff00ff', 5,  0.4 ],
-        [ $paths_polar,        '#ff00ff', 10, undef ],
-      )
-    {
-        my ( $paths_polar, $color, $width, $opacity ) = @$def;
-
-        for my $path_polar (@$paths_polar) {
-            my $route_js_code = <<EOF;
-    var route = new GPolyline([
-EOF
-            $route_js_code .= join(
-                ",\n",
-                map {
-                    my ( $x, $y ) = split /,/, $_;
-                    sprintf 'new GLatLng(%.5f, %.5f)', $y, $x;
-                  } @$path_polar
-            );
-	    push(@route, 
-		  map {
-                    my ( $x, $y ) = split /,/, $_;
-                    [sprintf('%.5f', $y), sprintf('%.5f', $x)]
-                  } @$path_polar );
-
-            $route_js_code .= qq{], "$color", $width};
-            if ( defined $opacity ) {
-                $route_js_code .= qq{, $opacity};
-            }
-            $route_js_code .= qq{);};
-
-            $html .= <<EOF;
-$route_js_code
     map.addOverlay(route);
 EOF
-        }
-    }
 
     for my $wpt (@$wpts) {
         my ( $x, $y, $name ) = @$wpt;
@@ -1095,11 +1111,6 @@ EOF
 EOF
     }
 
-    $html .= qq{var marker_list = [\n};
-    foreach my $i (@route) {
-	$html .= qq{[$i->[0],$i->[1]],\n};
-    }
-    $html =~ s/,\n$/];\n/;
 
     $html .= <<EOF;
 
