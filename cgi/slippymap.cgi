@@ -1255,9 +1255,14 @@ EOF
 
     $html .= <<EOF;
 <div id="footer" style="clear:left;">
-<br />
+<div id="footer_top">
+<br/>
+<p>
 <a href="../">home</a> 
 | <a href="$print_link">print</a> 
+</p>
+</div>
+
 <hr />
   <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em; " >
 (&copy;) 2008-2010 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> 
