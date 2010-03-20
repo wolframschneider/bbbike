@@ -1932,7 +1932,7 @@ EOF
 	    print <<EOF;
 <p>
 Willkommen bei BBBike! Wir helfen Dir, eine sch&ouml;ne Fahrradroute in <b>$city</b> und Umgebung zu finden.<br/>
-<!-- Bei nicht erfassten Straßen wird automatisch die nächste bekannte verwendet. ->
+<!-- Bei nicht erfassten Straßen wird automatisch die nächste bekannte verwendet. -->
 <!-- <b>Straßen bitte ohne Hausnummern oder Postleitzahlen eingeben.</b><br><br> -->
 </p>
 EOF
