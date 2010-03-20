@@ -1922,15 +1922,19 @@ EOF
 
 	if ($lang eq 'en') {
 	    print <<EOF;
-This is a route planner for cyclists in $city.
+<p>
+Welcome to BBBike! We'll help you find a nice bike route in <i>$city</i>.<br/>
 <!-- If a street is not available, then the nearest crossing will be used automatically. -->
-<b>Please do not enter street numbers or postal codes.</b><br><br>
+<!-- <b>Please do not enter street numbers or postal codes.</b><br><br> -->
+</p>
 EOF
 	} else {
 	    print <<EOF;
-Dieses Programm sucht (Fahrrad-)Routen in $city.
+<p>
+Willkommen bei BBBike. Wir helfen Dir, eine sch&ouml;ne Fahrradroute in <i>$city</i> zu finden.<br/>
 <!-- Bei nicht erfassten Straﬂen wird automatisch die n‰chste bekannte verwendet. -->
-<b>Straﬂen bitte ohne Hausnummern oder Postleitzahlen eingeben.</b><br><br>
+<!-- <b>Straﬂen bitte ohne Hausnummern oder Postleitzahlen eingeben.</b><br><br> -->
+</p>
 EOF
 	}
 	print <<EOF if ($bi->{'can_table'});
