@@ -1923,7 +1923,7 @@ EOF
 	if ($lang eq 'en') {
 	    print <<EOF;
 <p>
-Welcome to BBBike! We'll help you find a nice bike route in <i>$city</i>.<br/>
+Welcome to BBBike! We'll help you find a nice bike route in the <b>$city</b> and around.<br/>
 <!-- If a street is not available, then the nearest crossing will be used automatically. -->
 <!-- <b>Please do not enter street numbers or postal codes.</b><br><br> -->
 </p>
@@ -1931,8 +1931,8 @@ EOF
 	} else {
 	    print <<EOF;
 <p>
-Willkommen bei BBBike. Wir helfen Dir, eine sch&ouml;ne Fahrradroute in <i>$city</i> zu finden.<br/>
-<!-- Bei nicht erfassten Straﬂen wird automatisch die n‰chste bekannte verwendet. -->
+Willkommen bei BBBike! Wir helfen Dir, eine sch&ouml;ne Fahrradroute in <b>$city</b> und Umgebung zu finden.<br/>
+<!-- Bei nicht erfassten Straﬂen wird automatisch die n‰chste bekannte verwendet. ->
 <!-- <b>Straﬂen bitte ohne Hausnummern oder Postleitzahlen eingeben.</b><br><br> -->
 </p>
 EOF
