@@ -106,7 +106,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $warn_message $use_utf8 $use_via
 	    $enable_google_analytics
 	    $with_green_ways
-            $no_teaser
+            $no_teaser $no_teaser_right
             $slippymap_zoom $slippymap_zoom_maponly $slippymap_zoom_city
 	    $enable_opensearch_plugin $enable_rss_feed
 	    $nice_abc_list
@@ -1906,7 +1906,8 @@ sub choose_form {
 EOF
 
     if ($show_introduction && !$no_teaser) {
-	load_teaser();
+	load_teaser() if !$no_teaser_right;
+
 	# use "make count-streets" in ../data
 	print <<EOF if ($bi->{'can_table'});
 <td valign="top">@{[ blind_image(420,1) ]}<br>
