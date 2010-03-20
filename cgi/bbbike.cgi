@@ -6681,7 +6681,8 @@ my $s_copyright = <<EOF;
 <div id="footer_top">
 <p>
 <a href="../">home</a> |
-<a href="../doc.html">help</a>
+<a href="../doc.html">help</a> |
+<a href="../app.html">app</a>
 </p>
 </div>
 </div>
