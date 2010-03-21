@@ -952,7 +952,7 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
 			new GLatLng(x2,y2), 
 			new GLatLng(x1,y2), 
 			new GLatLng(x1,y1)], // first point again
-			'#ff0000', null, null, {});
+			'#ff0000', 10, 0.5, {});
 	       map.addOverlay(route);
              }
 

@@ -1033,7 +1033,7 @@ EOF
                         new GLatLng(x2,y2), 
                         new GLatLng(x1,y2), 
                         new GLatLng(x1,y1)], // first point again
-                        '#ff0000', null, null, {});
+                        '#ff0000', 10, 0.2, {});
                map.addOverlay(area);
             }
 
