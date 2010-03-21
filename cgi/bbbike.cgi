@@ -2432,8 +2432,15 @@ function " . $type . "char_init() {}
             $slippymap_url->param('maponly', '1');
             $slippymap_url->param('maptype', 'mapnik');
             $slippymap_url->param('zoom', $slippymap_zoom_city);
-	    if (exists $geo->{'center'}) {
-	       $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) ) 
+
+	    if (exists $geo->{'bbox_wgs84'}) {
+               	my @list = @{ $geo->{'bbox_wgs84'} };
+	  	my $area = "$list[0],$list[1]!$list[2],$list[3]";	
+	        $slippymap_url->param( 'area', $area );
+	    } 
+
+	    elsif (exists $geo->{'center'}) {
+               $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) ) 
             } else {
 	       warn "Cannot determine city center for '$cityname', maybe data-osm/<city>/meta.dd does not exists?\n"; 
 	    }
@@ -2446,7 +2453,7 @@ function " . $type . "char_init() {}
             $ie6hack =~ s,/+[^/]+$,,;
 
 	    print "<p></p>\n";
-	    print qq{<iframe src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="800" height="300" scrolling="no" border="0"></iframe>\n};
+	    print qq{<iframe src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="800" height="380" scrolling="no" border="0"></iframe>\n};
     }
 
     print "<input type=hidden name=scope value='" .
