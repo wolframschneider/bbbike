@@ -1012,7 +1012,7 @@ EOF
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
 	var b = navigator.userAgent.toLowerCase();
 
-        if (marker_list.length > 0 && !(/msie/.test(b) && !/opera/.test(b))) {
+        if (marker_list.length > 0) { //  && !(/msie/.test(b) && !/opera/.test(b))) {
 
 	     var bounds = new GLatLngBounds;
 	     for (var i=0; i<marker_list.length; i++) {
