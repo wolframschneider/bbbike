@@ -1354,14 +1354,14 @@ EOF
         $html .= qq{<div style="position:absolute; top:40px; right:15px;">};
         if ( $lang eq 'en' ) {
             $html .= <<EOF;
-<a href="$url"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a>
+<a href="$url"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0" /></a>
 <img class="selectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0">
 EOF
         }
         else {
             $html .= <<EOF;
-<img class="selectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" border="0" title="Deutsch">
-<a href="$url"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>
+<img class="selectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" border="0" title="Deutsch" />
+<a href="$url"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0" /></a>
 EOF
         }
         $html .= qq{</div>\n};
