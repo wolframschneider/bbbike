@@ -938,6 +938,23 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
             var zoom = map.getBoundsZoomLevel(bounds);
             // no zoom level higher than 15
             map.setZoom( zoom < 16 ? zoom : 15);
+
+	    if (marker_list.length == 2) {
+	       var x1 = marker_list[0][0];
+	       var y1 = marker_list[0][1];
+	       var x2 = marker_list[1][0];
+	       var y2 = marker_list[1][1];
+
+	       var route = new GPolyline([
+			new GLatLng(x1,y1), 
+			new GLatLng(x2,y1), 
+			new GLatLng(x2,y2), 
+			new GLatLng(x1,y2), 
+			new GLatLng(x1,y1)], // first point again
+			'#ff0000', null, null, {});
+	       map.addOverlay(route);
+             }
+
         } else {
             // use default zoom level
             map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
