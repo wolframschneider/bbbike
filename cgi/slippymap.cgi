@@ -1022,19 +1022,69 @@ EOF
             map.setZoom( zoom < 16 ? zoom : 15);
 
            if (area_list.length == 2) {
+               //
+               //    *----------------------* x2,y2
+               //    |                      |
+               //    |                      | ^
+               //    |                      | | x
+               //    *----------------------*
+               //  x1,y1                  -->y
+               //
                var x1 = area_list[0][0];
                var y1 = area_list[0][1];
                var x2 = area_list[1][0];
                var y2 = area_list[1][1];
 
-               var area = new GPolyline([
+               var area = new GPolygon([
                         new GLatLng(x1,y1), 
                         new GLatLng(x2,y1), 
                         new GLatLng(x2,y2), 
                         new GLatLng(x1,y2), 
                         new GLatLng(x1,y1)], // first point again
-                        '#ff0000', 10, 0.2, {});
+                        '#ff0000', 1, null, null, null, {});
                map.addOverlay(area);
+
+	       //x1-=1; y1-=1; x2+=1; y2+=1;
+	       var x3 = x1 - 10;
+	       var y3 = y1 - 20;
+	       var x4 = x1 + 10; 
+	       var y4 = y1 + 20;
+
+               var area_around = new GPolygon([
+                        new GLatLng(x4,y1), 
+                        new GLatLng(x3,y1), 
+                        new GLatLng(x3,y3), 
+                        new GLatLng(x4,y3), 
+                        new GLatLng(x4,y1)], // first point again
+			'#ffff00', 0, 0.8);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x4,y2), 
+                        new GLatLng(x3,y2), 
+                        new GLatLng(x3,y4), 
+                        new GLatLng(x4,y4), 
+                        new GLatLng(x4,y2)], // first point again
+			'#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x2,y1), 
+                        new GLatLng(x2,y2), 
+                        new GLatLng(x4,y2),
+                        new GLatLng(x4,y1),
+                        new GLatLng(x2,y1)], 
+			'#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x1,y1), 
+                        new GLatLng(x1,y2), 
+                        new GLatLng(x3,y2),
+                        new GLatLng(x3,y1),
+                        new GLatLng(x1,y1)], 
+			'#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
             }
 
         } else {

@@ -952,8 +952,50 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
 			new GLatLng(x2,y2), 
 			new GLatLng(x1,y2), 
 			new GLatLng(x1,y1)], // first point again
-			'#ff0000', 10, 0.5, {});
+			'#ff0000', 2, 0.5, {});
 	       map.addOverlay(route);
+
+               //x1-=1; y1-=1; x2+=1; y2+=1;
+               var x3 = x1 - 10;
+               var y3 = y1 - 20;
+               var x4 = x1 + 10;
+               var y4 = y1 + 20;
+
+               var area_around = new GPolygon([
+                        new GLatLng(x4,y1),
+                        new GLatLng(x3,y1),
+                        new GLatLng(x3,y3),
+                        new GLatLng(x4,y3),
+                        new GLatLng(x4,y1)], // first point again
+                        '#ffff00', 0, 0.8);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x4,y2),
+                        new GLatLng(x3,y2),
+                        new GLatLng(x3,y4),
+                        new GLatLng(x4,y4),
+                        new GLatLng(x4,y2)], // first point again
+                        '#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x2,y1),
+                        new GLatLng(x2,y2),
+                        new GLatLng(x4,y2),
+                        new GLatLng(x4,y1),
+                        new GLatLng(x2,y1)],
+                        '#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x1,y1),
+                        new GLatLng(x1,y2),
+                        new GLatLng(x3,y2),
+                        new GLatLng(x3,y1),
+                        new GLatLng(x1,y1)],
+                        '#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
              }
 
         } else {
