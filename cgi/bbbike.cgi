@@ -2433,7 +2433,8 @@ function " . $type . "char_init() {}
             $slippymap_url->param('maptype', 'mapnik');
             $slippymap_url->param('zoom', $slippymap_zoom_city);
 
-	    if (exists $geo->{'bbox_wgs84'}) {
+
+	    if ($geo->is_osm_source && exists $geo->{'bbox_wgs84'}) {
                	my @list = @{ $geo->{'bbox_wgs84'} };
 	  	my $area = "$list[0],$list[1]!$list[2],$list[3]";	
 	        $slippymap_url->param( 'area', $area );
@@ -4977,6 +4978,15 @@ EOF
 	    $slippymap_url->param( 'zielname', Encode::encode( utf8 => $zielname));
 	    $slippymap_url->param( 'lang', $lang);
 	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
+
+	    {
+	    	my $geo = get_geography_object();
+	    	if ($geo->is_osm_source && exists $geo->{'bbox_wgs84'}) {
+               	   my @list = @{ $geo->{'bbox_wgs84'} };
+	  	   my $area = "$list[0],$list[1]!$list[2],$list[3]";	
+	           $slippymap_url->param( 'area', $area );
+	    	} 
+	    }
 
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
             $smu =~ s/.*?\?//;
