@@ -929,7 +929,9 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
  	// map.setMapType($self->{maptype});
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
-        if (marker_list.length > 0) {
+	var b = navigator.userAgent.toLowerCase();
+
+        if (marker_list.length > 0 && !(/msie/.test(b) && !/opera/.test(b)) ) {
             var bounds = new GLatLngBounds;
             for (var i=0; i<marker_list.length; i++) {
                 bounds.extend(new GLatLng( marker_list[i][0], marker_list[i][1]));
