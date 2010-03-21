@@ -1161,7 +1161,7 @@ qq{<a href="#map" onclick="setwpt($x,$y);return true;">$name</a><br />\n};
 
 <div style="float:left; width:45%; margin-top:0.5cm; ">
 
-<form name="mapmode" class="boxed" method="get">
+<form action="" name="mapmode" class="boxed" method="get">
  <table border="0">
    <tr style="vertical-align:top;">
     <td><input onchange="currentModeChange()" 
@@ -1221,7 +1221,7 @@ EOF
  </table>
 </form>
 
-<form name="upload" onsubmit='setZoomInUploadForm()' class="boxed" style="margin-top:0.3cm; " method="post" enctype="multipart/form-data">
+<form action="" name="upload" onsubmit='setZoomInUploadForm()' class="boxed" style="margin-top:0.3cm; " method="post" enctype="multipart/form-data">
 EOF
     if ( $self->{errormessageupload} ) {
         $html .= <<EOF;
@@ -1237,7 +1237,7 @@ EOF
 
 </div>
 
-<form name="geocode" onsubmit='return doGeocode()' class="boxed" style="margin-top:0.5cm; margin-left:10px; width:45%; float:left;">
+<form action="" name="geocode" onsubmit='return doGeocode()' class="boxed" style="margin-top:0.5cm; margin-left:10px; width:45%; float:left;">
   <table style="width:100%;">
     <colgroup><col width="0*" /><col width="1*" /><col width="0*" /></colgroup>
     <tr>
@@ -1249,7 +1249,7 @@ EOF
   </table>
 </form>
  
-<form name="googlemap" onsubmit='return checkSetCoordForm()' class="boxed" style="margin-top:0.3cm; margin-left:10px; width:45%; float:left;">
+<form action="" name="googlemap" onsubmit='return checkSetCoordForm()' class="boxed" style="margin-top:0.3cm; margin-left:10px; width:45%; float:left;">
   <input type="hidden" name="zoom" value="@{[ $zoom ]}" />
   <input type="hidden" name="autosel" value="@{[ $self->{autosel} ]}" />
   <input type="hidden" name="maptype" value="@{[ $self->{maptype} ]}" />
@@ -1264,7 +1264,7 @@ EOF
   
 </form>
 
-<form id="commentform" style="position:absolute; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;">
+<form action="" id="commentform" style="position:absolute; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;">
   <table>
     <tr><td>Kommentar zur Route:</td><td> <textarea cols="40" rows="4" name="comment"></textarea></td></tr>
     <tr id="hasuserwpts" style="visibility:hidden;"><td colspan="2">(Kommentare f&uuml;r Waypoints werden angeh&auml;ngt)</td></tr>
