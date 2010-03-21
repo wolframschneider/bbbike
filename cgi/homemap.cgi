@@ -129,6 +129,7 @@ sub run {
     for my $def (
         [ 'coords',      \@polylines_polar ],
         [ 'city_center', \@polylines_polar ],
+        [ 'area', \@polylines_polar ],
         [ 'oldcoords',   \@polylines_polar_feeble ],
       )
     {
@@ -209,6 +210,18 @@ sub get_html {
     my $converter   = $self->{converter};
     my $coordsystem = $self->{coordsystem};
 
+    use Data::Dumper;
+    my $coords = $$paths_polar[0];
+
+    my $marker_list = '[';
+    foreach my $c ( @{ $coords } ) {
+	next if $c !~ /,/;
+
+	my ($y, $x) = split(/,/, $c);
+	$marker_list .= qq/[$x,$y],/;
+    }
+    $marker_list =~ s/,\s*$/]/;
+
     my ( $centerx, $centery );
     if ($center) {
         ( $centerx, $centery ) = map { sprintf "%.5f", $_ } split /,/, $center;
@@ -226,6 +239,7 @@ sub get_html {
         ( $centerx, $centery ) =
           $converter->( split /,/, Geography::Berlin_DE->center() );
     }
+
 
     my %google_api_keys = (
         'www.radzeit.de' =>
@@ -298,6 +312,7 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
           if $q->param("maponly");
     }
 
+
     my $html = <<EOF;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -356,6 +371,8 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
     goalIcon.iconSize = new GSize(32,32);
     var currentPointMarker = null;
     var currentTempBlockingMarkers = [];
+
+    var marker_list = $marker_list;
 
     function createMarker(point, html_name) {
 	var marker = new GMarker(point);
@@ -911,7 +928,21 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
  	// map.setMapType($self->{maptype});
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
-        map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
+        if (marker_list.length > 0) {
+            var bounds = new GLatLngBounds;
+            for (var i=0; i<marker_list.length; i++) {
+                bounds.extend(new GLatLng( marker_list[i][0], marker_list[i][1]));
+            }
+            map.setCenter(bounds.getCenter());
+
+            var zoom = map.getBoundsZoomLevel(bounds);
+            // no zoom level higher than 15
+            map.setZoom( zoom < 16 ? zoom : 15);
+        } else {
+            // use default zoom level
+            map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
+        }
+
 	new GKeyboardHandler(map);
     } else {
         document.getElementById("map").innerHTML = '<p class="large-error">Sorry, your browser is not supported by <a href="http://maps.google.com/support">Google Maps</a></p>';
@@ -1023,7 +1054,7 @@ EOF
 
             $html .= <<EOF;
 $route_js_code
-    map.addOverlay(route);
+    // map.addOverlay(route);
 EOF
         }
     }
