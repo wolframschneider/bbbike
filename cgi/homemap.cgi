@@ -221,6 +221,7 @@ sub get_html {
 	$marker_list .= qq/[$x,$y],/;
     }
     $marker_list =~ s/,\s*$/]/;
+    #warn Dumper($marker_list);
 
     my ( $centerx, $centery );
     if ($center) {

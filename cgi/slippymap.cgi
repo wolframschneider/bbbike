@@ -325,6 +325,8 @@ sub get_html {
     my $maponly        = "";
     my $wheelzoom      = "";
     my $slippymap_size = qq{width: 100%; height: 75%;};
+
+    my $area_code = '';
     {
         my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
@@ -334,6 +336,16 @@ sub get_html {
 	} else {
             $wheelzoom = qq|map.enableScrollWheelZoom();|;
         }
+
+	my @route = split(/!/, $q->param("area"));
+    	$area_code .= qq{var area_list = [};
+    	foreach my $i (@route) {
+	    my ($x, $y) = split(/,/, $i);
+	    $area_code .= qq{[$y, $x], };
+    	}
+    	$area_code =~ s/,\s*$//;
+        $area_code .= "];\n";
+	#use Data::Dumper; warn Dumper($area_code);
     }
 
 
@@ -379,6 +391,7 @@ EOF
 	$zoom_code .= qq{[$i->[0],$i->[1]],\n};
     }
     $zoom_code =~ s/,\n$/];\n/;
+
 
 
     my $html = <<EOF;
@@ -441,6 +454,7 @@ EOF
     var currentTempBlockingMarkers = [];
 
     $zoom_code
+    $area_code
 
     function createMarker(point, html_name) {
 	var marker = new GMarker(point);
@@ -1006,6 +1020,23 @@ EOF
 
 	    // no zoom level higher than 15
             map.setZoom( zoom < 16 ? zoom : 15);
+
+           if (area_list.length == 2) {
+               var x1 = area_list[0][0];
+               var y1 = area_list[0][1];
+               var x2 = area_list[1][0];
+               var y2 = area_list[1][1];
+
+               var area = new GPolyline([
+                        new GLatLng(x1,y1), 
+                        new GLatLng(x2,y1), 
+                        new GLatLng(x2,y2), 
+                        new GLatLng(x1,y2), 
+                        new GLatLng(x1,y1)], // first point again
+                        '#ff0000', null, null, {});
+               map.addOverlay(area);
+            }
+
         } else {
 	    // use default zoom level
             map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
