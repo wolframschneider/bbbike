@@ -956,10 +956,10 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
 	       map.addOverlay(route);
 
                //x1-=1; y1-=1; x2+=1; y2+=1;
-               var x3 = x1 - 10;
-               var y3 = y1 - 20;
-               var x4 = x1 + 10;
-               var y4 = y1 + 20;
+               var x3 = x1 - 180;
+               var y3 = y1 - 179.99;
+               var x4 = x1 + 180;  
+               var y4 = y1 + 179.99;
 
                var area_around = new GPolygon([
                         new GLatLng(x4,y1),
