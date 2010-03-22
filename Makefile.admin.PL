@@ -173,6 +173,17 @@ if ($rcs2log) {
     $bbbike_makefile_admin .= "RCS2LOG?=$rcs2log\n";
 }
 
+my $fbsdportsdir;
+my $fbsdportsdir_is_current = 0;
+if ($^O eq 'freebsd') {
+    if (-d "$ENV{HOME}/work2/freebsd/ports") {
+	$fbsdportsdir = "$ENV{HOME}/work2/freebsd/ports";
+	$fbsdportsdir_is_current = 1;
+    } else {
+	$fbsdportsdir = "/usr/ports";
+    }
+}
+
 $bbbike_makefile_admin .= <<'EOF'
 #### RSYNCS ###############################################################
 # XXX check which of the rsyncs are not obsolete!
@@ -532,9 +543,13 @@ pod-projdocs:
 ######################################################################
 # FreeBSD
 
+EOF
+. <<"EOF"
 fbsdport:
-	cd port/freebsd && env TMPDIR=$(TMPDIR) ./mkport.pl
+	cd port/freebsd && env TMPDIR=\$(TMPDIR) ./mkport.pl -portsdir $fbsdportsdir
 
+EOF
+. <<'EOF'
 #XXX -useversion devel NYI
 #fbsdport-devel:
 #	cd port/freebsd && env TMPDIR=$(TMPDIR) ./mkport.pl -useversion devel
@@ -550,10 +565,22 @@ fbsdportdiff: fbsdport do-fbsdportdiff
 
 fbsdportdiff-devel: fbsdport-devel do-fbsdportdiff
 
+EOF
+. <<"EOF"
 do-fbsdportdiff:
-	makepatch /usr/ports/german/BBBike $(TMPDIR)/BBBike > $(TMPDIR)/bbbike-freebsdport.diff
-#	-cd $(TMPDIR) && diff --new-file -u /usr/ports/german/BBBike BBBike > $(TMPDIR)/bbbike-freebsdport.diff
+	if @{[ $fbsdportsdir_is_current ? "true" : "false" ]} ; \\
+	then \\
+	    echo "INFO: first updating ports directory..."; \\
+	    (cd $fbsdportsdir/german/BBBike && cvs update); \\
+	    echo "INFO: now creating patch..."; \\
+	    makepatch --exclude-vc --exclude 'work/*' $fbsdportsdir/german/BBBike \$(TMPDIR)/BBBike > \$(TMPDIR)/bbbike-freebsdport.diff; \\
+	else \\
+	    echo "WARNING: diff'ing against possibly outdated ports tree"; \\
+	    makepatch --exclude 'work/*' $fbsdportsdir/german/BBBike \$(TMPDIR)/BBBike > \$(TMPDIR)/bbbike-freebsdport.diff ; \\
+	fi
 
+EOF
+. <<'EOF'
 VARPORTDIR=/var/tmp/BBBike
 TMPPORTDIR=$(TMPDIR)/BBBike
 
@@ -793,8 +820,8 @@ bundles:
 	if [ ! -h Bundle/make_small_bundle ] ; then \
 	    ln -s ../Makefile.PL Bundle/make_small_bundle; \
 	fi
-	if [ ! -h Bundle/make_radzeit_bundle ] ; then \
-	    ln -s ../Makefile.PL Bundle/make_radzeit_bundle; \
+	if [ ! -h Bundle/make_cgi_bundle ] ; then \
+	    ln -s ../Makefile.PL Bundle/make_cgi_bundle; \
 	fi
 	if [ ! -h Bundle/make_windist_bundle ] ; then \
 	    ln -s ../Makefile.PL Bundle/make_windist_bundle; \
@@ -802,7 +829,7 @@ bundles:
 	cd Bundle && \
 	    $(FULLPERL) make_bundle && \
 	    $(FULLPERL) make_small_bundle && \
-	    $(FULLPERL) make_radzeit_bundle && \
+	    $(FULLPERL) make_cgi_bundle && \
 	    $(FULLPERL) make_windist_bundle
 
 # OSD bundles are not supported anymore

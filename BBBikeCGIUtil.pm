@@ -55,7 +55,8 @@ sub encode_possible_utf8_params {
     }
 }
 
-# Hack for old ProxyPass on bbbike.radzeit.de, not needed anymore:
+# Hack for old ProxyPass on bbbike.radzeit.de, not needed anymore, but
+# still here in case proxy games are again needed:
 sub my_url {
     my($q, %args) = @_;
     return $q->url(%args);
@@ -63,12 +64,6 @@ sub my_url {
     # Not used anymore:
     if ($args{"-absolute"}) {
 	$q->url(-absolute => 1);
-    } elsif ($q->server_name eq 'bbbike.radzeit.de' ||
-	     $q->server_name eq 'bbbike.de' 
-	    ) {
-	my $url = $q->url(%args);
-	$url =~ s{^http://192\.168\.0\.2}{http://bbbike.de};
-	$url;
     } else {
 	$q->url(%args);
     }
@@ -83,8 +78,8 @@ sub my_self_url {
 
 sub my_server_name {
     my($q) = @_;
-    if ($q->server_name eq '192.168.0.5') {
-	'slaven1.radzeit.de';
+    if (0) {
+	'other.server.name';
     } else {
 	$q->server_name;
     }
