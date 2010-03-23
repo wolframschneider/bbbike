@@ -106,7 +106,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $warn_message $use_utf8 $use_via
 	    $enable_google_analytics
 	    $with_green_ways
-            $no_teaser $no_teaser_right
+            $no_teaser $no_teaser_right $teaser_bottom
             $slippymap_zoom $slippymap_zoom_maponly $slippymap_zoom_city
 	    $enable_opensearch_plugin $enable_rss_feed
 	    $nice_abc_list
@@ -2496,7 +2496,10 @@ EOF
        print window_open("$bbbike_script?all=1", "BBBikeAll",
                          "dependent,height=500,resizable," .
                          "screenX=500,screenY=30,scrollbars,width=250")
-	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $cityname : "") ."</a>" .  q{</div>};
+	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $cityname : "") ."</a>";
+        print qq{\n| <a href="../">}, M("BBBike f&uuml;r andere St&auml;dte"), "</a>\n" if $teaser_bottom;
+
+	print  q{</div>};
 	print "<hr>";
     }
 
