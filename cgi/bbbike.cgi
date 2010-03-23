@@ -1923,7 +1923,7 @@ EOF
 	if ($lang eq 'en') {
 	    print <<EOF;
 <p>
-Welcome to BBBike! We'll help you find a nice bike route in the <b>$city</b> and around.<br>
+Welcome to BBBike! We'll help you find a nice bike route in <b>$city</b> and around.<br>
 <!-- If a street is not available, then the nearest crossing will be used automatically. -->
 <!-- <b>Please do not enter street numbers or postal codes.</b><br><br> -->
 </p>
