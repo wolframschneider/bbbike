@@ -4,7 +4,7 @@
 # $Id: bbbike-teaser.pl,v 1.31 2009/04/04 11:12:32 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2003,2004,2005,2006,2008,2009 Slaven Rezic. All rights reserved.
+# Copyright (C) 2003,2004,2005,2006,2008,2009,2010 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -29,8 +29,7 @@ sub teaser {
     $teasers_mandatory{"de"} = [
 				teaser_other_cities(),
 				#teaser_sternfahrt_adfc(), # schaltet sich selbstständig ab
-				#teaser_perltk_newrelease(),
-				teaser_perltk(),
+				(1 ? teaser_perltk_newrelease() : teaser_perltk()),
 				teaser_beta(),
 				teaser_mapserver(),
 				#teaser_fahrradstadt(),
@@ -44,8 +43,7 @@ sub teaser {
     $teasers_optional{"en"} = [],
     $teasers_mandatory{"en"} = [
 				teaser_other_cities(),
-				#teaser_perltk_newrelease(),
-				teaser_perltk(),
+				(1 ? teaser_perltk_newrelease() : teaser_perltk()),
 				#teaser_beta(), # XXX There's no beta version in English yet!
 				teaser_mapserver(),
 				#teaser_collecting_tracks(),
@@ -117,12 +115,14 @@ EOF
 
 sub teaser_perltk_newrelease {
     if ($lang eq 'en') {
+	my $download_link = "$BBBike::BBBIKE_SF_WWW/downloads.en.html";
     	<<EOF;
-<div class="teaser"><a href="@{[ CGI::escapeHTML($BBBike::BBBIKE_SF_WWW) ]}/downloads.en.html">Download</a> the offline version of BBBike (Perl/Tk) with interactive map. Runs on Linux, Un*x, Mac OS X and Windows.<br /><a class="new" href="@{[ CGI::escapeHTML($BBBike::LATEST_RELEASE_DISTDIR) ]}" style="font-weight:bold;">NEW: Version @{[ CGI::escapeHTML($BBBike::STABLE_VERSION) ]}</a></div>
+<div class="teaser"><a href="@{[ CGI::escapeHTML($download_link) ]}">Download</a> the offline version of BBBike (Perl/Tk) with interactive map. Runs on Linux, Un*x, Mac OS X and Windows.<br /><a href="@{[ CGI::escapeHTML($download_link) ]}" class="new" style="font-weight:bold;">NEW: Version @{[ CGI::escapeHTML($BBBike::STABLE_VERSION) ]}</a></div>
 EOF
 } else {
+	my $download_link = "$BBBike::BBBIKE_SF_WWW/downloads.de.html";
 	<<EOF;
-<div class="teaser"><a href="@{[ CGI::escapeHTML($BBBike::BBBIKE_SF_WWW) ]}/downloads.de.html">Download</a> der Offline-Version von BBBike (Perl/Tk) mit interaktiver Karte. Läuft auf Linux, Un*x, Mac OS X und Windows.<br /><a class="new" href="@{[ CGI::escapeHTML($BBBike::LATEST_RELEASE_DISTDIR) ]}" style="font-weight:bold;">NEU: Version @{[ CGI::escapeHTML($BBBike::STABLE_VERSION) ]}</a></div>
+<div class="teaser"><a href="@{[ CGI::escapeHTML($download_link) ]}">Download</a> der Offline-Version von BBBike (Perl/Tk) mit interaktiver Karte. Läuft auf Linux, Un*x, Mac OS X und Windows.<br /><a class="new" href="@{[ CGI::escapeHTML($download_link) ]}" style="font-weight:bold;">NEU: Version @{[ CGI::escapeHTML($BBBike::STABLE_VERSION) ]}</a></div>
 EOF
     }
 }
@@ -190,11 +190,11 @@ sub teaser_beta {
 	    return ();
 	    # XXX There's no beta version in English yet!
 	    <<EOF;
-<div class="teaser">What's new in the <a href="$bbbike_url?info=1#beta" style="font-weight:bold;">next version</a> of www.bbbike.de?</div>
+<div class="teaser">What's new in the <a href="$bbbike_url?info=1#beta" style="font-weight:normal;">next version</a> of www.bbbike.de?</div>
 EOF
 	} else {
 	    <<EOF;
-<div class="teaser">Was gibt es in der <a href="$bbbike_url?info=1#beta" style="font-weight:bold;">nächsten Version</a> von www.bbbike.de?</div>
+<div class="teaser">Was gibt es in der <a href="$bbbike_url?info=1#beta" style="font-weight:normal;">nächsten Version</a> von www.bbbike.de?</div>
 EOF
 	}
     } else {
@@ -225,13 +225,13 @@ sub teaser_other_cities {
     if ($lang eq 'en') {
 	<<EOF;
 <div class="teaser">
-  <b>@{[ $is_new ? "NEW and " : "" ]}BETA</b>: <a href="$url">BBBike for other cities</a>
+  <a href="$url" style="font-weight:bold;">BBBike \@ World</a><br/>BBBike for other cities
 </div>
 EOF
     } else {
 	<<EOF;
 <div class="teaser">
-  <b>@{[ $is_new ? "NEU und " : "" ]}BETA</b>: <a href="$url">BBBike für andere Städte</a>
+  <a href="$url" style="font-weight:bold;">BBBike \@ World</a><br/>BBBike für andere Städte
 </div>
 EOF
     }

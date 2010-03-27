@@ -106,7 +106,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $warn_message $use_utf8 $use_via
 	    $enable_google_analytics
 	    $with_green_ways
-            $no_teaser $no_teaser_right
+            $no_teaser $no_teaser_right $teaser_bottom
             $slippymap_zoom $slippymap_zoom_maponly $slippymap_zoom_city
 	    $enable_opensearch_plugin $enable_rss_feed
 	    $nice_abc_list
@@ -1923,7 +1923,7 @@ EOF
 	if ($lang eq 'en') {
 	    print <<EOF;
 <p>
-Welcome to BBBike! We'll help you find a nice bike route in the <b>$city</b> and around.<br>
+Welcome to BBBike! We'll help you find a nice bike route in <b>$city</b> and around.<br>
 <!-- If a street is not available, then the nearest crossing will be used automatically. -->
 <!-- <b>Please do not enter street numbers or postal codes.</b><br><br> -->
 </p>
@@ -2432,8 +2432,16 @@ function " . $type . "char_init() {}
             $slippymap_url->param('maponly', '1');
             $slippymap_url->param('maptype', 'mapnik');
             $slippymap_url->param('zoom', $slippymap_zoom_city);
-	    if (exists $geo->{'center'}) {
-	       $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) ) 
+
+
+	    if ($geo->is_osm_source && exists $geo->{'bbox_wgs84'}) {
+               	my @list = @{ $geo->{'bbox_wgs84'} };
+	  	my $area = "$list[0],$list[1]!$list[2],$list[3]";	
+	        $slippymap_url->param( 'area', $area );
+	    } 
+
+	    elsif (exists $geo->{'center'}) {
+               $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) ) 
             } else {
 	       warn "Cannot determine city center for '$cityname', maybe data-osm/<city>/meta.dd does not exists?\n"; 
 	    }
@@ -2446,7 +2454,7 @@ function " . $type . "char_init() {}
             $ie6hack =~ s,/+[^/]+$,,;
 
 	    print "<p></p>\n";
-	    print qq{<iframe src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="800" height="300" scrolling="no" border="0"></iframe>\n};
+	    print qq{<iframe src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="380" scrolling="no" border="0"></iframe>\n};
     }
 
     print "<input type=hidden name=scope value='" .
@@ -2488,7 +2496,10 @@ EOF
        print window_open("$bbbike_script?all=1", "BBBikeAll",
                          "dependent,height=500,resizable," .
                          "screenX=500,screenY=30,scrollbars,width=250")
-	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $cityname : "") ."</a>" .  q{</div>};
+	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $cityname : "") ."</a>";
+        print qq{\n| <a href="../">}, M("BBBike f&uuml;r andere St&auml;dte"), "</a>\n" if $teaser_bottom;
+
+	print  q{</div>};
 	print "<hr>";
     }
 
@@ -4971,6 +4982,17 @@ EOF
 	    $slippymap_url->param( 'lang', $lang);
 	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 
+	    my $area2 = '';
+	    {
+	    	my $geo = get_geography_object();
+	    	if ($geo->is_osm_source && exists $geo->{'bbox_wgs84'}) {
+               	   my @list = @{ $geo->{'bbox_wgs84'} };
+	  	   my $area = "$list[0],$list[1]!$list[2],$list[3]";	
+	           $slippymap_url->param( 'area', $area );
+		   $area2 = $area;
+	    	} 
+	    }
+
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
             $smu =~ s/.*?\?//;
 
@@ -4981,7 +5003,7 @@ EOF
 	    print qq{ | <span class="slippymaplink"><a target="_slippymap" href="}, $pdf_url->url(-full=>1,-query=>1), qq{" title="PDF hand out">print map route</a></span>} if $show_mini_googlemap;
 
             if ($show_mini_googlemap) {
-	         print qq{<iframe src="slippymap.cgi?maponly=1&amp;coordsystem=polar&amp;city=$cityname&amp;source_script=$cityname.cgi&amp;coordsystem=wgs84&amp;zoom=$slippymap_zoom&amp;coords=$string_rep" title="slippy map" width="100%" height="505" scrolling="no" border="0"></iframe><p/>} if $show_mini_googlemap;
+	         print qq{<iframe src="slippymap.cgi?maponly=1&amp;coordsystem=polar&amp;city=$cityname&amp;source_script=$cityname.cgi&amp;coordsystem=wgs84&amp;zoom=$slippymap_zoom&amp;area=$area2&amp;coords=$string_rep" title="slippy map" width="100%" height="505" scrolling="no" border="0"></iframe><p/>} if $show_mini_googlemap;
 	    } elsif ($show_mini_map) {
 	    	print qq{<table><tr><td><a href="$ENV{'SCRIPT_NAME'}?center=&interactive=Show+map&imagetype=pdf-auto&coords=$string_rep&startname=}. CGI::escape($startname) . q{&zielname=} . CGI::escape($zielname) . qq{&geometry=240x180&draw=str&draw=sbahn&draw=ubahn&draw=wasser&draw=flaechen&draw=strname&draw=title&outputtarget=print&scope=" style="border=0;"><img  title="printable PDF map and route list" alt="" width="240" height="180" scrolling="no" border="0" src="$ENV{'SCRIPT_NAME'}?center=&interactive=Show+map&imagetype=png&coords=$string_rep&startname=}. CGI::escape($startname) . q{&zielname=} . CGI::escape($zielname) . qq{&geometry=240x180&draw=str&draw=sbahn&draw=wasser&draw=flaechen&draw=title&scope="></img></a></td><td>\n};
 

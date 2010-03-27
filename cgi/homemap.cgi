@@ -129,6 +129,7 @@ sub run {
     for my $def (
         [ 'coords',      \@polylines_polar ],
         [ 'city_center', \@polylines_polar ],
+        [ 'area', \@polylines_polar ],
         [ 'oldcoords',   \@polylines_polar_feeble ],
       )
     {
@@ -209,6 +210,19 @@ sub get_html {
     my $converter   = $self->{converter};
     my $coordsystem = $self->{coordsystem};
 
+    use Data::Dumper;
+    my $coords = $$paths_polar[0];
+
+    my $marker_list = '[';
+    foreach my $c ( @{ $coords } ) {
+	next if $c !~ /,/;
+
+	my ($y, $x) = split(/,/, $c);
+	$marker_list .= qq/[$x,$y],/;
+    }
+    $marker_list =~ s/,\s*$/]/;
+    #warn Dumper($marker_list);
+
     my ( $centerx, $centery );
     if ($center) {
         ( $centerx, $centery ) = map { sprintf "%.5f", $_ } split /,/, $center;
@@ -226,6 +240,7 @@ sub get_html {
         ( $centerx, $centery ) =
           $converter->( split /,/, Geography::Berlin_DE->center() );
     }
+
 
     my %google_api_keys = (
         'www.radzeit.de' =>
@@ -298,6 +313,7 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
           if $q->param("maponly");
     }
 
+
     my $html = <<EOF;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -356,6 +372,8 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
     goalIcon.iconSize = new GSize(32,32);
     var currentPointMarker = null;
     var currentTempBlockingMarkers = [];
+
+    var marker_list = $marker_list;
 
     function createMarker(point, html_name) {
 	var marker = new GMarker(point);
@@ -911,7 +929,82 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
  	// map.setMapType($self->{maptype});
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
-        map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
+	var b = navigator.userAgent.toLowerCase();
+
+        if (marker_list.length > 0) { //  && !(/msie/.test(b) && !/opera/.test(b)) ) {
+            var bounds = new GLatLngBounds;
+            for (var i=0; i<marker_list.length; i++) {
+                bounds.extend(new GLatLng( marker_list[i][0], marker_list[i][1]));
+            }
+            map.setCenter(bounds.getCenter());
+
+            var zoom = map.getBoundsZoomLevel(bounds);
+            // no zoom level higher than 15
+            map.setZoom( zoom < 16 ? zoom : 15);
+
+	    if (marker_list.length == 2) {
+	       var x1 = marker_list[0][0];
+	       var y1 = marker_list[0][1];
+	       var x2 = marker_list[1][0];
+	       var y2 = marker_list[1][1];
+
+	       var route = new GPolyline([
+			new GLatLng(x1,y1), 
+			new GLatLng(x2,y1), 
+			new GLatLng(x2,y2), 
+			new GLatLng(x1,y2), 
+			new GLatLng(x1,y1)], // first point again
+			'#ff0000', 2, 0.5, {});
+	       map.addOverlay(route);
+
+               //x1-=1; y1-=1; x2+=1; y2+=1;
+               var x3 = x1 - 180;
+               var y3 = y1 - 179.99;
+               var x4 = x1 + 180;  
+               var y4 = y1 + 179.99;
+
+               var area_around = new GPolygon([
+                        new GLatLng(x4,y1),
+                        new GLatLng(x3,y1),
+                        new GLatLng(x3,y3),
+                        new GLatLng(x4,y3),
+                        new GLatLng(x4,y1)], // first point again
+                        '#ffff00', 0, 0.8);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x4,y2),
+                        new GLatLng(x3,y2),
+                        new GLatLng(x3,y4),
+                        new GLatLng(x4,y4),
+                        new GLatLng(x4,y2)], // first point again
+                        '#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x2,y1),
+                        new GLatLng(x2,y2),
+                        new GLatLng(x4,y2),
+                        new GLatLng(x4,y1),
+                        new GLatLng(x2,y1)],
+                        '#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x1,y1),
+                        new GLatLng(x1,y2),
+                        new GLatLng(x3,y2),
+                        new GLatLng(x3,y1),
+                        new GLatLng(x1,y1)],
+                        '#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
+             }
+
+        } else {
+            // use default zoom level
+            map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
+        }
+
 	new GKeyboardHandler(map);
     } else {
         document.getElementById("map").innerHTML = '<p class="large-error">Sorry, your browser is not supported by <a href="http://maps.google.com/support">Google Maps</a></p>';
@@ -1023,7 +1116,7 @@ EOF
 
             $html .= <<EOF;
 $route_js_code
-    map.addOverlay(route);
+    // map.addOverlay(route);
 EOF
         }
     }
@@ -1070,7 +1163,7 @@ qq{<a href="#map" onclick="setwpt($x,$y);return true;">$name</a><br />\n};
 
 <div style="float:left; width:45%; margin-top:0.5cm; ">
 
-<form name="mapmode" class="boxed" method="get">
+<form action="" name="mapmode" class="boxed" method="get">
  <table border="0">
    <tr style="vertical-align:top;">
     <td><input onchange="currentModeChange()" 
@@ -1130,7 +1223,7 @@ EOF
  </table>
 </form>
 
-<form name="upload" onsubmit='setZoomInUploadForm()' class="boxed" style="margin-top:0.3cm; " method="post" enctype="multipart/form-data">
+<form action="" name="upload" onsubmit='setZoomInUploadForm()' class="boxed" style="margin-top:0.3cm; " method="post" enctype="multipart/form-data">
 EOF
     if ( $self->{errormessageupload} ) {
         $html .= <<EOF;
@@ -1146,7 +1239,7 @@ EOF
 
 </div>
 
-<form name="geocode" onsubmit='return doGeocode()' class="boxed" style="margin-top:0.5cm; margin-left:10px; width:45%; float:left;">
+<form action="" name="geocode" onsubmit='return doGeocode()' class="boxed" style="margin-top:0.5cm; margin-left:10px; width:45%; float:left;">
   <table style="width:100%;">
     <colgroup><col width="0*" /><col width="1*" /><col width="0*" /></colgroup>
     <tr>
@@ -1158,7 +1251,7 @@ EOF
   </table>
 </form>
  
-<form name="googlemap" onsubmit='return checkSetCoordForm()' class="boxed" style="margin-top:0.3cm; margin-left:10px; width:45%; float:left;">
+<form action="" name="googlemap" onsubmit='return checkSetCoordForm()' class="boxed" style="margin-top:0.3cm; margin-left:10px; width:45%; float:left;">
   <input type="hidden" name="zoom" value="@{[ $zoom ]}" />
   <input type="hidden" name="autosel" value="@{[ $self->{autosel} ]}" />
   <input type="hidden" name="maptype" value="@{[ $self->{maptype} ]}" />
@@ -1173,7 +1266,7 @@ EOF
   
 </form>
 
-<form id="commentform" style="position:absolute; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;">
+<form action="" id="commentform" style="position:absolute; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;">
   <table>
     <tr><td>Kommentar zur Route:</td><td> <textarea cols="40" rows="4" name="comment"></textarea></td></tr>
     <tr id="hasuserwpts" style="visibility:hidden;"><td colspan="2">(Kommentare f&uuml;r Waypoints werden angeh&auml;ngt)</td></tr>

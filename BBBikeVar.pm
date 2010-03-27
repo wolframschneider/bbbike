@@ -4,7 +4,7 @@
 # $Id: BBBikeVar.pm,v 1.62 2009/04/04 11:30:58 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2000-2009 Slaven Rezic. All rights reserved.
+# Copyright (C) 2000-2010 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -20,7 +20,7 @@ $VERSION	   = '3.17'; # remove "-DEVEL" for releases
 $STABLE_VERSION	   = '3.17';
 $WINDOWS_VERSION   = '3.17'; # Windows distribution
 $DEBIAN_VERSION    = '3.17-1'; # including revision
-$FREEBSD_VERSION   = '3.17'; # (XXX nowhere used?)
+$FREEBSD_VERSION   = '3.16'; # (used on download page and bbbikevar.t)
 
 $EMAIL_OLD	   = 'eserte@cs.tu-berlin.de';
 $EMAIL		   = 'slaven@rezic.de';
@@ -56,11 +56,6 @@ $BBBIKE_UPDATE_DIST_CGI = "http://www.bbbike.de/cgi-bin/bbbike-snapshot.cgi";
 # WAP version
 $BBBIKE_WAP	   = 'http://bbbike.de/wap';
 $BBBIKE_DIRECT_WAP = 'http://bbbike.de/cgi-bin/wapbbbike.cgi';
-
-# Sourceforge IDs (not visible anymore)
-$SF_BBBIKE_GROUP_ID = 19142;
-$SF_BBBIKE_PACKAGE_ID = 14052;
-$SF_BBBIKE_LATEST_RELEASE_ID = 571125; # this is 3.16, change for new releases!
 
 # Distribution directory for scripts. Unfortunately there's no directory
 # index available anymore at sourceforge...

@@ -325,6 +325,8 @@ sub get_html {
     my $maponly        = "";
     my $wheelzoom      = "";
     my $slippymap_size = qq{width: 100%; height: 75%;};
+
+    my $area_code = '';
     {
         my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
@@ -334,6 +336,16 @@ sub get_html {
 	} else {
             $wheelzoom = qq|map.enableScrollWheelZoom();|;
         }
+
+	my @route = split(/!/, $q->param("area"));
+    	$area_code .= qq{var area_list = [};
+    	foreach my $i (@route) {
+	    my ($x, $y) = split(/,/, $i);
+	    $area_code .= qq{[$y, $x], };
+    	}
+    	$area_code =~ s/,\s*$//;
+        $area_code .= "];\n";
+	#use Data::Dumper; warn Dumper($area_code);
     }
 
 
@@ -379,6 +391,7 @@ EOF
 	$zoom_code .= qq{[$i->[0],$i->[1]],\n};
     }
     $zoom_code =~ s/,\n$/];\n/;
+
 
 
     my $html = <<EOF;
@@ -441,6 +454,7 @@ EOF
     var currentTempBlockingMarkers = [];
 
     $zoom_code
+    $area_code
 
     function createMarker(point, html_name) {
 	var marker = new GMarker(point);
@@ -996,7 +1010,10 @@ EOF
  	// map.setMapType($self->{maptype});
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
-        if (marker_list.length > 0) {
+	var b = navigator.userAgent.toLowerCase();
+
+        if (marker_list.length > 0) { //  && !(/msie/.test(b) && !/opera/.test(b))) {
+
 	     var bounds = new GLatLngBounds;
 	     for (var i=0; i<marker_list.length; i++) {
     		bounds.extend(new GLatLng( marker_list[i][0], marker_list[i][1]));
@@ -1006,6 +1023,73 @@ EOF
 
 	    // no zoom level higher than 15
             map.setZoom( zoom < 16 ? zoom : 15);
+
+           if (area_list.length == 2) {
+               //
+               //    *----------------------* x2,y2
+               //    |                      |
+               //    |                      | ^
+               //    |                      | | x
+               //    *----------------------*
+               //  x1,y1                  -->y
+               //
+               var x1 = area_list[0][0];
+               var y1 = area_list[0][1];
+               var x2 = area_list[1][0];
+               var y2 = area_list[1][1];
+
+               var area = new GPolygon([
+                        new GLatLng(x1,y1), 
+                        new GLatLng(x2,y1), 
+                        new GLatLng(x2,y2), 
+                        new GLatLng(x1,y2), 
+                        new GLatLng(x1,y1)], // first point again
+                        '#ff0000', 1, null, null, null, {});
+               map.addOverlay(area);
+
+	       //x1-=1; y1-=1; x2+=1; y2+=1;
+	       var x3 = x1 - 180;
+	       var y3 = y1 - 179.99;
+	       var x4 = x1 + 180; 
+	       var y4 = y1 + 179.99;
+
+               var area_around = new GPolygon([
+                        new GLatLng(x4,y1), 
+                        new GLatLng(x3,y1), 
+                        new GLatLng(x3,y3), 
+                        new GLatLng(x4,y3), 
+                        new GLatLng(x4,y1)], // first point again
+			'#ffff00', 0, 0.8);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x4,y2), 
+                        new GLatLng(x3,y2), 
+                        new GLatLng(x3,y4), 
+                        new GLatLng(x4,y4), 
+                        new GLatLng(x4,y2)], // first point again
+			'#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x2,y1), 
+                        new GLatLng(x2,y2), 
+                        new GLatLng(x4,y2),
+                        new GLatLng(x4,y1),
+                        new GLatLng(x2,y1)], 
+			'#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
+
+               area_around = new GPolygon([
+                        new GLatLng(x1,y1), 
+                        new GLatLng(x1,y2), 
+                        new GLatLng(x3,y2),
+                        new GLatLng(x3,y1),
+                        new GLatLng(x1,y1)], 
+			'#ffff00', 0, 0.5);
+               map.addOverlay(area_around);
+            }
+
         } else {
 	    // use default zoom level
             map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
@@ -1142,7 +1226,7 @@ qq{<a href="#map" onclick="setwpt($x,$y);return true;">$name</a><br />\n};
 
 <div style="float:left; width:45%; margin-top:0.5cm; ">
 
-<form name="mapmode" class="boxed" method="get">
+<form name="mapmode" class="boxed" method="get" action="">
  <table border="0">
    <tr style="vertical-align:top;">
     <td><input onchange="currentModeChange()" 
@@ -1202,7 +1286,7 @@ EOF
  </table>
 </form>
 
-<form name="upload" onsubmit='setZoomInUploadForm()' class="boxed" style="margin-top:0.3cm; " method="post" enctype="multipart/form-data">
+<form action="" name="upload" onsubmit='setZoomInUploadForm()' class="boxed" style="margin-top:0.3cm; " method="post" enctype="multipart/form-data">
 EOF
     if ( $self->{errormessageupload} ) {
         $html .= <<EOF;
@@ -1218,7 +1302,7 @@ EOF
 
 </div>
 
-<form name="geocode" onsubmit='return doGeocode()' class="boxed" style="margin-top:0.5cm; margin-left:10px; width:45%; float:left;">
+<form action="" name="geocode" onsubmit='return doGeocode()' class="boxed" style="margin-top:0.5cm; margin-left:10px; width:45%; float:left;">
   <table style="width:100%;">
     <colgroup><col width="0*" /><col width="1*" /><col width="0*" /></colgroup>
     <tr>
@@ -1230,7 +1314,7 @@ EOF
   </table>
 </form>
  
-<form name="googlemap" onsubmit='return checkSetCoordForm()' class="boxed" style="margin-top:0.3cm; margin-left:10px; width:45%; float:left;">
+<form action="" name="googlemap" onsubmit='return checkSetCoordForm()' class="boxed" style="margin-top:0.3cm; margin-left:10px; width:45%; float:left;">
   <input type="hidden" name="zoom" value="@{[ $zoom ]}" />
   <input type="hidden" name="autosel" value="@{[ $self->{autosel} ]}" />
   <input type="hidden" name="maptype" value="@{[ $self->{maptype} ]}" />
@@ -1245,7 +1329,7 @@ EOF
   
 </form>
 
-<form id="commentform" style="position:absolute; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;">
+<form action="" id="commentform" style="position:absolute; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;">
   <table>
     <tr><td>Kommentar zur Route:</td><td> <textarea cols="40" rows="4" name="comment"></textarea></td></tr>
     <tr id="hasuserwpts" style="visibility:hidden;"><td colspan="2">(Kommentare f&uuml;r Waypoints werden angeh&auml;ngt)</td></tr>
@@ -1273,14 +1357,14 @@ EOF
         $html .= qq{<div style="position:absolute; top:40px; right:15px;">};
         if ( $lang eq 'en' ) {
             $html .= <<EOF;
-<a href="$url"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a>
+<a href="$url"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0" /></a>
 <img class="selectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0">
 EOF
         }
         else {
             $html .= <<EOF;
-<img class="selectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" border="0" title="Deutsch">
-<a href="$url"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>
+<img class="selectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" border="0" title="Deutsch" />
+<a href="$url"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0" /></a>
 EOF
         }
         $html .= qq{</div>\n};

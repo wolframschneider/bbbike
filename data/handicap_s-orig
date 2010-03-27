@@ -13,7 +13,7 @@ Caroline-Michaelis-Str.: Bauarbeiten, Ausweichen auf Gehweg	q4::inwork 9061,1405
 #: last_checked: 2010-03-17
 Fahrbahn der Mauerstr. wegen Bauarbeiten gesperrt	q4::inwork 9405,11413 9331,11497
 #: last_checked: 2010-02-02
-#: next_check: 2010-04-15
+#: next_check: 2010-05-31
 Hauptstr. (Friedrichshain-Kreuzberg): Baustelle, Radfahrer kˆnnen langsam passieren	q3::inwork 14906,10820 14794,10844 14717,10855
 #: last_checked: 2010-03-18
 Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt	q4::inwork 8389,11378 8374,11479
@@ -1753,3 +1753,5 @@ Wiesenpromenade: enge Straﬂe	q1 23675,5810 23758,5846 23874,5870
 Lenther Steig: enge Straﬂe	q1 1024,14889 1037,14814 1042,14721 1037,14515
 #: by: Juliane ... Rothmaler (ohne Kategorisierung)
 (Klothildestr - Schloﬂallee): Fuﬂg‰nger	q1 11068,19494 11081,19456
+#: by: Alexander Damaschun:
+Eschenallee (Rosenthal): enge Straﬂe	q1 9460,20644 9479,20535 9498,20435

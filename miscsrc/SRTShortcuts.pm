@@ -269,6 +269,8 @@ EOF
 				  "$bbbike_rootdir/tmp/unique-matches.bbd"),
 		layer_checkbutton('Unique matches since 2008', 'str',
 				  "$bbbike_rootdir/tmp/unique-matches-since2008.bbd"),
+		layer_checkbutton('Unique matches since 2009', 'str',
+				  "$bbbike_rootdir/tmp/unique-matches-since2009.bbd"),
 		[Button => "Abdeckung",
 		 -command => sub {
 		     local $main::p_draw{'pp-all'} = 1;
@@ -372,11 +374,19 @@ EOF
 # 		],
 	       ]
 	      ],
-	      [Button => $do_compound->('VMZ/LBVS lister'),
-	       -command => sub { show_vmz_lbvs_files() },
+	      [Button => $do_compound->('VMZ'),
+	       -command => sub { newvmz_process() },
 	      ],
-	      [Cascade => $do_compound->("VMZ/LBVS Archive"), -menuitems =>
+	      [Cascade => $do_compound->("Old VMZ/LBVS stuff"), -menuitems =>
 	       [
+		[Button => "Show recent VMZ diff (new version)",
+		 -command => sub { show_new_vmz_diff() },
+		],
+		"-",
+		[Button => $do_compound->('VMZ/LBVS lister'),
+		 -command => sub { show_vmz_lbvs_files() },
+		],
+		"-",
 		[Button => "Show recent VMZ diff",
 		 -command => sub { show_vmz_diff() },
 		],
@@ -719,6 +729,21 @@ sub md5_file {
     my $digest = $ctx->hexdigest;
 }
 
+sub newvmz_process {
+    my $bbd = "$vmz_lbvs_directory/diffnewvmz.bbd";
+    rename $bbd, "$vmz_lbvs_directory/diffnewvmz.old.bbd";
+    my @cmd = ($^X, "$bbbike_rootdir/miscsrc/VMZTool.pm",
+	       "-oldstore", "$vmz_lbvs_directory/newvmz.yaml",
+	       "-newstore", "$vmz_lbvs_directory/newvmz.new.yaml",
+	       "-outbbd", $bbd,
+	      );
+    system(@cmd);
+    if (!-s $bbd) {
+	main::status_message("Error while running @cmd, no bbd file $bbd created", "die");
+    }
+    show_new_vmz_diff();
+}
+
 sub show_vmz_lbvs_files {
     require File::Basename;
     my $t = $main::top->Toplevel(-title => "VMZ/LBVS files");
@@ -754,7 +779,7 @@ sub _vmz_lbvs_splitter {
     my($type, $content, $id);
     if ($line =~ m{¦}) {
 	# new style
-	($type, $content, $id) = split /¦/, $line, 3;
+	($type, $content, $id) = split /¦/, $line; # ignore everything after 3rd column
     } else {
 	($type, $content) = split /:\s+/, $line, 2;
     }
@@ -773,10 +798,22 @@ sub show_vmz_diff {
 
 sub show_lbvs_diff {
     my($version) = @_;
-    main::plot("str",'l', -draw => 1);
-    main::make_net();
+    unless ($main::str_draw{l}) {
+	main::plot("str",'l', -draw => 1);
+	main::make_net();
+    }
     if (defined $version) { $version = ".$version" }
     show_any_diff("$vmz_lbvs_directory/difflbvs.bbd$version", "lbvs");
+}
+
+sub show_new_vmz_diff {
+    my($version) = @_;
+    unless ($main::str_draw{l}) {
+	main::plot("str",'l', -draw => 1);
+	main::make_net();
+    }
+    if (defined $version) { $version = ".$version" }
+    show_any_diff("$vmz_lbvs_directory/diffnewvmz.bbd$version", "newvmz");
 }
 
 sub show_any_diff {
@@ -839,6 +876,25 @@ sub show_any_diff {
 			    if ($listener && Tk::Exists($listener)) {
 				fill_vmz_lbvs_files($listener);
 				$listener->raise;
+			    }
+			    if ($diff_type eq 'newvmz') {
+				{
+				    my @rename = ("$vmz_lbvs_directory/newvmz.yaml", "$vmz_lbvs_directory/newvmz.old.yaml");
+				    rename $rename[0], $rename[1]
+					or main::status_message("Cannot rename @rename: $!", "warn");
+				}
+				{
+				    my @rename = ("$vmz_lbvs_directory/newvmz.new.yaml", "$vmz_lbvs_directory/newvmz.yaml");
+				    rename $rename[0], $rename[1]
+					or main::status_message("Cannot rename @rename: $!", "warn");
+				}
+				require File::Copy;
+				require POSIX;
+				my $today = POSIX::strftime("%Y%m%d", localtime);
+				my @copy = ("$vmz_lbvs_directory/newvmz.yaml",
+					    "$vmz_lbvs_directory/archive/newvmz-$today.yaml");
+				File::Copy::copy(@copy)
+					or main::status_message("Cannot copy @copy: $!", "warn");
 			    }
 			    $t->destroy;
 			}

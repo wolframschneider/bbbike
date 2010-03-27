@@ -162,4 +162,5 @@ Bildgr&ouml;&szlig;e, Bildformat und Detailreichtum %s bis %s kB. PDFs sind %s b
      'Upload einer GPX-Datei' => 'upload of a GPX file',
      'WGS84-Koordinaten' => 'WGS84-coordinates',
      'Zeigen' => 'show',
+     'BBBike f&uuml;r andere St&auml;dte' => 'BBBike for other cities',
     };
