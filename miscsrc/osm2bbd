@@ -60,6 +60,8 @@ my $lang = '';
 use constant MAXLINELENGTH => 12288; # the limit of BBBikeXS
 my $splitlonglines = 1; # XXX this may change once BBBikeXS has no length restriction anymore
 my $xmlparser;
+my %height_db;
+my $height_db_file;
 
 my %experiments;
 my %known_experiments = map {($_,1)} qw(add_postal_code coastline_hack polar_coord_hack);
@@ -89,6 +91,7 @@ usage: $0 [-v] [-f] [-encoding enc] [-center lon,lat] [-map bbbike [-centerdelta
 -ignore-unhandled do not create the _unhandled layer
 -ignore-underline do not create any of the "_*" layers
 -experiment ...   Turn on experimental features (may be given multiple times).
+-height_db=file   read height values from database. Same format as ./hoehe
 osmfile ...       Files downloaded by downloadosm,
                   or directory containing .osm files
 EOF
@@ -103,6 +106,7 @@ GetOptions("o=s" => \$o,
 	   "v" => \$v,
 	   "debug=i" => \$debug,
 	   "map=s" => \$map,
+	   "height_db=s" => \$height_db_file,
 	   "center=s" => \$center,
 	   "centerdelta=s" => \$center_delta,
 	   "encoding=s" => \$encoding,
@@ -125,6 +129,8 @@ EOF
 	   },
 	  )
     or die usage;
+
+&init_height_db($height_db_file) if $height_db_file;
 
 my @osm_files = @ARGV;
 if (!@osm_files) {
@@ -234,6 +240,26 @@ use constant HIGHWAY_N_RX   => qr{^(?:residential|unclassified|service|minor)$};
 use constant CONSTRUCTION_RX => qr{^(?:construction|planned|proposed)$};
 
 my $cyclists_dismount_label = ($lang eq 'en' ? 'Cyclists dismount' : 'Radfahrer absteigen');
+
+sub init_height_db {
+    my $file = shift;
+
+    my $fd = new IO::File $file, "r" or die "open '$file': $!\n";
+
+    my $use_rounding = 1;
+
+    while(<$fd>) {
+	chomp;
+	my ($height, $x, $coord) = split;
+
+	if ($use_rounding) {
+	    $height = int($height + 0.5);
+	}
+     
+	$height_db{ $coord } = $height;
+    }
+    close $fd;
+}
 
 sub add_underline {
     return if $ignore_underline;
@@ -457,6 +483,19 @@ eval {
     print STDERR "Two passes are following: nodes and ways\n";
 };
 
+sub padding {
+    my $lat = shift;
+
+    my ($int, $dec) = split(/\./, $lat);
+    
+    while(length($dec) < 7) {
+	$dec .= '0';
+	$lat .= '0';
+    }
+    return $lat;
+}
+
+# use Data::Dumper; print Dumper( \%height_db );
 ######################################################################
 # NODES
 my %node2ll;
@@ -592,7 +631,18 @@ for my $osm_file (@osm_files) {
 
 	    my $name   = $tag{'name'} || '';
 	    my $height = exists $tag{'height'} ? $tag{'height'} : $tag{'ele'};
-	    warn "height: $height, $name\n" if $height && $debug >= 2;
+
+	    if (!defined $height) {
+	        my $lon2 = &padding($lon);
+	        my $lat2 = &padding($lat);
+
+	        if (exists $height_db{"$lon2,$lat2"} ) {
+		   $height = $height_db{"$lon2,$lat2"};
+	        }
+            } else {
+		$height = int($height + 0.5);
+	    }
+	    warn "height: $height, $name\n" if defined $height && $height ne '' && $debug >= 2;
 
 	    if (defined $parsefor_key) {
 		my $found_val = $tag{$parsefor_key};
