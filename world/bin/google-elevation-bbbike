@@ -52,6 +52,11 @@ sub init_height_db {
         chomp;
         my ( $height, $x, $coord ) = split;
 
+        if ( !defined $height || !defined $x || !defined $coord ) {
+            warn "Ignore broken line in height db: $_\n";
+            next;
+        }
+
         if ($use_rounding) {
             $height = int( $height + 0.5 );
         }
@@ -74,7 +79,7 @@ sub download {
         my $data = $response->decoded_content;    # or whatever
         my $obj  = XMLin($data);
         if ( $obj->{'status'} ne 'OK' ) {
-            warn "ERROR status: ", $obj->{'status'}, "\n";
+            die "ERROR status: ", $obj->{'status'}, "\n";
             return;
         }
 
@@ -100,6 +105,10 @@ sub padding {
     my $lat = shift;
 
     my ( $int, $dec ) = split( /\./, $lat );
+    if ( !defined $dec ) {
+        $dec = "";
+        $lat .= '.';
+    }
 
     while ( length($dec) < 7 ) {
         $dec .= '0';
@@ -150,13 +159,14 @@ activate_socksproxy($ua) if $socksproxy;
 my $max = 50;
 
 warn Dumper( \%hash ) if $debug >= 3;
+my %hash2;
 while (<>) {
     chomp;
     next if /^\s*#/;
 
     my $coords = $_;
     if (/\t/) {
-        $coords =~ s/^[^\t]*\t\w+\s+//;
+        $coords =~ s/^[^\t]*\t\S+\s+//;
     }
 
     foreach my $c ( split( / /, $coords ) ) {
@@ -167,6 +177,11 @@ while (<>) {
             warn "$coord already exists\n" if $debug >= 2;
             next;
         }
+        if ( exists $hash2{$coord} ) {
+            warn "$coord already parsed\n" if $debug >= 2;
+            next;
+        }
+        $hash2{$coord} = 1;
 
         $string .= "|" if $string;
         $string .= "$lat,$lng";
