@@ -1221,7 +1221,7 @@ EOF
        text  => 'Volksradstr. (Friedrichsfelde) in beiden Richtungen Baustelle, Straße vollständig gesperrt (bis 23.05.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 17475,10442 17511,10577 17565,10782 17621,10994
+userdel	q4 17475,10442 17511,10577 17527,10640 17569,10801 17621,10994
 userdel	q4 17475,10442 17427,10259
 EOF
      },
@@ -4601,7 +4601,7 @@ EOF
        text  => 'L 338 Rahnsdorfer Str. OD Schöneiche, Brücke über Jägergraben Brückenneubau Vollsperrung 07.06.2006-30.11.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 30221,7373 30118,8128
+userdel	2::inwork 30274,7380 30118,8128
 EOF
      },
      { from  => 1150581600, # 2006-06-18 00:00
@@ -6631,7 +6631,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004066',
        data  => <<EOF,
-userdel	2::inwork 25585,6050 25776,6054 25967,6125 26139,6188 26247,6228 28794,7219 29168,7350
+userdel	2::inwork 25585,6050 25776,6054 25967,6125 26139,6188 26247,6228 28586,7139 29168,7350 29192,7368
 EOF
      },
      { from  => 1163286000, # 2006-11-12 00:00
@@ -9028,7 +9028,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006066',
        data  => <<EOF,
-userdel	2::inwork 30090,5436 30041,5329
+userdel	2::inwork 30090,5436 30074,5402 30041,5329
 EOF
      },
      { from  => 1184450400, # 2007-07-15 00:00
@@ -17227,6 +17227,32 @@ EOF
        source_id => 'LSW-SG33-K10024',
        data  => <<EOF,
 userdel	2::inwork -44683,45909 -46141,45772
+EOF
+     },
+     { from  => 1269727554, # 2010-03-27 23:05
+       until => 1272664800, # 2010-05-01 00:00
+       text  => 'Petershagen/Eggersdorf: Straßenausbau OD Petershagen zw. Bahngleise und Clara-Zetkin-Str. 22.03.2010 bis 30.04.2010 ',
+       type  => 'handicap',
+       source_id => '96400995',
+       data  => <<EOF,
+userdel	q4::inwork 36666,14172 36677,14087 36654,13977 35900,13643 35427,13624
+EOF
+     },
+     { from  => 1269727743, # 2010-03-27 23:09
+       until => 1275688800, # 2010-06-05 00:00
+       text  => 'Kanal- und Leitungsbauarbeiten Neuruppin, OT Karwe, Vollsperrung 25.03.2010 bis 04.06.2010 ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork -27035,49829 -27196,50015 -27421,50349
+EOF
+     },
+     { from  => 1269728021, # 2010-03-27 23:13
+       until => 1271541600, # 2010-04-18 00:00
+       text  => 'Deckenerneuerung B 246, Wendisch Rietz - Storkow 25.03.2010 bis 17.04.2010 ',
+       type  => 'gesperrt',
+       source_id => 'LSO-SG33-F10029',
+       data  => <<EOF,
+userdel	2::inwork 50359,-20087 49368,-19096
 EOF
      },
     );

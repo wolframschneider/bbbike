@@ -113,7 +113,7 @@ Am Stand - Klemkepark: Torbogen in der Häuserfront in den Klemkepark benutzen	CS
 Begasstr. - Riemenschneiderweg: Hausdurchfahrten	CS 6513,7005 6662,7018 6770,7027
 "Brücke" ausgeschildert	CP; 2452,281 2195,42 2175,71
 Gartentor, Zufahrt zum Gemeindehaus (dürfte immer offen sein)	CS 2201,43954
-Freienbrinker Saum: die Straße führt am Waldrand entlang, in der Dunkelheit ist mit Wildschweinen zu rechnen	CS 30124,4664 30254,4692 30369,4697 30478,4715 30527,4724 30588,4720 30636,4717 30686,4731 30810,4765 30857,4770 30913,4766 31011,4750 31118,4768 31209,4781 31224,4775 31311,4742 31364,4711 31424,4658
+Freienbrinker Saum: die Straße führt am Waldrand entlang, in der Dunkelheit ist mit Wildschweinen zu rechnen	CS 30124,4664 30254,4692 30369,4697 30478,4715 30527,4724 30588,4720 30636,4717 30686,4731 30810,4765 30857,4770 30913,4766 31011,4750 31118,4768 31209,4781 31224,4775 31311,4742 31339,4726 31364,4711 31424,4658
 (Deutschhofer Allee - Unter den Birken): in der Dämmerung ist mit Wildschweinen zu rechnen	CS 21940,8158 22077,8104 22199,8028 22600,7711
 Petriplatz: zusätzliche Ausschilderung "Zur Brüderstr."	CS; 10460,11979 10418,12016
 DB-Gelände: bei starken Regenfällen regelmäßig eine große und tiefe Pfütze, die die Durchfahrt erschwert	CS 14093,10909 14043,10928
@@ -151,7 +151,7 @@ rechts vom Strand einbiegen	CP2; 28853,-19212 28805,-19189
 Gotenburger Str.: zwei Schulen, also Vorsicht	CS 8844,16863 9000,16803
 Als Wiesenweg ausgeschildert	CS; 52215,83681 52346,83150
 Am Gutshof (Gramzow): Privatstraße, Durchfahrt verboten	CS 50364,89561 50337,90193 50346,90286 50278,90449
-(Hoernlestr. - Gehsener Str.): Durchfahrt durch Torbogen, Hausüberbauung	CS 22351,6756 22391,6815
+(Hoernlestr. - Gehsener Str.): Durchfahrt durch Torbogen, Hausüberbauung	CS 22351,6756 22395,6821
 Lasdehner Str. - Gubener Str.: Hausdurchfahrt	CS 13375,12062 13339,12029
 S-Bahnunterführung	CS -3192,3129 -3176,3081 -3170,3070
 entlang der S-Bahn	CS -3223,3034 -3368,2942 -3378,2936
@@ -194,3 +194,4 @@ Philosophenweg: Privatstraße	CS 16073,12883 16074,12778
 Innovationspark Köpenick	CS 21683,6946 21498,7153 21475,7500 21497,7597 21546,7635
 entlang der Mauritiusschule	CS 15634,11656 15482,11729 15417,11681
 Vereinsweg (Charlottenburg): Privatstraße	CS 2828,11731 2855,11752 2907,11755 2934,11747
+Am Lindenplatz: Privatstraße	CS 17838,10878 17856,10961

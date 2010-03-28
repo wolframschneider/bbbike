@@ -246,7 +246,8 @@ Fritz-Schiff-Weg: Fuﬂg‰nger	q1 13465,12502 13484,12436 13472,12337
 (Molkenmarkt - Parochialstr.): Bordsteine	q2 10738,12364 10831,12371
 (Crellestr. - Julius-Leber-Br¸cke): Fuﬂg‰nger	q2 7535,9087 7555,8978 7509,8929 7497,8916
 (Fischerinsel, Spreekanalufer): Fuﬂg‰nger	q1 10364,11896 10329,11842 10373,11781 10517,11795 10672,11870 10776,11942 10824,11992
-(Baikalstr. - Rummelsburger Str.): Fuﬂg‰nger	q1 17281,10598 17228,10860
+(Baikalstr. - Rummelsburger Str.): Fuﬂg‰nger	q1 17281,10598 17249,10666
+(Baikalstr. - Rummelsburger Str.): Fuﬂg‰nger	q1 17249,10702 17228,10860
 Verl. P¸cklerstr.: Fuﬂg‰nger, Hundeauslaufgebiet	q1 1558,6729 1364,6691 1170,6654 967,6620 905,6631 880,6645 832,6607 778,6603 698,6567 546,6583 369,6594 306,6582 218,6571
 Weimarer Str.: Fuﬂg‰nger	q1 4092,11338 4077,11226
 Norwegerstr. - Behmstr.: Rampe	q2 10022,16237 10026,16165 10055,16104 10045,16157
@@ -566,6 +567,9 @@ Saatwinkler Steg, Rohrbruchwiesen: einige Fuﬂg‰nger	q1 -993,16682 -992,16688 -99
 Maselakepark: Fuﬂg‰nger	q1 -2391,16607 -2418,16609 -2445,16610 -2504,16558 -2510,16357
 Maselakepark: Fuﬂg‰nger	q1 -2587,16600 -2632,16347
 Nordhafen: Fuﬂg‰nger	q1 -2477,16351 -2510,16357 -2632,16347 -2779,16330 -2972,16399 -2972,16420
+(Gr¸nheider Weg - Fredersdorfer Weg): starker Anstieg, nicht f¸r Fahrr‰der geeignet	q4 30867,3806 30862,3816 30849,3843 30823,3866
+Seidenbienenweg: sehr eng	q4 31914,2767 31909,2802 31884,2841
+(entlang des Tr‰nkegrabens): Fuﬂg‰nger, Radfahren erlaubt	q2 16900,9861 17011,9950 17137,10098 17149,10160 17137,10238 17160,10376 17249,10666 17249,10702 17310,10714 17415,10694 17527,10640 17625,10615 17705,10621 17847,10629 17897,10607 17999,10584 18059,10556 18150,10543
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q3 11805,19071 11937,19175
 Ebersstr.: Sch¸ler	q2 7245,8583 7292,8631
 Straﬂe 103 (Niederschˆnhausen): enge Straﬂe	q1 10914,20065 11051,19789
@@ -965,7 +969,7 @@ Sodtkestr.: enge Straﬂe	q1 12221,15514 12302,15664 12382,15802 12423,15875
 Glauberstr.: viele parkende Autos, daher eng	q1 5556,984 5455,1150 5421,1205 5411,1259
 (Templerzeile - Gˆtzstr.): Parkweg, Fuﬂg‰nger, teilweise mit Radweg	q1 9681,6180 9683,6199 9708,6493
 (Darbystr. - Falkenseer Chaussee): schmal, aber auch mit H‰nger passierbar	q1 -5505,15859 -5526,15757
-Mittelheide: enge Straﬂe	q1 22724,6608 22858,6535 23033,6511 23135,6500 23220,6520 23299,6541 23375,6579 23482,6649 23593,6663
+Mittelheide: enge Straﬂe	q0 22724,6608 22858,6535 23033,6511 23135,6500 23220,6520 23299,6541 23375,6579 23482,6649 23593,6663
 Platanenstr.: teilweise recht eng	q1 9355,19789 9489,19826 9840,19923 10137,19993
 Senegalstr.: enge Straﬂe	q1 5961,15562 5906,15623 5848,15685 5787,15741 5722,15795
 Tangastr.: enge Straﬂe	q1 6133,15680 5961,15562
@@ -1145,7 +1149,7 @@ Flotowstr. (Lichterfelde): enge Straﬂe	q1 4515,4581 4651,4638
 Pfalzgrafenweg: enge Straﬂe	q1 25594,11939 25827,11867
 Spachtelweg: enge Straﬂe	q1 5900,20487 5970,20353
 Leuenberger Zeile: eng	q1 2852,19546 2789,19600 2684,19765
-(Hoernlestr. - Gehsener Str.): Fuﬂg‰nger, zwei Rampen an Fuﬂg‰ngertreppe	q3 22351,6756 22391,6815
+(Hoernlestr. - Gehsener Str.): Fuﬂg‰nger, zwei Rampen an Fuﬂg‰ngertreppe	q3 22351,6756 22395,6821
 Waldstr.: Bodenschwellen vor der Schule	q2 20540,4285 20623,4227
 Janitzkystr.: Siedlung, eng	q1 22763,6398 22889,6428 23002,6428 23027,6425 23131,6398 23192,6362 23242,6308
 Kaiser-Wilhelm-Str. - Langkofelweg: Fuﬂg‰nger	q2 6957,3699 6998,3596
@@ -1220,6 +1224,7 @@ Wiesenpromenade: enge Straﬂe	q1 23675,5810 23758,5846 23874,5870
 Lenther Steig: enge Straﬂe	q1 1024,14889 1037,14814 1042,14721 1037,14515
 (Klothildestr - Schloﬂallee): Fuﬂg‰nger	q1 11068,19494 11081,19456
 Eschenallee (Rosenthal): enge Straﬂe	q1 9460,20644 9479,20535 9498,20435
+S-Bahnhofunterf¸hrung Friedenau: Radfahren nicht erlaubt, ggfs. schieben	q4 6160,7074 6243,7033
 Dennewitzplatz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 7906,10098 7866,9918
 Eichborndamm: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 4240,19019 4232,18981
 Dorotheenstr. (Straﬂenbahn): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 9454,12558 9330,12529

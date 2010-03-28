@@ -173,10 +173,14 @@ persistent-tmp:	${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor-nextcheck.bbd \
 persistent-tmp:	${PERSISTENTTMPDIR}/XXX-$(i).bbd
 .endfor
 
-# even slower (about four minutes)
+# more checks, but even slower (about four minutes)
 really-slow-checks:	check-crossings-important \
-			check-nearest \
-			check-crossings-less-important
+			check-nearest
+
+# this adds also "check-crossings-less-important", but the results of
+# these checks there were never looked at, so really not important...
+unimportant-slow-checks:	really-slow-checks \
+				check-crossings-less-important
 
 ######################################################################
 # DATA FILE TARGETS
@@ -1089,7 +1093,7 @@ check-forever:
 
 # Like check-forever, but build first, then check (all calls the check target)
 all-forever:
-	-nice ${FOREVER_TWO_ERRORS} ${MAKE} all
+	-nice ${FOREVER_TWO_ERRORS} ${MAKE} ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd all
 	@-alarm -nicedown
 	@-xterm-conf -deiconify -raise
 	xmessage "all-forever failed"
@@ -1584,7 +1588,7 @@ ${PERSISTENTTMPDIR}/crossings_bahn.bbd:	strassen sbahn rbahn brunnels
 ${PERSISTENTTMPDIR}/crossings_gewaesser.bbd:	\
 					strassen wasserstrassen brunnels
 	${PERL} ${MISCSRCDIR}/check_crossings -v-if-interactive \
-	    -ignore "Fasaneriegraben,Packereigraben,Tränkegraben,Kraatzgraben,Teufelsseekanal,(See im Tiergarten),,Luiseninsel,Fennpfuhl,Heidekampgraben,Karpfenteich,Panke,Nordgraben,Tegeler Fließ,Hermsdorfer See,Wuhle,Neue Wuhle,Flutgraben,Kreuzgraben,Zingergraben,Iderfenngraben,Bäke,Bullengraben,Spektegraben,Bruchstückengraben,Fredersdorfer Mühlenfließ,Neuenhagener Mühlenfließ,Plumpengraben,Kleiner Jürgengraben,Rudower Fließ,Grützmachergraben" \
+	    -ignore "Fasaneriegraben,Packereigraben,Tränkegraben,Kraatzgraben,Teufelsseekanal,(See im Tiergarten),,Luiseninsel,Fennpfuhl,Heidekampgraben,Karpfenteich,Panke,Nordgraben,Tegeler Fließ,Hermsdorfer See,Wuhle,Neue Wuhle,Flutgraben,Kreuzgraben,Zingergraben,Iderfenngraben,Bäke,Bullengraben,Spektegraben,Bruchstückengraben,Fredersdorfer Mühlenfließ,Neuenhagener Mühlenfließ,Plumpengraben,Kleiner Jürgengraben,Rudower Fließ,Grützmachergraben,Kanal I,Kanal II,Kanal III,Kanal IV,Kanal V,Kanal in Neu-Venedig" \
 	    -o $@~ -against brunnels \
 	    strassen wasserstrassen
 	mv $@~ $@
