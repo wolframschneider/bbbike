@@ -246,14 +246,16 @@ sub init_height_db {
 
     my $fd = new IO::File $file, "r" or die "open '$file': $!\n";
 
-    my $use_rounding = 1;
+    my $use_rounding = 2;
 
     while(<$fd>) {
 	chomp;
 	my ($height, $x, $coord) = split;
 
-	if ($use_rounding) {
+	if ($use_rounding == 1) {
 	    $height = int($height + 0.5);
+	} elsif ($use_rounding == 2) {
+	    $height = int(10*$height + 0.5)/10;
 	}
      
 	$height_db{ $coord } = $height;
