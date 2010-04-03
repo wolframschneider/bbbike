@@ -5149,7 +5149,7 @@ EOF
 
 
 	    print "</div>";
-	    print "</td></tr></table>\n" if $show_mini_map;
+	    print "</td></tr></table>\n" if $show_mini_map && !$show_mini_googlemap;
 	}
 
 	print "<input type=hidden name=scope value='" .
