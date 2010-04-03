@@ -2278,7 +2278,7 @@ EOF
 	    }
 
 	    my $searchinput = 'suggest_' . $type;
-	    print qq{<input id="$searchinput" size="40" type="text" name="$type" autocomplete="yes">}; # if !$no_input_streetname;
+	    print qq{<input id="$searchinput" size="40" type="text" name="$type">}; # if !$no_input_streetname;
 
 	   if ($enable_opensearch_suggestions) { 
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
