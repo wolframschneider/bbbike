@@ -6504,6 +6504,8 @@ sub header {
 			     });
     }
     push @$head, "<base target='_top'>"; # Can't use -target option here
+    push @$head, $q->meta({-http_equiv => 'Content-Type', -content  => 'text/html; charset=utf-8'}) if $use_utf8;
+
     push @$head, cgilink({-rel  => "shortcut icon",
   			  -href => "$bbbike_images/srtbike1.ico",
   			  -type => "image/x-icon", # according to wikipedia official IANA type is image/vnd.microsoft.icon
