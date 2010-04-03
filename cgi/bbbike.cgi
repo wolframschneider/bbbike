@@ -6677,15 +6677,13 @@ sub footer_as_string {
     }
     $s .= "cellpadding=3>\n";
     $s .= <<EOF;
-<tr>
-<!-- <td></td> -->
-<!-- <td align=center>${fontstr}<a href="../">BBBike @ world</a>${fontend}</td> -->
-<!-- <td align=center>${fontstr}bbbike.cgi $VERSION${fontend}</td> -->
-<!-- <td align=center>${fontstr} <a target="_top" href="mailto:@{[ $BBBike::EMAIL ]}?subject=BBBike">@{[ M("E-Mail") ]}</a>${fontend}</td> -->
-<!-- <td align=center>$fontstr<a target="_top" href="$bbbike_script?begin=1$smallformstr">@{[ M("Neue Anfrage") ]}</a>${fontend}</td> -->
-EOF
-    $s .= <<EOF;
-<!-- <td align=center>$fontstr<a target="_top" href="$bbbike_script?info=1$smallformstr">@{[ M("Kontakt, Info &amp; Disclaimer") ]}</a>${fontend}</td> -->
+<!-- <tr>
+<td></td> 
+<td align=center>${fontstr}<a href="../">BBBike @ world</a>${fontend}</td>
+<td align=center>${fontstr}bbbike.cgi $VERSION${fontend}</td> 
+<td align=center>${fontstr} <a target="_top" href="mailto:@{[ $BBBike::EMAIL ]}?subject=BBBike">@{[ M("E-Mail") ]}</a>${fontend}</td> 
+<td align=center>$fontstr<a target="_top" href="$bbbike_script?begin=1$smallformstr">@{[ M("Neue Anfrage") ]}</a>${fontend}</td> 
+<td align=center>$fontstr<a target="_top" href="$bbbike_script?info=1$smallformstr">@{[ M("Kontakt, Info &amp; Disclaimer") ]}</a>${fontend}</td> -->
 EOF
     if (0) {
     $s .= "<td align=center>$fontstr";
@@ -6698,8 +6696,9 @@ EOF
         $s .= "<td><a href=\"$mapserver_init_url\">Mapserver</a></td>";
     }
     $s .= <<EOF;
-<!-- <td align=center>${fontstr}<a href="./livesearch.cgi">livesearch</a>${fontend}</td> -->
-</tr>
+<!-- <td align=center>${fontstr}<a href="./livesearch.cgi">livesearch</a>${fontend}</td> 
+</tr> -->
+<tr style="display:none"><td></td></tr>
 </table>
 </center>
 EOF
