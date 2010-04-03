@@ -2464,7 +2464,9 @@ function " . $type . "char_init() {}
 
 print <<EOF;
 <script type="text/javascript">
-    document.BBBikeForm.start.focus();
+    if (document.getElementById('suggest_start') != null) {
+        document.BBBikeForm.start.focus();
+    }
 </script><br>
 EOF
 
