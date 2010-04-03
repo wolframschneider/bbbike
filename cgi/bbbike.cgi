@@ -4907,6 +4907,58 @@ EOF
 	    my $post_bug = 1; # XXX für alle aktivieren
 	    #$post_bug = 1 if ($kfm_bug); # XXX war mal nur für kfm
 	    #print "<hr>";
+
+
+	    print qq{<span id="slippymap_span1">\n};
+            my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
+
+            my $pdf_url = CGI->new($q);
+            $pdf_url->param('imagetype', 'pdf-auto');
+	    $pdf_url->param( 'coords', $string_rep);
+	    $pdf_url->param( 'startname', Encode::encode( utf8 => $startname));
+	    $pdf_url->param( 'zielname', Encode::encode( utf8 => $zielname));
+	    $pdf_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
+
+            my $slippymap_url = CGI->new($q);
+            $slippymap_url->param('maponly', '0');
+            $slippymap_url->param('coordsystem', 'wgs84');
+            #$slippymap_url->param('maptype', 'cycle');
+            $slippymap_url->param('city', $cityname);
+            $slippymap_url->param('source_script', "$cityname.cgi");
+            $slippymap_url->param('zoom', $slippymap_zoom_maponly);
+	    $slippymap_url->param( 'coords', $string_rep);
+	    $slippymap_url->param( 'startname', Encode::encode( utf8 => $startname));
+	    $slippymap_url->param( 'zielname', Encode::encode( utf8 => $zielname));
+	    $slippymap_url->param( 'lang', $lang);
+	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
+
+	    my $area2 = '';
+	    {
+	    	my $geo = get_geography_object();
+	    	if ($geo->is_osm_source && exists $geo->{'bbox_wgs84'}) {
+               	   my @list = @{ $geo->{'bbox_wgs84'} };
+	  	   my $area = "$list[0],$list[1]!$list[2],$list[3]";	
+	           $slippymap_url->param( 'area', $area );
+		   $area2 = $area;
+	    	} 
+	    }
+
+            my $smu = $slippymap_url->url(-query=>1, -relative=>1);
+            $smu =~ s/.*?\?//;
+
+	    print $q->start_form(-name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi");
+	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
+		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
+	    }
+	    print $q->hidden('maponly', 1);
+	    print $q->end_form;
+	    print qq{</span><!-- slippymap_span1 -->\n};
+
+	    print qq{<span class="slippymaplink"><a target="_slippymap" href="slippymap.cgi?$smu" title="Open slippy map in external window">map only</a></span>\n} if $show_mini_googlemap;
+
+	    print qq{ | <span class="slippymaplink"><a target="_slippymap" href="}, $pdf_url->url(-full=>1,-query=>1), qq{" title="PDF hand out">print map route</a></span>\n} if $show_mini_googlemap;
+
+
 	    print qq{<div class="box">};
 	    print "<form name=showmap method=" .
 		($post_bug ? "get" : "post");
@@ -4962,50 +5014,11 @@ EOF
   	    }
 	    print ">\n";
 
-            my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
-
-            my $pdf_url = CGI->new($q);
-            $pdf_url->param('imagetype', 'pdf-auto');
-	    $pdf_url->param( 'coords', $string_rep);
-	    $pdf_url->param( 'startname', Encode::encode( utf8 => $startname));
-	    $pdf_url->param( 'zielname', Encode::encode( utf8 => $zielname));
-	    $pdf_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
-
-            my $slippymap_url = CGI->new($q);
-            $slippymap_url->param('maponly', '0');
-            $slippymap_url->param('coordsystem', 'wgs84');
-            #$slippymap_url->param('maptype', 'cycle');
-            $slippymap_url->param('city', $cityname);
-            $slippymap_url->param('source_script', "$cityname.cgi");
-            $slippymap_url->param('zoom', $slippymap_zoom_maponly);
-	    $slippymap_url->param( 'coords', $string_rep);
-	    $slippymap_url->param( 'startname', Encode::encode( utf8 => $startname));
-	    $slippymap_url->param( 'zielname', Encode::encode( utf8 => $zielname));
-	    $slippymap_url->param( 'lang', $lang);
-	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
-
-	    my $area2 = '';
-	    {
-	    	my $geo = get_geography_object();
-	    	if ($geo->is_osm_source && exists $geo->{'bbox_wgs84'}) {
-               	   my @list = @{ $geo->{'bbox_wgs84'} };
-	  	   my $area = "$list[0],$list[1]!$list[2],$list[3]";	
-	           $slippymap_url->param( 'area', $area );
-		   $area2 = $area;
-	    	} 
-	    }
-
-            my $smu = $slippymap_url->url(-query=>1, -relative=>1);
-            $smu =~ s/.*?\?//;
-
-
-	    # print qq{<span class="slippymaplink"><a target="_slippymap" href="slippymap.cgi?maponly=0&amp;coordsystem=polar&amp;maptype=hybrid&amp;city=$cityname&amp;source_script=$cityname.cgi&amp;coordsystem=wgs84&amp;zoom=$slippymap_zoom_maponly&amp;coords=$string_rep" title="Open slippy map in external window">Map only</a></span>} if $show_mini_googlemap;
-	    print qq{<span class="slippymaplink"><a target="_slippymap" href="slippymap.cgi?$smu" title="Open slippy map in external window">map only</a></span>} if $show_mini_googlemap;
-
-	    print qq{ | <span class="slippymaplink"><a target="_slippymap" href="}, $pdf_url->url(-full=>1,-query=>1), qq{" title="PDF hand out">print map route</a></span>} if $show_mini_googlemap;
 
             if ($show_mini_googlemap) {
-	         print qq{<iframe src="slippymap.cgi?maponly=1&amp;coordsystem=polar&amp;city=$cityname&amp;source_script=$cityname.cgi&amp;coordsystem=wgs84&amp;zoom=$slippymap_zoom&amp;area=$area2&amp;coords=$string_rep" title="slippy map" width="100%" height="505" scrolling="no"></iframe><p></p>} if $show_mini_googlemap;
+	         print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="505" scrolling="no"></iframe><p></p>};
+		 print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
+	
 	    } elsif ($show_mini_map) {
 	    	print qq{<table><tr><td><a href="$ENV{'SCRIPT_NAME'}?center=&interactive=Show+map&imagetype=pdf-auto&coords=$string_rep&startname=}. CGI::escape($startname) . q{&zielname=} . CGI::escape($zielname) . qq{&geometry=240x180&draw=str&draw=sbahn&draw=ubahn&draw=wasser&draw=flaechen&draw=strname&draw=title&outputtarget=print&scope=" style="border=0;"><img  title="printable PDF map and route list" alt="" width="240" height="180" scrolling="no" border="0" src="$ENV{'SCRIPT_NAME'}?center=&interactive=Show+map&imagetype=png&coords=$string_rep&startname=}. CGI::escape($startname) . q{&zielname=} . CGI::escape($zielname) . qq{&geometry=240x180&draw=str&draw=sbahn&draw=wasser&draw=flaechen&draw=title&scope="></img></a></td><td>\n};
 
