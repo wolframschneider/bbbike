@@ -2424,12 +2424,12 @@ function " . $type . "char_init() {}
 
     print "</table>\n" if $bi->{'can_table'};
 
-    if ($show_mini_googlemap_city) {
+    if (0 && $show_mini_googlemap_city) {
 	    my $geo = get_geography_object();
             my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
 
             my $slippymap_url = CGI->new($q);
-            $slippymap_url->param('maponly', '1');
+            $slippymap_url->param('map_menu', '0');
             $slippymap_url->param('maptype', 'mapnik');
             $slippymap_url->param('zoom', $slippymap_zoom_city);
 
@@ -4904,10 +4904,9 @@ EOF
 	    # Weiterer Vorteil: die Ergebnisse werden auch im accesslog
 	    # aufgezeichnet. Ansonsten muesste ich ein weiteres Logfile
 	    # anlegen.
-	    my $post_bug = 1; # XXX für alle aktivieren
+	    my $post_bug = 0; # XXX für alle aktivieren
 	    #$post_bug = 1 if ($kfm_bug); # XXX war mal nur für kfm
 	    #print "<hr>";
-
 
 	    print qq{<span id="slippymap_span1">\n};
             my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
@@ -4920,9 +4919,8 @@ EOF
 	    $pdf_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 
             my $slippymap_url = CGI->new($q);
-            $slippymap_url->param('maponly', '0');
             $slippymap_url->param('coordsystem', 'wgs84');
-            #$slippymap_url->param('maptype', 'cycle');
+            $slippymap_url->param('maptype', 'cycle');
             $slippymap_url->param('city', $cityname);
             $slippymap_url->param('source_script', "$cityname.cgi");
             $slippymap_url->param('zoom', $slippymap_zoom_maponly);
@@ -4957,20 +4955,20 @@ EOF
 </script>
 EOF
 
-	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi");
+	    print $q->start_form(-method=>"GET", -name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi");
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
-	    print $q->hidden('maponly', 1);
+	    print $q->hidden('map_menu', "0");
 	    print $q->end_form;
 	    print qq{\n</span><!-- slippymap_span1 -->\n};
 
 	    print qq{<span id="slippymap_span2">\n};
-	    print $q->start_form(-method=>"POST", -name => "slippymapFormExternal", -target => "_new", -action => "slippymap.cgi");
+	    print $q->start_form(-method=>"GET", -name => "slippymapFormExternal", -target => "_new", -action => "slippymap.cgi");
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
-	    print $q->hidden('maponly', 0);
+	    print $q->hidden('map_menu', "1");
 	    print $q->end_form;
 	    print qq{\n</span><!-- slippymap_span2 -->\n};
 
@@ -4985,8 +4983,11 @@ EOF
 	    if ($show_mini_googlemap) {
 	        print qq{<span class="slippymaplink"><a target="_slippymap" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">map only</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a target="_slippymap" onclick='javascript:pdfLink();' href='#' title="PDF hand out">print map route</a></span>\n};
-	    }
+	        print qq{<p></p>\n};
 
+		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="505" scrolling="no"></iframe><p></p>};
+		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
+	    }
 
 	    print qq{<div class="box">};
 	    print "<form name=showmap method=" .
@@ -5045,8 +5046,6 @@ EOF
 
 
             if ($show_mini_googlemap) {
-	         print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="505" scrolling="no"></iframe><p></p>};
-		 print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 	
 	    } elsif ($show_mini_map) {
 	    	print qq{<table><tr><td><a href="$ENV{'SCRIPT_NAME'}?center=&interactive=Show+map&imagetype=pdf-auto&coords=$string_rep&startname=}. CGI::escape($startname) . q{&zielname=} . CGI::escape($zielname) . qq{&geometry=240x180&draw=str&draw=sbahn&draw=ubahn&draw=wasser&draw=flaechen&draw=strname&draw=title&outputtarget=print&scope=" style="border=0;"><img  title="printable PDF map and route list" alt="" width="240" height="180" scrolling="no" border="0" src="$ENV{'SCRIPT_NAME'}?center=&interactive=Show+map&imagetype=png&coords=$string_rep&startname=}. CGI::escape($startname) . q{&zielname=} . CGI::escape($zielname) . qq{&geometry=240x180&draw=str&draw=sbahn&draw=wasser&draw=flaechen&draw=title&scope="></img></a></td><td>\n};
