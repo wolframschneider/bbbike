@@ -2454,7 +2454,7 @@ function " . $type . "char_init() {}
             $ie6hack =~ s,/+[^/]+$,,;
 
 	    print "<p></p>\n";
-	    print qq{<iframe src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="380" scrolling="no" border="0"></iframe>\n};
+	    print qq{<iframe src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="380" scrolling="no"></iframe>\n};
     }
 
     print "<input type=hidden name=scope value='" .
