@@ -2024,7 +2024,7 @@ EOF
 
 	# Darstellung eines Vias nicht erwünscht
 	if ($type eq 'via' and $$oneref eq 'NO') {
-	    print "<input type=hidden name=via value=NO>";
+	    print qq{<tr style="display:none"><td><input type="hidden" name="via" value="NO"></td></tr>};
 	    next;
 	}
 
