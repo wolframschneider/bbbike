@@ -4955,7 +4955,7 @@ EOF
 </script>
 EOF
 
-	    print $q->start_form(-method=>"GET", -name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi");
+	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi");
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
@@ -4964,7 +4964,7 @@ EOF
 	    print qq{\n</span><!-- slippymap_span1 -->\n};
 
 	    print qq{<span id="slippymap_span2">\n};
-	    print $q->start_form(-method=>"GET", -name => "slippymapFormExternal", -target => "_new", -action => "slippymap.cgi");
+	    print $q->start_form(-method=>"POST", -name => "slippymapFormExternal", -target => "_new", -action => "slippymap.cgi");
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
@@ -4981,7 +4981,7 @@ EOF
 	    print qq{\n</span>\n};
 
 	    if ($show_mini_googlemap) {
-	        print qq{<span class="slippymaplink"><a target="_slippymap" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">map only</a></span>\n};
+	        print qq{<span class="slippymaplink"><a target="_slippymap" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">larger map</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a target="_slippymap" onclick='javascript:pdfLink();' href='#' title="PDF hand out">print map route</a></span>\n};
 	        print qq{<p></p>\n};
 
