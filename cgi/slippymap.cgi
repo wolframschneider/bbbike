@@ -1356,7 +1356,7 @@ EOF
         if ( $lang eq 'en' ) {
             $html .= <<EOF;
 <a href="$url"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0" /></a>
-<img class="selectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0">
+<img class="selectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0" />
 EOF
         }
         else {
