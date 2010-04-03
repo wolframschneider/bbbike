@@ -3132,14 +3132,14 @@ sub reset_html {
 	get_settings_defaults();
 
 	print join(" ", 
-		   qq'<input class="settingsreset" type=button value="Reset" onclick="reset_form(',
+		   qq'<input class="settingsreset" type="button" value="Reset" onclick="reset_form(',
 		   qq'@{[defined $default_speed ? $default_speed : "null" ]},',
 		   qq'@{[defined $strcat{$default_cat} ? $strcat{$default_cat} : 0]},',
 		   qq'@{[defined $strqual{$default_quality} ? $strqual{$default_quality}: 0]},',
 		   qq'@{[defined $strrouten{$default_routen} ? $strrouten{$default_routen} : 0]},',
 		   qq'@{[ $default_ampel?"true":"false" ]},',
 		   qq'@{[defined $strgreen{$default_green} ? $strgreen{$default_green} : 0]},',
-		   qq'@{[defined $strspecialvehicle{$default_specialvehicle} ? $strspecialvehicle{$default_specialvehicle} : 0]}',
+		   qq'@{[defined $strspecialvehicle{$default_specialvehicle} ? $strspecialvehicle{$default_specialvehicle} : 0]},',
 		   qq'@{[defined $strunlit{$default_unlit} ? $strunlit{$default_unlit} : 0]},',
 		   qq'@{[defined $strwinter{$default_winter} ? $strwinter{$default_winter} : 0]}',
 		   qq'); enable_settings_buttons(); return false;">',
