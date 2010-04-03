@@ -399,13 +399,10 @@ EOF
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>BBBike data presented with Googlemap</title>
     <link rel="stylesheet" type="text/css" href="../html/bbbike.css" /><!-- XXX only for radzeit -->
     <link type="image/gif" rel="shortcut icon" href="../images/bbbike_google.gif" /><!-- XXX only for radzeit -->
-    <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
-    <script type="text/javascript">
-      google.load("maps", "2");
-    </script>
     <script src="../html/sprintf.js" type="text/javascript"></script>
     <script src="../html/bbbike_util.js" type="text/javascript"></script>
     <style type="text/css">
@@ -419,6 +416,7 @@ EOF
 	body.waitMode *    { cursor:wait; }
         $maponly
     </style>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=$google_api_key" type="text/javascript"></script>
   </head>
 
   <body onload="init()" onunload="GUnload()" class="nonWaitMode">
