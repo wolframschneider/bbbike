@@ -4946,17 +4946,46 @@ EOF
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
             $smu =~ s/.*?\?//;
 
-	    print $q->start_form(-name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi");
+	    print <<EOF;
+<script type="text/javascript"> 
+    function slippymapExternal () { 
+	document.slippymapFormExternal.submit(); 
+    } 
+    function pdfLink () { 
+	document.pdfForm.submit(); 
+    } 
+</script>
+EOF
+
+	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi");
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
 	    print $q->hidden('maponly', 1);
 	    print $q->end_form;
-	    print qq{</span><!-- slippymap_span1 -->\n};
+	    print qq{\n</span><!-- slippymap_span1 -->\n};
 
-	    print qq{<span class="slippymaplink"><a target="_slippymap" href="slippymap.cgi?$smu" title="Open slippy map in external window">map only</a></span>\n} if $show_mini_googlemap;
+	    print qq{<span id="slippymap_span2">\n};
+	    print $q->start_form(-method=>"POST", -name => "slippymapFormExternal", -target => "_new", -action => "slippymap.cgi");
+	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
+		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
+	    }
+	    print $q->hidden('maponly', 0);
+	    print $q->end_form;
+	    print qq{\n</span><!-- slippymap_span2 -->\n};
 
-	    print qq{ | <span class="slippymaplink"><a target="_slippymap" href="}, $pdf_url->url(-full=>1,-query=>1), qq{" title="PDF hand out">print map route</a></span>\n} if $show_mini_googlemap;
+	    print qq{<span id="pdf_span1">\n};
+	    print $q->start_form(-method=>"POST", -name => "pdfForm", -target => "_new", -action => "" );
+	    foreach my $name (qw/imagetype startname zielname draw coords/) {
+		print $q->hidden(-name => $name, -default => [ $pdf_url->param($name) ]), "\n";
+	    }
+	    print $q->end_form;
+	    print qq{\n</span>\n};
+
+	    if ($show_mini_googlemap) {
+	        print qq{<span class="slippymaplink"><a target="_slippymap" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">map only</a></span>\n};
+	        print qq{ | <span class="slippymaplink"><a target="_slippymap" onclick='javascript:pdfLink();' href='#' title="PDF hand out">print map route</a></span>\n};
+	    }
 
 
 	    print qq{<div class="box">};
