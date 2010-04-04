@@ -2424,7 +2424,8 @@ function " . $type . "char_init() {}
 
     print "</table>\n" if $bi->{'can_table'};
 
-    if (0 && $show_mini_googlemap_city) {
+    # home map 
+    if ($show_mini_googlemap_city) {
 	    my $geo = get_geography_object();
             my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
 
