@@ -308,9 +308,9 @@ sub get_html {
         $script = $q->param('source_script') || 'bbbike.cgi';
         $maponly =
 qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
-          if $q->param("maponly");
+          if !$q->param("map_menu");
         $slippymap_size = qq{ width: 100%; height: 100%; max-width: 800px;}
-          if $q->param("maponly");
+          if !$q->param("map_menu");
     }
 
 
