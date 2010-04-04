@@ -217,7 +217,7 @@ binmode( \*STDERR, ":utf8" ) if $debug >= 1;
 my $expire = $debug >= 2 ? '+1s' : '+1h';
 print $q->header(
     -type    => 'text/javascript',
-    -charset => 'utf8',
+    -charset => 'utf-8',
     -expires => $expire,
 );
 
