@@ -224,7 +224,7 @@ print $q->header(
 binmode( \*STDOUT, ":utf8" ) if $force_utf8;
 
 my @suggestion =
-  &streetnames_suggestions_unique( 'city' => $city, 'street' => $street );
+  sort &streetnames_suggestions_unique( 'city' => $city, 'street' => $street );
 
 # plain text
 if ( $namespace == 1 ) {
