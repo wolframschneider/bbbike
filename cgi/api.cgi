@@ -10,7 +10,7 @@ use strict;
 $ENV{LANG} = 'C';
 
 # how many streets to suggestest
-my $max_suggestions = 32;
+my $max_suggestions = 64;
 
 my $opensearch_file = 'opensearch.streetnames';
 my $opensearch_dir  = '../data-osm';
@@ -233,9 +233,9 @@ if ( $namespace == 1 ) {
 
 # devbridge autocomplete
 elsif ( $namespace == 2 ) {
-    print qq/{ query:'$street', suggestions:["/;
-    print join( '","', @suggestion ), '"' if scalar(@suggestion) > 0;
-    print "]}";
+    print qq/{ query:'$street', suggestions:[/;
+    print '"', join( '","', @suggestion ), '"' if scalar(@suggestion) > 0;
+    print "] }";
 }
 
 # googe like
