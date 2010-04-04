@@ -226,9 +226,19 @@ binmode( \*STDOUT, ":utf8" ) if $force_utf8;
 my @suggestion =
   &streetnames_suggestions_unique( 'city' => $city, 'street' => $street );
 
+# plain text
 if ( $namespace == 1 ) {
     print join( "\n", @suggestion ), "\n";
 }
+
+# devbridge autocomplete
+elsif ( $namespace == 2 ) {
+    print qq/{ query:'$street', suggestions:["/; 
+    print join( '","', @suggestion ), '"' if scalar(@suggestion) > 0;
+    print "]}";
+}
+
+# googe like
 else {
     print qq/["$street",[/;
     print qq{"}, join( '","', @suggestion ), qq{"} if scalar(@suggestion) > 0;
