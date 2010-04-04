@@ -233,7 +233,7 @@ if ( $namespace == 1 ) {
 
 # devbridge autocomplete
 elsif ( $namespace == 2 ) {
-    print qq/{ query:'$street', suggestions:["/; 
+    print qq/{ query:'$street', suggestions:["/;
     print join( '","', @suggestion ), '"' if scalar(@suggestion) > 0;
     print "]}";
 }
