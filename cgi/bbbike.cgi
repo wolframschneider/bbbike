@@ -4981,8 +4981,8 @@ EOF
 	    print qq{\n</span>\n};
 
 	    if ($show_mini_googlemap) {
-	        print qq{<span class="slippymaplink"><a target="_slippymap" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">larger map</a></span>\n};
-	        print qq{ | <span class="slippymaplink"><a target="_slippymap" onclick='javascript:pdfLink();' href='#' title="PDF hand out">print map route</a></span>\n};
+	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">larger map</a></span>\n};
+	        print qq{ | <span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out">print map route</a></span>\n};
 	        print qq{<p></p>\n};
 
 		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="505" scrolling="no"></iframe><p></p>};
