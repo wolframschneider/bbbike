@@ -4955,7 +4955,7 @@ EOF
 </script>
 EOF
 
-	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi");
+	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi?city=" . $slippymap_url->param('city') );
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
@@ -4964,7 +4964,7 @@ EOF
 	    print qq{\n</span><!-- slippymap_span1 -->\n};
 
 	    print qq{<span id="slippymap_span2">\n};
-	    print $q->start_form(-method=>"POST", -name => "slippymapFormExternal", -target => "_new", -action => "slippymap.cgi");
+	    print $q->start_form(-method=>"POST", -name => "slippymapFormExternal", -target => "_new", -action => "slippymap.cgi?city=" . $slippymap_url->param('city') );
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
