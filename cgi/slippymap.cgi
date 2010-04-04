@@ -334,6 +334,7 @@ sub get_html {
             $maponly = qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|;
             $slippymap_size = qq{ width: 100%; height: 100%;};
 	} else {
+            $maponly = qq|div#menu \t{ display: none }\n|;
             $wheelzoom = qq|map.enableScrollWheelZoom();|;
         }
 
@@ -391,7 +392,6 @@ EOF
 	$zoom_code .= qq{[$i->[0],$i->[1]],\n};
     }
     $zoom_code =~ s/,\n$/];\n/;
-
 
 
     my $html = <<EOF;
@@ -1203,6 +1203,8 @@ EOF
     <noscript>
         <p>You must enable JavaScript and CSS to run this application!</p>
     </noscript>
+
+    <div id="menu">
     <div class="sml" id="message"></div>
     <div class="sml" id="permalink"></div>
     <div class="sml" id="addroutelink"></div>
@@ -1369,6 +1371,7 @@ EOF
     }
 
     $html .= <<EOF;
+</div> <!-- menu -->
 <div id="footer" style="clear:left;">
 <div id="footer_top">
 <br/>
