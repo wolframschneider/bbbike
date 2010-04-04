@@ -334,7 +334,8 @@ sub get_html {
             $maponly = qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|;
             $slippymap_size = qq{ width: 100%; height: 100%;};
 	} else {
-            $maponly = qq|div#menu \t{ display: none }\n|;
+            $maponly = qq|div#menu \t{ display: none }\n div#nomap { height: 5em; }\n|;
+            $slippymap_size = qq{ width: 100%; height: 85%;};
             $wheelzoom = qq|map.enableScrollWheelZoom();|;
         }
 
