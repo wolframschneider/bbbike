@@ -201,7 +201,7 @@ my $q = new MyCgiSimple;
 #use CGI; my $q = new CGI;
 
 my $action    = 'opensearch';
-my $street    = $q->param('search') || $q->param('q') || 'Haupt' || 'Zähringe';
+my $street    = $q->param('search') || $q->param('query') || $q->param('q') || 'Zähringe';
 my $city      = $q->param('city') || 'Berlin';
 my $namespace = $q->param('namespace') || '0';
 
