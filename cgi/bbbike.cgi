@@ -2286,7 +2286,7 @@ EOF
 
 <script type="text/javascript">
 	var ac_$city = \$('#$searchinput').autocomplete( 
-		{ serviceUrl: 'api.cgi?debug=2;namespace=dbac;city=$city', minChars:2, maxHeight:400, width:300, deferRequestBy:100  }
+		{ serviceUrl: 'api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:400, width:300, deferRequestBy:100  }
 	);
 </script><br>
 
