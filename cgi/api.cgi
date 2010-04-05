@@ -12,6 +12,9 @@ $ENV{LANG} = 'C';
 # how many streets to suggestest
 my $max_suggestions = 64;
 
+# for the input less than 4 characters
+my $max_suggestions_short = 10;
+
 my $opensearch_file = 'opensearch.streetnames';
 my $opensearch_dir  = '../data-osm';
 my $opensearch_dir2 = '../data-opensearch-places';
@@ -125,7 +128,7 @@ sub streetnames_suggestions {
     my %args   = @_;
     my $city   = $args{'city'};
     my $street = $args{'street'};
-    my $limit  = $max_suggestions;
+    my $limit  = (length($street) <= 3 ? $max_suggestions_short : $max_suggestions);
 
     $street =~ s/([()|{}\]\[])/\\$1/;
 
