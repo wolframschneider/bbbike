@@ -45,6 +45,9 @@ sub street_match {
     my $file   = shift;
     my $street = shift;
     my $limit  = shift;
+    my $binary = shift;
+
+    $binary = 1 if !defined $binary;
 
     if ( !-e $file ) {
         warn "$!: $file\n";
@@ -55,7 +58,7 @@ sub street_match {
         my $look_opt = '-f';
 
         # linux only
-        $look_opt .= 'b' if -e '/proc';
+        $look_opt .= 'b' if $binary && -e '/proc';
 
         my @command = ( 'look', $look_opt, $street, $file );
 
@@ -147,6 +150,9 @@ sub streetnames_suggestions {
     my ( $d, $d2 ) = &street_match( $file, $street_plain, $limit );
 
     # no prefix match, try again with prefix match only
+    if ( defined $d && scalar(@$d) == 0 && scalar(@$d2) == 0 ) {
+        ( $d, $d2 ) = &street_match( $file, $street_plain, $limit, 0 );
+    }
     if ( defined $d && scalar(@$d) == 0 && scalar(@$d2) == 0 ) {
         ( $d, $d2 ) = &street_match( $file, "^$street_re", $limit );
     }
