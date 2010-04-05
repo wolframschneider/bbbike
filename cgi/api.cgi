@@ -131,7 +131,9 @@ sub streetnames_suggestions {
     my $limit =
       ( length($street) <= 3 ? $max_suggestions_short : $max_suggestions );
 
-    $street =~ s/([()|{}\]\[])/\\$1/;
+    my $street_plain = $street;
+    my $street_re = $street;
+    $street_re =~ s/([()|{}\]\[])/\\$1/;
 
     my $file =
       $city eq 'bbbike'
@@ -142,11 +144,11 @@ sub streetnames_suggestions {
         $file = "$opensearch_dir2/$city/$opensearch_file";
     }
 
-    my ( $d, $d2 ) = &street_match( $file, $street, $limit );
+    my ( $d, $d2 ) = &street_match( $file, $street_plain, $limit );
 
     # no prefix match, try again with prefix match only
     if ( defined $d && scalar(@$d) == 0 && scalar(@$d2) == 0 ) {
-        ( $d, $d2 ) = &street_match( $file, "^$street", $limit );
+        ( $d, $d2 ) = &street_match( $file, "^$street_re", $limit );
     }
 
     my @data  = defined $d  ? @$d  : ();
@@ -166,7 +168,7 @@ sub streetnames_suggestions {
 
         # match words
         my @d;
-        @d = grep { /$street\b/i || /\b$street/ } @data2;    # if $len >= 3;
+        @d = grep { /$street_re\b/i || /\b$street_re/ } @data2;    # if $len >= 3;
 
         my @result = &strip_list( $limit, @data );
         push @result,
