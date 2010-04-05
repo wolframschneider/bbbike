@@ -198,11 +198,14 @@ sub strip_list {
     return @d;
 }
 
-# GET /w/api.php?action=opensearch&search=berlin&namespace=0 HTTP/1.1
+######################################################################
+# GET /w/api.php?namespace=1&q=berlin HTTP/1.1
+#
+# param alias: q: query, search
+#              ns: namespace
+#
 
 my $q = new MyCgiSimple;
-
-#use CGI; my $q = new CGI;
 
 my $action = 'opensearch';
 my $street =
@@ -210,14 +213,11 @@ my $street =
   || $q->param('query')
   || $q->param('q')
   || 'Zähringe';
-my $city      = $q->param('city')      || 'Berlin';
-my $namespace = $q->param('namespace') || '0';
+my $city = $q->param('city') || 'Berlin';
+my $namespace = $q->param('namespace') || $q->param('ns') || '0';
 
-if (   defined $q->param('debug')
-    && $q->param('debug') >= 0
-    && $q->param('debug') <= 3 )
-{
-    $debug = $q->param('debug');
+if ( my $d = $q->param('debug') || $q->param('d') ) {
+    $debug = $d if defined $d && $d >= 0 && $d <= 3;
 }
 
 binmode( \*STDERR, ":utf8" ) if $debug >= 1;
