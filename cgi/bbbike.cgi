@@ -2285,12 +2285,9 @@ EOF
 	    print qq|
 
 <script type="text/javascript">
-jQuery.noConflict();
-jQuery(function() {
-        jQuery("#$searchinput").suggest("api.cgi?action=opensearch\x26city=$city\x26namespace=1\x26search=", 
-            
-         { minchars: 1, delay: 200, onSelect: function() {} }); });
-         // { onSelect: function() {alert("You selected: " + this.value)}}); });
+	var ac_$city = \$('#$searchinput').autocomplete( 
+		{ serviceUrl: 'api.cgi?debug=2;namespace=dbac;city=$city', minChars:2, maxHeight:400, width:300, deferRequestBy:100  }
+	);
 </script><br>
 
 |;
@@ -6634,10 +6631,9 @@ sub header {
 
 	push(@$head, qq|
 
-<script src="../html/jquery.js" type="text/javascript"></script>
-<script src="../html/jquery.suggest.js" type="text/javascript"></script>
-<script src="../html/jquery.dimensions.js" type="text/javascript"></script>
-<link href="../html/jquery.suggest.css" rel="stylesheet" type="text/css">
+<script src="../html/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="../html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js" type="text/javascript"></script>
+<link href="../html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css">
 
 |);
 
