@@ -230,12 +230,12 @@ my @suggestion =
   sort &streetnames_suggestions_unique( 'city' => $city, 'street' => $street );
 
 # plain text
-if ( $namespace == 1 ) {
+if ( $namespace eq 'plain' || $namespace == 1 ) {
     print join( "\n", @suggestion ), "\n";
 }
 
 # devbridge autocomplete
-elsif ( $namespace == 2 ) {
+elsif ( $namespace eq 'dbac' ) {
     print qq/{ query:'$street', suggestions:[/;
     print '"', join( '","', @suggestion ), '"' if scalar(@suggestion) > 0;
     print "] }";
