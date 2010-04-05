@@ -132,7 +132,7 @@ sub streetnames_suggestions {
       ( length($street) <= 3 ? $max_suggestions_short : $max_suggestions );
 
     my $street_plain = $street;
-    my $street_re = $street;
+    my $street_re    = $street;
     $street_re =~ s/([()|{}\]\[])/\\$1/;
 
     my $file =
@@ -168,7 +168,7 @@ sub streetnames_suggestions {
 
         # match words
         my @d;
-        @d = grep { /$street_re\b/i || /\b$street_re/ } @data2;    # if $len >= 3;
+        @d = grep { /$street_re\b/i || /\b$street_re/ } @data2;  # if $len >= 3;
 
         my @result = &strip_list( $limit, @data );
         push @result,
