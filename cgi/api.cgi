@@ -128,7 +128,8 @@ sub streetnames_suggestions {
     my %args   = @_;
     my $city   = $args{'city'};
     my $street = $args{'street'};
-    my $limit  = (length($street) <= 3 ? $max_suggestions_short : $max_suggestions);
+    my $limit =
+      ( length($street) <= 3 ? $max_suggestions_short : $max_suggestions );
 
     $street =~ s/([()|{}\]\[])/\\$1/;
 
@@ -203,9 +204,13 @@ my $q = new MyCgiSimple;
 
 #use CGI; my $q = new CGI;
 
-my $action    = 'opensearch';
-my $street    = $q->param('search') || $q->param('query') || $q->param('q') || 'Zähringe';
-my $city      = $q->param('city') || 'Berlin';
+my $action = 'opensearch';
+my $street =
+     $q->param('search')
+  || $q->param('query')
+  || $q->param('q')
+  || 'Zähringe';
+my $city      = $q->param('city')      || 'Berlin';
 my $namespace = $q->param('namespace') || '0';
 
 if (   defined $q->param('debug')
