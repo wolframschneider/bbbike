@@ -1389,6 +1389,9 @@ EOF
 
     $html .= <<EOF;
 </div> <!-- menu -->
+<!-- google elevation chart -->
+<div id="chart_div" style="width:80%; height:200px" onmouseout="clearMouseMarker()"></div>
+
 <div id="footer" style="clear:left;">
 <div id="footer_top">
 <br/>
