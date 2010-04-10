@@ -1041,11 +1041,11 @@ EOF
                //
 
 	       var marker; 
-	       marker = createMarker(new GLatLng(marker_list[0][0], marker_list[0][1]), "Start: " + startname);
+	       marker = createMarker(new GLatLng(marker_list[0][0], marker_list[0][1]), "@{[ M('Start') ]}" + ": " + startname);
                map.addOverlay(marker);
 
 	       var last = marker_list.length - 1;
-	       marker = createMarker(new GLatLng(marker_list[last][0], marker_list[last][1]), "Destination: " + zielname);
+	       marker = createMarker(new GLatLng(marker_list[last][0], marker_list[last][1]), "@{[ M('Ziel') ]}" + ": " + zielname);
                map.addOverlay(marker);
 
                var x1 = area_list[0][0];
