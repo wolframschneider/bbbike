@@ -23,6 +23,24 @@ function get_and_set_email_author_from_cookie(frm) {
   }
 }
 
+
+function togglePermaLinks() {
+	togglePermaLink("permalink_url");
+	togglePermaLink("permalink_url2");
+}
+
+function togglePermaLink(id) {
+        var permalink = document.getElementById(id);
+        if (permalink == null)
+                return;
+
+        if (permalink.style.display == "none") {
+                permalink.style.display = "inline";
+        } else {
+                permalink.style.display = "none";
+        };
+}
+
 // Local variables:
 // c-basic-offset: 2
 // End:
