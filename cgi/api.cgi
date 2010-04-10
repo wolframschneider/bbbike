@@ -206,6 +206,14 @@ sub strip_list {
     return @d;
 }
 
+sub escapeQuote {
+    my $string = shift;
+
+    $string =~ s/"/\\"/g;
+
+    return $string;
+}
+
 ######################################################################
 # GET /w/api.php?namespace=1&q=berlin HTTP/1.1
 #
@@ -249,15 +257,17 @@ if ( $namespace eq 'plain' || $namespace == 1 ) {
 
 # devbridge autocomplete
 elsif ( $namespace eq 'dbac' ) {
-    print qq/{ query:'$street', suggestions:[/;
-    print '"', join( '","', @suggestion ), '"' if scalar(@suggestion) > 0;
+    print qq/{ query:"/, escapeQuote($street), qq/", suggestions:[/;
+    print '"', join( '","', map { escapeQuote($_) } @suggestion ), '"'
+      if scalar(@suggestion) > 0;
     print "] }";
 }
 
 # googe like
 else {
     print qq/["$street",[/;
-    print qq{"}, join( '","', @suggestion ), qq{"} if scalar(@suggestion) > 0;
+    print qq{"}, join( '","', map { escapeQuote($_) } @suggestion ), qq{"}
+      if scalar(@suggestion) > 0;
     print qq,]],;
 }
 
