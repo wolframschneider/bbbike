@@ -1865,6 +1865,7 @@ sub choose_form {
     $header_args{-expires} = '+1d';
     http_header(%header_args);
     my @extra_headers;
+
     if ($bi->{'text_browser'} && !$bi->{'mobile_device'}) {
 	push @extra_headers, -up => $BBBike::HOMEPAGE;
     }
@@ -1878,6 +1879,8 @@ sub choose_form {
     if ($is_beta) {
 	$onloadscript .= "check_locate_me(); ";
     }
+
+
     if ($nice_berlinmap || $nice_abcmap) {
 	push @extra_headers, -onLoad => $onloadscript,
 	     -script => [{-src => $bbbike_html . "/bbbike_start.js?v=1.16"},
@@ -4979,11 +4982,16 @@ EOF
 	    print qq{\n</span>\n};
 
 	    if ($show_mini_googlemap) {
+		my $qq = new CGI;
+		#$qq->param( 'startname', Encode::encode( utf8 => $qq->param('startname')));
+		#$qq->param( 'zielname', Encode::encode( utf8 => $qq->param('zielname')));
+		my $permalink = BBBikeCGIUtil::my_escapeHTML($qq->url(-full=>1, -query=>1));
+
 	        print qq{<hr>\n};
 	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">larger map</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out">print map route</a></span>\n};
+	        print qq{ | <span class="slippymaplink" id="permalink"><a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url" style="display:none"> $permalink</span></span>\n};
 	        print qq{<p></p>\n};
-
 		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="505" scrolling="no"></iframe><p></p>};
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 	    }
@@ -6633,6 +6641,7 @@ sub header {
 
 <script src="../html/jquery-1.4.2.min.js" type="text/javascript"></script>
 <script src="../html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js" type="text/javascript"></script>
+<script src="../html/bbbike_util.js" type="text/javascript"></script>
 <link href="../html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css">
 
 |);
@@ -6746,9 +6755,16 @@ EOF
 </center>
 EOF
 
+my $qq = new CGI;
+#$qq->param( 'startname', Encode::encode( utf8 => $qq->param('startname')));
+#$qq->param( 'zielname', Encode::encode( utf8 => $qq->param('zielname')));
+my $permalink = BBBikeCGIUtil::my_escapeHTML($qq->url(-full=>1, -query=>1));
+
 my $s_copyright = <<EOF;
+
 <div id="footer">
 <div id="footer_top">
+<span id="permalink"><a href="#" onclick="togglePermaLinks(); return false;">Permalink</a><span id="permalink_url2" style="display:none"> $permalink</span></span>
 <p>
 <a href="../">home</a> |
 <a href="../doc.html">help</a> |
