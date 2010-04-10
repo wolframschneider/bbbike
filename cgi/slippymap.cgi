@@ -348,6 +348,11 @@ sub get_html {
     	$area_code =~ s/,\s*$//;
         $area_code .= "];\n";
 	#use Data::Dumper; warn Dumper($area_code);
+
+        $area_code .= qq{var startname = '} . escapeHTML($q->param("startname")) . qq{';\n};
+        $area_code .= qq{var zielname = '} .  escapeHTML($q->param("zielname")) . qq{';\n};
+
+        $area_code .= "\n\n";
     }
 
 
@@ -1023,6 +1028,8 @@ EOF
 	    // no zoom level higher than 15
             map.setZoom( zoom < 16 ? zoom : 15);
 
+	
+	   // hide the area around the main rectangle
            if (area_list.length == 2) {
                //
                //    *----------------------* x2,y2
@@ -1032,6 +1039,15 @@ EOF
                //    *----------------------*
                //  x1,y1                  -->y
                //
+
+	       var marker; 
+	       marker = createMarker(new GLatLng(marker_list[0][0], marker_list[0][1]), "Start: " + startname);
+               map.addOverlay(marker);
+
+	       var last = marker_list.length - 1;
+	       marker = createMarker(new GLatLng(marker_list[last][0], marker_list[last][1]), "Destination: " + zielname);
+               map.addOverlay(marker);
+
                var x1 = area_list[0][0];
                var y1 = area_list[0][1];
                var x2 = area_list[1][0];
