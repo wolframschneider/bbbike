@@ -50,9 +50,9 @@
   google.load("visualization", "1", {packages: ["columnchart"]});
   
   // Set a callback to run when the Google Visualization API is loaded.
-  google.setOnLoadCallback(initialize);
+  // google.setOnLoadCallback(elevation_initialize);
   
-  function initialize() {
+  function elevation_initialize(slippymap) {
     var myLatlng = new google.maps.LatLng(15, 0);
     var myOptions = {
       zoom: 1,
@@ -60,7 +60,12 @@
       mapTypeId: google.maps.MapTypeId.TERRAIN
     }
 
-    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    if (slippymap) {
+	map = slippymap;
+    } else {
+        map = new google.maps.Map(document.getElementById("map")); //, myOptions);
+    }
+
     chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
     
     geocoderService = new google.maps.Geocoder();
@@ -214,5 +219,6 @@
     
     markers = [];
     
-    // document.getElementById('chart_div').style.display = 'none';
+    document.getElementById('chart_div').style.display = 'none';
   }
+
