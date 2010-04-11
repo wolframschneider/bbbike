@@ -284,7 +284,7 @@
   // or submit a directions request for the path between points
   function updateElevation() {
     if (markers.length > 1) {
-      var travelMode = document.getElementById("mode").value;
+      var travelMode = 'direct'; // document.getElementById("mode").value;
       if (travelMode != 'direct') {
         calcRoute(travelMode);
       } else {
@@ -376,7 +376,7 @@
   function loadExample(n) {
     reset();
     map.setMapTypeId(examples[n].mapType);
-    document.getElementById('mode').value = examples[n].travelMode;
+    // document.getElementById('mode').value = examples[n].travelMode;
     var bounds = new google.maps.LatLngBounds();
     for (var i = 0; i < examples[n].latlngs.length; i++) {
       var latlng = new google.maps.LatLng(
