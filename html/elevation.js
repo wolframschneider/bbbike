@@ -115,8 +115,8 @@
 
     document.getElementById('chart_div').style.display = 'block';
     chart.draw(data, {
-      width: 512,
-      height: 200,
+      // width: '800',
+      // height: 200,
       legend: 'none',
       titleY: 'Elevation (m)',
       focusBorderColor: '#00ff00'
