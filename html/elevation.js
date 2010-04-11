@@ -138,7 +138,7 @@
       var marker = new google.maps.Marker({
         position: latlng,
         map: map,
-        draggable: true
+        // draggable: true
       })
       
       google.maps.event.addListener(marker, 'dragend', function(e) {
@@ -150,14 +150,9 @@
       if (doQuery) {
         updateElevation();
       }
-      
-      if (0 && markers.length == 50) {
-        document.getElementById('address').disabled = true;
-      }
-    } else {
-      // alert("No more than 50 points can be added");
     }
   }
+ 
   
   // Trigger the elevation query for point to point
   // or submit a directions request for the path between points
@@ -165,7 +160,7 @@
     if (markers.length > 1) {
         var latlngs = [];
         for (var i in markers) {
-          latlngs.push(markers[i].getPosition())
+           latlngs.push(markers[i].getPosition())
         }
 
         elevationService.getElevationAlongPath({
@@ -194,7 +189,6 @@
   }
 
   function loadRoute() {
-    // document.getElementById('mode').value = examples[n].travelMode;
     reset();
     map.setMapTypeId( google.maps.MapTypeId.ROADMAP );
     var bounds = new google.maps.LatLngBounds();
