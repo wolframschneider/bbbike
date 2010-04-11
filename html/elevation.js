@@ -137,13 +137,11 @@
       
       var marker = new google.maps.Marker({
         position: latlng,
-        map: map,
+        // map: map,
         // draggable: true
       })
-      
-      google.maps.event.addListener(marker, 'dragend', function(e) {
-        updateElevation();
-      });
+     
+      // google.maps.event.addListener(marker, 'dragend', function(e) { updateElevation(); });
       
       markers.push(marker);
       
