@@ -45,6 +45,20 @@ $feed->add_entry(
 );
 
 $feed->add_entry(
+    title => 'Elevation chart',
+    link  => $homepage,
+    id    => '81ebeaf0506f9d6a518be2ab38ec243f',
+
+    content => {
+        type    => 'text',
+        content => qq{BBBike @ World displays the elevation chart for the route.} 
+    },
+
+    updated  => '2010-04-11T18:30:03Z',
+    category => 'News',
+);
+
+$feed->add_entry(
     title => 'New cities for BBBike @ world',
     link  => $homepage,
     id    => '81ebeaf0506f9d6a518be2ab38ec243f',
