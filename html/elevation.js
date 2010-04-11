@@ -97,6 +97,9 @@
   // Takes an array of ElevationResult objects, draws the path on the map
   // and plots the elevation profile on a GViz ColumnChart
   function plotElevation(results) {
+    if (results == null)
+	return;
+
     elevations = results;
     
     var path = [];
