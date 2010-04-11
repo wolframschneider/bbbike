@@ -1239,7 +1239,7 @@ EOF
     <div class="sml" id="wpt">
 EOF
 
-    $html .= qq{<script> elevation_initialize(); </script>\n} if CGI->new()->param("map_menu");
+    $html .= qq{<script type="text/javascript">\nelevation_initialize();\n</script>\n\n} if CGI->new()->param("map_menu");
 
     for my $wpt (@$wpts) {
         my ( $x, $y, $name ) = @$wpt;
