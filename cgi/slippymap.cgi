@@ -335,7 +335,7 @@ sub get_html {
             $slippymap_size = qq{ width: 100%; height: 100%;};
 	} else {
             $maponly = qq|div#menu \t{ display: none }\n div#nomap { height: 5em; }\n|;
-            $slippymap_size = qq{ width: 100%; height: 75%;};
+            $slippymap_size = qq{ width: 100%; height: 80%;};
             $wheelzoom = qq|map.enableScrollWheelZoom();|;
         }
 
@@ -1402,8 +1402,6 @@ EOF
 
     $html .= <<EOF;
 </div> <!-- menu -->
-<!-- google elevation chart -->
-<div id="chart_div" style="width:80%; height:200px" onmouseout="clearMouseMarker()"></div>
 
 <div id="footer" style="clear:left;">
 <div id="footer_top">
