@@ -18,57 +18,8 @@
   var SAMPLES = 500;
 
   var examples = [{
-    // Lombard St
-    latlngs: [
-      [37.801000, -122.426499],
-      [37.802051, -122.419418],
-      [37.802729, -122.413989]
-    ],
-    mapType: google.maps.MapTypeId.ROADMAP,
-    travelMode: 'driving'
-  },{
-    // Mount Everest
-    latlngs: [
-      [27.973323, 86.908035],
-      [28.020614, 86.960906]
-    ],
-    mapType: google.maps.MapTypeId.TERRAIN,
-    travelMode: 'direct'
-  },{
     // Challenger Deep
     latlngs: [
-      [9.764009, 143.076632],
-      [11.932658, 142.373507]
-    ],
-    mapType: google.maps.MapTypeId.ROADMAP,
-    travelMode: 'direct'
-  },{
-    // foo
-    latlngs: [
-[47.5330135, 7.5961233],
-[47.5326773, 7.5950625],
-[47.527827, 7.5934769],
-[47.5278511, 7.5932459],
-[47.5267379, 7.5928775],
-[47.5265623, 7.5900035],
-[47.5265499, 7.5831392],
-[47.5265782, 7.5829547],
-[47.5268494, 7.5769051],
-
-[47.5255186, 7.5751377],
-[47.5259637, 7.5731076],
-[47.5260581, 7.5731978],
-[47.5263555, 7.5720822],
-[47.5242266, 7.5706058],
-[47.5254983, 7.5687585],
-
-    ],
-    mapType: google.maps.MapTypeId.ROADMAP,
-    travelMode: 'direct'
-  },{
-    // Challenger Deep
-    latlngs: [
-
 [43.3136402, 5.3680144],
 [43.3123856, 5.3687901],
 [43.3071048, 5.3753099],
@@ -116,32 +67,8 @@
     ],
     mapType: google.maps.MapTypeId.ROADMAP,
     travelMode: 'direct'
-  },{
-    // Death Valley
-    latlngs: [
-      [37.040952, -117.300314],
-      [35.896862, -116.654868],
-      [35.972751, -116.270689]
-    ],
-    mapType: google.maps.MapTypeId.TERRAIN,
-    travelMode: 'driving'
-  },{
-    // Grand Canyon
-    latlngs: [
-      [36.012196, -112.100348],
-      [36.221866, -112.098975],
-    ],
-    mapType: google.maps.MapTypeId.TERRAIN,
-    travelMode: 'direct'
-  },{
-    // Uluru
-    latlngs: [
-      [-25.34696, 131.022323],
-      [-25.34060, 131.045927]
-    ],
-    mapType: google.maps.MapTypeId.SATELLITE,
-    travelMode: 'direct'
-  }];
+  }
+  ];
 
   // Load the Visualization API and the piechart package.
   google.load("visualization", "1", {packages: ["columnchart"]});
@@ -180,8 +107,8 @@
       }
     });
 
-    // loadExample(4);
-    loadRoute();
+    loadExample(0);
+    // loadRoute();
   }
   
   // Takes an array of ElevationResult objects, draws the path on the map
