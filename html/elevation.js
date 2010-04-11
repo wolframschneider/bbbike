@@ -180,7 +180,8 @@
       }
     });
 
-    loadExample(4);
+    // loadExample(4);
+    loadRoute();
   }
   
   // Takes an array of ElevationResult objects, draws the path on the map
@@ -227,34 +228,9 @@
     }
   }
   
-  // Geocode an address and add a marker for the result
-  function addAddress() {
-    var address = document.getElementById('address').value;
-    geocoderService.geocode({ 'address': address }, function(results, status) {
-      document.getElementById('address').value = "";
-      if (status == google.maps.GeocoderStatus.OK) {
-        var latlng = results[0].geometry.location;
-        addMarker(latlng, true);
-        if (markers.length > 1) {
-          var bounds = new google.maps.LatLngBounds();
-          for (var i in markers) {
-            bounds.extend(markers[i].getPosition());
-          }
-          map.fitBounds(bounds);
-        } else {
-          map.fitBounds(results[0].geometry.viewport);
-        }
-      } else if (status == google.maps.GeocoderStatus.ZERO_RESULTS) {
-        alert("Address not found");
-      } else {
-        alert("Address lookup failed");
-      }
-    })
-  }
-  
   // Add a marker and trigger recalculation of the path and elevation
   function addMarker(latlng, doQuery) {
-    if (markers.length < 50) {
+    if (markers.length < 800) {
       
       var marker = new google.maps.Marker({
         position: latlng,
@@ -272,11 +248,11 @@
         updateElevation();
       }
       
-      if (markers.length == 50) {
+      if (0 && markers.length == 50) {
         document.getElementById('address').disabled = true;
       }
     } else {
-      alert("No more than 50 points can be added");
+      // alert("No more than 50 points can be added");
     }
   }
   
@@ -284,19 +260,10 @@
   // or submit a directions request for the path between points
   function updateElevation() {
     if (markers.length > 1) {
-      var travelMode = 'direct'; // document.getElementById("mode").value;
-      if (travelMode != 'direct') {
-        calcRoute(travelMode);
-      } else {
         var latlngs = [];
         for (var i in markers) {
           latlngs.push(markers[i].getPosition())
         }
-	/*
-        elevationService.getElevationForLocations({
-          locations: latlngs,
-        }, plotElevation);
-	*/
 
         elevationService.getElevationAlongPath({
           path: latlngs,
@@ -304,7 +271,6 @@
         }, plotElevation);
 
       }
-    }
   }
   
   // Submit a directions request for the path between points and an
@@ -366,7 +332,7 @@
     }
     
     if (keycode == 13) {
-       addAddress();
+       // addAddress();
        return false;
     } else {
        return true;
@@ -389,6 +355,23 @@
     map.fitBounds(bounds);
     updateElevation();
   }
+
+  function loadRoute() {
+    // document.getElementById('mode').value = examples[n].travelMode;
+    reset();
+    map.setMapTypeId( google.maps.MapTypeId.ROADMAP );
+    var bounds = new google.maps.LatLngBounds();
+    for (var i = 0; i < marker_list.length; i++) {
+      var latlng = new google.maps.LatLng(
+        marker_list[i][0],
+        marker_list[i][1]
+      );
+      addMarker(latlng, false);
+      bounds.extend(latlng);
+    }
+    map.fitBounds(bounds);
+    updateElevation();
+  }
   
   // Clear all overlays, reset the array of points, and hide the chart
   function reset() {
@@ -402,7 +385,7 @@
     
     markers = [];
     
-    document.getElementById('chart_div').style.display = 'none';
+    // document.getElementById('chart_div').style.display = 'none';
   }
 
 /*
