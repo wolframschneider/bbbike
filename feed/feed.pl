@@ -19,18 +19,19 @@ my $feed = XML::Atom::SimpleFeed->new(
 ######################################################################
 
 $feed->add_entry(
-    title => 'New design for BBBike @ world search',
+    title => 'Elevation chart',
     link  => $homepage,
-    id    => '3954a6fca12368526e8c790e38bcb743',
+    id    => '81ebeaf0506f9d6a518be2ab38ec243f',
 
     content => {
         type    => 'text',
-        content => qq{New design for BBBike @ world search}
+        content => qq{BBBike @ World displays the elevation chart for the route.} 
     },
 
-    updated  => '2010-03-06T18:30:02Z',
+    updated  => '2010-04-11T18:30:03Z',
     category => 'News',
 );
+
 
 
 
@@ -52,18 +53,19 @@ qq{Added new cities: Nuernberg, Muenchen, Kiel, Oldenburg, Genf, Warschau, Magde
 );
 
 $feed->add_entry(
-    title => 'Elevation chart',
+    title => 'New design for BBBike @ world search',
     link  => $homepage,
-    id    => '81ebeaf0506f9d6a518be2ab38ec243f',
+    id    => '3954a6fca12368526e8c790e38bcb743',
 
     content => {
         type    => 'text',
-        content => qq{BBBike @ World displays the elevation chart for the route.} 
+        content => qq{New design for BBBike @ world search}
     },
 
-    updated  => '2010-04-11T18:30:03Z',
+    updated  => '2010-03-06T18:30:02Z',
     category => 'News',
 );
+
 
 $feed->add_entry(
     title => 'New cities for BBBike @ world',
