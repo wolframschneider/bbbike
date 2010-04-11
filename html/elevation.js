@@ -107,8 +107,8 @@
       }
     });
 
-    loadExample(0);
-    // loadRoute();
+    // loadExample(0);
+    loadRoute();
   }
   
   // Takes an array of ElevationResult objects, draws the path on the map
@@ -200,72 +200,6 @@
       }
   }
   
-  // Submit a directions request for the path between points and an
-  // elevation request for the path once returned
-  function calcRoute(travelMode) {
-    var origin = markers[0].getPosition();
-    var destination = markers[markers.length - 1].getPosition();
-    
-    var waypoints = [];
-    for (var i = 1; i < markers.length - 1; i++) {
-      waypoints.push({
-        location: markers[i].getPosition(),
-        stopover: true
-      });
-    }
-    
-    var request = {
-      origin: origin,
-      destination: destination,
-      waypoints: waypoints
-    };
-   
-    switch (travelMode) {
-      case "bicycling":
-        request.travelMode = google.maps.DirectionsTravelMode.BICYCLING;
-        break;
-      case "driving":
-        request.travelMode = google.maps.DirectionsTravelMode.DRIVING;
-        break;
-      case "walking":
-        request.travelMode = google.maps.DirectionsTravelMode.WALKING;
-        break;
-    }
-    
-    directionsService.route(request, function(response, status) {
-      if (status == google.maps.DirectionsStatus.OK) {
-        elevationService.getElevationAlongPath({
-          path: response.routes[0].overview_path,
-          samples: SAMPLES
-        }, plotElevation);
-      } else if (status == google.maps.DirectionsStatus.ZERO_RESULTS) {
-        alert("Could not find a route between these points");
-      } else {
-        alert("Directions request failed");
-      }
-    });
-  }
-
-  // Trigger a geocode request when the Return key is
-  // pressed in the address field
-  function addressKeyHandler(e) {
-    var keycode;
-    if (window.event) {
-      keycode = window.event.keyCode;
-    } else if (e) {
-      keycode = e.which;
-    } else {
-      return true;
-    }
-    
-    if (keycode == 13) {
-       // addAddress();
-       return false;
-    } else {
-       return true;
-    }
-  }
-  
   function loadExample(n) {
     reset();
     map.setMapTypeId(examples[n].mapType);
@@ -314,38 +248,3 @@
     
     // document.getElementById('chart_div').style.display = 'none';
   }
-
-/*
-<body>
-  <div style="width: 512px; text-align: center">Add points by clicking on the map or entering an address</div>
-  <div id="map_canvas" style="border: 1px solid black; width:512px; height:400px"></div>
-  <table style="width:512px;">
-  <tr>
-    <td>Address: <input type="text" id="address" size="15" onkeypress="return addressKeyHandler(event)"/></td>
-    <td style="text-align: center">
-      Mode of travel:
-      <select id="mode" onchange="updateElevation()">
-        <option value="direct">Direct</option>
-        <option value="driving">Driving</option>
-        <option value="bicycling">Bicycling</option>
-        <option value="walking">Walking</option>
-      </select>
-    </td>
-    <td style="text-align: right">
-      <input type="button" value="Clear points" onclick="reset()"/>
-    </td>
-  </tr>
-  </table>
-  <table style="width:512px; font-size: small;">
-    <tr>
-      <td style="text-align: center"><a href="#" onclick="loadExample(1); return false">Mount Everest</a></td>
-      <td style="text-align: center"><a href="#" onclick="loadExample(2); return false">Challenger Deep</a></td>
-      <td style="text-align: center"><a href="#" onclick="loadExample(3); return false">Basel</a></td>
-      <td style="text-align: center"><a href="#" onclick="loadExample(4); return false">Marseille</a></td>
-    </tr>
-  </table>
-  <div id="chart_div" style="width:512px; height:200px" onmouseout="clearMouseMarker()"></div>
-</body>
-</html>
-*/
-
