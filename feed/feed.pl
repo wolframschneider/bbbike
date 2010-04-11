@@ -16,6 +16,27 @@ my $feed = XML::Atom::SimpleFeed->new(
     id => 'urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af6',
 );
 
+######################################################################
+
+$feed->add_entry(
+    title => 'New design for BBBike @ world search',
+    link  => $homepage,
+    id    => '3954a6fca12368526e8c790e38bcb743',
+
+    content => {
+        type    => 'text',
+        content => qq{New design for BBBike @ world search}
+    },
+
+    updated  => '2010-03-06T18:30:02Z',
+    category => 'News',
+);
+
+
+
+
+
+
 $feed->add_entry(
     title => 'More cities supported',
     id    => '82ebeaf0506f9d6a518be2ab38ec242d',
@@ -27,20 +48,6 @@ qq{Added new cities: Nuernberg, Muenchen, Kiel, Oldenburg, Genf, Warschau, Magde
     },
 
     updated  => '2010-03-12T18:30:02Z',
-    category => 'News',
-);
-
-$feed->add_entry(
-    title => 'New design for BBBike @ world search',
-    link  => $homepage,
-    id    => '81ebeaf0506f9d6a518be2ab34ed243f',
-
-    content => {
-        type    => 'text',
-        content => qq{New design for BBBike @ world search}
-    },
-
-    updated  => '2010-03-06T18:30:02Z',
     category => 'News',
 );
 
