@@ -335,7 +335,7 @@ sub get_html {
             $slippymap_size = qq{ width: 100%; height: 100%;};
 	} else {
             $maponly = qq|div#menu \t{ display: none }\n div#nomap { height: 5em; }\n|;
-            $slippymap_size = qq{ width: 100%; height: 85%;};
+            $slippymap_size = qq{ width: 100%; height: 75%;};
             $wheelzoom = qq|map.enableScrollWheelZoom();|;
         }
 
@@ -427,7 +427,9 @@ EOF
 
   <body onload="init()" onunload="GUnload()" class="nonWaitMode">
     <div id="map" style="$slippymap_size"></div>
+    <div id="chart_div" style="width:812px; height:200px" onmouseout="clearMouseMarker()"></div>
     <div id="nomap">
+
     <script type="text/javascript">
     //<![CDATA[
 
@@ -1217,9 +1219,17 @@ EOF
 
     //]]>
     </script>
+
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="../html/elevation.js" type="text/javascript"></script>
+
+
     <noscript>
         <p>You must enable JavaScript and CSS to run this application!</p>
     </noscript>
+
 
     <div id="menu">
     <div class="sml" id="message"></div>
@@ -1228,6 +1238,9 @@ EOF
     <div class="sml" id="addroutetext"></div>
     <div class="sml" id="wpt">
 EOF
+
+    $html .= qq{<script> elevation_initialize(); </script>\n} if CGI->new()->param("map_menu");
+
     for my $wpt (@$wpts) {
         my ( $x, $y, $name ) = @$wpt;
         next if $name eq '';
