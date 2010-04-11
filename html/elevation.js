@@ -1,18 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
- Copyright 2010 Google Inc. 
- Licensed under the Apache License, Version 2.0: 
- http://www.apache.org/licenses/LICENSE-2.0 
- -->
-<html>
-<head>
-<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-<title>Google Maps JavaScript API v3 Example: Elevation</title>
+/*
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript">
+*/
+
   var map = null;
   var chart = null;
   
@@ -415,17 +405,7 @@
     document.getElementById('chart_div').style.display = 'none';
   }
 
-</script>
-<style>
-body {
-  font-family: sans-serif
-}
-
-#map_canvas {
-  margin: 5px 0px 5px 0px;
-}
-</style>
-</head>
+/*
 <body>
   <div style="width: 512px; text-align: center">Add points by clicking on the map or entering an address</div>
   <div id="map_canvas" style="border: 1px solid black; width:512px; height:400px"></div>
@@ -457,3 +437,5 @@ body {
   <div id="chart_div" style="width:512px; height:200px" onmouseout="clearMouseMarker()"></div>
 </body>
 </html>
+*/
+
