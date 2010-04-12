@@ -4990,7 +4990,7 @@ EOF
 	        print qq{<hr>\n};
 	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">larger map</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out">print map route</a></span>\n};
-	        print qq{ | <span class="slippymaplink" id="permalink"><a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url" style="display:none"> $permalink</span></span>\n};
+	        print qq{ | <span class="slippymaplink"><a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url" style="display:none"> $permalink</span></span>\n};
 	        print qq{<p></p>\n};
 		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="505" scrolling="no"></iframe><p></p>};
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
@@ -6764,7 +6764,7 @@ my $s_copyright = <<EOF;
 
 <div id="footer">
 <div id="footer_top">
-<span id="permalink"><a href="#" onclick="togglePermaLinks(); return false;">Permalink</a><span id="permalink_url2" style="display:none"> $permalink</span></span>
+<span id="permalink_bottom"><a href="#" onclick="togglePermaLinks(); return false;">Permalink</a><span id="permalink_url2" style="display:none"> $permalink</span></span>
 <p>
 <a href="../">home</a> |
 <a href="../doc.html">help</a> |
