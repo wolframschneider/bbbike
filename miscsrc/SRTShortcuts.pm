@@ -165,10 +165,13 @@ EOF
 	    ($mmf,
 	     [
 	      [Button => $do_compound->("Set penalty: unique matches (alltime)"),
-	       -command => sub { set_penalty() },
+	       -command => sub { set_penalty('tmp/unique-matches.bbd') },
 	      ],
 	      [Button => $do_compound->("Set penalty: unique matches (since 2008)"),
-	       -command => sub { set_penalty_2008() },
+	       -command => sub { set_penalty('tmp/unique-matches-since2008.bbd') },
+	      ],
+	      [Button => $do_compound->("Set penalty: unique matches (since 2009)"),
+	       -command => sub { set_penalty('tmp/unique-matches-since2009.bbd') },
 	      ],
 	      [Button => $do_compound->("Set penalty fragezeichen"),
 	       -command => sub { set_penalty_fragezeichen() },
@@ -1033,18 +1036,11 @@ sub find_nearest_hoehe {
 }
 
 sub set_penalty {
+    my $filefrag = shift;
     require BBBikeEdit;
     $main::bbd_penalty = 1;
     $BBBikeEdit::bbd_penalty_invert = 0;
-    $BBBikeEdit::bbd_penalty_file = "$bbbike_rootdir/tmp/unique-matches.bbd";
-    BBBikeEdit::build_bbd_penalty_for_search();
-}
-
-sub set_penalty_2008 {
-    require BBBikeEdit;
-    $main::bbd_penalty = 1;
-    $BBBikeEdit::bbd_penalty_invert = 0;
-    $BBBikeEdit::bbd_penalty_file = "$bbbike_rootdir/tmp/unique-matches-since2008.bbd";
+    $BBBikeEdit::bbd_penalty_file = "$bbbike_rootdir/$filefrag";
     BBBikeEdit::build_bbd_penalty_for_search();
 }
 
@@ -2064,35 +2060,87 @@ sub show_bbbike_suggest_toplevel {
     require "$FindBin::RealBin/babybike/lib/BBBikeSuggest.pm";
     my $suggest = BBBikeSuggest->new;
     my($ofh,$sorted_zipfile) = File::Temp::tempfile(SUFFIX => ".data", UNLINK => 1);
+    my $srcfile;
+    my $is_opensearch_file;
+    my %alias2street;
+    my $is_utf8;
+    for my $def (["$main::datadir/opensearch.streetnames", 1, 1],
+		 ["$main::datadir/Berlin.coords.data", 0, 0],
+		) {
+	my($try_srcfile, $try_is_opensearch_file, $try_is_utf8) = @$def;
+	if (-s $try_srcfile) {
+	    $srcfile = $try_srcfile;
+	    $is_opensearch_file = $try_is_opensearch_file;
+	    $is_utf8 = $try_is_utf8;
+	    last;
+	}
+    }
+    if (!$srcfile) {
+	main::status_message("Sorry, no data file suitable for BBBikeSuggest found", "err");
+	return;
+    }
     {
-	local $ENV{LANG} = $ENV{LC_CTYPE} = $ENV{LC_ALL} = 'C';
-	open my $fh, "-|", 'sort', "$main::datadir/Berlin.coords.data"
-	    or die $!;
+	local $ENV{LANG} = $ENV{LC_CTYPE} = $ENV{LC_ALL} = $is_utf8 ? 'en_US.utf8' : 'C';
+	open my $fh, "-|", 'sort', $srcfile
+	    or die "Cannot sort $srcfile: $!";
+	binmode $fh, ':utf8' if $is_utf8;
 	while(<$fh>) {
-	    print $ofh $_;
+	    if ($is_opensearch_file) {
+		chomp;
+		my($alias, $street) = split /\t/, $_;
+		print $ofh join("|", $alias, "", "", "0,0"), "\n";
+		if ($street) {
+		    $alias2street{$alias} = $street;
+		}
+	    } else {
+		print $ofh $_;
+	    }
 	}
 	close $fh
-	    or die $!;
+	    or die "Cannot sort $srcfile: $!";
     }
     $suggest->set_zipfile($sorted_zipfile);
     my $t = main::redisplay_top($main::top, 'bbbike_suggest', -force => 1, -title => 'Search street', %args);
     main::set_as_toolwindow($t);
-    my $w = $suggest->suggest_widget($t, -selectcmd => sub {
-					 my $w = shift;
-					 my $plz = main::make_plz();
-					 main::status_message("Keine PLZ-Datenbank vorhanden!", 'die') if (!$plz);
-					 my $str = $w->get;
-					 ($str,my(@cityparts)) = Strasse::split_street_citypart($str);
-					 my($matchref) = $plz->look_loop($str, Agrep => 3, Max => 1,
-									 (@cityparts ? (Citypart => \@cityparts) : ()),
-									);
-					 my(@match) = @$matchref;
-					 main::status_message("Strange, no match for $str (@cityparts) found...", 'die') if (!@match);
-					 my $coord = $match[0]->[PLZ::LOOK_COORD()];
-					 main::mark_point(-coords => [[[ main::transpose(split /,/, $coord) ]]],
-							  -clever_center => 1,
-							  -inactive => 1);
-				     });
+    my $w = $suggest->suggest_widget
+	($t, -selectcmd => sub {
+	     my $w = shift;
+	     my $str = $w->get;
+	     my $coord;
+	     if (!$is_opensearch_file) {
+		 my $plz = main::make_plz();
+		 main::status_message("Keine PLZ-Datenbank vorhanden!", 'die') if (!$plz);
+		 ($str,my(@cityparts)) = Strasse::split_street_citypart($str);
+		 my($matchref) = $plz->look_loop
+		     ($str, Agrep => 3, Max => 1,
+		      (@cityparts ? (Citypart => \@cityparts) : ()),
+		     );
+		 my(@match) = @$matchref;
+		 main::status_message("Strange, no match for $str (@cityparts) found...", 'die') if (!@match);
+		 $coord = $match[0]->[PLZ::LOOK_COORD()];
+	     } else {
+		 if (exists $alias2street{$str}) {
+		     $str = $alias2street{$str};
+		 }
+		 my $s = $main::str_obj{s} || die "No strassen object available";
+		 $s->init;
+		 while(1) {
+		     my $r = $s->next;
+		     my $c = $r->[Strassen::COORDS()];
+		     last if !@$c;
+		     if ($str eq $r->[Strassen::NAME()]) {
+			 $coord = $c->[$#$c/2];
+			 last;
+		     }
+		 }
+		 if (!$coord) {
+		     main::status_message("Strange, no match for $str found...", 'die');
+		 }
+	     }
+	     main::mark_point(-coords => [[[ main::transpose(split /,/, $coord) ]]],
+			      -clever_center => 1,
+			      -inactive => 1);
+	 });
     $w->pack;
     $w->focus;
 }

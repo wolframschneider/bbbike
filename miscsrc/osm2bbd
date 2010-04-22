@@ -427,7 +427,12 @@ if ($experiments{'polar_coord_hack'}) {
 	}
     }
     if (!defined $lat) {
-	die "Cannot apply polar_coord_hack experiment, because the center could not be determined";
+	die <<EOF;
+Cannot apply polar_coord_hack experiment, because the center could not
+apply polar_coorbe determined. Most commonly this happens because the
+osm file does not have a <bound> tag (e.g. because it was created
+using osmosis). To fix this, set manually the -center option.
+EOF
 	# XXX should read the bboxes of all files
     }
     my $newx1 = cos(Math::Trig::deg2rad($lat))*111_000; # XXX 111km is rough for one degree
@@ -610,7 +615,7 @@ for my $osm_file (@osm_files) {
 	    $next1->() if exists $node2ll{$id};
 	    my $lat = $node->getAttribute('lat');
 	    my $lon = $node->getAttribute('lon');
-	    $node2ll{$id} = $conv->($lon,$lat);
+	    my $ll = $node2ll{$id} = $conv->($lon,$lat);
 
 	    my %tag;
 	    tie %tag, 'Tie::IxHash' if SORTED_TAGS;
@@ -668,7 +673,7 @@ for my $osm_file (@osm_files) {
 			# so resolve it later.
 			# XXX Maybe this should cause a warning? But currently "normal" railway stations
 			# do not have a "station" tag, just light_rail and subway
-			resolve_node_later("railway", $name, $node2ll{$id});
+			resolve_node_later("railway", $name, $ll);
 			$next2->();
 		    }
 		} elsif ($railway_cat =~ m{^(?:crossing|level_crossing)$}) {
@@ -719,7 +724,7 @@ for my $osm_file (@osm_files) {
 			$cat = 1;
 		    }
 		    push @or, ["orte", $cat];
-		    $place_to_population{$node2ll{$id}} = $population;
+		    $place_to_population{$ll} = $population;
 		} else {
 		    if ($place eq 'hamlet' || $place eq 'suburb' || $place eq 'locality') {
 			push @or, ["orte", 0];
@@ -782,7 +787,7 @@ for my $osm_file (@osm_files) {
 		if (exists $tag{'url'}) {
 		    push @{$out{$out_file}}, ["#: url: $tag{url}"];
 		}
-		push @{$out{$out_file}}, [$name, [$node2ll{$id}], $cat];
+		push @{$out{$out_file}}, [$name, [$ll], $cat];
 	    }
 	}
     }
@@ -1209,7 +1214,7 @@ for my $osm_file (@osm_files) {
 		    if ($oneway =~ m{^(?:yes|true)$}) {
 			if ($is_motorway ||
 			    (exists $tag{'bicycle'} && $tag{'bicycle'} eq 'opposite') || # seen in Würzburg, Äußere Pleich, but no documentation/discussion for it
-			    (exists $tag{'cycleway'} && $tag{'cycleway'} eq 'opposite') # described in http://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging
+			    (exists $tag{'cycleway'} && $tag{'cycleway'} =~ m{^opposite(?:$|_lane|_track)$}) # described in http://wiki.openstreetmap.org/wiki/DE:Germany_roads_tagging
 			   ) {
 			    push @or, ['gesperrt_car', '1', reversed => $reversed];
 			} else {
@@ -1241,6 +1246,11 @@ for my $osm_file (@osm_files) {
 			 $handicap_cat,
 			 name => ($name ? $name : '') . ($name && $handicap_name ? ': ' : '') . ($handicap_name ? $handicap_name : ''),
 			];
+		}
+
+		if (exists $tag{lit} && $tag{lit} eq 'no') {
+		    push @or,
+			['nolighting', 'NL', name => ''];
 		}
 
 		my $rcn_ref = $tag{'rcn_ref'};
@@ -1447,7 +1457,7 @@ for my $osm_file (@osm_files) {
 		if ($args{reversed}) {
 		    @nodes = reverse @nodes;
 		}
-		if ($args{name}) {
+		if (defined $args{name}) {
 		    $name = $args{name};
 		}
 
@@ -1509,8 +1519,10 @@ sort_by_population_and_category();
 if ($parsefor) {
     output_data(\*STDOUT, $out{"-"});
 } else {
-    if (!mkdir $o) {
-	die "Cannot create output directory <$o>: $!" if !$f;
+    if (!-d $o) {
+	if (!mkdir $o) {
+	    die "Cannot create output directory <$o>: $!" if !$f;
+	}
     }
     chdir $o
 	or die "Cannot chdir to $o: $!";

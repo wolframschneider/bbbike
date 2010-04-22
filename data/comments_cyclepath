@@ -7,7 +7,7 @@ Radweg	RW -19449,-5977 -19536,-5985 -19716,-5851 -19997,-5752 -20116,-5592 -2029
 Caputh: Radweg	RW -15811,-6533 -16280,-6747 -16553,-6765 -16562,-6825 -16812,-7010
 Potsdam - Ferch: Zweirichtungsradweg	RW -18431,-7978 -18631,-8412 -18756,-8962 -18909,-9080 -19146,-9196 -19606,-9698 -20112,-10437 -20590,-10806 -20816,-10818 -21391,-10967
 Templiner Str.: Zweirichtungsradweg	RW -13062,-2901 -13155,-2913 -13381,-2943 -13481,-2956 -13718,-2991 -13771,-3023 -14038,-3356 -14031,-3554 -14095,-3670 -14119,-3845 -14267,-4206 -14712,-4614 -14710,-4977 -14795,-5169 -14947,-5405 -15228,-5678 -15275,-5928 -15472,-6233 -15811,-6533
-asphaltierter Zweirichtungsradweg (Südwestseite)	RW -13778,4492 -14244,5152 -14404,5435 -14728,5709 -15216,6079 -15452,6185
+asphaltierter Zweirichtungsradweg (Südwestseite)	RW8;RW2 -13778,4492 -14244,5152 -14404,5435 -14728,5709 -15216,6079 -15452,6185
 Zweirichtungsradweg auf der Südseite, kurz vor der Lindenberg Wechsel auf Nordseite	RW 21626,19542 21471,19728 21303,19918 20867,20409 20270,20684 19945,20979 18762,22087
 Radweg	RW; 20606,21815 19945,20979 19881,20887 19637,20600
 Ahrensfelde: Radweg, Verbundsteinpflaster, keine hohen Geschwindigkeiten möglich	RW 22529,19361 22418,19268 21975,19068 21830,19016 21558,18947 21434,18875
@@ -33,9 +33,9 @@ Humboldtbrücke: Radweg vorhanden und wegen Kfz-Straße zwingend benutzungspflicht
 Nuthestr.: Radweg vorhanden und wegen Kfz-Straße zwingend benutzungspflichtig	RW2; -11549,-1169 -11613,-1125
 Nuthestr.: Radweg vorhanden und wegen Kfz-Straße zwingend benutzungspflichtig	RW2; -11613,-1125 -11549,-1169 -11463,-1232 -11356,-1317
 Alt Nowawes: asphaltierte Radwege	RW -10973,-1764 -10884,-1653 -10841,-1599 -10606,-1303 -10581,-1271 -10505,-1166 -10338,-950 -10154,-828
-B2: asphaltierter Zweirichtungsradweg auf der südöstlichen Seite	RW8;RW2 -10090,6868 -10206,6756 -10923,6318 -12181,5611 -12865,5567 -13143,5587 -13261,5566 -13578,5396 -13690,5212 -13778,4492
-B2: Radstreifen	RW4;RW4 -13778,4492 -13784,3900 -13567,3403
-B2: Gehweg für Radfahrer frei	RW1;RW1 -13567,3403 -13387,2987 -13375,2950
+B2: asphaltierter Zweirichtungsradweg auf der südöstlichen Seite	RW8;RW2 -10090,6868 -10206,6756 -10927,6333 -12179,5629 -12645,5573 -12865,5567 -13143,5587 -13261,5566 -13578,5396 -13690,5212 -13778,4492
+B2: Radstreifen	RW4;RW4 -13778,4492 -13783,3919 -13784,3900 -13703,3717
+B2: Gehweg für Radfahrer frei	RW1;RW1 -13703,3717 -13567,3403 -13387,2987 -13375,2950
 B2: asphaltierter Zweirichtungsradweg auf der östlichen Seite	RW8;RW2 -13375,2950 -13152,2169 -13141,1933
 B2: gemeinsamer Rad- und Gehweg, asphaltiert	RW2;RW2 -13141,1933 -13134,1758 -13133,1698 -13125,1508 -13115,1379 -13113,1356 -13108,1278 -13091,1150 -13039,894 -13038,856 -13042,807 -13058,702 -13062,535 -13036,342 -13091,-8 -13111,-136
 B273: Radweg	RW2;RW2 -13556,-1182 -13556,-1140 -13560,-1106 -13576,-1026 -13625,-902 -13815,-749 -14034,-571 -14134,-468 -14409,-371 -14546,-121 -14587,80 -14650,201 -14737,300
@@ -85,7 +85,7 @@ Radweg (?)	RW 39968,3795 40463,4020 41051,4427 41275,5229 41987,5693
 Gorinsee - Schönwalde: Zweirichtungsradweg auf der südl. Seite	RW 14341,30839 12955,30436 12466,30452
 Feinsplit-Radweg	RW 41806,-40762 42075,-40337 42152,-39572 41675,-38268 41687,-38100 41731,-37743
 asphaltierter Radweg auf der nördlichen Seite, enge Stelle an der Bahnüberführung	RW 8303,28478 7546,28255 7365,28253 7125,28106 5939,27781
-Gemeinsamer Geh- und Radweg, Verbundsteinpflaster	RW -150,-1457 86,-2903
+Gemeinsamer Geh- und Radweg, Verbundsteinpflaster	RW -173,-1397 86,-2903
 Gemeinsamer Geh- und Radweg, Verbundsteinpflaster	RW -1853,-2412 -2049,-2165
 Bansin: Zweirichtungsradweg (Verbundsteinpflaster) auf der nördlichen Seite	RW 56175,173875 56327,173853 56381,173849
 Bansin: Zweirichtungsradweg (Verbundsteinpflaster) auf der östlichen Seite	RW 56381,173849 56493,173943 56546,174049
@@ -129,10 +129,10 @@ Zeppelinstr.: gemeinsamer Rad- und Gehweg, teilweise sehr eng	RW2;RW2 -13556,-11
 B1, Zeppelinstr.: teilweise Radweg, teilweise Radspur	RW2;RW2 -14859,-2384 -15060,-2626 -15276,-2868 -15431,-3043 -15501,-3122 -15669,-3311
 Geschwister-Scholl-Str.: Radweg	RW; -14115,-1678 -14151,-1656
 Zehlendorfer Str.: Radweg auf Gehweg	RW 1460,-372 1473,-420 1457,-470 1378,-676 1346,-762
-Oderstr.: Verbundsteinpflasterradweg, teilweise Zweirichtungsradweg, oft wechselnde Seite	RW 595,-310 -425,-935 -882,-1220
+Oderstr.: Verbundsteinpflasterradweg, teilweise Zweirichtungsradweg, oft wechselnde Seite	RW 595,-310 525,-347 240,-519 -395,-920 -882,-1220
 Zehlendorfer Damm: Radweg	RW -1436,-887 -1378,-1022 -1348,-1098 -1503,-1328 -1573,-1477
 Geschwister-Scholl-Str.: Radweg auf Gehweg	RW2;RW2 -14909,-1818 -14733,-1812 -14612,-1809
-Thomas-Müntzer-Damm: Radweg (Verbundsteinpflaster)	RW -840,-185 -775,-304 -551,-731 -502,-803
+Thomas-Müntzer-Damm: Radweg (Verbundsteinpflaster)	RW -840,-185 -775,-304 -543,-691 -513,-736
 Am Kanal: Radspur	RW4;RW4 -12317,-1212 -12549,-1277 -12666,-1311
 Am Kanal: Radspur	RW4; -12666,-1311 -12674,-1313 -12718,-1327
 Am Kanal: Radweg	RW2; -12718,-1327 -12839,-1342
@@ -293,9 +293,9 @@ Eichhorst - Finowfurt: asphaltierter Zweirichtungsradweg auf der östlichen Seite
 Eichhorst - Finowfurt: asphaltierter Zweirichtungsradweg auf der westlichen Seite	RW 25395,53549 25347,53338
 Am Bahnhof Bernau: Suggestivstreifen	RW 22868,30412 22904,30359
 	RW 2246,31162 2219,31171 2173,31187 2126,31207 2042,31236 1931,31275 1918,31279 1762,31318 1737,31303
-	RW4;RW2 1346,-762 1212,-706 925,-684 741,-584 465,-662 348,-743
+	RW4;RW2 1346,-762 1212,-706 925,-684 741,-584 586,-627 465,-662 348,-743
 	RW4;RW4 348,-743 -71,-1037
-Gemeinsamer Rad- und Gehweg	RW2;RW2 -71,-1037 -282,-1184 -705,-1564 -1143,-1759 -1303,-1758 -1453,-1715 -1668,-1709 -2073,-1525 -2276,-1621 -2477,-1717 -2831,-1956 -2984,-2184 -3521,-2552 -3650,-2609
+Gemeinsamer Rad- und Gehweg	RW2;RW2 -71,-1037 -248,-1160 -705,-1564 -1143,-1759 -1303,-1758 -1453,-1715 -1668,-1709 -2073,-1525 -2276,-1621 -2477,-1717 -2831,-1956 -2984,-2184 -3521,-2552 -3650,-2609
 Alte Schildower Str.: Gehweg für Radfahrer freigegeben	RW1; 4958,24418 5019,24484 5168,24614
 Alte Schildower Str.: Gehweg für Radfahrer freigegeben	RW1;RW1 5212,24652 5265,24642 5443,24589 5608,24610
 Radspur	RW3;RW3 -13199,1691 -13133,1698
@@ -356,6 +356,7 @@ Asphaltierter Radweg	RW 38845,51258 38400,51404 38357,51575 38170,51708 38089,51
 	RW -1864,43042 -1943,43360 -2602,45078
 Waldstr.: Radweg mit Verbundsteinpflaster	RW2; 29675,7021 29812,6996 29938,6993 30180,6942 30324,6911
 Brandenburgische Str.: gemeinsamer Rad- und Gehweg	RW2;RW2 30495,7350 30557,6731 30602,6366 30648,5979
+Birkenweg (Groß Glienicke): verkehrsberuhigt	RW6;RW6 -10055,6715 -10091,6716 -10127,6716 -10177,6711 -10183,6650
 	RW 16953,35907 17114,35904 18082,36115 18440,36179 19193,36011
 Industriestr. (Dahlwitz-Hoppegarten): gegenläufiger Radweg, rotes Betonpflaster	RW 25938,11837 26042,11798 26222,11726 26555,11601 26794,11513 26880,11479
 	RW 1596,29362 1631,29260 1748,29003 1805,28879 1838,28808 1896,28681 2015,28414
@@ -435,3 +436,4 @@ asphaltierter Zweirichtungsradweg auf der östlichen Seite	RW -14279,-9832 -14518
 Zweirichtungsradweg auf der südlichen Seite	RW -14428,-10433 -13597,-10497 -13433,-10557 -13211,-10642
 eigener Radweg neben der Straße	RW2;RW8 35728,17428 35618,17440 35225,17557 34813,17682 34154,17882 33961,17989 33133,18131 32941,18121
 	RW 16488,29880 16279,29196 16066,28510 16008,28424 15777,28037
+	RW6;RW6 -10052,6640 -10138,6646 -10183,6650 -10315,6646

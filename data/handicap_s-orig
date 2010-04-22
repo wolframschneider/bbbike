@@ -8,9 +8,11 @@
 #
 #: temporary vvv
 # 
+#: last_checked: 2010-04-19
+Schloßplatz: Behinderungen durch Bauarbeiten möglich	q3::inwork 10170,12261 10063,12438
 #: last_checked: 2009-12-25
 Caroline-Michaelis-Str.: Bauarbeiten, Ausweichen auf Gehweg	q4::inwork 9061,14050 9125,13973
-#: last_checked: 2010-03-17
+#: last_checked: 2010-04-19
 Fahrbahn der Mauerstr. wegen Bauarbeiten gesperrt	q4::inwork 9405,11413 9331,11497
 #: last_checked: 2010-02-02
 #: next_check: 2010-05-31
@@ -19,10 +21,14 @@ Hauptstr. (Friedrichshain-Kreuzberg): Baustelle, Radfahrer können langsam passie
 Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt	q4::inwork 8389,11378 8374,11479
 #: last_checked: 2010-03-14
 General-Pape-Str.: Baustelle, Fahrbahn Richtung Norden gesperrt	q4::inwork; 7959,7609 7921,7728 7950,7840
-#: last_checked: 2010-03-18
+#: last_checked: 2010-04-19
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
-#: last_checked: 2010-03-18
+#: last_checked: 2010-04-19
 Universitätsstr.: wegen Bauarbeiten Richtung Unter den Linden gesperrt	q4::inwork; 9580,12581 9601,12380
+#: last_checked: 2010-04-18
+Planckstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9434,12669 9385,12809 9383,12915
+#: last_checked: 2010-04-17
+Matkowskystr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 14530,11137 14509,11060
 #: by: Uta Rahmann vvv
 #: next_check: 2010-10-01 vvv
 Varziner Str.: Bauarbeiten, Einbahnstraßenregelung zwischen Bundesallee und Varziner Platz (offen Richtung Südwestkorso)	q4::inwork; 5458,7866 5356,7862
@@ -111,7 +117,8 @@ Kolonie Albrechtshöhe: einige Fußgänger	q1 10260,5953 9931,5985
 Am Landwehrkanal: Parkweg	q1 12724,9545 12919,9584 12981,9672 13086,9825
 Uferweg an den Treptowers: enger und kurviger Weg	q3 14500,9856 14464,9927 14509,9997 14432,10059 14373,10046
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20070810.1330.83363.html
-Denewitzstr.: kombinierter Fuß- und Radweg	q1 8061,10310 7906,10098
+#: confirmed_by: srt
+Denewitzstr.: kombinierter Fuß- und Radweg	q1 8061,10310 7947,10155
 Linienstr.: Gehweg	q2 11104,13456 11149,13442
 Böcklerpark: gemeinsamer Fuß- und Radweg	q2 10885,10045 10723,10088 10521,10126
 Böcklerpark: enge Kurven, manchmal Fußgänger auf dem Radweg	q3 10967,10092 10885,10045
@@ -641,6 +648,8 @@ Nordhafen: Fußgänger	q1 -2477,16351 -2510,16357 -2632,16347 -2779,16330 -2972,16
 (Grünheider Weg - Fredersdorfer Weg): starker Anstieg, nicht für Fahrräder geeignet	q4 30867,3806 30862,3816 30849,3843 30823,3866
 Seidenbienenweg: sehr eng	q4 31914,2767 31909,2802 31884,2841
 (entlang des Tränkegrabens): Fußgänger, Radfahren erlaubt	q2+ 16900,9861 17011,9950 17137,10098 17149,10160 17137,10238 17160,10376 17249,10666 17249,10702 17310,10714 17415,10694 17527,10640 17625,10615 17705,10621 17847,10629 17897,10607 17999,10584 18059,10556 18150,10543
+Hortensienplatz: einige Fußgänger, Bordsteine	q3 4156,4784 4121,4841 4116,4850
+(Lustgarten entlang des Spreekanals): Fußgänger	q2 10063,12438 9956,12617 9948,12631
 ######################### User Contributions #################################
 #: by: Michael Kiekbusch
 #: corrected_by: srt/policy (q4 -> q3-)
@@ -727,7 +736,7 @@ Hugo-Heimann-Str.: enge, leicht kurvige Straße	q1 14120,1991 14165,2106 14229,21
 #: by: Christian Marwitz:
 Am Gemeindepark: enge Straße	q1 7172,2343 7215,2442 7208,2534 7199,2559 7165,2571 7034,2586 6751,2708 6679,2701
 #: by: Michael Meixner:
-Maurerweg: enge Straße	q1 12864,2191 12835,2470 12825,2573 12810,2751 12807,2958
+Maurerweg: enge Straße	q1 12864,2191 12844,2382 12835,2470 12825,2573 12810,2751 12807,2958
 #: by: Thomas Heuving
 (Uferweg): kurvenreich, ausreichende Breite	q1 -431,17169 -384,17155 -280,17229 -266,17335 -215,17385 -141,17377 61,17495 110,17489 151,17537 187,17663 235,17704 260,17788 258,17880 381,18186 416,18386 448,18476 496,18514 586,18540 680,18631 757,18673 768,18742 970,18919 1006,18972 1122,19036 1189,19018 1200,18969 1369,18958 1457,18969 1490,18950
 #: by: anonymous:
@@ -1321,7 +1330,8 @@ Augustenburger Platz: einige Fußgänger	q1 6561,15041 6537,15156 6562,15177
 #: by: Hans-Eberhard Heß:
 Telramundweg: enge Straße	q1 5206,4432 5284,4390
 #: by: Patrick Walter:
-(Weg entlang der U-Bahn-Betriebswerkstatt): einige Fußgänger	q1 13162,3576 13356,3467 13624,3355 13740,3252
+#: corrected_by: Roland Mohrbacher (bei gutem Wetter)
+(Weg entlang der U-Bahn-Betriebswerkstatt): einige Fußgänger, bei gutem Wetter viele Fußgänger	q1 13162,3576 13384,3426 13624,3355 13740,3252
 #: by: antje weiss dorn:
 Drosselbartweg: enger Weg	q3 13899,18833 13909,18835 13953,18842 13967,18842 13993,18833 14061,18791 14206,18700 14218,18674 14222,18666
 #: by: Wolfhard Schleese: vvv
@@ -1764,3 +1774,43 @@ Eschenallee (Rosenthal): enge Straße	q1 9460,20644 9479,20535 9498,20435
 S-Bahnhofunterführung Friedenau: Radfahren nicht erlaubt, ggfs. schieben	q4 6160,7074 6243,7033
 #: by: Sebastian Bralant:
 Nidwaldener Zeile: enge Straße	q1 3581,2211 3581,2105
+#: by: anonymous
+#: note: nachts "q4" wegen fehlender Beleuchtung und Bäumen
+(Marthastr. - Dietzgenstr.): einige Bäume auf dem Weg	q1 10383,19911 10167,19797
+#: by: birgit (...knabe)
+Lindenfelser Weg: Fußgänger, Bordsteinkanten am Hirschhorner Weg	q1 -963,4869 -857,4725 -753,4578 -690,4519 -649,4484 -638,4413 -595,4385 -548,4326 -420,4159
+#: by: anonymous
+Pertisauer Weg: enge Straße	q1 6199,1104 6176,1023 6167,933 6163,822 6186,652
+#: by: Michael Rehfeldt
+#: corrected_by: srt/policy (q2 -> q1)
+Chorweilerstr.: enge Straße	q1 20036,-122 20143,-93 20223,-72 20302,-51
+#: by: anonymous
+#: corrected_by: srt/policy (q2 -> q1)
+Bisonweg: enge Straße	q1 -774,22977 -709,22909 -657,22854 -595,22791 -542,22736
+#: by: Sandro Flory:
+Flatower Str.: enge Straße	q1 -5049,16987 -4999,16971 -4875,16928 -4821,16914 -4758,16910 -4628,16899 -4319,16879 -4155,16860
+#: by: Wolfram Ceder:
+#: corrected_by: srt/policy (q3 -> q2)
+Kroppenstedtweg: Fußgänger haben Vorrang	q2 1058,14898 1035,14996 996,15091 957,15189
+#: by: Hermann Weiß
+#: corrected_by: srt/policy (q2 -> q1)
+Rübezahlweg: einige Fußgänger	q1 14743,18839 14698,18967 14664,19057 14622,19123 14571,19172 14507,19214 14375,19296 14241,19379 14030,19510
+#: by: T.Geske:
+Charles-H.-King-Str.: enge Straße	q1 -1248,2451 -1401,2391 -1604,2324
+#: by: Carsten Schmidt:
+#: corrected_by: srt/policy (q2 -> q1)
+Rohrweihstr.: enge Straße	q1 -2141,19681 -2103,19833 -2073,19990 -2055,20129 -2020,20309 -1991,20312
+#: by: Nina Bohlmann
+Kolkrabenweg: enge Straße	q1 14655,3687 14885,3891
+#: by: ruth mantei:
+Teterower Str.: enge Straße	q1 13820,5203 13717,5175 13626,5153
+#: by: Juliane (alberts...)
+Seepromenade: enge Straße	q1 -4582,7213 -4559,7216 -4549,7243
+#: by: domi-89
+Münchener Str. (Lichtenrade): enge Straße	q1 11384,-1983 11380,-2100 11388,-2202 11433,-2320 11496,-2484 11523,-2617 11545,-2724
+#: by: Carola Schipke: vvv
+Lachtaubenweg: enge Straße	q1 -1827,20216 -1823,20298 -1838,20471
+Elstergasse: enge Straße, rechts und links versetzt parkende Autos	q1 -1596,20184 -1827,20216 -1971,20231
+#: by: ^^^
+#: by: Manfred Brühl
+Wesenberger Ring: enge Straße	q1 13162,3576 13206,3674 13238,3794 13229,3836 13206,3854 13165,3850 13129,3809 13030,3664

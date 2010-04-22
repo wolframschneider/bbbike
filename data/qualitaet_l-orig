@@ -71,7 +71,7 @@ Lˆwenbruch: Kopfsteinpflaster	Q2 5044,-12402 5002,-12551 4555,-12852
 Diedersdorf: Pflastersteine, OK	Q1 7558,-7093 7390,-7184 7378,-7406 7309,-7482 7506,-7471
 Diedersdorf: Kopfsteinpflaster, OK	Q1 7506,-7471 7981,-7165
 Arcostr.: Asphalt	Q0 10323,-3150 10309,-3191
-Arcostr.: m‰ﬂiges bis schlechtes Kopfsteinpflaster	Q3 10309,-3191 10242,-3345 10184,-3499 10088,-3740
+Arcostr.: m‰ﬂiges bis schlechtes Kopfsteinpflaster	Q3 10309,-3191 10277,-3262 10184,-3499 10088,-3740
 Arcostr.: Asphalt	Q0 10088,-3740 10070,-3790 9971,-3985
 Groﬂ-Kienitz: schlechtes Kopfsteinpflaster	Q3 14702,-8736 14913,-9037 15109,-8950
 Am F‰ngersee: Feld- und Waldwege, grˆﬂtenteils gut befahrbar (20 km/h), einige Stellen mit tiefen Sand	Q2 38908,19853 38889,20172 39128,20574 39130,20957 39431,21380 39367,21528 39251,21678 39439,21968 39372,22521
@@ -126,7 +126,7 @@ Erkner Richtung Tasdorf: Kopfsteinpflaster/schlechter Radweg	Q2; 34271,3184 3448
 Heinersdorf: Kopfsteinpflaster	Q2 5943,-2117 5773,-2075
 Heinersdorf: rauher Asphalt	Q1 5773,-2075 5559,-2032
 Heinersdorf: schlechtes Kopfsteinpflaster, sandiger Rand evtl. OK	Q3 5559,-2032 4985,-2373 4283,-2370
-Iserstr.: Kopfsteinpflaster	Q2 -282,-1184 -150,-1457
+Iserstr.: Kopfsteinpflaster	Q2 -248,-1160 -173,-1397
 #: add_fragezeichen: Stimmt das oder ist das St¸ck in Sputendorf auch asphaltiert?
 Sputendorf: teilweise Kopfsteinpflaster, OK	Q1 -1316,-7721 -1734,-7716 -2500,-7557
 #: add_fragezeichen: Stimmt das noch immer?
@@ -142,7 +142,7 @@ Wandlitz: Kopfsteinpflaster, OK	Q1 13546,37474 13908,37983 14449,38733 14498,388
 Altlandsberg: Kopfsteinpflaster	Q2 31887,17453 32100,18012 32115,18106 32224,18110 32293,18093 32513,18082
 Altlandsberg: Kopfsteinpflaster	Q2 32100,18012 32181,18009 32224,18110
 Altlandsberg: Kopfsteinpflaster	Q2 32293,18093 32325,18434
-Groﬂ-Glienicke: Kopfsteinpflaster, OK	Q1 -9413,7175 -9476,7033 -9640,6971
+Groﬂ-Glienicke: Kopfsteinpflaster, OK	Q1 -9413,7175 -9476,7033 -9616,6980 -9640,6971
 Werder, Am Bahnhof: Kopfsteinpflaster	Q2 -21462,-2657 -21636,-2101 -22042,-2060
 Golm, Weinmeisterstr.: sandige Straﬂe	Q2 -19578,-674 -19044,-737 -18981,-566
 #: add_fragezeichen: welche Nummer des F-Wegs?
@@ -860,7 +860,7 @@ Kopfsteinpflaster	Q2 -19190,7296 -19187,6709 -19514,6643
 	Q0 -16280,-6747 -15811,-6533 -15472,-6233 -15275,-5928 -15228,-5678 -14947,-5405 -14795,-5169 -14710,-4977 -14712,-4614 -14267,-4206 -14119,-3845 -14095,-3670 -14031,-3554 -14038,-3356 -13771,-3023 -13718,-2991 -13481,-2956 -13381,-2943 -13155,-2913 -13062,-2901
 	Q0 -13062,-2901 -13021,-2784 -13003,-2754 -12929,-2659 -12756,-2437 -12719,-2283 -12653,-2206 -12431,-2096
 	Q0 -17643,-7028 -17703,-7228 -18009,-7528
-	Q0 -5736,-3629 -5156,-3192 -4885,-3087 -4456,-2968 -3950,-2743 -3650,-2609 -3521,-2552 -2984,-2184 -2831,-1956 -2477,-1717 -2276,-1621 -2073,-1525 -1668,-1709 -1453,-1715 -1303,-1758 -1143,-1759 -705,-1564 -282,-1184 -71,-1037 348,-743 465,-662 741,-584 925,-684 1212,-706 1346,-762 1453,-746
+	Q0 -5736,-3629 -5156,-3192 -4885,-3087 -4456,-2968 -3950,-2743 -3650,-2609 -3521,-2552 -2984,-2184 -2831,-1956 -2477,-1717 -2276,-1621 -2073,-1525 -1668,-1709 -1453,-1715 -1303,-1758 -1143,-1759 -705,-1564 -248,-1160 -71,-1037 348,-743 465,-662 586,-627 741,-584 925,-684 1212,-706 1346,-762 1453,-746
 	Q0 3450,543 3417,524 3112,331 2947,220 2459,-109 2331,-228 2215,-328 1974,-440 1677,-582 1453,-746
 	Q0 -5201,-35443 -5698,-35202 -5785,-34882
 	Q0 -5785,-34882 -6231,-34800 -6593,-34717 -7472,-34234 -8812,-33517
@@ -871,7 +871,7 @@ Kopfsteinpflaster	Q2 -19190,7296 -19187,6709 -19514,6643
 Ruhlsdorf - G¸terfelde: m‰ﬂiger/schlechter Feldweg	Q2 1132,-3612 -256,-3961 -1812,-4210 -2493,-4385 -2534,-4606
 #XXX existiert nicht mehr, del?	Q0 2471,-6025 2031,-5468 1592,-5527
 	Q0 1622,-5649 1533,-5628 1343,-5420 296,-5328 -1095,-4973 -1809,-4792 -2534,-4606 -3368,-4430 -3418,-4525 -3446,-4709 -3596,-4687 -3796,-4612 -3871,-4437 -4457,-4197 -4661,-4172 -4819,-4154 -5736,-3629 -6277,-3348 -6553,-3235 -6810,-3151 -7060,-3124 -7487,-3097 -7497,-3096 -7577,-3093 -7668,-3092 -7774,-3091 -7878,-3090 -8005,-3056 -8137,-2997 -8283,-2917 -8361,-2875 -8417,-2867 -8500,-2856
-	Q0 -13036,342 -13062,535 -13058,702 -13042,807 -13038,856 -13039,894 -13091,1150 -13108,1278 -13113,1356 -13115,1379 -13125,1508 -13133,1698 -13134,1758 -13141,1933 -13152,2169 -13375,2950 -13387,2987 -13567,3403 -13784,3900 -13778,4492 -13690,5212 -13578,5396 -13261,5566 -13143,5587 -12865,5567 -12181,5611 -10923,6318 -10206,6756 -10090,6868 -9996,7037 -9928,7459 -8634,9626 -8628,9803 -8677,10083 -8697,10653 -8906,11139 -9262,11890 -9524,12215
+	Q0 -13036,342 -13062,535 -13058,702 -13042,807 -13038,856 -13039,894 -13091,1150 -13108,1278 -13113,1356 -13115,1379 -13125,1508 -13133,1698 -13134,1758 -13141,1933 -13152,2169 -13375,2950 -13387,2987 -13567,3403 -13703,3717 -13784,3900 -13783,3919 -13778,4492 -13690,5212 -13578,5396 -13261,5566 -13143,5587 -12865,5567 -12645,5573 -12179,5629 -10927,6333 -10206,6756 -10090,6868 -9996,7037 -9928,7459 -8634,9626 -8628,9803 -8677,10083 -8697,10653 -8906,11139 -9262,11890 -9524,12215
 	Q0 -13561,117 -13529,226 -13507,308 -13486,385 -13456,500 -13546,527 -14053,677
 Erich-Mendelsohn-Allee: Asphalt	Q0 -14235,298 -14216,372 -14198,449 -14174,486 -14053,677 -13995,773 -13961,836 -13903,941 -13853,1018 -13804,1088 -13772,1139 -13695,1276
 Hermann-Mattern-Promenade: Asphalt	Q0 -14216,721 -14131,858 -14094,917 -14053,985 -13985,1096 -13914,1218 -13893,1255 -13841,1341 -13795,1420
@@ -971,7 +971,8 @@ schlechte Straﬂe oder Kopfsteinpflaster	Q2 -6828,61530 -6585,59811 -6390,59554 -
 	Q0 47387,56887 47478,56833 47643,56843 47712,56989 47862,57100 48150,57300 48787,57212 49025,56975 49357,56735 49553,56716 49609,56615 50137,56612 50575,56750
 Kopfsteinpflaster	Q2 50575,56750 50921,56785
 	Q0 50891,68557 50557,68650 50364,68651 50314,68648
-	Q0 49728,68465 49650,68406 49566,68311 48657,68265 47373,67915 46187,68139 45714,68065 45364,67663 44430,67752 43646,67393 42039,67477 41260,67587 41069,67017 41026,66822 40746,66517 40551,66486 40411,66401 39875,66425
+	Q0 49728,68465 49650,68406 49566,68311
+	Q0 49503,68415 49286,68297 48657,68265 47373,67915 46187,68139 45714,68065 45364,67663 44430,67752 43646,67393 42039,67477 41260,67587 41069,67017 41026,66822 40746,66517 40551,66486 40411,66401 39875,66425
 	Q0 39875,66425 39701,66024 38843,65093 38631,64575 38581,64181
 schlechte Straﬂe oder Kopfsteinpflaster	Q2 36543,62050 36168,62043 35649,61936
 	Q0 52455,59382 52647,59402 53202,59283 54415,59302 54717,59365 54932,59479 55032,59608 55127,59753
@@ -1013,7 +1014,7 @@ Hellsee - Biesenthal: "Radfahrer m¸ssen hier ab und zu das Rad schieben"	Q3 2266
 #: according_to: http://home.arcor.de/hoge-online/std_tlw/s_t23.jpg
 Ruhlsdorfer Str.: Asphalt	Q0 86,-2903 -1520,-1832 -1715,-1767
 #: according_to: http://home.arcor.de/hoge-online/std_tlw/s_t24.jpg
-Iserstr.: Asphalt	Q0 -150,-1457 86,-2903
+Iserstr.: Asphalt	Q0 -173,-1397 86,-2903
 #Hohen Neuendorf, Bahnhofstr.: Kopfsteinpflaster, OK	Q1 2853,28918 2353,29078
 #Hohen Neuendorf, Bahnhofstr.: Kopfsteinpflaster, OK, auf Radweg umfahrbar	Q1 2353,29078 2071,29185 1596,29362
 Eggersdorf - Altlandsberg: teilweise etwas unebener Asphalt	Q0 38171,15125 36539,16154 36087,16319 35807,16563 35196,17190 35225,17557
@@ -1054,7 +1055,7 @@ Wilkendorfer Weg: schlechtes Kopfsteinpflaster mit schmalen Verbundsteinstreifen
 Strausberg, Am Roten Hof: grober Schotter	Q3 44471,21631 44158,21724
 Strausberg, Am Roten Hof: Feldweg	Q2 44158,21724 44112,21743 44103,21921
 Strausberg, Am Tofstich: Feldweg, einige wenige sandige Stellen	Q2 44112,21743 44009,21631 43881,21593 43406,21325
-Strausberg - Tiefensee: sehr guter Asphalt	Q0 43584,20871 43498,21028 43406,21325 43343,21459 43365,21675 43345,21745 43266,21790 43109,21939 42959,22368 42950,22546 42404,22684 42021,22780 41887,22959 41553,23243 41315,23410 40956,23662 40655,25779
+Strausberg - Tiefensee: sehr guter Asphalt	Q0 43584,20871 43498,21028 43406,21325 43343,21459 43363,21629 43345,21745 43266,21790 43109,21939 42959,22368 42950,22546 42404,22684 42021,22780 41887,22959 41553,23243 41315,23410 40956,23662 40655,25779
 Gielsdorf - Wesendahl: ¸berwiegend guter Asphalt	Q0 41887,22959 41705,22792 41653,22744 40575,22409 39578,22450 39372,22521 39337,22638 39261,22692 38770,22609 38547,22511 38437,22462 38159,22171
 Wesendahl - Hirschfelde: m‰ﬂiger bis guter Asphalt	Q1 38437,22462 38520,22567 38678,22862 38593,24171 38562,24659
 Hirschfelde: sehr guter Asphalt	Q0 36901,26234 37353,25904 37458,25848
@@ -1062,7 +1063,7 @@ Hirschfelde - Gielsdorf: ¸berweigend guter Asphalt mit einigen schadhaften Stell
 # soweit vom westlichen Ende einsehbar:
 nach Wilkendorf: guter Asphalt	Q0 42950,22546 43247,22560
 # soweit vom westlichen Ende einsehbar:
-Bergstr. (Strausberg): schlechtes Kopfsteinpflaster mit schmalen Asphaltstreifen	Q2 43365,21675 44103,21921
+Bergstr. (Strausberg): schlechtes Kopfsteinpflaster mit schmalen Asphaltstreifen	Q2 43363,21629 44103,21921
 # soweit vom s¸dlichen Ende einsehbar:
 Hirschfelde - (Schˆnfeld): schlechtes Kopfsteinpflaster	Q3 36528,26746 35667,28095
 Bahnhofstr. (Strausberg): Asphalt	Q0 40266,14531 39515,14603 38881,14606
@@ -1436,7 +1437,7 @@ Plantagenstr.: Asphalt	Q0 -9837,-1612 -9860,-1550 -9902,-1445
 #: confirmed_by: Aimo Raasch:
 Karl-Gruhl-Str.: Asphalt	Q0 -9837,-1612 -9905,-1627 -10102,-1522 -10119,-1515 -10369,-1374
 Oderstr.: Betonstraﬂe	Q1 818,-298 595,-310
-Oderstr.: Asphalt	Q0 595,-310 -425,-935 -882,-1220
+Oderstr.: Asphalt	Q0 595,-310 525,-347 240,-519 -395,-920 -882,-1220
 Brandenburger Str.: grobes Pflaster	Q1 -12883,-976 -13005,-1002 -13173,-1039 -13289,-1071 -13410,-1101 -13556,-1140
 Brandenburger Str.: etwas besseres Kopfsteinpflaster	Q1- -12883,-976 -12784,-956
 # von der Bahn aus gesehen: vvv
@@ -1984,14 +1985,22 @@ Wasserstr.: Kopfsteinpflaster	Q2 -9883,-161 -9795,-230
 #: by: anonymous ("Schlaglˆcher")
 Domstr. (Potsdam): asphaltiert, aber mit Schlaglˆchern	Q1- -9438,-1260 -9278,-1293 -9228,-1296 -9090,-1293  -9035,-1291 -8667,-1287
 Am Klubhaus: Kopfsteinpflaster	Q2 -8429,-1805 -8788,-1852
-Sacrower Allee (Groﬂ Glienicke): Asphalt	Q0 -10090,6868 -10059,6832 -10055,6715 -10053,6676 -10052,6640 -10052,6563 -10040,6021 -10036,5795
+Sacrower Allee (Groﬂ Glienicke): Asphalt	Q0 -10090,6868 -10059,6832 -10057,6804 -10055,6715 -10053,6676 -10052,6640 -10052,6563 -10045,6292 -10040,6021 -10036,5795
 #: by: osm (surface=cobblestone)
 Sacrower Allee (Groﬂ Glienicke): Kopfsteinpflaster	Q2 -10036,5795 -10046,5464
 #: by: osm (surface=paved)
 Sacrower Allee (Groﬂ Glienicke): Asphalt	Q0 -10046,5464 -10036,5310 -9986,5176 -9935,5070
-#: note: ˆstlich der Sacrower Allee by osm
-Richard-Wagner-Str. (Groﬂ Glienicke): Asphalt	Q0 -9730,5802 -9847,5798 -9945,5797 -10036,5795 -10140,5794 -10195,5794 -10234,5804 -10347,5874 -10467,5948
-Dorfstr. (Groﬂ Glienicke): Asphalt	Q0 -9476,7033 -9547,6865 -9557,6773 -9582,6643 -9642,6538
+Richard-Wagner-Str. (Groﬂ Glienicke): Asphalt	Q0 -9730,5802 -9847,5798 -9945,5797 -10036,5795
+#: XXX_indoor: bei osm "surface=paved"
+Richard-Wagner-Str. (Groﬂ Glienicke): Kopfsteinpflaster	Q2 -10036,5795 -10140,5794 -10195,5794 -10234,5804 -10347,5874 -10467,5948
+Dorfstr. (Groﬂ Glienicke): Asphalt	Q0 -9476,7033 -9547,6865 -9567,6773 -9593,6646 -9642,6538
+Bergstr. (Groﬂ Glienicke): Verbundsteinpflaster	Q0- -9722,6549 -9642,6538
+Hechtsprung (Groﬂ Glienicke): Schotter	Q2 -10154,6284 -10045,6292
+Hechtsprung (Groﬂ Glienicke): Asphalt	Q0 -10045,6292 -9962,6295 -9860,6288 -9703,6278
+Ernst-Th‰lmann-Str. (Groﬂ Glienicke): Plattenweg	Q2 -10148,6021 -10040,6021
+Ernst-Th‰lmann-Str. (Groﬂ Glienicke): Asphalt	Q0 -10040,6021 -9957,6028 -9855,6034 -9727,6035
+An der Sporthalle (Groﬂ Glienicke): Verbundsteinpflaster	Q1 -9689,6334 -9753,6338 -9851,6363
+(Potsdamer Chaussee - Dorfstr.): Asphalt	Q0 -9616,6980 -9565,6954 -9547,6865
 M¸ndeseerundweg: schottriger/sandiger Weg	Q2+ 50403,70708 50497,70796 50594,70755 50678,70738 50758,70752 50871,70761
 Pinnow - Frauenhagen: Asphalt	Q0 55703,74309 55612,74354 55164,74111 54952,74078
 Pinnow - Schˆnermark: halb Schotter/fester Sand, halb Kopfsteinpflaster	Q2 55164,74111 55038,74516
@@ -2161,6 +2170,9 @@ Brandenburgische Str.: Verbundsteinpflasterradwege, betonierte Fahrbahn	Q1+ 3055
 Brandenburgische Str.: Verbundsteinpflasterradwege, gepflasterte Fahrbahn	Q1+ 30602,6366 30648,5979
 Hamburger Str.: Asphalt	Q0 30871,6356 31007,6343 31080,6454 31416,6774
 (Schˆneiche - Woltersdorf): Waldweg	Q2+ 31007,6343 31016,6269 31030,6168 31027,6076
+Birkenweg (Groﬂ Glienicke): Asphalt	Q0 -10055,6715 -10091,6716 -10127,6716 -10177,6711
+#: note: beleuchtet
+Am Park: Asphalt	Q0 -9413,7175 -9118,7286
 ######################### User Contributions #################################
 #: by: Aaron Schaar: vvv
 Hermannswerder: guter Asphalt	Q0 -13718,-2991 -14301,-2871 -14577,-3068 -14740,-3262
@@ -2626,6 +2638,7 @@ Kopernikusstr.: heftiges Kopfsteinpflaster	Q3 -9723,-2451 -9963,-2253
 Wattstr.: Kopfsteinpflaster	Q2 -10360,-1934 -10350,-1997 -10398,-2134 -10426,-2231 -10454,-2339
 Heinrich-von-Kleist-Str.: Kopfsteinpflaster	Q2 -10032,-2196 -10050,-2246 -10078,-2339
 #: confirmed_by: http://www.potsdam.de/cms/beitrag/10046472/620526/ ("Granitpflaster")
+#: confirmed_by: Sissi (P)
 Siemensstr.: Kopfsteinpflaster	Q3 -10467,-2018 -10398,-2134 -10295,-2168 -10050,-2246
 Fultonstr.: Asphalt (mit wenig Kopfsteinpflaster auf Hˆhe Siemenstr.)	Q0 -10327,-2262 -10295,-2168 -10255,-2039
 Stephensonstr.: Kopfsteinpflaster	Q2 -10128,-2114 -10114,-2090 -9954,-2051
@@ -2651,7 +2664,7 @@ Pestalozzistr.: Asphalt	Q0 -9653,-2100 -9698,-2328 -9723,-2451
 #: by: rjoop: vvv
 Am Park: Asphalt	Q0 -9118,7286 -8968,7328
 #: note: laut "Berliner Umland" witterungsabh‰ngige Strecke
-Mauerweg am Groﬂ-Glienicker See: Asphalt, einige Fugen	Q0- -9118,7286 -9168,7172 -9154,7073 -9175,7037 -9446,6860 -9490,6650 -9668,6171 -9622,5804 -9640,5723 -9727,5573 -9763,5555
+Mauerweg am Groﬂ-Glienicker See: Asphalt, einige Fugen	Q0- -9118,7286 -9168,7172 -9154,7073 -9175,7037 -9446,6860 -9490,6650 -9616,6309 -9668,6171 -9622,5804 -9640,5723 -9727,5573 -9763,5555
 Seeburger Chaussee: Asphalt	Q0 -8634,9626 -8595,9582 -8564,9423 -8634,8630 -8719,8161 -8878,8089 -9077,7923 -9150,7720
 Seeburger Chaussee: m‰ﬂiger Asphalt	Q1 -9150,7720 -9097,7649 -9088,7599
 Edisonstr.: Sand	Q3 -10696,15970 -10722,16134
@@ -3348,7 +3361,7 @@ Wockninstr. - ‹ckeritz, Strand: Waldweg	Q2+ 51557,179407 51660,179531 51738,1797
 Karlsruher Str.: guter Asphalt	Q0 27016,14509 27073,14138
 #: by: Stefan Byczynski:
 #: note: "Straﬂe f¸hrt an einer Badestelle vorbei, im Bereich ist verst‰rkt mit Fuﬂg‰ngern und dicht parkenden Autos zu rechnen. Dann sehr eng. Linienbusverkehr."
-Seenpromenade (Groﬂ Glienicke): sehr guter Asphalt	Q0 -9642,6538 -9703,6278 -9728,6173 -9727,6035 -9730,5802 -9763,5555 -9777,5489 -9766,5437 -9671,5382
+Seenpromenade (Groﬂ Glienicke): sehr guter Asphalt	Q0 -9642,6538 -9689,6334 -9703,6278 -9728,6173 -9727,6035 -9730,5802 -9763,5555 -9777,5489 -9766,5437 -9671,5382
 #: by: ulrike (ub6):
 #: add_fragezeichen: Sind Teilabschnitte der Straﬂe "In der Aue" asphaltiert?
 #: XXX: zumindest die Verbindung zwischen den Tschaikowskiwegen!
@@ -3408,3 +3421,20 @@ Kirchstr.: gepflastert	Q2 17586,-1937 17738,-2094
 #: by: ^^^
 #: by: Johannes (jozs...)
 Robert-Baberske-Str. (Potsdam): Beton	Q0 -7616,-4536 -7498,-4655
+#: by: anonymous:
+Wagnerstr. (Potsdam): schlechtes Kopfsteinpflaster	Q3 -8140,-2475 -8189,-2569 -8361,-2875
+#: by: anonymous:
+#: note: enge Straﬂe, aber q0
+Wiesenstr. (Potsdam): guter Beton	Q0- -11711,-1749 -11605,-1820 -11535,-1869 -11416,-1945 -11385,-1937 -11354,-1902 -11319,-1861 -11295,-1832
+#: by: Maren (...nowy) vvv
+Fritz-Zubeil-Str.: guter Asphalt	Q0 -8997,-3762 -9123,-3655 -9212,-3609 -9356,-3546 -9531,-3408 -9642,-3257 -9845,-2990 -9806,-2861 -9788,-2785 -9767,-2718 -9716,-2543 -9692,-2462
+#: note: "war bisher immer sogar mit Rennradreifen befahrbar"
+An der Wetzlarer Bahn (Potsdam): unbefestigter Weg, bei Regen groﬂe Pf¸tzen	Q2 -9306,-4259 -9642,-4916 -9996,-5596
+#: by: ^^^
+#: by: Peter Piecha:
+#: note: Privatstraﬂe
+Ahornweg (Groﬂ Glienicke): Verbundsteinpflaster	Q0- -10052,6640 -10138,6646 -10183,6650 -10315,6646
+#: by: anonymous
+Bussardheck (Glienicke/Nordbahn): Asphalt	Q0 5820,24725 5981,24725 6119,24714 6146,24691 6151,24606
+#: by: anonymous
+Stralsunder Str.: guter Asphalt	Q0 -509,38106 -600,38284 -653,38379 -687,38443 -764,38590 -790,38671 -853,38856

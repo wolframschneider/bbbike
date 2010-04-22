@@ -1152,7 +1152,6 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 14310,9692
 	X 9918,13733
 	X 8570,15107
-#: add_fragezeichen: Existiert die Ampel Nordufer/Torfstr. noch?
 	X 6849,14831
 	X 6334,14756
 	X 3711,16481
@@ -2357,7 +2356,7 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 #: note: seit 2008-05-27 eingeschaltet:
 	X 13919,10583
 #: temporary:
-Modersohnstr. (zurzeit durch eine Ampel ersetzt, wahrscheinlich bis 2010-04-15, Neubau der Kynastbrücke)	F 14174,11406
+Modersohnstr. (zurzeit durch eine Ampel ersetzt, wahrscheinlich bis 2010-05-31, Neubau der Kynastbrücke)	F 14174,11406
 	X 21115,271
 	X 17477,6031
 #: note: Luftbild:
@@ -2492,6 +2491,9 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F -196,16187
 	F 8743,12099
 	F 30993,3557
+	F 5238,13714
+#: note: Luftbild
+	F -6911,13817
 ################################################################################
 # note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10044614/620526/
