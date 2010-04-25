@@ -575,6 +575,7 @@ Seidenbienenweg: sehr eng	q4 31914,2767 31909,2802 31884,2841
 (entlang des Tr‰nkegrabens): Fuﬂg‰nger, Radfahren erlaubt	q2 16900,9861 17011,9950 17137,10098 17149,10160 17137,10238 17160,10376 17249,10666 17249,10702 17310,10714 17415,10694 17527,10640 17625,10615 17705,10621 17847,10629 17897,10607 17999,10584 18059,10556 18150,10543
 Hortensienplatz: einige Fuﬂg‰nger, Bordsteine	q3 4156,4784 4121,4841 4116,4850
 (Lustgarten entlang des Spreekanals): Fuﬂg‰nger	q2 10063,12438 9956,12617 9948,12631
+Blaurackenweg: enge Straﬂe, spielende Kinder	q1 17613,7989 17647,8071 17532,8125
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q3 11805,19071 11937,19175
 Ebersstr.: Sch¸ler	q2 7245,8583 7292,8631
 Straﬂe 103 (Niederschˆnhausen): enge Straﬂe	q1 10914,20065 11051,19789
@@ -1239,6 +1240,7 @@ Bisonweg: enge Straﬂe	q1 -774,22977 -709,22909 -657,22854 -595,22791 -542,22736
 Flatower Str.: enge Straﬂe	q1 -5049,16987 -4999,16971 -4875,16928 -4821,16914 -4758,16910 -4628,16899 -4319,16879 -4155,16860
 Kroppenstedtweg: Fuﬂg‰nger haben Vorrang	q2 1058,14898 1035,14996 996,15091 957,15189
 R¸bezahlweg: einige Fuﬂg‰nger	q1 14743,18839 14698,18967 14664,19057 14622,19123 14571,19172 14507,19214 14375,19296 14241,19379 14030,19510
+Gebr¸der-Grimm-Weg: Fuﬂg‰nger, querlaufende Ablaufrinnen	q2 14277,18684 14265,18747 14269,18812 14278,18840 14292,18863 14324,18916 14358,18973 14391,19026 14433,19093 14457,19132 14482,19174 14507,19214 14573,19281
 Charles-H.-King-Str.: enge Straﬂe	q1 -1248,2451 -1401,2391 -1604,2324
 Rohrweihstr.: enge Straﬂe	q1 -2141,19681 -2103,19833 -2073,19990 -2055,20129 -2020,20309 -1991,20312
 Kolkrabenweg: enge Straﬂe	q1 14655,3687 14885,3891
@@ -1248,6 +1250,8 @@ M¸nchener Str. (Lichtenrade): enge Straﬂe	q1 11384,-1983 11380,-2100 11388,-2202
 Lachtaubenweg: enge Straﬂe	q1 -1827,20216 -1823,20298 -1838,20471
 Elstergasse: enge Straﬂe, rechts und links versetzt parkende Autos	q1 -1596,20184 -1827,20216 -1971,20231
 Wesenberger Ring: enge Straﬂe	q1 13162,3576 13206,3674 13238,3794 13229,3836 13206,3854 13165,3850 13129,3809 13030,3664
+Schmale Gasse: enge Straﬂe	q1 23883,4328 24055,4348 24075,4417
+Albrechtshofer Weg: enge Straﬂe	q1 -7517,15858 -7642,15840 -7747,15842 -7865,15867 -7975,15904
 Dennewitzplatz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 7906,10098 7866,9918
 Eichborndamm: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 4240,19019 4232,18981
 Dorotheenstr. (Straﬂenbahn): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 9454,12558 9330,12529
@@ -1275,7 +1279,7 @@ Neue Schˆnhauser Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::ignd
 Kirchhofstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 13188,7590 13117,7471 13027,7368
 Niemannstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 14254,11377 14211,11229
 Bjˆrnsonstr: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q1::igndisp; 10209,16674 10197,16528
-Eichhornstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 8232,11414 8258,11254
+Eichhornstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 8232,11414 8253,11306 8280,11296
 Paul-Junius-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 15084,12975 15085,13105
 Ahornallee: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 1589,11483 1574,11379
 Lindenallee: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 1429,11523 1403,11428
