@@ -6465,7 +6465,7 @@ sub generate_plot_functions {
 
 		if ($cat_hin =~ /^F:(.*)$/) { # Fläche, no $cat_rueck handling here
 		    $category = $1;
-		    my($color, $rest) = split(/\|/, $category);
+		    my($color, $rest) = split(/\|/, $category, 2);
 		    my $stipple = ($layer_category_stipple{$abk} && $layer_category_stipple{$abk}{$category}) || $layer_stipple{$abk} || $category_stipple{$category};
 		    if (defined $rest && $rest ne "") {
 			if ($rest =~ $complex_IMG_qr) {
@@ -13721,7 +13721,8 @@ sub show_info {
 	    my(@y) = Karte::Polar::ddd2dms($py);
 	    push @x, $x[0] < 0 ? "W" : "E";
 	    push @y, $y[0] < 0 ? "S" : "N";
-	    my $url = "http://stable.toolserver.org/geohack/geohack.php?params=" . join("_", @y, @x) . "_type:landmark_region:DE-BE";
+	    #my $url = "http://stable.toolserver.org/geohack/geohack.php?params=" . join("_", @y, @x) . "_type:landmark_region:DE-BE";
+	    my $url = "http://toolserver.org/~geohack/geohack.php?params=" . join("_", @y, @x) . "_type:landmark_region:DE-BE";
 
 	    my $need_indentation;
 	    if ($wikipedia_photo) {
@@ -17442,7 +17443,11 @@ sub add_custom_layers_to_net {
 	if ($val) { # XXX del? && $abk =~ /^L\d/) {
 	    eval {
 		if (!$str_obj{$abk}) {
-		    $str_obj{$abk} = new Strassen $str_file{$abk};
+		    my $s = Strassen->new($str_file{$abk});
+		    if ($abk eq 'fz') {
+			$s = $s->grepstreets(sub { $_->[Strassen::CAT] !~ m{(?:projected|inwork)} });
+		    }
+		    $str_obj{$abk} = $s;
 		}
 		push @$net_source, $str_obj{$abk};
 		push @$net_source_abk, $abk;
@@ -20189,6 +20194,7 @@ sub load_photo {
 		my $path;
 		if (file_name_is_absolute($file)) {
 		    $path = $file;
+		    $photo = $top->Photo(@name, -file => $path);
 		} else {
 		    for my $try_file ((-d "$datadir/images" ? "$datadir/images/$file" : ()),
 				      "$FindBin::RealBin/images/$file",

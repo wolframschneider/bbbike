@@ -1130,17 +1130,6 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        undef,
        undef,
-       {
-         'source_id' => 'IM_014098',
-         'until' => 1272751199,
-         'text' => 'Miraustr. (Reinickendorf) stadteinwärts zwischen Innungsstr. un
-d Breitenbachstr. Baustelle, Fahrtrichtung gesperrt (bis Anfang 05/2010)',
-         'from' => 1252440431,
-         'id' => 1860,
-         'data' => 'userdel	q4::inwork; 4014,19433 4170,19079 4195,19043
-',
-         'type' => 'handicap'
-       },
        undef,
        undef,
        undef,
@@ -1152,15 +1141,8 @@ d Breitenbachstr. Baustelle, Fahrtrichtung gesperrt (bis Anfang 05/2010)',
        undef,
        undef,
        undef,
-       {
-         'until' => 1275343200,
-         'text' => 'B 087 Leipziger Straße Brücke über den Elsterkolk in Herzberg Brückenneubau halbseitig gesperrt; Einbahnstraße 07.09.2009-31.05.2010 ',
-         'from' => 1252188000,
-         'id' => 1872,
-         'data' => 'userdel	q4::inwork 1327,-79312 1746,-79119
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1387,30 +1369,31 @@ userdel	q4::inwork; 9130,12433 9141,12320
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
-         'until' => 1272664800,
-         'text' => 'Baumaßnahmen in der Parkanlage am Schlachtensee, teilweise ist der Uferweg gesperrt (bis zum Frühjahr 2010)',
-         'from' => undef,
-         'id' => 2002,
-         'data' => 'userdel	2::inwork -2521,3637 -2396,3666 -2174,3718 -2014,3826 -1980,3872 -1974,3933 -1996,4063 -1944,4140 -1706,3971 -1624,3956 -1558,3965 -1468,3995 -1380,4108
+         'source_id' => 'LSS-SG33-C09248',
+         'until' => 1273874400,
+         'text' => 'L 601 Finsterwalde - Doberlug-Kirchhain OD Lugau, zw. Abzw. Hennersdorfer Str. u. Abzw. Ha Straßenbauarbeiten Vollsperrung 09.11.2009 bis 14.05.2010 ',
+         'from' => 1272607127,
+         'id' => 1987,
+         'data' => 'userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998 24927,-87720
 ',
          'type' => 'gesperrt'
        },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1426,27 +1409,10 @@ userdel	q4::inwork; 9130,12433 9141,12320
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1272664800,
-         'text' => 'L 601 Finsterwalde - Doberlug-Kirchhain OD Lugau, zw. Abzw. Hennersdorfer Str. u. Abzw. Ha Straßenbauarbeiten Vollsperrung 15.12.2009-30.04.2010 ',
-         'from' => 1260745200,
-         'id' => 2009,
-         'data' => 'userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998
-',
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
-       {
-         'source_id' => 'IM_014905',
-         'until' => 1272664799,
-         'text' => 'Lahnstr. (Neukölln) Richtung Grenzallee zwischen Naumburger Str. und Mierstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 04.2010)',
-         'from' => 1263844274,
-         'id' => 2012,
-         'data' => 'userdel	q4::inwork; 13278,6967 13500,7018 13627,7047
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        {
          'until' => 1282946400,
          'text' => 'B 246 Clara-Zetkin-Straße OD Beelitz, zw. Trebbiner Str. u. Brücker Str. Kanal- u. Straßenbauarbeiten halbseitig gesperrt; Einbahnstraße 29.05.2009-27.08.2010 ',
@@ -1474,17 +1440,7 @@ userdel	q4::inwork; 9130,12433 9141,12320
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_011081',
-         'until' => 1272664799,
-         'text' => 'Blankenburger Str. (Pankow) Richtung Dietzgenstr. zwischen Siegfriedstr. und Dietzgenstr. Baustelle, Fahrtrichtung gesperrt, sowie Einbahnstraßenregelung in der Siegfriedstr. (bis Ende 04/2010)',
-         'from' => 1265027979,
-         'id' => 2016,
-         'data' => 'userdel	q4::inwork; 10742,19632 10439,19576 10377,19565 10249,19541
-userdel	q4::inwork; 10614,19907 10742,19632
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_015001',
          'until' => 1309471199,
@@ -1495,26 +1451,8 @@ userdel	q4::inwork; 10614,19907 10742,19632
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_015007',
-         'until' => 1272664800,
-         'text' => 'Winckelmannstr. (Johannisthal) Richtung Segelfliegerdamm zwischen Herweghstr. und Köpenicker Str. Baustelle, gesperrt. Das Abbiegen vom Sterndamm in die Winckelmannstr. ist nicht möglich. Dauer: bis 30.04.2010 16:00 Uhr ',
-         'from' => 1270235299,
-         'id' => 2018,
-         'data' => 'userdel	q4::inwork; 17476,4337 17507,4216
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'IM_015284',
-         'until' => 1272664799,
-         'text' => 'Fennstr. (Treptow) Richtung Schnellerstr. zwischen Michael-Brückner-Str. und Schnellerstr. Baustelle, Fahrtrichtung gesperrt. Ebenso ist die Britzer Str. Richtung Michael-Brückner-Str. ab Schnellerstr. gesperrt. (bis Ende 04/2010)',
-         'from' => 1268336756,
-         'id' => 2019,
-         'data' => 'userdel	1::inwork 18370,5511 18307,5440 18214,5354 18080,5376 18245,5551
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        {
          'until' => 1276898399,
          'text' => 'Die Leipziger Str. ist zwischen Mauerstr. und Charlottenstr. Richtung Alexanderstr. wegen Bauarbeiten gesperrt. Zu Einbahnstraßen werden Teile der Mauer-, Krausen-, Charlottenstr. und Friedrichstr. Dauer: 15. März 2010 bis 18. Juni 2010 ',
@@ -1685,16 +1623,7 @@ userdel	q3::inwork 9444,11616 9432,11702
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'LSO-SG33-E09126.2',
-         'until' => 1272664800,
-         'text' => 'Prenzlau: Verbot für Fahrzeuge Brücke über die Ücker 24.03.2010 bis 30.04.2010 ',
-         'from' => 1270235686,
-         'id' => 2038,
-         'data' => 'userdel	2::inwork 39239,101950 39066,102017
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'until' => undef,
@@ -1787,9 +1716,9 @@ userdel	q3::inwork 9444,11616 9432,11702
        },
        {
          'source_id' => 'LSW-SG33-K10037',
-         'until' => 1277157600,
-         'text' => 'Rheinsberg: Straßenausbau und Bau einer Verkehrsinsel am Ortsausgang in FR Flecken Zechlin Ortslage Dorf Zechlin Umleitung innerorts 06.04.2010 bis 21.06.2010 ',
-         'from' => 1271281188,
+         'until' => 1272924000,
+         'text' => 'Rheinsberg: Straßenausbau und Bau einer Verkehrsinsel Ortslage Dorf Zechlin, 06.04.2010 bis 03.05.2010 ',
+         'from' => 1272607378,
          'id' => 2049,
          'data' => 'userdel	q4::inwork -33491,80874 -33511,80553
 ',
@@ -1826,15 +1755,7 @@ userdel	q3::inwork 9444,11616 9432,11702
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1272340800,
-         'text' => 'Sanierung des Bahnübergangs Bahnübergang zw. Gransee und Altlüdersdorf - vom 19.04.2010 22:00 Uhr bis 27.04.2010 06:00 Uhr Vollsperrung',
-         'from' => 1271707200,
-         'id' => 2054,
-         'data' => 'userdel	2::inwork -5575,69050 -5511,69122 -5146,69565
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'LSO-SG33-E10039',
          'until' => 1293836400,
@@ -1857,36 +1778,36 @@ userdel	q3::inwork 9444,11616 9432,11702
        },
        {
          'source_id' => 'IM_015553',
-         'until' => 1272472200,
-         'text' => 'Birkbuschstr. (Steglitz): Straße vollständig gesperrt, Fahrbahnschäden in beiden Richtungen zwischen Klingsorstr. und Haydnstr. 20.04.2010 07:14 Uhr bis 28.04.2010 18:30 Uhr ',
+         'until' => 1273249800,
+         'text' => 'Birkbuschstr. (Steglitz): Straße vollständig gesperrt, Fahrbahnschäden in beiden Richtungen zwischen Klingsorstr. und Haydnstr. 20.04.2010 07:14 Uhr bis 07.05.2010 18:30 Uhr ',
          'from' => 1271654040,
          'id' => 2057,
          'data' => 'userdel	q4::inwork 5271,4547 5161,4664 5137,4691 5076,4762
 ',
          'type' => 'handicap'
        },
+       undef,
+       undef,
+       undef,
        {
-         'source_id' => 'IM_015575',
-         'until' => 1272472200,
-         'text' => 'Oranienburger Straße (Mitte): Straße vollständig gesperrt, Grund: Wasserrohrbruch, in Richtung Friedrichstr. zwischen Hackescher Markt und Monbijouplatz. 22.04.2010 15:07 Uhr bis 28.04.2010 18:30 Uhr',
-         'from' => 1271855220,
-         'id' => 2058,
-         'data' => 'userdel	q4::inwork 10220,13098 10077,13100 9932,13109
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'IM_015533',
-         'until' => 1272290400,
-         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Yitzhak-Rabin-Str. und Brandenburger Tor: Veranstaltung (Kinderfest), Straße vollständig gesperrt, ebenfalls gesperrt: Ebertstr. zwischen Behrenstr. und Scheidemannstr., 22.04.2010 18:00 Uhr bis 26.04.2010 16:00 Uhr',
-         'from' => 1271865600,
-         'id' => 2059,
-         'data' => 'userdel	2::temp 8573,12325 8540,12420
-userdel	2::temp 8595,12066 8600,12165 8538,12245 8214,12205 8089,12190 8055,12186
-userdel	2::temp 8538,12245 8546,12279 8570,12302
-userdel	2::temp 8538,12245 8610,12254
+         'source_id' => 'LSO-SG33-F10045',
+         'until' => 1273183200,
+         'text' => 'Höhenland: Verbot für Fahrzeuge Steinbeck-Brunow und umgekehrt 20.04.2010 bis 06.05.2010 ',
+         'from' => 1272607309,
+         'id' => 2061,
+         'data' => 'userdel	2::inwork 43155,35936 44203,35121
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_015593',
+         'until' => 1273870500,
+         'text' => 'Roelckestr. (Weißensee) gesperrt, Baustelle In beiden Richtungen zwischen Pistoriusstr. und Gäblerstr. 26.04.2010 18:55 Uhr bis 14.05.2010 22:55 Uhr ',
+         'from' => 1272214500,
+         'id' => 2062,
+         'data' => 'userdel	q4::inwork 13104,16522 13272,16672
+',
+         'type' => 'handicap'
        }
      
 );

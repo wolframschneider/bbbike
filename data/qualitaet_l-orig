@@ -64,7 +64,7 @@ Mittenwalde: relativ glattes Kopfsteinpflaster	Q2 19893,-15274 19878,-15336 1994
 #: by: rjoop:
 #: add_fragezeichen: existiert durch Jühnsdorf ein Radweg?
 Jühnsdorf: Asphalt	Q0 9792,-12090 9345,-11425 9472,-11297 9578,-10891
-Jühnsdorf - Mahlow: asphaltierter Radweg; Fahrbahn mäßiges Kopfsteinpflaster, Richtung Süden besser	Q0 9578,-10891 9598,-10356 9854,-9480
+Jühnsdorf - Mahlow: asphaltierter Radweg; Fahrbahn mäßiges Kopfsteinpflaster, Richtung Süden besser	Q0 9578,-10891 9598,-10356 9704,-9993 9854,-9480
 Jühnsdorf - Mahlow: mäßiges Kopfsteinpflaster, Richtung Süden besser	Q2 9854,-9480 9990,-8867
 Jühnsdorf - Mahlow: mäßiges Kopfsteinpflaster, Richtung Süden besser	Q2 10115,-8276 10448,-7582 10483,-7211 10636,-6703 10782,-6409 11106,-5538 11054,-5341
 Löwenbruch: Kopfsteinpflaster	Q2 5044,-12402 5002,-12551 4555,-12852
@@ -1458,7 +1458,7 @@ Kleinow: schlechtes Kopfsteinpflaster	Q3 50828,96893 50875,97118
 Kleinow: Asphalt	Q0 50875,97118 50846,97187
 Zimmerstr. (Potsdam): Kopfsteinpflaster	Q2 -14149,-1264 -14129,-1258 -13876,-1226 -13646,-1168
 Köhlerplatz (Potsdam): Kopfsteinpflaster	Q2 -13876,-1226 -13876,-1263
-Kastanienallee (Potsdam): Kopfsteinpflaster, Tram auf Fahrbahn	Q2 -14909,-1818 -14897,-1946 -14881,-2098 -14868,-2244 -14859,-2384
+Kastanienallee (Potsdam): Kopfsteinpflaster, Tram auf Fahrbahn	Q2 -14909,-1818 -14896,-1968 -14881,-2098 -14868,-2244 -14859,-2384
 bei Zechow: Asphalt	Q0 -26350,70262 -24687,71412 -24162,71612
 dt. Alleenstraße: Asphalt	Q0 -24436,65301 -22589,66989 -22477,67059 -21066,67757
 An der Alten Fahrt: Parkweg	Q1 -12608,-1715 -12475,-1496 -12265,-1434 -12114,-1409 -12110,-1379
@@ -3267,6 +3267,7 @@ Kantstr. (Potsdam): mäßiges Kopfsteinpflaster	Q2 -14705,-1949 -14682,-2070 -1476
 #: by: Lars Brückner: (hat sich korrigiert, vorher guter Asphalt):
 Grenzstr. (Potsdam): Kopfsteinpflaster	Q2 -10616,-1089 -10505,-1166 -10412,-1218 -10332,-1266
 #: by: felix backe:
+#: confirmed_by: anonymous (Asphalt, Q0)
 Im Hagen (Kleinmachnow): gut befahrbarer glatter Belag	Q0 -625,189 -790,263 -903,314 -1163,407 -1384,380
 #: by: Mechthild Schubart:
 Flotowstr.: mäßiger Beton	Q1- -7497,-3096 -7495,-3006 -7491,-2904 -7484,-2745
@@ -3438,3 +3439,11 @@ Ahornweg (Groß Glienicke): Verbundsteinpflaster	Q0- -10052,6640 -10138,6646 -101
 Bussardheck (Glienicke/Nordbahn): Asphalt	Q0 5820,24725 5981,24725 6119,24714 6146,24691 6151,24606
 #: by: anonymous
 Stralsunder Str.: guter Asphalt	Q0 -509,38106 -600,38284 -653,38379 -687,38443 -764,38590 -790,38671 -853,38856
+#: by: Noack vvv
+Karl-Marx-Str. (Blankenfelde): guter Asphalt	Q0 12307,-7055 11787,-7495 11667,-7536 11601,-7560 11494,-7647 11454,-7760 11427,-7836
+Fasanenweg (Blankenfelde): guter Asphalt	Q0 11427,-7836 11569,-7878
+Heinrich-Heine-Str. (Blankenfelde): guter Asphalt	Q0 11427,-7836 11342,-7813 10448,-7582
+#: by: ^^^
+#: by: Mark Brunner:
+#: note: q1 ohne weitere Angaben ignoriert
+Ribbeckstr. (Potsdam): guter Asphalt	Q0 -14763,-412 -14801,-4 -14793,159 -14737,300

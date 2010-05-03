@@ -2,7 +2,6 @@
 # -*- perl -*-
 
 #
-# $Id: bbbikegooglemap.cgi,v 2.36 2009/04/04 11:14:43 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 2005,2006,2007,2008,2009,2010 Slaven Rezic. All rights reserved.
@@ -610,7 +609,7 @@ sub get_html {
 
     function showLink(point, message) {
 	var mapType = mapTypeToString();
-        var latLngStr = message + "@{[ $get_public_link->() ]}?zoom=" + map.getZoom() + "&wpt=" + formatPoint(point) + "&coordsystem=polar" + "&maptype=" + mapType;
+        var latLngStr = message + "@{[ $get_public_link->() ]}?zoom=" + map.getZoom() + "&wpt=" + formatPoint(point) + "&coordsystem=polar" + "&maptype=" + mapType + "&mapmode=" + getCurrentMode();
         document.getElementById("permalink").innerHTML = latLngStr;
     }
 
@@ -1084,7 +1083,7 @@ EOF
   
 </form>
 
-<form id="commentform" style="position:absolute; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;">
+<form id="commentform" style="position:fixed; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;">
   <table>
     <tr><td>Kommentar zur Route:</td><td> <textarea cols="40" rows="4" name="comment"></textarea></td></tr>
     <tr id="hasuserwpts" style="visibility:hidden;"><td colspan="2">(Kommentare für Waypoints werden angehängt)</td></tr>

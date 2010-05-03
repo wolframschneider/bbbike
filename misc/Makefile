@@ -5,6 +5,7 @@
 PERL=			perl
 
 BBBIKEDIR?=		${.CURDIR}/..
+BBBIKEAUXDIR?=		${HOME}/src/bbbike-aux
 MISCSRCDIR?=		${BBBIKEDIR}/miscsrc
 DATADIR?=		${BBBIKEDIR}/data
 CONVERT2HAFAS=		${MISCSRCDIR}/convert2hafas
@@ -58,12 +59,16 @@ update-from-andreasm:
 	cd $(HOME)/src/bbbike/data && make check all
 
 sparkassen_osm.bbd:	../data_berlin_osm_bbbike/_unhandled
-	perl -nle '/(^Sparkasse|Berliner Sparkasse|operator:Sparkasse)/ and do { s{\tX }{\tIMG:/home/e/eserte/images/icons/sparkasse.gif }; print }' ../data_berlin_osm_bbbike/_unhandled > sparkassen_osm.bbd~
+	(echo "#: encoding: utf-8"; \
+	 echo "#:"; \
+	 perl -nle '/(^Sparkasse|Berliner Sparkasse|operator:Sparkasse)/ and do { s{\tX }{\tIMG:${BBBIKEAUXDIR}/images/sparkasse.gif }; print }' ../data_berlin_osm_bbbike/_unhandled) > sparkassen_osm.bbd~
 	mv sparkassen_osm.bbd~ sparkassen_osm.bbd
 
-citibank_osm.bbd:	../data_berlin_osm_bbbike/_unhandled
-	perl -nle '/citibank/i and do { s{\tX }{\tIMG:/home/e/eserte/images/icons/citibank.gif }; print }' ../data_berlin_osm_bbbike/_unhandled > citibank_osm.bbd~
-	mv citibank_osm.bbd~ citibank_osm.bbd
+targobank_osm.bbd:	../data_berlin_osm_bbbike/_unhandled
+	(echo "#: encoding: utf-8"; \
+	 echo "#:"; \
+	 perl -nle '/(citibank|targobank)/i and do { s{\tX }{\tIMG:${BBBIKEAUXDIR}/images/targobank.png }; print }' ../data_berlin_osm_bbbike/_unhandled) > targobank_osm.bbd~
+	mv targobank_osm.bbd~ targobank_osm.bbd
 
 upload-personal: $(HOME)/.bbbike/personal.wpt
 	gpsman readput GPSMan WP $(HOME)/.bbbike/personal.wpt
@@ -255,17 +260,17 @@ bbbikemap-for-garmin:	/tmp/gmapsupp.img
 ../tmp/bbbike_routable.osm:
 	cd ../data && ${MAKE} ../tmp/bbbike_routable.osm
 
-/tmp/gmapsupp.img: /tmp/bbbike_routable.img ${HOME}/src/bbbike-aux/mkgmap/typ/M000002a.TYP
+/tmp/gmapsupp.img: /tmp/bbbike_routable.img ${BBBIKEAUXDIR}/mkgmap/typ/M000002a.TYP
 	cd /tmp && \
 	    ${MKGMAP} --family-id=42 --family-name="Slavens Map" \
-	       --gmapsupp bbbike_routable.img ${HOME}/src/bbbike-aux/mkgmap/typ/M000002a.TYP
+	       --gmapsupp bbbike_routable.img ${BBBIKEAUXDIR}/mkgmap/typ/M000002a.TYP
 
-/tmp/bbbike_routable.img: ../tmp/bbbike_routable.osm ${HOME}/src/bbbike-aux/mkgmap/srt-style/*
-	[ -r ${HOME}/src/bbbike-aux/mkgmap/srt-style ]
+/tmp/bbbike_routable.img: ../tmp/bbbike_routable.osm ${BBBIKEAUXDIR}/mkgmap/srt-style/*
+	[ -r ${BBBIKEAUXDIR}/mkgmap/srt-style ]
 	cd /tmp && \
 	    ${MKGMAP} --description="BBBike Routable" --mapname=12117006 \
 		--country-name=Germany --country-abbr=DE \
 		--region-name=Berlin --region-abbr=BER \
-	        --latin1 --net --route --draw-priority=5 --style-file=${HOME}/src/bbbike-aux/mkgmap/srt-style \
+	        --latin1 --net --route --draw-priority=5 --style-file=${BBBIKEAUXDIR}/mkgmap/srt-style \
 	        ${HOME}/src/bbbike/tmp/bbbike_routable.osm  && \
 	    mv -f 12117006.img bbbike_routable.img 
