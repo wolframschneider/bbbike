@@ -259,7 +259,6 @@ Travestr.	1 14835,11840 14897,11801 14977,11754
 Müggelstr.	1 14897,11801 14965,11921
 Schmollerplatz/str.	1 13244,9410 13184,9340 13209,9325
 Isarstr.	1 12349,8464 12368,8356
-#: XXX prüfen: sind überall hier Einbahnstraßen?
 Zionskirchplatz	1 10306,14247 10277,14350 10315,14386 10365,14372 10389,14274
 Ohmstr.	1 11324,11689 11378,11856
 Anton-Saefkow-Str.	1 13186,14397 13084,14472 13013,14523 12901,14594 12874,14608 12782,14676 12723,14714 12520,14833
@@ -338,7 +337,7 @@ Karl-Bonhoeffer-Nervenklinik: für Unbefugte nicht befahrbar, Strafvollzug	2 4997
 Schöneberger Südgelände: Radfahren verboten, Eintritt 1 Euro	2 7605,7109 7621,7105 7655,7096 7666,7093
 Schöneberger Südgelände: Radfahren verboten, Eintritt 1 Euro	2 7666,7093 7344,6104 7296,5872
 Prießnitzstr.	1 11549,19258 11407,19186 11351,19169
-Klaustaler Str.	1 11439,18890 11384,19067
+Klaustaler Str.	1 11384,19067 11439,18890
 Paracelsusstr.	1 11599,19171 11549,19258 11543,19279 11575,19296 11613,19312 11671,19204
 Wormbacher Weg	1 3791,338 3782,397 3648,531
 Schwelmer Str.	1 3676,311 3569,469 3497,574
@@ -346,6 +345,7 @@ Schöppinger Str.	1 3691,566 3648,531 3569,469
 #: by: anonymous:
 Arberstr.	1 19424,9502 19407,9232
 #: by: Frank Ottens:
+#: confirmed_by: srt
 Hanne Nüte	1 13675,4855 13695,4859 13758,4926 13761,4992 13717,5175
 Parchimer Str.	1 22292,12198 22228,12274 22212,12349 22212,12422 22256,12489 22253,12570 22271,12623 22310,12637
 #: by: Sascha (hurdler)
@@ -362,6 +362,7 @@ Spreepark	2 16023,8860 16161,8852
 Staakener Str.	1 -4112,14242 -4390,14257
 Langensteiner Weg	1 7282,4716 7335,4879 7437,4855
 #: by: Susanne Kuby:
+#: confirmed_by: srt
 Lowise-Reuter-Ring	1 13680,4715 13589,4681 13560,4681 13511,4695 13482,4718 13468,4766 13476,4812 13503,4846 13540,4861 13574,4862 13639,4850 13675,4855
 #: by: Gisela Mauer:
 Pfahlerstr.	1 5301,18447 5423,18438 5541,18435
@@ -397,8 +398,8 @@ Kienhorststr.	1 5543,18555 5324,18560
 Halbauer Weg	1 7722,3142 7719,3219 7734,3290 7753,3371
 #: by: Guido (guidoh):
 Amfortasweg	1 5214,4445 5173,4471 5144,4498 5067,4434 5150,4345
-#: by: Jürgen Jacobi:
-Onkel-Bräsig-Str.	1 13324,4784 13305,4504
+# XXX del #: by: Jürgen Jacobi:Onkel-Bräsig-Str.	1 13324,4784 13305,4504
+#: confirmed_by: srt
 Hüsung	1 13324,4784 13400,4788 13468,4766
 Hüsung	1s 13468,4766 13397,4762 13324,4784
 #: by: Christoph Winkelmann:
@@ -468,8 +469,6 @@ Becherweg	1 6227,18299 6232,18435 6226,18590 6217,18619
 #: by: Oliver Kunze:
 Hirschhorner Weg	1 -760,4542 -753,4578 -741,4660 -793,4754 -820,4772
 Feldspatweg	1 11190,1622 11369,1585 11407,1592
-#: add_fragezeichen: Gilt die Einbahnstraßenregelung auch für Radfahrer oder nur für Autofahrer?
-Liningstr.	1 13574,4862 13534,5111
 #: by: Werner Braun:
 Eisvogelweg	1 528,4747 542,4699 595,4594 635,4524 661,4492 691,4474
 #: by: Katharina Achazi:
@@ -534,6 +533,7 @@ Alt-Wittenau	1 4597,20778 4649,20771 4953,20624 5117,20517 4935,20574 4726,20690
 #: by: Florian (olf-kcots):
 Miningstr.	1 13444,5097 13455,4995 13432,4900 13466,4889 13503,4846
 #: by: Lutz Behrens:
+#: confirmed_by: srt
 Dörchläuchtingstr.	1 13511,4695 13486,4650 13485,4496
 #: by: Stefanie Töpper
 Biesenthaler Str. (Hohenschönhausen)	1 17239,14719 17074,14704 17063,14797
@@ -690,6 +690,12 @@ Anna-Mackenroth-Weg	1 3633,2210 3641,2459
 Fuchsbau	1 17590,7828 17651,7973
 Drosselstieg	1 17683,7958 17747,8107
 Blaurackenweg	1 17532,8125 17647,8071 17613,7989
+#: by: ewa_maria:
+Harzburger Str. (Pankow), Klaustaler Str...	1s:q4 11442,18736 11419,18801 11463,18817 11469,18799 11483,18753 11462,18743 11442,18736
+#: by: Andy (compstars)
+#: confirmed_by: Luftbild
+#: XXX_indoor bei osm falsch herum
+Faucherweg	1 -1307,14801 -1251,14772 -1207,14781 -1141,14814 -896,14888
 ######################################################################
 #
 # Potsdam
@@ -1035,7 +1041,7 @@ Yorckstr.: Linksabbiegen verboten (und unbequem)	3nocross 8192,9619 8097,9650 79
 An den Treptowers: unbequemes Überqueren, stark befahrene Straße	3nocross 14501,10169 14405,10027 14289,9870
 Lichtenberger Str.: Mittelstreifen	3nocross 12028,12519 12006,12464 11920,12266
 Sachsendamm: unbequem passierbarer Mittelstreifen	3nocross 7696,7562 7859,7486 7946,7411
-Karl-Marx-Str.: Mittelstreifen	3nocross 12598,8390 12582,8408 12540,8458
+Karl-Marx-Str.: Mittelstreifen	3nocross 12598,8390 12582,8408 12562,8432 12540,8458
 Karl-Marx-Str.: unbequemes Überqueren wegen parkender Autos	3nocross 12830,8031 12865,7923 12898,7832
 Flughafenstr.: Mittelstreifen (nicht unpassierbar, aber unbequem)	3nocross 11632,8302 11767,8330 11898,8362
 Stromstr.: unpassierbarer Mittelstreifen	3nocross 6183,13083 6165,12985 6156,12918 6150,12875
@@ -1121,6 +1127,7 @@ Adlergestell: Mittelstreifen	3nocross 19676,3705 19633,3751 19587,3801
 # Stellen, an denen getragen werden muß:
 # die Zahl hinter dem ":" entspricht ungefähr den verlorenen Sekunden
 # 
+tragen (ca. 17 Stufen)	0:22 13779,4929
 tragen (8 Stufen)	0:15 9956,12617
 tragen (6 Stufen)	0:10 4121,4841
 #: by: Uwe Borgenhagen
@@ -1192,7 +1199,7 @@ tragen (ca. 35 Stufen)	0:30 7621,7105
 tragen (ca. 35 Stufen)	0:30 7655,7096
 #: note: Luftbild (Stufenanzahl)
 tragen (30 Stufen)	0:30 15571,4168
-tragen (steile Treppe)	0:30 15156,6034
+tragen (26 Stufen, steile Treppe)	0:30 15156,6034
 tragen (Treppe)	0:30 4808,3404
 tragen (zwei Treppen, je ca. 10 Stufen)	0:30 8822,16873
 tragen (Treppe)	0:30 14390,5443
@@ -1602,7 +1609,7 @@ Matthäikirchplatz	1 7954,11399 7965,11380 7934,11275
 Herkulesufer: wg. Stufen schieben, ggf. auf Wiesenstreifen ausweichen	0:30 6920,11064
 Potsdamer Str.: schwierig zu überqueren - besser Ampel benutzen	3nocross 7912,10945 7968,11048 7980,11070
 Grunewaldstr.: queren schlecht möglich	3nocross 6709,9234 6863,9254 6923,9266
-Adolf-Scheidt-Platz	1 8731,8050 8765,8050 8783,8020 8769,7994 8731,7990
+#XXX del: keine Einbahnstraßenregelung: Adolf-Scheidt-Platz	1 8731,8050 8765,8050 8783,8020 8769,7994 8731,7990
 Rumeyplan	1 8690,7717 8799,7741 8894,7783 8940,7835
 Rumeyplan	1 8967,7821 8902,7763 8815,7722 8694,7691
 Greifswalder Str.	3nocross 12422,14692 12473,14763 12520,14833
@@ -1756,7 +1763,7 @@ Karl-Pokern-Str.	1 25860,5067 25860,5159 25857,5184 26026,5179 26028,5153 26034,
 Karl-Pokern-Str.	1 25860,5159 26028,5153
 Kubornstr.	1 15857,12682 15832,12518 15819,12498 15800,12353
 Lindenufer	1 -3275,14114 -3135,14183
-#: by: http://www.berlin.de/ba-spandau/presse/archiv/20051205.1215.33112.html
+#: by: (URL existiert nicht mehr) http://www.berlin.de/ba-spandau/presse/archiv/20051205.1215.33112.html
 Mauerstr.	1 -3316,14169 -3275,14114
 Groscurthstr.	1 16423,24935 16467,25092 16530,25276 16572,25407 16485,25485 16439,25442
 Friedrich-Richter-Str.	1 16264,24764 16284,24745 16217,24651

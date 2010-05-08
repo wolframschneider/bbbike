@@ -302,7 +302,7 @@ Karl-Bonhoeffer-Nervenklinik: für Unbefugte nicht befahrbar, Strafvollzug	2 4997
 Schöneberger Südgelände: Radfahren verboten, Eintritt 1 Euro	2 7605,7109 7621,7105 7655,7096 7666,7093
 Schöneberger Südgelände: Radfahren verboten, Eintritt 1 Euro	2 7666,7093 7344,6104 7296,5872
 Prießnitzstr.	1 11549,19258 11407,19186 11351,19169
-Klaustaler Str.	1 11439,18890 11384,19067
+Klaustaler Str.	1 11384,19067 11439,18890
 Paracelsusstr.	1 11599,19171 11549,19258 11543,19279 11575,19296 11613,19312 11671,19204
 Wormbacher Weg	1 3791,338 3782,397 3648,531
 Schwelmer Str.	1 3676,311 3569,469 3497,574
@@ -342,7 +342,6 @@ Waldowstr.	1 5536,18234 5537,18309 5541,18435 5541,18451 5543,18555 5545,18590 5
 Kienhorststr.	1 5543,18555 5324,18560
 Halbauer Weg	1 7722,3142 7719,3219 7734,3290 7753,3371
 Amfortasweg	1 5214,4445 5173,4471 5144,4498 5067,4434 5150,4345
-Onkel-Bräsig-Str.	1 13324,4784 13305,4504
 Hüsung	1 13324,4784 13400,4788 13468,4766
 Hüsung	1s 13468,4766 13397,4762 13324,4784
 Karl-Egon-Str.	1 18372,8869 18406,9052 18430,9199 18457,9343
@@ -394,7 +393,6 @@ Schulenburgstr. (Reinickendorf)	1 5345,18675 5547,18665
 Becherweg	1 6227,18299 6232,18435 6226,18590 6217,18619
 Hirschhorner Weg	1 -760,4542 -753,4578 -741,4660 -793,4754 -820,4772
 Feldspatweg	1 11190,1622 11369,1585 11407,1592
-Liningstr.	1 13574,4862 13534,5111
 Eisvogelweg	1 528,4747 542,4699 595,4594 635,4524 661,4492 691,4474
 Kreutzerweg	1 4834,4102 4848,4069 4836,4041 4629,3916
 Hornblendeweg	1 10440,1283 10415,1323 10402,1362 10425,1400 10510,1441 10594,1468 10638,1442 10659,1370
@@ -539,6 +537,8 @@ Anna-Mackenroth-Weg	1 3633,2210 3641,2459
 Fuchsbau	1 17590,7828 17651,7973
 Drosselstieg	1 17683,7958 17747,8107
 Blaurackenweg	1 17532,8125 17647,8071 17613,7989
+Harzburger Str. (Pankow), Klaustaler Str...	1s 11442,18736 11419,18801 11463,18817 11469,18799 11483,18753 11462,18743 11442,18736
+Faucherweg	1 -1307,14801 -1251,14772 -1207,14781 -1141,14814 -896,14888
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718 -12323,635 -12332,585 -12582,127
 Leistikowstr.	1 -12512,810 -12302,718
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -1231,8 +1231,8 @@ Lichtenberger Str. -> Neue Blumenstr.: Mittelstreifen	3::igndisp 12028,12519 120
 unbequem passierbarer Mittelstreifen	3nocross::ignrte 7696,7562 7859,7486 7946,7411
 Suadicanistr. -> Sachsendamm: unbequem passierbarer Mittelstreifen	3::igndisp 7858,7506 7859,7486 7946,7411
 Sachsendamm -> Suadicanistr.: unbequem passierbarer Mittelstreifen	3::igndisp 7696,7562 7859,7486 7858,7506
-Mittelstreifen	3nocross::ignrte 12598,8390 12582,8408 12540,8458
-Boddinstr. -> Karl-Marx-Str.: Mittelstreifen	3::igndisp 12368,8356 12582,8408 12540,8458
+Mittelstreifen	3nocross::ignrte 12598,8390 12582,8408 12562,8432 12540,8458
+Boddinstr. -> Karl-Marx-Str.: Mittelstreifen	3::igndisp 12368,8356 12582,8408 12562,8432
 unbequemes Überqueren wegen parkender Autos	3nocross::ignrte 12830,8031 12865,7923 12898,7832
 Karl-Marx-Str. -> Saltykowstr.: unbequemes Überqueren wegen parkender Autos	3::igndisp 12898,7832 12865,7923 12726,7887
 Mittelstreifen (nicht unpassierbar, aber unbequem)	3nocross::ignrte 11632,8302 11767,8330 11898,8362
@@ -1449,6 +1449,7 @@ Altheider Str. -> Adlergestell: Mittelstreifen	3::igndisp 19871,3600 19812,3561 
 Adlergestell -> Seidenbaustr.: Mittelstreifen	3::igndisp 19812,3561 19857,3514 19966,3596
 Seidenbaustr. -> Adlergestell: Mittelstreifen	3::igndisp 19966,3596 19857,3514 19904,3464
 Mittelstreifen	3nocross::ignrte 19676,3705 19633,3751 19587,3801
+tragen (ca. 17 Stufen)	0:22:-98 13779,4929
 tragen (8 Stufen)	0:15:-210 9956,12617
 tragen (6 Stufen)	0:10:-211 4121,4841
 tragen (ca. 25 Stufen)	0:30:-243 6160,7074
@@ -1500,7 +1501,7 @@ tragen (ca. 10 Stufen)	0:20:-257 -6442,14286
 tragen (ca. 35 Stufen)	0:30:-75 7621,7105
 tragen (ca. 35 Stufen)	0:30:-75 7655,7096
 tragen (30 Stufen)	0:30:-53 15571,4168
-tragen (steile Treppe)	0:30:-213 15156,6034
+tragen (26 Stufen, steile Treppe)	0:30:-213 15156,6034
 tragen (Treppe)	0:30:-117 4808,3404
 tragen (zwei Treppen, je ca. 10 Stufen)	0:30:-246 8822,16873
 tragen (Treppe)	0:30:0 14390,5443
@@ -1805,7 +1806,6 @@ schwierig zu überqueren - besser Ampel benutzen	3nocross::ignrte 7912,10945 7968
 queren schlecht möglich	3nocross::ignrte 6709,9234 6863,9254 6923,9266
 Grunewaldstr. -> Klixstr.: queren schlecht möglich	3::igndisp 6923,9266 6863,9254 6885,9132
 Klixstr. -> Grunewaldstr.: queren schlecht möglich	3::igndisp 6885,9132 6863,9254 6709,9234
-Adolf-Scheidt-Platz	1 8731,8050 8765,8050 8783,8020 8769,7994 8731,7990
 Rumeyplan	1 8690,7717 8799,7741 8894,7783 8940,7835
 Rumeyplan	1 8967,7821 8902,7763 8815,7722 8694,7691
 Greifswalder Str.	3nocross::ignrte 12422,14692 12473,14763 12520,14833

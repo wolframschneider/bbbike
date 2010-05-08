@@ -45,7 +45,7 @@ Boxhagener von E - Holtei	3 14771,11345 14639,11512 14575,11407
 Bachstr. - 17. Juni (?)	3 5798,12021 5787,11966 5771,11887 5901,11902
 Fasanen - Hertzallee (nur für BVG frei)	3 5456,11742 5360,11510 5356,11500 5587,11397
 Fasanenstr.	1 5198,10234 5207,10399
-Naumannstr. - Kolonnenstr.	3 7716,8356 7713,8600 7709,8777 7642,8815 7563,8871
+Naumannstr. - Kolonnenstr.	3 7713,8600 7709,8777 7642,8815
 Naumannstr. N - H	3 7707,8915 7709,8777 7713,8600
 zum Mariannenplatz	2 11950,11157 11921,11185
 # ... kompliziert ... mit vorgeschriebenen Fahrtrichtungen hätte man
@@ -67,7 +67,7 @@ Weserstr.	1 12074,9217 11993,9211 11881,9202
 Friedenstr.	1 12325,13148 12386,13085
 Fasanenstr.	1 5223,9810 5209,9978
 Kopfstr.	1 12478,7878 12327,7847 12220,7822 12176,7811 12041,7788
-Am Treptower Park	1 15166,8489 15079,8575 15070,8584 15002,8651 14934,8717 14852,8799 14739,8919 14614,9052 14563,9106 14529,9141 14443,9233 14382,9299 14242,9448 14179,9515 14089,9610
+Am Treptower Park	1 15166,8489 15079,8575 15070,8584 15002,8651 14934,8717 14852,8799 14842,8809 14739,8919 14614,9052 14563,9106 14529,9141 14443,9233 14382,9299 14242,9448 14179,9515 14089,9610
 Hagelberger - Yorck	3nocross 8595,9495 8648,9526 8777,9601
 Hagelberger - Mehringdamm	3nocross 9334,9670 9280,9476 9248,9350
 Fidicin - Mehringdamm	3 9305,9044 9224,9053 9225,9038 9227,8890
@@ -78,7 +78,7 @@ Rudolf-Breitscheid-Str.	1 -10446,-1947 -10360,-1934 -10235,-1916 -9986,-1882 -97
 Bendastr.	1 12689,6905 12702,6846
 Bendastr.	1 12793,6407 12779,6478 12756,6578 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
 Puschkin/Bulgarische	1 13829,9905 13884,9882 13995,9834 14193,9746 14310,9692 14780,9480 14819,9462 15383,9191 15561,8903 15591,8848 15383,8662 15166,8489
-Karl-Marx-Str./Schönstedt	3nocross 12500,8504 12540,8458 12582,8408
+Karl-Marx-Str./Schönstedt	3nocross 12500,8504 12540,8458 12562,8432 12582,8408
 Hoffmannstr./Elsenstr.	3 14076,10011 14289,9870 14405,10027
 Jerusalemer/Leipziger	3 9892,11752 9898,11679 9981,11689
 Behren/Ebert	3 8861,12125 8743,12099 8737,12098 8595,12066 8581,11896 8571,11846
@@ -284,6 +284,7 @@ Gürtelstr. - Lehderstr.: nur rechts abbiegen erlaubt	3 13409,15687 13316,15758 1
 Gürtelstr. - Greifswalder Str.: nur rechts abbiegen erlaubt	3 13409,15687 13316,15758 13229,15692 13098,15592
 #: by: ^^^
 #: by: Timo Feyerabend: vvv
+#: confirmed_by: srt
 Jochen-Nüßler-Str.	1 13571,4493 13589,4681
 Parchimer Allee	3nocross 13659,4489 13571,4493 13485,4496 13394,4500
 #: by: ^^^
@@ -297,7 +298,8 @@ Lilienthalstr.: Barriere für Autos	3 10598,8563 10627,8706 10653,8831
 Lilienthalstr.: Barriere für Autos	3 10653,8831 10627,8706 10598,8563
 Hellersdorfer Str.: Mittelstreifen	3nocross 23021,13982 22969,13816 22966,13806 22925,13662
 #: by: Jürgen Jacobi:
-Onkel-Bräsig-Str.	1 13323,5222 13359,5086 13324,4784
+#: confirmed_by: srt
+Onkel-Bräsig-Str.	1 13323,5222 13359,5086 13324,4784 13305,4504
 #: by: Jennifer (jhofmeister):
 Krokusstr.	1 16738,2717 16739,2736 16677,2856
 Gregor-Mendel-Str. (Potsdam)	1 -13596,-508 -13415,-506 -13257,-512 -13182,-515
@@ -478,7 +480,7 @@ Elisabethstr.	1 -3387,15410 -3451,15372 -3492,15331
 Eisenacher Str.	1 22886,15095 23116,15111
 #: note: Luftbild:
 Streitstr./Chamissostr.: Mittelstreifen	3nocross -3009,17090 -3017,16984 -3018,16974
-#: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20081119.1415.114691.html
+#: by: (URL existiert nicht mehr) http://www.berlin.de/ba-lichtenberg/presse/archiv/20081119.1415.114691.html
 Treskowallee/Rheinsteinstr.: Straßenbahntrasse	3nocross 18770,8898 18734,8682 18729,8650
 #: by: anonymous
 #: confirmed_by: srt
@@ -591,9 +593,15 @@ Steinträgerweg: Poller	3 12948,2484 12963,2365 12987,2220
 #: by: ^^^
 #: by: Christian Riemer:
 Im Rosengrund: Anliegerstraße	2:Anlieger 11576,4339 11601,4242 11619,4146 11633,4117 11684,3919
+Haselsteig: Anliegerstraße, nördliche Einfahrt per Schranke gesperrt	2:Anlieger 11480,4335 11547,4127 11563,4099 11567,4085 11610,3891
 #: by: ruth mantei:
+#: confirmed_by: srt
 Teterower Str.	1 13717,5175 13820,5203
 #: by: detlef (dpeche...)
 Hanns-Braun-Str.: bewachte Schranke	2 -515,12407 -671,12311 -1015,12106
 Weg 7: Sackgasse	3 17042,7685 16902,7652 *
 Elbeweg: nur für Anlieger	2:Anlieger 16934,7570 16949,7484 17061,7323 17135,7223 17211,7265
+Südkreuz Vorplatz: Durchfahrt nicht möglich	3 7762,7734 7757,7682 7716,7625
+Südkreuz Vorplatz: Durchfahrt nicht möglich	3 7716,7625 7757,7682 7762,7734
+Liningstr.	1 13574,4862 13534,5111
+Alt-Britz:	3 12596,4320 12560,4290 *
