@@ -1976,7 +1976,7 @@ EOF
 		print "<noscript>" . M("Die Aktivierung von Javascript und CSS ist empfehlenswert, aber nicht notwendig.") . "<p></noscript>\n";
 	    }
 
-            print qq{<span style="font-size:small">} . "&nbsp;" . M("Start- und Zielstra&szlig;e der Route eingeben") . ":" . "</span>\n";
+            print qq{<span style="font-size:small">} . "&nbsp;" . M("Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)") . ":" . "</span>\n";
 	    unless ($via eq 'NO') { print " (" . M("Via ist optional") . ")" }
 	    #if ($osm_data && $datadir =~ m,data-osm/(.+),) {
 	    #	print qq[, ], M("Stadt"), qq[: $1\n];
