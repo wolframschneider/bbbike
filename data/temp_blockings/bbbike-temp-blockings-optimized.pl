@@ -494,15 +494,7 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Reichenberger Str., Einbahnstraße Richtung Kottbusser Tor',
-         'from' => 1260212611,
-         'id' => 1563,
-         'data' => 'userdel	1::inwork 12398,9938 12556,9862 12714,9792 12834,9738
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1130,7 +1122,16 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_014098',
+         'until' => 1275314400,
+         'text' => 'Miraustr. (Reinickendorf): Baustelle, Fahrtrichtung gesperrt (bis Ende 05/2010) stadteinwärts zwischen Innungsstr. und Breitenbachstr., 07.09.2009 11:09 Uhr bis 31.05.2010 16:00 Uhr ',
+         'from' => 1252228140,
+         'id' => 1860,
+         'data' => 'userdel	q4::inwork; 4014,19433 4170,19079 4195,19043
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        undef,
@@ -1207,9 +1208,10 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
        undef,
        undef,
        {
-         'until' => 1275256800,
-         'text' => 'K 6910 Am Wasser OD Schwielowsee, zw. Hellwegbaumarkt und Mühlenbergstr. Kanal- u. Straßenbau halbseitig gesperrt; Einbahnstraße 21.09.2009-30.05.2010 ',
-         'from' => 1253397600,
+         'source_id' => '96900159',
+         'until' => 1280613600,
+         'text' => 'Schwielowsee: K6910: Kanal- und Straßenbau OL Geltow Richtungsverkehr zw. Mühlenbergstr. und B 1, 30.03.2009 bis 31.07.2010 ',
+         'from' => 1273091418,
          'id' => 1896,
          'data' => 'userdel	q4::inwork; -19013,-5247 -19112,-5226 -19332,-5240
 ',
@@ -1440,7 +1442,17 @@ userdel	q4::inwork; 9130,12433 9141,12320
 ',
          'type' => 'gesperrt'
        },
-       undef,
+       {
+         'source_id' => 'IM_011081',
+         'until' => 1283259600,
+         'text' => 'Blankenburger Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Ende 08.2010) Richtung Dietzgenstr. zwischen Siegfriedstr. und Dietzgenstr. sowie Einbahnstraßenregelung in der Siegfriedstr., 05.01.2009 11:00 Uhr bis 31.08.2010 15:00 Uhr ',
+         'from' => 1231063200,
+         'id' => 2016,
+         'data' => 'userdel	q4::inwork; 10742,19632 10439,19576 10377,19565 10249,19541
+userdel	q4::inwork; 10614,19907 10742,19632
+',
+         'type' => 'handicap'
+       },
        {
          'source_id' => 'IM_015001',
          'until' => 1309471199,
@@ -1452,7 +1464,16 @@ userdel	q4::inwork; 9130,12433 9141,12320
          'type' => 'handicap'
        },
        undef,
-       undef,
+       {
+         'source_id' => 'IM_015284',
+         'until' => 1275314400,
+         'text' => 'Fennstr. (Treptow): Baustelle, Fahrtrichtung gesperrt. Ebenso ist die Britzer Str. Richtung Michael-Brückner-Str. ab Schnellerstr. gesperrt. (bis Ende 05.2010) Richtung Schnellerstr. zwischen Michael-Brückner-Str. und Schnellerstr., 08.03.2010 11:00 Uhr bis 31.05.2010 16:00 Uhr ',
+         'from' => 1267956000,
+         'id' => 2019,
+         'data' => 'userdel	1::inwork 18370,5511 18307,5440 18214,5354 18080,5376 18245,5551
+',
+         'type' => 'gesperrt'
+       },
        {
          'until' => 1276898399,
          'text' => 'Die Leipziger Str. ist zwischen Mauerstr. und Charlottenstr. Richtung Alexanderstr. wegen Bauarbeiten gesperrt. Zu Einbahnstraßen werden Teile der Mauer-, Krausen-, Charlottenstr. und Friedrichstr. Dauer: 15. März 2010 bis 18. Juni 2010 ',
@@ -1583,16 +1604,7 @@ userdel	q3::inwork 9444,11616 9432,11702
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'LSO-SG33-F10034',
-         'until' => 1273269600,
-         'text' => 'Prötzel: Durchlassbau und Straßenbauarbeiten Prötzel -> Harnekop Sternbeck, 29.03.2010 bis 07.05.2010 ',
-         'from' => 1272051674,
-         'id' => 2034,
-         'data' => 'userdel	2::inwork 49820,27138 49875,28845
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => '86901199',
          'until' => 1275343200,
@@ -1603,16 +1615,7 @@ userdel	q3::inwork 9444,11616 9432,11702
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'LSO-SG33-F09177',
-         'until' => 1275343200,
-         'text' => 'Steinhöfel: Kanal- und Straßenbauarbeiten Ortslage Heinersdorf, Verbot für Fahrzeuge 07.09.2009 bis 31.05.2010 ',
-         'from' => 1270235498,
-         'id' => 2036,
-         'data' => 'userdel	q4::inwork 65618,6296 65528,6253 65365,6281 65225,6403
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'LSO-SG33-F10015',
          'until' => 1285020000,
@@ -1694,16 +1697,7 @@ userdel	q3::inwork 9444,11616 9432,11702
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'LSS-SG33-C10063',
-         'until' => 1273183200,
-         'text' => 'Massen-Niederlausitz: Deckenerneuerung Lieskau - Massen Standorte: B96 12.04.2010 bis 06.05.2010 ',
-         'from' => 1271281087,
-         'id' => 2047,
-         'data' => 'userdel	2::inwork 37473,-85957 37200,-85763 36941,-85640
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'LSW-SG33-K10017',
          'until' => 1293145200,
@@ -1714,16 +1708,7 @@ userdel	q3::inwork 9444,11616 9432,11702
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'LSW-SG33-K10037',
-         'until' => 1272924000,
-         'text' => 'Rheinsberg: Straßenausbau und Bau einer Verkehrsinsel Ortslage Dorf Zechlin, 06.04.2010 bis 03.05.2010 ',
-         'from' => 1272607378,
-         'id' => 2049,
-         'data' => 'userdel	q4::inwork -33491,80874 -33511,80553
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => '106900153',
          'until' => 1277935200,
@@ -1766,48 +1751,79 @@ userdel	q3::inwork 9444,11616 9432,11702
 ',
          'type' => 'gesperrt'
        },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'source_id' => 'LSO-SG33-F10040',
-         'until' => 1273269600,
-         'text' => 'Ausbau der L 38 zwischen Alt Zeschdorf und Abzweig B 167, 29.03.2010 bis 07.05.2010 ',
-         'from' => 1272051749,
-         'id' => 2056,
-         'data' => 'userdel	2::inwork 83070,5097 82765,4636 82314,4413 81301,3881
-',
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'IM_015553',
-         'until' => 1273249800,
-         'text' => 'Birkbuschstr. (Steglitz): Straße vollständig gesperrt, Fahrbahnschäden in beiden Richtungen zwischen Klingsorstr. und Haydnstr. 20.04.2010 07:14 Uhr bis 07.05.2010 18:30 Uhr ',
-         'from' => 1271654040,
-         'id' => 2057,
-         'data' => 'userdel	q4::inwork 5271,4547 5161,4664 5137,4691 5076,4762
+         'source_id' => 'IM_015680',
+         'until' => 1311948000,
+         'text' => 'Blankenburger Chaussee (Karow): Baustelle, Fahrtrichtung gesperrt (Ende 07.2011) stadteinwärts zwwischen Bahnhofstr. und Tarnowitzer Str., 05.05.2010 09:00 Uhr bis 29.07.2011 16:00 Uhr ',
+         'from' => 1272956400,
+         'id' => 2063,
+         'data' => 'userdel	q4::inwork; 15428,22736 15271,22527 15154,22370
 ',
          'type' => 'handicap'
        },
        undef,
-       undef,
-       undef,
        {
-         'source_id' => 'LSO-SG33-F10045',
-         'until' => 1273183200,
-         'text' => 'Höhenland: Verbot für Fahrzeuge Steinbeck-Brunow und umgekehrt 20.04.2010 bis 06.05.2010 ',
-         'from' => 1272607309,
-         'id' => 2061,
-         'data' => 'userdel	2::inwork 43155,35936 44203,35121
+         'source_id' => 'LSO-SG33-E10043',
+         'until' => 1277935200,
+         'text' => 'Wandlitz: B273: Instandsetzung von Winterschäden OD Wandlitz Ri. Wensickendorf Richtung Wensickendorf gesperrt, 04.05.2009 bis 30.06.2010 ',
+         'from' => 1273091803,
+         'id' => 2065,
+         'data' => 'userdel	q4::inwork; 13546,37474 13237,37524 12812,37567
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_015638',
+         'until' => 1275055200,
+         'text' => 'Zeltinger Str. (Reinickendorf): Baustelle, Fahrtrichtung gesperrt (bis Ende 05.2010) Richtung Zeltinger Platz zwischen Schönfließer Str. und Zerndorfer Weg, 03.05.2010 09:47 Uhr bis 28.05.2010 16:00 Uhr ',
+         'from' => 1272786420,
+         'id' => 2066,
+         'data' => 'userdel	q4::inwork; 3112,26253 3057,26075 2994,25873 2941,25822
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'LSW-SG33-K10053',
+         'until' => 1293836400,
+         'text' => 'Zernitz-Lohm: L141: Ersatzneubau einer Brücke ; Vollsperrung mit örtlicher Umfahrung bei Zernitz, Brücke über die Neue Jäglitz Umfahrung mit LSA, 05.05.2010 bis 31.12.2010 ',
+         'from' => 1273092119,
+         'id' => 2067,
+         'data' => 'userdel	2::inwork -60868,50275 -60612,50931
 ',
          'type' => 'gesperrt'
        },
        {
-         'source_id' => 'IM_015593',
-         'until' => 1273870500,
-         'text' => 'Roelckestr. (Weißensee) gesperrt, Baustelle In beiden Richtungen zwischen Pistoriusstr. und Gäblerstr. 26.04.2010 18:55 Uhr bis 14.05.2010 22:55 Uhr ',
-         'from' => 1272214500,
-         'id' => 2062,
-         'data' => 'userdel	q4::inwork 13104,16522 13272,16672
-',
-         'type' => 'handicap'
+         'until' => undef,
+         'permanent' => 1,
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich. Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'from' => undef,
+         'id' => 2068,
+         'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10691,8532 10640,8366 10598,8270 10575,8218
+(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10598,8270 10729,8152
+(Rundkurs auf dem Flughafen Tempelhof)	2::temp 11463,7785 11470,7744 11543,7369 11570,7315 11575,7249 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
+(Rundkurs auf dem Flughafen Tempelhof)	2::temp 9525,7558 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10575,8218
+(Rundkurs auf dem Flughafen Tempelhof)	2::temp 10575,8218 10729,8152 10924,7987 11090,7916 11264,7882 11355,7871 11381,7775 11460,7447 11518,7314
+(Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::temp 9525,7558 9431,7425 9392,7339 9300,7312 9302,7294 9242,7286
+(Südliche Landebahn)	2::temp 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11570,7315
+(Nördliche Landebahn)	2::temp 9351,7600 9518,7609 9654,7621 11279,7768 11381,7775 11463,7785
+(Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::temp 11463,7785 11439,7894
+(Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::temp 11472,7899 11458,7897 11439,7894
+(Strecke an der nordöstlichen Begrenzung)	2::temp 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10640,8366
+(Weg parallel zur Oderstr.)	2::temp 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11570,7315
+(Eingang Kienitzer Str.)	2::temp 11498,7750 11489,7748 11479,7746 11470,7744
+(Flughafen Tempelhof - Eingang Allerstr.)	2::temp 11507,7647 11515,7654
+(Flughafen Tempelhof - Eingang Okerstr.)	2::temp 11528,7528 11536,7533
+(Flughafen Tempelhof - Eingang Leinestr.)	2::temp 11547,7432 11553,7437
+(Flughafen Tempelhof - Eingang Oderstr.)	2::temp 11575,7249 11606,7260
+(Eingang Tempelhofer Damm - südliche Landebahn)	2::temp 9302,7294 9351,7241 9461,7190
+'
        }
      
 );

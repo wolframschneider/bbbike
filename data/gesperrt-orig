@@ -337,7 +337,7 @@ Karl-Bonhoeffer-Nervenklinik: für Unbefugte nicht befahrbar, Strafvollzug	2 4997
 Schöneberger Südgelände: Radfahren verboten, Eintritt 1 Euro	2 7605,7109 7621,7105 7655,7096 7666,7093
 Schöneberger Südgelände: Radfahren verboten, Eintritt 1 Euro	2 7666,7093 7344,6104 7296,5872
 Prießnitzstr.	1 11549,19258 11407,19186 11351,19169
-Klaustaler Str.	1 11439,18890 11384,19067
+Klaustaler Str.	1 11384,19067 11439,18890
 Paracelsusstr.	1 11599,19171 11549,19258 11543,19279 11575,19296 11613,19312 11671,19204
 Wormbacher Weg	1 3791,338 3782,397 3648,531
 Schwelmer Str.	1 3676,311 3569,469 3497,574
@@ -398,8 +398,7 @@ Kienhorststr.	1 5543,18555 5324,18560
 Halbauer Weg	1 7722,3142 7719,3219 7734,3290 7753,3371
 #: by: Guido (guidoh):
 Amfortasweg	1 5214,4445 5173,4471 5144,4498 5067,4434 5150,4345
-#: by: Jürgen Jacobi:
-Onkel-Bräsig-Str.	1 13324,4784 13305,4504
+# XXX del #: by: Jürgen Jacobi:Onkel-Bräsig-Str.	1 13324,4784 13305,4504
 #: confirmed_by: srt
 Hüsung	1 13324,4784 13400,4788 13468,4766
 Hüsung	1s 13468,4766 13397,4762 13324,4784
@@ -691,13 +690,18 @@ Anna-Mackenroth-Weg	1 3633,2210 3641,2459
 Fuchsbau	1 17590,7828 17651,7973
 Drosselstieg	1 17683,7958 17747,8107
 Blaurackenweg	1 17532,8125 17647,8071 17613,7989
+#: by: ewa_maria:
+Harzburger Str. (Pankow), Klaustaler Str...	1s:q4 11442,18736 11419,18801 11463,18817 11469,18799 11483,18753 11462,18743 11442,18736
+#: by: Andy (compstars)
+#: confirmed_by: Luftbild
+#: XXX_indoor bei osm falsch herum
+Faucherweg	1 -1307,14801 -1251,14772 -1207,14781 -1141,14814 -896,14888
 ######################################################################
 #
 # Potsdam
 # 
-Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718 -12323,635 -12332,585 -12582,127
-#: add_fragezeichen: Ist die Leistikowstr. für Radfahrer in entgegengesetzter Richtung geöffnet?
-Leistikowstr.	1 -12512,810 -12302,718
+Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
+Am Neuen Garten	1 -12332,585 -12582,127
 #: XXX_outdoor: überprüfen! Können Radfahrer vielleicht die linke Straßenseite nutzen?
 Humboldtring/Hans-Marchwitza-Ring: Hochstraße	3nocross -11399,-1339 -11461,-1424 -11540,-1543
 #: by: Christoph Ewert:
@@ -1036,7 +1040,7 @@ Yorckstr.: Linksabbiegen verboten (und unbequem)	3nocross 8192,9619 8097,9650 79
 An den Treptowers: unbequemes Überqueren, stark befahrene Straße	3nocross 14501,10169 14405,10027 14289,9870
 Lichtenberger Str.: Mittelstreifen	3nocross 12028,12519 12006,12464 11920,12266
 Sachsendamm: unbequem passierbarer Mittelstreifen	3nocross 7696,7562 7859,7486 7946,7411
-Karl-Marx-Str.: Mittelstreifen	3nocross 12598,8390 12582,8408 12540,8458
+Karl-Marx-Str.: Mittelstreifen	3nocross 12598,8390 12582,8408 12562,8432 12540,8458
 Karl-Marx-Str.: unbequemes Überqueren wegen parkender Autos	3nocross 12830,8031 12865,7923 12898,7832
 Flughafenstr.: Mittelstreifen (nicht unpassierbar, aber unbequem)	3nocross 11632,8302 11767,8330 11898,8362
 Stromstr.: unpassierbarer Mittelstreifen	3nocross 6183,13083 6165,12985 6156,12918 6150,12875
@@ -1122,6 +1126,7 @@ Adlergestell: Mittelstreifen	3nocross 19676,3705 19633,3751 19587,3801
 # Stellen, an denen getragen werden muß:
 # die Zahl hinter dem ":" entspricht ungefähr den verlorenen Sekunden
 # 
+tragen (19 Stufen)	0:25 11479,7746
 tragen (ca. 17 Stufen)	0:22 13779,4929
 tragen (8 Stufen)	0:15 9956,12617
 tragen (6 Stufen)	0:10 4121,4841
@@ -1302,7 +1307,7 @@ tragen (Treppe)	0:30 6017,12931
 tragen (Treppe, 4 Stufen)	0:10 38056,48407
 tragen (Treppe, 9 Stufen)	0:15 14331,17016
 tragen (4 Stufen)	0:10 12871,15882
-Rampe und 8 weite Stufen	0:25 16065,6126
+Rampe und flache Treppe (8 Stufen)	0:25 16065,6126
 tragen (Treppe, 12 Stufen)	0:15 5475,7906
 tragen (Treppe, ca. 20 Stufen)	0:25 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25 19160,14935
@@ -1505,6 +1510,8 @@ Poller, Abstand 80cm (mit Anhänger über Gehweg umfahren)	BNP:1::trailer=10 7816,
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: last_checked: 2010-05-09
+Bertiniweg: gesperrt, wird evtl. später neu geöffnet	2:inwork -12710,1713 -12642,1781 -12636,1804 -12604,1857 -12605,1927 -12593,1946 -12542,1959
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1002/nachricht3772.html
 #: next_check: 2010-10-01
 Brücke über A10: Sperrung vom 15.02.2010 bis 01.10.2010	2:inwork 15337,24593 15490,24848
@@ -1758,7 +1765,7 @@ Karl-Pokern-Str.	1 25860,5067 25860,5159 25857,5184 26026,5179 26028,5153 26034,
 Karl-Pokern-Str.	1 25860,5159 26028,5153
 Kubornstr.	1 15857,12682 15832,12518 15819,12498 15800,12353
 Lindenufer	1 -3275,14114 -3135,14183
-#: by: http://www.berlin.de/ba-spandau/presse/archiv/20051205.1215.33112.html
+#: by: (URL existiert nicht mehr) http://www.berlin.de/ba-spandau/presse/archiv/20051205.1215.33112.html
 Mauerstr.	1 -3316,14169 -3275,14114
 Groscurthstr.	1 16423,24935 16467,25092 16530,25276 16572,25407 16485,25485 16439,25442
 Friedrich-Richter-Str.	1 16264,24764 16284,24745 16217,24651
