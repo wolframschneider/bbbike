@@ -6,7 +6,7 @@ return
      "Die Aktivierung von Javascript und CSS ist empfehlenswert, aber nicht notwendig." =>
      "Activating JavaScript and CSS is preferable but not strictly necessary.",
      "Start- und Zielstra&szlig;e der Route ausw&auml;hlen" => "Choose Start and Destination street name",
-     "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)" => "Insert start and destination street name (without house number!)",
+     "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)" => "Please enter start and destination street name <b>without house number</b>! You will be prompted for the cross street on the next page",
      "Via ist optional" => "Via is optional",
      "Zurück" => "Back",
      "Weiter" => "Go on",
