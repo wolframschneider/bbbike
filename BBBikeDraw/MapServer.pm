@@ -1,7 +1,6 @@
 # -*- perl -*-
 
 #
-# $Id: MapServer.pm,v 1.45 2009/04/04 11:30:20 eserte Exp $
 # Author: Slaven Rezic
 #
 # Copyright (C) 2003-2008,2010 Slaven Rezic. All rights reserved.
@@ -30,7 +29,8 @@ $VERSION = sprintf("%d.%02d", q$Revision: 1.45 $ =~ /(\d+)\.(\d+)/);
     use base qw(Class::Accessor);
     __PACKAGE__->mk_accessors(qw(BbbikeDir MapserverMapDir MapserverBinDir
 				 MapserverRelurl MapserverUrl TemplateMap
-				 ImageSuffix FontsList));
+				 ImageSuffix FontsList
+				 MapserverVersion MapserverDriver));
 
     use vars qw($QUIET);
 
@@ -169,6 +169,14 @@ $VERSION = sprintf("%d.%02d", q$Revision: 1.45 $ =~ /(\d+)\.(\d+)/);
 	$self;
     }
 
+    sub shp2img_path {
+	my $self = shift;
+	if ($self->MapserverBinDir) {
+	    $self->MapserverBinDir . '/shp2img';
+	} else {
+	    'shp2img';
+	}
+    }
 }
 
 {
@@ -188,6 +196,7 @@ $VERSION = sprintf("%d.%02d", q$Revision: 1.45 $ =~ /(\d+)\.(\d+)/);
 		    RouteCoords MultiRouteCoords
 		    MapserverDir MapserverRelurl MapserverUrl
 		    BbbikeDir ImageDir ImageSuffix FontsList
+		    MapserverVersion MapserverDriver
 		   );
     @computed_accessors = qw(Conf ImageType);
 
@@ -249,10 +258,27 @@ $VERSION = sprintf("%d.%02d", q$Revision: 1.45 $ =~ /(\d+)\.(\d+)/);
 	$self->BbbikeDir($conf->BbbikeDir);
 	$self->ImageDir($self->BbbikeDir . "/images");
 	my $mapserver_dir = $conf->MapserverMapDir;
-	my $mapserver_bin_dir = $conf->MapserverBinDir;
+	my $shp2img_path = $conf->shp2img_path;
+
+	if (!defined $conf->MapserverVersion ||
+	    !defined $conf->MapserverDriver) {
+	    if (open my $fh, "-|", $shp2img_path, "-v") {
+		my $version_line = <$fh>;
+		if (defined $version_line) {
+		    if ($version_line =~ m{mapserver\s+version\s+(\d+)}i) {
+			$conf->MapserverVersion($1);
+		    }
+##XXX enable if there's better AGG support
+# 		    if ($version_line =~ m{\bSUPPORTS=AGG\b}) {
+# 			$conf->MapserverDriver('AGG');
+# 		    }
+		}
+	    }
+	}
 
 	$self->MapserverDir($mapserver_dir);
-	for my $var (qw(MapserverRelurl MapserverUrl ImageSuffix FontsList)) {
+	for my $var (qw(MapserverRelurl MapserverUrl ImageSuffix FontsList
+			MapserverVersion MapserverDriver)) {
 	    $self->$var($conf->$var());
 	}
 
@@ -285,7 +311,7 @@ $VERSION = sprintf("%d.%02d", q$Revision: 1.45 $ =~ /(\d+)\.(\d+)/);
 
 	my @cmd = (
 		   #"valgrind",
-		   "$mapserver_bin_dir/shp2img",
+		   $shp2img_path,
 		   "-m", $mapfile,
 		   "-e", @{ $self->BBox },
 		   "-i", $self->ImageType,
