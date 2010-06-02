@@ -1,4 +1,5 @@
 #: #: -*- coding: iso-8859-1 -*-
+#: encoding: iso-8859-1
 #: title.de: Bahnhöfe
 #: title.en: Railway stations
 #:
@@ -28,6 +29,8 @@ Jacobsdorf (Mark)	R 75478,-6977
 Pillgram	R 78352,-6456
 Frankfurt (O)-Rosengarten	R 83331,-6407
 Frankfurt (Oder)	R 88514,-6346
+#: alias: Berlin-Schönefeld Flughafen
+#: alias: Flughafen Berlin-Schönefeld
 Berlin-Schönefeld	RC 18055,-1466
 Berlin-Hohenschönhausen	RB 17607,18021
 Berlin-Karow	RB 14608,23364
@@ -77,6 +80,7 @@ Michendorf	RC -14536,-10396
 Seddin	RC -17623,-13232
 Eberswalde Hbf.	R 36315,48006
 Britz	R 37898,52485
+#: alias: Chorin-Kloster
 Chorin	R 41143,55887
 Angermünde	R 49537,68462
 Golzow (b Eberswalde)	R 38211,56944
@@ -381,7 +385,7 @@ Buddenhagen	R 25875,177788
 Hohendorf	R 29098,180702
 Wolgast	R 31675,182600
 Wolgast Hafen	R 32443,183584
-Wolgast Fähre	R 33150,184035
+Wolgaster Fähre	R 33150,184035
 Bannemin-Mölschow	R 36212,185764
 Trassenheide	R 38447,186930
 Zinnowitz	R 40706,186351
@@ -394,10 +398,13 @@ Kölpinsee	R 49020,181944
 Stubbenfelde	R 49683,181262
 Ückeritz	R 50862,179612
 Schmollensee	R 52718,176170
-Bansin	R 56362,174162
-Heringsdorf	R 58962,172675
-Ahlbeck	R 60212,171187
+Bansin Seebad	R 56362,174162
+Heringsdorf Neuhof	R 57669,172974
+Seebad Heringsdorf	R 58962,172675
+Ahlbeck Ostseetherme	R 59747,171919
+Seebad Ahlbeck	R 60381,171091
 Ahlbeck Grenze	R 62358,169623
+Swinoujscie Centrum	R 63651,168792
 Hosena	R 49344,-99923
 Hoyerswerda	R 69470,-107134
 Berlin Jungfernheide	RA 3352,13752
@@ -422,6 +429,8 @@ Spremberg	R 80105,-91209
 Bagenz	R 81908,-82220
 Neuhausen (bei Cottbus)	R 81298,-79351
 Kiekebusch (bei Cottbus)	R 78125,-75187
+#: alias: Lehrter Bahnhof
+#: alias: Berlin Hauptbahnhof
 Berlin Hauptbahnhof (Lehrter Bahnhof)	RA 7998,13244
 Potsdamer Platz	RA 8522,11503
 Berlin Südkreuz (Papestr.)	RA 7869,7674
@@ -432,6 +441,7 @@ Eichgestell	RP 20636,6188
 Hauptbahnhof	RP 20033,5965
 Wuhlheide	RP 20712,7135
 Badesee	RP 20301,6882
+Haus Natur und Umwelt	RP 20195,6680
 Freilichtbühne	RP 19958,6302
 Löcknitz	R 63435,117794
 Kratzeburg	R -23104,113110
