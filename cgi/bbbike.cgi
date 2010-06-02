@@ -3045,7 +3045,7 @@ sub make_crossing_choose_html {
 
 	    unless ($ecke_printed) {
 		if ($use_select) {
-		    $html .= " <i>" . M("Ecke") . " </i>";
+		    $html .= " <i title='" . M("die Strassenkreuzungen sind sortiert nach der Himmelsrichtung") . "'>" . M("Ecke") . " </i>";
 		    if ($bi->{'can_table'}) {
 			$html .= "</td><td>";
 		    }
