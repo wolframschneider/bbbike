@@ -163,4 +163,5 @@ Bildgr&ouml;&szlig;e, Bildformat und Detailreichtum %s bis %s kB. PDFs sind %s b
      'WGS84-Koordinaten' => 'WGS84-coordinates',
      'Zeigen' => 'show',
      'BBBike f&uuml;r andere St&auml;dte' => 'BBBike for other cities',
+     'Bitte keine <b>Hausnummer</b> eingeben' => 'Please do not enter a <b>house number</b>',
     };

@@ -2142,6 +2142,9 @@ EOF
 		print qq{<a target="newstreetform" href="$bbbike_html/newstreetform${newstreetform_encoding}.html?$qs">} . M("Diese Straße neu in die BBBike-Datenbank eintragen") . qq{</a><br><br>\n} if !$osm_data;
 		print M(qq{Oder einen anderen Straßennamen versuchen}) . qq{:<br>\n};
 	    } else {
+	        if ($$oneref =~ /^\s*\d+\w?\s+/ || $$oneref =~ /\s+\d+\w?\s*$/ ) {
+		    print M(qq{Bitte keine <b>Hausnummer</b> eingeben}) . qq{!<br>\n};
+		}
 		print M(qq{Einen anderen Straßennamen versuchen}) . qq{:<br>\n};
 	    }
 	    $no_td = 1;
