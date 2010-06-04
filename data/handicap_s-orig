@@ -13,20 +13,18 @@ Schloßplatz: Behinderungen durch Bauarbeiten möglich	q3::inwork 10170,12261 1006
 #XXX del #: last_checked: 2009-12-25 Caroline-Michaelis-Str.: Bauarbeiten, Ausweichen auf Gehweg	q4::inwork 9061,14050 9125,13973
 #: last_checked: 2010-04-23
 Fahrbahn der Mauerstr. wegen Bauarbeiten gesperrt	q4::inwork 9405,11413 9331,11497
-#: last_checked: 2010-02-02
-#: next_check: 2010-05-31
-Hauptstr. (Friedrichshain-Kreuzberg): Baustelle, Radfahrer können langsam passieren	q3::inwork 14906,10820 14794,10844 14717,10855
+#XXX del: last_checked: 2010-02-02, #: next_check: 2010-05-31, Hauptstr. (Friedrichshain-Kreuzberg): Baustelle, Radfahrer können langsam passieren	q3::inwork 14906,10820 14794,10844 14717,10855
 #: last_checked: 2010-04-23
 Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt	q4::inwork 8389,11378 8374,11479
 #: last_checked: 2010-04-29
 General-Pape-Str.: Baustelle, Fahrbahn Richtung Norden gesperrt	q4::inwork; 7959,7609 7921,7728 7950,7840
-#: last_checked: 2010-04-19
+#: last_checked: 2010-05-22
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
-#: last_checked: 2010-04-19
+#: last_checked: 2010-05-22
 Universitätsstr.: wegen Bauarbeiten Richtung Unter den Linden gesperrt	q4::inwork; 9580,12581 9601,12380
 #: last_checked: 2010-04-18
 Planckstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9434,12669 9385,12809 9383,12915
-#: last_checked: 2010-04-17
+#: next_check: 2010-10-01
 Matkowskystr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 14530,11137 14509,11060
 #: by: Uta Rahmann vvv
 #: next_check: 2010-10-01 vvv
@@ -108,7 +106,7 @@ Tiergarten: Parkweg	q1 7663,11946 7570,11855 7223,11897 7073,11798 6778,11742 65
 Tiergarten: Parkweg	q1 7816,12150 7827,12105 7832,12036 7822,11952 7801,11875 7795,11823 7777,11787 7772,11749 7796,11681 7816,11571
 (Bremer Weg - Fasanerieallee): Parkweg	q1 6342,11878 6379,11843 6406,11784 6467,11780 6540,11754
 Parkweg: enge Brücke, Fußweg	q2 14310,9692 14351,9757 14448,9922 14453,9929 14558,10082 14597,10129 14626,10162 14652,10201
-#: last_checked: 2010-04-23
+#: last_checked: 2010-05-31
 #: next_check: 2010-08-01
 #: note: Eröffnung des Hotels im Dezember 2010
 Spittelmarkt: Gehweg, wegen Bauarbeiten eng	q3::inwork 10166,11592 10153,11666 10213,11728
@@ -658,8 +656,11 @@ Blaurackenweg: enge Straße, spielende Kinder	q1 17613,7989 17647,8071 17532,8125
 Adolf-Scheidt-Platz: enge Straße, Gegenverkehr	q2; 8731,8050 8765,8050 8783,8020 8769,7994 8731,7990
 Am Britzer Garten - Straße 229: steile Brücke	q3 11103,3960 11104,3981
 Am Britzer Garten - Straße 229: enger Weg; Fußgänger	q2 11104,3981 11111,4055
-#: by: Markus Brandt:
-Kissingenplatz: Bordsteine	q4 11405,17985 11398,17962
+Kaunstr.: Fußgänger	q1 -999,2726 -984,2692
+(Römerweg - Weg entlang der Bahnstrecke): enger Weg	q2 18445,9887 18421,9764
+Brascheweg: enge Straße	q1 18881,9865 18810,9850
+Brascheweg: Fußgänger, Bordstein	q2 18810,9850 18763,9837
+Rudolf-Grosse-Str.: Fußgänger	q1 19141,9709 19142,9755
 ######################### User Contributions #################################
 #: by: Michael Kiekbusch
 #: corrected_by: srt/policy (q4 -> q3-)
@@ -968,9 +969,9 @@ An der Brauerei: Fußgänger	q2 13283,13311 13235,13414
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12851,12602 13108,12859 13046,12956 12878,13229
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12773,12683 13046,12956
 Ritterstr.: Fußgänger	q1 9763,11148 9861,11103
-Elisenstr.: Fußgänger	q2 5808,5332 5822,5388
+Elisenstr.: Fußgänger	q2 5808,5332 5810,5340 5822,5388
 Mittelstr. (Steglitz): Fußgänger	q2 5119,5332 5203,5278
-Goebenstr.: Fußgänger	q1 5606,4726 5555,4743 5509,4773 5478,4792
+Goebenstr.: Fußgänger	q1 5606,4726 5555,4743 5535,4756 5509,4773 5478,4792
 Johanna-Stegen-Str.: Fußgänger	q2 5557,4523 5479,4568 5397,4611 5371,4609 5325,4633
 Vionvillestr.: Fußgänger	q2 5557,4523 5589,4617
 Rezonvillestr.: Fußgänger	q2 5589,4617 5607,4610
@@ -1277,7 +1278,7 @@ Rosenorter Steig: enge Straße	q1 -1349,23497 -1451,23525 -1535,23575 -1617,23624
 #: by: Alfred Zudse:
 Straße 40 (Blankenburg): enge Straße	q1 14893,20583 14945,20748 15035,21026
 #: by: Andreas Vildman:
-(Mörchinger Str. - Berliner Str.): Fußgänger	q2 1360,3253 1358,3257 1338,3300
+(Mörchinger Str. - Berliner Str.): Fußgänger	q2 1393,3183 1388,3197 1338,3300
 #: by: Liana (lumielle):
 Sanddornstr.: enge Straße	q1 19184,4888 19199,4954 19191,5075 19173,5139
 #: by: Catherina Haags:
@@ -1834,3 +1835,18 @@ Albrechtshofer Weg: enge Straße	q1 -7517,15858 -7642,15840 -7747,15842 -7865,158
 #: by: Andy (compstars):
 #: by: Tatjana Brühl: enge Straße, q0
 Faucherweg: enge Straße	q1 -1307,14801 -1251,14772 -1207,14781 -1141,14814 -896,14888
+#: by: Ralf Wilcke:
+#: note: "fahrbahnbreite für 2 autos wenn keines parkt, was aber oft der fall ist."
+Dualastr.: enge Straße	q1 6019,15841 5848,15685
+#: by: hannes Peters:
+#: corrected_by: srt/policy (q3 -> q1)
+(Horterweg - Römerweg): einige Fußgänger	q1 19005,9816 19003,9800 18994,9707
+#: by: Markus Brandt:
+Kissingenplatz: Bordsteine	q4 11405,17985 11398,17962
+#: by: Wicharz:
+#: confirmed_by: anonymous
+Ruben-Wolf-Str.: einige Fußgänger	q1+ 19906,217 19785,361
+#: by: Jörg Henke:
+Semmelweg: einige Fußgänger	q1 1229,18750 1101,18611 915,18352 766,18083 492,17831 396,17648 255,17528
+#: by: Katrin Ahrens:
+Langenbeckplatz: enge Straße	q1 25030,9626 25095,9627 25086,9733 25020,9728 25030,9626

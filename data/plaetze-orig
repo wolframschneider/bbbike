@@ -11,6 +11,7 @@ Rosenthaler Platz	Pl 10177,13766
 Kleistpark	Pl 7479,9357
 Hochmeisterplatz	Pl 3431,9763
 Fehrbelliner Platz	Pl 4347,9290
+Julius-Morgenroth-Platz	Pl 4230,9229
 Emser Platz	Pl 4708,9498
 Walther-Schreiber-Platz	Pl 5370,6486
 Bundesplatz	Pl 5357,8013
@@ -208,6 +209,7 @@ Platz S	Pl 14015,8798
 #: section faked_plaetze vvv
 # Keine offiziellen Straßennamen, sondern
 # bekannte Bezeichnungen oder Sehenswürdigkeiten
+#: XXX_prog: diese Liste sollte nicht notwendig sein, sondern es sollte automatisch einen Fallback auf sehenswuerdigkeit/flaechen/brunnels/... geben vvv
 Kottbusser Tor	Pl 11393,10390
 Anhalter Bahnhof	Pl 8947,10956
 Flughafen Tempelhof	Pl 9401,8510
@@ -234,6 +236,12 @@ Insel der Jugend	Pl 15675,9090
 #: note: der Punkt ist der gegenüberliegende auf dem Festland
 Pfaueninsel	Pl -8564,2276
 Museumsinsel	Pl 9948,12631
+#: XXX_prog: populäre Brücken, sollten auch automatisch aus brunnels verwendet werden vvv
+Modersohnbrücke	Pl 14096,11134
+Warschauer Brücke	Pl 13476,11174
+Moltkebrücke	Pl 7936,12906
+Weidendammer Brücke	Pl 9280,12883
+#: XXX_prog ^^^
 #: append_comment Potsdam vvvvv
 Potsdam Hauptbahnhof	Pl -12493,-1896
 Potsdam Hbhf	Pl -12493,-1896
@@ -242,6 +250,7 @@ Schloß Sanssouci	Pl -14355,-606
 Sanssouci	Pl -14355,-606
 Telegrafenberg	Pl -12391,-3296
 #: append_comment ^^^^^^^^^^^^^
+#: XXX_prog ^^^
 #: section ^^^
 ######################################################################
 Habermannplatz	Pl 4715,8977

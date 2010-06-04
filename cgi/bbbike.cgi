@@ -689,7 +689,7 @@ $newstreetform_encoding = "";
 			   Dahlwitz-Hoppegarten Woltersdorf Rüdersdorf Werder Hennigsdorf Schwanebeck Hönow Ahrensfelde Großziethen
 		          ), "Hohen Neuendorf", "Königs Wusterhausen", "Schöneiche bei Berlin", "Neuenhagen bei Berlin",
 			"Petershagen bei Berlin", 'Dallgow-Döberitz', "Schönefeld", "Gosen", "Zepernick", "Röntgental",
-			"Glienicke/Nordbahn",
+			"Glienicke/Nordbahn", "Dahlewitz",
 		       );
 $outer_berlin_qr = "^(?:" . join("|", map { quotemeta } @outer_berlin_places) . ")\$"; $outer_berlin_qr = qr{$outer_berlin_qr};
 
@@ -1887,7 +1887,7 @@ sub choose_form {
 
     if ($nice_berlinmap || $nice_abcmap) {
 	push @extra_headers, -onLoad => $onloadscript,
-	     -script => [{-src => $bbbike_html . "/bbbike_start.js?v=1.16"},
+	     -script => [{-src => $bbbike_html . "/bbbike_start.js?v=1.17"},
 			 ($nice_berlinmap
 			  ? {-code => qq{set_bbbike_images_dir('$bbbike_images')}}
 			  : ()
@@ -2300,7 +2300,7 @@ EOF
 
 <script type="text/javascript">
 	var ac_$city = \$('#$searchinput').autocomplete( 
-		{ serviceUrl: 'api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:400, width:300, deferRequestBy:100  }
+		{ serviceUrl: 'api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:400, width:300, deferRequestBy:100, noCache: true }
 	);
 </script><br>
 
@@ -3048,7 +3048,7 @@ sub make_crossing_choose_html {
 
 	    unless ($ecke_printed) {
 		if ($use_select) {
-		    $html .= " <i>" . M("Ecke") . " </i>";
+		    $html .= " <i title='" . M("die Strassenkreuzungen sind sortiert nach der Himmelsrichtung") . "'>" . M("Ecke") . " </i>";
 		    if ($bi->{'can_table'}) {
 			$html .= "</td><td>";
 		    }

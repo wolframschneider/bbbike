@@ -696,6 +696,7 @@ Harzburger Str. (Pankow), Klaustaler Str...	1s:q4 11442,18736 11419,18801 11463,
 #: confirmed_by: Luftbild
 #: XXX_indoor bei osm falsch herum
 Faucherweg	1 -1307,14801 -1251,14772 -1207,14781 -1141,14814 -896,14888
+Römerweg	1s:q2 19236,9710 19450,9728 19459,9842
 ######################################################################
 #
 # Potsdam
@@ -1120,6 +1121,10 @@ Schildhornstreifen: Mittelstreifen vor dem Autobahnanschluss	3nocross 4292,6558 
 Adlergestell: Mittelstreifen	3nocross 19735,3643 19812,3561 19857,3514 19904,3464
 #: note: Luftbild:
 Adlergestell: Mittelstreifen	3nocross 19676,3705 19633,3751 19587,3801
+#: by: Thomas Pörs:
+Rhinstr.: Straßenbahngleise	3nocross 17579,15565 17542,15648 17488,15766
+Potsdamer Chaussee: Mittelstreifen	3nocross -1249,2590 -1085,2653 -984,2692 -870,2737
+Potsdamer Chaussee: Mittelstreifen	3nocross -870,2737 -756,2787 -567,2869 -512,2883 -391,2914
 #
 ####################################################################
 #
@@ -1213,7 +1218,7 @@ tragen (Treppen zur U-Bahnbrücke, 2 x 3 Stufen)	0:20 2301,4917
 tragen (Treppen zur U-Bahnbrücke, 2 x 3 Stufen)	0:20 2181,4835
 tragen (Eisenbahnbrücke Templiner See)	0:60 -15537,-4535
 tragen (Eisenbahnbrücke Templiner See)	0:60 -15652,-4441
-tragen (Eisenbahnbrücke Caputh)	0:60 -18009,-7528
+tragen (Eisenbahnbrücke Caputh)	0:60 -18002,-7496
 tragen (Eisenbahnbrücke Caputh)	0:60 -17978,-7375
 tragen (Eisenbahnbrücke Werder)	0:60 -21048,-2029
 tragen (Eisenbahnbrücke Werder)	0:60 -21210,-2058
@@ -1226,8 +1231,7 @@ tragen (Spreetunnel, ca. 50 Stufen)	0:60 25658,4619
 tragen (Spreetunnel, 50 Stufen)	0:60 25571,4553
 tragen (Brücke Tegeler Hafen)	0:60 1227,20281
 tragen (Brücke Tegeler Hafen)	0:60 1166,20330
-#: XXX ja, siehe osm-Karte. Richtung Rosestr. scheint noch eine Treppe zu sein.
-tragen? (Fußgängerbrücke)	0:120 20442,564
+# XXX del (Neubau einer Brücke): XXX ja, siehe osm-Karte. Richtung Rosestr. scheint noch eine Treppe zu sein. tragen? (Fußgängerbrücke)	0:120 20442,564
 #: XXX ja, siehe osm-Karte.
 tragen? (Fußgängerbrücke)	0:120 19762,-160
 tragen (Stufen), mit MTB befahrbar	0:30 5725,11644
@@ -1317,6 +1321,10 @@ tragen (Treppe, ca. 20 Stufen)	0:25 19160,14935
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+#: by: hannes Peters:
+#: note: "mit Anhänger eng, aber langsam passierbar"
+#: confirmed_by: srt
+Einfahrsperre für Autos	BNP:0::trailer=2 19003,9800
 #: XXX_prog: "künstlicher" Eintrag, um Anhänger auszusperren, siehe auch handicap_s
 sehr enge Stelle	BNP:0::trailer=no 31909,2802
 enges Drängelgitter	BNP:5::trailer=no 30862,3816
@@ -1390,7 +1398,7 @@ Schranke	BNP:5 21297,12748
 #: confirmed_by: srt
 Drängelgitter	BNP:5 22061,15168
 #: by: Andreas Vildman:
-Drängelgitter kann ohne Absteigen passiert werden	BNP:2 1358,3257
+Drängelgitter kann ohne Absteigen passiert werden	BNP:2 1388,3197
 Barriere für Autofahrer	BNP:2 17301,7645
 #: by: Niels Weber
 Drängelgitter	BNP:5 11010,-378
@@ -1516,24 +1524,25 @@ Bertiniweg: gesperrt, wird evtl. später neu geöffnet	2:inwork -12710,1713 -12642
 #: next_check: 2010-10-01
 Brücke über A10: Sperrung vom 15.02.2010 bis 01.10.2010	2:inwork 15337,24593 15490,24848
 #XXX del: last_checked: 2009-09-18, #: next_check: 2010-04-01, Kreuzstr.: Bauarbeiten, voll gesperrt	2:inwork 10231,11940 10209,11918
-#: next_check: 2010-09-31
-#: XXX der Neubau wird "N" sein und auch Radwege haben
+#: next_check: 2010-12-31
+#: XXX der Neubau wird "N" oder "NH" sein und Radwege haben
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0907/nachricht3563.html
+#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1005/nachricht3870.html
 Wegedornbrücke: Vollsperrung, Neubau	2:inwork 20385,593 20442,564 20510,530
 #: next_check: 2011-03-01
 Rathausbrücke: gesperrt bis März 2011 (Neubau)	2:inwork 10362,12351 10422,12395
-#: last_checked: 2010-04-24 vvv
-#: next_check: 2010-07-01 vvv
+#: last_checked: 2010-05-25 vvv
+#: next_check: 2010-08-01 vvv
 Vicki-Baum-Str.: noch in Bau, gesperrt	2:inwork 15990,10185 15894,10251
 Vicki-Baum-Str.: noch in Bau, gesperrt	2:inwork 15823,10300 15753,10353 15688,10400
 Alice-und-Hella-Hirsch-Ring: noch in Bau, gesperrt	2:inwork 15788,10252 15823,10300
 Lina-Morgenstern-Str.: noch in Bau, gesperrt	2:inwork 15716,10303 15753,10353
 #: next_check ^^^
 #: last_checked ^^^
-#: last_checked: 2010-03-26
-#: next_check: 2010-05-31
-#: note: zumindest auf der östlichen Seite wird ein Radweg entstehen
-Kynaststraße: Abriss und Neubau	2:inwork 14988,11130 14897,10935 14881,10864 14867,10802 14828,10628 14802,10505 14795,10473 14766,10372 14724,10297
+#: last_checked: 2010-06-01
+#: next_check: 2011-03-01
+Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14795,10473 14805,10518
+#XXX del 14988,11130 14897,10935 14881,10864 14867,10802 14828,10628 14802,10505 14795,10473 14766,10372 14724,10297
 #: last_checked: 2009-09-12
 Brücke im Tiergarten: gesperrt	2:inwork 6406,11784 6467,11780
 #: by: tobias wirnsberger
@@ -1627,9 +1636,9 @@ tragen (3 Stufen) oder schmale Rampe benutzen	0:5 12982,14629
 tragen (8 Stufen)	0:15 5575,5801
 tragen (12 Stufen)	0:20 5581,5828
 Althoffplatz	1 5687,5586 5609,5584 5573,5622 5613,5672 5683,5672
-Elisenstr.: tragen (3 Stufen)	0:15 5808,5332
+Elisenstr.: tragen (3 Stufen)	0:15 5810,5340
 tragen (9 Stufen)	0:30 5822,5388
-tragen (3 x 10 Stufen)	0:90 5478,4792
+tragen (3 x 10 Stufen)	0:90 5535,4756
 tragen (8 Stufen)	0:30 5466,4765
 tragen (Treppe)	0:20 5371,4609
 #: XXX Was ist das hier? Ein Drängelgitter, eine Schranke?
@@ -1775,6 +1784,7 @@ Groscurthstr.	1 16369,25230 16458,25193 16428,25107
 #: by: Martha Wimmer [AM]
 Sonnenallee	3nocross 14617,7243 14693,7168 14803,7056
 Treskowallee: Straßenbahntrasse	3nocross 18631,10167 18690,10016 18698,9996 18737,9901
+Treskowallee: Straßenbahntrasse	3nocross 18800,9743 18763,9837 18737,9901
 #: by: Christian Schweda [AM]
 Treskowallee: Straßenbahn	3nocross 18872,9568 18857,9606 18816,9705
 Treskowallee: Straßenbahn	3nocross 18800,9743 18816,9705 18857,9606
@@ -1973,6 +1983,7 @@ Poller	BNP:0 -585,36153
 # (entlang Umgehungsbahn) / Einfahrt Kleingartenanlage
 Poller	BNP:5 -2228,37131
 # (entlang Umgehungsbahn) / Schmalkaldener Str.
+#: add_fragezeichen: wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?
 Poller	BNP:5 -1889,37093
 # Fliederweg (Ostende)
 Poller	BNP:0 -1790,39587

@@ -174,12 +174,14 @@ Damme|(Uckermark)	1 49971,99565
 #: XXX_prog: Randowtal: besteht aus Eickstedt, Schmölln und Ziemkendorf.
 Eickstedt	1 51860,100659
 Warnitz	2 40971,86948
-Neuhof|(Warnitz)	0 42210,88596
+Neuhof|(Warnitz)	0 42311,88596
 Quast|(Warnitz)	0 41821,89709
 Potzlow	1 38475,90762
 Strehlow|(Potzlow)	0 38612,91950
 Abbau|(Potzlow)	0 36234,88882
 Rollberg|bei Eickstedt	0 53396,102754
+Rollberg/Ausbau	0 52996,102214
+Eickstedt/Ausbau	0 52403,101676
 Vogelsang|(Wallmow)	0 54717,103147
 Wallmow	1 54861,105010
 Wendtshof|(Wallmow)	0 53669,106653
@@ -232,6 +234,7 @@ Schmiedeberg	1 46191,82616
 Polßen	1 47579,85189
 Meichow	1 48468,87288
 Neumeichow	0 47090,88237
+Neumeichow/Ausbau	0 46529,89125
 Fredersdorf|(Uckermark)	1 51546,85950
 Zichow	1 51884,87559
 Golm|(Uckermark)	1 51689,83925
@@ -993,6 +996,8 @@ Labömitz	0 52937,169481
 Stolpe|auf Usedom	1 47071,163315
 Welzin|(bei Stolpe)	0 45028,161679
 Dargen	1 52228,165503
+#: note: Ortsteil von Dargen:
+Prätenow	0 51034,165181
 Gummlin	0 49188,164029
 Görke	0 54219,165539
 Kachlin	0 52616,166814
@@ -1077,10 +1082,10 @@ Blumberg|bei Casekow	1 59648,89982
 Hohenselchow	2 68363,89887
 Hohenreinkendorf	1 71721,92864
 Geesow	1 75347,95511
-Mescherin	1 78564,94756
+Mescherin	1 78499,94788
 Staffelde|(bei Mescherin)	0 78555,97379
 Tantow	1 73017,97449
-Keesow	0 72032,97559
+Keesow	0 72013,97603
 Schönfeld|(bei Penkun)	1 68964,97629
 Radekow	1 73101,100563
 Neurochlitz	1 76788,98470

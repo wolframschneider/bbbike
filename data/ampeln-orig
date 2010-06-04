@@ -789,8 +789,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 1136,3878
 	X 458,3697
 	X -266,3648
-#: note: evtl. wird nach den Bauarbeiten auf der Kynaststr. die alte Situation wieder hergestellt
-	F 14994,11120
+	X 14988,11130
 	X 12349,8464
 	X 17427,10259
 	X 17605,10199
@@ -2501,6 +2500,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Luftbild
 	F 20788,4008
 	F 14842,8809
+	F -3011,1761
+	F -2671,1988
+	X 6480,7992
+	F 4862,10881
 ################################################################################
 # note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10044614/620526/

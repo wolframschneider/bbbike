@@ -19,9 +19,10 @@ my $opensearch_file = 'opensearch.streetnames';
 my $opensearch_dir  = '../data-osm';
 my $opensearch_dir2 = '../data-opensearch-places';
 
-my $debug         = 1;
-my $match_anyware = 0;
-my $match_words   = 1;
+my $debug              = 1;
+my $match_anyware      = 0;
+my $match_words        = 1;
+my $remove_housenumber = 1;
 
 # word matching for utf8 data
 my $force_utf8 = 0;
@@ -249,6 +250,25 @@ binmode( \*STDOUT, ":utf8" ) if $force_utf8;
 
 my @suggestion =
   sort &streetnames_suggestions_unique( 'city' => $city, 'street' => $street );
+
+# strip english style addresses with
+#    <house number> <street name>
+# and run the query again if nothing was found
+if (   $remove_housenumber
+    && scalar(@suggestion) == 0
+    && $street =~ /^\d+\s+/ )
+{
+    my $street2 = $street;
+    $street2 =~ s/^\d+\s+//;
+
+    if ( $street2 ne "" ) {
+        warn "housenumber: $street <=> $street2\n" if $debug;
+        @suggestion = sort &streetnames_suggestions_unique(
+            'city'   => $city,
+            'street' => $street2
+        );
+    }
+}
 
 # plain text
 if ( $namespace eq 'plain' || $namespace == 1 ) {

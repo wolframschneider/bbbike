@@ -126,11 +126,12 @@ Steigung 4.0% (Kopischstr.)	St; 9477,9113 9459,9019
 Steigung 4.0% (Briesestr.)	St; 12668,8077 12446,8032
 Steigung 3.9% (Gritznerstr.)	St; 4370,6052 4291,5895
 Steigung 3.9% (Hochkirchstr.)	St; 8086,9418 8076,9316
+Steigung 3.9% (Wannseebadweg)	St; -4918,4087 -4650,3902
 Steigung 3.9% (Friesenstr. (Kreuzberg, Tempelhof))	St; 9797,9063 9799,8962
 Steigung 3.9% (Hochkirchstr.)	St; 8105,9313 8102,9262
 Steigung 3.9% (Hochkirchstr.)	St; 8076,9316 8105,9313
 Steigung 3.9% (Friesenstr. (Kreuzberg, Tempelhof))	St; 9795,9162 9797,9063
-Steigung 3.9% (Wannseebadweg)	St; -4964,4100 -4650,3902
+Steigung 3.9% (Wannseebadweg)	St; -4964,4100 -4918,4087
 Steigung 3.9% (Aachener Str.)	St; 4623,8457 4687,8306
 Steigung 3.9% (Königin-Luise-Str.)	St; 3850,5801 3931,5825
 Steigung 3.9% (Conradstr. (Wannsee))	St; -5588,1454 -5675,1429
@@ -854,7 +855,7 @@ Steigung 1.4% (Siegfriedstr. (Neukölln))	St; 12843,7093 12810,7047
 Steigung 1.4% (Albrechtstr. (Steglitz))	St; 5193,5431 5268,5386
 Steigung 1.4% (Hüttenweg (Grunewald, Dahlem))	St; 736,6217 869,6085
 Steigung 1.4% (Attilastr.)	St; 7263,4281 7310,4308
-Steigung 1.4% (Dr.-Kleusberg-Promenade: Qualität? Nachts beleuchtet? Ausgeschildert?)	St; -4585,9836 -4571,9764
+Steigung 1.4% ((Dr.-Kleusberg-Promenade) (Ist der Weg ausgeschildert? Ist der Weg nachts beleuchtet?))	St; -4585,9836 -4571,9764
 Steigung 1.4% (Hugo-Vogel-Str.)	St; -6216,1192 -6244,1315
 Steigung 1.4% (Stülpnagelstr.)	St; 2188,11679 2190,11569
 Steigung 1.4% ((Havel-Ufer Gatow))	St; -4442,9625 -4536,9800

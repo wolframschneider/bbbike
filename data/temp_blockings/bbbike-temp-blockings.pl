@@ -22,9 +22,9 @@ require Time::Local;
        text  => "Gesperrte Straßen am 28.5. zwischen 14 Und 24 Uhr während des Kirchentages (im Bereich Pariser Platz - Unter den Linden - Friedrichstr. - Gendarmenmarkt)",
        type  => "handicap",
      },
-     { from  => 1180032943, # 2007-05-24 20:55 PERIODISCH!
-       until => 1180389600, # 2007-05-29 00:00
-       text  => 'Straßenfest rund um den Blücherplatz, 25.05.2007, 0.00 Uhr bis 29.05.2007, 0.00 Uhr ',
+     { from  => Time::Local::timelocal(reverse(2010-1900,5-1,21,0,0,0)), # PERIODISCH!
+       until => Time::Local::timelocal(reverse(2010-1900,5-1,24,23,59,59)), # PERIODISCH!
+       text  => 'Straßenfest rund um den Blücherplatz, 21.05.2010 bis 24.05.2010',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 9521,10010 9827,10051
@@ -45,9 +45,9 @@ userdel auto	3 9689,10124 9827,10051 9837,9856
 userdel auto	3 9579,10122 9599,10175 9593,10238
 EOF
      },
-     { from  => 1243679400, # 2009-05-30 12:30 PERIODISCH!
-       until => 1243798200, # 2009-05-31 21:30
-       text  => 'Karneval der Kulturen, 31.05.2009, 12.30 Uhr bis 21.30 Uhr ',
+     { from  => Time::Local::timelocal(reverse(2010-1900,5-1,23,0,0,0)), # PERIODISCH!
+       until => Time::Local::timelocal(reverse(2010-1900,5-1,23,23,59,25)), # PERIODISCH!
+       text  => 'Karneval der Kulturen, 23.05.2009',
        type  => 'gesperrt',
        file  => "karneval-der-kulturen.bbd",
      },
@@ -2798,7 +2798,7 @@ EOF
        text  => 'L 201; (Nauener Chaussee); OD Falkensee, zw. F.-Ludwig-Jahn-Str. u. Innstr. Straßenbauarbeiten halbseitig gesperrt; Einbahnstraße 14.09.2005-30.09.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -12601,19517 -12074,19052
+userdel	q4 -12601,19517 -12161,19075
 EOF
      },
      { from  => 1126994400, # 2005-09-18 00:00
@@ -2926,7 +2926,7 @@ EOF
        text  => 'L 201; (Nauener Chaussee); OD Falkensee, zw. F.-Ludwig-Jahn-Str. u. Innstr. Straßenbauarbeiten halbseitig gesperrt; Einbahnstraße 14.09.2005-30.10.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -12601,19517 -12074,19052
+userdel	q4 -12601,19517 -12161,19075
 EOF
      },
      { from  => 1128549600, # 2005-10-06 00:00
@@ -5647,7 +5647,7 @@ EOF
        text  => 'L 201 OD Falkensee OD Falkensee, Falkenhagener Str. Straßenbau Vollsperrung 28.08.2006-31.07.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -10661,17873 -10926,17992
+userdel	q4::inwork -10661,17873 -10806,17958 -10926,17992
 EOF
      },
      { from  => 1156976097, # 2006-08-31 00:14
@@ -6507,7 +6507,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_003935',
        data  => <<EOF,
-userdel	q4::inwork; 14881,10864 14897,10935 14988,11130
+userdel	q4::inwork; 14894,10861 14919,10954 14950,11049 14988,11130
 EOF
      },
      { from  => 1155592800, # 2006-08-15 00:00
@@ -10352,7 +10352,7 @@ EOF
        text  => 'Bauarbeiten am Ostkreuz, Verbindungsstraße könnte für die Durchfahrt gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 14724,10297 14764,10303 14794,10336 14821,10478 14836,10524 14843,10621 14882,10732
+userdel	2::inwork 14673,10180 14764,10303 14794,10336 14821,10478 14832,10512 14843,10621 14882,10732
 EOF
      },
      { from  => undef, # 
@@ -11492,7 +11492,7 @@ EOF
        text  => 'Untere Kynaststr.: Restbauarbeiten, Straße könnte u.U. bis zum 2.6.2008 gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 14724,10297 14764,10303 14794,10336 14821,10478 14836,10524 14843,10621 14882,10732 14906,10820
+userdel	2::inwork 14673,10180 14764,10303 14794,10336 14821,10478 14832,10512 14843,10621 14882,10732 14906,10820
 EOF
      },
      { from  => undef, # 
@@ -11517,7 +11517,7 @@ EOF
        text  => 'Kynaststraße wird ab 2.6.2008 gesperrt. Unter Umständen wird dann die Untere Kynaststraße befahrbar sein.',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 14988,11130 14897,10935 14881,10864 14867,10802 14828,10628 14802,10505
+userdel	2::inwork 14988,11130 14950,11049 14919,10954 14894,10861 14880,10808 14828,10628 14805,10518
 EOF
      },
      { from  => 1211493600, # 2008-05-23 00:00
@@ -15310,13 +15310,14 @@ EOF
      },
      { from  => undef, #
        until => undef, #
-       text  => 'Innovationspark Köpenick: Privatstraße, nachts und am Wochenende gesperrt',
+       text  => 'Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt',
        type  => 'gesperrt',
        permanent => 1,
        data  => <<EOF,
 #: note: Sperrung bestätigt von Stefan (s.sms): vvv
-Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts und am Wochenende gesperrt	2::temp 21683,6946 21498,7153 21475,7500 21497,7597 21546,7635
-Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts und am Wochenende gesperrt	2::temp 21475,7500 21341,7487 21025,7349
+#: note: genauere Uhrzeit von Dieter Heimann
+Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::temp 21683,6946 21498,7153 21475,7500 21497,7597 21546,7635
+Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::temp 21475,7500 21341,7487 21025,7349
 #: note: ^^^
 EOF
      },
@@ -17091,12 +17092,13 @@ EOF
 userdel	q4::inwork -17930,-19476 -18615,-19264
 EOF
      },
-     { from  => 1240437600, # 2009-04-23 00:00
-       until => 1275343200, # 2010-06-01 00:00
-       text  => 'L 090 Eisenbahnstraße OD Werder, zw. Kesselgrund- u. Gartenstraße Rohrleit.-,Straßen-u.Gehwegbau halbseitig gesperrt; Einbahnstraße 24.04.2009-31.05.2010 ',
+     { from  => 1275342093, # 2010-05-31 23:41
+       until => 1276293600, # 2010-06-12 00:00
+       text  => 'Werder (Havel): L90: Rohrleitungsbau / Straßenbau / Gehweg OD Werder zw. Kesselgrund- und Gartenstraße - 2. BA Richtungsverkehr zw. AS Phöben und Werder, 13.03.2009 bis 11.06.2010 ',
        type  => 'handicap',
+       source_id => 'LS/W-SG33-P/09/109-8',
        data  => <<EOF,
-userdel	q4::inwork -21524,-2998 -22042,-2060
+userdel	q4::inwork; -22042,-2060 -21524,-2998
 EOF
      },
      { from  => 1252879200, # 2009-09-14 00:00
@@ -17207,9 +17209,9 @@ EOF
 userdel	q4::inwork -8457,-11261 -8332,-10598
 EOF
      },
-     { from  => 1261436400, # 2009-12-22 00:00
-       until => 1275084000, # 2010-05-29 00:00
-       text  => 'Schenkenberg: Grundhafter Straßenbau L 26 Prenzlau - A 20 23.12.09 - 28.05.10',
+     { from  => 1238191200, # 2009-03-27 23:00
+       until => 1293750000, # 2010-12-31 00:00
+       text  => 'Schenkenberg: L26: Grundhafter Straßenbau Prenzlau - A 20, 28.03.2009 23:00 Uhr bis 30.12.2010 ',
        type  => 'gesperrt',
        source_id => 'LS/O-SG33-E/09/214',
        data  => <<EOF,
@@ -17376,9 +17378,9 @@ EOF
 userdel	2::inwork 25170,18422 25654,17351
 EOF
      },
-     { from  => 1271281052, # 2010-04-14 23:37
-       until => 1273701600, # 2010-05-13 00:00
-       text  => 'Liebenwalde: Deckenerneuerung Klosterfelde - Zerpenschleuse 07.04.2010 bis 12.05.2010 ',
+     { from  => 1274300034, # 2010-05-19 22:13
+       until => 1274479200, # 2010-05-22 00:00
+       text  => 'Liebenwalde: B109: Deckenerneuerung Klosterfelde - Zerpenschleuse, 07.04.2010 bis 21.05.2010 ',
        type  => 'gesperrt',
        source_id => 'LSO-SG33-E10027',
        data  => <<EOF,
@@ -17599,6 +17601,87 @@ EOF
 (Flughafen Tempelhof - Eingang Leinestr.)	2::temp 11547,7432 11553,7437
 (Flughafen Tempelhof - Eingang Oderstr.)	2::temp 11575,7249 11606,7260
 (Eingang Tempelhofer Damm - südliche Landebahn)	2::temp 9302,7294 9351,7241 9461,7190
+EOF
+     },
+     { from  => 1263121920, # 2010-01-10 12:12
+       until => 1338472800, # 2012-05-31 16:00
+       text  => 'Lahnstr. (Neukölln): Baustelle, Fahrtrichtung gesperrt (bis Mitte 2012) Richtung Grenzallee zwischen Naumburger Str. und Mierstr., 11.01.2010 12:12 Uhr bis 31.05.2012 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_014905',
+       data  => <<EOF,
+userdel	q4::inwork; 13627,7047 13500,7018 13278,6967
+EOF
+     },
+     { from  => 1274300387, # 2010-05-19 22:19
+       until => 1280181600, # 2010-07-27 00:00
+       text  => 'Oberkrämer: L17: grundhafter Ausbau der Ortsdurchfahrt OD Schwante zw. Ortseingang und Kreisverkehr, 17.05.2010 bis 26.07.2010 ',
+       type  => 'handicap',
+       source_id => 'LS/O-SG33-E/10/042',
+       data  => <<EOF,
+userdel	q4::inwork -11307,35852 -11541,36139
+EOF
+     },
+     { from  => 1274001000, # 2010-05-16 11:10
+       until => 1276264800, # 2010-06-11 16:00
+       text  => 'Otternbuchtstr. (Spandau): Baustelle, Fahrtrichtung gesperrt (bis voraus. Ende 05/2010) Richtung Nonnendammallee zwischen Motardstr. und Nonnendammallee, 17.05.2010 11:10 Uhr bis 11.06.2010 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_015726',
+       data  => <<EOF,
+userdel	q4::inwork; -269,14178 -245,14343 -248,14518
+EOF
+     },
+     { from  => 1274188260, # 2010-05-18 15:11
+       until => 1274612350, # 2010-06-18 18:00 1276876800
+       text  => 'Stuttgarter Platz (Charlottenburg): Baustelle, Fahrtrichtung gesperrt (bis Mitte 06/2010) Richtung Kaiser-Friedrich-Str. ab Wilmersdorfer Str., 19.05.2010 15:11 Uhr bis 18.06.2010 18:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_015738',
+       data  => <<EOF,
+userdel	q4::inwork; 3827,10980 3546,10962
+EOF
+     },
+     { from  => 1273997280, # 2010-05-16 10:08
+       until => 1274450880, # 2010-05-21 16:08
+       text  => 'Westfälische Str. (Wilmersdorf): Baustelle, Fahrtrichtung gesperrt (bis Ende 05/2010) Richtung Kurfürstendamm zwischen Joachim-Friedrich-Str. und Johann-Sigismund-Str., 17.05.2010 10:08 Uhr bis 21.05.2010 16:08 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_015724',
+       data  => <<EOF,
+userdel	q4::inwork; 3092,9886 2938,9935
+EOF
+     },
+     { from  => 1274019000, # 2010-05-16 16:10
+       until => 1275318720, # 2010-05-31 17:12
+       text  => 'Wiltbergstr. (Pankow): Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei (bis ca. Ende 05/2010) in beiden Richtungen zwischen Alt-Buch und Röbellweg, 17.05.2010 16:10 Uhr bis 31.05.2010 17:12 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_015731',
+       data  => <<EOF,
+userdel	q3::inwork 16414,25575 16294,25683 16194,25743 16166,25767 16114,25827 16045,25907
+EOF
+     },
+     { from  => 1275342035, # 2010-05-31 23:40
+       until => 1282946400, # 2010-08-28 00:00
+       text  => 'Treuenbrietzen: L82: Bau Schmutzwasser- und Trinkwasserleitungen OL Marzahna, 27.05.2010 bis 27.08.2010 ',
+       type  => 'gesperrt',
+       source_id => '106900348',
+       data  => <<EOF,
+userdel	2::inwork -29601,-47258 -30976,-45652
+EOF
+     },
+     { from  => 1275170400, # 2010-05-30 00:00
+       until => 1285883999, # 2010-09-30 23:59
+       text  => 'Marksburgstraße, Bauarbeiten zwischen Treskowallee und Hentigstraße, 31.05. bis 30.09., Fahrbahn gesperrt',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100528.1110.297131.html',
+       data  => <<EOF,
+userdel	q4::inwork 18809,9133 18697,9153 18586,9172
+EOF
+     },
+     { from  => 1281736800, # 2010-08-14 00:00
+       until => 1288652399, # 2010-11-01 23:59
+       text  => 'Marksburgstraße, Bauarbeiten zwischen Hentigstraße und Sangeallee, 15.08. bis 01.11., Fahrbahn gesperrt ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100528.1110.297131.html',
+       data  => <<EOF,
+userdel	q4::inwork 18586,9172 18511,9185 18430,9199 18319,9218
 EOF
      },
     );
