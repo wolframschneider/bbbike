@@ -698,6 +698,17 @@ Harzburger Str. (Pankow), Klaustaler Str...	1s:q4 11442,18736 11419,18801 11463,
 Faucherweg	1 -1307,14801 -1251,14772 -1207,14781 -1141,14814 -896,14888
 Römerweg	1s:q2 19236,9710 19450,9728 19459,9842
 Michaelkirchplatz	1 11415,11392 11498,11417
+#: by: Ulrike Orlowski vvv
+#: XXX_osm Einbahnstraßen fehlen bei osm vvv
+Berenhorststr.	1 4816,17712 4862,17934
+Berenhorststr.	1 4905,18142 4862,17934
+Von-der-Gablentz-Str.	1 5151,17658 4946,17701 4893,17698 4816,17712
+#: XXX_osm ^^^
+#: by: ^^^
+#: by: Christian (i8pp):
+Kemmannweg	1 -4207,14473 -4117,14458 -4049,14419 -3937,14340 -3911,14331 -3819,14302
+#: by: jan (...matrix):
+Privatstr. 13	1 13171,17335 13103,17280 13018,17264
 ######################################################################
 #
 # Potsdam
@@ -1132,6 +1143,8 @@ Potsdamer Chaussee: Mittelstreifen	3nocross -870,2737 -756,2787 -567,2869 -512,2
 # Stellen, an denen getragen werden muß:
 # die Zahl hinter dem ":" entspricht ungefähr den verlorenen Sekunden
 # 
+#: by: Klaus Didrich:
+tragen oder Aufzug	0:30 4158,461
 tragen (19 Stufen)	0:25 11479,7746
 tragen (ca. 17 Stufen)	0:22 13779,4929
 tragen (8 Stufen)	0:15 9956,12617
@@ -1158,7 +1171,7 @@ tragen (43 Stufen)	0:35 16998,11861
 #: XXX_prog: should be Treppe with more than one point
 tragen (8 Stufen)	0:14 10286,11869
 tragen (14 Stufen)	0:25 -6972,1029
-tragen (Treppe)	0:30 22057,4531
+#XXX del Rampe existiert mittlerweile: tragen (Treppe)	0:30 22057,4531
 tragen (ca. 40 Stufen)	0:30 -2396,3652
 tragen (36 Stufen)	0:30 -3189,3147
 tragen (6 Stufen)	0:15 -3176,3081
@@ -1237,7 +1250,8 @@ tragen (Brücke Tegeler Hafen)	0:60 1166,20330
 tragen? (Fußgängerbrücke)	0:120 19762,-160
 tragen (Stufen), mit MTB befahrbar	0:30 5725,11644
 tragen (20 Stufen)	0:25 13138,9897
-unter der S-Bahn-Brücke tragen	0:30 3730,18992
+unter der S-Bahn-Brücke tragen (5 Stufen)	0:10 3726,18982
+unter der S-Bahn-Brücke tragen (5 Stufen)	0:10 3738,19007
 tragen (31 Stufen) oder Aufzug (Storkower Str.)	0:30 14530,13269
 tragen (41 Stufen) oder Aufzug (Storkower Str.)	0:40 14481,13143
 tragen (zum Uferweg an den Treptowers, 24 Stufen)	0:35 14383,10036
@@ -1316,6 +1330,8 @@ Rampe und flache Treppe (8 Stufen)	0:25 16065,6126
 tragen (Treppe, 12 Stufen)	0:15 5475,7906
 tragen (Treppe, ca. 20 Stufen)	0:25 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25 19160,14935
+#: by: rjoop, keine Stufenangabe!
+tragen (Treppe)	0:30 89344,-5795
 #
 ###################################################################
 # Drängelgitter (BLOCKED_NARROWPASSAGE)
@@ -1519,8 +1535,10 @@ Poller, Abstand 80cm (mit Anhänger über Gehweg umfahren)	BNP:1::trailer=10 7816,
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
-#: last_checked: 2010-05-09
-Bertiniweg: gesperrt, wird evtl. später neu geöffnet	2:inwork -12710,1713 -12642,1781 -12636,1804 -12604,1857 -12605,1927 -12593,1946 -12542,1959
+#: by: Ulrike Orlowski
+#: by: http://asp.vmzberlin.com/VMZ_LSBB_MELDUNGEN_WEB/Meldungskarte.jsp?back=true&map=true&x=52.53578&y=13.31063&zoom=13&meldungId=IM_014510
+#: next_check: 2011-06-30
+Radweg parallel zur Autobahn ist wegen Bauarbeiten am BAB gesperrt	2:inwork 5062,14681 4676,14534 3707,14303 3595,14277
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1002/nachricht3772.html
 #: next_check: 2010-10-01
 Brücke über A10: Sperrung vom 15.02.2010 bis 01.10.2010	2:inwork 15337,24593 15490,24848
@@ -1532,8 +1550,8 @@ Brücke über A10: Sperrung vom 15.02.2010 bis 01.10.2010	2:inwork 15337,24593 154
 Wegedornbrücke: Vollsperrung, Neubau	2:inwork 20385,593 20442,564 20510,530
 #: next_check: 2011-03-01
 Rathausbrücke: gesperrt bis März 2011 (Neubau)	2:inwork 10362,12351 10422,12395
-#: last_checked: 2010-05-25 vvv
-#: next_check: 2010-08-01 vvv
+#: last_checked: 2010-06-10 vvv
+#: next_check: 2010-09-01 vvv
 Vicki-Baum-Str.: noch in Bau, gesperrt	2:inwork 15990,10185 15894,10251
 Vicki-Baum-Str.: noch in Bau, gesperrt	2:inwork 15823,10300 15753,10353 15688,10400
 Alice-und-Hella-Hirsch-Ring: noch in Bau, gesperrt	2:inwork 15788,10252 15823,10300
@@ -1555,6 +1573,8 @@ Unterführung unter Adlergestell und Bahn: wegen Brückenerneuerung gesperrt	2:inw
 #: section in Brandenburg vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # XXX del #: last_checked: 2009-08-29 Rückbau der Fr.-Ebert-Str. zwischen Breite Str. und Platz der Einheit, Bauarbeiten bis Ende 2009. Umfahrung über Alten Markt notwendig.	1:inwork -12659,-1700 -12758,-1654 -12755,-1585 -12773,-1544
 # XXX del #: last_checked: 2009-08-29 Rückbau der Fr.-Ebert-Str., kein Zugang zur Schwertfegerstr.	2:inwork -12870,-1493 -12795,-1499
+#: last_checked: 2010-05-09
+Bertiniweg: gesperrt, wird evtl. später neu geöffnet	2:inwork -12710,1713 -12642,1781 -12636,1804 -12604,1857 -12605,1927 -12593,1946 -12542,1959
 #: section ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #: temporary ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #: section ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1783,7 +1803,7 @@ Franz-Schmidt-Str.	1 16328,25378 16297,25293 16337,25271 16292,25164
 Walter-Friedrich-Str.	1 16428,25107 16333,25147 16292,25164 16261,25178 16172,25217 16171,25254 16264,25418
 Groscurthstr.	1 16369,25230 16458,25193 16428,25107
 #: by: Martha Wimmer [AM]
-Sonnenallee	3nocross 14617,7243 14693,7168 14803,7056
+Sonnenallee	3nocross 14617,7243 14693,7168 14752,7108 14803,7056
 Treskowallee: Straßenbahntrasse	3nocross 18631,10167 18690,10016 18698,9996 18737,9901
 Treskowallee: Straßenbahntrasse	3nocross 18800,9743 18763,9837 18737,9901
 #: by: Christian Schweda [AM]

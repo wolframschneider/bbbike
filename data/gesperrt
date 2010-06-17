@@ -541,6 +541,11 @@ Harzburger Str. (Pankow), Klaustaler Str...	1s 11442,18736 11419,18801 11463,188
 Faucherweg	1 -1307,14801 -1251,14772 -1207,14781 -1141,14814 -896,14888
 Römerweg	1s 19236,9710 19450,9728 19459,9842
 Michaelkirchplatz	1 11415,11392 11498,11417
+Berenhorststr.	1 4816,17712 4862,17934
+Berenhorststr.	1 4905,18142 4862,17934
+Von-der-Gablentz-Str.	1 5151,17658 4946,17701 4893,17698 4816,17712
+Kemmannweg	1 -4207,14473 -4117,14458 -4049,14419 -3937,14340 -3911,14331 -3819,14302
+Privatstr. 13	1 13171,17335 13103,17280 13018,17264
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -778,6 +783,8 @@ Mittelstreifen	3nocross::ignrte 15256,14237 15430,14262 15838,14319
 Mittelstr./Altenhofer Str. -> Landsberger Allee: Mittelstreifen	3::igndisp 15430,14272 15430,14262 15838,14319
 Landsberger Allee -> Mittelstr./Altenhofer Str.: Mittelstreifen	3::igndisp 15256,14237 15430,14262 15430,14272
 Mittelstreifen	3nocross::ignrte 22484,11270 22756,11268 22937,11265
+Adolfstr. -> Alt-Kaulsdorf: Mittelstreifen	3::igndisp 22751,11381 22756,11268 22937,11265
+Alt-Kaulsdorf -> Adolfstr.: Mittelstreifen	3::igndisp 22484,11270 22756,11268 22751,11381
 Mittelstreifen	3nocross::ignrte 24175,11265 24019,11264 23848,11264 23648,11265
 Mittelstreifen	3nocross::ignrte 11002,1211 11155,1273 11198,1291
 Muschelkalkweg -> Marienfelder Chaussee: Mittelstreifen	3::igndisp 11120,1384 11155,1273 11198,1291
@@ -1461,6 +1468,7 @@ Mittelstreifen	3nocross::ignrte -870,2737 -756,2787 -567,2869 -512,2883 -391,291
 Niklasstr. -> Potsdamer Chaussee: Mittelstreifen	3::igndisp -791,2819 -756,2787 -567,2869
 Potsdamer Chaussee -> Niklasstr.: Mittelstreifen	3::igndisp -870,2737 -756,2787 -791,2819
 Hohentwielst. -> Potsdamer Chaussee: Mittelstreifen	3::igndisp -479,2715 -567,2869 -756,2787
+tragen oder Aufzug	0:30:-249 4158,461
 tragen (19 Stufen)	0:25:78 11479,7746
 tragen (ca. 17 Stufen)	0:22:-98 13779,4929
 tragen (8 Stufen)	0:15:-210 9956,12617
@@ -1482,7 +1490,6 @@ tragen (ca. 30 Stufen)	0:35:-221 19932,61
 tragen (43 Stufen)	0:35:-231 16998,11861
 tragen (8 Stufen)	0:14:-35 10286,11869
 tragen (14 Stufen)	0:25:-197 -6972,1029
-tragen (Treppe)	0:30:-24 22057,4531
 tragen (ca. 40 Stufen)	0:30:-147 -2396,3652
 tragen (36 Stufen)	0:30:-2 -3189,3147
 tragen (6 Stufen)	0:15:-18 -3176,3081
@@ -1543,7 +1550,8 @@ tragen (Brücke Tegeler Hafen)	0:60:-231 1166,20330
 tragen? (Fußgängerbrücke)	0:120:-202 19762,-160
 tragen (Stufen), mit MTB befahrbar	0:30:-69 5725,11644
 tragen (20 Stufen)	0:25:16 13138,9897
-unter der S-Bahn-Brücke tragen	0:30:-172 3730,18992
+unter der S-Bahn-Brücke tragen (5 Stufen)	0:10:-180 3726,18982
+unter der S-Bahn-Brücke tragen (5 Stufen)	0:10:-154 3738,19007
 tragen (31 Stufen) oder Aufzug (Storkower Str.)	0:30:-71 14530,13269
 tragen (41 Stufen) oder Aufzug (Storkower Str.)	0:40:-116 14481,13143
 tragen (zum Uferweg an den Treptowers, 24 Stufen)	0:35:-45 14383,10036
@@ -1599,6 +1607,7 @@ Rampe und flache Treppe (8 Stufen)	0:25:76 16065,6126
 tragen (Treppe, 12 Stufen)	0:15:-23 5475,7906
 tragen (Treppe, ca. 20 Stufen)	0:25:-108 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
+tragen (Treppe)	0:30:70 89344,-5795
 Einfahrsperre für Autos	BNP:0:7:trailer=2 19003,9800
 sehr enge Stelle	BNP:0:-188:trailer=no 31909,2802
 enges Drängelgitter	BNP:5:-206:trailer=no 30862,3816
@@ -1727,7 +1736,7 @@ Drängelgitter	BNP:3:-157 63721,42792
 Schranke, kann auch mit Anhänger umfahren werden	BNP:1:-168 49137,24422
 Drängelgitter	BNP:3:24:trailer=6 3644,8456
 Poller, Abstand 80cm (mit Anhänger über Gehweg umfahren)	BNP:1:1:trailer=10 7816,5682
-Bertiniweg: gesperrt, wird evtl. später neu geöffnet	2:inwork -12710,1713 -12642,1781 -12636,1804 -12604,1857 -12605,1927 -12593,1946 -12542,1959
+Radweg parallel zur Autobahn ist wegen Bauarbeiten am BAB gesperrt	2:inwork 5062,14681 4676,14534 3707,14303 3595,14277
 Brücke über A10: Sperrung vom 15.02.2010 bis 01.10.2010	2:inwork 15337,24593 15490,24848
 Wegedornbrücke: Vollsperrung, Neubau	2:inwork 20385,593 20442,564 20510,530
 Rathausbrücke: gesperrt bis März 2011 (Neubau)	2:inwork 10362,12351 10422,12395
@@ -1738,6 +1747,7 @@ Lina-Morgenstern-Str.: noch in Bau, gesperrt	2:inwork 15716,10303 15753,10353
 Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14795,10473 14805,10518
 Brücke im Tiergarten: gesperrt	2:inwork 6406,11784 6467,11780
 Unterführung unter Adlergestell und Bahn: wegen Brückenerneuerung gesperrt	2:inwork 20810,2398 20939,2413
+Bertiniweg: gesperrt, wird evtl. später neu geöffnet	2:inwork -12710,1713 -12642,1781 -12636,1804 -12604,1857 -12605,1927 -12593,1946 -12542,1959
 Behlertstr.	1 -12370,-354 -12500,-339 -12621,-359 -12821,-417
 tragen (Treppe)	0:30:-82 2279,5112
 tragen (Treppe)	0:15:-136 2211,5120
@@ -2075,8 +2085,8 @@ Friedrich-Richter-Str.	1 16264,24764 16284,24745 16217,24651
 Franz-Schmidt-Str.	1 16328,25378 16297,25293 16337,25271 16292,25164
 Walter-Friedrich-Str.	1 16428,25107 16333,25147 16292,25164 16261,25178 16172,25217 16171,25254 16264,25418
 Groscurthstr.	1 16369,25230 16458,25193 16428,25107
-Sonnenallee	3nocross::ignrte 14617,7243 14693,7168 14803,7056
-Krebsgang -> Sonnenallee: Sonnenallee	3::igndisp 14792,7192 14693,7168 14803,7056
+Sonnenallee	3nocross::ignrte 14617,7243 14693,7168 14752,7108 14803,7056
+Krebsgang -> Sonnenallee: Sonnenallee	3::igndisp 14792,7192 14693,7168 14752,7108
 Sonnenallee -> Krebsgang: Sonnenallee	3::igndisp 14617,7243 14693,7168 14792,7192
 Straßenbahntrasse	3nocross::ignrte 18631,10167 18690,10016 18698,9996 18737,9901
 Treskowallee -> Ontarioseestr.: Straßenbahntrasse	3::igndisp 18698,9996 18690,10016 18577,10023

@@ -1968,7 +1968,7 @@ EOF
        text  => 'L 35; (Eisenbahnstr.); OL Fürstenwalde, zw. Wassergasse und Frankfurter Str. Frühlingsfest Vollsperrung 25.05.2005-30.05.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 55447,-4247 55447,-4432 55447,-4585 55562,-4726
+userdel	q4 55447,-4247 55447,-4432 55447,-4585 55536,-4725
 EOF
      },
      { from  => 1117080000, # 2005-05-26 06:00
@@ -2346,7 +2346,7 @@ EOF
        text  => 'L 382; (Gronenfelder Weg); zw. FFO, Birnbaumsmühle und Booßener Kreisel Gefahrenabwehr Vollsperrung 14.07.2005-15.07.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 85161,-3425 84653,-3159
+userdel	2 85173,-3363 84649,-3081
 EOF
      },
      { from  => 1121724000, # 2005-07-19 00:00
@@ -2855,7 +2855,7 @@ EOF
        text  => 'L 382; (Birnbaumsmühle); OD Frankfurt (O), Bereich unter den Brücken DB grundh. Straßenbau Vollsperrung 28.09.2005-30.06.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 85403,-4497 85666,-3989
+userdel	2 85403,-4497 85622,-3937
 EOF
      },
      { from  => 1128117600, # 2005-10-01 00:00
@@ -3836,7 +3836,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS_1142967727545',
        data  => <<EOF,
-userdel	q4 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 23950,5342
+userdel	q4 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 24049,5380 23950,5342
 userdel	q4 25012,5754 25018,5756 25121,5799
 userdel	q4 25579,5958 25121,5799
 EOF
@@ -4322,7 +4322,7 @@ EOF
        text  => 'L 037 Petersdorfer Str. OD Petershagen Kanal- und Straßenbauarbeiten Vollsperrung 15.05.2006-30.09.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 74092,475 74246,584
+userdel	q4::inwork 74107,450 74197,607
 EOF
      },
      { from  => undef, # 
@@ -5237,7 +5237,7 @@ EOF
        text  => 'L 035 Eisenbahnstr.-August-Bebel-Str. Brücke über die Spree in Fürstenwalde Deckenerneuerung halbseitig gesperrt; Einbahnstraße 31.07.2006-02.09.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork; 55549,-4992 55562,-4726
+userdel	q4::inwork; 55506,-4975 55536,-4725
 EOF
      },
      { from  => 1154642400, # 2006-08-04 00:00
@@ -5417,7 +5417,7 @@ EOF
        text  => 'B 005 Berliner Str. OD Petershagen, zw. Betonstr. und Ortsausgang Kanal- und Straßenbauarbeiten Vollsperrung 16.08.2006-30.09.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 73775,831 74246,584
+userdel	q4::inwork 73775,831 74197,607
 EOF
      },
      { from  => 1155506400, # 2006-08-14 00:00
@@ -6515,7 +6515,7 @@ EOF
        text  => 'B 005 Berliner Str. OD Petershagen, zw. Betonstr. und Ortsausgang Kanal- und Straßenbauarbeiten Vollsperrung 16.08.2006-22.12.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 74246,584 73775,831 73479,1000
+userdel	q4::inwork 74197,607 73775,831 73479,1000
 EOF
      },
      { from  => 1162422000, # 2006-11-02 00:00
@@ -7122,7 +7122,7 @@ EOF
        text  => 'Fürstenwalder Damm, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Baustelle bis 30.03.2007 (im Bereich Einmündung Mühlweg) ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 23950,5342
+userdel	q4::inwork 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 24049,5380 23950,5342
 EOF
      },
      { from  => 1172530621, # 2007-02-26 23:57
@@ -7229,7 +7229,7 @@ EOF
        text  => 'L 037 Petersdorfer Str. OD Petershagen Kanal- und Straßenbauarbeiten Vollsperrung 16.04.2007-02.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 74092,475 74246,584
+userdel	2::inwork 74107,450 74197,607
 EOF
      },
      { from  => 1173308400, # 2007-03-08 00:00
@@ -7245,7 +7245,7 @@ EOF
        text  => 'L 023 Storkow-Herzfelde Bahnübergang Fangschleuse Gleisbauarbeiten Vollsperrung 16.03.2007-19.03.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 39225,1082 39259,612 39264,-832
+userdel	2::inwork 39250,1024 39259,612 39264,-832
 EOF
      },
      { from  => 1174172400, # 2007-03-18 00:00
@@ -8635,7 +8635,7 @@ EOF
        text  => 'B 005 Treplin-Petershagen OD Petershagen, zw. KVK und Ortsausgang Kanal- und Straßenbau Vollsperrung 18.06.2007-15.10.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 74246,584 74683,385
+userdel	q4::inwork 74197,607 74683,385
 EOF
      },
      { from  => 1182031200, # 2007-06-17 00:00
@@ -9085,7 +9085,7 @@ EOF
        text  => 'B 005 Kieler Str. OL Frankfurt (O), zw. Lebuser Ch. u. Goepelstr. Bergsicherungsarbeiten Vollsperrung 23.07.2007-03.08.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 87377,-3591 87248,-3446
+userdel	q4::inwork 87406,-3541 87292,-3434
 EOF
      },
      { from  => 1184709600, # 2007-07-18 00:00
@@ -9551,7 +9551,7 @@ EOF
        text  => 'B 112 Eisenhüttenstadt-Frankfurt (O) zw. Güldendorf und Frankfurt (O) Deckenerneuerung Richtungsverkehr 28.08.2007-15.09.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 87207,-9278 86790,-8657
+userdel	1::inwork 87207,-9278 86762,-8601
 EOF
      },
      { from  => 1188079200, # 2007-08-26 00:00
@@ -10212,7 +10212,7 @@ EOF
        text  => 'B 005 Treplin-Petershagen OD Petershagen, zw. KVK und Ortsausgang Kanal- und Straßenbau Vollsperrung 18.06.2007-26.10.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 74246,584 74683,385
+userdel	q4::inwork 74197,607 74683,385
 EOF
      },
      { from  => 1193090400, # 2007-10-23 00:00
@@ -10352,7 +10352,7 @@ EOF
        text  => 'Bauarbeiten am Ostkreuz, Verbindungsstraße könnte für die Durchfahrt gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 14673,10180 14764,10303 14794,10336 14821,10478 14832,10512 14843,10621 14882,10732
+userdel	2::inwork 14688,10167 14765,10279 14794,10336 14821,10478 14832,10512 14843,10621 14882,10732
 EOF
      },
      { from  => undef, # 
@@ -10977,7 +10977,7 @@ EOF
        text  => 'B 087 Leipziger Str. OD FFO, zw. Biegener- u. Krz.Kopernikus-/Müllroser-/EHS Str. Straßenausbau halbseitig gesperrt; Einbahnstraße 17.03.2008-30.05.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 87829,-6485 87655,-6717
+userdel	q4::inwork 87846,-6398 87671,-6669
 EOF
      },
      { from  => 1206486000, # 2008-03-26 00:00
@@ -11492,7 +11492,7 @@ EOF
        text  => 'Untere Kynaststr.: Restbauarbeiten, Straße könnte u.U. bis zum 2.6.2008 gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 14673,10180 14764,10303 14794,10336 14821,10478 14832,10512 14843,10621 14882,10732 14906,10820
+userdel	2::inwork 14688,10167 14765,10279 14794,10336 14821,10478 14832,10512 14843,10621 14882,10732 14906,10820
 EOF
      },
      { from  => undef, # 
@@ -12177,7 +12177,7 @@ EOF
        text  => 'B 087 Müllroser Chaussee zw. Brücke A 12 und Siedlung Markendorf Deckenerneuerung Vollsperrung 14.08.2008-18.08.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 84692,-9145 85598,-8331
+userdel	2::inwork 84677,-9063 85598,-8331
 EOF
      },
      { from  => 1218146400, # 2008-08-08 00:00
@@ -12363,7 +12363,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_009763',
        data  => <<EOF,
-userdel	q4::inwork 22740,4415 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23363,4846 23451,4877
+userdel	q4::inwork 22740,4415 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23055,4640 23363,4846 23451,4877
 EOF
      },
      { from  => 1219528800, # 2008-08-24 00:00
@@ -14668,7 +14668,7 @@ userdel	2::inwork -8893,85743 -9850,84800
 EOF
      },
      { from  => 1261769245, # 2009-12-25 20:27
-       until => 1277935199, # 2010-06-30 23:59
+       until => 1276408849, # 2010-06-30 23:59 1277935199
        text  => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Mohrenstr. und Französische Str. Baustelle, Fahrtrichtung gesperrt (bis Ende 06.10)',
        type  => 'handicap',
        source_id => 'IM_013316',
@@ -14832,7 +14832,7 @@ EOF
        text  => 'L 038 zw. OA Hangelsberg u. Kreisverkehrsplatz Straßeninstandsetzungsarbeiten Vollsperrung 16.07.2009-30.08.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 45037,31 43456,337 42843,102
+userdel	2::inwork 45037,31 43880,303 43456,337 42926,155
 EOF
      },
      { from  => 1247436000, # 2009-07-13 00:00
@@ -14956,7 +14956,7 @@ EOF
        text  => 'L 038 Falkenberg - Fürstenwalde zw. Berkenbrück u. Fürstenwalde Deckenerneuerung Vollsperrung 16.07.2009-29.08.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 58249,-5090 59449,-5351 60003,-5190 60762,-5117 60874,-5013 60958,-4995
+userdel	2::inwork 58249,-5090 58861,-5262 59449,-5351 60003,-5190 60687,-5131 60784,-5060 60918,-4953
 EOF
      },
      { from  => 1248559200, # 2009-07-26 00:00
@@ -15567,7 +15567,7 @@ EOF
        text  => 'B 001 Bundesgrenze Polen - Küstrin Kietz Vorflutbrücke bei Küstrin Kietz Brückeninstandsetzung Vollsperrung 17.08.2009-28.02.2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 92955,20065 93405,20640
+userdel	2::inwork 92925,19897 92970,19935 92970,20194 93096,20241 93405,20640
 EOF
      },
      { from  => 1252188000, # 2009-09-06 00:00
@@ -15765,7 +15765,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014045',
        data  => <<EOF,
-userdel	q4::inwork; 23451,4877 23363,4846 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22740,4415
+userdel	q4::inwork; 23451,4877 23363,4846 23055,4640 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22740,4415
 EOF
      },
      { from  => 1250978400, # 2009-08-23 00:00
@@ -17304,7 +17304,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LSO-SG33-F10015',
        data  => <<EOF,
-userdel	2::inwork 48220,6698 48051,6849
+userdel	2::inwork 48182,6806 48027,6894
 EOF
      },
      { from  => 1270235686, # 2010-04-02 21:14
@@ -17654,7 +17654,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015731',
        data  => <<EOF,
-userdel	q3::inwork 16414,25575 16294,25683 16194,25743 16166,25767 16114,25827 16045,25907
+userdel	q3::inwork 16414,25575 16294,25683 16220,25716 16166,25767 16114,25827 16045,25907
 EOF
      },
      { from  => 1275342035, # 2010-05-31 23:40
@@ -17682,6 +17682,24 @@ EOF
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100528.1110.297131.html',
        data  => <<EOF,
 userdel	q4::inwork 18586,9172 18511,9185 18430,9199 18319,9218
+EOF
+     },
+     { from  => 1275679548, # 2010-06-04 21:25
+       until => 1275948000, # 2010-06-08 00:00
+       text  => 'Erkner: L30: 18. Heimatfest OL Erkner, 03.06.2010 bis 07.06.2010 ',
+       type  => 'gesperrt',
+       source_id => '106700635',
+       data  => <<EOF,
+userdel	2::temp 34443,1951 34250,2546
+EOF
+     },
+     { from  => 1275537600, # 2010-06-03 06:00
+       until => 1275861540, # 2010-06-06 23:59
+       text  => 'Neue Krugallee (Treptow): Veranstaltung, gesperrt. Ebenso gesperrt Bulgarische Str. zw. Neue Krugallee und Parkplatz (bis 06.06.10 24.00 Uhr) in beiden Richtungen zw. Bulgarische Str. und Am Plänterwald, 04.06.2010 06:00 Uhr bis 06.06.2010 23:59 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_015813',
+       data  => <<EOF,
+userdel	q4::temp 15793,8984 15673,8901 15591,8848 15714,8633
 EOF
      },
     );
