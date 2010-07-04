@@ -16,6 +16,13 @@
   <generator uri="http://search.cpan.org/dist/XML-Atom-SimpleFeed/"
   version="0.86">XML::Atom::SimpleFeed</generator>
   <entry>
+    <title>More cities supported</title>
+    <id>74ce830fecbcbe6fe07c3f61df1f5176</id>
+    <content>Added new cities: Victoria</content>
+    <updated>2010-06-15T18:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
     <title>Elevation chart</title>
     <link href="http://www.bbbike.org" />
     <id>81ebeaf0506f9d6a518be2ab38ec243f</id>

@@ -19,6 +19,20 @@ my $feed = XML::Atom::SimpleFeed->new(
 ######################################################################
 
 $feed->add_entry(
+    title => 'More cities supported',
+    id    => '74ce830fecbcbe6fe07c3f61df1f5176',
+
+    content => {
+        type => 'text',
+        content =>
+qq{Added new cities: Victoria},
+    },
+
+    updated  => '2010-06-15T18:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
     title => 'Elevation chart',
     link  => $homepage,
     id    => '81ebeaf0506f9d6a518be2ab38ec243f',
@@ -31,11 +45,6 @@ $feed->add_entry(
     updated  => '2010-04-11T18:30:03Z',
     category => 'News',
 );
-
-
-
-
-
 
 
 $feed->add_entry(
