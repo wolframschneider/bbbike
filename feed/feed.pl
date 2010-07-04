@@ -23,9 +23,8 @@ $feed->add_entry(
     id    => '74ce830fecbcbe6fe07c3f61df1f5176',
 
     content => {
-        type => 'text',
-        content =>
-qq{Added new cities: Victoria},
+        type    => 'text',
+        content => qq{Added new cities: Victoria},
     },
 
     updated  => '2010-06-15T18:30:02Z',
@@ -38,14 +37,14 @@ $feed->add_entry(
     id    => '81ebeaf0506f9d6a518be2ab38ec243f',
 
     content => {
-        type    => 'text',
-        content => qq{BBBike @ World displays the elevation chart for the route.} 
+        type => 'text',
+        content =>
+          qq{BBBike @ World displays the elevation chart for the route.}
     },
 
     updated  => '2010-04-11T18:30:03Z',
     category => 'News',
 );
-
 
 $feed->add_entry(
     title => 'More cities supported',
@@ -74,7 +73,6 @@ $feed->add_entry(
     updated  => '2010-03-06T18:30:02Z',
     category => 'News',
 );
-
 
 $feed->add_entry(
     title => 'New cities for BBBike @ world',
