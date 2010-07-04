@@ -230,7 +230,7 @@ check:
 
 clean-cache-files-on-remote:
 	-${SSH_PROG_AND_ARGS} -l ${BBBIKE_HOSTEUROPE_USER} ${BBBIKE_HOSTEUROPE_SSH_HOST} \
-	    rm /tmp/b_de_\*
+	    rm /tmp/b_de_\* /tmp/bbbike_\*.cache
 
 RSYNC_RULES=		check-rsync-ok \
 			do-rsync \
@@ -731,9 +731,10 @@ init-local-environment:
 post-deploy-info:
 	@echo "**********************************************************************"
 	@echo "Consider to do the following things now:"
+	@echo "* Update the fragezeichen_list pages:"
+	@echo "    cd $(HOME)/src/bbbike/misc && slaymake rsync-fragezeichen-list"
 	@echo "* Update git repo of webserver:"
 	@echo "    $(HOME)/src/bbbike-aux/misc/bbbike-checkin-hosteurope.pl -after-sync"
 	@echo "* Send all messages in GNUS' drafts folder"
-	@echo "* Update the fragezeichen_list pages:"
-	@echo "    cd $(HOME)/src/bbbike/misc && slaymake rsync-fragezeichen-list"
+	@echo "* Push BBBike git repo to github"
 	@echo ""

@@ -35,6 +35,7 @@ use File::Basename qw(dirname);
 use URI;
 use BBBikeCGIUtil qw();
 use BBBikeVar;
+use BrowserInfo;
 use Karte;
 use Karte::Polar;
 
@@ -235,6 +236,11 @@ sub get_html {
     # assume that osm is always updated
     my $osm_copyright_year = ((localtime)[5])+1900;
 
+    my $is_msie6 = do {
+	my $bi = BrowserInfo->new;
+	$bi->{user_agent_name} eq 'MSIE' && $bi->{user_agent_version} < 7;
+    };
+
     my $html = <<EOF;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
@@ -261,7 +267,7 @@ sub get_html {
     --></style>
   </head>
   <body onload="init()" onunload="GUnload()" class="nonWaitMode">
-    <div id="map" style="width:100%; height:70%; min-height:500px;"></div>
+    <div id="map" style="width:100%; height:75%; min-height:500px;"></div>
     <script type="text/javascript">
     //<![CDATA[
 
@@ -282,6 +288,7 @@ sub get_html {
 
     var isGecko = navigator && navigator.product == "Gecko" ? true : false;
     var dragCursor = isGecko ? '-moz-grab' : 'url("$bbbikeroot/images/moz_grab.gif"), auto';
+    var isMSIE6 = @{[ $is_msie6 ? "true" : "false" ]};
 
     var startIcon = new GIcon(G_DEFAULT_ICON, "$bbbikeroot/images/flag2_bl_centered.png");
     startIcon.iconAnchor = new GPoint(16,16);
@@ -360,6 +367,17 @@ sub get_html {
 	        dragObj.setDraggableCursor(dragCursor);
 	    }
 	    document.getElementById("wpt").innerHTML = "";
+        }
+
+	if (!isMSIE6) {
+	    var editboxDiv = document.getElementById("editbox");
+	    if (editboxDiv) {
+	        if (currentMode == "addroute" || currentMode == "addwpt") {
+	            editboxDiv.style.visibility = "visible";
+	        } else {
+	            editboxDiv.style.visibility = "hidden";
+	        }
+	    }
         }
     }
 
@@ -1002,10 +1020,16 @@ EOF
     $html .= <<EOF;
     </div>
 
+EOF
+    if ($is_msie6) {
+	$html .= <<EOF;
 <div id="commentlink" class="boxed" style="display:none;">
   <a href="#" onclick="show_comment(); return false;">Kommentar zu Route und Waypoints senden</a>
 </div>
 
+EOF
+    }
+    $html .= <<EOF;
 <div style="float:left; width:45%; margin-top:0.5cm; ">
 
 <form name="mapmode" class="boxed" method="get">
@@ -1027,8 +1051,15 @@ EOF
 	       id="mapmode_addroute"
                type="radio" name="mapmode" value="addroute" /></td>
     <td><label for="mapmode_addroute">Mit Mausklicks eine Route erstellen</label><br/><!-- XXX remove colored "klicks" some time -->
+EOF
+    if ($is_msie6) {
+	$html .= <<EOF;
         <a href="javascript:deleteLastPoint()">Letzten Punkt löschen</a>
-        <a href="javascript:resetOrUndoRoute()" id="routedellink">Route löschen</a></td>
+        <a href="javascript:resetOrUndoRoute()" id="routedellink">Route löschen</a>
+EOF
+    }
+    $html .= <<EOF;
+     </td>
    </tr>
 EOF
     if ($is_beta) {
@@ -1088,6 +1119,15 @@ EOF
   </div>
   
 </form>
+
+<!-- should come before commentform to be lower in the layer stack -->
+<div id="editbox" class="boxed" style="position:fixed; top:15px; left:85px; background:white; visibility:hidden; font-size:smaller; ">
+  <a href="javascript:deleteLastPoint()">Letzten Punkt löschen</a>
+  <a href="javascript:resetOrUndoRoute()" id="routedellink">Route löschen</a><br/>
+  <div id="commentlink" style="display:none;">
+    <a href="#" onclick="show_comment(); return false;">Kommentar zu Route und Waypoints senden</a>
+  </div>
+</div>
 
 <form id="commentform" style="position:fixed; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;">
   <table>

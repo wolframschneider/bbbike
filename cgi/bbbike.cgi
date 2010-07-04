@@ -82,7 +82,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $use_module
 	    $cannot_gif_png $cannot_jpeg $cannot_pdf $cannot_svg $can_gif
 	    $can_wbmp $can_palmdoc $can_gpx $can_kml
-	    $can_google_maps $can_berliner_stadtplan_post
+	    $can_google_maps $can_gpsies_link
 	    $can_mapserver $mapserver_address_url
 	    $mapserver_init_url $no_berlinmap $max_plz_streets $with_comments
 	    $with_cat_display
@@ -251,7 +251,7 @@ $apache_session_module = "Apache::Session::DB_File";
 
 =back
 
-=head2 Imagemaps, graphic creation
+=head2 Imagemaps, graphic creation, export formats
 
 =over
 
@@ -400,6 +400,15 @@ below for special mapserver variables.
 =cut
 
 $can_mapserver = 0;
+
+=item $can_gpsies_link
+
+Set this to a true value if a link to L<www.gpsies.com> should be
+created. Default: false.
+
+=cut
+
+$can_gpsies_link = 0;
 
 =back
 
@@ -744,9 +753,6 @@ if ($osm_data) {
     require Karte::Polar;
 }
 
-# Post-config adjustments:
-$can_berliner_stadtplan_post = 0; # API does not work since 2007-08-01
-
 if ($lang ne "") {
     $msg = eval { do "$FindBin::RealBin/msg/$lang" };
     if ($msg && ref $msg ne 'HASH') {
@@ -811,7 +817,7 @@ $delim = '!'; # wegen Mac nicht ¶ verwenden!
 #XXX shared variable ! my $header_written;
 use vars qw($header_written);
 
-if (defined %Apache::) {
+if (%Apache::) {
     # workaround for "use lib" problem with Apache::Registry
     'lib'->import(@extra_libs);
 }
@@ -888,9 +894,10 @@ use vars qw(%handicap_speed);
 		   "q3" => 13,
 		   "q2" => 18,
 		   "q1" => 25,
+		   'Q'  => 8, # XXX this is for ferries, and should probably be finer granulated
 		  );
 
-@pref_keys = qw/speed cat quality ampel green specialvehicle unlit winter fragezeichen/;
+@pref_keys = qw/speed cat quality ampel green specialvehicle unlit ferry winter fragezeichen/;
 
 CGI->import('-no_xhtml');
 
@@ -1270,11 +1277,11 @@ if (defined $q->param('begin')) {
     print CGI->redirect(-uri => $res{imgurl});
     exit 0;
 } elsif (defined $q->param('startchar')) {
-    choose_ch_form($q->param('startchar'), 'start');
+    choose_ch_form($q->param('startchar'), 'start', $q->param('startort'));
 } elsif (defined $q->param('viachar')) {
-    choose_ch_form($q->param('viachar'), 'via');
+    choose_ch_form($q->param('viachar'), 'via', $q->param('viaort'));
 } elsif (defined $q->param('zielchar')) {
-    choose_ch_form($q->param('zielchar'), 'ziel');
+    choose_ch_form($q->param('zielchar'), 'ziel', $q->param('zielort'));
 } elsif (defined $q->param('startc') and
 	 defined $q->param('zielc')) {
     if (!$q->param('pref_seen')) {
@@ -1627,24 +1634,29 @@ sub choose_form {
 	# Darstellung eines Vias nicht erw¸nscht
 	next if ($type eq 'via' and $$oneref eq 'NO');
 
-	if ($$nameref eq '' && $$oneref eq '' && defined $ort && $ort =~ $outer_berlin_qr) {
-	    my $orte = get_orte();
-	    my $coords;
-	    eval {
-		$orte->grepstreets(sub {
-				       my($name) = $_->[Strassen::NAME] =~ m{^([^|]+)};
-				       if ($name eq $ort) {
-					   $coords = $_->[Strassen::COORDS][0];
-					   die "break loop";
-				       }
-				   });
-	    };
-	    if ($coords) {
-		$q->param($type.'c', $coords);
-		$$nameref = $ort;
-		next;
-	    }
-	}
+## The idea behind this block: if only the place was selected (without
+## a particular street), then choose the center of the place.
+## Unfortunately this breaks currently the "Zur¸ck zum
+## Eingabeformular" from a abc page, so it's commented out currently.
+## XXX
+# 	if ($$nameref eq '' && $$oneref eq '' && defined $ort && $ort =~ $outer_berlin_qr) {
+# 	    my $orte = get_orte();
+# 	    my $coords;
+# 	    eval {
+# 		$orte->grepstreets(sub {
+# 				       my($name) = $_->[Strassen::NAME] =~ m{^([^|]+)};
+# 				       if ($name eq $ort) {
+# 					   $coords = $_->[Strassen::COORDS][0];
+# 					   die "break loop";
+# 				       }
+# 				   });
+# 	    };
+# 	    if ($coords) {
+# 		$q->param($type.'c', $coords);
+# 		$$nameref = $ort;
+# 		next;
+# 	    }
+# 	}
 
 	# ‹berpr¸fen, ob eine Straﬂe in PLZ vorhanden ist.
 	if ($$nameref eq '' && $$oneref ne '') {
@@ -1921,7 +1933,7 @@ EOF
 EOF
 	# Eine Addition aller aktuellen Straﬂen, die bei luise-berlin
 	# aufgef¸hrt sind, ergibt als Summe 10129
-	my($bln_str, $all_bln_str, $pdm_str) = (8500, 10000, 390);
+	my($bln_str, $all_bln_str, $pdm_str) = (8750, 10000, 400);
 	# XXX Use format number to get a comma in between.
 
 	my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
@@ -2063,10 +2075,18 @@ EOF
 	    if (defined $coord and (!defined $$nameref or $$nameref eq '')) {
 		print crossing_text($coord);
 	    } else {
-		print "$$nameref\n";
+		print "$$nameref";
+		if ($$ortref) {
+		    print " ($$ortref)";
+		}
+		print "\n";
 	    }
 	    print "<input type=hidden name=" . $type
 	      . "name value=\"$$nameref\">\n";
+	    if ($$ortref) {
+		print "<input type=hidden name=" . $type
+		    . "ort value=\"$$ortref\">\n";
+	    }
 	    if (defined $q->param($type . "plz")) {
 		print "<input type=hidden name=${type}plz value=\""
 		  . $q->param($type . "plz") . "\">\n";
@@ -2136,11 +2156,21 @@ EOF
 		    $shown_unknown_street_helper = 1;
 		}
 
-		my $qs = CGI->new({strname => $$oneref,
-				   ($$ortref ? (ort => $$ortref) : ()),
-				  })->query_string;
-		print qq{<a target="newstreetform" href="$bbbike_html/newstreetform${newstreetform_encoding}.html?$qs">} . M("Diese Straﬂe neu in die BBBike-Datenbank eintragen") . qq{</a><br><br>\n} if !$osm_data;
-		print M(qq{Oder einen anderen Straﬂennamen versuchen}) . qq{:<br>\n};
+		# XXX Temporary solution to avoid unusable
+		# newstreetform mails:
+		if (   $$oneref !~ m{\b\d{5}\b} # keine PLZ
+		    && $$oneref !~ m{\b(?:Berlin|Potsdam)\b}i
+		    && $$oneref !~ m{,}
+		   ) {
+		    my $qs = CGI->new({strname => $$oneref,
+				       ($$ortref ? (ort => $$ortref) : ()),
+				      })->query_string;
+		    print qq{<a target="newstreetform" href="$bbbike_html/newstreetform${newstreetform_encoding}.html?$qs">} . M("Diese Straﬂe neu in die BBBike-Datenbank eintragen") . qq{</a><br><br>\n} !$osm_data;
+		    print M(qq{Oder einen anderen Straﬂennamen versuchen}) . qq{:<br>\n};
+		} else {
+		    warn "*** Avoid unusable newstreetform mail for <$$oneref>\n";
+		    print M(qq{Einen anderen Straﬂennamen versuchen}) . qq{:<br>\n};
+		}
 	    } else {
 	        if ($$oneref =~ /^\s*\d+\w?\s+/ || $$oneref =~ /\s+\d+\w?\s*$/ ) {
 		    print M(qq{Bitte keine <b>Hausnummer</b> eingeben}) . qq{!<br>\n};
@@ -2164,7 +2194,7 @@ EOF
 				   plz => $plz,
 				   coord => $xy,
 				  })->query_string;
-		my $report_nearest = $strasse !~ /^[su]-bhf/i && !$is_usable_without_strassen{$index||""};
+		my $report_nearest = _is_real_street($strasse) && !$is_usable_without_strassen{$index||""};
 		if ($report_nearest) {
 		    print qq{<i>$strasse</i> } . M("ist nicht bekannt") . qq{ (<a target="newstreetform" href="$bbbike_html/newstreetform${newstreetform_encoding}.html?$qs">} . M("diese Straﬂe eintragen") . qq{</a>).<br>\n};
 		} else {
@@ -2316,8 +2346,9 @@ EOF
 EOF
 		for my $place (sort @outer_berlin_places) {
 		    next if $place eq 'Potsdam'; # special case, Potsdam dualism
+		    my $selectedhtml = defined $$ortref && $place eq $$ortref ? ' selected' : '';
 		    print <<EOF;
-  <option value="$place">$place</option>
+  <option value="$place"$selectedhtml>$place</option>
 EOF
 		}
 		print <<EOF;
@@ -2570,10 +2601,15 @@ EOF
 }
 
 sub choose_ch_form {
-    my($search_char, $search_type) = @_;
+    my($search_char, $search_type, $search_ort) = @_;
     my $use_javascript = ($bi->{'can_javascript'} &&
 			  !$bi->{'javascript_incomplete'});
     my $printtype = ucfirst($search_type);
+    my $per_char_filtering = 0;
+    if (!defined $search_ort || ($search_ort eq '' || $search_ort eq 'Berlin/Potsdam')) {
+	undef $search_ort;
+	$per_char_filtering = 1;
+    }
 
 #XXX Diese locale-Manipulation mit choose_all_form verbinden, und Sortierung
 #    in eigene Subroutine auslagern.
@@ -2589,12 +2625,13 @@ sub choose_ch_form {
     };
     http_header(@weak_cache);
     header();
+
     print "<b>" . M($printtype) . "</b>";
-    print " (" . M("Anfangsbuchstabe") . " <b>$search_char</b>)<br>\n";
-    my $next_char =
-      (ord($search_char) < ord('Z') ? chr(ord($search_char)+1) : undef);
-    my $prev_char =
-      (ord($search_char) > ord('A') ? chr(ord($search_char)-1) : undef);
+    if ($per_char_filtering) {
+	print " (" . M("Anfangsbuchstabe") . " <b>$search_char</b>)";
+    }
+    print "<br>\n";
+
     print "<form action=\"$bbbike_script\" name=Charform>\n";
     if (!$use_javascript) {
 	print qq{<input type=submit value="} . M("Weiter") . qq{ &gt;&gt;"><br>};
@@ -2618,24 +2655,54 @@ sub choose_ch_form {
 				  ? '[U‹]'
 				  : $search_char)));
     my @strlist;
-    {
-	my $str = get_streets();
-	$str->init;
-	eval q{ # eval wegen /o
+    if (defined $search_ort) {
+	# Pick streets outside of Berlin/Potsdam. Show whole list, do
+	# not filter by $search_char
+	eval {
+	    my $landstr = MultiStrassen->new('landstrassen', 'landstrassen2');
+	    $landstr->init;
+	    eval q{ # eval wegen /o
+	    while(1) {
+		my $ret = $landstr->next;
+	        last if !@{$ret->[1]};
+	        my $name = $ret->[0];
+		next if $name !~ s{\s+\(
+				     \Q$search_ort\E # search for the place
+				     (?:     # without any subparts
+                                      |-(.*) # or with a subpart
+				     )
+				   \)}{}ox;
+		my $longname = defined $1 ? "$name ($1)" : undef;
+		if (defined $longname) {
+		    # remove Bundesstraﬂen name in the long name
+		    $longname =~ s{\s+\(B\d+\)}{};
+		}
+		push @strlist, defined $longname ? { short => $name, long => $longname } : $name;
+	    }
+	};
+	};
+	warn $@ if $@;
+    } else {
+	{
+	    # Pick streets in Berlin (or the main city) only, filtered
+	    # by $search_char
+	    my $str = get_streets();
+	    $str->init;
+	    eval q{ # eval wegen /o
 	    while(1) {
 	        my $ret = $str->next;
 	        last if !@{$ret->[1]};
 	        my $name = $ret->[0];
-	        push(@strlist, $name) if $name =~ /$regex_char/oi;
+	        push @strlist, $name if $name =~ /$regex_char/oi;
 	    }
         };
-    }
-    eval {
-	# Include Potsdam streets
-	# XXX Special case, look for another solution in other cities!
-	my $landstr = Strassen->new("landstrassen");
-	$landstr->init;
-	eval q{ # eval wegen /o
+	}
+	eval {
+	    # Include Potsdam streets
+	    # XXX Special case, look for another solution in other cities!
+	    my $landstr = Strassen->new("landstrassen");
+	    $landstr->init;
+	    eval q{ # eval wegen /o
 	    while(1) {
 		my $ret = $landstr->next;
 	        last if !@{$ret->[1]};
@@ -2644,14 +2711,19 @@ sub choose_ch_form {
 		if ($name =~ /$regex_char/oi) {
 		    # remove Bundesstraﬂen name here:
 		    $name =~ s{\s+\(B\d+\)}{};
-		    push(@strlist, $name);
+		    push @strlist, $name;
 		}
 	    }
 	};
-    };
-    warn $@ if $@;
+	};
+	warn $@ if $@;
+    }
 
-    @strlist = sort @strlist;
+    @strlist =
+	map { $_->[1] }
+	    sort { $a->[0] cmp $b->[0] }
+		map { [ref $_ ? $_->{short} : $_, $_] }
+		    @strlist;
 
     print
       "<label><input type=radio name=" . $search_type . "name value=\"\"" ,
@@ -2660,20 +2732,33 @@ sub choose_ch_form {
       ($use_javascript ? "(" . M("Zur¸ck zum Eingabeformular") . ")" : "(" . M("nicht gesetzt") . ")"),
       "</label><br>\n";
 
+    my $seen_anchor;
     my $last_name;
     for(my $i = 0; $i <= $#strlist; $i++) {
 	my $name = $strlist[$i];
+	my $longname;
+	if (ref $name) {
+	    ($name, $longname) = @{$name}{qw(short long)};
+	}
 	if (defined $last_name and $name eq $last_name) {
 	    next;
 	} else {
 	    $last_name = $name;
 	}
 	my $html_name = BBBikeCGIUtil::my_escapeHTML($name);
+	my $html_longname;
+	if (defined $longname) {
+	    $html_longname = BBBikeCGIUtil::my_escapeHTML($longname);
+	}	    
+	if (!$per_char_filtering && !$seen_anchor && uc(substr($name,0,1)) ge $search_char) {
+	    print '<a name="start"></a>';
+	    $seen_anchor++;
+	}
 	print
 	  "<label><input type=radio name=" . $search_type . "name value=\"$html_name\"",
 	  ($use_javascript ? " onclick=\"document.Charform.submit()\"" : ""),
 	  "> ",
-	  $html_name,
+	  (defined $html_longname ? $html_longname : $html_name),
 	  "</label><br>\n";
     }
 
@@ -2681,12 +2766,24 @@ sub choose_ch_form {
     if (!$use_javascript) {
 	print qq{<input type=submit value="} . M("Weiter") . qq{ &gt;&gt;"><br><br>\n};
     }
-    print M("andere") . " " . M($printtype . "stra&szlig;e") . ":<br>\n";
-    abc_link($search_type);
+    if ($per_char_filtering) {
+	print M("andere") . " " . M($printtype . "stra&szlig;e") . ":<br>\n";
+	abc_link($search_type);
+    }
     footer();
     print "<input type=hidden name=scope value='" .
 	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
+    if (defined $search_ort) {
+	print "<input type=hidden name=${search_type}ort value='$search_ort'>\n";
+    }
     print "</form>\n";
+    if ($use_javascript && $seen_anchor) {
+	print <<EOF;
+<script type="text/javascript"><!--
+location.hash = "start";
+// --></script>
+EOF
+    }
     print $q->end_html;
 }
 
@@ -3114,7 +3211,8 @@ sub set_cookie {
 }
 
 use vars qw($default_speed $default_cat $default_quality
-	    $default_ampel $default_routen $default_green $default_specialvehicle $default_unlit $default_winter
+	    $default_ampel $default_routen $default_green $default_specialvehicle
+	    $default_unlit $default_ferry $default_winter
 	    $default_fragezeichen);
 
 sub get_settings_defaults {
@@ -3132,6 +3230,7 @@ sub get_settings_defaults {
     }
     $default_specialvehicle = (defined $c{"pref_specialvehicle"} ? $c{"pref_specialvehicle"} : '');
     $default_unlit   = (defined $c{"pref_unlit"}   ? $c{"pref_unlit"}   : "");
+    $default_ferry   = (defined $c{"pref_ferry"}   ? $c{"pref_ferry"}   : "");
     $default_winter  = (defined $c{"pref_winter"}  ? $c{"pref_winter"}  : "");
     $default_fragezeichen = (defined $c{"pref_fragezeichen"} ? $c{"pref_fragezeichen"} : "");
 }
@@ -3144,6 +3243,7 @@ sub reset_html {
 	my(%strgreen)  = ("" => 0, "GR1" => 1, "GR2" => 2);
 	my(%strspecialvehicle) = ('' => 0, 'trailer' => 1, 'childseat' => 2);
 	my(%strunlit)  = ("" => 0, "NL" => 1);
+	my(%strferry)  = ("" => 0, "use" => 1);
 	my(%strwinter) = ("" => 0, "WI1" => 1, "WI2" => 2);
 
 	get_settings_defaults();
@@ -3158,6 +3258,7 @@ sub reset_html {
 		   qq'@{[defined $strgreen{$default_green} ? $strgreen{$default_green} : 0]},',
 		   qq'@{[defined $strspecialvehicle{$default_specialvehicle} ? $strspecialvehicle{$default_specialvehicle} : 0]},',
 		   qq'@{[defined $strunlit{$default_unlit} ? $strunlit{$default_unlit} : 0]},',
+		   qq'@{[defined $strferry{$default_ferry} ? $strferry{$default_ferry} : 0]},',
 		   qq'@{[defined $strwinter{$default_winter} ? $strwinter{$default_winter} : 0]}',
 		   qq'); enable_settings_buttons(); return false;">',
 		  );
@@ -3199,6 +3300,10 @@ sub settings_html {
 			      'value="' . $val . '" ' .
 			      ($default_unlit eq $val ? "selected" : "")
 			};
+    my $ferry_checked = sub { my $val = shift;
+			      'value="' . $val . '" ' .
+			      ($default_ferry eq $val ? "selected" : "")
+			  };
     my $winter_checked = sub { my $val = shift;
 			      'value="' . $val . '" ' .
 			      ($default_winter eq $val ? "selected" : "")
@@ -3274,6 +3379,11 @@ EOF
 <option @{[ $specialvehicle_checked->("childseat") ]}>@{[ M("Kindersitz mit Kind") ]}
 </select></td></tr>
 EOF
+    if ($is_beta) { # XXX should go into standard version some day!
+	print <<EOF;
+<tr><td>@{[ M("F‰hren benutzen") ]}:</td><td><input type=checkbox name="pref_ferry" value="use" @{[ $default_ferry?"checked":"" ]}></td></tr>
+EOF
+    }
     if ($use_winter_optimization) {
 	print <<EOF;
 <tr>
@@ -3530,13 +3640,17 @@ sub search_coord {
     # Winteroptimierung aktiv ist (haupts‰chlich wegen temp_blockings)
     if (1) {
 	if (!$handicap_net) {
+	    my @in_files = ('handicap_s');
 	    if ($scope eq 'region' || $scope eq 'wideregion') {
-		$handicap_net =
-		    new StrassenNetz(MultiStrassen->new("handicap_s",
-							"handicap_l"));
+		push @in_files, 'handicap_l';
+	    }
+	    if ($q->param('pref_ferry') && $q->param('pref_ferry') eq 'use') {
+		push @in_files, 'faehren';
+	    }
+	    if (@in_files == 1) {
+		$handicap_net = StrassenNetz->new(Strassen->new(@in_files));
 	    } else {
-		$handicap_net =
-		    new StrassenNetz(Strassen->new("handicap_s"));
+		$handicap_net = StrassenNetz->new(MultiStrassen->new(@in_files));
 	    }
 	    $handicap_net->make_net_cat;
 	}
@@ -3548,6 +3662,7 @@ sub search_coord {
 	    my $q_cat = "q$q";
 	    $penalty->{$q_cat} = 1 if !exists $penalty->{$q_cat} || $penalty->{$q_cat} < 1;
 	}
+
 	$extra_args{Handicap} =
 	    {Net => $handicap_net,
 	     Penalty => $penalty,
@@ -4038,6 +4153,9 @@ sub display_route {
 		    if ($scope eq 'region' || $scope eq 'wideregion') {
 			push @comment_files, "handicap_l";
 		    }
+		}
+		if ($q->param('pref_ferry') && $q->param('pref_ferry') eq 'use') {
+		    push @comment_files, 'comments_ferry';
 		}
 
 		for my $s (@comment_files) {
@@ -4693,6 +4811,20 @@ EOF
 	    $radwege_net->make_net_cat;
 	}
 
+	my %cat_to_title = ( NN => M("Weg ohne Kfz"),
+			     N  => M("Nebenstraﬂe"),
+			     NH => M("wichtige Nebenstraﬂe"),
+			     H  => M("Hauptstraﬂe"),
+			     HH => M("wichtige Hauptstraﬂe"),
+			     B  => M("Bundesstraﬂe"),
+			     fz => M("unbekannte Strecke"),
+			     Q  => M("F‰hre"),
+			   );
+	my %rw_to_title = ( RW => M("Radweg/spur"),
+			    BS => M("Busspur"),
+			    NF => M("Nebenfahrbahn"),
+			  );
+
   	my $odd = 0;
 	my $etappe_i = -1;
 	for my $etappe (@out_route) {
@@ -4765,20 +4897,10 @@ EOF
 			    $rw = $longest_rw || "";
 			}
 			if ($cat) {
-			    my $cat_title = { NN => "Weg ohne Kfz",
-					      N  => "Nebenstraﬂe",
-					      NH => "wichtige Nebenstraﬂe",
-					      H  => "Hauptstraﬂe",
-					      HH => "wichtige Hauptstraﬂe",
-					      B  => "Bundesstraﬂe",
-					      fz => "unbekannte Strecke",
-					    }->{$cat};
+			    my $cat_title = $cat_to_title{$cat};
 			    my $rw_title;
 			    if ($rw) {
-				$rw_title = { RW => "Radweg/spur",
-					      BS => "Busspur",
-					      NF => "Nebenfahrbahn",
-					    }->{$rw};
+				$rw_title = $rw_to_title{$rw};
 			    }
 			    my $title = $cat_title;
 			    if ($rw_title) {
@@ -4887,6 +5009,16 @@ EOF
 		}
 		if ($can_gpx || $can_kml) {
 		    #print experimental_label();
+		}
+		if ($can_gpsies_link) {
+		    my $qq2 = CGI->new($q->query_string);
+		    $qq2->param('output_as', "gpx-track");
+		    my $bbbike_script = $bbbike_script;
+		    if ($bbbike_script =~ m{^https?://[^.]+/}) { # local hostname?
+			$bbbike_script = $BBBike::BBBIKE_DIRECT_WWW;
+		    }
+		    my $href = 'http://www.gpsies.com/map.do?url=' . $bbbike_script . '?' . $qq2->query_string;
+		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com</a>};
 		}
 		if (0) { # XXX not yet
 		    my $qq2 = CGI->new({});
@@ -5091,7 +5223,6 @@ EOF
 	    print " <option " . $imagetype_checked->("pdf-landscape") . ">PDF (" . M("Querformat") . ")\n" unless $cannot_pdf;
 	    print " <option " . $imagetype_checked->("svg") . ">SVG\n" unless $cannot_svg;
 	    print " <option " . $imagetype_checked->("mapserver") . ">MapServer\n" if $can_mapserver;
-	    print " <option " . $imagetype_checked->("berlinerstadtplan") . ">www.berliner-stadtplan.com\n" if $can_berliner_stadtplan_post;
 	    #XXX print " <option " . $imagetype_checked->("googlemapsstatic") . ">Google Maps (static)\n" if 1;#XXXXXXXXXXXXXXXXXX
 	    print " </select></span>\n";
 	    print "<br>\n";
@@ -5323,9 +5454,13 @@ EOF
     if (@weather_res) {
 	my(@res) = @weather_res;
 	print "<center><table border=0 bgcolor=\"#d0d0d0\">\n";
-	print "<tr><td colspan=2>${fontstr}<b>" . link_to_met() . "Aktuelle Wetterdaten ($res[0], $res[1])</a></b>$fontend</td>";
-	print "<tr><td>${fontstr}Temperatur:$fontend</td><td>${fontstr}$res[2] ∞C$fontend</td></tr>\n";
-	print "<tr><td>${fontstr}Windrichtung:$fontend</td><td>${fontstr}$res[4]$fontend&nbsp;</td></tr>\n";
+	print "<tr><td colspan=2>${fontstr}<b>" . link_to_met() . M("Aktuelle Wetterdaten") . " ($res[0], $res[1])</a></b>$fontend</td>";
+	print "<tr><td>${fontstr}" . M("Temperatur") . ":$fontend</td><td>${fontstr}$res[2] ∞C$fontend</td></tr>\n";
+	my $wind_dir = $res[4];
+	if ($lang eq 'en') {
+	    $wind_dir =~ s{O$}{E}; # the only difference between de and en: east/ost
+	}
+	print "<tr><td>${fontstr}" . M("Windrichtung") . ":$fontend</td><td>${fontstr}$wind_dir$fontend&nbsp;</td></tr>\n";
 	my($kmh, $windtext);
 	eval { local $SIG{'__DIE__'};
 	       require Met::Wind;
@@ -5335,9 +5470,9 @@ EOF
 		   $kmh = sprintf("%d",$kmh); # keine Pseudogenauigkeit, bitte
 	       }
 	       $windtext = Met::Wind::wind_velocity([$res[5], 'm/s'],
-						    'text_de');
+						    $lang eq 'en' ? 'text_en' : 'text_de');
 	   };
-	print "<tr><td>${fontstr}Windgeschwindigkeit:$fontend</td><td>${fontstr}";
+	print "<tr><td>${fontstr}" . M("Windgeschwindigkeit") . ":$fontend</td><td>${fontstr}";
 	if (defined $kmh) {
 	    print "$kmh km/h";
 	} else {
@@ -5968,6 +6103,12 @@ sub get_streets {
 	}
     }
 
+    # XXX do not use Strassen::StrassenNetz::add_faehre, so better
+    # display in route list is possible
+    if (defined $q->param('pref_ferry') && $q->param('pref_ferry') eq 'use') {
+	push @f, 'faehren';
+    }
+
     # Should be last:
     if (defined $q->param("pref_fragezeichen") && $q->param("pref_fragezeichen") eq 'yes') {
 	push @f, "fragezeichen";
@@ -5978,8 +6119,8 @@ sub get_streets {
 	my @f = @f;
 	if ($use_cooked_street_data) {
 	    @f = map {
-		#$_ eq "fragezeichen" ? $_ :
-		"$_-cooked"
+		# Note: no "cooked" version for faehren available
+		$_ eq "faehren" ? $_ : "$_-cooked"
 	    } @f;
 	}
 	eval {
@@ -7616,6 +7757,18 @@ sub convert_wgs84_to_data {
 	$require_Karte->() if $require_Karte;
 	$Karte::Standard::obj->trim_accuracy($Karte::Polar::obj->map2standard($x,$y));
     }
+}
+
+# Is this a real street, which might is reportable via newstreetform?
+sub _is_real_street {
+    my $street = shift;
+    require PLZ;
+    # XXX hack: get_street_type needs a look result
+    my $look_result = [];
+    $look_result->[PLZ::LOOK_NAME()] = $street;
+    # XXX hack: should get_street_type be callable as a static method?
+    my $type = PLZ->get_street_type($look_result);
+    $type eq 'street' || $type eq 'projected street';
 }
 
 ######################################################################

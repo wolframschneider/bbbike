@@ -504,7 +504,7 @@ push @temp_blocking,
          'text' => 'Weinmeisterstr. (Mitte) in Richtung Alexanderplatz gesperrt',
          'from' => 1234122499,
          'id' => 1567,
-         'data' => '#: last_checked: 2010-04-19
+         'data' => '#: last_checked: 2010-06-18
 userdel	q4::inwork; 10350,13376 10527,13257
 ',
          'type' => 'gesperrt'
@@ -729,16 +729,7 @@ userdel	q4::inwork 10422,12395 10476,12432
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_013316',
-         'until' => 1277935199,
-         'text' => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Mohrenstr. und Französische Str. Baustelle, Fahrtrichtung gesperrt (bis Ende 06.10)',
-         'from' => 1261769245,
-         'id' => 1732,
-         'data' => 'userdel	q4::inwork; 9679,11834 9668,11928 9656,12021 9643,12127
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1091,7 +1082,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Wendenschloßstr. (Köpenick) Richtung Müggelheimer Str. zwischen Salvador-Allende-Str. und Landjägerstr. Baustelle, Fahrtrichtung gesperrt (bis Mitte 2010)',
          'from' => undef,
          'id' => 1857,
-         'data' => 'userdel	q4::inwork; 23451,4877 23363,4846 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22740,4415
+         'data' => 'userdel	q4::inwork; 23451,4877 23363,4846 23055,4640 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22740,4415
 ',
          'type' => 'handicap'
        },
@@ -1176,10 +1167,10 @@ userdel	q4::inwork; 10829,18083 10907,18109 10938,18147 10989,18172 11137,18358 
        {
          'source_id' => '96900159',
          'until' => 1280613600,
-         'text' => 'Schwielowsee: K6910: Kanal- und Straßenbau OL Geltow Richtungsverkehr zw. Mühlenbergstr. und B 1, 30.03.2009 bis 31.07.2010 ',
-         'from' => 1273091418,
+         'text' => 'Schwielowsee: K6910: Kanal- und Straßenbau OL Geltow Richtungsverkehr zw. Mühlenbergstr. und B 1, Vollsperrung für Deckeneinbau, bis 31.07.2010',
+         'from' => 1276547726,
          'id' => 1896,
-         'data' => 'userdel	q4::inwork; -19013,-5247 -19112,-5226 -19332,-5240
+         'data' => 'userdel	q4::inwork -19013,-5247 -19112,-5226 -19332,-5240
 ',
          'type' => 'handicap'
        },
@@ -1373,25 +1364,8 @@ userdel	q4::inwork; 9130,12433 9141,12320
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'LS/W-SG33-P/09/109-8',
-         'until' => 1276293600,
-         'text' => 'Werder (Havel): L90: Rohrleitungsbau / Straßenbau / Gehweg OD Werder zw. Kesselgrund- und Gartenstraße - 2. BA Richtungsverkehr zw. AS Phöben und Werder, 13.03.2009 bis 11.06.2010 ',
-         'from' => 1275342093,
-         'id' => 2014,
-         'data' => 'userdel	q4::inwork; -22042,-2060 -21524,-2998
-',
-         'type' => 'handicap'
-       },
-       {
-         'until' => 1277935200,
-         'text' => 'L 092 AS Potsdam-Nord - Ketzin Brücke über den Schleusenkanal bei Paretz Brückenneubau, Straßenbau Vollsperrung 15.09.2009-30.06.2010 ',
-         'from' => 1252879200,
-         'id' => 2015,
-         'data' => 'userdel	2::inwork -24240,6075 -24731,6194
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        {
          'source_id' => 'IM_011081',
          'until' => 1283259600,
@@ -1415,17 +1389,7 @@ userdel	q4::inwork; 10614,19907 10742,19632
        },
        undef,
        undef,
-       {
-         'until' => 1276898399,
-         'text' => 'Die Leipziger Str. ist zwischen Mauerstr. und Charlottenstr. Richtung Alexanderstr. wegen Bauarbeiten gesperrt. Zu Einbahnstraßen werden Teile der Mauer-, Krausen-, Charlottenstr. und Friedrichstr. Dauer: 15. März 2010 bis 18. Juni 2010 ',
-         'from' => 1268521200,
-         'id' => 2020,
-         'data' => 'userdel	q4::inwork; 9268,11590 9444,11616 9569,11631 9581,11523 9456,11513 9331,11497 9268,11590
-userdel	q2::inwork; 9456,11513 9444,11616
-userdel	q3::inwork 9444,11616 9432,11702
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => undef,
          'permanent' => 1,
@@ -1464,7 +1428,7 @@ userdel	q3::inwork 9444,11616 9432,11702
          'text' => 'Nuthetal: Kanal-und Straßenbauarbeiten L 771 OD Saarmund, 21.09.2009 bis 30.10.2010 ',
          'from' => 1269162391,
          'id' => 2026,
-         'data' => 'userdel	q4::inwork -8457,-11261 -8332,-10598
+         'data' => 'userdel	q4::inwork -8433,-11290 -8293,-10599
 ',
          'type' => 'handicap'
        },
@@ -1490,15 +1454,7 @@ userdel	q3::inwork 9444,11616 9432,11702
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1275688800,
-         'text' => 'Kanal- und Leitungsbauarbeiten Neuruppin, OT Karwe, Vollsperrung 25.03.2010 bis 04.06.2010 ',
-         'from' => 1269727743,
-         'id' => 2031,
-         'data' => 'userdel	q4::inwork -27035,49829 -27196,50015 -27421,50349
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'source_id' => 'IM_015434',
@@ -1519,7 +1475,7 @@ userdel	q3::inwork 9444,11616 9432,11702
          'text' => 'Grünheide (Mark): Brückenbauarbeiten OD Kienbaum 24.02.2010 bis 20.09.2010 ',
          'from' => 1270235590,
          'id' => 2037,
-         'data' => 'userdel	2::inwork 48220,6698 48051,6849
+         'data' => 'userdel	2::inwork 48182,6806 48027,6894
 ',
          'type' => 'gesperrt'
        },
@@ -1534,16 +1490,7 @@ userdel	q3::inwork 9444,11616 9432,11702
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => '101100040',
-         'until' => 1275775200,
-         'text' => 'Althüttendorf: Grundhafter Ausbau im Bereich der AS Chorin, westl. Seite 12.04.2010 bis 05.06.2010 ',
-         'from' => 1271280104,
-         'id' => 2041,
-         'data' => 'userdel	2::inwork 35000,60912 35215,60669 35255,60090
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => '107300037',
          'until' => 1279317600,
@@ -1686,21 +1633,21 @@ userdel	q3::inwork 9444,11616 9432,11702
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10691,8532 10640,8366 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10598,8270 10729,8152
-(Rundkurs auf dem Flughafen Tempelhof)	2::temp 11463,7785 11470,7744 11543,7369 11570,7315 11575,7249 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
+(Rundkurs auf dem Flughafen Tempelhof)	2::temp 11463,7785 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
 (Rundkurs auf dem Flughafen Tempelhof)	2::temp 9525,7558 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10575,8218
 (Rundkurs auf dem Flughafen Tempelhof)	2::temp 10575,8218 10729,8152 10924,7987 11090,7916 11264,7882 11355,7871 11381,7775 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::temp 9525,7558 9431,7425 9392,7339 9300,7312 9302,7294 9242,7286
-(Südliche Landebahn)	2::temp 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11570,7315
+(Südliche Landebahn)	2::temp 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11593,7314
 (Nördliche Landebahn)	2::temp 9351,7600 9518,7609 9654,7621 11279,7768 11381,7775 11463,7785
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::temp 11463,7785 11439,7894
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::temp 11472,7899 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung)	2::temp 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10640,8366
-(Weg parallel zur Oderstr.)	2::temp 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11570,7315
+(Weg parallel zur Oderstr.)	2::temp 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
 (Eingang Kienitzer Str.)	2::temp 11498,7750 11489,7748 11479,7746 11470,7744
 (Flughafen Tempelhof - Eingang Allerstr.)	2::temp 11507,7647 11515,7654
 (Flughafen Tempelhof - Eingang Okerstr.)	2::temp 11528,7528 11536,7533
 (Flughafen Tempelhof - Eingang Leinestr.)	2::temp 11547,7432 11553,7437
-(Flughafen Tempelhof - Eingang Oderstr.)	2::temp 11575,7249 11606,7260
+(Flughafen Tempelhof - Eingang Oderstr.)	2::temp 11598,7264 11608,7267
 (Eingang Tempelhofer Damm - südliche Landebahn)	2::temp 9302,7294 9351,7241 9461,7190
 '
        },
@@ -1724,16 +1671,7 @@ userdel	q3::inwork 9444,11616 9432,11702
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_015726',
-         'until' => 1276264800,
-         'text' => 'Otternbuchtstr. (Spandau): Baustelle, Fahrtrichtung gesperrt (bis voraus. Ende 05/2010) Richtung Nonnendammallee zwischen Motardstr. und Nonnendammallee, 17.05.2010 11:10 Uhr bis 11.06.2010 16:00 Uhr ',
-         'from' => 1274001000,
-         'id' => 2071,
-         'data' => 'userdel	q4::inwork; -269,14178 -245,14343 -248,14518
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1766,6 +1704,94 @@ userdel	q3::inwork 9444,11616 9432,11702
          'data' => 'userdel	q4::inwork 18586,9172 18511,9185 18430,9199 18319,9218
 ',
          'type' => 'handicap'
+       },
+       undef,
+       undef,
+       {
+         'source_id' => '106800201',
+         'until' => 1291158000,
+         'text' => 'Neuruppin: K6828: Straßenbau OL Karwe, 14.06.2010 bis 30.11.2010',
+         'from' => 1276547925,
+         'id' => 2080,
+         'data' => 'userdel	2::inwork -27035,49829 -25968,49631
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => '106401098',
+         'until' => 1292626800,
+         'text' => 'Rehfelde: K6419: Straßenausbau OL Rehfelde, zw. Bahnhofstraße und Kreisverkehr, 07.06.2010 bis 17.12.2010 ',
+         'from' => 1276547986,
+         'id' => 2081,
+         'data' => 'userdel	q4::inwork 45856,14437 44121,14615
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'LS/W-SG33-K/10/066',
+         'until' => 1293663600,
+         'text' => 'Wusterhausen/Dosse: K6806, B167: Straßenbauarbeiten OD Metzelthin , 07.06.2010 bis 29.12.2010 ',
+         'from' => 1276548087,
+         'id' => 2082,
+         'data' => 'userdel	2::inwork -50068,51237 -51018,51135
+',
+         'type' => 'gesperrt'
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'source_id' => 'IM_015899',
+         'until' => 1279231140,
+         'text' => 'Straße des 17. Juni (Tiergarten): FIFA Fan Fest, Straße vollständig gesperrt (bis 15. Juli, 24 Uhr) in beiden Richtungen zwischen Großer Stern und Eberstr., ebenso Yitzhak-Rabin-Str. sowie der östliche Tiergarten, 19.06.2010 16:00 Uhr bis 15.07.2010 23:59 Uhr ',
+         'from' => 1276869600,
+         'id' => 2088,
+         'data' => 'userdel	2::temp 8055,12186 7816,12150 7383,12095 6828,12031
+userdel	2::temp 8089,12190 8055,12186 8119,12414
+userdel auto	3 7460,12054 7383,12095 7039,12314
+userdel auto	3 7827,12105 7816,12150 7875,12363
+userdel auto	3 7875,12363 7816,12150 7827,12105
+userdel auto	3 7039,12314 7383,12095 7460,12054
+userdel	2::temp 7382,11588 7163,11738 7287,11763 7535,11677
+userdel	2::temp 8021,11636 8016,11770 7801,11875 7663,11946
+userdel	2::temp 7796,11681 7816,11571
+userdel	2::temp 8022,12016 8016,11770 7852,11721
+userdel	2::temp 7816,12150 7875,12363
+userdel	2::temp 7711,11558 7669,11586 7591,11639
+userdel	2::temp 8055,12186 8048,12135 8034,12093
+userdel	2::temp 7822,11952 7832,12036
+userdel	2::temp 8172,11679 8016,11770 8156,11863 8223,11796
+userdel	2::temp 7696,11621 7735,11656
+userdel	2::temp 7039,12314 7383,12095
+userdel	2::temp 7795,11823 7777,11787
+userdel	2::temp 6778,11742 7073,11798 6809,11979
+userdel	2::temp 8091,11992 8089,12041
+userdel	2::temp 8018,12131 7827,12105 7460,12054 7663,11946 7570,11855 7223,11897 7073,11798 7163,11738 6980,11583
+userdel	2::temp 7460,12054 6857,11992
+',
+         'type' => 'gesperrt'
+       },
+       undef,
+       {
+         'source_id' => '105200001',
+         'until' => 1324422000,
+         'text' => 'Cottbus: L511: Straßen- und Kanalbauarbeiten Cottbus, OT Sielow , 20.06.2010 bis 20.12.2011 ',
+         'from' => 1277443049,
+         'id' => 2090,
+         'data' => 'userdel	q4::inwork 73237,-66975 73640,-67643
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1279576799,
+         'text' => 'Instandsetzung des Radweges Königsweg zwischen Eichkampstraße und Hüttenweg, ab 28.06.2010 für drei Wochen komplett gesperrt',
+         'from' => 1277589600,
+         'id' => 2091,
+         'data' => 'userdel	2::inwork -903,6923 -643,7252 -348,7641 425,8766
+',
+         'type' => 'gesperrt'
        }
      
 );

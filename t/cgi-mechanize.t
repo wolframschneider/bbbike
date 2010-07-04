@@ -100,8 +100,8 @@ if (!@browsers) {
 }
 @browsers = map { "$_ BBBikeTest/1.0" } @browsers;
 
-my $outer_berlin_tests = 16;
-my $tests = 110 + $outer_berlin_tests;
+my $outer_berlin_tests = 30;
+my $tests = 113 + $outer_berlin_tests;
 plan tests => $tests * @browsers;
 
 if ($WWW::Mechanize::VERSION == 1.32) {
@@ -171,6 +171,25 @@ for my $browser (@browsers) {
 	$like_long_data->(qr/Bevorzugte Geschwindigkeit/i, "Einstellungen page");
     };
 
+    my $on_a_particular_page = sub {
+	my($type) = @_;
+	if      ($type eq 'startpage') {
+	    $like_long_data->(qr/BBBike/,                     "On the start page");
+	} elsif ($type eq 'crossing') {
+	    $like_long_data->(qr/genaue.*kreuzung.*angeben/i, "On the crossing page");
+	} elsif ($type eq 'routeresult') {
+	    $like_long_data->(qr/Route/,                      "On the route result page");
+	} elsif ($type eq 'settings') {
+	    $like_long_data->(qr/Einstellungen/,              "On the settings page");
+	} elsif ($type eq 'info') {
+	    $like_long_data->(qr/Information/,                "On the info page");
+	} elsif ($type eq 'streetform') {
+	    $like_long_data->(qr/Neue Stra.*e f.*r BBBike/,   "On the new street form");
+	} else {
+	    die "Check for '$type' NYI";
+	}
+    };
+
     # -xxx... handling
     for my $key (keys %do_xxx) {
 	if ($do_xxx{$key}) {
@@ -202,7 +221,7 @@ for my $browser (@browsers) {
 	$agent->submit();
 	my_tidy_check($agent);
 
-	$like_long_data->(qr/Kreuzung/, "On the crossing page");
+	$on_a_particular_page->('crossing');
 	{
 	    local $^W; $agent->current_form->value('startc', '8982,8781');
 	}
@@ -214,7 +233,27 @@ for my $browser (@browsers) {
 	$agent->submit();
 	my_tidy_check($agent);
 
-	$like_long_data->(qr/Route/, "On the route result page");
+	$on_a_particular_page->('routeresult');
+	$like_long_data->(qr/Methfesselstr.*
+			     Kreuzbergstr.*
+			     Mehringdamm.*
+			     Blücherstr.*
+			     Blücherplatz.*
+			     Waterloo-Ufer.*
+			     Gitschiner.Str.*
+			     Wassertorplatz.*
+			     Skalitzer.Str.*
+			     Oppelner.Str.*
+			     Oberbaumstr.*
+			     Oberbaumbrücke.*
+			     Am.Oberbaum.*
+			     Warschauer.Str.*
+			     Revaler.Str.*
+			     Libauer.Str.*
+			     Kopernikusstr.*
+			     Wühlischstr.*
+			     Sonntagstr.
+			    /xs, 'Route list between Duden..Sonntag');
 
 	my $has_ausweichroute = ($agent->forms)[0]->attr("name") =~ /Ausweichroute/;
 	{
@@ -237,7 +276,7 @@ for my $browser (@browsers) {
 
 	my_tidy_check($agent);
 
-	$like_long_data->(qr/BBBike/, "On the startpage again ...");
+	$on_a_particular_page->('startpage');
 	$like_long_data->(qr/Sonntagstr./, "... with the start street preserved");
 
 	{
@@ -255,7 +294,7 @@ for my $browser (@browsers) {
 	$agent->submit();
 	my_tidy_check($agent);
 
-	$like_long_data->(qr/Kreuzung/, "On the crossing page");
+	$on_a_particular_page->('crossing');
 	{
 	    local $^W; $agent->current_form->value('zielc', '27360,-3042');
 	}
@@ -263,7 +302,26 @@ for my $browser (@browsers) {
 	$agent->submit();
 	my_tidy_check($agent);
 
-	$like_long_data->(qr/Route/, "On the route result page");
+	$on_a_particular_page->('routeresult');
+	$like_long_data->(qr/Böcklinstr.*
+			     Wühlischstr.*
+			     Boxhagener.Str.*
+			     Karlshorster.Str.*
+			     Nöldnerstr.*
+			     Lückstr.*
+			     Sewanstr.*
+			     Dathepromenade.*
+			     Erieseering.*
+			     Sewanstr.*
+			     Am.Tierpark.*
+			     Richard-Kolkwitz-Weg.*
+			     Rägeliner.Str.*
+			     # skipping some streets, because coverage not yet good here
+			     # Heerstr.* # the one in Kaulsdorf # probably only crossed, so not in route list?
+			     Grünauer.Str.*
+			     Regattastr.*
+			     Adlergestell
+			    /xs, 'Route list between Sonntag..Adlergestell');
 	{
 	    my $formnr = (($agent->forms)[0]->attr("name") =~ /Ausweichroute/ ? 3 : 2);
 	    $agent->form_number($formnr);
@@ -292,7 +350,7 @@ for my $browser (@browsers) {
 	$agent->submit;
 	my_tidy_check($agent);
 
-	$like_long_data->(qr{Einstellungen}, "On the settings page");
+	$on_a_particular_page->('settings');
 	$unlike_long_data->(qr{genaue.*kreuzung}i, "Crossings are exact");
 
     }
@@ -402,7 +460,7 @@ for my $browser (@browsers) {
 	$agent->submit;
 	my_tidy_check($agent);
 
-	$like_long_data->(qr{genaue kreuzung}i, "On the crossing page");
+	$on_a_particular_page->('crossing');
 	$like_long_data->(qr/Kuhfort(er )?damm/i, "Expected start crossing");
 	$like_long_data->(qr/Mangerstr/, "Expected goal crossing");
 
@@ -428,7 +486,7 @@ for my $browser (@browsers) {
 	$agent->submit();
 	my_tidy_check($agent);
 
-	$like_long_data->(qr/genaue.*kreuzung.*angeben/i, "On the crossing page");
+	$on_a_particular_page->('crossing');
 	$like_long_data->(qr/\QAm Neuen Palais (Potsdam)/i,  "Correct start resolution (Neues Palais ...)");
 
     }
@@ -436,7 +494,6 @@ for my $browser (@browsers) {
     ######################################################################
     # Test custom blockings
 
- XXX: { ; }
     {
 
 	# Hier wird eine temporäre baustellenbedingte Einbahnstraße in
@@ -712,14 +769,14 @@ EOF
 	$agent->follow_link(text_regex => qr/Info/);
 	my_tidy_check($agent);
 
-	$like_long_data->(qr{Information}, "On the info page");
+	$on_a_particular_page->('info');
 	{
 	    local $^W = 0; # cease "Parsing of undecoded UTF-8 will give garbage when decoding entities" warning
 	    $agent->follow_link(text_regex => qr{dieses Formular});
 	}
 	my_tidy_check($agent);
 
-	$like_long_data->(qr{Neue Stra.*e f.*r BBBike}, "On the new street form");
+	$on_a_particular_page->('streetform');
 	my $fragezeichenform_url = $agent->uri;
 	$fragezeichenform_url =~ s{newstreetform}{fragezeichenform};
 
@@ -756,6 +813,7 @@ EOF
     ######################################################################
     # streets in plaetze in Potsdam
 
+ XXX: { ; }
     {
 
 	$get_agent->();
@@ -776,7 +834,12 @@ EOF
 	$like_long_data->(qr/scope.*region/i, "Scope is set to region");
 	$agent->submit();
 	my_tidy_check($agent);
-	$like_long_data->(qr/Route/, "On the result page");
+	$on_a_particular_page->('routeresult');
+	$like_long_data->(qr/Zur.Historischen.Mühle.*
+			     Schopenhauerstr.*
+			     Breite.Str.*
+			     Lange.Brücke
+			    /xs, 'Route list between Sanssouci and Potsdam Hbf');
     }
 
     ######################################################################
@@ -792,6 +855,7 @@ EOF
 	} else {
 	    ($bbbike2_url = $cgiurl) =~ s{bbbike\.cgi}{bbbike2.cgi};
 	    if ($bbbike2_url ne $cgiurl) {
+		$get_agent->();
 		my $resp = $agent->get($bbbike2_url);
 		$can_bbbike2_cgi = $resp->is_success;
 	    }
@@ -799,6 +863,49 @@ EOF
 	skip("Outer Berlin feature needs a working bbbike2.cgi", $outer_berlin_tests)
 	    if !$can_bbbike2_cgi;
 
+	{
+	    $get_agent->();
+	    $agent->get($bbbike2_url);
+	    my $form = $agent->current_form;
+	    $form->value('startort', 'Oranienburg');
+	    simulate_abc_click($agent, 'start', 'A');
+
+	    my_tidy_check($agent);
+	    $like_long_data->(qr/Am B.*tzower Stadtgraben/, 'Found a place in Oranienburg');
+	    $like_long_data->(qr/<a name=.start./, 'Found start anchor');
+	    $form = $agent->current_form;
+	    $form->value('startname', ''); # "Zurück zum Eingabeformular"
+	    $agent->submit;
+
+	    my_tidy_check($agent);
+	    $on_a_particular_page->('startpage');
+	    $form = $agent->current_form;
+	    is($form->value('startort'), 'Oranienburg', 'Last ort selection was kept');
+	    simulate_abc_click($agent, 'start', 'F');
+
+	    my_tidy_check($agent);
+	    $like_long_data->(qr/Falkenstr. \(Sachsenhausen\)/, 'Found a place in Oranienburg');
+	    $form = $agent->current_form;
+	    $form->value('startname', 'Falkenstr. (Sachsenhausen)');
+	    $agent->submit;
+
+	    my_tidy_check($agent);
+	    $like_long_data->(qr/Falkenstr. \(Oranienburg|Sachsenhausen\)/, 'Marked as start'); # We accept both: Oranienburg (currently), Sachsenhausen (maybe in future)
+	    $form = $agent->current_form;
+	    $form->value('zielort', 'Birkenwerder');
+	    simulate_abc_click($agent, 'ziel', 'A');
+
+	    my_tidy_check($agent);
+	    $like_long_data->(qr/Am Quast/, 'Found a place in Birkenwerder');
+	    $form = $agent->current_form;
+	    $form->value('zielname', 'Am Quast');
+	    $agent->submit;
+
+	    my_tidy_check($agent);
+	    $on_a_particular_page->('crossing');
+	}
+
+	# Test works with bbbike.cgi and bbbike2.cgi
 	$get_agent->();
 	$agent->get($cgiurl);
 	my $form = $agent->current_form;
@@ -817,11 +924,12 @@ EOF
 	$like_long_data->(qr/Invalidensiedlung/, "Crossing for goal");
 	$agent->submit();
 	my_tidy_check($agent);
-	$like_long_data->(qr/Route/, "On the result page");
+	$on_a_particular_page->('routeresult');
 	for my $expected_place (qw(Erkner Woltersdorf Dahlwitz-Hoppegarten)) {
 	    $like_long_data->(qr/$expected_place/, "Expected place on route ($expected_place)");
 	}
 
+	# Test works with bbbike.cgi and bbbike2.cgi
 	{
 	    $get_agent->();
 	    $agent->get($cgiurl);
@@ -872,6 +980,17 @@ sub my_tidy_check {
 	       -uri => $agent->uri,
 	       -charset => $charset,
 	      );
+}
+
+sub simulate_abc_click {
+    my($agent, $type, $char) = @_;
+    my $form = $agent->current_form;
+    my $ord = ord($char) - ord("A");
+    my $y = int($ord/9)*30 + 15;
+    my $x = ($ord%9)*30 + 15;
+    $form->value($type . 'charimg.x', $x);
+    $form->value($type . 'charimg.y', $y);
+    $agent->submit;
 }
 
 __END__

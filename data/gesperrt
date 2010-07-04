@@ -482,7 +482,7 @@ Schulstr. (Tegel)	1 1953,20149 1794,20110
 Natalissteig	1 1202,14935 1223,14824 1226,14714
 Straße 12 (Neukölln): gesperrt für Fahrzeuge aller Art (außer BAB-Versorgung)	2 13883,6682 13881,6634 13915,6592
 Alt-Biesdorf	1 20375,11694 20435,11698 20575,11698 21108,11628
-Alt-Biesdorf	1 21108,11628 20963,11618 20549,11659 20375,11694
+Alt-Biesdorf	1 21108,11628 20963,11618 20633,11651 20549,11659 20375,11694
 Privatstr. 14	1s 13159,17196 13103,17280
 Bernkasteler Str.	1 15208,16939 15015,16908 14923,16901 14923,16914
 Wiedenbrücker Weg	1 4207,1113 4220,1175 4148,1275
@@ -541,6 +541,17 @@ Harzburger Str. (Pankow), Klaustaler Str...	1s 11442,18736 11419,18801 11463,188
 Faucherweg	1 -1307,14801 -1251,14772 -1207,14781 -1141,14814 -896,14888
 Römerweg	1s 19236,9710 19450,9728 19459,9842
 Michaelkirchplatz	1 11415,11392 11498,11417
+Berenhorststr.	1 4816,17712 4862,17934
+Berenhorststr.	1 4905,18142 4862,17934
+Von-der-Gablentz-Str.	1 5151,17658 4946,17701 4893,17698 4816,17712
+Kemmannweg	1 -4207,14473 -4117,14458 -4049,14419 -3937,14340 -3911,14331 -3819,14302
+Straße 206	1s 13247,17262 13321,17318 13406,17382
+Privatstr. 13	1 13171,17335 13103,17280 13018,17264
+Preunelstr.	1 13012,17332 12965,17324 12930,17302 12865,17381
+Mollstr. (Richtungsfahrbahn)	1::igndisp 11723,13139 11843,13090 11904,13075 11958,13079 11985,13075
+Mollstr. (Richtungsfahrbahn)	1::igndisp 11985,13075 11966,13074 11905,13069 11881,13072 11839,13083 11739,13131 11723,13139
+Lötschbergstr.	1s 20161,11715 20150,11512
+Brodenbacher Weg	1 15178,17134 14897,17093
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -613,6 +624,7 @@ Brandenburger Str.	1s -12784,-956 -12883,-976
 Nietnerstr.	2 -13855,1673 -13843,1668
 Hechtsprung (Groß Glienicke)	1 -9703,6278 -9860,6288 -9962,6295 -10045,6292
 (Potsdamer Chaussee - Dorfstr.)	1 -9547,6865 -9565,6954 -9616,6980
+Tuchmacherstr.	1 -10463,-1343 -10610,-1596 -10636,-1667
 Bahnhofstr.	1s 26103,-11861 26300,-11864
 Bernau - Tempelfelde	1 23179,31047 23103,30923
 Dallgower Str.	1 -10799,15946 -10853,16230
@@ -705,14 +717,17 @@ Zeltinger Platz	1s 2404,25187 2355,25252 2395,25273 2446,25265 2490,25211 2486,2
 Ludolfinger Platz	1s 2277,25033 2245,25016 2205,25042 2192,25083 2216,25117 2277,25094 2285,25059 2277,25033
 Sewanstr. - Balatonstr.	1s 17705,10232 17741,10386
 Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich)	1s 18377,9366 18490,9387
-Mittelstreifen mit hoher Kante	3nocross::ignrte 13796,5262 13820,5203 13889,4954
-Teterower Str. -> Buschkrugallee: Mittelstreifen mit hoher Kante	3::igndisp 13717,5175 13820,5203 13796,5262
+Mittelstreifen mit hoher Kante	3nocross::ignrte 13809,5257 13820,5203 13889,4954
+Teterower Str. -> Buschkrugallee: Mittelstreifen mit hoher Kante	3::igndisp 13717,5175 13820,5203 13809,5257
 Buschkrugallee -> Teterower Str.: Mittelstreifen mit hoher Kante	3::igndisp 13889,4954 13820,5203 13717,5175
 Straßenbahntrasse	3nocross::ignrte 12878,13229 12979,13280 13078,13330
 Landsberger Allee -> Virchowstr.: Straßenbahntrasse	3::igndisp 12878,13229 12979,13280 12916,13368
 Straßenbahntrasse	3nocross::ignrte 15639,10469 15408,10638 15383,10656
 Hauptstr. (Rummelsburg) [Wohngebiet] -> Hauptstr.: Straßenbahntrasse	3::igndisp 15358,10562 15408,10638 15383,10656
 Hauptstr. -> Hauptstr. (Rummelsburg) [Wohngebiet]: Straßenbahntrasse	3::igndisp 15639,10469 15408,10638 15358,10562
+Straßenbahntrasse	3nocross::ignrte 16004,10204 16114,10123 16138,10105
+Hauptstr. -> Friedrich-Jacobs-Promenade: Straßenbahntrasse	3::igndisp 16138,10105 16114,10123 16063,10050
+Friedrich-Jacobs-Promenade -> Hauptstr.: Straßenbahntrasse	3::igndisp 16063,10050 16114,10123 16004,10204
 Grünstreifen	3nocross::ignrte 13649,14899 13749,15013 13838,15113
 Kniprodestr. -> Altenescher Weg: Grünstreifen	3::igndisp 13838,15113 13749,15013 13856,14944
 Altenescher Weg -> Kniprodestr.: Grünstreifen	3::igndisp 13856,14944 13749,15013 13649,14899
@@ -733,6 +748,8 @@ Armbrustweg -> Klemkestr.: Mittelstreifen	3::igndisp 7626,18606 7609,18707 7520,
 Straßenbahntrasse	3nocross::ignrte 14619,16682 14608,16772 14559,16912
 Caseler Str. -> Berliner Allee: Straßenbahntrasse	3::igndisp 14700,16790 14608,16772 14619,16682
 Berliner Allee -> Caseler Str.: Straßenbahntrasse	3::igndisp 14559,16912 14608,16772 14700,16790
+Straßenbahntrasse	3nocross::ignrte 13401,15821 13432,15843 13540,15928
+Streustr. -> Berliner Allee: Straßenbahntrasse	3::igndisp 13269,15927 13432,15843 13540,15928
 Gülzower Str.: Mittelstreifen	3 22603,12359 22388,12190 22424,12183
 Mittelstreifen	3nocross::ignrte 5350,21251 5357,21199 5391,21003
 Cyclopstr. -> Oranienburger Str.: Mittelstreifen	3::igndisp 5297,21243 5357,21199 5350,21251
@@ -778,6 +795,8 @@ Mittelstreifen	3nocross::ignrte 15256,14237 15430,14262 15838,14319
 Mittelstr./Altenhofer Str. -> Landsberger Allee: Mittelstreifen	3::igndisp 15430,14272 15430,14262 15838,14319
 Landsberger Allee -> Mittelstr./Altenhofer Str.: Mittelstreifen	3::igndisp 15256,14237 15430,14262 15430,14272
 Mittelstreifen	3nocross::ignrte 22484,11270 22756,11268 22937,11265
+Adolfstr. -> Alt-Kaulsdorf: Mittelstreifen	3::igndisp 22751,11381 22756,11268 22937,11265
+Alt-Kaulsdorf -> Adolfstr.: Mittelstreifen	3::igndisp 22484,11270 22756,11268 22751,11381
 Mittelstreifen	3nocross::ignrte 24175,11265 24019,11264 23848,11264 23648,11265
 Mittelstreifen	3nocross::ignrte 11002,1211 11155,1273 11198,1291
 Muschelkalkweg -> Marienfelder Chaussee: Mittelstreifen	3::igndisp 11120,1384 11155,1273 11198,1291
@@ -1117,8 +1136,12 @@ Alt-Biesdorf -> Märkische Allee: nicht passierbarer Mittelstreifen	3::igndisp 19
 Märkische Allee -> Alt-Biesdorf: nicht passierbarer Mittelstreifen	3::igndisp 20025,11747 20114,11719 20161,11715
 Märkische Allee -> Alt-Biesdorf: nicht passierbarer Mittelstreifen	3::igndisp 20026,11663 20114,11719 19985,11727
 Märkische Allee -> Märkische Allee: nicht passierbarer Mittelstreifen	3::igndisp 20026,11663 20114,11719 20025,11747
+Alt-Biesdorf -> Lötschbergstr.: nicht passierbarer Mittelstreifen	3::igndisp 20375,11694 20161,11715 20150,11512
 Mozartstr. -> Alt-Biesdorf: nicht passierbarer Mittelstreifen	3::igndisp 20169,11852 20161,11715 20375,11694
+Mozartstr. -> Lötschbergstr.: nicht passierbarer Mittelstreifen	3::igndisp 20169,11852 20161,11715 20150,11512
 Alt-Biesdorf -> Mozartstr.: nicht passierbarer Mittelstreifen	3::igndisp 20114,11719 20161,11715 20169,11852
+Lötschbergstr. -> Mozartstr.: nicht passierbarer Mittelstreifen	3::igndisp 20150,11512 20161,11715 20169,11852
+Lötschbergstr. -> Alt-Biesdorf: nicht passierbarer Mittelstreifen	3::igndisp 20150,11512 20161,11715 20114,11719
 Straßentunnelrampe	3nocross::ignrte 18220,11710 18555,11724 18626,11742
 Alt-Friedrichsfelde -> Charlottenstr.: Straßentunnelrampe	3::igndisp 18626,11742 18555,11724 18556,11688
 Charlottenstr. -> Alt-Friedrichsfelde: Straßentunnelrampe	3::igndisp 18556,11688 18555,11724 18220,11710
@@ -1240,12 +1263,12 @@ Karl-Marx-Str. -> Saltykowstr.: unbequemes Überqueren wegen parkender Autos	3::i
 Mittelstreifen (nicht unpassierbar, aber unbequem)	3nocross::ignrte 11632,8302 11767,8330 11898,8362
 Flughafenstr. -> Weisestr.: Mittelstreifen (nicht unpassierbar, aber unbequem)	3::igndisp 11898,8362 11767,8330 11770,8292
 Weisestr. -> Flughafenstr.: Mittelstreifen (nicht unpassierbar, aber unbequem)	3::igndisp 11770,8292 11767,8330 11632,8302
-unpassierbarer Mittelstreifen	3nocross::ignrte 6183,13083 6165,12985 6156,12918 6150,12875
+unpassierbarer Mittelstreifen	3nocross::ignrte 6183,13083 6165,12985 6157,12933 6150,12875
+Stromstr. -> Bundesratufer: unpassierbarer Mittelstreifen	3::igndisp 6157,12933 6165,12985 6106,12989
 Bundesratufer -> nördliches Spreeufer: unpassierbarer Mittelstreifen	3::igndisp 6106,12989 6165,12985 6190,12978
 Bundesratufer -> Stromstr.: unpassierbarer Mittelstreifen	3::igndisp 6106,12989 6165,12985 6183,13083
-Stromstr. -> Bundesratufer: unpassierbarer Mittelstreifen	3::igndisp 6156,12918 6165,12985 6106,12989
+nördliches Spreeufer -> Stromstr.: unpassierbarer Mittelstreifen	3::igndisp 6190,12978 6165,12985 6157,12933
 nördliches Spreeufer -> Bundesratufer: unpassierbarer Mittelstreifen	3::igndisp 6190,12978 6165,12985 6106,12989
-nördliches Spreeufer -> Stromstr.: unpassierbarer Mittelstreifen	3::igndisp 6190,12978 6165,12985 6156,12918
 Stromstr. -> nördliches Spreeufer: unpassierbarer Mittelstreifen	3::igndisp 6183,13083 6165,12985 6190,12978
 Linksabbiegen verboten	3nocross::ignrte 20109,16305 20219,16523 20339,16752
 Alfred-Döblin-Str. -> Märkische Allee: Linksabbiegen verboten	3::igndisp 20286,16494 20219,16523 20109,16305
@@ -1259,6 +1282,12 @@ Wuhletalstr. -> Märkische Allee: Linksabbiegen verboten	3::igndisp 20912,17678 2
 Märkische Allee -> Parkweg an der Neuen Wuhle: Linksabbiegen verboten	3::igndisp 20912,17872 20889,17838 20983,17846
 Parkweg an der Neuen Wuhle -> Märkische Allee: Linksabbiegen verboten	3::igndisp 20983,17846 20889,17838 20843,17745
 Märkische Allee -> Wuhletalstr.: Linksabbiegen verboten	3::igndisp 20889,17838 20912,17872 20832,17824
+Mittelstreifen	3nocross::ignrte 19896,11688 19918,11891 19939,12068 19947,12140 20002,12492
+Alt-Biesdorf -> Alt-Friedrichsfelde: Mittelstreifen	3::igndisp 19979,11774 19918,11891 19890,11830
+Alt-Biesdorf -> Märkische Allee: Mittelstreifen	3::igndisp 19979,11774 19918,11891 19896,11688
+Märkische Allee -> Alt-Friedrichsfelde: Mittelstreifen	3::igndisp 19896,11688 19918,11891 19890,11830
+Haydnstr. -> Märkische Allee: Mittelstreifen	3::igndisp 20006,12128 19947,12140 19939,12068
+Märkische Allee -> Haydnstr.: Mittelstreifen	3::igndisp 20002,12492 19947,12140 20006,12128
 Linksabbiegen wegen Straßenbahn nicht möglich	3nocross::ignrte 17400,17790 17703,17990 17843,18078
 Grünanlage Egon-Erwin-Kisch-Str. -> Falkenberger Chaussee: Linksabbiegen wegen Straßenbahn nicht möglich	3::igndisp 17678,18171 17703,17990 17843,18078
 Falkenberger Chaussee -> Grünanlage Egon-Erwin-Kisch-Str.: Linksabbiegen wegen Straßenbahn nicht möglich	3::igndisp 17400,17790 17703,17990 17678,18171
@@ -1461,6 +1490,8 @@ Mittelstreifen	3nocross::ignrte -870,2737 -756,2787 -567,2869 -512,2883 -391,291
 Niklasstr. -> Potsdamer Chaussee: Mittelstreifen	3::igndisp -791,2819 -756,2787 -567,2869
 Potsdamer Chaussee -> Niklasstr.: Mittelstreifen	3::igndisp -870,2737 -756,2787 -791,2819
 Hohentwielst. -> Potsdamer Chaussee: Mittelstreifen	3::igndisp -479,2715 -567,2869 -756,2787
+tragen (14 Stufen)	0:30:82 15133,5869
+tragen oder Aufzug	0:30:-249 4158,461
 tragen (19 Stufen)	0:25:78 11479,7746
 tragen (ca. 17 Stufen)	0:22:-98 13779,4929
 tragen (8 Stufen)	0:15:-210 9956,12617
@@ -1482,7 +1513,6 @@ tragen (ca. 30 Stufen)	0:35:-221 19932,61
 tragen (43 Stufen)	0:35:-231 16998,11861
 tragen (8 Stufen)	0:14:-35 10286,11869
 tragen (14 Stufen)	0:25:-197 -6972,1029
-tragen (Treppe)	0:30:-24 22057,4531
 tragen (ca. 40 Stufen)	0:30:-147 -2396,3652
 tragen (36 Stufen)	0:30:-2 -3189,3147
 tragen (6 Stufen)	0:15:-18 -3176,3081
@@ -1543,7 +1573,8 @@ tragen (Brücke Tegeler Hafen)	0:60:-231 1166,20330
 tragen? (Fußgängerbrücke)	0:120:-202 19762,-160
 tragen (Stufen), mit MTB befahrbar	0:30:-69 5725,11644
 tragen (20 Stufen)	0:25:16 13138,9897
-unter der S-Bahn-Brücke tragen	0:30:-172 3730,18992
+unter der S-Bahn-Brücke tragen (5 Stufen)	0:10:-180 3726,18982
+unter der S-Bahn-Brücke tragen (5 Stufen)	0:10:-154 3733,18997
 tragen (31 Stufen) oder Aufzug (Storkower Str.)	0:30:-71 14530,13269
 tragen (41 Stufen) oder Aufzug (Storkower Str.)	0:40:-116 14481,13143
 tragen (zum Uferweg an den Treptowers, 24 Stufen)	0:35:-45 14383,10036
@@ -1599,6 +1630,10 @@ Rampe und flache Treppe (8 Stufen)	0:25:76 16065,6126
 tragen (Treppe, 12 Stufen)	0:15:-23 5475,7906
 tragen (Treppe, ca. 20 Stufen)	0:25:-108 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
+tragen (Treppe)	0:30:70 89344,-5795
+Drängelgitter	BNP:3:-82 -4651,9842
+enge Umfahrung	BNP:3:-90:trailer=no 14529,5851
+Schranke	BNP:3:-102:trailer=no 17826,9630
 Einfahrsperre für Autos	BNP:0:7:trailer=2 19003,9800
 sehr enge Stelle	BNP:0:-188:trailer=no 31909,2802
 enges Drängelgitter	BNP:5:-206:trailer=no 30862,3816
@@ -1727,17 +1762,16 @@ Drängelgitter	BNP:3:-157 63721,42792
 Schranke, kann auch mit Anhänger umfahren werden	BNP:1:-168 49137,24422
 Drängelgitter	BNP:3:24:trailer=6 3644,8456
 Poller, Abstand 80cm (mit Anhänger über Gehweg umfahren)	BNP:1:1:trailer=10 7816,5682
-Bertiniweg: gesperrt, wird evtl. später neu geöffnet	2:inwork -12710,1713 -12642,1781 -12636,1804 -12604,1857 -12605,1927 -12593,1946 -12542,1959
+Radweg parallel zur Autobahn ist wegen Bauarbeiten am BAB gesperrt	2:inwork 5062,14681 4676,14534 3707,14303 3595,14277
 Brücke über A10: Sperrung vom 15.02.2010 bis 01.10.2010	2:inwork 15337,24593 15490,24848
 Wegedornbrücke: Vollsperrung, Neubau	2:inwork 20385,593 20442,564 20510,530
 Rathausbrücke: gesperrt bis März 2011 (Neubau)	2:inwork 10362,12351 10422,12395
-Vicki-Baum-Str.: noch in Bau, gesperrt	2:inwork 15990,10185 15894,10251
 Vicki-Baum-Str.: noch in Bau, gesperrt	2:inwork 15823,10300 15753,10353 15688,10400
-Alice-und-Hella-Hirsch-Ring: noch in Bau, gesperrt	2:inwork 15788,10252 15823,10300
 Lina-Morgenstern-Str.: noch in Bau, gesperrt	2:inwork 15716,10303 15753,10353
 Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14795,10473 14805,10518
 Brücke im Tiergarten: gesperrt	2:inwork 6406,11784 6467,11780
 Unterführung unter Adlergestell und Bahn: wegen Brückenerneuerung gesperrt	2:inwork 20810,2398 20939,2413
+Bertiniweg: gesperrt, wird evtl. später neu geöffnet	2:inwork -12710,1713 -12642,1781 -12636,1804 -12604,1857 -12605,1927 -12593,1946 -12542,1959
 Behlertstr.	1 -12370,-354 -12500,-339 -12621,-359 -12821,-417
 tragen (Treppe)	0:30:-82 2279,5112
 tragen (Treppe)	0:15:-136 2211,5120
@@ -1798,17 +1832,6 @@ Tübinger Str. -> Mainzer Str.: Queren nicht möglich	3::igndisp 5420,8160 5359,81
 Tübinger Str. -> Bundesallee: Queren nicht möglich	3::igndisp 5420,8160 5359,8140 5357,8013
 (Los-Angeles-Platz)	1s 5681,10696 5822,10609
 Bregenzer Str.	1 4278,10262 4227,10014
-Straßenbahntrasse	3nocross::ignrte 11905,13069 11881,13072 11839,13083 11739,13131 11723,13139
-Mollstr. -> Berolinastr.: Straßenbahntrasse	3::igndisp 11905,13069 11881,13072 11874,13048
-Berolinastr. -> Mollstr.: Straßenbahntrasse	3::igndisp 11874,13048 11881,13072 11839,13083
-Mollstr. -> Büschingstr.: Straßenbahntrasse	3::igndisp 11739,13131 11839,13083 11881,13147
-Büschingstr. -> Mollstr.: Straßenbahntrasse	3::igndisp 11881,13147 11839,13083 11881,13072
-Mollstr. -> Mollstr.: Straßenbahntrasse	3::igndisp 11719,13088 11739,13131 11723,13139
-Mollstr. -> Mollstr.: Straßenbahntrasse	3::igndisp 11839,13083 11739,13131 11719,13088
-Straßenbahntrasse	3nocross::ignrte 11881,13072 11905,13069 11966,13074 11985,13075
-Pl. der Vereinten Nationen -> Mollstr.: Straßenbahntrasse	3::igndisp 11910,13055 11905,13069 11881,13072
-Pl. der Vereinten Nationen -> Plus-Parkpl.: Straßenbahntrasse	3::igndisp 11905,13069 11966,13074 11881,13147
-Plus-Parkpl. -> Pl. der Vereinten Nationen: Straßenbahntrasse	3::igndisp 11881,13147 11966,13074 11985,13075
 Tor zum Spielplatz	BNP:10:-236 11865,13027
 Tor zum Spielplatz	BNP:10:-156 11874,13048
 Tor zum Spielplatz	BNP:10:-250 11815,13045
@@ -1962,7 +1985,7 @@ tragen (Treppe, 14 Stufen)	0:30:81 7931,12876
 Joachim-Karnatz-Allee	1 7142,12584 7131,12615
 Joachim-Karnatz-Allee	1 7175,12630 7187,12598
 Ingeborg-Drewitz-Allee	1 7365,12775 7388,12746 7539,12754 7538,12729 7418,12725 7367,12729 7343,12758
-tragen (Treppe)	0:30:-135 5730,12264
+tragen (Treppe)	0:30:-180 5714,12279
 Mittelstreifen schlecht zu queren	3nocross::ignrte 6020,12492 6086,12446 6178,12387
 Cuxhavener Str. -> Altonaer Str.: Mittelstreifen schlecht zu queren	3::igndisp 5999,12280 6086,12446 6020,12492
 Altonaer Str. -> Cuxhavener Str.: Mittelstreifen schlecht zu queren	3::igndisp 6178,12387 6086,12446 5999,12280
@@ -2075,8 +2098,8 @@ Friedrich-Richter-Str.	1 16264,24764 16284,24745 16217,24651
 Franz-Schmidt-Str.	1 16328,25378 16297,25293 16337,25271 16292,25164
 Walter-Friedrich-Str.	1 16428,25107 16333,25147 16292,25164 16261,25178 16172,25217 16171,25254 16264,25418
 Groscurthstr.	1 16369,25230 16458,25193 16428,25107
-Sonnenallee	3nocross::ignrte 14617,7243 14693,7168 14803,7056
-Krebsgang -> Sonnenallee: Sonnenallee	3::igndisp 14792,7192 14693,7168 14803,7056
+Sonnenallee	3nocross::ignrte 14617,7243 14693,7168 14752,7108 14803,7056
+Krebsgang -> Sonnenallee: Sonnenallee	3::igndisp 14792,7192 14693,7168 14752,7108
 Sonnenallee -> Krebsgang: Sonnenallee	3::igndisp 14617,7243 14693,7168 14792,7192
 Straßenbahntrasse	3nocross::ignrte 18631,10167 18690,10016 18698,9996 18737,9901
 Treskowallee -> Ontarioseestr.: Straßenbahntrasse	3::igndisp 18698,9996 18690,10016 18577,10023
@@ -2140,7 +2163,7 @@ Seekorso	1 -8828,6418 -8776,6425 -8682,6435 -8578,6462 -8470,6515 -8376,6579 -83
 Seekorso	1 -7913,6931 -7965,6888 -8023,6842 -8081,6792 -8133,6751 -8185,6707 -8240,6663 -8291,6620 -8339,6578 -8364,6562 -8459,6495 -8571,6443 -8678,6414 -8775,6403 -8825,6400
 Schöneicher Str. (Alt-Hohenschönhausen)	1 16694,15658 16658,15627 16628,15532 16584,15489
 Schöneicher Str. (Alt-Hohenschönhausen)	1 16675,15688 16628,15642 16597,15552 16550,15503
-tragen (Treppe)	0:45:-8 5964,12540
+tragen (Treppe)	0:45:-28 5946,12553
 Stormstr. (Potsdam)	1 -15243,-2459 -15168,-2529 -15060,-2626
 Am Kanal (Oranienburg)	1 -1964,35846 -2110,36206 -2209,36443
 An der Landstr. (Oranienburg)	1 -3485,38431 -3496,38421 -3528,38403 -3601,38359 -3748,38273

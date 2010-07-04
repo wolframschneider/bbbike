@@ -188,7 +188,7 @@ Siegfriedstr.	1 12340,6947 12477,6975 12664,7013 12810,7047 12843,7093 12872,713
 #: XXX: Einbahnstraßenrichtung unklar
 Onkel-Herse-Str.	1 13680,4715 13757,4729 13836,4759 13853,4759 13928,4775
 Paulstr.	3nocross 7064,12419 7095,12571 7102,12613
-Holsteiner Ufer	1 6580,12775 6452,12828 6354,12870
+Holsteiner Ufer	1 6580,12775 6449,12865 6347,12901
 Händelallee	1 6082,12273 6130,12232 6280,12222 6265,12134 5998,12105 5961,12134
 Wundstr.	1 2252,11037 2272,11074 2346,11147
 Kühler Weg	1 841,9914 743,9772 616,9602
@@ -613,3 +613,18 @@ Potsdamer Str.: Mittelstreifen	3nocross 452,3133 255,3085 161,3062
 Potsdamer Str.: Mittelstreifen	3nocross -151,2975 -49,3003 50,3031 161,3062
 #: by: tanya lucas:
 Am Heidehof	1 -1410,2726 -1571,2669 -1612,2785
+Eisenbahnstr. (Fürstenwalde)	1 55401,-3599 55456,-4023 55447,-4247
+Krebsgang	1 14693,7168 14792,7192
+Methfesselstr.: Durchfahrt gesperrt (Poller)	3 9150,9152 9125,9078 9115,9046
+Methfesselstr.: Durchfahrt gesperrt (Poller)	3 9115,9046 9125,9078 9150,9152
+#: note: Luftbild
+Neue Filandastr./Filandatr.	3nocross 5687,5486 5671,5389 5659,5313
+Müllerstr.: Mittelstreifen	3nocross 6019,16712 5937,16784 5900,16817 5777,16924
+Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16734,9990 16539,10097 16148,10329
+Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16148,10329 16539,10097 16734,9990
+Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19558,8064 19504,8003 19468,7962
+Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19468,7962 19504,8003 19558,8064
+#: by: MichaelM vvv
+Klapppfosten	3 -1612,2123 -1590,1985 -1592,1852
+Klapppfosten	3 -1592,1852 -1590,1985 -1612,2123
+#: by: ^^^

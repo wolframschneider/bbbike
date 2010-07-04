@@ -115,7 +115,7 @@ Sauerbruchweg: Gel‰nde der CharitÈ	CS 8487,13351 8555,13260 8605,13200 8630,1317
 (Guerickestr. - Einsteinufer): Privatstraﬂe	CS 4642,12275 4711,12411
 #: XXX_prog: trailer=no implementation missing
 Stromstr: kann ¸ber schmale Furt (keine Anh‰nger!) gequert werden	CS 6218,12975 6190,12978 6165,12985 6106,12989
-Am Wriezener Bahnhof: Privatstraﬂe zu diversen M‰rkten	CS 12794,11893 12953,11727
+Am Wriezener Bahnhof: Privatstraﬂe zu diversen M‰rkten	CS 12794,11893 12993,11717
 #: XXX_prog should be superseded by a superiour BNP-like implementation/wird irgendwann mal zu "BS" vvv
 Bordstein	CP 12054,12903 11983,12949 11921,12990
 Bordstein	CP2; 12483,12682 12594,12866
@@ -205,6 +205,9 @@ Kreisverkehr	Roundabout 26432,-10043
 Kreisverkehr	Roundabout 18017,2751
 Kreisverkehr	Roundabout 12670,16675 12686,16667 12702,16668 12713,16682 12712,16695 12705,16708 12691,16711 12678,16711 12667,16699 12667,16685 12670,16675
 Kreisverkehr	Roundabout 47917,180585
+Kreisverkehr	Roundabout -4229,-463
+#: by: rj:
+Kreisverkehr	Roundabout 68016,72528
 #: XXX_prog ^^^
 #: section ^^^
 #: by: Dagmar Schilka
@@ -314,5 +317,9 @@ Eingang Kienitzer Str. kann nachts nicht als Ausgang benutzt werden	CS; 11489,77
 Eingang Allerstr. kann nachts nicht als Ausgang benutzt werden	CS; 11507,7647 11515,7654
 Eingang Okerstr. kann nachts nicht als Ausgang benutzt werden	CS; 11528,7528 11536,7533
 Eingang Leinestr. kann nachts nicht als Ausgang benutzt werden	CS; 11547,7432 11553,7437
-Eingang Oderstr. kann nachts nicht als Ausgang benutzt werden	CS; 11575,7249 11606,7260
+Eingang Oderstr. kann nachts nicht als Ausgang benutzt werden	CS; 11598,7264 11608,7267
 #: note: ^^^
+Weg zwischen Habermannsee und Butzensee	CS 23522,10456 23468,10423 23431,10435 23193,10426 23024,10455 22978,10451
+Mollergasse: Straﬂe ist nicht ausgeschildert	CS 9892,12596 9894,12564
+Schmellwitzer Weg: Privatstraﬂe	CS 20005,11383 19984,11319 19801,11360
+Altenauer Weg: Zufahrt wegen Hecke schwer erkennbar	CP2; 5435,1390 5419,1395

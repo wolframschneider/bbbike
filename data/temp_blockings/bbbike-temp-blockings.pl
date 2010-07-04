@@ -480,10 +480,11 @@ EOF
        text  => 'Gleimstraße zwischen Schönhauser Allee und Ystarder Straße in beiden Richtungen gesperrt, Bauarbeiten. Dauer: bis voraussichtlich 07.07.2004',
        type  => 'handicap',
      },
-     { from  => undef, # 
-       until => 1150666200, # 2006-06-18 23:30
-       text  => 'Badstr. (Wedding) in beiden Richtungen, zwischen Pankstr. und Behmstr. Veranstaltung, Straße vollständig gesperrt (bis 18.06.2006 23:30 Uhr) Seifenkistenrennen und Straßenfest in der Badstr.',
+     { from  => 1276833600, # 2010-06-18 06:00
+       until => 1277071140, # 2010-06-20 23:59
+       text  => 'Badstraße (Wedding): Veranstaltung, gesperrt (bis 21.06.10, 0 Uhr) in beiden Richtungen zwischen Pankstraße und Behmstraße, 19.06.2010 06:00 Uhr bis 20.06.2010 23:59 Uhr ',
        type  => 'gesperrt',
+       source_id => 'IM_015896',
        file  => 'badstr.bbd',
      },
      { from  => 1087462800, # 2004-06-17 11:00
@@ -509,7 +510,7 @@ EOF
        text  => 'Müllerstr. (Wedding) in beiden Richtungen zwischen Londoner Str. und Transvaalstr. Veranstaltung, Straße vollständig gesperrt (bis 17.07.2005 24 Uhr)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 6019,16712 5937,16784 5777,16924
+userdel	2 6019,16712 5937,16784 5900,16817 5777,16924
 userdel	2 6019,16712 6103,16635
 userdel	2 6103,16635 6208,16546 6311,16457
 EOF
@@ -641,7 +642,7 @@ EOF
        text  => 'L 73; (B246-Fresdorf-Wildenbruch-B2); OD Wildenbruch, zw. Potsdamer Str. u. Dorfstr.; Straßenbauarbeiten; Vollsperrung; 23.08.2004-29.08.2004',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -12325,-13958 -12177,-13787
+userdel	q4 -12283,-13901 -12154,-13801
 EOF
      },
      { from  => undef, # 
@@ -769,7 +770,7 @@ EOF
        text  => 'L 771; (Gröben-Saarmund); Autobahnbrücke südl. Saarmund Brückenabriss u. -neubau Vollsperrung 08.09.2004-10.09.2004 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -8879,-12309 -8457,-11261
+userdel	2 -8879,-12309 -8433,-11290
 EOF
      },
      { from  => 1094176800, # 2004-09-03 04:00
@@ -1462,11 +1463,11 @@ EOF
        text  => 'Im Zeitraum vom 14.02.2005 bis 30.04.2005 besteht für die L 73 zwischen Langerwisch und Wildenbruch Vollsperrung auf Grund von Bauarbeiten. ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -12156,-13509 -12221,-13124
-userdel	2 -12156,-13509 -12177,-13787
-userdel	2 -12372,-12676 -12221,-13124
-userdel	2 -12372,-12676 -12443,-12223 -12459,-12120
-userdel	2 -12337,-10735 -12433,-11898 -12459,-12120
+userdel	2 -12104,-13586 -12221,-13124
+userdel	2 -12104,-13586 -12154,-13801
+userdel	2 -12344,-12547 -12221,-13124
+userdel	2 -12344,-12547 -12373,-12221 -12373,-12118
+userdel	2 -12305,-10732 -12369,-11903 -12373,-12118
 EOF
      },
      { from  => 1108684644, # 2005-02-18 00:57
@@ -1492,8 +1493,8 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2 14694,5230 14744,5211 14808,5202 14988,5214
-userdel	2 14988,5214 15038,5235 15183,5480
-userdel	2 15183,5480 15382,5687
+userdel	2 14988,5214 15038,5235 15190,5490
+userdel	2 15190,5490 15363,5668 15382,5687
 EOF
      },
      { from  => 1113429600, # 2005-04-14 00:00
@@ -1968,7 +1969,7 @@ EOF
        text  => 'L 35; (Eisenbahnstr.); OL Fürstenwalde, zw. Wassergasse und Frankfurter Str. Frühlingsfest Vollsperrung 25.05.2005-30.05.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 55447,-4247 55447,-4432 55447,-4585 55562,-4726
+userdel	q4 55447,-4247 55447,-4432 55447,-4585 55536,-4725
 EOF
      },
      { from  => 1117080000, # 2005-05-26 06:00
@@ -2176,7 +2177,7 @@ EOF
        text  => 'L 793; (Schönhagen-Ludwigsfelde); zw. Abzw. Gröben und Siethen Straßenbauarbeiten Vollsperrung 29.06.2005-02.09.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -2542,-13926 -3801,-14252
+userdel	2 -2542,-13926 -3842,-14180
 EOF
      },
      { from  => 1119909600, # 2005-06-28 00:00
@@ -2184,7 +2185,7 @@ EOF
        text  => 'L 793; (Schönhagen-Ludwigsfelde); zw. OD Jütchendorf und Abzw. Gröben Straßenbauarbeiten Vollsperrung 29.06.2005-02.09.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -3694,-14508 -4077,-14595
+userdel	2 -3717,-14467 -4077,-14595
 userdel	2 -4504,-14978 -4077,-14595
 EOF
      },
@@ -2346,7 +2347,7 @@ EOF
        text  => 'L 382; (Gronenfelder Weg); zw. FFO, Birnbaumsmühle und Booßener Kreisel Gefahrenabwehr Vollsperrung 14.07.2005-15.07.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 85161,-3425 84653,-3159
+userdel	2 85173,-3363 84649,-3081
 EOF
      },
      { from  => 1121724000, # 2005-07-19 00:00
@@ -2855,7 +2856,7 @@ EOF
        text  => 'L 382; (Birnbaumsmühle); OD Frankfurt (O), Bereich unter den Brücken DB grundh. Straßenbau Vollsperrung 28.09.2005-30.06.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 85403,-4497 85666,-3989
+userdel	2 85403,-4497 85622,-3937
 EOF
      },
      { from  => 1128117600, # 2005-10-01 00:00
@@ -3836,7 +3837,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS_1142967727545',
        data  => <<EOF,
-userdel	q4 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 23950,5342
+userdel	q4 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 24049,5380 23950,5342
 userdel	q4 25012,5754 25018,5756 25121,5799
 userdel	q4 25579,5958 25121,5799
 EOF
@@ -4322,7 +4323,7 @@ EOF
        text  => 'L 037 Petersdorfer Str. OD Petershagen Kanal- und Straßenbauarbeiten Vollsperrung 15.05.2006-30.09.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 74092,475 74246,584
+userdel	q4::inwork 74107,450 74197,607
 EOF
      },
      { from  => undef, # 
@@ -5237,7 +5238,7 @@ EOF
        text  => 'L 035 Eisenbahnstr.-August-Bebel-Str. Brücke über die Spree in Fürstenwalde Deckenerneuerung halbseitig gesperrt; Einbahnstraße 31.07.2006-02.09.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork; 55549,-4992 55562,-4726
+userdel	q4::inwork; 55506,-4975 55536,-4725
 EOF
      },
      { from  => 1154642400, # 2006-08-04 00:00
@@ -5417,7 +5418,7 @@ EOF
        text  => 'B 005 Berliner Str. OD Petershagen, zw. Betonstr. und Ortsausgang Kanal- und Straßenbauarbeiten Vollsperrung 16.08.2006-30.09.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 73775,831 74246,584
+userdel	q4::inwork 73775,831 74197,607
 EOF
      },
      { from  => 1155506400, # 2006-08-14 00:00
@@ -6103,7 +6104,7 @@ EOF
        text  => 'K 6904 Gröben-KG-K6903 Nudow zw. Abzw. Nudow und Fahlhorst Bau Eisenbahnüberführung Vollsperrung 24.07.2006-30.03.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -6631,-9207 -6181,-10412
+userdel	2::inwork -6631,-9207 -6223,-10366
 EOF
      },
      { from  => 1159826400, # 2006-10-03 00:00
@@ -6515,7 +6516,7 @@ EOF
        text  => 'B 005 Berliner Str. OD Petershagen, zw. Betonstr. und Ortsausgang Kanal- und Straßenbauarbeiten Vollsperrung 16.08.2006-22.12.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 74246,584 73775,831 73479,1000
+userdel	q4::inwork 74197,607 73775,831 73479,1000
 EOF
      },
      { from  => 1162422000, # 2006-11-02 00:00
@@ -7122,7 +7123,7 @@ EOF
        text  => 'Fürstenwalder Damm, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Baustelle bis 30.03.2007 (im Bereich Einmündung Mühlweg) ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 23950,5342
+userdel	q4::inwork 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 24049,5380 23950,5342
 EOF
      },
      { from  => 1172530621, # 2007-02-26 23:57
@@ -7229,7 +7230,7 @@ EOF
        text  => 'L 037 Petersdorfer Str. OD Petershagen Kanal- und Straßenbauarbeiten Vollsperrung 16.04.2007-02.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 74092,475 74246,584
+userdel	2::inwork 74107,450 74197,607
 EOF
      },
      { from  => 1173308400, # 2007-03-08 00:00
@@ -7245,7 +7246,7 @@ EOF
        text  => 'L 023 Storkow-Herzfelde Bahnübergang Fangschleuse Gleisbauarbeiten Vollsperrung 16.03.2007-19.03.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 39225,1082 39259,612 39264,-832
+userdel	2::inwork 39250,1024 39259,612 39264,-832
 EOF
      },
      { from  => 1174172400, # 2007-03-18 00:00
@@ -8398,7 +8399,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005655',
        data  => <<EOF,
-userdel	2::temp 6311,16457 6208,16546 6103,16635 6019,16712 5937,16784 5777,16924
+userdel	2::temp 6311,16457 6208,16546 6103,16635 6019,16712 5937,16784 5900,16817 5777,16924
 EOF
      },
      { from  => 1180783165, # 2007-06-02 13:19
@@ -8635,7 +8636,7 @@ EOF
        text  => 'B 005 Treplin-Petershagen OD Petershagen, zw. KVK und Ortsausgang Kanal- und Straßenbau Vollsperrung 18.06.2007-15.10.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 74246,584 74683,385
+userdel	q4::inwork 74197,607 74683,385
 EOF
      },
      { from  => 1182031200, # 2007-06-17 00:00
@@ -9085,7 +9086,7 @@ EOF
        text  => 'B 005 Kieler Str. OL Frankfurt (O), zw. Lebuser Ch. u. Goepelstr. Bergsicherungsarbeiten Vollsperrung 23.07.2007-03.08.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 87377,-3591 87248,-3446
+userdel	q4::inwork 87406,-3541 87292,-3434
 EOF
      },
      { from  => 1184709600, # 2007-07-18 00:00
@@ -9551,7 +9552,7 @@ EOF
        text  => 'B 112 Eisenhüttenstadt-Frankfurt (O) zw. Güldendorf und Frankfurt (O) Deckenerneuerung Richtungsverkehr 28.08.2007-15.09.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 87207,-9278 86790,-8657
+userdel	1::inwork 87207,-9278 86762,-8601
 EOF
      },
      { from  => 1188079200, # 2007-08-26 00:00
@@ -10212,7 +10213,7 @@ EOF
        text  => 'B 005 Treplin-Petershagen OD Petershagen, zw. KVK und Ortsausgang Kanal- und Straßenbau Vollsperrung 18.06.2007-26.10.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 74246,584 74683,385
+userdel	q4::inwork 74197,607 74683,385
 EOF
      },
      { from  => 1193090400, # 2007-10-23 00:00
@@ -10352,7 +10353,7 @@ EOF
        text  => 'Bauarbeiten am Ostkreuz, Verbindungsstraße könnte für die Durchfahrt gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 14673,10180 14764,10303 14794,10336 14821,10478 14832,10512 14843,10621 14882,10732
+userdel	2::inwork 14688,10167 14765,10279 14794,10336 14821,10478 14832,10512 14843,10621 14882,10732
 EOF
      },
      { from  => undef, # 
@@ -10977,7 +10978,7 @@ EOF
        text  => 'B 087 Leipziger Str. OD FFO, zw. Biegener- u. Krz.Kopernikus-/Müllroser-/EHS Str. Straßenausbau halbseitig gesperrt; Einbahnstraße 17.03.2008-30.05.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 87829,-6485 87655,-6717
+userdel	q4::inwork 87846,-6398 87671,-6669
 EOF
      },
      { from  => 1206486000, # 2008-03-26 00:00
@@ -11492,7 +11493,7 @@ EOF
        text  => 'Untere Kynaststr.: Restbauarbeiten, Straße könnte u.U. bis zum 2.6.2008 gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 14673,10180 14764,10303 14794,10336 14821,10478 14832,10512 14843,10621 14882,10732 14906,10820
+userdel	2::inwork 14688,10167 14765,10279 14794,10336 14821,10478 14832,10512 14843,10621 14882,10732 14906,10820
 EOF
      },
      { from  => undef, # 
@@ -12177,7 +12178,7 @@ EOF
        text  => 'B 087 Müllroser Chaussee zw. Brücke A 12 und Siedlung Markendorf Deckenerneuerung Vollsperrung 14.08.2008-18.08.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 84692,-9145 85598,-8331
+userdel	2::inwork 84677,-9063 85598,-8331
 EOF
      },
      { from  => 1218146400, # 2008-08-08 00:00
@@ -12363,7 +12364,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_009763',
        data  => <<EOF,
-userdel	q4::inwork 22740,4415 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23363,4846 23451,4877
+userdel	q4::inwork 22740,4415 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23055,4640 23363,4846 23451,4877
 EOF
      },
      { from  => 1219528800, # 2008-08-24 00:00
@@ -13281,7 +13282,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_011184',
        data  => <<EOF,
-#: last_checked: 2010-04-19
+#: last_checked: 2010-06-18
 userdel	q4::inwork; 10350,13376 10527,13257
 EOF
      },
@@ -14448,7 +14449,7 @@ EOF
        text  => 'K 6905 Langerwisch - Wilhelmshorst - B 2 OD Langerwisch, Abzw. Wilhelmshorst Straßenbau Vollsperrung 13.06.2009-13.06.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -12312,-10337 -12337,-10735
+userdel	q4::inwork -12312,-10337 -12305,-10732
 EOF
      },
      { from  => 1250200800, # 2009-08-14 00:00
@@ -14456,7 +14457,7 @@ EOF
        text  => 'L 077 Langerwisch - Saarmund OD Langerwisch, zw. Nahkauf u. Beelitzer Str. Straßenbau Vollsperrung 15.08.2009-30.08.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -12915,-10753 -12337,-10735
+userdel	q4::inwork -12915,-10753 -12305,-10732
 EOF
      },
      { from  => 1244584800, # 2009-06-10 00:00
@@ -14631,7 +14632,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_013302',
        data  => <<EOF,
-userdel	1::inwork 15382,5687 15183,5480
+userdel	1::inwork 15382,5687 15363,5668 15190,5490
 EOF
      },
      { from  => undef, # 
@@ -14668,7 +14669,7 @@ userdel	2::inwork -8893,85743 -9850,84800
 EOF
      },
      { from  => 1261769245, # 2009-12-25 20:27
-       until => 1277935199, # 2010-06-30 23:59
+       until => 1276408849, # 2010-06-30 23:59 1277935199
        text  => 'Markgrafenstr. (Mitte) Richtung Behrenstr. zwischen Mohrenstr. und Französische Str. Baustelle, Fahrtrichtung gesperrt (bis Ende 06.10)',
        type  => 'handicap',
        source_id => 'IM_013316',
@@ -14832,7 +14833,7 @@ EOF
        text  => 'L 038 zw. OA Hangelsberg u. Kreisverkehrsplatz Straßeninstandsetzungsarbeiten Vollsperrung 16.07.2009-30.08.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 45037,31 43456,337 42843,102
+userdel	2::inwork 45037,31 43880,303 43456,337 42926,155
 EOF
      },
      { from  => 1247436000, # 2009-07-13 00:00
@@ -14956,7 +14957,7 @@ EOF
        text  => 'L 038 Falkenberg - Fürstenwalde zw. Berkenbrück u. Fürstenwalde Deckenerneuerung Vollsperrung 16.07.2009-29.08.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 58249,-5090 59449,-5351 60003,-5190 60762,-5117 60874,-5013 60958,-4995
+userdel	2::inwork 58249,-5090 58861,-5262 59449,-5351 60003,-5190 60687,-5131 60784,-5060 60918,-4953
 EOF
      },
      { from  => 1248559200, # 2009-07-26 00:00
@@ -15567,7 +15568,7 @@ EOF
        text  => 'B 001 Bundesgrenze Polen - Küstrin Kietz Vorflutbrücke bei Küstrin Kietz Brückeninstandsetzung Vollsperrung 17.08.2009-28.02.2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 92955,20065 93405,20640
+userdel	2::inwork 92925,19897 92970,19935 92970,20194 93096,20241 93405,20640
 EOF
      },
      { from  => 1252188000, # 2009-09-06 00:00
@@ -15765,7 +15766,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014045',
        data  => <<EOF,
-userdel	q4::inwork; 23451,4877 23363,4846 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22740,4415
+userdel	q4::inwork; 23451,4877 23363,4846 23055,4640 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22740,4415
 EOF
      },
      { from  => 1250978400, # 2009-08-23 00:00
@@ -16094,13 +16095,13 @@ userdel	q4::temp 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,123
 userdel	q4::temp 6828,12031 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8538,12245 8610,12254
 EOF
      },
-     { from  => 1273091418, # 2010-05-05 22:30
+     { from  => 1276547726, # 2010-06-14 22:35
        until => 1280613600, # 2010-08-01 00:00
-       text  => 'Schwielowsee: K6910: Kanal- und Straßenbau OL Geltow Richtungsverkehr zw. Mühlenbergstr. und B 1, 30.03.2009 bis 31.07.2010 ',
+       text  => 'Schwielowsee: K6910: Kanal- und Straßenbau OL Geltow Richtungsverkehr zw. Mühlenbergstr. und B 1, Vollsperrung für Deckeneinbau, bis 31.07.2010',
        type  => 'handicap',
        source_id => '96900159',
        data  => <<EOF,
-userdel	q4::inwork; -19013,-5247 -19112,-5226 -19332,-5240
+userdel	q4::inwork -19013,-5247 -19112,-5226 -19332,-5240
 EOF
      },
      { from  => 1253138400, # 2009-09-17 00:00
@@ -17101,10 +17102,11 @@ EOF
 userdel	q4::inwork; -22042,-2060 -21524,-2998
 EOF
      },
-     { from  => 1252879200, # 2009-09-14 00:00
-       until => 1277935200, # 2010-07-01 00:00
-       text  => 'L 092 AS Potsdam-Nord - Ketzin Brücke über den Schleusenkanal bei Paretz Brückenneubau, Straßenbau Vollsperrung 15.09.2009-30.06.2010 ',
+     { from  => 1277442923, # 2010-06-25 07:15
+       until => 1277503200, # 2010-06-26 00:00
+       text  => 'Potsdam: L92: Brückenneubau - Straßenbau Brücke über den Schleusenkanal bei Paretz, 15.09.2009 bis 25.06.2010',
        type  => 'gesperrt',
+       source_id => 'LS/W-SG33-P/09/467-1',
        data  => <<EOF,
 userdel	2::inwork -24240,6075 -24731,6194
 EOF
@@ -17147,8 +17149,8 @@ userdel	1::inwork 18370,5511 18307,5440 18214,5354 18080,5376 18245,5551
 EOF
      },
      { from  => 1268521200, # 2010-03-14 00:00
-       until => 1276898399, # 2010-06-18 23:59
-       text  => 'Die Leipziger Str. ist zwischen Mauerstr. und Charlottenstr. Richtung Alexanderstr. wegen Bauarbeiten gesperrt. Zu Einbahnstraßen werden Teile der Mauer-, Krausen-, Charlottenstr. und Friedrichstr. Dauer: 15. März 2010 bis 18. Juni 2010 ',
+       until => 1277320989, # Time::Local::timelocal(reverse(2010-1900,6-1,25,15,0,0)), # was: 1276898399, # 2010-06-18 23:59
+       text  => 'Die Leipziger Str. ist zwischen Mauerstr. und Charlottenstr. Richtung Alexanderstr. wegen Bauarbeiten gesperrt. Zu Einbahnstraßen werden Teile der Mauer-, Krausen-, Charlottenstr. und Friedrichstr. Dauer: 15. März 2010 bis 25. Juni 2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	q4::inwork; 9268,11590 9444,11616 9569,11631 9581,11523 9456,11513 9331,11497 9268,11590
@@ -17206,7 +17208,7 @@ EOF
        type  => 'handicap',
        source_id => 'LSW-SG33-P09598-1',
        data  => <<EOF,
-userdel	q4::inwork -8457,-11261 -8332,-10598
+userdel	q4::inwork -8433,-11290 -8293,-10599
 EOF
      },
      { from  => 1238191200, # 2009-03-27 23:00
@@ -17286,7 +17288,7 @@ EOF
        type  => 'handicap',
        source_id => '86901199',
        data  => <<EOF,
-userdel	q4::inwork -12915,-10753 -12337,-10735
+userdel	q4::inwork -12915,-10753 -12305,-10732
 EOF
      },
      { from  => 1270235498, # 2010-04-02 21:11
@@ -17304,7 +17306,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LSO-SG33-F10015',
        data  => <<EOF,
-userdel	2::inwork 48220,6698 48051,6849
+userdel	2::inwork 48182,6806 48027,6894
 EOF
      },
      { from  => 1270235686, # 2010-04-02 21:14
@@ -17585,21 +17587,21 @@ EOF
        data  => <<EOF,
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10691,8532 10640,8366 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10598,8270 10729,8152
-(Rundkurs auf dem Flughafen Tempelhof)	2::temp 11463,7785 11470,7744 11543,7369 11570,7315 11575,7249 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
+(Rundkurs auf dem Flughafen Tempelhof)	2::temp 11463,7785 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
 (Rundkurs auf dem Flughafen Tempelhof)	2::temp 9525,7558 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10575,8218
 (Rundkurs auf dem Flughafen Tempelhof)	2::temp 10575,8218 10729,8152 10924,7987 11090,7916 11264,7882 11355,7871 11381,7775 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::temp 9525,7558 9431,7425 9392,7339 9300,7312 9302,7294 9242,7286
-(Südliche Landebahn)	2::temp 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11570,7315
+(Südliche Landebahn)	2::temp 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11593,7314
 (Nördliche Landebahn)	2::temp 9351,7600 9518,7609 9654,7621 11279,7768 11381,7775 11463,7785
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::temp 11463,7785 11439,7894
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::temp 11472,7899 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung)	2::temp 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10640,8366
-(Weg parallel zur Oderstr.)	2::temp 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11570,7315
+(Weg parallel zur Oderstr.)	2::temp 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
 (Eingang Kienitzer Str.)	2::temp 11498,7750 11489,7748 11479,7746 11470,7744
 (Flughafen Tempelhof - Eingang Allerstr.)	2::temp 11507,7647 11515,7654
 (Flughafen Tempelhof - Eingang Okerstr.)	2::temp 11528,7528 11536,7533
 (Flughafen Tempelhof - Eingang Leinestr.)	2::temp 11547,7432 11553,7437
-(Flughafen Tempelhof - Eingang Oderstr.)	2::temp 11575,7249 11606,7260
+(Flughafen Tempelhof - Eingang Oderstr.)	2::temp 11598,7264 11608,7267
 (Eingang Tempelhofer Damm - südliche Landebahn)	2::temp 9302,7294 9351,7241 9461,7190
 EOF
      },
@@ -17654,7 +17656,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015731',
        data  => <<EOF,
-userdel	q3::inwork 16414,25575 16294,25683 16194,25743 16166,25767 16114,25827 16045,25907
+userdel	q3::inwork 16414,25575 16294,25683 16220,25716 16166,25767 16114,25827 16045,25907
 EOF
      },
      { from  => 1275342035, # 2010-05-31 23:40
@@ -17682,6 +17684,200 @@ EOF
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100528.1110.297131.html',
        data  => <<EOF,
 userdel	q4::inwork 18586,9172 18511,9185 18430,9199 18319,9218
+EOF
+     },
+     { from  => 1275679548, # 2010-06-04 21:25
+       until => 1275948000, # 2010-06-08 00:00
+       text  => 'Erkner: L30: 18. Heimatfest OL Erkner, 03.06.2010 bis 07.06.2010 ',
+       type  => 'gesperrt',
+       source_id => '106700635',
+       data  => <<EOF,
+userdel	2::temp 34443,1951 34250,2546
+EOF
+     },
+     { from  => 1275537600, # 2010-06-03 06:00
+       until => 1275861540, # 2010-06-06 23:59
+       text  => 'Neue Krugallee (Treptow): Veranstaltung, gesperrt. Ebenso gesperrt Bulgarische Str. zw. Neue Krugallee und Parkplatz (bis 06.06.10 24.00 Uhr) in beiden Richtungen zw. Bulgarische Str. und Am Plänterwald, 04.06.2010 06:00 Uhr bis 06.06.2010 23:59 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_015813',
+       data  => <<EOF,
+userdel	q4::temp 15793,8984 15673,8901 15591,8848 15714,8633
+EOF
+     },
+     { from  => 1276547925, # 2010-06-14 22:38
+       until => 1291158000, # 2010-12-01 00:00
+       text  => 'Neuruppin: K6828: Straßenbau OL Karwe, 14.06.2010 bis 30.11.2010',
+       type  => 'gesperrt',
+       source_id => '106800201',
+       data  => <<EOF,
+userdel	2::inwork -27035,49829 -25968,49631
+EOF
+     },
+     { from  => 1276547986, # 2010-06-14 22:39
+       until => 1292626800, # 2010-12-18 00:00
+       text  => 'Rehfelde: K6419: Straßenausbau OL Rehfelde, zw. Bahnhofstraße und Kreisverkehr, 07.06.2010 bis 17.12.2010 ',
+       type  => 'handicap',
+       source_id => '106401098',
+       data  => <<EOF,
+userdel	q4::inwork 45856,14437 44121,14615
+EOF
+     },
+     { from  => 1276548087, # 2010-06-14 22:41
+       until => 1293663600, # 2010-12-30 00:00
+       text  => 'Wusterhausen/Dosse: K6806, B167: Straßenbauarbeiten OD Metzelthin , 07.06.2010 bis 29.12.2010 ',
+       type  => 'gesperrt',
+       source_id => 'LS/W-SG33-K/10/066',
+       data  => <<EOF,
+userdel	2::inwork -50068,51237 -51018,51135
+EOF
+     },
+     { from  => 1276812000, # 2010-06-18 00:00
+       until => 1276984799, # 2010-06-19 23:59
+       text  => 'CSD am 19.6.2010',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp 8731,12270 8610,12254 8538,12245 8546,12279 8570,12302
+userdel	2::temp 6851,10416 7033,10396 7033,10328 6971,10346 6937,10363 6851,10416 6753,10446 6636,10492 6532,10529 6468,10550 6353,10583 6223,10634 6133,10679 6025,10746 5942,10803 5782,10884 5725,10892 5656,10876 5484,10810 5351,10760
+userdel	2::temp 8600,12165 8538,12245 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 6828,12031 6809,11979 6744,11936 6778,11742 6809,11570 6825,11486 6851,11346 6880,11110 6882,11061 6873,11011 6824,10904 6918,10854 6972,10665 6985,10597 7003,10513 7033,10396
+userdel	2::temp 6828,12031 6787,12099 6754,12108 6725,12113 6690,12104 6653,12067 6642,12010 6685,11954 6744,11936
+userdel auto	3 6540,11754 6778,11742 7073,11798
+userdel auto	3 6681,10959 6824,10904 6740,10755
+userdel auto	3 6980,11583 6809,11570 6524,11583
+userdel auto	3 8048,12135 8055,12186 8119,12414
+userdel auto	3 5479,10719 5484,10810 5494,10973
+userdel auto	3 7115,11220 6880,11110 6841,11114
+userdel auto	3 6740,10755 6972,10665 7115,10612
+userdel auto	3 6740,10755 6824,10904 6681,10959
+userdel auto	3 6732,11106 6873,11011 7002,11034
+userdel auto	3 6250,10701 6223,10634 6192,10542
+userdel auto	3 7060,10221 7033,10328 7131,10331
+userdel auto	3 6131,10939 6025,10746 5877,10486
+userdel auto	3 6524,11583 6809,11570 6980,11583
+userdel auto	3 6192,10542 6223,10634 6250,10701
+userdel auto	3 8522,12239 8538,12245 8522,12187
+userdel auto	3 7103,11247 6851,11346 6692,11365
+userdel auto	3 6719,10347 6753,10446 6745,10619
+userdel auto	3 6573,11943 6642,12010 5901,11902
+userdel auto	3 5901,11902 6642,12010 6573,11943
+userdel auto	3 6692,11365 6851,11346 7103,11247
+userdel auto	3 5681,10696 5782,10884 5829,10964
+userdel auto	3 7875,12363 7816,12150 7827,12105
+userdel auto	3 7039,12314 7383,12095 7460,12054
+userdel auto	3 6302,10462 6353,10583 6380,10704
+userdel auto	3 7073,11798 6778,11742 6540,11754
+userdel auto	3 6745,10619 6753,10446 6719,10347
+userdel auto	3 6685,10690 6532,10529 6494,10440
+userdel auto	3 8119,12414 8055,12186 8048,12135
+userdel auto	3 8522,12187 8538,12245 8522,12239
+userdel auto	3 7115,10612 6972,10665 6740,10755
+userdel auto	3 6841,11114 6880,11110 7115,11220
+userdel auto	3 7827,12105 7816,12150 7875,12363
+userdel auto	3 6380,10704 6353,10583 6302,10462
+userdel auto	3 7171,11510 6825,11486 6716,11439
+userdel auto	3 6494,10440 6532,10529 6685,10690
+userdel auto	3 7460,12054 7383,12095 7039,12314
+userdel auto	3 7002,11034 6873,11011 6732,11106
+userdel auto	3 5877,10486 6025,10746 6131,10939
+userdel auto	3 5494,10973 5484,10810 5479,10719
+userdel auto	3 5829,10964 5782,10884 5681,10696
+userdel auto	3 7131,10331 7033,10396 7245,10499
+userdel auto	3 7131,10331 7033,10328 7060,10221
+userdel auto	3 6716,11439 6825,11486 7171,11510
+userdel auto	3 7245,10499 7033,10396 7131,10331
+EOF
+     },
+     { from  => 1276783200, # 2010-06-17 16:00
+       until => 1277089200, # 2010-06-21 05:00
+       text  => 'Frohnauer Brücke (Reinickendorf): Veranstaltung, gesperrt (bis 21.06.10, 5 Uhr) und Zeltinger Platz sowie Ludolfinger Platz, 18.06.2010 16:00 Uhr bis 21.06.2010 05:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_015895',
+       data  => <<EOF,
+userdel	q4::temp 2404,25187 2277,25094
+EOF
+     },
+     { from  => 1276833600, # 2010-06-18 06:00
+       until => 1276977600, # 2010-06-19 22:00
+       text  => 'Gotzkwoskystraße (Tiergarten): Veranstaltung, gesperrt (bis 22 Uhr) in beide Richtungen zwischen Alt-Moabit und Turmstraße, 19.06.2010 06:00 Uhr bis 19.06.2010 22:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_015893',
+       data  => <<EOF,
+userdel	q4::temp 5368,13406 5358,13207 5328,13019
+EOF
+     },
+     { from  => 1276833600, # 2010-06-18 06:00
+       until => 1276966800, # 2010-06-19 19:00
+       text  => 'Lipschitzallee (Neukölln): Veranstaltung, gesperrt (bis 19 Uhr) in beiden Richtungen zwischen Fritz-Erler-Allee und Rudower Straße, 19.06.2010 06:00 Uhr bis 19.06.2010 19:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'IM_015892',
+       data  => <<EOF,
+userdel	q4::temp 14935,2530 15088,2691 15140,2778 15235,2938 15271,3058
+EOF
+     },
+     { from  => 1276790400, # 2010-06-17 18:00
+       until => 1277085600, # 2010-06-21 04:00
+       text  => 'Melchow: L200: Gleisbauarbeiten Bahnübergang bei Melchow , 18.06.2010 18:00 Uhr bis 21.06.2010 04:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => '106000270',
+       data  => <<EOF,
+userdel	2::inwork 30143,41500 29553,41441 29468,41438
+EOF
+     },
+     { from  => 1276869600, # 2010-06-18 16:00
+       until => 1279231140, # 2010-07-15 23:59
+       text  => 'Straße des 17. Juni (Tiergarten): FIFA Fan Fest, Straße vollständig gesperrt (bis 15. Juli, 24 Uhr) in beiden Richtungen zwischen Großer Stern und Eberstr., ebenso Yitzhak-Rabin-Str. sowie der östliche Tiergarten, 19.06.2010 16:00 Uhr bis 15.07.2010 23:59 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'IM_015899',
+       data  => <<EOF,
+userdel	2::temp 8055,12186 7816,12150 7383,12095 6828,12031
+userdel	2::temp 8089,12190 8055,12186 8119,12414
+userdel auto	3 7460,12054 7383,12095 7039,12314
+userdel auto	3 7827,12105 7816,12150 7875,12363
+userdel auto	3 7875,12363 7816,12150 7827,12105
+userdel auto	3 7039,12314 7383,12095 7460,12054
+userdel	2::temp 7382,11588 7163,11738 7287,11763 7535,11677
+userdel	2::temp 8021,11636 8016,11770 7801,11875 7663,11946
+userdel	2::temp 7796,11681 7816,11571
+userdel	2::temp 8022,12016 8016,11770 7852,11721
+userdel	2::temp 7816,12150 7875,12363
+userdel	2::temp 7711,11558 7669,11586 7591,11639
+userdel	2::temp 8055,12186 8048,12135 8034,12093
+userdel	2::temp 7822,11952 7832,12036
+userdel	2::temp 8172,11679 8016,11770 8156,11863 8223,11796
+userdel	2::temp 7696,11621 7735,11656
+userdel	2::temp 7039,12314 7383,12095
+userdel	2::temp 7795,11823 7777,11787
+userdel	2::temp 6778,11742 7073,11798 6809,11979
+userdel	2::temp 8091,11992 8089,12041
+userdel	2::temp 8018,12131 7827,12105 7460,12054 7663,11946 7570,11855 7223,11897 7073,11798 7163,11738 6980,11583
+userdel	2::temp 7460,12054 6857,11992
+EOF
+     },
+     { from  => 1277355600, # 2010-06-24 07:00
+       until => 1277675940, # 2010-06-27 23:59
+       text  => 'Bergmannstraße (Kreuzberg): Veranstaltung, Straße vollständig gesperrt (bis vorauss. 27.06.2010 23:59) in beiden Richtungen zwischen Mehringdamm und Zossener Str., 25.06.2010 07:00 Uhr bis 27.06.2010 23:59 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_015920',
+       data  => <<EOF,
+userdel	q4::temp 9248,9350 9300,9341 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252
+userdel auto	3 9487,9209 9505,9306 9524,9426
+userdel auto	3 9524,9426 9505,9306 9487,9209
+EOF
+     },
+     { from  => 1277443049, # 2010-06-25 07:17
+       until => 1324422000, # 2011-12-21 00:00
+       text  => 'Cottbus: L511: Straßen- und Kanalbauarbeiten Cottbus, OT Sielow , 20.06.2010 bis 20.12.2011 ',
+       type  => 'handicap',
+       source_id => '105200001',
+       data  => <<EOF,
+userdel	q4::inwork 73237,-66975 73640,-67643
+EOF
+     },
+     { from  => 1277589600, # 2010-06-27 00:00
+       until => 1279576799, # 2010-07-19 23:59
+       text  => 'Instandsetzung des Radweges Königsweg zwischen Eichkampstraße und Hüttenweg, ab 28.06.2010 für drei Wochen komplett gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork -903,6923 -643,7252 -348,7641 425,8766
 EOF
      },
     );

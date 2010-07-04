@@ -85,7 +85,6 @@ Antonplatz	Pl 13540,15928
 Arnold-Schönberg-Platz	Pl 14063,15976
 Köllnischer Platz	Pl 21796,4517
 Mandrellaplatz	Pl 22513,5747
-Brandenburgplatz	Pl 23333,5710
 Platz der Stadt Hof	Pl 12753,8187
 Berlinickeplatz	Pl 8728,6701
 Attilaplatz	Pl 8606,5496
@@ -185,7 +184,7 @@ Ottilie-Baader-Platz	Pl 17551,-373
 Alice-Herz-Platz	Pl 24179,12260
 Graffplatz	Pl 26605,13217
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20100104.1525.151162.html
-Cajamarca-Platz	Pl 17728,5756
+Cajamarcaplatz	Pl 17782,5698
 Danewendplatz	Pl 15167,23470
 Platz an den Kasematen	Pl 16444,23298
 Schmiedebankplatz	Pl 16173,23165
@@ -205,6 +204,10 @@ Kastanienplatz	Pl 10857,10411
 Hellebergeplatz	Pl -4969,7272
 #: note: vor Ort nicht ausgeschildert
 Platz S	Pl 14015,8798
+Venusplatz	Pl 14752,7108
+Hindemithplatz	Pl 3886,10681
+Götz-Friedrich-Platz	Pl 3970,11664
+Am Dornbusch	Pl 1344,10012
 ######################################################################
 #: section faked_plaetze vvv
 # Keine offiziellen Straßennamen, sondern
@@ -212,7 +215,10 @@ Platz S	Pl 14015,8798
 #: XXX_prog: diese Liste sollte nicht notwendig sein, sondern es sollte automatisch einen Fallback auf sehenswuerdigkeit/flaechen/brunnels/... geben vvv
 Kottbusser Tor	Pl 11393,10390
 Anhalter Bahnhof	Pl 8947,10956
-Flughafen Tempelhof	Pl 9401,8510
+#: note: früher befand sich dieser Punkt am Empfangsgebäude, jetzt auf dem Feld
+#: XXX_indoor: vielleicht sollte es eine andere Lösung hierfür geben?
+Flughafen Tempelhof	Pl 9884,8265
+Tempelhofer Feld	Pl 9884,8265
 Brandenburger Tor (Mitte)	Pl 8610,12254
 Engelbecken	Pl 11421,11073
 Schlesisches Tor	Pl 12985,10665
@@ -233,6 +239,8 @@ Lehrter Bahnhof	Pl 7880,13315
 Hauptbahnhof	Pl 7880,13315
 Siegessäule	Pl 6828,12031
 Insel der Jugend	Pl 15675,9090
+Johannesstift	Pl -3953,17941
+Seebad Wendenschloß	Pl 23869,1282
 #: note: der Punkt ist der gegenüberliegende auf dem Festland
 Pfaueninsel	Pl -8564,2276
 Museumsinsel	Pl 9948,12631
@@ -249,6 +257,7 @@ Potsdam Hbf	Pl -12493,-1896
 Schloß Sanssouci	Pl -14355,-606
 Sanssouci	Pl -14355,-606
 Telegrafenberg	Pl -12391,-3296
+Sacrow	Pl -10363,2151
 #: append_comment ^^^^^^^^^^^^^
 #: XXX_prog ^^^
 #: section ^^^
@@ -277,7 +286,7 @@ Navarraplatz	Pl 11940,22587
 Cardinalplatz	Pl 21901,5728
 Klinkeplatz	Pl -3665,16378
 #: by: (URL vanished) http://www.berlin.de/ba-lichtenberg/presse/archiv/20060601.1640.41216.html
-Monimbó-Platz	Pl 17082,11909
+Monimbó-Platz	Pl 16998,11861
 Rodeliusplatz	Pl 16276,12273
 Zehlendorfer Eiche	Pl 820,3081
 Friedrichsbrunner Platz	Pl 12154,6063 12263,6086 12270,6025 12160,5997

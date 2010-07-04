@@ -74,7 +74,7 @@ Sauerbruchweg: Gelände der Charité	CS 8487,13351 8555,13260 8605,13200 8630,1317
 (Reichsstr. - Westendallee): Privatstraße	CS 269,12576 151,12541
 (Guerickestr. - Einsteinufer): Privatstraße	CS 4642,12275 4711,12411
 Stromstr: kann über schmale Furt (keine Anhänger!) gequert werden	CS 6218,12975 6190,12978 6165,12985 6106,12989
-Am Wriezener Bahnhof: Privatstraße zu diversen Märkten	CS 12794,11893 12953,11727
+Am Wriezener Bahnhof: Privatstraße zu diversen Märkten	CS 12794,11893 12993,11717
 Bordstein	CP 12054,12903 11983,12949 11921,12990
 Bordstein	CP2; 12483,12682 12594,12866
 Wilhelmstr.: Fahrbahn vor der britischen Botschaft für Autos gesperrt, passierbar für Radfahrer	CS 8861,12125 8804,12280
@@ -201,4 +201,8 @@ Eingang Kienitzer Str. kann nachts nicht als Ausgang benutzt werden	CS; 11489,77
 Eingang Allerstr. kann nachts nicht als Ausgang benutzt werden	CS; 11507,7647 11515,7654
 Eingang Okerstr. kann nachts nicht als Ausgang benutzt werden	CS; 11528,7528 11536,7533
 Eingang Leinestr. kann nachts nicht als Ausgang benutzt werden	CS; 11547,7432 11553,7437
-Eingang Oderstr. kann nachts nicht als Ausgang benutzt werden	CS; 11575,7249 11606,7260
+Eingang Oderstr. kann nachts nicht als Ausgang benutzt werden	CS; 11598,7264 11608,7267
+Weg zwischen Habermannsee und Butzensee	CS 23522,10456 23468,10423 23431,10435 23193,10426 23024,10455 22978,10451
+Mollergasse: Straße ist nicht ausgeschildert	CS 9892,12596 9894,12564
+Schmellwitzer Weg: Privatstraße	CS 20005,11383 19984,11319 19801,11360
+Altenauer Weg: Zufahrt wegen Hecke schwer erkennbar	CP2; 5435,1390 5419,1395

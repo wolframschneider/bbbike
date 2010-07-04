@@ -263,8 +263,8 @@ Freundschaftsinsel - Potsdam Hbf: wegen der Tramtrasse zunächst auf dem Gehweg b
 Zum Barnimer Dörferweg: am Waidmannsluster Damm auf den Gehweg fahren, nicht auf die Radspur fahren (wegen eines nicht überwindbaren Geländers)	PI; 1858,20740 1828,20780 1799,20815 1716,20915 1819,21116
 Barnimer Dörferweg - Karolinenstr.: wegen des Geländers zunächst auf dem Gehweg fahren	CP; 1819,21116 1716,20915 1799,20815 1828,20780 1858,20740
 Tegeler Hafen: zweite Brücke zur Insel nehmen	CP; 1675,20392 1756,20405 1736,20441
-Clayallee - Flanaganstr.: Fußweg vor dem McDrive nehmen	CP; 1746,5922 1736,5850 1596,5754
-Flanaganstr. - Clayallee: Fußweg am McDrive nehmen, bis zur Ampel an der Königin-Luise-Str. den linken Gehweg benutzen	PI; 1596,5754 1736,5850 1746,5922
+Clayallee - Flanaganstr.: Fußweg vor dem McDrive nehmen	CP; 1746,5922 1736,5850 1614,5738
+Flanaganstr. - Clayallee: Fußweg am McDrive nehmen, bis zur Ampel an der Königin-Luise-Str. den linken Gehweg benutzen	PI; 1614,5738 1736,5850 1746,5922
 Helmholtzstr. - Zeppelinstr.: zum Überqueren der Edisonstr. Fußgängerampel benutzen	CP; 17845,6986 17919,6968 18041,6924
 Zeppelinstr. - Helmholtzstr.: zum Überqueren der Edisonstr. Fußgängerampel benutzen	CP; 18041,6924 17919,6968 17845,6986
 Mariendorfer Damm - Heinitzweg: bereits an der Buckower Chaussee die Straßenseite wechseln	PI; 10425,971 10379,1097 10329,1077
@@ -309,7 +309,7 @@ Wuhlewanderweg/Landsberger Allee: bereits an der Ringenwalder Str. die Landsberg
 #XXX experiment! Sewanstr. - Bahndamm: An der Kreuzung Am Tierpark/Sewanstr. auf die "Tierpark"-Straßenseite wechseln	PI; 18631,10167 18690,10016 18698,9996 18715,10003 18773,10028
 Bahndamm - Am Tierpark: auf dem linken Gehweg bis zur Ampel Gregoroviusweg fahren	CP; 18773,10028 18715,10003 18698,9996 18737,9901
 #XXX del (lohnt sich nicht; erheblicher Umweg, und wird leider nicht im Routing gut reflektiert) nach links zum Bahndamm abbiegen: bis zur Kreuzung Gregoroviusweg vorfahren und dort die Straße überqueren	PI; 18577,10023 18690,10016 18698,9996 18715,10003 18773,10028
-Treskowallee - Römerweg: bereits an der Ampel Römerweg die Straßenseite wechseln	PI; 18800,9743 18816,9705 18994,9707 19042,9708
+Treskowallee - Römerweg: bereits an der Ampel Römerweg die Straßenseite wechseln	PI; 18800,9743 18816,9705 18994,9707
 #: by: Thiemo Guenther:
 Cyclopstr. - Blomberger Weg: Einfahrt zum Parkplatz OSZ Enährungs-, Hauswirtschaft u. Drucktechnik nehmen	CP2; 5106,21418 5041,21343
 Gürtelstr. - Lehderstr.: Fußgängerampel zum Überqueren der Berliner Allee/Greifswalder Str. benutzen	CP; 13409,15687 13316,15758 13214,15830
@@ -324,7 +324,7 @@ Klixstr. - Scharnweberstr.: zunächst den linken Gehweg bis zur Antonienstr. benu
 Falkenseer Chaussee - Darbystr.: bereits am Bahnübergang die Straßenseite wechseln	PI; -5609,15780 -5526,15757 -5505,15859
 Darbystr. - Falkenseer Chaussee: zunächst auf dem linken Gehweg bis zur Frankenwaldstr. vorfahren	CP; -5505,15859 -5526,15757 -5473,15742
 B1 - Ilsensteinweg: bereits an der Ampel Spanische Allee die Gehwegseite wechseln	PI; -1646,2434 -1626,2441 -1724,2743
-Ilsensteinweg - B1: ggfs. die Ampel an der Spanischen Allee zur rechten Hand zum Überqueren der Straße benutzen	CP; -1724,2743 -1626,2441 -1249,2590
+Ilsensteinweg - B1: ggfs. die Ampel an der Spanischen Allee zur rechten Hand zum Überqueren der Straße benutzen	CP; -1724,2743 -1626,2441 -1340,2554
 Theodorstr. - Alt-Mahlsdorf: ggfs. die nächste Ampel benutzen	CP; 24907,11186 24893,11252 24824,11256
 Alt-Mahlsdorf - Theodorstr.: frühzeitig auf den linken Gehweg wechseln	PI; 25144,11215 24893,11252 24907,11186
 Daumstr. - Glindowseestr.: bereits an der Kreuzung Daumstr./An den Rohrbruchwiesen die Straßenseite wechseln	PI; -1675,16813 -1710,16735 -1553,16695
@@ -438,11 +438,16 @@ Virchowstr. - Landsberger Allee: auf dem linken Geh-/Radweg bis zur Ampel fahren
 #: by: Manfred brühl:
 Wesenberger Ring - Paster-Behrens-Str.: Durchfahrt über Parkplatz	CS; 13165,3850 13134,3871
 Am Britzer Garten: Gehweg links der Fahrbahn benutzen	CP2; 11153,3728 11130,3838
-An der südlichen Landebahn den oberen Weg benutzen	CP2; 11570,7315 11547,7432
-An der südlichen Landebahn den unteren Weg benutzen	CP2; 11570,7315 11543,7369
+An der südlichen Landebahn den oberen Weg benutzen	CP2; 11593,7314 11554,7382
+An der südlichen Landebahn den unteren Weg benutzen	CP2; 11593,7314 11543,7369
 Columbiadamm - Flughafen Tempelhof: unter Umständen schon an der Fußgängerampel die Straßenseite wechseln	PI; 10796,8498 10691,8532 10640,8366
 Ederstr.: am nördlichen Ende nicht als "Ederstr." ausgeschildert	CP2; 13939,8228 13957,8209
 Potsdamer Chaussee - Hohentwielsteig: bereits an der Fürstenstr. die Straßenseite wechseln	PI; -391,2914 -512,2883 -567,2869 -479,2715
 Ausgeschildert als Waldenburger Str.	CP2; 22905,10488 22783,10548
 Ausgeschildert als Striegauer Str.	CP2; 22783,10548 22905,10488
 Pudagla: Empfohlene Verkehrsführung für Radfahrer	CS 52129,174507 52064,174635 52263,174673 52407,174744
+#: by: jan (...matrix):
+Berliner Allee - Streustr.: bereits an der Rossinistr. die Straßenseite wechseln	PI; 13401,15821 13432,15843 13269,15927
+Weg entlang der Bahnstrecke: Pfad ist schwierig zu finden	CP2; 17425,9605 17438,9619
+Am Sandberg: Straße nicht ausgeschildert	CP2; 20144,8355 20149,8318
+Am Wriezener Karree: nicht ausgeschildert	CP2; 12959,11631 12726,11851

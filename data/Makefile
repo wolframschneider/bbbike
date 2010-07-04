@@ -175,7 +175,8 @@ persistent-tmp:	${PERSISTENTTMPDIR}/XXX-$(i).bbd
 
 # more checks, but even slower (about four minutes)
 really-slow-checks:	check-crossings-important \
-			check-nearest
+			check-nearest \
+			check-urls
 
 # this adds also "check-crossings-less-important", but the results of
 # these checks there were never looked at, so really not important...
@@ -1515,7 +1516,7 @@ check-line-lengths:	.check_line_lengths
 	@touch $@
 
 count-streets:
-	@echo -n "Berlin:        "; grep -v "^(" strassen | ${CUT} -f1 -d"(" | sort -u | wc -l
+	@echo -n "Berlin:        "; grep -v "^(" strassen | grep -v '\[.*\]' | ${CUT} -f1 -d"(" | sort -u | wc -l
 	@echo -n "Landstraßen:   "; grep -v "^#" landstrassen landstrassen2 | ${CUT} -f1 | sort -u | wc -l
 	@echo -n "  Potsdam:     "; fgrep "(Potsdam)" landstrassen | grep -v "^(" | ${CUT} -f1 -d"(" | sort -u | wc -l
 	@echo -n "  Oranienburg: "; grep -v "^#" landstrassen | fgrep "(Oranienburg" | ${CUT} -f1 -d"(" | sort -u | wc -l
@@ -1599,6 +1600,11 @@ ${PERSISTENTTMPDIR}/crossings_gewaesser_ignore.bbd:	\
 	    -o $@~ -against brunnels \
 	    strassen wasserstrassen
 	mv $@~ $@
+
+check-urls: ${PERSISTENTTMPDIR}/url_checks.log
+
+${PERSISTENTTMPDIR}/url_checks.log:	comments_route-orig comments_ferry-orig
+	${PERL} ${MISCSRCDIR}/url_checker.pl -v -log ${PERSISTENTTMPDIR}/url_checks.log $>
 
 ######################################################################
 # Checks for unhandled streets
@@ -1741,6 +1747,11 @@ show-used-directives:
 
 sort-coords.data:	sort-Berlin.coords.data sort-Potsdam.coords.data
 
+# XXX It is considered to use a platform-independent approach to
+# do the sorting. A favorite approach is using Unicode::Collate, a
+# core perl module. But some problems:
+# - the diff is huge, mainly due to a bug in FreeBSD's "sort -f" implementation
+# - Unicode::Collate is significantly slower
 .for city in Berlin Potsdam
 sort-$(city).coords.data:
 	[ "`uname`" = FreeBSD ] && true || (echo "Sorting probably not correct on `uname`"; false)
