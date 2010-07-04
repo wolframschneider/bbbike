@@ -2165,7 +2165,7 @@ EOF
 		    my $qs = CGI->new({strname => $$oneref,
 				       ($$ortref ? (ort => $$ortref) : ()),
 				      })->query_string;
-		    print qq{<a target="newstreetform" href="$bbbike_html/newstreetform${newstreetform_encoding}.html?$qs">} . M("Diese Straﬂe neu in die BBBike-Datenbank eintragen") . qq{</a><br><br>\n} !$osm_data;
+		    print qq{<a target="newstreetform" href="$bbbike_html/newstreetform${newstreetform_encoding}.html?$qs">} . M("Diese Straﬂe neu in die BBBike-Datenbank eintragen") . qq{</a><br><br>\n} if !$osm_data;
 		    print M(qq{Oder einen anderen Straﬂennamen versuchen}) . qq{:<br>\n};
 		} else {
 		    warn "*** Avoid unusable newstreetform mail for <$$oneref>\n";
