@@ -201,9 +201,10 @@ my $street =
      $q->param('search')
   || $q->param('query')
   || $q->param('q')
-  || 'Landsberger Allee (12681)';
+  || 'Allschwilerstr';
+  #|| 'Landsberger Allee (12681)';
   # || 'Garibaldistr. (13158)';
-my $city = $q->param('city') || 'Berlin';
+my $city = $q->param('city') || 'Basel';
 my $namespace = $q->param('namespace') || $q->param('ns') || '0';
 
 if ( my $d = $q->param('debug') || $q->param('d') ) {
