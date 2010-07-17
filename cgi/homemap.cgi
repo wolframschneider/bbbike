@@ -213,6 +213,10 @@ sub get_html {
     use Data::Dumper;
     my $coords = $$paths_polar[0];
 
+    my @streets_coords = split(/\s+/, "7.5443329,47.5251379 7.5469164,47.5235672 7.5480924,47.5228182 7.5482338,47.5227565 7.5491824,47.5222038 7.5494484,47.5220834 7.5533795,47.5200881 7.5543836,47.5195388 7.5545531,47.5193698 7.554617,47.5192821 7.5546755,47.51922 7.5548816,47.5186564 7.5554395,47.517671 7.5554941,47.5175986 7.5558257,47.5173522 7.5569215,47.5167919 7.5575767,47.5163899 7.5576159,47.516348 7.5579886,47.5160769 7.5581838,47.5159932");
+
+    my $streets_list = '["' . join('","', @streets_coords) . '"]';
+
     my $marker_list = '[';
     foreach my $c ( @{ $coords } ) {
 	next if $c !~ /,/;
@@ -374,6 +378,7 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
     var currentTempBlockingMarkers = [];
 
     var marker_list = $marker_list;
+    var streets_list = $streets_list;
 
     function createMarker(point, html_name) {
 	var marker = new GMarker(point);
@@ -1133,7 +1138,53 @@ EOF
 EOF
     }
 
+
+    my $q = new CGI;
+    my $city = $q->param('city') || "";
+    my $street = $q->param('street') || "";
+
+    my $streets_route = << "EOF";
+    // city: $city
+    var street = "$street";
+
+    function getStreet(map, street) {
+        var url = "/cgi/street-coord.cgi?namespace=0;city=$city&query=" + escape(street);
+
+	GDownloadUrl(url, function(data, responseCode) {
+	  // To ensure against HTTP errors that result in null or bad data,
+	  // always check status code is equal to 200 before processing the data
+	  if(responseCode == 200) {
+	    var js = eval(data);
+	    var streets_list = js[1];
+
+    	    for (var i = 0; i < streets_list.length; i++) {
+    	        var streets_route = new Array;
+		var s = streets_list[i].split(" ");
+		for( var j = 0; j < s.length; j++) {
+	  	  var coords = s[j].split(",");
+		  streets_route.push(new GLatLng(coords[1], coords[0]));
+		}
+    	        map.addOverlay(new GPolyline(streets_route, "", 7, 0.5));
+    	    }
+
+	  } else if(responseCode == -1) {
+	    alert("Data request timed out. Please try later.");
+	  } else { 
+	    alert("Request resulted in error. Check XML file is retrievable.");
+	  }
+	});
+   }
+
+EOF
+
+
     $html .= <<EOF;
+   
+    $streets_route
+
+    if (street) {
+       getStreet(map, street);
+    }
 
     GEvent.addListener(map, "click", onClick);
 
