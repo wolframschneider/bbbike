@@ -2489,6 +2489,7 @@ function " . $type . "char_init() {}
 	       warn "Cannot determine city center for '$cityname', maybe data-osm/<city>/meta.dd does not exists?\n"; 
 	    }
             $slippymap_url->param('source_script', "$cityname.cgi");
+            $slippymap_url->param('city', $cityname);
 
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
             $smu =~ s/.*?\?//;
