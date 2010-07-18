@@ -2490,6 +2490,7 @@ function " . $type . "char_init() {}
 	    }
             $slippymap_url->param('source_script', "$cityname.cgi");
             $slippymap_url->param('city', $cityname);
+            #$slippymap_url->param('street', "Hauptstr.");
 
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
             $smu =~ s/.*?\?//;
