@@ -364,7 +364,7 @@ Langhoffstr.: enge Straﬂe, Gegenverkehr	q1 19817,14454 19818,14064
 (Frankfurter Allee, Nebenfahrbahn zur Hauptfahrbahn): Bordsteinabsenkung, aber eng	q3 16535,11920 16512,11894
 Zum Schlachtensee: wegen der groﬂen Steigung/Gef‰lles nur Schrittgeschwindigkeit mˆglich	q4 -1663,4218 -1592,4268
 (Treseburger Ufer - Rungiusstr.): nur f¸r Fuﬂg‰nger erlaubt	q4 12699,5909 13064,5953
-(Bellevuepark): nur f¸r Fuﬂg‰nger erlaubt	q4 22798,5731 22790,5568 22733,5569 22701,5428 22628,5340
+(Bellevuepark): nur f¸r Fuﬂg‰nger erlaubt	q4 22798,5731 22794,5583 22733,5569 22701,5428 22628,5340
 Walter-Nicklitz-Promenade: eng und kurvenreich, Fuﬂg‰nger	q2 8290,15304 8321,15386 8290,15406 8310,15449
 Gropiusstr.: Uferweg sehr eng, Fuﬂg‰nger	q2 8389,16214 8543,16364
 Pankeweg: Fuﬂg‰nger	q1 8286,14635 8316,14667 8263,14838 8248,14900 8266,15134
@@ -498,6 +498,8 @@ Wildensteiner Str.: enge Straﬂe	q1 18528,8331 18416,8163 18365,8094 18333,8059
 (Am Carlsgarten - Waldowallee): enger Abschnitt under der Bahnbr¸cke	q2 19468,7962 19504,8003 19558,8064
 Linienstr./Oranienburger Str.: Fuﬂg‰nger	q2 9225,13389 9296,13397
 Fontanestr.: zwei Schwellen, kˆnnen umfahren werden	q1+ 18240,6845 18254,6679
+#: note: wenn keine Autos illegalerweise an diesen Stellen parken
+Triniusstr.: zwei Schwellen, kˆnnen umfahren werden	q1+ 18417,6775 18339,6660
 Kiautschoustr.: Fuﬂg‰nger, Bordsteine	q3 6837,14848 6853,14854
 (Warschauer Br¸cke - Tamara-Danz-Str.): Fuﬂg‰nger, Bordsteine	q4 13493,11217 13513,11206 13503,11179 13479,11147
 (Blenheimstr. - B‰rensteinstr.): Fuﬂg‰nger	q1 21163,15289 21312,15268
@@ -686,6 +688,10 @@ B¸xensteinallee: Marktst‰nde, Fuﬂg‰nger	q3 22228,1071 22162,1067
 Don-Ugoletti-Platz - Regattastr.: Fuﬂg‰nger, Bordsteine	q1 22449,1569 22478,1602 22549,1644
 (Dossestr. - Scharnweberstr.): Fuﬂg‰nger, Radfahren erlaubt	q1 15140,11811 15122,11834 15121,11899
 Chiemseestr.: enge Straﬂe	q1 22204,1496 22334,1553
+(Kˆnigsheideweg - Am Alten Fenn): eng	q3 17037,4794 17060,4848
+(Am Alten Fenn - S¸dostallee): teilweise recht eng, Anh‰nger sollten parallelen Weg benutzen	q2 17295,5387 17300,5423 17366,5551
+(D‰meritzstr. - D‰meritzsee): Radfahren verboten	q4 32512,2621 32558,2562
+(Lindenstr. - Bahnhofstr.): gemeinsamer Rad- und Gehweg	q1 22017,5159 22046,5305 22043,5346
 ######################### User Contributions #################################
 #: by: Michael Kiekbusch
 #: corrected_by: srt/policy (q4 -> q3-)
@@ -1304,8 +1310,7 @@ Rosenorter Steig: enge Straﬂe	q1 -1349,23497 -1451,23525 -1535,23575 -1617,23624
 Straﬂe 40 (Blankenburg): enge Straﬂe	q1 14893,20583 14945,20748 15035,21026
 #: by: Andreas Vildman:
 (Mˆrchinger Str. - Berliner Str.): Fuﬂg‰nger	q2 1393,3183 1388,3197 1338,3300
-#: by: Liana (lumielle):
-Sanddornstr.: enge Straﬂe	q1 19184,4888 19199,4954 19191,5075 19173,5139
+# XXX del #: by: Liana (lumielle): --- corrected_by: srt q1 -> q0 --- Sanddornstr.: enge Straﬂe	q1 19184,4888 19199,4954 19191,5075 19173,5139
 #: by: Catherina Haags:
 Biesentaler Str.: Bodenschwellen	q1 9024,16855 9245,16758
 #: by: anonymous
@@ -1907,12 +1912,13 @@ Straﬂe 245 (Weiﬂensee): enge Straﬂe	q1 13590,17368 13271,17589
 Forster Str. (Hellersdorf): enge Straﬂe	q1 25237,14627 25365,14667 25397,14563 25418,14538
 #: by: katrin peters:
 #: corrected_by: srt/policy (q2 -> q1)
-Deisterpfad: Fuﬂg‰nger	q1 -17,5066 -21,5099
+Deisterpfad: Fuﬂg‰nger	q1 -17,5066 -18,5083 -21,5099
 #: by: anonymous:
 Tessiner Weg: enge Straﬂe	q1 7077,17186 7184,17208
 #: by: anonymous:
 Georg-Schroeder-Str.: enge Straﬂe	q1 -7513,15368 -7507,15449 -7588,15656 -7637,15793 -7642,15840
 #: by: MichaelM vvv
+Slatdorpweg: eng	q2 -1637,3596 -1495,3509 -1478,3498
 #: note: und Trampelpfad, aber bereits in qualitaet_s abgehandelt
 (G‰nsebl¸mchenweg - Parkplatz): Bordstein	q3 -1618,2137 -1612,2123
 Sprungschanzenweg: relativ enge Straﬂe	q1 577,5258 158,5103
@@ -1939,3 +1945,8 @@ Nordische Str.: enge Straﬂe	q1 15126,21799 15209,21985
 Gr¸nrockweg: Gehweg, Fuﬂg‰nger	q1 7377,18498 7274,18462
 #: by: A. Kohn:
 Kollostr.: enge Straﬂe	q1 9665,4392 9677,4518 9695,4638
+#: by: Niels (nathelbiya):
+(Mauerweg - Tˆpchiner Weg): einige Fuﬂg‰nger	q1 11794,550 11691,554 11598,587
+#: by: Bernhard Husch:
+#: note: "viele Fuﬂg‰nger", aber keine Kategorisierung
+(Marienfelder Allee - Hildburghauser Str., Gr¸nzug): Fuﬂg‰nger	q1- 7501,83 7231,236 7032,533 7023,694 7058,844
