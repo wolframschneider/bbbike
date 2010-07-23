@@ -1933,7 +1933,7 @@ EOF
 EOF
 	# Eine Addition aller aktuellen Straßen, die bei luise-berlin
 	# aufgeführt sind, ergibt als Summe 10129
-	my($bln_str, $all_bln_str, $pdm_str) = (8750, 10000, 400);
+	my($bln_str, $all_bln_str, $pdm_str) = (9000, 10000, 400);
 	# XXX Use format number to get a comma in between.
 
 	my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';

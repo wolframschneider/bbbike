@@ -81,7 +81,7 @@ Alexanderplatz: Fuﬂg‰ngerverkehr	q2 11139,13008 10970,12822 10923,12779
 Dircksenstr.: langsame Straﬂenbahnen, Fuﬂg‰nger	q2 10970,12822 10849,12944
 Dircksenstr.: Fuﬂg‰nger	q2 10970,12822 11007,12773 11030,12741 11087,12780 11105,12764
 Gontardstr.: langsame Straﬂenbahnen, Fuﬂg‰nger	q2 10740,12960 10793,12906 10923,12779
-Uferweg im Treptower Park: Fuﬂg‰nger, besonders an schˆnen Tagen	q2 15793,8984 15653,8989 15527,9096 15513,9144 15432,9322 15321,9448 15140,9566 14910,9643 14697,9726 14671,9759 14500,9856 14483,9843 14448,9922
+Uferweg im Treptower Park: Fuﬂg‰nger, besonders an schˆnen Tagen	q2 15793,8984 15638,9020 15527,9096 15513,9144 15432,9322 15321,9448 15140,9566 14910,9643 14697,9726 14671,9759 14500,9856 14483,9843 14448,9922
 (S-Bahnhof - Treptower Hafen): Fuﬂg‰nger, besonders an schˆnen Tagen	q2 14351,9757 14436,9784 14483,9843
 Treptower Park, am Rosengarten: Fuﬂg‰nger	q2 14819,9462 14910,9643
 Treptower Park: Fuﬂg‰nger	q1 14697,9726 14645,9710 14575,9648 14496,9705 14351,9757
@@ -272,6 +272,7 @@ Mussehlstr.: Bordsteine (Bayernring und Wolffring)	q3 8836,8564 8756,8453 8711,8
 (Kynaststr. - Paul-und-Paula-Ufer): Fuﬂg‰nger	q1 14821,10478 14868,10467
 Am Rummelsburger See: Fuﬂg‰nger, kurvenreich	q1 15787,9321 15819,9430 15749,9558 15741,9590 15703,9605 15600,9695 15626,9710 15583,9779 15545,9818 15465,9860 15347,9922 15295,10022 15260,10048 15314,10121 15261,10167 15204,10201 15134,10243 15101,10263 15044,10297 14892,10411 14864,10451 14868,10467 14884,10508 14906,10587 14937,10598 14990,10581 15100,10637 15248,10562
 Am Rummelsburger See: teilweise enge Kurven, Fuﬂg‰nger an schˆnen Tagen	q2 15453,10415 15457,10342 15496,10277 15518,10234 15604,10204 15601,10179 15645,10147 15713,10035 15786,9957 15790,9920 15828,9875 15914,9858 15931,9846
+Am Rummelsburger See: Fuﬂg‰nger an schˆnen Tagen	q1 15931,9846 16000,9784 16046,9746 16123,9692
 Unterf¸hrung unter Adlergestell und S-Bahn ist sehr eng, nicht f¸r Anh‰nger geeignet	q3 20939,2413 20810,2398
 Vorfahrt Reichstagsgeb‰ude: Fuﬂg‰nger	q3 8400,12417 8399,12616
 Am Teltowkanal: kurverreich und recht eng	q1 3743,1385 3695,1308 3619,1207 3458,1063 3366,1007
@@ -1918,6 +1919,8 @@ Tessiner Weg: enge Straﬂe	q1 7077,17186 7184,17208
 #: by: anonymous:
 Georg-Schroeder-Str.: enge Straﬂe	q1 -7513,15368 -7507,15449 -7588,15656 -7637,15793 -7642,15840
 #: by: MichaelM vvv
+Fischtalpark: Fuﬂweg, Schwellen	q3 881,4429 809,4461 769,4480 703,4511
+Rˆtheweg: Fuﬂg‰nger	q1 -1444,3655 -1488,3750 -1550,3883 -1554,3889 -1624,3956
 Slatdorpweg: eng	q2 -1637,3596 -1495,3509 -1478,3498
 #: note: und Trampelpfad, aber bereits in qualitaet_s abgehandelt
 (G‰nsebl¸mchenweg - Parkplatz): Bordstein	q3 -1618,2137 -1612,2123
@@ -1950,3 +1953,15 @@ Kollostr.: enge Straﬂe	q1 9665,4392 9677,4518 9695,4638
 #: by: Bernhard Husch:
 #: note: "viele Fuﬂg‰nger", aber keine Kategorisierung
 (Marienfelder Allee - Hildburghauser Str., Gr¸nzug): Fuﬂg‰nger	q1- 7501,83 7231,236 7032,533 7023,694 7058,844
+#: by: Chris (...ewald): vvv
+Prisdorfer Str.: enge Straﬂe	q1 -5887,13894 -5906,14102 -5887,14147 -5874,14242
+Janischweg: enge Straﬂe	q1 537,14919 481,15088 473,15169 453,15173 431,15230 429,15284
+Reclamweg: Bordsteinkanten	q2 -5196,12452 -5126,12425
+#: by: ^^^
+#: by: Rainer (ghostviewer): vvv
+#: note: "Eilige Anwohner mit Auto quetschen sich gern mal zum ‹berholen vorbei"
+Baseler Str. (Reinickendorf): enge Straﬂe	q1 6792,17951 6815,17871 6841,17781 6886,17649 6908,17583 6995,17322
+Bieler Str.: enge Straﬂe	q1 6815,17871 6711,17839
+#: by: ^^^
+#: by: Frank (...engel)
+Straﬂe 129: enge Straﬂe	q1 7802,21173 7929,21103
