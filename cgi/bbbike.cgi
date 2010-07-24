@@ -2330,7 +2330,7 @@ EOF
 
 <script type="text/javascript">
 	var ac_$city = \$('#$searchinput').autocomplete( 
-		{ serviceUrl: 'api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:400, width:300, deferRequestBy:100, noCache: true }
+		{ serviceUrl: 'api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:160, width:300, deferRequestBy:100, noCache: true }
 	);
 </script><br>
 
@@ -2499,7 +2499,59 @@ function " . $type . "char_init() {}
             $ie6hack =~ s,/+[^/]+$,,;
 
 	    print "<p></p>\n";
-	    print qq{<iframe src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="420" scrolling="no"></iframe>\n};
+	
+            print qq{<div id="streetmap"></div>\n};
+
+	    print qq{<!-- use div.text() as local variable to map -->\n};
+            print qq{<div style="display:none" id="streetmap2"></div>\n};
+            print qq{<div style="display:none" id="streetmap3"></div>\n};
+
+
+	    print qq{<iframe id="iframemap" src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="420" scrolling="no">xxx</iframe>\n};
+
+if (0) {
+print <<'EOF';
+<script>
+  // remember URL
+  $("div#streetmap2").text( $("iframe#iframemap").attr("src") );
+
+function homemap_street () {
+	var street = $("div.autocomplete-w1 div").find("div.selected").text();
+	if (street != "") {
+		var url = $("div#streetmap2").text() + ";street=" + escape(street);
+		var oldIframeURL = $("iframe#iframemap").attr("src");
+		if (oldIframeURL != url) {
+			$("div#streetmap").text(street);
+			$("iframe#iframemap").attr("src",  url); 
+		} else {
+			var date = new Date();
+			$("div#streetmap").text(url + " no update: " + date.getTime() ); 
+		}
+	}
+}
+
+var timeout = null;
+function homemap_street_timer (time) {
+	// cleanup older calls waiting in queue
+	if (timeout != null) {
+		clearTimeout(timeout);
+	}
+	timeout = setTimeout( function () { homemap_street (); }, time);
+}
+
+
+$("input#suggest_start").keyup( 	function() { homemap_street_timer(1000) } );
+$("input#suggest_start").keypress( 	function() { homemap_street_timer(1000) } ); // firefox
+$("input#suggest_ziel").keyup( 		function() { homemap_street_timer(1000) } );
+$("input#suggest_ziel").keypress( 	function() { homemap_street_timer(1000) } ); // firefox
+
+$("div.autocomplete-w1 div").mouseover( function() { homemap_street_timer(1000) } );
+
+</script>
+
+EOF
+}
+
     }
 
     print "<input type=hidden name=scope value='" .
@@ -5142,6 +5194,8 @@ EOF
 	        print qq{ | <span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out">print map route</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url" style="display:none"> $permalink</span></span>\n};
 	        print qq{<p></p>\n};
+
+
 		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="505" scrolling="no"></iframe><p></p>};
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 	    }
