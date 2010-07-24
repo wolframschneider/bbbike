@@ -18,7 +18,7 @@ my $max_suggestions_short = 10;
 my $opensearch_file = 'strassen';
 my $opensearch_dir  = '../data-osm';
 
-my $debug              = 1;
+my $debug = 0;
 
 # word matching for utf8 data
 my $force_utf8 = 0;
@@ -26,11 +26,10 @@ my $force_utf8 = 0;
 # look(1) is faster than egrep, override use_egrep option
 my $use_look = 1;
 
-
 sub get_coords {
     my $string = shift;
 
-    my ( @data ) = split( /\t/, $string );
+    my (@data) = split( /\t/, $string );
 
     return $data[1];
 }
@@ -202,8 +201,15 @@ my $street =
   || $q->param('query')
   || $q->param('q')
   || 'Allschwilerstr';
-  #|| 'Landsberger Allee (12681)';
-  # || 'Garibaldistr. (13158)';
+
+#|| 'Landsberger Allee (12681)';
+# || 'Garibaldistr. (13158)';
+
+if ($force_utf8) {
+    require Encode;
+    $street = Encode::decode( "utf-8" => $street );
+}
+
 my $city = $q->param('city') || 'Basel';
 my $namespace = $q->param('namespace') || $q->param('ns') || '0';
 
@@ -223,7 +229,13 @@ print $q->header(
 binmode( \*STDOUT, ":utf8" ) if $force_utf8;
 
 my @suggestion =
-  map { s/^\S+\s+//; $_ } sort &streetnames_suggestions_unique( 'city' => $city, 'street' => $street );
+  map { s/^\S+\s+//; $_ }
+  sort &streetnames_suggestions_unique( 'city' => $city, 'street' => $street );
+
+if ( $debug >= 0 && scalar(@suggestion) <= 0 ) {
+    warn "City $city: $street no coords found!\n";
+}
+warn "City $city: $street", join( " ", @suggestion ), "\n" if $debug >= 2;
 
 # plain text
 if ( $namespace eq 'plain' || $namespace == 1 ) {
