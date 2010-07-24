@@ -940,7 +940,7 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
 
             var zoom = map.getBoundsZoomLevel(bounds);
             // no zoom level higher than 15
-            map.setZoom( zoom < 15 ? zoom + 1 : 15);
+            map.setZoom( zoom < 16 ? zoom : 15);
 
 	    if (marker_list.length == 2) {
 	       var x1 = marker_list[0][0];
