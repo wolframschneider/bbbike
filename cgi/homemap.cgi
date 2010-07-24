@@ -37,6 +37,8 @@ use Encode;
 
 sub new { bless {}, shift }
 
+my $force_utf8 = 0;
+
 sub run {
     my ($self) = @_;
 
@@ -129,7 +131,7 @@ sub run {
     for my $def (
         [ 'coords',      \@polylines_polar ],
         [ 'city_center', \@polylines_polar ],
-        [ 'area', \@polylines_polar ],
+        [ 'area',        \@polylines_polar ],
         [ 'oldcoords',   \@polylines_polar_feeble ],
       )
     {
@@ -146,8 +148,8 @@ sub run {
     }
 
     # center defaults to Berlin
-    if (scalar(@polylines_polar) == 0) {
-	push @polylines_polar, ["13.376431,52.516172"];
+    if ( scalar(@polylines_polar) == 0 ) {
+        push @polylines_polar, ["13.376431,52.516172"];
     }
 
     for my $wpt ( param("wpt") ) {
@@ -192,6 +194,10 @@ sub run {
     $self->{coordsystem} = $coordsystem;
 
     print header ( "-type" => "text/html; charset=utf-8" );
+
+    binmode( \*STDOUT, ":utf8" ) if $force_utf8;
+    binmode( \*STDERR, ":utf8" ) if $force_utf8;
+
     print $self->get_html( \@polylines_polar, \@polylines_polar_feeble, \@wpt,
         $zoom, $center );
 }
@@ -214,13 +220,14 @@ sub get_html {
     my $coords = $$paths_polar[0];
 
     my $marker_list = '[';
-    foreach my $c ( @{ $coords } ) {
-	next if $c !~ /,/;
+    foreach my $c ( @{$coords} ) {
+        next if $c !~ /,/;
 
-	my ($y, $x) = split(/,/, $c);
-	$marker_list .= qq/[$x,$y],/;
+        my ( $y, $x ) = split( /,/, $c );
+        $marker_list .= qq/[$x,$y],/;
     }
     $marker_list =~ s/,\s*$/]/;
+
     #warn Dumper($marker_list);
 
     my ( $centerx, $centery );
@@ -240,7 +247,6 @@ sub get_html {
         ( $centerx, $centery ) =
           $converter->( split /,/, Geography::Berlin_DE->center() );
     }
-
 
     my %google_api_keys = (
         'www.radzeit.de' =>
@@ -312,7 +318,6 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
         $slippymap_size = qq{ width: 100%; height: 100%; max-width: 800px;}
           if !$q->param("map_menu");
     }
-
 
     my $html = <<EOF;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -1133,17 +1138,17 @@ EOF
 EOF
     }
 
-
-    my $q = new CGI;
-    my $city = $q->param('city') || "";
+    my $q      = new CGI;
+    my $city   = $q->param('city') || "";
     my $street = $q->param('street') || "";
+    $street = Encode::decode( utf8 => $street );
 
     my $streets_route = << "EOF";
     // city: $city
     var street = "$street";
 
     function getStreet(map, street) {
-        var url = "/cgi/street-coord.cgi?namespace=0;city=$city&query=" + escape(street);
+        var url = "/cgi/street-coord.cgi?namespace=0;city=$city&query=" + street;
 
 	GDownloadUrl(url, function(data, responseCode) {
 	  // To ensure against HTTP errors that result in null or bad data,
@@ -1171,7 +1176,6 @@ EOF
    }
 
 EOF
-
 
     $html .= <<EOF;
    
