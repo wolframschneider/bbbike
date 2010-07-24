@@ -2500,52 +2500,70 @@ function " . $type . "char_init() {}
 
 	    print "<p></p>\n";
 	
-            print qq{<div id="streetmap"></div>\n};
+            print qq{<div style="display:none" id="streetmap"></div>\n};
 
 	    print qq{<!-- use div.text() as local variable to map -->\n};
             print qq{<div style="display:none" id="streetmap2"></div>\n};
-            print qq{<div style="display:none" id="streetmap3"></div>\n};
+            print qq{<div style="display:none" id="streetmap3"></div>\n}; 
 
 
 	    print qq{<iframe id="iframemap" src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="420" scrolling="no">xxx</iframe>\n};
 
-if (0) {
+if (1) {
 print <<'EOF';
 <script>
   // remember URL
   $("div#streetmap2").text( $("iframe#iframemap").attr("src") );
 
-function homemap_street () {
-	var street = $("div.autocomplete-w1 div").find("div.selected").text();
+function homemap_street (event) {
+	var target = (event.target) ? event.target : event.srcElement;
+	var street;
+
+	// mouse event
+	if (!target.id) {
+        	street = $(target).attr("title");
+	} 
+
+	// key events in input field
+        else {
+		var ac_id = $("div.autocomplete");
+		if (target.id == "suggest_start") {
+			street = $(ac_id[0]).find("div.selected").attr("title");
+		} else {
+			street = $(ac_id[1]).find("div.selected").attr("title");
+		}
+	}
+	if (street == undefined) { street = "" }
+
+
 	if (street != "") {
-		var url = $("div#streetmap2").text() + ";street=" + escape(street);
+		var url = $("div#streetmap2").text() + ";street=" + street;
 		var oldIframeURL = $("iframe#iframemap").attr("src");
 		if (oldIframeURL != url) {
 			$("div#streetmap").text(street);
 			$("iframe#iframemap").attr("src",  url); 
 		} else {
-			var date = new Date();
-			$("div#streetmap").text(url + " no update: " + date.getTime() ); 
+			$("div#streetmap").text(street + " no update: " ); 
 		}
 	}
 }
 
 var timeout = null;
-function homemap_street_timer (time) {
+var delay = 800; // delay until we render the map
+function homemap_street_timer (event, time) {
 	// cleanup older calls waiting in queue
 	if (timeout != null) {
 		clearTimeout(timeout);
 	}
-	timeout = setTimeout( function () { homemap_street (); }, time);
+	timeout = setTimeout( function () { homemap_street (event); }, time);
 }
 
+$("input#suggest_start").keyup( 	function(event) { homemap_street_timer(event, delay) } );
+$("input#suggest_start").keypress( 	function(event) { homemap_street_timer(event, delay) } ); // firefox
+$("input#suggest_ziel").keyup( 		function(event) { homemap_street_timer(event, delay) } );
+$("input#suggest_ziel").keypress( 	function(event) { homemap_street_timer(event, delay) } ); // firefox
 
-$("input#suggest_start").keyup( 	function() { homemap_street_timer(1000) } );
-$("input#suggest_start").keypress( 	function() { homemap_street_timer(1000) } ); // firefox
-$("input#suggest_ziel").keyup( 		function() { homemap_street_timer(1000) } );
-$("input#suggest_ziel").keypress( 	function() { homemap_street_timer(1000) } ); // firefox
-
-$("div.autocomplete-w1 div").mouseover( function() { homemap_street_timer(1000) } );
+var foo_ac_id = $("div.autocomplete").mouseover( function(event) { homemap_street_timer(event, delay) } );
 
 </script>
 
