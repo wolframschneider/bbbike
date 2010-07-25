@@ -111,6 +111,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_opensearch_plugin $enable_rss_feed
 	    $nice_abc_list
 	    $warn_message $use_utf8 $data_is_wgs84
+	    $enable_homemap_streets
 	   );
 
 # XXX This may be removed one day
@@ -2509,7 +2510,7 @@ function " . $type . "char_init() {}
 
 	    print qq{<iframe id="iframemap" src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="420" scrolling="no">xxx</iframe>\n};
 
-if (1) {
+if ($enable_homemap_streets) {
 print <<'EOF';
 <script>
   // remember URL
