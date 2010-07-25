@@ -37,7 +37,7 @@ use Encode;
 
 sub new { bless {}, shift }
 
-my $force_utf8 = 0;
+my $force_utf8 = 1;
 
 sub run {
     my ($self) = @_;
