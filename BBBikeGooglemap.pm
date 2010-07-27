@@ -136,7 +136,7 @@ sub run {
     {
         my ( $cgiparam, $polylines_ref ) = @$def;
 
-        for my $coords ( param($cgiparam) ) {
+        for my $coords ( $q->param($cgiparam) ) {
             my (@coords) = split /[!;]/, $coords;
             my (@coords_polar) = map {
                 my ( $x, $y ) = split /,/, $_;
@@ -151,7 +151,7 @@ sub run {
         push @polylines_polar, ["13.376431,52.516172"];
     }
 
-    for my $wpt ( param("wpt") ) {
+    for my $wpt ( $q->param("wpt") ) {
         my ( $name, $coord );
         if ( $wpt =~ /[!;]/ ) {
             ( $name, $coord ) = split /[!;]/, $wpt;
@@ -165,13 +165,13 @@ sub run {
         push @wpt, [ $x, $y, $name ];
     }
 
-    my $zoom = param("zoom");
+    my $zoom = $q->param("zoom");
     $zoom = 3 if !defined $zoom;
 
-    my $autosel = param("autosel") || "";
+    my $autosel = $q->param("autosel") || "";
     $self->{autosel} = $autosel && $autosel ne 'false' ? "true" : "false";
 
-    my $maptype = param("maptype") || "";
+    my $maptype = $q->param("maptype") || "";
     $self->{maptype} = (
           $maptype =~ /hybrid/i    ? 'G_HYBRID_MAP'
         : $maptype =~ /normal/i    ? 'G_NORMAL_MAP'
@@ -182,12 +182,12 @@ sub run {
         : 'cycle_map'
     );
 
-    my $mapmode = param("mapmode") || "";
+    my $mapmode = $q->param("mapmode") || "";
     ( $self->{initial_mapmode} ) =
       $mapmode =~ m{^(search|addroute|browse|addwpt)$};
     $self->{initial_mapmode} ||= "";
 
-    my $center = param("center") || "";
+    my $center = $q->param("center") || "";
 
     $self->{converter}   = $converter;
     $self->{coordsystem} = $coordsystem;
@@ -198,7 +198,7 @@ sub run {
     binmode( \*STDERR, ":utf8" ) if $force_utf8;
 
     print $self->get_html( \@polylines_polar, \@polylines_polar_feeble, \@wpt,
-        $zoom, $center );
+        $zoom, $center, $q );
 }
 
 sub bbbike_converter {
@@ -210,7 +210,7 @@ sub bbbike_converter {
 sub polar_converter { @_[ 0, 1 ] }
 
 sub get_html {
-    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center ) = @_;
+    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center, $q ) = @_;
 
     my $converter   = $self->{converter};
     my $coordsystem = $self->{coordsystem};
@@ -267,7 +267,7 @@ sub get_html {
 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTN4WPiGfl2FX2PYZt6wyT5v7xqcg',
     );
 
-    my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new, -full => 1 ) );
+    my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new($q), -full => 1 ) );
     my $fallback_host = "bbbike.de";
     my $host = eval { $full->host } || $fallback_host;
 
@@ -280,7 +280,7 @@ sub get_html {
 
     my $bbbikeroot      = "/BBBike";
     my $get_public_link = sub {
-        BBBikeCGIUtil::my_url( CGI->new(), -full => 1 );
+        BBBikeCGIUtil::my_url( CGI->new($q), -full => 1 );
     };
     if ( $host eq 'bbbike.dyndns.org' ) {
         $bbbikeroot = "/bbbike";
@@ -291,7 +291,7 @@ sub get_html {
     elsif ( $host eq 'localhost' ) {
         $bbbikeroot      = "/bbbike";
         $get_public_link = sub {
-            my $link = BBBikeCGIUtil::my_url( CGI->new(), -full => 1 );
+            my $link = BBBikeCGIUtil::my_url( CGI->new($q), -full => 1 );
             $link =~ s{localhost$bbbikeroot/cgi}{bbbike.de/cgi-bin};
             $link;
         };
@@ -301,7 +301,7 @@ sub get_html {
     my $maponly        = "";
     my $slippymap_size = qq{width: 100%; height: 75%;};
     {
-        my $q = new CGI;
+        #my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
         $maponly =
 qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
@@ -1124,7 +1124,7 @@ EOF
 EOF
     }
 
-    my $q      = new CGI;
+    #my $q      = new CGI;
     my $city   = $q->param('city') || "";
     my $street = $q->param('street') || "";
     $street = Encode::decode( utf8 => $street );
