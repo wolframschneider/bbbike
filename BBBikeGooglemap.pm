@@ -1001,11 +1001,13 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
         document.getElementById("map").innerHTML = '<p class="large-error">Sorry, your browser is not supported by <a href="http://maps.google.com/support">Google Maps</a></p>';
     }
 
+    /*
     GEvent.addListener(map, "moveend", function() {
         var center = map.getCenter();
 	showCoords(center, 'Center of map: ');
 	showLink(center, 'Link to map center: ');
     });
+    */
 
 
     var copyright = new GCopyright(1,
@@ -1173,7 +1175,7 @@ EOF
        getStreet(map, street);
     }
 
-    GEvent.addListener(map, "click", onClick);
+    // GEvent.addListener(map, "click", onClick);
 
     //]]>
     </script>
