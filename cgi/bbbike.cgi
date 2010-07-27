@@ -111,6 +111,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_opensearch_plugin $enable_rss_feed
 	    $nice_abc_list
 	    $warn_message $use_utf8 $data_is_wgs84
+	    $enable_homemap_streets
 	   );
 
 # XXX This may be removed one day
@@ -2330,7 +2331,7 @@ EOF
 
 <script type="text/javascript">
 	var ac_$city = \$('#$searchinput').autocomplete( 
-		{ serviceUrl: 'api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:400, width:300, deferRequestBy:100, noCache: true }
+		{ serviceUrl: 'api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:160, width:300, deferRequestBy:100, noCache: true }
 	);
 </script><br>
 
@@ -2499,13 +2500,102 @@ function " . $type . "char_init() {}
             $ie6hack =~ s,/+[^/]+$,,;
 
 	    print "<p></p>\n";
-	    print qq{<iframe src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="420" scrolling="no"></iframe>\n};
-    }
+	
+            print qq{<div style="display:none" id="streetmap"></div>\n};
+
+	    print qq{<!-- use div.text() as local variable to map -->\n};
+            print qq{<div style="display:none" id="streetmap2"></div>\n};
+            print qq{<div style="display:none" id="streetmap3"></div>\n}; 
 
     print "<input type=hidden name=scope value='" .
 	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
 
     print "</form>\n";
+    print "</td></tr></table>\n" if $bi->{'can_table'};
+
+	    if (0) {
+	    print qq{<iframe id="iframemap" src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="420" scrolling="no">xxx</iframe>\n};
+            } else {
+		use BBBikeGooglemap;
+
+	        my $maps = BBBikeGooglemap->new();
+	        $maps->run(CGI->new( "$smu" ));
+	    }
+
+if ($enable_homemap_streets) {
+print <<'EOF';
+<script type="text/javascript">
+  // remember URL
+  $("div#streetmap2").text( $("iframe#iframemap").attr("src") );
+
+function homemap_street (event) {
+	var target = (event.target) ? event.target : event.srcElement;
+	var street;
+
+	// mouse event
+	if (!target.id) {
+        	street = $(target).attr("title");
+	} 
+
+	// key events in input field
+        else {
+		var ac_id = $("div.autocomplete");
+		if (target.id == "suggest_start") {
+			street = $(ac_id[0]).find("div.selected").attr("title");
+		} else {
+			street = $(ac_id[1]).find("div.selected").attr("title");
+		}
+	}
+	if (street == undefined) { street = "" }
+
+
+	if (street != "") {
+		var iframe_dom = 1;
+
+		// change URL for iframe map
+		if (!iframe_dom) {
+		var url = $("div#streetmap2").text() + ";street=" + street;
+		var oldIframeURL = $("iframe#iframemap").attr("src");
+		if (oldIframeURL != url) {
+			$("div#streetmap").text(street);
+			$("iframe#iframemap").attr("src",  url); 
+		} else {
+			$("div#streetmap").text(street + " no update: " ); 
+		}
+
+		// manipulate the iframe source code
+		} else {
+		    var js_div = $("div#BBBikeGooglemap").contents().find("div#street");
+		    if (js_div) {
+			getStreet(map, street);
+		    }
+	    	}
+	}
+}
+
+var timeout = null;
+var delay = 400; // delay until we render the map
+function homemap_street_timer (event, time) {
+	// cleanup older calls waiting in queue
+	if (timeout != null) {
+		clearTimeout(timeout);
+	}
+	timeout = setTimeout( function () { homemap_street (event); }, time);
+}
+
+$("input#suggest_start").keyup( 	function(event) { homemap_street_timer(event, delay) } );
+$("input#suggest_start").keypress( 	function(event) { homemap_street_timer(event, delay) } ); // firefox
+$("input#suggest_ziel").keyup( 		function(event) { homemap_street_timer(event, delay) } );
+$("input#suggest_ziel").keypress( 	function(event) { homemap_street_timer(event, delay) } ); // firefox
+
+var foo_ac_id = $("div.autocomplete").mouseover( function(event) { homemap_street_timer(event, delay) } );
+
+</script>
+
+EOF
+}
+
+    }
 
 print <<EOF;
 <script type="text/javascript">
@@ -2515,7 +2605,6 @@ print <<EOF;
 </script><br>
 EOF
 
-    print "</td></tr></table>\n" if $bi->{'can_table'};
 
     print "<hr>";
 
@@ -5142,6 +5231,8 @@ EOF
 	        print qq{ | <span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out">print map route</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url" style="display:none"> $permalink</span></span>\n};
 	        print qq{<p></p>\n};
+
+
 		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="505" scrolling="no"></iframe><p></p>};
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 	    }

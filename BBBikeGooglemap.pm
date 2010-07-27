@@ -40,9 +40,8 @@ sub new { bless {}, shift }
 my $force_utf8 = 1;
 
 sub run {
-    my ($self) = @_;
+    my ($self, $q) = @_;
 
-    my $q = new CGI;
     my $city = $q->param('city') || "";
     if ($city) {
         $ENV{DATA_DIR} = $ENV{BBBIKE_DATADIR} = "data-osm/$city";
@@ -137,7 +136,7 @@ sub run {
     {
         my ( $cgiparam, $polylines_ref ) = @$def;
 
-        for my $coords ( param($cgiparam) ) {
+        for my $coords ( $q->param($cgiparam) ) {
             my (@coords) = split /[!;]/, $coords;
             my (@coords_polar) = map {
                 my ( $x, $y ) = split /,/, $_;
@@ -152,7 +151,7 @@ sub run {
         push @polylines_polar, ["13.376431,52.516172"];
     }
 
-    for my $wpt ( param("wpt") ) {
+    for my $wpt ( $q->param("wpt") ) {
         my ( $name, $coord );
         if ( $wpt =~ /[!;]/ ) {
             ( $name, $coord ) = split /[!;]/, $wpt;
@@ -166,13 +165,13 @@ sub run {
         push @wpt, [ $x, $y, $name ];
     }
 
-    my $zoom = param("zoom");
+    my $zoom = $q->param("zoom");
     $zoom = 3 if !defined $zoom;
 
-    my $autosel = param("autosel") || "";
+    my $autosel = $q->param("autosel") || "";
     $self->{autosel} = $autosel && $autosel ne 'false' ? "true" : "false";
 
-    my $maptype = param("maptype") || "";
+    my $maptype = $q->param("maptype") || "";
     $self->{maptype} = (
           $maptype =~ /hybrid/i    ? 'G_HYBRID_MAP'
         : $maptype =~ /normal/i    ? 'G_NORMAL_MAP'
@@ -183,23 +182,23 @@ sub run {
         : 'cycle_map'
     );
 
-    my $mapmode = param("mapmode") || "";
+    my $mapmode = $q->param("mapmode") || "";
     ( $self->{initial_mapmode} ) =
       $mapmode =~ m{^(search|addroute|browse|addwpt)$};
     $self->{initial_mapmode} ||= "";
 
-    my $center = param("center") || "";
+    my $center = $q->param("center") || "";
 
     $self->{converter}   = $converter;
     $self->{coordsystem} = $coordsystem;
 
-    print header ( "-type" => "text/html; charset=utf-8" );
+    #print header ( "-type" => "text/html; charset=utf-8" );
 
     binmode( \*STDOUT, ":utf8" ) if $force_utf8;
     binmode( \*STDERR, ":utf8" ) if $force_utf8;
 
     print $self->get_html( \@polylines_polar, \@polylines_polar_feeble, \@wpt,
-        $zoom, $center );
+        $zoom, $center, $q );
 }
 
 sub bbbike_converter {
@@ -211,7 +210,7 @@ sub bbbike_converter {
 sub polar_converter { @_[ 0, 1 ] }
 
 sub get_html {
-    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center ) = @_;
+    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center, $q ) = @_;
 
     my $converter   = $self->{converter};
     my $coordsystem = $self->{coordsystem};
@@ -249,14 +248,6 @@ sub get_html {
     }
 
     my %google_api_keys = (
-        'www.radzeit.de' =>
-"ABQIAAAAidl4U46XIm-bi0ECbPGe5hR1DE4tk8nUxq5ddnsWMNnWMRHPuxTzJuNOAmRUyOC19LbqHh-nYAhakg",
-        'slaven1.radzeit.de' =>
-"ABQIAAAAidl4U46XIm-bi0ECbPGe5hTS_eeuTgvlotSiRSnbEXbHuw72JhQv5zsHIwt9pt-xa1jQybMfG07nnw",
-        'bbbike.radzeit.de' =>
-"ABQIAAAAidl4U46XIm-bi0ECbPGe5hS6wT240HZyk82lqsABWbmUCmE0QhQkWx8v-NluR6PNjW3O3dGEjh16GA",
-        'bbbike2.radzeit.de' =>
-"ABQIAAAAJEpwLJEnjBq8azKO6edvZhTVOBsDIw_K6AwUqiwPnLrAK56XrRT9Hcfdh86z8Tt62SrscN1BOkEPUg",
         'bbbike.dyndns.org' =>
 "ABQIAAAAidl4U46XIm-bi0ECbPGe5hSLqR5A2UGypn5BXWnifa_ooUsHQRSCfjJjmO9rJsmHNGaXSFEFrCsW4A",
 
@@ -276,7 +267,7 @@ sub get_html {
 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTN4WPiGfl2FX2PYZt6wyT5v7xqcg',
     );
 
-    my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new, -full => 1 ) );
+    my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new($q), -full => 1 ) );
     my $fallback_host = "bbbike.de";
     my $host = eval { $full->host } || $fallback_host;
 
@@ -289,7 +280,7 @@ sub get_html {
 
     my $bbbikeroot      = "/BBBike";
     my $get_public_link = sub {
-        BBBikeCGIUtil::my_url( CGI->new(), -full => 1 );
+        BBBikeCGIUtil::my_url( CGI->new($q), -full => 1 );
     };
     if ( $host eq 'bbbike.dyndns.org' ) {
         $bbbikeroot = "/bbbike";
@@ -300,7 +291,7 @@ sub get_html {
     elsif ( $host eq 'localhost' ) {
         $bbbikeroot      = "/bbbike";
         $get_public_link = sub {
-            my $link = BBBikeCGIUtil::my_url( CGI->new(), -full => 1 );
+            my $link = BBBikeCGIUtil::my_url( CGI->new($q), -full => 1 );
             $link =~ s{localhost$bbbikeroot/cgi}{bbbike.de/cgi-bin};
             $link;
         };
@@ -310,7 +301,7 @@ sub get_html {
     my $maponly        = "";
     my $slippymap_size = qq{width: 100%; height: 75%;};
     {
-        my $q = new CGI;
+        #my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
         $maponly =
 qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
@@ -320,13 +311,9 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
     }
 
     my $html = <<EOF;
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>BBBike data presented with Googlemap</title>
-    <link rel="stylesheet" type="text/css" href="../html/bbbike.css" /><!-- XXX only for radzeit -->
-    <link type="image/gif" rel="shortcut icon" href="../images/bbbike_google.gif" /><!-- XXX only for radzeit -->
+<!-- BBBikeGooglemap starts here -->
+<div id="BBBikeGooglemap" style="width:680x; height:420px;">
+
     <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
     <script type="text/javascript">
       google.load("maps", "2");
@@ -346,7 +333,6 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
     </style>
   </head>
 
-  <body onload="init()" onunload="GUnload()" class="nonWaitMode">
     <div id="map" style="$slippymap_size"></div>
     <div id="nomap">
     <script type="text/javascript">
@@ -1015,11 +1001,13 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
         document.getElementById("map").innerHTML = '<p class="large-error">Sorry, your browser is not supported by <a href="http://maps.google.com/support">Google Maps</a></p>';
     }
 
+    /*
     GEvent.addListener(map, "moveend", function() {
         var center = map.getCenter();
 	showCoords(center, 'Center of map: ');
 	showLink(center, 'Link to map center: ');
     });
+    */
 
 
     var copyright = new GCopyright(1,
@@ -1138,7 +1126,7 @@ EOF
 EOF
     }
 
-    my $q      = new CGI;
+    #my $q      = new CGI;
     my $city   = $q->param('city') || "";
     my $street = $q->param('street') || "";
     $street = Encode::decode( utf8 => $street );
@@ -1149,6 +1137,8 @@ EOF
 
     function getStreet(map, street) {
         var url = "/cgi/street-coord.cgi?namespace=0;city=$city&query=" + street;
+
+        map.clearOverlays();
 
 	GDownloadUrl(url, function(data, responseCode) {
 	  // To ensure against HTTP errors that result in null or bad data,
@@ -1185,299 +1175,23 @@ EOF
        getStreet(map, street);
     }
 
-    GEvent.addListener(map, "click", onClick);
+    // GEvent.addListener(map, "click", onClick);
 
     //]]>
     </script>
     <noscript>
         <p>You must enable JavaScript and CSS to run this application!</p>
     </noscript>
-    <div class="sml" id="message"></div>
-    <div class="sml" id="permalink"></div>
-    <div class="sml" id="addroutelink"></div>
-    <div class="sml" id="addroutetext"></div>
-    <div class="sml" id="wpt">
+</div> <!-- nomaps -->
+</div> <!-- BBBikeGooglemap -->
+<!-- BBBikeGooglemap ends here -->
 EOF
-    for my $wpt (@$wpts) {
-        my ( $x, $y, $name ) = @$wpt;
-        next if $name eq '';
-        $html .=
-qq{<a href="#map" onclick="setwpt($x,$y);return true;">$name</a><br />\n};
-    }
-    $html .= <<EOF;
-    </div>
 
-<div id="commentlink" class="boxed" style="display:none;">
-  <a href="#" onclick="show_comment(); return false;">Kommentar zu Route und Waypoints senden</a>
-</div>
-
-<div style="float:left; width:45%; margin-top:0.5cm; ">
-
-<form action="" name="mapmode" class="boxed" method="get">
- <table border="0">
-   <tr style="vertical-align:top;">
-    <td><input onchange="currentModeChange()" 
-	       id="mapmode_browse"
-               type="radio" name="mapmode" value="browse" checked="checked" /></td>
-    <td><label for="mapmode_browse">Scrollen/Bewegen/Zoomen</label></td>
-   </tr>
-   <tr style="vertical-align:top;">
-    <td><input onchange="currentModeChange()" 
-	       id="mapmode_search"
-               type="radio" name="mapmode" value="search" /></td>
-    <td><label for="mapmode_search">Mit Mausklicks Start- und Zielpunkt festlegen</label></td>
-   </tr>
-   <tr style="vertical-align:top;">
-    <td><input onchange="currentModeChange()" 
-	       id="mapmode_addroute"
-               type="radio" name="mapmode" value="addroute" /></td>
-    <td><label for="mapmode_addroute">Mit Maus<span style="color:red;">klicks</span> eine Route erstellen</label><br/><!-- XXX remove colored "klicks" some time -->
-        <a href="javascript:deleteLastPoint()">Letzten Punkt l&ouml;schen</a>
-        <a href="javascript:resetOrUndoRoute()" id="routedellink">Route l&ouml;schen</a></td>
-   </tr>
-EOF
-    if ($is_beta) {
-        $html .= <<EOF;
-   <tr style="vertical-align:top;">
-    <td><input onchange="currentModeChange()" 
-	       id="mapmode_addwpt"
-               type="radio" name="mapmode" value="addwpt" /></td>
-    <td><label for="mapmode_addwpt">Waypoints erstellen</label><br/>
-        <a href="javascript:deleteAllUserWpts()">Alle Waypoints l&ouml;schen</a></td>
-   </tr>
-EOF
-    }
-
-    my $pdf_url = CGI->new();
-    $pdf_url->param( 'imagetype', 'pdf-auto' );
-
-    #$pdf_url->param( 'coords', $string_rep);
-    $pdf_url->param(
-        -name  => 'draw',
-        -value => [qw/str strname sbahn wasser flaechen title/]
-    );
-
-    my $startname = Encode::decode( utf8 => $pdf_url->param('startname') );
-    my $zielname  = Encode::decode( utf8 => $pdf_url->param('zielname') );
-    $pdf_url->param( 'startname', $startname );
-    $pdf_url->param( 'zielname',  $zielname );
-
-    my $print_link = $pdf_url->url( -relative => 1, -query => 1 );
-
-    if ( $pdf_url->param('source_script') ) {
-        $print_link =~ s,^slippymap\.cgi,,;
-        $print_link = $pdf_url->param('source_script') . $print_link;
-    }
-
-    $html .= <<EOF;
- </table>
-</form>
-
-<form action="" name="upload" onsubmit='setZoomInUploadForm()' class="boxed" style="margin-top:0.3cm; " method="post" enctype="multipart/form-data">
-EOF
-    if ( $self->{errormessageupload} ) {
-        $html .= <<EOF;
-  <div class="error">@{[ escapeHTML($self->{errormessageupload}) ]}</div>
-EOF
-    }
-    $html .= <<EOF;
-  <input type="hidden" name="zoom" value="@{[ $zoom ]}" />
-  Upload einer GPX-Datei: <input type="file" name="gpxfile" />
-  <br />
-  <button>Zeigen</button>
-</form>
-
-</div>
-
-<form action="" name="geocode" onsubmit='return doGeocode()' class="boxed" style="margin-top:0.5cm; margin-left:10px; width:45%; float:left;">
-  <table style="width:100%;">
-    <colgroup><col width="0*" /><col width="1*" /><col width="0*" /></colgroup>
-    <tr>
-      <td>Adresse:</td>
-<!-- first width is needed for firefox, 2nd for seamonkey -->
-      <td style="width:100%;"><input style="width:100%;" name="geocodeAddress" /></td>
-      <td><button>Zeigen</button></td>
-    </tr>
-  </table>
-</form>
- 
-<form action="" name="googlemap" onsubmit='return checkSetCoordForm()' class="boxed" style="margin-top:0.3cm; margin-left:10px; width:45%; float:left;">
-  <input type="hidden" name="zoom" value="@{[ $zoom ]}" />
-  <input type="hidden" name="autosel" value="@{[ $self->{autosel} ]}" />
-  <input type="hidden" name="maptype" value="@{[ $self->{maptype} ]}" />
-  <label>Koordinate(n) (x,y bzw. lon,lat): <input name="wpt_or_trk" size="17" /></label>
-  <button>Zeigen</button>
-  <br />
-  <div class="sml">
-    Koordinatensystem:<br />
-    <label><input type="radio" name="coordsystem" value="polar" @{[ $coordsystem eq 'polar' ? 'checked="checked"' : '' ]} /> WGS84-Koordinaten (DDD)</label>
-    <label><input type="radio" name="coordsystem" value="bbbike" @{[ $coordsystem eq 'bbbike' ? 'checked="checked"' : '' ]} /> BBBike</label>
-  </div>
-  
-</form>
-
-<form action="" id="commentform" style="position:absolute; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;">
-  <table>
-    <tr><td>Kommentar zur Route:</td><td> <textarea cols="40" rows="4" name="comment"></textarea></td></tr>
-    <tr id="hasuserwpts" style="visibility:hidden;"><td colspan="2">(Kommentare f&uuml;r Waypoints werden angeh&auml;ngt)</td></tr>
-    <tr><td>Dein Name:</td><td><input name="author" /></td></tr>
-    <tr><td>Deine E-Mail:</td><td> <input name="email" /></td></tr>
-    <tr><td></td><td><a href="#" onclick="send_via_post(); return false;">Senden</a>
-                     <a href="#" onclick="close_commentform(); return false;">Abbrechen</a>
-                 </td></tr>
-  </table>
-</form>
-
-<div style="position:absolute; top:20px; left: 20px; border:1px solid black; padding:4px; background:white; visibility:hidden;" id="answerbox">
-  <a href="#" onclick="close_answerbox(); return false;">[x]</a>
-  <div id="answer"></div>
-</div>
-
-
-<div id="footer" style="clear:left;">
-<br />
-<a href="../">home</a> 
-| <a href="$print_link">print</a> 
-<hr />
-  <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em; " >
-(&copy;) 2008-2010 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> 
-// <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br/>
-  Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br />
-  </div>
-</div>
-  </div> <!-- nomap -->
-  </body>
-</html>
-EOF
     $html;
 }
 
-# REPO BEGIN
-# REPO NAME hrefify /home/e/eserte/work/srezic-repository
-# REPO MD5 10b14ef52873d9c6b53d959919cbcf54
+#my $o = BBBikeGooglemap->new;
+#$o->run(new CGI);
 
-# hrefify($text)
-# Create <a href="...">...</a> tags around things which look like URLs
-# and HTML-escape everything else.
+1;
 
-sub hrefify {
-    my ($text) = @_;
-
-    require HTML::Entities;
-    my $enc = sub {
-        HTML::Entities::encode_entities_numeric( $_[0],
-            q{<>&"'\\\\\177-\x{fffd}} );
-    };
-
-    my $lastpos;
-    my $ret = "";
-    while ( $text =~ m{(.*)((?:https?|ftp)://\S+)}g ) {
-        my ( $plain, $href ) = ( $1, $2 );
-        $ret .= $enc->($plain);
-        $ret .=
-          qq{<a href="} . $enc->($href) . qq{">} . $enc->($href) . qq{</a>};
-        $lastpos = pos($text);
-    }
-    if ( !defined $lastpos ) {
-        $ret .= $enc->($text);
-    }
-    else {
-        $ret .= $enc->( substr( $text, $lastpos ) );
-    }
-    $ret;
-}
-
-# REPO END
-
-# REPO BEGIN
-# REPO NAME trim /home/e/eserte/work/srezic-repository
-# REPO MD5 ab2f7dfb13418299d79662fba10590a1
-
-# trim($string)
-# Trim starting and leading white space and squeezes white space to a
-# single space.
-
-sub trim ($) {
-    my $s = shift;
-    return $s if !defined $s;
-    $s =~ s/^\s+//;
-    $s =~ s/\s+$//;
-    $s =~ s/\s+/ /;
-    $s;
-}
-
-# REPO END
-
-return 1
-  if ( ( caller() and ( caller() )[0] ne 'Apache::Registry' )
-    or keys %Devel::Trace:: );    # XXX Tracer bug
-
-my $o = BBBikeGooglemap->new;
-$o->run;
-
-=head1 NAME
-
-bbbikegooglemap.cgi - show BBBike data through Google maps
-
-=head1 DESCRIPTION
-
-=head2 CGI Parameters
-
-=over
-
-=item C<coordsystem=>I<coordsystem>
-
-Currently only C<bbbike> (standard BBBike coord system, default) and
-C<polar> or C<wgs84> (WGS84 coordinates) are allowed.
-
-=item C<wpt_or_trk=>I<...>
-
-A waypoint or a track. Track points are separated with spaces. XXX
-
-=item C<wpt=>I<name>C<!>I<lon>C<,>I<lat>
-
-Set waypoint with the specified name on lon/lat and center map to this
-waypoint.
-
-=item C<coords=>I<...>
-
-Display a track XXX
-
-=item C<oldcoords=>I<...>
-
-Display an alternative track with a feeble color XXX
-
-=item C<gpxfile=>I<...>
-
-Upload parameter for a GPX file.
-
-=item C<zoom=>I<...>
-
-Set zoom value (use standard Google Maps zoom values).
-
-=item C<autosel=true>I<|>C<false>
-
-Automatically update the OS selection if set to true. Does not work
-yet!
-
-=item C<maptype=hybrid>I<|>C<normal>I<|>C<satellite>
-
-Set initial type of map (by default: satellite).
-
-=item C<$mapmode=search>I<|>C<addroute>I<|>C<browse>I<|>C<addwpt>
-
-Set initial mapmode to: search (route search mode activated), addroute
-(adding points to routes activated), browse (just browsing the map is
-activated), addwpt (adding waypoint activated). The default is browse.
-
-=item C<center=>I<lon>C<,>I<lat>
-
-Center to map to the specified point. If not set, then the first coord
-from the track, or the first waypoint, or the center of Berlin will be
-used.
-
-=back
-
-=cut
-
-# rsync -e "ssh -2 -p 5022" -a ~/src/bbbike/cgi/bbbikegooglemap.cgi root@bbbike.de:/var/www/domains/radzeit.de/www/cgi-bin/bbbikegooglemap2.cgi
