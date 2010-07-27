@@ -311,6 +311,9 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
     }
 
     my $html = <<EOF;
+<!-- BBBikeGooglemap starts here -->
+<div id="BBBikeGooglemap" style="width:680x; height:420px;">
+
     <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
     <script type="text/javascript">
       google.load("maps", "2");
@@ -1175,6 +1178,9 @@ EOF
     <noscript>
         <p>You must enable JavaScript and CSS to run this application!</p>
     </noscript>
+</div> <!-- nomaps -->
+</div> <!-- BBBikeGooglemap -->
+<!-- BBBikeGooglemap ends here -->
 EOF
 
     $html;
