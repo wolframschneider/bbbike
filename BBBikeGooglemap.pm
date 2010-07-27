@@ -1136,6 +1136,8 @@ EOF
     function getStreet(map, street) {
         var url = "/cgi/street-coord.cgi?namespace=0;city=$city&query=" + street;
 
+        map.clearOverlays();
+
 	GDownloadUrl(url, function(data, responseCode) {
 	  // To ensure against HTTP errors that result in null or bad data,
 	  // always check status code is equal to 200 before processing the data
