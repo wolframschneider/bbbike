@@ -2512,7 +2512,7 @@ function " . $type . "char_init() {}
 
 if ($enable_homemap_streets) {
 print <<'EOF';
-<script>
+<script type="text/javascript">
   // remember URL
   $("div#streetmap2").text( $("iframe#iframemap").attr("src") );
 
@@ -2538,6 +2538,10 @@ function homemap_street (event) {
 
 
 	if (street != "") {
+		var iframe_dom = 0;
+
+		// change URL for iframe map
+		if (!iframe_dom) {
 		var url = $("div#streetmap2").text() + ";street=" + street;
 		var oldIframeURL = $("iframe#iframemap").attr("src");
 		if (oldIframeURL != url) {
@@ -2546,6 +2550,17 @@ function homemap_street (event) {
 		} else {
 			$("div#streetmap").text(street + " no update: " ); 
 		}
+
+		// manipulate the iframe source code
+		} else {
+		    var js_div = $("iframe#iframemap").contents().find("div#street");
+		    if (js_div) {
+			// split script tag to avoid double parsing of the JS interpreter
+			var text = street;
+			$("iframe#iframemap").contents().find("div#street").html(text);
+			$("iframe#iframemap").contents().find("div#street").attr("onmouseover", 'javascript:setTimeout(function(){getStreet(map, "hauptstr.");}, 200)');
+		    }
+	    	}
 	}
 }
 
