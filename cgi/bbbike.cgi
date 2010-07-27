@@ -2567,16 +2567,14 @@ function homemap_street (event) {
 		} else {
 		    var js_div = $("div#BBBikeGooglemap").contents().find("div#street");
 		    if (js_div) {
-			// split script tag to avoid double parsing of the JS interpreter
-			var text = street;
-			setTimeout(function(){getStreet(map, street);}, 200);
+			getStreet(map, street);
 		    }
 	    	}
 	}
 }
 
 var timeout = null;
-var delay = 800; // delay until we render the map
+var delay = 400; // delay until we render the map
 function homemap_street_timer (event, time) {
 	// cleanup older calls waiting in queue
 	if (timeout != null) {
