@@ -2507,8 +2507,20 @@ function " . $type . "char_init() {}
             print qq{<div style="display:none" id="streetmap2"></div>\n};
             print qq{<div style="display:none" id="streetmap3"></div>\n}; 
 
+    print "<input type=hidden name=scope value='" .
+	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
 
+    print "</form>\n";
+    print "</td></tr></table>\n" if $bi->{'can_table'};
+
+	    if (0) {
 	    print qq{<iframe id="iframemap" src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="420" scrolling="no">xxx</iframe>\n};
+            } else {
+		use BBBikeGooglemap;
+
+	        my $maps = BBBikeGooglemap->new();
+	        $maps->run(CGI->new( "$smu" ));
+	    }
 
 if ($enable_homemap_streets) {
 print <<'EOF';
@@ -2538,7 +2550,7 @@ function homemap_street (event) {
 
 
 	if (street != "") {
-		var iframe_dom = 0;
+		var iframe_dom = 1;
 
 		// change URL for iframe map
 		if (!iframe_dom) {
@@ -2553,12 +2565,11 @@ function homemap_street (event) {
 
 		// manipulate the iframe source code
 		} else {
-		    var js_div = $("iframe#iframemap").contents().find("div#street");
+		    var js_div = $("div#BBBikeGooglemap").contents().find("div#street");
 		    if (js_div) {
 			// split script tag to avoid double parsing of the JS interpreter
 			var text = street;
-			$("iframe#iframemap").contents().find("div#street").html(text);
-			$("iframe#iframemap").contents().find("div#street").attr("onmouseover", 'javascript:setTimeout(function(){getStreet(map, "hauptstr.");}, 200)');
+			setTimeout(function(){getStreet(map, street);}, 200);
 		    }
 	    	}
 	}
@@ -2588,11 +2599,6 @@ EOF
 
     }
 
-    print "<input type=hidden name=scope value='" .
-	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
-
-    print "</form>\n";
-
 print <<EOF;
 <script type="text/javascript">
     if (document.getElementById('suggest_start') != null) {
@@ -2601,7 +2607,6 @@ print <<EOF;
 </script><br>
 EOF
 
-    print "</td></tr></table>\n" if $bi->{'can_table'};
 
     print "<hr>";
 
