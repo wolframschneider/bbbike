@@ -498,19 +498,24 @@ EOF
     // city: $city
     var street = "$street";
     var street_cache = [];
+    var data_cache = [];
 
     function getStreet(map, street) {
         var url = "/cgi/street-coord.cgi?namespace=0;city=$city&query=" + street;
 
+	// cleanup map
 	for (var i = 0; i < street_cache.length; i++) {
             map.removeOverlay(street_cache[i]);
 	}
-	street_cache = [];
 
-	GDownloadUrl(url, function(data, responseCode) {
-	  // To ensure against HTTP errors that result in null or bad data,
-	  // always check status code is equal to 200 before processing the data
-	  if(responseCode == 200) {
+	// read data from cache
+	street_cache = [];
+	if (data_cache[url] != undefined) {
+	    return plotStreet(data_cache[url]);
+        }
+
+	// plot street(s) on map
+        function plotStreet(data) {
 	    var js = eval(data);
 	    var streets_list = js[1];
 
@@ -524,14 +529,23 @@ EOF
 	        var route = new GPolyline(streets_route, "", 7, 0.5);
 		street_cache.push(route);
     	        map.addOverlay(route);
-    	    }
+	    }
+        }
 
+	// download street coords with AJAX
+	GDownloadUrl(url, function(data, responseCode) {
+	  // To ensure against HTTP errors that result in null or bad data,
+	  // always check status code is equal to 200 before processing the data
+	  if(responseCode == 200) {
+	        data_cache[url] = data;
+		plotStreet(data);
 	  } else if(responseCode == -1) {
-	    alert("Data request timed out. Please try later.");
+	      alert("Data request timed out. Please try later.");
 	  } else { 
-	    alert("Request resulted in error. Check XML file is retrievable.");
+	      alert("Request resulted in error. Check XML file is retrievable.");
 	  }
 	});
+
    }
 EOF
 
