@@ -497,11 +497,15 @@ EOF
     my $streets_route = << "EOF";
     // city: $city
     var street = "$street";
+    var street_cache = [];
 
     function getStreet(map, street) {
         var url = "/cgi/street-coord.cgi?namespace=0;city=$city&query=" + street;
 
-        map.clearOverlays();
+	for (var i = 0; i < street_cache.length; i++) {
+            map.removeOverlay(street_cache[i]);
+	}
+	street_cache = [];
 
 	GDownloadUrl(url, function(data, responseCode) {
 	  // To ensure against HTTP errors that result in null or bad data,
@@ -517,7 +521,9 @@ EOF
 	  	  var coords = s[j].split(",");
 		  streets_route.push(new GLatLng(coords[1], coords[0]));
 		}
-    	        map.addOverlay(new GPolyline(streets_route, "", 7, 0.5));
+	        var route = new GPolyline(streets_route, "", 7, 0.5);
+		street_cache.push(route);
+    	        map.addOverlay(route);
     	    }
 
 	  } else if(responseCode == -1) {
@@ -527,7 +533,6 @@ EOF
 	  }
 	});
    }
-
 EOF
 
     $html .= <<EOF;
