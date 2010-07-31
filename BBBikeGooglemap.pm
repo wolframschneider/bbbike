@@ -293,7 +293,9 @@ sub get_html {
 	// map.disableDoubleClickZoom();
         map.addControl(new GLargeMapControl());
         map.addControl(new GMapTypeControl());
-        map.addControl(new GOverviewMapControl ());
+
+	var ov = new GOverviewMapControl ();
+        map.addControl( ov );
  	// map.setMapType($self->{maptype});
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
