@@ -2550,7 +2550,7 @@ function homemap_street (event) {
 			street = $(ac_id[1]).find("div.selected").attr("title") || $("input#suggest_ziel").attr("value" );
 		}
 	}
-	if (street == undefined || street.length <= 1) { street = "" }
+	if (street == undefined || street.length <= 2) { street = "" }
 	// $("div#foo").text("street: " + street);
 
 	if (street != "") {
