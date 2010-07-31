@@ -312,6 +312,14 @@ sub get_html {
             // no zoom level higher than 15
             map.setZoom( zoom < 16 ? zoom : 15);
 
+	    // re-center after resize of map window
+	    \$(window).resize( function(e) { 
+			map.setCenter(bounds.getCenter()); 
+			var zoom = map.getBoundsZoomLevel(bounds)
+			map.setZoom( zoom < 16 ? zoom : 15); 
+	    });
+
+
 	    if (marker_list.length == 2) {
 	       var x1 = marker_list[0][0];
 	       var y1 = marker_list[0][1];
@@ -374,6 +382,7 @@ sub get_html {
         } else {
             // use default zoom level
             map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
+
         }
 
 	new GKeyboardHandler(map);
