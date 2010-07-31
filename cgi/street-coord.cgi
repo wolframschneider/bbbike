@@ -15,7 +15,7 @@ my $max_suggestions = 64;
 # for the input less than 4 characters
 my $max_suggestions_short = 10;
 
-my $opensearch_file = 'strassen';
+my $opensearch_file = 'opensearch.street-coordinates';
 my $opensearch_dir  = '../data-osm';
 
 my $debug = 0;
