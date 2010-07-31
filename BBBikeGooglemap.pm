@@ -236,21 +236,11 @@ sub get_html {
     }
 
     my $script;
-    my $maponly        = "";
-    my $slippymap_size = qq{width: 100%; height: 75%;};
-    {
-        #my $q = new CGI;
-        $script = $q->param('source_script') || 'bbbike.cgi';
-        $maponly =
-qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
-          if !$q->param("map_menu");
-        $slippymap_size = qq{ width: 100%; height: 100%; max-width: 800px;}
-          if !$q->param("map_menu");
-    }
+    my $slippymap_size = "";
 
     my $html = <<EOF;
 <!-- BBBikeGooglemap starts here -->
-<div id="BBBikeGooglemap" style="width:680x; height:420px;">
+<div id="BBBikeGooglemap">
 
     <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
     <script type="text/javascript">
@@ -259,8 +249,8 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
     <script src="../html/sprintf.js" type="text/javascript"></script>
     <script src="../html/bbbike_util.js" type="text/javascript"></script>
 
-    <div id="map" style="$slippymap_size"></div>
-    <div id="nomap">
+    <div id="map"></div>
+    <div id="nomap_script">
     <script type="text/javascript">
     //<![CDATA[
 

@@ -210,7 +210,8 @@ html, body {
 
 div#map   {
         width: 100%; 
-        height: 70%;
+        height: 100%;
+	// min-height: 420px;
 }
 
 
@@ -224,3 +225,7 @@ div#nomap {
 div#footer { font-size: small; text-align: center; }
 div#footer_top { text-align: left; }
 
+div#BBBikeGooglemap { 
+        width: 100%; 
+	height: 60%;
+}
