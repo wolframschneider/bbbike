@@ -2334,7 +2334,7 @@ EOF
 	var ac_$city = \$('#$searchinput').autocomplete( 
 		{ serviceUrl: 'api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:160, width:300, deferRequestBy:100, noCache: true }
 	);
-</script><br>
+</script>
 
 |;
 	    }
@@ -2641,7 +2641,7 @@ print <<EOF;
     if (document.getElementById('suggest_start') != null) {
         document.BBBikeForm.start.focus();
     }
-</script><br>
+</script>
 
 EOF
 
