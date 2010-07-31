@@ -5272,7 +5272,7 @@ EOF
 	        print qq{<p></p>\n};
 
 
-		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="705" scrolling="no"></iframe><p></p>};
+		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="800" scrolling="no"></iframe><p></p>};
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 	    }
 
