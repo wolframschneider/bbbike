@@ -2642,10 +2642,11 @@ print <<EOF;
         document.BBBikeForm.start.focus();
     }
 </script><br>
+
 EOF
 
 
-    print "<hr>";
+    #print "<hr>";
 
     if (!$smallform) {
         my $cityname;
@@ -2666,16 +2667,13 @@ EOF
 	}
  
        $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'Berlin und Potsdam';
-       print q{<div id="footer_links">};
-       print qq{<!-- <a href="../">Home</a> | -->\n};
-       print window_open("$bbbike_script?all=1", "BBBikeAll",
-                         "dependent,height=500,resizable," .
-                         "screenX=500,screenY=30,scrollbars,width=250")
-	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $cityname : "") ."</a>";
-        print qq{\n| <a href="../">}, M("BBBike f&uuml;r andere St&auml;dte"), "</a>\n" if $teaser_bottom;
-
-	print  q{</div>};
-	print "<hr>";
+       #print q{<div style="display:none" id="footer_links">};
+       #print window_open("$bbbike_script?all=1", "BBBikeAll",
+       #                  "dependent,height=500,resizable," .
+       #                  "screenX=500,screenY=30,scrollbars,width=250")
+	#    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $cityname : "") ."</a>";
+	#	print  q{</div>};
+	#print "<hr>";
     }
 
     print footer_as_string();
@@ -7007,58 +7005,28 @@ EOF
 sub footer { print footer_as_string() }
 
 sub footer_as_string {
-    my $s = "";
-# ?begin anscheinend notwendig (Bug in Netscape3, Solaris2?)
-    my $smallformstr = ($q->param('smallform')
-			? '&smallform=' . $q->param('smallform')
-			: '');
-    $s .= qq{<center } . (!$bi->{'css_buggy'} ? qq{style="padding-top:5px;" } : "") . qq{><table };
-    if (1 || !$bi->{'can_css'}) { # XXX siehe oben Kommentar am Anfang von "sub search_*" bzgl. css
-	$s .= "bgcolor=\"#ffcc66\" ";
-    }
-    $s .= "cellpadding=3>\n";
-    $s .= <<EOF;
-<!-- <tr>
-<td></td> 
-<td align=center>${fontstr}<a href="../">BBBike @ world</a>${fontend}</td>
-<td align=center>${fontstr}bbbike.cgi $VERSION${fontend}</td> 
-<td align=center>${fontstr} <a target="_top" href="mailto:@{[ $BBBike::EMAIL ]}?subject=BBBike">@{[ M("E-Mail") ]}</a>${fontend}</td> 
-<td align=center>$fontstr<a target="_top" href="$bbbike_script?begin=1$smallformstr">@{[ M("Neue Anfrage") ]}</a>${fontend}</td> 
-<td align=center>$fontstr<a target="_top" href="$bbbike_script?info=1$smallformstr">@{[ M("Kontakt, Info &amp; Disclaimer") ]}</a>${fontend}</td> -->
-EOF
-    if (0) {
-    $s .= "<td align=center>$fontstr";
-    $s .= complete_link_to_einstellungen();
-    $s .= "${fontend}</td>\n";
-    }
-    if ($can_mapserver) {
-        $s .= "<td><a href=\"$bbbike_script?mapserver=1\">Mapserver</a></td>";
-    } elsif (defined $mapserver_init_url && !$osm_data) {
-        $s .= "<td><a href=\"$mapserver_init_url\">Mapserver</a></td>";
-    }
-    $s .= <<EOF;
-<!-- <td align=center>${fontstr}<a href="./livesearch.cgi">livesearch</a>${fontend}</td> 
-</tr> -->
-<tr style="display:none"><td></td></tr>
-</table>
-</center>
-EOF
+	my $s = "";
 
 my $qq = new CGI;
 #$qq->param( 'startname', Encode::encode( utf8 => $qq->param('startname')));
 #$qq->param( 'zielname', Encode::encode( utf8 => $qq->param('zielname')));
 my $permalink = BBBikeCGIUtil::my_escapeHTML($qq->url(-full=>1, -query=>1));
 
+my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'Berlin und Potsdam';
+my $list_of_all_streets = window_open("$bbbike_script?all=1", "BBBikeAll",
+                         "dependent,height=500,resizable," .
+                         "screenX=500,screenY=30,scrollbars,width=250")
+	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $cityname : "") ."</a>";
+
 my $s_copyright = <<EOF;
 
 <div id="footer">
 <div id="footer_top">
-<span id="permalink_bottom"><a href="#" onclick="togglePermaLinks(); return false;">Permalink</a><span id="permalink_url2" style="display:none"> $permalink</span></span>
-<p>
 <a href="../">home</a> |
 <a href="../doc.html">help</a> |
-<a href="../app.html">app</a>
-</p>
+<a href="../app.html">app</a> |
+$list_of_all_streets |
+<a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url2" style="display:none"> $permalink</span>
 </div>
 </div>
 <hr>
