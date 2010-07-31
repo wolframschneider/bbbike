@@ -290,7 +290,7 @@ sub get_html {
 
     if (GBrowserIsCompatible() ) {
         var map = new GMap2(document.getElementById("map") );
-	map.disableDoubleClickZoom();
+	// map.disableDoubleClickZoom();
         map.addControl(new GLargeMapControl());
         map.addControl(new GMapTypeControl());
         map.addControl(new GOverviewMapControl ());
@@ -418,7 +418,7 @@ sub get_html {
 
     // map.setMapType(cycle_map);
     map.setMapType($self->{maptype});
-    map.enableScrollWheelZoom();
+    // map.enableScrollWheelZoom();
 
 function GetTileUrl_Mapnik(a, z) {
     return "http://tile.openstreetmap.org/" +
