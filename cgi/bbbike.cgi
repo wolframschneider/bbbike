@@ -2445,9 +2445,8 @@ function " . $type . "char_init() {}
 	    print "<p>\n";
 	}
     }
-    $nl->();
-
-    hidden_smallform();
+    #$nl->();
+    #hidden_smallform();
 
     {
 	my $button_str = "";
