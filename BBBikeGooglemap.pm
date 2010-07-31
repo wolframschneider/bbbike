@@ -341,13 +341,14 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
                var x4 = x1 + 180;  
                var y4 = y1 + 179.99;
 
+	       var o = ['#fff', 0, 1, 0.2, 0.2];
                var area_around = new GPolygon([
                         new GLatLng(x4,y1),
                         new GLatLng(x3,y1),
                         new GLatLng(x3,y3),
                         new GLatLng(x4,y3),
                         new GLatLng(x4,y1)], // first point again
-                        '#ffff00', 0, 0.8);
+			o[0], o[1], o[2], o[3], o[4]);
                map.addOverlay(area_around);
 
                area_around = new GPolygon([
@@ -356,7 +357,7 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
                         new GLatLng(x3,y4),
                         new GLatLng(x4,y4),
                         new GLatLng(x4,y2)], // first point again
-                        '#ffff00', 0, 0.5);
+			o[0], o[1], o[2], o[3], o[4]);
                map.addOverlay(area_around);
 
                area_around = new GPolygon([
@@ -365,7 +366,7 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
                         new GLatLng(x4,y2),
                         new GLatLng(x4,y1),
                         new GLatLng(x2,y1)],
-                        '#ffff00', 0, 0.5);
+			o[0], o[1], o[2], o[3], o[4]);
                map.addOverlay(area_around);
 
                area_around = new GPolygon([
@@ -374,7 +375,7 @@ qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|
                         new GLatLng(x3,y2),
                         new GLatLng(x3,y1),
                         new GLatLng(x1,y1)],
-                        '#ffff00', 0, 0.5);
+			o[0], o[1], o[2], o[3], o[4]);
                map.addOverlay(area_around);
              }
 
