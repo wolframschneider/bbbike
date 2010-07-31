@@ -1921,6 +1921,7 @@ sub choose_form {
     header(@extra_headers, -from => $show_introduction ? "chooseform-start" : "chooseform");
 
     print <<EOF if ($bi->{'can_table'});
+<div id="routing">
 <table>
 <tr>
 EOF
@@ -1930,7 +1931,7 @@ EOF
 
 	# use "make count-streets" in ../data
 	print <<EOF if ($bi->{'can_table'});
-<td valign="top">@{[ blind_image(420,1) ]}<br>
+<td valign="top">@{[ blind_image(120,1) ]}<br>
 EOF
 	# Eine Addition aller aktuellen Straßen, die bei luise-berlin
 	# aufgeführt sind, ergibt als Summe 10129
@@ -2323,7 +2324,7 @@ EOF
 	    }
 
 	    my $searchinput = 'suggest_' . $type;
-	    print qq{<input id="$searchinput" size="40" type="text" name="$type" value="" class="ac_input">}; # if !$no_input_streetname;
+	    print qq{<input id="$searchinput" size="30" type="text" name="$type" value="" class="ac_input">}; # if !$no_input_streetname;
 
 	   if ($enable_opensearch_suggestions) { 
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
@@ -2514,7 +2515,7 @@ function " . $type . "char_init() {}
 	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
 
     print "</form>\n";
-    print "</td></tr></table>\n" if $bi->{'can_table'};
+    print "</td></tr></table>\n</div>\n" if $bi->{'can_table'};
 
 	    if (0) {
 	    print qq{<iframe id="iframemap" src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="420" scrolling="no">xxx</iframe>\n};
@@ -5271,7 +5272,7 @@ EOF
 	        print qq{<p></p>\n};
 
 
-		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="505" scrolling="no"></iframe><p></p>};
+		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="705" scrolling="no"></iframe><p></p>};
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 	    }
 
