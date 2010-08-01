@@ -246,14 +246,13 @@ sub get_html {
     my $html = <<EOF;
 <!-- BBBikeGooglemap starts here -->
 <div id="BBBikeGooglemap" $slippymap_size>
-
-    <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
-    <script type="text/javascript">
-      google.load("maps", "2");
-    </script>
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="../html/elevation.js" type="text/javascript"></script>
     <script src="../html/sprintf.js" type="text/javascript"></script>
     <script src="../html/bbbike_util.js" type="text/javascript"></script>
 
+    <script type="text/javascript"> google.load("maps", "2"); </script>
     <div id="map"></div>
     <div id="nomap_script">
     <script type="text/javascript">
