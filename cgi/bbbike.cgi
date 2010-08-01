@@ -2589,45 +2589,15 @@ function homemap_street_timer (event, time) {
 }
 
 
-$("input.ac_input").keyup( 	function(event) { homemap_street_timer(event, delay*2) } );
-$("input.ac_input").focusout( 	function(event) { homemap_street_timer(event, delay) } );
-$("input.ac_input").mouseover( 	function(event) { homemap_street_timer(event, delay) } );
-$("div.autocomplete").mouseover(function(event) { homemap_street_timer(event, delay) } );
+if (!navigator.userAgent.match(/iPhone/)) {
+  $("input.ac_input").keyup( 	function(event) { homemap_street_timer(event, delay*2) } );
+  $("input.ac_input").focusout( 	function(event) { homemap_street_timer(event, delay) } );
+  $("input.ac_input").mouseover( 	function(event) { homemap_street_timer(event, delay) } );
 
-/*
-function mytest (event, string) {
-	var target = (event.target) ? event.target : event.srcElement;
-	var id = target ? target.id : "";
-   $("div#foo3").text( $("div#foo2").text());
-   $("div#foo2").text(string + " " + id );
+  $("div.autocomplete").mouseover(function(event) { homemap_street_timer(event, delay) } );
+} else {
+  // 
 }
-
-$("input.ac_input").blur( function(event) { mytest ( event, "blur") } );
-$("input.ac_input").change( function(event) { mytest ( event, "change") } );
-$("input.ac_input").click( function(event) { mytest ( event, "click") } );
-$("input.ac_input").dblclick( function(event) { mytest ( event, "dblclick") } );
-$("input.ac_input").focus( function(event) { mytest ( event, "focus") } );
-$("input.ac_input").focusin( function(event) { mytest ( event, "focusin") } );
-$("input.ac_input").focusout( function(event) { mytest ( event, "focusout") } );
-$("input.ac_input").hover( function(event) { mytest ( event, "hover") } );
-$("input.ac_input").keydown( function(event) { mytest ( event, "keydown") } );
-$("input.ac_input").keypress( function(event) { mytest ( event, "keypress") } );
-$("input.ac_input").keyup( function(event) { mytest ( event, "keyup") } );
-$("input.ac_input").load( function(event) { mytest ( event, "load") } );
-$("input.ac_input").mousedown( function(event) { mytest ( event, "mousedown") } );
-$("input.ac_input").mouseenter( function(event) { mytest ( event, "mouseenter") } );
-$("input.ac_input").mouseleave( function(event) { mytest ( event, "mouseleave") } );
-$("input.ac_input").mousemove( function(event) { mytest ( event, "mousemove") } );
-$("input.ac_input").mouseout( function(event) { mytest ( event, "mouseout") } );
-$("input.ac_input").mouseover( function(event) { mytest ( event, "mouseover") } );
-$("input.ac_input").mouseup( function(event) { mytest ( event, "mouseup") } );
-$("input.ac_input").ready( function(event) { mytest ( event, "ready") } );
-$("input.ac_input").resize( function(event) { mytest ( event, "resize") } );
-$("input.ac_input").scroll( function(event) { mytest ( event, "scroll") } );
-$("input.ac_input").select( function(event) { mytest ( event, "select") } );
-$("input.ac_input").unload( function(event) { mytest ( event, "unload") } );
-*/
-
 
 </script>
 
