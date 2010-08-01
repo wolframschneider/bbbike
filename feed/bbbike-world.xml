@@ -16,6 +16,28 @@
   <generator uri="http://search.cpan.org/dist/XML-Atom-SimpleFeed/"
   version="0.86">XML::Atom::SimpleFeed</generator>
   <entry>
+    <title>Redesign of BBBike</title>
+    <id>9bcb8fcbc414515b4ad98ca3d1dac9f4</id>
+    <content>Redesign of BBBike @ world search page.</content>
+    <updated>2010-07-31T18:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
+    <title>Plotting Street Names</title>
+    <id>7c0e10e5b40c4423c8a3f0b37772028f</id>
+    <content>The street names will be plotted as you type in Google
+    Maps.</content>
+    <updated>2010-07-30T18:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
+    <title>More cities supported: Bamberg</title>
+    <id>5906fa459866ba81323e4b5ba6411588</id>
+    <content>Added new cities: Bamberg</content>
+    <updated>2010-07-23T18:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
     <title>More cities supported</title>
     <id>74ce830fecbcbe6fe07c3f61df1f5176</id>
     <content>Added new cities: Victoria</content>
