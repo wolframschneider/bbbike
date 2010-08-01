@@ -1,10 +1,9 @@
 # -*- perl -*-
 
 #
-# $Id: GpsmanData.pm,v 1.67 2009/02/12 00:50:36 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2002,2005,2007 Slaven Rezic. All rights reserved.
+# Copyright (C) 2002,2005,2007,2010 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -45,7 +44,7 @@ BEGIN {
 }
 
 use vars qw($VERSION @EXPORT_OK);
-$VERSION = sprintf("%d.%03d", q$Revision: 1.67 $ =~ /(\d+)\.(\d+)/);
+$VERSION = 1.70;
 
 use constant TYPE_UNKNOWN  => -1;
 use constant TYPE_WAYPOINT => 0;
@@ -1061,8 +1060,16 @@ sub convert_to_route {
     @res;
 }
 
+# Options:
+#   symtocmt => $bool: hack to put symbol name into comment, for gpx
+#                      renderers not dealing the sym tag (e.g. merkaartor)
 sub as_gpx {
-    my($self) = @_;
+    my($self, %args) = @_;
+
+    my $sym_to_cmt = delete $args{symtocmt};
+    die "Unhandled arguments: " . join(" ", %args) if %args;
+
+    require GPS::GpsmanData::GarminGPX;
     require XML::LibXML;
     my $dom = XML::LibXML::Document->new('1.0', 'utf-8');
     my $gpx = $dom->createElement("gpx");
@@ -1080,6 +1087,44 @@ sub as_gpx {
 		$wptxml->setAttribute("lon", $wpt->Longitude);
 		my $namexml = $wptxml->addNewChild(undef, "name");
 		$namexml->appendText($wpt->Ident);
+
+		my $symbol = $wpt->Symbol;
+		if (defined $symbol && length $symbol) {
+		    if ($symbol =~ m{user:}) {
+			# nop
+		    } else {
+			$symbol = GPS::GpsmanData::GarminGPX::gpsman_symbol_to_garmin_symbol_name($symbol);
+		    }
+		    if (defined $symbol) {
+			my $symbolxml = $wptxml->addNewChild(undef, 'sym');
+			$symbolxml->appendText($symbol);
+
+			if ($sym_to_cmt) {
+			    my $commentxml = $wptxml->addNewChild(undef, 'cmt');
+			    $commentxml->appendText($symbol);
+			}
+		    }
+		}
+
+		## normally not useful --- it's the date/time
+		#my $comment = $wpt->Comment;
+		#if (defined $comment and length $comment) {
+		#    my $commentxml = $wptxml->addNewChild(undef, 'cmt');
+		#    $commentxml->appendText($comment);
+		#}
+
+		my $altitude = $wpt->Altitude;
+		if (defined $altitude and length $altitude) {
+		    my $elexml = $wptxml->addNewChild(undef, 'ele');
+		    $elexml->appendText($altitude);
+		}
+
+		my $epoch = $wpt->Comment_to_unixtime($chunk);
+		if (defined $epoch) {
+		    require POSIX;
+		    my $timexml = $wptxml->addNewChild(undef, 'time');
+		    $timexml->appendText(POSIX::strftime("%FT%TZ", gmtime($epoch)));
+		}
 	    }
 	} elsif ($chunk->Type eq $chunk->TYPE_TRACK) {
 	    my $trkxml = $gpx->addNewChild(undef, "trk");
