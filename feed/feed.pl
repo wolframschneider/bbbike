@@ -19,6 +19,33 @@ my $feed = XML::Atom::SimpleFeed->new(
 ######################################################################
 
 $feed->add_entry(
+    title => 'Redesign of BBBike',
+    id    => '9bcb8fcbc414515b4ad98ca3d1dac9f4',
+
+    content => {
+        type    => 'text',
+        content => qq{Redesign of BBBike @ world search page.},
+    },
+
+    updated  => '2010-07-31T18:30:02Z',
+    category => 'News',
+);
+
+
+$feed->add_entry(
+    title => 'More cities supported: Bamberg',
+    id    => '5906fa459866ba81323e4b5ba6411588',
+
+    content => {
+        type    => 'text',
+        content => qq{Added new cities: Bamberg},
+    },
+
+    updated  => '2010-07-23T18:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
     title => 'More cities supported',
     id    => '74ce830fecbcbe6fe07c3f61df1f5176',
 
