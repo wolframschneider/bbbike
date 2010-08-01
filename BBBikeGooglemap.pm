@@ -246,17 +246,16 @@ sub get_html {
     my $html = <<EOF;
 <!-- BBBikeGooglemap starts here -->
 <div id="BBBikeGooglemap" $slippymap_size>
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="../html/elevation.js" type="text/javascript"></script>
-    <script src="../html/sprintf.js" type="text/javascript"></script>
-    <script src="../html/bbbike_util.js" type="text/javascript"></script>
-
     <script type="text/javascript"> google.load("maps", "2"); </script>
+
     <div id="map"></div>
     <div id="nomap_script">
     <script type="text/javascript">
     //<![CDATA[
+
+    var map;
+
+function bbbike_maps_init () {
 
     var routeLinkLabel = "Link to route: ";
     var routeLabel = "Route: ";
@@ -293,13 +292,13 @@ sub get_html {
     var goalPoint = null;
 
     if (GBrowserIsCompatible() ) {
-        var map = new GMap2(document.getElementById("map") );
+        map = new GMap2(document.getElementById("map") );
 	// map.disableDoubleClickZoom();
         map.addControl(new GLargeMapControl());
         map.addControl(new GMapTypeControl());
 
-	var ov = new GOverviewMapControl ();
-        map.addControl( ov );
+	// var ov = new GOverviewMapControl ();
+        // map.addControl( ov );
  	// map.setMapType($self->{maptype});
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
@@ -434,6 +433,7 @@ sub get_html {
     // map.setMapType(cycle_map);
     map.setMapType($self->{maptype});
     // map.enableScrollWheelZoom();
+}
 
 function GetTileUrl_Mapnik(a, z) {
     return "http://tile.openstreetmap.org/" +
@@ -478,7 +478,6 @@ EOF
 
             $html .= <<EOF;
 $route_js_code
-    // map.addOverlay(route);
 EOF
         }
     }
@@ -489,6 +488,8 @@ EOF
         #my $html_name = escapeHTML($name);
         my $html_name = hrefify($name);
         $html .= <<EOF;
+
+
     var point = new GLatLng($y,$x);
     var marker = createMarker(point, '$html_name');
     map.addOverlay(marker);
@@ -551,18 +552,14 @@ EOF
 	      alert("Request resulted in error. Check XML file is retrievable.");
 	  }
 	});
-
    }
+
+    bbbike_maps_init();
 EOF
 
     $html .= <<EOF;
    
     $streets_route
-
-    if (street) {
-       getStreet(map, street);
-    }
-
     //]]>
     </script>
     <noscript>
