@@ -253,6 +253,10 @@ sub get_html {
     <script type="text/javascript">
     //<![CDATA[
 
+    var map;
+
+function bbbike_maps_init () {
+
     var routeLinkLabel = "Link to route: ";
     var routeLabel = "Route: ";
     var commonSearchParams = "&pref_seen=1&pref_speed=20&pref_cat=&pref_quality=&pref_green=&scope=;output_as=xml;referer=bbbikegooglemap";
@@ -288,7 +292,7 @@ sub get_html {
     var goalPoint = null;
 
     if (GBrowserIsCompatible() ) {
-        var map = new GMap2(document.getElementById("map") );
+        map = new GMap2(document.getElementById("map") );
 	// map.disableDoubleClickZoom();
         map.addControl(new GLargeMapControl());
         map.addControl(new GMapTypeControl());
@@ -429,6 +433,7 @@ sub get_html {
     // map.setMapType(cycle_map);
     map.setMapType($self->{maptype});
     // map.enableScrollWheelZoom();
+}
 
 function GetTileUrl_Mapnik(a, z) {
     return "http://tile.openstreetmap.org/" +
@@ -472,6 +477,7 @@ EOF
             $route_js_code .= qq{);};
 
             $html .= <<EOF;
+    bbbike_maps_init();
 $route_js_code
     // map.addOverlay(route);
 EOF
@@ -484,6 +490,8 @@ EOF
         #my $html_name = escapeHTML($name);
         my $html_name = hrefify($name);
         $html .= <<EOF;
+
+
     var point = new GLatLng($y,$x);
     var marker = createMarker(point, '$html_name');
     map.addOverlay(marker);
@@ -546,18 +554,13 @@ EOF
 	      alert("Request resulted in error. Check XML file is retrievable.");
 	  }
 	});
-
    }
+
 EOF
 
     $html .= <<EOF;
    
     $streets_route
-
-    if (street) {
-       getStreet(map, street);
-    }
-
     //]]>
     </script>
     <noscript>
