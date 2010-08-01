@@ -6710,6 +6710,41 @@ sub http_header {
     }
 }
 
+sub get_google_api_key {
+
+    my %google_api_keys = (
+        'bbbike.dyndns.org' =>
+"ABQIAAAAidl4U46XIm-bi0ECbPGe5hSLqR5A2UGypn5BXWnifa_ooUsHQRSCfjJjmO9rJsmHNGaXSFEFrCsW4A",
+
+        '78.47.225.30' =>
+"ABQIAAAACNG-XP3VVgdpYda6EwQUyhTTdIcL8tflEzX084lXqj663ODsaRSCKugGasYn0ZdJkWoEtD-oJeRhNw",
+        'bbbike.de' =>
+'ABQIAAAACNG-XP3VVgdpYda6EwQUyhRfQt6AwvKXAVZ7ZsvglWYeC-xX5BROlXoba_KenDFQUtSEB_RJPUVetw',
+        'bbbike.org' =>
+'ABQIAAAAX99Vmq6XHlL56h0rQy6IShRC_6-KTdKUFGO0FTIV9HYn6k4jEBS45YeLakLQU48-9GshjYiSza7RMg',
+        'www.bbbike.org' =>
+'ABQIAAAAX99Vmq6XHlL56h0rQy6IShRC_6-KTdKUFGO0FTIV9HYn6k4jEBS45YeLakLQU48-9GshjYiSza7RMg',
+        'dev.bbbike.org' =>
+'ABQIAAAAX99Vmq6XHlL56h0rQy6IShQGl2ahQNKygvI--_E2nchLqmbBhxRLXr4pQqVNorfON2MgRTxoThX1iw',
+        'devel.bbbike.org' =>
+'ABQIAAAAX99Vmq6XHlL56h0rQy6IShSz9Y_XkjB4bplja172uJiTycvaMBQbZCQc60GoFTYOa5aTUrzyHP-dVQ',
+        'localhost' =>
+'ABQIAAAAX99Vmq6XHlL56h0rQy6IShT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTN4WPiGfl2FX2PYZt6wyT5v7xqcg',
+    );
+
+    my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new($q), -full => 1 ) );
+    my $fallback_host = "bbbike.de";
+    my $host = eval { $full->host } || $fallback_host;
+
+    # warn "Google maps API: host: $host, full: $full\n";
+
+    my $google_api_key = $google_api_keys{$host}
+      || $google_api_keys{$fallback_host};
+
+    return $google_api_key;
+}
+
+
 sub header {
     my(%args) = @_;
     my $from = delete $args{-from};
@@ -6847,14 +6882,17 @@ sub header {
 
     }
 
+    # google maps api v3
+    # <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    # <script src="../html/elevation.js" type="text/javascript"></script>
     if ($enable_homemap_streets) {
+	my $google_api_key = &get_google_api_key;
+
 	push(@$head, qq|
-    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+    <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
     <script src="../html/maps.js" type="text/javascript"></script>
-    <script src="../html/elevation.js" type="text/javascript"></script>
     <script src="../html/sprintf.js" type="text/javascript"></script>
-    <script src="../html/elevation.js" type="text/javascript"></script>
 |);
     }
 

@@ -477,9 +477,8 @@ EOF
             $route_js_code .= qq{);};
 
             $html .= <<EOF;
-    bbbike_maps_init();
 $route_js_code
-    // map.addOverlay(route);
+    bbbike_maps_init();
 EOF
         }
     }
