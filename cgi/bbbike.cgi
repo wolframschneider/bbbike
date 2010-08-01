@@ -2534,8 +2534,7 @@ print <<'EOF';
 
 if (!navigator.userAgent.match(/iPhone/)) {
   $("input.ac_input").keyup( 	function(event) { homemap_street_timer(event, delay*2) } );
-  $("input.ac_input").focusout( 	function(event) { homemap_street_timer(event, delay) } );
-  $("input.ac_input").mouseover( 	function(event) { homemap_street_timer(event, delay) } );
+  $("input.ac_input").click( 	function(event) { homemap_street_timer(event, delay) } );
 
   $("div.autocomplete").mouseover(function(event) { homemap_street_timer(event, delay) } );
 } else {
