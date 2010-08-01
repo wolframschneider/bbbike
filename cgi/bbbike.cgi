@@ -6905,6 +6905,18 @@ sub header {
 
     }
 
+    if ($enable_homemap_streets) {
+	push(@$head, qq|
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="../html/elevation.js" type="text/javascript"></script>
+    <script src="../html/sprintf.js" type="text/javascript"></script>
+    <script src="../html/bbbike_util.js" type="text/javascript"></script>
+    <script src="../html/elevation.js" type="text/javascript"></script>
+|);
+    }
+
+
     $args{-head} = $head if $head && @$head;
 
     if (!$smallform) {
