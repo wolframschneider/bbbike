@@ -31,6 +31,18 @@ $feed->add_entry(
     category => 'News',
 );
 
+$feed->add_entry(
+    title => 'Plotting Street Names',
+    id    => '7c0e10e5b40c4423c8a3f0b37772028f',
+
+    content => {
+        type    => 'text',
+        content => qq{The street names will be plotted as you type in Google Maps.},
+    },
+
+    updated  => '2010-07-30T18:30:02Z',
+    category => 'News',
+);
 
 $feed->add_entry(
     title => 'More cities supported: Bamberg',
