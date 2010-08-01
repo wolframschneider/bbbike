@@ -3454,7 +3454,7 @@ sub suche_button {
     if ($bi->{'can_javascript'}) {
 	print qq{<input type=button value="&lt;&lt; } . M("Zurück") . qq{" onclick="history.back(1);">&nbsp;&nbsp;};
     }
-    print qq{<input type=submit value="} . M("Route zeigen") . qq{ &gt;&gt;">\n};
+    print qq{<input type=submit value="} . M("Route zeigen") . qq{ &gt;&gt;"><p />\n};
 }
 
 sub hidden_smallform {
