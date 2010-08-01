@@ -478,7 +478,6 @@ EOF
 
             $html .= <<EOF;
 $route_js_code
-    bbbike_maps_init();
 EOF
         }
     }
@@ -555,6 +554,7 @@ EOF
 	});
    }
 
+    bbbike_maps_init();
 EOF
 
     $html .= <<EOF;
