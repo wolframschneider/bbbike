@@ -238,9 +238,14 @@ sub get_html {
     my $script;
     my $slippymap_size = "";
 
+    if ($q->user_agent("iPhone")) {
+	#$slippymap_size = qq{ style="width:240px; height:240px; "};
+	$slippymap_size = qq{ style="display:none"};
+    }
+
     my $html = <<EOF;
 <!-- BBBikeGooglemap starts here -->
-<div id="BBBikeGooglemap">
+<div id="BBBikeGooglemap" $slippymap_size>
 
     <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
     <script type="text/javascript">
