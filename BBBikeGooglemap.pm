@@ -297,8 +297,8 @@ function bbbike_maps_init () {
         map.addControl(new GLargeMapControl());
         map.addControl(new GMapTypeControl());
 
-	var ov = new GOverviewMapControl ();
-        map.addControl( ov );
+	// var ov = new GOverviewMapControl ();
+        // map.addControl( ov );
  	// map.setMapType($self->{maptype});
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
