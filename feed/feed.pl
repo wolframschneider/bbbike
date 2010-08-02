@@ -19,6 +19,19 @@ my $feed = XML::Atom::SimpleFeed->new(
 ######################################################################
 
 $feed->add_entry(
+    title => 'Additional map type terrain',
+    id    => '23c619077a199e8ad171617ab24c7eb8',
+
+    content => {
+        type    => 'text',
+        content => qq{Additional map type terrain},
+    },
+
+    updated  => '2010-08-02T18:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
     title => 'Redesign of BBBike',
     id    => '9bcb8fcbc414515b4ad98ca3d1dac9f4',
 
