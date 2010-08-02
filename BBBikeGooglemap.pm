@@ -114,6 +114,7 @@ sub run {
           $maptype =~ /hybrid/i    ? 'G_HYBRID_MAP'
         : $maptype =~ /normal/i    ? 'G_NORMAL_MAP'
         : $maptype =~ /^satelite/i ? 'G_SATELLITE_MAP'
+        : $maptype =~ /^physical/i ? 'G_PHYSICAL_MAP'
         : $maptype =~ /^cycle$/    ? 'cycle_map'
         : $maptype =~ /^mapnik$/   ? 'mapnik_map'
         : $maptype =~ /^tah$/      ? 'tah_map'
@@ -399,6 +400,8 @@ function bbbike_maps_init () {
     var copyrightCollection =
         new GCopyrightCollection('Map data &copy; 2010 <a target="_osm" href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors');
     copyrightCollection.addCopyright(copyright);
+
+    map.addMapType(G_PHYSICAL_MAP);
 
     var tilelayers_mapnik = new Array();
     tilelayers_mapnik[0] = new GTileLayer(copyrightCollection, 0, 18);

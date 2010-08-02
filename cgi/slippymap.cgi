@@ -1132,6 +1132,8 @@ EOF
         new GCopyrightCollection('Map data &copy; 2010 <a target="_osm" href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors');
     copyrightCollection.addCopyright(copyright);
 
+    map.addMapType(G_PHYSICAL_MAP);
+
     var tilelayers_mapnik = new Array();
     tilelayers_mapnik[0] = new GTileLayer(copyrightCollection, 0, 18);
     tilelayers_mapnik[0].getTileUrl = GetTileUrl_Mapnik;
