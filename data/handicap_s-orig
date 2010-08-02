@@ -322,7 +322,7 @@ Spreeuferweg - Elisabeth-Abegg-Str.: Rampe	q3 7923,12872 7885,12821
 (südliche Fahrbahn des Sachsendamms - Naturpark Schöneberg): Rampe	q2 7696,7562 7744,7538 7710,7547 7750,7528
 Heidenfeldstr.: Gehweg	q1 13433,13346 13393,13326
 (Gudrunstr. - Lichtenberger Brücke): Gehweg, Bordsteine	q2 16870,11920 16884,11889 16851,11852
-Grünstr.: Fußgängerzone	q2 22111,4562 22162,4546 22214,4548 22312,4593
+Grünstr.: Fußgängerzone, Radfahren erlaubt	q2 22111,4562 22162,4546 22214,4548 22312,4593
 Schloßplatz Köpenick: Fußgänger, Straßenbahn, Lieferverkehr	q2 22111,4562 22093,4499
 (Karlsgartenstr. - Hasenheide): Parkweg, Fußgänger	q1 11627,8485 11508,8491 11333,8582 11250,8585
 #: note: Radfahren erlaubt
@@ -1850,8 +1850,10 @@ Charles-H.-King-Str.: enge Straße	q1 -1248,2451 -1401,2391 -1604,2324
 Rohrweihstr.: enge Straße	q1 -2141,19681 -2103,19833 -2073,19990 -2055,20129 -2020,20309 -1991,20312
 #: by: Nina Bohlmann
 Kolkrabenweg: enge Straße	q1 14655,3687 14885,3891
-#: by: ruth mantei:
+#: by: ruth mantei: vvv
 Teterower Str.: enge Straße	q1 13820,5203 13717,5175 13626,5153
+Küstriner Str.: enge Straße	q1 11232,309 11343,405 11488,531
+#: by: ^^^
 #: by: Juliane (alberts...)
 Seepromenade: enge Straße	q1 -4582,7213 -4559,7216 -4549,7243
 #: by: domi-89
@@ -1960,8 +1962,16 @@ Reclamweg: Bordsteinkanten	q2 -5196,12452 -5126,12425
 #: by: ^^^
 #: by: Rainer (ghostviewer): vvv
 #: note: "Eilige Anwohner mit Auto quetschen sich gern mal zum Überholen vorbei"
-Baseler Str. (Reinickendorf): enge Straße	q1 6792,17951 6815,17871 6841,17781 6886,17649 6908,17583 6995,17322
+Baseler Str. (Reinickendorf): enge Straße	q1 6792,17951 6815,17871 6841,17781 6886,17649 6900,17608 6908,17583 6995,17322
 Bieler Str.: enge Straße	q1 6815,17871 6711,17839
 #: by: ^^^
 #: by: Frank (...engel)
 Straße 129: enge Straße	q1 7802,21173 7929,21103
+#: by: Wanda (schramms):
+Hottengrundweg: enge Straße	q1 -8637,4741 -8086,4504
+#: by: Roland Krause: vvv
+Privatstr. 2: enge Straße	q1 16902,17278 17026,17292 17161,17289 17300,17265 17403,17235
+Privatstr. 3: enge Straße	q1 16918,17204 17027,17219 17153,17216 17375,17165
+Privatstr. 4: enge Straße	q1 16934,17132 17125,17147 17146,17147 17167,17145 17346,17100
+Privatstr. 8: enge Straße	q1 16992,16840 17120,16849 17237,16825
+#: by: ^^^
