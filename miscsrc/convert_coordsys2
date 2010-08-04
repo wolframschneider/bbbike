@@ -60,7 +60,7 @@ while(<STDIN>) {
 	print $_, "\n";
 	next;
     }
-	s/(\d+,\d+)/&c($1)/eg;
+	s/(\-?\d+,\-?\d+)/&c($1)/eg;
 
    print "$_\n";
 }
