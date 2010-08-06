@@ -100,7 +100,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $newstreetform_encoding
 	    $use_region_image
 	    $include_outer_region @outer_berlin_places $outer_berlin_qr
-	    $osm_data $datadir $show_mini_map $show_mini_googlemap $show_mini_googlemap_city
+	    $datadir $show_mini_map $show_mini_googlemap $show_mini_googlemap_city
 	    $no_input_streetname
 	    $enable_opensearch_suggestions
 	    $warn_message $use_utf8 $use_via
@@ -112,6 +112,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $nice_abc_list
 	    $warn_message $use_utf8 $data_is_wgs84
 	    $enable_homemap_streets
+	    $warn_message $use_utf8 $data_is_wgs84 $osm_data
 	   );
 
 # XXX This may be removed one day
@@ -676,13 +677,21 @@ Set to a true value if the you want show a via search field.
 
 =item $data_is_wgs84
 
-Set to a true value if the data is using wgs84 coordinates instead of
+Set to a true value if data is using wgs84 coordinates instead of
 the home-brew bbbike format. Probably only useful for data converted
 from OpenStreetMap.
 
 =cut
 
 $data_is_wgs84 = 0;
+
+=item $osm_data
+
+Set to a true value if data originates from OpenStreetMap.
+
+=cut
+
+$osm_data = 0;
 
 =back
 
@@ -6484,6 +6493,8 @@ sub upgrade_scope {
 # NOTE: this is only valid for city=b_de. Other cities should use other
 # border files (XXX -> Geography::....)
 sub adjust_scope_for_search {
+    return if $osm_data;
+
     my($coordsref) = @_;
     return if $q->param("scope") && $q->param("scope") ne 'city'; # already bigger scope
 
@@ -6492,9 +6503,9 @@ sub adjust_scope_for_search {
 	return;
     }
 
-    my $city_border = eval { Strassen->new("berlin") };
+    my $city_border = eval { MultiStrassen->new("berlin", "upgrade_scope_hint") };
     if (!$city_border) {
-	warn "Cannot get border file";
+	warn "Cannot get border file (berlin and/or upgrade_scope_hint)";
 	return;
     }
 
@@ -7634,6 +7645,7 @@ sub filename_from_route {
 }
 
 sub outside_berlin_and_potsdam {
+    return if $osm_data;
     my($c) = @_;
     my $result = 0;
     eval {
@@ -7656,6 +7668,7 @@ sub outside_berlin_and_potsdam {
 }
 
 sub outside_berlin {
+    return if $osm_data;
     my($c) = @_;
     my $result = 0;
     eval {
