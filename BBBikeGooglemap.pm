@@ -511,7 +511,7 @@ EOF
     var data_cache = [];
 
     function getStreet(map, street) {
-        var url = "/cgi/street-coord.cgi?namespace=0;city=$city&query=" + street;
+        var url = encodeURI("/cgi/street-coord.cgi?namespace=0;city=$city&query=" + street);
 
 	// cleanup map
 	for (var i = 0; i < street_cache.length; i++) {
