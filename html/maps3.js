@@ -67,12 +67,18 @@ function bbbike_maps_init (maptype, marker_list) {
     var isGecko = navigator && navigator.product == "Gecko" ? true : false;
     var dragCursor = isGecko ? '-moz-grab' : 'url("../images/moz_grab.gif"), auto';
 
-    var startIcon = new GIcon(G_DEFAULT_ICON, "../images/flag2_bl_centered.png");
-    startIcon.iconAnchor = new GPoint(16,16);
-    startIcon.iconSize = new GSize(32,32);
-    var goalIcon = new GIcon(G_DEFAULT_ICON, "../images/flag_ziel_centered.png");
-    goalIcon.iconAnchor = new GPoint(16,16);
-    goalIcon.iconSize = new GSize(32,32);
+    // var startIcon = new GIcon(G_DEFAULT_ICON, "../images/flag2_bl_centered.png");
+    var startIcon = new google.maps.MarkerImage("../images/flag2_bl_centered.png", 
+	new google.maps.Size(20, 32), new google.maps.Point(0,0), new google.maps.Point(16,16));
+
+    // startIcon.iconAnchor = new GPoint(16,16);
+    // startIcon.iconSize = new GSize(32,32);
+    // var goalIcon = new GIcon(G_DEFAULT_ICON, "../images/flag_ziel_centered.png");
+    var goalIcon = new google.maps.MarkerImage("../images/flag_ziel_centered.png", 
+	new google.maps.Size(20, 32), new google.maps.Point(0,0), new google.maps.Point(16,16));
+
+    // goalIcon.iconAnchor = new GPoint(16,16);
+    // goalIcon.iconSize = new GSize(32,32);
     var currentPointMarker = null;
     var currentTempBlockingMarkers = [];
 
@@ -81,12 +87,12 @@ function bbbike_maps_init (maptype, marker_list) {
     var goalOverlay = null;
     var goalPoint = null;
 
-    if (GBrowserIsCompatible() ) {
+    if (1 || GBrowserIsCompatible() ) {
 
-        map = new GMap2(document.getElementById("map") );
+        map = new google.maps.Map(document.getElementById("map") );
 	// map.disableDoubleClickZoom();
-        map.addControl(new GLargeMapControl());
-        map.addControl(new GMapTypeControl());
+        // map.addControl(new GLargeMapControl());
+        // map.addControl(new GMapTypeControl());
 
 	// var ov = new GOverviewMapControl ();
         // map.addControl( ov );
@@ -95,13 +101,16 @@ function bbbike_maps_init (maptype, marker_list) {
 	var b = navigator.userAgent.toLowerCase();
 
         if (marker_list.length > 0) { //  && !(/msie/.test(b) && !/opera/.test(b)) ) {
-            var bounds = new GLatLngBounds;
+            var bounds = new google.maps.LatLngBounds;
             for (var i=0; i<marker_list.length; i++) {
-                bounds.extend(new GLatLng( marker_list[i][0], marker_list[i][1]));
+                bounds.extend(new google.maps.LatLng( marker_list[i][0], marker_list[i][1]));
             }
             map.setCenter(bounds.getCenter());
 
-            var zoom = map.getBoundsZoomLevel(bounds);
+            // var zoom = map.getBoundsZoomLevel(bounds);
+            map.fitBounds(bounds);
+	    var zoom = map.getZoom();
+
             // no zoom level higher than 15
             map.setZoom( zoom < 16 ? zoom : 15);
 
@@ -119,14 +128,15 @@ function bbbike_maps_init (maptype, marker_list) {
 	       var x2 = marker_list[1][0];
 	       var y2 = marker_list[1][1];
 
-	       var route = new GPolyline([
-			new GLatLng(x1,y1), 
-			new GLatLng(x2,y1), 
-			new GLatLng(x2,y2), 
-			new GLatLng(x1,y2), 
-			new GLatLng(x1,y1)], // first point again
+	       var route = new google.maps.Polyline([
+			new google.maps.LatLng(x1,y1), 
+			new google.maps.LatLng(x2,y1), 
+			new google.maps.LatLng(x2,y2), 
+			new google.maps.LatLng(x1,y2), 
+			new google.maps.LatLng(x1,y1)], // first point again
                         '#ff0000', 1, null, null, null, {});
-	       map.addOverlay(route);
+
+	       route.setMap(map);
 
                //x1-=1; y1-=1; x2+=1; y2+=1;
                var x3 = x1 - 180;
@@ -135,63 +145,67 @@ function bbbike_maps_init (maptype, marker_list) {
                var y4 = y1 + 179.99;
 
 	       var o = ['#fff', 0, 1, 0.2, 0.2];
-               var area_around = new GPolygon([
-                        new GLatLng(x4,y1),
-                        new GLatLng(x3,y1),
-                        new GLatLng(x3,y3),
-                        new GLatLng(x4,y3),
-                        new GLatLng(x4,y1)], // first point again
+               var area_around = new google.maps.Polygon([
+                        new google.maps.LatLng(x4,y1),
+                        new google.maps.LatLng(x3,y1),
+                        new google.maps.LatLng(x3,y3),
+                        new google.maps.LatLng(x4,y3),
+                        new google.maps.LatLng(x4,y1)], // first point again
 			o[0], o[1], o[2], o[3], o[4]);
-               map.addOverlay(area_around);
+               area_around.setMap(map);
 
-               area_around = new GPolygon([
-                        new GLatLng(x4,y2),
-                        new GLatLng(x3,y2),
-                        new GLatLng(x3,y4),
-                        new GLatLng(x4,y4),
-                        new GLatLng(x4,y2)], // first point again
+               area_around = new google.maps.Polygon([
+                        new google.maps.LatLng(x4,y2),
+                        new google.maps.LatLng(x3,y2),
+                        new google.maps.LatLng(x3,y4),
+                        new google.maps.LatLng(x4,y4),
+                        new google.maps.LatLng(x4,y2)], // first point again
 			o[0], o[1], o[2], o[3], o[4]);
-               map.addOverlay(area_around);
+               area_around.setMap(map);
 
-               area_around = new GPolygon([
-                        new GLatLng(x2,y1),
-                        new GLatLng(x2,y2),
-                        new GLatLng(x4,y2),
-                        new GLatLng(x4,y1),
-                        new GLatLng(x2,y1)],
+               area_around = new google.maps.Polygon([
+                        new google.maps.LatLng(x2,y1),
+                        new google.maps.LatLng(x2,y2),
+                        new google.maps.LatLng(x4,y2),
+                        new google.maps.LatLng(x4,y1),
+                        new google.maps.LatLng(x2,y1)],
 			o[0], o[1], o[2], o[3], o[4]);
-               map.addOverlay(area_around);
+               area_around.setMap(map);
 
-               area_around = new GPolygon([
-                        new GLatLng(x1,y1),
-                        new GLatLng(x1,y2),
-                        new GLatLng(x3,y2),
-                        new GLatLng(x3,y1),
-                        new GLatLng(x1,y1)],
+               area_around = new google.maps.Polygon([
+                        new google.maps.LatLng(x1,y1),
+                        new google.maps.LatLng(x1,y2),
+                        new google.maps.LatLng(x3,y2),
+                        new google.maps.LatLng(x3,y1),
+                        new google.maps.LatLng(x1,y1)],
 			o[0], o[1], o[2], o[3], o[4]);
-               map.addOverlay(area_around);
+               area_around.setMap(map);
              }
 
         } else {
             // use default zoom level
-            // map.setCenter(new GLatLng(48.05000, 7.31000), 17 - 6); // , G_NORMAL_MAP);
+            // map.setCenter(new google.maps.LatLng(48.05000, 7.31000), 17 - 6); // , G_NORMAL_MAP);
 
         }
 
-	new GKeyboardHandler(map);
+	// new GKeyboardHandler(map);
     } else {
         document.getElementById("map").innerHTML = '<p class="large-error">Sorry, your browser is not supported by <a href="http://maps.google.com/support">Google Maps</a></p>';
     }
 
+    if (0) {
     var copyright = new GCopyright(1,
-        new GLatLngBounds(new GLatLng(-90,-180), new GLatLng(90,180)), 0,
+        new google.maps.LatLng(new google.maps.LatLng(-90,-180), new google.maps.LatLng(90,180)), 0,
         '(<a rel="license" target="_ccbysa" href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>)');
     var copyrightCollection =
         new GCopyrightCollection('Map data &copy; 2010 <a target="_osm" href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors');
     copyrightCollection.addCopyright(copyright);
+    }
 
-    map.addMapType(G_PHYSICAL_MAP);
+    // map.addMapType(G_PHYSICAL_MAP);
+    map.mapTypeId = google.maps.MapTypeId.TERRAIN;
 
+/*
     var tilelayers_mapnik = new Array();
     tilelayers_mapnik[0] = new GTileLayer(copyrightCollection, 0, 18);
     tilelayers_mapnik[0].getTileUrl = GetTileUrl_Mapnik;
@@ -236,6 +250,8 @@ function bbbike_maps_init (maptype, marker_list) {
 
     map.setMapType( default_maptype );
     // map.enableScrollWheelZoom();
+*/
+
 }
 
 function GetTileUrl_Mapnik(a, z) {
@@ -282,9 +298,9 @@ function GetTileUrl_cycle(a, z) {
 		var s = streets_list[i].split(" ");
 		for( var j = 0; j < s.length; j++) {
 	  	  var coords = s[j].split(",");
-		  streets_route.push(new GLatLng(coords[1], coords[0]));
+		  streets_route.push(new google.maps.LatLng(coords[1], coords[0]));
 		}
-	        var route = new GPolyline(streets_route, "", 7, 0.5);
+	        var route = new google.maps.Polyline(streets_route, "", 7, 0.5);
 		street_cache.push(route);
     	        map.addOverlay(route);
 	    }
