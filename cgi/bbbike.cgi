@@ -2544,7 +2544,7 @@ print <<'EOF';
   // remember URL
   $("div#streetmap2").text( $("iframe#iframemap").attr("src") );
 
-if (!navigator.userAgent.match(/iPhone/)) {
+if (!navigator.userAgent.match(/XXXiPhoneXXX/)) {
   $("input.ac_input").keyup( 	function(event) { homemap_street_timer(event, delay*2) } );
   $("input.ac_input").click( 	function(event) { homemap_street_timer(event, delay) } );
 

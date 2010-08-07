@@ -240,7 +240,7 @@ sub get_html {
     my $script;
     my $slippymap_size = "";
 
-    if ($q->user_agent("iPhone")) {
+    if ($q->user_agent("XXXiPhone")) {
 	#$slippymap_size = qq{ style="width:240px; height:240px; "};
 	$slippymap_size = qq{ style="display:none"};
     }
