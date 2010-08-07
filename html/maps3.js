@@ -205,76 +205,39 @@ function bbbike_maps_init (maptype, marker_list) {
     copyrightCollection.addCopyright(copyright);
     }
 
-    // map.addMapType(G_PHYSICAL_MAP);
-    // map.mapTypeId = google.maps.MapTypeId.TERRAIN;
 
-    map.setMapTypeId( google.maps.MapTypeId.TERRAIN );
+    var mapnik_options = {
+    	getTileUrl : function (a,z) { 
+    	   return "http://tile.openstreetmap.org/" + z + "/" + a.x + "/" + a.y + ".png";
+     	},
+     	isPng: true,
+     	opacity: 1.0,
+     	tileSize: new google.maps.Size(256,256),
+     	name: "MAPNIK",
+     	minZoom:1,
+     	maxZoom:20
+    }
+    var MapnikMapType = new google.maps.ImageMapType( mapnik_options );
 
+    var cycle_options = {
+    	getTileUrl : function (a,z) { 
+    	   return "http://a.andy.sandbox.cloudmade.com/tiles/cycle/" + z + "/" + a.x + "/" + a.y + ".png";
+     	},
+        isPng: true,
+     	opacity: 1.0,
+     	tileSize: new google.maps.Size(256,256),
+     	name: "MAPNIK",
+     	minZoom:1,
+     	maxZoom:20
+    }
+    var CycleMapType = new google.maps.ImageMapType( cycle_options );
 
-/*
-    var tilelayers_mapnik = new Array();
-    tilelayers_mapnik[0] = new GTileLayer(copyrightCollection, 0, 18);
-    tilelayers_mapnik[0].getTileUrl = GetTileUrl_Mapnik;
-    tilelayers_mapnik[0].isPng = function () { return true; };
-    tilelayers_mapnik[0].getOpacity = function () { return 1.0; };
-    var mapnik_map = new GMapType(tilelayers_mapnik,
-        new GMercatorProjection(19), "Mapnik",
-        { urlArg: 'mapnik', linkColor: '#000000' });
-    map.addMapType(mapnik_map);
+    // create new map types
+    map.mapTypes.set("mapnik", MapnikMapType); 
+    map.mapTypes.set("cycle", CycleMapType); 
 
-    var tilelayers_tah = new Array();
-    tilelayers_tah[0] = new GTileLayer(copyrightCollection, 0, 17);
-    tilelayers_tah[0].getTileUrl = GetTileUrl_TaH;
-    tilelayers_tah[0].isPng = function () { return true; };
-    tilelayers_tah[0].getOpacity = function () { return 1.0; };
-    var tah_map = new GMapType(tilelayers_tah,
-        new GMercatorProjection(19), "T@H",
-        { urlArg: 'tah', linkColor: '#000000' });
-    // map.addMapType(tah_map);
-
-    var tilelayers_cycle = new Array();
-    tilelayers_cycle[0] = new GTileLayer(copyrightCollection, 0, 16);
-    tilelayers_cycle[0].getTileUrl = GetTileUrl_cycle;
-    tilelayers_cycle[0].isPng = function () { return true; };
-    tilelayers_cycle[0].getOpacity = function () { return 1.0; };
-    var cycle_map = new GMapType(tilelayers_cycle,
-        new GMercatorProjection(19), "Cycle",
-        { urlArg: 'cycle', linkColor: '#000000' });
-    map.addMapType(cycle_map);
-
-    // map.setMapType(cycle_map);
-
-    var default_maptype = 
-             maptype == "normal" ? 'G_NORMAL_MAP' :
-             maptype == "satelite" ? 'G_SATELLITE_MAP' :
-             maptype == "hybrid" ? 'G_HYBRID_MAP' :
-             maptype == "physical" ? 'G_PHYSICAL_MAP' :
-             maptype == "mapnik" ? mapnik_map :
-             maptype == "cycle" ? cycle_map :
-             maptype == "tah" ? tah_map :
-	     mapnik_map;
-
-    map.setMapType( default_maptype );
-    // map.enableScrollWheelZoom();
-*/
-
-}
-
-function GetTileUrl_Mapnik(a, z) {
-    return "http://tile.openstreetmap.org/" +
-                z + "/" + a.x + "/" + a.y + ".png";
-}
-
-function GetTileUrl_TaH(a, z) {
-    return "http://tah.openstreetmap.org/Tiles/tile/" +
-                z + "/" + a.x + "/" + a.y + ".png";
-}
-
-function GetTileUrl_cycle(a, z) {
-    return "http://a.andy.sandbox.cloudmade.com/tiles/cycle/" +
-                z + "/" + a.x + "/" + a.y + ".png";
-}
-
+    // default map type
+    map.setMapTypeId( "mapnik" );
 
     var street = "";
     var street_cache = [];
