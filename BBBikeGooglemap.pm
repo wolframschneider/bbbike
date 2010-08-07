@@ -256,7 +256,8 @@ sub get_html {
 
     var map;
 
-function bbbike_maps_init () {
+function bbbike_maps_init (maptype, marker_list) {
+
 
     var routeLinkLabel = "Link to route: ";
     var routeLabel = "Route: ";
@@ -284,15 +285,13 @@ function bbbike_maps_init () {
     var currentPointMarker = null;
     var currentTempBlockingMarkers = [];
 
-    var marker_list = $marker_list;
-
-
     var startOverlay = null;
     var startPoint = null;
     var goalOverlay = null;
     var goalPoint = null;
 
     if (GBrowserIsCompatible() ) {
+
         map = new GMap2(document.getElementById("map") );
 	// map.disableDoubleClickZoom();
         map.addControl(new GLargeMapControl());
@@ -300,7 +299,6 @@ function bbbike_maps_init () {
 
 	// var ov = new GOverviewMapControl ();
         // map.addControl( ov );
- 	// map.setMapType($self->{maptype});
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
 	var b = navigator.userAgent.toLowerCase();
@@ -385,7 +383,7 @@ function bbbike_maps_init () {
 
         } else {
             // use default zoom level
-            map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
+            // map.setCenter(new GLatLng($centery, $centerx), 17 - $zoom); // , G_NORMAL_MAP);
 
         }
 
@@ -434,7 +432,18 @@ function bbbike_maps_init () {
     map.addMapType(cycle_map);
 
     // map.setMapType(cycle_map);
-    map.setMapType($self->{maptype});
+
+    var default_maptype = 
+             maptype == "normal" ? 'G_NORMAL_MAP' :
+             maptype == "satelite" ? 'G_SATELLITE_MAP' :
+             maptype == "hybrid" ? 'G_HYBRID_MAP' :
+             maptype == "physical" ? 'G_PHYSICAL_MAP' :
+             maptype == "mapnik" ? mapnik_map :
+             maptype == "cycle" ? cycle_map :
+             maptype == "tah" ? tah_map :
+	     mapnik_map;
+
+    map.setMapType( default_maptype );
     // map.enableScrollWheelZoom();
 }
 
@@ -479,9 +488,9 @@ EOF
             }
             $route_js_code .= qq{);};
 
-            $html .= <<EOF;
-$route_js_code
-EOF
+#            $html .= <<EOF;
+#$route_js_code
+#EOF
         }
     }
 
@@ -557,7 +566,7 @@ EOF
 	});
    }
 
-    bbbike_maps_init();
+    bbbike_maps_init("default", $marker_list );
 EOF
 
     $html .= <<EOF;
