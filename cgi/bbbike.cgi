@@ -6908,9 +6908,9 @@ sub header {
     <script src="../html/maps.js" type="text/javascript"></script>
 |);
         } else {
-            my $my_lang = $lang || $q->param("lang") || "de";
+            my $my_lang = $lang;
             my $geo = get_geography_object();
-	    if ($geo->{local_language}) {
+	    if (!$lang && $geo->{local_language}) {
 		$my_lang = $geo->{local_language};
 	    }
 
