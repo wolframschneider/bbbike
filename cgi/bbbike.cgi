@@ -6908,7 +6908,7 @@ sub header {
     <script src="../html/maps.js" type="text/javascript"></script>
 |);
         } else {
-            my $my_lang = $lang || "de";
+            my $my_lang = $lang || $q->param("lang") || "de";
 
 	push(@$head, qq|
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=$my_lang"></script>
