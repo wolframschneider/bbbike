@@ -125,7 +125,7 @@ function bbbike_maps_init (maptype, marker_list) {
 			new GLatLng(x2,y2), 
 			new GLatLng(x1,y2), 
 			new GLatLng(x1,y1)], // first point again
-			'#ff0000', 2, 0.5, {});
+                        '#ff0000', 1, null, null, null, {});
 	       map.addOverlay(route);
 
                //x1-=1; y1-=1; x2+=1; y2+=1;
