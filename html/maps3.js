@@ -238,6 +238,7 @@ function bbbike_maps_init (maptype, marker_list) {
 
     // default map type
     map.setMapTypeId( "mapnik" );
+}
 
     var street = "";
     var street_cache = [];
