@@ -40,12 +40,13 @@ sub new { bless {}, shift }
 my $force_utf8 = 1;
 
 sub run {
-    my ($self, $q) = @_;
+    my ($self, $q, $gmap_api_version) = @_;
 
     my $city = $q->param('city') || "";
     if ($city) {
         $ENV{DATA_DIR} = $ENV{BBBIKE_DATADIR} = "data-osm/$city";
     }
+    $self->{gmap_api_version} = $gmap_api_version;
 
     local $CGI::POST_MAX = 2_000_000;
 
@@ -246,11 +247,12 @@ sub get_html {
 
 
     my $city = $q->param('city') || "";
+    my $gmap_api_version = $self->{gmap_api_version};
 
     my $html = <<EOF;
 <!-- BBBikeGooglemap starts here -->
 <div id="BBBikeGooglemap" $slippymap_size>
-    <script type="text/javascript"> google.load("maps", "2"); </script>
+    <script type="text/javascript"> google.load("maps", $gmap_api_version); </script>
 
     <div id="map"></div>
     <div id="nomap_script">

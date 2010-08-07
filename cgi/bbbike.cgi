@@ -113,7 +113,10 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $warn_message $use_utf8 $data_is_wgs84
 	    $enable_homemap_streets
 	    $warn_message $use_utf8 $data_is_wgs84 $osm_data
+	    $gmap_api_version
 	   );
+
+$gmap_api_version = 3;
 
 # XXX This may be removed one day
 use vars qw($use_cooked_street_data);
@@ -2532,7 +2535,7 @@ function " . $type . "char_init() {}
 		use BBBikeGooglemap;
 
 	        my $maps = BBBikeGooglemap->new();
-	        $maps->run(CGI->new( "$smu" ));
+	        $maps->run(CGI->new( "$smu"), $gmap_api_version );
 	    }
 
 if ($enable_homemap_streets) {
@@ -6899,7 +6902,7 @@ sub header {
 	my $google_api_key = &get_google_api_key;
 
         # google maps API version
-	if (2 == 2) {
+	if ($gmap_api_version == 2) {
 	push(@$head, qq|
     <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
     <script src="../html/maps.js" type="text/javascript"></script>
@@ -6908,7 +6911,7 @@ sub header {
 
 	push(@$head, qq|
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="../html/maps.js" type="text/javascript"></script>
+    <script src="../html/maps3.js" type="text/javascript"></script>
     <script src="../html/elevation.js" type="text/javascript"></script>
 |);
 	}
