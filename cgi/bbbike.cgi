@@ -6910,9 +6910,14 @@ sub header {
         } else {
             my $my_lang = $lang;
             my $geo = get_geography_object();
-	    if (!$lang && $geo->{local_language}) {
+	    if (!$lang && $q->param("lang")) {
+		$my_lang = $q->param("lang");
+	    } elsif (!$lang && $geo->{local_language}) {
 		$my_lang = $geo->{local_language};
 	    }
+
+	    # validate input - XSS check
+	    $my_lang = "" if $my_lang !~ /^[a-zA-Z\-]{2,6}$/;
 
 	push(@$head, qq|
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=$my_lang"></script>
