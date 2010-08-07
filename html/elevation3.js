@@ -1,0 +1,229 @@
+/*
+ Google Maps API v3 is required!
+
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+*/
+
+  var map = null;
+  var chart = null;
+  
+  var geocoderService = null;
+  var elevationService = null;
+  var directionsService = null;
+  
+  var mousemarker = null;
+  var markers = [];
+  var polyline = null;
+  var elevations = null;
+  
+  var SAMPLES = 500;
+
+  var examples = [{
+    // Challenger Deep
+    latlngs: [
+[43.304945, 5.4120598],
+[43.3041957, 5.4121212],
+[43.3043388, 5.4138052],
+[43.3039348, 5.4187127],
+[43.3037338, 5.4192019],
+[43.3040248, 5.4225599],
+[43.3032311, 5.4496462],
+[43.3030345, 5.4520411],
+[43.3014697, 5.4574281],
+[43.3002063, 5.4769171],
+[43.2893539, 5.4965152],
+[43.2868045, 5.5141309],
+[43.2854258, 5.5540415],
+[43.2860006, 5.5551744],
+[43.2877792, 5.5812209],
+[43.2874726, 5.5826565],
+[43.2872775, 5.5830016],
+[43.286235, 5.5874039],
+[43.2917601, 5.5878209],
+[43.2929885, 5.593981],
+    ],
+    mapType: google.maps.MapTypeId.ROADMAP,
+    travelMode: 'direct'
+  }
+  ];
+
+  // Load the Visualization API and the piechart package.
+  // google.load("visualization", "1", {packages: ["columnchart"]});
+  
+  // Set a callback to run when the Google Visualization API is loaded.
+  // google.setOnLoadCallback(elevation_initialize);
+  
+  function elevation_initialize(slippymap) {
+    var myLatlng = new google.maps.LatLng(15, 0);
+    var myOptions = {
+      zoom: 1,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.TERRAIN
+    }
+
+    if (slippymap) {
+	map = slippymap;
+    } else {
+        map = new google.maps.Map(document.getElementById("map")); //, myOptions);
+    }
+
+    chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+    
+    geocoderService = new google.maps.Geocoder();
+    elevationService = new google.maps.ElevationService();
+    directionsService = new google.maps.DirectionsService();
+    
+    google.maps.event.addListener(map, 'click', function(event) {
+      addMarker(event.latLng, true);
+    });
+    
+    google.visualization.events.addListener(chart, 'onmouseover', function(e) {
+      if (mousemarker == null) {
+        mousemarker = new google.maps.Marker({
+          position: elevations[e.row].location,
+          map: map,
+          icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+        });
+      } else {
+        mousemarker.setPosition(elevations[e.row].location);
+      }
+    });
+
+    // loadExample(0);
+    loadRoute();
+  }
+  
+  // Takes an array of ElevationResult objects, draws the path on the map
+  // and plots the elevation profile on a GViz ColumnChart
+  function plotElevation(results) {
+    if (results == null)
+	return;
+
+    elevations = results;
+    
+    var path = [];
+    for (var i = 0; i < results.length; i++) {
+      path.push(elevations[i].location);
+    }
+    
+    if (polyline) {
+      polyline.setMap(null);
+    }
+    
+    polyline = new google.maps.Polyline({
+      path: path,
+      strokeColor: "#000000",
+      map: map});
+    
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Sample');
+    data.addColumn('number', 'Elevation');
+    for (var i = 0; i < results.length; i++) {
+      data.addRow(['', elevations[i].elevation]);
+    }
+
+    document.getElementById('chart_div').style.display = 'block';
+    chart.draw(data, {
+      // width: '800',
+      // height: 200,
+      legend: 'none',
+      titleY: 'Elevation (m)',
+      focusBorderColor: '#00ff00'
+    });
+  }
+  
+  // Remove the green rollover marker when the mouse leaves the chart
+  function clearMouseMarker() {
+    if (mousemarker != null) {
+      mousemarker.setMap(null);
+      mousemarker = null;
+    }
+  }
+  
+  // Add a marker and trigger recalculation of the path and elevation
+  function addMarker(latlng, doQuery) {
+    if (markers.length < 800) {
+      
+      var marker = new google.maps.Marker({
+        position: latlng,
+        // map: map,
+        // draggable: true
+      })
+     
+      // google.maps.event.addListener(marker, 'dragend', function(e) { updateElevation(); });
+      
+      markers.push(marker);
+      
+      if (doQuery) {
+        updateElevation();
+      }
+    }
+  }
+ 
+  
+  // Trigger the elevation query for point to point
+  // or submit a directions request for the path between points
+  function updateElevation() {
+    if (markers.length > 1) {
+        var latlngs = [];
+        for (var i in markers) {
+           latlngs.push(markers[i].getPosition())
+        }
+
+        elevationService.getElevationAlongPath({
+          path: latlngs,
+          samples: SAMPLES
+        }, plotElevation);
+
+      }
+  }
+  
+  function loadExample(n) {
+    reset();
+    map.setMapTypeId(examples[n].mapType);
+    // document.getElementById('mode').value = examples[n].travelMode;
+    var bounds = new google.maps.LatLngBounds();
+    for (var i = 0; i < examples[n].latlngs.length; i++) {
+      var latlng = new google.maps.LatLng(
+        examples[n].latlngs[i][0],
+        examples[n].latlngs[i][1]
+      );
+      addMarker(latlng, false);
+      bounds.extend(latlng);
+    }
+    map.fitBounds(bounds);
+    updateElevation();
+  }
+
+  function loadRoute() {
+    reset();
+    map.setMapTypeId( google.maps.MapTypeId.ROADMAP );
+    var bounds = new google.maps.LatLngBounds();
+    for (var i = 0; i < marker_list.length; i++) {
+      var latlng = new google.maps.LatLng(
+        marker_list[i][0],
+        marker_list[i][1]
+      );
+      addMarker(latlng, false);
+      bounds.extend(latlng);
+    }
+    map.fitBounds(bounds);
+    updateElevation();
+  }
+  
+  // Clear all overlays, reset the array of points, and hide the chart
+  function reset() {
+    if (polyline) {
+      polyline.setMap(null);
+    }
+    
+    for (var i in markers) {
+      markers[i].setMap(null);
+    }
+    
+    markers = [];
+    
+    document.getElementById('chart_div').style.display = 'none';
+  }
+

@@ -252,7 +252,10 @@ sub get_html {
     my $html = <<EOF;
 <!-- BBBikeGooglemap starts here -->
 <div id="BBBikeGooglemap" $slippymap_size>
-    <script type="text/javascript"> google.load("maps", $gmap_api_version); </script>
+EOF
+
+    $html .=  qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </script>\n} if $gmap_api_version == 2;
+$html .= <<EOF;
 
     <div id="map"></div>
     <div id="nomap_script">
