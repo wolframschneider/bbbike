@@ -53,49 +53,15 @@ function bbbike_maps_init (maptype, marker_list) {
     var routeLinkLabel = "Link to route: ";
     var routeLabel = "Route: ";
     var commonSearchParams = "&pref_seen=1&pref_speed=20&pref_cat=&pref_quality=&pref_green=&scope=;output_as=xml;referer=bbbikegooglemap";
-    var routePostParam = "";
 
-    var addRoute = [];
-    var undoRoute = [];
-    var addRouteOverlay;
-    var addRouteOverlay2;
-
-    var userWpts = [];
-
-    var searchStage = 0;
-
-    var isGecko = navigator && navigator.product == "Gecko" ? true : false;
-    var dragCursor = isGecko ? '-moz-grab' : 'url("../images/moz_grab.gif"), auto';
-
-    // var startIcon = new GIcon(G_DEFAULT_ICON, "../images/flag2_bl_centered.png");
     var startIcon = new google.maps.MarkerImage("../images/flag2_bl_centered.png", 
 	new google.maps.Size(20, 32), new google.maps.Point(0,0), new google.maps.Point(16,16));
-
-    // startIcon.iconAnchor = new GPoint(16,16);
-    // startIcon.iconSize = new GSize(32,32);
-    // var goalIcon = new GIcon(G_DEFAULT_ICON, "../images/flag_ziel_centered.png");
     var goalIcon = new google.maps.MarkerImage("../images/flag_ziel_centered.png", 
 	new google.maps.Size(20, 32), new google.maps.Point(0,0), new google.maps.Point(16,16));
-
-    // goalIcon.iconAnchor = new GPoint(16,16);
-    // goalIcon.iconSize = new GSize(32,32);
-    var currentPointMarker = null;
-    var currentTempBlockingMarkers = [];
-
-    var startOverlay = null;
-    var startPoint = null;
-    var goalOverlay = null;
-    var goalPoint = null;
 
     if (1 || GBrowserIsCompatible() ) {
 
         map = new google.maps.Map(document.getElementById("map") );
-	// map.disableDoubleClickZoom();
-        // map.addControl(new GLargeMapControl());
-        // map.addControl(new GMapTypeControl());
-
-	// var ov = new GOverviewMapControl ();
-        // map.addControl( ov );
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
 	var b = navigator.userAgent.toLowerCase();
