@@ -344,7 +344,7 @@ function downloadUrl(url, callback) {
 
 	// cleanup map
 	for (var i = 0; i < street_cache.length; i++) {
-            street_cache[i].setMap();
+            street_cache[i].setMap(null);
 	}
 
 	// read data from cache
@@ -365,9 +365,14 @@ function downloadUrl(url, callback) {
 	  	  var coords = s[j].split(",");
 		  streets_route.push(new google.maps.LatLng(coords[1], coords[0]));
 		}
-	        var route = new google.maps.Polyline(streets_route, "", 7, 0.5);
-		street_cache.push(route);
+	        var route = new google.maps.Polyline( { 
+			path: streets_route, 
+			strokeColor: "#FF0000",
+			strokeWeight: 7, 
+			strokeOpacity: 0.5} );
     	        route.setMap(map);
+
+		street_cache.push(route);
 	    }
         }
 
