@@ -1152,7 +1152,7 @@ EOF
     var tah_map = new GMapType(tilelayers_tah,
         new GMercatorProjection(19), "T\@H",
         { urlArg: 'tah', linkColor: '#000000' });
-    map.addMapType(tah_map);
+    // map.addMapType(tah_map);
 
     var tilelayers_cycle = new Array();
     tilelayers_cycle[0] = new GTileLayer(copyrightCollection, 0, 16);
