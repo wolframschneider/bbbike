@@ -6918,6 +6918,7 @@ sub header {
 
 	    # validate input - XSS check
 	    $my_lang = "" if $my_lang !~ /^[a-zA-Z\-]{2,6}$/;
+	    $my_lang = "de" if $my_lang  eq "";
 
 	push(@$head, qq|
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=$my_lang"></script>
