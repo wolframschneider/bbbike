@@ -206,7 +206,10 @@ function bbbike_maps_init (maptype, marker_list) {
     }
 
     // map.addMapType(G_PHYSICAL_MAP);
-    map.mapTypeId = google.maps.MapTypeId.TERRAIN;
+    // map.mapTypeId = google.maps.MapTypeId.TERRAIN;
+
+    map.setMapTypeId( google.maps.MapTypeId.TERRAIN );
+
 
 /*
     var tilelayers_mapnik = new Array();
