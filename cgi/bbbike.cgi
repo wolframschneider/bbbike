@@ -6898,13 +6898,25 @@ sub header {
     if ($enable_homemap_streets) {
 	my $google_api_key = &get_google_api_key;
 
+        # google maps API version
+	if (2 == 2) {
 	push(@$head, qq|
-
     <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
     <script src="../html/maps.js" type="text/javascript"></script>
+|);
+        } else {
+
+	push(@$head, qq|
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="../html/maps.js" type="text/javascript"></script>
+    <script src="../html/elevation.js" type="text/javascript"></script>
+|);
+	}
+
+    }
+	push(@$head, qq|
     <script src="../html/sprintf.js" type="text/javascript"></script>
 |);
-    }
 
 
     $args{-head} = $head if $head && @$head;
