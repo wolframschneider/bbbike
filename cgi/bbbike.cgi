@@ -6923,7 +6923,6 @@ sub header {
 	push(@$head, qq|
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=$my_lang"></script>
     <script src="../html/maps3.js" type="text/javascript"></script>
-    <script src="../html/elevation3.js" type="text/javascript"></script>
 |);
 	}
 
