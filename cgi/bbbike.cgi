@@ -6888,7 +6888,6 @@ sub header {
 
 <script src="../html/jquery-1.4.2.min.js" type="text/javascript"></script>
 <script src="../html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js" type="text/javascript"></script>
-<script src="../html/bbbike_util.js" type="text/javascript"></script>
 
 <link href="../html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css">
 
