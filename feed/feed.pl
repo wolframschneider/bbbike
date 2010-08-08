@@ -19,6 +19,19 @@ my $feed = XML::Atom::SimpleFeed->new(
 ######################################################################
 
 $feed->add_entry(
+    title => 'Google Maps v3',
+    id    => '384a4805c8a4b03c2b034a1b8a3fe83f',
+
+    content => {
+        type    => 'text',
+        content => qq{BBBike supports now google maps version 3 which enable new features like localization and elevation charts.},
+    },
+
+    updated  => '2010-08-02T18:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
     title => 'Additional map type terrain',
     id    => '23c619077a199e8ad171617ab24c7eb8',
 
