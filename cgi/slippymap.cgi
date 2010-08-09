@@ -239,6 +239,17 @@ sub bbbike_converter {
 
 sub polar_converter { @_[ 0, 1 ] }
 
+sub log_route {
+    my %args = @_;
+
+    my $q = $args{'q'};
+    my $data = "";
+
+    $data .= $q->url(-query=>1);
+
+    warn $data, "\n";
+}
+
 sub get_html {
     my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center ) = @_;
 
@@ -399,6 +410,7 @@ EOF
     }
     $zoom_code =~ s/,\n$/];\n/;
 
+    &log_route('q'=>new CGI, 'route' => \@route);
 
     my $html = <<EOF;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
