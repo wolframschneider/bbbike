@@ -3270,7 +3270,7 @@ sub get_settings_defaults {
     get_global_cookie();
 
     $default_speed   = (defined $c{"pref_speed"} && $c{"pref_speed"} != 0 ? $c{"pref_speed"}+0 : $speed_default);
-    $default_cat     = (defined $c{"pref_cat"}     ? $c{"pref_cat"}     : "N_RW");
+    $default_cat     = (defined $c{"pref_cat"}     ? $c{"pref_cat"}     : "N1");
     $default_quality = (defined $c{"pref_quality"} ? $c{"pref_quality"} : "Q2");
     $default_ampel   = (defined $c{"pref_ampel"} && $c{"pref_ampel"} eq 'yes' ? 1 : 0);
     $default_routen  = (defined $c{"pref_routen"}  ? $c{"pref_routen"}  : "");
