@@ -9,7 +9,7 @@ use warnings;
 my $logfile = '/var/log/lighttpd/bbbike.error.log';
 
 my $q     = new CGI;
-my $max   = 256;
+my $max   = 100;
 my $debug = 1;
 
 # extract URLs from web server error log
