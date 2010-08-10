@@ -3391,7 +3391,8 @@ EOF
 #  <option value="R2">@{[ M("benutzungspflichtige Radwege vermeiden") ]}
 #  </select></td></tr>-->
     print "<tr>";
-print qq{<td>@{[ M("Ampeln vermeiden") ]}:</td><td><input type=checkbox name="pref_ampel" value="yes" @{[ $default_ampel?"checked":"" ]}></td>} if !$osm_data; 
+print qq{<td>@{[ M("Ampeln vermeiden") ]}:</td><td><input type=checkbox name="pref_ampel" value="yes" @{[ $default_ampel?"checked":"" ]}></td>} 
+if !$osm_data || ($datadir =~ m,data-osm/(.+), && $1 eq 'berlin');
 
     if ($include_outer_region) {
 	print <<EOF;
