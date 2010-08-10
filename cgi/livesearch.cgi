@@ -32,7 +32,8 @@ sub extract_route {
     return @data;
 }
 
-print $q->header(
+print $q->header();
+print $q->start_html(
     -style => {
         'src' => [
             "../html/devbridge-jquery-autocomplete-1.1.2/styles.css",
@@ -40,24 +41,28 @@ print $q->header(
             "../html/bbbike.css"
         ]
     },
-    -script => {
-        'src' => [
-            "../html/jquery-1.4.2.min.js",
-"../html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js",
-            "http://maps.google.com/maps/api/js?sensor=false&amp;language=de",
-            "../html/maps3.js"
-        ]
-    }
+    -script => [
+        { -type => 'text/javascript', 'src' => "../html/jquery-1.4.2.min.js" },
+        {
+            -type => 'text/javascript',
+            'src' =>
+"../html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js"
+        },
+        {
+            -type => 'text/javascript',
+            'src' =>
+              "http://maps.google.com/maps/api/js?sensor=false&amp;language=de"
+        },
+        { -type => 'text/javascript', 'src' => "../html/maps3.js" }
+    ]
 );
 
-my @d = &extract_route( $logfile, $max );
-
-print $q->start_html;
 print qq{<div id="routing"></div>\n};
 print qq{<div id="BBBikeGooglemap" >\n<div id="map"></div>\n};
 
 print "<pre>\n";
 
+my @d = &extract_route( $logfile, $max );
 foreach my $url (@d) {
     my $qq = CGI->new($url);
     print $url, "\n" if $debug >= 2;
@@ -72,6 +77,18 @@ foreach my $url (@d) {
 }
 
 print "</pre>\n";
+
+print <<EOF;
+    <script type="text/javascript">
+    //<![CDATA[
+
+    city = "Foobar";
+    bbbike_maps_init("default", [[47.5100000,7.5300000],[47.5900000,7.6900000]] );
+   
+    //]]>
+    </script>
+EOF
+
 print "</div>\n";
 
 print $q->end_html;
