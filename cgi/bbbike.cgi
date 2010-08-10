@@ -3391,7 +3391,7 @@ EOF
 #  <option value="R2">@{[ M("benutzungspflichtige Radwege vermeiden") ]}
 #  </select></td></tr>-->
     print <<EOF;
-<tr><td>@{[ M("Ampeln vermeiden") ]}:</td><td><input type=checkbox name="pref_ampel" value="yes" @{[ $default_ampel?"checked":"" ]}></td>
+<tr><!-- <td>@{[ M("Ampeln vermeiden") ]}:</td><td><input type=checkbox name="pref_ampel" value="yes" @{[ $default_ampel?"checked":"" ]}></td> -->
 EOF
     if ($include_outer_region) {
 	print <<EOF;
