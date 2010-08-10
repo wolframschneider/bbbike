@@ -8468,7 +8468,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004688',
        data  => <<EOF,
-userdel	1::inwork 23891,8780 23927,8864 23946,8909 23982,8994 24001,9037 24032,9111 24051,9156 24085,9237 24143,9371 24190,9484 24205,9520 24227,9574 24250,9629 24291,9727 24299,9746 24337,9835
+userdel	1::inwork 23891,8780 23927,8864 23933,8879 23946,8909 23982,8994 24001,9037 24032,9111 24051,9156 24085,9237 24143,9371 24190,9484 24205,9520 24227,9574 24250,9629 24291,9727 24299,9746 24337,9835
 EOF
      },
      { from  => 1182636000, # 2007-06-24 00:00
@@ -9860,7 +9860,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006673',
        data  => <<EOF,
-userdel	1::inwork 19273,5866 19388,5883 19403,5885 19650,5920 19681,5924 19934,5956
+userdel	1::inwork 19273,5866 19388,5883 19403,5885 19650,5920 19681,5924 19958,5950
 EOF
      },
      { from  => 1187992800, # 2007-08-25 00:00
@@ -17608,11 +17608,11 @@ EOF
      },
      { from  => 1263121920, # 2010-01-10 12:12
        until => 1338472800, # 2012-05-31 16:00
-       text  => 'Lahnstr. (Neukölln): Baustelle, Richtung Osten gesperrt (bis Mitte 2012) zwischen Niemetzstr. und Mittelbuschweg, 11.01.2010 12:12 Uhr bis 31.05.2012 16:00 Uhr ',
+       text  => 'Lahnstr. (Neukölln): Baustelle mit prov. Ampel, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, zwischen Mierstr. und Mittelbuschweg, 11.01.2010 12:12 Uhr bis 31.05.2012 16:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_014905',
        data  => <<EOF,
-userdel	q4::inwork; 13500,7018 13627,7047 13891,7107
+userdel	q4::inwork 13500,7018 13627,7047 13891,7107
 EOF
      },
      { from  => 1274300387, # 2010-05-19 22:19
@@ -18059,8 +18059,8 @@ EOF
 userdel	q4::inwork 22605,15111 22449,15127 22409,15128 22343,15115 22059,15153
 EOF
      },
-     { from  => 1281218400, # 2010-08-08 00:00
-       until => 1284069600, # 2010-09-10 00:00
+     { from  => 1281128604, # 2010-08-08 00:00 1281218400
+       until => 1281128608, # 2010-09-10 00:00 1284069600 --- wird auf September verschoben
        text  => 'Einbahnstraßenregelung in der Wasserwerkstr., Richtung Pionierstraße offen, vom 09.08.2010 bis zum 09.09.2010 ',
        type  => 'handicap',
        data  => <<EOF,
@@ -18073,6 +18073,42 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::inwork; 1785,1338 1825,1534 1848,1647 1854,1677 1873,1772 1945,2127
+EOF
+     },
+     { from  => 1280635200, # 2010-08-01 06:00
+       until => 1285941600, # 2010-10-01 16:00
+       text  => 'Lehrter Str. (Moabit): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Invalidenstr. und Seydlitzstr., 02.08.2010 06:00 Uhr bis 01.10.2010 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_016121',
+       data  => <<EOF,
+userdel	q4::inwork 7764,13236 7643,13461 7660,13506 7655,13539
+EOF
+     },
+     { from  => 1280985970, # 2010-08-05 07:26
+       until => 1282946400, # 2010-08-28 00:00
+       text  => 'Plessa: K6208: Gleisbauarbeiten und Umbau des BÜ, Straßen- und Schwarzdeckeneinbau OL Kahla, Bahnübergang, 03.08.2010 bis 27.08.2010 ',
+       type  => 'gesperrt',
+       source_id => '106200364',
+       data  => <<EOF,
+userdel	2::inwork 23805,-103848 24165,-103467 25237,-102574
+EOF
+     },
+     { from  => 1281391200, # 2010-08-10 00:00
+       until => 1282427999, # 2010-08-21 23:59
+       text  => 'In der Zeit vom 11.08. bis voraussichtlich 21.08. wird die Dessauer Straße zwischen Köthener Straße und Schwarzwurzelstraße auf Grund von Fahrbahnsanierungsarbeiten voll gesperrt. ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20100804.0935.305087.html',
+       data  => <<EOF,
+userdel	q4::inwork 20576,17994 20460,18030 20351,18066 20256,18096 20232,18123 20186,18238
+EOF
+     },
+     { from  => 1281247200, # 2010-08-08 08:00
+       until => 1322694000, # 2011-12-01 00:00
+       text  => 'Nuthetal: L77, L771: Bau OU Güterfelde, Berliner Straße / Stahnsdorfer Damm, 09.08.2010 08:00 Uhr bis 30.11.2011 ',
+       type  => 'gesperrt',
+       source_id => 'LS/W-SG33-P/10/410',
+       data  => <<EOF,
+userdel	2::inwork -2815,-3574 -3368,-4430
 EOF
      },
     );
