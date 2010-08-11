@@ -5130,6 +5130,7 @@ EOF
 	    $slippymap_url->param( 'zielname', Encode::encode( utf8 => $zielname));
 	    $slippymap_url->param( 'lang', $lang);
 	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
+	    $slippymap_url->param( 'route_length', sprintf("%2.2f", $r->len/1000));
 
 	    my $area2 = '';
 	    {
@@ -5157,7 +5158,7 @@ EOF
 EOF
 
 	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi?city=" . $slippymap_url->param('city') );
-	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
+	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords route_length/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
 	    print $q->hidden('map_menu', "0");
