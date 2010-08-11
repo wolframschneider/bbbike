@@ -18,17 +18,37 @@ sub extract_route {
     my $max  = shift;
 
     my @data;
+    my %hash;
 
-    my $fh = new IO::File $file, "r" or die "open $file: $!\n";
+    foreach my $file ( "$file.1.gz", $file ) {
+        next if !-f $file;
 
-    while (<$fh>) {
-        next if !/ slippymap.cgi: /;
-        next if !/coords/;
+        my $fh;
+        if ( $file =~ /\.gz$/ ) {
+            open( $fh, "gzip -dc $file |" ) or die "open $file: $!\n";
+        }
+        else {
+            open( $fh, $file ) or die "open $file: $!\n";
+        }
 
-        my @list = split;
-        push( @data, pop(@list) );
+        while (<$fh>) {
+            next if !/ slippymap.cgi: /;
+            next if !/coords/;
 
-        shift @data if scalar(@data) > $max;
+            my @list = split;
+            my $url  = pop(@list);
+
+            next if exists $hash{$url};
+            push( @data, $url );
+            $hash{$url} = 1;
+
+            # limit number of URLs
+            if ( scalar(@data) > $max ) {
+                $url = shift @data;
+                undef $hash{$url};
+            }
+        }
+        close $fh;
     }
 
     return @data;
