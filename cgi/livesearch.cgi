@@ -99,6 +99,8 @@ print qq{<script type="text/javascript">\n};
 foreach my $url (@d) {
     my $qq = CGI->new($url);
     print $url, "\n" if $debug >= 2;
+
+    print qq{ // city: }, $qq->param('city'), ", length: ", $qq->param('route_length'), ", driving time: ", $qq->param('driving_time'), "\n";
     if ( my $coords = $qq->param('coords') ) {
         my $data = "[";
         foreach my $c ( split /!/, $coords ) {
