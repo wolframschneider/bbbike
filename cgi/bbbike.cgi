@@ -2535,7 +2535,7 @@ function " . $type . "char_init() {}
 		use BBBikeGooglemap;
 
 	        my $maps = BBBikeGooglemap->new();
-	        $maps->run(CGI->new( "$smu"), $gmap_api_version, $lang );
+	        $maps->run(CGI->new( "$smu"), $gmap_api_version, &my_lang($lang) );
 	    }
 
 if ($enable_homemap_streets) {
@@ -6767,6 +6767,22 @@ sub get_google_api_key {
 }
 
 
+sub my_lang {
+    my $my_lang =  shift;
+    my $geo = get_geography_object();
+    if (!$lang && $q->param("lang")) {
+	$my_lang = $q->param("lang");
+    } elsif (!$lang && $geo->{local_language}) {
+	$my_lang = $geo->{local_language};
+    }
+
+    # validate input - XSS check
+    $my_lang = "" if $my_lang !~ /^[a-zA-Z\-]{2,6}$/;
+    $my_lang = "de" if $my_lang  eq "";
+
+    return $my_lang;
+}
+
 sub header {
     my(%args) = @_;
     my $from = delete $args{-from};
@@ -6917,17 +6933,7 @@ sub header {
     <script src="../html/maps.js" type="text/javascript"></script>
 |);
         } else {
-            my $my_lang = $lang;
-            my $geo = get_geography_object();
-	    if (!$lang && $q->param("lang")) {
-		$my_lang = $q->param("lang");
-	    } elsif (!$lang && $geo->{local_language}) {
-		$my_lang = $geo->{local_language};
-	    }
-
-	    # validate input - XSS check
-	    $my_lang = "" if $my_lang !~ /^[a-zA-Z\-]{2,6}$/;
-	    $my_lang = "de" if $my_lang  eq "";
+            my $my_lang = &my_lang($lang);
 
 	push(@$head, qq|
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=$my_lang"></script>
