@@ -381,6 +381,10 @@ function translate_mapcontrol ( word, lang ) {
       "cycle" : "Fahrrad"
    },
    "hr" : { "cycle" : "Bicikl" },
+   "da" : { "cycle" : "Cykel" },
+   "nl" : { "cycle" : "Fiets" },
+   "pl" : { "cycle" : "Rower" },
+   "fr" : { "cycle" : "Vélo" },
    "ru" : { "cycle" : "Велосипед" },
   };
 
