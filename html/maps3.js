@@ -363,7 +363,10 @@ function translate_mapcontrol ( word, lang ) {
    "de" : {
       "mapnik" : "Mapnik",
       "cycle" : "Fahrrad"
-   }
+   },
+   "hr" : {
+      "cycle" : "Bicikl"
+   },
   };
 
   if (!lang) {
