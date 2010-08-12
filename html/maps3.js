@@ -1,3 +1,19 @@
+function togglePermaLinks() {
+        togglePermaLink("permalink_url");
+        togglePermaLink("permalink_url2");
+}
+
+function togglePermaLink(id) {
+        var permalink = document.getElementById(id);
+        if (permalink == null)
+                return;
+
+        if (permalink.style.display == "none") {
+                permalink.style.display = "inline";
+        } else {
+                permalink.style.display = "none";
+        };
+}
 
 var city = "";
 
