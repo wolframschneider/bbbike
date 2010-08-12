@@ -380,9 +380,8 @@ function translate_mapcontrol ( word, lang ) {
       "mapnik" : "Mapnik",
       "cycle" : "Fahrrad"
    },
-   "hr" : {
-      "cycle" : "Bicikl"
-   },
+   "hr" : { "cycle" : "Bicikl" },
+   "ru" : { "cycle" : "Велосипед" },
   };
 
   if (!lang) {
