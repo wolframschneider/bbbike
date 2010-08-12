@@ -4762,6 +4762,8 @@ EOF
 	    $ampel_count = $r->trafficlights;
 	    $ampel_lost = 15*$ampel_count; # XXX do not hardcode!
 	}
+
+        my $driving_time = "";
 	{
 	    my $i = 0;
 	    my @speeds = sort { $a <=> $b } keys %speed_map;
@@ -4773,6 +4775,10 @@ EOF
 		    . "h (" . ($bold ? "<b>" : "") . M("bei")." $speed km/h" . ($bold ? "</b>" : "") . ")";
 		print "," if $speed != $speeds[-1];
 		print "$fontend</td>";
+
+                $driving_time .= "|" if $driving_time;
+		$driving_time .= make_time($time + $ampel_lost/3600 + $penalty_lost/3600) . ':' . $speed;
+
 		if ($i == 1) {
 		    print "</tr><tr><td></td>";
 		}
@@ -5130,6 +5136,8 @@ EOF
 	    $slippymap_url->param( 'zielname', Encode::encode( utf8 => $zielname));
 	    $slippymap_url->param( 'lang', $lang);
 	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
+	    $slippymap_url->param( 'route_length', sprintf("%2.2f", $r->len/1000));
+	    $slippymap_url->param( 'driving_time', $driving_time);
 
 	    my $area2 = '';
 	    {
@@ -5157,7 +5165,7 @@ EOF
 EOF
 
 	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi?city=" . $slippymap_url->param('city') );
-	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
+	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords route_length driving_time/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
 	    print $q->hidden('map_menu', "0");

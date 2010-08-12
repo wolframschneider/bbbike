@@ -41,15 +41,39 @@ sub register {
 	  callback_3 => sub { show_flickr_menu(@_) },
 	  ($flickr_bbbike_icon ? (icon => $flickr_bbbike_icon) : ()),
 	};
+    Hooks::get_hooks("delete_background_images")->add
+	    (sub {
+		 delete_flickr_images();
+	     }, __PACKAGE__);
 }
 
 sub _create_icon {
     if (!defined $flickr_bbbike_icon) {
 	# XXX make one
-# 	$flickr_bbbike_icon = $main::top->Photo
-# 	    (-format => 'gif',
-# 	     -data => <<EOF);
-# EOF
+	$flickr_bbbike_icon = $main::top->Photo
+	    (-format => 'gif',
+	     -data => <<EOF);
+R0lGODlhEAAQAOedAC0tLS4uLi4vNzIyMjs7Oz09Pf0AhP4AhP8Ag/8AhEBAQP4Bg/4BhPQF
+h/UFhkJCQkVFRf8Jh/4LikZJWU9PT1NTU7QvowBix1VVVQBjyAFjxwBkyAFkyFlZWVpaWglp
+ygppyjhdvQtqysQ4rFdefV9fX2NjYw160VdmyWFqjhF80hN80xR81Bt+1nBwcOVJr3JyciKA
+2XNzcyiB23Jt1CmC2yuD3Hd3d3l5eTqE3TmG4Xt01fNVskCH5EOH40GI5HB/t02H3UOK5IKC
+gvdbs0eL5IWFhU2N506O54mJiVuN6WmM0/5jtFqQ54SKrmCP8I2NjVqU6pGRkVua25KSklyb
+222V6WSY7ZSUlGaZ7WKe3WOf3ZeXl5uP35iYmGeh3nec9Jubm/58v/99v5+fn4Gm84Wl9IGn
+86WlpY6l+6enp7Of5oyp94Gv4qmpqaqqqpSq+46t9qysrJCu9q+vr5Cy9Jiz+LS0tMHBwcLC
+wrPE+8vMz87OztPT08nT/dTU1NXV1dna3sjd8//S6d7e3t/f39Lj9f/X69Pk9tTl9uPj49fn
+9t/k/+bm5ufn5+jo6Orq6uvr6+fr/+jr//Dw8O/x//T09PX19fn5+fj5/vv7+/v7//z8/P//
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+/////////////////////////////////yH+FUNyZWF0ZWQgd2l0aCBUaGUgR0lNUAAsAAAA
+ABAAEAAACPkAOyHSssVQp06DmBDpUmfTwU6JQGS48GHRoQgJEjSgUenhlwwcNGxoMwYBgwMH
+eDDyCFJkGzEIDCw4MALJw0QiJoJYtMbBgQQSdgh52EnQlCqCOoEJ8cICChsxjsQh2skRoAk+
+cihhAfXIHKpkFLhJs+LMjCg9iFJK4sFFgUxPTpSZEaQHFUydIgXA0geDACsq2Cyp0aTHkAea
+SuTp1ChFERVmApGwcyUtFigADjppoQPInjBSOmX50ekRhAAHJ8GR1OEPmiSd/OjpRIgCDDkP
+FRXgBInApYc31FgiIOOOFAB8DtIZ4OVNBRMHNbnBwQUS0UJYjOA5GBAAOw==
+EOF
     }
 }
 
@@ -80,7 +104,7 @@ sub show_mini_images {
 	($minx,$maxx) = ($maxx,$minx) if $minx > $maxx;
 	($miny,$maxy) = ($maxy,$miny) if $miny > $maxy;
 
-	delete_flickr_images();
+	Hooks::get_hooks("delete_background_images")->execute;
 	for (@photos) {
 	    eval { $_->delete }; warn $@ if $@;
 	}
@@ -100,7 +124,9 @@ sub show_mini_images {
 	     },
 	    );
 
+	my $seen_photos = 0;
 	for my $photo_node ($group_photos->findnodes('/rsp/photos/photo')) {
+	    $seen_photos++;
 	    my($lon, $lat) = ($photo_node->getAttribute('longitude'),
 			      $photo_node->getAttribute('latitude'));
 	    my $id = $photo_node->getAttribute('id');
@@ -119,6 +145,8 @@ sub show_mini_images {
 		$main::c->createImage($tx,$ty, -image => $p, -tags => ['flickr', $page_url, "ImageURL: $photo_url"]);
 	    }
 	}
+
+	main::status_message("Flickr API returned $seen_photos photo(s) within visible area", "info");
     };
     my $err = $@;
     main::DecBusy($main::top);
@@ -131,8 +159,8 @@ sub show_flickr_menu {
     if (!Tk::Exists($w->{"FlickrMenu"})) {
 	my $flickr_menu = $w->Menu(-title => "Flickr",
 				   -tearoff => 0);
-	$flickr_menu->command(-label => "Flickr-Bilder löschen",
-			      -command => sub { delete_flickr_images() },
+	$flickr_menu->command(-label => "Flickr- und andere Bilder löschen",
+			      -command => sub { Hooks::get_hooks("delete_background_images")->execute },
 			     );
 	$w->{"FlickrMenu"} = $flickr_menu;
     }

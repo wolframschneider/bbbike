@@ -203,7 +203,11 @@ function bbbike_maps_init (maptype, marker_list) {
     map.mapTypes.set("cycle", CycleMapType); 
 
     // default map type
-    map.setMapTypeId( "mapnik" );
+    if (maptype == "mapnik" || maptype == "terrain" || maptype == "normal") {
+    } else {
+	maptype = "mapnik";
+    }
+    map.setMapTypeId( maptype );
 }
 
     var street = "";
@@ -324,6 +328,24 @@ function downloadUrl(url, callback) {
 	  }
 	});
    }
+
+    // bbbike_maps_init("default", [[48.0500000,7.3100000],[48.1300000,7.4100000]] );
+
+    function plotRoute(map, opt, street) {
+	var r = [];
+    	for (var i = 0; i < street.length; i++) {
+	    var coords = street[i].split(",");
+	    r.push(new google.maps.LatLng(coords[1], coords[0]));
+	}
+	var color = "#" + parseInt( Math.random() * 16).toString(16) + parseInt( Math.random() * 16).toString(16) + parseInt( Math.random() * 16).toString(16);
+
+        var route = new google.maps.Polyline( { 
+		path: r, 
+		strokeColor: color,
+		strokeWeight: 3, 
+		strokeOpacity: 0.5} );
+            route.setMap(map);
+    }
 
     // bbbike_maps_init("default", [[48.0500000,7.3100000],[48.1300000,7.4100000]] );
 
