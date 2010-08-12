@@ -2535,7 +2535,7 @@ function " . $type . "char_init() {}
 		use BBBikeGooglemap;
 
 	        my $maps = BBBikeGooglemap->new();
-	        $maps->run(CGI->new( "$smu"), $gmap_api_version );
+	        $maps->run(CGI->new( "$smu"), $gmap_api_version, $lang );
 	    }
 
 if ($enable_homemap_streets) {

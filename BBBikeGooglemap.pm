@@ -40,7 +40,7 @@ sub new { bless {}, shift }
 my $force_utf8 = 1;
 
 sub run {
-    my ($self, $q, $gmap_api_version) = @_;
+    my ($self, $q, $gmap_api_version, $lang) = @_;
 
     my $city = $q->param('city') || "";
     if ($city) {
@@ -138,7 +138,7 @@ sub run {
     binmode( \*STDERR, ":utf8" ) if $force_utf8;
 
     print $self->get_html( \@polylines_polar, \@polylines_polar_feeble, \@wpt,
-        $zoom, $center, $q );
+        $zoom, $center, $q, $lang );
 }
 
 sub bbbike_converter {
@@ -150,7 +150,7 @@ sub bbbike_converter {
 sub polar_converter { @_[ 0, 1 ] }
 
 sub get_html {
-    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center, $q ) = @_;
+    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center, $q, $lang ) = @_;
 
     my $converter   = $self->{converter};
     my $coordsystem = $self->{coordsystem};
@@ -248,6 +248,8 @@ sub get_html {
 
     my $city = $q->param('city') || "";
     my $gmap_api_version = $self->{gmap_api_version};
+ 
+    $lang = "de" if !$lang;
 
     my $html = <<EOF;
 <!-- BBBikeGooglemap starts here -->
@@ -263,7 +265,7 @@ $html .= <<EOF;
     //<![CDATA[
 
     city = "$city";
-    bbbike_maps_init("default", $marker_list );
+    bbbike_maps_init("default", $marker_list, "$lang" );
 EOF
 
     $html .= <<EOF;

@@ -47,7 +47,7 @@ function homemap_street_timer (event, time) {
 // main map object
 var map;
 
-function bbbike_maps_init (maptype, marker_list) {
+function bbbike_maps_init (maptype, marker_list, lang) {
 
 
     var routeLinkLabel = "Link to route: ";
@@ -208,6 +208,9 @@ function bbbike_maps_init (maptype, marker_list) {
 	maptype = "mapnik";
     }
     map.setMapTypeId( maptype );
+
+    custom_map( "mapnik", lang);
+    custom_map( "cycle", lang);
 }
 
     var street = "";
@@ -348,4 +351,95 @@ function downloadUrl(url, callback) {
     }
 
     // bbbike_maps_init("default", [[48.0500000,7.3100000],[48.1300000,7.4100000]] );
+
+
+// localized custom map names
+function translate_mapcontrol ( word, lang ) {
+  var l = {
+   "en" : {
+      "mapnik" : "Mapnik",
+      "cycle" : "Cycle"
+   },
+   "de" : {
+      "mapnik" : "Mapnik",
+      "cycle" : "Fahrrad"
+   }
+  };
+
+  if (!lang) {
+	return word;
+  } else if (l[lang] && l[lang][word]) {
+	return l[lang][word];
+  } else if (l["en"] && l["en"][word]) {
+	return l["en"][word];
+  } else {
+	return word;
+  }
+}
+
+
+
+
+/**
+ * The HomeControl adds a control to the map that simply
+ * returns the user to Chicago. This constructor takes
+ * the control DIV as an argument.
+ */
+
+var currentText;
+function HomeControl(controlDiv, map, maptype, lang) {
+
+  // Set CSS styles for the DIV containing the control
+  // Setting padding to 5 px will offset the control
+  // from the edge of the map
+
+  controlDiv.style.paddingTop = '5px';
+  controlDiv.style.paddingRight = '2px';
+
+  // Set CSS for the control border
+  var controlUI = document.createElement('DIV');
+  controlUI.style.backgroundColor = 'white';
+  controlUI.style.borderStyle = 'solid';
+  controlUI.style.borderWidth = '2px';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.textAlign = 'center';
+
+  controlUI.title = 'Click to set the map to Home';
+  controlDiv.appendChild(controlUI);
+
+  // Set CSS for the control interior
+  var controlText = document.createElement('DIV');
+  // controlText.style.fontFamily = 'Arial,sans-serif';
+  controlText.style.fontSize = '12px';
+  controlText.style.paddingLeft = '8px';
+  controlText.style.paddingRight = '8px';
+  controlText.style.paddingTop = '1px';
+  controlText.style.paddingBottom = '1px';
+
+  controlText.innerHTML = translate_mapcontrol(maptype, lang);
+  controlUI.appendChild(controlText);
+
+  // Setup the click event listeners: simply set the map to Chicago
+  google.maps.event.addDomListener(controlUI, 'click', function() {
+    map.setMapTypeId(maptype);
+
+    // un-bold current text
+    if (currentText) {
+	currentText.style.fontWeight = "normal";	
+    }
+    controlText.style.fontWeight = "bold";
+    currentText = controlText;
+
+  });
+
+}
+
+function custom_map ( maptype, lang ) {
+  var homeControlDiv = document.createElement('DIV');
+  var homeControl = new HomeControl(homeControlDiv, map, maptype, lang);
+
+  homeControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+}
+
 
