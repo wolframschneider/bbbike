@@ -331,7 +331,7 @@ function downloadUrl(url, callback) {
 
     // bbbike_maps_init("default", [[48.0500000,7.3100000],[48.1300000,7.4100000]] );
 
-    function plotRoute(map, street) {
+    function plotRoute(map, opt, street) {
 	var r = [];
     	for (var i = 0; i < street.length; i++) {
 	    var coords = street[i].split(",");

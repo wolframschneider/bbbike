@@ -2,6 +2,7 @@
 
 use CGI;
 use IO::File;
+use JSON;
 
 use strict;
 use warnings;
@@ -96,18 +97,23 @@ EOF
 my @d = &extract_route( $logfile, $max );
 print qq{<script type="text/javascript">\n};
 
+my $json = new JSON;
 foreach my $url (@d) {
     my $qq = CGI->new($url);
     print $url, "\n" if $debug >= 2;
 
-    print qq{ // city: }, $qq->param('city'), ", length: ", $qq->param('route_length'), ", driving time: ", $qq->param('driving_time'), "\n";
+    # print qq{ // city: }, $qq->param('city'), ", length: ", $qq->param('route_length'), ", driving time: ", $qq->param('driving_time'), "\n";
+    my $opt = { map { $_ => ($qq->param($_) || "") } qw/city route_length driving_time startname zielname/ };
+
     if ( my $coords = $qq->param('coords') ) {
         my $data = "[";
         foreach my $c ( split /!/, $coords ) {
             $data .= qq{'$c', };
         }
         $data =~ s/, $/]/;
-        print qq{plotRoute(map, $data);\n};
+
+	my $opt_json = $json->encode($opt);
+        print qq{plotRoute(map, $opt_json, $data);\n};
     }
 }
 
