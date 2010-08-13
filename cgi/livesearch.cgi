@@ -3,6 +3,7 @@
 use CGI;
 use IO::File;
 use JSON;
+use Data::Dumper;
 
 use strict;
 use warnings;
@@ -55,8 +56,12 @@ sub extract_route {
     return @data;
 }
 
-print $q->header();
+print $q->header( -charset => 'utf-8' );
+
 print $q->start_html(
+    -meta =>
+      { -http_equiv => 'Content-Type', -content => 'text/html; charset=utf-8' },
+
     -style => {
         'src' => [
             "../html/devbridge-jquery-autocomplete-1.1.2/styles.css",
@@ -98,12 +103,14 @@ my @d = &extract_route( $logfile, $max );
 print qq{<script type="text/javascript">\n};
 
 my $json = new JSON;
+my $cities;
 foreach my $url (@d) {
     my $qq = CGI->new($url);
     print $url, "\n" if $debug >= 2;
 
-    # print qq{ // city: }, $qq->param('city'), ", length: ", $qq->param('route_length'), ", driving time: ", $qq->param('driving_time'), "\n";
-    my $opt = { map { $_ => ($qq->param($_) || "") } qw/city route_length driving_time startname zielname/ };
+    my $opt =
+      { map { $_ => ( $qq->param($_) || "" ) }
+          qw/city route_length driving_time startname zielname/ };
 
     if ( my $coords = $qq->param('coords') ) {
         my $data = "[";
@@ -112,13 +119,22 @@ foreach my $url (@d) {
         }
         $data =~ s/, $/]/;
 
-	my $opt_json = $json->encode($opt);
+        my $opt_json = $json->encode($opt);
         print qq{plotRoute(map, $opt_json, $data);\n};
+
+        push( @{ $cities->{ $opt->{'city'} } }, $opt ) if $opt->{'city'};
     }
 }
 
+print "/* ", Dumper($cities), " */\n";
+my $d = join( "<br/>",
+    map { $_ . "(" . scalar( @{ $cities->{$_} } ) . ")" } sort keys %$cities );
+print qq{\$("div#routing").html('$d');\n\n};
+
 print qq{</script>\n};
 
+print
+qq{<noscript><p>You must enable JavaScript and CSS to run this application!</p>\n</noscript>\n};
 print "</div>\n";
 
 print $q->end_html;
