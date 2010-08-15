@@ -16,6 +16,21 @@
   <generator uri="http://search.cpan.org/dist/XML-Atom-SimpleFeed/"
   version="0.86">XML::Atom::SimpleFeed</generator>
   <entry>
+    <title>Donatations</title>
+    <id>e86b828855a4103bfe73aa02fef7fa3a</id>
+    <content>We accecpt donations! ;-)
+    http://bbbike.org/community.html</content>
+    <updated>2010-08-15T18:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
+    <title>Twitter</title>
+    <id>e86b828855a4103bfe73aa02fef7fa3a</id>
+    <content>BBBike is on http://twitter.com/BBBikeWorld!</content>
+    <updated>2010-08-14T18:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
     <title>Google Maps v3</title>
     <id>384a4805c8a4b03c2b034a1b8a3fe83f</id>
     <content>BBBike supports now google maps version 3 which enable

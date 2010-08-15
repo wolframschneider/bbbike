@@ -19,6 +19,32 @@ my $feed = XML::Atom::SimpleFeed->new(
 ######################################################################
 
 $feed->add_entry(
+    title => 'Donatations',
+    id    => 'e86b828855a4103bfe73aa02fef7fa3a',
+
+    content => {
+        type    => 'text',
+        content => qq{We accecpt donations! ;-) http://bbbike.org/community.html},
+    },
+
+    updated  => '2010-08-15T18:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title => 'Twitter',
+    id    => 'e86b828855a4103bfe73aa02fef7fa3a',
+
+    content => {
+        type    => 'text',
+        content => qq{BBBike is on http://twitter.com/BBBikeWorld! },
+    },
+
+    updated  => '2010-08-14T18:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
     title => 'Google Maps v3',
     id    => '384a4805c8a4b03c2b034a1b8a3fe83f',
 
