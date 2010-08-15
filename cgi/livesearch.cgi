@@ -23,8 +23,10 @@ sub extract_route {
 
     my @data;
     my %hash;
+    my @files = "$file.1.gz", $file;
+    unshift( @files, "$file.3.gz", "$file.2.gz" ) if $max > 100;
 
-    foreach my $file ( "$file.1.gz", $file ) {
+    foreach my $file (@files) {
         next if !-f $file;
 
         my $fh;
@@ -141,6 +143,10 @@ print <<EOF;
     </script>
 EOF
 
+if ( $q->param('max') ) {
+    my $m = $q->param('max');
+    $max = $m if $m > 0 && $m < 1024;
+}
 my @d = &extract_route( $logfile, $max );
 print qq{<script type="text/javascript">\n};
 
@@ -174,7 +180,7 @@ print "/* ", Dumper($cities), " */\n";
 my $d = join(
     "<br/>",
     map {
-        qq/<a href="#" onclick="jumpToCity(\\'/
+            qq/<a href="#" onclick="jumpToCity(\\'/
           . $city_center->{$_}
           . qq/\\')">$_(/
           . scalar( @{ $cities->{$_} } ) . ")</a>"
