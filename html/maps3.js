@@ -350,20 +350,63 @@ function downloadUrl(url, callback) {
 
     // bbbike_maps_init("default", [[48.0500000,7.3100000],[48.1300000,7.4100000]] );
 
+    var infoWindow;
+    var routeSave;
     function plotRoute(map, opt, street) {
 	var r = [];
+
     	for (var i = 0; i < street.length; i++) {
 	    var coords = street[i].split(",");
 	    r.push(new google.maps.LatLng(coords[1], coords[0]));
 	}
 	var color = "#" + parseInt( Math.random() * 16).toString(16) + parseInt( Math.random() * 16).toString(16) + parseInt( Math.random() * 16).toString(16);
 
+	var x = r.length > 8 ? 8 : r.length;
         var route = new google.maps.Polyline( { 
-		path: r, 
+		clickable: true,
+		path: r,
 		strokeColor: color,
 		strokeWeight: 3, 
 		strokeOpacity: 0.5} );
             route.setMap(map);
+
+	var marker = new google.maps.Marker({
+    		//position: r[ parseInt(Math.random() * r.length) ],
+    		position: r[ parseInt( Math.random() * x) ],
+    		map: map,
+	});
+
+	function driving_time (driving_time) {
+		var data = "";
+		var time = driving_time.split('|');
+		for (var i = 0; i < time.length; i++) {
+			var t = time[i].split(':');
+			data += t[0] + ":" + t[1] + "h (at " + t[2] + "km/h) ";
+		}
+		return data;
+	}
+
+        google.maps.event.addListener(marker, "click", function(event) { 
+		if (infoWindow) {
+			infoWindow.close();
+		}
+		if (routeSave) {
+			routeSave.setOptions({ strokeWeight: 3 });
+		}
+
+		infoWindow = new google.maps.InfoWindow({ maxWidth: 400});
+		var content = "<div id=\"infoWindowContent\">\n"
+		content += "Start: " + opt.startname + "<br/>\n";
+		content += "Destination: " + opt.zielname + "<br/>\n";
+		content += "Route Length: " + opt.route_length + "<br/>\n";
+		content += "Driving time: " + driving_time(opt.driving_time) + "<br/>\n";
+		content += "</div>\n";
+		infoWindow.setContent(content);
+		infoWindow.open(map, marker);
+
+    		routeSave = route;
+		route.setOptions({ strokeWeight: 10 });
+	});
     }
 
     // bbbike_maps_init("default", [[48.0500000,7.3100000],[48.1300000,7.4100000]] );
