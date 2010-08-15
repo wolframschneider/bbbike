@@ -14,6 +14,8 @@ my $q     = new CGI;
 my $max   = 100;
 my $debug = 1;
 
+my $city_center;
+
 # extract URLs from web server error log
 sub extract_route {
     my $file = shift;
@@ -56,6 +58,11 @@ sub extract_route {
     return @data;
 }
 
+##############################################################################################
+#
+# main
+#
+
 print $q->header( -charset => 'utf-8' );
 
 print $q->start_html(
@@ -94,7 +101,23 @@ print <<EOF;
 
     city = "Foobar";
     bbbike_maps_init("terrain", [[42.5000000,2.5300000],[55.6498948, 15.0256735]] );
-   
+  
+    function jumpToCity (coord) {
+	var b = coord.split("!");
+
+	var bounds = new google.maps.LatLngBounds;
+        for (var i=0; i<b.length; i++) {
+	      var c = b[i].split(",");
+              bounds.extend(new google.maps.LatLng( c[1], c[0]));
+        }
+        map.setCenter(bounds.getCenter());
+        map.fitBounds(bounds);
+	var zoom = map.getZoom();
+
+        // no zoom level higher than 15
+         map.setZoom( zoom < 16 ? zoom + 1 : 16);
+    } 
+
     //]]>
     </script>
 EOF
@@ -110,7 +133,9 @@ foreach my $url (@d) {
 
     my $opt =
       { map { $_ => ( $qq->param($_) || "" ) }
-          qw/city route_length driving_time startname zielname/ };
+          qw/city route_length driving_time startname zielname area/ };
+
+    $city_center->{$opt->{'city'}} = $opt->{'area'};
 
     if ( my $coords = $qq->param('coords') ) {
         my $data = "[";
@@ -128,7 +153,7 @@ foreach my $url (@d) {
 
 print "/* ", Dumper($cities), " */\n";
 my $d = join( "<br/>",
-    map { $_ . "(" . scalar( @{ $cities->{$_} } ) . ")" } sort keys %$cities );
+    map { qq/<a href="#" onclick="jumpToCity(\\'/ . $city_center->{$_}  . qq/\\')">$_(/ . scalar( @{ $cities->{$_} } ) . ")</a>" } sort keys %$cities );
 print qq{\$("div#routing").html('$d');\n\n};
 
 print qq{</script>\n};
