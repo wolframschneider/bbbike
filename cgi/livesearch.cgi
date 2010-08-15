@@ -23,7 +23,7 @@ sub extract_route {
 
     my @data;
     my %hash;
-    my @files = ("$file.1.gz", $file);
+    my @files = ( "$file.1.gz", $file );
     unshift( @files, "$file.3.gz", "$file.2.gz" ) if $max > 100;
 
     foreach my $file (@files) {
@@ -176,7 +176,9 @@ foreach my $url (@d) {
     }
 }
 
-print "/* ", Dumper($cities), " */\n" if $debug >= 2;
+print "/* ", Dumper($cities),      " */\n" if $debug >= 2;
+print "/* ", Dumper($city_center), " */\n" if $debug >= 2;
+
 my $d = join(
     "<br/>",
     map {
@@ -186,9 +188,14 @@ my $d = join(
           . scalar( @{ $cities->{$_} } ) . ")</a>"
       } sort keys %$cities
 );
-print qq{\$("div#routing").html('$d');\n\n};
+print qq{\n\$("div#routing").html('$d');\n\n};
 
-print qq{</script>\n};
+my $city = $q->param('city') || "";
+if ( $city && exists $city_center->{$city} ) {
+    print qq[\njumpToCity('$city_center->{ $city }');\n];
+}
+
+print qq{\n</script>\n};
 
 print
 qq{<noscript><p>You must enable JavaScript and CSS to run this application!</p>\n</noscript>\n};
