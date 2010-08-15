@@ -59,7 +59,7 @@ sub extract_route {
 }
 
 sub footer {
-return <<EOF;
+    return <<EOF;
 <div id="footer">
 <div id="footer_top">
 <a href="../">home</a> 
@@ -154,7 +154,7 @@ foreach my $url (@d) {
       { map { $_ => ( $qq->param($_) || "" ) }
           qw/city route_length driving_time startname zielname area/ };
 
-    $city_center->{$opt->{'city'}} = $opt->{'area'};
+    $city_center->{ $opt->{'city'} } = $opt->{'area'};
 
     if ( my $coords = $qq->param('coords') ) {
         my $data = "[";
@@ -171,8 +171,15 @@ foreach my $url (@d) {
 }
 
 print "/* ", Dumper($cities), " */\n";
-my $d = join( "<br/>",
-    map { qq/<a href="#" onclick="jumpToCity(\\'/ . $city_center->{$_}  . qq/\\')">$_(/ . scalar( @{ $cities->{$_} } ) . ")</a>" } sort keys %$cities );
+my $d = join(
+    "<br/>",
+    map {
+        qq/<a href="#" onclick="jumpToCity(\\'/
+          . $city_center->{$_}
+          . qq/\\')">$_(/
+          . scalar( @{ $cities->{$_} } ) . ")</a>"
+      } sort keys %$cities
+);
 print qq{\$("div#routing").html('$d');\n\n};
 
 print qq{</script>\n};
