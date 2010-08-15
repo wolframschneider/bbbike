@@ -23,7 +23,7 @@ sub extract_route {
 
     my @data;
     my %hash;
-    my @files = "$file.1.gz", $file;
+    my @files = ("$file.1.gz", $file);
     unshift( @files, "$file.3.gz", "$file.2.gz" ) if $max > 100;
 
     foreach my $file (@files) {
@@ -176,7 +176,7 @@ foreach my $url (@d) {
     }
 }
 
-print "/* ", Dumper($cities), " */\n";
+print "/* ", Dumper($cities), " */\n" if $debug >= 2;
 my $d = join(
     "<br/>",
     map {
