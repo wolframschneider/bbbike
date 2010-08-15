@@ -58,6 +58,25 @@ sub extract_route {
     return @data;
 }
 
+sub footer {
+return <<EOF;
+<div id="footer">
+<div id="footer_top">
+<a href="../">home</a> 
+</div>
+</div>
+<hr>
+
+<div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
+(&copy;) 2008-2010 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br >
+
+  Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br >
+<div id="footer_community">
+</div>
+</div>
+EOF
+}
+
 ##############################################################################################
 #
 # main
@@ -161,6 +180,7 @@ print qq{</script>\n};
 print
 qq{<noscript><p>You must enable JavaScript and CSS to run this application!</p>\n</noscript>\n};
 print "</div>\n";
+print &footer;
 
 print $q->end_html;
 
