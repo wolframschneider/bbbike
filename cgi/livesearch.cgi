@@ -87,6 +87,7 @@ EOF
 print $q->header( -charset => 'utf-8' );
 
 print $q->start_html(
+    -title => 'BBBike @ World livesearch',
     -meta =>
       { -http_equiv => 'Content-Type', -content => 'text/html; charset=utf-8' },
 
