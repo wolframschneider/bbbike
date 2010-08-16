@@ -373,7 +373,7 @@ function downloadUrl(url, callback) {
 	var marker = new google.maps.Marker({
     		//position: r[ parseInt(Math.random() * r.length) ],
     		position: r[ parseInt( Math.random() * x) ],
-    		map: map,
+    		map: map
 	});
 
 	function driving_time (driving_time) {
@@ -428,7 +428,7 @@ function translate_mapcontrol ( word, lang ) {
    "nl" : { "cycle" : "Fiets" },
    "pl" : { "cycle" : "Rower" },
    "fr" : { "cycle" : "Vélo" },
-   "ru" : { "cycle" : "Велосипед" },
+   "ru" : { "cycle" : "Велосипед" }
   };
 
   if (!lang) {
