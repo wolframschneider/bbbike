@@ -1750,7 +1750,8 @@ S-Bahn und Regionalbahn	B 21562,12088
 	B 13557,-21831
 	B 16379,-29446
 	B 16630,-30953
-	F 10471,13745
+#: XXX_prog Ampel ist nach Osten versetzt, aber hier eingetragen, damit auch das Nord-Süd-Routing diese Ampel erfährt
+	F 10463,13747
 	F 8553,11630
 	X 8571,11846
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?)	B 40248,14503
@@ -2519,6 +2520,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 23933,8879
 #: note: am Wochenende ausgeschaltet (immer?)
 	F 24435,10065
+	F 25546,5359
 ################################################################################
 # note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10044614/620526/
