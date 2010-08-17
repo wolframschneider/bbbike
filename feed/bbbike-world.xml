@@ -16,6 +16,14 @@
   <generator uri="http://search.cpan.org/dist/XML-Atom-SimpleFeed/"
   version="0.86">XML::Atom::SimpleFeed</generator>
   <entry>
+    <title>KML Support</title>
+    <id>e86b828855a4103bfe73aa02fef7fa3a</id>
+    <content>New feature: you can download the route in KML format
+    for Google Earth!</content>
+    <updated>2010-08-17T18:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
     <title>Donatations</title>
     <id>e86b828855a4103bfe73aa02fef7fa3a</id>
     <content>We accecpt donations! ;-)

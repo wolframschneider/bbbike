@@ -19,6 +19,19 @@ my $feed = XML::Atom::SimpleFeed->new(
 ######################################################################
 
 $feed->add_entry(
+    title => 'KML Support',
+    id    => 'e86b828855a4103bfe73aa02fef7fa3a',
+
+    content => {
+        type    => 'text',
+        content => qq{New feature: you can download the route in KML format for Google Earth!},
+    },
+
+    updated  => '2010-08-17T18:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
     title => 'Donatations',
     id    => 'e86b828855a4103bfe73aa02fef7fa3a',
 
