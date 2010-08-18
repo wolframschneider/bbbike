@@ -366,13 +366,16 @@ function downloadUrl(url, callback) {
 		clickable: true,
 		path: r,
 		strokeColor: color,
-		strokeWeight: 3, 
+		strokeWeight: 5, 
 		strokeOpacity: 0.5} );
             route.setMap(map);
 
 	var marker = new google.maps.Marker({
-    		//position: r[ parseInt(Math.random() * r.length) ],
     		position: r[ parseInt( Math.random() * x) ],
+    		map: map
+	});
+	var marker2 = new google.maps.Marker({
+    		position: r[ r.length - 1 ],
     		map: map
 	});
 
@@ -386,12 +389,15 @@ function downloadUrl(url, callback) {
 		return data;
 	}
 
-        google.maps.event.addListener(marker, "click", function(event) { 
+        google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker) } );
+        google.maps.event.addListener(marker2, "click", function(event) { addInfoWindow(marker2) } );
+
+        function addInfoWindow (marker) {
 		if (infoWindow) {
 			infoWindow.close();
 		}
 		if (routeSave) {
-			routeSave.setOptions({ strokeWeight: 3 });
+			routeSave.setOptions({ strokeWeight: 5 });
 		}
 
 		infoWindow = new google.maps.InfoWindow({ maxWidth: 400});
@@ -406,7 +412,7 @@ function downloadUrl(url, callback) {
 
     		routeSave = route;
 		route.setOptions({ strokeWeight: 10 });
-	});
+	};
     }
 
     // bbbike_maps_init("default", [[48.0500000,7.3100000],[48.1300000,7.4100000]] );
