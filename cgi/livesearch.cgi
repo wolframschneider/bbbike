@@ -89,8 +89,12 @@ print $q->header( -charset => 'utf-8' );
 
 print $q->start_html(
     -title => 'BBBike @ World livesearch',
-    -head =>
-      $q->meta({ -http_equiv => 'Content-Type', -content => 'text/html; charset=utf-8' }),
+    -head  => $q->meta(
+        {
+            -http_equiv => 'Content-Type',
+            -content    => 'text/html; charset=utf-8'
+        }
+    ),
 
     -style => {
         'src' => [
@@ -166,7 +170,7 @@ foreach my $url (@d) {
 
     $city_center->{ $opt->{'city'} } = $opt->{'area'};
 
-    if ( my $coords = $qq->param('coords')) {
+    if ( my $coords = $qq->param('coords') ) {
         my $data = "[";
         foreach my $c ( split /!/, $coords ) {
             $data .= qq{'$c', };
