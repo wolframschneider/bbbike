@@ -157,13 +157,15 @@ foreach my $url (@d) {
     my $qq = CGI->new($url);
     print $url, "\n" if $debug >= 2;
 
+    next if !$qq->param('driving_time');
+
     my $opt =
       { map { $_ => ( $qq->param($_) || "" ) }
           qw/city route_length driving_time startname zielname area/ };
 
     $city_center->{ $opt->{'city'} } = $opt->{'area'};
 
-    if ( my $coords = $qq->param('coords') ) {
+    if ( my $coords = $qq->param('coords')) {
         my $data = "[";
         foreach my $c ( split /!/, $coords ) {
             $data .= qq{'$c', };
