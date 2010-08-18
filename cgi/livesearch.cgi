@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
-use CGI;
+use CGI qw/-utf-8/;
+
 use IO::File;
 use JSON;
 use Data::Dumper;
