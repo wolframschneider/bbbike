@@ -3969,7 +3969,7 @@ sub cgi_utf8 {
     return $qq if !$utf8_flag;
   
     foreach my $param ($qq->param() ) {
-	$qq->param($param, Encode::encode( utf8 => $qq->param($param)) );
+	$qq->param($param, Encode::decode( utf8 => $qq->param($param)) );
     }
 
     return $qq;
