@@ -196,6 +196,9 @@ my $d = join(
           . scalar( @{ $cities->{$_} } ) . ")</a>"
       } sort keys %$cities
 );
+
+#$d.= qq{<p><a href="javascript:flipMarkers(infoMarkers)">flip markers</a></p>};
+
 print qq{\n\$("div#routing").html('$d');\n\n};
 
 my $city = $q->param('city') || "";
