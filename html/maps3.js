@@ -203,7 +203,7 @@ function bbbike_maps_init (maptype, marker_list, lang) {
 
     var cycle_options = {
     	getTileUrl : function (a,z) { 
-    	   return "http://a.andy.sandbox.cloudmade.com/tiles/cycle/" + z + "/" + a.x + "/" + a.y + ".png";
+    	   return "http://a.tile.opencyclemap.org/cycle/" + z + "/" + a.x + "/" + a.y + ".png";
      	},
         isPng: true,
      	opacity: 1.0,

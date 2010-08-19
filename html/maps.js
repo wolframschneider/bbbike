@@ -249,7 +249,7 @@ function GetTileUrl_TaH(a, z) {
 }
 
 function GetTileUrl_cycle(a, z) {
-    return "http://a.andy.sandbox.cloudmade.com/tiles/cycle/" +
+    return "http://a.tile.opencyclemap.org/cycle/" +
                 z + "/" + a.x + "/" + a.y + ".png";
 }
 
