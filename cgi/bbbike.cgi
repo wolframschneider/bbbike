@@ -3962,14 +3962,15 @@ sub search_coord {
 }
 
 sub cgi_utf8 {
-    my $q = shift;
     my $utf8_flag = shift;
+    my $q = shift;
 
     my $qq =  CGI->new($q);
     return $qq if !$utf8_flag;
   
     foreach my $param ($qq->param() ) {
-	$qq->param($param, Encode::decode( utf8 => $qq->param($param)) );
+	my $string = Encode::decode( utf8 => $qq->param($param));
+	$qq->param($param, $string);
     }
 
     return $qq;
@@ -5023,9 +5024,9 @@ EOF
 
 	if ($bi->{'can_table'}) {
 	    if (!$bi->{'text_browser'} && !$printmode) {
-		my $qq_narrow = cgi_utf8($q, $use_utf8);
+		my $qq_narrow = cgi_utf8($use_utf8);
 		$qq_narrow->param('output_as', "print");
-		my $qq_normal = cgi_utf8($q, $use_utf8);
+		my $qq_normal = cgi_utf8($use_utf8);
 		$qq_normal->param('output_as', "print");
 		$qq_normal->param('printvariant', "normal");
 
@@ -5052,7 +5053,7 @@ EOF
 		    "<img src=\"$bbbike_images/printer_narrow.gif\" " .
 		    "width=16 height=16 border=0 alt='" . M("Druckvorlage schmal") . "'></a>";
 		if ($can_palmdoc) {
-		    my $qq2 = cgi_utf8($q, $use_utf8);
+		    my $qq2 = cgi_utf8($use_utf8);
 		    $qq2->param('output_as', "palmdoc");
 		    my $href = $bbbike_script;
 #XXX not needed anymore:
@@ -5064,26 +5065,27 @@ EOF
 		}
 		if ($can_gpx) {
 		    {
-		        my $qq2 = cgi_utf8($q, $use_utf8);
+		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-route");
 			my $href = $bbbike_script;
 			print qq{<a title="GPX route with waypoints for navigation, up to 256 points" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Route)</a>};
 		    }
 		    {
-		        my $qq2 = cgi_utf8($q, $use_utf8);
+		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-track");
 			my $href = $bbbike_script;
 			print qq{<a title="GPX with up to 1024 points, no navigation" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Track)</a>};
 		    }
 		}
 		if ($can_kml) {
-		    my $qq2 = cgi_utf8($q, $use_utf8);
+		    my $qq2 = cgi_utf8($use_utf8);
 		    $qq2->param('output_as', "kml-track");
+
 		    my $href = $bbbike_script;
-		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">KML</a>};
+		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->url(-query => 1) . qq{">KML</a>};
 		}
 		if ($can_gpsies_link) {
-		    my $qq2 = cgi_utf8($q, $use_utf8);
+		    my $qq2 = cgi_utf8($use_utf8);
 		    $qq2->param('output_as', "gpx-track");
 		    my $bbbike_script = $bbbike_script;
 		    if ($bbbike_script =~ m{^https?://[^.]+/}) { # local hostname?
