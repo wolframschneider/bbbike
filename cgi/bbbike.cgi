@@ -7052,7 +7052,7 @@ my $s_copyright = <<EOF;
 <a href="../">home</a> |
 <a href="../doc.html">help</a> |
 <a href="../app.html">app</a> |
-<a href="$community_link">community</a> |
+<a href="$community_link">donate</a> |
 $list_of_all_streets |
 <a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url2" style="display:none"> $permalink</span>
 </div>
