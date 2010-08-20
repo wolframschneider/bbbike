@@ -2529,9 +2529,25 @@ function " . $type . "char_init() {}
     print "</form>\n";
     print "</td></tr></table>\n</div>\n" if $bi->{'can_table'};
 
+	    my $BBBikeGooglemap = 1;
+	    if ($q->param('skin') && $q->param('skin') =~ m,^(m|mobile)$, ||
+		$q->virtual_host() =~ /^m\.|^mobile\./ ) {
+		$BBBikeGooglemap = 0;
+		$enable_homemap_streets = 0;
+
+		print <<EOF;
+<style>
+div#routing  	  { position: relative; font-size: xx-large; }
+div#routing input { font-size: xx-large; }
+div.autocomplete  { font-size: xx-large; }
+</style>
+EOF
+
+	    }
+
 	    if (0) {
 	    print qq{<iframe id="iframemap" src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="420" scrolling="no">xxx</iframe>\n};
-            } else {
+            } elsif ($BBBikeGooglemap) {
 		use BBBikeGooglemap;
 
 	        my $maps = BBBikeGooglemap->new();
