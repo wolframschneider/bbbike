@@ -298,6 +298,8 @@ sub get_html {
 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShQGl2ahQNKygvI--_E2nchLqmbBhxRLXr4pQqVNorfON2MgRTxoThX1iw',
         'devel.bbbike.org' =>
 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShSz9Y_XkjB4bplja172uJiTycvaMBQbZCQc60GoFTYOa5aTUrzyHP-dVQ',
+        'm.bbbike.org' =>
+'ABQIAAAAX99Vmq6XHlL56h0rQy6IShTkoFNU2Cgvb4rcCnxwHzph0kQstBTEPIvBTlQf7p0mSoNkibcHGn7W7w',
         'localhost' =>
 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTN4WPiGfl2FX2PYZt6wyT5v7xqcg',
     );
