@@ -179,4 +179,5 @@ Bildgr&ouml;&szlig;e, Bildformat und Detailreichtum %s bis %s kB. PDFs sind %s b
      'Busspur' => 'bus lane',
      # 'Nebenfahrbahn' => 'XXX',
      'Fähre' => 'Ferry',
+     'spenden' => 'donate',
     };
