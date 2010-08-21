@@ -16,11 +16,18 @@
   <generator uri="http://search.cpan.org/dist/XML-Atom-SimpleFeed/"
   version="0.86">XML::Atom::SimpleFeed</generator>
   <entry>
-    <title>KML Support</title>
-    <id>e86b828855a4103bfe73aa02fef7fa3a</id>
-    <content>New feature: you can download the route in KML format
-    for Google Earth!</content>
-    <updated>2010-08-17T18:30:02Z</updated>
+    <title>New cities for England</title>
+    <id>cfb1ddfbc43b4e93f9d20e729a2dea2e</id>
+    <content>New cities: Birmingham, Bristol, Leeds, Liverpool,
+    Manchester, Sheffield</content>
+    <updated>2010-08-21T12:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
+    <title>New cities for Scotland</title>
+    <id>527dad8380261ada331749b8a537af59</id>
+    <content>New cities: Edinburgh, Glasgow</content>
+    <updated>2010-08-21T12:30:02Z</updated>
     <category term="News" />
   </entry>
   <entry>

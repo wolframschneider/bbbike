@@ -18,16 +18,30 @@ my $feed = XML::Atom::SimpleFeed->new(
 
 ######################################################################
 
+
 $feed->add_entry(
-    title => 'KML Support',
-    id    => 'e86b828855a4103bfe73aa02fef7fa3a',
+    title => 'New cities for England',
+    id    => 'cfb1ddfbc43b4e93f9d20e729a2dea2e',
 
     content => {
         type    => 'text',
-        content => qq{New feature: you can download the route in KML format for Google Earth!},
+        content => qq{New cities: Birmingham, Bristol, Leeds, Liverpool, Manchester, Sheffield},
     },
 
-    updated  => '2010-08-17T18:30:02Z',
+    updated  => '2010-08-21T12:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title => 'New cities for Scotland',
+    id    => '527dad8380261ada331749b8a537af59',
+
+    content => {
+        type    => 'text',
+        content => qq{New cities: Edinburgh, Glasgow},
+    },
+
+    updated  => '2010-08-21T12:30:02Z',
     category => 'News',
 );
 
