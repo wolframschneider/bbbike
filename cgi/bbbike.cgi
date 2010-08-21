@@ -2002,12 +2002,12 @@ EOF
 		print "<noscript>" . M("Die Aktivierung von Javascript und CSS ist empfehlenswert, aber nicht notwendig.") . "<p></noscript>\n";
 	    }
 
-            print qq{<span style="font-size:small">} . "&nbsp;" . M("Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)") . ":" . "</span>\n";
+            print qq{<span id="housenumber">} . "&nbsp;" . M("Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)") . ":" . "</span>\n";
 	    unless ($via eq 'NO') { print " (" . M("Via ist optional") . ")" }
 	    #if ($osm_data && $datadir =~ m,data-osm/(.+),) {
 	    #	print qq[, ], M("Stadt"), qq[: $1\n];
 	    #}
-	    print "<p>\n";
+	    #print "<br />\n";
         }
 
 	print "</td></tr><tr>" if ($bi->{'can_table'});
@@ -2858,7 +2858,7 @@ sub is_mobile {
     my $q = shift;
 
     if ($q->param('skin') && $q->param('skin') =~ m,^(m|mobile)$, ||
-        $q->virtual_host() =~ /^m\.|^mobile\./ ) {
+        $q->virtual_host() =~ /^m\.|^mobile\.|^dev2/ ) {
 	return 1;
     } else {
 	return 0;
