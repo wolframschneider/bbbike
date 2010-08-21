@@ -4742,6 +4742,14 @@ EOF
 	}
 
     ROUTE_TABLE:
+	if (is_mobile($q)) {
+	    print <<EOF;
+<style>
+body, select, input, span.slippymaplink { font-size: x-large }
+</style>
+EOF
+	}
+
 	print "<center>" unless $printmode;
 	print qq{<table id="routehead" bgcolor="#ffcc66"};
 	if ($printmode) {
