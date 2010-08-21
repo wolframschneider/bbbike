@@ -2530,8 +2530,7 @@ function " . $type . "char_init() {}
     print "</td></tr></table>\n</div>\n" if $bi->{'can_table'};
 
 	    my $BBBikeGooglemap = 1;
-	    if ($q->param('skin') && $q->param('skin') =~ m,^(m|mobile)$, ||
-		$q->virtual_host() =~ /^m\.|^mobile\./ ) {
+            if (is_mobile($q)) {
 		$BBBikeGooglemap = 0;
 		$enable_homemap_streets = 0;
 
@@ -2854,6 +2853,17 @@ EOF
     print $q->end_html;
 }
 
+sub is_mobile {
+    my $q = shift;
+
+    if ($q->param('skin') && $q->param('skin') =~ m,^(m|mobile)$, ||
+        $q->virtual_host() =~ /^m\.|^mobile\./ ) {
+	return 1;
+    } else {
+	return 0;
+    }
+}
+
 sub get_kreuzung {
     my($start_str, $via_str, $ziel_str) = @_;
     if (!defined $start_str) {
@@ -3024,6 +3034,14 @@ sub get_kreuzung {
     $header_args{-script} = {-src => $bbbike_html . "/bbbike_result.js?v=1.13",
 			    };
     header(%header_args);
+
+    if (is_mobile($q)) {
+		print <<EOF;
+<style>
+body, select, input { font-size: x-large }
+</style>
+EOF
+    }
 
     if ((!$start_c && @start_coords != 1) ||
 	(!$ziel_c  && @ziel_coords != 1) ||
