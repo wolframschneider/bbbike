@@ -2539,6 +2539,7 @@ function " . $type . "char_init() {}
 div#routing  	  { position: relative; font-size: xx-large; }
 div#routing input { font-size: xx-large; }
 div.autocomplete  { font-size: xx-large; }
+input 		  { margin: 0.3em; }
 </style>
 EOF
 
