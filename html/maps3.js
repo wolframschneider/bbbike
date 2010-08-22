@@ -402,6 +402,7 @@ function downloadUrl(url, callback) {
 
 		infoWindow = new google.maps.InfoWindow({ maxWidth: 400});
 		var content = "<div id=\"infoWindowContent\">\n"
+		content += "City: " + opt.city + "<br/>\n";
 		content += "Start: " + opt.startname + "<br/>\n";
 		content += "Destination: " + opt.zielname + "<br/>\n";
 		content += "Route Length: " + opt.route_length + "<br/>\n";
