@@ -2535,7 +2535,7 @@ function " . $type . "char_init() {}
 		$enable_homemap_streets = 0;
 
 		print <<EOF;
-<style>
+<style type="text/css">
 div#routing  	  { position: relative; font-size: xx-large; }
 div#routing input { font-size: xx-large; }
 div.autocomplete  { font-size: xx-large; }
@@ -3038,7 +3038,7 @@ sub get_kreuzung {
 
     if (is_mobile($q)) {
 		print <<EOF;
-<style>
+<style type="text/css">
 body, select, input { font-size: x-large }
 </style>
 EOF
@@ -4745,7 +4745,7 @@ EOF
     ROUTE_TABLE:
 	if (is_mobile($q)) {
 	    print <<EOF;
-<style>
+<style type="text/css">
 body, select, input, span.slippymaplink { font-size: x-large }
 </style>
 EOF
