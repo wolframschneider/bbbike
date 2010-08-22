@@ -15,7 +15,6 @@ Varziner Str.: Bauarbeiten, Einbahnstraﬂenregelung zwischen Bundesallee und Varz
 Varziner Platz: Bauarbeiten, es muss geschoben werden	q4::inwork 5458,7866 5492,7868 5517,7869
 Rathausstr.: Baustelle vor dem Roten Rathaus, eng	q3::inwork 10601,12521 10704,12595
 J‰gerstr.: Einbahnstraﬂe	q4::inwork; 9394,11996 9201,11968
-Taubenstr.: Einbahnstraﬂe	q4::inwork; 9406,11899 9208,11872
 Am Carlsgarten: Bauarbeiten	q4::inwork 19468,7962 19372,8012 19334,8046
 Wuhlewanderweg: steiler Anstieg, Fuﬂg‰nger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gef‰lle, Fuﬂg‰nger	q4; 21970,12153 21998,12204
@@ -696,7 +695,7 @@ Nordufer: teilweise sehr schmaler Radweg	q1 7212,14738 7433,14656 7467,14632
 (Weg am Nordgraben): schmaler Weg, m‰ﬂiger Fuﬂg‰ngerverkehr	q2 3563,20589 3537,20624 3470,20683 3391,20746 3312,20789 3152,20852 3094,20905 3062,20923 3032,20930 2919,20910 2570,20837
 (Weg am Waldfriedhof Dahlem): Kurven	q2 1051,5525 825,5420 541,5306
 (Waldweg parallel zur Flanaganstr. zwischen H¸ttenweg und Im Jagen): starke Steigungen und Gef‰lle	q2 1051,5525 1697,5938
-(Altvaterstr./Breisgauer Str. - Salzachstr.): schmaler Fuﬂweg	q3 -2295,3523 -2133,3591
+(Altvaterstr./Breisgauer Str. - Salzachstr.): schmaler Fuﬂweg	q3 -2295,3523 -2253,3540 -2133,3591
 Neustrelitzer Str.: kurvenreich	q1 16752,14745 16668,14765 16534,14740 16443,14825 16346,14750 16256,14828
 (Esplanade - Gr¸ntaler Str.): Zickzack-Kurs	q2 9984,16968 9846,16981 9757,16912
 L¸nette: Fuﬂg‰nger	q1 -1342,15510 -1485,15463
@@ -1346,6 +1345,12 @@ Privatstr. 8: enge Straﬂe	q1 16992,16840 17120,16849 17237,16825
 Grumsiner Str.: enge Straﬂe	q1 22053,16462 22081,16600 22152,16695
 Grumsiner Str.: enge Straﬂe	q1 22081,16600 21908,16634
 Frankentaler Ufer: Fuﬂg‰nger	q1 7159,4023 7132,4028 7096,4051 6890,4124 6859,4085
+R¸hmkorffstr.: recht eng	q1 5697,1098 5620,1153 5573,1211
+Steinheilpfad: recht eng	q1 5585,1275 5573,1211 5455,1150
+Sch‰ferstege - Parkanlage: einige Fuﬂg‰nger, an der Br¸cke offiziell absteigen	q3 13366,20897 13332,20898 13298,20917 13244,20903
+Reginenweg: Radfahren verboten, ggfs. schieben	q4 6484,3292 6482,3327 6431,3417 6426,3425
+Ruthstr.: Fuﬂweg	q2 6330,3005 6320,3022
+Brigittenstr.: Fuﬂweg	q2 6208,2954 6226,2936
 Dennewitzplatz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 7906,10098 7866,9918
 Eichborndamm: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 4240,19019 4232,18981
 Dorotheenstr. (Straﬂenbahn): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 9454,12558 9330,12529
@@ -1402,3 +1407,4 @@ Am Tierpark, linker Gehweg	q1::igndisp; 18647,10172 18715,10003
 Alt-Friedrichsfelde, linker Gehweg	q2::igndisp; 19750,11730 19005,11767 18778,11742 18556,11688 18228,11656
 Landsberger Allee, linker Gehweg	q2::igndisp; 15256,14237 15430,14272
 Sonnenallee, linker Gehweg	q4::igndisp; 13474,8060 13457,8069
+Urbanstr.	q0::igndisp; 11888,9189 11861,9183

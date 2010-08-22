@@ -36,10 +36,9 @@ Varziner Platz: Bauarbeiten, es muss geschoben werden	q4::inwork 5458,7866 5492,
 #: next_check: 2011-01-01
 Rathausstr.: Baustelle vor dem Roten Rathaus, eng	q3::inwork 10601,12521 10704,12595
 #: by: ^^^
-#: last_checked: 2010-06-18
+#: last_checked: 2010-08-14
 J‰gerstr.: Einbahnstraﬂe	q4::inwork; 9394,11996 9201,11968
-#: last_checked: 2010-06-18
-Taubenstr.: Einbahnstraﬂe	q4::inwork; 9406,11899 9208,11872
+#XXX del --- #: last_checked: 2010-06-18 --- Taubenstr.: Einbahnstraﬂe	q4::inwork; 9406,11899 9208,11872
 #: last_checked: 2010-06-19
 Am Carlsgarten: Bauarbeiten	q4::inwork 19468,7962 19372,8012 19334,8046
 # 
@@ -860,7 +859,7 @@ Nordufer: teilweise sehr schmaler Radweg	q1 7212,14738 7433,14656 7467,14632
 (Weg am Waldfriedhof Dahlem): Kurven	q2 1051,5525 825,5420 541,5306
 #: XXX_prog das gehˆrt eigentlich nach comments_mount...
 (Waldweg parallel zur Flanaganstr. zwischen H¸ttenweg und Im Jagen): starke Steigungen und Gef‰lle	q2 1051,5525 1697,5938
-(Altvaterstr./Breisgauer Str. - Salzachstr.): schmaler Fuﬂweg	q3 -2295,3523 -2133,3591
+(Altvaterstr./Breisgauer Str. - Salzachstr.): schmaler Fuﬂweg	q3 -2295,3523 -2253,3540 -2133,3591
 #: by: ^^^
 #: by: AndrÈ K‰ding
 Neustrelitzer Str.: kurvenreich	q1 16752,14745 16668,14765 16534,14740 16443,14825 16346,14750 16256,14828
@@ -1989,3 +1988,15 @@ Grumsiner Str.: enge Straﬂe	q1 22081,16600 21908,16634
 #: by: ^^^
 #: by: Violet Sch‰fer:
 Frankentaler Ufer: Fuﬂg‰nger	q1 7159,4023 7132,4028 7096,4051 6890,4124 6859,4085
+#: by: cd.cj... vvv
+R¸hmkorffstr.: recht eng	q1 5697,1098 5620,1153 5573,1211
+Steinheilpfad: recht eng	q1 5585,1275 5573,1211 5455,1150
+#: by: ^^^
+#: by: christian (...chrisb...):
+Sch‰ferstege - Parkanlage: einige Fuﬂg‰nger, an der Br¸cke offiziell absteigen	q3 13366,20897 13332,20898 13298,20917 13244,20903
+#: by: guylian: vvv
+#: note: "Auf beiden Einfahrten stehen aber Schilder, dass Radfahren verboten ist."
+Reginenweg: Radfahren verboten, ggfs. schieben	q4 6484,3292 6482,3327 6431,3417 6426,3425
+Ruthstr.: Fuﬂweg	q2 6330,3005 6320,3022
+Brigittenstr.: Fuﬂweg	q2 6208,2954 6226,2936
+#: by: ^^^

@@ -1017,7 +1017,7 @@ EOF
        text  => 'L 30; (Schönower Chaussee); OD Bernau Baumfällungen Vollsperrung 11.10.2004-15.10.2004 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 21637,30946 20794,30899
+userdel	q4 21637,30946 21001,30933 20794,30899
 userdel	q4 21637,30946 21955,30976
 EOF
      },
@@ -1108,7 +1108,7 @@ EOF
        text  => 'L 30; (Schönower Chaussee); OL Bernau,zw. Weinbergstraße und Edelweißstraße Straßen- u. Radwegebau Vollsperrung 26.10.2004-23.12.2004 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 21637,30946 20794,30899
+userdel	q4 21637,30946 21001,30933 20794,30899
 userdel	q4 21637,30946 21955,30976
 EOF
      },
@@ -10037,7 +10037,7 @@ EOF
        text  => 'L 314 Zepernicker Chaussee OD Bernau grundhafter Straßenbau Vollsperrung 04.10.2007-21.12.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 22178,30343 21872,30139 21561,30131 21172,29984
+userdel	q4::inwork 22178,30343 21872,30139 21561,30131 21117,29968
 EOF
      },
      { from  => 1191362400, # 2007-10-03 00:00
@@ -10821,7 +10821,7 @@ EOF
        text  => 'L 314 Zepernicker Chaussee OD Bernau grundhafter Straßenbau Vollsperrung 31.01.2008-18.04.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 22178,30343 21872,30139 21561,30131 21172,29984
+userdel	2::inwork 22178,30343 21872,30139 21561,30131 21117,29968
 EOF
      },
      { from  => 1207420756, # 2008-04-05 20:39
@@ -11109,7 +11109,7 @@ EOF
        text  => 'Rückbau der Fr.-Ebert-Str. zwischen Breite Str. und Platz der Einheit, Bauarbeiten bis Ende 2009. Unter Umständen Umfahrung über Alten Markt notwendig. ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -12758,-1654 -12755,-1585 -12773,-1544
+userdel	2::inwork -12758,-1654 -12772,-1577 -12780,-1545
 EOF
      },
      { from  => 1211228399, # 2008-05-19 22:19
@@ -18108,6 +18108,15 @@ EOF
        source_id => 'LS/W-SG33-P/10/410',
        data  => <<EOF,
 userdel	2::inwork -2815,-3574 -3368,-4430
+EOF
+     },
+     { from  => 1282168322, # 2010-08-18 23:52
+       until => 1291158000, # 2010-12-01 00:00
+       text  => 'Belzig: K6933: Brückeninstandsetzung / Streckenausbau Bad Belzig - Borne, 16.08.2010 bis 30.11.2010 ',
+       type  => 'gesperrt',
+       source_id => '106900748',
+       data  => <<EOF,
+userdel	2::inwork -45941,-31977 -46134,-32389 -46514,-32785
 EOF
      },
     );
