@@ -17,6 +17,17 @@ my $debug = 1;
 
 my $city_center;
 
+sub is_mobile {
+    my $q = shift;
+
+    if ($q->param('skin') && $q->param('skin') =~ m,^(m|mobile)$, ||
+        $q->virtual_host() =~ /^m\.|^mobile\.|^dev2/ ) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 # extract URLs from web server error log
 sub extract_route {
     my $file = shift;
@@ -87,6 +98,7 @@ EOF
 
 print $q->header( -charset => 'utf-8' );
 
+my $sensor = is_mobile($q) ? 'true' : 'false';
 print $q->start_html(
     -title => 'BBBike @ World livesearch',
     -head  => $q->meta(
@@ -113,7 +125,7 @@ print $q->start_html(
         {
             -type => 'text/javascript',
             'src' =>
-              "http://maps.google.com/maps/api/js?sensor=false&amp;language=de"
+              "http://maps.google.com/maps/api/js?sensor=$sensor&amp;language=de"
         },
         { -type => 'text/javascript', 'src' => "../html/maps3.js" }
     ]
