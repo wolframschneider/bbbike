@@ -242,10 +242,10 @@ sub polar_converter { @_[ 0, 1 ] }
 sub log_route {
     my %args = @_;
 
-    my $q = $args{'q'};
+    my $q    = $args{'q'};
     my $data = "";
 
-    $data .= $q->url(-query=>1);
+    $data .= $q->url( -query => 1 );
 
     warn $data, "\n";
 }
@@ -343,34 +343,41 @@ sub get_html {
     {
         my $q = new CGI;
         $script = $q->param('source_script') || 'bbbike.cgi';
-        if (!$q->param("map_menu")) {
-            $maponly = qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|;
+        if ( !$q->param("map_menu") ) {
+            $maponly =
+qq|div#nomap \t{ display: none }\n\thtml, body \t{ margin: 0; padding: 0; }\n|;
             $slippymap_size = qq{ width: 100%; height: 100%;};
-	} else {
-            $maponly = qq|div#menu \t{ display: none }\n div#nomap { height: 5em; }\n|;
+        }
+        else {
+            $maponly =
+              qq|div#menu \t{ display: none }\n div#nomap { height: 5em; }\n|;
             $slippymap_size = qq{ width: 100%; height: 80%;};
-            $wheelzoom = qq|map.enableScrollWheelZoom();|;
+            $wheelzoom      = qq|map.enableScrollWheelZoom();|;
         }
 
-	my @route = split(/!/, $q->param("area"));
-    	$area_code .= qq{var area_list = [};
-    	foreach my $i (@route) {
-	    my ($x, $y) = split(/,/, $i);
-	    $area_code .= qq{[$y, $x], };
-    	}
-    	$area_code =~ s/,\s*$//;
+        my @route = split( /!/, $q->param("area") );
+        $area_code .= qq{var area_list = [};
+        foreach my $i (@route) {
+            my ( $x, $y ) = split( /,/, $i );
+            $area_code .= qq{[$y, $x], };
+        }
+        $area_code =~ s/,\s*$//;
         $area_code .= "];\n";
-	#use Data::Dumper; warn Dumper($area_code);
 
-        $area_code .= qq{var startname = '} . escapeHTML($q->param("startname")) . qq{';\n};
-        $area_code .= qq{var zielname = '} .  escapeHTML($q->param("zielname")) . qq{';\n};
+        #use Data::Dumper; warn Dumper($area_code);
+
+        $area_code .=
+            qq{var startname = '}
+          . escapeHTML( $q->param("startname") )
+          . qq{';\n};
+        $area_code .=
+          qq{var zielname = '} . escapeHTML( $q->param("zielname") ) . qq{';\n};
 
         $area_code .= "\n\n";
     }
 
-
     my $zoom_code = '';
-    my @route = ();
+    my @route     = ();
     for my $def (
         [ $feeble_paths_polar, '#ff00ff', 5,  0.4 ],
         [ $paths_polar,        '#ff00ff', 10, undef ],
@@ -389,11 +396,13 @@ EOF
                     sprintf 'new GLatLng(%.5f, %.5f)', $y, $x;
                   } @$path_polar
             );
-	    push(@route, 
-		  map {
+            push(
+                @route,
+                map {
                     my ( $x, $y ) = split /,/, $_;
-                    [sprintf('%.5f', $y), sprintf('%.5f', $x)]
-                  } @$path_polar );
+                    [ sprintf( '%.5f', $y ), sprintf( '%.5f', $x ) ]
+                  } @$path_polar
+            );
 
             $route_js_code .= qq{], "$color", $width};
             if ( defined $opacity ) {
@@ -408,11 +417,11 @@ EOF
     }
     $zoom_code .= qq{var marker_list = [\n};
     foreach my $i (@route) {
-	$zoom_code .= qq{[$i->[0],$i->[1]],\n};
+        $zoom_code .= qq{[$i->[0],$i->[1]],\n};
     }
     $zoom_code =~ s/,\n$/];\n/;
 
-    &log_route('q'=>new CGI, 'route' => \@route);
+    &log_route( 'q' => new CGI, 'route' => \@route );
 
     my $html = <<EOF;
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -1229,7 +1238,6 @@ EOF
 EOF
     }
 
-
     $html .= <<EOF;
 
     GEvent.addListener(map, "click", onClick);
@@ -1256,7 +1264,9 @@ EOF
     <div class="sml" id="wpt">
 EOF
 
-    $html .= qq{<script type="text/javascript">\nelevation_initialize();\n</script>\n\n} if CGI->new()->param("map_menu");
+    $html .=
+qq{<script type="text/javascript">\nelevation_initialize();\n</script>\n\n}
+      if CGI->new()->param("map_menu");
 
     for my $wpt (@$wpts) {
         my ( $x, $y, $name ) = @$wpt;
