@@ -2858,7 +2858,7 @@ sub is_mobile {
     my $q = shift;
 
     if ($q->param('skin') && $q->param('skin') =~ m,^(m|mobile)$, ||
-        $q->virtual_host() =~ /^m\.|^mobile\.|^dev2/ ) {
+        $q->virtual_host() =~ /^m\.|^mobile\.|^dev/ ) {
 	return 1;
     } else {
 	return 0;
@@ -6994,9 +6994,9 @@ sub header {
 |);
         } else {
             my $my_lang = &my_lang($lang);
-
+	    my $sensor = is_mobile($q) ? 'true' : 'false';
 	push(@$head, qq|
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=$my_lang"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=$sensor&amp;language=$my_lang"></script>
     <script src="../html/maps3.js" type="text/javascript"></script>
 |);
 	}
