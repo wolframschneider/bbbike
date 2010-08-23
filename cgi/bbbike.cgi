@@ -2858,7 +2858,7 @@ sub is_mobile {
     my $q = shift;
 
     if ($q->param('skin') && $q->param('skin') =~ m,^(m|mobile)$, ||
-        $q->virtual_host() =~ /^m\.|^mobile\.|^dev/ ) {
+        $q->virtual_host() =~ /^m\.|^mobile\.|^dev2/ ) {
 	return 1;
     } else {
 	return 0;
