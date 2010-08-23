@@ -5126,7 +5126,7 @@ EOF
 		    $qq2->param('output_as', "kml-track");
 
 		    my $href = $bbbike_script;
-		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->url(-query => 1) . qq{">KML</a>};
+		    print qq{<a title="view route with Google Earth" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->url(-query => 1) . qq{">KML</a>};
 		}
 		if ($can_gpsies_link) {
 		    my $qq2 = cgi_utf8($use_utf8);
@@ -5136,7 +5136,7 @@ EOF
 			$bbbike_script = $BBBike::BBBIKE_DIRECT_WWW;
 		    }
 		    my $href = 'http://www.gpsies.com/map.do?url=' . $bbbike_script . '?' . $qq2->query_string;
-		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com</a>};
+		    print qq{<a title="upload route to GPSies.com" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com</a>};
 		}
 		if (0) { # XXX not yet
 		    my $qq2 = CGI->new({});
