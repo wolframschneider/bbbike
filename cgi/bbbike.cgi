@@ -7047,7 +7047,7 @@ sub header {
 	print "<h1>BBBike</h1>";
     }
     if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$})) {
-        my $query_string = $q->query_string;
+        my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
 	print qq{<div style="position:absolute; top:5px; right:10px;">};
