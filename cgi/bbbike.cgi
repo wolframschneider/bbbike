@@ -5106,6 +5106,7 @@ EOF
 #		    }
 		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">PalmDoc</a>};
 		}
+	        print qq{\n<a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">PDF</a></span>\n};
 		if ($can_gpx) {
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
@@ -5256,7 +5257,7 @@ EOF
 
 	        print qq{<hr>\n};
 	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">larger map</a></span>\n};
-	        print qq{ | <span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out">print map route</a></span>\n};
+	        print qq{ | <span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">print map route</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url" style="display:none"> $permalink</span></span>\n};
 	        print qq{<p></p>\n};
 
