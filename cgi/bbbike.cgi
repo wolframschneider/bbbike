@@ -103,6 +103,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $datadir $show_mini_map $show_mini_googlemap $show_mini_googlemap_city
 	    $no_input_streetname
 	    $enable_opensearch_suggestions
+	    $enable_current_weather
 	    $warn_message $use_utf8 $use_via
 	    $enable_google_analytics
 	    $with_green_ways
@@ -7037,7 +7038,12 @@ sub header {
         my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
-	print qq{<div style="position:absolute; top:5px; right:10px;">};
+	print qq{<div id="top_right">};
+        if ($enable_current_weather) {
+	    print qq{<span id="current_weather">weather</span>\n};
+	}
+
+	print qq{  <span id="language_switch">};
 	if ($lang eq 'en') {
 	    print <<EOF;
 <a href="$bbbike_de_script$query_string"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a>
@@ -7049,6 +7055,7 @@ EOF
 <a href="$bbbike_en_script$query_string"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>
 EOF
 	}
+	print qq{  </span>\n};
 	print qq{</div>\n};
     }
 

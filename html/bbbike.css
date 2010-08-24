@@ -253,3 +253,5 @@ div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
 
 span#housenumber { font-size: small; }
 
+div#top_right { position:absolute; top:5px; right:10px; }
+
