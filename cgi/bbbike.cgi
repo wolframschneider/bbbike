@@ -1965,8 +1965,6 @@ EOF
 	    print <<EOF;
 <p>
 Willkommen bei BBBike! Wir helfen Dir, eine gute Fahrradroute in <b>$city</b> und Umgebung zu finden.<br>
-<!-- Bei nicht erfassten Straﬂen wird automatisch die n‰chste bekannte verwendet. -->
-<!-- <b>Straﬂen bitte ohne Hausnummern oder Postleitzahlen eingeben.</b><br><br> -->
 </p>
 EOF
 	}
@@ -2517,11 +2515,7 @@ function " . $type . "char_init() {}
 
 	    print qq{<!-- use div.text() as local variable to map -->\n};
             print qq{<div style="display:none" id="streetmap2"></div>\n};
-            print qq{<div style="display:none" id="streetmap3"></div>\n}; 
-            print qq{<div id="foo"></div>\n}; 
-            print qq{<div id="foo2"></div>\n}; 
-            print qq{<div id="foo3"></div>\n}; 
-            print qq{<div id="foo4"></div>\n}; 
+            #print qq{<div style="display:none" id="streetmap3"></div>\n}; 
 
     print "<input type=hidden name=scope value='" .
 	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
