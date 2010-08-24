@@ -2498,7 +2498,7 @@ function " . $type . "char_init() {}
                	my @list = @{ $geo->{'bbox_wgs84'} };
 	  	my $area = "$list[0],$list[1]!$list[2],$list[3]";	
 	        $slippymap_url->param( 'area', $area );
-		my @center =  @{ $geo->{'center'} };
+		my @center =  exists $geo->{'center'} ? @{ $geo->{'center'} } : @{ $geo->{'bbox_wgs84'} };
 		@weather_coords = ( $center[1], $center[0] );
 	    } 
 
