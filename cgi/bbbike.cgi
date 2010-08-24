@@ -6969,14 +6969,10 @@ sub header {
     if ($enable_opensearch_suggestions) {
 	    my $city = $osm_data && $datadir =~ m,data-osm/(.+), ? $1 : 'Berlin';
 
-	push(@$head, qq|
-
+	push(@$head, qq|\
 <script src="../html/jquery-1.4.2.min.js" type="text/javascript"></script>
 <script src="../html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js" type="text/javascript"></script>
-
-<link href="../html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css">
-
-|);
+<link href="../html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css"> |);
 
     }
 
@@ -6989,28 +6985,25 @@ sub header {
         # google maps API version
 	if ($gmap_api_version == 2) {
 	push(@$head, qq|
-    <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
-    <script src="../html/maps.js" type="text/javascript"></script>
+<script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
+<script src="../html/maps.js" type="text/javascript"></script>
 |);
         } else {
             my $my_lang = &my_lang($lang);
 	    my $sensor = is_mobile($q) ? 'true' : 'false';
-	push(@$head, qq|
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=$sensor&amp;language=$my_lang"></script>
-    <script src="../html/maps3.js" type="text/javascript"></script>
-|);
+	push(@$head, qq|\
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=$sensor&amp;language=$my_lang"></script>
+<script src="../html/maps3.js" type="text/javascript"></script>|);
 	}
 
     }
-	push(@$head, qq|
-|);
-
+    push (@$head, $q->meta({-name => "robots", -content => "nofollow,noindex,noarchive"}));
 
     $args{-head} = $head if $head && @$head;
 
     if (!$smallform) {
 
-
+	
 	print $q->start_html
 	    (%args,
 	     -lang => 'de-DE',
