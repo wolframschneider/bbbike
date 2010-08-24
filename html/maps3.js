@@ -543,7 +543,7 @@ function updateWeather (data) {
 	   return;
         }
 
-	message += temperature + "C ";
+	message += temperature + "C";
 	var clouds = js["weatherObservation"]["clouds"];
 	if (clouds && clouds != "n/a") {
 	   message += ", " + clouds;
