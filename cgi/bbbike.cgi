@@ -2338,11 +2338,15 @@ EOF
 
 	   if ($enable_opensearch_suggestions) { 
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
+
+		my $deferRequestBy = is_mobile($q) ? 500 : 100;
+		my $maxHeight = is_mobile($q) ? 200 : 160;
+		my $width = 300;
 	    print qq|
 
 <script type="text/javascript">
 	var ac_$city = \$('#$searchinput').autocomplete( 
-		{ serviceUrl: 'api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:160, width:300, deferRequestBy:100, noCache: true }
+		{ serviceUrl: 'api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:$maxHeight, width:$width, deferRequestBy:$deferRequestBy, noCache: true }
 	);
 </script>
 
