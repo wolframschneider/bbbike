@@ -7052,10 +7052,10 @@ sub header {
 
 	print qq{<div id="top_right">};
         if ($enable_current_weather) {
-	    print qq{<span id="current_weather"></span>\n};
+	    print qq{\n<span id="current_weather"></span>\n};
 	}
 
-	print qq{  <span id="language_switch">};
+	print qq{<span id="language_switch">};
 	if ($lang eq 'en') {
 	    print <<EOF;
 <a href="$bbbike_de_script$query_string"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a>
@@ -7067,7 +7067,7 @@ EOF
 <a href="$bbbike_en_script$query_string"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>
 EOF
 	}
-	print qq{  </span>\n};
+	print qq{</span>\n};
 	print qq{</div>\n};
     }
 
