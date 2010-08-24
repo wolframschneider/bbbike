@@ -248,7 +248,7 @@ function createXmlHttpRequest() {
      return new XMLHttpRequest();
    }
  } catch (e) {
-   changeStatus(e);
+   // alert(e);
  }
  return null;
 };
@@ -290,7 +290,7 @@ function downloadUrl(url, callback) {
  try {
    request.send(null);
  } catch (e) {
-   changeStatus(e);
+   // alert(e);
  }
 };
 
