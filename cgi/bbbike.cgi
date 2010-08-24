@@ -7040,7 +7040,7 @@ sub header {
 
 	print qq{<div id="top_right">};
         if ($enable_current_weather) {
-	    print qq{<span id="current_weather">weather</span>\n};
+	    print qq{<span id="current_weather"></span>\n};
 	}
 
 	print qq{  <span id="language_switch">};
