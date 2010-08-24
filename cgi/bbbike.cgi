@@ -2486,6 +2486,7 @@ function " . $type . "char_init() {}
     if ($show_mini_googlemap_city) {
 	    my $geo = get_geography_object();
             my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
+	    my @weather_coords;
 
             my $slippymap_url = CGI->new($q);
             $slippymap_url->param('map_menu', '0');
@@ -2497,6 +2498,8 @@ function " . $type . "char_init() {}
                	my @list = @{ $geo->{'bbox_wgs84'} };
 	  	my $area = "$list[0],$list[1]!$list[2],$list[3]";	
 	        $slippymap_url->param( 'area', $area );
+		my @center =  @{ $geo->{'center'} };
+		@weather_coords = ( $center[1], $center[0] );
 	    } 
 
 	    elsif (exists $geo->{'center'}) {
@@ -2554,6 +2557,8 @@ EOF
 	    }
 
 if ($enable_homemap_streets) {
+
+
 print <<'EOF';
 <script type="text/javascript">
   // remember URL
@@ -2567,7 +2572,14 @@ print <<'EOF';
 EOF
 }
 
-    }
+   if ($enable_current_weather && scalar(@weather_coords) > 0) {
+print <<EOF;
+<script type="text/javascript">
+   display_current_weather( $weather_coords[0], $weather_coords[1] );
+</script>
+EOF
+   }
+}
 
 print <<EOF;
 <script type="text/javascript">
