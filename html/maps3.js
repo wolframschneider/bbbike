@@ -516,8 +516,12 @@ function custom_map ( maptype, lang ) {
 
 /* not really a maps function, but AJAX related */
 
-function display_current_weather ( lat, lng ) {
-    var url = 'http://ws.geonames.org/findNearByWeatherJSON?lat=' + lat + '&lng=' + lng;
+function display_current_weather ( lat, lng, lang ) {
+    // var url = 'http://ws.geonames.org/findNearByWeatherJSON?lat=' + lat + '&lng=' + lng;
+    var url = 'weather.cgi?lat=' + lat + '&lng=' + lng;
+    if (lang && lang != "") {
+	url += '&lang=' + lang;
+    }
 
     downloadUrl(url, function(data, responseCode) {
 	if(responseCode == 200) {
@@ -543,17 +547,20 @@ function updateWeather (data) {
 	   return;
         }
 
-	message += temperature + "C";
+	message += temperature + " &deg;C";
 	var clouds = js["weatherObservation"]["clouds"];
-	if (clouds && clouds != "n/a") {
+	if (clouds && clouds.substring(0, 2) != "n/") {
 	   message += ", " + clouds;
 	}
 
 	var wind = parseInt( js["weatherObservation"]["windSpeed"] );
 	if (wind > 0) {
-	   message += ' and wind speed of ' + wind + " km/h";
+	   message += ', wind speed ' + wind + " km/h";
 	}
 
-	$("span#current_weather").html(message);
+	var span = document.getElementById("current_weather");
+	if (span) {
+		span.innerHTML = message;
+	}
 }
 

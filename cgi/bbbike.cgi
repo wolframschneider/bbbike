@@ -2573,9 +2573,10 @@ EOF
 }
 
    if ($enable_current_weather && scalar(@weather_coords) > 0) {
+	my $weather_lang = &my_lang($lang);
 print <<EOF;
 <script type="text/javascript">
-   display_current_weather( $weather_coords[0], $weather_coords[1] );
+   display_current_weather( "$weather_coords[0]", "$weather_coords[1]", "$weather_lang" );
 </script>
 EOF
    }
@@ -7052,19 +7053,17 @@ sub header {
 
 	print qq{<div id="top_right">};
         if ($enable_current_weather) {
-	    print qq{\n<span id="current_weather"></span>\n};
+	    print qq{\n<span id="current_weather"> </span>\n};
 	}
 
-	print qq{<span id="language_switch">};
+	print qq{<span id="language_switch">\n};
 	if ($lang eq 'en') {
 	    print <<EOF;
-<a href="$bbbike_de_script$query_string"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a>
-<img class="selectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0">
+<a href="$bbbike_de_script$query_string"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a><img class="selectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0">
 EOF
 	} else {
 	    print <<EOF;
-<img class="selectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" border="0" title="Deutsch">
-<a href="$bbbike_en_script$query_string"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>
+<img class="selectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" border="0" title="Deutsch"><a href="$bbbike_en_script$query_string"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>
 EOF
 	}
 	print qq{</span>\n};
