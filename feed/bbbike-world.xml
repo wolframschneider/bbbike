@@ -16,6 +16,14 @@
   <generator uri="http://search.cpan.org/dist/XML-Atom-SimpleFeed/"
   version="0.86">XML::Atom::SimpleFeed</generator>
   <entry>
+    <title>Weather</title>
+    <id>d156aa8e64721bff611a2d794fcbcf8e</id>
+    <content>Display current weather conditions in local
+    language.</content>
+    <updated>2010-08-21T12:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
     <title>New cities for England</title>
     <id>cfb1ddfbc43b4e93f9d20e729a2dea2e</id>
     <content>New cities: Birmingham, Bristol, Leeds, Liverpool,

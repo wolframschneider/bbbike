@@ -20,6 +20,19 @@ my $feed = XML::Atom::SimpleFeed->new(
 
 
 $feed->add_entry(
+    title => 'Weather',
+    id    => 'd156aa8e64721bff611a2d794fcbcf8e',
+
+    content => {
+        type    => 'text',
+        content => qq{Display current weather conditions in local language.},
+    },
+
+    updated  => '2010-08-21T12:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
     title => 'New cities for England',
     id    => 'cfb1ddfbc43b4e93f9d20e729a2dea2e',
 
