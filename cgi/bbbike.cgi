@@ -5133,7 +5133,7 @@ EOF
 		    $qq2->param('output_as', "kml-track");
 
 		    my $href = $bbbike_script;
-		    print qq{<a title="view route with Google Earth" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->url(-query => 1) . qq{">KML</a>};
+		    print qq{<a title="view route with Google Earth" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">KML</a>};
 		}
 		if ($can_gpsies_link) {
 		    my $qq2 = cgi_utf8($use_utf8);
