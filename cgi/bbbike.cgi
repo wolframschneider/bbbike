@@ -4130,7 +4130,7 @@ sub display_route {
 
     my(@weather_res);
     if ($show_weather || $bp_obj) {
-	@weather_res = gather_weather_proc() if !$osm_data;
+	@weather_res = gather_weather_proc() if $osm_data;
     }
 
     my $sess = tie_session(undef);
@@ -6692,6 +6692,13 @@ sub start_weather_proc {
     if (!defined $stat[9] or $stat[9]+30*60 < time()) {
 	my @weather_cmdline = (@weather_cmdline,
 			       '-o', $wettermeldung_file);
+	if ($osm_data) {
+	    return if ! -f "../$datadir/icao";
+	    @weather_cmdline = ("../miscsrc/icao_metar.pl", "--outfile=$wettermeldung_file", "--wettermeldung", "../$datadir/icao");
+	}
+
+	warn "Weather cmdline: ", join(" ",  @weather_cmdline), "\n" if 1 || $debug >= 2;
+
 	if ($^O eq 'MSWin32') { # XXX Austesten
 	    eval q{
 		require Win32::Process;

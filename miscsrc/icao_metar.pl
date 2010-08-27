@@ -26,7 +26,7 @@ my $metar_url = "http://weather.noaa.gov/cgi-bin/mgetmetar.pl?cccc=";
 
 sub usage () {
     die <<EOF;
-usage: $0 [-wettermeldung] datadirectory | icaofile
+usage: $0 [-wettermeldung] [ -outfile file ] datadirectory | icaofile
        $0 [-wettermeldung] -near lon,lat datadirectory | icaofile
        $0 [-wettermeldung] -sitecode EDDT
 EOF
@@ -35,13 +35,19 @@ EOF
 my $wanted_site_code;
 my $wettermeldung_compatible;
 my $near;
+my $outfile;
 GetOptions("sitecode=s" => \$wanted_site_code,
 	   "wettermeldung!" => \$wettermeldung_compatible,
 	   "near=s" => \$near,
+	   "outfile=s" => \$outfile,
 	  )
     or usage;
 
 my $ua = LWP::UserAgent->new;
+
+if ($outfile) {
+   open (\*STDOUT, "> $outfile") or die "open >$outfile: $!\n";
+}
 
 my @sites;
 if ($wanted_site_code) {
