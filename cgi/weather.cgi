@@ -15,11 +15,13 @@ my $debug = 1;
 # main
 #
 
-print $q->header( -type => 'application/json;charset=UTF-8',
-    -expire => '+30m' );
+print $q->header(
+    -type   => 'application/json;charset=UTF-8',
+    -expire => '+30m'
+);
 
-my $lat = $q->param('lat');
-my $lng = $q->param('lng');
+my $lat  = $q->param('lat');
+my $lng  = $q->param('lng');
 my $lang = $q->param('lang');
 
 my $url = 'http://ws.geonames.org/findNearByWeatherJSON?lat=';
@@ -30,6 +32,11 @@ if ( $lat && $lng ) {
 
     my $content = get($url);
 
-    print $content;
+    if ($content) {
+        print $content;
+    }
+    else {
+        warn "No weather data for: $url\n" if $debug >= 1;
+    }
 }
 
