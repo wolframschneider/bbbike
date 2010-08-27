@@ -71,6 +71,8 @@ sub new {
     $self->{Lang}      = delete $args{Lang};
     $self->{Geo}       = delete $args{Geo};
 
+    delete $args{"lang"};
+
     if (defined $self->{Return} &&
 	$self->{Return} eq 'string') {
 	if (!defined $self->{Filename}) {
