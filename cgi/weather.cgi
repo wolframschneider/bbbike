@@ -45,14 +45,14 @@ sub get_data_from_cache {
 }
 
 sub write_to_cache {
-    my $file = shift;
+    my $file    = shift;
     my $content = shift;
 
-        my $fh = new IO::File $file, "w"
-          or do { warn "open > $file: $!\n"; return; };
-        warn "Write weather data to cache file: $file\n" if $debug >= 2;
+    my $fh = new IO::File $file, "w"
+      or do { warn "open > $file: $!\n"; return; };
+    warn "Write weather data to cache file: $file\n" if $debug >= 2;
 
-        print $fh $content;
+    print $fh $content;
 }
 
 # $q = CGI->new('lat=53&lng=15&lang=de');
