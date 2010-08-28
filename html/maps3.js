@@ -516,9 +516,9 @@ function custom_map ( maptype, lang ) {
 
 /* not really a maps function, but AJAX related */
 
-function display_current_weather ( lat, lng, lang ) {
+function display_current_weather ( lat, lng, lang, city ) {
     // var url = 'http://ws.geonames.org/findNearByWeatherJSON?lat=' + lat + '&lng=' + lng;
-    var url = 'weather.cgi?lat=' + lat + '&lng=' + lng;
+    var url = 'weather.cgi?lat=' + lat + '&lng=' + lng + '&city=' + city;
     if (lang && lang != "") {
 	url += '&lang=' + lang;
     }
