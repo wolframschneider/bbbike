@@ -560,7 +560,7 @@ function updateWeather (data) {
 
 	var wind = parseInt( js["weatherObservation"]["windSpeed"] );
 	if (wind > 0) {
-	   message += ', wind speed ' + wind + " km/h";
+	   message += ', wind speed ' + wind + " m/s";
 	}
 
 	var span = document.getElementById("current_weather");
