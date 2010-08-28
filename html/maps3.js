@@ -516,11 +516,12 @@ function custom_map ( maptype, lang ) {
 
 /* not really a maps function, but AJAX related */
 
-function display_current_weather ( lat, lng, lang, city ) {
+function display_current_weather ( weather ) {
     // var url = 'http://ws.geonames.org/findNearByWeatherJSON?lat=' + lat + '&lng=' + lng;
-    var url = 'weather.cgi?lat=' + lat + '&lng=' + lng + '&city=' + city;
-    if (lang && lang != "") {
-	url += '&lang=' + lang;
+    var url = 'weather.cgi?lat=' + weather.lat + '&lng=' + weather.lng + '&city=' + weather.city;
+
+    if (weather.lang && weather.lang != "") {
+	url += '&lang=' + weather.lang;
     }
 
     downloadUrl(url, function(data, responseCode) {

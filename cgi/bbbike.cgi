@@ -2576,7 +2576,7 @@ EOF
 	my $weather_lang = &my_lang($lang);
 print <<EOF;
 <script type="text/javascript">
-   display_current_weather( "$weather_coords[0]", "$weather_coords[1]", "$weather_lang", "$cityname" );
+   display_current_weather( { lat:"$weather_coords[0]", lng:"$weather_coords[1]", lang:"$weather_lang", city:"$cityname"} );
 </script>
 EOF
    }
