@@ -6688,14 +6688,14 @@ sub fix_coords {
 }
 
 sub start_weather_proc {
+
+    # not supported for OSM data 
+    return if $osm_data;
+
     my(@stat) = stat($wettermeldung_file);
     if (!defined $stat[9] or $stat[9]+30*60 < time()) {
 	my @weather_cmdline = (@weather_cmdline,
 			       '-o', $wettermeldung_file);
-	if ($osm_data) {
-	    return if ! -f "../$datadir/icao";
-	    @weather_cmdline = ("../miscsrc/icao_metar.pl", "--outfile=$wettermeldung_file", "--wettermeldung", "../$datadir/icao");
-	}
 
 	warn "Weather cmdline: ", join(" ",  @weather_cmdline), "\n" if 1 || $debug >= 2;
 
@@ -6734,6 +6734,8 @@ sub start_weather_proc {
 }
 
 sub gather_weather_proc {
+    return &gather_weather_proc_osm() if $osm_data;
+
     my @res;
     my(@stat) = stat($wettermeldung_file);
     if (defined $stat[9] and $stat[9]+30*60 > time()) { # Aktualität checken
@@ -6745,6 +6747,61 @@ sub gather_weather_proc {
     }
     @res;
 }
+
+sub bearing {
+    my $angle = shift || 0;    #degrees
+    my $lang = shift || "en";
+
+    my %data = (
+    	1 => [qw{N E S W}],
+    	2 => [qw{N NE E SE S SW W NW}],
+    	3 => [qw{N NNE NE ENE E ESE SE SSE S SSW SW WSW W WNW NW NNW}],
+    	6 => [qw{N NNO NO ONO O OSO SO SSO S SSW SW WSW W WNW NW NNW}]
+    );
+
+    my $lang_ref = $lang eq 'de' ? 6 : 3;
+
+    $angle += 360 while ( $angle < 0 );
+    my @data = @{ $data{$lang_ref} };
+
+    return $data[ int( $angle / 360 * @data + 0.5 ) % @data ];
+}
+
+sub gather_weather_proc_osm  {
+    my $my_lang = &my_lang($lang);
+
+    my $file = "$wettermeldung_file.$my_lang.json";
+
+    return if ! -f $file;
+
+    my $fh = new IO::File $file, "r" or do { 
+	warn "open $file: $!\n";
+	return;
+    };
+
+    my $content = "";
+    while(<$fh>) {
+	$content .= $_;
+    }
+    undef $fh;
+   
+    require JSON; 
+
+    my $perl = JSON::decode_json ($content);
+    my $p = $perl->{weatherObservation};
+    return if ref $p ne 'HASH';
+
+    my ($date, $time) = split(" ", $p->{datetime});
+    $time =~ s,(\d\d):(\d\d):(\d\d),$1:$2,;
+    $time .= " UTC";
+
+    my @data = ( $date, $time, $p->{temperature}, $p->{hectoPascAltimeter}, 
+		 bearing($p->{windDirection}, $my_lang), $p->{windSpeed}, $p->{humidity}, $p->{windSpeed}, 
+		 "", $p->{weatherCondition});
+
+    return @data;
+}
+
 
 sub etag {
     my $lang = 'de'; # XXX
