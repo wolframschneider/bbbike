@@ -73,7 +73,7 @@ my $lang = $q->param('lang');
 my $url = 'http://ws.geonames.org/findNearByWeatherJSON?lat=';
 
 my $wettermeldung_file      = &cache_file($q);
-my $wettermeldung_file_json = "$wettermeldung_file.json";
+my $wettermeldung_file_json = "$wettermeldung_file.$lang.json";
 
 if ( my $content = get_data_from_cache($wettermeldung_file_json) ) {
     print $content;
