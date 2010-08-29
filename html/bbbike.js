@@ -128,6 +128,10 @@ function updateWeather (data) {
 
 // find a city and increase font size and set focus
 function higlightCity (city) {
+    if (!city || city == "NO_CITY") {
+	return;
+    }
+
     city =  "C_" + city;
 
     var a = document.getElementsByTagName("a");
@@ -141,5 +145,37 @@ function higlightCity (city) {
 
     // wait until the page loaded
     setTimeout(function() { if (focus) { focus.focus(); }}, 300 );
+}
+
+
+function geoCity (obj) {
+    // "13.3888548", "52.5170397";
+    // "-123.1333301", "49.2499987"
+    if (!obj || obj.lng == undefined || obj.lat == undefined) {
+	return;
+    }
+
+    var url = 'cgi/location.cgi?lng=' + obj.lng + '&lat=' + obj.lat;
+	
+    downloadUrl(url, function(data, responseCode) {
+        if(responseCode == 200) {
+            higlightCity(data);
+        } else if(responseCode == -1) {
+           alert("Data request timed out. Please try later.");
+        } else {
+            alert("Request resulted in error. Check XML file is retrievable.");
+        }
+    });
+}
+
+function focusCity () {
+    if (!navigator.geolocation) {
+	return;
+    }
+
+    navigator.geolocation.getCurrentPosition(function(position) {  
+	var obj = { "lat": position.coords.latitude, "lng": position.coords.longitude };
+        geoCity(obj);
+   });  
 }
 
