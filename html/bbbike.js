@@ -101,6 +101,10 @@ function updateWeather (data) {
 	// invalid label bug
 	var js = eval(  "(" + data + ")" );
 
+	if (!js["weatherObservation"]) {
+	    return; // no weather
+	}
+
 	var temperature = js["weatherObservation"]["temperature"];
 	if (temperature == 0 && js["weatherObservation"]["dewPoint"] == 0 && js["weatherObservation"]["humidity"] == 100) {
 	   // broken data, ignore
