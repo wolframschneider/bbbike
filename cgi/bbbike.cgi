@@ -917,7 +917,7 @@ CGI->import('-no_xhtml');
 
 $q = new CGI;
 
-if ($q->user_agent("MSIE 6.0")) {
+if ($q->user_agent("MSIE")) {
    if ($gmap_api_version == 3) {
 	warn "Downgrade to google maps v2 for IE6: ", $q->remote_host, " ", $q->url, " ", $q->user_agent, "\n" if 1 || $debug;
         $gmap_api_version = 2;
