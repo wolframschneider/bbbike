@@ -117,7 +117,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $gmap_api_version
 	   );
 
-$gmap_api_version = 3;
+$gmap_api_version = 2;
 
 # XXX This may be removed one day
 use vars qw($use_cooked_street_data);
@@ -2572,7 +2572,7 @@ print <<'EOF';
 EOF
 }
 
-   if ($enable_current_weather && scalar(@weather_coords) > 0) {
+   if ($enable_current_weather && scalar(@weather_coords) > 0 && $gmap_api_version > 2) {
 	my $weather_lang = &my_lang($lang);
 print <<EOF;
 <script type="text/javascript">
