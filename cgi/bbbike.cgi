@@ -6927,10 +6927,8 @@ sub header {
 		      ? \&CGI::link
 		      : \&CGI::Link);
     my $head = [];
-    push @$head, $q->meta({-http_equiv => "Content-Script-Type",
-			   -content => "text/javascript"});
-    push @$head, $q->meta({-name => "language",
-			   -content => $lang ? $lang : "de"});
+    push @$head, $q->meta({-http_equiv => "Content-Script-Type", -content => "text/javascript"});
+    # push @$head, $q->meta({-name => "language", -content => $lang ? $lang : "de"});
     if ($city eq 'Berlin_DE') {
 	push @$head, $q->meta({-name => "description",
 			       -content => ($lang eq 'en'
