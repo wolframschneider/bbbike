@@ -180,7 +180,7 @@ my $json = new JSON;
 my $cities;
 my %hash;
 my $counter;
-foreach my $url (@d) {
+foreach my $url (reverse @d) {
     my $qq = CGI->new($url);
     print $url, "\n" if $debug >= 2;
 
