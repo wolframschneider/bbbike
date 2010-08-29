@@ -96,30 +96,28 @@ function updateWeather (data) {
 	}
 
 	// var js =  {"weatherObservation":{"clouds":"few clouds","weatherCondition":"n/a","observation":"LFSB 242100Z VRB03KT 9999 FEW040 14/13 Q1019 NOSIG","ICAO":"LFSB","elevation":271,"countryCode":"FR","lng":7.51666666666667,"temperature":"14","dewPoint":"13","windSpeed":"03","humidity":93,"stationName":"Bale-Mulhouse","datetime":"2010-08-24 21:00:00","lat":47.6,"hectoPascAltimeter":1019}};
-	var message = '';
 
 	// invalid label bug
 	var js = eval(  "(" + data + ")" );
 
-	if (!js["weatherObservation"]) {
+	if (!js.weatherObservation) {
 	    return; // no weather
 	}
+	var w = js.weatherObservation;	
 
-	var temperature = js["weatherObservation"]["temperature"];
-	if (temperature == 0 && js["weatherObservation"]["dewPoint"] == 0 && js["weatherObservation"]["humidity"] == 100) {
+	if (w.temperature == 0 && w.dewPoint == 0 && w.humidity == 100) {
 	   // broken data, ignore
 	   return;
         }
 
-	message += temperature + " &deg;C";
-	var clouds = js["weatherObservation"]["clouds"];
-	if (clouds && clouds.substring(0, 2) != "n/") {
-	   message += ", " + clouds;
+	var message = w.temperature + " &deg;C";
+
+	if (w.clouds && w.clouds.substring(0, 2) != "n/") {
+	   message += ", " + w.clouds;
 	}
 
-	var wind = parseInt( js["weatherObservation"]["windSpeed"] );
-	if (wind > 0) {
-	   message += ', max. wind speed ' + wind + "m/s";
+	if (w.wind > 0) {
+	   message += ', max. wind speed ' + parseInt(w.wind) + "m/s";
 	}
 
 	var span = document.getElementById("current_weather");
