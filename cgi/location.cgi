@@ -1,97 +1,82 @@
 #!/usr/bin/perl
 
 use CGI qw/-utf-8/;
-use LWP::Simple;
 use IO::File;
 
 use strict;
 use warnings;
 
-my $q     = new CGI;
-my $debug = 2;
+my $q        = new CGI;
+my $debug    = 1;
+my $database = '../world/misc/cities.csv';
 
-sub cache_file {
-    my $q = shift;
-
-    my $server = $q->server_name;
-    my $city   = $q->param('city');
-
-    if ( $city !~ /^[A-Za-z_-]+$/ ) {
-        warn "Illegal city name: '$city'!\n";
-        return;
-    }
-    return "/var/cache/bbbike/$server/$city/wettermeldung-$<";
+sub point_in_grid {
+    my ( $x1, $y1, $gridx1, $gridy1, $gridx2, $gridy2 ) = @_;
+    return ( $x1 >= $gridx1
+          && $x1 <= $gridx2
+          && $y1 >= $gridy1
+          && $y1 <= $gridy2 );
 }
 
-sub get_data_from_cache {
-    my $file = shift;
+sub read_coord {
+    my $db = shift;
 
-    my (@stat) = stat($file);
-    if ( !defined $stat[9] or $stat[9] + 30 * 60 < time() ) {
-        return;
+    my %hash;
+    my $fh = new IO::File $db, "r" or die "open: $!\n";
+    while (<$fh>) {
+        chomp;
+        s/^\s+//;
+        next if /^#/ || $_ eq "";
+
+        my ( $city, $name, $lang, $local_lang, $area, $coord, $population,
+            $step )
+          = split(/:/);
+        $hash{$city} = {
+            city  => $city,
+            name  => $name,
+            coord => $coord,
+        };
     }
-    else {
-        my $fh = new IO::File $file, "r"
-          or do { warn "open $file: $!\n"; return; };
-        warn "Read weather data from cache file: $file\n" if $debug >= 2;
+    close $fh;
+    return \%hash;
+}
 
-        my $content;
-        while (<$fh>) {
-            $content .= $_;
+sub get_city {
+    my ( $hash, $lat, $lng ) = @_;
+    return if !$lat || !$lng;
+
+    foreach my $city ( keys %{$hash} ) {
+        my @coord = split( /\s+/, $hash->{$city}{"coord"} );
+        if ( point_in_grid( $lng, $lat, @coord ) ) {
+            return $city;
         }
-
-        return $content;
     }
 }
 
-sub write_to_cache {
-    my $file    = shift;
-    my $content = shift;
-
-    my $fh = new IO::File $file, "w"
-      or do { warn "open > $file: $!\n"; return; };
-    warn "Write weather data to cache file: $file\n" if $debug >= 2;
-
-    print $fh $content;
-}
-
-# $q = CGI->new('lat=53&lng=15&lang=de');
 ##############################################################################################
 #
 # main
 #
 
+my $hash = &read_coord($database);
+
 print $q->header(
-    -type   => 'application/json;charset=UTF-8',
-    -expire => '+30m'
+    -type => 'application/json;charset=UTF-8',
+
+    #-expire => '+5m'
 );
 
-my $lat  = $q->param('lat');
-my $lng  = $q->param('lng');
-my $lang = $q->param('lang');
+my $lat = $q->param('lat');
+my $lng = $q->param('lng');
 
-my $url = 'http://ws.geonames.org/findNearByWeatherJSON?lat=';
+#( $lng, $lat ) = ( "13.3888548", "52.5170397" );
 
-my $wettermeldung_file      = &cache_file($q);
-my $wettermeldung_file_json = "$wettermeldung_file.$lang.json";
+my $city = get_city( $hash, $lat, $lng );
 
-if ( my $content = get_data_from_cache($wettermeldung_file_json) ) {
-    print $content;
-    exit 0;
+if ($city) {
+    print $city;
 }
-
-elsif ( $lat && $lng ) {
-    $url .= $lat . '&lng=' . $lng;
-    $url .= "&lang=$lang" if $lang && $lang ne "";
-
-    my $content = get($url);
-
-    if ($content) {
-        print $content;
-        write_to_cache( $wettermeldung_file_json, $content );
-    }
-    else {
-        warn "No weather data for: $url\n" if $debug >= 1;
-    }
+else {
+    print "NO_CITY";
 }
 
