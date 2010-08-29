@@ -117,7 +117,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $gmap_api_version
 	   );
 
-$gmap_api_version = 2;
+$gmap_api_version = 3;
 
 # XXX This may be removed one day
 use vars qw($use_cooked_street_data);
@@ -916,6 +916,13 @@ use vars qw(%handicap_speed);
 CGI->import('-no_xhtml');
 
 $q = new CGI;
+
+if ($q->user_agent("MSIE 6.0")) {
+   if ($gmap_api_version == 3) {
+	warn "Downgrade to google maps v2 for IE6: ", $q->remote_host, " ", $q->url, " ", $q->user_agent, "\n" if 1 || $debug;
+        $gmap_api_version = 2;
+   }
+}
 
 # Stopp user to bookmark bbbike.cgi?begin=1
 if (defined $q->param('begin')) {
