@@ -233,68 +233,6 @@ function bbbike_maps_init (maptype, marker_list, lang) {
     var street_cache = [];
     var data_cache = [];
 
-/* http://gmaps-samples-v3.googlecode.com/svn/trunk/xmlparsing/downloadurl.html */
-/**
-* Returns an XMLHttp instance to use for asynchronous
-* downloading. This method will never throw an exception, but will
-* return NULL if the browser does not support XmlHttp for any reason.
-* @return {XMLHttpRequest|Null}
-*/
-function createXmlHttpRequest() {
- try {
-   if (typeof ActiveXObject != 'undefined') {
-     return new ActiveXObject('Microsoft.XMLHTTP');
-   } else if (window["XMLHttpRequest"]) {
-     return new XMLHttpRequest();
-   }
- } catch (e) {
-   // alert(e);
- }
- return null;
-};
-
-/**
-* This functions wraps XMLHttpRequest open/send function.
-* It lets you specify a URL and will call the callback if
-* it gets a status code of 200.
-* @param {String} url The URL to retrieve
-* @param {Function} callback The function to call once retrieved.
-*/
-function downloadUrl(url, callback) {
- var status = -1;
- var request = createXmlHttpRequest();
- if (!request) {
-   return false;
- }
-
- request.onreadystatechange = function() {
-   if (request.readyState == 4) {
-     try {
-       status = request.status;
-     } catch (e) {
-       // Usually indicates request timed out in FF.
-     }
-
-     if (status == 200) {
-       // callback(request.responseXML, request.status);
-
-       // JSON
-       callback(request.responseText, request.status);
-
-       request.onreadystatechange = function() {};
-     }
-   }
- }
-
- request.open('GET', url, true);
- try {
-   request.send(null);
- } catch (e) {
-   // alert(e);
- }
-};
-
-
     function getStreet(map, city, street) {
         var url = encodeURI("/cgi/street-coord.cgi?namespace=0;city=" + city + "&query=" + street);
 

@@ -7051,6 +7051,8 @@ sub header {
 
     }
 
+    push(@$head, qq|<script src="../html/bbbike.js" type="text/javascript"></script>\n|);
+
     # google maps api v3
     # <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     # <script src="../html/elevation.js" type="text/javascript"></script>
@@ -7072,7 +7074,6 @@ sub header {
 	}
 
     }
-    push(@$head, qq|<script src="../html/weather.js" type="text/javascript"></script>\n|) if $enable_current_weather;
 
     push (@$head, $q->meta({-name => "robots", -content => "nofollow,noindex,noarchive"}));
 
