@@ -47,7 +47,7 @@ function homemap_street_timer (event, time) {
 // main map object
 var map;
 
-function bbbike_maps_init (maptype, marker_list) {
+function bbbike_maps_init (maptype, marker_list, lang) {
 
 
     var routeLinkLabel = "Link to route: ";
