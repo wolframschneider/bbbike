@@ -126,3 +126,20 @@ function updateWeather (data) {
 	}
 }
 
+// find a city and increase font size and set focus
+function higlightCity (city) {
+    city =  "C_" + city;
+
+    var a = document.getElementsByTagName("a");
+    var focus;
+    for (var i=0; i<a.length; i++) {
+        if (a[i].className == city) {
+            a[i].style.fontSize = "200%";
+            focus = a[i];
+        }
+    }
+
+    // wait until the page loaded
+    setTimeout(function() { if (focus) { focus.focus(); }}, 300 );
+}
+
