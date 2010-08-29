@@ -2348,8 +2348,8 @@ EOF
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
 
 		my $deferRequestBy = is_mobile($q) ? 500 : 100;
-		my $maxHeight = is_mobile($q) ? 200 : 160;
-		my $width = 300;
+		my $maxHeight = is_mobile($q) ? 300 : 160;
+		my $width = is_mobile($q) ? 400 : 300;
 	    print qq|
 
 <script type="text/javascript">
