@@ -161,7 +161,7 @@ print <<EOF;
 	var zoom = map.getZoom();
 
         // no zoom level higher than 15
-         map.setZoom( zoom < 16 ? zoom + 1 : 16);
+         map.setZoom( zoom < 16 ? zoom + 0 : 16);
     } 
 
     //]]>
