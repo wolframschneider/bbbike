@@ -2579,7 +2579,7 @@ print <<'EOF';
 EOF
 }
 
-   if ($enable_current_weather && scalar(@weather_coords) > 0 && $gmap_api_version > 2) {
+   if ($enable_current_weather && scalar(@weather_coords) > 0) {
 	my $weather_lang = &my_lang($lang);
 print <<EOF;
 <script type="text/javascript">
@@ -7072,6 +7072,8 @@ sub header {
 	}
 
     }
+    push(@$head, qq|<script src="../html/weather.js" type="text/javascript"></script>\n|) if $enable_current_weather;
+
     push (@$head, $q->meta({-name => "robots", -content => "nofollow,noindex,noarchive"}));
 
     $args{-head} = $head if $head && @$head;
