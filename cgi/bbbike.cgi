@@ -6938,9 +6938,6 @@ sub header {
 					    : 'BBBike ist ein Fahrradroutenplaner für Berlin')
 			      });
     }
-    # XXX check the standards:
-    push @$head, $q->meta({-name => 'revisit-after',
-			   -content => "7 days"});
     push @$head, $q->meta({-name => 'DC.title',
 			   -content => "BBBike - Routenplaner für Radfahrer in Berlin und Brandenburg"});
     # ^^^

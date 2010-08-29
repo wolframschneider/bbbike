@@ -778,14 +778,14 @@ EOF
        text  => 'Hermannstraßenfest zwischen Flughafenstraße und Thomasstraße, Straße gesperrt, Dauer: 04.09.2004 04:00 Uhr bis 05.09.2004 23:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 12180,7387 12122,7553
+userdel	2 12180,7387 12158,7449 12122,7553
 userdel	2 11920,8252 11931,8206 11933,8198
 userdel	2 11920,8252 11898,8362
 userdel	2 12041,7788 12055,7751 12075,7696
 userdel	2 11979,8014 11963,8074
 userdel	2 11979,8014 12001,7937 12025,7852
 userdel	2 11933,8198 11963,8074
-userdel	2 12075,7696 12090,7651 12122,7553
+userdel	2 12075,7696 12081,7679 12090,7651 12122,7553
 EOF
      },
      { from  => 1094187600, # 2004-09-03 07:00
@@ -2975,9 +2975,9 @@ EOF
        text  => 'Hermannstraße zwischen Flughafenstraße und Thomasstraße Veranstaltung, Straße gesperrt bis So 23:00 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 12090,7651 12075,7696
+userdel	2 12090,7651 12081,7679 12075,7696
 userdel	2 12090,7651 12122,7553
-userdel	2 12180,7387 12122,7553
+userdel	2 12180,7387 12158,7449 12122,7553
 userdel	2 11920,8252 11931,8206 11933,8198
 userdel	2 11920,8252 11898,8362
 userdel	2 12041,7788 12055,7751
@@ -4489,7 +4489,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005438',
        data  => <<EOF,
-userdel	2 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12090,7651 12122,7553 12180,7387
+userdel	2 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12122,7553 12158,7449 12180,7387
 EOF
      },
      { from  => 1148565600, # 2006-05-25 16:00
@@ -6146,7 +6146,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003771',
        data  => <<EOF,
-userdel	2::temp 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12090,7651 12122,7553 12180,7387
+userdel	2::temp 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12122,7553 12158,7449 12180,7387
 EOF
      },
      { from  => 1160107200, # 2006-10-06 06:00
@@ -17659,9 +17659,9 @@ EOF
 userdel	q3::inwork 16414,25575 16294,25683 16220,25716 16166,25767 16114,25827 16045,25907
 EOF
      },
-     { from  => 1275342035, # 2010-05-31 23:40
-       until => 1282946400, # 2010-08-28 00:00
-       text  => 'Treuenbrietzen: L82: Bau Schmutzwasser- und Trinkwasserleitungen OL Marzahna, 27.05.2010 bis 27.08.2010 ',
+     { from  => 1274820117, # 2010-05-25 22:41
+       until => 1286575200, # 2010-10-09 00:00
+       text  => 'Treuenbrietzen: L82: Bau Schmutzwasser- und Trinkwasserleitungen OL Marzahna, 27.05.2010 bis 08.10.2010',
        type  => 'gesperrt',
        source_id => '106900348',
        data  => <<EOF,
