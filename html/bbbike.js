@@ -139,6 +139,7 @@ function higlightCity (city) {
     for (var i=0; i<a.length; i++) {
         if (a[i].className == city) {
             a[i].style.fontSize = "200%";
+            a[i].style.color = "#00f";
             focus = a[i];
         }
     }

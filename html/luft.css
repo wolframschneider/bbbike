@@ -118,3 +118,5 @@ table td#cell_other   { background-color: #CCC }
 div#streets input:focus { background-color: #FFC }
 div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
 
+div.htmltagcloud a:hover { color: #00f; }
+
