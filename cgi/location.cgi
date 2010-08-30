@@ -73,10 +73,8 @@ my $lng = $q->param('lng');
 
 my $city = get_city( $hash, $lat, $lng );
 
-if ($city) {
-    print $city;
-}
-else {
-    print "NO_CITY";
-}
+$city = "NO_CITY" if !$city;
+print $city;
+
+warn "lat: $lat, lng: $lng, city: $city\n" if $debug;
 
