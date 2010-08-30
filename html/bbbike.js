@@ -145,7 +145,10 @@ function higlightCity (city) {
     }
 
     // wait until the page loaded
-    setTimeout(function() { if (focus) { focus.focus(); }}, 300 );
+    var body = document.getElementsByTagName("body");
+    if (body && focus) {
+    	body.onload = focus.focus();
+    }
 }
 
 
