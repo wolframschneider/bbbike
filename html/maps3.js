@@ -452,3 +452,32 @@ function custom_map ( maptype, lang ) {
   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
 }
 
+
+function displayCurrentPosition () {
+    if (!navigator.geolocation) {
+	return;
+    }
+
+    navigator.geolocation.getCurrentPosition(function(position) {  
+        currentPosition = { "lat": position.coords.latitude, "lng": position.coords.longitude };
+
+	var pos = new google.maps.LatLng( currentPosition.lat, currentPosition.lng );
+        var marker = new google.maps.Marker({
+                position:  pos,
+                map: map
+        });
+
+        google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker) } );
+
+        function addInfoWindow (marker) {
+                infoWindow = new google.maps.InfoWindow({ maxWidth: 400});
+                var content = "<div id=\"infoWindowContent\">\n"
+                content += "Your current postion: " + currentPosition.lat + "," + currentPosition.lng + "<br/>\n";
+                content += "</div>\n";
+                infoWindow.setContent(content);
+                infoWindow.open(map, marker);
+        };
+   });  
+}
+
+
