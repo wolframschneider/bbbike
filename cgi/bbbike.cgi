@@ -115,6 +115,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_homemap_streets
 	    $warn_message $use_utf8 $data_is_wgs84 $osm_data
 	    $gmap_api_version
+	    $enable_current_postion
 	   );
 
 $gmap_api_version = 3;
@@ -2584,6 +2585,13 @@ EOF
 print <<EOF;
 <script type="text/javascript">
    display_current_weather( { lat:"$weather_coords[0]", lng:"$weather_coords[1]", lang:"$weather_lang", city:"$cityname"} );
+</script>
+EOF
+   }
+   if ($enable_current_postion) {
+      print <<EOF;
+<script type="text/javascript">
+	displayCurrentPosition();
 </script>
 EOF
    }
