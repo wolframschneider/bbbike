@@ -127,12 +127,13 @@ function updateWeather (data) {
 }
 
 // find a city and increase font size and set focus
-function higlightCity (city, obj) {
-    if (!city || city == "NO_CITY") {
+function higlightCity (data, obj) {
+    var pos = eval(  "(" + data + ")" );
+    if (!pos || pos.city == "NO_CITY") {
 	return;
     }
 
-    var className =  "C_" + city;
+    var className =  "C_" + pos.city;
 
     var a = document.getElementsByTagName("a");
     var focus;
@@ -141,7 +142,7 @@ function higlightCity (city, obj) {
             a[i].style.fontSize = "200%";
             a[i].style.color = "#00f";
 
-            a[i].setAttribute('title', city + " " + obj.lat + "," + obj.lng);
+            a[i].setAttribute('title', pos.city + " " + obj.lat + "," + obj.lng);
             focus = a[i];
         }
     }

@@ -74,7 +74,9 @@ my $lng = $q->param('lng');
 my $city = get_city( $hash, $lat, $lng );
 
 $city = "NO_CITY" if !$city;
-print $city;
+print <<EOF;
+{ "city": "$city", "street":"", "corner":"" }
+EOF
 
 warn "lat: $lat, lng: $lng, city: $city\n" if $debug;
 
