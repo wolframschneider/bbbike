@@ -127,19 +127,21 @@ function updateWeather (data) {
 }
 
 // find a city and increase font size and set focus
-function higlightCity (city) {
+function higlightCity (city, obj) {
     if (!city || city == "NO_CITY") {
 	return;
     }
 
-    city =  "C_" + city;
+    var className =  "C_" + city;
 
     var a = document.getElementsByTagName("a");
     var focus;
     for (var i=0; i<a.length; i++) {
-        if (a[i].className == city) {
+        if (a[i].className == className) {
             a[i].style.fontSize = "200%";
             a[i].style.color = "#00f";
+
+            a[i].setAttribute('title', city + " " + obj.lat + "," + obj.lng);
             focus = a[i];
         }
     }
@@ -151,7 +153,7 @@ function higlightCity (city) {
     }
 }
 
-
+var currentPosition;
 function geoCity (obj) {
     // "13.3888548", "52.5170397";
     // "-123.1333301", "49.2499987"
@@ -163,7 +165,7 @@ function geoCity (obj) {
 	
     downloadUrl(url, function(data, responseCode) {
         if(responseCode == 200) {
-            higlightCity(data);
+            higlightCity(data, obj);
         } else if(responseCode == -1) {
            alert("Data request timed out. Please try later.");
         } else {
@@ -178,8 +180,8 @@ function focusCity () {
     }
 
     navigator.geolocation.getCurrentPosition(function(position) {  
-	var obj = { "lat": position.coords.latitude, "lng": position.coords.longitude };
-        geoCity(obj);
+	currentPosition = { "lat": position.coords.latitude, "lng": position.coords.longitude };
+        geoCity(currentPosition);
    });  
 }
 
