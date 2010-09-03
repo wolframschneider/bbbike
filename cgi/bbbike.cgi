@@ -7247,7 +7247,11 @@ sub link_to_met {
 #     if ("@weather_cmdline" =~ /parse_wetterkarte/) {
 # 	qq{<a href="http://wkserv.met.fu-berlin.de/Wetter/mainframe.php">};
 #     } else {
+    if ($osm_data) {
+	qq{<a href="http://news.bbc.co.uk/weather/">};
+    } else {
 	qq{<a href="http://www.met.fu-berlin.de/de/wetter/">};
+    }
 #     }
 }
 
