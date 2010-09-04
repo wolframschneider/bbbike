@@ -47,10 +47,12 @@ function downloadUrl(url, callback) {
      }
 
      if (status == 200) {
-       // callback(request.responseXML, request.status);
-
-       // JSON
-       callback(request.responseText, request.status);
+	if (request.getResponseHeader("Content-Type").match("/xml")) {
+            callback(request.responseXML, request.status);
+	} else {
+          // JSON
+           callback(request.responseText, request.status);
+        }
 
        request.onreadystatechange = function() {};
      }
