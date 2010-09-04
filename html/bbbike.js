@@ -102,10 +102,10 @@ function updateWeather (data) {
 	// invalid label bug
 	var js = eval(  "(" + data + ")" );
 
-	if (!js.weatherObservation) {
+	if (!js.weather || !js.weather.weatherObservation) {
 	    return; // no weather
 	}
-	var w = js.weatherObservation;	
+	var w = js.weather.weatherObservation;	
 
 	if (w.temperature == 0 && w.dewPoint == 0 && w.humidity == 100) {
 	   // broken data, ignore
