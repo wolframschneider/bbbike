@@ -10,9 +10,10 @@ use LWP::UserAgent;
 use strict;
 use warnings;
 
-my $q         = new CGI;
-my $debug     = 1;
-my $cache_dir = "/var/cache/bbbike";
+my $q                              = new CGI;
+my $debug                          = 1;
+my $cache_dir                      = "/var/cache/bbbike";
+my $enable_google_weather_forecast = 1;
 
 sub cache_file {
     my $q = shift;
@@ -99,9 +100,13 @@ my $wettermeldung_file      = &cache_file($q);
 my $wettermeldung_file_json = "$wettermeldung_file.$lang.json";
 my $weather_forecast        = "$wettermeldung_file.forecast.$lang.json";
 
+my %weather;
 if ( my $content = get_data_from_cache($wettermeldung_file_json) ) {
     my $forecast = get_data_from_cache($weather_forecast) || "{}";
-    print qq|{ "weather": $content,\n"forecast": $forecast }\n|;
+
+    $weather{'weather'} = $content;
+    $weather{'forecast'} = $forecast if $enable_google_weather_forecast;
+    print &merge_json( \%weather );
     exit 0;
 }
 
@@ -117,7 +122,6 @@ elsif ( $lat && $lng ) {
 
     # current weather
     warn "Download URL: $url\n" if $debug >= 2;
-    my %weather;
 
     if ( $res->is_success ) {
         $weather{'weather'} = $res->content;
@@ -128,27 +132,30 @@ elsif ( $lat && $lng ) {
     }
 
     # forecast
-    my $city = $q->param('city');
-    $url = 'http://www.google.com/ig/api?weather=' . $city . '&hl=' . $lang;
-    warn "Download URL: $url\n" if $debug >= 2;
+    if ($enable_google_weather_forecast) {
 
-    $req = HTTP::Request->new( GET => $url );
-    $res = $ua->request($req);
+        my $city = $q->param('city');
+        $url = 'http://www.google.com/ig/api?weather=' . $city . '&hl=' . $lang;
+        warn "Download URL: $url\n" if $debug >= 2;
 
-    # Check the outcome of the response
-    if ( $res->is_success ) {
-        my @c = grep { s/^charset=// && $_ } $res->content_type();
-        my $charset = $c[0];
-        $content =
-          Encode::decode( $charset, $res->content, $Encode::FB_DEFAULT );
+        $req = HTTP::Request->new( GET => $url );
+        $res = $ua->request($req);
 
-        my $perl = XMLin($content);
-        my $json = encode_json($perl);
-        $weather{'forecast'} = $json;
-        write_to_cache( $weather_forecast, $json );
-    }
-    else {
-        warn "No weather data for: $url\n" if $debug >= 1;
+        # Check the outcome of the response
+        if ( $res->is_success ) {
+            my @c = grep { s/^charset=// && $_ } $res->content_type();
+            my $charset = $c[0];
+            $content =
+              Encode::decode( $charset, $res->content, $Encode::FB_DEFAULT );
+
+            my $perl = XMLin($content);
+            my $json = encode_json($perl);
+            $weather{'forecast'} = $json;
+            write_to_cache( $weather_forecast, $json );
+        }
+        else {
+            warn "No weather data for: $url\n" if $debug >= 1;
+        }
     }
 
     print &merge_json( \%weather );
