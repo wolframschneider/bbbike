@@ -118,8 +118,8 @@ function updateWeather (data) {
 	   message += ", " + w.clouds;
 	}
 
-	if (w.wind > 0) {
-	   message += ', max. wind speed ' + parseInt(w.wind) + "m/s";
+	if (w.windSpeed > 0) {
+	   message += ', max. wind speed ' + parseInt(w.windSpeed) + "m/s";
 	}
 
 	var span = document.getElementById("current_weather");
