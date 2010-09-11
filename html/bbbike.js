@@ -126,6 +126,19 @@ function updateWeather (data) {
 	if (span) {
 		span.innerHTML = message;
 	}
+
+	span = document.getElementById("weather_forecast");
+	if (span) {
+		message = renderWeatherForecast( js.forecast );
+		span.innerHTML = message;
+	}
+}
+
+function renderWeatherForecast( js ) {
+	if (!js || js == "" || !js.weather) { return; }
+	var w = js.weather;
+
+	return;
 }
 
 // find a city and increase font size and set focus
