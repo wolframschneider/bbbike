@@ -15,7 +15,7 @@ Schloﬂplatz: Behinderungen durch Bauarbeiten mˆglich	q3::inwork 10170,12261 1006
 #: last_checked: 2010-06-18
 Fahrbahn der Mauerstr. wegen Bauarbeiten gesperrt	q4::inwork 9405,11413 9331,11497
 #XXX del: last_checked: 2010-02-02, #: next_check: 2010-05-31, Hauptstr. (Friedrichshain-Kreuzberg): Baustelle, Radfahrer kˆnnen langsam passieren	q3::inwork 14906,10820 14794,10844 14717,10855
-#: last_checked: 2010-06-06
+#: last_checked: 2010-09-08
 Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt	q4::inwork 8389,11378 8374,11479
 #: last_checked: 2010-06-26
 General-Pape-Str.: Baustelle, Fahrbahn Richtung Norden gesperrt	q4::inwork; 7959,7609 7921,7728 7950,7840
@@ -29,9 +29,9 @@ Planckstr.: wegen Bauarbeiten eine Einbahnstraﬂe Richtung S¸den	q4::inwork; 9434
 Matkowskystr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 14530,11137 14509,11060
 # XXX del --- #: by: Uta Rahmann vvv --- #: next_check: 2010-10-01 vvv --- Varziner Str.: Bauarbeiten, Einbahnstraﬂenregelung zwischen Bundesallee und Varziner Platz (offen Richtung S¸dwestkorso)	q4::inwork; 5458,7866 5356,7862
 # XXX del --- Varziner Platz: Bauarbeiten, es muss geschoben werden	q4::inwork 5458,7866 5492,7868 5517,7869
-#: last_checked: 2010-04-29
+#: last_checked: 2010-09-09
 #: next_check: 2011-01-01
-Rathausstr.: Baustelle vor dem Roten Rathaus, eng	q3::inwork 10601,12521 10704,12595
+Rathausstr.: Baustelle vor dem Roten Rathaus, eng	q4::inwork 10601,12521 10704,12595
 #: by: ^^^
 #: last_checked: 2010-08-14
 J‰gerstr.: Einbahnstraﬂe	q4::inwork; 9394,11996 9201,11968
@@ -703,6 +703,8 @@ Holzbr¸cke: enge Br¸cke	q1 21869,6932 21888,6944
 Coloniaallee [32 u. 34]: Radfahren verboten, ggfs. schieben	q3 20052,-239 19973,-245
 Nippeser Str. [13 u. 15]: Radfahren verboten, ggfs. schieben	q3 19973,-245 19894,-247
 Nippeser Str. [12 u. 14]: Radfahren verboten, ggfs. schieben	q3 19894,-247 19827,-251 19775,-252
+Neumagener Str.: enge Straﬂe	q1 14897,17093 14910,17010
+Witzenhauser Str.: Fuﬂg‰nger	q2 18059,14838 18170,14890
 ######################### User Contributions #################################
 #: by: Michael Kiekbusch
 #: corrected_by: srt/policy (q4 -> q3-)
@@ -780,7 +782,7 @@ Gralsburgsteig: enge Straﬂe	q1 2164,25190 2206,25260 2038,25531 1950,25763 1924,
 #: by: Kathrin (jackelkathrin):
 Bahnhofstr. (Friedenau): enge Straﬂe	q1 6082,7066 6151,7078 6157,7117
 #: by: (x)qusor:
-(Michelangelostr. - Straﬂe 106): Kleingartenanlage	q2 13838,15113 14060,14986 14314,14841 14592,14682
+(Michelangelostr. - Straﬂe 106): Kleingartenanlage	q2 13838,15113 14060,14986 14314,14841 14599,14679
 #: by: Andrea (techlin):
 Hugo-Heimann-Str.: enge, leicht kurvige Straﬂe	q1 14120,1991 14165,2106 14229,2177 14453,2087 14587,2032
 #: by: Marek B‰nsch:
@@ -2001,6 +2003,7 @@ Steinheilpfad: recht eng	q1 5585,1275 5573,1211 5455,1150
 #: by: christian (...chrisb...):
 Sch‰ferstege - Parkanlage: einige Fuﬂg‰nger, an der Br¸cke offiziell absteigen	q3 13366,20897 13332,20898 13298,20917 13244,20903
 #: by: guylian: vvv
+Hermesweg: einige Fuﬂg‰nger	q1 6116,4707 6072,4606
 #: note: "Auf beiden Einfahrten stehen aber Schilder, dass Radfahren verboten ist."
 Reginenweg: Radfahren verboten, ggfs. schieben	q4 6484,3292 6482,3327 6431,3417 6426,3425
 Ruthstr.: Fuﬂweg	q2 6330,3005 6320,3022

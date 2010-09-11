@@ -1,12 +1,13 @@
-#
-# $Id: Makefile,v 1.25 2009/04/04 11:23:09 eserte Exp $
+# NOTE: use BSD make (pmake or freebsd-make on some systems!)
 #
 
 PERL=			perl
 
 BBBIKEDIR?=		${.CURDIR}/..
+BBBIKEMISCDIR?=		${.CURDIR}
 BBBIKETMPDIR?=		${BBBIKEDIR}/tmp
 BBBIKEAUXDIR?=		${HOME}/src/bbbike-aux
+BBBIKEMKGMAPDIR?=	${BBBIKEMISCDIR}/mkgmap
 MISCSRCDIR?=		${BBBIKEDIR}/miscsrc
 DATADIR?=		${BBBIKEDIR}/data
 CONVERT2HAFAS=		${MISCSRCDIR}/convert2hafas
@@ -261,20 +262,22 @@ bbbikemap-for-garmin:	${BBBIKETMPDIR}/bbbike_routable_gmapsupp.img
 
 .PHONY: ${BBBIKETMPDIR}/bbbike_routable.osm
 ${BBBIKETMPDIR}/bbbike_routable.osm:
-	cd ../data && ${MAKE} ${BBBIKETMPDIR}/bbbike_routable.osm
+# Do not use ${BBBIKETMPDIR} here, but a relative path against data,
+# so the remake rule really works
+	cd ../data && ${MAKE} ../tmp/bbbike_routable.osm
 
-${BBBIKETMPDIR}/bbbike_routable_gmapsupp.img: ${BBBIKETMPDIR}/bbbike_routable.img ${BBBIKEAUXDIR}/mkgmap/typ/M000002a.TYP
+${BBBIKETMPDIR}/bbbike_routable_gmapsupp.img: ${BBBIKETMPDIR}/bbbike_routable.img ${BBBIKEMKGMAPDIR}/typ/M000002a.TYP
 	cd ${BBBIKETMPDIR} && \
 	    ${MKGMAP} --family-id=42 --family-name="Slavens Map" \
-	       --gmapsupp bbbike_routable.img ${BBBIKEAUXDIR}/mkgmap/typ/M000002a.TYP
+	       --gmapsupp bbbike_routable.img ${BBBIKEMKGMAPDIR}/typ/M000002a.TYP
 	mv ${BBBIKETMPDIR}/gmapsupp.img ${BBBIKETMPDIR}/bbbike_routable_gmapsupp.img
 
-${BBBIKETMPDIR}/bbbike_routable.img: ${BBBIKETMPDIR}/bbbike_routable.osm ${BBBIKEAUXDIR}/mkgmap/srt-style/*
-	[ -r ${BBBIKEAUXDIR}/mkgmap/srt-style ]
+${BBBIKETMPDIR}/bbbike_routable.img: ${BBBIKETMPDIR}/bbbike_routable.osm ${BBBIKEMKGMAPDIR}/srt-style/*
+	[ -r ${BBBIKEMKGMAPDIR}/srt-style ]
 	cd ${BBBIKETMPDIR} && \
 	    ${MKGMAP} --description="BBBike Routable" --mapname=12117006 \
 		--country-name=Germany --country-abbr=DE \
-	        --latin1 --net --route --draw-priority=15 --style-file=${BBBIKEAUXDIR}/mkgmap/srt-style \
+	        --latin1 --net --route --draw-priority=15 --style-file=${BBBIKEMKGMAPDIR}/srt-style \
 	        ${BBBIKETMPDIR}/bbbike_routable.osm  && \
 	    mv -f 12117006.img bbbike_routable.img 
 
@@ -305,8 +308,10 @@ do-garmindata-dist:	${BBBIKETMPDIR}/bbbike_routable_gmapsupp.img
 	    zip -r bbbike-b_de-garmin-$(TODAY_DATE).zip bbbike-b_de-garmin
 
 garmindata-sf-release:	do-garmindata-dist
-	@echo "Really upload bbbike-b_de-garmin-$(TODAY_DATE).zip to SourceForge?"
-	@cd /tmp && ls -l bbbike-b_de-garmin-$(TODAY_DATE).zip
-	@echo "Press CTRL-C to abort. Return to continue release."
-	@read yn
-	cd /tmp && sf-upload -groupid 19142 -packageid 207826 -r $(TODAY_DATE) -f bbbike-b_de-garmin-$(TODAY_DATE).zip
+	@echo "Go to https://sourceforge.net/downloads/bbbike/bbbikedata-b_de/"
+	@echo "Create a YYYYMMDD directory and upload /tmp/bbbike-b_de-garmin-$(TODAY_DATE).zip"
+#	@echo "Really upload bbbike-b_de-garmin-$(TODAY_DATE).zip to SourceForge?"
+#	@cd /tmp && ls -l bbbike-b_de-garmin-$(TODAY_DATE).zip
+#	@echo "Press CTRL-C to abort. Return to continue release."
+#	@read yn
+#	cd /tmp && sf-upload -groupid 19142 -packageid 207826 -r $(TODAY_DATE) -f bbbike-b_de-garmin-$(TODAY_DATE).zip

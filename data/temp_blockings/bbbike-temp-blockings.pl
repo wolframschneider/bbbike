@@ -1831,7 +1831,7 @@ EOF
        text  => 'Berliner Allee Richtung stadtauwärts, zwischen Langhanstr. und Lindenallee Baustelle, Fahrtrichtung gesperrt (bis Ende 2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 13540,15928 13623,15954 13630,15956 13737,15994 13826,16026 14014,16106 14067,16127 14248,16202 14371,16252
+userdel	q4; 13540,15928 13623,15954 13630,15956 13737,15994 13826,16026 14014,16106 14045,16120 14248,16202 14371,16252
 EOF
      },
      { from  => 1138319749, # 2006-01-27 00:55
@@ -3557,7 +3557,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002437',
        data  => <<EOF,
-userdel	q4; 14067,16127 13788,16240
+userdel	q4; 14045,16120 13788,16240
 EOF
      },
      { from  => 1138319443, # 2006-01-27 00:50
@@ -8961,7 +8961,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20070703.1505.81257.html',
        data  => <<EOF,
-userdel	1::inwork 12667,16699 12604,16731 12486,16791 12257,16876 12241,16900
+userdel	1::inwork 12667,16699 12602,16727 12472,16783 12257,16876 12241,16900
 EOF
      },
      { from  => 1183704492, # 2007-07-06 08:48
@@ -10813,7 +10813,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006024',
        data  => <<EOF,
-userdel	1::inwork 12257,16876 12486,16791 12604,16731 12667,16699
+userdel	1::inwork 12257,16876 12472,16783 12602,16727 12667,16699
 EOF
      },
      { from  => 1201647600, # 2008-01-30 00:00
@@ -16516,8 +16516,8 @@ userdel	2::inwork 3314,15782 3564,16294
 EOF
      },
      { from  => 1270235189, # 2010-04-02 21:06
-       until => 1283205600, # 2010-08-31 00:00
-       text  => 'Neustädtische Kirchstr. (Mitte) Richtung Unter den Linden zwischen Dorotheenstr. und Unter den Linden Baustelle, Fahrtrichtung gesperrt bis 30.08.2010 16:00 Uhr ',
+       until => Time::Local::timelocal(reverse(2010-1900,9-1,24,16,0,0)), # 1283205600, # 2010-08-31 00:00
+       text  => 'Neustädtische Kirchstr. (Mitte) Richtung Unter den Linden zwischen Dorotheenstr. und Unter den Linden Baustelle, Fahrtrichtung gesperrt bis 24.09.2010 16:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_014421',
        data  => <<EOF,
@@ -17112,8 +17112,8 @@ userdel	2::inwork -24240,6075 -24731,6194
 EOF
      },
      { from  => 1231063200, # 2009-01-04 11:00
-       until => 1283259600, # 2010-08-31 15:00
-       text  => 'Blankenburger Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Ende 08.2010) Richtung Dietzgenstr. zwischen Siegfriedstr. und Dietzgenstr. sowie Einbahnstraßenregelung in der Siegfriedstr., 05.01.2009 11:00 Uhr bis 31.08.2010 15:00 Uhr ',
+       until => Time::Local::timelocal(reverse(2010-1900,9-1,13,15,0,0)), # 1283259600, # 2010-08-31 15:00
+       text  => 'Blankenburger Str. (Pankow): Baustelle, Fahrtrichtung gesperrt Richtung Dietzgenstr. zwischen Siegfriedstr. und Dietzgenstr. sowie Einbahnstraßenregelung in der Siegfriedstr., 05.01.2009 11:00 Uhr bis 13.09.2010 ',
        type  => 'handicap',
        source_id => 'IM_011081',
        data  => <<EOF,
@@ -17587,15 +17587,19 @@ EOF
        data  => <<EOF,
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10691,8532 10640,8366 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10598,8270 10729,8152
+(Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10384,8628 10360,8521 10298,8245
 (Rundkurs auf dem Flughafen Tempelhof)	2::temp 11463,7785 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
-(Rundkurs auf dem Flughafen Tempelhof)	2::temp 9525,7558 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10575,8218
+(Rundkurs auf dem Flughafen Tempelhof)	2::temp 9525,7558 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10298,8245 10575,8218
 (Rundkurs auf dem Flughafen Tempelhof)	2::temp 10575,8218 10729,8152 10924,7987 11090,7916 11264,7882 11355,7871 11381,7775 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::temp 9525,7558 9431,7425 9392,7339 9300,7312 9302,7294 9242,7286
+(Weg parallel zum Tempelhofer Damm)	2::temp  9300,7312 9281,7651 9281,7795
+(Eingang Peter-Strasser-Weg)	2::temp 9281,7795 9240,7797
+(Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::temp 9351,7600 9281,7651
 (Südliche Landebahn)	2::temp 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11593,7314
 (Nördliche Landebahn)	2::temp 9351,7600 9518,7609 9654,7621 11279,7768 11381,7775 11463,7785
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::temp 11463,7785 11439,7894
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::temp 11472,7899 11458,7897 11439,7894
-(Strecke an der nordöstlichen Begrenzung)	2::temp 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10640,8366
+(Strecke an der nordöstlichen Begrenzung)	2::temp 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10640,8366 10360,8521
 (Weg parallel zur Oderstr.)	2::temp 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
 (Eingang Kienitzer Str.)	2::temp 11498,7750 11489,7748 11479,7746 11470,7744
 (Flughafen Tempelhof - Eingang Allerstr.)	2::temp 11507,7647 11515,7654
@@ -17974,7 +17978,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100714.1400.303010.html',
        data  => <<EOF,
-userdel	q4::inwork; 16692,16253 16801,16501 16849,16551 17017,16716
+userdel	q4::inwork; 16692,16253 16806,16496 16849,16551 17017,16716
 EOF
      },
      { from  => 1279436400, # 2010-07-18 09:00
@@ -18117,6 +18121,66 @@ EOF
        source_id => '106900748',
        data  => <<EOF,
 userdel	2::inwork -45941,-31977 -46134,-32389 -46514,-32785
+EOF
+     },
+     { from  => 1283547955, # 2010-09-03 23:05
+       until => 1292972400, # 2010-12-22 00:00
+       text  => 'Bernau bei Berlin: L314: Verlegung Trinkwasser/ Sanierung Schmutzwasser, Ausbau nördl. Geh- und Radweg OD Bernau, Zepernicker Chaussee zw. Elbestr. und Autobahnbrücke gesperrt, 30.08.2010 bis 21.12.2010 ',
+       type  => 'handicap',
+       source_id => '106000506',
+       data  => <<EOF,
+userdel	q4::inwork; 20537,29285 21085,29942
+EOF
+     },
+     { from  => 1283457600, # 2010-09-02 22:00
+       until => 1283630400, # 2010-09-04 22:00
+       text  => 'Boxhagener Str. (Friedrichshain): Bauarbeiten an der Eisenbahnüberführung, Straße vollständig gesperrt (bis 04.09., 22 Uhr) in beiden Richtungen zwischen zwischen Kynaststr. und Neue Bahnhofstr., 03.09.2010 22:00 Uhr bis 04.09.2010 22:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'IM_016276',
+       data  => <<EOF,
+userdel	2::inwork 14918,11249 14988,11130
+EOF
+     },
+     { from  => 1283237460, # 2010-08-31 08:51
+       until => 1285000200, # 2010-09-20 18:30
+       text  => 'Romain-Rolland-Str. (Heinersdorf): Baustelle, Fahrtrichtung gesperrt (bis Ende 09/2010) Richtung Hohenschönhausen zwischen Rothenbachstr. und Berliner Str., 01.09.2010 08:51 Uhr bis 20.09.2010 18:30 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_016256',
+       data  => <<EOF,
+userdel	q4::inwork; 12575,18275 12606,18215 12693,18081 12736,17998
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Mariannenstr. zwischen Skalitzer Str. und Heinrichplatz: Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 11722,10533 11671,10402
+EOF
+     },
+     { from  => 1283623066, # 2010-09-04 19:57
+       until => 1285883999, # 2010-09-30 23:59
+       text  => 'Die Charlottenstraße zwischen Hermann-Elflein-Straße und Schopenhauerstraße ist für den Bau von Hausanschlüssen halbseitig gesperrt. Im Baubereich ist eine Einbahnstraße in Richtung Wilhelmgalerie eingerichtet. Die Arbeiten dauern bis voraus. 30.09.2010. ',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork; -13392,-1196 -13516,-1225
+EOF
+     },
+     { from  => 1281218400, # 2010-08-08 00:00
+       until => 1343685600, # 2012-07-31 00:00
+       text  => 'Für die Arbeiten an der Brücke des Friedens in Neu Fahrland wird der Lerchensteig auf der gesamten Baulänge zwischen Nedlitzer Straße und Am Golfplatz voll gesperrt . Der Zeitraum für diese Arbeiten ist vom 09.08.2010 bis ca. 30.07.2012 geplant ',
+       type  => 'handicap',
+       source_id => 'http://www.potsdam.de/cms/beitrag/10067788/966975/',
+       data  => <<EOF,
+userdel	q4::inwork -13387,2987 -13581,3075 -13840,2956 -14382,3066
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Die Wilhelm-Kabus-Str. ist noch nicht komplett fertig gestellt. Unter Umständen ist die Durchfahrt nicht möglich!',
+       type  => 'handicap',
+       data  => <<EOF,
+	2::inwork 7716,8048 7793,8043 7834,8085 7859,8252 7893,8327 7942,8380 8078,8772
 EOF
      },
     );

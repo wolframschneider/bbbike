@@ -175,7 +175,7 @@ EOF
 	      [Button => $do_compound->("Set penalty: unique matches (since 2009)"),
 	       -command => sub { set_penalty('tmp/unique-matches-since2009.bbd') },
 	      ],
-	      [Button => $do_compound->("Set penalty fragezeichen"),
+	      [Button => $do_compound->("Set penalty fragezeichen-outdoor-nextcheck"),
 	       -command => sub { set_penalty_fragezeichen() },
 	      ],
 	      [Button => $do_compound->("Tracks in region"),
@@ -284,6 +284,10 @@ EOF
 		],
 		layer_checkbutton('Exits (ÖPNV)', 'str',
 				  _maybe_orig_file("$main::datadir/exits")),
+		layer_checkbutton('Kneipen/Cafes', 'str',
+				  "$bbbike_rootdir/data_berlin_osm/kneipen"),
+		layer_checkbutton('Restaurants', 'str',
+				  "$bbbike_rootdir/data_berlin_osm/restaurants"),
 	       ],
 	      ],
 	      [Cascade => $do_compound->('OSM Live data', $MultiMap::images{OpenStreetMap}), -menuitems =>
@@ -1053,7 +1057,7 @@ sub set_penalty_fragezeichen {
     require BBBikeEdit;
     $main::bbd_penalty = 1;
     $BBBikeEdit::bbd_penalty_invert = 1;
-    $BBBikeEdit::bbd_penalty_file = "$main::datadir/fragezeichen";
+    $BBBikeEdit::bbd_penalty_file = "$bbbike_rootdir/tmp/fragezeichen-outdoor-nextcheck.bbd";
     BBBikeEdit::build_bbd_penalty_for_search();
 }
 

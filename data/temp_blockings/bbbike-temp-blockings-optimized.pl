@@ -1174,7 +1174,18 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_014421',
+         'until' => 1285336800,
+         'text' => 'Neustädtische Kirchstr. (Mitte) Richtung Unter den Linden zwischen Dorotheenstr. und Unter den Linden Baustelle, Fahrtrichtung gesperrt bis 24.09.2010 16:00 Uhr ',
+         'from' => 1270235189,
+         'id' => 1946,
+         'data' => 'userdel	2::inwork; 9123,12500 9130,12433
+Kein Durchgang von Mittelstr. zur Neustädtischen Kirchstr., auch nicht für Fußgänger	2::inwork 9343,12464 9130,12433
+userdel	q4::inwork; 9130,12433 9141,12320
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        undef,
@@ -1298,7 +1309,17 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_011081',
+         'until' => 1284382800,
+         'text' => 'Blankenburger Str. (Pankow): Baustelle, Fahrtrichtung gesperrt Richtung Dietzgenstr. zwischen Siegfriedstr. und Dietzgenstr. sowie Einbahnstraßenregelung in der Siegfriedstr., 05.01.2009 11:00 Uhr bis 13.09.2010 ',
+         'from' => 1231063200,
+         'id' => 2016,
+         'data' => 'userdel	q4::inwork; 10742,19632 10439,19576 10377,19565 10249,19541
+userdel	q4::inwork; 10614,19907 10742,19632
+',
+         'type' => 'handicap'
+       },
        {
          'source_id' => 'IM_015001',
          'until' => 1309471199,
@@ -1501,15 +1522,19 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10691,8532 10640,8366 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10598,8270 10729,8152
+(Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10384,8628 10360,8521 10298,8245
 (Rundkurs auf dem Flughafen Tempelhof)	2::temp 11463,7785 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
-(Rundkurs auf dem Flughafen Tempelhof)	2::temp 9525,7558 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10575,8218
+(Rundkurs auf dem Flughafen Tempelhof)	2::temp 9525,7558 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10298,8245 10575,8218
 (Rundkurs auf dem Flughafen Tempelhof)	2::temp 10575,8218 10729,8152 10924,7987 11090,7916 11264,7882 11355,7871 11381,7775 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::temp 9525,7558 9431,7425 9392,7339 9300,7312 9302,7294 9242,7286
+(Weg parallel zum Tempelhofer Damm)	2::temp  9300,7312 9281,7651 9281,7795
+(Eingang Peter-Strasser-Weg)	2::temp 9281,7795 9240,7797
+(Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::temp 9351,7600 9281,7651
 (Südliche Landebahn)	2::temp 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11593,7314
 (Nördliche Landebahn)	2::temp 9351,7600 9518,7609 9654,7621 11279,7768 11381,7775 11463,7785
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::temp 11463,7785 11439,7894
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::temp 11472,7899 11458,7897 11439,7894
-(Strecke an der nordöstlichen Begrenzung)	2::temp 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10640,8366
+(Strecke an der nordöstlichen Begrenzung)	2::temp 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10640,8366 10360,8521
 (Weg parallel zur Oderstr.)	2::temp 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
 (Eingang Kienitzer Str.)	2::temp 11498,7750 11489,7748 11479,7746 11470,7744
 (Flughafen Tempelhof - Eingang Allerstr.)	2::temp 11507,7647 11515,7654
@@ -1667,20 +1692,11 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Degnerstr., Bauarbeiten, Einbahnstraße in Richtung Süden, bis Oktober 2011',
          'from' => 1279577078,
          'id' => 2102,
-         'data' => 'userdel	q4::inwork; 16692,16253 16801,16501 16849,16551 17017,16716
+         'data' => 'userdel	q4::inwork; 16692,16253 16806,16496 16849,16551 17017,16716
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_016077',
-         'until' => 1283526000,
-         'text' => 'Schmidt-Knobelsdorf-Straße (Spandau): Baustelle, Einbahnstraße in Richtung Lutoner Str., 19.07.2010 09:00 Uhr bis 03.09.2010 17:00 Uhr',
-         'from' => 1279436400,
-         'id' => 2103,
-         'data' => 'userdel	q4::inwork; -5030,13017 -4629,12835 -4277,12675 -4239,12626
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1758,6 +1774,64 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'data' => 'userdel	2::inwork -45941,-31977 -46134,-32389 -46514,-32785
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => '106000506',
+         'until' => 1292972400,
+         'text' => 'Bernau bei Berlin: L314: Verlegung Trinkwasser/ Sanierung Schmutzwasser, Ausbau nördl. Geh- und Radweg OD Bernau, Zepernicker Chaussee zw. Elbestr. und Autobahnbrücke gesperrt, 30.08.2010 bis 21.12.2010 ',
+         'from' => 1283547955,
+         'id' => 2119,
+         'data' => 'userdel	q4::inwork; 20537,29285 21085,29942
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'IM_016256',
+         'until' => 1285000200,
+         'text' => 'Romain-Rolland-Str. (Heinersdorf): Baustelle, Fahrtrichtung gesperrt (bis Ende 09/2010) Richtung Hohenschönhausen zwischen Rothenbachstr. und Berliner Str., 01.09.2010 08:51 Uhr bis 20.09.2010 18:30 Uhr ',
+         'from' => 1283237460,
+         'id' => 2121,
+         'data' => 'userdel	q4::inwork; 12575,18275 12606,18215 12693,18081 12736,17998
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Mariannenstr. zwischen Skalitzer Str. und Heinrichplatz: Fahrbahn gesperrt',
+         'from' => undef,
+         'id' => 2122,
+         'data' => 'userdel	q4::inwork 11722,10533 11671,10402
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1285883999,
+         'text' => 'Die Charlottenstraße zwischen Hermann-Elflein-Straße und Schopenhauerstraße ist für den Bau von Hausanschlüssen halbseitig gesperrt. Im Baubereich ist eine Einbahnstraße in Richtung Wilhelmgalerie eingerichtet. Die Arbeiten dauern bis voraus. 30.09.2010. ',
+         'from' => 1283623066,
+         'id' => 2123,
+         'data' => 'userdel	q4::inwork; -13392,-1196 -13516,-1225
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.potsdam.de/cms/beitrag/10067788/966975/',
+         'until' => 1343685600,
+         'text' => 'Für die Arbeiten an der Brücke des Friedens in Neu Fahrland wird der Lerchensteig auf der gesamten Baulänge zwischen Nedlitzer Straße und Am Golfplatz voll gesperrt . Der Zeitraum für diese Arbeiten ist vom 09.08.2010 bis ca. 30.07.2012 geplant ',
+         'from' => 1281218400,
+         'id' => 2124,
+         'data' => 'userdel	q4::inwork -13387,2987 -13581,3075 -13840,2956 -14382,3066
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Die Wilhelm-Kabus-Str. ist noch nicht komplett fertig gestellt. Unter Umständen ist die Durchfahrt nicht möglich!',
+         'from' => undef,
+         'id' => 2125,
+         'data' => '	2::inwork 7716,8048 7793,8043 7834,8085 7859,8252 7893,8327 7942,8380 8078,8772
+',
+         'type' => 'handicap'
        }
      
 );

@@ -201,6 +201,8 @@ Eingang Allerstr. kann nachts nicht als Ausgang benutzt werden	CS; 11507,7647 11
 Eingang Okerstr. kann nachts nicht als Ausgang benutzt werden	CS; 11528,7528 11536,7533
 Eingang Leinestr. kann nachts nicht als Ausgang benutzt werden	CS; 11547,7432 11553,7437
 Eingang Oderstr. kann nachts nicht als Ausgang benutzt werden	CS; 11598,7264 11608,7267
+Eingang Peter-Strasser-Weg kann nachts nicht als Ausgang benutzt werden	CS; 9281,7795 9240,7797
+Eingang Columbiadamm/Golßener Str. kann nachts nicht als Ausgang benutzt werden	CS; 10360,8521 10384,8628
 Weg zwischen Habermannsee und Butzensee	CS 23522,10456 23468,10423 23431,10435 23193,10426 23024,10455 22978,10451
 Mollergasse: Straße ist nicht ausgeschildert	CS 9892,12596 9894,12564
 Schmellwitzer Weg: Privatstraße	CS 20005,11383 19984,11319 19801,11360
@@ -220,3 +222,8 @@ Verlängerte Köpenicker Str.: nicht ausgeschildert	CP2; 21016,7325 21284,7043
 Kirchhofweg: nicht ausgeschildert	CS 11608,7267 11687,7284 12180,7387
 (Landschaftspark Johannisthal): Nord-Süd-Strecke	CS 18229,2973 18228,2989 18046,3192 18027,3276 17997,3535 17976,3735 17953,3955
 Weidenweg (Altglienicke) [21B-21K]: Privatweg	CS 19879,-378 20050,-386 20248,-397 20300,-416
+Steffenstr.: nicht ausgeschildert, Zufahrt zum Sportforum	CP2; 15580,14880 15568,14901
+Hohenschönhauser Str.: ausgeschildert "Zu den Sport- und Tennisplätzen"	CP2; 14754,14406 14682,14572
+An den Feldtmanngärten: Privatstraße, 10km/h	CS 15810,17512 15802,17446 15537,17484 15271,17439
+Segitzdamm: als Oranienplatz ausgeschildert	CP2; 11159,10769 11133,10704
+Im Gartenheim: offiziell Einfahrt verboten; an beiden Eingängen Tore, aber ohne Schloss	CS 5707,4777 5690,4744 5659,4761 5677,4794
