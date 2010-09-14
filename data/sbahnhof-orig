@@ -33,7 +33,7 @@ Wollankstr.	SB 9476,17716
 #: attrs bg
 Pankow	SB 10796,17924
 Schönholz	SB 8692,18430
-Wilhelmsruh	SB 7452,19487
+Wilhelmsruh	SB 7446,19476
 Alt-Reinickendorf	SB 6583,19093
 #: attrs bg
 Wittenau	SB 5468,21190
@@ -205,7 +205,6 @@ Betriebsbhf. Schöneweide	SB 18674,4702
 Oberspree	SB 19582,5323
 #: attrs bf
 Spindlersfeld	SB 21285,4718
-#: XXX provisorischer Bahnhof; der neue Bahnhof entsteht bis 2010-03 über der Rudower Chaussee
 Adlershof	SB 19915,3386
 #: attrs bg
 Grünau	SB 22166,986

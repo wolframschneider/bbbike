@@ -12512,7 +12512,7 @@ EOF
        source_id => 'IM_009890',
        data  => <<EOF,
 userdel	2::inwork 20673,-31 20590,-120 20519,-198
-userdel	2::inwork 20688,-10 20684,105 20719,140
+userdel	2::inwork 20688,-10 20686,57 20684,105 20719,140
 userdel	2::inwork 20161,-487 20300,-416 20348,-380 20476,-279 20505,-217
 EOF
      },
@@ -17300,11 +17300,11 @@ EOF
 userdel	q4::inwork 65618,6296 65528,6253 65365,6281 65225,6403
 EOF
      },
-     { from  => 1270235590, # 2010-04-02 21:13
-       until => 1285020000, # 2010-09-21 00:00
-       text  => 'Grünheide (Mark): Brückenbauarbeiten OD Kienbaum 24.02.2010 bis 20.09.2010 ',
+     { from  => 1284411978, # 2010-09-13 23:06
+       until => 1288389600, # 2010-10-30 00:00
+       text  => 'Grünheide (Mark): L385: Brückenbauarbeiten OD Kienbaum, 24.02.2010 bis 29.10.2010 01:00 Uhr ',
        type  => 'gesperrt',
-       source_id => 'LSO-SG33-F10015',
+       source_id => 'LS/O-SG33-F/10/015',
        data  => <<EOF,
 userdel	2::inwork 48182,6806 48027,6894
 EOF
@@ -18181,6 +18181,60 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	2::inwork 7716,8048 7793,8043 7834,8085 7859,8252 7893,8327 7942,8380 8078,8772
+EOF
+     },
+     { from  => 1284091200, # 2010-09-10 06:00
+       until => 1284328740, # 2010-09-12 23:59
+       text  => 'Rheinstraße (Friedenau): Veranstaltung, Straße vollständig gesperrt (bis ca. 12.09.10, 24 Uhr) in beiden Richtungen zwischen Walther-Schreiber-Platz und Saarstraße ',
+       type  => 'gesperrt',
+       source_id => 'IM_016326',
+       data  => <<EOF,
+userdel	2::temp 5370,6486 5424,6584 5533,6753 5654,6941
+EOF
+     },
+     { from  => 1284091200, # 2010-09-10 06:00
+       until => 1284337800, # 2010-09-13 02:30
+       text  => 'Bahnhofstraße (Lichtenrade): Veranstaltung, Straße vollständig gesperrt (bis ca. 13.09.10, 2 Uhr) in beiden Richtungen zwischen Goltzstr. und Steinstr. ',
+       type  => 'handicap',
+       source_id => 'IM_016305',
+       data  => <<EOF,
+userdel	q4::temp 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
+EOF
+     },
+     { from  => 1284091200, # 2010-09-10 06:00
+       until => 1284336000, # 2010-09-13 02:00
+       text  => 'Breite Straße (Pankow): Veranstaltung, Straße vollständig gesperrt (bis 13.09.10, 2 Uhr morgens) in beiden Richtungen zwischen Mühlenstr. und Berliner Str.',
+       type  => 'handicap',
+       source_id => 'IM_016308',
+       data  => <<EOF,
+userdel	q4::temp 10240,18193 10320,18197 10487,18270 10660,18345 10680,18380 10609,18384 10567,18366 10502,18338 10463,18321 10281,18241
+EOF
+     },
+     { from  => 1284001200, # 2010-09-09 05:00
+       until => 1284332400, # 2010-09-13 01:00
+       text  => 'Turmstraße (Moabit): Veranstaltung, Straße vollständig gesperrt (bis 13.09.10, 1 Uhr morgens) in beiden Richtungen zwischen Stromstr. und Waldstr.',
+       type  => 'gesperrt',
+       source_id => 'IM_016302',
+       data  => <<EOF,
+userdel	2::temp 5368,13406 5560,13382 5705,13359 5857,13342 5956,13330 6011,13330 6112,13327 6228,13324
+EOF
+     },
+     { from  => 1284271200, # 2010-09-12 08:00
+       until => 1286550000, # 2010-10-08 17:00
+       text  => 'Dorfplatz (Bohnsdorf): Baustelle, Fahrtrichtung gesperrt Richtung A 117 zwischen Grünbergallee und Buntzelstr., 13.09.2010 08:00 Uhr bis 08.10.2010 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_016334',
+       data  => <<EOF,
+userdel	q4::inwork; 20827,-537 20881,-564 20995,-542 21074,-485
+EOF
+     },
+     { from  => 1284274800, # 2010-09-12 09:00
+       until => 1285851600, # 2010-09-30 15:00
+       text  => 'Neuer Hönower Weg (Dahlwitz-Hoppegarten): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Industriestr. und Wiesenstr., 13.09.2010 09:00 Uhr bis 30.09.2010 15:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_016338',
+       data  => <<EOF,
+userdel	q4::inwork 26880,11479 27272,11970
 EOF
      },
     );

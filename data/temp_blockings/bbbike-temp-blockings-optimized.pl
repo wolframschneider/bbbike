@@ -1309,17 +1309,7 @@ userdel	q4::inwork; 9130,12433 9141,12320
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_011081',
-         'until' => 1284382800,
-         'text' => 'Blankenburger Str. (Pankow): Baustelle, Fahrtrichtung gesperrt Richtung Dietzgenstr. zwischen Siegfriedstr. und Dietzgenstr. sowie Einbahnstraßenregelung in der Siegfriedstr., 05.01.2009 11:00 Uhr bis 13.09.2010 ',
-         'from' => 1231063200,
-         'id' => 2016,
-         'data' => 'userdel	q4::inwork; 10742,19632 10439,19576 10377,19565 10249,19541
-userdel	q4::inwork; 10614,19907 10742,19632
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_015001',
          'until' => 1309471199,
@@ -1395,10 +1385,10 @@ userdel	q4::inwork; 10614,19907 10742,19632
        undef,
        undef,
        {
-         'source_id' => 'LSO-SG33-F10015',
-         'until' => 1285020000,
-         'text' => 'Grünheide (Mark): Brückenbauarbeiten OD Kienbaum 24.02.2010 bis 20.09.2010 ',
-         'from' => 1270235590,
+         'source_id' => 'LS/O-SG33-F/10/015',
+         'until' => 1288389600,
+         'text' => 'Grünheide (Mark): L385: Brückenbauarbeiten OD Kienbaum, 24.02.2010 bis 29.10.2010 01:00 Uhr ',
+         'from' => 1284411978,
          'id' => 2037,
          'data' => 'userdel	2::inwork 48182,6806 48027,6894
 ',
@@ -1830,6 +1820,30 @@ userdel	q4::inwork; 10614,19907 10742,19632
          'from' => undef,
          'id' => 2125,
          'data' => '	2::inwork 7716,8048 7793,8043 7834,8085 7859,8252 7893,8327 7942,8380 8078,8772
+',
+         'type' => 'handicap'
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'source_id' => 'IM_016334',
+         'until' => 1286550000,
+         'text' => 'Dorfplatz (Bohnsdorf): Baustelle, Fahrtrichtung gesperrt Richtung A 117 zwischen Grünbergallee und Buntzelstr., 13.09.2010 08:00 Uhr bis 08.10.2010 17:00 Uhr ',
+         'from' => 1284271200,
+         'id' => 2130,
+         'data' => 'userdel	q4::inwork; 20827,-537 20881,-564 20995,-542 21074,-485
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_016338',
+         'until' => 1285851600,
+         'text' => 'Neuer Hönower Weg (Dahlwitz-Hoppegarten): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Industriestr. und Wiesenstr., 13.09.2010 09:00 Uhr bis 30.09.2010 15:00 Uhr ',
+         'from' => 1284274800,
+         'id' => 2131,
+         'data' => 'userdel	q4::inwork 26880,11479 27272,11970
 ',
          'type' => 'handicap'
        }

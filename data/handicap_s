@@ -346,8 +346,8 @@ Edenkobener Steg: Fuﬂg‰nger	q1 6627,4187 6645,4254
 Teltowkanalpromenade: enge und kurvige Unterf¸hrung	q2 4261,2703 4258,2693 4247,2652 4202,2622 4193,2616
 Heinrich-Laehr-Park: Fuﬂg‰nger	q1 1527,574 1258,1674
 (Unterf¸hrung): Rampen	q2 -8334,14461 -8238,14436 -8256,14418 -8227,14408 -8287,14411
-Viktoriapark: starke Steigung, Fuﬂg‰nger	q4; 8598,9074 8695,9079 8883,9089
-Viktoriapark: starkes Gef‰lle, Fuﬂg‰nger	q2; 8883,9089 8695,9079 8598,9074
+Viktoriapark: starke Steigung, Fuﬂg‰nger	q4; 8598,9074 8695,9079 8827,9086 8883,9089
+Viktoriapark: starkes Gef‰lle, Fuﬂg‰nger	q2; 8883,9089 8827,9086 8695,9079 8598,9074
 Viktoriapark: Steigung, Fuﬂg‰nger	q3; 9115,9046 9091,9054 9079,9058 9026,9042 8962,9048
 Viktoriapark: Gef‰lle, Fuﬂg‰nger	q1; 8962,9048 9026,9042 9079,9058 9091,9054 9115,9046
 Viktoriapark: Fuﬂg‰nger	q2 8883,9089 8901,9104 8943,9098 8962,9048
@@ -622,6 +622,9 @@ Nippeser Str. [13 u. 15]: Radfahren verboten, ggfs. schieben	q3 19973,-245 19894
 Nippeser Str. [12 u. 14]: Radfahren verboten, ggfs. schieben	q3 19894,-247 19827,-251 19775,-252
 Neumagener Str.: enge Straﬂe	q1 14897,17093 14910,17010
 Witzenhauser Str.: Fuﬂg‰nger	q2 18059,14838 18170,14890
+Schattenweg: Fuﬂg‰nger, spielende Kinder	q2 19928,319 19897,292 19865,263 19806,206 19691,107
+(Wegedornbr¸cke - M¸ngersdorfer Str.): sehr enger Weg	q3 20462,540 20409,478 20345,398 20338,386
+(Leberblumenweg - Goldsternweg): eng	q1 20591,2060 20550,2194
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q3 11805,19071 11937,19175
 Ebersstr.: Sch¸ler	q2 7245,8583 7292,8631
 Straﬂe 103 (Niederschˆnhausen): enge Straﬂe	q1 10914,20065 11051,19789
@@ -1303,7 +1306,7 @@ Faucherweg: enge Straﬂe	q1 -1307,14801 -1251,14772 -1207,14781 -1141,14814 -896,
 Dualastr.: enge Straﬂe	q1 6019,15841 5848,15685
 (Horterweg - Rˆmerweg): einige Fuﬂg‰nger	q1 19005,9816 19003,9800 18994,9707
 Kissingenplatz: Bordsteine	q4 11405,17985 11398,17962
-Ruben-Wolf-Str.: einige Fuﬂg‰nger	q1 19906,217 19785,361
+Ruben-Wolf-Str.: einige Fuﬂg‰nger	q1 19906,217 19865,263 19785,361
 Semmelweg: einige Fuﬂg‰nger	q1 1229,18750 1101,18611 915,18352 766,18083 492,17831 396,17648 255,17528
 Langenbeckplatz: enge Straﬂe	q1 25030,9626 25095,9627 25086,9733 25020,9728 25030,9626
 (RÈaumurstr. - F¸rstenstr., S-Bahnunterf¸hrung): Fuﬂg‰nger	q3 4279,459 4218,439 4158,461 4136,505
@@ -1360,6 +1363,7 @@ Hermesweg: einige Fuﬂg‰nger	q1 6116,4707 6072,4606
 Reginenweg: Radfahren verboten, ggfs. schieben	q4 6484,3292 6482,3327 6431,3417 6426,3425
 Ruthstr.: Fuﬂweg	q2 6330,3005 6320,3022
 Brigittenstr.: Fuﬂweg	q2 6208,2954 6226,2936
+(Oranienburger Str. - Wilhelm-Gericke-Str.): Fuﬂweg	q1 5545,19909 5598,19912
 Dennewitzplatz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 7906,10098 7866,9918
 Eichborndamm: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 4240,19019 4232,18981
 Dorotheenstr. (Straﬂenbahn): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 9454,12558 9330,12529
