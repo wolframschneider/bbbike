@@ -583,7 +583,7 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
          'text' => 'Rathausstr. (Mitte) Richtung Alexanderplatz zwischen Breitestr. und Poststr. Baustelle, Straße vollständig gesperrt (bis März 2011)',
          'from' => 1242770815,
          'id' => 1627,
-         'data' => 'userdel	q4::inwork 10267,12305 10362,12351
+         'data' => 'userdel	q4::inwork 10281,12310 10362,12351
 userdel	q4::inwork 10422,12395 10476,12432
 ',
          'type' => 'handicap'
@@ -811,8 +811,8 @@ userdel	q4::inwork 10422,12395 10476,12432
          'id' => 1808,
          'data' => '#: note: Sperrung bestätigt von Stefan (s.sms): vvv
 #: note: genauere Uhrzeit von Dieter Heimann
-Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::temp 21683,6946 21498,7153 21475,7500 21497,7597 21546,7635
-Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::temp 21475,7500 21341,7487 21025,7349
+Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21683,6946 21498,7153 21475,7500 21497,7597 21546,7635
+Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21475,7500 21341,7487 21025,7349
 #: note: ^^^
 ',
          'type' => 'gesperrt'
@@ -823,14 +823,14 @@ Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am 
          'text' => 'Neuer Garten: Wege sind nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet',
          'from' => undef,
          'id' => 1809,
-         'data' => '	2::temp -11615,853 -11715,959 -11818,993 -11871,1087 -12081,1168 -12094,1273 -12139,1325
-	2::temp -11650,590 -11603,721 -11615,853
-	2::temp -11510,810 -11562,918 -11575,1031 -11537,1206 -11544,1262 -11580,1281 -11871,1185 -11990,1214 -12124,1359 -12141,1357
-	2::temp -11615,853 -11510,810 -11412,784 -11392,762 -11231,696
-(Ökonomieweg, Neuer Garten): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -12528,-11 -12518,13 -12537,48 -12531,75 -12475,116 -12448,246 -12373,288 -12276,554 -12182,816 -12154,963 -12186,1118 -12148,1245 -12139,1325 -12141,1357 -12166,1384
-Neuer Garten, Westufer des Heiligen Sees: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -12265,-418 -12262,-362 -12328,-212 -12331,-131 -12321,9 -12278,134 -12156,193 -12103,315 -12143,353 -12115,409 -12068,384 -11990,790 -11950,781 -11887,837 -11856,950 -11818,993
-Neuer Garten (am Portierhaus) - Weinmeisterstr.: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -12331,-131 -12412,-118 -12450,-34 -12528,-11
-Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::temp -12332,585 -12276,554 -12115,409
+         'data' => '	2::night -11615,853 -11715,959 -11818,993 -11871,1087 -12081,1168 -12094,1273 -12139,1325
+	2::night -11650,590 -11603,721 -11615,853
+	2::night -11510,810 -11562,918 -11575,1031 -11537,1206 -11544,1262 -11580,1281 -11871,1185 -11990,1214 -12124,1359 -12141,1357
+	2::night -11615,853 -11510,810 -11412,784 -11392,762 -11231,696
+(Ökonomieweg, Neuer Garten): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12528,-11 -12518,13 -12537,48 -12531,75 -12475,116 -12448,246 -12373,288 -12276,554 -12182,816 -12154,963 -12186,1118 -12148,1245 -12139,1325 -12141,1357 -12166,1384
+Neuer Garten, Westufer des Heiligen Sees: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12265,-418 -12262,-362 -12328,-212 -12331,-131 -12321,9 -12278,134 -12156,193 -12103,315 -12143,353 -12115,409 -12068,384 -11990,790 -11950,781 -11887,837 -11856,950 -11818,993
+Neuer Garten (am Portierhaus) - Weinmeisterstr.: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12331,-131 -12412,-118 -12450,-34 -12528,-11
+Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -12332,585 -12276,554 -12115,409
 ',
          'type' => 'gesperrt'
        },
@@ -840,11 +840,11 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Sanssouci: Wege sind nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet',
          'from' => undef,
          'id' => 1810,
-         'data' => '(Am Neuen Palais, direkter Weg) 	2::temp -15810,-1274 -15820,-1146 -15854,-656
-(Am Grünen Gitter, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -13857,-1040 -14153,-1135 -14171,-1026
-(Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -14171,-1026 -14482,-1043 -14622,-1138 -14865,-1118 -15025,-1096 -15553,-1139 -15651,-1137 -15820,-1146
-(Lennestr. - Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -14614,-1342 -14856,-1223 -14865,-1118
-(Affengang, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::temp -14129,-1258 -14131,-1181 -14153,-1135
+         'data' => '(Am Neuen Palais, direkter Weg) 	2::night -15810,-1274 -15820,-1146 -15854,-656
+(Am Grünen Gitter, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -13857,-1040 -14153,-1135 -14171,-1026
+(Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -14171,-1026 -14482,-1043 -14622,-1138 -14865,-1118 -15025,-1096 -15553,-1139 -15651,-1137 -15820,-1146
+(Lennestr. - Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -14614,-1342 -14856,-1223 -14865,-1118
+(Affengang, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -14129,-1258 -14131,-1181 -14153,-1135
 ',
          'type' => 'gesperrt'
        },
@@ -854,7 +854,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Schloßpark Charlottenburg: bei Dunkelheit geschlossen',
          'from' => undef,
          'id' => 1811,
-         'data' => '	2::temp 3296,12719 3231,12749 3127,12793 3055,12973 2997,13402 2950,13552
+         'data' => '	2::night 3296,12719 3231,12749 3127,12793 3055,12973 2997,13402 2950,13552
 ',
          'type' => 'gesperrt'
        },
@@ -864,7 +864,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => '(Neue Grünstr. - Alte Jakobstr.): Der Hofdurchgang ist nachts zwischen 23 und 6 Uhr sowie an Sonn- und Feiertagen geschlossen',
          'from' => undef,
          'id' => 1812,
-         'data' => '	2::temp 10624,11548 10534,11609
+         'data' => '	2::night:weekend 10624,11548 10534,11609
 ',
          'type' => 'gesperrt'
        },
@@ -937,7 +937,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Karl-August-Platz, Weimarer Str.: Mi 08.00-13.00 und Sa 08.00-14.00 Wochenmarkt, Behinderungen möglich',
          'from' => undef,
          'id' => 1819,
-         'data' => '	q4::temp 4092,11338 4077,11226
+         'data' => '	q4::temp 4101,11347 4101,11233
 ',
          'type' => 'gesperrt'
        },
@@ -981,8 +981,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'id' => 1823,
          'data' => '#: by: Marek Bänsch:
 #: confirmed_by: srt
-	2::temp 8337,13541 8248,13659 8101,13901 8119,13912 8011,14096
-	2::temp 8119,13912 8216,13987
+	2::night 8337,13541 8248,13659 8101,13901 8119,13912 8011,14096
+	2::night 8119,13912 8216,13987
 ',
          'type' => 'gesperrt'
        },
@@ -992,8 +992,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Park Biesdorf nachts geschlossen, Öffnungszeiten 6.00-23.00',
          'from' => undef,
          'id' => 1824,
-         'data' => '	2::temp 21150,11925 21132,11943 21100,11960 20862,12027 20810,12031
-	2::temp 20862,12027 20836,11768
+         'data' => '	2::night 21150,11925 21132,11943 21100,11960 20862,12027 20810,12031
+	2::night 20862,12027 20836,11768
 ',
          'type' => 'gesperrt'
        },
@@ -1003,7 +1003,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Breite Gasse: nur von 9 Uhr bis zum Einschalten der Straßenbeleuchtung geöffnet',
          'from' => undef,
          'id' => 1825,
-         'data' => '	2::temp 22312,4329 22252,4362
+         'data' => '	2::night 22312,4329 22252,4362
 ',
          'type' => 'gesperrt'
        },
@@ -1013,8 +1013,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Park am Nordbahnhof: im Sommerhalbjahr zwischen 6.30 und 22.00 Uhr geöffnet, im Winterhalbjahr zwischen 7.30 und 19.00 Uhr',
          'from' => undef,
          'id' => 1826,
-         'data' => '	2::temp 8825,14401 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
-	2::temp 8913,14485 9176,14181 9147,14151 9224,14169
+         'data' => '	2::night 8825,14401 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
+	2::night 8913,14485 9176,14181 9147,14151 9224,14169
 ',
          'type' => 'gesperrt'
        },
@@ -1200,7 +1200,7 @@ userdel	q4::inwork; 9130,12433 9141,12320
          'text' => '(Drorystr. - Braunschweiger Str., Spielplatz): nachts werden die Tore geschlossen',
          'from' => undef,
          'id' => 1955,
-         'data' => '	2::temp 13520,7485 13601,7366
+         'data' => '	2::night 13520,7485 13601,7366
 ',
          'type' => 'gesperrt'
        },
@@ -1210,7 +1210,8 @@ userdel	q4::inwork; 9130,12433 9141,12320
          'text' => 'Friedrich-Ludwig-Jahn-Sportpark: während Veranstaltungen und nachts von ca. 22 bis 7 Uhr gesperrt, mit Anhänger wegen des engen Südeinganges ggfs. nicht befahrbar',
          'from' => undef,
          'id' => 1956,
-         'data' => '	2::temp 10473,15549 10607,15142
+         'data' => '#: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
+	2::night 10473,15549 10607,15142
 ',
          'type' => 'gesperrt'
        },
@@ -1309,7 +1310,17 @@ userdel	q4::inwork; 9130,12433 9141,12320
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_011081',
+         'until' => 1287147600,
+         'text' => 'Blankenburger Str. (Pankow): Baustelle, Fahrtrichtung gesperrt Richtung Dietzgenstr. zwischen Siegfriedstr. und Dietzgenstr. sowie Einbahnstraßenregelung in der Siegfriedstr., 05.01.2009 11:00 Uhr bis 15.10.2010 ',
+         'from' => 1231063200,
+         'id' => 2016,
+         'data' => 'userdel	q4::inwork; 10742,19632 10439,19576 10377,19565 10249,19541
+userdel	q4::inwork; 10614,19907 10742,19632
+',
+         'type' => 'handicap'
+       },
        {
          'source_id' => 'IM_015001',
          'until' => 1309471199,
@@ -1507,31 +1518,31 @@ userdel	q4::inwork; 9130,12433 9141,12320
        {
          'until' => undef,
          'permanent' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich. Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
-         'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10691,8532 10640,8366 10598,8270 10575,8218
-(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10598,8270 10729,8152
-(Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::temp 10384,8628 10360,8521 10298,8245
-(Rundkurs auf dem Flughafen Tempelhof)	2::temp 11463,7785 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
-(Rundkurs auf dem Flughafen Tempelhof)	2::temp 9525,7558 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10298,8245 10575,8218
-(Rundkurs auf dem Flughafen Tempelhof)	2::temp 10575,8218 10729,8152 10924,7987 11090,7916 11264,7882 11355,7871 11381,7775 11460,7447 11518,7314
-(Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::temp 9525,7558 9431,7425 9392,7339 9300,7312 9302,7294 9242,7286
-(Weg parallel zum Tempelhofer Damm)	2::temp  9300,7312 9281,7651 9281,7795
-(Eingang Peter-Strasser-Weg)	2::temp 9281,7795 9240,7797
-(Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::temp 9351,7600 9281,7651
-(Südliche Landebahn)	2::temp 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11593,7314
-(Nördliche Landebahn)	2::temp 9351,7600 9518,7609 9654,7621 11279,7768 11381,7775 11463,7785
-(Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::temp 11463,7785 11439,7894
-(Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::temp 11472,7899 11458,7897 11439,7894
-(Strecke an der nordöstlichen Begrenzung)	2::temp 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10640,8366 10360,8521
-(Weg parallel zur Oderstr.)	2::temp 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
-(Eingang Kienitzer Str.)	2::temp 11498,7750 11489,7748 11479,7746 11470,7744
-(Flughafen Tempelhof - Eingang Allerstr.)	2::temp 11507,7647 11515,7654
-(Flughafen Tempelhof - Eingang Okerstr.)	2::temp 11528,7528 11536,7533
-(Flughafen Tempelhof - Eingang Leinestr.)	2::temp 11547,7432 11553,7437
-(Flughafen Tempelhof - Eingang Oderstr.)	2::temp 11598,7264 11608,7267
-(Eingang Tempelhofer Damm - südliche Landebahn)	2::temp 9302,7294 9351,7241 9461,7190
+         'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10640,8366 10598,8270 10575,8218
+(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
+(Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10298,8245
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 11463,7785 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10298,8245 10575,8218
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10924,7987 11090,7916 11264,7882 11355,7871 11381,7775 11460,7447 11518,7314
+(Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9392,7339 9300,7312 9302,7294 9242,7286
+(Weg parallel zum Tempelhofer Damm)	2::night  9300,7312 9281,7651 9281,7795
+(Eingang Peter-Strasser-Weg)	2::night 9281,7795 9240,7797
+(Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9351,7600 9281,7651
+(Südliche Landebahn)	2::night 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11593,7314
+(Nördliche Landebahn)	2::night 9351,7600 9518,7609 9654,7621 11279,7768 11381,7775 11463,7785
+(Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11463,7785 11439,7894
+(Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
+(Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10640,8366 10360,8521
+(Weg parallel zur Oderstr.)	2::night 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
+(Eingang Kienitzer Str.)	2::night 11498,7750 11489,7748 11479,7746 11470,7744
+(Flughafen Tempelhof - Eingang Allerstr.)	2::night 11507,7647 11515,7654
+(Flughafen Tempelhof - Eingang Okerstr.)	2::night 11528,7528 11536,7533
+(Flughafen Tempelhof - Eingang Leinestr.)	2::night 11547,7432 11553,7437
+(Flughafen Tempelhof - Eingang Oderstr.)	2::night 11598,7264 11608,7267
+(Eingang Tempelhofer Damm - südliche Landebahn)	2::night 9302,7294 9351,7241 9461,7190
 '
        },
        {
@@ -1788,8 +1799,8 @@ userdel	q4::inwork; 9130,12433 9141,12320
        },
        undef,
        {
-         'until' => 1285883999,
-         'text' => 'Die Charlottenstraße zwischen Hermann-Elflein-Straße und Schopenhauerstraße ist für den Bau von Hausanschlüssen halbseitig gesperrt. Im Baubereich ist eine Einbahnstraße in Richtung Wilhelmgalerie eingerichtet. Die Arbeiten dauern bis voraus. 30.09.2010. ',
+         'until' => 1291157999,
+         'text' => 'Die Charlottenstraße zwischen Hermann-Elflein-Straße und Schopenhauerstraße ist für den Bau von Hausanschlüssen halbseitig gesperrt. Im Baubereich ist eine Einbahnstraße in Richtung Wilhelmgalerie eingerichtet. Die Arbeiten dauern bis voraus. Ende November 2010. ',
          'from' => 1283623066,
          'id' => 2123,
          'data' => 'userdel	q4::inwork; -13392,-1196 -13516,-1225
@@ -1830,6 +1841,36 @@ userdel	q4::inwork; 9130,12433 9141,12320
          'data' => 'userdel	q4::inwork 26880,11479 27272,11970
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_016343',
+         'until' => 1285945200,
+         'text' => 'Köpenicker Str. (Biesdorf): Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, zwischen Tiergartenstr. und Köpenicker Allee, 14.09.2010 09:00 Uhr bis 01.10.2010 17:00 Uhr ',
+         'from' => 1284361200,
+         'id' => 2132,
+         'data' => 'userdel	q3::inwork 21027,7432 21032,7590 21037,7751
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'LS/O-SG33-E/09/214-7',
+         'until' => 1293750000,
+         'text' => 'Schenkenberg: L26: Grundhafter Straßenbau mit Ausbau des Knotenpunktes mit der K 7344 Prenzlau - A 20, 13.09.2010 bis 30.12.2010 ',
+         'from' => 1284666529,
+         'id' => 2133,
+         'data' => 'userdel	2::inwork 46581,105900 47587,106693
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1356994800,
+         'text' => 'Braunschweiger Str./Karl-Marx-Str.: Abbiegen nicht möglich (bzw. nur auf dem Gehweg) bis 31.12.2012 16:00 Uhr',
+         'from' => 1284745737,
+         'id' => 2134,
+         'data' => 'userdel	3 13150,7254 13047,7234 13058,7165
+userdel	3 13150,7254 13047,7234 13034,7319
+',
+         'type' => 'gesperrt'
        }
      
 );

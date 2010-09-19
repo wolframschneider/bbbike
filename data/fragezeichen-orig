@@ -9,12 +9,12 @@
 #: section ignorieren vvv
 #: section projektierte Radstreifen der Verkehrsverwaltung vvv
 #
-#: last_checked: 2010-08-14
-#: next_check: 2011-01-01
+#: last_checked: 2010-09-18
+#: next_check: 2011-06-01
 #: XXX: die ersten Meter in der Breiten Str. sind noch Baustelle ohne Radspuren
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0709/nachricht2788.html
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1004/nachricht3862.html Bauarbeiten werden im Oktober 2011 abgeschloßen sein
-Breite Str./Werderscher Markt	?::inwork 10267,12305 10170,12261 10109,12238 10091,12232 10035,12209 9972,12184
+Breite Str./Werderscher Markt	?::inwork 10281,12310 10170,12261 10109,12238 10091,12232 10035,12209 9972,12184
 #: last_checked: 2007-07-15
 Löhleinstraße	?::projected 2717,5578 2499,5144 2454,5067 2288,4932
 #: last_checked: 2009-05-02
@@ -45,8 +45,8 @@ Zossener Str./Lindenstr.	?::projected 9856,10358 9873,10285 9865,10227 9858,1019
 #: next_check: 2010-12-07
 Michaelbrücke/Michaelkirchstr.	?::projected 11768,12006 11716,11914 11676,11839 11574,11594 11498,11417
 #
-#: last_checked: 2010-08-14
-#: next_check: 2010-12-01
+#: last_checked: 2010-09-18
+#: next_check: 2010-11-01
 # auch im Tsp 2010-03-26 erwähnt
 Fischerinsel	?::projected 10512,12039 10672,11870
 #
@@ -54,8 +54,8 @@ Fischerinsel	?::projected 10512,12039 10672,11870
 #: next_check: 2010-12-08
 Stülerstr.	?::projected 6825,11486 6716,11439 6692,11365 6679,11319 6630,11247 6606,11222
 #
-#: last_checked: 2010-08-14
-#: next_check: 2010-11-01
+#: last_checked: 2010-09-18
+#: next_check: 2011-01-01
 Danziger Str.	?::projected 11712,14868 11879,14771 11990,14714 12040,14688 12128,14640 12317,14535 12425,14459 12630,14306 12729,14227 12901,14093 12975,13990 13037,13897 13100,13803 13166,13707 13225,13620 13228,13615 13330,13468
 #
 #: last_checked: 2010-08-14
@@ -91,8 +91,8 @@ Goerzallee	?::projected 4164,2717 4065,2576 3983,2454 3805,2196 3700,2045 3640,1
 #: by: Tagesspiegel vom 2009-04-12, soll 2009 realisiert werden
 #: corrected_by: MoPo 2009-08-01, soll 2010 realisiert werden
 # auch im Tsp vom 2010-03-26 erwähnt
-#: next_check: 2010-10-01
-#: last_checked: 2010-06-15 (by Joachim Faust)
+#: next_check: 2011-01-01
+#: last_checked: 2010-09-18
 Müllerstr.	?::projected 6790,16018 6680,16116 6608,16180 6450,16325 6444,16331 6433,16342 6311,16457 6208,16546 6103,16635 6019,16712 5937,16784 5900,16817 5777,16924 5589,17081 5504,17153
 #
 #: by: Tagesspiegel vom 2009-04-12, soll 2009 realisiert werden
@@ -129,7 +129,7 @@ Blankenburger Str. erhält beiderseitig Radfahrstreifen zwischen Dietzgen- und Si
 Wollankstr.: Angebotsstreifen werden bis Herbst 2011 eingerichtet	?::projected 9549,17625 9590,17662 9624,17693 9663,17734 9727,17804 9791,17877 9832,17925 9870,17971 9978,18104 10027,18165 10089,18180
 #
 #: by: Tagesspiegel vom 2010-03-31
-#: last_checked: 2010-09-07
+#: last_checked: 2010-09-18
 #: next_check: 2010-12-01
 Rüdersdorfer Str. bekommt Radspuren	?::projected 13066,11854 12891,12008
 #
@@ -212,8 +212,8 @@ Mauerweg: evtl. existiert hier bereits ein geschotterter Radweg parallel zur Str
 #: last_checked: 2009-12-29
 Pyramidenring/Rhinstr.: Ampel in Bau	?::inwork 18166,14277
 #
-#: last_checked: 2010-08-14 vvv
-#: next_check: 2010-11-01 vvv
+#: last_checked: 2010-09-18 vvv
+#: next_check: 2011-01-01 vvv
 #: XXX Eintrag in Berlin.coords.data fehlt: PLZ=10117
 #: XXX genaue Lage?
 Prinzengasse: existiert sie schon, wenn ja: wie ist die Qualität?	?::inwork 9952,12292 10029,12313
@@ -257,11 +257,11 @@ Alt-Biesdorf/Alt-Kaulsdorf (südliche Seite): Bau von Radwegen	? 21108,11628 2125
 Allee der Kosmonauten: Bau von Radwegen oder -streifen	?::inwork 19173,13478 19059,13474 18875,13467 18783,13469
 #: by ^^^
 #: by: MoPo 2009-08-01, soll 2010 realisiert werden vvv
-#: last_checked: 2010-08-30
+#: last_checked: 2010-09-18
 #: next_check: 2011-01-01
 Fasanenstr.: Öffnung der Einbahnstraße für Radfahrer	? 5268,11274 5247,10992 5242,10918 5229,10716 5207,10399
-#: last_checked: 2010-06-08
-#: next_check: 2010-09-01
+#: last_checked: 2010-09-17
+#: next_check: 2010-12-01
 Braunschweiger Str.: Asphaltierung	? 13047,7234 13150,7254 13322,7294 13369,7307 13487,7337
 #: last_checked: 2010-06-08
 #: next_check: 2010-09-01
@@ -322,7 +322,9 @@ B96a: Neubau der Radwege (gemeinsam mit Gehweg); wahrscheinlich wird der Radstre
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-lichtenberg/presse/archiv/20080327.1225.97044.html
 Ahrensfelder Chaussee: Radstreifen in Bau, bis 2008-10	? 20160,18301 20460,18420 20582,18468 20624,18485 20746,18534 20915,18601 21165,18715 21278,18786 21332,18819
 # XXX del ---: by: http://www.berliner-stadtplan.com/topic/bln/str/x_wgs/22.04/y_wgs/28.92/from/form.html --- #: by: http://www.morgenpost.de/content/2006/09/20/bezirke/855150.html --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20060915.1800.47562.html --- #: by: http://www.cdu-fraktion-tk.de/image/inhalte/file/Amtsblatt_Nr__2010-14.pdf (Name der Straße) --- #: last_checked: 2010-09-08 --- #: next_check: 2010-09-15 --- Wilhelm-Kabus-Str.: neue Straße wird demnächst freigegeben, die Naumannstr. wird später verkehrsberuhigt; Ampelanlagen an den Kreuzungen Naumannstr. und Kolonnenstr. werden entstehen	?::inwork 7716,8048 7793,8043 7834,8085 7859,8252 7893,8327 7942,8380 8078,8772
-Wilhelm-Kabus-Str./Naumannstr.: Ampelanlange in Bau	?::inwork 7716,8048
+#: last_checked: 2010-09-16
+#: next_check: 2010-09-23
+Wilhelm-Kabus-Str./Naumannstr.: Ampelanlage in Bau	?::inwork 7716,8048
 #: next_check: 2011-12-31
 Verbindung zwischen Leuthener Platz und General-Pape-Str. (evtl. mit Verlängerung) inkl. Brücke über die Bahnstrecke für Fußgänger und Radfahrer (4m breit), Realisierung bis 2011-12-31	?::projected 7716,8356 7837,8354 7893,8327 8088,8283 8264,8289
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20060109.1050.33932.html
@@ -362,11 +364,6 @@ Fußgängerbrücke über den Nordhafen in Planung	?::projected -2506,16315 -2510,163
 # Das heißt diese Strecken werden nicht bei einer erweiterten Suche aufgenommen
 # und dem CGI-Benutzer auch nicht präsentiert.
 # 
-#: by: http://www.berlin.de/ba-neukoelln/presse/archiv/20100907.1300.309668.html
-Schwarzer Weg: existiert dieser Straßenname in der Realität? Evtl. als Alias eintragen?	? 13938,7938 13957,8209 13939,8228
-Neuköllner Tor: überprüfen, und dann nach sehenswuerdigkeit-orig, next to Neukölln Arcaden	? 13131,7066 13141,7009 13266,7033 13257,7094
-# XXX del --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1009/nachricht4030.html --- Situation auf der Lohmühleninsel: Schwellen, Beleuchtung?	? 13535,10184 13535,10184 13371,9974 13333,9929
-# XXX del --- Rampe zur Lohmühleninsel: nicht mehr so steil?	? 13221,10005 13237,9995 13267,10036
 #: XXX_prog
 Bordsteinkante Richtung Westen	? 17183,17385
 #: XXX_indoor
@@ -930,7 +927,7 @@ Heinestr./Ahrensfelde: laut ADFC-Karte nur mäßig für Radfahrer geeignet	? 20987,
 Cottbusser Platz: laut ADFC-Karte gute Qualität	? 23297,14772 23288,14719 23298,14685 23379,14514
 #: XXX: ein anonymer Eintrag: eng schlechter straßenbelag, Q2
 Schillingweg: laut ADFC-Karte mäßig bis gut geeignet	? 11514,24284 11259,23928 11224,23879 11190,23832 11128,23746 11101,23708 10855,23403 10717,23258 10700,23251 10629,23222 10396,23128 9890,22932
-Wriezener/Osloer Str.: ist das Abbiegen wegen der Straßenbahn möglich?	? 9210,16638
+# XXX del --- Furt existiert --- Wriezener/Osloer Str.: ist das Abbiegen wegen der Straßenbahn möglich?	? 9210,16638
 Eisenbahnbrücke über der Elbe: laut <cp6net$f0g$1@zeppelin.rz.uni-potsdam.de> ist die Eisenbahnbrücke für Fußgänger begehbar, laut <cn2fr0taoncnlu6s84inbhgpo8lq0u0bh2@4ax.com> sogar offizieller Bestandteil des Elbe-Radwegs	? -92087,-49506 -91387,-49350
 Weg entlang der Elbe: Qualität?	? -91387,-49350 -91150,-49775 -90062,-50750 -89709,-51230
 #XXX Koordinaten stimmen nicht mehr! Darßer Str.: beidseitiger Radweg ja, eintragen!	? B24943,-13819 B23513,-13631
@@ -1662,8 +1659,6 @@ Happestr.: Qualität?	? 10955,-769 10953,-812 10968,-987 10976,-1070
 Schumpeterstr.: Qualität? Ist die Straße eine Spielstraße?	? 10979,-1093 10993,-1256 11003,-1303
 Happestr. - Schumpeterstr.: Gibt es für Radfahrer eine Verbindung?	? 10976,-1070 10979,-1093
 Weißenthurmstr.: Qualität?	? 10968,-987 11120,-976
-#: XXX anonymer Eintrag: fester Sandweg, Q1, q2 ohne weitere Angaben: zweifelhaft
-Kronbergstr.: Qualität?	? 11099,-857 11291,-834 11490,-809 11680,-792 11844,-773
 #: XXX der anonyme Eintrag meinte bestimmt die in Kreuzberg
 Großbeerenstr. (Lichterfelde): Qualität?	? 4939,1148 5050,1133 5167,1116
 Smyrnaer Weg: Qualität?	? 10248,3897 10348,3888
@@ -1973,7 +1968,6 @@ Jägerstieg - B96: existiert eine Verbindung? Qualität? Für Autos gesperrt? Nacht
 Weg zwischen Goerdelersteg und Beusselstr.: existiert auch ein Weg zwischen Westhafenkanal und Autobahn? Wenn ja, wie ist die Qualität?	? 3619,14183 5086,14536
 Bohrauer Pfad: Qualität?	? 20981,4628 20827,4655 20716,4691
 Gartenweg (Kolonie Wendenheide): Qualität? Offizieler Name des Weges? Für Autos gesperrt?	? 20850,4225 20716,4549 20684,4596
-Travemünder Str.: Qualität?	? 8695,16525 8759,16665 8759,16684
 #: XXX: nicht vergessen: auch in brunnels eintragen!
 Fußgängerbrücke: Für Radfahrer befahrbar? Existieren Rampen oder Treppen? Qualität?	? 13192,21697 13046,21734 13008,21783
 Rue Racine: Qualität?	? 4339,21600 4334,21540 4307,21506 4254,21495 4204,21536 4198,21615 4209,21703
@@ -2181,7 +2175,8 @@ An der Krähenheide: Qualität?	? -1102,19564 -1071,19689 -1045,19793
 Gabelweihstr.: Qualität?	? -1492,19370 -1557,19457 -1681,19593
 Dorndreherweg: Qualität?	? -1364,19982 -1414,20145 -1473,20181 -1578,20228
 Armenische Str.: Qualität?	? 7216,16552 7285,16638 7177,16715 7150,16760 7147,16791
-Syrische Str.: Qualität? Kann man als Radfahrer zur Seestr. durchfahren? Kann man die Seestr. hier überqueren?	? 7106,16646 7216,16552 7263,16508 7295,16477
+#: XXX Kann man als Radfahrer zur Seestr. durchfahren? -> ja!
+Syrische Str.: Qualität? Kann man die Seestr. hier überqueren?	? 7106,16646 7216,16552 7263,16508 7295,16477
 Fischhauser Weg: Qualität? Kann man als Radfahrer zum Pankeweg gelangen?	? 8951,17717 9006,17690
 Zechliner Str. (Gesundbrunnen): Qualität?	? 8950,17219 8846,17266 8751,17307
 #: XXX laut anonymous: mäßiger Asphalt
@@ -4741,3 +4736,5 @@ Radweg BU: Qualität? Straßenname?	? 17668,26607 17964,26823
 Radweg BU: Qualität? Straßenname?	? 17376,26582 17418,26518
 #: XXX green?
 Teltowkanal - Rudower Höhe: Qualität? Nachts beleuchtet?	? 18426,2476 18518,2370 18567,2218 18580,2121
+#: by: http://www.potsdam.de/cms/beitrag/10068810/966975/
+Radweg in der Bergstraße: wo genau?	? -17968,7253 -18232,6565
