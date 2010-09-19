@@ -150,7 +150,7 @@ elsif ( $lat && $lng ) {
         if ( $res->is_success ) {
             my @c = grep { s/^charset=// && $_ } $res->content_type();
             my $charset = $c[0];
-	    warn "weather forecast charset: $charset\n" if $debug >= 2;
+            warn "weather forecast charset: $charset\n" if $debug >= 2;
             $content =
               Encode::decode( $charset, $res->content, $Encode::FB_DEFAULT );
 
