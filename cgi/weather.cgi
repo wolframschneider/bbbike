@@ -81,6 +81,7 @@ sub merge_json {
 # main
 #
 
+binmode \*STDOUT, ':utf8';
 print $q->header(
     -type   => 'application/json;charset=UTF-8',
     -expire => '+30m'
