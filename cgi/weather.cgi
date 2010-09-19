@@ -11,7 +11,7 @@ use strict;
 use warnings;
 
 my $q         = new CGI;
-my $debug     = 1;
+my $debug     = 2;
 my $cache_dir = "/var/cache/bbbike";
 
 my $enable_google_weather_forecast = 1;
@@ -150,6 +150,7 @@ elsif ( $lat && $lng ) {
         if ( $res->is_success ) {
             my @c = grep { s/^charset=// && $_ } $res->content_type();
             my $charset = $c[0];
+	    warn "weather forecast charset: $charset\n" if $debug >= 2;
             $content =
               Encode::decode( $charset, $res->content, $Encode::FB_DEFAULT );
 
