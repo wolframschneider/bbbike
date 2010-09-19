@@ -10,9 +10,10 @@ use LWP::UserAgent;
 use strict;
 use warnings;
 
-my $q                              = new CGI;
-my $debug                          = 1;
-my $cache_dir                      = "/var/cache/bbbike";
+my $q         = new CGI;
+my $debug     = 1;
+my $cache_dir = "/var/cache/bbbike";
+
 my $enable_google_weather_forecast = 1;
 
 sub cache_file {
@@ -126,8 +127,9 @@ elsif ( $lat && $lng ) {
     warn "Download URL: $url\n" if $debug >= 2;
 
     if ( $res->is_success ) {
-        $weather{'weather'} = $res->content;
-        write_to_cache( $wettermeldung_file_json, $res->content );
+        $weather{'weather'} =
+          Encode::decode( 'utf-8', $res->content, $Encode::FB_DEFAULT );
+        write_to_cache( $wettermeldung_file_json, $weather{'weather'} );
     }
     else {
         warn "No weather data for: $url\n" if $debug >= 1;
