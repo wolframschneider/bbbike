@@ -156,8 +156,8 @@ elsif ( $lat && $lng ) {
 
             my $perl = XMLin($content);
             my $json = encode_json($perl);
-            $weather{'forecast'} = $json;
-            write_to_cache( $weather_forecast, $json );
+            $weather{'forecast'} = Encode::decode( 'utf-8', $json );
+            write_to_cache( $weather_forecast, $weather{'forecast'} );
         }
         else {
             warn "No weather data for: $url\n" if $debug >= 1;
