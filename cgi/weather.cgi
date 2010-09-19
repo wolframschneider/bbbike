@@ -38,6 +38,7 @@ sub get_data_from_cache {
     else {
         my $fh = new IO::File $file, "r"
           or do { warn "open $file: $!\n"; return; };
+        binmode $fh, ':utf8';
         warn "Read weather data from cache file: $file\n" if $debug >= 2;
 
         my $content;
@@ -55,6 +56,7 @@ sub write_to_cache {
 
     my $fh = new IO::File $file, "w"
       or do { warn "open > $file: $!\n"; return; };
+    binmode $fh, ':utf8';
     warn "Write weather data to cache file: $file\n" if $debug >= 2;
 
     print $fh $content;
