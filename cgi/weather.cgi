@@ -11,7 +11,7 @@ use strict;
 use warnings;
 
 my $q         = new CGI;
-my $debug     = 2;
+my $debug     = 1;
 my $cache_dir = "/var/cache/bbbike";
 
 my $enable_google_weather_forecast = 1;
