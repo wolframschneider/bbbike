@@ -87,7 +87,7 @@ print $q->header(
     -expire => '+30m'
 );
 
-if ( $debug >= 3 ) {
+if ( $debug >= 9 ) {
     $q->param( "lng",  16.9105306 );
     $q->param( "lat",  52.4093290 );
     $q->param( "city", "Zagreb" );
