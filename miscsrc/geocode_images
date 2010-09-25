@@ -46,6 +46,7 @@ my $debug;
 my $relative_paths;
 my $out_file;
 my $max_delta = 180;
+my $for_person;
 
 my $lax_iso_date_qr = qr{^(\d{4})\D*(\d{2})\D*(\d{2})T(\d{2})\D(\d{2})\D(\d{2})};
 my $clock_qr        = qr{^\d{1,2}:\d{2}(:\d{2})?};
@@ -69,6 +70,7 @@ usage: $0
 	  [-anchor nw|n|ne|e|se|s|sw] [-thumbnailsize pixels]
           [-converter Image::GD::Thumbnail|ImageMagick|ImageMagick+exiftool|best|fast]
 	  [-recreatethumbnails] [-rel|-relativepaths] [-o file]
+	  [-person ...]
           [-v] [-debug] image ...
 EOF
 }
@@ -85,6 +87,7 @@ GetOptions("gpsdatadir=s" => \$gps_data_dir,
 	   "converter=s" => \$converter,
 	   "recreatethumbnails" => \$recreate_thumbnails,
 	   "rel|relativepaths!" => \$relative_paths,
+	   "person=s" => \$for_person,
 	   "o=s" => \$out_file,
 	   "v!" => \$v,
 	   "debug" => \$debug,
@@ -386,29 +389,41 @@ sub get_image_location {
     }
 
     if ($filename) {
-	my $gps = GPS::GpsmanData->new;
+	my $gps = GPS::GpsmanMultiData->new;
 	$gps->load($filename);
 	my $got_wpt;
 	my $last_wpt;
 	my $delta;
-	for my $wpt (@{ $gps->Track }) {
-	    my $wpt_epoch = $wpt->Comment_to_unixtime($gps);
-	    if ($wpt_epoch > $epoch) {
-		if ($last_wpt &&
-		    abs($last_wpt->Comment_to_unixtime($gps) - $epoch) <
-		    abs($wpt_epoch - $epoch)) {
-		    $got_wpt = $last_wpt;
-		} else {
-		    $got_wpt = $wpt;
+    CHUNKS: {
+	    my $current_gps_person;
+	    for my $chunk (@{ $gps->Chunks }) {
+		if ($for_person) {
+		    my $new_gps_person = $chunk->TrackAttrs && $chunk->TrackAttrs->{'srt:person'};
+		    if ($new_gps_person) {
+			$current_gps_person = $new_gps_person;
+		    }
+		    next CHUNKS if $current_gps_person && $current_gps_person ne $for_person;
 		}
-		last;
+		for my $wpt (@{ $chunk->Track }) {
+		    my $wpt_epoch = $wpt->Comment_to_unixtime($chunk);
+		    if ($wpt_epoch > $epoch) {
+			if ($last_wpt &&
+			    abs($last_wpt->Comment_to_unixtime($chunk) - $epoch) <
+			    abs($wpt_epoch - $epoch)) {
+			    $got_wpt = $last_wpt;
+			} else {
+			    $got_wpt = $wpt;
+			}
+			last CHUNKS;
+		    }
+		    $last_wpt = $wpt;
+		}
 	    }
-	    $last_wpt = $wpt;
 	}
 	if (!$got_wpt) {
-	    $got_wpt = $gps->Track->[-1];
+	    $got_wpt = ($gps->flat_track)[-1];
 	}
-	$delta = abs($got_wpt->Comment_to_unixtime($gps) - $epoch);
+	$delta = abs($got_wpt->Comment_to_unixtime($gps->Chunks->[0]) - $epoch);
 	if ($got_wpt) {
 	    return { Latitude  => $got_wpt->Latitude,
 		     Longitude => $got_wpt->Longitude,
@@ -780,6 +795,8 @@ version
  * Instructions needed on how to create
    a bundle suitable for sharing with other people
  * GPX support
+ * document options!
+   * -person: use only GPS tracks with no srt:person tag or a matching srt:person tag
 
 =head1 SEE ALSO
 
