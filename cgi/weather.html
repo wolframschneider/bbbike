@@ -226,13 +226,22 @@ var w = {
 
       <div style="padding: 5px; float: left;">
         <div style="font-size: 140%;">
-          <b>12C | 54F</b>
+          <b>
+	  <script type="text/javascript">
+	  var f = w.weather.current_conditions;
+
+          document.write(f.temp_c.data +'°C');
+	  </script>
+	  </b>
         </div>
 
         <div>
-          <b>Clear</b><br />
-          Wind: SW at 7 mph<br />
-          Humidity: 67%
+	  <script type="text/javascript">
+
+          document.write('<b>' + f.condition.data +'</b><br />');
+          document.write(f.wind_condition.data +'<br />');
+          document.write(f.humidity.data +'<br />');
+	</script>
         </div>
       </div>
 
