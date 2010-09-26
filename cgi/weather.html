@@ -37,15 +37,237 @@
 <body bgcolor="#ffffff">
 <h1>foo</h1>
 
-<script>
-var w = {
+<script type="text/javascript">
+var hr = {
   "forecast": {"weather":{"current_conditions":{"icon":{"data":"/ig/images/weather/mist.gif"},"temp_f":{"data":"55"},"temp_c":{"data":"13"},"wind_condition":{"data":"Smjer vjetra:  km/h"},"humidity":{"data":"Vlažnost: 94%"},"condition":{"data":"Slaba kiša"}},"forecast_conditions":[{"icon":{"data":"/ig/images/weather/chance_of_rain.gif"},"high":{"data":"14"},"low":{"data":"9"},"day_of_week":{"data":"ned"},"condition":{"data":"Moguća kiša"}},{"icon":{"data":"/ig/images/weather/chance_of_rain.gif"},"high":{"data":"14"},"low":{"data":"10"},"day_of_week":{"data":"pon"},"condition":{"data":"Moguća kiša"}},{"icon":{"data":"/ig/images/weather/chance_of_rain.gif"},"high":{"data":"17"},"low":{"data":"8"},"day_of_week":{"data":"uto"},"condition":{"data":"Moguća kiša"}},{"icon":{"data":"/ig/images/weather/chance_of_rain.gif"},"high":{"data":"16"},"low":{"data":"6"},"day_of_week":{"data":"sri"},"condition":{"data":"Moguća kiša"}}],"module_id":"0","forecast_information":{"forecast_date":{"data":"2010-09-26"},"city":{"data":"City of Zagreb, City of Zagreb"},"latitude_e6":{"data":""},"postal_code":{"data":"Zagreb"},"current_date_time":{"data":"2010-09-26 18:00:00 +0000"},"longitude_e6":{"data":""},"unit_system":{"data":"SI"}},"section":"0","tab_id":"0","mobile_row":"0","row":"0","mobile_zipped":"1"},"version":"1"},
   "weather": {"weatherObservation":{"clouds":"broken clouds","weatherCondition":"n/a","observation":"EPPO 261830Z VRB02KT 7000 -RA BKN030 17/15 Q1003","ICAO":"EPPO","elevation":92,"countryCode":"PL","lng":16.8166666666667,"temperature":"17","dewPoint":"15","windSpeed":"02","humidity":88,"stationName":"Poznan","datetime":"2010-09-26 18:30:00","lat":52.4166666666667,"hectoPascAltimeter":1003}}
+};
+
+var w = {
+   "version" : "1",
+   "weather" : {
+      "current_conditions" : {
+         "icon" : {
+            "data" : "/ig/images/weather/mist.gif"
+         },
+         "temp_f" : {
+            "data" : "55"
+         },
+         "temp_c" : {
+            "data" : "13"
+         },
+         "wind_condition" : {
+            "data" : "Wind:  mph"
+         },
+         "condition" : {
+            "data" : "Light rain"
+         },
+         "humidity" : {
+            "data" : "Humidity: 94%"
+         }
+      },
+      "forecast_conditions" : [
+         {
+            "high" : {
+               "data" : "57"
+            },
+            "icon" : {
+               "data" : "/ig/images/weather/chance_of_rain.gif"
+            },
+            "day_of_week" : {
+               "data" : "Sun"
+            },
+            "low" : {
+               "data" : "48"
+            },
+            "condition" : {
+               "data" : "Chance of Rain"
+            }
+         },
+         {
+            "high" : {
+               "data" : "57"
+            },
+            "icon" : {
+               "data" : "/ig/images/weather/chance_of_rain.gif"
+            },
+            "day_of_week" : {
+               "data" : "Mon"
+            },
+            "low" : {
+               "data" : "50"
+            },
+            "condition" : {
+               "data" : "Chance of Rain"
+            }
+         },
+         {
+            "high" : {
+               "data" : "66"
+            },
+            "icon" : {
+               "data" : "/ig/images/weather/chance_of_rain.gif"
+            },
+            "day_of_week" : {
+               "data" : "Tue"
+            },
+            "low" : {
+               "data" : "48"
+            },
+            "condition" : {
+               "data" : "Chance of Rain"
+            }
+         },
+         {
+            "high" : {
+               "data" : "60"
+            },
+            "icon" : {
+               "data" : "/ig/images/weather/chance_of_rain.gif"
+            },
+            "day_of_week" : {
+               "data" : "Wed"
+            },
+            "low" : {
+               "data" : "39"
+            },
+            "condition" : {
+               "data" : "Chance of Rain"
+            }
+         }
+      ],
+      "module_id" : "0",
+      "section" : "0",
+      "forecast_information" : {
+         "city" : {
+            "data" : "City of Zagreb, City of Zagreb"
+         },
+         "forecast_date" : {
+            "data" : "2010-09-26"
+         },
+         "postal_code" : {
+            "data" : "Zagreb"
+         },
+         "latitude_e6" : {
+            "data" : ""
+         },
+         "current_date_time" : {
+            "data" : "2010-09-26 18:00:00 +0000"
+         },
+         "longitude_e6" : {
+            "data" : ""
+         },
+         "unit_system" : {
+            "data" : "US"
+         }
+      },
+      "tab_id" : "0",
+      "mobile_row" : "0",
+      "row" : "0",
+      "mobile_zipped" : "1"
+   }
 }
 
 </script>
 
-foo
+<hr >
+
+  <div id="weatherSection" class="marginLeft">
+    <div style="font-size: 0.8em;" class="roundCorner floatLeft" id="googleWeather">
+      <div style="padding: 5px; float: left;">
+        <div style="font-size: 140%;">
+          <b>12&#194;&#176;C | 54&#194;&#176;F</b>
+        </div>
+
+        <div>
+          <b>Clear</b><br />
+          Wind: SW at 7 mph<br />
+          Humidity: 67%
+        </div>
+      </div>
+
+      <div style="padding: 5px; float: left;" align="center">
+        <br />
+        <img style="border: 1px solid rgb(187, 187, 204); margin-bottom: 2px;" src="http://www.google.com/ig/images/weather/sunny.gif" alt="Clear" title="Clear" /><br />
+        <nobr>54&#194;&#176;F</nobr>
+      </div>
+
+      <div style="padding: 5px; float: left;" align="center">
+        Sun<br />
+        <img style="border: 1px solid rgb(187, 187, 204); margin-bottom: 2px;" src="http://www.google.com/ig/images/weather/sunny.gif" alt="Clear" title="Clear" /><br />
+        <nobr>46&#194;&#176;F | 60&#194;&#176;F</nobr>
+      </div>
+
+      <div style="padding: 5px; float: left;" align="center">
+        Mon<br />
+        <img style="border: 1px solid rgb(187, 187, 204); margin-bottom: 2px;" src="http://www.google.com/ig/images/weather/chance_of_rain.gif" alt="Chance of Rain" title="Chance of Rain" /><br />
+        <nobr>51&#194;&#176;F | 60&#194;&#176;F</nobr>
+      </div>
+
+      <div style="padding: 5px; float: left;" align="center">
+        Tue<br />
+        <img style="border: 1px solid rgb(187, 187, 204); margin-bottom: 2px;" src="http://www.google.com/ig/images/weather/chance_of_rain.gif" alt="Chance of Rain" title="Chance of Rain" /><br />
+        <nobr>44&#194;&#176;F | 60&#194;&#176;F</nobr>
+      </div>
+
+      <div style="padding: 5px; float: left;" align="center">
+        Wed<br />
+        <img style="border: 1px solid rgb(187, 187, 204); margin-bottom: 2px;" src="http://www.google.com/ig/images/weather/sunny.gif" alt="Clear" title="Clear" /><br />
+        <nobr>50&#194;&#176;F | 66&#194;&#176;F</nobr>
+      </div>
+    </div><br class="clear" />
+  </div>
+
+<br clear="left" />
+
+<hr >
+  <div id="weatherSection2" class="marginLeft">
+    <div style="font-size: 0.8em;" class="roundCorner floatLeft" id="googleWeather2">
+
+      <div style="padding: 5px; float: left;">
+        <div style="font-size: 140%;">
+          <b>12C | 54F</b>
+        </div>
+
+        <div>
+          <b>Clear</b><br />
+          Wind: SW at 7 mph<br />
+          Humidity: 67%
+        </div>
+      </div>
+
+	  <script type="text/javascript">
+	  function plot (f) {
+      		document.write('<div style="padding: 5px; float: left;" align="center">');
+		if (f.day_of_week) {
+			document.write(f.day_of_week.data);
+		}
+		document.write('<br />');
+        	document.write('<img style="border: 1px solid rgb(187, 187, 204); margin-bottom: 2px;" src="http://www.google.com' + f.icon.data + '" alt="' + f.condition.data + '" title="' + f.condition.data + '" /><br />');
+		if (f.high) {
+        		document.write('<nobr>' + f.high.data + '°C | ' + f.low.data +'°C</nobr>');
+		}
+      		document.write('</div>');
+	  }
+
+	  plot( w.weather.current_conditions );
+
+	</script>
+
+	<script type="text/javascript">
+
+	var days = w.weather.forecast_conditions;
+	for(var i = 0; i< days.length; i++) {
+		plot (days[i]) ;
+	}
+	</script>
+
+    </div><br class="clear" />
+  </div>
+<br clear="left" />
+<hr >
+
+
 </body>
 </html>
 
