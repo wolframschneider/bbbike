@@ -75,6 +75,15 @@ sub merge_json {
     return "{\n" . $data . "\n}\n";
 }
 
+sub Fatal {
+    my $message = shift;
+
+    warn $message, "\n";
+    print "{}\n";
+
+    exit 1;
+}
+
 # $q = CGI->new('lat=53&lng=15&lang=de');
 ##############################################################################################
 #
@@ -94,9 +103,14 @@ if ( $debug >= 9 ) {
     $q->param( "lang", "hr" );
 }
 
-my $lat  = $q->param('lat');
-my $lng  = $q->param('lng');
-my $lang = $q->param('lang');
+my $lat  = $q->param('lat')  || "";
+my $lng  = $q->param('lng')  || "";
+my $lang = $q->param('lang') || "";
+my $city = $q->param('city') || "";
+
+Fatal(
+    "Missing parameters: lat: '$lat', lng: '$lng', lang: '$lang', city: '$city'"
+) if !( $lat && $lng && $lang && $city );
 
 my $url = 'http://ws.geonames.org/findNearByWeatherJSON?lat=';
 
