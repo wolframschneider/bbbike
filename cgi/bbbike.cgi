@@ -2189,7 +2189,7 @@ EOF
 		    print qq{<a target="newstreetform" href="$bbbike_html/newstreetform${newstreetform_encoding}.html?$qs">} . M("Diese Straﬂe neu in die BBBike-Datenbank eintragen") . qq{</a><br><br>\n} if !$osm_data;
 		    print M(qq{Oder einen anderen Straﬂennamen versuchen}) . qq{:<br>\n};
 		} else {
-		    warn "*** Avoid unusable newstreetform mail for <$$oneref>\n";
+		    #warn "*** Avoid unusable newstreetform mail for <$$oneref>\n";
 		    print M(qq{Einen anderen Straﬂennamen versuchen}) . qq{:<br>\n};
 		}
 	    } else {
