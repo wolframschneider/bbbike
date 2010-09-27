@@ -201,3 +201,48 @@ function focusCity () {
    });  
 }
 
+function google_weather (w) {
+
+	  var f = w.weather.current_conditions;
+   	  var html = '' +
+   '<div id="weatherSection" class="marginLeft">' +
+     '<div style="font-size: 0.8em;" class="roundCorner floatLeft" id="googleWeather">' +
+      '<div style="padding: 5px; float: left;">' +
+        '<div style="font-size: 140%;">' + '<b>' + f.temp_c.data + '°C' + '</b>' + 
+        '</div>' +
+        '<div>' +
+        '<b>' + f.condition.data +'</b><br />' + f.wind_condition.data +'<br />' + f.humidity.data +'<br />' +
+        '</div>' +
+      '</div>';
+
+	  function plot (f) {
+		var html = '' +
+      		  '<div style="padding: 5px; float: left;" align="center">';
+		if (f.day_of_week) {
+			html += f.day_of_week.data;
+		}
+		html += '<br />' +
+        	   '<img style="border: 1px solid rgb(187, 187, 204); margin-bottom: 2px;" src="http://www.google.com' + 
+		   f.icon.data + '" alt="' + f.condition.data + '" title="' + f.condition.data + '" /><br />';
+		if (f.high) {
+        	   html += '<nobr>' + f.high.data + '°C | ' + f.low.data +'°C</nobr>';
+		}
+      		html += '</div>';
+
+		return html;
+	  }
+
+	html += plot( w.weather.current_conditions );
+
+	var days = w.weather.forecast_conditions;
+	for(var i = 0; i< days.length; i++) {
+		html += plot (days[i]) ;
+	}
+ 
+        html += '' +
+     '</div><br class="clear" />' +
+  '</div>';
+
+        document.write(html);
+}
+
