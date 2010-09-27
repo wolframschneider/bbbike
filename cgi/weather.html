@@ -221,60 +221,55 @@ var w = {
 <br clear="left" />
 
 <hr >
-  <div id="weatherSection2" class="marginLeft">
-    <div style="font-size: 0.8em;" class="roundCorner floatLeft" id="googleWeather2">
-
-      <div style="padding: 5px; float: left;">
-        <div style="font-size: 140%;">
-          <b>
 	  <script type="text/javascript">
+
 	  var f = w.weather.current_conditions;
+   	  var html = '' +
+   '<div id="weatherSection" class="marginLeft">' +
+     '<div style="font-size: 0.8em;" class="roundCorner floatLeft" id="googleWeather">' +
+      '<div style="padding: 5px; float: left;">' +
+        '<div style="font-size: 140%;">' + '<b>' + f.temp_c.data + '°C' + '</b>' + 
+        '</div>' +
+        '<div>' +
+        '<b>' + f.condition.data +'</b><br />' + f.wind_condition.data +'<br />' + f.humidity.data +'<br />' +
+        '</div>' +
+      '</div>';
 
-          document.write(f.temp_c.data +'°C');
-	  </script>
-	  </b>
-        </div>
-
-        <div>
-	  <script type="text/javascript">
-
-          document.write('<b>' + f.condition.data +'</b><br />');
-          document.write(f.wind_condition.data +'<br />');
-          document.write(f.humidity.data +'<br />');
-	</script>
-        </div>
-      </div>
-
-	  <script type="text/javascript">
 	  function plot (f) {
-      		document.write('<div style="padding: 5px; float: left;" align="center">');
+		var html = '' +
+      		  '<div style="padding: 5px; float: left;" align="center">';
 		if (f.day_of_week) {
-			document.write(f.day_of_week.data);
+			html += f.day_of_week.data;
 		}
-		document.write('<br />');
-        	document.write('<img style="border: 1px solid rgb(187, 187, 204); margin-bottom: 2px;" src="http://www.google.com' + f.icon.data + '" alt="' + f.condition.data + '" title="' + f.condition.data + '" /><br />');
+		html += '<br />' +
+        	   '<img style="border: 1px solid rgb(187, 187, 204); margin-bottom: 2px;" src="http://www.google.com' + 
+		   f.icon.data + '" alt="' + f.condition.data + '" title="' + f.condition.data + '" /><br />';
 		if (f.high) {
-        		document.write('<nobr>' + f.high.data + '°C | ' + f.low.data +'°C</nobr>');
+        	   html += '<nobr>' + f.high.data + '°C | ' + f.low.data +'°C</nobr>';
 		}
-      		document.write('</div>');
+      		html += '</div>';
+
+		return html;
 	  }
 
-	  plot( w.weather.current_conditions );
-
-	</script>
-
-	<script type="text/javascript">
+	html += plot( w.weather.current_conditions );
 
 	var days = w.weather.forecast_conditions;
 	for(var i = 0; i< days.length; i++) {
-		plot (days[i]) ;
+		html += plot (days[i]) ;
 	}
-	</script>
+ 
+        html += '' +
+     '</div><br class="clear" />' +
+  '</div>';
 
-    </div><br class="clear" />
-  </div>
+        document.write(html);
+
+	</script>
 <br clear="left" />
 <hr >
+
+XXX
 
 
 </body>
