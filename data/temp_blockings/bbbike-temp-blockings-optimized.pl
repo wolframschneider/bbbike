@@ -864,7 +864,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Schloßpark Charlottenburg: bei Dunkelheit geschlossen',
          'from' => undef,
          'id' => 1811,
-         'data' => '	2::night 3296,12719 3231,12749 3127,12793 3055,12973 2997,13402 2950,13552
+         'data' => '	2::night 3332,12742 3231,12749 3127,12793 3055,12973 3020,13234 2996,13255 2980,13332 3003,13355 2953,13489 2950,13552
 ',
          'type' => 'gesperrt'
        },
@@ -1184,18 +1184,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_014421',
-         'until' => 1285855200,
-         'text' => 'Neustädtische Kirchstr. (Mitte) Richtung Unter den Linden zwischen Dorotheenstr. und Unter den Linden Baustelle, Fahrtrichtung gesperrt bis 30.09.2010 16:00 Uhr ',
-         'from' => 1270235189,
-         'id' => 1946,
-         'data' => 'userdel	2::inwork; 9123,12500 9130,12433
-Kein Durchgang von Mittelstr. zur Neustädtischen Kirchstr., auch nicht für Fußgänger	2::inwork 9343,12464 9130,12433
-userdel	q4::inwork; 9130,12433 9141,12320
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1355,16 +1344,7 @@ userdel	q4::inwork; 10614,19907 10742,19632
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'LSO-SG33-F10025',
-         'until' => 1285884000,
-         'text' => 'Altlandsberg: Straßen - und Rohrleitungsbau OD Wegendorf, 15.03.2010 bis 30.09.2010',
-         'from' => 1269113469,
-         'id' => 2023,
-         'data' => 'userdel	q4::inwork 34125,22128 34176,22704
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1528,7 +1508,7 @@ userdel	q4::inwork; 10614,19907 10742,19632
        {
          'until' => undef,
          'permanent' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10640,8366 10598,8270 10575,8218
@@ -1558,11 +1538,11 @@ userdel	q4::inwork; 10614,19907 10742,19632
        },
        {
          'source_id' => 'IM_014905',
-         'until' => 1338472800,
-         'text' => 'Lahnstr. (Neukölln): Baustelle mit prov. Ampel, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, zwischen Mierstr. und Mittelbuschweg, 11.01.2010 12:12 Uhr bis 31.05.2012 16:00 Uhr ',
-         'from' => 1263121920,
+         'until' => 1312034400,
+         'text' => 'Lahnstr. (Neukölln): Baustelle, Fahrtrichtung gesperrt Richtung Grenzallee zwischen Mierstr. und Niemetzstr., 04.10.2010 11:12 Uhr bis 30.07.2011 16:00 Uhr ',
+         'from' => 1286097120,
          'id' => 2069,
-         'data' => 'userdel	q4::inwork 13500,7018 13627,7047 13891,7107
+         'data' => 'userdel	q4::inwork; 13627,7047 13891,7107
 ',
          'type' => 'handicap'
        },
@@ -1581,16 +1561,7 @@ userdel	q4::inwork; 10614,19907 10742,19632
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100528.1110.297131.html',
-         'until' => 1285883999,
-         'text' => 'Marksburgstraße, Bauarbeiten zwischen Treskowallee und Hentigstraße, 31.05. bis 30.09., Fahrbahn gesperrt',
-         'from' => 1275170400,
-         'id' => 2076,
-         'data' => 'userdel	q4::inwork 18809,9133 18697,9153 18586,9172
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100528.1110.297131.html',
          'until' => 1288652399,
@@ -1755,16 +1726,7 @@ userdel	q4::inwork; 10614,19907 10742,19632
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_016121',
-         'until' => 1285941600,
-         'text' => 'Lehrter Str. (Moabit): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Invalidenstr. und Seydlitzstr., 02.08.2010 06:00 Uhr bis 01.10.2010 16:00 Uhr ',
-         'from' => 1280635200,
-         'id' => 2114,
-         'data' => 'userdel	q4::inwork 7764,13236 7643,13461 7660,13506 7655,13539
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1830,30 +1792,12 @@ userdel	q4::inwork; 10614,19907 10742,19632
          'text' => 'Dorfplatz (Bohnsdorf): Baustelle, Fahrtrichtung gesperrt Richtung A 117 zwischen Grünbergallee und Buntzelstr., 13.09.2010 08:00 Uhr bis 08.10.2010 17:00 Uhr ',
          'from' => 1284271200,
          'id' => 2130,
-         'data' => 'userdel	q4::inwork; 20827,-537 20881,-564 20995,-542 21074,-485
+         'data' => 'userdel	q4::inwork; 20827,-537 20890,-546 20986,-529 21074,-475
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_016338',
-         'until' => 1285851600,
-         'text' => 'Neuer Hönower Weg (Dahlwitz-Hoppegarten): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Industriestr. und Wiesenstr., 13.09.2010 09:00 Uhr bis 30.09.2010 15:00 Uhr ',
-         'from' => 1284274800,
-         'id' => 2131,
-         'data' => 'userdel	q4::inwork 26880,11479 27272,11970
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'IM_016343',
-         'until' => 1285945200,
-         'text' => 'Köpenicker Str. (Biesdorf): Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, zwischen Tiergartenstr. und Köpenicker Allee, 14.09.2010 09:00 Uhr bis 01.10.2010 17:00 Uhr ',
-         'from' => 1284361200,
-         'id' => 2132,
-         'data' => 'userdel	q3::inwork 21027,7432 21032,7590 21037,7751
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        {
          'source_id' => 'LS/O-SG33-E/09/214-7',
          'until' => 1293750000,
@@ -1874,16 +1818,7 @@ userdel	3 13150,7254 13047,7234 13034,7319
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_016372',
-         'until' => 1286370000,
-         'text' => 'Friedrichstr. (Mitte): Baustelle, Fahrtrichtung Richtung Chausseestr. gesperrt zwischen Dorotheenstr. und Georgenstr., 20.09.2010 04:00 Uhr bis 06.10.2010 15:00 Uhr ',
-         'from' => 1284861600,
-         'id' => 2135,
-         'data' => 'userdel	q4::inwork; 9330,12529 9314,12652
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'LS/O-SG33-E/10/086',
          'until' => 1288562400,
@@ -1901,6 +1836,45 @@ userdel	3 13150,7254 13047,7234 13034,7319
          'from' => 1285020000,
          'id' => 2137,
          'data' => 'userdel	q4::inwork; 5006,22507 5142,22581 5260,22634 5368,22669
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'http://www.berlin.de/ba-spandau/presse/archiv/20100930.1500.312639.html',
+         'until' => 1287064800,
+         'text' => 'Die Fahrbahn des Groß-Glienicker-Wegs wird zwischen Buchwaldzeile und Kladower Damm erneuert, Vollsperrung am 14.10.2010 zwischen 8.00 und 16.00 Uhr ',
+         'from' => 1287036000,
+         'id' => 2139,
+         'data' => 'userdel	2::inwork -4578,8336 -4682,8292
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4072.html',
+         'until' => 1286488800,
+         'text' => 'Brücke über A10: Sperrung vom 15.02.2010 bis 08.10.2010 ',
+         'from' => 1266102000,
+         'id' => 2140,
+         'data' => '	2:inwork 15337,24593 15490,24848
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1287784800,
+         'text' => 'Einbahnstraßenregelung in der Wasserwerkstr. vom 11.10.2010 bis zum 22.10.2010 zwischen Pfefferweg und Pionierstraße.',
+         'from' => 1286661600,
+         'id' => 2141,
+         'data' => 'userdel	q4::inwork; -5806,16403 -5830,16356 -5849,16199
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1288998000,
+         'text' => 'Einbahnstraßenregelung in der Wasserwerkstr. zwischen Falkenseer Chaussee und Pfefferweg vom 25.10 bis 05.11.2010',
+         'from' => 1287957600,
+         'id' => 2142,
+         'data' => 'userdel	q4::inwork; -5849,16199 -5875,15994 -5911,15877
 ',
          'type' => 'handicap'
        }

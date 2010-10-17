@@ -338,11 +338,11 @@ Klingenbergbrücke	Br 16791,9137 16831,9078
 Brücke über Avus	Br -3956,2787 -3758,2678
 Neue Späthbrücke	Br 14320,5437 14390,5458
 Anna-Nemitz-Brücke	Br 14390,5458 14421,5465 14507,5499 14546,5495
-Fußgängerbrücke (Altglienicke)	Br 21265,334 21164,476
+Fußgängerbrücke (Altglienicke)	Br 21262,375 21182,436
 Fußgängerbrücke	Br 19968,16 19940,52
 Neue Brücke	Br -3143,14676 -3139,14710
 Dammbrücke	Br -3042,14682 -3066,14718
-Fußgängerbrücke	Br 3053,13646 3003,13634 2921,13618 2858,13583
+Fußgängerbrücke	Br 3053,13646 3003,13634 2921,13618 2876,13594 2858,13530
 Gustav-Heinemann-Brücke	Br 8116,12938 8110,13042
 Hiroshimasteg	Br 7251,11202 7251,11181 7248,11143
 Anhalter Steg	Br 8726,10351 8760,10408 8773,10429
@@ -376,7 +376,7 @@ Hermann-Blankenstein-Str.	Tu 13886,13668 13858,13719
 (Fußgängertunnel Sybelstr.)	Tu 3800,10580 3781,10569 3731,10563 3712,10566
 (Durchfahrt Böschung Spreeufer)	Tu 8032,12889 8053,12871
 Siemenssteg	Br 4129,12619 4128,12637 4124,12706 4124,12721
-(Unterführung Schloßbrücke)	Tu 3396,12741 3326,12730 3231,12749
+(Unterführung Schloßbrücke)	Tu 3396,12741 3332,12742 3231,12749
 (Goslarer Ufer - Am Bahnhof Jungfernheide)	Tu 4156,13914 4151,13961
 (Fußgängertunnel S-Bhf Jungfernheide)	Tu 3320,13796 3365,13695
 (Machandelweg - Reichsstr.)	Tu -185,12822 -166,12849
@@ -482,8 +482,8 @@ Brücke über B2	Br 55014,74593 54996,74647
 B404	Br -197853,130794 -197527,130848
 Nuthestr./Wetzlarer Str.	Br -9021,-3865 -8407,-4066
 Nuthestr./Horstweg	Br -9021,-3865 -10321,-2800 -10547,-2606 -10898,-2375 -11070,-2123
-Nuthestr./Nuthe	Br -11070,-2123 -11142,-1675
-Nuthestr./Havel	Br -11613,-1125 -11875,-925 -12045,-757
+Nuthestr./Nuthe	Br -11070,-2123 -11116,-1681
+Nuthestr./Havel	Br -11613,-1125 -11869,-907 -12045,-757
 Nuthestr./Neuendorfer Str.	Br -8128,-4073 -7426,-4035 -7187,-4049 -6787,-4026 -6426,-4014
 Heinrich-Mann-Allee (Bahnbrücke)	Br -12431,-2096 -12493,-1896
 Lange Brücke (Potsdam)	Br -12493,-1896 -12567,-1817

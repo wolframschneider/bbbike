@@ -196,6 +196,7 @@ a.ms:visited { color:#333333; }
   font-size:larger;
 }
 
+<<<<<<< HEAD:html/bbbike.css
 input#suggest_start:focus, 
 input#suggest_via:focus, 
 input#suggest_ziel:focus { background-color: #FFC }
@@ -257,3 +258,9 @@ div#top_right { position:absolute; top:5px; right:10px; }
 span#current_weather { padding-right: 1em; font-size: normal; }
 
 
+/* Ausweichroute */
+.altroutebox {
+  background-color: #ffcc66;
+  padding:3px;
+  text-align:center;
+}

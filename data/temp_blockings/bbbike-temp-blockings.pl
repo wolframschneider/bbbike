@@ -3107,10 +3107,10 @@ userdel	2 -12531,-790 -12515,-889 -12512,-911 -12575,-1031
 userdel	2 -12531,-790 -12219,-726
 userdel	2 -12531,-790 -12693,-827
 userdel	2 -12045,-757 -12148,-934
-userdel	2 -12148,-934 -12231,-1078
+userdel	2 -12148,-934 -12248,-1107
 userdel	2 -12148,-934 -12100,-962
 userdel	2 -11910,-945 -12100,-962
-userdel	2 -12285,-1174 -12231,-1078
+userdel	2 -12285,-1174 -12248,-1107
 userdel	2 -12285,-1174 -12359,-1096 -12488,-999
 userdel	2 -12488,-999 -12553,-1025
 userdel	2 -12262,-612 -12219,-726
@@ -3119,8 +3119,8 @@ userdel	2 -12575,-1031 -12768,-1069
 userdel	2 -12575,-1031 -12553,-1025
 userdel	2 -12553,-1025 -12552,-1096 -12552,-1233 -12549,-1277
 userdel	2 -12078,-1068 -12070,-1153
-userdel	2 -12078,-1068 -12020,-1062
-userdel	2 -12078,-1068 -12231,-1078
+userdel	2 -12078,-1068 -11960,-1041
+userdel	2 -12078,-1068 -12248,-1107
 userdel	2 -12078,-1068 -12100,-962
 userdel	2 -12768,-1069 -12784,-956
 userdel	2 -12571,-581 -12545,-698
@@ -5392,7 +5392,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_003258',
        data  => <<EOF,
-userdel	q4::inwork 20205,-548 20354,-569 20362,-511
+userdel	q4::inwork 20205,-548 20252,-571 20354,-569 20362,-511
 EOF
      },
      { from  => undef, # 
@@ -9221,7 +9221,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006195',
        data  => <<EOF,
-userdel	2::inwork 20362,-511 20354,-569 20205,-548
+userdel	2::inwork 20362,-511 20354,-569 20252,-571 20205,-548
 EOF
      },
      { from  => 1188428040, # 2007-08-30 00:54
@@ -14941,7 +14941,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013726',
        data  => <<EOF,
-userdel	q4::inwork; 21968,-15 22108,82 22145,208
+userdel	q4::inwork; 21968,-15 21977,-8 22108,82 22145,208
 EOF
      },
      { from  => 1248559200, # 2009-07-26 00:00
@@ -15169,7 +15169,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013726', # auch: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/
        data  => <<EOF,
-userdel	q4::inwork; 21355,-309 21118,-459
+userdel	q4::inwork; 21355,-309 21235,-354 21157,-413 21120,-444
 EOF
      },
      { from  => 1249154403, # 2009-08-01 21:20
@@ -15357,7 +15357,7 @@ EOF
        type  => 'gesperrt',
        permanent => 1,
        data  => <<EOF,
-	2::night 3296,12719 3231,12749 3127,12793 3055,12973 2997,13402 2950,13552
+	2::night 3332,12742 3231,12749 3127,12793 3055,12973 3020,13234 2996,13255 2980,13332 3003,13355 2953,13489 2950,13552
 EOF
      },
      { from  => undef, #
@@ -17630,13 +17630,13 @@ EOF
 (Eingang Tempelhofer Damm - südliche Landebahn)	2::night 9302,7294 9351,7241 9461,7190
 EOF
      },
-     { from  => 1263121920, # 2010-01-10 12:12
-       until => 1338472800, # 2012-05-31 16:00
-       text  => 'Lahnstr. (Neukölln): Baustelle mit prov. Ampel, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, zwischen Mierstr. und Mittelbuschweg, 11.01.2010 12:12 Uhr bis 31.05.2012 16:00 Uhr ',
+     { from  => 1286097120, # 2010-10-03 11:12
+       until => 1312034400, # 2011-07-30 16:00
+       text  => 'Lahnstr. (Neukölln): Baustelle, Fahrtrichtung gesperrt Richtung Grenzallee zwischen Mierstr. und Niemetzstr., 04.10.2010 11:12 Uhr bis 30.07.2011 16:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_014905',
        data  => <<EOF,
-userdel	q4::inwork 13500,7018 13627,7047 13891,7107
+userdel	q4::inwork; 13627,7047 13891,7107
 EOF
      },
      { from  => 1274300387, # 2010-05-19 22:19
@@ -18246,7 +18246,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016334',
        data  => <<EOF,
-userdel	q4::inwork; 20827,-537 20881,-564 20995,-542 21074,-485
+userdel	q4::inwork; 20827,-537 20890,-546 20986,-529 21074,-475
 EOF
      },
      { from  => 1284274800, # 2010-09-12 09:00
@@ -18310,6 +18310,49 @@ EOF
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20100920.1135.311271.html',
        data  => <<EOF,
 userdel	q4::inwork; 5006,22507 5142,22581 5260,22634 5368,22669
+EOF
+     },
+     { from  => 1285855200, # 2010-09-30 16:00
+       until => 1286164800, # 2010-10-04 06:00
+       text  => 'Boxhagener Str. (Friedrichshain/Lichtenberg): Baustelle, Straße vollständig gesperrt (bis vorauss. 04.10.2010 06:00) in beiden Richtungen zwischen Neue Bahnhofstr. und Kynaststr., 01.10.2010 16:00 Uhr bis 04.10.2010 06:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_016440',
+       data  => <<EOF,
+userdel	q4::inwork 14918,11249 14988,11130
+EOF
+     },
+     { from  => 1287036000, # 2010-10-14 08:00
+       until => 1287064800, # 2010-10-14 16:00
+       text  => 'Die Fahrbahn des Groß-Glienicker-Wegs wird zwischen Buchwaldzeile und Kladower Damm erneuert, Vollsperrung am 14.10.2010 zwischen 8.00 und 16.00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-spandau/presse/archiv/20100930.1500.312639.html',
+       data  => <<EOF,
+userdel	2::inwork -4578,8336 -4682,8292
+EOF
+     },
+     { from  => 1266102000, # 2010-02-14 00:00
+       until => 1286488800, # 2010-10-08 00:00
+       text  => 'Brücke über A10: Sperrung vom 15.02.2010 bis 08.10.2010 ',
+       type  => 'gesperrt',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4072.html',
+       data  => <<EOF,
+	2:inwork 15337,24593 15490,24848
+EOF
+     },
+     { from  => 1286661600, # 2010-10-10 00:00
+       until => 1287784800, # 2010-10-23 00:00
+       text  => 'Einbahnstraßenregelung in der Wasserwerkstr. vom 11.10.2010 bis zum 22.10.2010 zwischen Pfefferweg und Pionierstraße.',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork; -5806,16403 -5830,16356 -5849,16199
+EOF
+     },
+     { from  => 1287957600, # 2010-10-25 00:00
+       until => 1288998000, # 2010-11-06 00:00
+       text  => 'Einbahnstraßenregelung in der Wasserwerkstr. zwischen Falkenseer Chaussee und Pfefferweg vom 25.10 bis 05.11.2010',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork; -5849,16199 -5875,15994 -5911,15877
 EOF
      },
     );
