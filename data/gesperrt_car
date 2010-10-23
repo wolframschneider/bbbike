@@ -835,6 +835,7 @@ Rochstr.: Barriere	3 10418,12922 10535,13006 10571,13034
 Rochstr.: Barriere	3 10571,13034 10535,13006 10418,12922
 Mittelstreifen	3nocross::ignrte 7936,12906 7948,12918 8039,13009
 Ella-Trebe-Str. -> Rahel-Hirsch-Str.: Mittelstreifen	3::igndisp 7941,13014 7948,12918 8039,13009
+Rahel-Hirsch-Str. -> Ella-Trebe-Str.: Mittelstreifen	3::igndisp 7936,12906 7948,12918 7941,13014
 verboten	3nocross::ignrte -12666,-1311 -12549,-1277 -12552,-1233
 Französische Str. -> Joliot-Curie-Str.: verboten	3::igndisp -12552,-1233 -12549,-1277 -12542,-1305
 Französische Str. -> Am Kanal: verboten	3::igndisp -12552,-1233 -12549,-1277 -12317,-1212
@@ -1059,3 +1060,4 @@ Schillerstr. -> Schillerstr.: Mittelinsel	3::igndisp 4156,11522 4331,11554 4452,
 Schillerstr. -> Leibnizstr.: Mittelinsel	3::igndisp 4156,11522 4331,11554 4345,11710
 Sybelstr.	1 4006,10585 4256,10583
 Hüttendorfer Weg	1 21409,-109 21463,-280
+Brückenstr.: Anlieger frei	1 17728,5756 17900,6072

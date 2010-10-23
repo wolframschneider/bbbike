@@ -155,6 +155,7 @@ sub string_to_coord ($) { split /,/, $_[0] }
 # Diese Funktion gilt nur, wenn die Koordinaten im Standard-Koordinatensystem
 # sind (X-Koordinaten wachsen nach rechts und Y-Koordinaten nach oben).
 # Argumente sind drei Punkte in der Form [x1,y1], ...
+# See also BBBikeUtil::schnittwinkel for a very similar function.
 ### AutoLoad Sub
 sub abbiegen {
     my($p0,$p1,$p2) = @_;
@@ -176,8 +177,12 @@ sub abbiegen {
     my $a_len = strecke($p0, $p1);
     my $b_len = strecke($p1, $p2);
 
-    my $angle = ($a_len == 0 || $b_len == 0 ? 0
-		  : rad2deg(&$acos(($a1*$b1+$a2*$b2)/($a_len*$b_len))));
+    # XXX $a_len or $b_len == 0 is meaningless --- what should be done here
+    my $acos_arg = $a_len == 0 || $b_len == 0 ? 0 : ($a1*$b1+$a2*$b2)/($a_len*$b_len);
+    # protect from floating point inaccuracies
+    if    ($acos_arg >  1) { $acos_arg = 1 }
+    elsif ($acos_arg < -1) { $acos_arg = -1 }
+    my $angle = rad2deg(&$acos($acos_arg));
     $angle = -$angle if $angle < 0; # if using old Math::Trig::acos
 
     ($dir, $angle);

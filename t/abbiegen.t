@@ -2,7 +2,6 @@
 # -*- perl -*-
 
 #
-# $Id: abbiegen.t,v 1.2 2003/06/23 22:04:48 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -14,20 +13,16 @@ use Strassen;
 
 BEGIN {
     if (!eval q{
-	use Test;
+	use Test::More;
 	1;
     }) {
-	print "# tests only work with installed Test module\n";
-	print "1..1\n";
-	print "ok 1\n";
+	print "1..0 # skip no Test::More module\n";
 	exit;
     }
-    $^W = 0;
+    #$^W = 0;
 }
 
-BEGIN { plan tests => 48 }
-
-foreach my $def (
+my @test_defs = (
 		 # ca. 90°
 		 [qw/r 88  4281,9706 4281,10112 4650,10125 /],
 		 [qw/l 88  975,425 950,1268 -43,1262/],
@@ -43,23 +38,37 @@ foreach my $def (
 		 # Spitzkehren
 		 [qw/r 168 1131,12193 631,13750 893,13287/],
 		 [qw/l 166 2006,13856 1687,13775 3325,13768/],
-		) {
+		 # straight on; previously caused "nan" because of
+		 # floating point inaccuracies
+		 [qw/r 0 12960,8246 12918,8232 12792,8190/],
+		 [qw/r 0 12792,8190 12918,8232 12960,8246/],
+		 # umkehren
+		 [qw/u 180 1131,12193 631,13750 1131,12193/],
+		 ## XXX TODO: what should be the correct result here?
+		 ## XXX 90° does not feel right...
+		 [qw/r 90 0,0 0,0 100,0/],
+		);
+
+plan tests => @test_defs * 4;
+
+foreach my $def (@test_defs) {
     my $dir = shift @$def;
     my $angle = shift @$def;
 
     my($got_dir, $got_angle) = Strassen::Util::abbiegen_s(@$def);
-    ok($got_dir, $dir);
-    ok(approx_angle($got_angle, $angle));
+    is($got_dir, $dir);
+    is_approx_angle($got_angle, $angle);
 
     my(@p) = map {[split /,/]} @$def;
     ($got_dir, $got_angle) = Strassen::Util::abbiegen(@p);
-    ok($got_dir, $dir);
-    ok(approx_angle($got_angle, $angle));
+    is($got_dir, $dir);
+    is_approx_angle($got_angle, $angle);
 }
 
-sub approx_angle {
+sub is_approx_angle {
     my($a1, $a2) = @_;
-    (abs($a1-$a2) < 2)
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
+    cmp_ok(abs($a1-$a2), "<", 1);
 }
 
 __END__

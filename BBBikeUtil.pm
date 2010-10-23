@@ -178,6 +178,7 @@ sub rad2deg { ($_[0]*180)/pi }
 # Eingabe: $p1(x|y) und $p2(x|y): äußere Punkte
 #          $pm(x|y): Punkt in der Mitte (Schnittpunkt)
 # Ausgabe: (Winkel in radians, Richtung l oder r)
+# See also Strassen::Util::abbiegen for a very similar function.
 sub schnittwinkel {
     my($p1x, $p1y, $pmx, $pmy, $p2x, $p2y) = @_;
     return (pi,'l') if $p1x==$p2x && $p1y==$p2y; # avoid nan
@@ -201,11 +202,14 @@ sub schnittwinkel {
     my $y2 = $p2y-$pmy;
     my $richtung = ($x1*$y2-$y1*$x2 > 0 ? 'l' : 'r');
     my $winkel = 0;
+    my $acos_arg = ($x1*$x2+$y1*$y2) /
+		   (sqrt(sqr($x1)+sqr($y1)) *
+		    sqrt(sqr($x2)+sqr($y2)));
+    # protect from floating point inaccuracies
+    if    ($acos_arg >  1) { $acos_arg = 1 }
+    elsif ($acos_arg < -1) { $acos_arg = -1 }
     eval {
-	$winkel = &$acos( ($x1*$x2+$y1*$y2) /
-			  (sqrt(sqr($x1)+sqr($y1)) * 
-			   sqrt(sqr($x2)+sqr($y2)))
-			);
+	$winkel = &$acos($acos_arg);
     };
     ($winkel, $richtung);
 }
