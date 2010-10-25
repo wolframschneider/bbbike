@@ -11,6 +11,7 @@
 # WWW:  http://bbbike.sourceforge.net
 #
 
+use BBBikeUtil qw(is_in_path);
 use BBBikeVar qw();
 use Config qw(%Config);
 
@@ -156,22 +157,6 @@ my $EXTMODCPAN = join(" ", @EXTMODCPAN);
 my $EXTMODPERL = join(" ", @EXTMODPERL);
 
 ######################################################################
-# ChangeLog
-my $rcs2log = is_in_path("rcs2log");
-if (!$rcs2log) {
-    for my $candidate ("/usr/local/libexec/emacs/21.3/i386--freebsd/rcs2log",
-		       "/usr/local/libexec/emacs/21.3/amd64--freebsd/rcs2log",
-		       "/usr/local/libexec/emacs/21.3/$Config{archname}/rcs2log",
-		      ) {
-	if (-x $candidate) {
-	    $rcs2log = $candidate;
-	    last;
-	}
-    }
-}
-if ($rcs2log) {
-    $bbbike_makefile_admin .= "RCS2LOG?=$rcs2log\n";
-}
 
 my $fbsdportsdir;
 my $fbsdportsdir_is_current = 0;
@@ -525,10 +510,6 @@ clean_pod2html:
 
 EOF
 . "bbbikedoc:	README README.english $all_html doc/HOWTO_edit_bbbike_data.html\n" . <<'EOF'
-
-# XXX this will fail if there is no symlink to the original libexec position
-ChangeLog:
-	${RCS2LOG} `find . -name "*,v" -a ! -path "./projects/*" -a ! -path "./misc/gps_data/*" -a ! -path "./Attic/*"` > ChangeLog
 
 clean_cache:
 	echo rm -rf cache/*
@@ -958,85 +939,11 @@ git-backup:
 test-with-protocol: permission
 	[ -d $(HOME)/log ] || mkdir $(HOME)/log
 	-$(MAKE) ext
-EOF
-. ($^O eq 'linux'
-   ? <<'EOF'
-	DATE=`date +%Y%m%d`; export HARNESS_NOTTY=1; export HARNESS_TIMER=1; export BBBIKE_LONG_TESTS=1; script -c '$(MAKE) test' $(HOME)/log/bbbike-test-$$DATE
-EOF
-   : <<'EOF'
-# The tee /dev/null is used because Test::Harness 3.xx does not understand HARNESS_NOTTY=1
-	DATE=`date +%Y%m%d`; export HARNESS_NOTTY=1; export HARNESS_TIMER=1; export BBBIKE_LONG_TESTS=1; script -t 1 $(HOME)/log/bbbike-test-$$DATE sh -c '$(MAKE) test | tee /dev/null'
-EOF
-  )
-. <<'EOF';
-	DATE=`date +%Y%m%d`; cd data && script $(HOME)/log/bbbike-test-data-$$DATE $(MAKE) all slow-checks really-slow-checks
+	DATE=`date +%Y%m%d`; export HARNESS_NOTTY=1; export HARNESS_TIMER=1; export BBBIKE_LONG_TESTS=1; $(MAKE) test >$(HOME)/log/bbbike-test-$$DATE 2>&1 || echo "$(MAKE) test failed, please look at $(HOME)/log/bbbike-test-$$DATE for output"
+	DATE=`date +%Y%m%d`; (cd data && $(MAKE) all slow-checks really-slow-checks >$(HOME)/log/bbbike-test-data-$$DATE 2>&1) || echo "$(MAKE) all slow-checks really-slow-checks failed, please look at $(HOME)/log/bbbike-test-data-$$DATE for output"
 
 EOF
 ;
-
-# REPO BEGIN
-# REPO NAME is_in_path /home/e/eserte/src/repository 
-# REPO MD5 1b42243230d92021e6c361e37c9771d1
-
-=head2 is_in_path($prog)
-
-=for category File
-
-Return the pathname of $prog, if the program is in the PATH, or undef
-otherwise.
-
-DEPENDENCY: file_name_is_absolute
-
-=cut
-
-sub is_in_path {
-    my($prog) = @_;
-    return $prog if (file_name_is_absolute($prog) and -f $prog and -x $prog);
-    my $sep = $Config{'path_sep'} || ':';
-    foreach (split(/$sep/o, $ENV{PATH})) {
-	if ($^O eq 'MSWin32') {
-	    return "$_\\$prog"
-		if (-x "$_\\$prog.bat" ||
-		    -x "$_\\$prog.com" ||
-		    -x "$_\\$prog.exe");
-	} else {
-	    return "$_/$prog" if (-x "$_/$prog");
-	}
-    }
-    undef;
-}
-# REPO END
-
-# REPO BEGIN
-# REPO NAME file_name_is_absolute /home/e/eserte/src/repository 
-# REPO MD5 a77759517bc00f13c52bb91d861d07d0
-
-=head2 file_name_is_absolute($file)
-
-=for category File
-
-Return true, if supplied file name is absolute. This is only necessary
-for older perls where File::Spec is not part of the system.
-
-=cut
-
-sub file_name_is_absolute {
-    my $file = shift;
-    my $r;
-    eval {
-        require File::Spec;
-        $r = File::Spec->file_name_is_absolute($file);
-    };
-    if ($@) {
-	if ($^O eq 'MSWin32') {
-	    $r = ($file =~ m;^([a-z]:(/|\\)|\\\\|//);i);
-	} else {
-	    $r = ($file =~ m|^/|);
-	}
-    }
-    $r;
-}
-# REPO END
 
 1;
 

@@ -1002,8 +1002,12 @@ Mittelstreifen	3nocross::ignrte 452,3133 255,3085 161,3062
 Ahornstr. -> Potsdamer Str.: Mittelstreifen	3::igndisp 292,2905 255,3085 161,3062
 Potsdamer Str. -> Ahornstr.: Mittelstreifen	3::igndisp 452,3133 255,3085 292,2905
 Mittelstreifen	3nocross::ignrte -151,2975 -49,3003 50,3031 161,3062
+Düppelstr. -> Rondellstr.: Mittelstreifen	3::igndisp 12,2752 -49,3003 -102,3078
 Düppelstr. -> Potsdamer Str.: Mittelstreifen	3::igndisp 12,2752 -49,3003 -151,2975
+Rondellstr. -> Düppelstr.: Mittelstreifen	3::igndisp -102,3078 -49,3003 12,2752
+Rondellstr. -> Potsdamer Str.: Mittelstreifen	3::igndisp -102,3078 -49,3003 50,3031
 Potsdamer Str. -> Düppelstr.: Mittelstreifen	3::igndisp 50,3031 -49,3003 12,2752
+Potsdamer Str. -> Rondellstr.: Mittelstreifen	3::igndisp -151,2975 -49,3003 -102,3078
 Mittelstr. -> Potsdamer Str.: Mittelstreifen	3::igndisp 104,2802 50,3031 -49,3003
 Potsdamer Str. -> Mittelstr.: Mittelstreifen	3::igndisp 161,3062 50,3031 104,2802
 Am Heidehof	1 -1410,2726 -1571,2669 -1612,2785
@@ -1033,6 +1037,7 @@ Husstr.	1 19815,4148 19763,3959 19736,3858 19633,3751
 Genossenschaftsstr.	1 20304,3714 20285,3739 20290,3756 20145,3954 20067,4054
 Gemeinschaftsstr.	1 20067,4054 20109,4087
 Malchiner Str.	1 13866,4481 13869,4626 13836,4759
+Dömitzer Str.	1 13771,4485 13775,4631 13757,4729
 Kirchstr.: nur Linienverkehr erlaubt	2 22312,4593 22284,4653
 Behrenstr./Bebelplatz	1 9801,12245 9743,12239 9700,12234 9631,12227
 Theodorstr.: Poller	3 24928,10737 24921,10705 24916,10539
@@ -1061,3 +1066,4 @@ Schillerstr. -> Leibnizstr.: Mittelinsel	3::igndisp 4156,11522 4331,11554 4345,1
 Sybelstr.	1 4006,10585 4256,10583
 Hüttendorfer Weg	1 21409,-109 21463,-280
 Brückenstr.: Anlieger frei	1 17728,5756 17900,6072
+Passauer -> Lietzenburger	3 6033,10403 6020,10351 6147,10383
