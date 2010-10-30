@@ -1663,26 +1663,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => '105100738',
-         'until' => 1288303200,
-         'text' => 'Brandenburg an der Havel: L93: Ausbau Bahnübergang Wilhelmsdorfer Landstraße, 27.07.2010 bis 28.10.2010 01:00 Uhr ',
-         'from' => 1280677929,
-         'id' => 2106,
-         'data' => 'userdel	q4::inwork -48338,-2586 -48114,-2344 -47938,-2184
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => '105100738_1',
-         'until' => 1288303200,
-         'text' => 'Brandenburg an der Havel: L93: Ausbau Bahnübergang Ziesarer Landstraße, 27.07.2010 bis 28.10.2010 01:00 Uhr',
-         'from' => 1280678128,
-         'id' => 2107,
-         'data' => 'userdel	q4::inwork -49042,-3647 -48542,-2958 -48338,-2586
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        {
          'source_id' => '106200475',
          'until' => 1293836400,
@@ -1806,26 +1788,8 @@ userdel	3 13150,7254 13047,7234 13034,7319
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20101007.1035.313571.html',
-         'until' => 1287957600,
-         'text' => 'Fahrbahnsanierung Paulsborner Straße zwischen Brandenburgische Straße und Westfälische Straße, Vom 18.10.2010 bis 24.10.2010 ',
-         'from' => 1287315670,
-         'id' => 2143,
-         'data' => 'userdel	q4::inwork; 3431,9763 3467,9793 3587,9905 3620,9936 3706,10039 3747,10094 3852,10236
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101013.1345.314376.html',
-         'until' => 1288368000,
-         'text' => 'Vollsperrung aufgrund von Straßenbaumaßnahmen im Staehleweg in Berlin-Reinickendorf vom 25.10.2010, 6.00 Uhr bis 29.10.2010, 18.00 Uhr ',
-         'from' => 1287892800,
-         'id' => 2144,
-         'data' => 'userdel	2::inwork 2061,27612 2345,27670
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        {
          'source_id' => 'IM_016525',
          'until' => 1301317200,
@@ -1835,6 +1799,46 @@ userdel	3 13150,7254 13047,7234 13034,7319
          'data' => 'userdel	2::inwork 21687,-3601 21696,-2925 22003,-1625
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101025.1235.315920.html',
+         'until' => 1288825199,
+         'text' => 'Der Steg Am Rohrbusch wird repariert Die Montage beginnt am Montag, dem 25.10.2010. Der Steg wird voraussichtlich am 3. November 2010 für die Öffentlichkeit wieder geöffnet.',
+         'from' => 1288036570,
+         'id' => 2146,
+         'data' => 'userdel	2::inwork 5535,24016 5645,23968
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20101028.1120.316439.html',
+         'until' => 1291157999,
+         'text' => 'Werneuchener Straße: zwischen Konrad-Wolf-Straße und Große-Leege-Straße wird die Fahrbahn instand gesetzt. Für den Zeitraum vom 1. bis 30. November wird die Werneuchener Straße zur Einbahnstraße von der Konrad-Wolf-Straße aus in Richtung Große-Leege-Straße.',
+         'from' => 1288479600,
+         'id' => 2147,
+         'data' => 'userdel	q4::inwork; 16430,15168 16376,15209 16319,15229 16119,15302
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'LS/O-SG33-E/10/086',
+         'until' => 1291503600,
+         'text' => 'Kremmen: B273: Abbruch der Brücke bei Kremmen, Kremmen - Staffelde, 20.09.2010 bis 04.12.2010 ',
+         'from' => 1288384501,
+         'id' => 2148,
+         'data' => 'userdel	2::inwork -17114,37670 -17262,37425
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => '106701877',
+         'until' => 1291158000,
+         'text' => 'Schöneiche bei Berlin: L302, L338: Gleis- und Straßenbau (Knotenumbau L302/L338) OL Schöneiche Knoten Rahnsdorfer Str. Vollsperrung, 28.10.2010 01:00 Uhr bis 30.11.2010 ',
+         'from' => 1288134000,
+         'id' => 2149,
+         'data' => 'userdel	q4::inwork 30290,8562 30118,8128
+',
+         'type' => 'handicap'
        }
      
 );

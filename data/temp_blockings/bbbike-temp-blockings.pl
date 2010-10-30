@@ -703,7 +703,7 @@ EOF
        text  => 'Die Naumannstraße ist zwischen Torgauer Straße und Tempelhofer Weg von 27.08.04, 07.00 Uhr bis 28.08.04, 20.00 Uhr gesperrt. Grund Bauarbeiten.',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 7716,8048 7717,7879 7717,7759
+userdel	2 7725,8033 7713,8001 7717,7879 7717,7759
 EOF
      },
      { from  => 1093730400, # 2004-08-29 00:00
@@ -1043,7 +1043,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002432',
        data  => <<EOF,
-userdel	q4 7717,7759 7717,7879 7716,8048
+userdel	q4 7717,7759 7717,7879 7713,8001 7725,8033
 EOF
      },
      { from  => 1097964000, # 2004-10-17 00:00
@@ -3182,7 +3182,7 @@ EOF
        source_id => 'LMS_1129024102795',
        data  => <<EOF,
 userdel	q4; 7713,8600 7709,8777
-userdel	q4; 7716,8048 7716,8356
+userdel	q4; 7710,8051 7716,8356
 EOF
      },
      { from  => 1130792769, # 2005-10-31 22:06
@@ -16333,7 +16333,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS_157063303',
        data  => <<EOF,
-userdel	q4::inwork 7709,8777 7713,8600 7716,8356 7716,8048 7717,7879 7717,7759
+userdel	q4::inwork 7709,8777 7713,8600 7716,8356 7710,8051 7725,8033 7713,8001 7717,7879 7717,7759
 EOF
      },
      { from  => 1255816800, # 2009-10-18 00:00
@@ -16584,7 +16584,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014786',
        data  => <<EOF,
-userdel	q4::inwork; 7716,8356 7716,8048 7717,7879
+userdel	q4::inwork; 7716,8356 7710,8051 7725,8033 7713,8001 7717,7879
 EOF
      },
      { from  => 1259938062, # 
@@ -18201,7 +18201,7 @@ EOF
        text  => 'Die Wilhelm-Kabus-Str. ist noch nicht komplett fertig gestellt. Unter Umständen ist die Durchfahrt nicht möglich!',
        type  => 'handicap',
        data  => <<EOF,
-	2::inwork 7716,8048 7793,8043 7834,8085 7859,8252 7893,8327 7942,8380 8078,8772
+	2::inwork 7725,8033 7793,8043 7834,8085 7859,8252 7893,8327 7942,8380 8078,8772
 EOF
      },
      { from  => 1284091200, # 2010-09-10 06:00
@@ -18380,6 +18380,42 @@ EOF
        source_id => 'IM_016525',
        data  => <<EOF,
 userdel	2::inwork 21687,-3601 21696,-2925 22003,-1625
+EOF
+     },
+     { from  => 1288036570, # 2010-10-25 21:56
+       until => 1288825199, # 2010-11-03 23:59
+       text  => 'Der Steg Am Rohrbusch wird repariert Die Montage beginnt am Montag, dem 25.10.2010. Der Steg wird voraussichtlich am 3. November 2010 für die Öffentlichkeit wieder geöffnet.',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101025.1235.315920.html',
+       data  => <<EOF,
+userdel	2::inwork 5535,24016 5645,23968
+EOF
+     },
+     { from  => 1288479600, # 2010-10-31 01:00
+       until => 1291157999, # 2010-11-30 23:59
+       text  => 'Werneuchener Straße: zwischen Konrad-Wolf-Straße und Große-Leege-Straße wird die Fahrbahn instand gesetzt. Für den Zeitraum vom 1. bis 30. November wird die Werneuchener Straße zur Einbahnstraße von der Konrad-Wolf-Straße aus in Richtung Große-Leege-Straße.',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20101028.1120.316439.html',
+       data  => <<EOF,
+userdel	q4::inwork; 16430,15168 16376,15209 16319,15229 16119,15302
+EOF
+     },
+     { from  => 1288384501, # 2010-10-29 22:35
+       until => 1291503600, # 2010-12-05 00:00
+       text  => 'Kremmen: B273: Abbruch der Brücke bei Kremmen, Kremmen - Staffelde, 20.09.2010 bis 04.12.2010 ',
+       type  => 'gesperrt',
+       source_id => 'LS/O-SG33-E/10/086',
+       data  => <<EOF,
+userdel	2::inwork -17114,37670 -17262,37425
+EOF
+     },
+     { from  => 1288134000, # 2010-10-27 01:00
+       until => 1291158000, # 2010-12-01 00:00
+       text  => 'Schöneiche bei Berlin: L302, L338: Gleis- und Straßenbau (Knotenumbau L302/L338) OL Schöneiche Knoten Rahnsdorfer Str. Vollsperrung, 28.10.2010 01:00 Uhr bis 30.11.2010 ',
+       type  => 'handicap',
+       source_id => '106701877',
+       data  => <<EOF,
+userdel	q4::inwork 30290,8562 30118,8128
 EOF
      },
     );
