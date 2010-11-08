@@ -116,6 +116,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $warn_message $use_utf8 $data_is_wgs84 $osm_data
 	    $gmap_api_version
 	    $enable_current_postion
+	    $enable_weather_forecast
 	   );
 
 $gmap_api_version = 3;
@@ -5608,12 +5609,28 @@ EOF
 	    }
 
 	    print "</form>\n";
-	    print qq{</div>};
+	    print qq{</div>\n};
 	}
 
     }
 
-    if (@weather_res) {
+    if ($enable_weather_forecast) {
+	print qq{\n<div id="weather_forecast" />\n};
+	my @weather_coords = get_weather_coords();
+   	if ($enable_current_weather && scalar(@weather_coords) > 0) {
+		my $weather_lang = &my_lang($lang);
+                my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
+print <<EOF;
+<script type="text/javascript">
+   display_current_weather( { lat:"$weather_coords[0]", lng:"$weather_coords[1]", lang:"$weather_lang", city:"$cityname"} );
+</script>
+EOF
+        }
+	print qq{</div>\n};
+	print qq{<hr style="clear:left;"/>\n};
+    } 
+
+    elsif (@weather_res) {
 	my(@res) = @weather_res;
 	print "<center><table border=0 bgcolor=\"#d0d0d0\">\n";
 	print "<tr><td colspan=2>${fontstr}<b>" . link_to_met() . M("Aktuelle Wetterdaten") . " ($res[0], $res[1])</a></b>$fontend</td>";
@@ -5644,19 +5661,9 @@ EOF
 	    print " ($windtext)";
 	}
 	print "$fontend</td></tr>\n";
-	print "</table></center><hr>";
+	print "</table></center>\n";
+	print "<hr>\n";
 
-	print qq{<div id="weather_forecast" />\n};
-	my @weather_coords = get_weather_coords();
-   	if ($enable_current_weather && scalar(@weather_coords) > 0) {
-		my $weather_lang = &my_lang($lang);
-                my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
-print <<EOF;
-<script type="text/javascript">
-   display_current_weather( { lat:"$weather_coords[0]", lng:"$weather_coords[1]", lang:"$weather_lang", city:"$cityname"} );
-</script>
-EOF
-        }
     }
 
     footer();
