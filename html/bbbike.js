@@ -119,7 +119,7 @@ function updateWeather (data) {
 	}
 
 	if (w.windSpeed > 0) {
-	   message += ', max. wind speed ' + parseInt(w.windSpeed) + "m/s";
+	   message += ', max. wind' + parseInt(w.windSpeed) + "m/s";
 	}
 
 	var span = document.getElementById("current_weather");
