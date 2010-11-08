@@ -135,10 +135,9 @@ function updateWeather (data) {
 }
 
 function renderWeatherForecast( js ) {
-	if (!js || js == "" || !js.weather) { return; }
-	var w = js.weather;
+	if (!js || js == "" || !js.weather) { return ""; }
 
-	return;
+	return google_weather(js);
 }
 
 // find a city and increase font size and set focus
@@ -243,6 +242,6 @@ function google_weather (w) {
      '</div><br class="clear" />' +
   '</div>';
 
-        document.write(html);
+        return (html);
 }
 
