@@ -8023,7 +8023,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005412',
        data  => <<EOF,
-userdel	1::inwork 10953,15787 10713,15746 10564,15721 10423,15698
+userdel	1::inwork 10953,15787 10713,15746 10564,15721 10427,15699 10423,15698
 EOF
      },
      { from  => 1178402400, # 2007-05-06 00:00
@@ -13319,8 +13319,8 @@ EOF
        type  => 'handicap',
        source_id => 'IM_011637',
        data  => <<EOF,
-#: last_checked: 2010-09-22
-userdel	q4::inwork; 8536,11063 8483,10900 8443,10777
+#: last_checked: 2010-11-05
+userdel	q4::inwork; 8483,10900 8443,10777
 EOF
      },
      { from  => 1244065177, # 2009-06-03 23:39
@@ -17835,7 +17835,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_015892',
        data  => <<EOF,
-userdel	q4::temp 14935,2530 15088,2691 15140,2778 15235,2938 15271,3058
+userdel	q4::temp 14946,2519 15078,2647 15166,2779 15254,2926 15301,3038
 EOF
      },
      { from  => 1276790400, # 2010-06-17 18:00
@@ -18267,9 +18267,9 @@ EOF
 userdel	q3::inwork 21027,7432 21032,7590 21037,7751
 EOF
      },
-     { from  => 1284666529, # 2010-09-16 21:48
-       until => 1293750000, # 2010-12-31 00:00
-       text  => 'Schenkenberg: L26: Grundhafter Straßenbau mit Ausbau des Knotenpunktes mit der K 7344 Prenzlau - A 20, 13.09.2010 bis 30.12.2010 ',
+     { from  => 1288905888, # 2010-11-04 22:24
+       until => 1306620000, # 2011-05-29 00:00
+       text  => 'Schenkenberg: L26: Bauarbeiten, Prenzlau - A 20 zw. AS Prenzlau-Ost und Abzweig Schenkenberg, 13.09.2010 bis 28.05.2011 ',
        type  => 'gesperrt',
        source_id => 'LS/O-SG33-E/09/214-7',
        data  => <<EOF,
@@ -18416,6 +18416,42 @@ EOF
        source_id => '106701877',
        data  => <<EOF,
 userdel	q4::inwork 30290,8562 30118,8128
+EOF
+     },
+     { from  => 1288249200, # 2010-10-28 09:00
+       until => 1301580000, # 2011-03-31 16:00
+       text  => 'Niederkirchnerstr. (Mitte): Baustelle, Fahrtrichtung gesperrt in Richtung Wilhelmstr., 29.10.2010 09:00 Uhr bis 31.03.2011 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_016598',
+       data  => <<EOF,
+userdel	q4::inwork; 8720,11226 8948,11257 9162,11286
+EOF
+     },
+     { from  => 1288238400, # 2010-10-28 06:00
+       until => 1289577600, # 2010-11-12 17:00
+       text  => 'Pankgrafenstraße (Karow): Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Regelung mit provisorischen Ampeln (bis ca. Mitte 11/2010) in beiden Richtungen Höhe Bucher Str./Revierförsterei, 29.10.2010 06:00 Uhr bis 12.11.2010 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_016591',
+       data  => <<EOF,
+userdel	q4::inwork 13220,23679 13953,23497
+EOF
+     },
+     { from  => 1289257200, # 2010-11-09 00:00
+       until => 1291503600, # 2010-12-05 00:00
+       text  => 'Bauarbeiten in der Klemkestraße zwischen Kopenhagener Straße und Emmentaler Straße vom 10.11.2010 bis 04.12.2010; Einbahnstraße in Richtung Emmentaler Straße ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101105.1400.317649.html',
+       data  => <<EOF,
+userdel	q4::inwork; 7855,18697 7785,18730 7690,18716 7609,18707 7520,18701 7492,18699 7434,18695 7320,18688 7217,18681
+EOF
+     },
+     { from  => 1289156455, # 2010-11-07 20:00
+       until => 1304200800, # 2011-05-01 00:00
+       text  => 'Steinstraße: Für den Bau eines Schmutzwasserkanals ist die Steinstraße zwischen Mendelssohn-Bartholdy-Straße und Bernhard-Beyer-Straße für den Kfz-Verkehr gesperrt. Die Arbeiten werden bis voraussichtlich April 2011 andauern.',
+       type  => 'handicap',
+       source_id => 'http://www.potsdam.de/cms/beitrag/10070344/966975/',
+       data  => <<EOF,
+userdel	q4::inwork -7750,-2431 -7909,-2375 -7996,-2293
 EOF
      },
     );

@@ -49,8 +49,7 @@ Baumschulenbrücke	Br 15584,5946 15628,6009
 #: XXX_indoor: kommt im RV-Plan und beim Städte-Verlag vor: http://www.staedte-verlag.de/utcms/de-karten-karte.html?linkid=4288445
 Heidekampbrücke	Br 15332,6138 15396,6125
 Brücke über den Nördlicher Heidekampgraben	Br 15070,8584 15079,8575
-#: XXX_indoor berliner-stadtplan sagt hierzu "Britzer Brücke", aber das dürfte falsch sein, da sie schon anderswo existiert
-#: add_fragezeichen: Heißt die Brücke "Britzer-Allee-Brücke" oder "Britzer Brücke"?
+#: note: Quellen sind uneinig, ob es die Brücke "Britzer Brücke" oder "Britzer-Allee-Brücke" heißt, und an der Brücke selbst gibt es kein Schild
 Britzer-Allee-Brücke	Br 15146,6054 15143,5936
 Späthstraßenbrücke	Br 14437,5080 14535,5137
 Hertabrücke	Br 12664,7013 12689,6905
@@ -337,8 +336,8 @@ Fußgängerbrücke zur o2 World	Br 13503,11179 13513,11206
 Brücke am Hafen Mariendorf	Br 7772,4306 7795,4242
 Klingenbergbrücke	Br 16791,9137 16831,9078
 Brücke über Avus	Br -3956,2787 -3758,2678
-Neue Späthbrücke	Br 14320,5437 14390,5458
-Anna-Nemitz-Brücke	Br 14390,5458 14421,5465
+Neue Späthbrücke	Br 14327,5427 14392,5453
+Anna-Nemitz-Brücke	Br 14392,5453 14421,5465
 Fußgängerbrücke (Altglienicke)	Br 21262,375 21182,436
 Fußgängerbrücke	Br 19968,16 19940,52
 Neue Brücke	Br -3143,14676 -3139,14710
@@ -369,6 +368,7 @@ Rudelsburger Brücke	Br 13787,22114 13795,22131
 Nördliche Rhinstraßenbrücke	Br 18181,14110 18184,14078
 Pyramidenringbrücke	Br 18354,14196 18383,14184
 Maselake-Klappbrücke	Br -2445,16610 -2504,16558
+Brücke über den Maselakekanal	Br -2152,17108 -2140,17171
 Brücke über Kanal I	Br 31362,2800 31358,2810
 Brücke über Kanal I	Br 31506,3061 31520,3065
 Brücke über Kanal I	Br 31329,3278 31316,3221
@@ -487,6 +487,7 @@ Nuthestr./Nuthe	Br -11070,-2123 -11116,-1681
 #: XXX_prog: eigentlich die gleiche Brücke...
 Humboldtbrücke	Br -11613,-1125 -11869,-907
 Humboldtbrücke	Br -11615,-1094 -11859,-892
+Humboldtbrücke	Br -11884,-936 -11626,-1133
 Nuthestr./Neuendorfer Str.	Br -8128,-4073 -7426,-4035 -7187,-4049 -6787,-4026 -6426,-4014
 Heinrich-Mann-Allee (Bahnbrücke)	Br -12431,-2096 -12493,-1896
 Lange Brücke (Potsdam)	Br -12493,-1896 -12567,-1817
@@ -523,6 +524,7 @@ Bahntunnel	Tu 26587,162845 26616,162886
 Brücke über die Havel	Br -1487,38509 -1426,38575
 Brücke über die Dahme	Br 27050,-10317 27742,-10246
 Brücke über die Dahme	Br 27165,-10332 27243,-10346
+Brücke über den Teltowkanal	Br 18388,2509 18496,2409
 #: by: Andreas Titz vvv
 August-Wilhelm-Steg	Br -1475,38989 -1531,38984
 #: by: ^^^

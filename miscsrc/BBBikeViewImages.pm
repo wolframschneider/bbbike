@@ -314,7 +314,10 @@ sub show_image_viewer {
 		if (!defined $image_viewer_toplevel) {
 		    $image_viewer_toplevel = $main::toplevel{"BBBikeViewImages_Viewer"};
 		} else {
-		    my $f = $image_viewer_toplevel->Frame->pack(-fill => "x", -side => "bottom");
+		    # Button bar is unusually at the top. This is to
+		    # have the button controls always in the same
+		    # place.
+		    my $f = $image_viewer_toplevel->Frame->pack(-fill => "x", -side => "top");
 
 		    my $first_button = $f->Button(-class => "SmallBut", -text => "|<")->pack(-side => "left");
 		    $image_viewer_toplevel->Advertise(FirstButton => $first_button);
@@ -463,12 +466,12 @@ sub show_image_viewer {
 		if (defined $prev_inx) {
 		    $image_viewer_toplevel->Subwidget("PrevButton")->configure(-command => [@cmd_args, $prev_inx],
 									       -state => "normal");
-		    for my $key ('BackSpace', 'Left') {
+		    for my $key ('BackSpace', 'b', 'Left') {
 			$image_viewer_toplevel->bind("<$key>" => sub { show_image_viewer(@args, $prev_inx) });
 		    }
 		} else {
 		    $image_viewer_toplevel->Subwidget("PrevButton")->configure(-state => "disabled");
-		    for my $key ('BackSpace', 'Left') {
+		    for my $key ('BackSpace', 'b', 'Left') {
 			$image_viewer_toplevel->bind("<$key>" => \&Tk::NoOp);
 		    }
 		}
@@ -500,7 +503,8 @@ sub show_image_viewer {
 		# current image being first in list. Unfortunately,
 		# look how complicated it is to get to $abs_file :-(
 		$image_viewer_toplevel->Subwidget("OrigButton")->configure(-command => [\&orig_viewer, $abs_file]);
-		$image_viewer_toplevel->bind("<o>" => sub { orig_viewer($abs_file) });
+		# o=orig, z=zoom (latter matches the binding in xzgv)
+		$image_viewer_toplevel->bind("<$_>" => sub { orig_viewer($abs_file) }) for ('o', 'z');
 
 		$image_viewer_toplevel->Subwidget("NOfMLabel")->configure(-text => $this_index_in_array->() . "/" . @$all_image_inx);
 

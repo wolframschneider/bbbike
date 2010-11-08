@@ -518,8 +518,8 @@ userdel	q4::inwork; 10350,13376 10527,13257
          'text' => 'Köthener Str. (Kreuzberg) zwischen Bernburger Str. und Hallesches Ufer Baustelle, Einbahnstraße Richtung Norden',
          'from' => 1238347506,
          'id' => 1571,
-         'data' => '#: last_checked: 2010-09-22
-userdel	q4::inwork; 8536,11063 8483,10900 8443,10777
+         'data' => '#: last_checked: 2010-11-05
+userdel	q4::inwork; 8483,10900 8443,10777
 ',
          'type' => 'handicap'
        },
@@ -1337,16 +1337,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'LSW-SG33-P09598-1',
-         'until' => 1288476000,
-         'text' => 'Nuthetal: Kanal-und Straßenbauarbeiten L 771 OD Saarmund, 21.09.2009 bis 30.10.2010 ',
-         'from' => 1269162391,
-         'id' => 2026,
-         'data' => 'userdel	q4::inwork -8433,-11290 -8293,-10599
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'LS/O-SG33-E/09/214',
          'until' => 1293750000,
@@ -1375,16 +1366,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'LS/O-SG33-F/10/015',
-         'until' => 1288389600,
-         'text' => 'Grünheide (Mark): L385: Brückenbauarbeiten OD Kienbaum, 24.02.2010 bis 29.10.2010 01:00 Uhr ',
-         'from' => 1284411978,
-         'id' => 2037,
-         'data' => 'userdel	2::inwork 48182,6806 48027,6894
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1433,16 +1415,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        undef,
        undef,
-       {
-         'source_id' => 'LSO-SG33-E10026',
-         'until' => 1288389600,
-         'text' => 'Wandlitz: Straßenbau (Ausbau OD) OD Zerpenschleuse 06.04.2010 bis 29.10.2010 ',
-         'from' => 1271281324,
-         'id' => 2051,
-         'data' => 'userdel	q4::inwork 18301,50512 18022,49766 17638,49090
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'source_id' => 'LSO-SG33-F10022',
@@ -1498,7 +1471,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'permanent' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im November von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10640,8366 10598,8270 10575,8218
@@ -1543,16 +1516,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100528.1110.297131.html',
-         'until' => 1288652399,
-         'text' => 'Marksburgstraße, Bauarbeiten zwischen Hentigstraße und Sangeallee, 15.08. bis 01.11., Fahrbahn gesperrt ',
-         'from' => 1281736800,
-         'id' => 2077,
-         'data' => 'userdel	q4::inwork 18586,9172 18511,9185 18430,9199 18319,9218
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1745,9 +1709,9 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'source_id' => 'LS/O-SG33-E/09/214-7',
-         'until' => 1293750000,
-         'text' => 'Schenkenberg: L26: Grundhafter Straßenbau mit Ausbau des Knotenpunktes mit der K 7344 Prenzlau - A 20, 13.09.2010 bis 30.12.2010 ',
-         'from' => 1284666529,
+         'until' => 1306620000,
+         'text' => 'Schenkenberg: L26: Bauarbeiten, Prenzlau - A 20 zw. AS Prenzlau-Ost und Abzweig Schenkenberg, 13.09.2010 bis 28.05.2011 ',
+         'from' => 1288905888,
          'id' => 2133,
          'data' => 'userdel	2::inwork 46581,105900 47587,106693
 ',
@@ -1764,30 +1728,13 @@ userdel	3 13150,7254 13047,7234 13034,7319
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'LS/O-SG33-E/10/086',
-         'until' => 1288562400,
-         'text' => 'Kremmen: B273: Abbruch der Brücke bei Kremmen, 20.09.2010 bis 31.10.2010 01:00 Uhr ',
-         'from' => 1285014030,
-         'id' => 2136,
-         'data' => 'userdel	2::inwork -17964,36290 -17262,37425
-',
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
        undef,
        undef,
-       {
-         'until' => 1288998000,
-         'text' => 'Einbahnstraßenregelung in der Wasserwerkstr. zwischen Falkenseer Chaussee und Pfefferweg vom 25.10 bis 05.11.2010',
-         'from' => 1287957600,
-         'id' => 2142,
-         'data' => 'userdel	q4::inwork; -5849,16199 -5875,15994 -5911,15877
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        undef,
        undef,
        {
@@ -1800,16 +1747,7 @@ userdel	3 13150,7254 13047,7234 13034,7319
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101025.1235.315920.html',
-         'until' => 1288825199,
-         'text' => 'Der Steg Am Rohrbusch wird repariert Die Montage beginnt am Montag, dem 25.10.2010. Der Steg wird voraussichtlich am 3. November 2010 für die Öffentlichkeit wieder geöffnet.',
-         'from' => 1288036570,
-         'id' => 2146,
-         'data' => 'userdel	2::inwork 5535,24016 5645,23968
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20101028.1120.316439.html',
          'until' => 1291157999,
@@ -1837,6 +1775,46 @@ userdel	3 13150,7254 13047,7234 13034,7319
          'from' => 1288134000,
          'id' => 2149,
          'data' => 'userdel	q4::inwork 30290,8562 30118,8128
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_016598',
+         'until' => 1301580000,
+         'text' => 'Niederkirchnerstr. (Mitte): Baustelle, Fahrtrichtung gesperrt in Richtung Wilhelmstr., 29.10.2010 09:00 Uhr bis 31.03.2011 16:00 Uhr ',
+         'from' => 1288249200,
+         'id' => 2150,
+         'data' => 'userdel	q4::inwork; 8720,11226 8948,11257 9162,11286
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_016591',
+         'until' => 1289577600,
+         'text' => 'Pankgrafenstraße (Karow): Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Regelung mit provisorischen Ampeln (bis ca. Mitte 11/2010) in beiden Richtungen Höhe Bucher Str./Revierförsterei, 29.10.2010 06:00 Uhr bis 12.11.2010 17:00 Uhr ',
+         'from' => 1288238400,
+         'id' => 2151,
+         'data' => 'userdel	q4::inwork 13220,23679 13953,23497
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101105.1400.317649.html',
+         'until' => 1291503600,
+         'text' => 'Bauarbeiten in der Klemkestraße zwischen Kopenhagener Straße und Emmentaler Straße vom 10.11.2010 bis 04.12.2010; Einbahnstraße in Richtung Emmentaler Straße ',
+         'from' => 1289257200,
+         'id' => 2152,
+         'data' => 'userdel	q4::inwork; 7855,18697 7785,18730 7690,18716 7609,18707 7520,18701 7492,18699 7434,18695 7320,18688 7217,18681
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.potsdam.de/cms/beitrag/10070344/966975/',
+         'until' => 1304200800,
+         'text' => 'Steinstraße: Für den Bau eines Schmutzwasserkanals ist die Steinstraße zwischen Mendelssohn-Bartholdy-Straße und Bernhard-Beyer-Straße für den Kfz-Verkehr gesperrt. Die Arbeiten werden bis voraussichtlich April 2011 andauern.',
+         'from' => 1289156455,
+         'id' => 2153,
+         'data' => 'userdel	q4::inwork -7750,-2431 -7909,-2375 -7996,-2293
 ',
          'type' => 'handicap'
        }
