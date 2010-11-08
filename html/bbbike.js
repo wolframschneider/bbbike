@@ -202,6 +202,7 @@ function focusCity () {
 
 function google_weather (w) {
 	  var unit = w.weather.forecast_information ? w.weather.forecast_information.unit_system.data : "";
+	  var html = "";
 
 	  // Fahrenheit -> Celcius
 	  function celcius(temp) {
@@ -215,10 +216,10 @@ function google_weather (w) {
 	  var f = w.weather.current_conditions;
 	  // give up
 	  if (!f) {
-		return;
+		return html;
 	  }
 
-   	  var html = '' +
+   	  html +=
    '<div id="weatherSection" class="marginLeft">' +
      '<div style="font-size: 0.8em;" class="roundCorner floatLeft" id="googleWeather">' +
       '<div style="padding: 5px; float: left;">' +
@@ -257,6 +258,6 @@ function google_weather (w) {
      '</div><br class="clear" />' +
   '</div>';
 
-        return (html);
+        return html;
 }
 
