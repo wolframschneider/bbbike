@@ -201,8 +201,23 @@ function focusCity () {
 }
 
 function google_weather (w) {
+	  var unit = w.weather.forecast_information ? w.weather.forecast_information.unit_system.data : "";
+
+	  // Fahrenheit -> Celcius
+	  function celcius(temp) {
+	    if (unit == "US") {
+		var t = (temp - 32) / 1.8;
+	        return parseInt(t + 0.5);
+	    }
+	    return temp;
+	  }
 
 	  var f = w.weather.current_conditions;
+	  // give up
+	  if (!f) {
+		return;
+	  }
+
    	  var html = '' +
    '<div id="weatherSection" class="marginLeft">' +
      '<div style="font-size: 0.8em;" class="roundCorner floatLeft" id="googleWeather">' +
@@ -224,7 +239,7 @@ function google_weather (w) {
         	   '<img style="border: 1px solid rgb(187, 187, 204); margin-bottom: 2px;" src="http://www.google.com' + 
 		   f.icon.data + '" alt="' + f.condition.data + '" title="' + f.condition.data + '" /><br />';
 		if (f.high) {
-        	   html += '<nobr>' + f.high.data + '°C | ' + f.low.data +'°C</nobr>';
+        	   html += '<nobr>' + celcius(f.high.data) + '°C | ' + celcius(f.low.data) +'°C</nobr>';
 		}
       		html += '</div>';
 
