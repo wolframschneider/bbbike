@@ -1458,6 +1458,24 @@ sub _outer_berlin_hack {
     $name;
 }
 
+sub get_weather_coords {
+    my @weather_coords;
+
+    my $geo = get_geography_object();
+
+    if ( $geo->is_osm_source && exists $geo->{'bbox_wgs84'} ) {
+        my @list = @{ $geo->{'bbox_wgs84'} };
+        my $area = "$list[0],$list[1]!$list[2],$list[3]";
+        my @center =
+          exists $geo->{'center'}
+          ? @{ $geo->{'center'} }
+          : @{ $geo->{'bbox_wgs84'} };
+        @weather_coords = ( $center[1], $center[0] );
+    }
+
+    return @weather_coords;
+}
+
 sub choose_form {
     my $startname = $q->param('startname') || '';
     my $start2    = $q->param('start2')    || '';
@@ -5627,6 +5645,18 @@ EOF
 	}
 	print "$fontend</td></tr>\n";
 	print "</table></center><hr>";
+
+	print qq{<div id="weather_forecast" />\n};
+	my @weather_coords = get_weather_coords();
+   	if ($enable_current_weather && scalar(@weather_coords) > 0) {
+		my $weather_lang = &my_lang($lang);
+                my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
+print <<EOF;
+<script type="text/javascript">
+   display_current_weather( { lat:"$weather_coords[0]", lng:"$weather_coords[1]", lang:"$weather_lang", city:"$cityname"} );
+</script>
+EOF
+        }
     }
 
     footer();
