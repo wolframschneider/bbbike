@@ -29,7 +29,7 @@ Reichsstr.: wird der vorhandene Radweg zugunsten eines Angebotsstreifens aufgege
 #
 #: by: MoPo 2009-08-01, soll 2009 realisiert werden vvv
 # auch im Tsp vom 2010-03-26 erwähnt
-#: last_checked: 2010-09-08
+#: last_checked: 2010-11-11
 Tiergartenstr.	?::projected 8172,11679 8021,11636 7816,11571 7717,11540 7600,11513 7504,11512 7435,11514 7356,11517 7293,11519 7171,11510 6825,11486
 #: last_checked: 2009-11-21
 Grunewaldstr. (Steglitz)	?::projected 4861,5581 4671,5697 4520,5793 4419,5842 4291,5895 4172,5918 4010,5888 3931,5825 3850,5801 3707,5758
@@ -50,8 +50,8 @@ Michaelbrücke/Michaelkirchstr.	?::projected 11768,12006 11716,11914 11676,11839 
 # auch im Tsp 2010-03-26 erwähnt
 Fischerinsel	?::projected 10512,12039 10672,11870
 #
-#: last_checked: 2010-09-08
-#: next_check: 2010-12-08
+#: last_checked: 2010-11-11
+#: next_check: 2010-12-15
 Stülerstr.	?::projected 6825,11486 6716,11439 6692,11365 6679,11319 6630,11247 6606,11222
 #
 #: last_checked: 2010-09-18
@@ -324,8 +324,10 @@ Hansastr.: Schaffung von Radverkehrsanlagen	? 14650,15750 14823,15776 14934,1586
 # XXX Radwegeverbindung im Zuge der TR7 Springpfuhl - Lea-Grundig-Str.
 #: last_checked: 2009-11-16
 Puccinistr.: Asphaltierung	? 13700,15501 13776,15546
-Borussenstr.: Asphaltstreifen	? -3882,2441 -3913,2327 -3965,2240 -4164,1993
-#: next_check ^^^
+# 
+#: last_checked: 2010-11-12 (Straße war gerade in Bau)
+#: next_check: 2010-12-01
+Borussenstr.: Asphaltierung steht an	? -3882,2441 -3913,2327 -3965,2240 -4164,1993
 # 
 #: last_checked: 2010-11-07
 Ringstr.: Radverkehrsanlagen	? 9021,3878 8766,4038 8605,4138 8399,4244 8159,4354 8098,4376 7990,4420 7921,4451 7690,4552
@@ -340,7 +342,7 @@ Boitzenburg - Hardenbeck: straßenbegleitender Radweg in Vorbereitung, Realisieru
 Laut Uckermark-Kurier: 2.7km Radweg auf ehem. Bahndamm zwischen L15 undf K7332 bei Hardenbeck (Radweg "Spur der Steine", Templin - Fürstenwerder), Baubeginn Anfang 2009, Asphalt ca. 3m breit; wo genau???	?::inwork 16377,90072 15782,90862 15738,90942 15410,92053 15661,93732 15688,93829 15748,93928 15841,94009 16435,94298 17677,94900 17796,95008 17912,95192 18001,95435 18507,96268 18676,96867 18954,97944 19022,98128 19442,99078 19582,99411
 #: last_checked: 2010-08-14
 #: next_check: 2010-11-01
-Choriner Str.: die Choriner Str. soll eine Fahrradstraße werden	? 10480,13871 10489,13942 10502,14070 10558,14176 10629,14299 10870,14689 10893,14705
+Choriner Str.: die Choriner Str. soll eine Fahrradstraße werden	? 10480,13871 10487,13928 10502,14070 10558,14176 10629,14299 10870,14689 10893,14705
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20081110.1105.113814.html
 #: last_checked: 2010-10-23:
 #: next_check: 2011-04-30:
@@ -476,7 +478,10 @@ B87 (Umfahrung Müllrose): Ist die Straße eine Kfz-Straße?	? 78295,-17575 78445,-
 B87 (Umfahrung Beeskow): Ist die Straße eine Kfz-Straße?	? 66269,-27581 66283,-27438 66441,-26994 66462,-26428 66441,-25347 66426,-23979 66605,-23083 67085,-22374 67558,-22059 68152,-21851 68883,-21844 69506,-22088 70838,-22847 71168,-22890 71397,-22833
 # Hier scheint nichts mehr zu passieren... : last_checked: 2008-01-25 #: by: Message-ID: <4mfe1bF5vae4U1@uni-berlin.de> Warschauer Str.: Radwegbenutzungspflicht wird aufgehoben	?; 13546,11352 13476,11174 13454,11119 13409,11004 13332,10832
 # XXX del #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20060629.1530.43277.html #: last_checked: 2009-08-09 --- R1: geänderte Ausschilderung steht noch aus	? 23753,4218 23879,4233 24135,4264 24181,4270 25132,4385 25396,4417 25347,4320 25373,4266 25376,4207 25282,3932 25262,3828 25254,3785 25232,3757 25241,3232 25281,3161 25259,3116 25346,2956 25474,2848 25547,2779 25600,2681 25768,2627 25789,2576 25790,2507 25846,2496 25847,2482 25948,2474
+# 
 #: next_check: 2006-06-01
+#: XXX oder vielleicht dieser Weg hier?
+#: by: http://www.berlin.de/ba-spandau/presse/archiv/20101109.1255.318039.html
 Burgwallgraben: neuer Weg wg. Renaturisierung durch DB - fertig Sommer 2006	? -3609,13492 -3649,13288 -3625,13241 -3550,13122 -3403,13024 -3360,13028 -3332,13054
 #: XXX laut Detlef Hoge:
 auf der östlichen Seite der B101n: wo genau ist der Radweg hier?	? 6173,-2344 5957,-2575 5627,-2671
@@ -4530,5 +4535,3 @@ Budapester Weg: Qualität? Nachts beleuchtet? Wo liegt der Weg genau? Ausschilder
 #: XXX fehlt in Berlin.coords.data
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/37re.pdf/file
 Elisabeth-Schwarzhaupt-Platz: liegt er an der Kreuzung Invalidenstr/Gartenstr?	? 9383,13978
-#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/35re.pdf/file
-Falkstr.: Heißt ein Teil jetzt Mainzer Straße?	? 12162,8055 12147,8117

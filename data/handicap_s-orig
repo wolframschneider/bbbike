@@ -11,8 +11,7 @@
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4088.html
 #: next_check: 2012-06-01
 Behrenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8861,12125 9054,12154 9064,12156 9164,12172
-#: last_checked: 2010-09-30
-#: XXX nach den Bauarbeiten: wahrscheinlich Q0- -> Q0
+#: last_checked: 2011-11-12
 Reichstagufer: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9117,12705 9209,12795 9280,12883
 #: last_checked: 2010-10-22
 Niederlagstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9972,12184 9939,12296 9951,12318
@@ -24,7 +23,8 @@ Oberwallstr.: Bauarbeiten, Einbahnstraße	q4::inwork; 9925,11947 9913,12068
 # 
 #: last_checked: 2010-11-06
 #: next_check: 2011-02-01
-Schloßplatz: Behinderungen durch Bauarbeiten möglich	q3::inwork 10170,12261 10063,12438
+#: note: ca. 3 Stufen
+Schloßplatz: Behinderungen durch Bauarbeiten möglich, einige Stufen	q3::inwork 10170,12261 10063,12438
 #: last_checked: 2010-09-08
 Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt	q4::inwork 8389,11378 8374,11479
 #: last_checked: 2010-10-29
@@ -105,7 +105,7 @@ Fasanerieallee: Parkweg	q1 6435,11606 6459,11638 6540,11754 6685,11954
 Große Sternallee: Parkweg	q1 6809,11979 7073,11798 7163,11738 7382,11588 7504,11512
 (Hiroshimastr. - Große Sternallee): Parkweg	q1 7356,11517 7382,11588
 Bellevueallee: Parkweg	q1 7039,12314 7383,12095 7460,12054 7663,11946 7801,11875 8016,11770 8172,11679
-Ahornsteig: Parkweg	q1 7669,11586 7696,11621 7735,11656 7796,11681 7852,11721 8016,11770 8156,11863 8222,11881 8284,11905 8453,12099 8522,12187 8538,12245
+Ahornsteig: Parkweg	q1 7669,11586 7696,11621 7735,11656 7796,11681 7901,11684 8016,11770 8156,11863 8222,11881 8284,11905 8453,12099 8522,12187 8538,12245
 Tiergarten: Parkweg	q1 8223,11796 8156,11863 8091,11992 8089,12041 8107,12145
 Tiergarten: Parkweg	q1 8016,11770 8022,12016
 Tiergarten: Parkweg	q1 8034,12093 8057,12059 8048,12033 8022,12016 7999,12049 8006,12074 8034,12093 8048,12135 8055,12186
@@ -121,7 +121,7 @@ Hasenheide: Parkweg	q1 11271,8325 11282,8428 11250,8585 11177,8985 11128,9100 11
 Hasenheide, zur Lilienthalstr.: Parkweg	q1 10709,9192 11128,9100
 Am Flutgraben: Parkweg	q1 13333,9929 13412,9935 13579,10146
 Kolonie Albrechtshöhe: einige Fußgänger	q1 10260,5953 9931,5985
-Am Landwehrkanal: Parkweg	q1 12724,9545 12919,9584 12981,9672 13086,9825
+Am Landwehrkanal: Parkweg	q1 12739,9576 12801,9554 12919,9584 12981,9672 13086,9825
 Uferweg an den Treptowers: enger und kurviger Weg	q3 14500,9856 14464,9927 14509,9997 14432,10059 14373,10046
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20070810.1330.83363.html
 #: confirmed_by: srt
@@ -266,7 +266,7 @@ Steinmetzstr.: Fußgängerzone, Radfahren erlaubt	q1 7625,9771 7648,9944 7698,1014
 Lützowplatz: Einbahnstraße, Ausweichen auf Gehweg	q3; 7002,11034 6873,11011
 Zauritzweg: Fußgänger	q1 4199,11819 4195,11690
 #: XXX_prog: Radfahren nicht erlaubt, rjoop möchte hier nicht geroutet werden, wenn "strikt befolgen" eingeschaltet ist
-#: XXX check again: vielleicht mittlerweile doch erlaubt?
+#: note: auf der westlichen Seite steht ein überklebtes Grünanlagen-Schild mit "Radfahren verboten", auf der östlichen Seite nicht
 (Blücherplatz - Zossener Str.): Fußgänger, Bordsteine	q2 9689,10124 9827,10051
 Hebbelstr.: Fußgänger	q2 3117,11852 3251,12025 3258,12035 3295,12068
 Spreewaldplatz: Fußgänger	q1 12341,10218 12292,10374

@@ -1770,8 +1770,8 @@ userdel	3 13150,7254 13047,7234 13034,7319
        },
        {
          'source_id' => '106701877',
-         'until' => 1291158000,
-         'text' => 'Schöneiche bei Berlin: L302, L338: Gleis- und Straßenbau (Knotenumbau L302/L338) OL Schöneiche Knoten Rahnsdorfer Str. Vollsperrung, 28.10.2010 01:00 Uhr bis 30.11.2010 ',
+         'until' => 1292367600,
+         'text' => 'Schöneiche bei Berlin: L302, L338: Gleis- und Straßenbau (Knotenumbau L302/L338) OL Schöneiche Knoten Rahnsdorfer Str. Vollsperrung, 28.10.2010 01:00 Uhr bis 14.12.2010 ',
          'from' => 1288134000,
          'id' => 2149,
          'data' => 'userdel	q4::inwork 30290,8562 30118,8128
@@ -1788,16 +1788,7 @@ userdel	3 13150,7254 13047,7234 13034,7319
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_016591',
-         'until' => 1289577600,
-         'text' => 'Pankgrafenstraße (Karow): Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Regelung mit provisorischen Ampeln (bis ca. Mitte 11/2010) in beiden Richtungen Höhe Bucher Str./Revierförsterei, 29.10.2010 06:00 Uhr bis 12.11.2010 17:00 Uhr ',
-         'from' => 1288238400,
-         'id' => 2151,
-         'data' => 'userdel	q4::inwork 13220,23679 13953,23497
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101105.1400.317649.html',
          'until' => 1291503600,
@@ -1817,6 +1808,71 @@ userdel	3 13150,7254 13047,7234 13034,7319
          'data' => 'userdel	q4::inwork -7750,-2431 -7909,-2375 -7996,-2293
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_016620',
+         'until' => 1290351600,
+         'text' => 'Hönower Straße (Mahlsdorf): Baustelle, Fahrtrichtung gesperrt Richtung Hönow zwischen Fritz-Reuter-Str. und Linderhofstr., 08.11.2010 11:21 Uhr bis 21.11.2010 16:00 Uhr ',
+         'from' => 1289125260,
+         'id' => 2154,
+         'data' => 'userdel	q4::inwork; 24556,12172 24530,12296
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'INKO_104287',
+         'until' => 1289602799,
+         'text' => 'Friedrichstr. (Mitte) in beiden Richtungen zwischen Unter den Linden und Behrenstr. Baustelle, Fahrbahn gesperrt, Fußgänger können passieren (bis vorauss. 12.11.2010 20:00) ',
+         'from' => 1289373706,
+         'id' => 2155,
+         'data' => 'userdel	q4::inwork 9358,12351 9369,12253
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'INKO_103947',
+         'until' => 1291157999,
+         'text' => 'Lückstr. (Rummelsburg) Richtung Nöldnerplatz zwischen Emanuelstr. und Giselastr. Baustelle, Fahrtrichtung gesperrt (bis Ende 11.2010) ',
+         'from' => 1289373844,
+         'id' => 2157,
+         'data' => 'userdel	q4::inwork; 16303,10760 16153,10818
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'INKO_104132',
+         'until' => 1289790000,
+         'text' => 'Teltower Damm (Zehlendorf) in beiden Richtungen zwischen Anhaltinerstr. und Machnower Str. Geplant ab: 12.11.2010 18 Uhr, Baustelle, Straße vollständig gesperrt (Einbau einer Hilfsbrücke) (bis vorauss. 15.11.2010 04:00)',
+         'from' => 1289494800,
+         'id' => 2159,
+         'data' => 'userdel	2::inwork 749,2616 725,2702
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20101111.1155.318374.html',
+         'until' => 1290186000,
+         'text' => 'Ruhrstraße zwischen Konstanzer Straße und Hohenzollerndamm wird ab Montag, dem 15.11. bis Freitag, dem 19.11.2010 instandgesetzt, Vollsperrung ',
+         'from' => 1289800800,
+         'id' => 2160,
+         'data' => 'userdel	q4::inwork 3983,9343 4230,9229
+userdel	q4::inwork 12690,10062 12659,10119
+userdel	q4::inwork 12855,10035 12817,9964
+userdel	q4::inwork 9268,11590 9058,11564 8733,11524
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'LS/S-SG33-W/10/146',
+         'until' => 1290293999,
+         'text' => 'Unterspreewald: B179: Brückenneubau Bauwerk 502 Brücke über die alte Spree bei Leibsch ab 16.11.-20.11.10 Vollsperrung ',
+         'from' => 1289775600,
+         'id' => 2161,
+         'data' => 'userdel	2::inwork 43875,-35850 44731,-35697
+',
+         'type' => 'gesperrt'
        }
      
 );

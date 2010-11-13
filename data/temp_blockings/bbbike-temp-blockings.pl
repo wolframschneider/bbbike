@@ -650,7 +650,7 @@ EOF
        text  => 'Bachstraße: In beiden Richtungen Störungen durch Rohrbruch, gesperrt bis Do 12:00 ',
        type  => 'handicap',
       data  => <<EOF,
-userdel	q4 6020,12492 5951,12353 5938,12281 5874,12165 5790,12026
+userdel	q4 6020,12492 5951,12353 5938,12281 5874,12165 5807,12070 5790,12026
 userdel	q4 5758,11895 5775,11975 5790,12026
 EOF
      },
@@ -4691,7 +4691,7 @@ EOF
        data  => <<EOF,
 userdel	2::temp 8021,11636 8016,11770 8172,11679
 userdel	2::temp 7816,12150 7875,12363
-userdel	2::temp 7504,11512 7382,11588 7163,11738 7287,11763 7535,11677 7591,11639 7669,11586 7696,11621 7735,11656 7796,11681 7852,11721 8016,11770
+userdel	2::temp 7504,11512 7382,11588 7163,11738 7287,11763 7535,11677 7591,11639 7669,11586 7696,11621 7735,11656 7796,11681 7901,11684 8016,11770
 userdel	2::temp 7669,11586 7711,11558
 userdel	2::temp 8022,12016 8016,11770 7801,11875 7663,11946 7570,11855 7223,11897 7073,11798 7163,11738 6980,11583 6809,11570
 userdel	2::temp 7039,12314 7383,12095
@@ -17862,7 +17862,7 @@ userdel auto	3 7039,12314 7383,12095 7460,12054
 userdel	2::temp 7382,11588 7163,11738 7287,11763 7535,11677
 userdel	2::temp 8021,11636 8016,11770 7801,11875 7663,11946
 userdel	2::temp 7796,11681 7816,11571
-userdel	2::temp 8022,12016 8016,11770 7852,11721
+userdel	2::temp 8022,12016 8016,11770 7901,11684
 userdel	2::temp 7816,12150 7875,12363
 userdel	2::temp 7711,11558 7669,11586 7591,11639
 userdel	2::temp 8055,12186 8048,12135 8034,12093
@@ -18410,8 +18410,8 @@ userdel	2::inwork -17114,37670 -17262,37425
 EOF
      },
      { from  => 1288134000, # 2010-10-27 01:00
-       until => 1291158000, # 2010-12-01 00:00
-       text  => 'Schöneiche bei Berlin: L302, L338: Gleis- und Straßenbau (Knotenumbau L302/L338) OL Schöneiche Knoten Rahnsdorfer Str. Vollsperrung, 28.10.2010 01:00 Uhr bis 30.11.2010 ',
+       until => 1292367600, # 2010-12-15 00:00
+       text  => 'Schöneiche bei Berlin: L302, L338: Gleis- und Straßenbau (Knotenumbau L302/L338) OL Schöneiche Knoten Rahnsdorfer Str. Vollsperrung, 28.10.2010 01:00 Uhr bis 14.12.2010 ',
        type  => 'handicap',
        source_id => '106701877',
        data  => <<EOF,
@@ -18452,6 +18452,81 @@ EOF
        source_id => 'http://www.potsdam.de/cms/beitrag/10070344/966975/',
        data  => <<EOF,
 userdel	q4::inwork -7750,-2431 -7909,-2375 -7996,-2293
+EOF
+     },
+     { from  => 1289125260, # 2010-11-07 11:21
+       until => 1290351600, # 2010-11-21 16:00
+       text  => 'Hönower Straße (Mahlsdorf): Baustelle, Fahrtrichtung gesperrt Richtung Hönow zwischen Fritz-Reuter-Str. und Linderhofstr., 08.11.2010 11:21 Uhr bis 21.11.2010 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_016620',
+       data  => <<EOF,
+userdel	q4::inwork; 24556,12172 24530,12296
+EOF
+     },
+     { from  => 1289373706, # 2010-11-10 08:21
+       until => 1289602799, # 2010-11-12 23:59
+       text  => 'Friedrichstr. (Mitte) in beiden Richtungen zwischen Unter den Linden und Behrenstr. Baustelle, Fahrbahn gesperrt, Fußgänger können passieren (bis vorauss. 12.11.2010 20:00) ',
+       type  => 'handicap',
+       source_id => 'INKO_104287',
+       data  => <<EOF,
+userdel	q4::inwork 9358,12351 9369,12253
+EOF
+     },
+     { from  => 1289373786, # 2010-11-10 08:23
+       until => 1289594954, # 2010-11-15 23:59 1289861999
+       text  => 'Kastanienallee (Mitte) in beiden Richtungen Höhe Zionskirchstr. Baustelle, Straße vollständig gesperrt (bis Mitte 11/2010) ',
+       type  => 'handicap',
+       source_id => 'INKO_103995',
+       data  => <<EOF,
+userdel	q4::inwork 10511,14418 10426,14262 10370,14158
+EOF
+     },
+     { from  => 1289373844, # 2010-11-10 08:24
+       until => 1291157999, # 2010-11-30 23:59
+       text  => 'Lückstr. (Rummelsburg) Richtung Nöldnerplatz zwischen Emanuelstr. und Giselastr. Baustelle, Fahrtrichtung gesperrt (bis Ende 11.2010) ',
+       type  => 'handicap',
+       source_id => 'INKO_103947',
+       data  => <<EOF,
+userdel	q4::inwork; 16303,10760 16153,10818
+EOF
+     },
+     { from  => 1289372400, # 2010-11-10 08:00
+       until => 1289448000, # 2010-11-11 05:00
+       text  => 'Strausberg: L34: Gleisbauarbeiten OL Strausberg, Bahnübergang vom 10.11. 08:30 bis 11.11.10 05:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => '106402691',
+       data  => <<EOF,
+userdel	2::inwork 43131,19792 43686,19241
+EOF
+     },
+     { from  => 1289494800, # 2010-11-11 18:00
+       until => 1289790000, # 2010-11-15 04:00
+       text  => 'Teltower Damm (Zehlendorf) in beiden Richtungen zwischen Anhaltinerstr. und Machnower Str. Geplant ab: 12.11.2010 18 Uhr, Baustelle, Straße vollständig gesperrt (Einbau einer Hilfsbrücke) (bis vorauss. 15.11.2010 04:00)',
+       type  => 'gesperrt',
+       source_id => 'INKO_104132',
+       data  => <<EOF,
+userdel	2::inwork 749,2616 725,2702
+EOF
+     },
+     { from  => 1289800800, # 2010-11-15 07:00
+       until => 1290186000, # 2010-11-19 18:00
+       text  => 'Ruhrstraße zwischen Konstanzer Straße und Hohenzollerndamm wird ab Montag, dem 15.11. bis Freitag, dem 19.11.2010 instandgesetzt, Vollsperrung ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20101111.1155.318374.html',
+       data  => <<EOF,
+userdel	q4::inwork 3983,9343 4230,9229
+userdel	q4::inwork 12690,10062 12659,10119
+userdel	q4::inwork 12855,10035 12817,9964
+userdel	q4::inwork 9268,11590 9058,11564 8733,11524
+EOF
+     },
+     { from  => 1289775600, # 2010-11-15 00:00
+       until => 1290293999, # 2010-11-20 23:59
+       text  => 'Unterspreewald: B179: Brückenneubau Bauwerk 502 Brücke über die alte Spree bei Leibsch ab 16.11.-20.11.10 Vollsperrung ',
+       type  => 'gesperrt',
+       source_id => 'LS/S-SG33-W/10/146',
+       data  => <<EOF,
+userdel	2::inwork 43875,-35850 44731,-35697
 EOF
      },
     );
