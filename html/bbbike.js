@@ -130,6 +130,9 @@ function updateWeather (data) {
 	span = document.getElementById("weather_forecast");
 	if (span) {
 		message = renderWeatherForecast( js.forecast );
+	        if (message == "") {
+		   message = ": no data available";
+	        }
 		span.innerHTML = message;
 	}
 }
