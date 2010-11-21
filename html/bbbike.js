@@ -223,7 +223,7 @@ function google_weather (w) {
 	if (display_city_name) {
 	   html += '\n<span id="weather_city">';
 	   if (w.weather.forecast_information && w.weather.forecast_information.city) {
-		html += w.weather.forecast_information.city.data;
+		html += "<b>" + w.weather.forecast_information.city.data + "</b>";
 		html += " - " + w.weather.forecast_information.forecast_date.data;
 	   }
 	   html += '</span>';
