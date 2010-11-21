@@ -5615,16 +5615,20 @@ EOF
     }
 
     if ($enable_weather_forecast) {
-	print qq{\n<div id="weather_forecast" />\n};
+	print qq{\n<div id="weather_forecast_html" />\n};
 	my @weather_coords = get_weather_coords();
    	if ($enable_current_weather && scalar(@weather_coords) > 0) {
 		my $weather_lang = &my_lang($lang);
                 my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
+
+		print M("Wettervorhersage"), ": <br />\n";
+		print qq{\n<div id="weather_forecast" />\n};
 print <<EOF;
 <script type="text/javascript">
    display_current_weather( { lat:"$weather_coords[0]", lng:"$weather_coords[1]", lang:"$weather_lang", city:"$cityname"} );
 </script>
 EOF
+		print qq{</div>\n};
         }
 	print qq{</div>\n};
 	print qq{<hr style="clear:left;"/>\n};
