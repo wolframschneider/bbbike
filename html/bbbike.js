@@ -119,7 +119,7 @@ function updateWeather (data) {
 	}
 
 	if (w.windSpeed > 0) {
-	   message += ', max. wind' + parseInt(w.windSpeed) + "m/s";
+	   message += ', max. wind ' + parseInt(w.windSpeed, 10) + "m/s";
 	}
 
 	var span = document.getElementById("current_weather");
@@ -208,7 +208,7 @@ function google_weather (w) {
 	  function celcius(temp) {
 	    if (unit == "US") {
 		var t = (temp - 32) / 1.8;
-	        return parseInt(t + 0.5);
+	        return parseInt(t + 0.5, 10);
 	    }
 	    return temp;
 	  }
