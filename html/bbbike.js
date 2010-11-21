@@ -203,6 +203,7 @@ function focusCity () {
 function google_weather (w) {
 	  var unit = w.weather.forecast_information ? w.weather.forecast_information.unit_system.data : "";
 	  var html = "";
+          var display_city_name = 1;
 
 	  // Fahrenheit -> Celcius
 	  function celcius(temp) {
@@ -218,6 +219,15 @@ function google_weather (w) {
 	  if (!f) {
 		return html;
 	  }
+
+	if (display_city_name) {
+	   html += '\n<span id="weather_city">';
+	   if (w.weather.forecast_information && w.weather.forecast_information.city) {
+		html += w.weather.forecast_information.city.data;
+		html += " - " + w.weather.forecast_information.forecast_date.data;
+	   }
+	   html += '</span>';
+	}
 
    	  html +=
    '<div id="weatherSection" class="marginLeft">' +
@@ -254,9 +264,9 @@ function google_weather (w) {
 		html += plot (days[i]) ;
 	}
  
-        html += '' +
-     '</div><br class="clear" />' +
-  '</div>';
+        html += '</div><br class="clear" />'; 
+        html += '</div>';
+
 
         return html;
 }

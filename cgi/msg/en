@@ -181,5 +181,5 @@ Bildgr&ouml;&szlig;e, Bildformat und Detailreichtum %s bis %s kB. PDFs sind %s b
      # 'Nebenfahrbahn' => 'XXX',
      'Fähre' => 'Ferry',
      'spenden' => 'donate',
-     'Wettervorhersage' => 'Weather forecast',
+     'Wetter f&uuml;r' => 'Weather in',
     };
