@@ -18,6 +18,19 @@ my $feed = XML::Atom::SimpleFeed->new(
 
 ######################################################################
 
+$feed->add_entry(
+    title => 'Weather forecast',
+    id    => '61637f729905b8c61ac32a9fc4822077',
+
+    content => {
+        type    => 'text',
+        content => qq{Display weather forecast for the next 4 days in local language.},
+    },
+
+    updated  => '2010-11-21T12:30:02Z',
+    category => 'News',
+);
+
 
 $feed->add_entry(
     title => 'Weather',

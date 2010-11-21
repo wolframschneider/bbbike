@@ -16,6 +16,14 @@
   <generator uri="http://search.cpan.org/dist/XML-Atom-SimpleFeed/"
   version="0.86">XML::Atom::SimpleFeed</generator>
   <entry>
+    <title>Weather forecast</title>
+    <id>61637f729905b8c61ac32a9fc4822077</id>
+    <content>Display weather forecast for the next 4 days in local
+    language.</content>
+    <updated>2010-11-21T12:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
     <title>Weather</title>
     <id>d156aa8e64721bff611a2d794fcbcf8e</id>
     <content>Display current weather conditions in local
