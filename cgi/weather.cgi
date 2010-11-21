@@ -11,7 +11,7 @@ use strict;
 use warnings;
 
 my $q         = new CGI;
-my $debug     = 1;
+my $debug     = 2;
 my $cache_dir = "/var/cache/bbbike";
 
 my $enable_google_weather_forecast = 1;
@@ -154,7 +154,18 @@ elsif ( $lat && $lng ) {
     if ($enable_google_weather_forecast) {
 
         my $city = $q->param('city');
-        $url = 'http://www.google.com/ig/api?weather=' . $city . '&hl=' . $lang;
+
+       # by city name
+       #$url = 'http://www.google.com/ig/api?weather=' . $city . '&hl=' . $lang;
+
+        # by lat/lng
+        $url =
+            'http://www.google.com/ig/api?weather='
+          . "$city,,,"
+          . int( 1_000_000 * $lat ) . ","
+          . int( 1_000_000 * $lng )
+          . "&hl=$lang";
+
         warn "Download URL: $url\n" if $debug >= 2;
 
         $req = HTTP::Request->new( GET => $url );
