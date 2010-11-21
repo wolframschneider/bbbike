@@ -1980,6 +1980,17 @@ EOF
 
 	my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
 
+	print qq{<span id="mobile_link">\n};
+	if (is_mobile($q)) {
+	    my $url = $q->url(-full=>1);
+	    $url =~ s,^http://(m|mobile)\.,http://www.,;
+	    print qq{<a href="$url">[classic view]</a>\n};
+        } else {
+	    my $url = $q->url(-full=>1);
+	    $url =~ s,^http://(dev|devel|www)\.,http://m.,;
+	    print qq{<a class="mobile_link" href="$url">[mobile]</a>\n};
+        }
+	print qq{</span>\n};
 
 	if ($lang eq 'en') {
 	    print <<EOF;
