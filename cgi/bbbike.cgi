@@ -1988,7 +1988,8 @@ EOF
         } else {
 	    my $url = $q->url(-full=>1);
 	    $url =~ s,^http://(dev|devel|www)\.,http://m.,;
-	    print qq{<a class="mobile_link" href="$url">[mobile]</a>\n};
+	    my $class = $q->user_agent =~ /iPhone|Android|iPod|Nokia|Symbian|BlackBerry|SonyEricsson|Samsung/ ? "mobile_link_mobile" : "mobile_link";
+	    print qq{<a class="$class" href="$url">[mobile]</a>\n};
         }
 	print qq{</span>\n};
 

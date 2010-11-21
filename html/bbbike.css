@@ -266,4 +266,5 @@ span#current_weather { padding-right: 1em; font-size: normal; }
 }
 
 .mobile_link { font-size: small; }
+.mobile_link_mobile { font-size:300%; }
 
