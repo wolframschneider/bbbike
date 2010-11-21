@@ -146,7 +146,7 @@ print <<EOF;
     //<![CDATA[
 
     city = "Foobar";
-    bbbike_maps_init("terrain", [[39,-5],[58, 28]] );
+    bbbike_maps_init("terrain", [[30,-15],[62, 48]] );
   
     function jumpToCity (coord) {
 	var b = coord.split("!");
