@@ -1800,43 +1800,15 @@ userdel	3 13150,7254 13047,7234 13034,7319
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_016620',
-         'until' => 1290405600,
-         'text' => 'Hönower Straße (Mahlsdorf): Baustelle, Fahrtrichtung gesperrt Richtung Hönow zwischen Fritz-Reuter-Str. und Linderhofstr., 08.11.2010 11:21 Uhr bis 22.11.2010 07:00 Uhr ',
-         'from' => 1289125260,
-         'id' => 2154,
-         'data' => 'userdel	q4::inwork; 24556,12172 24530,12296
-',
-         'type' => 'handicap'
-       },
-       undef,
-       undef,
-       {
-         'source_id' => 'INKO_103947',
-         'until' => 1291157999,
-         'text' => 'Lückstr. (Rummelsburg) Richtung Nöldnerplatz zwischen Emanuelstr. und Giselastr. Baustelle, Fahrtrichtung gesperrt (bis Ende 11.2010) ',
-         'from' => 1289373844,
-         'id' => 2157,
-         'data' => 'userdel	q4::inwork; 16303,10760 16153,10818
-',
-         'type' => 'handicap'
-       },
        undef,
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101117.1500.319282.html',
-         'until' => 1291503599,
-         'text' => 'Vollsperrung Falkentaler Steig in Berlin-Reinickendorf aufgrund von Straßenbaumaßnahmen im Ausführungszeitraum 22.11. bis 04.12.2010',
-         'from' => 1290294000,
-         'id' => 2162,
-         'data' => 'userdel	q4::inwork 2492,24325 2708,24383
-userdel	q4::inwork 3367,23654 3311,23677 3235,23781 3161,23888 3012,24107
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'source_id' => 'LS/O-SG33-F/10/170',
          'until' => 1293836400,
@@ -1847,16 +1819,7 @@ userdel	q4::inwork 3367,23654 3311,23677 3235,23781 3161,23888 3012,24107
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_016640',
-         'until' => 1290780000,
-         'text' => 'Wasserwerkstr. (Spandau): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Falkenseer Chaussee und Pionierstr., 17.11.2010 08:25 Uhr bis 26.11.2010 15:00 Uhr ',
-         'from' => 1289892300,
-         'id' => 2164,
-         'data' => 'userdel	q4::inwork -5806,16403 -5830,16356 -5849,16199 -5875,15994 -5911,15877
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => '106300839',
          'until' => 1292713200,
@@ -1867,15 +1830,25 @@ userdel	q4::inwork 3367,23654 3311,23677 3235,23781 3161,23888 3012,24107
 ',
          'type' => 'handicap'
        },
+       undef,
        {
-         'source_id' => 'IM_016647',
-         'until' => 1290396600,
-         'text' => 'Oberspreestr. (Köpenick): Baustelle, Straße vollständig gesperrt, in beiden Richtungen zwischen Bruno-Bürgel-Weg und Moosstr., 19.11.2010 22:00 Uhr bis 22.11.2010 04:30 Uhr ',
-         'from' => 1290114000,
-         'id' => 2166,
-         'data' => 'userdel	2::inwork 19328,5304 19405,5284 19445,5271
+         'until' => 1291762800,
+         'text' => 'Bauarbeiten in der Donizettistraße zwischen Mozart- und Schubertstraße, 23.11.2010-7.12.2010',
+         'from' => 1290380400,
+         'id' => 2167,
+         'data' => 'userdel	q4::inwork 25167,12119 25290,12088
 ',
-         'type' => 'gesperrt'
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20101126.1415.320541.html',
+         'until' => 1291014000,
+         'text' => 'Sachsendamm zwischen Gotenstr. und Priesterweg Richtung S-Bhf. Schöneberg wegen Bauarbeiten gesperrt, 26. November 2010 abends bis 29. November 2010 frühmorgens',
+         'from' => 1290803792,
+         'id' => 2168,
+         'data' => 'userdel	q4::inwork; 7491,7675 7316,7814
+',
+         'type' => 'handicap'
        }
      
 );

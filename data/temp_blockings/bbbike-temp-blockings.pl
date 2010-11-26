@@ -818,7 +818,7 @@ EOF
        text  => 'Gleim-Tunnel: Baustelle, Straße vollständig gesperrt (bis 01.10.2004)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 9917,15613 10122,15647
+userdel	2 9917,15613 9992,15625 10122,15647
 EOF
      },
      { from  => 1094421600, # 2004-09-06 00:00
@@ -1125,7 +1125,7 @@ EOF
        text  => 'Gleimstr. (Mitte) in beiden Richtungen zwischen Gleimtunnel und Graunstr. Baustelle, Straße vollständig gesperrt (bis 29.11.2004)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 9917,15613 10122,15647
+userdel	2 9917,15613 9992,15625 10122,15647
 EOF
      },
      { from  => 1098828000, # 2004-10-27 00:00
@@ -4210,7 +4210,7 @@ EOF
        text  => 'Karlsruher Straße zwischen Kurfürstendamm und Heilbronner Straße, Baustelle, Straße gesperrt. Dauer: 19.04.2006 bis 21.04.2006 jeweils zwischen 07.00 Uhr und 20.00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 2965,10522 2938,10071
+userdel	2 2985,10534 2963,10078
 EOF
      },
      { from  => 1145343600, # 2006-04-18 09:00
@@ -18482,7 +18482,7 @@ userdel	q4::inwork 10511,14418 10426,14262 10370,14158
 EOF
      },
      { from  => 1289373844, # 2010-11-10 08:24
-       until => 1291157999, # 2010-11-30 23:59
+       until => 1290544815, # 2010-11-30 23:59 1291157999
        text  => 'Lückstr. (Rummelsburg) Richtung Nöldnerplatz zwischen Emanuelstr. und Giselastr. Baustelle, Fahrtrichtung gesperrt (bis Ende 11.2010) ',
        type  => 'handicap',
        source_id => 'INKO_103947',
@@ -18526,8 +18526,8 @@ EOF
 userdel	2::inwork 43875,-35850 44731,-35697
 EOF
      },
-     { from  => 1290294000, # 2010-11-21 00:00
-       until => 1291503599, # 2010-12-04 23:59
+     { from  => 1290546446, # --- ausgesetzt 1290294000, # 2010-11-21 00:00
+       until => 1290546455, # --- ausgesetzt 1291503599, # 2010-12-04 23:59
        text  => 'Vollsperrung Falkentaler Steig in Berlin-Reinickendorf aufgrund von Straßenbaumaßnahmen im Ausführungszeitraum 22.11. bis 04.12.2010',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101117.1500.319282.html',
@@ -18570,6 +18570,23 @@ EOF
        source_id => 'IM_016647',
        data  => <<EOF,
 userdel	2::inwork 19328,5304 19405,5284 19445,5271
+EOF
+     },
+     { from  => 1290380400, # 2010-11-22 00:00
+       until => 1291762800, # 2010-12-08 00:00
+       text  => 'Bauarbeiten in der Donizettistraße zwischen Mozart- und Schubertstraße, 23.11.2010-7.12.2010',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 25167,12119 25290,12088
+EOF
+     },
+     { from  => 1290803792, # 2010-11-26 21:36
+       until => 1291014000, # 2010-11-29 08:00
+       text  => 'Sachsendamm zwischen Gotenstr. und Priesterweg Richtung S-Bhf. Schöneberg wegen Bauarbeiten gesperrt, 26. November 2010 abends bis 29. November 2010 frühmorgens',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20101126.1415.320541.html',
+       data  => <<EOF,
+userdel	q4::inwork; 7491,7675 7316,7814
 EOF
      },
     );
