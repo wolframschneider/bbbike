@@ -19,6 +19,19 @@ my $feed = XML::Atom::SimpleFeed->new(
 ######################################################################
 
 $feed->add_entry(
+    title => 'Added new cities',
+    id    => '3b3feac5b7b9f2d4edca9fbeade6ddeb',
+
+    content => {
+        type    => 'text',
+        content => qq{New cities: Adelaide, Auckland, Brisbane, Buenos Aires, Canberra, Halifax, Johannesburg, Melbourne, Philadelphia},
+    },
+
+    updated  => '2010-11-27T12:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
     title => 'Weather forecast',
     id    => '61637f729905b8c61ac32a9fc4822077',
 
