@@ -23,8 +23,9 @@ $feed->add_entry(
     id    => '3b3feac5b7b9f2d4edca9fbeade6ddeb',
 
     content => {
-        type    => 'text',
-        content => qq{New cities: Adelaide, Auckland, Brisbane, Buenos Aires, Canberra, Halifax, Johannesburg, Melbourne, Philadelphia},
+        type => 'text',
+        content =>
+qq{New cities: Adelaide, Auckland, Brisbane, Buenos Aires, Canberra, Halifax, Johannesburg, Melbourne, Philadelphia},
     },
 
     updated  => '2010-11-27T12:30:02Z',
@@ -36,14 +37,14 @@ $feed->add_entry(
     id    => '61637f729905b8c61ac32a9fc4822077',
 
     content => {
-        type    => 'text',
-        content => qq{Display weather forecast for the next 4 days in local language.},
+        type => 'text',
+        content =>
+          qq{Display weather forecast for the next 4 days in local language.},
     },
 
     updated  => '2010-11-21T12:30:02Z',
     category => 'News',
 );
-
 
 $feed->add_entry(
     title => 'Weather',
@@ -63,8 +64,9 @@ $feed->add_entry(
     id    => 'cfb1ddfbc43b4e93f9d20e729a2dea2e',
 
     content => {
-        type    => 'text',
-        content => qq{New cities: Birmingham, Bristol, Leeds, Liverpool, Manchester, Sheffield},
+        type => 'text',
+        content =>
+qq{New cities: Birmingham, Bristol, Leeds, Liverpool, Manchester, Sheffield},
     },
 
     updated  => '2010-08-21T12:30:02Z',
@@ -89,8 +91,9 @@ $feed->add_entry(
     id    => 'e86b828855a4103bfe73aa02fef7fa3a',
 
     content => {
-        type    => 'text',
-        content => qq{We accecpt donations! ;-) http://bbbike.org/community.html},
+        type => 'text',
+        content =>
+          qq{We accecpt donations! ;-) http://bbbike.org/community.html},
     },
 
     updated  => '2010-08-15T18:30:02Z',
@@ -115,8 +118,9 @@ $feed->add_entry(
     id    => '384a4805c8a4b03c2b034a1b8a3fe83f',
 
     content => {
-        type    => 'text',
-        content => qq{BBBike supports now google maps version 3 which enable new features like localization and elevation charts.},
+        type => 'text',
+        content =>
+qq{BBBike supports now google maps version 3 which enable new features like localization and elevation charts.},
     },
 
     updated  => '2010-08-02T18:30:02Z',
@@ -154,8 +158,9 @@ $feed->add_entry(
     id    => '7c0e10e5b40c4423c8a3f0b37772028f',
 
     content => {
-        type    => 'text',
-        content => qq{The street names will be plotted as you type in Google Maps.},
+        type => 'text',
+        content =>
+          qq{The street names will be plotted as you type in Google Maps.},
     },
 
     updated  => '2010-07-30T18:30:02Z',
