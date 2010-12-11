@@ -233,13 +233,23 @@ EOF
        until => Time::Local::timelocal(reverse(2006,12-1,9,23,59,59)),
        text  => 'Richardplatz Alt-Rixdorfer Weihnachtsmarkt, gesperrt. Dauer: bis 09.12.2006. ',
        type  => 'gesperrt',
-       file  => 'rixdorfer_weihnachtsmarkt.bbd',
+       #file  => 'rixdorfer_weihnachtsmarkt.bbd', # XXX do not use anymore!!!
+       data => '', # dummy
      },
      { from  => 1290962654, # PERIODISCH! # früher: 1102672800, # 2004-12-10 11:00
        until => 1293145199, # PERIODISCH! # früher: 1102805999, # 2004-12-11 23:59
-       file  => 'spandauer_weihnachtsmarkt.bbd',
        text  => 'Spandauer Weihnachtsmarkt',
        type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2 -3275,14407 -3231,14383 -3204,14368 -3155,14340
+userdel	2 -3275,14407 -3338,14333
+userdel	2 -3150,14631 -3185,14556 -3205,14512 -3228,14468 -3275,14407
+userdel	2 -3275,14407 -3350,14446 -3393,14470 -3410,14479 -3440,14498 -3481,14523
+userdel	2 -3227,14260 -3155,14340
+userdel	2 -3227,14260 -3293,14304 -3338,14333
+userdel	2 -3552,14082 -3457,14189 -3409,14241 -3338,14333
+userdel	2 -3014,14559 -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340
+EOF
      },
      { from  => 1070600400, # 2003-12-05 06:00 # note: periodisch, siehe unten
        until => 1070838000, # 2003-12-08 00:00
@@ -1150,7 +1160,8 @@ EOF
        text  => 'Richardplatz Neukölln Straßensperrung Weihnachtsmarkt 7.12.2007-8.12.2007 ',
        type  => 'gesperrt',
        source_id => 'IM_007405',
-       file  => 'rixdorfer_weihnachtsmarkt.bbd',
+       #file  => 'rixdorfer_weihnachtsmarkt.bbd', # XXX do not use anymore!!!
+       data => '', # dummy
      },
      { from  => 1100038749, # 2004-11-09 23:19
        until => 1100559600, # 2004-11-16 00:00
@@ -16966,7 +16977,18 @@ EOF
        until => 1291589999, # PERIODISCH! # früher: 1260140400, # 2009-12-07 00:00
        text  => 'Richardplatz (Neukölln) und die Durchfahrt aller angrenzenden Straßen Rixdorfer Weihnachtsmarkt, Straße vollständig gesperrt (03.12.2010 bis 05.12.2010)',
        type  => 'gesperrt',
-       file  => 'rixdorfer_weihnachtsmarkt.bbd',
+       data  => <<EOF,
+userdel	2 13423,7707 13426,7674
+userdel	2 13423,7707 13297,7654
+userdel	2 13426,7674 13400,7642 13303,7622
+userdel	2 12980,7597 13100,7626 13177,7644
+userdel	2 13188,7590 13177,7644
+userdel	2 13188,7590 13303,7622
+userdel	2 13297,7654 13303,7622
+userdel	2 13297,7654 13177,7644
+userdel auto	3 13446,7879 13423,7707 13426,7674 13560,7646
+userdel auto	3 13560,7646 13426,7674 13423,7707 13446,7879
+EOF
      },
      { from  => 1212876000, # 2008-06-08 00:00
        until => 1264978800, # 2010-02-01 00:00
@@ -17357,8 +17379,8 @@ userdel	q4::inwork 48657,68265 49286,68297 49503,68415
 EOF
      },
      { from  => 1270980000, # 2010-04-11 12:00
-       until => 1291129200, # 2010-11-30 16:00
-       text  => 'Klemkestr. (Reinickendorf): Baustelle, Fahrtrichtung Richtung Residenzstr. zwischen Str. vor Schönholz und Emmentaler Strgesperrt. 12.04.2010 12:00 Uhr bis 30.11.2010 16:00 Uhr',
+       until => 1293807600, # 2010-12-31 16:00
+       text  => 'Klemkestr. (Reinickendorf): Baustelle, Richtung Residenzstr. zwischen Str. vor Schönholz und Emmentaler Str., 12.04.2010 12:00 Uhr bis 31.12.2010 16:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_015512',
        data  => <<EOF,
@@ -18136,9 +18158,9 @@ EOF
 userdel	2::inwork -2815,-3574 -3368,-4430
 EOF
      },
-     { from  => 1282168322, # 2010-08-18 23:52
-       until => 1291158000, # 2010-12-01 00:00
-       text  => 'Belzig: K6933: Brückeninstandsetzung / Streckenausbau Bad Belzig - Borne, 16.08.2010 bis 30.11.2010 ',
+     { from  => 1290975348, # 2010-11-28 21:15
+       until => 1292626800, # 2010-12-18 00:00
+       text  => 'Belzig: K6933: Brückeninstandsetzung / Streckenausbau Bad Belzig - Borne, 16.08.2010 bis 17.12.2010 ',
        type  => 'gesperrt',
        source_id => '106900748',
        data  => <<EOF,
@@ -18527,11 +18549,12 @@ EOF
 userdel	2::inwork 43875,-35850 44731,-35697
 EOF
      },
-     { from  => 1290546446, # --- ausgesetzt 1290294000, # 2010-11-21 00:00
-       until => 1290546455, # --- ausgesetzt 1291503599, # 2010-12-04 23:59
-       text  => 'Vollsperrung Falkentaler Steig in Berlin-Reinickendorf aufgrund von Straßenbaumaßnahmen im Ausführungszeitraum 22.11. bis 04.12.2010',
+     { from  => 1290585600, #1290546446, # --- ausgesetzt 1290294000, # 2010-11-21 00:00
+       until => 1291654800, #1290546455, # --- ausgesetzt 1291503599, # 2010-12-04 23:59
+       text  => 'Vollsperrung Falkentaler Steig in Berlin-Reinickendorf aufgrund von Straßenbaumaßnahmen, 24.11.2010 09:00 Uhr bis 06.12.2010 18:00 Uhr',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101117.1500.319282.html',
+#       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101117.1500.319282.html',
+       source_id => 'IM_016682',
        data  => <<EOF,
 userdel	q4::inwork 2492,24325 2708,24383
 userdel	q4::inwork 3367,23654 3311,23677 3235,23781 3161,23888 3012,24107
