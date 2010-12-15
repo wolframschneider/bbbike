@@ -17,6 +17,13 @@
   version="0.86">XML::Atom::SimpleFeed</generator>
   <entry>
     <title>Added new cities</title>
+    <id>22bc165c483f77f67e3430b6505e83fa</id>
+    <content>New cities: Bern</content>
+    <updated>2010-12-15T12:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
+    <title>Added new cities</title>
     <id>3b3feac5b7b9f2d4edca9fbeade6ddeb</id>
     <content>New cities: Adelaide, Auckland, Brisbane, Buenos
     Aires, Canberra, Halifax, Johannesburg, Melbourne,
