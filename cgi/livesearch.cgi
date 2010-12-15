@@ -37,7 +37,8 @@ sub extract_route {
     my @data;
     my %hash;
     my @files = ( "$file.2.gz", "$file.1.gz", $file );
-    unshift( @files, "$file.5.gz", "$file.4.gz", "$file.3.gz" ) if $max > 100;
+    unshift( @files, "$file.4.gz", "$file.3.gz" ) if $max > 50;
+    unshift( @files, "$file.7.gz", "$file.6.gz", "$file.5.gz" ) if $max > 100;
 
     foreach my $file (@files) {
         next if !-f $file;
