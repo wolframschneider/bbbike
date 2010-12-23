@@ -1822,8 +1822,9 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        {
-         'until' => 1292972400,
-         'text' => 'B 102 Treuenbrietzener Str. OD Jüterbog, zw. Dammtor und Bülowstr. Straßenausbau Vollsperrung 20.07.2009-21.12.2010 ',
+         'source_id' => 'LS/S-SG33-W/09/135',
+         'until' => 1306836000,
+         'text' => 'B 102 Treuenbrietzener Str. OD Jüterbog, zw. Dammtor und Bülowstr. Straßenausbau Vollsperrung 20.07.2009-31.05.2011 ',
          'from' => 1247954400,
          'id' => 1753,
          'data' => 'userdel	q4::inwork -12541,-46115 -13108,-46122
@@ -2607,16 +2608,7 @@ userdel	2::temp 9516,12010 9656,12021
        undef,
        undef,
        undef,
-       {
-         'source_id' => '106401098',
-         'until' => 1292626800,
-         'text' => 'Rehfelde: K6419: Straßenausbau OL Rehfelde, zw. Bahnhofstraße und Kreisverkehr, 07.06.2010 bis 17.12.2010 ',
-         'from' => 1276547986,
-         'id' => 2081,
-         'data' => 'userdel	q4::inwork 45856,14437 44121,14615
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'LS/W-SG33-K/10/066',
          'until' => 1293663600,
@@ -2647,8 +2639,8 @@ userdel	2::temp 9516,12010 9656,12021
        undef,
        {
          'source_id' => 'LS/O-SG33-F/10/013',
-         'until' => 1293836400,
-         'text' => 'Tauche: B87: Ausbau der Ortslage Trebatsch hier: Vollsperrung der Spreebrücke B 87, Ortslage Trebatsch, 24.02.2010 bis 31.12.2010 ',
+         'until' => 1301565600,
+         'text' => 'Tauche: B87: Ausbau der Ortslage Trebatsch hier: Vollsperrung der Spreebrücke B 87, Ortslage Trebatsch, 24.02.2010 bis 31.03.2011 ',
          'from' => 1278267896,
          'id' => 2092,
          'data' => 'userdel	2::inwork 63609,-34428 63520,-34874
@@ -2709,7 +2701,16 @@ userdel	2::temp 9516,12010 9656,12021
          'type' => 'gesperrt'
        },
        undef,
-       undef,
+       {
+         'source_id' => 'IM_016759',
+         'until' => 1293112800,
+         'text' => 'Tucholskystr. (Mitte): Baustelle, Straße vollständig gesperrt (bis 23.12.2010) in beiden Richtungen zwischen Oranienburger Str. und Auguststr., 17.12.2010 10:02 Uhr bis 23.12.2010 15:00 Uhr ',
+         'from' => 1292490120,
+         'id' => 2110,
+         'data' => 'userdel	q4::inwork 9605,13248 9651,13406
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        undef,
@@ -2726,16 +2727,7 @@ userdel	2::temp 9516,12010 9656,12021
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => '106900748',
-         'until' => 1292626800,
-         'text' => 'Belzig: K6933: Brückeninstandsetzung / Streckenausbau Bad Belzig - Borne, 16.08.2010 bis 17.12.2010 ',
-         'from' => 1290975348,
-         'id' => 2118,
-         'data' => 'userdel	2::inwork -45941,-31977 -46134,-32389 -46514,-32785
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => '106000506',
          'until' => 1292972400,
@@ -2811,16 +2803,7 @@ userdel	3 13150,7254 13047,7234 13034,7319
        undef,
        undef,
        undef,
-       {
-         'source_id' => '106701877',
-         'until' => 1292367600,
-         'text' => 'Schöneiche bei Berlin: L302, L338: Gleis- und Straßenbau (Knotenumbau L302/L338) OL Schöneiche Knoten Rahnsdorfer Str. Vollsperrung, 28.10.2010 01:00 Uhr bis 14.12.2010 ',
-         'from' => 1288134000,
-         'id' => 2149,
-         'data' => 'userdel	q4::inwork 30290,8562 30118,8128
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_016598',
          'until' => 1301580000,
@@ -2863,16 +2846,7 @@ userdel	3 13150,7254 13047,7234 13034,7319
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => '106300839',
-         'until' => 1292713200,
-         'text' => 'Wustermark: K6304: Straßenneubau OD Priort (zw. Kartzow und Priort), 15.11.2010 bis 18.12.2010',
-         'from' => 1290029645,
-         'id' => 2165,
-         'data' => 'userdel	q4::inwork -19268,10819 -19323,11087 -19149,11495
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2895,6 +2869,16 @@ userdel	3 13150,7254 13047,7234 13034,7319
          'data' => 'userdel	2::inwork -17114,37670 -17262,37425
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_016766',
+         'until' => 1293623040,
+         'text' => 'Köpenicker Allee (Köpenick): Straßenschäden, Straße vollständig gesperrt in beiden Richtungen zwischen Köpenicker Str. und An der Wuhlheide, 21.12.2010 08:44 Uhr bis 29.12.2010 12:44 Uhr ',
+         'from' => 1292831040,
+         'id' => 2171,
+         'data' => 'userdel	q4::inwork 21233,6096 20722,6971
+',
+         'type' => 'handicap'
        }
      
 );
