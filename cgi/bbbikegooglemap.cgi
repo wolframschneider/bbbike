@@ -208,10 +208,14 @@ sub get_html {
 	);
     my $full = URI->new(BBBikeCGIUtil::my_url(CGI->new, -full => 1));
     my $fallback_host = "bbbike.de";
-    my $host = eval { $full->host } || $fallback_host;
-
-    # warn "Google maps API: host: $host, full: $full\n";
-
+    my $host_port = eval { $full->host } || $fallback_host;
+    my($host, $port);
+    if ($host_port =~ m{^(.*):(\d+)$}) {
+	($host, $port) = ($1, $2);
+    } else {
+	$host = $host_port;
+	$port = 80;
+    }
     my $google_api_key = $google_api_keys{$host} || $google_api_keys{$fallback_host};
     my $cgi_reldir = dirname($full->path);
     my $is_beta = $full =~ m{bbikegooglemap2.cgi};
@@ -224,11 +228,11 @@ sub get_html {
 	$bbbikeroot = "/bbbike";
     } elsif ($host =~ m{bbbike\.org}) {
 	$bbbikeroot = "";
-    } elsif ($host eq 'localhost') {
+    } elsif ($host eq "localhost") {
 	$bbbikeroot = "/bbbike";
 	$get_public_link = sub {
 	    my $link = BBBikeCGIUtil::my_url(CGI->new(), -full => 1);
-	    $link =~ s{localhost$bbbikeroot/cgi}{bbbike.de/cgi-bin};
+	    $link =~ s{localhost(:?:\d+)?$bbbikeroot/cgi}{bbbike.de/cgi-bin};
 	    $link;
 	};
     }
