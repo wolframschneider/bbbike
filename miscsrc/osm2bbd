@@ -654,6 +654,11 @@ for my $osm_file (@osm_files) {
             } else {
 		# ignore metric description: "2 m" => "2"
 	        $height =~ s/\s*m$//;
+
+		# still some non-integers, extract number
+		if ($height !~ /^[\d\.]+$/) {
+		    $height = /([\d\.]+)/ ? $1 : 0;
+	        }
 		$height = int($height + 0.5);
 	    }
 	    warn "height: $height, $name\n" if defined $height && $height ne '' && $debug >= 2;
@@ -1885,7 +1890,7 @@ EOF
 	    my $currlen = length($namecat);
 	    print $ofh $namecat;
 	    my $lastc;
-	    for my $c (@$coords) {
+	    for my $c (grep { defined } @$coords) {
 		if ($currlen + 1 + length($c) + 1 > MAXLINELENGTH) {
 		    print $ofh "\n$namecat $lastc";
 		    $currlen = length($namecat);
