@@ -25,6 +25,8 @@ use File::Basename qw(dirname);
 use File::Temp     qw(tempfile);
 use Getopt::Long;
 
+binmode \*STDERR, ":utf8";
+
 my @targets = ('wasserstrassen_lowres',
 	       'largest_city_is_center',
 	       'title_for_dataset',
