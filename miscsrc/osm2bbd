@@ -652,6 +652,8 @@ for my $osm_file (@osm_files) {
 		   $height = $height_db{"$lon2,$lat2"};
 	        }
             } else {
+		# ignore metric description: "2 m" => "2"
+	        $height =~ s/\s*m$//;
 		$height = int($height + 0.5);
 	    }
 	    warn "height: $height, $name\n" if defined $height && $height ne '' && $debug >= 2;
