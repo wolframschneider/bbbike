@@ -657,7 +657,7 @@ for my $osm_file (@osm_files) {
 
 		# still some non-integers, extract number
 		if ($height !~ /^[\d\.]+$/) {
-		    $height = /([\d\.]+)/ ? $1 : 0;
+		    $height = ($height =~ /([\d\.]+)/ ? $1 : 0);
 	        }
 		$height = int($height + 0.5);
 	    }
