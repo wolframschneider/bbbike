@@ -1879,7 +1879,7 @@ EOF
 	    next;
 	}
 	my $namecat = "$name\t$cat";
-	my $coord_string = join(" ", @$coords);
+	my $coord_string = join(" ", grep { defined } @$coords);
 	if ($splitlonglines && length($namecat) + length($coord_string) + 2 >= MAXLINELENGTH) {
 	    warn_once("Long line detected in $filename, splitting...\n");
 	    my $currlen = length($namecat);
