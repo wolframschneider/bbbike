@@ -1762,7 +1762,7 @@ sub resolve_node_now {
 			 }->{$bbbike_layer};
     do{warn "no $osm_layer layer"; return} if !$r;
     for my $coord (map { $node2ll{$_} } @$nodes_ref) {
-	if (exists $r->{$coord}) {
+	if (defined $coord && exists $r->{$coord}) {
 	    my $name = $r->{$coord};
 	    $name = $normalize_name->($name) if $normalize_name;
 	    push @{$out{$bbbike_layer}}, [$name, [$coord], $bbbike_cat];
