@@ -17,6 +17,13 @@
   version="0.86">XML::Atom::SimpleFeed</generator>
   <entry>
     <title>Added new cities</title>
+    <id>8b4c4c5b6f1172986ef6cc55bcd0bd41</id>
+    <content>New cities: Bochum</content>
+    <updated>2010-12-31T12:30:02Z</updated>
+    <category term="News" />
+  </entry>
+  <entry>
+    <title>Added new cities</title>
     <id>22bc165c483f77f67e3430b6505e83fa</id>
     <content>New cities: Bern</content>
     <updated>2010-12-15T12:30:02Z</updated>

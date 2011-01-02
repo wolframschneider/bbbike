@@ -20,6 +20,20 @@ my $feed = XML::Atom::SimpleFeed->new(
 
 $feed->add_entry(
     title => 'Added new cities',
+    id    => '8b4c4c5b6f1172986ef6cc55bcd0bd41',
+
+    content => {
+        type => 'text',
+        content =>
+qq{New cities: Bochum},
+    },
+
+    updated  => '2010-12-31T12:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title => 'Added new cities',
     id    => '22bc165c483f77f67e3430b6505e83fa',
 
     content => {
