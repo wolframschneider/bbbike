@@ -4598,7 +4598,7 @@ sub display_route {
     }
 
  OUTPUT_DISPATCHER:
-    if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|perldump|gpx-route)$/) {
+    if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|json|json-short|perldump|gpx-route)$/) {
 	for my $tb (@affecting_blockings) {
 	    $tb->{longlathop} = [ map { join ",", convert_data_to_wgs84(split /,/, $_) } @{ $tb->{hop} || [] } ];
 	}
@@ -4652,6 +4652,24 @@ sub display_route {
 		print $yaml_dump->($short_res);
 	    } else {
 		print $yaml_dump->($res);
+	    }
+	} elsif ($output_as =~ /^json(.*)/) {
+	    my $is_short = $1 eq '-short';
+	    require JSON::XS;
+	    http_header
+		(-type => "application/json",
+		 @no_cache, # XXX why?
+		);
+	    if ($is_short) {
+		my $short_res = {LongLatPath => $res->{LongLatPath}};
+		# XXX I think a temp_blockings-containing object might
+		# go into the dump, which would cause JSON::XS to
+		# fail. Maybe I should create a TO_JSON converter, or
+		# just leave it as is (that is, allow the blessed
+		# object to be converted to null)
+		print JSON::XS->new->utf8->allow_blessed(1)->encode($short_res);
+	    } else {
+		print JSON::XS->new->utf8->allow_blessed(1)->encode($res);
 	    }
 	} elsif ($output_as eq 'gpx-route') {
 	    require Strassen::GPX;
