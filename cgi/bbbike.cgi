@@ -636,7 +636,7 @@ Set this to true for debugging purposes.
 
 =cut
 
-$VERBOSE = 0;
+$VERBOSE = 1;
 
 =item $bbbike_temp_blockings_file
 
@@ -747,7 +747,12 @@ $config_master =~ s,.*/,,;
 $0 =~ m,^(.+)/,;	
 $config_master = $1.'/'. $config_master;
 
+if ($config_master =~ m,/index.cgi$,) {
+    $config_master = "../../etc/world.cgi";
+}
+
 warn "lang: $lang, config_master: $config_master, do $config_master.config" if $VERBOSE;
+warn "YYY: $config_master.config\n" if ! -f "$config_master.config";
 
 # XXX hier require verwenden???
 eval { local $SIG{'__DIE__'};
