@@ -7154,7 +7154,7 @@ sub header {
 
     }
 
-    push (@$head, $q->meta({-name => "robots", -content => "nofollow,noindex,noarchive"}));
+    push (@$head, $q->meta({-name => "robots", -content => "nofollow,noarchive"}));
 
     $args{-head} = $head if $head && @$head;
 
