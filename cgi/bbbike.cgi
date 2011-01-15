@@ -7056,9 +7056,12 @@ sub header {
     my($bbbike_de_script, $bbbike_en_script);
     if ($lang eq 'en') {
 	($bbbike_de_script = $bbbike_script) =~ s{\.en\.cgi}{.cgi};
+	$bbbike_de_script =~ s,/index.cgi,,;
 	$bbbike_en_script = $bbbike_script;
     } else {
 	($bbbike_en_script = $bbbike_script) =~ s{\.cgi}{.en.cgi};
+	$bbbike_en_script .= "index.en.cgi" if $bbbike_en_script !~ /\.cgi$/;
+
 	$bbbike_de_script = $bbbike_script;
     }
     if (!$smallform) {
