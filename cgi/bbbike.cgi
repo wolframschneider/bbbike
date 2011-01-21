@@ -750,7 +750,7 @@ $config_master = $1.'/'. $config_master;
 # new directory layout
 if ($config_master =~ m,/index.cgi$,) {
     $config_master = "../../etc/world.cgi";
-    if (-e "lang.en") {
+    if (0 && -e "lang.en") {
 	$lang = "en";
     }
 }
@@ -7063,8 +7063,8 @@ sub header {
 
     if ($lang eq 'en') {
 	($bbbike_de_script = $bbbike_script) =~ s{\.en\.cgi}{.cgi};
-	if (-e "lang.en") {
-	   $bbbike_de_script .= "/index.cgi" if $bbbike_de_script !~ m,/index.cgi,;
+	if (0 && -e "lang.en") {
+	   $bbbike_de_script .= "index.cgi" if $bbbike_de_script !~ m,index.cgi,;
 	} else {
 	   $bbbike_de_script =~ s,/index.cgi,/, 
 	}
@@ -7072,6 +7072,10 @@ sub header {
     } else {
 	($bbbike_en_script = $bbbike_script) =~ s{\.cgi}{.en.cgi};
 	$bbbike_en_script .= "index.en.cgi" if $bbbike_en_script !~ /\.cgi$/;
+
+        if (0 && -e "lang.en") {
+	   $bbbike_en_script =~ s,/index.en.cgi,/, 
+	}
 
 	$bbbike_de_script = $bbbike_script;
     }
