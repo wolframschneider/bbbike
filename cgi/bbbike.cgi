@@ -747,8 +747,12 @@ $config_master =~ s,.*/,,;
 $0 =~ m,^(.+)/,;	
 $config_master = $1.'/'. $config_master;
 
+# new directory layout
 if ($config_master =~ m,/index.cgi$,) {
     $config_master = "../../etc/world.cgi";
+    if (-e "lang.en") {
+	$lang = "en";
+    }
 }
 
 warn "lang: $lang, config_master: $config_master, do $config_master.config" if $VERBOSE;
@@ -2391,7 +2395,7 @@ EOF
 
 <script type="text/javascript">
 	var ac_$city = \$('#$searchinput').autocomplete( 
-		{ serviceUrl: 'api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:$maxHeight, width:$width, deferRequestBy:$deferRequestBy, noCache: true }
+		{ serviceUrl: '../cgi/api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:$maxHeight, width:$width, deferRequestBy:$deferRequestBy, noCache: true }
 	);
 </script>
 
@@ -5300,7 +5304,7 @@ EOF
 </script>
 EOF
 
-	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "slippymap.cgi?city=" . $slippymap_url->param('city') );
+	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "../cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords route_length driving_time/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
@@ -5309,7 +5313,7 @@ EOF
 	    print qq{\n</span><!-- slippymap_span1 -->\n};
 
 	    print qq{<span id="slippymap_span2">\n};
-	    print $q->start_form(-method=>"POST", -name => "slippymapFormExternal", -target => "_new", -action => "slippymap.cgi?city=" . $slippymap_url->param('city') );
+	    print $q->start_form(-method=>"POST", -name => "slippymapFormExternal", -target => "_new", -action => "../cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
@@ -7054,9 +7058,16 @@ sub header {
 #			  -type => "image/gif",
 			 });
     my($bbbike_de_script, $bbbike_en_script);
+    { 
+    my $qq = CGI->new($bbbike_script);
+
     if ($lang eq 'en') {
 	($bbbike_de_script = $bbbike_script) =~ s{\.en\.cgi}{.cgi};
-	$bbbike_de_script =~ s,/index.cgi,,;
+	if (-e "lang.en") {
+	   $bbbike_de_script .= "/index.cgi" if $bbbike_de_script !~ m,/index.cgi,;
+	} else {
+	   $bbbike_de_script =~ s,/index.cgi,/, 
+	}
 	$bbbike_en_script = $bbbike_script;
     } else {
 	($bbbike_en_script = $bbbike_script) =~ s{\.cgi}{.en.cgi};
@@ -7064,6 +7075,9 @@ sub header {
 
 	$bbbike_de_script = $bbbike_script;
     }
+
+    }
+
     if (!$smallform) {
 	push @$head,
 	    cgilink({-rel => 'Help',
