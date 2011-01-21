@@ -963,7 +963,7 @@ $cookiename = "bbbike";
 $max_plz_streets = 25;
 
 # die originale URL (für den Kaltstart)
-$bbbike_url = BBBikeCGIUtil::my_url($q);
+$bbbike_url = BBBikeCGIUtil::my_url($q, -full=>0, -absolute=>1);
 # Root-Verzeichnis und Bilder-Verzeichnis von bbbike
 ($bbbike_root = $bbbike_url) =~ s|[^/]*/[^/]*$|| if !defined $bbbike_root;
 $bbbike_root =~ s|/$||; # letzten Slash abschneiden
@@ -7084,16 +7084,10 @@ sub header {
 
     if (!$smallform) {
 	push @$head,
-	    cgilink({-rel => 'Help',
-		     -href => "$bbbike_script?info=1"}),
-	    cgilink({-rel => 'Home',
-		     -href => "$bbbike_script?begin=1"}),
-	    cgilink({-rel => 'Start',
-		     -hreflang => 'de',
-		     -href => "$bbbike_de_script?begin=1"}),
-	    cgilink({-rel => 'Start',
-		     -hreflang => 'en',
-		     -href => "$bbbike_en_script?begin=1"}),
+	    # cgilink({-rel => 'Help', -href => "$bbbike_script?info=1"}),
+	    # cgilink({-rel => 'Home', -href => "$bbbike_script?begin=1"}),
+	    # cgilink({-rel => 'Start', -hreflang => 'de', -href => "$bbbike_de_script?begin=1"}),
+	    # cgilink({-rel => 'Start', -hreflang => 'en', -href => "$bbbike_en_script?begin=1"}),
 	    cgilink({-rel => 'Author',
 		     -href => "mailto:@{[ $BBBike::EMAIL ]}"}),
 	   (defined $args{-up}
@@ -7105,7 +7099,7 @@ sub header {
 	}
 
     if ($enable_opensearch_plugin) {
-        my $opensearch_url = $q->url();
+        my $opensearch_url = $q->url(-full=>0, -absolute=>1);
 	$opensearch_url =~ s,[^/]+/[^/]+$,,;
         $opensearch_url .= 'osp';
 
