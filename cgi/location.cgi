@@ -8,7 +8,7 @@ use warnings;
 
 my $q        = new CGI;
 my $debug    = 1;
-my $database = '../world/misc/cities.csv';
+my $database = '../world/etc/cities.csv';
 
 sub point_in_grid {
     my ( $x1, $y1, $gridx1, $gridy1, $gridx2, $gridy2 ) = @_;
@@ -22,7 +22,7 @@ sub read_coord {
     my $db = shift;
 
     my %hash;
-    my $fh = new IO::File $db, "r" or die "open: $!\n";
+    my $fh = new IO::File $db, "r" or die "open '$db': $!\n";
     while (<$fh>) {
         chomp;
         s/^\s+//;
