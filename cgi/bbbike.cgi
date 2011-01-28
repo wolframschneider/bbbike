@@ -734,11 +734,19 @@ undef $bbbike_html;
 undef $bbbike_images;
 undef $warn_message;
 
-$lang = "";
+$lang = "en";
 $config_master = $ENV{'SCRIPT_NAME'};
-if ($config_master =~ s{^(.*)\.(en)(\.cgi)$}{$1$3}) {
-    $lang = $2;
+
+{ my $q = new CGI;
+  my $path = $q->url(-full => 0, -absolute => 1);
+
+  # de | en | m
+  if ($path =~ m#^/([a-z]{1,2})/# ) {
+      $lang = $1;
+  }
 }
+
+#if ($config_master =~ s{^(.*)\.(en)(\.cgi)$}{$1$3}) {
 
 $with_green_ways = 1;
 
@@ -750,9 +758,6 @@ $config_master = $1.'/'. $config_master;
 # new directory layout
 if ($config_master =~ m,/index.cgi$,) {
     $config_master = "../../etc/world.cgi";
-    if (0 && -e "lang.en") {
-	$lang = "en";
-    }
 }
 
 warn "lang: $lang, config_master: $config_master, do $config_master.config" if $VERBOSE;
@@ -2920,7 +2925,8 @@ sub is_mobile {
     my $q = shift;
 
     if ($q->param('skin') && $q->param('skin') =~ m,^(m|mobile)$, ||
-        $q->virtual_host() =~ /^m\.|^mobile\.|^dev2/ ) {
+        $q->virtual_host() =~ /^m\.|^mobile\.|^dev2/ || 
+	$q->url(-full=>0, -absolute=>1) =~ m,^/m/, ) {
 	return 1;
     } else {
 	return 0;
