@@ -7005,7 +7005,13 @@ sub my_lang {
     my $my_lang =  shift;
     my $geo = get_geography_object();
 
-    $my_lang = $geo->{local_language} || $lang || "en";
+    $my_lang = $geo->{local_language};
+    my $qq = new CGI;
+    my $url = $qq->url(-full=>0, -absolute => 1);
+
+    if ($url =~ m,^/\w\w/, ) {
+       $my_lang = $lang || "en";
+    }
 
 
     # validate input - XSS check
@@ -7064,7 +7070,7 @@ sub header {
 #			  -type => "image/gif",
 			 });
     my($bbbike_de_script, $bbbike_en_script);
-    { 
+    if (0) { 
     my $qq = CGI->new($bbbike_script);
 
     if ($lang eq 'en') {
@@ -7085,7 +7091,13 @@ sub header {
 
 	$bbbike_de_script = $bbbike_script;
     }
-
+    } else {
+	my $qq = CGI->new();
+	my $url = $qq->url(-full=>0, -absolute=>1, -query=>1);
+	$url =~ s,/\w\w/,/,;
+	
+	$bbbike_de_script = "/de" . $url;
+	$bbbike_en_script = "/en" . $url;
     }
 
     if (!$smallform) {
