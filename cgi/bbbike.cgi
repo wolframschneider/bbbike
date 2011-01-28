@@ -2001,7 +2001,7 @@ EOF
 	    print qq{<a href="$url">[classic view]</a>\n};
         } else {
 	    my $url = $q->url(-full=>0, -absolute => 1);
-	    $url =~ s,^(/\w\w/)?,/m,;
+	    $url =~ s,^/\w\w/,/m/, || $url =~ s,/,/m/,;
 
 	    my $class = $q->user_agent =~ /iPhone|Android|iPod|Nokia|Symbian|BlackBerry|SonyEricsson|Samsung/ ? "mobile_link_mobile" : "mobile_link";
 	    print qq{<a class="$class" href="$url">[mobile]</a>\n};
