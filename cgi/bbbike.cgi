@@ -972,6 +972,7 @@ $bbbike_url = BBBikeCGIUtil::my_url($q, -full=>0, -absolute=>1);
 # Root-Verzeichnis und Bilder-Verzeichnis von bbbike
 ($bbbike_root = $bbbike_url) =~ s|[^/]*/[^/]*$|| if !defined $bbbike_root;
 $bbbike_root =~ s|/$||; # letzten Slash abschneiden
+$bbbike_root = "";
 if (!defined $bbbike_images) {
     $bbbike_images = "$bbbike_root/" . ($use_cgi_bin_layout ? "BBBike/" : "") .
 	"images";
@@ -5311,7 +5312,7 @@ EOF
 </script>
 EOF
 
-	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "../cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
+	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "/cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords route_length driving_time/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
@@ -5320,7 +5321,7 @@ EOF
 	    print qq{\n</span><!-- slippymap_span1 -->\n};
 
 	    print qq{<span id="slippymap_span2">\n};
-	    print $q->start_form(-method=>"POST", -name => "slippymapFormExternal", -target => "_new", -action => "../cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
+	    print $q->start_form(-method=>"POST", -name => "slippymapFormExternal", -target => "_new", -action => "/cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
 	    }
@@ -7149,17 +7150,17 @@ sub header {
 	    my $city = $osm_data && $datadir =~ m,data-osm/(.+), ? $1 : 'Berlin';
 
 	push(@$head, qq|\
-<script src="../html/jquery-1.4.2.min.js" type="text/javascript"></script>
-<script src="../html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js" type="text/javascript"></script>
-<link href="../html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css"> |);
+<script src="/html/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script src="/html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js" type="text/javascript"></script>
+<link href="/html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css"> |);
 
     }
 
-    push(@$head, qq|<script src="../html/bbbike.js" type="text/javascript"></script>\n|);
+    push(@$head, qq|<script src="/html/bbbike.js" type="text/javascript"></script>\n|);
 
     # google maps api v3
     # <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    # <script src="../html/elevation.js" type="text/javascript"></script>
+    # <script src="/html/elevation.js" type="text/javascript"></script>
     if ($enable_homemap_streets) {
 	my $google_api_key = &get_google_api_key;
 
@@ -7167,14 +7168,14 @@ sub header {
 	if ($gmap_api_version == 2) {
 	push(@$head, qq|
 <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
-<script src="../html/maps.js" type="text/javascript"></script>
+<script src="/html/maps.js" type="text/javascript"></script>
 |);
         } else {
             my $my_lang = &my_lang($lang);
 	    my $sensor = is_mobile($q) ? 'true' : 'false';
 	push(@$head, qq|\
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=$sensor&amp;language=$my_lang"></script>
-<script src="../html/maps3.js" type="text/javascript"></script>|);
+<script src="/html/maps3.js" type="text/javascript"></script>|);
 	}
 
     }
@@ -7277,7 +7278,7 @@ my $s_copyright = <<EOF;
 <a href="../doc.html">help</a> |
 <a href="../app.html">app</a> |
 <a href="$community_link">$donate</a> |
-<a href="../cgi/livesearch.cgi">livesearch</a> |
+<a href="/cgi/livesearch.cgi">livesearch</a> |
 $list_of_all_streets |
 <a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url2" style="display:none"> $permalink</span>
 </div>
@@ -7288,8 +7289,8 @@ $list_of_all_streets |
 (&copy;) 2008-2010 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br >
   Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br >
 <div id="footer_community">
-  <a href="$community_link"><img src="../images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
-  <a href="$community_link"><img style="border:0px;" src="../images/tweetn.png" title="Follow us on Twitter" alt=""></a>
+  <a href="$community_link"><img src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
+  <a href="$community_link"><img style="border:0px;" src="/images/tweetn.png" title="Follow us on Twitter" alt=""></a>
 </div>
 </div>
 
