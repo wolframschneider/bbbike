@@ -1996,12 +1996,13 @@ EOF
 
 	print qq{<span id="mobile_link">\n};
 	if (is_mobile($q)) {
-	    my $url = $q->url(-full=>1);
-	    $url =~ s,^http://(m|mobile)\.,http://www.,;
+	    my $url = $q->url(-full=>0, -absolute=>1);
+	    $url =~ s,^/m/,/,;
 	    print qq{<a href="$url">[classic view]</a>\n};
         } else {
-	    my $url = $q->url(-full=>1);
-	    $url =~ s,^http://(dev|devel|www)\.,http://m.,;
+	    my $url = $q->url(-full=>0, -absolute => 1);
+	    $url =~ s,^(/\w\w/)?,/m,;
+
 	    my $class = $q->user_agent =~ /iPhone|Android|iPod|Nokia|Symbian|BlackBerry|SonyEricsson|Samsung/ ? "mobile_link_mobile" : "mobile_link";
 	    print qq{<a class="$class" href="$url">[mobile]</a>\n};
         }
