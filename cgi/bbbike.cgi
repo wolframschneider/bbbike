@@ -7002,15 +7002,13 @@ sub get_google_api_key {
 sub my_lang {
     my $my_lang =  shift;
     my $geo = get_geography_object();
-    if (!$lang && $q->param("lang")) {
-	$my_lang = $q->param("lang");
-    } elsif (!$lang && $geo->{local_language}) {
-	$my_lang = $geo->{local_language};
-    }
+
+    $my_lang = $geo->{local_language} || $lang || "en";
+
 
     # validate input - XSS check
     $my_lang = "" if $my_lang !~ /^[a-zA-Z\-]{2,6}$/;
-    $my_lang = "de" if $my_lang  eq "";
+    $my_lang = "en" if $my_lang  eq "";
 
     return $my_lang;
 }
