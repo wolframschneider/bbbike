@@ -7253,6 +7253,7 @@ sub header {
 	        print " | " if $counter++ > 0;
 	        print qq{<a href="/$l$bbbike_local_script" title="switch map language to }, M($l), qq{">$l</a>\n};
 	}
+	print qq{| <a href="$bbbike_local_script" title="switch map language to }, M($local_lang), qq{">local</a>\n} if $selected_lang;
 
 	if (0) {
 	if ($selected_lang && $bbbike_local_script) {
