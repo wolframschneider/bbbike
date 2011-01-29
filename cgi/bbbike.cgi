@@ -747,9 +747,13 @@ my @supported_lang = qw/en de/;
   if ($path =~ m#^/([a-z]{1,2})/# ) {
       $lang = $1;
       $selected_lang = $lang;
+
+      $lang = "en" if $lang eq 'm'; # mobile
   }
   $local_lang = &my_lang($lang, 1);
 }
+
+warn "xxx: lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
 
 #if ($config_master =~ s{^(.*)\.(en)(\.cgi)$}{$1$3}) {
 
@@ -2407,7 +2411,7 @@ EOF
 
 <script type="text/javascript">
 	var ac_$city = \$('#$searchinput').autocomplete( 
-		{ serviceUrl: '../cgi/api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:$maxHeight, width:$width, deferRequestBy:$deferRequestBy, noCache: true }
+		{ serviceUrl: '/cgi/api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:$maxHeight, width:$width, deferRequestBy:$deferRequestBy, noCache: true }
 	);
 </script>
 
@@ -7192,7 +7196,7 @@ sub header {
 	     -BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 	     -meta=>{'keywords'=>'berlin fahrrad route bike karte suche cycling route routing routenplaner routenplanung fahrradroutenplaner radroutenplaner entfernungsrechner',
-		     'copyright'=>'(c) 1998-2010 Slaven Rezic',
+		     'copyright'=>'(c) 1998-2011 Slaven Rezic',
 		    },
 	     -author => $BBBike::EMAIL,
 	    );
@@ -7222,7 +7226,7 @@ sub header {
 	print $q->start_html;
 	print "<h1>BBBike</h1>";
     }
-    if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$})) {
+    if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$}) && !&is_mobile($q) ) {
         my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
@@ -7234,9 +7238,13 @@ sub header {
 	print qq{<span id="language_switch">\n};
 	if ($selected_lang && $bbbike_local_script) {
 	    if (!grep { $local_lang eq $_ } @supported_lang) {
-	        print qq{<a href="$bbbike_local_script" title="map language: $local_lang">$local_lang</a>\n};
+	        print qq{<a href="$bbbike_local_script" title="switch map language to }, M($local_lang), qq{">$local_lang</a>\n};
 	    }
-	}
+	} else {
+	    if (!grep { $local_lang eq $_ } @supported_lang) {
+		print qq{<span title="map language is in }, M($local_lang), qq{"><i>$local_lang</i></span>\n};
+	    }
+        }
 
 	if ($lang eq 'en') {
 	    print qq{<a href="$bbbike_de_script$query_string"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a>};
@@ -7277,15 +7285,16 @@ my $list_of_all_streets = window_open("$bbbike_script?all=1", "BBBikeAll",
                          "dependent,height=500,resizable," .
                          "screenX=500,screenY=30,scrollbars,width=250")
 	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $cityname : "") ."</a>";
-my $community_link = $lang eq 'en' ? '../community.html' : '../community.de.html';
+my $community_link = $lang eq 'en' ? '/community.html' : '/community.de.html';
 my $donate = M("spenden");
+
 my $s_copyright = <<EOF;
 
 <div id="footer">
 <div id="footer_top">
-<a href="../">home</a> |
-<a href="../doc.html">help</a> |
-<a href="../app.html">app</a> |
+<a href="/">home</a> |
+<a href="/doc.html">help</a> |
+<a href="/app.html">app</a> |
 <a href="$community_link">$donate</a> |
 <a href="/cgi/livesearch.cgi">livesearch</a> |
 $list_of_all_streets |
@@ -7295,7 +7304,7 @@ $list_of_all_streets |
 <hr>
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
-(&copy;) 2008-2010 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br >
+(&copy;) 2008-2011 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br >
   Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br >
 <div id="footer_community">
   <a href="$community_link"><img src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
@@ -8525,7 +8534,7 @@ Slaven Rezic <slaven@rezic.de>
 
 =head1 COPYRIGHT
 
-Copyright (C) 1998-2010 Slaven Rezic. All rights reserved.
+Copyright (C) 1998-2011 Slaven Rezic. All rights reserved.
 This is free software; you can redistribute it and/or modify it under the
 terms of the GNU General Public License, see the file COPYING.
 

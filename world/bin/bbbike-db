@@ -18,6 +18,8 @@ $VERSION = 0.1;
 use Getopt::Long;
 
 my $debug = 1;    # 0: quiet, 1: normal, 2: verbose
+binmode \*STDOUT, ":utf8";
+binmode \*STDERR, ":utf8";
 
 sub osm_round {
     my $real    = shift;
@@ -83,6 +85,7 @@ usage: $0 [--debug={0..2}] [options] city
 --centerdelta
 --area=area
 --city-by-lang=lang
+--city-names
 --step
 --list
 EOF
@@ -98,12 +101,14 @@ my $centerdelta;
 my $area;
 my $city_by_lang;
 my $list;
+my $city_names;
 
 GetOptions(
     "debug=i"        => \$debug,
     "lang"           => \$lang,
     "local-lang"     => \$local_lang,
     "step"           => \$step,
+    "city-names"     => \$city_names,
     "population"     => \$population,
     "coord"          => \$coord,
     "poly"           => \$poly,
@@ -150,6 +155,9 @@ if ( exists $hash{$city} ) {
     elsif ($local_lang) {
         print $hash{$city}->{local_lang} ? $hash{$city}->{local_lang} : "en";
         print " ";
+    }
+    elsif ($city_names) {
+        print $hash{$city}->{name} ? $hash{$city}->{name} : $city;
     }
     elsif ($coord) {
         my ( $x1, $y1, $x2, $y2 ) =
