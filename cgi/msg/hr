@@ -73,7 +73,7 @@ return {
     "Oder einen anderen Stra�ennamen versuchen" =>
       "Ili pokušajte s drugim nazivom ulice",
     "Bitte keine <b>Hausnummer</b> eingeben" =>
-      "Molimo Vas da ne ulaze <b> kućni broj </ b>",
+      "Molimo Vas da ne ulaze <b> kućni broj </b>",
     "Letzten Punkt l&ouml;schen" => "izbrisati posljednja točka",
     "Kreuzung ist"               => "prijelaz",
     "U-Bahn"                     => "underground",

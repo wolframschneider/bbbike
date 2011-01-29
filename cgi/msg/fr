@@ -74,7 +74,7 @@ return {
     "Oder einen anderen Stra�ennamen versuchen" =>
       "Vous pouvez également essayer un autre nom de la rue",
     "Bitte keine <b>Hausnummer</b> eingeben" =>
-      "S'il vous plaît ne pas entrer dans un <b> numéro de la maison </ b>",
+      "S'il vous plaît ne pas entrer dans un <b> numéro de la maison </b>",
     "Letzten Punkt l&ouml;schen" => "supprimer dernier point",
     "Kreuzung ist"               => "traversée",
     "U-Bahn"                     => "underground",
@@ -150,7 +150,7 @@ return {
     "Viastra&szlig;e"                    => "par la rue",
     "Experimentell"                      => "expérimentale",
     "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)" =>
-"S'il vous plaît entrez vous <b> nom de la rue de destination, sans numéro de la maison </ b>! Vous serez invité à la rue transversale à la page suivante",
+"S'il vous plaît entrez vous <b> nom de la rue de destination, sans numéro de la maison </b>! Vous serez invité à la rue transversale à la page suivante",
     "Ampeln vermeiden"                   => "feux éviter",
     "Weg ohne Kfz"                       => "rue sans véhicules à moteur",
     "Keine Route gefunden"               => "Pas d'itinéraire trouvé",

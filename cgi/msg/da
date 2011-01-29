@@ -73,7 +73,7 @@ return {
     "Oder einen anderen Stra�ennamen versuchen" =>
       "Alternativt kan du prøve et andet vejnavn",
     "Bitte keine <b>Hausnummer</b> eingeben" =>
-      "Du må ikke angive et <b> husnummer </ b>",
+      "Du må ikke angive et <b> husnummer </b>",
     "Letzten Punkt l&ouml;schen" => "slet sidste punkt",
     "Kreuzung ist"               => "krydser",
     "U-Bahn"                     => "underjordisk",
@@ -148,7 +148,7 @@ return {
     "Viastra&szlig;e"                    => "via street",
     "Experimentell"                      => "eksperimenterende",
     "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)" =>
-"Angiv start-og bestemmelsessted gadenavn <b> uden husnummer </ b>! Du vil blive bedt om vejkryds på næste side",
+"Angiv start-og bestemmelsessted gadenavn <b> uden husnummer </b>! Du vil blive bedt om vejkryds på næste side",
     "Ampeln vermeiden"                   => "Undgå trafiklys",
     "Weg ohne Kfz"                       => "gaden uden motorkøretøjer",
     "Keine Route gefunden"               => "Ingen rute fundet",

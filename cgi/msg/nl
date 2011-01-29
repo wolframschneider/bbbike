@@ -73,7 +73,7 @@ return {
     "Oder einen anderen Straßennamen versuchen" =>
       "Of probeer een andere straatnaam",
     "Bitte keine <b>Hausnummer</b> eingeben" =>
-      "Gelieve geen voer een <b> huisnummer </ b>",
+      "Gelieve geen voer een <b> huisnummer </b>",
     "Letzten Punkt l&ouml;schen"          => "verwijderen laatste punt",
     "Kreuzung ist"                        => "overtocht wordt",
     "U-Bahn"                              => "ondergrondse",
@@ -149,7 +149,7 @@ return {
     "Viastra&szlig;e"                    => "via de straat",
     "Experimentell"                      => "experimentele",
     "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)" =>
-"Geef start-en straatnaam van uw bestemming <b> zonder huisnummer </ b>! U wordt gevraagd voor de kruising op de volgende pagina",
+"Geef start-en straatnaam van uw bestemming <b> zonder huisnummer </b>! U wordt gevraagd voor de kruising op de volgende pagina",
     "Ampeln vermeiden"                   => "Vermijd verkeerslichten",
     "Weg ohne Kfz"                       => "straat zonder auto's",
     "Keine Route gefunden"               => "Geen route gevonden",

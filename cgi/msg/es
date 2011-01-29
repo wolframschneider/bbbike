@@ -74,7 +74,7 @@ return {
     "Oder einen anderen Stra�ennamen versuchen" =>
       "También pruebe con otro nombre de la calle",
     "Bitte keine <b>Hausnummer</b> eingeben" =>
-      "Por favor, no entrar en una casa <b> número </ b>",
+      "Por favor, no entrar en una casa <b> número <b>",
     "Letzten Punkt l&ouml;schen" => "eliminar el último punto",
     "Kreuzung ist"               => "travesía",
     "U-Bahn"                     => "underground",
@@ -151,7 +151,7 @@ return {
     "Viastra&szlig;e"           => "a través de la calle",
     "Experimentell"             => "experimental",
     "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)" =>
-"Por favor, introduzca de inicio y destino <b> nombre de la calle, sin número de casa </ b>! Se le pedirá para el cruce de calles en la página siguiente",
+"Por favor, introduzca de inicio y destino <b> nombre de la calle, sin número de casa </b>! Se le pedirá para el cruce de calles en la página siguiente",
     "Ampeln vermeiden"      => "semáforo Evita",
     "Weg ohne Kfz"          => "calle sin vehículos de motor",
     "Keine Route gefunden"  => "No hay ninguna vía que se encuentran",
