@@ -7238,9 +7238,13 @@ sub header {
 	print qq{<span id="language_switch">\n};
 	if ($selected_lang && $bbbike_local_script) {
 	    if (!grep { $local_lang eq $_ } @supported_lang) {
-	        print qq{<a href="$bbbike_local_script" title="map language: $local_lang">$local_lang</a>\n};
+	        print qq{<a href="$bbbike_local_script" title="switch map language to }, M($local_lang), qq{">$local_lang</a>\n};
 	    }
-	}
+	} else {
+	    if (!grep { $local_lang eq $_ } @supported_lang) {
+		print qq{<span title="map language is in }, M($local_lang), qq{"><i>$local_lang</i></span>\n};
+	    }
+        }
 
 	if ($lang eq 'en') {
 	    print qq{<a href="$bbbike_de_script$query_string"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a>};
