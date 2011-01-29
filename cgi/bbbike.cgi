@@ -741,6 +741,7 @@ $config_master = $ENV{'SCRIPT_NAME'};
 my $local_lang = "";
 my $selected_lang = "";
 my @supported_lang = qw/da de en es fr hr nl pl pt ru/;
+
 { my $q = new CGI;
   my $path = $q->url(-full => 0, -absolute => 1);
 
@@ -787,9 +788,16 @@ $slippymap_zoom = 5 if $slippymap_zoom <= 0;
 $slippymap_zoom_maponly = 4 if $slippymap_zoom <= 0;
 $slippymap_zoom_city = 6 if $slippymap_zoom_city <= 0;
 
+my $local_city_name = "";
 if ($osm_data) {
     $datadir =~ m,data-osm/(.+),;
     my $city = $1;
+
+
+    my $geo = get_geography_object();
+    my $name = $geo->{city_names};
+
+    $local_city_name = select_city_name($city, $name, $lang);
 
     unshift (@INC, "../data-osm/$city") if $city;
     require Karte::Polar;
@@ -826,6 +834,35 @@ sub M ($) {
 
     return $text;
 }
+
+# select city name by language
+sub select_city_name {
+    #my $self = shift;
+
+    my $city      = shift;
+    my $name      = shift or die "No city name given!\n";
+    my $city_lang = shift || "en";
+
+    #warn "city: $city, name: $name, lang: $city_lang\n" if $self->debug >= 2;
+
+    my %hash;
+    $hash{ALL} = $city;
+    foreach my $n ( split /\s*,\s*/, $name ) {
+        my ( $lang, $city_name ) = split( /!/, $n );
+        if ($city_name) {
+            $hash{$lang} = $city_name;
+        }
+
+        # no city language defined, use default
+        else {
+            $hash{ALL} = $lang;
+        }
+    }
+
+    #use Data::Dumper; warn Dumper( \%hash );
+    return exists( $hash{$city_lang} ) ? $hash{$city_lang} : $hash{ALL};
+}
+
 
 if ($VERBOSE) {
     $StrassenNetz::VERBOSE    = $VERBOSE;
@@ -2030,21 +2067,9 @@ EOF
         }
 	print qq{</span>\n};
 
-	if ($lang eq 'en') {
-	    print <<EOF;
-<p>
-Welcome to BBBike! We'll help you find a nice bike route in <b>$city</b> and around.<br>
-<!-- If a street is not available, then the nearest crossing will be used automatically. -->
-<!-- <b>Please do not enter street numbers or postal codes.</b><br><br> -->
-</p>
-EOF
-	} else {
-	    print <<EOF;
-<p>
-Willkommen bei BBBike! Wir helfen Dir, eine gute Fahrradroute in <b>$city</b> und Umgebung zu finden.<br>
-</p>
-EOF
-	}
+         print "<p>\n", M("Willkommen bei BBBike! Wir helfen Dir, eine gute Fahrradroute in"),  " <b>$local_city_name</b> ",  
+	    M("und Umgebung zu finden."), "<br></p>\n";
+
 	print <<EOF if ($bi->{'can_table'});
 </td>
 <td rowspan="3" valign="top" @{[ $start_bgcolor ? "bgcolor=$start_bgcolor" : "" ]}>@{[ defined &teaser && !$bi->{'css_buggy'} ? teaser() : "" ]}</td>
@@ -7049,7 +7074,8 @@ sub header {
     my $from = delete $args{-from};
     if (!exists $args{-title}) {
         my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
-	$args{-title} = "BBBike \@ $city";
+	$args{-title} = "BBBike \@ $city" . ($city ne $local_city_name ? " // $local_city_name" : "");
+	$args{-title2} = "BBBike\@$local_city_name";
     }
 
     no strict;
@@ -7222,7 +7248,7 @@ sub header {
 	    print "<img alt=\"\" src=\"$bbbike_images/srtbike.gif\" hspace=10>";
 	} else {
 	    my $use_css = !$bi->{'css_buggy'};
-	    my $title = $args{-title};
+	    my $title = $args{-title2};
 	    if ($is_beta) {
 		$title = "BB<span style='font-style:italic;'>&#x03B2;</span>ike</a>";
 	    }
