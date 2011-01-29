@@ -725,10 +725,11 @@ unshift(@Strassen::datadirs,
 	#"$FindBin::RealBin/../BBBike/$main::datadir",
        );
 
-use vars qw($lang $config_master $msg);
+use vars qw($lang $config_master $msg $msg_en);
 
 # These must not be permanent:
 undef $msg;
+undef $msg_en;
 undef $bbbike_root;
 undef $bbbike_html;
 undef $bbbike_images;
@@ -794,9 +795,9 @@ if ($osm_data) {
 
 if ($lang ne "") {
     $msg = eval { do "$FindBin::RealBin/msg/$lang" };
-    if ($msg && ref $msg ne 'HASH') {
-	undef $msg;
-    }
+    $msg_en = eval { do "$FindBin::RealBin/msg/en" };
+    undef $msg if $msg && ref $msg ne 'HASH';
+    undef $msg_en if $msg_en && ref $msg_en ne 'HASH';
 
     no strict "vars";
     if ($msg && ref $msg eq 'HASH') {
@@ -812,6 +813,8 @@ sub M ($) {
     my $text;
     if ($msg && exists $msg->{$key}) {
 	$text = $msg->{$key};
+    } elsif ($msg_en && exists $msg_en->{$key}) {
+	$text = $msg_en->{$key};
     } else {
         warn "Unknown translation: $key\n" if $VERBOSE && $msg;
 	$text = $key;
