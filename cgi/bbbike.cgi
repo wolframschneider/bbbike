@@ -747,9 +747,13 @@ my @supported_lang = qw/en de/;
   if ($path =~ m#^/([a-z]{1,2})/# ) {
       $lang = $1;
       $selected_lang = $lang;
+
+      $lang = "en" if $lang eq 'm'; # mobile
   }
   $local_lang = &my_lang($lang, 1);
 }
+
+warn "xxx: lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
 
 #if ($config_master =~ s{^(.*)\.(en)(\.cgi)$}{$1$3}) {
 
@@ -7222,7 +7226,7 @@ sub header {
 	print $q->start_html;
 	print "<h1>BBBike</h1>";
     }
-    if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$})) {
+    if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$}) && !&is_mobile($q) ) {
         my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
