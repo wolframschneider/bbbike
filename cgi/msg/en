@@ -199,6 +199,8 @@ Bildgr&ouml;&szlig;e, Bildformat und Detailreichtum %s bis %s kB. PDFs sind %s b
     'Fähre'           => 'Ferry',
     'spenden'         => 'donate',
     'Wetter f&uuml;r' => 'Weather in',
+    "Willkommen bei BBBike! Wir helfen Dir, eine gute Fahrradroute in" => "Welcome to BBBike! We'll help you find a nice bike route in",
+    "und Umgebung zu finden." => "and around.",
 
     "ar"    => "Arabic",
     "az"    => "Azerbaijani",
