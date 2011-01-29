@@ -2,8 +2,8 @@
 return {
     "Start-"          => "Start",
     "Via- (optional)" => "via (optional)",
-"Die Aktivierung von Javascript und CSS ist empfehlenswert, aber nicht notwendig."
-      => "Activating JavaScript and CSS is preferable but not strictly necessary.",
+"Die Aktivierung von Javascript und CSS ist empfehlenswert, aber nicht notwendig.",
+    => "Activating JavaScript and CSS is preferable but not strictly necessary.",
     "Start- und Zielstra&szlig;e der Route ausw&auml;hlen" =>
       "Choose Start and Destination street name",
     "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)" =>
