@@ -793,7 +793,7 @@ if ($osm_data) {
     require Karte::Polar;
 }
 
-if ($lang ne "") {
+if ($lang ne "de") {
     $msg = eval { do "$FindBin::RealBin/msg/$lang" };
     $msg_en = eval { do "$FindBin::RealBin/msg/en" };
     undef $msg if $msg && ref $msg ne 'HASH';
