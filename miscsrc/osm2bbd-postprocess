@@ -67,6 +67,7 @@ my $coastline_hack_anchor;
 my $debug = 1;
 my $force;
 my $local_language = "";
+my $city_names = "";
 GetOptions(
 	   (map {
 	       (my $optname = $_) =~ s{_}{-}g;
@@ -76,6 +77,7 @@ GetOptions(
 	   } @targets),
 	   "debug=i" => \$debug,
 	   "local-language=s" => \$local_language,
+	   "city-names=s" => \$city_names,
 	   "force!" => \$force,
 	   # targets with additional arguments
 	   "dataset-title=s" => \$set_dataset_title,
@@ -450,6 +452,7 @@ sub _write_meta {
     my $meta = shift;
 
     $meta->{"local_language"} = $local_language;
+    $meta->{"city_names"} = $city_names;
 
     require Data::Dumper;
 
