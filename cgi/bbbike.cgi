@@ -7192,7 +7192,7 @@ sub header {
 	     -BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 	     -meta=>{'keywords'=>'berlin fahrrad route bike karte suche cycling route routing routenplaner routenplanung fahrradroutenplaner radroutenplaner entfernungsrechner',
-		     'copyright'=>'(c) 1998-2010 Slaven Rezic',
+		     'copyright'=>'(c) 1998-2011 Slaven Rezic',
 		    },
 	     -author => $BBBike::EMAIL,
 	    );
@@ -7295,7 +7295,7 @@ $list_of_all_streets |
 <hr>
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
-(&copy;) 2008-2010 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br >
+(&copy;) 2008-2011 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br >
   Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br >
 <div id="footer_community">
   <a href="$community_link"><img src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
@@ -8525,7 +8525,7 @@ Slaven Rezic <slaven@rezic.de>
 
 =head1 COPYRIGHT
 
-Copyright (C) 1998-2010 Slaven Rezic. All rights reserved.
+Copyright (C) 1998-2011 Slaven Rezic. All rights reserved.
 This is free software; you can redistribute it and/or modify it under the
 terms of the GNU General Public License, see the file COPYING.
 
