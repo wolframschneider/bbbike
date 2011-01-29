@@ -737,13 +737,18 @@ undef $warn_message;
 $lang = "en";
 $config_master = $ENV{'SCRIPT_NAME'};
 
+my $local_lang = "";
+my $selected_lang = "";
+my @supported_lang = qw/en de/;
 { my $q = new CGI;
   my $path = $q->url(-full => 0, -absolute => 1);
 
   # de | en | m
   if ($path =~ m#^/([a-z]{1,2})/# ) {
       $lang = $1;
+      $selected_lang = $lang;
   }
+  $local_lang = &my_lang($lang, 1);
 }
 
 #if ($config_master =~ s{^(.*)\.(en)(\.cgi)$}{$1$3}) {
@@ -7003,13 +7008,15 @@ sub get_google_api_key {
 
 sub my_lang {
     my $my_lang =  shift;
+    my $flag = shift || 0;
+
     my $geo = get_geography_object();
 
     $my_lang = $geo->{local_language};
     my $qq = new CGI;
     my $url = $qq->url(-full=>0, -absolute => 1);
 
-    if ($url =~ m,^/\w\w/, ) {
+    if (!$flag && $url =~ m,^/\w\w/, ) {
        $my_lang = $lang || "en";
     }
 
@@ -7069,35 +7076,15 @@ sub header {
 #			  -href => "$bbbike_images/srtbike16.gif",
 #			  -type => "image/gif",
 			 });
-    my($bbbike_de_script, $bbbike_en_script);
-    if (0) { 
-    my $qq = CGI->new($bbbike_script);
-
-    if ($lang eq 'en') {
-	($bbbike_de_script = $bbbike_script) =~ s{\.en\.cgi}{.cgi};
-	if (0 && -e "lang.en") {
-	   $bbbike_de_script .= "index.cgi" if $bbbike_de_script !~ m,index.cgi,;
-	} else {
-	   $bbbike_de_script =~ s,/index.cgi,/, 
-	}
-	$bbbike_en_script = $bbbike_script;
-    } else {
-	($bbbike_en_script = $bbbike_script) =~ s{\.cgi}{.en.cgi};
-	$bbbike_en_script .= "index.en.cgi" if $bbbike_en_script !~ /\.cgi$/;
-
-        if (0 && -e "lang.en") {
-	   $bbbike_en_script =~ s,/index.en.cgi,/, 
-	}
-
-	$bbbike_de_script = $bbbike_script;
-    }
-    } else {
+    my($bbbike_de_script, $bbbike_en_script, $bbbike_local_script);
+    {
 	my $qq = CGI->new();
 	my $url = $qq->url(-full=>0, -absolute=>1, -query=>1);
 	$url =~ s,/\w\w/,/,;
 	
 	$bbbike_de_script = "/de" . $url;
 	$bbbike_en_script = "/en" . $url;
+        $bbbike_local_script = $url;
     }
 
     if (!$smallform) {
@@ -7245,10 +7232,20 @@ sub header {
 	}
 
 	print qq{<span id="language_switch">\n};
+	if ($selected_lang && $bbbike_local_script) {
+	    if (!grep { $local_lang eq $_ } @supported_lang) {
+	        print qq{<a href="$bbbike_local_script" title="map language: $local_lang">$local_lang</a>\n};
+	    }
+	}
+
 	if ($lang eq 'en') {
-	    print <<EOF;
-<a href="$bbbike_de_script$query_string"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a><img class="selectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0">
-EOF
+	    print qq{<a href="$bbbike_de_script$query_string"><img class="unselectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" title="Deutsch" border="0"></a>};
+	    if ($selected_lang) {
+	       print qq{<img class="selectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0">\n} 
+            } else {
+	       print qq{<a href="$bbbike_en_script$query_string"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>\n};
+	    }
+
 	} else {
 	    print <<EOF;
 <img class="selectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" border="0" title="Deutsch"><a href="$bbbike_en_script$query_string"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>
