@@ -2067,7 +2067,7 @@ EOF
         }
 	print qq{</span>\n};
 
-         print "<p>\n", M("Willkommen bei BBBike! Wir helfen Dir, eine gute Fahrradroute in"),  " <b>$local_city_name</b> ",  
+         print "<p>\n", M("Willkommen bei BBBike! Wir helfen Dir, eine gute Fahrradroute in"),  " <b title='$city'>$local_city_name</b> ",  
 	    M("und Umgebung zu finden."), "<br></p>\n";
 
 	print <<EOF if ($bi->{'can_table'});
