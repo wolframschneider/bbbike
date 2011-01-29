@@ -7242,7 +7242,7 @@ sub header {
 	if ($bi->{'css_buggy'}) {
 	    print "<font face=\"$font\">";
 	}
-	print "<h1>\n";
+	print "<h2>\n";
 	if ($printmode) {
 	    print "$args{-title}";
 	    print "<img alt=\"\" src=\"$bbbike_images/srtbike.gif\" hspace=10>";
@@ -7260,7 +7260,7 @@ sub header {
 	    print " alt=\"\" src=\"$bbbike_images/srtbike.gif\" border=0>";
 	    print "</a>";
 	}
-	print "</h1>\n";
+	print "</h2>\n";
     } else {
 	print $q->start_html;
 	print "<h1>BBBike</h1>";
