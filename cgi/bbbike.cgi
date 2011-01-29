@@ -752,6 +752,8 @@ my @supported_lang = qw/da de en es fr hr nl pl pt ru/;
       $lang = "en" if $lang eq 'm'; # mobile
   }
   $local_lang = &my_lang($lang, 1);
+
+  $lang = $local_lang if $local_lang && !$selected_lang;
 }
 
 warn "xxx: lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
