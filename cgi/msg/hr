@@ -25,7 +25,7 @@ return {
     "nichts weiter"             => "niÅ¡ta posebno",
     "nur Hauptstraßen benutzen" => "koristi samo glavne ceste",
     "Stadt"                     => "grad",
-    "start"                     => "Start",
+    "start"                     => "start",
     "unbekannte Strecke"        => "nepoznata ulica",
     "Ecke"                      => "u kut",
     "spenden"                   => "donirati",
@@ -113,7 +113,7 @@ return {
     "Route mit ge&auml;nderten Einstellungen" =>
       "Search opet s promijenjenim postavkama",
     "Details"                                     => "Detalji",
-    "ziel"                                        => "odred",
+    "ziel"                                        => "dest",
     "um %d Meter länger"                          => "viÅ¡e za% d metara",
     "Karte"                                       => "karta",
     "Zurück"                                      => "Natrag",

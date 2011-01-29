@@ -115,7 +115,7 @@ return {
     "Route mit ge&auml;nderten Einstellungen" =>
       "Buscar de nuevo con la configuraciÃ³n ha cambiado",
     "Details"                    => "Detalles",
-    "ziel"                       => "destino",
+    "ziel"                       => "dest",
     "um %d Meter länger"         => "ya metros de% d",
     "Karte"                      => "mapa",
     "Zurück"                     => "Volver",
