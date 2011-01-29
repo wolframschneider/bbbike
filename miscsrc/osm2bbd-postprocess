@@ -451,15 +451,21 @@ sub _load_meta {
 sub _write_meta {
     my $meta = shift;
 
+    use Data::Dumper;
     $meta->{"local_language"} = $local_language;
-    $meta->{"city_names"} = $city_names;
 
-    require Data::Dumper;
+    if (!Encode::is_utf8($city_names)) { 
+	$city_names = Encode::decode("utf-8", $city_names); 
+    }
+
+    $meta->{"city_names"} = $city_names;
 
     DumpFile("meta.yml~", $meta);
 
     open my $ofh, ">", "meta.dd~"
 	or die "Cannot write to meta.dd~: $!";
+    binmode $ofh, ":utf8";
+
     print $ofh Data::Dumper->new([$meta],['meta'])->Sortkeys(1)->Useqq(1)->Dump;
     close $ofh
 	or die "While closing meta.dd~: $!";
