@@ -192,4 +192,39 @@ return {
     "Kopfsteinpflaster und schlechte Fahrbahnen vermeiden" =>
       "kaldrma izbjegavati kamenje i loše površine",
     "auf der Strecke" => "na stazi",
+
+"ar" => "arapski"
+    "az" => "azerbajdžanski",
+    "bg" => "bugarski"
+    "cn-zh" => "kineski",
+    "cs" => "češki",
+    "da" => "Danski",
+    "de" => "njemački"
+    "es" => "španjolski",
+    "et" => "estonski",
+    "fa" => "perzijski",
+    "fi" => "finski"
+    "fr" => "francuski"
+    "he" => "hebrejski",
+    "hr" => "hrvatski",
+    "hu" => "mađarski"
+    "it" => "talijanski"
+    "ja" => "japanski",
+    "km" => "Central kmerskim",
+    "ko" => "korejski"
+    "lt" => "litvanski"
+    "lv" => "latvijski",
+    "mn" => "mongolski",
+    "nl" => "nizozemski",
+    "no" => "norveški"
+    "pl" => "poljski"
+    "pt" => "portugalski",
+    "ru" => "ruski",
+    "sl" => "slovenski",
+    "sv" => "švedski",
+    "th" => "tajlandski"
+    "tr" => "turskom",
+    "uk" => "Ukrajinski",
+    "vi" => "vijetnamski"
+
 };
