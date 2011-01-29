@@ -24,3 +24,6 @@ world/web/cgi
 world/web/html
 world/web/images
 world/web/berlin
+world/web/[a-z][a-z]
+world/web/m/
+cgi/streets.cgi
