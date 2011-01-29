@@ -739,7 +739,7 @@ $config_master = $ENV{'SCRIPT_NAME'};
 
 my $local_lang = "";
 my $selected_lang = "";
-my @supported_lang = qw/en de/;
+my @supported_lang = qw/da de en es fr hr nl pl pt ru/;
 { my $q = new CGI;
   my $path = $q->url(-full => 0, -absolute => 1);
 
@@ -796,6 +796,13 @@ if ($lang ne "") {
     $msg = eval { do "$FindBin::RealBin/msg/$lang" };
     if ($msg && ref $msg ne 'HASH') {
 	undef $msg;
+    }
+
+    no strict "vars";
+    if ($msg && ref $msg eq 'HASH') {
+    	foreach my $key (keys %$msg) {
+	   $msg->{$key} = Encode::decode("utf-8", $msg->{$key});
+    	}
     }
 }
 
