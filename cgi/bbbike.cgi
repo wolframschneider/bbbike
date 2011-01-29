@@ -7098,6 +7098,7 @@ sub header {
 	
 	$bbbike_de_script = "/de" . $url;
 	$bbbike_en_script = "/en" . $url;
+
         $bbbike_local_script = $url;
     }
 
@@ -7246,6 +7247,14 @@ sub header {
 	}
 
 	print qq{<span id="language_switch">\n};
+	
+	my $counter = 0;
+	foreach my $l (@supported_lang) {
+	        print " | " if $counter++ > 0;
+	        print qq{<a href="/$l$bbbike_local_script" title="switch map language to }, M($l), qq{">$l</a>\n};
+	}
+
+	if (0) {
 	if ($selected_lang && $bbbike_local_script) {
 	    if (!grep { $local_lang eq $_ } @supported_lang) {
 	        print qq{<a href="$bbbike_local_script" title="switch map language to }, M($local_lang), qq{">$local_lang</a>\n};
@@ -7268,7 +7277,8 @@ sub header {
 	    print <<EOF;
 <img class="selectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" border="0" title="Deutsch"><a href="$bbbike_en_script$query_string"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>
 EOF
-	}
+	} }
+
 	print qq{</span>\n};
 	print qq{</div>\n};
     }
