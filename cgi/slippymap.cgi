@@ -72,7 +72,7 @@ sub run {
 
     {
         my $l = $q->param('lang') || "";
-        $lang = $l if $l eq 'de' || $l eq 'en';
+        $lang = $l if grep { $l eq $_ } qw/da de en es fr hr nl pl pt ru/;
     }
 
     if ( $lang ne "" ) {
@@ -445,7 +445,7 @@ EOF
 	body.waitMode *    { cursor:wait; }
         $maponly
     </style>
-    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=$google_api_key" type="text/javascript"></script>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=$google_api_key&amp;hl=$lang" type="text/javascript"></script>
   </head>
 
   <body onload="init()" onunload="GUnload()" class="nonWaitMode">
@@ -1246,8 +1246,8 @@ EOF
     </script>
 
 
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi?hl=$lang"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=$lang"></script>
 <script src="../html/elevation.js" type="text/javascript"></script>
 
 
