@@ -7094,12 +7094,13 @@ sub header {
     if ($city eq 'Berlin_DE') {
 	push @$head, $q->meta({-name => "description",
 			       -content => ($lang eq 'en'
-					    ? 'BBBike is a route planner for cyclists in Berlin'
-					    : 'BBBike ist ein Fahrradroutenplaner für Berlin')
+					    ? 'BBBike @ World is a route planner for cyclists based on OpenStreetMap data.'
+					    : 'BBBike ist ein Fahrradroutenplaner mit OpenStreetMap Daten.')
 			      });
     }
-    push @$head, $q->meta({-name => 'DC.title',
-			   -content => "BBBike - Routenplaner für Radfahrer in Berlin und Brandenburg"});
+    #push @$head, $q->meta({-name => 'DC.title',
+    #			   -content => "BBBike - Routenplaner für Radfahrer in Berlin und Brandenburg"});
+
     # ^^^
     # Hint for search engines, to canonify the start URL
     # This handles the ?begin=1 case and bbbike.de vs. www.bbbike.de
