@@ -757,7 +757,7 @@ my @supported_lang = qw/da de en es fr hr nl pl pt ru/;
   $lang = $local_lang if $local_lang && !$selected_lang;
 }
 
-warn "xxx: lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
+warn "xxx: city: $datadir, lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
 
 #if ($config_master =~ s{^(.*)\.(en)(\.cgi)$}{$1$3}) {
 
@@ -811,6 +811,8 @@ if ($lang ne "de") {
 
     no strict "vars";
     if ($msg && ref $msg eq 'HASH') {
+	warn "decode utf8 '$lang' message\n";
+
     	foreach my $key (keys %$msg) {
 	   $msg->{$key} = Encode::decode("utf-8", $msg->{$key});
     	}
