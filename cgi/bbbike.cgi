@@ -7159,13 +7159,16 @@ sub header {
 	push @$head, 
 		cgilink({-rel  => 'search',
 		         -type => "application/opensearchdescription+xml",
-			 -href => "$opensearch_url/$city2-en.xml",
+			 -href => "$opensearch_url/$city2.en.xml",
 			 -title=> "$city2 (en)"});
+     
+        if ($local_lang ne 'en') {
 	push @$head, 
 		cgilink({-rel  => 'search',
 		         -type => "application/opensearchdescription+xml",
-			 -href => "$opensearch_url/$city2-de.xml",
-			 -title=> "$city2 (de)"});
+			 -href => "$opensearch_url/$city2.xml",
+			 -title=> "$city2 ($local_lang)"});
+	}
     }
 
     if ($enable_rss_feed) {
