@@ -7079,7 +7079,7 @@ sub header {
     my $from = delete $args{-from};
     if (!exists $args{-title}) {
         my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
-	$args{-title} = "BBBike \@ $city" . ($city ne $local_city_name ? " // $local_city_name" : "");
+	$args{-title} = "BBBike \@ " . ($city ne $local_city_name ? " $local_city_name // " : "") . $city;
 	$args{-title2} = "BBBike\@$local_city_name";
     }
 
