@@ -5716,7 +5716,8 @@ EOF
 	my @weather_coords = get_weather_coords();
    	if ($enable_current_weather && scalar(@weather_coords) > 0) {
 		my $weather_lang = &my_lang($lang);
-                my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
+                my $cityname = $local_city_name; #$osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
+		
 
 		print M("Wetter f&uuml;r"), "\n";
 		print qq{\n<span id="weather_forecast" />\n};
