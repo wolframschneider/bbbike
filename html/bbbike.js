@@ -179,7 +179,7 @@ function geoCity (obj) {
 	return;
     }
 
-    var url = 'cgi/location.cgi?lng=' + obj.lng + '&lat=' + obj.lat;
+    var url = '/cgi/location.cgi?lng=' + obj.lng + '&lat=' + obj.lat;
 	
     downloadUrl(url, function(data, responseCode) {
         if(responseCode == 200) {
