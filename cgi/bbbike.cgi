@@ -5273,7 +5273,7 @@ EOF
 		    if ($bbbike_script =~ m{^https?://[^.]+/}) { # local hostname?
 			$bbbike_script = $BBBike::BBBIKE_DIRECT_WWW;
 		    }
-		    my $href = 'http://www.gpsies.com/map.do?url=' . $bbbike_script . '?' . $qq2->query_string;
+		    my $href = 'http://www.gpsies.com/map.do?url=' . BBBikeCGIUtil::my_escapeHTML($qq2->url(-full=>1, -query=>1));
 		    print qq{<a title="upload route to GPSies.com" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com</a>};
 		}
 		if (0) { # XXX not yet
