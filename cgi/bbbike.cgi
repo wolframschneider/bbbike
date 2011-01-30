@@ -7151,9 +7151,7 @@ sub header {
 	}
 
     if ($enable_opensearch_plugin) {
-        my $opensearch_url = $q->url(-full=>0, -absolute=>1);
-	$opensearch_url =~ s,[^/]+/[^/]+$,,;
-        $opensearch_url .= 'osp';
+        my $opensearch_url = '/osp';
 
         my $city2 = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
 	push @$head, 
