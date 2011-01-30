@@ -36,7 +36,7 @@ use Karte::Polar;
 use Encode;
 
 ############################################################
-my $lang             = "de";
+my $lang             = "en";
 my $msg              = "";
 my $VERBOSE          = 1;
 my $with_lang_switch = 1;
