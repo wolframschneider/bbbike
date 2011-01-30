@@ -7172,7 +7172,7 @@ sub header {
 	push @$head, 
 		cgilink({-rel  => 'alternate',
 		         -type => 'application/atom+xml',
-			 -href => '../feed/bbbike-world.xml',
+			 -href => '/feed/bbbike-world.xml',
 			 -title=> 'BBBike @ World RSS feed'});
     }
 
