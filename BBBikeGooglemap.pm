@@ -249,7 +249,7 @@ sub get_html {
     my $city = $q->param('city') || "";
     my $gmap_api_version = $self->{gmap_api_version};
  
-    $lang = "de" if !$lang;
+    $lang = "en" if !$lang;
 
     my $html = <<EOF;
 <!-- BBBikeGooglemap starts here -->
