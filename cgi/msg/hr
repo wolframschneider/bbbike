@@ -1,5 +1,7 @@
 # -*- perl -*-
 return {
+   "Start- und Zielstra&szlig;e der Route ausw&auml;hlen" => "Odaberite Start i odredišni naziv ulice",
+   "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)" => "Molimo unesite početak i odredište naziv ulice <b>bez kućni broj</b>! Bit ćete upitani za križanju ulice na sljedećoj stranici",
 
     "Unterwegs mit" => "Na putu s",
     "Querformat"    => "Pejzaž",
@@ -33,8 +35,6 @@ return {
     "Bildgr&ouml;&szlig;e"      => "Karta veličine",
     "bei"                       => "u",
     "Karte zeigen"              => "Pokaži kartu",
-    "Start- und Zielstra&szlig;e der Route ausw&auml;hlen" =>
-      "Odaberite Start i odredišni naziv ulice",
     "bekannte"                             => "poznate",
     "S�dwest"                              => "South West",
     "Routenliste"                          => "Route List",
