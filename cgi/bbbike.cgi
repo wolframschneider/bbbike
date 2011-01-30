@@ -822,10 +822,12 @@ if ($lang ne "de") {
 sub M ($) {
     my $key = shift;
 
+
     my $text;
     if ($msg && exists $msg->{$key}) {
 	$text = $msg->{$key};
     } elsif ($msg_en && exists $msg_en->{$key}) {
+	warn "Unknown translation local lang $lang: $key\n";
 	$text = $msg_en->{$key};
     } else {
         warn "Unknown translation: $key\n" if $VERBOSE && $msg;
