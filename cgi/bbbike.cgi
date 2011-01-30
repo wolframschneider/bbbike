@@ -7338,7 +7338,7 @@ my $list_of_all_streets = window_open("$bbbike_script?all=1", "BBBikeAll",
                          "dependent,height=500,resizable," .
                          "screenX=500,screenY=30,scrollbars,width=250")
 	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $cityname : "") ."</a>";
-my $community_link = $lang eq 'en' ? '/community.html' : '/community.de.html';
+my $community_link = $lang eq 'de' ? '/community.de.html' : '/community.html';
 my $donate = M("spenden");
 
 my $s_copyright = <<EOF;
