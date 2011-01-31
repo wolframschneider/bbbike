@@ -360,19 +360,15 @@ function bbbike_maps_init (maptype, marker_list, lang) {
 // localized custom map names
 function translate_mapcontrol ( word, lang ) {
   var l = {
-   "en" : {
-      "mapnik" : "Mapnik",
-      "cycle" : "Cycle"
-   },
-   "de" : {
-      "mapnik" : "Mapnik",
-      "cycle" : "Fahrrad"
-   },
-   "hr" : { "cycle" : "Bicikl" },
    "da" : { "cycle" : "Cykel" },
+   "de" : { "mapnik" : "Mapnik", "cycle" : "Fahrrad" },
+   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle" },
+   "es" : { "cycle" : "Bicicletas" },
+   "fr" : { "cycle" : "Vélo" },
+   "hr" : { "cycle" : "Bicikl" },
    "nl" : { "cycle" : "Fiets" },
    "pl" : { "cycle" : "Rower" },
-   "fr" : { "cycle" : "Vélo" },
+   "pt" : { "cycle" : "Bicicleta" },
    "ru" : { "cycle" : "Велосипед" }
   };
 
