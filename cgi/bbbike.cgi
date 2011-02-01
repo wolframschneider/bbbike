@@ -740,7 +740,7 @@ $config_master = $ENV{'SCRIPT_NAME'};
 
 my $local_lang = "";
 my $selected_lang = "";
-my @supported_lang = qw/da de en es fr hr nl pl pt ru/;
+my @supported_lang = qw/da de en es fr hr nl pl pt ru zh/;
 
 { my $q = new CGI;
   my $path = $q->url(-full => 0, -absolute => 1);
