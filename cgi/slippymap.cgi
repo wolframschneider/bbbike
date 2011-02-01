@@ -72,7 +72,7 @@ sub run {
 
     {
         my $l = $q->param('lang') || "";
-        $lang = $l if grep { $l eq $_ } qw/da de en es fr hr nl pl pt ru/;
+        $lang = $l if grep { $l eq $_ } qw/da de en es fr hr nl pl pt ru zh/;
     }
 
     if ( $lang ne "" ) {
