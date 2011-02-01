@@ -504,7 +504,7 @@ push @temp_blocking,
          'text' => 'Weinmeisterstr. (Mitte) in Richtung Alexanderplatz gesperrt',
          'from' => undef,
          'id' => 1567,
-         'data' => '#: last_checked: 2010-11-19
+         'data' => '#: last_checked: 2011-01-27
 userdel	q4::inwork; 10350,13376 10527,13257
 ',
          'type' => 'gesperrt'
@@ -1042,16 +1042,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_013995',
-         'until' => 1296482400,
-         'text' => 'Freiheit/Wiesendamm (Spandau): Baustelle, Fahrtrichtung gesperrt, Richtung Spandauer Damm zwischen Klärwerkstr. und Spandauer Damm, 25.08.2009 07:04 Uhr bis 31.01.2011 15:00 Uhr ',
-         'from' => 1251090240,
-         'id' => 1850,
-         'data' => 'userdel	q4::inwork; -1258,13552 -990,13502 -729,13415 -346,13349 -307,13279 -264,13009
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1419,7 +1410,7 @@ userdel	q4::inwork; 12598,8390 12771,8439
        {
          'until' => undef,
          'permanent' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Januar von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Februar von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10640,8366 10598,8270 10575,8218
@@ -1726,26 +1717,26 @@ userdel	3 13150,7254 13047,7234 13034,7319
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_016826',
-         'until' => 1296060180,
-         'text' => 'Straße nach Fichtenau (Köpenick): Gefahrenstelle, Straße vollständig gesperrt in beiden Richtungen zwischen Alter Fischerweg und Fürstenwalder Allee, 14.01.2011 13:43 Uhr bis 26.01.2011 17:43 Uhr ',
-         'from' => 1294922580,
-         'id' => 2176,
-         'data' => 'userdel	2::inwork 29898,5149 29832,5065 29705,4987 29712,4548
-userdel	2::inwork 30041,5329 30074,5402
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'LS/S-SG33-W/11/013',
-         'until' => 1296255600,
-         'text' => 'Teupitz: L74: Überflutung der gesamten Fahrbahn zwischen Egsdorf und Teupitz, 18.01.2011 bis 28.01.2011 ',
-         'from' => 1295723276,
+         'until' => 1298934000,
+         'text' => 'Teupitz: L74: Überflutung der gesamten Fahrbahn zwischen Egsdorf und Teupitz, 18.01.2011 bis 28.02.2011 ',
+         'from' => 1296387720,
          'id' => 2177,
          'data' => 'userdel	2::inwork 23962,-30831 24550,-30862
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20110201.1500.329349.html',
+         'until' => 1300316399,
+         'text' => 'Dircksenstr., Rochstr., Rosa-Luxemburg-Str.: Behinderungen wegen Bauarbeiten und temporärer Einbahnstraßenregelung möglich, 02. Februar bis 16. März 2011 ',
+         'from' => 1296591853,
+         'id' => 2178,
+         'data' => 'userdel	q4::inwork 10755,13152 10706,13043 10595,13100 10635,13207
+',
+         'type' => 'handicap'
        }
      
 );

@@ -5,7 +5,7 @@
 #:
 # Die Sammlung hier ist bei weiten nicht vollständig und wird
 # nicht im BBBike-Routing verwendet.
-Weitlingstraße/Münsterlandplatz	Zs 16578,11015
+Weitlingstraße/Münsterlandplatz	Zs 16575,11028
 Grünberger Str. am Boxhagener Platz	Zs 14253,11779
 #: XXX im Luftbild aber nicht zu sehen:
 am U-Bhf. Friedrichsfelde is IMHO auch noch einer	Zs 17737,11384
@@ -341,7 +341,6 @@ Schloßstr./Neufertstr.	Zs 3058,12322
 Ulmenstr./Eichenstr.	Zs 22483,9045
 #: note: Luftbild
 Teltower Damm	Zs 852,2128
-#: XXX genaue Position?
 Friesenstr.	Zs 9800,8935
 #: note: public imagery
 Karlsruger Str.	Zs 2978,10369

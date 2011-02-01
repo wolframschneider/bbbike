@@ -3,6 +3,7 @@
 /.prove
 /BBBikeVar.tpl
 /ChangeLog
+/MYMETA.yml
 /Makefile
 /Makefile.old
 /blib
