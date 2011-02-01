@@ -369,7 +369,8 @@ function translate_mapcontrol ( word, lang ) {
    "nl" : { "cycle" : "Fiets" },
    "pl" : { "cycle" : "Rower" },
    "pt" : { "cycle" : "Bicicleta" },
-   "ru" : { "cycle" : "Велосипед" }
+   "ru" : { "cycle" : "Велосипед" },
+   "zh" : { "cycle" : "自行车" }
   };
 
   if (!lang) {
