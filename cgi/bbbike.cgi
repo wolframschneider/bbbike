@@ -7347,6 +7347,8 @@ my $list_of_all_streets = window_open("$bbbike_script?all=1", "BBBikeAll",
 	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $local_city_name : "") ."</a>";
 my $community_link = $lang eq 'de' ? '/community.de.html' : '/community.html';
 my $donate = M("spenden");
+my $livesearch = M("livesuche");
+my $permalink_msg = M("permalink");
 
 my $s_copyright = <<EOF;
 
@@ -7356,9 +7358,9 @@ my $s_copyright = <<EOF;
 <a href="/doc.html">help</a> |
 <a href="/app.html">app</a> |
 <a href="$community_link">$donate</a> |
-<a href="/cgi/livesearch.cgi">livesearch</a> |
+<a href="/cgi/livesearch.cgi">$livesearch</a> |
 $list_of_all_streets |
-<a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url2" style="display:none"> $permalink</span>
+<a href="#" onclick="togglePermaLinks(); return false;">$permalink_msg</a><span id="permalink_url2" style="display:none"> $permalink</span>
 </div>
 </div>
 <hr>
