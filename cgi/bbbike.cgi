@@ -789,6 +789,7 @@ $slippymap_zoom_maponly = 4 if $slippymap_zoom <= 0;
 $slippymap_zoom_city = 6 if $slippymap_zoom_city <= 0;
 
 my $local_city_name = "";
+my $en_city_name = "";
 if ($osm_data) {
     $datadir =~ m,data-osm/(.+),;
     my $city = $1;
@@ -798,6 +799,7 @@ if ($osm_data) {
     my $name = $geo->{city_names};
 
     $local_city_name = select_city_name($city, $name, $lang);
+    $en_city_name = select_city_name($city, $name, "en");
 
     unshift (@INC, "../data-osm/$city") if $city;
     require Karte::Polar;
@@ -7080,7 +7082,7 @@ sub header {
     my(%args) = @_;
     my $from = delete $args{-from};
     if (!exists $args{-title}) {
-        my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
+        my $city = $en_city_name || do { ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin' };
 	$args{-title} = "BBBike \@ " . ($city ne $local_city_name ? " $local_city_name // " : "") . $city;
 	$args{-title2} = "BBBike\@$local_city_name";
     }
