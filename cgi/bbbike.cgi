@@ -7242,7 +7242,7 @@ sub header {
 	
 	print $q->start_html
 	    (%args,
-	     -lang => 'de-DE',
+	     #-lang => 'de-DE',
 	     -BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 	     -meta=>{'keywords'=>'berlin fahrrad route bike karte suche cycling route routing routenplaner routenplanung fahrradroutenplaner radroutenplaner entfernungsrechner',
