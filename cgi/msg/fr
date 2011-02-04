@@ -207,4 +207,5 @@ return {
     "uk"    => "ukrainienne",
     "vi"    => "vietnamien",
 
+    'permalink' => 'permalien',
 };

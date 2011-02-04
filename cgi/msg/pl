@@ -212,4 +212,6 @@ return {
     "tr"    => "turecki",
     "uk"    => "ukraiński",
     "vi"    => "wietnamski",
+
+    'permalink' => 'odnośnik bezpośredni',
 };

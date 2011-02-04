@@ -219,4 +219,8 @@ return {
     "uk"    => "Ukrainian",
     "vi"    => "Vietnamese",
 
+    'livesuche' => 'livesearch',
+    'permalink' => 'permalink',
+
 };
+

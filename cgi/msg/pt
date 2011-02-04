@@ -212,4 +212,6 @@ return {
     "tr"    => "Turcos",
     "uk"    => "ucranianos",
     "vi"    => "vietnamita",
+
+    'permalink' => 'ligação permanente',
 };
