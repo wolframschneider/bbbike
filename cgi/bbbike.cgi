@@ -59,6 +59,8 @@ use File::Basename qw(dirname basename);
 use CGI;
 use CGI::Carp; # Nur zum Debuggen verwenden --- manche Web-Server machen bei den kleinsten Kleinigkeiten Probleme damit: qw(fatalsToBrowser);
 use BrowserInfo 1.47;
+use Encode;
+
 use strict;
 use vars qw($VERSION $VERBOSE $WAP_URL
 	    $debug $tmp_dir $mapdir_fs $mapdir_url $local_route_dir
@@ -7098,9 +7100,7 @@ sub header {
 			   -content => $lang ? $lang : "de"});
     if ($city eq 'Berlin_DE') {
 	push @$head, $q->meta({-name => "description",
-			       -content => ($lang eq 'en'
-					    ? 'BBBike @ World is a route planner for cyclists based on OpenStreetMap data.'
-					    : 'BBBike ist ein Fahrradroutenplaner mit OpenStreetMap Daten.')
+			       -content => M('BBBike ist ein Fahrradroutenplaner mit OpenStreetMap Daten.')
 			      });
     }
     #push @$head, $q->meta({-name => 'DC.title',

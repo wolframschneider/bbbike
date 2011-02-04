@@ -222,5 +222,7 @@ return {
     'livesuche' => 'livesearch',
     'permalink' => 'permalink',
 
+    'BBBike ist ein Fahrradroutenplaner mit OpenStreetMap Daten.' => 'BBBike @ World is a route planner for cyclists based on OpenStreetMap data.',
+
 };
 
