@@ -85,7 +85,7 @@ sub output {
 	$city = $1;
     }
 
-    my $title = "BBBike.org$url ";
+    my $title = "BBBike.org$url";
     $title .= " // " . $out->{City_en} if $city && $city ne $out->{City_en};
 
     $page->stringc($font, 24, $page_width/2, $y, $title ); $y -= 24+3;
