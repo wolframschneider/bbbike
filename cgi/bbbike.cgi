@@ -2071,8 +2071,8 @@ EOF
 	    $url =~ s,^/\w\w/,/m/, || $url =~ s,/,/m/,;
 
 	    my $class = $q->user_agent =~ /iPhone|Android|iPod|Nokia|Symbian|BlackBerry|SonyEricsson|Samsung/ ? "mobile_link_mobile" : "mobile_link";
-	    print qq{<a style="border:0px;" href="http://twitter.com/BBBikeWorld/"><img width="16" height="16" style="border:0px;" src="/images/twitter-t.png" title="Follow us on twitter.com/BBBikeWorld"></img></a>\n};
-	    print qq{<a class="$class" href="$url" title="}, M("BBBike for mobile devices"), qq{">[}, M("mobil"), qq{]</a>\n};
+	    print qq{<a href="http://twitter.com/BBBikeWorld/"><img class="logo" width="16" height="16" src="/images/twitter-t.png" title="Follow us on twitter.com/BBBikeWorld"></img></a>\n};
+	    print qq{<a class="$class" href="$url" title="}, M("BBBike for mobile devices"), qq{"><img class="logo" width="16" height="16" src="/images/phone.png"></img>[}, M("mobil"), qq{]</a>\n};
         }
 	print qq{</span>\n};
 

@@ -270,3 +270,6 @@ span#current_weather { padding-right: 1em; font-size: normal; }
 
 span#language_switch { font-size: small; }
 
+img.logo { border: 0px; }
+a.logo { border: 0px; }
+
