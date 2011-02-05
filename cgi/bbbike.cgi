@@ -119,6 +119,8 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $gmap_api_version
 	    $enable_current_postion
 	    $enable_weather_forecast
+	    $enable_facebook_t_link
+	    $enable_twitter_t_link
 	   );
 
 $gmap_api_version = 3;
@@ -2071,7 +2073,8 @@ EOF
 	    $url =~ s,^/\w\w/,/m/, || $url =~ s,/,/m/,;
 
 	    my $class = $q->user_agent =~ /iPhone|Android|iPod|Nokia|Symbian|BlackBerry|SonyEricsson|Samsung/ ? "mobile_link_mobile" : "mobile_link";
-	    print qq{<a href="http://twitter.com/BBBikeWorld/"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n};
+	    print qq{<a href="http://facebook.com/"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="BBBike on Facebook"></a>\n} if $enable_facebook_t_link;
+	    print qq{<a href="http://twitter.com/BBBikeWorld/"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n} if $enable_twitter_t_link;
 	    print qq{<a class="$class" href="$url" title="}, M("BBBike for mobile devices"), qq{"><img class="logo" width="16" height="16" alt="" src="/images/phone.png">[}, M("mobil"), qq{]</a>\n};
         }
 	print qq{</span>\n};
