@@ -2071,7 +2071,7 @@ EOF
 	    $url =~ s,^/\w\w/,/m/, || $url =~ s,/,/m/,;
 
 	    my $class = $q->user_agent =~ /iPhone|Android|iPod|Nokia|Symbian|BlackBerry|SonyEricsson|Samsung/ ? "mobile_link_mobile" : "mobile_link";
-	    print qq{<a class="$class" href="$url">[mobile]</a>\n};
+	    print qq{<a class="$class" href="$url">[}, M("mobil"), qq{]</a>\n};
         }
 	print qq{</span>\n};
 
@@ -7349,14 +7349,17 @@ my $community_link = $lang eq 'de' ? '/community.de.html' : '/community.html';
 my $donate = M("spenden");
 my $livesearch = M("livesuche");
 my $permalink_msg = M("permalink");
+my $app = M("app");
+my $help = M("hilfe");
+my $mobile = M("mobile");
 
 my $s_copyright = <<EOF;
 
 <div id="footer">
 <div id="footer_top">
 <a href="/">home</a> |
-<a href="/doc.html">help</a> |
-<a href="/app.html">app</a> |
+<a href="/doc.html">$help</a> |
+<a href="/app.html">$app</a> |
 <a href="$community_link">$donate</a> |
 <a href="/cgi/livesearch.cgi">$livesearch</a> |
 $list_of_all_streets |
