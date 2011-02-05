@@ -13,6 +13,7 @@
 #
 
 package Route::PDF;
+use Encode;
 
 use strict;
 use vars qw($VERSION);
@@ -159,6 +160,12 @@ use vars qw($unidecode_warning);
 # Note: also used by BBBikeDraw::PDF:
 sub _unidecode_string {
     my($str) = @_;
+
+    # check unicode before calling Text::Unidecode
+    if (!Encode::is_utf8($str)) {
+	eval { $str = Encode::decode("utf8", $str, Encode::FB_QUIET); };
+    }
+
     if (grep { ord($_) > 255 } split //, $str) {
 	if (!eval { require Text::Unidecode; 1 }) {
 	    if (!$unidecode_warning++) {
