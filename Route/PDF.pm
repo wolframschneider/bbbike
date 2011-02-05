@@ -78,7 +78,8 @@ sub output {
     my $start_y = $page_height-80;
     my $y = $start_y;
 
-    $page->stringc($font, 24, $page_width/2, $y, "BBBike"); $y -= 24+3;
+    $page->stringc($font, 24, $page_width/2, $y, qq{BBBike.org}); $y -= 24+3;
+
     if ($out->{Title}) {
 	my $title = _unidecode_string($out->{Title});
 	my $font_size = 18;
