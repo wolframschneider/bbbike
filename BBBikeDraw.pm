@@ -70,6 +70,9 @@ sub new {
     $self->{Compress}  = delete $args{Compress};
     $self->{Lang}      = delete $args{Lang};
     $self->{Geo}       = delete $args{Geo};
+    $self->{Url}      = delete $args{Url};
+    $self->{City_local}      = delete $args{City_local};
+    $self->{City_en}      = delete $args{City_en};
 
     delete $args{"lang"};
 

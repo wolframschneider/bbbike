@@ -6047,6 +6047,7 @@ sub draw_route {
 	local $SIG{'__DIE__'};
 	require BBBikeDraw;
 	BBBikeDraw->VERSION(2.26);
+
 	# Auch hier sieht dunkler besser aus:
 	$draw = BBBikeDraw->new_from_cgi($q,
 					 MakeNet => \&make_netz,
@@ -6081,7 +6082,10 @@ sub draw_route {
     $draw->draw_wind   if $draw->can("draw_wind");
     $draw->draw_route  if $draw->can("draw_route");
     $draw->add_route_descr(-net => make_netz(),
-			   -lang => $lang)
+			   -lang => $lang, 
+			   -Url => $q->url(-full=>0, -absolute=>1, -query=>0), 
+			   -City_local => $local_city_name, 
+			   -City_en => $en_city_name)
 	if $draw->can("add_route_descr");
     $draw->flush;
 }

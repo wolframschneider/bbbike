@@ -96,7 +96,8 @@ sub init {
 			     );
 
     $pdf->new_outline('Title' => (defined $self->{Lang} && $self->{Lang} eq 'de' ? 'Karte' : 'map'),
-		      'Destination' => $page);
+		      'Destination' => $page,
+		      );
 
     $self->{PDF}      = $pdf;
     $self->{PageBBox} = $page_bbox;
@@ -855,6 +856,9 @@ sub add_route_descr {
 	     -net => $net,
 	     -route => Route->new_from_realcoords(\@c),
 	     -lang => $args{'-lang'},
+	     -Url => $args{'-Url'},
+	     -City_local => $args{'-City_local'},
+	     -City_en => $args{'-City_en'},
 	    );
 }
 

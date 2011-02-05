@@ -87,6 +87,9 @@ sub convert {
     my $zielhnr  = delete $args{-zielhnr};
     my $verbose  = delete $args{-verbose};
     my $lang  = delete $args{-lang};
+    my $url  = delete $args{-Url};
+    my $city_local  = delete $args{-City_local};
+    my $city_en  = delete $args{-City_en};
 
     if (keys %args) {
 	die "Invalid argument to outout method";
@@ -183,6 +186,9 @@ sub convert {
 	my $entf = sprintf "%s %.2f km", M("nach"), $next_entf/1000;
 	$ret{Footer} = [$entf, "", M("angekommen")."!", $ges_entf_s];
     }
+    $ret{Url} = $url;
+    $ret{City_local} = $city_local;
+    $ret{City_en} = $city_en;
 
     \%ret;
 }

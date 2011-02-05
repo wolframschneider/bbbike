@@ -71,14 +71,24 @@ sub output {
     my($page_width, $page_height);
     (undef, undef, $page_width, $page_height) = @{$pdf->get_page_size("a4")};
     my $page = $pdf->new_page;
-    $pdf->new_outline('Title' => &Route::Descr::M('Routenliste'),
+    $pdf->new_outline('Title' => _unidecode_string(&Route::Descr::M('Routenliste')),
 		      'Destination' => $page);
     my $font = $self->{NormalFont};
     my $bold_font = $self->{BoldFont};
     my $start_y = $page_height-80;
     my $y = $start_y;
 
-    $page->stringc($font, 24, $page_width/2, $y, qq{BBBike.org}); $y -= 24+3;
+    my $url = $out->{Url};
+    $url =~ s,/+$,,;
+    my $city;
+    if ($url =~ m,/([^/]+)$,) {
+	$city = $1;
+    }
+
+    my $title = "BBBike.org$url ";
+    $title .= " // " . $out->{City_en} if $city && $city ne $out->{City_en};
+
+    $page->stringc($font, 24, $page_width/2, $y, $title ); $y -= 24+3;
 
     if ($out->{Title}) {
 	my $title = _unidecode_string($out->{Title});
