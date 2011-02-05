@@ -95,7 +95,7 @@ sub init {
 			      (defined $rotate ? ('Rotate' => $rotate) : ()),
 			     );
 
-    $pdf->new_outline('Title' => (defined $self->{Lang} && $self->{Lang} eq 'en' ? 'map' : 'Karte'),
+    $pdf->new_outline('Title' => (defined $self->{Lang} && $self->{Lang} eq 'de' ? 'Karte' : 'map'),
 		      'Destination' => $page);
 
     $self->{PDF}      = $pdf;
