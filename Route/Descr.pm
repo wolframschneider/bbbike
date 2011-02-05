@@ -111,6 +111,11 @@ sub convert {
     $VERBOSE = $verbose if defined $verbose;
     &init_msg($lang) if $lang;
 
+    # if no translation is available, fall back to english
+    if ($lang && $lang ne 'en' && $lang ne 'de' && !$msg) {
+	&init_msg("en");
+    }
+
     my(@strnames) = $net->route_to_name($r->path);
     if (!defined $startname) {
 	$startname = $strnames[0]->[0];
