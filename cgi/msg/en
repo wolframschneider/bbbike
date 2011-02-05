@@ -226,6 +226,8 @@ return {
     'hilfe'                                                       => 'help',
     'app'                                                         => 'app',
     'mobil'                                                       => 'mobile',
+    "BBBike for mobile devices"                                   => "BBBike for mobile devices",
+    "BBBike in classic view"                                      => "BBBike in classic view",
 
 };
 

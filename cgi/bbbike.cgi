@@ -2065,13 +2065,13 @@ EOF
 	if (is_mobile($q)) {
 	    my $url = $q->url(-full=>0, -absolute=>1);
 	    $url =~ s,^/m/,/,;
-	    print qq{<a href="$url">[classic view]</a>\n};
+	    print qq{<a href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
         } else {
 	    my $url = $q->url(-full=>0, -absolute => 1);
 	    $url =~ s,^/\w\w/,/m/, || $url =~ s,/,/m/,;
 
 	    my $class = $q->user_agent =~ /iPhone|Android|iPod|Nokia|Symbian|BlackBerry|SonyEricsson|Samsung/ ? "mobile_link_mobile" : "mobile_link";
-	    print qq{<a class="$class" href="$url">[}, M("mobil"), qq{]</a>\n};
+	    print qq{<a class="$class" href="$url" title="}, M("BBBike for mobile devices"), qq{">[}, M("mobil"), qq{]</a>\n};
         }
 	print qq{</span>\n};
 
@@ -7377,7 +7377,7 @@ $list_of_all_streets |
   Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br >
 <div id="footer_community">
   <a href="$community_link"><img src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
-  <a href="$community_link"><img style="border:0px;" src="/images/tweetn.png" title="Follow us on Twitter" alt=""></a>
+  <a href="$community_link"><img style="border:0px;" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
 </div>
 </div>
 
