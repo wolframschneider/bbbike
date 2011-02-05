@@ -30,7 +30,13 @@ my $msg;
 #
 # Currently it is using the message file living under cgi/msg
 #
-sub M ($) {
+our $unidecode;
+
+sub M {
+    return &unidecode(M2(shift));
+}
+
+sub M2 ($) {
     my $phrase = shift;
 
     #  config error?
@@ -46,6 +52,13 @@ sub M ($) {
     warn "Unknown translation: $phrase\n" if $VERBOSE;
     return $phrase;  
 }
+
+sub unidecode {
+   my $string = shift;
+
+   return $unidecode ? &$unidecode($string) : $string;
+}
+
 
 sub init_msg {
     my $lang = shift;
@@ -90,6 +103,7 @@ sub convert {
     my $url  = delete $args{-Url};
     my $city_local  = delete $args{-City_local};
     my $city_en  = delete $args{-City_en};
+    $unidecode  = delete $args{unidecode};
 
     if (keys %args) {
 	die "Invalid argument to outout method";

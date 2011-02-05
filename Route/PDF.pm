@@ -64,7 +64,7 @@ sub output {
     require Route::Descr;
 
     my(%args) = @_;
-    my $out = Route::Descr::convert(%args);
+    my $out = Route::Descr::convert(%args, 'unidecode' => \&_unidecode_string);
 
     $self->allocate_fonts;
     my $pdf = $self->{PDF};
