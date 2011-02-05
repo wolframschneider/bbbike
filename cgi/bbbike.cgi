@@ -5251,7 +5251,7 @@ EOF
 #		    }
 		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">PalmDoc</a>};
 		}
-	        print qq{\n<a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">PDF</a></span>\n};
+	        print qq{\n<span><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">PDF</a></span>\n};
 		if ($can_gpx) {
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
@@ -5719,7 +5719,7 @@ EOF
     }
 
     if ($enable_weather_forecast) {
-	print qq{\n<div id="weather_forecast_html" />\n};
+	print qq{\n<div id="weather_forecast_html">\n};
 	my @weather_coords = get_weather_coords();
    	if ($enable_current_weather && scalar(@weather_coords) > 0) {
 		my $weather_lang = &my_lang($lang);
@@ -5727,7 +5727,7 @@ EOF
 		
 
 		print M("Wetter f&uuml;r"), "\n";
-		print qq{\n<span id="weather_forecast" />\n};
+		print qq{\n<span id="weather_forecast">\n};
 print <<EOF;
 <script type="text/javascript">
    display_current_weather( { lat:"$weather_coords[0]", lng:"$weather_coords[1]", lang:"$weather_lang", city:"$cityname"} );
@@ -5736,7 +5736,7 @@ EOF
 		print qq{</span>\n};
         }
 	print qq{</div>\n};
-	print qq{<hr style="clear:left;"/>\n};
+	print qq{<hr style="clear:left;">\n};
     } 
 
     elsif (@weather_res) {
