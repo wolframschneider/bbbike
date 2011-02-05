@@ -7244,11 +7244,11 @@ sub header {
 
     if (!$smallform) {
 
-	
+	my $title2 = delete $args{-title2};	
 	print $q->start_html
 	    (%args,
 	     #-lang => 'de-DE',
-	     -BGCOLOR => '#ffffff',
+	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 	     -meta=>{'keywords'=>'berlin fahrrad route bike karte suche cycling route routing routenplaner routenplanung fahrradroutenplaner radroutenplaner entfernungsrechner',
 		     'copyright'=>'(c) 1998-2011 Slaven Rezic',
@@ -7264,7 +7264,7 @@ sub header {
 	    print "<img alt=\"\" src=\"$bbbike_images/srtbike.gif\" hspace=10>";
 	} else {
 	    my $use_css = !$bi->{'css_buggy'};
-	    my $title = $args{-title2};
+	    my $title = $title2;
 	    if ($is_beta) {
 		$title = "BB<span style='font-style:italic;'>&#x03B2;</span>ike</a>";
 	    }
