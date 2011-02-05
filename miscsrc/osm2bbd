@@ -50,6 +50,7 @@ my $debug = 1; # 0: quiet, 1: normal, 2: verbose
 my $ignore_unhandled;
 my $ignore_underline;
 
+my $nodate;
 my $map;
 my $center;
 my $center_delta;
@@ -113,6 +114,7 @@ GetOptions("o=s" => \$o,
 	   "parsefor=s" => \$parsefor,
 	   "country=s" => \$country,
 	   "lang=s" => \$lang,
+	   "nodate" => \$nodate,
 	   "splitlonglines!" => \$splitlonglines,
 	   "xmlparser=s" => \$xmlparser,
 	   "ignore-unhandled!" => \$ignore_unhandled,
@@ -1854,6 +1856,7 @@ EOF
 EOF
     }
 my $isodate = epoch2isodatez;
+$isodate = 'fixed' if $nodate;
 print $ofh <<EOF;
 #:date: $isodate
 EOF
