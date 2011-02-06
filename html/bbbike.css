@@ -249,6 +249,13 @@ div#BBBikeGooglemap {
 //min-height: 300px;
 }
 
+div#chart_div {
+	witdh: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	height: 120px;
+}
+
 div#footer { top: 0.7em; }
 div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
 
