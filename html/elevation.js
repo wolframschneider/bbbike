@@ -120,8 +120,12 @@
     
     polyline = new google.maps.Polyline({
       path: path,
-      strokeColor: "#000000",
-      map: map});
+      clickable: true,
+      strokeColor: '#ff0000',
+      strokeWeight: 18, 
+      strokeOpacity: 0.6, 
+      map: map
+    });
     
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Sample');
