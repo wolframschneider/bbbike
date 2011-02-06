@@ -332,7 +332,7 @@ EOF
 EOF
     }
 
-    $html .= "// " . scalar(@{$route}), "\n";
+    $html .= "// " . scalar( @{$route} ), "\n";
 
     $html .= <<EOF;
    
