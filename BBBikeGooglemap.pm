@@ -281,7 +281,7 @@ sub get_html {
 <style type="text/css">
 div#BBBikeGooglemap { 
 	width: 90%; 
-	height: 100%; 
+	height: 80%; 
 	margin-left: 5%; 
 	margin-right: 5%; 
 	padding: 0em; 
