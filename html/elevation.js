@@ -9,7 +9,9 @@
 //
 // list of points in a route
 //   var marker_list = [ [47.53301,7.59612], [47.53297,7.59599], [47.53268,7.59506], ... ] 
-
+// the global map
+//   var map;
+//
 */
 
   // var map = null;
@@ -24,7 +26,7 @@
   var polyline = null;
   var elevations = null;
   
-  var SAMPLES = 500;
+  var SAMPLES = 400;
 
   var examples = [{
     // Challenger Deep
@@ -106,8 +108,10 @@
   // Takes an array of ElevationResult objects, draws the path on the map
   // and plots the elevation profile on a GViz ColumnChart
   function plotElevation(results) {
-    if (results == null)
-	return;
+    if (results == null) {
+	alert("Sorry, no elevation results are available. Plot the route only.");
+        return plotRouteOnly();
+    }
 
     elevations = results;
     
@@ -145,7 +149,30 @@
       focusBorderColor: '#00ff00'
     });
   }
-  
+
+  // fallback, plot only the  route without elevation 
+  function plotRouteOnly () {
+    var path = [];
+    for (var i in marker_list ) {
+	path.push( new google.maps.LatLng ( marker_list[i][0], marker_list[i][1] ));
+    }
+
+    polyline = new google.maps.Polyline({
+      path: path,
+      clickable: true,
+      strokeColor: '#ff0000',
+      strokeWeight: 18, 
+      strokeOpacity: 0.6, 
+      map: map
+    });
+  }
+
+  /*    
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Sample');
+    data.addColumn('number', 'Elevation');
+  */
+
   // Remove the green rollover marker when the mouse leaves the chart
   function clearMouseMarker() {
     if (mousemarker != null) {
@@ -178,10 +205,18 @@
   // Trigger the elevation query for point to point
   // or submit a directions request for the path between points
   function updateElevation() {
+
     if (markers.length > 1) {
         var latlngs = [];
+
+	// only 500 elevation points can be showed
+	// skip every second/third/fourth etc. if there are more
+        var select = parseInt ((markers.length + SAMPLES) / SAMPLES);
+
         for (var i in markers) {
-           latlngs.push(markers[i].getPosition())
+	   if (i % select == 0) {
+              latlngs.push(markers[i].getPosition())
+	   }
         }
 
         elevationService.getElevationAlongPath({
