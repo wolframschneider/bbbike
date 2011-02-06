@@ -40,7 +40,7 @@ sub new { bless {}, shift }
 my $force_utf8 = 1;
 
 sub run {
-    my ($self, $q, $gmap_api_version, $lang) = @_;
+    my ($self, $q, $gmap_api_version, $lang, $fullscreen) = @_;
 
     my $city = $q->param('city') || "";
     if ($city) {
@@ -138,7 +138,7 @@ sub run {
     binmode( \*STDERR, ":utf8" ) if $force_utf8;
 
     print $self->get_html( \@polylines_polar, \@polylines_polar_feeble, \@wpt,
-        $zoom, $center, $q, $lang );
+        $zoom, $center, $q, $lang, $fullscreen );
 }
 
 sub bbbike_converter {
@@ -150,7 +150,7 @@ sub bbbike_converter {
 sub polar_converter { @_[ 0, 1 ] }
 
 sub get_html {
-    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center, $q, $lang ) = @_;
+    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center, $q, $lang, $fullscreen ) = @_;
 
     my $converter   = $self->{converter};
     my $coordsystem = $self->{coordsystem};
@@ -251,7 +251,24 @@ sub get_html {
  
     $lang = "en" if !$lang;
 
-    my $html = <<EOF;
+    my $html;
+   
+    if ($fullscreen) {
+	$html = <<EOF; 
+<style type="text/css">
+div#BBBikeGooglemap { 
+	width: 90%; 
+	height: 100%; 
+	margin-left: 5%; 
+	margin-right: 5%; 
+	padding: 0em; 
+        top: 0em; 
+}
+</style>
+EOF
+     }
+
+     $html .= <<EOF;
 <!-- BBBikeGooglemap starts here -->
 <div id="BBBikeGooglemap" $slippymap_size>
 EOF
