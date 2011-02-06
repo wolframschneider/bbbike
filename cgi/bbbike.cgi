@@ -5234,7 +5234,10 @@ EOF
 		if ($has_fragezeichen_routelist && !$printmode) {
 		    $cols++;
 		}
+
 		print qq{$cols" style="background-color:white; text-align:right;">};
+
+
 		print
 		    "<a style='padding:0 0.2cm 0 0.2cm;' title='" . M("Druckvorlage normal") . "' target=printwindow href=\"$bbbike_script?" . $qq_normal->query_string . "\">" .
 		    "<img src=\"$bbbike_images/printer.gif\" " .
@@ -5286,6 +5289,8 @@ EOF
 		    my $href = 'http://www.gpsies.com/map.do?url=' . BBBikeCGIUtil::my_escapeHTML($qq2->url(-full=>1, -query=>1));
 		    print qq{<a title="upload route to GPSies.com" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com</a>};
 		}
+		print qq{<a href="http://www.facebook.com/pages/BBBike/179755905394369" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>\n};
+
 		if (0) { # XXX not yet
 		    my $qq2 = CGI->new({});
 		    $qq2->param("query", $q->query_string);
@@ -7382,7 +7387,7 @@ $list_of_all_streets |
 <div id="footer_community">
   <a href="$community_link"><img src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
   <a href="$community_link"><img style="border:0px;" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
-  <a href="http://www.facebook.com/pages/BBBike/179755905394369" target="_new"><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook" /></a>
+  <a href="http://www.facebook.com/pages/BBBike/179755905394369" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>
 </div>
 </div>
 
