@@ -5367,7 +5367,7 @@ EOF
 	    }
 
             my $smu = $slippymap_url->url(-query=>1, -relative=>1);
-            $smu =~ s/.*?\?//;
+           $smu =~ s/.*?\?//;
 
 	    print <<EOF;
 <script type="text/javascript"> 
@@ -5386,8 +5386,10 @@ EOF
 	    }
 	    print $q->hidden('map_menu', "0");
 	    print $q->end_form;
+        }
 	    print qq{\n</span><!-- slippymap_span1 -->\n};
 
+	if (!$gmapsv3) {
 	    print qq{<span id="slippymap_span2">\n};
 	    print $q->start_form(-method=>"POST", -name => "slippymapFormExternal", -target => "_new", -action => "/cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords/) {
