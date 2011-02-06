@@ -294,8 +294,16 @@ function bbbike_maps_init (maptype, marker_list, lang) {
 	var r = [];
 
     	for (var i = 0; i < street.length; i++) {
-	    var coords = street[i].split(",");
-	    r.push(new google.maps.LatLng(coords[1], coords[0]));
+            //  string: '23.3529099,42.6708386'
+	    if (typeof street[i] == 'string') {
+	       var coords = street[i].split(",");
+	       r.push(new google.maps.LatLng(coords[1], coords[0]));
+	    } 
+
+	    // array: [lat,lng] 
+	    else { 
+	       r.push(new google.maps.LatLng( street[i][1], street[i][0] ));
+	    }
 	}
 	var color = "#" + parseInt( Math.random() * 16).toString(16) + parseInt( Math.random() * 16).toString(16) + parseInt( Math.random() * 16).toString(16);
 
