@@ -184,7 +184,7 @@ sub get_html {
         next if $c !~ /,/;
 
         my ( $y, $x ) = split( /,/, $c );
-        $route_list .= qq/'$x,$y', /;
+        $route_list .= qq/[$x,$y], /;
     }
     $route_list =~ s/,\s*$//;
 
@@ -307,6 +307,8 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     <div id="nomap_script">
     <script type="text/javascript">
     //<![CDATA[
+
+    var marker_list = [ $route_list ];
 
     city = "$city";
     bbbike_maps_init("default", $marker_list, "$lang" );

@@ -7249,8 +7249,11 @@ sub header {
             my $my_lang = &my_lang($lang);
 	    my $sensor = is_mobile($q) ? 'true' : 'false';
 	push(@$head, qq|\
+<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=$sensor&amp;language=$my_lang"></script>
-<script src="/html/maps3.js" type="text/javascript"></script>|);
+<script src="/html/maps3.js" type="text/javascript"></script>
+<script src="/html/elevation.js" type="text/javascript"></script> 
+|);
 	}
 
     }
