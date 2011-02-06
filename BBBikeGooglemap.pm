@@ -40,7 +40,14 @@ sub new { bless {}, shift }
 my $force_utf8 = 1;
 
 sub run {
-    my ($self, $q, $gmap_api_version, $lang, $fullscreen) = @_;
+    #my ($self, $q, $gmap_api_version, $lang, $fullscreen) = @_;
+    my $self = shift;
+    my %args = @_;
+
+    my $q = $args{'q'};
+    my $gmap_api_version = $args{'gmap_api_version'};
+    my $lang = $args{'lang'};
+    my $fullscreen = $args{'fullscreen'};
 
     my $city = $q->param('city') || "";
     if ($city) {

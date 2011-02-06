@@ -2671,7 +2671,7 @@ EOF
 		use BBBikeGooglemap;
 
 	        my $maps = BBBikeGooglemap->new();
-	        $maps->run(CGI->new( "$smu"), $gmap_api_version, &my_lang($lang) );
+	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang) );
 	    }
 
 if ($enable_homemap_streets) {
@@ -5424,7 +5424,7 @@ EOF
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 		} else {
 		   my $maps = BBBikeGooglemap->new();
-                   $maps->run(CGI->new( "$smu"), $gmap_api_version, &my_lang($lang), 1 );
+                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1 );
 		}
 	    }
 
