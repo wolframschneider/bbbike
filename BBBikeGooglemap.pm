@@ -76,9 +76,11 @@ sub run {
     my $filename = param("gpxfile");
 
     for my $def (
-        [ 'coords',      \@polylines_route ],
+        [ 'coords', \@polylines_route ],
+
         #[ 'city_center', \@polylines_polar ],
-        [ 'area',        \@polylines_polar ],
+        [ 'area', \@polylines_polar ],
+
         #[ 'oldcoords',   \@polylines_polar_feeble ],
       )
     {
@@ -146,8 +148,8 @@ sub run {
     binmode( \*STDOUT, ":utf8" ) if $force_utf8;
     binmode( \*STDERR, ":utf8" ) if $force_utf8;
 
-    print $self->get_html( \@polylines_polar, \@polylines_route, \@wpt,
-        $zoom, $center, $q, $lang, $fullscreen );
+    print $self->get_html( \@polylines_polar, \@polylines_route, \@wpt, $zoom,
+        $center, $q, $lang, $fullscreen );
 }
 
 sub bbbike_converter {
@@ -159,16 +161,17 @@ sub bbbike_converter {
 sub polar_converter { @_[ 0, 1 ] }
 
 sub get_html {
-    my ( $self, $paths_polar, $paths_route, $wpts, $zoom, $center, $q,
-        $lang, $fullscreen )
-      = @_;
+    my (
+        $self,   $paths_polar, $paths_route, $wpts, $zoom,
+        $center, $q,           $lang,        $fullscreen
+    ) = @_;
 
     my $converter   = $self->{converter};
     my $coordsystem = $self->{coordsystem};
 
     use Data::Dumper;
     my $coords = $$paths_polar[0];
-    my $route = $$paths_route[0];
+    my $route  = $$paths_route[0];
 
     my $marker_list = '[';
     foreach my $c ( @{$coords} ) {
@@ -272,10 +275,10 @@ sub get_html {
 
     $lang = "en" if !$lang;
 
-    my $startname = Encode::decode( utf8 => $q->param('startname') );
-    my $zielname =  Encode::decode( utf8 => $q->param('zielname') );
-    my $driving_time =  Encode::decode( utf8 => $q->param('driving_time') );
-    my $route_length =  Encode::decode( utf8 => $q->param('route_length') );
+    my $startname    = Encode::decode( utf8 => $q->param('startname') );
+    my $zielname     = Encode::decode( utf8 => $q->param('zielname') );
+    my $driving_time = Encode::decode( utf8 => $q->param('driving_time') );
+    my $route_length = Encode::decode( utf8 => $q->param('route_length') );
 
     my $html;
 
@@ -304,7 +307,6 @@ EOF
 qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </script>\n}
       if $gmap_api_version == 2;
 
-
     $html .= <<EOF;
 
     <div id="map"></div>
@@ -322,7 +324,6 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     elevation_initialize(map, {"driving_time":"$driving_time", "area":$marker_list, "lang":"$lang",
 				"route_length":"$route_length", "city":"$city", "startname":"$startname", "zielname": "$zielname"});
 EOF
-
 
     $html .= <<EOF;
    
