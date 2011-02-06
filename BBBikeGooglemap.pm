@@ -40,14 +40,15 @@ sub new { bless {}, shift }
 my $force_utf8 = 1;
 
 sub run {
+
     #my ($self, $q, $gmap_api_version, $lang, $fullscreen) = @_;
     my $self = shift;
     my %args = @_;
 
-    my $q = $args{'q'};
+    my $q                = $args{'q'};
     my $gmap_api_version = $args{'gmap_api_version'};
-    my $lang = $args{'lang'};
-    my $fullscreen = $args{'fullscreen'};
+    my $lang             = $args{'lang'};
+    my $fullscreen       = $args{'fullscreen'};
 
     my $city = $q->param('city') || "";
     if ($city) {
@@ -157,7 +158,9 @@ sub bbbike_converter {
 sub polar_converter { @_[ 0, 1 ] }
 
 sub get_html {
-    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center, $q, $lang, $fullscreen ) = @_;
+    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center, $q,
+        $lang, $fullscreen )
+      = @_;
 
     my $converter   = $self->{converter};
     my $coordsystem = $self->{coordsystem};
@@ -247,21 +250,21 @@ sub get_html {
     my $script;
     my $slippymap_size = "";
 
-    if ($q->user_agent("XXXiPhone")) {
-	#$slippymap_size = qq{ style="width:240px; height:240px; "};
-	$slippymap_size = qq{ style="display:none"};
-    }
+    if ( $q->user_agent("XXXiPhone") ) {
 
+        #$slippymap_size = qq{ style="width:240px; height:240px; "};
+        $slippymap_size = qq{ style="display:none"};
+    }
 
     my $city = $q->param('city') || "";
     my $gmap_api_version = $self->{gmap_api_version};
- 
+
     $lang = "en" if !$lang;
 
     my $html;
-   
+
     if ($fullscreen) {
-	$html = <<EOF; 
+        $html = <<EOF;
 <style type="text/css">
 div#BBBikeGooglemap { 
 	width: 90%; 
@@ -273,15 +276,17 @@ div#BBBikeGooglemap {
 }
 </style>
 EOF
-     }
+    }
 
-     $html .= <<EOF;
+    $html .= <<EOF;
 <!-- BBBikeGooglemap starts here -->
 <div id="BBBikeGooglemap" $slippymap_size>
 EOF
 
-    $html .=  qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </script>\n} if $gmap_api_version == 2;
-$html .= <<EOF;
+    $html .=
+qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </script>\n}
+      if $gmap_api_version == 2;
+    $html .= <<EOF;
 
     <div id="map"></div>
     <div id="nomap_script">
