@@ -3,6 +3,13 @@
 
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+//////////////////////////////////////////////////
+// external variables
+//
+// list of points in a route
+//   var marker_list = [ [47.53301,7.59612], [47.53297,7.59599], [47.53268,7.59506], ... ] 
+
 */
 
   var map = null;
