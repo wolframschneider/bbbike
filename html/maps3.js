@@ -77,7 +77,7 @@ function bbbike_maps_init (maptype, marker_list, lang) {
 
     if (1 || GBrowserIsCompatible() ) {
 
-        map = new google.maps.Map(document.getElementById("map") );
+        map = new google.maps.Map(document.getElementById("map"), { zoomControl: true, scaleControl: true } );
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
 	var b = navigator.userAgent.toLowerCase();
