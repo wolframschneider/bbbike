@@ -274,6 +274,9 @@ sub get_html {
 
     my $startname = Encode::decode( utf8 => $q->param('startname') );
     my $zielname =  Encode::decode( utf8 => $q->param('zielname') );
+    my $driving_time =  Encode::decode( utf8 => $q->param('driving_time') );
+    my $route_length =  Encode::decode( utf8 => $q->param('route_length') );
+
     my $html;
 
     if ($fullscreen) {
@@ -293,16 +296,18 @@ EOF
 
     $html .= <<EOF;
 <!-- BBBikeGooglemap starts here -->
+<div id="chart_div" onmouseout="clearMouseMarker()" style="display:none"></div>
 <div id="BBBikeGooglemap" $slippymap_size>
 EOF
 
     $html .=
 qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </script>\n}
       if $gmap_api_version == 2;
+
+
     $html .= <<EOF;
 
     <div id="map"></div>
-    <div id="chart_div" style="width:812px; height:200px" onmouseout="clearMouseMarker()"></div>
 
     <div id="nomap_script">
     <script type="text/javascript">
@@ -312,9 +317,10 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
 
     city = "$city";
     bbbike_maps_init("default", $marker_list, "$lang" );
-    plotRoute( map, {"driving_time":"0:28:10|0:19:15|0:14:20|0:11:25", "area":"-58.56000,-34.72000!-58.28000,-34.52000","route_length":"4.81", "city":"$city", "startname":"$startname", "zielname": "$zielname"}, [$route_list] );
+    // plotRoute( map, {"driving_time":"0:28:10|0:19:15|0:14:20|0:11:25", "area":"-58.56000,-34.72000!-58.28000,-34.52000","route_length":"4.81", "city":"$city", "startname":"$startname", "zielname": "$zielname"}, marker_list );
 
-    elevation_initialize();
+    elevation_initialize(map, {"driving_time":"$driving_time", "area":$marker_list, "lang":"$lang",
+				"route_length":"$route_length", "city":"$city", "startname":"$startname", "zielname": "$zielname"});
 EOF
 
 
