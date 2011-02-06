@@ -121,12 +121,15 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_weather_forecast
 	    $enable_facebook_t_link
 	    $enable_twitter_t_link
+	    $gmapsv3
 	   );
 
 $gmap_api_version = 3;
 
 # XXX This may be removed one day
 use vars qw($use_cooked_street_data);
+
+$gmapsv3 = 1;
 
 #XXX in mod_perl/Apache::Registry operation there are a lot of "shared
 # variable" warnings. They seem to be not harmful, but I should get
@@ -5376,7 +5379,7 @@ EOF
     } 
 </script>
 EOF
-
+	if (!$gmapsv3) {
 	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "/cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords route_length driving_time/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";
@@ -5384,6 +5387,7 @@ EOF
 	    print $q->hidden('map_menu', "0");
 	    print $q->end_form;
 	    print qq{\n</span><!-- slippymap_span1 -->\n};
+	}
 
 	    print qq{<span id="slippymap_span2">\n};
 	    print $q->start_form(-method=>"POST", -name => "slippymapFormExternal", -target => "_new", -action => "/cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
@@ -5415,8 +5419,13 @@ EOF
 	        print qq{<p></p>\n};
 
 
+		if (!$gmapsv3) {
 		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="800" scrolling="no"></iframe><p></p>};
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
+		} else {
+		   my $maps = BBBikeGooglemap->new();
+                   $maps->run(CGI->new( "$smu"), $gmap_api_version, &my_lang($lang), 1 );
+		}
 	    }
 
 	    print qq{<div class="box">};
