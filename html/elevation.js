@@ -80,10 +80,12 @@
     geocoderService = new google.maps.Geocoder();
     elevationService = new google.maps.ElevationService();
     directionsService = new google.maps.DirectionsService();
-    
+   
+    /* 
     google.maps.event.addListener(map, 'click', function(event) {
       addMarker(event.latLng, true);
     });
+    */
     
     google.visualization.events.addListener(chart, 'onmouseover', function(e) {
       if (mousemarker == null) {
