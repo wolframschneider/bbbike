@@ -12,7 +12,7 @@
 
 */
 
-  var map = null;
+  // var map = null;
   var chart = null;
   
   var geocoderService = null;
@@ -61,12 +61,12 @@
   // Set a callback to run when the Google Visualization API is loaded.
   // google.setOnLoadCallback(elevation_initialize);
   
-  function elevation_initialize(slippymap) {
+  function elevation_initialize(slippymap, opt) {
     var myLatlng = new google.maps.LatLng(15, 0);
     var myOptions = {
       zoom: 1,
       center: myLatlng,
-      mapTypeId: google.maps.MapTypeId.TERRAIN
+      // mapTypeId: google.maps.MapTypeId.TERRAIN
     }
 
     if (slippymap) {
@@ -98,7 +98,7 @@
     });
 
     // loadExample(0);
-    loadRoute();
+    loadRoute(opt);
   }
   
   // Takes an array of ElevationResult objects, draws the path on the map
@@ -203,9 +203,13 @@
     updateElevation();
   }
 
-  function loadRoute() {
+  function loadRoute(opt) {
     reset();
-    map.setMapTypeId( google.maps.MapTypeId.ROADMAP );
+    // map.setMapTypeId( google.maps.MapTypeId.ROADMAP );
+    if (opt.maptype) {
+    	map.setMapTypeId( opt.maptype );
+    }
+
     var bounds = new google.maps.LatLngBounds();
     for (var i = 0; i < marker_list.length; i++) {
       var latlng = new google.maps.LatLng(

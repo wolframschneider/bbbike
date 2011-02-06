@@ -321,8 +321,10 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     bbbike_maps_init("default", $marker_list, "$lang" );
     // plotRoute( map, {"driving_time":"0:28:10|0:19:15|0:14:20|0:11:25", "area":"-58.56000,-34.72000!-58.28000,-34.52000","route_length":"4.81", "city":"$city", "startname":"$startname", "zielname": "$zielname"}, marker_list );
 
-    elevation_initialize(map, {"driving_time":"$driving_time", "area":$marker_list, "lang":"$lang",
-				"route_length":"$route_length", "city":"$city", "startname":"$startname", "zielname": "$zielname"});
+    elevation_initialize(map, {"driving_time":"$driving_time", "area":$marker_list, "lang":"$lang", "route_length":"$route_length", 
+				"city":"$city", "startname":"$startname", "zielname": "$zielname", 
+				"maptype":"cycle"
+				});
 EOF
 
     $html .= <<EOF;
