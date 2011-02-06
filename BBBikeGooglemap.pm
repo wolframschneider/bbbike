@@ -179,14 +179,14 @@ sub get_html {
     }
     $marker_list =~ s/,\s*$/]/;
 
-    my $route_list = '[';
+    my $route_list = '';
     foreach my $c ( @{$route} ) {
         next if $c !~ /,/;
 
         my ( $y, $x ) = split( /,/, $c );
-        $route_list .= qq/[$x,$y],/;
+        $route_list .= qq/'$x,$y', /;
     }
-    $route_list =~ s/,\s*$/]/;
+    $route_list =~ s/,\s*$//;
 
     #warn Dumper($marker_list);
 
@@ -302,14 +302,19 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     $html .= <<EOF;
 
     <div id="map"></div>
+    <div id="chart_div" style="width:812px; height:200px" onmouseout="clearMouseMarker()"></div>
+
     <div id="nomap_script">
     <script type="text/javascript">
     //<![CDATA[
 
     city = "$city";
     bbbike_maps_init("default", $marker_list, "$lang" );
-    // display_route( "$startname", "$zielname", $route_list );
+    plotRoute( map, {"driving_time":"0:28:10|0:19:15|0:14:20|0:11:25", "area":"-58.56000,-34.72000!-58.28000,-34.52000","route_length":"4.81", "city":"$city", "startname":"$startname", "zielname": "$zielname"}, [$route_list] );
+
+    elevation_initialize();
 EOF
+
 
     $html .= <<EOF;
    
