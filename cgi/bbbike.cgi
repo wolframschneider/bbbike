@@ -5379,7 +5379,7 @@ EOF
     } 
 </script>
 EOF
-	if (!$gmapsv3) {
+	if (!$gmapsv3 || 1) {
 	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "/cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
 	    foreach my $name (qw/coordsystem maptype city source_script zoom startname zielname lang draw area coords route_length driving_time/) {
 		print $q->hidden(-name => $name, -default => [ $slippymap_url->param($name) ]), "\n";

@@ -59,6 +59,7 @@ sub run {
     local $CGI::POST_MAX = 2_000_000;
 
     my @polylines_polar;
+    my @polylines_route;
     my @polylines_polar_feeble;
     my @wpt;
 
@@ -75,10 +76,10 @@ sub run {
     my $filename = param("gpxfile");
 
     for my $def (
-        [ 'coords',      \@polylines_polar ],
-        [ 'city_center', \@polylines_polar ],
+        [ 'coords',      \@polylines_route ],
+        #[ 'city_center', \@polylines_polar ],
         [ 'area',        \@polylines_polar ],
-        [ 'oldcoords',   \@polylines_polar_feeble ],
+        #[ 'oldcoords',   \@polylines_polar_feeble ],
       )
     {
         my ( $cgiparam, $polylines_ref ) = @$def;
@@ -145,7 +146,7 @@ sub run {
     binmode( \*STDOUT, ":utf8" ) if $force_utf8;
     binmode( \*STDERR, ":utf8" ) if $force_utf8;
 
-    print $self->get_html( \@polylines_polar, \@polylines_polar_feeble, \@wpt,
+    print $self->get_html( \@polylines_polar, \@polylines_route, \@wpt,
         $zoom, $center, $q, $lang, $fullscreen );
 }
 
@@ -158,7 +159,7 @@ sub bbbike_converter {
 sub polar_converter { @_[ 0, 1 ] }
 
 sub get_html {
-    my ( $self, $paths_polar, $feeble_paths_polar, $wpts, $zoom, $center, $q,
+    my ( $self, $paths_polar, $paths_route, $wpts, $zoom, $center, $q,
         $lang, $fullscreen )
       = @_;
 
@@ -167,6 +168,7 @@ sub get_html {
 
     use Data::Dumper;
     my $coords = $$paths_polar[0];
+    my $route = $$paths_route[0];
 
     my $marker_list = '[';
     foreach my $c ( @{$coords} ) {
@@ -176,6 +178,15 @@ sub get_html {
         $marker_list .= qq/[$x,$y],/;
     }
     $marker_list =~ s/,\s*$/]/;
+
+    my $route_list = '[';
+    foreach my $c ( @{$route} ) {
+        next if $c !~ /,/;
+
+        my ( $y, $x ) = split( /,/, $c );
+        $route_list .= qq/[$x,$y],/;
+    }
+    $route_list =~ s/,\s*$/]/;
 
     #warn Dumper($marker_list);
 
@@ -261,6 +272,8 @@ sub get_html {
 
     $lang = "en" if !$lang;
 
+    my $startname = Encode::decode( utf8 => $q->param('startname') );
+    my $zielname =  Encode::decode( utf8 => $q->param('zielname') );
     my $html;
 
     if ($fullscreen) {
@@ -295,6 +308,7 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
 
     city = "$city";
     bbbike_maps_init("default", $marker_list, "$lang" );
+    // display_route( "$startname", "$zielname", $route_list );
 EOF
 
     $html .= <<EOF;
