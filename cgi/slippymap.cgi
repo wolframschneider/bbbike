@@ -450,7 +450,7 @@ EOF
 
   <body onload="init()" onunload="GUnload()" class="nonWaitMode">
     <div id="map" style="$slippymap_size"></div>
-    <div id="chart_div" style="width:812px; height:200px" onmouseout="clearMouseMarker()"></div>
+    <div id="chart_div" style="width:812px; height:200px" onmouseout="clearMouseMarker()" sytle="display:none;"></div>
     <div id="nomap">
 
     <script type="text/javascript">
