@@ -177,6 +177,7 @@ return {
     "az"    => "Azerbaïdjan",
     "bg"    => "bulgare",
     "cn-zh" => "chinois",
+    "zh"    => "chinois",
     "cs"    => "tchèque",
     "da"    => "danois",
     "de"    => "allemand",

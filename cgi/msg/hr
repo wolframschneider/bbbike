@@ -184,6 +184,7 @@ return {
     "az"    => "azerbajdžanski",
     "bg"    => "bugarski",
     "cn-zh" => "kineski",
+    "zh"    => "kineski",
     "cs"    => "češki",
     "da"    => "Danski",
     "de"    => "njemački",

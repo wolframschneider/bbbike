@@ -183,6 +183,7 @@ return {
     "az"    => "aserbajdsjansk",
     "bg"    => "Bulgarsk",
     "cn-zh" => "kinesisk",
+    "zh"    => "kinesisk",
     "cs"    => "tjekkisk",
     "da"    => "danske",
     "de"    => "tysk",

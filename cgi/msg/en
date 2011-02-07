@@ -189,6 +189,7 @@ return {
     "az"    => "Azerbaijani",
     "bg"    => "Bulgarian",
     "cn-ZH" => "Chinese",
+    "zh"    => "Chinese",
     "cs"    => "Czech",
     "da"    => "Danish",
     "de"    => "German",

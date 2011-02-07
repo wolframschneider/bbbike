@@ -183,6 +183,7 @@ return {
     "az"    => "Azerbeidzjaanse",
     "bg"    => "Bulgaarse",
     "cn-zh" => "Chinees",
+    "zh"    => "Chinees",
     "cs"    => "Tsjechisch",
     "da"    => "Deens",
     "de"    => "Duits",

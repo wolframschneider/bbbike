@@ -183,6 +183,7 @@ return {
     "az"    => "Azerbejdżanu",
     "bg"    => "bułgarski",
     "cn-zh" => "chiński",
+    "zh"    => "chiński",
     "cs"    => "Czech",
     "da"    => "duński",
     "de"    => "niemiecki",
