@@ -280,7 +280,7 @@ sub get_html {
     my $driving_time = Encode::decode( utf8 => $q->param('driving_time') );
     my $route_length = Encode::decode( utf8 => $q->param('route_length') );
 
-    my $html;
+    my $html = "";
 
     if ($fullscreen) {
         $html = <<EOF;
@@ -331,8 +331,6 @@ EOF
 				});
 EOF
     }
-
-    $html .= "// " . scalar( @{$route} ), "\n";
 
     $html .= <<EOF;
    
