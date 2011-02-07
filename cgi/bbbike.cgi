@@ -2066,18 +2066,26 @@ EOF
 
 	my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
 
+	sub social_link {
+	    print qq{<span id="social">\n};
+	    print qq{<a href="http://www.facebook.com/pages/BBBike/179755905394369" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="BBBike on Facebook"></a>\n} if $enable_facebook_t_link;
+	    print qq{<a href="http://twitter.com/BBBikeWorld/" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n} if $enable_twitter_t_link;
+	    print qq{</span>\n};
+	}
+
 	print qq{<span id="mobile_link">\n};
 	if (is_mobile($q)) {
 	    my $url = $q->url(-full=>0, -absolute=>1);
 	    $url =~ s,^/m/,/,;
+	    &social_link;
 	    print qq{<a href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
         } else {
 	    my $url = $q->url(-full=>0, -absolute => 1);
 	    $url =~ s,^/\w\w/,/m/, || $url =~ s,/,/m/,;
 
 	    my $class = $q->user_agent =~ /iPhone|Android|iPod|Nokia|Symbian|BlackBerry|SonyEricsson|Samsung/ ? "mobile_link_mobile" : "mobile_link";
-	    print qq{<a href="http://www.facebook.com/pages/BBBike/179755905394369" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="BBBike on Facebook"></a>\n} if $enable_facebook_t_link;
-	    print qq{<a href="http://twitter.com/BBBikeWorld/" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n} if $enable_twitter_t_link;
+	    &social_link;
+
 	    print qq{<a class="$class logo" href="$url" title="}, M("BBBike for mobile devices"), qq{"><img class="logo" width="16" height="16" alt="" src="/images/phone.png">[}, M("mobil"), qq{]</a>\n};
         }
 	print qq{</span>\n};
