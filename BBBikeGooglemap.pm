@@ -348,8 +348,8 @@ EOF
 
     # log route queries
     if ($log_routes) {
-	my $url = $q->url(-query=>1, -full =>1);
-	warn "$url\n";
+        my $url = $q->url( -query => 1, -full => 1 );
+        warn "$url\n";
     }
     return $html;
 }
