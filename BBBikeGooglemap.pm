@@ -166,6 +166,8 @@ sub get_html {
         $center, $q,           $lang,        $fullscreen
     ) = @_;
 
+    my $log_routes = 1;
+
     my $converter   = $self->{converter};
     my $coordsystem = $self->{coordsystem};
 
@@ -344,7 +346,12 @@ EOF
 <!-- BBBikeGooglemap ends here -->
 EOF
 
-    $html;
+    # log route queries
+    if ($log_routes) {
+	my $url = $q->url(-query=>1, -full =>1);
+	warn "$url\n";
+    }
+    return $html;
 }
 
 #my $o = BBBikeGooglemap->new;
