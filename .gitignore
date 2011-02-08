@@ -27,4 +27,15 @@ world/web/images
 world/web/berlin
 world/web/[a-z][a-z]
 world/web/m/
+world/tmp
+cgi/MyCgiSimple.pm
+cgi/api.cgi
+cgi/livesearch.cgi
+cgi/location.cgi
+cgi/slippymap.cgi
+cgi/street-coord.cgi
+cgi/weather.cgi
 cgi/streets.cgi
+data-osm.bbbike.tgz
+data-osm.bbbike/
+data-osm.old/
