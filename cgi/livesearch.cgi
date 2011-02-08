@@ -33,6 +33,9 @@ sub is_mobile {
 sub extract_route {
     my $file = shift;
     my $max  = shift;
+    my $devel  = shift;
+
+    my $host = $devel ? '(dev|devel|www)' : 'www';
 
     my @data;
     my %hash;
@@ -53,10 +56,10 @@ sub extract_route {
         }
 
         while (<$fh>) {
-            next if !/ slippymap.cgi: /;
+            next if !/ (slippymap|bbbike)\.cgi: /;
             next
               if $only_production_statistic
-                  && !m, slippymap.cgi: http://www.bbbike.org/,i;
+                  && !m, (slippymap|bbbike)\.cgi: http://$host.bbbike.org/,i;
 
             next if !/coords/;
 
@@ -173,7 +176,7 @@ if ( $q->param('max') ) {
     my $m = $q->param('max');
     $max = $m if $m > 0 && $m < 1024;
 }
-my @d = &extract_route( $logfile, $max );
+my @d = &extract_route( $logfile, $max, 0 );
 print qq{<script type="text/javascript">\n};
 
 my $city_center;
