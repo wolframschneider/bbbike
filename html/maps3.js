@@ -348,7 +348,7 @@ function bbbike_maps_init (maptype, marker_list, lang) {
 
 		infoWindow = new google.maps.InfoWindow({ maxWidth: 400});
 		var content = "<div id=\"infoWindowContent\">\n"
-		content += "City: " + '<a target="_new" href="' + opt.city + '.cgi">' + opt.city + '</a>' + "<br/>\n";
+		content += "City: " + '<a target="_new" href="/' + opt.city + '/">' + opt.city + '</a>' + "<br/>\n";
 		content += "Start: " + opt.startname + "<br/>\n";
 		content += "Destination: " + opt.zielname + "<br/>\n";
 		content += "Route Length: " + opt.route_length + "<br/>\n";
