@@ -276,7 +276,9 @@ span#current_weather { padding-right: 1em; font-size: normal; }
 .mobile_link_mobile { font-size:300%; }
 
 span#language_switch { font-size: small; }
+span#language_switch a:hover { color: green; }
 
 img.logo { border: 0px; }
 a.logo { border: 0px; text-decoration:none }
+span.current_language { font-size: large; }
 

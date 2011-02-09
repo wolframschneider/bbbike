@@ -7330,8 +7330,12 @@ sub header {
 	
 	my $counter = 0;
 	foreach my $l (@supported_lang) {
-	        print " | " if $counter++ > 0;
+	    print " | " if $counter++ > 0;
+	    if ($l eq $lang) {
+		print qq{<span class="current_language" title="}, M("aktuelle Sprache"), ": ", M($l), qq{">$l</span>\n};
+	    } else {
 	        print qq{<a href="/$l$bbbike_local_script" title="switch map language to }, M($l), qq{">$l</a>\n};
+	    }
 	}
 	print qq{| <a href="$bbbike_local_script" title="switch map language to }, M($local_lang), qq{">local</a>\n} if $selected_lang;
 
