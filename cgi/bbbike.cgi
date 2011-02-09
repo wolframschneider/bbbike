@@ -799,9 +799,11 @@ $slippymap_zoom_city = 6 if $slippymap_zoom_city <= 0;
 
 my $local_city_name = "";
 my $en_city_name = "";
+my $city_script;
 if ($osm_data) {
     $datadir =~ m,data-osm/(.+),;
     my $city = $1;
+    $city_script = $city;
 
 
     my $geo = get_geography_object();
@@ -2704,7 +2706,7 @@ EOF
 	my $weather_lang = &my_lang($lang);
 print <<EOF;
 <script type="text/javascript">
-   display_current_weather( { lat:"$weather_coords[0]", lng:"$weather_coords[1]", lang:"$weather_lang", city:"$cityname"} );
+   display_current_weather( { lat:"$weather_coords[0]", lng:"$weather_coords[1]", lang:"$weather_lang", city:"$en_city_name", city_script:"$city_script" } );
 </script>
 EOF
    }
