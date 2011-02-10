@@ -767,6 +767,7 @@ my @supported_lang = qw/da de en es fr hr nl pl pt ru zh/;
 }
 
 warn "xxx: city: $datadir, lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
+warn "$datadir does not exists!\n" if ! -d "../$datadir";
 
 #if ($config_master =~ s{^(.*)\.(en)(\.cgi)$}{$1$3}) {
 
