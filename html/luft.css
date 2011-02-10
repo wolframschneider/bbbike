@@ -123,4 +123,5 @@ div.htmltagcloud a:hover { color: #00f; }
 img.logo { border: 0px; }
 span#social { padding-right: 0.5em }
 div#header_links { font-size: small; }
+span.current_language { font-size: large; }
 
