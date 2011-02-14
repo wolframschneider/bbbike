@@ -15,7 +15,7 @@ Altes Rad|Potsdam||-17729,-426
 Althoffstr.|Potsdam||-9988,-2132
 Am Alten Friedhof|Potsdam||-11772,-2677
 Am Alten Markt|Potsdam||-12684,-1428
-Am Alten Mörtelwerk|Potsdam||
+Am Alten Mörtelwerk (Eiche)|Potsdam||-17186,-451
 Am Angelhaken|Potsdam||
 Am Babelsberger Park|Potsdam||-11090,-1506
 Am Bahnhof|Potsdam||-18808,2241
@@ -43,13 +43,13 @@ Am Heineberg|Potsdam||-17788,1427
 Am Hinzenberg|Potsdam||-12708,-1928
 Am Hirtengraben|Potsdam|14480|-8035,-5105
 Am Kanal|Potsdam||-12794,-1364
-Am Kirchblick|Potsdam|14469|
+Am Kirchblick|Potsdam|14469|-17488,-686
 Am Klubhaus (Marquardt)|Potsdam||-19605,4370
 Am Klubhaus|Potsdam||-8853,-1754
 Am Konsumplatz|Potsdam||-19639,4370
 Am Krongut|Potsdam|14469|-15085,144
 Am Küssel|Potsdam||-19516,2361
-Am Langen Berg|Potsdam||
+Am Langen Berg|Potsdam||-17376,-220
 Am Luftschiffhafen|Potsdam||-15703,-3687
 Am Lustgartenwall|Potsdam||-13281,-1796
 Am Meedehorn|Potsdam||
@@ -65,14 +65,14 @@ Am Pfingstberg|Potsdam||-13109,1174
 Am Plantagenhaus|Potsdam||-10948,-3995
 Am Raubfang|Potsdam||-15604,837
 Am Reiherbusch|Potsdam||-13148,1429
-Am Sandberg|Potsdam||
+Am Sandberg|Potsdam||-17141,-349
 Am Schlangenfenn|Potsdam||-10697,-5557
 Am Schragen|Potsdam||-13292,370
 Am Silbergraben|Potsdam||-7891,-5569
 Am Sportplatz|Potsdam||-9196,-2349
 Am Springbruch|Potsdam||-10742,-5680
 Am Stadtrand|Potsdam||-9919,-4586
-Am Stern|Potsdam||-8222,-3686
+Am Stellwerk|Potsdam|14473|-11996,-2192
 Am Tempelberg|Potsdam||-17091,-380
 Am Vogelherd|Potsdam||-13988,2090
 Am Waldrand|Potsdam||-9552,532
@@ -101,7 +101,7 @@ An der Vogelwiese|Potsdam||
 An der Vorderkappe|Potsdam||-13319,-2841
 Angermannstr.|Potsdam||-13741,2762
 Anhaltstr.|Potsdam||-10039,-1944
-Annemarie-Wolf-Platz|Potsdam||
+Annemarie-Wolff-Platz|Potsdam|14469|-13456,500
 Anni-von-Gottberg-Str.|Potsdam||-7619,-5186
 Antikentempel|Potsdam||-15622,-874
 Apfelweg|Potsdam||-14464,1314
@@ -111,8 +111,6 @@ Auf dem Kiewitt|Potsdam||-14109,-2334
 August-Bebel-Str.|Potsdam||-8594,-1393
 August-Bier-Str.|Potsdam||-9301,-1007
 August-Bonnes-Str.|Potsdam|14469|-13741,368
-Babelsberg Nord|Potsdam||-10956,-372
-Babelsberg Süd|Potsdam||-9531,-2623
 Babelsberger Str.|Potsdam||-12228,-1842
 Baberowweg|Potsdam||-9997,-2787
 Bäckerstr.|Potsdam||-13325,-1307
@@ -129,14 +127,13 @@ Beetzweg|Potsdam||-9512,-2956
 Behlertstr.|Potsdam||-12313,-454
 Behringstr.|Potsdam||-9725,-815
 Bellavitestr.|Potsdam||-7577,-4841
-Belvedere|Potsdam||-15691,-420
+Belvedere|Potsdam||-15510,-306
 Bendastr.|Potsdam||-10361,-1783
 Benkertstr.|Potsdam||-12756,-785
 Benzstr.|Potsdam||-10175,-1935
 Bergholzer Str.|Potsdam||-11729,-2421
 Bergweg|Potsdam||-9629,-480
 Berliner Str.|Potsdam||-12255,-1075
-Berliner Vorstadt|Potsdam||-11587,370
 Bernhard-Kellermann-Str.|Potsdam||-10446,-4341
 Bertha-von-Suttner-Str.|Potsdam||-12649,-294
 Bertinistr.|Potsdam||-12606,1928
@@ -157,19 +154,15 @@ Blumenweg|Potsdam||-9485,-2177
 Böcklinstr.|Potsdam||-11576,537
 Bollmannsteig|Potsdam||
 Bornimer Weg|Potsdam||
-Bornim|Potsdam||-16462,1375
-Bornstedter Feld|Potsdam||-13773,272
 Bornstedter Str.|Potsdam||-14735,110
-Bornstedt|Potsdam||-15030,1037
 Brahmsweg|Potsdam||
 Brandenburger Str.|Potsdam||-13328,-1096
 Brandenburger Tor|Potsdam||-13586,-1146
-Brandenburger Vorstadt|Potsdam||-14630,-1244
 Brauhausberg|Potsdam||-12982,-3068
 Breite Str.|Potsdam||-13776,-1538
-Breiter Weg|Potsdam||-16250,1646
+Breiter Weg|Potsdam|14469|-16250,1646
 Brentanoweg|Potsdam||-13592,-379
-Brombeerstieg|Potsdam||
+Brombeerstieg|Potsdam||-17648,-79
 Bruno-H.-Bürgel-Str.|Potsdam||-10051,-1233
 Bruno-Taut-Str.|Potsdam||-12939,1493
 Burgstr.|Potsdam||-12494,-1436
@@ -187,6 +180,7 @@ Chopinstr.|Potsdam||-7687,-3165
 Clara-Schumann-Str.|Potsdam||-7580,-5485
 Clara-Zetkin-Str.|Potsdam||-14298,-1626
 Communs|Potsdam||-16161,-1129
+Concordiaweg|Potsdam|14482|-10208,-1155
 Conrad-Veidt-Str.|Potsdam||-7193,-4644
 Daimlerstr.|Potsdam||-10846,-2048
 Damaschkeweg|Potsdam||-11359,-3825
@@ -204,11 +198,10 @@ Dr.-Rudolf-Tschäpe-Platz|Potsdam||-14356,-1509
 Drachenhaus|Potsdam||-15330,-491
 Drevesstr.|Potsdam||-11690,-3154
 Drewitzer Str.|Potsdam||-10082,-4556
-Drewitz|Potsdam||-8752,-2919
 Dürerstr.|Potsdam||-11814,156
 Ebereschenweg|Potsdam||-19374,3975
 Ebräerstr.|Potsdam||-13006,-1268
-Ecksteinweg|Potsdam||
+Ecksteinweg|Potsdam||-17290,-679
 Edison-Allee|Potsdam||-11166,-1764
 Eduard-Claudius-Str.|Potsdam||-10632,-4222
 Eduard-Engel-Str.|Potsdam||-13367,66
@@ -220,7 +213,6 @@ Eichelkamp|Potsdam||-14593,2923
 Eichenallee|Potsdam||-15693,-275
 Eichenring|Potsdam||-17627,-13
 Eichenweg|Potsdam||-9569,-2401
-Eiche|Potsdam||-17540,-1134
 Eisenhartstr.|Potsdam||-12852,-331
 Eleonore-Prochaska-Str.|Potsdam||-7960,-5070
 Eltesterstr.|Potsdam||-12060,-1383
@@ -268,6 +260,7 @@ Friedrich-Klausing-Str.|Potsdam|14469|-13084,1679
 Friedrich-Kunert-Weg|Potsdam|14469|-13751,1756
 Friedrich-List-Str.|Potsdam||-11822,-1959
 Friedrich-W.-Murnau-Str.|Potsdam||-7165,-4288
+Friedrich-Wilhelm-Boelcke-Str|Potsdam|14473|-12831,-2439
 Friedrich-Wolf-Str.|Potsdam||-10324,-4749
 Friesenstr.|Potsdam||-10707,-2223
 Fritz-Encke-Str.|Potsdam||-13905,1491
@@ -290,11 +283,10 @@ Gertrud-Droste-Platz|Potsdam|14482|-9642,-936
 Gertrud-Feiertag-Str.|Potsdam||
 Gertrud-Kolmar-Str.|Potsdam||-7506,-5395
 Geschwister-Scholl-Str.|Potsdam||-15632,-1886
-Gillis-Grafström-Str.|Potsdam|14469|
+Gillis-Grafström-Str.|Potsdam|14469|-16036,1707
 Ginsterweg|Potsdam||-10630,-4711
 Glasmeisterstr.|Potsdam||-11005,-1885
 Glienicker Brücke|Potsdam||-10939,605
-Glienicker Horn|Potsdam||-11014,238
 Glienicker Weg|Potsdam||
 Glienicker Winkel|Potsdam||-10040,-699
 Gluckstr.|Potsdam||-7768,-2811
@@ -311,12 +303,11 @@ Grenzstr.|Potsdam||-10659,-1078
 Grenzweg|Potsdam||-9717,-4049
 Griebnitzstr.|Potsdam||-9713,19
 Grillparzerstr.|Potsdam||-14207,-2136
-Gröbenstr.|Potsdam||
+Gröbenstr.|Potsdam||-17646,1636
 Grotrianstr.|Potsdam||-7585,-3185
 Großbeerenstr.|Potsdam||-9929,-2386
 Große Fischerstr.|Potsdam||-12082,-1272
 Große Weinmeisterstr.|Potsdam||-12721,304
-Grube|Potsdam||-19837,2443
 Grüner Weg|Potsdam||-16224,1747
 Grünstr.|Potsdam||-9256,-2828
 Guido-Seeber-Weg|Potsdam||-7511,-4350
@@ -348,9 +339,9 @@ Hegelallee|Potsdam||-13495,-899
 Hegemeisterweg|Potsdam||-11125,-4365
 Heidereiterweg|Potsdam||-11203,-3766
 Heideweg|Potsdam||-9898,-2208
-Heilig-Geist-Str.|Potsdam||-12156,-1307
+Heilig-Geist-Str.|Potsdam|14467|-12156,-1307
 Heimrode|Potsdam||-11108,-3809
-Heiner-Carow-Str.|Potsdam||
+Heiner-Carow-Platz|Potsdam|14480|-7570,-5186
 Heinestr.|Potsdam||-9575,-1279
 Heinrich-George-Str.|Potsdam||-8945,-2681
 Heinrich-Mann-Allee|Potsdam||-12399,-2189
@@ -392,13 +383,11 @@ Im Schäferfeld|Potsdam||-8452,-3757
 Immenseestr.|Potsdam||-15722,-2965
 In den Neuen Höfen|Potsdam|14480|-7995,-5068
 In der Aue|Potsdam||-8228,-2531
-Industriegelände|Potsdam||-9055,-5047
 Inselhof|Potsdam||-10172,-3691
 Jagdhausstr.|Potsdam||-7069,-3197
 Jägerallee|Potsdam||-13256,-550
 Jägersteig|Potsdam||-8480,-2136
 Jägerstr.|Potsdam||-13115,-870
-Jägervorstadt|Potsdam||-13728,7
 Jahnstr.|Potsdam||-10618,-2244
 Jakob-von-Gundling-Str.|Potsdam||-13529,226
 Joachim-Niemeyer-Weg|Potsdam||
@@ -410,7 +399,7 @@ Johann-Kunkel-Weg|Potsdam||
 Johann-Strauß-Platz|Potsdam||-9435,-687
 Johanna-Just-Str.|Potsdam||-7894,-4969
 Johannes-Kepler-Platz|Potsdam||-8001,-3504
-Johannes-Lepsius-Str.|Potsdam||-13240,32
+Johannes-Lepsius-Str.|Potsdam|14469|-13240,32
 Johannes-R.-Becher-Str.|Potsdam||-10409,-4529
 Johannsenstr.|Potsdam||-10996,-2018
 Joliot-Curie-Str.|Potsdam||-12563,-1359
@@ -422,7 +411,7 @@ Kahlenbergstr.|Potsdam||-17395,-497
 Kaiser-Friedrich-Str.|Potsdam||-18046,-955
 Kamblystr.|Potsdam||-7714,-5177
 Kantstr.|Potsdam||-15225,-2222
-Karen-Jeppe-Str.|Potsdam||
+Karen-Jeppe-Str.|Potsdam|14469|-13232,98
 Karl-Foerster-Str.|Potsdam||-11534,-1506
 Karl-Gruhl-Str.|Potsdam||-10258,-1448
 Karl-Krieger-Str.|Potsdam||-14135,699
@@ -441,18 +430,17 @@ Kiepenheuerallee|Potsdam||-13456,500
 Kiezstr.|Potsdam||-13453,-1732
 Kirchstr.|Potsdam||-7970,-5304
 Kirschallee|Potsdam||-14708,509
-Kirschenstieg|Potsdam||
+Kirschenstieg|Potsdam||-17308,246
 Klabautermann|Potsdam||-19568,4182
 Kladower Str.|Potsdam||-10236,2385
 Kleewall|Potsdam|14482|-9745,-2838
-Klein Glienicke|Potsdam||-9355,192
 Kleine Fischerstr.|Potsdam||-12123,-1284
 Kleine Gasse|Potsdam||-13333,-1241
 Kleine Str.|Potsdam||-9323,-2463
 Kleine Weinmeisterstr.|Potsdam||-12818,413
 Klopstockstr.|Potsdam||-9589,-1624
 Knobelsdorffstr.|Potsdam||-15453,-2782
-Köhlerplatz|Potsdam||-14058,-1333
+Köhlerplatz|Potsdam|14467|-13876,-1226
 Kohlhasenbrücker Str.|Potsdam||-6890,-3305
 Kolonie Daheim|Potsdam||
 Kolonie Krähenbusch|Potsdam||
@@ -465,7 +453,7 @@ Körnerstr.|Potsdam||-9443,-1432
 Kottmeierstr.|Potsdam||-11445,-3560
 Krampnitzer Str.|Potsdam||-10694,2165
 Kreuzstr.|Potsdam||-10291,-1537
-Krumme Str.|Potsdam||
+Krumme Str.|Potsdam||-17316,-302
 Kuckucksruf|Potsdam||-10529,-4287
 Kuhforter Damm|Potsdam|14469|-17929,-1654
 Kuhforter Damm|Potsdam|14471|-17929,-1654
@@ -562,10 +550,8 @@ Nansenstr.|Potsdam||-14422,-1518
 Nattwerder Weg|Potsdam||-20957,1588
 Nattwerder|Potsdam||-20957,1588
 Nauener Tor|Potsdam||-13010,-646
-Nauener Vorstadt|Potsdam||-12709,1226
 Nedlitzer Holz|Potsdam||-13270,1758
 Nedlitzer Str.|Potsdam||-13457,2801
-Nedlitz|Potsdam||-14150,2832
 Nelly-Sachs-Str.|Potsdam||-7804,-5089
 Neptungrotte|Potsdam||-13965,-820
 Neptun|Potsdam||-19488,4250
@@ -590,7 +576,7 @@ Orville-Wright-Str.|Potsdam||-13923,1499
 Oskar-Meßter-Str.|Potsdam||-7704,-4565
 Otterkiez|Potsdam||-9809,-3873
 Otterweg|Potsdam||-9598,-3091
-Otto-Erich-Str.|Potsdam||-8940,-1444
+Otto-Erich-Str.|Potsdam|14482|-8940,-1444
 Otto-Hahn-Ring|Potsdam||-7366,-3703
 Otto-Haseloff-Str.|Potsdam||-7178,-3533
 Otto-Nagel-Str.|Potsdam||-12049,-405
@@ -624,7 +610,6 @@ Plantagenstr.|Potsdam||-10000,-1443
 Platz der Einheit|Potsdam||-12857,-1243
 Poseidon|Potsdam||-19583,4293
 Posthofstr.|Potsdam||-12560,-1148
-Potsdam-West|Potsdam||-15673,-2253
 Potsdamer Str.|Potsdam||-16800,1258
 Prager Str.|Potsdam||-9554,-2901
 Priesterweg|Potsdam||-7830,-4779
@@ -642,14 +627,14 @@ Reusengang|Potsdam||
 Reuterstr.|Potsdam||-9524,-1456
 Ribbeckstr.|Potsdam||-14836,-325
 Ricarda-Huch-Str.|Potsdam||-7869,-4857
-Richard-Schäfer-Str.|Potsdam|14469|
+Richard-Schäfer-Str.|Potsdam|14469|-13166,146
 Robert-Baberske-Str.|Potsdam||-7659,-4442
 Robert-Koch-Str.|Potsdam||-9176,-1149
 Röhrenstr.|Potsdam||-7872,-3124
 Römische Bäder|Potsdam||-14831,-1426
 Rosa-Luxemburg-Str.|Potsdam||-9689,-559
 Roseggerstr.|Potsdam||-14996,-2257
-Rosenstieg|Potsdam||
+Rosenstieg|Potsdam||-17646,1
 Rosenstr.|Potsdam||-9630,-2013
 Rosenweg (Marquardt)|Potsdam||-19604,4293
 Rosenweg|Potsdam||-9562,-3990
@@ -684,17 +669,15 @@ Schillerstr.|Potsdam||-14288,-2193
 Schinkelstr.|Potsdam||-7670,-5376
 Schlaatzstr.|Potsdam||-11676,-2331
 Schlaatzweg|Potsdam||-11582,-2318
-Schlaatz|Potsdam||-10072,-3567
 Schlänitzseer Weg|Potsdam||-20024,2673
-Schlänitzsee|Potsdam||-20675,4149
 Schlegelstr.|Potsdam||-13761,-460
-Schlehenstieg|Potsdam||
+Schlehenstieg|Potsdam||-17374,271
 Schloß Babelsberg|Potsdam||-10716,-112
 Schloß Lindstedt|Potsdam||-16383,-67
 Schloßstr.|Potsdam||-12992,-1690
 Schloßtheater|Potsdam||-15813,-1211
 Schlüterstr.|Potsdam||-15893,-2502
-Schmidts Hof|Potsdam|14469|
+Schmidts Hof|Potsdam|14469|-19927,2193
 Schmiedegasse|Potsdam|14469|-13645,-184
 Schneiderweg|Potsdam||-15891,2509
 Schopenhauerstr.|Potsdam||-13809,-817
@@ -741,9 +724,7 @@ Stülerstr.|Potsdam||-7608,-5419
 Tannenstr.|Potsdam||-9587,221
 Tannenweg|Potsdam||-9405,204
 Teltower Damm|Potsdam||-10858,-3315
-Teltower Vorstadt|Potsdam||-12042,-2816
 Templiner Str.|Potsdam||-15029,-5697
-Templiner Vorstadt|Potsdam||-14115,-3945
 Thaerstr.|Potsdam||-15186,634
 Theodor-Echtermeyer-Str.|Potsdam||-13824,1561
 Theodor-Hoppe-Weg|Potsdam||-10426,-1912
@@ -777,13 +758,12 @@ Vogelweide|Potsdam||-13071,1697
 Voltaireweg|Potsdam||-13938,-441
 Voltastr.|Potsdam||-10738,-1968
 Von-Klitzing-Str.|Potsdam||
-Wacholderstieg|Potsdam||
+Wacholderstieg|Potsdam||-17413,130
 Wagnerstr.|Potsdam||-8388,-2723
 Waldhornweg|Potsdam||-7322,-3502
 Waldmüllerstr.|Potsdam||-10156,143
 Waldstadt II|Potsdam||-10483,-4975
 Waldstadt I|Potsdam||-9951,-4676
-Waldstadt|Potsdam||-11261,-3579
 Waldstr.|Potsdam||-11428,-3726
 Wall am Kiez|Potsdam||-13570,-1668
 Walter-Funcke-Str.|Potsdam||-14134,1008
@@ -793,7 +773,7 @@ Wasserstr.|Potsdam||-9968,-131
 Wattstr.|Potsdam||-10530,-2242
 Weberplatz|Potsdam||-10458,-1685
 Weg nach Bornim|Potsdam||-16945,-555
-Weidendamm|Potsdam||
+Weidendamm|Potsdam|14482|-9461,-2738
 Weidenhof|Potsdam||-10368,-3739
 Weinbergstr.|Potsdam||-13614,-680
 Weinbergterrassen|Potsdam||-14258,-770
@@ -819,18 +799,16 @@ Willi-Schiller-Weg|Potsdam||-7209,-4533
 Willy-A.-Kleinau-Weg|Potsdam||-7399,-4504
 Windmühlenweg|Potsdam||-17310,1303
 Windspiel|Potsdam||-19700,4368
-Wohngebiet Drewitz|Potsdam||-6966,-4051
 Wolfgang-Staudte-Str.|Potsdam||-7416,-4715
 Wollestr.|Potsdam||-11006,-1429
 Wublitzstr.|Potsdam||-20016,2173
 Wurzelweg|Potsdam||
 Yorckstr.|Potsdam||-13181,-1360
 Zarah-Leander-Str.|Potsdam||-8660,-2548
-Zentrum-Ost|Potsdam||-11868,-1068
 Zeppelinstr.|Potsdam||-17043,-4769
 Zimmerstr.|Potsdam||-13917,-1252
 Ziolkowskistr.|Potsdam||-7882,-3324
-Zum Bahnhof Pirschheide|Potsdam||
+Zum Bahnhof Pirschheide|Potsdam||-16050,-3982
 Zum Hauptbahnhof|Potsdam||-16232,-4142
 Zum Heizwerk|Potsdam||-9693,-5482
 Zum Jagenstein|Potsdam||-10763,-4480
@@ -844,4 +822,5 @@ Zum Teufelssee|Potsdam||-10496,-5420
 Zum Wasserturm|Potsdam|14473|-11993,-2095
 Zum Windmühlenberg|Potsdam||
 Zur Historischen Mühle|Potsdam||-14436,-718
+Zur Königlichen Hofbrauerei|Potsdam|14473|-12813,-2423
 Zur Nuthe|Potsdam||-9809,-4239
