@@ -230,6 +230,6 @@ return {
     "BBBike for mobile devices"                                   => "BBBike for mobile devices",
     "BBBike in classic view"                                      => "BBBike in classic view",
     "aktuelle Sprache"                                            => "current language",
-
+    "Fahrrad-Routenplaner"                                        => "Cycle Route Planner",
 };
 
