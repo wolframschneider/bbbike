@@ -5766,7 +5766,7 @@ EOF
 		print qq{\n<span id="weather_forecast">\n};
 print <<EOF;
 <script type="text/javascript">
-   display_current_weather( { lat:"$weather_coords[0]", lng:"$weather_coords[1]", lang:"$weather_lang", city:"$cityname"} );
+   display_current_weather( { lat:"$weather_coords[0]", lng:"$weather_coords[1]", lang:"$weather_lang", city:"$cityname", city_script:"$city_script"} );
 </script>
 EOF
 		print qq{</span>\n};
