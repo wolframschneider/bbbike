@@ -7329,6 +7329,7 @@ sub header {
 	    print qq{\n<span id="current_weather"> </span>\n};
 	}
 
+	if (!$printmode) {
 	print qq{<span id="language_switch">\n};
 	
 	my $counter = 0;
@@ -7341,6 +7342,7 @@ sub header {
 	    }
 	}
 	print qq{| <a href="$bbbike_local_script" title="switch map language to }, M($local_lang), qq{">local</a>\n} if $selected_lang;
+	}
 
 	if (0) {
 	if ($selected_lang && $bbbike_local_script) {
