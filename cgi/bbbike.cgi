@@ -5321,12 +5321,9 @@ EOF
 	}
 
 	if ($printmode) {
-	    print
-	      "<hr><br>", $fontstr,
-	      "BBBike by Slaven Rezic: ",
-	      "<a href=\"$bbbike_url\">$bbbike_url</a><br>\n",
-	      "<script type=\"text/javascript\"><!--\nprint();\n",
-              "// --></script>\n";
+	    my $url = $q->url(-base => 1);
+	    print "<hr><br>", $fontstr, qq{(&copy;) 1998-2011 <a href="$url">$url</a>\n};
+
 	    goto END_OF_HTML;
 	}
 
