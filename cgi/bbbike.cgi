@@ -7400,6 +7400,27 @@ my $app = M("app");
 my $help = M("hilfe");
 my $mobile = M("mobile");
 
+my $other_cities = "";
+if ($osm_data) {
+    my $geo = get_geography_object();
+    my $name = $geo->{city_names};
+
+    if (exists $geo->{'neighbours'} && ref $geo->{'neighbours'} eq 'ARRAY') {
+	foreach my $n (@{ $geo->{'neighbours'} } ) {
+		my ($distance, $city2, $city_names) = @{ $n };
+		next if $city2 eq 'berlin';
+	        next if $city2 eq $city_script;
+
+		next if $distance > 3000;
+
+		$city_names = $city2 if !$city_names;
+
+		$other_cities .= qq{ <a href="../$city2/">} . select_city_name($city2, $city_names, $lang), "</a>\n";
+	}
+    }
+    $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
+}
+
 my $s_copyright = <<EOF;
 
 <div id="footer">
@@ -7425,6 +7446,9 @@ $list_of_all_streets |
 </div>
 </div>
 
+<div id="other_cities">
+$other_cities
+</div>
 EOF
 
 

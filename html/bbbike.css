@@ -263,6 +263,7 @@ div#other_cities { font-size: small; text-align: center; }
 div#other_cities a { text-decoration:none; }
 div#other_cities a:link { color: #808080; }
 div#other_cities a:visited { color: green; }
+div#other_cities a:hover { color: green; }
 
 span#housenumber { font-size: small; }
 
