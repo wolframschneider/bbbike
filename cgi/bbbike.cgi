@@ -864,7 +864,10 @@ sub select_city_name {
     #warn "city: $city, name: $name, lang: $city_lang\n" if $self->debug >= 2;
 
     my %hash;
+
+    # default city name
     $hash{ALL} = $city;
+
     foreach my $n ( split /\s*,\s*/, $name ) {
         my ( $lang, $city_name ) = split( /!/, $n );
         if ($city_name) {
@@ -877,8 +880,7 @@ sub select_city_name {
         }
     }
 
-    #use Data::Dumper; warn Dumper( \%hash );
-    return exists( $hash{$city_lang} ) ? $hash{$city_lang} : $hash{ALL};
+    return $hash{$city_lang} || $hash{"en"} || $hash{ALL};
 }
 
 
@@ -7415,7 +7417,7 @@ if ($osm_data) {
 
 		$city_names = $city2 if !$city_names;
 
-		$other_cities .= qq{ <a href="../$city2/">} . select_city_name($city2, $city_names, $lang), "</a>\n";
+		$other_cities .= qq{ <a href="../$city2/">} . select_city_name($city2, $city_names, $lang) . "</a>\n";
 	}
     }
     $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
