@@ -196,7 +196,6 @@ a.ms:visited { color:#333333; }
   font-size:larger;
 }
 
-<<<<<<< HEAD:html/bbbike.css
 input#suggest_start:focus, 
 input#suggest_via:focus, 
 input#suggest_ziel:focus { background-color: #FFC }
@@ -283,6 +282,7 @@ span#current_weather { padding-right: 1em; font-size: normal; }
 
 span#language_switch { font-size: small; }
 span#language_switch a:hover { color: green; }
+span#language_switch a { text-decoration:none; }
 
 img.logo { border: 0px; }
 a.logo { border: 0px; text-decoration:none }
