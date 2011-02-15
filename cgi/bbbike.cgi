@@ -7417,7 +7417,7 @@ if ($osm_data) {
 
 		$city_names = $city2 if !$city_names;
 
-		$other_cities .= qq{ <a href="../$city2/">} . select_city_name($city2, $city_names, $lang) . "</a>\n";
+		$other_cities .= qq{ <a href="../$city2/">} . BBBikeCGIUtil::my_escapeHTML( select_city_name($city2, $city_names, $lang) ) . "</a>\n";
 	}
     }
     $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
