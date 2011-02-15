@@ -68,7 +68,7 @@ my $debug = 1;
 my $force;
 my $local_language = "";
 my $city_names = "";
-my $neighbours = "[]";
+my $neighbours = [];
 GetOptions(
 	   (map {
 	       (my $optname = $_) =~ s{_}{-}g;
@@ -459,9 +459,11 @@ sub _write_meta {
     if (!Encode::is_utf8($city_names)) { 
 	$city_names = Encode::decode("utf-8", $city_names); 
     }
+
     if (!Encode::is_utf8($neighbours)) { 
 	$neighbours = Encode::decode("utf-8", $neighbours); 
     }
+    $neighbours = eval $neighbours;
 
     $meta->{"city_names"} = $city_names;
     $meta->{"neighbours"} = $neighbours;
