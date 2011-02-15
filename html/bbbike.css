@@ -281,8 +281,9 @@ span#current_weather { padding-right: 1em; font-size: normal; }
 .mobile_link_mobile { font-size:300%; }
 
 span#language_switch { font-size: small; }
-span#language_switch a:hover { color: green; }
 span#language_switch a { text-decoration:none; }
+span#language_switch a:link { color: #808080; }
+span#language_switch a:hover { color: green; }
 
 img.logo { border: 0px; }
 a.logo { border: 0px; text-decoration:none }
