@@ -231,5 +231,6 @@ return {
     "BBBike in classic view"                                      => "BBBike in classic view",
     "aktuelle Sprache"                                            => "current language",
     "Fahrrad-Routenplaner"                                        => "Cycle Route Planner",
+    "weitere St&auml;dte"                                         => "more cities",
 };
 
