@@ -259,6 +259,11 @@ div#chart_div {
 div#footer { top: 0.7em; }
 div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
 
+div#other_cities { font-size: small; text-align: center; }
+div#other_cities a { text-decoration:none; }
+div#other_cities a:link { color: #808080; }
+div#other_cities a:visited { color: green; }
+
 span#housenumber { font-size: small; }
 
 div#top_right { position:absolute; top:5px; right:10px; }
