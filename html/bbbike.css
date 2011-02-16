@@ -53,6 +53,10 @@ a.ms:visited { color:#333333; }
 
 .new { font-weight:bold;color:#a00000; }
 
+/* link colors */
+a { text-decoration:none; color: green; }
+a:hover { text-decoration:underline; }
+
 .teaserbox {
   width:100%;
   color: #000000;
@@ -259,10 +263,8 @@ div#footer { top: 0.7em; }
 div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
 
 div#other_cities { font-size: small; text-align: center; }
-div#other_cities a { text-decoration:none; }
-div#other_cities a:link { color: #808080; }
-div#other_cities a:visited { color: green; }
-div#other_cities a:hover { color: green; }
+// div#other_cities a:link { color: #808080; }
+
 
 span#housenumber { font-size: small; }
 
@@ -281,9 +283,9 @@ span#current_weather { padding-right: 1em; font-size: normal; }
 .mobile_link_mobile { font-size:300%; }
 
 span#language_switch { font-size: small; }
-span#language_switch a { text-decoration:none; }
-span#language_switch a:link { color: #808080; }
-span#language_switch a:hover { color: green; }
+// span#language_switch a { text-decoration:none; }
+// span#language_switch a:link { color: #808080; }
+// span#language_switch a:hover { color: green; }
 
 img.logo { border: 0px; }
 a.logo { border: 0px; text-decoration:none }
