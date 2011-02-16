@@ -157,7 +157,7 @@ function higlightCity (data, obj) {
     for (var i=0; i<a.length; i++) {
         if (a[i].className == className) {
             a[i].style.fontSize = "200%";
-            a[i].style.color = "#00f";
+            a[i].style.color = "green";
 
             a[i].setAttribute('title', pos.city + " " + obj.lat + "," + obj.lng);
             focus = a[i];

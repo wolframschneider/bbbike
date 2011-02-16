@@ -1,15 +1,17 @@
 /* ------------------------------------------------------------------- */
-a         {text-decoration: none}
-a:link    {color: #d64}
-a:visited {color: #864}
-a:hover   {text-decoration: underline}
-a:active  {text-decoration: underline}
-a.empty   {color: gray}
-a.private {color: black}
+a         {text-decoration: none; color: green; }
+
+div.htmltagcloud a:link    {color: #d64}
+div.htmltagcloud a:visited {color: #864}
+div.htmltagcloud a:hover   {text-decoration: underline }
+div.htmltagcloud a:active  {text-decoration: underline}
+div.htmltagcloud a.empty   {color: gray}
+div.htmltagcloud a.private {color: black}
 
 /***************************/
 
 body {
+	// background-color: #9c9;
 	background-color: #9c9;
 	margin: 0px 5px 0px 5px;
 	text-align: center;
@@ -25,8 +27,9 @@ div#border {
 
 div#all {
 	max-width: 48em;
-	background-color: #669966;
+	// background-color: #669966;
 	/* background-color: #9c9; */
+	background-color: #9c9;
 	margin: 1em;
 	margin: 0px auto; /* Right And Left Margin Widths To Auto */
 	position: relative;
@@ -118,10 +121,10 @@ table td#cell_other   { background-color: #CCC }
 div#streets input:focus { background-color: #FFC }
 div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
 
-div.htmltagcloud a:hover { color: #00f; }
+div.htmltagcloud a:hover { color: green; text-decoration: underline; }
 
 img.logo { border: 0px; }
 span#social { padding-right: 0.5em }
 div#header_links { font-size: small; }
 span.current_language { font-size: large; }
-
+span#language_switch a { color: green; }
