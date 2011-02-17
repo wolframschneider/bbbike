@@ -128,3 +128,6 @@ span#social { padding-right: 0.5em }
 div#header_links { font-size: small; }
 span.current_language { font-size: large; }
 span#language_switch a { color: green; }
+
+span#maplink { font-size: small; }
+
