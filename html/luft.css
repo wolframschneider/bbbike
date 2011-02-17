@@ -11,7 +11,6 @@ div.htmltagcloud a.private {color: black}
 /***************************/
 
 body {
-	// background-color: #9c9;
 	background-color: #9c9;
 	margin: 0px 5px 0px 5px;
 	text-align: center;
@@ -27,7 +26,6 @@ div#border {
 
 div#all {
 	max-width: 48em;
-	// background-color: #669966;
 	/* background-color: #9c9; */
 	background-color: #9c9;
 	margin: 1em;
