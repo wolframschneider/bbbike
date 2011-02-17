@@ -37,7 +37,7 @@ div#all {
 	padding: 10px; 
 }
 
-div#footer { font-size: small; text-align: center; }
+div#footer { font-size: small; text-align: center; padding-top: 0.7em; }
 div#footer_top { text-align: left; }
 
 /* ************************************************************ */
