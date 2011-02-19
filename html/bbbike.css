@@ -207,7 +207,6 @@ input#suggest_ziel:focus { background-color: #FFC }
 span.slippymaplink { font-size: small; }
 
 html, body {
-	/* margin: 0; padding: 0; */
 	height: 100%; 
 }
 
@@ -215,7 +214,6 @@ html, body {
 div#map   {
         width: 100%; 
         height: 100%;
-	// min-height: 420px;
 }
 
 
@@ -228,8 +226,6 @@ div#nomap {
 
 div#footer { font-size: small; text-align: center; }
 div#footer_top { text-align: left; }
-
-// div#BBBikeGooglemap { width: 100%; height: 60%; }
 
 body { position: relative;width: 100%;height: 100%;z-index: 0; }
 
@@ -248,8 +244,6 @@ div#BBBikeGooglemap {
 	margin-left: 18.4em; 
 	border: 1px solid #979797;z-index: 0; 
 	top: -0.5em; 
-// min-width: 400px; 
-//min-height: 300px;
 }
 
 div#chart_div {
@@ -261,13 +255,8 @@ div#chart_div {
 
 div#footer { top: 0.7em; }
 div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
-
 div#other_cities { font-size: small; text-align: center; padding-bottom: 0.5em }
-// div#other_cities a:link { color: #808080; }
-
-
 span#housenumber { font-size: small; }
-
 div#top_right { position:absolute; top:5px; right:10px; }
 span#current_weather { padding-right: 1em; font-size: normal; }
 
@@ -283,9 +272,6 @@ span#current_weather { padding-right: 1em; font-size: normal; }
 .mobile_link_mobile { font-size:300%; }
 
 span#language_switch { font-size: small; }
-// span#language_switch a { text-decoration:none; }
-// span#language_switch a:link { color: #808080; }
-// span#language_switch a:hover { color: green; }
 
 img.logo { border: 0px; }
 a.logo { border: 0px; text-decoration:none }
