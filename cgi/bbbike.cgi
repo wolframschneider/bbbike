@@ -7271,7 +7271,7 @@ sub header {
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=$sensor&amp;language=$my_lang"></script>
 <script src="/html/maps3.js" type="text/javascript"></script>
 <script src="/html/elevation.js" type="text/javascript"></script> 
-|);
+|) if !is_mobile($q) || ($q->param('startc') && $q->param('zielc'));
 	}
 
     }
