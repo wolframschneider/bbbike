@@ -7242,12 +7242,10 @@ sub header {
     if ($enable_opensearch_suggestions) {
 	    my $city = $osm_data && $datadir =~ m,data-osm/(.+), ? $1 : 'Berlin';
 
-	push(@$head, qq|\
-<script src="/html/jquery-1.4.2.min.js" type="text/javascript"></script>
-<script src="/html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js" type="text/javascript"></script>
-<link href="/html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css"> |);
-
+	push(@$head, qq|<script src="/html/jquery-1.4.2.min.js" type="text/javascript"></script>\n|);
+	push(@$head, qq|<script src="/html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js" type="text/javascript"></script>\n|);
     }
+    #<link href="/html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css"> |);
 
     push(@$head, qq|<script src="/html/bbbike.js" type="text/javascript"></script>\n|);
 

@@ -291,3 +291,14 @@ img.logo { border: 0px; }
 a.logo { border: 0px; text-decoration:none }
 span.current_language { font-size: large; }
 
+
+/* 
+ * include copy of devbridge-jquery-autocomplete-1.1.2/styles.css 
+ * less HTTP traffic
+ */
+.autocomplete-w1 { background:url(devbridge-jquery-autocomplete-1.1.2/shadow.png) no-repeat bottom right; position:absolute; top:0px; left:0px; margin:8px 0 0 6px; /* IE6 fix: */ _background:none; _margin:0; }
+.autocomplete { border:1px solid #999; background:#FFF; cursor:default; text-align:left; max-height:350px; overflow:auto; margin:-6px 6px 6px -6px; /* IE6 specific: */ _height:350px;  _margin:0; _overflow-x:hidden; }
+.autocomplete .selected { background:#F0F0F0; }
+.autocomplete div { padding:2px 5px; white-space:nowrap; }
+.autocomplete strong { font-weight:normal; color:#3399FF; }
+
