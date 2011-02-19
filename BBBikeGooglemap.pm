@@ -4,6 +4,7 @@
 # Author: Slaven Rezic
 #
 # Copyright (C) 2005,2006,2007,2008 Slaven Rezic. All rights reserved.
+# Copyright (C) 2008i-2010 Wolfram Schneider. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
