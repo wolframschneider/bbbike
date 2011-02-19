@@ -2705,7 +2705,7 @@ print <<'EOF';
 EOF
 }
 
-   if ($enable_current_weather && scalar(@weather_coords) > 0) {
+   if ($enable_current_weather && scalar(@weather_coords) > 0 && (!is_mobile($q) || is_resultpage($q))) {
 	my $weather_lang = &my_lang($lang);
 print <<EOF;
 <script type="text/javascript">
@@ -3011,6 +3011,12 @@ sub is_mobile {
     } else {
 	return 0;
     }
+}
+
+sub is_resultpage {
+    my $q = shift;
+
+   return ($q->param('startc') && $q->param('zielc')) ? 1 : 0;
 }
 
 sub get_kreuzung {
@@ -7269,7 +7275,7 @@ sub header {
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=$sensor&amp;language=$my_lang"></script>
 <script src="/html/maps3.js" type="text/javascript"></script>
 <script src="/html/elevation.js" type="text/javascript"></script> 
-|) if !is_mobile($q) || ($q->param('startc') && $q->param('zielc'));
+|) if !is_mobile($q) || is_resultpage($q);
 	}
 
     }
@@ -7317,7 +7323,7 @@ sub header {
 	print $q->start_html;
 	print "<h1>BBBike</h1>";
     }
-    if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$}) && !&is_mobile($q) ) {
+    if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$}) && (!&is_mobile($q) || is_resultpage($q))) {
         my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
@@ -7326,7 +7332,7 @@ sub header {
 	    print qq{\n<span id="current_weather"> </span>\n};
 	}
 
-	if (!$printmode) {
+	if (!$printmode && !&is_mobile($q)) {
 	print qq{<span id="language_switch">\n};
 	
 	my $counter = 0;
