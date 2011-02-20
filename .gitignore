@@ -21,6 +21,7 @@ osm
 data-opensearch-places
 osp
 world/web/[A-Z]*
+world/web/bbbike
 world/web/cgi
 world/web/html
 world/web/images
