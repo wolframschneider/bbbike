@@ -23,6 +23,7 @@ osp
 world/web/[A-Z]*
 world/web/bbbike
 world/web/cgi
+world/web/doc
 world/web/html
 world/web/images
 world/web/berlin
