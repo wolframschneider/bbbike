@@ -35,6 +35,7 @@ cgi/api.cgi
 cgi/livesearch.cgi
 cgi/location.cgi
 cgi/slippymap.cgi
+cgi/languages.cgi
 cgi/street-coord.cgi
 cgi/weather.cgi
 cgi/streets.cgi
