@@ -351,7 +351,7 @@ function bbbike_maps_init (maptype, marker_list, lang) {
 		content += "City: " + '<a target="_new" href="/' + opt.city + '/">' + opt.city + '</a>' + "<br/>\n";
 		content += "Start: " + opt.startname + "<br/>\n";
 		content += "Destination: " + opt.zielname + "<br/>\n";
-		content += "Route Length: " + opt.route_length + "<br/>\n";
+		content += "Route Length: " + opt.route_length + "km<br/>\n";
 		content += "Driving time: " + driving_time(opt.driving_time) + "<br/>\n";
 		content += "</div>\n";
 		infoWindow.setContent(content);
