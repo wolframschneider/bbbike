@@ -118,8 +118,8 @@ Wolletz Richtung Norden: laut "Regio-Cart" gut geeignet (zumindest in Wolletz Ve
 Dargen - Katschow: Fahrradroute laut Kompass-Karte	? 51034,165181 50994,165390 50715,166093 50464,166650 50472,166804 50661,166901 50993,167239 51565,167859
 Oberjägerweg außerhalb Spandaus: Qualität? Für Kfz-Verkehr gesperrt?	? -4472,20411 -4053,20594 -3936,21061 -3794,21804
 Drosselstr.: Qualität zwischen Privatstr. und Privatstr.?	? -8731,7403 -8503,7434 -8540,7569 -8554,7584
-Mauerweg Groß-Glienicke - Sacrower Landstr.: laut "Berliner Umland" witterungsabhängige Strecke	? -9395,5025 -9560,4615
-Mauerweg Groß-Glienicke - Sacrower Landstr.: laut "Berliner Umland" witterungsabhängige Strecke; am Luisenberg laut Tagesspiegel asphaltiert	? -9560,4615 -9138,4086 -8868,3875 -8799,3778
+Mauerweg Groß Glienicke - Sacrower Landstr.: laut "Berliner Umland" witterungsabhängige Strecke	? -9395,5025 -9560,4615
+Mauerweg Groß Glienicke - Sacrower Landstr.: laut "Berliner Umland" witterungsabhängige Strecke; am Luisenberg laut Tagesspiegel asphaltiert	? -9560,4615 -9138,4086 -8868,3875 -8799,3778
 Mauerweg am Griebnitzsee: Qualität (vermutlich Asphalt?)?	? -9655,-298 -9562,-325 -9454,-434 -9365,-610
 Wilhelm-Busch-Str. (Rehbrücke): Qualität?	? -9500,-6933 -9541,-6955 -9753,-7192 -9812,-7544
 Schlüterstr. (Rehbrücke): Qualität?	? -9812,-7544 -9953,-7604 -10080,-8117 -10263,-8447
@@ -1263,7 +1263,6 @@ Allée Pierre de Coubertin: Qualität? Für Autos offen?	? 4510,21506 4537,21497 45
 Am Ansitz: Qualität?	? 3913,21977 3855,22055
 Am Leitbruch: Qualität? Für Autos gesperrt?	? 4062,22069 4130,21961
 Am Wechsel: Qualität?	? 3771,21910 3722,21970 3681,21999 3688,22018
-Büchenbronner Steig: Qualität?	? 5291,23072 5357,23004
 Ettenheimer Pfad: Qualität?	? 4898,22459 4938,22405 5075,22153
 Höllentalweg: Qualität?	? 5108,22156 5168,22197 5209,22229
 Florastr.: Qualität?	? 4360,22576 4437,22655
@@ -2889,7 +2888,6 @@ Straße 433: Stimmt der Straßenname? Qualität?	? 9839,814 9956,852 10034,991
 Hermann-Wundrich-Platz: Qualität? Nachts beleuchtet? Ausgeschildert?	? 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 Rue René Laennec: Qualität?	? 3684,16788 3608,16765
 Elsa-Rendschmidt-Weg: Wieviele Stufen hat die Treppe zur Sarkauer Allee?	? -1574,11484 -1593,11501
-Elsa-Rendschmidt-Weg: Qualität? Können Radfahrer hier fahren?	? -1593,11501 -1635,11535 -1750,11719
 (Waldweg): Qualität? Führt hier die Route 6 entlang?	? 1859,21541 1610,21721 1556,22050 1588,22209 1524,22368 1415,22552 1476,22938 1559,23039 1534,23277 1382,23505 902,23844
 Führen hier die Routen 3 und 6 entlang?	? 905,24113 931,23965 902,23844
 Straupitzer Steig: Qualität?	? 6768,21515 6777,21335
@@ -2919,8 +2917,8 @@ Hermann-Krone-Weg (Groß Glienicke): Qualität?	? -9746,6850 -9746,6789
 Triftweg (Groß Glienicke): Qualität?	? -9640,6971 -9690,6782 -9717,6669 -9719,6639 -9722,6549
 An der Kirche (Groß Glienicke): Qualität?	? -10057,6804 -9835,6791 -9746,6789 -9690,6782 -9567,6773
 An der Kirche (Groß Glienicke): Qualität?	? -10053,6676 -9717,6669
-Bergstr. (Groß Glienicke): Qualität?	? -10272,6569 -10052,6563 -9722,6549
-Wendensteig (Groß Glienicke): Qualität?	? -10157,6361 -10154,6284 -10148,6021 -10140,5794 -10141,5704 -10161,5459 -10174,5357 -10102,5131 -10080,5069
+Bergstr. (Groß Glienicke): Qualität?	? -10272,6569 -10052,6563 -9843,6554 -9722,6549
+Wendensteig (Groß Glienicke): Qualität?	? -10157,6397 -10154,6284 -10148,6021 -10140,5794 -10141,5704 -10161,5459 -10174,5357 -10102,5131 -10080,5069
 Am Schlahn (Groß Glienicke): Qualität?	? -10494,6586 -10446,6449 -10444,6363 -10489,6050 -10467,5948 -10487,5846 -10521,5770
 Christophorusweg (Groß Glienicke): Qualität?	? -9962,6295 -9957,6028 -9945,5797
 Sankt-Anna-Str. (Groß Glienicke): Qualität?	? -9860,6288 -9855,6034 -9847,5798
@@ -2959,7 +2957,7 @@ Klaustaler Str.: Ist die Klaustaler Str. zwischen Harzburger Str. und Bleicherod
 Gatower Weg (Seeburg): Qualität?	? -8607,11262 -8596,11184 -8451,11071 -8327,10979 -8274,10938
 Straße 357: Qualität?	? -6046,14253 -6064,14321 -6091,14391 -6146,14317
 Grabenstr. (Potsdam): Qualität?	? -15023,13 -15309,-36
-Neue Kirschallee (Potsdam): Qualität?	? -14643,505 -14673,579 -14733,637 -14711,690 -14788,744
+Neue Kirschallee (Potsdam-Bornim): Qualität?	? -14643,505 -14673,579 -14733,637 -14711,690 -14788,744
 Fliederweg (Potsdam): Qualität?	? -14733,637 -14776,560 -14725,522
 Blumenstr. (Potsdam): Qualität?	? -15059,535 -15051,248
 Lendelallee (Potsdam): Qualität?	? -15633,47 -15436,64 -15442,159
@@ -2969,11 +2967,13 @@ Gersthofweg (Potsdam-Bornim): Qualität?	? -16569,1643 -16683,1437 -16727,1370
 Gutsstr. (Potsdam-Bornim): Qualität?	? -16361,1564 -16346,1591 -16314,1648 -16251,1759 -16192,1856 -16170,1908
 An der Vogelwiese (Potsdam-Bornim): Qualität?	? -16346,1591 -16407,1616 -16461,1634 -16502,1650
 Pannenbergstr. (Potsdam-Bornim): Qualität?	? -16470,1602 -16487,1548 -16477,1473 -16446,1426 -16394,1369 -16342,1324 -16280,1279 -16174,1220 -15982,1147
+Zum Weizenring (Potsdam-Bornim): Qualität? Genaue Lage der Straße?	? -16566,1579 -16535,1467
+Pomonaring (Potsdam-Bornim): Qualität? Genaue Lage der Straße?	? -15999,1387 -16046,1203 -15925,1365
 Florastr. (Potsdam-Bornim): Qualität?	? -16023,1042 -15982,1147 -15932,1238 -15859,1384 -15791,1523
 Staudenweg (Potsdam-Bornim): Qualität?	? -15932,1238 -15717,1159
 Haselnussring (Potsdam-Bornim): Qualität? Spielstraße?	? -16174,1220 -16145,1272 -16129,1306 -16108,1349 -16048,1454
 Haselnussring (Potsdam-Bornim): Qualität? Spielstraße?	? -16280,1279 -16154,1492
-Wallnussring (Potsdam-Bornim): Qualität?	? -16477,1473 -16493,1462 -16541,1360 -16371,1271 -16342,1324
+Walnussring (Potsdam-Bornim): Qualität?	? -16477,1473 -16493,1462 -16541,1360 -16371,1271 -16342,1324
 Breiter Weg (Potsdam-Bornim): Qualität?	? -16314,1648 -16239,1613 -16169,1740 -16251,1759
 Grüner Weg (Potsdam-Bornim): Qualität?	? -16192,1856 -16074,1820
 Verlängerung des Grünen Wegs: Qualität?	? -16074,1820 -16024,1806 -15692,1716 -15603,1690
@@ -3054,7 +3054,7 @@ Amelieweg: Qualität? Wo liegt die Straße genau?	? 22822,12387 22736,12412
 (Welzower Steig - Zabel-Krüger-Damm): Qualität? Nachts beleuchtet? Führt hier die Radroute 2 entlang?	? 5929,22339 5821,22435
 (Welzower Steig - Zabel-Krüger-Damm): Qualität? Nachts beleuchtet? Führt hier die Radroute 2 entlang?	? 5828,22446 5619,22766
 (Zabel-Krüger-Damm - Benekendorffstr.): Qualität? Nachts beleuchtet? Führt hier die Radroute 2 entlang?	? 5574,22747 5521,22825 5357,23004
-(Zehntwerderweg - Hermsdorfer See): Qualität? Nachts beleuchtet? Führt hier die Radroute 2 entlang?	? 5291,23072 5232,23139
+(Zehntwerderweg - Hermsdorfer See): Führt hier die Radroute 2 entlang?	? 5291,23072 5232,23139
 (Weg am Packereigraben): Qualität? Nachts beleuchtet?	? 5895,22493 5828,22446 5821,22435 5783,22418 5668,22283 5619,22168 5490,22095 5373,22089 5177,22142 5108,22156 5033,22122 4917,22119 4884,22097
 Templiner Str.: gibt es in der Templiner Straße mittlerweile Radstreifen?	? -13062,-2901 -13155,-2913 -13381,-2943 -13481,-2956 -13718,-2991
 Manuelaweg: wo genau befindet sich diese Straße? Qualität?	? -6349,5761 -6349,5674
@@ -3135,6 +3135,26 @@ Spechtweg (Potsdam-Golm): Qualität?	? -17864,83 -17843,139
 Sperberweg (Potsdam-Golm): Qualität?	? -17843,139 -17789,300
 Friedrich-Wilhelm-Boelcke-Str. (Potsdam): Qualität?	? -12796,-2488 -12831,-2439 -12813,-2423 -12779,-2467
 Zur Königlichen Hofbrauerei (Potsdam): Qualität?	? -12813,-2423 -12781,-2376
+Unterführung Müllerstraße: gibt es hier eine Rampe/Treppe?	? 4311,746 4250,763
+Georg-Stern-Str.: Wo befindet sich die Straße genau? Qualität?	? 19255,7987 19176,8045
+Günter-Riesebrodt-Weg: Wo befindet sich die Straße genau? Qualität?	? 19384,7946 19285,7914
+Ida-von-Arnim-Str.: Wo genau wird die Straße gebaut? Qualität?	? 8169,14267 8452,14298
+Am Golmer Weinberg (Potsdam-Golm): Qualität? Genaue Lage?	? -19225,-261 -19147,-77
+Alter Weinberg (Groß Glienicke): Qualität?	? -9276,7226 -9198,7051
+Dr.-Kurt-Fischer-Str. (Groß Glienicke): Qualität?	? -9429,7137 -9445,7199 -9506,7421
+Helmut-Just-Str. (Groß Glienicke): Qualität?	? -9316,7393 -9506,7421
+Freiheitsstr. (Groß Glienicke): Qualität?	? -9445,7199 -9670,7190 -9848,7181 -9869,7199 -9964,7203
+Grüner Weg (Groß Glienicke): Qualität?	? -9616,6980 -9848,7181
+Interessentenweg (Groß Glienicke): Qualität?	? -9670,7190 -9726,7239 -9798,7341
+Am Anger (Groß Glienicke): Qualität?	? -9668,6423 -9803,6453 -9839,6497 -9843,6554
+Waldweg (Groß Glienicke): Qualität?	? -10261,6466 -10127,6469
+Am Denkmal (Groß Glienicke): Qualität?	? -9531,6901 -9424,6874
+Ulrich-Steinhauer-Str. (Groß Glienicke): Qualität?	? -9983,7100 -9880,7094
+Zum Teufelssee - Am Moosfenn (Potsdam): Qualität der Gehwegverbindung?	? -10397,-5379 -10503,-5165
+Am Pappeltor (Potsdam, Geltow): Qualität?	? -18894,-5272 -18885,-5173 -18908,-4810 -18928,-4677 -18928,-4595 -18910,-4561 -18771,-4330 -18604,-3755
+An den Kopfweiden (Potsdam): Qualität?	? -10859,-3249 -11015,-3091
+Hannes-Meyer-Str. (Potsdam): Qualität?	? -14114,580 -13958,534
+Elisenweg (Potsdam): Qualität?	? -17194,-4659 -17217,-4610 -17235,-4609 -17599,-4389 -17810,-4254 -17847,-4179
 # added from ampeln-orig
 geschlossen bei Bedarf (?) (Zbr)	? 27657,-11741
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?) (B)	? 40248,14503
