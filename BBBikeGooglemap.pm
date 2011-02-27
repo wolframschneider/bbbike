@@ -328,10 +328,16 @@ EOF
     if ( $route_length ne '' ) {
 
         $html .= <<EOF;
-    elevation_initialize(map, {"driving_time":"$driving_time", "area":$marker_list, "lang":"$lang", "route_length":"$route_length", 
-				"city":"$city", "startname":"$startname", "zielname": "$zielname", 
-				"maptype":"cycle"
-				});
+elevation_initialize(map, {
+	"driving_time":"$driving_time",
+	"area":$marker_list,
+	"lang":"$lang",
+	"route_length":"$route_length",
+	"city":"$city",
+	"startname":"$startname",
+	"zielname": "$zielname",
+	"maptype":"cycle"
+});
 EOF
     }
 
