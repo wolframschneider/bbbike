@@ -19,57 +19,53 @@
 
 use strict;
 
+use IO::Dir;
+use IO::File;
 use FindBin;
-use lib ("$FindBin::RealBin/..", "$FindBin::RealBin/../lib");
+use lib ( "$FindBin::RealBin/..", "$FindBin::RealBin/../lib" );
 use Karte;
 use Strassen;
 Karte::preload(':all');
 use Getopt::Long;
 
-my($addx,$addy) = (0,0);
+my ( $addx, $addy ) = ( 0, 0 );
+my ( $from, $to );
 
-if (!GetOptions("addx=i" => \$addx,
-		"addy=i" => \$addy)) {
-    usage();
-}
+my $input_dir;
+my $output_dir;
+my $debug = 0;
 
-my($from, $to);
+sub convert {
+    my $fd_in  = shift || \*STDIN;
+    my $fd_out = shift || \*STDOUT;
 
-if (@ARGV == 1) {
-    $ARGV[1] = 'standard';
-}
-if (@ARGV == 2) {
-    $from = $Karte::map{$ARGV[0]} || usage_coordsys($ARGV[0]);
-    $to   = $Karte::map{$ARGV[1]} || usage_coordsys($ARGV[1]);
-} else {
-    usage();
-}
+    print $fd_out "#: map: $ARGV[1]\n";
 
-print "#: map: $ARGV[1]\n";
-
-while(<STDIN>) {
-    chomp;
-    if ($_ =~ m{^#}) {
-	print $_, "\n";
-	next;
+    while (<$fd_in>) {
+        chomp;
+        if ( $_ =~ m{^#} ) {
+            print $fd_out $_, "\n";
+            next;
+        }
+        my $l = Strassen::parse($_);
+        my @new_s;
+        foreach my $xy ( @{ $l->[1] } ) {
+            my ( $x, $y ) = split /,/, $xy;
+            my ( $tx, $ty ) =
+              $to->trim_accuracy( $from->map2map( $to, $x, $y ) );
+            $tx += $addx;
+            $ty += $addy;
+            push @new_s, "$tx,$ty";
+        }
+        $l->[1] = join( " ", @new_s );
+        print $fd_out Strassen::arr2line($l);
     }
-    my $l = Strassen::parse($_);
-    my @new_s;
-    foreach my $xy (@{$l->[1]}) {
-	my($x,$y) = split /,/, $xy;
-	my($tx,$ty) = $to->trim_accuracy($from->map2map($to, $x, $y));
-	$tx+=$addx;
-	$ty+=$addy;
-	push @new_s, "$tx,$ty";
-    }
-    $l->[1] = join(" ", @new_s);
-    print Strassen::arr2line($l);
 }
 
 sub usage_coordsys {
     my $tried = shift;
-    die "Unknown coordsys token <$tried>. Use one of following:\n" .
-	join(", ", keys %Karte::map) . "\n";
+    die "Unknown coordsys token <$tried>. Use one of following:\n"
+      . join( ", ", keys %Karte::map ) . "\n";
 }
 
 sub usage {
@@ -77,7 +73,73 @@ sub usage {
 usage: $0 [-addx x] [-addy y] fromcoordsys [tocoordsys] < bbdin > bbdout
 -addx/y: add value to each coordinate
 if tocoordsys is not specified, then "standard" is assumed.
+
+--input-dir=/path/to/data-osm/Berlin
+--output-dir=/path/to/data-osm.bbbike/Berlin
+--debug={0..2}
 EOF
+}
+
+sub convert_dir {
+    my $input_dir  = shift;
+    my $output_dir = shift;
+
+    my $fh = new IO::Dir $input_dir;
+
+    if ( !defined $fh ) {
+        die "open dir $input_dir: $!\n";
+    }
+
+    while ( defined( my $file = $fh->read ) ) {
+        next if $file eq '.' || $file eq '..';
+        next if $file =~ /^opensearch\./;
+        next if $file =~ /^meta\./;
+        next if $file =~ /-(orig|bak|old)$/;
+        next if !-f "$input_dir/$file";
+
+        my $fd_in = new IO::File "$input_dir/$file", "r"
+          or die "open '$input_dir/$file'\n";
+        my $fd_out = new IO::File "$output_dir/$file", "w"
+          or die "open '$output_dir/$file'\n";
+        warn "open > $output_dir/$file\n" if $debug;
+
+        &convert( $fd_in, $fd_out );
+    }
+}
+
+######################################################################
+# main
+#
+if (
+    !GetOptions(
+        "addx=i"       => \$addx,
+        "addy=i"       => \$addy,
+        "debug=i"      => \$debug,
+        "input-dir=s"  => \$input_dir,
+        "output-dir=s" => \$output_dir,
+    )
+  )
+{
+    usage();
+}
+
+if ( @ARGV == 1 ) {
+    $ARGV[1] = 'standard';
+}
+if ( @ARGV == 2 ) {
+    $from = $Karte::map{ $ARGV[0] } || usage_coordsys( $ARGV[0] );
+    $to   = $Karte::map{ $ARGV[1] } || usage_coordsys( $ARGV[1] );
+}
+else {
+    usage();
+}
+
+if ( $input_dir && $output_dir ) {
+    &convert_dir( $input_dir, $output_dir );
+}
+else {
+    warn "Read from STDIN, write to STDOUT\n" if $debug;
+    &convert();
 }
 
 __END__
