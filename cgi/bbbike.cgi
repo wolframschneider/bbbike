@@ -7452,9 +7452,11 @@ $list_of_all_streets |
 </div>
 </div>
 
+<!--googleoff: index-->
 <div id="other_cities">
 $other_cities
 </div>
+<!--googleon: index-->
 EOF
 
 
