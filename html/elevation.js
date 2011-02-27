@@ -262,7 +262,58 @@
     }
     map.fitBounds(bounds);
     updateElevation();
+    RouteMarker(opt);
   }
+
+   
+  function RouteMarker(opt) {
+	var len = marker_list.length;
+	var point = new google.maps.LatLng( marker_list[0][0], marker_list[0][1] );
+	var point2 = new google.maps.LatLng( marker_list[len-1][0], marker_list[len-1][1] );
+
+        var marker = new google.maps.Marker({
+                position: point,
+                map: map
+        });
+        var marker2 = new google.maps.Marker({
+                position: point2,
+                map: map
+        });
+
+        function driving_time (driving_time) {
+                var data = "";
+                var time = driving_time.split('|');
+                for (var i = 0; i < time.length; i++) {
+                        var t = time[i].split(':');
+                        data += t[0] + ":" + t[1] + "h (at " + t[2] + "km/h) ";
+                }
+                return data;
+        }
+
+        google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker) } );
+        google.maps.event.addListener(marker2, "click", function(event) { addInfoWindow(marker2) } );
+
+        function addInfoWindow (marker) {
+                if (infoWindow) {
+                        infoWindow.close();
+                }
+
+                infoWindow = new google.maps.InfoWindow({ maxWidth: 400});
+
+                var content = "<div id=\"infoWindowContent\">\n"
+                content += "City: " + '<a target="_new" href="/' + opt.city + '/">' + opt.city + '</a>' + "<br/>\n";
+                content += "Start: " + opt.startname + "<br/>\n";
+                content += "Destination: " + opt.zielname + "<br/>\n";
+                content += "Route Length: " + opt.route_length + "km<br/>\n";
+                content += "Driving time: " + driving_time(opt.driving_time) + "<br/>\n";
+                content += "</div>\n";
+
+                infoWindow.setContent(content);
+                infoWindow.open(map, marker);
+        };
+    }
+
+
   
   // Clear all overlays, reset the array of points, and hide the chart
   function reset() {
