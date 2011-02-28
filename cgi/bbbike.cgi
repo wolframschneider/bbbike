@@ -5443,7 +5443,9 @@ EOF
 	        print qq{<p></p>\n};
 
 
-		if (!$gmapsv3) {
+		if (is_mobile($qq)) {
+		   #
+		} elsif (!$gmapsv3) {
 		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="800" scrolling="no"></iframe><p></p>};
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 		} else {
