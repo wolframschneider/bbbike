@@ -353,6 +353,26 @@ function bbbike_maps_init (maptype, marker_list, lang) {
 		content += "Destination: " + opt.zielname + "<br/>\n";
 		content += "Route Length: " + opt.route_length + "km<br/>\n";
 		content += "Driving time: " + driving_time(opt.driving_time) + "<br/>\n";
+		// pref_cat pref_quality pref_specialvehicle pref_speed pref_ferry pref_unlit
+		if (opt.pref_speed != "" && opt.pref_speed != "20" ) { 
+		content += "Preferred speed: " + opt.pref_speed + "<br/>\n";
+		}
+		if (opt.pref_cat != "") { 
+		content += "Preferred street category: " + opt.pref_cat + "<br/>\n";
+		}
+		if (opt.pref_quality != "") { 
+		content += "Road surface: " + opt.pref_quality + "<br/>\n";
+		}
+		if (opt.pref_unlit != "") { 
+		content += "Avoid unlit streets: " + opt.pref_unlit + "<br/>\n";
+		}
+		if (opt.pref_specialvehicle != "") { 
+		content += "On the way with: " + opt.pref_specialvehicle + "<br/>\n";
+		}
+		if (opt.pref_ferry != "") { 
+		content += "Use ferries: " + opt.pref_ferry + "<br/>\n";
+		}
+
 		content += "</div>\n";
 		infoWindow.setContent(content);
 		infoWindow.open(map, marker);
