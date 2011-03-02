@@ -3186,8 +3186,7 @@ sub get_kreuzung {
 
     http_header(@weak_cache);
     my %header_args;
-    $header_args{-script} = {-src => $bbbike_html . "/bbbike_result.js?v=1.13",
-			    };
+    $header_args{-script} = {-src => bbbike_result_js() };
     header(%header_args);
 
     if (is_mobile($q)) {
@@ -4861,8 +4860,7 @@ sub display_route {
 # -->
 # EOF
 #     }
-    $header_args{-script} = {-src => $bbbike_html . "/bbbike_result.js?v=1.14",
-			    };
+    $header_args{-script} = {-src => bbbike_result_js() };
     $header_args{-printmode} = 1 if $printmode;
     header(%header_args, -onLoad => "init_search_result()");
 
@@ -7021,6 +7019,8 @@ sub etag {
     $etag = qq{"$etag"};
     (-ETag => $etag);
 }
+
+sub bbbike_result_js { $bbbike_html . "/bbbike_result.js?v=1.14" }
 
 # Write a HTTP header (always with Etag and Vary) and maybe enabled compression
 sub http_header {
