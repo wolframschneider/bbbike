@@ -273,10 +273,12 @@
 
         var marker = new google.maps.Marker({
                 position: point,
+		icon: '/images/mm_20_green.png',
                 map: map
         });
         var marker2 = new google.maps.Marker({
                 position: point2,
+		// icon: '/images/mm_20_red.png',
                 map: map
         });
 

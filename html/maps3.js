@@ -318,10 +318,12 @@ function bbbike_maps_init (maptype, marker_list, lang) {
 
 	var marker = new google.maps.Marker({
     		position: r[ parseInt( Math.random() * x) ],
+		icon: '/images/mm_20_green.png',
     		map: map
 	});
 	var marker2 = new google.maps.Marker({
     		position: r[ r.length - 1 ],
+		icon: '/images/mm_20_red.png',
     		map: map
 	});
 
