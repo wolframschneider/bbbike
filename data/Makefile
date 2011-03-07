@@ -633,7 +633,7 @@ ${f}: ${f}-orig ${ALL_STREETS} ${PERSISTENTTMPDIR}/gesperrt-without-nocross
 	    ${GREPSTRASSEN} -v -sectionrx "ignorieren" | \
 	    $(CONVERT2HAFAS) -basefile ${f}-orig - | \
 	    ${RESOLVE_STARS} -sperrefile ${PERSISTENTTMPDIR}/gesperrt-without-nocross \
-	        ${ALL_STREETS} - > $@~ && \
+	        ${ALL_STREETS} - > $@~
 	mv $@~ $@
 	-@$(READONLY) $@
 .endfor
@@ -647,7 +647,7 @@ comments_cyclepath: comments_cyclepath-orig ${ALL_STREETS} ${PERSISTENTTMPDIR}/g
 	    ${RESOLVE_STARS} -sperrefile ${PERSISTENTTMPDIR}/gesperrt-without-nocross \
 	        ${ALL_STREETS} - | \
 	    ${REPLACESTRASSEN} -catexpr 's/\?//g' \
-		> $@~ && \
+		> $@~
 	mv $@~ $@
 	-@$(READONLY) $@
 
@@ -662,7 +662,7 @@ ${f}: ${f}-orig ${ALL_STREETS} ${PERSISTENTTMPDIR}/gesperrt-without-nocross
 	    ${GREPSTRASSEN} -v -sectionrx "ignorieren" | \
 	    $(CONVERT_ORIG) -keep-directive url -keep-directive alias -special as_of - | \
 	    ${RESOLVE_STARS} -sperrefile ${PERSISTENTTMPDIR}/gesperrt-without-nocross \
-	        ${ALL_STREETS} - > $@~ && \
+	        ${ALL_STREETS} - > $@~
 	mv $@~ $@
 	-@$(READONLY) $@
 .endfor
@@ -733,7 +733,7 @@ ${_img_gif_${img}}: ${_img_png_${img}}
 .modified:	${TARGETS} ${NON_TARGETS}
 	${PERL} ${MISCSRCDIR}/create_modified
 
-multi_bez_str:	multi_bez_str-orig
+multi_bez_str:	multi_bez_str-orig strassen-orig
 	-@$(WRITEABLE) $@
 	${PERL} ${MISCSRCDIR}/complete_multi_bez_str > $@~
 	mv $@~ $@
