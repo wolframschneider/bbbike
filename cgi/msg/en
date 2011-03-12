@@ -183,6 +183,7 @@ return {
     'spenden'                                                          => 'donate',
     'Wetter f&uuml;r'                                                  => 'Weather in',
     "Willkommen bei BBBike! Wir helfen Dir, eine gute Fahrradroute in" => "Welcome to BBBike! We'll help you find a nice bike route in",
+    "Willkommen bei BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in" => "Welcome to BBBike! We'll help you find a nice, safe and short bike route in",
     "und Umgebung zu finden."                                          => "and around.",
 
     "ar"    => "Arabic",
