@@ -232,5 +232,10 @@ return {
     "aktuelle Sprache"                                            => "current language",
     "Fahrrad-Routenplaner"                                        => "Cycle Route Planner",
     "weitere St&auml;dte"                                         => "more cities",
+
+    "Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in " => "We'll help you find a nice, safe and short bicycle route in ",
+
+    " und Umgebung zu finden. Viele Suchoptionen für Radfahrer und GPX Export. OpenStreetMap Daten." => " and around. Many cycle search preferences, print and GPX exports. Based on OpenStreetMap data.",
+
 };
 

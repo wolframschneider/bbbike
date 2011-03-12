@@ -7146,9 +7146,15 @@ sub header {
 			   -content => "text/javascript"});
     push @$head, $q->meta({-name => "language",
 			   -content => $lang ? $lang : "de"});
+
+    # should not be longer than 161 characters
+    my $description =  M("Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in ") .
+	$local_city_name . 
+	M(" und Umgebung zu finden. Viele Suchoptionen für Radfahrer und GPX Export. OpenStreetMap Daten.");
+
     if ($city eq 'Berlin_DE') {
 	push @$head, $q->meta({-name => "description",
-			       -content => M('BBBike ist ein Fahrradroutenplaner mit OpenStreetMap Daten.')
+			       -content => $description,
 			      });
     }
     #push @$head, $q->meta({-name => 'DC.title',
