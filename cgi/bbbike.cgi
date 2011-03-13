@@ -7289,7 +7289,7 @@ sub header {
 
     }
 
-    push (@$head, $q->meta({-name => "robots", -content => "nofollow,noarchive"}));
+    push (@$head, $q->meta({-name => "robots", -content => "nofollow"}));
 
     # ignore directory service as DMOZ, Yahoo! and MSN
     push (@$head, $q->meta({-name => "robots", -content => "noodp,noydir"}));
