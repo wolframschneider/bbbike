@@ -123,6 +123,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_twitter_t_link
 	    $gmapsv3
 	    $facebook_page
+	    $enable_google_adsense
 	   );
 
 $gmap_api_version = 3;
@@ -1570,6 +1571,30 @@ sub get_weather_coords {
     return @weather_coords;
 }
 
+sub adsense_start_page {
+    my $file = "/usr/local/www/etc/bbbike/adsense_start_page.js";
+
+    return if !$enable_google_adsense || ! -f $file;
+
+    open (FH, $file) or return;
+
+    my $data;
+    while(<FH>) {
+	$data .= $_;
+    }
+	
+print <<EOF;
+<hr />
+<br />
+<br />
+<div id="adsense_start_page">
+$data
+</div>
+<br />
+EOF
+}
+
+
 sub choose_form {
     my $startname = $q->param('startname') || '';
     my $start2    = $q->param('start2')    || '';
@@ -2656,6 +2681,8 @@ function " . $type . "char_init() {}
             print qq{<div style="display:none" id="streetmap"></div>\n};
 
 	    print qq{<!-- use div.text() as local variable to map -->\n};
+	    &adsense_start_page if !is_mobile($q);
+
             print qq{<div style="display:none" id="streetmap2"></div>\n};
             #print qq{<div style="display:none" id="streetmap3"></div>\n}; 
 
