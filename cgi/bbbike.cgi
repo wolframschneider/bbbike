@@ -3691,7 +3691,7 @@ EOF
 
 
 sub spinning_wheel {
-    return qq{<img style="display:none" id="spinning_wheel" width="32" height="32" src="/images/spinning_wheel32.gif">};
+    return qq{<img title="BBBike is searching a cycle route for you. Please wait." style="display:none" id="spinning_wheel" width="32" height="32" src="/images/spinning_wheel32.gif">};
 }
 
 sub suche_button {
@@ -5716,7 +5716,7 @@ EOF
 	    reset_html();
 	    print "<p>\n";
 	    settings_html();
-	    print qq{<input type=submit value="} . M("Route mit ge&auml;nderten Einstellungen") . qq{">\n};
+	    print qq{<input onclick="show_spinning_wheel();" type=submit value="} . M("Route mit ge&auml;nderten Einstellungen") . qq{">\n} . &spinning_wheel;
 	    print "</form>\n";
 	    print qq{</div>};
 	}
