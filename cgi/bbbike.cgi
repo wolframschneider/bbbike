@@ -801,6 +801,7 @@ $slippymap_zoom_city = 6 if $slippymap_zoom_city <= 0;
 
 my $local_city_name = "";
 my $en_city_name = "";
+my $de_city_name = "";
 my $city_script;
 if ($osm_data) {
     $datadir =~ m,data-osm/(.+),;
@@ -813,6 +814,7 @@ if ($osm_data) {
 
     $local_city_name = select_city_name($city, $name, $lang);
     $en_city_name = select_city_name($city, $name, "en");
+    $de_city_name = select_city_name($city, $name, "de");
 
     unshift (@INC, "../data-osm/$city") if $city;
     require Karte::Polar;
@@ -7247,19 +7249,22 @@ sub header {
     if ($enable_opensearch_plugin) {
         my $opensearch_url = '/osp';
 
-        my $city2 = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
+        #my $city2 = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
 	push @$head, 
 		cgilink({-rel  => 'search',
 		         -type => "application/opensearchdescription+xml",
-			 -href => "$opensearch_url/$city2.en.xml",
-			 -title=> "$city2 (en)"});
+			 -href => "$opensearch_url/$city_script.xml",
+			 -title=> "$local_city_name ($local_lang)"});
      
-        if ($local_lang ne 'en') {
-	push @$head, 
+
+        for my $l (qw/en de/) {
+	    next if $l eq $local_lang;
+	    my $name = $l eq 'en' ? $en_city_name : $de_city_name;
+	    push @$head, 
 		cgilink({-rel  => 'search',
 		         -type => "application/opensearchdescription+xml",
-			 -href => "$opensearch_url/$city2.xml",
-			 -title=> "$city2 ($local_lang)"});
+			 -href => "$opensearch_url/$city_script.$l.xml",
+			 -title=> "$name ($l)"});
 	}
     }
 
