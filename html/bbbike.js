@@ -274,3 +274,11 @@ function google_weather (w) {
         return html;
 }
 
+// show the spinning wheel image
+function show_spinning_wheel() {
+	span = document.getElementById("spinning_wheel");
+	if (span) {
+		span.style.display = "inline";
+	}
+}
+

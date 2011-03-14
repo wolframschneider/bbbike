@@ -3689,11 +3689,16 @@ EOF
 EOF
 }
 
+
+sub spinning_wheel {
+    return qq{<img style="display:none" id="spinning_wheel" width="32" height="32" src="/images/spinning_wheel32.gif">};
+}
+
 sub suche_button {
     if ($bi->{'can_javascript'}) {
 	print qq{<input type=button value="&lt;&lt; } . M("Zurück") . qq{" onclick="history.back(1);">&nbsp;&nbsp;};
     }
-    print qq{<input type=submit value="} . M("Route zeigen") . qq{ &gt;&gt;"><p></p>\n};
+    print qq{<input onclick="show_spinning_wheel();" type=submit value="} . M("Route zeigen") . qq{ &gt;&gt;"> }. &spinning_wheel .  qq{<p></p>\n};
 }
 
 sub hidden_smallform {
