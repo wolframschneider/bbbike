@@ -2681,7 +2681,7 @@ function " . $type . "char_init() {}
             print qq{<div style="display:none" id="streetmap"></div>\n};
 
 	    print qq{<!-- use div.text() as local variable to map -->\n};
-	    &adsense_start_page if !is_mobile($q);
+	    &adsense_start_page if &is_production($q) && !is_mobile($q);
 
             print qq{<div style="display:none" id="streetmap2"></div>\n};
             #print qq{<div style="display:none" id="streetmap3"></div>\n}; 
@@ -3039,6 +3039,12 @@ sub is_mobile {
     } else {
 	return 0;
     }
+}
+
+sub is_production {
+    my $q = shift;
+
+    return $q->virtual_host() =~ /^www\.bbbike\.org$/i ? 1 : 0;
 }
 
 sub is_resultpage {
