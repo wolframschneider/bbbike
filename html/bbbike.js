@@ -278,7 +278,8 @@ function google_weather (w) {
 function show_spinning_wheel() {
 	span = document.getElementById("spinning_wheel");
 	if (span) {
-		span.style.display = "inline";
+		span.style.visibility = "visible";
 	}
+	return true;
 }
 

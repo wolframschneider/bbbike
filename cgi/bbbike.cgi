@@ -3691,7 +3691,7 @@ EOF
 
 
 sub spinning_wheel {
-    return qq{<img title="BBBike is searching a cycle route for you. Please wait." style="display:none" id="spinning_wheel" width="32" height="32" src="/images/spinning_wheel32.gif">};
+    return qq{<img title="BBBike is searching a cycle route for you. Please wait." style="visibility:hidden" id="spinning_wheel" width="32" height="32" src="/images/spinning_wheel32.gif">};
 }
 
 sub suche_button {
