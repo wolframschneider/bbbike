@@ -3691,7 +3691,10 @@ EOF
 
 
 sub spinning_wheel {
-    return qq{<img title="BBBike is searching a cycle route for you. Please wait." style="visibility:hidden" id="spinning_wheel" width="32" height="32" src="/images/spinning_wheel32.gif">};
+    return qq{<span id="spinning_wheel" style="visibility:hidden">&nbsp;&nbsp;&nbsp;} . 
+	M("BBBike sucht eine Fahrradroute") . " ...&nbsp;&nbsp;&nbsp;\n" . 
+        qq{<img title="BBBike is searching a cycle route for you. Please wait." width="32" height="32" src="/images/spinning_wheel32.gif">} .
+    qq{</span>\n};
 }
 
 sub suche_button {
