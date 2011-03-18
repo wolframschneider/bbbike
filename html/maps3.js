@@ -75,8 +75,6 @@ function bbbike_maps_init (maptype, marker_list, lang) {
     var goalIcon = new google.maps.MarkerImage("../images/flag_ziel_centered.png", 
 	new google.maps.Size(20, 32), new google.maps.Point(0,0), new google.maps.Point(16,16));
 
-    if (1 || GBrowserIsCompatible() ) {
-
         map = new google.maps.Map(document.getElementById("map"), { zoomControl: true, scaleControl: true } );
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
@@ -167,7 +165,6 @@ function bbbike_maps_init (maptype, marker_list, lang) {
                area_around.setMap(map);
              }
         }
-    }
 
     var mapnik_options = {
     	getTileUrl : function (a,z) { 
