@@ -288,3 +288,5 @@ span.current_language { font-size: large; }
 .autocomplete div { padding:2px 5px; white-space:nowrap; }
 .autocomplete strong { font-weight:normal; color:#3399FF; }
 
+div#livestatistic { font-size: small; }
+
