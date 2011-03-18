@@ -316,6 +316,32 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 		return data;
 	}
 
+        function area (area) {
+           var a = area.split("!");
+	   var x1y1 = a[0].split(",");
+	   var x2y2 = a[1].split(",");
+	   var x1 = x1y1[1];
+	   var y1 = x1y1[0];
+	   var x2 = x2y2[1];
+	   var y2 = x2y2[0];
+
+	   var r = [];
+	   r.push(new google.maps.LatLng( x1, y1 ));
+	   r.push(new google.maps.LatLng( x1, y2 ));
+	   r.push(new google.maps.LatLng( x2, y2 ));
+	   r.push(new google.maps.LatLng( x2, y1 ));
+	   r.push(new google.maps.LatLng( x1, y1 ));
+
+           var route = new google.maps.Polyline( { 
+		path: r,
+		strokeColor: "green",
+		strokeWeight: 4, 
+		strokeOpacity: 0.5} );
+            route.setMap(map);
+        }
+
+	area(opt.area);
+
         google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker) } );
         google.maps.event.addListener(marker2, "click", function(event) { addInfoWindow(marker2) } );
 
