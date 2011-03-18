@@ -63,7 +63,7 @@ function homemap_street_timer (event, time) {
 // main map object
 var map;
 
-function bbbike_maps_init (maptype, marker_list, lang) {
+function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
 
     var routeLinkLabel = "Link to route: ";
@@ -105,7 +105,7 @@ function bbbike_maps_init (maptype, marker_list, lang) {
 	    });
 
 
-	    if (marker_list.length == 2) {
+	    if (marker_list.length == 2 && without_area != 1) {
 	       var x1 = marker_list[0][0];
 	       var y1 = marker_list[0][1];
 	       var x2 = marker_list[1][0];
@@ -206,6 +206,7 @@ function bbbike_maps_init (maptype, marker_list, lang) {
     custom_map( "mapnik", lang);
     custom_map( "cycle", lang);
 }
+
 
     var street = "";
     var street_cache = [];
