@@ -167,21 +167,7 @@ function bbbike_maps_init (maptype, marker_list, lang) {
                area_around.setMap(map);
              }
         }
-
-	// new GKeyboardHandler(map);
-    } else {
-        document.getElementById("map").innerHTML = '<p class="large-error">Sorry, your browser is not supported by <a href="http://maps.google.com/support">Google Maps</a></p>';
     }
-
-    if (0) {
-    var copyright = new GCopyright(1,
-        new google.maps.LatLng(new google.maps.LatLng(-90,-180), new google.maps.LatLng(90,180)), 0,
-        '(<a rel="license" target="_ccbysa" href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>)');
-    var copyrightCollection =
-        new GCopyrightCollection('Map data &copy; 2010 <a target="_osm" href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors');
-    copyrightCollection.addCopyright(copyright);
-    }
-
 
     var mapnik_options = {
     	getTileUrl : function (a,z) { 
