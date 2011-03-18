@@ -166,11 +166,6 @@ function bbbike_maps_init (maptype, marker_list, lang) {
 			strokeColor: o[0], strokeWeight: o[1], strokeOpacity: o[2], fillColor: o[3], fillOpacity: o[4]});
                area_around.setMap(map);
              }
-
-        } else {
-            // use default zoom level
-            // map.setCenter(new google.maps.LatLng(48.05000, 7.31000), 17 - 6); // , G_NORMAL_MAP);
-
         }
 
 	// new GKeyboardHandler(map);
