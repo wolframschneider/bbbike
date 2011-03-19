@@ -39,6 +39,7 @@ cgi/languages.cgi
 cgi/street-coord.cgi
 cgi/weather.cgi
 cgi/streets.cgi
+cgi/area.cgi
 data-osm.bbbike.tgz
 data-osm.bbbike/
 data-osm.old/

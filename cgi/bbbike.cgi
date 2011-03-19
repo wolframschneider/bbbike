@@ -916,7 +916,7 @@ use vars qw($font $delim);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
 $delim = '!'; # wegen Mac nicht ¦ verwenden!
 
-@weak_cache = ('-expires' => '+8h',
+@weak_cache = ('-expires' => '+6d',
                # XXX ein bißchen soll Netscape3 auch cachen können:
 	       #'-pragma' => 'no-cache',
 	       '-cache-control' => 'private',
@@ -1107,7 +1107,7 @@ if ($q->param("tmp")) {
     $file =~ s{/+}{}g; # one leading slash is expected
     $file = $mapdir_fs . "/" . $file;
     my($ext) = $file =~ m{\.([^\.]+)$};
-    http_header(-expires => '+8h', -type => "image/$ext");
+    http_header(-expires => '+6d', -type => "image/$ext");
 
     binmode STDOUT;
     open TMP, $file or die "Can't open file $file: $!";
@@ -2039,7 +2039,7 @@ sub choose_form {
     }
 
     my %header_args = @weak_cache;
-    $header_args{-expires} = '+8h';
+    $header_args{-expires} = '+6d';
     http_header(%header_args);
     my @extra_headers;
 
@@ -6111,7 +6111,7 @@ sub draw_route {
 	my $filename = ($startname && $zielname ? filename_from_route($startname, $zielname, "bbbike") : "bbbike");
 	http_header
 	    (-type => "application/pdf",
-	     -expires => '+8h',
+	     -expires => '+6d',
 	     @header_args,
 	     -Content_Disposition => "inline; filename=$filename.pdf",
 	    );
@@ -6157,7 +6157,7 @@ sub draw_route {
     if (!$header_written && !$draw->module_handles_all_cgi) {
 	http_header
 	    (-type => $draw->mimetype,
-		-expires => '+8h',
+		-expires => '+6d',
 	     -Content_Disposition => "inline; filename=bbbike.".$draw->suffix,
 	    );
     }
