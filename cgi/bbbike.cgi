@@ -7763,11 +7763,11 @@ sub choose_all_form {
 	     $last_initial ne $trans{$initial})) {
 	    print "<hr>";
 	    $last_initial = ($trans{$initial} ? $trans{$initial} : $initial);
-	    print "<a name=\"$last_initial\"><b>$last_initial</b></a><br>";
+	    print "<a name=\"$last_initial\"><b>$last_initial</b></a><br>\n";
 	}
 	#print "$strname<br>";
         my $html_strname = BBBikeCGIUtil::my_escapeHTML($strname);
-        print "$html_strname<br>";
+        print "$html_strname<br>\n";
     }
 
 #     for my $type (qw(s u)) {
