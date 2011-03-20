@@ -7785,7 +7785,10 @@ sub choose_all_form {
 # 	print join("<br/>\n", map { uc($type) . " " . $_ } @bhf), "\n";
 #     }
 
+    print "<hr>";
     print "</div>";
+
+    &footer;
 
     print $q->end_html;
 
