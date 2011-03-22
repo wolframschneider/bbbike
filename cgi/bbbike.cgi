@@ -752,6 +752,7 @@ my $local_lang = "";
 my $selected_lang = "";
 my @supported_lang = qw/da de en es fr hr nl pl pt ru zh/;
 
+my $time_start = time;
 { my $q = new CGI;
   my $path = $q->url(-full => 0, -absolute => 1);
 
@@ -7446,6 +7447,8 @@ sub footer { print footer_as_string() }
 sub footer_as_string {
 	my $s = "";
 
+my $real_time = $time_start - time;
+
 my $qq = new CGI;
 #$qq->param( 'startname', Encode::encode( utf8 => $qq->param('startname')));
 #$qq->param( 'zielname', Encode::encode( utf8 => $qq->param('zielname')));
@@ -7542,6 +7545,8 @@ EOF
     if ($bi->{'css_buggy'}) {
 	$s .= "</font>\n";
     }
+
+    $s .= "<!-- real time: $real_time -->\n";
     $s;
 }
 
