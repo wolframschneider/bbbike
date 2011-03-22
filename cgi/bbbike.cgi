@@ -7447,7 +7447,7 @@ sub footer { print footer_as_string() }
 sub footer_as_string {
 	my $s = "";
 
-my $real_time = $time_start - time;
+my $real_time = time - $time_start;
 
 my $qq = new CGI;
 #$qq->param( 'startname', Encode::encode( utf8 => $qq->param('startname')));
@@ -7546,7 +7546,7 @@ EOF
 	$s .= "</font>\n";
     }
 
-    $s .= "<!-- real time: $real_time -->\n";
+    $s .= "\n<!-- real time: $real_time seconds -->\n";
     $s;
 }
 
