@@ -1333,7 +1333,7 @@ if (defined $q->param('begin')) {
     $q->delete('uploadpage');
     $q->delete('gps');
     upload_button();
-} elsif (defined $q->param('all')) {
+} elsif (defined $q->param('all') || $q->url(-path_info =>1) =~ m,/streets\.html$, ) {
     $q->delete('all');
     choose_all_form();
 } elsif (defined $q->param('bikepower')) {
