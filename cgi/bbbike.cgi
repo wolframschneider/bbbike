@@ -1070,6 +1070,8 @@ if (!$is_beta) {
     $bbbike2_url =~ s{bbbike(\.en)?\.cgi}{bbbike2$1.cgi};
 }
 
+$bbbike_url =~ s,/streets\.html$,/,;
+
 $bbbike_script = $bbbike_url;
 
 if (!$mapdir_url && !$mapdir_fs) {
@@ -7336,7 +7338,7 @@ sub header {
 
     }
 
-    push (@$head, $q->meta({-name => "robots", -content => "nofollow"}));
+    #push (@$head, $q->meta({-name => "robots", -content => "nofollow"}));
 
     # ignore directory service as DMOZ, Yahoo! and MSN
     push (@$head, $q->meta({-name => "robots", -content => "noodp,noydir"}));
@@ -7455,7 +7457,8 @@ my $qq = new CGI;
 my $permalink = BBBikeCGIUtil::my_escapeHTML($qq->url(-full=>1, -query=>1));
 
 my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'Berlin und Potsdam';
-my $list_of_all_streets = window_open("$bbbike_script?all=1", "BBBikeAll",
+my $streets = $bbbike_script =~ m,/$, ? $bbbike_script . "streets.html" : "$bbbike_script?all=1";
+my $list_of_all_streets = window_open("$streets", "BBBikeAll",
                          "dependent,height=500,resizable," .
                          "screenX=500,screenY=30,scrollbars,width=250")
 	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $local_city_name : "") ."</a>";
