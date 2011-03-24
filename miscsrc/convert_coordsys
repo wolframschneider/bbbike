@@ -95,6 +95,7 @@ sub convert_dir {
         next if $file =~ /^opensearch\./;
         next if $file =~ /^meta\./;
         next if $file =~ /-(orig|bak|old)$/;
+        next if $file =~ /\.(gz|bz2)$/;
         next if !-f "$input_dir/$file";
 
         my $fd_in = new IO::File "$input_dir/$file", "r"
