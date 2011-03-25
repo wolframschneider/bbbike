@@ -594,6 +594,7 @@ Fritz-Erpenbeck-Ring	1 9717,19692 9697,19758 9708,19779 9785,19807 9864,19793
 Am Konsulat: Privatstraße, mit Toren versperrt	2 9962,19757 9990,19644 9916,19625
 Pastor-Niemöller-Platz	1 9859,19283 9811,19302 9789,19329 9791,19363 9826,19382 9870,19360
 Pasewalker Str. (Wedding)	1 7891,15417 7877,15581
+Olympische Str.	1 610,12100 628,12138
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -1771,6 +1772,9 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-108 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
+2x Drängelgitter	BNP:6:65:trailer=25 13189,2736
+Schranke	BNP:4:-102:trailer=10 11432,4054
+Schranke	BNP:4:-41:trailer=10 11408,4190
 Schranke	BNP:4:-216:trailer=10 15200,2754
 Pfosten (lichte Breite ca. 120cm)	BNP:0:-69:trailer=5 18727,1040
 Pfosten (lichte Breite ca. 100cm)	BNP:0:-147:trailer=5 21356,8267
