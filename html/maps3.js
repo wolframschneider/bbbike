@@ -212,8 +212,12 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     var street_cache = [];
     var data_cache = [];
 
-    function getStreet(map, city, street) {
+    function getStreet(map, city, street, strokeColor) {
         var url = encodeURI("/cgi/street-coord.cgi?namespace=0;city=" + city + "&query=" + street);
+
+	if (!strokeColor) {
+	    strokeColor = "#0000FF";
+	}
 
 	// cleanup map
 	for (var i = 0; i < street_cache.length; i++) {
@@ -240,7 +244,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 		}
 	        var route = new google.maps.Polyline( { 
 			path: streets_route, 
-			strokeColor: "#FF0000",
+			strokeColor: strokeColor,
 			strokeWeight: 7, 
 			strokeOpacity: 0.5} );
     	        route.setMap(map);
