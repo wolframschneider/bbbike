@@ -7460,7 +7460,7 @@ my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'Berlin un
 my $streets = $bbbike_script =~ m,/$, ? $bbbike_script . "streets.html" : "$bbbike_script?all=1";
 my $list_of_all_streets = window_open("$streets", "BBBikeAll",
                          "dependent,height=500,resizable," .
-                         "screenX=500,screenY=30,scrollbars,width=250")
+                         "screenX=500,screenY=230,scrollbars,width=550")
 	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $local_city_name : "") ."</a>";
 my $community_link = $lang eq 'de' ? '/community.de.html' : '/community.html';
 my $donate = M("spenden");
