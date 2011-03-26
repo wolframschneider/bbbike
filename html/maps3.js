@@ -273,6 +273,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
     var infoWindow;
     var routeSave;
+    var _area_hash = [];
     function plotRoute(map, opt, street) {
 	var r = [];
 
@@ -344,7 +345,11 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
             route.setMap(map);
         }
 
-	area(opt.area);
+	// plot the area *once* for a city
+	if (opt.area && !_area_hash[opt.area]) {
+	    area(opt.area);
+	    _area_hash[opt.area] = 1;
+        }
 
         google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker) } );
         google.maps.event.addListener(marker2, "click", function(event) { addInfoWindow(marker2) } );
