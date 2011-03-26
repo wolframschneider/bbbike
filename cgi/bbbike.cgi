@@ -7194,6 +7194,10 @@ sub header {
         my $city = $en_city_name || do { ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin' };
 	$args{-title} = "BBBike \@ $local_city_name" . " - " . M("Fahrrad-Routenplaner") . " $local_city_name" . ($city ne $local_city_name ? " // $city" : "");
 	$args{-title2} = "BBBike\@$local_city_name";
+
+	if ($q->url(-path_info =>1) =~ m,/streets\.html$,) {
+	   $args{-title} .= " - street names";
+        }
     }
 
     no strict;
