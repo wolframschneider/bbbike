@@ -7752,6 +7752,10 @@ sub choose_all_form {
     my $last = "";
     my $last_initial = "";
 
+    print "<p>\n", M("Willkommen bei BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
+	    " <i title='$city'>$local_city_name</i> ",  
+	    M("und Umgebung zu finden."), "<br></p>\n";
+
     print qq{\n<div id="a_z_list">\n};
     print "<center>";
     for my $ch ('A' .. 'Z') {
