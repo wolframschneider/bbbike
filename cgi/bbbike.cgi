@@ -7750,6 +7750,7 @@ sub choose_all_form {
     my $last = "";
     my $last_initial = "";
 
+    print qq{\n<div id="a_z_list">\n};
     print "<center>";
     for my $ch ('A' .. 'Z') {
 	print "<a href=\"#$ch\">$ch</a> ";
@@ -7757,7 +7758,7 @@ sub choose_all_form {
 #     for my $type (qw(s u)) {
 # 	print qq{<a href="#${type}bhf">} . uc($type) . qq{-Bahnhöfe</a> };
 #     }
-    print "</center><div id='list'>";
+    print "</center>\n</div>\n\n<div id='list'>";
 
     for(my $i = 0; $i <= $#strlist; $i++) {
 	next if ($strlist[$i] =~ /^\(/);
@@ -7769,13 +7770,13 @@ sub choose_all_form {
 	    $last_initial ne $initial and
 	    (!defined $trans{$initial} or
 	     $last_initial ne $trans{$initial})) {
-	    print "<hr>";
+	    print "\n<hr>\n";
 	    $last_initial = ($trans{$initial} ? $trans{$initial} : $initial);
 	    print "<a name=\"$last_initial\"><b>$last_initial</b></a><br>\n";
 	}
 	#print "$strname<br>";
         my $html_strname = BBBikeCGIUtil::my_escapeHTML($strname);
-        print "$html_strname<br>\n";
+        print qq{<span class="street">$html_strname</span><br>\n};
     }
 
 #     for my $type (qw(s u)) {
