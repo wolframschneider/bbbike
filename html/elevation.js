@@ -127,8 +127,8 @@
     polyline = new google.maps.Polyline({
       path: path,
       clickable: true,
-      strokeColor: '#ff0000',
-      strokeWeight: 18, 
+      strokeColor: '#00FF00',
+      strokeWeight: 8, 
       strokeOpacity: 0.6, 
       map: map
     });
