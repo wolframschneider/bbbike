@@ -2724,6 +2724,12 @@ EOF
 
 if ($enable_homemap_streets) {
 
+   my $plot_streets = "";
+   foreach my $param (qw/start via ziel/) {
+       if ($q->param($param)) {
+	   $plot_streets .= qq{getStreet(map, city, "} . CGI::escapeHTML($q->param($param)) . qq{");\n};
+       }
+   }
 
 print <<'EOF';
 <script type="text/javascript">
@@ -2733,9 +2739,14 @@ print <<'EOF';
   $("input.ac_input").keyup( 	function(event) { homemap_street_timer(event, delay*2) } );
   $("input.ac_input").click( 	function(event) { homemap_street_timer(event, delay) } );
   $("div.autocomplete").mouseover(function(event) { homemap_street_timer(event, delay) } );
-</script>
 
 EOF
+
+print <<"EOF" 
+$plot_streets
+</script>
+EOF
+
 }
 
    if ($enable_current_weather && scalar(@weather_coords) > 0 && (!is_mobile($q) || is_resultpage($q))) {
