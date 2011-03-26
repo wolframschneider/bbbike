@@ -7736,6 +7736,7 @@ sub choose_all_form {
 # 		);
 #    my $trans_rx = "[".join("",keys %trans)."]";
     my %trans = %BBBikeUtil::uml_german_locale;
+
     if ($locale_set) {
 	@strlist = sort @strlist;
     } else {
@@ -7747,6 +7748,7 @@ sub choose_all_form {
 		      }
 		       @strlist;
     }
+
     my $last = "";
     my $last_initial = "";
 
@@ -7776,6 +7778,11 @@ sub choose_all_form {
 	}
 	#print "$strname<br>";
         my $html_strname = BBBikeCGIUtil::my_escapeHTML($strname);
+        $html_strname =~ s/&#160;/ /g;
+	if (!Encode::is_utf8($html_strname)) {
+            $html_strname = Encode::decode("utf-8", $html_strname);
+	}
+ 
         print qq{<span class="street">$html_strname</span><br>\n};
     }
 
@@ -7794,8 +7801,20 @@ sub choose_all_form {
 # 	print join("<br/>\n", map { uc($type) . " " . $_ } @bhf), "\n";
 #     }
 
-    print "<hr>";
-    print "</div>";
+    print "<hr>\n";
+    print "</div>\n";
+
+    # make the street names clickable
+print <<"EOF";
+<script type="text/javascript">
+\$(document).ready(function(){
+    \$("div#list span.street").click(function(event){
+	open("$bbbike_url?start=" + escape(this.innerHTML));
+    });
+});
+</script>
+EOF
+
 
     &footer;
 
