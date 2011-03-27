@@ -768,7 +768,7 @@ my $time_start = time;
   $lang = $local_lang if $local_lang && !$selected_lang;
 }
 
-warn "xxx: city: $datadir, lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
+#warn "xxx: city: $datadir, lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
 warn "$datadir does not exists!\n" if ! -d "../$datadir";
 
 #if ($config_master =~ s{^(.*)\.(en)(\.cgi)$}{$1$3}) {
