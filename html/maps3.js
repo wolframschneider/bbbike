@@ -88,7 +88,18 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
             map.setCenter(bounds.getCenter());
 
             // var zoom = map.getBoundsZoomLevel(bounds);
-            map.fitBounds(bounds);
+
+	    // improve zoom level, max. area as possible
+	    if ( marker_list.length == 2) {
+               	var bounds_padding = new google.maps.LatLngBounds;
+	  	var padding = 0.01; // make the area smaller by this value to cheat to map.getZoom()
+
+	       	bounds_padding.extend(new google.maps.LatLng( marker_list[0][0] + padding, marker_list[0][1] + padding))
+	       	bounds_padding.extend(new google.maps.LatLng( marker_list[1][0] - padding, marker_list[1][1] - padding))
+               	map.fitBounds(bounds_padding);
+	    } else {
+                map.fitBounds(bounds);
+	    }
 	    var zoom = map.getZoom();
 
             // no zoom level higher than 15
