@@ -237,7 +237,9 @@ div#routing {
 	z-index: 1000; 
 	
 	// scroll city list if to long
-	overflow: auto;
+	// overflow: auto;
+	overflow-y: auto;
+	overflow-x: auto;
 	height: 90%;
 }
 
