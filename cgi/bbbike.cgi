@@ -7523,8 +7523,8 @@ $list_of_all_streets |
 <hr>
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
-(&copy;) 1998-2011 BBBike.org by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
-  Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project, <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br >
+(&copy;) 1998-2011 <a href="http://CycleRoutePlanner.org">CycleRoutePlanner.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
+Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
 <div id="footer_community">
   <a href="$community_link"><img height="19" width="64" src="/images/donate.png" alt="Flattr this" title="Donate to bbbike.org" border="0"></a>
   <a href="$community_link"><img src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
