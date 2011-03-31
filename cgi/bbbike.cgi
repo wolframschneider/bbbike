@@ -1616,6 +1616,7 @@ print <<EOF;
 <div id="adsense_street_page">
 $data
 </div>
+<br />
 EOF
 }
 
