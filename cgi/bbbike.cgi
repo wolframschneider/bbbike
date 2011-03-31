@@ -1620,6 +1620,24 @@ $data
 EOF
 }
 
+sub adsense_linkblock {
+    my $file = "/usr/local/www/etc/bbbike/adsense_linkblock.js";
+
+    return if !$enable_google_adsense || ! -f $file;
+
+    open (FH, $file) or return;
+
+    my $data;
+    while(<FH>) {
+	$data .= $_;
+    }
+	
+print <<EOF;
+<div id="adsense_linkblock">
+$data
+</div>
+EOF
+}
 
 
 sub choose_form {
@@ -7473,6 +7491,8 @@ EOF
 
 	print qq{</span>\n};
 	print qq{</div>\n};
+
+	&adsense_linkblock if &is_production($q) && !is_mobile($q);
     }
 
     if ($ENV{SERVER_NAME} =~ /cs\.tu-berlin\.de/ &&
