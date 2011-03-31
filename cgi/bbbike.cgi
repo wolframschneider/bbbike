@@ -7793,6 +7793,7 @@ sub choose_all_form {
     print "<p>\n", M("Willkommen bei BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
 	    " <i title='$city'>$local_city_name</i> ",  
 	    M("und Umgebung zu finden."), "<br></p>\n";
+    print qq{<p>\n}, M("Klicke auf eine Strasse, um die Routensuche zu starten"), qq{:</p>\n};
 
     &adsense_street_page if &is_production($q); # && !is_mobile($q);
 

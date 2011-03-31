@@ -238,6 +238,7 @@ return {
 
     " und Umgebung zu finden. Viele Suchoptionen für Radfahrer und GPX Export. OpenStreetMap Daten." => " and around. Many cycle search preferences, print and GPX exports. Based on OpenStreetMap data.",
 
-    "BBBike sucht eine Fahrradroute" => "BBBike is searching a cycle route for you. Please wait",
+    "BBBike sucht eine Fahrradroute"                         => "BBBike is searching a cycle route for you. Please wait",
+    "Klicke auf eine Strasse, um die Routensuche zu starten" => "Please click on a street to start the route search",
 };
 
