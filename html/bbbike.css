@@ -252,6 +252,13 @@ div#BBBikeGooglemap {
 	top: -0.5em; 
 }
 
+div#adsense_linkblock { 
+	margin-left: 18.4em; 
+	position: relative;
+	top: -1.0em; 
+        width: 74%; 
+}
+
 div#chart_div {
 	witdh: 90%;
 	margin-left: 5%;

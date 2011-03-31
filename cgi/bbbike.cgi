@@ -2758,6 +2758,9 @@ EOF
             } elsif ($BBBikeGooglemap) {
 		use BBBikeGooglemap;
 
+		print qq{<div id="map_area">\n};
+		&adsense_linkblock if &is_production($q) && !is_mobile($q);
+		print qq{</div>\n\n};
 	        my $maps = BBBikeGooglemap->new();
 	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang) );
 	    }
@@ -7492,7 +7495,7 @@ EOF
 	print qq{</span>\n};
 	print qq{</div>\n};
 
-	&adsense_linkblock if &is_production($q) && !is_mobile($q);
+	#&adsense_linkblock if &is_production($q) && !is_mobile($q);
     }
 
     if ($ENV{SERVER_NAME} =~ /cs\.tu-berlin\.de/ &&
