@@ -1595,11 +1595,9 @@ sub adsense_start_page {
 print <<EOF;
 <hr />
 <br />
-<br />
 <div id="adsense_start_page">
 $data
 </div>
-<br />
 EOF
 }
 
