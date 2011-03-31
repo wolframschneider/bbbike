@@ -1599,6 +1599,27 @@ $data
 EOF
 }
 
+sub adsense_street_page {
+    my $file = "/usr/local/www/etc/bbbike/adsense_street_page.js";
+
+    return if !$enable_google_adsense || ! -f $file;
+
+    open (FH, $file) or return;
+
+    my $data;
+    while(<FH>) {
+	$data .= $_;
+    }
+	
+print <<EOF;
+<hr />
+<div id="adsense_street_page">
+$data
+</div>
+EOF
+}
+
+
 
 sub choose_form {
     my $startname = $q->param('startname') || '';
@@ -7771,6 +7792,8 @@ sub choose_all_form {
     print "<p>\n", M("Willkommen bei BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
 	    " <i title='$city'>$local_city_name</i> ",  
 	    M("und Umgebung zu finden."), "<br></p>\n";
+
+    &adsense_street_page if &is_production($q); # && !is_mobile($q);
 
     print qq{\n<div id="a_z_list">\n};
     print "<center>";
