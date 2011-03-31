@@ -239,7 +239,7 @@ div#routing {
 	// scroll city list if to long
 	// overflow: auto;
 	overflow-y: auto;
-	overflow-x: auto;
+	overflow-x: none;
 	height: 80%;
 }
 
