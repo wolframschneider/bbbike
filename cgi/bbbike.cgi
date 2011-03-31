@@ -124,6 +124,9 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $gmapsv3
 	    $facebook_page
 	    $enable_google_adsense
+	    $enable_google_adsense_start
+	    $enable_google_adsense_street
+	    $enable_google_adsense_linkblock
 	   );
 
 $gmap_api_version = 3;
@@ -1580,6 +1583,7 @@ sub adsense_start_page {
     my $file = "/usr/local/www/etc/bbbike/adsense_start_page.js";
 
     return if !$enable_google_adsense || ! -f $file;
+    return if defined $enable_google_adsense_start && !$enable_google_adsense_start;
 
     open (FH, $file) or return;
 
@@ -1603,6 +1607,7 @@ sub adsense_street_page {
     my $file = "/usr/local/www/etc/bbbike/adsense_street_page.js";
 
     return if !$enable_google_adsense || ! -f $file;
+    return if defined $enable_google_adsense_street && !$enable_google_adsense_street;
 
     open (FH, $file) or return;
 
@@ -1624,6 +1629,7 @@ sub adsense_linkblock {
     my $file = "/usr/local/www/etc/bbbike/adsense_linkblock.js";
 
     return if !$enable_google_adsense || ! -f $file;
+    return if defined $enable_google_adsense_linkblock && !$enable_google_adsense_linkblock;
 
     open (FH, $file) or return;
 
@@ -3104,6 +3110,7 @@ sub is_mobile {
 sub is_production {
     my $q = shift;
 
+    return 1;
     return $q->virtual_host() =~ /^www\.bbbike\.org$/i ? 1 : 0;
 }
 
