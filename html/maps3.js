@@ -294,8 +294,8 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
         	   // google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker, street) } );
 		   if (streets_list.length <= 10) {
         	   	addInfoWindow(marker, street);
-		   	street_cache.push(marker);
 		   }
+		   street_cache.push(marker);
 		}
 
 	    }
