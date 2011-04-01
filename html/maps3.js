@@ -224,7 +224,9 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     var data_cache = [];
 
     function getStreet(map, city, street, strokeColor) {
-        var url = encodeURI("/cgi/street-coord.cgi?namespace=0;city=" + city + "&query=" + street);
+	var streetnames = 3;
+
+        var url = encodeURI("/cgi/street-coord.cgi?namespace=" + (streetnames ? "3" : "0") + ";city=" + city + "&query=" + street);
 
 	if (!strokeColor) {
 	    strokeColor = "#0000FF";
@@ -241,6 +243,15 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 	    return plotStreet(data_cache[url]);
         }
 
+        function addInfoWindow (marker, address) {
+                infoWindow = new google.maps.InfoWindow({ maxWidth: 500 });
+                var content = "<span id=\"infoWindowContent\">\n"
+                content += "<p>" + address + "</p>\n";
+                content += "</span>\n";
+                infoWindow.setContent(content);
+                infoWindow.open(map, marker);
+        };
+
 	// plot street(s) on map
         function plotStreet(data) {
 	    var js = eval(data);
@@ -248,7 +259,17 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
     	    for (var i = 0; i < streets_list.length; i++) {
     	        var streets_route = new Array;
-		var s = streets_list[i].split(" ");
+		var s;
+		var street;
+
+		if (!streetnames) {
+		   s = streets_list[i].split(" ");
+		} else {
+		   var list = streets_list[i].split("\t");
+		   street = list[0];
+		   s = list[1].split(" ");
+		}
+
 		for( var j = 0; j < s.length; j++) {
 	  	  var coords = s[j].split(",");
 		  streets_route.push(new google.maps.LatLng(coords[1], coords[0]));
@@ -261,6 +282,22 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     	        route.setMap(map);
 
 		street_cache.push(route);
+
+		// display a small marker for every street
+		if (streetnames) {
+	           var marker = new google.maps.Marker({
+                   	position: streets_route[0],
+                  	icon: '/images/mm_20_green.png',
+                   	map: map
+        	   });
+
+        	   // google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker, street) } );
+		   if (streets_list.length <= 10) {
+        	   	addInfoWindow(marker, street);
+		   	street_cache.push(marker);
+		   }
+		}
+
 	    }
         }
 
