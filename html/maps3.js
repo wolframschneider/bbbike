@@ -505,7 +505,7 @@ function custom_map ( maptype, lang ) {
 }
 
 
-function displayCurrentPosition () {
+function displayCurrentPosition (area) {
     if (!navigator.geolocation) {
 	return;
     }
@@ -519,12 +519,34 @@ function displayCurrentPosition () {
                 map: map
         });
 
-        google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker) } );
+	var geocoder = new google.maps.Geocoder();
+	geocoder.geocode({'latLng': pos}, function(results, status) {
+  		if(status != google.maps.GeocoderStatus.OK || !results[0]) {
+    			alert("reverse geocoder failed to find an address for " + latlng.toUrlValue());
+  		} else { 
+			var result = results[0];
 
-        function addInfoWindow (marker) {
+			// display info window at startup if inside the area
+			if (area.length > 0) {
+			   if (area[0][0] < currentPosition.lng && area[0][1] < currentPosition.lat &&
+			       area[1][0] > currentPosition.lng && area[1][1] > currentPosition.lat) {
+
+			      addInfoWindow (marker, result.formatted_address);
+			   }
+			}
+
+			// or later at click event
+        		google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker, result.formatted_address) } );
+  		}
+	});
+
+       // google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker) } );
+
+        function addInfoWindow (marker, address) {
                 infoWindow = new google.maps.InfoWindow({ maxWidth: 400});
                 var content = "<div id=\"infoWindowContent\">\n"
                 content += "<p>Your current postion: " + currentPosition.lat + "," + currentPosition.lng + "</p>\n";
+		content += "<p>Address: " +  address + "</p>\n";
                 content += "</div>\n";
                 infoWindow.setContent(content);
                 infoWindow.open(map, marker);
