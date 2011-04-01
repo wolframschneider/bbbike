@@ -235,12 +235,19 @@ div#routing {
 	width: 17em;
 	background-color: white;
 	z-index: 1000; 
+}
+
+div#routes {
+	position: absolute; 
+	left: 0px;
+	width: 17em;
+	background-color: white;
+	z-index: 1000; 
 	
 	// scroll city list if to long
-	// overflow: auto;
 	overflow-y: auto;
-	overflow-x: none;
-	height: 80%;
+	overflow-x: auto;
+	height: 90%;
 }
 
 div#BBBikeGooglemap { 
