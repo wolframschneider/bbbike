@@ -522,7 +522,7 @@ function displayCurrentPosition (area) {
 	var geocoder = new google.maps.Geocoder();
 	geocoder.geocode({'latLng': pos}, function(results, status) {
   		if(status != google.maps.GeocoderStatus.OK || !results[0]) {
-    			alert("reverse geocoder failed to find an address for " + latlng.toUrlValue());
+    			// alert("reverse geocoder failed to find an address for " + latlng.toUrlValue());
   		} else { 
 			var result = results[0];
 
