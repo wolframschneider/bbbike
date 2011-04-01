@@ -546,7 +546,7 @@ function displayCurrentPosition (area) {
                 infoWindow = new google.maps.InfoWindow({ maxWidth: 400});
                 var content = "<div id=\"infoWindowContent\">\n"
                 content += "<p>Your current postion: " + currentPosition.lat + "," + currentPosition.lng + "</p>\n";
-		content += "<p>Address: " +  address + "</p>\n";
+		content += "<p>Approximate address: " +  address + "</p>\n";
                 content += "</div>\n";
                 infoWindow.setContent(content);
                 infoWindow.open(map, marker);
