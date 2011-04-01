@@ -569,6 +569,16 @@ function displayCurrentPosition (area) {
 			       area[1][0] > currentPosition.lng && area[1][1] > currentPosition.lat) {
 
 			      addInfoWindow (marker, result.formatted_address);
+
+			      // hide window after N seconds
+			      setTimeout( function () { 
+				marker.setMap(null);
+				marker = new google.maps.Marker({
+                			position:  pos,
+                			map: map
+        			});
+        		        google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker, result.formatted_address) });
+			      }, 5000 );
 			   }
 			}
 
@@ -587,6 +597,7 @@ function displayCurrentPosition (area) {
                 content += "</div>\n";
                 infoWindow.setContent(content);
                 infoWindow.open(map, marker);
+
         };
    });  
 }
