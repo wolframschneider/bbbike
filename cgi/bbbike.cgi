@@ -3108,6 +3108,7 @@ sub is_mobile {
 sub is_production {
     my $q = shift;
 
+    #return 1;
     return $q->virtual_host() =~ /^www\.bbbike\.org$/i ? 1 : 0;
 }
 
