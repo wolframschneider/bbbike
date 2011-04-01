@@ -1579,6 +1579,17 @@ sub get_weather_coords {
     return @weather_coords;
 }
 
+sub get_bbox_wgs84 {
+    my @box;
+
+    my $geo = get_geography_object();
+
+    if ( $geo->is_osm_source && exists $geo->{'bbox_wgs84'} ) {
+        my @list = @{ $geo->{'bbox_wgs84'} };
+	return @list;
+    }
+}
+
 sub adsense_start_page {
     my $file = "/usr/local/www/etc/bbbike/adsense_start_page.js";
 
@@ -2805,10 +2816,19 @@ print <<EOF;
 </script>
 EOF
    }
-   if ($enable_current_postion) {
+    if ($enable_current_postion) {
+
+    my @list = get_bbox_wgs84();
+    my $data;
+    if (scalar(@list)) {
+	$data = "[[" . "$list[0],$list[1]" . "], [" . "$list[2],$list[3]" . "]]";
+    } else {
+	$data = "[]";
+    }
+
       print <<EOF;
 <script type="text/javascript">
-	displayCurrentPosition();
+	displayCurrentPosition($data);
 </script>
 EOF
    }
