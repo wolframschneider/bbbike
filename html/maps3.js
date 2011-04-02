@@ -285,8 +285,13 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
 		// display a small marker for every street
 		if (streetnames) {
+		   var pos = 0;
+		   // set the marker in the middle of the street
+		   if (streets_route.length > 0) {
+			pos = Math.ceil( (streets_route.length - 1)/ 2);
+		   }
 	           var marker = new google.maps.Marker({
-                   	position: streets_route[0],
+                   	position: streets_route[pos],
                   	icon: '/images/mm_20_green.png',
                    	map: map
         	   });
