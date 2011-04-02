@@ -1654,6 +1654,15 @@ $data
 EOF
 }
 
+# extract the new streetname from input
+# "old streetname -> new streetname" => new streetname
+sub old_new_streetname {
+   my $street = shift;
+
+   $street =~ s,.*?[=\-]>\s+,,;
+
+   return $street;
+}
 
 sub choose_form {
     my $startname = $q->param('startname') || '';
@@ -1711,12 +1720,15 @@ sub choose_form {
     # Leerzeichen am Anfang und Ende löschen
     # überflüssige Leerzeichen in der Mitte löschen
     if (defined $start) {
+	$start = &old_new_streetname($start);
 	$start =~ s/^\s+//; $start =~ s/\s+$//; $start =~ s/\s{2,}/ /g;
     }	
     if (defined $via) {
+	$via = &old_new_streetname($via);
 	$via   =~ s/^\s+//; $via   =~ s/\s+$//; $via   =~ s/\s{2,}/ /g;
     }
     if (defined $ziel) {
+	$ziel = &old_new_streetname($ziel);
 	$ziel  =~ s/^\s+//; $ziel  =~ s/\s+$//; $ziel  =~ s/\s{2,}/ /g;
     }
 
