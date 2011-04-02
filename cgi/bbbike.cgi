@@ -2294,6 +2294,7 @@ EOF
 	my $tryempty  = 0;
 	my $no_td     = 0;
 
+        # print "XXX";
 	if ($bi->{'can_table'}) {
 	    print qq{<tr id=${type}tr $bgcolor_s><td align=center valign=middle width=40><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:8px;" } : "") . qq{src="$imagetype" border=0 alt="} . M($printtype) . qq{"></a></td>};
 	    my $color = {'start' => '#e0e0e0',
