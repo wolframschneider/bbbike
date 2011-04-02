@@ -90,12 +90,13 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
             // var zoom = map.getBoundsZoomLevel(bounds);
 
 	    // improve zoom level, max. area as possible
+            var bounds_padding = new google.maps.LatLngBounds;
 	    if ( marker_list.length == 2) {
-               	var bounds_padding = new google.maps.LatLngBounds;
-	  	var padding = 0.03; // make the area smaller by this value to cheat to map.getZoom()
+	  	var padding_x = 0.05; // make the area smaller by this value to cheat to map.getZoom()
+		var padding_y = 0.03
 
-	       	bounds_padding.extend(new google.maps.LatLng( marker_list[0][0] + padding, marker_list[0][1] + padding))
-	       	bounds_padding.extend(new google.maps.LatLng( marker_list[1][0] - padding, marker_list[1][1] - padding))
+	       	bounds_padding.extend(new google.maps.LatLng( marker_list[0][0] + padding_x, marker_list[0][1] + padding_y))
+	       	bounds_padding.extend(new google.maps.LatLng( marker_list[1][0] - padding_x, marker_list[1][1] - padding_y))
                	map.fitBounds(bounds_padding);
 	    } else {
                 map.fitBounds(bounds);
@@ -109,7 +110,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 	    $(window).resize( function(e) { 
 			map.setCenter(bounds.getCenter()); 
 			// var zoom = map.getBoundsZoomLevel(bounds)
-			map.fitBounds(bounds);
+			map.fitBounds(bounds_padding);
 			var zoom = map.getZoom();
 
 			map.setZoom( zoom < 16 ? zoom : 15); 
