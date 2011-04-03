@@ -93,10 +93,10 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
             var bounds_padding = new google.maps.LatLngBounds;
 	    if ( marker_list.length == 2) {
 	  	var padding_x = 0.05; // make the area smaller by this value to cheat to map.getZoom()
-		var padding_y = 0.03
+		var padding_y = 0.03;
 
-	       	bounds_padding.extend(new google.maps.LatLng( marker_list[0][0] + padding_x, marker_list[0][1] + padding_y))
-	       	bounds_padding.extend(new google.maps.LatLng( marker_list[1][0] - padding_x, marker_list[1][1] - padding_y))
+	       	bounds_padding.extend(new google.maps.LatLng( marker_list[0][0] + padding_x, marker_list[0][1] + padding_y));
+	       	bounds_padding.extend(new google.maps.LatLng( marker_list[1][0] - padding_x, marker_list[1][1] - padding_y));
                	map.fitBounds(bounds_padding);
 	    } else {
                 map.fitBounds(bounds);
