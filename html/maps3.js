@@ -225,7 +225,8 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     var data_cache = [];
 
     function getStreet(map, city, street, strokeColor) {
-	var streetnames = 3;
+	var streetnames = 3; // if set, display a info window with the street name
+	var autozoom = 1;    // if set, zoom to the streets
 
         var url = encodeURI("/cgi/street-coord.cgi?namespace=" + (streetnames ? "3" : "0") + ";city=" + city + "&query=" + street);
 
@@ -258,6 +259,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 	    var js = eval(data);
 	    var streets_list = js[1];
 
+	    var autozoom_points = [];
     	    for (var i = 0; i < streets_list.length; i++) {
     	        var streets_route = new Array;
 		var s;
@@ -284,6 +286,10 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
 		street_cache.push(route);
 
+		if (autozoom) {
+		    autozoom_points.push ( streets_route[0] );
+		}
+
 		// display a small marker for every street
 		if (streetnames) {
 		   var pos = 0;
@@ -304,6 +310,19 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 		   street_cache.push(marker);
 		}
 
+	    }
+
+	    if (autozoom && autozoom_points.length > 0) {
+            	// improve zoom level, max. area as possible
+            	var bounds = new google.maps.LatLngBounds;
+	    	for ( var i = 0; i < autozoom_points.length; i++) {
+                    bounds.extend( autozoom_points[i] );
+            	}
+            	map.fitBounds(bounds);
+            	var zoom = map.getZoom();
+
+            	// no zoom level higher than 13
+            	map.setZoom( zoom < 13 ? zoom : 13);
 	    }
         }
 
