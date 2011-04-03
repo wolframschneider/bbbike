@@ -226,7 +226,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
     function getStreet(map, city, street, strokeColor) {
 	var streetnames = 3; // if set, display a info window with the street name
-	var autozoom = 1;    // if set, zoom to the streets
+	var autozoom = 13;   // if set, zoom to the streets
 
         var url = encodeURI("/cgi/street-coord.cgi?namespace=" + (streetnames ? "3" : "0") + ";city=" + city + "&query=" + street);
 
@@ -288,6 +288,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
 		if (autozoom) {
 		    autozoom_points.push ( streets_route[0] );
+		    autozoom_points.push ( streets_route[ streets_route.length - 1] );
 		}
 
 		// display a small marker for every street
@@ -320,9 +321,8 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
             	}
             	map.fitBounds(bounds);
             	var zoom = map.getZoom();
-
-            	// no zoom level higher than 13
-            	map.setZoom( zoom < 13 ? zoom : 13);
+            	// do not zoom higher than XY
+            	map.setZoom( zoom > autozoom ? autozoom : zoom);
 	    }
         }
 
@@ -583,39 +583,41 @@ function displayCurrentPosition (area) {
 
 	var geocoder = new google.maps.Geocoder();
 	geocoder.geocode({'latLng': pos}, function(results, status) {
-  		if(status != google.maps.GeocoderStatus.OK || !results[0]) {
-    			// alert("reverse geocoder failed to find an address for " + latlng.toUrlValue());
-  		} else { 
-			var result = results[0];
+  	   if(status != google.maps.GeocoderStatus.OK || !results[0]) {
+    		// alert("reverse geocoder failed to find an address for " + latlng.toUrlValue());
+  	   } else { 
+		var result = results[0];
 
-			// display info window at startup if inside the area
-			if (area.length > 0) {
-			   if (area[0][0] < currentPosition.lng && area[0][1] < currentPosition.lat &&
-			       area[1][0] > currentPosition.lng && area[1][1] > currentPosition.lat) {
+		// display info window at startup if inside the area
+		if (area.length > 0) {
+		   if (area[0][0] < currentPosition.lng && area[0][1] < currentPosition.lat &&
+		       area[1][0] > currentPosition.lng && area[1][1] > currentPosition.lat) {
 
-			      addInfoWindow (marker, result.formatted_address);
+		      addInfoWindow (marker, result.formatted_address);
 
-			      // hide window after N seconds
-			      setTimeout( function () { 
-				marker.setMap(null);
-				marker = new google.maps.Marker({
-                			position:  pos,
-                			map: map
-        			});
-        		        google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker, result.formatted_address) });
-			      }, 5000 );
-			   }
-			}
+		      // hide window after N seconds
+		      setTimeout( function () { 
+			marker.setMap(null);
+			marker = new google.maps.Marker({
+               			position:  pos,
+               			map: map
+        		});
 
-			// or later at click event
-        		google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker, result.formatted_address) } );
-  		}
+        	        google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker, result.formatted_address) });
+
+		        }, 5000 );
+		   }
+		}
+
+		// or later at click event
+        	google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker, result.formatted_address) } );
+  	   }
 	});
 
        // google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker) } );
 
         function addInfoWindow (marker, address) {
-                infoWindow = new google.maps.InfoWindow({ maxWidth: 400});
+                infoWindow = new google.maps.InfoWindow({ disableAutoPan: true, maxWidth: 400});
                 var content = "<div id=\"infoWindowContent\">\n"
                 content += "<p>Your current postion: " + currentPosition.lat + "," + currentPosition.lng + "</p>\n";
 		content += "<p>Approximate address: " +  address + "</p>\n";
