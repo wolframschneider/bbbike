@@ -146,22 +146,24 @@ function renderWeatherForecast( js ) {
 // find a city and increase font size and set focus
 function higlightCity (data, obj) {
     var pos = eval(  "(" + data + ")" );
-    if (!pos || pos.city == "NO_CITY") {
+    if (!pos || pos.length < 1 || pos[0] == "NO_CITY") {
 	return;
     }
-
-    var className =  "C_" + pos.city;
 
     var a = document.getElementsByTagName("a");
     var focus;
     for (var i=0; i<a.length; i++) {
-        if (a[i].className == className) {
-            a[i].style.fontSize = "200%";
-            a[i].style.color = "green";
+	for (var j=0; j < pos.length; j++) {
+            var className =  "C_" + pos[j];
 
-            a[i].setAttribute('title', pos.city + " " + obj.lat + "," + obj.lng);
-            focus = a[i];
-        }
+            if (a[i].className == className) {
+            	a[i].style.fontSize = "200%";
+            	a[i].style.color = "green";
+
+            	a[i].setAttribute('title', pos[j] + " " + obj.lat + "," + obj.lng);
+            	focus = a[i];
+            }
+	}
     }
 
     // wait until the page loaded
