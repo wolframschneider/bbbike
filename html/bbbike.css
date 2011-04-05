@@ -313,3 +313,5 @@ div#livestatistic { font-size: small; }
 div#list span.street:hover { text-decoration:underline; color: green; }
 div#list span.street:active { text-decoration:none; color: red; }
 
+.honey { display: none; }
+
