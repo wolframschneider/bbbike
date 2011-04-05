@@ -7869,7 +7869,8 @@ sub choose_all_form {
     print "</center>\n</div>\n\n<div id='list'>";
 
     for(my $i = 0; $i <= $#strlist; $i++) {
-	next if ($strlist[$i] =~ /^\(/);
+	next if ($strlist[$i] =~ /^\s*['"\(\.\,]/);
+
 	next if $last eq $strlist[$i];
 	$last = $strlist[$i];
 	(my $strname = $strlist[$i]) =~ s/\s+/\240/g;
