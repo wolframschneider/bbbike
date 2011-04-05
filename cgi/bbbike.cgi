@@ -1673,6 +1673,7 @@ print <<EOF;
 <div id="adsense_street_linkblock">
 $data
 </div>
+<br />
 EOF
 }
 
@@ -7890,10 +7891,10 @@ sub choose_all_form {
 #     }
     print "</center>\n</div>\n\n";
 
-    &adsense_street_linkblock if &is_production($q); # && !is_mobile($q);
 
     print "\n\n<div id='list'>";
 
+    my $counter = 0;
     for(my $i = 0; $i <= $#strlist; $i++) {
 	next if ($strlist[$i] =~ /^\s*['"\(\.\,]/);
 
@@ -7906,6 +7907,9 @@ sub choose_all_form {
 	    (!defined $trans{$initial} or
 	     $last_initial ne $trans{$initial})) {
 	    print "\n<hr>\n";
+    	    &adsense_street_linkblock if !$counter && &is_production($q); # && !is_mobile($q);
+	    $counter++;
+
 	    $last_initial = ($trans{$initial} ? $trans{$initial} : $initial);
 	    print "<a name=\"$last_initial\"><b>$last_initial</b></a><br>\n";
 	}
