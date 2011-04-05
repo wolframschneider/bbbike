@@ -1669,6 +1669,7 @@ sub adsense_street_linkblock {
     }
 	
 print <<EOF;
+<br />
 <div id="adsense_street_linkblock">
 $data
 </div>
