@@ -1632,6 +1632,7 @@ print <<EOF;
 $data
 </div>
 <br />
+<br />
 EOF
 }
 
@@ -1669,11 +1670,9 @@ sub adsense_street_linkblock {
     }
 	
 print <<EOF;
-<br />
 <div id="adsense_street_linkblock">
 $data
 </div>
-<br />
 EOF
 }
 
@@ -7879,6 +7878,7 @@ sub choose_all_form {
 	    M("und Umgebung zu finden."), "<br></p>\n";
     print qq{<p>\n}, M("Klicke auf eine Strasse, um die Routensuche zu starten"), qq{:</p>\n};
 
+    &adsense_street_linkblock if &is_production($q); # && !is_mobile($q);
     &adsense_street_page if &is_production($q); # && !is_mobile($q);
 
     print qq{\n<div id="a_z_list">\n};
@@ -7907,7 +7907,6 @@ sub choose_all_form {
 	    (!defined $trans{$initial} or
 	     $last_initial ne $trans{$initial})) {
 	    print "\n<hr>\n";
-    	    &adsense_street_linkblock if !$counter && &is_production($q); # && !is_mobile($q);
 	    $counter++;
 
 	    $last_initial = ($trans{$initial} ? $trans{$initial} : $initial);
