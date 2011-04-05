@@ -127,6 +127,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_google_adsense_start
 	    $enable_google_adsense_street
 	    $enable_google_adsense_linkblock
+	    $enable_google_adsense_street_linkblock
 	   );
 
 $gmap_api_version = 3;
@@ -1649,6 +1650,26 @@ sub adsense_linkblock {
 	
 print <<EOF;
 <div id="adsense_linkblock">
+$data
+</div>
+EOF
+}
+
+sub adsense_street_linkblock {
+    my $file = "/usr/local/www/etc/bbbike/adsense_street_linkblock.js";
+
+    return if !$enable_google_adsense || ! -f $file;
+    return if defined $enable_google_adsense_street_linkblock && !$enable_google_adsense_street_linkblock;
+
+    open (FH, $file) or return;
+
+    my $data;
+    while(<FH>) {
+	$data .= $_;
+    }
+	
+print <<EOF;
+<div id="adsense_street_linkblock">
 $data
 </div>
 EOF
@@ -7866,7 +7887,11 @@ sub choose_all_form {
 #     for my $type (qw(s u)) {
 # 	print qq{<a href="#${type}bhf">} . uc($type) . qq{-Bahnhöfe</a> };
 #     }
-    print "</center>\n</div>\n\n<div id='list'>";
+    print "</center>\n</div>\n\n";
+
+    &adsense_street_linkblock if &is_production($q); # && !is_mobile($q);
+
+    print "\n\n<div id='list'>";
 
     for(my $i = 0; $i <= $#strlist; $i++) {
 	next if ($strlist[$i] =~ /^\s*['"\(\.\,]/);
