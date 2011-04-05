@@ -60,6 +60,8 @@ use CGI;
 use CGI::Carp; # Nur zum Debuggen verwenden --- manche Web-Server machen bei den kleinsten Kleinigkeiten Probleme damit: qw(fatalsToBrowser);
 use BrowserInfo 1.47;
 use Encode;
+use BBBikeGooglemap;
+use BBBikeAds;
 
 use strict;
 use vars qw($VERSION $VERBOSE $WAP_URL
@@ -841,6 +843,12 @@ if ($lang ne "de") {
     }
 }
 
+$BBBikeAds::enable_google_adsense = $enable_google_adsense;
+$BBBikeAds::enable_google_adsense_start = $enable_google_adsense_start;
+$BBBikeAds::enable_google_adsense_street = $enable_google_adsense_street;
+$BBBikeAds::enable_google_adsense_linkblock = $enable_google_adsense_linkblock;
+$BBBikeAds::enable_google_adsense_street_linkblock = $enable_google_adsense_street_linkblock;
+
 sub M ($) {
     my $key = shift;
 
@@ -1589,91 +1597,6 @@ sub get_bbox_wgs84 {
         my @list = @{ $geo->{'bbox_wgs84'} };
 	return @list;
     }
-}
-
-sub adsense_start_page {
-    my $file = "/usr/local/www/etc/bbbike/adsense_start_page.js";
-
-    return if !$enable_google_adsense || ! -f $file;
-    return if defined $enable_google_adsense_start && !$enable_google_adsense_start;
-
-    open (FH, $file) or return;
-
-    my $data;
-    while(<FH>) {
-	$data .= $_;
-    }
-	
-print <<EOF;
-<hr />
-<br />
-<div id="adsense_start_page">
-$data
-</div>
-EOF
-}
-
-sub adsense_street_page {
-    my $file = "/usr/local/www/etc/bbbike/adsense_street_page.js";
-
-    return if !$enable_google_adsense || ! -f $file;
-    return if defined $enable_google_adsense_street && !$enable_google_adsense_street;
-
-    open (FH, $file) or return;
-
-    my $data;
-    while(<FH>) {
-	$data .= $_;
-    }
-	
-print <<EOF;
-<hr />
-<div id="adsense_street_page">
-$data
-</div>
-<br />
-<br />
-EOF
-}
-
-sub adsense_linkblock {
-    my $file = "/usr/local/www/etc/bbbike/adsense_linkblock.js";
-
-    return if !$enable_google_adsense || ! -f $file;
-    return if defined $enable_google_adsense_linkblock && !$enable_google_adsense_linkblock;
-
-    open (FH, $file) or return;
-
-    my $data;
-    while(<FH>) {
-	$data .= $_;
-    }
-	
-print <<EOF;
-<div id="adsense_linkblock">
-$data
-</div>
-EOF
-}
-
-sub adsense_street_linkblock {
-    my $file = "/usr/local/www/etc/bbbike/adsense_street_linkblock.js";
-
-    return if !$enable_google_adsense || ! -f $file;
-    return if defined $enable_google_adsense_street_linkblock && !$enable_google_adsense_street_linkblock;
-
-    open (FH, $file) or return;
-
-    my $data;
-    while(<FH>) {
-	$data .= $_;
-    }
-	
-print <<EOF;
-<div id="adsense_street_linkblock">
-$data
-</div>
-EOF
 }
 
 # extract the new streetname from input
@@ -2776,7 +2699,7 @@ function " . $type . "char_init() {}
             print qq{<div style="display:none" id="streetmap"></div>\n};
 
 	    print qq{<!-- use div.text() as local variable to map -->\n};
-	    &adsense_start_page if &is_production($q) && !is_mobile($q);
+	    &BBBikeAds::adsense_start_page if &is_production($q) && !is_mobile($q);
 
             print qq{<div style="display:none" id="streetmap2"></div>\n};
             #print qq{<div style="display:none" id="streetmap3"></div>\n}; 
@@ -2809,7 +2732,7 @@ EOF
 		use BBBikeGooglemap;
 
 		print qq{<div id="map_area">\n};
-		&adsense_linkblock if &is_production($q) && !is_mobile($q);
+		&BBBikeAds::adsense_linkblock if &is_production($q) && !is_mobile($q);
 		print qq{</div>\n\n};
 	        my $maps = BBBikeGooglemap->new();
 	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang) );
@@ -7878,8 +7801,8 @@ sub choose_all_form {
 	    M("und Umgebung zu finden."), "<br></p>\n";
     print qq{<p>\n}, M("Klicke auf eine Strasse, um die Routensuche zu starten"), qq{:</p>\n};
 
-    &adsense_street_linkblock if &is_production($q); # && !is_mobile($q);
-    &adsense_street_page if &is_production($q); # && !is_mobile($q);
+    &BBBikeAds::adsense_street_linkblock if &is_production($q); # && !is_mobile($q);
+    &BBBikeAds::adsense_street_page if &is_production($q); # && !is_mobile($q);
 
     print qq{\n<div id="a_z_list">\n};
     print "<center>";

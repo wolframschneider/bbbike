@@ -17,6 +17,12 @@ package BBBikeAds;
 use strict;
 use warnings;
 
+our (
+    $enable_google_adsense,        $enable_google_adsense_start,
+    $enable_google_adsense_street, $enable_google_adsense_linkblock,
+    $enable_google_adsense_street_linkblock
+);
+
 sub adsense_start_page {
     my $file = "/usr/local/www/etc/bbbike/adsense_start_page.js";
 
