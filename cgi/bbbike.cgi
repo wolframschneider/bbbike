@@ -7819,7 +7819,7 @@ sub choose_all_form {
 
     my $counter = 0;
     for(my $i = 0; $i <= $#strlist; $i++) {
-	next if ($strlist[$i] =~ /^\s*['"\(\.\,]/);
+	next if ($strlist[$i] =~ /^\s*['"\(\.\,<\-]/);
 
 	next if $last eq $strlist[$i];
 	$last = $strlist[$i];
