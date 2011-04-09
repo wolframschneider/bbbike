@@ -7850,7 +7850,7 @@ EOF
             $html_strname = Encode::decode("utf-8", $html_strname);
 	}
  
-        print qq{<span class="street" onclick="oS(this);">$html_strname</span><br>\n};
+        print qq{<span onclick="oS(this);">$html_strname</span><br>\n};
     }
 
 #     for my $type (qw(s u)) {
