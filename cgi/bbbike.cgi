@@ -751,6 +751,8 @@ undef $bbbike_html;
 undef $bbbike_images;
 undef $warn_message;
 
+my $google_analytics_uacct = "UA-286675-19";
+
 $lang = "en";
 $config_master = $ENV{'SCRIPT_NAME'};
 
@@ -7405,7 +7407,7 @@ sub header {
 	}
 
 	if ($enable_google_analytics && is_production($q)) {
-	    print qq{<script type="text/javascript">\nwindow.google_analytics_uacct = "UA-286675-19";\n</script>\n\n};
+	    print qq{<script type="text/javascript">\nwindow.google_analytics_uacct = "$google_analytics_uacct";\n</script>\n\n};
         }
 
 	print "<h2>\n";
@@ -7580,7 +7582,7 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 </script>
 <script type="text/javascript">
 try {
-var pageTracker = _gat._getTracker("UA-286675-19");
+var pageTracker = _gat._getTracker("$google_analytics_uacct");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 
