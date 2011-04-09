@@ -7814,6 +7814,14 @@ sub choose_all_form {
 #     }
     print "</center>\n</div>\n\n";
 
+    # make the street names clickable
+print <<"EOF";
+<script type="text/javascript">
+function oS (tag) { // openStreet
+	open("$bbbike_url?startname=" + escape(tag.innerHTML));
+};
+</script>
+EOF
 
     print "\n\n<div id='list'>";
 
@@ -7842,7 +7850,7 @@ sub choose_all_form {
             $html_strname = Encode::decode("utf-8", $html_strname);
 	}
  
-        print qq{<span class="street">$html_strname</span><br>\n};
+        print qq{<span class="street" onclick="oS(this);">$html_strname</span><br>\n};
     }
 
 #     for my $type (qw(s u)) {
@@ -7862,18 +7870,6 @@ sub choose_all_form {
 
     print "<hr>\n";
     print "</div>\n";
-
-    # make the street names clickable
-print <<"EOF";
-<script type="text/javascript">
-\$(document).ready(function(){
-    \$("div#list span.street").click(function(event){
-	open("$bbbike_url?startname=" + escape(this.innerHTML));
-    });
-});
-</script>
-EOF
-
 
     &footer;
 
