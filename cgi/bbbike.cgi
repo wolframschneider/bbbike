@@ -7403,6 +7403,11 @@ sub header {
 	if ($bi->{'css_buggy'}) {
 	    print "<font face=\"$font\">";
 	}
+
+	if ($enable_google_analytics && is_production($q)) {
+	    print qq{<script type="text/javascript">\nwindow.google_analytics_uacct = "UA-286675-19";\n</script>\n\n};
+        }
+
 	print "<h2>\n";
 	if ($printmode) {
 	    print "$args{-title}";
@@ -7587,7 +7592,7 @@ EOF
     my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new, -full => 1 ) );
     my $host = eval { $full->host } || "";
 
-    $s .= $s_google_analytics if $enable_google_analytics && $host eq 'www.bbbike.org';
+    $s .= $s_google_analytics if $enable_google_analytics && is_production($q);
 
     if ($bi->{'css_buggy'}) {
 	$s .= "</font>\n";
