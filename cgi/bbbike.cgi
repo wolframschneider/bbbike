@@ -7868,7 +7868,7 @@ print <<"EOF";
 <script type="text/javascript">
 \$(document).ready(function(){
     \$("div#list span.street").click(function(event){
-	open("$bbbike_url?start=" + escape(this.innerHTML));
+	open("$bbbike_url?startname=" + escape(this.innerHTML));
     });
 });
 </script>
