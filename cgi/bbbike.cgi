@@ -7382,7 +7382,9 @@ sub header {
 
     }
 
-    #push (@$head, $q->meta({-name => "robots", -content => "nofollow"}));
+    push (@$head, $q->meta({-name => "robots", -content => "nofollow"}))
+      if (defined $q->param('all') || $q->url(-path_info =>1) =~ m,/streets\.html$,); 
+	
 
     # ignore directory service as DMOZ, Yahoo! and MSN
     push (@$head, $q->meta({-name => "robots", -content => "noodp,noydir"}));
@@ -7825,7 +7827,8 @@ sub choose_all_form {
 print <<"EOF";
 <script type="text/javascript">
 function oS (tag) { // openStreet
-	open("$bbbike_url?startname=" + escape(tag.innerHTML));
+	var t = tag;
+	open("$bbbike_url" + "?startname=" + escape(tag.innerHTML));
 };
 </script>
 EOF
