@@ -181,7 +181,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     var mapnik_options = {
     	getTileUrl : function (a,z) { 
 	   // select a random server
-	   var list = ["a", "b", "c"];
+	   var list = ["a", "b"]; // "c"
            var server = list [ parseInt( Math.random() * list.length ) ];
 
     	   return "http://" + server + ".tile.openstreetmap.org/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -199,7 +199,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     	getTileUrl : function (a,z) { 
 
 	   // select a random server
-	   var list = ["a", "b", "c"];
+	   var list = ["a", "b"]; // "c"
            var server = list [ parseInt( Math.random() * list.length ) ];
 
     	   return "http://" + server + ".tile.opencyclemap.org/cycle/" + z + "/" + a.x + "/" + a.y + ".png";
