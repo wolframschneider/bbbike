@@ -180,7 +180,11 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
     var mapnik_options = {
     	getTileUrl : function (a,z) { 
-    	   return "http://tile.openstreetmap.org/" + z + "/" + a.x + "/" + a.y + ".png";
+	   // select a random server
+	   var list = ["a", "b", "c"];
+           var server = list [ parseInt( Math.random() * list.length ) ];
+
+    	   return "http://" + server + ".tile.openstreetmap.org/" + z + "/" + a.x + "/" + a.y + ".png";
      	},
      	isPng: true,
      	opacity: 1.0,
@@ -193,12 +197,17 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
     var cycle_options = {
     	getTileUrl : function (a,z) { 
-    	   return "http://a.tile.opencyclemap.org/cycle/" + z + "/" + a.x + "/" + a.y + ".png";
+
+	   // select a random server
+	   var list = ["a", "b", "c"];
+           var server = list [ parseInt( Math.random() * list.length ) ];
+
+    	   return "http://" + server + ".tile.opencyclemap.org/cycle/" + z + "/" + a.x + "/" + a.y + ".png";
      	},
         isPng: true,
      	opacity: 1.0,
      	tileSize: new google.maps.Size(256,256),
-     	name: "MAPNIK",
+     	name: "CYCLE",
      	minZoom:1,
      	maxZoom:20
     }
