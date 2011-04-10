@@ -50,6 +50,7 @@ sub run {
     my $gmap_api_version = $args{'gmap_api_version'};
     my $lang             = $args{'lang'};
     my $fullscreen       = $args{'fullscreen'};
+    my $cache            = $args{'cache'};
 
     my $city = $q->param('city') || "";
     if ($city) {
@@ -150,7 +151,7 @@ sub run {
     binmode( \*STDERR, ":utf8" ) if $force_utf8;
 
     print $self->get_html( \@polylines_polar, \@polylines_route, \@wpt, $zoom,
-        $center, $q, $lang, $fullscreen );
+        $center, $q, $lang, $fullscreen, $cache );
 }
 
 sub bbbike_converter {
@@ -163,8 +164,8 @@ sub polar_converter { @_[ 0, 1 ] }
 
 sub get_html {
     my (
-        $self,   $paths_polar, $paths_route, $wpts, $zoom,
-        $center, $q,           $lang,        $fullscreen
+        $self,   $paths_polar, $paths_route, $wpts,       $zoom,
+        $center, $q,           $lang,        $fullscreen, $cache
     ) = @_;
 
     my $log_routes = 1;
@@ -354,7 +355,7 @@ EOF
 EOF
 
     # log route queries
-    if ($log_routes) {
+    if ( $log_routes && !$cache ) {
         my $url = $q->url( -query => 1, -full => 1 );
         warn "$url\n";
     }

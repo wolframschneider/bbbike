@@ -2737,7 +2737,7 @@ EOF
 		&BBBikeAds::adsense_linkblock if &is_production($q) && !is_mobile($q);
 		print qq{</div>\n\n};
 	        my $maps = BBBikeGooglemap->new();
-	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang) );
+	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'cache' => $q->param('cache') );
 	    }
 
 if ($enable_homemap_streets) {
