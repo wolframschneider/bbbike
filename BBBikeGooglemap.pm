@@ -41,8 +41,6 @@ sub new { bless {}, shift }
 my $force_utf8 = 1;
 
 sub run {
-
-    #my ($self, $q, $gmap_api_version, $lang, $fullscreen) = @_;
     my $self = shift;
     my %args = @_;
 
@@ -357,6 +355,8 @@ EOF
     # log route queries
     if ( $log_routes && !$cache ) {
         my $url = $q->url( -query => 1, -full => 1 );
+        warn "cache: $cache\n";
+
         warn "$url\n";
     }
     return $html;
