@@ -793,7 +793,7 @@ if ($config_master =~ m,/index.cgi$,) {
     $config_master = "../../etc/world.cgi";
 }
 
-warn "lang: $lang, config_master: $config_master, do $config_master.config" if $VERBOSE;
+warn "lang: $lang, config_master: $config_master, do $config_master.config" if $VERBOSE >= 2;
 warn "YYY: $config_master.config\n" if ! -f "$config_master.config";
 
 # XXX hier require verwenden???
