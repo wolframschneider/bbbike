@@ -837,7 +837,7 @@ if ($lang ne "de") {
 
     no strict "vars";
     if ($msg && ref $msg eq 'HASH') {
-	warn "decode utf8 '$lang' message\n";
+	warn "decode utf8 '$lang' message\n" if $VERBOSE >= 2;
 
     	foreach my $key (keys %$msg) {
 	   $msg->{$key} = Encode::decode("utf-8", $msg->{$key});
@@ -2737,7 +2737,7 @@ EOF
 		&BBBikeAds::adsense_linkblock if &is_production($q) && !is_mobile($q);
 		print qq{</div>\n\n};
 	        my $maps = BBBikeGooglemap->new();
-	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'cache' => $q->param('cache') );
+	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'cache' =>$q->param('cache') );
 	    }
 
 if ($enable_homemap_streets) {
@@ -5535,7 +5535,7 @@ EOF
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 		} else {
 		   my $maps = BBBikeGooglemap->new();
-                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1 );
+                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1, 'cache' =>$q->param('cache') );
 		}
 	    }
 
