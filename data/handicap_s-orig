@@ -777,6 +777,9 @@ Litfaß-Platz: Fußgängerzone, Radfahren erlaubt	q3 10348,12879 10312,12982
 (Finkenweg - Mariendorfer Damm): Fußgänger	q1 9360,4996 9239,4980
 Yva-Bogen: Fußgängerzone	q4 5373,10981 5426,11039 5459,11135
 (Georgenkirchstr. - Mollstr.): Fußgänger	q1 11589,13305 11524,13247
+Kelchstr.: enge Straße	q1 7386,4692 7424,4821 7437,4855 7456,4934
+Doldenweg: Bordsteine, Fußgänger	q2 7424,4821 7487,4802
+Kottesteig: Bordsteine, Fußgänger	q1 6868,5262 6820,5237 6806,5230
 ######################### User Contributions #################################
 #: by: Michael Kiekbusch
 #: corrected_by: srt/policy (q4 -> q3-)
@@ -955,9 +958,9 @@ Gritznerstr.: enge Straße	q1 4291,5895 4370,6052 4430,6165 4472,6242 4507,6320 4
 #: by: Angela
 Im Jagen: Fußgänger, Hundeauslaufgebiet	q1 905,6631 909,6584 1057,6461 1375,6138
 #: by: Patrik Marschalik vvv
-Worpsweder Str.: eng mit ein- und ausparkenden Autos	q1 6191,4923 6203,5138
-Wilseder Str.: eng mit ein- und ausparkenden Autos	q1 6295,5132 6288,4906
-Hünensteig: Fußgänger	q2 6396,5125 6406,5223 6108,5253
+Worpsweder Str.: eng mit ein- und ausparkenden Autos	q1 6191,4923 6202,5163
+Wilseder Str.: eng mit ein- und ausparkenden Autos	q1 6295,5158 6288,4906
+Hünensteig: Fußgänger	q2 6395,5154 6405,5238 6108,5253
 #: by: ^^^
 #: by: Thomas (dobr@...) vvv
 (Götzstr. - Albrechtstr.): Fußgänger	q2 9460,6519 9453,6415 9404,6392 9389,6348 9381,6277 9367,6160 9349,6075
@@ -1643,7 +1646,7 @@ Simpsonweg: enge Straße	q1 10082,-671 9937,-693 9913,-705 9899,-732 9907,-812 98
 #: by: where_are_you_between:
 (Weg am Heidekampgraben - Kiefholzstr., entlang der S-Bahn): teilweise eng/unübersichtlich	q1 15388,7228 15422,7265 15468,7291 15579,7316 15609,7347
 #: by: Norbert Rupsch
-Immenweg: eng (einspurig)	q1 6744,4983 6415,5028 6383,4890
+Immenweg: eng (einspurig)	q1 6744,4983 6419,5048 6383,4890
 #: by: Ralf Pilgrim:
 #: corrected_by: srt/policy (q2 -> q1)
 Albtalweg: enge Straße	q1 5368,22669 5338,22753 5297,22830 5243,22896
@@ -2104,3 +2107,6 @@ Rudolf-Pechel-Str.: enge Straße	q1 9991,-413 9913,-432 9920,-513 10018,-494
 Buolstr.: enge Straße	q1 559,15342 429,15284 283,15237
 #: by: paul müller:
 Dompfaffenweg: enge Straße	q1 20068,14516 19729,14564
+#: by: Andreas (...behm...):
+#: corrected_by: srt/policy (q2 -> q1)
+Luisenstr. (Konradshöhe): enge Straße	q1 -1846,18778 -2064,18667
