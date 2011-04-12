@@ -24,7 +24,13 @@ our (
 );
 
 sub adsense_start_page {
+    my $random = shift;
     my $file = "/usr/local/www/etc/bbbike/adsense_start_page.js";
+
+    # adblock or linkblock, random
+    if ($random && rand(2) >= 1) {
+        $file = "/usr/local/www/etc/bbbike/adsense_start_page_linkblock.js";
+    }
 
     return if !$enable_google_adsense || !-f $file;
     return

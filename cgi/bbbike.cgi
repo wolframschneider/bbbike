@@ -2701,7 +2701,7 @@ function " . $type . "char_init() {}
             print qq{<div style="display:none" id="streetmap"></div>\n};
 
 	    print qq{<!-- use div.text() as local variable to map -->\n};
-	    &BBBikeAds::adsense_start_page if &is_production($q) && !is_mobile($q);
+	    &BBBikeAds::adsense_start_page(1) if &is_production($q) && !is_mobile($q);
 
             print qq{<div style="display:none" id="streetmap2"></div>\n};
             #print qq{<div style="display:none" id="streetmap3"></div>\n}; 
@@ -3095,7 +3095,7 @@ sub is_production {
 sub is_resultpage {
     my $q = shift;
 
-   return ($q->param('startc') && $q->param('zielc')) ? 1 : 0;
+    return ($q->param('startc') && $q->param('zielc')) ? 1 : 0;
 }
 
 sub get_kreuzung {
