@@ -355,8 +355,6 @@ EOF
     # log route queries
     if ( $log_routes && !$cache ) {
         my $url = $q->url( -query => 1, -full => 1 );
-        warn "cache: $cache\n";
-
         warn "$url\n";
     }
     return $html;
