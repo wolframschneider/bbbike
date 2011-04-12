@@ -2088,10 +2088,10 @@ sub choose_form {
     my $show_introduction;
     {
 	local $^W = 0;
-	$show_introduction = ($start eq ''  && $ziel eq '' &&
-			      $start2 eq '' && $ziel2 eq '' &&
-			      $startname eq '' && $zielname eq '' &&
-			      $startc eq '' && $zielc eq '' &&
+	$show_introduction = (#$start eq ''  && $ziel eq '' &&
+			      #$start2 eq '' && $ziel2 eq '' &&
+			      #$startname eq '' && $zielname eq '' &&
+			      #$startc eq '' && $zielc eq '' &&
 			      !$smallform &&
 			      !$warn_message);
     }
