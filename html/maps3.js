@@ -129,7 +129,9 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 			new google.maps.LatLng(x2,y2), 
 			new google.maps.LatLng(x1,y2), 
 			new google.maps.LatLng(x1,y1)], // first point again
-                        strokeColor: '#ff0000', strokeWeight: 1});
+                        strokeColor: '#ff0000', 
+			strokeWeight: 0
+			});
 
 	       route.setMap(map);
 
@@ -139,14 +141,14 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
                var x4 = x1 + 180;  
                var y4 = y1 + 179.99;
 
-	       var o = ['#fff', 0, 1, 0.2, 0.2];
+	       var o = ['#ffffff', 0, 1, '#000000', 0.2];
                var area_around = new google.maps.Polygon({ paths: [
                         new google.maps.LatLng(x4,y1),
                         new google.maps.LatLng(x3,y1),
                         new google.maps.LatLng(x3,y3),
                         new google.maps.LatLng(x4,y3),
                         new google.maps.LatLng(x4,y1)], // first point again
-			strokeColor: o[0], strokeWeight: o[1], strokeOpacity: o[2], fillColor: o[3], fillOpacity: o[4]});
+			strokeColor: o[0], strokeWeight: o[1]  , strokeOpacity: o[2], fillOpacity: o[4]});
                area_around.setMap(map);
 
                area_around = new google.maps.Polygon({ path: [
@@ -155,7 +157,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
                         new google.maps.LatLng(x3,y4),
                         new google.maps.LatLng(x4,y4),
                         new google.maps.LatLng(x4,y2)], // first point again
-			strokeColor: o[0], strokeWeight: o[1], strokeOpacity: o[2], fillColor: o[3], fillOpacity: o[4]});
+			strokeColor: o[0], strokeWeight: o[1], strokeOpacity: o[2], fillOpacity: o[4]});
                area_around.setMap(map);
 
                area_around = new google.maps.Polygon({ path: [
@@ -164,7 +166,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
                         new google.maps.LatLng(x4,y2),
                         new google.maps.LatLng(x4,y1),
                         new google.maps.LatLng(x2,y1)],
-			strokeColor: o[0], strokeWeight: o[1], strokeOpacity: o[2], fillColor: o[3], fillOpacity: o[4]});
+			strokeColor: o[0], strokeWeight: o[1], strokeOpacity: o[2], fillOpacity: o[4]});
                area_around.setMap(map);
 
                area_around = new google.maps.Polygon( { path: [
@@ -173,7 +175,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
                         new google.maps.LatLng(x3,y2),
                         new google.maps.LatLng(x3,y1),
                         new google.maps.LatLng(x1,y1)],
-			strokeColor: o[0], strokeWeight: o[1], strokeOpacity: o[2], fillColor: o[3], fillOpacity: o[4]});
+			strokeColor: o[0], strokeWeight: o[1], strokeOpacity: o[2], fillOpacity: o[4]});
                area_around.setMap(map);
              }
         }
@@ -371,7 +373,16 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 	       r.push(new google.maps.LatLng( street[i][1], street[i][0] ));
 	    }
 	}
-	var color = "#" + parseInt( Math.random() * 16).toString(16) + parseInt( Math.random() * 16).toString(16) + parseInt( Math.random() * 16).toString(16);
+
+	// create a random color
+	var color;
+	{ 
+	  var _color_r  = parseInt( Math.random() * 16).toString(16);
+	  var _color_g  = parseInt( Math.random() * 16).toString(16);
+	  var _color_b  = parseInt( Math.random() * 16).toString(16);
+
+	  color = "#" + _color_r + _color_r + _color_g + _color_g + _color_b + _color_b;
+        }
 
 	var x = r.length > 8 ? 8 : r.length;
         var route = new google.maps.Polyline( { 
