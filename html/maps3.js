@@ -432,7 +432,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
            var route = new google.maps.Polyline( { 
 		path: r,
-		strokeColor: "green",
+		strokeColor: "#006400",
 		strokeWeight: 4, 
 		strokeOpacity: 0.5} );
             route.setMap(map);
