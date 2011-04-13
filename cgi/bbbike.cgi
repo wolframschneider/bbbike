@@ -776,6 +776,20 @@ my $time_start = time;
   $lang = $local_lang if $local_lang && !$selected_lang;
 }
 
+# run cache requests with lower priority
+{
+  my $q = new CGI;
+  if ($q->param('cache')) {
+     eval {
+	require BSD::Resource;
+
+	my $success = setpriority(0, 0, 15);
+	die "cannot set priority: $$\n" if !$success;
+     };
+     warn "$@" if $@;
+  } 
+}
+
 #warn "xxx: city: $datadir, lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
 warn "$datadir does not exists!\n" if ! -d "../$datadir";
 
@@ -7827,8 +7841,9 @@ sub choose_all_form {
 print <<"EOF";
 <script type="text/javascript">
 function oS (tag) { // openStreet
-	var t = tag;
+    if (window.history) {
 	open("$bbbike_url" + "?startname=" + escape(tag.innerHTML));
+    }
 };
 </script>
 EOF
