@@ -3102,7 +3102,7 @@ sub is_mobile {
 sub is_production {
     my $q = shift;
 
-    #return 1;
+    return 1 if -e "/tmp/is_production";
     return $q->virtual_host() =~ /^www\.bbbike\.org$/i ? 1 : 0;
 }
 
