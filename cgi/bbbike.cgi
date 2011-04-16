@@ -2760,7 +2760,7 @@ if ($enable_homemap_streets) {
    foreach my $param (qw/startname vianame zielname/) {
        my $val = $q->param($param);
        if ($val && $val ne 'NO') {
-	   $plot_streets .= qq{getStreet(map, city, "} . CGI::escapeHTML($val) . qq{", "blue");\n};
+	   $plot_streets .= qq{getStreet(map, city, "} . CGI::escapeHTML($val) . qq{", "#0000FF");\n};
        }
    }
 
