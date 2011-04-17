@@ -10,9 +10,7 @@ var delay = 400; // delay until we render the map
 // bbbike options
 var bbbike = {
     // map type by google
-    mapTypeControlOptions: {
-	mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.TERRAIN]
-    },
+    mapTypeControlOptions: { mapTypeIds: [ google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE ] },
 
     // map type by OpenStreetMap
     mapType: {
@@ -40,7 +38,7 @@ var bbbike = {
 
    area: { 
 	visible: true,
-	greyout: true
+	greyout: true,
    }
 };
 
@@ -118,7 +116,14 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     var goalIcon = new google.maps.MarkerImage("../images/flag_ziel_centered.png", 
 	new google.maps.Size(20, 32), new google.maps.Point(0,0), new google.maps.Point(16,16));
 
-        map = new google.maps.Map(document.getElementById("map"), { zoomControl: true, scaleControl: true } );
+        map = new google.maps.Map(document.getElementById("map"), { 
+	   zoomControl: bbbike.controls.zoomControl,
+	   scaleControl: bbbike.controls.scaleControl,
+	   overviewMapControl: bbbike.controls.overviewMapControl,
+	   panControl: bbbike.controls.panControl,
+
+	   mapTypeControlOptions: { mapTypeIds: bbbike.mapTypeControlOptions.mapTypeIds }
+	} );
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
 	var b = navigator.userAgent.toLowerCase();
@@ -160,7 +165,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 	    });
 
 
-	    if (marker_list.length == 2 && without_area != 1) {
+	    if (marker_list.length == 2 && without_area != 1 && bbbike.area.visible) {
 	       var x1 = marker_list[0][0];
 	       var y1 = marker_list[0][1];
 	       var x2 = marker_list[1][0];
@@ -178,6 +183,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
 	       route.setMap(map);
 
+	       if (bbbike.area.greyout) {
                //x1-=1; y1-=1; x2+=1; y2+=1;
                var x3 = x1 - 180;
                var y3 = y1 - 179.99;
@@ -221,6 +227,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 			strokeColor: o[0], strokeWeight: o[1], strokeOpacity: o[2], fillOpacity: o[4]});
                area_around.setMap(map);
              }
+	     }
         }
 
     var mapnik_options = {
@@ -276,7 +283,8 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     	custom_map( "cycle", lang);
 
     if (bbbike.mapLayers.BicyclingLayer) 
-    	add_bicycle_layer ( map );
+	add_bicycle_layer ( map );
+
     if (bbbike.mapLayers.TrafficLayer) 
     	add_traffic_layer ( map );
 }
