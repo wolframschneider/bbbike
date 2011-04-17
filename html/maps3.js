@@ -1,3 +1,53 @@
+//////////////////////////////////////////////////////////////////////
+// global objects/variables
+//
+var city = ""; 	// bbbike city
+var map; 	// main map object
+
+var timeout = null;
+var delay = 400; // delay until we render the map
+
+// bbbike options
+var bbbike = {
+    // map type by google
+    mapTypeControlOptions: {
+	mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.TERRAIN]
+    },
+
+    // map type by OpenStreetMap
+    mapType: {
+	MapnikMapType: true,
+	CycleMapType: true,
+    },
+
+    // optinal layers in google maps or all maps
+    mapLayers: {
+	TrafficLayer: false,
+	BicyclingLayer: true,
+	PanoramioLayer: false
+    },
+
+    // default map
+    mapDefault: "mapnik",
+
+   // visible controls
+   controls: { 
+	zoomControl: true, 
+	scaleControl: true,
+	overviewMapControl: true,
+	panControl: true,
+   },
+
+   area: { 
+	visible: true,
+	greyout: true
+   }
+};
+
+//////////////////////////////////////////////////////////////////////
+// functions
+//
+
 function togglePermaLinks() {
         togglePermaLink("permalink_url");
         togglePermaLink("permalink_url2");
@@ -15,7 +65,6 @@ function togglePermaLink(id) {
         };
 }
 
-var city = "";
 
 function homemap_street (event) {
         var target = (event.target) ? event.target : event.srcElement;
@@ -47,9 +96,6 @@ function homemap_street (event) {
         }
 }
 
-var timeout = null;
-var delay = 400; // delay until we render the map
-
 function homemap_street_timer (event, time) {
         // cleanup older calls waiting in queue
         if (timeout != null) {
@@ -59,9 +105,6 @@ function homemap_street_timer (event, time) {
 }
 
 
-
-// main map object
-var map;
 
 function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
@@ -226,11 +269,16 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     }
     map.setMapTypeId( maptype );
 
-    custom_map( "mapnik", lang);
-    custom_map( "cycle", lang);
+    if (bbbike.mapType.MapnikMapType) 
+    	custom_map( "mapnik", lang);
 
-    add_bicycle_layer ( map );
-    add_traffic_layer ( map );
+    if (bbbike.mapType.CycleMapType) 
+    	custom_map( "cycle", lang);
+
+    if (bbbike.mapLayers.BicyclingLayer) 
+    	add_bicycle_layer ( map );
+    if (bbbike.mapLayers.TrafficLayer) 
+    	add_traffic_layer ( map );
 }
 
 // add bicycle routes and lanes to map, by google maps
