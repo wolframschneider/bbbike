@@ -7386,9 +7386,14 @@ sub header {
         } else {
             my $my_lang = &my_lang($lang);
 	    my $sensor = is_mobile($q) ? 'true' : 'false';
+
+	# http://code.google.com/apis/maps/documentation/javascript/basics.html#VersionDocs
+        # google maps v=3.3 
+	# Release Version (3.3) Reference (Feature-Stable)
+
 	push(@$head, qq|\
 <script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=$sensor&amp;language=$my_lang"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>
 <script src="/html/maps3.js" type="text/javascript"></script>
 <script src="/html/elevation.js" type="text/javascript"></script> 
 |) if !is_mobile($q) || is_resultpage($q);
