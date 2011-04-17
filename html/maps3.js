@@ -230,13 +230,22 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     custom_map( "cycle", lang);
 
     add_bicycle_layer ( map );
+    add_traffic_layer ( map );
 }
 
 // add bicycle routes and lanes to map, by google maps
 function add_bicycle_layer ( map ) {
-    var bicycle = new google.maps.BicyclingLayer();
-    if (bicycle) {
-        bicycle.setMap( map );
+    var bicyclingLayer = new google.maps.BicyclingLayer();
+    if (bicyclingLayer) {
+        bicyclingLayer.setMap( map );
+    }
+}
+
+// add traffic to map, by google maps
+function add_traffic_layer ( map ) {
+    var trafficLayer = new google.maps.TrafficLayer();
+    if (trafficLayer) {
+    	trafficLayer.setMap( map );
     }
 }
 
