@@ -15,7 +15,7 @@ var bbbike = {
     // map type by OpenStreetMap
     mapType: {
 	MapnikMapType: true,
-	CycleMapType: true,
+	CycleMapType: true
     },
 
     // optinal layers in google maps or all maps
@@ -32,13 +32,13 @@ var bbbike = {
    controls: { 
 	zoomControl: true, 
 	scaleControl: true,
-	overviewMapControl: true,
-	panControl: true,
+	overviewMapControl: false, // http://code.google.com/p/gmaps-api-issues/issues/detail?id=3167
+	panControl: true
    },
 
    area: { 
 	visible: true,
-	greyout: true,
+	greyout: true
    }
 };
 
@@ -119,10 +119,9 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
         map = new google.maps.Map(document.getElementById("map"), { 
 	   zoomControl: bbbike.controls.zoomControl,
 	   scaleControl: bbbike.controls.scaleControl,
-	   overviewMapControl: bbbike.controls.overviewMapControl,
 	   panControl: bbbike.controls.panControl,
-
-	   mapTypeControlOptions: { mapTypeIds: bbbike.mapTypeControlOptions.mapTypeIds }
+	   mapTypeControlOptions: { mapTypeIds: bbbike.mapTypeControlOptions.mapTypeIds },
+	   overviewMapControl: bbbike.controls.overviewMapControl
 	} );
 
         // for zoom level, see http://code.google.com/apis/maps/documentation/upgrade.html
