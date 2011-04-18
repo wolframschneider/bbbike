@@ -242,5 +242,6 @@ return {
     "Klicke auf eine Strasse, um die Routensuche zu starten" => "Please click on a street to start the route search",
     "Kreuzung"                                               => "corner",
     "Route"                                                  => "route",
+    "Strassennamen"                                          => "street names",
 };
 

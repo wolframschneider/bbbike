@@ -7241,7 +7241,7 @@ sub header {
 	$args{-title2} = "BBBike\@$local_city_name";
 
 	if ($q->url(-path_info =>1) =~ m,/streets\.html$,) {
-	   $args{-title} .= " - street names";
+	   $args{-title} .= " - " . M("Strassennamen");
         } elsif ( $q->param("output_as") && $q->param("output_as") eq 'print' ) {
 	   $args{-title} .= " - " . ($q->param("printvariant") ? "print normal" : "print small");
 	} elsif (my $result = delete $args{-result} ) {
