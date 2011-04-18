@@ -4963,6 +4963,8 @@ sub display_route {
 #     }
     $header_args{-script} = {-src => bbbike_result_js() };
     $header_args{-printmode} = 1 if $printmode;
+    $header_args{-result} = "route";
+
     header(%header_args, -onLoad => "init_search_result()");
 
  ROUTE_HEADER:
@@ -7239,6 +7241,10 @@ sub header {
 
 	if ($q->url(-path_info =>1) =~ m,/streets\.html$,) {
 	   $args{-title} .= " - street names";
+        } elsif ( $q->param("output_as") && $q->param("output_as") eq 'print' ) {
+	   $args{-title} .= " - " . ($q->param("printvariant") ? "print normal" : "print small");
+	} elsif (my $result = delete $args{-result} ) {
+	   $args{-title} .= " - $result";
         }
     }
 
