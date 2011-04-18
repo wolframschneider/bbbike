@@ -7853,8 +7853,14 @@ sub choose_all_form {
 print <<"EOF";
 <script type="text/javascript">
 function oS (tag) { // openStreet
+    function e (html) { 
+	return escape(html); 
+    }
+
     if (window.history) {
-	open("$bbbike_url" + "?startname=" + escape(tag.innerHTML));
+	open("$bbbike_url" + "?" + 
+	"startname=" + 
+	e(tag.innerHTML));
     }
 };
 </script>
