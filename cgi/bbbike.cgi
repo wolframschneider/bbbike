@@ -1179,7 +1179,7 @@ if ($show_weather || $bp_obj) {
 }
 
 $q->delete('Dummy');
-$smallform = $q->param('smallform') || $bi->{'mobile_device'};
+$smallform = $q->param('smallform') || $bi->{'mobile_device'} || $q->virtual_host =~ m{^m\.}; # e.g. m.bbbike.de
 $got_cookie = 0;
 %c = ();
 
@@ -7458,7 +7458,7 @@ sub header {
 	}
 	print "</h2>\n";
     } else {
-	print $q->start_html;
+	print $q->start_html(%args);
 	print "<h1>BBBike</h1>";
     }
     if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$}) && (!&is_mobile($q) || is_resultpage($q))) {
