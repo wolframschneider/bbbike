@@ -3280,6 +3280,7 @@ sub get_kreuzung {
     http_header(@weak_cache);
     my %header_args;
     $header_args{-script} = {-src => bbbike_result_js() };
+    $header_args{-result} = M("Kreuzung");
     header(%header_args);
 
     if (is_mobile($q)) {
@@ -4963,7 +4964,7 @@ sub display_route {
 #     }
     $header_args{-script} = {-src => bbbike_result_js() };
     $header_args{-printmode} = 1 if $printmode;
-    $header_args{-result} = "route";
+    $header_args{-result} = M("Route");
 
     header(%header_args, -onLoad => "init_search_result()");
 
