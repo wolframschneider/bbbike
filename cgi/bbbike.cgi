@@ -2091,7 +2091,7 @@ sub choose_form {
 
     if ($nice_berlinmap || $nice_abcmap) {
 	push @extra_headers, -onLoad => $onloadscript,
-	     -script => [{-src => $bbbike_html . "/bbbike_start.js?v=1.17"},
+	     -script => [{-src => $bbbike_html . "/bbbike_start.js"},
 			 ($nice_berlinmap
 			  ? {-code => qq{set_bbbike_images_dir('$bbbike_images')}}
 			  : ()
@@ -7131,7 +7131,7 @@ sub etag {
     (-ETag => $etag);
 }
 
-sub bbbike_result_js { $bbbike_html . "/bbbike_result.js?v=1.14" }
+sub bbbike_result_js { $bbbike_html . "/bbbike_result.js" }
 
 # Write a HTTP header (always with Etag and Vary) and maybe enabled compression
 sub http_header {
