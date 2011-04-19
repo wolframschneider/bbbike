@@ -3284,7 +3284,7 @@ sub get_kreuzung {
     header(%header_args);
 
     if (is_mobile($q)) {
-		print <<EOF;
+	print <<EOF;
 <style type="text/css">
 body, select, input { font-size: x-large }
 </style>
@@ -5018,6 +5018,13 @@ EOF
 
     ROUTE_TABLE:
 	if (is_mobile($q)) {
+	    print qq{<span id="mobile_link">\n};
+	    my $url = $q->url(-full=>0, -absolute=>1, -query=>1);
+            $url =~ s,^/m/,/,;
+            #&social_link;
+            print qq{<a href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+	    print qq{</span>\n\n};
+
 	    print <<EOF;
 <style type="text/css">
 body, select, input, span.slippymaplink { font-size: x-large }
