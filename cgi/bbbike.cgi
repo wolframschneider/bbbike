@@ -7423,6 +7423,7 @@ sub header {
     push (@$head, $q->meta({-name => "robots", -content => "noodp,noydir"}));
 
     $args{-head} = $head if $head && @$head;
+    $args{-style} = {-src => "$bbbike_html/bbbike.css" } if !$printmode;
 
     if (!$smallform) {
 
