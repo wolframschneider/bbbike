@@ -7423,6 +7423,7 @@ sub header {
     push (@$head, $q->meta({-name => "robots", -content => "noodp,noydir"}));
 
     $args{-head} = $head if $head && @$head;
+    $args{-style} = {-src => "$bbbike_html/bbbike.css" } if !$printmode;
 
     if (!$smallform) {
 
@@ -7784,6 +7785,50 @@ sub choose_all_form {
     my $locale_set = 0;
     my $old_locale;
     use locale;
+
+
+    my $cache_street_names = 1;
+
+    my $street_names_files = $ENV{TMPDIR} . "/streets.html";
+    my $cache_file;
+    my $fh;
+
+    if ( $cache_street_names && $ENV{TMPDIR} && -d $ENV{TMPDIR} ) {
+	# read from cache if exists
+	if ( -r $street_names_files && -s $street_names_files ) {
+	   $fh = new IO::File $street_names_files, "r";
+	   if (defined $fh) {
+		binmode $fh, ":utf8";	
+		binmode STDOUT, ":utf8";	
+
+		while(<$fh>) {
+		   print;
+		}
+
+		# done
+		return;
+
+	   } else {
+		warn "open street name cache '$street_names_files': $!, regenerate...\n";
+	   } 
+	}
+
+	# create cache entry, and write the output later to stdout
+	else {
+	   $cache_file = $street_names_files . ".tmp.$$";
+
+	   $fh = new IO::File $cache_file, "w";
+           if (defined $fh) {
+		binmode $fh, ':utf8';
+		select $fh;
+           } else {
+		warn "write to street name cache > '$cache_file': $!\n";
+		undef $cache_file;
+	   }
+	}
+    }
+
+    if(0) {
     eval {
 	local $SIG{'__DIE__'};
 	require POSIX;
@@ -7793,6 +7838,7 @@ sub choose_all_form {
 		if (&POSIX::setlocale(&POSIX::LC_COLLATE, $locale));
 	}
     };
+    }
 
     http_header(@weak_cache);
     header(#too slow XXX -onload => "list_all_streets_onload()",
@@ -7925,12 +7971,38 @@ EOF
 
     print $q->end_html;
 
-    if ($locale_set && defined $old_locale) {
+    if (0 && $locale_set && defined $old_locale) {
 	eval {
 	    local $SIG{'__DIE__'};
 	    &POSIX::setlocale( &POSIX::LC_COLLATE, $old_locale);
 	};
 	warn $@ if $@; #XXX remove?
+    }
+
+    if ($cache_file && $fh) {
+	$fh->close;
+
+	my $data;
+	$fh = new IO::File $cache_file, "r";
+	if (defined $fh) {
+	    select STDOUT;
+	    binmode $fh, ':utf8';
+	    binmode STDOUT, ':utf8';
+
+	    while (<$fh> ) {
+	   	$data .= $_;
+	    }
+            $fh->close;
+        } else {
+	    die "open cache file: $cache_file: $!\n";
+	}
+
+	# rename first, then print it out (on a slow link)
+	if (!rename ($cache_file, $street_names_files)) {
+	   warn "rename $cache_file => street_names_files: $!\n";
+	}
+
+	print STDOUT $data;	
     }
 }
 
