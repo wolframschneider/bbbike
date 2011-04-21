@@ -779,7 +779,11 @@ my $time_start = time;
 # run cache requests with lower priority
 {
   my $q = new CGI;
-  if ($q->param('cache')) {
+
+  # /streets.html
+  my $all = defined $q->param('all') ? $q->param('all') : 0;
+
+  if ($q->param('cache') || $all >= 2) {
      eval {
 	require BSD::Resource;
 
@@ -7786,16 +7790,18 @@ sub choose_all_form {
     my $old_locale;
     use locale;
 
-
+    my $q = new CGI;
     my $cache_street_names = 1;
+    my $force_cache_rebuild = defined $q->param('all') && $q->param('all') >= 3 ? 1 : 0;
 
     my $street_names_files = $ENV{TMPDIR} . "/streets.html";
     my $cache_file;
     my $fh;
 
+
     if ( $cache_street_names && $ENV{TMPDIR} && -d $ENV{TMPDIR} ) {
 	# read from cache if exists
-	if ( -r $street_names_files && -s $street_names_files ) {
+	if ( !$force_cache_rebuild && -r $street_names_files && -s $street_names_files ) {
 	   $fh = new IO::File $street_names_files, "r";
 	   if (defined $fh) {
 		binmode $fh, ":utf8";	
@@ -7933,7 +7939,10 @@ EOF
 	    $last_initial ne $initial and
 	    (!defined $trans{$initial} or
 	     $last_initial ne $trans{$initial})) {
-	    print "\n<hr>\n";
+
+	    print "</div>\n" if $counter;
+	    print qq{\n<div class="street_section">\n};
+	    print "<hr>\n";
 	    $counter++;
 
 	    $last_initial = ($trans{$initial} ? $trans{$initial} : $initial);
@@ -7963,6 +7972,8 @@ EOF
 # 	print qq{<a name="${type}bhf"><b>} . uc($type) . qq{-Bahnhöfe</b></a><br/>\n};
 # 	print join("<br/>\n", map { uc($type) . " " . $_ } @bhf), "\n";
 #     }
+
+    print "</div>\n" if $counter;
 
     print "<hr>\n";
     print "</div>\n";
