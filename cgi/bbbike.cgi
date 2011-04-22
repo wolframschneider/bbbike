@@ -2113,6 +2113,9 @@ sub choose_form {
 			      !$smallform &&
 			      !$warn_message);
     }
+
+    push (@extra_headers, -google_analytics_uacct => 1) if is_startpage($q);
+
     header(@extra_headers, -from => $show_introduction ? "chooseform-start" : "chooseform");
 
     print <<EOF if ($bi->{'can_table'});
@@ -3101,6 +3104,12 @@ sub is_mobile {
     } else {
 	return 0;
     }
+}
+
+sub is_startpage {
+    my $q = shift;
+
+    return ($q->param("start") || $q->param("startname") || $q->param("ziel") || $q->param("zielname")) ? 0 : 1;
 }
 
 sub is_production {
@@ -7446,7 +7455,8 @@ sub header {
 	    print "<font face=\"$font\">";
 	}
 
-	if ($enable_google_analytics && is_production($q)) {
+	my $enable_google_analytics_uacct = delete $args{'-google_analytics_uacct'};
+	if ($enable_google_analytics && is_production($q) && $enable_google_analytics_uacct) {
 	    print qq{<script type="text/javascript">\nwindow.google_analytics_uacct = "$google_analytics_uacct";\n</script>\n\n};
         }
 
@@ -7850,6 +7860,7 @@ sub choose_all_form {
     header(#too slow XXX -onload => "list_all_streets_onload()",
 	   -script => {-src => $bbbike_html . "/bbbike_start.js",
 		      },
+	   -google_analytics_uacct => 1,
 	  );
 
     my @strlist;
