@@ -21,7 +21,7 @@ var bbbike = {
     // optinal layers in google maps or all maps
     mapLayers: {
 	TrafficLayer: false,
-	BicyclingLayer: true,
+	BicyclingLayer: false,
 	PanoramioLayer: false
     },
 
