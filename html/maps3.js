@@ -271,7 +271,6 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
      	minZoom:1,
      	maxZoom:20
     }
-    var MapnikMapType = new google.maps.ImageMapType( mapnik_options );
 
     var cycle_options = {
     	getTileUrl : function (a,z) { 
@@ -289,30 +288,31 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
      	minZoom:1,
      	maxZoom:20
     }
-    var CycleMapType = new google.maps.ImageMapType( cycle_options );
 
-    // create new map types
-    map.mapTypes.set("mapnik", MapnikMapType); 
-    map.mapTypes.set("cycle", CycleMapType); 
 
-    if (is_supported_map (maptype)) {
-    } else {
+    if (bbbike.mapType.MapnikMapType) {
+        var MapnikMapType = new google.maps.ImageMapType( mapnik_options );
+    	map.mapTypes.set("mapnik", MapnikMapType); 
+    	custom_map( "mapnik", lang);
+    }
+
+    if (bbbike.mapType.CycleMapType) {
+        var CycleMapType = new google.maps.ImageMapType( cycle_options );
+        map.mapTypes.set("cycle", CycleMapType); 
+    	custom_map( "cycle", lang);
+    }
+
+    if (!is_supported_map (maptype)) {
 	maptype = bbbike.mapDefault;
     }
+
     map.setMapTypeId( maptype );
-
-    if (bbbike.mapType.MapnikMapType) 
-    	custom_map( "mapnik", lang);
-
-    if (bbbike.mapType.CycleMapType) 
-    	custom_map( "cycle", lang);
-
     if (is_supported_maptype( maptype, bbbike.available_custom_maps)) {
 	setCustomBold(maptype);
     }
 
+    // google maps layers
     init_layers ();
-
     custom_layer( map, {"layer":"PanoramioLayer", 
 		        "enabled": bbbike.mapLayers.PanoramioLayer, 
 			"callback": add_panoramio_layer, 
