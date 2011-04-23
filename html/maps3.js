@@ -27,6 +27,7 @@ var bbbike = {
 
     // default map
     mapDefault: "mapnik",
+    //mapDefault: "normal",
 
    // visible controls
    controls: { 
@@ -285,6 +286,11 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
     init_layers ();
 
+    custom_layer( map, {"layer":"PanoramioLayer", 
+		        "enabled": bbbike.mapLayers.PanoramioLayer, 
+			"callback": add_panoramio_layer, 
+			"lang": lang });
+
     custom_layer( map, {"layer":"BicyclingLayer", 
 		        "enabled": bbbike.mapLayers.BicyclingLayer, 
 			"callback": add_bicycle_layer, 
@@ -295,14 +301,11 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 			"callback": add_traffic_layer, 
 			"lang": lang });
 
-    custom_layer( map, {"layer":"PanoramioLayer", 
-		        "enabled": bbbike.mapLayers.PanoramioLayer, 
-			"callback": add_panoramio_layer, 
-			"lang": lang });
-
-
-    // custom_layer( "cycle", "de");
-    // custom_layer( "mapnik", "de");
+    if (maptype == "mapnik" || maptype == "cycle") {
+       hideGoogleLayers();
+       // setTimeout( function () { document.getElementById( "TrafficLayer" ).style.visibility = "hidden" }, 2000);
+       // setTimeout( function () { document.getElementById( "BicyclingLayer" ).style.visibility = "hidden" }, 2500);
+    }
 }
 
 function init_layers () {
@@ -719,8 +722,17 @@ function HomeControl(controlDiv, map, maptype, lang) {
     controlText.style.fontWeight = "bold";
     currentText = controlText;
 
+    hideGoogleLayers();
+
   });
 
+}
+
+function hideGoogleLayers( enable ) {
+    var value = enable ? "show" : "hidden";
+
+    setTimeout( function () { document.getElementById( "TrafficLayer" ).style.visibility = value }, 2000);
+    setTimeout( function () { document.getElementById( "BicyclingLayer" ).style.visibility = value }, 2500);
 }
 
 var layerControl = {
@@ -740,7 +752,7 @@ function LayerControl(controlDiv, map, opt) {
   // from the edge of the map
 
   var controlUI = document.createElement('DIV');
-  controlUI.setAttribute("class", layer);
+  controlUI.setAttribute("id", layer);
 
   var controlText = document.createElement('DIV');
 
