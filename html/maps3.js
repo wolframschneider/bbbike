@@ -19,6 +19,7 @@ var bbbike = {
 	CycleMapType: true,
 	PublicTransportMapType: true,
 	HikeBikeMapType: true,
+	YahooMapMapType: true,
 	TahMapType: false
     },
 
@@ -42,7 +43,7 @@ var bbbike = {
    },
 
    available_google_maps: [ "roadmap", "terrain", "satellite", "hybrid"],
-   available_custom_maps: [ "tah", "public-transport", "hike-bike", "mapnik-de", "mapnik", "cycle" ],
+   available_custom_maps: [ "yahoo-map", "tah", "public-transport", "hike-bike", "mapnik-de", "mapnik", "cycle" ],
 
    area: { 
 	visible: true,
@@ -371,6 +372,25 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
      	maxZoom:17
     };
 
+    // http://png.maps.yimg.com/png?t=m&v=4.1&s=256&f=j&x=34&y=11&z=12
+    // http://www.guidebee.biz/forum/viewthread.php?tid=71
+    var yahoo_map_options = {
+    	getTileUrl : function (a,z) { 
+	   return "http://png.maps.yimg.com/png?t=m&v=4.1&s=256&f=j&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
+     	},
+     	isPng: true,
+     	opacity: 1.0,
+     	tileSize: new google.maps.Size(256,256),
+     	name: "YAHOO-MAP",
+     	minZoom:1,
+     	maxZoom:20
+    };
+
+    if (bbbike.mapType.YahooMapMapType) {
+        var YahooMapMapType = new google.maps.ImageMapType( yahoo_map_options );
+    	map.mapTypes.set("yahoo-map", YahooMapMapType); 
+    	custom_map( "yahoo-map", lang);
+    }
 
     if (bbbike.mapType.MapnikMapType) {
         var MapnikMapType = new google.maps.ImageMapType( mapnik_options );
@@ -783,7 +803,7 @@ function add_panoramio_layer ( map, enable, flag ) {
 function translate_mapcontrol ( word, lang ) {
   var l = {
    // master language, fallback for all
-   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle", "tah":"Tile@Home", "hike-bike":"Hike&Bike", "public-transport":"Public Transport", "mapnik-de":"Mapnik (de)" },
+   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle", "tah":"Tile@Home", "hike-bike":"Hike&Bike", "public-transport":"Public Transport", "mapnik-de":"Mapnik (de)", "yahoo-map":"Yahoo" },
 
    // rest
    "da" : { "cycle" : "Cykel" },
