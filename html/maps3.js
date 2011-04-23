@@ -262,6 +262,10 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
 	     }
         }
 
+    function is_european (region) {
+	return (region == "de" || region == "eu") ? true : false;	
+    }
+
     //
     // see:
     // 	http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
@@ -374,7 +378,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
     	custom_map( "mapnik", lang);
     }
 
-    if (bbbike.mapType.MapnikDeMapType) {
+    if (bbbike.mapType.MapnikDeMapType && is_european(region) ) {
         var MapnikDeMapType = new google.maps.ImageMapType( mapnik_de_options );
     	map.mapTypes.set("mapnik-de", MapnikDeMapType); 
     	custom_map( "mapnik-de", lang);
@@ -393,7 +397,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
     }
 
 
-    if (bbbike.mapType.PublicTransportMapType) {
+    if (bbbike.mapType.PublicTransportMapType && is_european(region) ) {
         var PublicTransportMapType = new google.maps.ImageMapType( public_transport_options );
         map.mapTypes.set("public-transport", PublicTransportMapType); 
     	custom_map( "public-transport", lang);
