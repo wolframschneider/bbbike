@@ -740,6 +740,8 @@ function LayerControl(controlDiv, map, opt) {
   // from the edge of the map
 
   var controlUI = document.createElement('DIV');
+  controlUI.setAttribute("class", layer);
+
   var controlText = document.createElement('DIV');
 
   controlDiv.style.paddingTop = '5px';
