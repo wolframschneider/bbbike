@@ -491,36 +491,38 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
     	custom_map( "public-transport", lang);
     }
 
+
     if (bbbike.mapType.BingMapMapType) {
         var maptype = new google.maps.ImageMapType( bing_map_options );
     	map.mapTypes.set("bing-map", maptype); 
     	custom_map( "bing-map", lang);
     }
-    if (bbbike.mapType.BingHybridMapType) {
-        var maptype = new google.maps.ImageMapType( bing_hybrid_options );
-    	map.mapTypes.set("bing-hybrid", maptype); 
-    	custom_map( "bing-hybrid", lang);
-    }
-    if (bbbike.mapType.BingSatelliteMapType) {
-        var maptype = new google.maps.ImageMapType( bing_satellite_options );
-    	map.mapTypes.set("bing-satellite", maptype); 
-    	custom_map( "bing-satellite", lang);
-    }
-
     if (bbbike.mapType.YahooMapMapType) {
         var maptype = new google.maps.ImageMapType( yahoo_map_options );
     	map.mapTypes.set("yahoo-map", maptype); 
     	custom_map( "yahoo-map", lang);
     }
-    if (bbbike.mapType.YahooHybridMapType) {
-        var maptype = new google.maps.ImageMapType( yahoo_hybrid_options );
-    	map.mapTypes.set("yahoo-hybrid", maptype); 
-    	custom_map( "yahoo-hybrid", lang);
+
+    if (bbbike.mapType.BingSatelliteMapType) {
+        var maptype = new google.maps.ImageMapType( bing_satellite_options );
+    	map.mapTypes.set("bing-satellite", maptype); 
+    	custom_map( "bing-satellite", lang);
     }
     if (bbbike.mapType.YahooSatelliteMapType) {
         var maptype = new google.maps.ImageMapType( yahoo_satellite_options );
     	map.mapTypes.set("yahoo-satellite", maptype); 
     	custom_map( "yahoo-satellite", lang);
+    }
+
+    if (bbbike.mapType.BingHybridMapType) {
+        var maptype = new google.maps.ImageMapType( bing_hybrid_options );
+    	map.mapTypes.set("bing-hybrid", maptype); 
+    	custom_map( "bing-hybrid", lang);
+    }
+    if (bbbike.mapType.YahooHybridMapType) {
+        var maptype = new google.maps.ImageMapType( yahoo_hybrid_options );
+    	map.mapTypes.set("yahoo-hybrid", maptype); 
+    	custom_map( "yahoo-hybrid", lang);
     }
 
 
@@ -898,7 +900,7 @@ function add_panoramio_layer ( map, enable, flag ) {
 function translate_mapcontrol ( word, lang ) {
   var l = {
    // master language, fallback for all
-   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle", "tah":"Tile@Home", "hike-bike":"Hike&Bike", "public-transport":"Public Transport", "mapnik-de":"Mapnik (de)", "yahoo-map":"Yahoo", "yahoo-hybrid":"Yahoo (hybrid)", "yahoo-satellite":"Yahoo (Sat)", "bing-map":"Bing", "bing-satellite":"Bing (Sat)", "bing-hybrid":"Bing (Hybrid)" },
+   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle", "tah":"Tile@Home", "hike-bike":"Hike&amp;Bike", "public-transport":"Public Transport", "mapnik-de":"Mapnik (de)", "yahoo-map":"Yahoo", "yahoo-hybrid":"Yahoo (hybrid)", "yahoo-satellite":"Yahoo (Sat)", "bing-map":"Bing", "bing-satellite":"Bing (Sat)", "bing-hybrid":"Bing (Hybrid)" },
 
    // rest
    "da" : { "cycle" : "Cykel" },
