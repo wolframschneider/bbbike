@@ -183,6 +183,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
             // no zoom level higher than 15
             map.setZoom( zoom < 16 ? zoom : 15);
 
+	    /*
 	    // re-center after resize of map window
 	    $(window).resize( function(e) { 
 			map.setCenter(bounds.getCenter()); 
@@ -192,6 +193,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
 
 			map.setZoom( zoom < 16 ? zoom : 15); 
 	    });
+	    */
 
 
 	    if (marker_list.length == 2 && without_area != 1 && bbbike.area.visible) {
