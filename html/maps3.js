@@ -19,7 +19,7 @@ var bbbike = {
 	CycleMapType: true,
 	PublicTransportMapType: true,
 	HikeBikeMapType: true,
-	TahMapType: false,
+	TahMapType: true,
 
 	YahooMapMapType: true,
 	YahooHybridMapType: true,
@@ -455,6 +455,42 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
      	maxZoom:17
     };
 
+    if (bbbike.mapType.MapnikMapType) {
+        var MapnikMapType = new google.maps.ImageMapType( mapnik_options );
+    	map.mapTypes.set("mapnik", MapnikMapType); 
+    	custom_map( "mapnik", lang);
+    }
+
+    if (bbbike.mapType.MapnikDeMapType && is_european(region) ) {
+        var MapnikDeMapType = new google.maps.ImageMapType( mapnik_de_options );
+    	map.mapTypes.set("mapnik-de", MapnikDeMapType); 
+    	custom_map( "mapnik-de", lang);
+    }
+
+    if (bbbike.mapType.TahMapType) {
+        var TahMapType = new google.maps.ImageMapType( tah_options );
+        map.mapTypes.set("tah", TahMapType); 
+    	custom_map( "tah", lang);
+    }
+
+    if (bbbike.mapType.CycleMapType) {
+        var CycleMapType = new google.maps.ImageMapType( cycle_options );
+        map.mapTypes.set("cycle", CycleMapType); 
+    	custom_map( "cycle", lang);
+    }
+
+    if (bbbike.mapType.HikeBikeMapType) {
+        var HikeBikeMapType = new google.maps.ImageMapType( hike_bike_options );
+        map.mapTypes.set("hike-bike", HikeBikeMapType); 
+    	custom_map( "hike-bike", lang);
+    }
+
+    if (bbbike.mapType.PublicTransportMapType && is_european(region) ) {
+        var PublicTransportMapType = new google.maps.ImageMapType( public_transport_options );
+        map.mapTypes.set("public-transport", PublicTransportMapType); 
+    	custom_map( "public-transport", lang);
+    }
+
     if (bbbike.mapType.BingMapMapType) {
         var maptype = new google.maps.ImageMapType( bing_map_options );
     	map.mapTypes.set("bing-map", maptype); 
@@ -487,42 +523,6 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
     	custom_map( "yahoo-satellite", lang);
     }
 
-    if (bbbike.mapType.MapnikMapType) {
-        var MapnikMapType = new google.maps.ImageMapType( mapnik_options );
-    	map.mapTypes.set("mapnik", MapnikMapType); 
-    	custom_map( "mapnik", lang);
-    }
-
-    if (bbbike.mapType.MapnikDeMapType && is_european(region) ) {
-        var MapnikDeMapType = new google.maps.ImageMapType( mapnik_de_options );
-    	map.mapTypes.set("mapnik-de", MapnikDeMapType); 
-    	custom_map( "mapnik-de", lang);
-    }
-
-    if (bbbike.mapType.CycleMapType) {
-        var CycleMapType = new google.maps.ImageMapType( cycle_options );
-        map.mapTypes.set("cycle", CycleMapType); 
-    	custom_map( "cycle", lang);
-    }
-
-    if (bbbike.mapType.HikeBikeMapType) {
-        var HikeBikeMapType = new google.maps.ImageMapType( hike_bike_options );
-        map.mapTypes.set("hike-bike", HikeBikeMapType); 
-    	custom_map( "hike-bike", lang);
-    }
-
-
-    if (bbbike.mapType.PublicTransportMapType && is_european(region) ) {
-        var PublicTransportMapType = new google.maps.ImageMapType( public_transport_options );
-        map.mapTypes.set("public-transport", PublicTransportMapType); 
-    	custom_map( "public-transport", lang);
-    }
-
-    if (bbbike.mapType.TahMapType) {
-        var TahMapType = new google.maps.ImageMapType( tah_options );
-        map.mapTypes.set("tah", TahMapType); 
-    	custom_map( "tah", lang);
-    }
 
     if (!is_supported_map (maptype)) {
 	maptype = bbbike.mapDefault;
