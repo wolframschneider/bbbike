@@ -320,7 +320,7 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     var marker_list = [ $route_list ];
 
     city = "$city";
-    bbbike_maps_init("default", $marker_list, "$lang" );
+    bbbike_maps_init("default", $marker_list, "$lang", false, "" );
 
 EOF
 
