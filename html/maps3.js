@@ -12,15 +12,18 @@ var bbbike = {
     // map type by google
     mapTypeControlOptions: { mapTypeIds: [ google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE ] },
 
-    // map type by OpenStreetMap
+    // map type by OpenStreetMap & other
     mapType: {
 	MapnikMapType: true,
 	MapnikDeMapType: true,
 	CycleMapType: true,
 	PublicTransportMapType: true,
 	HikeBikeMapType: true,
+	TahMapType: false,
+
 	YahooMapMapType: true,
-	TahMapType: false
+	YahooHybridMapType: true,
+	YahooSatelliteMapType: true
     },
 
     // optinal layers in google maps or all maps
@@ -43,7 +46,7 @@ var bbbike = {
    },
 
    available_google_maps: [ "roadmap", "terrain", "satellite", "hybrid"],
-   available_custom_maps: [ "yahoo-map", "tah", "public-transport", "hike-bike", "mapnik-de", "mapnik", "cycle" ],
+   available_custom_maps: [ "yahoo-map", "yahoo-hybrid", "yahoo-satellite", "tah", "public-transport", "hike-bike", "mapnik-de", "mapnik", "cycle" ],
 
    area: { 
 	visible: true,
@@ -383,13 +386,45 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
      	tileSize: new google.maps.Size(256,256),
      	name: "YAHOO-MAP",
      	minZoom:1,
-     	maxZoom:20
+     	maxZoom:17
     };
+    var yahoo_hybrid_options = {
+    	getTileUrl : function (a,z) { 
+	   return "http://us.maps3.yimg.com/aerial.maps.yimg.com/png?v=1.1&t=h&s=256&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
+     	},
+     	isPng: true,
+     	opacity: 1.0,
+     	tileSize: new google.maps.Size(256,256),
+     	name: "YAHOO-HYBRID",
+     	minZoom:1,
+     	maxZoom:17
+    };
+    var yahoo_satellite_options = {
+    	getTileUrl : function (a,z) { 
+	   return "http://aerial.maps.yimg.com/ximg?t=a&v=1.7&s=256&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
+     	},
+     	isPng: true,
+     	opacity: 1.0,
+     	tileSize: new google.maps.Size(256,256),
+     	name: "YAHOO-SATELLITE",
+     	minZoom:1,
+     	maxZoom:17
+    }
 
     if (bbbike.mapType.YahooMapMapType) {
-        var YahooMapMapType = new google.maps.ImageMapType( yahoo_map_options );
-    	map.mapTypes.set("yahoo-map", YahooMapMapType); 
+        var maptype = new google.maps.ImageMapType( yahoo_map_options );
+    	map.mapTypes.set("yahoo-map", maptype); 
     	custom_map( "yahoo-map", lang);
+    }
+    if (bbbike.mapType.YahooHybridMapType) {
+        var maptype = new google.maps.ImageMapType( yahoo_hybrid_options );
+    	map.mapTypes.set("yahoo-hybrid", maptype); 
+    	custom_map( "yahoo-hybrid", lang);
+    }
+    if (bbbike.mapType.YahooSatelliteMapType) {
+        var maptype = new google.maps.ImageMapType( yahoo_satellite_options );
+    	map.mapTypes.set("yahoo-satellite", maptype); 
+    	custom_map( "yahoo-satellite", lang);
     }
 
     if (bbbike.mapType.MapnikMapType) {
@@ -803,7 +838,7 @@ function add_panoramio_layer ( map, enable, flag ) {
 function translate_mapcontrol ( word, lang ) {
   var l = {
    // master language, fallback for all
-   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle", "tah":"Tile@Home", "hike-bike":"Hike&Bike", "public-transport":"Public Transport", "mapnik-de":"Mapnik (de)", "yahoo-map":"Yahoo" },
+   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle", "tah":"Tile@Home", "hike-bike":"Hike&Bike", "public-transport":"Public Transport", "mapnik-de":"Mapnik (de)", "yahoo-map":"Yahoo", "yahoo-hybrid":"Yahoo (hybrid)", "yahoo-satellite":"Yahoo (Sat)" },
 
    // rest
    "da" : { "cycle" : "Cykel" },
