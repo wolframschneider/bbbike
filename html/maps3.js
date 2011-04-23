@@ -15,7 +15,8 @@ var bbbike = {
     // map type by OpenStreetMap
     mapType: {
 	MapnikMapType: true,
-	CycleMapType: true
+	CycleMapType: true,
+	TahMapType: true
     },
 
     // optinal layers in google maps or all maps
@@ -256,6 +257,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
 	     }
         }
 
+    // http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
     var mapnik_options = {
     	getTileUrl : function (a,z) { 
 	   // select a random server
@@ -270,7 +272,23 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
      	name: "MAPNIK",
      	minZoom:1,
      	maxZoom:20
-    }
+    };
+
+    var tah_options = {
+    	getTileUrl : function (a,z) { 
+	   // select a random server
+	   var list = ["a", "b"]; // "c"
+           var server = list [ parseInt( Math.random() * list.length ) ];
+
+    	   return "http://" + server + ".tah.openstreetmap.org/Tiles/tile/" + z + "/" + a.x + "/" + a.y + ".png";
+     	},
+     	isPng: true,
+     	opacity: 1.0,
+     	tileSize: new google.maps.Size(256,256),
+     	name: "TAH",
+     	minZoom:1,
+     	maxZoom:20
+    };
 
     var cycle_options = {
     	getTileUrl : function (a,z) { 
@@ -287,7 +305,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
      	name: "CYCLE",
      	minZoom:1,
      	maxZoom:20
-    }
+    };
 
 
     if (bbbike.mapType.MapnikMapType) {
@@ -300,6 +318,12 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
         var CycleMapType = new google.maps.ImageMapType( cycle_options );
         map.mapTypes.set("cycle", CycleMapType); 
     	custom_map( "cycle", lang);
+    }
+
+    if (bbbike.mapType.TahMapType) {
+        var TahMapType = new google.maps.ImageMapType( tah_options );
+        map.mapTypes.set("tah", TahMapType); 
+    	custom_map( "tah", lang);
     }
 
     if (!is_supported_map (maptype)) {
@@ -675,9 +699,12 @@ function add_panoramio_layer ( map, enable, flag ) {
 // localized custom map names
 function translate_mapcontrol ( word, lang ) {
   var l = {
+   // master language, fallback for all
+   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle", "tah":"Tile@Home" },
+
+   // rest
    "da" : { "cycle" : "Cykel" },
    "de" : { "mapnik" : "Mapnik", "cycle" : "Fahrrad", "traffic layer": "Google Verkehr", "Panoramio": "Panoramio Fotos", "cycle layer": "Google Fahrrad" },
-   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle" },
    "es" : { "cycle" : "Bicicletas" },
    "fr" : { "cycle" : "Vélo" },
    "hr" : { "cycle" : "Bicikl" },
