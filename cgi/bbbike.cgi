@@ -830,6 +830,7 @@ my $local_city_name = "";
 my $en_city_name = "";
 my $de_city_name = "";
 my $city_script;
+my $region = "";
 if ($osm_data) {
     $datadir =~ m,data-osm/(.+),;
     my $city = $1;
@@ -845,6 +846,8 @@ if ($osm_data) {
 
     unshift (@INC, "../data-osm/$city") if $city;
     require Karte::Polar;
+
+    $region = $geo->{"region"} || "other";
 }
 
 if ($lang ne "de") {
@@ -2758,7 +2761,7 @@ EOF
 		&BBBikeAds::adsense_linkblock if &is_production($q) && !is_mobile($q);
 		print qq{</div>\n\n};
 	        my $maps = BBBikeGooglemap->new();
-	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'cache' =>$q->param('cache') );
+	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'region' => $region, 'cache' =>$q->param('cache') );
 	    }
 
 if ($enable_homemap_streets) {
@@ -5572,7 +5575,7 @@ EOF
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 		} else {
 		   my $maps = BBBikeGooglemap->new();
-                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1, 'cache' =>$q->param('cache') );
+                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1, 'region' => $region, 'cache' => $q->param('cache') );
 		}
 	    }
 

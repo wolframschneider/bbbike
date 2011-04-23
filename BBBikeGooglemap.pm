@@ -49,6 +49,7 @@ sub run {
     my $lang             = $args{'lang'};
     my $fullscreen       = $args{'fullscreen'};
     my $cache            = $args{'cache'};
+    my $region           = $args{'region'} || "other";
 
     my $city = $q->param('city') || "";
     if ($city) {
@@ -149,7 +150,7 @@ sub run {
     binmode( \*STDERR, ":utf8" ) if $force_utf8;
 
     print $self->get_html( \@polylines_polar, \@polylines_route, \@wpt, $zoom,
-        $center, $q, $lang, $fullscreen, $cache );
+        $center, $q, $lang, $fullscreen, $cache, $region );
 }
 
 sub bbbike_converter {
@@ -162,8 +163,9 @@ sub polar_converter { @_[ 0, 1 ] }
 
 sub get_html {
     my (
-        $self,   $paths_polar, $paths_route, $wpts,       $zoom,
-        $center, $q,           $lang,        $fullscreen, $cache
+        $self,       $paths_polar, $paths_route, $wpts,
+        $zoom,       $center,      $q,           $lang,
+        $fullscreen, $cache,       $region
     ) = @_;
 
     my $log_routes = 1;
@@ -309,6 +311,8 @@ EOF
 qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </script>\n}
       if $gmap_api_version == 2;
 
+    $region = "other" if $region !~ /^(de|eu|other)$/;
+
     $html .= <<EOF;
 
     <div id="map"></div>
@@ -320,7 +324,7 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     var marker_list = [ $route_list ];
 
     city = "$city";
-    bbbike_maps_init("default", $marker_list, "$lang", false, "" );
+    bbbike_maps_init("default", $marker_list, "$lang", false, "$region" );
 
 EOF
 
