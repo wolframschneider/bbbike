@@ -15,6 +15,7 @@ var bbbike = {
     // map type by OpenStreetMap
     mapType: {
 	MapnikMapType: true,
+	MapnikDeMapType: true,
 	CycleMapType: true,
 	PublicTransportMapType: true,
 	HikeBikeMapType: true,
@@ -261,9 +262,11 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
 	     }
         }
 
+    //
     // see:
     // 	http://wiki.openstreetmap.org/wiki/Slippy_map_tilenames
     //  http://wiki.openstreetmap.org/wiki/Tileserver
+    //
     var mapnik_options = {
     	getTileUrl : function (a,z) { 
 	   // select a random server
@@ -271,6 +274,23 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
            var server = list [ parseInt( Math.random() * list.length ) ];
 
     	   return "http://" + server + ".tile.openstreetmap.org/" + z + "/" + a.x + "/" + a.y + ".png";
+     	},
+     	isPng: true,
+     	opacity: 1.0,
+     	tileSize: new google.maps.Size(256,256),
+     	name: "MAPNIK",
+     	minZoom:1,
+     	maxZoom:18
+    };
+
+    // http://openstreetmap.de/
+    var mapnik_de_options = {
+    	getTileUrl : function (a,z) { 
+	   // select a random server
+	   var list = ["a", "b"]; // "c"
+           var server = list [ parseInt( Math.random() * list.length ) ];
+
+    	   return "http://" + server + ".tile.openstreetmap.de/tiles/osmde/" + z + "/" + a.x + "/" + a.y + ".png";
      	},
      	isPng: true,
      	opacity: 1.0,
@@ -352,6 +372,12 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
         var MapnikMapType = new google.maps.ImageMapType( mapnik_options );
     	map.mapTypes.set("mapnik", MapnikMapType); 
     	custom_map( "mapnik", lang);
+    }
+
+    if (bbbike.mapType.MapnikDeMapType) {
+        var MapnikDeMapType = new google.maps.ImageMapType( mapnik_de_options );
+    	map.mapTypes.set("mapnik-de", MapnikDeMapType); 
+    	custom_map( "mapnik-de", lang);
     }
 
     if (bbbike.mapType.CycleMapType) {
@@ -753,7 +779,7 @@ function add_panoramio_layer ( map, enable, flag ) {
 function translate_mapcontrol ( word, lang ) {
   var l = {
    // master language, fallback for all
-   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle", "tah":"Tile@Home", "hike-bike":"Hike&Bike", "public-transport":"Public Transport" },
+   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle", "tah":"Tile@Home", "hike-bike":"Hike&Bike", "public-transport":"Public Transport", "mapnik-de":"Mapnik (de)" },
 
    // rest
    "da" : { "cycle" : "Cykel" },
