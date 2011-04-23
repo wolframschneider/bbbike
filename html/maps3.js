@@ -676,7 +676,7 @@ function add_panoramio_layer ( map, enable, flag ) {
 function translate_mapcontrol ( word, lang ) {
   var l = {
    "da" : { "cycle" : "Cykel" },
-   "de" : { "mapnik" : "Mapnik", "cycle" : "Fahrrad", "traffic": "Verkehr", "panoramio": "Fotos" },
+   "de" : { "mapnik" : "Mapnik", "cycle" : "Fahrrad", "traffic layer": "Google Verkehr", "Panoramio": "Panoramio Fotos", "cycle layer": "Google Fahrrad" },
    "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle" },
    "es" : { "cycle" : "Bicicletas" },
    "fr" : { "cycle" : "Vélo" },
