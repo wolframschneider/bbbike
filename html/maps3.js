@@ -131,7 +131,7 @@ function is_supported_maptype (maptype, list) {
     return 0;
 }
 
-function bbbike_maps_init (maptype, marker_list, lang, without_area) {
+function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
 
 
     var routeLinkLabel = "Link to route: ";
