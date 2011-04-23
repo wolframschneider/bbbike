@@ -27,7 +27,7 @@ var bbbike = {
 
     // default map
     mapDefault: "mapnik",
-    //mapDefault: "normal",
+    // mapDefault: "terrain",
 
    // visible controls
    controls: { 
@@ -36,6 +36,9 @@ var bbbike = {
 	overviewMapControl: false, // http://code.google.com/p/gmaps-api-issues/issues/detail?id=3167
 	panControl: true
    },
+
+   available_google_maps: [ "roadmap", "terrain", "satellite", "hybrid"],
+   available_custom_maps: [ "tah", "mapnik-de", "mapnik", "cycle" ],
 
    area: { 
 	visible: true,
@@ -106,6 +109,27 @@ function homemap_street_timer (event, time) {
 }
 
 
+// test for all google + custom maps
+function is_supported_map (maptype) {
+    if (is_supported_maptype( maptype, bbbike.available_google_maps) ||
+        is_supported_maptype( maptype, bbbike.available_custom_maps) ) {
+	return 1;
+    } else {
+	return 0;
+    }
+}
+
+function is_supported_maptype (maptype, list) {
+    if (!list)
+	return 0;
+
+    for (var i = 0; i < list.length; i++) {
+	if (list[i] == maptype ) 
+	    return 1;
+    }
+
+    return 0;
+}
 
 function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
@@ -271,10 +295,9 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     map.mapTypes.set("mapnik", MapnikMapType); 
     map.mapTypes.set("cycle", CycleMapType); 
 
-    // default map type
-    if (maptype == "mapnik" || maptype == "terrain" || maptype == "normal") {
+    if (is_supported_map (maptype)) {
     } else {
-	maptype = "mapnik";
+	maptype = bbbike.mapDefault;
     }
     map.setMapTypeId( maptype );
 
@@ -283,6 +306,10 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 
     if (bbbike.mapType.CycleMapType) 
     	custom_map( "cycle", lang);
+
+    if (is_supported_maptype( maptype, bbbike.available_custom_maps)) {
+	setCustomBold(maptype);
+    }
 
     init_layers ();
 
@@ -301,11 +328,15 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
 			"callback": add_traffic_layer, 
 			"lang": lang });
 
-    if (maptype == "mapnik" || maptype == "cycle") {
-       hideGoogleLayers();
-       // setTimeout( function () { document.getElementById( "TrafficLayer" ).style.visibility = "hidden" }, 2000);
-       // setTimeout( function () { document.getElementById( "BicyclingLayer" ).style.visibility = "hidden" }, 2500);
-    }
+    hideGoogleLayers(maptype);
+
+    // map changed
+    google.maps.event.addListener(map, "maptypeid_changed",
+	 function () { 
+	    var maptype = map.getMapTypeId();
+            hideGoogleLayers(maptype);
+	}
+    );
 }
 
 function init_layers () {
@@ -677,7 +708,7 @@ function translate_mapcontrol ( word, lang ) {
  * the control DIV as an argument.
  */
 
-var currentText;
+var currentText = [];
 function HomeControl(controlDiv, map, maptype, lang) {
 
   // Set CSS styles for the DIV containing the control
@@ -711,28 +742,55 @@ function HomeControl(controlDiv, map, maptype, lang) {
   controlText.innerHTML = translate_mapcontrol(maptype, lang);
   controlUI.appendChild(controlText);
 
+  currentText[maptype] = controlText;
+
   // Setup the click event listeners: simply set the map to Chicago
   google.maps.event.addDomListener(controlUI, 'click', function() {
     map.setMapTypeId(maptype);
-
-    // un-bold current text
-    if (currentText) {
-	currentText.style.fontWeight = "normal";	
-    }
-    controlText.style.fontWeight = "bold";
-    currentText = controlText;
-
-    hideGoogleLayers();
-
+    setCustomBold( maptype );
   });
+}
+
+// de-select all custom maps and optional set a map to bold
+function setCustomBold ( maptype ) {
+   if (!currentText)
+	return;
+
+   // cleanup
+   for (var key in  currentText) {
+	currentText[key].style.fontWeight = "normal";
+   }
+
+   // optional: set map to bold
+   if (currentText[ maptype ]) 
+	currentText[maptype].style.fontWeight = "bold";
 
 }
 
-function hideGoogleLayers( enable ) {
-    var value = enable ? "show" : "hidden";
+function setCustomBold ( maptype ) {
+    if (currentText && currentText[ maptype ]) 
+	currentText[maptype].style.fontWeight = "bold";
+}
 
-    setTimeout( function () { document.getElementById( "TrafficLayer" ).style.visibility = value }, 2000);
-    setTimeout( function () { document.getElementById( "BicyclingLayer" ).style.visibility = value }, 2500);
+// hide google layers on non-google custom maps
+function hideGoogleLayers( maptype ) {
+    var value = is_supported_maptype( maptype, bbbike.available_custom_maps) ? "hidden" : "visible";
+
+    var timeout = value == "hidden" ? 2000 : 1000;
+
+    setTimeout( function () { 
+	var div = document.getElementById( "BicyclingLayer" );
+	if (div)
+	   div.style.visibility = value; 
+   }, timeout);
+
+    setTimeout( function () { 
+	var div = document.getElementById( "TrafficLayer" );
+	if (div) 
+	   div.style.visibility = value;
+    }, timeout - (value == "hidden" ? 500 : -500));
+
+    setCustomBold();
 }
 
 var layerControl = {
