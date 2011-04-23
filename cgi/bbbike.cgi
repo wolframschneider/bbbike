@@ -7423,6 +7423,7 @@ sub header {
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>
 <script src="/html/maps3.js" type="text/javascript"></script>
 <script src="/html/elevation.js" type="text/javascript"></script> 
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=panoramio&sensor=$sensor"></script>
 |) if !is_mobile($q) || is_resultpage($q);
 	}
 

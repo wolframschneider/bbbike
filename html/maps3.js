@@ -42,6 +42,8 @@ var bbbike = {
    }
 };
 
+var layers = {};
+
 //////////////////////////////////////////////////////////////////////
 // functions
 //
@@ -281,28 +283,97 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area) {
     if (bbbike.mapType.CycleMapType) 
     	custom_map( "cycle", lang);
 
-    if (bbbike.mapLayers.BicyclingLayer) 
-	add_bicycle_layer ( map );
+    init_layers ();
 
-    if (bbbike.mapLayers.TrafficLayer) 
-    	add_traffic_layer ( map );
+    custom_layer( map, {"layer":"BicyclingLayer", 
+		        "enabled": bbbike.mapLayers.BicyclingLayer, 
+			"callback": add_bicycle_layer, 
+			"lang": lang });
+
+    custom_layer( map, {"layer":"TrafficLayer", 
+		        "enabled": bbbike.mapLayers.TrafficLayer, 
+			"callback": add_traffic_layer, 
+			"lang": lang });
+
+    custom_layer( map, {"layer":"PanoramioLayer", 
+		        "enabled": bbbike.mapLayers.PanoramioLayer, 
+			"callback": add_panoramio_layer, 
+			"lang": lang });
+
+
+    // custom_layer( "cycle", "de");
+    // custom_layer( "mapnik", "de");
+}
+
+function init_layers () {
+    layers.bicyclingLayer = new google.maps.BicyclingLayer();
+    layers.trafficLayer = new google.maps.TrafficLayer();
+
+    // need to download library first
+    layers.panoramioLayer = false;
 }
 
 // add bicycle routes and lanes to map, by google maps
-function add_bicycle_layer ( map ) {
-    var bicyclingLayer = new google.maps.BicyclingLayer();
-    if (bicyclingLayer) {
-        bicyclingLayer.setMap( map );
+function add_bicycle_layer ( map, enable ) {
+    if (!layers.bicyclingLayer) 
+	return;
+
+    if (enable) {
+        layers.bicyclingLayer.setMap( map );
+    } else {
+        layers.bicyclingLayer.setMap( null );
     }
 }
 
 // add traffic to map, by google maps
-function add_traffic_layer ( map ) {
-    var trafficLayer = new google.maps.TrafficLayer();
-    if (trafficLayer) {
-    	trafficLayer.setMap( map );
+function add_traffic_layer ( map, enable ) {
+    if (!layers.trafficLayer) 
+	return;
+
+    if (enable) {
+    	layers.trafficLayer.setMap( map );
+    } else {
+    	layers.trafficLayer.setMap( null );
     }
 }
+// add traffic to map, by google maps
+function add_panoramio_layer ( map, enable, flag ) {
+   // ignore if nothing to display
+   if (!layers.panoramioLayer && !enable)
+	return;
+
+   // download JavaScript library for panoramio
+   if (!layers.panoramioLayer && !flag) {
+	if (0) {
+	// if (!document.getElementById("panoramio") {
+   	var panoramio = document.createElement('DIV');
+	panoramio.setAttribute("id", "panoramio");
+
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+        script.src = "http://maps.google.com/maps/api/js?libraries=panoramio&sensor=true";
+
+	panoramio.appendChild(script);	
+        document.body.appendChild(panoramio);
+
+	setTimeout( function () { 
+		layers.panoramioLayer = new google.maps.panoramio.PanoramioLayer(); 
+		add_panoramio_layer ( map, enable, true );
+	}, 3000 );
+
+	return;
+	}
+
+	layers.panoramioLayer = new google.maps.panoramio.PanoramioLayer(); 
+   }
+
+    if (enable) {
+    	layers.panoramioLayer.setMap( map );
+    } else {
+    	layers.panoramioLayer.setMap( null );
+    }
+}
+
 
     var street = "";
     var street_cache = [];
@@ -571,7 +642,7 @@ function add_traffic_layer ( map ) {
 function translate_mapcontrol ( word, lang ) {
   var l = {
    "da" : { "cycle" : "Cykel" },
-   "de" : { "mapnik" : "Mapnik", "cycle" : "Fahrrad" },
+   "de" : { "mapnik" : "Mapnik", "cycle" : "Fahrrad", "traffic": "Verkehr", "panoramio": "Fotos" },
    "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle" },
    "es" : { "cycle" : "Bicicletas" },
    "fr" : { "cycle" : "Vélo" },
@@ -610,22 +681,23 @@ function HomeControl(controlDiv, map, maptype, lang) {
   // Setting padding to 5 px will offset the control
   // from the edge of the map
 
+  var controlUI = document.createElement('DIV');
+  var controlText = document.createElement('DIV');
+
   controlDiv.style.paddingTop = '5px';
   controlDiv.style.paddingRight = '2px';
 
   // Set CSS for the control border
-  var controlUI = document.createElement('DIV');
   controlUI.style.backgroundColor = 'white';
   controlUI.style.borderStyle = 'solid';
   controlUI.style.borderWidth = '2px';
   controlUI.style.cursor = 'pointer';
   controlUI.style.textAlign = 'center';
-
   controlUI.title = 'Click to set the map to Home';
+
   controlDiv.appendChild(controlUI);
 
   // Set CSS for the control interior
-  var controlText = document.createElement('DIV');
   // controlText.style.fontFamily = 'Arial,sans-serif';
   controlText.style.fontSize = '12px';
   controlText.style.paddingLeft = '8px';
@@ -651,12 +723,97 @@ function HomeControl(controlDiv, map, maptype, lang) {
 
 }
 
+var layerControl = {
+   TrafficLayer: false,
+   BicyclingLayer: false,
+   PanoramioLayer: false
+};
+
+function LayerControl(controlDiv, map, opt) {
+   var layer = opt.layer;
+   var enabled = opt.enabled; 
+   var callback = opt.callback;
+   var lang = opt.lang;
+
+  // Set CSS styles for the DIV containing the control
+  // Setting padding to 5 px will offset the control
+  // from the edge of the map
+
+  var controlUI = document.createElement('DIV');
+  var controlText = document.createElement('DIV');
+
+  controlDiv.style.paddingTop = '5px';
+  controlDiv.style.paddingRight = '2px';
+
+  // Set CSS for the control border
+  controlUI.style.backgroundColor = 'white';
+  controlUI.style.borderStyle = 'solid';
+  controlUI.style.borderWidth = '2px';
+  controlUI.style.cursor = 'pointer';
+  controlUI.style.textAlign = 'center';
+
+  var layerText = layer;
+  if (layer == "BicyclingLayer") {
+      layerText = "cycle layer";
+      callback ( map, enabled );
+  }
+  if (layer == "TrafficLayer") {
+      layerText = "traffic layer";
+      callback ( map, enabled );
+  }
+  if (layer == "PanoramioLayer") {
+      layerText = "Panoramio";
+      callback ( map, enabled );
+  }
+
+
+  layerControl.layer = enabled;
+
+  function toogleColor (toogle) {
+     controlUI.style.color = toogle ? '#cdc9c9' : '#228b22';
+  }
+  toogleColor(!layerControl.layer);
+
+  controlUI.title = 'Click to add the layer ' + layerText;
+
+  controlDiv.appendChild(controlUI);
+
+  // Set CSS for the control interior
+  // controlText.style.fontFamily = 'Arial,sans-serif';
+  controlText.style.fontSize = '12px';
+  controlText.style.paddingLeft = '8px';
+  controlText.style.paddingRight = '8px';
+  controlText.style.paddingTop = '1px';
+  controlText.style.paddingBottom = '1px';
+
+  controlText.innerHTML = translate_mapcontrol(layerText, lang);
+  controlUI.appendChild(controlText);
+  if (enabled) 
+      controlText.fontWeight = "bold";
+
+   // switch enabled <-> disabled
+  google.maps.event.addDomListener(controlUI, 'click', function() {
+    toogleColor(layerControl.layer);
+    layerControl.layer = layerControl.layer ? false : true;
+    callback ( map,  layerControl.layer);
+  });
+
+}
+
 function custom_map ( maptype, lang ) {
   var homeControlDiv = document.createElement('DIV');
   var homeControl = new HomeControl(homeControlDiv, map, maptype, lang);
 
   homeControlDiv.index = 1;
   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+}
+
+function custom_layer ( map, opt) { 
+  var layerControlDiv = document.createElement('DIV');
+  var layerControl = new LayerControl (layerControlDiv, map, opt);
+
+  layerControlDiv.index = 1;
+  map.controls[google.maps.ControlPosition.RIGHT_TOP].push(layerControlDiv);
 }
 
 
