@@ -724,7 +724,7 @@ function HomeControl(controlDiv, map, maptype, lang) {
   // Set CSS for the control border
   controlUI.style.backgroundColor = 'white';
   controlUI.style.borderStyle = 'solid';
-  controlUI.style.borderWidth = '2px';
+  controlUI.style.borderWidth = '0px';
   controlUI.style.cursor = 'pointer';
   controlUI.style.textAlign = 'center';
   controlUI.title = 'Click to set the map to Home';
@@ -733,11 +733,11 @@ function HomeControl(controlDiv, map, maptype, lang) {
 
   // Set CSS for the control interior
   // controlText.style.fontFamily = 'Arial,sans-serif';
-  controlText.style.fontSize = '12px';
+  controlText.style.fontSize = '13px';
   controlText.style.paddingLeft = '8px';
   controlText.style.paddingRight = '8px';
-  controlText.style.paddingTop = '1px';
-  controlText.style.paddingBottom = '1px';
+  controlText.style.paddingTop = '3px';
+  controlText.style.paddingBottom = '3px';
 
   controlText.innerHTML = translate_mapcontrol(maptype, lang);
   controlUI.appendChild(controlText);
@@ -753,24 +753,24 @@ function HomeControl(controlDiv, map, maptype, lang) {
 
 // de-select all custom maps and optional set a map to bold
 function setCustomBold ( maptype ) {
-   if (!currentText)
+   if (!currentText) 
 	return;
 
-   // cleanup
    for (var key in  currentText) {
 	currentText[key].style.fontWeight = "normal";
+	currentText[key].style.color = "#000000";
+	currentText[key].style.background = "#FFFFFF";
    }
 
    // optional: set map to bold
-   if (currentText[ maptype ]) 
+   if (currentText[ maptype ]) {
 	currentText[maptype].style.fontWeight = "bold";
+	currentText[maptype].style.color = "#FFFFFF";
+	currentText[maptype].style.background = "#4682B4";
+   }
 
 }
 
-function setCustomBold ( maptype ) {
-    if (currentText && currentText[ maptype ]) 
-	currentText[maptype].style.fontWeight = "bold";
-}
 
 // hide google layers on non-google custom maps
 function hideGoogleLayers( maptype ) {
@@ -790,7 +790,7 @@ function hideGoogleLayers( maptype ) {
 	   div.style.visibility = value;
     }, timeout - (value == "hidden" ? 500 : -500));
 
-    setCustomBold();
+    setCustomBold( maptype );
 }
 
 var layerControl = {
