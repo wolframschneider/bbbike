@@ -18,7 +18,7 @@ var bbbike = {
 	CycleMapType: true,
 	PublicTransportMapType: true,
 	HikeBikeMapType: true,
-	TahMapType: true
+	TahMapType: false
     },
 
     // optinal layers in google maps or all maps
