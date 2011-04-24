@@ -472,9 +472,68 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
      	maxZoom:17
     };
 
+
+    // select a tiles random server. The argument is either an interger or a 
+    // list of server names , e.g.:
+    // list = ["a", "b"]; 
+    //  list = 4;
+    function randomServer ( list ) {
+	var server = "";
+
+	if (typeof list == "number") { 
+	   server = parseInt( Math.random() * list );
+        } else {
+           server = list [ parseInt( Math.random() * list.length ) ];
+	}
+
+	return server + "";
+    }
+
+    //
+    // Bing normal map:
+    // http://ecn.t2.tiles.virtualearth.net/tiles/r1202102332222?g=681&mkt=de-de&lbl=l1&stl=h&shading=hill&n=z
+    // http://ecn.t0.tiles.virtualearth.net/tiles/r12021023322300?g=681&mkt=de-de&lbl=l1&stl=h&shading=hill&n=z
+    // 
+    // Bird view:
+    // http://ecn.t2.tiles.virtualearth.net/tiles/h120022.jpeg?g=681&mkt=en-gb&n=z
+    //
+    // map type: "r" (roadmap), "h" (hybrid", "a" (arial)
+    function getTileUrlBingBirdview(a, z, type, lang) {
+	var url = "http://ecn.t" + randomServer(4) + ".tiles.virtualearth.net/tiles/" + type +  getQuadKey(a, z);
+
+	if (type == "r") {
+           url += "?g=681&mkt=" + lang + "&lbl=l1&stl=h&shading=hill&n=z";
+	} else if (type == "h" || type == "a") {
+           url += ".jpeg?g=681&mkt=" + lang + "&n=z";
+        }
+
+        return url;
+    }
+    
+    // Converts tile XY coordinates into a QuadKey at a specified level of detail.
     // http://msdn.microsoft.com/en-us/library/bb259689.aspx
+    function getQuadKey(a, z) {
+        var quadKey = "";
+        for (var i = z; i > 0; i--) {
+	    var digit = '0';
+            var mask = 1 << (i - 1);
+
+            if ((a.x & mask) != 0) {
+                digit++;
+            }
+
+            if ((a.y & mask) != 0) {
+                digit++;
+                digit++;
+            }
+            quadKey += digit;
+       }
+
+       return quadKey;
+    }
+
     var bing_birdview_options = {
-    	getTileUrl : function (a,z) { return getTileUrlBing(a, z, "a"); },
+    	getTileUrl : function (a,z) { return getTileUrlBingBirdview(a, z, "a", lang); },
      	isPng: false,
      	opacity: 1.0,
      	tileSize: new google.maps.Size(256,256),
