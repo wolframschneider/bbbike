@@ -27,7 +27,8 @@ var bbbike = {
 
 	BingMapMapType: true,
 	BingHybridMapType: true,
-	BingSatelliteMapType: true
+	BingSatelliteMapType: true,
+	BingBirdviewMapType: false
     },
 
     mapPosition: {
@@ -36,6 +37,7 @@ var bbbike = {
 	"bing-map": "BOTTOM_RIGHT",
 	"bing-hybrid": "BOTTOM_RIGHT",
 	"bing-satellite": "BOTTOM_RIGHT",
+	"bing-birdview": "BOTTOM_RIGHT",
 	"yahoo-map": "BOTTOM_RIGHT",
 	"yahoo-hybrid": "BOTTOM_RIGHT",
 	"yahoo-satellite": "BOTTOM_RIGHT"
@@ -61,7 +63,7 @@ var bbbike = {
    },
 
    available_google_maps: [ "roadmap", "terrain", "satellite", "hybrid"],
-   available_custom_maps: [ "bing-map", "bing-hybrid", "bing-satellite", "yahoo-map", "yahoo-hybrid", "yahoo-satellite", "tah", "public-transport", "hike-bike", "mapnik-de", "mapnik", "cycle" ],
+   available_custom_maps: [ "bing-birdview", "bing-map", "bing-hybrid", "bing-satellite", "yahoo-map", "yahoo-hybrid", "yahoo-satellite", "tah", "public-transport", "hike-bike", "mapnik-de", "mapnik", "cycle" ],
 
    area: { 
 	visible: true,
@@ -443,7 +445,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
      	isPng: true,
      	opacity: 1.0,
      	tileSize: new google.maps.Size(256,256),
-     	name: "MICROSOFT-MAP",
+     	name: "BING-MAP",
      	minZoom:1,
      	maxZoom:17
     };
@@ -452,7 +454,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
      	isPng: false,
      	opacity: 1.0,
      	tileSize: new google.maps.Size(256,256),
-     	name: "MICROSOFT-MAP",
+     	name: "BING-MAP",
      	minZoom:1,
      	maxZoom:17
     };
@@ -461,7 +463,18 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
      	isPng: false,
      	opacity: 1.0,
      	tileSize: new google.maps.Size(256,256),
-     	name: "MICROSOFT-MAP",
+     	name: "BING-MAP",
+     	minZoom:1,
+     	maxZoom:17
+    };
+
+    // http://msdn.microsoft.com/en-us/library/bb259689.aspx
+    var bing_birdview_options = {
+    	getTileUrl : function (a,z) { return getTileUrlBing(a, z, "a"); },
+     	isPng: false,
+     	opacity: 1.0,
+     	tileSize: new google.maps.Size(256,256),
+     	name: "BING-BIRDVIEW",
      	minZoom:1,
      	maxZoom:17
     };
@@ -512,6 +525,11 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
         var BingSatelliteMapType = new google.maps.ImageMapType( bing_satellite_options );
     	map.mapTypes.set("bing-satellite", BingSatelliteMapType); 
     	custom_map( "bing-satellite", lang);
+    }
+    if (bbbike.mapType.BingBirdviewMapType) {
+        var BingBirdviewMapType = new google.maps.ImageMapType( bing_birdview_options );
+    	map.mapTypes.set("bing-birdview", BingBirdviewMapType); 
+    	custom_map( "bing-birdview", lang);
     }
     if (bbbike.mapType.YahooSatelliteMapType) {
         var YahooSatelliteMapType = new google.maps.ImageMapType( yahoo_satellite_options );
@@ -910,11 +928,11 @@ function add_panoramio_layer ( map, enable, flag ) {
 function translate_mapcontrol ( word, lang ) {
   var l = {
    // master language, fallback for all
-   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle", "tah":"Tile@Home", "hike-bike":"Hike&amp;Bike", "public-transport":"Public Transport", "mapnik-de":"Mapnik (de)", "yahoo-map":"Yahoo", "yahoo-hybrid":"Yahoo (hybrid)", "yahoo-satellite":"Yahoo (Sat)", "bing-map":"Bing", "bing-satellite":"Bing (Sat)", "bing-hybrid":"Bing (Hybrid)" },
+   "en" : { "mapnik" : "Mapnik", "cycle" : "Cycle", "tah":"Tile@Home", "hike-bike":"Hike&amp;Bike", "public-transport":"Public Transport", "mapnik-de":"Mapnik (de)", "yahoo-map":"Yahoo", "yahoo-hybrid":"Yahoo (hybrid)", "yahoo-satellite":"Yahoo (Sat)", "bing-map":"Bing", "bing-satellite":"Bing (Sat)", "bing-hybrid":"Bing (Hybrid)", "bing-birdview":"Bing (Birdview)" },
 
    // rest
    "da" : { "cycle" : "Cykel" },
-   "de" : { "mapnik" : "Mapnik", "cycle" : "Fahrrad", "traffic layer": "Google Verkehr", "Panoramio": "Panoramio Fotos", "cycle layer": "Google Fahrrad", "hike-bike":"Wandern", "public-transport":"ÖPNV", 'Show map':"Zeige Karte" },
+   "de" : { "mapnik" : "Mapnik", "cycle" : "Fahrrad", "traffic layer": "Google Verkehr", "Panoramio": "Panoramio Fotos", "cycle layer": "Google Fahrrad", "hike-bike":"Wandern", "public-transport":"ÖPNV", 'Show map':"Zeige Karte", "bing-birdview":"Bing (Vogel)" },
    "es" : { "cycle" : "Bicicletas" },
    "fr" : { "cycle" : "Vélo" },
    "hr" : { "cycle" : "Bicikl" },
