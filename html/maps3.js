@@ -1096,8 +1096,9 @@ function LayerControl(controlDiv, map, opt) {
 
   layerControl.layer = enabled;
 
+  // grey (off) <-> green (on)
   function toogleColor (toogle) {
-     controlUI.style.color = toogle ? '#cdc9c9' : '#228b22';
+     controlUI.style.color = toogle ? '#888888' : '#228b22';
   }
   toogleColor(!layerControl.layer);
 
