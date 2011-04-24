@@ -56,8 +56,8 @@ var bbbike = {
    controls: { 
 	zoomControl: true, 
 	scaleControl: true,
-	overviewMapControl: false, // http://code.google.com/p/gmaps-api-issues/issues/detail?id=3167
-	panControl: true
+	overviewMapControl: false, // bug http://code.google.com/p/gmaps-api-issues/issues/detail?id=3167
+	panControl: false
    },
 
    available_google_maps: [ "roadmap", "terrain", "satellite", "hybrid"],
@@ -171,6 +171,8 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
 	   scaleControl: bbbike.controls.scaleControl,
 	   panControl: bbbike.controls.panControl,
 	   mapTypeControlOptions: { mapTypeIds: bbbike.mapTypeControlOptions.mapTypeIds },
+	   zoomControlOptions: { style: google.maps.ZoomControlStyle.SMALL },
+	   panControlOptions: { position: google.maps.ControlPosition.LEFT_TOP },
 	   overviewMapControl: bbbike.controls.overviewMapControl
 	} );
 
