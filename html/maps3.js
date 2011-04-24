@@ -30,6 +30,17 @@ var bbbike = {
 	BingSatelliteMapType: true
     },
 
+    mapPosition: {
+	"default": "TOP_RIGHT",
+	"tah": "BOTTOM_RIGHT",
+	"bing-map": "BOTTOM_RIGHT",
+	"bing-hybrid": "BOTTOM_RIGHT",
+	"bing-satellite": "BOTTOM_RIGHT",
+	"yahoo-map": "BOTTOM_RIGHT",
+	"yahoo-hybrid": "BOTTOM_RIGHT",
+	"yahoo-satellite": "BOTTOM_RIGHT"
+    },
+
     // optinal layers in google maps or all maps
     mapLayers: {
 	TrafficLayer: false,
@@ -467,12 +478,6 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
     	custom_map( "mapnik-de", lang);
     }
 
-    if (bbbike.mapType.TahMapType) {
-        var TahMapType = new google.maps.ImageMapType( tah_options );
-        map.mapTypes.set("tah", TahMapType); 
-    	custom_map( "tah", lang);
-    }
-
     if (bbbike.mapType.CycleMapType) {
         var CycleMapType = new google.maps.ImageMapType( cycle_options );
         map.mapTypes.set("cycle", CycleMapType); 
@@ -525,6 +530,11 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
     	custom_map( "yahoo-hybrid", lang);
     }
 
+    if (bbbike.mapType.TahMapType) {
+        var TahMapType = new google.maps.ImageMapType( tah_options );
+        map.mapTypes.set("tah", TahMapType); 
+    	custom_map( "tah", lang);
+    }
 
     if (!is_supported_map (maptype)) {
 	maptype = bbbike.mapDefault;
@@ -1103,8 +1113,13 @@ function custom_map ( maptype, lang ) {
   var homeControlDiv = document.createElement('DIV');
   var homeControl = new HomeControl(homeControlDiv, map, maptype, lang);
 
+  var position = bbbike.mapPosition["default"];
+  if (bbbike.mapPosition[maptype]) {
+      position = bbbike.mapPosition[maptype];
+  }
+
   homeControlDiv.index = 1;
-  map.controls[google.maps.ControlPosition.TOP_RIGHT].push(homeControlDiv);
+  map.controls[google.maps.ControlPosition[position]].push(homeControlDiv);
 }
 
 function custom_layer ( map, opt) { 
