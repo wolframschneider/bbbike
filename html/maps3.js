@@ -946,7 +946,7 @@ function translate_mapcontrol ( word, lang ) {
  */
 
 var currentText = [];
-function HomeControl(controlDiv, map, maptype, lang) {
+function HomeControl(controlDiv, map, maptype, lang, opt) {
 
   // Set CSS styles for the DIV containing the control
   // Setting padding to 5 px will offset the control
@@ -1109,9 +1109,9 @@ function LayerControl(controlDiv, map, opt) {
 
 }
 
-function custom_map ( maptype, lang ) {
+function custom_map ( maptype, lang, opt ) {
   var homeControlDiv = document.createElement('DIV');
-  var homeControl = new HomeControl(homeControlDiv, map, maptype, lang);
+  var homeControl = new HomeControl(homeControlDiv, map, maptype, lang, opt);
 
   var position = bbbike.mapPosition["default"];
   if (bbbike.mapPosition[maptype]) {
