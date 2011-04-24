@@ -580,7 +580,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
 			"callback": add_traffic_layer, 
 			"lang": lang });
 
-    hideGoogleLayers(maptype);
+    setTimeout( function () { hideGoogleLayers(maptype) }, 2000 );
 
     // map changed
     google.maps.event.addListener(map, "maptypeid_changed",
