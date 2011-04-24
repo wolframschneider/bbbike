@@ -10,7 +10,11 @@ var delay = 400; // delay until we render the map
 // bbbike options
 var bbbike = {
     // map type by google
-    mapTypeControlOptions: { mapTypeIds: [ google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE ] },
+    mapTypeControlOptions: { mapTypeIds: [ google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.HYBRID ] },
+
+    // enable Google Arial View: 45 Imagery
+    // http://en.wikipedia.org/wiki/Google_Maps#Google_Aerial_View
+    mapImagery45: 45,
 
     // map type by OpenStreetMap & other
     mapType: {
@@ -580,7 +584,12 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
 			"callback": add_traffic_layer, 
 			"lang": lang });
 
-    setTimeout( function () { hideGoogleLayers(maptype) }, 2000 );
+    setTimeout( function () { hideGoogleLayers(maptype) }, 5000 );
+
+    // enable Google Arial View
+    if (bbbike.mapImagery45 > 0) {
+	map.setTilt(bbbike.mapImagery45);	
+    }
 
     // map changed
     google.maps.event.addListener(map, "maptypeid_changed",
