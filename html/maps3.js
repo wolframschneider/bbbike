@@ -498,6 +498,8 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
     // http://ecn.t2.tiles.virtualearth.net/tiles/h120022.jpeg?g=681&mkt=en-gb&n=z
     // http://ecn.t0.tiles.virtualearth.net/tiles/cmd/ObliqueHybrid?a=12021023322-256-19-18&g=681
     //
+    // http://rbrundritt.wordpress.com/2009/01/08/birds-eye-imagery-extraction-via-the-virtual-earth-web-services-part-2/
+    //
     // map type: "r" (roadmap), "h" (hybrid", "a" (arial)
     function getTileUrlBingBirdview(a, z, type, lang) {
 	var url;
