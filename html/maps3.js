@@ -496,15 +496,26 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
     // 
     // Bird view:
     // http://ecn.t2.tiles.virtualearth.net/tiles/h120022.jpeg?g=681&mkt=en-gb&n=z
+    // http://ecn.t0.tiles.virtualearth.net/tiles/cmd/ObliqueHybrid?a=12021023322-256-19-18&g=681
     //
     // map type: "r" (roadmap), "h" (hybrid", "a" (arial)
     function getTileUrlBingBirdview(a, z, type, lang) {
-	var url = "http://ecn.t" + randomServer(4) + ".tiles.virtualearth.net/tiles/" + type +  getQuadKey(a, z);
+	var url;
 
-	if (type == "r") {
-           url += "?g=681&mkt=" + lang + "&lbl=l1&stl=h&shading=hill&n=z";
-	} else if (type == "h" || type == "a") {
-           url += ".jpeg?g=681&mkt=" + lang + "&n=z";
+	// low resolution, hybrid like map
+	if (z <= 17 ) {
+	   url  = "http://ecn.t" + randomServer(4) + ".tiles.virtualearth.net/tiles/" + type +  getQuadKey(a, z);
+
+	   if (type == "r") {
+           	url += "?g=681&mkt=" + lang + "&lbl=l1&stl=h&shading=hill&n=z";
+	   } else if (type == "h" || type == "a") {
+               url += ".jpeg?g=681&mkt=" + lang + "&n=z";
+           }
+
+	// Bird view
+	} else {
+	   url = "http://ecn.t" + randomServer(4) + ".tiles.virtualearth.net/tiles/cmd/ObliqueHybrid?" + type + "=" + getQuadKey(a, z);
+	   url += "-256-19-18" + "&g=681";
         }
 
         return url;
@@ -539,7 +550,7 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
      	tileSize: new google.maps.Size(256,256),
      	name: "BING-BIRDVIEW",
      	minZoom:1,
-     	maxZoom:17
+     	maxZoom:23
     };
 
     if (bbbike.mapType.MapnikMapType) {
