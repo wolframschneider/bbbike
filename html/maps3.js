@@ -155,8 +155,6 @@ function is_supported_maptype (maptype, list) {
 }
 
 function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
-
-
     var routeLinkLabel = "Link to route: ";
     var routeLabel = "Route: ";
     var commonSearchParams = "&pref_seen=1&pref_speed=20&pref_cat=&pref_quality=&pref_green=&scope=;output_as=xml;referer=bbbikegooglemap";
@@ -500,35 +498,35 @@ function bbbike_maps_init (maptype, marker_list, lang, without_area, region) {
 
 
     if (bbbike.mapType.BingMapMapType) {
-        var maptype = new google.maps.ImageMapType( bing_map_options );
-    	map.mapTypes.set("bing-map", maptype); 
+        var BingMapMapType = new google.maps.ImageMapType( bing_map_options );
+    	map.mapTypes.set("bing-map", BingMapMapType); 
     	custom_map( "bing-map", lang);
     }
     if (bbbike.mapType.YahooMapMapType) {
-        var maptype = new google.maps.ImageMapType( yahoo_map_options );
-    	map.mapTypes.set("yahoo-map", maptype); 
+        var YahooMapMapType = new google.maps.ImageMapType( yahoo_map_options );
+    	map.mapTypes.set("yahoo-map", YahooMapMapType); 
     	custom_map( "yahoo-map", lang);
     }
 
     if (bbbike.mapType.BingSatelliteMapType) {
-        var maptype = new google.maps.ImageMapType( bing_satellite_options );
-    	map.mapTypes.set("bing-satellite", maptype); 
+        var BingSatelliteMapType = new google.maps.ImageMapType( bing_satellite_options );
+    	map.mapTypes.set("bing-satellite", BingSatelliteMapType); 
     	custom_map( "bing-satellite", lang);
     }
     if (bbbike.mapType.YahooSatelliteMapType) {
-        var maptype = new google.maps.ImageMapType( yahoo_satellite_options );
-    	map.mapTypes.set("yahoo-satellite", maptype); 
+        var YahooSatelliteMapType = new google.maps.ImageMapType( yahoo_satellite_options );
+    	map.mapTypes.set("yahoo-satellite", YahooSatelliteMapType); 
     	custom_map( "yahoo-satellite", lang);
     }
 
     if (bbbike.mapType.BingHybridMapType) {
-        var maptype = new google.maps.ImageMapType( bing_hybrid_options );
-    	map.mapTypes.set("bing-hybrid", maptype); 
+        var BingHybridMapType = new google.maps.ImageMapType( bing_hybrid_options );
+    	map.mapTypes.set("bing-hybrid", BingHybridMapType); 
     	custom_map( "bing-hybrid", lang);
     }
     if (bbbike.mapType.YahooHybridMapType) {
-        var maptype = new google.maps.ImageMapType( yahoo_hybrid_options );
-    	map.mapTypes.set("yahoo-hybrid", maptype); 
+        var YahooHybridMapType = new google.maps.ImageMapType( yahoo_hybrid_options );
+    	map.mapTypes.set("yahoo-hybrid", YahooHybridMapType); 
     	custom_map( "yahoo-hybrid", lang);
     }
 
