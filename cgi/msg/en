@@ -243,5 +243,6 @@ return {
     "Kreuzung"                                               => "corner",
     "Route"                                                  => "route",
     "Strassennamen"                                          => "street names",
+    "Was gibt es Neues auf BBBike.org" => "What's new on BBBike.org",
 };
 

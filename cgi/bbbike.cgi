@@ -113,7 +113,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $with_green_ways
             $no_teaser $no_teaser_right $teaser_bottom
             $slippymap_zoom $slippymap_zoom_maponly $slippymap_zoom_city
-	    $enable_opensearch_plugin $enable_rss_feed
+	    $enable_opensearch_plugin 
 	    $nice_abc_list
 	    $warn_message $use_utf8 $data_is_wgs84
 	    $enable_homemap_streets
@@ -123,6 +123,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_weather_forecast
 	    $enable_facebook_t_link
 	    $enable_twitter_t_link
+	    $enable_rss_feed $enable_rss_icon
 	    $gmapsv3
 	    $facebook_page
 	    $enable_google_adsense
@@ -7596,6 +7597,11 @@ if ($osm_data) {
     $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
 }
 
+my $rss_icon = "";
+$rss_icon = qq{<a href="/feed/bbbike-world.xml"><img class="logo" width="14" height="14" title="}
+	    .  M('Was gibt es Neues auf BBBike.org') 
+	    . qq{" src="/images/rss-icon.png" /></a>} if $enable_rss_icon;
+
 my $s_copyright = <<EOF;
 
 <div id="footer">
@@ -7615,10 +7621,11 @@ $list_of_all_streets |
 (&copy;) 1998-2011 <a href="http://CycleRoutePlanner.org">CycleRoutePlanner.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
 <div id="footer_community">
-  <a href="$community_link"><img height="19" width="64" src="/images/donate.png" alt="Flattr this" title="Donate to bbbike.org" border="0"></a>
-  <a href="$community_link"><img src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
-  <a href="$community_link"><img style="border:0px;" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
+  <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="Donate to bbbike.org" border="0"></a>
+  <a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
+  <a href="$community_link"><img class="logo" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
   <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>
+  $rss_icon
 </div>
 </div>
 
