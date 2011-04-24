@@ -914,7 +914,7 @@ function translate_mapcontrol ( word, lang ) {
 
    // rest
    "da" : { "cycle" : "Cykel" },
-   "de" : { "mapnik" : "Mapnik", "cycle" : "Fahrrad", "traffic layer": "Google Verkehr", "Panoramio": "Panoramio Fotos", "cycle layer": "Google Fahrrad", "hike-bike":"Wandern", "public-transport":"ÖPNV" },
+   "de" : { "mapnik" : "Mapnik", "cycle" : "Fahrrad", "traffic layer": "Google Verkehr", "Panoramio": "Panoramio Fotos", "cycle layer": "Google Fahrrad", "hike-bike":"Wandern", "public-transport":"ÖPNV", 'Show map':"Zeige Karte" },
    "es" : { "cycle" : "Bicicletas" },
    "fr" : { "cycle" : "Vélo" },
    "hr" : { "cycle" : "Bicikl" },
@@ -964,7 +964,7 @@ function HomeControl(controlDiv, map, maptype, lang) {
   controlUI.style.borderWidth = '0px';
   controlUI.style.cursor = 'pointer';
   controlUI.style.textAlign = 'center';
-  controlUI.title = 'Click to set the map to Home';
+  controlUI.title = translate_mapcontrol('Show map', lang) + " " + translate_mapcontrol(maptype, lang);
 
   controlDiv.appendChild(controlUI);
 
