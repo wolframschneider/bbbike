@@ -132,6 +132,9 @@ jsbeautifier js:
 	   jsbeautifier -j $$i > $@.tmp && mv -f $@.tmp $$i; \
 	done
 
+distclean:
+	rm -f *.bak
+
 help:
-	@echo "make [ jsbeautifier | html ]"
+	@echo "make [ jsbeautifier | html | distclean ]"
 

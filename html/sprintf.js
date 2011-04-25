@@ -1,3 +1,5 @@
+/* depricated JavaScript file */
+
 // From http://jan.moesen.nu/
 // Found at http://jan.moesen.nu/code/javascript/sprintf-and-printf-in-javascript/
 // Fixes by Slaven Rezic

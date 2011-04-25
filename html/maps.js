@@ -1,3 +1,5 @@
+/* depricated JavaScript file */
+
 var city = "";
 
 function homemap_street(event) {

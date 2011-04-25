@@ -1,3 +1,5 @@
+/* depricated JavaScript file */
+
 /*
  Google Maps API v3 is required!
 
