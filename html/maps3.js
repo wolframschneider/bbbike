@@ -42,13 +42,13 @@ var bbbike = {
     mapPosition: {
         "default": "TOP_RIGHT",
         "tah": "BOTTOM_RIGHT",
-        "bing-map": "BOTTOM_RIGHT",
-        "bing-hybrid": "BOTTOM_RIGHT",
-        "bing-satellite": "BOTTOM_RIGHT",
-        "bing-birdview": "BOTTOM_RIGHT",
-        "yahoo-map": "BOTTOM_RIGHT",
-        "yahoo-hybrid": "BOTTOM_RIGHT",
-        "yahoo-satellite": "BOTTOM_RIGHT"
+        "bing_map": "BOTTOM_RIGHT",
+        "bing_hybrid": "BOTTOM_RIGHT",
+        "bing_satellite": "BOTTOM_RIGHT",
+        "bing_birdview": "BOTTOM_RIGHT",
+        "yahoo_map": "BOTTOM_RIGHT",
+        "yahoo_hybrid": "BOTTOM_RIGHT",
+        "yahoo_satellite": "BOTTOM_RIGHT"
     },
 
     // optinal layers in google maps or all maps
@@ -71,7 +71,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing-birdview", "bing-map", "bing-hybrid", "bing-satellite", "yahoo-map", "yahoo-hybrid", "yahoo-satellite", "tah", "public-transport", "hike-bike", "mapnik-de", "mapnik", "cycle"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public-transport", "hike-bike", "mapnik-de", "mapnik", "cycle"],
 
     area: {
         visible: true,
@@ -621,40 +621,40 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
 
     if (bbbike.mapType.BingMapMapType) {
         var BingMapMapType = new google.maps.ImageMapType(bing_map_options);
-        map.mapTypes.set("bing-map", BingMapMapType);
-        custom_map("bing-map", lang);
+        map.mapTypes.set("bing_map", BingMapMapType);
+        custom_map("bing_map", lang);
     }
     if (bbbike.mapType.YahooMapMapType) {
         var YahooMapMapType = new google.maps.ImageMapType(yahoo_map_options);
-        map.mapTypes.set("yahoo-map", YahooMapMapType);
-        custom_map("yahoo-map", lang);
+        map.mapTypes.set("yahoo_map", YahooMapMapType);
+        custom_map("yahoo_map", lang);
     }
 
     if (bbbike.mapType.BingSatelliteMapType) {
         var BingSatelliteMapType = new google.maps.ImageMapType(bing_satellite_options);
-        map.mapTypes.set("bing-satellite", BingSatelliteMapType);
-        custom_map("bing-satellite", lang);
+        map.mapTypes.set("bing_satellite", BingSatelliteMapType);
+        custom_map("bing_satellite", lang);
     }
     if (bbbike.mapType.BingBirdviewMapType) {
         var BingBirdviewMapType = new google.maps.ImageMapType(bing_birdview_options);
-        map.mapTypes.set("bing-birdview", BingBirdviewMapType);
-        custom_map("bing-birdview", lang);
+        map.mapTypes.set("bing_birdview", BingBirdviewMapType);
+        custom_map("bing_birdview", lang);
     }
     if (bbbike.mapType.YahooSatelliteMapType) {
         var YahooSatelliteMapType = new google.maps.ImageMapType(yahoo_satellite_options);
-        map.mapTypes.set("yahoo-satellite", YahooSatelliteMapType);
-        custom_map("yahoo-satellite", lang);
+        map.mapTypes.set("yahoo_satellite", YahooSatelliteMapType);
+        custom_map("yahoo_satellite", lang);
     }
 
     if (bbbike.mapType.BingHybridMapType) {
         var BingHybridMapType = new google.maps.ImageMapType(bing_hybrid_options);
-        map.mapTypes.set("bing-hybrid", BingHybridMapType);
-        custom_map("bing-hybrid", lang);
+        map.mapTypes.set("bing_hybrid", BingHybridMapType);
+        custom_map("bing_hybrid", lang);
     }
     if (bbbike.mapType.YahooHybridMapType) {
         var YahooHybridMapType = new google.maps.ImageMapType(yahoo_hybrid_options);
-        map.mapTypes.set("yahoo-hybrid", YahooHybridMapType);
-        custom_map("yahoo-hybrid", lang);
+        map.mapTypes.set("yahoo_hybrid", YahooHybridMapType);
+        custom_map("yahoo_hybrid", lang);
     }
 
     if (bbbike.mapType.TahMapType) {
@@ -1067,13 +1067,13 @@ function translate_mapcontrol(word, lang) {
             "hike-bike": "Hike&amp;Bike",
             "public-transport": "Public Transport",
             "mapnik-de": "Mapnik (de)",
-            "yahoo-map": "Yahoo",
-            "yahoo-hybrid": "Yahoo (hybrid)",
-            "yahoo-satellite": "Yahoo (Sat)",
-            "bing-map": "Bing",
-            "bing-satellite": "Bing (Sat)",
-            "bing-hybrid": "Bing (Hybrid)",
-            "bing-birdview": "Bing (Birdview)"
+            "yahoo_map": "Yahoo",
+            "yahoo_hybrid": "Yahoo (hybrid)",
+            "yahoo_satellite": "Yahoo (Sat)",
+            "bing_map": "Bing",
+            "bing_satellite": "Bing (Sat)",
+            "bing_hybrid": "Bing (Hybrid)",
+            "bing_birdview": "Bing (Birdview)"
         },
 
         // rest
@@ -1089,7 +1089,7 @@ function translate_mapcontrol(word, lang) {
             "hike-bike": "Wandern",
             "public-transport": "ÖPNV",
             'Show map': "Zeige Karte",
-            "bing-birdview": "Bing (Vogel)"
+            "bing_birdview": "Bing (Vogel)"
         },
         "es": {
             "cycle": "Bicicletas"
