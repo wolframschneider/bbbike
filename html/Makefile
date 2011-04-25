@@ -10,7 +10,9 @@ TPAGE=	tpage
 # XXX get from elsewhere
 CGIDIR?=../cgi
 
-all:	newstreetform.html newstreetform.utf8.html \
+all: help
+
+html:	newstreetform.html newstreetform.utf8.html \
 	fragezeichenform.html fragezeichenform.utf8.html \
 	bbbike_small \
 	bbbike-opensearch \
@@ -113,4 +115,10 @@ opensearch/bbbike-opensearch-en-simple.gif:
 
 opensearch/bbbike-opensearch-en.gif:
 	cd opensearch && ln -s ../../images/srtbike16.gif bbbike-opensearch-en.gif
+
+jsbeautifier:
+	jsbeautifier -j maps3.js > $@.tmp && mv -f $@.tmp maps3.js
+
+help:
+	@echo "make [ jsbeautifier | html ]"
 
