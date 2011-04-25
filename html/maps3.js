@@ -54,9 +54,9 @@ var bbbike = {
 
     // optinal layers in google maps or all maps
     mapLayers: {
-        TrafficLayer: false,
-        BicyclingLayer: false,
-        PanoramioLayer: false
+        TrafficLayer: true,
+        BicyclingLayer: true,
+        PanoramioLayer: true
     },
 
     // default map
@@ -718,9 +718,11 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     // google maps layers
     init_layers();
+
     custom_layer(map, {
         "layer": "PanoramioLayer",
         "enabled": bbbike.mapLayers.PanoramioLayer,
+        "active": false,
         "callback": add_panoramio_layer,
         "lang": lang
     });
@@ -728,6 +730,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "BicyclingLayer",
         "enabled": bbbike.mapLayers.BicyclingLayer,
+        "active": false,
         "callback": add_bicycle_layer,
         "lang": lang
     });
@@ -735,6 +738,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "TrafficLayer",
         "enabled": bbbike.mapLayers.TrafficLayer,
+        "active": false,
         "callback": add_traffic_layer,
         "lang": lang
     });
@@ -1274,7 +1278,7 @@ var layerControl = {
 
 function LayerControl(controlDiv, map, opt) {
     var layer = opt.layer;
-    var enabled = opt.enabled;
+    var enabled = opt.active;
     var callback = opt.callback;
     var lang = opt.lang;
 
@@ -1359,6 +1363,9 @@ function custom_map(maptype, lang, opt) {
 }
 
 function custom_layer(map, opt) {
+    if (!opt.enabled) 
+	return;
+
     var layerControlDiv = document.createElement('DIV');
     var layerControl = new LayerControl(layerControlDiv, map, opt);
 
