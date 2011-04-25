@@ -36,7 +36,7 @@ var bbbike = {
         BingMapMapType: true,
         BingHybridMapType: true,
         BingSatelliteMapType: true,
-        BingBirdviewMapType: false
+        BingBirdviewMapType: true
     },
 
     mapPosition: {
@@ -533,7 +533,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
             url += "-256-19-18" + "&g=681";
         }
 
-        return url;
+        return url + "&zoom=" + z;
     }
 
     // Converts tile XY coordinates into a QuadKey at a specified level of detail.
@@ -541,6 +541,13 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
 
     function getQuadKey(a, z) {
         var quadKey = "";
+
+	// bing quadKey does work only up to level of 17
+	// http://rbrundritt.wordpress.com/2009/01/08/birds-eye-imagery-extraction-via-the-virtual-earth-web-services-part-1/
+        var zReal = z;
+        if (z > 17)
+	   z = 17;
+
         for (var i = z; i > 0; i--) {
             var digit = '0';
             var mask = 1 << (i - 1);
