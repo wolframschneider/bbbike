@@ -35,7 +35,7 @@ var bbbike = {
 
         BingMapMapType: true,
         BingHybridMapType: true,
-        BingSatelliteMapType: true,
+        BingSatelliteMapType: false, // old
         BingBirdviewMapType: true
     },
 
@@ -1118,7 +1118,7 @@ function translate_mapcontrol(word, lang) {
             "bing_map_old": "Bing (old)",
             "bing_satellite": "Bing (Sat)",
             "bing_hybrid": "Bing (Hybrid)",
-            "bing_birdview": "Bing (Birdview)"
+            "bing_birdview": "Bing (Sat/Birdview)"
         },
 
         // rest
@@ -1134,7 +1134,7 @@ function translate_mapcontrol(word, lang) {
             "hike_bike": "Wandern",
             "public_transport": "ÖPNV",
             'Show map': "Zeige Karte",
-            "bing_birdview": "Bing (Vogel)"
+            "bing_birdview": "Bing (Sat/Vogel)"
         },
         "es": {
             "cycle": "Bicicletas"
