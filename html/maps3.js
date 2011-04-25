@@ -76,7 +76,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public-transport", "hike-bike", "mapnik-de", "mapnik", "cycle"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public-transport", "hike_bike", "mapnik_de", "mapnik", "cycle"],
 
     area: {
         visible: true,
@@ -590,11 +590,11 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
                 custom_map("mapnik", lang);
             }
         },
-        "mapnik-de": function () {
+        "mapnik_de": function () {
             if (bbbike.mapType.MapnikDeMapType && is_european(region)) {
                 var MapnikDeMapType = new google.maps.ImageMapType(mapnik_de_options);
-                map.mapTypes.set("mapnik-de", MapnikDeMapType);
-                custom_map("mapnik-de", lang);
+                map.mapTypes.set("mapnik_de", MapnikDeMapType);
+                custom_map("mapnik_de", lang);
             }
         },
         "cycle": function () {
@@ -608,13 +608,13 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
     };
 
     mapControls.mapnik();
-    mapControls["mapnik-de"]();
+    mapControls.mapnik_de();
     mapControls.cycle();
 
     if (bbbike.mapType.HikeBikeMapType) {
         var HikeBikeMapType = new google.maps.ImageMapType(hike_bike_options);
-        map.mapTypes.set("hike-bike", HikeBikeMapType);
-        custom_map("hike-bike", lang);
+        map.mapTypes.set("hike_bike", HikeBikeMapType);
+        custom_map("hike_bike", lang);
     }
 
     if (bbbike.mapType.PublicTransportMapType && is_european(region)) {
@@ -1069,9 +1069,9 @@ function translate_mapcontrol(word, lang) {
             "mapnik": "Mapnik",
             "cycle": "Cycle",
             "tah": "Tile@Home",
-            "hike-bike": "Hike&amp;Bike",
+            "hike_bike": "Hike&amp;Bike",
             "public-transport": "Public Transport",
-            "mapnik-de": "Mapnik (de)",
+            "mapnik_de": "Mapnik (de)",
             "yahoo_map": "Yahoo",
             "yahoo_hybrid": "Yahoo (hybrid)",
             "yahoo_satellite": "Yahoo (Sat)",
@@ -1091,7 +1091,7 @@ function translate_mapcontrol(word, lang) {
             "traffic layer": "Google Verkehr",
             "Panoramio": "Panoramio Fotos",
             "cycle layer": "Google Fahrrad",
-            "hike-bike": "Wandern",
+            "hike_bike": "Wandern",
             "public-transport": "ÖPNV",
             'Show map': "Zeige Karte",
             "bing_birdview": "Bing (Vogel)"
