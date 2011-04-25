@@ -146,7 +146,6 @@ function homemap_street_timer(event, time) {
 
 // test for all google + custom maps
 
-
 function is_supported_map(maptype) {
     if (is_supported_maptype(maptype, bbbike.available_google_maps) || is_supported_maptype(maptype, bbbike.available_custom_maps)) {
         return 1;
@@ -496,7 +495,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
     // list = ["a", "b"]; 
     //  list = 4;
 
-
     function randomServer(list) {
         var server = "";
 
@@ -522,7 +520,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
     //
     // map type: "r" (roadmap), "h" (hybrid", "a" (arial)
 
-
     function getTileUrlBingBirdview(a, z, type, lang) {
         var url;
 
@@ -547,7 +544,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
 
     // Converts tile XY coordinates into a QuadKey at a specified level of detail.
     // http://msdn.microsoft.com/en-us/library/bb259689.aspx
-
 
     function getQuadKey(a, z) {
         var quadKey = "";
@@ -725,7 +721,6 @@ function init_layers() {
 
 // add bicycle routes and lanes to map, by google maps
 
-
 function add_bicycle_layer(map, enable) {
     if (!layers.bicyclingLayer) return;
 
@@ -738,7 +733,6 @@ function add_bicycle_layer(map, enable) {
 
 // add traffic to map, by google maps
 
-
 function add_traffic_layer(map, enable) {
     if (!layers.trafficLayer) return;
 
@@ -749,7 +743,6 @@ function add_traffic_layer(map, enable) {
     }
 }
 // add traffic to map, by google maps
-
 
 function add_panoramio_layer(map, enable, flag) {
     // ignore if nothing to display
@@ -824,7 +817,6 @@ function getStreet(map, city, street, strokeColor) {
     };
 
     // plot street(s) on map
-
 
     function plotStreet(data) {
         var js = eval(data);
@@ -1063,9 +1055,7 @@ function plotRoute(map, opt, street) {
 }
 
 // bbbike_maps_init("default", [[48.0500000,7.3100000],[48.1300000,7.4100000]] );
-
 // localized custom map names
-
 
 function translate_mapcontrol(word, lang) {
     var l = {
@@ -1192,7 +1182,6 @@ function HomeControl(controlDiv, map, maptype, lang, opt) {
 
 // de-select all custom maps and optional set a map to bold
 
-
 function setCustomBold(maptype) {
     if (!currentText) return;
 
@@ -1213,7 +1202,6 @@ function setCustomBold(maptype) {
 
 
 // hide google layers on non-google custom maps
-
 
 function hideGoogleLayers(maptype) {
     var value = is_supported_maptype(maptype, bbbike.available_custom_maps) ? "hidden" : "visible";
@@ -1281,7 +1269,6 @@ function LayerControl(controlDiv, map, opt) {
     layerControl.layer = enabled;
 
     // grey (off) <-> green (on)
-
 
     function toogleColor(toogle) {
         controlUI.style.color = toogle ? '#888888' : '#228b22';
