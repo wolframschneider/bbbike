@@ -127,9 +127,9 @@ BBBIKE_WORLD_JAVASCRIPT_FILES=\
 
 JAVASCRIPT_FILES= ${BBBIKE_WORLD_JAVASCRIPT_FILES}
 
-jsbeautifier:
-	@for i in ${BBBIKE_WORLD_JAVASCRIPT_FILES}; do \
-	   echo "jsbeautifier -j $$i > $@.tmp && mv -f $@.tmp $$i"; \
+jsbeautifier js:
+	for i in ${BBBIKE_WORLD_JAVASCRIPT_FILES}; do \
+	   jsbeautifier -j $$i > $@.tmp && mv -f $@.tmp $$i; \
 	done
 
 help:
