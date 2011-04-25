@@ -4274,10 +4274,14 @@ sub cgi_utf8 {
 
     my $qq =  CGI->new($q);
     return $qq if !$utf8_flag;
-  
+ 
     foreach my $param ($qq->param() ) {
-	my $string = Encode::decode( utf8 => $qq->param($param));
-	$qq->param($param, $string);
+	my $string = $qq->param($param);
+
+	if (!Encode::is_utf8( $string)) {
+	   $string = Encode::decode( utf8 => $qq->param($param), Encode::FB_QUIET );
+	   $qq->param($param, $string);
+	}
     }
 
     return $qq;
@@ -7941,7 +7945,8 @@ function oS (tag) { // openStreet
     if (window.history) {
 	open("$bbbike_url" + "?" + 
 	"startname=" + 
-	e(tag.innerHTML));
+	e(tag.innerHTML),
+	"$city_script" );
     }
 };
 </script>
