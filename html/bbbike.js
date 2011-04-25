@@ -284,5 +284,4 @@ function show_spinning_wheel() {
 
 // unknown google maps bug
 // Af[z] is undefined
-
 // EOF

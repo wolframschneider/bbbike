@@ -1363,8 +1363,7 @@ function custom_map(maptype, lang, opt) {
 }
 
 function custom_layer(map, opt) {
-    if (!opt.enabled) 
-	return;
+    if (!opt.enabled) return;
 
     var layerControlDiv = document.createElement('DIV');
     var layerControl = new LayerControl(layerControlDiv, map, opt);
@@ -1448,7 +1447,6 @@ function displayCurrentPosition(area) {
 }
 
 // elevation.js
-
 /*
 <script type="text/javascript" src="http://www.google.com/jsapi"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
