@@ -2167,7 +2167,7 @@ EOF
         }
 	print qq{</span>\n};
 
-         print "<p>\n", M("Willkommen bei BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
+         print "<p>\n", M("Willkommen beim Radroutenplaner BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
 	    " <i title='$city'>$local_city_name</i> ",  
 	    M("und Umgebung zu finden."), "<br></p>\n";
 
@@ -7917,7 +7917,7 @@ sub choose_all_form {
     my $last = "";
     my $last_initial = "";
 
-    print "<p>\n", M("Willkommen bei BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
+    print "<p>\n", M("Willkommen beim Radroutenplaner BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
 	    " <i title='$city'>$local_city_name</i> ",  
 	    M("und Umgebung zu finden."), "<br></p>\n";
     print qq{<p>\n}, M("Klicke auf eine Strasse, um die Routensuche zu starten"), qq{:</p>\n};
