@@ -7399,12 +7399,14 @@ sub header {
     if ($enable_opensearch_suggestions) {
 	    my $city = $osm_data && $datadir =~ m,data-osm/(.+), ? $1 : 'Berlin';
 
-	push(@$head, qq|<script src="/html/jquery-1.4.2.min.js" type="text/javascript"></script>\n|);
-	push(@$head, qq|<script src="/html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js" type="text/javascript"></script>\n|);
+	push(@$head, qq|<script type="text/javascript" src="/html/jquery-1.4.2.min.js"></script>|);
+	push(@$head, qq|<script type="text/javascript" src="/html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js"></script>|);
     }
-    #<link href="/html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css"> |);
 
-    push(@$head, qq|<script src="/html/bbbike.js" type="text/javascript"></script>\n|);
+    push(@$head, qq|<script type="text/javascript" src="/html/bbbike.js"></script>|);
+
+    # included in bbbike.css
+    #<link href="/html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css"> |);
 
     # google maps api v3
     # <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -7414,10 +7416,9 @@ sub header {
 
         # google maps API version
 	if ($gmap_api_version == 2) {
-	push(@$head, qq|
+	push(@$head, qq|\
 <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
-<script src="/html/maps.js" type="text/javascript"></script>
-|);
+<script src="/html/maps.js" type="text/javascript"></script>|);
         } else {
             my $my_lang = &my_lang($lang);
 	    my $sensor = is_mobile($q) ? 'true' : 'false';
@@ -7426,13 +7427,11 @@ sub header {
         # google maps v=3.3 
 	# Release Version (3.3) Reference (Feature-Stable)
 
-	push(@$head, qq|\
-<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>
+	push(@$head, qq|<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>
-<script src="/html/maps3.js" type="text/javascript"></script>
-<script src="/html/elevation.js" type="text/javascript"></script> 
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=panoramio&amp;sensor=$sensor"></script>
-|) if !is_mobile($q) || is_resultpage($q);
+<script type="text/javascript" src="/html/maps3.js"></script>
+<script type="text/javascript" src="/html/elevation.js"></script>|) if !is_mobile($q) || is_resultpage($q);
 	}
 
     }
