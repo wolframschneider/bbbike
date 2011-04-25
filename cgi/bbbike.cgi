@@ -2778,12 +2778,14 @@ if ($enable_homemap_streets) {
 
 print <<'EOF';
 <script type="text/javascript">
+  var delay = bbbike.streetPlotDelay;
+
   // remember URL
   $("div#streetmap2").text( $("iframe#iframemap").attr("src") );
 
-  $("input.ac_input").keyup( 	function(event) { homemap_street_timer(event, delay*2) } );
-  $("input.ac_input").click( 	function(event) { homemap_street_timer(event, delay) } );
-  $("div.autocomplete").mouseover(function(event) { homemap_street_timer(event, delay) } );
+  $("input.ac_input").keyup( 	   function(event) { homemap_street_timer(event, delay*2) } );
+  $("input.ac_input").click( 	   function(event) { homemap_street_timer(event, delay) } );
+  $("div.autocomplete").mouseover( function(event) { homemap_street_timer(event, delay) } );
 
 EOF
 

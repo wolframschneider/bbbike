@@ -3,11 +3,6 @@
 //
 var city = ""; // bbbike city
 var map; // main map object
-//
-var timeout = null;
-var delay = 400; // delay until we render the map
-/* 
-*/
 
 // bbbike options
 var bbbike = {
@@ -77,7 +72,13 @@ var bbbike = {
     area: {
         visible: true,
         greyout: true
-    }
+    },
+
+    // delay until we render streets on the map
+    streetPlotDelay: 400,
+
+    // street lookup events
+    _timeout: null
 };
 
 var layers = {};
@@ -136,10 +137,11 @@ function homemap_street(event) {
 
 function homemap_street_timer(event, time) {
     // cleanup older calls waiting in queue
-    if (timeout != null) {
-        clearTimeout(timeout);
+    if (bbbike._timeout != null) {
+        clearTimeout(bbbike._timeout);
     }
-    timeout = setTimeout(function () {
+
+    bbbike._timeout = setTimeout(function () {
         homemap_street(event);
     }, time);
 }
