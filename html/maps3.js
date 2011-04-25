@@ -581,7 +581,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         tileSize: new google.maps.Size(256, 256),
         name: "BING-BIRDVIEW",
         minZoom: 1,
-        maxZoom: 23
+        maxZoom: 18 // 23
     };
 
     var mapControls = {
@@ -1118,7 +1118,7 @@ function translate_mapcontrol(word, lang) {
             "bing_map_old": "Bing (old)",
             "bing_satellite": "Bing (Sat)",
             "bing_hybrid": "Bing (Hybrid)",
-            "bing_birdview": "Bing (Sat/Birdview)"
+            "bing_birdview": "Bing (Sat)" // Birdview
         },
 
         // rest
@@ -1134,7 +1134,7 @@ function translate_mapcontrol(word, lang) {
             "hike_bike": "Wandern",
             "public_transport": "ÖPNV",
             'Show map': "Zeige Karte",
-            "bing_birdview": "Bing (Sat/Vogel)"
+            "bing_birdview": "Bing (Sat)" // Vogel
         },
         "es": {
             "cycle": "Bicicletas"
