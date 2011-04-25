@@ -283,6 +283,7 @@ sub get_html {
     my $zielname     = Encode::decode( utf8 => $q->param('zielname') );
     my $driving_time = Encode::decode( utf8 => $q->param('driving_time') );
     my $route_length = Encode::decode( utf8 => $q->param('route_length') );
+    my $zoom_param   = $q->param('zoom_param');
 
     my $html = "";
 
@@ -324,7 +325,7 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     var marker_list = [ $route_list ];
 
     city = "$city";
-    bbbike_maps_init("default", $marker_list, "$lang", false, "$region" );
+    bbbike_maps_init("default", $marker_list, "$lang", false, "$region", "$zoom_param" );
 
 EOF
 
