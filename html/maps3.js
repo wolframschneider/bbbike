@@ -13,7 +13,12 @@ var delay = 400; // delay until we render the map
 var bbbike = {
     // map type by google
     mapTypeControlOptions: {
-        mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.HYBRID]
+        mapTypeIds: [ 
+		google.maps.MapTypeId.ROADMAP, 
+		google.maps.MapTypeId.SATELLITE, 
+		google.maps.MapTypeId.HYBRID, 
+		google.maps.MapTypeId.TERRAIN
+		]
     },
 
     // enable Google Arial View: 45 Imagery
