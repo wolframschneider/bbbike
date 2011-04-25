@@ -209,8 +209,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             bounds_padding.extend(new google.maps.LatLng(marker_list[0][0] + padding_x, marker_list[0][1] + padding_y));
             bounds_padding.extend(new google.maps.LatLng(marker_list[1][0] - padding_x, marker_list[1][1] - padding_y));
             if (!zoomParam) {
-		map.fitBounds(bounds_padding);
-	    }
+                map.fitBounds(bounds_padding);
+            }
         } else {
             map.fitBounds(bounds);
         }
@@ -219,11 +219,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         // no zoom level higher than 15
         map.setZoom(zoom < 16 ? zoom : 15);
 
-	// alert("zoom: " + zoom + " : " + map.getZoom() + " : " + zoomParam);
-
-	if (zoomParam && parseInt(zoomParam) > 0) {
-	    map.setZoom(parseInt(zoomParam));
-	}
+        // alert("zoom: " + zoom + " : " + map.getZoom() + " : " + zoomParam);
+        if (zoomParam && parseInt(zoomParam) > 0) {
+            map.setZoom(parseInt(zoomParam));
+        }
 
 /*
 	    // re-center after resize of map window
@@ -550,11 +549,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     function getQuadKey(a, z) {
         var quadKey = "";
 
-	// bing quadKey does work only up to level of 17
-	// http://rbrundritt.wordpress.com/2009/01/08/birds-eye-imagery-extraction-via-the-virtual-earth-web-services-part-1/
+        // bing quadKey does work only up to level of 17
+        // http://rbrundritt.wordpress.com/2009/01/08/birds-eye-imagery-extraction-via-the-virtual-earth-web-services-part-1/
         var zReal = z;
-        if (z > 17)
-	   z = 17;
+        if (z > 17) z = 17;
 
         for (var i = z; i > 0; i--) {
             var digit = '0';
