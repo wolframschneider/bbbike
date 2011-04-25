@@ -7457,8 +7457,8 @@ sub header {
 	     #-lang => 'de-DE',
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
-	     -meta=>{'keywords'=>'berlin fahrrad route bike karte suche cycling route routing routenplaner routenplanung fahrradroutenplaner radroutenplaner entfernungsrechner',
-		     'copyright'=>'(c) 1998-2011 Slaven Rezic',
+	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, cycle route planner, bicycle, cycling route routing',
+		     'copyright'=>'(c) 1998-2011 Slaven Rezic + Wolfram Schneider',
 		    },
 	     -author => $BBBike::EMAIL,
 	    );

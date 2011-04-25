@@ -3,7 +3,6 @@
 //
 var city = ""; // bbbike city
 var map; // main map object
-
 // bbbike options
 var bbbike = {
     // map type by google
