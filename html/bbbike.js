@@ -283,6 +283,6 @@ function show_spinning_wheel() {
 }
 
 // unknown google maps bug
-var z = 0;
+// Af[z] is undefined
 
 // EOF
