@@ -281,3 +281,8 @@ function show_spinning_wheel() {
     }
     return true;
 }
+
+// unknown google maps bug
+var z = 0;
+
+// EOF
