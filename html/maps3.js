@@ -35,7 +35,7 @@ var bbbike = {
 
         BingMapMapType: true,
         BingHybridMapType: true,
-        BingSatelliteMapType: false, // old
+        BingSatelliteMapType: false,
         BingBirdviewMapType: true
     },
 
