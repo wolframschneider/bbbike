@@ -120,9 +120,6 @@ opensearch/bbbike-opensearch-en.gif:
 #
 BBBIKE_WORLD_JAVASCRIPT_FILES=\
 	bbbike.js \
-	elevation.js \
-	elevation3.js \
-	maps.js \
 	maps3.js
 
 JAVASCRIPT_FILES= ${BBBIKE_WORLD_JAVASCRIPT_FILES}

@@ -1,3 +1,5 @@
+/* depricated JavaScript file */
+
 // $Id: bbbike_util.js,v 1.1 2007/08/28 20:25:44 eserte Exp $
 // (c) 2007 Slaven Rezic. All rights reserved.
 
