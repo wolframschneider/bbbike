@@ -116,8 +116,21 @@ opensearch/bbbike-opensearch-en-simple.gif:
 opensearch/bbbike-opensearch-en.gif:
 	cd opensearch && ln -s ../../images/srtbike16.gif bbbike-opensearch-en.gif
 
+######################################################################
+#
+BBBIKE_WORLD_JAVASCRIPT_FILES=\
+	bbbike.js \
+	elevation.js \
+	elevation3.js \
+	maps.js \
+	maps3.js
+
+JAVASCRIPT_FILES= ${BBBIKE_WORLD_JAVASCRIPT_FILES}
+
 jsbeautifier:
-	jsbeautifier -j maps3.js > $@.tmp && mv -f $@.tmp maps3.js
+	@for i in ${BBBIKE_WORLD_JAVASCRIPT_FILES}; do \
+	   echo "jsbeautifier -j $$i > $@.tmp && mv -f $@.tmp $$i"; \
+	done
 
 help:
 	@echo "make [ jsbeautifier | html ]"
