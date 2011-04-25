@@ -7447,6 +7447,7 @@ sub header {
     $args{-head} = $head if $head && @$head;
     $args{-style} = {-src => "$bbbike_html/bbbike.css" } if !$printmode;
 
+    my $enable_google_analytics_uacct = delete $args{'-google_analytics_uacct'};
     if (!$smallform) {
 
 	my $title2 = delete $args{-title2};	
@@ -7464,7 +7465,6 @@ sub header {
 	    print "<font face=\"$font\">";
 	}
 
-	my $enable_google_analytics_uacct = delete $args{'-google_analytics_uacct'};
 	if ($enable_google_analytics && is_production($q) && $enable_google_analytics_uacct) {
 	    print qq{<script type="text/javascript">\nwindow.google_analytics_uacct = "$google_analytics_uacct";\n</script>\n\n};
         }
