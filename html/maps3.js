@@ -165,7 +165,7 @@ function is_supported_maptype(maptype, list) {
     return 0;
 }
 
-function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
+function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam) {
     var routeLinkLabel = "Link to route: ";
     var routeLabel = "Route: ";
     var commonSearchParams = "&pref_seen=1&pref_speed=20&pref_cat=&pref_quality=&pref_green=&scope=;output_as=xml;referer=bbbikegooglemap";
@@ -208,7 +208,9 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
 
             bounds_padding.extend(new google.maps.LatLng(marker_list[0][0] + padding_x, marker_list[0][1] + padding_y));
             bounds_padding.extend(new google.maps.LatLng(marker_list[1][0] - padding_x, marker_list[1][1] - padding_y));
-            map.fitBounds(bounds_padding);
+            if (!zoomParam) {
+		map.fitBounds(bounds_padding);
+	    }
         } else {
             map.fitBounds(bounds);
         }
@@ -216,6 +218,12 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
 
         // no zoom level higher than 15
         map.setZoom(zoom < 16 ? zoom : 15);
+
+	// alert("zoom: " + zoom + " : " + map.getZoom() + " : " + zoomParam);
+
+	if (zoomParam && parseInt(zoomParam) > 0) {
+	    map.setZoom(parseInt(zoomParam));
+	}
 
 /*
 	    // re-center after resize of map window
