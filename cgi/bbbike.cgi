@@ -7431,7 +7431,7 @@ sub header {
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>
 <script src="/html/maps3.js" type="text/javascript"></script>
 <script src="/html/elevation.js" type="text/javascript"></script> 
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=panoramio&sensor=$sensor"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=panoramio&amp;sensor=$sensor"></script>
 |) if !is_mobile($q) || is_resultpage($q);
 	}
 
@@ -7602,9 +7602,9 @@ if ($osm_data) {
 }
 
 my $rss_icon = "";
-$rss_icon = qq{<a href="/feed/bbbike-world.xml"><img class="logo" width="14" height="14" title="}
+$rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="14" height="14" title="}
 	    .  M('Was gibt es Neues auf BBBike.org') 
-	    . qq{" src="/images/rss-icon.png" /></a>} if $enable_rss_icon;
+	    . qq{" src="/images/rss-icon.png" ></a>} if $enable_rss_icon;
 
 my $s_copyright = <<EOF;
 
