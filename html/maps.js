@@ -251,7 +251,6 @@ function getStreet(map, city, street) {
 
     // plot street(s) on map
 
-
     function plotStreet(data) {
         var js = eval(data);
         var streets_list = js[1];

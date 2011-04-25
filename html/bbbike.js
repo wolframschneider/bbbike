@@ -147,7 +147,6 @@ function renderWeatherForecast(js) {
 
 // find a city and increase font size and set focus
 
-
 function higlightCity(data, obj) {
     var pos = eval("(" + data + ")");
     if (!pos || pos.length < 1 || pos[0] == "NO_CITY") {
@@ -220,7 +219,6 @@ function google_weather(w) {
 
     // Fahrenheit -> Celcius
 
-
     function celcius(temp) {
         if (unit == "US") {
             var t = (temp - 32) / 1.8;
@@ -275,7 +273,6 @@ function google_weather(w) {
 }
 
 // show the spinning wheel image
-
 
 function show_spinning_wheel() {
     span = document.getElementById("spinning_wheel");

@@ -94,7 +94,6 @@ function elevation_initialize(slippymap) {
 // Takes an array of ElevationResult objects, draws the path on the map
 // and plots the elevation profile on a GViz ColumnChart
 
-
 function plotElevation(results) {
     if (results == null) return;
 
@@ -134,7 +133,6 @@ function plotElevation(results) {
 
 // Remove the green rollover marker when the mouse leaves the chart
 
-
 function clearMouseMarker() {
     if (mousemarker != null) {
         mousemarker.setMap(null);
@@ -143,7 +141,6 @@ function clearMouseMarker() {
 }
 
 // Add a marker and trigger recalculation of the path and elevation
-
 
 function addMarker(latlng, doQuery) {
     if (markers.length < 800) {
@@ -166,7 +163,6 @@ function addMarker(latlng, doQuery) {
 
 // Trigger the elevation query for point to point
 // or submit a directions request for the path between points
-
 
 function updateElevation() {
     if (markers.length > 1) {
@@ -213,7 +209,6 @@ function loadRoute() {
 }
 
 // Clear all overlays, reset the array of points, and hide the chart
-
 
 function reset() {
     if (polyline) {
