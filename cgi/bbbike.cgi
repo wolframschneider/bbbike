@@ -7457,7 +7457,7 @@ sub header {
 	     #-lang => 'de-DE',
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
-	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, cycle route planner, bicycle, cycling route routing',
+	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling route routing, bicycle navigation',
 		     'copyright'=>'(c) 1998-2011 Slaven Rezic + Wolfram Schneider',
 		    },
 	     -author => $BBBike::EMAIL,
