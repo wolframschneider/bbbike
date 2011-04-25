@@ -496,8 +496,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region) {
     }
 
     // OSM use up to 3 servers: "a", "b", "c"
-    function randomServerOSM () {
-	return randomServer(["a", "b"]);
+
+
+    function randomServerOSM() {
+        return randomServer(["a", "b"]);
     }
 
     //
