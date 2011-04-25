@@ -131,6 +131,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_google_adsense_street
 	    $enable_google_adsense_linkblock
 	    $enable_google_adsense_street_linkblock
+	    $enable_panoramio_photos
 	   );
 
 $gmap_api_version = 3;
@@ -7406,11 +7407,8 @@ sub header {
     push(@$head, qq|<script type="text/javascript" src="/html/bbbike.js"></script>|);
 
     # included in bbbike.css
-    #<link href="/html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css"> |);
+    # <link href="/html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css"> |);
 
-    # google maps api v3
-    # <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    # <script src="/html/elevation.js" type="text/javascript"></script>
     if ($enable_homemap_streets) {
 	my $google_api_key = &get_google_api_key;
 
@@ -7427,11 +7425,13 @@ sub header {
         # google maps v=3.3 
 	# Release Version (3.3) Reference (Feature-Stable)
 
-	push(@$head, qq|<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=panoramio&amp;sensor=$sensor"></script>
-<script type="text/javascript" src="/html/maps3.js"></script>
-<script type="text/javascript" src="/html/elevation.js"></script>|) if !is_mobile($q) || is_resultpage($q);
+	  if (!is_mobile($q) || is_resultpage($q) ) {
+	    push(@$head, qq|<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>|);
+	    push(@$head, qq|<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>|);
+	    push(@$head, qq|<script type="text/javascript" src="http://maps.google.com/maps/api/js?libraries=panoramio&amp;sensor=$sensor"></script>|)
+		if $enable_panoramio_photos;
+	    push(@$head, qq|<script type="text/javascript" src="/html/maps3.js"></script>|); 
+	  }
 	}
 
     }
