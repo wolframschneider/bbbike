@@ -1,5 +1,4 @@
 // "use strict"
-
 //////////////////////////////////////////////////////////////////////
 // global objects/variables
 //
@@ -1450,20 +1449,6 @@ function displayCurrentPosition(area) {
 }
 
 // elevation.js
-/*
-<script type="text/javascript" src="http://www.google.com/jsapi"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
-//////////////////////////////////////////////////
-// external variables
-//
-// list of points in a route
-//   var marker_list = [ [47.53301,7.59612], [47.53297,7.59599], [47.53268,7.59506], ... ] 
-// the global map
-//   var map;
-//
-*/
-
 // var map = null;
 var chart = null;
 
@@ -1477,33 +1462,6 @@ var polyline = null;
 var elevations = null;
 
 var SAMPLES = 400;
-
-var examples = [{
-    // Challenger Deep
-    latlngs: [
-        [43.304945, 5.4120598],
-        [43.3041957, 5.4121212],
-        [43.3043388, 5.4138052],
-        [43.3039348, 5.4187127],
-        [43.3037338, 5.4192019],
-        [43.3040248, 5.4225599],
-        [43.3032311, 5.4496462],
-        [43.3030345, 5.4520411],
-        [43.3014697, 5.4574281],
-        [43.3002063, 5.4769171],
-        [43.2893539, 5.4965152],
-        [43.2868045, 5.5141309],
-        [43.2854258, 5.5540415],
-        [43.2860006, 5.5551744],
-        [43.2877792, 5.5812209],
-        [43.2874726, 5.5826565],
-        [43.2872775, 5.5830016],
-        [43.286235, 5.5874039],
-        [43.2917601, 5.5878209],
-        [43.2929885, 5.593981], ],
-    mapType: google.maps.MapTypeId.ROADMAP,
-    travelMode: 'direct'
-}];
 
 // Load the Visualization API and the piechart package.
 google.load("visualization", "1", {
@@ -1533,12 +1491,6 @@ function elevation_initialize(slippymap, opt) {
     elevationService = new google.maps.ElevationService();
     directionsService = new google.maps.DirectionsService();
 
-/* 
-    google.maps.event.addListener(map, 'click', function(event) {
-      addMarker(event.latLng, true);
-    });
-    */
-
     google.visualization.events.addListener(chart, 'onmouseover', function (e) {
         if (mousemarker == null) {
             mousemarker = new google.maps.Marker({
@@ -1551,7 +1503,6 @@ function elevation_initialize(slippymap, opt) {
         }
     });
 
-    // loadExample(0);
     loadRoute(opt);
 }
 
@@ -1619,12 +1570,6 @@ function plotRouteOnly() {
     });
 }
 
-/*    
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Sample');
-    data.addColumn('number', 'Elevation');
-  */
-
 // Remove the green rollover marker when the mouse leaves the chart
 
 function clearMouseMarker() {
@@ -1679,21 +1624,6 @@ function updateElevation() {
         }, plotElevation);
 
     }
-}
-
-function loadExample(n) {
-    reset();
-    map.setMapTypeId(examples[n].mapType);
-    // document.getElementById('mode').value = examples[n].travelMode;
-    var bounds = new google.maps.LatLngBounds();
-    for (var i = 0; i < examples[n].latlngs.length; i++) {
-        var latlng = new google.maps.LatLng(
-        examples[n].latlngs[i][0], examples[n].latlngs[i][1]);
-        addMarker(latlng, false);
-        bounds.extend(latlng);
-    }
-    map.fitBounds(bounds);
-    updateElevation();
 }
 
 function loadRoute(opt) {
