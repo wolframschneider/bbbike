@@ -318,6 +318,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     //  http://wiki.openstreetmap.org/wiki/Tileserver
     //
     var mapnik_options = {
+	bbbike: { 
+		"name":"Mapnik",
+		"description":"Mapnik, by OpenStreetMap"
+	},
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".tile.openstreetmap.org/" + z + "/" + a.x + "/" + a.y + ".png";
         },
@@ -331,6 +335,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     // http://openstreetmap.de/
     var mapnik_de_options = {
+	bbbike: { 
+		"name":"Mapnik (de)",
+		"description":"German Mapnik, by OpenStreetMap"
+	},
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".tile.openstreetmap.de/tiles/osmde/" + z + "/" + a.x + "/" + a.y + ".png";
         },
@@ -343,6 +351,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     };
 
     var tah_options = {
+	bbbike: { 
+		"name":"Tile@Home",
+		"description":"Tile at Home, by OpenStreetMap"
+	},
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".tah.openstreetmap.org/Tiles/tile/" + z + "/" + a.x + "/" + a.y + ".png";
         },
@@ -356,6 +368,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     // http://www.öpnvkarte.de/
     var public_transport_options = {
+	bbbike: { 
+		"name":"Public Transport",
+		"description":"Public Transport, by OpenStreetMap"
+	},
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".tile.xn--pnvkarte-m4a.de/tilegen/" + z + "/" + a.x + "/" + a.y + ".png";
         },
@@ -369,6 +385,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     // http://hikebikemap.de/
     var hike_bike_options = {
+	bbbike: { 
+		"name":"Hike&Bike",
+		"description":"Hike&Bike, by OpenStreetMap"
+	},
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".www.toolserver.org/tiles/hikebike/" + z + "/" + a.x + "/" + a.y + ".png";
         },
@@ -381,6 +401,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     }
 
     var cycle_options = {
+	bbbike: { 
+		"name":"Cycle",
+		"description":"Cycle, by OpenStreetMap"
+	},
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".tile.opencyclemap.org/cycle/" + z + "/" + a.x + "/" + a.y + ".png";
         },
@@ -395,6 +419,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     // http://png.maps.yimg.com/png?t=m&v=4.1&s=256&f=j&x=34&y=11&z=12
     // http://www.guidebee.biz/forum/viewthread.php?tid=71
     var yahoo_map_options = {
+	bbbike: { 
+		"name":"Yahoo",
+		"description":"Yahoo"
+	},
         getTileUrl: function (a, z) {
             return "http://png.maps.yimg.com/png?t=m&v=4.1&s=256&f=j&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
         },
@@ -406,6 +434,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 17
     };
     var yahoo_hybrid_options = {
+	bbbike: { 
+		"name":"Yahoo (Hybrid)",
+		"description":"Yahoo (Hybrid)",
+	},
         getTileUrl: function (a, z) {
             return "http://us.maps3.yimg.com/aerial.maps.yimg.com/png?v=1.1&t=h&s=256&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
         },
@@ -417,6 +449,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 17
     };
     var yahoo_satellite_options = {
+	bbbike: { 
+		"name":"Yahoo (Hybrid)",
+		"description":"Yahoo (Hybrid)",
+	},
         getTileUrl: function (a, z) {
             return "http://aerial.maps.yimg.com/ximg?t=a&v=1.7&s=256&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
         },
@@ -441,6 +477,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     }
 
     var bing_map_old_options = {
+	bbbike: { 
+		"name":"Bing (old)",
+		"description":"Bing traditional, by Microsoft"
+	},
         getTileUrl: function (a, z) {
             return getTileUrlBing(a, z, "r")
         },
@@ -452,6 +492,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 19
     };
     var bing_map_options = {
+	bbbike: { 
+		"name":"Bing",
+		"description":"Bing, by Microsoft"
+	},
         getTileUrl: function (a, z) {
             return getTileUrlBingVirtualearth(a, z, "r")
         },
@@ -464,6 +508,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     }
 
     var bing_hybrid_options = {
+	bbbike: { 
+		"name":"Bing (Hybrid)",
+		"description":"Bing (Hybrid), by Microsoft"
+	},
         getTileUrl: function (a, z) {
             return getTileUrlBing(a, z, "h")
         },
@@ -475,6 +523,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 17
     };
     var bing_satellite_options = {
+	bbbike: { 
+		"name":"Bing (Sat)",
+		"description":"Bing Satellite, by Microsoft"
+	},
         getTileUrl: function (a, z) {
             return getTileUrlBing(a, z, "a");
         },
@@ -575,6 +627,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     }
 
     var bing_birdview_options = {
+	bbbike: { 
+		"name":"Bing (Sat/Bird)",
+		"description":"Bing Satellite and BirdView, by Microsoft"
+	},
         getTileUrl: function (a, z) {
             return getTileUrlBingVirtualearth(a, z, "a", lang);
         },
@@ -591,14 +647,14 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             if (bbbike.mapType.MapnikMapType) {
                 var MapnikMapType = new google.maps.ImageMapType(mapnik_options);
                 map.mapTypes.set("mapnik", MapnikMapType);
-                custom_map("mapnik", lang);
+                custom_map("mapnik", lang, mapnik_options.bbbike);
             }
         },
         "mapnik_de": function () {
             if (bbbike.mapType.MapnikDeMapType && is_european(region)) {
                 var MapnikDeMapType = new google.maps.ImageMapType(mapnik_de_options);
                 map.mapTypes.set("mapnik_de", MapnikDeMapType);
-                custom_map("mapnik_de", lang);
+                custom_map("mapnik_de", lang, mapnik_de_options.bbbike);
             }
         },
 
@@ -606,7 +662,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             if (bbbike.mapType.TahMapType) {
                 var TahMapType = new google.maps.ImageMapType(tah_options);
                 map.mapTypes.set("tah", TahMapType);
-                custom_map("tah", lang);
+                custom_map("tah", lang, tah_options.bbbike);
             }
         },
 
@@ -615,7 +671,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             if (bbbike.mapType.CycleMapType) {
                 var CycleMapType = new google.maps.ImageMapType(cycle_options);
                 map.mapTypes.set("cycle", CycleMapType);
-                custom_map("cycle", lang);
+                custom_map("cycle", lang, cycle_options.bbbike);
             }
         },
 
@@ -623,7 +679,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             if (bbbike.mapType.HikeBikeMapType) {
                 var HikeBikeMapType = new google.maps.ImageMapType(hike_bike_options);
                 map.mapTypes.set("hike_bike", HikeBikeMapType);
-                custom_map("hike_bike", lang);
+                custom_map("hike_bike", lang, hike_bike_options.bbbike);
             }
         },
 
@@ -631,7 +687,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             if (bbbike.mapType.PublicTransportMapType && is_european(region)) {
                 var PublicTransportMapType = new google.maps.ImageMapType(public_transport_options);
                 map.mapTypes.set("public_transport", PublicTransportMapType);
-                custom_map("public_transport", lang);
+                custom_map("public_transport", lang, public_transport_options.bbbike);
             }
         },
 
@@ -639,21 +695,21 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             if (bbbike.mapType.YahooMapMapType) {
                 var YahooMapMapType = new google.maps.ImageMapType(yahoo_map_options);
                 map.mapTypes.set("yahoo_map", YahooMapMapType);
-                custom_map("yahoo_map", lang);
+                custom_map("yahoo_map", lang, yahoo_map_options.bbbike);
             }
         },
         "yahoo_satellite": function () {
             if (bbbike.mapType.YahooSatelliteMapType) {
                 var YahooSatelliteMapType = new google.maps.ImageMapType(yahoo_satellite_options);
                 map.mapTypes.set("yahoo_satellite", YahooSatelliteMapType);
-                custom_map("yahoo_satellite", lang);
+                custom_map("yahoo_satellite", lang, yahoo_satellite_options.bbbike);
             }
         },
         "yahoo_hybrid": function () {
             if (bbbike.mapType.YahooHybridMapType) {
                 var YahooHybridMapType = new google.maps.ImageMapType(yahoo_hybrid_options);
                 map.mapTypes.set("yahoo_hybrid", YahooHybridMapType);
-                custom_map("yahoo_hybrid", lang);
+                custom_map("yahoo_hybrid", lang, yahoo_hybrid_options.bbbike);
             }
         },
 
@@ -661,35 +717,35 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             if (bbbike.mapType.BingMapMapType) {
                 var BingMapMapType = new google.maps.ImageMapType(bing_map_old_options);
                 map.mapTypes.set("bing_map_old", BingMapMapType);
-                custom_map("bing_map_old", lang);
+                custom_map("bing_map_old", lang, bing_map_old_options.bbbike );
             }
         },
         "bing_map": function () {
             if (bbbike.mapType.BingMapMapType) {
                 var BingMapMapType = new google.maps.ImageMapType(bing_map_options);
                 map.mapTypes.set("bing_map", BingMapMapType);
-                custom_map("bing_map", lang);
+                custom_map("bing_map", lang, bing_map_options.bbbike );
             }
         },
         "bing_satellite": function () {
             if (bbbike.mapType.BingSatelliteMapType) {
                 var BingSatelliteMapType = new google.maps.ImageMapType(bing_satellite_options);
                 map.mapTypes.set("bing_satellite", BingSatelliteMapType);
-                custom_map("bing_satellite", lang);
+                custom_map("bing_satellite", lang, bing_satellite_options.bbbike);
             }
         },
         "bing_birdview": function () {
             if (bbbike.mapType.BingBirdviewMapType) {
                 var BingBirdviewMapType = new google.maps.ImageMapType(bing_birdview_options);
                 map.mapTypes.set("bing_birdview", BingBirdviewMapType);
-                custom_map("bing_birdview", lang);
+                custom_map("bing_birdview", lang, bing_birdview_options.bbbike );
             }
         },
         "bing_hybrid": function () {
             if (bbbike.mapType.BingHybridMapType) {
                 var BingHybridMapType = new google.maps.ImageMapType(bing_hybrid_options);
                 map.mapTypes.set("bing_hybrid", BingHybridMapType);
-                custom_map("bing_hybrid", lang);
+                custom_map("bing_hybrid", lang, bing_hybrid_options.bbbike );
             }
         }
     };
@@ -1132,13 +1188,13 @@ function translate_mapcontrol(word, lang) {
             "cycle": "Cykel"
         },
         "de": {
-            "mapnik": "Mapnik",
-            "cycle": "Fahrrad",
+            "Mapnik": "Mapnik",
+            "Cycle": "Fahrrad",
             "traffic layer": "Google Verkehr",
             "Panoramio": "Panoramio Fotos",
             "cycle layer": "Google Fahrrad",
-            "hike_bike": "Wandern",
-            "public_transport": "ÖPNV",
+            "Hike&Bike": "Wandern",
+            "Public Transport":"ÖPNV",
             'Show map': "Zeige Karte",
             "bing_birdview": "Bing (Sat)" // Vogel
         },
@@ -1191,6 +1247,8 @@ function translate_mapcontrol(word, lang) {
 var currentText = [];
 
 function HomeControl(controlDiv, map, maptype, lang, opt) {
+    var name = opt && opt.name ? translate_mapcontrol(opt.name, lang) : translate_mapcontrol(maptype, lang);
+    var description = opt && opt.description ? translate_mapcontrol(opt.description, lang) : translate_mapcontrol(maptype, lang);
 
     // Set CSS styles for the DIV containing the control
     // Setting padding to 5 px will offset the control
@@ -1207,7 +1265,7 @@ function HomeControl(controlDiv, map, maptype, lang, opt) {
     controlUI.style.borderWidth = '0px';
     controlUI.style.cursor = 'pointer';
     controlUI.style.textAlign = 'center';
-    controlUI.title = translate_mapcontrol('Show map', lang) + " " + translate_mapcontrol(maptype, lang);
+    controlUI.title = translate_mapcontrol('Show map', lang) + " " + description; 
 
     controlDiv.appendChild(controlUI);
 
@@ -1219,7 +1277,7 @@ function HomeControl(controlDiv, map, maptype, lang, opt) {
     controlText.style.paddingTop = '3px';
     controlText.style.paddingBottom = '3px';
 
-    controlText.innerHTML = translate_mapcontrol(maptype, lang);
+    controlText.innerHTML = name;
     controlUI.appendChild(controlText);
 
     currentText[maptype] = controlText;
