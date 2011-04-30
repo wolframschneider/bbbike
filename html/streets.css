@@ -13,7 +13,7 @@ div#top {
   	background: #fff;
   	padding: 1em;
   	border: 1px solid #9c9;
-	width: 58em; 
+	width: 54em; 
 	margin-left: -2em;
 }
 
@@ -46,7 +46,7 @@ div#top {
 }
 
 div#main {
-        max-width: 58em;
+        max-width: 54em;
         margin: 0px auto; /* Right And Left Margin Widths To Auto */
         text-align: left; 
         background-color: #E4E9F1; /* light blue-grey */
