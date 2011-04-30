@@ -763,6 +763,7 @@ my $selected_lang = "";
 my @supported_lang = qw/da de en es fr hr nl pl pt ru zh/;
 
 my $time_start = time;
+my $is_streets;
 { my $q = new CGI;
   my $path = $q->url(-full => 0, -absolute => 1);
 
@@ -776,6 +777,7 @@ my $time_start = time;
   $local_lang = &my_lang($lang, 1);
 
   $lang = $local_lang if $local_lang && !$selected_lang;
+  $is_streets = &is_streets($q);
 }
 
 # run cache requests with lower priority
@@ -1372,7 +1374,7 @@ if (defined $q->param('begin')) {
     $q->delete('uploadpage');
     $q->delete('gps');
     upload_button();
-} elsif (defined $q->param('all') || $q->url(-path_info =>1) =~ m,/streets\.html$, ) {
+} elsif ($is_streets) {
     $q->delete('all');
     choose_all_form();
 } elsif (defined $q->param('bikepower')) {
@@ -3131,6 +3133,15 @@ sub is_resultpage {
 
     return ($q->param('startc') && $q->param('zielc')) ? 1 : 0;
 }
+
+
+sub is_streets {
+    my $q = shift;
+
+    return (defined $q->param('all') || $q->url(-path_info =>1) =~ m,/streets\.html$,); 
+}
+
+
 
 sub get_kreuzung {
     my($start_str, $via_str, $ziel_str) = @_;
@@ -7388,7 +7399,10 @@ sub header {
     delete @args{qw(-contents -up)};
     my $printmode = delete $args{-printmode};
     if ($bi->{'can_css'} && !exists $args{-style}) {
-	$args{-style} = {-src => "$bbbike_html/" . ($printmode ? "bbbikeprint" : "bbbike") . ".css"};
+
+         my @css = $printmode ? "$bbbike_html/bbbikeprint.css" : "$bbbike_html/bbbike.css";
+         push (@css, "$bbbike_html/streets.css") if $is_streets;
+	$args{-style} = {-src => \@css };
 #XXX del:
 #  <<EOF;
 #  $std_css
@@ -7438,15 +7452,18 @@ sub header {
 
     }
 
-    push (@$head, $q->meta({-name => "robots", -content => "nofollow"}))
-      if (defined $q->param('all') || $q->url(-path_info =>1) =~ m,/streets\.html$,); 
+    push (@$head, $q->meta({-name => "robots", -content => "nofollow"})) 
+	if $is_streets;
 	
 
     # ignore directory service as DMOZ, Yahoo! and MSN
     push (@$head, $q->meta({-name => "robots", -content => "noodp,noydir"}));
 
     $args{-head} = $head if $head && @$head;
-    $args{-style} = {-src => "$bbbike_html/bbbike.css" } if !$printmode;
+
+    my @css = $printmode ? "$bbbike_html/bbbikeprint.css" : "$bbbike_html/bbbike.css";
+    push (@css, "$bbbike_html/streets.css") if $is_streets;
+    $args{-style} = {-src => \@css } if !$printmode;
 
     my $enable_google_analytics_uacct = delete $args{'-google_analytics_uacct'};
     if (!$smallform) {
@@ -7469,6 +7486,13 @@ sub header {
 	if ($enable_google_analytics && is_production($q) && $enable_google_analytics_uacct) {
 	    print qq{<script type="text/javascript">\nwindow.google_analytics_uacct = "$google_analytics_uacct";\n</script>\n\n};
         }
+
+	if ($is_streets) {
+	   print qq{<div id="main">\n<div id="main_border">\n};
+	   print qq{<div id="top_ie">\n<div id="top">\n};
+	   print qq{<div id="search_query"></div>\n};
+	   print qq{<div id="ad_top">\n};
+	}
 
 	print "<h2>\n";
 	if ($printmode) {
@@ -7935,6 +7959,8 @@ sub choose_all_form {
 #     }
     print "</center>\n</div>\n\n";
 
+    print qq{</div>\n</div>\n</div><!-- top_ie -->\n};
+
     # make the street names clickable
 print <<"EOF";
 <script type="text/javascript">
@@ -8007,6 +8033,9 @@ EOF
     print "</div>\n";
 
     &footer;
+
+    print "</div>\n";
+    print "</div>\n";
 
     print $q->end_html;
 
