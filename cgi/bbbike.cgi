@@ -7593,9 +7593,7 @@ my $permalink = BBBikeCGIUtil::my_escapeHTML($qq->url(-full=>1, -query=>1));
 
 my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'Berlin und Potsdam';
 my $streets = $bbbike_script =~ m,/$, ? $bbbike_script . "streets.html" : "$bbbike_script?all=1";
-my $list_of_all_streets = window_open("$streets", "BBBikeAll",
-                         "dependent,height=500,resizable," .
-                         "screenX=500,screenY=230,scrollbars,width=780")
+my $list_of_all_streets = qq{<a href="$streets" target="BBBikeAll">} 
 	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $local_city_name : "") ."</a>";
 my $community_link = $lang eq 'de' ? '/community.de.html' : '/community.html';
 my $donate = M("spenden");
