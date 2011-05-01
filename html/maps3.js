@@ -540,8 +540,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     };
     var yahoo_satellite_options = {
         bbbike: {
-            "name": "Yahoo (Hybrid)",
-            "description": "Yahoo (Hybrid)",
+            "name": "Yahoo (Sat)",
+            "description": "Yahoo (Satellite)",
         },
         getTileUrl: function (a, z) {
             return "http://aerial.maps.yimg.com/ximg?t=a&v=1.7&s=256&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
@@ -718,8 +718,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     var bing_birdview_options = {
         bbbike: {
-            "name": "Bing (Sat/Bird)",
-            "description": "Bing Satellite and BirdView, by Microsoft"
+            "name": "Bing (Sat)",
+            "description": "Bing Satellite and Bird View, by Microsoft"
         },
         getTileUrl: function (a, z) {
             return getTileUrlBingVirtualearth(a, z, "a", lang);
