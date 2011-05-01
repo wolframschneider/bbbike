@@ -7342,6 +7342,11 @@ sub header {
 #			  -href => "$bbbike_images/srtbike16.gif",
 #			  -type => "image/gif",
 			 });
+    push @$head, cgilink({-rel  => "apple-touch-icon",
+  			  -href => "$bbbike_images/srtbike57.png",
+  			  -type => "image/png"
+			 });
+
     my($bbbike_de_script, $bbbike_en_script, $bbbike_local_script);
     {
 	my $qq = CGI->new();
