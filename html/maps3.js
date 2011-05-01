@@ -100,19 +100,21 @@ var layers = {};
 
 function toogleFullScreen () {
     var fullscreen = state.fullscreen;
-    var value = fullscreen ? "block" : "none";
+
+    // list of tags which are inline and not block
+    var inline = { "routelist": true };
 
     for (var i = 0; i < state.non_map_tags.length; i++) {
-	var tag = document.getElementById ( state.non_map_tags[i]);
+	tagname = state.non_map_tags[i];
+	var tag = document.getElementById ( tagname );
+        var value = fullscreen ? (inline[tagname] ? "inline" : "block") : "none";
 	if (tag) { 
 	    tag.style.display = value;	
 	}
     }
 
     resizeFullScreen(fullscreen);
-
     state.fullscreen = fullscreen ? false : true;
-
 }
 
 function resizeFullScreen (fullscreen) {
