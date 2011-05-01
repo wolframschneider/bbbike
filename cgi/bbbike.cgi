@@ -5067,6 +5067,7 @@ body, select, input, span.slippymaplink { font-size: x-large }
 EOF
 	}
 
+	print qq{<div id="route_table">\n};
 	print "<center>" unless $printmode;
 	print qq{<table id="routehead" bgcolor="#ffcc66"};
 	if ($printmode) {
@@ -5192,7 +5193,9 @@ EOF
 	    print ".$fontend<br>\n";
 	}
 	print "</center>\n" unless $printmode;
+       
 	print "<hr>";
+	print "</div>\n"; # id="route_table"
 
 	my $line_fmt;
 	if (!$bi->{'can_table'}) {
@@ -5579,13 +5582,14 @@ EOF
 		#$qq->param( 'zielname', Encode::encode( utf8 => $qq->param('zielname')));
 		my $permalink = BBBikeCGIUtil::my_escapeHTML($qq->url(-full=>1, -query=>1));
 
+	        print qq{<div id="link_list">\n};
 	        print qq{<hr>\n};
 		print qq{<span class="slippymaplink"><a title="}, M("neue Anfrage"), qq{" href="}, $q->url(-absolute=>1, -query=>0), qq{">BBBike\@$local_city_name</a></span> |\n};
 	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">larger map</a></span> |\n} if !$gmapsv3;
 	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">print map route</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url" style="display:none"> $permalink</span></span>\n};
 	        print qq{<p></p>\n};
-
+		print qq{</div>\n\n};
 
 		if (is_mobile($qq)) {
 		   #
@@ -5598,7 +5602,8 @@ EOF
 		}
 	    }
 
-	    print qq{<div class="box">};
+	    print qq{<div id="bbbike_graphic">\n};
+	    print qq{<div class="box">\n};
 	    print "<form name=showmap method=" .
 		($post_bug ? "get" : "post");
 
@@ -5901,6 +5906,7 @@ EOF
 
 	    print "</form>\n";
 	    print qq{</div>\n};
+	    print qq{</div>\n}; # id="bbbike_graphic">
 	}
 
     }
@@ -5922,8 +5928,8 @@ print <<EOF;
 EOF
 		print qq{</span>\n};
         }
-	print qq{</div>\n};
 	print qq{<hr style="clear:left;">\n};
+	print qq{</div>\n};
     } 
 
     elsif (@weather_res) {
@@ -7642,9 +7648,9 @@ $list_of_all_streets |
 <a href="#" onclick="togglePermaLinks(); return false;">$permalink_msg</a><span id="permalink_url2" style="display:none"> $permalink</span>
 </div>
 </div>
-<hr>
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
+<hr>
 (&copy;) 1998-2011 <a href="http://CycleRoutePlanner.org">CycleRoutePlanner.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
 <div id="footer_community">
