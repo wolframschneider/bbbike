@@ -151,17 +151,7 @@ function resizeFullScreen (fullscreen) {
 	}
     }
 
-
-    /*
-     div#BBBikeGooglemap { 
-	width: 90%; 
-	height: 80%; 
-	margin-left: 5%; 
-	margin-right: 5%; 
-	padding: 0em; 
-        top: 0em; 
-    }
-    */
+    google.maps.event.trigger(map, 'resize');
 }
 
 
