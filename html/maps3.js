@@ -52,7 +52,10 @@ var bbbike = {
     mapLayers: {
         TrafficLayer: true,
         BicyclingLayer: true,
-        PanoramioLayer: true
+        PanoramioLayer: true,
+
+	// enable full screen mode
+        FullScreen: true
     },
 
     // default map
@@ -879,6 +882,14 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     init_layers();
 
     custom_layer(map, {
+        "layer": "FullScreen",
+        "enabled": bbbike.mapLayers.FullScreen,
+        "active": false,
+        "callback": toogleFullScreen,
+        "lang": lang
+    });
+
+    custom_layer(map, {
         "layer": "PanoramioLayer",
         "enabled": bbbike.mapLayers.PanoramioLayer,
         "active": false,
@@ -1282,6 +1293,7 @@ function translate_mapcontrol(word, lang) {
             "bing_map_old": "Bing (old)",
             "bing_satellite": "Bing (Sat)",
             "bing_hybrid": "Bing (Hybrid)",
+            "FullScreen": "Full Screen View",
             "bing_birdview": "Bing (Sat)" // Birdview
         },
 
@@ -1298,6 +1310,7 @@ function translate_mapcontrol(word, lang) {
             "Hike&Bike": "Wandern",
             "Public Transport": "ÖPNV",
             'Show map': "Zeige Karte",
+            "FullScreen": "Vollbildmodus",
             "bing_birdview": "Bing (Sat)" // Vogel
         },
         "es": {
@@ -1476,7 +1489,6 @@ function LayerControl(controlDiv, map, opt) {
         callback(map, enabled);
     }
 
-
     layerControl.layer = enabled;
 
     // grey (off) <-> green (on)
@@ -1486,7 +1498,11 @@ function LayerControl(controlDiv, map, opt) {
     }
     toogleColor(!layerControl.layer);
 
-    controlUI.title = 'Click to add the layer ' + layerText;
+    if (layer == "FullScreen") {
+       controlUI.title = 'Click to enable/disable ' + translate_mapcontrol(layerText, lang);
+    } else {
+       controlUI.title = 'Click to add the layer ' + layerText;
+    }
 
     controlDiv.appendChild(controlUI);
 
