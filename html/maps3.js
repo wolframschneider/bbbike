@@ -55,6 +55,7 @@ var bbbike = {
         PanoramioLayer: true,
 
         // enable full screen mode
+        SlideShow: true,
         FullScreen: true
     },
 
@@ -95,6 +96,8 @@ var state = {
     // keep old state of map area
     map_style: {},
 
+    maplist: [],
+
     // street lookup events
     timeout: null
 };
@@ -125,6 +128,30 @@ function toogleFullScreen() {
 
     resizeFullScreen(fullscreen);
     state.fullscreen = fullscreen ? false : true;
+}
+
+function runSlideShow(none, none2, toogleColor) {
+    var delay = 6000;
+    var counter = 0;
+
+
+    var currentMaptype = map.getMapTypeId()
+    var maplist = state.maplist;
+    maplist.push(currentMaptype);
+
+    for (var i = 0; i < maplist.length; i++) {
+        var maptype = maplist[i];
+
+        (function (maptype, timeout) {
+            setTimeout(function () {
+                map.setMapTypeId(maptype);
+            }, timeout);
+        })(maptype, delay * counter++);
+    }
+
+    setTimeout(function () {
+        toogleColor(true)
+    }, delay * counter);
 }
 
 function resizeFullScreen(fullscreen) {
@@ -876,6 +903,14 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "callback": toogleFullScreen,
         "lang": lang
     });
+    custom_layer(map, {
+        "layer": "SlideShow",
+        "enabled": bbbike.mapLayers.SlideShow,
+        "active": false,
+        "callback": runSlideShow,
+        "lang": lang
+    });
+
 
     custom_layer(map, {
         "layer": "PanoramioLayer",
@@ -1281,6 +1316,7 @@ function translate_mapcontrol(word, lang) {
             "bing_satellite": "Bing (Sat)",
             "bing_hybrid": "Bing (Hybrid)",
             "FullScreen": "Full Screen View",
+            "SlideShow": "Slide Show",
             "bing_birdview": "Bing (Sat)" // Birdview
         },
 
@@ -1302,7 +1338,7 @@ function translate_mapcontrol(word, lang) {
             "Black/White Mapnik, by OpenStreetMap": "Schwarz/Weiss Mapnik, von OpenStreetMap",
             "Cycle, by OpenStreetMap": "Fahrrad, von OpenStreetMap",
             "Public Transport, by OpenStreetMap": "Öffentlicher Personennahverkehr, von OpenStreetMap",
-            "German Mapnik, by OpenStreetMap":"Mapnik in deutschem Kartenlayout, von OpenStreetMap",
+            "German Mapnik, by OpenStreetMap": "Mapnik in deutschem Kartenlayout, von OpenStreetMap",
 
             "bing_birdview": "Bing (Sat)" // Vogel
         },
@@ -1352,7 +1388,19 @@ function translate_mapcontrol(word, lang) {
  * the control DIV as an argument.
  */
 
-var currentText = [];
+
+function init_google_map_list() {
+    var list = [];
+    for (var i = 0; i < bbbike.mapTypeControlOptions.mapTypeIds.length; i++) {
+        var maptype = bbbike.mapTypeControlOptions.mapTypeIds[i];
+        list.push(maptype);
+    }
+
+    return list;
+}
+
+var currentText = {};
+state.maplist = init_google_map_list();
 
 function HomeControl(controlDiv, map, maptype, lang, opt) {
     var name = opt && opt.name ? translate_mapcontrol(opt.name, lang) : translate_mapcontrol(maptype, lang);
@@ -1395,6 +1443,8 @@ function HomeControl(controlDiv, map, maptype, lang, opt) {
         map.setMapTypeId(maptype);
         setCustomBold(maptype);
     });
+
+    state.maplist.push(maptype);
 }
 
 // de-select all custom maps and optional set a map to bold
@@ -1497,6 +1547,8 @@ function LayerControl(controlDiv, map, opt) {
 
     if (layer == "FullScreen") {
         controlUI.title = 'Click to enable/disable ' + translate_mapcontrol(layerText, lang);
+    } else if (layer == "SlideShow") {
+        controlUI.title = 'Click to run ' + translate_mapcontrol(layerText, lang);
     } else {
         controlUI.title = 'Click to add the layer ' + layerText;
     }
@@ -1519,7 +1571,7 @@ function LayerControl(controlDiv, map, opt) {
     google.maps.event.addDomListener(controlUI, 'click', function () {
         toogleColor(layerControl.layer);
         layerControl.layer = layerControl.layer ? false : true;
-        callback(map, layerControl.layer);
+        callback(map, layerControl.layer, toogleColor);
     });
 
 }
