@@ -61,6 +61,7 @@ var bbbike = {
     // default map
     mapDefault: "mapnik",
     // mapDefault: "terrain",
+
     // visible controls
     controls: {
         zoomControl: true,
@@ -236,6 +237,10 @@ function is_supported_maptype(maptype, list) {
 }
 
 function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam) {
+    if (!is_supported_map(maptype)) {
+        maptype = bbbike.mapDefault;
+    }
+
     var routeLinkLabel = "Link to route: ";
     var routeLabel = "Route: ";
     var commonSearchParams = "&pref_seen=1&pref_speed=20&pref_cat=&pref_quality=&pref_green=&scope=;output_as=xml;referer=bbbikegooglemap";
@@ -760,7 +765,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         },
 
         "cycle": function () {
-
             if (bbbike.mapType.CycleMapType) {
                 var CycleMapType = new google.maps.ImageMapType(cycle_options);
                 map.mapTypes.set("cycle", CycleMapType);
@@ -859,10 +863,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.yahoo_hybrid();
     mapControls.tah();
 
-    if (!is_supported_map(maptype)) {
-        maptype = bbbike.mapDefault;
-    }
-
     map.setMapTypeId(maptype);
     if (is_supported_maptype(maptype, bbbike.available_custom_maps)) {
         setCustomBold(maptype);
@@ -904,7 +904,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     setTimeout(function () {
-        hideGoogleLayers(maptype)
+        hideGoogleLayers(); 
     }, 5000);
 
     // enable Google Arial View
@@ -914,8 +914,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     // map changed
     google.maps.event.addListener(map, "maptypeid_changed", function () {
-        var maptype = map.getMapTypeId();
-        hideGoogleLayers(maptype);
+        hideGoogleLayers();
     });
 }
 
@@ -1418,6 +1417,10 @@ function setCustomBold(maptype) {
 // hide google layers on non-google custom maps
 
 function hideGoogleLayers(maptype) {
+    if (!maptype) {
+	maptype = map.getMapTypeId()
+    }
+
     var value = is_supported_maptype(maptype, bbbike.available_custom_maps) ? "hidden" : "visible";
 
     var timeout = value == "hidden" ? 2000 : 1000;
@@ -1643,6 +1646,12 @@ function elevation_initialize(slippymap, opt) {
         zoom: 1,
         center: myLatlng,
         // mapTypeId: google.maps.MapTypeId.TERRAIN
+    }
+
+    var maptype = slippymap.maptype;
+    if (is_supported_map(maptype)) {
+	// state.maptype = maptype;
+        setCustomBold(maptype);
     }
 
     if (slippymap) {
