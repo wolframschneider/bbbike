@@ -1298,6 +1298,12 @@ function translate_mapcontrol(word, lang) {
             "Public Transport": "ÖPNV",
             'Show map': "Zeige Karte",
             "FullScreen": "Vollbildmodus",
+            "Mapnik (b/w)": "Mapnik (s/w)",
+            "Black/White Mapnik, by OpenStreetMap": "Schwarz/Weiss Mapnik, von OpenStreetMap",
+            "Cycle, by OpenStreetMap": "Fahrrad, von OpenStreetMap",
+            "Public Transport, by OpenStreetMap": "Öffentlicher Personennahverkehr, von OpenStreetMap",
+            "German Mapnik, by OpenStreetMap":"Mapnik in deutschem Kartenlayout, von OpenStreetMap",
+
             "bing_birdview": "Bing (Sat)" // Vogel
         },
         "es": {
