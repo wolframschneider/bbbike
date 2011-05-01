@@ -86,6 +86,8 @@ var state = {
     // tags to hide in full screen mode
     non_map_tags: [ "copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic" ],
 
+    map_style: {},
+
     // street lookup events
     timeout: null
 };
@@ -98,7 +100,7 @@ var layers = {};
 
 function toogleFullScreen () {
     var fullscreen = state.fullscreen;
-    var value = fullscreen ? "inline" : "none";
+    var value = fullscreen ? "block" : "none";
 
     for (var i = 0; i < state.non_map_tags.length; i++) {
 	var tag = document.getElementById ( state.non_map_tags[i]);
@@ -107,8 +109,49 @@ function toogleFullScreen () {
 	}
     }
 
+    resizeFullScreen(fullscreen);
+
     state.fullscreen = fullscreen ? false : true;
+
 }
+
+function resizeFullScreen (fullscreen) {
+    var tag = document.getElementById ( "BBBikeGooglemap" );
+
+    if (!tag)
+	return;
+
+    var style = ["width", "height", "marginLeft", "marginRight"];
+    if (!fullscreen) {
+	// keep old state
+	for (var i = 0; i < style.length; i++) {
+	    state.map_style[ style[i] ]  = tag.style[ style[i] ];
+	}
+
+	tag.style.width = "99%";	
+	tag.style.height = "90%";	
+	tag.style.marginLeft = "0%";	
+	tag.style.marginRight = "0%";	
+    } else {
+	// restore old state
+	for (var i = 0; i < style.length; i++) {
+	    tag.style[ style[i] ] = state.map_style[ style[i] ]; 
+	}
+    }
+
+
+    /*
+     div#BBBikeGooglemap { 
+	width: 90%; 
+	height: 80%; 
+	margin-left: 5%; 
+	margin-right: 5%; 
+	padding: 0em; 
+        top: 0em; 
+    }
+    */
+}
+
 
 function togglePermaLinks() {
     togglePermaLink("permalink_url");
