@@ -54,14 +54,13 @@ var bbbike = {
         BicyclingLayer: true,
         PanoramioLayer: true,
 
-	// enable full screen mode
+        // enable full screen mode
         FullScreen: true
     },
 
     // default map
     mapDefault: "mapnik",
     // mapDefault: "terrain",
-
     // visible controls
     controls: {
         zoomControl: true,
@@ -84,11 +83,11 @@ var bbbike = {
 
 };
 
-var state = { 
+var state = {
     fullscreen: false,
 
     // tags to hide in full screen mode
-    non_map_tags: [ "copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div" ],
+    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div"],
 
     // keep state of non map tags
     non_map_tags_val: {},
@@ -106,50 +105,49 @@ var layers = {};
 // functions
 //
 
-function toogleFullScreen () {
+function toogleFullScreen() {
     var fullscreen = state.fullscreen;
 
     for (var i = 0; i < state.non_map_tags.length; i++) {
-	tagname = state.non_map_tags[i];
-	var tag = document.getElementById ( tagname );
+        tagname = state.non_map_tags[i];
+        var tag = document.getElementById(tagname);
 
-	if (tag) { 
-	    if (fullscreen) {
-	       	tag.style.display = state.non_map_tags_val[tagname];
-	    } else {
-		// keep copy of old state
-		state.non_map_tags_val[tagname] = tag.style.display;
-	       	tag.style.display = "none";
-	    }
-	}
+        if (tag) {
+            if (fullscreen) {
+                tag.style.display = state.non_map_tags_val[tagname];
+            } else {
+                // keep copy of old state
+                state.non_map_tags_val[tagname] = tag.style.display;
+                tag.style.display = "none";
+            }
+        }
     }
 
     resizeFullScreen(fullscreen);
     state.fullscreen = fullscreen ? false : true;
 }
 
-function resizeFullScreen (fullscreen) {
-    var tag = document.getElementById ( "BBBikeGooglemap" );
+function resizeFullScreen(fullscreen) {
+    var tag = document.getElementById("BBBikeGooglemap");
 
-    if (!tag)
-	return;
+    if (!tag) return;
 
     var style = ["width", "height", "marginLeft", "marginRight"];
     if (!fullscreen) {
-	// keep old state
-	for (var i = 0; i < style.length; i++) {
-	    state.map_style[ style[i] ]  = tag.style[ style[i] ];
-	}
+        // keep old state
+        for (var i = 0; i < style.length; i++) {
+            state.map_style[style[i]] = tag.style[style[i]];
+        }
 
-	tag.style.width = "99%";	
-	tag.style.height = "90%";	
-	tag.style.marginLeft = "0%";	
-	tag.style.marginRight = "0%";	
+        tag.style.width = "99%";
+        tag.style.height = "90%";
+        tag.style.marginLeft = "0%";
+        tag.style.marginRight = "0%";
     } else {
-	// restore old state
-	for (var i = 0; i < style.length; i++) {
-	    tag.style[ style[i] ] = state.map_style[ style[i] ]; 
-	}
+        // restore old state
+        for (var i = 0; i < style.length; i++) {
+            tag.style[style[i]] = state.map_style[style[i]];
+        }
     }
 
     google.maps.event.trigger(map, 'resize');
@@ -904,7 +902,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     setTimeout(function () {
-        hideGoogleLayers(); 
+        hideGoogleLayers();
     }, 5000);
 
     // enable Google Arial View
@@ -1418,7 +1416,7 @@ function setCustomBold(maptype) {
 
 function hideGoogleLayers(maptype) {
     if (!maptype) {
-	maptype = map.getMapTypeId()
+        maptype = map.getMapTypeId()
     }
 
     var value = is_supported_maptype(maptype, bbbike.available_custom_maps) ? "hidden" : "visible";
@@ -1492,9 +1490,9 @@ function LayerControl(controlDiv, map, opt) {
     toogleColor(!layerControl.layer);
 
     if (layer == "FullScreen") {
-       controlUI.title = 'Click to enable/disable ' + translate_mapcontrol(layerText, lang);
+        controlUI.title = 'Click to enable/disable ' + translate_mapcontrol(layerText, lang);
     } else {
-       controlUI.title = 'Click to add the layer ' + layerText;
+        controlUI.title = 'Click to add the layer ' + layerText;
     }
 
     controlDiv.appendChild(controlUI);
@@ -1650,7 +1648,7 @@ function elevation_initialize(slippymap, opt) {
 
     var maptype = slippymap.maptype;
     if (is_supported_map(maptype)) {
-	// state.maptype = maptype;
+        // state.maptype = maptype;
         setCustomBold(maptype);
     }
 
