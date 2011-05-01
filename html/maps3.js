@@ -86,6 +86,10 @@ var state = {
     // tags to hide in full screen mode
     non_map_tags: [ "copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic" ],
 
+    // keep state of non map tags
+    non_map_tags_val: {},
+
+    // keep old state of map area
     map_style: {},
 
     // street lookup events
@@ -101,15 +105,18 @@ var layers = {};
 function toogleFullScreen () {
     var fullscreen = state.fullscreen;
 
-    // list of tags which are inline and not block
-    var inline = { "routelist": true };
-
     for (var i = 0; i < state.non_map_tags.length; i++) {
 	tagname = state.non_map_tags[i];
 	var tag = document.getElementById ( tagname );
-        var value = fullscreen ? (inline[tagname] ? "inline" : "block") : "none";
+
 	if (tag) { 
-	    tag.style.display = value;	
+	    if (fullscreen) {
+	       	tag.style.display = state.non_map_tags_val[tagname];
+	    } else {
+		// keep copy of old state
+		state.non_map_tags_val[tagname] = tag.style.display;
+	       	tag.style.display = "none";
+	    }
 	}
     }
 
