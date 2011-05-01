@@ -19,6 +19,7 @@ var bbbike = {
     mapType: {
         MapnikMapType: true,
         MapnikDeMapType: true,
+        MapnikBwMapType: true,
         CycleMapType: true,
         PublicTransportMapType: true,
         HikeBikeMapType: true,
@@ -67,7 +68,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "hike_bike", "mapnik_de", "mapnik", "cycle"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle"],
 
     area: {
         visible: true,
@@ -345,7 +346,24 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         isPng: true,
         opacity: 1.0,
         tileSize: new google.maps.Size(256, 256),
-        name: "MAPNIK",
+        name: "MAPNIK-DE",
+        minZoom: 1,
+        maxZoom: 18
+    };
+
+    // http://osm.t-i.ch/bicycle/map/
+    var mapnik_bw_options = {
+        bbbike: {
+            "name": "Mapnik (b/w)",
+            "description": "Black/White Mapnik, by OpenStreetMap"
+        },
+        getTileUrl: function (a, z) {
+            return "http://" + randomServerOSM() + ".www.toolserver.org/tiles/bw-mapnik/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "MAPNIK-BW",
         minZoom: 1,
         maxZoom: 18
     };
@@ -657,6 +675,14 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("mapnik_de", lang, mapnik_de_options.bbbike);
             }
         },
+        "mapnik_bw": function () {
+            if (bbbike.mapType.MapnikBwMapType) {
+                var MapnikBwMapType = new google.maps.ImageMapType(mapnik_bw_options);
+                map.mapTypes.set("mapnik_bw", MapnikBwMapType);
+                custom_map("mapnik_bw", lang, mapnik_bw_options.bbbike);
+            }
+        },
+
 
         "tah": function () {
             if (bbbike.mapType.TahMapType) {
@@ -752,6 +778,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     mapControls.mapnik();
     mapControls.mapnik_de();
+    mapControls.mapnik_bw();
     mapControls.cycle();
     mapControls.hike_bike();
     mapControls.public_transport();
@@ -1173,6 +1200,7 @@ function translate_mapcontrol(word, lang) {
             "hike_bike": "Hike&amp;Bike",
             "public_transport": "Public Transport",
             "mapnik_de": "Mapnik (de)",
+            "mapnik_bw": "Mapnik (b/w)",
             "yahoo_map": "Yahoo",
             "yahoo_hybrid": "Yahoo (hybrid)",
             "yahoo_satellite": "Yahoo (Sat)",
