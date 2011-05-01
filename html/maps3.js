@@ -1316,7 +1316,7 @@ function translate_mapcontrol(word, lang) {
             "bing_satellite": "Bing (Sat)",
             "bing_hybrid": "Bing (Hybrid)",
             "FullScreen": "Full Screen View",
-            "SlideShow": "Slide Show",
+            "SlideShow": "Map Slide Show",
             "bing_birdview": "Bing (Sat)" // Birdview
         },
 
