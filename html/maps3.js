@@ -78,8 +78,16 @@ var bbbike = {
     // delay until we render streets on the map
     streetPlotDelay: 400,
 
+};
+
+var state = { 
+    fullscreen: false,
+
+    // tags to hide in full screen mode
+    non_map_tags: [ "copyright", "weather_forecast_html", "top_right", "routelist",  "other_cities", "footer", "routing" ],
+
     // street lookup events
-    _timeout: null
+    timeout: null
 };
 
 var layers = {};
@@ -87,6 +95,20 @@ var layers = {};
 //////////////////////////////////////////////////////////////////////
 // functions
 //
+
+function toogleFullScreen () {
+    var fullscreen = state.fullscreen;
+    var value = fullscreen ? "inline" : "none";
+
+    for (var i = 0; i < state.non_map_tags.length; i++) {
+	var tag = document.getElementById ( state.non_map_tags[i]);
+	if (tag) { 
+	    tag.style.display = value;	
+	}
+    }
+
+    state.fullscreen = fullscreen ? false : true;
+}
 
 function togglePermaLinks() {
     togglePermaLink("permalink_url");
@@ -138,11 +160,11 @@ function homemap_street(event) {
 
 function homemap_street_timer(event, time) {
     // cleanup older calls waiting in queue
-    if (bbbike._timeout != null) {
-        clearTimeout(bbbike._timeout);
+    if (state.timeout != null) {
+        clearTimeout(state.timeout);
     }
 
-    bbbike._timeout = setTimeout(function () {
+    state.timeout = setTimeout(function () {
         homemap_street(event);
     }, time);
 }
