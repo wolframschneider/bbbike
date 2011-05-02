@@ -984,42 +984,17 @@ function add_traffic_layer(map, enable) {
 }
 // add traffic to map, by google maps
 
-function add_panoramio_layer(map, enable, flag) {
+function add_panoramio_layer(map, enable) {
     // ignore if nothing to display
     if (!layers.panoramioLayer && !enable) return;
 
-    // download JavaScript library for panoramio
-    if (!layers.panoramioLayer && !flag) {
-        if (0) {
-            // if (!document.getElementById("panoramio") {
-            var panoramio = document.createElement('DIV');
-            panoramio.setAttribute("id", "panoramio");
-
-            var script = document.createElement("script");
-            script.type = "text/javascript";
-            script.src = "http://maps.google.com/maps/api/js?libraries=panoramio&sensor=true";
-
-            panoramio.appendChild(script);
-            document.body.appendChild(panoramio);
-
-            setTimeout(function () {
-                layers.panoramioLayer = new google.maps.panoramio.PanoramioLayer();
-                add_panoramio_layer(map, enable, true);
-            }, 3000);
-
-            return;
-        }
-
+    //  activate library for panoramio
+    if (!layers.panoramioLayer) {
         layers.panoramioLayer = new google.maps.panoramio.PanoramioLayer();
     }
 
-    if (enable) {
-        layers.panoramioLayer.setMap(map);
-    } else {
-        layers.panoramioLayer.setMap(null);
-    }
+    layers.panoramioLayer.setMap(enable ? map : null);
 }
-
 
 var street = "";
 var street_cache = [];
