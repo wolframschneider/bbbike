@@ -1664,9 +1664,12 @@ var elevations = null;
 var SAMPLES = 400;
 
 // Load the Visualization API and the piechart package.
-google.load("visualization", "1", {
-    packages: ["columnchart"]
-});
+try {
+    google.load("visualization", "1", {
+    	packages: ["columnchart"]
+    });
+} catch (e) {
+}
 
 // Set a callback to run when the Google Visualization API is loaded.
 // google.setOnLoadCallback(elevation_initialize);
