@@ -97,9 +97,11 @@ var state = {
     map_style: {},
 
     maplist: [],
+    slideShowMaps: [],
 
     // street lookup events
     timeout: null
+
 };
 
 var layers = {};
@@ -108,7 +110,7 @@ var layers = {};
 // functions
 //
 
-function toogleFullScreen() {
+function toogleFullScreen(none, none2, toogleColor) {
     var fullscreen = state.fullscreen;
 
     for (var i = 0; i < state.non_map_tags.length; i++) {
@@ -127,31 +129,48 @@ function toogleFullScreen() {
     }
 
     resizeFullScreen(fullscreen);
+    // toogleColor(fullscreen)
     state.fullscreen = fullscreen ? false : true;
 }
 
 function runSlideShow(none, none2, toogleColor) {
+    // stop running slide show
+    if (state.slideShowMaps.length > 0) {
+    	for (var i = 0; i < state.slideShowMaps.length; i++) {
+	   clearTimeout( state.slideShowMaps[i] );
+        }
+	state.slideShowMaps = [];
+    	toogleColor(true);
+	return;
+    }
+
+    state.slideShowMaps = [];
     var delay = 6000;
     var counter = 0;
-
 
     var currentMaptype = map.getMapTypeId()
     var maplist = state.maplist;
     maplist.push(currentMaptype);
 
+    toogleColor(false);
+
     for (var i = 0; i < maplist.length; i++) {
         var maptype = maplist[i];
 
         (function (maptype, timeout) {
-            setTimeout(function () {
+            var timer = setTimeout(function () {
                 map.setMapTypeId(maptype);
             }, timeout);
+
+	    state.slideShowMaps.push(timer);
         })(maptype, delay * counter++);
     }
 
-    setTimeout(function () {
+    // last action, reset color of control
+    var timer = setTimeout(function () {
         toogleColor(true)
     }, delay * counter);
+    state.slideShowMaps.push(timer);
 }
 
 function resizeFullScreen(fullscreen) {
