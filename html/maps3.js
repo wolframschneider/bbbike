@@ -136,12 +136,12 @@ function toogleFullScreen(none, none2, toogleColor) {
 function runSlideShow(none, none2, toogleColor) {
     // stop running slide show
     if (state.slideShowMaps.length > 0) {
-    	for (var i = 0; i < state.slideShowMaps.length; i++) {
-	   clearTimeout( state.slideShowMaps[i] );
+        for (var i = 0; i < state.slideShowMaps.length; i++) {
+            clearTimeout(state.slideShowMaps[i]);
         }
-	state.slideShowMaps = [];
-    	toogleColor(true);
-	return;
+        state.slideShowMaps = [];
+        toogleColor(true);
+        return;
     }
 
     state.slideShowMaps = [];
@@ -162,7 +162,7 @@ function runSlideShow(none, none2, toogleColor) {
                 map.setMapTypeId(maptype);
             }, timeout);
 
-	    state.slideShowMaps.push(timer);
+            state.slideShowMaps.push(timer);
         })(maptype, delay * counter++);
     }
 
@@ -1685,10 +1685,9 @@ var SAMPLES = 400;
 // Load the Visualization API and the piechart package.
 try {
     google.load("visualization", "1", {
-    	packages: ["columnchart"]
+        packages: ["columnchart"]
     });
-} catch (e) {
-}
+} catch (e) {}
 
 // Set a callback to run when the Google Visualization API is loaded.
 // google.setOnLoadCallback(elevation_initialize);
