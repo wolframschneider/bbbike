@@ -135,7 +135,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	   );
 
 $gmap_api_version = 3;
-$facebook_page = "http://www.facebook.com/pages/BBBike/179755905394369";
+$facebook_page = 'http://www.facebook.com/BBBikeWorld';
 
 # XXX This may be removed one day
 use vars qw($use_cooked_street_data);
