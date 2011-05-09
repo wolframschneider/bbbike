@@ -7648,7 +7648,7 @@ my $s_copyright = <<EOF;
 <div id="footer">
 <div id="footer_top">
 <a href="/">home</a> |
-<a href="/doc.html">$help</a> |
+<a href="/help.html">$help</a> |
 <a href="/app.html">$app</a> |
 <a href="$community_link">$donate</a> |
 <a href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
