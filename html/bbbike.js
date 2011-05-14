@@ -165,7 +165,7 @@ function higlightCity(data, obj) {
                 a[i].style.color = "green";
 
                 a[i].setAttribute('title', pos[j] + " " + obj.lat + "," + obj.lng);
-                focus = a[i];
+                if (!focus) focus = a[i];
             }
         }
     }
