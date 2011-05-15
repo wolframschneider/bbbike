@@ -28,7 +28,8 @@ my $debug = 1;
 my @poi_files =
   qw( _education _oepnv faehren icao kinos kneipen orte rbahnhof restaurants sbahnhof sehenswuerdigkeit ubahnhof);
 
-push @poi_files, "_building";
+#push @poi_files, "_building";
+@poi_files = qw( _oepnv faehren icao orte rbahnhof sbahnhof ubahnhof);
 
 my $use_exact_streetchooser = 1;
 my $use_cooked_street_data;
@@ -40,6 +41,12 @@ my $kr;
 my $str;
 my $crossings;
 my $g_str;
+
+my $enable_bus_stations = 0;
+
+# foo -> S foo
+# bar -> U bar
+my $enable_stations_prefix = 1;
 
 if ($use_polar) {
     no warnings 'redefine';
@@ -278,6 +285,8 @@ sub get_poi {
 
     my @points;
     foreach my $file (@files) {
+        my $file_type = ( $file =~ /^([sur])bahnhof$/ ? $1 : "" );
+
         $file = $ENV{'BBBIKE_DATADIR'} . "/$file";
         my $fh;
 
@@ -295,7 +304,7 @@ sub get_poi {
             open $fh, $file or die "open file '$file': $!\n";
         }
 
-        my @p = get_poi_fh($fh);
+        my @p = get_poi_fh( $fh, $file_type );
         push( @points, @p ) if scalar(@p);
     }
 
@@ -303,7 +312,10 @@ sub get_poi {
 }
 
 sub get_poi_fh {
-    my $fh = shift;
+    my $fh        = shift;
+    my $file_type = shift;
+    $file_type = uc($file_type);
+
     binmode $fh, ":utf8";
 
     my @p;
@@ -316,6 +328,14 @@ sub get_poi_fh {
 
         my ( $type, $first_coord, @coords ) = split " ", $rest;
         $type =~ s/:.*//;
+
+        # ignore bus stations
+        next if !$enable_bus_stations && $type eq 'Busstop';
+
+        # train stations
+        if ( $file_type && $enable_stations_prefix ) {
+            $poi = "$file_type $poi";
+        }
 
         push @p, [ $poi, $type, $first_coord ];
     }
@@ -359,6 +379,6 @@ foreach my $poi (@points) {
     my ( $x, $y ) = split( ",", $poi->[2] );
 
     my $point = get_nearest_crossing_coords( $x, $y ) || "";
-    print $poi->[0], " ", $poi->[1], " $point\n";
+    print $poi->[0], "\t", $poi->[1], " ", "$point\n";
 }
 
