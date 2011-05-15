@@ -1,4 +1,6 @@
 #!/usr/local/bin/perl
+#
+# osm2bbd-poi - for a point of interest (POI), find the nearest cross
 
 use vars qw($VERSION);
 $VERSION = 0.1;
