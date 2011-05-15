@@ -26,10 +26,11 @@ use warnings;
 
 my $debug = 1;
 my @poi_files =
-  qw( _education _oepnv faehren icao kinos kneipen orte rbahnhof restaurants sbahnhof sehenswuerdigkeit ubahnhof);
+  qw( _education.gz _oepnv.gz faehren icao kinos kneipen orte rbahnhof restaurants sbahnhof sehenswuerdigkeit ubahnhof);
 
-#push @poi_files, "_building";
-@poi_files = qw( _oepnv faehren icao orte rbahnhof sbahnhof ubahnhof);
+push @poi_files, "_building.gz";
+
+#@poi_files = qw( _oepnv faehren icao orte rbahnhof sbahnhof ubahnhof);
 
 my $use_exact_streetchooser = 1;
 my $use_cooked_street_data;
