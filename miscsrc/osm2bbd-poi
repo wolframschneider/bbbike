@@ -25,7 +25,10 @@ use strict;
 use warnings;
 
 my $debug = 1;
-my @poi_files;
+my @poi_files =
+  qw( _education _oepnv faehren icao kinos kneipen orte rbahnhof restaurants sbahnhof sehenswuerdigkeit ubahnhof);
+
+#push @poi_files, "_building";
 
 my $use_exact_streetchooser = 1;
 my $use_cooked_street_data;
@@ -163,7 +166,7 @@ sub get_nearest_crossing_coords {
             my $ret = $str->nearest_point( "$x,$y", FullReturn => 1 );
             $xy = $ret->{Coord};
 
-            print Dumper($ret);
+            print Dumper($ret) if $debug >= 2;
 
             if ( $xy && !$kr->crossing_exists($xy) ) {
 
@@ -270,6 +273,55 @@ sub get_streets_rebuild_dependents {
     #$g_str = get_streets();
 }
 
+sub get_poi {
+    my @files = @_;
+
+    my @points;
+    foreach my $file (@files) {
+        $file = $ENV{'BBBIKE_DATADIR'} . "/$file";
+
+        if ( !-f $file ) {
+            warn "$file does not exists, skip...\n" if $debug >= 1;
+            next;
+        }
+
+        my $fh;
+        if ( $file =~ /\.gz$/ ) {
+            open $fh, '-|', 'gzip', '-dc', $file
+              or die "Can't run zcat on $file: $!";
+        }
+        else {
+            open $fh, $file or die "open file '$file': $!\n";
+        }
+
+        my @p = get_poi_fh($fh);
+        push( @points, @p ) if scalar(@p);
+    }
+
+    return @points;
+}
+
+sub get_poi_fh {
+    my $fh = shift;
+    binmode $fh, ":utf8";
+
+    my @p;
+    while (<$fh>) {
+        next if /^\s*#/;
+        next if /^\s+/;
+        next if /^\s*$/;
+
+        my ( $poi, $rest ) = split "\t", $_;
+
+        my ( $type, $first_coord, @coords ) = split " ", $rest;
+        $type =~ s/:.*//;
+
+        push @p, [ $poi, $type, $first_coord ];
+    }
+
+    return @p;
+}
+
 sub usage () {
     <<EOF;
 usage: env CITY=city $0 [ options ] poi
@@ -279,6 +331,10 @@ usage: env CITY=city $0 [ options ] poi
 EOF
 }
 
+binmode \*STDIN,  ":utf8";
+binmode \*STDOUT, ":utf8";
+binmode \*STDERR, ":utf8";
+
 my $help;
 my $ret = GetOptions(
     "debug=i"    => \$debug,
@@ -286,13 +342,22 @@ my $ret = GetOptions(
     "help"       => \$help
 );
 
-die usage if $help || !$ret || scalar(@ARGV) <= 0;
-my $city = $ARGV[0];
-unshift( @INC, $ENV{CITY} );
+die usage if $help || !$ret;
 
-my $poi = $ARGV[0];    # 13.2840194,52.5585185
-my ( $x, $y ) = split( ",", $poi );
+my @points;
 
-my $point = get_nearest_crossing_coords( $x, $y ) || "";
-print "Nearest point: $point\n";
+# 13.2840194,52.5585185
+if ( $ARGV[0] ) {
+    push @points, [ "foo", "X", $ARGV[0] ];
+}
+else {
+    push @points, &get_poi(@poi_files);
+}
+
+foreach my $poi (@points) {
+    my ( $x, $y ) = split( ",", $poi->[2] );
+
+    my $point = get_nearest_crossing_coords( $x, $y ) || "";
+    print $poi->[0], " ", $poi->[1], " $point\n";
+}
 
