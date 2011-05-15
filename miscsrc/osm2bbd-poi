@@ -1,0 +1,234 @@
+#!/usr/local/bin/perl
+
+use vars qw($VERSION);
+$VERSION = 0.1;
+
+use Getopt::Long;
+use strict;
+use warnings;
+
+my $debug = 1;
+my @poi_files;
+
+my $use_exact_streetchooser = 1;
+my $use_cooked_street_data;
+
+my $q;
+my $kr;
+my $str;
+my $crossings;
+my $g_str;
+
+sub new_kreuzungen {
+    if ( !$kr ) {
+        all_crossings();
+        my $str = get_streets();
+        $kr = new Kreuzungen(
+            Hash     => $crossings,
+            Strassen => $str
+        );
+        $kr->make_grid( UseCache => 1 );
+    }
+    $kr;
+}
+
+sub all_crossings {
+    if ( scalar keys %$crossings == 0 ) {
+        my $str = get_streets();
+        $crossings = $str->all_crossings(
+            RetType  => 'hash',
+            UseCache => 1
+        );
+    }
+}
+
+sub get_streets {
+    my ($scope) = shift || $q->param("scope") || "city";
+    $scope =~ s/^all,//;
+    if ( $g_str && $g_str->{Scope} eq $scope ) {
+        return $g_str;
+    }
+    my @f = (
+        "strassen",
+        ( $scope =~ /region/ ? "landstrassen" : () ),
+        ( $scope eq 'wideregion' ? "landstrassen2" : () ),
+    );
+
+    if ( $q->param("addnet") ) {
+        for my $addnet ( $q->param("addnet") ) {
+            if ( $addnet =~ /^(?:  )$/x ) {    # no addnet support for now
+                push @f, $addnet;
+            }
+        }
+    }
+
+    # XXX do not use Strassen::StrassenNetz::add_faehre, so better
+    # display in route list is possible
+    if ( defined $q->param('pref_ferry') && $q->param('pref_ferry') eq 'use' ) {
+        push @f, 'faehren';
+    }
+
+    # Should be last:
+    if ( defined $q->param("pref_fragezeichen")
+        && $q->param("pref_fragezeichen") eq 'yes' )
+    {
+        push @f, "fragezeichen";
+    }
+
+    my $use_cooked_street_data = $use_cooked_street_data;
+    while (1) {
+        my @f = @f;
+        if ($use_cooked_street_data) {
+            @f = map {
+
+                # Note: no "cooked" version for faehren available
+                $_ eq "faehren" ? $_ : "$_-cooked"
+            } @f;
+        }
+        eval {
+            if ( @f == 1 )
+            {
+                $g_str = new Strassen $f[0];
+            }
+            else {
+                $g_str = new MultiStrassen @f;
+            }
+        };
+        if ($@) {
+            if ($use_cooked_street_data) {
+                warn
+qq{Maybe the "cooked" version for <@f> is missing? Try again the normal version...};
+                $use_cooked_street_data = 0;
+                next;
+            }
+            else {
+                die $@;
+            }
+        }
+        last;
+    }
+    $g_str->{Scope} = $scope;
+
+    if ( !$use_cooked_street_data ) {
+        my $i_s;
+        eval { $i_s = new Strassen "inaccessible_strassen" };
+        if ($i_s) {
+            $g_str = $g_str->new_with_removed_points($i_s);
+            $g_str->{Scope} = $scope;
+        }
+    }
+
+    $crossings = {};
+
+    $g_str;
+}
+
+sub get_nearest_crossing_coords {
+    my ( $x, $y ) = @_;
+    new_kreuzungen();
+    my $xy;
+    while (1) {
+        if ($use_exact_streetchooser) {
+            my $str = get_streets();
+            my $ret = $str->nearest_point( "$x,$y", FullReturn => 1 );
+            $xy = $ret->{Coord};
+            if ( $xy && !$kr->crossing_exists($xy) ) {
+
+         # This may happen, because nearest_point does also return Kurvenpointe,
+         # whereas $kr has only real Kreuzungen. Find a real Kreuzung...
+                my @street_coords =
+                  @{ $ret->{StreetObj}->[ Strassen::COORDS() ] || [] };
+
+                # find this point in @street_coords
+                my $start_index = 0;
+                for ( ; $start_index <= $#street_coords ; $start_index++ ) {
+                    last if ( $street_coords[$start_index] eq $xy );
+                }
+                if ( $start_index > $#street_coords ) {
+
+                    # This may happen if there's really no "nearest point".
+                    # Hopefully we'll get one after incrementing the scope,
+                    # see below.
+                }
+                else {
+                    my $before_xy;
+                    my $after_xy;
+                    for ( my $i = $start_index - 1 ; $i >= 0 ; $i-- ) {
+                        if ( $kr->crossing_exists( $street_coords[$i] ) ) {
+                            $before_xy = $street_coords[$i];
+                            last;
+                        }
+                    }
+                    for (
+                        my $i = $start_index + 1 ;
+                        $i <= $#street_coords ;
+                        $i++
+                      )
+                    {
+                        if ( $kr->crossing_exists( $street_coords[$i] ) ) {
+                            $after_xy = $street_coords[$i];
+                            last;
+                        }
+                    }
+                    if ( !$before_xy && !$after_xy ) {
+                        warn
+"Harmless? Cannot find any real crossing in <@street_coords>\n"
+                          ;    #, scope is <@{[ $q->param('scope') ]}>";
+                    }
+                    else {
+                        if ( $after_xy && $before_xy ) {
+
+                            # choose nearest
+                            if (
+                                Strassen::Util::strecke_s(
+                                    "$x,$y", $before_xy
+                                ) <
+                                Strassen::Util::strecke_s( "$x,$y", $after_xy )
+                              )
+                            {
+                                $xy = $before_xy;
+                            }
+                            else {
+                                $xy = $after_xy;
+                            }
+                        }
+                        elsif ($before_xy) {
+                            $xy = $before_xy;
+                        }
+                        elsif ($after_xy) {
+                            $xy = $after_xy;
+                        }
+                    }
+                }
+
+            }
+        }
+        else {
+            $xy = ( ( $kr->nearest_loop( $x, $y ) )[0] );
+        }
+        last if defined $xy;
+        my $new_scope = increment_scope();
+        last if !defined $new_scope;
+        get_streets_rebuild_dependents();
+    }
+    $xy;
+}
+
+sub usage () {
+    <<EOF;
+usage: $0 [ options ] city 
+
+--debug=0..2      debug level, default $debug
+--poi-file file	  files with points of interests
+EOF
+}
+
+my $help;
+my $ret = GetOptions(
+    "debug=i"    => \$debug,
+    "poi-file=s" => \@poi_files,
+    "help"       => \$help
+);
+
+die usage if $help || !$ret;
+
