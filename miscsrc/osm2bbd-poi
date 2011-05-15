@@ -28,7 +28,7 @@ my $debug = 1;
 my @poi_files =
   qw( _education _oepnv faehren icao kinos kneipen orte rbahnhof restaurants sbahnhof sehenswuerdigkeit ubahnhof);
 
-#push @poi_files, "_building";
+push @poi_files, "_building";
 
 my $use_exact_streetchooser = 1;
 my $use_cooked_street_data;
@@ -279,13 +279,14 @@ sub get_poi {
     my @points;
     foreach my $file (@files) {
         $file = $ENV{'BBBIKE_DATADIR'} . "/$file";
+        my $fh;
 
         if ( !-f $file ) {
             warn "$file does not exists, skip...\n" if $debug >= 1;
             next;
         }
 
-        my $fh;
+        warn "open $file ...\n" if $debug >= 2;
         if ( $file =~ /\.gz$/ ) {
             open $fh, '-|', 'gzip', '-dc', $file
               or die "Can't run zcat on $file: $!";
