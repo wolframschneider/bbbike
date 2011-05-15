@@ -13,6 +13,8 @@ BEGIN {
 
 use Getopt::Long;
 use CGI;
+use Data::Dumper;
+
 use lib '.';
 use lib 'lib';
 use Karte::Polar;
@@ -160,6 +162,9 @@ sub get_nearest_crossing_coords {
             my $str = get_streets();
             my $ret = $str->nearest_point( "$x,$y", FullReturn => 1 );
             $xy = $ret->{Coord};
+
+            print Dumper($ret);
+
             if ( $xy && !$kr->crossing_exists($xy) ) {
 
          # This may happen, because nearest_point does also return Kurvenpointe,
@@ -285,9 +290,9 @@ die usage if $help || !$ret || scalar(@ARGV) <= 0;
 my $city = $ARGV[0];
 unshift( @INC, $ENV{CITY} );
 
-my $poi = $ARGV[1];    # 13.2840194,52.5585185
-my ( $x, $y ) = split ",", $poi;
+my $poi = $ARGV[0];    # 13.2840194,52.5585185
+my ( $x, $y ) = split( ",", $poi );
 
-my $point = get_nearest_crossing_coords( $y, $x ) || "";
+my $point = get_nearest_crossing_coords( $x, $y ) || "";
 print "Nearest point: $point\n";
 
