@@ -1,11 +1,24 @@
 #!/usr/local/bin/perl
 #
 # osm2bbd-poi - for a point of interest (POI), find the nearest cross
+#
+# env CITY=data-osm/Berlin ./miscsrc/osm2bbd-poi data-osm/Berlin 13.2840194,52.5585
 
 use vars qw($VERSION);
 $VERSION = 0.1;
 
+BEGIN {
+    $ENV{'BBBIKE_DATADIR'} = $ENV{'DATA_DIR'} = $ENV{CITY};
+}
+
 use Getopt::Long;
+use CGI;
+use lib '.';
+use lib 'lib';
+use Karte::Polar;
+use Strassen;
+use Strassen::Dataset;
+
 use strict;
 use warnings;
 
@@ -14,12 +27,25 @@ my @poi_files;
 
 my $use_exact_streetchooser = 1;
 my $use_cooked_street_data;
+my $use_polar     = 1;
+my $data_is_wgs84 = 1;
 
-my $q;
+my $q = new CGI;
 my $kr;
 my $str;
 my $crossings;
 my $g_str;
+
+if ($use_polar) {
+    no warnings 'redefine';
+
+    require Strassen::Util;
+    *Strassen::Util::strecke   = \&Strassen::Util::strecke_polar;
+    *Strassen::Util::strecke_s = \&Strassen::Util::strecke_s_polar;
+    if ( defined &StrassenNetz::make_net_PP ) {
+        *StrassenNetz::make_net = \&StrassenNetz::make_net_PP;
+    }
+}
 
 sub new_kreuzungen {
     if ( !$kr ) {
@@ -213,12 +239,35 @@ sub get_nearest_crossing_coords {
         last if !defined $new_scope;
         get_streets_rebuild_dependents();
     }
+
     $xy;
+}
+
+# Increment scope and return the new scope, or undef if the largest scope
+# is already used. Call get_streets_rebuild_dependents after.
+sub increment_scope {
+    my $scope = $q->param("scope") || "";
+    if ( $scope eq "" || $scope eq "city" ) {
+        $scope = "region";
+    }
+    elsif ( $scope eq "region" ) {
+        $scope = "wideregion";
+    }
+    else {
+        return undef;
+    }
+    $q->param( "scope", $scope );
+    $scope;
+}
+
+sub get_streets_rebuild_dependents {
+
+    #$g_str = get_streets();
 }
 
 sub usage () {
     <<EOF;
-usage: $0 [ options ] city 
+usage: env CITY=city $0 [ options ] poi
 
 --debug=0..2      debug level, default $debug
 --poi-file file	  files with points of interests
@@ -232,5 +281,13 @@ my $ret = GetOptions(
     "help"       => \$help
 );
 
-die usage if $help || !$ret;
+die usage if $help || !$ret || scalar(@ARGV) <= 0;
+my $city = $ARGV[0];
+unshift( @INC, $ENV{CITY} );
+
+my $poi = $ARGV[1];    # 13.2840194,52.5585185
+my ( $x, $y ) = split ",", $poi;
+
+my $point = get_nearest_crossing_coords( $y, $x ) || "";
+print "Nearest point: $point\n";
 
