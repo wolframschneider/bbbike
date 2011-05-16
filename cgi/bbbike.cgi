@@ -1636,30 +1636,40 @@ sub old_new_streetname {
    return $street;
 }
 
+sub Param {
+    my $name = shift;
+
+    my $val = $q->param($name);
+
+    $val = "" if $val =~ /[<>]/;
+
+    return $val;
+}
+
 sub choose_form {
-    my $startname = $q->param('startname') || '';
-    my $start2    = $q->param('start2')    || '';
-    my $start     = $q->param('start')     || '';
-    my $startplz  = $q->param('startplz')  || '';
-    my $starthnr  = $q->param('starthnr')  || '';
-    my $startc    = $q->param('startc')    || '';
-    my $startort  = $q->param('startort')  || '';
+    my $startname = Param('startname') || '';
+    my $start2    = Param('start2')    || '';
+    my $start     = Param('start')     || '';
+    my $startplz  = Param('startplz')  || '';
+    my $starthnr  = Param('starthnr')  || '';
+    my $startc    = Param('startc')    || '';
+    my $startort  = Param('startort')  || '';
 
-    my $vianame   = $q->param('vianame')   || '';
-    my $via2      = $q->param('via2')      || '';
-    my $via       = $q->param('via')       || ($use_via ? '' : 'NO');
-    my $viaplz    = $q->param('viaplz')    || '';
-    my $viahnr    = $q->param('viahnr')    || '';
-    my $viac      = $q->param('viac')      || '';
-    my $viaort    = $q->param('viaort')    || '';
+    my $vianame   = Param('vianame')   || '';
+    my $via2      = Param('via2')      || '';
+    my $via       = Param('via')       || ($use_via ? '' : 'NO');
+    my $viaplz    = Param('viaplz')    || '';
+    my $viahnr    = Param('viahnr')    || '';
+    my $viac      = Param('viac')      || '';
+    my $viaort    = Param('viaort')    || '';
 
-    my $zielname  = $q->param('zielname')  || '';
-    my $ziel2     = $q->param('ziel2')     || '';
-    my $ziel      = $q->param('ziel')      || '';
-    my $zielplz   = $q->param('zielplz')   || '';
-    my $zielhnr   = $q->param('zielhnr')   || '';
-    my $zielc     = $q->param('zielc')     || '';
-    my $zielort   = $q->param('zielort')   || '';
+    my $zielname  = Param('zielname')  || '';
+    my $ziel2     = Param('ziel2')     || '';
+    my $ziel      = Param('ziel')      || '';
+    my $zielplz   = Param('zielplz')   || '';
+    my $zielhnr   = Param('zielhnr')   || '';
+    my $zielc     = Param('zielc')     || '';
+    my $zielort   = Param('zielort')   || '';
 
     my $nl = sub {
 	if ($bi->{'can_table'}) {
