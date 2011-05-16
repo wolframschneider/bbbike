@@ -43,3 +43,5 @@ cgi/area.cgi
 data-osm.bbbike.tgz
 data-osm.bbbike/
 data-osm.old/
+/nytprof.out*
+/nytprof/
