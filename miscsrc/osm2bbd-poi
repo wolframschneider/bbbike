@@ -391,6 +391,7 @@ usage: env CITY=city $0 [ options ] poi
 
 --debug=0..2      debug level, default $debug
 --poi-file file	  files with points of interests
+--poi=x,y	  GPS coordinates
 EOF
 }
 
