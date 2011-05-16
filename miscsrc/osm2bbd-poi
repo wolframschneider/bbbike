@@ -26,9 +26,9 @@ use warnings;
 
 my $debug = 1;
 my @poi_files =
-  qw( _education.gz _oepnv.gz faehren icao kinos kneipen orte rbahnhof restaurants sbahnhof sehenswuerdigkeit ubahnhof);
+  qw( _education.gz _oepnv.gz _education _oepnv faehren icao kinos kneipen orte rbahnhof restaurants sbahnhof sehenswuerdigkeit ubahnhof);
 
-push @poi_files, "_building.gz";
+push @poi_files, ("_building.gz", "_building");
 
 #@poi_files = qw( _oepnv faehren icao orte rbahnhof sbahnhof ubahnhof);
 
