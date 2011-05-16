@@ -387,7 +387,7 @@ EOF
 
 sub usage () {
     <<EOF;
-usage: env CITY=city $0 [ options ] poi
+usage: env CITY=data-osm/<city> $0 [ options ] poi
 
 --debug=0..2      debug level, default $debug
 --poi-file file	  files with points of interests
@@ -409,6 +409,10 @@ my $ret = GetOptions(
 );
 
 die usage if $help || !$ret;
+if ( !$ENV{'BBBIKE_DATADIR'} ) {
+    warn "No city defined!\n";
+    die usage;
+}
 
 my @points;
 
