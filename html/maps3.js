@@ -1103,12 +1103,12 @@ function getStreet(map, city, street, strokeColor) {
                     map: map
                 });
 
-                google.maps.event.addListener(marker, "click", 
-			function(marker, street) {
-			    return function(event) { addInfoWindow(marker, street); }
-			} ( marker, street)
-		);
- 
+                google.maps.event.addListener(marker, "click", function (marker, street) {
+                    return function (event) {
+                        addInfoWindow(marker, street);
+                    }
+                }(marker, street));
+
                 if (streets_list.length <= 10) {
                     addInfoWindow(marker, street);
                 }
