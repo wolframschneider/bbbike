@@ -29,7 +29,7 @@ my $debug = 1;
 my @poi_files =
   qw( _education _oepnv faehren icao kinos kneipen orte rbahnhof restaurants sbahnhof sehenswuerdigkeit ubahnhof);
 
-push @poi_files, ( "_building", "kinos" );
+push @poi_files, ("_building");
 
 #@poi_files = qw( _oepnv faehren icao orte rbahnhof sbahnhof ubahnhof);
 
@@ -44,9 +44,9 @@ my $str;
 my $crossings;
 my $g_str;
 
-my $enable_bus_stations = 0;
+my $enable_bus_stations  = 0;
 my $enable_tram_stations = 0;
-my $sort_entries        = 1;
+my $sort_entries         = 1;
 
 # foo -> S foo
 # bar -> U bar
@@ -354,11 +354,11 @@ sub get_poi_fh {
         $type =~ s/:.*//;
 
         # ignore bus stations
-        next if !$enable_bus_stations && $type eq 'Busstop';
+        next if !$enable_bus_stations  && $type eq 'Busstop';
         next if !$enable_tram_stations && $type eq 'Tramstop';
 
-	# ignore incomplete entries	
-	next if $poi eq "" || $type eq "" || $first_coord eq "";
+        # ignore incomplete entries
+        next if $poi eq "" || $type eq "" || $first_coord eq "";
 
         # train stations
         if ( $file_type && $enable_stations_prefix ) {
