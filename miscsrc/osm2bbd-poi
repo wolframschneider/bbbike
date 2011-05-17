@@ -357,6 +357,9 @@ sub get_poi_fh {
         next if !$enable_bus_stations && $type eq 'Busstop';
         next if !$enable_tram_stations && $type eq 'Tramstop';
 
+	# ignore incomplete entries	
+	next if $poi eq "" || $type eq "" || $first_coord eq "";
+
         # train stations
         if ( $file_type && $enable_stations_prefix ) {
             $poi = "$file_type $poi";
