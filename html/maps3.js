@@ -1096,13 +1096,19 @@ function getStreet(map, city, street, strokeColor) {
                 if (streets_route.length > 0) {
                     pos = Math.ceil((streets_route.length - 1) / 2);
                 }
+
                 var marker = new google.maps.Marker({
                     position: streets_route[pos],
                     icon: '/images/mm_20_green.png',
                     map: map
                 });
 
-                // google.maps.event.addListener(marker, "click", function(event) { addInfoWindow(marker, street) } );
+                google.maps.event.addListener(marker, "click", function (marker, street) {
+                    return function (event) {
+                        addInfoWindow(marker, street);
+                    }
+                }(marker, street));
+
                 if (streets_list.length <= 10) {
                     addInfoWindow(marker, street);
                 }
