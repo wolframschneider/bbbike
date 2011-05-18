@@ -63,6 +63,7 @@ my $splitlonglines = 1; # XXX this may change once BBBikeXS has no length restri
 my $xmlparser;
 my %height_db;
 my $height_db_file;
+my $no_create;
 
 my %experiments;
 my %known_experiments = map {($_,1)} qw(add_postal_code coastline_hack polar_coord_hack handle_relations);
@@ -95,6 +96,7 @@ usage: $0 [-v] [-f] [-encoding enc] [-center lon,lat] [-map bbbike [-centerdelta
 -height_db=file   read height values from database. Same format as ./hoehe
 osmfile ...       Files downloaded by downloadosm,
                   or directory containing .osm files
+-no-create	  do not store create date and cwd
 EOF
 }
 
@@ -105,6 +107,7 @@ my $cwd = cwd;
 GetOptions("o=s" => \$o,
 	   "f" => \$f,
 	   "v" => \$v,
+	   "no_create" => \$no_create,
 	   "debug=i" => \$debug,
 	   "map=s" => \$map,
 	   "height_db=s" => \$height_db_file,
@@ -1951,6 +1954,12 @@ sub output_meta {
 	    }
 	    $meta{skip_features}->{$feature_name} = 1;
 	}
+    }
+
+    if ($no_create) {
+	undef $meta{created};
+	undef $meta{created_by};
+	undef $meta{creation_cwd};
     }
 
     open my $ofh, ">", $meta_file_dd."~"
