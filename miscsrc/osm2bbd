@@ -93,7 +93,7 @@ usage: $0 [-v] [-f] [-encoding enc] [-center lon,lat] [-map bbbike [-centerdelta
 -ignore-unhandled do not create the _unhandled layer
 -ignore-underline do not create any of the "_*" layers
 -experiment ...   Turn on experimental features (may be given multiple times).
--height_db=file   read height values from database. Same format as ./hoehe
+-height-db=file   read height values from database. Same format as ./hoehe
 osmfile ...       Files downloaded by downloadosm,
                   or directory containing .osm files
 -no-create	  do not store create date and cwd
@@ -107,10 +107,10 @@ my $cwd = cwd;
 GetOptions("o=s" => \$o,
 	   "f" => \$f,
 	   "v" => \$v,
-	   "no_create" => \$no_create,
+	   "no-create" => \$no_create,
 	   "debug=i" => \$debug,
 	   "map=s" => \$map,
-	   "height_db=s" => \$height_db_file,
+	   "height-db=s" => \$height_db_file,
 	   "center=s" => \$center,
 	   "centerdelta=s" => \$center_delta,
 	   "encoding=s" => \$encoding,
