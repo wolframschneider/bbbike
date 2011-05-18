@@ -244,5 +244,8 @@ return {
     "Route"                                                  => "route",
     "Strassennamen"                                          => "street names",
     "Was gibt es Neues auf BBBike.org"                       => "What's new on BBBike.org",
+    'Radweg'                                                 => 'cycle path',
+    'Radspur'                                                => 'cycle lane',
+    'Fahrradstraße'                                          => 'cycle street',
 };
 
