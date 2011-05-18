@@ -184,7 +184,7 @@ sub get_nearest_crossing_coords {
             my $ret = $str->nearest_point( "$x,$y", FullReturn => 1 );
             $xy = $ret->{Coord};
 
-            print Dumper($ret) if $debug >= 2;
+            print Dumper($ret) if $debug >= 3;
 
             if ( $xy && !$kr->crossing_exists($xy) ) {
 
@@ -400,6 +400,12 @@ usage: env CITY=data-osm/<city> $0 [ options ] poi
 EOF
 }
 
+sub is_gps_point {
+    my $point = shift;
+
+    return $point =~ /^[\d\-\+\.]+,[\d\-\+\.]+$/ ? 1 : 0;
+}
+
 binmode \*STDIN,  ":utf8";
 binmode \*STDOUT, ":utf8";
 binmode \*STDERR, ":utf8";
@@ -437,7 +443,12 @@ foreach my $file (@poi_files) {
     my $t0 = [gettimeofday];
     foreach my $poi (@points) {
         my $point = get_nearest_crossing_coords( $poi->[2] ) || "";
-        push @data, $poi->[0] . "\t" . $poi->[1] . " $point\n";
+        if ( $poi->[0] ne "" && $poi->[1] ne "" && is_gps_point($point) ) {
+            push @data, $poi->[0] . "\t" . $poi->[1] . " $point\n";
+        }
+        elsif ($debug) {
+            warn join( ":", @$poi, $point ), "\n";
+        }
     }
 
     my $elapsed = int( tv_interval($t0) * 100 ) / 100;
