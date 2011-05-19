@@ -30,7 +30,7 @@ my @poi_files =
   qw( _education _oepnv faehren icao kinos kneipen orte rbahnhof restaurants sbahnhof sehenswuerdigkeit ubahnhof);
 
 push @poi_files, ("_building");
-@poi_files = ("b");
+#@poi_files = ("b");
 
 #@poi_files = qw( _oepnv faehren icao orte rbahnhof sbahnhof ubahnhof);
 
