@@ -30,6 +30,7 @@ my @poi_files =
   qw( _education _oepnv faehren icao kinos kneipen orte rbahnhof restaurants sbahnhof sehenswuerdigkeit ubahnhof);
 
 push @poi_files, ("_building");
+@poi_files = ("b");
 
 #@poi_files = qw( _oepnv faehren icao orte rbahnhof sbahnhof ubahnhof);
 
@@ -51,6 +52,9 @@ my $sort_entries         = 1;
 # foo -> S foo
 # bar -> U bar
 my $enable_stations_prefix = 1;
+
+# old or other names
+my $oldnames = 1;
 
 if ($use_polar) {
     no warnings 'redefine';
@@ -343,7 +347,16 @@ sub get_poi_fh {
     binmode $fh, ":utf8";
 
     my @p;
+    my @p_old;
+    my $flag = 0;
     while (<$fh>) {
+        chomp;
+        if ( $oldnames && /^#:\s+\w+_name:\s+/ ) {
+            push @p_old, [$_];
+            $flag = $.;    # current line for next real entry
+            next;
+        }
+
         next if /^\s*#/;
         next if /^\s+/;
         next if /^\s*$/;
@@ -364,6 +377,12 @@ sub get_poi_fh {
         if ( $file_type && $enable_stations_prefix ) {
             $poi = "$file_type $poi";
         }
+
+        # alias, old names for a *known* point
+        if ( $flag + 1 == $. ) {
+            push @p, @p_old;
+        }
+        undef @p_old;
 
         push @p, [ $poi, $type, $first_coord ];
     }
@@ -395,6 +414,7 @@ sub usage () {
 usage: env CITY=data-osm/<city> $0 [ options ] poi
 
 --debug=0..2      debug level, default $debug
+--oldnames=0|1    keep alias, historic or nick names
 --poi-file file	  files with points of interests
 --poi=x,y	  GPS coordinates
 EOF
@@ -416,6 +436,7 @@ my $ret = GetOptions(
     "debug=i"    => \$debug,
     "poi-file=s" => \@poi_files,
     "poi=s"      => \$poi,
+    "oldnames=i" => \$oldnames,
     "help"       => \$help
 );
 
@@ -423,6 +444,11 @@ die usage if $help || !$ret;
 if ( !$ENV{'BBBIKE_DATADIR'} ) {
     warn "No city defined!\n";
     die usage;
+}
+
+if ( $sort_entries && $oldnames ) {
+    warn "ignore sorting names if oldnames is enabled!\n";
+    $sort_entries = 0;
 }
 
 my @points;
@@ -442,6 +468,11 @@ foreach my $file (@poi_files) {
     my @data;
     my $t0 = [gettimeofday];
     foreach my $poi (@points) {
+        if ( $oldnames && $poi->[0] =~ /^#/ ) {
+            push @data, $poi->[0] . "\n";
+            next;
+        }
+
         my $point = get_nearest_crossing_coords( $poi->[2] ) || "";
         if ( $poi->[0] ne "" && $poi->[1] ne "" && is_gps_point($point) ) {
             push @data, $poi->[0] . "\t" . $poi->[1] . " $point\n";
