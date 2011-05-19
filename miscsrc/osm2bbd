@@ -1512,11 +1512,13 @@ for my $osm_file (@osm_files) {
 			}
 		    }
  		}
-		if (exists $tag{'old_name'}) {
-		    push @{$out{$out_file}}, ["#: oldname: $tag{old_name}"];
-		}
-		if (exists $tag{'alt_name'}) {
-		    push @{$out{$out_file}}, ["#: alias: $tag{alt_name}"];
+
+		# local, official, historical, regional names etc:  
+		# http://wiki.openstreetmap.org/wiki/Key:name
+	      	foreach my $key (qw/int_name nat_name reg_name loc_name old_name alt_name official_name/) {
+		    if (exists $tag{$key}) {
+		    	push @{$out{$out_file}}, ["#: $key: $tag{$key}"];
+		    }
 		}
 
 		if ((exists $tag{'width'} || exists $tag{'est_width'}) && $out_file eq 'strassen') {
