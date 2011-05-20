@@ -1631,7 +1631,12 @@ sub get_bbox_wgs84 {
 sub old_new_streetname {
    my $street = shift;
 
+   my $s = $street;
    $street =~ s,.*?[=\-]>\s+,,;
+
+   if ($debug && $s ne $street) {
+      warn "Rewrite street name: '$s' to '$street'\n";
+   }
 
    return $street;
 }
@@ -1641,7 +1646,12 @@ sub Param {
 
     my $val = $q->param($name);
 
-    $val = "" if $val =~ /[<>]/;
+    my $v = $val;
+    $val = "" if $val =~ /[<]/;
+    
+    if ($debug && $v ne $val) {
+	warn "XSS reset parameter: '$v'\n";
+    }
 
     return $val;
 }
