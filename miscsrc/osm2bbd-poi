@@ -368,7 +368,7 @@ sub get_poi_fh {
         $type =~ s/:.*//;
 
         # ignore bus stations
-        next if !$enable_bus_stations  && $type =~ /^Bus/i;
+        next if !$enable_bus_stations && $type =~ /^Bus/i;
         next if !$enable_tram_stations && $type eq 'Tramstop';
 
         # ignore incomplete entries
