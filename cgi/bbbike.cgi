@@ -1466,7 +1466,7 @@ if (defined $q->param('begin')) {
 	  (defined $q->param('ziel') and $q->param('ziel') ne '')
 	 )
 	 and
-	 via_not_needed()
+	 (1 || via_not_needed())
 	) {
     get_kreuzung();
 } elsif (defined $q->param('browser')) {
@@ -3203,7 +3203,7 @@ sub get_kreuzung {
 	$start_str = Param('startname') || Param('start');
     }
     if (!defined $via_str) {
-	$via_str = Param('vianame');
+	$via_str = Param('vianame') || Param('via');
     }
     if (defined $via_str && $via_str =~ /^\s*$/) {
 	undef $via_str;
