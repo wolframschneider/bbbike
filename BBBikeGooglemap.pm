@@ -301,7 +301,8 @@ EOF
     }
 
     my $viac = $q->param('viac') || "";
-    my $route_points = to_array( $$route[0], $$route[-1] );
+    my $route_points =
+      scalar(@$route) >= 2 ? to_array( $$route[0], $$route[-1] ) : "";
     if ( $viac && grep { $viac eq $_ } @$route ) {
         $route_points .= ", " . &to_array($viac);
     }
