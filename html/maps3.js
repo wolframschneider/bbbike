@@ -1893,20 +1893,24 @@ function loadRoute(opt) {
 
 
 function RouteMarker(opt) {
-    var len = marker_list.length;
-    var point = new google.maps.LatLng(marker_list[0][0], marker_list[0][1]);
-    var point2 = new google.maps.LatLng(marker_list[len - 1][0], marker_list[len - 1][1]);
 
-    var marker = new google.maps.Marker({
-        position: point,
-        icon: '/images/mm_20_green.png',
-        map: map
-    });
-    var marker2 = new google.maps.Marker({
-        position: point2,
-        // icon: '/images/mm_20_red.png',
-        map: map
-    });
+    // up to 3 markers: [ start, dest, via ]
+    var icons = ['/images/mm_20_green.png', '/images/mm_20_red.png', '/images/mm_20_white.png'];
+    for (var i = 0; i < marker_list_points.length; i++) {
+        var point = new google.maps.LatLng(marker_list_points[i][0], marker_list_points[i][1]);
+
+        var marker = new google.maps.Marker({
+            position: point,
+            icon: icons[i],
+            map: map
+        });
+
+        google.maps.event.addListener(marker, "click", function (marker) {
+            return function (event) {
+                addInfoWindow(marker)
+            };
+        }(marker));
+    }
 
     function driving_time(driving_time) {
         var data = "";
@@ -1917,13 +1921,6 @@ function RouteMarker(opt) {
         }
         return data;
     }
-
-    google.maps.event.addListener(marker, "click", function (event) {
-        addInfoWindow(marker)
-    });
-    google.maps.event.addListener(marker2, "click", function (event) {
-        addInfoWindow(marker2)
-    });
 
     function addInfoWindow(marker) {
         if (infoWindow) {
@@ -1936,11 +1933,11 @@ function RouteMarker(opt) {
 
         var content = "<div id=\"infoWindowContent\">\n"
         content += "City: " + '<a target="_new" href="/' + opt.city + '/">' + opt.city + '</a>' + "<br/>\n";
-        content += "Start: " + opt.startname + "<br/>\n";
+        content += "<img height='12' src='" + icons[0] + "' /> " + "Start: " + opt.startname + "<br/>\n";
         if (opt.vianame && opt.vianame != "") {
-            content += "Via: " + opt.vianame + "<br/>\n";
+            content += "<img height='12' src='" + icons[2] + "' /> " + "Via: " + opt.vianame + "<br/>\n";
         }
-        content += "Destination: " + opt.zielname + "<br/>\n";
+        content += "<img height='12' src='" + icons[1] + "' /> " + "Destination: " + opt.zielname + "<br/>\n";
         content += "Route Length: " + opt.route_length + "km<br/>\n";
         content += "Driving time: " + driving_time(opt.driving_time) + "<br/>\n";
         content += "</div>\n";
