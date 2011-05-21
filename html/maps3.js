@@ -1019,7 +1019,7 @@ var street = "";
 var street_cache = [];
 var data_cache = [];
 
-function getStreet(map, city, street, strokeColor) {
+function getStreet(map, city, street, strokeColor, noCleanup) {
     var streetnames = 3; // if set, display a info window with the street name
     var autozoom = 13; // if set, zoom to the streets
     var url = encodeURI("/cgi/street-coord.cgi?namespace=" + (streetnames ? "3" : "0") + ";city=" + city + "&query=" + street);
@@ -1028,13 +1028,15 @@ function getStreet(map, city, street, strokeColor) {
         strokeColor = "#0000FF";
     }
 
-    // cleanup map
-    for (var i = 0; i < street_cache.length; i++) {
-        street_cache[i].setMap(null);
+    if (!noCleanup) {
+        // cleanup map
+        for (var i = 0; i < street_cache.length; i++) {
+            street_cache[i].setMap(null);
+        }
+        street_cache = [];
     }
 
     // read data from cache
-    street_cache = [];
     if (data_cache[url] != undefined) {
         return plotStreet(data_cache[url]);
     }
@@ -1074,6 +1076,12 @@ function getStreet(map, city, street, strokeColor) {
                 var coords = s[j].split(",");
                 streets_route.push(new google.maps.LatLng(coords[1], coords[0]));
             }
+
+            // only a point, create a list
+            if (streets_route.length == 1) {
+                streets_route[1] = streets_route[0];
+            }
+
             var route = new google.maps.Polyline({
                 path: streets_route,
                 strokeColor: strokeColor,
@@ -1112,7 +1120,9 @@ function getStreet(map, city, street, strokeColor) {
                 if (streets_list.length <= 10) {
                     addInfoWindow(marker, street);
                 }
+
                 street_cache.push(marker);
+
             }
 
         }
@@ -1127,6 +1137,7 @@ function getStreet(map, city, street, strokeColor) {
             var zoom = map.getZoom();
             // do not zoom higher than XY
             map.setZoom(zoom > autozoom ? autozoom : zoom);
+            // alert("zoom: " + zoom);
         }
     }
 
