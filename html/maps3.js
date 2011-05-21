@@ -1271,6 +1271,9 @@ function plotRoute(map, opt, street) {
         var content = "<div id=\"infoWindowContent\">\n"
         content += "City: " + '<a target="_new" href="/' + opt.city + '/">' + opt.city + '</a>' + "<br/>\n";
         content += "Start: " + opt.startname + "<br/>\n";
+        if (opt.vianame && opt.vianame != "") {
+            content += "Via: " + opt.vianame + "<br/>\n";
+        }
         content += "Destination: " + opt.zielname + "<br/>\n";
         content += "Route Length: " + opt.route_length + "km<br/>\n";
         content += "Driving time: " + driving_time(opt.driving_time) + "<br/>\n";
@@ -1879,8 +1882,7 @@ function loadRoute(opt) {
 
     var bounds = new google.maps.LatLngBounds();
     for (var i = 0; i < marker_list.length; i++) {
-        var latlng = new google.maps.LatLng(
-        marker_list[i][0], marker_list[i][1]);
+        var latlng = new google.maps.LatLng(marker_list[i][0], marker_list[i][1]);
         addMarker(latlng, false);
         bounds.extend(latlng);
     }
@@ -1935,6 +1937,9 @@ function RouteMarker(opt) {
         var content = "<div id=\"infoWindowContent\">\n"
         content += "City: " + '<a target="_new" href="/' + opt.city + '/">' + opt.city + '</a>' + "<br/>\n";
         content += "Start: " + opt.startname + "<br/>\n";
+        if (opt.vianame && opt.vianame != "") {
+            content += "Via: " + opt.vianame + "<br/>\n";
+        }
         content += "Destination: " + opt.zielname + "<br/>\n";
         content += "Route Length: " + opt.route_length + "km<br/>\n";
         content += "Driving time: " + driving_time(opt.driving_time) + "<br/>\n";

@@ -161,6 +161,20 @@ sub bbbike_converter {
 
 sub polar_converter { @_[ 0, 1 ] }
 
+sub to_array {
+    my @coords = @_;
+
+    my $marker_list = '';
+    foreach my $c (@coords) {
+        next if $c !~ /,/;
+
+        my ( $y, $x ) = split( /,/, $c );
+        $marker_list .= qq/[$x,$y],/;
+    }
+    $marker_list =~ s/,\s*$//;
+    return $marker_list;
+}
+
 sub get_html {
     my (
         $self,       $paths_polar, $paths_route, $wpts,
@@ -177,25 +191,8 @@ sub get_html {
     my $coords = $$paths_polar[0];
     my $route  = $$paths_route[0];
 
-    my $marker_list = '[';
-    foreach my $c ( @{$coords} ) {
-        next if $c !~ /,/;
-
-        my ( $y, $x ) = split( /,/, $c );
-        $marker_list .= qq/[$x,$y],/;
-    }
-    $marker_list =~ s/,\s*$/]/;
-
-    my $route_list = '';
-    foreach my $c ( @{$route} ) {
-        next if $c !~ /,/;
-
-        my ( $y, $x ) = split( /,/, $c );
-        $route_list .= qq/[$x,$y], /;
-    }
-    $route_list =~ s/,\s*$//;
-
-    #warn Dumper($marker_list);
+    my $marker_list = "[" . &to_array( @{$coords} ) . "]";
+    my $route_list  = &to_array(@$route);
 
     my ( $centerx, $centery );
     if ($center) {
@@ -281,9 +278,10 @@ sub get_html {
 
     my $startname    = Encode::decode( utf8 => $q->param('startname') );
     my $zielname     = Encode::decode( utf8 => $q->param('zielname') );
+    my $vianame      = Encode::decode( utf8 => $q->param('vianame') || "" );
     my $driving_time = Encode::decode( utf8 => $q->param('driving_time') );
     my $route_length = Encode::decode( utf8 => $q->param('route_length') );
-    my $zoom_param   = $q->param('zoom_param');
+    my $zoom_param = $q->param('zoom_param');
 
     my $html = "";
 
@@ -300,6 +298,12 @@ div#BBBikeGooglemap {
 }
 </style>
 EOF
+    }
+
+    my $viac = $q->param('viac') || "";
+    my $route_points = to_array( $$route[0], $$route[-1] );
+    if ( $viac && grep { $viac eq $_ } @$route ) {
+        $route_points .= ", " . &to_array($viac);
     }
 
     $html .= <<EOF;
@@ -324,6 +328,8 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
 
     var marker_list = [ $route_list ];
 
+    var marker_list_points = [ $route_points ];
+
     city = "$city";
     bbbike_maps_init("default", $marker_list, "$lang", false, "$region", "$zoom_param" );
 
@@ -340,6 +346,7 @@ elevation_initialize(map, {
 	"city":"$city",
 	"startname":"$startname",
 	"zielname": "$zielname",
+	"vianame": "$vianame",
 	"maptype":"cycle"
 });
 EOF
