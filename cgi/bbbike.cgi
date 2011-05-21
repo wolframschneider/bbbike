@@ -108,7 +108,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $no_input_streetname
 	    $enable_opensearch_suggestions
 	    $enable_current_weather
-	    $warn_message $use_utf8 $use_via
+	    $warn_message $use_utf8 $use_via $enable_via_hide
 	    $enable_google_analytics
 	    $with_green_ways
             $no_teaser $no_teaser_right $teaser_bottom
@@ -1724,7 +1724,6 @@ sub choose_form {
     if (defined $ziel) {
 	$ziel  =~ s/^\s+//; $ziel  =~ s/\s+$//; $ziel  =~ s/\s{2,}/ /g;
     }
-    warn "start: $start, ziel: $ziel, via: $via\n";
 
     foreach ([\$startname, \$start2, \$startoldort, \$startortc, 'start'],
 	     [\$vianame,   \$via2,   \$viaoldort,   \$viaortc,   'via'],
@@ -2229,7 +2228,7 @@ EOF
 	    }
 
             print qq{<span id="housenumber">} . "&nbsp;" . M("Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)") . ":" . "</span>\n";
-	    unless ($via eq 'NO') { print " (" . M("Via ist optional") . ")" }
+	    # unless ($via eq 'NO') { print " (" . M("Via ist optional") . ")" }
 	    #if ($osm_data && $datadir =~ m,data-osm/(.+),) {
 	    #	print qq[, ], M("Stadt"), qq[: $1\n];
 	    #}
@@ -2264,6 +2263,7 @@ EOF
 EOF
     }
 
+    
     print "<table id=inputtable>\n" if ($bi->{'can_table'});
 
     my $shown_unknown_street_helper = 0;
@@ -2294,7 +2294,9 @@ EOF
 
         # print "XXX";
 	if ($bi->{'can_table'}) {
-	    print qq{<tr id=${type}tr $bgcolor_s><td align=center valign=middle width=40><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:8px;" } : "") . qq{src="$imagetype" border=0 alt="} . M($printtype) . qq{"></a></td>};
+	    my $style = $type eq 'via' && $enable_via_hide ? qq{ style="display:none"} : "";
+
+	    print qq{<tr id=${type}tr $style $bgcolor_s><td align=center valign=middle width=40><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:8px;" } : "") . qq{src="$imagetype" border=0 alt="} . M($printtype) . qq{"></a></td>};
 	    my $color = {'start' => '#e0e0e0',
 			 'via'   => '#c0c0c0',
 			 'ziel'  => '#a0a0a0',
@@ -2705,7 +2707,13 @@ function " . $type . "char_init() {}
 //--></script>\n";
         }
 	if ($bi->{'can_table'}) {
-	    print "<td width=40>&nbsp;</td></tr>\n";
+	    if ($type eq 'start') { 
+	    	print qq{<td id="via_message" style="font-size:small" width=40>&nbsp;<a href="javascript:toogleVia('viatr', 'via_message')" title="}, M("add a via point (optional)"), qq{">[via]</a></td></tr>\n};
+	    } elsif ($type eq 'via') { 
+	    	print qq{<td style="font-size:small" width=40>&nbsp;<a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("remove via point (optional)"), qq{">[hide]</a></td></tr>\n};
+	    } else {
+		print qq{<td width=40>&nbsp;</td></tr>\n};
+	    }
 	} else {
 	    print "<p>\n";
 	}

@@ -286,6 +286,22 @@ function show_spinning_wheel() {
     return true;
 }
 
+function toogleVia(via_field, via_message, via_input) {
+    var tag = document.getElementById(via_field);
+    if (!tag) return;
+    tag.style.display = tag.style.display == "none" ? "table-row" : "none";
+
+    tag = document.getElementById(via_message);
+    if (!tag) return;
+    tag.style.display = tag.style.display == "none" ? "table-cell" : "none";
+
+    // reset input field if hiding the via area
+    tag = document.getElementById(via_input);
+    if (!tag) return;
+    tag.value = "";
+}
+
+
 // unknown google maps bug
 // Af[z] is undefined
 // EOF
