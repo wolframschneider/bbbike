@@ -2811,10 +2811,12 @@ EOF
 if ($enable_homemap_streets) {
 
    my $plot_streets = "";
-   foreach my $param (qw/startname vianame zielname/) {
+   my $flag = 0;
+   foreach my $param (qw/startname vianame zielname start ziel start2 ziel2/) {
        my $val = $q->param($param);
        if ($val && $val ne 'NO') {
-	   $plot_streets .= qq{getStreet(map, city, "} . CGI::escapeHTML($val) . qq{", "#0000FF");\n};
+	   $plot_streets .= qq{getStreet(map, city, "} . CGI::escapeHTML($val) . qq{", "#0000FF", $flag);\n};
+	   $flag = 1;
        }
    }
 
