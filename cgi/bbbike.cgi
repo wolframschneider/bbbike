@@ -1653,6 +1653,10 @@ sub Param {
 	warn "XSS reset parameter: '$v'\n";
     }
 
+    $val = &old_new_streetname($val);
+    $val =~ s/^\s+//;
+    $val =~ s/\s+$//;
+
     return $val;
 }
 
@@ -1712,17 +1716,15 @@ sub choose_form {
     # Leerzeichen am Anfang und Ende löschen
     # überflüssige Leerzeichen in der Mitte löschen
     if (defined $start) {
-	$start = &old_new_streetname($start);
 	$start =~ s/^\s+//; $start =~ s/\s+$//; $start =~ s/\s{2,}/ /g;
     }	
     if (defined $via) {
-	$via = &old_new_streetname($via);
 	$via   =~ s/^\s+//; $via   =~ s/\s+$//; $via   =~ s/\s{2,}/ /g;
     }
     if (defined $ziel) {
-	$ziel = &old_new_streetname($ziel);
 	$ziel  =~ s/^\s+//; $ziel  =~ s/\s+$//; $ziel  =~ s/\s{2,}/ /g;
     }
+    warn "start: $start, ziel: $ziel, via: $via\n";
 
     foreach ([\$startname, \$start2, \$startoldort, \$startortc, 'start'],
 	     [\$vianame,   \$via2,   \$viaoldort,   \$viaortc,   'via'],
@@ -3190,16 +3192,16 @@ sub is_streets {
 sub get_kreuzung {
     my($start_str, $via_str, $ziel_str) = @_;
     if (!defined $start_str) {
-	$start_str = $q->param('startname') || $q->param('start');
+	$start_str = Param('startname') || Param('start');
     }
     if (!defined $via_str) {
-	$via_str = $q->param('vianame');
+	$via_str = Param('vianame');
     }
     if (defined $via_str && $via_str =~ /^\s*$/) {
 	undef $via_str;
     }
     if (!defined $ziel_str) {
-	$ziel_str  = $q->param('zielname') ||  $q->param('ziel');
+	$ziel_str  = Param('zielname') ||  Param('ziel');
     }
 
     my $start_plz = $q->param('startplz');
