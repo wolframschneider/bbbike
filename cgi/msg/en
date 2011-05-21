@@ -247,5 +247,8 @@ return {
     'Radweg'                                                                              => 'cycle path',
     'Radspur'                                                                             => 'cycle lane',
     'Fahrradstraße'                                                                       => 'cycle street',
+
+    "Via-Punkt hinzuf&uuml;gen (optional)" => "add a via point (optional)",
+    "Via-Punkt entfernen"                  => "remove via point",
 };
 
