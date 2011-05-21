@@ -2707,10 +2707,10 @@ function " . $type . "char_init() {}
 //--></script>\n";
         }
 	if ($bi->{'can_table'}) {
-	    if ($type eq 'start') { 
-	    	print qq{<td id="via_message" style="font-size:small" width=40>&nbsp;<a href="javascript:toogleVia('viatr', 'via_message')" title="}, M("Via-Punkt hinzuf&uuml;gen (optional)"), qq{">[via]</a></td></tr>\n};
+	    if ($type eq 'ziel') { 
+	    	print qq{<td id="via_message" style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message')" title="}, M("Via-Punkt hinzuf&uuml;gen (optional)"), qq{">[via]</a></td></tr>\n};
 	    } elsif ($type eq 'via') { 
-	    	print qq{<td style="font-size:small" width=40>&nbsp;<a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("Via-Punkt entfernen"), qq{">[hide]</a></td></tr>\n};
+	    	print qq{<td style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("Via-Punkt entfernen"), qq{">[hide]</a></td></tr>\n};
 	    } else {
 		print qq{<td width=40>&nbsp;</td></tr>\n};
 	    }
