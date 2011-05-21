@@ -3297,6 +3297,7 @@ sub get_kreuzung {
     if ((!defined $start and !defined $start_c) ||
 	(!defined $ziel  and !defined $ziel_c)) {
 	local $^W = 0;
+
 	## In the past, I emitted a warning if this happen. But
 	## it seems that there are half-legal use cases, like specifying
 	## a link with just a zielname, so don't warn anymore
@@ -5411,7 +5412,7 @@ EOF
 		    }
 		    print "<td>$fontstr$etappe_comment_html$fontend</td>";
 		}
-		if ($has_fragezeichen_routelist && !$printmode) {
+		if ($has_fragezeichen_routelist && !$printmode && !$osm_data) {
 		    if (defined $fragezeichen_comment && $fragezeichen_comment ne "") {
 
 			# unbekannt oder unvollständig
