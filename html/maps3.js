@@ -1119,7 +1119,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
 
                 var marker = new google.maps.Marker({
                     position: streets_route[pos],
-                    icon: '/images/mm_20_green.png',
+                    icon: bbbike.icons.green,
                     map: map
                 });
 
@@ -1770,7 +1770,7 @@ function elevation_initialize(slippymap, opt) {
             mousemarker = new google.maps.Marker({
                 position: elevations[e.row].location,
                 map: map,
-                icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png"
+                icon: bbbike.icons.purple_dot
             });
         } else {
             mousemarker.setPosition(elevations[e.row].location);
