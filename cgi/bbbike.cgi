@@ -1898,7 +1898,7 @@ sub choose_form {
 		next;
 	    }
 
-	    warn "Suche $$oneref in der PLZ-DB.\n" if $debug;
+	    warn "Suche '$$oneref' in der PLZ-DB.\n" if $debug;
 
 	    # check for given crossings
 	    my $crossing_street;
@@ -1953,7 +1953,7 @@ sub choose_form {
 			    ) {
 		    my($producer, $label) = @$def;
 		    if (my $str = $producer->()) {
-			warn "Suche $$oneref in der $label.\n" if $debug;
+			warn "Suche '$$oneref' in der $label.\n" if $debug;
 			my @res = $str->agrep($$oneref);
 			if (@res) {
 			    my @matches;
