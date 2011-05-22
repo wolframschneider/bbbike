@@ -1283,6 +1283,8 @@ function plotRoute(map, opt, street) {
 
 
     function addInfoWindow(marker) {
+        var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.white];
+
         if (infoWindow) {
             infoWindow.close();
         }
@@ -1297,11 +1299,11 @@ function plotRoute(map, opt, street) {
         });
         var content = "<div id=\"infoWindowContent\">\n"
         content += "City: " + '<a target="_new" href="/' + opt.city + '/">' + opt.city + '</a>' + "<br/>\n";
-        content += "Start: " + opt.startname + "<br/>\n";
+        content += "<img height='12' src='" + icons[0] + "' /> " + "Start: " + opt.startname + "<br/>\n";
         if (opt.vianame && opt.vianame != "") {
-            content += "Via: " + opt.vianame + "<br/>\n";
+            content += "<img height='12' src='" + icons[2] + "' /> " + "Via: " + opt.vianame + "<br/>\n";
         }
-        content += "Destination: " + opt.zielname + "<br/>\n";
+        content += "<img height='12' src='" + icons[1] + "' /> " + "Destination: " + opt.zielname + "<br/>\n";
         content += "Route Length: " + opt.route_length + "km<br/>\n";
         content += "Driving time: " + driving_time(opt.driving_time) + "<br/>\n";
         // pref_cat pref_quality pref_specialvehicle pref_speed pref_ferry pref_unlit
