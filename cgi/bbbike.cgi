@@ -1805,7 +1805,7 @@ sub choose_form {
 		 ($q->param("viac")))) {
 		search_coord();
 	    } else {
-		warn "Wähle Kreuzung für $startname und $zielname (1st)\n"
+		warn "Wähle Kreuzung für '$startname' und '$zielname' (1st)\n"
 		    if $debug;
 		get_kreuzung($startname, $vianame, $zielname);
 	    }
@@ -2096,7 +2096,7 @@ sub choose_form {
 	    last TRY if (((defined $via2 && $via2 ne '') ||
 			  (defined $via  && $via  ne '')) &&
 			 (!defined $vianame || $vianame eq ''));
-	    warn "Wähle Kreuzung für $startname und $zielname (2nd)\n"
+	    warn "Wähle Kreuzung für '$startname' und '$zielname' (2nd)\n"
 	      if $debug;
 	    get_kreuzung($startname, $vianame, $zielname);
 	    return;
