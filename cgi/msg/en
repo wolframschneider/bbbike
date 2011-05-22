@@ -250,5 +250,7 @@ return {
 
     "Via-Punkt hinzuf&uuml;gen (optional)" => "add a via point (optional)",
     "Via-Punkt entfernen"                  => "remove via point",
+    "Karte nach links schieben"            => "move map left",
+    "Karte nach rechts schieben"           => "move map right",
 };
 

@@ -1995,4 +1995,30 @@ function reset() {
     document.getElementById('chart_div').style.display = 'none';
 }
 
+function smallerMap(step, id) {
+    if (!id) id = "BBBikeGooglemap";
+    if (!step) step = 1;
+
+    var tag = document.getElementById(id);
+    if (!tag) return;
+
+    var margin = tag.style.marginLeft || "18.4em";
+
+    // match "18.4em" and increase it by step=1 to 19.4
+    var matches = margin.match(/^([0-9\.\-]+)([a-z]+)$/);
+
+    var unit, m;
+    if (matches) {
+        unit = matches[2];
+        m = parseFloat(matches[0]) + step;
+    } else {
+        m = "0";
+        unit = "em";
+    }
+
+    // alert("foo: " + m + unit);
+    tag.style.marginLeft = m + unit;
+}
+
+
 // EOF
