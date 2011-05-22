@@ -852,6 +852,8 @@ if ($osm_data) {
     require Karte::Polar;
 
     $region = $geo->{"region"} || "other";
+
+    binmode (\*STDERR, ':utf8') if $use_utf8;
 }
 
 if ($lang ne "de") {
