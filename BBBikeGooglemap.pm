@@ -38,7 +38,8 @@ use Encode;
 
 sub new { bless {}, shift }
 
-my $force_utf8 = 1;
+our $force_utf8   = 1;
+our $cgi_utf8_bug = 1;
 
 sub run {
     my $self = shift;
@@ -367,6 +368,19 @@ EOF
 
     # log route queries
     if ( $log_routes && !$cache ) {
+
+        # utf8 fixes
+        if ($cgi_utf8_bug) {
+            foreach my $key (qw/startname zielname vianame/) {
+                my $val = Encode::decode( "utf8", $q->param("vianame") );
+
+                # XXX: have to run decode twice!!!
+                $val = Encode::decode( "utf8", $val );
+
+                $q->param( $key, $val );
+            }
+        }
+
         my $url = $q->url( -query => 1, -full => 1 );
         warn "URL:$url\n";
     }
