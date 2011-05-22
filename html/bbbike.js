@@ -289,11 +289,21 @@ function show_spinning_wheel() {
 function toogleVia(via_field, via_message, via_input) {
     var tag = document.getElementById(via_field);
     if (!tag) return;
-    tag.style.display = tag.style.display == "none" ? "table-row" : "none";
+
+    // IE 6/7 workarounds
+    var table_row = "table-row";
+    var table_cell = "table-cell";
+    var b = navigator.userAgent.toLowerCase();
+    if (/msie [67]/.test(b)) {
+        table_row = "inline";
+        table_cell = "inline";
+    }
+
+    tag.style.display = tag.style.display == "none" ? table_row : "none";
 
     tag = document.getElementById(via_message);
     if (!tag) return;
-    tag.style.display = tag.style.display == "none" ? "table-cell" : "none";
+    tag.style.display = tag.style.display == "none" ? table_cell : "none";
 
     // reset input field if hiding the via area
     tag = document.getElementById(via_input);
