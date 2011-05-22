@@ -2021,7 +2021,7 @@ function smallerMap(step, id) {
     tag.style.marginLeft = m + unit;
 
     matches = width.match(/^([0-9\.\-]+)%$/);
-    width =  parseFloat( matches[0]) + step * -1.3;
+    width = parseFloat(matches[0]) + step * -1.3;
 
     width = (width < 0 || width > 100) ? 100 : width;
     tag.style.width = width + "%";
