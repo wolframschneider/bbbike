@@ -2747,6 +2747,7 @@ function " . $type . "char_init() {}
             my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
 	    my @weather_coords;
 
+
             my $slippymap_url = CGI->new($q);
             $slippymap_url->param('map_menu', '0');
             $slippymap_url->param('maptype', 'mapnik');
@@ -5567,6 +5568,7 @@ EOF
 	    $pdf_url->param( 'coords', $string_rep);
 	    $pdf_url->param( 'startname', Encode::encode( utf8 => $startname));
 	    $pdf_url->param( 'zielname', Encode::encode( utf8 => $zielname));
+	    $pdf_url->param( 'vianame', Encode::encode( utf8 => $vianame));
 	    $pdf_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 
             my $slippymap_url = CGI->new($q);
@@ -5578,10 +5580,12 @@ EOF
 	    $slippymap_url->param( 'coords', $string_rep);
 	    $slippymap_url->param( 'startname', Encode::encode( utf8 => $startname));
 	    $slippymap_url->param( 'zielname', Encode::encode( utf8 => $zielname));
+	    $slippymap_url->param( 'vianame', Encode::encode( utf8 => $vianame));
 	    $slippymap_url->param( 'lang', $lang);
 	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 	    $slippymap_url->param( 'route_length', sprintf("%2.2f", $r->len/1000));
 	    $slippymap_url->param( 'driving_time', $driving_time);
+
 
 	    my $area2 = '';
 	    {
