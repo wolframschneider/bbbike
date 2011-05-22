@@ -3036,16 +3036,7 @@ userdel	q4::inwork; -12545,-698 -12262,-612
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'LS/O-SG33-E/10/124.5',
-         'until' => 1305928800,
-         'text' => 'Zichow: L280, B166: Deckenerneuerung Zichow - Passow ab 18.04.11 Abzw. Zichow gesperrt, 22.11.2010 bis 20.05.2011 ',
-         'from' => 1302991200,
-         'id' => 2200,
-         'data' => 'userdel	2::inwork 52733,87022 52642,86984
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => '106401098',
          'until' => 1309471200,
@@ -3115,6 +3106,39 @@ userdel	q4::inwork; -12545,-698 -12262,-612
          'data' => 'userdel	q4::inwork; 9028,12307 9016,12416 9008,12485
 ',
          'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'INKO_107373',
+         'until' => 1306879199,
+         'text' => 'Hönower Str. (Mahlsdorf) Richtung Hönow zwischen Fritz-Reuter-Str. und Ridbacher Str. Baustelle, Fahrtrichtung gesperrt (bis Ende 05/11) ',
+         'from' => 1305840528,
+         'id' => 2212,
+         'data' => 'userdel	q4::inwork; 24554,12100 24556,12172 24530,12296
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'INKO_105491',
+         'until' => 1309471199,
+         'text' => 'Lahnstr. (Neukölln) Richtung Grenzallee zwischen Karl-Marx-Str. und Naumburger Str. Baustelle, Fahrtrichtung gesperrt (bis Ende 06/11) ',
+         'from' => 1305840720,
+         'id' => 2213,
+         'data' => 'userdel	q4::inwork; 13095,6926 13278,6967
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_017297',
+         'until' => 1306101600,
+         'text' => 'Str. des 17. Juni (Tiergarten) in beiden Richtungen zwischen Y.-Rabin-Str. und Brandenburger Tor, auch Ebertstr. zwischen Behrenstr. und Dorotheenstr. Veranstaltung, Straße vollständig gesperrt (bis 22.05.2011 ca. 24:00 Uhr) ',
+         'from' => 1305840997,
+         'id' => 2214,
+         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8538,12245 8610,12254
+userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+userdel	2::temp 8542,11502 8548,11552
+',
+         'type' => 'gesperrt'
        }
      
 );

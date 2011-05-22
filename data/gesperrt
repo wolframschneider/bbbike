@@ -553,7 +553,7 @@ Huttwiler Weg	1 6913,18460 6961,18453 7035,18413 7098,18383 7120,18295 7071,1823
 Markgrafenstr. (Zehlendorf)	1 475,2811 441,2987
 Bürstadter Weg	1 -847,4553 -760,4542
 Hartmannsweilerweg	1s 16,3744 41,3510 17,3471
-Alsenzer Weg	1s 27751,819 27798,872 27863,943 27968,1060
+Alsenzer Weg	1s 27751,819 27804,878 27863,943 27968,1060
 Fichtenweg	1 -2963,17872 -2949,17946 -2967,18033 -3000,18192
 Johann-Landefeldt-Str.	1 -8598,7018 -8532,7041 -8466,7064 -8404,7087 -8341,7108 -8275,7131 -8207,7156
 Johann-Landefeldt-Str.	1s -8619,7012 -8598,7018
@@ -816,9 +816,11 @@ Mittelstreifen	3nocross::ignrte 19578,6165 19405,6276 19276,6359
 Treskowstr. -> An der Wuhlheide: Mittelstreifen	3::igndisp 19333,6165 19405,6276 19276,6359
 An der Wuhlheide -> Treskowstr.: Mittelstreifen	3::igndisp 19578,6165 19405,6276 19333,6165
 nicht überquerbar	3nocross::ignrte 456,11233 585,11256 704,11273
-Mittelstreifen	3nocross::ignrte -3481,14523 -3498,14413 -3506,14306
-Mittelstreifen mit Zaun	3nocross::ignrte -3498,14413 -3506,14306 -3517,14218
-Altstädter Ring -> Jüdenstr.: Mittelstreifen mit Zaun	3::igndisp -3498,14413 -3506,14306 -3444,14310
+Mittelstreifen	3nocross::ignrte -3481,14523 -3498,14413 -3501,14365 -3506,14306
+Altstädter Ring -> Augusta-Ufer: Mittelstreifen	3::igndisp -3498,14413 -3501,14365 -3440,14498
+Augusta-Ufer -> Altstädter Ring: Mittelstreifen	3::igndisp -3440,14498 -3501,14365 -3506,14306
+Mittelstreifen mit Zaun	3nocross::ignrte -3501,14365 -3506,14306 -3517,14218
+Altstädter Ring -> Jüdenstr.: Mittelstreifen mit Zaun	3::igndisp -3501,14365 -3506,14306 -3444,14310
 Jüdenstr. -> Altstädter Ring: Mittelstreifen mit Zaun	3::igndisp -3444,14310 -3506,14306 -3517,14218
 Mittelstreifen	3nocross::ignrte 6996,3761 6957,3699 6794,3502
 Langkofelweg -> Kaiser-Wilhelm-Str.: Mittelstreifen	3::igndisp 6998,3596 6957,3699 6794,3502
@@ -1121,9 +1123,9 @@ Sieglindestr. -> Bundesallee: Bundesplatztunnel	3::igndisp 5458,7866 5358,7746 5
 unbequem passierbarer Mittelstreifen	3nocross::ignrte 6880,11110 6882,11061 6873,11011 6824,10904
 Herkulesufer -> Schillstr.: unbequem passierbarer Mittelstreifen	3::igndisp 6920,11064 6882,11061 6873,11011
 Klingelhöferstr. -> Herkulesufer: unbequem passierbarer Mittelstreifen	3::igndisp 6880,11110 6882,11061 6920,11064
-Lützowpl. -> Lützowufer: unbequem passierbarer Mittelstreifen	3::igndisp 7002,11034 6873,11011 6732,11106
-Lützowpl. -> Schillstr.: unbequem passierbarer Mittelstreifen	3::igndisp 7002,11034 6873,11011 6824,10904
-Lützowufer -> Lützowpl.: unbequem passierbarer Mittelstreifen	3::igndisp 6732,11106 6873,11011 7002,11034
+Lützowufer -> Lützowufer: unbequem passierbarer Mittelstreifen	3::igndisp 7002,11034 6873,11011 6732,11106
+Lützowufer -> Schillstr.: unbequem passierbarer Mittelstreifen	3::igndisp 7002,11034 6873,11011 6824,10904
+Lützowufer -> Lützowufer: unbequem passierbarer Mittelstreifen	3::igndisp 6732,11106 6873,11011 7002,11034
 Tunneleinfahrt Adenauerplatz	3nocross::ignrte 3852,10236 3874,10153 3906,10035 3930,9919
 Brandenburgische Str. -> Duisburger Str.: Tunneleinfahrt Adenauerplatz	3::igndisp 3852,10236 3874,10153 4183,10144
 Brandenburgische Str. -> Düsseldorfer Str.: Tunneleinfahrt Adenauerplatz	3::igndisp 3874,10153 3906,10035 4151,10026
@@ -1490,8 +1492,8 @@ nicht passierbarer Mittelstreifens	3nocross::ignrte 2560,5044 2587,4965 2615,488
 Thielallee -> Hittorfstr.: nicht passierbarer Mittelstreifens	3::igndisp 2615,4885 2587,4965 2516,4936
 Hittorfstr. -> Thielallee: nicht passierbarer Mittelstreifens	3::igndisp 2516,4936 2587,4965 2560,5044
 Straßenbahntrasse	3nocross::ignrte 11446,13294 11406,13321 11306,13386 11275,13407
-Wadzeckstr. -> Mollstr.: Straßenbahntrasse	3::igndisp 11326,13196 11406,13321 11306,13386
-Mollstr. -> Wadzeckstr.: Straßenbahntrasse	3::igndisp 11446,13294 11406,13321 11326,13196
+Wadzeckstr. -> Mollstr.: Straßenbahntrasse	3::igndisp 11379,13279 11406,13321 11306,13386
+Mollstr. -> Wadzeckstr.: Straßenbahntrasse	3::igndisp 11446,13294 11406,13321 11379,13279
 Mendelssohnstr. -> Mollstr.: Straßenbahntrasse	3::igndisp 11346,13441 11306,13386 11406,13321
 Mollstr. -> Mendelssohnstr.: Straßenbahntrasse	3::igndisp 11275,13407 11306,13386 11346,13441
 Straßenbahntrasse	3nocross::ignrte 11706,13635 11640,13551 11561,13451 11539,13425 11486,13350 11446,13294
@@ -1505,6 +1507,7 @@ Otto-Braun-Str. -> Mendelssohnstr. [Wohngebiet]: Straßenbahntrasse	3::igndisp 11
 Mendelssohnstr. [Wohngebiet] -> Otto-Braun-Str.: Straßenbahntrasse	3::igndisp 11433,13389 11486,13350 11539,13425
 Straßenbahntrasse	3nocross::ignrte 11446,13294 11368,13170 11314,13087
 Wadzeckstr. -> Otto-Braun-Str.: Straßenbahntrasse	3::igndisp 11326,13196 11368,13170 11446,13294
+Otto-Braun-Str. -> Wadzeckstr.: Straßenbahntrasse	3::igndisp 11314,13087 11368,13170 11326,13196
 Mittelstreifen	3nocross::ignrte 11368,13170 11314,13087 11267,13012 11228,12951
 Otto-Braun-Str. -> Str.nbahntrasse: Mittelstreifen	3::igndisp 11267,13012 11314,13087 11230,13134
 Str.nbahntrasse -> Otto-Braun-Str.: Mittelstreifen	3::igndisp 11230,13134 11314,13087 11368,13170
@@ -1670,6 +1673,7 @@ Albrecht-Thaer-Weg -> Schorlemerallee: Mittelstreifen	3::igndisp 3449,6863 3347,
 Straßenbahntrasse	3nocross::ignrte 12396,17514 12436,17682 12467,17814
 Str. 56 -> Berliner Str.: Straßenbahntrasse	3::igndisp 12587,17603 12436,17682 12396,17514
 Berliner Str. -> Str. 56: Straßenbahntrasse	3::igndisp 12467,17814 12436,17682 12587,17603
+tragen (ca. 60 Stufen)	0:100:-55 28016,71
 tragen	0:180:-218 6376,23358
 tragen (ca. 30 Stufen)	0:30:-142 -1711,11452
 tragen	0:30:-140 -1663,11487
@@ -2006,13 +2010,14 @@ Hüttenweg: Sperrung wegen Bau an der Autobahn, wahrscheinlich bis 2012	2:inwork 
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9385,13174
 Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405,12953 14686,12873
 Tiergartenufer: Bauarbeiten, gesperrt	2:inwork 5711,11841 5565,11871
-Bebelplatz: Bauarbeiten, gesperrt	2:inwork 9679,12388 9700,12234
+Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
+Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9801,12245 9795,12293 9780,12401
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10170,12261 10063,12438
 Boyenweg - Uferweg: wegen Bauarbeiten gesperrt	2:inwork 7938,14426 7886,14518
 Treitschkestr.: Bauarbeiten am Kaufhaus, bis 2012	2:inwork 5219,6215 5125,6262 4971,6345
 Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9061,14050 9125,13973
 Ella-Trebe-Str.: Einbahnstraße wegen Bauarbeiten	1s:inwork 7937,13109 7941,13014 7948,12918
-Brüderstr.: Bauarbeiten, gesperrt	2:inwork 10385,11985 10284,12113
+Alex-Wedding-Str.: Bauarbeiten, komplett gesperrt	2:inwork 11085,13239 11045,13183
 Mauerstr.: Einbiegen in die Behrenstr. nicht möglich	3:inwork 9076,12054 9064,12156 9054,12154
 Mauerstr.: Einbiegen in die Behrenstr. nicht möglich	3:inwork 9076,12054 9064,12156 9164,12172
 Behrenstr.: Einbiegen in die Mauerstr. nicht möglich	3:inwork 9054,12154 9064,12156 9076,12054

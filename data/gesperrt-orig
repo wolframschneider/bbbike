@@ -724,7 +724,7 @@ Bürstadter Weg	1 -847,4553 -760,4542
 #: note: "Fährt man verbotenerweise doch verkehrt herum ein, ist ein Ausweichen auf den Gehweg nötig, wenn jemand entgegenkommt, weil zu eng"
 Hartmannsweilerweg	1s:q4 16,3744 41,3510 17,3471
 #: by: ^^^
-Alsenzer Weg	1s:q3 27751,819 27798,872 27863,943 27968,1060
+Alsenzer Weg	1s:q3 27751,819 27804,878 27863,943 27968,1060
 #: by: Ulf Rathje:
 Fichtenweg	1 -2963,17872 -2949,17946 -2967,18033 -3000,18192
 #: by: anonymous
@@ -1009,9 +1009,9 @@ Kniprodestr.: Grünstreifen	3nocross 13654,14905 13749,15013 13838,15113
 An der Wuhlheide: Mittelstreifen	3nocross 19578,6165 19405,6276 19276,6359
 Heerstr.: nicht überquerbar	3nocross 456,11233 585,11256 704,11273
 #: by: Sabine (schaeffler)
-Altstädter Ring: Mittelstreifen	3nocross -3481,14523 -3498,14413 -3506,14306
+Altstädter Ring: Mittelstreifen	3nocross -3481,14523 -3498,14413 -3501,14365 -3506,14306
 #: by: Juliane (alberts...)
-Altstädter Ring: Mittelstreifen mit Zaun	3nocross -3498,14413 -3506,14306 -3517,14218
+Altstädter Ring: Mittelstreifen mit Zaun	3nocross -3501,14365 -3506,14306 -3517,14218
 #: by: Steini (immerlocker)
 Kaiser-Wilhelm-Str.: Mittelstreifen	3nocross 6996,3761 6957,3699 6794,3502
 Alexanderstr.: umbequemes Überqueren wegen Bordsteinen	3nocross 11323,12484 11333,12437 11343,12300
@@ -1282,6 +1282,7 @@ Berliner Str.: Straßenbahntrasse	3nocross 12396,17514 12436,17682 12467,17814
 # Stellen, an denen getragen werden muß:
 # die Zahl hinter dem ":" entspricht ungefähr den verlorenen Sekunden
 # 
+tragen (ca. 60 Stufen)	0:100 28016,71
 #: by: Detlev Deter
 tragen	0:180 6376,23358
 tragen (ca. 30 Stufen)	0:30 -1711,11452
@@ -1751,8 +1752,8 @@ Tor	BNP:5 26888,13976
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
-#: last_checked: 2011-05-04
-#: next_check: 2011-06-15
+#: last_checked: 2011-05-20
+#: next_check: 2011-06-20
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt?
 Niederlagstr.: Bauarbeiten, Fahrbahn und Gehwege gesperrt	2:inwork 9972,12184 9947,12269 9939,12296 9951,12318
 # 
@@ -1774,8 +1775,12 @@ Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405
 #: last_checked: 2011-04-30
 Tiergartenufer: Bauarbeiten, gesperrt	2:inwork 5711,11841 5565,11871
 # 
-#: last_checked: 2011-04-08
-Bebelplatz: Bauarbeiten, gesperrt	2:inwork 9679,12388 9700,12234
+#XXX del --- #: last_checked: 2011-04-08 --- Bebelplatz: Bauarbeiten, gesperrt	2:inwork 9679,12388 9700,12234
+#
+#: last_checked: 2011-05-20 vvv
+Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
+Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9801,12245 9795,12293 9780,12401
+#: last_checked: ^^^
 # 
 #: last_checked: 2011-05-04
 #: next_check: 2011-08-01
@@ -1798,9 +1803,11 @@ Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9061,14050 9125,13973
 #: next_check: 2011-09-01
 Ella-Trebe-Str.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 7937,13109 7941,13014 7948,12918
 # 
-#: last_checked: 2011-03-04
-#: next_check: 2011-05-15
-Brüderstr.: Bauarbeiten, gesperrt	2:inwork 10385,11985 10284,12113
+#XXX del --- #: last_checked: 2011-03-04 --- #: next_check: 2011-05-15 --- Brüderstr.: Bauarbeiten, gesperrt	2:inwork 10385,11985 10284,12113
+# 
+#: last_checked: 2011-05-20
+#: next_check: 2011-08-01
+Alex-Wedding-Str.: Bauarbeiten, komplett gesperrt	2:inwork 11085,13239 11045,13183
 # 
 #: next_check: 2012-06-01 vvv
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4088.html

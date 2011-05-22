@@ -1290,7 +1290,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6704,16898
 	X 8226,11458
 	X -4644,1514
-	F -4847,1417
+	F -4827,1433
 	X 346,4833
 	X 7946,7411
 nur Richtung O	X 8142,7221
@@ -2602,6 +2602,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	B -5882,14210
 	X 14028,5325
 	X 15670,12022
+#: note: Luftbild
+	F 4861,20241
 ################################################################################
 # note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10067917/966975/
