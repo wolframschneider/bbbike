@@ -82,6 +82,18 @@ var bbbike = {
     // delay until we render streets on the map
     streetPlotDelay: 400,
 
+    icons: {
+        "green": '/images/mm_20_green.png',
+        "red": '/images/mm_20_red.png',
+        "white": '/images/mm_20_white.png',
+
+        "blue_dot": "/images/blue-dot.png",
+        "green_dot": "/images/green-dot.png",
+        "purple_dot": "/images/purple-dot.png",
+        "red_dot": "/images/red-dot.png",
+        "yellow_dot": "/images/yellow-dot.png"
+
+    }
 };
 
 var state = {
@@ -1198,14 +1210,35 @@ function plotRoute(map, opt, street) {
 
     var marker = new google.maps.Marker({
         position: r[parseInt(Math.random() * x)],
-        icon: '/images/mm_20_green.png',
+        icon: bbbike.icons.green,
         map: map
     });
     var marker2 = new google.maps.Marker({
         position: r[r.length - 1],
-        icon: '/images/mm_20_red.png',
+        icon: bbbike.icons.red,
         map: map
     });
+
+    google.maps.event.addListener(marker, "click", function (event) {
+        addInfoWindow(marker)
+    });
+    google.maps.event.addListener(marker2, "click", function (event) {
+        addInfoWindow(marker2)
+    });
+
+    if (opt.viac && opt.viac != "") {
+        var coords = opt.viac.split(",");
+        var pos = new google.maps.LatLng(coords[1], coords[0]);
+
+        var marker3 = new google.maps.Marker({
+            position: pos,
+            icon: bbbike.icons.white,
+            map: map
+        });
+        google.maps.event.addListener(marker3, "click", function (event) {
+            addInfoWindow(marker3)
+        });
+    }
 
     function driving_time(driving_time) {
         var data = "";
@@ -1248,12 +1281,6 @@ function plotRoute(map, opt, street) {
         _area_hash[opt.area] = 1;
     }
 
-    google.maps.event.addListener(marker, "click", function (event) {
-        addInfoWindow(marker)
-    });
-    google.maps.event.addListener(marker2, "click", function (event) {
-        addInfoWindow(marker2)
-    });
 
     function addInfoWindow(marker) {
         if (infoWindow) {
@@ -1895,7 +1922,8 @@ function loadRoute(opt) {
 function RouteMarker(opt) {
 
     // up to 3 markers: [ start, dest, via ]
-    var icons = ['/images/mm_20_green.png', '/images/mm_20_red.png', '/images/mm_20_white.png'];
+    var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.white];
+
     for (var i = 0; i < marker_list_points.length; i++) {
         var point = new google.maps.LatLng(marker_list_points[i][0], marker_list_points[i][1]);
 
