@@ -89,7 +89,7 @@ return {
     "in die Fahrzeit einbezogen"                           => "已经计入开车时间",
     "Keine Ampeln"                                         => "没有红绿灯",
     "Liste aller bekannten Stra&szlig;en"                  => "列出所有已知的街道",
-    "via"                                                  => "内经",
+    "via"                                                  => "via",                                                    #"内经",
     "Busspur"                                              => "公交专用道",
     "Gr�ne Wege"                                           => "绿色方法",
     "Hauptstra�e"                                          => "二级公路",
