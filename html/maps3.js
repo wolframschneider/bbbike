@@ -2003,6 +2003,7 @@ function smallerMap(step, id) {
     if (!tag) return;
 
     var margin = tag.style.marginLeft || "18.4em";
+    var width = tag.style.width || "74%";
 
     // match "18.4em" and increase it by step=1 to 19.4
     var matches = margin.match(/^([0-9\.\-]+)([a-z]+)$/);
@@ -2018,6 +2019,12 @@ function smallerMap(step, id) {
 
     // alert("foo: " + m + unit);
     tag.style.marginLeft = m + unit;
+
+    matches = width.match(/^([0-9\.\-]+)%$/);
+    width =  parseFloat( matches[0]) + step * -1.3;
+
+    width = (width < 0 || width > 100) ? 100 : width;
+    tag.style.width = width + "%";
 }
 
 
