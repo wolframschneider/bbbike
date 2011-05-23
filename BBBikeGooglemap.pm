@@ -38,11 +38,10 @@ use Encode;
 
 sub new { bless {}, shift }
 
-my $force_utf8 = 1;
+our $force_utf8   = 1;
+our $cgi_utf8_bug = 1;
 
 sub run {
-
-    #my ($self, $q, $gmap_api_version, $lang, $fullscreen) = @_;
     my $self = shift;
     my %args = @_;
 
@@ -50,6 +49,8 @@ sub run {
     my $gmap_api_version = $args{'gmap_api_version'};
     my $lang             = $args{'lang'};
     my $fullscreen       = $args{'fullscreen'};
+    my $cache            = $args{'cache'};
+    my $region           = $args{'region'} || "other";
 
     my $city = $q->param('city') || "";
     if ($city) {
@@ -150,7 +151,7 @@ sub run {
     binmode( \*STDERR, ":utf8" ) if $force_utf8;
 
     print $self->get_html( \@polylines_polar, \@polylines_route, \@wpt, $zoom,
-        $center, $q, $lang, $fullscreen );
+        $center, $q, $lang, $fullscreen, $cache, $region );
 }
 
 sub bbbike_converter {
@@ -161,10 +162,25 @@ sub bbbike_converter {
 
 sub polar_converter { @_[ 0, 1 ] }
 
+sub to_array {
+    my @coords = @_;
+
+    my $marker_list = '';
+    foreach my $c (@coords) {
+        next if $c !~ /,/;
+
+        my ( $y, $x ) = split( /,/, $c );
+        $marker_list .= qq/[$x,$y],/;
+    }
+    $marker_list =~ s/,\s*$//;
+    return $marker_list;
+}
+
 sub get_html {
     my (
-        $self,   $paths_polar, $paths_route, $wpts, $zoom,
-        $center, $q,           $lang,        $fullscreen
+        $self,       $paths_polar, $paths_route, $wpts,
+        $zoom,       $center,      $q,           $lang,
+        $fullscreen, $cache,       $region
     ) = @_;
 
     my $log_routes = 1;
@@ -176,25 +192,8 @@ sub get_html {
     my $coords = $$paths_polar[0];
     my $route  = $$paths_route[0];
 
-    my $marker_list = '[';
-    foreach my $c ( @{$coords} ) {
-        next if $c !~ /,/;
-
-        my ( $y, $x ) = split( /,/, $c );
-        $marker_list .= qq/[$x,$y],/;
-    }
-    $marker_list =~ s/,\s*$/]/;
-
-    my $route_list = '';
-    foreach my $c ( @{$route} ) {
-        next if $c !~ /,/;
-
-        my ( $y, $x ) = split( /,/, $c );
-        $route_list .= qq/[$x,$y], /;
-    }
-    $route_list =~ s/,\s*$//;
-
-    #warn Dumper($marker_list);
+    my $marker_list = "[" . &to_array( @{$coords} ) . "]";
+    my $route_list  = &to_array(@$route);
 
     my ( $centerx, $centery );
     if ($center) {
@@ -280,8 +279,10 @@ sub get_html {
 
     my $startname    = Encode::decode( utf8 => $q->param('startname') );
     my $zielname     = Encode::decode( utf8 => $q->param('zielname') );
+    my $vianame      = Encode::decode( utf8 => $q->param('vianame') || "" );
     my $driving_time = Encode::decode( utf8 => $q->param('driving_time') );
     my $route_length = Encode::decode( utf8 => $q->param('route_length') );
+    my $zoom_param = $q->param('zoom_param');
 
     my $html = "";
 
@@ -300,6 +301,13 @@ div#BBBikeGooglemap {
 EOF
     }
 
+    my $viac = $q->param('viac') || "";
+    my $route_points =
+      scalar(@$route) >= 2 ? to_array( $$route[0], $$route[-1] ) : "";
+    if ( $viac && grep { $viac eq $_ } @$route ) {
+        $route_points .= ", " . &to_array($viac);
+    }
+
     $html .= <<EOF;
 <!-- BBBikeGooglemap starts here -->
 <div id="chart_div" onmouseout="clearMouseMarker()" style="display:none"></div>
@@ -309,6 +317,8 @@ EOF
     $html .=
 qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </script>\n}
       if $gmap_api_version == 2;
+
+    $region = "other" if $region !~ /^(de|eu|other)$/;
 
     $html .= <<EOF;
 
@@ -320,8 +330,10 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
 
     var marker_list = [ $route_list ];
 
+    var marker_list_points = [ $route_points ];
+
     city = "$city";
-    bbbike_maps_init("default", $marker_list, "$lang" );
+    bbbike_maps_init("default", $marker_list, "$lang", false, "$region", "$zoom_param" );
 
 EOF
 
@@ -336,6 +348,7 @@ elevation_initialize(map, {
 	"city":"$city",
 	"startname":"$startname",
 	"zielname": "$zielname",
+	"vianame": "$vianame",
 	"maptype":"cycle"
 });
 EOF
@@ -354,9 +367,22 @@ EOF
 EOF
 
     # log route queries
-    if ($log_routes) {
+    if ( $log_routes && !$cache ) {
+
+        # utf8 fixes
+        if ($cgi_utf8_bug) {
+            foreach my $key (qw/startname zielname vianame/) {
+                my $val = Encode::decode( "utf8", $q->param("vianame") );
+
+                # XXX: have to run decode twice!!!
+                $val = Encode::decode( "utf8", $val );
+
+                $q->param( $key, $val );
+            }
+        }
+
         my $url = $q->url( -query => 1, -full => 1 );
-        warn "$url\n";
+        warn "URL:$url\n";
     }
     return $html;
 }

@@ -89,7 +89,7 @@ Mehringdamm - Baruther	3nocross 9444,9919 9387,9804 9334,9670
 Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
 Hobrechtstr.	1 12003,9105 11998,8872
 Lützowplatz	1 7002,11034 6873,11011
-Romain-Rolland-Str. - Berliner Str.	3 12856,17825 12825,17870 12736,17998 12479,17811
+Romain-Rolland-Str. - Berliner Str.	3 12856,17825 12825,17870 12736,17998 12467,17814
 Mahlower Str.	1 11773,8231 11920,8252
 Essener Str.	1 5889,13032 5993,13064 6114,13095 6183,13083
 Belforter Str. - Heinrich-Roller-Str.	3 11299,14112 11435,14023 11616,13911
@@ -252,8 +252,8 @@ Schlichtallee	3nocross 15639,10469 15758,10578 15982,10765
 Hindenburgdamm	3nocross 4507,4755 4515,4581 4521,4484
 Mariannenplatz - Bethaniendamm	1 11984,11130 12012,11235
 #: by: http://www.bruhaha.de/special/suedkreuz_0612/suedkreuz-06-12-004.html vvv
-Ballonfahrerweg - Werner-Voß-Damm	3 7979,7525 7959,7609 8263,7611
-General-Pape-Str. - Werner-Voß-Damm	3 7921,7728 7959,7609 8263,7611
+Ballonfahrerweg - Werner-Voß-Damm	3 7979,7525 7949,7607 8263,7611
+General-Pape-Str. - Werner-Voß-Damm	3 7935,7736 7949,7607 8263,7611
 #: by: ^^^
 #: by: Michael Kuhlmann:
 Rubensstr. - Baumeisterstr.	3 6389,7196 6367,7356 6283,7231
@@ -331,7 +331,7 @@ Berliner Str.: Mittelstreifen	3nocross 4918,8872 5022,8879 5172,8880 5182,8880 5
 #: note: Luftbild
 Heylstr.: Mittelstreifen	3nocross 6181,8181 6246,8222 6325,8259
 #: note: Luftbild
-Kaiserdamm: Mittelstreifen	3nocross 2191,11451 2282,11463 2390,11468
+Kaiserdamm: Mittelstreifen	3nocross 2191,11451 2282,11463 2391,11478
 Landsberger Allee: Mittelstreifen	3nocross 15838,14319 16008,14340 16310,14378
 #: note: Luftbild
 Daumstr.: Mittelstreifen	3nocross -1485,15463 -1389,15285 -1345,15060
@@ -380,7 +380,7 @@ Lichtenrader Damm: Mittelstreifen	3nocross 10638,403 10676,299 10713,197 10737,1
 #: note: Luftbild: 
 Allee der Kosmonauten: Straßenbahntrasse	3nocross 20281,14361 20269,14256 20241,14016
 #: note: Luftbild: 
-Allee der Kosmonauten: Straßenbahntrasse	3nocross 20771,14500 20822,14594 20868,14698
+Allee der Kosmonauten: Straßenbahntrasse	3nocross 20756,14486 20822,14594 20868,14698
 #: by: HGinzel (offen für Radfahrer): vvv
 Geitelsteig	1 1988,14870 1977,14751 1974,14646
 Schweiggerweg	1 2081,14570 2079,14704 2099,14852
@@ -426,8 +426,6 @@ B110 nach Swinoujscie: kein Grenzübergang für Autos	2 62279,166179 62213,166173
 Neuköllner Str.: Mittelstreifen	3nocross 16643,1460 16698,1392 16815,1278
 Storkower Str.: Mittelstreifen	3nocross 13151,14855 13110,14879 12812,15053
 Hönower Wiesenweg: nur für Anlieger und Radfahrer offen	2:Anlieger 17375,8847 17416,8767 17483,8644 17554,8458 17624,8353 17708,8316 17751,8284
-#: note: Luftbild
-Munsterdamm: Mittelstreifen	3nocross 6787,5459 6767,5233 6747,5010
 #: note: Luftbild
 Mariendorfer Damm: Mittelstreifen	3nocross 9248,4904 9239,4980 9207,5185
 #: note: Luftbild
@@ -580,7 +578,7 @@ Indira-Gandhi-Str.: Straßenbahntrasse	3nocross 14609,15921 14597,15970 14595,159
 Lenther Steig	1 1024,14889 1037,14814 1042,14721
 Hauptstr./Wielandstr.: Mittelstreifen	3nocross 6157,7685 6083,7582 5955,7406
 Fehmarner Str.	1 6710,14776 6528,15000
-Kaiserdamm: Mittelstreifen	3nocross 1962,11417 1837,11398 1629,11363
+Kaiserdamm: Mittelstreifen	3nocross 1960,11426 1834,11408 1625,11380
 #: by: Roland Mohrbacher vvv
 Paplitzer Str.	1 11027,-2448 11080,-2035
 Steinträgerweg: Poller	3 12987,2220 12963,2365 12948,2484
@@ -617,8 +615,8 @@ Neue Filandastr./Filandatr.	3nocross 5687,5486 5671,5389 5659,5313
 Müllerstr.: Mittelstreifen	3nocross 6019,16712 5937,16784 5900,16817 5777,16924
 Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16734,9990 16539,10097 16148,10329
 Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16148,10329 16539,10097 16734,9990
-Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19558,8064 19504,8003 19468,7962
-Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19468,7962 19504,8003 19558,8064
+Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19558,8064 19504,8003 19460,7954
+Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19460,7954 19504,8003 19558,8064
 #: by: MichaelM vvv
 Klapppfosten	3 -1612,2123 -1590,1985 -1592,1852
 Klapppfosten	3 -1592,1852 -1590,1985 -1612,2123
@@ -659,6 +657,7 @@ Rütlistr.: Durchfahrt verboten	2 12565,9200 12490,9056
 #: note: "Für Radfahrer ist in der Gegenrichtung die Benutzung des Gehweges möglich."
 Wustermarker Str.:	1 -4385,14305 -4556,14349
 #: note: public imagery vvv
+Hundekehlestr.: Mittelstreifen	3nocross 2346,7684 2460,7658 2576,7634
 Berliner Str.	3nocross 10859,17854 10871,17722 10892,17491
 Lietzenburger Str.	3nocross 5063,10384 5207,10399 5329,10422
 Greifswalder Str.: Straßenbahntrasse	3nocross 12228,14404 12177,14335 12077,14186
@@ -703,3 +702,28 @@ Teikeweg: Poller	3 9519,4537 9412,4537 *
 Teikeweg: Poller	3 * 9412,4537 9519,4537
 Medebacher Weg: Schranke	3 1886,19835 1896,19801 1945,19622
 Medebacher Weg: Schranke	3 1945,19622 1896,19801 1886,19835
+Dievenowstr.	1 3228,7401 3208,7328 3189,7249 3202,7121
+Abbestr.: nur für Anlieger, herausfahrbare Poller	2 4757,12219 4683,12072
+Knesebeckstr. - Hardenbergstr.	3 4897,11354 4919,11605 4900,11626
+Sakrower Kirchweg	1 -8162,4025 -8255,3946 -8308,3902 -8401,3894 -8449,3907
+Sibeliusweg	1 -6797,4991 -6789,5052 -6787,5076 -6762,5133 -6747,5169
+Angerburger Allee	1 -1524,11108 -1608,11133 -1885,11392 -1931,11437 -1986,11487
+Sensburger Allee	1 200,11428 326,11391 456,11233
+Kyllburger - Darßer Str	3 16670,17454 16779,17521 16751,17560
+Am Steinberg	1 13183,17580 12998,17480
+Schäßburger Weg: Poller	3 7090,-225 7127,-248 7225,-312
+Schäßburger Weg: Poller	3 7225,-312 7127,-248 7090,-225
+Fuchsmühler Weg: Durchfahrt gesperrt	2 7277,-77 7231,25
+Poller	3 7181,-15 7231,25 *
+Poller	3 * 7231,25 7181,-15
+Mittelstreifen	3nocross 9338,4129 9365,4006 9410,3793
+Ontarioseestr.: Sackgasse für Autos	3 18408,10041 18339,10048 *
+Ontarioseestr.: Sackgasse für Autos	3 * 18339,10048 18408,10041
+#: by: Almuth Maasz vvv
+#: note: "für Radfahrer mit Anhänger passierbar"
+Schranke	3 * 11982,21392 11948,21366
+Schranke	3 11948,21366 11982,21392 *
+#: by: ^^^
+#: by: Michael Otto:
+#: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20090220.1035.120888.html (Einbahnstraßen)
+Pestalozzistr.	1 24652,11794 24704,11830 24769,11819

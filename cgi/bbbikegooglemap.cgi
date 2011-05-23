@@ -299,9 +299,13 @@ sub get_html {
     var startIcon = new GIcon(G_DEFAULT_ICON, "$bbbikeroot/images/flag2_bl_centered.png");
     startIcon.iconAnchor = new GPoint(16,16);
     startIcon.iconSize = new GSize(32,32);
+    startIcon.shadow = "$bbbikeroot/images/flag_shadow.png";
+    startIcon.shadowSize = new GSize(45,24);
     var goalIcon = new GIcon(G_DEFAULT_ICON, "$bbbikeroot/images/flag_ziel_centered.png");
     goalIcon.iconAnchor = new GPoint(16,16);
     goalIcon.iconSize = new GSize(32,32);
+    goalIcon.shadow = "$bbbikeroot/images/flag_shadow.png";
+    goalIcon.shadowSize = new GSize(45,24);
     var currentPointMarker = null;
     var currentTempBlockingMarkers = [];
 
@@ -934,8 +938,10 @@ sub get_html {
     //map.setMapType(mapnik_map);
 
     function GetTileUrl_Mapnik(a, z) {
-        return "http://tile.openstreetmap.org/" +
-                    z + "/" + a.x + "/" + a.y + ".png";
+	// select a random server
+	var list = ["a", "b", "c"];
+	var server = list [ parseInt( Math.random() * list.length ) ];
+	return "http://" + server + ".tile.openstreetmap.org/" + z + "/" + a.x + "/" + a.y + ".png";
     }
 
     function GetTileUrl_TaH(a, z) {
@@ -944,8 +950,10 @@ sub get_html {
     }
 
     function GetTileUrl_cycle(a, z) {
-        return "http://a.andy.sandbox.cloudmade.com/tiles/cycle/" +
-                    z + "/" + a.x + "/" + a.y + ".png";
+	// select a random server
+	var list = ["a", "b", "c"];
+	var server = list [ parseInt( Math.random() * list.length ) ];
+	return "http://" + server + ".tile.opencyclemap.org/cycle/" + z + "/" + a.x + "/" + a.y + ".png";
     }
 
     if (GBrowserIsCompatible() ) {

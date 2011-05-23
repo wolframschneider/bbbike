@@ -211,9 +211,19 @@ Auguste-Viktoria-Krankenhaus	F:SW|IMG:hospital 6584,6183 6585,6145 6595,6124 661
 Krankenhaus Waldfriede	SW|IMG:hospital -598,4091
 St.-Josef-Krankenhaus	F:SW|IMG:hospital 8437,8051 8439,7965 8422,7957 8419,7977 8392,7981 8394,8001 8418,8004 8418,8029 8374,8025 8379,7986 8291,7984 8292,8053
 Karl-Bonhoeffer-Nervenklinik	SW|IMG:hospital 5167,19386
-#: alias: Technische Univerität Berlin
+#: alias: Technische Universität Berlin
 #: alias: TU
 Hauptgebäude der TU	F:SW 5181,11748 5071,11735 5068,11762 5047,11759 5059,11675 5271,11703 5257,11785 5236,11782 5242,11756 5217,11753 5207,11788 5181,11785
+#: alias: Beuth Hochschule für Technik Berlin vvv
+#: alias: BHT vvv
+#: oldname: TFH vvv
+Haus Gauß	F:SW 6642,15179 6658,15162 6770,15264 6757,15279
+Haus Grashof	F:SW 6792,15282 6906,15370 6877,15396 6847,15377 6825,15401 6820,15393 6827,15384 6762,15322
+Haus Bauwesen	F:SW 7030,15525 7098,15458 6991,15355 6926,15424
+Haus Beuth	F:SW 6825,15435 6752,15374 6697,15437 6770,15499
+#: oldname: ^^^
+#: alias: ^^^
+#: alias: ^^^
 Ernst-Reuter-Haus	F:SW 5635,11936 5481,11910 5481,11935 5630,11953
 Versuchsanstalt für Wasserbau	F:SW 5701,11755 5692,11720 5593,11745 5604,11782
 #: alias: UdK
@@ -344,6 +354,7 @@ St.-Thomas-Kirche	SW|IMG:church 11963,11100
 #: alias: Dorfkirche Sankt Bartholomäus
 Dorfkirche Stralau	SW|IMG:church 15534,9563
 Dorfkirche Marienfelde	SW|IMG:church 8156,671
+Dorfkirche Mariendorf	SW|IMG:church 9415,3721
 Alte Pfarrkirche Pankow	SW|IMG:church 10615,18349
 St.-Johannes-Basilika	SW|IMG:church 10776,9110
 Sehitlik-Moschee	SW|IMG:mosque 10843,8425
@@ -462,14 +473,17 @@ Markuskirche	SW|IMG:church 6299,4754
 Bethanienkirche	SW|IMG:church 13377,16401
 #: section Erholungspark Marzahn vvv
 #: alias: Erholungspark Marzahn
+#: alias: Gärten der Welt
 Chinesischer Garten	SW 22090,14750
-Japanischer Garten	SW 22297,14957
+Japanischer Garten	SW 22313,14974
 #: alias Koreanischer Garten
-Seouler Garten	SW 22304,15077
-Balinesischer Garten	SW 22163,15074
+Seouler Garten	SW 22283,15062
+Balinesischer Garten	SW 22145,15071
 Orientalischer Garten	SW 22001,15108
 Italienischer Renaissance-Garten	SW 21612,14824
 Irrgarten	SW 21899,14861
+Christlicher Garten	SW 22159,14795
+Karl-Foerster-Staudengarten	SW 22138,14910
 #: section ^^^
 Wasserturm Jungfernheide	IMG:sehenswuerdigkeit_img/wasserturm_jungfernheide|ANCHOR:s 2629,15216
 Betriebshof Niederschönhausen	F:SW 10195,20542 10294,20571 10266,20671 10169,20638
@@ -615,6 +629,9 @@ Britzer Mühle	SW 12590,2948
 #: note: im Botanischen Volkspark Pankow
 Geologische Wand	SW 9509,22054
 #: section ^^^
+Klinikum Buch	SW|IMG:hospital 16007,26291
+Mühle Alt-Gatow	SW -4746,8514
+Luftwaffenmuseum Gatow	SW|IMG:museum -7176,7221
 ######################################################################
 #
 #  POTSDAM

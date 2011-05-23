@@ -1,12 +1,5 @@
 # general
-User-agent: *
-Disallow: /bbbike/cgi
-Disallow: /cgi
-Disallow: /html
-Disallow: /berlin
-Disallow: /bbbike
-Disallow: /osp
-Disallow: /honey
+Sitemap: http://www.bookmaps.org/sitemap.xml.gz
 
 User-agent: Ezooms
 Disallow: /
@@ -26,14 +19,11 @@ Disallow: /
 User-agent: ScoutJet
 Disallow: /
 
-User-agent: Purebot
-Disallow: /
-
 User-agent: MLBot
 Disallow: /
 
 User-agent: sitebot
-disallow: /
+Disallow: /
 
 User-agent: MJ12bot
 Disallow: /
@@ -41,8 +31,17 @@ Disallow: /
 User-agent: Linguee
 Disallow: /
 
+User-agent: discobot
+Disallow: /
 
 User-agent: *
+Disallow: /bbbike/cgi
+Disallow: /cgi
+Disallow: /html
+Disallow: /berlin
+Disallow: /bbbike
+Disallow: /osp
+Disallow: /honey
 Disallow: /da/
 Disallow: /de/
 Disallow: /en/
@@ -80,8 +79,6 @@ Disallow: /m/W
 Disallow: /m/X
 Disallow: /m/Y
 Disallow: /m/Z
-
-User-agent: *
 Disallow: /Aachen/?
 Disallow: /Aarhus/?
 Disallow: /Adelaide/?
@@ -145,6 +142,7 @@ Disallow: /Darmstadt/?
 Disallow: /Davis/?
 Disallow: /DenHaag/?
 Disallow: /Denver/?
+Disallow: /Dessau/?
 Disallow: /Dortmund/?
 Disallow: /Dresden/?
 Disallow: /Dublin/?
@@ -163,6 +161,7 @@ Disallow: /Freiburg/?
 Disallow: /Gdansk/?
 Disallow: /Genf/?
 Disallow: /Gent/?
+Disallow: /Gera/?
 Disallow: /Glasgow/?
 Disallow: /Gliwice/?
 Disallow: /Goerlitz/?
@@ -183,6 +182,7 @@ Disallow: /Istanbul/?
 Disallow: /Jena/?
 Disallow: /Jerusalem/?
 Disallow: /Johannesburg/?
+Disallow: /Kaiserslautern/?
 Disallow: /Karlsruhe/?
 Disallow: /Kassel/?
 Disallow: /Katowice/?
@@ -258,6 +258,7 @@ Disallow: /Ruegen/?
 Disallow: /Saarbruecken/?
 Disallow: /Sacramento/?
 Disallow: /Saigon/?
+Disallow: /Salzburg/?
 Disallow: /SanFrancisco/?
 Disallow: /SanJose/?
 Disallow: /SanktPetersburg/?
@@ -284,8 +285,8 @@ Disallow: /Tokyo/?
 Disallow: /Toronto/?
 Disallow: /Toulouse/?
 Disallow: /Trondheim/?
+Disallow: /Tucson/?
 Disallow: /Turin/?
-Disallow: /Tuscon/?
 Disallow: /UlanBator/?
 Disallow: /Ulm/?
 Disallow: /Usedom/?

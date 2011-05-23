@@ -1,0 +1,11 @@
+# http://download.bbbike.org/osm/planet/
+User-agent: *
+Disallow: /osm/planet/planet
+
+User-agent: Googlebot
+Disallow: *.gz
+Disallow: *.pbf
+Disallow: *.bz2
+Disallow: *.tgz
+Disallow: *.tbz
+

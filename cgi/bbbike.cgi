@@ -5,7 +5,7 @@
 # $Id: bbbike.cgi,v 9.30 2009/04/04 11:13:58 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998-2009 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2011 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -108,12 +108,12 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $no_input_streetname
 	    $enable_opensearch_suggestions
 	    $enable_current_weather
-	    $warn_message $use_utf8 $use_via
+	    $warn_message $use_utf8 $use_via $enable_via_hide
 	    $enable_google_analytics
 	    $with_green_ways
             $no_teaser $no_teaser_right $teaser_bottom
             $slippymap_zoom $slippymap_zoom_maponly $slippymap_zoom_city
-	    $enable_opensearch_plugin $enable_rss_feed
+	    $enable_opensearch_plugin 
 	    $nice_abc_list
 	    $warn_message $use_utf8 $data_is_wgs84
 	    $enable_homemap_streets
@@ -123,6 +123,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_weather_forecast
 	    $enable_facebook_t_link
 	    $enable_twitter_t_link
+	    $enable_rss_feed $enable_rss_icon
 	    $gmapsv3
 	    $facebook_page
 	    $enable_google_adsense
@@ -130,10 +131,11 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_google_adsense_street
 	    $enable_google_adsense_linkblock
 	    $enable_google_adsense_street_linkblock
+	    $enable_panoramio_photos
 	   );
 
 $gmap_api_version = 3;
-$facebook_page = "http://www.facebook.com/pages/BBBike/179755905394369";
+$facebook_page = 'http://www.facebook.com/BBBikeWorld';
 
 # XXX This may be removed one day
 use vars qw($use_cooked_street_data);
@@ -751,6 +753,8 @@ undef $bbbike_html;
 undef $bbbike_images;
 undef $warn_message;
 
+my $google_analytics_uacct = "UA-286675-19";
+
 $lang = "en";
 $config_master = $ENV{'SCRIPT_NAME'};
 
@@ -759,6 +763,7 @@ my $selected_lang = "";
 my @supported_lang = qw/da de en es fr hr nl pl pt ru zh/;
 
 my $time_start = time;
+my $is_streets;
 { my $q = new CGI;
   my $path = $q->url(-full => 0, -absolute => 1);
 
@@ -772,6 +777,25 @@ my $time_start = time;
   $local_lang = &my_lang($lang, 1);
 
   $lang = $local_lang if $local_lang && !$selected_lang;
+  $is_streets = &is_streets($q);
+}
+
+# run cache requests with lower priority
+{
+  my $q = new CGI;
+
+  # /streets.html
+  my $all = defined $q->param('all') ? $q->param('all') : 0;
+
+  if ($q->param('cache') || $all >= 2) {
+     eval {
+	require BSD::Resource;
+
+	my $success = setpriority(0, 0, 15);
+	die "cannot set priority: $$\n" if !$success;
+     };
+     warn "$@" if $@;
+  } 
 }
 
 #warn "xxx: city: $datadir, lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
@@ -791,7 +815,7 @@ if ($config_master =~ m,/index.cgi$,) {
     $config_master = "../../etc/world.cgi";
 }
 
-warn "lang: $lang, config_master: $config_master, do $config_master.config" if $VERBOSE;
+warn "lang: $lang, config_master: $config_master, do $config_master.config" if $VERBOSE >= 2;
 warn "YYY: $config_master.config\n" if ! -f "$config_master.config";
 
 # XXX hier require verwenden???
@@ -810,6 +834,7 @@ my $local_city_name = "";
 my $en_city_name = "";
 my $de_city_name = "";
 my $city_script;
+my $region = "";
 if ($osm_data) {
     $datadir =~ m,data-osm/(.+),;
     my $city = $1;
@@ -825,6 +850,10 @@ if ($osm_data) {
 
     unshift (@INC, "../data-osm/$city") if $city;
     require Karte::Polar;
+
+    $region = $geo->{"region"} || "other";
+
+    binmode (\*STDERR, ':utf8') if $use_utf8;
 }
 
 if ($lang ne "de") {
@@ -835,7 +864,7 @@ if ($lang ne "de") {
 
     no strict "vars";
     if ($msg && ref $msg eq 'HASH') {
-	warn "decode utf8 '$lang' message\n";
+	warn "decode utf8 '$lang' message\n" if $VERBOSE >= 2;
 
     	foreach my $key (keys %$msg) {
 	   $msg->{$key} = Encode::decode("utf-8", $msg->{$key});
@@ -923,7 +952,7 @@ $require_Karte = sub {
     undef $require_Karte;
 };
 
-$VERSION = 10.003;
+$VERSION = 10.004;
 
 use vars qw($font $delim);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
@@ -1163,7 +1192,7 @@ if ($show_weather || $bp_obj) {
 }
 
 $q->delete('Dummy');
-$smallform = $q->param('smallform') || $bi->{'mobile_device'};
+$smallform = $q->param('smallform') || $bi->{'mobile_device'} || $q->virtual_host =~ m{^m\.}; # e.g. m.bbbike.de
 $got_cookie = 0;
 %c = ();
 
@@ -1347,7 +1376,7 @@ if (defined $q->param('begin')) {
     $q->delete('uploadpage');
     $q->delete('gps');
     upload_button();
-} elsif (defined $q->param('all') || $q->url(-path_info =>1) =~ m,/streets\.html$, ) {
+} elsif ($is_streets) {
     $q->delete('all');
     choose_all_form();
 } elsif (defined $q->param('bikepower')) {
@@ -1439,7 +1468,7 @@ if (defined $q->param('begin')) {
 	  (defined $q->param('ziel') and $q->param('ziel') ne '')
 	 )
 	 and
-	 via_not_needed()
+	 (1 || via_not_needed())
 	) {
     get_kreuzung();
 } elsif (defined $q->param('browser')) {
@@ -1604,35 +1633,59 @@ sub get_bbox_wgs84 {
 sub old_new_streetname {
    my $street = shift;
 
+   my $s = $street;
    $street =~ s,.*?[=\-]>\s+,,;
+
+   if ($debug && $s ne $street) {
+      warn "Rewrite street name: '$s' to '$street'\n";
+   }
 
    return $street;
 }
 
+sub Param {
+    my $name = shift;
+
+    my $val = $q->param($name);
+
+    my $v = $val;
+    $val = "" if $val =~ /[<]/;
+    
+    if ($debug && $v ne $val) {
+	warn "XSS reset parameter: '$v'\n";
+    }
+
+    $val = &old_new_streetname($val);
+    $val =~ s/^\s+//;
+    $val =~ s/\s+$//;
+
+    return $val;
+}
+
 sub choose_form {
-    my $startname = $q->param('startname') || '';
-    my $start2    = $q->param('start2')    || '';
-    my $start     = $q->param('start')     || '';
-    my $startplz  = $q->param('startplz')  || '';
-    my $starthnr  = $q->param('starthnr')  || '';
-    my $startc    = $q->param('startc')    || '';
-    my $startort  = $q->param('startort')  || '';
+    my $startname = Param('startname') || '';
+    my $start2    = Param('start2')    || '';
+    my $start     = Param('start')     || '';
+    my $startplz  = Param('startplz')  || '';
+    my $starthnr  = Param('starthnr')  || '';
+    my $startc    = Param('startc')    || '';
+    my $startort  = Param('startort')  || '';
 
-    my $vianame   = $q->param('vianame')   || '';
-    my $via2      = $q->param('via2')      || '';
-    my $via       = $q->param('via')       || ($use_via ? '' : 'NO');
-    my $viaplz    = $q->param('viaplz')    || '';
-    my $viahnr    = $q->param('viahnr')    || '';
-    my $viac      = $q->param('viac')      || '';
-    my $viaort    = $q->param('viaort')    || '';
+    my $vianame   = Param('vianame')   || '';
+    my $via2      = Param('via2')      || '';
+    my $via       = Param('via')       || ($use_via ? '' : 'NO');
+    my $viaplz    = Param('viaplz')    || '';
+    my $viahnr    = Param('viahnr')    || '';
+    my $viac      = Param('viac')      || '';
+    my $viaort    = Param('viaort')    || '';
 
-    my $zielname  = $q->param('zielname')  || '';
-    my $ziel2     = $q->param('ziel2')     || '';
-    my $ziel      = $q->param('ziel')      || '';
-    my $zielplz   = $q->param('zielplz')   || '';
-    my $zielhnr   = $q->param('zielhnr')   || '';
-    my $zielc     = $q->param('zielc')     || '';
-    my $zielort   = $q->param('zielort')   || '';
+    my $zielname  = Param('zielname')  || '';
+    my $ziel2     = Param('ziel2')     || '';
+    my $ziel      = Param('ziel')      || '';
+    my $zielplz   = Param('zielplz')   || '';
+    my $zielhnr   = Param('zielhnr')   || '';
+    my $zielc     = Param('zielc')     || '';
+    my $zielort   = Param('zielort')   || '';
 
     my $nl = sub {
 	if ($bi->{'can_table'}) {
@@ -1665,15 +1718,12 @@ sub choose_form {
     # Leerzeichen am Anfang und Ende löschen
     # überflüssige Leerzeichen in der Mitte löschen
     if (defined $start) {
-	$start = &old_new_streetname($start);
 	$start =~ s/^\s+//; $start =~ s/\s+$//; $start =~ s/\s{2,}/ /g;
     }	
     if (defined $via) {
-	$via = &old_new_streetname($via);
 	$via   =~ s/^\s+//; $via   =~ s/\s+$//; $via   =~ s/\s{2,}/ /g;
     }
     if (defined $ziel) {
-	$ziel = &old_new_streetname($ziel);
 	$ziel  =~ s/^\s+//; $ziel  =~ s/\s+$//; $ziel  =~ s/\s{2,}/ /g;
     }
 
@@ -1755,7 +1805,7 @@ sub choose_form {
 		 ($q->param("viac")))) {
 		search_coord();
 	    } else {
-		warn "Wähle Kreuzung für $startname und $zielname (1st)\n"
+		warn "Wähle Kreuzung für '$startname' und '$zielname' (1st)\n"
 		    if $debug;
 		get_kreuzung($startname, $vianame, $zielname);
 	    }
@@ -1848,7 +1898,7 @@ sub choose_form {
 		next;
 	    }
 
-	    warn "Suche $$oneref in der PLZ-DB.\n" if $debug;
+	    warn "Suche '$$oneref' in der PLZ-DB.\n" if $debug;
 
 	    # check for given crossings
 	    my $crossing_street;
@@ -1903,7 +1953,7 @@ sub choose_form {
 			    ) {
 		    my($producer, $label) = @$def;
 		    if (my $str = $producer->()) {
-			warn "Suche $$oneref in der $label.\n" if $debug;
+			warn "Suche '$$oneref' in der $label.\n" if $debug;
 			my @res = $str->agrep($$oneref);
 			if (@res) {
 			    my @matches;
@@ -2046,7 +2096,7 @@ sub choose_form {
 	    last TRY if (((defined $via2 && $via2 ne '') ||
 			  (defined $via  && $via  ne '')) &&
 			 (!defined $vianame || $vianame eq ''));
-	    warn "Wähle Kreuzung für $startname und $zielname (2nd)\n"
+	    warn "Wähle Kreuzung für '$startname' und '$zielname' (2nd)\n"
 	      if $debug;
 	    get_kreuzung($startname, $vianame, $zielname);
 	    return;
@@ -2075,7 +2125,7 @@ sub choose_form {
 
     if ($nice_berlinmap || $nice_abcmap) {
 	push @extra_headers, -onLoad => $onloadscript,
-	     -script => [{-src => $bbbike_html . "/bbbike_start.js?v=1.17"},
+	     -script => [{-src => $bbbike_html . "/bbbike_start.js"},
 			 ($nice_berlinmap
 			  ? {-code => qq{set_bbbike_images_dir('$bbbike_images')}}
 			  : ()
@@ -2086,13 +2136,16 @@ sub choose_form {
     my $show_introduction;
     {
 	local $^W = 0;
-	$show_introduction = ($start eq ''  && $ziel eq '' &&
-			      $start2 eq '' && $ziel2 eq '' &&
-			      $startname eq '' && $zielname eq '' &&
-			      $startc eq '' && $zielc eq '' &&
+	$show_introduction = (#$start eq ''  && $ziel eq '' &&
+			      #$start2 eq '' && $ziel2 eq '' &&
+			      #$startname eq '' && $zielname eq '' &&
+			      #$startc eq '' && $zielc eq '' &&
 			      !$smallform &&
 			      !$warn_message);
     }
+
+    push (@extra_headers, -google_analytics_uacct => 1) if is_startpage($q);
+
     header(@extra_headers, -from => $show_introduction ? "chooseform-start" : "chooseform");
 
     print <<EOF if ($bi->{'can_table'});
@@ -2110,7 +2163,8 @@ EOF
 EOF
 	# Eine Addition aller aktuellen Straßen, die bei luise-berlin
 	# aufgeführt sind, ergibt als Summe 10129
-	my($bln_str, $all_bln_str, $pdm_str) = (9000, 10000, 400);
+	# Da aber auch einige "unoffizielle" Wege in der DB sind, dürften es an die 11000 werden
+	my($bln_str, $all_bln_str, $pdm_str) = (10000, 11000, 420);
 	# XXX Use format number to get a comma in between.
 
 	my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
@@ -2136,10 +2190,13 @@ EOF
 	    &social_link;
 
 	    print qq{<a class="$class logo" href="$url" title="}, M("BBBike for mobile devices"), qq{"><img class="logo" width="16" height="16" alt="" src="/images/phone.png">[}, M("mobil"), qq{]</a>\n};
+	    print "&nbsp;" x 17;
+	    print qq{<a style="font-size:small" title="}, M("Karte nach rechts schieben"), qq{" href="javascript:smallerMap(1.5)">&gt;&gt;</a>\n};
+	    print qq{<a style="font-size:small" title="}, M("Karte nach links schieben"), qq{" href="javascript:smallerMap(-1.5)">&lt;&lt;</a>\n};
         }
 	print qq{</span>\n};
 
-         print "<p>\n", M("Willkommen bei BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
+         print "<p>\n", M("Willkommen beim Radroutenplaner BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
 	    " <i title='$city'>$local_city_name</i> ",  
 	    M("und Umgebung zu finden."), "<br></p>\n";
 
@@ -2176,7 +2233,7 @@ EOF
 	    }
 
             print qq{<span id="housenumber">} . "&nbsp;" . M("Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)") . ":" . "</span>\n";
-	    unless ($via eq 'NO') { print " (" . M("Via ist optional") . ")" }
+	    # unless ($via eq 'NO') { print " (" . M("Via ist optional") . ")" }
 	    #if ($osm_data && $datadir =~ m,data-osm/(.+),) {
 	    #	print qq[, ], M("Stadt"), qq[: $1\n];
 	    #}
@@ -2211,6 +2268,7 @@ EOF
 EOF
     }
 
+    
     print "<table id=inputtable>\n" if ($bi->{'can_table'});
 
     my $shown_unknown_street_helper = 0;
@@ -2241,7 +2299,9 @@ EOF
 
         # print "XXX";
 	if ($bi->{'can_table'}) {
-	    print qq{<tr id=${type}tr $bgcolor_s><td align=center valign=middle width=40><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:8px;" } : "") . qq{src="$imagetype" border=0 alt="} . M($printtype) . qq{"></a></td>};
+	    my $style = $type eq 'via' && $enable_via_hide ? qq{ style="display:none"} : "";
+
+	    print qq{<tr id=${type}tr $style $bgcolor_s><td align=center valign=middle width=40><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:8px;" } : "") . qq{src="$imagetype" border=0 alt="} . M($printtype) . qq{"></a></td>};
 	    my $color = {'start' => '#e0e0e0',
 			 'via'   => '#c0c0c0',
 			 'ziel'  => '#a0a0a0',
@@ -2316,6 +2376,13 @@ EOF
 	    my $geo = get_geography_object();
 	    if (!$geo || !$geo->is_osm_source) {
 		if (!$shown_unknown_street_helper) {
+		    # Check if the given streetname is completely
+		    # unusable and very unlikely to contain a new
+		    # street.
+		    my $is_maybe_usable = ($$oneref !~ m{\b\d{5}\b} # keine PLZ
+					   && $$oneref !~ m{\b(?:Berlin|Potsdam)\b}i
+					   && $$oneref !~ m{,}
+					  );
 		    if ($lang eq 'en') {
 			print <<EOF;
 <p>
@@ -2326,9 +2393,16 @@ Checklist:
 <li>The BBBike database only contains streets from Berlin and Potsdam.
 <li>Only most important Berlin sights are available through this interface.
 </ul>
-Nothing applies?
+<p>
+EOF
+			if ($is_maybe_usable) {
+			    print <<EOF;
+<p>
+Nothing applies? Then use the email link below and contribute information
+for this street.
 </p>
 EOF
+			}
 		    } else {
 			print <<EOF;
 <p>
@@ -2339,19 +2413,24 @@ Checkliste:
 <li>In der Datenbank befinden sich nur Berliner und Potsdamer Straßen!
 <li>Nur die wichtigsten Berliner Sehenswürdigkeiten können verwendet werden.
 </ul>
-Ansonsten:
 </p>
 EOF
+			if ($is_maybe_usable) {
+			    print <<EOF;
+<p>
+Ansonsten: Informationen zu dieser Straße über den E-Mail-Link unten melden.
+</p>
+EOF
+			}
 		    }
 		    $shown_unknown_street_helper = 1;
 		}
 
-		# XXX Temporary solution to avoid unusable
-		# newstreetform mails:
-		if (   $$oneref !~ m{\b\d{5}\b} # keine PLZ
-		    && $$oneref !~ m{\b(?:Berlin|Potsdam)\b}i
-		    && $$oneref !~ m{,}
-		   ) {
+		if (0) {
+		    # Don't show anymore the newstreetform link in
+		    # this situation, too many false entries. The user
+		    # can you the contact link if he thinks otherwise.
+
 		    my $qs = CGI->new({strname => $$oneref,
 				       ($$ortref ? (ort => $$ortref) : ()),
 				      })->query_string;
@@ -2633,7 +2712,13 @@ function " . $type . "char_init() {}
 //--></script>\n";
         }
 	if ($bi->{'can_table'}) {
-	    print "<td width=40>&nbsp;</td></tr>\n";
+	    if ($type eq 'ziel') { 
+	    	print qq{<td id="via_message" style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message')" title="}, M("Via-Punkt hinzuf&uuml;gen (optional)"), qq{">via</a></td></tr>\n};
+	    } elsif ($type eq 'via') { 
+	    	print qq{<td style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("Via-Punkt entfernen"), qq{">off</a></td></tr>\n};
+	    } else {
+		print qq{<td width=40>&nbsp;</td></tr>\n};
+	    }
 	} else {
 	    print "<p>\n";
 	}
@@ -2664,6 +2749,7 @@ function " . $type . "char_init() {}
 	    my $geo = get_geography_object();
             my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
 	    my @weather_coords;
+
 
             my $slippymap_url = CGI->new($q);
             $slippymap_url->param('map_menu', '0');
@@ -2699,7 +2785,7 @@ function " . $type . "char_init() {}
             print qq{<div style="display:none" id="streetmap"></div>\n};
 
 	    print qq{<!-- use div.text() as local variable to map -->\n};
-	    &BBBikeAds::adsense_start_page if &is_production($q) && !is_mobile($q);
+	    &BBBikeAds::adsense_start_page if &is_production($q) && !is_mobile($q) && !$q->param("startname");
 
             print qq{<div style="display:none" id="streetmap2"></div>\n};
             #print qq{<div style="display:none" id="streetmap3"></div>\n}; 
@@ -2735,27 +2821,33 @@ EOF
 		&BBBikeAds::adsense_linkblock if &is_production($q) && !is_mobile($q);
 		print qq{</div>\n\n};
 	        my $maps = BBBikeGooglemap->new();
-	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang) );
+	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'region' => $region, 'cache' =>$q->param('cache') );
 	    }
 
 if ($enable_homemap_streets) {
 
    my $plot_streets = "";
-   foreach my $param (qw/start via ziel/) {
+   my $flag = 0;
+   foreach my $param (qw/startname vianame zielname start ziel start2 ziel2/) {
        my $val = $q->param($param);
        if ($val && $val ne 'NO') {
-	   $plot_streets .= qq{getStreet(map, city, "} . CGI::escapeHTML($val) . qq{", "blue");\n};
+	   my $v = CGI::escapeHTML($val);
+	   $v =~ s/&lt;/</g;
+	   $plot_streets .= qq{getStreet(map, city, "$v", "#0000FF", $flag);\n};
+	   $flag = 1;
        }
    }
 
 print <<'EOF';
 <script type="text/javascript">
+  var delay = bbbike.streetPlotDelay;
+
   // remember URL
   $("div#streetmap2").text( $("iframe#iframemap").attr("src") );
 
-  $("input.ac_input").keyup( 	function(event) { homemap_street_timer(event, delay*2) } );
-  $("input.ac_input").click( 	function(event) { homemap_street_timer(event, delay) } );
-  $("div.autocomplete").mouseover(function(event) { homemap_street_timer(event, delay) } );
+  $("input.ac_input").keyup( 	   function(event) { homemap_street_timer(event, delay*2) } );
+  $("input.ac_input").click( 	   function(event) { homemap_street_timer(event, delay) } );
+  $("div.autocomplete").mouseover( function(event) { homemap_street_timer(event, delay) } );
 
 EOF
 
@@ -3083,32 +3175,47 @@ sub is_mobile {
     }
 }
 
+sub is_startpage {
+    my $q = shift;
+
+    return ($q->param("start") || $q->param("startname") || $q->param("ziel") || $q->param("zielname")) ? 0 : 1;
+}
+
 sub is_production {
     my $q = shift;
 
-    #return 1;
+    return 1 if -e "/tmp/is_production";
     return $q->virtual_host() =~ /^www\.bbbike\.org$/i ? 1 : 0;
 }
 
 sub is_resultpage {
     my $q = shift;
 
-   return ($q->param('startc') && $q->param('zielc')) ? 1 : 0;
+    return ($q->param('startc') && $q->param('zielc')) ? 1 : 0;
 }
+
+
+sub is_streets {
+    my $q = shift;
+
+    return (defined $q->param('all') || $q->url(-path_info =>1) =~ m,/streets\.html$,); 
+}
+
+
 
 sub get_kreuzung {
     my($start_str, $via_str, $ziel_str) = @_;
     if (!defined $start_str) {
-	$start_str = $q->param('startname') || $q->param('start');
+	$start_str = Param('startname') || Param('start');
     }
     if (!defined $via_str) {
-	$via_str = $q->param('vianame');
+	$via_str = Param('vianame') || Param('via');
     }
     if (defined $via_str && $via_str =~ /^\s*$/) {
 	undef $via_str;
     }
     if (!defined $ziel_str) {
-	$ziel_str  = $q->param('zielname') ||  $q->param('ziel');
+	$ziel_str  = Param('zielname') ||  Param('ziel');
     }
 
     my $start_plz = $q->param('startplz');
@@ -3196,6 +3303,7 @@ sub get_kreuzung {
     if ((!defined $start and !defined $start_c) ||
 	(!defined $ziel  and !defined $ziel_c)) {
 	local $^W = 0;
+
 	## In the past, I emitted a warning if this happen. But
 	## it seems that there are half-legal use cases, like specifying
 	## a link with just a zielname, so don't warn anymore
@@ -3264,10 +3372,11 @@ sub get_kreuzung {
     http_header(@weak_cache);
     my %header_args;
     $header_args{-script} = {-src => bbbike_result_js() };
+    $header_args{-result} = M("Kreuzung");
     header(%header_args);
 
     if (is_mobile($q)) {
-		print <<EOF;
+	print <<EOF;
 <style type="text/css">
 body, select, input { font-size: x-large }
 </style>
@@ -3734,7 +3843,7 @@ EOF
 sub spinning_wheel {
     return qq{<span id="spinning_wheel" style="visibility:hidden">&nbsp;&nbsp;&nbsp;} . 
 	M("BBBike sucht eine Fahrradroute") . " ...&nbsp;&nbsp;&nbsp;\n" . 
-        qq{<img title="BBBike is searching a cycle route for you. Please wait." width="32" height="32" src="/images/spinning_wheel32.gif">} .
+        qq{<img title="BBBike is searching a cycle route for you. Please wait." width="32" height="32" src="/images/spinning_wheel32.gif" alt="" >} .
     qq{</span>\n};
 }
 
@@ -4240,10 +4349,14 @@ sub cgi_utf8 {
 
     my $qq =  CGI->new($q);
     return $qq if !$utf8_flag;
-  
+ 
     foreach my $param ($qq->param() ) {
-	my $string = Encode::decode( utf8 => $qq->param($param));
-	$qq->param($param, $string);
+	my $string = $qq->param($param);
+
+	if (!Encode::is_utf8( $string)) {
+	   $string = Encode::decode( utf8 => $qq->param($param), Encode::FB_QUIET );
+	   $qq->param($param, $string);
+	}
     }
 
     return $qq;
@@ -4947,6 +5060,8 @@ sub display_route {
 #     }
     $header_args{-script} = {-src => bbbike_result_js() };
     $header_args{-printmode} = 1 if $printmode;
+    $header_args{-result} = M("Route");
+
     header(%header_args, -onLoad => "init_search_result()");
 
  ROUTE_HEADER:
@@ -4999,6 +5114,13 @@ EOF
 
     ROUTE_TABLE:
 	if (is_mobile($q)) {
+	    print qq{<span id="mobile_link">\n};
+	    my $url = $q->url(-full=>0, -absolute=>1, -query=>1);
+            $url =~ s,^/m/,/,;
+            #&social_link;
+            print qq{<a href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+	    print qq{</span>\n\n};
+
 	    print <<EOF;
 <style type="text/css">
 body, select, input, span.slippymaplink { font-size: x-large }
@@ -5006,6 +5128,7 @@ body, select, input, span.slippymaplink { font-size: x-large }
 EOF
 	}
 
+	print qq{<div id="route_table">\n};
 	print "<center>" unless $printmode;
 	print qq{<table id="routehead" bgcolor="#ffcc66"};
 	if ($printmode) {
@@ -5131,7 +5254,9 @@ EOF
 	    print ".$fontend<br>\n";
 	}
 	print "</center>\n" unless $printmode;
+       
 	print "<hr>";
+	print "</div>\n"; # id="route_table"
 
 	my $line_fmt;
 	if (!$bi->{'can_table'}) {
@@ -5194,7 +5319,9 @@ EOF
 			     fz => M("unbekannte Strecke"),
 			     Q  => M("Fähre"),
 			   );
-	my %rw_to_title = ( RW => M("Radweg/spur"),
+	my %rw_to_title = ( RW => M("Radweg"),
+			    RS => M("Radspur"),
+			    FS => M("Fahrradstraße"),
 			    BS => M("Busspur"),
 			    NF => M("Nebenfahrbahn"),
 			  );
@@ -5253,8 +5380,12 @@ EOF
 				    my $rw;
 				    my $rw_rec = $radwege_net->{Net}->{$p1}->{$p2};
 				    if ($rw_rec) {
-					if ($rw_rec =~ /^RW([1234789])?$/) {
+					if ($rw_rec =~ /^RW([1289])?$/) {
 					    $rw = "RW";
+					} elsif ($rw_rec =~ m{^RW[34]$}) {
+					    $rw = "RS";
+					} elsif ($rw_rec eq 'RW7') {
+					    $rw = 'FS';
 					} elsif ($rw_rec eq 'RW5') {
 					    $rw = "BS"; # Busspur
 					} elsif ($rw_rec eq 'RW10') {
@@ -5287,7 +5418,7 @@ EOF
 		    }
 		    print "<td>$fontstr$etappe_comment_html$fontend</td>";
 		}
-		if ($has_fragezeichen_routelist && !$printmode) {
+		if ($has_fragezeichen_routelist && !$printmode && !$osm_data) {
 		    if (defined $fragezeichen_comment && $fragezeichen_comment ne "") {
 
 			# unbekannt oder unvollständig
@@ -5440,6 +5571,7 @@ EOF
 	    $pdf_url->param( 'coords', $string_rep);
 	    $pdf_url->param( 'startname', Encode::encode( utf8 => $startname));
 	    $pdf_url->param( 'zielname', Encode::encode( utf8 => $zielname));
+	    $pdf_url->param( 'vianame', Encode::encode( utf8 => $vianame));
 	    $pdf_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 
             my $slippymap_url = CGI->new($q);
@@ -5451,10 +5583,12 @@ EOF
 	    $slippymap_url->param( 'coords', $string_rep);
 	    $slippymap_url->param( 'startname', Encode::encode( utf8 => $startname));
 	    $slippymap_url->param( 'zielname', Encode::encode( utf8 => $zielname));
+	    $slippymap_url->param( 'vianame', Encode::encode( utf8 => $vianame));
 	    $slippymap_url->param( 'lang', $lang);
 	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 	    $slippymap_url->param( 'route_length', sprintf("%2.2f", $r->len/1000));
 	    $slippymap_url->param( 'driving_time', $driving_time);
+
 
 	    my $area2 = '';
 	    {
@@ -5518,13 +5652,14 @@ EOF
 		#$qq->param( 'zielname', Encode::encode( utf8 => $qq->param('zielname')));
 		my $permalink = BBBikeCGIUtil::my_escapeHTML($qq->url(-full=>1, -query=>1));
 
+	        print qq{<div id="link_list">\n};
 	        print qq{<hr>\n};
 		print qq{<span class="slippymaplink"><a title="}, M("neue Anfrage"), qq{" href="}, $q->url(-absolute=>1, -query=>0), qq{">BBBike\@$local_city_name</a></span> |\n};
 	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">larger map</a></span> |\n} if !$gmapsv3;
 	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">print map route</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url" style="display:none"> $permalink</span></span>\n};
 	        print qq{<p></p>\n};
-
+		print qq{</div>\n\n};
 
 		if (is_mobile($qq)) {
 		   #
@@ -5533,11 +5668,12 @@ EOF
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 		} else {
 		   my $maps = BBBikeGooglemap->new();
-                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1 );
+                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1, 'region' => $region, 'cache' => $q->param('cache') );
 		}
 	    }
 
-	    print qq{<div class="box">};
+	    print qq{<div id="bbbike_graphic">\n};
+	    print qq{<div class="box">\n};
 	    print "<form name=showmap method=" .
 		($post_bug ? "get" : "post");
 
@@ -5840,6 +5976,7 @@ EOF
 
 	    print "</form>\n";
 	    print qq{</div>\n};
+	    print qq{</div>\n}; # id="bbbike_graphic">
 	}
 
     }
@@ -5861,8 +5998,8 @@ print <<EOF;
 EOF
 		print qq{</span>\n};
         }
-	print qq{</div>\n};
 	print qq{<hr style="clear:left;">\n};
+	print qq{</div>\n};
     } 
 
     elsif (@weather_res) {
@@ -7105,7 +7242,7 @@ sub etag {
     (-ETag => $etag);
 }
 
-sub bbbike_result_js { $bbbike_html . "/bbbike_result.js?v=1.14" }
+sub bbbike_result_js { $bbbike_html . "/bbbike_result.js" }
 
 # Write a HTTP header (always with Etag and Vary) and maybe enabled compression
 sub http_header {
@@ -7222,7 +7359,11 @@ sub header {
 	$args{-title2} = "BBBike\@$local_city_name";
 
 	if ($q->url(-path_info =>1) =~ m,/streets\.html$,) {
-	   $args{-title} .= " - street names";
+	   $args{-title} .= " - " . M("Strassennamen");
+        } elsif ( $q->param("output_as") && $q->param("output_as") eq 'print' ) {
+	   $args{-title} .= " - " . ($q->param("printvariant") ? "print normal" : "print small");
+	} elsif (my $result = delete $args{-result} ) {
+	   $args{-title} .= " - $result";
         }
     }
 
@@ -7271,6 +7412,11 @@ sub header {
 #			  -href => "$bbbike_images/srtbike16.gif",
 #			  -type => "image/gif",
 			 });
+    push @$head, cgilink({-rel  => "apple-touch-icon",
+  			  -href => "$bbbike_images/srtbike57.png",
+  			  -type => "image/png"
+			 });
+
     my($bbbike_de_script, $bbbike_en_script, $bbbike_local_script);
     {
 	my $qq = CGI->new();
@@ -7334,7 +7480,10 @@ sub header {
     delete @args{qw(-contents -up)};
     my $printmode = delete $args{-printmode};
     if ($bi->{'can_css'} && !exists $args{-style}) {
-	$args{-style} = {-src => "$bbbike_html/" . ($printmode ? "bbbikeprint" : "bbbike") . ".css"};
+
+         my @css = $printmode ? "$bbbike_html/bbbikeprint.css" : "$bbbike_html/bbbike.css";
+         push (@css, "$bbbike_html/streets.css") if $is_streets;
+	$args{-style} = {-src => \@css };
 #XXX del:
 #  <<EOF;
 #  $std_css
@@ -7348,45 +7497,58 @@ sub header {
     if ($enable_opensearch_suggestions) {
 	    my $city = $osm_data && $datadir =~ m,data-osm/(.+), ? $1 : 'Berlin';
 
-	push(@$head, qq|<script src="/html/jquery-1.4.2.min.js" type="text/javascript"></script>\n|);
-	push(@$head, qq|<script src="/html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js" type="text/javascript"></script>\n|);
+	push(@$head, qq|<script type="text/javascript" src="/html/jquery-1.4.2.min.js"></script>|);
+	push(@$head, qq|<script type="text/javascript" src="/html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js"></script>|);
     }
-    #<link href="/html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css"> |);
 
-    push(@$head, qq|<script src="/html/bbbike.js" type="text/javascript"></script>\n|);
+    push(@$head, qq|<script type="text/javascript" src="/html/bbbike.js"></script>|);
 
-    # google maps api v3
-    # <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    # <script src="/html/elevation.js" type="text/javascript"></script>
+    # included in bbbike.css
+    # <link href="/html/devbridge-jquery-autocomplete-1.1.2/styles.css" rel="stylesheet" type="text/css"> |);
+
     if ($enable_homemap_streets) {
 	my $google_api_key = &get_google_api_key;
 
         # google maps API version
 	if ($gmap_api_version == 2) {
-	push(@$head, qq|
+	push(@$head, qq|\
 <script src="http://maps.google.com/jsapi?key=$google_api_key" type="text/javascript"></script>
-<script src="/html/maps.js" type="text/javascript"></script>
-|);
+<script src="/html/maps.js" type="text/javascript"></script>|);
         } else {
             my $my_lang = &my_lang($lang);
 	    my $sensor = is_mobile($q) ? 'true' : 'false';
-	push(@$head, qq|\
-<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=$sensor&amp;language=$my_lang"></script>
-<script src="/html/maps3.js" type="text/javascript"></script>
-<script src="/html/elevation.js" type="text/javascript"></script> 
-|) if !is_mobile($q) || is_resultpage($q);
+
+	# http://code.google.com/apis/maps/documentation/javascript/basics.html#VersionDocs
+        # google maps v=3.3 
+	# Release Version (3.3) Reference (Feature-Stable)
+
+	  if (!is_mobile($q) || is_resultpage($q) ) {
+	    push(@$head, qq|<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>|);
+	    # push(@$head, qq|<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>|);
+	    my $gmails_url = "http://maps.google.com/maps/api/js?v=3.4&amp;sensor=$sensor&amp;hl=$my_lang";
+	    $gmails_url .= "&amp;libraries=panoramio" if $enable_panoramio_photos;
+
+	    push(@$head, qq|<script type="text/javascript" src="$gmails_url"></script>|);
+	    push(@$head, qq|<script type="text/javascript" src="/html/maps3.js"></script>|); 
+	  }
 	}
 
     }
 
-    #push (@$head, $q->meta({-name => "robots", -content => "nofollow"}));
+    push (@$head, $q->meta({-name => "robots", -content => "nofollow"})) 
+	if $is_streets;
+	
 
     # ignore directory service as DMOZ, Yahoo! and MSN
     push (@$head, $q->meta({-name => "robots", -content => "noodp,noydir"}));
 
     $args{-head} = $head if $head && @$head;
 
+    my @css = $printmode ? "$bbbike_html/bbbikeprint.css" : "$bbbike_html/bbbike.css";
+    push (@css, "$bbbike_html/streets.css") if $is_streets;
+    $args{-style} = {-src => \@css } if !$printmode;
+
+    my $enable_google_analytics_uacct = delete $args{'-google_analytics_uacct'};
     if (!$smallform) {
 
 	my $title2 = delete $args{-title2};	
@@ -7395,14 +7557,26 @@ sub header {
 	     #-lang => 'de-DE',
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
-	     -meta=>{'keywords'=>'berlin fahrrad route bike karte suche cycling route routing routenplaner routenplanung fahrradroutenplaner radroutenplaner entfernungsrechner',
-		     'copyright'=>'(c) 1998-2011 Slaven Rezic',
+	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling route routing, bicycle navigation, Velo, Rad',
+		     'copyright'=>'(c) 1998-2011 Slaven Rezic + Wolfram Schneider',
 		    },
 	     -author => $BBBike::EMAIL,
 	    );
 	if ($bi->{'css_buggy'}) {
 	    print "<font face=\"$font\">";
 	}
+
+	if ($enable_google_analytics && is_production($q) && $enable_google_analytics_uacct) {
+	    print qq{<script type="text/javascript">\nwindow.google_analytics_uacct = "$google_analytics_uacct";\n</script>\n\n};
+        }
+
+	if ($is_streets) {
+	   print qq{<div id="main">\n<div id="main_border">\n};
+	   print qq{<div id="top_ie">\n<div id="top">\n};
+	   print qq{<div id="search_query"></div>\n};
+	   print qq{<div id="ad_top">\n};
+	}
+
 	print "<h2>\n";
 	if ($printmode) {
 	    print "$args{-title}";
@@ -7423,7 +7597,7 @@ sub header {
 	}
 	print "</h2>\n";
     } else {
-	print $q->start_html;
+	print $q->start_html(%args);
 	print "<h1>BBBike</h1>";
     }
     if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$}) && (!&is_mobile($q) || is_resultpage($q))) {
@@ -7502,9 +7676,7 @@ my $permalink = BBBikeCGIUtil::my_escapeHTML($qq->url(-full=>1, -query=>1));
 
 my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'Berlin und Potsdam';
 my $streets = $bbbike_script =~ m,/$, ? $bbbike_script . "streets.html" : "$bbbike_script?all=1";
-my $list_of_all_streets = window_open("$streets", "BBBikeAll",
-                         "dependent,height=500,resizable," .
-                         "screenX=500,screenY=230,scrollbars,width=780")
+my $list_of_all_streets = qq{<a href="$streets" target="BBBikeAll">} 
 	    . M("Liste aller bekannten Stra&szlig;en") . ($cityname ? " " . M("in") . " " . $local_city_name : "") ."</a>";
 my $community_link = $lang eq 'de' ? '/community.de.html' : '/community.html';
 my $donate = M("spenden");
@@ -7535,12 +7707,17 @@ if ($osm_data) {
     $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
 }
 
+my $rss_icon = "";
+$rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="14" height="14" title="}
+	    .  M('Was gibt es Neues auf BBBike.org') 
+	    . qq{" src="/images/rss-icon.png" ></a>} if $enable_rss_icon;
+
 my $s_copyright = <<EOF;
 
 <div id="footer">
 <div id="footer_top">
 <a href="/">home</a> |
-<a href="/doc.html">$help</a> |
+<a href="/help.html">$help</a> |
 <a href="/app.html">$app</a> |
 <a href="$community_link">$donate</a> |
 <a href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
@@ -7548,16 +7725,17 @@ $list_of_all_streets |
 <a href="#" onclick="togglePermaLinks(); return false;">$permalink_msg</a><span id="permalink_url2" style="display:none"> $permalink</span>
 </div>
 </div>
-<hr>
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
+<hr>
 (&copy;) 1998-2011 <a href="http://CycleRoutePlanner.org">CycleRoutePlanner.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
 <div id="footer_community">
-  <a href="$community_link"><img height="19" width="64" src="/images/donate.png" alt="Flattr this" title="Donate to bbbike.org" border="0"></a>
-  <a href="$community_link"><img src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
-  <a href="$community_link"><img style="border:0px;" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
+  <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="Donate to bbbike.org" border="0"></a>
+  <a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
+  <a href="$community_link"><img class="logo" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
   <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>
+  $rss_icon
 </div>
 </div>
 
@@ -7575,7 +7753,7 @@ document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.
 </script>
 <script type="text/javascript">
 try {
-var pageTracker = _gat._getTracker("UA-286675-19");
+var pageTracker = _gat._getTracker("$google_analytics_uacct");
 pageTracker._trackPageview();
 } catch(err) {}</script>
 
@@ -7587,7 +7765,7 @@ EOF
     my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new, -full => 1 ) );
     my $host = eval { $full->host } || "";
 
-    $s .= $s_google_analytics if $enable_google_analytics && $host eq 'www.bbbike.org';
+    $s .= $s_google_analytics if $enable_google_analytics && is_production($q);
 
     if ($bi->{'css_buggy'}) {
 	$s .= "</font>\n";
@@ -7742,6 +7920,52 @@ sub choose_all_form {
     my $locale_set = 0;
     my $old_locale;
     use locale;
+
+    my $q = new CGI;
+    my $cache_street_names = 1;
+    my $force_cache_rebuild = defined $q->param('all') && $q->param('all') >= 3 ? 1 : 0;
+
+    my $street_names_files = $ENV{TMPDIR} . "/streets.html";
+    my $cache_file;
+    my $fh;
+
+
+    if ( $cache_street_names && $ENV{TMPDIR} && -d $ENV{TMPDIR} ) {
+	# read from cache if exists
+	if ( !$force_cache_rebuild && -r $street_names_files && -s $street_names_files ) {
+	   $fh = new IO::File $street_names_files, "r";
+	   if (defined $fh) {
+		binmode $fh, ":utf8";	
+		binmode STDOUT, ":utf8";	
+
+		while(<$fh>) {
+		   print;
+		}
+
+		# done
+		return;
+
+	   } else {
+		warn "open street name cache '$street_names_files': $!, regenerate...\n";
+	   } 
+	}
+
+	# create cache entry, and write the output later to stdout
+	else {
+	   $cache_file = $street_names_files . ".tmp.$$";
+
+	   $fh = new IO::File $cache_file, "w";
+           if (defined $fh) {
+		binmode $fh, ':utf8';
+		select $fh;
+           } else {
+		warn "write to street name cache > '$cache_file': $!\n";
+		undef $cache_file;
+	   }
+	}
+    }
+
+    if(0) {
     eval {
 	local $SIG{'__DIE__'};
 	require POSIX;
@@ -7751,11 +7975,13 @@ sub choose_all_form {
 		if (&POSIX::setlocale(&POSIX::LC_COLLATE, $locale));
 	}
     };
+    }
 
     http_header(@weak_cache);
     header(#too slow XXX -onload => "list_all_streets_onload()",
 	   -script => {-src => $bbbike_html . "/bbbike_start.js",
 		      },
+	   -google_analytics_uacct => 1,
 	  );
 
     my @strlist;
@@ -7796,10 +8022,10 @@ sub choose_all_form {
     my $last = "";
     my $last_initial = "";
 
-    print "<p>\n", M("Willkommen bei BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
+    print "<p>\n", M("Willkommen beim Radroutenplaner BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
 	    " <i title='$city'>$local_city_name</i> ",  
 	    M("und Umgebung zu finden."), "<br></p>\n";
-    print qq{<p>\n}, M("Klicke auf eine Strasse, um die Routensuche zu starten"), qq{:</p>\n};
+    print qq{<p>\n}, M("Klicke auf eine Strasse oder Point of Interest (POI), um die Routensuche zu starten"), qq{:</p>\n};
 
     &BBBikeAds::adsense_street_linkblock if &is_production($q); # && !is_mobile($q);
     &BBBikeAds::adsense_street_page if &is_production($q); # && !is_mobile($q);
@@ -7814,6 +8040,7 @@ sub choose_all_form {
 #     }
     print "</center>\n</div>\n\n";
 
+    print qq{</div>\n</div>\n</div><!-- top_ie -->\n};
 
     print "\n\n<div id='list'>";
 
@@ -7829,7 +8056,10 @@ sub choose_all_form {
 	    $last_initial ne $initial and
 	    (!defined $trans{$initial} or
 	     $last_initial ne $trans{$initial})) {
-	    print "\n<hr>\n";
+
+	    print "</div>\n" if $counter;
+	    print qq{\n<div class="street_section">\n};
+	    print "<hr>\n";
 	    $counter++;
 
 	    $last_initial = ($trans{$initial} ? $trans{$initial} : $initial);
@@ -7842,7 +8072,7 @@ sub choose_all_form {
             $html_strname = Encode::decode("utf-8", $html_strname);
 	}
  
-        print qq{<span class="street">$html_strname</span><br>\n};
+        print qq{<span onclick="oS(this);">$html_strname</span><br>\n};
     }
 
 #     for my $type (qw(s u)) {
@@ -7860,31 +8090,50 @@ sub choose_all_form {
 # 	print join("<br/>\n", map { uc($type) . " " . $_ } @bhf), "\n";
 #     }
 
+    print "</div>\n" if $counter;
+
     print "<hr>\n";
     print "</div>\n";
 
-    # make the street names clickable
-print <<"EOF";
-<script type="text/javascript">
-\$(document).ready(function(){
-    \$("div#list span.street").click(function(event){
-	open("$bbbike_url?start=" + escape(this.innerHTML));
-    });
-});
-</script>
-EOF
-
-
     &footer;
+
+    print "</div>\n";
+    print "</div>\n";
 
     print $q->end_html;
 
-    if ($locale_set && defined $old_locale) {
+    if (0 && $locale_set && defined $old_locale) {
 	eval {
 	    local $SIG{'__DIE__'};
 	    &POSIX::setlocale( &POSIX::LC_COLLATE, $old_locale);
 	};
 	warn $@ if $@; #XXX remove?
+    }
+
+    if ($cache_file && $fh) {
+	$fh->close;
+
+	my $data;
+	$fh = new IO::File $cache_file, "r";
+	if (defined $fh) {
+	    select STDOUT;
+	    binmode $fh, ':utf8';
+	    binmode STDOUT, ':utf8';
+
+	    while (<$fh> ) {
+	   	$data .= $_;
+	    }
+            $fh->close;
+        } else {
+	    die "open cache file: $cache_file: $!\n";
+	}
+
+	# rename first, then print it out (on a slow link)
+	if (!rename ($cache_file, $street_names_files)) {
+	   warn "rename $cache_file => street_names_files: $!\n";
+	}
+
+	print STDOUT $data;	
     }
 }
 

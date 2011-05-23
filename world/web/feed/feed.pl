@@ -9,23 +9,170 @@ my $feed = XML::Atom::SimpleFeed->new(
     link    => $homepage,
     link    => { rel => 'self', href => $homepage . '/feed/bbbike-world.xml' },
     icon    => $homepage . '/images/srtbike.ico',
-    updated => '2010-03-03T18:30:02Z',
+    updated => '2011-04-09T18:30:03Z',
     author  => 'Wolfram Schneider',
     subtitle =>
 'BBBike is a route planner for cyclists in Berlin. It is now ported to other cities around the world - thanks to the OpenStreetMap project!',
-    id => 'urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af6',
+    id => 'urn:uuid:60a76c80-d399-11d9-b93C-0003939e0af7',
 );
 
 ######################################################################
+#
+# TODO
+# - larger area for most cities, up top 30 km radius the centr of the city
+#
+
+$feed->add_entry(
+    title   => qq{Allow to move the map left or right.},
+    id      => 'af55477bc54143ea90ee66ab34b850a8',
+    content => {
+        type    => 'text',
+        content => qq{Allow to move the map left or right.}
+    },
+    updated  => '2011-05-22T12:30:03Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title   => qq{Support cycle route search with a via point.},
+    id      => 'af55477bc54143ea90ee66ab34b850a9',
+    content => {
+        type    => 'text',
+        content => qq{Support cycle route search with a via point.}
+    },
+    updated  => '2011-05-22T12:30:03Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title =>
+qq{Support route search for Point of Interest (POI), for train stations, schools, buildings, restaurants, sights etc.},
+    id      => '9511e253bd8ac0da0fb7ab4c7a5f1ac2',
+    content => {
+        type => 'text',
+        content =>
+qq{Support route search for Point of Interest (POI), for train stations, schools, buildings, restaurants, sights etc.}
+    },
+    updated  => '2011-05-17T12:30:03Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title =>
+qq{Added a Map Slide Show for all 7 #osm maps and 11 non-osm maps on http://bbbike.org},
+    id      => '17fe6ae451ab0eb00b25f59a0cb7b75c',
+    content => {
+        type    => 'text',
+        content => qq{Added map slide show for http://bbbike.org},
+    },
+    updated  => '2011-05-02T12:30:03Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title   => qq{Added Full Screen View for http://bbbike.org},
+    id      => '15c559e7c35a7dac75a141c92877dabd',
+    content => {
+        type    => 'text',
+        content => qq{Added Added Full Screen View for http://bbbike.org},
+    },
+    updated  => '2011-05-01T12:30:03Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title   => qq{Added black/white Mapnik map for http://bbbike.org},
+    id      => '8180c31f8c34e75058495ff6a1bf7f8d',
+    content => {
+        type    => 'text',
+        content => qq{Added black/white Mapnik map for http://bbbike.org},
+    },
+    updated  => '2011-05-01T12:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title =>
+qq{Added Yahoo and Bing maps (satellite, hybrid, map) for http://bbbike.org},
+    id      => '9de8ff38b08a07a69968512b8def69ec',
+    content => {
+        type => 'text',
+        content =>
+qq{Added Yahoo and Bing maps (satellite, hybrid, map) for http://bbbike.org}
+    },
+    updated  => '2011-04-24T12:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title   => qq{Added OpenStreetMaps map Hike&Bike for http://bbbike.org},
+    id      => '112d59fb9de68297123558b6c7d278e5',
+    content => {
+        type => 'text',
+        content =>
+qq{New: suport google maps v3 layers bicycling, traffic and panoramio},
+    },
+    updated  => '2011-04-23T12:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title =>
+qq{Added OpenStreetMaps maps public transport and German Mapnik for European cities},
+    id      => '2eb7271b2f3fbc1056ebe01e06e69676',
+    content => {
+        type => 'text',
+        content =>
+qq{New: suport google maps v3 layers bicycling, traffic and panoramio},
+    },
+    updated  => '2011-04-23T12:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title =>
+qq{Added google maps v3 layers bicycling, traffic and panoramio for http://bbbike.org},
+    id      => 'f66f22b31bb6aa46ee0b71f25c31a694',
+    content => {
+        type => 'text',
+        content =>
+qq{New: suport google maps v3 layers bicycling, traffic and panoramio},
+    },
+    updated  => '2011-04-23T12:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title   => qq{New: cycle routing for Kaiserslautern and Salzburg},
+    id      => 'a2390777c2e2c60c01c94121836458aa',
+    content => {
+        type    => 'text',
+        content => qq{New: cycle routing for Kaiserslautern and Salzburg},
+    },
+    updated  => '2011-04-17T12:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title   => qq{New: cycle routing for Gera and Dessau},
+    id      => 'c9fca418ccf44c117367127fd236a669',
+    content => {
+        type    => 'text',
+        content => qq{New: cycle routing for Gera and Dessau},
+    },
+    updated  => '2011-04-10T12:30:02Z',
+    category => 'News',
+);
+
 $feed->add_entry(
     title   => qq{New: cycle routing for Hamm and Moenchengladbach},
     id      => 'ec119bc2cf68e262a6c0deb36a30f5c3',
     content => {
-        type     => 'text',
-        content  => qq{New: cycle routing for Hamm and Moenchengladbach},
-        updated  => '2011-04-07T12:30:02Z',
-        category => 'News',
-    }
+        type    => 'text',
+        content => qq{New: cycle routing for Hamm and Moenchengladbach},
+    },
+    updated  => '2011-04-07T12:30:02Z',
+    category => 'News',
 );
 
 $feed->add_entry(
@@ -35,9 +182,9 @@ $feed->add_entry(
         type => 'text',
         content =>
 qq{New: cycle routing for Waterloo and Kitchener, Ontario: http://www.bbbike.org/Waterloo},
-        updated  => '2011-04-02T12:30:02Z',
-        category => 'News',
-    }
+    },
+    updated  => '2011-04-02T12:30:02Z',
+    category => 'News',
 );
 
 $feed->add_entry(
@@ -47,9 +194,9 @@ $feed->add_entry(
         type => 'text',
         content =>
           qq{New: cycle routing for Luxemburg, Lake Balaton, Cork, Lausanne},
-        updated  => '2011-03-24T12:30:02Z',
-        category => 'News',
-    }
+    },
+    updated  => '2011-03-24T12:30:03Z',
+    category => 'News',
 );
 
 $feed->add_entry(
@@ -60,9 +207,9 @@ qq{New: cycle routing for Braunschweig/Wolfsburg, Wuppertal, Usedom/Greifswald,,
         type => 'text',
         content =>
 qq{New: cycle routing for Braunschweig/Wolfsburg, Wuppertal, Usedom/Greifswald,, Schwerin/Wismar, Flensburg, Koblenz, Saarbruecken},
-        updated  => '2011-03-24T12:30:02Z',
-        category => 'News',
-    }
+    },
+    updated  => '2011-03-24T12:30:02Z',
+    category => 'News',
 );
 
 $feed->add_entry(
@@ -73,20 +220,20 @@ qq{New: cycle routing for Dallas, Stockton, Portland ME, Huntsville, New Orleans
         type => 'text',
         content =>
 qq{New: cycle routing for Dallas, Stockton, Portland ME, Huntsville AL, New Orleans},
-        updated  => '2011-03-21T12:30:02Z',
-        category => 'News',
-    }
+    },
+    updated  => '2011-03-21T12:30:02Z',
+    category => 'News',
 );
 
 $feed->add_entry(
     title   => qq{New: cycle routing for Lodz, Brno, Ostrava, Calgary},
     id      => 'cd703c8c5c464d05509931f62f578a0c',
     content => {
-        type     => 'text',
-        content  => qq{New: cycle routing for Lodz, Brno, Ostrava, Calgary},
-        updated  => '2011-03-21T12:30:02Z',
-        category => 'News',
-    }
+        type    => 'text',
+        content => qq{New: cycle routing for Lodz, Brno, Ostrava, Calgary},
+    },
+    updated  => '2011-03-21T12:30:03Z',
+    category => 'News',
 );
 
 $feed->add_entry(
@@ -97,20 +244,20 @@ qq{New: cycle routing for Lyon, Toulouse, Bordeaux, Montpellier, Clermont-Ferran
         type => 'text',
         content =>
 qq{New: cycle routing for Lyon, Toulouse, Bordeaux, Montpellier, Clermont-Ferrand, Corsica},
-        updated  => '2011-03-20T12:30:02Z',
-        category => 'News',
-    }
+    },
+    updated  => '2011-03-20T12:30:02Z',
+    category => 'News',
 );
 
 $feed->add_entry(
     title   => qq{New: cycle routing for Antwerpen, Bruegge, Gent},
     id      => 'e53b734df1d017e695a60d9f9a91c915',
     content => {
-        type     => 'text',
-        content  => qq{New: cycle routing for Antwerpen, Bruegge, Gent},
-        updated  => '2011-03-19T12:30:02Z',
-        category => 'News',
-    }
+        type    => 'text',
+        content => qq{New: cycle routing for Antwerpen, Bruegge, Gent},
+    },
+    updated  => '2011-03-19T12:30:02Z',
+    category => 'News',
 );
 
 $feed->add_entry(
@@ -121,21 +268,21 @@ qq{New: cycle routing for 's-Hertogenbosch, Arnhem, Eindhoven, Maastricht, Tilbu
         type => 'text',
         content =>
 qq{New: cycle routing for 's-Hertogenbosch, Arnhem, Eindhoven, Maastricht, Tilburg, Utrecht},
-        updated  => '2011-03-19T12:30:02Z',
-        category => 'News',
-    }
+    },
+    updated  => '2011-03-19T12:30:03Z',
+    category => 'News',
 );
 
 $feed->add_entry(
     title =>
 'New: cycle routing for Augsburg, Halle (Saale), Konstanz, Osnabrueck, Paderborn, Regensburg, Ulm',
-    id      => '579e68d390c03319d8445fc43966a6cb',
+    id      => '579e68d390c03319d8445fc43966a6cc',
     content => {
         type => 'text',
         content =>
 qq{New: cycle routing for Augsburg, Halle (Saale), Konstanz, Osnabrüc, Paderbor, Regensbur, Ulm},
     },
-    updated  => '2011-03-19T12:30:02Z',
+    updated  => '2011-03-19T12:30:04Z',
     category => 'News',
 );
 
@@ -202,13 +349,13 @@ qq{New: cycle routing for New Dehli and Bombay: http://www.bbbike.org/Bombay and
 $feed->add_entry(
     title =>
       'New: cycle routing for Brazilian cities Curitiba and Porto Alegre',
-    id      => 'e14f7b9315ebcbfeaf184a589400181b',
+    id      => 'e14f7b9315ebcbfeaf184a589400181c',
     content => {
         type => 'text',
         content =>
 qq{New: cycle routing for Brazilian cities Curitiba and Porto Alegre: http://www.bbbike.org/Curitiba and http://www.bbbike.org/PortoAlegre},
     },
-    updated  => '2011-02-05T12:30:02Z',
+    updated  => '2011-02-05T12:30:09Z',
     category => 'News',
 );
 
@@ -232,7 +379,7 @@ $feed->add_entry(
         content =>
 qq{New: cycle routing for South America: http://www.bbbike.org/Montevideo and http://www.bbbike.org/Lima},
     },
-    updated  => '2011-01-31T12:30:02Z',
+    updated  => '2011-01-31T12:30:12Z',
     category => 'News',
 );
 
@@ -266,7 +413,7 @@ qq{BBBike.org is now available in Danish, German, English, Spanish, French, Croa
 
 $feed->add_entry(
     title => 'New directory layout with shorter URLs',
-    id    => '5569e78510bee2720280ed5cd3afee09',
+    id    => '5569e78510bee2720280ed5cd3afee08',
 
     content => {
         type => 'text',
@@ -355,7 +502,7 @@ $feed->add_entry(
 qq{New cities: Birmingham, Bristol, Leeds, Liverpool, Manchester, Sheffield},
     },
 
-    updated  => '2010-08-21T12:30:02Z',
+    updated  => '2010-08-21T12:30:05Z',
     category => 'News',
 );
 
@@ -368,7 +515,7 @@ $feed->add_entry(
         content => qq{New cities: Edinburgh, Glasgow},
     },
 
-    updated  => '2010-08-21T12:30:02Z',
+    updated  => '2010-08-21T12:30:06Z',
     category => 'News',
 );
 
@@ -388,7 +535,7 @@ $feed->add_entry(
 
 $feed->add_entry(
     title => 'Twitter',
-    id    => 'e86b828855a4103bfe73aa02fef7fa3a',
+    id    => 'e86b828855a4103bfe73aa02fef7fa3b',
 
     content => {
         type    => 'text',
@@ -409,7 +556,7 @@ $feed->add_entry(
 qq{BBBike supports now google maps version 3 which enable new features like localization and elevation charts.},
     },
 
-    updated  => '2010-08-02T18:30:02Z',
+    updated  => '2010-08-02T18:30:42Z',
     category => 'News',
 );
 
@@ -524,7 +671,7 @@ $feed->add_entry(
 $feed->add_entry(
     title => 'New cities for BBBike@world',
     link  => $homepage,
-    id    => '81ebeaf0506f9d6a518be2ab38ec243f',
+    id    => '81ebeaf0506f9d6a518be2ab38ec243d',
 
     content => {
         type    => 'text',
@@ -551,7 +698,7 @@ $feed->add_entry(
 
 $feed->add_entry(
     title => 'OpenSearch search plugins',
-    id    => '81ebeaf0506f9d6a518be2ab38ec243d',
+    id    => '81ebeaf0506f9d6a518be2ab38ec244d',
 
     content => {
         type => 'text',

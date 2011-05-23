@@ -22,11 +22,17 @@ my $opensearch_file = 'opensearch.streetnames';
 my $opensearch_dir  = '../data-osm';
 my $opensearch_dir2 = '../data-opensearch-places';
 
-my $debug              = 1;
-my $match_anyware      = 0;
-my $match_words        = 1;
-my $remove_housenumber = 1;
-my $remove_city        = 1;
+my $debug         = 1;
+my $match_anyware = 0;
+my $match_words   = 1;
+my $remove_city   = 1;
+my $remove_train  = 1;
+
+# 232 College Street -> College Street
+my $remove_housenumber_suffix = 1;
+
+# Hauptstr. 27 -> Hauptstr
+my $remove_housenumber_prefix = 1;
 
 # word matching for utf8 data
 my $force_utf8 = 0;
@@ -65,7 +71,7 @@ sub street_match {
         # linux only
         $look_opt .= 'b' if $binary && -e '/proc';
 
-        my @command = ( 'look', $look_opt, $street, $file );
+        my @command = ( 'look', $look_opt, "--", $street, $file );
 
         warn join( " ", @command ), "\n" if $debug >= 2;
         open( IN, '-|' ) || exec @command;
@@ -258,7 +264,7 @@ my @suggestion =
 # strip english style addresses with
 #    <house number> <street name>
 # and run the query again if nothing was found
-if (   $remove_housenumber
+if (   $remove_housenumber_prefix
     && scalar(@suggestion) == 0
     && $street =~ /^\d+\s+/ )
 {
@@ -266,12 +272,47 @@ if (   $remove_housenumber
     $street2 =~ s/^\d+\s+//;
 
     if ( $street2 ne "" ) {
-        warn "housenumber: $street <=> $street2\n" if $debug;
+        warn "API: city: $city, housenumber prefix: $street <=> $street2\n"
+          if $debug;
         @suggestion = sort &streetnames_suggestions_unique(
             'city'   => $city,
             'street' => $street2
         );
     }
+}
+
+# strip european style addresses with
+#    <street name> < housenumber
+# and run the query again if nothing was found
+elsif ($remove_housenumber_suffix
+    && scalar(@suggestion) == 0
+    && $street =~ /\s+\d+$/ )
+{
+    my $street2 = $street;
+    $street2 =~ s/\s+\d+$//;
+
+    if ( $street2 ne "" ) {
+        warn "API: city: $city, housenumber suffix: $street <=> $street2\n"
+          if $debug;
+        @suggestion = sort &streetnames_suggestions_unique(
+            'city'   => $city,
+            'street' => $street2
+        );
+    }
+}
+
+# strip S-Bahn => S, U-Bahn => U
+elsif ($remove_train
+    && scalar(@suggestion) == 0
+    && $street =~ /^([sur])[\s\-]+(train\s+|bahn\s+|bahnof\s+)?(.*)/oi )
+{
+    my $street2 = "$1 $3";
+
+    warn "API: city: $city, train station: $street <=> $street2\n" if $debug;
+    @suggestion = sort &streetnames_suggestions_unique(
+        'city'   => $city,
+        'street' => $street2
+    );
 }
 
 if (   $remove_city
@@ -282,7 +323,7 @@ if (   $remove_city
     $street2 =~ s/^.*?,\s*//;
 
     if ( $street2 ne "" ) {
-        warn "strip city: $street <=> $street2\n" if $debug;
+        warn "API: city: $city, strip city: $street <=> $street2\n" if $debug;
         @suggestion = sort &streetnames_suggestions_unique(
             'city'   => $city,
             'street' => $street2

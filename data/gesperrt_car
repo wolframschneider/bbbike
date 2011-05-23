@@ -99,7 +99,7 @@ Mehringdamm -> Baruther Str.: Mehringdamm - Baruther	3::igndisp 9444,9919 9387,9
 Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
 Hobrechtstr.	1 12003,9105 11998,8872
 Lützowplatz	1 7002,11034 6873,11011
-Romain-Rolland-Str. - Berliner Str.	3 12856,17825 12825,17870 12736,17998 12479,17811
+Romain-Rolland-Str. - Berliner Str.	3 12856,17825 12825,17870 12736,17998 12467,17814
 Mahlower Str.	1 11773,8231 11920,8252
 Essener Str.	1 5889,13032 5993,13064 6114,13095 6183,13083
 Belforter Str. - Heinrich-Roller-Str.	3 11299,14112 11435,14023 11616,13911
@@ -385,8 +385,8 @@ Hindenburgdamm -> Roonstr.: Hindenburgdamm	3::igndisp 4521,4484 4515,4581 4265,4
 Flotowstr. -> Roonstr.: Hindenburgdamm	3::igndisp 4651,4638 4515,4581 4265,4484
 Flotowstr. -> Hindenburgdamm: Hindenburgdamm	3::igndisp 4651,4638 4515,4581 4521,4484
 Mariannenplatz - Bethaniendamm	1 11984,11130 12012,11235
-Ballonfahrerweg - Werner-Voß-Damm	3 7979,7525 7959,7609 8263,7611
-General-Pape-Str. - Werner-Voß-Damm	3 7921,7728 7959,7609 8263,7611
+Ballonfahrerweg - Werner-Voß-Damm	3 7979,7525 7949,7607 8263,7611
+General-Pape-Str. - Werner-Voß-Damm	3 7935,7736 7949,7607 8263,7611
 Rubensstr. - Baumeisterstr.	3 6389,7196 6367,7356 6283,7231
 Mittelstreifen	3nocross::ignrte 13010,8422 13042,8395 13107,8343
 Anzengruberstr. -> Sonnenallee: Mittelstreifen	3::igndisp 12865,8346 13042,8395 13010,8422
@@ -524,13 +524,13 @@ Berliner Str. -> Nassauische Str.: Mittelstreifen	3::igndisp 5182,8880 5195,8880
 Mittelstreifen	3nocross::ignrte 6181,8181 6246,8222 6325,8259
 Nymphenburger Str. -> Heylstr.: Mittelstreifen	3::igndisp 6163,8398 6246,8222 6325,8259
 Heylstr. -> Nymphenburger Str.: Mittelstreifen	3::igndisp 6181,8181 6246,8222 6163,8398
-Mittelstreifen	3nocross::ignrte 2191,11451 2282,11463 2390,11468
+Mittelstreifen	3nocross::ignrte 2191,11451 2282,11463 2391,11478
 Kaiserdamm -> Rognitzstr.: Mittelstreifen	3::igndisp 2191,11451 2282,11463 2314,11581
-Kaiserdamm -> Rognitzstr.: Mittelstreifen	3::igndisp 2390,11468 2282,11463 2219,11304
-Rognitzstr. -> Kaiserdamm: Mittelstreifen	3::igndisp 2314,11581 2282,11463 2390,11468
 Rognitzstr. -> Rognitzstr.: Mittelstreifen	3::igndisp 2314,11581 2282,11463 2219,11304
+Rognitzstr. -> Kaiserdamm: Mittelstreifen	3::igndisp 2314,11581 2282,11463 2391,11478
 Rognitzstr. -> Kaiserdamm: Mittelstreifen	3::igndisp 2219,11304 2282,11463 2191,11451
 Rognitzstr. -> Rognitzstr.: Mittelstreifen	3::igndisp 2219,11304 2282,11463 2314,11581
+Kaiserdamm -> Rognitzstr.: Mittelstreifen	3::igndisp 2391,11478 2282,11463 2219,11304
 Mittelstreifen	3nocross::ignrte 15838,14319 16008,14340 16310,14378
 Landsberger Allee -> Große-Leege-Str.: Mittelstreifen	3::igndisp 15838,14319 16008,14340 16007,14367
 Große-Leege-Str. -> Landsberger Allee: Mittelstreifen	3::igndisp 16007,14367 16008,14340 16310,14378
@@ -625,9 +625,9 @@ Schwebelstr. -> Lichtenrader Damm: Mittelstreifen	3::igndisp 10903,263 10713,197
 Straßenbahntrasse	3nocross::ignrte 20281,14361 20269,14256 20241,14016
 Annenstr. -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 20376,14244 20269,14256 20241,14016
 Allee der Kosmonauten -> Annenstr.: Straßenbahntrasse	3::igndisp 20281,14361 20269,14256 20376,14244
-Straßenbahntrasse	3nocross::ignrte 20771,14500 20822,14594 20868,14698
+Straßenbahntrasse	3nocross::ignrte 20756,14486 20822,14594 20868,14698
+Allee der Kosmonauten -> Vierlandenstr.: Straßenbahntrasse	3::igndisp 20756,14486 20822,14594 20761,14589
 Vierlandenstr. -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 20761,14589 20822,14594 20868,14698
-Allee der Kosmonauten -> Vierlandenstr.: Straßenbahntrasse	3::igndisp 20771,14500 20822,14594 20761,14589
 Geitelsteig	1 1988,14870 1977,14751 1974,14646
 Schweiggerweg	1 2081,14570 2079,14704 2099,14852
 Jungfernheideweg	1 1465,14963 1423,14679 1361,14431
@@ -719,7 +719,6 @@ Mittelstreifen	3nocross::ignrte 13151,14855 13110,14879 12812,15053
 Einsteinstr. -> Storkower Str.: Mittelstreifen	3::igndisp 13143,14935 13110,14879 13151,14855
 Storkower Str. -> Einsteinstr.: Mittelstreifen	3::igndisp 12812,15053 13110,14879 13143,14935
 Hönower Wiesenweg: nur für Anlieger und Radfahrer offen	2:Anlieger 17375,8847 17416,8767 17483,8644 17554,8458 17624,8353 17708,8316 17751,8284
-Mittelstreifen	3nocross::ignrte 6787,5459 6767,5233 6747,5010
 Mittelstreifen	3nocross::ignrte 9248,4904 9239,4980 9207,5185
 Mariendorfer Damm -> Finkenweg: Mittelstreifen	3::igndisp 9207,5185 9239,4980 9360,4996
 Finkenweg -> Mariendorfer Damm: Mittelstreifen	3::igndisp 9360,4996 9239,4980 9248,4904
@@ -996,13 +995,13 @@ Mittelstreifen	3nocross::ignrte 6157,7685 6083,7582 5955,7406
 Hauptstr. -> Wielandstr.: Mittelstreifen	3::igndisp 6157,7685 6083,7582 6081,7215
 Wielandstr. -> Hauptstr.: Mittelstreifen	3::igndisp 6081,7215 6083,7582 5955,7406
 Fehmarner Str.	1 6710,14776 6528,15000
-Mittelstreifen	3nocross::ignrte 1962,11417 1837,11398 1629,11363
-Soorstr. -> Soorstr.: Mittelstreifen	3::igndisp 1878,11268 1837,11398 1799,11517
-Soorstr. -> Kaiserdamm: Mittelstreifen	3::igndisp 1878,11268 1837,11398 1629,11363
-Kaiserdamm -> Soorstr.: Mittelstreifen	3::igndisp 1962,11417 1837,11398 1878,11268
-Soorstr. -> Soorstr.: Mittelstreifen	3::igndisp 1799,11517 1837,11398 1878,11268
-Soorstr. -> Kaiserdamm: Mittelstreifen	3::igndisp 1799,11517 1837,11398 1962,11417
-Kaiserdamm -> Soorstr.: Mittelstreifen	3::igndisp 1629,11363 1837,11398 1799,11517
+Mittelstreifen	3nocross::ignrte 1960,11426 1834,11408 1625,11380
+Soorstr. -> Kaiserdamm: Mittelstreifen	3::igndisp 1878,11268 1834,11408 1625,11380
+Soorstr. -> Soorstr.: Mittelstreifen	3::igndisp 1878,11268 1834,11408 1799,11517
+Kaiserdamm -> Soorstr.: Mittelstreifen	3::igndisp 1625,11380 1834,11408 1799,11517
+Kaiserdamm -> Soorstr.: Mittelstreifen	3::igndisp 1960,11426 1834,11408 1878,11268
+Soorstr. -> Soorstr.: Mittelstreifen	3::igndisp 1799,11517 1834,11408 1878,11268
+Soorstr. -> Kaiserdamm: Mittelstreifen	3::igndisp 1799,11517 1834,11408 1960,11426
 Paplitzer Str.	1 11027,-2448 11080,-2035
 Steinträgerweg: Poller	3 12987,2220 12963,2365 12948,2484
 Steinträgerweg: Poller	3 12948,2484 12963,2365 12987,2220
@@ -1052,8 +1051,8 @@ Querweg durch die Dauerkolonie Togo -> Müllerstr.: Mittelstreifen	3::igndisp 570
 Müllerstr. -> Querweg durch die Dauerkolonie Togo: Mittelstreifen	3::igndisp 5937,16784 5900,16817 5700,16584
 Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16734,9990 16539,10097 16148,10329
 Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16148,10329 16539,10097 16734,9990
-Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19558,8064 19504,8003 19468,7962
-Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19468,7962 19504,8003 19558,8064
+Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19558,8064 19504,8003 19460,7954
+Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19460,7954 19504,8003 19558,8064
 Klapppfosten	3 -1612,2123 -1590,1985 -1592,1852
 Klapppfosten	3 -1592,1852 -1590,1985 -1612,2123
 Pflanzenkübel	3 -1604,2324 -1401,2391 -1248,2451
@@ -1097,6 +1096,9 @@ Passauer -> Lietzenburger	3 6033,10403 6020,10351 6147,10383
 Am Hanffgraben	1 16805,1488 16698,1392
 Rütlistr.: Durchfahrt verboten	2 12565,9200 12490,9056
 Wustermarker Str.:	1 -4385,14305 -4556,14349
+Mittelstreifen	3nocross::ignrte 2346,7684 2460,7658 2576,7634
+Sulzaer Str. -> Hundekehlestr.: Mittelstreifen	3::igndisp 2499,7930 2460,7658 2576,7634
+Hundekehlestr. -> Sulzaer Str.: Mittelstreifen	3::igndisp 2346,7684 2460,7658 2499,7930
 Berliner Str.	3nocross::ignrte 10859,17854 10871,17722 10892,17491
 Borkumstr. -> Berliner Str.: Berliner Str.	3::igndisp 10956,17735 10871,17722 10892,17491
 Berliner Str. -> Borkumstr.: Berliner Str.	3::igndisp 10859,17854 10871,17722 10956,17735
@@ -1173,3 +1175,31 @@ Teikeweg: Poller	3 9408,4568 9412,4537 9519,4537
 Teikeweg: Poller	3 9428,4419 9412,4537 9519,4537
 Medebacher Weg: Schranke	3 1886,19835 1896,19801 1945,19622
 Medebacher Weg: Schranke	3 1945,19622 1896,19801 1886,19835
+Dievenowstr.	1 3228,7401 3208,7328 3189,7249 3202,7121
+Abbestr.: nur für Anlieger, herausfahrbare Poller	2 4757,12219 4683,12072
+Knesebeckstr. - Hardenbergstr.	3 4897,11354 4919,11605 4900,11626
+Sakrower Kirchweg	1 -8162,4025 -8255,3946 -8308,3902 -8401,3894 -8449,3907
+Sibeliusweg	1 -6797,4991 -6789,5052 -6787,5076 -6762,5133 -6747,5169
+Angerburger Allee	1 -1524,11108 -1608,11133 -1885,11392 -1931,11437 -1986,11487
+Sensburger Allee	1 200,11428 326,11391 456,11233
+Kyllburger - Darßer Str	3 16670,17454 16779,17521 16751,17560
+Am Steinberg	1 13183,17580 12998,17480
+Schäßburger Weg: Poller	3 7090,-225 7127,-248 7225,-312
+Schäßburger Weg: Poller	3 7225,-312 7127,-248 7090,-225
+Fuchsmühler Weg: Durchfahrt gesperrt	2 7277,-77 7231,25
+Poller	3 7181,-15 7231,25 7184,150
+Poller	3 7181,-15 7231,25 7277,-77
+Poller	3 7184,150 7231,25 7181,-15
+Poller	3 7277,-77 7231,25 7181,-15
+Mittelstreifen	3nocross::ignrte 9338,4129 9365,4006 9410,3793
+Mariendorfer Damm -> Richterstr.: Mittelstreifen	3::igndisp 9410,3793 9365,4006 9232,3980
+Richterstr. -> Mariendorfer Damm: Mittelstreifen	3::igndisp 9232,3980 9365,4006 9338,4129
+Ontarioseestr.: Sackgasse für Autos	3 18408,10041 18339,10048 18296,10027
+Ontarioseestr.: Sackgasse für Autos	3 18408,10041 18339,10048 18403,10077
+Ontarioseestr.: Sackgasse für Autos	3 18296,10027 18339,10048 18408,10041
+Ontarioseestr.: Sackgasse für Autos	3 18403,10077 18339,10048 18408,10041
+Schranke	3 11870,21574 11982,21392 11948,21366
+Schranke	3 12074,21243 11982,21392 11948,21366
+Schranke	3 11948,21366 11982,21392 11870,21574
+Schranke	3 11948,21366 11982,21392 12074,21243
+Pestalozzistr.	1 24652,11794 24704,11830 24769,11819

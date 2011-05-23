@@ -10,7 +10,9 @@ TPAGE=	tpage
 # XXX get from elsewhere
 CGIDIR?=../cgi
 
-all:	newstreetform.html newstreetform.utf8.html \
+all: help
+
+html:	newstreetform.html newstreetform.utf8.html \
 	fragezeichenform.html fragezeichenform.utf8.html \
 	bbbike_small \
 	bbbike-opensearch \
@@ -113,4 +115,23 @@ opensearch/bbbike-opensearch-en-simple.gif:
 
 opensearch/bbbike-opensearch-en.gif:
 	cd opensearch && ln -s ../../images/srtbike16.gif bbbike-opensearch-en.gif
+
+######################################################################
+#
+BBBIKE_WORLD_JAVASCRIPT_FILES=\
+	bbbike.js \
+	maps3.js
+
+JAVASCRIPT_FILES= ${BBBIKE_WORLD_JAVASCRIPT_FILES}
+
+jsbeautifier js:
+	for i in ${BBBIKE_WORLD_JAVASCRIPT_FILES}; do \
+	   jsbeautifier -j $$i > $@.tmp && mv -f $@.tmp $$i; \
+	done
+
+distclean:
+	rm -f *.bak
+
+help:
+	@echo "make [ jsbeautifier | html | distclean ]"
 

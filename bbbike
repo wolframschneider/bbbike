@@ -7090,8 +7090,9 @@ EOF
 			           -tags => ["$abk-fg", "$xx,$yy", $pointname],
 			          );
 	        } elsif ($abk eq 'vf') {
-		    my @tags = ("$abk-fg", "$xx,$yy", "$abk-$category-fg", "$abk-$i");
-		    if ($category eq 'Vf') {
+		    my($rawcategory, $attribs) = split /::/, $category;
+		    my @tags = ("$abk-fg", "$xx,$yy", "$abk-$rawcategory-fg", "$abk-$i");
+		    if ($rawcategory eq 'Vf') {
 			my($x1,$y1,$x2,$y2,$x3,$y3) =
 			  (transpose(@{Strassen::to_koord1($ret->[Strassen::COORDS][0])}),
 			   transpose(@{Strassen::to_koord1($ret->[Strassen::COORDS][1])}),
@@ -7397,7 +7398,7 @@ sub set_bindings {
 			   Tk::Babybike::handle_button1_scribble($c,$c->XEvent);
 		       } elsif ($map_mode eq MM_URL_SELECT) {
 			   my($url) = grep { $_ } map {
-			       my($url) = $_ =~ m{(https?://\S+)};
+			       my($url) = $_ =~ m{((?:file|https?)://\S+)};
 			       defined $url ? $url : undef;
 			   } $c->gettags("current");
 			   if ($url) {
@@ -19517,10 +19518,29 @@ sub add_to_stack {
 	    return;
 	}
     }
+
+    # Smart match do-it-yorself:
+    my $other_abk_match =
+	(ref $other_abk eq 'ARRAY'
+	 ? sub {
+	     my($tag) = @_;
+	     first { $_ eq $tag } @$other_abk;
+	 }
+	 : ref $other_abk eq 'Regexp'
+	 ? sub {
+	     my($tag) = @_;
+	     $tag =~ $other_abk;
+	 }
+	 : sub {
+	     my($tag) = @_;
+	     $tag eq $other_abk;
+	 }
+	);
+
     my $i = 0;
-    for (@normal_stack_order) {
+    for my $tag (@normal_stack_order) {
 	# XXX I think I don't have to check against '*...*' tags
-	if ($_ eq $other_abk) {
+	if ($other_abk_match->($tag)) {
 	    if ($how =~ m{^(after|above)$}) {
 		splice @normal_stack_order, $i+1, 0, $abk, "$abk-fg";
 		return;

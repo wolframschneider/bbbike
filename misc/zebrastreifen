@@ -32,7 +32,6 @@ Manfred-von-Richthofen-Str. Ecke Schulenburgring	Zs 9002,8596
 Manfred-von-Richthofen-Str. Ecke Wolffring	Zs 8812,8360
 Manfred-von-Richthofen-Str. Ecke Kaiserkorso	Zs 9096,8666
 Bayernring Ecke Schulenburgring	Zs 9028,8434
-#XXX del --- Luxemburger Straße	Zs 6846,15202
 Oberspreestraße/Bärenlauchstraße	Zs 19762,5167
 Lindenthaler Allee/Clauertstrasse	Zs -1253,2212
 Teltower Damm/Nieritzweg	Zs 1203,1075
@@ -280,7 +279,6 @@ Gotthardstr./Höhe Kita	Zs 6142,17798
 #: XXX Realisierung noch 2009
 Ludolfingerplatz/Maximiliankorso	Zs 2216,25117
 #: by: ^^^
-#XXX del --- jetzt Ampel --- #: note: Luftbild --- Damerowstr./S Heinersdorf	Zs 11913,19146
 #: note: am 2009-07-29 noch nicht aktiv gewesen, mittlerweile aber: http://www.berlin.de/ba-pankow/presse/archiv/20090828.1330.136793.html
 Fehrbelliner/Templiner Str.	Zs 10596,14011
 #: note: seit 2009-08
@@ -290,6 +288,7 @@ Seeburger Str./Seecktstr.	Zs -4299,13304
 Hämmerlingstr./Annenallee	Zs 22097,5592
 Schnellerstr./Bruno-Bürgel-Weg	Zs 19273,5304
 Alt-Müggelheim/Sobernheimer Str.	Zs 28207,953
+Alt-Müggelheim/Sobernheimer Str.	Zs 28242,988
 Heilbronner/Katharinenstr.	Zs 2870,10460
 Paulsborner/Caspar-Theyß-Str.	Zs 2968,9387
 Allee der Kosmonauten/Beilsteiner Str.	Zs 18895,13470
@@ -345,11 +344,30 @@ Friesenstr.	Zs 9800,8935
 Karlsruger Str.	Zs 2978,10369
 Emmentaler/Thurgauer	Zs 7141,18140
 Veitstr./Medebacher Weg	Zs 1901,19842
-Malchower/Clematisweg	Zs 13173,18144
 #: note: ^^^
+Malchower/Clematisweg	Zs 13173,18144
+Malchower Weg/Biesterfelder	Zs 17106,16456
 Grunewaldstr.	Zs 7218,9321
 Feuerbachstr./Fregestr.	Zs 5597,6360
 Neumann/Vinetastr.	Zs 11575,17016
 Exerzierstr./Gottschedstr.	Zs 8296,16430
 Transvaal/Togostr.	Zs 6097,16214
 Britzer Str./Rotkopfweg	Zs 10976,3708
+Franzensbader Str./Reinerzstr.	Zs 2358,8618
+Joachim-Friedrich-Str.	Zs 3122,10328
+Alt-Lietzow	Zs 4247,12373
+Engeldamm/Melchiorstr.	Zs 11901,11173
+Bethaniendamm/Melchiorstr.	Zs 11928,11146
+Engeldamm/Adalbertstr.	Zs 11666,11107
+Bethaniendamm/Adalbertstr.	Zs 11650,11069
+Windscheidstr./Schillerstr.	Zs 3207,11416
+Schirwindter Allee/Dickensweg	Zs -1532,11176
+Josef-Orlopp-Str.	Zs 15738,13159
+Ribnitzer Str./Zum Hechtgraben	Zs 16408,18259
+#: XXX in Bau
+#: last_checked: 2011-05-20
+Grünberger/Gubener	Zs 13382,11996
+Elisabethstr./Oberfeldstr.	Zs 20923,14461
+#: note: public imagery
+Hochstr./Humboldtsteg	Zs 8871,15769
+Müggelheimer Damm/Rübezahl	Zs 25911,2306

@@ -24,7 +24,6 @@ Zossener - Brachvogelstr.: bereits an der Johanniterstr. vom Radstreifen auf den
 Wendeschleife der Straßenbahn links umfahren	CP; 22965,4124 23368,3894 23652,3722
 Potsdamer Str. - Am Karlsbad: bereits am Schöneberger Ufer auf linken Gehweg wechseln	PI; 7980,11070 7968,11048 8011,11014
 Am Karlsbad - Potsdamer Str.: entweder Fußgängerampel am Schöneberger Ufer oder an der Lützowstr. benutzen	CP; 8011,11014 7968,11048 7912,10945
-Otto-Braun-Str. - Wadzeckstr.: bereits am Alexanderplatz die Straßenseite wechseln	PI; 11228,12951 11267,13012 11314,13087 11368,13170 11326,13196
 Fußgängerampel auf der linken Seite benutzen	CP; 9929,13660 9918,13733 9792,13681
 Fußgängerampel auf der linken Seite zum Überqueren der Torstr. benutzen	CP; 9929,13660 9918,13733 9810,14066
 Fußgängerampel auf der rechten Seite zum Überqueren der Torstr. benutzen	CP; 9810,14066 9918,13733 9929,13660
@@ -268,10 +267,10 @@ Rudower Str. - Grünauer Str.: linken Gehweg bis zur Ampel benutzen	CP; 21585,445
 Rudower Chaussee - Walther-Nernst-Str.: an der Ampel Groß-Berliner Damm die Straßenseite wechseln	PI; 19501,3101 19475,3074 19498,3054
 Rügenwalder Weg - Gülzower Str.: auf dem linken Bürgersteig bis zur Parchimer Str. oder zum Zebrastreifen vor dem U/S-Bhf. Wuhletal vorfahren	CP; 22424,12183 22388,12190 22304,12157
 Allee der Kosmonauten - Heliosstr.: Straßenbahntrasse kurz hinter der Vierlandenstr. überqueren	CP; 20868,14698 20822,14594 20975,14601
-Heliosstr. - Allee der Kosmonauten: Überquerungsmöglichkeit der Straßenbahntrasse links	CP; 20975,14601 20822,14594 20771,14500
+Heliosstr. - Allee der Kosmonauten: Überquerungsmöglichkeit der Straßenbahntrasse links	CP; 20975,14601 20822,14594 20756,14486
 Heliosstr. - Vierlandenstr.: Überquerungsmöglichkeit der Straßenbahntrasse links	CP; 20975,14601 20822,14594 20761,14589
 Vierlandenstr. - Heliosstr.: Überquerungsmöglichkeit der Straßenbahntrasse rechts	CP; 20761,14589 20822,14594 20975,14601
-Allee der Kosmonauten - Vierlandenstr.: Straßenbahntrasse kurz vor der Heliosstr. überqueren	CP; 20771,14500 20822,14594 20761,14589
+Allee der Kosmonauten - Vierlandenstr.: Straßenbahntrasse kurz vor der Heliosstr. überqueren	CP; 20756,14486 20822,14594 20761,14589
 Vierlandenstr. - Allee der Kosmonauten: Überquerungsmöglichkeit der Straßenbahntrasse rechts	CP; 20761,14589 20822,14594 20868,14698
 Kleine Andreasstr.: Einfahrt befindet sich links von der Kaiser's-Parkplatzeinfahrt	CP2; 12279,12113 12211,12128
 Zitadelle - Am Juliusturm: bis zur Ampel am Zitadellenweg auf dem linken Gehweg vorfahren	CP; -2668,14635 -2656,14582 -2652,14559 -2646,14525 -2597,14532
@@ -336,3 +335,8 @@ Groß-Berliner Damm - Landschaftspark Johannisthal: bereits an der Herrmann-Dorne
 Groß-Berliner Damm - Landschaftspark Johannisthal: bereits an der Herrmann-Dorner-Allee die Straßenseite wechseln	PI; 18928,3701 18882,3750 18854,3781 18833,3781
 Wilhelm-Gericke-Str. - Oranienburger Str.: zunächst linken Gehweg bis zur Ampel an der Jansenstr. benutzen	CP; 5598,19912 5545,19909 5533,19811
 Bugenhagenstr. - Stromstr.: zunächst linken Gehweg bis zur Ampel an der Perleberger Str. benutzen	CP; 6104,13522 6235,13517 6230,13596
+Munsterdamm - Kottesteig: 40m vor der Kreuzung die Straßenseite wechseln	PI; 6771,5273 6767,5233 6806,5230
+Schorlemerallee - Albrecht-Thaer-Weg: bereits an der Kreuzung Schweinfurthstr. die Straßenseite wechseln	PI; 3306,6453 3347,6460 3449,6863
+Alemannenallee - Badenallee: Fußgängerampel rechts zum Überqueren der Heerstr. benutzen	CP; 1065,11216 943,11302 743,11462
+Badenallee - Alemannenallee: Fußgängerampel links zum Überqueren der Heerstr. benutzen	CP; 743,11462 943,11302 1065,11216
+bereits an der Ampel Parchimer Allee/Onkel-Bräsig-Str. auf die linke Straßenseite wechseln	PI; 13305,4504 13266,4503 13098,4452
