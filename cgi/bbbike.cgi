@@ -8042,24 +8042,6 @@ sub choose_all_form {
 
     print qq{</div>\n</div>\n</div><!-- top_ie -->\n};
 
-    # make the street names clickable
-print <<"EOF";
-<script type="text/javascript">
-function oS (tag) { // openStreet
-    function e (html) { 
-	return escape(html); 
-    }
-
-    if (window.history) {
-	open("$bbbike_url" + "?" + 
-	"startname=" + 
-	e(tag.innerHTML),
-	"$city_script" );
-    }
-};
-</script>
-EOF
-
     print "\n\n<div id='list'>";
 
     my $counter = 0;

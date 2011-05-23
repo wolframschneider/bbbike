@@ -311,6 +311,11 @@ function toogleVia(via_field, via_message, via_input) {
     tag.value = "";
 }
 
+function oS (tag) { // openStreet
+    if (window.history) {
+	open("./?" + "startname=" + escape(tag.innerHTML), "BBBike");
+    }
+}
 
 // unknown google maps bug
 // Af[z] is undefined
