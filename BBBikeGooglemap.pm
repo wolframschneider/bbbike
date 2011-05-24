@@ -372,7 +372,7 @@ EOF
         # utf8 fixes
         if ($cgi_utf8_bug) {
             foreach my $key (qw/startname zielname vianame/) {
-                my $val = Encode::decode( "utf8", $q->param("vianame") );
+                my $val = Encode::decode( "utf8", $q->param($key) );
 
                 # XXX: have to run decode twice!!!
                 $val = Encode::decode( "utf8", $val );
