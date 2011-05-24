@@ -311,9 +311,9 @@ function toogleVia(via_field, via_message, via_input) {
     tag.value = "";
 }
 
-function oS (tag) { // openStreet
+function oS(tag) { // openStreet
     if (window.history) {
-	open("./?" + "startname=" + escape(tag.innerHTML), "BBBike");
+        open("./?" + "startname=" + escape(tag.innerHTML), "BBBike");
     }
 }
 
