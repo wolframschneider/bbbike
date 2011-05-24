@@ -48,7 +48,7 @@ my $g_str;
 
 my $enable_bus_stations  = 0;
 my $enable_tram_stations = 0;
-my $sort_entries         = 1;
+my $sort_entries         = 0;
 
 # foo -> S foo
 # bar -> U bar
