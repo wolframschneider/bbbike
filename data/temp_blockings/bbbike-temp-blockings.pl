@@ -14315,8 +14315,8 @@ userdel	2::inwork -19058,11636 -19029,11660 -18750,11919
 EOF
      },
      { from  => 1243863900, # 2009-06-01 15:45
-       until => 1306853100, # 2011-05-31 16:45
-       text  => 'Pasewalker Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Frühjahr 2011) stadteinwärts zwischen Marienstr. und Anschlussstelle A114, 02.06.2009 bis 31.05.2011',
+       until => 1307743140, # XXX 1306853100, # 2011-05-31 16:45
+       text  => 'Pasewalker Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Frühjahr 2011) stadteinwärts zwischen Marienstr. und Anschlussstelle A114, 02.06.2009 bis 10.06.2011',
        type  => 'handicap',
        source_id => 'IM_012907',
        data  => <<EOF,
@@ -17313,9 +17313,6 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_090026',
        data  => <<EOF,
-#: last_checked: 2011-04-07
-#: next_check: 2011-05-14
-#: XXX nach den Bauarbeiten vielleicht besserer Asphalt? Siehe qualitaet_s-orig...
 userdel	q4::inwork; 12598,8390 12771,8439
 EOF
      },
@@ -18892,6 +18889,9 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016132',
        data  => <<EOF,
+#: XXX Verkehrsfreigabe ist bereits erfolgt (2011-05-25) --- Einschränkung aufgehoben?
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20110520.1450.344975.html
+#: next_check: 2011-05-25
 userdel	q4::inwork; 7949,7607 7935,7736 7950,7840 8226,8648 8237,8685 8306,8722
 EOF
      },
@@ -19052,6 +19052,39 @@ EOF
 userdel	2::temp 8055,12186 8089,12190 8214,12205 8538,12245 8610,12254
 userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 userdel	2::temp 8542,11502 8548,11552
+EOF
+     },
+     { from  => 1306213385, # 2011-05-24 07:03
+       until => 1306965599, # 2011-06-01 23:59
+       text  => 'Puschkinallee (Treptow) zwischen Bulgarische Str. und Elsenstr. Baustelle, Straße vollständig gesperrt (bis Anfang 06/11) ',
+       type  => 'gesperrt',
+       source_id => 'IM_017318',
+       data  => <<EOF,
+userdel	2::inwork 15383,9191 14819,9462 14780,9480 14310,9692
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Fuldastr., von Donaustr. Richtung Karl-Marx-Str. ist die Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2011-05-24
+#: next_check: 2011-06-05
+#: XXX wie lange gilt die Sperrung?
+userdel	q4::inwork; 12549,8616 12500,8504
+EOF
+     },
+     { from  => undef, # 
+       until => 1306447199, # 2011-05-26 23:59
+       text  => 'Oberbaumbruecke wegen Bombenfunds gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp 13332,10832 13305,10789 13206,10651 13178,10623 13082,10634
+userdel	2::temp 13249,10445 13149,10539
+userdel	2::temp 13409,11004 13332,10832 13389,10808
+userdel	2::temp 13332,10832 13144,10921
+userdel	2::temp 13077,10747 13206,10651
+userdel	2::temp 12985,10665 12865,10762 12942,10845 13077,10747 13015,10659 13082,10634 13028,10629 13140,10546 13178,10623
 EOF
      },
     );

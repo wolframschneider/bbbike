@@ -1860,8 +1860,8 @@ userdel	2::temp 20610,12050 20715,12040
        undef,
        {
          'source_id' => 'IM_012907',
-         'until' => 1306853100,
-         'text' => 'Pasewalker Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Frühjahr 2011) stadteinwärts zwischen Marienstr. und Anschlussstelle A114, 02.06.2009 bis 31.05.2011',
+         'until' => 1307743140,
+         'text' => 'Pasewalker Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Frühjahr 2011) stadteinwärts zwischen Marienstr. und Anschlussstelle A114, 02.06.2009 bis 10.06.2011',
          'from' => 1243863900,
          'id' => 1686,
          'data' => 'userdel	q4::inwork; 12095,20832 12076,20731 12030,20490 12008,20368 12000,20327 11984,20246 11963,20136 11931,19965 11907,19838 11907,19749
@@ -2528,33 +2528,13 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'INKO_090026',
-         'until' => 1306101600,
-         'text' => 'Erkstr. (Neukölln) Richtung Sonnenallee Baustelle, Fahrtrichtung gesperrt (bis Mitte 05/2011) ',
-         'from' => 1304110298,
-         'id' => 2033,
-         'data' => '#: last_checked: 2011-04-07
-#: next_check: 2011-05-14
-#: XXX nach den Bauarbeiten vielleicht besserer Asphalt? Siehe qualitaet_s-orig...
-userdel	q4::inwork; 12598,8390 12771,8439
-',
-         'type' => 'handicap'
-       },
        undef,
        undef,
        undef,
        undef,
        undef,
-       {
-         'until' => 1306101600,
-         'text' => 'Müllerstr. (Wedding): Veranstaltung, gesperrt (20. bis 22. Mai 2011) in beiden Richtungen zwischen Nazarethkirchstr. und Seestr. ',
-         'from' => 1305756000,
-         'id' => 2039,
-         'data' => 'userdel	2::temp 6790,16018 6914,15908 6936,15888 7043,15793 7129,15717 7198,15656
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        {
          'until' => undef,
          'text' => 'Anwohner haben den Uferweg am Groß Glienicker See versperrt',
@@ -3012,7 +2992,10 @@ userdel	q4::inwork; -12545,-698 -12262,-612
          'text' => 'General-Pape-Straße (Tempelhof): Baustelle, Fahrtichtung gesperrt (bis ca. 07/2011) Richtung Kolonnenstr. zwischen Werner-Voß-Str. und Loewenhardtdamm, 26.07.2010 11:47 Uhr bis 30.07.2011 16:00 Uhr ',
          'from' => 1280051220,
          'id' => 2197,
-         'data' => 'userdel	q4::inwork; 7949,7607 7935,7736 7950,7840 8226,8648 8237,8685 8306,8722
+         'data' => '#: XXX Verkehrsfreigabe ist bereits erfolgt (2011-05-25) --- Einschränkung aufgehoben?
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20110520.1450.344975.html
+#: next_check: 2011-05-25
+userdel	q4::inwork; 7949,7607 7935,7736 7950,7840 8226,8648 8237,8685 8306,8722
 ',
          'type' => 'handicap'
        },
@@ -3068,15 +3051,7 @@ userdel	q4::inwork; -12545,-698 -12262,-612
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1306101599,
-         'text' => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 29.04. - 22.05.2011 ',
-         'from' => 1303941600,
-         'id' => 2207,
-         'data' => 'userdel	q4::temp 11177,8985 11250,8585 11282,8428 11271,8325
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'LS/O-SG33-E/11/044',
          'until' => 1317506400,
@@ -3128,15 +3103,40 @@ userdel	q4::inwork; -12545,-698 -12262,-612
 ',
          'type' => 'handicap'
        },
+       undef,
        {
-         'source_id' => 'IM_017297',
-         'until' => 1306101600,
-         'text' => 'Str. des 17. Juni (Tiergarten) in beiden Richtungen zwischen Y.-Rabin-Str. und Brandenburger Tor, auch Ebertstr. zwischen Behrenstr. und Dorotheenstr. Veranstaltung, Straße vollständig gesperrt (bis 22.05.2011 ca. 24:00 Uhr) ',
-         'from' => 1305840997,
-         'id' => 2214,
-         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8538,12245 8610,12254
-userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-userdel	2::temp 8542,11502 8548,11552
+         'source_id' => 'IM_017318',
+         'until' => 1306965599,
+         'text' => 'Puschkinallee (Treptow) zwischen Bulgarische Str. und Elsenstr. Baustelle, Straße vollständig gesperrt (bis Anfang 06/11) ',
+         'from' => 1306213385,
+         'id' => 2215,
+         'data' => 'userdel	2::inwork 15383,9191 14819,9462 14780,9480 14310,9692
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'text' => 'Fuldastr., von Donaustr. Richtung Karl-Marx-Str. ist die Fahrbahn gesperrt',
+         'from' => undef,
+         'id' => 2216,
+         'data' => '#: last_checked: 2011-05-24
+#: next_check: 2011-06-05
+#: XXX wie lange gilt die Sperrung?
+userdel	q4::inwork; 12549,8616 12500,8504
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1306447199,
+         'text' => 'Oberbaumbruecke wegen Bombenfunds gesperrt',
+         'from' => undef,
+         'id' => 2217,
+         'data' => 'userdel	2::temp 13332,10832 13305,10789 13206,10651 13178,10623 13082,10634
+userdel	2::temp 13249,10445 13149,10539
+userdel	2::temp 13409,11004 13332,10832 13389,10808
+userdel	2::temp 13332,10832 13144,10921
+userdel	2::temp 13077,10747 13206,10651
+userdel	2::temp 12985,10665 12865,10762 12942,10845 13077,10747 13015,10659 13082,10634 13028,10629 13140,10546 13178,10623
 ',
          'type' => 'gesperrt'
        }
