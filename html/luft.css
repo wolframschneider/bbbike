@@ -44,7 +44,7 @@ div#footer_top { text-align: left; }
 /*End Win IE fix*/
 /* ************************************************************ */
 
-h2, h3 { text-align: center; } 
+h2 { text-align: center; } 
 div#copyright { text-align: center; padding-top: 0.7em; font-size: small; }
 div#wetter { padding-left: 10px; }
 
