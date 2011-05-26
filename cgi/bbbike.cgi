@@ -7525,7 +7525,7 @@ sub header {
 	  if (!is_mobile($q) || is_resultpage($q) ) {
 	    push(@$head, qq|<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>|);
 	    # push(@$head, qq|<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>|);
-	    my $gmails_url = "http://maps.google.com/maps/api/js?v=3.4&amp;sensor=$sensor&amp;hl=$my_lang";
+	    my $gmails_url = "http://maps.google.com/maps/api/js?v=3.4&amp;sensor=$sensor&amp;language=$my_lang";
 	    $gmails_url .= "&amp;libraries=panoramio" if $enable_panoramio_photos;
 
 	    push(@$head, qq|<script type="text/javascript" src="$gmails_url"></script>|);
