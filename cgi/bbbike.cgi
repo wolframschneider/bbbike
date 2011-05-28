@@ -7427,6 +7427,7 @@ sub header {
 	$bbbike_en_script = "/en" . $url;
 
         $bbbike_local_script = $url;
+        $bbbike_local_script =~ s,/\?all=3$,/streets.html,;
     }
 
     if (!$smallform) {
