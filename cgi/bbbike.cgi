@@ -7617,18 +7617,19 @@ sub header {
 	}
 
 	if (!$printmode && !&is_mobile($q)) {
-	print qq{<span id="language_switch">\n};
+	  print qq{<span id="language_switch">\n};
 	
-	my $counter = 0;
-	foreach my $l (@supported_lang) {
+	  my $counter = 0;
+	  foreach my $l (@supported_lang) {
 	    print " | " if $counter++ > 0;
 	    if ($l eq $lang) {
 		print qq{<span class="current_language" title="}, M("aktuelle Sprache"), ": ", M($l), qq{">$l</span>\n};
 	    } else {
 	        print qq{<a href="/$l$bbbike_local_script" title="switch map language to }, M($l), qq{">$l</a>\n};
 	    }
-	}
-	print qq{| <a href="$bbbike_local_script" title="switch map language to }, M($local_lang), qq{">local</a>\n} if $selected_lang;
+	  }
+	  print qq{| <a href="$bbbike_local_script" title="switch map language to }, M($local_lang), qq{">local</a>\n} if $selected_lang;
+	  print qq{</span>\n};
 	}
 
 	if (0) {
@@ -7654,9 +7655,10 @@ sub header {
 	    print <<EOF;
 <img class="selectedflag" src="$bbbike_images/de_flag.png" alt="Deutsch" border="0" title="Deutsch"><a href="$bbbike_en_script$query_string"><img class="unselectedflag" src="$bbbike_images/gb_flag.png" alt="English" title="English" border="0"></a>
 EOF
-	} }
+	} 
 
-	print qq{</span>\n};
+	}
+
 	print qq{</div>\n};
 
 	#&adsense_linkblock if &is_production($q) && !is_mobile($q);
