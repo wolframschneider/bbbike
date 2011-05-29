@@ -253,7 +253,9 @@ function google_weather(w) {
         if (f.day_of_week) {
             html += f.day_of_week.data;
         }
-        html += '<br />' + '<img style="border: 1px solid rgb(187, 187, 204); margin-bottom: 2px;" src="http://www.google.com' + f.icon.data + '" alt="' + f.condition.data + '" title="' + f.condition.data + '" /><br />';
+	
+	var icon_src = f.icon.data.match(/^http:/) ? f.icon.data : "http://www.google.com" + f.icon.data;
+        html += '<br />' + '<img style="border: 0px solid rgb(187, 187, 204); margin-bottom: 2px;" src="' + icon_src + '" alt="' + f.condition.data + '" title="' + f.condition.data + '" /><br />';
         if (f.high) {
             html += '<nobr>' + celcius(f.high.data) + '°C | ' + celcius(f.low.data) + '°C</nobr>';
         }
