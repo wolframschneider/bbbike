@@ -2181,7 +2181,7 @@ EOF
 	    my $url = $q->url(-full=>0, -absolute=>1);
 	    $url =~ s,^/m/,/,;
 	    &social_link;
-	    print qq{<a href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+	    print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
         } else {
 	    my $url = $q->url(-full=>0, -absolute => 1);
 	    $url =~ s,^/\w\w/,/m/, || $url =~ s,/,/m/,;
@@ -5118,12 +5118,13 @@ EOF
 	    my $url = $q->url(-full=>0, -absolute=>1, -query=>1);
             $url =~ s,^/m/,/,;
             #&social_link;
-            print qq{<a href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+            print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
 	    print qq{</span>\n\n};
 
 	    print <<EOF;
 <style type="text/css">
 body, select, input, span.slippymaplink { font-size: x-large }
+a.mobile_link { font-size: xx-large; margin-top: 3em; padding-top: 3em; }
 </style>
 EOF
 	}
@@ -5459,6 +5460,9 @@ EOF
 		$qq_normal->param('output_as', "print");
 		$qq_normal->param('printvariant', "normal");
 
+		# add a white bar
+	        if (is_mobile($q)) { print qq{<tr bgcolor="white"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td></tr>\n}; }
+
 		print qq{<tr bgcolor="white">};
 		#print qq{<td tyle="text-align:left">Route als ...</td>};
 		print qq{<td colspan="};
@@ -5495,19 +5499,19 @@ EOF
 #		    }
 		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">PalmDoc</a>};
 		}
-	        print qq{\n<span><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">PDF</a></span>\n};
+	        print qq{\n<span><a class="mobile_link" target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">PDF</a></span>\n};
 		if ($can_gpx) {
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-route");
 			my $href = $bbbike_script;
-			print qq{<a title="GPX route with waypoints for navigation, up to 256 points" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Route)</a>};
+			print qq{<a class="mobile_link" title="GPX route with waypoints for navigation, up to 256 points" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Route)</a>};
 		    }
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-track");
 			my $href = $bbbike_script;
-			print qq{<a title="GPX with up to 1024 points, no navigation" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Track)</a>};
+			print qq{<a class="mobile_link" title="GPX with up to 1024 points, no navigation" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Track)</a>};
 		    }
 		}
 		if ($can_kml) {
@@ -5515,7 +5519,7 @@ EOF
 		    $qq2->param('output_as', "kml-track");
 
 		    my $href = $bbbike_script;
-		    print qq{<a title="view route with Google Earth" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">KML</a>};
+		    print qq{<a class="mobile_link" title="view route with Google Earth" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">KML</a>};
 		}
 		if ($can_gpsies_link) {
 		    my $qq2 = cgi_utf8($use_utf8);
@@ -5536,6 +5540,9 @@ EOF
 		    print qq{<a target="BBBikeComment" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">Kommentar zur Route</a>};
 		}
 		print "</td></tr>";
+
+		# add a white bar
+	        if (is_mobile($q)) { print qq{<tr bgcolor="white"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td></tr>\n}; }
 	    }
 
 	    print "</table>\n";
@@ -7717,7 +7724,7 @@ my $s_copyright = <<EOF;
 
 <div id="footer">
 <div id="footer_top">
-<a href="/">home</a> |
+<a class="mobile_link" href="/">home</a> |
 <a href="/help.html">$help</a> |
 <a href="/app.html">$app</a> |
 <a href="$community_link">$donate</a> |
