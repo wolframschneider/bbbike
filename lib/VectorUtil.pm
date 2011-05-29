@@ -51,13 +51,13 @@ sub vector_in_grid {
     return 0 if $y1 > $gridy2 && $y2 > $gridy2;
 
     my $sgn;
-    my $ges_strecke = sqrt(abs(($x1-$x2)*($x1-$x2) + ($y1-$y2)*($y1-$y2)));
+    my $ges_strecke = sqrt(($x1-$x2)*($x1-$x2) + ($y1-$y2)*($y1-$y2));
 
     if ($x1 != $x2) {
 	# Schnittpunkt-Test am rechten Rand
 	my $d_x1_gridx1 = ($gridx1 - $x1);
 	my $a = $d_x1_gridx1*$ges_strecke/($x2-$x1);
-	my $b = sqrt(abs( $a*$a - $d_x1_gridx1*$d_x1_gridx1 ));
+	my $b = sqrt($a*$a - $d_x1_gridx1*$d_x1_gridx1);
 	$sgn = ($y1 < $y2 ? 1 : -1);
 	$sgn *= -1 if (($x1 < $x2 && $x1 > $gridx1) ||
 		       ($x2 < $x1 && $x1 < $gridx1));
@@ -72,7 +72,7 @@ sub vector_in_grid {
 	# Schnittpunkt-Test am linken Rand
 	my $d_x1_gridx2 = ($gridx2 - $x1);
 	$a = $d_x1_gridx2*$ges_strecke/($x2-$x1);
-	$b = sqrt((abs ($a*$a - $d_x1_gridx2*$d_x1_gridx2 )));
+	$b = sqrt($a*$a - $d_x1_gridx2*$d_x1_gridx2);
 	$sgn = ($y1 < $y2 ? 1 : -1);
 	$sgn *= -1 if (($x1 < $x2 && $x1 > $gridx2) ||
 		       ($x2 < $x1 && $x1 < $gridx2));
@@ -89,7 +89,7 @@ sub vector_in_grid {
 	# Schnittpunkt-Test am oberen Rand (geometrisch unten)
 	my $d_y1_gridy2 = ($gridy2 - $y1);
 	my $a = $d_y1_gridy2*$ges_strecke/($y2-$y1);
-	my $b = sqrt(abs( $a*$a - $d_y1_gridy2*$d_y1_gridy2 ));
+	my $b = sqrt($a*$a - $d_y1_gridy2*$d_y1_gridy2);
 	$sgn = ($x1 < $x2 ? 1 : -1);
 	$sgn *= -1 if (($y1 < $y2 && $y1 > $gridy2) ||
 		       ($y2 < $y1 && $y1 < $gridy2));
@@ -105,7 +105,7 @@ sub vector_in_grid {
 
 	my $d_y1_gridy1 = ($gridy1 - $y1);
 	$a = $d_y1_gridy1*$ges_strecke/($y2-$y1);
-	$b = sqrt(abs( $a*$a - $d_y1_gridy1*$d_y1_gridy1 ));
+	$b = sqrt($a*$a - $d_y1_gridy1*$d_y1_gridy1);
 	$sgn = ($x1 < $x2 ? 1 : -1);
 	$sgn *= -1 if (($y1 < $y2 && $y1 > $gridy1) ||
 		       ($y2 < $y1 && $y1 < $gridy1));
@@ -128,7 +128,7 @@ sub project_point_on_line {
     my($px,$py,$s0x,$s0y,$s1x,$s1y) = @_;
     my($sxd, $syd) = ($s1x-$s0x, $s1y-$s0y);
     if ($sxd+$syd==0) { # line is really a point
-	return sqrt(sqr(abs ($px-$s0x)+sqr($py-$s0y)));
+	return sqrt(sqr($px-$s0x)+sqr($py-$s0y));
     }
     my $tf = (($px-$s0x)*($s1x-$s0x) + ($py-$s0y)*($s1y-$s0y)) /
 	     ($sxd*$sxd + $syd*$syd);
@@ -145,7 +145,7 @@ sub distance_point_line {
     my($px,$py,$s0x,$s0y,$s1x,$s1y) = @_;
     my($sxd, $syd) = ($s1x-$s0x, $s1y-$s0y);
     if ($sxd+$syd==0) { # line is really a point
-	return sqrt(sqr(abs($px-$s0x)+sqr($py-$s0y)));
+	return sqrt(sqr($px-$s0x)+sqr($py-$s0y));
     }
     my $tf = (($px-$s0x)*($s1x-$s0x) + ($py-$s0y)*($s1y-$s0y)) /
 	     ($sxd*$sxd + $syd*$syd);
@@ -158,11 +158,11 @@ sub distance_point_line {
        ) {
 	my $dx = $s0x-$px+$tf*$sxd;
 	my $dy = $s0y-$py+$tf*$syd;
-	sqrt(abs($dx*$dx+$dy*$dy));
+	sqrt($dx*$dx+$dy*$dy);
     } else {
 	# nearest point is out of line ... check the endpoints of the line
-	my $dist0 = sqrt(sqr(abs($s0x-$px) + sqr($s0y-$py)));
-	my $dist1 = sqrt(sqr(abs($s1x-$px) + sqr($s1y-$py)));
+	my $dist0 = sqrt(sqr($s0x-$px) + sqr($s0y-$py));
+	my $dist1 = sqrt(sqr($s1x-$px) + sqr($s1y-$py));
 	if ($dist0 < $dist1) {
 	    $dist0;
 	} else {
@@ -190,7 +190,7 @@ sub get_polygon_center {
     my $step = 1;
     for(my $inx = 0; $inx < $#koord-2; $inx+=2) {
 	my($x1,$y1, $x2,$y2) = (@koord[$inx..$inx+3]);
-	my $len = sqrt(sqr(abs($x1-$x2) + sqr($y1-$y2)));
+	my $len = sqrt(sqr($x1-$x2) + sqr($y1-$y2));
 	next if $len == 0;
 	my($ex,$ey) = ($step*($x2-$x1)/$len,$step*($y2-$y1)/$len);
 	my($sx,$sy) = ($x1,$y1);
@@ -218,9 +218,9 @@ sub get_polygon_center {
 	}
 
 	if ($oldn < $n) {
-	    $ovfl = sqrt(sqr(abs($x2-($sx-$ex))+sqr($y2-($sy-$ey))));
+	    $ovfl = sqrt(sqr($x2-($sx-$ex))+sqr($y2-($sy-$ey)));
 	} else {
-	    $ovfl -= sqrt(sqr(abs($x2-$sx)+sqr($y2-$sy)));
+	    $ovfl -= sqrt(sqr($x2-$sx)+sqr($y2-$sy));
 	}
     }
     if ($n != 0) {
