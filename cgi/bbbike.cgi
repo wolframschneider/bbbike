@@ -5477,8 +5477,7 @@ EOF
 		    $cols++;
 		}
 
-		print qq{$cols" style="background-color:white; text-align:right;">};
-
+		print qq{$cols" style="background-color:white; text-align:center;">};
 
 		print
 		    "<a style='padding:0 0.2cm 0 0.2cm;' title='" . M("Druckvorlage normal") . "' target=printwindow href=\"$bbbike_script?" . $qq_normal->query_string . "\">" .
