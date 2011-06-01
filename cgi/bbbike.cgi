@@ -1056,6 +1056,12 @@ CGI->import('-no_xhtml');
 
 $q = new CGI;
 
+my @cgi_param = qw/startname start2 start startplz starthnr startc startort vianame via2 via viaplz viahnr viac viaort zielname ziel2 ziel zielplz zielhnr zielc zielort/;
+
+if (&is_forum_spam($q, @cgi_param)) {
+    $q->delete ( @cgi_param);
+}
+
 if ($q->user_agent("MSIE 6")) {
    if ($gmap_api_version == 3) {
 	warn "Downgrade to google maps v2 for IE6: ", $q->remote_host, " ", $q->url, " ", $q->user_agent, "\n" if 1 || $debug;
@@ -1646,15 +1652,12 @@ sub old_new_streetname {
 sub Param {
     my $name = shift;
 
-    my $val = $q->param($name);
-
-    my $v = $val;
-    $val = "" if $val =~ /[<]/;
-    
-    if ($debug && $v ne $val) {
-	warn "XSS reset parameter: '$v'\n";
+    if (&is_forum_spam($q, $name)) {
+	warn caller;
+	return "";
     }
 
+    my $val = $q->param($name);
     $val = &old_new_streetname($val);
     $val =~ s/^\s+//;
     $val =~ s/\s+$//;
@@ -1662,7 +1665,24 @@ sub Param {
     return $val;
 }
 
+sub is_forum_spam {
+   my $q = shift;
+   my @param = @_;
+
+   my $flag = 0;
+   foreach my $param (@param) {
+        my $val = $q->param($param);
+    	if ($val =~ /[<]/ || $val =~ m,http://,) {
+	   $flag++;
+	   warn "XSS parameter: '$param'\n" if $debug;
+	   $q->param($param, "");
+	}
+   }
+   return $flag;
+}
+
 sub choose_form {
+
     my $startname = Param('startname') || '';
     my $start2    = Param('start2')    || '';
     my $start     = Param('start')     || '';
@@ -1686,6 +1706,7 @@ sub choose_form {
     my $zielhnr   = Param('zielhnr')   || '';
     my $zielc     = Param('zielc')     || '';
     my $zielort   = Param('zielort')   || '';
+
 
     my $nl = sub {
 	if ($bi->{'can_table'}) {
@@ -7426,7 +7447,13 @@ sub header {
     my($bbbike_de_script, $bbbike_en_script, $bbbike_local_script);
     {
 	my $qq = CGI->new();
-	my $url = $qq->url(-full=>0, -absolute=>1, -query=>1);
+	my $url;
+
+	if (!is_forum_spam($qq, qw/start via ziel/)) {
+          $url = $qq->url(-full=>0, -absolute=>1, -query=>1);
+	} else {
+          $url = $qq->url(-full=>0, -absolute=>1, -query=>0);
+	}
 	$url =~ s,/\w\w/,/,;
 	
 	$bbbike_de_script = "/de" . $url;
