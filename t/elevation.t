@@ -6,12 +6,17 @@
 # Author: Slaven Rezic
 #
 
-use strict;
+BEGIN {
+    my $city = "SanFrancisco";
+    $ENV{BBBIKE_DATADIR} = $ENV{DATA_DIR} = "data-osm/$city";
+}
+
 use FindBin;
 use lib (
     "$FindBin::RealBin/..",      "$FindBin::RealBin/../lib",
     "$FindBin::RealBin/../data", "$FindBin::RealBin",
 );
+
 use Getopt::Long;
 use Data::Dumper qw(Dumper);
 use Storable qw(dclone);
@@ -27,6 +32,8 @@ use Route::Heavy;
 use BBBikeElevation;
 
 use BBBikeTest;
+use strict;
+use warnings;
 
 #plan tests => 50;
 
@@ -79,6 +86,10 @@ my $comments_scenic = Strassen::Lazy->new("comments_scenic");
 
 {
     my $e = new BBBikeElevation;
+
+    $e->init_elevation;
+
+    warn Dumper( $e->get_elevation );
 }
 
 __END__

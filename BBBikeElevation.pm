@@ -46,7 +46,9 @@ my $verbose = 1;
 my @power = ( 50, 100 );
 
 # read elevation data, set global var %hoehe
-sub read_hoehe {
+sub init_elevation {
+    my $shift;
+
     my %args = @_;
 
     my $elevation_database = "hoehe";
@@ -62,6 +64,12 @@ sub read_hoehe {
         warn $@;
         %hoehe = ();
     }
+}
+
+sub get_elevation {
+    my $self = shift;
+
+    return \%hoehe;
 }
 
 # Return active speed in km/h.
