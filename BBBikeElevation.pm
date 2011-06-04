@@ -11,21 +11,12 @@
 package BBBikeElevation;
 
 use FindBin;
-use lib (
-    grep { -d } (
-        "$FindBin::RealBin/..",
-        "$FindBin::RealBin/../lib",
+use lib 'lib';
 
-        # f<FC>r Radzeit:
-        "$FindBin::RealBin/../BBBike",
-        "$FindBin::RealBin/../BBBike/lib",
-    )
-);
-
+use BikePower;
 use Encode;
 use strict;
-
-#use warnings;
+use warnings;
 
 our %hoehe = ();
 our $steigung_net;
@@ -117,24 +108,6 @@ sub speed2power {
 }
 
 # Always use Bikepower (e.g. mandatory for Steigungsoptimierung)
-my $bikepwr = 1;
-if ($bikepwr) {
-    eval { require BikePower; };
-    if ($@) {
-        status_message( Mfmt( "Kann BikePower nicht laden: %s", $@ ), 'err' );
-        $bikepwr = 0;
-    }
-    else {
-        if ( $verbose && $BikePower::has_xs ) {
-            print STDERR "Verwende die XS version von BikePower\n";
-        }
-        $bp_obj = new BikePower;
-        $bp_obj->given('P');
-        $bp_obj->temperature($temperature);
-
-        set_corresponding_power();
-    }
-}
 
 # create elevation network
 # set global var $steigung_net
@@ -179,5 +152,13 @@ sub set_corresponding_power {
     }
 }
 
+if ( $verbose && $BikePower::has_xs ) {
+    print STDERR "Verwende die XS version von BikePower\n";
+}
+$bp_obj = new BikePower;
+$bp_obj->given('P');
+$bp_obj->temperature($temperature);
+
+set_corresponding_power();
 1;
 
