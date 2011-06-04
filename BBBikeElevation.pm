@@ -10,11 +10,12 @@
 
 package BBBikeElevation;
 
-use FindBin;
-use lib 'lib';
-
-use BikePower;
 use Encode;
+
+use lib './lib';
+use Strassen;
+use BikePower;
+
 use strict;
 use warnings;
 
@@ -23,7 +24,9 @@ our $steigung_net;
 our $bp_obj;
 our $net;
 
-sub new { bless {}, shift }
+sub new {
+    bless {}, shift;
+}
 
 ######################################################################
 #
