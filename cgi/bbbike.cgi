@@ -132,6 +132,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_google_adsense_linkblock
 	    $enable_google_adsense_street_linkblock
 	    $enable_panoramio_photos
+	    $enable_elevation
 	   );
 
 $gmap_api_version = 3;
@@ -1050,7 +1051,7 @@ use vars qw(%handicap_speed);
 		   'Q'  => 8, # XXX this is for ferries, and should probably be finer granulated
 		  );
 
-@pref_keys = qw/speed cat quality ampel green specialvehicle unlit ferry winter fragezeichen/;
+@pref_keys = qw/speed cat quality ampel green specialvehicle unlit ferry elevation winter fragezeichen/;
 
 CGI->import('-no_xhtml');
 
@@ -3658,7 +3659,7 @@ sub set_cookie {
 
 use vars qw($default_speed $default_cat $default_quality
 	    $default_ampel $default_routen $default_green $default_specialvehicle
-	    $default_unlit $default_ferry $default_winter
+	    $default_unlit $default_ferry $default_elevation $default_winter
 	    $default_fragezeichen);
 
 sub get_settings_defaults {
@@ -3677,6 +3678,7 @@ sub get_settings_defaults {
     $default_specialvehicle = (defined $c{"pref_specialvehicle"} ? $c{"pref_specialvehicle"} : '');
     $default_unlit   = (defined $c{"pref_unlit"}   ? $c{"pref_unlit"}   : "");
     $default_ferry   = (defined $c{"pref_ferry"}   ? $c{"pref_ferry"}   : "");
+    $default_elevation   = (defined $c{"pref_elevation"}   ? $c{"pref_elevation"}   : "");
     $default_winter  = (defined $c{"pref_winter"}  ? $c{"pref_winter"}  : "");
     $default_fragezeichen = (defined $c{"pref_fragezeichen"} ? $c{"pref_fragezeichen"} : "");
 }
@@ -3690,6 +3692,7 @@ sub reset_html {
 	my(%strspecialvehicle) = ('' => 0, 'trailer' => 1, 'childseat' => 2);
 	my(%strunlit)  = ("" => 0, "NL" => 1);
 	my(%strferry)  = ("" => 0, "use" => 1);
+	my(%strelevation)  = ("" => 0, "use" => 1);
 	my(%strwinter) = ("" => 0, "WI1" => 1, "WI2" => 2);
 
 	get_settings_defaults();
@@ -3705,6 +3708,7 @@ sub reset_html {
 		   qq'@{[defined $strspecialvehicle{$default_specialvehicle} ? $strspecialvehicle{$default_specialvehicle} : 0]},',
 		   qq'@{[defined $strunlit{$default_unlit} ? $strunlit{$default_unlit} : 0]},',
 		   qq'@{[defined $strferry{$default_ferry} ? $strferry{$default_ferry} : 0]},',
+		   qq'@{[defined $strelevation{$default_elevation} ? $strelevation{$default_elevation} : 0]},',
 		   qq'@{[defined $strwinter{$default_winter} ? $strwinter{$default_winter} : 0]}',
 		   qq'); enable_settings_buttons(); return false;">',
 		  );
@@ -3750,6 +3754,10 @@ sub settings_html {
 			      'value="' . $val . '" ' .
 			      ($default_ferry eq $val ? "selected" : "")
 			  };
+    my $elevation_checked = sub { my $val = shift;
+			      'value="' . $val . '" ' .
+			      ($default_elevation eq $val ? "selected" : "")
+			  };
     my $winter_checked = sub { my $val = shift;
 			      'value="' . $val . '" ' .
 			      ($default_winter eq $val ? "selected" : "")
@@ -3789,6 +3797,14 @@ EOF
 print qq{<tr><td>@{[ M("Ampeln vermeiden") ]}:</td><td><input type=checkbox name="pref_ampel" value="yes" @{[ $default_ampel?"checked":"" ]}></td>} 
 if !$osm_data || ($datadir =~ m,data-osm/(.+), && $1 eq 'berlin');
 
+    print <<EOF;
+<tr><td>@{[ M("Unterwegs mit") ]}:</td><td><select $bi->{hfill} name="pref_specialvehicle">
+<option @{[ $specialvehicle_checked->("")          ]}>@{[ M("nichts weiter") ]} <!-- expr? XXX -->
+<option @{[ $specialvehicle_checked->("trailer")   ]}>@{[ M("Anhänger") ]}
+<option @{[ $specialvehicle_checked->("childseat") ]}>@{[ M("Kindersitz mit Kind") ]}
+</select></td></tr>
+EOF
+
     if ($include_outer_region) {
 	print <<EOF;
 <td style="font-size:smaller;">@{[ M("(nur in Berlin/Potsdam erfasst)") ]}</td>
@@ -3819,13 +3835,6 @@ EOF
 EOF
     }
 
-    print <<EOF;
-<tr><td>@{[ M("Unterwegs mit") ]}:</td><td><select $bi->{hfill} name="pref_specialvehicle">
-<option @{[ $specialvehicle_checked->("")          ]}>@{[ M("nichts weiter") ]} <!-- expr? XXX -->
-<option @{[ $specialvehicle_checked->("trailer")   ]}>@{[ M("Anhänger") ]}
-<option @{[ $specialvehicle_checked->("childseat") ]}>@{[ M("Kindersitz mit Kind") ]}
-</select></td></tr>
-EOF
     if (!$osm_data || do {
 	my $geo = get_geography_object();
 	$geo && $geo->can('skip_feature') && !$geo->skip_feature('faehren')
@@ -3834,6 +3843,10 @@ EOF
 <tr><td>@{[ M("Fähren benutzen") ]}:</td><td><input type=checkbox name="pref_ferry" value="use" @{[ $default_ferry?"checked":"" ]}></td></tr>
 EOF
     }
+    if ($enable_elevation) {
+	print qq|<tr><td>@{[ M("Berge vermeiden") ]}:</td><td><input type=checkbox name="pref_elevation" value="use" @{[ $default_elevation?"checked":"" ]}></td></tr>|;
+    }
+
     if ($use_winter_optimization) {
 	print <<EOF;
 <tr>
