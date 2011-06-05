@@ -1063,7 +1063,16 @@ if (&is_forum_spam($q, @cgi_param)) {
     $q->delete ( @cgi_param);
 }
 
-if ($q->user_agent("MSIE 6")) {
+sub is_ie6 {
+   my $q = shift;
+   $q->user_agent("MSIE 6") ? 1 : 0;
+}
+sub is_ie7 {
+   my $q = shift;
+   $q->user_agent("MSIE 7") ? 1 : 0;
+}
+
+if (&is_ie6($q)) {
    if ($gmap_api_version == 3) {
 	warn "Downgrade to google maps v2 for IE6: ", $q->remote_host, " ", $q->url, " ", $q->user_agent, "\n" if 1 || $debug;
         $gmap_api_version = 2;
@@ -5655,7 +5664,7 @@ EOF
 </script>
 EOF
 	# IE6 & IE7 are not supported by google maps v3
-	$gmapsv3 = 0 if $q->user_agent =~ /MSIE [67]/;
+	$gmapsv3 = 0 if &is_ie6($q) || &is_ie7($q);
 
 	if (!$gmapsv3) {
 	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "/cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
