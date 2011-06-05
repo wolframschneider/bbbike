@@ -258,14 +258,14 @@ sub altitude_difference {
 
     my $elevation = $self->get_elevation;
 
-    my @error = (-1, -1);
+    my @error = ( -1, -1 );
     if ( !ref $path eq 'ARRAY' || scalar(@$path) == 0 ) {
-        return ( @error );
+        return (@error);
     }
 
-    my $last = 0;
-    my $up   = 0;
-    my $down = 0;
+    my $last    = 0;
+    my $up      = 0;
+    my $down    = 0;
     my $counter = 0;
     my ( $xy, $e );
     foreach my $point (@$path) {
@@ -279,7 +279,7 @@ sub altitude_difference {
                 $down += ( $last - $e );
             }
             $last = $e;
-	    $counter++;
+            $counter++;
         }
     }
 
