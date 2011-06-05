@@ -6,6 +6,7 @@
 # Author: Slaven Rezic
 #
 
+# configure city to test
 BEGIN {
     my $city = "SanFrancisco";
 
@@ -65,7 +66,7 @@ $s_net->make_net();    # UseCache => 1 );
     print $e->statistic, "\n" if $debug;
 
     my ( $c1, $c2 );
-    if ( $ENV{BBBIKE_DATADIR} ) {
+    if ( $ENV{BBBIKE_DATADIR} && -f "$ENV{DATA_DIR}/strassen" ) {
         pass("-- Marine Drive - Channel Street --");
 
         # data-osm/SanFrancisco
