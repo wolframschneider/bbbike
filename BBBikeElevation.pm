@@ -164,10 +164,13 @@ sub elevation_net {
     my $self = shift;
 
     if ( !$steigung_net ) {
-	my $g_str = Strassen->new("strassen"); # MultiStrassen
+        my $streets = Strassen->new("strassen");    # MultiStrassen
 
-        $steigung_net = StrassenNetz->new( $g_str);
-        $steigung_net->make_net_steigung( $steigung_net, $self->get_elevation );
+        my $elevation = $self->get_elevation;
+
+        $steigung_net = StrassenNetz->new($streets);
+        $steigung_net->make_net;
+        $steigung_net->make_net_steigung( $steigung_net, $elevation );
     }
 
     my $penalty;
@@ -184,7 +187,8 @@ sub elevation_net {
         $steigung_penalty = {};
     }
     $steigung_penalty_env{ActPower} = $act_power;
-    $extra_args{Steigung}           = {
+
+    $extra_args{Steigung} = {
         Net        => $steigung_net,
         Penalty    => $steigung_penalty,
         PenaltySub => sub { steigung_penalty( $_[0], $act_power ) },
@@ -205,6 +209,14 @@ sub set_corresponding_power {
     if ( !@power ) {
         @power = ( 50, 100 );
     }
+}
+
+# Steigung muss als Tausendfaches angegeben werden.
+### AutoLoad Sub
+sub steigung_penalty {
+    my ( $steigung, $act_power ) = @_;
+    my $frac = ( $steigung / 1000 + 0.08 ) / ( 0.08 * 2 );
+    max_speed( power2speed( $act_power, -grade => $steigung / 1000 ) );
 }
 
 # if ( $verbose && $BikePower::has_xs ) { print STDERR "Verwende die XS version von BikePower\n"; }
