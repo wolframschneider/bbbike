@@ -19,17 +19,13 @@ use BikePower;
 use strict;
 use warnings;
 
+######################################################################
+#
+
 our %hoehe = ();
 our $steigung_net;
 our $bp_obj;
 our $net;
-
-sub new {
-    bless {}, shift;
-}
-
-######################################################################
-#
 
 my %active_speed_power;
 my %steigung_penalty_env;
@@ -38,16 +34,48 @@ my %extra_args;
 
 $active_speed_power{"Type"}  = 'speed';
 $active_speed_power{"Index"} = 0;
+######################################################################
 
-my $temperature = 20;
-my @speed       = 20;
+my @speed = 20;
 
 my $verbose = 1;
 my @power = ( 50, 100 );
 
+sub new {
+    my $class = shift;
+    my %args  = @_;
+
+    my $self = {};
+
+    bless $self, $class;
+
+    $self->temperature(20);
+    return $self;
+}
+
+sub temperature {
+    my $self = shift;
+    my $val  = shift;
+
+    my $this_function = ( caller(0) )[3];
+
+    if ( defined $val ) {
+        $self->{$this_function} = $val;
+    }
+
+    return $self->{$this_function};
+}
+
+sub init {
+    my $self = shift;
+
+    $self->init_elevation;
+    $self->init_bbbike_power;
+}
+
 # read elevation data, set global var %hoehe
 sub init_elevation {
-    my $shift;
+    my $self = shift;
 
     my %args = @_;
 
@@ -64,6 +92,16 @@ sub init_elevation {
         warn $@;
         %hoehe = ();
     }
+}
+
+sub init_bbbike_power {
+    my $self = shift;
+
+    $bp_obj = new BikePower;
+    $bp_obj->given('P');
+    $bp_obj->temperature( $self->temperature );
+
+    set_corresponding_power();
 }
 
 sub get_elevation {
@@ -123,11 +161,15 @@ sub speed2power {
 # create elevation network
 # set global var $steigung_net
 sub elevation_net {
+    my $self = shift;
 
     if ( !$steigung_net ) {
-        $steigung_net = new StrassenNetz Strassen->new;
-        $steigung_net->make_net_steigung( $net, \%hoehe );
+	my $g_str = Strassen->new("strassen"); # MultiStrassen
+
+        $steigung_net = StrassenNetz->new( $g_str);
+        $steigung_net->make_net_steigung( $steigung_net, $self->get_elevation );
     }
+
     my $penalty;
     my $act_power;
     if ( $active_speed_power{Type} eq 'power' ) {
@@ -147,6 +189,8 @@ sub elevation_net {
         Penalty    => $steigung_penalty,
         PenaltySub => sub { steigung_penalty( $_[0], $act_power ) },
     };
+
+    return \%extra_args;
 }
 
 sub set_corresponding_power {
@@ -163,13 +207,7 @@ sub set_corresponding_power {
     }
 }
 
-if ( $verbose && $BikePower::has_xs ) {
-    print STDERR "Verwende die XS version von BikePower\n";
-}
-$bp_obj = new BikePower;
-$bp_obj->given('P');
-$bp_obj->temperature($temperature);
+# if ( $verbose && $BikePower::has_xs ) { print STDERR "Verwende die XS version von BikePower\n"; }
 
-set_corresponding_power();
 1;
 

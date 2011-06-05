@@ -52,44 +52,12 @@ my $comments_path   = Strassen::Lazy->new("comments_path");
 my $comments_scenic = Strassen::Lazy->new("comments_scenic");
 
 {
-
-    # Melchiorstr.: mäßiger Asphalt	Q1; 11726,11265 11542,11342
-    my $coords = "11542,11342 11726,11265";
-    my $route = [ map { [ split /,/ ] } split /\s+/, $coords ];
-
-    {
-        pass("-- Melchiorstr.: einseitige Qualitätsangabe --");
-
-        my $net = StrassenNetz->new($qs);
-        $net->make_net_cat( -obeydir => 1, -net2name => 1 );
-        my $route = dclone $route;
-        is( $net->get_point_comment( $route, 0, undef ), 0,
-            "Without multiple" );
-        $route = [ reverse @$route ];
-        like( ( $net->get_point_comment( $route, 0, undef ) )[0],
-            qr/mäßiger Asphalt/i );
-    }
-
-    {
-        pass("-- Melchiorstr.: einseitige Qualitätsangabe (dito) --");
-
-        my $net = StrassenNetz->new($qs);
-        $net->make_net_cat( -obeydir => 1, -net2name => 1, -multiple => 1 );
-        my $route = dclone $route;
-        is( scalar $net->get_point_comment( $route, 0, undef ),
-            0, "With multiple" );
-        $route = [ reverse @$route ];
-        like( ( $net->get_point_comment( $route, 0, undef ) )[0],
-            qr/mäßiger Asphalt/i );
-    }
-}
-
-{
     my $e = new BBBikeElevation;
 
     $e->init_elevation;
-
-    warn Dumper( $e->get_elevation );
+    my $h = $e->get_elevation;
+    warn Dumper ( $e->elevation_net );
+    warn Dumper ( $h);
 }
 
 __END__
