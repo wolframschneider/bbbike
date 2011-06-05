@@ -37,35 +37,30 @@ use strict;
 use warnings;
 
 #plan tests => 50;
-
-print "# Tests may fail if data changes\n";
+my $debug = 2;
 
 my $s     = Strassen::Lazy->new("strassen");
 my $s_net = StrassenNetz->new($s);
 $s_net->make_net();    # UseCache => 1 );
 
 {
-    my $e = new BBBikeElevation;
-
-    $e->init;
-    my $h = $e->get_elevation;
-    $e->elevation_net;
-
-    #warn Dumper ( $h);
-}
-
-{
+    local $Data::Dumper::Indent = 0;
     my $enable_dist = 1;
 
     my $e = new BBBikeElevation;
     $e->init;
 
-    open OUT, "> /tmp/net.old" or die "$!\n";
-    print OUT Dumper($s_net);
+    if ( $debug >= 3 ) {
+        open OUT, "> /tmp/net.old" or die "$!\n";
+        print OUT Dumper($s_net);
+    }
 
     my $extra_args = $e->elevation_net;
-    open OUT, "> /tmp/net.hoehe" or die "$!\n";
-    print OUT Dumper( $extra_args->{Steigung}{Net} );
+    if ( $debug >= 3 ) {
+        open OUT, "> /tmp/net.hoehe" or die "$!\n";
+        print OUT Dumper( $extra_args->{Steigung}{Net} );
+    }
+    print $e->statistic if $debug;
 
     # data-osm/SanFrancisco
     pass("-- Marine Drive - Channel Street --");
@@ -77,7 +72,6 @@ $s_net->make_net();    # UseCache => 1 );
     $c2 = "10524,655";                 # Lichtenrader Damm
 
     my $net = $s_net;
-    local $Data::Dumper::Indent = 0;
     foreach my $args ( {}, $extra_args ) {
         print "\nStart =>\n";
         for my $c ( $c1, $c2 ) {       # points may move ... fix it!
@@ -90,20 +84,14 @@ $s_net->make_net();    # UseCache => 1 );
         if ($enable_dist) {
             my $dist1 = int sum map { $_->[StrassenNetz::ROUTE_DIST] } @route;
 
-#my (@compact_route) = $net->compact_route( \@route );
-#my $dist2 = int sum map { $_->[StrassenNetz::ROUTE_DIST] } @compact_route;
-#is( $dist1, $dist2, "Distance the same after compaction" );
-#cmp_ok( scalar(@compact_route), "<", scalar(@route), "Actually less hops in compacted route" );
-
             print "dist1: $dist1 meters\n";
             print "hops: ", scalar(@route), "\n";
         }
 
         print Dumper( \@route ), "\n";
+        print Dumper($path) if $debug >= 3;
     }
 
-    #print Dumper($path);
-    #print Dumper( \@compact_route ), "\n";
 }
 
 __END__

@@ -50,10 +50,25 @@ sub new {
     bless $self, $class;
 
     $self->temperature(20);
+    $self->debug(0);
+
     return $self;
 }
 
 sub temperature {
+    my $self = shift;
+    my $val  = shift;
+
+    my $this_function = ( caller(0) )[3];
+
+    if ( defined $val ) {
+        $self->{$this_function} = $val;
+    }
+
+    return $self->{$this_function};
+}
+
+sub debug {
     my $self = shift;
     my $val  = shift;
 
@@ -158,6 +173,15 @@ sub speed2power {
 
 # Always use Bikepower (e.g. mandatory for Steigungsoptimierung)
 
+sub statistic {
+    my $self = shift;
+
+    my $net = $steigung_net;
+    if ($net) {
+        return $net->statistics;
+    }
+}
+
 # create elevation network
 # set global var $steigung_net
 sub elevation_net {
@@ -168,9 +192,13 @@ sub elevation_net {
 
         my $elevation = $self->get_elevation;
 
+        my $s = StrassenNetz->new($streets);
+        $s->make_net;
+        $s->source($streets);
+
         $steigung_net = StrassenNetz->new($streets);
         $steigung_net->make_net;
-        $steigung_net->make_net_steigung( $steigung_net, $elevation );
+        $steigung_net->make_net_steigung( $s, $elevation );
     }
 
     my $penalty;
@@ -217,6 +245,27 @@ sub steigung_penalty {
     my ( $steigung, $act_power ) = @_;
     my $frac = ( $steigung / 1000 + 0.08 ) / ( 0.08 * 2 );
     max_speed( power2speed( $act_power, -grade => $steigung / 1000 ) );
+}
+
+# fake
+sub max_speed { 30; }
+
+# Berechnet den Faktor f<FC>r die max. Geschwindigkeit, die auf der
+# jeweiligen Stra<DF>e (wegen Belag, Kategorie ...) gefahren werden kann.
+### AutoLoad Sub
+sub _max_speed {
+    my ($speed_belag) = @_;
+    my $speed_radler = get_active_speed();
+    if ( $speed_belag <= 0 ) {
+        require Carp;
+        Carp::cluck("Division by zero protection");
+        return $speed_radler;
+    }
+    (
+        $speed_belag >= $speed_radler
+        ? 1
+        : $speed_radler / $speed_belag
+    );
 }
 
 # if ( $verbose && $BikePower::has_xs ) { print STDERR "Verwende die XS version von BikePower\n"; }
