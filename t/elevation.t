@@ -100,6 +100,10 @@ $s_net->make_net();    # UseCache => 1 );
         }
 
         print Dumper( \@route ), "\n";
+        my ( $up, $down ) = $e->altitude_difference($path);
+        print "Up: $up meters, down: $down meters, total: ", $up + $down,
+          " meters\n";
+
         print Dumper($path) if $debug >= 3;
 
         printf "Search time: %.3f seconds\n\n",

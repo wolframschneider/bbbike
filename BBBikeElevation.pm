@@ -218,7 +218,6 @@ sub elevation_net {
         my $streets = Strassen->new("strassen");    # MultiStrassen
 
         my $elevation = $self->get_elevation;
-        warn Dumper($elevation);
 
         my $s = StrassenNetz->new($streets);
         $s->make_net;
@@ -251,6 +250,37 @@ sub elevation_net {
     };
 
     return \%extra_args;
+}
+
+sub altitude_difference {
+    my $self = shift;
+    my $path = shift;
+
+    my $elevation = $self->get_elevation;
+
+    if ( !ref $path eq 'ARRAY' || scalar(@$path) == 0 ) {
+        return ( 0, 0 );
+    }
+
+    my $last = 0;
+    my $up   = 0;
+    my $down = 0;
+    my ( $xy, $e );
+    foreach my $point (@$path) {
+        $xy = $point->[0] . "," . $point->[1];
+        if ( exists $elevation->{$xy} ) {
+            $e = $elevation->{$xy};
+            if ( $e > $last ) {
+                $up += ( $e - $last );
+            }
+            else {
+                $down += ( $last - $e );
+            }
+            $last = $e;
+        }
+    }
+
+    return ( $up, $down );
 }
 
 sub set_corresponding_power {
