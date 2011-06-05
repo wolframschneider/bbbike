@@ -252,6 +252,6 @@ return {
     "Via-Punkt entfernen"                  => "remove via point",
     "Karte nach links schieben"            => "move map left",
     "Karte nach rechts schieben"           => "move map right",
-"Berge vermeiden" => "avoid hills",
+    "Berge vermeiden"                      => "avoid hills",
 };
 

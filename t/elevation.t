@@ -9,7 +9,7 @@
 BEGIN {
     my $city = "SanFrancisco";
 
-    #$ENV{BBBIKE_DATADIR} = $ENV{DATA_DIR} = "data-osm/$city";
+    $ENV{BBBIKE_DATADIR} = $ENV{DATA_DIR} = "data-osm/$city";
 }
 
 use FindBin;
