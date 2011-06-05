@@ -23,6 +23,7 @@ use Data::Dumper qw(Dumper);
 use Storable qw(dclone);
 use Test::More;
 use List::Util qw(sum);
+use Time::HiRes qw/gettimeofday tv_interval/;
 
 use Strassen::Core;
 use Strassen::Util;
@@ -33,6 +34,7 @@ use Route::Heavy;
 use BBBikeElevation;
 
 use BBBikeTest;
+
 use strict;
 use warnings;
 
@@ -62,19 +64,28 @@ $s_net->make_net();    # UseCache => 1 );
     }
     print $e->statistic if $debug;
 
-    # data-osm/SanFrancisco
-    pass("-- Marine Drive - Channel Street --");
-    my $c1 = "-122.4715,37.80851";     # Marine Drive
-    my $c2 = "-122.39178,37.77455";    # Channel Street
+    my ( $c1, $c2 );
+    if ( $ENV{BBBIKE_DATADIR} ) {
+        pass("-- Marine Drive - Channel Street --");
 
-    #pass("-- Scharnweber - Lichtenrader Damm --");
-    $c1 = "4695,17648";                # Scharnweberstr.
-    $c2 = "10524,655";                 # Lichtenrader Damm
+        # data-osm/SanFrancisco
+        $c1 = "-122.4715,37.80851";     # Marine Drive
+        $c2 = "-122.39178,37.77455";    # Channel Street
+
+    }
+    else {
+        pass("-- no city defined, fall back to bbbike --");
+        pass("-- Scharnweber - Lichtenrader Damm --");
+        $c1 = "4695,17648";             # Scharnweberstr.
+        $c2 = "10524,655";              # Lichtenrader Damm
+    }
 
     my $net = $s_net;
     foreach my $args ( {}, $extra_args ) {
-        print "\nStart =>\n";
-        for my $c ( $c1, $c2 ) {       # points may move ... fix it!
+        my $t0 = [gettimeofday];
+
+        print "Start =>\n";
+        for my $c ( $c1, $c2 ) {        # points may move ... fix it!
             $c = $net->fix_coords($c);
         }
 
@@ -90,8 +101,10 @@ $s_net->make_net();    # UseCache => 1 );
 
         print Dumper( \@route ), "\n";
         print Dumper($path) if $debug >= 3;
-    }
 
+        printf "Search time: %.3f seconds\n\n",
+          tv_interval( $t0, [gettimeofday] );
+    }
 }
 
 __END__
