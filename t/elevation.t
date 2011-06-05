@@ -62,7 +62,7 @@ $s_net->make_net();    # UseCache => 1 );
         open OUT, "> /tmp/net.hoehe" or die "$!\n";
         print OUT Dumper( $extra_args->{Steigung}{Net} );
     }
-    print $e->statistic if $debug;
+    print $e->statistic, "\n" if $debug;
 
     my ( $c1, $c2 );
     if ( $ENV{BBBIKE_DATADIR} ) {
@@ -95,8 +95,8 @@ $s_net->make_net();    # UseCache => 1 );
         if ($enable_dist) {
             my $dist1 = int sum map { $_->[StrassenNetz::ROUTE_DIST] } @route;
 
-            print "dist1: $dist1 meters\n";
-            print "hops: ", scalar(@route), "\n";
+            print "Distance: $dist1 meters\n";
+            print "Hops: ", scalar(@route), "\n";
         }
 
         print Dumper( \@route ), "\n";
