@@ -15,6 +15,7 @@ use Encode;
 use lib './lib';
 use Strassen;
 use BikePower;
+use Data::Dumper;
 
 use strict;
 use warnings;
@@ -68,6 +69,18 @@ sub temperature {
     return $self->{$this_function};
 }
 
+sub is_latlng {
+    my $latlng = shift;
+
+    return ( defined $latlng && $latlng =~ /^[\d\-\,\.]+$/ ) ? 1 : 0;
+}
+
+sub is_height {
+    my $height = shift;
+
+    return ( defined $height && $height =~ /^[\-\+]?\d+$/ ) ? 1 : 0;
+}
+
 sub debug {
     my $self = shift;
     my $val  = shift;
@@ -100,12 +113,26 @@ sub init_elevation {
         !eval {
             my $h = new Strassen($elevation_database);
             %hoehe = %{ $h->get_hashref };
+            $self->check_database( \%hoehe );
             1;
         }
       )
     {
         warn $@;
         %hoehe = ();
+    }
+}
+
+sub check_database {
+    my $self = shift;
+    my $hash = shift;
+
+    my $debug = $self->debug;
+    while ( my ( $key, $val ) = each %$hash ) {
+        if ( !&is_height($val) ) {
+            warn "Delete key: $key -> $val\n" if $debug >= 1;
+            delete $hash->{$key};
+        }
     }
 }
 
@@ -191,6 +218,7 @@ sub elevation_net {
         my $streets = Strassen->new("strassen");    # MultiStrassen
 
         my $elevation = $self->get_elevation;
+        warn Dumper($elevation);
 
         my $s = StrassenNetz->new($streets);
         $s->make_net;
