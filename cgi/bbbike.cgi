@@ -62,6 +62,7 @@ use BrowserInfo 1.47;
 use Encode;
 use BBBikeGooglemap;
 use BBBikeAds;
+use BBBikeElevation;
 
 use strict;
 use vars qw($VERSION $VERBOSE $WAP_URL
@@ -3988,6 +3989,16 @@ sub search_coord {
     $extra_args{Velocity} = $velocity_kmh/3.6; # convert to m/s
     # XXX Anzahl der Tragestellen zählen...
 
+    if ($enable_elevation && $q->param("pref_elevation") ) {
+	my $elevation = new BBBikeElevation;
+    	$elevation->init;
+        my $extra_args = $elevation->elevation_net;
+
+	$extra_args{"Steigung"} = $extra_args->{"Steigung"};
+
+	warn $elevation->statistic, "\n" if $debug;
+    }
+	
     my @penalty_subs;
 
     my $disable_other_optimizations = 0;
@@ -4365,6 +4376,8 @@ sub search_coord {
 	    }
 	}
     }
+
+    warn "Search extra arguments: " . join (" ", keys %extra_args), "\n" if $debug >= 2;
 
     my($r) = $net->search($startcoord, $zielcoord,
 			  AsObj => 1,
