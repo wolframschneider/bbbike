@@ -306,8 +306,8 @@ sub split_crossing {
     }
 
     # hacker style
-    if ($street =~ /\S+\s+\@\s+\S+/) {
-	return split m{\s+\@\s+}, $street, 2;
+    if ($street =~ /\S+\s*\@\s*\S+/) {
+	return split m{\s*\@\s*}, $street, 2;
     }
 
     $street;
