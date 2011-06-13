@@ -157,6 +157,8 @@ Poelchaustr.	SB 19253,14497
 #: attrs bg
 Springpfuhl	SB 19367,13687
 #: XXX_prog bf nur Richtung Westen
+#: XXX ab 2011-06-20: Aufzug auch in Richtung Osten
+#: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20110609.1020.347201.html
 Biesdorf	SB 20766,12124
 #: attrs bg
 Friedrichsfelde Ost	SB 18295,12195
@@ -260,7 +262,7 @@ Oranienburg	SC -672,38539
 #: attrs bf
 Mühlenbeck-Mönchsmühle	SC 8851,27676
 #: attrs bf
-Schönfließ	SC 5600,28848
+Schönfließ	SC 5712,28711
 #: attrs bg
 Bergfelde b. Berlin	SC 4293,29252
 Zepernick	SC 18899,28383

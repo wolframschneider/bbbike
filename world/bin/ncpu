@@ -7,6 +7,7 @@
 PATH=/bin:/usr/bin:/sbin:/usr/sbin; export PATH
 
 cpuinfo=/proc/cpuinfo
+
 minus=0
 vcpu=0
 rcpu=0
@@ -14,6 +15,8 @@ rcpu=0
 case $1 in
 	vcpu ) vcpu=1; shift ;;
 	rcpu ) rcpu=1; shift ;;
+	""   ) ;;
+	*    ) echo "usage $0 [ vcpu | rcpu ] [ -/+ number ]"; exit 1;;
 esac
 
 case $1 in
@@ -38,16 +41,18 @@ if sysctl -n hw.physicalcpu > /dev/null 2>&1; then
 
 # linux
 elif  [ -f $cpuinfo ]; then
-  ncpu=`egrep -c ^processor $cpuinfo`
-  cores=`awk '{ if (/^cpu cores/) { print $4; exit }}' $cpuinfo`
+  ncpu=`egrep -c '^physical id.: 0$' $cpuinfo`
+  cores=`egrep -c '^processor' $cpuinfo`
 
   if [ $vcpu = 1 ]; then
-	:
+    ncpu=$cores
+
   # real CPUs + 1/2 virtual CPUs
   elif [ $rcpu = 1 ]; then
      ncpu=`perl -e 'print int(($ARGV[0] + $ARGV[1])/2)' $ncpu $cores`
 
-  elif [ $ncpu -gt $cores ]; then # a virtual server with 4 cores and 3 virtuals cpu's available
+  # a virtual server with 4 cores and 3 virtuals cpu's available
+  elif [ $ncpu -gt $cores ]; then 
      ncpu=$cores
   fi
 
@@ -57,7 +62,10 @@ elif  [ -f $cpuinfo ]; then
   fi
 fi
 
+# +/-
 ncpu=`perl -e "print $ncpu + $minus"`
+
+# print valid output
 if [ "$ncpu" -ge 1 -a "$ncpu" -le 64 ]; then
 	echo "$ncpu"
 else

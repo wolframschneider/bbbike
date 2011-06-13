@@ -62,6 +62,7 @@ use BrowserInfo 1.47;
 use Encode;
 use BBBikeGooglemap;
 use BBBikeAds;
+use BBBikeElevation;
 
 use strict;
 use vars qw($VERSION $VERBOSE $WAP_URL
@@ -1063,7 +1064,16 @@ if (&is_forum_spam($q, @cgi_param)) {
     $q->delete ( @cgi_param);
 }
 
-if ($q->user_agent("MSIE 6")) {
+sub is_ie6 {
+   my $q = shift;
+   $q->user_agent("MSIE 6") ? 1 : 0;
+}
+sub is_ie7 {
+   my $q = shift;
+   $q->user_agent("MSIE 7") ? 1 : 0;
+}
+
+if (&is_ie6($q)) {
    if ($gmap_api_version == 3) {
 	warn "Downgrade to google maps v2 for IE6: ", $q->remote_host, " ", $q->url, " ", $q->user_agent, "\n" if 1 || $debug;
         $gmap_api_version = 2;
@@ -3979,6 +3989,16 @@ sub search_coord {
     $extra_args{Velocity} = $velocity_kmh/3.6; # convert to m/s
     # XXX Anzahl der Tragestellen zählen...
 
+    if ($enable_elevation && $q->param("pref_elevation") ) {
+	my $elevation = new BBBikeElevation;
+    	$elevation->init;
+        my $extra_args = $elevation->elevation_net;
+
+	$extra_args{"Steigung"} = $extra_args->{"Steigung"};
+
+	warn $elevation->statistic, "\n" if $debug;
+    }
+	
     my @penalty_subs;
 
     my $disable_other_optimizations = 0;
@@ -4356,6 +4376,8 @@ sub search_coord {
 	    }
 	}
     }
+
+    warn "Search extra arguments: " . join (" ", keys %extra_args), "\n" if $debug >= 2;
 
     my($r) = $net->search($startcoord, $zielcoord,
 			  AsObj => 1,
@@ -5655,7 +5677,7 @@ EOF
 </script>
 EOF
 	# IE6 & IE7 are not supported by google maps v3
-	$gmapsv3 = 0 if $q->user_agent =~ /MSIE [67]/;
+	$gmapsv3 = 0 if &is_ie6($q) || &is_ie7($q);
 
 	if (!$gmapsv3) {
 	    print $q->start_form(-method=>"POST", -name => "slippymapForm", -target => "slippymapIframe", -action => "/cgi/slippymap.cgi?city=" . $slippymap_url->param('city') );
@@ -7614,7 +7636,7 @@ sub header {
 	     #-lang => 'de-DE',
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
-	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling route routing, bicycle navigation, Velo, Rad',
+	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map',
 		     'copyright'=>'(c) 1998-2011 Slaven Rezic + Wolfram Schneider',
 		    },
 	     -author => $BBBike::EMAIL,
@@ -7787,7 +7809,7 @@ $list_of_all_streets |
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
-(&copy;) 1998-2011 <a href="http://CycleRoutePlanner.org">CycleRoutePlanner.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
+(&copy;) 1998-2011 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
 <div id="footer_community">
   <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="Donate to bbbike.org" border="0"></a>

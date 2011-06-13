@@ -148,7 +148,7 @@ sub check_database {
         next if $val eq "" && is_latlng($key);
 
         print "$key => $val\n"
-          if !is_hight($val) || !is_latlng($key) || $val == -32768;
+          if !is_height($val) || !is_latlng($key) || $val == -32768;
     }
 }
 
@@ -178,7 +178,7 @@ sub is_latlng {
     return ( defined $latlng && $latlng =~ /^[\d\-\,\.]+$/ ) ? 1 : 0;
 }
 
-sub is_hight {
+sub is_height {
     my $height = shift;
 
     return ( defined $height && $height =~ /^[\-\+]?\d+$/ ) ? 1 : 0;
@@ -192,7 +192,7 @@ sub repair_database {
     while ( my ( $key, $val ) = each %$hash ) {
         if ( defined $val && $val eq "" ) {
         }
-        elsif ( !defined $val || $val eq "-32768" || !is_hight($val) ) {
+        elsif ( !defined $val || $val eq "-32768" || !is_height($val) ) {
             warn "key: $key, val: '$val'\n";
             $val = "";
             $hash->{$key} = $val;
@@ -338,7 +338,7 @@ sub parse_streets {
     }
 
     warn "Corner count: $counter\n" if $debug;
-    return $hash;
+    return ( $hash, $counter );
 }
 
 sub get_elevation_data {
@@ -380,7 +380,7 @@ sub get_elevation_data {
         else {
             for ( my $i = 0 ; $i < scalar(@heights) ; $i++ ) {
                 my $height = $heights[$i];
-                if ( defined $height && is_hight($height) ) {
+                if ( defined $height && is_height($height) ) {
                     if ( $height == $NO_DATA ) {
                         warn "unknown height for: ", $data[$i], "\n";
 
@@ -441,6 +441,21 @@ sub update_hoehe {
     rename( $tmp, $file ) or die "rename $tmp -> $file: $!\n";
 }
 
+# keep a copy of the original "hoehe" file for
+# further use if the script runs again
+sub get_original_hoehe_file {
+    my $hoehe      = shift;
+    my $hoehe_orig = $hoehe . "-orig";
+
+    # return original file
+    if ( !-e $hoehe_orig ) {
+        my @args = ( "cp", "-f", $hoehe, $hoehe_orig );
+        system(@args) and die "system @args: $?\n";
+    }
+
+    return $hoehe_orig;
+}
+
 sub update_city {
     my %args = @_;
     my $city = $args{'city'};
@@ -449,8 +464,8 @@ sub update_city {
 
     my $dir = "$data_osm_dir/$city";
 
-    my $height  = &parse_hoehe("$dir/hoehe");
-    my $streets = &parse_streets("$dir/strassen");
+    my $height = &parse_hoehe( &get_original_hoehe_file("$dir/hoehe") );
+    my ( $streets, $corners ) = &parse_streets("$dir/strassen");
 
     # point to write to "hoehe"
     my @corners = ();
@@ -510,7 +525,7 @@ sub update_city {
         'database' => $hash
     ) if !$test_mode;
 
-    return ( $hash, $counter );
+    return ( $hash, $counter, $corners );
 }
 
 ######################################################################
@@ -564,18 +579,22 @@ activate_socksproxy($ua) if $socksproxy;
 
 my $counter;
 my $total_counter = 0;
+my $total_corners = 0;
 
 # walk throught the list of cities
 foreach my $city (@cities) {
     warn "City: $city\n" if $debug;
-    ( $hash, $counter ) =
+    my $corners;
+    ( $hash, $counter, $corners ) =
       &update_city( 'city' => $city, 'ua' => $ua, 'database' => $hash );
     $total_counter += $counter;
+    $total_corners += $corners;
 
     # write database
     &write_database( $database, $hash, $counter )
       if !$readonly_database;
 }
 
-warn "Total updates: $total_counter\n" if $debug;
+warn "\nCorners checked: $total_corners\n" if $debug;
+warn "Total updates: $total_counter\n"     if $debug;
 
