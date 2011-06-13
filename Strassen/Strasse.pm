@@ -286,12 +286,30 @@ sub get_crossing_streets {
     @cross_streets;
 }
 
+# extract streetnames from a cross
+#
+# Garibaldistr/Herzstr -> ("Garibaldistr", "Herzstr")
+# College St at Ossington -> ("College St", "Ossington")
+#
 sub split_crossing {
     my($street) = @_;
     return if !defined $street;
+
+    # international
     if ($street =~ m{[/\\]}) {
 	return split m{\s*[/\\]\s*}, $street, 2;
     }
+
+    # american style
+    if ($street =~ /\S+\s+at\s+\S+/) {
+	return split m{\s+at\s+}, $street, 2;
+    }
+
+    # hacker style
+    if ($street =~ /\S+\s+\@\s+\S+/) {
+	return split m{\s+\@\s+}, $street, 2;
+    }
+
     $street;
 }
 
