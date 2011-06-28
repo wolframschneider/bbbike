@@ -134,6 +134,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_google_adsense_street_linkblock
 	    $enable_panoramio_photos
 	    $enable_elevation
+	    $dos_run_timeout
 	   );
 
 $gmap_api_version = 3;
@@ -798,6 +799,12 @@ my $is_streets;
      };
      warn "$@" if $@;
   } 
+}
+
+if ($dos_run_timeout > 0) {
+    my $run_timeout = $dos_run_timeout;
+    local $SIG{ALRM} = sub { die "Runs to long, give up after $run_timeout seconds\n" };
+    alarm($run_timeout);
 }
 
 #warn "xxx: city: $datadir, lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
