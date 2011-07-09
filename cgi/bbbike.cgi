@@ -4294,11 +4294,12 @@ sub search_coord {
     }
 
     my $is_test_mode = (defined $q->param("test") && grep { /^(?:custom|temp)[-_]blocking/ } $q->param("test"));
-    load_temp_blockings(-test => $is_test_mode);
+    my $fake_time    = $q->param('fake_time');
+    load_temp_blockings(-test => $is_test_mode || $fake_time);
 
     my(%custom_s, @current_temp_blocking);
     {
-	my $t = time;
+	my $t = $fake_time || time;
 	my $index = -1;
 	for my $tb (@temp_blocking) {
 	    $index++;
@@ -4363,8 +4364,12 @@ sub search_coord {
 			}
 		    }
 		} else {
-		    $tb->{net} = StrassenNetz->new($strobj);
-		    $tb->{net}->make_net_cat(-onewayhack => 1);
+		    my $strobj_3    = $strobj->grepstreets(sub { $_->[Strassen::CAT] eq '3' });
+		    my $strobj_non3 = $strobj->grepstreets(sub { $_->[Strassen::CAT] ne '3' });
+		    my $tb_net = $tb->{net} = StrassenNetz->new($strobj_non3);
+		    $tb_net->make_net_cat(-onewayhack => 1);
+		    $tb_net->make_sperre($strobj_3, Type => ['wegfuehrung']);
+		    # XXX What about $special_vehicle? Should it be used here?
 		}
 	    }
 
@@ -4496,6 +4501,18 @@ sub display_route {
 	return;
     }
 
+    my $route_to_strassen_object = sub {
+	my $bbd_line;
+	if ($r->path && @{ $r->path }) {
+	    $bbd_line = "$startname - $zielname\tX " .
+		join(" ", map { "$_->[0],$_->[1]" }
+		     @{ $r->path || [] }) . "\n";
+	} else {
+	    $bbd_line = '';
+	}
+	Strassen->new_from_data($bbd_line);
+    };
+
     if (defined $output_as && $output_as eq 'gpx-track') {
 	require Strassen::GPX;
 	my $filename = filename_from_route($startname, $zielname, "track") . ".gpx";
@@ -4503,10 +4520,7 @@ sub display_route {
 	    (-type => "application/xml",
 	     -Content_Disposition => "attachment; filename=$filename",
 	    );
-	my $s = Strassen->new_from_data("$startname - $zielname\tX " .
-					join(" ", map { "$_->[0],$_->[1]" }
-					     @{ $r->path }) . "\n");
-
+	my $s = $route_to_strassen_object->();
 	my $s_gpx = Strassen::GPX->new($s);
 	$s_gpx->{"GlobalDirectives"}->{"map"}[0] = "polar" if $data_is_wgs84;
 	print $s_gpx->bbd2gpx(-as => "track");
@@ -4520,9 +4534,7 @@ sub display_route {
 	    (-type => "application/vnd.google-earth.kml+xml",
 	     -Content_Disposition => "attachment; filename=$filename",
 	    );
-	my $s = Strassen->new_from_data("$startname - $zielname\tX " .
-					join(" ", map { "$_->[0],$_->[1]" }
-					     @{ $r->path }) . "\n");
+	my $s = $route_to_strassen_object->();
 	my $s_kml = Strassen::KML->new($s);
 	$s_kml->{"GlobalDirectives"}->{"map"}[0] = "polar" if $data_is_wgs84;
 	print $s_kml->bbd2kml;
@@ -4948,15 +4960,37 @@ sub display_route {
     if (@current_temp_blocking && !@custom && !$printmode) {
     TEMP_BLOCKING:
 	for my $tb (@current_temp_blocking) {
+	    my $net         = $tb->{net}{Net};
+	    my $wegfuehrung = $tb->{net}{Wegfuehrung};
+
 	    my(@path) = $r->path_list;
 	    for(my $i = 0; $i < $#path; $i++) {
 		my($x1, $y1) = @{$path[$i]};
 		my($x2, $y2) = @{$path[$i+1]};
-		if ($tb->{net}{Net}{"$x1,$y1"}{"$x2,$y2"}) {
+		my $xy1 = "$x1,$y1";
+		my $xy2 = "$x2,$y2";
+
+		# Handling "1"/"2" and "qX" types
+		if ($net->{$xy1}{$xy2}) {
 		    push @affecting_blockings, $tb;
 		    $tb->{lost_time}{$velocity_kmh} = lost_time($r, $tb, $velocity_kmh);
-		    $tb->{hop} = ["$x1,$y1", "$x2,$y2"];
+		    $tb->{hop} = [$xy1, $xy2];
 		    next TEMP_BLOCKING;
+		}
+
+		# Handling "3" (wegfuehrung) types
+		if ($wegfuehrung && exists $wegfuehrung->{$xy2}) {
+		    for my $wegfuehrung (@{ $wegfuehrung->{$xy2} }) {
+		    CHECK_WEGFUEHRUNG: {
+			    for(my $j=0; $j<$#$wegfuehrung; $j++) {
+				last CHECK_WEGFUEHRUNG
+				    if ($j > $i || join(",",@{$path[$i-$j]}) ne $wegfuehrung->[$#$wegfuehrung-1-$j]);
+			    }
+			    push @affecting_blockings, $tb;
+			    $tb->{hop} = [$xy1, $xy2];
+			    next TEMP_BLOCKING;
+			}
+		    }
 		}
 	    }
 	}
@@ -6225,10 +6259,18 @@ sub draw_route {
     my $draw;
     my $route; # optional Route object
 
-    if (defined $q->param('coordssession') &&
-	(my $sess = tie_session($q->param('coordssession')))) {
-	$q->param(coords => $sess->{routestringrep});
-	$route = $sess->{route};
+    my $session_is_expired;
+    if (defined $q->param('coordssession')) {
+	if (my $sess = tie_session($q->param('coordssession'))) {
+	    # Note: the session data specified by coordssession could
+	    # already be deleted. In this case all session data would be
+	    # empty, especially the coords. The error will happen later,
+	    # in BBBikeDraw.
+	    $q->param(coords => $sess->{routestringrep});
+	    $route = $sess->{route};
+	} else {
+	    $session_is_expired = 1;
+	}
     }
 
     if (defined $q->param('oldcs') &&
@@ -6413,18 +6455,24 @@ sub draw_route {
 	    );
     }
 
-    $draw->pre_draw
-	if $draw->can("pre_draw");
-    $draw->draw_map    if $draw->can("draw_map");
-    $draw->draw_wind   if $draw->can("draw_wind");
-    $draw->draw_route  if $draw->can("draw_route");
-    $draw->add_route_descr(-net => make_netz(),
-			   -lang => $lang, 
-			   -Url => $q->url(-full=>0, -absolute=>1, -query=>0), 
-			   -City_local => $local_city_name, 
-			   -City_en => $en_city_name)
-	if $draw->can("add_route_descr");
-    $draw->flush;
+    eval {
+	$draw->pre_draw
+	    if $draw->can("pre_draw");
+	$draw->draw_map    if $draw->can("draw_map");
+	$draw->draw_wind   if $draw->can("draw_wind");
+	$draw->draw_route  if $draw->can("draw_route");
+	$draw->add_route_descr(-net => make_netz(),
+			       -lang => $lang)
+	    if $draw->can("add_route_descr");
+	$draw->flush;
+    };
+    if ($@) {
+	if ($session_is_expired) {
+	    die "Cannot draw image because session is expired";
+	} else {
+	    die $@;
+	}
+    }
 }
 
 sub create_map {
@@ -7485,9 +7533,17 @@ sub header {
 #			  -href => "$bbbike_images/srtbike16.gif",
 #			  -type => "image/gif",
 			 });
-    push @$head, cgilink({-rel  => "apple-touch-icon",
-  			  -href => "$bbbike_images/srtbike57.png",
-  			  -type => "image/png"
+    # apple touch icons
+    push @$head, cgilink({-rel  => 'apple-touch-icon',
+			  -href => "$bbbike_images/srtbike57.png",
+			 });
+    push @$head, cgilink({-rel   => 'apple-touch-icon',
+			  -sizes => '72x72',
+			  -href  => "$bbbike_images/srtbike72.png",
+			 });
+    push @$head, cgilink({-rel   => 'apple-touch-icon',
+			  -sizes => '114x114',
+			  -href  => "$bbbike_images/srtbike114.png",
 			 });
 
     my($bbbike_de_script, $bbbike_en_script, $bbbike_local_script);

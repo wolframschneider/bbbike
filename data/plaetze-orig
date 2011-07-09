@@ -152,8 +152,6 @@ Otto-Rosenberg-Platz	Pl 19991,16322
 Zietenplatz	Pl 9000,11727 9075,11756 9171,11777
 #: oldname: -2008: Platz S
 Betty-Hirsch-Platz	Pl 2206,7637
-Guthmannplatz	Pl 25763,13476 25722,13490
-Heinrich-Grüber-Platz	Pl 22836,11994
 Am Glockenturm	Pl -1398,11803
 Mathilde-Jacob-Platz	Pl 5956,13330
 Charitéplatz	Pl 8602,13075
@@ -219,7 +217,6 @@ Victor-Klemperer-Platz	Pl 20755,15933
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20101104.1040.317413.html
 Eugen-Gerstenmaier-Platz	Pl 3839,4577
 Joe-May-Platz	Pl 14346,17224
-Erika-Gräfin-von-Brockdorff-Platz	Pl 7949,7607
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/05re.pdf/file
 #: note: früher vielleicht "Platz M" (siehe auch http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20101112.1040.318520.html)
 Jürgen-Fuchs-Platz	Pl 3366,5654
@@ -230,6 +227,15 @@ Roederplatz	Pl 15502,13539
 Kamisardenplatz	Pl 12067,23241
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/23re.pdf/file
 Plaza San Rafael del Sur	Pl 13325,10565
+Letteplatz	Pl 7998,17564
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file
+Fred-Löwenberg-Platz	Pl 21616,13900
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file
+#: by: http://www.spd-fraktion-steglitz-zehlendorf.de/index.php?option=com_content&view=article&id=92:marga-meusel-platz-antrag-drs-1496&catid=35:antraege-anfragen&Itemid=69
+Marga-Meusel-Platz	Pl -745,3401
+#: by: http://de.wikipedia.org/wiki/Der_Havelkaiser
+#: by: http://www.panoramio.com/photo/10167910
+Havelkaiser-Platz	Pl -2334,16624
 ######################################################################
 #: section faked_plaetze vvv
 # Keine offiziellen Straßennamen, sondern

@@ -30,7 +30,7 @@ Freiarmbrücke	Br 23492,5488 23519,5490
 Spreetunnel	Tu 25571,4553 25658,4619
 Grünauer Brücke	Br 22050,2736 22058,2700 22074,2666
 #: alias: Galgen
-Kaulsdorfer Brücke	Br 22688,12007 22669,12049 22693,12084
+Kaulsdorfer Brücke	Br 22688,12007 22684,12016 22669,12049 22693,12084
 Fußgängerbrücke (Blockdammweg)	Br 17976,8964 18087,9035
 Grabensprung, U-Bahnbrücke	Br 20586,10935 20681,10772
 Fußgängerbrücke (Rebenweg)	Br 19726,-32 19762,-160
@@ -186,7 +186,7 @@ Olympische Brücke	Br 94,12048 262,12085
 Saatwinkler Steg	Br -1073,16610 -995,16701
 Gartenfelder Brücke	Br -302,15602 -303,15526
 Tegeler Brücke	Br -247,15982 -236,16043 -226,16086
-Spandauer-See-Brücke	Br -2209,16501 -1939,16427
+Spandauer-See-Brücke	Br -2209,16501 -1928,16423
 Wasserstadtbrücke	Br -2069,16907 -1863,16868
 Tiefwerderbrücke	Br -2761,12835 -2770,12861
 Nennhauser Damm, S-Bahnbrücke	Br -7445,14392 -7457,14317
@@ -204,8 +204,8 @@ Fennbrücke	Br 7378,14559 7446,14615
 Perleberger Brücke	Br 7180,14419 7378,14559
 Dischingerbrücke	Br -3398,13753 -3471,13807
 Charlottenbrücke	Br -3135,14183 -3083,14105 -3068,14033
-Eiswerderbrücke	Br -2675,15513 -2447,15476
-Kleine Eiswerderbrücke	Br -2065,15682 -1872,15676
+Eiswerderbrücke	Br -2675,15513 -2453,15476
+Kleine Eiswerderbrücke	Br -2038,15683 -1978,15684
 Juliusturmbrücke	Br -2946,14533 -2829,14506
 Schulenburgbrücke	Br -3210,12913 -3159,12962
 Schwanenwerderbrücke	Br -5021,4110 -4964,4100
@@ -223,7 +223,7 @@ Hermann-Gladenbeck-Brücke	Br 16948,3200 16962,3212 16991,3241
 Hobrechtbrücke	Br 12088,9775 12119,9823
 Thielenbrücke	Br 12563,9536 12584,9572 12591,9584
 General-Ganeval-Brücke	Br 2996,15771 3033,15694
-#: XXX möglicherweise auch "Alt-Moabiter Brücke" (Referenz z.B. Straßenreinigungsverzeichnis, http://www.staedte-fotos.de/name/einzelbild/number/12944/kategorie/Deutschland~Berlin~Stadtansichten.html)
+#: note: einige Referenzen bezeichnen die Brücke als "Alt-Moabiter Brücke" (z.B. Straßenreinigungsverzeichnis, http://www.staedte-fotos.de/name/einzelbild/number/12944/kategorie/Deutschland~Berlin~Stadtansichten.html), aber in der Realität steht hier "Moabiter Brücke"
 Moabiter Brücke	Br 6580,12775 6608,12858
 Marggraffbrücke	Br 16677,6892 16720,6845
 Monbijoubrücke	Br 9661,12876 9680,12916 9707,12974
@@ -247,7 +247,7 @@ Bäkebrücke	Br 4591,3089 4655,3060
 Krahmersteg	Br 4791,3395 4862,3363
 Prinzregent-Ludwig-Brücke	Br 5557,4294 5588,4210
 Hannembrücke	Br 6006,4327 6011,4292 6012,4265
-Siemensbrücke	Br 6174,4258 6210,4313
+Siemensbrücke	Br 6162,4264 6199,4312
 Edenkobener Steg	Br 6645,4254 6627,4187
 Sieversbrücke	Br 7161,4091 7160,4051 7159,4023
 Teubertbrücke	Br 7921,4451 7990,4420
@@ -291,7 +291,7 @@ Prenzlauer Promenade	Br 11965,19349 12024,18913
 Darßer Brücke	Br 15105,18040 15034,18051
 Märkische Allee, Brücke über der Wuhletalstr.	Br 20717,17516 20843,17745
 Brücke am Biesdorfer Kreuz	Br 20002,12492 19947,12140
-Blumberger Damm, S-Bahnbrücke	Br 21199,12258 21166,12023
+Blumberger Damm, S-Bahnbrücke	Br 21199,12258 21190,12193 21166,12023
 Bitterfelder Brücke	Br 20372,16583 20230,16560 20150,16572
 Marzahner Brücke	Br 19350,14997 19408,15007 19605,15073
 Marzahner Brücke	Br 19567,15134 19496,15113 19364,15045
@@ -357,7 +357,8 @@ Hermann-Hesse-Str., Brücke über den Zingergraben	Br 9501,18902 9475,18862
 Hugo-Preuß-Brücke	Br 8160,13053 8274,13052
 Friedrich-Haak-Brücke	Br 7946,7411 7914,7364
 Hermann-Ganswindt-Brücke	Br 7314,7451 7432,7600
-Brücke über den Teufelsseekanal	Br -2503,18945 -2460,18918 -2434,18832
+#: by: http://wikimapia.org/13619600/de/Oberhavelsteg
+Oberhavelsteg	Br -2503,18945 -2460,18918 -2434,18832
 Kaisersteg	Br 18353,5897 18420,6009
 Fischgrundbrücke	Br 2624,24710 2690,24751
 Pyramidenbrücke	Br 21569,5730 21596,5693
@@ -448,7 +449,7 @@ Ringbahnbrücke Oberspree	Br 14443,9988 14546,10124
 Knoten am Flughafen Tegel	Br 2953,15999 2848,15979
 Fußgängerbrücke Ostkreuz	Br 14787,10972 14764,10877
 Brücke über die Spektelake	Br -7228,15504 -7182,15524
-Brücke über die Wuhle	Br 22323,13533 22251,13561
+Brücke über die Wuhle	Br 22313,13523 22246,13551
 Brücke über die Wuhle	Br 22195,10993 22271,10971
 Brücke über die Wuhle	Br 22326,11266 22242,11269
 Brücke über die Wuhle	Br 22364,17323 22349,17302
@@ -467,11 +468,12 @@ Brücke über den Heidekampgraben	Br 15368,7023 15289,7010
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1005/nachricht3868.html (Name der Brücke)
 Schönholzer Brücke	Br 9909,18333 9881,18354
 Märkische-Allee-Brücke	Br 19947,12140 19939,12068
-Brücke über den Aalemannkanal	Br -2172,18379 -2177,18279
+Brücke über den Aalemannkanal	Br -2166,18365 -2171,18265
 Brücke über Eisenbahn	Br 19348,-434 19385,-444
 Parkringbrücke	Br 8670,8370 8671,8307
 Nonnendammbrücke	Br 2149,13775 2176,13703
 Ernststr., Brücke über Autobahn	Br 2700,19527 2780,19548
+Brücke über die Erpe	Br 23675,5706 23675,5729
 #: section ^^^
 #
 ## Brandenburg und weiter ####################################################

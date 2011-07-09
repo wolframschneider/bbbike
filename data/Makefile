@@ -1257,7 +1257,7 @@ check-disabled:
 	@touch $@
 
 .check_ortsschilder2:	orte orte2 ortsschilder
-	perl -MData::Dumper -I.. -I../lib -MStrassen::Core -e 'for $$o (qw(orte orte2)) { Strassen->new_stream($$o)->read_stream(sub { $$seen{$$_[0]->[0]}++; for (@{ $$_[1]->{alias} || [] }) { $$seen{$$_ }++ } }, UseLocalDirectives => 1) }; Strassen->new_stream("ortsschilder")->read_stream(sub { $$seen{$$_[0]->[0]}++ or $$error{$$_[0]->[0]}++ }); if (%error) { die Dumper(\%error) }' 
+	perl -MData::Dumper -I.. -I../lib -MStrassen::Core -e '$$seen{"Berlin"} = 1; for $$o (qw(orte orte2)) { Strassen->new_stream($$o)->read_stream(sub { $$seen{$$_[0]->[0]}++; for (@{ $$_[1]->{alias} || [] }) { $$seen{$$_ }++ } }, UseLocalDirectives => 1) }; Strassen->new_stream("ortsschilder")->read_stream(sub { $$seen{$$_[0]->[0]}++ or $$error{$$_[0]->[0]}++ }); if (%error) { die Dumper(\%error) }' 
 	@touch $@
 
 # Interactive test
@@ -1520,7 +1520,7 @@ check-line-lengths:	.check_line_lengths
 	@touch $@
 
 count-streets:
-	@echo -n "Berlin:        "; grep -v "^(" strassen | grep -v '\[.*\]' | ${CUT} -f1 -d"(" | sort -u | wc -l
+	@echo -n "Berlin:        "; grep -v "^#" strassen | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 -d"(" | sort -u | wc -l
 	@echo -n "Landstraﬂen:   "; grep -v "^#" landstrassen landstrassen2 | ${CUT} -f1 | sort -u | wc -l
 	@echo -n "  Potsdam:     "; fgrep "(Potsdam)" landstrassen | grep -v "^(" | ${CUT} -f1 -d"(" | sort -u | wc -l
 	@echo -n "  Oranienburg: "; grep -v "^#" landstrassen | fgrep "(Oranienburg" | ${CUT} -f1 -d"(" | sort -u | wc -l

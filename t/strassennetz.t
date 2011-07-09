@@ -37,7 +37,7 @@ BEGIN {
     }
 }
 
-plan tests => 50;
+plan tests => 71;
 
 print "# Tests may fail if data changes\n";
 
@@ -85,7 +85,6 @@ if ($do_xxx) {
     }
 }
 
-XXX:
 {
     my $net = StrassenNetz->new($comments_path);
     $net->make_net_cat(-obeydir => 1, -net2name => 1, -multiple => 1);
@@ -335,6 +334,103 @@ EOF
     my $path = $ret->{RealCoords};
     my(@route) = eval { $s_net->route_to_name($path) };
     is $@, '', 'No division by zero error';
+}
+
+{
+    # Sketching the handling of "2" vs. "3" records in temp-blockings.
+    my $s = Strassen->new_from_data_string(<<EOF);
+userdel	3 13150,7254 13047,7234 13058,7165
+userdel	3 13058,7165 13047,7234 13150,7254
+userdel	3 13150,7254 13047,7234 13034,7319
+userdel	3 13034,7319 13047,7234 13150,7254
+userdel	2::inwork 46581,105900 47587,106693
+EOF
+    my $s_3    = $s->grepstreets(sub { $_->[Strassen::CAT] eq '3' });
+    my $s_non3 = $s->grepstreets(sub { $_->[Strassen::CAT] ne '3' });
+    my $net = StrassenNetz->new($s_non3);
+    $net->make_net_cat(-onewayhack => 1);
+    $net->make_sperre($s_3, Type => ['wegfuehrung']);
+    is scalar keys %{$net->{Net}}, 2, 'Only the "blocked" records in Net';
+    is scalar keys %{$net->{Wegfuehrung}}, 3, 'The "wegfuehrung" records'
+	or diag Dumper($net->{Wegfuehrung});
+}
+
+{
+    # stack and pop_stack
+
+    # Create net with existing record
+    my($k1,$v1) = each %{$s_net->{Net}}; keys %{$s_net->{Net}};
+    my($k2,$v2) = each %$v1;             keys %$v1;
+    my $add_s1 = Strassen->new_from_data_string(<<EOF);
+something	XYZ $k1 $k2
+EOF
+    my $add_net1 = StrassenNetz->new($add_s1);
+    $add_net1->make_net_cat(-onewayhack => 1);
+
+    # Create net with completely new record
+    my $new_k1  = '1234567,987654';
+    my $new_k2  = '-1234,-4321';
+    my $new_cat = 'ABC';
+    my $add_s2 = Strassen->new_from_data_string(<<EOF);
+something new	$new_cat $new_k1 $new_k2
+EOF
+    my $add_net2 = StrassenNetz->new($add_s2);
+    $add_net2->make_net_cat(-onewayhack => 1);
+
+    $s_net->push_stack($add_net1);
+    is $s_net->{Net}{$k1}{$k2}, 'XYZ', 'Stacked value (overwriting old)';
+
+    $s_net->push_stack($add_net2);
+    is $s_net->{Net}{$new_k1}{$new_k2}, $new_cat, 'Stacked value (newly added)';
+
+    $s_net->pop_stack;
+    ok !exists $s_net->{Net}{$new_k1}{$new_k2}, 'Original value --- does not exist';
+
+    $s_net->pop_stack;
+    is $s_net->{Net}{$k1}{$k2}, $v2, 'Original value';
+
+    eval { $s_net->pop_stack };
+    ok $@, 'Cannot pop_stack from empty stack';
+}
+
+XXX:
+{
+    # make_sperre tests
+    my $s = Strassen->new_from_data_string(<<EOF);
+Street	H 0,0 10,0 20,0 30,0 40,0 50,0 60,0 70,0
+EOF
+    my $sperre = Strassen->new_from_data_string(<<EOF);
+One way	1 0,0 10,0
+One way non-strict	1s 10,0 20,0
+One way with attrib	1::igndisp 20,0 30,0
+Blocked	2 30,0 40,0
+Blocked with attrib	2:inwork 40,0 50,0
+Wegfuehrung	3 50,0 60,0
+Wegfuehrung with attrib	3::igndisp 60,0 70,0
+BNP	BNP:5:90	50,0
+Tragen	0:30:90	60,0
+EOF
+    my $net = StrassenNetz->new($s);
+    $net->make_net;
+    $net->make_sperre($sperre, Type => 'all', DelToken => 'removable_test');
+
+    ok $net->{Net}{'10,0'}{'0,0'}, 'One way, open';
+    ok !$net->{Net}{'0,0'}{'10,0'}, 'One way, closed';
+    ok !$net->{Net}{'10,0'}{'20,0'}, 'One way, non-strict, closed';
+    ok !$net->{Net}{'20,0'}{'30,0'}, 'One way, with attrib, closed';
+    ok !$net->{Net}{'30,0'}{'40,0'}, 'Blocked';
+    ok !$net->{Net}{'40,0'}{'30,0'}, 'Blocked, other direction';
+    ok $net->{Wegfuehrung}{'60,0'}, 'Wegfuehrung';
+    # XXX bnp/tragen tests missing
+
+    $net->remove_all_from_deleted(undef, 'removable_test');
+    ok $net->{Net}{'10,0'}{'0,0'}, 'One way, open, unchanged';
+    ok $net->{Net}{'0,0'}{'10,0'}, 'One way removed';
+    ok $net->{Net}{'10,0'}{'20,0'}, 'Another one way, non-strict, removed';
+    ok $net->{Net}{'20,0'}{'30,0'}, 'One way, with attrib, removed';
+    ok $net->{Net}{'30,0'}{'40,0'}, 'Blocked, removed';
+    ok $net->{Net}{'40,0'}{'30,0'}, 'Blocked, other direction, removed';
+    ok !$net->{Wegfuehrung}{'60,0'}, 'Wegfuehrung removed';
 }
 
 __END__

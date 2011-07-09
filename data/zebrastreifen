@@ -191,8 +191,9 @@ Oberfeldstr./Ketschendorfer Weg	Zs 20847,14063
 Oberfeldstr./Eitelstr.	Zs 20770,13450
 #: note: Luftbild
 Sterndamm/Megedestr.	Zs 17237,4232
-#: note: Luftbild
-Wilhelmsmühlenweg	Zs 22873,11956
+Heinrich-Grüber-Platz/Planitzstr.	Zs 22885,11927
+Heinrich-Grüber-Platz/Wilhelmsmühlenweg	Zs 22890,11955
+Heinrich-Grüber-Platz/Heinrich-Grüber-Str.	Zs 22833,12000
 #: note: Luftbild
 Böhlener Str./Louis-Lewin-Str.	Zs 25022,15134
 #: note: Luftbild
@@ -240,7 +241,6 @@ Am Nordgraben	Zs 3819,20393
 Rudolf-Breitscheid-Str./Straßenbahnhaltestelle (Potsdam)	Zs -9348,-1741
 #: note: Luftbild
 Pölnitzweg/Röbellweg	Zs 16380,26325
-#: note: Luftbild
 Dahlwitzer/Hamburger	Zs 26666,13864
 Pankower Allee/Kühlweinstr.	Zs 7989,17558
 Morusstr./Nähe Kopfstr.	Zs 12483,7857
@@ -379,3 +379,4 @@ Gartenstr./Feldstr.	Zs 8959,14522
 #: last_checked: 2011-06-12
 Gartenstr.	Zs 8728,14864
 Ruppiner Chaussee/Stolpmünder Weg	Zs -1635,24113
+Hönower Weg	Zs 26885,13135

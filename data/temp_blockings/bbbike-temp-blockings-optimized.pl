@@ -1019,17 +1019,6 @@ userdel	2 16975,1262 16849,1437
        undef,
        undef,
        undef,
-       {
-         'until' => 1308520800,
-         'text' => 'Motzstr., Eisenacher Str., Kalckreuthstr. (Schöneberg) in beiden Richtungen, Veranstaltung, Straße vollständig gesperrt (18. und 19. Juni 2011)',
-         'from' => 1308261600,
-         'id' => 1024,
-         'data' => 'userdel	2::temp 6628,10318 6626,10155 6729,10212 6739,10120
-userdel	2::temp 6609,10147 6514,10088
-userdel	2::temp 6971,10346 6729,10212 6719,10347
-',
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
@@ -1055,16 +1044,8 @@ userdel	2::temp 6971,10346 6729,10212 6719,10347
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_005931',
-         'until' => 1309039200,
-         'text' => 'Mehringdamm (Kreuzberg) in Richtung Tempelhof, zwischen Kreuzbergstr. und Dudenstr. Veranstaltung (Seifenkistenrennen am 25. Juni 2011), Fahrtrichtung gesperrt',
-         'from' => 1308866400,
-         'id' => 1050,
-         'data' => 'userdel	1::temp 9248,9350 9225,9111 9224,9053 9225,9038 9227,8890 9229,8785
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1130,15 +1111,7 @@ userdel	2::temp 6971,10346 6729,10212 6719,10347
        undef,
        undef,
        undef,
-       {
-         'until' => 1309730400,
-         'text' => 'Open Air Gallery am 3. Juli 2011 auf der Oberbaumbrücke ',
-         'from' => 1309557600,
-         'id' => 1107,
-         'data' => 'userdel	2::temp 13178,10623 13206,10651 13305,10789 13332,10832
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1405,18 +1378,7 @@ userdel	2::temp 8119,12414 8055,12186
        undef,
        undef,
        undef,
-       {
-         'until' => 1308002340,
-         'text' => 'Straßen um den Blücherplatz Kreuzberg Blücherplatz, Waterlooufer: Mehringdamm - Zossener Str., Blücherstr.: Mehringdamm - Zossener Str., Zossener Str.: Waterlooufer-Blücherstr. gesperrt (10. - 13.06.2011)',
-         'from' => 1307570400,
-         'id' => 1358,
-         'data' => 'userdel	2::temp 9521,10010 9448,10014
-userdel	2::temp 9858,10199 9837,10117 9827,10051 9521,10010 9536,10064 9579,10122 9599,10175 9687,10180 9825,10206 9865,10227
-userdel	2::temp 9416,10196 9599,10175
-userdel	2::temp 9579,10122 9631,10142 9689,10124 9827,10051
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1728,16 +1690,7 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_012523',
-         'until' => 1309438800,
-         'text' => 'Kantstr. zwischen Hardebergstr. und Joachimstaler Str. gesperrt (bis 2011) ',
-         'from' => 1241419680,
-         'id' => 1643,
-         'data' => 'userdel	2::inwork 5652,11004 5613,10963 5494,10973
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1985,7 +1938,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'id' => 1813,
          'data' => '######################################################################
 # Wochenmärkte vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-	q4::temp 4397,7375 4330,7375 4162,7375 4059,7375
+	q4::temp:clock 4397,7375 4330,7375 4162,7375 4059,7375
 ',
          'type' => 'gesperrt'
        },
@@ -1995,7 +1948,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Nestorstr.: Di und Fr 08.00-13.00 Wochenmarkt, Behinderungen möglich',
          'from' => undef,
          'id' => 1814,
-         'data' => '	q4::temp 3374,10201 3359,9968 3347,9793
+         'data' => '	q4::temp:clock 3374,10201 3359,9968 3347,9793
 ',
          'type' => 'gesperrt'
        },
@@ -2005,7 +1958,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Maybachufer: Di und Fr 11.00-18.30 Wochenmarkt, Behinderungen möglich',
          'from' => undef,
          'id' => 1815,
-         'data' => '	q4::temp 11543,10015 11669,9987 11880,9874
+         'data' => '	q4::temp:clock 11543,10015 11669,9987 11880,9874
 ',
          'type' => 'gesperrt'
        },
@@ -2016,7 +1969,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'from' => undef,
          'id' => 1816,
          'data' => '#: note: http://www.berlin.de/ba-friedrichshain-kreuzberg/wirtschaftsfoerderung/wirtschaftsstandort/maerkte.html
-	q4::temp 9566,10566 9580,10434
+	q4::temp:clock 9566,10566 9580,10434
 ',
          'type' => 'gesperrt'
        },
@@ -2026,7 +1979,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Crellestr: Mi und Sa 10.00-15.00 Wochenmarkt, Behinderungen möglich',
          'from' => undef,
          'id' => 1817,
-         'data' => '	q4::temp 7882,9490 7836,9413 7771,9389
+         'data' => '	q4::temp:clock 7882,9490 7836,9413 7771,9389
 ',
          'type' => 'gesperrt'
        },
@@ -2036,7 +1989,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Charlottenbrunner Str.: Mo und Do 09.00-14.00 Wochenmarkt, Ausweichen auf Gehweg',
          'from' => undef,
          'id' => 1818,
-         'data' => '	q4::temp 3073,9020 2972,9037
+         'data' => '	q4::temp:clock 3073,9020 2972,9037
 ',
          'type' => 'gesperrt'
        },
@@ -2046,7 +1999,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Karl-August-Platz, Weimarer Str.: Mi 08.00-13.00 und Sa 08.00-14.00 Wochenmarkt, Behinderungen möglich',
          'from' => undef,
          'id' => 1819,
-         'data' => '	q4::temp 4101,11347 4101,11233
+         'data' => '	q4::temp:clock 4101,11347 4101,11233
 ',
          'type' => 'gesperrt'
        },
@@ -2056,7 +2009,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Richard-Wagner-Platz: Wochenmarkt Mo und Do 08.00-13.00, Behinderungen möglich',
          'from' => undef,
          'id' => 1820,
-         'data' => '	q4::temp 3763,12279 3701,12279
+         'data' => '	q4::temp:clock 3763,12279 3701,12279
 ',
          'type' => 'gesperrt'
        },
@@ -2066,7 +2019,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Ladiusmarkt in der Andréezeile: Wochenmarkt Dienstag, Donnerstag und Sonnabend, Behinderungen möglich',
          'from' => undef,
          'id' => 1821,
-         'data' => '	q4::temp 1020,496 1078,443
+         'data' => '	q4::temp:clock 1020,496 1078,443
 ',
          'type' => 'gesperrt'
        },
@@ -2076,7 +2029,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Preußenallee zwischen Marathonallee und Badenallee: Wochenmarkt Mo 08.00-13.00 und Do 08.00-13.00, Behinderungen möglich',
          'from' => undef,
          'id' => 1822,
-         'data' => '	q4::temp 596,11951 585,11830 572,11698 563,11601
+         'data' => '	q4::temp:clock 596,11951 585,11830 572,11698 563,11601
 # Wochenmärkte ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ######################################################################
 ',
@@ -2199,7 +2152,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Breslauer Platz: Wochenmarkt Mittwoch 8-13 Uhr, Donnerstag 12-17 Uhr, Samstag 8-14 Uhr, Behinderungen möglich',
          'from' => undef,
          'id' => 1884,
-         'data' => '	q4::temp 5902,7334 5810,7337 5817,7223
+         'data' => '	q4::temp:clock 5902,7334 5810,7337 5817,7223
 ',
          'type' => 'gesperrt'
        },
@@ -2210,7 +2163,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Erich-Steinfurth-Str.: Antikmarkt am Ostbahnhof, Sonntag 9-17 Uhr, nur Schieben möglich',
          'from' => undef,
          'id' => 1886,
-         'data' => '	q4::temp 12596,11696 12453,11790 12366,11808
+         'data' => '	q4::temp:clock 12596,11696 12453,11790 12366,11808
 ',
          'type' => 'gesperrt'
        },
@@ -2220,8 +2173,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Am Kupfergraben und am Zeughaus: Berliner Kunst- und Nostalgiemarkt, Samstag und Sonntag ca. 11-17 Uhr, nur Schieben möglich',
          'from' => undef,
          'id' => 1887,
-         'data' => '	q4::temp 9754,12775 9661,12876 9618,12907 9529,12925
-	q4::temp 9919,12613 9950,12522 9984,12426
+         'data' => '	q4::temp:clock 9754,12775 9661,12876 9618,12907 9529,12925
+	q4::temp:clock 9919,12613 9950,12522 9984,12426
 ',
          'type' => 'gesperrt'
        },
@@ -2408,16 +2361,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_015001',
-         'until' => 1309471199,
-         'text' => 'Bahnhofstr. (Erkner) in beiden Richtungen zwischen Kreisverkehr Friedensplatz und Bahnhofsvorplatz Baustelle, Straße vollständig gesperrt (bis Ende 06.2011)',
-         'from' => 1265413596,
-         'id' => 2017,
-         'data' => 'userdel	2::inwork 34326,2915 34142,2742
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2506,7 +2450,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'permanent' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juni bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juli bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10640,8366 10598,8270 10575,8218
@@ -2557,78 +2501,13 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'until' => 1309039140,
-         'text' => 'CSD am 25.6.2011',
-         'from' => 1308866400,
-         'id' => 2083,
-         'data' => 'userdel	2::temp 8731,12270 8610,12254 8538,12245 8546,12279 8570,12302
-userdel	2::temp 6851,10416 7033,10396 7033,10328 6971,10346 6937,10363 6851,10416 6753,10446 6636,10492 6532,10529 6468,10550 6353,10583 6223,10634 6133,10679 6025,10746 5942,10803 5782,10884 5725,10892 5656,10876 5484,10810 5351,10760
-userdel	2::temp 8600,12165 8538,12245 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 6828,12031 6809,11979 6744,11936 6778,11742 6809,11570 6825,11486 6851,11346 6880,11110 6882,11061 6873,11011 6824,10904 6918,10854 6972,10665 6985,10597 7003,10513 7033,10396
-userdel	2::temp 6828,12031 6787,12099 6754,12108 6725,12113 6690,12104 6653,12067 6642,12010 6685,11954 6744,11936
-userdel auto	3 6540,11754 6778,11742 7073,11798
-userdel auto	3 6681,10959 6824,10904 6740,10755
-userdel auto	3 6980,11583 6809,11570 6524,11583
-userdel auto	3 8048,12135 8055,12186 8119,12414
-userdel auto	3 5479,10719 5484,10810 5494,10973
-userdel auto	3 7115,11220 6880,11110 6841,11114
-userdel auto	3 6740,10755 6818,10725 6972,10665 7115,10612
-userdel auto	3 6740,10755 6824,10904 6681,10959
-userdel auto	3 6732,11106 6873,11011 7002,11034
-userdel auto	3 6250,10701 6223,10634 6192,10542
-userdel auto	3 7060,10221 7033,10328 7131,10331
-userdel auto	3 6131,10939 6025,10746 5877,10486
-userdel auto	3 6524,11583 6809,11570 6980,11583
-userdel auto	3 6192,10542 6223,10634 6250,10701
-userdel auto	3 8522,12239 8538,12245 8522,12187
-userdel auto	3 7103,11247 6851,11346 6692,11365
-userdel auto	3 6719,10347 6753,10446 6745,10619
-userdel auto	3 6573,11943 6642,12010 5900,11913
-userdel auto	3 5900,11913 6642,12010 6573,11943
-userdel auto	3 6692,11365 6851,11346 7103,11247
-userdel auto	3 5681,10696 5782,10884 5829,10964
-userdel auto	3 7875,12363 7816,12150 7827,12105
-userdel auto	3 7039,12314 7383,12095 7460,12054
-userdel auto	3 6302,10462 6353,10583 6380,10704
-userdel auto	3 7073,11798 6778,11742 6540,11754
-userdel auto	3 6745,10619 6753,10446 6719,10347
-userdel auto	3 6685,10690 6532,10529 6494,10440
-userdel auto	3 8119,12414 8055,12186 8048,12135
-userdel auto	3 8522,12187 8538,12245 8522,12239
-userdel auto	3 7115,10612 6972,10665 6818,10725 6740,10755
-userdel auto	3 6841,11114 6880,11110 7115,11220
-userdel auto	3 7827,12105 7816,12150 7875,12363
-userdel auto	3 6380,10704 6353,10583 6302,10462
-userdel auto	3 7171,11510 6825,11486 6716,11439
-userdel auto	3 6494,10440 6532,10529 6685,10690
-userdel auto	3 7460,12054 7383,12095 7039,12314
-userdel auto	3 7002,11034 6873,11011 6732,11106
-userdel auto	3 5877,10486 6025,10746 6131,10939
-userdel auto	3 5494,10973 5484,10810 5479,10719
-userdel auto	3 5829,10964 5782,10884 5681,10696
-userdel auto	3 7131,10331 7033,10396 7245,10499
-userdel auto	3 7131,10331 7033,10328 7060,10221
-userdel auto	3 6716,11439 6825,11486 7171,11510
-userdel auto	3 7245,10499 7033,10396 7131,10331
-',
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
        undef,
        undef,
-       {
-         'until' => 1309125600,
-         'text' => 'Bergmannstraße (Kreuzberg): Veranstaltung, Straße vollständig gesperrt (24. bis 26. Juni 2011) in beiden Richtungen zwischen Mehringdamm und Zossener Str.',
-         'from' => 1308780000,
-         'id' => 2089,
-         'data' => 'userdel	q4::temp 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252
-userdel auto	3 9487,9209 9505,9306 9524,9426
-userdel auto	3 9524,9426 9505,9306 9487,9209
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        {
          'source_id' => '105200001',
          'until' => 1324422000,
@@ -2686,9 +2565,9 @@ userdel auto	3 9524,9426 9505,9306 9487,9209
        undef,
        {
          'source_id' => '106200475',
-         'until' => 1309471200,
-         'text' => 'Lichterfeld-Schacksdorf: L60: Straßenbau Lauchhammer - Licherfelde, 22.07.2010 bis 30.06.2011 ',
-         'from' => 1295721720,
+         'until' => 1325372400,
+         'text' => 'Lichterfeld-Schacksdorf: L60: Havarie, Straßenzustand Lauchhammer - Licherfelde Umleitung: Lauchhammer - Grünwalde - Staupitz - Sorno - Finsterwalde - Schacksdorf - Lichterfelde, 22.07.2010 bis 31.12.2011 ',
+         'from' => 1309719930,
          'id' => 2108,
          'data' => 'userdel	2::inwork 37809,-92300 37918,-93202 37419,-94853 37230,-95682
 ',
@@ -2729,15 +2608,7 @@ userdel auto	3 9524,9426 9505,9306 9487,9209
          'type' => 'handicap'
        },
        undef,
-       {
-         'until' => 1309730400,
-         'text' => 'Rheinstraße (Friedenau): Veranstaltung, Straße vollständig gesperrt (2. und 3. Juli 2011) in beiden Richtungen zwischen Walther-Schreiber-Platz und Breslauer Platz',
-         'from' => 1309471200,
-         'id' => 2126,
-         'data' => 'userdel	2::temp 5370,6486 5424,6584 5533,6753 5654,6941 5817,7223
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        {
@@ -2759,7 +2630,9 @@ userdel auto	3 9524,9426 9505,9306 9487,9209
          'from' => 1284745737,
          'id' => 2134,
          'data' => 'userdel	3 13150,7254 13047,7234 13058,7165
+userdel	3 13058,7165 13047,7234 13150,7254
 userdel	3 13150,7254 13047,7234 13034,7319
+userdel	3 13034,7319 13047,7234 13150,7254
 ',
          'type' => 'gesperrt'
        },
@@ -2882,19 +2755,7 @@ userdel	q4::inwork; -12545,-698 -12262,-612
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_016132',
-         'until' => 1312034400,
-         'text' => 'General-Pape-Straße (Tempelhof): Baustelle, Fahrtichtung gesperrt (bis ca. 07/2011) Richtung Kolonnenstr. zwischen Werner-Voß-Str. und Loewenhardtdamm, 26.07.2010 11:47 Uhr bis 30.07.2011 16:00 Uhr ',
-         'from' => 1280051220,
-         'id' => 2197,
-         'data' => '#: XXX Verkehrsfreigabe ist bereits erfolgt (2011-05-25) --- Einschränkung aufgehoben?
-#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20110520.1450.344975.html
-#: next_check: 2011-05-25
-userdel	q4::inwork; 7949,7607 7935,7736 7950,7840 8226,8648 8237,8685 8306,8722
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_017117',
          'until' => 1311976800,
@@ -2916,16 +2777,7 @@ userdel	q4::inwork; 7949,7607 7935,7736 7950,7840 8226,8648 8237,8685 8306,8722
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => '106401098',
-         'until' => 1309471200,
-         'text' => 'Rehfelde: K6419: Straßenausbau OL Rehfelde, zw. Bahnhofstraße und Kreisverkehr gesperrt, bis 30.06.2011 ',
-         'from' => 1304110785,
-         'id' => 2201,
-         'data' => 'userdel	q4::inwork; 45856,14437 44121,14615
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2980,16 +2832,7 @@ userdel	q4::inwork; 7949,7607 7935,7736 7950,7840 8226,8648 8237,8685 8306,8722
        },
        undef,
        undef,
-       {
-         'source_id' => 'INKO_105491',
-         'until' => 1309190400,
-         'text' => 'Lahnstr. (Neukölln): Baustelle, Fahrtrichtung gesperrt (bis Ende 06/11) Richtung Grenzallee zwischen Karl-Marx-Str. und Naumburger Str., 28.03.2011 07:00 Uhr bis 27.06.2011 18:00 Uhr ',
-         'from' => 1301202000,
-         'id' => 2213,
-         'data' => 'userdel	q4::inwork; 13095,6926 13278,6967
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -3005,24 +2848,15 @@ userdel	q4::inwork; 12549,8616 12500,8504
          'type' => 'handicap'
        },
        undef,
-       {
-         'until' => undef,
-         'text' => 'Friedrichsbrücke: Bauarbeiten, Fahrrad muss geschoben werden, mit Anhaenger kommt man nicht durch',
-         'from' => undef,
-         'id' => 2218,
-         'data' => '#: by: wosch
-#: last_checked: 2011-05-31
-userdel	q4::inwork 10086,12725 10166,12777
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Burgstraße/Anna-Louisa-Karsch-Straße: Bauarbeiten, Einbahnstraßenregelung',
          'from' => undef,
          'id' => 2219,
          'data' => '#: by: wosch
-#: last_checked: 2011-05-31
+#: confirmed_by: srt
+#: last_checked: 2011-06-15
 userdel	q4::inwork; 10264,12826 10166,12777 10132,12941
 ',
          'type' => 'handicap'
@@ -3038,16 +2872,7 @@ userdel	q4::inwork; 10264,12826 10166,12777 10132,12941
          'type' => 'handicap'
        },
        undef,
-       {
-         'source_id' => 'LS/S-SG33-C/11/084',
-         'until' => 1308520800,
-         'text' => 'Jämlitz-Klein Düben: B115, B112: Deckenerneuerung Simmersdorf - AS Forst geplante Vollsperrung: 17.06.11-19.06.11',
-         'from' => 1308261600,
-         'id' => 2222,
-         'data' => 'userdel	2::inwork 97780,-91551 97468,-91292
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'IM_017000',
          'until' => 1310839200,
@@ -3069,15 +2894,126 @@ userdel	q4::inwork; 10264,12826 10166,12777 10132,12941
          'type' => 'handicap'
        },
        undef,
+       undef,
+       undef,
+       undef,
        {
-         'source_id' => '116100612',
-         'until' => 1308981600,
-         'text' => 'Lübben (Spreewald): B115: Gleisbauarbeiten OL Lübben, Bahnübergang, 20.06.2011 06:00 Uhr bis 25.06.2011 08:00 Uhr',
-         'from' => 1308456000,
-         'id' => 2226,
-         'data' => 'userdel	2::inwork 40079,-50702 43031,-50423 43540,-50369
+         'source_id' => 'LS/S-SG33-C/11/067',
+         'until' => 1320447600,
+         'text' => 'Neuhausen/Spree: L48: Brückenneubau L 48 Brücke über das Fließ bei Gablenz, 19.04.2011 bis 04.11.2011 ',
+         'from' => 1308809403,
+         'id' => 2229,
+         'data' => 'userdel	2::inwork 85633,-77062 87212,-78642
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'INKO_107899',
+         'until' => 1310742000,
+         'text' => 'Granitzstr. (Pankow): Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei (bis Mitte 07/11) in beiden Richtungen zwischen Haßfurter Weg und Dettelbacher Weg, 24.06.2011 07:00 Uhr bis 15.07.2011 17:00 Uhr ',
+         'from' => 1308805200,
+         'id' => 2230,
+         'data' => 'userdel	q4::inwork 11796,18482 11698,18446
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'IM_017476',
+         'until' => 1311343200,
+         'text' => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt (bis Ende 07/11) Richtung Prenzlauer Allee zwischen Schönhauser Allee und Pappelallee, 20.06.2011 09:00 Uhr bis 22.07.2011 16:00 Uhr ',
+         'from' => 1308466800,
+         'id' => 2232,
+         'data' => 'userdel	q4::inwork; 10953,15787 11086,15772 11158,15739 11301,15668
+',
+         'type' => 'handicap'
+       },
+       undef,
+       undef,
+       {
+         'source_id' => 'http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20110623.1015.348936.html',
+         'until' => 1312164000,
+         'text' => 'Sperrung des Bahnüberganges in der Lemkestraße: 29.07.2011 22:00 Uhr bis 01.08.2011 04:00 Uhr',
+         'from' => 1311883200,
+         'id' => 2235,
+         'data' => 'userdel	2::inwork 25149,12266 25109,12196 25072,12107
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20110623.1015.348936.html',
+         'until' => 1314583200,
+         'text' => 'Sperrung des Bahnüberganges in der Lemkestraße: 26.08.2011 22:00 Uhr bis 29.08.2011 04:00 Uhr',
+         'from' => 1314302400,
+         'id' => 2236,
+         'data' => 'userdel	2::inwork 25149,12266 25109,12196 25072,12107
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20110623.1015.348936.html',
+         'until' => 1315188000,
+         'text' => 'Sperrung des Bahnüberganges in der Lemkestraße: 02.09.2011 22:00 Uhr bis 05.09.2011 04:00 Uhr',
+         'from' => 1314907200,
+         'id' => 2237,
+         'data' => 'userdel	2::inwork 25149,12266 25109,12196 25072,12107
+',
+         'type' => 'gesperrt'
+       },
+       undef,
+       {
+         'source_id' => 'LS/W-SG33-P/11/484',
+         'until' => 1325372400,
+         'text' => 'Rabenstein/Fläming: L84, K6932: Straßenbau OD Rädigke LSA-Regelung, Abzw. Buchholz gesperrt ab 04.07.11 Vollsperrung, 27.06.2011 bis 31.12.2011 ',
+         'from' => 1309644000,
+         'id' => 2239,
+         'data' => 'userdel	2::inwork -41811,-40216 -41351,-39981
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_017436',
+         'until' => 1310216400,
+         'text' => 'Puschkinallee (Treptow): Baumpflegearbeiten, Straße gesperrt zwischen Elsenstr. und Eichenstr., sowie Einbahnstraßenregelung in der Martin-Hoffmann-Str., 14.06.2011 08:56 Uhr bis 09.07.2011 15:00 Uhr ',
+         'from' => 1307948160,
+         'id' => 2240,
+         'data' => 'userdel	2::inwork 13829,9905 13884,9882 13995,9834 14193,9746
+	q4::inwork; 13835,10083 13928,10053 14012,10029 14076,10011 14289,9870
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'LS/W-SG33-P/11/412',
+         'until' => 1310853599,
+         'text' => 'Kleinmachnow: L77: Instandsetzungsarbeiten OL Kleinmachnow , Friedensbrücke 04.07.-16.07.2011 Vollsperrung ',
+         'from' => 1309644000,
+         'id' => 2241,
+         'data' => 'userdel	2::inwork -1378,-1022 -1348,-1098
+',
+         'type' => 'gesperrt'
+       },
+       undef,
+       undef,
+       {
+         'source_id' => 'IM_017544',
+         'until' => 1310767200,
+         'text' => 'Markgrafenstr. (Mitte): Veranstaltung, Straße vollständig gesperrt (bis 15.07., 18:00) in beiden Richtungen zwischen Jägerstr. und Taubenstr., 03.07.2011 bis 15.07.2011 18:00 Uhr ',
+         'from' => 1310016128,
+         'id' => 2244,
+         'data' => 'userdel	2::temp 9656,12021 9668,11928
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_017564',
+         'until' => 1310144400,
+         'text' => 'Platz der Luftbrücke (Tempelhof): Veranstaltung, Straße vollständig gesperrt (bis 08.07.2011 ca. 19:00 Uhr) in beiden Richtungen, 06.07.2011 07:00 Uhr bis 08.07.2011 19:00 Uhr ',
+         'from' => 1309842000,
+         'id' => 2245,
+         'data' => 'userdel	q4::temp 9233,8597 9321,8607 9364,8640 9395,8726
+userdel	q4::temp 9321,8607 9401,8510 9451,8548 9364,8640
+',
+         'type' => 'handicap'
        }
      
 );
