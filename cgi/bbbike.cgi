@@ -765,7 +765,10 @@ my $local_lang = "";
 my $selected_lang = "";
 my @supported_lang = qw/da de en es fr hr nl pl pt ru zh/;
 
-my $time_start = time;
+use Time::HiRes qw( gettimeofday tv_interval );
+#my $time_start = time;
+my $time_start = [gettimeofday];
+
 my $is_streets;
 { my $q = new CGI;
   my $path = $q->url(-full => 0, -absolute => 1);
@@ -7755,7 +7758,9 @@ sub footer { print footer_as_string() }
 sub footer_as_string {
 	my $s = "";
 
-my $real_time = time - $time_start;
+#my $real_time = time - $time_start;
+my $elapsed = tv_interval ( $time_start, [gettimeofday]);
+my $real_time = int ($elapsed * 100)/100; 
 
 my $qq = new CGI;
 #$qq->param( 'startname', Encode::encode( utf8 => $qq->param('startname')));
