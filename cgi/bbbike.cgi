@@ -135,6 +135,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_panoramio_photos
 	    $enable_elevation
 	    $dos_run_timeout
+	    $show_real_time
 	   );
 
 $gmap_api_version = 3;
@@ -7864,7 +7865,11 @@ EOF
 	$s .= "</font>\n";
     }
 
-    $s .= "\n<!-- real time: $real_time seconds -->\n";
+    if (!$show_real_time) {
+       $s .= "\n<!-- real time: $real_time seconds -->\n";
+    } else {
+       $s .= qq{\n<span class="real_time">cycle route calculated in $real_time seconds</span>\n};
+    }
     $s;
 }
 
