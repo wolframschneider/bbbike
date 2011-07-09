@@ -7865,11 +7865,8 @@ EOF
 	$s .= "</font>\n";
     }
 
-    if (!$show_real_time) {
-       $s .= "\n<!-- real time: $real_time seconds -->\n";
-    } else {
-       $s .= qq{\n<span class="real_time">cycle route calculated in $real_time seconds</span>\n};
-    }
+    $s .= qq{\n<span class="real_time" style="} . 
+	    ($show_real_time ? "" : 'display:none') . qq{">cycle route calculated in $real_time seconds</span>\n};
     $s;
 }
 
