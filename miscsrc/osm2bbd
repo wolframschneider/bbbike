@@ -352,8 +352,13 @@ my $do_tourism = sub {
 	push @or, ["sehenswuerdigkeit", $F."SW"];
     } elsif ($tourism eq 'museum') {
 	push @or, ["sehenswuerdigkeit", $F."SW|IMG:museum"];
+    } elsif (grep { $tourism eq $_ } qw/hostel hotel camp_site guest_house caravan_site/) {
+	push @or, ["_tourism", $F."H"];
+    } elsif (grep { $tourism eq $_ } qw/theme_park attraction zoo artwork/) {
+	push @or, ["_tourism", $F."A"];
     } else {
-	$unhandled{"tourism-$tourism"}++;
+	push @or, ["_tourism", $F."X"];
+	#$unhandled{"tourism-$tourism"}++;
     }
     @or;
 };
