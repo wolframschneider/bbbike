@@ -214,7 +214,7 @@ my $handle_relations = $experiments{'handle_relations'};
 			'title: Ortsschilder'],
     );
 
-map { $global_directives{$_} = [] } qw/_natural _landuse _sport _leisure _tourism _shop/;
+map { $global_directives{$_} = [] } qw/_natural _landuse _sport _leisure _tourism _shop _public_services/;
 
 
 # see http://www.mail-archive.com/talk@openstreetmap.org/msg06041.html
@@ -327,6 +327,8 @@ my $do_amenity = sub {
 	} else {
 	    push @or, ['sehenswuerdigkeit', 'SW'];
 	}
+    } elsif (grep { $amenity eq $_ } qw/fire_station pharmacy bank fuel/) {
+	push @or, ["_public_services", $F."X"];
     } else {
 	$unhandled{"amenity-$amenity"}++;
     }
