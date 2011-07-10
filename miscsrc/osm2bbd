@@ -214,6 +214,9 @@ my $handle_relations = $experiments{'handle_relations'};
 			'title: Ortsschilder'],
     );
 
+map { $global_directives{$} = [] } qw/_natural _landuse _sport _leisure _tourism/;
+
+
 # see http://www.mail-archive.com/talk@openstreetmap.org/msg06041.html
 # XXX does not match very well with the tracks around Baska Voda --- maybe grade1 should match Q1 at most?
 my %grade_to_Q = (1 => "Q0",
@@ -352,8 +355,13 @@ my $do_tourism = sub {
 	push @or, ["sehenswuerdigkeit", $F."SW"];
     } elsif ($tourism eq 'museum') {
 	push @or, ["sehenswuerdigkeit", $F."SW|IMG:museum"];
+    } elsif (grep { $tourism eq $_ } qw/hostel hotel camp_site guest_house caravan_site/) {
+	push @or, ["_tourism", $F."H"];
+    } elsif (grep { $tourism eq $_ } qw/theme_park attraction zoo artwork/) {
+	push @or, ["_tourism", $F."A"];
     } else {
-	$unhandled{"tourism-$tourism"}++;
+	push @or, ["_tourism", $F."X"];
+	#$unhandled{"tourism-$tourism"}++;
     }
     @or;
 };
@@ -1352,6 +1360,7 @@ for my $osm_file (@osm_files) {
 			warn_once("Found natural=coastline, sorry cannot use it, fallback to line plotting...\n");
 		    }
 		} else {
+		    push @or, ["_natural", "X"];
 		    $unhandled{"natural=$natural"}++;
 		}
 	    } elsif (exists $tag{'boundary'}) { # Sometimes there's boundary=administrative and natural=coastline at the same time. Currently I prefer coastline over boundary (see the Usedom data). But maybe I should render both? Think of it! XXX
@@ -1386,7 +1395,8 @@ for my $osm_file (@osm_files) {
 		if      ($sport =~ m{^(?:soccer|athletics)$}) {
 		    push @or, ["flaechen", "F:Sport"];
 		} else {
-		    $unhandled{"sport=$sport"}++;
+		    push @or, ["_sport", "F:Sport"];
+		    #$unhandled{"sport=$sport"}++;
 		}
 	    } elsif (exists $tag{'leisure'}) {
 		my $leisure = $tag{'leisure'};
@@ -1397,7 +1407,8 @@ for my $osm_file (@osm_files) {
 		} elsif ($leisure eq 'cemetery') { # see below: landuse=cemetery
 		    push @or, ["flaechen", "F:Cemetery"];
 		} else {
-		    $unhandled{"leisure=$leisure"}++;
+		    push @or, ["_leisure", "X"];
+		    #$unhandled{"leisure=$leisure"}++;
 		}
 	    } elsif ($cycleway) {
 		push @or, $do_cycleway->();
@@ -1423,6 +1434,8 @@ for my $osm_file (@osm_files) {
 		} elsif ($landuse eq 'residential') {
 		    add_underline(\@or, "_building", "F:#d0d0d0");
 		} else {
+		    add_underline(\@or, "_landuse", "F:#d0d0d0");
+
 		    # e.g. greenfield (= Bauerwartungsland)
 		    $unhandled{"landuse=$landuse"}++;
 		}
