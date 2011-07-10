@@ -214,7 +214,7 @@ my $handle_relations = $experiments{'handle_relations'};
 			'title: Ortsschilder'],
     );
 
-map { $global_directives{$} = [] } qw/_natural _landuse _sport _leisure _tourism/;
+map { $global_directives{$_} = [] } qw/_natural _landuse _sport _leisure _tourism/;
 
 
 # see http://www.mail-archive.com/talk@openstreetmap.org/msg06041.html
