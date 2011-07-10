@@ -1391,7 +1391,8 @@ for my $osm_file (@osm_files) {
 		if      ($sport =~ m{^(?:soccer|athletics)$}) {
 		    push @or, ["flaechen", "F:Sport"];
 		} else {
-		    $unhandled{"sport=$sport"}++;
+		    push @or, ["_sport", "F:Sport"];
+		    #$unhandled{"sport=$sport"}++;
 		}
 	    } elsif (exists $tag{'leisure'}) {
 		my $leisure = $tag{'leisure'};
@@ -1402,7 +1403,8 @@ for my $osm_file (@osm_files) {
 		} elsif ($leisure eq 'cemetery') { # see below: landuse=cemetery
 		    push @or, ["flaechen", "F:Cemetery"];
 		} else {
-		    $unhandled{"leisure=$leisure"}++;
+		    push @or, ["_leisure", "X"];
+		    #$unhandled{"leisure=$leisure"}++;
 		}
 	    } elsif ($cycleway) {
 		push @or, $do_cycleway->();
