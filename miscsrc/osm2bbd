@@ -1357,6 +1357,7 @@ for my $osm_file (@osm_files) {
 			warn_once("Found natural=coastline, sorry cannot use it, fallback to line plotting...\n");
 		    }
 		} else {
+		    push @or, ["_natural", "X"];
 		    $unhandled{"natural=$natural"}++;
 		}
 	    } elsif (exists $tag{'boundary'}) { # Sometimes there's boundary=administrative and natural=coastline at the same time. Currently I prefer coastline over boundary (see the Usedom data). But maybe I should render both? Think of it! XXX
@@ -1430,6 +1431,8 @@ for my $osm_file (@osm_files) {
 		} elsif ($landuse eq 'residential') {
 		    add_underline(\@or, "_building", "F:#d0d0d0");
 		} else {
+		    add_underline(\@or, "_landuse", "F:#d0d0d0");
+
 		    # e.g. greenfield (= Bauerwartungsland)
 		    $unhandled{"landuse=$landuse"}++;
 		}
