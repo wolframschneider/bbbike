@@ -214,6 +214,9 @@ my $handle_relations = $experiments{'handle_relations'};
 			'title: Ortsschilder'],
     );
 
+map { $global_directives{$} = [] } qw/_natural _landuse _sport _leisure _tourism/;
+
+
 # see http://www.mail-archive.com/talk@openstreetmap.org/msg06041.html
 # XXX does not match very well with the tracks around Baska Voda --- maybe grade1 should match Q1 at most?
 my %grade_to_Q = (1 => "Q0",
