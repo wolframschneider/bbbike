@@ -2,7 +2,6 @@
 # -*- perl -*-
 
 #
-# $Id: cgi-mechanize.t,v 1.54 2009/01/24 09:06:55 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -24,7 +23,9 @@ BEGIN {
     }
 }
 
-if ($WWW::Mechanize::VERSION == 1.54) {
+######################################################################
+# WWW::Mechanize monkeypatches
+if ($WWW::Mechanize::VERSION >= 1.54 && $WWW::Mechanize::VERSION <= 1.68) { # XXX bug ticket missing!
     package WWW::Mechanize;
     local $^W;
     *_update_page = sub {
@@ -68,8 +69,34 @@ if ($WWW::Mechanize::VERSION == 1.54) {
     }
 
     return $res;
-} # _update_page
+}; # _update_page
+
+# This monkeypatch is needed to keep the original charset for the form requests.
+    *update_html = sub {
+    my $self = shift;
+    my $html = shift;
+
+    $self->_reset_page;
+    $self->{ct} = 'text/html';
+    $self->{content} = $html;
+
+    $self->{forms} = [ HTML::Form->parse($html, base => $self->base, charset => $self->{res}->content_charset) ];
+    for my $form (@{ $self->{forms} }) {
+        for my $input ($form->inputs) {
+             if ($input->type eq 'file') {
+                 $input->value( undef );
+             }
+        }
+    }
+    $self->{form}  = $self->{forms}->[0];
+    $self->{_extracted_links} = 0;
+    $self->{_extracted_images} = 0;
+
+    return;
+};
+
 } # monkey-patch end
+######################################################################
 
 use FindBin;
 use lib ("$FindBin::RealBin",
@@ -105,7 +132,7 @@ if (!@browsers) {
 @browsers = map { "$_ BBBikeTest/1.0" } @browsers;
 
 my $outer_berlin_tests = 30;
-my $tests = 123 + $outer_berlin_tests;
+my $tests = 126 + $outer_berlin_tests;
 plan tests => $tests * @browsers;
 
 if ($WWW::Mechanize::VERSION == 1.32) {
@@ -499,7 +526,6 @@ for my $browser (@browsers) {
     ######################################################################
     # Test custom blockings
 
- XXX: { ; }
     {
 	my %common_args = (
 			   pref_seen  => 1,
@@ -821,6 +847,7 @@ for my $browser (@browsers) {
     ######################################################################
     # non-utf8 checks
 
+ XXX: { ; }
     {
 	$get_agent->();
 
@@ -840,7 +867,11 @@ for my $browser (@browsers) {
 	$on_a_particular_page->('streetform');
 	my $fragezeichenform_url = $agent->uri;
 	$fragezeichenform_url =~ s{newstreetform}{fragezeichenform};
+	my $shortfragezeichenform_url = $agent->uri;
+	$shortfragezeichenform_url =~ s{newstreetform}{shortfragezeichenform};
 
+	#######################
+	# newstreetform
 	$agent->field("strname", "TEST IGNORE");
 	$agent->field("author",  "TEST IGNORE");
     SKIP: {
@@ -858,6 +889,8 @@ for my $browser (@browsers) {
 	}
 	my_tidy_check($agent);
 
+	#######################
+	# fragezeichenform
 	$agent->field("strname",  "TEST IGNORE");
 	$agent->field("comments", "TEST IGNORE with umlauts äöüß");
 	$agent->field("author",   "TEST IGNORE");
@@ -868,6 +901,26 @@ for my $browser (@browsers) {
 	    my_tidy_check($agent);
 
 	    $like_long_data->(qr{Danke, die Angaben.*gesendet}, "Sent comment (fragezeichenform)");
+	}
+
+	{
+	    local $^W = 0; # cease "Parsing of undecoded UTF-8 will give garbage when decoding entities" warning
+	    $agent->get($shortfragezeichenform_url);
+	}
+	my_tidy_check($agent);
+
+	#######################
+	# shortfragezeichenform
+	$agent->field("strname",  "TEST IGNORE");
+	$agent->field("comments", "TEST IGNORE with umlauts äöüß");
+	$agent->field("author",   "TEST IGNORE");
+    SKIP: {
+	    skip("URL is hardcoded and not valid on bbbike.hosteurope.herceg.de or radzeit.herceg.de", 2)
+		if $cgiurl =~ /(bbbike.hosteurope|radzeit).herceg.de/;
+	    $agent->submit;
+	    my_tidy_check($agent);
+
+	    $like_long_data->(qr{Danke, die Angaben.*gesendet}, "Sent comment (shortfragezeichenform)");
 	}
     }
 

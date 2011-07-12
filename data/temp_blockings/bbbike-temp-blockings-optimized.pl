@@ -1076,8 +1076,8 @@ userdel	2 16975,1262 16849,1437
        undef,
        {
          'source_id' => 'IM_005525',
-         'until' => 1314795600,
-         'text' => 'Rudower Chaussee (Treptow - Köpenick) in beiden Richtungen Höhe S-Bahn Brücke Adlershof Baustelle, Straße vollständig gesperrt, als Fußgänger kann man passieren (bis Ende 08/2011)',
+         'until' => 1320015599,
+         'text' => 'Rudower Chaussee (Treptow - Köpenick) in beiden Richtungen Höhe S-Bahn Brücke Adlershof Baustelle, Straße vollständig gesperrt, als Fußgänger kann man passieren',
          'from' => 1179453600,
          'id' => 1079,
          'data' => 'userdel	q4::inwork 19904,3464 19732,3340
@@ -2433,16 +2433,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_015680',
-         'until' => 1311948000,
-         'text' => 'Blankenburger Chaussee (Karow): Baustelle, Fahrtrichtung gesperrt (Ende 07.2011) stadteinwärts zwwischen Bahnhofstr. und Tarnowitzer Str., 05.05.2010 09:00 Uhr bis 29.07.2011 16:00 Uhr ',
-         'from' => 1272956400,
-         'id' => 2063,
-         'data' => 'userdel	q4::inwork; 15428,22736 15271,22527 15154,22370
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2971,17 +2962,7 @@ userdel	q4::inwork; 10264,12826 10166,12777 10132,12941
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_017436',
-         'until' => 1310216400,
-         'text' => 'Puschkinallee (Treptow): Baumpflegearbeiten, Straße gesperrt zwischen Elsenstr. und Eichenstr., sowie Einbahnstraßenregelung in der Martin-Hoffmann-Str., 14.06.2011 08:56 Uhr bis 09.07.2011 15:00 Uhr ',
-         'from' => 1307948160,
-         'id' => 2240,
-         'data' => 'userdel	2::inwork 13829,9905 13884,9882 13995,9834 14193,9746
-	q4::inwork; 13835,10083 13928,10053 14012,10029 14076,10011 14289,9870
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'LS/W-SG33-P/11/412',
          'until' => 1310853599,
@@ -3004,16 +2985,25 @@ userdel	q4::inwork; 10264,12826 10166,12777 10132,12941
 ',
          'type' => 'gesperrt'
        },
+       undef,
        {
-         'source_id' => 'IM_017564',
-         'until' => 1310144400,
-         'text' => 'Platz der Luftbrücke (Tempelhof): Veranstaltung, Straße vollständig gesperrt (bis 08.07.2011 ca. 19:00 Uhr) in beiden Richtungen, 06.07.2011 07:00 Uhr bis 08.07.2011 19:00 Uhr ',
-         'from' => 1309842000,
-         'id' => 2245,
-         'data' => 'userdel	q4::temp 9233,8597 9321,8607 9364,8640 9395,8726
-userdel	q4::temp 9321,8607 9401,8510 9451,8548 9364,8640
+         'until' => 1320015599,
+         'text' => 'Dörpfeldstr.: Bauarbeiten, Einbahnstraßenregelung',
+         'from' => undef,
+         'id' => 2246,
+         'data' => 'userdel	q4::inwork; 19904,3464 20012,3532
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'INKO_096636',
+         'until' => 1310745600,
+         'text' => 'Geschwister-Scholl-Str./Tucholskystr. (Mitte): Bauarbeiten, Brücke vollständig gesperrt (bis Mitte 07/11) in beiden Richtungen Höhe Ebertsbrücke, 08.07.2011 07:00 Uhr bis 15.07.2011 18:00 Uhr ',
+         'from' => 1310014800,
+         'id' => 2247,
+         'data' => 'userdel	2::inwork 9524,12950 9529,12925
+',
+         'type' => 'gesperrt'
        }
      
 );
