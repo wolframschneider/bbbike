@@ -28,7 +28,6 @@ BBBikeLazy.pm
 BBBikeMail.pm
 BBBikeMapserver.pm
 BBBikeMenubar.pm
-BBBikeOvlPlugin.pm
 BBBikePalm.pm
 BBBikePersonal.pm
 BBBikePlugin.pm
@@ -37,13 +36,9 @@ BBBikePrint.pm
 BBBikeProfil.pm
 BBBikeRouting.pm
 BBBikeRouting.pod
-BBBikeRuler.pm
-BBBikeSalesman.pm
 BBBikeScribble.pm
-BBBikeScribblePlugin.pm
 BBBikeServer.pm
 BBBikeStats.pm
-BBBikeThunder.pm
 BBBikeTkUtil.pm
 BBBikeTrans.pm
 BBBikeUtil.pm
@@ -460,6 +455,8 @@ html/opensearch/opensearch.html
 html/opensearch/opensearch.js
 html/pleasewait.html
 html/presse.html
+html/shortfragezeichenform.html
+html/shortfragezeichenform.utf8.html
 html/sprintf.js
 images/PoweredByPerl.gif
 images/abc.gif
@@ -575,6 +572,7 @@ images/church.png
 images/church.xpm
 images/click.gif
 images/click.xpm
+images/clock.png
 images/cross.gif
 images/cross.xpm
 images/crosses.xbm
@@ -1021,6 +1019,17 @@ lib/your.pm
 miscsrc/bbbike_chooser.pl
 msg/bbbike/en
 msg/install/en
+plugins/AltBerlin.pm
+plugins/BBBikeOvlPlugin.pm
+plugins/BBBikeRuler.pm
+plugins/BBBikeSalesman.pm
+plugins/BBBikeScribblePlugin.pm
+plugins/BBBikeThunder.pm
+plugins/BBBikeViewImages.pm
+plugins/GeocoderPlugin.pm
+plugins/KaupertsPlugin.pm
+plugins/MerkaartorPlugin.pm
+plugins/MultiMap.pm
 smsbbbike
 tkbikepwr
 tmp/.keep_me

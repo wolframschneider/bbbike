@@ -181,6 +181,10 @@ EOF
 		    ];
 		} @acc_cat_split_streets_years
 		),
+		'-',
+		[Button => $do_compound->('unset'),
+		 -command => sub { unset_penalty() },
+		],
 	       ]
 	      ],
 	      [Button => $do_compound->("Set penalty fragezeichen-outdoor-nextcheck"),
@@ -1146,6 +1150,10 @@ sub set_penalty {
     BBBikeEdit::build_bbd_penalty_for_search();
 }
 
+sub unset_penalty {
+    delete $main::penalty_subs{'bbdpenalty'};
+}
+
 sub set_penalty_fragezeichen {
     $main::add_net{fz} = 1;
     main::change_net_type();
@@ -1637,17 +1645,20 @@ sub gps_data_viewer {
 	    $gps_view->associate_object($gps);
 	}
     };
+    my $unplot_file = sub {
+	if ($BBBikeEdit::recent_gps_point_layer) {
+	    main::delete_layer($BBBikeEdit::recent_gps_point_layer);
+	    undef $BBBikeEdit::recent_gps_point_layer;
+	}
+	if ($BBBikeEdit::recent_gps_street_layer) {
+	    main::delete_layer($BBBikeEdit::recent_gps_street_layer);
+	    undef $BBBikeEdit::recent_gps_street_layer;
+	}
+    };
     my $show_and_plot_file = sub {
 	if (defined $gps_data_viewer_file) {
 	    $show_file->();
-	    if ($BBBikeEdit::recent_gps_point_layer) {
-		main::delete_layer($BBBikeEdit::recent_gps_point_layer);
-		undef $BBBikeEdit::recent_gps_point_layer;
-	    }
-	    if ($BBBikeEdit::recent_gps_street_layer) {
-		main::delete_layer($BBBikeEdit::recent_gps_street_layer);
-		undef $BBBikeEdit::recent_gps_street_layer;
-	    }
+	    $unplot_file->();
 	    BBBikeEdit::edit_gps_track($gps_data_viewer_file);
 	}
     };
@@ -1673,6 +1684,11 @@ sub gps_data_viewer {
 			   $show_and_plot_file->();
 		       }
 		      )->pack(-side => "left");
+	$f->Button(-text => 'Unplot',
+		   -command => sub {
+		       $unplot_file->();
+		   }
+		  )->pack(-side => 'left');
 	$pe->configure(-selectcmd => sub {
 			   $plotandshowb->focus;
 		       });
