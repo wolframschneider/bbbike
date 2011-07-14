@@ -805,11 +805,6 @@ my $is_streets;
   } 
 }
 
-if ($dos_run_timeout > 0) {
-    my $run_timeout = $dos_run_timeout;
-    local $SIG{ALRM} = sub { die "Runs to long, give up after $run_timeout seconds\n" };
-    alarm($run_timeout);
-}
 
 #warn "xxx: city: $datadir, lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
 warn "$datadir does not exists!\n" if ! -d "../$datadir";
@@ -838,6 +833,13 @@ eval { local $SIG{'__DIE__'};
 
 $no_berlinmap = 1 if $osm_data;
 warn "osm_data: $osm_data, show_mini_map: $show_mini_map/$show_mini_googlemap, no_berlin_map: $no_berlinmap, enable_opensearch_suggestions: $enable_opensearch_suggestions\n" if $VERBOSE; 
+
+if ($dos_run_timeout > 0) {
+    my $run_timeout = $dos_run_timeout;
+    local $SIG{ALRM} = sub { die "Runs to long, give up after $run_timeout seconds\n" };
+    alarm($run_timeout);
+    warn "Activate DoS handler: $run_timeout seconds\n" if $debug >= 2;
+}
 
 $slippymap_zoom = 5 if $slippymap_zoom <= 0;
 $slippymap_zoom_maponly = 4 if $slippymap_zoom <= 0;
