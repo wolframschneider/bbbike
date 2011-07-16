@@ -283,6 +283,7 @@ EOF
 				  "$ENV{HOME}/.bbbike/geocoded_images.bbd",
 				  above => $str_layer_level,
 				 ),
+		[Button => "today's geocoded images", -command => sub { add_todays_geocoded_images() }],
 		layer_checkbutton('fragezeichen-outdoor-nextcheck', 'str',
 				  "$bbbike_rootdir/tmp/fragezeichen-outdoor-nextcheck.bbd",
 				  below_above_cb => sub {
@@ -308,6 +309,11 @@ EOF
 		  } @acc_cat_split_streets_years,
 		 ],
 		],
+		layer_checkbutton('Weighted matches', 'str',
+				  "$bbbike_rootdir/tmp/weighted-matches.bbd",
+				  above => $str_layer_level,
+				  Width => undef, # XXX weighted-matches.desc sets its own widths, but why it isn't winning?
+				 ),
 		[Button => "Abdeckung",
 		 -command => sub {
 		     local $main::p_draw{'pp-all'} = 1;
@@ -449,8 +455,18 @@ EOF
 	      [Button => $do_compound->("Mark most recent Layer"),
 	       -command => sub { mark_most_recent_layer() },
 	      ],
-	      [Button => $do_compound->("Current search in local bbbike.cgi"),
-	       -command => sub { current_search_in_bbbike_cgi() },
+	      [Cascade => $do_compound->("Current search in ..."), -menuitems =>
+	       [
+		[Button => $do_compound->("local bbbike.cgi"),
+		 -command => sub { current_search_in_bbbike_cgi() },
+		],
+		[Button => $do_compound->("komoot"),
+		 -command => sub { current_search_in_komoot() },
+		],
+		[Button => $do_compound->("komoot (Selection)"),
+		 -command => sub { current_search_in_komoot_selection() },
+		],
+	       ]
 	      ],
 	      [Button => $do_compound->("Street name experiment"),
 	       -command => sub { street_name_experiment() },
@@ -694,8 +710,10 @@ sub add_new_layer {
 	if (exists $args{Width}) {
 	    if (ref $args{Width} eq 'ARRAY') {
 		$main::line_width{$free_layer} = [@{$args{Width}}];
-	    } else {
+	    } elsif (defined $args{Width}) {
 		$main::line_width{$free_layer} = [($args{Width})x6];
+	    } else {
+		delete $main::line_width{$free_layer};
 	    }
 	} else {
 	    $main::line_width{$free_layer} = [@{$main::line_width{default}}];
@@ -818,6 +836,39 @@ sub set_layer_highlightning {
 # 	$name_tag = ($main::c->gettags("current"))[1];
 # 	$main::c->
 #     };
+}
+
+# Very hardcoded to my own environment:
+# * images in ~/images/from_handy/Fotos
+# * gps tracks in ~/src/bbbike/misc/gps_data
+sub add_todays_geocoded_images {
+    require File::Glob;
+    require File::Temp;
+    # XXX Support for nikon images missing
+    my(@l) = localtime;
+    my $y = $l[5]+1900;
+    my $m = $l[4]+1;
+    my $d = $l[3];
+    my $glob = sprintf "$ENV{HOME}/images/from_handy/Fotos/%04d-%02d/%02d%02d%04d*.jpg", $y,$m,$d,$m,$y;
+    my @images = File::Glob::bsd_glob($glob);
+    if (!@images) {
+	main::status_message("No images found with glob '$glob'", "warn");
+	return;
+    }
+    my $gpsdatadir = "$bbbike_rootdir/misc/gps_data";
+    my $trk = sprintf "$gpsdatadir/%04d%02d%02d.trk", $y,$m,$d;
+    if (!-e $trk) {
+	main::status_message("No track '$trk' found", "warn");
+	return;
+    }
+    my($tmpfh,$tmpfile) = File::Temp::tempfile(SUFFIX => sprintf("_geocoded_images_%04d%02d%02d.bbd", $y,$m,$d), UNLINK => 1)
+	or main::status_message($!, 'die');
+    my @cmd = ("$bbbike_rootdir/miscsrc/geocode_images", "-o", $tmpfile, "-gpsdatadir", $gpsdatadir, "-v", @images);
+    system(@cmd);
+    if ($? != 0) {
+	main::status_message("The command '@cmd' failed", 'die');
+    }
+    add_new_layer('str', $tmpfile);
 }
 
 ######################################################################
@@ -1269,9 +1320,60 @@ sub current_search_in_bbbike_cgi {
     WWWBrowser::start_browser($url);
 }
 
+sub current_search_in_komoot_url {
+    if (@main::search_route_points < 2) {
+	main::status_message("Not enough points", "die");
+    }
+    if (@main::search_route_points > 2) {
+	main::status_message("Too many points, komoot URLs seem to support no vias", "die");
+    }
+
+    my $sxy2lonlat = sub {
+	my($sxy,$prefix) = @_;
+	my($sx,$sy) = split /,/, $sxy;
+	my($px,$py);
+	if ($main::city_obj->can("standard_to_polar")) {
+	    ($px,$py) = $main::city_obj->standard_to_polar($sx,$sy);
+	} else {
+	    no warnings 'once';
+	    ($px,$py) = $Karte::Polar::obj->trim_accuracy($main::coord_system_obj->map2map($Karte::Polar::obj, $sx, $sy));
+	}
+	if ($prefix) {
+	    "${prefix}Lon:$px;${prefix}Lat:$py";
+	} else {
+	    "lon:$px;lat:$py";
+	}
+    };
+
+    my $url = 'http://www.komoot.de/r/#routing=type:AB;skill:touringbicycle;sport:touringbicycle;';
+    $url .= $sxy2lonlat->($main::search_route_points[0]->[0]) . ";";
+    $url .= $sxy2lonlat->($main::search_route_points[1]->[0], 'end');
+    $url;
+}
+
+sub current_search_in_komoot_selection {
+    my $url = current_search_in_komoot_url();
+    $main::top->SelectionOwn;
+    $main::top->SelectionHandle; # Aberglaube...
+    $main::top->SelectionHandle
+	(sub {
+	     my($offset,$maxbytes) = @_;
+	     return undef if $offset > length($url);
+	     substr($url, $offset, $maxbytes);
+	 });
+}
+
+sub current_search_in_komoot {
+    my $url = current_search_in_komoot_url();
+    main::status_message("Der WWW-Browser wird mit der URL $url gestartet.", "info");
+    require WWWBrowser;
+    WWWBrowser::start_browser($url);
+}
+
 # XXX BBBikeOsmUtil should probably behave like a plugin? or not?
 sub _require_BBBikeOsmUtil {
-    require Cwd; require File::Basename; local @INC = (@INC, Cwd::realpath(File::Basename::dirname(__FILE__)));
+    # XXX hmmm, why not simply require $bbbike_rootdir/miscsrc/BBBikeOsmUtil.pm?
+    require Cwd; require File::Basename; local @INC = (@INC, File::Basename::dirname(File::Basename::dirname(Cwd::realpath(__FILE__))) . "/miscsrc");
     require BBBikeOsmUtil;
     BBBikeOsmUtil::register();
 }
@@ -1305,7 +1407,7 @@ sub route_lister {
 
 sub add_current_route_as_layer {
     if (!@main::realcoords) {
-	status_message("No current route", "warn");
+	main::status_message("No current route", "warn");
 	return;
     }
     require Route;
@@ -1314,7 +1416,7 @@ sub add_current_route_as_layer {
     my $rte = Route->new_from_realcoords(\@main::realcoords);
     my $s = $rte->as_strassen;
     my($tmpfh,$tmpfile) = File::Temp::tempfile(UNLINK => 1, SUFFIX => '_current_route.bbd')
-	or status_message($!, 'die');
+	or main::status_message($!, 'die');
     $s->write($tmpfile);
     add_new_layer('str', $tmpfile);
 }

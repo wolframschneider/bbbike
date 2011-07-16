@@ -1867,7 +1867,7 @@ userdel	q4::inwork; 11883,19739 11730,19684
        undef,
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt',
          'from' => undef,
          'id' => 1808,
@@ -1881,7 +1881,7 @@ Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am 
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Neuer Garten: Wege sind nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet',
          'from' => undef,
          'id' => 1809,
@@ -1898,7 +1898,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Sanssouci: Wege sind nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet',
          'from' => undef,
          'id' => 1810,
@@ -1912,7 +1912,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Schloßpark Charlottenburg: bei Dunkelheit geschlossen',
          'from' => undef,
          'id' => 1811,
@@ -1922,7 +1922,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => '(Neue Grünstr. - Alte Jakobstr.): Der Hofdurchgang ist nachts zwischen 23 und 6 Uhr sowie an Sonn- und Feiertagen geschlossen',
          'from' => undef,
          'id' => 1812,
@@ -1932,7 +1932,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Eberbacher Str.: Di und Fr 08.00-13.00 wegen Wochenmarkt zwischen Binger Str und Rüdesheimer Str gesperrt',
          'from' => undef,
          'id' => 1813,
@@ -1944,7 +1944,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Nestorstr.: Di und Fr 08.00-13.00 Wochenmarkt, Behinderungen möglich',
          'from' => undef,
          'id' => 1814,
@@ -1954,7 +1954,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Maybachufer: Di und Fr 11.00-18.30 Wochenmarkt, Behinderungen möglich',
          'from' => undef,
          'id' => 1815,
@@ -1964,7 +1964,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Friedrichstraße: zwischen Franz-Klühs-Str. und Mehringplatz, Markt Do 10.00-18.00 und Sa 08.00-13.00, Behinderungen möglich',
          'from' => undef,
          'id' => 1816,
@@ -1975,7 +1975,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Crellestr: Mi und Sa 10.00-15.00 Wochenmarkt, Behinderungen möglich',
          'from' => undef,
          'id' => 1817,
@@ -1985,7 +1985,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Charlottenbrunner Str.: Mo und Do 09.00-14.00 Wochenmarkt, Ausweichen auf Gehweg',
          'from' => undef,
          'id' => 1818,
@@ -1995,7 +1995,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Karl-August-Platz, Weimarer Str.: Mi 08.00-13.00 und Sa 08.00-14.00 Wochenmarkt, Behinderungen möglich',
          'from' => undef,
          'id' => 1819,
@@ -2005,7 +2005,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Richard-Wagner-Platz: Wochenmarkt Mo und Do 08.00-13.00, Behinderungen möglich',
          'from' => undef,
          'id' => 1820,
@@ -2015,7 +2015,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Ladiusmarkt in der Andréezeile: Wochenmarkt Dienstag, Donnerstag und Sonnabend, Behinderungen möglich',
          'from' => undef,
          'id' => 1821,
@@ -2025,7 +2025,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Preußenallee zwischen Marathonallee und Badenallee: Wochenmarkt Mo 08.00-13.00 und Do 08.00-13.00, Behinderungen möglich',
          'from' => undef,
          'id' => 1822,
@@ -2037,7 +2037,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Uferpromenade und Invalidenfriedhof nachts geschlossen, Öffnungszeiten Winter (1.10-15.3.) 7.00-18.30, Sommer (16.3.-30.9.) 7.00-21.30',
          'from' => undef,
          'id' => 1823,
@@ -2050,7 +2050,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Park Biesdorf nachts geschlossen, Öffnungszeiten 6.00-23.00',
          'from' => undef,
          'id' => 1824,
@@ -2061,7 +2061,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Breite Gasse: nur von 9 Uhr bis zum Einschalten der Straßenbeleuchtung geöffnet',
          'from' => undef,
          'id' => 1825,
@@ -2071,7 +2071,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Park am Nordbahnhof: im Sommerhalbjahr zwischen 6.30 und 22.00 Uhr geöffnet, im Winterhalbjahr zwischen 7.30 und 19.00 Uhr',
          'from' => undef,
          'id' => 1826,
@@ -2148,7 +2148,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Breslauer Platz: Wochenmarkt Mittwoch 8-13 Uhr, Donnerstag 12-17 Uhr, Samstag 8-14 Uhr, Behinderungen möglich',
          'from' => undef,
          'id' => 1884,
@@ -2159,7 +2159,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Erich-Steinfurth-Str.: Antikmarkt am Ostbahnhof, Sonntag 9-17 Uhr, nur Schieben möglich',
          'from' => undef,
          'id' => 1886,
@@ -2169,7 +2169,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Am Kupfergraben und am Zeughaus: Berliner Kunst- und Nostalgiemarkt, Samstag und Sonntag ca. 11-17 Uhr, nur Schieben möglich',
          'from' => undef,
          'id' => 1887,
@@ -2255,7 +2255,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => '(Drorystr. - Braunschweiger Str., Spielplatz): nachts werden die Tore geschlossen',
          'from' => undef,
          'id' => 1955,
@@ -2265,7 +2265,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Friedrich-Ludwig-Jahn-Sportpark: während Veranstaltungen und nachts von ca. 22 bis 7 Uhr gesperrt, mit Anhänger wegen des engen Südeinganges ggfs. nicht befahrbar',
          'from' => undef,
          'id' => 1956,
@@ -2276,7 +2276,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Luitpoldstr., Durchfahrt über Schulhof: nicht immer geöffnet!',
          'from' => undef,
          'id' => 1957,
@@ -2286,7 +2286,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Rutherfordstr.: nicht permanent geöffnet',
          'from' => undef,
          'id' => 1958,
@@ -2296,7 +2296,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Uferweg am Schloß Bellevue: kann bei Staatsbesuchen gesperrt sein',
          'from' => undef,
          'id' => 1959,
@@ -2367,7 +2367,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Friedrich-Ebert-Platz: bei Bundestagssitzungen gesperrt',
          'from' => undef,
          'id' => 2021,
@@ -2440,7 +2440,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juli bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
@@ -2516,7 +2516,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Johannes-Kraatz-Str.: Tor, Zugang könnte versperrt sein',
          'from' => undef,
          'id' => 2096,
@@ -2530,7 +2530,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Gewerbegebiet: Privatstraßen, u.U. Durchfahrt nicht gestattet',
          'from' => undef,
          'id' => 2101,
@@ -2689,8 +2689,7 @@ userdel	3 13034,7319 13047,7234 13150,7254
          'text' => 'Auerbachtunnel: einspurige Verkehrsführung, Regelung mit Ampel',
          'from' => undef,
          'id' => 2182,
-         'data' => '#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110303.0840.333719.html
-#: next_check: 2011-04-01
+         'data' => '#: next_check: 2011-04-01
 userdel	q4::inwork 425,8766 490,8716
 ',
          'type' => 'handicap'
@@ -2701,8 +2700,7 @@ userdel	q4::inwork 425,8766 490,8716
          'text' => 'Leiblstraße: Für die Einrichtung einer Baustelle für den Bau von Wohnhäusern wird die Leiblstraße bis voraussichtlich Mitte November von der Hans-Thoma-Straße in Richtung Hebbelstraße als Einbahnstraße ausgeschildert. ',
          'from' => 1299353825,
          'id' => 2183,
-         'data' => '#: by: http://www.potsdam.de/cms/beitrag/10078717/1191938/
-userdel	q4::inwork; -12545,-698 -12262,-612
+         'data' => 'userdel	q4::inwork; -12545,-698 -12262,-612
 ',
          'type' => 'handicap'
        },
@@ -2738,7 +2736,7 @@ userdel	q4::inwork; -12545,-698 -12262,-612
        undef,
        {
          'until' => undef,
-         'permanent' => 1,
+         'recurring' => 1,
          'text' => 'Albrecht-Thaer-Weg: Privatstraße, eventuell zeitweise gesperrt (nachts?)',
          'from' => undef,
          'id' => 2196,
@@ -2794,12 +2792,12 @@ userdel	q4::inwork; -12545,-698 -12262,-612
        {
          'source_id' => 'LS/O-SG33-E/11/044',
          'until' => 1317506400,
-         'text' => 'Flieth-Stegelitz: L24: Brücke über den Stierngraben bei Kaakstedt, LSA-Regelung, bis 01.10.2011',
+         'text' => 'Flieth-Stegelitz: L24: Brücke über den Stierngraben bei Kaakstedt, LSA-Regelung, ab 18.7. Vollsperrung',
          'from' => 1304805600,
          'id' => 2208,
-         'data' => 'userdel	q4::inwork 35887,85385 34920,85944
+         'data' => 'userdel	2::inwork 35887,85385 34920,85944
 ',
-         'type' => 'handicap'
+         'type' => 'gesperrt'
        },
        {
          'source_id' => 'LS/O-SG33-F/11/070',
@@ -2898,16 +2896,7 @@ userdel	q4::inwork; 10264,12826 10166,12777 10132,12941
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'INKO_107899',
-         'until' => 1310742000,
-         'text' => 'Granitzstr. (Pankow): Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei (bis Mitte 07/11) in beiden Richtungen zwischen Haßfurter Weg und Dettelbacher Weg, 24.06.2011 07:00 Uhr bis 15.07.2011 17:00 Uhr ',
-         'from' => 1308805200,
-         'id' => 2230,
-         'data' => 'userdel	q4::inwork 11796,18482 11698,18446
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'source_id' => 'IM_017476',
@@ -2995,15 +2984,59 @@ userdel	q4::inwork; 10264,12826 10166,12777 10132,12941
 ',
          'type' => 'handicap'
        },
+       undef,
        {
-         'source_id' => 'INKO_096636',
-         'until' => 1310745600,
-         'text' => 'Geschwister-Scholl-Str./Tucholskystr. (Mitte): Bauarbeiten, Brücke vollständig gesperrt (bis Mitte 07/11) in beiden Richtungen Höhe Ebertsbrücke, 08.07.2011 07:00 Uhr bis 15.07.2011 18:00 Uhr ',
-         'from' => 1310014800,
-         'id' => 2247,
-         'data' => 'userdel	2::inwork 9524,12950 9529,12925
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1107/nachricht4413.html',
+         'until' => 1314395999,
+         'text' => 'Instandsetzung des Stegs zwischen Nackthals- und Seidenhuhnweg, u.U. Vollsperrung, ab 12. Juli 2011 für ca. 10 Wochen',
+         'from' => 1310335200,
+         'id' => 2248,
+         'data' => '#: XXX bis Sommer 2012 werden noch weitere Brücken am Rudower Fließ instandgesetzt
+userdel	2::inwork 16135,473 16148,458 16122,403
+userdel	2::inwork 16148,458 16169,458
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20110712.1215.351002.html',
+         'until' => 1313791199,
+         'text' => 'Fahrbahn am östlichen Herthaplatz wird ausgebaut, bis Mitte August 2011',
+         'from' => undef,
+         'id' => 2249,
+         'data' => 'userdel	q4::inwork 10599,19957 10614,19907
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110712.1035.350987.html',
+         'until' => 1342389599,
+         'text' => 'Neubau der Buddestraße von Bernstorffstraße bis Brunowstraße, Sperrung der Fahrbahn, bis Mitte Juli 2012',
+         'from' => 1310504724,
+         'id' => 2250,
+         'data' => 'userdel	q4::inwork 2358,20368 2295,20358 2241,20487
+userdel	q4::inwork 2295,20358 2362,20218 2402,20126
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110711.0715.350961.html',
+         'until' => 1312142400,
+         'text' => 'Einbahnstraßenregelung in der Neuen Krugallee zwischen Baumschulenstr. und Rodelbergweg vom 29.07.2011, 8:00 Uhr bis 31.07.2011, 22:00 Uhr',
+         'from' => 1311832800,
+         'id' => 2251,
+         'data' => 'userdel	q4::inwork; 16507,7254 16615,7062
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1107/nachricht4418.html',
+         'until' => 1333231200,
+         'text' => 'Instandsetzung der Pankgrafenbrücke, ab dem 18.07.2011 bis März 2012, Einschränkungen möglich',
+         'from' => 1310763434,
+         'id' => 2252,
+         'data' => 'userdel	q4::inwork 13953,23497 14173,23426
+',
+         'type' => 'handicap'
        }
      
 );

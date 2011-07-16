@@ -8541,10 +8541,11 @@ EOF
 userdel	2::inwork 12731,15824 12642,15668 12559,15524 12472,15356 12428,15275
 EOF
      },
-     { from  => 1244066400, # 2009-06-04 00:00 PERIODISCH!
-       until => 1244411999, # 2009-06-07 23:59
-       text  => 'Treptower Festtage 5. Juni 2009 - 7. Juni 2009',
+     { from  => 1311285600, # 1244066400, # 2009-06-04 00:00 PERIODISCH!
+       until => 1311544800, # 1244411999, # 2009-06-07 23:59
+       text  => 'Treptower Festtage 22.. Juli 2011 - 24. Juli 2011',
        type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110714.0755.351214.html',
        data  => <<EOF,
 userdel	2::temp 14464,9927 14500,9856 14671,9759 14697,9726 14910,9643
 userdel	2::temp 14500,9856 14483,9843
@@ -15191,7 +15192,7 @@ EOF
        until => 1250978399, # 2009-08-22 23:59
        text  => 'Bellevuestraße und Seelenbinderstraße von Bahnhofstraße bis Bellevuestraße: Einbahnstraße in Richtung Bahnhofstr. vom 10.8. bis zum 22.8.2009',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/',
+       # XXX URL existiert nicht mehr: source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/',
        data  => <<EOF,
 userdel	q4::inwork; 22294,5777 22513,5747 22608,5732 22696,5728 22798,5731 22897,5740 23092,5762 23333,5710 23402,5483
 EOF
@@ -15346,7 +15347,7 @@ EOF
        until => undef, #
        text  => 'Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 #: note: Sperrung bestätigt von Stefan (s.sms): vvv
 #: note: genauere Uhrzeit von Dieter Heimann
@@ -15359,7 +15360,7 @@ EOF
        until => undef, #
        text  => 'Neuer Garten: Wege sind nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	2::night -11615,853 -11715,959 -11818,993 -11871,1087 -12081,1168 -12094,1273 -12139,1325
 	2::night -11650,590 -11603,721 -11615,853
@@ -15375,7 +15376,7 @@ EOF
        until => undef, #
        text  => 'Sanssouci: Wege sind nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 (Am Neuen Palais, direkter Weg) 	2::night -15810,-1274 -15820,-1146 -15854,-656
 (Am Grünen Gitter, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -13857,-1040 -14153,-1135 -14171,-1026
@@ -15388,7 +15389,7 @@ EOF
        until => undef, #
        text  => 'Schloßpark Charlottenburg: bei Dunkelheit geschlossen',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	2::night 3332,12742 3231,12749 3127,12793 3055,12973 3020,13234 2996,13255 2980,13332 3003,13355 2953,13489 2950,13552
 EOF
@@ -15397,7 +15398,7 @@ EOF
        until => undef, #
        text  => '(Neue Grünstr. - Alte Jakobstr.): Der Hofdurchgang ist nachts zwischen 23 und 6 Uhr sowie an Sonn- und Feiertagen geschlossen',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	2::night:weekend 10624,11548 10534,11609
 EOF
@@ -15406,7 +15407,7 @@ EOF
        until => undef, #
        text  => 'Eberbacher Str.: Di und Fr 08.00-13.00 wegen Wochenmarkt zwischen Binger Str und Rüdesheimer Str gesperrt',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 ######################################################################
 # Wochenmärkte vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -15417,7 +15418,7 @@ EOF
        until => undef, #
        text  => 'Nestorstr.: Di und Fr 08.00-13.00 Wochenmarkt, Behinderungen möglich',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	q4::temp:clock 3374,10201 3359,9968 3347,9793
 EOF
@@ -15426,7 +15427,7 @@ EOF
        until => undef, #
        text  => 'Maybachufer: Di und Fr 11.00-18.30 Wochenmarkt, Behinderungen möglich',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	q4::temp:clock 11543,10015 11669,9987 11880,9874
 EOF
@@ -15435,7 +15436,7 @@ EOF
        until => undef, #
        text  => 'Friedrichstraße: zwischen Franz-Klühs-Str. und Mehringplatz, Markt Do 10.00-18.00 und Sa 08.00-13.00, Behinderungen möglich',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 #: note: http://www.berlin.de/ba-friedrichshain-kreuzberg/wirtschaftsfoerderung/wirtschaftsstandort/maerkte.html
 	q4::temp:clock 9566,10566 9580,10434
@@ -15445,7 +15446,7 @@ EOF
        until => undef, #
        text  => 'Crellestr: Mi und Sa 10.00-15.00 Wochenmarkt, Behinderungen möglich',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	q4::temp:clock 7882,9490 7836,9413 7771,9389
 EOF
@@ -15454,7 +15455,7 @@ EOF
        until => undef, #
        text  => 'Charlottenbrunner Str.: Mo und Do 09.00-14.00 Wochenmarkt, Ausweichen auf Gehweg',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	q4::temp:clock 3073,9020 2972,9037
 EOF
@@ -15463,7 +15464,7 @@ EOF
        until => undef, #
        text  => 'Karl-August-Platz, Weimarer Str.: Mi 08.00-13.00 und Sa 08.00-14.00 Wochenmarkt, Behinderungen möglich',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	q4::temp:clock 4101,11347 4101,11233
 EOF
@@ -15472,7 +15473,7 @@ EOF
        until => undef, #
        text  => 'Richard-Wagner-Platz: Wochenmarkt Mo und Do 08.00-13.00, Behinderungen möglich',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	q4::temp:clock 3763,12279 3701,12279
 EOF
@@ -15481,7 +15482,7 @@ EOF
        until => undef, #
        text  => 'Ladiusmarkt in der Andréezeile: Wochenmarkt Dienstag, Donnerstag und Sonnabend, Behinderungen möglich',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	q4::temp:clock 1020,496 1078,443
 EOF
@@ -15490,7 +15491,7 @@ EOF
        until => undef, #
        text  => 'Preußenallee zwischen Marathonallee und Badenallee: Wochenmarkt Mo 08.00-13.00 und Do 08.00-13.00, Behinderungen möglich',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	q4::temp:clock 596,11951 585,11830 572,11698 563,11601
 # Wochenmärkte ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -15501,7 +15502,7 @@ EOF
        until => undef, #
        text  => 'Uferpromenade und Invalidenfriedhof nachts geschlossen, Öffnungszeiten Winter (1.10-15.3.) 7.00-18.30, Sommer (16.3.-30.9.) 7.00-21.30',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 #: by: Marek Bänsch:
 #: confirmed_by: srt
@@ -15513,7 +15514,7 @@ EOF
        until => undef, #
        text  => 'Park Biesdorf nachts geschlossen, Öffnungszeiten 6.00-23.00',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	2::night 21150,11925 21132,11943 21100,11960 20862,12027 20810,12031
 	2::night 20862,12027 20836,11768
@@ -15523,7 +15524,7 @@ EOF
        until => undef, #
        text  => 'Breite Gasse: nur von 9 Uhr bis zum Einschalten der Straßenbeleuchtung geöffnet',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	2::night 22312,4329 22252,4362
 EOF
@@ -15532,7 +15533,7 @@ EOF
        until => undef, #
        text  => 'Park am Nordbahnhof: im Sommerhalbjahr zwischen 6.30 und 22.00 Uhr geöffnet, im Winterhalbjahr zwischen 7.30 und 19.00 Uhr',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	2::night 8825,14401 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
 	2::night 8913,14485 9176,14181 9147,14151 9224,14169
@@ -15806,7 +15807,7 @@ EOF
        until => 1262300399, # 2009-12-31 23:59
        text  => 'Aufgrund von Baumaßnahmen der Berliner Wasserbetriebe wird es vom 24. August bis zum 31. Dezember in der Rathausstraße und den angrenzenden Kreuzungsbereichen Rathausstraße/Frankfurter Allee und Rathaus-/Möllendorffstraße zu Verkehrseinschränkungen kommen.',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20090813.1105.134956.html',
+       # XXX URL existiert nicht mehr: source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20090813.1105.134956.html',
        data  => <<EOF,
 userdel	q4::inwork 15537,12367 15576,12315 15628,12246 15651,12214 15685,12154 15670,12022
 EOF
@@ -15815,7 +15816,7 @@ EOF
        until => 1262300399, # 2009-12-31 23:59
        text  => 'Vom 24. August bis zum 31. Dezember wird es in der Robert-Uhrig-Straße und den angrenzenden Kreuzungsbereichen Robert-Uhrig-Straße/Alt-Friedrichsfelde und Robert-Uhrig-/Paul-Gesche-Straße zu Verkehrseinschränkungen aufgrund von Baumaßnahmen der Berliner Wasserbetriebe kommen.',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20090813.1105.134956.html',
+       # XXX URL existiert nicht mehr: source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20090813.1105.134956.html',
        data  => <<EOF,
 userdel	q4::inwork 17746,11748 17744,11703 17741,11607
 EOF
@@ -16023,7 +16024,7 @@ EOF
        until => undef, #
        text  => 'Breslauer Platz: Wochenmarkt Mittwoch 8-13 Uhr, Donnerstag 12-17 Uhr, Samstag 8-14 Uhr, Behinderungen möglich',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	q4::temp:clock 5902,7334 5810,7337 5817,7223
 EOF
@@ -16045,7 +16046,7 @@ EOF
        until => undef, #
        text  => 'Erich-Steinfurth-Str.: Antikmarkt am Ostbahnhof, Sonntag 9-17 Uhr, nur Schieben möglich',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	q4::temp:clock 12596,11696 12453,11790 12366,11808
 EOF
@@ -16054,7 +16055,7 @@ EOF
        until => undef, #
        text  => 'Am Kupfergraben und am Zeughaus: Berliner Kunst- und Nostalgiemarkt, Samstag und Sonntag ca. 11-17 Uhr, nur Schieben möglich',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	q4::temp:clock 9754,12775 9661,12876 9618,12907 9529,12925
 	q4::temp:clock 9919,12613 9950,12522 9984,12426
@@ -16624,8 +16625,6 @@ EOF
        text  => 'Universitätsstraße Richtung Unter den Linden gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2009-10-18
-#: XXX oder ist das eine permanente Sperrung?
 userdel	q4::inwork; 9580,12581 9601,12380
 EOF
      },
@@ -16633,7 +16632,7 @@ EOF
        until => undef, #
        text  => '(Drorystr. - Braunschweiger Str., Spielplatz): nachts werden die Tore geschlossen',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	2::night 13520,7485 13601,7366
 EOF
@@ -16642,7 +16641,7 @@ EOF
        until => undef, #
        text  => 'Friedrich-Ludwig-Jahn-Sportpark: während Veranstaltungen und nachts von ca. 22 bis 7 Uhr gesperrt, mit Anhänger wegen des engen Südeinganges ggfs. nicht befahrbar',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 #: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
 	2::night 10473,15549 10607,15142
@@ -16652,7 +16651,7 @@ EOF
        until => undef, #
        text  => 'Luitpoldstr., Durchfahrt über Schulhof: nicht immer geöffnet!',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	2::temp 6611,9879 6670,9887
 EOF
@@ -16661,7 +16660,7 @@ EOF
        until => undef, #
        text  => 'Rutherfordstr.: nicht permanent geöffnet',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	2::temp 19071,2746 19136,2673 19207,2592
 EOF
@@ -16670,7 +16669,7 @@ EOF
        until => undef, #
        text  => 'Uferweg am Schloß Bellevue: kann bei Staatsbesuchen gesperrt sein',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	2::temp 6694,12627 7039,12314
 EOF
@@ -17206,7 +17205,7 @@ EOF
        until => undef, #
        text  => 'Friedrich-Ebert-Platz: bei Bundestagssitzungen gesperrt',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 	2::temp 8554,12593 8540,12420
 EOF
@@ -17644,7 +17643,7 @@ EOF
 				}->{$mon};
 		    $until || '';
 		} . '. Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10640,8366 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
@@ -17738,7 +17737,7 @@ EOF
        until => 1285883999, # 2010-09-30 23:59
        text  => 'Marksburgstraße, Bauarbeiten zwischen Treskowallee und Hentigstraße, 31.05. bis 30.09., Fahrbahn gesperrt',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100528.1110.297131.html',
+       # XXX URL existiert nicht mehr: source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100528.1110.297131.html',
        data  => <<EOF,
 userdel	q4::inwork 18809,9133 18697,9153 18586,9172
 EOF
@@ -17747,7 +17746,7 @@ EOF
        until => 1288652399, # 2010-11-01 23:59
        text  => 'Marksburgstraße, Bauarbeiten zwischen Hentigstraße und Sangeallee, 15.08. bis 01.11., Fahrbahn gesperrt ',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100528.1110.297131.html',
+       # XXX URL existiert nicht mehr: source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20100528.1110.297131.html',
        data  => <<EOF,
 userdel	q4::inwork 18586,9172 18511,9185 18430,9199 18319,9218
 EOF
@@ -17983,7 +17982,7 @@ EOF
        until => undef, # XXX
        text  => 'Johannes-Kraatz-Str.: Tor, Zugang könnte versperrt sein',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 userdel	2::temp 18870,5833 18932,5926
 EOF
@@ -18027,7 +18026,7 @@ EOF
        until => undef, # XXX
        text  => 'Gewerbegebiet: Privatstraßen, u.U. Durchfahrt nicht gestattet',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 #: note: allerdings keine Hinweise auf eine verbotene Durchfahrt gesehen
 (Gewerbegebiet)	2 21617,3287 21826,3129 21770,2936 21816,2919 21939,2894 21984,2897 22004,2904
@@ -18435,7 +18434,7 @@ EOF
        until => 1291157999, # 2010-11-30 23:59
        text  => 'Werneuchener Straße: zwischen Konrad-Wolf-Straße und Große-Leege-Straße wird die Fahrbahn instand gesetzt. Für den Zeitraum vom 1. bis 30. November wird die Werneuchener Straße zur Einbahnstraße von der Konrad-Wolf-Straße aus in Richtung Große-Leege-Straße.',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20101028.1120.316439.html',
+       # XXX URL existiert nicht mehr: source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20101028.1120.316439.html',
        data  => <<EOF,
 userdel	q4::inwork; 16430,15168 16376,15209 16319,15229 16119,15302
 EOF
@@ -18754,7 +18753,6 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110303.0840.333719.html',
        data  => <<EOF,
-#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110303.0840.333719.html
 #: next_check: 2011-04-01
 userdel	q4::inwork 425,8766 490,8716
 EOF
@@ -18765,7 +18763,6 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.potsdam.de/cms/beitrag/10078717/1191938/',
        data  => <<EOF,
-#: by: http://www.potsdam.de/cms/beitrag/10078717/1191938/
 userdel	q4::inwork; -12545,-698 -12262,-612
 EOF
      },
@@ -18881,7 +18878,7 @@ EOF
        until => undef, #
        text  => 'Albrecht-Thaer-Weg: Privatstraße, eventuell zeitweise gesperrt (nachts?)',
        type  => 'gesperrt',
-       permanent => 1,
+       recurring => 1,
        data  => <<EOF,
 Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3347,6460 3449,6863
 EOF
@@ -18985,11 +18982,11 @@ EOF
      },
      { from  => 1304805600, # 2011-05-08 00:00
        until => 1317506400, # 2011-10-02 00:00
-       text  => 'Flieth-Stegelitz: L24: Brücke über den Stierngraben bei Kaakstedt, LSA-Regelung, bis 01.10.2011',
-       type  => 'handicap',
+       text  => 'Flieth-Stegelitz: L24: Brücke über den Stierngraben bei Kaakstedt, LSA-Regelung, ab 18.7. Vollsperrung',
+       type  => 'gesperrt',
        source_id => 'LS/O-SG33-E/11/044',
        data  => <<EOF,
-userdel	q4::inwork 35887,85385 34920,85944
+userdel	2::inwork 35887,85385 34920,85944
 EOF
      },
      { from  => 1304796386, # 2011-05-07 21:26
@@ -19366,6 +19363,66 @@ EOF
        source_id => 'INKO_096636',
        data  => <<EOF,
 userdel	2::inwork 9524,12950 9529,12925
+EOF
+     },
+## Unklar, ob die Sperrung tatsächlich schon erfolgt ist und wie lange sie dauert...
+#     { from  => undef, # 
+#       until => undef, # XXX
+#       text  => 'Sperrung Fußgängerbrücke Altglienicke.',
+#       type  => 'gesperrt',
+#       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4399.html',
+#       data  => <<EOF,
+##: XXX wann wird die Brücke wieder eröffnet?
+##: next_check: 2011-07-31
+#userdel	2::inwork 21262,375 21182,436
+#EOF
+#     },
+     { from  => 1310335200, # 2011-07-11 00:00
+       until => 1314395999, # 2011-08-26 23:59
+       text  => 'Instandsetzung des Stegs zwischen Nackthals- und Seidenhuhnweg, u.U. Vollsperrung, ab 12. Juli 2011 für ca. 10 Wochen',
+       type  => 'gesperrt',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1107/nachricht4413.html',
+       data  => <<EOF,
+#: XXX bis Sommer 2012 werden noch weitere Brücken am Rudower Fließ instandgesetzt
+userdel	2::inwork 16135,473 16148,458 16122,403
+userdel	2::inwork 16148,458 16169,458
+EOF
+     },
+     { from  => undef, # 
+       until => 1313791199, # 2011-08-19 23:59
+       text  => 'Fahrbahn am östlichen Herthaplatz wird ausgebaut, bis Mitte August 2011',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20110712.1215.351002.html',
+       data  => <<EOF,
+userdel	q4::inwork 10599,19957 10614,19907
+EOF
+     },
+     { from  => 1310504724, # 2011-07-12 23:05
+       until => 1342389599, # 2012-07-15 23:59
+       text  => 'Neubau der Buddestraße von Bernstorffstraße bis Brunowstraße, Sperrung der Fahrbahn, bis Mitte Juli 2012',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110712.1035.350987.html',
+       data  => <<EOF,
+userdel	q4::inwork 2358,20368 2295,20358 2241,20487
+userdel	q4::inwork 2295,20358 2362,20218 2402,20126
+EOF
+     },
+     { from  => 1311832800, # 2011-07-28 08:00
+       until => 1312142400, # 2011-07-31 22:00
+       text  => 'Einbahnstraßenregelung in der Neuen Krugallee zwischen Baumschulenstr. und Rodelbergweg vom 29.07.2011, 8:00 Uhr bis 31.07.2011, 22:00 Uhr',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110711.0715.350961.html',
+       data  => <<EOF,
+userdel	q4::inwork; 16507,7254 16615,7062
+EOF
+     },
+     { from  => 1310763434, # 2011-07-15 22:57
+       until => 1333231200, # 2012-04-01 00:00
+       text  => 'Instandsetzung der Pankgrafenbrücke, ab dem 18.07.2011 bis März 2012, Einschränkungen möglich',
+       type  => 'handicap',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1107/nachricht4418.html',
+       data  => <<EOF,
+userdel	q4::inwork 13953,23497 14173,23426
 EOF
      },
     );
