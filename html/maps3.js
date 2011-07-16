@@ -1497,7 +1497,7 @@ function HomeControl(controlDiv, map, maptype, lang, opt) {
 
 // de-select all custom maps and optional set a map to bold
 
-function setCustomBold(maptype) {
+function setCustomBold(maptype, log) {
     if (!currentText) return;
 
     for (var key in currentText) {
@@ -1514,7 +1514,7 @@ function setCustomBold(maptype) {
     }
 
     // get information about map type and log maptype
-    if (bbbike.maptype_usage) {
+    if (bbbike.maptype_usage && log) {
         var url = "/cgi/maptype.cgi?city=" + city + "&maptype=" + maptype;
 
         downloadUrl(url, function (data, responseCode) {
@@ -1551,7 +1551,7 @@ function hideGoogleLayers(maptype) {
         if (div) div.style.visibility = value;
     }, timeout - (value == "hidden" ? 500 : -500));
 
-    setCustomBold(maptype);
+    setCustomBold(maptype, 1);
 }
 
 var layerControl = {
