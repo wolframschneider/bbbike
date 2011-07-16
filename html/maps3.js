@@ -93,7 +93,12 @@ var bbbike = {
         "red_dot": "/images/red-dot.png",
         "yellow_dot": "/images/yellow-dot.png"
 
-    }
+    },
+
+    maptype_usage: 1,
+
+    // IE bugs
+    dummy: 0
 };
 
 var state = {
@@ -1508,6 +1513,20 @@ function setCustomBold(maptype) {
         currentText[maptype].style.background = "#4682B4";
     }
 
+
+    if (bbbike.maptype_usage) {
+        var url = "/cgi/maptype.cgi?city=" + city + "&maptype=" + maptype;
+
+        downloadUrl(url, function (data, responseCode) {
+            if (responseCode == 200) {
+                //
+            } else if (responseCode == -1) {
+                //
+            } else {
+                // 
+            }
+        });
+    }
 }
 
 
