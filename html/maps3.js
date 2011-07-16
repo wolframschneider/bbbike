@@ -1513,7 +1513,7 @@ function setCustomBold(maptype) {
         currentText[maptype].style.background = "#4682B4";
     }
 
-
+    // get information about map type and log maptype
     if (bbbike.maptype_usage) {
         var url = "/cgi/maptype.cgi?city=" + city + "&maptype=" + maptype;
 
