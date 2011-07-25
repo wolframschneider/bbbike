@@ -7735,7 +7735,7 @@ sub header {
 	    if ($is_beta) {
 		$title = "BB<span style='font-style:italic;'>&#x03B2;</span>ike</a>";
 	    }
-	    print "<a href='$bbbike_url?begin=1' title='" . M("Zurück zur Hauptseite") . "' style='text-decoration:none; color:black;'>$title";
+	    print "<a href='$bbbike_url' title='" . M("Zurück zur Hauptseite") . "' style='text-decoration:none; color:black;'>$title";
 	    print "<img";
 	    if ($use_css) {
 		print ' style="position:relative; top:15px; left:-15px;"';
