@@ -7864,6 +7864,8 @@ $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="
 	    .  M('Was gibt es Neues auf BBBike.org') 
 	    . qq{" src="/images/rss-icon.png" ></a>} if $enable_rss_icon;
 
+my $permalink_text = $is_streets ? "" : qq{ | <a href="#" onclick="togglePermaLinks(); return false;">$permalink_msg</a><span id="permalink_url2" style="display:none"> $permalink</span>};
+
 my $s_copyright = <<EOF;
 
 <div id="footer">
@@ -7873,8 +7875,7 @@ my $s_copyright = <<EOF;
 <a href="/app.html">$app</a> |
 <a href="$community_link">$donate</a> |
 <a href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
-$list_of_all_streets |
-<a href="#" onclick="togglePermaLinks(); return false;">$permalink_msg</a><span id="permalink_url2" style="display:none"> $permalink</span>
+$list_of_all_streets $permalink_text
 </div>
 </div>
 
