@@ -3243,6 +3243,7 @@ sub is_resultpage {
 sub is_streets {
     my $q = shift;
 
+    #warn "zzz: ", $q->url(-full=>1, -rewrite => 1, -path_info => 1, -query=>1), " zzz\n";
     return (defined $q->param('all') || $q->url(-path_info =>1) =~ m,/streets\.html$,); 
 }
 
@@ -3664,17 +3665,18 @@ sub get_cookie {
 
 sub set_cookie {
     my($href) = @_;
+ 
     # Create a dirname and a non-dirname cookie (both for backward compat):
     [$q->cookie
      (-name => "$cookiename-dir",
       -value => $href,
-      -expires => '+1y',
+      #-expires => '+1y',
       -path => dirname(BBBikeCGIUtil::my_url($q, -absolute => 1)),
      ),
      $q->cookie
      (-name => $cookiename,
       -value => $href,
-      -expires => '+1y',
+      #-expires => '+1y',
       -path => BBBikeCGIUtil::my_url($q, -absolute => 1),
      ),
     ];
@@ -9237,4 +9239,6 @@ terms of the GNU General Public License, see the file COPYING.
 bbbike(1).
 
 =cut
+
+1;
 
