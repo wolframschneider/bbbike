@@ -48,6 +48,7 @@ my $encoding = "utf-8";
 my $debug = 1; # 0: quiet, 1: normal, 2: verbose
 my $ignore_unhandled;
 my $ignore_underline;
+my $ignore_underline_noname;
 
 my $nodate;
 my $map;
@@ -92,6 +93,7 @@ usage: $0 [-v] [-f] [-encoding enc] [-center lon,lat] [-map bbbike [-centerdelta
                   supported languages)
 -ignore-unhandled do not create the _unhandled layer
 -ignore-underline do not create any of the "_*" layers
+-ignore-underline-noname do not create entries for "_*" layers if no name is given
 -experiment ...   Turn on experimental features (may be given multiple times).
 -height-db=file   read height values from database. Same format as ./hoehe
 osmfile ...       Files downloaded by downloadosm,
@@ -124,6 +126,7 @@ GetOptions("o=s" => \$o,
 	   "xmlparser=s" => \$xmlparser,
 	   "ignore-unhandled!" => \$ignore_unhandled,
 	   "ignore-underline!" => \$ignore_underline,
+	   "ignore-underline-noname!" => \$ignore_underline_noname,
 	   'experiment=s@' => sub {
 	       my $exp = $_[1];
 	       if (!$known_experiments{$exp}) {
@@ -282,8 +285,17 @@ sub init_height_db {
 
 sub add_underline {
     return if $ignore_underline;
-    my($or_ref, $name, $cat) = @_;
+
+    my ($or_ref, $name, $cat) = @_;
     push @$or_ref, [$name, $cat];
+}
+
+sub add_underline_noname {
+    my ($or_ref, $name, $cat, $val) = @_;
+	
+    return if !$val && $ignore_underline_noname;
+
+    return add_underline ($or_ref, $name, $cat, $val);
 }
 
 my $do_amenity = sub {
@@ -834,6 +846,7 @@ for my $osm_file (@osm_files) {
 
 	    for my $or (@or) {
 		my($out_file, $cat, %args) = @$or;
+	        next if $ignore_underline_noname && !$name && $out_file =~ /^_/;
 
 		my $name = $name;
 		if ($args{name}) {
@@ -1450,7 +1463,7 @@ for my $osm_file (@osm_files) {
 		    push @or, ["flaechen", "F:Green"]; # XXX not definitely clear
 		    #XXX ja? nein? } elsif ($landuse eq 'water') { push @or, ["wasserstrassen", "F:W"];
 		} elsif ($landuse eq 'residential') {
-		    add_underline(\@or, "_building", "F:#d0d0d0");
+		    add_underline_noname(\@or, "_building", "F:#d0d0d0", $name);
 		} else {
 		    add_underline(\@or, "_landuse", "F:#d0d0d0");
 
@@ -1492,7 +1505,7 @@ for my $osm_file (@osm_files) {
 	    } elsif (exists $tag{'building'}) {
 		my $building = $tag{'building'};
 		if ($building =~ m{^(?:yes|true)$}) {
-		    add_underline(\@or, "_building", "F:#cccccc");
+		    add_underline_noname(\@or, "_building", "F:#cccccc", $name);
 		}
 	    } elsif (exists $tag{'power'}) {
 		if (exists $tag{'operator'}) {

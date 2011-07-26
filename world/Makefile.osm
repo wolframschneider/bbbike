@@ -18,7 +18,7 @@ OSM_TIMEOUT=	--timeout=45
 DOWNLOADOSM_URL=	--osm-api-url=http://www.informationfreeway.org/api/0.6
 DOWNLOADOSM=	${PERL} ./miscsrc/downloadosm --debug=1 ${OSM_SOCKS_PROXY} ${OSM_TIMEOUT} ${DOWNLOADOSM_URL}
 #OSM2BBD=	${PERL} ./miscsrc/osm2bbd --nodate -f --debug=0 ${OSM2BBD_MAPTYPE} -ignore-unhandled -ignore-underline -experiment add_postal_code #-experiment polar_coord_hack
-OSM2BBD=	./miscsrc/osm2bbd --nodate --no-create --git-id="${GIT_ID}" -f --debug=0 ${OSM2BBD_MAPTYPE} -experiment add_postal_code -experiment handle_relations
+OSM2BBD=	./miscsrc/osm2bbd --ignore-underline-noname --nodate --no-create --git-id="${GIT_ID}" -f --debug=0 ${OSM2BBD_MAPTYPE} -experiment add_postal_code -experiment handle_relations
 MAX_CPU=	`world/bin/ncpu`
 MAX_CPU2=	`world/bin/ncpu -1`
 MAX_VCPU=	`world/bin/ncpu vcpu`
@@ -151,6 +151,9 @@ city-reorder:
 city-file:
 	#( echo Bogota; ${MAKE} -s city-reorder | awk '{print $$2 }' | egrep -v Bogota ) > ${CITIES_FILE}
 	${MAKE} -s city-reorder | awk '{print $$2 }'  > ${CITIES_FILE}
+
+city-memory:
+	echo ${CITIES} | ${NICE} ${TIME} ${XARGS} -E " " -n1 -P${MAX_RCPU} ./world/bin/bbbike-memory
 
 update-robots.txt:
 	( cat world/web/robots.txt.in; \
@@ -491,6 +494,7 @@ help:
 	@echo "  [ create-bbbike-web-symlinks | kml | create-osp | index ]"
 	@echo "  [ convert-wgs84 | convert-bbbike | convert-bbbike-full ]"
 	@echo "  [ city-count | city-reorder | city-file | check-osm | cleanup-osm-error ]"
+	@echo "  [ city-memory ]"
 	@echo "  [ elevation-check | elevation-update | elevation-fetch | elevation-repair ]"
 	@echo "  [ planet-download | planet-geofabrik-download ]"
 	@echo "  [ planet-streets | planet-places ]"
