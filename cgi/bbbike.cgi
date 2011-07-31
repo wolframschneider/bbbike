@@ -136,6 +136,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_elevation
 	    $dos_run_timeout
 	    $show_real_time
+	    $cache_streets_html
 	   );
 
 $gmap_api_version = 3;
@@ -8086,6 +8087,9 @@ sub choose_all_form {
     my $q = new CGI;
     my $cache_street_names = 1;
     my $force_cache_rebuild = defined $q->param('all') && $q->param('all') >= 3 ? 1 : 0;
+
+    #
+    $cache_street_names = 0 if !$cache_streets_html;
 
     my $street_names_files = $ENV{TMPDIR} . "/$lang.streets.html";
     my $cache_file;
