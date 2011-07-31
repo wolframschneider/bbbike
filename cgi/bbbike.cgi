@@ -7569,7 +7569,10 @@ sub header {
 	$bbbike_en_script = "/en" . $url;
 
         $bbbike_local_script = $url;
-        $bbbike_local_script =~ s,/\?all=3$,/streets.html,;
+
+	# mapping ?all=3 => /streets.html, by lighttpd web server
+        $bbbike_local_script =~ s,/streets.html\?all=[123]$,/streets.html,;
+        $bbbike_local_script =~ s,/\?all=[123]$,/streets.html,;
     }
 
     if (!$smallform) {
