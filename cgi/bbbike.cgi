@@ -2976,6 +2976,7 @@ EOF
     print footer_as_string();
 
     print $q->end_html;
+    exit(0);
 }
 
 sub berlinmap_with_choices {
@@ -3210,6 +3211,7 @@ location.hash = "start";
 EOF
     }
     print $q->end_html;
+    exit(0);
 }
 
 sub is_mobile {
@@ -3537,6 +3539,7 @@ EOF
 	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
     print "</form>";
     print $q->end_html;
+    exit(0);
 }
 
 #XXX hmmm... muss gründlicher überlegt werden.
@@ -6157,6 +6160,7 @@ EOF
 
   END_OF_HTML:
     print $q->end_html;
+    exit(0);
 }
 
 sub user_agent_info {
@@ -6734,6 +6738,7 @@ EOF
     footer();
     print "</form>\n";
     print $q->end_html;
+    exit(0);
 }
 
 # Stellt für den x/y-Index der berlin_small-Karte die zugehörige
@@ -8267,6 +8272,7 @@ sub choose_all_form {
     print "</div>\n";
 
     print $q->end_html;
+    exit(0);
 
     if (0 && $locale_set && defined $old_locale) {
 	eval {
@@ -8340,6 +8346,7 @@ sub nahbereich {
     footer();
     print "</form>\n";
     print $q->end_html;
+    exit(0);
 }
 
 sub get_nearest_crossing_coords {
@@ -8475,6 +8482,7 @@ sub draw_route_from_fh {
 	upload_button_html();
 	footer();
 	print $q->end_html;
+        exit(0);
     }
 }
 
@@ -8484,6 +8492,7 @@ sub upload_button {
     upload_button_html();
     footer();
     print $q->end_html;
+    exit(0);
 }
 
 sub upload_button_html {
@@ -9218,6 +9227,7 @@ EOF
     footer();
 
     print $q->end_html;
+    exit(0);
 }
 
 sub footnote {
@@ -9252,4 +9262,3 @@ bbbike(1).
 =cut
 
 1;
-
