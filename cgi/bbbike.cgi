@@ -136,6 +136,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_elevation
 	    $dos_run_timeout
 	    $show_real_time
+	    $cache_streets_html
 	   );
 
 $gmap_api_version = 3;
@@ -794,7 +795,10 @@ my $is_streets;
   # /streets.html
   my $all = defined $q->param('all') ? $q->param('all') : 0;
 
-  if ($q->param('cache') || $all >= 2) {
+  # request from internal IP address 10.x.x.x
+  my $local_host = $q->remote_host() =~ /^10\./ ? 1 : 0;
+
+  if ($q->param('cache') || $all >= 2 || $local_host) {
      eval {
 	require BSD::Resource;
 
@@ -2972,6 +2976,7 @@ EOF
     print footer_as_string();
 
     print $q->end_html;
+    exit(0);
 }
 
 sub berlinmap_with_choices {
@@ -3206,6 +3211,7 @@ location.hash = "start";
 EOF
     }
     print $q->end_html;
+    exit(0);
 }
 
 sub is_mobile {
@@ -3533,6 +3539,7 @@ EOF
 	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
     print "</form>";
     print $q->end_html;
+    exit(0);
 }
 
 #XXX hmmm... muss gründlicher überlegt werden.
@@ -6153,6 +6160,7 @@ EOF
 
   END_OF_HTML:
     print $q->end_html;
+    exit(0);
 }
 
 sub user_agent_info {
@@ -6730,6 +6738,7 @@ EOF
     footer();
     print "</form>\n";
     print $q->end_html;
+    exit(0);
 }
 
 # Stellt für den x/y-Index der berlin_small-Karte die zugehörige
@@ -7566,7 +7575,10 @@ sub header {
 	$bbbike_en_script = "/en" . $url;
 
         $bbbike_local_script = $url;
-        $bbbike_local_script =~ s,/\?all=3$,/streets.html,;
+
+	# mapping ?all=3 => /streets.html, by lighttpd web server
+        $bbbike_local_script =~ s,/streets.html\?all=[123]$,/streets.html,;
+        $bbbike_local_script =~ s,/\?all=[123]$,/streets.html,;
     }
 
     if (!$smallform) {
@@ -8081,6 +8093,9 @@ sub choose_all_form {
     my $cache_street_names = 1;
     my $force_cache_rebuild = defined $q->param('all') && $q->param('all') >= 3 ? 1 : 0;
 
+    #
+    $cache_street_names = 0 if !$cache_streets_html;
+
     my $street_names_files = $ENV{TMPDIR} . "/$lang.streets.html";
     my $cache_file;
     my $fh;
@@ -8257,6 +8272,7 @@ sub choose_all_form {
     print "</div>\n";
 
     print $q->end_html;
+    exit(0);
 
     if (0 && $locale_set && defined $old_locale) {
 	eval {
@@ -8330,6 +8346,7 @@ sub nahbereich {
     footer();
     print "</form>\n";
     print $q->end_html;
+    exit(0);
 }
 
 sub get_nearest_crossing_coords {
@@ -8465,6 +8482,7 @@ sub draw_route_from_fh {
 	upload_button_html();
 	footer();
 	print $q->end_html;
+        exit(0);
     }
 }
 
@@ -8474,6 +8492,7 @@ sub upload_button {
     upload_button_html();
     footer();
     print $q->end_html;
+    exit(0);
 }
 
 sub upload_button_html {
@@ -9208,6 +9227,7 @@ EOF
     footer();
 
     print $q->end_html;
+    exit(0);
 }
 
 sub footnote {
@@ -9242,4 +9262,3 @@ bbbike(1).
 =cut
 
 1;
-
