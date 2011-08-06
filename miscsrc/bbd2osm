@@ -119,6 +119,8 @@ my %cat_to_highway = ('B'  => 'primary', # See also $do_highway_primary_hack
 my %cat_to_railway = ('U' => 'subway',
 		      'S' => 'light_rail',
 		      'R' => 'rail',
+		      'RG' => 'rail', # XXX is there a better tag?
+		      'RP' => 'narrow_gauge', # not quite correct, but in most cases a good approximation
 		     );
 
 my %cat_to_area_landuse = ('Forest'     => 'forest',
@@ -161,6 +163,7 @@ if ($single_file) {
     do_file("$datadir/berlin_ortsteile", \&handle_berlin_citypart_like);
 
     do_file("$datadir/comments_ferry", \&handle_ferry_info_like);
+    do_file("$datadir/comments_scenic", \&handle_comments_scenic_like);
 
     # WAY-like
     do_file("$datadir/gesperrt", \&handle_blocked_way_like);
@@ -247,7 +250,7 @@ sub handle_blocked_way_like {
 	$node_id;
     } @{ $r->[Strassen::COORDS] };
     for my $node_id_i (1 .. $#node_ids) {
-	if ($cat eq '1') {
+	if ($cat eq '1' || $cat eq '1s') {
 	    $oneway{$node_ids[$node_id_i].' '.$node_ids[$node_id_i-1]} = 1; # in osm oneway is the open direction, not the closed
 	} elsif ($cat eq '2') {
 	    $no_access{$node_ids[$node_id_i-1].' '.$node_ids[$node_id_i]} = 1;
@@ -264,11 +267,27 @@ sub handle_handicap_like {
     } else {
 	($cat_hin, $cat_rueck) = ($r->[Strassen::CAT], $r->[Strassen::CAT]);
     }
-    for ($cat_hin, $cat_rueck) {
-	if (defined $_) {
-	    ($_) = $_ =~ m{^([^:]+)};
+
+    my($attrib_hin, $attrib_rueck);
+    for my $def (
+		 [\$cat_hin, \$attrib_hin],
+		 [\$cat_rueck, \$attrib_rueck],
+		) {
+	my($cat_ref, $attrib_ref) = @$def;
+	if (defined $$cat_ref) {
+	    ($$cat_ref, $$attrib_ref) = $$cat_ref =~ m{^
+						       ([^:]+)
+						       (?:::(.*))?
+						       $}x;
 	}
     }
+    if (defined $attrib_hin && $attrib_hin eq 'igndisp') {
+	# This is most likely generated from an "1s" record. Don't
+	# render it, because we cannot distinguish between directions
+	# in the osm output.
+	return;
+    }
+
     my @node_ids = map {
 	my($px,$py) = $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(split /,/, $_));
 	my $node_id = maybe_add_node($px,$py);
@@ -460,10 +479,11 @@ sub handle_railway_like {
     my($r, $dir) = @_;
 
     my($cat) = $r->[Strassen::CAT] =~ m{^([^:]+)};
-    return if $cat !~ m{^([USR])([ABC0]?)$};
+    return if $cat !~ m{^([USR]|RP|RG)([ABC0]|Bau)?$};
     my $railway_cat = $cat_to_railway{$1};
     return if !defined $railway_cat;
     my $is_abandoned = defined $2 && $2 eq '0';
+    my $is_construction = defined $2 && $2 eq 'Bau';
 
     my @node_ids = get_node_ids($r);
 
@@ -478,6 +498,8 @@ sub handle_railway_like {
     print $wayfh qq{  <tag k="railway" v="$railway_cat" />\n};
     if ($is_abandoned) {
 	print $wayfh qq{  <tag k="abandoned" v="yes" />\n};
+    } elsif ($is_construction) {
+	print $wayfh qq{  <tag k="construction" v="yes" />\n};
     }
     print $wayfh qq{</way>\n};
     $next_way_id++;
@@ -539,6 +561,20 @@ sub handle_ferry_info_like {
     my $label = shorten_label($r->[Strassen::NAME]);
 
     get_node_id_from_center($r, { note => $label });
+}
+
+sub handle_comments_scenic_like {
+    my($r, $dir) = @_;
+    my $cat = $r->[Strassen::CAT];
+    if ($cat =~ m{^View(?:$|:)}) {
+	my $label = shorten_label($r->[Strassen::NAME]);
+	my $attribs = { tourism => 'viewpoint',
+			name => $label,
+		      };
+	get_node_ids($r, $attribs); # as a side-effect, create the nodes
+    } else {
+	return;
+    }
 }
 
 sub handle_area_like {

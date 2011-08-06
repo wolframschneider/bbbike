@@ -2,7 +2,6 @@
 # -*- perl -*-
 
 #
-# $Id: strassen-kml.t,v 1.11 2008/03/19 23:03:01 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -32,7 +31,7 @@ BEGIN {
 
 use BBBikeTest;
 
-plan tests => 24;
+plan tests => 30;
 
 use_ok("Strassen::KML")
     or exit 1; # avoid recursive calls to Strassen::new
@@ -99,7 +98,9 @@ isa_ok($s, "Strassen");
     is($data[0], "Route\tX @sample_coords\n", "Expected translated coordinates with namespace decl hack");
 }
 
-{
+for my $kml_filename ('doc.kml',
+		      'DOC.KML',
+		     ) {
     my($tmpfh,$tmpfile) = tempfile(SUFFIX => '.kmz',
 				   UNLINK => 1);
 
@@ -107,7 +108,7 @@ isa_ok($s, "Strassen");
     my @sample_coords = get_sample_coordinates_1();
 
     my $zip = Archive::Zip->new;
-    $zip->addString($kml_string, 'doc.kml');
+    $zip->addString($kml_string, $kml_filename);
     unless ($zip->writeToFileNamed($tmpfile) == AZ_OK) {
 	die "Can't write to $tmpfile";
     }
@@ -115,11 +116,26 @@ isa_ok($s, "Strassen");
     my $s = Strassen::KML->new($tmpfile);
     isa_ok($s, "Strassen", "File <$tmpfile> loaded OK");
     my @data = @{ $s->data };
-    is($data[0], "Route\tX @sample_coords\n", "Expected translated coordinates in .kmz file");
+    is($data[0], "Route\tX @sample_coords\n", "Expected translated coordinates in .kmz file (mail kml file: $kml_filename)");
 
     my $s0 = Strassen->new($tmpfile);
     isa_ok($s, "Strassen", ".kmz detection in Strassen::Core seems OK");
     is_deeply($s0->data, $s->data, "No difference between Strassen and Strassen::KML loading");
+}
+
+{
+    # .kmz without valid .kml
+    my($tmpfh,$tmpfile) = tempfile(SUFFIX => '.kmz',
+				   UNLINK => 1);
+    my $zip = Archive::Zip->new;
+    $zip->addString("something", "a filename");
+    $zip->addString("else", "another_file_not_ending_in_dot_kml");
+    unless ($zip->writeToFileNamed($tmpfile) == AZ_OK) {
+	die "Can't write to $tmpfile";
+    }
+
+    ok !eval { Strassen::KML->new($tmpfile) }, 'No valid .kmz file';
+    like $@, qr{Can't find any file .*\.kml.* in}, 'Error message';
 }
 
 {

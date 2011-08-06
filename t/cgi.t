@@ -88,7 +88,7 @@ if (!@urls) {
 }
 
 my $ortsuche_tests = 11;
-plan tests => (221 + $ortsuche_tests) * scalar @urls;
+plan tests => (226 + $ortsuche_tests) * scalar @urls;
 
 my $hdrs;
 if (defined &Compress::Zlib::memGunzip && $do_accept_gzip) {
@@ -238,10 +238,24 @@ for my $cgiurl (@urls) {
 	ok($res->is_success, "Zoo")
 	    or diag(Dumper($res));
 	$content = uncompr($res);
-	BBBikeTest::like_long_data($content, qr/Start.*Zoologischer Garten/,
-				   "Start is Zoologischer Garten", ".html");
-	BBBikeTest::unlike_long_data($content, qr/\bZoo\b/,
-				     "Zoo not found (same point optimization)", ".html");
+	if ($content =~ m{Zoologischer Garten \[Elefantentor\]}) {
+	    # Since 2011-08 there is no one point matching this query,
+	    # but two for each entrance to the zoo. The "combine
+	    # places with same coordinates" feature is probably still
+	    # tested, because "Zoo" and "Zoologischer Garten [Eingang
+	    # Hardenbergplatz]" with the same coordinate is still
+	    # there.
+	    BBBikeTest::like_long_data($content, qr/start2.*Zoologischer Garten.*Elefantentor/,
+				       "First alternative is Zoologischer Garten Elefantentor", ".html");
+	    BBBikeTest::like_long_data($content, qr/start2.*\bZoo\b/,
+				       "Second alternative is just Zoo (Hardenbergplatz)", ".html");
+	    
+	} else {
+	    BBBikeTest::like_long_data($content, qr/Start.*Zoologischer Garten/,
+				       "Start is Zoologischer Garten", ".html");
+	    BBBikeTest::unlike_long_data($content, qr/\bZoo\b/,
+					 "Zoo not found (same point optimization)", ".html");
+	}
 	BBBikeTest::unlike_long_data($content, qr/\(\)/,
 				     "No empty parenthesis", ".html");
 
@@ -410,7 +424,6 @@ for my $cgiurl (@urls) {
 	cmp_ok($len, "<=", 14.5, "Shorter route"); # eastern in 14.6km
     }
 
- XXX:
     {
 	my $content;
 
@@ -456,6 +469,34 @@ for my $cgiurl (@urls) {
 	    or diag "Can't find Gubener Str. in " . $content;
 	like($content, qr/Guben!\#ort!/, "Guben as place/city found")
 	    or diag("Can't find Guben in " . $content);
+    }
+
+    {
+	# Test "ImportantAngleCrossingName"
+	$req = new HTTP::Request
+	    ('GET', "$action?startc=23085%2C898;pref_quality=;startplz=12527;pref_speed=20;startname=Regattastr.;pref_specialvehicle=;zielname=Sportpromenade;pref_seen=1;zielplz=12527;zielc=25958%2C-731;pref_cat=;pref_green=;scope=");
+	$res = $ua->request($req);
+	ok($res->is_success, 'test "ImportantAngleCrossingName" feature')
+	    or diag(Dumper($res));
+	$content = uncompr($res);
+	BBBikeTest::like_long_data($content, qr/\QRegattastr. (Ecke Rabindranath-Tagore-Str.)/,
+				   'found "ImportantAngleCrossingName" feature', '.html');
+    }
+
+ XXX:
+    {
+	# Another test for "ImportantAngleCrossingName"
+	# Bülowstr. am Dennewitzplatz
+	$req = new HTTP::Request
+	    ('GET', "$action?startc=7938%2C9694&pref_seen=1&zielc=7813%2C10112");
+	$res = $ua->request($req);
+	ok($res->is_success, 'test "ImportantAngleCrossingName" feature (Dennewitzplatz)')
+	    or diag(Dumper($res));
+	$content = uncompr($res);
+	BBBikeTest::like_long_data($content, qr/weiter auf der.*B.*lowstr\. \(Ecke Alvenslebenstr\.\)/,
+				   'stripped citypart from ImportantAngleCrossingName', '.html');
+	BBBikeTest::like_long_data($content, qr/weiter auf der.*B.*lowstr\. \(Ecke Dennewitzstr\.\)/,
+				   'second ImportantAngleCrossingName', '.html');
     }
 
     # Klick on "D" in Start A..Z

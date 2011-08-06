@@ -2,7 +2,6 @@
 # -*- perl -*-
 
 #
-# $Id: wwwdata.t,v 1.3 2007/12/23 21:54:57 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -30,7 +29,7 @@ use Image::Info qw(image_info);
 
 use Strassen::Core;
 
-plan tests => 30;
+plan tests => 40;
 
 my $htmldir = $ENV{BBBIKE_TEST_HTMLDIR};
 if (!$htmldir) {
@@ -44,13 +43,17 @@ my $ua = LWP::UserAgent->new;
 $ua->parse_head(0); # too avoid confusion with Content-Type in http header and meta tags
 $ua->agent('BBBike-Test/1.0');
 
+my $ua316 = LWP::UserAgent->new;
+$ua316->parse_head(0);
+$ua316->agent('bbbike/3.16 (Http/4.01) BBBike-Test/1.0');
+
 my $datadir = "$htmldir/data";
 
 for my $do_accept_gzip (0, 1) {
-    $ua->default_header('Accept-Encoding' => $do_accept_gzip ? "gzip" : undef);
-
     my $basic_tests = sub {
-	my $url = shift;
+	my($url, %args) = @_;
+	my $ua = $args{ua} || $ua;
+	$ua->default_header('Accept-Encoding' => $do_accept_gzip ? "gzip" : undef);
 	my $resp = $ua->get($url);
 	ok($resp->is_success, "GET $url " . ($do_accept_gzip ? "(Accept gzipped)" : "(uncompressed)"))
 	    or diag $resp->status_line;
@@ -86,6 +89,16 @@ for my $do_accept_gzip (0, 1) {
 	my $image_info = image_info(\$content);
 	ok(!$image_info->{error}, "No error detected while looking at image content");
 	is($image_info->{file_media_type}, $resp->header("Content-Type"), "Expected mime type");
+	is $resp->header("content-encoding")||'', '', 'No compression for images'
+	    or diag <<'EOF';
+If mod_deflate is used, then something like
+
+     SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+
+should be put into the Apache configuration for
+the bbbike/data location; or an equivalent solution
+for other systems is necessary.
+EOF
     }
 
     {
@@ -97,6 +110,22 @@ for my $do_accept_gzip (0, 1) {
 	# issue. See also parse_head setting above.
 	like($resp->header("content-type"), qr{^text/html(;\s*charset=iso-8859-1)?$}, "Content-type check")
 	    or diag($resp->as_string);
+    }
+
+    # Simulate old BBBike application
+    {
+	my $url = "$datadir/strassen";
+	my($resp, $content) = $basic_tests->($url, ua => $ua316);
+	my $s = eval { Strassen->new_from_data_string($content) };
+	is($@, "", "No error while parsing bbd data");
+	my $count_NH = 0;
+	$s->init;
+	while () {
+	    my $ret = $s->next;
+	    last if !@{ $ret->[Strassen::COORDS] };
+	    $count_NH++ if $ret->[Strassen::CAT] eq 'NH';
+	}
+	is $count_NH, 0, 'No cat=NH found for old client'
     }
 }
 

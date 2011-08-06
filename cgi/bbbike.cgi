@@ -137,6 +137,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $dos_run_timeout
 	    $show_real_time
 	    $cache_streets_html
+	    $bbbike_start_js_version
 	   );
 
 $gmap_api_version = 3;
@@ -1035,6 +1036,8 @@ $detailwidth  = 500; # muß quadratisch sein!
 $detailheight = 500;
 $nice_berlinmap = 0;
 $nice_abcmap    = 0;
+
+$bbbike_start_js_version = '1.18';
 
 use vars qw(@b_and_p_plz_multi_files %is_usable_without_strassen %same_single_point_optimization);
 @b_and_p_plz_multi_files = 
@@ -4762,6 +4765,7 @@ sub display_route {
 	    my $entf_s = '';
 	    my $raw_direction;
 	    my $route_inx;
+	    my $important_angle_crossing_name;
 	    my($entf, $winkel, $richtung, $extra)
 		= ($next_entf, $next_winkel, $next_richtung, $next_extra);
 	    ($strname, $next_entf, $next_winkel, $next_richtung,
@@ -4770,6 +4774,8 @@ sub display_route {
 	    if ($i > 0) {
 		if (!$winkel) { $winkel = 0 }
 		$winkel = int($winkel/10)*10;
+		my $same_streetname_important_angle =
+		    @out_route && $out_route[-1]->{Strname} eq $strname && $extra && $extra->{ImportantAngleCrossingName};
 		if ($winkel < 30 && (!$extra || !$extra->{ImportantAngle})) {
 		    $richtung = "";
 		    $raw_direction = "";
@@ -4780,7 +4786,19 @@ sub display_route {
 		    $richtung =
 			($winkel <= 45 ? M('halb') : '') .
 			    ($richtung eq 'l' ? M('links') : M('rechts')) .
-				" ($winkel°) " . ($lang eq 'en' ? "-&gt;" : Strasse::de_artikel($strname));
+				" ($winkel°) ";
+		    if ($lang eq 'en') {
+			$richtung .= "-&gt;";
+		    } else {
+			if ($same_streetname_important_angle) {
+			    $richtung .= "weiter " . Strasse::de_artikel_genitiv($strname);
+			} else {
+			    $richtung .= Strasse::de_artikel($strname);
+			}
+		    }
+		}
+		if ($same_streetname_important_angle) {
+		    $important_angle_crossing_name = Strasse::strip_bezirk($extra->{ImportantAngleCrossingName});
 		}
 		$ges_entf += $entf;
 		$ges_entf_s = sprintf "%.1f km", $ges_entf/1000;
@@ -4937,6 +4955,7 @@ sub display_route {
 		 DirectionString => $richtung,
 		 Angle => $winkel,
 		 Strname => $strname,
+		 ImportantAngleCrossingName => $important_angle_crossing_name,
 		 ($with_comments && $comments_net ?
 		  (Comment => $etappe_comment,
 		   CommentHtml => $etappe_comment_html,
@@ -5443,9 +5462,9 @@ EOF
 	my $etappe_i = -1;
 	for my $etappe (@out_route) {
 	    $etappe_i++;
-	    my($entf, $richtung, $strname, $ges_entf_s,
+	    my($entf, $richtung, $strname, $important_angle_crossing_name, $ges_entf_s,
 	       $etappe_comment_html, $fragezeichen_comment, $path_index) =
-		   @{$etappe}{qw(DistString DirectionString Strname TotalDistString CommentHtml FragezeichenComment PathIndex)};
+		   @{$etappe}{qw(DistString DirectionString Strname ImportantAngleCrossingName TotalDistString CommentHtml FragezeichenComment PathIndex)};
 	    my $last_path_index;
 	    if ($etappe_i < $#out_route) {
 		$last_path_index = $out_route[$etappe_i+1]->{PathIndex} - 1;
@@ -5460,6 +5479,9 @@ EOF
 		print "<a class=ms href='#' onclick='return ms($etappe->{Coord})'>"
 		    if $can_jslink;
 		print $strname;
+		if ($important_angle_crossing_name) {
+		    print " (" . M("Ecke") . " " . $important_angle_crossing_name . ")";
+		}
 		print "</a>"
 		    if $can_jslink;
 		print "$fontend</td><td nowrap>$fontstr$ges_entf_s$fontend</td>";
@@ -8152,7 +8174,7 @@ sub choose_all_form {
 
     http_header(@weak_cache);
     header(#too slow XXX -onload => "list_all_streets_onload()",
-	   -script => {-src => $bbbike_html . "/bbbike_start.js",
+	   -script => {-src => $bbbike_html . "/bbbike_start.js?v=$bbbike_start_js_version",
 		      },
 	   -google_analytics_uacct => 1,
 	  );

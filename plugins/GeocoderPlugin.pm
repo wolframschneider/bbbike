@@ -210,7 +210,11 @@ sub geocoder_dialog {
 			     },
 			     'label' => 'Yahoo (avoid umlauts)',
 			   },
-		'Bing' => { 'new' => sub {
+		'Bing' => {  'require' => sub {
+				 require Geo::Coder::Bing;
+				 Geo::Coder::Bing->VERSION(0.10); # at least 0.04 stopped working at some time
+			     },
+			     'new' => sub {
 				 Geo::Coder::Bing->new;
 			     },
 			     'extract_loc' => sub {
@@ -248,7 +252,7 @@ sub geocoder_dialog {
 				     my $loc = shift;
 				     ($loc->centroid->long, $loc->centroid->lat);
 				 },
-				 'label' => 'Cloudmade (needs API key)',
+				 'label' => 'Cloudmade (needs API key, avoid umlauts)',
 			       },
 		'OSM' => { 'require' => sub { require Geo::Coder::OSM },
 			   'new' => sub { Geo::Coder::OSM->new },

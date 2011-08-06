@@ -2412,7 +2412,7 @@ EOF
        text  => 'Hönower Str. (Mahlsdorf) in Richtung Alt-Mahlsdorf zwischen Wilhelmsmühlenweg und Alt-Mahlsdorf Baustelle, Fahrtrichtung gesperrt (bis 12.08.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 24623,11684 24591,11587 24603,11450 24654,11265
+userdel	q4; 24623,11684 24591,11587 24603,11450 24624,11374 24654,11265
 EOF
      },
      { from  => 1121724000, # 2005-07-19 00:00
@@ -6945,7 +6945,7 @@ EOF
        text  => 'Hultschiner Damm zwischen Alt-Mahlsdorf und Elsenstr. gesperrt, geplatzte Wasserleitung bis 19.01.2007 15:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 24639,10766 24740,10992 24654,11265
+userdel	2::inwork 24639,10766 24653,10831 24740,10992 24693,11141 24654,11265
 EOF
      },
      { from  => 1182281811, # 2007-06-19 21:36
@@ -7032,7 +7032,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004452',
        data  => <<EOF,
-userdel	2::inwork 24639,10766 24740,10992 24654,11265
+userdel	2::inwork 24639,10766 24653,10831 24740,10992 24693,11141 24654,11265
 EOF
      },
      { from  => 1170098849, # 2007-01-29 20:27
@@ -10875,7 +10875,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_007852',
        data  => <<EOF,
-userdel	1::inwork 24654,11265 24740,10992 24639,10766
+userdel	1::inwork 24654,11265 24693,11141 24740,10992 24653,10831 24639,10766
 EOF
      },
      { from  => 1203374120, # 2008-02-18 23:35
@@ -12172,9 +12172,9 @@ EOF
 userdel	1::inwork 9164,12172 9183,12076 9201,11968
 EOF
      },
-     { from  => 1314828000, # 1217625881, # 2008-08-01 23:24 # zweiter Termin im Jahr
-       until => 1315173600, # 1217800800, # 2008-08-04 00:00
-       text  => 'Müllerstr. (Wedding) in beiden Richtungen zwischen Leopoldplatz und Seestr. Veranstaltung, Straße vollständig gesperrt (2. bis 4. September 2011)',
+     { from  => 1312513200, # zweiter Termin im Jahr (August oder September)
+       until => 1312754400,
+       text  => 'Müllerstr. (Wedding) in beiden Richtungen zwischen Leopoldplatz und Seestr. Veranstaltung, Straße vollständig gesperrt (5. bis 7. August 2011)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 6790,16018 6914,15908 6936,15888 7043,15793 7129,15717 7198,15656 7277,15586
@@ -19312,7 +19312,7 @@ EOF
        data  => <<EOF,
 userdel	2::inwork 22364,6158 22475,6151 22539,6258
 userdel	2::inwork 22358,5918 22428,6063 22475,6151 22603,6141
-userdel	2::inwork 22468,6046 22544,6037
+userdel	2::inwork 22478,6041 22544,6037
 userdel	2::inwork 22324,6397 22364,6158 22283,6174
 userdel	2::inwork 22513,5747 22531,5871 22358,5918 22294,5777
 userdel	2::inwork 22777,6157 22603,6141
@@ -19357,8 +19357,8 @@ userdel	q4::inwork; 19904,3464 20012,3532
 EOF
      },
      { from  => 1310014800, # 2011-07-07 07:00
-       until => 1311264000, # 2011-07-21 18:00
-       text  => 'Geschwister-Scholl-Str./Tucholskystr. (Mitte): Bauarbeiten, Brücke vollständig gesperrt (bis Ende 07/11) in beiden Richtungen Höhe Ebertsbrücke, 08.07.2011 07:00 Uhr bis 21.07.2011 18:00 Uhr ',
+       until => 1313337600, # 2011-08-14 18:00
+       text  => 'Geschwister-Scholl-Str./Tucholskystr. (Mitte): Bauarbeiten, Brücke vollständig gesperrt (bis Mitte 08/11) in beiden Richtungen Höhe Ebertsbrücke, 08.07.2011 07:00 Uhr bis 14.08.2011 18:00 Uhr ',
        type  => 'gesperrt',
        source_id => 'INKO_096636',
        data  => <<EOF,
@@ -19424,6 +19424,108 @@ EOF
        source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1107/nachricht4418.html',
        data  => <<EOF,
 userdel	q4::inwork 13953,23497 14173,23426
+EOF
+     },
+     { from  => 1281243600, # 2010-08-08 07:00
+       until => 1316786400, # 2011-09-23 16:00
+       text  => 'Köpenicker Str. (Altglienicke): Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei (bis Ende 09/11) in beiden Richtungen zwischen Korkedamm und Semmelweisstr., 09.08.2010 07:00 Uhr bis 23.09.2011 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_016196',
+       data  => <<EOF,
+userdel	q4::inwork 19812,1923 19840,2010 19939,2074 20100,2247
+EOF
+     },
+     { from  => 1312229266, # 2011-08-01 22:07
+       until => 1314828000, # 2011-09-01 00:00
+       text  => 'Eberswalde (Stadt): B167: Umbau Konten Freienwalder Straße/Saarstraße OD Eberswalde Saarstraße gesperrt, 25.07.2011 bis 31.08.2011 ',
+       type  => 'handicap',
+       source_id => 'LS/O-SG33-E/11/084',
+       data  => <<EOF,
+userdel	q4::inwork 38504,47638 39129,47518
+EOF
+     },
+     { from  => 1312090200, # 2011-07-31 07:30
+       until => 1314025200, # 2011-08-22 17:00
+       text  => 'Gartenstr. (Mitte): Baustelle, Fahrtrichtung gesperrt (bis Ende 08/11) Richtung Invalidenstr. zwischen Bernauer Str. und Invalidenstr., 01.08.2011 07:30 Uhr bis 22.08.2011 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'INKO_107796',
+       data  => <<EOF,
+userdel	q4::inwork; 9224,14169 9383,13978
+EOF
+     },
+     { from  => 1312229500, # 2011-08-01 22:11
+       until => 1313791200, # 2011-08-20 00:00
+       text  => 'Oranienburg: B273: Kampfmitteluntersuchung OL Oranienburg, 01.08.2011 bis 19.08.2011 ',
+       type  => 'gesperrt',
+       source_id => '116501481',
+       data  => <<EOF,
+userdel	2::inwork -1887,38134 -2179,38179
+EOF
+     },
+     { from  => 1311483600, # 2011-07-24 07:00
+       until => 1312642800, # 2011-08-06 17:00
+       text  => 'Pastor-Niemöller-Platz (Niederschönhausen): Baustelle, Einmündung Friedrichs-Engels-Str. vollständig gesperrt, Staugefahr (bis Anfang 08/11) im Kreisverkehr Einmündung Friedrich-Engels-Str., 25.07.2011 07:00 Uhr bis 06.08.2011 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'INKO_108243',
+       data  => <<EOF,
+userdel	q4::inwork 9826,19382 9791,19363 9789,19329
+EOF
+     },
+     { from  => 1312088400, # 2011-07-31 07:00
+       until => 1313161200, # 2011-08-12 17:00
+       text  => 'Späthstr. (Treptow): Baustelle, Straße vollständig gesperrt (bis Mitte 08/11) in beiden Richtungen zwischen Königsheideweg und Neue Späthstr., 01.08.2011 07:00 Uhr bis 12.08.2011 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'INKO_108454',
+       data  => <<EOF,
+userdel	q4::inwork 15363,5668 15183,5480 15038,5235 14988,5214 14808,5202 14744,5211
+EOF
+     },
+     { from  => 1312063200, # 2011-07-31 00:00
+       until => 1313359200, # 2011-08-15 00:00
+       text  => 'Zabel-Krüger-Damm: Bauarbeiten, Einbahnstraßenregelung, auch in der Schonacher Str., vom 01.08.2011 bis voraussichtlich 14.08.2011',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110727.1340.352586.html',
+       data  => <<EOF,
+userdel	q4::inwork; 4718,22384 4800,22418 4898,22459 5006,22507 4919,22658
+EOF
+     },
+     { from  => 1313272800, # 2011-08-14 00:00
+       until => 1314568800, # 2011-08-29 00:00
+       text  => 'Straßenbauarbeiten in der Chris-Gueffroy-Allee: Vollsperrung der Fahrbahn, 15.8.2011-28.8.2011',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110727.1340.352585.html',
+       data  => <<EOF,
+userdel	q4::inwork 15183,5480 15165,5506 15146,5592 15143,5705 15141,5774 15141,5800 15141,5870 15143,5936
+EOF
+     },
+     { from  => 1312526331, # 2011-08-05 08:38
+       until => 1312772400, # 2011-08-08 05:00
+       text  => 'Holzhauser Str. (Reinickendorf) in beiden Richtungen zwischen Wittestr. und Berliner Str., Bauarbeiten, Straße vollständig gesperrt, 05.05.2011 bis 08.05.2011 05:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'INKO_108474',
+       data  => <<EOF,
+userdel	2::inwork 3079,19045 2993,18962
+EOF
+     },
+     { from  => 1312430400, # 2011-08-04 06:00
+       until => 1312776000, # 2011-08-08 06:00
+       text  => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung, Straßen nördlich der Karl-Marx-Str. vollständig gesperrt, 05.08.2011 06:00 Uhr bis 08.08.2011 06:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'IM_017646',
+       data  => <<EOF,
+userdel	2::temp 12360,12505 12364,12589
+userdel	2::temp 12891,12549 12869,12425
+userdel	2::temp 12635,12629 12606,12471
+EOF
+     },
+     { from  => 1312520400, # 2011-08-05 07:00
+       until => 1312667999, # 2011-08-06 23:59
+       text  => 'Yitzak-Rabin-Str. (Tiergarten) zwischen Str. des 17. Juni und Scheidemannstr sowie Scheidemannstr. und Heinrich-v.-Gagern-Str. gesperrt, ab 06.08.2011 07 Uhr bis ca. 24:00',
+       type  => 'gesperrt',
+       source_id => 'IM_017645',
+       data  => <<EOF,
+userdel	2::temp 8123,12615 8119,12414 8055,12186
+userdel	2::temp 8540,12420 8400,12417 8374,12416 8119,12414
 EOF
      },
     );

@@ -100,22 +100,28 @@ sub run {
 	    close $fh;
 	    close $tmpfh;
 
-	    my $gpx = Strassen->new($tmpfile, name => "Uploaded GPX file");
-	    $gpx->init;
-	    my $gpx_converter = $gpx->get_conversion(-tomap => 'polar');
-	    while (1) {
-		my $r = $gpx->next;
-		if (!$r || !UNIVERSAL::isa($r->[Strassen::COORDS()], "ARRAY")) {
-		    warn "Parse error in line " . $gpx->pos . ", skipping...";
-		    next;
-		}
-		my @c = @{ $r->[Strassen::COORDS()] };
-		last if !@c;
-		@c = map { $gpx_converter->($_) } @c if $gpx_converter;
-		if (@c == 1) { # treat as waypoint
-		    push @wpt, [ $c[0], $r->[Strassen::NAME()] ];
-		} else {
-		    push @coords, \@c;
+	    my $gpx = eval { Strassen->new($tmpfile, name => "Uploaded GPX file") };
+	    if (!$gpx) {
+		warn $@;
+		(my $short_err_msg = $@) =~ s{ at \S+ line \d+\.}{};
+		$self->{errormessageupload} = "Ungültiges Datenformat. Gültige Datenformate sind u.a. .gpx, .kml und .kmz.\nDetaillierte Fehlermeldung:\n$short_err_msg";
+	    } else {
+		$gpx->init;
+		my $gpx_converter = $gpx->get_conversion(-tomap => 'polar');
+		while (1) {
+		    my $r = $gpx->next;
+		    if (!$r || !UNIVERSAL::isa($r->[Strassen::COORDS()], "ARRAY")) {
+			warn "Parse error in line " . $gpx->pos . ", skipping...";
+			next;
+		    }
+		    my @c = @{ $r->[Strassen::COORDS()] };
+		    last if !@c;
+		    @c = map { $gpx_converter->($_) } @c if $gpx_converter;
+		    if (@c == 1) { # treat as waypoint
+			push @wpt, [ $c[0], $r->[Strassen::NAME()] ];
+		    } else {
+			push @coords, \@c;
+		    }
 		}
 	    }
 	}
@@ -1094,8 +1100,10 @@ EOF
 <form name="upload" onsubmit='setZoomInUploadForm()' class="boxed" style="margin-top:0.3cm; " method="post" enctype="multipart/form-data">
 EOF
     if ($self->{errormessageupload}) {
+	my $errormessageupload_html = escapeHTML($self->{errormessageupload});
+	$errormessageupload_html =~ s{\n}{<br />}g;
 	$html .= <<EOF;
-  <div class="error">@{[ escapeHTML($self->{errormessageupload}) ]}</div>
+  <div class="error">$errormessageupload_html</div>
 EOF
     }
     $html .= <<EOF;

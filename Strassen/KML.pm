@@ -89,7 +89,7 @@ sub kmz2bbd {
     }
     my $docMember;
     for my $m ($zip->members) {
-	if ($m->fileName =~ m{\.kml$}) {
+	if ($m->fileName =~ m{\.kml$}i) {
 	    if ($docMember) {
 		warn "Multiple .kml files in .kmz found, using only the first one!";
 	    } else {
@@ -98,7 +98,7 @@ sub kmz2bbd {
 	}
     }
     if (!$docMember) {
-	die "Can't find any file <*.kml> in <$file>";
+	die "Can't find any file <*.kml> in <$file>, zip only contains " . join(", ", $zip->memberNames);
     }
     my($contents, $status) = $docMember->contents;
     if ($status != Archive::Zip::AZ_OK()) {
