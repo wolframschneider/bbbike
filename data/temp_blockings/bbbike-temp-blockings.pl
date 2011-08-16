@@ -1516,7 +1516,7 @@ EOF
        text  => 'Fürstenwalder Damm zwischen Bölschestr. und Stillerzeile Baustelle, Straße stadteinwärts gesperrt (bis Ende 07.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q3; 25579,5958 25121,5799
+userdel	q3; 25579,5958 25179,5819 25121,5799
 EOF
      },
      { from  => 1108681200, # 2005-02-18 00:00
@@ -1617,7 +1617,7 @@ EOF
        text  => 'Dahlwitzer Landstr. - Bölschestr. (Köpenick) in beiden Richtungen an der Bahnbrücke Bölschestr. Baustelle, Straße vollständig gesperrt (Brücken- und Straßenarbeiten) (bis 26.09.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 25585,6050 25579,5958
+userdel	q4 25584,6029 25579,5958
 EOF
      },
      { from  => 1110668400, # 2005-03-13 00:00
@@ -3879,7 +3879,7 @@ EOF
        data  => <<EOF,
 userdel	q4 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 24049,5380 23950,5342
 userdel	q4 25012,5754 25018,5756 25121,5799
-userdel	q4 25579,5958 25121,5799
+userdel	q4 25579,5958 25179,5819 25121,5799
 EOF
      },
      { from  => 1146520800, # 2006-05-02 00:00
@@ -6671,7 +6671,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004066',
        data  => <<EOF,
-userdel	2::inwork 25585,6050 25776,6054 25967,6125 26139,6188 26247,6228 28586,7139 29168,7350 29192,7368
+userdel	2::inwork 25584,6029 25776,6054 25967,6125 26139,6188 26247,6228 28586,7139 29168,7350 29192,7368
 EOF
      },
      { from  => 1163286000, # 2006-11-12 00:00
@@ -10755,7 +10755,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_007457',
        data  => <<EOF,
-userdel	1::inwork 25579,5958 25121,5799
+userdel	1::inwork 25579,5958 25179,5819 25121,5799
 EOF
      },
      { from  => 1200178800, # 2008-01-13 00:00
@@ -12398,7 +12398,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_009763',
        data  => <<EOF,
-userdel	q4::inwork 22740,4415 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23055,4640 23363,4846 23451,4877
+userdel	q4::inwork 22740,4415 22759,4430 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23055,4640 23363,4846 23451,4877
 EOF
      },
      { from  => 1219528800, # 2008-08-24 00:00
@@ -15800,7 +15800,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014045',
        data  => <<EOF,
-userdel	q4::inwork; 23451,4877 23363,4846 23055,4640 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22740,4415
+userdel	q4::inwork; 23451,4877 23363,4846 23055,4640 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22759,4430 22740,4415
 EOF
      },
      { from  => 1250978400, # 2009-08-23 00:00
@@ -18119,7 +18119,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20100720.1055.303592.html',
        data  => <<EOF,
-userdel	q4::inwork 22605,15111 22449,15127 22409,15128 22343,15115 22059,15153
+userdel	q4::inwork 22605,15111 22449,15127 22419,15127 22343,15115 22059,15153
 EOF
      },
      { from  => 1281128604, # 2010-08-08 00:00 1281218400
@@ -18944,7 +18944,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110421.1205.341677.html',
        data  => <<EOF,
-userdel	q4::inwork 22740,4415 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23055,4640 23363,4846 23451,4877
+userdel	q4::inwork 22740,4415 22759,4430 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23055,4640 23363,4846 23451,4877
 EOF
      },
      { from  => 1304676000, # 2011-05-06 12:00
@@ -19357,8 +19357,8 @@ userdel	q4::inwork; 19904,3464 20012,3532
 EOF
      },
      { from  => 1310014800, # 2011-07-07 07:00
-       until => 1313337600, # 2011-08-14 18:00
-       text  => 'Geschwister-Scholl-Str./Tucholskystr. (Mitte): Bauarbeiten, Brücke vollständig gesperrt (bis Mitte 08/11) in beiden Richtungen Höhe Ebertsbrücke, 08.07.2011 07:00 Uhr bis 14.08.2011 18:00 Uhr ',
+       until => 1314806400, # 2011-08-31 18:00
+       text  => 'Geschwister-Scholl-Str./Tucholskystr. (Mitte): Bauarbeiten, Brücke vollständig gesperrt (bis Ende 08/11) in beiden Richtungen Höhe Ebertsbrücke, 08.07.2011 07:00 Uhr bis 31.08.2011 18:00 Uhr ',
        type  => 'gesperrt',
        source_id => 'INKO_096636',
        data  => <<EOF,
@@ -19453,9 +19453,9 @@ EOF
 userdel	q4::inwork; 9224,14169 9383,13978
 EOF
      },
-     { from  => 1312229500, # 2011-08-01 22:11
-       until => 1313791200, # 2011-08-20 00:00
-       text  => 'Oranienburg: B273: Kampfmitteluntersuchung OL Oranienburg, 01.08.2011 bis 19.08.2011 ',
+     { from  => 1313269753, # 2011-08-13 23:09
+       until => 1315605600, # 2011-09-10 00:00
+       text  => 'Oranienburg: B273: Kampfmitteluntersuchung OL Oranienburg, 01.08.2011 bis 09.09.2011 ',
        type  => 'gesperrt',
        source_id => '116501481',
        data  => <<EOF,
@@ -19526,6 +19526,42 @@ EOF
        data  => <<EOF,
 userdel	2::temp 8123,12615 8119,12414 8055,12186
 userdel	2::temp 8540,12420 8400,12417 8374,12416 8119,12414
+EOF
+     },
+     { from  => 1310464800, # 2011-07-12 12:00
+       until => 1313852400, # 2011-08-20 17:00
+       text  => 'Wartenberger Weg (Malchow): Baustelle, Straße vollständig gesperrt an der Kreuzung Dorfstr., 13.07.2011 12:00 Uhr bis 20.08.2011 17:00 Uhr',
+       type  => 'handicap',
+       source_id => 'INKO_107049',
+       data  => <<EOF,
+userdel	q4::inwork 16094,19179 15640,19208
+EOF
+     },
+     { from  => 1313272800, # 2011-08-14 00:00
+       until => 1356994800, # 2013-01-01 00:00
+       text  => 'Wildau: L401: Straßenbau OD Wildau, Einmündung Richard-Sorge-Straße bis Stichkanal ab 15.08.11 Vollsperrung Richtung Königs Wusterhausen, 30.08.2010 bis 31.12.2012 ',
+       type  => 'handicap',
+       source_id => 'LS/S-SG33-W/10/173',
+       data  => <<EOF,
+userdel	q3::inwork; 26679,-8825 26381,-9753
+EOF
+     },
+     { from  => 1313270628, # 2011-08-13 23:23
+       until => 1314827999, # 2011-08-31 23:59
+       text  => 'Rennbahnstr. (Weißensee) Richtung Heinersdorf Höhe Pasedagplatz Bauarbeiten, Fahrtrichtung gesperrt (bis Ende 08/11) ',
+       type  => 'handicap',
+       source_id => 'INKO_108874',
+       data  => <<EOF,
+userdel	q4::inwork; 14144,17165 14060,17221 13912,17320
+EOF
+     },
+     { from  => 1313270697, # 2011-08-13 23:24
+       until => 1318629600, # 2011-10-15 00:00
+       text  => 'Schenkenberg: L26: grundhafter Ausbau der L 26 OA Baumgarten - Knoten Schenkenberg, 02.05.2011 bis 14.10.2011 ',
+       type  => 'gesperrt',
+       source_id => 'LS/O-SG33-E/10/214-10',
+       data  => <<EOF,
+userdel	2::inwork 45906,105450 46581,105900
 EOF
      },
     );
