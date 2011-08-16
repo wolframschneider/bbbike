@@ -320,12 +320,13 @@ function oS(tag) { // openStreet
 }
 
 var _google_plusone = 0;
+
 function google_plusone() {
-  if (!_google_plusone) {
-     jQuery.getScript( 'https://apis.google.com/js/plusone.js' );
-     $('.gplus').remove();
-  }
-  _google_plusone = 1;
+    if (!_google_plusone) {
+        jQuery.getScript('https://apis.google.com/js/plusone.js');
+        $('.gplus').remove();
+    }
+    _google_plusone = 1;
 }
 
 // unknown google maps bug
