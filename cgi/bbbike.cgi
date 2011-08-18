@@ -2222,7 +2222,7 @@ EOF
 	sub social_link {
 	    print qq{<span id="social">\n};
 	    print qq{<a href="$facebook_page" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="BBBike on Facebook"></a>\n} if $enable_facebook_t_link;
-	    print qq{<a href="http://twitter.com/BBBikeWorld/" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n} if $enable_twitter_t_link;
+	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n} if $enable_twitter_t_link;
 	    print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="small" count="false"></g:plusone>\n} if $enable_google_plusone_t_link;
 	    print qq{</span>\n};
 	}
@@ -7927,7 +7927,7 @@ Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Projec
 <div id="footer_community">
   <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="Donate to bbbike.org" border="0"></a>
   <a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
-  <a href="$community_link"><img class="logo" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
+  <a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
   <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>
   $google_plusone
   $rss_icon
