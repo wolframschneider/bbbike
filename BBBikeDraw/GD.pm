@@ -42,6 +42,8 @@ sub AUTOLOAD {
 $DEBUG = 0;
 $VERSION = sprintf("%d.%02d", q$Revision: 1.66 $ =~ /(\d+)\.(\d+)/);
 
+my $use_truecolor = 0; # XXX with 1 segfaults (still with 2.0.33, seen on amd64-freebsd).
+
 my(%brush, %outline_brush, %thickness, %outline_thickness);
 
 # REPO BEGIN
@@ -121,13 +123,13 @@ sub init {
 		}
 	    }
 	    sub newFromImage {
-		my $image = shift;
+		my($image, $file) = @_;
 		if ($self->imagetype eq 'gif' && $image->can('newFromGif')) {
-		    $image->newFromGif(@_);
+		    $image->newFromGif($file);
 		} elsif ($self->imagetype eq 'png' && $image->can('newFromPng')) {
-		    $image->newFromPng(@_);
+		    $image->newFromPng($file, $use_truecolor);
 		} elsif ($self->imagetype eq 'jpeg' && $image->can('newFromJpeg')) {
-		    $image->newFromJpeg(@_);
+		    $image->newFromJpeg($file, $use_truecolor);
 		} else {
 		    die "Fatal error: no newFrom" . ucfirst($self->imagetype) . " method available";
 		}
@@ -189,7 +191,6 @@ sub init {
     if ($self->{OldImage}) {
 	$im = $self->{OldImage};
     } else {
-	my $use_truecolor = 0; # XXX with 1 segfaults (still with 2.0.33, seen on amd64-freebsd). Also, background color is not set correctly.
 	$im = $self->{GD_Image}->new($self->{Width},$self->{Height},
  				     $use_truecolor);
     }
@@ -201,6 +202,11 @@ sub init {
 
     if (!$self->{OldImage}) {
 	$self->allocate_colors;
+	if ($im->isTrueColor) {
+	    # In true color mode the default bg color is not the first
+	    # in palette, but black
+	    $im->filledRectangle(0,0,$self->{Width}-1,$self->{Height},$grey_bg);
+	}
     }
 
     $self->set_category_colors;
@@ -244,7 +250,7 @@ sub pre_draw {
     }
     # create outline brushes
     foreach my $cat (keys %width) {
-	next unless $outline_color{$cat};
+	next unless defined $outline_color{$cat};
 	my $width = $width{$cat} * $scale;
 	$width = 1 if $width < 1;
 	$width = int($width);
