@@ -38,6 +38,7 @@ my $use_exact_streetchooser = 1;
 my $use_cooked_street_data;
 my $use_polar     = 1;
 my $data_is_wgs84 = 1;
+my $keep_coord = 0;
 
 my $q = new CGI;
 my $kr;
@@ -179,6 +180,8 @@ sub get_nearest_crossing_coords {
         $x = $1;
         $y = $2;
     }
+
+    return "$x,$y" if $keep_coord;
 
     new_kreuzungen();
     my $xy;
