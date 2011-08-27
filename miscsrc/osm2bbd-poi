@@ -38,7 +38,7 @@ my $use_exact_streetchooser = 1;
 my $use_cooked_street_data;
 my $use_polar     = 1;
 my $data_is_wgs84 = 1;
-my $keep_coord = 0;
+my $keep_coord    = 0;
 
 my $q = new CGI;
 my $kr;
