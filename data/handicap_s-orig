@@ -13,11 +13,12 @@
 #: XXX siehe auch qualitaet_s-orig
 Sembritzkystr.: Bauarbeiten, Einbahnstraße	q3::inwork; 7203,5488 7186,5453 7157,5418 7095,5317 7018,5201
 # 
-#: last_checked: 2011-06-15 vvv
-#: next_check: 2011-08-15 vvv
+#: last_checked: 2011-08-19 vvv
+#: next_check: 2011-09-25 vvv
 #: XXX wird wahrscheinlich reorganisiert mit der neuen Verbindung
-Beuthstr. - Spittelmarkt: Gehweg, Bauarbeiten	q3::inwork 10166,11592 10197,11605 10229,11618 10213,11728
-Spittelmarkt: Gehweg, Bordstein, Bauarbeiten	q3::inwork 10166,11592 10153,11666 10213,11728
+Beuthstr. - Spittelmarkt: Gehweg, Bauarbeiten	q4::inwork 10166,11592 10197,11605 10229,11618 10213,11728
+Spittelmarkt: Gehweg, Bordstein, Bauarbeiten	q4::inwork 10166,11592 10153,11666 10213,11728
+Axel-Springer-Str.: Bauarbeiten	q4::inwork 10166,11592 10136,11529
 #: next_check: ^^^
 #: last_checked: ^^^
 # 
@@ -26,11 +27,10 @@ Spittelmarkt: Gehweg, Bordstein, Bauarbeiten	q3::inwork 10166,11592 10153,11666 
 #: next_check: 2013-05-31
 Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Gartenstr. und Hessische Str. gesperrt	q4::inwork; 9383,13978 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
 # 
-#: last_checked: 2011-05-20
-Krausenstr.: Bauarbeiten an der Kreuzung Krausenstr./Charlottenstr	q3::inwork 9581,11523 9711,11543
+#XXX del --- #: last_checked: 2011-05-20 --- Krausenstr.: Bauarbeiten an der Kreuzung Krausenstr./Charlottenstr	q3::inwork 9581,11523 9711,11543
 # 
-#: last_checked: 2011-07-16
-#: next_check: 2011-09-01
+#: last_checked: 2011-08-20
+#: next_check: 2011-10-15
 Alt-Stralau: Bauarbeiten an der Brücke, enge Durchfahrt	q3::inwork 14652,10201 14558,10264
 # 
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4088.html
@@ -42,23 +42,29 @@ Behrenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8861,12125 9054,1215
 #: XXX evtl. gehen die Bauarbeiten bis Ende 2012 (mit Unterbrechungen) weiter
 Behrenstr.: Bauarbeiten, Fahrbahn teilweise gesperrt	q4::inwork 9373,12197 9164,12172
 # 
-#: last_checked: 2011-07-13
+#: last_checked: 2011-08-19
 Oberwallstr.: Bauarbeiten, Einbahnstraße	q4::inwork; 9925,11947 9913,12068
 # 
-#: last_checked: 2011-07-13
-Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9890,12161 9875,12257
+#: last_checked: 2011-08-19
+#: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
+Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9890,12161 9875,12257 9869,12297
+# 
+#: last_checked: 2011-08-19
+Jerusalemer Str.: Bauarbeiten, Einbahnstraße	q3::inwork; 9878,11857 9892,11752
 # 
 #: last_checked: 2011-06-12
 Neumannsgasse: Bauarbeiten, Fahrbahn gespert	q4::inwork 10284,12113 10383,12191
-#
+# 
 #: last_checked: 2011-04-30
 #: next_check: 2011-07-01
 Varian-Fry-Str.: Baustelle, Fahrbahn gesperrt	q4::inwork 8389,11378 8374,11479
 # 
-#: last_checked: 2011-06-26
+#: last_checked: 2011-08-19
+#: next_check: 2011-10-15
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
 # 
-#: last_checked: 2011-06-26
+#: last_checked: 2011-08-19
+#: next_check: 2011-10-15
 Universitätsstr.: wegen Bauarbeiten Richtung Unter den Linden gesperrt	q4::inwork; 9580,12581 9601,12380
 # 
 #: last_checked: 2011-08-02
@@ -72,8 +78,8 @@ Haasestr.: Einbahnstraße ist eingerichtet	q4::inwork; 14286,11186 14327,11308
 #: next_check: ^^^
 #: last_checked: ^^^
 # 
-#: last_checked: 2011-05-05
-#: next_check: 2011-08-01
+#: last_checked: 2011-08-19
+#: next_check: 2012-01-01
 Rathausstr.: Baustelle vor dem Roten Rathaus, eng	q4::inwork 10601,12521 10704,12595
 # 
 #XXX del --- #: last_checked: 2011-02-27 --- #: next_check: 2011-07-15 --- Am Carlsgarten: Bauarbeiten	q4::inwork 19460,7954 19372,8012 19334,8046
@@ -83,9 +89,14 @@ Rathausstr. zwischen Breitestr. und Poststr.: Fahrbahn wegen Brückenbauarbeiten 
 Rathausstr. zwischen Breitestr. und Poststr.: Fahrbahn wegen Brückenbauarbeiten gesperrt	q4::inwork 10422,12395 10476,12432
 #: next_check: ^^^
 # 
-#: last_checked: 2011-06-05
-#: next_check: 2011-08-05
+#: last_checked: 2011-08-18
+#: next_check: 2011-11-05
 Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10436,11344 10244,11160
+# 
+#: last_checked: 2011-08-21
+#: next_check: 2012-05-01
+#: by: http://www.svendsimdorn.de/index.php?ka=1&ska=1&idx=26540 (Fertigstellung Spätsommer 2012)
+Elcknerplatz, Borgmannstr.: Bauarbeiten, Einbahnstraße	q4::inwork; 22428,6063 22478,6041 22544,6037 22539,5956
 #: temporary ^^^
 ######################################################################
 #: XXX es ist zu erwarten, dass hier der Wuhlewanderweg verbessert wird: vvv
@@ -158,7 +169,7 @@ Parkweg: enge Brücke, Fußweg	q2 14310,9692 14361,9772 14404,9847 14448,9922 1445
 Spittelmarkt: Gehweg	q1 10369,11728 10240,11740
 Hasenheide: Parkweg	q1 11271,8325 11282,8428 11250,8585 11177,8985 11141,9107 11136,9183
 Hasenheide, zur Lilienthalstr.: Parkweg	q1 10709,9192 11141,9107
-Am Flutgraben: Parkweg	q1 13333,9929 13412,9935 13579,10146
+Am Flutgraben: Fußgänger	q1 13333,9929 13412,9935 13579,10146
 (durch den Schlesischen Busch): Fußgänger	q1 13412,9935 13636,9964 13711,10022
 Kolonie Albrechtshöhe: einige Fußgänger	q1 10260,5953 9931,5985
 Am Landwehrkanal: Parkweg	q1 12739,9576 12801,9554 12919,9584 12981,9672 13086,9825
@@ -172,8 +183,10 @@ Böcklerpark: enge Kurven, manchmal Fußgänger auf dem Radweg	q3 10967,10092 10885
 Böcklerpark: enge Kurven, Fußgänger	q3 10923,10113 10885,10045
 Am Landwehrkanal: Parkweg	q1 10521,10126 10362,10120 10226,10145 10083,10192
 vor dem Kanzleramt: Fußgänger, manchmal gesperrt	q1 8120,12756 8123,12615
+#: XXX_prog: BS: am Nordende Bordsteine
 Am Stadtpark: Parkweg mit Fußgängern	q1 15395,12762 15433,12686 15454,12519
-Am Stichkanal: Parkweg	q1 22832,4491 22702,4592 22585,4634 22458,4565
+Am Stichkanal: Fußgänger	q1 22832,4491 22814,4505 22797,4518 22702,4592 22585,4634
+Am Stichkanal: Fußgänger	q1 22759,4430 22797,4518
 Schwedter Str. (Mauerpark): Park, Fußgänger	q2 10354,14987 10238,15316 10186,15463 10122,15647
 (Fußweg am Griesinger-Krankenhaus): Fußgänger	q1 21935,12160 21930,12185 21615,12326 21367,12437 21268,12481 21222,12501
 (Fußgängerbrücke Ostkreuz): Fußgänger	q3 14798,10985 14787,10972 14764,10877 14794,10844
@@ -486,7 +499,7 @@ Wuhlewanderweg: enge Unterführung	q3 22280,11284 22271,11218
 Wuhlewanderweg: Fußgänger	q1 22271,11218 22236,11198
 Wuhlewanderweg: Fußgänger	q1 22238,6195 22236,6233 22214,6271 22146,6338 22097,6414 22030,6600 22056,6613 21976,6848 21888,6944 21590,7211 21574,7244 21590,7414 21613,7521 21620,7647 21604,7715 21570,7751 21616,7863 21629,7921 21599,7904 21593,7934 21568,8052 21351,8259 21337,8273 21276,8374 21185,8483 21183,8731 21192,8839 21210,8883 21252,8928 21280,8954 21351,9066
 Wuhlewanderweg: Fußgänger	q1 21385,9049 21468,9230 21524,9488 21587,9609 21633,9731 21678,9817 21686,9876
-Wuhlewanderweg: Fußgänger	q1 21611,9893 21619,9993 21566,10222 21581,10329 21608,10403 21646,10510 21657,10519 21791,10623 21830,10679 21867,10733 21950,10776 22060,10778 22097,10812 22160,10834
+Wuhlewanderweg: Fußgänger	q1 21611,9893 21619,9993 21566,10230 21581,10329 21586,10344 21608,10403 21646,10510 21657,10519 21791,10623 21830,10679 21867,10733 21950,10776 22060,10778 22097,10812 22160,10834
 Heinrich-Dathe-Platz: Fußgänger	q2 18512,10337 18484,10411 18394,10348
 Dathepromenade: Fußgänger	q1 18394,10348 18320,10318 18302,10289 18314,10260 18101,10169 18048,10169
 (Dathepromenade - Sewanstr.): Bordsteine	q3 17953,10123 17905,10122
@@ -563,7 +576,7 @@ Baruther Str.: gemeinsamer Rad- und Gehweg	q1 9588,9827 9723,9842
 (Maybachufer - Weigandufer): Radfahren nicht erlaubt, ggfs. schieben	q3 12851,9309 12907,9073
 (Parkplatz Charité): Fußgänger, parkende Autos	q1 8828,13434 8808,13380 8778,13368 8665,13353
 (Lasdehner Str. - Gubener Str.): Fußgänger, Bordsteine	q3 13375,12062 13339,12029
-Straßenbahntrasse zum Alex: Bodenschwellen und Schienen	q1- 11139,13008 11191,13080
+#XXX del --- paralleler Radweg existiert --- Straßenbahntrasse zum Alex: Bodenschwellen und Schienen	q1- 11139,13008 11191,13080
 Perleberger - Kieler: unterhalb der Brücke sehr eng	q3 7661,14398 7636,14414 7612,14449 7561,14458
 Ida-Wolff-Platz: Fußgänger	q2 9210,10614 9192,10528
 Falkstr.: Fußgänger	q1 12179,7979 12220,7822
@@ -1012,6 +1025,13 @@ enge Rampe	q3 23784,14569 23792,14561 23793,14573
 #Wuhletalstr. [Mittelstreifen]: für Fußgänger überquerbar	q4 20891,17572 20895,17594
 Schrebergasse: enge Straße	q0- 23980,4633 23925,4555 23850,4497
 Rathausstr.: einige "Moabiter Kissen", leicht umfahrbar	q0 15576,12315 15628,12246 15651,12214
+Unterführung S-Bhf. Nöldnerplatz: Fußgänger	q3 15886,10947 15879,10954 15865,10965 15859,10970
+Spreepromenade: Pfad	q2 23608,5196 23785,5169 23808,5177
+#: XXX_prog BS (2x, im Norden relativ flach, und im Süden)
+Liebstadter Gang: Bordsteine	q1 24434,5645 24471,5544
+(Unterführung S-Bhf. Hirschgarten): Fußgänger	q3 23948,6054 23947,6014 23930,6013 23931,5992
+(S-Bhf. Hirschgarten - KGA Erpetal): eng	q2 23948,6054 23951,6063 23941,6118
+Spatenweg: Betonbarriere, eng	q3 21190,12515 21222,12501
 ######################### User Contributions #################################
 #: by: Michael Kiekbusch
 #: corrected_by: srt/policy (q4 -> q3-)
@@ -1477,19 +1497,25 @@ Bootshausweg: Fußgänger, teilweise sehr eng, nicht für Anhänger geeignet	q2- -12
 #: confirmed_by: srt
 Bootshausweg: Fußgänger	q1 -1465,16957 -1520,16989 -1564,17001 -1610,17007 -1664,17009 -1743,16990 -1723,16973 -1690,16971 -1676,16957 -1673,16939 -1688,16862 -1675,16813
 #: by: ^^^
+# 
 # XXX del: not confirmed by me : by: Karin Millonig: Rufacher Weg: enge Straße	q2 12207,1704 12179,1758 12160,1817 12255,2058 12286,2065 12582,2129 12738,2162
 #XXX del --- -> RW6 in radwege --- #: by: Benno Koch [AM] --- #: corrected_by: srt (q4 -> q2) (common sense!) --- Nelly-Sachs-Str.: Verkehrsberuhigter Bereich	q2 24061,14801 24115,14828 24191,14866
 #XXX del hier nicht! --- Nelly-Sachs-Str.: Verkehrsberuhigter Bereich	q2 24191,14866 24253,14888 24349,14922
+# 
 #: by: torsten albrecht [AM]
-Karl-Pokern-Str.: spielende Kinder	q1 26079,5057 26034,5056 25984,5070 25941,5069 25860,5067 25732,5065
+#: corrected_by: srt (q1 -> q0-)
+Karl-Pokern-Str.: spielende Kinder	q0- 26079,5057 26034,5056 25984,5070 25941,5069 25860,5067 25732,5065
+# 
 #: by: ingo [AM]
 (Plantagenstr. - Ruheplatzstr.): Gehweg, Fußgänger	q4 7595,15596 7540,15566
 #XXX duplicate: Goerdelersteg: steile Fußgängerwendel zur Autobahnbrücke	q3 3619,14183 3601,14284 3595,14277
+# 
 #: by: Andreas Püschel: vvv
 Bruno-Apitz-Str.: viele Fußgänger	q1 16423,24935 16359,24795 16304,24825 16264,24764 16131,24850
 Bruno-Apitz-Str.: viele Fußgänger	q1 16359,24795 16334,24728
 Bruno-Apitz-Str.: viele Fußgänger	q1 16329,24865 16304,24825
 #: by: ^^^
+# 
 #: by: Karsten [AM]
 Scherenbergstr.: enge Straße	q2 11307,15995 11358,16067 11404,16140 11464,16232 11542,16384
 #: by: Peter Friede [AM]
@@ -1775,7 +1801,7 @@ Sendener Weg: enge Straße	q0- 964,18321 1040,18283 1178,18223 1221,18327 1281,18
 # 
 #: by: henning (hirschgarten):
 #: corrected_by: srt/policy (q2 -> q1)
-Gilgenburger Str.: enge Straße	q1 24387,5672 24434,5645 24666,5726
+Gilgenburger Str.: enge Straße	q1 24387,5672 24434,5645 24549,5685 24666,5726
 # 
 #: by: Steffi (silver midi):
 Blochmannstr.: enge Straße	q1 5097,988 5036,949 4986,959 4925,961 4862,975 4788,1023 4702,1147 4634,1245
@@ -2156,7 +2182,8 @@ Krämerweg: enge Straße	q1 -5267,16871 -5224,17046 -5178,17258
 #: corrected_by: srt/policy (q3 -> q1)
 Seidenbaustr.: enge Straße	q1 19857,3514 19966,3596
 #: by: Ulrike Herwig:
-Gerstenweg: enge Straße	q1 21262,13517 21214,13126 21168,12794 21101,12661 21053,12582 21028,12536 20952,12407 20943,12376 20923,12194
+#: corrected_by: srt/policy (q1 -> q0-)
+Gerstenweg: enge Straße	q0- 21262,13517 21214,13126 21168,12794 21101,12661 21053,12582 21028,12536 20952,12407 20943,12376 20923,12194
 #: by: Katja Frenzel:
 Genfer Weg: Fußgänger	q1 2995,2119 3150,2113
 #: by anonymous:
@@ -2171,7 +2198,7 @@ Grammestr.: enge Straße	q1 1057,14389 1028,14251
 #: by: K. Wieker: vvv
 #: corrected_by: srt/policy (q3 -> q2)
 Hirschsprung: enge Straße	q2 23837,5978 23874,5870
-Wiesenpromenade: enge Straße	q1 23660,5819 23675,5823 23758,5846 23874,5870
+Wiesenpromenade: enge Straße	q1 23660,5819 23675,5823 23758,5846 23874,5870 23912,5883 23919,5908 23951,5923 23931,5992
 #: by: ^^^
 #: by: Burkard dau:
 Lenther Steig: enge Straße	q1 1024,14889 1037,14814 1042,14721 1037,14515
@@ -2417,3 +2444,11 @@ Johannesstr.: enge Straße	q1 609,1915 712,1551
 Birkenstr. (Köpenick): enge Straße	q1 24166,4568 24068,4602 23980,4633 23934,4661 23947,4673 23869,4733
 #: by: Michael Schwarz:
 S-Bahnunterführung: Kehre, einige Fußgänger	q1 4250,763 4225,753 4311,746
+# 
+#: by: britta (no email):
+#: corrected_by: srt/policy (q2 -> q0-)
+Minorkaweg: enge Straße	q0- 15831,484 15925,541 16008,628
+# 
+#: by: olaf binder
+#: corrected_by: srt/policy (q1 -> q0-)
+Am Finkenherd: enge Straße	q0- -7004,15434 -6977,15706 -6932,16048

@@ -448,7 +448,7 @@ Zugang zur S-Bahn	culdesac_pseudo 14845,10954
 	culdesac 12910,8929
 #: XXX_osm fehlt komplett
 	culdesac 12090,7865
-	culdesac 12295,8154
+	culdesac 12327,8161
 	culdesac 12465,7250
 	culdesac 13070,6449
 	culdesac 13168,6444
@@ -613,6 +613,35 @@ Zugang zum Bad	culdesac_pseudo 7344,13435
 	culdesac 21221,11398
 	culdesac_pseudo 21217,11328
 	culdesac 22001,10216
+	culdesac 25941,4971
+	culdesac 24991,4701
+	culdesac_pseudo 23808,5177
+	culdesac_pseudo 23608,5196
+	culdesac 23492,5334
+	culdesac 23469,5340
+	culdesac 23433,5197
+	culdesac_pseudo 23660,5819
+	culdesac 23600,5932
+	culdesac_pseudo 24225,5619
+	culdesac_pseudo 23681,5579
+	culdesac_pseudo 25002,5296
+	culdesac_pseudo 25009,5593
+#: XXX: fortgesetzter Weg fehlt bei BBBike
+	culdesac_pseudo 26270,5829
+#: XXX: fortgesetzter Waldweg fehlt bei BBBike
+	culdesac_pseudo 26351,6028
+	culdesac 24351,5696
+	culdesac 21553,10671
+	culdesac 21543,10724
+	culdesac_pseudo 21428,10691
+	culdesac_pseudo 15787,9321
+	culdesac_pseudo 14599,10039
+	culdesac_pseudo 15181,10154
+	culdesac_pseudo 15044,10297
+	culdesac_pseudo 14888,10385
+	culdesac_pseudo 15513,10298
+	culdesac_pseudo 15334,10528
+	culdesac_pseudo 15633,10442
 #: section ^^^
 ######################################################################
 # busroute
@@ -808,14 +837,14 @@ Bus X69	busroute_N 22324,6397 22539,6258
 Bus 167, ...	busroute_N 23435,4179 23655,4205 23753,4218 23879,4233 24135,4264 24181,4270
 Bus 190	busroute_N 21025,7349 21341,7487 21475,7500
 Bus 190	busroute_N 21175,9989 20947,9999 20703,10004 20706,10047 20708,10144 20711,10230 20713,10293 20716,10434 21017,10423 21288,10431
-Bus 398	busroute_N 21135,10995 21249,11042 21362,11098 21385,11119 21420,11150 21537,11256 21624,11379
+Bus 398	busroute_N 21135,10995 21249,11042 21385,11119 21420,11150 21537,11256 21624,11379
 Bus 108	busroute_N 21124,11462 20959,11465 20828,11466 20641,11480 20623,11481 20525,11488 20549,11659 20575,11698
 Bus 192	busroute_N 18597,12162 19086,12134 19143,12078 19142,11804 19135,11713 19121,11681 19035,11671 19005,11705 19005,11767 19004,11780
 Bus 108, Bus 192	busroute_N 19389,11761 19142,11804
 Bus 108	busroute_N 19142,11804 19064,11805 18853,11780
 Bus 192	busroute_N 20656,12415 20629,12177 20627,12162 20790,12146
 Bus 191	busroute_N 19687,14469 19729,14564 19777,14673 19800,14726 19873,14884 19902,14945 20010,15142 20117,15282 20286,15382 20260,15434 20222,15519
-Bus 195	busroute_N 21599,15213 21718,15198 21809,15186 21903,15174 22059,15153 22343,15115 22409,15128 22449,15127 22605,15111 22726,15082 22886,15095
+Bus 195	busroute_N 21599,15213 21718,15198 21809,15186 21903,15174 22059,15153 22343,15115 22419,15127 22449,15127 22605,15111 22726,15082 22886,15095
 Bus 191, ...	busroute_N 20222,15519 19962,15343 19824,15347 19681,15405
 Bus X54	busroute_N 18365,17382 18428,17497 18635,17649 18556,17752 18482,17847 18412,17920 18304,18071 18242,18146 18205,18256
 Bus 256	busroute_N 17003,19035 16993,18928 17114,18775 17260,18579 17502,18286 17574,18196 17678,18171 17768,18160 17843,18078
@@ -1001,8 +1030,9 @@ ausgeschildert als "Zum Finkenweg"	CP2; 9239,4980 9360,4996
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/12re.pdf/file
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/13re.pdf/file
 #: XXX Ausschilderung fehlt, Benennung ist ab 26.5. wirksam
-#: last_checked: 2011-04-01
-#: next_check: 2011-05-26
+#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110819.1140.355461.html
+#: XXX Benennung am 2011-09-01
+#: next_check: 2011-09-01
 Yva-Bogen: nicht ausgeschildert; zwischen Hotel und S-Bahnviadukt	CS 5373,10981 5426,11039 5459,11135
 (Privatstraﬂe am Karl-Fischer-Weg): Privatstraﬂe	CS 7202,5016 7180,4913
 Carl-Ludwig-Schleich-Promenade: nicht ausgeschildert	CP2; 2315,8431 2316,8469
@@ -1060,3 +1090,7 @@ Kaiserkronenweg: Privatstraﬂe, nur frei f¸r Anlieger	CS 20183,14645 20030,14731 
 Biesdorfer Blumenwiese: Privatstraﬂe	CS 20609,14343 20597,14291 20543,14293 20540,14249
 Biesdorfer Blumenwiese: Privatstraﬂe	CS 20494,14246 20540,14249 20583,14241 20584,14211
 (Fortsetzung der Mieltschiner Str.): Privatstraﬂe	CS 22051,10201 22001,10216
+Sternallee: Privatstraﬂe	CS 23651,5435 23590,5436 23595,5394 23658,5423
+Stillerzeile [89-95]: Privatgrundst¸ck, kein ˆffentlicher Durchgang	CS 24285,5472 24236,5594
+Apfelwicklerstr.: Privatstraﬂe	CS 21434,10678 21543,10724
+Apfelwicklerstr.: Privatstraﬂe	CS 21456,10631 21553,10671

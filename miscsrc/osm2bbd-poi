@@ -30,7 +30,7 @@ my @poi_files =
   qw(faehren icao kinos kneipen orte rbahnhof restaurants sbahnhof sehenswuerdigkeit ubahnhof);
 push @poi_files, qw( _education _oepnv _building);
 push @poi_files,
-  qw( _natural _landuse _sport _leisure _tourism _sport _shop _public_services);
+  qw( _natural _landuse _sport _leisure _tourism _shop _public_services);
 
 #@poi_files = qw( _oepnv faehren icao orte rbahnhof sbahnhof ubahnhof);
 
@@ -38,6 +38,7 @@ my $use_exact_streetchooser = 1;
 my $use_cooked_street_data;
 my $use_polar     = 1;
 my $data_is_wgs84 = 1;
+my $keep_coord    = 0;
 
 my $q = new CGI;
 my $kr;
@@ -179,6 +180,8 @@ sub get_nearest_crossing_coords {
         $x = $1;
         $y = $2;
     }
+
+    return "$x,$y" if $keep_coord;
 
     new_kreuzungen();
     my $xy;

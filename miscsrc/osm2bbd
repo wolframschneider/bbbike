@@ -17,7 +17,7 @@ use FindBin;
 use lib "$FindBin::RealBin/..";
 
 use vars qw($VERSION);
-$VERSION = 0.13;
+$VERSION = 0.14;
 
 use Cwd qw(cwd realpath);
 use Data::Dumper;
@@ -331,8 +331,14 @@ my $do_amenity = sub {
 	push @or, ["kinos", $F."X"];
     } elsif ($amenity =~ m{^(?:kindergarten|school)$}) {
 	add_underline(\@or, "_education", $F."X");
-    } elsif ($amenity =~ m{^(?:parking|car_rental)$}) {
-	add_underline(\@or, "_motortraffic", $F."#f0f0f0|IMG:Parking");
+    } elsif ($amenity eq 'parking') {
+	my $cat = ($F 
+		   ? $F."#f0f0f0|IMG:Parking" # XXX Note: Perl/Tk cannot handle IMG:Parking here (category_image mapping not used)
+		   : "Parking"
+		  );
+	add_underline(\@or, "_motortraffic", $cat);
+    } elsif ($amenity eq 'car_rental') {
+	add_underline(\@or, "_motortraffic", 'X');
     } elsif ($amenity eq 'border_control') {
 	push @or, ['grenzuebergaenge', 'GU'];
     } elsif ($amenity eq 'grave_yard') {
@@ -833,6 +839,12 @@ for my $osm_file (@osm_files) {
 
 	    if (exists $tag{'traffic_sign'} && $tag{'traffic_sign'} eq 'city_limit') {
 		push @or, ['ortsschilder', 'OS'];
+	    }
+
+	    if (exists $tag{'addr:city'} && exists $tag{'addr:housenumber'} &&
+		exists $tag{'addr:postcode'} && exists $tag{'addr:street'}) {
+		my $name = join("|", @tag{qw(addr:street addr:housenumber addr:postcode addr:city)});
+		push @or, ['_addr', 'HNR', name => $name];
 	    }
 
 	    if (!@or && !$ignore_unhandled && !$ignore_underline) {
@@ -1998,13 +2010,14 @@ sub output_meta {
 			    wasserumland => 1, # -"-
 			    wideregion   => 1, # -"-
 			    vbb          => 1, # even in Berlin, because we don't have the VBB zone info
-			    # following are skipped if no data was found
-			    (!$out{nolighting} || !@{ $out{nolighting} } ? (nolighting => 1) : ()),
-			    (!$out{faehren} || !@{ $out{faehren} } ? (faehren => 1) : ()),
 			   };
+    # following are skipped if no data was found
     for my $def (['u-bahn', ['ubahn', 'ubahnhof']],
 		 ['s-bahn', ['sbahn', 'sbahnhof']],
 		 ['r-bahn', ['rbahn', 'rbahnhof']],
+		 ['tram', ['comments_tram']],
+		 ['nolighting', ['nolighting']],
+		 ['faehren', ['faehren']],
 		) {
 	my($feature_name, $layers) = @$def;
     CHECK_EMPTY_LAYER: {

@@ -2239,7 +2239,7 @@ unless($skip_features{"strassen"}) {
 	$strcm->entryconfigure("last", -menu => $c_bpcm);
 	my @used_types;
 	foreach my $type (@comments_types) {
-	    next if $type =~ /^(cyclepath|mount|route)$/; # handled elsewhere
+	    next if $type =~ /^(cyclepath|mount|route|ferry)$/; # handled elsewhere
 	    if (!$advanced) {
 		# kfzverkehr: poor presentation
 		# scenic: almost no data
@@ -2267,10 +2267,6 @@ unless($skip_features{"strassen"}) {
 	    );
 	$comments_all_check_index = $c_bpcm->index('last');
     }
-
-    $strcm->checkbutton(-label => M"Fähren",
-			-variable => \$str_draw{'e'},
-			-command => sub { plot('str','e') });
 
     unless ($skip_features{"hoehe"}) {
 	$strcm->checkbutton(-label => M"Höhenangaben",
@@ -2650,6 +2646,24 @@ unless ($skip_features{"r-bahn"}) {
     menuright($rbahn_check, $rbcm);
     menuarrow($rbcmb, $rbcm, $col++,
 	      -menulabel => M"R-Bahn", -special => 'LAYER');
+}
+##### Ferries #####
+unless ($skip_features{'faehren'}) {
+    $ferry_photo = load_photo($misc_frame, 'ferry');
+    my $ferry_check = $misc_frame->$Checkbutton
+      (image_or_text($ferry_photo, 'F'),
+       -variable => \$str_draw{'e'},
+       -command => sub { plot('str','e') },
+      )->grid(-row => $curr_row, -column => $col, -sticky => 's');
+    $balloon->attach($ferry_check, -msg => M"Fähren");
+    my $ferrycmb = $misc_frame->Menubutton;
+    my $ferrycm = $ferrycmb->Menu(-title => M"Fähren");
+    menu_entry_choose_ort($ferrycm, 'e',
+			  -pchooseortargs => {'-markstartifactive' => 1},
+			 );
+    menuright($ferry_check, $ferrycm);
+    menuarrow($ferrycmb, $ferrycm, $col++,
+	      -menulabel => M"Fähren", -special => 'LAYER');
 }
 ##### Gewässer #####
 my $wasser_check;
@@ -3399,12 +3413,14 @@ unless ($skip_features{"sehenswuerdigkeiten"}) {
 		      -command => sub {
 			  pending(1, 'recalc-net');
 		      },);
-    $sb2m->checkbutton(-label => M"Fähren verwenden",
-                      -variable => \$use_faehre,
-                      -command => sub {
-                          pending(1, 'recalc-net');
-                      },
-		     );
+    unless ($skip_features{faehren}) {
+	$sb2m->checkbutton(-label => M"Fähren verwenden",
+			   -variable => \$use_faehre,
+			   -command => sub {
+			       pending(1, 'recalc-net');
+			   },
+			  );
+    }
     $sb2m->separator;
     $sb2m->checkbutton(-label => M"Straßenqualität-Optimierung",
 		      -variable => \$qualitaet_s_optimierung,
@@ -3414,6 +3430,7 @@ unless ($skip_features{"sehenswuerdigkeiten"}) {
 		       -command => sub {
 			   if ($strcat_optimierung) {
 			       $N_RW_optimization = 0;
+			       $N_RW1_optimization = 0;
 			   }
 		       },
 		     );
@@ -3429,6 +3446,7 @@ unless ($skip_features{"sehenswuerdigkeiten"}) {
 		       -command => sub {
 			   if ($radwege_optimierung) {
 			       $N_RW_optimization = 0;
+			       $N_RW1_optimization = 0;
 			   }
 		       }
 		      );
@@ -3438,6 +3456,17 @@ unless ($skip_features{"sehenswuerdigkeiten"}) {
 			   if ($N_RW_optimization) {
 			       $radwege_optimierung = 0;
 			       $strcat_optimierung = 0;
+			       $N_RW1_optimization = 0;
+			   }
+		       }
+		      );
+    $sb2m->checkbutton(-label => M"Hauptstraßen ohne Radwege meiden",
+		       -variable => \$N_RW1_optimization,
+		       -command => sub {
+			   if ($N_RW1_optimization) {
+			       $radwege_optimierung = 0;
+			       $strcat_optimierung = 0;
+			       $N_RW_optimization = 0;
 			   }
 		       }
 		      );
@@ -3484,9 +3513,11 @@ unless ($skip_features{"sehenswuerdigkeiten"}) {
 			  );
     }
     if ($advanced) { # XXX
-	$sb2m->checkbutton(-label => M"Straßenbahnschienen meiden",
-			   -variable => \$tram_optimization,
-			  );
+	unless ($skip_features{"tram"}) {
+	    $sb2m->checkbutton(-label => M"Straßenbahnschienen meiden",
+			       -variable => \$tram_optimization,
+			      );
+	}
     }
     unless ($skip_features{"hoehe"}) {
 	$sb2m->checkbutton(-label => M"Steigungsoptimierung",
@@ -5190,7 +5221,7 @@ sub handle_options {
 	  nogui => 1],		# XXX Tk::Getopt can't handle this yet
 	 ['radwegeoptimierung','!',0, var => \$radwege_optimierung,
 	  label => M"Radwege-Optimierung"],
-	 ['N_RW_optimization', '!', 0, var => \$N_RW_optimization, nogui => 1],
+	 ['N_RW_optimization', '!', 0, var => \$N_RW_optimization, nogui => 1],#XXX N_RW vs. N_RW1 missing!
 	 ['tram_optimization', '!', 0, var => \$tram_optimization, nogui => 1],
 	 ['greenoptimierung', '=i', 0, choices => [0,1,2],
 	  longhelp => "0: ".M("egal")."\n".
@@ -5616,7 +5647,8 @@ sub load_photos {
     $cal_photo           = load_photo($top, 'cal');
     $clock_photo	 = load_photo($top, 'clock');
     $night_photo	 = load_photo($top, 'night');
-    $ferry_photo         = load_photo($top, 'ferry');
+    $ferry_photo         = load_photo($top, 'ferry')
+	if !$ferry_photo;
     $ferry_klein_photo   = load_photo($top, 'ferry_klein');
     $zugbruecke_photo    = load_photo($top, 'zugbruecke');
     $zugbruecke_klein_photo
@@ -5847,6 +5879,7 @@ sub define_item_attribs {
     for (1 .. 10) {
 	$category_color{"RW".$_."?"} = $category_color{"RW".$_};
     }
+    $layer_category_color{'e'}->{'CS'} = $category_color{'Q'};
     %category_font_color =
 	(
 	 'W'  => '#2a45b7',
@@ -6000,9 +6033,10 @@ sub define_item_attribs {
     foreach (qw/gBO gP gD/) {
 	$line_dash{$_} = [@{ $line_dash{"g"}}];
     }
-    foreach (grep { $_ ne 'tram' } @comments_types) {
+    foreach (grep { $_ !~ m{^(tram|ferry)$} } @comments_types) {
 	$line_dash{"comm-".$_} = [@{ $line_dash{"comm"}}];
     }
+    $line_dash{'comm-ferry'} = $line_dash{'e'};
 
     %line_length =
 	('sperre1'  => [0, 0, 4, 5, 7, 10],
@@ -9036,12 +9070,13 @@ sub enter_opt_preferences {
     }
 
     my $N_RW_cb;
+    my $N_RW1_cb;
     my $cb3;
     $cb3 = $act_page[2]->Checkbutton
       (-text => M"Verwenden",
        -variable => \$radwege_optimierung,
        -command => sub { change_state_all($act_page[2], $radwege_optimierung,
-					  {$cb3=>3,$N_RW_cb=>1}); },
+					  {$cb3=>1,$N_RW_cb=>1,$N_RW1_cb=>1}); },
       )->grid(-row => $gridy++,
 	      -column => 2,
 	      -sticky => 'e');
@@ -9054,8 +9089,24 @@ sub enter_opt_preferences {
 	     if ($N_RW_optimization) {
 		 $radwege_optimierung = 0;
 		 $strcat_optimierung = 0;
+		 $N_RW1_optimization = 0;
 		 change_state_all($act_page[2], $radwege_optimierung,
-				  {$cb3=>1,$N_RW_cb=>1});
+				  {$cb3=>1,$N_RW_cb=>1,$N_RW1_cb=>1});
+	     }
+	 },
+	)->grid(-row => $gridy++,
+		-column => 0,
+		-sticky => "w");
+    $N_RW1_cb = $act_page[2]->Checkbutton
+	(-text => M"Hauptstraßen ohne Radwege meiden",
+	 -variable => \$N_RW1_optimization,
+	 -command => sub {
+	     if ($N_RW1_optimization) {
+		 $radwege_optimierung = 0;
+		 $strcat_optimierung = 0;
+		 $N_RW_optimization = 0;
+		 change_state_all($act_page[2], $radwege_optimierung,
+				  {$cb3=>1,$N_RW_cb=>1,$N_RW1_cb=>1});
 	     }
 	 },
 	)->grid(-row => $gridy++,
@@ -9979,6 +10030,8 @@ sub plotstr {
 	    $str = _get_wasser_obj($filename);
 	} elsif ($abk eq 'l') {
 	    $str = _get_landstr_obj();
+	} elsif ($abk eq 'e') {
+	    $str = _get_ferry_obj();
 	} elsif ($abk eq 'comm') {
 	    $str = _get_comments_obj();
 	} elsif ($abk eq 'fz') {
@@ -11291,6 +11344,17 @@ sub _get_landstr_obj {
     }
     return $obj[0] if (@obj == 1);
     new MultiStrassen @obj;
+}
+
+# Gibt ein Fähren-Objekt zurück.
+### AutoLoad Sub
+sub _get_ferry_obj {
+    my @obj;
+    push @obj, Strassen->new(get_strassen_file($str_file{'e'}));
+    push @obj, eval { Strassen->new(get_strassen_file($str_file{'comm-ferry'})) };
+    warn $@ if $@;
+    return $obj[0] if (@obj == 1);
+    MultiStrassen->new(@obj);
 }
 
 # Gibt ein Kommentar-Objekt zurück.
@@ -17216,7 +17280,7 @@ sub search_route {
 	      };
 	}
 
-	if ($N_RW_optimization) {
+	if ($N_RW_optimization || $N_RW1_optimization) {
 	    # XXX check if $N_RW_net is up-to-date with respect to its
 	    # sources, or whether a new $N_RW_net should be build
 	    if (!$N_RW_net) {
@@ -17229,10 +17293,12 @@ sub search_route {
 		}
 	    }
 	    if ($N_RW_net) {
-		my $penalty = { "H"    => 4,
-				"H_RW" => 1,
-				"N"    => 1,
-				"N_RW" => 1 };
+		my $penalty = { "H"     => 4,
+				"H_Bus" => ($N_RW1_optimization ? 4 : 1),
+				"H_RW"  => 1,
+				"N"     => 1,
+				"N_Bus" => 1,
+				"N_RW"  => 1 };
 		$extra_args{RadwegeStrcat} =
 		    {Net => $N_RW_net,
 		     Penalty => $penalty,
@@ -21759,6 +21825,7 @@ sub balloon_info_from_all_tags {
     my $comments_rx = join("|", map { "comm-" . quotemeta }
 			   grep { $_ ne "kfzverkehr" } # list types without meaningful "name" field XXX but maybe comm-kfzverkehr should have meaningful names some day...
 			   @Strassen::Dataset::comments_types);
+
     for my $item (@items) {
 	my(@tags) = $c->gettags($item);
 	if ($verbose && $verbose >= 2) {
@@ -21791,7 +21858,11 @@ sub balloon_info_from_all_tags {
 		}
 		$major_item_seen++;
 	    } else {
-		if ($tags[0] =~ m{^(qs|ql|hs|hl)$}) {
+		if (($tags[2]||'') =~ m{^e-(CS|img)$}) { # comm-ferry
+		    if ($label =~ m{^(?:.*)?:\s*(.*)}) {
+			$label = $1;
+		    }
+		} elsif ($tags[0] =~ m{^(qs|ql|hs|hl)$}) {
 		    if ($label =~ m{^(?:.*)?:\s*(.*)}) {
 			$label = $1;
 		    }

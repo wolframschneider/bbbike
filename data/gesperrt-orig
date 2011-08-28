@@ -251,7 +251,7 @@ Erlenweg	1 -3228,18103 -3327,18007
 Aspenweg	1 -3000,18192 -3020,18188 -3050,18164 -3096,18119 -3111,18105 -3168,18051 -3203,18014 -3224,17943
 Aspenweg	1 -3288,17831 -3244,17883 -3224,17943
 Pintschstr.	1 13342,13185 13438,12965
-Wolliner Str.	1 10405,14425 10320,14608
+#XXX del! --- Wolliner Str.	1 10405,14425 10320,14608
 Splanemannstr.	1 18301,9946 18389,9925 18408,10041 18403,10077
 Burgherrenstr.	1 8969,8640 9076,8783
 Travestr.	1 14835,11840 14897,11801 14977,11754
@@ -284,9 +284,7 @@ Braillestr.	1 4430,5324 4477,5250 4512,5199
 Mudrackzeile	1 6985,17812 7020,17690
 Gustav-Müller-Str.	1 7643,8634 7642,8815
 Gustav-Müller-Platz	1 7644,8560 7614,8599 7643,8634 7682,8598 7644,8560
-#: XXX wird die Einbahnstraßenregelung vielleicht aufgehoben?
-#: last_checked: 2011-07-13
-Niederlagstr.	1 9972,12184 9961,12273 9943,12364 9934,12418
+#XXX del --- #: XXX wird die Einbahnstraßenregelung vielleicht aufgehoben? --- #: last_checked: 2011-07-13 --- Niederlagstr.	1 9972,12184 9961,12273 9943,12364 9934,12418
 Kolk/Behnitz/Möllentordamm	1 -3042,14682 -3028,14640 -2951,14617 -2944,14652 -2942,14666 -3027,14689 -3042,14682
 Hertelstr.	1 4893,6900 4787,6899
 Karl-Marx-Platz	1 12980,7597 13100,7626
@@ -852,6 +850,9 @@ Landhausring	1 21710,12798 21866,12763 21893,12783 21900,12820 21880,12858 21729
 Kaulsdorfer Str.	1 22539,6258 22324,6397
 Kreisverkehr Brebacher Weg	1 21655,12521 21642,12538 21651,12569 21666,12577 21674,12565 21671,12532 21655,12521
 Kreisverkehr Brebacher Weg	1 21581,12182 21570,12191 21575,12212 21589,12217 21602,12208 21598,12185 21581,12182
+Hirteplatz: Kreisverkehr	1 23766,5281 23775,5271 23775,5258 23765,5248 23751,5248 23744,5262 23743,5268 23746,5276 23756,5280 23766,5281
+Löcknitzstr.	1 26496,5047 26612,5051
+Brösener Str.	1 26247,6228 26284,6130 26282,6033
 ######################################################################
 #
 # Potsdam
@@ -1144,8 +1145,8 @@ Alt-Biesdorf: unbequemes Passieren des Mittelstreifens	3nocross 21960,11269 2224
 Konrad-Wolf-Str./Große-Leege-Str.: wegen Absperrgitter nicht überquerbar	3nocross 16961,16042 16917,16001 16819,15912
 Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3nocross 2996,15771 2960,15847 2913,15944 2819,16141
 Königsberger Str.: Mittelstreifen nicht passierbar	3nocross 4251,2637 4212,2675 4164,2717
-#: note: Luftbild:
-Berliner Str.: Straßenbahntrasse	3nocross 10911,17275 10906,17331 10900,17397 10894,17470 10892,17491
+Berliner Str.: Straßenbahntrasse	3nocross 10911,17275 10906,17331 10900,17397
+Berliner Str.: Straßenbahntrasse	3nocross 10900,17397 10894,17470 10892,17491
 #: note: Luftbild:
 Berliner Str.: Straßenbahntrasse	3nocross 13737,15994 13826,16026 14014,16106
 Karl-Liebknecht-Str.: Straßenbahntrasse	3nocross 11149,13442 11092,13366 11080,13350 11027,13279 11021,13271
@@ -1329,12 +1330,22 @@ Berliner Str.: Straßenbahntrasse	3nocross 12396,17514 12436,17682 12467,17814
 Daumstr.: Mittelstreifen	3nocross -1821,16327 -1816,16111 -1815,15976
 Zossener Str.: Straßenbahntrasse	3nocross 22811,15753 22883,15740 23080,15700
 Landsberger Chaussee: Straßenbahntrasse	3nocross 22771,16194 22974,16139 23159,16086
+Salvador-Allende-Str.: Mittelstreifen	3nocross 23404,5325 23403,5385 23402,5483
+#: XXX Wie wird die Situation nach den Bauarbeiten aussehen?
+#: last_checked: 2011-08-14
+#: next_check: 2013-01-01
+Fürstenwalder Damm: Straßenbahntrasse	3nocross 23660,5477 23728,5446 23822,5403 23851,5389
 #
 ####################################################################
 #
 # Stellen, an denen getragen werden muß:
 # die Zahl hinter dem ":" entspricht ungefähr den verlorenen Sekunden
 # 
+tragen (16 Stufen)	0:25 22814,4505
+tragen (19 Stufen)	0:30 23930,6013
+tragen (16 Stufen)	0:25 23948,6054
+tragen (7 Stufen)	0:10 15879,10954
+tragen (8 Stufen)	0:10 15865,10965
 #: note: zwei Treppen: 9 Stufen + 6 Stufen
 tragen (15 Stufen)	0:25 27728,-3146
 tragen (4 Stufen)	0:6 27361,-1551
@@ -1567,6 +1578,8 @@ tragen, langgezogene Stufen (13 Stufen)	0:25 20704,1383
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+Drängelgitter (lichte Breite ca. 100cm)	BNP:3::trailer=10 21578,10413
+Drängelgitter (lichte Breite ca. 80cm)	BNP:5::trailer=no 21579,10345
 offenes Tor	BNP:3 24790,15447
 Drängelgitter (lichte Breite ca. 100cm)	BNP:3::trailer=10 23914,15453
 Drängelgitter	BNP:1::trailer=3 17317,12609
@@ -1832,9 +1845,7 @@ Tor	BNP:5 26888,13976
 #: next_check: 2012-01-01
 Sonnenkieker: Bauarbeiten	2:inwork 22610,13808 22669,13842 22692,13836
 # 
-#: last_checked: 2011-06-26
-#: XXX hier muss noch der genaue Wegverlauf ermittelt werden
-Uferweg am Salzhof: ein Teilabschnitt ist noch nicht freigegeben	2:inwork -1942,16105 -1979,15994 -1923,15684
+#XXX del --- #: last_checked: 2011-06-26 --- #: XXX hier muss noch der genaue Wegverlauf ermittelt werden --- Uferweg am Salzhof: ein Teilabschnitt ist noch nicht freigegeben	2:inwork -1942,16105 -1979,15994 -1923,15684
 # 
 #: last_checked: 2011-06-26 vvv
 #: next_check: 2011-12-31 vvv
@@ -1843,8 +1854,8 @@ Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,2
 #: next_check: ^^^
 #: last_checked ^^^
 # 
-#: last_checked: 2011-05-26
-#: next_check: 2011-07-20
+#: last_checked: 2011-08-19
+#: next_check: 2011-09-25
 Beuthstr.: Bauarbeiten für Anbindung der Axel-Springer-Str. zum Spittelmarkt	2:inwork 10229,11618 10197,11605 10166,11592
 # 
 #: by: somebody via phone call 
@@ -1870,13 +1881,15 @@ Tiergartenufer: Bauarbeiten, gesperrt	2:inwork 5711,11841 5565,11871
 # 
 #XXX del --- #: last_checked: 2011-04-08 --- Bebelplatz: Bauarbeiten, gesperrt	2:inwork 9679,12388 9700,12234
 #
-#: last_checked: 2011-05-20 vvv
+#: last_checked: 2011-08-19 vvv
+#: next_check: 2012-02-01 vvv
 Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
 Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9801,12245 9795,12293 9780,12401
+#: next_check: ^^^
 #: last_checked: ^^^
 # 
-#: last_checked: 2011-06-12
-#: next_check: 2011-10-01
+#: last_checked: 2011-08-19
+#: next_check: 2012-02-01
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10170,12261 10063,12438
 # 
 #: XXX wird es jemals wieder öffentlich befahrbar sein?
@@ -1888,7 +1901,7 @@ Boyenweg - Uferweg: wegen Bauarbeiten gesperrt	2:inwork 7938,14426 7886,14518 77
 #: next_check: 2012-01-01
 Treitschkestr.: Bauarbeiten am Kaufhaus, bis 2012	2:inwork 5219,6215 5125,6262 4971,6345
 # 
-#: last_checked: 2011-06-12
+#: last_checked: 2011-07-18 (Daniel Be.)
 #: next_check: 2012-01-01
 Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973
 # 
@@ -1934,13 +1947,14 @@ Radweg parallel zur Autobahn ist wegen Bauarbeiten am BAB gesperrt	2:inwork 5062
 #XXX del --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1002/nachricht3772.html --- #: next_check: 2010-10-01 --- Brücke über A10: Sperrung vom 15.02.2010 bis 01.10.2010	2:inwork 15337,24593 15490,24848
 #XXX del --- #: last_checked: 2010-09-11 --- #: next_check: 2010-12-31 --- #: XXX der Neubau wird "N" oder "NH" sein und Radwege haben --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0907/nachricht3563.html --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1005/nachricht3870.html --- #: by: http://www.altglienicke.de/aktuell.php : Sperrung aufgehoben (20.05.11) --- Wegedornbrücke: Vollsperrung, Neubau	2:inwork 20385,593 20442,564 20510,530 20534,501
 # 
-#: next_check: 2011-09-01
-Rathausbrücke: gesperrt (Neubau), Fertigstellung nicht vor März 2012	2:inwork 10362,12351 10422,12395
+#: next_check: 2012-02-15
+#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1108/nachricht4438.html
+Rathausbrücke: gesperrt (Neubau), Fertigstellung und Verkehrsfreigabe im Frühjahr 2012	2:inwork 10362,12351 10422,12395
 # 
 #XXX del --- #: last_checked: 2011-02-27 --- #: next_check: 2011-05-15 --- Vicki-Baum-Str.: noch in Bau, gesperrt	2:inwork 15753,10353 15823,10300
 # 
-#: last_checked: 2011-06
-#: next_check: 2011-08-01
+#: last_checked: 2011-08
+#: next_check: 2011-09-01
 #: XXX abhängiger Eintrag in vorfahrt-orig!
 Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14795,10473 14805,10518
 # 
@@ -1949,7 +1963,7 @@ Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,1029
 Brücke im Tiergarten: gesperrt	2:inwork 6406,11784 6467,11780
 # 
 #: by: tobias wirnsberger, Matthias Stief
-#: last_checked: 2011-07-16 (srt)
+#: last_checked: 2011-08-24 (srt, von der Bahn aus)
 #: next_check: 2011-12-01
 Unterführung unter Adlergestell und Bahn: wegen Brückenerneuerung gesperrt	2:inwork 20810,2398 20939,2413
 #

@@ -255,7 +255,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LMS_1134638526559',
        data  => <<EOF,
-userdel	2 15758,10578 15982,10765 16032,10842
+userdel	2 15758,10578 15982,10765 16003,10797 16032,10842
 userdel	2 15758,10578 15639,10469
 EOF
      },
@@ -1516,7 +1516,7 @@ EOF
        text  => 'Fürstenwalder Damm zwischen Bölschestr. und Stillerzeile Baustelle, Straße stadteinwärts gesperrt (bis Ende 07.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q3; 25579,5958 25121,5799
+userdel	q3; 25579,5958 25179,5819 25121,5799
 EOF
      },
      { from  => 1108681200, # 2005-02-18 00:00
@@ -1617,7 +1617,7 @@ EOF
        text  => 'Dahlwitzer Landstr. - Bölschestr. (Köpenick) in beiden Richtungen an der Bahnbrücke Bölschestr. Baustelle, Straße vollständig gesperrt (Brücken- und Straßenarbeiten) (bis 26.09.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 25585,6050 25579,5958
+userdel	q4 25584,6029 25579,5958
 EOF
      },
      { from  => 1110668400, # 2005-03-13 00:00
@@ -3399,13 +3399,13 @@ EOF
        text  => 'K 6753 von OL Braunsdorf bis OL Markgrafpieske grundhafter Ausbau Vollsp. 10.11.2005-23.12.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 47692,-6364 47806,-6168
+userdel	2 47692,-6364 47767,-6214
 userdel	2 47692,-6364 47514,-6402
 userdel	2 48136,-5051 48131,-4175
 userdel	2 48136,-5051 47885,-5561
-userdel	2 47885,-5561 47908,-5802
+userdel	2 47885,-5561 47794,-6060
 userdel	2 47514,-6402 47354,-6584
-userdel	2 47806,-6168 47908,-5802
+userdel	2 47767,-6214 47794,-6060
 EOF
      },
      { from  => 1135983600, # 2005-12-31 00:00
@@ -3649,7 +3649,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002885',
        data  => <<EOF,
-userdel	q4; 15639,10469 15758,10578 15982,10765 16032,10842
+userdel	q4; 15639,10469 15758,10578 15982,10765 16003,10797 16032,10842
 EOF
      },
      { from  => undef, # 
@@ -3879,7 +3879,7 @@ EOF
        data  => <<EOF,
 userdel	q4 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 24049,5380 23950,5342
 userdel	q4 25012,5754 25018,5756 25121,5799
-userdel	q4 25579,5958 25121,5799
+userdel	q4 25579,5958 25179,5819 25121,5799
 EOF
      },
      { from  => 1146520800, # 2006-05-02 00:00
@@ -6671,7 +6671,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004066',
        data  => <<EOF,
-userdel	2::inwork 25585,6050 25776,6054 25967,6125 26139,6188 26247,6228 28586,7139 29168,7350 29192,7368
+userdel	2::inwork 25584,6029 25776,6054 25967,6125 26139,6188 26247,6228 28586,7139 29168,7350 29192,7368
 EOF
      },
      { from  => 1163286000, # 2006-11-12 00:00
@@ -9360,7 +9360,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006236',
        data  => <<EOF,
-userdel	1::inwork 16032,10842 15681,10801 15433,10765 15388,10758 15272,10790
+userdel	1::inwork 16032,10842 15983,10836 15681,10801 15433,10765 15388,10758 15272,10790
 EOF
      },
      { from  => 1186081587, # 2007-08-02 21:06
@@ -10755,7 +10755,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_007457',
        data  => <<EOF,
-userdel	1::inwork 25579,5958 25121,5799
+userdel	1::inwork 25579,5958 25179,5819 25121,5799
 EOF
      },
      { from  => 1200178800, # 2008-01-13 00:00
@@ -11536,7 +11536,7 @@ EOF
        text  => 'Papierlager brennt, Köpenicker Str. ist zwischen Manteuffelstr. und Engeldamm gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 12055,11331 12304,11163
+userdel	2::inwork 12055,11331 12126,11283 12304,11163
 EOF
      },
      { from  => 1211828060, # 
@@ -12398,7 +12398,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_009763',
        data  => <<EOF,
-userdel	q4::inwork 22740,4415 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23055,4640 23363,4846 23451,4877
+userdel	q4::inwork 22740,4415 22759,4430 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23055,4640 23363,4846 23451,4877
 EOF
      },
      { from  => 1219528800, # 2008-08-24 00:00
@@ -12843,7 +12843,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010255',
        data  => <<EOF,
-userdel	1::inwork 16032,10842 15681,10801 15433,10765 15388,10758 15272,10790
+userdel	1::inwork 16032,10842 15983,10836 15681,10801 15433,10765 15388,10758 15272,10790
 EOF
      },
      { from  => 1223416800, # 2008-10-08 00:00
@@ -13142,7 +13142,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010255',
        data  => <<EOF,
-userdel	1::inwork 16032,10842 15681,10801 15433,10765 15388,10758 15272,10790
+userdel	1::inwork 16032,10842 15983,10836 15681,10801 15433,10765 15388,10758 15272,10790
 EOF
      },
      { from  => 1228431600, # 2008-12-05 00:00
@@ -13750,7 +13750,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_011757',
        data  => <<EOF,
-userdel	1::inwork 15982,10765 16032,10842
+userdel	1::inwork 15982,10765 16003,10797 16032,10842
 EOF
      },
      { from  => 1239912306, # 2009-04-16 22:05
@@ -15112,7 +15112,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013849',
        data  => <<EOF,
-userdel	q4::inwork 15639,10469 15758,10578 15982,10765 16032,10842
+userdel	q4::inwork 15639,10469 15758,10578 15982,10765 16003,10797 16032,10842
 EOF
      },
      { from  => 1249768800, # 2009-08-09 00:00
@@ -15800,7 +15800,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014045',
        data  => <<EOF,
-userdel	q4::inwork; 23451,4877 23363,4846 23055,4640 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22740,4415
+userdel	q4::inwork; 23451,4877 23363,4846 23055,4640 22959,4576 22893,4532 22862,4511 22832,4491 22791,4457 22759,4430 22740,4415
 EOF
      },
      { from  => 1250978400, # 2009-08-23 00:00
@@ -17671,10 +17671,10 @@ EOF
 EOF
      },
      { from  => 1304110406, # 2011-04-29 22:53
-       until => 1314914399, # 2011-09-01 23:59
+       until => 1315087199, # 2011-09-03 23:59 #        until => 1314914399, # 2011-09-01 23:59
        text  => 'Lahnstr. (Neukölln) Richtung Grenzallee zwischen Mierstr. und Niemetzstr. Baustelle, in beiden Richtungen gesperrt (bis Anfang 09/2011) ',
        type  => 'handicap',
-       source_id => 'INKO_107124',
+       source_id => 'INKO_107124', # auch: http://www.berlin.de/ba-neukoelln/presse/archiv/20110819.1100.355442.html
        data  => <<EOF,
 userdel	q4::inwork 13627,7047 13891,7107
 EOF
@@ -18119,7 +18119,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20100720.1055.303592.html',
        data  => <<EOF,
-userdel	q4::inwork 22605,15111 22449,15127 22409,15128 22343,15115 22059,15153
+userdel	q4::inwork 22605,15111 22449,15127 22419,15127 22343,15115 22059,15153
 EOF
      },
      { from  => 1281128604, # 2010-08-08 00:00 1281218400
@@ -18944,7 +18944,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110421.1205.341677.html',
        data  => <<EOF,
-userdel	q4::inwork 22740,4415 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23055,4640 23363,4846 23451,4877
+userdel	q4::inwork 22740,4415 22759,4430 22791,4457 22832,4491 22862,4511 22893,4532 22959,4576 23055,4640 23363,4846 23451,4877
 EOF
      },
      { from  => 1304676000, # 2011-05-06 12:00
@@ -19062,13 +19062,10 @@ userdel	2::inwork 15383,9191 14819,9462 14780,9480 14310,9692
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1314041104, # XXX
        text  => 'Fuldastr., von Donaustr. Richtung Karl-Marx-Str. ist die Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2011-06-09
-#: next_check: 2011-07-05
-#: XXX wie lange gilt die Sperrung?
 userdel	q4::inwork; 12549,8616 12500,8504
 EOF
      },
@@ -19096,13 +19093,14 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Burgstraße/Anna-Louisa-Karsch-Straße: Bauarbeiten, Einbahnstraßenregelung',
+       text  => 'Burgstraße: Bauarbeiten, Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
 #: by: wosch
 #: confirmed_by: srt
-#: last_checked: 2011-06-15
-userdel	q4::inwork; 10264,12826 10166,12777 10132,12941
+#: last_checked: 2011-08-19
+#: note: eigentlich Radfahren auf der Friedrichsbrücke jetzt auch verboten
+userdel	q4::inwork; 10166,12777 10132,12941
 EOF
      },
      { from  => 1307219374, # 2011-06-04 22:29
@@ -19350,15 +19348,15 @@ EOF
      },
      { from  => undef, # 
        until => 1320015599, # 2011-10-30 23:59
-       text  => 'Dörpfeldstr.: Bauarbeiten, Einbahnstraßenregelung',
+       text  => 'Dörpfeldstr.: Bauarbeiten, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork; 19904,3464 20012,3532
+userdel	q4::inwork 19904,3464 20012,3532
 EOF
      },
      { from  => 1310014800, # 2011-07-07 07:00
-       until => 1313337600, # 2011-08-14 18:00
-       text  => 'Geschwister-Scholl-Str./Tucholskystr. (Mitte): Bauarbeiten, Brücke vollständig gesperrt (bis Mitte 08/11) in beiden Richtungen Höhe Ebertsbrücke, 08.07.2011 07:00 Uhr bis 14.08.2011 18:00 Uhr ',
+       until => 1314806400, # 2011-08-31 18:00
+       text  => 'Geschwister-Scholl-Str./Tucholskystr. (Mitte): Bauarbeiten, Brücke vollständig gesperrt (bis Ende 08/11) in beiden Richtungen Höhe Ebertsbrücke, 08.07.2011 07:00 Uhr bis 31.08.2011 18:00 Uhr ',
        type  => 'gesperrt',
        source_id => 'INKO_096636',
        data  => <<EOF,
@@ -19453,9 +19451,9 @@ EOF
 userdel	q4::inwork; 9224,14169 9383,13978
 EOF
      },
-     { from  => 1312229500, # 2011-08-01 22:11
-       until => 1313791200, # 2011-08-20 00:00
-       text  => 'Oranienburg: B273: Kampfmitteluntersuchung OL Oranienburg, 01.08.2011 bis 19.08.2011 ',
+     { from  => 1313269753, # 2011-08-13 23:09
+       until => 1315605600, # 2011-09-10 00:00
+       text  => 'Oranienburg: B273: Kampfmitteluntersuchung OL Oranienburg, 01.08.2011 bis 09.09.2011 ',
        type  => 'gesperrt',
        source_id => '116501481',
        data  => <<EOF,
@@ -19526,6 +19524,127 @@ EOF
        data  => <<EOF,
 userdel	2::temp 8123,12615 8119,12414 8055,12186
 userdel	2::temp 8540,12420 8400,12417 8374,12416 8119,12414
+EOF
+     },
+     { from  => 1310464800, # 2011-07-12 12:00
+       until => 1314802800, # 2011-08-31 17:00
+       text  => 'Wartenberger Weg (Malchow): Baustelle, Straße vollständig gesperrt, auf der Dorfstr. Verkehrseinschränkungen (bis Ende 08/11) in beiden Richtungen an der Kreuzung Dorfstr., 13.07.2011 12:00 Uhr bis 31.08.2011 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'INKO_107049',
+       data  => <<EOF,
+userdel	q4::inwork 16094,19179 15640,19208
+EOF
+     },
+     { from  => 1313272800, # 2011-08-14 00:00
+       until => 1356994800, # 2013-01-01 00:00
+       text  => 'Wildau: L401: Straßenbau OD Wildau, Einmündung Richard-Sorge-Straße bis Stichkanal ab 15.08.11 Vollsperrung Richtung Königs Wusterhausen, 30.08.2010 bis 31.12.2012 ',
+       type  => 'handicap',
+       source_id => 'LS/S-SG33-W/10/173',
+       data  => <<EOF,
+userdel	q3::inwork; 26679,-8825 26381,-9753
+EOF
+     },
+     { from  => 1313270628, # 2011-08-13 23:23
+       until => 1313783686, # 1314827999, # 2011-08-31 23:59
+       text  => 'Rennbahnstr. (Weißensee) Richtung Heinersdorf Höhe Pasedagplatz Bauarbeiten, Fahrtrichtung gesperrt (bis Ende 08/11) ',
+       type  => 'handicap',
+       source_id => 'INKO_108874',
+       data  => <<EOF,
+userdel	q4::inwork; 14144,17165 14060,17221 13912,17320
+EOF
+     },
+     { from  => 1313270697, # 2011-08-13 23:24
+       until => 1318629600, # 2011-10-15 00:00
+       text  => 'Schenkenberg: L26: grundhafter Ausbau der L 26 OA Baumgarten - Knoten Schenkenberg, 02.05.2011 bis 14.10.2011 ',
+       type  => 'gesperrt',
+       source_id => 'LS/O-SG33-E/10/214-10',
+       data  => <<EOF,
+userdel	2::inwork 45906,105450 46581,105900
+EOF
+     },
+     { from  => 1313694142, # 2011-08-18 21:02
+       until => 1313989200, # 2011-08-22 07:00
+       text  => 'Schwarzer Weg (Mitte) in beiden Richtungen zwischen Invalidenstr. und Habersathstr. Veranstaltung, Straße vollständig gesperrt, 19.08.2011 12 Uhr bis 22.08.2011 07:00 ',
+       type  => 'gesperrt',
+       source_id => 'IM_017698',
+       data  => <<EOF,
+userdel	2::temp 8429,13903 8574,13666
+EOF
+     },
+     { from  => 1313553600, # 2011-08-17 06:00
+       until => 1313985600, # 2011-08-22 06:00
+       text  => 'Str. des 17. Juni (Tiergarten): Veranstaltung, Straße vollständig gesperrt in beiden Richtungen zwischen Y.-Rabin-Str. und Ebertstr., Ebertstr. ebenfalls gesperrt, 18.08.2011, 06:00 Uhr bis 22.08.2011, 06:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_017679',
+       data  => <<EOF,
+userdel	q4::temp 8089,12190 8214,12205 8538,12245
+userdel	q4::temp 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
+EOF
+     },
+     { from  => 1313596800, # 2011-08-17 18:00
+       until => 1313949600, # 2011-08-21 20:00
+       text  => 'Triftstr. (Reinickendorf): Veranstaltung, Straße vollständig gesperrt in beiden Richtungen zwischen Am Nordgraben und Holzhauser Str., 18.08.2011, 18:00 Uhr bis 21.08.2011, 20:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'IM_017672',
+       data  => <<EOF,
+userdel	2::temp 4273,20021 4319,20182
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Hausvogteiplatz: Wochenmarkt Mittwoch und Freitag 9-16 Uhr, Behinderungen möglich',
+       type  => 'gesperrt',
+       recurring => 1,
+       data  => <<EOF,
+#: by: http://www.berliner-woche.de/fileadmin/Wochenblatt-Ausgaben/2011/1122_MI.pdf
+	q4::temp:clock 9925,11947 9878,11857
+EOF
+     },
+     { from  => 1313733600, # 2011-08-19 08:00
+       until => 1313888400, # 2011-08-21 03:00
+       text  => 'Kirchstr. (Moabit) Veranstaltung zwischen Alt-Moabit und Helgoländer Ufer ab 20.08.2011, 08 Uhr bis 21.08.2011, 03:00 Uhr',
+       type  => 'handicap',
+       source_id => 'IM_017697',
+       data  => <<EOF,
+userdel	q4::temp 6608,12858 6661,13130
+EOF
+     },
+     { from  => 1314482400, # 2011-08-28 00:00
+       until => 1317506400, # 2011-10-02 00:00
+       text  => 'Vollsperrung der Schorfheidestraße zwischen Dannenwalder Weg und Wilhelmsruher Damm in Berlin-Reinickendorf aufgrund von Straßenbaumaßnahmen, vom 29.08.2011 bis voraussichtlich 01.10.2011 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110825.1435.356236.html',
+       data  => <<EOF,
+userdel	q4::inwork 6298,20599 6330,20742 6347,20819 6366,20902 6376,20951 6380,20983 6382,21109
+EOF
+     },
+     { from  => 1314482400, # 2011-08-28 00:00
+       until => undef, # XXX
+       text  => 'Kastanienallee: Fahrbahn zwischen Oderberger Straße und Schönhauser Allee/Eberswalder Straße ab Montag dem 29.8.2011 gesperrt',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20110826.1055.356350.html',
+       data  => <<EOF,
+#: XXX Ende der Bauarbeiten?
+userdel	q4::inwork 10881,15047 10838,14962 10723,14772
+EOF
+     },
+     { from  => 1314259200, # 2011-08-25 10:00
+       until => 1314576000, # 2011-08-29 02:00
+       text  => 'Berliner Allee (Weißensee): Veranstaltung, Fahrtrichtung gesperrt, stadteinwärts zwischen Pistoriusstr. und Langhansstr., 26.08.2011 10:00 Uhr bis 29.08.2011 02:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_017716',
+       data  => <<EOF,
+userdel	q4::temp; 14014,16106 13826,16026 13737,15994 13630,15956
+userdel	q4::temp; 13623,15954 13512,15909
+EOF
+     },
+     { from  => 1313913600, # 2011-08-21 10:00
+       until => 1342796400, # 2012-07-20 17:00
+       text  => 'Bäkestr. (Wannsee): Brückenarbeiten, Straße vollständig gesperrt, in beiden Richtungen zwischen Neue Kreisstr. und Königsweg, 22.08.2011 10:00 Uhr bis 20.07.2012 17:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'INKO_103963',
+       data  => <<EOF,
+userdel	2::inwork -7191,-1023 -7152,-1064 -7088,-1074 -7051,-1221
 EOF
      },
     );

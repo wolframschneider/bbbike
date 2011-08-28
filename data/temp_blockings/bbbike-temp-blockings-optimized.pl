@@ -1451,15 +1451,7 @@ userdel	2::temp 8119,12414 8055,12186
        undef,
        undef,
        undef,
-       {
-         'until' => 1312754400,
-         'text' => 'Müllerstr. (Wedding) in beiden Richtungen zwischen Leopoldplatz und Seestr. Veranstaltung, Straße vollständig gesperrt (5. bis 7. August 2011)',
-         'from' => 1312513200,
-         'id' => 1431,
-         'data' => 'userdel	2::temp 6790,16018 6914,15908 6936,15888 7043,15793 7129,15717 7198,15656 7277,15586
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2461,7 +2453,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'source_id' => 'INKO_107124',
-         'until' => 1314914399,
+         'until' => 1315087199,
          'text' => 'Lahnstr. (Neukölln) Richtung Grenzallee zwischen Mierstr. und Niemetzstr. Baustelle, in beiden Richtungen gesperrt (bis Anfang 09/2011) ',
          'from' => 1304110406,
          'id' => 2069,
@@ -2751,15 +2743,7 @@ userdel	q4::inwork 425,8766 490,8716
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1312754400,
-         'text' => 'Open Air Gallery am 7. August 2011 auf der Oberbaumbrücke ',
-         'from' => 1312581600,
-         'id' => 2206,
-         'data' => 'userdel	2::temp 13178,10623 13206,10651 13305,10789 13332,10832
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'source_id' => 'LS/O-SG33-E/11/044',
@@ -2796,29 +2780,19 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Fuldastr., von Donaustr. Richtung Karl-Marx-Str. ist die Fahrbahn gesperrt',
-         'from' => undef,
-         'id' => 2216,
-         'data' => '#: last_checked: 2011-06-09
-#: next_check: 2011-07-05
-#: XXX wie lange gilt die Sperrung?
-userdel	q4::inwork; 12549,8616 12500,8504
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
          'until' => undef,
-         'text' => 'Burgstraße/Anna-Louisa-Karsch-Straße: Bauarbeiten, Einbahnstraßenregelung',
+         'text' => 'Burgstraße: Bauarbeiten, Einbahnstraßenregelung',
          'from' => undef,
          'id' => 2219,
          'data' => '#: by: wosch
 #: confirmed_by: srt
-#: last_checked: 2011-06-15
-userdel	q4::inwork; 10264,12826 10166,12777 10132,12941
+#: last_checked: 2011-08-19
+#: note: eigentlich Radfahren auf der Friedrichsbrücke jetzt auch verboten
+userdel	q4::inwork; 10166,12777 10132,12941
 ',
          'type' => 'handicap'
        },
@@ -2913,17 +2887,17 @@ userdel	q4::inwork; 10264,12826 10166,12777 10132,12941
        undef,
        {
          'until' => 1320015599,
-         'text' => 'Dörpfeldstr.: Bauarbeiten, Einbahnstraßenregelung',
+         'text' => 'Dörpfeldstr.: Bauarbeiten, Fahrbahn gesperrt',
          'from' => undef,
          'id' => 2246,
-         'data' => 'userdel	q4::inwork; 19904,3464 20012,3532
+         'data' => 'userdel	q4::inwork 19904,3464 20012,3532
 ',
          'type' => 'handicap'
        },
        {
          'source_id' => 'INKO_096636',
-         'until' => 1313337600,
-         'text' => 'Geschwister-Scholl-Str./Tucholskystr. (Mitte): Bauarbeiten, Brücke vollständig gesperrt (bis Mitte 08/11) in beiden Richtungen Höhe Ebertsbrücke, 08.07.2011 07:00 Uhr bis 14.08.2011 18:00 Uhr ',
+         'until' => 1314806400,
+         'text' => 'Geschwister-Scholl-Str./Tucholskystr. (Mitte): Bauarbeiten, Brücke vollständig gesperrt (bis Ende 08/11) in beiden Richtungen Höhe Ebertsbrücke, 08.07.2011 07:00 Uhr bis 31.08.2011 18:00 Uhr ',
          'from' => 1310014800,
          'id' => 2247,
          'data' => 'userdel	2::inwork 9524,12950 9529,12925
@@ -2942,16 +2916,7 @@ userdel	2::inwork 16148,458 16169,458
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20110712.1215.351002.html',
-         'until' => 1313791199,
-         'text' => 'Fahrbahn am östlichen Herthaplatz wird ausgebaut, bis Mitte August 2011',
-         'from' => undef,
-         'id' => 2249,
-         'data' => 'userdel	q4::inwork 10599,19957 10614,19907
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110712.1035.350987.html',
          'until' => 1342389599,
@@ -2994,56 +2959,20 @@ userdel	q4::inwork 2295,20358 2362,20218 2402,20126
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'INKO_107796',
-         'until' => 1314025200,
-         'text' => 'Gartenstr. (Mitte): Baustelle, Fahrtrichtung gesperrt (bis Ende 08/11) Richtung Invalidenstr. zwischen Bernauer Str. und Invalidenstr., 01.08.2011 07:30 Uhr bis 22.08.2011 17:00 Uhr ',
-         'from' => 1312090200,
-         'id' => 2255,
-         'data' => 'userdel	q4::inwork; 9224,14169 9383,13978
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => '116501481',
-         'until' => 1313791200,
-         'text' => 'Oranienburg: B273: Kampfmitteluntersuchung OL Oranienburg, 01.08.2011 bis 19.08.2011 ',
-         'from' => 1312229500,
+         'until' => 1315605600,
+         'text' => 'Oranienburg: B273: Kampfmitteluntersuchung OL Oranienburg, 01.08.2011 bis 09.09.2011 ',
+         'from' => 1313269753,
          'id' => 2256,
          'data' => 'userdel	2::inwork -1887,38134 -2179,38179
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'INKO_108243',
-         'until' => 1312642800,
-         'text' => 'Pastor-Niemöller-Platz (Niederschönhausen): Baustelle, Einmündung Friedrichs-Engels-Str. vollständig gesperrt, Staugefahr (bis Anfang 08/11) im Kreisverkehr Einmündung Friedrich-Engels-Str., 25.07.2011 07:00 Uhr bis 06.08.2011 17:00 Uhr ',
-         'from' => 1311483600,
-         'id' => 2257,
-         'data' => 'userdel	q4::inwork 9826,19382 9791,19363 9789,19329
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'INKO_108454',
-         'until' => 1313161200,
-         'text' => 'Späthstr. (Treptow): Baustelle, Straße vollständig gesperrt (bis Mitte 08/11) in beiden Richtungen zwischen Königsheideweg und Neue Späthstr., 01.08.2011 07:00 Uhr bis 12.08.2011 17:00 Uhr ',
-         'from' => 1312088400,
-         'id' => 2258,
-         'data' => 'userdel	q4::inwork 15363,5668 15183,5480 15038,5235 14988,5214 14808,5202 14744,5211
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110727.1340.352586.html',
-         'until' => 1313359200,
-         'text' => 'Zabel-Krüger-Damm: Bauarbeiten, Einbahnstraßenregelung, auch in der Schonacher Str., vom 01.08.2011 bis voraussichtlich 14.08.2011',
-         'from' => 1312063200,
-         'id' => 2259,
-         'data' => 'userdel	q4::inwork; 4718,22384 4800,22418 4898,22459 5006,22507 4919,22658
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110727.1340.352585.html',
          'until' => 1314568800,
@@ -3054,36 +2983,94 @@ userdel	q4::inwork 2295,20358 2362,20218 2402,20126
 ',
          'type' => 'handicap'
        },
+       undef,
+       undef,
+       undef,
        {
-         'source_id' => 'INKO_108474',
-         'until' => 1312772400,
-         'text' => 'Holzhauser Str. (Reinickendorf) in beiden Richtungen zwischen Wittestr. und Berliner Str., Bauarbeiten, Straße vollständig gesperrt, 05.05.2011 bis 08.05.2011 05:00 Uhr',
-         'from' => 1312526331,
-         'id' => 2261,
-         'data' => 'userdel	2::inwork 3079,19045 2993,18962
+         'source_id' => 'INKO_107049',
+         'until' => 1314802800,
+         'text' => 'Wartenberger Weg (Malchow): Baustelle, Straße vollständig gesperrt, auf der Dorfstr. Verkehrseinschränkungen (bis Ende 08/11) in beiden Richtungen an der Kreuzung Dorfstr., 13.07.2011 12:00 Uhr bis 31.08.2011 17:00 Uhr ',
+         'from' => 1310464800,
+         'id' => 2264,
+         'data' => 'userdel	q4::inwork 16094,19179 15640,19208
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'LS/S-SG33-W/10/173',
+         'until' => 1356994800,
+         'text' => 'Wildau: L401: Straßenbau OD Wildau, Einmündung Richard-Sorge-Straße bis Stichkanal ab 15.08.11 Vollsperrung Richtung Königs Wusterhausen, 30.08.2010 bis 31.12.2012 ',
+         'from' => 1313272800,
+         'id' => 2265,
+         'data' => 'userdel	q3::inwork; 26679,-8825 26381,-9753
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'LS/O-SG33-E/10/214-10',
+         'until' => 1318629600,
+         'text' => 'Schenkenberg: L26: grundhafter Ausbau der L 26 OA Baumgarten - Knoten Schenkenberg, 02.05.2011 bis 14.10.2011 ',
+         'from' => 1313270697,
+         'id' => 2267,
+         'data' => 'userdel	2::inwork 45906,105450 46581,105900
 ',
          'type' => 'gesperrt'
        },
+       undef,
+       undef,
+       undef,
        {
-         'source_id' => 'IM_017646',
-         'until' => 1312776000,
-         'text' => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung, Straßen nördlich der Karl-Marx-Str. vollständig gesperrt, 05.08.2011 06:00 Uhr bis 08.08.2011 06:00 Uhr ',
-         'from' => 1312430400,
-         'id' => 2262,
-         'data' => 'userdel	2::temp 12360,12505 12364,12589
-userdel	2::temp 12891,12549 12869,12425
-userdel	2::temp 12635,12629 12606,12471
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Hausvogteiplatz: Wochenmarkt Mittwoch und Freitag 9-16 Uhr, Behinderungen möglich',
+         'from' => undef,
+         'id' => 2271,
+         'data' => '#: by: http://www.berliner-woche.de/fileadmin/Wochenblatt-Ausgaben/2011/1122_MI.pdf
+	q4::temp:clock 9925,11947 9878,11857
 ',
          'type' => 'gesperrt'
        },
+       undef,
        {
-         'source_id' => 'IM_017645',
-         'until' => 1312667999,
-         'text' => 'Yitzak-Rabin-Str. (Tiergarten) zwischen Str. des 17. Juni und Scheidemannstr sowie Scheidemannstr. und Heinrich-v.-Gagern-Str. gesperrt, ab 06.08.2011 07 Uhr bis ca. 24:00',
-         'from' => 1312520400,
-         'id' => 2263,
-         'data' => 'userdel	2::temp 8123,12615 8119,12414 8055,12186
-userdel	2::temp 8540,12420 8400,12417 8374,12416 8119,12414
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110825.1435.356236.html',
+         'until' => 1317506400,
+         'text' => 'Vollsperrung der Schorfheidestraße zwischen Dannenwalder Weg und Wilhelmsruher Damm in Berlin-Reinickendorf aufgrund von Straßenbaumaßnahmen, vom 29.08.2011 bis voraussichtlich 01.10.2011 ',
+         'from' => 1314482400,
+         'id' => 2273,
+         'data' => 'userdel	q4::inwork 6298,20599 6330,20742 6347,20819 6366,20902 6376,20951 6380,20983 6382,21109
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20110826.1055.356350.html',
+         'until' => undef,
+         'text' => 'Kastanienallee: Fahrbahn zwischen Oderberger Straße und Schönhauser Allee/Eberswalder Straße ab Montag dem 29.8.2011 gesperrt',
+         'from' => 1314482400,
+         'id' => 2274,
+         'data' => '#: XXX Ende der Bauarbeiten?
+userdel	q4::inwork 10881,15047 10838,14962 10723,14772
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_017716',
+         'until' => 1314576000,
+         'text' => 'Berliner Allee (Weißensee): Veranstaltung, Fahrtrichtung gesperrt, stadteinwärts zwischen Pistoriusstr. und Langhansstr., 26.08.2011 10:00 Uhr bis 29.08.2011 02:00 Uhr ',
+         'from' => 1314259200,
+         'id' => 2275,
+         'data' => 'userdel	q4::temp; 14014,16106 13826,16026 13737,15994 13630,15956
+userdel	q4::temp; 13623,15954 13512,15909
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'INKO_103963',
+         'until' => 1342796400,
+         'text' => 'Bäkestr. (Wannsee): Brückenarbeiten, Straße vollständig gesperrt, in beiden Richtungen zwischen Neue Kreisstr. und Königsweg, 22.08.2011 10:00 Uhr bis 20.07.2012 17:00 Uhr ',
+         'from' => 1313913600,
+         'id' => 2276,
+         'data' => 'userdel	2::inwork -7191,-1023 -7152,-1064 -7088,-1074 -7051,-1221
 ',
          'type' => 'gesperrt'
        }

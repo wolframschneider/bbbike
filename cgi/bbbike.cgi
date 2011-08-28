@@ -2171,10 +2171,7 @@ sub choose_form {
 	$onloadscript .= "init_hi(); window.onresize = init_hi; "
     }
     $onloadscript .= "focus_first(); ";
-    if ($is_beta) {
-	$onloadscript .= "check_locate_me(); ";
-    }
-
+    $onloadscript .= "check_locate_me(); ";
 
     if ($nice_berlinmap || $nice_abcmap) {
 	push @extra_headers, -onLoad => $onloadscript,
@@ -2225,7 +2222,7 @@ EOF
 	sub social_link {
 	    print qq{<span id="social">\n};
 	    print qq{<a href="$facebook_page" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="BBBike on Facebook"></a>\n} if $enable_facebook_t_link;
-	    print qq{<a href="http://twitter.com/BBBikeWorld/" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n} if $enable_twitter_t_link;
+	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n} if $enable_twitter_t_link;
 	    print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="small" count="false"></g:plusone>\n} if $enable_google_plusone_t_link;
 	    print qq{</span>\n};
 	}
@@ -2717,20 +2714,22 @@ EOF
 };
 		    }
 		}
+	    }
 
-		if ($type eq 'start' && $bi->{'can_css'} && $is_beta) {
-		    my $transpose_dot_func = "transpose_dot_func = " . overview_map()->{TransposeJS};
-		    print <<EOF;
+	    if ($type eq 'start' && $bi->{'can_css'}) {
+		my $transpose_dot_func = "transpose_dot_func = " . overview_map()->{TransposeJS};
+		print <<EOF;
 <div id="locateme" style="visibility:hidden;">
-  <a href="javascript:locate_me()">@{[ M("Aktuelle Position verwenden") ]}</a> @{[ experimental_label() ]}
+  <a href="javascript:locate_me()">@{[ M("Aktuelle Position verwenden") ]}</a>
 </div>
 <div id="locateme_marker" style="position:absolute; visibility:hidden;"><img src="$bbbike_images/bluedot.png" border=0 width=8 height=8></div>
 <script type="text/javascript"><!--
  $transpose_dot_func
 // --></script>
 EOF
-		}
+	    }
 
+	    if (!$smallform) {
 		print "</td><td>" if $bi->{'can_table'};
 		if ($nice_berlinmap && !$no_berlinmap) {
 		    print "<input type=hidden name=\"" . $type . "mapimg.x\" value=\"\">";
@@ -3811,6 +3810,7 @@ sub settings_html {
 <option @{[ $cat_checked->("H1") ]}>@{[ M("Hauptstraﬂen bevorzugen") ]}
 <option @{[ $cat_checked->("H2") ]}>@{[ M("nur Hauptstraﬂen benutzen") ]}
 <option @{[ $cat_checked->("N_RW") ]}>@{[ M("Hauptstraﬂen ohne Radwege/Busspuren meiden") ]}
+<option @{[ $cat_checked->("N_RW1") ]}>@{[ M("Hauptstraﬂen ohne Radwege meiden") ]}
 </select></td></tr>
 <tr><td>@{[ M("Bevorzugter Straﬂenbelag") ]}:</td><td><select $bi->{hfill} name="pref_quality">
 <option @{[ $qual_checked->("") ]}>@{[ M("egal") ]}
@@ -4244,19 +4244,21 @@ sub search_coord {
     # Kategorieoptimierung
     if (!$disable_other_optimizations && defined $q->param('pref_cat') && $q->param('pref_cat') ne '') {
 	my $penalty;
-	if ($q->param('pref_cat') eq 'N_RW') {
+	my $pref_cat = $q->param('pref_cat');
+	if ($pref_cat =~ m{^N_RW1?$}) {
 	    if (!$radwege_strcat_net) {
 		my $str = get_streets();
-		$radwege_strcat_net = new StrassenNetz $str;
+		$radwege_strcat_net = StrassenNetz->new($str);
 		$radwege_strcat_net->make_net_cyclepath
-		    (get_cyclepath_streets(),
-		     'N_RW', UseCache => 0, # UseCache => 1 for munich
-		    );
+		    (get_cyclepath_streets(), UseCache => 1);
 	    }
-	    $penalty = { "H"    => 4,
-			 "H_RW" => 1,
-			 "N"    => 1,
-			 "N_RW" => 1 };
+	    $penalty = { "H"     => 4,
+			 "H_Bus" => ($pref_cat eq 'N_RW1' ? 4 : 1),
+			 "H_RW"  => 1,
+			 "N"     => 1,
+			 "N_Bus" => 1,
+			 "N_RW"  => 1,
+		       };
 	    $extra_args{RadwegeStrcat} =
 		{Net => $radwege_strcat_net,
 		 Penalty => $penalty,
@@ -4265,30 +4267,30 @@ sub search_coord {
 	    if (!$strcat_net) {
 		my $str = get_streets();
 		$strcat_net = new StrassenNetz $str;
-		$strcat_net->make_net_cat(-usecache => 0); # 1 for munich
+		$strcat_net->make_net_cat(-usecache => 1);
 	    }
-	    if ($q->param('pref_cat') eq 'N2') {
+	    if ($pref_cat eq 'N2') {
 		$penalty = { "B"  => 4,
 			     "HH" => 4,
 			     "H"  => 4,
 			     "NH" => 2,
 			     "N"  => 1,
 			     "NN" => 1 };
-	    } elsif ($q->param('pref_cat') eq 'N1') {
+	    } elsif ($pref_cat eq 'N1') {
 		$penalty = { "B"  => 1.5,
 			     "HH" => 1.5,
 			     "H"  => 1.5,
 			     "NH" => 1,
 			     "N"  => 1,
 			     "NN" => 1 };
-	    } elsif ($q->param('pref_cat') eq 'H1') {
+	    } elsif ($pref_cat eq 'H1') {
 		$penalty = { "B"  => 1,
 			     "HH" => 1,
 			     "H"  => 1,
 			     "NH" => 1,
 			     "N"  => 1.5,
 			     "NN" => 1.5 };
-	    } elsif ($q->param('pref_cat') eq 'H2') {
+	    } elsif ($pref_cat eq 'H2') {
 		$penalty = { "B"  => 1,
 			     "HH" => 1,
 			     "H"  => 1,
@@ -7928,7 +7930,7 @@ Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Projec
 <div id="footer_community">
   <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="Donate to bbbike.org" border="0"></a>
   <a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
-  <a href="$community_link"><img class="logo" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
+  <a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
   <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>
   $google_plusone
   $rss_icon
