@@ -798,7 +798,7 @@ my $is_streets;
   my $all = defined $q->param('all') ? $q->param('all') : 0;
 
   # request from internal IP address 10.x.x.x
-  my $local_host = $q->remote_host() =~ /^10\./ ? 1 : 0;
+  my $local_host = $q->remote_host() =~ /^(10\.|127\.0\.0\.1)/ ? 1 : 0;
 
   if ($q->param('cache') || $all >= 2 || $local_host) {
      eval {
