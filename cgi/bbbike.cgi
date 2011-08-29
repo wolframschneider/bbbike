@@ -1944,7 +1944,7 @@ sub choose_form {
 	    if (!$plz_obj) {
 		# Notbehelf. PLZ sollte möglichst installiert sein.
 		my $str = get_streets();
-		my @res = $str->agrep($$oneref);
+		my @res = $str->agrep($$oneref, 'utf8_database' => $osm_data);
 		if (@res) {
 		    $$nameref = $res[0];
 		}
@@ -2007,7 +2007,7 @@ sub choose_form {
 		    my($producer, $label) = @$def;
 		    if (my $str = $producer->()) {
 			warn "Suche '$$oneref' in der $label.\n" if $debug;
-			my @res = $str->agrep($$oneref);
+			my @res = $str->agrep($$oneref, 'utf8_database' => $osm_data);
 			if (@res) {
 			    my @matches;
 			    for my $res (@res) {
@@ -2095,7 +2095,7 @@ sub choose_form {
 	    }
 
 	    if ($multiorte) {
-		my @orte = $multiorte->agrep($$oneref, Agrep => $matcherr);
+		my @orte = $multiorte->agrep($$oneref, Agrep => $matcherr, 'utf8_database' => $osm_data);
 		if (@orte) {
 		    use constant MATCHREF_ISORT_INDEX => 5;
 		    push @$matchref, map { [$_, undef, undef, undef, undef, 1] } @orte;

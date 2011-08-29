@@ -108,7 +108,7 @@ sub new_with_removed_points {
 sub agrep {
     my($self, $pattern, %arg) = @_;
 
-    my $utf8_database = 1;
+    my $utf8_database = defined $arg{'utf8_database'} ? $arg{'utf8_database'} : 0;
     my $debug = 0;
 
     if ($utf8_database && !Encode::is_utf8($pattern)) {
@@ -187,7 +187,8 @@ sub agrep {
 	    $grep_type = 'perl';
 	}
     }
-return () if !@data;
+    #return () if !@data;
+
     my @def;
     if ($arg{ErrorDef}) {
 	@def = @{$arg{ErrorDef}};
@@ -224,11 +225,15 @@ return () if !@data;
 	} elsif ($grep_type eq 'approx' && $err) {
 	    next if $begin || $err > 2; # Bug bei $err == 3
 	    $grep_pattern =~ s/[()]/./g; # String::Approx-Bug?
+
 warn "greppat=$grep_pattern" if $debug;
 warn "e " . scalar(@data) if $debug;
+
 	    @this_res = String::Approx::amatch
 	      ($grep_pattern, ['i', $err], @data);
+
 warn "done " . scalar(@data) if $debug;
+
 	} else { # weder agrep noch String::Approx
 	    $grep_pattern = ($begin ? "^$grep_pattern" : $grep_pattern);
 	    if ($err == 0) {
