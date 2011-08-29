@@ -30,10 +30,12 @@ Angerm¸nder Str.	X 1,1
 Unkeallee (A)	X 1,1
 Unkeallee (B)	X 1,1
 Weiﬂenseer Weg	X 1,1
+Garibaldistr. (13158)	N 13.36129,52.58418 13.36138,52.58526 13.36158,52.58592 13.36188,52.58604 13.36248,52.58626 13.36337,52.58614 13.36544,52.58593 13.36688,52.58554 13.36884,52.58491
 EOF
+#Bergstr. (Mitte)	N 9792,13681 9718,13885 9663,14036 9399,14143
 
 my @search_types = ("agrep", "String::Approx", "perl");
-my $non_approx_tests = 7;
+my $non_approx_tests = 9;
 my $approx_tests     = 2;
 my $tests_per_type = $non_approx_tests + $approx_tests;
 
@@ -94,9 +96,11 @@ for my $search_def (@search_types) {
 	    is_deeply([$s->agrep($supply, %args)], $expected, "Search for '$supply' ($search_def, $encoding)");
 	};
 	$check->("Dudenstr", ["Dudenstr."]);
+	$check->("garibaldistr", ["Garibaldistr. (13158)"]);
 	$check->("Angerm¸nder Str", ["Angerm¸nder Str."]);
 	$check->("Weiﬂenseer Weg", ["Weiﬂenseer Weg"]);
 	$check->("Unkeallee", ["Unkeallee (A)", "Unkeallee (B)"]);
+	$check->("Garibaldi", ["Garibaldistr. (13158)"]);
 	$check->("Really does not exist!", []);
 	{
 	    local $TODO = "Not implemented yet: substituting straﬂe with str";
