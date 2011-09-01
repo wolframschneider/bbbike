@@ -201,15 +201,15 @@ strassen:	.strassen.tmp plaetze routing_helper-orig
 	mv $@~ $@
 	-@$(READONLY) $@
 
-.strassen.tmp: strassen-orig
+# XXX old rule, may be deleted some day
+XXX-strassen-tmp-without-NH:
 	$(CONVERT_ORIG) -keep-directive alias -keep-old-name -5y strassen-orig |\
 	    ${REPLACESTRASSEN} -catexpr 's/NH/N/' > $@~
-	mv $@~ $@
-
-# Just for testing:
-XXX-strassen-tmp-with-NH:
-	$(CONVERT_ORIG) -keep-directive alias -keep-old-name -5y strassen-orig > .strassen.tmp~
 	mv .strassen.tmp~ .strassen.tmp
+
+.strassen.tmp: strassen-orig
+	$(CONVERT_ORIG) -keep-directive alias -keep-old-name -5y strassen-orig > .strassen.tmp~
+	mv $@~ $@
 
 .for f in ${COOKED_TARGETS}
 _f_raw_${f}:=${f:S/-cooked$//}
@@ -1600,7 +1600,7 @@ ${PERSISTENTTMPDIR}/crossings_bahn.bbd:	strassen sbahn rbahn brunnels
 ${PERSISTENTTMPDIR}/crossings_gewaesser.bbd:	\
 					strassen wasserstrassen brunnels
 	${PERL} ${MISCSRCDIR}/check_crossings -v-if-interactive \
-	    -ignore "Fasaneriegraben,Packereigraben,Tränkegraben,Kraatzgraben,Teufelsseekanal,(See im Tiergarten),,Luiseninsel,Fennpfuhl,Heidekampgraben,Karpfenteich,Panke,Nordgraben,Tegeler Fließ,Hermsdorfer See,Wuhle,Neue Wuhle,Flutgraben,Kreuzgraben,Zingergraben,Iderfenngraben,Bäke,Bullengraben,Spektegraben,Bruchstückengraben,Fredersdorfer Mühlenfließ,Neuenhagener Mühlenfließ,Plumpengraben,Kleiner Jürgengraben,Rudower Fließ,Grützmachergraben,Kanal I,Kanal II,Kanal III,Kanal IV,Kanal V,Kanal in Neu-Venedig" \
+	    -ignore "Fasaneriegraben,Packereigraben,Tränkegraben,Kraatzgraben,Teufelsseekanal,(See im Tiergarten),,Luiseninsel,Fennpfuhl,Heidekampgraben,Karpfenteich,Panke,Nordgraben,Tegeler Fließ,Hermsdorfer See,Neue Wuhle,Flutgraben,Kreuzgraben,Zingergraben,Iderfenngraben,Bäke,Bullengraben,Spektegraben,Bruchstückengraben,Fredersdorfer Mühlenfließ,Neuenhagener Mühlenfließ,Plumpengraben,Kleiner Jürgengraben,Rudower Fließ,Grützmachergraben,Kanal I,Kanal II,Kanal III,Kanal IV,Kanal V,Kanal in Neu-Venedig" \
 	    -o $@~ -against brunnels \
 	    strassen wasserstrassen
 	mv $@~ $@
