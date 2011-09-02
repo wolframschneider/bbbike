@@ -8,6 +8,7 @@ use FindBin;
 use lib ( "$FindBin::RealBin/..", "$FindBin::RealBin/../lib" );
 use Strassen::Core;
 use Time::HiRes qw( gettimeofday tv_interval );
+use Data::Dumper;
 
 use strict;
 use warnings;
@@ -22,12 +23,19 @@ my @streets = (
 );
 
 plan tests => scalar(@streets) * 3;
+my $debug = 0;
 
 my $strassen = "data-osm/Berlin/strassen";
 my $s_utf8   = Strassen->new($strassen);
 
 # agrep or perl
 # String::Approx or perl
+
+sub elapsed {
+    my $time_start = shift;
+    my $elapsed = tv_interval( $time_start, [gettimeofday] );
+    return int( $elapsed * 100 ) / 100;
+}
 
 for my $search_def (@search_types) {
     local $Strassen::OLD_AGREP;
@@ -53,9 +61,16 @@ for my $search_def (@search_types) {
 
         my $check = sub {
             my ( $supply, $expected ) = @_;
+            my $time_start = [gettimeofday];
+
             local $Test::Builder::Level = $Test::Builder::Level + 1;
-            is_deeply( [ $s->agrep( $supply, %args ) ],
-                $expected, "Search for '$supply' ($search_def, $encoding)" );
+            my @result = $s->agrep( $supply, %args );
+            warn Dumper( \@result ) if $debug >= 2;
+
+            is_deeply( \@result, $expected,
+                    "Search for '$supply' ($search_def, $encoding) in "
+                  . &elapsed($time_start)
+                  . " seconds" );
         };
 
         foreach my $test (@streets) {
@@ -63,5 +78,4 @@ for my $search_def (@search_types) {
         }
     }
 }
-
 __END__
