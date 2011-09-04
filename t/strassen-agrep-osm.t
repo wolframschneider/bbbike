@@ -22,10 +22,17 @@ my @streets = (
     [ "Really does not exist!", [] ],
 );
 
-plan tests => scalar(@streets) * 3;
 my $debug = 0;
 
 my $strassen = "data-osm/Berlin/strassen";
+
+if (! -r $strassen) {
+    diag "File '$strassen' does not exists, ignore tests\n";
+    exit(0);
+} else {
+    plan tests => scalar(@streets) * 3;
+}
+
 my $s_utf8   = Strassen->new($strassen);
 
 # agrep or perl
