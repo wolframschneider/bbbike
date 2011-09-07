@@ -1945,7 +1945,7 @@ sub choose_form {
 	    my $str = get_streets();
             $str->{File} = "strassen";
 		
-	    my @res = $str->agrep($$oneref, 'utf8_database' => $osm_data, 'uniqe' => $osm_data);
+	    my @res = $str->agrep($$oneref, 'utf8_database' => $osm_data, 'uniqe' => $osm_data, 'debug' => $debug);
 	    warn "agrep result: ", Dumper(\@res), "\n" if $debug;
 
 	    my @matches;
