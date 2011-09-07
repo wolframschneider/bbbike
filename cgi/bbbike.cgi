@@ -1953,7 +1953,7 @@ sub choose_form {
 		my $ret = $str->get_by_name($res);
                 if ($ret) {
                     my($street, $citypart) = Strasse::split_street_citypart($res);
-                    push @matches, [$res, "", undef, $ret->[1][0]];
+                    push @matches, [$res, "", undef, undef]; #$ret->[1][0]];
                 }
 	    }
 
@@ -2618,7 +2618,7 @@ EOF
 		if ($nice_berlinmap) {
 		    print " onclick='set_street_in_berlinmap(\"$type\", $out_i);'";
 		}
-		print " type=radio name=" . $type . "2";
+		print " type=radio name=" . $type . ($osm_data ? "" : "2");
 		if ($is_ort && $multiorte) {
 		    my($ret) = $multiorte->get_by_name($s->[0]);
 		    my $xy;
@@ -2630,6 +2630,8 @@ EOF
 		} else {
 		    $strasse2val = join($delim, @$s); # 0..3
 		}
+                $strasse2val = $s->[0] if $osm_data;
+
 		print " value=\"$strasse2val\"";
 		if (!$checked) {
 		    print " checked";
