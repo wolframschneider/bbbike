@@ -369,13 +369,15 @@ EOF
     # log route queries
     if ( $log_routes && !$cache ) {
 
+      eval {
         # utf8 fixes
         if ($cgi_utf8_bug) {
             foreach my $key (qw/startname zielname vianame/) {
-                my $val = Encode::decode( "utf8", $q->param($key) );
+                my $val =  $q->param($key);
+		$val = Encode::decode( "utf8", $val); 
 
                 # XXX: have to run decode twice!!!
-                $val = Encode::decode( "utf8", $val );
+                #$val = Encode::decode( "utf8", $val );
 
                 $q->param( $key, $val );
             }
@@ -383,6 +385,7 @@ EOF
 
         my $url = $q->url( -query => 1, -full => 1 );
         warn "URL:$url\n";
+      };
     }
     return $html;
 }
