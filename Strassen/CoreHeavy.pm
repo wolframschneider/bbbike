@@ -109,12 +109,13 @@ sub new_with_removed_points {
 # agrep wrapper
 sub agrep {
     my $self = shift;
+    my $name = shift;
     my %args = @_;
 
-    my @res = $self->_agrep(@_);
+    my @res = $self->_agrep($name, @_);
 
     # unique street list
-    if ($args{'uniqe'}) {
+    if ($args{'unique'}) {
 	my %res = map { $_ => 1 } @res;
 	return sort keys %res;
     } 
