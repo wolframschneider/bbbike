@@ -105,7 +105,27 @@ sub new_with_removed_points {
 # Agrep: maximale Anzahl von erlaubten Fehlern
 # Return value: Array with matched street names
 ### AutoLoad Sub
+
+# agrep wrapper
 sub agrep {
+    my $self = shift;
+    my %args = @_;
+
+    my @res = $self->_agrep(@_);
+
+    # unique street list
+    if ($args{'uniqe'}) {
+	my %res = map { $_ => 1 } @res;
+	return sort keys %res;
+    } 
+
+    # unfiltered list
+    else {
+	return @res;
+    }
+}
+
+sub _agrep {
     my($self, $pattern, %arg) = @_;
 
     my $utf8_database = defined $arg{'utf8_database'} ? $arg{'utf8_database'} : 0;
