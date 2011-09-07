@@ -7952,7 +7952,7 @@ my $s_copyright = <<EOF;
 <a href="/help.html">$help</a> |
 <a href="/app.html">$app</a> |
 <a href="$community_link">$donate</a> |
-<a href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
+<a title="search time: $real_time seconds" href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
 $list_of_all_streets $permalink_text
 </div>
 </div>
