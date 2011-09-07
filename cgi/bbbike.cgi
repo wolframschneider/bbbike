@@ -21,8 +21,10 @@ bbbike.cgi - CGI interface to bbbike
 
 BEGIN {
     $ENV{SERVER_NAME} ||= "";
-    open(STDERR, ">/home/groups/b/bb/bbbike/bbbike.log")
-	if $ENV{SERVER_NAME} =~ /sourceforge/ && -w "/home/groups/b/bb/bbbike";
+    open(STDERR, ">/tmp/bbbike.log")
+	if $ENV{SERVER_NAME} =~ /sourceforge/ ||
+           $ENV{SERVER_NAME} =~ m,^(dev|test).*$,;
+	 
     $^W = 1 if $ENV{SERVER_NAME} =~ /herceg\.de/i;
     $main::datadir = $ENV{'DATA_DIR'} || "data";
     $ENV{LANG} = 'C'; 
@@ -63,6 +65,7 @@ use Encode;
 use BBBikeGooglemap;
 use BBBikeAds;
 use BBBikeElevation;
+use Data::Dumper;
 
 use strict;
 use vars qw($VERSION $VERBOSE $WAP_URL
@@ -1936,6 +1939,37 @@ sub choose_form {
 # 		next;
 # 	    }
 # 	}
+    
+    if ($osm_data ) {
+	if ($$nameref eq '' && $$oneref ne '') {
+	    my $str = get_streets();
+            $str->{File} = "strassen";
+		
+	    my @res = $str->agrep($$oneref, 'utf8_database' => $osm_data, 'uniqe' => $osm_data);
+	    warn "agrep result: ", Dumper(\@res), "\n" if $debug;
+
+	    my @matches;
+	    foreach my $res (@res) {
+		my $ret = $str->get_by_name($res);
+                if ($ret) {
+                    my($street, $citypart) = Strasse::split_street_citypart($res);
+                    push @matches, [$res, "", undef, $ret->[1][0]];
+                }
+	    }
+
+	    if (@matches == 1) {
+                $$oneref = $res[0];
+                $$nameref = $res[0];
+
+	        warn "nameref: $$nameref\n" if $debug;;
+	    } else {
+		@$matchref = @matches;
+		warn "matches: ", Dumper(\@matches), "\n";
+	    }
+
+	    next;
+	}
+    }
 
 	# Überprüfen, ob eine Straße in PLZ vorhanden ist.
 	if ($$nameref eq '' && $$oneref ne '') {
