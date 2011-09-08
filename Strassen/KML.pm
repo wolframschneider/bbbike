@@ -1,10 +1,9 @@
 # -*- perl -*-
 
 #
-# $Id: KML.pm,v 1.10 2008/05/12 16:04:23 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2007 Slaven Rezic. All rights reserved.
+# Copyright (C) 2007,2011 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,7 +15,7 @@ package Strassen::KML;
 
 use strict;
 use vars qw($VERSION $TEST_SET_NAMESPACE_DECL_URI_HACK);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.10 $ =~ /(\d+)\.(\d+)/);
+$VERSION = 1.12;
 
 use base qw(Strassen);
 
@@ -138,6 +137,7 @@ sub bbd2kml {
     my($self, %args) = @_;
     my $document_name = delete $args{documentname} || 'BBBike-Route';
     my $document_description = delete $args{documentdescription} || "";
+    my $with_start_goal_icons = delete $args{startgoalicons};
 
     my $xy2longlat = \&xy2longlat;
     my $map = $self->get_global_directive("map");
@@ -197,6 +197,27 @@ EOF
     </Style>
 EOF
     }
+    if ($with_start_goal_icons) {
+	$kml_tmpl .= <<EOF;
+    <Style id="start">
+      <IconStyle>
+        <scale>2</scale>
+        <Icon>
+          <href>http://www.bbbike.de/BBBike/images/flag2_bl_centered.png</href>
+        </Icon> 
+      </IconStyle>
+    </Style>
+    <Style id="goal">
+      <IconStyle>
+        <scale>2</scale>
+        <Icon>
+          <href>http://www.bbbike.de/BBBike/images/flag_ziel_centered.png</href>
+        </Icon> 
+      </IconStyle>
+    </Style>
+EOF
+    }
+    my $is_first_route = 1;
     for my $route (@routes) {
 	my($name, $coords, $color, $dist) = @{$route}{qw(name coords color dist)};
 	my $dist_km = m2km($dist);
@@ -206,6 +227,26 @@ EOF
       <name>@{[ xml($name) ]}</name>
       <description>@{[ xml($dist_km) ]}</description>
       <styleUrl>#@{[ xml($styles{$color}) ]}</styleUrl> 
+EOF
+	if ($is_first_route) {
+	    $is_first_route = 0;
+	    if (!$with_start_goal_icons) {
+		# Without the start/goal icons the route is centered
+		# and not completely shown. In this case it's better
+		# to specify a LookAt point. With the altitude=2000m a
+		# good portion of the route is shown.
+		my($lon,$lat) = $coords =~ m{^([^,]+),(\S+)};
+		$kml_tmpl .= <<EOF;
+      <!-- Center to start -->
+      <LookAt>
+        <longitude>$lon</longitude>
+        <latitude>$lat</latitude>
+        <range>2000</range>
+      </LookAt>
+EOF
+	    }
+	}
+	$kml_tmpl .= <<EOF;
       <LineString>
         <extrude>1</extrude>
         <tessellate>1</tessellate>
@@ -217,13 +258,97 @@ EOF
     </Placemark>
 EOF
     }
+    if ($with_start_goal_icons && @routes) {
+	my($startcoord) = $routes[0]->{coords}  =~ m{^(\S+)};
+	my($goalcoord)  = $routes[-1]->{coords} =~ m{(\S+)$};
+	$kml_tmpl .= <<EOF;
+    <Placemark>
+      <styleUrl>#start</styleUrl>
+      <Point>
+        <coordinates>$startcoord</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <styleUrl>#goal</styleUrl>
+      <Point>
+        <coordinates>$goalcoord</coordinates>
+      </Point>
+    </Placemark>
+EOF
+    }
     $kml_tmpl .= <<EOF;
   </Document>
 </kml>
 EOF
-    
+    $kml_tmpl;
 }
 
 1;
 
 __END__
+
+=head1 NAME
+
+Strassen::KML - convert between bbd and kml files
+
+=head1 SYNOPSIS
+
+    use Strassen::KML;
+    $kml_s = Strassen::KML->new($s);
+    $kml = $kml_s->bbd2kml;
+
+=head1 DESCRIPTION
+
+Convert between BBBike's bbd format and Google's kml format.
+
+=head2 Converting from bbd to kml
+
+Call the constructor C<new> with a L<Strassen> object.
+
+Then use the method C<bbd2kml> to create a KML string.
+
+The C<bbd2kml> method takes the following optional named parameters:
+
+=over
+
+=item documentname => $name
+
+The KML document name. Defaults to "BBBike-Route".
+
+=item documentdescription => $description
+
+The KML document description. No default.
+
+=item startgoalicons => $bool
+
+If true, then create references to start/goal icons for the
+beginning/end of the route. The icon images are fetched from
+L<http://www.bbbike.de>.
+
+=back
+
+=head2 Covnerting from kml/kmz to bbd
+
+Call the constructor C<new> with a C<kml> or C<kmz> filename. After
+this, the constructed object behaves like a L<Strassen> object.
+
+The constructor takes the following optional named parameters:
+
+=over
+
+=item name => $name
+
+The route name. Defaults to "Route". Note that in the future kml's
+name element may be used for this.
+
+=item cat => $cat
+
+The route category. Defaults to "X".
+
+=back
+
+=head1 AUTHOR
+
+Slaven Rezic
+
+=cut

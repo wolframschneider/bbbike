@@ -90,16 +90,7 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       {
-         'until' => 1315173600,
-         'text' => 'Alt-Rudow in beiden Richtungen, zwischen Krokusstr. und Neudecker Weg Veranstaltung, Straße vollständig gesperrt (3. und 4. Septermber 2011), Rudower Septermbermeile',
-         'from' => 1314914400,
-         'id' => 112,
-         'data' => 'userdel	2 16610,1715 16805,1488 16849,1437
-userdel	2 16975,1262 16849,1437
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1067,8 +1058,8 @@ userdel	2 16975,1262 16849,1437
        undef,
        undef,
        {
-         'source_id' => 'IM_005525',
-         'until' => 1320015599,
+         'source_id' => 'INKO_096853',
+         'until' => 1317938400,
          'text' => 'Rudower Chaussee (Treptow - Köpenick) in beiden Richtungen Höhe S-Bahn Brücke Adlershof Baustelle, Straße vollständig gesperrt, als Fußgänger kann man passieren',
          'from' => 1179453600,
          'id' => 1079,
@@ -1585,7 +1576,7 @@ userdel	2::temp 8119,12414 8055,12186
          'text' => 'Weinmeisterstr. (Mitte) in Richtung Alexanderplatz gesperrt',
          'from' => undef,
          'id' => 1567,
-         'data' => '#: last_checked: 2011-06-12
+         'data' => '#: last_checked: 2011-08-31
 userdel	q4::inwork; 10350,13376 10527,13257
 ',
          'type' => 'gesperrt'
@@ -2415,7 +2406,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im August bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10640,8366 10598,8270 10575,8218
@@ -2443,16 +2434,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
 (Eingang Tempelhofer Damm - südliche Landebahn)	2::night 9302,7294 9351,7241 9461,7190
 '
        },
-       {
-         'source_id' => 'INKO_107124',
-         'until' => 1315087199,
-         'text' => 'Lahnstr. (Neukölln) Richtung Grenzallee zwischen Mierstr. und Niemetzstr. Baustelle, in beiden Richtungen gesperrt (bis Anfang 09/2011) ',
-         'from' => 1304110406,
-         'id' => 2069,
-         'data' => 'userdel	q4::inwork 13627,7047 13891,7107
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2638,16 +2620,7 @@ userdel	3 13034,7319 13047,7234 13150,7254
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_014357',
-         'until' => 1333112400,
-         'text' => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung stadteinwärts gesperrt, 05.10.2009 10:32 Uhr bis 30.03.2012 15:00 Uhr',
-         'from' => 1254645120,
-         'id' => 2172,
-         'data' => 'userdel	q4::inwork; 10680,18380 10755,18231 10829,18083 10846,17992 10859,17854
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2782,7 +2755,7 @@ userdel	q4::inwork 425,8766 490,8716
          'id' => 2219,
          'data' => '#: by: wosch
 #: confirmed_by: srt
-#: last_checked: 2011-08-19
+#: last_checked: 2011-08-31
 #: note: eigentlich Radfahren auf der Friedrichsbrücke jetzt auch verboten
 userdel	q4::inwork; 10166,12777 10132,12941
 ',
@@ -2841,16 +2814,7 @@ userdel	q4::inwork; 10166,12777 10132,12941
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20110623.1015.348936.html',
-         'until' => 1315188000,
-         'text' => 'Sperrung des Bahnüberganges in der Lemkestraße: 02.09.2011 22:00 Uhr bis 05.09.2011 04:00 Uhr',
-         'from' => 1314907200,
-         'id' => 2237,
-         'data' => 'userdel	2::inwork 25149,12266 25109,12196 25072,12107
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'source_id' => 'LS/W-SG33-P/11/484',
@@ -2869,7 +2833,7 @@ userdel	q4::inwork; 10166,12777 10132,12941
        undef,
        undef,
        {
-         'until' => 1320015599,
+         'until' => 1317938400,
          'text' => 'Dörpfeldstr.: Bauarbeiten, Fahrbahn gesperrt',
          'from' => undef,
          'id' => 2246,
@@ -2877,16 +2841,7 @@ userdel	q4::inwork; 10166,12777 10132,12941
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'INKO_096636',
-         'until' => 1314806400,
-         'text' => 'Geschwister-Scholl-Str./Tucholskystr. (Mitte): Bauarbeiten, Brücke vollständig gesperrt (bis Ende 08/11) in beiden Richtungen Höhe Ebertsbrücke, 08.07.2011 07:00 Uhr bis 31.08.2011 18:00 Uhr ',
-         'from' => 1310014800,
-         'id' => 2247,
-         'data' => 'userdel	2::inwork 9524,12950 9529,12925
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        {
@@ -2921,16 +2876,7 @@ userdel	q4::inwork 2295,20358 2362,20218 2402,20126
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'LS/O-SG33-E/11/084',
-         'until' => 1314828000,
-         'text' => 'Eberswalde (Stadt): B167: Umbau Konten Freienwalder Straße/Saarstraße OD Eberswalde Saarstraße gesperrt, 25.07.2011 bis 31.08.2011 ',
-         'from' => 1312229266,
-         'id' => 2254,
-         'data' => 'userdel	q4::inwork 38504,47638 39129,47518
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'source_id' => '116501481',
@@ -2949,16 +2895,7 @@ userdel	q4::inwork 2295,20358 2362,20218 2402,20126
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'INKO_107049',
-         'until' => 1314802800,
-         'text' => 'Wartenberger Weg (Malchow): Baustelle, Straße vollständig gesperrt, auf der Dorfstr. Verkehrseinschränkungen (bis Ende 08/11) in beiden Richtungen an der Kreuzung Dorfstr., 13.07.2011 12:00 Uhr bis 31.08.2011 17:00 Uhr ',
-         'from' => 1310464800,
-         'id' => 2264,
-         'data' => 'userdel	q4::inwork 16094,19179 15640,19208
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'LS/S-SG33-W/10/173',
          'until' => 1356994800,
@@ -3007,12 +2944,11 @@ userdel	q4::inwork 2295,20358 2362,20218 2402,20126
        },
        {
          'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20110826.1055.356350.html',
-         'until' => undef,
+         'until' => 1324656000,
          'text' => 'Kastanienallee: Fahrbahn zwischen Oderberger Straße und Schönhauser Allee/Eberswalder Straße ab Montag dem 29.8.2011 gesperrt',
          'from' => 1314482400,
          'id' => 2274,
-         'data' => '#: XXX Ende der Bauarbeiten?
-userdel	q4::inwork 10881,15047 10838,14962 10723,14772
+         'data' => 'userdel	q4::inwork 10881,15047 10838,14962 10723,14772
 ',
          'type' => 'handicap'
        },
@@ -3024,6 +2960,26 @@ userdel	q4::inwork 10881,15047 10838,14962 10723,14772
          'from' => 1313913600,
          'id' => 2276,
          'data' => 'userdel	2::inwork -7191,-1023 -7152,-1064 -7088,-1074 -7051,-1221
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20110902.1020.357195.html',
+         'until' => 1316469599,
+         'text' => 'Buchholzer Straße, Einbahnstraße zwischen Beuthstraße und Herthaplatz, von 5. September 2011 bis 19. September 2011',
+         'from' => 1315087200,
+         'id' => 2277,
+         'data' => 'userdel	q4::inwork; 10599,19957 10609,19971 10802,20240 10843,20301
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => '116501441',
+         'until' => 1315857600,
+         'text' => 'Gransee: B96: Gleisbauarbeiten Bahnübergang bei Altlüdersdorf Vollsperrung ab 08.09.11 22:00 Uhr, 08.09.2011 22:00 Uhr bis 12.09.2011 22:00 Uhr ',
+         'from' => 1315425600,
+         'id' => 2278,
+         'data' => 'userdel	2::inwork -5575,69050 -5511,69122 -5146,69565
 ',
          'type' => 'gesperrt'
        }

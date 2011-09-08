@@ -160,10 +160,6 @@ Edith-Stein-Str.: Qualit‰t nach den Bauarbeiten? Genaue Lage der Straﬂe?	?::inwo
 #: last_checked: 2011-08-02
 entlang der U-Bahn nach Hˆnow: Bauarbeiten. Wie sieht der Weg danach aus?	?::inwork 25334,15051 25499,15010 25742,14907 25866,14898 25932,14955 25991,14926
 # 
-#: next_check: 2011-09-02
-#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1107/nachricht4429.html
-Park am Gleisdreieck, Ostpark: Erˆffnung am 2011-09-02, genaue Grenzen?	? 8679,10208 8746,10202 8724,9726 8545,9574 8357,9642 8464,9907 8581,9912
-# 
 #: last_checked: 2011-07-09 vvv
 #: next_check: 2012-06-01 vvv
 #: XXX eventuell wird hier auch die Waadter Zeile (auch in Berlin.coords.data) irgendwann existieren
@@ -190,9 +186,11 @@ Schˆnholzer Str.: werden hier Radstreifen markiert?	?::inwork 10089,18180 10054,
 Hauptstraﬂe/Kastanienallee: neue Ampel in Bau	?::inwork 7992,20515
 # 
 #: last_checked: 2011-05-01
-#: next_check: 2011-08-01
-#: XXX_indoor NBE oder NEB?
-entlang der ehemaligen NEB-Trasse: Weiterbau bis zum Faulen See	?::inwork 16146,17304 16286,17130 16391,16975
+#: next_check: 2011-09-09
+#: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110831.1520.356932.html (Erˆffnung)
+#: note: Niederbarnimer Eisenbahn (NEB)
+#: XXX genaue Lage?
+entlang der ehemaligen NEB-Trasse: Qualit‰t?	?::inwork 16146,17304 16296,17114 16386,16953
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/14re.pdf/file
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/30re.pdf/file
@@ -241,8 +239,8 @@ Planstraﬂe im Block 902: neue Straﬂe wird gebaut, wo genau, wann? Wird der Straﬂ
 #: XXX - Theanolte B‰hnisch
 #: XXX - Bernhard Weiﬂ - Planstraﬂe 6???
 #: XXX habe ich bereits: Alex Wedding - Planstraﬂe 5
-#: last_checked: 2011-05-20 vvv
-#: next_check: 2011-08-01 vvv
+#: last_checked: 2011-08-27 vvv
+#: next_check: 2011-10-15 vvv
 Neue Planstraﬂe: ˆstl. Abschnitt Asphalt, westl. Abschnitt Fuﬂg‰nger. Straﬂenname?	?::inwork 11108,13142 11045,13183 11004,13211
 Neue Planstraﬂe: bereits fertig, Asphalt, z.Zt. Einbahnstraﬂe offen in Richtung Westen; Straﬂenname?	?::inwork 11085,13239 11027,13279
 #: next_check: ^^^
@@ -312,7 +310,7 @@ An der Barthschen Promenade: vielleicht wird die Straﬂe in Zukunft sich hier bef
 #: XXX passiert hier noch was? Oder ist es mit der Verl‰ngerung der Rollbergstr. schon getan? Oder ist es die Verbindung zwischen Rollbergstr. und Werbellinstr.?
 Am Sudhaus: wo genau wird die Straﬂe verlaufen? Qualit‰t?	? 12148,8174 12227,8190
 # 
-#XXX del --- ja, Straﬂe sieht anscheinend fertig aus --- #: last_checked: 2010-10-02 vvv --- #: next_check: 2010-12-01 (public) vvv --- Groﬂ-Berliner Damm: ist der Radweg Richtung Norden zwischen Segelfliegerdamm und Sterndamm schon fertig gebaut?	?::inwork; 18050,4649 17956,4787 17885,4912 17780,5086 17769,5107 17735,5170 17685,5264 17645,5328 --- Groﬂ-Berliner Damm/Nieberstr.: ist die Ampel bereits in Betrieb?	?::inwork 17885,4912 --- #: next_check ^^^ --- #: last_checked ^^^
+#XXX del --- ja, Straﬂe sieht anscheinend fertig aus --- #: last_checked: 2010-10-02 vvv --- #: next_check: 2010-12-01 (public) vvv --- Groﬂ-Berliner Damm: ist der Radweg Richtung Norden zwischen Segelfliegerdamm und Sterndamm schon fertig gebaut?	?::inwork; 18050,4649 17956,4787 17885,4912 17780,5086 17769,5107 17735,5170 17705,5223 17645,5328 --- Groﬂ-Berliner Damm/Nieberstr.: ist die Ampel bereits in Betrieb?	?::inwork 17885,4912 --- #: next_check ^^^ --- #: last_checked ^^^
 # 
 #: last_checked: 2010-06-19
 Am Birkenrevier: Bauarbeiten	?::inwork 19176,8098 19176,8098
@@ -370,12 +368,9 @@ Falkoniergasse: Qualit‰t?	?::inwork 9945,12180 9915,12259
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20091119.1240.146739.html
 Baumaﬂnahmen in der Parkanlage am Schlachtensee, teilweise ist der Uferweg gesperrt (bis zum Fr¸hjahr 2010): danach hat der Weg eine neue wassergebundene Decke	?::inwork -2521,3637 -2396,3666 -2174,3718 -2014,3826 -1980,3872 -1974,3933 -1996,4063 -1944,4140 -1706,3971 -1624,3956 -1558,3965 -1468,3995 -1380,4108
 # 
-#: last_checked: 2010-10-02
-#: next_check: 2011-05-01
+#: last_checked: 2011-09-03
+#: next_check: 2012-07-01
 Wilhelm-Hoff-Str.: nur als Trasse erkennbar, keine Anzeichen von Bauarbeiten	?::projected 18833,3191 18892,3256 18953,3318 19125,3491
-#: last_checked: 2009-11-19
-#: next_check: 2010-04-01
-Greifstr.: Straﬂe wird zurzeit neu gebaut, danach vielleicht asphaltiert?	?::inwork 17780,5086 17854,5131
 #: by: http://www.potsdam.de/cms/beitrag/10050631/757395/
 #: by: (URL existiert nicht mehr) http://www.potsdam.de/cms/beitrag/10058808/757395/
 #: XXX wo wird die Verbindung genau entlanggef¸hrt?
@@ -447,9 +442,6 @@ Ringstr.: Radverkehrsanlagen	? 9021,3878 8766,4038 8605,4138 8399,4244 8159,4354
 #: next_check: 2009-12-31:
 Boitzenburg - Hardenbeck: straﬂenbegleitender Radweg in Vorbereitung, Realisierung bis Ende 2009	?::inwork 22233,95712 21980,95754 21160,95892 20914,96092 20696,96135 20064,95650 19336,95235 19032,95142
 Laut Uckermark-Kurier: 2.7km Radweg auf ehem. Bahndamm zwischen L15 undf K7332 bei Hardenbeck (Radweg "Spur der Steine", Templin - F¸rstenwerder), Baubeginn Anfang 2009, Asphalt ca. 3m breit; wo genau???	?::inwork 16377,90072 15782,90862 15738,90942 15410,92053 15661,93732 15688,93829 15748,93928 15841,94009 16435,94298 17677,94900 17796,95008 17912,95192 18001,95435 18507,96268 18676,96867 18954,97944 19022,98128 19442,99078 19582,99411
-#: last_checked: 2011-05-06
-#: next_check: 2011-06-05
-Choriner Str.: die Choriner Str. soll eine Fahrradstraﬂe werden	? 10480,13871 10487,13928 10502,14070 10558,14176 10629,14299 10870,14689 10893,14705
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20081110.1105.113814.html
 #: last_checked: 2011-07-09:
 #: next_check: 2011-09-30:
@@ -508,6 +500,8 @@ Mittenwalde - Telz: Radweg in Bau	?::inwork 19835,-16307 19263,-16584 17784,-171
 # die Datenbank aufgenommen werden sollen und somit nicht ˆffentlich sind.
 # Das heiﬂt diese Strecken werden nicht bei einer erweiterten Suche aufgenommen
 # und dem CGI-Benutzer auch nicht pr‰sentiert.
+# 
+Groﬂ-Berliner Damm/Sterndamm: genaue Ausschilderung pr¸fen, insbesondere an der Kreuzung Sterndamm/S¸dostallee!	? 17705,5223 17645,5328
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/37re.pdf/file?y=2011
 #: XXX Was bedeutet das?
@@ -3420,6 +3414,7 @@ Templiner Str.: gibt es in der Templiner Straﬂe mittlerweile Radstreifen?	? -130
 #: last_checked: 2011-04-30
 #: next_check: 2011-09-01
 #: XXX wahrscheinlich Verbundsteinpflaster; H‰user sind am Entstehen, Straﬂen noch nicht ganz fertig
+#: by: http://www.berlin.de/ba-spandau/presse/archiv/20110831.0850.356859.html
 Manuelaweg: wo genau befindet sich diese Straﬂe? Qualit‰t?	? -6463,5679 -6598,5542
 #: XXX fehlt in Berlin.coords.data
 Forum (Adlershof): Wo genau liegt die Straﬂe? Ist sie ausgeschildert? Qualit‰t?	? 19242,3052 19328,3072
@@ -3801,3 +3796,4 @@ Kleiner-Heufalter-Weg: Wo genau ist liegt die Straﬂe? Qualit‰t?	? 21277,11012 21
 Vogelsang - Hammelspring: gibt es hier mittlerweile einen Radweg?	? 7983,69794 7906,70007 8656,71489 10148,73146 11005,74052
 #: XXX eventuell unbefestigt?
 Lanker Str.: Qualit‰t im nˆrdlichen Abschnitt?	? 15347,23211 15387,23310 15428,23413 15475,23532 15527,23609
+Darﬂer Str. - Malchower See: Qualit‰t? Nachts beleuchtet?	? 15515,17971 15825,18385 15972,18545

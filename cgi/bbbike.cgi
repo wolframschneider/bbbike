@@ -2248,7 +2248,7 @@ EOF
 	# Eine Addition aller aktuellen Straßen, die bei luise-berlin
 	# aufgeführt sind, ergibt als Summe 10129
 	# Da aber auch einige "unoffizielle" Wege in der DB sind, dürften es an die 11000 werden
-	my($bln_str, $all_bln_str, $pdm_str) = (10000, 11000, 420);
+	my($bln_str, $all_bln_str, $pdm_str) = (10500, 11000, 420);
 	# XXX Use format number to get a comma in between.
 
 	my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
@@ -4591,7 +4591,7 @@ sub display_route {
 	my $s = $route_to_strassen_object->();
 	my $s_kml = Strassen::KML->new($s);
 	$s_kml->{"GlobalDirectives"}->{"map"}[0] = "polar" if $data_is_wgs84;
-	print $s_kml->bbd2kml;
+	print $s_kml->bbd2kml(startgoalicons => 1);
 	return;
     }
 
@@ -5692,7 +5692,7 @@ EOF
 		    $qq2->param('output_as', "kml-track");
 
 		    my $href = $bbbike_script;
-		    print qq{<a class="mobile_link" title="view route with Google Earth" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">KML</a>};
+		    print qq{<a class="mobile_link" title="view route with Google Earth" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">KML (Google Earth)</a>};
 		}
 		if ($can_gpsies_link) {
 		    my $qq2 = cgi_utf8($use_utf8);
