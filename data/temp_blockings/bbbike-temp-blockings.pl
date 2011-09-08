@@ -50,7 +50,7 @@ EOF
        text  => 'Karneval der Kulturen, 12.6.2011',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11500,9116 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9334,9670 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8192,9619
+userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11500,9116 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9334,9670 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
 userdel	3 8773,9524 8777,9601 8779,9812
 userdel	3 8779,9812 8777,9601 8773,9524
 userdel	3 9000,9509 9043,9745 9073,9915
@@ -9135,10 +9135,10 @@ userdel	q4::inwork -32153,-176 -32143,-211 -31993,-726 -31991,-1024
 EOF
      },
      { from  => 1179453600, # 2007-05-18 04:00
-       until => 1320015599, # 2011-10-30 23:59 --- until => Time::Local::timelocal(reverse(2011-1900,8-1,31,15,0,0)), # 1279544400, # 2010-07-19 15:00
+       until => 1317938400, # 2011-10-07 00:00
        text  => 'Rudower Chaussee (Treptow - Köpenick) in beiden Richtungen Höhe S-Bahn Brücke Adlershof Baustelle, Straße vollständig gesperrt, als Fußgänger kann man passieren',
        type  => 'handicap',
-       source_id => 'IM_005525',
+       source_id => 'INKO_096853',
        data  => <<EOF,
 userdel	q4::inwork 19904,3464 19732,3340
 EOF
@@ -13316,7 +13316,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_011184',
        data  => <<EOF,
-#: last_checked: 2011-06-12
+#: last_checked: 2011-08-31
 userdel	q4::inwork; 10350,13376 10527,13257
 EOF
      },
@@ -18657,7 +18657,7 @@ userdel	q4::inwork 21233,6096 20722,6971
 EOF
      },
      { from  => 1254645120, # 2009-10-04 10:32
-       until => 1333112400, # 2012-03-30 15:00
+       until => 1314991761, # 1333112400, # 2012-03-30 15:00
        text  => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung stadteinwärts gesperrt, 05.10.2009 10:32 Uhr bis 30.03.2012 15:00 Uhr',
        type  => 'handicap',
        source_id => 'IM_014357',
@@ -19098,7 +19098,7 @@ EOF
        data  => <<EOF,
 #: by: wosch
 #: confirmed_by: srt
-#: last_checked: 2011-08-19
+#: last_checked: 2011-08-31
 #: note: eigentlich Radfahren auf der Friedrichsbrücke jetzt auch verboten
 userdel	q4::inwork; 10166,12777 10132,12941
 EOF
@@ -19347,7 +19347,7 @@ userdel	q4::temp 9321,8607 9401,8510 9451,8548 9364,8640
 EOF
      },
      { from  => undef, # 
-       until => 1320015599, # 2011-10-30 23:59
+       until => 1317938400, # 2011-10-07 00:00
        text  => 'Dörpfeldstr.: Bauarbeiten, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
@@ -19619,12 +19619,11 @@ userdel	q4::inwork 6298,20599 6330,20742 6347,20819 6366,20902 6376,20951 6380,2
 EOF
      },
      { from  => 1314482400, # 2011-08-28 00:00
-       until => undef, # XXX
+       until => 1324656000, # 2011-12-23 17:00
        text  => 'Kastanienallee: Fahrbahn zwischen Oderberger Straße und Schönhauser Allee/Eberswalder Straße ab Montag dem 29.8.2011 gesperrt',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20110826.1055.356350.html',
+       source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20110826.1055.356350.html', # und: source_id => 'IM_017746'
        data  => <<EOF,
-#: XXX Ende der Bauarbeiten?
 userdel	q4::inwork 10881,15047 10838,14962 10723,14772
 EOF
      },
@@ -19645,6 +19644,33 @@ EOF
        source_id => 'INKO_103963',
        data  => <<EOF,
 userdel	2::inwork -7191,-1023 -7152,-1064 -7088,-1074 -7051,-1221
+EOF
+     },
+     { from  => 1315087200, # 2011-09-04 00:00
+       until => 1316469599, # 2011-09-19 23:59
+       text  => 'Buchholzer Straße, Einbahnstraße zwischen Beuthstraße und Herthaplatz, von 5. September 2011 bis 19. September 2011',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20110902.1020.357195.html',
+       data  => <<EOF,
+userdel	q4::inwork; 10599,19957 10609,19971 10802,20240 10843,20301
+EOF
+     },
+     { from  => 1315425600, # 2011-09-07 22:00
+       until => 1315857600, # 2011-09-12 22:00
+       text  => 'Gransee: B96: Gleisbauarbeiten Bahnübergang bei Altlüdersdorf Vollsperrung ab 08.09.11 22:00 Uhr, 08.09.2011 22:00 Uhr bis 12.09.2011 22:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => '116501441',
+       data  => <<EOF,
+userdel	2::inwork -5575,69050 -5511,69122 -5146,69565
+EOF
+     },
+     { from  => 1314943200, # 2011-09-02 08:00
+       until => 1315058400, # 2011-09-03 16:00
+       text  => 'Joachim-Friedrich-Str. (Charlottenburg) in beiden Richtungen zwischen Kurfürstendamm und Damaschkestr., Veranstaltung, Straße vollständig gesperrt (03.09.2011 08:00 bis 16:00)',
+       type  => 'handicap',
+       source_id => 'IM_017752',
+       data  => <<EOF,
+userdel	q4::temp 3132,10499 3111,10116
 EOF
      },
     );

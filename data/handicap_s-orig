@@ -89,11 +89,11 @@ Rathausstr. zwischen Breitestr. und Poststr.: Fahrbahn wegen Br¸ckenbauarbeiten 
 Rathausstr. zwischen Breitestr. und Poststr.: Fahrbahn wegen Br¸ckenbauarbeiten gesperrt	q4::inwork 10422,12395 10476,12432
 #: next_check: ^^^
 # 
-#: last_checked: 2011-08-18
-#: next_check: 2011-11-05
+#: last_checked: 2011-09-06
+#: next_check: 2011-11-15
 Alte Jakobstr.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 10436,11344 10244,11160
 # 
-#: last_checked: 2011-08-21
+#: last_checked: 2011-09-04 (by srt)
 #: next_check: 2012-05-01
 #: by: http://www.svendsimdorn.de/index.php?ka=1&ska=1&idx=26540 (Fertigstellung Sp‰tsommer 2012)
 Elcknerplatz, Borgmannstr.: Bauarbeiten, Einbahnstraﬂe	q4::inwork; 22428,6063 22478,6041 22544,6037 22539,5956
@@ -241,7 +241,11 @@ Markgrafenstr.: Gehweg	q2 9737,11546 9732,11574 9707,11596 9701,11656
 Gendarmenmarkt: Fuﬂg‰ngerzone, ggfs. schieben	q3 9526,11911 9668,11928
 Gendarmenmarkt: Fuﬂg‰ngerzone, ggfs. schieben	q3 9516,12010 9656,12021
 Am Volkspark: Parkweg	q1 5745,8194 5934,8220
-Karl-Marx-Str. - Marchlewskistr.: Gehweg	q2 12869,12425 12950,12340 12985,12303
+Karl-Marx-Str. - Marchlewskistr.: Gehweg	q2 12869,12425 12950,12340
+#: last_checked: 2011-09-01
+#: XXX alten Eintrag dann wieder aktivieren
+Karl-Marx-Allee - Marchlewskistr.: Bauarbeiten, eng	q3::inwork 12950,12340 12985,12303
+#Karl-Marx-Allee - Marchlewskistr.: Gehweg	q2 12950,12340 12985,12303
 #: XXX_prog: zus‰tzlich noch Bordsteine an der ˆstlichen Seite
 Lange Str. [vor Kaufhof]: Fuﬂg‰nger	q2 12409,11902 12522,11837
 Gotenstr./Cheruskerstr. - Kolonnenstr.: Fuﬂg‰nger	q2 7488,8768 7548,8879
@@ -310,7 +314,7 @@ Spreepromenade am DomAquarÈe: Fuﬂg‰nger, CafÈs	q3 10300,12587 10249,12658 10219,
 St.-Wolfgang-Str.: Fuﬂg‰nger, CafÈs	q3 10219,12701 10285,12744 10360,12793
 Spreegasse: Fuﬂg‰nger, CafÈs	q3 10249,12658 10309,12700 10387,12760
 Heiligengeistgasse: Fuﬂg‰nger, CafÈs, sehr eng	q4 10285,12744 10309,12700 10352,12627
-#: XXX_prog: sollte BS werden
+#: XXX_prog: sollte BS werden (1x an der Gormannstr.)
 zur Gormannstr.: Bordstein	q3 10350,13376 10372,13436
 #: note: Flohmarkt ist in temp_blockings erw‰hnt:
 Am Zeughaus: Fuﬂg‰nger	q2 9919,12613 9950,12522 9984,12426
@@ -1330,9 +1334,9 @@ Bissingzeile: Einspurig, eng bei Gegenverkehr	q1 7959,10910 8113,10786
 Weinstr.: Fuﬂg‰nger, Wurzeln	q3 11793,13247 11909,13387
 (Mollstr. - Barnimstr.): Fuﬂg‰nger	q1 11723,13139 11758,13210
 Br¸der-Grimm-Gasse: Fuﬂg‰nger	q2 8351,11163 8343,11133
-(zum Anhalter Steg): eng, Fuﬂg‰nger	q2 8659,10239 8685,10317 8726,10351
-(Anhalter Steg): Fuﬂg‰nger	q1 8726,10351 8760,10408 8773,10429
-(Anhalter Steg - Anhalter Bahnhof): Fuﬂg‰nger	q1 8773,10429 8776,10548 8854,10712 8912,10846 8938,10872
+(zum Anhalter Steg): eng, Fuﬂg‰nger	q2 8677,10224 8662,10227 8711,10322
+(Anhalter Steg): Fuﬂg‰nger	q1 8711,10322 8726,10351 8760,10408 8773,10429
+(Anhalter Steg - Anhalter Bahnhof): Fuﬂg‰nger	q1 8773,10429 8776,10548 8808,10598 8854,10712 8912,10846 8938,10872
 Fontaneplatz: Fuﬂg‰nger, Bordsteinkante	q3 8474,11350 8427,11365
 (Fontaneplatz - Alte Potsdamer Str.): Fuﬂg‰nger, schmal	q4 8427,11365 8389,11378
 Voxstr.: Fuﬂg‰nger	q3 8309,11390 8375,11368
@@ -2003,7 +2007,7 @@ M¸hlbergstr.: enge Straﬂe	q1 17187,3988 17288,4026 17341,4046
 M¸hlbergstr.: enge Straﬂe	q1 17346,4031 17402,4050 17405,4151
 #: by: ^^^
 #: confirmed_by: Daniel Prusseit:
-Hohenschˆnhausener Weg: Fuﬂg‰nger haben Vorrang	q1+ 15600,18551 16317,18020
+Hohenschˆnhausener Weg: Fuﬂg‰nger haben Vorrang	q1+ 15600,18551 15825,18385 16317,18020
 #: by: anonymous (q1 ohne genauere Kommentierung, aber auf dem Luftbild sieht es eng aus)
 Murtzaner Ring: enge Straﬂe	q1 19593,14472 19593,14405 19595,14348 19599,14273 19634,14171 19692,14082 19731,14061 19770,14060 19818,14064 19921,14064 19951,14083 20051,14191 20061,14220 20056,14373 20059,14441
 #XXX: P. Loll:, corrected_by: Uwe Borgenhagen (not mentioned): Windenweg: enge Straﬂe	q1 16306,2364 16106,2514 16012,2592 15923,2667 15870,2768 15785,2900 15751,2936 15602,3099
