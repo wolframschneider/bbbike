@@ -1954,6 +1954,8 @@ sub choose_form {
                 if ($ret) {
                     my($street, $citypart) = Strasse::split_street_citypart($res);
                     push @matches, [$res, "", undef, undef]; #$ret->[1][0]];
+                } else {
+                    warn "XXX: unknown street: '$res'\n";
                 }
 	    }
 
