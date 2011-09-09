@@ -5680,13 +5680,13 @@ EOF
 		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-route");
 			my $href = $bbbike_script;
-			print qq{<a class="mobile_link" title="GPX route with waypoints for navigation, up to 256 points" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Route)</a>};
+			print qq{<a class="mobile_link" title="GPX route with waypoints for GPS navigation, up to 256 points" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Route)</a>};
 		    }
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-track");
 			my $href = $bbbike_script;
-			print qq{<a class="mobile_link" title="GPX with up to 1024 points, no navigation" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Track)</a>};
+			print qq{<a class="mobile_link" title="GPX with up to 1024 points, no navigation" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Track)</a>};
 		    }
 		}
 		if ($can_kml) {
