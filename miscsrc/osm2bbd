@@ -392,7 +392,8 @@ my $do_shop = sub {
     my($is_area, $shop) = @_;
     my @or;
     my $F = $is_area ? "F:" : "";
-    if ($shop eq 'XXXXX') {
+
+    if (defined $shop && $shop eq 'XXXXX') {
 	push @or, ["_shop", $F."S"];
     } else {
 	push @or, ["_shop", $F."X"];
