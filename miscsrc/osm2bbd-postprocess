@@ -477,7 +477,7 @@ sub _write_meta {
     $meta->{"city_names"} = $city_names;
     $meta->{"neighbours"} = $neighbours;
     $meta->{"region"} = $region;
-    $meta->{"other_names"} = $other_names;
+    $meta->{"other_names"} = [ split /\s*;\s*/, $other_names ];
 
     DumpFile("meta.yml~", $meta);
 
