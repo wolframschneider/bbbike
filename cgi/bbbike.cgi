@@ -7804,7 +7804,7 @@ sub header {
 	   print qq{<div id="ad_top">\n};
 	}
 
-	print "<h2>\n";
+	print qq{<span id="headline">\n<h2>\n};
 	if ($printmode) {
 	    print "$args{-title}";
 	    print "<img alt=\"\" src=\"$bbbike_images/srtbike.gif\" hspace=10>";
@@ -7819,10 +7819,11 @@ sub header {
 	    if ($use_css) {
 		print ' style="position:relative; top:15px; left:-15px;"';
 	    }
-	    print " alt=\"\" src=\"$bbbike_images/srtbike.gif\" border=0>";
+	    print " id=\"headlogo\" alt=\"\" src=\"$bbbike_images/srtbike.gif\" border=0>";
 	    print "</a>";
 	}
 	print "</h2>\n";
+	print "</span>\n";
     } else {
 	print $q->start_html(%args);
 	print "<h1>BBBike</h1>";

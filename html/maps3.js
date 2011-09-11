@@ -105,7 +105,7 @@ var state = {
     fullscreen: false,
 
     // tags to hide in full screen mode
-    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes"],
+    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo"],
 
     // keep state of non map tags
     non_map_tags_val: {},
