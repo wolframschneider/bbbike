@@ -859,6 +859,8 @@ my $en_city_name = "";
 my $de_city_name = "";
 my $city_script;
 my $region = "";
+my $other_names = [];
+
 if ($osm_data) {
     $datadir =~ m,data-osm/(.+),;
     my $city = $1;
@@ -878,6 +880,10 @@ if ($osm_data) {
     $region = $geo->{"region"} || "other";
 
     binmode (\*STDERR, ':utf8') if $use_utf8;
+
+    if (exists $geo->{'other_names'}) {
+	$other_names = $geo->{'other_names'};
+    }
 }
 
 if ($lang ne "de") {
@@ -7555,6 +7561,12 @@ sub header {
     if (!exists $args{-title}) {
         my $city = $en_city_name || do { ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin' };
 	$args{-title} = "BBBike \@ $local_city_name" . " - " . M("Fahrrad-Routenplaner") . " $local_city_name" . ($city ne $local_city_name ? " // $city" : "");
+
+	# other city names in this area
+        foreach my $o (@$other_names) {
+	    $args{-title} .= " // " . $o;
+        }
+
 	$args{-title2} = "BBBike\@$local_city_name";
 
 	if ($q->url(-path_info =>1) =~ m,/streets\.html$,) {
