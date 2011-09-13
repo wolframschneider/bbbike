@@ -7563,7 +7563,9 @@ sub header {
 	$args{-title} = "BBBike \@ $local_city_name" . " - " . M("Fahrrad-Routenplaner") . " $local_city_name" . ($city ne $local_city_name ? " // $city" : "");
 
 	# other city names in this area
-	$args{-title} .= join ", " , @$other_names;
+	if (scalar(@$other_names)) {
+	    $args{-title} .= join ", " , "", @$other_names 
+	}
 
 	$args{-title2} = "BBBike\@$local_city_name";
 
@@ -7794,7 +7796,7 @@ sub header {
 	     #-lang => 'de-DE',
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
-	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route, ' . join (", " , $en_city_name, @$other_names),
+	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
 		     'copyright'=>'(c) 1998-2011 Slaven Rezic + Wolfram Schneider',
 		    },
 	     -author => $BBBike::EMAIL,
