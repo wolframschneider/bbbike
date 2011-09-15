@@ -2049,11 +2049,11 @@ function smallerMap(step, id) {
 function init_markers (area) {
 
     // top_left
-    var padding = 0.07;
+    var padding = 0.05;
 
     var pos_start = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding);
-    var pos_dest  = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding + 0.9*padding );
-    var pos_via  = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding + 2*0.9*padding );
+    var pos_dest  = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding + 0.5*padding );
+    var pos_via  = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding + 2*0.5*padding );
 
 
     var marker_start = new google.maps.Marker(
