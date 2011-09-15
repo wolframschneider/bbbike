@@ -2046,5 +2046,39 @@ function smallerMap(step, id) {
     tag.style.width = width + "%";
 }
 
+function init_markers (area) {
+
+    // top_left
+    var padding = 0.07;
+
+    var pos_start = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding);
+    var pos_dest  = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding + 0.9*padding );
+
+
+    var marker_start = new google.maps.Marker(
+	{ 
+	  position: pos_start,
+	  map: map,
+	  clickable: true,
+	  draggable: true,
+	  title: "Set start point",
+	  icon: bbbike.icons["green_dot"]
+	  // icon: "/images/start_ptr.png"
+	});
+
+    var marker_dest = new google.maps.Marker(
+	{ position: pos_dest,
+	  map: map,
+	  clickable: true,
+	  draggable: true,
+	  title: "Set destination point",
+	  // icon: "/images/ziel_ptr.png"
+	  icon: bbbike.icons["red_dot"]
+	});
+
+    // marker_start.setMap(map);
+    marker_dest.setMap(map);
+}
+
 
 // EOF
