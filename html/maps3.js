@@ -2053,6 +2053,7 @@ function init_markers (area) {
 
     var pos_start = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding);
     var pos_dest  = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding + 0.9*padding );
+    var pos_via  = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding + 2*0.9*padding );
 
 
     var marker_start = new google.maps.Marker(
@@ -2076,8 +2077,19 @@ function init_markers (area) {
 	  icon: bbbike.icons["red_dot"]
 	});
 
-    // marker_start.setMap(map);
+    var marker_via = new google.maps.Marker(
+	{ position: pos_via,
+	  map: map,
+	  clickable: true,
+	  draggable: true,
+	  title: "Set via point",
+	  // icon: "/images/ziel_ptr.png"
+	  icon: bbbike.icons["yellow_dot"]
+	});
+
+    marker_start.setMap(map);
     marker_dest.setMap(map);
+    marker_via.setMap(map);
 }
 
 
