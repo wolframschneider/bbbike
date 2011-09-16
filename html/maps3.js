@@ -2047,11 +2047,15 @@ function smallerMap(step, id) {
 }
 
 // zoom level is not known yet, try it 0.5 seconds later
-function init_markers (area) {
-      setTimeout(function () { _init_markers (area) }, 500); 
+
+
+function init_markers(area) {
+    setTimeout(function () {
+        _init_markers(area)
+    }, 500);
 }
 
-function _init_markers (area) {
+function _init_markers(area) {
     var zoom = map.getZoom();
 
     // top_left on city area, based on a zoom level of 10
@@ -2059,69 +2063,74 @@ function _init_markers (area) {
 
     // need more space
     if (zoom < 10) {
-	padding *= (11 - zoom);
+        padding *= (11 - zoom);
     } else if (zoom > 10) {
-	padding /= (zoom - 9);
+        padding /= (zoom - 9);
     }
 
-    var pos_start = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding);
-    var pos_dest  = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding + 0.5*padding );
-    var pos_via  = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding + 2*0.5*padding );
+    var pos_start = new google.maps.LatLng(area[1][0] - padding, area[0][1] + padding);
+    var pos_dest = new google.maps.LatLng(area[1][0] - padding, area[0][1] + padding + 0.5 * padding);
+    var pos_via = new google.maps.LatLng(area[1][0] - padding, area[0][1] + padding + 2 * 0.5 * padding);
 
-    var marker_start = new google.maps.Marker(
-	{ 
-	  position: pos_start,
-	  map: map,
-	  clickable: true,
-	  draggable: true,
-	  title: "Set start point",
-	  icon: bbbike.icons["green_dot"]
-	  // icon: "/images/start_ptr.png"
-	});
+    var marker_start = new google.maps.Marker({
+        position: pos_start,
+        map: map,
+        clickable: true,
+        draggable: true,
+        title: "Set start point",
+        icon: bbbike.icons["green_dot"]
+        // icon: "/images/start_ptr.png"
+    });
 
-    var marker_dest = new google.maps.Marker(
-	{ position: pos_dest,
-	  map: map,
-	  clickable: true,
-	  draggable: true,
-	  title: "Set destination point",
-	  // icon: "/images/ziel_ptr.png"
-	  icon: bbbike.icons["red_dot"]
-	});
+    var marker_dest = new google.maps.Marker({
+        position: pos_dest,
+        map: map,
+        clickable: true,
+        draggable: true,
+        title: "Set destination point",
+        // icon: "/images/ziel_ptr.png"
+        icon: bbbike.icons["red_dot"]
+    });
 
-    var marker_via = new google.maps.Marker(
-	{ position: pos_via,
-	  map: map,
-	  clickable: true,
-	  draggable: true,
-	  title: "Set via point",
-	  // icon: "/images/ziel_ptr.png"
-	  icon: bbbike.icons["yellow_dot"]
-	});
+    var marker_via = new google.maps.Marker({
+        position: pos_via,
+        map: map,
+        clickable: true,
+        draggable: true,
+        title: "Set via point",
+        // icon: "/images/ziel_ptr.png"
+        icon: bbbike.icons["yellow_dot"]
+    });
 
     marker_start.setMap(map);
     marker_dest.setMap(map);
     marker_via.setMap(map);
 
     var event = 'position_changed';
-    google.maps.event.addListener(marker_start, event, function() { find_street(marker_start, "suggest_start") });
-    google.maps.event.addListener(marker_dest, event, function() { find_street(marker_dest, "suggest_ziel") });
-    google.maps.event.addListener(marker_via, event, function() { find_street(marker_via, "suggest_via") });
+    google.maps.event.addListener(marker_start, event, function () {
+        find_street(marker_start, "suggest_start")
+    });
+    google.maps.event.addListener(marker_dest, event, function () {
+        find_street(marker_dest, "suggest_ziel")
+    });
+    google.maps.event.addListener(marker_via, event, function () {
+        find_street(marker_via, "suggest_via")
+    });
 }
 
-function find_street (marker, input_id) {
-   var latLng = marker.getPosition();
-   
-   var input = document.getElementById(input_id);
-   if (input) {
-        if (input_id == "XXXsuggest_via") {
-		toogleVia('viatr', 'via_message', null, true);
-	}
-   	input.setAttribute("value", 'lat: ' + latLng.lat() + ' ' + 'lng: ' + latLng.lng());
+function find_street(marker, input_id) {
+    var latLng = marker.getPosition();
 
-   } else {
-	alert("unknonw: " + input_id);
-   }
+    var input = document.getElementById(input_id);
+    if (input) {
+        if (input_id == "XXXsuggest_via") {
+            toogleVia('viatr', 'via_message', null, true);
+        }
+        input.setAttribute("value", 'lat: ' + latLng.lat() + ' ' + 'lng: ' + latLng.lng());
+
+    } else {
+        alert("unknonw: " + input_id);
+    }
 
 }
 
