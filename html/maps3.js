@@ -2102,7 +2102,27 @@ function _init_markers (area) {
     marker_start.setMap(map);
     marker_dest.setMap(map);
     marker_via.setMap(map);
+
+    var event = 'position_changed';
+    google.maps.event.addListener(marker_start, event, function() { find_street(marker_start, "suggest_start") });
+    google.maps.event.addListener(marker_dest, event, function() { find_street(marker_dest, "suggest_ziel") });
+    google.maps.event.addListener(marker_via, event, function() { find_street(marker_via, "suggest_via") });
 }
 
+function find_street (marker, input_id) {
+   var latLng = marker.getPosition();
+   
+   var input = document.getElementById(input_id);
+   if (input) {
+        if (input_id == "XXXsuggest_via") {
+		toogleVia('viatr', 'via_message', null, true);
+	}
+   	input.setAttribute("value", 'lat: ' + latLng.lat() + ' ' + 'lng: ' + latLng.lng());
+
+   } else {
+	alert("unknonw: " + input_id);
+   }
+
+}
 
 // EOF
