@@ -2046,15 +2046,27 @@ function smallerMap(step, id) {
     tag.style.width = width + "%";
 }
 
+// zoom level is not known yet, try it 0.5 seconds later
 function init_markers (area) {
+      setTimeout(function () { _init_markers (area) }, 500); 
+}
 
-    // top_left
-    var padding = 0.05;
+function _init_markers (area) {
+    var zoom = map.getZoom();
+
+    // top_left on city area, based on a zoom level of 10
+    var padding = 0.06;
+
+    // need more space
+    if (zoom < 10) {
+	padding *= (11 - zoom);
+    } else if (zoom > 10) {
+	padding /= (zoom - 9);
+    }
 
     var pos_start = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding);
     var pos_dest  = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding + 0.5*padding );
     var pos_via  = new google.maps.LatLng( area[1][0] - padding, area[0][1] + padding + 2*0.5*padding );
-
 
     var marker_start = new google.maps.Marker(
 	{ 
