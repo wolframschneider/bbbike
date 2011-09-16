@@ -288,9 +288,12 @@ function show_spinning_wheel() {
     return true;
 }
 
-function toogleVia(via_field, via_message, via_input) {
+function toogleVia(via_field, via_message, via_input, visible) {
+    alert(visible);
+
     var tag = document.getElementById(via_field);
-    if (!tag) return;
+    if (!tag) 
+	return;
 
     // IE 6/7 workarounds
     var table_row = "table-row";
@@ -301,15 +304,19 @@ function toogleVia(via_field, via_message, via_input) {
         table_cell = "inline";
     }
 
-    tag.style.display = tag.style.display == "none" ? table_row : "none";
+    tag.style.display = (tag.style.display == "none" || visible) ? table_row : "none";
 
     tag = document.getElementById(via_message);
-    if (!tag) return;
-    tag.style.display = tag.style.display == "none" ? table_cell : "none";
+    if (!tag) 
+	return;
+    tag.style.display = (tag.style.display == "none" || visible) ? table_cell : "none";
 
     // reset input field if hiding the via area
+    if (!via_input) 
+	return;
     tag = document.getElementById(via_input);
-    if (!tag) return;
+    if (!tag) 
+	return;
     tag.value = "";
 }
 
