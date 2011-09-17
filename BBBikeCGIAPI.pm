@@ -59,6 +59,11 @@ sub action_revgeocode {
     my $xy = main::get_nearest_crossing_coords($x,$y);
     my @cr = split m{/}, main::crossing_text($xy);
     @cr = @cr[0,1] if @cr > 2; # bbbike.cgi can deal only with A/B
+
+    # first part of cross is empty, switch streetsnames of corner: /foo -> foo/
+    if ($cr[0] eq '') {
+	@cr = ( $cr[1], "" );
+    }
     my $cr = join("/", @cr);
     print $q->header('text/plain');
     print JSON::XS->new->ascii->encode({ crossing => $cr,
