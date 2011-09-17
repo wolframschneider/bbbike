@@ -2048,7 +2048,6 @@ function smallerMap(step, id) {
 
 // zoom level is not known yet, try it 0.5 seconds later
 
-
 function init_markers(area) {
     setTimeout(function () {
         _init_markers(area)
@@ -2118,6 +2117,15 @@ function _init_markers(area) {
     });
 }
 
+// round up to 1.1 meters
+
+
+function granularity(val) {
+    var granularity = 100000;
+
+    return parseInt(val * granularity) / granularity;
+}
+
 function find_street(marker, input_id) {
     var latLng = marker.getPosition();
 
@@ -2126,7 +2134,7 @@ function find_street(marker, input_id) {
         if (input_id == "XXXsuggest_via") {
             toogleVia('viatr', 'via_message', null, true);
         }
-        input.setAttribute("value", 'lat: ' + latLng.lat() + ' ' + 'lng: ' + latLng.lng());
+        input.setAttribute("value", granularity(latLng.lat()) + ',' + granularity(latLng.lng()));
 
     } else {
         alert("unknonw: " + input_id);
