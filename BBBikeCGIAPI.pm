@@ -43,7 +43,7 @@ sub action_revgeocode {
 	($lat, $lon) = split /,/, $q->param('latlon');
     }
     elsif (defined $q->param('lonlat')) {
-	($lon, $lat) = split /,/, $q->param('latlon');
+	($lon, $lat) = split /,/, $q->param('lonlat');
     }
 
     $lat eq '' and die "lat is missing";
