@@ -60,8 +60,8 @@ var bbbike = {
     },
 
     // default map
-    mapDefault: "mapnik",
-    // mapDefault: "terrain",
+    // mapDefault: "mapnik",
+    mapDefault: "terrain",
     // visible controls
     controls: {
         zoomControl: true,
@@ -115,6 +115,8 @@ var state = {
 
     maplist: [],
     slideShowMaps: [],
+    markers: [],
+    markers_drag: [],
 
     // street lookup events
     timeout: null
@@ -2049,70 +2051,105 @@ function smallerMap(step, id) {
 // zoom level is not known yet, try it 0.5 seconds later
 
 function init_markers(area) {
-    setTimeout(function () {
+    var timeout = setTimeout(function () {
         _init_markers(area)
     }, 500);
+
+    // reset markers after the map bound were changed
+    google.maps.event.addListener(map, "bounds_changed", function () {
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+            _init_markers()
+        }, 800);
+    });
 }
 
 function _init_markers(area) {
     var zoom = map.getZoom();
 
+    var lat, lng;
+    if (area) {
+        lat = area[1][0];
+        lng = area[0][1];
+    }
+
+    // use current map size instead area
+    else {
+        lat = map.getBounds().getNorthEast().lat();
+        lng = map.getBounds().getSouthWest().lng();
+    }
+
     // top_left on city area, based on a zoom level of 10
-    var padding = 0.06;
+    var padding = 0.07;
 
     // need more space
     if (zoom < 10) {
-        padding *= (11 - zoom);
+        padding *= (11 - zoom) * 1;
     } else if (zoom > 10) {
-        padding /= (zoom - 9);
+        padding /= (zoom - 9) * 1;
     }
 
-    var pos_start = new google.maps.LatLng(area[1][0] - padding, area[0][1] + padding);
-    var pos_dest = new google.maps.LatLng(area[1][0] - padding, area[0][1] + padding + 0.5 * padding);
-    var pos_via = new google.maps.LatLng(area[1][0] - padding, area[0][1] + padding + 2 * 0.5 * padding);
+    var pos_start = new google.maps.LatLng(lat - 1 * padding, lng + 2 * padding);
+    var pos_dest = new google.maps.LatLng(lat - 1 * padding, lng + 2 * padding + 0.5 * padding);
+    var pos_via = new google.maps.LatLng(lat - 1 * padding, lng + 2 * padding + 2 * 0.5 * padding);
 
     var marker_start = new google.maps.Marker({
         position: pos_start,
-        map: map,
         clickable: true,
         draggable: true,
         title: "Set start point",
-        icon: bbbike.icons["green_dot"]
-        // icon: "/images/start_ptr.png"
+        icon: bbbike.icons["green_dot"] // icon: "/images/start_ptr.png"
     });
+
 
     var marker_dest = new google.maps.Marker({
         position: pos_dest,
-        map: map,
         clickable: true,
         draggable: true,
         title: "Set destination point",
-        // icon: "/images/ziel_ptr.png"
-        icon: bbbike.icons["red_dot"]
+        icon: bbbike.icons["red_dot"] // icon: "/images/ziel_ptr.png"
     });
 
     var marker_via = new google.maps.Marker({
         position: pos_via,
-        map: map,
         clickable: true,
         draggable: true,
         title: "Set via point",
-        // icon: "/images/ziel_ptr.png"
-        icon: bbbike.icons["yellow_dot"]
+        icon: bbbike.icons["yellow_dot"] // icon: "/images/ziel_ptr.png"
     });
 
-    marker_start.setMap(map);
-    marker_dest.setMap(map);
-    marker_via.setMap(map);
+    // clean old markers
+    debug("marker start state: " + state.markers.marker_start ? 0 : 1);
 
-    var event = 'position_changed';
+    if (state.markers_drag.marker_start == null) {
+        if (state.markers.marker_start) state.markers.marker_start.setMap(null);
+        marker_start.setMap(map);
+        state.markers.marker_start = marker_start;
+    }
+    if (state.markers_drag.marker_dest == null) {
+        if (state.markers.marker_dest) state.markers.marker_dest.setMap(null);
+        marker_dest.setMap(map);
+        state.markers.marker_dest = marker_dest;
+    }
+    if (state.markers_drag.marker_via == null) {
+        if (state.markers.marker_via) state.markers.marker_via.setMap(null);
+        marker_via.setMap(map);
+        state.markers.marker_via = marker_via;
+    }
+
+
+    var event = 'drag';
     google.maps.event.addListener(marker_start, event, function () {
+        state.markers_drag.marker_start = marker_start;
+        debug("marker start event: " + event);
         find_street(marker_start, "suggest_start")
     });
     google.maps.event.addListener(marker_dest, event, function () {
+        state.markers_drag.marker_dest = marker_dest;
         find_street(marker_dest, "suggest_ziel")
     });
     google.maps.event.addListener(marker_via, event, function () {
+        state.markers_drag.marker_via = marker_via;
         find_street(marker_via, "suggest_via")
     });
 }
@@ -2123,6 +2160,18 @@ function granularity(val) {
     var granularity = 100000;
 
     return parseInt(val * granularity) / granularity;
+}
+
+function debug(text, id) {
+    if (!id) {
+        id = "debug";
+    }
+
+    var tag = document.getElementById(id);
+
+    if (!tag) return;
+
+    tag.innerHTML = "debug: " + text;
 }
 
 function find_street(marker, input_id) {
