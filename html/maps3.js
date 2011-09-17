@@ -2184,7 +2184,7 @@ function find_street(marker, input_id) {
         }
         input.setAttribute("value", granularity(latLng.lng()) + ',' + granularity(latLng.lat()));
     } else {
-        alert("Unknonw: " + input_id);
+        debug("Unknonw: " + input_id);
     }
 }
 
