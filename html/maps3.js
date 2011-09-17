@@ -2119,7 +2119,6 @@ function _init_markers(area) {
 
 // round up to 1.1 meters
 
-
 function granularity(val) {
     var granularity = 100000;
 
@@ -2134,12 +2133,10 @@ function find_street(marker, input_id) {
         if (input_id == "XXXsuggest_via") {
             toogleVia('viatr', 'via_message', null, true);
         }
-        input.setAttribute("value", granularity(latLng.lat()) + ',' + granularity(latLng.lng()));
-
+        input.setAttribute("value", granularity(latLng.lng()) + ',' + granularity(latLng.lat()));
     } else {
-        alert("unknonw: " + input_id);
+        alert("Unknonw: " + input_id);
     }
-
 }
 
 // EOF
