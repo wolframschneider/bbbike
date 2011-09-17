@@ -37,9 +37,14 @@ sub action {
 sub action_revgeocode {
     my $q = shift;
     my($lon) = $q->param('lon');
-    $lon eq '' and die "lon is missing";
     my($lat) = $q->param('lat');
+
+    if (defined $q->param('latlon')) {
+	($lat, $lon) = split /,/, $q->param('latlon');
+    }
+
     $lat eq '' and die "lat is missing";
+    $lon eq '' and die "lon is missing";
 
     no warnings 'once';
     my($x,$y) = $main::data_is_wgs84 ? ($lon, $lat) : $Karte::Polar::obj->map2standard($lon,$lat);
