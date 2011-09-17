@@ -142,6 +142,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $show_real_time
 	    $cache_streets_html
 	    $bbbike_start_js_version
+	    $enable_latlng_search
 	   );
 
 $gmap_api_version = 3;
@@ -1369,6 +1370,23 @@ my $set_anyc = sub {
     }
 };
 
+# allow to search with wgs84 coordinates
+sub enable_latlng_search {
+    my $q = shift;
+
+    foreach my $param (qw/start ziel via/) {
+	my $param_c = $param . "c";
+
+    	if (!defined $q->param($param_c) && defined $q->param($param) && is_latlng($q->param($param))) {
+	   $q->param($param_c, $q->param($param));
+	   $q->delete($param);
+	   warn "Do a lat,lng search for $param\n" if $debug;
+    	}
+    }
+}
+
+&enable_latlng_search($q) if $enable_latlng_search;
+
 # schwache stadtplandienst-Kompatibilität
 # Note: ";" und "&" werden von CGI.pm gleichberechtigt behandelt
 if (defined $q->param('STR')) {
@@ -1706,6 +1724,12 @@ sub Param {
     return $val;
 }
 
+sub is_latlng{
+   my $latlng = shift;
+
+   return $latlng =~ /^\s*[\+\-]?[\d\.]+,[\+\-]?[\d\.]+\s*$/ ? 1 : 0;
+}
+
 sub is_forum_spam {
    my $q = shift;
    my @param = @_;
@@ -1747,7 +1771,6 @@ sub choose_form {
     my $zielhnr   = Param('zielhnr')   || '';
     my $zielc     = Param('zielc')     || '';
     my $zielort   = Param('zielort')   || '';
-
 
     my $nl = sub {
 	if ($bi->{'can_table'}) {
@@ -3304,6 +3327,8 @@ sub is_streets {
 
 
 sub get_kreuzung {
+    warn "get kreuzung", join " ", caller(), "\n" if $debug >= 2;
+
     my($start_str, $via_str, $ziel_str) = @_;
     if (!defined $start_str) {
 	$start_str = Param('startname') || Param('start');
