@@ -334,7 +334,7 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
 
     city = "$city";
     bbbike_maps_init("default", $marker_list, "$lang", false, "$region", "$zoom_param" );
-    init_markers($marker_list);
+    init_markers(); // $marker_list);
 
 EOF
 
