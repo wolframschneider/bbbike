@@ -2916,6 +2916,8 @@ function " . $type . "char_init() {}
     print "</form>\n";
     print "</td></tr></table>\n</div>\n" if $bi->{'can_table'};
 
+	
+
 	    my $BBBikeGooglemap = 1;
             if (is_mobile($q)) {
 		$BBBikeGooglemap = 0;
@@ -7976,6 +7978,8 @@ if ($osm_data) {
     $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
 }
 
+my $span_debug = is_production($q) ? "" : qq{<t><span id="debug"></span></t>\n};
+
 my $rss_icon = "";
 $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="14" height="14" title="}
 	    .  M('Was gibt es Neues auf BBBike.org') 
@@ -7996,6 +8000,7 @@ my $s_copyright = <<EOF;
 <a href="$community_link">$donate</a> |
 <a title="search time: $real_time seconds" href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
 $list_of_all_streets $permalink_text
+$span_debug
 </div>
 </div>
 
