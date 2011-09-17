@@ -3329,7 +3329,7 @@ sub is_streets {
 
 
 sub get_kreuzung {
-    warn "get kreuzung", join " ", caller(), "\n" if $debug >= 2;
+    warn "get kreuzung: ", join " ", caller(), "\n" if $debug >= 1;
 
     my($start_str, $via_str, $ziel_str) = @_;
     if (!defined $start_str) {
@@ -7147,6 +7147,8 @@ sub load_temp_blockings {
 # Bundesallee/Wexstr.!
 sub crossing_text {
     my $c = shift;
+    warn "crossing_text: $c, ", join " ", caller(), "\n" if $debug >= 2;
+
     all_crossings();
     if (!exists $crossings->{$c}) {
 	new_kreuzungen();
@@ -8844,6 +8846,17 @@ sub get_geography_object {
 
 sub nice_crossing_name {
     my(@c) = @_;
+   
+    # first part of cross is empty, switch streetsnames of corner: /foo -> foo/
+    if ($osm_data) {
+	my @cr = @c;
+    	if ($cr[0] eq '') {
+           @cr = ( $cr[1], "" );
+    	}
+    	my $cr = join("/", @cr);
+    	return $cr;
+    }
+
     my @c_street;
     my $unique_cityparts;
     for my $c (@c) {
