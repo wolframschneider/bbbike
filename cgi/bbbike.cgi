@@ -5878,7 +5878,7 @@ EOF
 	        print qq{<hr>\n};
 		print qq{<span class="slippymaplink"><a title="}, M("neue Anfrage"), qq{" href="}, $q->url(-absolute=>1, -query=>0), qq{">BBBike\@$local_city_name</a></span> |\n};
 	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">larger map</a></span> |\n} if !$gmapsv3;
-	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">print map route</a></span>\n};
+	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="}, M("PDF Ausdruck der Karte und Route"), qq{">}, M("drucken"), qq{</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url" style="display:none"> $permalink</span></span>\n} if $permalink =~ /=/;
 	        print qq{<p></p>\n};
 		print qq{</div>\n\n};

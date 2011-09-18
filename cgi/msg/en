@@ -260,5 +260,6 @@ return {
     "PDF Ausdruck der Karte und Route"                               => "PDF hand out of map and route",
     "Route auf GPSies.com hochladen"                                 => "upload route to GPSies.com, Tracks for Vagabonds",
     "Facebook Fanpage"                                               => "Facebook fanpage",
+    "drucken"                                                        => "print",
 };
 
