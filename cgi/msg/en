@@ -261,5 +261,6 @@ return {
     "Route auf GPSies.com hochladen"                                 => "upload route to GPSies.com, Tracks for Vagabonds",
     "Facebook Fanpage"                                               => "Facebook fanpage",
     "drucken"                                                        => "print",
+    "Spende an BBBike.org"                                           => "Donate to BBBike.org",
 };
 

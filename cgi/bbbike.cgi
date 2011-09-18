@@ -8002,6 +8002,8 @@ $permalink_text = "" if $permalink !~ /=/;
 
 my $google_plusone = qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png" alt=""></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
 
+my $facebook_title = M("Facebook Fanpage");
+my $donate_title = M("Spende an BBBike.org");
 my $s_copyright = <<EOF;
 
 <div id="footer">
@@ -8021,10 +8023,10 @@ $span_debug
 (&copy;) 1998-2011 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
 <div id="footer_community">
-  <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="Donate to bbbike.org" border="0"></a>
+  <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="$donate_title" border="0"></a>
   <a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
   <a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
-  <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>
+  <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="$facebook_title"></a>
   $google_plusone
   $rss_icon
 </div>
