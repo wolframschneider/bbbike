@@ -62,7 +62,6 @@ var bbbike = {
     // default map
     mapDefault: "mapnik",
     // mapDefault: "terrain",
-
     // visible controls
     controls: {
         panControl: true,
@@ -2068,6 +2067,8 @@ function init_markers(area) {
 
 function _init_markers(area) {
     var zoom = map.getZoom();
+    var ne = map.getBounds().getNorthEast()
+    var sw = map.getBounds().getSouthWest();
 
     var lat, lng;
     if (area) {
@@ -2077,23 +2078,17 @@ function _init_markers(area) {
 
     // use current map size instead area
     else {
-        lat = map.getBounds().getNorthEast().lat();
-        lng = map.getBounds().getSouthWest().lng();
+        lat = ne.lat();
+        lng = sw.lng();
     }
 
-    // top_left on city area, based on a zoom level of 10
-    var padding = 0.07;
+    var pos_lng = lng + (ne.lng() - lng) / 8; //  1/8 right
+    var pos_lat = lat - (lat - sw.lat()) / 12; //  1/2 down
+    padding = (ne.lng() - lng) / 25; // distance beteen markers on map, 1/25 of the map
 
-    // need more space
-    if (zoom < 10) {
-        padding *= (11 - zoom) * 1;
-    } else if (zoom > 10) {
-        padding /= (zoom - 9) * 1;
-    }
-
-    var pos_start = new google.maps.LatLng(lat - 1 * padding, lng + 2 * padding);
-    var pos_dest = new google.maps.LatLng(lat - 1 * padding, lng + 2 * padding + 0.5 * padding);
-    var pos_via = new google.maps.LatLng(lat - 1 * padding, lng + 2 * padding + 2 * 0.5 * padding);
+    var pos_start = new google.maps.LatLng(pos_lat, pos_lng);
+    var pos_dest = new google.maps.LatLng(pos_lat, pos_lng + padding);
+    var pos_via = new google.maps.LatLng(pos_lat, pos_lng + 2 * padding);
 
     var marker_start = new google.maps.Marker({
         position: pos_start,
@@ -2121,7 +2116,7 @@ function _init_markers(area) {
     });
 
     // clean old markers
-    debug("zoom level: " + map.getZoom());
+    debug("zoom level: " + map.getZoom() + " padding: " + padding);
 
     if (state.markers_drag.marker_start == null) {
         if (state.markers.marker_start) state.markers.marker_start.setMap(null);
