@@ -86,12 +86,16 @@ var bbbike = {
         "green": '/images/mm_20_green.png',
         "red": '/images/mm_20_red.png',
         "white": '/images/mm_20_white.png',
+        "yellow": '/images/mm_20_yellow.png',
 
         "blue_dot": "/images/blue-dot.png",
         "green_dot": "/images/green-dot.png",
         "purple_dot": "/images/purple-dot.png",
         "red_dot": "/images/red-dot.png",
-        "yellow_dot": "/images/yellow-dot.png"
+        "yellow_dot": "/images/yellow-dot.png",
+
+        "start": "/images/dd-start.png",
+        "dest": "/images/dd-end.png",
 
     },
 
@@ -1240,7 +1244,7 @@ function plotRoute(map, opt, street) {
 
         var marker3 = new google.maps.Marker({
             position: pos,
-            icon: bbbike.icons.white,
+            icon: bbbike.icons.yellow,
             map: map
         });
         google.maps.event.addListener(marker3, "click", function (event) {
@@ -1291,7 +1295,7 @@ function plotRoute(map, opt, street) {
 
 
     function addInfoWindow(marker) {
-        var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.white];
+        var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.yellow];
 
         if (infoWindow) {
             infoWindow.close();
@@ -1955,7 +1959,7 @@ function loadRoute(opt) {
 function RouteMarker(opt) {
 
     // up to 3 markers: [ start, dest, via ]
-    var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.white];
+    var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.yellow];
 
     for (var i = 0; i < marker_list_points.length; i++) {
         var point = new google.maps.LatLng(marker_list_points[i][0], marker_list_points[i][1]);
@@ -2096,18 +2100,17 @@ function _init_markers(opt) {
 
     var pos_lng = lng + (ne.lng() - lng) / 8; //  1/8 right
     var pos_lat = lat - (lat - sw.lat()) / 12; //  1/2 down
-    padding = (ne.lng() - lng) / 35; // distance beteen markers on map, 1/35 of the map
-
+    padding = (ne.lng() - lng) / 30; // distance beteen markers on map, 1/35 of the map
     var pos_start = new google.maps.LatLng(pos_lat, pos_lng);
     var pos_dest = new google.maps.LatLng(pos_lat, pos_lng + padding);
-    var pos_via = new google.maps.LatLng(pos_lat, pos_lng + 2 * padding);
+    var pos_via = new google.maps.LatLng(pos_lat, pos_lng + 2.0 * padding);
 
     var marker_start = new google.maps.Marker({
         position: pos_start,
         clickable: true,
         draggable: true,
         title: translate_mapcontrol("Set start point", lang),
-        icon: bbbike.icons["green_dot"] // icon: "/images/start_ptr.png"
+        icon: bbbike.icons["start"] // icon: "/images/start_ptr.png"
     });
 
     var marker_dest = new google.maps.Marker({
@@ -2115,7 +2118,7 @@ function _init_markers(opt) {
         clickable: true,
         draggable: true,
         title: translate_mapcontrol("Set destination point", lang),
-        icon: bbbike.icons["red_dot"] // icon: "/images/ziel_ptr.png"
+        icon: bbbike.icons["dest"] // icon: "/images/ziel_ptr.png"
     });
 
     var marker_via = new google.maps.Marker({
@@ -2163,6 +2166,8 @@ function _init_markers(opt) {
 }
 
 // round up to 1.1 meters
+
+
 function granularity(val) {
     var granularity = 100000;
 
