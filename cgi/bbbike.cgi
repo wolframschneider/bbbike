@@ -2294,7 +2294,7 @@ EOF
 	    print qq{<span id="social">\n};
 	    print qq{<a href="$facebook_page" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="BBBike on Facebook"></a>\n} if $enable_facebook_t_link;
 	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n} if $enable_twitter_t_link;
-	    print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="small" count="false"></g:plusone>\n} if $enable_google_plusone_t_link;
+	    print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png" alt=""></a><g:plusone href="http://bbbike.org" size="small" count="false"></g:plusone>\n} if $enable_google_plusone_t_link;
 	    print qq{</span>\n};
 	}
 
@@ -7986,7 +7986,7 @@ if ($osm_data) {
     $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
 }
 
-my $span_debug = is_production($q) ? "" : qq{<t><span id="debug"></span></t>\n};
+my $span_debug = is_production($q) ? "" : qq{<tt><span id="debug"></span></tt>\n};
 
 my $rss_icon = "";
 $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="14" height="14" title="}
@@ -7996,7 +7996,7 @@ $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="
 my $permalink_text = $is_streets ? "" : qq{ | <a href="#" onclick="togglePermaLinks(); return false;">$permalink_msg</a><span id="permalink_url2" style="display:none"> $permalink</span>};
 $permalink_text = "" if $permalink !~ /=/;
 
-my $google_plusone = qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
+my $google_plusone = qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png" alt=""></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
 
 my $s_copyright = <<EOF;
 
