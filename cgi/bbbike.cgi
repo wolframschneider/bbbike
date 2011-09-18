@@ -3015,7 +3015,7 @@ EOF
 print <<EOF;
 <script type="text/javascript">
     if (document.getElementById('suggest_start') != null) {
-        document.BBBikeForm.start.focus();
+        // document.BBBikeForm.start.focus();
     }
 </script>
 
