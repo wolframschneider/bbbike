@@ -909,6 +909,8 @@ $BBBikeAds::enable_google_adsense_street = $enable_google_adsense_street;
 $BBBikeAds::enable_google_adsense_linkblock = $enable_google_adsense_linkblock;
 $BBBikeAds::enable_google_adsense_street_linkblock = $enable_google_adsense_street_linkblock;
 
+my $no_name = '(' . M("Straße ohne Namen") . ')';
+
 sub M ($) {
     my $key = shift;
 
@@ -3688,7 +3690,7 @@ sub make_crossing_choose_html {
 	    }
 	    for (@kreuzung) {
 		if (m{^\s*$}) {
-		    $_ = '(' . M("Straße ohne Namen") . ')';
+		    $_ = $no_name;
 		}
 	    }
 	    {
@@ -8846,6 +8848,7 @@ sub get_geography_object {
 
 sub nice_crossing_name {
     my(@c) = @_;
+
    
     # first part of cross is empty, switch streetsnames of corner: /foo -> foo/
     if ($osm_data) {
@@ -8853,6 +8856,9 @@ sub nice_crossing_name {
     	if ($cr[0] eq '') {
            @cr = ( $cr[1], "" );
     	}
+
+        #my $no_name = "NN";
+        @cr = map { $_ eq "" ? $no_name : $_ } @cr;
     	my $cr = join("/", @cr);
     	return $cr;
     }

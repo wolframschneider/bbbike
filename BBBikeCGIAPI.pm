@@ -64,6 +64,10 @@ sub action_revgeocode {
     if ($cr[0] eq '') {
 	@cr = ( $cr[1], "" );
     }
+
+    my $no_name = "NN";
+    @cr = map { $_ eq "" ? $no_name : $_ } @cr;
+
     my $cr = join("/", @cr);
     print $q->header('text/plain');
     print JSON::XS->new->ascii->encode({ crossing => $cr,
