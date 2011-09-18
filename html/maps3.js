@@ -1391,7 +1391,12 @@ function translate_mapcontrol(word, lang) {
             "Public Transport, by OpenStreetMap": "Öffentlicher Personennahverkehr, von OpenStreetMap",
             "German Mapnik, by OpenStreetMap": "Mapnik in deutschem Kartenlayout, von OpenStreetMap",
 
-            "bing_birdview": "Bing (Sat)" // Vogel
+            "bing_birdview": "Bing (Sat)",
+
+            "Set start point": "Setze Startpunkt",
+            "Set destination point": "Setze Zielpunkt",
+            "Set via point": "Setze Zwischenpunkt (Via)",
+
         },
         "es": {
             "cycle": "Bicicletas"
@@ -2051,21 +2056,24 @@ function smallerMap(step, id) {
 
 // zoom level is not known yet, try it 0.5 seconds later
 
-function init_markers(area) {
+function init_markers(opt) {
     var timeout = setTimeout(function () {
-        _init_markers(area)
+        _init_markers(opt)
     }, 500);
 
     // reset markers after the map bound were changed
     google.maps.event.addListener(map, "bounds_changed", function () {
         clearTimeout(timeout);
         timeout = setTimeout(function () {
-            _init_markers()
+            _init_markers(opt)
         }, 800);
     });
 }
 
-function _init_markers(area) {
+function _init_markers(opt) {
+    var area = opt.area;
+    var lang = opt.lang;
+
     var zoom = map.getZoom();
     var ne = map.getBounds().getNorthEast()
     var sw = map.getBounds().getSouthWest();
@@ -2085,7 +2093,6 @@ function _init_markers(area) {
     var pos_lng = lng + (ne.lng() - lng) / 8; //  1/8 right
     var pos_lat = lat - (lat - sw.lat()) / 12; //  1/2 down
     padding = (ne.lng() - lng) / 35; // distance beteen markers on map, 1/35 of the map
-
     var pos_start = new google.maps.LatLng(pos_lat, pos_lng);
     var pos_dest = new google.maps.LatLng(pos_lat, pos_lng + padding);
     var pos_via = new google.maps.LatLng(pos_lat, pos_lng + 2 * padding);
@@ -2094,16 +2101,15 @@ function _init_markers(area) {
         position: pos_start,
         clickable: true,
         draggable: true,
-        title: "Set start point",
+        title: translate_mapcontrol("Set start point", lang),
         icon: bbbike.icons["green_dot"] // icon: "/images/start_ptr.png"
     });
-
 
     var marker_dest = new google.maps.Marker({
         position: pos_dest,
         clickable: true,
         draggable: true,
-        title: "Set destination point",
+        title: translate_mapcontrol("Set destination point", lang),
         icon: bbbike.icons["red_dot"] // icon: "/images/ziel_ptr.png"
     });
 
@@ -2111,9 +2117,10 @@ function _init_markers(area) {
         position: pos_via,
         clickable: true,
         draggable: true,
-        title: "Set via point",
+        title: translate_mapcontrol("Set via point", lang),
         icon: bbbike.icons["yellow_dot"] // icon: "/images/ziel_ptr.png"
     });
+
 
     // clean old markers
     debug("zoom level: " + map.getZoom() + " padding: " + padding);
