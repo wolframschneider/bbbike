@@ -254,5 +254,8 @@ return {
     "Karte nach links schieben"            => "move map left",
     "Karte nach rechts schieben"           => "move map right",
     "Berge vermeiden"                      => "Avoid hills",
+    "Route auf Google Earth anschauen"     => "view route with Google Earth",
+    "GPX mit bis zu 1024 Punkten, keine Navigation",                  "GPX with up to 1024 points, no navigation",
+    "GPX Route mit Waypoints fuer GPS Navigation, bis zu 256 Punkte", "GPX route with waypoints for GPS navigation, up to 256 points",
 };
 
