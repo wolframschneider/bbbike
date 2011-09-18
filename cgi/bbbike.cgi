@@ -2293,7 +2293,7 @@ EOF
 	sub social_link {
 	    print qq{<span id="social">\n};
 	    print qq{<a href="$facebook_page" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="}, M("Facebook Fanpage"), qq{"></a>\n} if $enable_facebook_t_link;
-	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n} if $enable_twitter_t_link;
+	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="}, M("Folge uns auf twitter.com/BBBikeWorld"), qq{"></a>\n} if $enable_twitter_t_link;
 	    print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png" alt=""></a><g:plusone href="http://bbbike.org" size="small" count="false"></g:plusone>\n} if $enable_google_plusone_t_link;
 	    print qq{</span>\n};
 	}
@@ -8004,6 +8004,7 @@ my $google_plusone = qq{<a class="gplus" onmouseover="javascript:google_plusone(
 
 my $facebook_title = M("Facebook Fanpage");
 my $donate_title = M("Spende an BBBike.org");
+my $twitter_title = M("Folge uns auf twitter.com/BBBikeWorld");
 my $s_copyright = <<EOF;
 
 <div id="footer">
@@ -8025,7 +8026,7 @@ Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Projec
 <div id="footer_community">
   <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="$donate_title" border="0"></a>
   <a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
-  <a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
+  <a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="$twitter_title" alt=""></a>
   <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="$facebook_title"></a>
   $google_plusone
   $rss_icon
