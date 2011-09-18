@@ -2121,7 +2121,7 @@ function _init_markers(area) {
     });
 
     // clean old markers
-    debug("marker start state: " + state.markers.marker_start ? 0 : 1);
+    debug("zoom level: " + map.getZoom());
 
     if (state.markers_drag.marker_start == null) {
         if (state.markers.marker_start) state.markers.marker_start.setMap(null);
@@ -2143,7 +2143,6 @@ function _init_markers(area) {
     var event = 'drag';
     google.maps.event.addListener(marker_start, event, function () {
         state.markers_drag.marker_start = marker_start;
-        debug("marker start event: " + event);
         find_street(marker_start, "suggest_start")
     });
     google.maps.event.addListener(marker_dest, event, function () {
