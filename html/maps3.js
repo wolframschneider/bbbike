@@ -2063,23 +2063,23 @@ function smallerMap(step, id) {
 function init_markers(opt) {
     var timeout = setTimeout(function () {
         _init_markers(opt)
-    }, 500);
+    }, 900);
 
     // reset markers after the map bound were changed
     google.maps.event.addListener(map, "bounds_changed", function () {
         clearTimeout(timeout);
         timeout = setTimeout(function () {
             _init_markers(opt)
-        }, 800);
+        }, 1000);
     });
 }
 
 function _init_markers(opt) {
     var area = opt.area;
-    var lang = opt.lang;
+    var lang = opt.lang || "en";
 
     var zoom = map.getZoom();
-    var ne = map.getBounds().getNorthEast()
+    var ne = map.getBounds().getNorthEast();
     var sw = map.getBounds().getSouthWest();
 
     var lat, lng;
@@ -2097,6 +2097,7 @@ function _init_markers(opt) {
     var pos_lng = lng + (ne.lng() - lng) / 8; //  1/8 right
     var pos_lat = lat - (lat - sw.lat()) / 12; //  1/2 down
     padding = (ne.lng() - lng) / 35; // distance beteen markers on map, 1/35 of the map
+
     var pos_start = new google.maps.LatLng(pos_lat, pos_lng);
     var pos_dest = new google.maps.LatLng(pos_lat, pos_lng + padding);
     var pos_via = new google.maps.LatLng(pos_lat, pos_lng + 2 * padding);
@@ -2162,7 +2163,6 @@ function _init_markers(opt) {
 }
 
 // round up to 1.1 meters
-
 function granularity(val) {
     var granularity = 100000;
 
