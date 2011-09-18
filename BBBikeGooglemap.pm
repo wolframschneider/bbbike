@@ -45,6 +45,8 @@ sub run {
     my $self = shift;
     my %args = @_;
 
+    warn __PACKAGE__, "::run->() ", join " ", caller(), "\n" if $args{'debug'} >= 2;
+
     my $q                = $args{'q'};
     my $gmap_api_version = $args{'gmap_api_version'};
     my $lang             = $args{'lang'};
