@@ -2152,7 +2152,8 @@ function _init_markers(opt) {
     }
 
 
-    var event = 'drag';
+    // var event = 'position_changed'; // "drag", Firefox bug
+    var event = 'drag'; // "drag", Firefox bug
     google.maps.event.addListener(marker_start, event, function () {
         state.markers_drag.marker_start = marker_start;
         find_street(marker_start, "suggest_start")
@@ -2181,10 +2182,11 @@ function debug(text, id) {
     }
 
     var tag = document.getElementById(id);
+    var today = new Date();
 
     if (!tag) return;
 
-    tag.innerHTML = "debug: " + text;
+    tag.innerHTML = "debug: " + text + " " + today;
 }
 
 function find_street(marker, input_id) {
@@ -2195,7 +2197,11 @@ function find_street(marker, input_id) {
         if (input_id == "XXXsuggest_via") {
             toogleVia('viatr', 'via_message', null, true);
         }
-        input.setAttribute("value", granularity(latLng.lng()) + ',' + granularity(latLng.lat()));
+
+        var value = granularity(latLng.lng()) + ',' + granularity(latLng.lat());
+        input.setAttribute("value", value);
+
+        debug(value);
     } else {
         debug("Unknonw: " + input_id);
     }
