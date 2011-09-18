@@ -1396,6 +1396,8 @@ function translate_mapcontrol(word, lang) {
             "Set start point": "Setze Startpunkt",
             "Set destination point": "Setze Zielpunkt",
             "Set via point": "Setze Zwischenpunkt (Via)",
+            "Your current postion": "Ihre aktuelle Position",
+            "Approximate address": "Ungef&auml;hre Adresse",
 
         },
         "es": {
@@ -1670,7 +1672,9 @@ function custom_layer(map, opt) {
 }
 
 
-function displayCurrentPosition(area) {
+function displayCurrentPosition(area, lang) {
+    if (!lang) lang = "en";
+
     if (!navigator.geolocation) {
         return;
     }
@@ -1733,8 +1737,8 @@ function displayCurrentPosition(area) {
                 maxWidth: 400
             });
             var content = "<div id=\"infoWindowContent\">\n"
-            content += "<p>Your current postion: " + currentPosition.lat + "," + currentPosition.lng + "</p>\n";
-            content += "<p>Approximate address: " + address + "</p>\n";
+            content += "<p>" + translate_mapcontrol("Your current postion", lang) + ": " + currentPosition.lat + "," + currentPosition.lng + "</p>\n";
+            content += "<p>" + translate_mapcontrol("Approximate address", lang) + ": " + address + "</p>\n";
             content += "</div>\n";
             infoWindow.setContent(content);
             infoWindow.open(map, marker);

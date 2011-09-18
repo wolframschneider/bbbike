@@ -3000,7 +3000,7 @@ EOF
 
       print <<EOF;
 <script type="text/javascript">
-	displayCurrentPosition($data);
+	displayCurrentPosition($data, "$lang");
 </script>
 EOF
    }
