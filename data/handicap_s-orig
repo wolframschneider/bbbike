@@ -13,8 +13,8 @@
 #: XXX siehe auch qualitaet_s-orig
 Sembritzkystr.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 7203,5488 7186,5453 7157,5418 7095,5317 7018,5201
 # 
-#: last_checked: 2011-08-19 vvv
-#: next_check: 2011-09-25 vvv
+#: last_checked: 2011-09-13 vvv
+#: next_check: 2011-10-15 vvv
 #: XXX wird wahrscheinlich reorganisiert mit der neuen Verbindung
 Beuthstr. - Spittelmarkt: Gehweg, Bauarbeiten	q4::inwork 10166,11592 10197,11605 10229,11618 10213,11728
 Spittelmarkt: Gehweg, Bordstein, Bauarbeiten	q4::inwork 10166,11592 10153,11666 10213,11728
@@ -29,8 +29,8 @@ Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Gartenstr. und He
 # 
 #XXX del --- #: last_checked: 2011-05-20 --- Krausenstr.: Bauarbeiten an der Kreuzung Krausenstr./Charlottenstr	q3::inwork 9581,11523 9711,11543
 # 
-#: last_checked: 2011-08-20
-#: next_check: 2011-10-15
+#: last_checked: 2011-09-10
+#: next_check: 2011-11-15
 Alt-Stralau: Bauarbeiten an der Br¸cke, enge Durchfahrt	q3::inwork 14652,10201 14558,10264
 # 
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4088.html
@@ -49,7 +49,7 @@ Oberwallstr.: Bauarbeiten, Einbahnstraﬂe	q4::inwork; 9925,11947 9913,12068
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9890,12161 9875,12257 9869,12297
 # 
-#: last_checked: 2011-08-19
+#: last_checked: 2011-09-15
 Jerusalemer Str.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 9878,11857 9892,11752
 # 
 #: last_checked: 2011-06-12
@@ -140,16 +140,16 @@ Uferweg im Treptower Park: Fuﬂg‰nger, besonders an schˆnen Tagen	q2 15793,8984 1
 (S-Bahnhof - Treptower Hafen): Fuﬂg‰nger, besonders an schˆnen Tagen	q2 14361,9772 14436,9784 14483,9843
 Treptower Park, am Rosengarten: Fuﬂg‰nger	q2 14819,9462 14910,9643
 Treptower Park: Fuﬂg‰nger	q1 14697,9726 14645,9710 14575,9648 14496,9705 14361,9772
-Gˆrlitzer Park: Parkweg, Fuﬂg‰nger	q2 12671,10042 12686,10045 12690,10062
-Gˆrlitzer Park: Parkweg, Fuﬂg‰nger	q2 12761,10195 12769,10211 12774,10222
-Gˆrlitzer Park: Parkweg, Fuﬂg‰nger	q2 13145,9920 12869,10071 12802,10097
-Gˆrlitzer Park: Parkweg, Fuﬂg‰nger	q2 12670,10160 12559,10220 12459,10256 12406,10368 12328,10442
-Gˆrlitzer Park: Parkweg, Fuﬂg‰nger	q2 12817,9964 12855,10035 12869,10071 12904,10141 12911,10156
-Gˆrlitzer Park, Rondell: Parkweg, Fuﬂg‰nger	q2 12802,10097 12737,10051 12690,10062 12659,10119 12670,10160 12712,10192 12761,10195 12801,10146 12802,10097
+Gˆrlitzer Park: Fuﬂg‰nger	q2 12671,10042 12686,10045 12690,10062
+Gˆrlitzer Park: Fuﬂg‰nger	q2 12761,10195 12769,10211 12774,10222
+Gˆrlitzer Park: Fuﬂg‰nger	q2 13145,9920 13004,9997 12869,10071 12802,10097
+Gˆrlitzer Park: Fuﬂg‰nger	q2 12670,10160 12559,10220 12459,10256 12406,10368 12328,10442
+Gˆrlitzer Park: Fuﬂg‰nger	q2 12817,9964 12869,10071 12904,10141 12911,10156
+Gˆrlitzer Park, Rondell: Fuﬂg‰nger	q2 12802,10097 12737,10051 12690,10062 12659,10119 12670,10160 12712,10192 12761,10195 12801,10146 12802,10097
 Gˆrlitzer Park: Fuﬂg‰nger, eng	q2 12802,10097 12670,10160
 Gˆrlitzer Park: eng, Kurven, Fuﬂg‰nger	q2 12507,10130 12509,10189 12559,10220
-Gˆrlitzer Park: Parkweg, Fuﬂg‰nger	q2 12559,10220 12611,10299
-Tiergartenufer: Parkweg, Fuﬂg‰nger	q1 6186,11466 6079,11524 5940,11616 5903,11683 5835,11768 5711,11841 5565,11871
+Gˆrlitzer Park: Fuﬂg‰nger	q2 12559,10220 12611,10299
+Tiergartenufer: Fuﬂg‰nger	q1 6186,11466 6079,11524 5940,11616 5903,11683 5835,11768 5711,11841 5565,11871
 (Lichtensteinallee - Tiergartenufer): Parkweg, Fuﬂg‰nger	q1 6309,11443 6186,11466
 Tiergarten: Parkweg, Fuﬂg‰nger	q2 5666,11362 5727,11573 5758,11630 5780,11622 5802,11672 5831,11697 5818,11722 5835,11768 5870,11842 5890,11865 5900,11913
 Fasanerieallee: Parkweg	q1 6435,11606 6459,11638 6540,11754 6685,11954
@@ -1046,6 +1046,10 @@ Achillesstr. - Strˆmannstr.: Fuﬂg‰nger, eng	q2 15945,23608 15932,23581
 Erekweg: enger Pfad	q3 16186,24108 16139,24162
 #: XXX_prog BS (am Gewanneweg)
 (Kurze-Enden-Weg - Gewanneweg): eng, Bordstein	q2 15278,23934 15321,23979
+Faulhornweg: Fuﬂg‰nger	q1 10383,2088 10322,2163
+Igelkolbensteig: eng	q2 15947,3572 16003,3652
+#: XXX_prog BS (2x)
+Melissenweg: Bordsteine	q2 16003,3652 16041,3718
 ######################### User Contributions #################################
 #: by: Michael Kiekbusch
 #: corrected_by: srt/policy (q4 -> q3-)
@@ -1725,7 +1729,8 @@ Schieritzstr.: enge Straﬂe	q1 12463,15774 12642,15668 12821,15565 12966,15478
 #: by: Max Janke 
 Siedlungsring (Karow): schlecht ¸beraschaubar	q1 16139,24162 16245,24159 16357,24093 16473,24045 16900,23884 16887,23860 16717,23845 16664,23845 16600,23881 16542,23954 16512,23979 16462,24012
 #: by: karsten (kasi):
-W¸rzburger Str.: enge Straﬂe	q1 11681,-1951 11886,-1930 11919,-1927 12082,-1908 12167,-1898 12216,-1891
+#: corrected_by: srt/policy (q1 -> q0-)
+W¸rzburger Str.: enge Straﬂe	q0- 11681,-1951 11886,-1930 11919,-1927 12082,-1908 12167,-1898 12216,-1891
 #: by: guenther (m...berlin): vvv
 # corrected_by: srt (removed): --- Hauptweg (Biesdorf): enger Weg	q2 20821,8438 20834,8694
 Hauptweg (Biesdorf): enger Weg	q2 20834,8694 20799,8965 20802,9297
@@ -1869,12 +1874,16 @@ Am Forstacker: enge Straﬂe	q1 -3676,17131 -3671,17202 -3648,17250 -3612,17280 -3
 #: by: David (dh):
 #: corrected_by: srt/policy (q2 -> q1)
 Brandenburgische Str. (Steglitz): enge Straﬂe	q1 6889,4334 6820,4347 6677,4384 6638,4394 6532,4422
+# 
 #: by: anonymous vvv
-Im Lesachtal: enge Straﬂe	q1 10349,2188 10428,2109 10466,2071 10549,2257
-Im Lesachtal: enge Straﬂe	q1 10617,2226 10549,2257
-Im Lesachtal: enge Straﬂe	q1 10549,2257 10526,2282
-Im Lesachtal: enge Straﬂe	q1 10526,2282 10504,2321
+#: corrected_by: srt/policy (q1 -> q0-) vvv
+Im Lesachtal: enge Straﬂe	q0- 10349,2188 10428,2109 10466,2071 10517,2183 10549,2257
+Im Lesachtal: enge Straﬂe	q0- 10617,2226 10559,2252 10549,2257
+Im Lesachtal: enge Straﬂe	q0- 10549,2257 10526,2282
+Im Lesachtal: enge Straﬂe	q0- 10526,2282 10504,2321
 #: by: ^^^
+#: by: ^^^
+# 
 #: by: anonymous
 Rotdornstr.: enge Straﬂe	q1 5139,7206 5141,7158 5121,7132 5085,7109
 #: by: Ines Junge:
@@ -1949,7 +1958,7 @@ Klemkepark - Kopenhagener Str./Freiheitsweg: Hunde	q1 7574,18874 7576,18837 7480
 #: by: Detlef Liebe: vvv
 Bosporusstr.: enge Straﬂe	q1 10363,4183 10455,4189 10505,4194 10601,4185 10724,4168
 Werfelstr.: enge Straﬂe	q1 10126,-834 9907,-812
-Simpsonweg: enge Straﬂe	q1 10082,-671 9937,-693 9913,-705 9899,-732 9907,-812 9884,-860
+Simpsonweg: enge Straﬂe	q1 10092,-669 9937,-693 9913,-705 9899,-732 9907,-812 9884,-860
 #: by: ^^^
 #: by: where_are_you_between:
 (Weg am Heidekampgraben - Kiefholzstr., entlang der S-Bahn): teilweise eng/un¸bersichtlich	q1 15388,7228 15422,7265 15468,7291 15579,7316 15609,7347
@@ -2062,7 +2071,8 @@ Schoelerpark: Fuﬂg‰nger, f¸r Radfahrer nicht freigegeben, ggfs. schieben	q3- 522
 Schoelerpark: Fuﬂg‰nger, f¸r Radfahrer nicht freigegeben, ggfs. schieben	q3- 5219,8635 5212,8602
 #: by: ^^^
 #: by: Markus (Graf):
-Homburgstr.: enge Straﬂe	q1 11077,-714 11106,-737 11278,-719 11477,-697 11666,-675 11808,-659
+#: corrected_by: srt/policy (q1 -> q0-)
+Homburgstr.: enge Straﬂe	q0- 11077,-714 11106,-737 11278,-719 11477,-697 11666,-675 11808,-659
 #: by: Jochen.Gollbach:
 Schwarzburger Str.: enge Straﬂe	q1 21719,17427 21709,17382 21677,17195 21665,17133 21488,17160
 #: by: anonymous

@@ -229,10 +229,10 @@ Florastraße zwischen Grunowstraße und Berliner Straße, Baustelle, Straße in beid
        text  => 'Fürstenwalder Damm zwischen Bölschestraße und Hartlebenstraße Baustell stadtauswärts, Straße gesperrt, eine Umleitung ist eingerichtet, Dauer: 07.09.2003,04.00 Uhr bis 21.09.2003',
        type  => 'gesperrt',
      },
-     { from  => 1315519200, #1063339200, # 2003-09-12 06:00
+     { from  => 1315519200, #1063339200, # 2003-09-12 06:00 # PERIODISCH
        until => 1315778400, #1063576800, # 2003-09-15 00:00
        data  => <<EOF,
-userdel	2 10453,-2133 10509,-2131 10631,-2130 10747,-2129
+userdel	2 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129
 EOF
        text  => 'Bahnhofstraße, zwischen Goltzstraße und Steinstraße Winzerfest, vom 10.09.2011 bis 11.09.2011',
        type  => 'gesperrt',
@@ -1296,7 +1296,7 @@ EOF
        text  => 'L 75; (Karl-Marx-Straße); OD Großziethen, von Dorfstraße bis Friedhofsweg Straßenbauarbeiten Vollsperrung 24.05.2004-20.12.2004 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 13225,-681 13176,-161 13165,-34 13124,216 13165,-34 13176,-161 13225,-681 13230,-712 13309,-1268
+userdel	q4 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13165,-34 13176,-161 13215,-570 13225,-681 13230,-712 13300,-1252
 EOF
      },
      { from  => 1292626800, # PERIODISCH, Advents-Wochenenden! # früher: 1102654800, # 2004-12-10 06:00
@@ -2881,7 +2881,7 @@ EOF
        text  => 'L 75; (Karl-Marx-Str.); OD Großziethen Straßenbauarbeiten Vollsperrung 06.09.2005-30.11.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 13225,-681 13176,-161 13165,-34 13124,216 12984,1011
+userdel	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 12984,1011
 EOF
      },
      { from  => 1128290400, # 2005-10-03 00:00
@@ -4034,7 +4034,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_003887',
        data  => <<EOF,
-userdel	q4 13225,-681 13176,-161 13165,-34 13124,216 12984,1011
+userdel	q4 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 12984,1011
 EOF
      },
      { from  => 1143928800, # 2006-04-02 00:00
@@ -5679,7 +5679,7 @@ EOF
        text  => 'L 075 Karl-Marx-Str. OD Großziehten Straßenbauarbeiten Vollsperrung 24.11.2006-22.12.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 13225,-681 13176,-161 13165,-34 13124,216 12984,1011
+userdel	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 12984,1011
 EOF
      },
      { from  => 1156629600, # 2006-08-27 00:00
@@ -19698,6 +19698,44 @@ EOF
        source_id => 'IM_017750',
        data  => <<EOF,
 userdel	q4::inwork; 13236,6489 13455,6559 13520,6583
+EOF
+     },
+     { from  => undef, # 
+       until => 1356994800, # 2013-01-01 00:00
+       text  => 'Jonasstr./Karl-Marx-Str.: Abbiegen nicht möglich (bzw. nur auf dem Gehweg)',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	3 12925,7425 13015,7440 13027,7368
+userdel	3 13027,7368 13015,7440 12925,7425
+userdel	3 12925,7425 13015,7440 12992,7545
+userdel	3 12992,7545 13015,7440 12925,7425
+EOF
+     },
+     { from  => 1317297600, # 2011-09-29 14:00
+       until => 1317697200, # 2011-10-04 05:00
+       text  => 'Rote Chaussee: Vollsperrung, von 30.09.2011, 14:00 Uhr bis 04.10.2011, 5:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110914.1015.358646.html',
+       data  => <<EOF,
+userdel	2::inwork 872,24330 905,24113 831,24054 764,24065 609,24215 237,24374 195,24389 132,24390 78,24364 -406,23934
+EOF
+     },
+     { from  => 1316062800, # 2011-09-15 07:00
+       until => 1316383140, # 2011-09-18 23:59
+       text  => 'Hauptstr. (Rosenthal): Veranstaltung, Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 16.09.2011 07:00 Uhr bis 18.09.2011 23:59 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_017830',
+       data  => <<EOF,
+userdel	q4::temp 8591,21906 8460,21602
+EOF
+     },
+     { from  => 1316088000, # 2011-09-15 14:00
+       until => 1316282400, # 2011-09-17 20:00
+       text  => 'Kirchstr. (Zehlendorf): Veranstaltung, Straße vollständig gesperrt, 16.09.2011 14:00 Uhr bis 17.09.2011 20:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_017848',
+       data  => <<EOF,
+userdel	q4::temp 751,2860 589,2925
 EOF
      },
     );
