@@ -1692,6 +1692,7 @@ function displayCurrentPosition(area, lang) {
         var pos = new google.maps.LatLng(currentPosition.lat, currentPosition.lng);
         var marker = new google.maps.Marker({
             position: pos,
+            icon: bbbike.icons["purple_dot"],
             map: map
         });
 
@@ -1715,6 +1716,7 @@ function displayCurrentPosition(area, lang) {
                             marker.setMap(null);
                             marker = new google.maps.Marker({
                                 position: pos,
+                                icon: bbbike.icons["purple_dot"],
                                 map: map
                             });
 
@@ -2166,7 +2168,6 @@ function _init_markers(opt) {
 }
 
 // round up to 1.1 meters
-
 
 function granularity(val) {
     var granularity = 100000;
