@@ -2084,7 +2084,7 @@ function _init_markers(area) {
 
     var pos_lng = lng + (ne.lng() - lng) / 8; //  1/8 right
     var pos_lat = lat - (lat - sw.lat()) / 12; //  1/2 down
-    padding = (ne.lng() - lng) / 25; // distance beteen markers on map, 1/25 of the map
+    padding = (ne.lng() - lng) / 35; // distance beteen markers on map, 1/35 of the map
 
     var pos_start = new google.maps.LatLng(pos_lat, pos_lng);
     var pos_dest = new google.maps.LatLng(pos_lat, pos_lng + padding);
