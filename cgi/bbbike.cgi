@@ -5713,7 +5713,7 @@ EOF
 #		    }
 		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">PalmDoc</a>};
 		}
-	        print qq{\n<span><a class="mobile_link" target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">PDF</a></span>\n};
+	        print qq{\n<span><a class="mobile_link" target="" onclick='javascript:pdfLink();' href='#' title="}, M("PDF Ausdruck der Karte und Route"), qq{">PDF</a></span>\n};
 		if ($can_gpx) {
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
@@ -5733,7 +5733,7 @@ EOF
 		    $qq2->param('output_as', "kml-track");
 
 		    my $href = $bbbike_script;
-		    print qq{<a class="mobile_link" title="}, M("view route with Google Earth"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">Google Earth (KML)</a>};
+		    print qq{<a class="mobile_link" title="}, M("Route auf Google Earth anschauen"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">Google Earth (KML)</a>};
 		}
 		if ($can_gpsies_link) {
 		    my $qq2 = cgi_utf8($use_utf8);
@@ -5743,7 +5743,7 @@ EOF
 			$bbbike_script = $BBBike::BBBIKE_DIRECT_WWW;
 		    }
 		    my $href = 'http://www.gpsies.com/map.do?url=' . BBBikeCGIUtil::my_escapeHTML($qq2->url(-full=>1, -query=>1));
-		    print qq{<a title="upload route to GPSies.com, Tracks for Vagabonds" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com (upload)</a>};
+		    print qq{<a title="}, M("Route auf GPSies.com hochladen"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com (upload)</a>};
 		}
 		print qq{<a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>\n};
 	        print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
