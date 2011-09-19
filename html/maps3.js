@@ -2219,7 +2219,6 @@ function find_street(marker, input_id) {
 
 // call the API only after 100ms
 
-
 function display_current_crossing(id, obj) {
     if (state.timeout_crossing) {
         clearTimeout(state.timeout_crossing);
