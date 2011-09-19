@@ -2186,7 +2186,7 @@ function debug(text, id) {
 
     if (!tag) return;
 
-    tag.innerHTML = "debug: " + text + " " + today;
+    tag.innerHTML = "debug: " + text; // + " " + today;
 }
 
 function find_street(marker, input_id) {
