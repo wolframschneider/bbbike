@@ -60,8 +60,8 @@ var bbbike = {
     },
 
     // default map
-    mapDefault: "mapnik",
-    // mapDefault: "terrain",
+    // mapDefault: "mapnik",
+    mapDefault: "terrain",
     // visible controls
     controls: {
         panControl: true,
@@ -121,6 +121,8 @@ var state = {
     slideShowMaps: [],
     markers: [],
     markers_drag: [],
+
+    timeout_crossing: null,
 
     // street lookup events
     timeout: null
@@ -2170,8 +2172,8 @@ function _init_markers(opt) {
 
 // round up to 1.1 meters
 
-function granularity(val) {
-    var granularity = 100000;
+function granularity(val, gran) {
+    var granularity = gran || 100000;
 
     return parseInt(val * granularity) / granularity;
 }
@@ -2201,10 +2203,62 @@ function find_street(marker, input_id) {
         var value = granularity(latLng.lng()) + ',' + granularity(latLng.lat());
         input.setAttribute("value", value);
 
-        debug(value);
+        display_current_crossing(null, {
+            "lngLat": granularity(latLng.lng(), 10000) + ',' + granularity(latLng.lat(), 10000)
+        });
+        // debug(value);
     } else {
         debug("Unknonw: " + input_id);
     }
 }
+
+/*************************************************
+ * crossings
+ *
+ */
+
+// call the API only after 100ms
+
+
+function display_current_crossing(id, obj) {
+    if (state.timeout_crossing) {
+        clearTimeout(state.timeout_crossing);
+    }
+
+    state.timeout_crossing = setTimeout(function () {
+        _display_current_crossing(id, obj)
+    }, 200);
+}
+
+function _display_current_crossing(id, obj) {
+    var url = '/cgi/api.cgi?crossing=1;namespace=dbac;city=' + city + ';query=' + obj.lngLat;
+
+    downloadUrl(url, function (data, responseCode) {
+        if (responseCode == 200) {
+            updateCrossing(id, data);
+        } else if (responseCode == -1) {
+            alert("Data request timed out. Please try later.");
+        } else {
+            alert("Request resulted in error. Check XML file is retrievable.");
+        }
+    });
+}
+
+function updateCrossing(id, data) {
+    //debug("crossing: " + data);
+    if (!data || data == "") {
+        return;
+    }
+
+    var js = eval("(" + data + ")");
+
+    if (!js || !js.suggestions) {
+        debug("no crossing");
+        return;
+    }
+
+    debug("crossing: " + js.suggestions[0]);
+}
+
 
 // EOF
