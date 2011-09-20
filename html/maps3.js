@@ -127,8 +127,12 @@ var state = {
     timeout_crossing: null,
 
     // street lookup events
-    timeout: null
+    timeout: null,
 
+    marker_list: [],
+
+    // IE bugs
+    dummy: 0
 };
 
 var layers = {};
@@ -311,6 +315,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     if (!is_supported_map(maptype)) {
         maptype = bbbike.mapDefault;
     }
+    state.marker_list = marker_list;
 
     var routeLinkLabel = "Link to route: ";
     var routeLabel = "Route: ";
@@ -2206,7 +2211,8 @@ function find_street(marker, input_id) {
         input.setAttribute("value", value);
 
         display_current_crossing(input_id, {
-            "lngLat": granularity(latLng.lng()) + ',' + granularity(latLng.lat())
+            "lng": granularity(latLng.lng()),
+            "lat": granularity(latLng.lat())
         });
         // debug(value);
     } else {
@@ -2218,6 +2224,19 @@ function find_street(marker, input_id) {
  * crossings
  *
  */
+
+function inside_area(obj) {
+    var area = state.marker_list;
+    var bottomLeft = area[0];
+    var topRight = area[1];
+
+    // debug("lng: " + obj.lng + " lat: " + obj.lat + " area: " +  bottomLeft[1] + " :: " +  bottomLeft[0]);
+    if (obj.lng >= bottomLeft[1] && obj.lng <= topRight[1] && obj.lat >= bottomLeft[0] && obj.lat <= topRight[0]) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
 
 // call the API only after 100ms
 
@@ -2232,8 +2251,14 @@ function display_current_crossing(id, obj) {
 }
 
 function _display_current_crossing(id, obj) {
-    var url = '/cgi/api.cgi?crossing=1;namespace=dbac;city=' + city + ';query=' + obj.lngLat;
+    var lngLat = obj.lng + "," + obj.lat
+    var url = '/cgi/api.cgi?crossing=1;namespace=dbac;city=' + city + ';query=' + lngLat;
 
+    if (!inside_area(obj)) {
+        debug("outside area");
+        updateCrossing(id, "{suggestions:[]}");
+        return;
+    }
     downloadUrl(url, function (data, responseCode) {
         if (responseCode == 200) {
             updateCrossing(id, data);
@@ -2259,13 +2284,15 @@ function updateCrossing(id, data) {
     }
 
     var input = document.getElementById(id);
+    var value = js.suggestions[0];
+
     if (input) {
-        input.setAttribute("value", js.suggestions[0]);
+        input.setAttribute("value", value);
     } else {
         alert("unknown input field: " + id);
     }
-    // debug("crossing: " + id + " " + js.suggestions[0]);
-}
 
+    debug("crossing: " + id + " " + value);
+}
 
 // EOF
