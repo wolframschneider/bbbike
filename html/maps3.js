@@ -101,6 +101,8 @@ var bbbike = {
 
     maptype_usage: 1,
 
+    granularity: 100000, // 5 digits for LatLng after dot
+
     // IE bugs
     dummy: 0
 };
@@ -2173,7 +2175,7 @@ function _init_markers(opt) {
 // round up to 1.1 meters
 
 function granularity(val, gran) {
-    var granularity = gran || 10000;
+    var granularity = gran || bbbike.granularity;
 
     return parseInt(val * granularity) / granularity;
 }
@@ -2204,7 +2206,7 @@ function find_street(marker, input_id) {
         input.setAttribute("value", value);
 
         display_current_crossing(null, {
-            "lngLat": granularity(latLng.lng(), 10000) + ',' + granularity(latLng.lat(), 10000)
+            "lngLat": granularity(latLng.lng()) + ',' + granularity(latLng.lat())
         });
         // debug(value);
     } else {
