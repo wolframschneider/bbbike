@@ -101,8 +101,8 @@ var bbbike = {
 
     maptype_usage: 1,
 
-    granularity: 100000, // 5 digits for LatLng after dot
-
+    granularity: 100000,
+    // 5 digits for LatLng after dot
     // IE bugs
     dummy: 0
 };
@@ -2205,7 +2205,7 @@ function find_street(marker, input_id) {
         var value = granularity(latLng.lng()) + ',' + granularity(latLng.lat());
         input.setAttribute("value", value);
 
-        display_current_crossing(null, {
+        display_current_crossing(input_id, {
             "lngLat": granularity(latLng.lng()) + ',' + granularity(latLng.lat())
         });
         // debug(value);
@@ -2258,7 +2258,13 @@ function updateCrossing(id, data) {
         return;
     }
 
-    debug("crossing: " + js.suggestions[0]);
+    var input = document.getElementById(id);
+    if (input) {
+        input.setAttribute("value", js.suggestions[0]);
+    } else {
+        alert("unknown input field: " + id);
+    }
+    // debug("crossing: " + id + " " + js.suggestions[0]);
 }
 
 
