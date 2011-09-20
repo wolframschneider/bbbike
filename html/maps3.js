@@ -2173,7 +2173,7 @@ function _init_markers(opt) {
 // round up to 1.1 meters
 
 function granularity(val, gran) {
-    var granularity = gran || 100000;
+    var granularity = gran || 10000;
 
     return parseInt(val * granularity) / granularity;
 }
@@ -2226,7 +2226,7 @@ function display_current_crossing(id, obj) {
 
     state.timeout_crossing = setTimeout(function () {
         _display_current_crossing(id, obj)
-    }, 200);
+    }, 100);
 }
 
 function _display_current_crossing(id, obj) {
