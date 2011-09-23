@@ -2252,7 +2252,7 @@ function display_current_crossing(id, obj) {
 
 function _display_current_crossing(id, obj) {
     var lngLat = obj.lng + "," + obj.lat
-    var url = '/cgi/api.cgi?crossing=1;namespace=dbac;city=' + city + ';query=' + lngLat;
+    var url = '/cgi/crossing.cgi?crossing=1;namespace=dbac;city=' + city + ';query=' + lngLat;
 
     if (!inside_area(obj)) {
         debug("outside area");
