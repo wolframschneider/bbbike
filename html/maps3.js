@@ -60,8 +60,8 @@ var bbbike = {
     },
 
     // default map
-    // mapDefault: "mapnik",
-    mapDefault: "terrain",
+    mapDefault: "mapnik",
+    //mapDefault: "terrain",
     // visible controls
     controls: {
         panControl: true,
