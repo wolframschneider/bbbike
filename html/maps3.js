@@ -2285,14 +2285,16 @@ function updateCrossing(id, data) {
 
     var input = document.getElementById(id);
     var value = js.suggestions[0];
+    var v = value.split("\t");
+    var street_latlng = v[1] + " [" + v[0] + "]";
 
     if (input) {
-        input.setAttribute("value", value);
+        input.setAttribute("value", street_latlng);
     } else {
         alert("unknown input field: " + id);
     }
 
-    debug("crossing: " + id + " " + value);
+    debug("crossing: " + id + " " + street_latlng);
 }
 
 // EOF
