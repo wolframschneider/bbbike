@@ -21,7 +21,7 @@ bbbike.cgi - CGI interface to bbbike
 
 BEGIN {
     $ENV{SERVER_NAME} ||= "";
-    open(STDERR, ">/tmp/bbbike.log")
+    open(STDERR, ">> /tmp/bbbike.log")
 	if $ENV{SERVER_NAME} =~ /sourceforge/ ||
            $ENV{SERVER_NAME} =~ m,^(dev|test).*$,;
 	 
@@ -1383,8 +1383,13 @@ sub enable_latlng_search {
     foreach my $param (qw/start ziel via/) {
 	my $param_c = $param . "c";
 
-    	if (!defined $q->param($param_c) && defined $q->param($param) && is_latlng($q->param($param))) {
-	   $q->param($param_c, $q->param($param));
+	my $value = $q->param($param) || "";
+
+	# extract latlng: Mendosa Avenue [-122.46748,37.74807] -> -122.46748,37.74807
+	$value = $1 if $value =~ /\s+\[([\d\.,\-\+]+)\]$/;
+
+    	if (!defined $q->param($param_c) && $value) {
+	   $q->param($param_c, $value);
 	   $q->delete($param);
 	   warn "Do a lat,lng search for $param\n" if $debug;
     	}
