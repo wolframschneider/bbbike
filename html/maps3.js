@@ -2256,8 +2256,7 @@ function _display_current_crossing(id, obj) {
 
     if (!inside_area(obj)) {
         debug("outside area");
-        updateCrossing(id, "{suggestions:[]}");
-        return;
+        return updateCrossing(id, '{query:"", suggestions:[]}');
     }
     downloadUrl(url, function (data, responseCode) {
         if (responseCode == 200) {
@@ -2274,7 +2273,7 @@ function set_input_field(id, value) {
     var input = document.getElementById(id);
 
     if (input) {
-        input.setAttribute("value", value);
+        input.value = value;
     } else {
         debug("unknown input field: " + id);
         return;
