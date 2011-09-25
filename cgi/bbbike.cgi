@@ -1388,7 +1388,7 @@ sub enable_latlng_search {
 	# extract latlng: Mendosa Avenue [-122.46748,37.74807] -> -122.46748,37.74807
 	$value = $1 if $value =~ /\s+\[([\d\.,\-\+]+)\]$/;
 
-    	if (!defined $q->param($param_c) && $value) {
+    	if (!defined $q->param($param_c) && is_latlng($value)) {
 	   $q->param($param_c, $value);
 	   $q->delete($param);
 	   warn "Do a lat,lng search for $param\n" if $debug;
