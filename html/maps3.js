@@ -131,6 +131,8 @@ var state = {
 
     marker_list: [],
 
+    lang: "en",
+
     // IE bugs
     dummy: 0
 };
@@ -315,6 +317,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     if (!is_supported_map(maptype)) {
         maptype = bbbike.mapDefault;
     }
+    state.lang = lang;
     state.marker_list = marker_list;
 
     var routeLinkLabel = "Link to route: ";
@@ -1362,6 +1365,10 @@ function plotRoute(map, opt, street) {
 // localized custom map names
 
 function translate_mapcontrol(word, lang) {
+    if (!lang) {
+        lang = state.lang;
+    }
+
     var l = {
         // master language, fallback for all
         "en": {
@@ -1411,7 +1418,10 @@ function translate_mapcontrol(word, lang) {
             "Set via point": "Setze Zwischenpunkt (Via)",
             "Your current postion": "Ihre aktuelle Position",
             "Approximate address": "Ungef&auml;hre Adresse",
-
+            "crossing": "Kreuzung",
+            "Start": "Start",
+            "Destination": "Ziel",
+            "Via": "Via"
         },
         "es": {
             "cycle": "Bicicletas"
@@ -2073,7 +2083,11 @@ function smallerMap(step, id) {
     tag.style.width = width + "%";
 }
 
+//
+// set start/via/destination markers
 // zoom level is not known yet, try it 0.5 seconds later
+//
+
 
 function init_markers(opt) {
     var timeout = setTimeout(function () {
@@ -2210,10 +2224,12 @@ function find_street(marker, input_id) {
         var value = granularity(latLng.lng()) + ',' + granularity(latLng.lat());
         input.setAttribute("value", value);
 
-        display_current_crossing(input_id, {
+        display_current_crossing(marker, input_id, {
             "lng": granularity(latLng.lng()),
             "lat": granularity(latLng.lat())
         });
+
+
         // debug(value);
     } else {
         debug("Unknonw: " + input_id);
@@ -2240,17 +2256,17 @@ function inside_area(obj) {
 
 // call the API only after 100ms
 
-function display_current_crossing(id, obj) {
+function display_current_crossing(marker, id, obj) {
     if (state.timeout_crossing) {
         clearTimeout(state.timeout_crossing);
     }
 
     state.timeout_crossing = setTimeout(function () {
-        _display_current_crossing(id, obj)
+        _display_current_crossing(marker, id, obj)
     }, 100);
 }
 
-function _display_current_crossing(id, obj) {
+function _display_current_crossing(marker, id, obj) {
     var lngLat = obj.lng + "," + obj.lat
     var url = '/cgi/crossing.cgi?crossing=1;namespace=dbac;city=' + city + ';query=' + lngLat;
 
@@ -2260,7 +2276,7 @@ function _display_current_crossing(id, obj) {
     }
     downloadUrl(url, function (data, responseCode) {
         if (responseCode == 200) {
-            updateCrossing(id, data);
+            updateCrossing(marker, id, data);
         } else if (responseCode == -1) {
             alert("Data request timed out. Please try later.");
         } else {
@@ -2282,7 +2298,7 @@ function set_input_field(id, value) {
     debug("crossing: " + id + " " + value);
 }
 
-function updateCrossing(id, data) {
+function updateCrossing(marker, id, data) {
 
     if (!data || data == "") {
         return set_input_field(id, "");
@@ -2304,7 +2320,42 @@ function updateCrossing(id, data) {
         street_latlng = js.query;
     }
 
+    newInfoWindow(marker, {
+        "id": id,
+        "crossing": v ? v[1] : street_latlng
+    });
+
     return set_input_field(id, street_latlng);
 }
+
+function newInfoWindow(marker, opt) {
+
+    var infoWindow = new google.maps.InfoWindow({
+        maxWidth: 450
+    });
+
+    var content = "<div id=\"infoWindowContent\">\n"
+    content += "<p>"
+    content += translate_mapcontrol(opt.id == "suggest_start" ? "Start" : opt.id == "suggest_ziel" ? "Destination" : "Via") + " ";
+    content += translate_mapcontrol("crossing") + ": <br/>" + opt.crossing;
+    content += "</p>"
+    content += "</div>\n";
+
+    infoWindow.setContent(content);
+    infoWindow.open(map, marker);
+
+    google.maps.event.addListener(marker, "click", function (event) {
+        infoWindow.open(map, marker);
+        setTimeout(function () {
+            infoWindow.close()
+        }, 3000);
+    });
+
+    // close info window after 3 seconds
+    setTimeout(function () {
+        infoWindow.close()
+    }, 2000);
+};
+
 
 // EOF
