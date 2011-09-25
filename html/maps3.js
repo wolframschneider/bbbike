@@ -2270,31 +2270,42 @@ function _display_current_crossing(id, obj) {
     });
 }
 
-function updateCrossing(id, data) {
-    //debug("crossing: " + data);
-    if (!data || data == "") {
+function set_input_field(id, value) {
+    var input = document.getElementById(id);
+
+    if (input) {
+        input.setAttribute("value", value);
+    } else {
+        debug("unknown input field: " + id);
         return;
+    }
+
+    debug("crossing: " + id + " " + value);
+}
+
+function updateCrossing(id, data) {
+
+    if (!data || data == "") {
+        return set_input_field(id, "");
     }
 
     var js = eval("(" + data + ")");
 
     if (!js || !js.suggestions) {
-        debug("no crossing");
-        return;
+        return set_input_field(id, "");
     }
 
-    var input = document.getElementById(id);
     var value = js.suggestions[0];
-    var v = value.split("\t");
-    var street_latlng = v[1] + " [" + v[0] + "]";
+    var v, street_latlng;
 
-    if (input) {
-        input.setAttribute("value", street_latlng);
+    if (value) {
+        v = value.split("\t");
+        street_latlng = v[1] + " [" + v[0] + "]";
     } else {
-        alert("unknown input field: " + id);
+        street_latlng = js.query;
     }
 
-    debug("crossing: " + id + " " + street_latlng);
+    return set_input_field(id, street_latlng);
 }
 
 // EOF
