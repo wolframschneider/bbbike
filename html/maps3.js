@@ -2088,7 +2088,6 @@ function smallerMap(step, id) {
 // zoom level is not known yet, try it 0.5 seconds later
 //
 
-
 function init_markers(opt) {
     var timeout = setTimeout(function () {
         _init_markers(opt)
