@@ -1385,6 +1385,13 @@ sub enable_latlng_search {
 
 	my $value = $q->param($param) || "";
 
+	# ignore errors in input field if the marker is outside the area
+	# [Error: outside area]
+	if ($value =~ /^\[.*\]$/) {
+	    $value = "";
+	    $q->delete($param);
+        }
+
 	# extract latlng: Mendosa Avenue [-122.46748,37.74807] -> -122.46748,37.74807
 	$value = $1 if $value =~ /\s+\[([\d\.,\-\+]+)\]$/;
 
