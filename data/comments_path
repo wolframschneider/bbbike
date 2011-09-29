@@ -100,7 +100,7 @@ Kietz - Amtsstr.: zum Überqueren der Straße Fußgängerampel links benutzen	CP; 22
 als "Neue Dorfstr." ausgeschildert	CS; 52490,75434 52181,75778
 als "Wiesenweg" ausgeschildert	CS; 52215,83681 52346,83150
 Lichtenrader Damm - Griembergweg: Überquerungsmöglichkeit nördlich der Kreuzung	PI; 10737,132 10753,83 10913,96
-Griembergweg - Lichtenrader Damm: Überquerungsmöglichkeit nördlich der Kreuzung	CP; 10913,96 10753,83 10780,-43
+Griembergweg - Lichtenrader Damm: Überquerungsmöglichkeit nördlich der Kreuzung	CP; 10913,96 10753,83 10782,-24
 Richtung Bellevuestr. und Kemperplatz	CS; 8548,11552 8505,11544 8462,11538
 Richtung Linkstr.	CS; 8573,11404 8554,11386 8474,11350
 Einfahrt gegenüber Waldcafe	CP2; 30041,5329 27096,5828
@@ -346,3 +346,4 @@ Walsheimer Str. - Alt-Biesdorf: zunächst linken Gehweg bis zum Biesdorfer Friedh
 Yorckstr. - Park am Gleisdreieck: ggfs. schon an der Ampel Bautzener Str. auf den linken Gehweg wechseln	PI; 8192,9619 8358,9568 8357,9598
 Grenzallee - Straße 12: ggfs. schon an der Ampel Autobahnausfahrt auf den linken Gehweg wechseln	PI; 14051,6731 13930,6686 13883,6682 13881,6634
 Buschkrugallee - Bürgerstr.: bereits an der Fußgängerampel die Straßenseite wechseln	PI; 13323,6322 13307,6359 13239,6344
+Prenzlauer Allee - Wohngebiet: bereits an der Krügerstr. oder Wisbyer Str. auf den linken Gehweg wechseln	PI; 12071,16130 12030,15968 12154,15902

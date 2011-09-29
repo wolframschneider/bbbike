@@ -289,8 +289,6 @@ function show_spinning_wheel() {
 }
 
 function toogleVia(via_field, via_message, via_input, visible) {
-    alert(visible);
-
     var tag = document.getElementById(via_field);
     if (!tag) return;
 

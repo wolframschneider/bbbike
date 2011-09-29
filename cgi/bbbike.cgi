@@ -21,7 +21,7 @@ bbbike.cgi - CGI interface to bbbike
 
 BEGIN {
     $ENV{SERVER_NAME} ||= "";
-    open(STDERR, ">/tmp/bbbike.log")
+    open(STDERR, ">> /tmp/bbbike.log")
 	if $ENV{SERVER_NAME} =~ /sourceforge/ ||
            $ENV{SERVER_NAME} =~ m,^(dev|test).*$,;
 	 
@@ -33,6 +33,10 @@ use vars qw(@extra_libs);
 BEGIN { delete $INC{"FindBin.pm"} } # causes warnings, maybe try FindBin->again if available?
 use FindBin;
 BEGIN {
+    if ($ENV{MOD_PERL} && $ENV{MOD_PERL} =~ m{mod_perl/2}) {
+	# Fix FindBin for ModPerl::Registry operation
+	($FindBin::RealBin = __FILE__) =~ s{/[^/]+$}{};
+    }
     {
 	# Achtung: evtl. ist auch ~/lib/ f¸r GD.pm notwendig (z.B. CS)
 	@extra_libs =
@@ -142,6 +146,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $show_real_time
 	    $cache_streets_html
 	    $bbbike_start_js_version
+	    $enable_latlng_search
 	   );
 
 $gmap_api_version = 3;
@@ -908,6 +913,8 @@ $BBBikeAds::enable_google_adsense_street = $enable_google_adsense_street;
 $BBBikeAds::enable_google_adsense_linkblock = $enable_google_adsense_linkblock;
 $BBBikeAds::enable_google_adsense_street_linkblock = $enable_google_adsense_street_linkblock;
 
+my $no_name = '(' . M("Straﬂe ohne Namen") . ')';
+
 sub M ($) {
     my $key = shift;
 
@@ -1369,6 +1376,28 @@ my $set_anyc = sub {
     }
 };
 
+# allow to search with wgs84 coordinates
+sub enable_latlng_search {
+    my $q = shift;
+
+    foreach my $param (qw/start ziel via/) {
+	my $param_c = $param . "c";
+
+	my $value = $q->param($param) || "";
+
+	# extract latlng: Mendosa Avenue [-122.46748,37.74807] -> -122.46748,37.74807
+	$value = $1 if $value =~ /\s+\[([\d\.,\-\+]+)\]$/;
+
+    	if (!defined $q->param($param_c) && is_latlng($value)) {
+	   $q->param($param_c, $value);
+	   $q->delete($param);
+	   warn "Do a lat,lng search for $param\n" if $debug;
+    	}
+    }
+}
+
+&enable_latlng_search($q) if $enable_latlng_search;
+
 # schwache stadtplandienst-Kompatibilit‰t
 # Note: ";" und "&" werden von CGI.pm gleichberechtigt behandelt
 if (defined $q->param('STR')) {
@@ -1706,6 +1735,12 @@ sub Param {
     return $val;
 }
 
+sub is_latlng{
+   my $latlng = shift;
+
+   return $latlng =~ /^\s*[\+\-]?[\d\.]+,[\+\-]?[\d\.]+\s*$/ ? 1 : 0;
+}
+
 sub is_forum_spam {
    my $q = shift;
    my @param = @_;
@@ -1747,7 +1782,6 @@ sub choose_form {
     my $zielhnr   = Param('zielhnr')   || '';
     my $zielc     = Param('zielc')     || '';
     my $zielort   = Param('zielort')   || '';
-
 
     my $nl = sub {
 	if ($bi->{'can_table'}) {
@@ -2263,9 +2297,9 @@ EOF
 
 	sub social_link {
 	    print qq{<span id="social">\n};
-	    print qq{<a href="$facebook_page" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="BBBike on Facebook"></a>\n} if $enable_facebook_t_link;
-	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n} if $enable_twitter_t_link;
-	    print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="small" count="false"></g:plusone>\n} if $enable_google_plusone_t_link;
+	    print qq{<a href="$facebook_page" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="}, M("Facebook Fanpage"), qq{"></a>\n} if $enable_facebook_t_link;
+	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="}, M("Folge uns auf twitter.com/BBBikeWorld"), qq{"></a>\n} if $enable_twitter_t_link;
+	    print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png" alt=""></a><g:plusone href="http://bbbike.org" size="small" count="false"></g:plusone>\n} if $enable_google_plusone_t_link;
 	    print qq{</span>\n};
 	}
 
@@ -2893,6 +2927,8 @@ function " . $type . "char_init() {}
     print "</form>\n";
     print "</td></tr></table>\n</div>\n" if $bi->{'can_table'};
 
+	
+
 	    my $BBBikeGooglemap = 1;
             if (is_mobile($q)) {
 		$BBBikeGooglemap = 0;
@@ -2975,7 +3011,7 @@ EOF
 
       print <<EOF;
 <script type="text/javascript">
-	displayCurrentPosition($data);
+	displayCurrentPosition($data, "$lang");
 </script>
 EOF
    }
@@ -2984,7 +3020,7 @@ EOF
 print <<EOF;
 <script type="text/javascript">
     if (document.getElementById('suggest_start') != null) {
-        document.BBBikeForm.start.focus();
+        // document.BBBikeForm.start.focus();
     }
 </script>
 
@@ -3304,6 +3340,8 @@ sub is_streets {
 
 
 sub get_kreuzung {
+    warn "get kreuzung: ", join " ", caller(), "\n" if $debug >= 1;
+
     my($start_str, $via_str, $ziel_str) = @_;
     if (!defined $start_str) {
 	$start_str = Param('startname') || Param('start');
@@ -3661,7 +3699,7 @@ sub make_crossing_choose_html {
 	    }
 	    for (@kreuzung) {
 		if (m{^\s*$}) {
-		    $_ = '(' . M("Straﬂe ohne Namen") . ')';
+		    $_ = $no_name;
 		}
 	    }
 	    {
@@ -5680,19 +5718,19 @@ EOF
 #		    }
 		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">PalmDoc</a>};
 		}
-	        print qq{\n<span><a class="mobile_link" target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">PDF</a></span>\n};
+	        print qq{\n<span><a class="mobile_link" target="" onclick='javascript:pdfLink();' href='#' title="}, M("PDF Ausdruck der Karte und Route"), qq{">PDF</a></span>\n};
 		if ($can_gpx) {
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-route");
 			my $href = $bbbike_script;
-			print qq{<a class="mobile_link" title="GPX route with waypoints for GPS navigation, up to 256 points" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Route)</a>};
+			print qq{<a class="mobile_link" title="}, M("GPX Route mit Waypoints fuer GPS Navigation, bis zu 256 Punkte"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Route)</a>};
 		    }
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-track");
 			my $href = $bbbike_script;
-			print qq{<a class="mobile_link" title="GPX with up to 1024 points, no navigation" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Track)</a>};
+			print qq{<a class="mobile_link" title="}, M("GPX mit bis zu 1024 Punkten, keine Navigation"), qq{"padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Track)</a>};
 		    }
 		}
 		if ($can_kml) {
@@ -5700,7 +5738,7 @@ EOF
 		    $qq2->param('output_as', "kml-track");
 
 		    my $href = $bbbike_script;
-		    print qq{<a class="mobile_link" title="view route with Google Earth" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">KML (Google Earth)</a>};
+		    print qq{<a class="mobile_link" title="}, M("Route auf Google Earth anschauen"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">Google Earth (KML)</a>};
 		}
 		if ($can_gpsies_link) {
 		    my $qq2 = cgi_utf8($use_utf8);
@@ -5710,9 +5748,9 @@ EOF
 			$bbbike_script = $BBBike::BBBIKE_DIRECT_WWW;
 		    }
 		    my $href = 'http://www.gpsies.com/map.do?url=' . BBBikeCGIUtil::my_escapeHTML($qq2->url(-full=>1, -query=>1));
-		    print qq{<a title="upload route to GPSies.com, Tracks for Vagabonds" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com (upload)</a>};
+		    print qq{<a title="}, M("Route auf GPSies.com hochladen"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com (upload)</a>};
 		}
-		print qq{<a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>\n};
+		print qq{<a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt="" title="}, M("Facebook Fanpage"), qq{"><img class="logo" src="/images/facebook-like.png" alt="" title="}, M("Facebook Fanpage"), qq{"></a>\n};
 	        print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
 
 		if (0) { # XXX not yet
@@ -5758,9 +5796,9 @@ EOF
             my $pdf_url = CGI->new($q);
             $pdf_url->param('imagetype', 'pdf-auto');
 	    $pdf_url->param( 'coords', $string_rep);
-	    $pdf_url->param( 'startname', Encode::encode( utf8 => $startname));
-	    $pdf_url->param( 'zielname', Encode::encode( utf8 => $zielname));
-	    $pdf_url->param( 'vianame', Encode::encode( utf8 => $vianame));
+	    $pdf_url->param( 'startname', Encode::is_utf8($startname) ? $startname : Encode::encode( utf8 => $startname));
+	    $pdf_url->param( 'zielname', Encode::is_utf8($zielname) ? $zielname : Encode::encode( utf8 => $zielname));
+	    $pdf_url->param( 'vianame', Encode::is_utf8($vianame) ? $vianame : Encode::encode( utf8 => $vianame));
 	    $pdf_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 
             my $slippymap_url = CGI->new($q);
@@ -5770,9 +5808,9 @@ EOF
             $slippymap_url->param('source_script', "$cityname.cgi");
             $slippymap_url->param('zoom', $slippymap_zoom_maponly);
 	    $slippymap_url->param( 'coords', $string_rep);
-	    $slippymap_url->param( 'startname', Encode::encode( utf8 => $startname));
-	    $slippymap_url->param( 'zielname', Encode::encode( utf8 => $zielname));
-	    $slippymap_url->param( 'vianame', Encode::encode( utf8 => $vianame));
+	    $slippymap_url->param( 'startname', Encode::is_utf8($startname) ? $startname : Encode::encode( utf8 => $startname));
+	    $slippymap_url->param( 'zielname', Encode::is_utf8($zielname) ? $zielname : Encode::encode( utf8 => $zielname));
+	    $slippymap_url->param( 'vianame', Encode::is_utf8($vianame) ? $vianame : Encode::encode( utf8 => $vianame));
 	    $slippymap_url->param( 'lang', $lang);
 	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 	    $slippymap_url->param( 'route_length', sprintf("%2.2f", $r->len/1000));
@@ -5843,10 +5881,14 @@ EOF
 
 	        print qq{<div id="link_list">\n};
 	        print qq{<hr>\n};
+
+	        if (0) {
 		print qq{<span class="slippymaplink"><a title="}, M("neue Anfrage"), qq{" href="}, $q->url(-absolute=>1, -query=>0), qq{">BBBike\@$local_city_name</a></span> |\n};
 	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">larger map</a></span> |\n} if !$gmapsv3;
-	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">print map route</a></span>\n};
+	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="}, M("PDF Ausdruck der Karte und Route"), qq{">}, M("drucken"), qq{</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url" style="display:none"> $permalink</span></span>\n} if $permalink =~ /=/;
+		}
+
 	        print qq{<p></p>\n};
 		print qq{</div>\n\n};
 
@@ -5857,7 +5899,7 @@ EOF
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 		} else {
 		   my $maps = BBBikeGooglemap->new();
-                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1, 'region' => $region, 'cache' => $q->param('cache') );
+                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1, 'region' => $region, 'cache' => $q->param('cache') || 0, 'debug' => $debug );
 		}
 	    }
 
@@ -6545,7 +6587,10 @@ sub draw_route {
 	$draw->draw_wind   if $draw->can("draw_wind");
 	$draw->draw_route  if $draw->can("draw_route");
 	$draw->add_route_descr(-net => make_netz(),
-			       -lang => $lang)
+			       -lang => $lang,
+                          -Url => $q->url(-full=>0, -absolute=>1, -query=>0), 
+                          -City_local => $local_city_name, 
+                          -City_en => $en_city_name)
 	    if $draw->can("add_route_descr");
 	$draw->flush;
     };
@@ -7120,6 +7165,8 @@ sub load_temp_blockings {
 # Bundesallee/Wexstr.!
 sub crossing_text {
     my $c = shift;
+    warn "crossing_text: $c, ", join " ", caller(), "\n" if $debug >= 2;
+
     all_crossings();
     if (!exists $crossings->{$c}) {
 	new_kreuzungen();
@@ -7951,6 +7998,8 @@ if ($osm_data) {
     $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
 }
 
+my $span_debug = is_production($q) ? "" : qq{<tt><span id="debug"></span></tt>\n};
+
 my $rss_icon = "";
 $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="14" height="14" title="}
 	    .  M('Was gibt es Neues auf BBBike.org') 
@@ -7959,8 +8008,11 @@ $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="
 my $permalink_text = $is_streets ? "" : qq{ | <a href="#" onclick="togglePermaLinks(); return false;">$permalink_msg</a><span id="permalink_url2" style="display:none"> $permalink</span>};
 $permalink_text = "" if $permalink !~ /=/;
 
-my $google_plusone = qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
+my $google_plusone = qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png" alt=""></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
 
+my $facebook_title = M("Facebook Fanpage");
+my $donate_title = M("Spende an BBBike.org");
+my $twitter_title = M("Folge uns auf twitter.com/BBBikeWorld");
 my $s_copyright = <<EOF;
 
 <div id="footer">
@@ -7971,6 +8023,7 @@ my $s_copyright = <<EOF;
 <a href="$community_link">$donate</a> |
 <a title="search time: $real_time seconds" href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
 $list_of_all_streets $permalink_text
+$span_debug
 </div>
 </div>
 
@@ -7979,10 +8032,10 @@ $list_of_all_streets $permalink_text
 (&copy;) 1998-2011 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
 <div id="footer_community">
-  <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="Donate to bbbike.org" border="0"></a>
+  <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="$donate_title" border="0"></a>
   <a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
-  <a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
-  <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>
+  <a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="$twitter_title" alt=""></a>
+  <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="$facebook_title"></a>
   $google_plusone
   $rss_icon
 </div>
@@ -8814,6 +8867,21 @@ sub get_geography_object {
 
 sub nice_crossing_name {
     my(@c) = @_;
+
+   
+    # first part of cross is empty, switch streetsnames of corner: /foo -> foo/
+    if ($osm_data) {
+	my @cr = @c;
+    	if ($cr[0] eq '') {
+           @cr = ( $cr[1], "" );
+    	}
+
+        #my $no_name = "NN";
+        @cr = map { $_ eq "" ? $no_name : $_ } @cr;
+    	my $cr = join("/", @cr);
+    	return $cr;
+    }
+
     my @c_street;
     my $unique_cityparts;
     for my $c (@c) {

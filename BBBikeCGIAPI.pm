@@ -37,9 +37,17 @@ sub action {
 sub action_revgeocode {
     my $q = shift;
     my($lon) = $q->param('lon');
-    $lon eq '' and die "lon is missing";
     my($lat) = $q->param('lat');
+
+    if (defined $q->param('latlon')) {
+	($lat, $lon) = split /,/, $q->param('latlon');
+    }
+    elsif (defined $q->param('lonlat')) {
+	($lon, $lat) = split /,/, $q->param('lonlat');
+    }
+
     $lat eq '' and die "lat is missing";
+    $lon eq '' and die "lon is missing";
 
     no warnings 'once';
     my($x,$y) = $main::data_is_wgs84 ? ($lon, $lat) : $Karte::Polar::obj->map2standard($lon,$lat);
@@ -51,6 +59,15 @@ sub action_revgeocode {
     my $xy = main::get_nearest_crossing_coords($x,$y);
     my @cr = split m{/}, main::crossing_text($xy);
     @cr = @cr[0,1] if @cr > 2; # bbbike.cgi can deal only with A/B
+
+    # first part of cross is empty, switch streetsnames of corner: /foo -> foo/
+    if ($cr[0] eq '') {
+	@cr = ( $cr[1], "" );
+    }
+
+    my $no_name = "NN";
+    @cr = map { $_ eq "" ? $no_name : $_ } @cr;
+
     my $cr = join("/", @cr);
     print $q->header('text/plain');
     print JSON::XS->new->ascii->encode({ crossing => $cr,
