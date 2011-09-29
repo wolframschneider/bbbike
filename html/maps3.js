@@ -2271,7 +2271,7 @@ function _display_current_crossing(marker, id, obj) {
 
     if (!inside_area(obj)) {
         debug("outside area");
-        return updateCrossing(id, '{query:"", suggestions:[]}');
+        return updateCrossing(marker, id, '{query:"", suggestions:[]}');
     }
     downloadUrl(url, function (data, responseCode) {
         if (responseCode == 200) {
