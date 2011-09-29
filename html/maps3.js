@@ -1419,6 +1419,7 @@ function translate_mapcontrol(word, lang) {
             "Your current postion": "Ihre aktuelle Position",
             "Approximate address": "Ungef&auml;hre Adresse",
             "crossing": "Kreuzung",
+            "Error: outside area": "Fehler: ausserhalb des Gebietes",
             "Start": "Start",
             "Destination": "Ziel",
             "Via": "Via"
@@ -2271,7 +2272,8 @@ function _display_current_crossing(marker, id, obj) {
 
     if (!inside_area(obj)) {
         debug("outside area");
-        return updateCrossing(marker, id, '{query:"", suggestions:[]}');
+        var query = translate_mapcontrol("Error: outside area");
+        return updateCrossing(marker, id, '{query:"[' + query + ']", suggestions:[]}');
     }
     downloadUrl(url, function (data, responseCode) {
         if (responseCode == 200) {
