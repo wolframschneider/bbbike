@@ -1396,9 +1396,10 @@ sub enable_latlng_search {
 	$value = $1 if $value =~ /\s+\[([\d\.,\-\+]+)\]$/;
 
     	if (!defined $q->param($param_c) && is_latlng($value)) {
-	   $q->param($param_c, $value);
+	   my $val = get_nearest_crossing_coords(swap_coords($value));
+	   $q->param($param_c, $val);
 	   $q->delete($param);
-	   warn "Do a lat,lng search for $param\n" if $debug;
+	   warn "Do a lat,lng search for $param, $value -> $val\n" if $debug;
     	}
     }
 }
@@ -1583,6 +1584,15 @@ if ($modperl_lowmem) {
 }
 
 my_exit 0;
+
+# LatLng <-> LngLat
+sub swap_coords {
+    my $coord = shift;
+
+    my @c = split /,/, $coord;
+
+    return $c[1] . "," . $c[0];
+}
 
 sub abc_link {
     my($type, %args) = @_;
