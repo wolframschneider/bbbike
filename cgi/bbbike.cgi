@@ -1393,12 +1393,14 @@ sub enable_latlng_search {
         }
 
 	# extract latlng: Mendosa Avenue [-122.46748,37.74807] -> -122.46748,37.74807
-	$value = $1 if $value =~ /\s+\[([\d\.,\-\+]+)\]$/;
+	$value = $2 if $value =~ /^(.*)\s+\[([\d\.,\-\+]+)\]$/;
+	my $street = $1;
 
     	if (!defined $q->param($param_c) && is_latlng($value)) {
 	   my $val = get_nearest_crossing_coords(swap_coords($value));
 	   $q->param($param_c, $val);
 	   $q->delete($param);
+	   $q->param("_" . $param, $street);
 	   warn "Do a lat,lng search for $param, $value -> $val\n" if $debug;
     	}
     }
@@ -3577,6 +3579,7 @@ EOF
 	print "</td><td>"
 	    if ($bi->{'can_table'});
 
+
 	if (@coords == 1) {
 	    $c = $coords[0];
 	}
@@ -3592,7 +3595,11 @@ EOF
 	    print "<input type=hidden name=" . $type . "c value=\"$c\">";
 	}
 	if (defined $c and (not defined $strname or $strname eq '')) {
-	    print crossing_text($c) . "<br>\n";
+	    print crossing_text($c);
+	    if (my $val = $q->param("_$type")) {
+		print qq{ <span class="grey">[$val]</span>\n};
+	    }
+            print "<br>\n";
 	} else {
 	    if (defined $plz and $plz eq '') {
 		print $strname;
@@ -3620,11 +3627,13 @@ EOF
 	    print "<input type=hidden name=" . $type . "isort value=1>\n";
 	}
 	print $crossing_choose_html if $crossing_choose_html;
+
 	if ($bi->{'can_table'}) {
 	    print "</td></tr>\n";
 	} else {
 	    print "" . ($type ne 'ziel' ? '<hr>' : '<br><br>') . "\n";
 	}
+
     }
 
     print "</table>\n" if ($bi->{'can_table'});

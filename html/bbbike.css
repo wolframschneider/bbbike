@@ -319,3 +319,5 @@ div#list span:active { text-decoration:none; color: red; }
 
 .honey { display: none; }
 
+span.grey { font-size: small; color: #808080 }
+
