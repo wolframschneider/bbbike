@@ -2358,6 +2358,14 @@ function newInfoWindow(marker, opt) {
     }, 2000);
 };
 
+// strip trailing country name
+
+
+function format_address(address) {
+    var street = address.split(",");
+    street.pop();
+    return street.join(",");
+}
 
 function googleCodeAddress(address, callback) {
 
@@ -2381,8 +2389,9 @@ function googleCodeAddress(address, callback) {
 
             var streets = [];
             for (var i = 0; i < results.length; i++) {
-                streets.push('"' + results[i].formatted_address + ' [' + results[i].geometry.location.lat() + ',' + results[i].geometry.location.lng() + ']"');
+                streets.push('"' + format_address(results[i].formatted_address) + ' [' + granularity(results[i].geometry.location.lat()) + ',' + granularity(results[i].geometry.location.lng()) + ']"');
             }
+
             autocomplete += streets.join(",");
             autocomplete += '] }';
 
