@@ -291,16 +291,15 @@
 	response.data = []; 
       }
 
+      // if geocoder is enabled, try google geolocation service next
+      if (response.suggestions.length === 0 && this.geocoder && !second_try) {
+	var me = this;
+	return this.geocoder( response.query, function (geocoder_text) { me.processResponse( geocoder_text, true) } );
+      }
+
       if(!this.options.noCache){
         this.cachedResponse[response.query] = response;
-        if (response.suggestions.length === 0) { 
-
-	  // if geocoder is enabled, try google geolocation service next
-          if (!second_try && this.geocoder) {
-	    return this.geocoder( response.query, function (geocoder_text) { his.processResponse( geocoder_text, true) } );
-          }
-	  this.badQueries.push(response.query); 
-	}
+        if (response.suggestions.length === 0) { this.badQueries.push(response.query); }
       }
       if (response.query === this.getQuery(this.currentValue)) {
         this.suggestions = response.suggestions;
