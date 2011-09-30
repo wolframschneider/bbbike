@@ -7802,11 +7802,11 @@ sub header {
 	  if (!is_mobile($q) || is_resultpage($q) ) {
 	    push(@$head, qq|<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>|);
 	    # push(@$head, qq|<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>|);
+
 	    my $google_maps_url = "http://maps.google.com/maps/api/js?v=3.4&amp;sensor=$sensor&amp;language=$my_lang";
 	    $google_maps_url .= "&amp;libraries=panoramio" if $enable_panoramio_photos && is_resultpage($q);
 
 	    push(@$head, qq|<script type="text/javascript" src="$google_maps_url"></script>|);
-	    #push(@$head, qq|<script type="text/javascript" src="/html/maps3.js"></script>|); 
 	    push @javascript, 'maps3.js';
 	  }
 	}
@@ -7814,18 +7814,17 @@ sub header {
     }
 
     push @javascript, 'bbbike.js';
-    #push(@$head, qq|<script type="text/javascript" src="/html/bbbike.js"></script>|);
     if ($enable_opensearch_suggestions) {
 	my $city = $osm_data && $datadir =~ m,data-osm/(.+), ? $1 : 'Berlin';
-	#push @javascript, "jquery-1.4.2.min.js", "devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js";
-	push @javascript, "bbbike-jquery.min.js";
-
-	#push(@$head, qq|<script type="text/javascript" src="/html/jquery-1.4.2.min.js"></script>|);
-	#push(@$head, qq|<script type="text/javascript" src="/html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js"></script>|);
+	push @javascript, "jquery-1.4.2.min.js", "devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js";
     }
 
-    foreach my $js (@javascript) {
-	push(@$head, qq|<script type="text/javascript" src="/html/$js"></script>|);
+    if (is_production($q)) {
+        push(@$head, qq|<script type="text/javascript" src="/html/bbbike-js.js"></script>|);
+    } else {
+    	foreach my $js (@javascript) {
+	    push(@$head, qq|<script type="text/javascript" src="/html/$js"></script>|);
+    	}
     }
 
     push (@$head, $q->meta({-name => "robots", -content => "nofollow"})) 
