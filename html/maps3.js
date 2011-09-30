@@ -2359,4 +2359,36 @@ function newInfoWindow(marker, opt) {
 };
 
 
+function googleCodeAddress(address, callback) {
+
+    // search for an address only in this specific area
+    // var box = [[43.60000,-79.66000],[43.85000,-79.07000]];
+    var box = state.marker_list;
+
+    var bounds = new google.maps.LatLngBounds;
+    bounds.extend(new google.maps.LatLng(box[0][0], box[0][1]), new google.maps.LatLng(box[1][0], box[1][1]));
+
+    geocoder.geocode({
+        'address': address,
+        'bounds': bounds
+    }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            var autocomplete = '{ query:"' + address + '", suggestions:[';
+
+            var streets = [];
+            for (var i = 0; i < results.length; i++) {
+                streets.push('"' + results[i].formatted_address + ' [' + results[i].geometry.location.lat() + ',' + results[i].geometry.location.lng() + ']');
+            }
+            autocomplete += streets.join(",");
+            autocomplete += '] }';
+
+            callback(autocomplete);
+        }
+    } else {
+        alert("Geocode was not successful for the following reason: " + status);
+    }
+    });
+}
+
+
 // EOF
