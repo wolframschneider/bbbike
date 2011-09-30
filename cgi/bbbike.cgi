@@ -2739,7 +2739,14 @@ EOF
 
 <script type="text/javascript">
 	var ac_$city = \$('#$searchinput').autocomplete( 
-		{ serviceUrl: '/cgi/api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:$maxHeight, width:$width, deferRequestBy:$deferRequestBy, noCache: true }
+		{ serviceUrl: '/cgi/api.cgi?namespace=dbac;city=$city', 
+		  minChars:2, 
+	          maxHeight:$maxHeight, 
+	          width:$width, 
+		  deferRequestBy:$deferRequestBy, 
+	          noCache: true, 
+	          geocoder: function (address, callback) { googleCodeAddress(address, callback); } 
+	        }
 	);
 </script>
 
