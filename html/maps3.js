@@ -2368,7 +2368,11 @@ function googleCodeAddress(address, callback) {
     var bounds = new google.maps.LatLngBounds;
     bounds.extend(new google.maps.LatLng(box[0][0], box[0][1]), new google.maps.LatLng(box[1][0], box[1][1]));
 
-    geocoder.geocode({
+    if (!state.geocoder) {
+        state.geocoder = new google.maps.Geocoder();
+    }
+
+    state.geocoder.geocode({
         'address': address,
         'bounds': bounds
     }, function (results, status) {
