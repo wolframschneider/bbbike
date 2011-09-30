@@ -1397,7 +1397,7 @@ sub enable_latlng_search {
 	my $street = $1;
 
     	if (!defined $q->param($param_c) && is_latlng($value)) {
-	   my $val = get_nearest_crossing_coords(swap_coords($value));
+	   my $val = get_nearest_crossing_coords($value);
 	   $q->param($param_c, $val);
 	   $q->delete($param);
 	   $q->param("_" . $param, $street);

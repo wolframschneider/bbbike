@@ -2395,7 +2395,7 @@ function googleCodeAddress(address, callback) {
                     lat: results[i].geometry.location.lat(),
                     lng: results[i].geometry.location.lng()
                 })) {
-                    streets.push('"' + format_address(results[i].formatted_address) + ' [' + granularity(results[i].geometry.location.lat()) + ',' + granularity(results[i].geometry.location.lng()) + ']"');
+                    streets.push('"' + format_address(results[i].formatted_address) + ' [' + granularity(results[i].geometry.location.lng()) + ',' + granularity(results[i].geometry.location.lat()) + ']"');
                 }
             }
 
