@@ -2241,17 +2241,20 @@ function find_street(marker, input_id) {
  *
  */
 
-function inside_area(obj) {
+function inside_area(obj) { // { lng: lng, lat: lat }
     var area = state.marker_list;
     var bottomLeft = area[0];
     var topRight = area[1];
 
-    // debug("lng: " + obj.lng + " lat: " + obj.lat + " area: " +  bottomLeft[1] + " :: " +  bottomLeft[0]);
+    var result;
     if (obj.lng >= bottomLeft[1] && obj.lng <= topRight[1] && obj.lat >= bottomLeft[0] && obj.lat <= topRight[0]) {
-        return 1;
+        result = 1;
     } else {
-        return 0;
+        result = 0;
     }
+
+    debug("lng: " + obj.lng + " lat: " + obj.lat + " area: " + bottomLeft[1] + "," + bottomLeft[0] + " " + topRight[0] + "," + topRight[1] + " result: " + result);
+    return result;
 }
 
 // call the API only after 100ms
@@ -2360,7 +2363,6 @@ function newInfoWindow(marker, opt) {
 
 // strip trailing country name
 
-
 function format_address(address) {
     var street = address.split(",");
     street.pop();
@@ -2389,7 +2391,12 @@ function googleCodeAddress(address, callback) {
 
             var streets = [];
             for (var i = 0; i < results.length; i++) {
-                streets.push('"' + format_address(results[i].formatted_address) + ' [' + granularity(results[i].geometry.location.lat()) + ',' + granularity(results[i].geometry.location.lng()) + ']"');
+                if (inside_area({
+                    lat: results[i].geometry.location.lat(),
+                    lng: results[i].geometry.location.lng()
+                })) {
+                    streets.push('"' + format_address(results[i].formatted_address) + ' [' + granularity(results[i].geometry.location.lat()) + ',' + granularity(results[i].geometry.location.lng()) + ']"');
+                }
             }
 
             autocomplete += streets.join(",");
