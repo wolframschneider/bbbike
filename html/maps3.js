@@ -2377,16 +2377,15 @@ function googleCodeAddress(address, callback) {
 
             var streets = [];
             for (var i = 0; i < results.length; i++) {
-                streets.push('"' + results[i].formatted_address + ' [' + results[i].geometry.location.lat() + ',' + results[i].geometry.location.lng() + ']');
+                streets.push('"' + results[i].formatted_address + ' [' + results[i].geometry.location.lat() + ',' + results[i].geometry.location.lng() + ']"');
             }
             autocomplete += streets.join(",");
             autocomplete += '] }';
 
             callback(autocomplete);
+        } else {
+            alert("Geocode was not successful for the following reason: " + status);
         }
-    } else {
-        alert("Geocode was not successful for the following reason: " + status);
-    }
     });
 }
 
