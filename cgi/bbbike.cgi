@@ -913,7 +913,6 @@ $BBBikeAds::enable_google_adsense_street = $enable_google_adsense_street;
 $BBBikeAds::enable_google_adsense_linkblock = $enable_google_adsense_linkblock;
 $BBBikeAds::enable_google_adsense_street_linkblock = $enable_google_adsense_street_linkblock;
 
-my $no_name = '(' . M("Straße ohne Namen") . ')';
 
 sub M ($) {
     my $key = shift;
@@ -934,6 +933,8 @@ sub M ($) {
 
     return $text;
 }
+
+my $no_name = '(' . M("Straße ohne Namen") . ')';
 
 # select city name by language
 sub select_city_name {
@@ -1397,7 +1398,7 @@ sub enable_latlng_search {
 	my $street = $1;
 
     	if (!defined $q->param($param_c) && is_latlng($value)) {
-	   my $val = get_nearest_crossing_coords($value);
+	   my $val = get_nearest_crossing_coords(extract_latlng($value));
 	   $q->param($param_c, $val);
 	   $q->delete($param);
 	   $q->param("_" . $param, $street);
@@ -1756,8 +1757,32 @@ sub Param {
 
 sub is_latlng{
    my $latlng = shift;
+   my $flag = shift;
 
+   # lat,lng,flag
+   if ($flag && $latlng =~ /,.*,/) {
+	$latlng =~ s/[^,]+\s*$//;
+   }
+	
    return $latlng =~ /^\s*[\+\-]?[\d\.]+,[\+\-]?[\d\.]+\s*$/ ? 1 : 0;
+}
+
+sub extract_latlng{
+   my $latlng = shift;
+
+   $latlng =~ s/^\s+//;
+   $latlng =~ s/\s+$//;
+
+   my @pos = split /,/, $latlng;
+   return if scalar(@pos) < 2;
+
+   if ($debug && scalar(@pos) >2) {
+	warn "LatLng type: $pos[2]\n";	
+   }
+
+   if ($pos[0] =~ /^[\+\-]?[\d\.]$/ && $pos[1] =~ /^[\+\-]?[\d\.]$/) {
+      return join ",", $pos[0], $pos[1];
+   }
 }
 
 sub is_forum_spam {
