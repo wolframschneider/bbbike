@@ -1057,7 +1057,6 @@ function add_panoramio_layer(map, enable) {
 // false: foo [123,456]
 //
 
-
 function osm_streetname(street) {
     if (street.match(/^[\-\+ ]?[0-9\.]+,[\-\+ ]?[0-9\.]+[ ]*$/) || street.match(/^.* \[[0-9\.,\-\+]+\][ ]*$/)) {
         return 0;
@@ -1066,14 +1065,16 @@ function osm_streetname(street) {
     }
 }
 
-function plotStreetGPS(street) {
+function plotStreetGPS(street, caller) {
     var pos = street.match(/^(.*) \[([0-9\.,\-\+]+),[0-9]\][ ]*$/);
 
     debug("pos: " + pos[1] + " :: " + pos[2] + " :: length: " + pos.length);
     if (pos.length == 3) {
         var data = '["' + pos[1] + '",["' + pos[1] + "\t" + pos[2] + '"]]';
         debug(data);
-        plotStreet(data);
+
+        // plotStreet()
+        caller(data);
     } else {
         debug("cannot plot street");
     }
@@ -1090,7 +1091,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
 
     if (!osm_streetname(street)) {
         debug("Not a OSM street name: '" + street + ', skip ajax call"');
-        return plotStreetGPS(street);
+        return plotStreetGPS(street, plotStreet);
     }
 
     if (!strokeColor) {
@@ -1122,6 +1123,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
     };
 
     // plot street(s) on map
+
 
     function plotStreet(data) {
         var js = eval(data);
