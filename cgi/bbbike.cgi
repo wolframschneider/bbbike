@@ -3625,7 +3625,8 @@ EOF
 	if (defined $c and (not defined $strname or $strname eq '')) {
 	    print crossing_text($c);
 	    if (my $val = $q->param("_$type")) {
-		print qq{ <span class="grey">[$val]</span>\n};
+		# print the typed address if it is different from the crossing (e.g. for google addresses)
+		print qq{ <span class="grey">[$val]</span>\n} if $val ne crossing_text($c);
 	    }
             print "<br>\n";
 	} else {
