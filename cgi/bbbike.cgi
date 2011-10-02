@@ -1385,6 +1385,7 @@ sub enable_latlng_search {
 	my $param_c = $param . "c";
 
 	my $value = $q->param($param) || "";
+	my $street = "";
 
 	# ignore errors in input field if the marker is outside the area
 	# [Error: outside area]
@@ -1394,11 +1395,16 @@ sub enable_latlng_search {
         }
 
 	# extract latlng: Mendosa Avenue [-122.46748,37.74807] -> -122.46748,37.74807
-	$value = $2 if $value =~ /^(.*)\s+\[([\d\.,\-\+]+)\]$/;
-	my $street = $1;
+        if ($value =~ /^(.*)\s+\[([\d\.,\-\+]+)\]\s*$/) {
+	   $street = $1;
+	   $value = $2;
+ 	}
 
-    	if (!defined $q->param($param_c) && is_latlng($value)) {
+	warn "param: $param, value: $value, street: $street\n";
+
+    	if (!defined $q->param($param_c) && is_latlng($value, 1)) {
 	   my $val = get_nearest_crossing_coords(extract_latlng($value));
+
 	   $q->param($param_c, $val);
 	   $q->delete($param);
 	   $q->param("_" . $param, $street);
@@ -1760,29 +1766,26 @@ sub is_latlng{
    my $flag = shift;
 
    # lat,lng,flag
-   if ($flag && $latlng =~ /,.*,/) {
-	$latlng =~ s/[^,]+\s*$//;
+   if ($flag && $latlng =~ /,.+,/) {
+	$latlng =~ s/,[^,]+\s*$//;
    }
 	
    return $latlng =~ /^\s*[\+\-]?[\d\.]+,[\+\-]?[\d\.]+\s*$/ ? 1 : 0;
 }
 
 sub extract_latlng{
-   my $latlng = shift;
+    my $latlng = shift;
 
-   $latlng =~ s/^\s+//;
-   $latlng =~ s/\s+$//;
+    $latlng =~ s/^\s+//;
+    $latlng =~ s/\s+$//;
 
-   my @pos = split /,/, $latlng;
-   return if scalar(@pos) < 2;
+    my @pos = split /,/, $latlng;
+    return if scalar(@pos) < 2;
 
-   if ($debug && scalar(@pos) >2) {
-	warn "LatLng type: $pos[2]\n";	
-   }
-
-   if ($pos[0] =~ /^[\+\-]?[\d\.]$/ && $pos[1] =~ /^[\+\-]?[\d\.]$/) {
-      return join ",", $pos[0], $pos[1];
-   }
+    if ($pos[0] =~ /^[\+\-]?[\d\.]+$/ && $pos[1] =~ /^[\+\-]?[\d\.]+$/) {
+	warn "LatLng type: $pos[2] $pos[0],$pos[1]\n" if $debug && scalar(@pos) >2;
+        return join (",", $pos[0], $pos[1]);
+    }
 }
 
 sub is_forum_spam {
