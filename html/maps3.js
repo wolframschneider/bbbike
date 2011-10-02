@@ -2319,7 +2319,7 @@ function updateCrossing(marker, id, data) {
 
     if (value) {
         v = value.split("\t");
-        street_latlng = v[1] + " [" + v[0] + "]";
+        street_latlng = v[1] + " [" + v[0] + ",0]";
     } else {
         street_latlng = js.query;
     }
