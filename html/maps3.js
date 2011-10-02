@@ -1051,6 +1051,20 @@ function add_panoramio_layer(map, enable) {
     layers.panoramioLayer.setMap(enable ? map : null);
 }
 
+//
+// guess if a streetname is from the OSM database
+// false: 123,456
+// false: foo [123,456]
+//
+function osm_streetname(street) {
+   if (street.match(/^[\-\+ ]?[0-9\.]+,[\-\+ ]?[0-9\.]+[ ]*$/) || 
+       street.match(/^.* \[[0-9\.,\-\+]+\][ ]*$/)) {		  
+	return 0;
+   } else {
+	return 1;
+   }
+}
+
 var street = "";
 var street_cache = [];
 var data_cache = [];
@@ -1059,6 +1073,11 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
     var streetnames = 3; // if set, display a info window with the street name
     var autozoom = 13; // if set, zoom to the streets
     var url = encodeURI("/cgi/street-coord.cgi?namespace=" + (streetnames ? "3" : "0") + ";city=" + city + "&query=" + street);
+
+    if (!osm_streetname(street)) {
+	debug("Not a OSM street name: '" + street + '"');
+	return;
+    }
 
     if (!strokeColor) {
         strokeColor = "#0000FF";
