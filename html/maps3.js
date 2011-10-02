@@ -1112,7 +1112,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
     }
 
     function addInfoWindow(marker, address) {
-        infoWindow = new google.maps.InfoWindow({
+        var infoWindow = new google.maps.InfoWindow({
             maxWidth: 500
         });
         var content = "<span id=\"infoWindowContent\">\n"
@@ -1120,10 +1120,15 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
         content += "</span>\n";
         infoWindow.setContent(content);
         infoWindow.open(map, marker);
+
+        // close info window after 4 seconds
+        setTimeout(function () {
+            infoWindow.close()
+        }, 4000)
+
     };
 
     // plot street(s) on map
-
 
     function plotStreet(data) {
         var js = eval(data);
@@ -1190,6 +1195,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
 
                 if (streets_list.length <= 10) {
                     addInfoWindow(marker, street);
+
                 }
 
                 street_cache.push(marker);
@@ -1388,6 +1394,7 @@ function plotRoute(map, opt, street) {
         content += "</div>\n";
         infoWindow.setContent(content);
         infoWindow.open(map, marker);
+
 
         routeSave = route;
         route.setOptions({
