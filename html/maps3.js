@@ -1056,13 +1056,27 @@ function add_panoramio_layer(map, enable) {
 // false: 123,456
 // false: foo [123,456]
 //
+
+
 function osm_streetname(street) {
-   if (street.match(/^[\-\+ ]?[0-9\.]+,[\-\+ ]?[0-9\.]+[ ]*$/) || 
-       street.match(/^.* \[[0-9\.,\-\+]+\][ ]*$/)) {		  
-	return 0;
-   } else {
-	return 1;
-   }
+    if (street.match(/^[\-\+ ]?[0-9\.]+,[\-\+ ]?[0-9\.]+[ ]*$/) || street.match(/^.* \[[0-9\.,\-\+]+\][ ]*$/)) {
+        return 0;
+    } else {
+        return 1;
+    }
+}
+
+function plotStreetGPS(street) {
+    var pos = street.match(/^(.*) \[([0-9\.,\-\+]+),[0-9]\][ ]*$/);
+
+    debug("pos: " + pos[1] + " :: " + pos[2] + " :: length: " + pos.length);
+    if (pos.length == 3) {
+        var data = '["' + pos[1] + '",["' + pos[1] + "\t" + pos[2] + '"]]';
+        debug(data);
+        plotStreet(data);
+    } else {
+        debug("cannot plot street");
+    }
 }
 
 var street = "";
@@ -1075,8 +1089,8 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
     var url = encodeURI("/cgi/street-coord.cgi?namespace=" + (streetnames ? "3" : "0") + ";city=" + city + "&query=" + street);
 
     if (!osm_streetname(street)) {
-	debug("Not a OSM street name: '" + street + '"');
-	return;
+        debug("Not a OSM street name: '" + street + ', skip ajax call"');
+        return plotStreetGPS(street);
     }
 
     if (!strokeColor) {
