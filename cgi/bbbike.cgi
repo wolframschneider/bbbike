@@ -3585,6 +3585,12 @@ EOF
 
     print "<form action=\"$bbbike_script\">";
 
+    foreach my $param (qw/_start _ziel _via/) {
+	if (defined $q->param($param)) {
+	   print $q->hidden(-name=> $param, -default=> $q->param($param)), "\n";
+	}
+    }
+
     print "<table>\n" if ($bi->{'can_table'});
 
     foreach ([$start_str, \@start_coords, $start_plz, $start_c, 'start',
