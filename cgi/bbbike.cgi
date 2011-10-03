@@ -7854,7 +7854,7 @@ sub header {
         # google maps v=3.3 
 	# Release Version (3.3) Reference (Feature-Stable)
 
-	  if (!is_mobile($q) || is_resultpage($q) ) {
+	  if (1 || !is_mobile($q) || is_resultpage($q) ) {
 	    push(@$head, qq|<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>|);
 	    # push(@$head, qq|<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>|);
 
