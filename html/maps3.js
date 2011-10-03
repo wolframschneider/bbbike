@@ -339,7 +339,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         },
         zoomControlOptions: {
             position: google.maps.ControlPosition.LEFT_TOP,
-            style: google.maps.ZoomControlStyle.DEFAULT // SMALL
+            style: google.maps.ZoomControlStyle.LARGE // DEFAULT // SMALL
         },
         overviewMapControl: bbbike.controls.overviewMapControl
     });
