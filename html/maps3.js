@@ -2168,14 +2168,13 @@ function _init_markers(opt) {
     var dist = 8;
     var mobile = 1;
     if (window.screen.width <= 480) {
-	mobile = 2;
-	debug("detect small screen");
+        mobile = 2;
+        debug("detect small screen");
     }
 
     var pos_lng = lng + (ne.lng() - lng) / dist * mobile; //  1/8 right
-    var pos_lat = lat - (lat - sw.lat()) / dist*1.5; //  1/12 down
-
-    padding = (ne.lng() - lng) / (dist/mobile*4); // distance beteen markers on map, 1/32 of the map
+    var pos_lat = lat - (lat - sw.lat()) / dist * 1.5; //  1/12 down
+    padding = (ne.lng() - lng) / (dist / mobile * 4); // distance beteen markers on map, 1/32 of the map
     var pos_start = new google.maps.LatLng(pos_lat, pos_lng);
     var pos_dest = new google.maps.LatLng(pos_lat, pos_lng + padding);
     var pos_via = new google.maps.LatLng(pos_lat, pos_lng + 2.0 * padding);
