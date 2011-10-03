@@ -1012,12 +1012,11 @@ sub BBBikeHeavy::get_file_or_url {
 }
 
 ### AutoLoad Sub
-sub BBBikeHeavy::get_user_agent {
-    return $ua if defined $ua;
+sub BBBikeHeavy::get_uncached_user_agent {
     eval { require LWP::UserAgent };
     return undef if $@;
-    $ua = LWP::UserAgent->new;
-    $ua->agent("$progname/$VERSION");
+    my $ua = LWP::UserAgent->new;
+    $ua->agent("$progname/$VERSION (LWP::UserAgent/$LWP::VERSION) ($^O)");
     $ua->timeout(30);
     $ua->env_proxy;
     if ($os eq 'win' && eval { require Win32Util; 1 }) {
@@ -1026,6 +1025,13 @@ sub BBBikeHeavy::get_user_agent {
     if ($proxy) {
 	$ua->proxy(['http','ftp'], $proxy);
     }
+    $ua;
+}
+
+### AutoLoad Sub
+sub BBBikeHeavy::get_user_agent {
+    return $ua if defined $ua;
+    $ua = BBBikeHeavy::get_uncached_user_agent();
     $ua;
 }
 

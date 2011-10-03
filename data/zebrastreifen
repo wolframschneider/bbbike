@@ -175,7 +175,7 @@ Rummelsburger Straße/Höhe Eggersdorfer Straße/Delbrückstr.	Zs 17180,10845
 #: by: ^^^
 #: note: Luftbild
 Fritz-Reuter-Allee/Britzer Park	Zs 13476,3857
-Groß-Berliner Damm/Pilotenstr.	Zs 17944,4797
+#XXX del --- wieder aufgehoben --- Groß-Berliner Damm/Pilotenstr.	Zs 17944,4797
 #: note: Luftbild
 Rosenthaler Weg/Arnouxstr.	Zs 11569,22436
 Behmstr./Zingster Str.	Zs 9285,16032
@@ -355,8 +355,6 @@ Windscheidstr./Schillerstr.	Zs 3207,11416
 Schirwindter Allee/Dickensweg	Zs -1532,11176
 Josef-Orlopp-Str.	Zs 15747,13152
 Ribnitzer Str./Zum Hechtgraben	Zs 16408,18259
-#: XXX in Bau
-#: last_checked: 2011-06-12
 Grünberger/Gubener	Zs 13382,11996
 Elisabethstr./Oberfeldstr.	Zs 20923,14461
 #: note: public imagery
@@ -371,8 +369,6 @@ Gartenstr./Feldstr.	Zs 8959,14522
 Gartenstr.	Zs 8728,14864
 Ruppiner Chaussee/Stolpmünder Weg	Zs -1635,24113
 Hönower Weg	Zs 26885,13135
-#: XXX in Bau
-#: last_checked: 2011-07-09
 Monumentenstr./Hohenfriedbergstr.	Zs 7766,9122
 Schütte-Lanz-Str./Scheelestr.	Zs 5345,836
 Eisenhutweg/Straße am Flugplatz	Zs 18032,2745
@@ -381,7 +377,8 @@ Alte Hellersdorfer Str.	Zs 23068,15441
 Cecilienstr./Bodo-Uhse-Str.	Zs 23086,13267
 Ridbacher Str./Wernerstr.	Zs 24222,12755
 Müggelseedamm	Zs 24485,5048
-#: XXX genaue Position ermitteln
+#: XXX in Bau
+#: last_checked: 2011-09-01
 Reichenberger/Manteuffelstr.	Zs 11843,10186
 #: XXX in Bau
 #: last_checked: 2011-08-28
@@ -390,3 +387,9 @@ Achillesstr.	Zs 16354,23370
 #: XXX in Bau, genaue Position ermitteln
 #: last_checked: 2011-08-28
 Bahnhodstr.	Zs 14896,23083
+#: XXX in Bau
+#: last_checked: 2011-09-01
+Friedenstr./Weinstr.	Zs 11989,13461
+#: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20110901.1335.357063.html
+Ziekowstr./Hatzfeldtallee	Zs 2584,20615
+Königsheideweg/Herrenhausstr.	Zs 17681,4536

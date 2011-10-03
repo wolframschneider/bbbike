@@ -602,7 +602,6 @@ Georgenstr. (Mitte)	1 9117,12705 9242,12652
 Schulstr. (Tegel)	1 1953,20149 1794,20110
 #: add_fragezeichen: Ist der Natalissteig eine Einbahnstraße? Wenn ja, gilt die Einbahnstraßenregelung nur für Autofahrer oder auch für Radfahrer?
 Natalissteig	1 1202,14935 1223,14824 1226,14714
-Straße 12 (Neukölln): gesperrt für Fahrzeuge aller Art (außer BAB-Versorgung)	2 13883,6682 13881,6634 13915,6592
 Alt-Biesdorf	1 20375,11694 20435,11698 20575,11698 21108,11628
 Alt-Biesdorf	1 21108,11628 20963,11618 20633,11651 20549,11659 20375,11694
 #: by: Frank Winterlich:
@@ -626,8 +625,8 @@ Bernhard-Bästlein-Str.	1 15595,14041 15593,13768
 Washingtonplatz	1s 8106,13130 7937,13126
 (Vorfahrt HdKdW)	1 7627,12380 7654,12464 7687,12477 7778,12470 7813,12427 7821,12367
 #: by: Bernhard Husch:
-#: XXX ein Eintrag war ohne, einer mit Einbahnstraße. osm hat keine Einbahnstraße eingezeichnet -> nachgefragt
-Pfarrer-Lütkehaus-Platz	1 10220,-2137 10231,-2159 10318,-2156
+#: note: Einfahrt verboten
+Pfarrer-Lütkehaus-Platz	1 10228,-2136 10231,-2159
 Radebeuler Str.	1 19067,13818 19025,14037
 Beilsteiner Str.	1 18749,12413 18800,12838 18832,13099 18852,13269
 #: note: durch ein Tor versperrt; es existiert aber anscheinend parallel dazu ein Trampelpfad
@@ -853,6 +852,8 @@ Kreisverkehr Brebacher Weg	1 21581,12182 21570,12191 21575,12212 21589,12217 216
 Hirteplatz: Kreisverkehr	1 23766,5281 23775,5271 23775,5258 23765,5248 23751,5248 23744,5262 23743,5268 23746,5276 23756,5280 23766,5281
 Löcknitzstr.	1 26496,5047 26612,5051
 Brösener Str.	1 26247,6228 26284,6130 26282,6033
+Grenzweg	1 9456,-1271 9493,-1269 9503,-1302 9496,-1327 9457,-1329
+Alt-Lichtenrade	1 10782,-24 10835,-145
 ######################################################################
 #
 # Potsdam
@@ -1336,6 +1337,7 @@ Salvador-Allende-Str.: Mittelstreifen	3nocross 23404,5325 23403,5385 23402,5483
 #: last_checked: 2011-08-14
 #: next_check: 2013-01-01
 Fürstenwalder Damm: Straßenbahntrasse	3nocross 23660,5477 23728,5446 23822,5403 23851,5389
+Tauernallee: Mittelstreifen	3nocross 10349,2188 10431,2258 10504,2321
 #
 ####################################################################
 #
@@ -1579,6 +1581,9 @@ tragen, langgezogene Stufen (13 Stufen)	0:25 20704,1383
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+#: by: MG
+Schranke	BNP:1::trailer=3 21514,11796
+Drängelgitter	BNP:3::trailer=10 8357,9598
 Schranke	BNP:1::trailer=3 17028,23968
 Schranke (lichte Breite ca. 85cm, weitere Umfahrung möglich)	BNP:2::trailer=10 16339,22199
 Drängelgitter (lichte Breite ca. 100cm)	BNP:3::trailer=10 21578,10413
@@ -1857,8 +1862,8 @@ Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,2
 #: next_check: ^^^
 #: last_checked ^^^
 # 
-#: last_checked: 2011-08-19
-#: next_check: 2011-09-25
+#: last_checked: 2011-09-13
+#: next_check: 2011-10-15
 Beuthstr.: Bauarbeiten für Anbindung der Axel-Springer-Str. zum Spittelmarkt	2:inwork 10229,11618 10197,11605 10166,11592
 # 
 #: by: somebody via phone call 
@@ -1933,12 +1938,9 @@ Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,127
 #XXX --- siehe http://www.flickr.com/photos/h-e-n-r-y/5260386593/ #: last_checked: 2010-11-05 --- #: next_check: 2010-12-01 --- #: note: Eröffnung des Hotels im Dezember 2010 --- #: XXX Neubewertung für handicap_s notwendig! --- Spittelmarkt: wegen Bauarbeiten gesperrt	2:inwork 10166,11592 10153,11666 10213,11728
 # 
 #: by: http://www.kondorwessels.com/index.php?id=356 (Fertigstellung)
-#: last_checked: 2011-07-13
-#: next_check: 2011-09-15
+#: last_checked: 2011-09-13
+#: next_check: 2011-12-15
 Elisabeth-Mara-Str.: Bauarbeiten bis zum Frühjahr 2011	2:inwork 10506,11567 10320,11627
-# 
-#: last_checked: 2010-09-11
-Wagner-Régeny-Str.: Straße ist fertig, aber noch gesperrt	2:inwork 19487,3593 19377,3721
 # 
 #XXX del --- #: last_checked: 2010-09-05 --- #: next_check: 2011-09-01 --- Rhinstr.: neues Wohngebiet, Weg gesperrt	2:inwork 18015,13846 17300,14133
 # 
@@ -1954,10 +1956,8 @@ Radweg parallel zur Autobahn ist wegen Bauarbeiten am BAB gesperrt	2:inwork 5062
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1108/nachricht4438.html
 Rathausbrücke: gesperrt (Neubau), Fertigstellung und Verkehrsfreigabe im Frühjahr 2012	2:inwork 10362,12351 10422,12395
 # 
-#XXX del --- #: last_checked: 2011-02-27 --- #: next_check: 2011-05-15 --- Vicki-Baum-Str.: noch in Bau, gesperrt	2:inwork 15753,10353 15823,10300
-# 
-#: last_checked: 2011-08
-#: next_check: 2011-09-01
+#: last_checked: 2011-09-10
+#: next_check: 2011-11-15
 #: XXX abhängiger Eintrag in vorfahrt-orig!
 Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14795,10473 14805,10518
 # 
@@ -2017,7 +2017,7 @@ Treitschkestr.	1 4854,6413 4971,6345 5125,6262 5219,6215
 tragen (3 x 10 Stufen)	0:40 4127,5427
 tragen (5 Stufen)	0:10 4061,5418
 Iltisstr.	1 2797,5624 2858,5535
-Bundesallee: Mittelstreifen unbequem zu überqueren	3nocross 5493,9357 5495,9263 5503,8982
+Bundesallee: Mittelstreifen unbequem zu überqueren	3nocross 5493,9367 5495,9263 5503,8982
 Bundesallee: Mittelstreifen, parkende Autos	3nocross 5356,7862 5356,7915 5357,8013
 Lietzenburger Str.: Mittelstreifen schlecht zu überqueren	3nocross 6494,10440 6403,10424 6276,10401
 (Kolonieweg a. d. Forkenbeckstr.): tragen (5 Stufen)	0:15 3230,8194

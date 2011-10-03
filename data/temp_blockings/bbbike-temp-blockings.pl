@@ -50,7 +50,7 @@ EOF
        text  => 'Karneval der Kulturen, 12.6.2011',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11500,9116 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9334,9670 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8192,9619
+userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11500,9116 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9334,9670 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
 userdel	3 8773,9524 8777,9601 8779,9812
 userdel	3 8779,9812 8777,9601 8773,9524
 userdel	3 9000,9509 9043,9745 9073,9915
@@ -229,10 +229,10 @@ Florastraße zwischen Grunowstraße und Berliner Straße, Baustelle, Straße in beid
        text  => 'Fürstenwalder Damm zwischen Bölschestraße und Hartlebenstraße Baustell stadtauswärts, Straße gesperrt, eine Umleitung ist eingerichtet, Dauer: 07.09.2003,04.00 Uhr bis 21.09.2003',
        type  => 'gesperrt',
      },
-     { from  => 1315519200, #1063339200, # 2003-09-12 06:00
+     { from  => 1315519200, #1063339200, # 2003-09-12 06:00 # PERIODISCH
        until => 1315778400, #1063576800, # 2003-09-15 00:00
        data  => <<EOF,
-userdel	2 10453,-2133 10509,-2131 10631,-2130 10747,-2129
+userdel	2 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129
 EOF
        text  => 'Bahnhofstraße, zwischen Goltzstraße und Steinstraße Winzerfest, vom 10.09.2011 bis 11.09.2011',
        type  => 'gesperrt',
@@ -1296,7 +1296,7 @@ EOF
        text  => 'L 75; (Karl-Marx-Straße); OD Großziethen, von Dorfstraße bis Friedhofsweg Straßenbauarbeiten Vollsperrung 24.05.2004-20.12.2004 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 13225,-681 13176,-161 13165,-34 13124,216 13165,-34 13176,-161 13225,-681 13230,-712 13309,-1268
+userdel	q4 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13165,-34 13176,-161 13215,-570 13225,-681 13230,-712 13300,-1252
 EOF
      },
      { from  => 1292626800, # PERIODISCH, Advents-Wochenenden! # früher: 1102654800, # 2004-12-10 06:00
@@ -2881,7 +2881,7 @@ EOF
        text  => 'L 75; (Karl-Marx-Str.); OD Großziethen Straßenbauarbeiten Vollsperrung 06.09.2005-30.11.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 13225,-681 13176,-161 13165,-34 13124,216 12984,1011
+userdel	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 12984,1011
 EOF
      },
      { from  => 1128290400, # 2005-10-03 00:00
@@ -4034,7 +4034,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_003887',
        data  => <<EOF,
-userdel	q4 13225,-681 13176,-161 13165,-34 13124,216 12984,1011
+userdel	q4 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 12984,1011
 EOF
      },
      { from  => 1143928800, # 2006-04-02 00:00
@@ -5679,7 +5679,7 @@ EOF
        text  => 'L 075 Karl-Marx-Str. OD Großziehten Straßenbauarbeiten Vollsperrung 24.11.2006-22.12.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 13225,-681 13176,-161 13165,-34 13124,216 12984,1011
+userdel	2 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 12984,1011
 EOF
      },
      { from  => 1156629600, # 2006-08-27 00:00
@@ -9135,10 +9135,10 @@ userdel	q4::inwork -32153,-176 -32143,-211 -31993,-726 -31991,-1024
 EOF
      },
      { from  => 1179453600, # 2007-05-18 04:00
-       until => 1320015599, # 2011-10-30 23:59 --- until => Time::Local::timelocal(reverse(2011-1900,8-1,31,15,0,0)), # 1279544400, # 2010-07-19 15:00
+       until => 1317938400, # 2011-10-07 00:00
        text  => 'Rudower Chaussee (Treptow - Köpenick) in beiden Richtungen Höhe S-Bahn Brücke Adlershof Baustelle, Straße vollständig gesperrt, als Fußgänger kann man passieren',
        type  => 'handicap',
-       source_id => 'IM_005525',
+       source_id => 'INKO_096853',
        data  => <<EOF,
 userdel	q4::inwork 19904,3464 19732,3340
 EOF
@@ -13316,7 +13316,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_011184',
        data  => <<EOF,
-#: last_checked: 2011-06-12
+#: last_checked: 2011-08-31
 userdel	q4::inwork; 10350,13376 10527,13257
 EOF
      },
@@ -18243,7 +18243,7 @@ EOF
 	2::inwork 7725,8033 7793,8043 7834,8085 7859,8252 7893,8327 7942,8380 8078,8772
 EOF
      },
-     { from  => 1309471200, # 1284091200, # 2010-09-10 06:00 # zweiter Termin im Jahr!
+     { from  => 1309471200, # 1284091200, # 2010-09-10 06:00 # zweiter Termin im Jahr! # PERIODISCH!
        until => 1309730400, # 1284328740, # 2010-09-12 23:59
        text  => 'Rheinstraße (Friedenau): Veranstaltung, Straße vollständig gesperrt (2. und 3. Juli 2011) in beiden Richtungen zwischen Walther-Schreiber-Platz und Breslauer Platz',
        type  => 'gesperrt',
@@ -18251,7 +18251,7 @@ EOF
 userdel	2::temp 5370,6486 5424,6584 5533,6753 5654,6941 5817,7223
 EOF
      },
-     { from  => 1284091200, # 2010-09-10 06:00
+     { from  => 1284091200, # 2010-09-10 06:00 # PERIODISCH!
        until => 1284337800, # 2010-09-13 02:30
        text  => 'Bahnhofstraße (Lichtenrade): Veranstaltung, Straße vollständig gesperrt (bis ca. 13.09.10, 2 Uhr) in beiden Richtungen zwischen Goltzstr. und Steinstr. ',
        type  => 'handicap',
@@ -18260,7 +18260,7 @@ EOF
 userdel	q4::temp 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
 EOF
      },
-     { from  => 1284091200, # 2010-09-10 06:00
+     { from  => 1284091200, # 2010-09-10 06:00 # PERIODISCH!
        until => 1284336000, # 2010-09-13 02:00
        text  => 'Breite Straße (Pankow): Veranstaltung, Straße vollständig gesperrt (bis 13.09.10, 2 Uhr morgens) in beiden Richtungen zwischen Mühlenstr. und Berliner Str.',
        type  => 'handicap',
@@ -18269,7 +18269,7 @@ EOF
 userdel	q4::temp 10240,18193 10320,18197 10487,18270 10660,18345 10680,18380 10609,18384 10567,18366 10502,18338 10463,18321 10281,18241
 EOF
      },
-     { from  => 1315432800, # 1284001200, # 2010-09-09 05:00
+     { from  => 1315432800, # 1284001200, # 2010-09-09 05:00 # PERIODISCH!
        until => 1315778400, # 1284332400, # 2010-09-13 01:00
        text  => 'Turmstraße (Moabit): Veranstaltung, Straße vollständig gesperrt (9. bis 11. September 2011) in beiden Richtungen zwischen Stromstr. und Waldstr.',
        type  => 'gesperrt',
@@ -18657,7 +18657,7 @@ userdel	q4::inwork 21233,6096 20722,6971
 EOF
      },
      { from  => 1254645120, # 2009-10-04 10:32
-       until => 1333112400, # 2012-03-30 15:00
+       until => 1314991761, # 1333112400, # 2012-03-30 15:00
        text  => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung stadteinwärts gesperrt, 05.10.2009 10:32 Uhr bis 30.03.2012 15:00 Uhr',
        type  => 'handicap',
        source_id => 'IM_014357',
@@ -18956,15 +18956,15 @@ EOF
 userdel	2::temp 9990,-8867 10115,-8276
 EOF
      },
-     { from  => 1315519200, # 2011-09-09 00:00
+     { from  => 1315519200, # 2011-09-09 00:00 # PERIODISCH!
        until => 1315778399, # 2011-09-11 23:59
        text  => 'Seifenkistenrennen auf dem Kaiserdamm zwischen Theodor-Heuss-Platz und Königin-Elisabeth-Straße, 10./11.09.2011',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 2109,11441 1960,11426 1834,11408 1625,11380 1574,11379
+userdel	1::temp 1574,11379 1625,11380 1834,11408 1960,11426 2109,11441
 EOF
      },
-     { from  => 1312581600, # 1186214400, # 2007-08-04 10:00 zweiter Termin im Sommer
+     { from  => 1312581600, # 1186214400, # 2007-08-04 10:00 zweiter Termin im Sommer # PERIODISCH!
        until => 1312754400, # 1186344000, # 2007-08-05 22:00
        text  => 'Open Air Gallery am 7. August 2011 auf der Oberbaumbrücke ',
        type  => 'gesperrt',
@@ -19098,7 +19098,7 @@ EOF
        data  => <<EOF,
 #: by: wosch
 #: confirmed_by: srt
-#: last_checked: 2011-08-19
+#: last_checked: 2011-08-31
 #: note: eigentlich Radfahren auf der Friedrichsbrücke jetzt auch verboten
 userdel	q4::inwork; 10166,12777 10132,12941
 EOF
@@ -19347,7 +19347,7 @@ userdel	q4::temp 9321,8607 9401,8510 9451,8548 9364,8640
 EOF
      },
      { from  => undef, # 
-       until => 1320015599, # 2011-10-30 23:59
+       until => 1317938400, # 2011-10-07 00:00
        text  => 'Dörpfeldstr.: Bauarbeiten, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
@@ -19619,12 +19619,11 @@ userdel	q4::inwork 6298,20599 6330,20742 6347,20819 6366,20902 6376,20951 6380,2
 EOF
      },
      { from  => 1314482400, # 2011-08-28 00:00
-       until => undef, # XXX
+       until => 1324656000, # 2011-12-23 17:00
        text  => 'Kastanienallee: Fahrbahn zwischen Oderberger Straße und Schönhauser Allee/Eberswalder Straße ab Montag dem 29.8.2011 gesperrt',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20110826.1055.356350.html',
+       source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20110826.1055.356350.html', # und: source_id => 'IM_017746'
        data  => <<EOF,
-#: XXX Ende der Bauarbeiten?
 userdel	q4::inwork 10881,15047 10838,14962 10723,14772
 EOF
      },
@@ -19645,6 +19644,98 @@ EOF
        source_id => 'INKO_103963',
        data  => <<EOF,
 userdel	2::inwork -7191,-1023 -7152,-1064 -7088,-1074 -7051,-1221
+EOF
+     },
+     { from  => 1315087200, # 2011-09-04 00:00
+       until => 1316469599, # 2011-09-19 23:59
+       text  => 'Buchholzer Straße, Einbahnstraße zwischen Beuthstraße und Herthaplatz, von 5. September 2011 bis 19. September 2011',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20110902.1020.357195.html',
+       data  => <<EOF,
+userdel	q4::inwork; 10599,19957 10609,19971 10802,20240 10843,20301
+EOF
+     },
+     { from  => 1315425600, # 2011-09-07 22:00
+       until => 1315857600, # 2011-09-12 22:00
+       text  => 'Gransee: B96: Gleisbauarbeiten Bahnübergang bei Altlüdersdorf Vollsperrung ab 08.09.11 22:00 Uhr, 08.09.2011 22:00 Uhr bis 12.09.2011 22:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => '116501441',
+       data  => <<EOF,
+userdel	2::inwork -5575,69050 -5511,69122 -5146,69565
+EOF
+     },
+     { from  => 1314943200, # 2011-09-02 08:00
+       until => 1315058400, # 2011-09-03 16:00
+       text  => 'Joachim-Friedrich-Str. (Charlottenburg) in beiden Richtungen zwischen Kurfürstendamm und Damaschkestr., Veranstaltung, Straße vollständig gesperrt (03.09.2011 08:00 bis 16:00)',
+       type  => 'handicap',
+       source_id => 'IM_017752',
+       data  => <<EOF,
+userdel	q4::temp 3132,10499 3111,10116
+EOF
+     },
+     { from  => 1315465200, # 2011-09-08 09:00
+       until => 1315792800, # 2011-09-12 04:00
+       text  => 'Potsdam: B2: Nesselgrundbrücke zwischen Michendorf und Potsdam, Vollsperrung der Brücke vom 09.09.11, 9:00 - 12.09.11, 04:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'LS/W-SG33-P/11/523',
+       data  => <<EOF,
+userdel	2::inwork -13687,-4949 -13723,-6401
+EOF
+     },
+     { from  => 1315519200, # 2011-09-09 00:00
+       until => 1315778400, # 2011-09-12 00:00
+       text  => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr. ab: 10.09.2011 06 Uhr, Veranstaltung, Straße vollständig gesperrt (bis 11.09.2011 nachts) ',
+       type  => 'gesperrt',
+       source_id => 'IM_017803',
+       data  => <<EOF,
+userdel	2::temp 10609,18384 10567,18366 10502,18338 10463,18321 10281,18241 10240,18193 10320,18197 10487,18270 10660,18345
+EOF
+     },
+     { from  => 1315040400, # 2011-09-03 11:00
+       until => 1338386400, # 2012-05-30 16:00
+       text  => 'Lahnstr. (Neukölln): Baustelle, Fahrtrichtung gesperrt Richtung Neuköllnische Allee zwischen Karl-Marx-Str. und Naumburger Str., 04.09.2011 11:00 Uhr bis 30.05.2012 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_017750',
+       data  => <<EOF,
+userdel	q4::inwork; 13236,6489 13455,6559 13520,6583
+EOF
+     },
+     { from  => undef, # 
+       until => 1356994800, # 2013-01-01 00:00
+       text  => 'Jonasstr./Karl-Marx-Str.: Abbiegen nicht möglich (bzw. nur auf dem Gehweg)',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	3 12925,7425 13015,7440 13027,7368
+userdel	3 13027,7368 13015,7440 12925,7425
+userdel	3 12925,7425 13015,7440 12992,7545
+userdel	3 12992,7545 13015,7440 12925,7425
+EOF
+     },
+     { from  => 1317297600, # 2011-09-29 14:00
+       until => 1317697200, # 2011-10-04 05:00
+       text  => 'Rote Chaussee: Vollsperrung, von 30.09.2011, 14:00 Uhr bis 04.10.2011, 5:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110914.1015.358646.html',
+       data  => <<EOF,
+userdel	2::inwork 872,24330 905,24113 831,24054 764,24065 609,24215 237,24374 195,24389 132,24390 78,24364 -406,23934
+EOF
+     },
+     { from  => 1316062800, # 2011-09-15 07:00
+       until => 1316383140, # 2011-09-18 23:59
+       text  => 'Hauptstr. (Rosenthal): Veranstaltung, Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 16.09.2011 07:00 Uhr bis 18.09.2011 23:59 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_017830',
+       data  => <<EOF,
+userdel	q4::temp 8591,21906 8460,21602
+EOF
+     },
+     { from  => 1316088000, # 2011-09-15 14:00
+       until => 1316282400, # 2011-09-17 20:00
+       text  => 'Kirchstr. (Zehlendorf): Veranstaltung, Straße vollständig gesperrt, 16.09.2011 14:00 Uhr bis 17.09.2011 20:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_017848',
+       data  => <<EOF,
+userdel	q4::temp 751,2860 589,2925
 EOF
      },
     );

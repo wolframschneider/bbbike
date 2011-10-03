@@ -61,14 +61,14 @@ var bbbike = {
 
     // default map
     mapDefault: "mapnik",
-    // mapDefault: "terrain",
+    //mapDefault: "terrain",
     // visible controls
     controls: {
+        panControl: true,
         zoomControl: true,
         scaleControl: true,
-        overviewMapControl: false,
+        overviewMapControl: false
         // bug http://code.google.com/p/gmaps-api-issues/issues/detail?id=3167
-        panControl: false
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
@@ -86,17 +86,23 @@ var bbbike = {
         "green": '/images/mm_20_green.png',
         "red": '/images/mm_20_red.png',
         "white": '/images/mm_20_white.png',
+        "yellow": '/images/mm_20_yellow.png',
 
         "blue_dot": "/images/blue-dot.png",
         "green_dot": "/images/green-dot.png",
         "purple_dot": "/images/purple-dot.png",
         "red_dot": "/images/red-dot.png",
-        "yellow_dot": "/images/yellow-dot.png"
+        "yellow_dot": "/images/yellow-dot.png",
+
+        "start": "/images/dd-start.png",
+        "dest": "/images/dd-end.png",
 
     },
 
     maptype_usage: 1,
 
+    granularity: 100000,
+    // 5 digits for LatLng after dot
     // IE bugs
     dummy: 0
 };
@@ -105,7 +111,7 @@ var state = {
     fullscreen: false,
 
     // tags to hide in full screen mode
-    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes"],
+    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo"],
 
     // keep state of non map tags
     non_map_tags_val: {},
@@ -115,10 +121,20 @@ var state = {
 
     maplist: [],
     slideShowMaps: [],
+    markers: [],
+    markers_drag: [],
+
+    timeout_crossing: null,
 
     // street lookup events
-    timeout: null
+    timeout: null,
 
+    marker_list: [],
+
+    lang: "en",
+
+    // IE bugs
+    dummy: 0
 };
 
 var layers = {};
@@ -301,6 +317,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     if (!is_supported_map(maptype)) {
         maptype = bbbike.mapDefault;
     }
+    state.lang = lang;
+    state.marker_list = marker_list;
 
     var routeLinkLabel = "Link to route: ";
     var routeLabel = "Route: ";
@@ -316,11 +334,12 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         mapTypeControlOptions: {
             mapTypeIds: bbbike.mapTypeControlOptions.mapTypeIds
         },
-        zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.SMALL
-        },
         panControlOptions: {
-            position: google.maps.ControlPosition.LEFT_TOP
+            position: google.maps.ControlPosition.TOP_LEFT
+        },
+        zoomControlOptions: {
+            position: google.maps.ControlPosition.LEFT_TOP,
+            style: google.maps.ZoomControlStyle.DEFAULT // SMALL
         },
         overviewMapControl: bbbike.controls.overviewMapControl
     });
@@ -1032,6 +1051,35 @@ function add_panoramio_layer(map, enable) {
     layers.panoramioLayer.setMap(enable ? map : null);
 }
 
+//
+// guess if a streetname is from the OSM database
+// false: 123,456
+// false: foo [123,456]
+//
+
+function osm_streetname(street) {
+    if (street.match(/^[\-\+ ]?[0-9\.]+,[\-\+ ]?[0-9\.]+[ ]*$/) || street.match(/^.* \[[0-9\.,\-\+]+\][ ]*$/)) {
+        return 0;
+    } else {
+        return 1;
+    }
+}
+
+function plotStreetGPS(street, caller) {
+    var pos = street.match(/^(.*) \[([0-9\.,\-\+]+),[0-9]\][ ]*$/);
+
+    debug("pos: " + pos[1] + " :: " + pos[2] + " :: length: " + pos.length);
+    if (pos.length == 3) {
+        var data = '["' + pos[1] + '",["' + pos[1] + "\t" + pos[2] + '"]]';
+        debug(data);
+
+        // plotStreet()
+        caller(data);
+    } else {
+        debug("cannot plot street");
+    }
+}
+
 var street = "";
 var street_cache = [];
 var data_cache = [];
@@ -1040,6 +1088,11 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
     var streetnames = 3; // if set, display a info window with the street name
     var autozoom = 13; // if set, zoom to the streets
     var url = encodeURI("/cgi/street-coord.cgi?namespace=" + (streetnames ? "3" : "0") + ";city=" + city + "&query=" + street);
+
+    if (!osm_streetname(street)) {
+        debug("Not a OSM street name: '" + street + ', skip ajax call"');
+        return plotStreetGPS(street, plotStreet);
+    }
 
     if (!strokeColor) {
         strokeColor = "#0000FF";
@@ -1059,7 +1112,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
     }
 
     function addInfoWindow(marker, address) {
-        infoWindow = new google.maps.InfoWindow({
+        var infoWindow = new google.maps.InfoWindow({
             maxWidth: 500
         });
         var content = "<span id=\"infoWindowContent\">\n"
@@ -1067,6 +1120,12 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
         content += "</span>\n";
         infoWindow.setContent(content);
         infoWindow.open(map, marker);
+
+        // close info window after 4 seconds
+        setTimeout(function () {
+            infoWindow.close()
+        }, 4000)
+
     };
 
     // plot street(s) on map
@@ -1136,6 +1195,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
 
                 if (streets_list.length <= 10) {
                     addInfoWindow(marker, street);
+
                 }
 
                 street_cache.push(marker);
@@ -1237,7 +1297,7 @@ function plotRoute(map, opt, street) {
 
         var marker3 = new google.maps.Marker({
             position: pos,
-            icon: bbbike.icons.white,
+            icon: bbbike.icons.yellow,
             map: map
         });
         google.maps.event.addListener(marker3, "click", function (event) {
@@ -1288,7 +1348,7 @@ function plotRoute(map, opt, street) {
 
 
     function addInfoWindow(marker) {
-        var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.white];
+        var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.yellow];
 
         if (infoWindow) {
             infoWindow.close();
@@ -1335,6 +1395,7 @@ function plotRoute(map, opt, street) {
         infoWindow.setContent(content);
         infoWindow.open(map, marker);
 
+
         routeSave = route;
         route.setOptions({
             strokeWeight: 10
@@ -1346,6 +1407,10 @@ function plotRoute(map, opt, street) {
 // localized custom map names
 
 function translate_mapcontrol(word, lang) {
+    if (!lang) {
+        lang = state.lang;
+    }
+
     var l = {
         // master language, fallback for all
         "en": {
@@ -1388,7 +1453,18 @@ function translate_mapcontrol(word, lang) {
             "Public Transport, by OpenStreetMap": "Öffentlicher Personennahverkehr, von OpenStreetMap",
             "German Mapnik, by OpenStreetMap": "Mapnik in deutschem Kartenlayout, von OpenStreetMap",
 
-            "bing_birdview": "Bing (Sat)" // Vogel
+            "bing_birdview": "Bing (Sat)",
+
+            "Set start point": "Setze Startpunkt",
+            "Set destination point": "Setze Zielpunkt",
+            "Set via point": "Setze Zwischenpunkt (Via)",
+            "Your current postion": "Ihre aktuelle Position",
+            "Approximate address": "Ungef&auml;hre Adresse",
+            "crossing": "Kreuzung",
+            "Error: outside area": "Fehler: ausserhalb des Gebietes",
+            "Start": "Start",
+            "Destination": "Ziel",
+            "Via": "Via"
         },
         "es": {
             "cycle": "Bicicletas"
@@ -1662,7 +1738,9 @@ function custom_layer(map, opt) {
 }
 
 
-function displayCurrentPosition(area) {
+function displayCurrentPosition(area, lang) {
+    if (!lang) lang = "en";
+
     if (!navigator.geolocation) {
         return;
     }
@@ -1676,6 +1754,7 @@ function displayCurrentPosition(area) {
         var pos = new google.maps.LatLng(currentPosition.lat, currentPosition.lng);
         var marker = new google.maps.Marker({
             position: pos,
+            icon: bbbike.icons["purple_dot"],
             map: map
         });
 
@@ -1699,6 +1778,7 @@ function displayCurrentPosition(area) {
                             marker.setMap(null);
                             marker = new google.maps.Marker({
                                 position: pos,
+                                icon: bbbike.icons["purple_dot"],
                                 map: map
                             });
 
@@ -1725,8 +1805,8 @@ function displayCurrentPosition(area) {
                 maxWidth: 400
             });
             var content = "<div id=\"infoWindowContent\">\n"
-            content += "<p>Your current postion: " + currentPosition.lat + "," + currentPosition.lng + "</p>\n";
-            content += "<p>Approximate address: " + address + "</p>\n";
+            content += "<p>" + translate_mapcontrol("Your current postion", lang) + ": " + currentPosition.lat + "," + currentPosition.lng + "</p>\n";
+            content += "<p>" + translate_mapcontrol("Approximate address", lang) + ": " + address + "</p>\n";
             content += "</div>\n";
             infoWindow.setContent(content);
             infoWindow.open(map, marker);
@@ -1943,7 +2023,7 @@ function loadRoute(opt) {
 function RouteMarker(opt) {
 
     // up to 3 markers: [ start, dest, via ]
-    var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.white];
+    var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.yellow];
 
     for (var i = 0; i < marker_list_points.length; i++) {
         var point = new google.maps.LatLng(marker_list_points[i][0], marker_list_points[i][1]);
@@ -2044,6 +2124,339 @@ function smallerMap(step, id) {
 
     width = (width < 0 || width > 100) ? 100 : width;
     tag.style.width = width + "%";
+}
+
+//
+// set start/via/destination markers
+// zoom level is not known yet, try it 0.5 seconds later
+//
+
+function init_markers(opt) {
+    var timeout = setTimeout(function () {
+        _init_markers(opt)
+    }, 900);
+
+    // reset markers after the map bound were changed
+    google.maps.event.addListener(map, "bounds_changed", function () {
+        clearTimeout(timeout);
+        timeout = setTimeout(function () {
+            _init_markers(opt)
+        }, 1000);
+    });
+}
+
+function _init_markers(opt) {
+    var area = opt.area;
+    var lang = opt.lang || "en";
+
+    var zoom = map.getZoom();
+    var ne = map.getBounds().getNorthEast();
+    var sw = map.getBounds().getSouthWest();
+
+    var lat, lng;
+    if (area) {
+        lat = area[1][0];
+        lng = area[0][1];
+    }
+
+    // use current map size instead area
+    else {
+        lat = ne.lat();
+        lng = sw.lng();
+    }
+
+    var dist = 8;
+    var mobile = 1;
+    if (window.screen.width <= 480) {
+	mobile = 2;
+	debug("detect small screen");
+    }
+
+    var pos_lng = lng + (ne.lng() - lng) / dist * mobile; //  1/8 right
+    var pos_lat = lat - (lat - sw.lat()) / dist*1.5; //  1/12 down
+
+    padding = (ne.lng() - lng) / (dist/mobile*4); // distance beteen markers on map, 1/32 of the map
+    var pos_start = new google.maps.LatLng(pos_lat, pos_lng);
+    var pos_dest = new google.maps.LatLng(pos_lat, pos_lng + padding);
+    var pos_via = new google.maps.LatLng(pos_lat, pos_lng + 2.0 * padding);
+
+    var marker_start = new google.maps.Marker({
+        position: pos_start,
+        clickable: true,
+        draggable: true,
+        title: translate_mapcontrol("Set start point", lang),
+        icon: bbbike.icons["start"] // icon: "/images/start_ptr.png"
+    });
+
+    var marker_dest = new google.maps.Marker({
+        position: pos_dest,
+        clickable: true,
+        draggable: true,
+        title: translate_mapcontrol("Set destination point", lang),
+        icon: bbbike.icons["dest"] // icon: "/images/ziel_ptr.png"
+    });
+
+    var marker_via = new google.maps.Marker({
+        position: pos_via,
+        clickable: true,
+        draggable: true,
+        title: translate_mapcontrol("Set via point", lang),
+        icon: bbbike.icons["yellow_dot"] // icon: "/images/ziel_ptr.png"
+    });
+
+
+    // clean old markers
+    debug("zoom level: " + map.getZoom() + " padding: " + padding);
+
+    if (state.markers_drag.marker_start == null) {
+        if (state.markers.marker_start) state.markers.marker_start.setMap(null);
+        marker_start.setMap(map);
+        state.markers.marker_start = marker_start;
+    }
+    if (state.markers_drag.marker_dest == null) {
+        if (state.markers.marker_dest) state.markers.marker_dest.setMap(null);
+        marker_dest.setMap(map);
+        state.markers.marker_dest = marker_dest;
+    }
+    if (state.markers_drag.marker_via == null) {
+        if (state.markers.marker_via) state.markers.marker_via.setMap(null);
+        marker_via.setMap(map);
+        state.markers.marker_via = marker_via;
+    }
+
+
+    // var event = 'position_changed'; // "drag", Firefox bug
+    var event = 'drag'; // "drag", Firefox bug
+    google.maps.event.addListener(marker_start, event, function () {
+        state.markers_drag.marker_start = marker_start;
+        find_street(marker_start, "suggest_start")
+    });
+    google.maps.event.addListener(marker_dest, event, function () {
+        state.markers_drag.marker_dest = marker_dest;
+        find_street(marker_dest, "suggest_ziel")
+    });
+    google.maps.event.addListener(marker_via, event, function () {
+        state.markers_drag.marker_via = marker_via;
+        find_street(marker_via, "suggest_via")
+    });
+}
+
+// round up to 1.1 meters
+
+function granularity(val, gran) {
+    var granularity = gran || bbbike.granularity;
+
+    return parseInt(val * granularity) / granularity;
+}
+
+function debug(text, id) {
+    if (!id) {
+        id = "debug";
+    }
+
+    var tag = document.getElementById(id);
+    var today = new Date();
+
+    if (!tag) return;
+
+    tag.innerHTML = "debug: " + text; // + " " + today;
+}
+
+function find_street(marker, input_id) {
+    var latLng = marker.getPosition();
+
+    var input = document.getElementById(input_id);
+    if (input) {
+        if (input_id == "XXXsuggest_via") {
+            toogleVia('viatr', 'via_message', null, true);
+        }
+
+        var value = granularity(latLng.lng()) + ',' + granularity(latLng.lat());
+        input.setAttribute("value", value);
+
+        display_current_crossing(marker, input_id, {
+            "lng": granularity(latLng.lng()),
+            "lat": granularity(latLng.lat())
+        });
+
+
+        // debug(value);
+    } else {
+        debug("Unknonw: " + input_id);
+    }
+}
+
+/*************************************************
+ * crossings
+ *
+ */
+
+function inside_area(obj) { // { lng: lng, lat: lat }
+    var area = state.marker_list;
+    var bottomLeft = area[0];
+    var topRight = area[1];
+
+    var result;
+    if (obj.lng >= bottomLeft[1] && obj.lng <= topRight[1] && obj.lat >= bottomLeft[0] && obj.lat <= topRight[0]) {
+        result = 1;
+    } else {
+        result = 0;
+    }
+
+    debug("lng: " + obj.lng + " lat: " + obj.lat + " area: " + bottomLeft[1] + "," + bottomLeft[0] + " " + topRight[0] + "," + topRight[1] + " result: " + result);
+    return result;
+}
+
+// call the API only after 100ms
+
+function display_current_crossing(marker, id, obj) {
+    if (state.timeout_crossing) {
+        clearTimeout(state.timeout_crossing);
+    }
+
+    state.timeout_crossing = setTimeout(function () {
+        _display_current_crossing(marker, id, obj)
+    }, 100);
+}
+
+function _display_current_crossing(marker, id, obj) {
+    var lngLat = obj.lng + "," + obj.lat
+    var url = '/cgi/crossing.cgi?id=' + id + ';ns=dbac;city=' + city + ';q=' + lngLat;
+
+    if (!inside_area(obj)) {
+        debug("outside area");
+        var query = translate_mapcontrol("Error: outside area");
+        return updateCrossing(marker, id, '{query:"[' + query + ']", suggestions:[]}');
+    }
+    downloadUrl(url, function (data, responseCode) {
+        if (responseCode == 200) {
+            updateCrossing(marker, id, data);
+        } else if (responseCode == -1) {
+            alert("Data request timed out. Please try later.");
+        } else {
+            alert("Request resulted in error. Check XML file is retrievable.");
+        }
+    });
+}
+
+function set_input_field(id, value) {
+    var input = document.getElementById(id);
+
+    if (input) {
+        input.value = value;
+    } else {
+        debug("unknown input field: " + id);
+        return;
+    }
+
+    debug("crossing: " + id + " " + value);
+}
+
+function updateCrossing(marker, id, data) {
+
+    if (!data || data == "") {
+        return set_input_field(id, "");
+    }
+
+    var js = eval("(" + data + ")");
+
+    if (!js || !js.suggestions) {
+        return set_input_field(id, "");
+    }
+
+    var value = js.suggestions[0];
+    var v, street_latlng;
+
+    if (value) {
+        v = value.split("\t");
+        street_latlng = v[1] + " [" + v[0] + ",0]";
+    } else {
+        street_latlng = js.query;
+    }
+
+    newInfoWindow(marker, {
+        "id": id,
+        "crossing": v ? v[1] : street_latlng
+    });
+
+    return set_input_field(id, street_latlng);
+}
+
+function newInfoWindow(marker, opt) {
+
+    var infoWindow = new google.maps.InfoWindow({
+        maxWidth: 450
+    });
+
+    var content = "<div id=\"infoWindowContent\">\n"
+    content += "<p>"
+    content += translate_mapcontrol(opt.id == "suggest_start" ? "Start" : opt.id == "suggest_ziel" ? "Destination" : "Via") + " ";
+    content += translate_mapcontrol("crossing") + ": <br/>" + opt.crossing;
+    content += "</p>"
+    content += "</div>\n";
+
+    infoWindow.setContent(content);
+    infoWindow.open(map, marker);
+
+    google.maps.event.addListener(marker, "click", function (event) {
+        infoWindow.open(map, marker);
+        setTimeout(function () {
+            infoWindow.close()
+        }, 3000);
+    });
+
+    // close info window after 3 seconds
+    setTimeout(function () {
+        infoWindow.close()
+    }, 2000);
+};
+
+// strip trailing country name
+
+function format_address(address) {
+    var street = address.split(",");
+    street.pop();
+    return street.join(",");
+}
+
+function googleCodeAddress(address, callback) {
+
+    // search for an address only in this specific area
+    // var box = [[43.60000,-79.66000],[43.85000,-79.07000]];
+    var box = state.marker_list;
+
+    var bounds = new google.maps.LatLngBounds;
+    bounds.extend(new google.maps.LatLng(box[0][0], box[0][1]), new google.maps.LatLng(box[1][0], box[1][1]));
+
+    if (!state.geocoder) {
+        state.geocoder = new google.maps.Geocoder();
+    }
+
+    state.geocoder.geocode({
+        'address': address,
+        'bounds': bounds
+    }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            var autocomplete = '{ query:"' + address + '", suggestions:[';
+
+            var streets = [];
+            for (var i = 0; i < results.length; i++) {
+                if (inside_area({
+                    lat: results[i].geometry.location.lat(),
+                    lng: results[i].geometry.location.lng()
+                })) {
+                    streets.push('"' + format_address(results[i].formatted_address) + ' [' + granularity(results[i].geometry.location.lng()) + ',' + granularity(results[i].geometry.location.lat()) + ',1]"');
+                }
+            }
+
+            autocomplete += streets.join(",");
+            autocomplete += '] }';
+
+            callback(autocomplete);
+        } else {
+            // alert("Geocode was not successful for the following reason: " + status);
+        }
+    });
 }
 
 

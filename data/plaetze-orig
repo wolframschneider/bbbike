@@ -74,14 +74,14 @@ Soldauer Platz	Pl 512,11084
 Hammarskjöldplatz	Pl 1865,11082
 Unionplatz	Pl 5943,14049
 Karlplatz	Pl 8715,12956
-Leopoldplatz	Pl 7277,15586
+Leopoldplatz (Wedding)	Pl 7277,15586
+Leopoldplatz (Lichtenrade)	Pl 10831,-2919
 Max-Josef-Metzger-Platz	Pl 7474,15408
 Pekinger Platz	Pl 6964,14849
 Falkplatz	Pl 10122,15647
 Humannplatz	Pl 11455,15916
 Antonplatz	Pl 13512,15909
 Arnold-Schönberg-Platz	Pl 14063,15976
-Köllnischer Platz	Pl 21796,4517
 Mandrellaplatz	Pl 22513,5747
 Platz der Stadt Hof	Pl 12753,8187
 Berlinickeplatz	Pl 8728,6701
@@ -222,6 +222,7 @@ Jürgen-Fuchs-Platz	Pl 3366,5654
 Rudower Spinne	Pl 16908,1217
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110224.0905.332693.html
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/20re.pdf/file
+#: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110906.1720.357692.html (Name ab 2011-09-14)
 Roederplatz	Pl 15502,13539
 Kamisardenplatz	Pl 12067,23241
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/23re.pdf/file
@@ -242,6 +243,8 @@ Lipschitzplatz	Pl 14633,2145
 Franz-Amrehn-Platz	Pl 5165,6119
 Clara-Zetkin-Platz	Pl 22574,13017
 Paul-Levi-Platz	Pl 25041,14016
+Erich-Hermann-Platz	Pl 9982,-1818
+Hermann-Wundrich-Platz	Pl 11055,-1741
 ######################################################################
 #: section faked_plaetze vvv
 # Keine offiziellen Straßennamen, sondern
@@ -292,6 +295,8 @@ Moltkebrücke	Pl 7936,12906
 Weidendammer Brücke	Pl 9280,12883
 Bösebrücke	Pl 9883,16557
 #: XXX_prog ^^^
+#: XXX_prog: systematischer Fehler: alle Punkte in Potsdam/Berlin.coords.data müssen tatsächlich in strassen oder plaetze verfügbar sein
+Schleuseninsel im Tiergarten	Pl 5758,11630
 # 
 #: section Eingänge vvv
 # Hier werden nur Eingänge für Flächen aufgenommen, die für Radfahrer gesperrt sind.

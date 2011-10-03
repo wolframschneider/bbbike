@@ -33,6 +33,7 @@
     this.onChangeInterval = null;
     this.ignoreValueChange = false;
     this.serviceUrl = options.serviceUrl;
+    this.geocoder = options.geocoder;
     this.isLocal = false;
     this.options = {
       autoSubmit: false,
@@ -281,12 +282,21 @@
       this.container.show();
     },
 
-    processResponse: function(text) {
+    processResponse: function(text, second_try) {
       var response;
       try {
         response = eval('(' + text + ')');
       } catch (err) { return; }
-      if (!$.isArray(response.data)) { response.data = []; }
+      if (!$.isArray(response.data)) { 
+	response.data = []; 
+      }
+
+      // if geocoder is enabled, try google geolocation service next
+      if (response.suggestions.length === 0 && this.geocoder && !second_try) {
+	var me = this;
+	return this.geocoder( response.query, function (geocoder_text) { me.processResponse( geocoder_text, true) } );
+      }
+
       if(!this.options.noCache){
         this.cachedResponse[response.query] = response;
         if (response.suggestions.length === 0) { this.badQueries.push(response.query); }

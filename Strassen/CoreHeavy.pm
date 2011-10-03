@@ -105,19 +105,41 @@ sub new_with_removed_points {
 # Agrep: maximale Anzahl von erlaubten Fehlern
 # Return value: Array with matched street names
 ### AutoLoad Sub
+
+# agrep wrapper
 sub agrep {
+    my $self = shift;
+    my $name = shift;
+    my %args = @_;
+
+    my @res = $self->_agrep($name, @_);
+
+    # unique street list
+    if ($args{'unique'}) {
+	my %res = map { $_ => 1 } @res;
+	return sort keys %res;
+    } 
+
+    # unfiltered list
+    else {
+	return @res;
+    }
+}
+
+sub _agrep {
     my($self, $pattern, %arg) = @_;
 
     my $utf8_database = defined $arg{'utf8_database'} ? $arg{'utf8_database'} : 0;
-    my $debug = 0;
+    my $debug = $arg{'debug'} || 0;
 
+    my $pattern_original = $pattern;
     if ($utf8_database && !Encode::is_utf8($pattern)) {
 	   require HTML::Entities;
            $pattern = Encode::encode("utf-8", $pattern);
 	   $pattern = HTML::Entities::decode($pattern);
     }
 
-    #warn qq{pattern: "$pattern", file: $file\n} if $debug;
+    warn qq{pattern: '$pattern_original' "$pattern"} if $debug;
 
     my @paths;
     my @files;
@@ -214,9 +236,12 @@ sub agrep {
 	    my @args = '-i';
 	    $grep_pattern = ($begin ? "^$grep_pattern" : $grep_pattern);
 	    if ($err > 0) { CORE::push(@args, "-$err") }
+
+	    warn "AGREP: ", join " ", 'agrep', @args, $grep_pattern, @paths, "\n" if $debug;
 	    open(AGREP, "-|") or
 	      exec 'agrep', @args, $grep_pattern, @paths or
 		die "Can't exec program: $!";
+
 	    if (defined $file_encoding) {
 		switch_encoding(\*AGREP, $file_encoding);
 	    }

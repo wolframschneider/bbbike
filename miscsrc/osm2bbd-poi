@@ -21,6 +21,7 @@ use lib 'lib';
 use Karte::Polar;
 use Strassen;
 use Strassen::Dataset;
+use Storable;
 
 use strict;
 use warnings;
@@ -31,6 +32,8 @@ my @poi_files =
 push @poi_files, qw( _education _oepnv _building);
 push @poi_files,
   qw( _natural _landuse _sport _leisure _tourism _shop _public_services);
+
+my $storable;
 
 #@poi_files = qw( _oepnv faehren icao orte rbahnhof sbahnhof ubahnhof);
 
@@ -393,6 +396,27 @@ sub get_poi_fh {
     return @p;
 }
 
+sub read_storable {
+    my $file = shift;
+
+    my $cache = Storable::retrieve($file) or die "storable $file: $!\n";
+
+    return $cache;
+}
+
+sub write_storable {
+    my $file  = shift;
+    my $cache = shift;
+
+    my $file_tmp = "$file.tmp";
+
+    if ( !Storable::store( $cache, $file_tmp ) ) {
+        die "Can't write to $file: $!\n";
+    }
+
+    rename( $file_tmp, $file ) or die "rename $file_tmp => $file: $!\n";
+}
+
 sub head {
     <<EOF;
 #: #: -*- coding: utf-8 -*-
@@ -420,6 +444,7 @@ usage: env CITY=data-osm/<city> $0 [ options ] poi
 --oldnames=0|1    keep alias, historic or nick names
 --poi-file file	  files with points of interests
 --poi=x,y	  GPS coordinates
+--storable=file.db cache database for POI
 EOF
 }
 
@@ -440,6 +465,7 @@ my $ret = GetOptions(
     "poi-file=s" => \@poi_files,
     "poi=s"      => \$poi,
     "oldnames=i" => \$oldnames,
+    "storable=s" => \$storable,
     "help"       => \$help
 );
 
@@ -463,6 +489,8 @@ if ($poi) {
     exit;
 }
 
+my $cache = $storable && -f $storable ? read_storable($storable) : {};
+
 # for all POI in the database
 print &head;
 foreach my $file (@poi_files) {
@@ -476,7 +504,16 @@ foreach my $file (@poi_files) {
             next;
         }
 
-        my $point = get_nearest_crossing_coords( $poi->[2] ) || "";
+        my $coord = $poi->[2];
+        my $point;
+        if ( exists $cache->{$coord} ) {
+            $point = $cache->{$coord};
+        }
+        else {
+            $point = get_nearest_crossing_coords($coord) || "";
+            $cache->{$coord} = $point;
+        }
+
         if ( $poi->[0] ne "" && $poi->[1] ne "" && is_gps_point($point) ) {
             push @data, $poi->[0] . "\t" . $poi->[1] . " $point\n";
         }
@@ -495,6 +532,8 @@ foreach my $file (@poi_files) {
       . ", time: ${elapsed}sec, average: ${average}ms\n";
     print $sort_entries ? sort @data : @data;
 }
+
+&write_storable( $storable, $cache ) if $storable;
 
 __DATA__
 

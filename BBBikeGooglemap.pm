@@ -45,6 +45,9 @@ sub run {
     my $self = shift;
     my %args = @_;
 
+    warn __PACKAGE__, "::run->() ", join " ", caller(), "\n"
+      if $args{'debug'} >= 2;
+
     my $q                = $args{'q'};
     my $gmap_api_version = $args{'gmap_api_version'};
     my $lang             = $args{'lang'};
@@ -304,7 +307,7 @@ EOF
     my $viac = $q->param('viac') || "";
     my $route_points =
       scalar(@$route) >= 2 ? to_array( $$route[0], $$route[-1] ) : "";
-    if ( $viac && grep { $viac eq $_ } @$route ) {
+    if ($viac) {    # && grep { $viac eq $_ } @$route ) {
         $route_points .= ", " . &to_array($viac);
     }
 
@@ -334,6 +337,9 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
 
     city = "$city";
     bbbike_maps_init("default", $marker_list, "$lang", false, "$region", "$zoom_param" );
+    if (document.getElementById("suggest_start")) {
+	init_markers({"lang":"$lang"});
+    }
 
 EOF
 
@@ -369,20 +375,24 @@ EOF
     # log route queries
     if ( $log_routes && !$cache ) {
 
-        # utf8 fixes
-        if ($cgi_utf8_bug) {
-            foreach my $key (qw/startname zielname vianame/) {
-                my $val = Encode::decode( "utf8", $q->param($key) );
+        eval {
 
-                # XXX: have to run decode twice!!!
-                $val = Encode::decode( "utf8", $val );
+            # utf8 fixes
+            if ($cgi_utf8_bug) {
+                foreach my $key (qw/startname zielname vianame/) {
+                    my $val = $q->param($key);
+                    $val = Encode::decode( "utf8", $val );
 
-                $q->param( $key, $val );
+                    # XXX: have to run decode twice!!!
+                    #$val = Encode::decode( "utf8", $val );
+
+                    $q->param( $key, $val );
+                }
             }
-        }
 
-        my $url = $q->url( -query => 1, -full => 1 );
-        warn "URL:$url\n";
+            my $url = $q->url( -query => 1, -full => 1 );
+            warn "URL:$url\n";
+        };
     }
     return $html;
 }

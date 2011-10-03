@@ -28,8 +28,12 @@ use Getopt::Long;
 
 my($addx,$addy) = (0,0);
 
+my $startc;
+
 if (!GetOptions("addx=i" => \$addx,
-		"addy=i" => \$addy)) {
+		"addy=i" => \$addy,
+		"startc" => \$startc
+		)) {
     usage();
 }
 
@@ -45,7 +49,7 @@ if (@ARGV == 2) {
     usage();
 }
 
-print "#: map: $ARGV[1]\n";
+print "#: map: $ARGV[1]\n" if !$startc;
 
 sub c {
 	my $coord = shift;
@@ -54,15 +58,26 @@ sub c {
         return join(",", $to->trim_accuracy($from->map2map($to, $x, $y)));
 }
 
+# wrapper
+sub startc { 
+    my ($param, $x, $y) = @_;
+    return "$param=" . &c("$x,$y");
+}
+
 while(<STDIN>) {
     chomp;
-    if ($_ =~ m{^#} || !/\d+,\d+/) {
+    if ($_ =~ m{^#}) { 
 	print $_, "\n";
 	next;
     }
-	s/(\-?\d+,\-?\d+)/&c($1)/eg;
 
-   print "$_\n";
+    if ($startc) {
+       s/(startc|viac|zielc)=(\-?\d+)%2C(\-?\d+)/&startc($1,$2,$3)/eg;
+    } else {
+       s/(\-?\d+,\-?\d+)/&c($1)/eg;
+    }
+
+    print "$_\n";
 }
 
 sub usage_coordsys {

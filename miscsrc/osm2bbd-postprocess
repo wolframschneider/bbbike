@@ -72,6 +72,7 @@ my $local_language = "";
 my $city_names = "";
 my $neighbours = [];
 my $region = "";
+my $other_names = "";
 GetOptions(
 	   (map {
 	       (my $optname = $_) =~ s{_}{-}g;
@@ -83,6 +84,7 @@ GetOptions(
 	   "local-language=s" => \$local_language,
 	   "city-names=s" => \$city_names,
 	   "neighbours=s" => \$neighbours,
+	   "other-names:s" => \$other_names,
 	   "region=s" => \$region,
 	   "force!" => \$force,
 	   # targets with additional arguments
@@ -468,10 +470,14 @@ sub _write_meta {
 	$neighbours = Encode::decode("utf-8", $neighbours); 
     }
     $neighbours = eval $neighbours;
+    if (!Encode::is_utf8($other_names)) { 
+	$other_names = Encode::decode("utf-8", $other_names); 
+    }
 
     $meta->{"city_names"} = $city_names;
     $meta->{"neighbours"} = $neighbours;
     $meta->{"region"} = $region;
+    $meta->{"other_names"} = [ split /\s*;\s*/, $other_names ];
 
     DumpFile("meta.yml~", $meta);
 

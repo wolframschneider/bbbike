@@ -472,7 +472,6 @@ Georgenstr. (Mitte)	1 9242,12652 9108,12635
 Georgenstr. (Mitte)	1 9117,12705 9242,12652
 Schulstr. (Tegel)	1 1953,20149 1794,20110
 Natalissteig	1 1202,14935 1223,14824 1226,14714
-Straße 12 (Neukölln): gesperrt für Fahrzeuge aller Art (außer BAB-Versorgung)	2 13883,6682 13881,6634 13915,6592
 Alt-Biesdorf	1 20375,11694 20435,11698 20575,11698 21108,11628
 Alt-Biesdorf	1 21108,11628 20963,11618 20633,11651 20549,11659 20375,11694
 Privatstr. 14	1s 13159,17196 13103,17280
@@ -485,7 +484,7 @@ Bernhard-Bästlein-Str.	1 15595,14041 15593,13768
 (Fredersdorfer Str. - Hildegard-Jadamowitz-Str.)	1 12908,12280 12883,12118 12893,12077 12923,12043
 Washingtonplatz	1s 8106,13130 7937,13126
 (Vorfahrt HdKdW)	1 7627,12380 7654,12464 7687,12477 7778,12470 7813,12427 7821,12367
-Pfarrer-Lütkehaus-Platz	1 10220,-2137 10231,-2159 10318,-2156
+Pfarrer-Lütkehaus-Platz	1 10228,-2136 10231,-2159
 Radebeuler Str.	1 19067,13818 19025,14037
 Beilsteiner Str.	1 18749,12413 18800,12838 18832,13099 18852,13269
 Am Rosengarten	2 18707,12225 18834,12228 18867,12265
@@ -657,6 +656,8 @@ Kreisverkehr Brebacher Weg	1 21581,12182 21570,12191 21575,12212 21589,12217 216
 Hirteplatz: Kreisverkehr	1 23766,5281 23775,5271 23775,5258 23765,5248 23751,5248 23744,5262 23743,5268 23746,5276 23756,5280 23766,5281
 Löcknitzstr.	1 26496,5047 26612,5051
 Brösener Str.	1 26247,6228 26284,6130 26282,6033
+Grenzweg	1 9456,-1271 9493,-1269 9503,-1302 9496,-1327 9457,-1329
+Alt-Lichtenrade	1 10782,-24 10835,-145
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -1423,7 +1424,6 @@ Chodowieckistr. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn, hier aber F
 Prenzlauer Allee -> Chodowieckistr.: Mittelstreifen mit Straßenbahn, hier aber Fußgängerfurt vorhanden	3::igndisp 11712,14868 11681,14759 11992,14599
 Mittelstreifen mit Straßenbahn	3nocross::ignrte 12071,16130 12030,15968 11997,15834
 Prenzlauer Allee -> Kuglerstr.: Mittelstreifen mit Straßenbahn	3::igndisp 11997,15834 12030,15968 11961,16002
-Prenzlauer Allee -> Prenzlauer Allee [Wohngebiet]: Mittelstreifen mit Straßenbahn	3::igndisp 12071,16130 12030,15968 12154,15902
 Kuglerstr. -> Prenzlauer Allee [Wohngebiet]: Mittelstreifen mit Straßenbahn	3::igndisp 11961,16002 12030,15968 12154,15902
 Kuglerstr. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn	3::igndisp 11961,16002 12030,15968 12071,16130
 Straßenbahntrasse	3nocross::ignrte 11941,15586 11967,15700 11997,15834
@@ -1766,6 +1766,9 @@ Fürstenwalder Damm -> Ahornweg: Straßenbahntrasse	3::igndisp 23822,5403 23728,54
 Ahornweg -> Fürstenwalder Damm: Straßenbahntrasse	3::igndisp 23691,5368 23728,5446 23660,5477
 Hoher Weg -> Fürstenwalder Damm: Straßenbahntrasse	3::igndisp 23766,5281 23822,5403 23728,5446
 Fürstenwalder Damm -> Hoher Weg: Straßenbahntrasse	3::igndisp 23851,5389 23822,5403 23766,5281
+Mittelstreifen	3nocross::ignrte 10349,2188 10431,2258 10504,2321
+Lienzer Pfad -> Tauernallee: Mittelstreifen	3::igndisp 10444,2234 10431,2258 10349,2188
+Tauernallee -> Lienzer Pfad: Mittelstreifen	3::igndisp 10504,2321 10431,2258 10444,2234
 tragen (16 Stufen)	0:25:-232 22814,4505
 tragen (19 Stufen)	0:30:86 23930,6013
 tragen (16 Stufen)	0:25:-164 23948,6054
@@ -1940,6 +1943,8 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-108 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
+Schranke	BNP:1:-142:trailer=3 21514,11796
+Drängelgitter	BNP:3:-181:trailer=10 8357,9598
 Schranke	BNP:1:-38:trailer=3 17028,23968
 Schranke (lichte Breite ca. 85cm, weitere Umfahrung möglich)	BNP:2:-54:trailer=10 16339,22199
 Drängelgitter (lichte Breite ca. 100cm)	BNP:3:-107:trailer=10 21578,10413
@@ -2148,7 +2153,6 @@ Behrenstr.: Einbiegen in die Mauerstr. nicht möglich	3:inwork 9054,12154 9064,12
 Behrenstr.: Einbiegen in die Mauerstr. nicht möglich	3:inwork 9164,12172 9064,12156 9076,12054
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12748
 Elisabeth-Mara-Str.: Bauarbeiten bis zum Frühjahr 2011	2:inwork 10506,11567 10320,11627
-Wagner-Régeny-Str.: Straße ist fertig, aber noch gesperrt	2:inwork 19487,3593 19377,3721
 Radweg parallel zur Autobahn ist wegen Bauarbeiten am BAB gesperrt	2:inwork 5062,14681 4676,14534 3707,14303 3595,14277
 Rathausbrücke: gesperrt (Neubau), Fertigstellung und Verkehrsfreigabe im Frühjahr 2012	2:inwork 10362,12351 10422,12395
 Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14795,10473 14805,10518
@@ -2187,9 +2191,9 @@ Treitschkestr.	1 4854,6413 4971,6345 5125,6262 5219,6215
 tragen (3 x 10 Stufen)	0:40:-217 4127,5427
 tragen (5 Stufen)	0:10:26 4061,5418
 Iltisstr.	1 2797,5624 2858,5535
-Mittelstreifen unbequem zu überqueren	3nocross::ignrte 5493,9357 5495,9263 5503,8982
+Mittelstreifen unbequem zu überqueren	3nocross::ignrte 5493,9367 5495,9263 5503,8982
 Tharandter Str. -> Bundesallee: Mittelstreifen unbequem zu überqueren	3::igndisp 5527,9263 5495,9263 5503,8982
-Bundesallee -> Tharandter Str.: Mittelstreifen unbequem zu überqueren	3::igndisp 5493,9357 5495,9263 5527,9263
+Bundesallee -> Tharandter Str.: Mittelstreifen unbequem zu überqueren	3::igndisp 5493,9367 5495,9263 5527,9263
 Mittelstreifen, parkende Autos	3nocross::ignrte 5356,7862 5356,7915 5357,8013
 Bundesallee -> Bernhardstr.: Mittelstreifen, parkende Autos	3::igndisp 5357,8013 5356,7915 5471,7915
 Bernhardstr. -> Bundesallee: Mittelstreifen, parkende Autos	3::igndisp 5471,7915 5356,7915 5356,7862

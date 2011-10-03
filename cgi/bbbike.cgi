@@ -21,8 +21,10 @@ bbbike.cgi - CGI interface to bbbike
 
 BEGIN {
     $ENV{SERVER_NAME} ||= "";
-    open(STDERR, ">/home/groups/b/bb/bbbike/bbbike.log")
-	if $ENV{SERVER_NAME} =~ /sourceforge/ && -w "/home/groups/b/bb/bbbike";
+    open(STDERR, ">> /tmp/bbbike.log")
+	if $ENV{SERVER_NAME} =~ /sourceforge/ ||
+           $ENV{SERVER_NAME} =~ m,^(dev|test).*$,;
+	 
     $^W = 1 if $ENV{SERVER_NAME} =~ /herceg\.de/i;
     $main::datadir = $ENV{'DATA_DIR'} || "data";
     $ENV{LANG} = 'C'; 
@@ -31,6 +33,10 @@ use vars qw(@extra_libs);
 BEGIN { delete $INC{"FindBin.pm"} } # causes warnings, maybe try FindBin->again if available?
 use FindBin;
 BEGIN {
+    if ($ENV{MOD_PERL} && $ENV{MOD_PERL} =~ m{mod_perl/2}) {
+	# Fix FindBin for ModPerl::Registry operation
+	($FindBin::RealBin = __FILE__) =~ s{/[^/]+$}{};
+    }
     {
 	# Achtung: evtl. ist auch ~/lib/ für GD.pm notwendig (z.B. CS)
 	@extra_libs =
@@ -63,6 +69,7 @@ use Encode;
 use BBBikeGooglemap;
 use BBBikeAds;
 use BBBikeElevation;
+use Data::Dumper;
 
 use strict;
 use vars qw($VERSION $VERBOSE $WAP_URL
@@ -139,6 +146,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $show_real_time
 	    $cache_streets_html
 	    $bbbike_start_js_version
+	    $enable_latlng_search
 	   );
 
 $gmap_api_version = 3;
@@ -856,6 +864,8 @@ my $en_city_name = "";
 my $de_city_name = "";
 my $city_script;
 my $region = "";
+my $other_names = [];
+
 if ($osm_data) {
     $datadir =~ m,data-osm/(.+),;
     my $city = $1;
@@ -875,6 +885,10 @@ if ($osm_data) {
     $region = $geo->{"region"} || "other";
 
     binmode (\*STDERR, ':utf8') if $use_utf8;
+
+    if (exists $geo->{'other_names'}) {
+	$other_names = $geo->{'other_names'};
+    }
 }
 
 if ($lang ne "de") {
@@ -899,6 +913,7 @@ $BBBikeAds::enable_google_adsense_street = $enable_google_adsense_street;
 $BBBikeAds::enable_google_adsense_linkblock = $enable_google_adsense_linkblock;
 $BBBikeAds::enable_google_adsense_street_linkblock = $enable_google_adsense_street_linkblock;
 
+
 sub M ($) {
     my $key = shift;
 
@@ -918,6 +933,8 @@ sub M ($) {
 
     return $text;
 }
+
+my $no_name = '(' . M("Straße ohne Namen") . ')';
 
 # select city name by language
 sub select_city_name {
@@ -1360,6 +1377,44 @@ my $set_anyc = sub {
     }
 };
 
+# allow to search with wgs84 coordinates
+sub enable_latlng_search {
+    my $q = shift;
+
+    foreach my $param (qw/start ziel via/) {
+	my $param_c = $param . "c";
+
+	my $value = $q->param($param) || "";
+	my $street = "";
+
+	# ignore errors in input field if the marker is outside the area
+	# [Error: outside area]
+	if ($value =~ /^\[.*\]$/) {
+	    $value = "";
+	    $q->delete($param);
+        }
+
+	# extract latlng: Mendosa Avenue [-122.46748,37.74807] -> -122.46748,37.74807
+        if ($value =~ /^(.*)\s+\[([\d\.,\-\+]+)\]\s*$/) {
+	   $street = $1;
+	   $value = $2;
+ 	}
+
+	warn "param: $param, value: $value, street: $street\n";
+
+    	if (!defined $q->param($param_c) && is_latlng($value, 1)) {
+	   my $val = get_nearest_crossing_coords(extract_latlng($value));
+
+	   $q->param($param_c, $val);
+	   $q->delete($param);
+	   $q->param("_" . $param, $street);
+	   warn "Do a lat,lng search for $param, $value -> $val\n" if $debug;
+    	}
+    }
+}
+
+&enable_latlng_search($q) if $enable_latlng_search;
+
 # schwache stadtplandienst-Kompatibilität
 # Note: ";" und "&" werden von CGI.pm gleichberechtigt behandelt
 if (defined $q->param('STR')) {
@@ -1539,6 +1594,15 @@ if ($modperl_lowmem) {
 
 my_exit 0;
 
+# LatLng <-> LngLat
+sub swap_coords {
+    my $coord = shift;
+
+    my @c = split /,/, $coord;
+
+    return $c[1] . "," . $c[0];
+}
+
 sub abc_link {
     my($type, %args) = @_;
 
@@ -1697,6 +1761,33 @@ sub Param {
     return $val;
 }
 
+sub is_latlng{
+   my $latlng = shift;
+   my $flag = shift;
+
+   # lat,lng,flag
+   if ($flag && $latlng =~ /,.+,/) {
+	$latlng =~ s/,[^,]+\s*$//;
+   }
+	
+   return $latlng =~ /^\s*[\+\-]?[\d\.]+,[\+\-]?[\d\.]+\s*$/ ? 1 : 0;
+}
+
+sub extract_latlng{
+    my $latlng = shift;
+
+    $latlng =~ s/^\s+//;
+    $latlng =~ s/\s+$//;
+
+    my @pos = split /,/, $latlng;
+    return if scalar(@pos) < 2;
+
+    if ($pos[0] =~ /^[\+\-]?[\d\.]+$/ && $pos[1] =~ /^[\+\-]?[\d\.]+$/) {
+	warn "LatLng type: $pos[2] $pos[0],$pos[1]\n" if $debug && scalar(@pos) >2;
+        return join (",", $pos[0], $pos[1]);
+    }
+}
+
 sub is_forum_spam {
    my $q = shift;
    my @param = @_;
@@ -1738,7 +1829,6 @@ sub choose_form {
     my $zielhnr   = Param('zielhnr')   || '';
     my $zielc     = Param('zielc')     || '';
     my $zielort   = Param('zielort')   || '';
-
 
     my $nl = sub {
 	if ($bi->{'can_table'}) {
@@ -1936,6 +2026,39 @@ sub choose_form {
 # 		next;
 # 	    }
 # 	}
+    
+    if ($osm_data ) {
+	if ($$nameref eq '' && $$oneref ne '') {
+	    my $str = get_streets();
+            $str->{File} = "strassen";
+		
+	    my @res = $str->agrep($$oneref, 'utf8_database' => $osm_data, 'unique' => $osm_data, 'debug' => $debug);
+	    warn "agrep result: ", Dumper(\@res), "\n" if $debug;
+
+	    my @matches;
+	    foreach my $res (@res) {
+		my $ret = $str->get_by_name($res);
+                if ($ret) {
+                    my($street, $citypart) = Strasse::split_street_citypart($res);
+                    push @matches, [$res, "", undef, undef]; #$ret->[1][0]];
+                } else {
+                    warn "XXX: unknown street: '$res'\n";
+                }
+	    }
+
+	    if (@matches == 1) {
+                $$oneref = $res[0];
+                $$nameref = $res[0];
+
+	        warn "nameref: $$nameref\n" if $debug;;
+	    } else {
+		@$matchref = @matches;
+		warn "matches: ", Dumper(\@matches), "\n";
+	    }
+
+	    next;
+	}
+    }
 
 	# Überprüfen, ob eine Straße in PLZ vorhanden ist.
 	if ($$nameref eq '' && $$oneref ne '') {
@@ -1944,7 +2067,7 @@ sub choose_form {
 	    if (!$plz_obj) {
 		# Notbehelf. PLZ sollte möglichst installiert sein.
 		my $str = get_streets();
-		my @res = $str->agrep($$oneref, 'utf8_database' => $osm_data);
+		my @res = $str->agrep($$oneref, 'utf8_database' => $osm_data, 'uniqe' => $osm_data);
 		if (@res) {
 		    $$nameref = $res[0];
 		}
@@ -2007,7 +2130,7 @@ sub choose_form {
 		    my($producer, $label) = @$def;
 		    if (my $str = $producer->()) {
 			warn "Suche '$$oneref' in der $label.\n" if $debug;
-			my @res = $str->agrep($$oneref, 'utf8_database' => $osm_data);
+			my @res = $str->agrep($$oneref, 'utf8_database' => $osm_data, 'uniqe' => $osm_data);
 			if (@res) {
 			    my @matches;
 			    for my $res (@res) {
@@ -2095,7 +2218,7 @@ sub choose_form {
 	    }
 
 	    if ($multiorte) {
-		my @orte = $multiorte->agrep($$oneref, Agrep => $matcherr, 'utf8_database' => $osm_data);
+		my @orte = $multiorte->agrep($$oneref, Agrep => $matcherr, 'utf8_database' => $osm_data, 'uniqe' => $osm_data);
 		if (@orte) {
 		    use constant MATCHREF_ISORT_INDEX => 5;
 		    push @$matchref, map { [$_, undef, undef, undef, undef, 1] } @orte;
@@ -2214,16 +2337,16 @@ EOF
 	# Eine Addition aller aktuellen Straßen, die bei luise-berlin
 	# aufgeführt sind, ergibt als Summe 10129
 	# Da aber auch einige "unoffizielle" Wege in der DB sind, dürften es an die 11000 werden
-	my($bln_str, $all_bln_str, $pdm_str) = (10000, 11000, 420);
+	my($bln_str, $all_bln_str, $pdm_str) = (10500, 11000, 420);
 	# XXX Use format number to get a comma in between.
 
 	my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
 
 	sub social_link {
 	    print qq{<span id="social">\n};
-	    print qq{<a href="$facebook_page" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="BBBike on Facebook"></a>\n} if $enable_facebook_t_link;
-	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld"></a>\n} if $enable_twitter_t_link;
-	    print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="small" count="false"></g:plusone>\n} if $enable_google_plusone_t_link;
+	    print qq{<a href="$facebook_page" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="}, M("Facebook Fanpage"), qq{"></a>\n} if $enable_facebook_t_link;
+	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="}, M("Folge uns auf twitter.com/BBBikeWorld"), qq{"></a>\n} if $enable_twitter_t_link;
+	    print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png" alt=""></a><g:plusone href="http://bbbike.org" size="small" count="false"></g:plusone>\n} if $enable_google_plusone_t_link;
 	    print qq{</span>\n};
 	}
 
@@ -2584,7 +2707,7 @@ EOF
 		if ($nice_berlinmap) {
 		    print " onclick='set_street_in_berlinmap(\"$type\", $out_i);'";
 		}
-		print " type=radio name=" . $type . "2";
+		print " type=radio name=" . $type . ($osm_data ? "" : "2");
 		if ($is_ort && $multiorte) {
 		    my($ret) = $multiorte->get_by_name($s->[0]);
 		    my $xy;
@@ -2596,6 +2719,8 @@ EOF
 		} else {
 		    $strasse2val = join($delim, @$s); # 0..3
 		}
+                $strasse2val = $s->[0] if $osm_data;
+
 		print " value=\"$strasse2val\"";
 		if (!$checked) {
 		    print " checked";
@@ -2654,7 +2779,14 @@ EOF
 
 <script type="text/javascript">
 	var ac_$city = \$('#$searchinput').autocomplete( 
-		{ serviceUrl: '/cgi/api.cgi?namespace=dbac;city=$city', minChars:2, maxHeight:$maxHeight, width:$width, deferRequestBy:$deferRequestBy, noCache: true }
+		{ serviceUrl: '/cgi/api.cgi?namespace=dbac;city=$city', 
+		  minChars:2, 
+	          maxHeight:$maxHeight, 
+	          width:$width, 
+		  deferRequestBy:$deferRequestBy, 
+	          noCache: true, 
+	          geocoder: function (address, callback) { googleCodeAddress(address, callback); } 
+	        }
 	);
 </script>
 
@@ -2849,6 +2981,8 @@ function " . $type . "char_init() {}
     print "</form>\n";
     print "</td></tr></table>\n</div>\n" if $bi->{'can_table'};
 
+	
+
 	    my $BBBikeGooglemap = 1;
             if (is_mobile($q)) {
 		$BBBikeGooglemap = 0;
@@ -2931,7 +3065,7 @@ EOF
 
       print <<EOF;
 <script type="text/javascript">
-	displayCurrentPosition($data);
+	displayCurrentPosition($data, "$lang");
 </script>
 EOF
    }
@@ -2940,7 +3074,7 @@ EOF
 print <<EOF;
 <script type="text/javascript">
     if (document.getElementById('suggest_start') != null) {
-        document.BBBikeForm.start.focus();
+        // document.BBBikeForm.start.focus();
     }
 </script>
 
@@ -3260,6 +3394,8 @@ sub is_streets {
 
 
 sub get_kreuzung {
+    warn "get kreuzung: ", join " ", caller(), "\n" if $debug >= 1;
+
     my($start_str, $via_str, $ziel_str) = @_;
     if (!defined $start_str) {
 	$start_str = Param('startname') || Param('start');
@@ -3471,6 +3607,7 @@ EOF
 	print "</td><td>"
 	    if ($bi->{'can_table'});
 
+
 	if (@coords == 1) {
 	    $c = $coords[0];
 	}
@@ -3486,7 +3623,12 @@ EOF
 	    print "<input type=hidden name=" . $type . "c value=\"$c\">";
 	}
 	if (defined $c and (not defined $strname or $strname eq '')) {
-	    print crossing_text($c) . "<br>\n";
+	    print crossing_text($c);
+	    if (my $val = $q->param("_$type")) {
+		# print the typed address if it is different from the crossing (e.g. for google addresses)
+		print qq{ <span class="grey">[$val]</span>\n} if $val ne crossing_text($c);
+	    }
+            print "<br>\n";
 	} else {
 	    if (defined $plz and $plz eq '') {
 		print $strname;
@@ -3514,11 +3656,13 @@ EOF
 	    print "<input type=hidden name=" . $type . "isort value=1>\n";
 	}
 	print $crossing_choose_html if $crossing_choose_html;
+
 	if ($bi->{'can_table'}) {
 	    print "</td></tr>\n";
 	} else {
 	    print "" . ($type ne 'ziel' ? '<hr>' : '<br><br>') . "\n";
 	}
+
     }
 
     print "</table>\n" if ($bi->{'can_table'});
@@ -3617,7 +3761,7 @@ sub make_crossing_choose_html {
 	    }
 	    for (@kreuzung) {
 		if (m{^\s*$}) {
-		    $_ = '(' . M("Straße ohne Namen") . ')';
+		    $_ = $no_name;
 		}
 	    }
 	    {
@@ -4555,7 +4699,7 @@ sub display_route {
 	my $s = $route_to_strassen_object->();
 	my $s_kml = Strassen::KML->new($s);
 	$s_kml->{"GlobalDirectives"}->{"map"}[0] = "polar" if $data_is_wgs84;
-	print $s_kml->bbd2kml;
+	print $s_kml->bbd2kml(startgoalicons => 1);
 	return;
     }
 
@@ -5636,19 +5780,19 @@ EOF
 #		    }
 		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">PalmDoc</a>};
 		}
-	        print qq{\n<span><a class="mobile_link" target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">PDF</a></span>\n};
+	        print qq{\n<span><a class="mobile_link" target="" onclick='javascript:pdfLink();' href='#' title="}, M("PDF Ausdruck der Karte und Route"), qq{">PDF</a></span>\n};
 		if ($can_gpx) {
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-route");
 			my $href = $bbbike_script;
-			print qq{<a class="mobile_link" title="GPX route with waypoints for navigation, up to 256 points" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Route)</a>};
+			print qq{<a class="mobile_link" title="}, M("GPX Route mit Waypoints fuer GPS Navigation, bis zu 256 Punkte"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Route)</a>};
 		    }
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-track");
 			my $href = $bbbike_script;
-			print qq{<a class="mobile_link" title="GPX with up to 1024 points, no navigation" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPX (Track)</a>};
+			print qq{<a class="mobile_link" title="}, M("GPX mit bis zu 1024 Punkten, keine Navigation"), qq{"padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Track)</a>};
 		    }
 		}
 		if ($can_kml) {
@@ -5656,7 +5800,7 @@ EOF
 		    $qq2->param('output_as', "kml-track");
 
 		    my $href = $bbbike_script;
-		    print qq{<a class="mobile_link" title="view route with Google Earth" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">KML</a>};
+		    print qq{<a class="mobile_link" title="}, M("Route auf Google Earth anschauen"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">Google Earth (KML)</a>};
 		}
 		if ($can_gpsies_link) {
 		    my $qq2 = cgi_utf8($use_utf8);
@@ -5666,9 +5810,9 @@ EOF
 			$bbbike_script = $BBBike::BBBIKE_DIRECT_WWW;
 		    }
 		    my $href = 'http://www.gpsies.com/map.do?url=' . BBBikeCGIUtil::my_escapeHTML($qq2->url(-full=>1, -query=>1));
-		    print qq{<a title="upload route to GPSies.com" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com</a>};
+		    print qq{<a title="}, M("Route auf GPSies.com hochladen"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com (upload)</a>};
 		}
-		print qq{<a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>\n};
+		print qq{<a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt="" title="}, M("Facebook Fanpage"), qq{"><img class="logo" src="/images/facebook-like.png" alt="" title="}, M("Facebook Fanpage"), qq{"></a>\n};
 	        print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
 
 		if (0) { # XXX not yet
@@ -5714,9 +5858,9 @@ EOF
             my $pdf_url = CGI->new($q);
             $pdf_url->param('imagetype', 'pdf-auto');
 	    $pdf_url->param( 'coords', $string_rep);
-	    $pdf_url->param( 'startname', Encode::encode( utf8 => $startname));
-	    $pdf_url->param( 'zielname', Encode::encode( utf8 => $zielname));
-	    $pdf_url->param( 'vianame', Encode::encode( utf8 => $vianame));
+	    $pdf_url->param( 'startname', Encode::is_utf8($startname) ? $startname : Encode::encode( utf8 => $startname));
+	    $pdf_url->param( 'zielname', Encode::is_utf8($zielname) ? $zielname : Encode::encode( utf8 => $zielname));
+	    $pdf_url->param( 'vianame', Encode::is_utf8($vianame) ? $vianame : Encode::encode( utf8 => $vianame));
 	    $pdf_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 
             my $slippymap_url = CGI->new($q);
@@ -5726,9 +5870,9 @@ EOF
             $slippymap_url->param('source_script', "$cityname.cgi");
             $slippymap_url->param('zoom', $slippymap_zoom_maponly);
 	    $slippymap_url->param( 'coords', $string_rep);
-	    $slippymap_url->param( 'startname', Encode::encode( utf8 => $startname));
-	    $slippymap_url->param( 'zielname', Encode::encode( utf8 => $zielname));
-	    $slippymap_url->param( 'vianame', Encode::encode( utf8 => $vianame));
+	    $slippymap_url->param( 'startname', Encode::is_utf8($startname) ? $startname : Encode::encode( utf8 => $startname));
+	    $slippymap_url->param( 'zielname', Encode::is_utf8($zielname) ? $zielname : Encode::encode( utf8 => $zielname));
+	    $slippymap_url->param( 'vianame', Encode::is_utf8($vianame) ? $vianame : Encode::encode( utf8 => $vianame));
 	    $slippymap_url->param( 'lang', $lang);
 	    $slippymap_url->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
 	    $slippymap_url->param( 'route_length', sprintf("%2.2f", $r->len/1000));
@@ -5799,10 +5943,14 @@ EOF
 
 	        print qq{<div id="link_list">\n};
 	        print qq{<hr>\n};
+
+	        if (0) {
 		print qq{<span class="slippymaplink"><a title="}, M("neue Anfrage"), qq{" href="}, $q->url(-absolute=>1, -query=>0), qq{">BBBike\@$local_city_name</a></span> |\n};
 	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:slippymapExternal();' href='#' title="Open slippy map in external window">larger map</a></span> |\n} if !$gmapsv3;
-	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="PDF hand out of map and route">print map route</a></span>\n};
+	        print qq{<span class="slippymaplink"><a target="" onclick='javascript:pdfLink();' href='#' title="}, M("PDF Ausdruck der Karte und Route"), qq{">}, M("drucken"), qq{</a></span>\n};
 	        print qq{ | <span class="slippymaplink"><a href="#" onclick="togglePermaLinks(); return false;">permalink</a><span id="permalink_url" style="display:none"> $permalink</span></span>\n} if $permalink =~ /=/;
+		}
+
 	        print qq{<p></p>\n};
 		print qq{</div>\n\n};
 
@@ -5813,7 +5961,7 @@ EOF
 		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 		} else {
 		   my $maps = BBBikeGooglemap->new();
-                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1, 'region' => $region, 'cache' => $q->param('cache') );
+                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1, 'region' => $region, 'cache' => $q->param('cache') || 0, 'debug' => $debug );
 		}
 	    }
 
@@ -6501,7 +6649,10 @@ sub draw_route {
 	$draw->draw_wind   if $draw->can("draw_wind");
 	$draw->draw_route  if $draw->can("draw_route");
 	$draw->add_route_descr(-net => make_netz(),
-			       -lang => $lang)
+			       -lang => $lang,
+                          -Url => $q->url(-full=>0, -absolute=>1, -query=>0), 
+                          -City_local => $local_city_name, 
+                          -City_en => $en_city_name)
 	    if $draw->can("add_route_descr");
 	$draw->flush;
     };
@@ -7076,6 +7227,8 @@ sub load_temp_blockings {
 # Bundesallee/Wexstr.!
 sub crossing_text {
     my $c = shift;
+    warn "crossing_text: $c, ", join " ", caller(), "\n" if $debug >= 2;
+
     all_crossings();
     if (!exists $crossings->{$c}) {
 	new_kreuzungen();
@@ -7517,6 +7670,12 @@ sub header {
     if (!exists $args{-title}) {
         my $city = $en_city_name || do { ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin' };
 	$args{-title} = "BBBike \@ $local_city_name" . " - " . M("Fahrrad-Routenplaner") . " $local_city_name" . ($city ne $local_city_name ? " // $city" : "");
+
+	# other city names in this area
+	if (scalar(@$other_names)) {
+	    $args{-title} .= join ", " , "", @$other_names 
+	}
+
 	$args{-title2} = "BBBike\@$local_city_name";
 
 	if ($q->url(-path_info =>1) =~ m,/streets\.html$,) {
@@ -7698,11 +7857,11 @@ sub header {
 	  if (!is_mobile($q) || is_resultpage($q) ) {
 	    push(@$head, qq|<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>|);
 	    # push(@$head, qq|<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>|);
+
 	    my $google_maps_url = "http://maps.google.com/maps/api/js?v=3.4&amp;sensor=$sensor&amp;language=$my_lang";
 	    $google_maps_url .= "&amp;libraries=panoramio" if $enable_panoramio_photos && is_resultpage($q);
 
 	    push(@$head, qq|<script type="text/javascript" src="$google_maps_url"></script>|);
-	    #push(@$head, qq|<script type="text/javascript" src="/html/maps3.js"></script>|); 
 	    push @javascript, 'maps3.js';
 	  }
 	}
@@ -7710,18 +7869,17 @@ sub header {
     }
 
     push @javascript, 'bbbike.js';
-    #push(@$head, qq|<script type="text/javascript" src="/html/bbbike.js"></script>|);
     if ($enable_opensearch_suggestions) {
 	my $city = $osm_data && $datadir =~ m,data-osm/(.+), ? $1 : 'Berlin';
-	#push @javascript, "jquery-1.4.2.min.js", "devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js";
-	push @javascript, "bbbike-jquery.min.js";
-
-	#push(@$head, qq|<script type="text/javascript" src="/html/jquery-1.4.2.min.js"></script>|);
-	#push(@$head, qq|<script type="text/javascript" src="/html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js"></script>|);
+	push @javascript, "jquery-1.4.2.min.js", "devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete.js";
     }
 
-    foreach my $js (@javascript) {
-	push(@$head, qq|<script type="text/javascript" src="/html/$js"></script>|);
+    if (is_production($q)) {
+        push(@$head, qq|<script type="text/javascript" src="/html/bbbike-js.js"></script>|);
+    } else {
+    	foreach my $js (@javascript) {
+	    push(@$head, qq|<script type="text/javascript" src="/html/$js"></script>|);
+    	}
     }
 
     push (@$head, $q->meta({-name => "robots", -content => "nofollow"})) 
@@ -7746,7 +7904,7 @@ sub header {
 	     #-lang => 'de-DE',
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
-	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route',
+	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
 		     'copyright'=>'(c) 1998-2011 Slaven Rezic + Wolfram Schneider',
 		    },
 	     -author => $BBBike::EMAIL,
@@ -7766,7 +7924,7 @@ sub header {
 	   print qq{<div id="ad_top">\n};
 	}
 
-	print "<h2>\n";
+	print qq{<span id="headline">\n<h2>\n};
 	if ($printmode) {
 	    print "$args{-title}";
 	    print "<img alt=\"\" src=\"$bbbike_images/srtbike.gif\" hspace=10>";
@@ -7781,10 +7939,11 @@ sub header {
 	    if ($use_css) {
 		print ' style="position:relative; top:15px; left:-15px;"';
 	    }
-	    print " alt=\"\" src=\"$bbbike_images/srtbike.gif\" border=0>";
+	    print " id=\"headlogo\" alt=\"\" src=\"$bbbike_images/srtbike.gif\" border=0>";
 	    print "</a>";
 	}
 	print "</h2>\n";
+	print "</span>\n";
     } else {
 	print $q->start_html(%args);
 	print "<h1>BBBike</h1>";
@@ -7900,6 +8059,8 @@ if ($osm_data) {
     $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
 }
 
+my $span_debug = is_production($q) ? "" : qq{<tt><span id="debug"></span></tt>\n};
+
 my $rss_icon = "";
 $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="14" height="14" title="}
 	    .  M('Was gibt es Neues auf BBBike.org') 
@@ -7908,8 +8069,11 @@ $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="
 my $permalink_text = $is_streets ? "" : qq{ | <a href="#" onclick="togglePermaLinks(); return false;">$permalink_msg</a><span id="permalink_url2" style="display:none"> $permalink</span>};
 $permalink_text = "" if $permalink !~ /=/;
 
-my $google_plusone = qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
+my $google_plusone = qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png" alt=""></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
 
+my $facebook_title = M("Facebook Fanpage");
+my $donate_title = M("Spende an BBBike.org");
+my $twitter_title = M("Folge uns auf twitter.com/BBBikeWorld");
 my $s_copyright = <<EOF;
 
 <div id="footer">
@@ -7918,8 +8082,9 @@ my $s_copyright = <<EOF;
 <a href="/help.html">$help</a> |
 <a href="/app.html">$app</a> |
 <a href="$community_link">$donate</a> |
-<a href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
+<a title="search time: $real_time seconds" href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
 $list_of_all_streets $permalink_text
+$span_debug
 </div>
 </div>
 
@@ -7928,10 +8093,10 @@ $list_of_all_streets $permalink_text
 (&copy;) 1998-2011 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
 <div id="footer_community">
-  <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="Donate to bbbike.org" border="0"></a>
+  <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="$donate_title" border="0"></a>
   <a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
-  <a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="Follow us on Twitter" alt=""></a>
-  <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="BBBike on Facebook"></a>
+  <a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="$twitter_title" alt=""></a>
+  <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="$facebook_title"></a>
   $google_plusone
   $rss_icon
 </div>
@@ -8763,6 +8928,21 @@ sub get_geography_object {
 
 sub nice_crossing_name {
     my(@c) = @_;
+
+   
+    # first part of cross is empty, switch streetsnames of corner: /foo -> foo/
+    if ($osm_data) {
+	my @cr = @c;
+    	if ($cr[0] eq '') {
+           @cr = ( $cr[1], "" );
+    	}
+
+        #my $no_name = "NN";
+        @cr = map { $_ eq "" ? $no_name : $_ } @cr;
+    	my $cr = join("/", @cr);
+    	return $cr;
+    }
+
     my @c_street;
     my $unique_cityparts;
     for my $c (@c) {
