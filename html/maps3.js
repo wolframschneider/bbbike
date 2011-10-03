@@ -1133,6 +1133,8 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
     function plotStreet(data) {
         var js = eval(data);
         var streets_list = js[1];
+	var query = js[0];
+	var query_lc = query.toLowerCase();
 
         var autozoom_points = [];
         for (var i = 0; i < streets_list.length; i++) {
@@ -1183,7 +1185,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
 
                 var marker = new google.maps.Marker({
                     position: streets_route[pos],
-                    icon: bbbike.icons.green,
+                    icon: query_lc == street.toLowerCase() ? bbbike.icons.green : bbbike.icons.white,
                     map: map
                 });
 
