@@ -1133,8 +1133,8 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
     function plotStreet(data) {
         var js = eval(data);
         var streets_list = js[1];
-	var query = js[0];
-	var query_lc = query.toLowerCase();
+        var query = js[0];
+        var query_lc = query.toLowerCase();
 
         var autozoom_points = [];
         for (var i = 0; i < streets_list.length; i++) {
