@@ -3394,7 +3394,7 @@ sub is_streets {
 
 
 sub get_kreuzung {
-    warn "get kreuzung: ", join " ", caller(), "\n" if $debug >= 1;
+    warn "get kreuzung: ", join " ", caller(), "\n" if $debug >= 2;
 
     my($start_str, $via_str, $ziel_str) = @_;
     if (!defined $start_str) {
