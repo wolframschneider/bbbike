@@ -1400,7 +1400,7 @@ sub enable_latlng_search {
 	   $value = $2;
  	}
 
-	warn "param: $param, value: $value, street: $street\n";
+	warn "param: $param, value: $value, street: $street\n" if $debug >= 2;
 
     	if (!defined $q->param($param_c) && is_latlng($value, 1)) {
 	   my $val = get_nearest_crossing_coords(extract_latlng($value));
