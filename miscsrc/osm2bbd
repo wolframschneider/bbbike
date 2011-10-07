@@ -261,7 +261,7 @@ use constant CONSTRUCTION_RX => qr{^(?:construction|planned|proposed)$};
 
 my $cyclists_dismount_label = ($lang eq 'en' ? 'Cyclists dismount' : 'Radfahrer absteigen');
 
-sub mychomp {
+sub bbd_chomp {
     my $data = shift;
 
     return $data if !defined $data;
@@ -709,7 +709,7 @@ for my $osm_file (@osm_files) {
 
 	    my @or;
 
-	    my $name   = mychomp($tag{'name'}) || '';
+	    my $name   = bbd_chomp($tag{'name'}) || '';
 	    my $height = exists $tag{'height'} ? $tag{'height'} : $tag{'ele'};
 
 	    if (!defined $height) {
@@ -975,7 +975,7 @@ for my $osm_file (@osm_files) {
 		$way2nodes{$id} = \@nodes;
 	    }
 
-	    my $name   = mychomp($tag{'name'}) || '';
+	    my $name   = bbd_chomp($tag{'name'}) || '';
 	    my $height = exists $tag{'height'} ? $tag{'height'} : $tag{'ele'};
 
 	    if (exists $tag{'ref'}) {
@@ -1691,7 +1691,7 @@ if ($handle_relations) {
 		#$next1->() if $tag{'visible'} && $tag{'visible'} eq 'false';
 
 		my @or;
-		my $name   = mychomp($tag{'name'}) || '';
+		my $name   = bbd_chomp($tag{'name'}) || '';
 
 		if (my $route = $tag{'route'}) {
 		    if ($route eq 'bicycle') {
