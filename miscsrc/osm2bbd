@@ -261,6 +261,20 @@ use constant CONSTRUCTION_RX => qr{^(?:construction|planned|proposed)$};
 
 my $cyclists_dismount_label = ($lang eq 'en' ? 'Cyclists dismount' : 'Radfahrer absteigen');
 
+sub mychomp {
+    my $data = shift;
+
+    return $data if !defined $data;
+
+    $data =~ s/\t/ /g;
+    $data =~ s/\n/ /g;
+
+    $data =~ s/^\s+//;
+    $data =~ s/\s+$//;
+
+    return $data;
+}
+
 sub init_height_db {
     my $file = shift;
 
@@ -695,7 +709,7 @@ for my $osm_file (@osm_files) {
 
 	    my @or;
 
-	    my $name   = $tag{'name'} || '';
+	    my $name   = mychomp($tag{'name'}) || '';
 	    my $height = exists $tag{'height'} ? $tag{'height'} : $tag{'ele'};
 
 	    if (!defined $height) {
@@ -961,7 +975,7 @@ for my $osm_file (@osm_files) {
 		$way2nodes{$id} = \@nodes;
 	    }
 
-	    my $name   = $tag{'name'} || '';
+	    my $name   = mychomp($tag{'name'}) || '';
 	    my $height = exists $tag{'height'} ? $tag{'height'} : $tag{'ele'};
 
 	    if (exists $tag{'ref'}) {
@@ -1678,7 +1692,7 @@ if ($handle_relations) {
 		#$next1->() if $tag{'visible'} && $tag{'visible'} eq 'false';
 
 		my @or;
-		my $name   = $tag{'name'} || '';
+		my $name   = mychomp($tag{'name'}) || '';
 
 		if (my $route = $tag{'route'}) {
 		    if ($route eq 'bicycle') {
