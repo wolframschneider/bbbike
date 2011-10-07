@@ -1930,7 +1930,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8626,23432
 	B0 15350,1636
 	B0 14621,1798
 	B0 13559,2205
-	B0 14221,1921
+	B0 14224,1925
 	B0 14512,1818
 	B0 15799,1690
 	B0 12231,4365
@@ -1960,7 +1960,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8626,23432
 	X 5219,6215
 	X 5244,6261
 	F 5091,5979
-	F 4984,5788
+	F 4982,5789
 	F 4900,5648
 	F 6333,7708
 	X 8868,2061
@@ -2386,6 +2386,9 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 16669,25373
 	F 16606,25141
 	X 17885,4912
+	F 730,2734
+	X 8206,12757
+	F 13993,2741
 	X -12549,-1277
 	X -13051,-3101
 	X -12839,-1342
@@ -2495,6 +2498,11 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F -7214,-4362
 	X -13778,4492
 	X -13067,-706
+unbeschrankter Bahnübergang	B0 57683,14751
+unbeschrankter Bahnübergang	B0 56520,16826
+	B 53586,13868
+	B 57463,13977
+	B 58025,14188
 	F 13642,-997
 	F 13885,-775
 	B 55825,-11622
