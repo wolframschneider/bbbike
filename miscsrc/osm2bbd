@@ -264,6 +264,8 @@ my $cyclists_dismount_label = ($lang eq 'en' ? 'Cyclists dismount' : 'Radfahrer 
 sub mychomp {
     my $data = shift;
 
+    return $data if !defined $data;
+
     $data =~ s/\t/ /g;
     $data =~ s/\n/ /g;
 
