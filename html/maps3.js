@@ -297,7 +297,6 @@ function homemap_street_timer(event, time) {
 
 // test for all google + custom maps
 
-
 function is_supported_map(maptype) {
     if (is_supported_maptype(maptype, bbbike.available_google_maps) || is_supported_maptype(maptype, bbbike.available_custom_maps)) {
         return 1;
