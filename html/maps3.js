@@ -1807,8 +1807,9 @@ function displayCurrentPosition(area, lang) {
                 maxWidth: 400
             });
             var content = "<div id=\"infoWindowContent\">\n"
-            content += "<p>" + translate_mapcontrol("Your current postion", lang) + ": " + currentPosition.lat + "," + currentPosition.lng + "</p>\n";
+            content += "<p class='grey'>" + translate_mapcontrol("Your current postion", lang) + ": " + currentPosition.lat + "," + currentPosition.lng + "</p>\n";
             content += "<p>" + translate_mapcontrol("Approximate address", lang) + ": " + address + "</p>\n";
+            // content += "<p>" + translate_mapcontrol("From here") + " " + translate_mapcontrol("To here") + "</p>\n";
             content += "</div>\n";
             infoWindow.setContent(content);
             infoWindow.open(map, marker);
