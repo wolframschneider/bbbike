@@ -151,7 +151,7 @@ function granularity(val,gran){var granularity=gran||bbbike.granularity;return p
 function debug(text,id){if(!id){id="debug";}
 var tag=document.getElementById(id);var today=new Date();if(!tag)return;tag.innerHTML="debug: "+text;}
 function find_street(marker,input_id,shadow){var latLng=marker.getPosition();var input=document.getElementById(input_id);if(input){if(input_id=="XXXsuggest_via"){toogleVia('viatr','via_message',null,true);}
-var value=granularity(latLng.lng())+','+granularity(latLng.lat());input.setAttribute("value",value);marker.setShadow(shadow);display_current_crossing(marker,input_id,{"lng":granularity(latLng.lng()),"lat":granularity(latLng.lat())});}else{debug("Unknonw: "+input_id);}}
+var value=granularity(latLng.lng())+','+granularity(latLng.lat());input.setAttribute("value",value);marker.setShadow(shadow);display_current_crossing(marker,input_id,{"lng":granularity(latLng.lng()),"lat":granularity(latLng.lat())});var type=input_id.substr(8);var color=document.getElementById("icon_"+type);if(color){color.setAttribute("bgcolor",type=="start"?"green":type=="ziel"?"red":"yellow");}}else{debug("Unknonw: "+input_id);}}
 function inside_area(obj){var area=state.marker_list;var bottomLeft=area[0];var topRight=area[1];var result;if(obj.lng>=bottomLeft[1]&&obj.lng<=topRight[1]&&obj.lat>=bottomLeft[0]&&obj.lat<=topRight[0]){result=1;}else{result=0;}
 debug("lng: "+obj.lng+" lat: "+obj.lat+" area: "+bottomLeft[1]+","+bottomLeft[0]+" "+topRight[0]+","+topRight[1]+" result: "+result);return result;}
 function display_current_crossing(marker,id,obj){if(state.timeout_crossing){clearTimeout(state.timeout_crossing);}
