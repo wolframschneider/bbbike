@@ -8,7 +8,8 @@ var map; // main map object
 var bbbike = {
     // map type by google
     mapTypeControlOptions: {
-        mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
+	// moved to bbbike_maps_init(), because the JS object google is not defiend yet
+        mapTypeIds: [], // google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
     },
 
     // enable Google Arial View: 45 Imagery
@@ -294,7 +295,6 @@ function homemap_street_timer(event, time) {
 
 
 // test for all google + custom maps
-
 function is_supported_map(maptype) {
     if (is_supported_maptype(maptype, bbbike.available_google_maps) || is_supported_maptype(maptype, bbbike.available_custom_maps)) {
         return 1;
@@ -314,6 +314,9 @@ function is_supported_maptype(maptype, list) {
 }
 
 function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam) {
+    bbbike.mapTypeControlOptions.mapTypeIds = [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN];
+    state.maplist = init_google_map_list();
+
     if (!is_supported_map(maptype)) {
         maptype = bbbike.mapDefault;
     }
@@ -1526,7 +1529,6 @@ function init_google_map_list() {
 }
 
 var currentText = {};
-state.maplist = init_google_map_list();
 
 function HomeControl(controlDiv, map, maptype, lang, opt) {
     var name = opt && opt.name ? translate_mapcontrol(opt.name, lang) : translate_mapcontrol(maptype, lang);
