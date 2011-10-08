@@ -32,6 +32,7 @@ var bbbike = {
         YahooSatelliteMapType: true,
 
         BingMapMapType: true,
+        BingMapOldMapType: false,
         BingHybridMapType: true,
         BingSatelliteMapType: false,
         BingBirdviewMapType: true
@@ -896,7 +897,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         },
 
         "bing_map_old": function () {
-            if (bbbike.mapType.BingMapMapType) {
+            if (bbbike.mapType.BingMapOldMapType) {
                 var BingMapMapType = new google.maps.ImageMapType(bing_map_old_options);
                 map.mapTypes.set("bing_map_old", BingMapMapType);
                 custom_map("bing_map_old", lang, bing_map_old_options.bbbike);
