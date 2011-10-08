@@ -8,8 +8,9 @@ var map; // main map object
 var bbbike = {
     // map type by google
     mapTypeControlOptions: {
-	// moved to bbbike_maps_init(), because the JS object google is not defiend yet
-        mapTypeIds: [], // google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
+        // moved to bbbike_maps_init(), because the JS object google is not defiend yet
+        mapTypeIds: [],
+        // google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
     },
 
     // enable Google Arial View: 45 Imagery
@@ -295,6 +296,8 @@ function homemap_street_timer(event, time) {
 
 
 // test for all google + custom maps
+
+
 function is_supported_map(maptype) {
     if (is_supported_maptype(maptype, bbbike.available_google_maps) || is_supported_maptype(maptype, bbbike.available_custom_maps)) {
         return 1;
