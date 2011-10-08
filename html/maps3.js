@@ -99,6 +99,9 @@ var bbbike = {
 
         "start": "/images/dd-start.png",
         "dest": "/images/dd-end.png",
+        "via": "/images/yellow-dot.png",
+
+        "shadow": "/images/shadow-dot.png",
 
     },
 
@@ -106,6 +109,11 @@ var bbbike = {
 
     granularity: 100000,
     // 5 digits for LatLng after dot
+    // position of green/red/yellow search markers
+    // 3-4: centered, left top
+    // 8: left top
+    search_markers_pos: 3.5,
+
     // IE bugs
     dummy: 0
 };
@@ -2173,18 +2181,16 @@ function _init_markers(opt) {
         lng = sw.lng();
     }
 
-    var dist = 8;
-    if (window.screen.width <= 480) {
-        dist = 4;
-        debug("detect small screen");
-    }
-
-    var pos_lng = lng + (ne.lng() - lng) / dist; //  1/8 right
-    var pos_lat = lat - (lat - sw.lat()) / (dist * 1.5); //  1/12 down
-    padding = (ne.lng() - lng) / (dist * 4); // distance beteen markers on map, 1/32 of the map
+    var dist = bbbike.search_markers_pos; // use 3.5 or 8
+    var pos_lng = lng + (ne.lng() - lng) / dist; //  right
+    var pos_lat = lat - (lat - sw.lat()) / dist; //  down
+    padding = (ne.lng() - lng) / 16; // distance beteen markers on map, 1/x of the map
     var pos_start = new google.maps.LatLng(pos_lat, pos_lng);
     var pos_dest = new google.maps.LatLng(pos_lat, pos_lng + padding);
     var pos_via = new google.maps.LatLng(pos_lat, pos_lng + 2.0 * padding);
+
+    // shadow for markers, if moved
+    var shadow = new google.maps.MarkerImage(bbbike.icons["shadow"], new google.maps.Size(49.0, 32.0), new google.maps.Point(0, 0), new google.maps.Point(16.0, 16.0));
 
     var marker_start = new google.maps.Marker({
         position: pos_start,
@@ -2207,7 +2213,7 @@ function _init_markers(opt) {
         clickable: true,
         draggable: true,
         title: translate_mapcontrol("Set via point", lang),
-        icon: bbbike.icons["yellow_dot"] // icon: "/images/ziel_ptr.png"
+        icon: bbbike.icons["via"] // icon: "/images/ziel_ptr.png"
     });
 
 
@@ -2235,15 +2241,15 @@ function _init_markers(opt) {
     var event = 'drag'; // "drag", Firefox bug
     google.maps.event.addListener(marker_start, event, function () {
         state.markers_drag.marker_start = marker_start;
-        find_street(marker_start, "suggest_start")
+        find_street(marker_start, "suggest_start", shadow)
     });
     google.maps.event.addListener(marker_dest, event, function () {
         state.markers_drag.marker_dest = marker_dest;
-        find_street(marker_dest, "suggest_ziel")
+        find_street(marker_dest, "suggest_ziel", shadow)
     });
     google.maps.event.addListener(marker_via, event, function () {
         state.markers_drag.marker_via = marker_via;
-        find_street(marker_via, "suggest_via")
+        find_street(marker_via, "suggest_via", shadow)
     });
 }
 
@@ -2268,7 +2274,7 @@ function debug(text, id) {
     tag.innerHTML = "debug: " + text; // + " " + today;
 }
 
-function find_street(marker, input_id) {
+function find_street(marker, input_id, shadow) {
     var latLng = marker.getPosition();
 
     var input = document.getElementById(input_id);
@@ -2279,6 +2285,9 @@ function find_street(marker, input_id) {
 
         var value = granularity(latLng.lng()) + ',' + granularity(latLng.lat());
         input.setAttribute("value", value);
+
+        // set shadow to indicate an active marker
+        marker.setShadow(shadow);
 
         display_current_crossing(marker, input_id, {
             "lng": granularity(latLng.lng()),
