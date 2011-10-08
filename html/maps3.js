@@ -2294,6 +2294,11 @@ function find_street(marker, input_id, shadow) {
             "lat": granularity(latLng.lat())
         });
 
+        var type = input_id.substr(8);
+        var color = document.getElementById("icon_" + type);
+        if (color) {
+            color.setAttribute("bgcolor", type == "start" ? "green" : type == "ziel" ? "red" : "yellow");
+        }
 
         // debug(value);
     } else {
