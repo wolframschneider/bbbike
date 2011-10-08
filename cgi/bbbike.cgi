@@ -147,6 +147,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $cache_streets_html
 	    $bbbike_start_js_version
 	    $enable_latlng_search
+	    $enable_input_colors
 	   );
 
 $gmap_api_version = 3;
@@ -2405,11 +2406,19 @@ EOF
 	my $tryempty  = 0;
 	my $no_td     = 0;
 
+	my $icon_bgcolor = $type eq 'via' ? "#F3F781" : $type eq 'ziel' ? "#f37f78" : "#6aaf67";
+	my $icon_color = $type eq 'via' ? "green" : $type eq 'ziel' ? "red" : "green";
+
+        $icon_bgcolor = "" if !$enable_input_colors;
+
         # print "XXX";
+	my $icon_image = qq{<img src="/images/mm_20_$icon_color.png" style="padding-bottom:1px; padding-left:2px;"></img>};
+
 	if ($bi->{'can_table'}) {
 	    my $style = $type eq 'via' && $enable_via_hide ? qq{ style="display:none"} : "";
 
-	    print qq{<tr id=${type}tr $style $bgcolor_s><td align=center valign=middle width=40><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:8px;" } : "") . qq{src="$imagetype" border=0 alt="} . M($printtype) . qq{"></a></td>};
+	    # start.gif
+	    print qq{<tr id=${type}tr $style $bgcolor_s><td id="icon_$type" bgcolor="$icon_bgcolor" align=center valign=middle width=40><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:6px; padding-top:4px;" } : "") . qq{src="$imagetype" border=0 alt="} . M($printtype) . qq{"></a></td>};
 	    my $color = {'start' => '#e0e0e0',
 			 'via'   => '#c0c0c0',
 			 'ziel'  => '#a0a0a0',
@@ -2701,6 +2710,7 @@ EOF
 	    }
 
 	    my $searchinput = 'suggest_' . $type;
+	    #print $icon_image;
 	    print qq{<input id="$searchinput" size="42" type="text" name="$type" value="" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
 
 	   if ($enable_opensearch_suggestions) { 
