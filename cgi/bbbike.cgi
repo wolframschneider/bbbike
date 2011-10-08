@@ -7809,7 +7809,9 @@ sub header {
 	# Release Version (3.3) Reference (Feature-Stable)
 
 	  if (1 || !is_mobile($q) || is_resultpage($q) ) {
+	    # for elevation charts
 	    push(@$head, qq|<script type="text/javascript" src="http://www.google.com/jsapi?hl=$my_lang"></script>|);
+
 	    # push(@$head, qq|<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>|);
 
 	    my $google_maps_url = "http://maps.googleapis.com/maps/api/js?sensor=$sensor&amp;language=$my_lang";
