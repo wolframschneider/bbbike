@@ -114,6 +114,9 @@ var bbbike = {
     // 8: left top
     search_markers_pos: 3.5,
 
+    // change input color to dark green/red/yellow if marker was moved
+    dark_icon_colors: 1,
+
     // IE bugs
     dummy: 0
 };
@@ -2296,7 +2299,7 @@ function find_street(marker, input_id, shadow) {
 
         var type = input_id.substr(8);
         var color = document.getElementById("icon_" + type);
-        if (color) {
+        if (bbbike.dark_icon_colors && color) {
             color.setAttribute("bgcolor", type == "start" ? "green" : type == "ziel" ? "red" : "yellow");
         }
 
