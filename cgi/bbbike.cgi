@@ -148,6 +148,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $bbbike_start_js_version
 	    $enable_latlng_search
 	    $enable_input_colors
+	    $skip_second_page
 	   );
 
 $gmap_api_version = 3;
@@ -1383,6 +1384,12 @@ sub enable_latlng_search {
 	   $q->param("_" . $param, $street);
 	   warn "Do a lat,lng search for $param, $value -> $val\n" if $debug;
     	}
+    }
+
+    # skip second page, redirect to 3th result page
+    if ($skip_second_page && $q->param("startc") && $q->param("zielc") && !$q->param("pref_seen")) {
+	$q->param("pref_seen", 2);
+	#print $q->redirect( $q->url(-query => 1)); exit 0;
     }
 }
 
