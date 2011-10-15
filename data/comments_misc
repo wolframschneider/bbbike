@@ -90,7 +90,7 @@ Teltower Weg: nicht ausgeschildert	CP2; -107,5880 -174,5941
 Kreisverkehr	Roundabout 19907,12501
 Röntgentaler Weg: durch den Schloßpark	CS 16166,25767 16222,25829 16532,26174
 (Autobahnzubringer): Fahrbahn ist Kraftfahrzeugstraße	CS 18036,2531 18247,2490 18496,2471
-(In den Gärten - Hochspannungsweg): Privatweg	CS 11713,1622 11689,1687 11709,1761 11659,1943
+(In den Gärten - Hochspannungsweg): Privatweg	CS 11724,1629 11704,1692 11718,1771 11652,1959
 Privatweg, Durchfahrt eigentlich verboten, aber möglich	CS 19726,11743 19750,11730 19827,11686 19881,11591
 Dreipfuhlpark: Freigegeben für Radfahrer	CS 1536,3780 1523,3904 1520,4006 1524,4054 1548,4168 1608,4313 1670,4477 1692,4575 1682,4607 1689,4630 1698,4653
 Seefelder Str.: Schranken, für Radler gut passierbar	CS 17341,16136 17344,16081
@@ -242,7 +242,6 @@ Walhallastr.: Privatstraße, Anlieger frei	CS 8727,19746 8743,19755
 An den Zingerwiesen: Privatstraße, Anlieger frei	CS 8788,19702 8743,19755 8684,19853
 Killisch-von-Horn-Weg: Privatstraße	CS 9590,18082 9707,17941 9730,17927
 ausgeschildert als "Zum Finkenweg"	CP2; 9239,4980 9360,4996
-Yva-Bogen: nicht ausgeschildert; zwischen Hotel und S-Bahnviadukt	CS 5373,10981 5426,11039 5459,11135
 (Privatstraße am Karl-Fischer-Weg): Privatstraße	CS 7202,5016 7180,4913
 Carl-Ludwig-Schleich-Promenade: nicht ausgeschildert	CP2; 2315,8431 2316,8469
 Carl-Ludwig-Schleich-Promenade: nicht ausgeschildert	CP2; 2279,8638 2317,8616
@@ -308,3 +307,14 @@ Am Rundling: nur frei für Anlieger	CS 17927,3737 17927,3771 17927,3788
 (Park am Gleisdreieck): "Sprintstrecke"	CP2; 8521,9911 8579,10030
 (Biesdorfer Friedhofsweg - Wuhlewanderweg): zwischen U-Bahn und Friedhof Biesdorf	CS 21514,11796 21645,11912 21775,11989 21914,12019
 (Kloster-Zinna-Str. - Braunfelsstr.): Privatstraße	CS 11712,-289 11721,-351
+Simsonweg: nicht ausgeschildert	CP2; 8354,12416 8546,12279
+Simsonweg: nicht ausgeschildert	CP2; 8546,12279 8354,12416
+Jänickestr. - Dahlemer Weg: Privatstraße	CS 1702,1278 1707,1256 1742,1118
+Ausgeschildert als Jasminpfad	CS 8259,8628 8221,8631
+Ausgeschildert als Rosenpromenade	CS 8264,8289 8259,8628
+Jasminpfad: Tor 1 der Kleingartenanlage	CP2; 8221,8631 8259,8628
+Teilestr. - Schaffhausener Str.: vor der Autobahnbrücke links abbiegen	CP2; 11068,6006 11077,6028
+Königstuhlweg: nicht ausgeschildert	CS 10334,2321 10214,2348
+Straße 482: nicht ausgeschildert	CS 11120,1384 11146,1413 11156,1463
+Ausgeschildert als "Zu den Grundstücken Lindholzweg 44-48"	CP2; 12460,1168 12374,1193
+Lenzelpfad: Privatstraße	CS 15318,2079 15213,2076 15213,2094 15126,2112 15125,2096 15056,2096

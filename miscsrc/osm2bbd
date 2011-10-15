@@ -261,6 +261,20 @@ use constant CONSTRUCTION_RX => qr{^(?:construction|planned|proposed)$};
 
 my $cyclists_dismount_label = ($lang eq 'en' ? 'Cyclists dismount' : 'Radfahrer absteigen');
 
+sub bbd_chomp {
+    my $data = shift;
+
+    return $data if !defined $data;
+
+    $data =~ s/\t/ /g;
+    $data =~ s/\n/ /g;
+
+    $data =~ s/^\s+//;
+    $data =~ s/\s+$//;
+
+    return $data;
+}
+
 sub init_height_db {
     my $file = shift;
 
@@ -695,7 +709,7 @@ for my $osm_file (@osm_files) {
 
 	    my @or;
 
-	    my $name   = $tag{'name'} || '';
+	    my $name   = bbd_chomp($tag{'name'}) || '';
 	    my $height = exists $tag{'height'} ? $tag{'height'} : $tag{'ele'};
 
 	    if (!defined $height) {
@@ -961,7 +975,7 @@ for my $osm_file (@osm_files) {
 		$way2nodes{$id} = \@nodes;
 	    }
 
-	    my $name   = $tag{'name'} || '';
+	    my $name   = bbd_chomp($tag{'name'}) || '';
 	    my $height = exists $tag{'height'} ? $tag{'height'} : $tag{'ele'};
 
 	    if (exists $tag{'ref'}) {
@@ -1025,9 +1039,8 @@ for my $osm_file (@osm_files) {
 			push @or, ["rbahn", "R".$addcat];
 			resolve_node_now('railway', 'rbahnhof', "R", \@nodes);
 		    }
-		} elsif ($railway_cat eq 'preserved') {
-		    # ignore
-		} elsif ($railway_cat eq 'service') {
+		} elsif ($railway_cat =~ m{^(service|preserved)$}) {
+		    # example for "preserved": Buckower Kleinbahn (Museumsbetrieb)
 		    push @or, ["rbahn", "RG".$addcat];
 		    resolve_node_now('railway', 'rbahnhof', "RG", \@nodes);
 		} elsif ($railway_cat =~ m{^(?:abandoned|disused)$}) {
@@ -1678,7 +1691,7 @@ if ($handle_relations) {
 		#$next1->() if $tag{'visible'} && $tag{'visible'} eq 'false';
 
 		my @or;
-		my $name   = $tag{'name'} || '';
+		my $name   = bbd_chomp($tag{'name'}) || '';
 
 		if (my $route = $tag{'route'}) {
 		    if ($route eq 'bicycle') {

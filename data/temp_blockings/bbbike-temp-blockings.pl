@@ -50,7 +50,7 @@ EOF
        text  => 'Karneval der Kulturen, 12.6.2011',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11500,9116 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9334,9670 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
+userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11500,9116 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9242,9694 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
 userdel	3 8773,9524 8777,9601 8779,9812
 userdel	3 8779,9812 8777,9601 8773,9524
 userdel	3 9000,9509 9043,9745 9073,9915
@@ -75,8 +75,8 @@ userdel	3 10705,9234 10713,9260 10747,9326
 userdel	3 10747,9326 10713,9260 10705,9234
 userdel	3 11141,9107 11136,9183 11208,9345 11274,9492
 userdel	3 11274,9492 11208,9345 11136,9183 11141,9107
-userdel	3 11998,8872 11824,8995 11882,8527
-userdel	3 11882,8527 11824,8995 11998,8872
+userdel	3 11998,8872 11880,8955 11824,8995 11882,8527
+userdel	3 11882,8527 11824,8995 11880,8955 11998,8872
 EOF
      },
      { from  => Time::Local::timelocal(reverse(2003-1900,6-1,19,6,0,0)),
@@ -3133,9 +3133,9 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002305',
        data  => <<EOF,
-userdel	q4 8119,12414 8374,12416
+userdel	q4 8119,12414 8354,12416
 userdel	q4 8400,12417 8540,12420
-userdel	q4 8400,12417 8374,12416
+userdel	q4 8400,12417 8354,12416
 EOF
      },
      { from  => 1129878000, # 2005-10-21 09:00
@@ -4674,7 +4674,7 @@ EOF
        text  => 'Reinhardtstraße - Otto-von-Bismarck-Allee: zwischen Kreuzung Kapelleufer und Kreuzung Willy-Brandt-Straße in beiden Richtungen Veranstaltung, gesperrt, Dauer: 07.05.2006 09:00 Uhr bis 14.07.2006 23:45 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 8120,12756 8206,12757 8275,12758 8309,12758 8417,12846 8503,12895
+userdel	2::temp 8120,12756 8206,12757 8301,12758 8309,12758 8417,12846 8503,12895
 EOF
      },
      { from  => 1149703449, # 2006-06-07 20:04
@@ -4684,7 +4684,7 @@ EOF
        source_id => 'IM_002870',
        data  => <<EOF,
 userdel	2::temp 8168,12848 8204,12816 8206,12757 8207,12616
-userdel	2::temp 8775,12457 8540,12420 8400,12417 8374,12416 8119,12414
+userdel	2::temp 8775,12457 8540,12420 8400,12417 8354,12416 8119,12414
 userdel	2::temp 8032,12817 8124,12840
 userdel	2::temp 8306,12617 8309,12758
 userdel	2::temp 8032,12817 8017,12826
@@ -4735,7 +4735,7 @@ userdel	2::temp 7669,11586 7711,11558
 userdel	2::temp 8022,12016 8016,11770 7801,11875 7663,11946 7570,11855 7223,11897 7073,11798 7163,11738 6980,11583 6809,11570
 userdel	2::temp 7039,12314 7383,12095
 userdel	2::temp 7073,11798 6778,11742
-userdel	2::temp 8374,12416 8546,12279
+userdel	2::temp 8354,12416 8546,12279
 userdel	2::temp 7382,11588 7356,11517
 userdel	2::temp 6809,11979 7073,11798
 userdel	2::temp 8225,11692 8223,11796 8222,11881 8215,12156 8214,12205
@@ -4990,7 +4990,7 @@ EOF
 userdel	2::temp 6653,12067 6642,12010 6685,11954 6744,11936 6809,11979 6828,12031 6787,12099 6754,12108 6725,12113 6690,12104
 userdel	2::temp 6540,11754 6685,11954
 userdel	2::temp 6825,11486 6809,11570 6778,11742 6744,11936
-userdel	2::temp 6653,12067 6178,12387
+userdel	2::temp 6653,12067 6348,12272 6178,12387
 userdel	2::temp 5900,11913 6642,12010
 userdel	2::temp 7039,12314 6787,12099
 EOF
@@ -5026,7 +5026,7 @@ EOF
        text  => 'K 6413 Berliner Str. OL Buckow, zw. Hauptstr. und OA grundhafter Straßenbau Vollsperrung 17.07.2006-31.12.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 55877,18248 55700,18101 55623,17923 55524,17754 55164,17565
+userdel	q4::inwork 55882,18301 55853,18228 55700,18101 55623,17923 55524,17754 55164,17565
 EOF
      },
      { from  => 1152568800, # 2006-07-11 00:00
@@ -5034,7 +5034,7 @@ EOF
        text  => 'K 6413 Berliner Str. OL Buckow, zw. Nr. 60 und Waldweg grundhafter Straßenbau Vollsperrung; Umleitung 12.07.2006-14.07.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 55877,18248 55700,18101 55623,17923 55524,17754 55164,17565
+userdel	q4::inwork 55882,18301 55853,18228 55700,18101 55623,17923 55524,17754 55164,17565
 EOF
      },
      { from  => 1152568800, # 2006-07-11 00:00
@@ -7311,7 +7311,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004915',
        data  => <<EOF,
-userdel	2::inwork 8306,8722 8237,8685 8226,8648 7955,7840
+userdel	2::inwork 8306,8722 8237,8685 8221,8631 8106,8290 8093,8251 7955,7840
 EOF
      },
      { from  => 1173913200, # 2007-03-15 00:00
@@ -8713,7 +8713,7 @@ EOF
        text  => 'Homburger Str.: Einbahnstraße wegen Baustelle zw. Ahrweiler Str. und Assmannshauser Str., Durchfahrt Richtung Osten möglich',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 4599,7474 4403,7498
+userdel	1::inwork 4599,7474 4400,7508
 EOF
      },
      { from  => undef, # 
@@ -9990,7 +9990,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006771',
        data  => <<EOF,
-userdel	2::temp 7875,12363 8017,12359 8070,12409 8119,12414 8374,12416 8400,12417 8540,12420
+userdel	2::temp 7875,12363 8017,12359 8070,12409 8119,12414 8354,12416 8400,12417 8540,12420
 EOF
      },
      { from  => 1191269068, # 2007-10-01 22:04
@@ -11807,7 +11807,7 @@ userdel auto	3 8172,11679 8226,11458 8232,11414
 userdel auto	3 7444,10479 7633,10394 7744,10372
 userdel auto	3 9028,12307 9141,12320 9130,12433
 userdel auto	3 7744,10372 7633,10394 7444,10479
-userdel auto	3 7293,11519 7171,11510 6825,11486 6716,11439
+userdel auto	3 7293,11519 7171,11510 6915,11492 6825,11486 6716,11439
 userdel auto	3 9869,12297 9852,12409 9842,12506
 userdel auto	3 7849,10488 7689,10514 7478,10612
 userdel auto	3 7160,11225 7103,11247 6851,11346 6692,11365
@@ -11833,7 +11833,7 @@ userdel auto	3 6494,10440 6532,10529 6468,10550
 userdel auto	3 9343,12464 9358,12351 9369,12253
 userdel auto	3 7002,11034 6873,11011 6732,11106
 userdel auto	3 9130,12433 9141,12320 9028,12307
-userdel auto	3 6716,11439 6825,11486 7171,11510 7293,11519
+userdel auto	3 6716,11439 6825,11486 6915,11492 7171,11510 7293,11519
 userdel auto	3 8804,12280 8861,12125 8901,12008
 userdel auto	3 7291,10506 7245,10499 7033,10396 7003,10513
 EOF
@@ -12129,7 +12129,7 @@ EOF
        source_id => 'IM_009465',
        data  => <<EOF,
 userdel	2::temp 6787,12099 6754,12108 6725,12113 6690,12104 6653,12067
-userdel	2::temp 6178,12387 6653,12067 6642,12010 5900,11913
+userdel	2::temp 6178,12387 6348,12272 6653,12067 6642,12010 5900,11913
 userdel	2::temp 6642,12010 6685,11954 6744,11936 6809,11979 6828,12031 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8538,12245
 userdel	2::temp 6744,11936 6778,11742
 userdel	2::temp 6828,12031 6787,12099 7039,12314
@@ -13221,8 +13221,8 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_011040',
        data  => <<EOF,
-userdel	2::temp 7875,12363 8017,12359 8070,12409 8119,12414 8374,12416 8546,12279 8570,12302 8573,12325 8540,12420
-userdel	2::temp 8374,12416 8400,12417 8540,12420 8775,12457
+userdel	2::temp 7875,12363 8017,12359 8070,12409 8119,12414 8354,12416 8546,12279 8570,12302 8573,12325 8540,12420
+userdel	2::temp 8354,12416 8400,12417 8540,12420 8775,12457
 EOF
      },
      { from  => 1231707292, # 2009-01-11 21:54
@@ -14187,7 +14187,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_012708',
        data  => <<EOF,
-userdel	2::temp 8540,12420 8400,12417 8374,12416 8119,12414
+userdel	2::temp 8540,12420 8400,12417 8354,12416 8119,12414
 EOF
      },
      { from  => 1243116000, # 2009-05-24 00:00
@@ -16117,7 +16117,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014201',
        data  => <<EOF,
-userdel	q4::temp 8540,12420 8400,12417 8374,12416 8119,12414 8123,12615 8207,12616 8306,12617 8399,12616
+userdel	q4::temp 8540,12420 8400,12417 8354,12416 8119,12414 8123,12615 8207,12616 8306,12617 8399,12616
 EOF
      },
      { from  => 1253359000, # 2009-09-19 13:16
@@ -16180,7 +16180,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014246',
        data  => <<EOF,
-userdel	q4::temp 8540,12420 8400,12417 8374,12416 8119,12414
+userdel	q4::temp 8540,12420 8400,12417 8354,12416 8119,12414
 EOF
      },
      { from  => 1254952800, # 2009-10-08 00:00
@@ -17838,7 +17838,7 @@ userdel auto	3 7115,10612 6972,10665 6818,10725 6740,10755
 userdel auto	3 6841,11114 6880,11110 7115,11220
 userdel auto	3 7827,12105 7816,12150 7875,12363
 userdel auto	3 6380,10704 6353,10583 6302,10462
-userdel auto	3 7171,11510 6825,11486 6716,11439
+userdel auto	3 7171,11510 6915,11492 6825,11486 6716,11439
 userdel auto	3 6494,10440 6532,10529 6685,10690
 userdel auto	3 7460,12054 7383,12095 7039,12314
 userdel auto	3 7002,11034 6873,11011 6732,11106
@@ -17847,7 +17847,7 @@ userdel auto	3 5494,10973 5484,10810 5479,10719
 userdel auto	3 5829,10964 5782,10884 5681,10696
 userdel auto	3 7131,10331 7033,10396 7245,10499
 userdel auto	3 7131,10331 7033,10328 7060,10221
-userdel auto	3 6716,11439 6825,11486 7171,11510
+userdel auto	3 6716,11439 6825,11486 6915,11492 7171,11510
 userdel auto	3 7245,10499 7033,10396 7131,10331
 EOF
      },
@@ -18889,7 +18889,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016132',
        data  => <<EOF,
-userdel	q4::inwork; 7949,7607 7943,7708 7951,7801 7955,7840 8226,8648 8237,8685 8306,8722
+userdel	q4::inwork; 7949,7607 7943,7708 7951,7801 7955,7840 8093,8251 8106,8290 8221,8631 8237,8685 8306,8722
 EOF
      },
      { from  => 1302411000, # 2011-04-10 06:50
@@ -19523,7 +19523,7 @@ EOF
        source_id => 'IM_017645',
        data  => <<EOF,
 userdel	2::temp 8123,12615 8119,12414 8055,12186
-userdel	2::temp 8540,12420 8400,12417 8374,12416 8119,12414
+userdel	2::temp 8540,12420 8400,12417 8354,12416 8119,12414
 EOF
      },
      { from  => 1310464800, # 2011-07-12 12:00
@@ -19711,11 +19711,11 @@ userdel	3 12925,7425 13015,7440 12992,7545
 userdel	3 12992,7545 13015,7440 12925,7425
 EOF
      },
-     { from  => 1317297600, # 2011-09-29 14:00
-       until => 1317697200, # 2011-10-04 05:00
-       text  => 'Rote Chaussee: Vollsperrung, von 30.09.2011, 14:00 Uhr bis 04.10.2011, 5:00 Uhr ',
+     { from  => 1318507200, # 2011-10-13 14:00
+       until => 1318820400, # 2011-10-17 05:00
+       text  => 'Rote Chaussee: Vollsperrung, vom 14.10.2011, 14:00 Uhr bis 17.10.2011, 5:00 Uhr',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110914.1015.358646.html',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110929.0810.360313.html',
        data  => <<EOF,
 userdel	2::inwork 872,24330 905,24113 831,24054 764,24065 609,24215 237,24374 195,24389 132,24390 78,24364 -406,23934
 EOF
@@ -19736,6 +19736,54 @@ EOF
        source_id => 'IM_017848',
        data  => <<EOF,
 userdel	q4::temp 751,2860 589,2925
+EOF
+     },
+     { from  => 1316412000, # 2011-09-19 08:00
+       until => 1316743200, # 2011-09-23 04:00
+       text  => 'John-Foster-Dulles-Allee (Tiergarten): Veranstaltung, Straße gesperrt zwischen Spreeweg und Yitzhak-Rabin-Str., 20.09.2011 08:00 Uhr bis 23.09.2011 04:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_017857',
+       data  => <<EOF,
+userdel	q4::temp 7039,12314 7215,12295 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
+EOF
+     },
+     { from  => 1316491200, # 2011-09-20 06:00
+       until => 1316750400, # 2011-09-23 06:00
+       text  => 'Straße des 17. Juni (Tiergarten): Veranstaltung, Straße gesperrt zwischen Y.-Rabin-Str. und Ebertstr., 21.09.2011 06:00 Uhr bis 23.09.2011 06:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_017861',
+       data  => <<EOF,
+userdel	q4::temp 8089,12190 8214,12205 8538,12245
+EOF
+     },
+     { from  => 1317679200, # 2011-10-04 00:00
+       until => 1318111199, # 2011-10-08 23:59
+       text  => 'Torstraße: zwischen Chausseestraße und Rosenthaler Platz Richtung Osten gesperrt, vom 04. bis 08. Oktober 2011',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20110928.1340.360235.html',
+       data  => <<EOF,
+userdel	q4::inwork; 9212,13471 9340,13510 9394,13528 9517,13571 9571,13590 9668,13629 9792,13681 9918,13733 10177,13766
+EOF
+     },
+     { from  => 1317679200, # 2011-10-04 00:00
+       until => undef, # XXX
+       text  => 'Blankenburger Straße: Richtung Dietzgenstraße zwischen Lindenberger Straße und Siegfriedstraße wegen Bauarbeiten gesperrt, ab 5. Oktober 2011',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20110930.1255.360473.html',
+       data  => <<EOF,
+#: XXX Ende der Bauarbeiten?
+#: XXX nach den Bauarbeiten Radfahrstreifen
+#: next_check: 2012-03-01
+userdel	q4::inwork; 11148,19838 11051,19789 10948,19737 10829,19676 10742,19632
+EOF
+     },
+     { from  => 1317592800, # 2011-10-03 00:00
+       until => 1318716000, # 2011-10-16 00:00
+       text  => 'Zeltinger Straße wird als Einbahnstraße vom Zeltinger Platz in Richtung Zerndorfer Weg ausgewiesen, vom 04.10.2011 bis 15.10.2011',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110928.1140.360205.html',
+       data  => <<EOF,
+userdel	q4::inwork; 2941,25822 2897,25776 2764,25639 2721,25576 2657,25486 2531,25368 2519,25353 2446,25265
 EOF
      },
     );

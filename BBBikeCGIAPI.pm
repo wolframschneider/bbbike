@@ -50,12 +50,13 @@ sub action_revgeocode {
     $lon eq '' and die "lon is missing";
 
     no warnings 'once';
-    my($x,$y) = $main::data_is_wgs84 ? ($lon, $lat) : $Karte::Polar::obj->map2standard($lon,$lat);
+    my($x,$y) = $main::data_is_wgs84 ? ($lon,$lat) : $Karte::Polar::obj->map2standard($lon,$lat);
 
     # XXX Die Verwendung von main::... bricht, wenn bbbike.cgi als
     # Apache::Registry-Skript ausgeführt wird, da das Package dann ein
     # anderes ist! -> beste Lösung: alle Funktionen von bbbike.cgi
     # müssen in ein Package überführt werden
+
     my $xy = main::get_nearest_crossing_coords($x,$y);
     my @cr = split m{/}, main::crossing_text($xy);
     @cr = @cr[0,1] if @cr > 2; # bbbike.cgi can deal only with A/B
@@ -69,9 +70,11 @@ sub action_revgeocode {
     @cr = map { $_ eq "" ? $no_name : $_ } @cr;
 
     my $cr = join("/", @cr);
-    print $q->header('text/plain');
+    print $q->header(-type => 'text/plain', -access_control_allow_origin => '*');
     print JSON::XS->new->ascii->encode({ crossing => $cr,
 					 bbbikepos => $xy,
+					 origlon => $lon,
+					 origlat => $lat,
 				       });
 }
 

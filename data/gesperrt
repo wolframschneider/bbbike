@@ -23,7 +23,8 @@ Winterfeldtplatz	1 7049,9833 7039,10082
 Winterfeldtplatz	1 7080,10098 7126,9825
 Moritzplatz	1 10847,10853 10824,10909 10885,10928 10906,10874 10847,10853
 Segitzdamm etc.	1 10923,10113 10988,10268 10975,10334
-Segitzdamm etc.	1 10987,10360 11017,10435 11065,10443 11100,10530 11145,10638 11164,10687 11133,10704 11159,10769 11189,10831 11227,10821 11290,10972
+Segitzdamm etc.	1 10987,10360 11017,10435 11065,10443 11100,10530 11145,10638 11164,10687 11133,10704 11159,10769
+Segitzdamm etc.	1 11189,10831 11227,10821 11290,10972
 Erkelenzdamm etc.	1 11328,10957 11264,10804 11301,10783 11275,10723
 Erkelenzdamm etc.	1 11258,10682 11244,10653 11210,10668 11145,10510 11109,10423 11134,10383 11117,10326
 Erkelenzdamm etc.	1 11094,10261 11038,10247 10967,10092
@@ -286,7 +287,7 @@ Amalienpark	1 10934,18500 10860,18650
 Im Amseltal	1 1962,25214 1982,25108
 Gundelfinger Str.	1 18735,9421 18697,9153 18653,8922 18609,8717
 Dorotheenstr.	1 18653,8922 18770,8898
-Alte Sp‰thbr¸cke	2 14437,5080 14535,5137
+Alte Sp‰thbr¸cke	2 14466,5087 14544,5123
 Katzengraben	1 22451,4749 22465,4690
 Schwiegersteig	1 1134,14721 1130,14823 1109,14911
 Mor‰nenweg	1 3208,21425 3304,21205
@@ -387,7 +388,7 @@ Stockholmer Str.	1 8950,17219 8866,17075
 Schulenburgstr. (Reinickendorf)	1 5345,18675 5547,18665
 Becherweg	1 6227,18299 6232,18435 6226,18590 6217,18619
 Hirschhorner Weg	1 -760,4542 -753,4578 -741,4660 -793,4754 -820,4772
-Feldspatweg	1 11190,1622 11369,1585 11407,1592
+Feldspatweg	1 11180,1623 11369,1585 11407,1592
 Eisvogelweg	1 528,4747 542,4699 595,4594 635,4524 661,4492 691,4474
 Kreutzerweg	1 4834,4102 4848,4069 4836,4041 4629,3916
 Hornblendeweg	1 10440,1283 10415,1323 10402,1362 10425,1400 10510,1441 10594,1468 10638,1442 10659,1370
@@ -635,7 +636,8 @@ Boraweg	1s 6759,2882 6710,2909 6658,2907
 Viktoriaplatz	1 3500,4146 3523,4139 3528,4118 3518,4106 3489,4115 3485,4137 3500,4146
 Glaserweg	1 10187,872 10237,749
 Lintruper Str.	1 10307,922 10380,757
-Alt-Buckow	1 12574,1866 12561,1931 12817,2031
+Alt-Buckow	1s 12574,1866 12561,1931
+Alt-Buckow	1 12561,1931 12817,2031
 Alt-Schmˆckwitz	1 27396,-3101 27428,-3137 27427,-3171 27413,-3196 27388,-3199 27378,-3183 27382,-3151 27396,-3101
 Fontanestr.	1 18273,6606 18254,6679
 Kokoschkaplatz	1 24102,14928 24107,14947 24091,14964 24071,14961 24066,14945 24075,14928 24102,14928
@@ -658,6 +660,7 @@ Lˆcknitzstr.	1 26496,5047 26612,5051
 Brˆsener Str.	1 26247,6228 26284,6130 26282,6033
 Grenzweg	1 9456,-1271 9493,-1269 9503,-1302 9496,-1327 9457,-1329
 Alt-Lichtenrade	1 10782,-24 10835,-145
+Glimmerweg	1 11436,1513 11349,1483 11161,1518
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Hochstraﬂe	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -1389,8 +1392,8 @@ unbequem passierbarer Mittelstreifen	3nocross::ignrte 14381,12205 14427,12197 14
 Frankfurter Allee -> Mainzer Str.: unbequem passierbarer Mittelstreifen	3::igndisp 14488,12188 14427,12197 14357,12011
 Mainzer Str. -> Frankfurter Allee: unbequem passierbarer Mittelstreifen	3::igndisp 14357,12011 14427,12197 14381,12205
 unbequem passierbarer Mittelstreifen	3nocross::ignrte 13785,12292 13885,12279 14208,12235
-Liebigstr. -> Frankfurter Allee: unbequem passierbarer Mittelstreifen	3::igndisp 13905,12374 13885,12279 14208,12235
-Frankfurter Allee -> Liebigstr.: unbequem passierbarer Mittelstreifen	3::igndisp 13785,12292 13885,12279 13905,12374
+Liebigstr. -> Frankfurter Allee: unbequem passierbarer Mittelstreifen	3::igndisp 13927,12370 13885,12279 14208,12235
+Frankfurter Allee -> Liebigstr.: unbequem passierbarer Mittelstreifen	3::igndisp 13785,12292 13885,12279 13927,12370
 unbequem passierbarer Mittelstreifen	3nocross::ignrte 9701,11656 9898,11679 9981,11689
 Leipziger Str. -> Jerusalemer Str.: unbequem passierbarer Mittelstreifen	3::igndisp 9701,11656 9898,11679 9892,11752
 Mittelstreifen mit Straﬂenbahn	3nocross::ignrte 12177,14335 12228,14404 12266,14460 12317,14535
@@ -1769,6 +1772,7 @@ F¸rstenwalder Damm -> Hoher Weg: Straﬂenbahntrasse	3::igndisp 23851,5389 23822,5
 Mittelstreifen	3nocross::ignrte 10349,2188 10431,2258 10504,2321
 Lienzer Pfad -> Tauernallee: Mittelstreifen	3::igndisp 10444,2234 10431,2258 10349,2188
 Tauernallee -> Lienzer Pfad: Mittelstreifen	3::igndisp 10504,2321 10431,2258 10444,2234
+Mittelstreifen	3nocross::ignrte 10226,1515 10239,1481 10276,1383
 tragen (16 Stufen)	0:25:-232 22814,4505
 tragen (19 Stufen)	0:30:86 23930,6013
 tragen (16 Stufen)	0:25:-164 23948,6054
@@ -1847,7 +1851,7 @@ tragen (Treppe)	0:30:-267 1471,-311
 tragen (ca. 20 Stufen)	0:30:-221 730,13286
 tragen (Treppe)	0:30:-105 3281,15792
 tragen (ca. 35 Stufen)	0:30:-235 3361,15784
-tragen (ca. 40 Stufen)	0:30:56 1761,3208
+tragen (4 x 8 Stufen)	0:30:56 1761,3208
 tragen (ca. 30 Stufen)	0:30:53 17757,11761
 tragen (15 Stufen)	0:30:-198 4710,23263
 tragen (Treppe)	0:30:-65 1179,13532
@@ -1860,7 +1864,7 @@ tragen (26 Stufen, steile Treppe)	0:30:-213 15156,6034
 tragen (Treppe)	0:30:-117 4808,3404
 tragen (zwei Treppen, je ca. 10 Stufen)	0:30:-246 8822,16873
 tragen (Treppe)	0:30:11 14390,5443
-tragen (Treppe)	0:30:-253 14340,5414
+tragen (Treppe)	0:30:-171 14325,5409
 tragen (ca. 35 Stufen)	0:30:-108 18180,12262
 tragen (S-Bhf. Marzahn)	0:30:-195 19571,15417
 tragen (S-Bhf. Marzahn)	0:30:-155 19638,15431
@@ -1899,7 +1903,7 @@ tragen (Bahn¸bergang ehem. Bhf. Satzkorn)	0:60:57 -19183,7299
 schieben (Rampe Schmˆckwitzwerdersteg)	0:30:-155 30533,-3124
 schieben (Rampe Schmˆckwitzwerdersteg)	0:30:30 30546,-3072
 tragen (Treppe Mansfelder Str.)	0:30:-269 3619,9331
-tragen (Treppe)	0:30:-263 9557,12992
+tragen (22 Stufen)	0:30:-263 9557,12992
 tragen (Treppe)	0:30:83 9508,12991
 tragen (Treppe)	0:30:-226 9983,16561
 tragen (Treppe)	0:30:38 9982,16527
@@ -1943,6 +1947,12 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-108 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
+Tor	BNP:10:-144:trailer=15 14555,4976
+Schranke	BNP:3:-207:trailer=10 14433,4716
+Dr‰ngelgitter am Bahn¸bergang (2x)	BNP:6:-178:trailer=15 14985,1801
+Tor	BNP:10:-198:trailer=15 11630,2024
+Schranke (lichte Breite ca. 90cm)	BNP:4:-82:trailer=15 11091,1529
+Tor	BNP:10:-12:trailer=15 1707,1256
 Schranke	BNP:1:-142:trailer=3 21514,11796
 Dr‰ngelgitter	BNP:3:-181:trailer=10 8357,9598
 Schranke	BNP:1:-38:trailer=3 17028,23968
@@ -2131,14 +2141,16 @@ Schranke (lichte Breite ca. 120cm)	BNP:2:-50:trailer=8 14448,4501
 Schranke (lichte Breite ca. 120cm)	BNP:2:-53:trailer=8 14709,4307
 Schranke (lichte Breite ca. 100cm)	BNP:3:-45:trailer=10 15179,3901
 Tor	BNP:5:-57 26888,13976
+Spreeufer: wegen Bauarbeiten gesperrt	2:inwork 8596,12576 8495,12651 8473,12753
+(Leuthener Platz - Wilhelm-Kabus-Str.): Bauz‰une	2:inwork 7716,8356 7837,8354 7893,8327
+(General-Pape-Str. - Gontermannstr.): Bauz‰une	2:inwork 8106,8290 8264,8289
+Axel-Springer-Str.: wird noch gebaut	2:inwork 10166,11592 10202,11669 10213,11728
 Sonnenkieker: Bauarbeiten	2:inwork 22610,13808 22669,13842 22692,13836
 Tegeler Hafen: Weg ¸ber Insel gesperrt	2 1756,20405 1736,20441 1742,20464 1762,20505 1761,20539
 Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,20603
-Beuthstr.: Bauarbeiten f¸r Anbindung der Axel-Springer-Str. zum Spittelmarkt	2:inwork 10229,11618 10197,11605 10166,11592
 H¸ttenweg: Sperrung wegen Bau an der Autobahn, wahrscheinlich bis 2012	2:inwork -739,6838 -927,6888
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9385,13174
 Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405,12953 14686,12873
-Tiergartenufer: Bauarbeiten, gesperrt	2:inwork 5711,11841 5565,11871
 Behrenstr.: Bauarbeiten, vollst‰ndig gesperrt	2:inwork 9743,12239 9801,12245
 Hinter der Katholischen Kirche: Bauarbeiten, vollst‰ndig gesperrt	2:inwork 9801,12245 9795,12293 9780,12401
 Schloﬂplatz: Bauarbeiten, gesperrt	2:inwork 10170,12261 10063,12438
@@ -2168,7 +2180,7 @@ Dr‰ngelgitter	BNP:5:-241 4386,6288
 Dr‰ngelgitter	BNP:5:-56 4351,6307
 Heimst‰ttenweg (kein ˆffentlicher Verkehr)	2 4355,6207 4323,6131 4268,6154
 Markobrunner Str.	1 4374,7016 4462,7137 4593,7167
-Deidesheimer Str.	1 4983,7546 4784,7534 4616,7563 4497,7595
+Deidesheimer Str.	1 4983,7546 4784,7534 4616,7563 4486,7597
 Landauer Str.	1 4578,7358 4786,7327
 Eschenstr. (Friedenau)	1 5067,7523 5121,7523 5158,7560
 (Zur Dillenburger Str.)	1 3837,6926 3964,6928 4000,6852
@@ -2348,8 +2360,8 @@ Hohenzollerndamm -> Kronberger Str.: Mittlestreifen wg. Leitplanke nicht zu quer
 Mittelstreifen schlecht zu queren	3nocross::ignrte 2116,7740 2094,7719 2036,7653
 Kˆnigsmarckstr. -> Hohenzollerndamm: Mittelstreifen schlecht zu queren	3::igndisp 1971,7738 2094,7719 2116,7740
 Hohenzollerndamm -> Kˆnigsmarckstr.: Mittelstreifen schlecht zu queren	3::igndisp 2036,7653 2094,7719 1971,7738
-Mittelstreifen	3nocross::ignrte 1136,3878 1152,3918 1203,4047
-Biesalskistr. -> Clayallee: Mittelstreifen	3::igndisp 1130,3930 1152,3918 1203,4047
+Mittelstreifen	3nocross::ignrte 1136,3878 1152,3918 1214,4075
+Biesalskistr. -> Clayallee: Mittelstreifen	3::igndisp 1130,3930 1152,3918 1214,4075
 Am Zirkus	1 9239,12923 9170,13031 9145,13020 9118,13070
 Adele-Schreiber-Krieger-Str.	1s 8737,12757 8596,12748
 Virchowweg: schmale Toreinfahrt, Fuﬂg‰nger und Bordstein	0:10:86 8548,13577

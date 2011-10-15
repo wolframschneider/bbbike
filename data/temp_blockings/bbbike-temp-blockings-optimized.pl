@@ -1012,16 +1012,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_013995',
-         'until' => 1317387600,
-         'text' => 'Freiheit/Wiesendamm (Spandau): Baustelle, Fahrtrichtung gesperrt (bis Ende 09/2011) Richtung Spandauer Damm zwischen Klärwerkstr. und Spandauer Damm, 25.08.2009 07:04 Uhr bis 30.09.2011 15:00 Uhr ',
-         'from' => 1251090240,
-         'id' => 1850,
-         'data' => 'userdel	q4::inwork; -1258,13552 -990,13502 -729,13415 -346,13349 -307,13279 -264,13009
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1342,7 +1333,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10640,8366 10598,8270 10575,8218
@@ -1630,26 +1621,8 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'LS/O-SG33-E/11/044',
-         'until' => 1317506400,
-         'text' => 'Flieth-Stegelitz: L24: Brücke über den Stierngraben bei Kaakstedt, LSA-Regelung, ab 18.7. Vollsperrung',
-         'from' => 1304805600,
-         'id' => 2208,
-         'data' => 'userdel	2::inwork 35887,85385 34920,85944
-',
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'LS/O-SG33-F/11/070',
-         'until' => 1317420000,
-         'text' => 'Bad Freienwalde (Oder): B167: Straßenbau- und Kanalarbeiten Ortsdurchfahrt Bad Freienwalde, Eberswalder Straße Beginn Vollsperrung geplant, 09.05.2011 bis 30.09.2011 ',
-         'from' => 1304796386,
-         'id' => 2209,
-         'data' => 'userdel	q4::inwork 52119,43318 50799,43130
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        {
          'source_id' => 'INKO_093372',
          'until' => 1333206000,
@@ -1786,16 +1759,7 @@ userdel	q4::inwork 2295,20358 2362,20218 2402,20126
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_016196',
-         'until' => 1316786400,
-         'text' => 'Köpenicker Str. (Altglienicke): Baustelle, für beide Richtungen nur ein Fahrstreifen abwechselnd frei (bis Ende 09/11) in beiden Richtungen zwischen Korkedamm und Semmelweisstr., 09.08.2010 07:00 Uhr bis 23.09.2011 16:00 Uhr ',
-         'from' => 1281243600,
-         'id' => 2253,
-         'data' => 'userdel	q4::inwork 19812,1923 19840,2010 19939,2074 20100,2247
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1843,16 +1807,7 @@ userdel	q4::inwork 2295,20358 2362,20218 2402,20126
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110825.1435.356236.html',
-         'until' => 1317506400,
-         'text' => 'Vollsperrung der Schorfheidestraße zwischen Dannenwalder Weg und Wilhelmsruher Damm in Berlin-Reinickendorf aufgrund von Straßenbaumaßnahmen, vom 29.08.2011 bis voraussichtlich 01.10.2011 ',
-         'from' => 1314482400,
-         'id' => 2273,
-         'data' => 'userdel	q4::inwork 6298,20599 6330,20742 6347,20819 6366,20902 6376,20951 6380,20983 6382,21109
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20110826.1055.356350.html',
          'until' => 1324656000,
@@ -1874,16 +1829,7 @@ userdel	q4::inwork 2295,20358 2362,20218 2402,20126
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20110902.1020.357195.html',
-         'until' => 1316469599,
-         'text' => 'Buchholzer Straße, Einbahnstraße zwischen Beuthstraße und Herthaplatz, von 5. September 2011 bis 19. September 2011',
-         'from' => 1315087200,
-         'id' => 2277,
-         'data' => 'userdel	q4::inwork; 10599,19957 10609,19971 10802,20240 10843,20301
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1911,32 +1857,49 @@ userdel	3 12992,7545 13015,7440 12925,7425
          'type' => 'gesperrt'
        },
        {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110914.1015.358646.html',
-         'until' => 1317697200,
-         'text' => 'Rote Chaussee: Vollsperrung, von 30.09.2011, 14:00 Uhr bis 04.10.2011, 5:00 Uhr ',
-         'from' => 1317297600,
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110929.0810.360313.html',
+         'until' => 1318820400,
+         'text' => 'Rote Chaussee: Vollsperrung, vom 14.10.2011, 14:00 Uhr bis 17.10.2011, 5:00 Uhr',
+         'from' => 1318507200,
          'id' => 2284,
          'data' => 'userdel	2::inwork 872,24330 905,24113 831,24054 764,24065 609,24215 237,24374 195,24389 132,24390 78,24364 -406,23934
 ',
          'type' => 'gesperrt'
        },
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'source_id' => 'IM_017830',
-         'until' => 1316383140,
-         'text' => 'Hauptstr. (Rosenthal): Veranstaltung, Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 16.09.2011 07:00 Uhr bis 18.09.2011 23:59 Uhr ',
-         'from' => 1316062800,
-         'id' => 2285,
-         'data' => 'userdel	q4::temp 8591,21906 8460,21602
+         'source_id' => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20110928.1340.360235.html',
+         'until' => 1318111199,
+         'text' => 'Torstraße: zwischen Chausseestraße und Rosenthaler Platz Richtung Osten gesperrt, vom 04. bis 08. Oktober 2011',
+         'from' => 1317679200,
+         'id' => 2289,
+         'data' => 'userdel	q4::inwork; 9212,13471 9340,13510 9394,13528 9517,13571 9571,13590 9668,13629 9792,13681 9918,13733 10177,13766
 ',
          'type' => 'handicap'
        },
        {
-         'source_id' => 'IM_017848',
-         'until' => 1316282400,
-         'text' => 'Kirchstr. (Zehlendorf): Veranstaltung, Straße vollständig gesperrt, 16.09.2011 14:00 Uhr bis 17.09.2011 20:00 Uhr ',
-         'from' => 1316088000,
-         'id' => 2286,
-         'data' => 'userdel	q4::temp 751,2860 589,2925
+         'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20110930.1255.360473.html',
+         'until' => undef,
+         'text' => 'Blankenburger Straße: Richtung Dietzgenstraße zwischen Lindenberger Straße und Siegfriedstraße wegen Bauarbeiten gesperrt, ab 5. Oktober 2011',
+         'from' => 1317679200,
+         'id' => 2290,
+         'data' => '#: XXX Ende der Bauarbeiten?
+#: XXX nach den Bauarbeiten Radfahrstreifen
+#: next_check: 2012-03-01
+userdel	q4::inwork; 11148,19838 11051,19789 10948,19737 10829,19676 10742,19632
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110928.1140.360205.html',
+         'until' => 1318716000,
+         'text' => 'Zeltinger Straße wird als Einbahnstraße vom Zeltinger Platz in Richtung Zerndorfer Weg ausgewiesen, vom 04.10.2011 bis 15.10.2011',
+         'from' => 1317592800,
+         'id' => 2291,
+         'data' => 'userdel	q4::inwork; 2941,25822 2897,25776 2764,25639 2721,25576 2657,25486 2531,25368 2519,25353 2446,25265
 ',
          'type' => 'handicap'
        }

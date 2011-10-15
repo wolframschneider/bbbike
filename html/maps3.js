@@ -8,7 +8,9 @@ var map; // main map object
 var bbbike = {
     // map type by google
     mapTypeControlOptions: {
-        mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
+        // moved to bbbike_maps_init(), because the JS object google is not defiend yet
+        mapTypeIds: [],
+        // google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
     },
 
     // enable Google Arial View: 45 Imagery
@@ -30,6 +32,7 @@ var bbbike = {
         YahooSatelliteMapType: true,
 
         BingMapMapType: true,
+        BingMapOldMapType: false,
         BingHybridMapType: true,
         BingSatelliteMapType: false,
         BingBirdviewMapType: true
@@ -96,6 +99,9 @@ var bbbike = {
 
         "start": "/images/dd-start.png",
         "dest": "/images/dd-end.png",
+        "via": "/images/yellow-dot.png",
+
+        "shadow": "/images/shadow-dot.png",
 
     },
 
@@ -103,6 +109,14 @@ var bbbike = {
 
     granularity: 100000,
     // 5 digits for LatLng after dot
+    // position of green/red/yellow search markers
+    // 3-4: centered, left top
+    // 8: left top
+    search_markers_pos: 3.5,
+
+    // change input color to dark green/red/yellow if marker was moved
+    dark_icon_colors: 1,
+
     // IE bugs
     dummy: 0
 };
@@ -314,6 +328,9 @@ function is_supported_maptype(maptype, list) {
 }
 
 function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam) {
+    bbbike.mapTypeControlOptions.mapTypeIds = [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN];
+    state.maplist = init_google_map_list();
+
     if (!is_supported_map(maptype)) {
         maptype = bbbike.mapDefault;
     }
@@ -339,7 +356,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         },
         zoomControlOptions: {
             position: google.maps.ControlPosition.LEFT_TOP,
-            style: google.maps.ZoomControlStyle.DEFAULT // SMALL
+            style: google.maps.ZoomControlStyle.LARGE // DEFAULT // SMALL
         },
         overviewMapControl: bbbike.controls.overviewMapControl
     });
@@ -891,7 +908,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         },
 
         "bing_map_old": function () {
-            if (bbbike.mapType.BingMapMapType) {
+            if (bbbike.mapType.BingMapOldMapType) {
                 var BingMapMapType = new google.maps.ImageMapType(bing_map_old_options);
                 map.mapTypes.set("bing_map_old", BingMapMapType);
                 custom_map("bing_map_old", lang, bing_map_old_options.bbbike);
@@ -1051,6 +1068,35 @@ function add_panoramio_layer(map, enable) {
     layers.panoramioLayer.setMap(enable ? map : null);
 }
 
+//
+// guess if a streetname is from the OSM database
+// false: 123,456
+// false: foo [123,456]
+//
+
+function osm_streetname(street) {
+    if (street.match(/^[\-\+ ]?[0-9\.]+,[\-\+ ]?[0-9\.]+[ ]*$/) || street.match(/^.* \[[0-9\.,\-\+]+\][ ]*$/)) {
+        return 0;
+    } else {
+        return 1;
+    }
+}
+
+function plotStreetGPS(street, caller) {
+    var pos = street.match(/^(.*) \[([0-9\.,\-\+]+),[0-9]\][ ]*$/);
+
+    debug("pos: " + pos[1] + " :: " + pos[2] + " :: length: " + pos.length);
+    if (pos.length == 3) {
+        var data = '["' + pos[1] + '",["' + pos[1] + "\t" + pos[2] + '"]]';
+        debug(data);
+
+        // plotStreet()
+        caller(data);
+    } else {
+        debug("cannot plot street");
+    }
+}
+
 var street = "";
 var street_cache = [];
 var data_cache = [];
@@ -1059,6 +1105,11 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
     var streetnames = 3; // if set, display a info window with the street name
     var autozoom = 13; // if set, zoom to the streets
     var url = encodeURI("/cgi/street-coord.cgi?namespace=" + (streetnames ? "3" : "0") + ";city=" + city + "&query=" + street);
+
+    if (!osm_streetname(street)) {
+        debug("Not a OSM street name: '" + street + ', skip ajax call"');
+        return plotStreetGPS(street, plotStreet);
+    }
 
     if (!strokeColor) {
         strokeColor = "#0000FF";
@@ -1078,7 +1129,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
     }
 
     function addInfoWindow(marker, address) {
-        infoWindow = new google.maps.InfoWindow({
+        var infoWindow = new google.maps.InfoWindow({
             maxWidth: 500
         });
         var content = "<span id=\"infoWindowContent\">\n"
@@ -1086,6 +1137,12 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
         content += "</span>\n";
         infoWindow.setContent(content);
         infoWindow.open(map, marker);
+
+        // close info window after 4 seconds
+        setTimeout(function () {
+            infoWindow.close()
+        }, 4000)
+
     };
 
     // plot street(s) on map
@@ -1093,6 +1150,8 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
     function plotStreet(data) {
         var js = eval(data);
         var streets_list = js[1];
+        var query = js[0];
+        var query_lc = query.toLowerCase();
 
         var autozoom_points = [];
         for (var i = 0; i < streets_list.length; i++) {
@@ -1143,7 +1202,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
 
                 var marker = new google.maps.Marker({
                     position: streets_route[pos],
-                    icon: bbbike.icons.green,
+                    icon: query_lc == street.toLowerCase() ? bbbike.icons.green : bbbike.icons.white,
                     map: map
                 });
 
@@ -1155,6 +1214,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
 
                 if (streets_list.length <= 10) {
                     addInfoWindow(marker, street);
+
                 }
 
                 street_cache.push(marker);
@@ -1354,6 +1414,7 @@ function plotRoute(map, opt, street) {
         infoWindow.setContent(content);
         infoWindow.open(map, marker);
 
+
         routeSave = route;
         route.setOptions({
             strokeWeight: 10
@@ -1482,7 +1543,6 @@ function init_google_map_list() {
 }
 
 var currentText = {};
-state.maplist = init_google_map_list();
 
 function HomeControl(controlDiv, map, maptype, lang, opt) {
     var name = opt && opt.name ? translate_mapcontrol(opt.name, lang) : translate_mapcontrol(maptype, lang);
@@ -1763,8 +1823,9 @@ function displayCurrentPosition(area, lang) {
                 maxWidth: 400
             });
             var content = "<div id=\"infoWindowContent\">\n"
-            content += "<p>" + translate_mapcontrol("Your current postion", lang) + ": " + currentPosition.lat + "," + currentPosition.lng + "</p>\n";
+            content += "<p class='grey'>" + translate_mapcontrol("Your current postion", lang) + ": " + currentPosition.lat + "," + currentPosition.lng + "</p>\n";
             content += "<p>" + translate_mapcontrol("Approximate address", lang) + ": " + address + "</p>\n";
+            // content += "<p>" + translate_mapcontrol("From here") + " " + translate_mapcontrol("To here") + "</p>\n";
             content += "</div>\n";
             infoWindow.setContent(content);
             infoWindow.open(map, marker);
@@ -2123,12 +2184,16 @@ function _init_markers(opt) {
         lng = sw.lng();
     }
 
-    var pos_lng = lng + (ne.lng() - lng) / 8; //  1/8 right
-    var pos_lat = lat - (lat - sw.lat()) / 12; //  1/2 down
-    padding = (ne.lng() - lng) / 30; // distance beteen markers on map, 1/35 of the map
+    var dist = bbbike.search_markers_pos; // use 3.5 or 8
+    var pos_lng = lng + (ne.lng() - lng) / dist; //  right
+    var pos_lat = lat - (lat - sw.lat()) / dist; //  down
+    padding = (ne.lng() - lng) / 16; // distance beteen markers on map, 1/x of the map
     var pos_start = new google.maps.LatLng(pos_lat, pos_lng);
     var pos_dest = new google.maps.LatLng(pos_lat, pos_lng + padding);
     var pos_via = new google.maps.LatLng(pos_lat, pos_lng + 2.0 * padding);
+
+    // shadow for markers, if moved
+    var shadow = new google.maps.MarkerImage(bbbike.icons["shadow"], new google.maps.Size(49.0, 32.0), new google.maps.Point(0, 0), new google.maps.Point(16.0, 16.0));
 
     var marker_start = new google.maps.Marker({
         position: pos_start,
@@ -2151,7 +2216,7 @@ function _init_markers(opt) {
         clickable: true,
         draggable: true,
         title: translate_mapcontrol("Set via point", lang),
-        icon: bbbike.icons["yellow_dot"] // icon: "/images/ziel_ptr.png"
+        icon: bbbike.icons["via"] // icon: "/images/ziel_ptr.png"
     });
 
 
@@ -2179,15 +2244,15 @@ function _init_markers(opt) {
     var event = 'drag'; // "drag", Firefox bug
     google.maps.event.addListener(marker_start, event, function () {
         state.markers_drag.marker_start = marker_start;
-        find_street(marker_start, "suggest_start")
+        find_street(marker_start, "suggest_start", shadow)
     });
     google.maps.event.addListener(marker_dest, event, function () {
         state.markers_drag.marker_dest = marker_dest;
-        find_street(marker_dest, "suggest_ziel")
+        find_street(marker_dest, "suggest_ziel", shadow)
     });
     google.maps.event.addListener(marker_via, event, function () {
         state.markers_drag.marker_via = marker_via;
-        find_street(marker_via, "suggest_via")
+        find_street(marker_via, "suggest_via", shadow)
     });
 }
 
@@ -2212,7 +2277,7 @@ function debug(text, id) {
     tag.innerHTML = "debug: " + text; // + " " + today;
 }
 
-function find_street(marker, input_id) {
+function find_street(marker, input_id, shadow) {
     var latLng = marker.getPosition();
 
     var input = document.getElementById(input_id);
@@ -2224,11 +2289,19 @@ function find_street(marker, input_id) {
         var value = granularity(latLng.lng()) + ',' + granularity(latLng.lat());
         input.setAttribute("value", value);
 
+        // set shadow to indicate an active marker
+        marker.setShadow(shadow);
+
         display_current_crossing(marker, input_id, {
             "lng": granularity(latLng.lng()),
             "lat": granularity(latLng.lat())
         });
 
+        var type = input_id.substr(8);
+        var color = document.getElementById("icon_" + type);
+        if (bbbike.dark_icon_colors && color) {
+            color.setAttribute("bgcolor", type == "start" ? "green" : type == "ziel" ? "red" : "yellow");
+        }
 
         // debug(value);
     } else {
@@ -2319,7 +2392,7 @@ function updateCrossing(marker, id, data) {
 
     if (value) {
         v = value.split("\t");
-        street_latlng = v[1] + " [" + v[0] + "]";
+        street_latlng = v[1] + " [" + v[0] + ",0]";
     } else {
         street_latlng = js.query;
     }

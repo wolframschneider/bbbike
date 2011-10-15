@@ -9,9 +9,8 @@
 # (This is a slightly modified version of the original pmake as found in
 # the FreeBSD sources)
 #
-# pmake is also available as a standard Debian package, but a somewhat
-# older version which has some minor problems:
-# * the uppercase construct ${...:U} does not exist
+# Debian users may use freebsd-make from the freebsd-buildutils
+# package.
 
 .ifndef HOSTNAME
 HOSTNAME	!= hostname
@@ -1846,7 +1845,7 @@ do-doublechecks:	.doublecheck_strassen.tmp \
 .doublecheck_strassen.tmp:	.strassen.tmp
 	-rm /tmp/strassen-XXX
 	$(CONVERT2HAFAS) strassen-orig > /tmp/strassen-XXX
-	diff -I '#: alias:' -u .strassen.tmp /tmp/strassen-XXX
+	diff -I '#: alias:' -I '#: oldname' -u .strassen.tmp /tmp/strassen-XXX
 	rm /tmp/strassen-XXX
 	touch $@
 

@@ -236,7 +236,7 @@ body { position: relative;width: 100%;height: 100%;z-index: 0; }
 div#routing { 
 	position: absolute; 
 	left: 0px;
-	width: 17em;
+	width: 22em;
 	background-color: white;
 	z-index: 1000; 
 }
@@ -244,7 +244,7 @@ div#routing {
 div#routes {
 	position: absolute; 
 	left: 0px;
-	width: 17em;
+	width: 22em;
 	background-color: white;
 	z-index: 1000; 
 	
@@ -258,7 +258,7 @@ div#BBBikeGooglemap {
         width: 74%; 
         height: 80%;
 	position: relative;
-	margin-left: 18.4em; 
+	margin-left: 22.4em; 
 	border: 1px solid #979797;z-index: 0; 
 	top: -1.0em; 
 }
@@ -319,5 +319,5 @@ div#list span:active { text-decoration:none; color: red; }
 
 .honey { display: none; }
 
-span.grey { font-size: small; color: #808080 }
+span.grey, p.grey { font-size: small; color: #808080 }
 

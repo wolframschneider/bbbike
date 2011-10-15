@@ -110,7 +110,7 @@ Platz des 23. April	Pl 21954,5229
 Sickingenplatz	Pl 4587,13837
 Goslarer Platz	Pl 4296,13228
 Ottoplatz	Pl 5691,13144
-Sandmeyerplatz	Pl 653,1540
+Sandmeyerplatz	Pl 644,1539
 Esperantoplatz	Pl 13761,7328
 Andreasplatz	Pl 12295,12197
 Grieser Platz	Pl 2947,9367
@@ -128,6 +128,9 @@ Annemirl-Bauer-Platz	Pl 14669,11152
 Boddinplatz	Pl 12104,8299
 Kläre-Bloch-Platz	Pl 2953,11830
 Schmetterlingsplatz	Pl 693,9129
+#: XXX Umbenennung zum Friedrich-Hollaender-Platz
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/43re.pdf/file?y=2011
+#: next_check: 2012-01-18 (Umbenennung wird dann wirksam)
 Rankeplatz	Pl 5529,10453
 Herbert-Lewin-Platz	Pl 5518,12159
 Inge-Beisheim-Platz	Pl 8473,11634
@@ -240,6 +243,7 @@ Marga-Meusel-Platz	Pl -745,3401
 Havelkaiser-Platz	Pl -2334,16624
 Lipschitzplatz	Pl 14633,2145
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/28re.pdf/file
+#: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20110920.0625.359202.html
 Franz-Amrehn-Platz	Pl 5165,6119
 Clara-Zetkin-Platz	Pl 22574,13017
 Paul-Levi-Platz	Pl 25041,14016
