@@ -2875,6 +2875,7 @@ function " . $type . "char_init() {}
 	}
 	$button_str .= qq{ type=submit onclick="show_spinning_wheel();" value="} . M("Weiter") . qq{ &gt;&gt;"></a>};
 	$tbl_center_under_inputs->($button_str);
+        $tbl_center_under_inputs->("&nbsp;");
         $tbl_center_under_inputs->(&spinning_wheel);
     }
 
