@@ -137,7 +137,7 @@ return {
     "f&uuml;r Druck optimieren"                                                        => "optymalizacji do druku",
     "Viastra&szlig;e"                                                                  => "przez ulicę",
     "Experimentell"                                                                    => "experimental",
-    "Start- und Zielstra&szlig;e der Route eingeben"                => "Proszę podać start i ulicy przeznaczenia nazwę",
+    "Start- und Zielstra&szlig;e der Route eingeben"                                   => "Proszę podać start i ulicy przeznaczenia nazwę",
     "Ampeln vermeiden"                                                                 => "Unikaj światła",
     "Weg ohne Kfz"                                                                     => "ulicy bez pojazdów silnikowych",
     "Keine Route gefunden"                                                             => "Nie znaleziono trasy",

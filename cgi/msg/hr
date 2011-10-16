@@ -1,7 +1,7 @@
 # -*- perl -*-
 return {
-    "Start- und Zielstra&szlig;e der Route ausw&auml;hlen"              => "Odaberite Start i odredišni naziv ulice",
-    "Start- und Zielstra&szlig;e der Route eingeben" => "Molimo unesite početak i odredište naziv ulice",
+    "Start- und Zielstra&szlig;e der Route ausw&auml;hlen" => "Odaberite Start i odredišni naziv ulice",
+    "Start- und Zielstra&szlig;e der Route eingeben"       => "Molimo unesite početak i odredište naziv ulice",
 
     "Unterwegs mit"                                                                    => "Na putu s",
     "Querformat"                                                                       => "Pejzaž",

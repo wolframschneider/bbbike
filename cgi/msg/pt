@@ -137,7 +137,7 @@ return {
     "f&uuml;r Druck optimieren"                                                        => "otimizar para imprimir",
     "Viastra&szlig;e"                                                                  => "através da rua",
     "Experimentell"                                                                    => "experimental",
-    "Start- und Zielstra&szlig;e der Route eingeben"                => "Por favor, indique de partida eo destino nome da rua",
+    "Start- und Zielstra&szlig;e der Route eingeben"                                   => "Por favor, indique de partida eo destino nome da rua",
     "Ampeln vermeiden"                                                                 => "Evite semáforos",
     "Ampeln vermeiden"                                                                 => "Evite semáforos",
     "Keine Route gefunden"                                                             => "Nenhum caminho encontrado",

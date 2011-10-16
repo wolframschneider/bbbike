@@ -138,7 +138,7 @@ return {
     "f&uuml;r Druck optimieren"                                                                                                                            => "“优化打印",
     "Viastra&szlig;e"                                                                                                                                      => "通过一条街",
     "Experimentell"                                                                                                                                        => "实验性",
-    "Start- und Zielstra&szlig;e der Route eingeben"                                                                                    => "请输入起始和没有门牌号码</乙>目的地的街道名称的",
+    "Start- und Zielstra&szlig;e der Route eingeben"                                                                                                       => "请输入起始和没有门牌号码</乙>目的地的街道名称的",
     "Ampeln vermeiden"                                                                                                                                     => "避免交通灯",
     "Weg ohne Kfz"                                                                                                                                         => "街道无车辆",
     "Keine Route gefunden"                                                                                                                                 => "没有路由发现",
