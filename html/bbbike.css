@@ -321,3 +321,6 @@ div#list span:active { text-decoration:none; color: red; }
 
 span.grey, p.grey { font-size: small; color: #808080 }
 
+// position of 'via' link
+td#via_message { padding-top: 0em; }
+
