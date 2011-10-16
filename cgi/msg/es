@@ -138,7 +138,7 @@ return {
     "f&uuml;r Druck optimieren"                                         => "optimizar la impresión",
     "Viastra&szlig;e"                                                   => "a través de la calle",
     "Experimentell"                                                     => "experimental",
-    "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)" => "Por favor, introduzca de inicio y destino <b> nombre de la calle, sin número de casa </b>! Se le pedirá para el cruce de calles en la página siguiente",
+    "Start- und Zielstra&szlig;e der Route eingeben" => "Por favor, introduzca de inicio y destino",
     "Ampeln vermeiden"                                                  => "semáforo Evita",
     "Weg ohne Kfz"                                                      => "calle sin vehículos de motor",
     "Keine Route gefunden"                                              => "No hay ninguna vía que se encuentran",

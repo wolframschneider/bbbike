@@ -137,7 +137,7 @@ return {
     "f&uuml;r Druck optimieren"                                                        => "оптимизировать для печати",
     "Viastra&szlig;e"                                                                  => "по улице",
     "Experimentell"                                                                    => "экспериментальных",
-    "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)"                => "Пожалуйста, введите начало и назначения название улицы <b> без номера дома </B>! Вам будет предложено на перекрестке на следующей странице",
+    "Start- und Zielstra&szlig;e der Route eingeben"                => "Пожалуйста, введите начало и назначения название улицы",
     "Ampeln vermeiden"                                                                 => "Избегайте светофора",
     "Weg ohne Kfz"                                                                     => "улицу без автомобилей",
     "Keine Route gefunden"                                                             => "Не найден маршрут",
