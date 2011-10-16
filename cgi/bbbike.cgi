@@ -2873,8 +2873,9 @@ function " . $type . "char_init() {}
 	if ($nice_berlinmap || $nice_abcmap) {
 	    $button_str .= qq{ onclick='cleanup_special_click()'};
 	}
-	$button_str .= qq{ type=submit onclick="show_spinning_wheel();" value="} . M("Weiter") . qq{ &gt;&gt;"></a>} .  &spinning_wheel;
+	$button_str .= qq{ type=submit onclick="show_spinning_wheel();" value="} . M("Weiter") . qq{ &gt;&gt;"></a>};
 	$tbl_center_under_inputs->($button_str);
+        $tbl_center_under_inputs->(&spinning_wheel);
     }
 
     print "</table>\n" if $bi->{'can_table'};
