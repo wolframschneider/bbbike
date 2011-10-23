@@ -134,7 +134,7 @@ return {
     "f&uuml;r Druck optimieren"                                                        => "optimiser pour l'impression",
     "Viastra&szlig;e"                                                                  => "par la rue",
     "Experimentell"                                                                    => "expérimentale",
-    "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)"                => "S'il vous plaît entrez vous <b> nom de la rue de destination, sans numéro de la maison </b>! Vous serez invité à la rue transversale à la page suivante",
+    "Start- und Zielstra&szlig;e der Route eingeben"                                   => "S'il vous plaît entrez vous nom de la rue de destination",
     "Ampeln vermeiden"                                                                 => "éviter des feux",
     "Weg ohne Kfz"                                                                     => "rue sans véhicules à moteur",
     "Keine Route gefunden"                                                             => "ne trouvé pas un itinéraire",

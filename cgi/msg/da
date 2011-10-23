@@ -137,7 +137,7 @@ return {
     "f&uuml;r Druck optimieren"                                                        => "optimere til print",
     "Viastra&szlig;e"                                                                  => "via street",
     "Experimentell"                                                                    => "eksperimenterende",
-    "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)"                => "Angiv start-og bestemmelsessted gadenavn <b> uden husnummer </b>! Du vil blive bedt om vejkryds på næste side",
+    "Start- und Zielstra&szlig;e der Route eingeben"                                   => "Angiv start-og bestemmelsessted gadenavn",
     "Ampeln vermeiden"                                                                 => "Undgå trafiklys",
     "Weg ohne Kfz"                                                                     => "gaden uden motorkøretøjer",
     "Keine Route gefunden"                                                             => "Ingen rute fundet",

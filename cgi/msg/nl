@@ -137,7 +137,7 @@ return {
     "f&uuml;r Druck optimieren"                                                        => "optimaliseren voor print",
     "Viastra&szlig;e"                                                                  => "via de straat",
     "Experimentell"                                                                    => "experimentele",
-    "Start- und Zielstra&szlig;e der Route eingeben (ohne Hausnummer!)"                => "Geef start-en straatnaam van uw bestemming <b> zonder huisnummer </b>! U wordt gevraagd voor de kruising op de volgende pagina",
+    "Start- und Zielstra&szlig;e der Route eingeben"                                   => "Geef start-en straatnaam van uw bestemming",
     "Ampeln vermeiden"                                                                 => "Vermijd verkeerslichten",
     "Weg ohne Kfz"                                                                     => "straat zonder auto's",
     "Keine Route gefunden"                                                             => "Geen route gevonden",
