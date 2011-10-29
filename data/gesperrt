@@ -630,7 +630,7 @@ Oelder Weg	1 1967,18743 1965,18686
 Steffenshagener Str.	1s 23159,11097 22983,11098
 Pestalozzistr.	1s 24652,11794 24706,11838 24769,11819
 Finsterberger Str.	1s 23086,12565 23129,12496 23233,12406
-Bauerwitzer Weg	1 22917,12239 22814,12353 22990,12493
+Bauerwitzer Weg	1 22917,12239 22814,12353 22861,12390 22990,12493
 Heinrich-Grüber-Platz	1 22877,11940 22858,11937 22843,11999 22856,12003 22870,12000 22883,11956 22877,11940
 Boraweg	1s 6759,2882 6710,2909 6658,2907
 Viktoriaplatz	1 3500,4146 3523,4139 3528,4118 3518,4106 3489,4115 3485,4137 3500,4146
@@ -662,6 +662,10 @@ Grenzweg	1 9456,-1271 9493,-1269 9503,-1302 9496,-1327 9457,-1329
 Alt-Lichtenrade	1 10782,-24 10835,-145
 Glimmerweg	1 11436,1513 11349,1483 11161,1518
 Dorfstr.	1s 18144,18813 18161,18814
+Nossener Str.	1 24345,14403 24298,14267 24217,14041
+Nossener Str.	1 24187,14052 24221,14142 24272,14278 24321,14410
+Mark-Twain-Str.	1 24349,14500 24363,14453 24345,14403
+Mark-Twain-Str.	1 24321,14410 24349,14500
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -1598,9 +1602,11 @@ Karl-Marx-Allee -> Berolinastr.: Mittelstreifen	3::igndisp 11228,12951 11295,129
 Berolinastr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 11362,12964 11295,12915 11589,12768
 Karl-Marx-Allee -> Berolinastr.: Mittelstreifen	3::igndisp 11295,12915 11589,12768 11600,12857
 Berolinastr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 11600,12857 11589,12768 11635,12745
-unbequem zu überqueren (Bordsteine)	3nocross::ignrte 10796,8498 10911,8457 11271,8325
-Am Rixdorfer Teich -> Columbiadamm: unbequem zu überqueren (Bordsteine)	3::igndisp 10957,8573 10911,8457 11271,8325
-Columbiadamm -> Am Rixdorfer Teich: unbequem zu überqueren (Bordsteine)	3::igndisp 10796,8498 10911,8457 10957,8573
+unbequem zu überqueren (Bordsteine)	3nocross::ignrte 10796,8498 10911,8457 11223,8343 11271,8325
+Hasenheide, am Rixdorfer Teich -> Columbiadamm: unbequem zu überqueren (Bordsteine)	3::igndisp 10929,8503 10911,8457 11223,8343
+Columbiadamm -> Hasenheide, am Rixdorfer Teich: unbequem zu überqueren (Bordsteine)	3::igndisp 10796,8498 10911,8457 10929,8503
+Hasenheide, westlicher Weg -> Columbiadamm: unbequem zu überqueren (Bordsteine)	3::igndisp 11235,8454 11223,8343 11271,8325
+Columbiadamm -> Hasenheide, westlicher Weg: unbequem zu überqueren (Bordsteine)	3::igndisp 10911,8457 11223,8343 11235,8454
 Mittelstreifen	3nocross::ignrte 4807,5131 4766,5208 4745,5283
 Fronhoferstr. -> Wolfensteindamm: Mittelstreifen	3::igndisp 4656,5101 4766,5208 4745,5283
 Wolfensteindamm -> Fronhoferstr.: Mittelstreifen	3::igndisp 4807,5131 4766,5208 4656,5101
@@ -1888,7 +1894,7 @@ tragen (Spreetunnel, 50 Stufen)	0:60:52 25571,4553
 tragen (Brücke Tegeler Hafen)	0:60:-256 1227,20281
 tragen (Brücke Tegeler Hafen)	0:60:-231 1166,20330
 tragen (Stufen), mit MTB befahrbar	0:30:-69 5725,11644
-tragen (20 Stufen)	0:25:16 13138,9897
+tragen (23 Stufen)	0:25:16 13138,9897
 unter der S-Bahn-Brücke tragen (6 Stufen)	0:10:-180 3726,18982
 unter der S-Bahn-Brücke tragen (5 Stufen)	0:10:-154 3733,18997
 tragen (31 Stufen) oder Aufzug (Storkower Str.)	0:30:-71 14530,13269
@@ -1948,6 +1954,8 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-108 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
+Drängelgitter	BNP:3:11:trailer=10 24958,13798
+Drängelgitter	BNP:3:30:trailer=10 24946,13755
 Tor	BNP:10:-144:trailer=15 14555,4976
 Schranke	BNP:3:-207:trailer=10 14433,4716
 Drängelgitter am Bahnübergang (2x)	BNP:6:-178:trailer=15 14985,1801
@@ -2085,6 +2093,7 @@ Drängelgitter	BNP:5:34:trailer=10 14453,9929
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2:39:trailer=4 14558,10082
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2:41:trailer=4 14597,10129
 Drängelgitter	BNP:3:-153:trailer=no 12904,10141
+Drängelgitter	BNP:1:-154:trailer=3 12833,9998
 Schranke (Privatstr.)	BNP:5:-180 25039,5304
 Schranke	BNP:2:85:trailer=4 9907,11752
 Schranke	BNP:5:50:trailer=10 10112,11796
