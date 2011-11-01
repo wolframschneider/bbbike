@@ -26,6 +26,7 @@ var bbbike = {
         PublicTransportMapType: true,
         HikeBikeMapType: true,
         TahMapType: true,
+        BBBikeMapnikMapType: true,
 
         YahooMapMapType: true,
         YahooHybridMapType: true,
@@ -75,7 +76,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik"],
 
     area: {
         visible: true,
@@ -333,6 +334,9 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     if (!is_supported_map(maptype)) {
         maptype = bbbike.mapDefault;
+	if (city == "bbbike" && is_supported_map("bbbike_mapnik")) {
+	    maptype = "bbbike_mapnik";
+	}
     }
     state.lang = lang;
     state.marker_list = marker_list;
@@ -519,6 +523,25 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         minZoom: 1,
         maxZoom: 18
     };
+
+    // BBBike data in mapnik
+    var bbbike_mapnik_options = {
+        bbbike: {
+            "name": "BBBike (mapnik)",
+            "description": "BBBike Mapnik, by Slaven Rezic"
+        },
+        getTileUrl: function (a, z) {
+            // return "http://" + randomServerOSM() + ".tile.openstreetmap.de/tiles/osmde/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "BBBIKE-MAPNIK",
+        minZoom: 1,
+        maxZoom: 18
+    };
+
 
     // http://osm.t-i.ch/bicycle/map/
     var mapnik_bw_options = {
@@ -844,6 +867,15 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("mapnik_de", lang, mapnik_de_options.bbbike);
             }
         },
+        "bbbike_mapnik": function () {
+            if (bbbike.mapType.BBBikeMapnikMapType && city == "bbbike") {
+	        //bbbike.mapDefault = "bbbike_mapnik"; // make it the default map
+ 
+                var BBBikeMapnikMapType = new google.maps.ImageMapType(bbbike_mapnik_options);
+                map.mapTypes.set("bbbike_mapnik", BBBikeMapnikMapType);
+                custom_map("bbbike_mapnik", lang, bbbike_mapnik_options.bbbike);
+            }
+        },
         "mapnik_bw": function () {
             if (bbbike.mapType.MapnikBwMapType) {
                 var MapnikBwMapType = new google.maps.ImageMapType(mapnik_bw_options);
@@ -944,6 +976,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         }
     };
 
+    mapControls.bbbike_mapnik();
     mapControls.mapnik();
     mapControls.mapnik_de();
     mapControls.mapnik_bw();
