@@ -532,7 +532,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         },
         getTileUrl: function (a, z) {
             // return "http://" + randomServerOSM() + ".tile.openstreetmap.de/tiles/osmde/" + z + "/" + a.x + "/" + a.y + ".png";
-            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/mapnik/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
