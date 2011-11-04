@@ -868,7 +868,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             }
         },
         "bbbike_mapnik": function () {
-            if (bbbike.mapType.BBBikeMapnikMapType && city == "bbbike") {
+            if (bbbike.mapType.BBBikeMapnikMapType && (city == "bbbike" || city == "Berlin")) {
 	        //bbbike.mapDefault = "bbbike_mapnik"; // make it the default map
  
                 var BBBikeMapnikMapType = new google.maps.ImageMapType(bbbike_mapnik_options);
