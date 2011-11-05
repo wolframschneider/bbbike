@@ -27,6 +27,7 @@ var bbbike = {
         HikeBikeMapType: true,
         TahMapType: true,
         BBBikeMapnikMapType: true,
+        BBBikeMapnikGermanMapType: true,
 
         YahooMapMapType: true,
         YahooHybridMapType: true,
@@ -76,7 +77,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german"],
 
     area: {
         visible: true,
@@ -527,7 +528,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     // BBBike data in mapnik
     var bbbike_mapnik_options = {
         bbbike: {
-            "name": "BBBike (mapnik)",
+            "name": "BBBike",
             "description": "BBBike Mapnik, by Slaven Rezic"
         },
         getTileUrl: function (a, z) {
@@ -538,6 +539,23 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         opacity: 1.0,
         tileSize: new google.maps.Size(256, 256),
         name: "BBBIKE-MAPNIK",
+        minZoom: 1,
+        maxZoom: 18
+    };
+
+    // BBBike data in mapnik german
+    var bbbike_mapnik_german_options = {
+        bbbike: {
+            "name": "BBBike (DE)",
+            "description": "BBBike Mapnik German, by Slaven Rezic"
+        },
+        getTileUrl: function (a, z) {
+            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/mapnik-german/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "BBBIKE-MAPNIK-GERMAN",
         minZoom: 1,
         maxZoom: 18
     };
@@ -876,6 +894,13 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("bbbike_mapnik", lang, bbbike_mapnik_options.bbbike);
             }
         },
+        "bbbike_mapnik_german": function () {
+            if (bbbike.mapType.BBBikeMapnikGermanMapType && (city == "bbbike" || city == "Berlin")) {
+                var BBBikeMapnikGermanMapType = new google.maps.ImageMapType(bbbike_mapnik_german_options);
+                map.mapTypes.set("bbbike_mapnik_german", BBBikeMapnikGermanMapType);
+                custom_map("bbbike_mapnik_german", lang, bbbike_mapnik_german_options.bbbike);
+            }
+        },
         "mapnik_bw": function () {
             if (bbbike.mapType.MapnikBwMapType) {
                 var MapnikBwMapType = new google.maps.ImageMapType(mapnik_bw_options);
@@ -977,6 +1002,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     };
 
     mapControls.bbbike_mapnik();
+    mapControls.bbbike_mapnik_german();
     mapControls.mapnik();
     mapControls.mapnik_de();
     mapControls.mapnik_bw();
