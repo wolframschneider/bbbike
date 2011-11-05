@@ -13,6 +13,7 @@
 #
 
 use strict;
+use Data::Dumper;
 use FindBin;
 use lib ("$FindBin::RealBin/..",
 	 "$FindBin::RealBin/../lib",
@@ -47,6 +48,8 @@ my $shorten_for_garmin;
 my $quiet;
 my $debug;
 my $do_highway_primary_hack = 0;
+my $dump_quality = 1;
+
 GetOptions("single=s" => \$single_file,
 	   "type=s" => \$single_file_type,
 	   "fragezeichen=s" => \$fragezeichen_file,
@@ -298,6 +301,8 @@ sub handle_blocked_way_like {
 
 sub handle_handicap_like {
     my($r, $dir) = @_;
+
+
     my($cat_hin, $cat_rueck);
     if ($r->[Strassen::CAT] =~ /^(.*);(.*)$/) {
 	($cat_hin, $cat_rueck) = ($1, $2);
@@ -357,7 +362,10 @@ sub handle_handicap_like {
 	}
     }
     if (defined $quality) {
-	push @remember_quality, [\@node_ids, $quality];
+	my $street = $r->[0];
+	$street =~ s/:.*//;
+	$street =~ s/"/'/g;
+	push @remember_quality, [\@node_ids, $quality, $street];
     }
 }
 
@@ -1029,12 +1037,18 @@ sub _xmlify {
 
 sub dump_quality {
     for my $def (@remember_quality) {
-	my($node_ids, $quality) = @$def;
+	my($node_ids, $quality, $street) = @$def;
 	print $wayfh qq{<way id="$next_way_id" visible="true">\n};
 	for my $node_id (@$node_ids) {
 	    print $wayfh qq{  <nd ref="$node_id"/>\n};
 	}
 	print $wayfh qq{  <tag k="bbbike:quality" v="Q$quality" />\n};
+
+	if ($dump_quality) {
+	    print $wayfh qq{  <tag k="name" v="$street" />\n};
+	    print $wayfh qq{  <tag k="highway" v="residential" />\n};
+	}
+
 	print $wayfh qq{</way>\n};
 	$next_way_id++;
     }
