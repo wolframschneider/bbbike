@@ -28,6 +28,7 @@ var bbbike = {
         TahMapType: true,
         BBBikeMapnikMapType: true,
         BBBikeMapnikGermanMapType: true,
+        BBBikeQualityMapType: true,
 
         YahooMapMapType: true,
         YahooHybridMapType: true,
@@ -57,9 +58,10 @@ var bbbike = {
     mapLayers: {
         TrafficLayer: true,
         BicyclingLayer: true,
-        PanoramioLayer: true,
+        PanoramioLayer: false,
 
         // enable full screen mode
+        StreetQuality: true,
         SlideShow: true,
         FullScreen: true
     },
@@ -77,7 +79,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_quality"],
 
     area: {
         visible: true,
@@ -543,6 +545,23 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 18
     };
 
+    // BBBike quality
+    var bbbike_quality_options = {
+        bbbike: {
+            "name": "BBBike (Quality)",
+            "description": "BBBike Street Quality, by Slaven Rezic"
+        },
+        getTileUrl: function (a, z) {
+            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/bbbike-quality/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "BBBIKE-QUALITY",
+        minZoom: 1,
+        maxZoom: 18
+    };
+
     // BBBike data in mapnik german
     var bbbike_mapnik_german_options = {
         bbbike: {
@@ -894,6 +913,17 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("bbbike_mapnik", lang, bbbike_mapnik_options.bbbike);
             }
         },
+
+	// layer
+        "bbbike_quality": function () {
+            if (bbbike.mapType.BBBikeQualityMapType && (city == "bbbike" || city == "Berlin")) {
+                var BBBikeQualityMapType = new google.maps.ImageMapType(bbbike_quality_options);
+	        return BBBikeQualityMapType;
+
+                // custom_map("bbbike_quality", lang, bbbike_quality_options.bbbike);
+            }
+        },
+
         "bbbike_mapnik_german": function () {
             if (bbbike.mapType.BBBikeMapnikGermanMapType && (city == "bbbike" || city == "Berlin")) {
                 var BBBikeMapnikGermanMapType = new google.maps.ImageMapType(bbbike_mapnik_german_options);
@@ -1003,6 +1033,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     mapControls.bbbike_mapnik();
     mapControls.bbbike_mapnik_german();
+    // mapControls.bbbike_quality();
     mapControls.mapnik();
     mapControls.mapnik_de();
     mapControls.mapnik_bw();
@@ -1026,6 +1057,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     // google maps layers
     init_layers();
+    layers.streetQualityLayer = mapControls.bbbike_quality();
 
     custom_layer(map, {
         "layer": "FullScreen",
@@ -1042,6 +1074,13 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "lang": lang
     });
 
+    custom_layer(map, {
+        "layer": "Street Quality",
+        "enabled": bbbike.mapLayers.StreetQuality,
+        "active": false,
+        "callback": add_streetquality_layer,
+        "lang": lang
+    });
 
     custom_layer(map, {
         "layer": "PanoramioLayer",
@@ -1113,8 +1152,19 @@ function add_traffic_layer(map, enable) {
         layers.trafficLayer.setMap(null);
     }
 }
-// add traffic to map, by google maps
 
+// bbbike street quality layer
+function add_streetquality_layer(map, enable) {
+    if (!layers.streetQualityLayer) return;
+
+    if (enable) {
+        map.overlayMapTypes.setAt(0, layers.streetQualityLayer);
+    } else {
+        // map.overlayMapTypes.setAt(1, null);
+    }
+}
+
+// add traffic to map, by google maps
 function add_panoramio_layer(map, enable) {
     // ignore if nothing to display
     if (!layers.panoramioLayer && !enable) return;
@@ -1542,6 +1592,7 @@ function translate_mapcontrol(word, lang) {
             "Error: outside area": "Fehler: ausserhalb des Gebietes",
             "Start": "Start",
             "Destination": "Ziel",
+            "Street Quality": "Strassenqualit&auml;t",
             "Via": "Via"
         },
         "es": {
