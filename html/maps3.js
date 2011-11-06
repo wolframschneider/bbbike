@@ -28,7 +28,6 @@ var bbbike = {
         TahMapType: true,
         BBBikeMapnikMapType: true,
         BBBikeMapnikGermanMapType: true,
-        BBBikeQualityMapType: true,
 
         YahooMapMapType: true,
         YahooHybridMapType: true,
@@ -61,9 +60,9 @@ var bbbike = {
         PanoramioLayer: false,
 
         // enable full screen mode
-        StreetQuality: true,
         SlideShow: true,
-        FullScreen: true
+        FullScreen: true,
+        StreetQuality: true
     },
 
     // default map
@@ -914,15 +913,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             }
         },
 
-	// layer
-        "bbbike_quality": function () {
-            if (bbbike.mapType.BBBikeQualityMapType && (city == "bbbike" || city == "Berlin")) {
-                var BBBikeQualityMapType = new google.maps.ImageMapType(bbbike_quality_options);
-	        return BBBikeQualityMapType;
-
-                // custom_map("bbbike_quality", lang, bbbike_quality_options.bbbike);
-            }
-        },
 
         "bbbike_mapnik_german": function () {
             if (bbbike.mapType.BBBikeMapnikGermanMapType && (city == "bbbike" || city == "Berlin")) {
@@ -1031,9 +1021,17 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         }
     };
 
+    // custome layer
+    var mapLayers = {
+        "bbbike_quality": function () {
+            if (bbbike.mapLayers.StreetQuality && (city == "bbbike" || city == "Berlin")) {
+                return new google.maps.ImageMapType(bbbike_quality_options);
+            }
+        },
+    };
+
     mapControls.bbbike_mapnik();
     mapControls.bbbike_mapnik_german();
-    // mapControls.bbbike_quality();
     mapControls.mapnik();
     mapControls.mapnik_de();
     mapControls.mapnik_bw();
@@ -1055,9 +1053,17 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         setCustomBold(maptype);
     }
 
-    // google maps layers
-    init_layers();
-    layers.streetQualityLayer = mapControls.bbbike_quality();
+    // maps layers
+    init_google_layers();
+    init_custom_layers(mapLayers);
+
+    custom_layer(map, {
+        "layer": "Street Quality",
+        "enabled": bbbike.mapLayers.StreetQuality,
+        "active": false,
+        "callback": add_streetquality_layer,
+        "lang": lang
+    });
 
     custom_layer(map, {
         "layer": "FullScreen",
@@ -1066,19 +1072,12 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "callback": toogleFullScreen,
         "lang": lang
     });
+
     custom_layer(map, {
         "layer": "SlideShow",
         "enabled": bbbike.mapLayers.SlideShow,
         "active": false,
         "callback": runSlideShow,
-        "lang": lang
-    });
-
-    custom_layer(map, {
-        "layer": "Street Quality",
-        "enabled": bbbike.mapLayers.StreetQuality,
-        "active": false,
-        "callback": add_streetquality_layer,
         "lang": lang
     });
 
@@ -1106,6 +1105,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "lang": lang
     });
 
+
     setTimeout(function () {
         hideGoogleLayers();
     }, 5000);
@@ -1121,12 +1121,18 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 }
 
-function init_layers() {
+// layers which works only on google maps
+function init_google_layers() {
     layers.bicyclingLayer = new google.maps.BicyclingLayer();
     layers.trafficLayer = new google.maps.TrafficLayer();
 
     // need to download library first
     layers.panoramioLayer = false;
+}
+
+// custom layers
+function init_custom_layers(layer) {
+    layers.streetQualityLayer = layer.bbbike_quality();
 }
 
 // add bicycle routes and lanes to map, by google maps
@@ -1160,7 +1166,7 @@ function add_streetquality_layer(map, enable) {
     if (enable) {
         map.overlayMapTypes.setAt(0, layers.streetQualityLayer);
     } else {
-        // map.overlayMapTypes.setAt(1, null);
+        map.overlayMapTypes.setAt(0, null);
     }
 }
 
