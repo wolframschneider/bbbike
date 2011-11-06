@@ -1023,7 +1023,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     // custome layer
     var mapLayers = {
         "bbbike_quality": function () {
-            if (bbbike.mapLayers.StreetQuality && (city == "bbbike" || city == "Berlin")) {
+            if (bbbike.mapLayers.StreetQuality) {
                 return new google.maps.ImageMapType(bbbike_quality_options);
             }
         },
@@ -1056,13 +1056,15 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     init_google_layers();
     init_custom_layers(mapLayers);
 
-    custom_layer(map, {
-        "layer": "Street Quality",
-        "enabled": bbbike.mapLayers.StreetQuality,
-        "active": false,
-        "callback": add_streetquality_layer,
-        "lang": lang
-    });
+    if (bbbike.mapLayers.StreetQuality && (city == "bbbike" || city == "Berlin" || city == "Oranienburg" || city == "Potsdam" || city == "FrankfurtOder")) {
+        custom_layer(map, {
+            "layer": "Street Quality",
+            "enabled": bbbike.mapLayers.StreetQuality,
+            "active": false,
+            "callback": add_streetquality_layer,
+            "lang": lang
+        });
+    }
 
     custom_layer(map, {
         "layer": "FullScreen",
@@ -1122,7 +1124,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
 // layers which works only on google maps
 
-
 function init_google_layers() {
     layers.bicyclingLayer = new google.maps.BicyclingLayer();
     layers.trafficLayer = new google.maps.TrafficLayer();
@@ -1133,9 +1134,10 @@ function init_google_layers() {
 
 // custom layers
 
-
 function init_custom_layers(layer) {
-    layers.streetQualityLayer = layer.bbbike_quality();
+    if (bbbike.mapLayers.StreetQuality) {
+        layers.streetQualityLayer = layer.bbbike_quality();
+    }
 }
 
 // add bicycle routes and lanes to map, by google maps
@@ -1164,7 +1166,6 @@ function add_traffic_layer(map, enable) {
 
 // bbbike street quality layer
 
-
 function add_streetquality_layer(map, enable) {
     if (!layers.streetQualityLayer) return;
 
@@ -1176,7 +1177,6 @@ function add_streetquality_layer(map, enable) {
 }
 
 // add traffic to map, by google maps
-
 
 function add_panoramio_layer(map, enable) {
     // ignore if nothing to display
