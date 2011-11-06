@@ -336,9 +336,9 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     if (!is_supported_map(maptype)) {
         maptype = bbbike.mapDefault;
-	if (city == "bbbike" && is_supported_map("bbbike_mapnik")) {
-	    maptype = "bbbike_mapnik";
-	}
+        if (city == "bbbike" && is_supported_map("bbbike_mapnik")) {
+            maptype = "bbbike_mapnik";
+        }
     }
     state.lang = lang;
     state.marker_list = marker_list;
@@ -905,8 +905,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         },
         "bbbike_mapnik": function () {
             if (bbbike.mapType.BBBikeMapnikMapType && (city == "bbbike" || city == "Berlin")) {
-	        //bbbike.mapDefault = "bbbike_mapnik"; // make it the default map
- 
+                //bbbike.mapDefault = "bbbike_mapnik"; // make it the default map
                 var BBBikeMapnikMapType = new google.maps.ImageMapType(bbbike_mapnik_options);
                 map.mapTypes.set("bbbike_mapnik", BBBikeMapnikMapType);
                 custom_map("bbbike_mapnik", lang, bbbike_mapnik_options.bbbike);
@@ -1122,6 +1121,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 }
 
 // layers which works only on google maps
+
+
 function init_google_layers() {
     layers.bicyclingLayer = new google.maps.BicyclingLayer();
     layers.trafficLayer = new google.maps.TrafficLayer();
@@ -1131,6 +1132,8 @@ function init_google_layers() {
 }
 
 // custom layers
+
+
 function init_custom_layers(layer) {
     layers.streetQualityLayer = layer.bbbike_quality();
 }
@@ -1160,6 +1163,8 @@ function add_traffic_layer(map, enable) {
 }
 
 // bbbike street quality layer
+
+
 function add_streetquality_layer(map, enable) {
     if (!layers.streetQualityLayer) return;
 
@@ -1171,6 +1176,8 @@ function add_streetquality_layer(map, enable) {
 }
 
 // add traffic to map, by google maps
+
+
 function add_panoramio_layer(map, enable) {
     // ignore if nothing to display
     if (!layers.panoramioLayer && !enable) return;
