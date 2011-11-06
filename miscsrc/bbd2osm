@@ -1036,6 +1036,9 @@ sub _xmlify {
 }
 
 sub dump_quality {
+
+    my $dump_streetname = $optimize_for == OPTIMIZE_FOR_MAPNIK && $dump_quality ? 1 : 0;
+
     for my $def (@remember_quality) {
 	my($node_ids, $quality, $street) = @$def;
 	print $wayfh qq{<way id="$next_way_id" visible="true">\n};
@@ -1044,7 +1047,7 @@ sub dump_quality {
 	}
 	print $wayfh qq{  <tag k="bbbike:quality" v="Q$quality" />\n};
 
-	if ($dump_quality) {
+	if ($dump_streetname) {
 	    print $wayfh qq{  <tag k="name" v="$street" />\n};
 	    print $wayfh qq{  <tag k="highway" v="residential" />\n};
 	}
