@@ -287,6 +287,8 @@ sub get_html {
     my $route_length = Encode::decode( utf8 => $q->param('route_length') );
     my $zoom_param = $q->param('zoom_param');
 
+    my $map = Encode::decode( utf8 => $q->param('map') ) || "default";
+
     my $html = "";
 
     if ($fullscreen) {
@@ -336,7 +338,7 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     var marker_list_points = [ $route_points ];
 
     city = "$city";
-    bbbike_maps_init("default", $marker_list, "$lang", false, "$region", "$zoom_param" );
+    bbbike_maps_init("$map", $marker_list, "$lang", false, "$region", "$zoom_param" );
     if (document.getElementById("suggest_start")) {
 	init_markers({"lang":"$lang"});
     }
