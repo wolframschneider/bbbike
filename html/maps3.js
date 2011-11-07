@@ -330,7 +330,7 @@ function is_supported_maptype(maptype, list) {
     return 0;
 }
 
-function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam) {
+function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam, layer) {
     bbbike.mapTypeControlOptions.mapTypeIds = [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN];
     state.maplist = init_google_map_list();
 
@@ -1053,14 +1053,14 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     }
 
     // maps layers
-    init_google_layers();
-    init_custom_layers(mapLayers);
+    init_google_layers(layer);
+    init_custom_layers(mapLayers, layer);
 
     if (bbbike.mapLayers.Smoothness && (city == "bbbike" || city == "Berlin" || city == "Oranienburg" || city == "Potsdam" || city == "FrankfurtOder")) {
         custom_layer(map, {
             "layer": "Smoothness",
             "enabled": bbbike.mapLayers.Smoothness,
-            "active": false,
+            "active": layer == "smoothness" ? true : false,
             "callback": add_smoothness_layer,
             "lang": lang
         });
@@ -1069,7 +1069,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "FullScreen",
         "enabled": bbbike.mapLayers.FullScreen,
-        "active": false,
+        "active": layer == "fullscreen" ? true : false,
         "callback": toogleFullScreen,
         "lang": lang
     });
@@ -1077,7 +1077,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "SlideShow",
         "enabled": bbbike.mapLayers.SlideShow,
-        "active": false,
+        "active": layer == "slideshow" ? true : false,
         "callback": runSlideShow,
         "lang": lang
     });
@@ -1085,7 +1085,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "PanoramioLayer",
         "enabled": bbbike.mapLayers.PanoramioLayer,
-        "active": false,
+        "active": layer == "panoramio" ? true : false,
         "callback": add_panoramio_layer,
         "lang": lang
     });
@@ -1093,7 +1093,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "BicyclingLayer",
         "enabled": bbbike.mapLayers.BicyclingLayer,
-        "active": false,
+        "active": layer == "bicycling" ? true : false,
         "callback": add_bicycle_layer,
         "lang": lang
     });
@@ -1101,7 +1101,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "TrafficLayer",
         "enabled": bbbike.mapLayers.TrafficLayer,
-        "active": false,
+        "active": layer == "traffic" ? true : false,
         "callback": add_traffic_layer,
         "lang": lang
     });
@@ -1812,6 +1812,11 @@ function LayerControl(controlDiv, map, opt) {
     }
     if (layer == "PanoramioLayer") {
         layerText = "Panoramio";
+        callback(map, enabled);
+    }
+
+    // ???
+    if (layer == "Smoothness") {
         callback(map, enabled);
     }
 
