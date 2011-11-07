@@ -548,7 +548,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var bbbike_quality_options = {
         bbbike: {
             "name": "BBBike (Quality)",
-            "description": "BBBike Street Quality, by Slaven Rezic"
+            "description": "BBBike Smoothness, by Slaven Rezic"
         },
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/bbbike-quality/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -1058,7 +1058,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     if (bbbike.mapLayers.StreetQuality && (city == "bbbike" || city == "Berlin" || city == "Oranienburg" || city == "Potsdam" || city == "FrankfurtOder")) {
         custom_layer(map, {
-            "layer": "Street Quality",
+            "layer": "Smoothness",
             "enabled": bbbike.mapLayers.StreetQuality,
             "active": false,
             "callback": add_streetquality_layer,
@@ -1605,7 +1605,7 @@ function translate_mapcontrol(word, lang) {
             "Error: outside area": "Fehler: ausserhalb des Gebietes",
             "Start": "Start",
             "Destination": "Ziel",
-            "Street Quality": "Strassenqualit&auml;t",
+            "Smoothness": "Fahrbahnqualit&auml;t",
             "Via": "Via"
         },
         "es": {
