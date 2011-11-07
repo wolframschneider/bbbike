@@ -666,6 +666,7 @@ Nossener Str.	1 24345,14403 24298,14267 24217,14041
 Nossener Str.	1 24187,14052 24221,14142 24272,14278 24321,14410
 Mark-Twain-Str.	1 24349,14500 24363,14453 24345,14403
 Mark-Twain-Str.	1 24321,14410 24349,14500
+A.T.U-Einfahrt: Tor, außerhalb der Öffnungszeiten (Mo-Fr bis 20 Uhr, Sa bis 16 Uhr) gesperrt	2 8546,9468 8561,9482
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -1954,6 +1955,7 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-108 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
+Schranke	BNP:1:-153:trailer=3 14180,3334
 Drängelgitter	BNP:3:11:trailer=10 24958,13798
 Drängelgitter	BNP:3:30:trailer=10 24946,13755
 Tor	BNP:10:-144:trailer=15 14555,4976
@@ -1993,7 +1995,7 @@ Drängelgitter (lichte Breite ca. 80cm)	BNP:4:15:trailer=no -5236,11204
 Schranke (lichte Breite ca. 100cm)	BNP:2:-72:trailer=5 20904,19284
 Schranke	BNP:4:-102:trailer=10 11432,4054
 Schranke	BNP:4:-41:trailer=10 11408,4190
-Schranke	BNP:4:-216:trailer=10 15200,2754
+Schranke	BNP:4:-220:trailer=10 15200,2754
 Pfosten (lichte Breite ca. 120cm)	BNP:0:-69:trailer=5 18727,1040
 Pfosten (lichte Breite ca. 100cm)	BNP:0:-147:trailer=5 21356,8267
 Pfosten (lichte Breite ca. 100cm)	BNP:0:-146:trailer=5 21368,8285
@@ -2154,7 +2156,6 @@ Tor	BNP:5:-57 26888,13976
 (Markgrafenstr. - Ritterstr.): Bauarbeiten	2:inwork 9763,11148 9861,11103
 Spreeufer: wegen Bauarbeiten gesperrt	2:inwork 8596,12576 8495,12651 8473,12753
 (Leuthener Platz - Wilhelm-Kabus-Str.): Bauzäune	2:inwork 7716,8356 7837,8354 7893,8327
-(General-Pape-Str. - Gontermannstr.): Bauzäune	2:inwork 8106,8290 8264,8289
 Axel-Springer-Str.: wird noch gebaut	2:inwork 10166,11592 10202,11669 10213,11728
 Sonnenkieker: Bauarbeiten	2:inwork 22610,13808 22669,13842 22692,13836
 Tegeler Hafen: Weg über Insel gesperrt	2 1756,20405 1736,20441 1742,20464 1762,20505 1761,20539
