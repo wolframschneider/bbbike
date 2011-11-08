@@ -62,7 +62,7 @@ var bbbike = {
         // enable full screen mode
         SlideShow: true,
         FullScreen: true,
-        StreetQuality: true
+        Smoothness: true
     },
 
     // default map
@@ -78,7 +78,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_quality"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness"],
 
     area: {
         visible: true,
@@ -330,7 +330,7 @@ function is_supported_maptype(maptype, list) {
     return 0;
 }
 
-function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam) {
+function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam, layer) {
     bbbike.mapTypeControlOptions.mapTypeIds = [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN];
     state.maplist = init_google_map_list();
 
@@ -544,19 +544,19 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 18
     };
 
-    // BBBike quality
-    var bbbike_quality_options = {
+    // BBBike smoothness
+    var bbbike_smoothness_options = {
         bbbike: {
-            "name": "BBBike (Quality)",
-            "description": "BBBike Street Quality, by Slaven Rezic"
+            "name": "BBBike (Smoothness)",
+            "description": "BBBike Smoothness, by Slaven Rezic"
         },
         getTileUrl: function (a, z) {
-            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/bbbike-quality/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/bbbike-smoothness/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
         tileSize: new google.maps.Size(256, 256),
-        name: "BBBIKE-QUALITY",
+        name: "BBBIKE-SMOOTHNESS",
         minZoom: 1,
         maxZoom: 18
     };
@@ -1022,9 +1022,9 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     // custome layer
     var mapLayers = {
-        "bbbike_quality": function () {
-            if (bbbike.mapLayers.StreetQuality) {
-                return new google.maps.ImageMapType(bbbike_quality_options);
+        "bbbike_smoothness": function () {
+            if (bbbike.mapLayers.Smoothness) {
+                return new google.maps.ImageMapType(bbbike_smoothness_options);
             }
         },
     };
@@ -1053,15 +1053,15 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     }
 
     // maps layers
-    init_google_layers();
-    init_custom_layers(mapLayers);
+    init_google_layers(layer);
+    init_custom_layers(mapLayers, layer);
 
-    if (bbbike.mapLayers.StreetQuality && (city == "bbbike" || city == "Berlin" || city == "Oranienburg" || city == "Potsdam" || city == "FrankfurtOder")) {
+    if (bbbike.mapLayers.Smoothness && (city == "bbbike" || city == "Berlin" || city == "Oranienburg" || city == "Potsdam" || city == "FrankfurtOder")) {
         custom_layer(map, {
-            "layer": "Street Quality",
-            "enabled": bbbike.mapLayers.StreetQuality,
-            "active": false,
-            "callback": add_streetquality_layer,
+            "layer": "Smoothness",
+            "enabled": bbbike.mapLayers.Smoothness,
+            "active": layer == "smoothness" ? true : false,
+            "callback": add_smoothness_layer,
             "lang": lang
         });
     }
@@ -1069,7 +1069,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "FullScreen",
         "enabled": bbbike.mapLayers.FullScreen,
-        "active": false,
+        "active": layer == "fullscreen" ? true : false,
         "callback": toogleFullScreen,
         "lang": lang
     });
@@ -1077,7 +1077,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "SlideShow",
         "enabled": bbbike.mapLayers.SlideShow,
-        "active": false,
+        "active": layer == "slideshow" ? true : false,
         "callback": runSlideShow,
         "lang": lang
     });
@@ -1085,7 +1085,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "PanoramioLayer",
         "enabled": bbbike.mapLayers.PanoramioLayer,
-        "active": false,
+        "active": layer == "panoramio" ? true : false,
         "callback": add_panoramio_layer,
         "lang": lang
     });
@@ -1093,7 +1093,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "BicyclingLayer",
         "enabled": bbbike.mapLayers.BicyclingLayer,
-        "active": false,
+        "active": layer == "bicycling" ? true : false,
         "callback": add_bicycle_layer,
         "lang": lang
     });
@@ -1101,7 +1101,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "TrafficLayer",
         "enabled": bbbike.mapLayers.TrafficLayer,
-        "active": false,
+        "active": layer == "traffic" ? true : false,
         "callback": add_traffic_layer,
         "lang": lang
     });
@@ -1135,8 +1135,8 @@ function init_google_layers() {
 // custom layers
 
 function init_custom_layers(layer) {
-    if (bbbike.mapLayers.StreetQuality) {
-        layers.streetQualityLayer = layer.bbbike_quality();
+    if (bbbike.mapLayers.Smoothness) {
+        layers.smoothnessLayer = layer.bbbike_smoothness();
     }
 }
 
@@ -1164,13 +1164,13 @@ function add_traffic_layer(map, enable) {
     }
 }
 
-// bbbike street quality layer
+// bbbike smoothness layer
 
-function add_streetquality_layer(map, enable) {
-    if (!layers.streetQualityLayer) return;
+function add_smoothness_layer(map, enable) {
+    if (!layers.smoothnessLayer) return;
 
     if (enable) {
-        map.overlayMapTypes.setAt(0, layers.streetQualityLayer);
+        map.overlayMapTypes.setAt(0, layers.smoothnessLayer);
     } else {
         map.overlayMapTypes.setAt(0, null);
     }
@@ -1605,7 +1605,7 @@ function translate_mapcontrol(word, lang) {
             "Error: outside area": "Fehler: ausserhalb des Gebietes",
             "Start": "Start",
             "Destination": "Ziel",
-            "Street Quality": "Strassenqualit&auml;t",
+            "Smoothness": "Fahrbahnqualit&auml;t",
             "Via": "Via"
         },
         "es": {
@@ -1812,6 +1812,11 @@ function LayerControl(controlDiv, map, opt) {
     }
     if (layer == "PanoramioLayer") {
         layerText = "Panoramio";
+        callback(map, enabled);
+    }
+
+    // ???
+    if (layer == "Smoothness") {
         callback(map, enabled);
     }
 
