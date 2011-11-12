@@ -266,6 +266,7 @@ sub read_from_fh {
     my @block_directives_line;
     my $preserve_line_info = $args{PreserveLineInfo} || 0;
     my $preserve_comments  = $args{PreserveComments} || 0;
+    my @errors;
 
     local $_;
     while (<$fh>) {
@@ -300,8 +301,16 @@ sub read_from_fh {
 		    push @block_directives, [$directive => $value];
 		    push @block_directives_line, $.;
 		} elsif ($is_block_end) {
-		    pop @block_directives;
-		    pop @block_directives_line;
+		SEARCH_DIRECTIVE: {
+			for(my $i = $#block_directives; $i >= 0; $i--) {
+			    if ($block_directives[$i]->[0] eq $directive) {
+				splice @block_directives, $i, 1;
+				splice @block_directives_line, $i, 1;
+				last SEARCH_DIRECTIVE;
+			    }
+			}
+			push @errors, "Unexpected closed directive '$directive' at line $., but expected one of: " . join(", ", map { "$block_directives[$_]->[0] (line $block_directives_line[$_])" } (0 .. $#block_directives));
+		    }
 		} else {
 		    push @{ $line_directive{$directive} }, $value;
 		}
@@ -364,6 +373,9 @@ sub read_from_fh {
     }
     if (%line_directive) {
 	die "Stray line directive `@{[ keys %line_directive ]}' at end of file\n";
+    }
+    if (@errors) {
+	warn_or_die("ERROR: found following errors:\n" . join("\n", @errors) . "\n");
     }
     warn "... done\n" if ($VERBOSE && $VERBOSE > 1);
     close $fh;
@@ -555,8 +567,9 @@ sub as_string {
 	    $s .= "#:\n";
 	}
 	my %current_block_directives;
+	my $current_block_directives_i = 1;
 	for my $pos (0 .. $#{$self->{Data}}) {
-	    my $close_blocks = "";
+	    my @close_blocks;
 	    if ($self->{Directives}[$pos]) {
 		while(my($directive,$values) = each %{ $self->{Directives}[$pos] }) {
 		    for my $value (@$values) {
@@ -570,11 +583,11 @@ sub as_string {
 			}
 			if ($continuing_to_next_line && !$current_block_directives{$directive}{$value}) {
 			    $s .= "#: $directive: $value vvv\n";
-			    $current_block_directives{$directive}{$value} = 1;
+			    $current_block_directives{$directive}{$value} = $current_block_directives_i++;
 			} elsif ($continuing_to_next_line && $current_block_directives{$directive}{$value}) {
 			    # do nothing
 			} elsif (!$continuing_to_next_line && $current_block_directives{$directive}{$value}) {
-			    $close_blocks .= "#: $directive: ^^^\n";
+			    push @close_blocks, { content => "#: $directive: ^^^\n", line => $current_block_directives{$directive}{$value} };
 			    delete $current_block_directives{$directive}{$value};
 			} else {
 			    $s .= "#: $directive: $value\n";
@@ -583,7 +596,7 @@ sub as_string {
 		}
 	    }
 	    $s .= $self->{Data}[$pos];
-	    $s .= $close_blocks;
+	    $s .= join "", map { $_->{content} } sort { $b->{line} <=> $a->{line} } @close_blocks;
 	}
 	$s;
     } else {
