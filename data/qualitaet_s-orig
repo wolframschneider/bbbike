@@ -1425,6 +1425,7 @@ Briesestr.: Kopfsteinpflaster	Q2 12001,7937 12179,7979
 Briesestr.: Kopfsteinpflaster	Q2 12446,8032 12668,8077 12794,8103
 Geygerstr.: Asphalt	Q0 13066,8153 13194,8276
 Bellevue-Ufer: Kleinsteinpflaster	Q1- 6694,12627 7039,12314
+#: XXX wahrscheinlich mittlerweile asphaltiert?
 Bettina-von-Arnim-Ufer: Parkweg	Q1 7437,12368 7529,12496 7670,12576
 Große Querallee: Parkweg	Q1 7875,12363 7816,12150
 (Große Querallee - Tiergartenstr.): Asphalt	Q0 7816,12150 7827,12105 7832,12036 7822,11952 7801,11875
@@ -1625,9 +1626,9 @@ Gertrud-Kolmar-Str.: asphaltiert	Q0 8837,11676 8825,11773 8810,11824 8783,11959
 Am Johannistisch: Verbundsteinpflaster	Q1 10029,9989 10111,9942
 (Markgrafendamm - Modersohnstr.; über das DB-Gelände): Beton	Q0 14672,10760 14564,10792 14558,10819
 (Markgrafendamm - Modersohnstr.; über das DB-Gelände): mäßiges bis schlechtes Kopfsteinpflaster	Q3+ 14558,10819 14141,10931 14107,10911 14043,10928
-Mehringplatz: Verbundsteinpflaster	Q0 9590,10262 9508,10320 9509,10391 9580,10434 9644,10404 9662,10345 9646,10301 9590,10262
+Mehringplatz: Verbundsteinpflaster	Q0 9590,10262 9544,10280 9518,10326 9527,10389 9580,10434 9649,10408 9676,10346 9668,10306 9644,10281 9590,10262
 Mehringplatz - Friedrichstr.: Verbundsteinpflaster	Q0 9580,10434 9566,10566
-zum Mehringplatz: Verbundsteinpflaster	Q0 9873,10285 9646,10301
+zum Mehringplatz: Verbundsteinpflaster	Q0 9873,10285 9668,10306
 Brommystr.: Kopfsteinpflaster	Q2 12521,11016 12582,11103
 (Mariannenplatz - Bethaniendamm): Kopfsteinpflaster	Q2 11984,11130 12012,11235
 (Tunnelstr. - Uferweg): Parkweg	Q1 15662,9501 15749,9558
@@ -1915,7 +1916,11 @@ Jungfernheideweg: Kopfsteinpflaster	Q2 1238,15705 1293,15559
 Koloniestr.: Kopfsteinpflaster	Q2 8503,16716 8583,16914 8601,16960 8677,17154 8751,17307 8951,17717 8977,17771 8944,17961
 Selma-Lagerlöf-Str.: Asphalt	Q0 11782,17222 11768,17296 11729,17499
 Eschengraben: Asphalt	Q0 11621,16749
-Eschengraben: Wechsel zwischen Asphalt und Kopfsteinpflaster	Q2+ 11621,16749 11504,16746 11441,16745 11369,16744 11351,16744 11281,16743 11018,16730
+Eschengraben: Kopfsteinpflaster	Q2 11621,16749 11559,16747
+Eschengraben: Asphalt	Q0 11559,16747 11504,16746 11473,16746
+Eschengraben: Kopfsteinpflaster	Q2 11473,16746 11441,16745 11428,16745
+Eschengraben: Asphalt	Q0 11428,16745 11369,16744 11351,16744
+Eschengraben: Kopfsteinpflaster	Q2 11351,16744 11281,16743 11018,16730
 #: note: es gab widersprüchliche Angaben: mäßiger Beton Q1 (by anonymous) und guter Asphalt Q0 (by openbc...), die verkehrsberuhigte Zone hat sich wahrscheinlich erledigt
 Tiroler Str.: schlechter Asphalt	Q1- 10862,17087 10654,17091 10497,17095 10226,17098 10114,17098
 #: note: laut ADFC-Karte/neu schlecht geeignet:
@@ -8164,8 +8169,14 @@ Miethepfad: Asphalt	Q0 9520,-641 9561,-748 9600,-850
 #: corrected_by: Axel Stojenthin:
 #: confirmed_by: srt
 Schulzendorfer Str.: Asphalt	Q0 -656,23011 -700,22998 -728,22990 -774,22977 -915,22935 -1103,22889 -1251,22853 -1299,22842 -1538,22800
+#: XXX Asphaltierung der Fahrbahn vvv
+#: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20111116.1510.362622.html vvv
+#: next_check: 2011-11-24 vvv
 Schulzendorfer Str.: Fahrbahn Kopfsteinpflaster, Verbundsteinpflaster-Radweg	Q1 -1538,22800 -2024,22899 -2131,22810 -2176,22789
 Schulzendorfer Str.: Fahrbahn Kopfsteinpflaster, Ausweichen auf Gehweg möglich	Q1 -2176,22789 -2263,22748 -2348,22704 -2377,22689 -2504,22626
+#: next_check ^^^
+#: by: ^^^
+#: XXX ^^^
 #: by: ^^^
 # 
 #: by: Ullrich christ: vvv
@@ -8539,6 +8550,7 @@ Wachtelstr. (Dahlem): Kopfsteinpflaster	Q2 1946,6042 1983,6005 2141,5948 2170,59
 Vogelsang: Kopfsteinpflaster	Q2 2106,5808 2141,5948 2195,6184 2193,6214
 Vogelsang: Kopfsteinpflaster	Q2 2137,5798 2170,5939 2229,6203
 Spechtstr. (Dahlem): Kopfsteinpflaster	Q1 1909,5872 1929,5951 1912,6024
+#: XXX kann das Kopfsteinpflaster hier als "gut" bezeichnet werden?
 Dohnenstieg: Kopfsteinpflaster	Q2 2606,6708 2435,6690 2301,6638 2170,6567 1933,6497
 Gadebuscher Weg: Kopfsteinpflaster, am Rand besser	Q3 2547,6274 2499,6428
 Heinrich-Stahl-Weg: Verbundsteinpflaster, wassergeb. Decke	Q2 2367,6336 2281,6469
@@ -8648,6 +8660,8 @@ Hittorfstr.: Asphalt	Q1 2212,4600 2290,4709
 Hittorfstr: Kopfsteinpflaster	Q2 2290,4709 2381,4737 2442,4806 2469,4882 2516,4936 2587,4965
 Lefèvrestr.: Asphalt	Q0 4987,6902 4993,6812 5014,6752 5040,6706 5137,6651 5215,6643 5360,6642
 Paulsenstr.: Asphalt	Q0 4423,6477 4500,6612 4528,6711
+#: XXX Hat sich an Qualität oder Streckenführung nach den Bauarbeiten etwas geändert?
+#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1111/nachricht4523.html
 (Spreeufer zwischen Schloßpark Charlottenburg und Fürstenbrunner Weg): wassergebundene Decke	Q1 3231,12749 3127,12793 3055,12973 3020,13234 2996,13255 2980,13332 3003,13355 2953,13489 2950,13552 2922,13594 2859,13686 2777,13712 2568,13662 2260,13540 1951,13647 1826,13587 1753,13587 1512,13511 1198,13526 1144,13528
 #: note: laut ADFC-Karte "mäßig geeignet":
 (Spreeufer): wassergebundene Decke	Q1 -307,13279 -278,13322 76,13296 438,13324 848,13497 1144,13528
@@ -18534,7 +18548,7 @@ Holsteiner Ufer: Verbundsteine	Q1 6580,12775 6469,12867 6449,12865
 (Zufahrt Parkplätze Bartningallee): Gehwegplatten	Q1 6159,12505 6149,12454
 (Altonaer Str. - Flensburger Str.): Gehwegplatten	Q1 6178,12387 6149,12454 6137,12532 6160,12681
 Cuxhavener Str.: Kopfsteinpflaster	Q2 5919,12423 5951,12353 5999,12280
-(Zufahrt Parkplätze Kloppstockstr.): Kopfsteinpflaster	Q2 5930,12076 5884,12085 5880,12100 5999,12280
+(Zufahrt Parkplätze Kloppstockstr.): Kopfsteinpflaster	Q2 5917,12079 5880,12100 5999,12280
 (Cuxhavener Str. - Altonaer Str.): fester Sand	Q1 5999,12280 6086,12446
 Hanseatenweg: Kopfsteinpflaster	Q1 6444,12536 6445,12495 6428,12439 6368,12455 6324,12455 6314,12518
 Am Waldfriedhof: Asphalt	Q0 922,4910 928,4996
