@@ -29,7 +29,6 @@ Erkelenzdamm etc.	1 11328,10957 11264,10804 11301,10783 11275,10723
 Erkelenzdamm etc.	1 11258,10682 11244,10653 11210,10668 11145,10510 11109,10423 11134,10383 11117,10326
 Erkelenzdamm etc.	1 11094,10261 11038,10247 10967,10092
 ‹berf¸hrung Daimlerstr.	1 8639,2212 8588,2176 8559,2203 8552,2243 8606,2376
-Groﬂer Stern	1 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936 6685,11954 6642,12010 6653,12067 6690,12104 6725,12113
 Ernst-Reuter-Platz	1 4763,11834 4854,11843 4905,11785 4885,11735 4838,11697 4781,11708 4737,11768 4763,11834
 Theodor-Heuss-Platz	1 1381,11335 1403,11428 1574,11379 1532,11280 1450,11309 1381,11335
 Halenseestr.	1 2112,10488 2069,10330 2229,10045 2268,9976 2300,9883 2369,9779 2415,9765
@@ -2153,6 +2152,7 @@ Schranke (lichte Breite ca. 120cm)	BNP:2:-50:trailer=8 14448,4501
 Schranke (lichte Breite ca. 120cm)	BNP:2:-53:trailer=8 14709,4307
 Schranke (lichte Breite ca. 100cm)	BNP:3:-45:trailer=10 15179,3901
 Tor	BNP:5:-57 26888,13976
+Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
 (Markgrafenstr. - Ritterstr.): Bauarbeiten	2:inwork 9763,11148 9861,11103
 Spreeufer: wegen Bauarbeiten gesperrt	2:inwork 8596,12576 8495,12651 8473,12753
 (Leuthener Platz - Wilhelm-Kabus-Str.): Bauz‰une	2:inwork 7716,8356 7837,8354 7893,8327
@@ -2165,7 +2165,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9385,13174
 Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405,12953 14686,12873
 Behrenstr.: Bauarbeiten, vollst‰ndig gesperrt	2:inwork 9743,12239 9801,12245
 Hinter der Katholischen Kirche: Bauarbeiten, vollst‰ndig gesperrt	2:inwork 9801,12245 9795,12293 9780,12401
-Schloﬂplatz: Bauarbeiten, gesperrt	2:inwork 10170,12261 10063,12438
+Schloﬂplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 Boyenweg - Uferweg: wegen Bauarbeiten gesperrt	2:inwork 7938,14426 7886,14518 7787,14473
 Treitschkestr.: Bauarbeiten am Kaufhaus, bis 2012	2:inwork 5219,6215 5125,6262 4971,6345
 Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973

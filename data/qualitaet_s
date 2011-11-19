@@ -1463,9 +1463,9 @@ Gertrud-Kolmar-Str.: asphaltiert	Q0 8837,11676 8825,11773 8810,11824 8783,11959
 Am Johannistisch: Verbundsteinpflaster	Q1 10029,9989 10111,9942
 (Markgrafendamm - Modersohnstr.; über das DB-Gelände): Beton	Q0 14672,10760 14564,10792 14558,10819
 (Markgrafendamm - Modersohnstr.; über das DB-Gelände): mäßiges bis schlechtes Kopfsteinpflaster	Q3 14558,10819 14141,10931 14107,10911 14043,10928
-Mehringplatz: Verbundsteinpflaster	Q0 9590,10262 9508,10320 9509,10391 9580,10434 9644,10404 9662,10345 9646,10301 9590,10262
+Mehringplatz: Verbundsteinpflaster	Q0 9590,10262 9544,10280 9518,10326 9527,10389 9580,10434 9649,10408 9676,10346 9668,10306 9644,10281 9590,10262
 Mehringplatz - Friedrichstr.: Verbundsteinpflaster	Q0 9580,10434 9566,10566
-zum Mehringplatz: Verbundsteinpflaster	Q0 9873,10285 9646,10301
+zum Mehringplatz: Verbundsteinpflaster	Q0 9873,10285 9668,10306
 Brommystr.: Kopfsteinpflaster	Q2 12521,11016 12582,11103
 (Mariannenplatz - Bethaniendamm): Kopfsteinpflaster	Q2 11984,11130 12012,11235
 (Tunnelstr. - Uferweg): Parkweg	Q1 15662,9501 15749,9558
@@ -1706,7 +1706,11 @@ Jungfernheideweg: Kopfsteinpflaster	Q2 1238,15705 1293,15559
 Koloniestr.: Kopfsteinpflaster	Q2 8503,16716 8583,16914 8601,16960 8677,17154 8751,17307 8951,17717 8977,17771 8944,17961
 Selma-Lagerlöf-Str.: Asphalt	Q0 11782,17222 11768,17296 11729,17499
 Eschengraben: Asphalt	Q0 11621,16749
-Eschengraben: Wechsel zwischen Asphalt und Kopfsteinpflaster	Q2 11621,16749 11504,16746 11441,16745 11369,16744 11351,16744 11281,16743 11018,16730
+Eschengraben: Kopfsteinpflaster	Q2 11621,16749 11559,16747
+Eschengraben: Asphalt	Q0 11559,16747 11504,16746 11473,16746
+Eschengraben: Kopfsteinpflaster	Q2 11473,16746 11441,16745 11428,16745
+Eschengraben: Asphalt	Q0 11428,16745 11369,16744 11351,16744
+Eschengraben: Kopfsteinpflaster	Q2 11351,16744 11281,16743 11018,16730
 Tiroler Str.: schlechter Asphalt	Q1 10862,17087 10654,17091 10497,17095 10226,17098 10114,17098
 Weg am Humboldthain: Parkweg	Q1 8742,15298 8757,15328 8735,15478 8831,15644 8934,15740
 Kaiserstr. (Spandau): Asphalt	Q0 -3854,16997 -3845,16921 -3832,16847 -3819,16769 -3808,16690 -3777,16532 -3755,16369
@@ -6779,7 +6783,7 @@ Vesaliusstr.: Asphalt	Q0 11805,19071 11748,19235 11726,19482
 Stiftsweg: Asphalt	Q0 11001,18528 11268,18851
 Bleicheroder Str.: Asphalt	Q0 11268,18851 11439,18890 11526,18929 11622,18964 11727,19001 11762,19014 11805,19071
 Paracelsusstr.: schlechter Asphalt	Q2 11523,19393 11575,19296 11543,19279 11549,19258 11599,19171
-Paracelsusstr.: schlechter Asphalt	Q2 11634,19187 11727,19001
+Paracelsusstr.: Kopfsteinpflaster	Q2 11634,19187 11727,19001
 Paracelsusstr.: schlechter Asphalt	Q2 11671,19204 11613,19312 11575,19296
 Honnefer Str.: Asphalt	Q0 19316,8933 19209,9125
 Voltastr.: Kopfsteinpflaster	Q2 9041,14896 9206,14987 9361,15066 9566,15188
@@ -11217,7 +11221,7 @@ Holsteiner Ufer: Verbundsteine	Q1 6580,12775 6469,12867 6449,12865
 (Zufahrt Parkplätze Bartningallee): Gehwegplatten	Q1 6159,12505 6149,12454
 (Altonaer Str. - Flensburger Str.): Gehwegplatten	Q1 6178,12387 6149,12454 6137,12532 6160,12681
 Cuxhavener Str.: Kopfsteinpflaster	Q2 5919,12423 5951,12353 5999,12280
-(Zufahrt Parkplätze Kloppstockstr.): Kopfsteinpflaster	Q2 5930,12076 5884,12085 5880,12100 5999,12280
+(Zufahrt Parkplätze Kloppstockstr.): Kopfsteinpflaster	Q2 5917,12079 5880,12100 5999,12280
 (Cuxhavener Str. - Altonaer Str.): fester Sand	Q1 5999,12280 6086,12446
 Hanseatenweg: Kopfsteinpflaster	Q1 6444,12536 6445,12495 6428,12439 6368,12455 6324,12455 6314,12518
 Am Waldfriedhof: Asphalt	Q0 922,4910 928,4996
