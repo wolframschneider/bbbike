@@ -1394,7 +1394,7 @@ EOF
        text  => 'Weihnachtsmarkt am Schloßplatz, bis 25.12.2005',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 10170,12261 10063,12438
+userdel	2 10174,12284 10063,12438
 EOF
      },
      { from  => 1136837576, # 2006-01-09 21:12
@@ -2122,8 +2122,8 @@ userdel	2 9643,12127 9756,12139 9812,12145
 userdel	2 10091,12232 10035,12209 9972,12184
 userdel	2 9812,12145 9890,12161
 userdel	2 9890,12161 9972,12184
-userdel	2 10170,12261 10109,12238
-userdel	2 10170,12261 10281,12310
+userdel	2 10174,12284 10109,12238
+userdel	2 10174,12284 10194,12258 10281,12310
 EOF
      },
      { from  => 1118988173, # 2005-06-17 08:02
@@ -3292,14 +3292,15 @@ EOF
 userdel	1 -1668,-1709 -1715,-1767 -1921,-1931 -2049,-2165
 EOF
      },
-     { from  => 1290380400, # PERIODISCH! # früher: 1132411558, # 2005-11-19 15:45
-       until => 1294009199, # PERIODISCH! # früher: 1136069999, # 2005-12-31 23:59
-       text  => 'Weihnachtsmarkt an der Gedächtniskirche, vom 22. November 2010 bis 2. Januar 2011',
-       type  => 'handicap',
+     { from  => 1321743600, # 2011-11-20 00:00 # PERIODISCH!
+       until => 1325458800, # 2012-01-02 00:00 # PERIODISCH!
+       text  => 'Weihnachtsmarkt an der Gedächtniskirche, vom 21.11.2011 bis 1.1.2012',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20111116.1015.362582.html',
        data  => <<EOF,
-userdel	q4 5829,10964 5782,10884
-userdel	q4 5656,10876 5652,11004
-#XXX del - userdel	q4; 5652,11004 5716,10978 5829,10964
+# sowieso schon mit q4 markiert, deshalb -> 2
+userdel	2::temp 5829,10964 5782,10884
+userdel	2::temp 5656,10876 5652,11004
 EOF
      },
      { from  => 1132606608, # 2005-11-21 21:56
@@ -3494,10 +3495,11 @@ EOF
 userdel	2::inwork -19908,17940 -18793,18169
 EOF
      },
-     { from  => 1291417200, # PERIODISCH! 2. und 3. Advent # früher: 1165660181, # 2006-12-09 11:29
-       until => 1291590000, # PERIODISCH! 2. und 3. Advent # früher: 1165708800, # 2006-12-10 01:00
-       text  => 'Lichtenrader Weihnachtsmarkt: Bahnhofstr. (Lichtenrade) in beiden Richtungen zwischen Steinstr. und Goltzstr gesperrt (04.12.2010 bis 05.12.2010) ',
+     { from  => 1322301600, # 2011-11-26 11:00, PERIODISCH! an allen Adventssamstagen
+       until => 1322335800, # 2011-11-26 20:30, PERIODISCH! an allen Adventssamstagen
+       text  => 'Lichtenrader Weihnachtsmarkt: Bahnhofstr. (Lichtenrade) in beiden Richtungen zwischen Steinstr. und Goltzstr gesperrt (alle Adventssamstage von 11:00 bis 20:30) ',
        type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20111109.1040.362258.html',
        data  => <<EOF,
 userdel	q4 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
 EOF
@@ -6682,17 +6684,17 @@ EOF
 userdel	2::inwork -31993,-726 -32143,-211 -32153,-176
 EOF
      },
-     { from  => 1290380400, # PERIODISCH! # früher: 1163480400, # 2006-11-14 06:00
-       until => 1293404399, # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
-       text  => 'Weihnachtsmarkt am Opernpalais: der Bereich Oberwallstr., Niederlagstr., Am Schinkelplatz gesperrt, vom 22.11.-26.12.2010',
+     { from  => 1321916400, # 2011-11-22 00:00 # PERIODISCH! # früher: 1163480400, # 2006-11-14 06:00
+       until => 1324940399, # 2011-12-26 23:59 # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
+       text  => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: der Bereich Oberwallstr., Niederlagstr., Am Schinkelplatz gesperrt, vom 23.11.-26.12.2010',
        type  => 'gesperrt',
+       source_id => 'http://www.berliner-weihnacht.de/',
        data  => <<EOF,
-userdel	2::temp 9994,12368 9943,12364 9934,12418
-userdel	2::temp 9996,12401 10058,12290 10008,12274 9994,12368 9996,12401 9984,12426
-userdel	2::temp 10058,12290 10091,12232
+userdel	2::temp 10008,12274 9994,12368
 userdel	2::temp 9943,12364 9961,12273 9972,12184
 userdel	2::temp 10010,12259 10035,12209
 userdel	2::temp 9852,12409 9869,12297 9875,12257 9890,12161
+userdel	2::temp 9961,12273 9875,12257
 EOF
      },
      { from  => 1163718000, # 2006-11-17 00:00
@@ -9419,7 +9421,7 @@ EOF
        data  => <<EOF,
 userdel	2::temp 9890,12161 9875,12257 9869,12297 9795,12293 9780,12401
 userdel	2::temp 9869,12297 9852,12409
-userdel	2::temp 9994,12368 9943,12364 9961,12273 9972,12184
+userdel	2::temp 9943,12364 9961,12273 9972,12184
 userdel	2::temp 9934,12418 9943,12364
 EOF
      },
@@ -10559,7 +10561,7 @@ EOF
        text  => 'Weihnachtsmarkt',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 10170,12261 10063,12438
+userdel	2::inwork 10174,12284 10063,12438
 EOF
      },
      { from  => 1195515915, # 2007-11-20 00:45
@@ -17203,12 +17205,10 @@ EOF
      },
      { from  => undef, # 
        until => undef, #
-       text  => 'Friedrich-Ebert-Platz: bei Bundestagssitzungen gesperrt, mittlerweile möglicherweise permanent gesperrt',
+       text  => 'Friedrich-Ebert-Platz: bei Bundestagssitzungen gesperrt',
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
-#: XXX wo gibt es Informationen hierzu?
-#: by: Kai Wagner (permanente Sperrung)
 	2::temp 8554,12593 8540,12420
 EOF
      },
@@ -19100,7 +19100,7 @@ EOF
        data  => <<EOF,
 #: by: wosch
 #: confirmed_by: srt
-#: last_checked: 2011-08-31
+#: last_checked: 2011-11-13
 #: note: eigentlich Radfahren auf der Friedrichsbrücke jetzt auch verboten
 userdel	q4::inwork; 10166,12777 10132,12941
 EOF
@@ -19891,6 +19891,42 @@ EOF
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20111030.0735.361648.html',
        data  => <<EOF,
 userdel	2::inwork -1245,4414 -1185,4450 -1139,4575 -1134,4706 -971,4971 -724,5080 -604,5228
+EOF
+     },
+     { from  => 1321138800, # 2011-11-13 00:00
+       until => 1321397999, # 2011-11-15 23:59
+       text  => 'Nöldnerstraße am 14. und 15. November gesperrt (Bauarbeiten)',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20111110.1420.362326.html',
+       data  => <<EOF,
+userdel	q4::inwork 15272,10790 15388,10758 15433,10765 15681,10801
+EOF
+     },
+     { from  => 1321398000, # 2011-11-16 00:00
+       until => 1322866799, # 2011-12-02 23:59
+       text  => 'Sperrung der Straße Im Erpelgrund zwischen der Straße An der Schneise bis Dambockstraße in östlicher Richtung, vom 17. November 2011 bis voraussichtlich 2. Dezember 2011 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20111110.1620.362354.html',
+       data  => <<EOF,
+userdel	q4::inwork -629,21975 -428,21933
+EOF
+     },
+     { from  => 1320590700, # 2011-11-06 15:45
+       until => 1322235960, # 2011-11-25 16:46
+       text  => 'Köpenicker Str. (Altglienicke): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Semmelweisstr. und Bohnsdorfer Weg, 07.11.2011 15:45 Uhr bis 25.11.2011 16:46 Uhr',
+       type  => 'handicap',
+       source_id => 'IM_018140',
+       data  => <<EOF,
+userdel	q4::inwork 19806,1903 19771,1793 19728,1660 19679,1571
+EOF
+     },
+     { from  => 1320987600, # 2011-11-11 06:00
+       until => 1325347200, # 2011-12-31 17:00
+       text  => 'Luisenstr. (Mitte): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Invalidenstr. und Hannoversche Str., 12.11.2011 06:00 Uhr bis 31.12.2011 17:00 Uhr',
+       type  => 'handicap',
+       source_id => 'IM_018151',
+       data  => <<EOF,
+userdel	q4::inwork 8635,13580 8626,13641 8619,13689
 EOF
      },
     );
