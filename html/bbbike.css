@@ -197,6 +197,12 @@ a:hover { text-decoration:underline; }
   font-weight:bold;
 }
 
+.success {
+  color:green;
+  font-weight:normal;
+}
+
+
 .newstrattrhead {
   vertical-align:top;
   font-weight:bold;
