@@ -12,6 +12,7 @@
 #
 
 package BBBikeUnicodeUtil;
+use Encode;
 
 =head1 NAME
 
@@ -47,8 +48,18 @@ $BBBikeUnicodeUtil::unidecode_warning_shown.
 =cut
 
 use vars qw($unidecode_warning_shown);
+
+our $debug = 1;
+
 sub unidecode_string {
     my($str) = @_;
+
+    # check unicode before calling Text::Unidecode
+    if (!Encode::is_utf8($str)) {
+       warn "Encode::is_utf8 failed: $str\n" if $debug;
+       eval { $str = Encode::decode("utf8", $str, Encode::FB_QUIET); };
+    }
+
     if (grep { ord($_) > 255 } split //, $str) {
 	if (!eval { require Text::Unidecode; 1 }) {
 	    if (!$unidecode_warning_shown++) {
