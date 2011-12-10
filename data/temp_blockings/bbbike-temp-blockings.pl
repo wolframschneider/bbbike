@@ -4259,7 +4259,7 @@ EOF
        text  => 'Invalidenstraße, Prenzlauer Berg Richtung Tiergarten Zwischen Kreuzung Gartenstraße und Kreuzung Chausseestraße Baustelle, gesperrt, Dauer: 19.04.2006 09:00 Uhr bis 15:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 9383,13978 9203,13953
+userdel	2 9383,13978 9274,13963 9203,13953
 userdel	2 9151,13941 9203,13953
 userdel	2 9151,13941 9085,13919
 userdel	2 9085,13919 8935,13844
@@ -15729,8 +15729,8 @@ userdel	2::inwork -30199,-5774 -30919,-6570 -31110,-6743 -32618,-7268
 EOF
      },
      { from  => 1251090240, # 2009-08-24 07:04
-       until => 1323439200, # 2011-12-09 15:00
-       text  => 'Freiheit/Wiesendamm (Spandau): Baustelle, Fahrtrichtung gesperrt Richtung Spandauer Damm zwischen Klärwerkstr. und Spandauer Damm, 25.08.2009 07:04 Uhr bis 09.12.2011 15:00 Uhr ',
+       until => 1324044000, # 2011-12-16 15:00
+       text  => 'Freiheit/Wiesendamm (Spandau): Baustelle, Fahrtrichtung gesperrt Richtung Spandauer Damm zwischen Klärwerkstr. und Spandauer Damm, 25.08.2009 07:04 Uhr bis 16.12.2011 15:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_013995',
        data  => <<EOF,
@@ -19121,7 +19121,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_017330',
        data  => <<EOF,
-userdel	q4::inwork; 9383,13978 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
+userdel	q4::inwork; 9383,13978 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
 EOF
      },
      { from  => 1308261600, # 2011-06-17 00:00
