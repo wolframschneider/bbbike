@@ -1583,7 +1583,7 @@ check-categories:	.check_categories
 .for target in ${BBD_TARGETS}
 	@echo " ${target}"
 	@$(PERL_UTF8) -I../lib -I.. -MStrassen::Cat -e '\
-	    exit !Strassen::Cat::check_file($$ARGV[0], BBBikeVersion => "3.16");\
+	    exit !Strassen::Cat::check_file($$ARGV[0], BBBikeVersion => "data-update");\
 	' ${target}
 .endfor
 	touch $@

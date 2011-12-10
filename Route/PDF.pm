@@ -1,10 +1,9 @@
 # -*- perl -*-
 
 #
-# $Id: PDF.pm,v 1.10 2008/09/16 19:29:00 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2002,2004 Slaven Rezic. All rights reserved.
+# Copyright (C) 2002,2004,2011 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -68,10 +67,11 @@ sub output {
 
     $self->allocate_fonts;
     my $pdf = $self->{PDF};
-    my($page_width, $page_height);
-    (undef, undef, $page_width, $page_height) = @{$pdf->get_page_size("a4")};
-    my $page = $pdf->new_page;
-    $pdf->new_outline('Title' => _unidecode_string(&Route::Descr::M('Routenliste')),
+    # XXX Maybe the MediaBox should be configurable?
+    my $media_box = $pdf->get_page_size('a4');
+    my(undef, undef, $page_width, $page_height) = @$media_box;
+    my $page = $pdf->new_page(MediaBox => $media_box);
+    $pdf->new_outline('Title' => &Route::Descr::M('Routenliste'),
 		      'Destination' => $page);
     my $font = $self->{NormalFont};
     my $bold_font = $self->{BoldFont};
@@ -126,7 +126,6 @@ sub output {
 
     for my $line (@lines) {
 	my $x = $start_x;
-	my $col_i = 0;
 	for my $col_i (0 .. $#$line) {
 	    my $col = $line->[$col_i];
 	    my $font = ($col_i == 2 ? $bold_font : $font);
@@ -140,7 +139,7 @@ sub output {
 	}
 	$y -= $font_size+3;
 	if ($y < 40) {
-	    $page = $pdf->new_page; $y = $start_y;
+	    $page = $pdf->new_page(MediaBox => $media_box); $y = $start_y;
 	}
     }
 }
@@ -167,31 +166,9 @@ sub flush {
     $self->{PDF}->close;
 }
 
-use vars qw($unidecode_warning);
-# Note: also used by BBBikeDraw::PDF:
 sub _unidecode_string {
-    my($str) = @_;
-
-    # check unicode before calling Text::Unidecode
-    if (!Encode::is_utf8($str)) {
-	eval { $str = Encode::decode("utf8", $str, Encode::FB_QUIET); };
-    }
-
-    if (grep { ord($_) > 255 } split //, $str) {
-	if (!eval { require Text::Unidecode; 1 }) {
-	    if (!$unidecode_warning++) {
-		warn <<EOF;
-Unicode characters > 255 detected, but no Text::Unidecode module available,
-continuing with undefined results. This warning will be shown only once.
-EOF
-		$unidecode_warning = 1;
-	    }
-	} else {
-	    # XXX Should preserve at least the latin1 characters.
-	    return Text::Unidecode::unidecode($str);
-	}
-    }
-    $str;
+    require BBBikeUnicodeUtil;
+    BBBikeUnicodeUtil::unidecode_string(@_);
 }
 
 1;
