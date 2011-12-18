@@ -287,7 +287,7 @@ sub get_html {
     my $route_length = Encode::decode( utf8 => $q->param('route_length') );
     my $zoom_param = $q->param('zoom_param');
 
-    my $map = Encode::decode( utf8 => $q->param('map') ) || "default";
+    my $map   = Encode::decode( utf8 => $q->param('map') )   || "default";
     my $layer = Encode::decode( utf8 => $q->param('layer') ) || "";
 
     my $html = "";

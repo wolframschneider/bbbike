@@ -37,9 +37,9 @@ userdel	2::temp 5656,10876 5652,11004
        undef,
        {
          'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20111109.1040.362258.html',
-         'until' => 1322335800,
+         'until' => 1324150200,
          'text' => 'Lichtenrader Weihnachtsmarkt: Bahnhofstr. (Lichtenrade) in beiden Richtungen zwischen Steinstr. und Goltzstr gesperrt (alle Adventssamstage von 11:00 bis 20:30) ',
-         'from' => 1322301600,
+         'from' => 1324076400,
          'id' => 417,
          'data' => 'userdel	q4 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
 ',
@@ -719,16 +719,7 @@ userdel	2::temp 9961,12273 9875,12257
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'INKO_096853',
-         'until' => 1322694000,
-         'text' => 'Rudower Chaussee (Treptow - Köpenick) in beiden Richtungen Höhe S-Bahn Brücke Adlershof Baustelle, Straße vollständig gesperrt, als Fußgänger kann man passieren',
-         'from' => 1319138777,
-         'id' => 1079,
-         'data' => 'userdel	q4::inwork 19904,3464 19732,3340
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1714,16 +1705,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_013995',
-         'until' => 1322834400,
-         'text' => 'Freiheit/Wiesendamm (Spandau): Baustelle, Fahrtrichtung gesperrt Richtung Spandauer Damm zwischen Klärwerkstr. und Spandauer Damm, 25.08.2009 07:04 Uhr bis 02.12.2011 15:00 Uhr ',
-         'from' => 1251090240,
-         'id' => 1850,
-         'data' => 'userdel	q4::inwork; -1258,13552 -990,13502 -729,13415 -346,13349 -307,13279 -264,13009
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1935,7 +1917,15 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
+       {
+         'until' => 1325372340,
+         'text' => 'Voltairestr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht oder nur schwer möglich',
+         'from' => 1321311600,
+         'id' => 1988,
+         'data' => 'userdel	2::temp 11209,12430 11323,12484
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -2008,16 +1998,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_015518',
-         'until' => 1324033200,
-         'text' => 'Heinrich-Mann-Str. (Pankow): Baustelle, gesperrt in beiden Richtungen zwischen Cottastr. und Grabbeallee. 12.04.2010 bis 16.12.2011',
-         'from' => 1270987200,
-         'id' => 2044,
-         'data' => 'userdel	q4::inwork 9881,18354 9821,18392
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2044,22 +2025,23 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im November von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Dezember von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10640,8366 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10298,8245
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 11463,7785 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10298,8245 10575,8218
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10042,8270 10298,8245 10575,8218
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11381,7775 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9392,7339 9300,7312 9302,7294 9242,7286
 (Weg parallel zum Tempelhofer Damm)	2::night  9300,7312 9281,7651 9281,7795
 (Eingang Peter-Strasser-Weg)	2::night 9281,7795 9240,7797
-(Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9351,7600 9281,7651
+(Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9362,7616 9281,7651
+(Rundkurs auf dem Flughafen Tempelhof - Eingang Peter-Strasser-Weg)	2::night 9562,7796 9372,7798 9281,7795
 (Südliche Landebahn)	2::night 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11593,7314
-(Nördliche Landebahn)	2::night 9351,7600 9518,7609 9654,7621 11279,7768 11381,7775 11463,7785
-(Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11463,7785 11439,7894
+(Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 11279,7768 11381,7775 11430,7781 11460,7802
+(Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11005,8064 10909,8003
 (Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10803,8251 10640,8366 10360,8521
@@ -2157,16 +2139,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'LS/W-SG33-P/10/410',
-         'until' => 1322694000,
-         'text' => 'Nuthetal: L77, L771: Bau OU Güterfelde, Berliner Straße / Stahnsdorfer Damm, 09.08.2010 08:00 Uhr bis 30.11.2011 ',
-         'from' => 1281247200,
-         'id' => 2117,
-         'data' => 'userdel	2::inwork -2815,-3574 -3368,-4430
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2383,16 +2356,7 @@ userdel	q4::inwork; 10166,12777 10132,12941
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'LS/S-SG33-C/11/067',
-         'until' => 1323990000,
-         'text' => 'Neuhausen/Spree: L48: Brückenneubau Brücke über das Fließ bei Gablenz, 19.04.2011 bis 15.12.2011 ',
-         'from' => 1320439456,
-         'id' => 2229,
-         'data' => 'userdel	2::inwork 85633,-77062 87212,-78642
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2495,16 +2459,7 @@ userdel	q4::inwork 2295,20358 2362,20218 2402,20126
          'type' => 'handicap'
        },
        undef,
-       {
-         'source_id' => 'INKO_103963',
-         'until' => 1342796400,
-         'text' => 'Bäkestr. (Wannsee): Brückenarbeiten, Straße vollständig gesperrt, in beiden Richtungen zwischen Neue Kreisstr. und Königsweg, 22.08.2011 10:00 Uhr bis 20.07.2012 17:00 Uhr ',
-         'from' => 1313913600,
-         'id' => 2276,
-         'data' => 'userdel	2::inwork -7191,-1023 -7152,-1064 -7088,-1074 -7051,-1221
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2552,24 +2507,15 @@ userdel	3 12992,7545 13015,7440 12925,7425
        undef,
        {
          'source_id' => 'IM_018013',
-         'until' => 1322496000,
-         'text' => 'Motardstr. (Spandau): Baustelle, Fahrtrichtung gesperrt Richtung Rohrdamm zwischen Sternfelder Str. und Rohrdamm, 11.10.2011 08:44 Uhr bis 28.11.2011 17:00 Uhr ',
+         'until' => 1324656000,
+         'text' => 'Motardstr. (Spandau): Baustelle, Fahrtrichtung gesperrt Richtung Rohrdamm zwischen Sternfelder Str. und Rohrdamm, 11.10.2011 08:44 Uhr bis 23.12.2011 17:00 Uhr ',
          'from' => 1318229040,
          'id' => 2293,
          'data' => 'userdel	q4::inwork; 386,14162 990,14062
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'LS/O-SG33-F/11/197',
-         'until' => 1322262000,
-         'text' => 'Prötzel: L35: Straßenbauarbeiten Prötzel - Harnekop und umgekehrt Vollsperrung ab 17.10.11 bis 25.11.2011 ',
-         'from' => 1318716000,
-         'id' => 2294,
-         'data' => 'userdel	2::inwork 50141,30438 50704,30986
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2596,16 +2542,7 @@ userdel	q4::inwork 18286,11275 18059,11248
          'type' => 'handicap'
        },
        undef,
-       {
-         'source_id' => 'INKO_110898',
-         'until' => 1323273600,
-         'text' => 'Teichstr. (Reinickendorf): Baustelle, Fahrtrichtung gesperrt (bis Anfang 12/11) Richtung Gotthardstr. zwischen Lindauer Allee und Gotthardstr. ',
-         'from' => 1319526000,
-         'id' => 2302,
-         'data' => 'userdel	q4::inwork; 6432,18682 6418,18491 6403,18289 6383,18033 6380,17836
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20111030.0735.361648.html',
          'until' => 1338501600,
@@ -2617,20 +2554,11 @@ userdel	q4::inwork 18286,11275 18059,11248
          'type' => 'gesperrt'
        },
        undef,
+       undef,
        {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20111110.1620.362354.html',
-         'until' => 1322866799,
-         'text' => 'Sperrung der Straße Im Erpelgrund zwischen der Straße An der Schneise bis Dambockstraße in östlicher Richtung, vom 17. November 2011 bis voraussichtlich 2. Dezember 2011 ',
-         'from' => 1321398000,
-         'id' => 2305,
-         'data' => 'userdel	q4::inwork -629,21975 -428,21933
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'IM_018140',
-         'until' => 1322667960,
-         'text' => 'Köpenicker Str. (Altglienicke): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Semmelweisstr. und Rudower Str., 07.11.2011 15:45 Uhr bis 30.11.2011 16:46 Uhr ',
+         'source_id' => 'IM_018211',
+         'until' => 1324655160,
+         'text' => 'Köpenicker Str. (Altglienicke): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Semmelweisstr. und Rudower Str., 07.11.2011 15:45 Uhr bis 23.12.2011 16:46 Uhr ',
          'from' => 1320590700,
          'id' => 2306,
          'data' => 'userdel	q4::inwork 19806,1903 19771,1793

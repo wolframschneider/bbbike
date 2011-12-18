@@ -729,6 +729,10 @@ Zugang zum Bad	culdesac_pseudo 7344,13435
 	culdesac 17681,-178
 	culdesac 17488,-145
 	culdesac 15315,1108
+	culdesac_pseudo 8839,8132
+	culdesac_pseudo 8839,7904
+	culdesac_pseudo 8741,14928
+	culdesac_pseudo 9003,14608
 #: section ^^^
 ######################################################################
 # busroute
@@ -1187,7 +1191,7 @@ Simsonweg: nicht ausgeschildert	CP2; 8354,12416 8546,12279
 Simsonweg: nicht ausgeschildert	CP2; 8546,12279 8354,12416
 Jänickestr. - Dahlemer Weg: Privatstraße	CS 1702,1278 1707,1256 1742,1118
 Ausgeschildert als Jasminpfad	CS 8259,8628 8221,8631
-Ausgeschildert als Rosenpromenade	CS 8264,8289 8259,8628
+Ausgeschildert als Rosenpromenade	CS 8265,8305 8259,8628
 Jasminpfad: Tor 1 der Kleingartenanlage	CP2; 8221,8631 8259,8628
 Teilestr. - Schaffhausener Str.: vor der Autobahnbrücke links abbiegen	CP2; 11068,6006 11077,6028
 Königstuhlweg: nicht ausgeschildert	CS 10334,2321 10214,2348
@@ -1216,3 +1220,7 @@ Nikolaus-Ehlen-Weg: Privatstraße	CS 17308,-36 17215,94 17176,90
 #: XXX_indoor: würde besser unter sehenswuerdigkeit passen
 Gaslaternen-Freilichtmuseum Berlin	CS 5903,11683 5835,11768 5870,11842 5890,11865 5900,11913
 #: section ^^^
+(Kanzlerweg - Schreiberring): Privatweg	CS 8839,8168 8861,8242
+(Kanzlerweg - Schreiberring): Tordurchfahrt	CP2; 8861,8242 8839,8168
+(Rumeyplan - Kanzlerweg): Privatweg	CS 8899,7788 8839,7904
+(Rumeyplan - Kanzlerweg): Tordurchfahrt	CP2; 8899,7788 8839,7904
