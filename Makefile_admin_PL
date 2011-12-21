@@ -634,9 +634,10 @@ winbindist: winbindist-pre
 DEB_DEVEL=	git-core bison byacc flex g++ apt-show-versions freebsd-buildutils gcc \
 		libc6-dev libinline-perl strace rsync less make
 DEB_TEST=	libimage-info-perl libwww-mechanize-perl
+# Note: libpango-perl not available in lenny, only squeeze
 DEB_DRAW=	libgd2-xpm libgd2-xpm-dev perlmagick libimager-perl \
 		pdftk netpbm imagemagick libgd-gd2-perl ttf-bitstream-vera \
-		libpdf-create-perl libfont-afm-perl \
+		libpdf-create-perl libcairo-perl libpango-perl libfont-afm-perl \
 		libtest-number-delta-perl \
 		libsvg-perl
 DEB_MAIL=	libmime-lite-perl libmailtools-perl
@@ -962,21 +963,17 @@ test-with-protocol: permission
 	    export HARNESS_NOTTY=1;\
 	    export HARNESS_TIMER=1;\
 	    export BBBIKE_LONG_TESTS=1;\
-	    echo -n "git describe: "; \
-	    git describe >$(HOME)/log/bbbike-test-$$DATE 2>&1;\
-	    echo "git status: "; \
-	    git status >$(HOME)/log/bbbike-test-$$DATE 2>&1;\
-	    echo; \
+	    (echo -n "git describe: "; git describe;\
+	     echo "git status: "; git status;\
+	     echo ) >$(HOME)/log/bbbike-test-$$DATE 2>&1;\
 	    $(MAKE) ext  >>$(HOME)/log/bbbike-test-$$DATE 2>&1;\
 	    if ! $(MAKE) test >>$(HOME)/log/bbbike-test-$$DATE 2>&1; then \
 		echo "$(MAKE) test failed, please look at $(HOME)/log/bbbike-test-$$DATE for output";\
 		has_failure=yes;\
 	    fi; \
-	    echo -n "git describe: "; \
-	    git describe >$(HOME)/log/bbbike-test-data-$$DATE 2>&1;\
-	    echo "git status: "; \
-	    git status >$(HOME)/log/bbbike-test-data-$$DATE 2>&1;\
-	    echo; \
+	    (echo -n "git describe: "; git describe ;\
+	     echo "git status: "; git status;\
+	     echo ) >$(HOME)/log/bbbike-test-data-$$DATE 2>&1;\
 	    if ! (cd data && $(MAKE) all slow-checks really-slow-checks >>$(HOME)/log/bbbike-test-data-$$DATE 2>&1); then \
 		echo "$(MAKE) all slow-checks really-slow-checks failed, please look at $(HOME)/log/bbbike-test-data-$$DATE for output";\
 		has_failure=yes;\
