@@ -3320,7 +3320,7 @@ sub is_mobile {
     my $q = shift;
 
     if ($q->param('skin') && $q->param('skin') =~ m,^(m|mobile)$, ||
-        $q->virtual_host() =~ /^m\.|^mobile\.|^dev2/ || 
+        $q->virtual_host() =~ /^m\.|^mobile\.|^dev23/ || 
 	$q->url(-full=>0, -absolute=>1) =~ m,^/m/, ) {
 	return 1;
     } else {
