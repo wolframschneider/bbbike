@@ -2,7 +2,6 @@
 # -*- mode:cperl;coding:raw-text; -*-
 
 #
-# $Id: route-pdf.t,v 1.16 2009/03/15 16:22:41 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -14,15 +13,16 @@ use lib ("$FindBin::RealBin/..",
 	 "$FindBin::RealBin/../data",
 	 "$FindBin::RealBin",
 	);
-use Route::PDF;
-use Strassen::Core;
-use Strassen::MultiStrassen;
-use Strassen::StrassenNetz;
-use Strassen::Dataset;
-eval q{ use BBBikeXS; };
+use Data::Dumper qw(Dumper);
 use Getopt::Long;
 
+use BBBikeUtil qw(is_in_path);
 use BBBikeTest;
+use Strassen::Core;
+use Strassen::Dataset;
+use Strassen::MultiStrassen;
+use Strassen::StrassenNetz;
+eval q{ use BBBikeXS; };
 
 BEGIN {
     if (!eval q{
@@ -35,13 +35,22 @@ BEGIN {
     }
 }
 
-plan tests => 4;
+my $pdfinfo_tests = 4;
+plan tests => (2+$pdfinfo_tests)*2;
 
 my $lang;
+my $Route_PDF_class = 'Route::PDF';
+my $debug;
 if (!GetOptions("lang=s" => \$lang,
+		"class=s" => \$Route_PDF_class,
+		"debug" => \$debug,
 		get_std_opts(qw(display pdfprog)),
 	       )) {
-    die "usage: $0 [-lang lang] [-pdfprog pdfviewer] [-display]";
+    die "usage: $0 [-lang lang] [-debug] [-pdfprog pdfviewer] [-display] [-class Route::PDF::...]";
+}
+
+if (!eval 'use ' . $Route_PDF_class . '; 1') {
+    die $@;
 }
 
 my(undef, $pdffile) = tempfile(SUFFIX => "_test.pdf",
@@ -88,17 +97,18 @@ my $comments_net;
     }
 }
 
-my $rp = Route::PDF->new(@arg);
+my $rp = $Route_PDF_class->new(@arg);
 $rp->output(($lang ? (-lang => $lang) : ()),
 	    -vianame => $via_name,
 	    -commentsnet => $comments_net,
 	    -net => $net,
 	    -route => $route,
 	   );
-$rp->{PDF}->close;
+$rp->flush;
 
 maybe_display($pdffile);
 trivial_pdf_test($pdffile);
+pdfinfo_test($pdffile);
 
 {
     # testing with UTF-8 encoding --- currently does not work!
@@ -111,6 +121,12 @@ Dudenstraße	X 100,100 200,200 300,300
 Trg bana Jelačića	X 300,300 400,400 500,500
 # Moskva, cyrillic:
 Москва	X 500,500 600,600
+# Jerusalem, hebrew:
+ירושלים	X 600,600 700,700
+# Jerusalem, arabic:
+‏القدس‎	X 700,700 800,800
+# Tokyo:
+東京	X 800,800 900,900
 EOF
     my $start = $s->get(0)          ->[Strassen::COORDS()]->[0];
     my $goal  = $s->get($s->count-1)->[Strassen::COORDS()]->[-1];
@@ -118,14 +134,15 @@ EOF
     my $net = StrassenNetz->new($s);
     $net->make_net;
     my($route) = $net->search($start, $goal, AsObj => 1);
-    my $rp = Route::PDF->new(-filename => $pdffile);
+    my $rp = $Route_PDF_class->new(-filename => $pdffile);
     $rp->output(($lang ? (-lang => $lang) : ()),
 		-net => $net,
 		-route => $route,
 	       );
-    $rp->{PDF}->close;
+    $rp->flush;
     maybe_display($pdffile);
     trivial_pdf_test($pdffile);
+    pdfinfo_test($pdffile);
 }
 
 sub maybe_display {
@@ -142,6 +159,40 @@ sub trivial_pdf_test {
     open(PDF, $pdffile) or die $!;
     my $firstline = <PDF>;
     like($firstline, qr/^%PDF-1\.\d+/, "PDF magic in $pdffile");
+}
+
+sub pdfinfo_test {
+    my $pdffile = shift;
+ SKIP: {
+	skip 'No pdfinfo available', $pdfinfo_tests
+	    if !is_in_path('pdfinfo');
+	my %info;
+	open my $fh, "-|", 'pdfinfo', $pdffile
+	    or die $!;
+	while(<$fh>) {
+	    chomp;
+	    my($k,$v) = split /:\s+/, $_, 2;
+	    $info{$k} = $v;
+	}
+	close $fh or die $!;
+
+	my $info_like = sub {
+	    my($k,$rx) = @_;
+	    my $v = $info{$k} || '';
+	    like $v, $rx, "Check for $k"
+		or do { $debug && diag Dumper(\%info) };
+	};
+	$info_like->('Page size', qr{A4});
+	{
+	    local $TODO;
+	    if ($Route_PDF_class eq 'Route::PDF::Cairo') {
+		$TODO = 'Cannot set Creator, Author, or Title with cairo';
+	    }
+	    $info_like->('Title', qr{BBBike Route});
+	    $info_like->('Author', qr{Slaven Rezic});
+	    $info_like->('Creator', qr{Route::PDF version \d+\.\d+});
+	}
+    }
 }
 
 __END__

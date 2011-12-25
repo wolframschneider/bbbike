@@ -5945,7 +5945,11 @@ sub define_item_attribs {
 	);
 
     %category_stipple =
-	('Cemetery' => 'crosses.xbm');
+	(
+	 'Cemetery' => 'crosses.xbm',
+	 'Cemetery|religion:jewish' => 'stars_of_david.xbm',
+	 'Cemetery|religion:muslim' => 'halfmoons.xbm',
+	);
 
     %line_width =
 	('s-NN'     => [1, 1, 2, 2, 4, 7],
@@ -6030,7 +6034,7 @@ sub define_item_attribs {
     foreach (qw/gBO gP gD/) {
 	$line_dash{$_} = [@{ $line_dash{"g"}}];
     }
-    foreach (grep { $_ !~ m{^(tram|ferry)$} } @comments_types) {
+    foreach (grep { $_ !~ m{^(tram|ferry|cyclepath)$} } @comments_types) {
 	$line_dash{"comm-".$_} = [@{ $line_dash{"comm"}}];
     }
     $line_dash{'comm-ferry'} = $line_dash{'e'};
@@ -6668,7 +6672,7 @@ sub generate_plot_functions {
 			if ($rest =~ $complex_IMG_qr) {
 			    $image = $1;
 			    $anchor = $2 if $2;
-			} else {
+			} elsif (!defined $stipple) {
 			    $stipple = $rest;
 			}
 		    }
@@ -8041,14 +8045,15 @@ sub set_route_point {
 sub draw_street_numbers {
     # the coloring is german specific
     my($c,$strname,$abk,$coordlist_ref) = @_;
-    my $do_round = 0;
-    my $image;
     use constant SMALLER_TABLES => 0.7;
-    # XXX handling of multiple street numbers? e.g. "F1, R1" or "B2/B5"?
-    my($type,$nr) = Strasse::parse_street_type_nr($strname);
-    # Extra routes in and outer Berlin:
-    if (!defined $type && $city_obj->can("parse_street_type_nr")) {
+    my $do_round = 0;
+    my($type, $image, $nr);
+    if ($city_obj->can("parse_street_type_nr")) {
 	($type, $nr, $do_round, $image) = $city_obj->parse_street_type_nr($strname);
+    }
+    if (!defined $type) {
+	# XXX handling of multiple street numbers? e.g. "F1, R1" or "B2/B5"?
+	($type,$nr) = Strasse::parse_street_type_nr($strname);
     }
     if (defined $type) {
 	my $dist = 0;
@@ -21834,15 +21839,21 @@ sub get_image_for_any {
     my $p = $images->{$key};
     if (!$p) {
 	eval {
-	    # XXX Es ist nicht zugesichert, dass eine Datei für ein
-	    # p/str-Objekt existiert. Somit kann $p/str_file{$abk}
-	    # leer sein und der dirname-Aufruf meckern (fileparse()
-	    # need a valid pathname)
-	    my $abspath = $type eq 'p' ? $p_file{$abk} : $str_file{$abk};
-	    if ($abspath !~ m{^/}) { # XXX windows compat? Should check for all occurences of this pattern and replace by function!
-		$abspath = "$datadir/$abspath";
+	    my $abs_realfile;
+	    if ($realfile =~ m{^/}) {
+		$abs_realfile = $realfile;
+	    } else {
+		# XXX Es ist nicht zugesichert, dass eine Datei für ein
+		# p/str-Objekt existiert. Somit kann $p/str_file{$abk}
+		# leer sein und der dirname-Aufruf meckern (fileparse()
+		# need a valid pathname)
+		my $bbd_abspath = $type eq 'p' ? $p_file{$abk} : $str_file{$abk};
+		if ($bbd_abspath !~ m{^/}) { # XXX windows compat? Should check for all occurences of this pattern and replace by function!
+		    $bbd_abspath = "$datadir/$bbd_abspath";
+		}
+		my $dir = dirname($bbd_abspath);
+		$abs_realfile = "$dir/$realfile";
 	    }
-	    my $dir = dirname($abspath);
 	    if ($is_svg) {
 		# XXX move svg stuff to some general-purpose function or module
 		if (!defined $w) {
@@ -21859,7 +21870,7 @@ sub get_image_for_any {
 		require File::Temp;
 		require Tk::PNG;
 		my(undef,$tmpfile) = File::Temp::tempfile(SUFFIX => ".png", UNLINK => 1);
-		my @cmd = ("convert", "-geometry", "${w}x${h}", "$dir/$realfile", $tmpfile);
+		my @cmd = ("convert", "-geometry", "${w}x${h}", $abs_realfile, $tmpfile);
 		system(@cmd) == 0
 		    or die "Error while converting: @cmd, status=$?";
 		$p = $c->Photo(-file => $tmpfile);
@@ -21867,8 +21878,8 @@ sub get_image_for_any {
 	    } else {
 		$p = get_image($base, $realfile);
 		if (!$p) {
-		    warn "Try $dir/$realfile...\n";
-		    $p = $c->Photo(-file => "$dir/$realfile");
+		    warn "Try $abs_realfile...\n";
+		    $p = $c->Photo(-file => $abs_realfile);
 		}
 	    }
 	};

@@ -2,14 +2,13 @@
 # -*- perl -*-
 
 #
-# $Id: bbbikedraw.pl,v 1.23 2008/08/22 19:47:45 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2001 Slaven Rezic. All rights reserved.
+# Copyright (C) 2001,2011 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
-# Mail: slaven.rezic@berlin.de
+# Mail: eserte@users.sourceforge.net
 # WWW:  http://www.rezic.de/eserte/
 #
 
@@ -52,6 +51,7 @@ my $route_file;
 my $marker_point;
 my $q;
 my $debug;
+my $do_routelist;
 
 if (!GetOptions("w=i" => \$w,
 		"h=i" => \$h,
@@ -79,6 +79,7 @@ if (!GetOptions("w=i" => \$w,
 		"customplaces=s" => \$custom_places,
 		"routefile=s" => \$route_file,
 		"markerpoint=s" => \$marker_point,
+		"routelist!" => \$do_routelist,
 		"q|quiet!" => \$q,
 		"debug" => \$debug,
 	       )) {
@@ -178,7 +179,13 @@ if (defined $route_file) {
     } else {
 	require Route;
 	my $load = Route::load($route_file);
-	push @extra_args, Coords => [ map { join(",", @$_) } @{ $load->{RealCoords} } ];
+	my @coords = map { join(",", @$_) } @{ $load->{RealCoords} };
+	push @extra_args, Coords => \@coords;
+	my(@strnames) = make_netz()->route_to_name([ map { [split ','] } @coords ]);
+	if (@strnames) {
+	    push @extra_args, Startname => Strassen::strip_bezirk($strnames[0]->[0]);
+	    push @extra_args, Zielname => Strassen::strip_bezirk($strnames[-1]->[0]);
+	}
     }
 }
 if (defined $marker_point) {
@@ -190,6 +197,7 @@ my $draw = new BBBikeDraw
     Fh       => \*OUT,
     Geometry => $geometry,
     Draw     => [@drawtypes],
+    MakeNet  => \&make_netz,
     @extra_args,
     ;
 if (defined $bbox) {
@@ -201,12 +209,7 @@ if (defined $bbox) {
 } elsif (defined $route_file) {
     # bbox automatically set in pre_draw, see below
 } else {
-    $draw->set_bbox_max(new Strassen
-			(defined $scope && $scope eq 'region'
-			 ? "landstrassen"
-			 : (defined $scope && $scope eq 'wideregion'
-			    ? 'landstrassen2' : "strassen"))
-		       );
+    $draw->set_bbox_max(get_strassen());
 }
 $draw->init;
 if ($route_file) {
@@ -224,7 +227,15 @@ if (defined $custom_places) {
 }
 if ($route_file) {
     $draw->draw_route;
+    if ($do_routelist) {
+	$draw->add_route_descr(
+			       -net => make_netz(),
+			       -lang => 'de',
+			      )
+	    if $draw->can("add_route_descr");
+    }
 }
+
 $draw->flush;
 close OUT;
 
@@ -236,6 +247,34 @@ if (defined $dimfile) {
     }
     print DIM Data::Dumper->Dumpxs([$draw], ['draw']);
     close DIM;
+}
+
+{
+    my $s;
+    sub get_strassen {
+	return $s if $s;
+	$s = Strassen->new(
+			   (defined $scope && $scope eq 'region'
+			    ? 'landstrassen'
+			    : (defined $scope && $scope eq 'wideregion'
+			       ? 'landstrassen2'
+			       : 'strassen'
+			      )
+			   )
+			  );
+    }
+}
+
+{
+    my $net;
+    sub make_netz {
+	return $net if $net;
+	my $s = get_strassen();
+	require Strassen::StrassenNetz;
+	$net = StrassenNetz->new($s);
+	$net->make_net(UseCache => 1);
+	$net;
+    }
 }
 
 sub usage {

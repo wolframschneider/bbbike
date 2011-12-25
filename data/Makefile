@@ -141,6 +141,7 @@ targets:	${TARGETS}
 targets-clean:
 	-mkdir /tmp/old-data
 	mv -f ${TARGETS} /tmp/old-data/
+	-rm -f .strassen.tmp
 
 fix-permissions:
 	$(READABLE) $(TARGETS) $(NON_TARGETS) temp_blockings/bbbike-temp-blockings.pl temp_blockings/*.bbd
@@ -1583,7 +1584,7 @@ check-categories:	.check_categories
 .for target in ${BBD_TARGETS}
 	@echo " ${target}"
 	@$(PERL_UTF8) -I../lib -I.. -MStrassen::Cat -e '\
-	    exit !Strassen::Cat::check_file($$ARGV[0], BBBikeVersion => "3.16");\
+	    exit !Strassen::Cat::check_file($$ARGV[0], BBBikeVersion => "data-update");\
 	' ${target}
 .endfor
 	touch $@

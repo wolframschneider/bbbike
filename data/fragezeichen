@@ -130,7 +130,6 @@ Espengrund: Qualität?	? -9035,-1291 -9033,-1459
 Uhlandstr. (Potsdam): Ist das Kopfsteinpflaster eher mäßig oder eher schlecht?	? -9525,-1787 -9524,-1730 -9529,-1599 -9534,-1430
 Körnerweg (Potsdam): Qualität (Laut OpenStreetMap Kopfsteinpflaster)?	? -9425,-1526 -9318,-1518 -9319,-1594
 Theodor-Hoppe-Weg: Ist das Kopfsteinpflaster eher gut, mäßig oder schlecht? Stimmt der Straßenname?	? -10446,-1947 -10412,-1857 -10445,-1847 -10440,-1836
-Schornsteinfegergasse (Potsdam): Ist die Straße eine Einbahnstraße, und wenn ja, gilt das auch für Radfahrer?	? -10535,-1809 -10440,-1836 -10425,-1773
 Wichgrafstr. (Potsdam): Qualität kurz vorm Plantagenplatz?	? -9930,-1687 -9905,-1627
 Wichgrafstr. - Plantagenstr.: existiert hier eine für Radfahrer befahrbare Verbindung? Qualität?	? -9930,-1687 -9813,-1664
 Plantagenplatz: Qualität? Ist die Straße eine Einbahnstraße, und wenn ja, gilt das auch für Radfahrer?	? -9874,-1551 -9905,-1627
@@ -1757,7 +1756,6 @@ Am Seegraben/Alexander-Meißner-Str.: Ampel in Vorbereitung	?::inwork 19894,-835
 Havelwiesen: Qualität des Weges? Nachts beleuchtet? Genauer Verlauf?	? -2595,16808 -2391,16788
 An der Wasserstadt: wo genau befindet sich dieser Rad- und Fußweg?	? -2484,16835 -2476,16742
 Via Tilia: Qualität? Wo liegt die Straße genau?	? -7384,-970 -7326,-1047
-Elisabeth-Schwarzhaupt-Platz: liegt er an der Kreuzung Invalidenstr/Gartenstr?	? 9383,13978
 Fahrenheitstr. - Celsiusstr.: Existiert eine Durchfahrt für Radfahrer? Qualität?	? 4510,669 4436,621
 Amelieweg: Qualität nach den Bauarbeiten?	?::inwork 22861,12390 22805,12456 22759,12420 22814,12353
 (Welzower Steig - Zabel-Krüger-Damm): Qualität? Nachts beleuchtet? Führt hier die Radroute 2 entlang?	? 5929,22339 5821,22435
@@ -1926,7 +1924,6 @@ Am Zwiebusch (Gosen): Qualität?	? 30421,-1710 30353,-1731 29972,-2159
 Gewerbestr. (Dahlwitz-Hoppegarten): Qualität?	? 25923,11076 25964,11310 26026,11377 26128,11457 26150,11516 26222,11726
 (Weg entlang der Stadtgrenze): Qualität des südlichen Abschnitts?	? 25952,11935 25902,11846 25876,11774 25868,11706 25830,11636 25809,11613 25757,11479 25770,11431 25763,11396 25855,11296 25923,11076
 Uferweg: Qualität?	? -585,19132 -544,19129 -475,19156 -429,19230 -338,19267 -195,19415 -88,19483 48,19533 146,19640 123,19749 72,19790
-Uferweg Eiswerder: Qualität?	? -2038,15683 -2094,15663 -2138,15622 -2163,15571 -2177,15511 -2325,15431 -2431,15436 -2465,15471 -2454,15472 -2453,15476
 Elkartweg: Qualität des nördlichen Abschnitts?	? -2074,17921 -2196,18069
 Aalemannufer: gibt es Radstreifen am Aalemannufer?	? -1989,18378 -2053,18375 -2096,18376 -2535,18391 -2605,18393 -2678,18396 -2759,18400
 Uferweg am Salzhof: nachts beleuchtet?	? -1923,15684 -1979,15994 -1942,16105 -1945,16202 -1956,16220 -1958,16269 -1943,16292 -1962,16312 -1967,16380 -1937,16383 -1928,16423
@@ -1980,7 +1977,6 @@ Ringelsteinweg - Kleinmachnower Weg: Qualität? Nachts beleuchtet?	? 906,294 941,
 Ramsteinweg - Andréezeile, Radweg: Qualität? Nachts beleuchtet?	? 762,645 779,673
 nach Garzin und Garzau: Qualität?	? 53884,16566 53683,16474 53019,16358 52848,16456 52574,16529 51697,16718 51715,16919 49700,16565
 Dahmsdorf - Münchehofe: alternative Strecke durch den Wald, Qualität?	? 59488,16074 59402,16156 59309,16178 59220,16332 59263,16443 59460,16443 59560,16579 59624,16883
-Cheruskerpark, Weg zwischen Cheruskerstr. und Torgauer Str: Qualität? Beleuchtung? Schwingtüren?	? 7400,8279 7309,8287
 Zur Holzoper: wo liegt die Straße?	? 19977,4218 19996,4279
 Verlängerung des Imbuschwegs: Qualität? Gibt es Schranken o.ä.?	? 14245,2704 14254,2566
 Grafenauer Weg: evtl. existiert jetzt eine Verbindung zum Bodenmaiser Weg	? 19495,9278 19495,9243
@@ -1999,6 +1995,8 @@ Meißner Weg: ist der gesamte südliche Abschnitt der Straße gepflastert?	? 15633,
 Putenweg: Qualität des nördlichen Abschnitts?	? 16491,517 16372,312
 Putenweg: Qualität des südlichen Abschnitts?	? 16198,-339 16259,-368 16346,-394
 Putenweg - Waßmannsdorfer Chaussee: für Radfahrer befahrbar? Qualität?	? 16346,-394 16400,-409
+Deportationsweg: Qualität? Ausschilderung? Für Autos gesperrt? Nachts beleuchtet?	? 6920,14365 6857,14488
+Feldspatzwenweg: Qualität? Wo genau befindet sich die Straße?	? 7609,23108 7583,23177 7804,23253 7831,23192
 # added from ampeln-orig
 geschlossen bei Bedarf (?) (Zbr)	? 27657,-11741
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?) (B)	? 40248,14503
@@ -2139,14 +2137,11 @@ Kliestow - Wüste Kunersdorf: Feldwege (Qualität des Feldwegs mäßig und nicht sch
 Mühlental - Lebus: Feldwege (Qualität des Feldwegs mäßig und nicht schlecht?)	? 85662,1959 85885,2842 85956,3025 85940,3299
 Mützlitz: gutes Kopfsteinpflaster (nach Ende der Bauarbeiten (2006-10-06) vielleicht asphaltiert?)	? -50578,15920 -50493,15837 -50268,15901
 Melzow - Warnitz: querliegende Betonplatten (Betonplatten zumindest auf der nördlichen Seite)	? 41910,85359 41901,85524 42245,86063
-(Uferweg - Alter Markt): provisorische sandige Rampe (die Rampe wird in Zukunft vielleicht durch eine Treppe ersetzt)	? -12608,-1715 -12643,-1694
-Bendastr.: Kopfsteinpflaster (Kopfsteinpflaster mäßig oder schlecht?)	? -10235,-1916 -10267,-1759
-Semmelweisstr.: Kopfsteinpflaster (Kopfsteinpflaster mäßig oder schlecht?)	? -10297,-1186 -9976,-1276
-Turnstr.: Kopfsteinpflaster (Kopfsteinpflaster mäßig oder schlecht?)	? -10341,-1293 -10055,-1453 -10035,-1465 -9874,-1551 -9860,-1550
+Semmelweisstr.: Asphalt (Kopfsteinpflaster mäßig oder schlecht?)	? -9976,-1276 -9929,-1291 -9856,-1312 -9785,-1333
+Turnstr.: Kopfsteinpflaster (Kopfsteinpflaster mäßig oder schlecht?)	? -10055,-1453 -10035,-1465 -9874,-1551 -9860,-1550
 Müllerstr.: Kopfsteinpflaster (Kopfsteinpflaster mäßig oder schlecht?)	? -10102,-1522 -10055,-1453
 Müllerstr.: Kopfsteinpflaster (Kopfsteinpflaster mäßig oder schlecht?)	? -10035,-1465 -10004,-1365
-Wichgrafstr.: Kopfsteinpflaster (Kopfsteinpflaster mäßig oder schlecht?)	? -10381,-1768 -10267,-1759 -9930,-1687
-Schornsteinfegergasse: Kopfsteinpflaster (Kopfsteinpflaster mäßig oder schlecht?)	? -10535,-1809 -10440,-1836 -10425,-1773
+Wichgrafstr.: Kopfsteinpflaster (Kopfsteinpflaster mäßig oder schlecht?)	? -10267,-1759 -9930,-1687
 (Steinstr. - Tschaikowskiweg): Waldweg (ist der Verbindungsweg mittlerweile asphaltiert?)	? -7996,-2293 -8024,-2468
 Reichenberg: grobes Kopfsteinpflaster (genauer Abschnitt fehlt)	? 58453,24209 58390,23910 58422,23806 58340,23653
 Rollwitz - Damerow: Kopfsteinpflaster/Feldweg (genauere Qualitätsbeschreibung fehlt)	? 46872,118656 46914,117945 47156,116507 47087,115725
@@ -2166,18 +2161,14 @@ Baumgartensteg (Gilt die Einbahnstraßenregelung auch für Radfahrer oder nur für 
 Heinickeweg (Gilt die Einbahnstraßenregelung auch für Radfahrer oder nur für Autofahrer?)	? 2224,14825 2210,14696 2207,14576
 Natalissteig (Ist der Natalissteig eine Einbahnstraße? Wenn ja, gilt die Einbahnstraßenregelung nur für Autofahrer oder auch für Radfahrer?)	? 1202,14935 1223,14824 1226,14714
 Poller (wo genau ist der Poller: an der KGA oder an der Umgehungsbahn?)	? -1889,37093
-Zweirichtungsradweg auf der östl. Seite, Qualität unbekannt (Position ist vielleicht nicht ganz genau)	? -7533,24138 -7734,23796 -8777,22961 -8988,22668 -9046,22376
-Radstreifen (Gibt es in der Großbeerenstr. einen Radweg oder Radstreifen?)	? -10673,-2128 -10634,-2159 -10528,-2196 -10426,-2231 -10327,-2262
-Radwege unterschiedlicher Form und Qualtität (genauer spezifizieren)	? -9723,-2451 -9692,-2462 -9534,-2515 -9462,-2540 -9254,-2605 -9118,-2649 -9110,-2651 -9075,-2664 -8865,-2732 -8500,-2856 -8417,-2867 -8361,-2875 -8283,-2917 -8137,-2997 -8005,-3056 -7878,-3090 -7774,-3091 -7668,-3092 -7577,-3093 -7497,-3096 -7487,-3097 -7060,-3124 -6810,-3151
-Zweirichtungsradweg auf der östlichen Seite (laut "Berliner Umland" entnommen)	? -18356,4783 -18233,4501 -18025,4018
-Zweirichtungsradweg auf der östlichen Seite (laut "Berliner Umland" entnommen)	? -17588,2815 -17309,2517 -16706,1911
-Radweg (andere Straßenseite auch?)	? 37093,-151665 37375,-151190
-Radweg (andere Straßenseite auch?)	? 37628,-150734 37756,-150359
-Lessingstr.: optionaler Radweg (nicht ganz sicher)	? -13749,105474 -12659,104581 -12122,104267 -12062,104131
-Dahlewitz: Zweirichtungsradweg auf Gehweg, südlichen Seite (wie weit geht der Radweg in Dahlewitz?)	? 11875,-8728 11791,-8700 11555,-8625
-Zweirichtungsradweg auf der nördlichen Seite (Geht der Radweg bis zur B2?)	? 50314,68648 50364,68651 50557,68650 50891,68557
-Großbeeren - Diedersdorf: asphaltierter Zweirichtungsradweg auf der nördlichen Seite (fängt der Radweg bereits in Großbeeren an?)	? 5654,-6424 6432,-6715
-Mellensee - Rehagen: asphaltierter Zweirichtungsradweg auf der nordwestlichen Seite (geht der Radweg in Richtung Südwesten weiter?)	? 10744,-25036 9478,-26014 9223,-26361 8647,-26861
+(wie ist die Qualität des Radwegs?)	? -7533,24138 -7599,23946 -7734,23796 -8777,22961 -8988,22668 -9046,22376
+Radstreifen (Gibt es in der Großbeerenstr. einen Radweg oder einen Radstreifen?)	? -10673,-2128 -10634,-2159 -10528,-2196 -10426,-2231 -10327,-2262
+(andere Straßenseite auch?)	? 37093,-151665 37375,-151190
+(andere Straßenseite auch?)	? 37628,-150734 37756,-150359
+(wie weit geht der Radweg in Dahlewitz?)	? 11875,-8728 11791,-8700 11555,-8625
+(Geht der Radweg bis zur B2?)	? 50314,68648 50364,68651 50557,68650 50891,68557
+asphaltiert (fängt der Radweg bereits in Großbeeren an?)	? 5654,-6424 6432,-6715
+asphaltiert (geht der Radweg in Richtung Südwesten weiter?)	? 10744,-25036 9478,-26014 9223,-26361 8647,-26861
 Tor (Sperrung möglich?) (Ist das Tor permanent geöffnet?)	? 58041,164268 58324,164202 59544,164184
 (Weg über das Sportgelände): evtl. nachts geschlossen (wird dieser Weg tatsächlich nachts geschlossen?)	? 13252,14179 13385,13992
 Ausschilderung nach Luisenthal (?) folgen (Heißt es tatsächlich "Luisenthal"?)	? 41134,76881 41143,76365

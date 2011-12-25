@@ -17,6 +17,7 @@ BBBikeDraw/ImageMagick.pm
 BBBikeDraw/Imager.pm
 BBBikeDraw/MapServer.pm
 BBBikeDraw/PDF.pm
+BBBikeDraw/PDFCairo.pm
 BBBikeDraw/SVG.pm
 BBBikeESRI.pm
 BBBikeEdit.pm
@@ -43,6 +44,7 @@ BBBikeServer.pm
 BBBikeStats.pm
 BBBikeTkUtil.pm
 BBBikeTrans.pm
+BBBikeUnicodeUtil.pm
 BBBikeUtil.pm
 BBBikeVar.pm
 BBBikeVia.pm
@@ -150,6 +152,7 @@ Route.pm
 Route/Descr.pm
 Route/Heavy.pm
 Route/PDF.pm
+Route/PDF/Cairo.pm
 Route/Simplify.pm
 Salesman.pm
 Strassen.pm
@@ -568,6 +571,10 @@ images/car.png
 images/car.xpm
 images/cemetery_bg.gif
 images/cemetery_bg.png
+images/cemetery_jewish_bg.gif
+images/cemetery_jewish_bg.png
+images/cemetery_muslim_bg.gif
+images/cemetery_muslim_bg.png
 images/cgi_legende.gif
 images/cgi_legende.xpm
 images/church.gif
@@ -660,6 +667,7 @@ images/grenzuebergang_16.gif
 images/grenzuebergang_16.png
 images/grenzuebergang_32.gif
 images/grenzuebergang_32.png
+images/halfmoons.xbm
 images/haltestelle.gif
 images/haltestelle.xpm
 images/hatched_ring.gif
@@ -819,6 +827,7 @@ images/srtbike_www.xpm
 images/star.gif
 images/star.png
 images/star.xpm
+images/stars_of_david.xbm
 images/start.gif
 images/start.png
 images/start.xpm

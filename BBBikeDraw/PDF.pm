@@ -219,7 +219,7 @@ sub draw_map {
 		    my $cat = $s->[2];
 		    $cat =~ s{::.*}{};
 		    my $is_area = 0;
-		    if ($cat =~ /^F:(.*)/) {
+		    if ($cat =~ /^F:([^|]+)/) {
 			$cat = $1;
 			$is_area = 1;
 		    }
@@ -258,7 +258,7 @@ sub draw_map {
 		# move to first point
 		$im->moveto(@{ $ss->[0] });
 
-		if ($cat =~ /^F:(.*)/) {
+		if ($cat =~ /^F:([^|]+)/) {
 		    my $cat = $1;
 		    next if ($strecke_name eq 'flaechen' &&
 			     (($flaechen_pass == 1 && $cat eq 'Pabove') ||
@@ -1021,10 +1021,10 @@ sub can_multiple_passes {
 }
 
 sub patch_string {
-    if (!eval { require Route::PDF; 1 }) {
+    if (!eval { require BBBikeUnicodeUtil; 1 }) {
 	$_[0];
     } else {
-	Route::PDF::_unidecode_string($_[0]);
+	BBBikeUnicodeUtil::unidecode_string($_[0]);
     }
 }
 

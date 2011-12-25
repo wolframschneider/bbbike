@@ -7,21 +7,20 @@ Sembritzkystr.: Bauarbeiten, Einbahnstraße	q3::inwork; 7203,5488 7186,5453 7157,
 Beuthstr. - Spittelmarkt: Gehweg, Bauarbeiten	q4::inwork 10229,11618 10213,11728
 Spittelmarkt: Gehweg, Bordstein, Bauarbeiten	q4::inwork 10166,11592 10153,11666 10213,11728
 Axel-Springer-Str.: Bauarbeiten	q4::inwork 10166,11592 10136,11529
-Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Gartenstr. und Hessische Str. gesperrt	q4::inwork; 9383,13978 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
+Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Gartenstr. und Hessische Str. gesperrt	q4::inwork; 9383,13978 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
 Alt-Stralau: Bauarbeiten an der Brücke, enge Durchfahrt	q3::inwork 14652,10201 14558,10264
-Behrenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8861,12125 9054,12154 9064,12156 9164,12172
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9890,12161 9875,12257 9869,12297
 Jerusalemer Str.: Bauarbeiten, Einbahnstraße	q3::inwork; 9878,11857 9892,11752
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
 Universitätsstr.: wegen Bauarbeiten Richtung Unter den Linden gesperrt	q4::inwork; 9580,12581 9601,12380
-Matkowskystr., Revaler Str.: Bauarbeiten, Einbahnstraße	q4::inwork; 14530,11137 14509,11060 14442,11101
+Revaler Str.: Bauarbeiten, Einbahnstraße	q4::inwork; 14509,11060 14442,11101
 Helmerdingstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 14465,11195 14442,11101
 Rathausstr.: Baustelle vor dem Roten Rathaus, eng	q4::inwork 10601,12521 10704,12595
 Rathausstr. zwischen Breitestr. und Poststr.: Fahrbahn wegen Brückenbauarbeiten gesperrt	q4::inwork 10281,12310 10362,12351
 Rathausstr. zwischen Breitestr. und Poststr.: Fahrbahn wegen Brückenbauarbeiten gesperrt	q4::inwork 10422,12395 10476,12432
 Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10436,11344 10244,11160
 Elcknerplatz, Borgmannstr.: Bauarbeiten, Einbahnstraße	q4::inwork; 22428,6063 22478,6041 22544,6037 22539,5956
-Kantstr.: Bauarbeiten am Zoofenster	q4::inwork 5613,10963 5652,11004
+Kantstr.: Bauarbeiten am Zoofenster, Fahrbahn Richtung Westen gesperrt	q4::inwork; 5652,11004 5613,10963
 Wuhlewanderweg: steiler Anstieg, Fußgänger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gefälle, Fußgänger	q4; 21970,12153 21998,12204
 (An der Wuhle, östliches Ufer): Fußgänger	q1 21323,8481 21333,8355 21371,8289 21594,8107 21627,8024 21629,7921
@@ -61,12 +60,12 @@ Treptower Park: Fußgänger	q1 14697,9726 14645,9710 14575,9648 14496,9705 14361,9
 Görlitzer Park: Fußgänger	q2 12671,10042 12686,10045 12690,10062
 Görlitzer Park: Fußgänger	q2 12761,10195 12769,10211 12774,10222
 Görlitzer Park: Fußgänger	q2 13145,9920 12869,10071 12802,10097
-Görlitzer Park: Fußgänger	q2 12670,10160 12559,10220 12459,10256 12406,10368 12328,10442
+Görlitzer Park: Fußgänger	q2 12670,10160 12567,10211 12543,10223 12459,10256 12406,10368 12328,10442
 Görlitzer Park: Fußgänger	q2 12817,9964 12833,9998 12869,10071 12904,10141 12911,10156
 Görlitzer Park, Rondell: Fußgänger	q2 12802,10097 12737,10051 12690,10062 12659,10119 12670,10160 12712,10192 12761,10195 12801,10146 12802,10097
 Görlitzer Park: Fußgänger, eng	q2 12802,10097 12670,10160
-Görlitzer Park: eng, Kurven, Fußgänger	q2 12507,10130 12509,10189 12559,10220
-Görlitzer Park: Fußgänger	q2 12559,10220 12611,10299
+Görlitzer Park: eng, Kurven, Fußgänger	q2 12507,10130 12504,10172 12516,10202 12543,10223
+Görlitzer Park: Fußgänger	q2 12543,10223 12580,10252 12611,10299
 Tiergartenufer: Fußgänger	q1 6186,11466 6079,11524 5940,11616 5903,11683 5835,11768 5736,11835 5543,11837 5478,11860
 (Lichtensteinallee - Tiergartenufer): Parkweg, Fußgänger	q1 6309,11443 6186,11466
 Tiergarten: Parkweg, Fußgänger	q2 5666,11362 5727,11573 5758,11630 5780,11622 5802,11672 5831,11697 5818,11722 5835,11768 5870,11842 5890,11865 5900,11913
@@ -407,7 +406,7 @@ Viktoriapark: Fußgänger, kurze Rampe, Pfähle	q1 5013,6003 4981,5939 4957,5894
 Teltowkanalpromenade: eng, nicht anhängertauglich	q2 2079,-12 1924,-188 1593,-317 1471,-311
 (Wohnanlage Friedastr.): Fußgänger, Bordsteine	q3 16887,11545 16759,11582
 (Eitelstr. - Bahnhof Lichtenberg): Fußgänger	q3 16727,11611 16766,11603
-Bennigsenstr.: enge Straße	q1 5807,7771 5957,7765 6225,7776
+Bennigsenstr.: enge Straße	q1 5807,7771 5957,7773 6195,7775 6215,7761
 Perelsplatz: Fußgänger, Park	q2 5809,7712 5636,7709
 Gustav-Rickelt-Weg: eng, Fußgänger, Bordsteine	q2 4226,6712 4223,6796 4206,6820
 Unterführung unter der Stromstr.: Fußgänger, eng	q2 6218,12975 6180,12972
@@ -564,7 +563,9 @@ Gounodstr.: Fußgänger	q1 14259,15816 14272,15837 14366,15877
 Seidenberger Str.: Bordstein, Geländer	q3 12379,16998 12373,17007
 Mulackstr.: enge Straße	q1 10640,13471 10535,13509 10406,13543 10304,13575
 Rückerstr.: enge Straße	q1 10597,13647 10535,13509
-Cheruskerpark: Fußgänger	q1 7437,8712 7403,8693 7369,8583 7352,8390 7283,8265 7250,8223
+Cheruskerpark: Fußgänger	q1 7437,8712 7403,8693 7369,8583 7352,8391 7352,8390 7283,8265 7282,8264 7250,8223
+(Cheruskerpark - Cheruskerstr.): Fußgänger	q1 7352,8391 7366,8390 7375,8294 7400,8273 7412,8273
+(Torgauer Str. - Cheruskerstr.): Fußgänger	q1 7282,8264 7289,8259 7332,8292 7375,8294
 (Bernhardstr. - Varziner Platz): S-Bahnunterführung, Fußgänger	q4 5471,7915 5475,7906 5492,7868
 (Georg-Knorr-Str. - Landsberger Allee): Rampe	q3 19150,15009 19152,14999 19127,14984 19156,14987 19157,14979
 (Georg-Knorr-Str. - Frank-Schweitzer-Str.): Unterführung, Fußgänger	q2 19157,14979 19171,14938 19175,14926
@@ -681,7 +682,7 @@ Ugandastr.: enge Straße	q1 6071,15768 5906,15623
 Limburger Str.: Fußgänger	q2 7012,15571 7129,15717
 Litfaß-Platz: Fußgängerzone, Radfahren erlaubt	q3 10348,12879 10312,12982
 (Finkenweg - Mariendorfer Damm): Fußgänger	q1 9360,4996 9239,4980
-Yva-Bogen: Fußgängerzone	q4 5373,10981 5426,11039 5459,11135
+Yva-Bogen: Fußgänger	q2 5373,10981 5426,11039 5459,11135
 (Georgenkirchstr. - Mollstr.): Fußgänger	q1 11589,13305 11524,13247
 Kelchstr.: enge Straße	q1 7386,4692 7424,4821 7437,4855 7456,4934
 Doldenweg: Bordsteine, Fußgänger	q2 7424,4821 7487,4802
@@ -891,6 +892,8 @@ Roßweiner Ring: Bordsteinkante	q3 25163,13785 25157,13790
 Karsenzeile: Fußgänger	q1 14245,2704 14408,2708 14458,2709 14582,2595 14597,2607
 Karsenzeile: Fußgänger, Bordsteinkante	q2 14682,2532 14597,2607
 Marianne-Hapig-Weg: Fußgänger, Spielplatz	q2 17623,-221 17563,-364
+(Kanzlerweg - Schreiberring): eng	q2 8839,8168 8861,8242
+(Rumeyplan - Kanzlerweg): eng	q2 8899,7788 8839,7904
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q3 11805,19071 11895,19183 11927,19308
 Ebersstr.: Schüler	q2 7245,8583 7292,8631
 Straße 103 (Niederschönhausen): enge Straße	q1 10914,20065 11051,19789
@@ -980,7 +983,7 @@ Neustrelitzer Str.: kurvenreich	q1 16752,14745 16668,14765 16534,14740 16443,148
 (Esplanade - Grüntaler Str.): Zickzack-Kurs	q2 9984,16968 9880,16994 9846,16981
 Lünette: Fußgänger	q1 -1342,15510 -1485,15463
 Maselakeweg: Fußgänger	q1 -2450,16981 -2410,16931 -2391,16788 -2391,16607 -2333,16590
-Gritznerstr.: enge Straße	q1 4291,5895 4370,6052 4430,6165 4472,6242 4507,6320 4555,6403 4630,6534 4679,6620 4734,6716
+Gritznerstr.: enge Straße	q1 4291,5895 4370,6052 4414,6134 4430,6165 4472,6242 4507,6320 4555,6403 4630,6534 4679,6620 4734,6716
 Im Jagen: Fußgänger, Hundeauslaufgebiet	q1 905,6631 909,6584 1057,6461 1375,6138
 Worpsweder Str.: eng mit ein- und ausparkenden Autos	q1 6191,4923 6202,5163
 Wilseder Str.: eng mit ein- und ausparkenden Autos	q1 6295,5158 6288,4906
@@ -1004,8 +1007,8 @@ Friedrichshaller Str.: Bodenschwellen	q2 2774,7655 2786,7721 2911,7686 3083,7587
 Hechtgraben: eng, Fußgänger, Treppen oder Rampen	q3 3105,5594 3173,5493
 (Weg in d. Kolonie Norderney): Fußgänger	q3 3596,6828 3607,6952 3582,6964
 Franz-Cornelsen-Weg: Fußgänger, Radfahren offiziell nicht erlaubt, schmaler Fußweg am Spielplatz	q3 3593,7176 3597,7192 3612,7335 3634,7601
-Björnsonstr.: Fußgänger, eng	q3 4290,6445 4320,6540
-Rückertstr.: Fußweg durch Wohngebiet	q3 3878,6110 4028,6099
+Björnsonstr.: Fußgänger, eng	q3 4290,6445 4338,6528
+(Gustav-Mahler-Platz - Rückertstr.): Fußweg durch Wohngebiet	q3 3878,6110 3943,6107 3976,6094 4027,6088
 Spinozastr.: eng u. unübersichtlich	q2 3926,6409 3930,6481 3974,6511 4050,6506
 (Parkweg): mit Stufen	q3 2214,4992 2288,4932
 Koburger Str.: Gehweg	q3 6534,8467 6540,8421
@@ -1063,7 +1066,7 @@ Voxstr.: Fußgänger	q3 8309,11390 8375,11368
 Alice-Salomon-Park: getrennte Wege für Radfahrer und Fußgänger, Bordsteine	q2 6851,9365 6771,9458 6728,9457
 (Geßlerstr. - Monumentenstr.): Fußgänger, Kinder	q2 7970,8886 7964,9060 8009,9063 8014,9126
 (Loewenhardtdamm - Höhndorfstr.): Fußgänger, Bordsteine, Schranken	q2 8334,8655 8438,8676
-(Weg d. Kol. Papestr.): Fußgänger	q1 8221,8631 8259,8628 8264,8289
+(Weg d. Kol. Papestr.): Fußgänger	q1 8221,8631 8259,8628 8265,8305
 (zum Bayernring): Fußgänger	q1 8455,8567 8531,8404
 Bautzener Platz: Fußgänger, Bordsteine	q2 8182,9240 8100,9240
 Bautzener Platz: Fufgänger, Bordsteine	q2 8102,9262 8183,9260
@@ -1373,7 +1376,7 @@ Wetterseestr.: enge Straße	q1 11499,16883 11504,16746
 Kreuzritterstr.: enge Straße	q1 2252,24700 2297,24682 2359,24677 2402,24687 2471,24709 2531,24702 2586,24678 2621,24638 2640,24608
 Askaloner Weg: enge Straße	q1 2402,24687 2407,24657 2384,24603 2311,24546 2262,24505
 Juttastr.: enge Straße	q1 1072,4542 949,4366
-Herbert-Baum-Str.: enge Straße	q1 13826,16026 13869,15912 13904,15818 13943,15717 13964,15656 13989,15589
+Herbert-Baum-Str.: enge Straße	q0 13826,16026 13869,15912 13904,15818 13943,15717 13964,15656 13989,15589
 Sendener Weg: enge Straße	q0 964,18321 1040,18283 1178,18223 1221,18327 1281,18487 1346,18662
 Gilgenburger Str.: enge Straße	q1 24387,5672 24434,5645 24549,5685 24666,5726
 Blochmannstr.: enge Straße	q1 5097,988 5036,949 4986,959 4925,961 4862,975 4788,1023 4702,1147 4634,1245

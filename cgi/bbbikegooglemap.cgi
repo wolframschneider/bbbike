@@ -964,9 +964,7 @@ EOF
     var bbbikeorg_map = new GMapType(tilelayers_bbbikeorg,
         new GMercatorProjection(19), "BBBike",
         { urlArg: 'bbbikeorg', linkColor: '#000000' });
-    if (isBBBikeBeta) {
-        map.addMapType(bbbikeorg_map);
-    }
+    map.addMapType(bbbikeorg_map);
 
     //// no, I prefer hybrid
     //map.setMapType(mapnik_map);
@@ -991,7 +989,11 @@ EOF
     }
 
     function GetTileUrl_bbbikeorg(a, z) {
-	return "http://tile.bbbike.org/osm/mapnik/" + z + "/" + a.x + "/" + a.y + ".png";
+	if (false) {
+	    return "http://tile.bbbike.org/osm/mapnik/"        + z + "/" + a.x + "/" + a.y + ".png";
+	} else {
+	    return "http://tile.bbbike.org/osm/mapnik-german/" + z + "/" + a.x + "/" + a.y + ".png";
+	}
     }
 
     if (GBrowserIsCompatible() ) {
