@@ -135,6 +135,8 @@ sub make_long_streets {
     my $count = 0;
     while (1) {
 	my $r = $self->next;
+	next if !exists $r->[Strassen::COORDS]; # comments?
+
 	last if !@{ $r->[Strassen::COORDS] };
 	if ($ignorecat{$r->[Strassen::CAT]}) {
 	    CORE::push(@strdata, $r);
