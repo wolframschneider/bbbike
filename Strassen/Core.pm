@@ -25,7 +25,7 @@ use vars qw(@datadirs $OLD_AGREP $VERBOSE $STRICT $VERSION $can_strassen_storabl
 	    %directive_aliases
 	   );
 
-use enum qw(NAME COORDS CAT LOCALDIRECTIVES);
+use enum qw(NAME COORDS CAT);
 use constant LAST => CAT;
 
 $VERSION = sprintf("%d.%02d", q$Revision: 1.94 $ =~ /(\d+)\.(\d+)/);
