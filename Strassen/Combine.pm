@@ -135,14 +135,17 @@ sub make_long_streets {
     my $count = 0;
     while (1) {
 	my $r = $self->next;
-	next if !exists $r->[Strassen::COORDS]; # comments?
+
+	$r->[Strassen::LOCALDIRECTIVES] = $self->{Directives}->[$count];
+        $count++;
 
 	last if !@{ $r->[Strassen::COORDS] };
 	if ($ignorecat{$r->[Strassen::CAT]}) {
 	    CORE::push(@strdata, $r);
 	    next;
 	}
-	if ($v && ++$count%100 == 0) {
+
+	if ($v && $count%100 == 0) {
 	    print STDERR "$count\r";
 	}
 
@@ -286,7 +289,7 @@ sub make_long_streets {
 		$coords[0] ne $coords[-1]) {
 		CORE::push(@coords, $coords[0]);
 	    }
-	    $out_str->push([$r->[Strassen::NAME], \@coords, $r->[Strassen::CAT]]);
+	    $out_str->push_ext([ $r->[Strassen::NAME], \@coords, $r->[Strassen::CAT] ], $r->[LOCALDIRECTIVES]);
 	}
     }
 

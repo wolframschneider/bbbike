@@ -23,6 +23,7 @@ BEGIN { require Strassen::Core }
 use constant NAME   => Strassen::NAME();
 use constant COORDS => Strassen::COORDS();
 use constant CAT    => Strassen::CAT();
+#use constant LOCALDIRECTIVES => Strassen::LOCALDIRECTIVES();
 
 sub new {
     my($class, $obj) = @_;
