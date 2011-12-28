@@ -107,7 +107,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $bbbike_temp_blockings_file $bbbike_temp_blockings_optimized_file
 	    @temp_blocking $temp_blocking_epoch
 	    $use_reproxy
-	    $use_cgi_compress_gzip $use_bbbikedraw_compress $max_matches
+	    $use_cgi_compress_gzip $use_bbbikedraw_pdf_compress $max_matches
 	    $use_winter_optimization $winter_hardness
 	    $with_lang_switch
 	    $newstreetform_encoding
@@ -5966,7 +5966,10 @@ EOF
 				      };
 
 
-	    print " target=\"BBBikeGrafik\" action=\"$bbbike_script\"";
+	    if (!$bi->{'no_new_windows'}) {
+		print " target=\"BBBikeGrafik\"";
+	    }
+	    print " action=\"$bbbike_script\"";
 	    # show_map scheint bei OS/2 nicht zu funktionieren
 	    # ... und bei weiteren Browsern (MSIE), deshalb erst einmal
 	    # pauschal herausgenommen.
@@ -6118,7 +6121,7 @@ EOF
 #  	    }
 	    print "</table>\n";
 	    print qq{<div class="graphfootnote">};
-	    printf M(<<EOF), 15, 50, ($use_bbbikedraw_compress ? (100, 500) : (100, 3000));
+	    printf M(<<EOF), 15, 200, 50, 3000;
 Die Dateigr&ouml;&szlig;e der Grafik beträgt je nach
 Bildgr&ouml;&szlig;e, Bildformat und Detailreichtum %s bis %s kB. PDFs sind %s bis %s kB groß.
 EOF
@@ -6581,15 +6584,15 @@ sub draw_route {
 	if (defined $bbbikedraw_pdf_module && !$bbbikedraw_args{Module}) {
 	    $bbbikedraw_args{Module} = $bbbikedraw_pdf_module;
 	}
+	if ($use_bbbikedraw_pdf_compress && !defined $bbbikedraw_args{Module}) {
+	    # assume that BBBikeDraw::PDF is used
+	    $bbbikedraw_args{Compress} = 1;
+	}
     } else {
 	# for non-pdf
 	if (defined $use_module && !$bbbikedraw_args{Module}) {
 	    $bbbikedraw_args{Module} = $use_module;
 	}
-    }
-
-    if ($use_bbbikedraw_compress) {
-	$bbbikedraw_args{Compress} = 1;
     }
 
     eval {
@@ -8156,7 +8159,9 @@ sub link_to_met {
 
 sub window_open {
     my($href, $winname, $settings) = @_;
-    if ($bi->{'can_javascript'} && !$bi->{'window_open_buggy'}) {
+    if ($bi->{'no_new_windows'}) {
+	"<a href=\"$href\">";
+    } elsif ($bi->{'can_javascript'} && !$bi->{'window_open_buggy'}) {
 	"<a href=\"$href\" target=\"$winname\" onclick='window.open(\"$href\", \"$winname\"" .
 	  (defined $settings ? ", \"$settings\"" : "") .
 	    "); return false;'>";
