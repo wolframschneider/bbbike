@@ -45,7 +45,7 @@ BEGIN {
 
     @modules = qw(GD/png GD/gif GD/jpeg
 		  GD::SVG SVG
-		  PDF PDF2
+		  PDF PDFCairo
 		  Imager/png Imager/jpeg
 		  MapServer MapServer;noroute
 		  ImageMagick/png ImageMagick/jpeg
@@ -214,9 +214,6 @@ plan tests => scalar @modules * $tests_per_module;
 
 for my $module (@modules) {
  SKIP: {
-	skip("PDF2 is not ready yet", $tests_per_module)
-	    if $module eq 'PDF2';
-
 	eval {
 	    draw_map($module);
 	};
@@ -259,7 +256,7 @@ sub draw_map {
 	$imagetype = $2;
     } elsif ($module eq 'SVG') {
 	$imagetype = "svg";
-    } elsif ($module =~ /^PDF2?$/) {
+    } elsif ($module =~ /^(?:PDF|PDFCairo)$/) {
 	$imagetype = "pdf";
     } elsif ($module eq 'BerlinerStadtplan') {
 	$imagetype = "http.html";
@@ -371,7 +368,14 @@ sub draw_map {
 	my $pdf_content = <$fh>;
 
 	ok($pdf_content =~ m{^%PDF-1\.\d+}, "Looks like a PDF document");
-	ok($pdf_content =~ m{Creator.*(BBBikeDraw|MapServer)}i, "Found Creator");
+
+	{
+	    local $TODO;
+	    if ($module eq 'PDFCairo') {
+		$TODO = 'Cairo has no support for Create, Author... in pdfs';
+	    }
+	    ok($pdf_content =~ m{Creator.*(BBBikeDraw|MapServer)}i, "Found Creator");
+	}
     } else {
     SKIP: {
 	    my $image_info = image_info($filename);
@@ -379,7 +383,7 @@ sub draw_map {
 		is($image_info->{file_media_type}, "image/$imagetype", "Correct mime type for $imagetype");
 	    } elsif ($imagetype eq 'svg') {
 		like($image_info->{file_media_type}, qr{^image/svg[+-]xml$}, "Correct mime type for $imagetype")
-		    or diag "Test may fail if Image::Info is too old, try 1.30";
+		    or diag "Test may fail if Image::Info is too old, try 1.31_50 or better";
 		if ($image_info->{file_media_type} eq 'image/svg-xml') {
 		    diag <<EOF;
 The recommended mime type for SVG is image/svg+xml, not image svg-xml.

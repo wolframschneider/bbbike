@@ -91,6 +91,10 @@ List::Permutor	- Für das Problem des Handlungsreisenden (langsamerer Permutor)
 
 PDF::Create 0.06	- Erzeugung der Route als PDF-Dokument
 
+Cairo	- Erzeugung der Route als PDF-Dokument, alternativer Renderer
+
+Pango	- Erzeugung der Route als PDF-Dokument, alternativer Renderer
+
 Font::Metrics::Helvetica	- Für die Reparatur der Zeichenbreitentabellen in PDF::Create
 
 BSD::Resource
@@ -171,15 +175,11 @@ Algorithm::Diff	- Unterschiede im temp_blockings-Editor anzeigen
 
 Sort::Naturally	- Für natürliches Sortieren von bbd-Dateien
 
-Yahoo::Search	- Suche in luise-berlin
-
 Geo::Coder::Google 0.06	- Geocoding über Googlemaps (API v2)
 
 Geo::Coder::Googlev3	- Geocoding über Googlemaps (API v3)
 
-Geo::Coder::Yahoo	- Geocoding über Yahoo
-
-Geo::Coder::Bing	- Geocoding über Bing
+Geo::Coder::Bing 0.10	- Geocoding über Bing
 
 Geo::Cloudmade	- Geocoding über Cloudmade
 

@@ -51,6 +51,8 @@ my $route_file;
 my $marker_point;
 my $q;
 my $debug;
+my $do_routelist;
+my $compress;
 
 if (!GetOptions("w=i" => \$w,
 		"h=i" => \$h,
@@ -78,6 +80,8 @@ if (!GetOptions("w=i" => \$w,
 		"customplaces=s" => \$custom_places,
 		"routefile=s" => \$route_file,
 		"markerpoint=s" => \$marker_point,
+		"routelist!" => \$do_routelist,
+		"compress!" => \$compress,
 		"q|quiet!" => \$q,
 		"debug" => \$debug,
 	       )) {
@@ -177,11 +181,20 @@ if (defined $route_file) {
     } else {
 	require Route;
 	my $load = Route::load($route_file);
-	push @extra_args, Coords => [ map { join(",", @$_) } @{ $load->{RealCoords} } ];
+	my @coords = map { join(",", @$_) } @{ $load->{RealCoords} };
+	push @extra_args, Coords => \@coords;
+	my(@strnames) = make_netz()->route_to_name([ map { [split ','] } @coords ]);
+	if (@strnames) {
+	    push @extra_args, Startname => Strassen::strip_bezirk($strnames[0]->[0]);
+	    push @extra_args, Zielname => Strassen::strip_bezirk($strnames[-1]->[0]);
+	}
     }
 }
 if (defined $marker_point) {
     push @extra_args, MarkerPoint => $marker_point;
+}
+if ($compress) {
+    push @extra_args, Compress => 1;
 }
 
 my $draw = new BBBikeDraw
@@ -219,7 +232,15 @@ if (defined $custom_places) {
 }
 if ($route_file) {
     $draw->draw_route;
+    if ($do_routelist) {
+	$draw->add_route_descr(
+			       -net => make_netz(),
+			       -lang => 'de',
+			      )
+	    if $draw->can("add_route_descr");
+    }
 }
+
 $draw->flush;
 close OUT;
 
@@ -302,6 +323,8 @@ usage: $0 [options]
 -fontsizescale float       Scale default font sizes for place labels.
 -bg|-background color      Specify background color (as GD colors).
                            Use "transparent" for a transparent background.
+-compress		   Turn compression on. May help in reducing size for pdf
+			   output.
 -q			   Be quiet.
 -debug                     Turn debugging on.
 EOF

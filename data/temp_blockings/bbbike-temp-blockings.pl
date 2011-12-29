@@ -5304,7 +5304,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003088',
        data  => <<EOF,
-userdel	2::temp 5370,6486 5424,6584 5533,6753 5654,6941
+userdel	2::temp 5370,6486 5424,6584 5533,6753 5644,6936
 EOF
      },
      { from  => 1154203576, # 2006-07-29 22:06
@@ -7966,7 +7966,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005341',
        data  => <<EOF,
-userdel	2::temp 5370,6486 5424,6584 5533,6753 5654,6941
+userdel	2::temp 5370,6486 5424,6584 5533,6753 5644,6936
 EOF
      },
      { from  => 1177739901, # 2007-04-28 07:58
@@ -9142,7 +9142,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_096853',
        data  => <<EOF,
-userdel	q4::inwork 19904,3464 19803,3391 19732,3340
+userdel	q4::inwork 19904,3464 19842,3419 19732,3340
 EOF
      },
      { from  => 1185055200, # 2007-07-22 00:00
@@ -10553,7 +10553,7 @@ EOF
        text  => 'Weihnachtsmarkt ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 9700,12234 9679,12388
+userdel	2::inwork 9708,12235 9702,12307 9695,12390
 EOF
      },
      { from  => undef, # # note: existiert nicht mehr
@@ -11778,7 +11778,7 @@ EOF
        data  => <<EOF,
 userdel	2::temp 8358,11477 8301,11469 8226,11458 8145,11438 8083,11381 8065,11349 8031,11249 8000,11137 7980,11070 7968,11048 7912,10945 7820,10768 7689,10514 7633,10394 7579,10183 7413,10244 7245,10297 7131,10331 7033,10328 6971,10346 6937,10363 6851,10416 6753,10446 6636,10492 6532,10529 6685,10690 6740,10755 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936
 userdel	2::temp 8553,11630 8548,11552 8542,11502 8479,11493 8374,11479
-userdel	2::temp 9984,12426 9934,12418 9852,12409 9780,12401 9771,12400 9679,12388 9601,12380 9475,12365 9358,12351 9141,12320 9164,12172 9064,12156
+userdel	2::temp 9984,12426 9934,12418 9852,12409 9780,12401 9771,12400 9734,12395 9695,12390 9656,12386 9601,12380 9475,12365 9358,12351 9141,12320 9164,12172 9064,12156
 userdel	2::temp 8553,11638 8567,11799 8571,11846 8581,11896 8595,12066 8737,12098 8743,12099 8861,12125 9054,12154
 userdel auto	3 6972,10665 6818,10725 6740,10755 6607,10801
 userdel auto	3 8901,12008 8861,12125 8804,12280
@@ -16019,7 +16019,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014142',
        data  => <<EOF,
-userdel	q4::temp; 5817,7223 5654,6941
+userdel	q4::temp; 5817,7223 5644,6936
 EOF
      },
      { from  => undef, #
@@ -16840,7 +16840,7 @@ EOF
        source_id => 'IM_014608',
        data  => <<EOF,
 userdel	2::temp 9943,12364 9961,12273 9972,12184
-userdel	2::temp 9780,12401 9795,12293 9801,12245 9812,12145
+userdel	2::temp 9780,12401 9795,12293 9801,12245 9808,12182 9812,12145
 userdel	2::temp 9852,12409 9869,12297 9875,12257 9890,12161
 EOF
      },
@@ -18089,9 +18089,9 @@ EOF
 userdel	q4::inwork -49042,-3647 -48542,-2958 -48338,-2586
 EOF
      },
-     { from  => 1309719930, # 2011-07-03 21:05
-       until => 1325372400, # 2012-01-01 00:00
-       text  => 'Lichterfeld-Schacksdorf: L60: Havarie, Straßenzustand Lauchhammer - Licherfelde Umleitung: Lauchhammer - Grünwalde - Staupitz - Sorno - Finsterwalde - Schacksdorf - Lichterfelde, 22.07.2010 bis 31.12.2011 ',
+     { from  => 1324669252, # 2011-12-23 20:40
+       until => 1341093600, # 2012-07-01 00:00
+       text  => 'Lichterfeld-Schacksdorf: L60: Havarie, Straßenzustand Lauchhammer - Licherfelde Umleitung: Lauchhammer - Grünwalde - Staupitz - Sorno - Finsterwalde - Schacksdorf - Lichterfelde, 22.07.2010 bis 30.06.2012 ',
        type  => 'gesperrt',
        source_id => '106200475',
        data  => <<EOF,
@@ -18251,7 +18251,7 @@ EOF
        text  => 'Rheinstraße (Friedenau): Veranstaltung, Straße vollständig gesperrt (2. und 3. Juli 2011) in beiden Richtungen zwischen Walther-Schreiber-Platz und Breslauer Platz',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 5370,6486 5424,6584 5533,6753 5654,6941 5817,7223
+userdel	2::temp 5370,6486 5424,6584 5533,6753 5644,6936 5817,7223
 EOF
      },
      { from  => 1284091200, # 2010-09-10 06:00 # PERIODISCH!
@@ -19239,7 +19239,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_017503',
        data  => <<EOF,
-userdel	2::temp 9852,12409 9780,12401 9771,12400 9679,12388 9601,12380 9475,12365 9358,12351
+userdel	2::temp 9852,12409 9780,12401 9771,12400 9734,12395 9695,12390 9656,12386 9601,12380 9475,12365 9358,12351
 EOF
      },
      { from  => 1311883200, # 2011-07-28 22:00
@@ -19399,11 +19399,13 @@ userdel	q4::inwork 10599,19957 10614,19907
 EOF
      },
      { from  => 1310504724, # 2011-07-12 23:05
-       until => 1342389599, # 2012-07-15 23:59
+       until => 1324668762, # XXX 1342389599, # 2012-07-15 23:59
        text  => 'Neubau der Buddestraße von Bernstorffstraße bis Brunowstraße, Sperrung der Fahrbahn, bis Mitte Juli 2012',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110712.1035.350987.html',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20111220.1150.364099.html',
        data  => <<EOF,
+#: XXX Weiterbau zwischen Gorkistr. und Bernstorffstraße ab März 2012 vorgesehen
+#: next_check: 2012-03-01
 userdel	q4::inwork 2358,20368 2295,20358 2241,20487
 userdel	q4::inwork 2295,20358 2362,20218 2402,20126
 EOF
@@ -19929,6 +19931,15 @@ EOF
        source_id => 'IM_018151',
        data  => <<EOF,
 userdel	q4::inwork 8635,13580 8626,13641 8619,13689
+EOF
+     },
+     { from  => 1314604800, # 2011-08-29 10:00
+       until => 1328025600, # 2012-01-31 17:00
+       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten, Straße vollständig gesperrt in beiden Richtungen zwischen Oderberger Str. und Schönhauser Allee, bis 31.01.2012 ',
+       type  => 'handicap',
+       source_id => 'IM_017746',
+       data  => <<EOF,
+userdel	q4::inwork 10723,14772 10838,14962 10881,15047
 EOF
      },
     );
