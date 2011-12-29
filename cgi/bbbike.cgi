@@ -9042,7 +9042,8 @@ sub show_info {
     header(-from => 'info');
     my $perl_url = "http://www.perl.org/";
     my $cpan = "http://www.cpan.org/";
-    my $scpan = "http://search.cpan.org/search?mode=module&amp;query=";
+    #my $scpan = "http://search.cpan.org/search?mode=module&amp;query=";
+    my $scpan = "http://search.cpan.org/perldoc?";
     print <<EOF;
 <center><h2>Information</h2></center>
 <ul>
@@ -9330,7 +9331,17 @@ EOF
     }
     print <<EOF;
 <li><a href="${scpan}GD">GD</a> für das Erzeugen der GIF/PNG/JPEG-Grafik
+EOF
+    if ($bbbikedraw_pdf_module && $bbbikedraw_pdf_module eq 'PDFCairo') {
+	print <<EOF;
+<li><a href="${scpan}Cairo">Cairo</a> und <a href="${scpan}Pango">Pango</a> für das Erzeugen der PDF-Grafik
+EOF
+    } else {
+	print <<EOF;
 <li><a href="${scpan}PDF::Create">PDF::Create</a> für das Erzeugen der PDF-Grafik
+EOF
+    }
+    print <<EOF;
 <li><a href="${scpan}SVG">SVG</a> für das Erzeugen von SVG-Dateien
 <li><a href="${scpan}Storable">Storable</a> für das Caching
 <li><a href="${scpan}String::Approx">String::Approx</a> für approximatives Suchen von Straßennamen (anstelle von <a href="ftp://ftp.cs.arizona.edu/agrep/">agrep</a>)
