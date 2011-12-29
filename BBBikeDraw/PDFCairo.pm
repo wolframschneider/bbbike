@@ -19,9 +19,9 @@ use Strassen;
 # Strassen benutzt FindBin benutzt Carp, also brauchen wir hier nicht zu
 # sparen:
 use Carp qw(confess);
-use BBBikeUtil qw(pi is_in_path);
+use BBBikeUtil qw(pi);
 
-use vars qw($VERSION @colors %color %width %outline_color $VERBOSE);
+use vars qw($VERSION @colors %color %width %outline_color $VERBOSE $DO_COMPRESS);
 BEGIN { @colors =
          qw($grey_bg $white $yellow $lightyellow $red $green $middlegreen $darkgreen
 	    $darkblue $lightblue $rose $black $darkgrey $lightgreen);
@@ -37,25 +37,9 @@ use constant DIN_A4_HEIGHT => 842;
 sub init {
     my $self = shift;
 
-    if ($self->{Compress}) {
-	if (is_in_path "pdftk") {
-	    $self->{_CompressTool} = "pdftk";
-	} elsif (0 && eval { require PDF::API2; require File::Temp; 1 }) {# XXX does not work, see below XXX also not supported in PDFCairo (yet? never?)
-	    $self->{_CompressTool} = "PDF::API2";
-	} elsif (0 && eval { require CAM::PDF; require File::Temp; 1 }) {# XXX not supported in PDFCairo (yet? never?)
-	    $self->{_CompressTool} = "CAM::PDF";
-	} else {
-	    warn "No pdftk in PATH available, don't compress...";
-	    undef $self->{Compress};
-	}
-	if ($self->{_CompressTool}) {
-	    require File::Temp;
-	    my($fh,$filename) = File::Temp::tempfile(SUFFIX => ".pdf", UNLINK => 1);
-	    die "Cannot create temporary file: $!" if !$filename;
-	    $self->{_CompressOriginalFilename} = $self->{Filename};
-	    $self->{_CompressTemporaryFilename} = $filename;
-	    $self->{Filename} = $filename;
-	}
+    if ($DO_COMPRESS) {
+	require BBBikeDraw::PDFUtil;
+	BBBikeDraw::PDFUtil::init_compress($self);
     }
 
     my $page_bbox = [0,0,DIN_A4_WIDTH,DIN_A4_HEIGHT];
@@ -286,17 +270,16 @@ sub draw_map {
 	my $images_dir = $self->get_images_dir;
 	my $suf = ($self->{Xk} >= 0.05 ? '' : '2');
 
-	my($kl_ampel);
-	my($kl_andreas);
-	my($kl_zugbruecke);
+	my($kl_ampel, $kl_andreas, $kl_zugbruecke, $kl_ampelf);
 
 	eval {
 	    my $file;
 	    $kl_ampel      = Cairo::ImageSurface->create_from_png("$images_dir/ampel_klein$suf.png");
 	    $kl_andreas    = Cairo::ImageSurface->create_from_png("$images_dir/andreaskr_klein$suf.png");
-	    $kl_zugbruecke = Cairo::ImageSurface->create_from_png("$images_dir/zugbruecke_klein.png");
+	    $kl_zugbruecke = Cairo::ImageSurface->create_from_png("$images_dir/" . ($self->{Xk} >= 0.05 ? "zugbruecke" : "zugbruecke_klein") . ".png");
+	    $kl_ampelf     = Cairo::ImageSurface->create_from_png("$images_dir/ampelf_klein$suf.png");
 	}; warn $@ if $@;
-	if ($kl_andreas && $kl_ampel) {
+	if ($kl_andreas || $kl_ampel || $kl_zugbruecke || $kl_ampelf) {
 	    $lsa->init;
 	    while(1) {
 		my $s = $lsa->next_obj;
@@ -310,7 +293,9 @@ sub draw_map {
 		my $image;
 		if ($cat =~ m{^(B|B0)$}) {
 		    $image = $kl_andreas;
-		} elsif ($cat =~ m{^(X|F)$}) {
+		} elsif ($cat eq 'F' && $kl_ampelf) {
+		    $image = $kl_ampelf;
+		} elsif ($cat =~ m{^(X|F)$}) { # F: only fallback
 		    $image = $kl_ampel;
 		} elsif ($cat =~ m{^Zbr$}) {
 		    $image = $kl_zugbruecke;
@@ -347,12 +332,31 @@ sub draw_map {
  		    4 => 12,
  		    5 => 14,
  		    6 => 16,
+		    bhf => 7,
  		   );
+    my %seen_bahnhof;
+    my $strip_bhf = sub {
+	my $bhf = shift;
+	require Strassen::Strasse;
+	$bhf =~ s/\s+\(.*\)$//; # strip text in parenthesis
+	$bhf = Strasse::short($bhf, 1);
+	$bhf;
+    };
     foreach my $def (['ubahn', 'ubahnhof', 'u'],
 		     ['sbahn', 'sbahnhof', 's'],
+		     ['rbahn', 'rbahnhof', 'r'],
 		     ['ort', 'orte',       'o'],
+		     ['orte_city', 'orte_city', 'oc'],
 		    ) {
 	my($lines, $points, $type) = @$def;
+	# check if it is advisable to draw stations...
+	next if ($lines =~ /bahn$/ && $self->{Xk} < 0.004);
+	my $do_bahnhof = grep { $_ eq $lines."name" } @{$self->{Draw}};
+	if ($self->{Xk} < 0.06) {
+	    $do_bahnhof = 0;
+	}
+	# Skip drawing if !ubahnhof, !sbahnhof or !rbahnhof is specified
+	next if $str_draw{"!" . $points};
   	if ($str_draw{$lines}) {
   	    my $p = ($lines eq 'ort'
   		     ? $self->_get_orte
@@ -370,25 +374,18 @@ sub draw_map {
 	    }
 
 	    eval {
-		if ($points eq 'ubahnhof') {
-		    $image = Cairo::ImageSurface->create_from_png("$images_dir/ubahn$suffix.png");
-		} elsif ($points eq 'sbahnhof') {
-		    $image = Cairo::ImageSurface->create_from_png("$images_dir/sbahn$suffix.png");
+		if ($points =~ m{^[us]bahnhof$}) {
+		    $image = Cairo::ImageSurface->create_from_png("$images_dir/${type}bahn$suffix.png");
+		} elsif ($points eq 'rbahnhof') {
+		    $image = Cairo::ImageSurface->create_from_png("$images_dir/eisenbahn$suffix.png");
 		}
 	    };
 	    warn $@ if $@;
 
-  	    $p->init;
-  	    while(1) {
-  		my $s = $p->next_obj;
-  		last if $s->is_empty;
-  		my $cat = $s->category;
+	    for my $s ($self->get_street_records_in_bbox($p)) {
+  		my $cat = $s->[Strassen::CAT];
   		next if $cat =~ $BBBikeDraw::bahn_bau_rx;
-  		my($x0,$y0) = @{$s->coord_as_list(0)};
-  		# Bereichscheck (XXX ist nicht ganz korrekt wenn der Screen breiter ist als die Route)
-#  		next if (!(($x0 >= $self->{Min_x} and $x0 <= $self->{Max_x})
-#  			   and
-#  			   ($y0 >= $self->{Min_y} and $y0 <= $self->{Max_y})));
+  		my($x0,$y0) = split /,/, $s->[Strassen::COORDS][0];
 		if ($image) {
 		    my($x1, $y1) = &$transpose($x0, $y0);
 		    my($w,$h) = ($image->get_width, $image->get_height);
@@ -397,18 +394,39 @@ sub draw_map {
 		    next if $x1 < 0 || $y1 < 0 || $x1 > $self->{Width} || $y1 > $self->{Height};
 		    $im->set_source_surface($image, $x1, $y1);
 		    $im->paint;
+		    if (0 && $do_bahnhof) { # XXX station label drawing not yet enabled, needs more work...
+			my $name = $strip_bhf->($s->[Strassen::NAME]);
+			if (!$seen_bahnhof{$name}) {
+			    my $pad_top  = $h/2; 
+			    my $pad_left = $w+1;
+			    $im->set_source_rgb(@$darkblue);
+			    draw_text($im, $ort_font{'bhf'},
+				      $x1+$pad_left, $y1+$pad_top,
+				      $name,
+				     );
+			    $seen_bahnhof{$name}++;
+			}
+		    }
  		} else {
  		    if ($cat >= $min_ort_category) {
- 			my($x, $y) = &$transpose(@{$s->coord_as_list(0)});
- 			my $ort = $s->name;
+ 			my($x, $y) = &$transpose($x0, $y0);
+ 			my $ort = $s->[Strassen::NAME];
  			# Anhängsel löschen (z.B. "b. Berlin")
  			$ort =~ s/\|.*$//;
-			$im->set_source_rgb(@$black);
-			$im->move_to($x, $y);
- 			$im->arc($x, $y, 1, 0, 2*pi);#XXX check!
-			$im->fill;
-			$im->set_source_rgb(@$darkblue);
-			draw_text($im, $ort_font{$cat} || 6, $x+4, $y, $ort);
+			my $size = $ort_font{$cat} || 6;
+			if ($type eq 'oc') {
+			    # orte_city is plotted centered, without a dot
+			    my($s_width, undef) = get_text_dimensions($im, $size, $ort);
+			    $im->set_source_rgb(@$darkblue);
+			    draw_text($im, $size, $x-$s_width/2, $y, $ort);
+			} else {
+			    $im->set_source_rgb(@$black);
+			    $im->move_to($x, $y);
+			    $im->arc($x, $y, 1, 0, 2*pi);#XXX check!
+			    $im->fill;
+			    $im->set_source_rgb(@$darkblue);
+			    draw_text($im, $size, $x+4, $y, $ort);
+			}
  		    }
  		}
   	    }
@@ -530,8 +548,8 @@ sub draw_scale {
     $im->stroke;
 
     my $font_size = 10;
-    draw_text($im, $font_size, $self->{Width}-($x1-$x0)-$x_margin-3, $y_margin+$bar_width+$font_size, "0");
-    draw_text($im, $font_size, $self->{Width}-$x_margin+8-6*length($strecke_label), $y_margin+$bar_width+$font_size, $strecke_label);
+    draw_text($im, $font_size, $self->{Width}-($x1-$x0)-$x_margin-3, $y_margin+$bar_width+4, "0", -forcevertalign => 1);
+    draw_text($im, $font_size, $self->{Width}-$x_margin+8-6*length($strecke_label), $y_margin+$bar_width+4, $strecke_label, -forcevertalign => 1);
 }
 
 sub draw_route {
@@ -651,7 +669,7 @@ sub draw_route {
 	    }
 	    $$s = join("/", @s);
 	}
-	my $title_string = "$start " . chr(0x2190) . " $ziel";
+	my $title_string = "$start " . chr(0x2192) . " $ziel";
 
 	my $size = 20;
 	my($s_width, $s_height) = get_text_dimensions($im, $size, $title_string);
@@ -773,78 +791,8 @@ sub flush {
     }
     $self->{PDF}->finish;
 
-    if ($self->{Compress}) {
-	my $compress_message = sub {
-	    my($before, $after) = @_;
-	    $before = ref $before ? $$before : -s $before;
-	    $after  = ref $after  ? $$after  : -s $after;
-	    "Compressed " . (100-int(100*($after)/($before))) .
-		"% (original " . ($before) . " bytes, compressed " . ($after) . " bytes)...\n";
-	};
-
-	if ($self->{_CompressTool} eq 'pdftk') {
-	    if (defined $self->{_CompressOriginalFilename}) {
-		system("pdftk", $self->{Filename}, "output", $self->{_CompressOriginalFilename}, "compress");
-		warn eval { $compress_message->($self->{Filename}, $self->{_CompressOriginalFilename}) }
-		    if $VERBOSE;
-		unlink $self->{_CompressTemporaryFilename};
-	    } else {
-		require File::Temp;
-		my($fh,$filename) = File::Temp::tempfile(SUFFIX => ".pdf", UNLINK => 1);
-		system("pdftk", $self->{Filename}, "output", $filename, "compress");
-		seek $fh, 0, 0;
-		local $/ = \4096;
-		my $ofh = $self->{Fh};
-		while(<$fh>) {
-		    print $ofh $_;
-		}
-		close $fh;
-		warn eval { $compress_message->($self->{Filename}, $filename) }
-		    if $VERBOSE;
-		unlink $filename;
-		unlink $self->{_CompressTemporaryFilename};
-	    }
-	} elsif (0 && $self->{_CompressTool} eq 'PDF::API2') {# XXX not supported in PDFCairo (yet? never?)
-	    # XXX Does not work!!!
-	    my $pdf = PDF::API2->open($self->{Filename});
- 	    my $page = $pdf->openpage(1)
- 		or die "Cannot open page 1";
-	    $page->fixcontents;
-	    # XXX Especially this part does not work
- 	    warn("compressing"),$_->compressFlate for $page->{Contents}->elementsof;
-	    if (defined $self->{_CompressOriginalFilename}) {
-		$pdf->saveas($self->{_CompressOriginalFilename});
-		warn eval { $compress_message->($self->{Filename}, $self->{_CompressOriginalFilename}) }
-		    if $VERBOSE;
-	    } else {
-		my $ofh = $self->{Fh};
-		my $pdf_contents = $pdf->stringify;
-		print $ofh $pdf_contents;
-		warn eval { $compress_message->($self->{Filename}, \length $pdf_contents) }
-		    if $VERBOSE;
-	    }
-	    unlink $self->{_CompressTemporaryFilename};
-	} elsif (0 && $self->{_CompressTool} eq 'CAM::PDF') { # XXX not supported in PDFCairo (yet? never?)
-	    my $pdf = CAM::PDF->new($self->{Filename});
-	    # XXX It's purely coincidence that the map drawing is objnum=3
-	    # XXX But how to get it reliably?
-	    $pdf->encodeObject(3, 'FlateDecode');
-	    $pdf->clean;
-	    if (defined $self->{_CompressOriginalFilename}) {
-		$pdf->output($self->{_CompressOriginalFilename});
-		warn eval { $compress_message->($self->{Filename}, $self->{_CompressOriginalFilename}) }
-		    if $VERBOSE;
-	    } else {
-		my $ofh = $self->{Fh};
-		my $pdf_contents = $pdf->toPDF;
-		print $ofh $pdf_contents;
-		warn eval { $compress_message->($self->{Filename}, \length $pdf_contents) }
-		    if $VERBOSE;
-	    }
-	    unlink $self->{_CompressTemporaryFilename};
-	} else {
-	    die "Unhandled compression tool <$self->{_CompressTool}>";
-	}
+    if ($DO_COMPRESS) {
+	BBBikeDraw::PDFUtil::flush_compress($self, -v => $VERBOSE);
     }
 }
 
@@ -930,7 +878,7 @@ sub patch_string {
 }
 
 sub draw_text {
-    my($surface, $size, $x, $y, $string) = @_;
+    my($surface, $size, $x, $y, $string, %args) = @_;
     if (eval { require Pango; 1 }) {
 	my $layout = Pango::Cairo::create_layout($surface);
 	$layout->set_text($string);
@@ -943,7 +891,16 @@ sub draw_text {
 	$string = patch_string($string);
 	utf8::upgrade($string); # workaround bug in Cairo, see https://rt.cpan.org/Ticket/Display.html?id=73177
 	my $extents = $surface->text_extents($string);
-	$surface->move_to($x, $y - $extents->{y_bearing});
+	# Subtracting y_bearing works fine for the route labels and
+	# the title string, but is not good in draw_scale, where both
+	# strings may have different y_bearing values (even if it's
+	# the same string!). In this case it's better to use the size
+	# instead, with a small negative offset.
+	if ($args{'-forcevertalign'}) {
+	    $surface->move_to($x, $y + $size - 1);
+	} else {
+	    $surface->move_to($x, $y - $extents->{y_bearing});
+	}
 	$surface->select_font_face('Sans Serif', 'normal', 'normal');
 	$surface->set_font_size($size);
 	$surface->show_text($string);

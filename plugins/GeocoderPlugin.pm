@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2007,2008,2010 Slaven Rezic. All rights reserved.
+# Copyright (C) 2007,2008,2010,2011 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -15,16 +15,12 @@
 # Description (de): Geokodierung
 package GeocoderPlugin;
 
-# TODO:
-# * if there are multiple results, then show them all in a list or so
-# * watch from time to time if the Yahoo issues are solved, especially the utf8 problems
-
 use BBBikePlugin;
 push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION $geocoder_toplevel);
-$VERSION = 2.00;
+$VERSION = 2.01;
 
 BEGIN {
     if (!eval '
@@ -41,6 +37,12 @@ use BBBikeTkUtil qw(pack_buttonframe);
 
 require Karte::Standard;
 require Karte::Polar;
+
+# cease warnings
+if (0) {
+    $main::devel_host = $main::devel_host;
+    $main::advanced = $main::advanced;
+}
 
 sub register {
     my $pkg = __PACKAGE__;
@@ -87,7 +89,7 @@ sub geocoder_dialog {
     $geocoder_toplevel = $main::top->Toplevel(-title => "Geocode");
     $geocoder_toplevel->transient($main::top) if $main::transient;
     #my $loc = "Berlin, ";
-    my $loc = ", Berlin"; # It seems that Yahoo can deal better with the city at the end. Google is fine with both.
+    my $loc = ", Berlin"; # It seems that Yahoo and OSM can deal better with the city at the end. Google and Bing are fine with both.
     my $e = $geocoder_toplevel->LabEntry(-textvariable => \$loc,
 					 -labelPack => [-side => 'left'],
 					 -label => 'Location:',
@@ -100,7 +102,7 @@ sub geocoder_dialog {
 					  )->pack(-fill => 'x', -expand => 1);
     my $geocoder_api = 'My_Google_v3';
     my %apis = ('My_Google_v3' => {
-				   'label' => 'Google v3 (without API key)',
+				   'label' => 'Google v3',
 				   'require' => sub { },
 				   'new' => sub { Geo::Coder::My_Google_v3->new },
 				   'extract_loc' => sub {
@@ -112,12 +114,15 @@ sub geocoder_dialog {
 				       $location->{formatted_address} . "\n" .
 					   join(",", @{$location->{geometry}{location}}{qw(lng lat)});
 				   },
+				   'include_multi' => 1,
+				   'include_multi_master' => 1, # means this geocoder's address will be shown first in a "Multi" call
 				  },
 		'Google_v3' => {
-				'label' => 'Google v3 (without API key, using module)',
+				'label' => 'Google v3 (using CPAN module)',
 				'require' => sub { require Geo::Coder::Googlev3 },
 				'new' => sub { Geo::Coder::Googlev3->new },
-				# extract_loc/addr defined below
+				'devel_only' => 1,
+				# extract_loc/addr defined above
 			       },
 		'Google' => { 'new' => sub {
 				  my $apikey = do {
@@ -144,6 +149,7 @@ sub geocoder_dialog {
 				      join(",", @{$location->{Point}{coordinates}});
 			      },
 			      'label' => 'Google (needs API key)',
+			      'devel_only' => 1,
 			    },
 		'GoogleMaps' => { 'new' => sub {
 				      my $apikey = do {
@@ -155,7 +161,7 @@ sub geocoder_dialog {
 					  $_;
 				      };
 				      require LWP::UserAgent; # should be already loaded anyway
-				      #Geo::Coder::GoogleMaps->VERSION(0.03); # API changes! XXX check cannot be done, because of 0.3 vs. 0.3.1 problem!
+				      Geo::Coder::GoogleMaps->VERSION(0.04); # API changes, bug fixes
 				      Geo::Coder::GoogleMaps->new(apikey => $apikey,
 								  ua => LWP::UserAgent->new(agent => "Mozilla/5.0 (compatible; Geo::Coder::GoogleMaps/$Geo::Coder::GoogleMaps::VERSION; Google, please stop smoking crack; http://rt.cpan.org/Public/Bug/Display.html?id=49483)"),
 								 );
@@ -179,40 +185,18 @@ sub geocoder_dialog {
 					  join(",", $location->longitude, $location->latitude);
 				  },
 				  'label' => 'Google (alternative implementation, needs API key)',
+				  'devel_only' => 1,
 				},
-		
-		'Yahoo' => { 'new' => sub {
-				 Geo::Coder::Yahoo->new(appid => 'bbbike');
-			     },
-			     'extract_loc' => sub {
-				 my $locations = shift;
-				 ($locations->[0]{longitude}, $locations->[0]{latitude});
-			     },
-			     'extract_addr' => sub {
-				 my $locations = shift;
-				 my $location = $locations->[0];
-				 $location->{address} . ", " . $location->{city} . ", " . $location->{state} . "\n" .
-				     $location->{longitude} . "," . $location->{latitude};
-			     },
-			     'fix_result' => sub {
-				 my $location = shift;
-				 if ($Yahoo::Search::XML::VERSION le '20060729.004') {
-				     # utf-8 not flagged correctly, trying to fix
-				     # See http://rt.cpan.org/Ticket/Display.html?id=31618
-				     if (eval { require Data::Rmap;
-						require Encode;
-					    }) {
-					 Data::Rmap::rmap(sub { $_ = Encode::decode("utf-8", $_) }, $location);
-				     } else {
-					 warn "Cannot repair Yahoo response: $@";
-				     }
-				 }
-			     },
-			     'label' => 'Yahoo (avoid umlauts)',
-			   },
 		'Bing' => {  'require' => sub {
 				 require Geo::Coder::Bing;
-				 Geo::Coder::Bing->VERSION(0.10); # at least 0.04 stopped working at some time
+				 # At least 0.04 stopped working at
+				 # some time.
+				 #
+				 # 0.06 has some output encoding
+				 # problems which are solved in 0.07,
+				 # but these are not so grave. Best is
+				 # to use at least 0.10.
+				 Geo::Coder::Bing->VERSION(0.06);
 			     },
 			     'new' => sub {
 				 Geo::Coder::Bing->new;
@@ -230,6 +214,7 @@ sub geocoder_dialog {
 					 $location->{BestLocation}{Coordinates}{Latitude};
 			     },
 			     'label' => 'Bing',
+			     'include_multi' => 1,
 			   },
 		'Cloudmade' => { 'require' => sub { require Geo::Cloudmade },
 				 'new' => sub {
@@ -252,7 +237,11 @@ sub geocoder_dialog {
 				     my $loc = shift;
 				     ($loc->centroid->long, $loc->centroid->lat);
 				 },
+				 # See
+				 # http://developers.cloudmade.com/issues/show/1007
+				 # for the umlauts issue
 				 'label' => 'Cloudmade (needs API key, avoid umlauts)',
+				 'devel_only' => 1,
 			       },
 		'OSM' => { 'require' => sub { require Geo::Coder::OSM },
 			   'new' => sub { Geo::Coder::OSM->new },
@@ -264,20 +253,44 @@ sub geocoder_dialog {
 			       my $loc = shift;
 			       ($loc->{lon}, $loc->{lat});
 			   },
+			   'include_multi' => 1,
 			 },
-		# Other geocoding services:
-		#
-		# - Geo::Coder::Mapquest: requires an API key and is
-		# currently (2009-09) not production-ready (no results
-		# for non-US addresses)
 	       );
     $apis{Google_v3}->{$_} = $apis{My_Google_v3}->{$_} for (qw(extract_loc extract_addr));
 
+    my $do_geocode = sub {
+	my($gc, $loc) = @_;
+			
+	if ($gc->{require}) {
+	    eval { $gc->{require}->() };
+	} else {
+	    my $mod = 'Geo::Coder::' . $geocoder_api;
+	    eval "require $mod";
+	}
+	if ($@) {
+	    main::status_message($@, "die");
+	}
+
+	my $geocoder = $gc->{new}->();
+	my $location = $geocoder->geocode(location => $loc);
+	$gc->{fix_result}->($location) if $gc->{fix_result};
+	require Data::Dumper; print STDERR "Line " . __LINE__ . ", File: " . __FILE__ . "\n" . Data::Dumper->new([$location],[qw()])->Indent(1)->Useqq(1)->Dump; # XXX
+
+	$location;
+    };
+
     for my $_api (sort keys %apis) {
-	my $label = $apis{$_api}->{'label'} || $_api;
+	my $gc = $apis{$_api};
+	my $color;
+	if ($gc->{devel_only}) {
+	    next if !$main::devel_host;
+	    $color = 'red';
+	}
+	my $label = $gc->{'label'} || $_api;
 	$gcf->Radiobutton(-variable => \$geocoder_api,
 			  -value => $_api,
 			  -text => $label,
+			  ($color ? (-foreground => $color) : ()),
 			 )->pack(-anchor => 'w');
     }
 
@@ -288,21 +301,7 @@ sub geocoder_dialog {
 	$bf->Button(Name => "ok",
 		    -command => sub {
 			my $gc = $apis{$geocoder_api};
-			
-			if ($gc->{require}) {
-			    eval { $gc->{require}->() };
-			} else {
-			    my $mod = 'Geo::Coder::' . $geocoder_api;
-			    eval "require $mod";
-			}
-			if ($@) {
-			    main::status_message($@, "die");
-			}
-
-			my $geocoder = $gc->{new}->();
-			my $location = $geocoder->geocode(location => $loc);
-			$gc->{fix_result}->($location) if $gc->{fix_result};
-			require Data::Dumper; print STDERR "Line " . __LINE__ . ", File: " . __FILE__ . "\n" . Data::Dumper->new([$location],[qw()])->Indent(1)->Useqq(1)->Dump; # XXX
+			my $location = $do_geocode->($gc, $loc);
 			if ($location) {
 			    $res->delete("1.0", "end");
 			    my $loc_addr = $gc->{extract_addr}->($location);
@@ -316,12 +315,43 @@ sub geocoder_dialog {
 			}
 		    });
     $e->bind("<Return>" => sub { $okb->invoke });
+    my $multib;
+    if ($main::advanced) {
+	$multib =
+	    $bf->Button(-text => 'Multi',
+			-command => sub {
+			    my @coords;
+			    my $loc_addr;
+			    for my $_api (sort { ($apis{$b}->{include_multi_master}||0) <=> ($apis{$a}->{include_multi_master}||0) } keys %apis) {
+				my $gc = $apis{$_api};
+				next if !$gc->{include_multi};
+				my $location = eval {
+				    $do_geocode->($gc, $loc);
+				};
+				if ($@ || !$location) {
+				    warn "Could not geocode '$loc' with '$_api': $@";
+				} else {
+				    if ($gc->{include_multi_master}) {
+					$loc_addr = $gc->{extract_addr}->($location);
+				    }
+				    push @coords, [[main::transpose($Karte::Polar::obj->map2standard($gc->{extract_loc}->($location)))]];
+				}
+			    }
+			    if (!@coords) {
+				main::status_message('No result', 'warn');
+			    } else {
+				$res->delete("1.0", "end");
+				$res->insert("end", $loc_addr);
+				main::mark_street(-coords => \@coords);
+			    }
+			})->pack(-side => 'left');
+    }
     my $cancelb =
 	$bf->Button(Name => "close",
 		    -command => sub {
 			destroy_geocoder_dialog();
 		    })->pack(-side => "left");
-    pack_buttonframe($bf, [$okb, $cancelb]);
+    pack_buttonframe($bf, [$okb, ($multib ? $multib : ()), $cancelb]);
 }
 
 {
@@ -366,3 +396,82 @@ sub geocoder_dialog {
 1;
 
 __END__
+
+=head1 NAME
+
+GeocoderPlugin - a geocoding plugin for BBBike
+
+=head1 SYNOPSIS
+
+None, usually only loaded within bbbike
+
+=head1 DESCRIPTION
+
+Supported geocoding services:
+
+=over
+
+=item Google v3
+
+through a built-in class (no CPAN modules other than L<LWP> and
+L<JSON::XS> required) and through L<Geo::Coder::Googlev3>
+
+=item Bing
+
+through L<Geo::Coder::Bing>, at least version 0.10 is recommended,
+though 0.06 works, too, with some limitations/problems
+
+=item OSM
+
+through L<Geo::Coder::OSM>
+
+=back
+
+More supported geocoding services, but not enabled in non-advanced
+mode:
+
+=over
+
+=item Google v2
+
+through L<Geo::Coder::Google> and L<Geo::Coder::GoogleMaps>, needs an
+API key stored in F<~/.googlemapsapikey>
+
+=item Cloudmade
+
+through L<Geo::Cloudmade>, needs an API key stored in
+F<~/.cloudmadeapikey>
+
+=back
+
+Unsupported geocoding services:
+
+=over
+
+=item Yahoo's PlaceFinder
+
+L<Geo::Coder::PlaceFinder> exists, needs an API key
+
+=item Mapquest
+
+through L<Geo::Coder::Mapquest>, requires an API key and is not
+production-ready (as of 2011), as there's no support for non-US
+addresses
+
+=item OVI
+
+through L<Geo::Coder::Ovi>, probably API key is needed
+
+=back
+
+Obsolete geocoding services:
+
+=over
+
+=item old Yahoo API
+
+L<Geo::Coder::Yahoo> is using an old and shut down Yahoo API
+
+=back
+
+=cut
