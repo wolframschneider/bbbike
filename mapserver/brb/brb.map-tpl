@@ -287,10 +287,15 @@ END
 
 SYMBOL
   NAME 'dashed1'
+[% IF MAPSERVER_DRIVER == "AGG" -%]
+  TYPE SIMPLE
+  PATTERN 2 4 END
+[% ELSE -%]
   TYPE VECTOR
   POINTS 0 0 2 2 END
   FILLED true
   STYLE 4 4 END
+[% END -%]
 END
 
 SYMBOL
@@ -456,6 +461,19 @@ SYMBOL
     8 12 8 12
   END
 END
+
+[%# NOTE: it's not clear if this needs to be done with the AGG driver,
+  # or with Mapserver 5.6.3, or if combining both. Anyway, the
+  # above rectangle-train solution does not work, neither does
+  # two line styles with patterns
+-%]
+[% IF MAPSERVER_DRIVER == "AGG" -%]
+SYMBOL
+  NAME 'train-dashed'
+  TYPE SIMPLE
+  PATTERN 8 12 END
+END
+[% END -%]
 
 SYMBOL   
   NAME "cartoline_round"
@@ -800,12 +818,16 @@ LAYER
 [% END -%]
     COLOR 0 255 0
     SYMBOL '[% IMAGE_DIR %]/ferry[% imgsuffix %].[% IMAGE_SUFFIX %]'
+# With Mapserver 5.6.5 and AGG driver the label is not empty, but one pixel is
+# drawn. This was not the case with 5.0.3 and GD driver. So don't use a black
+# label anymore, but a blue one which matches the ferry icon as closely as
+# possible.
     LABEL
       MINFEATURESIZE 10
       MINDISTANCE 150
       POSITION CC
       SIZE TINY
-      COLOR 0 0 0
+      COLOR 0 128 192
     END
     [% IF maxscale %]MAXSCALE [% maxscale %][% END %]
     [% IF minscale %]MINSCALE [% minscale %][% END %]
@@ -1567,7 +1589,17 @@ LAYER
   CLASS
     EXPRESSION /^R[ABC]?$/
     MAXSCALE 20000
-[% IF MAPSERVER_VERSION < 5 -%]
+[% IF MAPSERVER_DRIVER == "AGG" -%]
+    STYLE
+      COLOR 0 128 0
+      WIDTH 4
+    END
+    STYLE
+      COLOR 255 255 255
+      SYMBOL 'train-dashed'
+      WIDTH 2
+    END
+[% ELSIF MAPSERVER_VERSION < 5 -%]
     COLOR 0 128 0
     SYMBOL 'width'
     SIZE 2
@@ -2475,16 +2507,17 @@ TRANSPARENCY 50 ##XXX Wie am geschicktesten verwenden?
 
   CLASS
     NAME "Route"
-#    COLOR 255 0 255
-#    COLOR 180 80 130
-     COLOR 150 0 0
-#    SYMBOL 'width'
-    SYMBOL 'dotted'
+    COLOR 150 0 0
     SIZE 11
-#    OVERLAYCOLOR 130 80 180
+[% IF MAPSERVER_DRIVER == "AGG" -%]
+    SYMBOL 'dotted12'
+[%# Currently there's no way to get the alternate blue/red dots plotted with the AGG driver... -%]
+[% ELSE -%]
+    SYMBOL 'dotted'
     OVERLAYCOLOR 0 0 150
     OVERLAYSYMBOL dottedtransposed
     OVERLAYSIZE 11
+[% END -%]
   END
   METADATA
     WMS_TITLE "Route"
