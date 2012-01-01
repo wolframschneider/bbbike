@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -w
+#!/usr/local/bin/perl
 # -*- perl -*-
 
 #
@@ -12,7 +12,6 @@
 # WWW:  http://www.rezic.de/eserte/
 #
 
-use strict;
 use FindBin;
 use lib "$FindBin::RealBin/..";
 
@@ -26,6 +25,9 @@ use File::Spec qw();
 use Getopt::Long;
 use IO::File;
 use List::Util qw(max);
+
+use strict;
+use warnings;
 
 sub epoch2isodatez (;$);
 sub touch ($);
