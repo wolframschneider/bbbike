@@ -211,7 +211,8 @@ Finowstr.: Kopfsteinpflaster	Q2 14622,11685 14708,11820 14783,11949 14836,12045 
 Glatzer Str.: Kopfsteinpflaster	Q2 14577,11582 14645,11670
 Wiesenweg (Lichtenberg): Kopfsteinpflaster	Q2 15477,11338 15303,11412 15227,11429 15162,11458
 Wiesenweg (Lichtenberg): Asphalt	Q0 15162,11458 15055,11505
-Wartenbergstr. (Lichtenberg): Kopfsteinpflaster	Q2 15227,11429 15328,11636 15423,11667
+Wartenbergstr. (Lichtenberg): Kopfsteinpflaster	Q2 15227,11429 15328,11636
+Wartenbergstr. (Lichtenberg): Kopfsteinpflaster	Q2 15328,11636 15423,11667
 Tasdorfer Str.: Asphalt	Q0 15303,11412 15355,11513 15377,11555 15393,11590
 Tasdorfer Str. - Wilhelm-Guddorf-Str.: Gehwegpflasterung	Q0 15393,11590 15423,11667
 (Grünes Band): Gehwegpflasterung	Q0 15349,11911 15298,11892 15327,11724 15328,11636 15377,11555
@@ -1006,6 +1007,7 @@ Rolandufer: Kopfsteinpflaster, Ausweichen auf Uferweg möglich, dort unbefestigte
 Rolandufer/Spreeufer: gutes Kopfsteinpflaster	Q1 10945,12150 10837,12158 10660,12176
 Spreeufer: Verbundsteine	Q1 10583,12206 10492,12289 10424,12364 10422,12395
 Treptower Park: Schotterweg, aber relativ glatt	Q2 14854,8964 14614,9052
+Treptower Park: wassergebundene Decke	Q1 14854,8964 15057,8910 15159,8934
 Treptower Park: Schotterweg	Q2 14242,9448 14316,9542
 Treptower Park: Asphalt mit mäßigen Stellen	Q1 14697,9726 14645,9710 14575,9648 14496,9705 14361,9772
 Am Rosengarten: Parkweg	Q1 14910,9643 14819,9462
@@ -6271,6 +6273,7 @@ Varian-Fry-Str.: Kleinsteinpflaster	Q1 8374,11479 8389,11378
 (Erfurter Str. - Wexstr.): Kopfsteinpflaster	Q2 6261,8058 6260,8011
 Wiesenschlag: Asphalt	Q0 -2074,2258 -2036,2150
 Elisabeth-Schwarzhaupt-Platz: Gehwegplatten	Q0 9274,13963 9167,14127
+(Bornsdorfer Str. - Werbellinstr.): Verbundsteinpflaster	Q1 12668,8077 12650,8164
 An den Hubertshäusern: guter Asphalt	Q0 -2049,2359 -1940,2400 -1963,2461 -2069,2429
 Straße 77 (Französisch Buchholz): schlechter Asphalt	Q2 12836,22763 12608,22943 12589,22948 12526,22972
 Straße 69: schlechter fester Sandweg, Schlaglöcher	Q3 15434,22604 15638,22473 15898,22296
@@ -8591,7 +8594,9 @@ Ecksteinweg: mäßiges Kopfsteinpflaster	Q2 17765,5406 17736,5441
 Waiblinger Weg: mäßiger Asphalt	Q1 17830,5324 17803,5303 17771,5278
 Hagedornstr.: mäßiger Asphalt	Q0 17803,5303 17855,5236 17906,5170 18030,5010 18116,4898
 Hagedornstr.: Kleinkopfsteinpflaster	Q1 18116,4898 18202,4786
-Stegerwaldstr.: guter Asphalt	Q0 8799,1380 8765,1363 8668,1409 8642,1422 8569,1457 8482,1502 8381,1550 8246,1616 8147,1663 8074,1698
+Stegerwaldstr.: guter Asphalt	Q0 8799,1380 8765,1363 8668,1409 8642,1422 8569,1457 8482,1502
+Stegerwaldstr.: Kopfsteinpflaster	Q2 8482,1502 8381,1550
+Stegerwaldstr.: guter Asphalt	Q0 8381,1550 8246,1616 8147,1663 8074,1698
 An der Heilandsweide: asphaltiert	Q0 8077,1259 8203,1194
 An der Heilandsweide: Verbundsteinpflaster, außen fester Sand	Q1 8203,1194 8305,1148 8492,1050 8539,1025 8687,950
 Kiepertplatz: schlechtes Kopfsteinplaster, sehr holprig	Q3 8522,1870 8607,1898
