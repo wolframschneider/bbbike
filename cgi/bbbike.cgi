@@ -5,7 +5,7 @@
 # $Id: bbbike.cgi,v 9.30 2009/04/04 11:13:58 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998-2011 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2012 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -5795,7 +5795,7 @@ EOF
 
 	if ($printmode) {
 	    my $url = $q->url(-base => 1);
-	    print "<hr><br>", $fontstr, qq{(&copy;) 1998-2011 <a href="$url">$url</a>\n};
+	    print "<hr><br>", $fontstr, qq{(&copy;) 1998-2012 <a href="$url">$url</a>\n};
 
 	    goto END_OF_HTML;
 	}
@@ -7896,7 +7896,7 @@ sub header {
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
-		     'copyright'=>'(c) 1998-2011 Slaven Rezic + Wolfram Schneider',
+		     'copyright'=>'(c) 1998-2012 Slaven Rezic + Wolfram Schneider',
 		    },
 	     -author => $BBBike::EMAIL,
 	    );
@@ -8081,7 +8081,7 @@ $span_debug
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
-(&copy;) 1998-2011 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
+(&copy;) 1998-2012 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
 <div id="footer_community">
   <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="$donate_title" border="0"></a>
@@ -9375,7 +9375,7 @@ Slaven Rezic <slaven@rezic.de>
 
 =head1 COPYRIGHT
 
-Copyright (C) 1998-2011 Slaven Rezic. All rights reserved.
+Copyright (C) 1998-2012 Slaven Rezic. All rights reserved.
 This is free software; you can redistribute it and/or modify it under the
 terms of the GNU General Public License, see the file COPYING.
 
