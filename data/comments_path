@@ -190,7 +190,7 @@ Ellerbeker Str. - Behmstr.: links entlang des Sportplatzes fahren	CP2; 9727,1618
 Am Hohenzollernkanal: keine Unterquerung der Bernauer Brücke möglich	CP 44,15897 -196,16060 -224,16095 -238,16095 -910,16608
 Roonstr./Flotowstr.: Hindenburgdamm kann über Fußgängerfurt gequert werden	CP; 4265,4484 4515,4581 4651,4638
 Flotowstr./Roonstr.: Hindenburgdamm kann über Fußgängerfurt gequert werden	CP; 4651,4638 4515,4581 4265,4484
-Hausdurchfahrt benutzen	CP2; 6502,9782 6534,9747
+Hausdurchfahrt benutzen	CP2; 6502,9782 6529,9738
 Nach dem Steg kann man zunächst nur in der Mitte direkt am Ufer fahren, da Leitplanken das Übequeren verhindern, erst auf Höhe der Genthiner Str. kann man die Straße überquert werden	CS; 7251,11181 7248,11143 7461,11051
 Lützowufer - Hiroshimasteg: frühzeitig auf den linken Gehweg wechseln, Leitplanken verhindern das Überqueren	PI; 7002,11034 7248,11143 7251,11181
 Alexanderstr. - Schillingstr.: bereits an der Ampel Voltairestr. die Straßenseite wechseln	PI; 11323,12484 11333,12437 11462,12384
@@ -316,7 +316,7 @@ Wesenberger Ring - Paster-Behrens-Str.: Durchfahrt über Parkplatz	CS; 13165,3850
 Am Britzer Garten: Gehweg links der Fahrbahn benutzen	CP2; 11153,3728 11130,3838
 An der südlichen Landebahn den oberen Weg benutzen	CP2; 11593,7314 11554,7382
 An der südlichen Landebahn den unteren Weg benutzen	CP2; 11593,7314 11543,7369
-Columbiadamm - Flughafen Tempelhof: unter Umständen schon an der Fußgängerampel die Straßenseite wechseln	PI; 10796,8498 10691,8532 10640,8366
+Columbiadamm - Flughafen Tempelhof: unter Umständen schon an der Fußgängerampel die Straßenseite wechseln	PI; 10796,8498 10691,8532 10644,8363
 Potsdamer Chaussee - Hohentwielsteig: bereits an der Fürstenstr. die Straßenseite wechseln	PI; -391,2914 -512,2883 -567,2869 -479,2715
 Ausgeschildert als Waldenburger Str.	CP2; 22905,10488 22783,10548
 Ausgeschildert als Striegauer Str.	CP2; 22783,10548 22905,10488
@@ -351,3 +351,4 @@ Mariendorfer Damm - Göllweg: Mittelstreifen kann nicht überquert werden, bis zum
 Göllweg - Mariendorfer Damm: zunächst den linken Gehweg benutzen und am Ankogelweg die Straßenseite wechseln	CP; 10119,1435 10239,1481 10226,1515
 Johannisthaler Chaussee - Weg zur Gutschmidtstr.: bereits an der Kreuzung Johannisthaler Chaussee/Kirschnerweg auf den linken Radweg wechseln	CP; 13886,2653 13915,2673 13887,2710
 Suermondtstr. - Orankestrand: bereits an der Kreuzung Augustastr. die Straßenseite wechseln	PI; 15918,16383 15871,16399 15782,16277
+Hasenheide - Park: bereits an der Kreuzung Hasenheide/Jahnstr. auf den linken Gehweg wechseln	PI; 11500,9116 11449,9125 11439,9049

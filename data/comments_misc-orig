@@ -418,7 +418,7 @@ Weiterfahrt in den Innovationspark möglich	culdesac_pseudo 21284,7043
 	culdesac 15378,17414
 	culdesac 15455,16984
 	culdesac 16429,13021
-	culdesac 9104,9262
+	culdesac 9124,9262
 	culdesac 9149,8961
 	culdesac 8376,8859
 	culdesac 8979,10485
@@ -429,7 +429,7 @@ Weiterfahrt in den Innovationspark möglich	culdesac_pseudo 21284,7043
 	culdesac 8796,11393
 	culdesac 10111,9942
 	culdesac 9666,10848
-	culdesac 10538,10899
+	culdesac 10564,10925
 	culdesac 12615,9132
 	culdesac 13325,10565
 	culdesac 12582,11103
@@ -530,7 +530,7 @@ Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2405,10131
 	culdesac 8950,8954
 	culdesac 8950,9021
 	culdesac 7144,9150
-	culdesac 6753,9474
+	culdesac 6771,9458
 	culdesac 13628,10396
 	culdesac 7064,10467
 	culdesac 8382,11224
@@ -1230,3 +1230,4 @@ Fritschweg: Privatstraße	CS 4173,6284 4142,6166 4123,6163 4118,6091
 Am Klötzgraben: Privatstraße	CS 6651,23020 6741,23117 6779,23139 6817,23167 6890,23213
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/57re.pdf/file?y=2011
 Eisbärenweg: Privatstraße	CS 6909,17796 6950,17669
+über den Luisenstädtischen Grünzug	CS 11190,10619 11145,10638

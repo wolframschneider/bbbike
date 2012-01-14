@@ -50,7 +50,7 @@ EOF
        text  => 'Karneval der Kulturen, 12.6.2011',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11500,9116 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9242,9694 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
+userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9242,9694 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
 userdel	3 8773,9524 8777,9601 8779,9812
 userdel	3 8779,9812 8777,9601 8773,9524
 userdel	3 9000,9509 9043,9745 9073,9915
@@ -17647,7 +17647,7 @@ EOF
 		} . '. Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
        recurring => 1,
        data  => <<EOF,
-(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10640,8366 10598,8270 10575,8218
+(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10298,8245
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
@@ -17663,7 +17663,7 @@ EOF
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11005,8064 10909,8003
-(Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10803,8251 10640,8366 10360,8521
+(Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10803,8251 10644,8363 10360,8521
 (Weg parallel zur Oderstr.)	2::night 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
 (Eingang Kienitzer Str.)	2::night 11498,7750 11489,7748 11479,7746 11470,7744
 (Flughafen Tempelhof - Eingang Allerstr.)	2::night 11507,7647 11515,7654
@@ -18980,7 +18980,7 @@ EOF
        text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 29.04. - 22.05.2011 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::temp 11177,8985 11250,8585 11282,8428 11271,8325
+userdel	q4::temp 11177,8985 11255,8591 11279,8489 11282,8428 11266,8336
 EOF
      },
      { from  => 1304805600, # 2011-05-08 00:00
@@ -19017,12 +19017,12 @@ EOF
        data  => <<EOF,
 #: by: http://www.tempelhoferfreiheit.de/ueber-die-tempelhofer-freiheit/aktuelles/die-challenge-bibendum-startet/
 #: by: http://www.tempelhoferfreiheit.de/fileadmin/user_upload/Ueber_die_Tempelhofer_Freiheit/Aktuelles/Plan_ChallengeBibendum2011-THF.jpg
-userdel	2::temp 11355,7871 11381,7775 11279,7768 9653,7635 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10042,8270 10298,8245 10360,8521 10640,8366 10803,8251 11005,8064 10909,8003
+userdel	2::temp 11355,7871 11381,7775 11279,7768 9653,7635 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10042,8270 10298,8245 10360,8521 10644,8363 10803,8251 11005,8064 10909,8003
 userdel	2::temp 9362,7616 9522,7624 9525,7558
 userdel	2::temp 10360,8521 10384,8628
 userdel	2::temp 10575,8218 10729,8152 10598,8270 10575,8218 10298,8245
 userdel	2::temp 10729,8152 10909,8003 11090,7916 11264,7882
-userdel	2::temp 10598,8270 10640,8366 10691,8532
+userdel	2::temp 10598,8270 10644,8363 10691,8532
 EOF
      },
      { from  => 1305840528, # 2011-05-19 23:28
@@ -19860,12 +19860,11 @@ EOF
 userdel	2::inwork 19750,11730 19827,11686 19881,11591
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1325955689, # 
+       until => 1325955693, # XXX
        text  => 'Alfred-Kowalke-Str.: Bauarbeiten, teilweise muss auf den Gehweg ausgewichen werden',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2011-10-22
 userdel	q4::inwork 18286,11275 18059,11248
 EOF
      },

@@ -26,7 +26,7 @@ Segitzdamm etc.	1 10923,10113 10988,10268 10975,10334
 Segitzdamm etc.	1 10987,10360 11017,10435 11065,10443 11100,10530 11145,10638 11164,10687 11133,10704 11159,10769
 Segitzdamm etc.	1 11189,10831 11227,10821 11290,10972
 Erkelenzdamm etc.	1 11328,10957 11264,10804 11301,10783 11275,10723
-Erkelenzdamm etc.	1 11258,10682 11244,10653 11210,10668 11145,10510 11109,10423 11134,10383 11117,10326
+Erkelenzdamm etc.	1 11258,10682 11244,10653 11210,10668 11190,10619 11145,10510 11109,10423 11134,10383 11117,10326
 Erkelenzdamm etc.	1 11094,10261 11038,10247 10967,10092
 Überführung Daimlerstr.	1 8639,2212 8588,2176 8559,2203 8552,2243 8606,2376
 Ernst-Reuter-Platz	1 4763,11834 4854,11843 4905,11785 4885,11735 4838,11697 4781,11708 4737,11768 4763,11834
@@ -247,7 +247,7 @@ Wilseder Str.	1 6295,5158 6288,4906
 Dickhardtstr.	1 5817,7223 5824,6974 5826,6871 5811,6833 5752,6751 5604,6709 5533,6753
 Roennebergstr.	1 5533,6753 5357,6932
 Schmitzweg	1 5879,19352 5858,19437 5831,19547 5731,19824
-Barbarossaplatz	1 6731,9559 6746,9540 6743,9523 6728,9515 6704,9537 6712,9557 6731,9559
+Barbarossaplatz	1 6731,9559 6748,9524 6727,9497 6694,9537 6692,9546 6731,9559
 Otto-von-Simson-Str.	1 2560,5044 2627,5095 2835,5410
 In den neuen Gärten	1 7111,3432 7318,3306 7359,3349 7472,3308
 Braillestr.	1 4430,5324 4477,5250 4512,5199
@@ -668,6 +668,8 @@ Mark-Twain-Str.	1 24321,14410 24349,14500
 A.T.U-Einfahrt: Tor, außerhalb der Öffnungszeiten (Mo-Fr bis 20 Uhr, Sa bis 16 Uhr) gesperrt	2 8546,9468 8561,9482
 (Erfurter Str. - Wexstr.)	1 6260,8011 6261,8058
 Rubensstr.	1 6429,7876 6307,7893
+Bäumerplan	1 8527,7928 8553,7795
+Bäumerplan	1 8512,7757 8467,7913
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -1201,12 +1203,12 @@ Hermannstr. -> Boddinstr.: Gitter auf Mittelstreifen	3::igndisp 11898,8362 11920
 Bundesplatztunnel	3nocross::ignrte 5360,7554 5359,7619 5358,7681 5358,7746 5356,7862
 Bundesallee -> Ortrudstr.: Bundesplatztunnel	3::igndisp 5358,7681 5359,7619 5493,7590
 Ortrudstr. -> Bundesallee: Bundesplatztunnel	3::igndisp 5493,7590 5359,7619 5360,7554
-Sentastr. -> Mainauer Str.: Bundesplatztunnel	3::igndisp 5458,7683 5358,7681 5286,7681
+Sentastr. -> Mainauer Str.: Bundesplatztunnel	3::igndisp 5458,7683 5358,7681 5227,7677
 Sentastr. -> Bundesallee: Bundesplatztunnel	3::igndisp 5458,7683 5358,7681 5359,7619
 Bundesallee -> Sentastr.: Bundesplatztunnel	3::igndisp 5358,7746 5358,7681 5458,7683
-Mainauer Str. -> Sentastr.: Bundesplatztunnel	3::igndisp 5286,7681 5358,7681 5458,7683
-Mainauer Str. -> Bundesallee: Bundesplatztunnel	3::igndisp 5286,7681 5358,7681 5358,7746
-Bundesallee -> Mainauer Str.: Bundesplatztunnel	3::igndisp 5359,7619 5358,7681 5286,7681
+Mainauer Str. -> Sentastr.: Bundesplatztunnel	3::igndisp 5227,7677 5358,7681 5458,7683
+Mainauer Str. -> Bundesallee: Bundesplatztunnel	3::igndisp 5227,7677 5358,7681 5358,7746
+Bundesallee -> Mainauer Str.: Bundesplatztunnel	3::igndisp 5359,7619 5358,7681 5227,7677
 Bundesallee -> Sieglindestr.: Bundesplatztunnel	3::igndisp 5356,7862 5358,7746 5458,7866
 Sieglindestr. -> Bundesallee: Bundesplatztunnel	3::igndisp 5458,7866 5358,7746 5358,7681
 unbequem passierbarer Mittelstreifen	3nocross::ignrte 6880,11110 6882,11061 6873,11011 6824,10904
@@ -1604,11 +1606,11 @@ Karl-Marx-Allee -> Berolinastr.: Mittelstreifen	3::igndisp 11228,12951 11295,129
 Berolinastr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 11362,12964 11295,12915 11589,12768
 Karl-Marx-Allee -> Berolinastr.: Mittelstreifen	3::igndisp 11295,12915 11589,12768 11600,12857
 Berolinastr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 11600,12857 11589,12768 11635,12745
-unbequem zu überqueren (Bordsteine)	3nocross::ignrte 10796,8498 10911,8457 11223,8343 11271,8325
-Hasenheide, am Rixdorfer Teich -> Columbiadamm: unbequem zu überqueren (Bordsteine)	3::igndisp 10929,8503 10911,8457 11223,8343
+unbequem zu überqueren (Bordsteine)	3nocross::ignrte 10796,8498 10911,8457 11225,8350 11266,8336
+Hasenheide, am Rixdorfer Teich -> Columbiadamm: unbequem zu überqueren (Bordsteine)	3::igndisp 10929,8503 10911,8457 11225,8350
 Columbiadamm -> Hasenheide, am Rixdorfer Teich: unbequem zu überqueren (Bordsteine)	3::igndisp 10796,8498 10911,8457 10929,8503
-Hasenheide, westlicher Weg -> Columbiadamm: unbequem zu überqueren (Bordsteine)	3::igndisp 11235,8454 11223,8343 11271,8325
-Columbiadamm -> Hasenheide, westlicher Weg: unbequem zu überqueren (Bordsteine)	3::igndisp 10911,8457 11223,8343 11235,8454
+Hasenheide, westlicher Weg -> Columbiadamm: unbequem zu überqueren (Bordsteine)	3::igndisp 11235,8454 11225,8350 11266,8336
+Columbiadamm -> Hasenheide, westlicher Weg: unbequem zu überqueren (Bordsteine)	3::igndisp 10911,8457 11225,8350 11235,8454
 Mittelstreifen	3nocross::ignrte 4807,5131 4766,5208 4745,5283
 Fronhoferstr. -> Wolfensteindamm: Mittelstreifen	3::igndisp 4656,5101 4766,5208 4745,5283
 Wolfensteindamm -> Fronhoferstr.: Mittelstreifen	3::igndisp 4807,5131 4766,5208 4656,5101
@@ -1783,6 +1785,9 @@ Lienzer Pfad -> Tauernallee: Mittelstreifen	3::igndisp 10444,2234 10431,2258 103
 Tauernallee -> Lienzer Pfad: Mittelstreifen	3::igndisp 10504,2321 10431,2258 10444,2234
 Mittelstreifen	3nocross::ignrte 10226,1515 10239,1481 10276,1383
 Straßenbahnhaltestelle	3nocross::ignrte -11307,133 -11390,72 -11494,-4
+Mittelstreifen	3nocross::ignrte 11500,9116 11449,9125 11136,9183
+Hasenheide, zwischen Jahnstr. und Columbiadamm -> Hasenheide: Mittelstreifen	3::igndisp 11439,9049 11449,9125 11136,9183
+tragen (13 Stufen)	0:20:0 13013,10047
 tragen (16 Stufen)	0:25:-232 22814,4505
 tragen (19 Stufen)	0:30:86 23930,6013
 tragen (16 Stufen)	0:25:-164 23948,6054
@@ -1958,6 +1963,8 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-108 19163,14981
 tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
+Drängelgitter	BNP:3:-233:trailer=10 506,14926
+Drängelgitter	BNP:3:-199:trailer=10 47,15571
 Schranke	BNP:1:-153:trailer=3 14180,3334
 Drängelgitter	BNP:3:11:trailer=10 24958,13798
 Drängelgitter	BNP:3:30:trailer=10 24946,13755
@@ -2169,7 +2176,7 @@ Axel-Springer-Str.: wird noch gebaut	2:inwork 10166,11592 10202,11669 10213,1172
 Sonnenkieker: Bauarbeiten	2:inwork 22610,13808 22669,13842 22692,13836
 Tegeler Hafen: Weg über Insel gesperrt	2 1756,20405 1736,20441 1742,20464 1762,20505 1761,20539
 Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,20603
-Hüttenweg: Sperrung wegen Bau an der Autobahn, wahrscheinlich bis Anfang Juni 2012	2:inwork -739,6838 -927,6888
+Hüttenweg: Sperrung wegen Bau an der Autobahn, wahrscheinlich bis Mai 2012	2:inwork -739,6838 -927,6888
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9385,13174
 Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405,12953 14686,12873
 Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
@@ -2196,9 +2203,9 @@ Drängelgitter	BNP:5:-241 4386,6288
 Drängelgitter	BNP:5:-56 4351,6307
 Heimstättenweg (kein öffentlicher Verkehr)	2 4355,6207 4323,6131 4268,6154
 Markobrunner Str.	1 4374,7016 4462,7137 4593,7167
-Deidesheimer Str.	1 4983,7546 4784,7534 4616,7563 4486,7597
+Deidesheimer Str.	1 4973,7531 4785,7518 4616,7563 4486,7597
 Landauer Str.	1 4578,7358 4786,7327
-Eschenstr. (Friedenau)	1 5067,7523 5121,7523 5158,7560
+Eschenstr. (Friedenau)	1 5069,7498 5148,7500 5188,7536
 (Zur Dillenburger Str.)	1 3837,6926 3964,6928 4000,6852
 Dillenburger Str.	1 3947,6814 3837,6926
 Drängelgitter	BNP:5:-165 3597,7192
