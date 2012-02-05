@@ -174,7 +174,7 @@ Helmholtzstr. - Zeppelinstr.: zum Überqueren der Edisonstr. Fußgängerampel benut
 Zeppelinstr. - Helmholtzstr.: zum Überqueren der Edisonstr. Fußgängerampel benutzen	CP; 18041,6924 17919,6968 17845,6986
 Mariendorfer Damm - Heinitzweg: bereits an der Buckower Chaussee die Straßenseite wechseln	PI; 10425,971 10379,1097 10329,1077
 Heinitzweg - Mariendorfer Damm: zunächst auf dem linken Gehweg/Radweg vorfahren	CP; 10329,1077 10379,1097 10329,1231
-Zum Naturpark Schöneberg: Weg zwischen den Parkhäusern nehmen	CP2; 7757,7682 7772,7610
+Zum Naturpark Schöneberg: Weg zwischen den Parkhäusern nehmen	CP2; 7774,7724 7787,7692
 Hochspannungsweg - Buckower Damm: zunächst zur Fußgängerampel links vorfahren	CP; 12606,2477 12694,2514 12694,2544
 Hochspannungsweg: zur Überquerung des Buckower Damms Fußgängerampel links nehmen	CP; 12606,2477 12694,2514 12825,2573
 Hochspannungsweg: zur Überquerung des Buckower Damms Fußgängerampel rechts nehmen	CP; 12825,2573 12694,2514 12606,2477
@@ -352,3 +352,5 @@ Göllweg - Mariendorfer Damm: zunächst den linken Gehweg benutzen und am Ankogelw
 Johannisthaler Chaussee - Weg zur Gutschmidtstr.: bereits an der Kreuzung Johannisthaler Chaussee/Kirschnerweg auf den linken Radweg wechseln	CP; 13886,2653 13915,2673 13887,2710
 Suermondtstr. - Orankestrand: bereits an der Kreuzung Augustastr. die Straßenseite wechseln	PI; 15918,16383 15871,16399 15782,16277
 Hasenheide - Park: bereits an der Kreuzung Hasenheide/Jahnstr. auf den linken Gehweg wechseln	PI; 11500,9116 11449,9125 11439,9049
+Hasenheide - Park: bereits an der Ampel Neue Welt auf den linken Gehweg wechseln	PI; 11629,9086 11550,9104 11515,9066
+Park - Hasenheide: auf dem linken Gehweg bis zur Ampel fahren	CP; 11515,9066 11550,9104 11500,9116

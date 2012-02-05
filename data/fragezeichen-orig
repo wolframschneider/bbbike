@@ -82,8 +82,8 @@ Müllerstr.	?::projected 6790,16018 6659,16133 6608,16180 6450,16325 6444,16331 6
 #
 #: by: Tagesspiegel vom 2009-04-12, soll 2009 realisiert werden
 #: corrected_by: MoPo 2009-08-01, soll 2010 realisiert werden
-#: last_checked: 2011-11-03 (östliches Ende)
-#: next_check: 2012-01-01
+#: last_checked: 2012-01-17
+#: next_check: 2012-03-01
 Annenstr./Heinrich-Heine-Platz	?::projected 11349,11227 11249,11268 11091,11379 11039,11425 10915,11535 10819,11664
 #
 #: by: Tagesspiegel vom 2009-04-12, soll 2009 realisiert werden
@@ -268,11 +268,7 @@ Hauptstraße/Kastanienallee: neue Ampel in Bau	?::inwork 7992,20515
 An den Eldenaer Höfen: wo genau wird die Straße liegen? Qualität?	?::inwork 14431,12903 14476,12836
 # 
 #XXX del --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1104/nachricht4274.html --- #: XXX die Straße wird Radstreifen haben --- #: XXX neue Ampel an der neuen Kreuzung (wahrscheinlich anstelle der alten Fußgängerampel) --- #: last_checked: 2011-08-19 --- #: next_check: 2012-04-01 --- Axel-Springer-Str.: Verbindung zum Spittelmarkt	?::inwork 10166,11592 10213,11728
-# 
-#: last_checked: 2011-10-31
-#: next_check: 2011-11-15
-#: XXX zur Zeit (2011-10-31) laufen noch Asphaltierungsarbeiten
-Radstreifen in der Wilhelmstr.: wird der Rest noch realisiert?	?::inwork 9234,11056 9199,11166
+#XXX del --- #: last_checked: 2011-10-31 --- #: next_check: 2011-11-15 --- #: XXX zur Zeit (2011-10-31) laufen noch Asphaltierungsarbeiten --- Radstreifen in der Wilhelmstr.: wird der Rest noch realisiert?	?::inwork 9234,11056 9199,11166
 #
 #: last_checked: 2011-04-09 vvv
 #: next_check: 2011-07-15 vvv
@@ -524,8 +520,8 @@ Eisenhutweg: Radwege entstehen im Zuge der Bauarbeiten bis September 2011	?::inw
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0802/nachricht2961.html
 B96a: Neubau der Radwege (gemeinsam mit Gehweg); wahrscheinlich wird der Radstreifen dann aufgehoben (bis 2010-01-01)	?::inwork 9228,23643 9146,23843 8984,24078 8891,24330 8826,24501 8682,24883 8665,24941 8661,24952 8571,25180 8548,25239 8493,25378
 # 
-#: last_checked: 2012-01-06
-#: next_check: 2012-02-07
+#: last_checked: 2012-01-20
+#: next_check: 2012-02-15
 #: by: http://www.stadtumbau-berlin.de/O-W-Gruenzug-Fussgaenger-und-Radfahrersteg.4699.0.html
 #: by: http://www.stadtumbau-berlin.de/fileadmin/images/Dokumentation/Projektdokumentation/Tempelhof-Schoeneberg/FG_Suedkreuz/Naumannstrasse/Karten/Lageplan_Naumann_Leuthener-Platz.pdf (begleitende Verkehrsberuhigung in der Naumannstraße)
 #: by: http://www.stadtumbau-berlin.de/O-W-Gruenzug-Fussgaenger-und-Radfahrersteg.4699.0.html?y=2012 (Name der Brücke, Fertigstellung Juli 2012)
@@ -613,9 +609,6 @@ Dohnenstieg: liegt hier auch Kopfsteinpflaster?	? 2711,6698 2654,6706 2606,6708
 #: XXX kann man es schon in flaechen-orig einzeichnen?
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/50re.pdf/file?y=2011
 Stuttgarter Platz: Widmung als Grünanlage	? 3571,10913 3546,10962 3827,10980 3828,10967 3571,10913
-# 
-#: XXX_prog BS
-Lotte-Laserstein-Str. - Hildegard-Knef-Platz: Bordsteine (1x? 2x?)	? 7716,7625 7757,7682
 # 
 Elsterwerdaer Platz: Qualität, Wegverbindung?	? 20840,11291 21094,11313
 # 
@@ -789,7 +782,7 @@ B87 (Umfahrung Beeskow): Ist die Straße eine Kfz-Straße?	? 66269,-27581 66283,-2
 #: next_check: 2006-06-01
 #: XXX oder vielleicht dieser Weg hier?
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20101109.1255.318039.html
-Burgwallgraben: neuer Weg wg. Renaturisierung durch DB - fertig Sommer 2006	? -3609,13492 -3649,13288 -3625,13241 -3550,13122 -3403,13024 -3360,13028 -3332,13054
+Burgwallgraben: neuer Weg wg. Renaturisierung durch DB - fertig Sommer 2006. Qualität? Nachts beleuchtet?	? -3609,13492 -3649,13288 -3625,13241 -3550,13122 -3403,13024 -3360,13028 -3332,13054
 #: XXX laut Detlef Hoge:
 auf der östlichen Seite der B101n: wo genau ist der Radweg hier?	? 6173,-2344 5957,-2575 5627,-2671
 #: by: Message-ID: <Xns96A387773A8B04usenet@krickstadt.de>:
@@ -2324,7 +2317,8 @@ Lindauer Allee/Aroser Allee - Luisenweg: Fahrbahnbeschaffenheit der Radfahrverbi
 Markscheiderstr. - An der Nordbahn: Existiert hier eine direkte Verbindung für Radfahrer? Qualität?	? 7105,19677 7125,19717
 #XXX del --- #: XXX Bauarbeiten waren Mai 2009 --- Blankenfelde, Berliner Str. und Hauptstr: Ist die Fahrbahnqualität (früher Kopfsteinpflaster) nach den Bauarbeiten besser geworden?	? 9528,23240 9490,23531 9425,23693 9625,23781 9774,23936
 Weg am Mühlengraben: Für Radfahrer befahrbar? Qualität?	? -3370,14115 -3306,14035
-Weg an der Havel: Für Radfahrer befahrbar? Qualität?	? -3355,14001 -3493,13782 -3543,13691 -3566,13580 -3555,13485
+#: XXX bei gmaps: "Schiffahrtsufer"
+Weg an der Havel: Für Radfahrer befahrbar? Qualität? Existieren Straßenschilder? Nachts beleuchtet?	? -3355,14001 -3493,13782 -3543,13691 -3566,13580 -3555,13485
 Schiffahrtsufer: Für Radfahrer befahrbar? Qualität?	? -3555,13485 -3441,13270
 Reiterhof, Phöben - Havelfähre: Qualität des Radwegs?	? -25787,3228 -25765,3246 -25530,3223 -25511,3313 -25425,3364 -25345,3389 -25282,3433 -25191,3442 -25198,3540 -25262,3561 -25373,3653 -25460,3795 -25563,3940 -25592,3985 -25578,4203 -25471,4332 -25506,4488 -25723,4736 -25725,4734 -25726,4734 -25855,4868 -25942,5010 -26073,5175 -26215,5272 -26647,5444 -26755,5459 -26918,5525
 Havelfähre - Trebelberg: Qualität des Radwegs?	? -26918,5525 -27169,5667 -27239,5694 -27344,5769 -27537,5873 -27679,5929 -27873,6033 -28007,6147 -28158,6227 -28398,6324 -28418,6351 -28778,6516 -28755,6544 -28757,6542 -29169,6718 -29225,6532 -29272,6453 -29279,6367 -29507,6251 -29501,6153 -29526,6093 -29580,6051 -29618,5962 -29969,5876 -29960,5808 -29883,5747 -29792,5636 -30714,5328 -30571,4759 -30814,4732 -30785,4243
@@ -2654,8 +2648,6 @@ Straße 126: Qualität? Existiert eine Verbindung zum Mauerweg?	? 8426,22015 8256,
 Rosskastanienhof: Qualität?	? 8055,20708 8190,20658 8191,20622
 Straße 60: Qualität?	? 8400,21180 8423,21212
 Distelweg: Qualität?	? 8587,21218 8484,21282
-#: XXX zumindest am östlichen Ende betoniert
-Straße 140 (Rosenthal): Qualität?	? 8605,21248 8680,21208 8753,21253 8826,21369
 Straße 141 (Rosenthal): Qualität?	? 8811,21379 8851,21453
 Straße 142 (Rosenthal): Qualität?	? 8851,21453 8927,21403
 Straße 127: Qualität?	? 8321,22269 8256,22098 8234,22024
@@ -3659,6 +3651,7 @@ Händelplatz (Eichwalde): Qualität?	? 25368,-3091 25347,-3077 25295,-3103 25254,-
 Am Orangeriepark: Qualität? Genaue Lage der Straße?	? 10270,19478 10399,19502
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/32re.pdf/file vvv
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/04re.pdf/file?y=2012 vvv
 #: XXX Privatstraßen, fehlt in Berlin.coords.data vvv
 #: last_checked: 2011-11-05 (noch in Bau) vvv
 #: next_check: 2012-03-15 vvv
@@ -3668,6 +3661,7 @@ Eulenweg: Qualität? Wo befindet sich die Straße?	? 16551,-446 16513,-537
 #: next_check ^^^
 #: last_checked ^^^
 #: XXX ^^^
+#: by: ^^^
 #: by: ^^^
 # 
 Schoppenhauerstr. (Waldesruh): Qualität des östlichen Abschnitts?	? 24974,8486 25048,8432 25119,8379 25212,8313 25301,8252 25347,8213
@@ -3772,7 +3766,6 @@ Hospitalgrabenpark: Qualität?	? 7115,3003 7127,3077 7184,3142 7263,3117 7314,319
 Lankegrabenpark: Qualität?	? 7364,3193 7409,3331 7458,3451
 Vierlingpark: Qualität?	? -762,4054 -762,4054 -713,4102 -685,4167 -638,4413
 Vierlingpark: Qualität?	? -713,4102 -713,4102 -758,4222 -716,4355 -754,4361
-Idealpassage: Qualität?	? 12553,8671 12452,8750
 #: XXX evtl. auch als Park/Grünanlage eintragen
 Egelpfuhlwiesen: Qualität?	? -5594,12832 -5554,12929 -5493,12994 -5446,13137 -5472,13235
 #: XXX evtl. auch den Park eintragen; von gleichnamiger Straße abgrenzen
@@ -3780,3 +3773,5 @@ Stabholzgarten: Existiert eine Verbindung durch die Grünanlage? Qualität? Nachts
 #: XXX evtl. auch als Park/Grünanlage eintragen
 Immenweidepark: Qualität?	? -2114,17878 -2169,17882 -2241,17847 -2298,17868 -2366,17868 -2388,17893
 Andreas-Rabe-Siedlung: Qualität? Ausgeschildert?	? 6898,23233 6912,23237 6967,23278 7078,23340 7027,23459
+Skandinavische Str.: hinter den Häusern, existiert eine ebenerdige Verbindung zur Lichtenberger Brücke?	? 17191,11973 17029,11903 16975,11858
+Ruhlebener Str. - Uferweg: existiert ein Zugang? Wieviele Treppenstufen?	? -3621,13884 -3493,13782

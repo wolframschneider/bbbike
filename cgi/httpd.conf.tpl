@@ -1,9 +1,7 @@
 # Configuration for bbbike.cgi
 [%
     IF CGI_TYPE == "ModPerl::Registry" || CGI_TYPE == "Apache::Registry";
-## XXX preloading modules is a bad idea unless
-## I get rid of all Class::Struct usages...
-#        PROCESS preload_modules;
+        PROCESS preload_modules;
     END
 -%]
 
@@ -54,6 +52,9 @@ ScriptAlias [% ROOT_URL %]/cgi/browserinfo.cgi [% ROOT_DIR %]/lib/BrowserInfo.pm
 
 # HTML ... documents
 Alias [% ROOT_URL %]  [% ROOT_DIR %]
+
+# Redirect for root URL
+RedirectMatch ^[% ROOT_URL %]/?$ [% ROOT_URL %]/cgi/bbbike.cgi
 
 # server headers have precedence over http-equiv tags, so
 # force utf-8 in case DefaultCharset is active

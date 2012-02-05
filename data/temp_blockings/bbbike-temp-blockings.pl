@@ -32,16 +32,16 @@ userdel	2::temp 9521,10010 9448,10014
 userdel	2::temp 9599,10175 9687,10180 9825,10206
 userdel	2::temp 9416,10196 9599,10175
 userdel	2::temp 9579,10122 9536,10064
-userdel	2::temp 9579,10122 9631,10142 9689,10124
+userdel	2::temp 9579,10122 9631,10142 9702,10129
 userdel	2::temp 9837,10117 9827,10051
 userdel	2::temp 9837,10117 9858,10199
 userdel auto	3 9593,10238 9599,10175 9579,10122
 userdel auto	3 10006,9942 9922,10010 9827,10051 9837,9856
-userdel auto	3 10006,9942 9922,10010 9827,10051 9689,10124
+userdel auto	3 10006,9942 9922,10010 9827,10051 9702,10129
 userdel auto	3 9837,9856 9827,10051 9922,10010 10006,9942
-userdel auto	3 9837,9856 9827,10051 9689,10124
-userdel auto	3 9689,10124 9827,10051 9922,10010 10006,9942
-userdel auto	3 9689,10124 9827,10051 9837,9856
+userdel auto	3 9837,9856 9827,10051 9702,10129
+userdel auto	3 9702,10129 9827,10051 9922,10010 10006,9942
+userdel auto	3 9702,10129 9827,10051 9837,9856
 userdel auto	3 9579,10122 9599,10175 9593,10238
 EOF
      },
@@ -50,7 +50,7 @@ EOF
        text  => 'Karneval der Kulturen, 12.6.2011',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9242,9694 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
+userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9242,9694 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
 userdel	3 8773,9524 8777,9601 8779,9812
 userdel	3 8779,9812 8777,9601 8773,9524
 userdel	3 9000,9509 9043,9745 9073,9915
@@ -3223,7 +3223,7 @@ EOF
        source_id => 'LMS_1129024102795',
        data  => <<EOF,
 userdel	q4; 7713,8600 7709,8777
-userdel	q4; 7710,8051 7716,8356
+userdel	q4; 7710,8051 7715,8308 7716,8356
 EOF
      },
      { from  => 1130792769, # 2005-10-31 22:06
@@ -4609,7 +4609,7 @@ EOF
 userdel	2 9521,10010 9448,10014
 userdel	2 9827,10051 9521,10010 9536,10064 9579,10122 9599,10175 9687,10180 9825,10206 9865,10227
 userdel	2 9416,10196 9599,10175
-userdel	2 9579,10122 9631,10142 9689,10124
+userdel	2 9579,10122 9631,10142 9702,10129
 userdel	2 9827,10051 9837,10117 9858,10199 9865,10227
 EOF
      },
@@ -11481,7 +11481,7 @@ EOF
 userdel	2::temp 9521,10010 9448,10014
 userdel	2::temp 9858,10199 9837,10117 9827,10051 9521,10010 9536,10064 9579,10122 9599,10175 9687,10180 9825,10206 9865,10227
 userdel	2::temp 9416,10196 9599,10175
-userdel	2::temp 9579,10122 9631,10142 9689,10124 9827,10051
+userdel	2::temp 9579,10122 9631,10142 9702,10129 9827,10051
 EOF
      },
      { from  => undef, # 
@@ -16368,7 +16368,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS_157063303',
        data  => <<EOF,
-userdel	q4::inwork 7709,8777 7713,8600 7716,8356 7710,8051 7725,8033 7713,8001 7717,7879 7717,7759
+userdel	q4::inwork 7709,8777 7713,8600 7716,8370 7716,8356 7715,8308 7710,8051 7725,8033 7713,8001 7717,7879 7717,7759
 EOF
      },
      { from  => 1255816800, # 2009-10-18 00:00
@@ -16619,7 +16619,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014786',
        data  => <<EOF,
-userdel	q4::inwork; 7716,8356 7710,8051 7725,8033 7713,8001 7717,7879
+userdel	q4::inwork; 7716,8356 7715,8308 7710,8051 7725,8033 7713,8001 7717,7879
 EOF
      },
      { from  => 1259938062, # 
@@ -18980,7 +18980,7 @@ EOF
        text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 29.04. - 22.05.2011 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::temp 11177,8985 11255,8591 11279,8489 11282,8428 11266,8336
+userdel	q4::temp 11177,8985 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
 EOF
      },
      { from  => 1304805600, # 2011-05-08 00:00
@@ -19101,7 +19101,7 @@ EOF
        data  => <<EOF,
 #: by: wosch
 #: confirmed_by: srt
-#: last_checked: 2011-11-13
+#: last_checked: 2012-01-22
 #: note: eigentlich Radfahren auf der Friedrichsbrücke jetzt auch verboten
 userdel	q4::inwork; 10166,12777 10132,12941
 EOF
@@ -19366,18 +19366,6 @@ EOF
 userdel	2::inwork 9524,12950 9529,12925
 EOF
      },
-## Unklar, ob die Sperrung tatsächlich schon erfolgt ist und wie lange sie dauert...
-#     { from  => undef, # 
-#       until => undef, # XXX
-#       text  => 'Sperrung Fußgängerbrücke Altglienicke.',
-#       type  => 'gesperrt',
-#       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4399.html',
-#       data  => <<EOF,
-##: XXX wann wird die Brücke wieder eröffnet?
-##: next_check: 2011-07-31
-#userdel	2::inwork 21262,375 21182,436
-#EOF
-#     },
      { from  => 1310335200, # 2011-07-11 00:00
        until => 1314395999, # 2011-08-26 23:59
        text  => 'Instandsetzung des Stegs zwischen Nackthals- und Seidenhuhnweg, u.U. Vollsperrung, ab 12. Juli 2011 für ca. 10 Wochen',
@@ -19933,8 +19921,8 @@ userdel	q4::inwork 8635,13580 8626,13641 8619,13689
 EOF
      },
      { from  => 1314604800, # 2011-08-29 10:00
-       until => 1328025600, # 2012-01-31 17:00
-       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten, Straße vollständig gesperrt in beiden Richtungen zwischen Oderberger Str. und Schönhauser Allee, bis 31.01.2012 ',
+       until => 1346425200, # 2012-08-31 17:00
+       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten, Straße vollständig gesperrt in beiden Richtungen zwischen Oderberger Str. und Schönhauser Allee, bis 31.08.2012 ',
        type  => 'handicap',
        source_id => 'IM_017746',
        data  => <<EOF,
@@ -19957,6 +19945,19 @@ EOF
        source_id => 'IM_018330',
        data  => <<EOF,
 userdel	2::temp 8538,12245 8214,12205 8089,12190
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Sperrung Fußgängerbrücke Altglienicke.',
+       type  => 'gesperrt',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4399.html',
+       data  => <<EOF,
+#: by: http://www.altglienicke24.de/meldungen.html
+#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1201/nachricht4563.html
+#: XXX wann wird die Brücke wieder eröffnet?
+#: next_check: 2012-03-01
+userdel	2::inwork 19968,16 19940,52
 EOF
      },
     );
