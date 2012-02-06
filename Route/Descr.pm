@@ -18,6 +18,7 @@ use strict;
 use vars qw($VERSION);
 $VERSION = sprintf("%d.%02d", q$Revision: 1.4 $ =~ /(\d+)\.(\d+)/);
 
+use Encode;
 use Cwd qw(abs_path);
 use File::Basename qw(dirname);
 use Strassen::Strasse;
@@ -79,6 +80,11 @@ sub init_msg {
 	    if ($msg && ref $msg ne 'HASH') {
 		undef $msg;
 	    }
+
+	    foreach my $key (keys %$msg) {
+           	$msg->{$key} = Encode::decode("utf-8", $msg->{$key});
+       	    }
+
 	    $msg
 	}) {
 	    last;
