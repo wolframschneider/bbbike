@@ -5853,7 +5853,7 @@ for my $etappe (@out_route) {
 	        if (is_mobile($q)) { print qq{<tr bgcolor="white"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td></tr>\n}; }
 	    }
 
-	    print qq{</tr></table>};
+	    print qq{</table>};
 	    print "</center>\n" unless $printmode;
 	}
 
