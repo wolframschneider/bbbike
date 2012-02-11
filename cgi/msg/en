@@ -265,7 +265,7 @@ return {
     "Folge uns auf twitter.com/BBBikeWorld"                          => "Follow us on twitter.com/BBBikeWorld",
 
     "Es existiert keine Ausweichroute." => "There's no alternative route.",
-    "Richt." => "Dir.", # abbrev
-    "Route als" => 'Show route as',
+    "Richt."                            => "Dir.",                            # abbrev
+    "Route als"                         => 'Show route as',
 };
 
