@@ -159,7 +159,6 @@ function osm_init() {
 
     // size of an area in square km 
 
-
     function square_km(x1, y1, x2, y2) { // SW x NE
         var height = OpenLayers.Util.distVincenty({
             lat: x1,
@@ -185,7 +184,7 @@ function osm_init() {
 
         var sqm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
         if ($("#square_km")) {
-            $("#square_km").html("current square km: " + sqm);
+            $("#square_km").html("area covers " + sqm + " square km");
         }
 
         if (sqm > 70000) {
