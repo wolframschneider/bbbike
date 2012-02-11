@@ -141,7 +141,7 @@ function osm_init() {
         $("#maxlon").val(Math.round(bounds.right * decimals) / decimals);
         $("#maxlat").val(Math.round(bounds.top * decimals) / decimals);
 
-        $('input[name=sw_lat]', parent.document).attr("value", 'foo');
+        // $('input[name=sw_lat]', parent.document).attr("value", 'foo');
 
         mapnikSizeChanged();
     }
@@ -171,8 +171,8 @@ function osm_init() {
         var bounds = new OpenLayers.Bounds($("#minlon").val(), $("#minlat").val(), $("#maxlon").val(), $("#maxlat").val());
 
         var sqm = square_km( $("#minlat").val(), $("#minlon").val(), $("#maxlat").val(), $("#maxlon").val() );
-        if ($("#debug")) {
-                $("#debug").html( "square km: " + sqm);
+        if ($("#square_km")) {
+            $("#square_km").html( "current square km: " + sqm);
         }
         
         if ( sqm > 70000) {
