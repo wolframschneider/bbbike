@@ -77,10 +77,10 @@ function osm_init() {
         map.events.register("moveend", map, mapMoved);
 
         // $("#sidebar_title").html("Export");
-        $("#maxlat").change(boundsChanged);
-        $("#minlon").change(boundsChanged);
-        $("#maxlon").change(boundsChanged);
-        $("#minlat").change(boundsChanged);
+        $("#ne_lat").change(boundsChanged);
+        $("#sw_lng").change(boundsChanged);
+        $("#ne_lng").change(boundsChanged);
+        $("#sw_lat").change(boundsChanged);
 
         $("#drag_box").click(startDrag);
         setBounds(map.getExtent());
@@ -88,7 +88,7 @@ function osm_init() {
 
     function boundsChanged() {
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
-        var bounds = new OpenLayers.Bounds($("#minlon").val(), $("#minlat").val(), $("#maxlon").val(), $("#maxlat").val());
+        var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
 
         bounds.transform(epsg4326, map.getProjectionObject());
 
@@ -136,10 +136,10 @@ function osm_init() {
 
         bounds = bounds.clone().transform(map.getProjectionObject(), epsg4326);
 
-        $("#minlon").val(Math.round(bounds.left * decimals) / decimals);
-        $("#minlat").val(Math.round(bounds.bottom * decimals) / decimals);
-        $("#maxlon").val(Math.round(bounds.right * decimals) / decimals);
-        $("#maxlat").val(Math.round(bounds.top * decimals) / decimals);
+        $("#sw_lng").val(Math.round(bounds.left * decimals) / decimals);
+        $("#sw_lat").val(Math.round(bounds.bottom * decimals) / decimals);
+        $("#ne_lng").val(Math.round(bounds.right * decimals) / decimals);
+        $("#ne_lat").val(Math.round(bounds.top * decimals) / decimals);
 
         // $('input[name=sw_lat]', parent.document).attr("value", 'foo');
 
@@ -168,9 +168,9 @@ function osm_init() {
     }
 
     function validateControls() {
-        var bounds = new OpenLayers.Bounds($("#minlon").val(), $("#minlat").val(), $("#maxlon").val(), $("#maxlat").val());
+        var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
 
-        var sqm = square_km( $("#minlat").val(), $("#minlon").val(), $("#maxlat").val(), $("#maxlon").val() );
+        var sqm = square_km( $("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val() );
         if ($("#square_km")) {
             $("#square_km").html( "current square km: " + sqm);
         }
@@ -187,7 +187,7 @@ function osm_init() {
     }
 
     function mapnikImageSize(scale) {
-        var bounds = new OpenLayers.Bounds($("#minlon").val(), $("#minlat").val(), $("#maxlon").val(), $("#maxlat").val());
+        var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
         var epsg900913 = new OpenLayers.Projection("EPSG:900913");
 
