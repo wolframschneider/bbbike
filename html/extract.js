@@ -142,7 +142,6 @@ function osm_init() {
         $("#ne_lat").val(Math.round(bounds.top * decimals) / decimals);
 
         // $('input[name=sw_lat]', parent.document).attr("value", 'foo');
-
         mapnikSizeChanged();
     }
 
@@ -157,25 +156,39 @@ function osm_init() {
         vectors.addFeatures(feature);
         transform.setFeature(feature);
     }
-    
+
     // size of an area in square km 
-    function square_km ( x1, y1, x2, y2) { // SW x NE
-        var height =  OpenLayers.Util.distVincenty ({ lat: x1, lon: y1}, { lat: x1, lon: y2} );
-        var width =  OpenLayers.Util.distVincenty ({ lat: x1, lon: y1}, { lat: x2, lon: y1} );
-        
-       return Math.round(height * width + 0.5);
-       // return height + " " + width;
+
+
+    function square_km(x1, y1, x2, y2) { // SW x NE
+        var height = OpenLayers.Util.distVincenty({
+            lat: x1,
+            lon: y1
+        }, {
+            lat: x1,
+            lon: y2
+        });
+        var width = OpenLayers.Util.distVincenty({
+            lat: x1,
+            lon: y1
+        }, {
+            lat: x2,
+            lon: y1
+        });
+
+        return Math.round(height * width + 0.5);
+        // return height + " " + width;
     }
 
     function validateControls() {
         var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
 
-        var sqm = square_km( $("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val() );
+        var sqm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
         if ($("#square_km")) {
-            $("#square_km").html( "current square km: " + sqm);
+            $("#square_km").html("current square km: " + sqm);
         }
-        
-        if ( sqm > 70000) {
+
+        if (sqm > 70000) {
             $("#export_osm_too_large").show();
         } else {
             $("#export_osm_too_large").hide();
