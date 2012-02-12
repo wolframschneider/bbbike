@@ -181,7 +181,7 @@ function osm_init() {
             $("#square_km").html("area covers " + sqm + " square km");
         }
 
-        if (sqm > 70000) {
+        if (sqm > 200000) {
             $("#export_osm_too_large").show();
         } else {
             $("#export_osm_too_large").hide();
