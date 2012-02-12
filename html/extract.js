@@ -12,9 +12,14 @@ function init() {
 
     map = new OpenLayers.Map("map", {
         controls: [
-        new OpenLayers.Control.Navigation(), new OpenLayers.Control.PanZoomBar(), new OpenLayers.Control.Permalink(), new OpenLayers.Control.ScaleLine({
-            geodesic: true
-        }), new OpenLayers.Control.Permalink('permalink'), new OpenLayers.Control.MousePosition(), new OpenLayers.Control.Attribution()],
+            new OpenLayers.Control.Navigation(), 
+	    new OpenLayers.Control.PanZoomBar(), 
+	    new OpenLayers.Control.ScaleLine({ geodesic: true }), 
+	    new OpenLayers.Control.MousePosition(), 
+	    new OpenLayers.Control.Attribution(),
+	    new OpenLayers.Control.LayerSwitcher(),
+        ],
+
         maxExtent: new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
         maxResolution: 156543.0339,
         numZoomLevels: 19,
@@ -27,13 +32,6 @@ function init() {
     map.addLayer(layerMapnik);
     var layerCycleMap = new OpenLayers.Layer.OSM.CycleMap("OSM CycleMap");
     map.addLayer(layerCycleMap);
-
-    var switcherControl = new OpenLayers.Control.LayerSwitcher();
-    map.addControl(switcherControl);
-
-    // switcherControl.maximizeControl();
-    // map.addControl(new OpenLayers.Control.LayerSwitcher());
-    map.addControl(new OpenLayers.Control.Permalink());
 
     if (!map.getCenter()) {
         var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
