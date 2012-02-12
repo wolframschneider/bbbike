@@ -333,3 +333,6 @@ span.grey, p.grey { font-size: small; color: #808080 }
 // position of 'via' link
 td#via_message { padding-top: 0em; }
 
+/* extract.cgi */
+form#extract input#extract { color: green; font-size: large }
+
