@@ -29,7 +29,7 @@ use VectorUtil qw(get_polygon_center);
 
 sub usage () {
     die <<EOF;
-usage: $0 [-ignore-missing] [-use-orig] [-quiet] [-debug] [datadir] [-optimize-for garmin|mapnik]
+usage: $0 [-ignore-missing] [-use-orig] [-quiet] [-debug] [datadir] [-optimize-for garmin|mapnik|mapnik-bbbike]
        $0 [-type area|waterway|highway|railway|ferry] -single bbdfile
 
 Either convert a whole bbbike data directory, or convert a single bbd
@@ -59,20 +59,29 @@ GetOptions("single=s" => \$single_file,
 	  )
     or usage;
 
-use constant OPTIMIZE_FOR_NONE   => 0;
-use constant OPTIMIZE_FOR_GARMIN => 1;
-use constant OPTIMIZE_FOR_MAPNIK => 2;
-my $optimize_for = OPTIMIZE_FOR_NONE;
+use constant OPTIMIZE_FOR_NONE           => 0;
+use constant OPTIMIZE_FOR_GARMIN         => 1;
+use constant OPTIMIZE_FOR_MAPNIK         => 2;
+
+use constant OPTIMIZE_FOR_MAPNIK_STYLE_NONE    => 0;
+use constant OPTIMIZE_FOR_MAPNIK_STYLE_DEFAULT => 1;
+use constant OPTIMIZE_FOR_MAPNIK_STYLE_BBBIKE  => 2;
+my $optimize_for              = OPTIMIZE_FOR_NONE;
+my $optimize_for_mapnik_style = OPTIMIZE_FOR_MAPNIK_STYLE_NONE;
 if ($optimize_for_string) {
-    if ($optimize_for_string !~ m{^(garmin|mapnik)$}) {
-	warn "-optimize-for takes only value 'garmin' or 'mapink'\n";
+    if ($optimize_for_string !~ m{^(garmin|mapnik|mapnik-bbbike)$}) {
+	warn "-optimize-for takes only value 'garmin' or 'mapnik' or 'mapnik-bbbike'\n";
 	usage;
     }
     if ($optimize_for_string eq 'garmin') {
 	$shorten_for_garmin = 1;
 	$optimize_for = OPTIMIZE_FOR_GARMIN;
     } elsif ($optimize_for_string eq 'mapnik') {
-	$optimize_for = OPTIMIZE_FOR_MAPNIK;
+	$optimize_for              = OPTIMIZE_FOR_MAPNIK;
+	$optimize_for_mapnik_style = OPTIMIZE_FOR_MAPNIK_STYLE_DEFAULT;
+    } elsif ($optimize_for_string eq 'mapnik-bbbike') {
+	$optimize_for              = OPTIMIZE_FOR_MAPNIK;
+	$optimize_for_mapnik_style = OPTIMIZE_FOR_MAPNIK_STYLE_BBBIKE;
     } else {
 	die "Should never happen (optimize_for=$optimize_for_string)";
     }
@@ -127,6 +136,7 @@ my %oneway;
 my %no_access;
 my %speed0;
 my @remember_quality;
+my @remember_handicap;
 my %remember_steps; # node_id -> { steps => ... }
 
 my %cat_to_highway = ('B'  => 'primary', # See also $do_highway_primary_hack
@@ -150,12 +160,19 @@ my %cat_to_area_landuse = ('Forest'     => 'forest',
 			   'Industrial' => 'industrial',
 			   # 'Ae' => 'airport', # does not exist
 			   'Orchard'    => 'allotments',
-			   'Sport'      => 'sports',
+			   ($optimize_for != OPTIMIZE_FOR_MAPNIK ? ('Sport' => 'sports') : ()),
 			   'Green'      => 'village_green',
 			  );
 my %cat_to_area_leisure = ('P'          => 'park',
 			   'Pabove'     => 'park',
+			   ($optimize_for == OPTIMIZE_FOR_MAPNIK ? ('Sport' => 'sports_centre') : ()),
 			  );
+
+my %bbbikequality_to_smoothness = (0 => 'excellent',    # Q0
+				   1 => 'good',         # Q1
+				   2 => 'intermediate', # Q2
+				   3 => 'bad',          # Q3
+				  );
 
 my($min_lat, $max_lat, $min_lon, $max_lon);
 
@@ -208,6 +225,7 @@ if ($single_file) {
     do_file("$datadir/landstrassen2", \&handle_anywhere_highway_like);
 
     dump_quality();
+    dump_handicap();
 	
     if (!$fragezeichen_file) {
 	$fragezeichen_file = -r "$datadir/../tmp/fragezeichen-nextcheck.bbd" ? "$datadir/../tmp/fragezeichen-nextcheck.bbd" : "$datadir/fragezeichen";
@@ -348,16 +366,22 @@ sub handle_handicap_like {
 	}
     }
 
-    my($quality_hin) = $cat_hin =~ m{^Q(\d+)}; # XXX maybe support for +/-?
-    my $quality = $quality_hin;
-    if (defined $cat_rueck) {
-	my($quality_rueck) = $cat_rueck =~ m{^Q(\d+)}; # XXX maybe support for +/-?
-	if (defined $quality_rueck && (!defined $quality_hin || $quality_rueck > $quality_hin)) {
-	    $quality = $quality_rueck;
+    for my $def (
+		 ['Q', \@remember_quality],
+		 ['q', \@remember_handicap],
+		) {
+	my($catprefix,$varref) = @$def;
+	my($quality_hin) = $cat_hin =~ m{^\Q$catprefix\E(\d+)}; # note: no support for +/-
+	my $quality = $quality_hin;
+	if (defined $cat_rueck) {
+	    my($quality_rueck) = $cat_rueck =~ m{^\Q$catprefix\E(\d+)}; # note: support for +/-?
+	    if (defined $quality_rueck && (!defined $quality_hin || $quality_rueck > $quality_hin)) {
+		$quality = $quality_rueck;
+	    }
 	}
-    }
-    if (defined $quality) {
-	push @remember_quality, [\@node_ids, $quality];
+	if (defined $quality) {
+	    push @$varref, [\@node_ids, $quality];
+	}
     }
 }
 
@@ -624,7 +648,7 @@ sub handle_waterway_like {
     my @node_ids = get_node_ids($r, undef, is_area => $is_area);
 
     my $name = $r->[Strassen::NAME];
-    _xmlify($name);
+    _xmlify(format_waterway_label($name));
 
     print $wayfh qq{<way id="$next_way_id" visible="true">\n};
     for my $node_id (@node_ids) {
@@ -736,9 +760,16 @@ sub handle_trafficsignals_like {
 	$attribs = { highway => 'traffic_signals' };
     } elsif ($cat =~ m{^F}) {
 	if ($optimize_for == OPTIMIZE_FOR_MAPNIK) {
-	    # Treat LSA-X and LSA-F the same, otherwise LSA-F will not
-	    # be rendered at all in mapnik
-	    $attribs = { highway => 'traffic_signals' };
+	    if ($optimize_for_mapnik_style == OPTIMIZE_FOR_MAPNIK_STYLE_BBBIKE) {
+		# Use a non-standard tag value here
+		$attribs = { highway => 'traffic_signals_pedestrian' };
+	    } else {
+		# Treat LSA-X and LSA-F the same, otherwise LSA-F will not
+		# be rendered at all in mapnik using default or german style.
+		# This is because there's no "crossing" column in the
+		# planet database.
+		$attribs = { highway => 'traffic_signals' };
+	    }
 	} else {
 	    $attribs = { highway => 'crossing', crossing => 'traffic_signals' };
 	}
@@ -768,18 +799,36 @@ sub handle_railway_stations_like {
     my $is_ubahn = $cat =~ m{^U};
     my $is_sbahn = $cat =~ m{^S};
     my $is_abandoned = $cat =~ m{0$};
+    my $is_optimize_for_mapnik_bbbike_style = $optimize_for_mapnik_style == OPTIMIZE_FOR_MAPNIK_STYLE_BBBIKE;
+    my $name = (
+		$is_optimize_for_mapnik_bbbike_style
+		? ''
+		: ($is_ubahn ? 'U ' : $is_sbahn ? 'S ' : '')
+	       ) . $r->[Strassen::NAME];
     my $attribs = { railway => 'station', # no distinction between halt and station
-		    name => ($is_ubahn ? 'U ' : $is_sbahn ? 'S ' : '') . $r->[Strassen::NAME],
 		    ($is_abandoned ? ("abandoned" => "yes") : ()),
+		    name => $name,
 		  };
     if      ($is_ubahn) {
-	$attribs->{station} = 'subway';
+	if ($is_optimize_for_mapnik_bbbike_style) {
+	    $attribs->{railway} = 'station_subway';
+	} else {
+	    $attribs->{station} = 'subway';
+	}
     } elsif ($is_sbahn) {
-	$attribs->{station} = 'light_rail';
+	if ($is_optimize_for_mapnik_bbbike_style) {
+	    $attribs->{railway} = 'station_light_rail';
+	} else {
+	    $attribs->{station} = 'light_rail';
+	}
     } elsif ($cat =~ m{^R}) {
 	# Regional/Fernbahnhof
 	if ($cat =~ m{^RP}) {
-	    $attribs->{'bbbike:station_type'} = 'RP';
+	    if ($optimize_for_mapnik_style == OPTIMIZE_FOR_MAPNIK_STYLE_BBBIKE) {
+		$attribs->{railway} = 'station_narrow_gauge';
+	    } else {
+		$attribs->{'bbbike:station_type'} = 'RP';
+	    }
 	}
     } else {
 	warn "Unhandled railway station-like category $cat\n";
@@ -1053,6 +1102,25 @@ sub dump_quality {
 	    print $wayfh qq{  <nd ref="$node_id"/>\n};
 	}
 	print $wayfh qq{  <tag k="bbbike:quality" v="Q$quality" />\n};
+	my $smoothness = $bbbikequality_to_smoothness{$quality};
+	if ($smoothness) {
+	    print $wayfh qq{  <tag k="smoothness" v="$smoothness" />\n};
+	} else {
+	    warn "Cannot map quality '$quality' to smoothness level";
+	}
+	print $wayfh qq{</way>\n};
+	$next_way_id++;
+    }
+}
+
+sub dump_handicap {
+    for my $def (@remember_handicap) {
+	my($node_ids, $handicap) = @$def;
+	print $wayfh qq{<way id="$next_way_id" visible="true">\n};
+	for my $node_id (@$node_ids) {
+	    print $wayfh qq{  <nd ref="$node_id"/>\n};
+	}
+	print $wayfh qq{  <tag k="bbbike:handicap" v="q$handicap" />\n};
 	print $wayfh qq{</way>\n};
 	$next_way_id++;
     }
@@ -1081,6 +1149,16 @@ sub format_place_label {
     my $s = shift;
     my($name, $add) = split /\|/, $s;
     $name . (defined $add ? ' ' . $add : '');
+}
+
+sub format_waterway_label {
+    my $s = shift;
+    if ($optimize_for == OPTIMIZE_FOR_MAPNIK) {
+	if (defined $s) {
+	    $s =~ s{\|.*}{};
+	}
+    }
+    $s;
 }
 
 __END__
@@ -1144,6 +1222,21 @@ later usage with mapnik (and the default osm styles) are done:
 =item * Street name parts in "[...]" are stripped
 
 =item * Special pedestrian traffic lights handling needed
+
+=item * Remove "|..." part in waterways
+
+=back
+
+The switch C<< -optimize-for=mapnik-bbbike >> turns on optimization if
+using mapnik with the special bbbike style:
+
+=over
+
+=item * For pedestrian-only traffic lights use the non-standard tag
+value "traffic_signals_pedestrian"
+
+=item * Railway stations may have the non-standard tag values
+"station_subway", "station_light_rail", or "station_narrow_gauge"
 
 =back
 
