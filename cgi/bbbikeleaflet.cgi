@@ -27,11 +27,31 @@ my $htmlfile = "$htmldir/bbbikeleaflet.html";
 my $q = CGI->new;
 print $q->header('text/html; charset=utf-8');
 
+my $leaflet_dist = $q->param('leafletdist') || '';
+
 open my $fh, $htmlfile
     or die "Can't open $htmlfile: $!";
 binmode $fh, ':utf8';
 binmode STDOUT, ':utf8';
 while(<$fh>) {
+    if (m{(.*)\Q<!-- FIX URL LAYOUT -->\E}) {
+	my $line = $1;
+	my $use_old_url_layout = $q->url(-absolute => 1) =~ m{/cgi/bbbikeleaflet};
+	my $bbbike_htmlurl;
+	if ($use_old_url_layout) {
+	    $bbbike_htmlurl = "/bbbike/html";
+	} else {
+	    $bbbike_htmlurl = "/BBBike/html";
+	}
+	$line =~ s{(src=")}{$1$bbbike_htmlurl/};
+	print $line, "\n";
+	next;
+    }
+
+    if ($leaflet_dist eq 'biokovo') {
+	s{\Qhttp://bbbike.de/leaflet/dist\E}{http://192.168.1.5/~eserte/leaflet/dist};
+    }
+
     print $_;
     if (m{\Q//--- INSERT GEOJSON HERE ---}) {
 	if ($q->param('coordssession')) {

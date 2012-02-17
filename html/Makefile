@@ -133,6 +133,7 @@ bbbikeleaflet.en.html:
 #
 BBBIKE_WORLD_JAVASCRIPT_FILES=\
 	bbbike.js \
+	extract.js \
 	maps3.js
 
 JAVASCRIPT_FILES= ${BBBIKE_WORLD_JAVASCRIPT_FILES}

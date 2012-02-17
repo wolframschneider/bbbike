@@ -10,11 +10,11 @@
 <Map bgcolor="transparent" srs="&srs900913;" minimum_version="0.7.1">
   &fontset-settings;
 
-<Style name="smoothness">
+<Style name="handicap">
   
 <!--
     <Rule>
-      <Filter>[bbbike:quality] = 'Q0'</Filter>
+      <Filter>[bbbike:handicap] = 'q0'</Filter>
       &maxscale_zoom15;
       &minscale_zoom19;
       <LineSymbolizer>
@@ -25,7 +25,7 @@
     </Rule>
 -->
     <Rule>
-      <Filter>[bbbike:quality] = 'Q1'</Filter>
+      <Filter>[bbbike:handicap] = 'q1'</Filter>
       &maxscale_zoom15;
       &minscale_zoom19;
       <LineSymbolizer>
@@ -35,7 +35,7 @@
       </LineSymbolizer>
     </Rule>
     <Rule>
-      <Filter>[bbbike:quality] = 'Q2'</Filter>
+      <Filter>[bbbike:handicap] = 'q2'</Filter>
       &maxscale_zoom15;
       &minscale_zoom19;
       <LineSymbolizer>
@@ -45,7 +45,7 @@
       </LineSymbolizer>
     </Rule>
     <Rule>
-      <Filter>[bbbike:quality] = 'Q3'</Filter>
+      <Filter>[bbbike:handicap] = 'q3'</Filter>
       &maxscale_zoom15;
       &minscale_zoom19;
       <LineSymbolizer>
@@ -57,7 +57,7 @@
    
 <!--   
     <Rule>
-      <Filter>[bbbike:quality] = 'Q0'</Filter>
+      <Filter>[bbbike:handicap] = 'q0'</Filter>
       &maxscale_zoom12;
       &minscale_zoom14;
       <LineSymbolizer>
@@ -68,7 +68,7 @@
     </Rule>
 -->
     <Rule>
-      <Filter>[bbbike:quality] = 'Q1'</Filter>
+      <Filter>[bbbike:handicap] = 'q1'</Filter>
       &maxscale_zoom12;
       &minscale_zoom14;
       <LineSymbolizer>
@@ -78,7 +78,7 @@
       </LineSymbolizer>
     </Rule>
     <Rule>
-      <Filter>[bbbike:quality] = 'Q2'</Filter>
+      <Filter>[bbbike:handicap] = 'q2'</Filter>
       &maxscale_zoom12;
       &minscale_zoom14;
       <LineSymbolizer>
@@ -88,7 +88,7 @@
       </LineSymbolizer>
     </Rule>
     <Rule>
-      <Filter>[bbbike:quality] = 'Q3'</Filter>
+      <Filter>[bbbike:handicap] = 'q3'</Filter>
       &maxscale_zoom12;
       &minscale_zoom14;
       <LineSymbolizer>
@@ -100,7 +100,7 @@
 
 <!--    
     <Rule>
-      <Filter>[bbbike:quality] = 'Q0'</Filter>
+      <Filter>[bbbike:handicap] = 'q0'</Filter>
       &maxscale_zoom1;
       &minscale_zoom11;
       <LineSymbolizer>
@@ -111,7 +111,7 @@
     </Rule>
 -->
     <Rule>
-      <Filter>[bbbike:quality] = 'Q1'</Filter>
+      <Filter>[bbbike:handicap] = 'q1'</Filter>
       &maxscale_zoom1;
       &minscale_zoom11;
       <LineSymbolizer>
@@ -121,7 +121,7 @@
       </LineSymbolizer>
     </Rule>
     <Rule>
-      <Filter>[bbbike:quality] = 'Q2'</Filter>
+      <Filter>[bbbike:handicap] = 'q2'</Filter>
       &maxscale_zoom1;
       &minscale_zoom11;
       <LineSymbolizer>
@@ -131,7 +131,7 @@
       </LineSymbolizer>
     </Rule>
     <Rule>
-      <Filter>[bbbike:quality] = 'Q3'</Filter>
+      <Filter>[bbbike:handicap] = 'q3'</Filter>
       &maxscale_zoom1;
       &minscale_zoom11;
       <LineSymbolizer>
@@ -144,13 +144,13 @@
 </Style>
 
 <!-- -->
-<Layer name="smoothness" status="on" srs="&osm2pgsql_projection;">
-    <StyleName>smoothness</StyleName>
+<Layer name="handicap" status="on" srs="&osm2pgsql_projection;">
+    <StyleName>handicap</StyleName>
     <Datasource>
       <Parameter name="table">
-      (select way,"bbbike:quality"
+      (select way,"bbbike:handicap"
        from &prefix;_line
-       where "bbbike:quality" is not null
+       where "bbbike:handicap" is not null
        order by z_order) as roads
       </Parameter>
       &datasource-settings;

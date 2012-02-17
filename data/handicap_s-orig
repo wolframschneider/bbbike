@@ -13,8 +13,8 @@
 #: XXX siehe auch qualitaet_s-orig
 Sembritzkystr.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 7203,5488 7186,5453 7157,5418 7095,5317 7018,5201
 # 
-#: last_checked: 2011-11-25 vvv
-#: next_check: 2012-01-15 vvv
+#: last_checked: 2012-02-14 vvv
+#: next_check: 2012-04-01 vvv
 #: XXX wird wahrscheinlich reorganisiert mit der neuen Verbindung
 Beuthstr. - Spittelmarkt: Gehweg, Bauarbeiten	q4::inwork 10229,11618 10213,11728
 Spittelmarkt: Gehweg, Bordstein, Bauarbeiten	q4::inwork 10166,11592 10153,11666 10213,11728
@@ -1379,7 +1379,7 @@ Leuthener Str.: enge Straﬂe	q1 7411,8364 7494,8364 7578,8358 7640,8359 7716,8356
 #: by: Wilfried Flade:
 s¸dliches Spreeufer: besonders an Wochenenden tags¸ber sehr viele Fuﬂg‰nger	q2 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576
 #: by: Julia (jbrauch):
-Berchtesgadener Str.: Fuﬂg‰nger, Bordsteine	q2 6361,9175 6360,9194
+Berchtesgadener Str.: Fuﬂg‰nger, Bordsteine	q2 6361,9175 6359,9244
 #: by: Uta Voigt:
 Waldstr.: enge Straﬂe	q1 9718,20498 9724,20291 9723,20269
 #: by: Wolfram (...007...):
