@@ -45,6 +45,7 @@ var bbbike = {
     mapPosition: {
         "default": "TOP_RIGHT",
         "tah": "BOTTOM_RIGHT",
+        "mapnik_bw": "BOTTOM_RIGHT",
         "bing_map": "BOTTOM_RIGHT",
         "bing_map_old": "BOTTOM_RIGHT",
         "bing_hybrid": "BOTTOM_RIGHT",
@@ -1085,7 +1086,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.bbbike_mapnik_german();
     mapControls.mapnik();
     mapControls.mapnik_de();
-    mapControls.mapnik_bw();
     mapControls.cycle();
     mapControls.hike_bike();
     mapControls.public_transport();
@@ -1100,6 +1100,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.bing_hybrid();
     mapControls.yahoo_hybrid();
     mapControls.tah();
+    mapControls.mapnik_bw();
 
     map.setMapTypeId(maptype);
     if (is_supported_maptype(maptype, bbbike.available_custom_maps)) {
