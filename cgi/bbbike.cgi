@@ -1004,9 +1004,9 @@ $require_Karte = sub {
     undef $require_Karte;
 };
 
-$VERSION = 10.004;
+$VERSION = "11.002";
 
-use vars qw($font $delim);
+use vars qw($delim $font);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
 $delim = '!'; # wegen Mac nicht ¦ verwenden!
 
@@ -1069,7 +1069,7 @@ $detailheight = 500;
 $nice_berlinmap = 0;
 $nice_abcmap    = 0;
 
-$bbbike_start_js_version = '1.21';
+$bbbike_start_js_version = '1.23';
 
 use vars qw(@b_and_p_plz_multi_files %is_usable_without_strassen %same_single_point_optimization);
 @b_and_p_plz_multi_files = 
@@ -1184,6 +1184,10 @@ $bbbike_url =~ s,/streets\.html$,/,;
 
 $bbbike_script = $bbbike_url;
 
+use vars qw($is_m $is_printable);
+$is_m = $q->virtual_host =~ m{^m\.}; # e.g. m.bbbike.de
+$is_printable = !$is_m;
+
 if (!$mapdir_url && !$mapdir_fs) {
     $mapdir_url = "$bbbike_script?tmp=";
     $mapdir_fs  = "$FindBin::RealBin/../tmp/www"; # hmmm, too much assuming about position of cgi
@@ -1199,8 +1203,6 @@ if (defined $mapdir_url && $mapdir_url !~ m{^https?://}) {
     $mapdir_url = "http://" . BBBikeCGIUtil::my_server_name($q) . ($q->server_port != 80 ? ":" . $q->server_port : "") . $mapdir_url;
 }
 
-#XXX ! stay shared: my($fontstr, $fontend);
-#XXX ! stay shared: my $smallform = 0;
 use vars qw($smallform $fontstr $fontend);
 $smallform = 0;
 
@@ -1254,7 +1256,7 @@ if ($show_weather || $bp_obj) {
 }
 
 $q->delete('Dummy');
-$smallform = $q->param('smallform') || $bi->{'mobile_device'} || $q->virtual_host =~ m{^m\.}; # e.g. m.bbbike.de
+$smallform = $q->param('smallform') || $bi->{'mobile_device'} || $is_m;
 $got_cookie = 0;
 %c = ();
 
@@ -2448,7 +2450,7 @@ EOF
 	}
 	if ((defined $$nameref and $$nameref ne '') ||
 	    (defined $coord and $coord ne '')) {
-	    print "<td valign=middle>$fontstr" if $bi->{'can_table'};
+	    print "<td valign=middle>" if $bi->{'can_table'};
 	    if (defined $coord) {
 		print "<input type=hidden name=" . $type . "c value=\""
 		  . $coord . "\">\n";
@@ -2482,7 +2484,7 @@ EOF
 		    . $q->param($type."hnr") . "\">\n";
 	    }
 
-	    print "$fontend</td>\n" if $bi->{'can_table'};
+	    print "</td>\n" if $bi->{'can_table'};
 
 	    if ($nice_berlinmap && $bi->{'can_table'}) {
 		print "<td>";
@@ -2496,14 +2498,14 @@ EOF
 	    }
 
 	} elsif (defined $$oldortref and $$oldortref ne '') {
-	    print "<td valign=middle>$fontstr" if $bi->{'can_table'};
+	    print "<td valign=middle>" if $bi->{'can_table'};
 	    print "$$oldortref\n";
 	    print "<input type=hidden name=" . $type . "2 value=\""
 		  . $$tworef . "\">\n";
 	    print "</td>" if $bi->{'can_table'};
 	    print "<input type=hidden name=" . $type . "isort value=1>\n";
 	} elsif ($$oneref ne '' && @$matchref == 0) {
-	    print "<td>$fontstr" if $bi->{'can_table'};
+	    print "<td>" if $bi->{'can_table'};
 	    print "<i>$$oneref</i> ";
 	    if ($$ortref && $$ortref ne 'Berlin/Potsdam') {
 		print "in <i>$$ortref</i> ";
@@ -2589,7 +2591,7 @@ EOF
 	    if ($bezirk eq 'Potsdam') {
 		upgrade_scope("region");
 	    }
-	    print "<td>$fontstr" if $bi->{'can_table'};
+	    print "<td>" if $bi->{'can_table'};
 	    if (defined $xy && $xy !~ /^\s*$/) {
 		new_kreuzungen();
 		my($best) = get_nearest_crossing_coords(split(/,/, $xy));
@@ -2620,7 +2622,7 @@ EOF
 				   $plz,
 				   $type);
 	    }
-	    print "$fontend</td>" if $bi->{'can_table'};
+	    print "</td>" if $bi->{'can_table'};
 	    # show point in the overview map, too
 	    if ($nice_berlinmap && $bi->{'can_table'}) {
 		print "<td>";
@@ -2634,13 +2636,13 @@ EOF
 	    }
 	} elsif (@$matchref == 1) {
 # XXX wann kommt man hierher?
-	    print "<td>$fontstr" if $bi->{'can_table'};
+	    print "<td>" if $bi->{'can_table'};
 	    choose_street_html($matchref->[0][0],
 			       $matchref->[0][2],
 			       $type);
-	    print "$fontend</td>" if $bi->{'can_table'};
+	    print "</td>" if $bi->{'can_table'};
 	} elsif (@$matchref > 1) {
-	    print "<td>${fontstr}" if $bi->{'can_table'};
+	    print "<td>" if $bi->{'can_table'};
 	    if ($lang eq 'en') {
 		print "Choose exact <b>" . M("${printtype}stra&szlig;e") . "</b>:<br>\n";
 	    } else {
@@ -2695,7 +2697,7 @@ EOF
 		    for (1, 2) {
 			push @cp, $s->[$_] if (defined $s->[$_] && $s->[$_] ne "");
 		    }
-		    print " (<font size=-1>" . join(", ", @cp) . "</font>)";
+		    print " (<span style='font-size:smaller;'>" . join(", ", @cp) . "</span>)";
 		}
 		print "</label>";
 		print "<br>\n";
@@ -2707,7 +2709,7 @@ EOF
 	    }
 
 	    if ($bi->{'can_table'}) {
-		print "$fontend</td><td>";
+		print "</td><td>";
 
 		# show choices in the overview map, too
 		if ($nice_berlinmap) {
@@ -2812,7 +2814,10 @@ EOF
 		print <<EOF;
 <div id="locateme" style="visibility:hidden;">
   <a href="javascript:locate_me()">@{[ M("Aktuelle Position verwenden") ]}</a>
-  <a class="yellowbox" style="text-decoration:none" target="BBBikeHelp" href="$bbbike_html/help.html#geolocation">?</a>
+  <img id="locateme_wait" src="$bbbike_images/loading.gif" style="visibility:hidden;">
+EOF
+		print help_link('geolocation');
+		print <<EOF;
 </div>
 <div id="locateme_marker" style="position:absolute; visibility:hidden;"><img src="$bbbike_images/bluedot.png" border=0 width=8 height=8></div>
 <script type="text/javascript"><!--
@@ -3737,7 +3742,7 @@ sub make_crossing_choose_html {
 	    unless ($ecke_printed) {
 		if ($use_select) {
 		    $html .= " <i title='" . M("die Strassenkreuzungen sind sortiert nach der Himmelsrichtung") . "'>" . M("Ecke") . " </i>";
-		    if ($bi->{'can_table'}) {
+		    if ($bi->{'can_table'} && !$is_m) { # $is_m: may use an additional linebreak here
 			$html .= "</td><td>";
 		    }
 		    $html .= "<select $bi->{hfill} name=" . $type . "c>";
@@ -4001,7 +4006,13 @@ EOF
 <option @{[ $winter_checked->("WI1") ]}>@{[ M("schwach") ]}
 <option @{[ $winter_checked->("WI2") ]}>@{[ M("stark") ]}
 </select></td>
+EOF
+	if (!$is_m) {
+	    print <<EOF;
  <td style="vertical-align:bottom">@{[ experimental_label() ]}<small><a target="BBBikeHelp" href="$bbbike_html/help.html#winteroptimization" onclick="show_help@{[ $lang ? "_$lang" : "" ]}('winteroptimization'); return false;">@{[ M("Was ist das?") ]}</a></small></td>
+EOF
+	}
+	print <<EOF;
 </tr>
 EOF
     }
@@ -4010,7 +4021,13 @@ EOF
 <tr>
  <td>@{[ M("Unbekannte Straßen mit einbeziehen") ]}:</td>
  <td><input type=checkbox name="pref_fragezeichen" value=yes @{[ $default_fragezeichen?"checked":"" ]}></td>
+EOF
+	if (!$is_m) {
+	    print <<EOF;
  <td style="vertical-align:bottom"><small><a target="BBBikeHelp" href="$bbbike_html/help.html#fragezeichen" onclick="show_help@{[ $lang ? "_$lang" : "" ]}('fragezeichen'); return false;">@{[ M("Was ist das?") ]}</a></small></td>
+EOF
+	}
+	print <<EOF;
 </tr>
 EOF
     }
@@ -4032,6 +4049,17 @@ sub suche_button {
 	print qq{<input type=button value="&lt;&lt; } . M("Zurück") . qq{" onclick="history.back(1);">&nbsp;&nbsp;};
     }
     print qq{<input onclick="show_spinning_wheel();" type=submit value="} . M("Route zeigen") . qq{ &gt;&gt;"> }. &spinning_wheel .  qq{<p></p>\n};
+}
+
+sub help_link {
+    my($topic) = @_;
+    my $s = '';
+    if (!$is_m) {
+	$s .= <<EOF;
+  <a class="yellowbox" style="text-decoration:none" target="BBBikeHelp" href="$bbbike_html/help.html#$topic">?</a>
+EOF
+    }
+    $s;
 }
 
 sub hidden_smallform {
@@ -4610,6 +4638,8 @@ sub display_route {
     my $show_settings = !$args{-hidesettings};
     my $show_wayback  = !$args{-hidewayback};
 
+    my $in_error_condition;
+
     make_netz();
 
     if (defined $output_as && $output_as eq 'palmdoc') {
@@ -4863,8 +4893,8 @@ sub display_route {
 	    @path = $r->path_list;
 	}
 
-	my($next_entf, $ges_entf_s, $next_winkel, $next_richtung, $next_extra)
-	    = (0, "", undef, "", undef);
+	my($next_entf, $ges_entf_s, $next_winkel, $next_richtung, $next_richtung_html, $next_extra)
+	    = (0, "", undef, "", "", undef);
 
 	my $ges_entf = 0;
 	for(my $i = 0; $i <= $#strnames; $i++) {
@@ -4876,8 +4906,8 @@ sub display_route {
 	    my $raw_direction;
 	    my $route_inx;
 	    my $important_angle_crossing_name;
-	    my($entf, $winkel, $richtung, $extra)
-		= ($next_entf, $next_winkel, $next_richtung, $next_extra);
+	    my($entf, $winkel, $richtung, $richtung_html, $extra)
+		= ($next_entf, $next_winkel, $next_richtung, $next_richtung_html, $next_extra);
 	    ($strname, $next_entf, $next_winkel, $next_richtung,
 	     $route_inx, $next_extra) = @{$strnames[$i]};
 	    $strname = Strasse::strip_bezirk_perfect($strname, $city);
@@ -4887,7 +4917,7 @@ sub display_route {
 		my $same_streetname_important_angle =
 		    @out_route && $out_route[-1]->{Strname} eq $strname && $extra && $extra->{ImportantAngleCrossingName};
 		if ($winkel < 30 && (!$extra || !$extra->{ImportantAngle})) {
-		    $richtung = "";
+		    $richtung = $richtung_html = "";
 		    $raw_direction = "";
 		} else {
 		    $raw_direction =
@@ -4906,21 +4936,39 @@ sub display_route {
 			    $richtung .= Strasse::de_artikel($strname);
 			}
 		    }
+		    if ($is_m && !$bi->{cannot_unicode_arrows}) {
+			$richtung_html = {'l'  => '&#x21d0;',
+					  'hl' => '&#x21d6;',
+					  'hr' => '&#x21d7;',
+					  'r'  => '&#x21d2;',
+					 }->{$raw_direction};
+		    } else {
+			$richtung_html = $richtung;
+		    }
 		}
 		if ($same_streetname_important_angle) {
 		    $important_angle_crossing_name = Strasse::strip_bezirk($extra->{ImportantAngleCrossingName});
 		}
 		$ges_entf += $entf;
 		$ges_entf_s = sprintf "%.1f km", $ges_entf/1000;
-		$entf_s = sprintf M("nach") . " %.2f km", $entf/1000;
+		$entf_s = sprintf "%s%.2f km", ($is_m ? '' : M("nach") . " "), $entf/1000;
 	    } elsif ($#{ $r->path } > 1) {
 		my($x1,$y1) = @{ $r->path->[0] };
 		my($x2,$y2) = @{ $r->path->[1] };
 		$raw_direction =
 		    uc(BBBikeCalc::line_to_canvas_direction
 		       ($x1,$y1,$x2,$y2));
-		$richtung = ($lang eq 'en' ? "towards" : "nach") . " " .
-		    BBBikeCalc::localize_direction($raw_direction, $lang eq '' ? "de" : $lang);
+		{
+		    my $lang = $lang eq '' ? "de" : $lang;
+		    if ($is_m) {
+			$richtung =
+			    BBBikeCalc::localize_direction_abbrev($raw_direction, $lang);
+		    } else {
+			$richtung = ($lang eq 'en' ? "towards" : "nach") . " " .
+			    BBBikeCalc::localize_direction($raw_direction, $lang);
+		    }
+		}
+		$richtung_html = $richtung;
 	    }
 
 	    if ($with_comments && $comments_net) {
@@ -5063,6 +5111,7 @@ sub display_route {
 		 TotalDistString => $ges_entf_s,
 		 Direction => $raw_direction,
 		 DirectionString => $richtung,
+		 DirectionHtml => $richtung_html,
 		 Angle => $winkel,
 		 Strname => $strname,
 		 ImportantAngleCrossingName => $important_angle_crossing_name,
@@ -5081,13 +5130,14 @@ sub display_route {
 	}
 	$ges_entf += $next_entf;
 	$ges_entf_s = sprintf "%.1f km", $ges_entf/1000;
-	my $entf_s = sprintf M("nach") . " %.2f km", $next_entf/1000;
+	my $entf_s = sprintf "%s%.2f km", ($is_m ? '' : M("nach") . " "), $next_entf/1000;
 	push @out_route, {
 			  Dist => $next_entf,
 			  DistString => $entf_s,
 			  TotalDist => $ges_entf,
 			  TotalDistString => $ges_entf_s,
 			  DirectionString => M("angekommen") . "!",
+			  DirectionHtml => M("angekommen") . "!",
 			  Strname => $real_zielname,
 			  Comment => '',
 			  CommentHtml => '',
@@ -5137,7 +5187,7 @@ sub display_route {
     }
 
  OUTPUT_DISPATCHER:
-    if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|json|json-short|perldump|gpx-route)$/) {
+    if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|json|json-short|geojson|perldump|gpx-route)$/) {
 	for my $tb (@affecting_blockings) {
 	    $tb->{longlathop} = [ map { join ",", convert_data_to_wgs84(split /,/, $_) } @{ $tb->{hop} || [] } ];
 	}
@@ -5210,6 +5260,13 @@ sub display_route {
 	    } else {
 		print JSON::XS->new->utf8->allow_blessed(1)->encode($res);
 	    }
+	} elsif ($output_as eq 'geojson') {
+	    http_header
+		(-type => "application/json",
+		 @no_cache, # XXX why?
+		);
+	    require BBBikeGeoJSON;
+	    print BBBikeGeoJSON::bbbikecgires_to_geojson_json($res);
 	} elsif ($output_as eq 'gpx-route') {
 	    require Strassen::GPX;
 	    my $filename = filename_from_route($startname, $zielname) . ".gpx";
@@ -5307,8 +5364,18 @@ sub display_route {
 
  ROUTE_HEADER:
     if (!@out_route) {
-	print M("Keine Route gefunden").".\n";
-	warn "Fehler: keine Route zwischen <$startname>" . ($vianame ? ", <$vianame>" : "") . " und <$zielname> gefunden, sollte niemals passieren" . (@affecting_blockings ? " (Ausnahme: bei dieser Suche waren temporäre Sperrungen aktiv)" : "");
+	if (@current_temp_blocking) {
+	    print "<center>";
+	    print M("Es existiert keine Ausweichroute.")."\n";
+	    my $qq = CGI->new($q->query_string);
+	    $qq->delete('custom');
+	    print qq{<a href="$bbbike_script?} . $qq->query_string . qq{">} . M("Zurück") . qq{</a>\n};
+	    print "</center>\n";
+	} else {
+	    print M("Keine Route gefunden").".\n";
+	    warn "Fehler: keine Route zwischen <$startname>" . ($vianame ? ", <$vianame>" : "") . " und <$zielname> gefunden, sollte niemals passieren";
+	}
+	$in_error_condition = 1;
     } else {
 	if (@affecting_blockings) {
 	    my $hidden = "";
@@ -5377,7 +5444,7 @@ EOF
 	    print " width='$printwidth'";
 	}
 	my $can_jslink = $can_mapserver && !$printmode && $bi->{'can_javascript'};
-	print "><tr><td>$fontstr";
+	print "><tr><td>";
 	if ($routetitle) {
 	    print "<b>" . CGI::escapeHTML($routetitle) . "</b>";
 	} elsif (!$zielname) {
@@ -5427,165 +5494,162 @@ EOF
 						     ) . "</b>";
 	    }
 	}
-	print "$fontend</td></tr></table><br>\n";
+	print "</td></tr></table><br>\n";
 	print "<table";
 	if ($printmode) {
 	    print " width='$printwidth'";
 	}
 	print ">\n";
-	printf "<tr><td>${fontstr}@{[ M('L&auml;nge') ]}:$fontend</td><td>${fontstr}%.2f km$fontend</td>\n", $r->len/1000;
+	printf "<tr><td>@{[ M('L&auml;nge') ]}:</td><td>%.2f km</td>\n", $r->len/1000;
 	print
-	  "<tr><td>${fontstr}@{[ M('Fahrzeit') ]}:$fontend</td>";
+	  "<tr><td>@{[ M('Fahrzeit') ]}:</td>";
 
-	my $ampel_count;
-	my $ampel_lost = 0;
-	if (defined $r->trafficlights) {
-	    $ampel_count = $r->trafficlights;
-	    $ampel_lost = 15*$ampel_count; # XXX do not hardcode!
+my $ampel_count;
+my $ampel_lost = 0;
+if (defined $r->trafficlights) {
+    $ampel_count = $r->trafficlights;
+    $ampel_lost = 15*$ampel_count; # XXX do not hardcode!
+}
+
+my $driving_time = "";
+{
+    my $i = 0;
+    my @speeds = sort { $a <=> $b } keys %speed_map;
+    for my $speed (@speeds) {
+	my $def = $speed_map{$speed};
+	my $bold = $def->{Pref};
+	my $time = $def->{Time};
+	print "<td>" . make_time($time + $ampel_lost/3600 + $penalty_lost/3600)
+	    . "h (" . ($bold ? "<b>" : "") . M("bei")." $speed km/h" . ($bold ? "</b>" : "") . ")";
+	print "," if $speed != $speeds[-1];
+	print "</td>";
+
+	$driving_time .= "|" if $driving_time;
+	$driving_time .= make_time($time + $ampel_lost/3600 + $penalty_lost/3600) . ':' . $speed;
+
+	if ($i == 1) {
+	    print "</tr><tr><td></td>";
 	}
-
-        my $driving_time = "";
-	{
-	    my $i = 0;
-	    my @speeds = sort { $a <=> $b } keys %speed_map;
-	    for my $speed (@speeds) {
-		my $def = $speed_map{$speed};
-		my $bold = $def->{Pref};
-		my $time = $def->{Time};
-		print "<td>$fontstr" . make_time($time + $ampel_lost/3600 + $penalty_lost/3600)
-		    . "h (" . ($bold ? "<b>" : "") . M("bei")." $speed km/h" . ($bold ? "</b>" : "") . ")";
-		print "," if $speed != $speeds[-1];
-		print "$fontend</td>";
-
-                $driving_time .= "|" if $driving_time;
-		$driving_time .= make_time($time + $ampel_lost/3600 + $penalty_lost/3600) . ':' . $speed;
-
-		if ($i == 1) {
-		    print "</tr><tr><td></td>";
-		}
-		$i++;
-	    }
+	$i++;
+    }
+}
+print "</tr>\n";
+if (%power_map) {
+    print "<tr><td></td>";
+    my $is_first = 1;
+    for my $power (sort { $a <=> $b } keys %power_map) {
+	print "<td>";
+	if (!$is_first) {
+	    print ",";
+	} else {
+	    $is_first = 0;
 	}
-	print "</tr>\n";
-	if (%power_map) {
-	    print "<tr><td></td>";
-	    my $is_first = 1;
-	    for my $power (sort { $a <=> $b } keys %power_map) {
-		print "<td>";
-		if (!$is_first) {
-		    print ",";
-		} else {
-		    $is_first = 0;
-		}
-		print $fontstr,  make_time(($power_map{$power}->{Time} + $ampel_lost + $penalty_lost)/3600) . "h (" . M("bei") . " $power W)", $fontend, "</td>"
-	    }
-	    print "</tr>\n";
-	}
-	print "</table>\n";
-	if (defined $ampel_count) {
-	    print $fontstr;
-	    if ($ampel_count == 0) {
-		print M("Keine Ampeln");
-	    } else {
-		print $ampel_count . " " . M("Ampel" . ($ampel_count == 1 ? "" : "n"));
-	    }
-	    print " " . M("auf der Strecke");
-	    if ($ampel_count) {
-		print " (" . M("in die Fahrzeit einbezogen") . ")";
-	    }
-	    print ".$fontend<br>\n";
-	}
-	print "</center>\n" unless $printmode;
-       
-	print "<hr>";
-	print "</div>\n"; # id="route_table"
+	print make_time(($power_map{$power}->{Time} + $ampel_lost + $penalty_lost)/3600) . "h (" . M("bei") . " $power W)", "</td>"
+    }
+    print "</tr>\n";
+}
+print "</table>\n";
+if (defined $ampel_count) {
+    if ($ampel_count == 0) {
+	print M("Keine Ampeln");
+    } else {
+	print $ampel_count . " " . M("Ampel" . ($ampel_count == 1 ? "" : "n"));
+    }
+    print " " . M("auf der Strecke");
+    if ($ampel_count) {
+	print " (" . M("in die Fahrzeit einbezogen") . ")";
+    }
+    print ".<br>\n";
+}
+print "</center>\n" unless $printmode;
 
-	my $line_fmt;
-	if (!$bi->{'can_table'}) {
-	    $with_comments = 0;
-	    if ($bi->{'mobile_device'}) {
-		$line_fmt = "%s %s %s (ges.:%s)\n";
-	    } else {
-		$line_fmt = "%-13s %-24s %-31s %-8s";
+print "<hr>";
+print "</div>\n"; # id="route_table"
+
+my $line_fmt;
+if (!$bi->{'can_table'}) {
+    $with_comments = 0;
+    if ($bi->{'mobile_device'}) {
+	$line_fmt = "%s %s %s (ges.:%s)\n";
+    } else {
+	$line_fmt = "%-13s %-24s %-31s %-8s";
 ##XXX does not work:
 # 		if ($has_fragezeichen_routelist && !$printmode) {
 # 		    $line_fmt .= " %s";
 # 		}
-		$line_fmt .= "\n";
-	    }
-	    print "<pre>";
-	} else {
-	    # Ist width=... bei Netscape4 buggy? Das nachfolgende Attribut
-	    # ignoriert font-family.
-	    #   width=\"90%\"
-	    print q{<center>} unless $printmode;
-	    print q{<table cellspacing="0" cellpadding="0" class='routelist};
-	    #print q{<table  class='routelist};
-	    if ($printmode) {
-		print " print";
-	    }
-	    print "' id='routelist' ";
-	    if ($printmode) {
+	$line_fmt .= "\n";
+    }
+    print "<pre>";
+} else {
+    # Ist width=... bei Netscape4 buggy? Das nachfolgende Attribut
+    # ignoriert font-family.
+    #   width=\"90%\"
+    print q{<center>} unless $printmode;
+    print q{<table cellspacing="0" cellpadding="0" class='routelist};
+    #print q{<table  class='routelist};
+    if ($printmode) {
+	print " print";
+    }
+    print "' id='routelist' ";
+    if ($printmode) {
 #		print ' style="border: 1px solid black;"';
 #		print " border=1"; # XXX ohne geht's leider nicht
-		print " width='$printtablewidth'";
-	    } else {
-		print " align=center";
-		if (1 || !$bi->{'can_css'}) { # XXX siehe Kommentar oben (css...)
+	print " width='$printtablewidth'";
+    } else {
+	print " align=center";
+	if (1 || !$bi->{'can_css'}) { # XXX siehe Kommentar oben (css...)
 #		    print ' XXXbgcolor="#ffcc66" style="background-color:#ffcc66; border-style:solid; border:white; border-width:1px;" ';
-		    print ' bgcolor="#ffcc66" ';
-		}
-	    }
-	    print "><tr><th>${fontstr}" . M("Etappe") . "$fontend</th><th>${fontstr}" . M("Richtung") . "$fontend</th><th>${fontstr}" . M("Stra&szlig;e") . "$fontend</th><th>${fontstr}" . M("Gesamt") . "$fontend</th>";
-	    if ($with_comments) {
-		print "<th" . ($with_cat_display && !$printmode ? " colspan=4" : "") .
-	              ">${fontstr}" . M("Bemerkungen") . "$fontend</th>";
-	    }
-	    if ($has_fragezeichen_routelist && !$printmode) {
-		print "<th></th>"; # no header for Fragezeichen
-	    }
-	    print "</tr>\n";
+	    print ' bgcolor="#ffcc66" ';
 	}
+    }
+    print "><tr><th>" . M("Etappe") . "</th><th>" . ($is_m ? M("Richt.") : M("Richtung")) . "</th><th>" . M("Stra&szlig;e") . "</th><th>" . M("Gesamt") . "</th>";
+    if ($with_comments) {
+	print "<th" . ($with_cat_display && !$printmode ? " colspan=4" : "") .
+	      ">" . M("Bemerkungen") . "</th>";
+    }
+    if ($has_fragezeichen_routelist && !$printmode) {
+	print "<th></th>"; # no header for Fragezeichen
+    }
+    print "</tr>\n";
+}
 
-	if ($with_cat_display && !$radwege_net) {
-	    $radwege_net = new StrassenNetz get_cyclepath_streets();
-	    $radwege_net->make_net_cat;
-	}
+if ($with_cat_display && !$radwege_net) {
+    $radwege_net = new StrassenNetz get_cyclepath_streets();
+    $radwege_net->make_net_cat;
+}
 
-	my %cat_to_title = ( NN => M("Weg ohne Kfz"),
-			     N  => M("Nebenstraße"),
-			     NH => M("wichtige Nebenstraße"),
-			     H  => M("Hauptstraße"),
-			     HH => M("wichtige Hauptstraße"),
-			     B  => M("Bundesstraße"),
-			     fz => M("unbekannte Strecke"),
-			     Q  => M("Fähre"),
-			   );
-	my %rw_to_title = ( RW => M("Radweg"),
-			    RS => M("Radspur"),
-			    FS => M("Fahrradstraße"),
-			    BS => M("Busspur"),
-			    NF => M("Nebenfahrbahn"),
-			  );
+my %cat_to_title = ( NN => M("Weg ohne Kfz"),
+		     N  => M("Nebenstraße"),
+		     NH => M("wichtige Nebenstraße"),
+		     H  => M("Hauptstraße"),
+		     HH => M("wichtige Hauptstraße"),
+		     B  => M("Bundesstraße"),
+		     fz => M("unbekannte Strecke"),
+		     Q  => M("Fähre"),
+		   );
+my %rw_to_title = ( RW => M("Radweg"),
+		    RS => M("Radspur"),
+		    FS => M("Fahrradstraße"),
+		    BS => M("Busspur"),
+		    NF => M("Nebenfahrbahn"),
+		  );
 
-  	my $odd = 0;
-	my $etappe_i = -1;
-	for my $etappe (@out_route) {
-	    $etappe_i++;
-	    my($entf, $richtung, $strname, $important_angle_crossing_name, $ges_entf_s,
+my $odd = 0;
+my $etappe_i = -1;
+for my $etappe (@out_route) {
+    $etappe_i++;
+    my($entf, $richtung_html, $strname, $important_angle_crossing_name, $ges_entf_s,
 	       $etappe_comment_html, $fragezeichen_comment, $path_index) =
-		   @{$etappe}{qw(DistString DirectionString Strname ImportantAngleCrossingName TotalDistString CommentHtml FragezeichenComment PathIndex)};
+		   @{$etappe}{qw(DistString DirectionHtml Strname ImportantAngleCrossingName TotalDistString CommentHtml FragezeichenComment PathIndex)};
 	    my $last_path_index;
 	    if ($etappe_i < $#out_route) {
 		$last_path_index = $out_route[$etappe_i+1]->{PathIndex} - 1;
 	    }
 	    if (!$bi->{'can_table'}) {
 		printf $line_fmt,
-		    $entf, $richtung, string_kuerzen($strname, 31), $ges_entf_s;
+		    $entf, $richtung_html, string_kuerzen($strname, 31), $ges_entf_s;
 	    } else {
-		## XXX rechter Pfeil, sieht eigentlich schöner aus, aber wo ist es unterstützt?
-		#$richtung =~ s/=>/&#x2192;/g;
-		print "<tr class=" . ($odd ? "odd" : "even") . "><td nowrap>$fontstr$entf$fontend</td><td>$fontstr$richtung$fontend</td><td>$fontstr";
+		print "<tr class=" . ($odd ? "odd" : "even") . "><td nowrap>$entf</td><td" . ($is_m ? " align='center'" : "") . ">$richtung_html</td><td>";
 		print "<a class=ms href='#' onclick='return ms($etappe->{Coord})'>"
 		    if $can_jslink;
 		print $strname;
@@ -5594,7 +5658,7 @@ EOF
 		}
 		print "</a>"
 		    if $can_jslink;
-		print "$fontend</td><td nowrap>$fontstr$ges_entf_s$fontend</td>";
+		print "</td><td nowrap>$ges_entf_s</td>";
 		$odd = 1-$odd;
 		if ($with_comments && $comments_net) {
 		    if ($with_cat_display && !$printmode) {
@@ -5661,7 +5725,7 @@ EOF
 			    print "<td></td><td></td><td></td>";
 			}
 		    }
-		    print "<td>$fontstr$etappe_comment_html$fontend</td>";
+		    print "<td>$etappe_comment_html</td>";
 		}
 		if ($has_fragezeichen_routelist && !$printmode && !$osm_data) {
 		    if (defined $fragezeichen_comment && $fragezeichen_comment ne "") {
@@ -5681,13 +5745,13 @@ EOF
 					   strname_html => CGI::escapeHTML($fragezeichen_comment),
 					   supplied_coord => join(",", @{$r->path->[$path_index]}),
 					  })->query_string;
-			print qq{<td>$fontstr<a target="newstreetform" href="$bbbike_html/shortfragezeichenform${newstreetform_encoding}.html?$qs">};
+			print qq{<td><a target="newstreetform" href="$bbbike_html/shortfragezeichenform${newstreetform_encoding}.html?$qs">};
 			if ($is_unknown) {
 			    print qq{Unbekannte Straße};
 			} else {
 			    print qq{Unvollständige Daten};
 			}
-			print qq{, Kommentar eintragen</a>$fontend</td>};
+			print qq{, Kommentar eintragen</a></td>};
 		    } else {
 			print qq{<td>&nbsp;</td>};
 		    }
@@ -5789,7 +5853,7 @@ EOF
 	        if (is_mobile($q)) { print qq{<tr bgcolor="white"><td>&nbsp;</td><td></td><td></td><td></td><td></td><td></td></tr>\n}; }
 	    }
 
-	    print "</table>\n";
+	    print qq{</table>};
 	    print "</center>\n" unless $printmode;
 	}
 
@@ -5996,8 +6060,13 @@ EOF
 
 	    print "<input type=hidden name=center value=''>\n";
 #XXX not yet	    print "<input type=hidden name='as_attachment' value=''>\n";
-	    print qq{<input type=submit name=interactive value="@{[ M("Karte zeigen") ]}"> <font size=-1>(@{[ M("neues Fenster wird ge&ouml;ffnet") ]})</font>};
-	    print " <label><input type=checkbox name=outputtarget value='print' " . ($default_print?"checked":"") . "> " . M("f&uuml;r Druck optimieren") . "</label>";
+	    print qq{<input type=submit name=interactive value="@{[ M("Karte zeigen") ]}">};
+	    if (!$is_m) {
+		print qq{ <span style="font-size:smaller;">(@{[ M("neues Fenster wird ge&ouml;ffnet") ]})</span>};
+	    }
+	    if ($is_printable) {
+	        print " <label><input type=checkbox name=outputtarget value='print' " . ($default_print?"checked":"") . "> " . M("f&uuml;r Druck optimieren") . "</label>";
+	    }
 #XXX not yet	    print " <input type=checkbox name='cb_attachment'> als Download";
 	    print "&nbsp;&nbsp; <span class=nobr>" . M("Ausgabe als") . ": <select name=imagetype " . ($bi->{'can_javascript'} ? "onchange='enable_size_details_buttons()'" : "") . ">\n";
 	    print " <option " . $imagetype_checked->("googlemaps") . ">Google Maps\n" if $can_google_maps;
@@ -6008,7 +6077,7 @@ EOF
 	    print " <option " . $imagetype_checked->("pdf-auto") . ">PDF\n" unless $cannot_pdf;
 	    print " <option " . $imagetype_checked->("pdf") . ">PDF (" . M("Längsformat") . ")\n" unless $cannot_pdf;
 	    print " <option " . $imagetype_checked->("pdf-landscape") . ">PDF (" . M("Querformat") . ")\n" unless $cannot_pdf;
-	    print " <option " . $imagetype_checked->("svg") . ">SVG\n" unless $cannot_svg;
+	    print " <option " . $imagetype_checked->("svg") . ">SVG\n" if !$cannot_svg && !$is_m;
 	    print " <option " . $imagetype_checked->("mapserver") . ">MapServer\n" if $can_mapserver;
 	    #XXX print " <option " . $imagetype_checked->("googlemapsstatic") . ">Google Maps (static)\n" if 1;#XXXXXXXXXXXXXXXXXX
 	    print " </select></span>\n";
@@ -6069,20 +6138,22 @@ EOF
 		print
 		    qq{<td><label><input type="radio" name="geometry" value="$geom"},
 		    ($geom eq $default_geometry ? " checked" : ""),
-		    qq{>$fontstr $geom $fontend</label></td>\n};
+		    qq{> $geom </label></td>\n};
 	    }
-	    if (@not_for) {
-		print "<td valign=bottom><small>(" . M("nicht für") . ": " . join(", ", @not_for) . ")</small></td>";
+	    if (!$is_m) {
+	        if (@not_for) {
+		    print "<td valign=bottom><small>(" . M("nicht für") . ": " . join(", ", @not_for) . ")</small></td>";
+		}
 	    }
-	    print "</tr>\n";
-	    print "<tr><td>$fontstr<b>" . M("Details") . ":</b>$fontend</td>";
+	    print "</tr></table>\n";
+
+	    print "<table><tr><td><b>" . M("Details") . ":</b></td>";
 	    my @draw_details =
 		([M('Stra&szlig;en'),  'str',      $default_draw{"str"}],
 		 [M('S-Bahn'),         'sbahn',    $default_draw{"sbahn"}],
 		 [M('U-Bahn'),         'ubahn',    $default_draw{"ubahn"}],
 		 [M('Gew&auml;sser'),  'wasser',   $default_draw{"wasser"}],
 		 [M('Fl&auml;chen'),   'flaechen', $default_draw{"flaechen"}],
-		 "-",
 		 [M('Ampeln'),         'ampel',    $default_draw{"ampel"}],
 		 );
 	    if ($multiorte) {
@@ -6093,12 +6164,20 @@ EOF
 		[M('Routendetails'),  'strname',$default_draw{"strname"}],
 		[M('Titel'),          'title',  $default_draw{"title"}],
 		[M('Alles'),          'all',    $default_draw{"all"}];
+	    {
+		my $cols = $is_m ? 2 : 5;
+		for(my $i=$#draw_details-1; $i>=0; $i--) {
+		    if ($i % $cols == $cols-1) {
+			splice @draw_details, $i+1, 0, '-';
+		    }
+		}
+	    }
 	    foreach my $draw (@draw_details) {
-		my $text;
 		if ($draw eq '-') {
-		    print "</tr>\n<tr><td></td>";
+		    print table_br();
 		    next;
 		}
+		my $text;
 		if ($draw->[0] eq 'S-Bahn' && !$bi->{'text_browser'}) {
 		    $text = "<img src=\"$bbbike_images/sbahn.gif\" width=15 height=15 border=0 alt=S>-Bahn";
 		} elsif ($draw->[0] eq 'U-Bahn' && !$bi->{'text_browser'}) {
@@ -6111,7 +6190,7 @@ EOF
 		    qq{<td><span class=nobr><input id="$id" type="checkbox" name="draw" value="$draw->[1]"},
 		    ($draw->[2] ? " checked" : ""),
 		    ($draw->[1] eq 'all' ? qq{ onclick="all_checked()"} : ""),
-		    qq{>$fontstr <label for="$id">$text</label> $fontend</span></td>\n};
+		    qq{> <label for="$id">$text</label> </span></td>\n};
 	    }
 	    print "</tr>\n";
 ##XXX Fix this without using $str
@@ -6120,11 +6199,13 @@ EOF
 #  		print "<input type=hidden name=draw value=umland>\n";
 #  	    }
 	    print "</table>\n";
-	    print qq{<div class="graphfootnote">};
-	    printf M(<<EOF), 15, 200, 50, 3000;
+	    if (!$is_m) {
+	        print qq{<div class="graphfootnote">};
+	        printf M(<<EOF), 15, 200, 50, 3000;
 Die Dateigr&ouml;&szlig;e der Grafik beträgt je nach
 Bildgr&ouml;&szlig;e, Bildformat und Detailreichtum %s bis %s kB. PDFs sind %s bis %s kB groß.
 EOF
+	    }
             print window_open("$bbbike_html/legende.html", "BBBikeLegende",
 			      "dependent,height=392,resizable" .
 			      "screenX=400,screenY=80,scrollbars,width=440")
@@ -6263,13 +6344,13 @@ EOF
     elsif (@weather_res) {
 	my(@res) = @weather_res;
 	print "<center><table border=0 bgcolor=\"#d0d0d0\">\n";
-	print "<tr><td colspan=2>${fontstr}<b>" . link_to_met() . M("Aktuelle Wetterdaten") . " ($res[0], $res[1])</a></b>$fontend</td>";
-	print "<tr><td>${fontstr}" . M("Temperatur") . ":$fontend</td><td>${fontstr}$res[2] °C$fontend</td></tr>\n";
+	print "<tr><td colspan=2><b>" . link_to_met() . M("Aktuelle Wetterdaten") . " ($res[0], $res[1])</a></b></td>";
+	print "<tr><td>" . M("Temperatur") . ":</td><td>$res[2] °C</td></tr>\n";
 	my $wind_dir = $res[4];
 	if ($lang eq 'en') {
 	    $wind_dir =~ s{O$}{E}; # the only difference between de and en: east/ost
 	}
-	print "<tr><td>${fontstr}" . M("Windrichtung") . ":$fontend</td><td>${fontstr}$wind_dir$fontend&nbsp;</td></tr>\n";
+	print "<tr><td>" . M("Windrichtung") . ":</td><td>$wind_dir&nbsp;</td></tr>\n";
 	my($kmh, $windtext);
 	eval { local $SIG{'__DIE__'};
 	       require Met::Wind;
@@ -6281,7 +6362,7 @@ EOF
 	       $windtext = Met::Wind::wind_velocity([$res[5], 'm/s'],
 						    $lang eq 'en' ? 'text_en' : 'text_de');
 	   };
-	print "<tr><td>${fontstr}" . M("Windgeschwindigkeit") . ":$fontend</td><td>${fontstr}";
+	print "<tr><td>" . M("Windgeschwindigkeit") . ":</td><td>";
 	if (defined $kmh) {
 	    print "$kmh km/h";
 	} else {
@@ -6307,8 +6388,6 @@ sub user_agent_info {
     $bi = new BrowserInfo $q;
 #    $bi->emulate("wap"); # XXX put your favourite emulation
     $bi->emulate_if_validator("mozilla");
-    $fontstr = ($bi->{'can_css'} || $bi->{'text_browser'} ? '' : "<font face=\"$font\">");
-    $fontend = ($bi->{'can_css'} || $bi->{'text_browser'} ? '' : "</font>");
     $bi->{'hfill'} = ($bi->is_browser_version("Mozilla", 5, 5.0999) ?
 		      "class='hfill'" : "");
 }
@@ -6374,6 +6453,11 @@ sub string_kuerzen {
     } else {
 	substr($strname, 0, $len-3)."...";
     }
+}
+
+# Create a table "break" and indent one column
+sub table_br {
+    "</tr>\n<tr><td></td>";
 }
 
 sub overview_map {
@@ -7936,7 +8020,6 @@ sub header {
 	print "</h2>\n";
 	print "</span>\n";
     } else {
-	print $q->start_html(%args);
 	print "<h1>BBBike</h1>";
     }
     if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$}) && (!&is_mobile($q) || is_resultpage($q))) {
@@ -9003,13 +9086,13 @@ sub show_info {
   <ul>
    <li><a href="#perltk">Perl/Tk-Version</a>
    <li><a href="#beta">Beta-Version</a>
-<!--   <li><a href="#pda">PDA-Version</a>-->
+   <li><a href="#mobile">Mobile Version</a>
    <li><a href="#wap">WAP</a>
-   <li><a href="#iphone">iPhone</a>
    <li><a href="#gpsupload">GPS-Upload</a>
    <li><a href="#opensearch">Suchplugin für Firefox und IE</a>
-@{[ $can_palmdoc ? qq{<li><a href="#palmexport">Palm-Export</a>} : qq{} ]}
+   <li><a href="#leaflet">BBBike &amp; Leaflet</a>
    <li><a href="#googlemaps">BBBike auf Google Maps</a>
+@{[ $can_palmdoc ? qq{<li><a href="#palmexport">Palm-Export</a>} : qq{} ]}
   </ul>
  <li><a href="@{[ $bbbike_html ]}/presse.html">Die Presse über BBBike</a>
  <li><a href="http://bbbike.sourceforge.net/bbbike/doc/links.html">Links</a>
@@ -9109,14 +9192,12 @@ Der aktuellen Snapshot der Perl/Tk-Version kann <a href="@{[ $BBBike::BBBIKE_UPD
 
 <h4 id="beta">Beta-Version von bbbike.de</h4>
 Zukünftige BBBike-Features können <a href="$bbbike2_url">hier</a> getestet werden.
-<!--<h4 id="pda">PDA-Version für iPAQ/Linux</h4>
-Für iPAQ-Handhelds mit Familiar Linux gibt es eine kleine Version von BBBike: <a href="@{[ $BBBike::BBBIKE_SF_WWW ]}">tkbabybike</a>.
--->
-<h4 id="wap">WAP</h4>
-BBBike kann man per WAP-Handy unter der Adresse <a href="@{[ $BBBike::BBBIKE_WAP ]}">@{[ $BBBike::BBBIKE_WAP ]}</a> nutzen.
+<h4 id="mobile">Mobile Version</h2>
+Unter der Adresse <a href="@{[ $BBBike::BBBIKE_MOBILE ]}">@{[ $BBBike::BBBIKE_MOBILE ]}</a> existiert eine Version von BBBike, die für mobile Geräte optimiert ist.
 <p>
-<h4 id="iphone">iPhone</h4>
 Eine Anregung, wie man BBBike auf dem iPhone verwenden kann, findet man <a href="$bbbike_html/bbbike_tracks_iphone.html">hier</a>.
+<h4 id="wap">WAP</h4>
+Ältere WAP-Handys können BBBike unter der Adresse <a href="@{[ $BBBike::BBBIKE_WAP ]}">@{[ $BBBike::BBBIKE_WAP ]}</a> nutzen.
 <h4 id="gpsupload">GPS-Upload</h4>
 Es besteht die experimentelle Möglichkeit, sich <a href="@{[ $bbbike_url ]}?uploadpage=1">GPS-Tracks oder bbr-Dateien</a> anzeigen zu lassen.<p>
 <h4 id="diplom">Diplomarbeit</h4>
@@ -9158,6 +9239,17 @@ Installation des <a href="$bbbike_html/opensearch/opensearch.html">Suchplugins</
 </form>
 EOF
     }
+    print <<EOF;
+<h4 id="leaflet">BBBike &amp; Leaflet</h4>
+Noch in Entwicklung: 
+BBBike-Routen auf einer <a href="bbbikeleaflet.cgi">Leaflet-Karte</a> suchen.<br/>
+Um Start- und Zielpunkt zu setzen, einfach Doppel-Klicks oder -Taps machen.
+EOF
+    print <<EOF;
+<h4 id="googlemaps">BBBike auf Google Maps</h4>
+Noch in Entwicklung: 
+BBBike-Routen auf <a href="@{[ bbbikegooglemap_basename() ]}?mapmode=search;maptype=hybrid">Google Maps</a> suchen
+EOF
     if ($can_palmdoc) {
 	print <<EOF;
 <h4 id="palmexport">Palm-Export</h4>
@@ -9168,11 +9260,6 @@ Für eine komplette Liste kompatibler Viewer siehe auch
 <a href="http://www.freewarepalm.com/docs/docs_software.shtml">hier</a>.
 EOF
     }
-    print <<EOF;
-<h4 id="googlemaps">BBBike auf Google Maps</h4>
-Noch in Entwicklung: 
-BBBike-Routen auf <a href="bbbikegooglemap.cgi?mapmode=search;maptype=hybrid">Google Maps</a> suchen
-EOF
     print "<hr><p>\n";
 
     print "<h3 id='hardsoftware'>Hard- und Software</h3>\n";

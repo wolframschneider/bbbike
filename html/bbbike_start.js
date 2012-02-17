@@ -316,7 +316,23 @@ function check_locate_me() {
 }
 
 function locate_me() {
-  navigator.geolocation.getCurrentPosition(locate_me_cb);
+  vis("locateme_wait", "show");
+  navigator.geolocation.getCurrentPosition(locate_me_cb, locate_me_error);
+}
+
+function locate_me_error(error) {
+  vis("locateme_wait", "hide");
+  var msg = "Es konnte keine Positionierung durchgeführt werden. ";
+  if (error.code == 1) {
+    msg += "Möglicher Grund: Ortungsdienste sind ausgeschaltet. Bitte in den Einstellungen des Geräts aktivieren!";
+  } else if (error.code == 2) {
+    msg += "Die Position konnte nicht ermittelt werden.";
+  } else if (error.code == 3) {
+    msg += "Möglicher Grund: Zeitablauf bei der Ermittlung der Position";
+  } else {
+    msg += "Unbekannter Grund, Fehler-Code=" + error.code;
+  }
+  alert(msg);
 }
 
 function locate_me_cb(position) {
@@ -325,6 +341,7 @@ function locate_me_cb(position) {
 }
 
 function locate_me_res(res) {
+  vis("locateme_wait", "hide");
   if (!res) {
     alert("Die Positionierung konnte nicht durchgeführt werden.");
   } else if (!res.bbbikepos) {
@@ -336,8 +353,10 @@ function locate_me_res(res) {
     if (typeof transpose_dot_func == "function") {
       var xy = res.bbbikepos.split(/,/);
       var txy = transpose_dot_func(parseInt(xy[0]), parseInt(xy[1]));
-      pos_rel("locateme_marker", "startmapbelow", txy[0], txy[1]);
-      vis("locateme_marker", "show");
+      if (find_layer("startmapbelow")) {
+	pos_rel("locateme_marker", "startmapbelow", txy[0], txy[1]);
+	vis("locateme_marker", "show");
+      }
       var startc_input = bbbikeform.elements["startc"];
       var startcvalidfor_input = bbbikeform.elements["scvf"];
       if (startc_input && startcvalidfor_input && res.bbbikepos) {

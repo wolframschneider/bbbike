@@ -63,7 +63,7 @@ Herbartstr.	1 2340,11045 2372,10941 2476,10790 2498,10665
 Breite Str. Pankow	1 10609,18384 10680,18380
 Gormannstr.	1 10463,13747 10445,13675 10406,13543 10390,13493 10372,13436
 Reichenberger Str.	1 11291,10438 11393,10390
-Weserstr.	1 12074,9217 11993,9211 11888,9189
+Weserstr.	1 12074,9217 12005,9211 11888,9189
 Friedenstr.	1 12325,13148 12386,13085
 Fasanenstr.	1 5223,9810 5209,9978
 Kopfstr.	1 12478,7878 12327,7847 12220,7822 12176,7811 12041,7788
@@ -78,7 +78,7 @@ Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
 Mangerstr. (Potsdam)	1 -12064,-284 -12108,-291 -12265,-418
 Rudolf-Breitscheid-Str.	1 -10446,-1947 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
 Bendastr.	1 12689,6905 12702,6846
-Bendastr.	1 12793,6407 12779,6478 12756,6578 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
+Bendastr.	1 12793,6407 12781,6470 12759,6563 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
 Puschkin/Bulgarische	1 13829,9905 13884,9882 13995,9834 14193,9746 14310,9692 14780,9480 14819,9462 15383,9191 15561,8903 15591,8848 15378,8668 15166,8489
 Karl-Marx-Str./Schˆnstedt	3nocross::ignrte 12500,8504 12540,8458 12562,8432 12582,8408
 Karl-Marx-Str. -> Schˆnstedtstr.: Karl-Marx-Str./Schˆnstedt	3::igndisp 12500,8504 12540,8458 12649,8535
@@ -99,7 +99,7 @@ Mehringdamm - Baruther	3nocross::ignrte 9444,9919 9387,9804 9334,9670
 Baruther Str. -> Mehringdamm: Mehringdamm - Baruther	3::igndisp 9588,9827 9387,9804 9334,9670
 Mehringdamm -> Baruther Str.: Mehringdamm - Baruther	3::igndisp 9444,9919 9387,9804 9588,9827
 Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
-Hobrechtstr.	1 12003,9105 11998,8872
+Hobrechtstr.	1 12011,9100 11998,8872
 L¸tzowplatz	1 7002,11034 6873,11011
 Romain-Rolland-Str. - Berliner Str.	3 12856,17825 12825,17870 12736,17998 12467,17814
 Mahlower Str.	1 11773,8231 11920,8252
@@ -919,17 +919,17 @@ Else-Lasker-Sch¸ler-Str.: Poller	3 7291,10506 7245,10499 7033,10396
 (Westhafenstr. - Beusselstr.): Durchfahrt verboten, Anlieger frei	2:Anlieger 6083,14564 6025,14539 6015,14516 5997,14444 5920,14422 5217,14255
 Steinbachstr.	1 19759,4160 19703,3979 19673,3888 19587,3801
 Mittelstreifen	3nocross::ignrte 5083,7682 5066,7668 5045,7635
-Gˆrresstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5158,7560 5066,7668 5067,7523
-Gˆrresstr. -> S¸dwestkorso: Mittelstreifen	3::igndisp 5158,7560 5066,7668 5045,7635
-Gˆrresstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5158,7560 5066,7668 5063,7784
-Stubenrauchstr. -> S¸dwestkorso: Mittelstreifen	3::igndisp 5067,7523 5066,7668 5045,7635
-Stubenrauchstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5067,7523 5066,7668 5063,7784
+Gˆrresstr. -> S¸dwestkorso: Mittelstreifen	3::igndisp 5188,7536 5066,7668 5045,7635
+Gˆrresstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5188,7536 5066,7668 5069,7498
+Gˆrresstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5188,7536 5066,7668 5063,7784
 S¸dwestkorso -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5045,7635 5066,7668 5063,7784
-S¸dwestkorso -> Gˆrresstr.: Mittelstreifen	3::igndisp 5083,7682 5066,7668 5158,7560
-S¸dwestkorso -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5083,7682 5066,7668 5067,7523
-Stubenrauchstr. -> Gˆrresstr.: Mittelstreifen	3::igndisp 5063,7784 5066,7668 5158,7560
-Stubenrauchstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5063,7784 5066,7668 5067,7523
+S¸dwestkorso -> Gˆrresstr.: Mittelstreifen	3::igndisp 5083,7682 5066,7668 5188,7536
+S¸dwestkorso -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5083,7682 5066,7668 5069,7498
+Stubenrauchstr. -> S¸dwestkorso: Mittelstreifen	3::igndisp 5069,7498 5066,7668 5045,7635
+Stubenrauchstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5069,7498 5066,7668 5063,7784
+Stubenrauchstr. -> Gˆrresstr.: Mittelstreifen	3::igndisp 5063,7784 5066,7668 5188,7536
 Stubenrauchstr. -> S¸dwestkorso: Mittelstreifen	3::igndisp 5063,7784 5066,7668 5083,7682
+Stubenrauchstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5063,7784 5066,7668 5069,7498
 ‹berqueren verboten	3nocross::ignrte 6687,8385 6807,8309 6935,8208
 Gustav-Freytag-Str. -> Feurigstr.: ‹berqueren verboten	3::igndisp 6779,8279 6807,8309 7012,8511
 Gustav-Freytag-Str. -> Dominicusstr.: ‹berqueren verboten	3::igndisp 6779,8279 6807,8309 6687,8385
@@ -945,7 +945,6 @@ Seddiner -> Hohenschˆnhausener Weg: Poller	3 18559,12105 18408,12105 18422,11837
 Hohenschˆnhausener Weg -> Seddiner: Poller	3 18422,11837 18408,12105 18215,12132
 Hohenschˆnhausener Weg -> Seddiner: Poller	3 18422,11837 18408,12105 18559,12105
 Gluckweg	1 6039,3275 5853,3050
-Am Tierpark - Criegernweg	3 18408,10774 18417,10738 18509,10757
 Rosenfelder Ring	3 17978,12092 18093,12093 18165,12091
 Rosenfelder Ring	3 18165,12091 18093,12093 17978,12092
 Sophienstr.	1 9986,13412 10317,13248
@@ -1320,3 +1319,5 @@ Rochlitzer Weg: Schranke	3 16083,1013 16117,927 15999,880
 Rochlitzer Weg: Schranke	3 16131,889 16117,927 15999,880
 Groﬂer Stern	1 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936 6685,11954 6642,12010 6653,12067 6690,12104 6725,12113
 Markelstr.	1 5269,6305 5020,6434
+Geschwister-Scholl-Str. (Potsdam)	1 -14909,-1818 -14733,-1812
+Feuerbachstr. (Potsdam)	1 -14140,-1390 -13879,-1445

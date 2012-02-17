@@ -13,8 +13,8 @@
 #: XXX siehe auch qualitaet_s-orig
 Sembritzkystr.: Bauarbeiten, Einbahnstraße	q3::inwork; 7203,5488 7186,5453 7157,5418 7095,5317 7018,5201
 # 
-#: last_checked: 2011-11-25 vvv
-#: next_check: 2012-01-15 vvv
+#: last_checked: 2012-02-14 vvv
+#: next_check: 2012-04-01 vvv
 #: XXX wird wahrscheinlich reorganisiert mit der neuen Verbindung
 Beuthstr. - Spittelmarkt: Gehweg, Bauarbeiten	q4::inwork 10229,11618 10213,11728
 Spittelmarkt: Gehweg, Bordstein, Bauarbeiten	q4::inwork 10166,11592 10153,11666 10213,11728
@@ -29,8 +29,9 @@ Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Gartenstr. und He
 # 
 #XXX del --- #: last_checked: 2011-05-20 --- Krausenstr.: Bauarbeiten an der Kreuzung Krausenstr./Charlottenstr	q3::inwork 9581,11523 9711,11543
 # 
-#: last_checked: 2011-11-04
-#: next_check: 2012-01-15
+#: last_checked: 2012-01-18
+#: next_check: 2012-03-15
+#: XXX abhängig von den Arbeiten in der Kynaststr.
 Alt-Stralau: Bauarbeiten an der Brücke, enge Durchfahrt	q3::inwork 14652,10201 14558,10264
 # 
 #XXX del? --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4088.html --- #: last_checked: 2011-10-31 --- #: next_check: 2011-11-18 --- #: XXX Einbahnstraßenregelung eventuell nur bis 2011-11-18, siehe IM_016526 --- Behrenstr.: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 8861,12125 9054,12154 9064,12156 9164,12172
@@ -45,18 +46,18 @@ Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9890,12161 9875,12257 98
 #: last_checked: 2011-11-14
 Jerusalemer Str.: Bauarbeiten, Einbahnstraße	q3::inwork; 9878,11857 9892,11752
 # 
-#: last_checked: 2011-12-26
-#: next_check: 2012-02-08
+#: last_checked: 2012-01-22
+#: next_check: 2012-03-01
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 9475,12365 9462,12481 9454,12558
 # 
-#: last_checked: 2011-12-26
-#: next_check: 2012-02-08
+#: last_checked: 2012-01-22
+#: next_check: 2012-03-01
 Universitätsstr.: wegen Bauarbeiten Richtung Unter den Linden gesperrt	q4::inwork; 9580,12581 9601,12380
 # 
 #: last_checked: 2012-01-01 vvv
 #: next_check: 2012-02-15 vvv
-Revaler Str.: Bauarbeiten, Einbahnstraße	q4::inwork; 14509,11060 14442,11101
-Helmerdingstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 14465,11195 14442,11101
+Revaler Str.: Bauarbeiten, Kreuzung gesperrt, Gehweg kann benutzt werden	q4::inwork 14509,11060 14442,11101
+Helmerdingstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg kann benutzt werden	q4::inwork 14465,11195 14442,11101
 #: next_check: ^^^
 #: last_checked: ^^^
 # 
@@ -71,8 +72,8 @@ Rathausstr. zwischen Breitestr. und Poststr.: Fahrbahn wegen Brückenbauarbeiten 
 Rathausstr. zwischen Breitestr. und Poststr.: Fahrbahn wegen Brückenbauarbeiten gesperrt	q4::inwork 10422,12395 10476,12432
 #: next_check: ^^^
 # 
-#: last_checked: 2011-11-11
-#: next_check: 2011-12-31
+#: last_checked: 2012-01-17
+#: next_check: 2012-03-01
 Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10436,11344 10244,11160
 # 
 #: last_checked: 2011-09-04 (by srt)
@@ -129,13 +130,14 @@ Treptower Park, am Rosengarten: Fußgänger	q2 14819,9462 14910,9643
 Treptower Park: Fußgänger	q1 14697,9726 14645,9710 14575,9648 14496,9705 14361,9772
 Görlitzer Park: Fußgänger	q2 12671,10042 12686,10045 12690,10062
 Görlitzer Park: Fußgänger	q2 12761,10195 12769,10211 12774,10222
-Görlitzer Park: Fußgänger	q2 13145,9920 12869,10071 12802,10097
-Görlitzer Park: Fußgänger	q2 12670,10160 12567,10211 12543,10223 12459,10256 12406,10368 12328,10442
+Görlitzer Park: Fußgänger	q2 13145,9920 12987,10007 12869,10071 12802,10097
+Görlitzer Park: Fußgänger	q2 12670,10160 12567,10211 12543,10223 12506,10244 12384,10368 12328,10442
 Görlitzer Park: Fußgänger	q2 12817,9964 12833,9998 12869,10071 12904,10141 12911,10156
 Görlitzer Park, Rondell: Fußgänger	q2 12802,10097 12737,10051 12690,10062 12659,10119 12670,10160 12712,10192 12761,10195 12801,10146 12802,10097
 Görlitzer Park: Fußgänger, eng	q2 12802,10097 12670,10160
 Görlitzer Park: eng, Kurven, Fußgänger	q2 12507,10130 12504,10172 12516,10202 12543,10223
 Görlitzer Park: Fußgänger	q2 12543,10223 12580,10252 12611,10299
+Görlitzer Park: Fußgänger	q2 13053,10088 13013,10068 13013,10047 12987,10007 12932,9900
 Tiergartenufer: Fußgänger	q1 6186,11466 6079,11524 5940,11616 5903,11683 5835,11768 5736,11835 5543,11837 5478,11860
 (Lichtensteinallee - Tiergartenufer): Parkweg, Fußgänger	q1 6309,11443 6186,11466
 Tiergarten: Parkweg, Fußgänger	q2 5666,11362 5727,11573 5758,11630 5780,11622 5802,11672 5831,11697 5818,11722 5835,11768 5870,11842 5890,11865 5900,11913
@@ -149,16 +151,20 @@ Tiergarten: Parkweg	q1 8016,11770 8022,12016
 Tiergarten: Parkweg	q1 8034,12093 8057,12059 8048,12033 8022,12016 7999,12049 8006,12074 8034,12093 8048,12135 8055,12186
 Tiergarten: Parkweg	q1 8214,12205 8215,12156 8222,11881 8223,11796 8225,11692
 Tiergarten: Parkweg	q1 8021,11636 8016,11770
-Tiergarten: Parkweg	q1 7663,11946 7570,11855 7223,11897 7073,11798 6778,11742 6540,11754
+Tiergarten: Parkweg	q1 7663,11946 7570,11855 7223,11897 7182,11870 7173,11864 7073,11798 6778,11742 6540,11754
 Tiergarten: Parkweg	q1 7816,12150 7827,12105 7832,12036 7822,11952 7801,11875 7795,11823 7777,11787 7772,11749 7796,11681 7816,11571
 (Bremer Weg - Fasanerieallee): Parkweg	q1 6342,11878 6379,11843 6406,11784 6467,11780 6540,11754
 Parkweg: enge Brücke, Fußweg	q2 14310,9692 14361,9772 14404,9847 14448,9922 14453,9929 14558,10082 14597,10129 14626,10162 14652,10201
 Spittelmarkt: Gehweg	q1 10369,11728 10240,11740
-Hasenheide: Fußgänger	q1 11271,8325 11282,8428 11250,8585 11177,8985 11141,9107 11136,9183
-Hasenheide: Fußgänger	q1 11141,9107 11115,9100 11098,9046 11100,8974 11137,8738 11193,8568 11235,8454 11223,8343
-Hasenheide: Fußgänger	q1 11177,8985 11100,8974
+Hasenheide: Fußgänger	q1 11266,8336 11275,8387 11282,8428 11279,8489 11255,8591 11177,8985 11141,9107 11136,9183
+Hasenheide: Fußgänger	q1 11141,9107 11115,9100 11098,9046 11100,8974 11137,8738 11193,8568 11235,8454 11230,8402 11225,8350
+Hasenheide: Fußgänger	q1 11177,8985 11137,8979 11100,8974
 (Hasenheide, Weg am westlichen Rand): Fußgänger	q1 11100,8974 11048,8922 10988,8867 10936,8837 10919,8785 10919,8755 10924,8690 10893,8608 10890,8567 10929,8503
 Hasenheide, zur Lilienthalstr.: Parkweg	q1 10709,9192 11141,9107
+(Hasenheide, Eingang Wissmannstr.): Fußgänger	q1 11768,8739 11708,8747 11647,8723 11607,8751 11578,8784
+(Hasenheide, östlicher Rundweg): Fußgänger	q1 11560,8488 11549,8601 11578,8784 11587,8882 11549,8917 11484,8928 11406,8941 11177,8985
+(Hasenheide, südöstlicher Rundweg): Fußgänger	q1 11467,8329 11523,8327 11559,8357 11570,8409 11560,8488
+(Flughafenstr. - Rundweg in der Hasenheide): Fußgänger	q1 11632,8302 11577,8315 11559,8357
 Am Flutgraben: Fußgänger	q1 13333,9929 13412,9935 13579,10146
 (durch den Schlesischen Busch): Fußgänger	q1 13412,9935 13636,9964 13711,10022
 Kolonie Albrechtshöhe: einige Fußgänger	q1 10260,5953 9931,5985
@@ -169,8 +175,9 @@ Uferweg an den Treptowers: enger und kurviger Weg	q3 14500,9856 14464,9927 14509
 Denewitzstr.: kombinierter Fuß- und Radweg	q1 8061,10310 7947,10155
 Linienstr.: Gehweg	q2 11104,13456 11149,13442
 Böcklerpark: gemeinsamer Fuß- und Radweg	q2 10885,10045 10723,10088 10521,10126
-Böcklerpark: enge Kurven, manchmal Fußgänger auf dem Radweg	q3 10967,10092 10885,10045
-Böcklerpark: enge Kurven, Fußgänger	q3 10923,10113 10885,10045
+Böcklerpark: enge Kurven, manchmal Fußgänger auf dem Radweg	q3 10967,10092 10917,10068 10885,10045
+Böcklerpark: enge Kurven, Fußgänger	q3 10923,10113 10917,10068
+Böcklerpark: Fußgänger	q2 10917,10068 10863,10082 10802,10111 10794,10201 10690,10247 10580,10256
 Am Landwehrkanal: Parkweg	q1 10521,10126 10362,10120 10226,10145 10083,10192
 vor dem Kanzleramt: Fußgänger, manchmal gesperrt	q1 8120,12756 8123,12615
 #: XXX_prog: BS: am Nordende Bordsteine
@@ -299,7 +306,7 @@ Hermannplatz: oft Fußgänger auf dem Radweg	q1 11824,8995 11909,9155
 Spreepromenade am DomAquarée: Fußgänger, Cafés	q3 10300,12587 10249,12658 10219,12701 10166,12777
 St.-Wolfgang-Str.: Fußgänger, Cafés	q3 10219,12701 10285,12744 10360,12793
 Spreegasse: Fußgänger, Cafés	q3 10249,12658 10309,12700 10387,12760
-Heiligengeistgasse: Fußgänger, Cafés, sehr eng	q4 10285,12744 10309,12700 10352,12627
+Heiligegeistgasse: Fußgänger, Cafés, sehr eng	q4 10285,12744 10309,12700 10352,12627
 #: XXX_prog: sollte BS werden (1x an der Gormannstr.)
 zur Gormannstr.: Bordstein	q3 10350,13376 10372,13436
 #: note: Flohmarkt ist in temp_blockings erwähnt:
@@ -310,7 +317,7 @@ Lützowplatz: Einbahnstraße, Ausweichen auf Gehweg	q3; 7002,11034 6873,11011
 Zauritzweg: Fußgänger	q1 4199,11819 4195,11690
 #: XXX_prog: Radfahren nicht erlaubt, rjoop möchte hier nicht geroutet werden, wenn "strikt befolgen" eingeschaltet ist
 #: note: auf der westlichen Seite steht ein überklebtes Grünanlagen-Schild mit "Radfahren verboten", auf der östlichen Seite nicht
-(Blücherplatz - Zossener Str.): Fußgänger, Bordsteine	q2 9689,10124 9827,10051
+(Blücherplatz - Zossener Str.): Fußgänger, Bordsteine	q2 9702,10129 9827,10051
 Hebbelstr.: Fußgänger	q2 3117,11852 3251,12025 3258,12035 3295,12068
 Spreewaldplatz: Fußgänger	q1 12341,10218 12292,10374
 Mussehlstr.: Bordsteine (Bayernring und Wolffring)	q3 8836,8564 8756,8453 8711,8371
@@ -360,7 +367,7 @@ Verl. Pücklerstr.: Fußgänger, Hundeauslaufgebiet	q1 1558,6729 1364,6691 1170,665
 Weimarer Str.: Fußgänger	q1 4101,11347 4101,11233
 Norwegerstr. - Behmstr.: Rampe	q2 10022,16237 10026,16165 10055,16104 10045,16157
 Marzahner Promenade - Mühlenbecker Weg: Fußgänger	q1 20222,15519 20181,15658 20150,15678
-Rosemeyerweg: Fußgänger	q1 -3758,2678 -3956,2787 -4001,2858
+Rosemeyerweg: Fußgänger	q1 -3758,2678 -3852,2730 -3956,2787 -4001,2858
 Moorlake - Krughorn: Fußgänger, aber breite Straße	q0 -9606,1389 -9734,1394 -9746,1408 -9770,1482 -9818,1530 -9900,1573 -9975,1564 -10044,1567 -10078,1551
 Krughorn - Volkspark Klein-Glienicke: Fußgänger, besonders an schönen Tagen	q1 -10078,1551 -10163,1288 -10190,1185 -10198,1173 -10273,1088 -10430,848 -10512,683 -10573,564 -10593,476
 Moorlake - Pfaueninsel: Fußgänger, besonders an schönen Tagen	q1 -9606,1389 -9647,1462 -9673,1519 -9663,1622 -9632,1672 -9584,1703 -9511,1739 -9444,1820 -9393,1831 -9108,1798 -9016,1782 -8934,1801 -8861,1855 -8747,2023 -8636,2102 -8591,2144 -8540,2209 -8468,2152
@@ -371,9 +378,9 @@ Heidenfeldstr.: Gehweg	q1 13433,13346 13393,13326
 (Gudrunstr. - Lichtenberger Brücke): Gehweg, Bordsteine	q2 16870,11920 16884,11889 16851,11852
 Grünstr.: Fußgängerzone, Radfahren erlaubt	q2 22111,4562 22162,4546 22214,4548 22312,4593
 Schloßplatz Köpenick: Fußgänger, Straßenbahn, Lieferverkehr	q2 22111,4562 22093,4499
-(Karlsgartenstr. - Hasenheide): Parkweg, Fußgänger	q1 11627,8485 11508,8491 11333,8582 11250,8585
+(Karlsgartenstr. - Hasenheide): Parkweg, Fußgänger	q1 11627,8485 11560,8488 11508,8491 11333,8582 11255,8591
 #: note: Radfahren erlaubt
-(Am Rixdorfer Teich): Parkweg, Fußgänger	q1 11250,8585 11193,8568 11133,8560 11020,8596 10957,8573 10929,8503 10911,8457
+(Am Rixdorfer Teich): Parkweg, Fußgänger	q1 11255,8591 11193,8568 11133,8560 11020,8596 10957,8573 10929,8503 10911,8457
 Torstr. - Weydingerstr.: Bordsteine	q2 11079,13492 11108,13513
 #: note: möglicherweise ist im Herbst/Winter weniger los, dann vielleicht q2?
 Gustav-Heinemann-Brücke: Fußgänger, enge Brücke	q3 8116,12938 8110,13042
@@ -419,7 +426,7 @@ Langhoffstr.: enge Straße, Gegenverkehr	q1 19817,14454 19818,14064
 (Frankfurter Allee, Nebenfahrbahn zur Hauptfahrbahn): Bordsteinabsenkung, aber eng	q3 16535,11920 16512,11894
 Zum Schlachtensee: wegen der großen Steigung/Gefälles nur Schrittgeschwindigkeit möglich	q4 -1663,4218 -1592,4268
 (Treseburger Ufer - Rungiusstr.): nur für Fußgänger erlaubt	q4 12699,5909 13064,5953
-(Bellevuepark): einige Fußgänger	q1 22798,5731 22794,5583 22855,5554 22835,5452 22851,5321
+(Bellevuepark): einige Fußgänger	q1 22798,5731 22796,5640 22796,5631 22794,5583 22855,5554 22835,5452 22851,5321
 (Bellevuepark): nur für Fußgänger erlaubt	q4 22794,5583 22733,5569 22701,5428 22628,5340
 Walter-Nicklitz-Promenade: eng und kurvenreich, Fußgänger	q2 8290,15304 8321,15386 8290,15406 8310,15449
 Gropiusstr.: Uferweg sehr eng, Fußgänger	q2 8389,16214 8534,16355 8543,16364
@@ -631,7 +638,7 @@ Upstallweg (Lichtenberg): gemeinsamer Rad- und Gehweg	q1 17946,10344 17954,10367
 Mayschweg: Fußgänger (Radfahrer frei), eng	q1 23064,3614 23012,3598 23007,3597
 Spreetunnel: Fußgänger	q2 25571,4553 25658,4619
 (entlang der Autobahn, zum hohen Bogen): gemeinsamer Fuß- und Radweg	q1+ 3388,8958 3489,8839 3510,8814 3713,8578 3696,8572 3644,8456 3644,8425
-Görresstr.: enge Straße	q1 5066,7668 5158,7560 5272,7458 5318,7424
+Görresstr.: enge Straße	q1 5066,7668 5188,7536 5272,7458 5318,7424
 Stendaler Platz: Fußgänger, Spielplatz	q2 6394,14085 6489,14071
 Washingtonplatz: querende Fußgänger, Taxis	q2; 7937,13126 8106,13130
 Washingtonplatz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 8106,13130 7937,13126
@@ -952,7 +959,7 @@ Ernststr.: wendelförmige Rampen	q2 2821,19559 2780,19548 2700,19527
 An der Kremmener Bahn: Fußgänger	q1 -304,22578 -515,22801 -700,22998
 Straße 366: Bodenschwellen	q2 -3145,22004 -3281,22011
 Verlängerte Fährstr.: enge Straße	q1 -3419,22102 -3412,22058 -3407,22028 -3402,21994 -3397,21946 -3394,21915 -3367,21860
-Schlütersteig: enger Weg	q3 -3412,22058 -3355,22063
+Schlütersteg: enger Weg	q3 -3412,22058 -3355,22063
 Meistergasse: enger Weg	q3 -3407,22028 -3348,22035
 Kleine Brüderstr.: enger Weg	q3 -3402,21994 -3345,22001
 Erlenweg (Heiligensee): enger Weg	q3 -3397,21946 -3360,21951
@@ -1094,6 +1101,16 @@ Marianne-Hapig-Weg: Fußgänger, Spielplatz	q2- 17623,-221 17563,-364
 (Rumeyplan - Kanzlerweg): eng	q2 8899,7788 8839,7904
 Elisabeth-Schwarzhaupt-Platz: einige Fußgänger	q1 9274,13963 9167,14127
 (Bornsdorfer Str. - Werbellinstr.): einige Fußgänger	q1 12668,8077 12650,8164
+#: XXX_prog BS (2x)
+(Erkelenzdamm - Prinzessinnenstr.): Bordsteine, parkende Autos, Fußgänger	q4 11190,10619 11145,10638
+(Bethanienpark): Fußgänger	q1 11799,10848 11776,10860 11752,10878 11668,10916
+#: XXX_prog BS
+(Bethanienpark): Fußgänger, Bordstein	q3 11668,10916 11589,10947
+#: XXX_prog BS (südliches Ende)
+(Hildegard-Knef-Platz - Lotte-Laserstein-Str.): Bordstein	q2 7774,7724 7757,7682
+#: XXX_prog BS (östliches Ende nur, westliches Ende ist abgesenkt)
+(Blücherplatz - Johanniterstr.): Fußgänger, Bordstein	q2 9702,10129 9816,10119 9837,10117
+Idealpassage: Fußgänger, eng, Schrittgeschwindigkeit	q3 12434,8776 12578,8654
 #
 ######################### User Contributions #################################
 # 
@@ -1362,7 +1379,7 @@ Leuthener Str.: enge Straße	q1 7411,8364 7494,8364 7578,8358 7640,8359 7716,8356
 #: by: Wilfried Flade:
 südliches Spreeufer: besonders an Wochenenden tagsüber sehr viele Fußgänger	q2 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576
 #: by: Julia (jbrauch):
-Berchtesgadener Str.: Fußgänger, Bordsteine	q2 6361,9175 6360,9194
+Berchtesgadener Str.: Fußgänger, Bordsteine	q2 6361,9175 6359,9244
 #: by: Uta Voigt:
 Waldstr.: enge Straße	q1 9718,20498 9724,20291 9723,20269
 #: by: Wolfram (...007...):
@@ -2131,7 +2148,7 @@ Schwarzburger Str.: enge Straße	q1 21719,17427 21709,17382 21677,17195 21665,171
 #: corrected_by: srt/policy (q3 -> q2)
 Taubnesselweg: enge Straße	q2 20793,2247 20836,2150 20872,2112
 #: by: die_annemi:
-Theodor-Loos-Weg: enge Straße	q1 15325,1720 15460,1764 15634,1765 15671,1923 15781,1928 15818,1834 15875,1796
+Theodor-Loos-Weg: enge Straße	q1 15325,1720 15460,1764 15634,1765 15671,1923 15781,1928 15806,1903 15818,1834 15875,1796
 #: by: timm wille:
 #: corrected_by: srt/policy (q2 -> q1)
 Irmgardstr.: enge Straße	q1 974,4669 960,4660 881,4429 863,4363 865,4288 908,4175

@@ -43,6 +43,26 @@ sub new {
     bless $self, $class;
 }
 
+sub pdf_title {
+    my $out = shift;
+
+    # return "BBBike"; # old style
+
+    my $url = $out->{Url};
+    $url =~ s,/+$,,;
+    my $city;
+    if ($url =~ m,/([^/]+)$,) {
+        $city = $1;
+    }
+    use Data::Dumper; open OUT, "> /tmp/foo"; print OUT Dumper($out);
+
+    my $title = "BBBike.org$url";
+    #$title .= " // " . $out->{City_en} if $city && $city ne $out->{City_en};
+    #$title .= " // " . $out->{City_local} if $city && $city ne $out->{City_local};
+
+    return $title;
+}
+
 sub output {
     my $self = shift;
 
@@ -187,7 +207,7 @@ sub output {
 	$font_size = 10;
     }
 
-    $y += $stringc->('BBBike', 'Sans Normal', $head1_font_size, 0, $y);
+    $y += $stringc->(&pdf_title($out), 'Sans Normal', $head1_font_size, 0, $y);
 
     if ($out->{Title}) {
 	my $title = $out->{Title};

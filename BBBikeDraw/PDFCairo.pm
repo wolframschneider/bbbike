@@ -779,6 +779,9 @@ sub add_route_descr {
 	     -net => $net,
 	     -route => Route->new_from_realcoords(\@c),
 	     -lang => $args{'-lang'},
+ 	     -Url => $args{'-Url'},
+             -City_local => $args{'-City_local'},
+             -City_en => $args{'-City_en'},
 	    );
 }
 

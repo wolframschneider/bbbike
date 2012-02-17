@@ -1,9 +1,7 @@
 # Configuration for bbbike.cgi
 [%
     IF CGI_TYPE == "ModPerl::Registry" || CGI_TYPE == "Apache::Registry";
-## XXX preloading modules is a bad idea unless
-## I get rid of all Class::Struct usages...
-#        PROCESS preload_modules;
+        PROCESS preload_modules;
     END
 -%]
 
@@ -55,12 +53,42 @@ ScriptAlias [% ROOT_URL %]/cgi/browserinfo.cgi [% ROOT_DIR %]/lib/BrowserInfo.pm
 # HTML ... documents
 Alias [% ROOT_URL %]  [% ROOT_DIR %]
 
+# Redirect for root URL
+RedirectMatch ^[% ROOT_URL %]/?$ [% ROOT_URL %]/cgi/bbbike.cgi
+
 # server headers have precedence over http-equiv tags, so
 # force utf-8 in case DefaultCharset is active
 <Location [% ROOT_URL %]/html/opensearch/opensearch.html>
     AddType "text/html; charset=utf-8" .html
 </Location>
 
+<IfModule mod_deflate.c>
+    <Location [% ROOT_URL %]>
+	AddOutputFilterByType DEFLATE application/vnd.google-earth.kml+xml image/svg+xml application/xml
+	AddOutputFilterByType DEFLATE application/json
+	# no need to compress .wml ...
+	#
+	# The following is standard in Debian/squeeze's
+	# apache2/mods-enabled/deflate.conf, but may be missing in
+	# other installations:
+	AddOutputFilterByType DEFLATE text/html text/plain text/xml
+	AddOutputFilterByType DEFLATE text/css
+	AddOutputFilterByType DEFLATE application/x-javascript application/javascript application/ecmascript
+	AddOutputFilterByType DEFLATE application/rss+xml
+    </Location>
+</IfModule>
+
+<IfModule mod_headers.c>
+    <LocationMatch "^\Q[% ROOT_URL %]\E/data/[^/]+$">
+        # This is needed to get the data files compressed.
+        # The Content-Type is also text/plain if this is not set,
+        # but somehow mod_deflate does not work otherwise...
+        Header Set Content-Type text/plain
+    </LocationMatch>
+</IfModule>
+
+[% IF 0 -%]
+[%# compression by AddOutputFilterByType is smarter ... -%]
 <IfModule deflate_module>
     <LocationMatch "^\Q[% ROOT_URL %]\E/(data|mapserver/brb)">
         SetOutputFilter DEFLATE
@@ -72,6 +100,7 @@ Alias [% ROOT_URL %]  [% ROOT_DIR %]
 	SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
     </LocationMatch>
 </IfModule>
+[% END -%]
 
 <IfModule perl_module>
     <Perl>

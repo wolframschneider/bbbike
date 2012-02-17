@@ -76,7 +76,7 @@
 	X 10713,9260
 	X 10213,8665
 	F 10796,8498
-	F 11271,8325
+	F 11266,8336
 	X 11023,9597
 	X 11075,9576
 	X 11089,9751
@@ -936,7 +936,6 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2902,14006
 	X 3038,13612
 	X 3123,13274
-	X 3645,13189
 	X 3711,13202
 	X 3967,13211
 	X 4382,13232
@@ -2508,6 +2507,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -13778,4492
 	X -13067,-706
 	F -11133,262
+	X 18417,10738
 unbeschrankter Bahnübergang	B0 57683,14751
 unbeschrankter Bahnübergang	B0 56520,16826
 	B 53586,13868
