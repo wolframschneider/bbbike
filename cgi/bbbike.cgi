@@ -5968,8 +5968,7 @@ EOF
 	    print qq{<span id="pdf_span1">\n};
 	    print $q->start_form(-method=>"POST", -name => "pdfForm", -target => "_new", -action => "" );
 	    foreach my $name (qw/imagetype startname zielname draw coords/) {
-		my $value = Encode::is_utf8( $pdf_url->param($name)) ? $pdf_url->param($name) : Encode::encode( utf8 => $pdf_url->param($name) );
-		print $q->hidden(-name => $name, -default => [ $value ]), "\n";
+		print $q->hidden(-name => $name, -default =>  [ $pdf_url->param($name) ] ), "\n";
 	    }
 	    print $q->end_form;
 	    print qq{\n</span>\n};
