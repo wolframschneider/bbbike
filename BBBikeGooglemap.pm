@@ -35,6 +35,7 @@ use BBBikeVar;
 use Karte;
 use Karte::Polar;
 use Encode;
+use Data::Dumper;
 
 sub new { bless {}, shift }
 
@@ -54,6 +55,7 @@ sub run {
     my $fullscreen       = $args{'fullscreen'};
     my $cache            = $args{'cache'};
     my $region           = $args{'region'} || "other";
+    my $nomap            = $args{'nomap'} || "nomaps";
 
     my $city = $q->param('city') || "";
     if ($city) {
@@ -153,8 +155,7 @@ sub run {
     binmode( \*STDOUT, ":utf8" ) if $force_utf8;
     binmode( \*STDERR, ":utf8" ) if $force_utf8;
 
-    print $self->get_html( \@polylines_polar, \@polylines_route, \@wpt, $zoom,
-        $center, $q, $lang, $fullscreen, $cache, $region );
+    print $self->get_html( \@polylines_polar, \@polylines_route, \@wpt, $zoom, $center, $q, $lang, $fullscreen, $cache, $region, $nomap );
 }
 
 sub bbbike_converter {
@@ -183,9 +184,10 @@ sub get_html {
     my (
         $self,       $paths_polar, $paths_route, $wpts,
         $zoom,       $center,      $q,           $lang,
-        $fullscreen, $cache,       $region
+        $fullscreen, $cache,       $region, $nomap
     ) = @_;
 
+    #open(O, "> /tmp/a.log"); print O "nomap: $nomap\n";
     my $log_routes = 1;
 
     my $converter   = $self->{converter};
@@ -269,7 +271,7 @@ sub get_html {
     my $script;
     my $slippymap_size = "";
 
-    if ( $q->user_agent("XXXiPhone") ) {
+    if ( $q->user_agent("XXXiPhone") || $nomap ) {
 
         #$slippymap_size = qq{ style="width:240px; height:240px; "};
         $slippymap_size = qq{ style="display:none"};
@@ -326,6 +328,7 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
 
     $region = "other" if $region !~ /^(de|eu|other)$/;
 
+    if (!$nomap) {
     $html .= <<EOF;
 
     <div id="map"></div>
@@ -345,6 +348,14 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     }
 
 EOF
+    } else {
+    $html .= <<EOF;
+    <script type="text/javascript">
+    //<![CDATA[
+    state.marker_list = $marker_list;
+     
+EOF
+    }
 
     if ( $route_length ne '' ) {
 
@@ -399,7 +410,7 @@ EOF
     }
     return $html;
 }
-
+    
 #my $o = BBBikeGooglemap->new;
 #$o->run(new CGI);
 

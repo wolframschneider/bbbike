@@ -2954,7 +2954,7 @@ function " . $type . "char_init() {}
 
 	    my $BBBikeGooglemap = 1;
             if (is_mobile($q)) {
-		$BBBikeGooglemap = 0;
+		#$BBBikeGooglemap = 0;
 		$enable_homemap_streets = 0;
 
 		print <<EOF;
@@ -2977,7 +2977,7 @@ EOF
 		&BBBikeAds::adsense_linkblock if &is_production($q) && !is_mobile($q);
 		print qq{</div>\n\n};
 	        my $maps = BBBikeGooglemap->new();
-	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'region' => $region, 'cache' =>$q->param('cache') );
+	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'region' => $region, 'cache' =>$q->param('cache')||0, 'nomap' =>  is_mobile($q) );
 	    }
 
 if ($enable_homemap_streets) {
@@ -5980,14 +5980,13 @@ EOF
 	        print qq{<p></p>\n};
 		print qq{</div>\n\n};
 
-		if (is_mobile($qq)) {
-		   #
-		} elsif (!$gmapsv3) {
-		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="800" scrolling="no"></iframe><p></p>};
-		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
+		if (!$gmapsv3 && !is_mobile($qq)) {
+		    print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="800" scrolling="no"></iframe><p></p>};
+		    print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 		} else {
 		   my $maps = BBBikeGooglemap->new();
-                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1, 'region' => $region, 'cache' => $q->param('cache') || 0, 'debug' => $debug );
+                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1,
+			      'region' => $region, 'cache' => $q->param('cache') || 0, 'debug' => $debug, 'nomap' => is_mobile($qq) );
 		}
 	    }
 
