@@ -948,7 +948,13 @@ sub M ($) {
     return $text;
 }
 
-my $no_name = '(' . M("Straﬂe ohne Namen") . ')';
+my $no_name_t = "Straﬂe ohne Namen";
+my $no_name = M("Straﬂe ohne Namen");
+# no translation, convert charset to utf8
+if ($no_name eq $no_name_t) {
+    $no_name = Encode::decode("iso8859-1", $no_name);
+}
+$no_name = "($no_name)";
 
 # select city name by language
 sub select_city_name {
@@ -5962,7 +5968,8 @@ EOF
 	    print qq{<span id="pdf_span1">\n};
 	    print $q->start_form(-method=>"POST", -name => "pdfForm", -target => "_new", -action => "" );
 	    foreach my $name (qw/imagetype startname zielname draw coords/) {
-		print $q->hidden(-name => $name, -default => [ $pdf_url->param($name) ]), "\n";
+		my $value = Encode::is_utf8( $pdf_url->param($name)) ? $pdf_url->param($name) : Encode::encode( utf8 => $pdf_url->param($name) );
+		print $q->hidden(-name => $name, -default => [ $value ]), "\n";
 	    }
 	    print $q->end_form;
 	    print qq{\n</span>\n};
