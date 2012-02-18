@@ -65,7 +65,8 @@ var bbbike = {
         // enable full screen mode
         SlideShow: true,
         FullScreen: true,
-        Smoothness: true
+        Smoothness: true,
+        LandShading: true
     },
 
     // default map
@@ -81,7 +82,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading"],
 
     area: {
         visible: true,
@@ -547,7 +548,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 18
     };
 
-    // BBBike smoothness
+    // BBBike smoothness overlay
     var bbbike_smoothness_options = {
         bbbike: {
             "name": "BBBike (Smoothness)",
@@ -560,6 +561,23 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         opacity: 1.0,
         tileSize: new google.maps.Size(256, 256),
         name: "BBBIKE-SMOOTHNESS",
+        minZoom: 1,
+        maxZoom: 18
+    };
+
+    // Land Shading overlay
+    var land_shading_options = {
+        bbbike: {
+            "name": "Land Shading",
+            "description": "Land Shading, by openpistemap.org"
+        },
+        getTileUrl: function (a, z) {
+            return "http://" + "http://tiles2.openpistemap.org/landshaded/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "LAND-SHADING",
         minZoom: 1,
         maxZoom: 18
     };
@@ -1080,6 +1098,11 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 return new google.maps.ImageMapType(bbbike_smoothness_options);
             }
         },
+        "land_shading": function () {
+            if (bbbike.mapLayers.LandShading) {
+                return new google.maps.ImageMapType(land_shading_options);
+            }
+        },
     };
 
     mapControls.bbbike_mapnik();
@@ -1120,6 +1143,14 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             "lang": lang
         });
     }
+
+    custom_layer(map, {
+        "layer": "LandShading",
+        "enabled": bbbike.mapLayers.LandShading,
+        "active": layer == "land_shading" ? true : false,
+        "callback": add_land_shading_layer,
+        "lang": lang
+    });
 
     custom_layer(map, {
         "layer": "FullScreen",
@@ -1193,6 +1224,9 @@ function init_custom_layers(layer) {
     if (bbbike.mapLayers.Smoothness) {
         layers.smoothnessLayer = layer.bbbike_smoothness();
     }
+    if (bbbike.mapLayers.LandShading) {
+        layers.land_shadingLayer = layer.bbbike_land_shading();
+    }
 }
 
 // add bicycle routes and lanes to map, by google maps
@@ -1226,6 +1260,18 @@ function add_smoothness_layer(map, enable) {
 
     if (enable) {
         map.overlayMapTypes.setAt(0, layers.smoothnessLayer);
+    } else {
+        map.overlayMapTypes.setAt(0, null);
+    }
+}
+
+function add_land_shading_layer(map, enable) {
+    alert("add_land_shading_layer");
+
+    if (!layers.land_shadingLayer) return;
+
+    if (enable) {
+        map.overlayMapTypes.setAt(0, layers.land_shadingLayer);
     } else {
         map.overlayMapTypes.setAt(0, null);
     }
@@ -1662,6 +1708,7 @@ function translate_mapcontrol(word, lang) {
             "Start": "Start",
             "Destination": "Ziel",
             "Smoothness": "Fahrbahnqualit&auml;t",
+            "Land Shading": "Reliefkarte",
             "Via": "Via"
         },
         "es": {
