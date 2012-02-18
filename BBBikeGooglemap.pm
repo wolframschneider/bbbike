@@ -55,7 +55,7 @@ sub run {
     my $fullscreen       = $args{'fullscreen'};
     my $cache            = $args{'cache'};
     my $region           = $args{'region'} || "other";
-    my $nomap            = $args{'nomap'} || "nomaps";
+    my $nomap            = $args{'nomap'} || 0;
 
     my $city = $q->param('city') || "";
     if ($city) {
