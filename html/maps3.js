@@ -572,7 +572,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             "description": "Land Shading, by openpistemap.org"
         },
         getTileUrl: function (a, z) {
-            return "http://" + "http://tiles2.openpistemap.org/landshaded/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + "tiles2.openpistemap.org/landshaded/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
@@ -1145,7 +1145,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     }
 
     custom_layer(map, {
-        "layer": "LandShading",
+        "layer": "Land Shading",
         "enabled": bbbike.mapLayers.LandShading,
         "active": layer == "land_shading" ? true : false,
         "callback": add_land_shading_layer,
@@ -1225,7 +1225,7 @@ function init_custom_layers(layer) {
         layers.smoothnessLayer = layer.bbbike_smoothness();
     }
     if (bbbike.mapLayers.LandShading) {
-        layers.land_shadingLayer = layer.bbbike_land_shading();
+        layers.land_shadingLayer = layer.land_shading();
     }
 }
 
@@ -1266,7 +1266,6 @@ function add_smoothness_layer(map, enable) {
 }
 
 function add_land_shading_layer(map, enable) {
-    alert("add_land_shading_layer");
 
     if (!layers.land_shadingLayer) return;
 
