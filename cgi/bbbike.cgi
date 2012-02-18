@@ -7979,6 +7979,13 @@ sub header {
     if (!$smallform) {
 
 	my $title2 = delete $args{-title2};	
+
+	# mobile devices
+        my @viewport;
+        if (is_mobile($q)) {
+	    @viewport = 'viewport' => "width=320; initial-scale=1.0, max-scale=1.0, user-scalable=no";
+        }
+
 	print $q->start_html
 	    (%args,
 	     #-lang => 'de-DE',
@@ -7986,6 +7993,7 @@ sub header {
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
 		     'copyright'=>'(c) 1998-2012 Slaven Rezic + Wolfram Schneider',
+		     @viewport
 		    },
 	     -author => $BBBike::EMAIL,
 	    );
