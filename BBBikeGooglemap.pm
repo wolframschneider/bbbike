@@ -155,7 +155,8 @@ sub run {
     binmode( \*STDOUT, ":utf8" ) if $force_utf8;
     binmode( \*STDERR, ":utf8" ) if $force_utf8;
 
-    print $self->get_html( \@polylines_polar, \@polylines_route, \@wpt, $zoom, $center, $q, $lang, $fullscreen, $cache, $region, $nomap );
+    print $self->get_html( \@polylines_polar, \@polylines_route, \@wpt, $zoom,
+        $center, $q, $lang, $fullscreen, $cache, $region, $nomap );
 }
 
 sub bbbike_converter {
@@ -184,7 +185,7 @@ sub get_html {
     my (
         $self,       $paths_polar, $paths_route, $wpts,
         $zoom,       $center,      $q,           $lang,
-        $fullscreen, $cache,       $region, $nomap
+        $fullscreen, $cache,       $region,      $nomap
     ) = @_;
 
     #open(O, "> /tmp/a.log"); print O "nomap: $nomap\n";
@@ -328,8 +329,8 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
 
     $region = "other" if $region !~ /^(de|eu|other)$/;
 
-    if (!$nomap) {
-    $html .= <<EOF;
+    if ( !$nomap ) {
+        $html .= <<EOF;
 
     <div id="map"></div>
 
@@ -348,8 +349,9 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     }
 
 EOF
-    } else {
-    $html .= <<EOF;
+    }
+    else {
+        $html .= <<EOF;
     <script type="text/javascript">
     //<![CDATA[
     state.marker_list = $marker_list;
@@ -410,7 +412,7 @@ EOF
     }
     return $html;
 }
-    
+
 #my $o = BBBikeGooglemap->new;
 #$o->run(new CGI);
 
