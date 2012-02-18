@@ -7983,7 +7983,7 @@ sub header {
 	# mobile devices
         my @viewport;
         if (is_mobile($q)) {
-	    @viewport = 'viewport' => "width=320; initial-scale=1.0, max-scale=1.0, user-scalable=no";
+	    # @viewport = ('viewport' => "width=320; initial-scale=1.0, max-scale=4.0, user-scalable=yes");
         }
 
 	print $q->start_html
