@@ -2732,7 +2732,9 @@ EOF
 
 	    my $searchinput = 'suggest_' . $type;
 	    #print $icon_image;
-	    print qq{<input id="$searchinput" size="42" type="text" name="$type" value="" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
+	    my $input_size = is_mobile($q) ? 20 : 42;
+
+	    print qq{<input id="$searchinput" size="$input_size" type="text" name="$type" value="" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
 
 	   if ($enable_opensearch_suggestions) { 
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
@@ -2867,7 +2869,7 @@ function " . $type . "char_init() {}
 	    if ($type eq 'start') { 
 	    	print qq{<td id="via_message" style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message')" title="}, M("Via-Punkt hinzuf&uuml;gen (optional)"), qq{">via</a></td></tr>\n};
 	    } elsif ($type eq 'via') { 
-	    	print qq{<td style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("Via-Punkt entfernen"), qq{">off</a></td></tr>\n};
+	    	print qq{<td id="via_message_off" style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("Via-Punkt entfernen"), qq{">off</a></td></tr>\n};
 	    } else {
 		print qq{<td width=40>&nbsp;</td></tr>\n};
 	    }
@@ -2960,9 +2962,12 @@ function " . $type . "char_init() {}
 		print <<EOF;
 <style type="text/css">
 div#routing  	  { position: relative; font-size: xx-large; }
-div#routing input { font-size: xx-large; }
-div.autocomplete  { font-size: xx-large; }
+div#routing input { font-size: 200%; }
+div.autocomplete  { font-size: 200%; }
+td#via_message a, td#via_message_off a  { font-size: 300%; }
 input 		  { margin: 0.3em; }
+input[type='submit']  { float: left; margin-left: 2em; margin-top: 1.5em; color: green; }
+span#housenumber  { font-size: 200%; }
 </style>
 EOF
 
@@ -3540,6 +3545,7 @@ sub get_kreuzung {
 	print <<EOF;
 <style type="text/css">
 body, select, input { font-size: x-large }
+input[type='submit']  { color: green; font-size: 200%; }
 </style>
 EOF
     }
