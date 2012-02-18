@@ -2732,7 +2732,9 @@ EOF
 
 	    my $searchinput = 'suggest_' . $type;
 	    #print $icon_image;
-	    print qq{<input id="$searchinput" size="42" type="text" name="$type" value="" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
+	    my $input_size = is_mobile($q) ? 20 : 42;
+
+	    print qq{<input id="$searchinput" size="$input_size" type="text" name="$type" value="" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
 
 	   if ($enable_opensearch_suggestions) { 
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
@@ -2867,7 +2869,7 @@ function " . $type . "char_init() {}
 	    if ($type eq 'start') { 
 	    	print qq{<td id="via_message" style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message')" title="}, M("Via-Punkt hinzuf&uuml;gen (optional)"), qq{">via</a></td></tr>\n};
 	    } elsif ($type eq 'via') { 
-	    	print qq{<td style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("Via-Punkt entfernen"), qq{">off</a></td></tr>\n};
+	    	print qq{<td id="via_message_off" style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("Via-Punkt entfernen"), qq{">off</a></td></tr>\n};
 	    } else {
 		print qq{<td width=40>&nbsp;</td></tr>\n};
 	    }
@@ -2954,15 +2956,18 @@ function " . $type . "char_init() {}
 
 	    my $BBBikeGooglemap = 1;
             if (is_mobile($q)) {
-		$BBBikeGooglemap = 0;
+		#$BBBikeGooglemap = 0;
 		$enable_homemap_streets = 0;
 
 		print <<EOF;
 <style type="text/css">
 div#routing  	  { position: relative; font-size: xx-large; }
-div#routing input { font-size: xx-large; }
-div.autocomplete  { font-size: xx-large; }
+div#routing input { font-size: 200%; }
+div.autocomplete  { font-size: 200%; }
+td#via_message a, td#via_message_off a  { font-size: 300%; }
 input 		  { margin: 0.3em; }
+input[type='submit']  { float: left; margin-left: 2em; margin-top: 1.5em; color: green; }
+span#housenumber  { font-size: 200%; }
 </style>
 EOF
 
@@ -2977,7 +2982,7 @@ EOF
 		&BBBikeAds::adsense_linkblock if &is_production($q) && !is_mobile($q);
 		print qq{</div>\n\n};
 	        my $maps = BBBikeGooglemap->new();
-	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'region' => $region, 'cache' =>$q->param('cache') );
+	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'region' => $region, 'cache' =>$q->param('cache')||0, 'nomap' =>  is_mobile($q) );
 	    }
 
 if ($enable_homemap_streets) {
@@ -3540,6 +3545,7 @@ sub get_kreuzung {
 	print <<EOF;
 <style type="text/css">
 body, select, input { font-size: x-large }
+input[type='submit']  { color: green; font-size: 200%; }
 </style>
 EOF
     }
@@ -5980,14 +5986,13 @@ EOF
 	        print qq{<p></p>\n};
 		print qq{</div>\n\n};
 
-		if (is_mobile($qq)) {
-		   #
-		} elsif (!$gmapsv3) {
-		print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="800" scrolling="no"></iframe><p></p>};
-		print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
+		if (!$gmapsv3 && !is_mobile($qq)) {
+		    print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="800" scrolling="no"></iframe><p></p>};
+		    print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 		} else {
 		   my $maps = BBBikeGooglemap->new();
-                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1, 'region' => $region, 'cache' => $q->param('cache') || 0, 'debug' => $debug );
+                   $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1,
+			      'region' => $region, 'cache' => $q->param('cache') || 0, 'debug' => $debug, 'nomap' => is_mobile($qq) );
 		}
 	    }
 
@@ -7974,6 +7979,13 @@ sub header {
     if (!$smallform) {
 
 	my $title2 = delete $args{-title2};	
+
+	# mobile devices
+        my @viewport;
+        if (is_mobile($q)) {
+	    # @viewport = ('viewport' => "width=320; initial-scale=1.0, max-scale=4.0, user-scalable=yes");
+        }
+
 	print $q->start_html
 	    (%args,
 	     #-lang => 'de-DE',
@@ -7981,6 +7993,7 @@ sub header {
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
 		     'copyright'=>'(c) 1998-2012 Slaven Rezic + Wolfram Schneider',
+		     @viewport
 		    },
 	     -author => $BBBike::EMAIL,
 	    );
