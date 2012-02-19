@@ -32,6 +32,8 @@ var bbbike = {
         OCMTransport: true,
         MapQuest: true,
         MapQuestSatellite: true,
+        Esri: true,
+        EsriTopo: true,
 
         YahooMapMapType: true,
         YahooHybridMapType: true,
@@ -86,7 +88,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo"],
 
     area: {
         visible: true,
@@ -751,6 +753,37 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 19
     };
 
+    var esri_options = {
+        bbbike: {
+            "name": "Esri",
+            "description": "Esri, by arcgisonline.com"
+        },
+        getTileUrl: function (a, z) {
+            return "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/" + z + "/" + a.y + "/" + a.x + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "ESRI",
+        minZoom: 1,
+        maxZoom: 18
+    };
+
+    var esri_topo_options = {
+        bbbike: {
+            "name": "Esri Topo",
+            "description": "Esri Topo, by arcgisonline.com"
+        },
+        getTileUrl: function (a, z) {
+            return "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/" + z + "/" + a.y + "/" + a.x + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "ESRI-TOPO",
+        minZoom: 1,
+        maxZoom: 18
+    };
 
     // http://png.maps.yimg.com/png?t=m&v=4.1&s=256&f=j&x=34&y=11&z=12
     // http://png.maps.yimg.com/png?t=m&v=4.1&s=256&f=j&x=34&y=11&z=12
@@ -1142,6 +1175,20 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("mapquest_satellite", lang, mapquest_satellite_options.bbbike);
             }
         },
+        "esri": function () {
+            if (bbbike.mapType.Esri) {
+                var EsriMapType = new google.maps.ImageMapType(esri_options);
+                map.mapTypes.set("esri", EsriMapType);
+                custom_map("esri", lang, esri_options.bbbike);
+            }
+        },
+        "esri_topo": function () {
+            if (bbbike.mapType.EsriTopo) {
+                var EsriTopoMapType = new google.maps.ImageMapType(esri_topo_options);
+                map.mapTypes.set("esri_topo", EsriTopoMapType);
+                custom_map("esri_topo", lang, esri_topo_options.bbbike);
+            }
+        },
     };
 
     // custome layer
@@ -1179,6 +1226,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.yahoo_hybrid();
     mapControls.tah();
     mapControls.mapnik_bw();
+    mapControls.esri();
+    mapControls.esri_topo();
 
     map.setMapTypeId(maptype);
     if (is_supported_maptype(maptype, bbbike.available_custom_maps)) {
@@ -1728,6 +1777,8 @@ function translate_mapcontrol(word, lang) {
             "bing_hybrid": "Bing (Hybrid)",
             "FullScreen": "Full Screen View",
             "SlideShow": "Map Slide Show",
+            "esri": "Esri",
+            "esri_topo": "Esri Topo",
             "bing_birdview": "Bing (Sat)" // Birdview
         },
 
