@@ -31,7 +31,7 @@ var bbbike = {
         OCMLandscape: true,
         OCMTransport: true,
         MapQuest: true,
-        MapQuestTopo: true,
+        MapQuestSatellite: true,
 
         YahooMapMapType: true,
         YahooHybridMapType: true,
@@ -56,7 +56,7 @@ var bbbike = {
         "yahoo_map": "BOTTOM_RIGHT",
         "yahoo_hybrid": "BOTTOM_RIGHT",
         "mapquest": "BOTTOM_RIGHT",
-        "mapquest_topo": "BOTTOM_RIGHT",
+        "mapquest_satellite": "BOTTOM_RIGHT",
         "yahoo_satellite": "BOTTOM_RIGHT"
     },
 
@@ -86,7 +86,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_topo"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite"],
 
     area: {
         visible: true,
@@ -735,10 +735,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 19
     };
 
-    var mapquest_topo_options = {
+    var mapquest_satellite_options = {
         bbbike: {
-            "name": "MapQuest Topo",
-            "description": "MapQuest Topo, by mapquest.de"
+            "name": "MapQuest (Sat)",
+            "description": "MapQuest Satellite, by mapquest.de"
         },
         getTileUrl: function (a, z) {
             return "http://mtile0" + randomServer(4) + ".mqcdn.com/tiles/1.0.0/vy/sat/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -1135,11 +1135,11 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("mapquest", lang, mapquest_options.bbbike);
             }
         },
-        "mapquest_topo": function () {
-            if (bbbike.mapType.MapQuestTopo) {
-                var MapQuestTopoMapType = new google.maps.ImageMapType(mapquest_topo_options);
-                map.mapTypes.set("mapquest_topo", MapQuestTopoMapType);
-                custom_map("mapquest_topo", lang, mapquest_topo_options.bbbike);
+        "mapquest_satellite": function () {
+            if (bbbike.mapType.MapQuestSatellite) {
+                var MapQuestSatelliteMapType = new google.maps.ImageMapType(mapquest_satellite_options);
+                map.mapTypes.set("mapquest_satellite", MapQuestSatelliteMapType);
+                custom_map("mapquest_satellite", lang, mapquest_satellite_options.bbbike);
             }
         },
     };
@@ -1171,7 +1171,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.bing_map_old();
     mapControls.yahoo_map();
     mapControls.mapquest();
-    mapControls.mapquest_topo();
+    mapControls.mapquest_satellite();
     mapControls.bing_satellite();
     mapControls.bing_birdview();
     mapControls.yahoo_satellite();
@@ -1719,7 +1719,7 @@ function translate_mapcontrol(word, lang) {
             "mapnik_bw": "Mapnik (b/w)",
             "yahoo_map": "Yahoo",
             "mapquest": "MapQuest",
-            "mapquest_topo": "MapQuest (Sat)",
+            "mapquest_satellite": "MapQuest (Sat)",
             "yahoo_hybrid": "Yahoo (hybrid)",
             "yahoo_satellite": "Yahoo (Sat)",
             "bing_map": "Bing",
