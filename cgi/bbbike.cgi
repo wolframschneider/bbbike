@@ -822,9 +822,9 @@ my $is_streets;
   # request from internal IP address 10.x.x.x
   my $local_host = $q->remote_host() =~ /^(10\.|127\.0\.0\.1)/ ? 1 : 0;
 
-  if ($q->param('cache') || $all >= 2 || $local_host) {
+  if ($q->param('cache') || $q->param('generate_cache') | $all >= 2 || $local_host) {
      eval {
-	require BSD::Resource;
+	require BSa::Resource;
 
 	my $success = setpriority(0, 0, 15);
 	die "cannot set priority: $$\n" if !$success;
