@@ -1451,6 +1451,8 @@ if (defined $q->param('begin')) {
 } elsif (defined $q->param('info') || $q->path_info eq '/_info') {
     $q->delete('info');
     show_info();
+} elsif (defined $q->param('generate_cache') ) {
+    generate_cache($q);
 } elsif (defined $q->param('uploadpage') ||
 	 defined $q->param('gps')) {
     $q->delete('uploadpage');
@@ -8372,6 +8374,28 @@ EOF
 	}
 	print "><br>\n";
     }
+}
+
+sub generate_cache {
+    my $q = shift;
+
+    http_header(-content => "text/plain", '-expires' => '+1s');
+    &_generate_cache();
+    print "cache regenerated\n";
+    exit(0);
+}
+
+sub _generate_cache {
+    get_streets_rebuild_dependents();
+
+    # "strassen", "inaccessible_strassen"
+    $net = make_netz();
+
+    # all_crossings
+    new_kreuzungen();
+
+    # gridx
+    get_streets()->nearest_point("0,0", FullReturn => 1);
 }
 
 sub choose_all_form {
