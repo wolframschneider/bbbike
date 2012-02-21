@@ -54,7 +54,6 @@ sub pdf_title {
     if ($url =~ m,/([^/]+)$,) {
         $city = $1;
     }
-    use Data::Dumper; open OUT, "> /tmp/foo"; print OUT Dumper($out);
 
     my $title = "BBBike.org$url";
     #$title .= " // " . $out->{City_en} if $city && $city ne $out->{City_en};

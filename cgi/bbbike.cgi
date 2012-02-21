@@ -822,9 +822,9 @@ my $is_streets;
   # request from internal IP address 10.x.x.x
   my $local_host = $q->remote_host() =~ /^(10\.|127\.0\.0\.1)/ ? 1 : 0;
 
-  if ($q->param('cache') || $all >= 2 || $local_host) {
+  if ($q->param('cache') || $q->param('generate_cache') | $all >= 2 || $local_host) {
      eval {
-	require BSD::Resource;
+	require BSa::Resource;
 
 	my $success = setpriority(0, 0, 15);
 	die "cannot set priority: $$\n" if !$success;
@@ -948,7 +948,13 @@ sub M ($) {
     return $text;
 }
 
-my $no_name = '(' . M("Straße ohne Namen") . ')';
+my $no_name_t = "Straße ohne Namen";
+my $no_name = M("Straße ohne Namen");
+# no translation, convert charset to utf8
+if ($no_name eq $no_name_t) {
+    $no_name = Encode::decode("iso8859-1", $no_name);
+}
+$no_name = "($no_name)";
 
 # select city name by language
 sub select_city_name {
@@ -1445,6 +1451,8 @@ if (defined $q->param('begin')) {
 } elsif (defined $q->param('info') || $q->path_info eq '/_info') {
     $q->delete('info');
     show_info();
+} elsif (defined $q->param('generate_cache') ) {
+    generate_cache($q);
 } elsif (defined $q->param('uploadpage') ||
 	 defined $q->param('gps')) {
     $q->delete('uploadpage');
@@ -5143,7 +5151,7 @@ sub display_route {
 			  TotalDist => $ges_entf,
 			  TotalDistString => $ges_entf_s,
 			  DirectionString => M("angekommen") . "!",
-			  DirectionHtml => M("angekommen") . "!",
+			  DirectionHtml => ($is_m ? "" : M("angekommen") . "!"), # save column space in m.bbbike.de
 			  Strname => $real_zielname,
 			  Comment => '',
 			  CommentHtml => '',
@@ -5962,7 +5970,7 @@ EOF
 	    print qq{<span id="pdf_span1">\n};
 	    print $q->start_form(-method=>"POST", -name => "pdfForm", -target => "_new", -action => "" );
 	    foreach my $name (qw/imagetype startname zielname draw coords/) {
-		print $q->hidden(-name => $name, -default => [ $pdf_url->param($name) ]), "\n";
+		print $q->hidden(-name => $name, -default =>  [ $pdf_url->param($name) ] ), "\n";
 	    }
 	    print $q->end_form;
 	    print qq{\n</span>\n};
@@ -8366,6 +8374,28 @@ EOF
 	}
 	print "><br>\n";
     }
+}
+
+sub generate_cache {
+    my $q = shift;
+
+    http_header(-content => "text/plain", '-expires' => '+1s');
+    &_generate_cache();
+    print "cache regenerated\n";
+    exit(0);
+}
+
+sub _generate_cache {
+    get_streets_rebuild_dependents();
+
+    # "strassen", "inaccessible_strassen"
+    $net = make_netz();
+
+    # all_crossings
+    new_kreuzungen();
+
+    # gridx
+    get_streets()->nearest_point("0,0", FullReturn => 1);
 }
 
 sub choose_all_form {
