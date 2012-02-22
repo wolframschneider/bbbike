@@ -5969,9 +5969,13 @@ EOF
 
 	    print qq{<span id="pdf_span1">\n};
 	    print $q->start_form(-method=>"POST", -name => "pdfForm", -target => "_new", -action => "" );
+	    # optimize for print
+	    print $q->hidden(-name => 'outputtarget', -value => "print" ), "\n";
+
 	    foreach my $name (qw/imagetype startname zielname draw coords/) {
 		print $q->hidden(-name => $name, -default =>  [ $pdf_url->param($name) ] ), "\n";
 	    }
+
 	    print $q->end_form;
 	    print qq{\n</span>\n};
 
