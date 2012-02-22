@@ -100,17 +100,7 @@ EOF
 *** NOTE: if you want to build HTML documentation using "make bbbikedoc"
 *** you should install Marek::Pod::HTML to get best results
 EOF
-    my $pod2html;
-    if (-e "/usr/perl5.8.1/bin/pod2html") {
-	$pod2html = "perl5.8.1 /usr/perl5.8.1/bin/pod2html";
-    } elsif (-x "/usr/perl5.7.2/bin/pod2html") {
-	# XXX --htmlroot with bugs: one level module names are not linked
-	$pod2html = "/usr/perl5.7.2/bin/pod2html $htmlroot -css html/bbbikepod.css --header";
-    } elsif (-x "/usr/perl5.6.0/bin/pod2html") {
-	$pod2html = "/usr/perl5.6.0/bin/pod2html $htmlroot";
-    } else {
-	$pod2html = "pod2html";
-    }
+    my $pod2html = "pod2html";
     $bbbike_html_rule = "";
     for my $poddef (@pods) {
 	$bbbike_html_rule .= <<EOF
@@ -655,11 +645,16 @@ DEB_APACHE=	apache2
 DEB_MAPSERVER=	mapserver-bin cgi-mapserver
 
 # Debian packages from own repo
+# Available from
+#
+#    deb http://mydebs.bbbike.de squeeze main
+#
 OWN_DEB=	libapache-session-counted-perl libpalm-palmdoc-perl \
 		libgd-svg-perl libgeo-spacemanager-perl \
 		libgeo-distance-perl libgeo-distance-xs-perl \
 		libobject-iterate-perl libkwalify-perl libcdb-file-perl \
-		libgeo-coder-bing libgeo-coder-googlev3 libgeo-coder-osm
+		libgeo-coder-bing-perl libgeo-coder-googlev3-perl libgeo-coder-osm-perl \
+		libgeo-proj4-perl
 
 # All packages needed for full-flavoured Web server operation:
 DEB_ALL_CGI=	$(DEB_DEVEL)      \
@@ -681,8 +676,8 @@ DEB_ALL=	libalgorithm-diff-perl libapache-session-perl libarchive-zip-perl \
 		libdate-pcalc-perl libdb-file-lock-perl libdbd-mysql-perl \
 		libdbd-xbase-perl libdbi-perl libdbix-class-perl libdevel-leak-perl \
 		libfile-readbackwards-perl libflickr-api-perl libfont-afm-perl \
-		libgd-gd2-perl libgeo-coder-google-perl libgeo-distance-perl \
-		libgeo-distance-xs-perl libgeo-metar-perl libimage-exiftool-perl \
+		libgd-gd2-perl libgeo-coder-google-perl \
+		libgeo-metar-perl libimage-exiftool-perl \
 		libimage-info-perl libimager-perl libinline-perl libipc-run-perl \
 		libjson-xs-perl libmailtools-perl libmime-lite-perl libmldbm-perl \
 		libobject-realize-later-perl libpdf-create-perl \
@@ -694,8 +689,7 @@ DEB_ALL=	libalgorithm-diff-perl libapache-session-perl libarchive-zip-perl \
 		libwww-shorten-perl libx11-protocol-perl libxml-libxml-perl \
 		libxml-parser-perl libxml-sax-perl libxml-simple-perl libxml-twig-perl \
 		libyaml-perl libyaml-syck-perl perl perl-modules perl-tk perlmagick \
-		libgeo-coder-bing libgeo-coder-googlev3 libgeo-coder-osm libhtml-format-perl \
-		libmath-round-perl
+		libhtml-format-perl libmath-round-perl libgdal-perl
 
 # XXX Does not work, see below
 install-debian-for-cgi:	install-debian-packages-for-cgi \
@@ -707,14 +701,8 @@ install-debian-packages-for-apache:
 install-debian-packages-for-cgi:
 	aptitude install ${DEB_ALL_CGI}
 
-# Assumes own deb packages are in ~/work/mydebs
-# XXX Does not work: dpkg expects full filenames, not package names!
-install-debian-owndebs-for-cgi:
-	cd ${HOME}/work/mydebs && \
-	    dpkg --install ${OWN_DEB}
-
 install-debian-packages-for-all:
-	aptitude install ${DEB_ALL}
+	aptitude install ${DEB_ALL} ${OWN_DEB}
 
 ######################################################################
 # par

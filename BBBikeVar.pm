@@ -102,6 +102,9 @@ $BBBIKE_CVS_HTTP = 'http://bbbike.cvs.sourceforge.net/viewvc/bbbike/bbbike/';
 
 $BBBIKE_GOOGLEMAP_URL = 'slippymap.cgi';
 
+$BBBIKE_LEAFLET_URL = 'http://bbbike.de/BBBike/html/bbbikeleaflet.html';
+$BBBIKE_LEAFLET_CGI_URL = 'http://bbbike.de/cgi-bin/bbbikeleaflet.cgi';
+
 1;
 
 __END__
