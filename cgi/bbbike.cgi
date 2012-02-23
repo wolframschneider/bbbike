@@ -21,9 +21,11 @@ bbbike.cgi - CGI interface to bbbike
 
 BEGIN {
     $ENV{SERVER_NAME} ||= "";
-    open(STDERR, ">> /tmp/bbbike.log")
-	if $ENV{SERVER_NAME} =~ /sourceforge/ ||
-           $ENV{SERVER_NAME} =~ m,^(dev|test).*$,;
+    if ($ENV{SERVER_NAME} =~ /sourceforge/ || $ENV{SERVER_NAME} =~ m,^(dev|test).*$,) {
+	my $error_log = "/tmp/bbbike.log";
+	warn "Redirect error log on test server to $error_log\n";
+    	open(STDERR, ">> $error_log");
+    }
 	 
     $^W = 1 if $ENV{SERVER_NAME} =~ /herceg\.de/i;
     $main::datadir = $ENV{'DATA_DIR'} || "data";
@@ -811,6 +813,22 @@ my $is_streets;
   $lang = $local_lang if $local_lang && !$selected_lang;
   $is_streets = &is_streets($q);
 }
+
+# local language links redirect: /de/Berlin/ -> /Berlin/
+if ($local_lang eq $selected_lang) {
+    my $q= new CGI;
+    $q->delete('all');
+
+    my $path_info = $q->url( -absolute => 1, -query => 0, -full => 0);
+
+    if ($q->url(-path_info=>1,-query=>1, -absolute => 1) eq $path_info && $path_info =~ m#^/([a-z]{1,2})(/[^/]+/(streets.html|))$#) {
+        warn "redirect to local language:  $local_lang $selected_lang $path_info\n";
+        print $q->redirect($2);
+    }
+}
+
+# Used for $use_utf8=1
+eval{BBBikeCGIUtil::decode_possible_utf8_params($q);};warn $@ if $@;
 
 # run cache requests with lower priority
 {
