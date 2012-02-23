@@ -370,7 +370,7 @@ sub read_from_fh {
 	die $msg, "\n";
     }
     if (%line_directive) {
-	die "Stray line directive `@{[ keys %line_directive ]}' at end of file\n";
+	warn "Stray line directive `@{[ keys %line_directive ]}' at end of file\n";
     }
     if (@errors) {
 	warn_or_die("ERROR: found following errors:\n" . join("\n", @errors) . "\n");
