@@ -842,7 +842,7 @@ eval{BBBikeCGIUtil::decode_possible_utf8_params($q);};warn $@ if $@;
 
   if ($q->param('cache') || $q->param('generate_cache') | $all >= 2 || $local_host) {
      eval {
-	require BSa::Resource;
+	require BSD::Resource;
 
 	my $success = setpriority(0, 0, 15);
 	die "cannot set priority: $$\n" if !$success;
