@@ -916,7 +916,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     // list = 4;
     //
 
-
     function randomServer(list) {
         var server;
 
