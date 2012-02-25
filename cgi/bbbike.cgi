@@ -827,9 +827,6 @@ if ($local_lang eq $selected_lang) {
     }
 }
 
-# Used for $use_utf8=1
-eval{BBBikeCGIUtil::decode_possible_utf8_params($q);};warn $@ if $@;
-
 # run cache requests with lower priority
 {
   my $q = new CGI;
