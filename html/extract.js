@@ -178,7 +178,7 @@ function osm_init() {
 
         var sqm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
         if ($("#square_km")) {
-            $("#square_km").html("area covers " + sqm + " square km");
+            $("#square_km").html("area covers " + large_int(sqm) + " square km");
         }
 
         if (sqm > 200000) {
@@ -218,4 +218,17 @@ function osm_init() {
     }
 
     startExport();
+}
+
+// 240000 -> 240,000
+
+
+function large_int(number) {
+    var string = String(number);
+
+    if (number < 1000) {
+        return number;
+    } else {
+        return string.slice(0, -3) + "," + string.slice(-3, 4);
+    }
 }
