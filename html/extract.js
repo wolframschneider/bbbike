@@ -222,13 +222,12 @@ function osm_init() {
 
 // 240000 -> 240,000
 
-
 function large_int(number) {
     var string = String(number);
 
     if (number < 1000) {
         return number;
     } else {
-        return string.slice(0, -3) + "," + string.slice(-3, 4);
+        return string.slice(0, -3) + "," + string.substring(-3, 3);
     }
 }
