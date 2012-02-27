@@ -1,9 +1,15 @@
 // Copyright by http://www.openstreetmap.org/export
 // OSM License, 2012
+// http://bbbike.org
+// 
 // Start position for the map (hardcoded here for simplicity)
 var lat = 52.51703;
 var lon = 13.38885;
 var zoom = 10;
+
+// map box for Berlin, default
+var sw = [12.875, 52.329];
+var ne = [13.902, 52.705];
 
 // Initialise the 'map' object
 var map;
@@ -29,7 +35,24 @@ function init() {
     var layerCycleMap = new OpenLayers.Layer.OSM.CycleMap("OSM CycleMap");
     map.addLayer(layerCycleMap);
 
+    var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+    var bounds;
+
+    // read from input, back button pressed?
+    if ($("#sw_lng").val() && $("#sw_lat").val() && $("#ne_lng").val() && $("#ne_lat").val()) {
+        bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
+    }
+
+    // default city
+    else {
+        bounds = new OpenLayers.Bounds(sw[0], sw[1], ne[0], ne[1]);
+    }
+
+    bounds.transform(epsg4326, map.getProjectionObject());
+    map.zoomToExtent(bounds);
+
     if (!map.getCenter()) {
+        alert("foo");
         var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
         map.setCenter(lonLat, zoom);
     }
