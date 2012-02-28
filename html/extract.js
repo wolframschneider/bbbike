@@ -11,6 +11,8 @@ var zoom = 10;
 var sw = [12.875, 52.329];
 var ne = [13.902, 52.705];
 
+var max_skm = 240000;
+
 // Initialise the 'map' object
 var map;
 
@@ -199,12 +201,12 @@ function osm_init() {
     function validateControls() {
         var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
 
-        var sqm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
+        var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
         if ($("#square_km")) {
-            $("#square_km").html("area covers " + large_int(sqm) + " square km");
+            $("#square_km").html("area covers " + large_int(skm) + " square km");
         }
 
-        if (sqm > 200000) {
+        if (skm > max_skm) {
             $("#export_osm_too_large").show();
         } else {
             $("#export_osm_too_large").hide();
