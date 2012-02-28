@@ -131,8 +131,9 @@ Fahrradstraße in der Lauenburger Str.	?::projected 5870,4992 5905,5088 5927,5182
 #: section Straßen in Bau und Planung vvv
 # 
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20120201.1215.365686.html
+#: by: http://gleisdreieck-blog.de/2011/08/15/letzte-debatte-vor-beginn-der-neuen-baumfaellsaison/
 #: next_check: 2013-11-30
-Radweg Berlin-Leipzig, Abschnitt Yorckstr. - Monumentenstr.: wird bis Ende 2013 realisiert	?::projected 8358,9568 8337,9065
+Radweg Berlin-Leipzig, Abschnitt Yorckstr. - Monumentenstr.: wird bis Ende 2013 realisiert	?::projected 8333,9583 8338,9443 8388,9242 8337,9065
 # 
 #: by: http://www.stadtumbau-berlin.de/Fotos.4730.0.html
 #: next_check: 2012-04-01
@@ -580,7 +581,6 @@ Hauptstr.: besteht hier weiterhin die Radwegbenutzungspflicht? (im westlichen Ab
 Radroutenwegführung überprüfen	? 9890,12161 9875,12257 9869,12297 9852,12409
 Vulkanstr./Landsberger Allee - Große Leegestr.: hier existiert wohl eine Radwegführung mit Ampel, genauer anschauen!	? 15838,14319 15837,14324 15923,14334 15922,14344 15920,14357
 Alt-Lankwitz: parallele Fahrbahn, Qualität, genaue Lage?	? 7412,3484 7419,3500 7249,3598 7057,3713
-Mühlendamm: gibt es tatsächlich eine Busspur hier Richtung Südwesten?	?; 10574,12131 10512,12039
 Hermann-Stöhr-Platz: genaue Lage? Qualität: wassergebundene Decke, Pfützen bei großem Regen	? 12416,11876 12425,11809
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20120207.1005.365838.html vvv
 Hirschberger/Schreiberhauser: gibt es hier einen Zebrastreifen?	? 15188,11090 15212,11053
@@ -3250,17 +3250,18 @@ Sotzmannstr.: Qualität? Ist das tatsächlich die Sotzmannstr.?	? -4629,12835 -455
 #XXX del --- hier ist nur ein Einkaufszentrum --- #: XXX fehlt bei Berlin.coords.data: --- Märkische Zeile: gibt es tatsächlich einen Weg diesen Namens hier? Für Radfahrer relevant?	? 6855,21481 6874,21183
 Langenbeckstr.: ist die gesamte Straße asphaltiert?	? 24793,9860 25020,9728
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/05re.pdf/file?y=2012
-Alexander-Meißner-Str.: Qualität? Ist die Straße schon komplett fertiggestellt? Gibt es auch im südlichen Teil Radwege?	? 20078,-1029 20414,-1370 20464,-1730
+Alexander-Meißner-Str.: Qualität? Ist die Straße schon komplett fertiggestellt? Gibt es auch im südlichen Teil Radwege?	? 20078,-1029 20388,-1373 20394,-1397 20423,-1733
 #: XXX fehlt in Berlin.coords.data, PLZ=12526:
 Ludwig-Prandtl-Str.: Qualität? Ist die Straße schon komplett fertiggestellt?	? 19626,-1318 19855,-1214 19924,-1157 20078,-1029 20342,-777
 # 
 #: by: detailnetz vvv
 #: XXX fehlt in Berlin.coords.data vvv
 Gebrüder-Hirth-Str.: Qualität? Ist die Straße schon komplett fertiggestellt?	? 19626,-1318 19678,-1500 19686,-1705
-Melitta-Schiller-Str.: Qualität? Ist die Straße schon komplett fertiggestellt?	? 20050,-1715 20016,-1479 19855,-1214
-Rita-Maiburg-Str.: Qualität? Ist die Straße schon komplett fertiggestellt?	? 20342,-777 20761,-1166 20773,-1234 20872,-1748
+Melitta-Schiller-Str.: Qualität? Ist die Straße schon komplett fertiggestellt?	? 20050,-1715 20011,-1459 19855,-1214
+Rita-Maiburg-Str.: Qualität? Ist die Straße schon komplett fertiggestellt?	? 20342,-777 20782,-1199 20822,-1242 20833,-1298 20872,-1748
 #: XXX ^^^
-Hufenstr.: existiert diese Verlängerung? Qualität?	? 20814,-935 20773,-1234
+#: XXX Hufenstr. oder Hufenweg? Oder "Diepenseer Str.", laut osm?
+Hufenstr.: existiert diese Verlängerung? Qualität?	? 20814,-935 20782,-1199 20770,-1315 20757,-1457
 Blindschleichengang: existert eine Verbindung zur Venusstr.? Qualität?	? 19341,-129 19297,80
 Widosteig: exitiert eine Verbindung zum Bohnsdorfer Weg? Qualität?	? 19934,1102 19987,1192
 #: by: ^^^
@@ -3281,7 +3282,9 @@ Alleestr./Weinmeinsterstr.: existiert hier eine Ampel?	? -12557,11
 #: by: http://www.potsdam.de/cms/beitrag/10068810/966975/
 Radweg in der Bergstraße: wo genau?	? -17968,7253 -18232,6565
 #: XXX unbeleuchtet
-Asphaltierter Radweg Richtung Waltersdorf/Flughafen Schönefeld: wie geht es weiter?	? 21306,-975 21284,-1008 21273,-1057 21237,-1108
+Asphaltierter Radweg Richtung Waltersdorf/Flughafen Schönefeld: wie geht es weiter?	? 21306,-975 21284,-1008 21273,-1057 21165,-1161 21161,-1220 20833,-1298 20770,-1315 20394,-1397 20214,-1441
+#: XXX genaue Wegführung?
+Radweg: Qualität? Straßenschilder? Nachts beleuchtet?	? 20388,-1373 20011,-1459 19680,-1522 19618,-1531
 #: last_checked: 2010-10-16
 Am Seegraben/Alexander-Meißner-Str.: Ampel in Vorbereitung	?::inwork 19894,-835
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4100.html
