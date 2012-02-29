@@ -1,9 +1,17 @@
 // Copyright by http://www.openstreetmap.org/export
 // OSM License, 2012
+// http://bbbike.org
+// 
 // Start position for the map (hardcoded here for simplicity)
 var lat = 52.51703;
 var lon = 13.38885;
 var zoom = 10;
+
+// map box for Berlin, default
+var sw = [12.875, 52.329];
+var ne = [13.902, 52.705];
+
+var max_skm = 240000;
 
 // Initialise the 'map' object
 var map;
@@ -14,7 +22,7 @@ function init() {
         controls: [
         new OpenLayers.Control.Navigation(), new OpenLayers.Control.PanZoomBar(), new OpenLayers.Control.ScaleLine({
             geodesic: true
-        }), new OpenLayers.Control.MousePosition(), new OpenLayers.Control.Attribution(), new OpenLayers.Control.LayerSwitcher(), ],
+        }), new OpenLayers.Control.MousePosition(), new OpenLayers.Control.Attribution(), new OpenLayers.Control.LayerSwitcher()],
 
         maxExtent: new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
         maxResolution: 156543.0339,
@@ -29,7 +37,24 @@ function init() {
     var layerCycleMap = new OpenLayers.Layer.OSM.CycleMap("OSM CycleMap");
     map.addLayer(layerCycleMap);
 
+    var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+    var bounds;
+
+    // read from input, back button pressed?
+    if ($("#sw_lng").val() && $("#sw_lat").val() && $("#ne_lng").val() && $("#ne_lat").val()) {
+        bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
+    }
+
+    // default city
+    else {
+        bounds = new OpenLayers.Bounds(sw[0], sw[1], ne[0], ne[1]);
+    }
+
+    bounds.transform(epsg4326, map.getProjectionObject());
+    map.zoomToExtent(bounds);
+
     if (!map.getCenter()) {
+        alert("foo");
         var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
         map.setCenter(lonLat, zoom);
     }
@@ -176,12 +201,12 @@ function osm_init() {
     function validateControls() {
         var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
 
-        var sqm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
+        var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
         if ($("#square_km")) {
-            $("#square_km").html("area covers " + sqm + " square km");
+            $("#square_km").html("area covers " + large_int(skm) + " square km");
         }
 
-        if (sqm > 200000) {
+        if (skm > max_skm) {
             $("#export_osm_too_large").show();
         } else {
             $("#export_osm_too_large").hide();
@@ -218,4 +243,16 @@ function osm_init() {
     }
 
     startExport();
+}
+
+// 240000 -> 240,000
+
+function large_int(number) {
+    var string = String(number);
+
+    if (number < 1000) {
+        return number;
+    } else {
+        return string.slice(0, -3) + "," + string.substring(-3, 3);
+    }
 }
