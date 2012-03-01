@@ -7,9 +7,15 @@ var lat = 52.51703;
 var lon = 13.38885;
 var zoom = 10;
 
+/*
 // map box for Berlin, default
 var sw = [12.875, 52.329];
 var ne = [13.902, 52.705];
+*/
+
+// map box for San Francisco, default
+var sw = [-122.9, 37.2];
+var ne = [-121.7, 37.9];
 
 var max_skm = 240000;
 
