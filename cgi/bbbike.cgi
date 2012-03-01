@@ -4960,7 +4960,7 @@ sub display_route {
 			$richtung .= "-&gt;";
 		    } else {
 			if ($same_streetname_important_angle) {
-			    $richtung .= "weiter " . Strasse::de_artikel_genitiv($strname);
+			    $richtung .= "weiter " . Strasse::de_artikel_dativ($strname);
 			} else {
 			    $richtung .= Strasse::de_artikel($strname);
 			}
