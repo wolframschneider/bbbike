@@ -271,3 +271,49 @@ function large_int(number) {
         return string.slice(0, -3) + "," + string.substring(-3, 3);
     }
 }
+
+// validate lat or lng values
+
+
+function check_lat(lat) {
+    if (lat == NaN || lat == "") return false;
+    if (lat >= -180 && lat <= 180) return true;
+
+    return false;
+}
+
+function checkform() {
+    var ret = true;
+    var color_normal = "white";
+    var color_error = "red";
+
+    for (i = 0; i < document.forms[0].elements.length; ++i) {
+        var e = document.forms[0].elements[i];
+
+        if (e.value == "") {
+            // optional forms fields
+            if (e.name == "city") continue;
+
+            e.style.background = color_error;
+            e.focus();
+            ret = false;
+            continue;
+        }
+
+        if (e.name == "sw_lat" || e.name == "sw_lng" || e.name == "ne_lat" || e.name == "ne_lng") {
+            if (!check_lat(e.value)) {
+                e.style.background = color_error;
+                ret = false;
+                continue;
+            }
+        }
+
+        // reset color
+        e.style.background = color_normal;
+    }
+
+    if (!ret) {
+        alert("Please fill out all fields!");
+    }
+    return ret;
+}
