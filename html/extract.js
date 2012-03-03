@@ -293,8 +293,10 @@ function checkform() {
     var color_normal = "white";
     var color_error = "red";
 
-    for (i = 0; i < document.forms[0].elements.length; ++i) {
-        var e = document.forms[0].elements[i];
+    var inputs = $("form#extract input");
+    // debug("inputs elements: " + inputs.length); return false;
+    for (i = 0; i < inputs.length; ++i) {
+        var e = inputs[i];
 
         if (e.value == "") {
             // optional forms fields
@@ -340,4 +342,17 @@ function check_lat_form(noerror) {
     }
 
     return ret;
+}
+
+function debug(text, id) {
+    if (!id) {
+        id = "debug";
+    }
+
+    var tag = document.getElementById(id);
+    var today = new Date();
+
+    if (!tag) return;
+
+    tag.innerHTML = "debug: " + text; // + " " + today;
 }
