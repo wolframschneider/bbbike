@@ -19,6 +19,18 @@ var ne = [-121.7, 37.9];
 
 var max_skm = 240000;
 
+var config = {
+    "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
+    "color_normal": "white",
+    "color_error": "red",
+    "max_skm": 240000,
+    // map box for San Francisco, default
+    "sw": [-122.9, 37.2],
+    "ne": [-121.7, 37.9],
+
+    "dummy": ""
+};
+
 // Initialise the 'map' object
 var map;
 
@@ -274,7 +286,6 @@ function large_int(number) {
 
 // validate lat or lng values
 
-
 function check_lat(lat) {
     if (lat == NaN || lat == "") return false;
     if (lat >= -180 && lat <= 180) return true;
@@ -315,5 +326,21 @@ function checkform() {
     if (!ret) {
         alert("Please fill out all fields!");
     }
+    return ret;
+}
+
+
+function check_lat_form() {
+    var ret = true;
+
+    for (var i = 0; i < coord.length; i++) {
+        var val = $(coord[i]).val();
+        if (check_lat(val)) {
+
+        } else {
+            ret = false;
+        }
+    }
+
     return ret;
 }
