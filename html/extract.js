@@ -7,23 +7,12 @@ var lat = 52.51703;
 var lon = 13.38885;
 var zoom = 10;
 
-/*
-// map box for Berlin, default
-var sw = [12.875, 52.329];
-var ne = [13.902, 52.705];
-*/
-
-// map box for San Francisco, default
-var sw = [-122.9, 37.2];
-var ne = [-121.7, 37.9];
-
-var max_skm = 240000;
-
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
     "color_error": "red",
     "max_skm": 240000,
+
     // map box for San Francisco, default
     "sw": [-122.9, 37.2],
     "ne": [-121.7, 37.9],
@@ -68,13 +57,13 @@ function init() {
     var bounds;
 
     // read from input, back button pressed?
-    if ($("#sw_lng").val() && $("#sw_lat").val() && $("#ne_lng").val() && $("#ne_lat").val()) {
+    if (check_lat_form(1)) {
         bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
     }
 
     // default city
     else {
-        bounds = new OpenLayers.Bounds(sw[0], sw[1], ne[0], ne[1]);
+        bounds = new OpenLayers.Bounds(config.sw[0], config.sw[1], config.ne[0], config.ne[1]);
     }
 
     bounds.transform(epsg4326, map.getProjectionObject());
@@ -134,6 +123,12 @@ function osm_init() {
 
     function boundsChanged() {
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+
+        if (!check_lat_form()) {
+            alert("lat or lng value is out of range -180 ... 180");
+            return;
+        }
+
         var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
 
         bounds.transform(epsg4326, map.getProjectionObject());
@@ -233,7 +228,7 @@ function osm_init() {
             $("#square_km").html("area covers " + large_int(skm) + " square km");
         }
 
-        if (skm > max_skm) {
+        if (skm > config.max_skm) {
             $("#export_osm_too_large").show();
         } else {
             $("#export_osm_too_large").hide();
@@ -330,14 +325,16 @@ function checkform() {
 }
 
 
-function check_lat_form() {
+function check_lat_form(noerror) {
     var ret = true;
+    var coord = config.coord;
 
     for (var i = 0; i < coord.length; i++) {
         var val = $(coord[i]).val();
         if (check_lat(val)) {
-
+            $(coord[i]).css("background", config.color_normal);
         } else {
+            if (!noerror) $(coord[i]).css("background", config.color_error);
             ret = false;
         }
     }
