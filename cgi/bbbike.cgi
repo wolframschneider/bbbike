@@ -7989,9 +7989,10 @@ sub header {
     	}
     }
 
-    push (@$head, $q->meta({-name => "robots", -content => "nofollow"})) 
-	if $is_streets;
-	
+    # only /city/street.html should be indexed by search engines, don't index local language versions
+    if ($is_streets) {
+        push (@$head, $q->meta({-name => "robots", -content => $selected_lang ? "nofollow,noindex,noarchive" : "nofollow" })) 
+    }
 
     # ignore directory service as DMOZ, Yahoo! and MSN
     push (@$head, $q->meta({-name => "robots", -content => "noodp,noydir"}));
