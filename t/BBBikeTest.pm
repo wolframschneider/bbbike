@@ -276,51 +276,118 @@ sub tidy_check {
 sub xmllint_string {
     my($content, $test_name, %args) = @_;
     my $schema = delete $args{-schema};
+    $test_name = "xmllint check" if !$test_name;
     local $Test::Builder::Level = $Test::Builder::Level+1;
  SKIP: {
 	my $no_of_tests = 1;
-	if (!defined $can_xmllint) {
-	    $can_xmllint = is_in_path("xmllint");
-	}
-	Test::More::skip("xmllint is not available", $no_of_tests) if !$can_xmllint;
-
-	$test_name = "xmllint check" if !$test_name;
-
-	require File::Temp;
-	my($errfh,$errfile) = File::Temp::tempfile(SUFFIX => ".log",
-						   UNLINK => 1);
-	my $cmd = "xmllint --noout";
-	if ($schema) {
-	    $cmd .= " --schema $schema";
-	}
-	$cmd .= " - ";
-	if ($^O ne 'MSWin32') {
-	    $cmd .= "2>$errfile";
-	}
-	warn $cmd if $debug;
-	open(my $XMLLINT, "| $cmd")
-	    or die "Error while opening xmllint: $!";
-	binmode $XMLLINT;
-	print $XMLLINT $content; # do not check for die
-	close $XMLLINT; # do not check for die, check $? later
-	my $ok = Test::More::is($?, 0, $test_name) or do {
-	    seek($errfh,0,0);
-	    my $errorcontent = do { local $/; <$errfh> };
-	    $content = "Errors:\n$errorcontent\nXML:\n$content";
-	    if (length($content) > 1024) {
-		require File::Temp;
-		my($tempfh,$tempfile) = File::Temp::tempfile(SUFFIX => ".xml",
-							     UNLINK => 0);
-		print $tempfh $content;
-		close $tempfh;
-		Test::More::diag("Please look at <$tempfile> for the tested XML content");
-	    } else {
-		Test::More::diag($content);
+	if (eval {
+	    require XML::LibXML;
+	    if ($schema && $schema =~ m{^https://}) {
+		require LWP::UserAgent;
 	    }
-	};
-	unlink $errfile;
-	$ok;
+	    1;
+	}) {
+	    _xmllint_string_with_XML_LibXML($content, $test_name, %args, -schema => $schema);
+	} else {
+	    if (!defined $can_xmllint) {
+		$can_xmllint = is_in_path("xmllint");
+	    }
+	    if ($can_xmllint) {
+		_xmllint_string_with_xmllint($content, $test_name, %args, -schema => $schema);
+	    } else {
+		Test::More::skip("xmllint is not available", $no_of_tests) if !$can_xmllint;
+	    }
+	}
     }
+}
+
+sub _xmllint_string_with_XML_LibXML {
+    my($content, $test_name, %args) = @_;
+    my $schema = delete $args{-schema};
+    local $Test::Builder::Level = $Test::Builder::Level+1;
+
+    my @errors;
+
+    my $p = XML::LibXML->new;
+    my $doc = eval { $p->parse_string($content) };
+    if (!$doc || $@) {
+	push @errors, "XML document is not well-formed:\n$@";
+    } elsif ($schema) {
+	my @schema_args;
+	if ($schema =~ m{^https://}) {
+	    my $ua = LWP::UserAgent->new;
+	    my $resp = $ua->get($schema);
+	    if (!$resp->is_success) {
+		push @errors, "Can't fetch $schema with LWP: " . $resp->message;
+	    } else {
+		@schema_args = (string => $resp->decoded_content);
+	    }
+	} else {
+	    @schema_args = (location => $schema);
+	}
+	if (@schema_args) {
+	    my $xmlschema = XML::LibXML::Schema->new(@schema_args);
+	    if (!eval { $xmlschema->validate($doc); 1 }) {
+		push @errors, "XML document has validation errors:\n$@";
+	    }
+	}
+    }
+
+    my $ok = Test::More::ok(!@errors, $test_name) or do {
+	my $diag = "Errors:\n" . join("\n", @errors) . "\nXML:\n" . $content;
+	if (length $diag > 1024) {
+	    require File::Temp;
+	    my($tempfh,$tempfile) = File::Temp::tempfile(SUFFIX => ".xml",
+							 UNLINK => 0);
+	    print $tempfh $diag;
+	    close $tempfh;
+	    Test::More::diag("Please look at <$tempfile> for the tested XML content");
+	} else {
+	    Test::More::diag($diag);
+	}
+    };
+    $ok;
+}
+
+sub _xmllint_string_with_xmllint {
+    my($content, $test_name, %args) = @_;
+    my $schema = delete $args{-schema};
+    local $Test::Builder::Level = $Test::Builder::Level+1;
+
+    require File::Temp;
+    my($errfh,$errfile) = File::Temp::tempfile(SUFFIX => ".log",
+					       UNLINK => 1);
+    my $cmd = "xmllint --noout";
+    if ($schema) {
+	$cmd .= " --schema $schema";
+    }
+    $cmd .= " - ";
+    if ($^O ne 'MSWin32') {
+	$cmd .= "2>$errfile";
+    }
+    warn $cmd if $debug;
+    open(my $XMLLINT, "| $cmd")
+	or die "Error while opening xmllint: $!";
+    binmode $XMLLINT;
+    print $XMLLINT $content; # do not check for die
+    close $XMLLINT; # do not check for die, check $? later
+    my $ok = Test::More::is($?, 0, $test_name) or do {
+	seek($errfh,0,0);
+	my $errorcontent = do { local $/; <$errfh> };
+	$content = "Errors:\n$errorcontent\nXML:\n$content";
+	if (length($content) > 1024) {
+	    require File::Temp;
+	    my($tempfh,$tempfile) = File::Temp::tempfile(SUFFIX => ".xml",
+							 UNLINK => 0);
+	    print $tempfh $content;
+	    close $tempfh;
+	    Test::More::diag("Please look at <$tempfile> for the tested XML content");
+	} else {
+	    Test::More::diag($content);
+	}
+    };
+    unlink $errfile;
+    $ok;
 }
 
 # only usable with Test::More, generates one test
@@ -366,7 +433,7 @@ sub kmllint_string {
  					 "misc",
  					 "kml21.xsd");
     if (!-r $kml_schema) {
-	if (1) {
+	if (0) {
 	    # since 2012-02-28 the schema file is located on a https URL
 	    # https://developers.google.com/kml/schema/kml21.xsd
 	    # which xmllint cannot handle
@@ -380,7 +447,11 @@ sub kmllint_string {
 		Test::More::diag("Local KML schema $kml_schema cannot be found, fallback to remote schema...");
 		$shown_kml_schema_warning = 1;
 	    }
-	    $kml_schema = "http://code.google.com/apis/kml/schema/kml21.xsd";
+	    ## The old location, now a redirect:
+	    #$kml_schema = "http://code.google.com/apis/kml/schema/kml21.xsd";
+	    ## Use the redirected location, so the heuristics can detect that
+	    ## this a https URL is used.
+	    $kml_schema = "https://developers.google.com/kml/schema/kml21.xsd";
 	}
     }
     xmllint_string($content, $test_name, %args, ($kml_schema ? (-schema => $kml_schema) : ()));
