@@ -837,7 +837,7 @@ if ($local_lang eq $selected_lang) {
   # request from internal IP address 10.x.x.x
   my $local_host = $q->remote_host() =~ /^(10\.|127\.0\.0\.1)/ ? 1 : 0;
 
-  if ($q->param('cache') || $q->param('generate_cache') | $all >= 3 || $local_host) {
+  if ($q->param('cache') || $q->param('generate_cache') || $all >= 3 || $local_host) {
      eval {
 	require BSD::Resource;
 
@@ -7989,9 +7989,10 @@ sub header {
     	}
     }
 
-    push (@$head, $q->meta({-name => "robots", -content => "nofollow"})) 
-	if $is_streets;
-	
+    # only /city/street.html should be indexed by search engines, don't index local language versions
+    if ($is_streets) {
+        push (@$head, $q->meta({-name => "robots", -content => $selected_lang ? "nofollow,noindex,noarchive" : "nofollow" })) 
+    }
 
     # ignore directory service as DMOZ, Yahoo! and MSN
     push (@$head, $q->meta({-name => "robots", -content => "noodp,noydir"}));
