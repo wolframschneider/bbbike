@@ -34,6 +34,7 @@ var bbbike = {
         MapQuestSatellite: true,
         Esri: true,
         EsriTopo: true,
+        MapBox: true,
 
         YahooMapMapType: true,
         YahooHybridMapType: true,
@@ -88,7 +89,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox"],
 
     area: {
         visible: true,
@@ -909,6 +910,22 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 17
     };
 
+    var mapbox_options = {
+        bbbike: {
+            "name": "MapBox",
+            "description": "MapBox OSM, by mapbox.com"
+        },
+        getTileUrl: function (a, z) {
+            return "http://" + randomServerOSM() + ".tiles.mapbox.com/v3/mapbox.mapbox-streets/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "MapQuest",
+        minZoom: 1,
+        maxZoom: 17
+    };
+
     //
     // select a tiles random server. The argument is either an interger or a 
     // list of server names , e.g.:
@@ -1188,6 +1205,13 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("esri_topo", lang, esri_topo_options.bbbike);
             }
         },
+        "mapbox": function () {
+            if (bbbike.mapType.MapBox) {
+                var MapBoxMapType = new google.maps.ImageMapType(mapbox_options);
+                map.mapTypes.set("mapbox", MapBoxMapType);
+                custom_map("mapbox", lang, mapbox_options.bbbike);
+            }
+        }
     };
 
     // custome layer
@@ -1227,6 +1251,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.mapnik_bw();
     mapControls.esri();
     mapControls.esri_topo();
+    mapControls.mapbox();
 
     map.setMapTypeId(maptype);
     if (is_supported_maptype(maptype, bbbike.available_custom_maps)) {
@@ -1778,6 +1803,7 @@ function translate_mapcontrol(word, lang) {
             "SlideShow": "Map Slide Show",
             "esri": "Esri",
             "esri_topo": "Esri Topo",
+            "mapbox": "MapBox",
             "bing_birdview": "Bing (Sat)" // Birdview
         },
 
