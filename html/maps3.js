@@ -1236,7 +1236,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("apple", lang, apple_options.bbbike);
             }
         }
-	// trailing comma for IE6
+        // trailing comma for IE6
     };
 
     // custome layer
