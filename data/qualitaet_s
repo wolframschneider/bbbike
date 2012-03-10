@@ -1065,7 +1065,7 @@ Parkplatz am Fischerhüttenweg - Schlachtensee: Waldweg	Q2 -1371,4424 -1453,4383 
 Fischerhüttenweg: Kopfsteinpflaster, schmale Asphaltbankette	Q2 -1274,4367 -1315,4393 -1371,4424 -1424,4504
 Weg am Riemeisterfenn: Waldweg, überwiegend OK	Q1 -604,5228 -118,5287 10,5343 79,5405 122,5416 161,5496 213,5582 309,5669 344,5738 325,5925 381,6094 331,6225 394,6368 441,6435
 Umgehungschaussee: fester breiter Waldweg	Q1 1149,7205 1168,7047 1176,6938 1170,6654 1126,6548 1057,6461 917,6301 866,6328 533,6479 441,6435
-Friedrichsgracht: Parkweg	Q1 10207,12055 10109,12238
+Friedrichsgracht: wassergebundene Decke, teilweise Holzbohlen	Q1 10207,12055 10109,12238
 Hüttenweg: relativer guter Waldweg	Q1 -927,6888 -1006,6911 -1241,7017 -1493,6984 -1851,6887
 Grunewald: teilweise sandig	Q2 -3475,6780 -3418,6747 -3305,6797 -3242,6884 -3133,6948 -2981,6941 -2805,6884 -2668,6862
 Grunewald: teilweise sehr sandig, steile Strecken	Q3 -2668,6862 -2581,6834 -2468,6839 -2366,6869 -2230,6909 -2080,6897
@@ -6318,6 +6318,13 @@ Kaskelstr.: Asphalt	Q0 15245,11178 15101,11231
 (Fischerstr. - Lückstr.): Beton mit Schäden	Q2 16516,10448 16501,10460 16572,10613 16587,10613
 (Fischerstr. - Lückstr.): Beton mit Schäden	Q1 16587,10613 16601,10650
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Asphalt mit einigen Schäden	Q1 17210,11950 17201,11975 17137,11969 17023,11908 17026,11888
+Rüdersdorfer Str. [Rückseite]: Beton	Q0 12923,12043 13014,11955 13040,11921 13088,11945 13050,11979 13014,11955
+Neue Jakobstr. [Wohngebiet]: Beton	Q0 11131,11579 10963,11695
+Annenstr.: Beton	Q0 11052,11414 11131,11579 11166,11664
+Fischerinsel [Wohngebiet]: Beton	Q0 10604,11941 10474,11843 10450,11823
+(Fischerinsel - Grünstraßenbrücke): Gehwegplatten	Q0 10474,11843 10517,11795
+Neue Blumenstr.: Beton mit einigen Schden	Q1 11607,12412 11709,12601
+Neue Blumenstr.: Asphalt	Q0 11709,12601 12006,12464
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3777,16532 -3870,16527 -3962,16527 -4096,16525
 Straße 140 (Rosenthal): guter Asphalt	Q0 8605,21248 8680,21208 8753,21253 8826,21369
 An den Hubertshäusern: guter Asphalt	Q0 -2049,2359 -1940,2400 -1963,2461 -2069,2429
@@ -10000,6 +10007,8 @@ Ketschendorfer Weg: sehr guter Asphalt	Q0 20361,14118 20461,14110 20620,14092 20
 Am Hellespont: guter Beton	Q0 10879,4358 10869,4233
 Jeanette-Wolff-Str.: asphaltiert	Q0 17551,-373 17563,-364 17669,-290 17726,-251 17789,-211 17848,-173 17928,-120
 Helene-Nathan-Weg: guter Asphalt	Q0 17681,-178 17726,-251
+Meißner Weg: Kopfsteinpflaster	Q2 15633,1161 15705,1019 15776,850 15854,666
+Meißner Weg: Asphalt	Q0 15434,1317 15344,1544
 (Buchbinderweg - Zittauer Str.): fester Sandweg	Q1 16485,1162 16435,1063 16419,1048 16387,976 16342,959
 Mohnweg: Beton, stellenweise leichte Aufwerfungen der Betonplatten	Q1 16242,2279 16114,2377 16045,2434 15862,2588 15779,2649
 Landhausweg: Asphalt	Q0 16308,1585 16464,1194 16489,1185
@@ -10866,6 +10875,7 @@ Hüttigpfad: Kopfsteinpflaster	Q2 5107,14781 5057,14824 4887,14931 4810,15000
 Jochen-Klepper-Weg: Waldweg, teilweise kleine Wurzeln	Q1 -3030,2266 -2784,2358 -2690,2385 -2372,2477
 Thürstr.: gutes Kopfsteinpflaster	Q1 93,2014 26,2179
 (Ottomar-Geschke-Str. - Rudower Str.): betonierter Weg/Straße, teilweise beschädigte Platten	Q2 21184,4293 21269,4316 21273,4333 21329,4383
+Vienweg: Asphalt	Q0 11977,22801 11505,23160
 Erich-Nehlhans-Str.: Asphalt	Q0 14006,13272 14132,13234 14224,13206
 Richard-Ermisch-Str.: Asphalt	Q0 14245,13268 14224,13206 14207,13152 14177,13065 14163,13025 14130,12926 14096,12827
 Zum Langen Jammer: Kopfsteinpflaster, Gehweg besser	Q2 14686,12873 14405,12953

@@ -1084,19 +1084,7 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Burgstraße: Bauarbeiten, Einbahnstraßenregelung',
-         'from' => undef,
-         'id' => 2219,
-         'data' => '#: by: wosch
-#: confirmed_by: srt
-#: last_checked: 2012-01-22
-#: note: eigentlich Radfahren auf der Friedrichsbrücke jetzt auch verboten
-userdel	q4::inwork; 10166,12777 10132,12941
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1282,10 +1270,11 @@ userdel	2::inwork 19750,11730 19827,11686 19881,11591
        {
          'source_id' => 'IM_017746',
          'until' => 1346425200,
-         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten, Straße vollständig gesperrt in beiden Richtungen zwischen Oderberger Str. und Schönhauser Allee, bis 31.08.2012 ',
+         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, mögliche Behinderungen, bis 31.08.2012 ',
          'from' => 1314604800,
          'id' => 2308,
-         'data' => 'userdel	q4::inwork 10723,14772 10838,14962 10881,15047
+         'data' => '#: note: am 2012-03-09 geprüft, Radfahrer konnten problemlos passieren
+userdel	q4::inwork 10723,14772 10838,14962 10881,15047
 ',
          'type' => 'handicap'
        },
@@ -1386,15 +1375,18 @@ userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 
 ',
          'type' => 'handicap'
        },
+       undef,
        {
-         'source_id' => 'IM_018478',
-         'until' => 1331132400,
-         'text' => 'Damerowstr. (Pankow): Baustelle, Fahrtrichtung gesperrt Richtung Berliner Str. zwischen Mendelstr. und Stiftsweg, 01.03.2012 07:20 Uhr bis 07.03.2012 16:00 Uhr ',
-         'from' => 1330496400,
-         'id' => 2319,
-         'data' => 'userdel	q4::inwork; 11357,18598 11204,18545 11168,18542 11001,18528
-',
-         'type' => 'handicap'
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Am Schloss Schönhausen: nachts gesperrt (im Sommer ab ca. 19 Uhr, im Winter ab Einbruch der Dunkelheit)',
+         'from' => undef,
+         'id' => 2320,
+         'data' => '#: by: cornelia (bayer...): vvv
+Am Schloss Schönhausen	2::night 10308,19297 10350,19182 10390,19069
+Am Schloss Schönhausen	2::night 10249,19148 10350,19182
+#: by: ^^^
+'
        }
      
 );
