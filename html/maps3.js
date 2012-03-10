@@ -35,6 +35,7 @@ var bbbike = {
         Esri: true,
         EsriTopo: true,
         MapBox: true,
+        Apple: true,
 
         YahooMapMapType: true,
         YahooHybridMapType: true,
@@ -89,7 +90,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple"],
 
     area: {
         visible: true,
@@ -926,6 +927,22 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 17
     };
 
+    var apple_options = {
+        bbbike: {
+            "name": "Apple",
+            "description": "Apple iPhone OSM, by apple.com"
+        },
+        getTileUrl: function (a, z) {
+            return "http://gsp2.apple.com/tile?api=1&style=slideshow&layers=default&lang=de_DE&z=" + z + "&x=" + a.x + "&y=" + a.y + "&v=9";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "apple",
+        minZoom: 1,
+        maxZoom: 14
+    };
+
     //
     // select a tiles random server. The argument is either an interger or a 
     // list of server names , e.g.:
@@ -1211,7 +1228,15 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 map.mapTypes.set("mapbox", MapBoxMapType);
                 custom_map("mapbox", lang, mapbox_options.bbbike);
             }
+        },
+        "apple": function () {
+            if (bbbike.mapType.Apple) {
+                var AppleMapType = new google.maps.ImageMapType(apple_options);
+                map.mapTypes.set("apple", AppleMapType);
+                custom_map("apple", lang, apple_options.bbbike);
+            }
         }
+	// trailing comma for IE6
     };
 
     // custome layer
@@ -1252,6 +1277,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.esri();
     mapControls.esri_topo();
     mapControls.mapbox();
+    mapControls.apple();
 
     map.setMapTypeId(maptype);
     if (is_supported_maptype(maptype, bbbike.available_custom_maps)) {
@@ -1804,6 +1830,7 @@ function translate_mapcontrol(word, lang) {
             "esri": "Esri",
             "esri_topo": "Esri Topo",
             "mapbox": "MapBox",
+            "apple": "Apple",
             "bing_birdview": "Bing (Sat)" // Birdview
         },
 
