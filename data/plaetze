@@ -98,7 +98,7 @@ Steinplatz (Friedrichshagen)	Pl 26062,5776
 Imchenplatz	Pl -6811,4893
 Piesporter Platz	Pl 15286,17300
 Breslauer Platz	Pl 5817,7223
-Kaisereiche	Pl 5654,6941
+Kaisereiche	Pl 5644,6936
 Schillerplatz	Pl 5074,7207
 Garbátyplatz	Pl 10705,17931
 Platz des 23. April	Pl 21954,5229
@@ -125,7 +125,7 @@ Inge-Beisheim-Platz	Pl 8473,11634
 Platz am Königstor	Pl 11706,13635
 Akademieplatz	Pl 19206,2848
 Dorothea-Schlegel-Platz	Pl 9108,12635
-Heiligengeistkirchplatz	Pl 10360,12793
+Heiligegeistkirchplatz	Pl 10360,12793
 Helmholtzplatz	Pl 11368,15301
 Wilhelm-Hasenclever-Platz	Pl 7231,16418
 Adam-Kuckhoff-Platz	Pl 4788,7257
@@ -208,6 +208,10 @@ Clara-Zetkin-Platz	Pl 22574,13017
 Paul-Levi-Platz	Pl 25041,14016
 Erich-Hermann-Platz	Pl 9982,-1818
 Hermann-Wundrich-Platz	Pl 11055,-1741
+Markus-Reich-Platz	Pl 13989,15589
+Innsbrucker Platz	Pl 6418,7958
+Carlo-Schmid-Platz	Pl -5118,13053
+Max-Beckmann-Platz	Pl 3490,23472
 Kottbusser Tor	Pl 11393,10390
 Anhalter Bahnhof	Pl 8947,10956
 Flughafen Tempelhof	Pl 9884,8265
@@ -239,6 +243,7 @@ Seebad Wendenschloß	Pl 23869,1282
 Strandbad Müggelsee	Pl 29089,4759
 Strandbad Wannsee	Pl -4684,3318
 Wannseehafen	Pl -4905,1514
+Tegel-Center	Pl 2295,20358
 Pfaueninsel	Pl -8564,2276
 Museumsinsel	Pl 9948,12631
 Modersohnbrücke	Pl 14096,11134
@@ -286,13 +291,12 @@ Shakespeareplatz	Pl 3898,11655
 Fröbelplatz	Pl 11870,15004
 Schierker Platz	Pl 12722,7261
 Böhmischer Platz	Pl 13546,7600
-Falkenplatz	Pl -1787,19341
+Falkenplatz	Pl -1788,19663 -1726,19725 -1739,19803 -1806,19806 -1788,19663
 Teutoburger Platz	Pl 10695,13952
 Platz am Spreetunnel	Pl 15383,9191
 Navarraplatz	Pl 11940,22587
 Cardinalplatz	Pl 21901,5728
 Klinkeplatz	Pl -3665,16378
-Monimbó-Platz	Pl 16998,11861
 Rodeliusplatz	Pl 16276,12273
 Zehlendorfer Eiche	Pl 820,3081
 Friedrichsbrunner Platz	Pl 12154,6063 12263,6086 12270,6025 12160,5997

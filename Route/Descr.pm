@@ -1,10 +1,9 @@
 # -*- perl -*-
 
 #
-# $Id: Descr.pm,v 1.4 2008/09/16 19:40:42 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2002 Slaven Rezic. All rights reserved.
+# Copyright (C) 2002,2012 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,8 +15,9 @@ package Route::Descr;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.4 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '1.05';
 
+use Encode;
 use Cwd qw(abs_path);
 use File::Basename qw(dirname);
 use Strassen::Strasse;
@@ -79,6 +79,11 @@ sub init_msg {
 	    if ($msg && ref $msg ne 'HASH') {
 		undef $msg;
 	    }
+
+	    foreach my $key (keys %$msg) {
+           	$msg->{$key} = Encode::decode("utf-8", $msg->{$key});
+       	    }
+
 	    $msg
 	}) {
 	    last;
@@ -104,6 +109,7 @@ sub convert {
     my $city_local  = delete $args{-City_local};
     my $city_en  = delete $args{-City_en};
     $unidecode  = delete $args{unidecode};
+    my $city = delete $args{-city} || 'Berlin_DE';
 
     if (keys %args) {
 	die "Invalid argument to outout method";
@@ -142,26 +148,44 @@ sub convert {
 	$ret{Title} = join(" ", @str);
     }
 
+    # Note: taken from display_route() in bbbike.cgi
     my @lines;
-    my($next_entf, $ges_entf_s, $next_winkel, $next_richtung);
+    my($next_entf, $ges_entf_s, $next_winkel, $next_richtung, $next_extra);
     my $ges_entf = 0;
     for(my $i = 0; $i <= $#strnames; $i++) {
 	my $strname;
 	my $etappe_comment = '';
-	my($entf, $winkel, $richtung)
-	    = ($next_entf, $next_winkel, $next_richtung);
-	($strname, $next_entf, $next_winkel, $next_richtung)
-	    = @{$strnames[$i]};
+	my $route_inx;
+	my $important_angle_crossing_name;
+	my($entf, $winkel, $richtung, $extra)
+	    = ($next_entf, $next_winkel, $next_richtung, $next_extra);
+	($strname, $next_entf, $next_winkel, $next_richtung,
+	 $route_inx, $next_extra) = @{$strnames[$i]};
+	$strname = Strasse::strip_bezirk_perfect($strname, $city);
 	if ($i > 0) {
 	    if (!$winkel) { $winkel = 0 }
 	    $winkel = int($winkel/10)*10;
-	    if ($winkel < 30) {
+	    my $same_streetname_important_angle =
+		@lines && $lines[-1]->[2] eq $strname && $extra && $extra->{ImportantAngleCrossingName};
+	    if ($winkel < 30 && (!$extra || !$extra->{ImportantAngle})) {
 		$richtung = "";
 	    } else {
 		$richtung =
 		    ($winkel <= 45 ? 'halb' : '') .
 			($richtung eq 'l' ? M('links') : M('rechts')) . ' ' .
-			    "($winkel°) " . (($lang||'') eq 'en' ? "->" : Strasse::de_artikel($strname));
+			    "($winkel°) ";
+		if (($lang||'') eq 'en') {
+		    $richtung .= '->';
+		} else {
+		    if ($same_streetname_important_angle) {
+			$richtung .= 'weiter ' . Strasse::de_artikel_dativ($strname);
+		    } else {
+			$richtung .= Strasse::de_artikel($strname);
+		    }
+		}
+	    }
+	    if ($same_streetname_important_angle) {
+		$important_angle_crossing_name = Strasse::strip_bezirk($extra->{ImportantAngleCrossingName});
 	    }
 	    $ges_entf += $entf;
 	    $ges_entf_s = sprintf "%.1f km", $ges_entf/1000;

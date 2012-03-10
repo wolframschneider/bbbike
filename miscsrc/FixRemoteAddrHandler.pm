@@ -1,10 +1,9 @@
 # -*- perl -*-
 
 #
-# $Id: FixRemoteAddrHandler.pm,v 1.3 2007/03/31 20:08:08 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2006,2009 Slaven Rezic. All rights reserved.
+# Copyright (C) 2006,2009,2011 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -25,28 +24,34 @@ Usage in httpd.conf:
    PerlRequire /home/e/eserte/src/bbbike/miscsrc/FixRemoteAddrHandler.pm
    PerlLogHandler FixRemoteAddrHandler::handler
 
-When using Apache2 and mod_perl2:
-
-   <Perl>
-       use Apache2::compat;
-   </Perl>
-
-and then the same as before.
-
 =cut
 
 use strict;
 use vars qw($VERSION);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.3 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '1.05';
 
-use Apache::Constants qw(DECLINED);
+use constant MP2 => (exists $ENV{MOD_PERL_API_VERSION} and $ENV{MOD_PERL_API_VERSION} >= 2);
+BEGIN {
+    if (MP2) {
+	require Apache2::RequestRec;
+	require Apache2::Connection;
+	require Apache2::Const;
+        Apache2::Const->import(qw(DECLINED));
+    } else {
+	require Apache::Constants;
+	Apache::Constants->import(qw(DECLINED));
+    }
+}
 
 sub handler {
     my $r = shift;
 
-    my $forwarded_for = $r->header_in("X-Forwarded-For");
+    my $forwarded_for = $r->headers_in->{"X-Forwarded-For"};
     if ($forwarded_for) {
-	$r->connection->remote_ip($forwarded_for);
+	my(@ips) = split /\s*,\s*/, $forwarded_for;
+	if ($ips[-1]) {
+	    $r->connection->remote_ip($ips[-1]);
+	}
     }
 
     DECLINED;

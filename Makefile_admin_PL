@@ -100,17 +100,7 @@ EOF
 *** NOTE: if you want to build HTML documentation using "make bbbikedoc"
 *** you should install Marek::Pod::HTML to get best results
 EOF
-    my $pod2html;
-    if (-e "/usr/perl5.8.1/bin/pod2html") {
-	$pod2html = "perl5.8.1 /usr/perl5.8.1/bin/pod2html";
-    } elsif (-x "/usr/perl5.7.2/bin/pod2html") {
-	# XXX --htmlroot with bugs: one level module names are not linked
-	$pod2html = "/usr/perl5.7.2/bin/pod2html $htmlroot -css html/bbbikepod.css --header";
-    } elsif (-x "/usr/perl5.6.0/bin/pod2html") {
-	$pod2html = "/usr/perl5.6.0/bin/pod2html $htmlroot";
-    } else {
-	$pod2html = "pod2html";
-    }
+    my $pod2html = "pod2html";
     $bbbike_html_rule = "";
     for my $poddef (@pods) {
 	$bbbike_html_rule .= <<EOF
@@ -633,12 +623,13 @@ winbindist: winbindist-pre
 # categorized:
 DEB_DEVEL=	git-core bison byacc flex g++ apt-show-versions freebsd-buildutils gcc \
 		libc6-dev libinline-perl strace rsync less make
-DEB_TEST=	libimage-info-perl libwww-mechanize-perl
-DEB_DRAW=	libgd2-xpm libgd2-xpm-dev perlmagick libimager-perl \
-		pdftk netpbm imagemagick libgd-gd2-perl ttf-bitstream-vera \
-		libpdf-create-perl libfont-afm-perl \
-		libtest-number-delta-perl \
-		libsvg-perl
+DEB_TEST=	libimage-info-perl libwww-mechanize-perl libemail-mime-perl
+# Note: libpango-perl not available in lenny, only squeeze
+DEB_DRAW=	libgd2-xpm libgd2-xpm-dev \
+		pdftk netpbm libgd-gd2-perl ttf-bitstream-vera \
+		libpdf-create-perl libcairo-perl libpango-perl libfont-afm-perl \
+		libtest-number-delta-perl
+DEB_DRAW_OPTIONAL= perlmagick libimager-perl imagemagick libsvg-perl
 DEB_MAIL=	libmime-lite-perl libmailtools-perl
 DEB_DATA=	libstring-approx-perl libdbd-xbase-perl libxml-parser-perl \
 		libxml-twig-perl libdbi-perl libtie-ixhash-perl \
@@ -648,16 +639,22 @@ DEB_DATA=	libstring-approx-perl libdbd-xbase-perl libxml-parser-perl \
 		libyaml-perl libyaml-syck-perl libjson-xs-perl \
 		libtext-unidecode-perl libdata-compare-perl agrep
 DEB_MISC=	libdate-calc-perl
+DEB_CGI=	libapache-session-perl libfile-counterfile-perl
 # If apache-perl is installed, then do not install apache2!
-DEB_CGI=	libapache-session-perl apache2 libfile-counterfile-perl
+DEB_APACHE=	apache2
 DEB_MAPSERVER=	mapserver-bin cgi-mapserver
 
 # Debian packages from own repo
+# Available from
+#
+#    deb http://mydebs.bbbike.de squeeze main
+#
 OWN_DEB=	libapache-session-counted-perl libpalm-palmdoc-perl \
 		libgd-svg-perl libgeo-spacemanager-perl \
 		libgeo-distance-perl libgeo-distance-xs-perl \
 		libobject-iterate-perl libkwalify-perl libcdb-file-perl \
-		libgeo-coder-bing libgeo-coder-googlev3 libgeo-coder-osm
+		libgeo-coder-bing-perl libgeo-coder-googlev3-perl libgeo-coder-osm-perl \
+		libgeo-proj4-perl
 
 # All packages needed for full-flavoured Web server operation:
 DEB_ALL_CGI=	$(DEB_DEVEL)      \
@@ -669,6 +666,9 @@ DEB_ALL_CGI=	$(DEB_DEVEL)      \
 		$(DEB_CGI)        \
 		$(DEB_MAPSERVER)  
 
+# All packages needed for Apache operation:
+DEB_ALL_APACHE= $(DEB_ALL_CGI) $(DEB_APACHE)
+
 # Complete list of required modules for full operation.
 # This is what is available on a typical debian/lenny system
 DEB_ALL=	libalgorithm-diff-perl libapache-session-perl libarchive-zip-perl \
@@ -676,8 +676,8 @@ DEB_ALL=	libalgorithm-diff-perl libapache-session-perl libarchive-zip-perl \
 		libdate-pcalc-perl libdb-file-lock-perl libdbd-mysql-perl \
 		libdbd-xbase-perl libdbi-perl libdbix-class-perl libdevel-leak-perl \
 		libfile-readbackwards-perl libflickr-api-perl libfont-afm-perl \
-		libgd-gd2-perl libgeo-coder-google-perl libgeo-distance-perl \
-		libgeo-distance-xs-perl libgeo-metar-perl libimage-exiftool-perl \
+		libgd-gd2-perl libgeo-coder-google-perl \
+		libgeo-metar-perl libimage-exiftool-perl \
 		libimage-info-perl libimager-perl libinline-perl libipc-run-perl \
 		libjson-xs-perl libmailtools-perl libmime-lite-perl libmldbm-perl \
 		libobject-realize-later-perl libpdf-create-perl \
@@ -689,23 +689,20 @@ DEB_ALL=	libalgorithm-diff-perl libapache-session-perl libarchive-zip-perl \
 		libwww-shorten-perl libx11-protocol-perl libxml-libxml-perl \
 		libxml-parser-perl libxml-sax-perl libxml-simple-perl libxml-twig-perl \
 		libyaml-perl libyaml-syck-perl perl perl-modules perl-tk perlmagick \
-		libgeo-coder-bing libgeo-coder-googlev3 libgeo-coder-osm libhtml-format-perl \
-		libmath-round-perl
+		libhtml-format-perl libmath-round-perl libgdal-perl
 
+# XXX Does not work, see below
 install-debian-for-cgi:	install-debian-packages-for-cgi \
 			install-debian-owndebs-for-cgi
+
+install-debian-packages-for-apache:
+	aptitude install ${DEB_ALL_APACHE}
 
 install-debian-packages-for-cgi:
 	aptitude install ${DEB_ALL_CGI}
 
-# Assumes own deb packages are in ~/work/mydebs
-# XXX Does not work: dpkg expects full filenames, not package names!
-install-debian-owndebs-for-cgi:
-	cd ${HOME}/work/mydebs && \
-	    dpkg --install ${OWN_DEB}
-
 install-debian-packages-for-all:
-	aptitude install ${DEB_ALL}
+	aptitude install ${DEB_ALL} ${OWN_DEB}
 
 ######################################################################
 # par
@@ -962,12 +959,18 @@ test-with-protocol: permission
 	    export HARNESS_NOTTY=1;\
 	    export HARNESS_TIMER=1;\
 	    export BBBIKE_LONG_TESTS=1;\
-	    $(MAKE) ext   >$(HOME)/log/bbbike-test-$$DATE 2>&1;\
+	    (echo -n "git describe: "; git describe;\
+	     echo "git status: "; git status;\
+	     echo ) >$(HOME)/log/bbbike-test-$$DATE 2>&1;\
+	    $(MAKE) ext  >>$(HOME)/log/bbbike-test-$$DATE 2>&1;\
 	    if ! $(MAKE) test >>$(HOME)/log/bbbike-test-$$DATE 2>&1; then \
 		echo "$(MAKE) test failed, please look at $(HOME)/log/bbbike-test-$$DATE for output";\
 		has_failure=yes;\
 	    fi; \
-	    if ! (cd data && $(MAKE) all slow-checks really-slow-checks >$(HOME)/log/bbbike-test-data-$$DATE 2>&1); then \
+	    (echo -n "git describe: "; git describe ;\
+	     echo "git status: "; git status;\
+	     echo ) >$(HOME)/log/bbbike-test-data-$$DATE 2>&1;\
+	    if ! (cd data && $(MAKE) all slow-checks really-slow-checks >>$(HOME)/log/bbbike-test-data-$$DATE 2>&1); then \
 		echo "$(MAKE) all slow-checks really-slow-checks failed, please look at $(HOME)/log/bbbike-test-data-$$DATE for output";\
 		has_failure=yes;\
 	    fi; \

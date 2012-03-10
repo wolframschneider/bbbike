@@ -1,10 +1,9 @@
 # -*- perl -*-
 
 #
-# $Id: BBBikeTest.pm,v 1.38 2008/02/20 23:04:06 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2004,2006,2008 Slaven Rezic. All rights reserved.
+# Copyright (C) 2004,2006,2008,2012 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -43,7 +42,7 @@ use BBBikeUtil qw(is_in_path);
 @EXPORT = (qw(get_std_opts set_user_agent do_display tidy_check
 	      xmllint_string xmllint_file gpxlint_string gpxlint_file kmllint_string
 	      eq_or_diff is_long_data like_long_data unlike_long_data
-	      like_html unlike_html),
+	      like_html unlike_html is_float using_bbbike_test_cgi),
 	   @opt_vars);
 
 # Old logfile
@@ -55,8 +54,10 @@ use BBBikeUtil qw(is_in_path);
 # New server since 2009-12-XX
 $logfile = "$ENV{HOME}/www/log/bbbike.hosteurope/bbbike.de_access.log";
 
+my $testdir = dirname(File::Spec->rel2abs(__FILE__));
+
 # load test config file
-my $config_file = dirname(File::Spec->rel2abs(__FILE__)) . "/test.config";
+my $config_file = "$testdir/test.config";
 #$config_file.=".example";#XXX!
 if (-e $config_file) {
     require $config_file;
@@ -275,51 +276,118 @@ sub tidy_check {
 sub xmllint_string {
     my($content, $test_name, %args) = @_;
     my $schema = delete $args{-schema};
+    $test_name = "xmllint check" if !$test_name;
     local $Test::Builder::Level = $Test::Builder::Level+1;
  SKIP: {
 	my $no_of_tests = 1;
-	if (!defined $can_xmllint) {
-	    $can_xmllint = is_in_path("xmllint");
-	}
-	Test::More::skip("xmllint is not available", $no_of_tests) if !$can_xmllint;
-
-	$test_name = "xmllint check" if !$test_name;
-
-	require File::Temp;
-	my($errfh,$errfile) = File::Temp::tempfile(SUFFIX => ".log",
-						   UNLINK => 1);
-	my $cmd = "xmllint --noout";
-	if ($schema) {
-	    $cmd .= " --schema $schema";
-	}
-	$cmd .= " - ";
-	if ($^O ne 'MSWin32') {
-	    $cmd .= "2>$errfile";
-	}
-	warn $cmd if $debug;
-	open(my $XMLLINT, "| $cmd")
-	    or die "Error while opening xmllint: $!";
-	binmode $XMLLINT;
-	print $XMLLINT $content; # do not check for die
-	close $XMLLINT; # do not check for die, check $? later
-	my $ok = Test::More::is($?, 0, $test_name) or do {
-	    seek($errfh,0,0);
-	    my $errorcontent = do { local $/; <$errfh> };
-	    $content = "Errors:\n$errorcontent\nXML:\n$content";
-	    if (length($content) > 1024) {
-		require File::Temp;
-		my($tempfh,$tempfile) = File::Temp::tempfile(SUFFIX => ".xml",
-							     UNLINK => 0);
-		print $tempfh $content;
-		close $tempfh;
-		Test::More::diag("Please look at <$tempfile> for the tested XML content");
-	    } else {
-		Test::More::diag($content);
+	if (eval {
+	    require XML::LibXML;
+	    if ($schema && $schema =~ m{^https://}) {
+		require LWP::UserAgent;
 	    }
-	};
-	unlink $errfile;
-	$ok;
+	    1;
+	}) {
+	    _xmllint_string_with_XML_LibXML($content, $test_name, %args, -schema => $schema);
+	} else {
+	    if (!defined $can_xmllint) {
+		$can_xmllint = is_in_path("xmllint");
+	    }
+	    if ($can_xmllint) {
+		_xmllint_string_with_xmllint($content, $test_name, %args, -schema => $schema);
+	    } else {
+		Test::More::skip("xmllint is not available", $no_of_tests) if !$can_xmllint;
+	    }
+	}
     }
+}
+
+sub _xmllint_string_with_XML_LibXML {
+    my($content, $test_name, %args) = @_;
+    my $schema = delete $args{-schema};
+    local $Test::Builder::Level = $Test::Builder::Level+1;
+
+    my @errors;
+
+    my $p = XML::LibXML->new;
+    my $doc = eval { $p->parse_string($content) };
+    if (!$doc || $@) {
+	push @errors, "XML document is not well-formed:\n$@";
+    } elsif ($schema) {
+	my @schema_args;
+	if ($schema =~ m{^https://}) {
+	    my $ua = LWP::UserAgent->new;
+	    my $resp = $ua->get($schema);
+	    if (!$resp->is_success) {
+		push @errors, "Can't fetch $schema with LWP: " . $resp->message;
+	    } else {
+		@schema_args = (string => $resp->decoded_content);
+	    }
+	} else {
+	    @schema_args = (location => $schema);
+	}
+	if (@schema_args) {
+	    my $xmlschema = XML::LibXML::Schema->new(@schema_args);
+	    if (!eval { $xmlschema->validate($doc); 1 }) {
+		push @errors, "XML document has validation errors:\n$@";
+	    }
+	}
+    }
+
+    my $ok = Test::More::ok(!@errors, $test_name) or do {
+	my $diag = "Errors:\n" . join("\n", @errors) . "\nXML:\n" . $content;
+	if (length $diag > 1024) {
+	    require File::Temp;
+	    my($tempfh,$tempfile) = File::Temp::tempfile(SUFFIX => ".xml",
+							 UNLINK => 0);
+	    print $tempfh $diag;
+	    close $tempfh;
+	    Test::More::diag("Please look at <$tempfile> for the tested XML content");
+	} else {
+	    Test::More::diag($diag);
+	}
+    };
+    $ok;
+}
+
+sub _xmllint_string_with_xmllint {
+    my($content, $test_name, %args) = @_;
+    my $schema = delete $args{-schema};
+    local $Test::Builder::Level = $Test::Builder::Level+1;
+
+    require File::Temp;
+    my($errfh,$errfile) = File::Temp::tempfile(SUFFIX => ".log",
+					       UNLINK => 1);
+    my $cmd = "xmllint --noout";
+    if ($schema) {
+	$cmd .= " --schema $schema";
+    }
+    $cmd .= " - ";
+    if ($^O ne 'MSWin32') {
+	$cmd .= "2>$errfile";
+    }
+    warn $cmd if $debug;
+    open(my $XMLLINT, "| $cmd")
+	or die "Error while opening xmllint: $!";
+    binmode $XMLLINT;
+    print $XMLLINT $content; # do not check for die
+    close $XMLLINT; # do not check for die, check $? later
+    my $ok = Test::More::is($?, 0, $test_name) or do {
+	seek($errfh,0,0);
+	my $errorcontent = do { local $/; <$errfh> };
+	$content = "Errors:\n$errorcontent\nXML:\n$content";
+	if (length($content) > 1024) {
+	    require File::Temp;
+	    my($tempfh,$tempfile) = File::Temp::tempfile(SUFFIX => ".xml",
+							 UNLINK => 0);
+	    print $tempfh $content;
+	    close $tempfh;
+	    Test::More::diag("Please look at <$tempfile> for the tested XML content");
+	} else {
+	    Test::More::diag($content);
+	}
+    };
+    unlink $errfile;
+    $ok;
 }
 
 # only usable with Test::More, generates one test
@@ -344,10 +412,9 @@ sub gpxlint_string {
 	    Test::More::diag("GPX schema file <$gpx_schema> not found or not readable, continue with schema-less checks...");
 	    $shown_gpx_schema_warning = 1;
 	}
-	xmllint_string($content, $test_name, %args);
-    } else {
-	xmllint_string($content, $test_name, %args, -schema => $gpx_schema);
+	undef $gpx_schema;
     }
+    xmllint_string($content, $test_name, %args, ($gpx_schema ? (-schema => $gpx_schema) : ()));
 }
 
 # only usable with Test::More, generates one test
@@ -366,13 +433,28 @@ sub kmllint_string {
  					 "misc",
  					 "kml21.xsd");
     if (!-r $kml_schema) {
-	if (!$shown_kml_schema_warning) {
-	    Test::More::diag("Local KML schema $kml_schema cannot be found, fallback to remote schema...");
-	    $shown_kml_schema_warning = 1;
+	if (0) {
+	    # since 2012-02-28 the schema file is located on a https URL
+	    # https://developers.google.com/kml/schema/kml21.xsd
+	    # which xmllint cannot handle
+	    if (!$shown_kml_schema_warning) {
+		Test::More::diag("Local KML schema $kml_schema cannot be found, continue with schema-less checks...");
+		$shown_kml_schema_warning = 1;
+	    }
+	    undef $kml_schema;
+	} else {
+	    if (!$shown_kml_schema_warning) {
+		Test::More::diag("Local KML schema $kml_schema cannot be found, fallback to remote schema...");
+		$shown_kml_schema_warning = 1;
+	    }
+	    ## The old location, now a redirect:
+	    #$kml_schema = "http://code.google.com/apis/kml/schema/kml21.xsd";
+	    ## Use the redirected location, so the heuristics can detect that
+	    ## this a https URL is used.
+	    $kml_schema = "https://developers.google.com/kml/schema/kml21.xsd";
 	}
-	$kml_schema = "http://code.google.com/apis/kml/schema/kml21.xsd";
     }
-    xmllint_string($content, $test_name, %args, -schema => $kml_schema);
+    xmllint_string($content, $test_name, %args, ($kml_schema ? (-schema => $kml_schema) : ()));
 }
 
 sub failed_long_data {
@@ -477,6 +559,41 @@ if (!eval {
 			   $info);
 	}
     };
+}
+
+# Taken from Tk
+sub is_float ($$;$) {
+    my($value, $expected, $testname) = @_;
+    require POSIX;
+    local $Test::Builder::Level = $Test::Builder::Level+1;
+    my @value    = split /[\s,]+/, $value;
+    my @expected = split /[\s,]+/, $expected;
+    my $ok = 1;
+    for my $i (0 .. $#value) {
+	if ($expected[$i] =~ /^[\d+-]/) {
+	    if (abs($value[$i]-$expected[$i]) > &POSIX::DBL_EPSILON) {
+		$ok = 0;
+		last;
+	    }
+	} else {
+	    if ($value[$i] ne $expected[$i]) {
+		$ok = 0;
+		last;
+	    }
+	}
+    }
+    if ($ok) {
+	Test::More::pass($testname);
+    } else {
+	Test::More::is($value, $expected, $testname); # will fail
+    }
+}
+
+sub using_bbbike_test_cgi () {
+    my $make = $^O =~ m{bsd}i ? "make" : is_in_path("freebsd-make") ? "freebsd-make" : "pmake";
+    # -f BSDmakefile needed for old pmake (which may be found in Debian)
+    system("cd $testdir/data && $make -f BSDmakefile");
+    Test::More::diag("Error running make, expect test failures...") if $? != 0;
 }
 
 1;

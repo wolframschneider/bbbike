@@ -166,6 +166,7 @@ Ribnitzer Straße/Ecke Zum Hechtgraben	Zs 16407,18257
 Irenenstraße/Ecke Wönnichstraße	Zs 16928,11633
 Wartenberger Straße/Ecke Arnimstraße	Zs 17903,17084
 Zingster Straße/Ecke Ahrenshooper Straße	Zs 16914,17937
+#: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20120207.1005.365838.html
 Gärtnerstraße/Ecke Große-Leege-Straße	Zs 16904,15821
 Gensinger Straße 103	Zs 19146,11913
 Vincent-van-Gogh-Straße/Ecke Randowstraße	Zs 18424,17908
@@ -174,7 +175,6 @@ Rummelsburger Straße/Höhe Eggersdorfer Straße/Delbrückstr.	Zs 17180,10845
 #: by: ^^^
 #: note: Luftbild
 Fritz-Reuter-Allee/Britzer Park	Zs 13476,3857
-#XXX del --- wieder aufgehoben --- Groß-Berliner Damm/Pilotenstr.	Zs 17944,4797
 #: note: Luftbild
 Rosenthaler Weg/Arnouxstr.	Zs 11569,22436
 Behmstr./Zingster Str.	Zs 9285,16032
@@ -251,7 +251,7 @@ Am Kleinen Wannsee/Conradstr.	Zs -5717,1155
 Wühlischstr./Böcklinstr.	Zs 14683,11366
 #: XXX soll laut http://www.potsdam.de/cms/beitrag/10064125/966975/ durch eine Ampel ersetzt werden
 Am Neuen Garten/Bertha-von-Suttner-Str. (Potsdam)	Zs -12432,-228
-Geschwister-Scholl-Str. (Potsdam)	Zs -15140,-1800
+Geschwister-Scholl-Str. (Potsdam)	Zs -15231,-1794
 Kurfürstenstr./Frobenstr.	Zs 7457,10471
 Parkstr./Amalienstr.	Zs 13974,16643
 Bernau, Richtung Ladeburg	Zs 22315,31106
@@ -389,8 +389,6 @@ Friedenstr./Weinstr.	Zs 11989,13461
 #: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20110901.1335.357063.html
 Ziekowstr./Hatzfeldtallee	Zs 2584,20615
 Königsheideweg/Herrenhausstr.	Zs 17681,4536
-#: XXX in Bau
-#: last_checked: 2011-09-24
 Andreasstr./Lange Str.	Zs 12243,11948
 Seehofstr./Jänickestr.	Zs 1591,2223
 Rüdesheimer/Laubenheimer	Zs 4320,7084
@@ -400,3 +398,15 @@ Wildhüterweg/Am Buschfeld	Zs 14128,1858
 Scharnweberstr./Weichselstr.	Zs 14879,11930
 #: XXX prüfen!
 Louis-Lewin-Str./Weißenfelser Str.	Zs 24995,15185
+Karl-Liebknecht-Str./Lutherstr. (Potsdam)	Zs -10440,-1571
+Karl-Liebknecht-Str./Garnstr. (Potsdam)	Zs -10503,-1731
+#: XXX in Bau
+#: last_checked: 2012-01-11
+Manteuffelstr./Naunynstr.	Zs 12008,10543
+#: by: http://www.flickr.com/photos/drggkkrueger/5826991387/in/pool-gwb
+#: by: http://farm3.staticflickr.com/2194/5826991387_e538283e0f_z.jpg
+Ostpreußendamm/Lippstädter Str.	Zs 3657,749
+#: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20111230.1240.364422.html
+#: XXX genaue Position?
+Köpenicker Straße/Ecke Dohlengrund	Zs 21288,10431
+Proskauer/Bänsch	Zs 14327,12658

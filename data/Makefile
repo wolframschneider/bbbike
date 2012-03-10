@@ -141,6 +141,7 @@ targets:	${TARGETS}
 targets-clean:
 	-mkdir /tmp/old-data
 	mv -f ${TARGETS} /tmp/old-data/
+	-rm -f .strassen.tmp
 
 fix-permissions:
 	$(READABLE) $(TARGETS) $(NON_TARGETS) temp_blockings/bbbike-temp-blockings.pl temp_blockings/*.bbd
@@ -172,8 +173,7 @@ persistent-tmp:	${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor-nextcheck.bbd \
 		${PERSISTENTTMPDIR}/non-faked-plaetze \
 		${PERSISTENTTMPDIR}/non-faked-strassen \
 		${PERSISTENTTMPDIR}/XXX.bbd \
-		${PERSISTENTTMPDIR}/plz-b.bbd \
-		persistent-tmp-from-opengeodb
+		${PERSISTENTTMPDIR}/plz-b.bbd
 
 .for i in $(XXX_TARGETS)
 persistent-tmp:	${PERSISTENTTMPDIR}/XXX-$(i).bbd
@@ -244,27 +244,27 @@ ${PERSISTENTTMPDIR}/non-faked-strassen: .strassen.tmp ${PERSISTENTTMPDIR}/non-fa
 
 inaccessible_strassen: strassen gesperrt
 	-@$(WRITEABLE) $@
-	-cp -f $@ /tmp/old_inaccessible_strassen
 	${SEARCH_INACCESSIBLE} -street strassen -blocked gesperrt \
 	    -blockedtype einbahn -blockedtype sperre \
-	    > inaccessible_strassen~ && mv inaccessible_strassen~ inaccessible_strassen
-	@if [ -e /tmp/old_inaccessible_strassen ] ; then \
-	    diff -u /tmp/old_inaccessible_strassen $@; \
+	    > new.$@~
+	@if [ -e $@ ] ; then \
+	    diff -u $@ new.$@~ || \
+		(echo "*** If this is OK, then"; echo "        rm $@"; echo "    and rerun make"; false); \
 	fi
-	@rm -f /tmp/old_inaccessible_strassen
+	mv new.$@~ $@
 	-@$(READONLY) $@
 
 inaccessible_landstrassen: strassen landstrassen landstrassen2 gesperrt
 	-@$(WRITEABLE) $@
-	-cp -f $@ /tmp/old_inaccessible_landstrassen
 	${SEARCH_INACCESSIBLE} -street strassen -street landstrassen \
 	    -street landstrassen2 -street faehren -blocked gesperrt \
 	    -blockedtype einbahn -blockedtype sperre \
-	    > inaccessible_landstrassen~ && mv inaccessible_landstrassen~ inaccessible_landstrassen
-	@if [ -e /tmp/old_inaccessible_landstrassen ] ; then \
-	    diff -u /tmp/old_inaccessible_landstrassen $@; \
+	    > new.$@~
+	@if [ -e $@ ] ; then \
+	    diff -u $@ new.$@~ || \
+		(echo "*** If this is OK, then"; echo "        rm $@"; echo "    and rerun make"; false); \
 	fi
-	@rm -f /tmp/old_inaccessible_landstrassen
+	mv new.$@~ $@
 	-@$(READONLY) $@
 
 ######################################################################
@@ -1583,7 +1583,7 @@ check-categories:	.check_categories
 .for target in ${BBD_TARGETS}
 	@echo " ${target}"
 	@$(PERL_UTF8) -I../lib -I.. -MStrassen::Cat -e '\
-	    exit !Strassen::Cat::check_file($$ARGV[0], BBBikeVersion => "3.16");\
+	    exit !Strassen::Cat::check_file($$ARGV[0], BBBikeVersion => "data-update");\
 	' ${target}
 .endfor
 	touch $@

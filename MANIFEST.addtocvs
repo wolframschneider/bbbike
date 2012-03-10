@@ -75,7 +75,6 @@ cgi/bbbike-netbeat.cgi.config
 cgi/bbbike-radzeit.cgi.config
 cgi/bbbike2-radzeit.cgi.config
 cgi/bbbike-sourceforge.cgi.config
-cgi/bbbikesoapserver.cgi
 cgi/gridserv.cgi
 data/.cvsignore
 data/BASE
@@ -330,7 +329,6 @@ miscsrc/BBBikeGPSTrackingPlugin.pm
 miscsrc/BBBikeLocalizator.pm
 miscsrc/BBBikePanoramioPlugin.pm
 miscsrc/BBBikeOsmUtil.pm
-miscsrc/BBBikeSOAP.pm
 miscsrc/BBBikeViewImages.pm
 miscsrc/CombineTrainStreetNets.pm
 miscsrc/CommonMLDBM.pm
@@ -350,7 +348,6 @@ miscsrc/TelbuchDBApprox.pm
 miscsrc/TransparentCanvas.pm
 #XXX_this_is_temporary_-_to_be_removed_some_day
 miscsrc/XXX_new_comments.pl
-miscsrc/YahooMaps.pm
 miscsrc/accesslog2bbd
 miscsrc/ampelschaltung.pl
 miscsrc/analyze_deploy_timestamps
@@ -442,7 +439,6 @@ miscsrc/opengeodborte2bbd
 miscsrc/osm2bbd
 miscsrc/osm2bbd-postprocess
 miscsrc/parse_mapbender_plz.pl
-miscsrc/polizei-faxabruf-diff.pl
 miscsrc/reduce_streets
 miscsrc/replacestrassen
 miscsrc/replay_accesslog

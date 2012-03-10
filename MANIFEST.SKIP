@@ -29,7 +29,8 @@ patch\.gz$
 ^nytprof/
 ^profiler/
 (^|/)\.prove$
-(^|/)MYMETA\.yml
+(^|/)MYMETA\.yml$
+(^|/)MYMETA\.json$
 # private common files
 \.ok2cgi$
 \.copynewer.SKIP$
@@ -110,13 +111,13 @@ cgi/bbbike-debian.cgi.config$
 cgi/bbbike-osm.cgi.config$
 cgi/bbbike-osm.cgi$
 cgi/bbbike-hosteurope.cgi.config$
+cgi/bbbike2-biokovo.cgi.config$
 cgi/bbbike2-hosteurope.cgi.config$
 cgi/bbbike2-radzeit.cgi.config$
 cgi/bbbike2.cgi.config$
 cgi/bbbike-cs.cgi.config$
 cgi/bbbike2.cgi$
 cgi/bbbike-test.cgi$
-cgi/bbbikesoapserver.cgi$
 cgi/global.asa$
 cgi/test.cgi$
 cgi/Makefile.local.inc$
@@ -250,8 +251,6 @@ BBBikeCanvas.pm
 BBBikeContext.pm
 BBBikeUserEdit.pm
 BBBikeMapEditorPlugin.pm
-BBBikeDraw/PDF2.pm
-BBBikeDraw/PDFHeavy.pm
 cgi/bbbike_comment.cgi$
 cgi/Makefile$
 cgi/GNUmakefile$
@@ -291,6 +290,7 @@ cgi/gridserv.cgi$
 ^cgi/httpd.conf$
 ^cgi/bbbike.en.cgi$
 ^cgi/bbbike2.en.cgi$
+^cgi/bbbikeleaflet.en.cgi$
 ^images/kreuzberg-20020501.gif$
 ^mapserver/brb/tmp/
 ^mapserver/brb/data/
@@ -307,6 +307,7 @@ cgi/gridserv.cgi$
 ^images/berlin_small_hi.png$
 ^images/Makefile$
 ^html/Makefile$
+^html/bbbikeleaflet.en.html$
 ^data/datachange.log$
 ^data/\.fragezeichen-
 ^data/.*-cooked

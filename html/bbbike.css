@@ -24,6 +24,9 @@ table.routelist td {
 table.detailmap td {
   vertical-align:middle;
 }
+table.routeas td {
+  padding-right:10px;
+}
 tt,pre {
   font-family:courier,monospace;
 }
@@ -197,6 +200,12 @@ a:hover { text-decoration:underline; }
   font-weight:bold;
 }
 
+.success {
+  color:green;
+  font-weight:normal;
+}
+
+
 .newstrattrhead {
   vertical-align:top;
   font-weight:bold;
@@ -248,7 +257,7 @@ div#routes {
 	background-color: white;
 	z-index: 1000; 
 	
-	// scroll city list if to long
+	/* scroll city list if to long */
 	overflow-y: auto;
 	overflow-x: auto;
 	height: 90%;
@@ -271,7 +280,7 @@ div#adsense_linkblock {
 }
 
 div#chart_div {
-	witdh: 90%;
+	width: 90%;
 	margin-left: 5%;
 	margin-right: 5%;
 	height: 120px;
@@ -282,7 +291,7 @@ div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
 div#other_cities { font-size: small; text-align: center; padding-bottom: 0.5em }
 span#housenumber { font-size: small; }
 div#top_right { position:absolute; top:5px; right:10px; }
-span#current_weather { padding-right: 1em; font-size: normal; }
+span#current_weather { padding-right: 1em; font-size: medium; }
 
 
 /* Ausweichroute */
@@ -306,7 +315,7 @@ span.current_language { font-size: large; }
  * include copy of devbridge-jquery-autocomplete-1.1.2/styles.css 
  * less HTTP traffic
  */
-.autocomplete-w1 { background:url(devbridge-jquery-autocomplete-1.1.2/shadow.png) no-repeat bottom right; position:absolute; top:0px; left:0px; margin:8px 0 0 6px; /* IE6 fix: */ _background:none; _margin:0; }
+.autocomplete-w1 { background:url(../html/devbridge-jquery-autocomplete-1.1.2/shadow.png) no-repeat bottom right; position:absolute; top:0px; left:0px; margin:8px 0 0 6px; /* IE6 fix: */ _background:none; _margin:0; }
 .autocomplete { border:1px solid #999; background:#FFF; cursor:default; text-align:left; max-height:350px; overflow:auto; margin:-6px 6px 6px -6px; /* IE6 specific: */ _height:350px;  _margin:0; _overflow-x:hidden; }
 .autocomplete .selected { background:#F0F0F0; }
 .autocomplete div { padding:2px 5px; white-space:nowrap; }
@@ -321,6 +330,16 @@ div#list span:active { text-decoration:none; color: red; }
 
 span.grey, p.grey { font-size: small; color: #808080 }
 
-// position of 'via' link
+/* position of 'via' link */
 td#via_message { padding-top: 0em; }
+
+/* extract.cgi */
+form#extract input#extract { color: green; font-size: large }
+
+/* large green submit button, to focus user actions */
+form input[type=submit] { 
+	color: green; 
+	font-size: large; 
+	margin-bottom: 0.4em; 
+}
 

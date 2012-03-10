@@ -4,6 +4,8 @@
 #                        local system first, then sync, then test on remote
 #                        system, and do some git operations before and
 #                        after
+#  automatic-deployment-temp-blockings: do everything to deploy only
+#					the temp-blockings-related files
 #
 #  check:	Show what would be rsync'ed from the current directory
 #  rsync:	Do the rsync. This will not be permitted if the make system
@@ -53,6 +55,7 @@ CGI_FILES=		bbbike.cgi \
 			bbbike-data.cgi \
 			bbbike-snapshot.cgi \
 			bbbikegooglemap.cgi \
+			bbbikeleaflet.cgi \
 			wapbbbike.cgi \
 			mapserver_address.cgi \
 			mapserver_comment.cgi \
@@ -172,6 +175,10 @@ TARGET=bbbike.hosteurope.herceg.de
 .endfor
 .endif
 
+.ifndef MAPSERVER_TARGET
+MAPSERVER_TARGET=${TARGET}
+.endif
+
 .ifndef TARGET
 .if   make(deploy)                   || \
       make(deploy-data)		     || \
@@ -201,7 +208,8 @@ TARGET=devpc01
 .else
 TARGET=bbbike.hosteurope.herceg.de
 .endif
-.elif make(automatic-deployment)
+.elif make(automatic-deployment) || \
+      make(automatic-deployment-temp-blockings)
 # no TARGET=
 .else
 .error "Please set TARGET to hosteurope or bbbike.hosteurope.herceg.de"
@@ -423,6 +431,8 @@ prepare-bbbike-dist-prog-bbbike-cgi:
 	cd ${CURDIR}/cgi-bin && ln -s bbbike.cgi bbbike.en.cgi
 	rm -f ${CURDIR}/cgi-bin/bbbike2.en.cgi
 	cd ${CURDIR}/cgi-bin && ln -s bbbike.cgi bbbike2.en.cgi
+	rm -f ${CURDIR}/cgi-bin/bbbikeleaflet.en.cgi
+	cd ${CURDIR}/cgi-bin && ln -s bbbikeleaflet.cgi bbbikeleaflet.en.cgi
 # Fix permissions
 # Make sure that /usr/lib/cgi-bin/* isn't touched, otherwise make will fail
 	(cd ${CURDIR}/cgi-bin && chmod ugo+r `find . -maxdepth 1 | xargs -L1 readlink | grep -v /usr/lib/cgi-bin`)
@@ -491,7 +501,7 @@ prepare-bbbike-dist-prog-bbbike-html:
 	fi
 .endfor
 	cd ${CURDIR}/BBBike/html && \
-	    ${MAKE} bbbike-opensearch bbbike-opensearch-images
+	    ${MAKE} bbbike-opensearch bbbike-opensearch-images bbbikeleaflet.en.html
 #	Vorsichtshalber, weil ansonsten die falschen URLs enthalten sein
 #	könnten:
 	cd ${CURDIR}/BBBike/html && \
@@ -548,8 +558,11 @@ prepare-mapserver-dist-pre:
 
 # XXX rename /tmp/radzeit_mapserver_dist, here and in mapserver/brb/Makefile
 prepare-mapserver-dist-main:
+# XXX   Copying and removing the localinc file here is an ugly hack
+	cp -pf etc/mapserver-brb-brb.map-localinc ${BBBIKE_ROOT_DIR}/mapserver/brb/brb.map-localinc
 	cd ${BBBIKE_ROOT_DIR}/mapserver/brb && \
-	    ${MAKE} dist-any TARGET=${TARGET}
+	    ${MAKE} dist-any TARGET=${MAPSERVER_TARGET}
+	rm -f ${BBBIKE_ROOT_DIR}/mapserver/brb/brb.map-localinc
 .if ${TARGET_OS_DIST} == "linux-debian"
 	perl -i -pe 's{^(\S+\s+)(.*)}{$$1/usr/share/fonts/truetype/ttf-bitstream-vera/Vera.ttf}' \
 	    /tmp/radzeit_mapserver_dist/fonts-radzeit.list
@@ -559,8 +572,11 @@ prepare-mapserver-dist-main:
 
 prepare-mapserver-dist-local-main:
 	touch ${CURDIR}/.not_rsyncable
+# XXX   Copying and removing the localinc file here is an ugly hack
+	cp -pf etc/mapserver-brb-brb.map-localinc ${BBBIKE_ROOT_DIR}/mapserver/brb/brb.map-localinc
 	cd ${BBBIKE_ROOT_DIR}/mapserver/brb && \
 	    ${MAKE} dist-any TARGET=bbbike.hosteurope.herceg.de
+	rm -f ${BBBIKE_ROOT_DIR}/mapserver/brb/brb.map-localinc
 	cp -Rpf /tmp/radzeit_mapserver_dist/* ${CURDIR}/$(HTDOCS)/mapserver/brb/
 	chmod 777 ${CURDIR}/$(HTDOCS)/mapserver/brb
 	chmod 777 ${CURDIR}/$(HTDOCS)/mapserver/brb/tmp
@@ -777,3 +793,12 @@ automatic-deployment:
 	-@${XTERM_CONF_TITLE} "BBBike post-deployment git update"
 	$(HOME)/src/bbbike-aux/misc/bbbike-checkin-hosteurope.pl -after-sync
 	-@${XTERM_CONF_TITLE} "BBBike deployment finished"
+
+automatic-deployment-temp-blockings:
+	-@${XTERM_CONF_TITLE} "BBBike pre-deployment git update"
+	$(HOME)/src/bbbike-aux/misc/bbbike-checkin-hosteurope.pl -update
+	-@${XTERM_CONF_TITLE} "BBBike temp-blockings deployment"
+	${MAKE} deploy-temp-blockings
+	-@${XTERM_CONF_TITLE} "BBBike post-deployment git update"
+	$(HOME)/src/bbbike-aux/misc/bbbike-checkin-hosteurope.pl -after-sync
+	-@${XTERM_CONF_TITLE} "BBBike temp-blockings deployment finished"

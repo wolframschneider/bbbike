@@ -47,6 +47,7 @@ if (-e "$FindBin::RealBin/bbbike") {
 } else {
     $bbbike_rootdir = "$ENV{HOME}/src/bbbike";
 }
+my $bbbike_auxdir = "$ENV{HOME}/src/bbbike-aux";
 my $streets_track                    = "$bbbike_rootdir/tmp/streets.bbd";
 my $acc_streets_track                = "$bbbike_rootdir/tmp/streets-accurate.bbd";
 my $acc_cat_streets_track            = "$bbbike_rootdir/tmp/streets-accurate-categorized.bbd";
@@ -296,6 +297,18 @@ EOF
 				      $main::edit_normal_mode ? (below => $str_layer_level) : (above => $str_layer_level)
 				  },
 				 ),
+		layer_checkbutton('fragezeichen-outdoor-nextcheck-categorized', 'str',
+				  "$bbbike_rootdir/tmp/fragezeichen-outdoor-nextcheck-categorized.bbd",
+				  below_above_cb => sub {
+				      $main::edit_normal_mode ? (below => $str_layer_level) : (above => $str_layer_level)
+				  },
+				 ),
+		layer_checkbutton('fragezeichen-outdoor-categorized', 'str',
+				  "$bbbike_rootdir/tmp/fragezeichen-outdoor-categorized.bbd",
+				  below_above_cb => sub {
+				      $main::edit_normal_mode ? (below => $str_layer_level) : (above => $str_layer_level)
+				  },
+				 ),
 		layer_checkbutton('fragezeichen-indoor-nextcheck', 'str',
 				  "$bbbike_rootdir/tmp/fragezeichen-indoor-nextcheck.bbd"),
 		layer_checkbutton('fragezeichen-nextcheck', 'str',
@@ -432,6 +445,27 @@ EOF
 	      ],
 	      [Button => $do_compound->('VMZ'),
 	       -command => sub { newvmz_process() },
+	      ],
+	      [Cascade => $do_compound->("VMZ-Detailnetz"), -menuitems =>
+	       [
+		layer_checkbutton('strassen', 'str',
+				  "$bbbike_auxdir/vmz/bbd/strassen",
+				  below => $str_layer_level,
+				 ),
+		[Button => 'gesperrt', -command => sub { add_new_nonlazy_layer('sperre', "$bbbike_auxdir/vmz/bbd/gesperrt") }],
+		layer_checkbutton('qualitaet', 'str',
+				  "$bbbike_auxdir/vmz/bbd/qualitaet_s",
+				  above => $str_layer_level,
+				 ),
+		layer_checkbutton('radwege', 'str',
+				  "$bbbike_auxdir/vmz/bbd/radwege",
+				  above => $str_layer_level,
+				 ),
+		layer_checkbutton('ampeln', 'str', # yes, str, otherwise symbol is not plotted
+				  "$bbbike_auxdir/vmz/bbd/ampeln",
+				  above => $str_layer_level,
+				 ),
+	       ],
 	      ],
 	      [Cascade => $do_compound->("Old VMZ/LBVS stuff"), -menuitems =>
 	       [

@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998,2000,2003,2004,2006,2010,2011 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998,2000,2003,2004,2006,2010,2011,2012 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -93,7 +93,7 @@ if (!@urls) {
 }
 
 my $ortsuche_tests = 11;
-plan tests => (238 + $ortsuche_tests) * scalar @urls;
+plan tests => (240 + $ortsuche_tests) * scalar @urls;
 
 my $default_hdrs;
 if (defined &Compress::Zlib::memGunzip && $do_accept_gzip) {
@@ -102,8 +102,6 @@ if (defined &Compress::Zlib::memGunzip && $do_accept_gzip) {
 } else {
     $default_hdrs = HTTP::Headers->new();
 }
-
-my $hdrs = $default_hdrs;#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 for my $cgiurl (@urls) {
     my $action;
@@ -155,9 +153,10 @@ for my $cgiurl (@urls) {
 
     # search_coord
     for my $output_as ("", qw(xml gpx-track gpx-route kml-track print perldump
-			      yaml yaml-short json json-short palmdoc mapserver)) {
+			      yaml yaml-short json json-short geojson palmdoc mapserver)) {
     SKIP: {
-	    skip "No mapserver tests", 2 if $skip{mapserver};
+	    skip "No mapserver tests", 2
+		if $output_as eq 'mapserver' && $skip{mapserver};
 
 	    my($content, $resp) = std_get "$action?startname=Dudenstr.&startplz=10965&startc=9222%2C8787&zielname=Grimmstr.+%28Kreuzberg%29&zielplz=10967&zielc=11036%2C9592&pref_seen=1&output_as=$output_as",
 					 testname => "Route result output_as=$output_as";
@@ -198,7 +197,7 @@ for my $cgiurl (@urls) {
 		is $resp->content_type, 'application/vnd.google-earth.kml+xml', "The KML mime type";
 		like $resp->header('Content-Disposition'), qr{attachment; filename=.*\.kml$}, 'kml filename';
 		kmllint_string($content, "xmllint check for $output_as");
-	    } elsif ($output_as =~ m{^json}) {
+	    } elsif ($output_as =~ m{^(json|geojson$)}) {
 		require JSON::XS;
 		my $data = eval { JSON::XS::decode_json($content) };
 		my $err = $@;
@@ -515,7 +514,8 @@ for my $cgiurl (@urls) {
 		      ) {
     SKIP: {
 	    my $tests = 3;
-	    skip "No mapserver tests", $tests if $skip{mapserver};
+	    skip "No mapserver tests", $tests
+		if $imagetype eq 'mapserver' && $skip{mapserver};
 
 	    my $imagetype_param = ($imagetype ne "" ? "imagetype=$imagetype&" : "");
 	    # This coords are sensitive to changes if
@@ -846,7 +846,7 @@ sub uncompr {
     my $res = shift;
     if ($res->can("decoded_content")) {
 	my %opts;
-	if ($res->content_is_xml) {
+	if (!$res->can('content_is_xml') || $res->content_is_xml) {
 	    # http://rt.cpan.org/Public/Bug/Display.html?id=52572
 	    $opts{charset} = 'none';
 	}

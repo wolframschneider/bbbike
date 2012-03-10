@@ -63,7 +63,7 @@ Herbartstr.	1 2340,11045 2372,10941 2476,10790 2498,10665
 Breite Str. Pankow	1 10609,18384 10680,18380
 Gormannstr.	1 10463,13747 10445,13675 10406,13543 10390,13493 10372,13436
 Reichenberger Str.	1 11291,10438 11393,10390
-Weserstr.	1 12074,9217 11993,9211 11888,9189
+Weserstr.	1 12074,9217 12005,9211 11888,9189
 Friedenstr.	1 12325,13148 12386,13085
 Fasanenstr.	1 5223,9810 5209,9978
 Kopfstr.	1 12478,7878 12327,7847 12220,7822 12176,7811 12041,7788
@@ -78,17 +78,19 @@ Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
 Mangerstr. (Potsdam)	1 -12064,-284 -12108,-291 -12265,-418
 Rudolf-Breitscheid-Str.	1 -10446,-1947 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
 Bendastr.	1 12689,6905 12702,6846
-Bendastr.	1 12793,6407 12779,6478 12756,6578 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
+Bendastr.	1 12793,6407 12781,6470 12759,6563 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
 Puschkin/Bulgarische	1 13829,9905 13884,9882 13995,9834 14193,9746 14310,9692 14780,9480 14819,9462 15383,9191 15561,8903 15591,8848 15378,8668 15166,8489
 Karl-Marx-Str./Schönstedt	3nocross::ignrte 12500,8504 12540,8458 12562,8432 12582,8408
 Karl-Marx-Str. -> Schönstedtstr.: Karl-Marx-Str./Schönstedt	3::igndisp 12500,8504 12540,8458 12649,8535
 Schönstedtstr. -> Karl-Marx-Str.: Karl-Marx-Str./Schönstedt	3::igndisp 12649,8535 12540,8458 12562,8432
 Hoffmannstr./Elsenstr.	3 14076,10011 14289,9870 14405,10027
-Jerusalemer/Leipziger	3 9892,11752 9898,11679 9981,11689
+Jerusalemer/Leipziger	3 9892,11752 9896,11703 9898,11679 9981,11689
 Behren/Ebert	3 8861,12125 8743,12099 8737,12098 8595,12066 8581,11896 8571,11846
-UdL/Universitätsstr.	3nocross::ignrte 9475,12365 9601,12380 9679,12388
+UdL/Universitätsstr.	3nocross::ignrte 9475,12365 9601,12380 9656,12386 9695,12390
 Unter den Linden -> Universitätsstr.: UdL/Universitätsstr.	3::igndisp 9475,12365 9601,12380 9580,12581
-Universitätsstr. -> Unter den Linden: UdL/Universitätsstr.	3::igndisp 9580,12581 9601,12380 9679,12388
+Universitätsstr. -> Unter den Linden: UdL/Universitätsstr.	3::igndisp 9580,12581 9601,12380 9656,12386
+Unter den Linden -> Bebelpl., diagonal über den Platz: UdL/Universitätsstr.	3::igndisp 9695,12390 9656,12386 9702,12307
+Bebelpl., diagonal über den Platz -> Unter den Linden: UdL/Universitätsstr.	3::igndisp 9702,12307 9656,12386 9601,12380
 Kolonnenstr. -> Hohenfriedbergstr.	3 7709,8777 7795,8765 7791,8882
 Horn - Yorck	3nocross::ignrte 8777,9601 9002,9731 9043,9745
 Hornstr. -> Yorckstr.: Horn - Yorck	3::igndisp 8980,9751 9002,9731 9043,9745
@@ -97,7 +99,7 @@ Mehringdamm - Baruther	3nocross::ignrte 9444,9919 9387,9804 9334,9670
 Baruther Str. -> Mehringdamm: Mehringdamm - Baruther	3::igndisp 9588,9827 9387,9804 9334,9670
 Mehringdamm -> Baruther Str.: Mehringdamm - Baruther	3::igndisp 9444,9919 9387,9804 9588,9827
 Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
-Hobrechtstr.	1 12003,9105 11998,8872
+Hobrechtstr.	1 12011,9100 11998,8872
 Lützowplatz	1 7002,11034 6873,11011
 Romain-Rolland-Str. - Berliner Str.	3 12856,17825 12825,17870 12736,17998 12467,17814
 Mahlower Str.	1 11773,8231 11920,8252
@@ -428,13 +430,13 @@ Johannisstr. -> Friedrichstr.: Friedrichstr. (Straßenbahn)	3::igndisp 9385,13174
 Oranienburger Str. (Straßenbahnhaltestelle)	3nocross::ignrte 9225,13389 9281,13374 9415,13315
 Linienstr. -> Oranienburger Str.: Oranienburger Str. (Straßenbahnhaltestelle)	3::igndisp 9296,13397 9281,13374 9415,13315
 Oranienburger Str. -> Linienstr.: Oranienburger Str. (Straßenbahnhaltestelle)	3::igndisp 9225,13389 9281,13374 9296,13397
-Durchfahrt für Autofahrer per Poller gesperrt	3nocross::ignrte 5972,6756 5897,6799 5828,6839
-Fregestr. -> Saarstr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5777,6628 5897,6799 5828,6839
-Fregestr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5777,6628 5897,6799 5957,6889
-Saarstr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5828,6839 5897,6799 5957,6889
-Fregestr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5957,6889 5897,6799 5777,6628
-Fregestr. -> Saarstr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5957,6889 5897,6799 5972,6756
-Saarstr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5972,6756 5897,6799 5777,6628
+Durchfahrt für Autofahrer per Poller gesperrt	3nocross::ignrte 5966,6747 5896,6785 5811,6833
+Saarstr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5966,6747 5896,6785 5777,6628
+Fregestr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5777,6628 5896,6785 5957,6889
+Fregestr. -> Saarstr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5777,6628 5896,6785 5811,6833
+Fregestr. -> Saarstr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5957,6889 5896,6785 5966,6747
+Fregestr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5957,6889 5896,6785 5777,6628
+Saarstr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5811,6833 5896,6785 5957,6889
 Putlitzstr.	1 6210,13939 6205,14216
 Bornitzstr.	1 15643,12875 15563,12860
 Straßenbahntrasse	3nocross::ignrte 18890,9529 18834,9256 18809,9133
@@ -465,8 +467,8 @@ Kettinger Str. -> Sandsteinweg: Mittelstreifen	3::igndisp 10228,1194 10329,1231 
 Mariendorfer Damm -> Sandsteinweg: Mittelstreifen	3::igndisp 10276,1383 10329,1231 10440,1283
 Sandsteinweg -> Mariendorfer Damm: Mittelstreifen	3::igndisp 10440,1283 10329,1231 10379,1097
 Sandsteinweg -> Kettinger Str.: Mittelstreifen	3::igndisp 10440,1283 10329,1231 10228,1194
-Lilienthalstr.: Barriere für Autos	3 10598,8563 10627,8706 10653,8831
-Lilienthalstr.: Barriere für Autos	3 10653,8831 10627,8706 10598,8563
+Lilienthalstr.: Barriere für Autos	3 10615,8558 10627,8706 10640,8832
+Lilienthalstr.: Barriere für Autos	3 10640,8832 10627,8706 10615,8558
 Mittelstreifen	3nocross::ignrte 23021,13982 22969,13816 22966,13806 22925,13662
 Feldberger Ring -> Hellersdorfer Str.: Mittelstreifen	3::igndisp 22943,13822 22969,13816 23021,13982
 Hellersdorfer Str. -> Feldberger Ring: Mittelstreifen	3::igndisp 22966,13806 22969,13816 22943,13822
@@ -903,7 +905,7 @@ Margarete-Kühn-Str.: Poller am Salzufer	3 5018,12322 5133,12240 5203,12387
 Margarete-Kühn-Str.: Poller am Salzufer	3 5194,12176 5133,12240 5203,12387
 Eberswalder Str. (Bernau)	1 23109,30968 23103,30923 22922,30640
 Rutnikstr. - Möllendorffstr.: Abbiegen verboten	3 15648,12687 15546,12690 15550,12625
-Torgauer Str.: nur für Anlieger	2:Anlieger 7446,8200 7402,8208 7250,8223 7005,8150
+Torgauer Str.: nur für Anlieger	2:Anlieger 7446,8200 7402,8208 7250,8223 7001,8161
 Hermannswerder	1 -14301,-2871 -13718,-2991
 Neue Schönholzer Str.	1 10089,18180 10140,18080 10179,17772
 Kleine Kurstr.	1 10230,11839 10183,11770
@@ -917,17 +919,17 @@ Else-Lasker-Schüler-Str.: Poller	3 7291,10506 7245,10499 7033,10396
 (Westhafenstr. - Beusselstr.): Durchfahrt verboten, Anlieger frei	2:Anlieger 6083,14564 6025,14539 6015,14516 5997,14444 5920,14422 5217,14255
 Steinbachstr.	1 19759,4160 19703,3979 19673,3888 19587,3801
 Mittelstreifen	3nocross::ignrte 5083,7682 5066,7668 5045,7635
-Görresstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5158,7560 5066,7668 5067,7523
-Görresstr. -> Südwestkorso: Mittelstreifen	3::igndisp 5158,7560 5066,7668 5045,7635
-Görresstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5158,7560 5066,7668 5063,7784
-Stubenrauchstr. -> Südwestkorso: Mittelstreifen	3::igndisp 5067,7523 5066,7668 5045,7635
-Stubenrauchstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5067,7523 5066,7668 5063,7784
+Görresstr. -> Südwestkorso: Mittelstreifen	3::igndisp 5188,7536 5066,7668 5045,7635
+Görresstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5188,7536 5066,7668 5069,7498
+Görresstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5188,7536 5066,7668 5063,7784
 Südwestkorso -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5045,7635 5066,7668 5063,7784
-Südwestkorso -> Görresstr.: Mittelstreifen	3::igndisp 5083,7682 5066,7668 5158,7560
-Südwestkorso -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5083,7682 5066,7668 5067,7523
-Stubenrauchstr. -> Görresstr.: Mittelstreifen	3::igndisp 5063,7784 5066,7668 5158,7560
-Stubenrauchstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5063,7784 5066,7668 5067,7523
+Südwestkorso -> Görresstr.: Mittelstreifen	3::igndisp 5083,7682 5066,7668 5188,7536
+Südwestkorso -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5083,7682 5066,7668 5069,7498
+Stubenrauchstr. -> Südwestkorso: Mittelstreifen	3::igndisp 5069,7498 5066,7668 5045,7635
+Stubenrauchstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5069,7498 5066,7668 5063,7784
+Stubenrauchstr. -> Görresstr.: Mittelstreifen	3::igndisp 5063,7784 5066,7668 5188,7536
 Stubenrauchstr. -> Südwestkorso: Mittelstreifen	3::igndisp 5063,7784 5066,7668 5083,7682
+Stubenrauchstr. -> Stubenrauchstr.: Mittelstreifen	3::igndisp 5063,7784 5066,7668 5069,7498
 Überqueren verboten	3nocross::ignrte 6687,8385 6807,8309 6935,8208
 Gustav-Freytag-Str. -> Feurigstr.: Überqueren verboten	3::igndisp 6779,8279 6807,8309 7012,8511
 Gustav-Freytag-Str. -> Dominicusstr.: Überqueren verboten	3::igndisp 6779,8279 6807,8309 6687,8385
@@ -943,7 +945,6 @@ Seddiner -> Hohenschönhausener Weg: Poller	3 18559,12105 18408,12105 18422,11837
 Hohenschönhausener Weg -> Seddiner: Poller	3 18422,11837 18408,12105 18215,12132
 Hohenschönhausener Weg -> Seddiner: Poller	3 18422,11837 18408,12105 18559,12105
 Gluckweg	1 6039,3275 5853,3050
-Am Tierpark - Criegernweg	3 18408,10774 18417,10738 18509,10757
 Rosenfelder Ring	3 17978,12092 18093,12093 18165,12091
 Rosenfelder Ring	3 18165,12091 18093,12093 17978,12092
 Sophienstr.	1 9986,13412 10317,13248
@@ -1018,9 +1019,9 @@ Indira-Gandhi-Str. -> Gounodstr.: Straßenbahntrasse	3::igndisp 14609,15921 14597
 Meyerbeerstr. -> Indira-Gandhi-Str.: Straßenbahntrasse	3::igndisp 14484,16035 14576,16069 14550,16161
 Indira-Gandhi-Str. -> Meyerbeerstr.: Straßenbahntrasse	3::igndisp 14595,15980 14576,16069 14484,16035
 Lenther Steig	1 1024,14889 1037,14814 1042,14721
-Mittelstreifen	3nocross::ignrte 6157,7685 6083,7582 5955,7406
-Hauptstr. -> Wielandstr.: Mittelstreifen	3::igndisp 6157,7685 6083,7582 6081,7215
+Mittelstreifen	3nocross::ignrte 6150,7673 6083,7582 5955,7406
 Wielandstr. -> Hauptstr.: Mittelstreifen	3::igndisp 6081,7215 6083,7582 5955,7406
+Hauptstr. -> Wielandstr.: Mittelstreifen	3::igndisp 6150,7673 6083,7582 6081,7215
 Fehmarner Str.	1 6710,14776 6528,15000
 Mittelstreifen	3nocross::ignrte 1960,11426 1834,11408 1625,11380
 Soorstr. -> Kaiserdamm: Mittelstreifen	3::igndisp 1878,11268 1834,11408 1625,11380
@@ -1066,6 +1067,8 @@ Potsdamer Str. -> Mittelstr.: Mittelstreifen	3::igndisp 161,3062 50,3031 104,280
 Am Heidehof	1 -1410,2726 -1571,2669 -1612,2785
 Eisenbahnstr. (Fürstenwalde)	1 55401,-3599 55456,-4023 55447,-4247
 Krebsgang	1 14693,7168 14792,7192
+Methfesselstr.: Durchfahrt gesperrt (Poller)	3 9115,9046 9125,9078 9150,9152
+Methfesselstr.: Durchfahrt gesperrt (Poller)	3 9150,9152 9125,9078 9115,9046
 Neue Filandastr./Filandatr.	3nocross::ignrte 5687,5486 5671,5389 5659,5313
 Filandastr. -> Neue Filandastr.: Neue Filandastr./Filandatr.	3::igndisp 5637,5401 5671,5389 5687,5486
 Neue Filandastr. -> Filandastr.: Neue Filandastr./Filandatr.	3::igndisp 5659,5313 5671,5389 5637,5401
@@ -1074,8 +1077,8 @@ Liverpooler Str. -> Müllerstr.: Mittelstreifen	3::igndisp 5995,16836 5937,16784 
 Müllerstr. -> Liverpooler Str.: Mittelstreifen	3::igndisp 5900,16817 5937,16784 5995,16836
 Querweg durch die Dauerkolonie Togo -> Müllerstr.: Mittelstreifen	3::igndisp 5700,16584 5900,16817 5777,16924
 Müllerstr. -> Querweg durch die Dauerkolonie Togo: Mittelstreifen	3::igndisp 5937,16784 5900,16817 5700,16584
-Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16734,9990 16539,10097 16148,10329
-Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16148,10329 16539,10097 16734,9990
+Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16734,9990 16539,10097 16353,10207 16148,10329
+Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16148,10329 16353,10207 16539,10097 16734,9990
 Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19460,7954 19504,8003 19558,8064
 Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19558,8064 19504,8003 19460,7954
 Klapppfosten	3 -1612,2123 -1590,1985 -1592,1852
@@ -1090,7 +1093,7 @@ Gemeinschaftsstr.	1 20067,4054 20109,4087
 Malchiner Str.	1 13866,4481 13869,4626 13836,4759
 Dömitzer Str.	1 13771,4485 13775,4631 13757,4729
 Kirchstr.: nur Linienverkehr erlaubt	2 22312,4593 22284,4653
-Behrenstr./Bebelplatz	1 9801,12245 9743,12239 9700,12234 9631,12227
+Behrenstr./Bebelplatz	1 9801,12245 9743,12239 9708,12235 9674,12231 9631,12227
 Theodorstr.: Poller	3 24916,10539 24921,10705 24928,10737
 Theodorstr.: Poller	3 24928,10737 24921,10705 24916,10539
 Anzengruberstr.	1 13042,8395 12865,8346
@@ -1314,3 +1317,7 @@ Rochlitzer Weg: Schranke	3 15999,880 16117,927 16083,1013
 Rochlitzer Weg: Schranke	3 15999,880 16117,927 16131,889
 Rochlitzer Weg: Schranke	3 16083,1013 16117,927 15999,880
 Rochlitzer Weg: Schranke	3 16131,889 16117,927 15999,880
+Großer Stern	1 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936 6685,11954 6642,12010 6653,12067 6690,12104 6725,12113
+Markelstr.	1 5269,6305 5020,6434
+Geschwister-Scholl-Str. (Potsdam)	1 -14909,-1818 -14733,-1812
+Feuerbachstr. (Potsdam)	1 -14140,-1390 -13879,-1445

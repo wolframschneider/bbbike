@@ -198,6 +198,7 @@ sub get_html {
 	 '78.47.225.30'	      => "ABQIAAAACNG-XP3VVgdpYda6EwQUyhTTdIcL8tflEzX084lXqj663ODsaRSCKugGasYn0ZdJkWoEtD-oJeRhNw",
 	 'bbbike.de'	      => 'ABQIAAAACNG-XP3VVgdpYda6EwQUyhRfQt6AwvKXAVZ7ZsvglWYeC-xX5BROlXoba_KenDFQUtSEB_RJPUVetw',
 	 '83.169.19.137'      => 'ABQIAAAACNG-XP3VVgdpYda6EwQUyhSIqv_shXeYhPRHJYvhhlve40RasBRI6WpGYyWT9EJigb4eNrqNhQkqSQ',
+	 'bbbike.lvps176-28-19-132.dedicated.hosteurope.de' => 'ABQIAAAACNG-XP3VVgdpYda6EwQUyhR1a2Mn5lCCKUDYSFfuCVGW4Ye_FhRhw_1E4wz6JOkiJ2PLXtE3mf_NbQ',
 	 'bbbike.lvps83-169-19-137.dedicated.hosteurope.de' => 'ABQIAAAACNG-XP3VVgdpYda6EwQUyhQzU4FpitV0WsqI42ZHyXuB_4og4xSjtsqjECenvg7m7jSSPGu1rc1w4A',
 	 'user.cs.tu-berlin.de' => 'ABQIAAAACNG-XP3VVgdpYda6EwQUyhSBtzeMHRPjsDce2pdCviKWsp6ivRQM5jfqAYX2iYe9oBJyTM_QLOjtZw',
 
@@ -964,9 +965,7 @@ EOF
     var bbbikeorg_map = new GMapType(tilelayers_bbbikeorg,
         new GMercatorProjection(19), "BBBike",
         { urlArg: 'bbbikeorg', linkColor: '#000000' });
-    if (isBBBikeBeta) {
-        map.addMapType(bbbikeorg_map);
-    }
+    map.addMapType(bbbikeorg_map);
 
     //// no, I prefer hybrid
     //map.setMapType(mapnik_map);
@@ -991,7 +990,15 @@ EOF
     }
 
     function GetTileUrl_bbbikeorg(a, z) {
-	return "http://tile.bbbike.org/osm/mapnik/" + z + "/" + a.x + "/" + a.y + ".png";
+	// select a random server
+	var list = ["a", "b", "c"];
+	var server = list [ parseInt( Math.random() * list.length ) ];
+
+	if (false) {
+	    return "http://" + server + ".tile.bbbike.org/osm/mapnik/"        + z + "/" + a.x + "/" + a.y + ".png";
+	} else {
+	    return "http://" + server + ".tile.bbbike.org/osm/mapnik-german/" + z + "/" + a.x + "/" + a.y + ".png";
+	}
     }
 
     if (GBrowserIsCompatible() ) {

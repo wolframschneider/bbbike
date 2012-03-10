@@ -2,7 +2,6 @@
 # -*- perl -*-
 
 #
-# $Id: cgihead2.t,v 1.27 2009/06/30 21:03:58 eserte Exp $
 # Author: Slaven Rezic
 #
 
@@ -34,7 +33,7 @@ use constant MSDOS_MIME_TYPE => qr{^application/(octet-stream|x-msdos-program|x-
 {
     use POSIX qw(strftime);
     use constant TODO_ADFC_ERRORS => 1; # "2010-09-01T12:00:00" gt strftime("%FT%T", localtime) && 'Redirects on adfc server do not work';
-    use constant TODO_FREEBSD_PKG_ERRORS => "2011-10-31T12:00:00" gt strftime("%FT%T", localtime) && 'BBBike packages for FreeBSD not available because of p5-Tk problems';
+    use constant TODO_FREEBSD_PKG_ERRORS => 0; # "2012-01-22T12:00:00" gt strftime("%FT%T", localtime) && 'BBBike packages for FreeBSD not available, need more research';
 }
 
 my @var;
@@ -47,6 +46,7 @@ push @var, (qw(
 	       $BBBike::BBBIKE_UPDATE_WWW
 	       $BBBike::BBBIKE_UPDATE_DATA_CGI
 	       $BBBike::BBBIKE_UPDATE_DIST_CGI
+	       $BBBike::BBBIKE_MOBILE
 	       $BBBike::BBBIKE_WAP
 	       $BBBike::BBBIKE_DIRECT_WAP
 	       $BBBike::DISTFILE_SOURCE
@@ -57,6 +57,9 @@ push @var, (qw(
 	       $BBBike::BBBIKE_MAPSERVER_ADDRESS_URL
 	       $BBBike::BBBIKE_MAPSERVER_DIRECT
 	       $BBBike::BBBIKE_MAPSERVER_INDIRECT
+	       $BBBike::BBBIKE_GOOGLEMAP_URL
+	       $BBBike::BBBIKE_LEAFLET_URL
+	       $BBBike::BBBIKE_LEAFLET_CGI_URL
 	       $BBBike::SF_DISTFILE_SOURCE
 	       $BBBike::SF_DISTFILE_WINDOWS
 	       $BBBike::SF_DISTFILE_DEBIAN
@@ -103,14 +106,18 @@ for my $url (@compat_urls) {
 for my $var (@var) {
     for my $url (@{ $url{$var} }) {
 
-	# XXX requesting bbbike-snapshot.cgi sometimes fails, with
-	# really long request times. Doing first a head against the
-	# debug version to have the timings in the errorlog
-	# XXX remove this some day...
-	if ($url eq $BBBike::BBBIKE_UPDATE_DIST_CGI) {
-	    my $resp = $ua->head('http://bbbike.de/cgi-bin/bbbike-snapshot-debug.cgi');
-	    if (!$resp->is_success) {
-		diag "Failure requesting the bbbike snaphost: " . $resp->as_string;
+	if (0) {
+	    # XXX requesting bbbike-snapshot.cgi sometimes fails, with
+	    # really long request times. Doing first a head against the
+	    # debug version to have the timings in the errorlog
+	    #
+	    # 2012-01: this is not anymore an issue, a request is typically
+	    # accomplished after 5 seconds.
+	    if ($url eq $BBBike::BBBIKE_UPDATE_DIST_CGI) {
+		my $resp = $ua->head('http://bbbike.de/cgi-bin/bbbike-snapshot-debug.cgi');
+		if (!$resp->is_success) {
+		    diag "Failure requesting the bbbike snapshot: " . $resp->as_string;
+		}
 	    }
 	}
 

@@ -79,7 +79,7 @@
 	X 10713,9260
 	X 10213,8665
 	F 10796,8498
-	F 11271,8325
+	F 11266,8336
 #: related vvv
 	X 11023,9597
 	X 11075,9576
@@ -343,7 +343,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9021,3878
 	X 9277,4664
 	X 9308,4407
-	X 5654,6941
+	X 5644,6936
 	X 5817,7223
 	X 5381,7201
 	X 5357,8013
@@ -654,7 +654,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 14639,11512
 	X 14575,11407
 	X 7086,8579
-	X 6157,7685
+	X 6150,7673
 	X 5370,6486
 	X 5312,6382
 	X 6004,9771
@@ -726,7 +726,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5870,4992
 	X 6007,5785
 	X 5803,6403
-	X 6027,6722
+	X 6019,6710
 	X 8200,5510
 	X 8742,475
 	X 8736,337
@@ -942,7 +942,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6083,6451
 	X 6070,6570
 	X 6709,5854
-	X 5972,6756
+	X 5966,6747
 	X 4793,7992
 	X 4787,7788
 	X 4708,9498
@@ -976,7 +976,6 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2902,14006
 	X 3038,13612
 	X 3123,13274
-	X 3645,13189
 	X 3711,13202
 	X 3967,13211
 	X 4382,13232
@@ -1021,7 +1020,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3839,7787
 	X 3968,7906
 	X 4061,7992
-	X 6371,7976
+	X 6388,7999
 	X 9000,9509
 	X 12360,12505
 	X 8443,10777
@@ -1638,7 +1637,7 @@ nur Richtung O	X 8142,7221
 	X 5189,9397
 	X 4957,9437
 #: note: laut Luftbild:
-	F 5822,6842
+	F 5799,6841
 #: note: laut Luftbild:
 	X -772,13199
 	X 3961,7288
@@ -1739,8 +1738,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: by: Olaf Schulz vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 	F 11310,14953
 #: by ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#: by: Joern (js):
-	F 11593,15051
+#XXX del --- existiert nicht mehr --- #: by: Joern (js): ---	F 11593,15051
 	X 5421,8337
 #: XXX_prog: lange Wartezeiten für Radfahrer (zwei Umläufe)
 	X 8241,11024
@@ -2664,6 +2662,16 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: provisorische Ampel (2011-10-20)
 	X 9000,11727
 	X 25451,14018
+#: by: ossi vvv
+	X 19732,3340
+	X 19324,2939
+#: XXX genaue Position?
+#: note: wahrscheinlich mit der Ampel am Adlergestell synchronisiert
+	F 19842,3419
+#: XXX genaue Position?
+	X 19111,2777
+#: by: ^^^
+	F 4651,6037
 ################################################################################
 #: note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10067917/966975/
@@ -2777,6 +2785,11 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F -7214,-4362
 	X -13778,4492
 	X -13067,-706
+	F -11133,262
+#: XXX noch provisorisch, aber wird wahrscheinlich dauerhaft sein
+#: last_checked: 2012-01-07
+#: next_check: 2012-02-15
+	X 18417,10738
 #: note: ^^^
 ################################################################################
 #: note: Ampeln elsewhere vvv

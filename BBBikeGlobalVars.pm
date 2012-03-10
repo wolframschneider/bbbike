@@ -61,7 +61,7 @@ use vars qw(
      $essen_photo $essen_klein_photo $kino_klein_photo
      $search_photo $search_pref_photo $steigung_photo $gefaelle_photo
      $inwork_photo $achtung_photo $cal_photo $clock_photo $night_photo $star_photo $newlayer_photo
-     $menuarrow_photo $ferry_photo $ferry_klein_photo $blocked_photo
+     $menuarrow_photo $ferry_photo $ferry_klein_photo $ferry_mini_photo $blocked_photo
      $notrailer_photo
      $google_photo $bbbike_google_photo $google_streetview_photo $wikipedia_photo
      %photo
@@ -236,7 +236,7 @@ use vars qw($steigung_net %steigung_penalty_env $steigung_penalty
 	    $curr_selection @inslauf_selection @ext_selection
 	    $strecke $dim_color $unit_s
 	    $bikepwr @bikepwr_all_time @bikepwr_time @bikepwr_cal
-	    $power_cache $next_is_undo
+	    $next_is_undo
 	    %do_flag);
 use vars qw(@search_route_points $search_route_flag $in_search
 	    $show_grade);

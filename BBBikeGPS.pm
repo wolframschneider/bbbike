@@ -170,12 +170,11 @@ if (!defined $gpsman_data_dir) {
 
 use vars qw($cfc_mapping);
 
-use Class::Struct;
-undef &BBBikeGPS::PathGraphElem::new;
-struct('BBBikeGPS::PathGraphElem' => [map { ($_ => "\$") }
-				      (qw(wholedist wholetime dist time legtime
-					  speed alt grade coord accuracy))
-				     ]);
+{
+    package BBBikeGPS::PathGraphElem;
+    use myclassstruct qw(wholedist wholetime dist time legtime
+			 speed alt grade coord accuracy);
+}
 
 use constant DEFAULT_MAX_GAP => 2; # minutes
 
@@ -1475,6 +1474,7 @@ sub tk_interface {
     my $gps_route_info = $args{-gpsrouteinfo} or die "-gpsrouteinfo arg is missing";
     my $oklabel = $args{-oklabel};
     my $file = delete $args{-file}; # only set if saving into a file
+    my $uniquewpts = exists $args{-uniquewpts} ? delete $args{-uniquewpts} : 1;
 
     if (!defined $gps_route_info->{Name} || $gps_route_info->{Name} eq '') {
 	# use filename, if existing
@@ -1515,18 +1515,23 @@ sub tk_interface {
 			       -vcmd => sub { $_[0] =~ /^\d*$/ }),
 		 -sticky => "w");
     }
-    Tk::grid($t->Label(-text => M"Waypoint-Suffix"),
-	     $t->Entry(-textvariable => \$gps_route_info->{WptSuffix}),
-	     -sticky => "w");
-    Tk::grid($t->Checkbutton(-text => M"Suffix nur bei vorhandenen Waypoints verwenden",
-			     -variable => \$gps_route_info->{WptSuffixExisting}),
-	     -sticky => "w", -columnspan => 2);
-    if ($self->can('reset_waypoint_cache')) {
-	Tk::grid($t->Button(-text => M"Waypoints-Cache zurücksetzen",
-			    -command => sub {
-				$self->reset_waypoint_cache;
-			    }),
+    if ($uniquewpts) {
+	Tk::grid($t->Label(-text => M"Waypoint-Suffix"),
+		 $t->Entry(-textvariable => \$gps_route_info->{WptSuffix}),
+		 -sticky => "w");
+	Tk::grid($t->Checkbutton(-text => M"Suffix nur bei vorhandenen Waypoints verwenden",
+				 -variable => \$gps_route_info->{WptSuffixExisting}),
 		 -sticky => "w", -columnspan => 2);
+	if ($self->can('reset_waypoint_cache')) {
+	    Tk::grid($t->Button(-text => M"Waypoints-Cache zurücksetzen",
+				-command => sub {
+				    $self->reset_waypoint_cache;
+				}),
+		     -sticky => "w", -columnspan => 2);
+	}
+    } else {
+	$gps_route_info->{WptSuffix} = '';
+	$gps_route_info->{WptSuffixExisting} = 0;
     }
     if ($self->has_gps_settings && defined &main::optedit) {
 	Tk::grid($t->Button(-text => M"GPS-Einstellungen",
@@ -1657,7 +1662,7 @@ sub tk_interface {
 
     sub tk_interface {
 	my($self, %args) = @_;
-	BBBikeGPS::tk_interface($self, %args);
+	BBBikeGPS::tk_interface($self, %args, -uniquewpts => 0);
     }
 
     sub convert_from_route {
@@ -1672,7 +1677,7 @@ sub tk_interface {
 	require Route::Simplify;
 	require Strassen::Core;
 	require Strassen::GPX;
-	my $simplified_route = $route->simplify_for_gps(%args, -leftrightpair => ['<- ', ' ->']);
+	my $simplified_route = $route->simplify_for_gps(%args, -uniquewpts => 0, -leftrightpair => ['<- ', ' ->']);
 	my $s = Strassen::GPX->new;
 	$s->set_global_directives({ map => ["polar"] });
 	for my $wpt (@{ $simplified_route->{wpt} }) {
@@ -1722,6 +1727,12 @@ sub tk_interface {
 
     sub convert_from_route {
 	my($self, $route, %args) = @_;
+
+	if (!$self->has_mapsource) {
+	    main::status_message("Mapsource is not available on this system.", "error");
+	    return;
+	}
+
 	require File::Temp;
 	require Route::Simplify;
 	require Strassen::Core;
@@ -1738,7 +1749,11 @@ sub tk_interface {
 	print $ofh $s->bbd2gpx(-as => "route");
 	close $ofh;
 
-	system(1, $self->mapsource_path, $ofile);
+	if ($^O eq 'MSWin32') {
+	    system(1, $self->mapsource_path, $ofile);
+	} else {
+	    system($self->mapsource_path, $ofile);
+	}
     }
 
     sub transfer {

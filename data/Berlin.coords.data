@@ -27,6 +27,7 @@ Ackerstr.|Spandau|13585|-3718,15245
 Adalbertstr.|Kreuzberg|10997|11640,11067
 Adalbertstr.|Kreuzberg|10999|11640,11067
 Adalbertstr.|Mitte|10179|11640,11067
+Adam-Kuckhoff-Platz|Wilmersdorf|14197|4788,7257
 Adam-von-Trott-Str.|Charlottenburg-Nord|13627|3860,15485
 Adamstr.|Wilhelmstadt|13595|-4035,12467
 Adele-Sandrock-Str.|Hellersdorf|12627|24951,14708
@@ -1820,7 +1821,7 @@ Brombeerweg|Westend|14052|-855,12559
 Bromelienweg|Heinersdorf|13089|13368,18040
 Brommystr.|Kreuzberg|10997|12518,11092
 Bröndbystr.|Lichterfelde|12207|3285,1402
-Bronteweg|Westend|14055|-1350,11047
+Brontëweg|Westend|14055|-1350,11047
 Brook-Taylor-Str.|Adlershof|12489|19146,2975
 Brösener Str.|Friedrichshagen|12587|26144,6190
 Brotteroder Str.|Lankwitz|12249|6876,1537
@@ -2043,7 +2044,7 @@ Chamissoplatz|Kreuzberg|10965|9612,9104
 Chamissostr.|Französisch Buchholz|13127|12392,21837
 Chamissostr.|Hakenfelde|13587|-2596,16826
 Champignonstr.|Bohnsdorf|12526|21346,-1107
-Chantieweg|Französisch Buchholz|13127|11409,21599
+Chantiéweg|Französisch Buchholz|13127|11409,21599
 Charitéplatz|Mitte|10117|8602,13075
 Charitéstr.|Mitte|10117|8728,12892
 Charles-Corcelle-Ring|Wedding|13405|5000,16986
@@ -2734,6 +2735,7 @@ Elisabeth-Feller-Weg|Lichterfelde|12205|3494,2315
 Elisabeth-Flickenschildt-Str.|Haselhorst|13599|-1671,15083
 Elisabeth-Mara-Str.|Mitte|10117|10320,11627
 Elisabeth-Schiemann-Str.|Falkenberg|13057|20512,18626
+Elisabeth-Schwarzhaupt-Platz|Mitte|10115|9274,13963
 Elisabeth-Selbert-Str.|Rudow|12355|17346,-240
 Elisabethkirchstr.|Mitte|10115|9860,14165
 Elisabethstr.|Biesdorf|12683|20991,14455
@@ -3013,7 +3015,7 @@ Falkenhagener Str.|Spandau|13585|-3672,15356
 Falkenhagener Tor|Spandau|13585|-3972,15639
 Falkenhausenweg|Lankwitz|12249|7855,2132
 Falkenhorststr.|Konradshöhe|13505|-2002,19555
-Falkenplatz|Konradshöhe|13505|-1610,19530
+Falkenplatz|Konradshöhe|13505|-1726,19725
 Falkenried|Dahlem|14195|2432,5987
 Falkenseer Chaussee|Falkenhagener Feld|13583|-4308,15411
 Falkenseer Chaussee|Falkenhagener Feld|13589|-4308,15411
@@ -3069,7 +3071,7 @@ Feilnerstr.|Kreuzberg|10969|10114,11057
 Feldberger Ring|Hellersdorf|12619|22639,13873
 Feldblumenweg|Köpenick|12557|23335,2331
 Feldgrabensteig|Falkenhagener Feld|13589|-6358,15816
-Feldlerchenweg|Lübars|13469|7109,22919 6912,23237
+Feldlerchenweg|Lübars|13469|7109,22919
 Feldmarkweg|Tegel|13509|3314,21165
 Feldrain|Mahlsdorf|12623|25558,13706
 Feldschlößchen (Kolonie)|Britz|12359|14608,4896
@@ -4588,9 +4590,10 @@ Heidetor|Spandau|13597|-3106,14731
 Heideweg|Baumschulenweg|12487|15943,4366
 Heilbronner Str.|Halensee|10711|2991,10481
 Heilbronner Str.|Schöneberg|10779|6138,9347
+Heiligegeistgasse|Mitte|10178|10309,12700
+Heiligegeistkirchplatz|Mitte|10178|10360,12793
 Heiligenberger Str.|Karlshorst|10318|18345,8336
 Heiligendammer Str.|Schmargendorf|14199|2810,7110
-Heiligengeistgasse|Mitte|10178|10309,12700
 Heiligenseestr.|Heiligensee|13503|-1206,21813
 Heiligenstadter Str.|Alt-Hohenschönhausen|13055|16788,14671
 Heiligental|Wittenau|13437|5964,19598
@@ -5127,6 +5130,7 @@ Iburger Ufer|Charlottenburg|10587|4174,12527
 Ida-Wolff-Platz|Kreuzberg|10963|9210,10614
 Idastr.|Niederschönhausen|13156|10783,19815
 Ideal III (Kolonie)|Britz|12359|15418,4093
+Idealpassage|Neukölln|12043|12578,8654
 Idsteiner Str.|Zehlendorf|14163|-323,2239
 Idunastr.|Heinersdorf|13089|12918,18560
 Ifenpfad|Mariendorf|12107|10112,1420
@@ -7140,6 +7144,7 @@ Marktstr.|Rummelsburg|10317|14995,11121
 Marktstr.|Spandau|13597|-3138,14253
 Markt|Spandau|13597|-3112,14309
 Markulfweg|Altglienicke|12524|19080,780
+Markus-Reich-Platz|Weißensee|13088|13989,15589
 Markusplatz|Steglitz|12167|6342,4783
 Marlene-Dietrich-Platz|Tiergarten|10785|8258,11254
 Marlenestr.|Konradshöhe|13505|-1546,18174
@@ -7469,6 +7474,7 @@ Mönchmühler Str.|Rosenthal|13158|8569,22444
 Mönchsheimer Str.|Rahnsdorf|12589|30321,4174
 Mönchstr.|Spandau|13597|-3072,14321
 Mondsteinpfad|Buckow|12349|11181,1884
+Monimbóplatz|Rummelsburg|10317|16962,11833
 Mönkeberger Str.|Gesundbrunnen|13357|9665,16247
 Monopolstr.|Mariendorf|12109|9463,4740
 Monschauer Weg|Mariendorf|12105|8888,4827
@@ -9663,7 +9669,7 @@ Schleipfuhlweg|Hellersdorf|12621|24707,13742
 Schleipfuhlweg|Hellersdorf|12627|24707,13742
 Schleipfuhlweg|Kaulsdorf|12621|24707,13742
 Schleizer Str.|Alt-Hohenschönhausen|13055|17021,14952
-Schlesinger Str.|Charlottenburg|10587|4924,12974
+Schlesingerstr.|Charlottenburg|10587|4924,12974
 Schlesische Str.|Kreuzberg|10997|13379,10268
 Schleswiger Ufer|Hansaviertel|10555|5839,12266
 Schlettstadter Str.|Zehlendorf|14169|1684,3663
@@ -9698,7 +9704,7 @@ Schloßstr.|Steglitz|12165|4415,5103
 Schloßstr.|Tegel|13507|2039,20500
 Schluchseestr.|Lübars|13469|5718,22547
 Schluchseestr.|Waidmannslust|13469|5718,22547
-Schlütersteig|Heiligensee|13503|-3412,22058
+Schlütersteg|Heiligensee|13503|-3412,22058
 Schlüterstr.|Charlottenburg|10625|4546,10316
 Schlüterstr.|Charlottenburg|10629|4546,10316
 Schlüterstr.|Charlottenburg|10707|4546,10316
@@ -10491,6 +10497,7 @@ Stendelweg|Spandau|13597|-758,12849
 Stendelweg|Westend|14052|-758,12849
 Stepenitzer Weg|Kaulsdorf|12621|23644,11742
 Stephaniweg|Lichterfelde|12209|4841,1713
+Stephanplatz|Moabit|10559|6394,14085
 Stephanstr.|Moabit|10559|6358,13966
 Stephanstr.|Steglitz|12167|6677,4502
 Stephanusring|Französisch Buchholz|13127|11863,22146

@@ -361,7 +361,7 @@ sub draw_map {
 
 	for my $s ($self->get_street_records_in_bbox($strecke)) {
 	    my $cat = $s->[Strassen::CAT];
-	    if ($cat =~ /^F:(.*)/) {
+	    if ($cat =~ /^F:([^|]+)/) {
 		my $cat = $1;
 		next if ($strecke_name eq 'flaechen' &&
 			 (($flaechen_pass == 1 && $cat eq 'Pabove') ||
@@ -495,7 +495,22 @@ sub draw_map {
 	my($kl_ampel, $w_lsa, $h_lsa) = $self->read_image("ampel_klein$suf");
 	my($kl_andreas, $w_and, $h_and) = $self->read_image("andreaskr_klein$suf");
 	my($kl_zugbruecke, $w_zbr, $h_zbr) = $self->read_image($self->{Xk} >= 0.05 ? "zugbruecke" : "zugbruecke_klein");
-	my($kl_ampelf, $w_lsaf, $h_lsaf) = $self->read_image("ampelf_klein$suf");
+	my($kl_ampelf, $w_lsaf, $h_lsaf);
+	if ($self->suffix eq 'png') {
+	    # XXX Bei png muss die "noalpha"-Variante wegen GD-Problemen
+	    # verwendet werden. Theoretisch würde es funktionieren, wenn
+	    # das truecolor-Bit sowohl auf $im als auch auf $kl_ampelf
+	    # gesetzt wäre. Leider bekomme ich einen Absturz bei $im mit
+	    # truecolor.
+	    if ($suf eq '') { # noalpha variant only for suf=="" available
+		($kl_ampelf, $w_lsaf, $h_lsaf) = $self->read_image("ampelf_klein_noalpha");
+	    } else {
+		# Reuse normal ampel variant without pedestrian
+		($kl_ampelf, $w_lsaf, $h_lsaf) = ($kl_ampel, $w_lsa, $h_lsa);
+	    }
+	} else {
+	    ($kl_ampelf, $w_lsaf, $h_lsaf) = $self->read_image("ampelf_klein$suf");
+	}
 
 	if ($kl_andreas || $kl_ampel || $kl_zugbruecke || $kl_ampelf) {
 	    $lsa->init;
@@ -514,16 +529,12 @@ sub draw_map {
 			$im->copy($kl_zugbruecke, $x-$w_zbr/2, $y-$h_zbr/2, 0, 0,
 				  $w_zbr, $h_zbr);
 		    }
-		} elsif (0 && $cat eq 'F') {
-		    # XXX Wegen des Alpha-Channels in ampelf* nicht nutzbar.
-		    # Es würde funktionieren, wenn das truecolor-Bit sowohl
-		    # auf $im als auch auf $kl_ampelf gesetzt wäre.
-		    # Leider bekomme ich einen Absturz bei $im mit truecolor.
+		} elsif ($cat eq 'F') {
 		    if ($kl_ampelf) {
-			$im->copy($kl_ampelf, $x-$w_lsa/2, $y-$h_lsa/2, 0, 0,
-				  $w_lsa, $h_lsa);
+			$im->copy($kl_ampelf, $x-$w_lsaf/2, $y-$h_lsaf/2, 0, 0,
+				  $w_lsaf, $h_lsaf);
 		    }
-		} elsif ($cat =~ m{^(F|X)$}) { # F: only fallback here
+		} elsif ($cat eq 'X') {
 		    if ($kl_ampel) {
 			$im->copy($kl_ampel, $x-$w_lsa/2, $y-$h_lsa/2, 0, 0,
 				  $w_lsa, $h_lsa);
@@ -568,25 +579,26 @@ sub draw_map {
 	$bhf = Strasse::short($bhf, 1);
 	$bhf;
     };
-    foreach my $points (['ubahn', 'ubahnhof', 'u'],
-			['sbahn', 'sbahnhof', 's'],
-			['rbahn', 'rbahnhof', 'r'],
-			['ort', 'orte',       'o'],
-			['orte_city', 'orte_city', 'oc'],
-		       ) {
+    foreach my $def (['ubahn', 'ubahnhof', 'u'],
+		     ['sbahn', 'sbahnhof', 's'],
+		     ['rbahn', 'rbahnhof', 'r'],
+		     ['ort', 'orte',       'o'],
+		     ['orte_city', 'orte_city', 'oc'],
+		    ) {
+	my($lines, $points, $type) = @$def;
 	# check if it is advisable to draw stations...
-	next if ($points->[0] =~ /bahn$/ && $self->{Xk} < 0.004);
-	my $do_bahnhof = grep { $_ eq $points->[0]."name" } @{$self->{Draw}};
+	next if ($lines =~ /bahn$/ && $self->{Xk} < 0.004);
+	my $do_bahnhof = grep { $_ eq $lines."name" } @{$self->{Draw}};
 	if ($self->{Xk} < 0.06) {
 	    $do_bahnhof = 0;
 	}
 	# Skip drawing if !ubahnhof, !sbahnhof or !rbahnhof is specified
-	next if $str_draw{"!" . $points->[1]};
+	next if $str_draw{"!" . $points};
 
-	if ($str_draw{$points->[0]}) {
+	if ($str_draw{$lines}) {
 
 	    my $brush;
-	    if ($points->[2] =~ /^[sr]$/) {
+	    if ($type =~ /^[sr]$/) {
 		$brush = $self->{GD_Image}->new($xw_s,$yw_s);
 		$brush->transparent($brush->colorAllocate(255,255,255));
 		my $col = $brush->colorAllocate($im->rgb($color{'SA'}));
@@ -595,13 +607,12 @@ sub draw_map {
 		$im->setBrush($brush);
 	    }
 
-	    my $p = ($points->[0] eq 'ort'
+	    my $p = ($lines eq 'ort'
 		     ? $self->_get_orte
-		     : new Strassen $points->[1]);
-	    my $type = $points->[2];
+		     : new Strassen $points);
 
 	    my($image, $image_w, $image_h);
-	    if ($points->[1] =~ /^([us])bahnhof$/ && $self->{Xk} > 0.01) {
+	    if ($points =~ /^([us])bahnhof$/ && $self->{Xk} > 0.01) {
 		my $type = $1;
 		my $basename = "${type}bahn" . ($self->{Xk} > 0.12 ? "" :
 						$self->{Xk} > 0.07 ? "_klein" : "_mini");
@@ -975,7 +986,7 @@ sub draw_route {
 	    $self->imagetype ne 'wbmp') {
 	    my $images_dir = $self->get_images_dir;
 	    my $imgfile;
-	    $imgfile = "$images_dir/flag2_bl." . $self->suffix;
+	    $imgfile = "$images_dir/flag2_bl" . ($self->suffix eq 'png' ? '_noalpha' : '') . '.' . $self->suffix;
 	    if (open(GIF, $imgfile)) {
 		binmode GIF;
 		my $start_flag = $self->{GD_Image}->newFromImage(\*GIF);
@@ -994,7 +1005,7 @@ sub draw_route {
 		warn "Can't open $imgfile: $!";
 	    }
 
-	    $imgfile = "$images_dir/flag_ziel." . $self->suffix;
+	    $imgfile = "$images_dir/flag_ziel" . ($self->suffix eq 'png' ? '_noalpha' : '') . '.' . $self->suffix;
 	    if (open(GIF, $imgfile)) {
 		binmode GIF;
 		my $end_flag = $self->{GD_Image}->newFromImage(\*GIF);

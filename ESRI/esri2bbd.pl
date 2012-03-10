@@ -5,7 +5,7 @@
 # $Id: esri2bbd.pl,v 1.12 2003/11/11 23:32:25 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2001,2003 Slaven Rezic. All rights reserved.
+# Copyright (C) 2001,2003,2012 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -24,11 +24,13 @@ my $dbfcol;
 my $forcelines;
 my $do_int;
 my $do_autoconv;
+my $verbose;
 if (!GetOptions("dbfinfo=s"   => \$dbfinfo,
 		"dbfcol=i"    => \$dbfcol,
 		"forcelines!" => \$forcelines,
 		"int|integer!"=> \$do_int,
 		"autoconv!"   => \$do_autoconv,
+		"v"           => \$verbose,
 	       )) {
     usage();
 }
@@ -45,6 +47,11 @@ sub usage {
 
 my $from = shift or usage("ESRI file missing");
 my $to   = shift or usage("Output file missing");
+
+if ($verbose) {
+    $ESRI::Shapefile::verbose = 1;
+    $ESRI::Shapefile::verbose = $ESRI::Shapefile::verbose if 0; # cease -w
+}
 
 my $shapefile = new ESRI::Shapefile;
 $shapefile->set_file($from);
@@ -71,7 +78,7 @@ esri2bbd.pl - convert ESRI shapefiles to bbd data
 =head1 SYNOPSIS
 
     esri2bbd.pl [-dbfinfo string] [-dbfcol columnindex] [-forcelines]
-                [-int] [-autoconv]
+                [-int] [-autoconv] [-v]
                 esrifile bbdfile
 
 =head1 DESCRIPTION
@@ -89,7 +96,8 @@ has to be C<NAME>.
 =item -dbfcol columnindex
 
 Use the specified column from the DBase database to set the "name"
-attribute of the generated bbd file.
+attribute of the generated bbd file. Index is zero-based. Currently
+the option C<-dbfinfo NAME> also has to be set.
 
 =item -forcelines
 
@@ -103,9 +111,23 @@ Convert coordinates from float into integers.
 
 Automatically convert coordinates to fit in the bbbike application.
 
+=item -v
+
+Increase verbosity.
+
 =back
 
-=head1 HOWTO use ESRI shapefiles in bbbike
+=head2 COORDINATE CONVERSION
+
+If the perl modules L<Geo::GDAL> and L<Geo::Proj4> are installed and
+the ESRI shapefile comes with a projection file ending with C<.prj>,
+then the converted bbd file will contain WGS84 coordinates which can
+be plotted and used directly in BBBike.
+
+Otherwise, you have to try out the C<-autoconv> switch and follow the
+instructions outlined in L</HOWTO use ESRI shapefiles in bbbike>.
+
+=head2 HOWTO use ESRI shapefiles in bbbike
 
 Here are some checkpoints for using ESRI shapefiles in bbbike routing:
 

@@ -32,16 +32,16 @@ userdel	2::temp 9521,10010 9448,10014
 userdel	2::temp 9599,10175 9687,10180 9825,10206
 userdel	2::temp 9416,10196 9599,10175
 userdel	2::temp 9579,10122 9536,10064
-userdel	2::temp 9579,10122 9631,10142 9689,10124
+userdel	2::temp 9579,10122 9631,10142 9702,10129
 userdel	2::temp 9837,10117 9827,10051
 userdel	2::temp 9837,10117 9858,10199
 userdel auto	3 9593,10238 9599,10175 9579,10122
 userdel auto	3 10006,9942 9922,10010 9827,10051 9837,9856
-userdel auto	3 10006,9942 9922,10010 9827,10051 9689,10124
+userdel auto	3 10006,9942 9922,10010 9827,10051 9702,10129
 userdel auto	3 9837,9856 9827,10051 9922,10010 10006,9942
-userdel auto	3 9837,9856 9827,10051 9689,10124
-userdel auto	3 9689,10124 9827,10051 9922,10010 10006,9942
-userdel auto	3 9689,10124 9827,10051 9837,9856
+userdel auto	3 9837,9856 9827,10051 9702,10129
+userdel auto	3 9702,10129 9827,10051 9922,10010 10006,9942
+userdel auto	3 9702,10129 9827,10051 9837,9856
 userdel auto	3 9579,10122 9599,10175 9593,10238
 EOF
      },
@@ -50,7 +50,7 @@ EOF
        text  => 'Karneval der Kulturen, 12.6.2011',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11500,9116 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9242,9694 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
+userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9242,9694 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
 userdel	3 8773,9524 8777,9601 8779,9812
 userdel	3 8779,9812 8777,9601 8773,9524
 userdel	3 9000,9509 9043,9745 9073,9915
@@ -850,7 +850,7 @@ EOF
        text  => 'Lückstr. Richtung stadteinwärts zwischen Schlichtallee und Wönnichstr. Baustelle, Straße gesperrt (bis Mitte 10.2004) ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1 16699,10611 16647,10632 16588,10655 16460,10699 16316,10755 16303,10760 16153,10818 16085,10844 16032,10842
+userdel	1 16699,10611 16647,10632 16601,10650 16588,10655 16460,10699 16316,10755 16303,10760 16153,10818 16085,10844 16032,10842
 EOF
      },
      { from  => 1094627730, # 2004-09-08 09:15
@@ -1394,7 +1394,7 @@ EOF
        text  => 'Weihnachtsmarkt am Schloßplatz, bis 25.12.2005',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 10170,12261 10063,12438
+userdel	2 10174,12284 10063,12438
 EOF
      },
      { from  => 1136837576, # 2006-01-09 21:12
@@ -2122,8 +2122,8 @@ userdel	2 9643,12127 9756,12139 9812,12145
 userdel	2 10091,12232 10035,12209 9972,12184
 userdel	2 9812,12145 9890,12161
 userdel	2 9890,12161 9972,12184
-userdel	2 10170,12261 10109,12238
-userdel	2 10170,12261 10281,12310
+userdel	2 10174,12284 10109,12238
+userdel	2 10174,12284 10194,12258 10281,12310
 EOF
      },
      { from  => 1118988173, # 2005-06-17 08:02
@@ -3223,7 +3223,7 @@ EOF
        source_id => 'LMS_1129024102795',
        data  => <<EOF,
 userdel	q4; 7713,8600 7709,8777
-userdel	q4; 7710,8051 7716,8356
+userdel	q4; 7710,8051 7715,8308 7716,8356
 EOF
      },
      { from  => 1130792769, # 2005-10-31 22:06
@@ -3292,14 +3292,15 @@ EOF
 userdel	1 -1668,-1709 -1715,-1767 -1921,-1931 -2049,-2165
 EOF
      },
-     { from  => 1290380400, # PERIODISCH! # früher: 1132411558, # 2005-11-19 15:45
-       until => 1294009199, # PERIODISCH! # früher: 1136069999, # 2005-12-31 23:59
-       text  => 'Weihnachtsmarkt an der Gedächtniskirche, vom 22. November 2010 bis 2. Januar 2011',
-       type  => 'handicap',
+     { from  => 1321743600, # 2011-11-20 00:00 # PERIODISCH!
+       until => 1325458800, # 2012-01-02 00:00 # PERIODISCH!
+       text  => 'Weihnachtsmarkt an der Gedächtniskirche, vom 21.11.2011 bis 1.1.2012',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20111116.1015.362582.html',
        data  => <<EOF,
-userdel	q4 5829,10964 5782,10884
-userdel	q4 5656,10876 5652,11004
-#XXX del - userdel	q4; 5652,11004 5716,10978 5829,10964
+# sowieso schon mit q4 markiert, deshalb -> 2
+userdel	2::temp 5829,10964 5782,10884
+userdel	2::temp 5656,10876 5652,11004
 EOF
      },
      { from  => 1132606608, # 2005-11-21 21:56
@@ -3494,10 +3495,11 @@ EOF
 userdel	2::inwork -19908,17940 -18793,18169
 EOF
      },
-     { from  => 1291417200, # PERIODISCH! 2. und 3. Advent # früher: 1165660181, # 2006-12-09 11:29
-       until => 1291590000, # PERIODISCH! 2. und 3. Advent # früher: 1165708800, # 2006-12-10 01:00
-       text  => 'Lichtenrader Weihnachtsmarkt: Bahnhofstr. (Lichtenrade) in beiden Richtungen zwischen Steinstr. und Goltzstr gesperrt (04.12.2010 bis 05.12.2010) ',
+     { from  => 1324076400, # 2011-11-26 11:00, PERIODISCH! an allen Adventssamstagen
+       until => 1324150200, # 2011-11-26 20:30, PERIODISCH! an allen Adventssamstagen
+       text  => 'Lichtenrader Weihnachtsmarkt: Bahnhofstr. (Lichtenrade) in beiden Richtungen zwischen Steinstr. und Goltzstr gesperrt (alle Adventssamstage von 11:00 bis 20:30) ',
        type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20111109.1040.362258.html',
        data  => <<EOF,
 userdel	q4 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
 EOF
@@ -4257,7 +4259,7 @@ EOF
        text  => 'Invalidenstraße, Prenzlauer Berg Richtung Tiergarten Zwischen Kreuzung Gartenstraße und Kreuzung Chausseestraße Baustelle, gesperrt, Dauer: 19.04.2006 09:00 Uhr bis 15:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 9383,13978 9203,13953
+userdel	2 9383,13978 9274,13963 9203,13953
 userdel	2 9151,13941 9203,13953
 userdel	2 9151,13941 9085,13919
 userdel	2 9085,13919 8935,13844
@@ -4607,7 +4609,7 @@ EOF
 userdel	2 9521,10010 9448,10014
 userdel	2 9827,10051 9521,10010 9536,10064 9579,10122 9599,10175 9687,10180 9825,10206 9865,10227
 userdel	2 9416,10196 9599,10175
-userdel	2 9579,10122 9631,10142 9689,10124
+userdel	2 9579,10122 9631,10142 9702,10129
 userdel	2 9827,10051 9837,10117 9858,10199 9865,10227
 EOF
      },
@@ -4732,7 +4734,7 @@ userdel	2::temp 8021,11636 8016,11770 8172,11679
 userdel	2::temp 7816,12150 7875,12363
 userdel	2::temp 7504,11512 7382,11588 7163,11738 7287,11763 7535,11677 7591,11639 7669,11586 7696,11621 7735,11656 7796,11681 7901,11684 8016,11770
 userdel	2::temp 7669,11586 7711,11558
-userdel	2::temp 8022,12016 8016,11770 7801,11875 7663,11946 7570,11855 7223,11897 7073,11798 7163,11738 6980,11583 6809,11570
+userdel	2::temp 8022,12016 8016,11770 7801,11875 7663,11946 7570,11855 7223,11897 7182,11870 7173,11864 7073,11798 7163,11738 6980,11583 6809,11570
 userdel	2::temp 7039,12314 7383,12095
 userdel	2::temp 7073,11798 6778,11742
 userdel	2::temp 8354,12416 8546,12279
@@ -4740,7 +4742,7 @@ userdel	2::temp 7382,11588 7356,11517
 userdel	2::temp 6809,11979 7073,11798
 userdel	2::temp 8225,11692 8223,11796 8222,11881 8215,12156 8214,12205
 userdel	2::temp 8119,12414 8055,12186
-userdel	2::temp 8055,12186 8048,12135 8034,12093 8006,12074 7999,12049 8022,12016 8048,12033 8057,12059 8034,12093
+userdel	2::temp 8055,12186 8048,12135 8034,12093 8004,12074 7999,12040 8022,12016 8052,12033 8057,12065 8034,12093
 userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 userdel	2::temp 8595,12066 8581,11896 8571,11846
 EOF
@@ -4898,7 +4900,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_64281_COPY_1',
        data  => <<EOF,
-userdel	2 20692,3951 20772,3999 20788,4008 20834,4035 21053,4162 21146,4229 21174,4250 21206,4387 21289,4563 21332,4655
+userdel	2 20692,3951 20772,3999 20788,4008 20834,4035 21053,4162 21146,4229 21174,4250 21184,4293 21206,4387 21289,4563 21332,4655
 EOF
      },
      { from  => 1151101431, # 2006-06-24 00:23
@@ -5302,7 +5304,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003088',
        data  => <<EOF,
-userdel	2::temp 5370,6486 5424,6584 5533,6753 5654,6941
+userdel	2::temp 5370,6486 5424,6584 5533,6753 5644,6936
 EOF
      },
      { from  => 1154203576, # 2006-07-29 22:06
@@ -6682,17 +6684,17 @@ EOF
 userdel	2::inwork -31993,-726 -32143,-211 -32153,-176
 EOF
      },
-     { from  => 1290380400, # PERIODISCH! # früher: 1163480400, # 2006-11-14 06:00
-       until => 1293404399, # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
-       text  => 'Weihnachtsmarkt am Opernpalais: der Bereich Oberwallstr., Niederlagstr., Am Schinkelplatz gesperrt, vom 22.11.-26.12.2010',
+     { from  => 1321916400, # 2011-11-22 00:00 # PERIODISCH! # früher: 1163480400, # 2006-11-14 06:00
+       until => 1324940399, # 2011-12-26 23:59 # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
+       text  => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: der Bereich Oberwallstr., Niederlagstr., Am Schinkelplatz gesperrt, vom 23.11.-26.12.2010',
        type  => 'gesperrt',
+       source_id => 'http://www.berliner-weihnacht.de/',
        data  => <<EOF,
-userdel	2::temp 9994,12368 9943,12364 9934,12418
-userdel	2::temp 9996,12401 10058,12290 10008,12274 9994,12368 9996,12401 9984,12426
-userdel	2::temp 10058,12290 10091,12232
+userdel	2::temp 10008,12274 9994,12368
 userdel	2::temp 9943,12364 9961,12273 9972,12184
 userdel	2::temp 10010,12259 10035,12209
 userdel	2::temp 9852,12409 9869,12297 9875,12257 9890,12161
+userdel	2::temp 9961,12273 9875,12257
 EOF
      },
      { from  => 1163718000, # 2006-11-17 00:00
@@ -7964,7 +7966,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005341',
        data  => <<EOF,
-userdel	2::temp 5370,6486 5424,6584 5533,6753 5654,6941
+userdel	2::temp 5370,6486 5424,6584 5533,6753 5644,6936
 EOF
      },
      { from  => 1177739901, # 2007-04-28 07:58
@@ -9135,12 +9137,12 @@ userdel	q4::inwork -32153,-176 -32143,-211 -31993,-726 -31991,-1024
 EOF
      },
      { from  => 1319138777, # 2011-10-20 21:26
-       until => 1322694000, # 2011-12-01 00:00
+       until => 1322599270, # 1322694000, # 2011-12-01 00:00
        text  => 'Rudower Chaussee (Treptow - Köpenick) in beiden Richtungen Höhe S-Bahn Brücke Adlershof Baustelle, Straße vollständig gesperrt, als Fußgänger kann man passieren',
        type  => 'handicap',
        source_id => 'INKO_096853',
        data  => <<EOF,
-userdel	q4::inwork 19904,3464 19732,3340
+userdel	q4::inwork 19904,3464 19842,3419 19732,3340
 EOF
      },
      { from  => 1185055200, # 2007-07-22 00:00
@@ -9419,7 +9421,7 @@ EOF
        data  => <<EOF,
 userdel	2::temp 9890,12161 9875,12257 9869,12297 9795,12293 9780,12401
 userdel	2::temp 9869,12297 9852,12409
-userdel	2::temp 9994,12368 9943,12364 9961,12273 9972,12184
+userdel	2::temp 9943,12364 9961,12273 9972,12184
 userdel	2::temp 9934,12418 9943,12364
 EOF
      },
@@ -10551,7 +10553,7 @@ EOF
        text  => 'Weihnachtsmarkt ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 9700,12234 9679,12388
+userdel	2::inwork 9708,12235 9702,12307 9695,12390
 EOF
      },
      { from  => undef, # # note: existiert nicht mehr
@@ -10559,7 +10561,7 @@ EOF
        text  => 'Weihnachtsmarkt',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 10170,12261 10063,12438
+userdel	2::inwork 10174,12284 10063,12438
 EOF
      },
      { from  => 1195515915, # 2007-11-20 00:45
@@ -11479,7 +11481,7 @@ EOF
 userdel	2::temp 9521,10010 9448,10014
 userdel	2::temp 9858,10199 9837,10117 9827,10051 9521,10010 9536,10064 9579,10122 9599,10175 9687,10180 9825,10206 9865,10227
 userdel	2::temp 9416,10196 9599,10175
-userdel	2::temp 9579,10122 9631,10142 9689,10124 9827,10051
+userdel	2::temp 9579,10122 9631,10142 9702,10129 9827,10051
 EOF
      },
      { from  => undef, # 
@@ -11776,7 +11778,7 @@ EOF
        data  => <<EOF,
 userdel	2::temp 8358,11477 8301,11469 8226,11458 8145,11438 8083,11381 8065,11349 8031,11249 8000,11137 7980,11070 7968,11048 7912,10945 7820,10768 7689,10514 7633,10394 7579,10183 7413,10244 7245,10297 7131,10331 7033,10328 6971,10346 6937,10363 6851,10416 6753,10446 6636,10492 6532,10529 6685,10690 6740,10755 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936
 userdel	2::temp 8553,11630 8548,11552 8542,11502 8479,11493 8374,11479
-userdel	2::temp 9984,12426 9934,12418 9852,12409 9780,12401 9771,12400 9679,12388 9601,12380 9475,12365 9358,12351 9141,12320 9164,12172 9064,12156
+userdel	2::temp 9984,12426 9934,12418 9852,12409 9780,12401 9771,12400 9734,12395 9695,12390 9656,12386 9601,12380 9475,12365 9358,12351 9141,12320 9164,12172 9064,12156
 userdel	2::temp 8553,11638 8567,11799 8571,11846 8581,11896 8595,12066 8737,12098 8743,12099 8861,12125 9054,12154
 userdel auto	3 6972,10665 6818,10725 6740,10755 6607,10801
 userdel auto	3 8901,12008 8861,12125 8804,12280
@@ -11792,14 +11794,14 @@ userdel auto	3 7963,10716 7820,10768 7534,10850
 userdel auto	3 7828,11133 8000,11137 8102,11099
 userdel auto	3 6732,11106 6873,11011 7002,11034
 userdel auto	3 6607,10801 6740,10755 6818,10725 6972,10665
-userdel auto	3 8572,11506 8542,11502 8573,11404
-userdel auto	3 8572,11506 8542,11502 8462,11538
+userdel auto	3 8596,11508 8542,11502 8573,11404
+userdel auto	3 8596,11508 8542,11502 8462,11538
 userdel auto	3 6692,11365 6851,11346 7103,11247 7160,11225
 userdel auto	3 8573,11404 8542,11502 8462,11538
-userdel auto	3 8573,11404 8542,11502 8572,11506
+userdel auto	3 8573,11404 8542,11502 8596,11508
 userdel auto	3 7478,10612 7689,10514 7849,10488
 userdel auto	3 8462,11538 8542,11502 8573,11404
-userdel auto	3 8462,11538 8542,11502 8572,11506
+userdel auto	3 8462,11538 8542,11502 8596,11508
 userdel auto	3 6524,11583 6809,11570 6980,11583
 userdel auto	3 7429,10366 7413,10244 7384,10127
 userdel auto	3 6719,10347 6753,10446 6745,10619
@@ -13010,7 +13012,7 @@ EOF
        text  => 'L 020 Falkensee - Velten zw. Schönwalde und Gewerbegebiet Straßenbauarbeiten Vollsperrung 10.11.2008-19.12.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -8777,22961 -7734,23796 -7533,24138
+userdel	2::inwork -8777,22961 -7734,23796 -7599,23946 -7533,24138
 EOF
      },
      { from  => 1225753200, # 2008-11-04 00:00
@@ -13316,7 +13318,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_011184',
        data  => <<EOF,
-#: last_checked: 2011-08-31
+#: last_checked: 2012-02-01
 userdel	q4::inwork; 10350,13376 10527,13257
 EOF
      },
@@ -15439,7 +15441,7 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: note: http://www.berlin.de/ba-friedrichshain-kreuzberg/wirtschaftsfoerderung/wirtschaftsstandort/maerkte.html
-	q4::temp:clock 9566,10566 9580,10434
+	q4::temp:clock 9566,10566 9587,10421
 EOF
      },
      { from  => undef, #
@@ -15727,8 +15729,8 @@ userdel	2::inwork -30199,-5774 -30919,-6570 -31110,-6743 -32618,-7268
 EOF
      },
      { from  => 1251090240, # 2009-08-24 07:04
-       until => 1322834400, # 2011-12-02 15:00
-       text  => 'Freiheit/Wiesendamm (Spandau): Baustelle, Fahrtrichtung gesperrt Richtung Spandauer Damm zwischen Klärwerkstr. und Spandauer Damm, 25.08.2009 07:04 Uhr bis 02.12.2011 15:00 Uhr ',
+       until => 1324044000, # 2011-12-16 15:00
+       text  => 'Freiheit/Wiesendamm (Spandau): Baustelle, Fahrtrichtung gesperrt Richtung Spandauer Damm zwischen Klärwerkstr. und Spandauer Damm, 25.08.2009 07:04 Uhr bis 16.12.2011 15:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_013995',
        data  => <<EOF,
@@ -16017,7 +16019,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014142',
        data  => <<EOF,
-userdel	q4::temp; 5817,7223 5654,6941
+userdel	q4::temp; 5817,7223 5644,6936
 EOF
      },
      { from  => undef, #
@@ -16366,7 +16368,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS_157063303',
        data  => <<EOF,
-userdel	q4::inwork 7709,8777 7713,8600 7716,8356 7710,8051 7725,8033 7713,8001 7717,7879 7717,7759
+userdel	q4::inwork 7709,8777 7713,8600 7716,8370 7716,8356 7715,8308 7710,8051 7725,8033 7713,8001 7717,7879 7717,7759
 EOF
      },
      { from  => 1255816800, # 2009-10-18 00:00
@@ -16617,7 +16619,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014786',
        data  => <<EOF,
-userdel	q4::inwork; 7716,8356 7710,8051 7725,8033 7713,8001 7717,7879
+userdel	q4::inwork; 7716,8356 7715,8308 7710,8051 7725,8033 7713,8001 7717,7879
 EOF
      },
      { from  => 1259938062, # 
@@ -16838,7 +16840,7 @@ EOF
        source_id => 'IM_014608',
        data  => <<EOF,
 userdel	2::temp 9943,12364 9961,12273 9972,12184
-userdel	2::temp 9780,12401 9795,12293 9801,12245 9812,12145
+userdel	2::temp 9780,12401 9795,12293 9801,12245 9808,12182 9812,12145
 userdel	2::temp 9852,12409 9869,12297 9875,12257 9890,12161
 EOF
      },
@@ -16907,8 +16909,8 @@ EOF
 userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998 24927,-87720
 EOF
      },
-     { from  => 1290960699, # PERIODISCH! # früher: 1258045387, # 2009-11-12 18:03
-       until => 1293836399, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
+     { from  => 1321311600, # PERIODISCH! # früher: 1258045387, # 2009-11-12 18:03
+       until => 1325372340, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
        text  => 'Voltairestr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht oder nur schwer möglich',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -16991,9 +16993,9 @@ EOF
 userdel	2::temp 8479,11493 8481,11447 8389,11378
 EOF
      },
-     { from  => 1291330800, # PERIODISCH! # früher: 1259959719, # 2009-12-04 21:48
-       until => 1291589999, # PERIODISCH! # früher: 1260140400, # 2009-12-07 00:00
-       text  => 'Richardplatz (Neukölln) und die Durchfahrt aller angrenzenden Straßen Rixdorfer Weihnachtsmarkt, Straße vollständig gesperrt (03.12.2010 bis 05.12.2010)',
+     { from  => 1322780400, # PERIODISCH! # früher: 1259959719, # 2009-12-04 21:48
+       until => 1323039600, # PERIODISCH! # früher: 1260140400, # 2009-12-07 00:00
+       text  => 'Richardplatz (Neukölln) und die Durchfahrt aller angrenzenden Straßen Rixdorfer Weihnachtsmarkt, Straße vollständig gesperrt (02.12.2011 bis 04.12.2011)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2 13423,7707 13426,7674
@@ -17203,12 +17205,10 @@ EOF
      },
      { from  => undef, # 
        until => undef, #
-       text  => 'Friedrich-Ebert-Platz: bei Bundestagssitzungen gesperrt, mittlerweile möglicherweise permanent gesperrt',
+       text  => 'Friedrich-Ebert-Platz: bei Bundestagssitzungen gesperrt',
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
-#: XXX wo gibt es Informationen hierzu?
-#: by: Kai Wagner (permanente Sperrung)
 	2::temp 8554,12593 8540,12420
 EOF
      },
@@ -17647,22 +17647,23 @@ EOF
 		} . '. Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
        recurring => 1,
        data  => <<EOF,
-(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10640,8366 10598,8270 10575,8218
+(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10298,8245
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 11463,7785 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10298,8245 10575,8218
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10042,8270 10298,8245 10575,8218
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11381,7775 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9392,7339 9300,7312 9302,7294 9242,7286
 (Weg parallel zum Tempelhofer Damm)	2::night  9300,7312 9281,7651 9281,7795
 (Eingang Peter-Strasser-Weg)	2::night 9281,7795 9240,7797
-(Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9351,7600 9281,7651
+(Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9362,7616 9281,7651
+(Rundkurs auf dem Flughafen Tempelhof - Eingang Peter-Strasser-Weg)	2::night 9562,7796 9372,7798 9281,7795
 (Südliche Landebahn)	2::night 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11593,7314
-(Nördliche Landebahn)	2::night 9351,7600 9518,7609 9654,7621 11279,7768 11381,7775 11463,7785
-(Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11463,7785 11439,7894
+(Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 11279,7768 11381,7775 11430,7781 11460,7802
+(Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11005,8064 10909,8003
-(Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10803,8251 10640,8366 10360,8521
+(Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10803,8251 10644,8363 10360,8521
 (Weg parallel zur Oderstr.)	2::night 11458,7897 11489,7748 11507,7647 11528,7528 11547,7432 11554,7382 11593,7314
 (Eingang Kienitzer Str.)	2::night 11498,7750 11489,7748 11479,7746 11470,7744
 (Flughafen Tempelhof - Eingang Allerstr.)	2::night 11507,7647 11515,7654
@@ -17915,7 +17916,7 @@ userdel	2::temp 7039,12314 7383,12095
 userdel	2::temp 7795,11823 7777,11787
 userdel	2::temp 6778,11742 7073,11798 6809,11979
 userdel	2::temp 8091,11992 8089,12041
-userdel	2::temp 8018,12131 7827,12105 7460,12054 7663,11946 7570,11855 7223,11897 7073,11798 7163,11738 6980,11583
+userdel	2::temp 8018,12131 7827,12105 7460,12054 7663,11946 7570,11855 7223,11897 7182,11870 7173,11864 7073,11798 7163,11738 6980,11583
 userdel	2::temp 7460,12054 6857,11992
 EOF
      },
@@ -18088,9 +18089,9 @@ EOF
 userdel	q4::inwork -49042,-3647 -48542,-2958 -48338,-2586
 EOF
      },
-     { from  => 1309719930, # 2011-07-03 21:05
-       until => 1325372400, # 2012-01-01 00:00
-       text  => 'Lichterfeld-Schacksdorf: L60: Havarie, Straßenzustand Lauchhammer - Licherfelde Umleitung: Lauchhammer - Grünwalde - Staupitz - Sorno - Finsterwalde - Schacksdorf - Lichterfelde, 22.07.2010 bis 31.12.2011 ',
+     { from  => 1324669252, # 2011-12-23 20:40
+       until => 1341093600, # 2012-07-01 00:00
+       text  => 'Lichterfeld-Schacksdorf: L60: Havarie, Straßenzustand Lauchhammer - Licherfelde Umleitung: Lauchhammer - Grünwalde - Staupitz - Sorno - Finsterwalde - Schacksdorf - Lichterfelde, 22.07.2010 bis 30.06.2012 ',
        type  => 'gesperrt',
        source_id => '106200475',
        data  => <<EOF,
@@ -18250,7 +18251,7 @@ EOF
        text  => 'Rheinstraße (Friedenau): Veranstaltung, Straße vollständig gesperrt (2. und 3. Juli 2011) in beiden Richtungen zwischen Walther-Schreiber-Platz und Breslauer Platz',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 5370,6486 5424,6584 5533,6753 5654,6941 5817,7223
+userdel	2::temp 5370,6486 5424,6584 5533,6753 5644,6936 5817,7223
 EOF
      },
      { from  => 1284091200, # 2010-09-10 06:00 # PERIODISCH!
@@ -18659,8 +18660,8 @@ userdel	q4::inwork 21233,6096 20722,6971
 EOF
      },
      { from  => 1254641760, # 2009-10-04 09:36
-       until => 1325324220, # 2011-12-31 10:37
-       text  => 'Berliner Str. (Pankow): Baustelle bis Florastr., Fahrtrichtung stadteinwärts gesperrt, bis Ende 2011',
+       until => 1356969600, # 2012-12-31 17:00
+       text  => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Ende 12/2012) stadteinwärts zwischen Breite Str. und Florastr. ',
        type  => 'handicap',
        source_id => 'IM_018078',
        data  => <<EOF,
@@ -18979,7 +18980,7 @@ EOF
        text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 29.04. - 22.05.2011 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::temp 11177,8985 11250,8585 11282,8428 11271,8325
+userdel	q4::temp 11177,8985 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
 EOF
      },
      { from  => 1304805600, # 2011-05-08 00:00
@@ -19016,12 +19017,12 @@ EOF
        data  => <<EOF,
 #: by: http://www.tempelhoferfreiheit.de/ueber-die-tempelhofer-freiheit/aktuelles/die-challenge-bibendum-startet/
 #: by: http://www.tempelhoferfreiheit.de/fileadmin/user_upload/Ueber_die_Tempelhofer_Freiheit/Aktuelles/Plan_ChallengeBibendum2011-THF.jpg
-userdel	2::temp 11355,7871 11381,7775 11279,7768 9654,7621 9518,7609 9611,7934 9710,8143 9884,8265 10042,8270 10298,8245 10360,8521 10640,8366 10803,8251 11005,8064 10909,8003
-userdel	2::temp 9351,7600 9518,7609 9525,7558
+userdel	2::temp 11355,7871 11381,7775 11279,7768 9653,7635 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10042,8270 10298,8245 10360,8521 10644,8363 10803,8251 11005,8064 10909,8003
+userdel	2::temp 9362,7616 9522,7624 9525,7558
 userdel	2::temp 10360,8521 10384,8628
 userdel	2::temp 10575,8218 10729,8152 10598,8270 10575,8218 10298,8245
 userdel	2::temp 10729,8152 10909,8003 11090,7916 11264,7882
-userdel	2::temp 10598,8270 10640,8366 10691,8532
+userdel	2::temp 10598,8270 10644,8363 10691,8532
 EOF
      },
      { from  => 1305840528, # 2011-05-19 23:28
@@ -19093,14 +19094,14 @@ EOF
 userdel	q4::inwork 10086,12725 10166,12777
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1331065556, # 
+       until => 1331065559, # XXX -> jetzt in handicap_s
        text  => 'Burgstraße: Bauarbeiten, Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
 #: by: wosch
 #: confirmed_by: srt
-#: last_checked: 2011-08-31
+#: last_checked: 2012-01-22
 #: note: eigentlich Radfahren auf der Friedrichsbrücke jetzt auch verboten
 userdel	q4::inwork; 10166,12777 10132,12941
 EOF
@@ -19120,7 +19121,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_017330',
        data  => <<EOF,
-userdel	q4::inwork; 9383,13978 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
+userdel	q4::inwork; 9383,13978 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
 EOF
      },
      { from  => 1308261600, # 2011-06-17 00:00
@@ -19133,8 +19134,8 @@ userdel	2::inwork 97780,-91551 97468,-91292
 EOF
      },
      { from  => 1299564000, # 2011-03-08 07:00
-       until => 1330110000, # 2012-02-24 20:00
-       text  => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt (bis Anfang 2012) Richtung Schönhauser Allee zwischen Dunckerstr. und Schliemannstr., 09.03.2011 07:00 Uhr bis 24.02.2012 20:00 Uhr ',
+       until => 1349114400, # 2012-10-01 20:00
+       text  => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt Richtung Schönhauser Allee zwischen Dunckerstr. und Schliemannstr., 09.03.2011 bis 01.10.2012 ',
        type  => 'handicap',
        source_id => 'IM_017000',
        data  => <<EOF,
@@ -19238,7 +19239,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_017503',
        data  => <<EOF,
-userdel	2::temp 9852,12409 9780,12401 9771,12400 9679,12388 9601,12380 9475,12365 9358,12351
+userdel	2::temp 9852,12409 9780,12401 9771,12400 9734,12395 9695,12390 9656,12386 9601,12380 9475,12365 9358,12351
 EOF
      },
      { from  => 1311883200, # 2011-07-28 22:00
@@ -19365,18 +19366,6 @@ EOF
 userdel	2::inwork 9524,12950 9529,12925
 EOF
      },
-## Unklar, ob die Sperrung tatsächlich schon erfolgt ist und wie lange sie dauert...
-#     { from  => undef, # 
-#       until => undef, # XXX
-#       text  => 'Sperrung Fußgängerbrücke Altglienicke.',
-#       type  => 'gesperrt',
-#       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4399.html',
-#       data  => <<EOF,
-##: XXX wann wird die Brücke wieder eröffnet?
-##: next_check: 2011-07-31
-#userdel	2::inwork 21262,375 21182,436
-#EOF
-#     },
      { from  => 1310335200, # 2011-07-11 00:00
        until => 1314395999, # 2011-08-26 23:59
        text  => 'Instandsetzung des Stegs zwischen Nackthals- und Seidenhuhnweg, u.U. Vollsperrung, ab 12. Juli 2011 für ca. 10 Wochen',
@@ -19398,11 +19387,13 @@ userdel	q4::inwork 10599,19957 10614,19907
 EOF
      },
      { from  => 1310504724, # 2011-07-12 23:05
-       until => 1342389599, # 2012-07-15 23:59
+       until => 1324668762, # XXX 1342389599, # 2012-07-15 23:59
        text  => 'Neubau der Buddestraße von Bernstorffstraße bis Brunowstraße, Sperrung der Fahrbahn, bis Mitte Juli 2012',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110712.1035.350987.html',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20111220.1150.364099.html',
        data  => <<EOF,
+#: XXX Weiterbau zwischen Gorkistr. und Bernstorffstraße ab März 2012 vorgesehen
+#: next_check: 2012-03-01
 userdel	q4::inwork 2358,20368 2295,20358 2241,20487
 userdel	q4::inwork 2295,20358 2362,20218 2402,20126
 EOF
@@ -19640,7 +19631,7 @@ userdel	q4::temp; 13623,15954 13512,15909
 EOF
      },
      { from  => 1313913600, # 2011-08-21 10:00
-       until => 1342796400, # 2012-07-20 17:00
+       until => 1322169302, # 1342796400, # 2012-07-20 17:00
        text  => 'Bäkestr. (Wannsee): Brückenarbeiten, Straße vollständig gesperrt, in beiden Richtungen zwischen Neue Kreisstr. und Königsweg, 22.08.2011 10:00 Uhr bis 20.07.2012 17:00 Uhr ',
        type  => 'gesperrt',
        source_id => 'INKO_103963',
@@ -19795,8 +19786,8 @@ userdel	q4::inwork 4613,19279 4690,19446
 EOF
      },
      { from  => 1318229040, # 2011-10-10 08:44
-       until => 1322496000, # 2011-11-28 17:00
-       text  => 'Motardstr. (Spandau): Baustelle, Fahrtrichtung gesperrt Richtung Rohrdamm zwischen Sternfelder Str. und Rohrdamm, 11.10.2011 08:44 Uhr bis 28.11.2011 17:00 Uhr ',
+       until => 1324656000, # 2011-12-23 17:00
+       text  => 'Motardstr. (Spandau): Baustelle, Fahrtrichtung gesperrt Richtung Rohrdamm zwischen Sternfelder Str. und Rohrdamm, 11.10.2011 08:44 Uhr bis 23.12.2011 17:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_018013',
        data  => <<EOF,
@@ -19826,7 +19817,7 @@ EOF
        text  => 'Rüdersdorfer Str.: Einbahnstraße zwischen Fredersdorfer Str. und Wedekindstr., offen in Richtung Osten',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q3::inwork; 13066,11854 12891,12008
+userdel	q3::inwork; 13066,11854 13052,11867 12891,12008
 EOF
      },
      { from  => 1318996800, # 2011-10-19 06:00
@@ -19857,12 +19848,11 @@ EOF
 userdel	2::inwork 19750,11730 19827,11686 19881,11591
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1325955689, # 
+       until => 1325955693, # XXX
        text  => 'Alfred-Kowalke-Str.: Bauarbeiten, teilweise muss auf den Gehweg ausgewichen werden',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2011-10-22
 userdel	q4::inwork 18286,11275 18059,11248
 EOF
      },
@@ -19891,6 +19881,169 @@ EOF
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20111030.0735.361648.html',
        data  => <<EOF,
 userdel	2::inwork -1245,4414 -1185,4450 -1139,4575 -1134,4706 -971,4971 -724,5080 -604,5228
+EOF
+     },
+     { from  => 1321138800, # 2011-11-13 00:00
+       until => 1321397999, # 2011-11-15 23:59
+       text  => 'Nöldnerstraße am 14. und 15. November gesperrt (Bauarbeiten)',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20111110.1420.362326.html',
+       data  => <<EOF,
+userdel	q4::inwork 15272,10790 15388,10758 15433,10765 15681,10801
+EOF
+     },
+     { from  => 1321398000, # 2011-11-16 00:00
+       until => 1322866799, # 2011-12-02 23:59
+       text  => 'Sperrung der Straße Im Erpelgrund zwischen der Straße An der Schneise bis Dambockstraße in östlicher Richtung, vom 17. November 2011 bis voraussichtlich 2. Dezember 2011 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20111110.1620.362354.html',
+       data  => <<EOF,
+userdel	q4::inwork -629,21975 -428,21933
+EOF
+     },
+     { from  => 1320590700, # 2011-11-06 15:45
+       until => 1324655160, # 2011-12-23 16:46
+       text  => 'Köpenicker Str. (Altglienicke): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Semmelweisstr. und Rudower Str., 07.11.2011 15:45 Uhr bis 23.12.2011 16:46 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_018211',
+       data  => <<EOF,
+userdel	q4::inwork 19806,1903 19771,1793
+#XXX del: userdel	q4::inwork 19771,1793 19728,1660 19679,1571
+EOF
+     },
+     { from  => 1329681337, # 1320987600, # 2011-11-11 06:00
+       until => 1329681343, # 1333206000, # 2012-03-31 17:00
+       text  => 'Luisenstr. (Mitte): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Invalidenstr. und Hannoversche Str., 12.11.2011 06:00 Uhr bis 31.03.2012 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_018151',
+       data  => <<EOF,
+userdel	q4::inwork 8635,13580 8626,13641 8619,13689
+EOF
+     },
+     { from  => 1314604800, # 2011-08-29 10:00
+       until => 1346425200, # 2012-08-31 17:00
+       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, mögliche Behinderungen, bis 31.08.2012 ',
+       type  => 'handicap',
+       source_id => 'IM_017746',
+       data  => <<EOF,
+#: note: am 2012-03-09 geprüft, Radfahrer konnten problemlos passieren
+userdel	q4::inwork 10723,14772 10838,14962 10881,15047
+EOF
+     },
+     { from  => 1295269680, # 2011-01-17 14:08
+       until => 1334322000, # 2012-04-13 15:00
+       text  => 'Heinrich-Mann-Str. (Pankow): Baustelle, Straße vollständig gesperrt (bis Mitte 04/12) in beiden Richtungen zwischen Schönholzer Str. und Cottastr. ',
+       type  => 'handicap',
+       source_id => 'IM_016853',
+       data  => <<EOF,
+userdel	q4::inwork 9881,18354 9821,18392
+EOF
+     },
+     { from  => 1325718000, # 2012-01-05 00:00
+       until => 1327618800, # 2012-01-27 00:00
+       text  => 'Str. des 17. Juni (Tiergarten) in beiden Richtungen zwischen Yitzhak-Rabin-Str. und Ebertstr. Veranstaltung, Straße vollständig gesperrt (06.01.2012 06 Uh bis 26.01.12, ca. 18:00 Uhr) ',
+       type  => 'gesperrt',
+       source_id => 'IM_018330',
+       data  => <<EOF,
+userdel	2::temp 8538,12245 8214,12205 8089,12190
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Sperrung Fußgängerbrücke Altglienicke.',
+       type  => 'gesperrt',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4399.html',
+       data  => <<EOF,
+#: by: http://www.altglienicke24.de/meldungen.html
+#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1201/nachricht4563.html
+#: XXX wann wird die Brücke wieder eröffnet?
+#: next_check: 2012-03-01
+userdel	2::inwork 19968,16 19940,52
+EOF
+     },
+     { from  => 1329680038, # 2012-02-19 20:33
+       until => 1354316400, # 2012-12-01 00:00
+       text  => 'Fredersdorf-Vogelsdorf: L30: Ersatzneubau Brücke über das Mühlenfließ OD Fredersdorf, möglicherweise komplett gesperrt, 06.02.2012 bis 30.11.2012 ',
+       type  => 'gesperrt',
+       source_id => 'LS/O-SG33-F/12/014',
+       data  => <<EOF,
+userdel	2::inwork 34913,13893 35382,13974
+EOF
+     },
+     { from  => 1329208920, # 2012-02-14 09:42
+       until => 1369989720, # 2013-05-31 10:42
+       text  => 'Hessische Str. (Mitte): Baustelle, Fahrtrichtung gesperrt (Umleitungsstrecke für die Arbeiten auf der Invalidenstr.) Richtung Oranienburger Tor, 15.02.2012 09:42 Uhr bis 31.05.2013 10:42 Uhr',
+       type  => 'handicap',
+       source_id => 'IM_018437',
+       data  => <<EOF,
+userdel	q4::inwork; 8690,13723 8793,13591
+EOF
+     },
+     { from  => 1330026300, # 2012-02-23 20:45
+       until => 1331766000, # 2012-03-15 00:00
+       text  => 'Orankestrand wegen Bauarbeiten gesperrt, bis ungefähr März 2012, siehe http://www.berlin.de/ba-lichtenberg/presse/archiv/20120220.1530.366402.html',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120220.1530.366402.html',
+       data  => <<EOF,
+userdel	2::inwork 15479,16060 15592,16069 15664,16115 15731,16208
+EOF
+     },
+     { from  => 1330988400, # 2012-03-06 00:00
+       until => 1346968800, # 2012-09-07 00:00
+       text  => 'Buddestraße, Sperrung von Bernstorffstraße bis Gorkistraße wegen Bauarbeiten',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120223.1505.366579.html',
+       data  => <<EOF,
+userdel	q4::inwork 2295,20358 2241,20487
+EOF
+     },
+     { from  => 1330902000, # 2012-03-05 00:00
+       until => 1388530799, # 2013-12-31 23:59
+       text  => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende 2013',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html',
+       data  => <<EOF,
+#: XXX nach den Bauarbeiten Radwege auf beiden Seiten
+#: next_check: 2013-12-01
+userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
+EOF
+     },
+     { from  => 1329631200, # 2012-02-19 07:00
+       until => 1341068400, # 2012-06-30 17:00
+       text  => 'Behrenstr. (Mitte): Fahrbahn gesperrt (bis Ende 06/12) zwischen Glinkastr. und Friedrichstr.',
+       type  => 'handicap',
+       source_id => 'INKO_093369',
+       data  => <<EOF,
+userdel	q4::inwork 9373,12197 9164,12172
+EOF
+     },
+     { from  => 1330419240, # 2012-02-28 09:54
+       until => 1339768800, # 2012-06-15 16:00
+       text  => 'Colditzstr. (Tempelhof): Baustelle, gesperrt in beiden Richtungen zwischen Ullsteinstr. und Volkmarstr., 29.02.2012 09:54 Uhr bis 15.06.2012 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_018476',
+       data  => <<EOF,
+userdel	q4::inwork 10029,5230 9955,5376
+EOF
+     },
+     { from  => 1330496400, # 2012-02-29 07:20
+       until => 1331132400, # 2012-03-07 16:00
+       text  => 'Damerowstr. (Pankow): Baustelle, Fahrtrichtung gesperrt Richtung Berliner Str. zwischen Mendelstr. und Stiftsweg, 01.03.2012 07:20 Uhr bis 07.03.2012 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_018478',
+       data  => <<EOF,
+userdel	q4::inwork; 11357,18598 11204,18545 11168,18542 11001,18528
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Am Schloss Schönhausen: nachts gesperrt (im Sommer ab ca. 19 Uhr, im Winter ab Einbruch der Dunkelheit)',
+       recurring => 1,
+       data => <<EOF,
+#: by: cornelia (bayer...): vvv
+Am Schloss Schönhausen	2::night 10308,19297 10350,19182 10390,19069
+Am Schloss Schönhausen	2::night 10249,19148 10350,19182
+#: by: ^^^
 EOF
      },
     );
