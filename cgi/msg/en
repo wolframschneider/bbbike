@@ -227,7 +227,7 @@ return {
 
     'BBBike ist ein Fahrradroutenplaner mit OpenStreetMap Daten.' => 'BBBike @ World is a route planner for cyclists based on OpenStreetMap data.',
     'hilfe'                                                       => 'help',
-    'app'                                                         => 'app',
+    'tools'                                                       => 'tools',
     'mobil'                                                       => 'mobile',
     "BBBike for mobile devices"                                   => "BBBike for mobile devices",
     "BBBike in classic view"                                      => "BBBike in classic view",

@@ -8150,7 +8150,7 @@ my $community_link = $lang eq 'de' ? '/community.de.html' : '/community.html';
 my $donate = M("spenden");
 my $livesearch = M("livesuche");
 my $permalink_msg = M("permalink");
-my $app = M("app");
+my $app = M("tools");
 my $help = M("hilfe");
 my $mobile = M("mobile");
 
