@@ -8196,7 +8196,7 @@ my $s_copyright = <<EOF;
 <div id="footer_top">
 <a class="mobile_link" href="/">home</a> |
 <a href="/help.html">$help</a> |
-<a href="/app.html" title="BBBike tools and applications">$app</a> |
+<a href="/tools.html" title="BBBike tools and applications">$app</a> |
 <a href="$community_link">$donate</a> |
 <a title="search time: $real_time seconds" href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
 $list_of_all_streets $permalink_text
