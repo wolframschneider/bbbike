@@ -38,7 +38,7 @@ var bbbike = {
         Apple: true,
 
         YahooMapMapType: true,
-        YahooHybridMapType: true,
+
         YahooSatelliteMapType: true,
 
         BingMapMapType: true,
@@ -74,6 +74,8 @@ var bbbike = {
         SlideShow: true,
         FullScreen: true,
         Smoothness: true,
+        VeloLayer: true,
+        MaxSpeed: true,
         LandShading: true
     },
 
@@ -90,7 +92,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple", "velo_layer", "max_speed"],
 
     area: {
         visible: true,
@@ -571,6 +573,37 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         name: "BBBIKE-SMOOTHNESS",
         minZoom: 1,
         maxZoom: 18
+    };
+
+    var velo_layer_options = {
+        bbbike: {
+            "name": "Velo-Layer",
+            "description": "Velo-Layer, by osm.t-i.ch/bicycle/map"
+        },
+        getTileUrl: function (a, z) {
+            return "http://toolserver.org/tiles/bicycle/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "VELO-LAYER",
+        minZoom: 1,
+        maxZoom: 19
+    };
+    var max_speed_options = {
+        bbbike: {
+            "name": "Max Speed",
+            "description": "Max Speed, by wince.dentro.info/koord/osm/KosmosMap.htm"
+        },
+        getTileUrl: function (a, z) {
+            return "http://wince.dentro.info/koord/osm/tiles/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "MAX-SPEED",
+        minZoom: 1,
+        maxZoom: 15
     };
 
     // Land Shading overlay
@@ -1246,6 +1279,16 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 return new google.maps.ImageMapType(bbbike_smoothness_options);
             }
         },
+        "velo_layer": function () {
+            if (bbbike.mapLayers.VeloLayer) {
+                return new google.maps.ImageMapType(velo_layer_options);
+            }
+        },
+        "max_speed": function () {
+            if (bbbike.mapLayers.MaxSpeed) {
+                return new google.maps.ImageMapType(max_speed_options);
+            }
+        },
         "land_shading": function () {
             if (bbbike.mapLayers.LandShading) {
                 return new google.maps.ImageMapType(land_shading_options);
@@ -1294,6 +1337,26 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             "enabled": bbbike.mapLayers.Smoothness,
             "active": layer == "smoothness" ? true : false,
             "callback": add_smoothness_layer,
+            "lang": lang
+        });
+    }
+
+    if (bbbike.mapLayers.VeloLayer && is_european(region)) {
+        custom_layer(map, {
+            "layer": "VeloLayer",
+            "enabled": bbbike.mapLayers.VeloLayer,
+            "active": layer == "velo_layer" ? true : false,
+            "callback": add_velo_layer,
+            "lang": lang
+        });
+    }
+
+    if (bbbike.mapLayers.MaxSpeed && is_european(region)) {
+        custom_layer(map, {
+            "layer": "MaxSpeed",
+            "enabled": bbbike.mapLayers.MaxSpeed,
+            "active": layer == "max_speed" ? true : false,
+            "callback": add_max_speed_layer,
             "lang": lang
         });
     }
@@ -1381,6 +1444,12 @@ function init_custom_layers(layer) {
     if (bbbike.mapLayers.LandShading) {
         layers.land_shadingLayer = layer.land_shading();
     }
+    if (bbbike.mapLayers.VeloLayer) {
+        layers.veloLayer = layer.velo_layer();
+    }
+    if (bbbike.mapLayers.MaxSpeed) {
+        layers.maxSpeedLayer = layer.max_speed();
+    }
 }
 
 // add bicycle routes and lanes to map, by google maps
@@ -1419,8 +1488,27 @@ function add_smoothness_layer(map, enable) {
     }
 }
 
-function add_land_shading_layer(map, enable) {
+function add_velo_layer(map, enable) {
+    if (!layers.veloLayer) return;
 
+    if (enable) {
+        map.overlayMapTypes.setAt(0, layers.veloLayer);
+    } else {
+        map.overlayMapTypes.setAt(0, null);
+    }
+}
+
+function add_max_speed_layer(map, enable) {
+    if (!layers.maxSpeedLayer) return;
+
+    if (enable) {
+        map.overlayMapTypes.setAt(0, layers.maxSpeedLayer);
+    } else {
+        map.overlayMapTypes.setAt(0, null);
+    }
+}
+
+function add_land_shading_layer(map, enable) {
     if (!layers.land_shadingLayer) return;
 
     if (enable) {
@@ -1868,6 +1956,8 @@ function translate_mapcontrol(word, lang) {
             "Destination": "Ziel",
             "Smoothness": "Fahrbahnqualit&auml;t",
             "Land Shading": "Reliefkarte",
+            "VeloLayer": "Velo-Layer",
+            "MaxSpeed": "Tempo Limit",
             "Via": "Via"
         },
         "es": {
