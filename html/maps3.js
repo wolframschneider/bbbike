@@ -1492,9 +1492,9 @@ function add_velo_layer(map, enable) {
     if (!layers.veloLayer) return;
 
     if (enable) {
-        map.overlayMapTypes.setAt(0, layers.veloLayer);
+        map.overlayMapTypes.setAt(1, layers.veloLayer);
     } else {
-        map.overlayMapTypes.setAt(0, null);
+        map.overlayMapTypes.setAt(1, null);
     }
 }
 
@@ -1502,9 +1502,9 @@ function add_max_speed_layer(map, enable) {
     if (!layers.maxSpeedLayer) return;
 
     if (enable) {
-        map.overlayMapTypes.setAt(0, layers.maxSpeedLayer);
+        map.overlayMapTypes.setAt(2, layers.maxSpeedLayer);
     } else {
-        map.overlayMapTypes.setAt(0, null);
+        map.overlayMapTypes.setAt(2, null);
     }
 }
 
@@ -1512,9 +1512,9 @@ function add_land_shading_layer(map, enable) {
     if (!layers.land_shadingLayer) return;
 
     if (enable) {
-        map.overlayMapTypes.setAt(0, layers.land_shadingLayer);
+        map.overlayMapTypes.setAt(3, layers.land_shadingLayer);
     } else {
-        map.overlayMapTypes.setAt(0, null);
+        map.overlayMapTypes.setAt(3, null);
     }
 }
 
@@ -1919,6 +1919,8 @@ function translate_mapcontrol(word, lang) {
             "esri_topo": "Esri Topo",
             "mapbox": "MapBox",
             "apple": "Apple",
+            "VeloLayer": "Velo-Layer",
+            "MaxSpeed": "Speed Limit",
             "bing_birdview": "Bing (Sat)" // Birdview
         },
 
@@ -2169,6 +2171,12 @@ function LayerControl(controlDiv, map, opt) {
 
     // ???
     if (layer == "Smoothness") {
+        callback(map, enabled);
+    }
+    if (layer == "VeloLayer") {
+        callback(map, enabled);
+    }
+    if (layer == "MaxSpeed") {
         callback(map, enabled);
     }
 
