@@ -1408,7 +1408,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
-        "layer": "google_TrafficLayer",
+        "id": "google_TrafficLayer",
+        "layer": "TrafficLayer",
         "enabled": bbbike.mapLayers.TrafficLayer,
         "active": layer == "traffic" ? true : false,
         "callback": add_traffic_layer,
