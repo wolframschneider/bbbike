@@ -1470,7 +1470,6 @@ function debug_layer(layer) {
 
 // add bicycle routes and lanes to map, by google maps
 
-
 function add_bicycle_layer(map, enable) {
     if (!layers.bicyclingLayer) return;
 
@@ -2189,7 +2188,6 @@ function LayerControl(controlDiv, map, opt) {
     toogleColor(true);
 
     // grey (off) <-> green (on)
-
 
     function toogleColor(toogle) {
         controlUI.style.color = toogle ? '#888888' : '#228b22';
