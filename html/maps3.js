@@ -1479,6 +1479,7 @@ function add_traffic_layer(map, enable) {
 // bbbike smoothness layer
 
 function add_smoothness_layer(map, enable) {
+    // debug("smoothness: " + enable);
     if (!layers.smoothnessLayer) return;
 
     if (enable) {
@@ -1489,6 +1490,7 @@ function add_smoothness_layer(map, enable) {
 }
 
 function add_velo_layer(map, enable) {
+    // debug("velo: " + enable);
     if (!layers.veloLayer) return;
 
     if (enable) {
@@ -1499,6 +1501,7 @@ function add_velo_layer(map, enable) {
 }
 
 function add_max_speed_layer(map, enable) {
+    // debug("max speed: " + enable);
     if (!layers.maxSpeedLayer) return;
 
     if (enable) {
@@ -2084,8 +2087,12 @@ function setCustomBold(maptype, log) {
         currentText[maptype].style.background = "#4682B4";
     }
 
+    maptype_usage(maptype);
+}
+
+function maptype_usage(maptype) {
     // get information about map type and log maptype
-    if (bbbike.maptype_usage && log) {
+    if (bbbike.maptype_usage) {
         var url = "/cgi/maptype.cgi?city=" + city + "&maptype=" + maptype;
 
         downloadUrl(url, function (data, responseCode) {
@@ -2099,7 +2106,6 @@ function setCustomBold(maptype, log) {
         });
     }
 }
-
 
 // hide google layers on non-google custom maps
 
@@ -2126,9 +2132,15 @@ function hideGoogleLayers(maptype) {
 }
 
 var layerControl = {
+/*
     TrafficLayer: false,
     BicyclingLayer: false,
-    PanoramioLayer: false
+    PanoramioLayer: false,
+    Smoothness: true,
+    VeloLayer: true,
+    MaxSpeed: true,
+    LandShading: false
+*/
 };
 
 function LayerControl(controlDiv, map, opt) {
@@ -2156,6 +2168,7 @@ function LayerControl(controlDiv, map, opt) {
     controlUI.style.textAlign = 'center';
 
     var layerText = layer;
+/*
     if (layer == "BicyclingLayer") {
         layerText = "cycle layer";
         callback(map, enabled);
@@ -2179,15 +2192,17 @@ function LayerControl(controlDiv, map, opt) {
     if (layer == "MaxSpeed") {
         callback(map, enabled);
     }
+    */
 
-    layerControl.layer = enabled;
+    layerControl.layer = false; // enabled; 
+    toogleColor(true);
 
     // grey (off) <-> green (on)
+
 
     function toogleColor(toogle) {
         controlUI.style.color = toogle ? '#888888' : '#228b22';
     }
-    toogleColor(!layerControl.layer);
 
     if (layer == "FullScreen") {
         controlUI.title = 'Click to enable/disable ' + translate_mapcontrol(layerText, lang);
@@ -2216,6 +2231,11 @@ function LayerControl(controlDiv, map, opt) {
         toogleColor(layerControl.layer);
         layerControl.layer = layerControl.layer ? false : true;
         callback(map, layerControl.layer, toogleColor);
+
+        if (layerControl.layer) {
+            maptype_usage(layer);
+        }
+        // debug("foo: " + layer + " " + layerControl.layer);
     });
 
 }
@@ -2237,7 +2257,7 @@ function custom_layer(map, opt) {
     if (!opt.enabled) return;
 
     var layerControlDiv = document.createElement('DIV');
-    var layerControl = new LayerControl(layerControlDiv, map, opt);
+    var layerControl = LayerControl(layerControlDiv, map, opt);
 
     layerControlDiv.index = 1;
     map.controls[google.maps.ControlPosition.RIGHT_TOP].push(layerControlDiv);
