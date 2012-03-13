@@ -1333,6 +1333,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     if (bbbike.mapLayers.Smoothness && (city == "bbbike" || city == "Berlin" || city == "Oranienburg" || city == "Potsdam" || city == "FrankfurtOder")) {
         custom_layer(map, {
+            "id": "bbbike_smoothness",
             "layer": "Smoothness",
             "enabled": bbbike.mapLayers.Smoothness,
             "active": layer == "smoothness" ? true : false,
@@ -1343,6 +1344,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     if (bbbike.mapLayers.VeloLayer && is_european(region)) {
         custom_layer(map, {
+            "id": "velo_layer",
             "layer": "VeloLayer",
             "enabled": bbbike.mapLayers.VeloLayer,
             "active": layer == "velo_layer" ? true : false,
@@ -1353,6 +1355,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     if (bbbike.mapLayers.MaxSpeed && is_european(region)) {
         custom_layer(map, {
+            "id": "max_speed",
             "layer": "MaxSpeed",
             "enabled": bbbike.mapLayers.MaxSpeed,
             "active": layer == "max_speed" ? true : false,
@@ -1362,6 +1365,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     }
 
     custom_layer(map, {
+        "id": "land_shading",
         "layer": "Land Shading",
         "enabled": bbbike.mapLayers.LandShading,
         "active": layer == "land_shading" ? true : false,
@@ -1386,6 +1390,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "id": "google_PanoramioLayer",
         "layer": "PanoramioLayer",
         "enabled": bbbike.mapLayers.PanoramioLayer,
         "active": layer == "panoramio" ? true : false,
@@ -1394,6 +1399,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "id": "google_BicyclingLayer",
         "layer": "BicyclingLayer",
         "enabled": bbbike.mapLayers.BicyclingLayer,
         "active": layer == "bicycling" ? true : false,
@@ -1402,7 +1408,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
-        "layer": "TrafficLayer",
+        "layer": "google_TrafficLayer",
         "enabled": bbbike.mapLayers.TrafficLayer,
         "active": layer == "traffic" ? true : false,
         "callback": add_traffic_layer,
@@ -1452,7 +1458,18 @@ function init_custom_layers(layer) {
     }
 }
 
+
+function debug_layer(layer) {
+    var data = layer;
+    for (var l in layerControl) {
+        data += " " + l + ": " + layerControl[l];
+    }
+
+    debug(data);
+}
+
 // add bicycle routes and lanes to map, by google maps
+
 
 function add_bicycle_layer(map, enable) {
     if (!layers.bicyclingLayer) return;
@@ -1479,7 +1496,6 @@ function add_traffic_layer(map, enable) {
 // bbbike smoothness layer
 
 function add_smoothness_layer(map, enable) {
-    // debug("smoothness: " + enable);
     if (!layers.smoothnessLayer) return;
 
     if (enable) {
@@ -1490,7 +1506,6 @@ function add_smoothness_layer(map, enable) {
 }
 
 function add_velo_layer(map, enable) {
-    // debug("velo: " + enable);
     if (!layers.veloLayer) return;
 
     if (enable) {
@@ -1501,7 +1516,6 @@ function add_velo_layer(map, enable) {
 }
 
 function add_max_speed_layer(map, enable) {
-    // debug("max speed: " + enable);
     if (!layers.maxSpeedLayer) return;
 
     if (enable) {
@@ -1512,6 +1526,8 @@ function add_max_speed_layer(map, enable) {
 }
 
 function add_land_shading_layer(map, enable) {
+    debug_layer("shading");
+
     if (!layers.land_shadingLayer) return;
 
     if (enable) {
@@ -2148,6 +2164,7 @@ function LayerControl(controlDiv, map, opt) {
     var enabled = opt.active;
     var callback = opt.callback;
     var lang = opt.lang;
+    var id = opt.id;
 
     // Set CSS styles for the DIV containing the control
     // Setting padding to 5 px will offset the control
@@ -2168,33 +2185,7 @@ function LayerControl(controlDiv, map, opt) {
     controlUI.style.textAlign = 'center';
 
     var layerText = layer;
-/*
-    if (layer == "BicyclingLayer") {
-        layerText = "cycle layer";
-        callback(map, enabled);
-    }
-    if (layer == "TrafficLayer") {
-        layerText = "traffic layer";
-        callback(map, enabled);
-    }
-    if (layer == "PanoramioLayer") {
-        layerText = "Panoramio";
-        callback(map, enabled);
-    }
-
-    // ???
-    if (layer == "Smoothness") {
-        callback(map, enabled);
-    }
-    if (layer == "VeloLayer") {
-        callback(map, enabled);
-    }
-    if (layer == "MaxSpeed") {
-        callback(map, enabled);
-    }
-    */
-
-    layerControl.layer = false; // enabled; 
+    layerControl[layer] = false; // true // enabled; 
     toogleColor(true);
 
     // grey (off) <-> green (on)
@@ -2228,14 +2219,11 @@ function LayerControl(controlDiv, map, opt) {
 
     // switch enabled <-> disabled
     google.maps.event.addDomListener(controlUI, 'click', function () {
-        toogleColor(layerControl.layer);
-        layerControl.layer = layerControl.layer ? false : true;
-        callback(map, layerControl.layer, toogleColor);
+        toogleColor(layerControl[layer]);
+        layerControl[layer] = layerControl[layer] ? false : true;
+        callback(map, layerControl[layer], toogleColor);
 
-        if (layerControl.layer) {
-            maptype_usage(layer);
-        }
-        // debug("foo: " + layer + " " + layerControl.layer);
+        if (layerControl[layer]) maptype_usage(layer);
     });
 
 }
@@ -2258,6 +2246,7 @@ function custom_layer(map, opt) {
 
     var layerControlDiv = document.createElement('DIV');
     var layerControl = LayerControl(layerControlDiv, map, opt);
+    debug_layer(opt.id);
 
     layerControlDiv.index = 1;
     map.controls[google.maps.ControlPosition.RIGHT_TOP].push(layerControlDiv);
