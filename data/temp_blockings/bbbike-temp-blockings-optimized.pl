@@ -7,7 +7,7 @@ push @temp_blocking,
          'text' => 'Weinmeisterstr. (Mitte) in Richtung Alexanderplatz gesperrt',
          'from' => undef,
          'id' => 1567,
-         'data' => '#: last_checked: 2012-01-05
+         'data' => '#: last_checked: 2012-02-01
 userdel	q4::inwork; 10350,13376 10527,13257
 ',
          'type' => 'gesperrt'
@@ -811,7 +811,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Februar von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -1072,7 +1072,8 @@ userdel	q4::inwork 425,8766 490,8716
          'text' => 'Schadowstr. (Mitte): Baustelle, Straße vollständig gesperrt (bis Ende 03/12) in beiden Richtungen zwischen Unter den Linden und Dorotheenstr., 16.05.2011 07:00 Uhr bis 31.03.2012 17:00 Uhr ',
          'from' => 1305435600,
          'id' => 2210,
-         'data' => 'userdel	q4::inwork 9028,12307 9016,12416 9008,12485
+         'data' => '#: last_checked: 2012-03-16
+userdel	q4::inwork 9028,12307 9016,12416 9008,12485
 ',
          'type' => 'handicap'
        },
@@ -1084,19 +1085,7 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Burgstraße: Bauarbeiten, Einbahnstraßenregelung',
-         'from' => undef,
-         'id' => 2219,
-         'data' => '#: by: wosch
-#: confirmed_by: srt
-#: last_checked: 2012-01-22
-#: note: eigentlich Radfahren auf der Friedrichsbrücke jetzt auch verboten
-userdel	q4::inwork; 10166,12777 10132,12941
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1116,7 +1105,8 @@ userdel	q4::inwork; 10166,12777 10132,12941
          'text' => 'Dorotheenstr. (Mitte): Baustelle, Fahrtrichtung gesperrt (bis Ende 04/12) Richtung Friedrichstr. zwischen Wilhelmstr. und Schadowstr., 06.06.2011 07:00 Uhr bis 30.04.2012 17:00 Uhr ',
          'from' => 1307250000,
          'id' => 2224,
-         'data' => 'userdel	q4::inwork; 8775,12457 8907,12472 9008,12485
+         'data' => '#: last_checked: 2012-03-16
+userdel	q4::inwork; 8775,12457 8907,12472 9008,12485
 ',
          'type' => 'handicap'
        },
@@ -1147,16 +1137,7 @@ userdel	q4::inwork; 10166,12777 10132,12941
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1107/nachricht4418.html',
-         'until' => 1331568000,
-         'text' => 'Instandsetzung der Pankgrafenbrücke, ab dem 18.07.2011 bis Mitte März 2012, Einschränkungen möglich',
-         'from' => 1310763434,
-         'id' => 2252,
-         'data' => 'userdel	q4::inwork 13953,23497 14173,23426
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1282,10 +1263,11 @@ userdel	2::inwork 19750,11730 19827,11686 19881,11591
        {
          'source_id' => 'IM_017746',
          'until' => 1346425200,
-         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten, Straße vollständig gesperrt in beiden Richtungen zwischen Oderberger Str. und Schönhauser Allee, bis 31.08.2012 ',
+         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, mögliche Behinderungen, bis 31.08.2012 ',
          'from' => 1314604800,
          'id' => 2308,
-         'data' => 'userdel	q4::inwork 10723,14772 10838,14962 10881,15047
+         'data' => '#: note: am 2012-03-09 geprüft, Radfahrer konnten problemlos passieren
+userdel	q4::inwork 10723,14772 10838,14962 10881,15047
 ',
          'type' => 'handicap'
        },
@@ -1334,16 +1316,7 @@ userdel	2::inwork 19968,16 19940,52
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120220.1530.366402.html',
-         'until' => 1331766000,
-         'text' => 'Orankestrand wegen Bauarbeiten gesperrt, bis ungefähr März 2012, siehe http://www.berlin.de/ba-lichtenberg/presse/archiv/20120220.1530.366402.html',
-         'from' => 1330026300,
-         'id' => 2314,
-         'data' => 'userdel	2::inwork 15479,16060 15592,16069 15664,16115 15731,16208
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120223.1505.366579.html',
          'until' => 1346968800,
@@ -1353,6 +1326,51 @@ userdel	2::inwork 19968,16 19940,52
          'data' => 'userdel	q4::inwork 2295,20358 2241,20487
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html',
+         'until' => 1388530799,
+         'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende 2013',
+         'from' => 1330902000,
+         'id' => 2316,
+         'data' => '#: XXX nach den Bauarbeiten Radwege auf beiden Seiten
+#: next_check: 2013-12-01
+userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'INKO_093369',
+         'until' => 1341068400,
+         'text' => 'Behrenstr. (Mitte): Fahrbahn gesperrt (bis Ende 06/12) zwischen Glinkastr. und Friedrichstr.',
+         'from' => 1329631200,
+         'id' => 2317,
+         'data' => 'userdel	q4::inwork 9373,12197 9164,12172
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_018476',
+         'until' => 1339768800,
+         'text' => 'Colditzstr. (Tempelhof): Baustelle, gesperrt in beiden Richtungen zwischen Ullsteinstr. und Volkmarstr., 29.02.2012 09:54 Uhr bis 15.06.2012 16:00 Uhr ',
+         'from' => 1330419240,
+         'id' => 2318,
+         'data' => 'userdel	q4::inwork 10029,5230 9955,5376
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Am Schloss Schönhausen: nachts gesperrt (im Sommer ab ca. 19 Uhr, im Winter ab Einbruch der Dunkelheit)',
+         'from' => undef,
+         'id' => 2320,
+         'data' => '#: by: cornelia (bayer...): vvv
+Am Schloss Schönhausen	2::night 10308,19297 10350,19182 10390,19069
+Am Schloss Schönhausen	2::night 10249,19148 10350,19182
+#: by: ^^^
+'
        }
      
 );

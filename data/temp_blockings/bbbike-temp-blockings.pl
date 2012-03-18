@@ -850,7 +850,7 @@ EOF
        text  => 'Lückstr. Richtung stadteinwärts zwischen Schlichtallee und Wönnichstr. Baustelle, Straße gesperrt (bis Mitte 10.2004) ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1 16699,10611 16647,10632 16588,10655 16460,10699 16316,10755 16303,10760 16153,10818 16085,10844 16032,10842
+userdel	1 16699,10611 16647,10632 16601,10650 16588,10655 16460,10699 16316,10755 16303,10760 16153,10818 16085,10844 16032,10842
 EOF
      },
      { from  => 1094627730, # 2004-09-08 09:15
@@ -13318,7 +13318,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_011184',
        data  => <<EOF,
-#: last_checked: 2012-01-05
+#: last_checked: 2012-02-01
 userdel	q4::inwork; 10350,13376 10527,13257
 EOF
      },
@@ -19007,6 +19007,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_093372',
        data  => <<EOF,
+#: last_checked: 2012-03-16
 userdel	q4::inwork 9028,12307 9016,12416 9008,12485
 EOF
      },
@@ -19094,8 +19095,8 @@ EOF
 userdel	q4::inwork 10086,12725 10166,12777
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1331065556, # 
+       until => 1331065559, # XXX -> jetzt in handicap_s
        text  => 'Burgstraße: Bauarbeiten, Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
@@ -19148,6 +19149,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_093371',
        data  => <<EOF,
+#: last_checked: 2012-03-16
 userdel	q4::inwork; 8775,12457 8907,12472 9008,12485
 EOF
      },
@@ -19817,7 +19819,7 @@ EOF
        text  => 'Rüdersdorfer Str.: Einbahnstraße zwischen Fredersdorfer Str. und Wedekindstr., offen in Richtung Osten',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q3::inwork; 13066,11854 12891,12008
+userdel	q3::inwork; 13066,11854 13052,11867 12891,12008
 EOF
      },
      { from  => 1318996800, # 2011-10-19 06:00
@@ -19922,10 +19924,11 @@ EOF
      },
      { from  => 1314604800, # 2011-08-29 10:00
        until => 1346425200, # 2012-08-31 17:00
-       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten, Straße vollständig gesperrt in beiden Richtungen zwischen Oderberger Str. und Schönhauser Allee, bis 31.08.2012 ',
+       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, mögliche Behinderungen, bis 31.08.2012 ',
        type  => 'handicap',
        source_id => 'IM_017746',
        data  => <<EOF,
+#: note: am 2012-03-09 geprüft, Radfahrer konnten problemlos passieren
 userdel	q4::inwork 10723,14772 10838,14962 10881,15047
 EOF
      },
@@ -19994,6 +19997,55 @@ EOF
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120223.1505.366579.html',
        data  => <<EOF,
 userdel	q4::inwork 2295,20358 2241,20487
+EOF
+     },
+     { from  => 1330902000, # 2012-03-05 00:00
+       until => 1388530799, # 2013-12-31 23:59
+       text  => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende 2013',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html',
+       data  => <<EOF,
+#: XXX nach den Bauarbeiten Radwege auf beiden Seiten
+#: next_check: 2013-12-01
+userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
+EOF
+     },
+     { from  => 1329631200, # 2012-02-19 07:00
+       until => 1341068400, # 2012-06-30 17:00
+       text  => 'Behrenstr. (Mitte): Fahrbahn gesperrt (bis Ende 06/12) zwischen Glinkastr. und Friedrichstr.',
+       type  => 'handicap',
+       source_id => 'INKO_093369',
+       data  => <<EOF,
+userdel	q4::inwork 9373,12197 9164,12172
+EOF
+     },
+     { from  => 1330419240, # 2012-02-28 09:54
+       until => 1339768800, # 2012-06-15 16:00
+       text  => 'Colditzstr. (Tempelhof): Baustelle, gesperrt in beiden Richtungen zwischen Ullsteinstr. und Volkmarstr., 29.02.2012 09:54 Uhr bis 15.06.2012 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_018476',
+       data  => <<EOF,
+userdel	q4::inwork 10029,5230 9955,5376
+EOF
+     },
+     { from  => 1330496400, # 2012-02-29 07:20
+       until => 1331132400, # 2012-03-07 16:00
+       text  => 'Damerowstr. (Pankow): Baustelle, Fahrtrichtung gesperrt Richtung Berliner Str. zwischen Mendelstr. und Stiftsweg, 01.03.2012 07:20 Uhr bis 07.03.2012 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_018478',
+       data  => <<EOF,
+userdel	q4::inwork; 11357,18598 11204,18545 11168,18542 11001,18528
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Am Schloss Schönhausen: nachts gesperrt (im Sommer ab ca. 19 Uhr, im Winter ab Einbruch der Dunkelheit)',
+       recurring => 1,
+       data => <<EOF,
+#: by: cornelia (bayer...): vvv
+Am Schloss Schönhausen	2::night 10308,19297 10350,19182 10390,19069
+Am Schloss Schönhausen	2::night 10249,19148 10350,19182
+#: by: ^^^
 EOF
      },
     );

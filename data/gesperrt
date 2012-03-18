@@ -254,7 +254,8 @@ Braillestr.	1 4430,5324 4477,5250 4512,5199
 Mudrackzeile	1 6985,17812 7020,17690
 Gustav-M¸ller-Str.	1 7643,8634 7642,8815
 Gustav-M¸ller-Platz	1 7644,8560 7614,8599 7643,8634 7682,8598 7644,8560
-Niederlagstr.	1 9972,12184 9961,12273 9943,12364 9934,12418
+Niederlagstr.	1 9972,12184 9961,12273
+Niederlagstr.	1 9943,12364 9934,12418
 Kolk/Behnitz/Mˆllentordamm	1 -3042,14682 -3028,14640 -2951,14617 -2944,14652 -2942,14666 -3027,14689 -3042,14682
 Hertelstr.	1 4893,6900 4787,6899
 Karl-Marx-Platz	1 12980,7597 13100,7626
@@ -673,6 +674,8 @@ B‰umerplan	1 8527,7928 8553,7795
 B‰umerplan	1 8512,7757 8467,7913
 Mierendorffstr.	1 3645,13189 3542,13063
 H¸ttigpfad	1 4810,15000 4887,14931 5057,14824 5107,14781
+(Alex-Wedding-Str. - Karl-Liebknecht-Str.)	1s 11027,13279 11085,13239
+Fischerinsel	1s 10429,11807 10474,11843 10604,11941
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Hochstraﬂe	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -1110,9 +1113,11 @@ Straﬂenbahntrasse	3nocross::ignrte 10900,17397 10894,17470 10892,17491
 Straﬂenbahntrasse	3nocross::ignrte 13737,15994 13826,16026 14014,16106
 Berliner Allee -> Herbert-Baum-Str.: Straﬂenbahntrasse	3::igndisp 14014,16106 13826,16026 13869,15912
 Herbert-Baum-Str. -> Berliner Allee: Straﬂenbahntrasse	3::igndisp 13869,15912 13826,16026 13737,15994
-Straﬂenbahntrasse	3nocross::ignrte 11149,13442 11092,13366 11080,13350 11027,13279 11021,13271
-Karl-Liebknecht-Str. -> Wadzeckstr.: Straﬂenbahntrasse	3::igndisp 11149,13442 11092,13366 11146,13328
+Straﬂenbahntrasse	3nocross::ignrte 11149,13442 11119,13402 11092,13366 11080,13350 11027,13279 11021,13271
 Wadzeckstr. -> Karl-Liebknecht-Str.: Straﬂenbahntrasse	3::igndisp 11146,13328 11092,13366 11080,13350
+Karl-Liebknecht-Str. -> Wadzeckstr.: Straﬂenbahntrasse	3::igndisp 11119,13402 11092,13366 11146,13328
+Alex-Wedding-Str. -> Karl-Liebknecht-Str.: Straﬂenbahntrasse	3::igndisp 11085,13239 11027,13279 11021,13271
+Karl-Liebknecht-Str. -> Alex-Wedding-Str.: Straﬂenbahntrasse	3::igndisp 11080,13350 11027,13279 11085,13239
 Gitter auf Mittelstreifen	3nocross::ignrte 8659,16327 8543,16364 8516,16393 8486,16425
 Badstr. -> Gropiusstr.: Gitter auf Mittelstreifen	3::igndisp 8659,16327 8543,16364 8534,16355
 Badstr. -> Travem¸nder Str.: Gitter auf Mittelstreifen	3::igndisp 8516,16393 8543,16364 8592,16406
@@ -1567,8 +1572,8 @@ Indira-Gandhi-Str. -> Gartenstr.: Straﬂenbahntrasse	3::igndisp 14499,16341 14522
 unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3nocross::ignrte 16737,11866 16851,11852 16962,11833 17037,11820 17151,11801
 Frankfurter Allee -> Gudrunstr.: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16737,11866 16851,11852 16884,11889
 Gudrunstr. -> Frankfurter Allee: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16884,11889 16851,11852 16962,11833
-Skandinavische Str. -> Frankfurter Allee: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16998,11861 16962,11833 17037,11820
-Frankfurter Allee -> Skandinavische Str.: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16851,11852 16962,11833 16998,11861
+Frankfurter Allee -> MonimbÛpl.: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16851,11852 16962,11833 16988,11865
+MonimbÛpl. -> Frankfurter Allee: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 16988,11865 16962,11833 17037,11820
 Weitlingstr. -> Frankfurter Allee: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 17026,11810 17037,11820 16962,11833
 Frankfurter Allee -> Weitlingstr.: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3::igndisp 17151,11801 17037,11820 17026,11810
 Mittelinsel mit Gel‰nder	3nocross::ignrte 7709,8777 7642,8815 7563,8871
@@ -2175,26 +2180,24 @@ Radweg Herzberge: wegen Bauarbeiten gesperrt (ab 2012-02-20)	2:inwork 17167,1365
 Am Alten Markt: wegen Bauarbeiten (Wiederaufbau des Schlosses) gesperrt	2:inwork -12643,-1694 -12624,-1598
 Wikingerufer: wegen Besch‰digungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
 Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
-(Markgrafenstr. - Ritterstr.): Bauarbeiten	2:inwork 9763,11148 9861,11103
 Spreeufer: wegen Bauarbeiten gesperrt	2:inwork 8596,12576 8495,12651 8473,12753
-Axel-Springer-Str.: wird noch gebaut	2:inwork 10166,11592 10202,11669 10213,11728
 Sonnenkieker: Bauarbeiten	2:inwork 22610,13808 22669,13842 22692,13836
 Tegeler Hafen: Weg ¸ber Insel gesperrt	2 1756,20405 1736,20441 1742,20464 1762,20505 1761,20539
 Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,20603
 H¸ttenweg: Sperrung wegen Bau an der Autobahn, wahrscheinlich bis Mai 2012	2:inwork -739,6838 -927,6888
-Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9385,13174
+Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
 Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405,12953 14686,12873
 Behrenstr.: Bauarbeiten, vollst‰ndig gesperrt	2:inwork 9743,12239 9801,12245
 Bebelplatz: Bauarbeiten, vollst‰ndig gesperrt	2:inwork 9795,12293 9869,12297
 Hinter der Katholischen Kirche: Bauarbeiten, vollst‰ndig gesperrt	2:inwork 9808,12182 9801,12245 9795,12293 9780,12401
+Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12395
 Schloﬂplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 Boyenweg - Uferweg: wegen Bauarbeiten gesperrt	2:inwork 7938,14426 7886,14518 7787,14473
 Treitschkestr.: Bauarbeiten am Kaufhaus, bis 2012	2:inwork 5219,6215 5125,6262 4971,6345
 Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973
 Ella-Trebe-Str.: Einbahnstraﬂe wegen Bauarbeiten	1s:inwork 7937,13109 7941,13014 7948,12918
-Alex-Wedding-Str.: Bauarbeiten, komplett gesperrt	2:inwork 11085,13239 11045,13183
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12748
-Rathausbr¸cke: gesperrt (Neubau), Fertigstellung und Verkehrsfreigabe im Fr¸hjahr 2012	2:inwork 10362,12351 10422,12395
+Rathausbr¸cke: gesperrt (Neubau), Fertigstellung und Verkehrsfreigabe im Fr¸hjahr 2013	2:inwork 10362,12351 10422,12395
 Kynaststraﬂe: Bauarbeiten im s¸dlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14795,10473 14805,10518
 Br¸cke im Tiergarten: gesperrt	2:inwork 6406,11784 6467,11780
 Unterf¸hrung unter Adlergestell und Bahn: wegen Br¸ckenerneuerung gesperrt	2:inwork 20810,2398 20939,2413
@@ -2389,7 +2392,6 @@ Kˆnigsmarckstr. -> Hohenzollerndamm: Mittelstreifen schlecht zu queren	3::igndis
 Hohenzollerndamm -> Kˆnigsmarckstr.: Mittelstreifen schlecht zu queren	3::igndisp 2036,7653 2094,7719 1971,7738
 Mittelstreifen	3nocross::ignrte 1136,3878 1152,3918 1214,4075
 Biesalskistr. -> Clayallee: Mittelstreifen	3::igndisp 1130,3930 1152,3918 1214,4075
-Am Zirkus	1 9239,12923 9170,13031 9145,13020 9118,13070
 Adele-Schreiber-Krieger-Str.	1s 8737,12757 8596,12748
 Virchowweg: schmale Toreinfahrt, Fuﬂg‰nger und Bordstein	0:10:86 8548,13577
 tragen (ca. 20 Stufen)	0:45:-98 8536,12758

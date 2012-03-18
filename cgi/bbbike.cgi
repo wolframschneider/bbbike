@@ -837,11 +837,11 @@ if ($local_lang eq $selected_lang) {
   # request from internal IP address 10.x.x.x
   my $local_host = $q->remote_host() =~ /^(10\.|127\.0\.0\.1)/ ? 1 : 0;
 
-  if ($q->param('cache') || $q->param('generate_cache') | $all >= 2 || $local_host) {
+  if ($q->param('cache') || $q->param('generate_cache') || $all >= 3 || $local_host) {
      eval {
 	require BSD::Resource;
 
-	my $success = setpriority(0, 0, 15);
+	my $success = setpriority(0, 0, 10);
 	die "cannot set priority: $$\n" if !$success;
      };
      warn "$@" if $@;
@@ -2461,8 +2461,9 @@ EOF
 	if ($bi->{'can_table'}) {
 	    my $style = $type eq 'via' && $enable_via_hide ? qq{ style="display:none"} : "";
 
+	    my $table_title = M("$printtype eingeben oder Marker auf der Karte setzen");
 	    # start.gif
-	    print qq{<tr id=${type}tr $style $bgcolor_s><td id="icon_$type" bgcolor="$icon_bgcolor" align=center valign=middle width=40><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:6px; padding-top:4px; padding-left:4px; padding-right:4px;" } : "") . qq{src="$imagetype" border=0 alt="} . M($printtype) . qq{"></a></td>};
+	    print qq{<tr id=${type}tr $style $bgcolor_s><td id="icon_$type" bgcolor="$icon_bgcolor" align=center valign=middle width=40><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:6px; padding-top:4px; padding-left:4px; padding-right:4px;" } : "") . qq{src="$imagetype" border=0 alt="$table_title" title="$table_title"></a></td>};
 	    my $color = {'start' => '#e0e0e0',
 			 'via'   => '#c0c0c0',
 			 'ziel'  => '#a0a0a0',
@@ -2757,7 +2758,10 @@ EOF
 	    #print $icon_image;
 	    my $input_size = is_mobile($q) ? 20 : 42;
 
-	    print qq{<input id="$searchinput" size="$input_size" type="text" name="$type" value="" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
+	    my $startstreet = $q->param("startstreet") || "";
+	    my $value = $searchinput eq 'suggest_start' ? CGI::escapeHTML($startstreet) : "";
+	   
+	    print qq{<input id="$searchinput" size="$input_size" type="text" name="$type" value="$value" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
 
 	   if ($enable_opensearch_suggestions) { 
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
@@ -2765,6 +2769,12 @@ EOF
 		my $deferRequestBy = is_mobile($q) ? 500 : 100;
 		my $maxHeight = is_mobile($q) ? 300 : 160;
 		my $width = is_mobile($q) ? 400 : 300;
+
+		# plot street if given by a parameter (e.g. from /street.html)
+	        my $plot_street;
+	        if ($value) {
+		   $plot_street = qq/homemap_street_timer({ "target": { "id": "suggest_start" }}, 200); /;
+	        }
 	    print qq|
 
 <script type="text/javascript">
@@ -2778,6 +2788,7 @@ EOF
 	          geocoder: function (address, callback) { googleCodeAddress(address, callback); } 
 	        }
 	);
+        $plot_street
 </script>
 
 |;
@@ -4960,7 +4971,7 @@ sub display_route {
 			$richtung .= "-&gt;";
 		    } else {
 			if ($same_streetname_important_angle) {
-			    $richtung .= "weiter " . Strasse::de_artikel_genitiv($strname);
+			    $richtung .= "weiter " . Strasse::de_artikel_dativ($strname);
 			} else {
 			    $richtung .= Strasse::de_artikel($strname);
 			}
@@ -7989,9 +8000,10 @@ sub header {
     	}
     }
 
-    push (@$head, $q->meta({-name => "robots", -content => "nofollow"})) 
-	if $is_streets;
-	
+    # only /city/street.html should be indexed by search engines, don't index local language versions
+    if ($is_streets) {
+        push (@$head, $q->meta({-name => "robots", -content => $selected_lang ? "nofollow,noindex,noarchive" : "nofollow" })) 
+    }
 
     # ignore directory service as DMOZ, Yahoo! and MSN
     push (@$head, $q->meta({-name => "robots", -content => "noodp,noydir"}));
@@ -8148,7 +8160,7 @@ my $community_link = $lang eq 'de' ? '/community.de.html' : '/community.html';
 my $donate = M("spenden");
 my $livesearch = M("livesuche");
 my $permalink_msg = M("permalink");
-my $app = M("app");
+my $app = M("tools");
 my $help = M("hilfe");
 my $mobile = M("mobile");
 
@@ -8194,7 +8206,7 @@ my $s_copyright = <<EOF;
 <div id="footer_top">
 <a class="mobile_link" href="/">home</a> |
 <a href="/help.html">$help</a> |
-<a href="/app.html">$app</a> |
+<a href="/tools.html" title="BBBike tools and applications">$app</a> |
 <a href="$community_link">$donate</a> |
 <a title="search time: $real_time seconds" href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
 $list_of_all_streets $permalink_text

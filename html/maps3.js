@@ -34,9 +34,11 @@ var bbbike = {
         MapQuestSatellite: true,
         Esri: true,
         EsriTopo: true,
+        MapBox: true,
+        Apple: true,
 
         YahooMapMapType: true,
-        YahooHybridMapType: true,
+
         YahooSatelliteMapType: true,
 
         BingMapMapType: true,
@@ -72,6 +74,8 @@ var bbbike = {
         SlideShow: true,
         FullScreen: true,
         Smoothness: true,
+        VeloLayer: true,
+        MaxSpeed: true,
         LandShading: true
     },
 
@@ -88,7 +92,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple", "velo_layer", "max_speed"],
 
     area: {
         visible: true,
@@ -571,6 +575,37 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 18
     };
 
+    var velo_layer_options = {
+        bbbike: {
+            "name": "Velo-Layer",
+            "description": "Velo-Layer, by osm.t-i.ch/bicycle/map"
+        },
+        getTileUrl: function (a, z) {
+            return "http://toolserver.org/tiles/bicycle/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "VELO-LAYER",
+        minZoom: 1,
+        maxZoom: 19
+    };
+    var max_speed_options = {
+        bbbike: {
+            "name": "Max Speed",
+            "description": "Max Speed, by wince.dentro.info/koord/osm/KosmosMap.htm"
+        },
+        getTileUrl: function (a, z) {
+            return "http://wince.dentro.info/koord/osm/tiles/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "MAX-SPEED",
+        minZoom: 1,
+        maxZoom: 15
+    };
+
     // Land Shading overlay
     var land_shading_options = {
         bbbike: {
@@ -909,6 +944,38 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 17
     };
 
+    var mapbox_options = {
+        bbbike: {
+            "name": "MapBox",
+            "description": "MapBox OSM, by mapbox.com"
+        },
+        getTileUrl: function (a, z) {
+            return "http://" + randomServerOSM() + ".tiles.mapbox.com/v3/mapbox.mapbox-streets/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "MapQuest",
+        minZoom: 1,
+        maxZoom: 17
+    };
+
+    var apple_options = {
+        bbbike: {
+            "name": "Apple",
+            "description": "Apple iPhone OSM, by apple.com"
+        },
+        getTileUrl: function (a, z) {
+            return "http://gsp2.apple.com/tile?api=1&style=slideshow&layers=default&lang=de_DE&z=" + z + "&x=" + a.x + "&y=" + a.y + "&v=9";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "apple",
+        minZoom: 1,
+        maxZoom: 14
+    };
+
     //
     // select a tiles random server. The argument is either an interger or a 
     // list of server names , e.g.:
@@ -1188,6 +1255,21 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("esri_topo", lang, esri_topo_options.bbbike);
             }
         },
+        "mapbox": function () {
+            if (bbbike.mapType.MapBox) {
+                var MapBoxMapType = new google.maps.ImageMapType(mapbox_options);
+                map.mapTypes.set("mapbox", MapBoxMapType);
+                custom_map("mapbox", lang, mapbox_options.bbbike);
+            }
+        },
+        "apple": function () {
+            if (bbbike.mapType.Apple) {
+                var AppleMapType = new google.maps.ImageMapType(apple_options);
+                map.mapTypes.set("apple", AppleMapType);
+                custom_map("apple", lang, apple_options.bbbike);
+            }
+        }
+        // trailing comma for IE6
     };
 
     // custome layer
@@ -1195,6 +1277,16 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "bbbike_smoothness": function () {
             if (bbbike.mapLayers.Smoothness) {
                 return new google.maps.ImageMapType(bbbike_smoothness_options);
+            }
+        },
+        "velo_layer": function () {
+            if (bbbike.mapLayers.VeloLayer) {
+                return new google.maps.ImageMapType(velo_layer_options);
+            }
+        },
+        "max_speed": function () {
+            if (bbbike.mapLayers.MaxSpeed) {
+                return new google.maps.ImageMapType(max_speed_options);
             }
         },
         "land_shading": function () {
@@ -1227,6 +1319,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.mapnik_bw();
     mapControls.esri();
     mapControls.esri_topo();
+    mapControls.mapbox();
+    mapControls.apple();
 
     map.setMapTypeId(maptype);
     if (is_supported_maptype(maptype, bbbike.available_custom_maps)) {
@@ -1239,6 +1333,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     if (bbbike.mapLayers.Smoothness && (city == "bbbike" || city == "Berlin" || city == "Oranienburg" || city == "Potsdam" || city == "FrankfurtOder")) {
         custom_layer(map, {
+            "id": "bbbike_smoothness",
             "layer": "Smoothness",
             "enabled": bbbike.mapLayers.Smoothness,
             "active": layer == "smoothness" ? true : false,
@@ -1247,7 +1342,30 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         });
     }
 
+    if (bbbike.mapLayers.VeloLayer && is_european(region)) {
+        custom_layer(map, {
+            "id": "velo_layer",
+            "layer": "VeloLayer",
+            "enabled": bbbike.mapLayers.VeloLayer,
+            "active": layer == "velo_layer" ? true : false,
+            "callback": add_velo_layer,
+            "lang": lang
+        });
+    }
+
+    if (bbbike.mapLayers.MaxSpeed && is_european(region)) {
+        custom_layer(map, {
+            "id": "max_speed",
+            "layer": "MaxSpeed",
+            "enabled": bbbike.mapLayers.MaxSpeed,
+            "active": layer == "max_speed" ? true : false,
+            "callback": add_max_speed_layer,
+            "lang": lang
+        });
+    }
+
     custom_layer(map, {
+        "id": "land_shading",
         "layer": "Land Shading",
         "enabled": bbbike.mapLayers.LandShading,
         "active": layer == "land_shading" ? true : false,
@@ -1272,6 +1390,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "id": "google_PanoramioLayer",
         "layer": "PanoramioLayer",
         "enabled": bbbike.mapLayers.PanoramioLayer,
         "active": layer == "panoramio" ? true : false,
@@ -1280,6 +1399,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "id": "google_BicyclingLayer",
         "layer": "BicyclingLayer",
         "enabled": bbbike.mapLayers.BicyclingLayer,
         "active": layer == "bicycling" ? true : false,
@@ -1288,6 +1408,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "id": "google_TrafficLayer",
         "layer": "TrafficLayer",
         "enabled": bbbike.mapLayers.TrafficLayer,
         "active": layer == "traffic" ? true : false,
@@ -1330,6 +1451,22 @@ function init_custom_layers(layer) {
     if (bbbike.mapLayers.LandShading) {
         layers.land_shadingLayer = layer.land_shading();
     }
+    if (bbbike.mapLayers.VeloLayer) {
+        layers.veloLayer = layer.velo_layer();
+    }
+    if (bbbike.mapLayers.MaxSpeed) {
+        layers.maxSpeedLayer = layer.max_speed();
+    }
+}
+
+
+function debug_layer(layer) {
+    var data = layer;
+    for (var l in layerControl) {
+        data += " " + l + ": " + layerControl[l];
+    }
+
+    debug(data);
 }
 
 // add bicycle routes and lanes to map, by google maps
@@ -1368,14 +1505,35 @@ function add_smoothness_layer(map, enable) {
     }
 }
 
+function add_velo_layer(map, enable) {
+    if (!layers.veloLayer) return;
+
+    if (enable) {
+        map.overlayMapTypes.setAt(1, layers.veloLayer);
+    } else {
+        map.overlayMapTypes.setAt(1, null);
+    }
+}
+
+function add_max_speed_layer(map, enable) {
+    if (!layers.maxSpeedLayer) return;
+
+    if (enable) {
+        map.overlayMapTypes.setAt(2, layers.maxSpeedLayer);
+    } else {
+        map.overlayMapTypes.setAt(2, null);
+    }
+}
+
 function add_land_shading_layer(map, enable) {
+    debug_layer("shading");
 
     if (!layers.land_shadingLayer) return;
 
     if (enable) {
-        map.overlayMapTypes.setAt(0, layers.land_shadingLayer);
+        map.overlayMapTypes.setAt(3, layers.land_shadingLayer);
     } else {
-        map.overlayMapTypes.setAt(0, null);
+        map.overlayMapTypes.setAt(3, null);
     }
 }
 
@@ -1778,6 +1936,10 @@ function translate_mapcontrol(word, lang) {
             "SlideShow": "Map Slide Show",
             "esri": "Esri",
             "esri_topo": "Esri Topo",
+            "mapbox": "MapBox",
+            "apple": "Apple",
+            "VeloLayer": "Velo-Layer",
+            "MaxSpeed": "Speed Limit",
             "bing_birdview": "Bing (Sat)" // Birdview
         },
 
@@ -1815,6 +1977,8 @@ function translate_mapcontrol(word, lang) {
             "Destination": "Ziel",
             "Smoothness": "Fahrbahnqualit&auml;t",
             "Land Shading": "Reliefkarte",
+            "VeloLayer": "Velo-Layer",
+            "MaxSpeed": "Tempo Limit",
             "Via": "Via"
         },
         "es": {
@@ -1939,8 +2103,12 @@ function setCustomBold(maptype, log) {
         currentText[maptype].style.background = "#4682B4";
     }
 
+    maptype_usage(maptype);
+}
+
+function maptype_usage(maptype) {
     // get information about map type and log maptype
-    if (bbbike.maptype_usage && log) {
+    if (bbbike.maptype_usage) {
         var url = "/cgi/maptype.cgi?city=" + city + "&maptype=" + maptype;
 
         downloadUrl(url, function (data, responseCode) {
@@ -1954,7 +2122,6 @@ function setCustomBold(maptype, log) {
         });
     }
 }
-
 
 // hide google layers on non-google custom maps
 
@@ -1981,9 +2148,15 @@ function hideGoogleLayers(maptype) {
 }
 
 var layerControl = {
+/*
     TrafficLayer: false,
     BicyclingLayer: false,
-    PanoramioLayer: false
+    PanoramioLayer: false,
+    Smoothness: true,
+    VeloLayer: true,
+    MaxSpeed: true,
+    LandShading: false
+*/
 };
 
 function LayerControl(controlDiv, map, opt) {
@@ -1991,6 +2164,7 @@ function LayerControl(controlDiv, map, opt) {
     var enabled = opt.active;
     var callback = opt.callback;
     var lang = opt.lang;
+    var id = opt.id;
 
     // Set CSS styles for the DIV containing the control
     // Setting padding to 5 px will offset the control
@@ -2011,32 +2185,14 @@ function LayerControl(controlDiv, map, opt) {
     controlUI.style.textAlign = 'center';
 
     var layerText = layer;
-    if (layer == "BicyclingLayer") {
-        layerText = "cycle layer";
-        callback(map, enabled);
-    }
-    if (layer == "TrafficLayer") {
-        layerText = "traffic layer";
-        callback(map, enabled);
-    }
-    if (layer == "PanoramioLayer") {
-        layerText = "Panoramio";
-        callback(map, enabled);
-    }
-
-    // ???
-    if (layer == "Smoothness") {
-        callback(map, enabled);
-    }
-
-    layerControl.layer = enabled;
+    layerControl[layer] = false; // true // enabled; 
+    toogleColor(true);
 
     // grey (off) <-> green (on)
 
     function toogleColor(toogle) {
         controlUI.style.color = toogle ? '#888888' : '#228b22';
     }
-    toogleColor(!layerControl.layer);
 
     if (layer == "FullScreen") {
         controlUI.title = 'Click to enable/disable ' + translate_mapcontrol(layerText, lang);
@@ -2062,9 +2218,11 @@ function LayerControl(controlDiv, map, opt) {
 
     // switch enabled <-> disabled
     google.maps.event.addDomListener(controlUI, 'click', function () {
-        toogleColor(layerControl.layer);
-        layerControl.layer = layerControl.layer ? false : true;
-        callback(map, layerControl.layer, toogleColor);
+        toogleColor(layerControl[layer]);
+        layerControl[layer] = layerControl[layer] ? false : true;
+        callback(map, layerControl[layer], toogleColor);
+
+        if (layerControl[layer]) maptype_usage(layer);
     });
 
 }
@@ -2086,7 +2244,8 @@ function custom_layer(map, opt) {
     if (!opt.enabled) return;
 
     var layerControlDiv = document.createElement('DIV');
-    var layerControl = new LayerControl(layerControlDiv, map, opt);
+    var layerControl = LayerControl(layerControlDiv, map, opt);
+    debug_layer(opt.id);
 
     layerControlDiv.index = 1;
     map.controls[google.maps.ControlPosition.RIGHT_TOP].push(layerControlDiv);

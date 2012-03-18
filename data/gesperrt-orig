@@ -284,8 +284,11 @@ Braillestr.	1 4430,5324 4477,5250 4512,5199
 Mudrackzeile	1 6985,17812 7020,17690
 Gustav-Müller-Str.	1 7643,8634 7642,8815
 Gustav-Müller-Platz	1 7644,8560 7614,8599 7643,8634 7682,8598 7644,8560
-#: XXX Ist die Einbahnstraßenregelung durchgängig?
-Niederlagstr.	1 9972,12184 9961,12273 9943,12364 9934,12418
+#: XXX Wird die Einbahnstraßenregelung hier aufgehoben?
+#: last_checked: 2012-03-06
+#: next_check: 2012-04-20
+Niederlagstr.	1:q3 9972,12184 9961,12273
+Niederlagstr.	1 9943,12364 9934,12418
 Kolk/Behnitz/Möllentordamm	1 -3042,14682 -3028,14640 -2951,14617 -2944,14652 -2942,14666 -3027,14689 -3042,14682
 Hertelstr.	1 4893,6900 4787,6899
 Karl-Marx-Platz	1 12980,7597 13100,7626
@@ -871,6 +874,8 @@ Bäumerplan	1 8512,7757 8467,7913
 Mierendorffstr.	1 3645,13189 3542,13063
 #: XXX Einbahnstraße auch für Radfahrer gültig?
 Hüttigpfad	1 4810,15000 4887,14931 5057,14824 5107,14781
+(Alex-Wedding-Str. - Karl-Liebknecht-Str.)	1s:q3 11027,13279 11085,13239
+Fischerinsel	1s:q3 10429,11807 10474,11843 10604,11941
 ######################################################################
 #
 # Potsdam
@@ -1167,7 +1172,7 @@ Berliner Str.: Straßenbahntrasse	3nocross 10911,17275 10906,17331 10900,17397
 Berliner Str.: Straßenbahntrasse	3nocross 10900,17397 10894,17470 10892,17491
 #: note: Luftbild:
 Berliner Str.: Straßenbahntrasse	3nocross 13737,15994 13826,16026 14014,16106
-Karl-Liebknecht-Str.: Straßenbahntrasse	3nocross 11149,13442 11092,13366 11080,13350 11027,13279 11021,13271
+Karl-Liebknecht-Str.: Straßenbahntrasse	3nocross 11149,13442 11119,13402 11092,13366 11080,13350 11027,13279 11021,13271
 Badstr.: Gitter auf Mittelstreifen	3nocross 8659,16327 8543,16364 8516,16393 8486,16425
 Riesaer Str.: Straßenbahntrasse	3nocross 24120,14526 24097,14575 24030,14717
 #: note: Luftbild:
@@ -1921,21 +1926,12 @@ Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552
 #: last_checked: 2011-11-13
 Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
 # 
-#: last_checked: 2011-10-25
-#: next_check: 2012-02-15
-(Markgrafenstr. - Ritterstr.): Bauarbeiten	2:inwork 9763,11148 9861,11103
-# 
 #: last_checked: 2011-10-01
 #: next_check: 2011-10-15
 Spreeufer: wegen Bauarbeiten gesperrt	2:inwork 8596,12576 8495,12651 8473,12753
 # 
 #XXX del --- #: last_checked: 2011-12-17 --- #: next_check: 2012-01-15 --- (Leuthener Platz - Wilhelm-Kabus-Str.): Bauzäune	2:inwork 7716,8356 7837,8354 7893,8327
 #XXX del --- #: last_checked: 2011-09-27 --- #: next_check: 2011-10-15 --- (General-Pape-Str. - Gontermannstr.): Bauzäune	2:inwork 8106,8290 8202,8293 8265,8305 8276,8295
-# 
-#: last_checked: 2012-02-17
-#: next_check: 2012-04-01
-#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/51re.pdf/file?y=2011
-Axel-Springer-Str.: wird noch gebaut	2:inwork 10166,11592 10202,11669 10213,11728
 # 
 #: last_checked: 2011-08-02
 #: next_check: 2012-01-01
@@ -1959,25 +1955,25 @@ Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,2
 #: next_check: 2012-05-01
 Hüttenweg: Sperrung wegen Bau an der Autobahn, wahrscheinlich bis Mai 2012	2:inwork -739,6838 -927,6888
 # 
-#: by: wosch
-#: confirmed_by: srt
-#: last_checked: 2011-06-12
-#: next_check: 2011-11-15
-Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9385,13174
+#: last_checked: 2012-03-16
+#: next_check: 2012-07-15
+#: note: abgeschlossener Zaun
+Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
 #
-#: last_checked: 2011-05-01
-#: next_check: 2011-10-15
+#: last_checked: 2012-03-03
+#: next_check: 2012-05-01
 #: XXX mit den Bauarbeiten "An den Eldenaer Höfen" koordinieren
 Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405,12953 14686,12873
 #
 #XXX del --- #: last_checked: 2011-04-30 --- Tiergartenufer: Bauarbeiten, gesperrt	2:inwork 5711,11841 5543,11837 5478,11860
 #XXX del --- #: last_checked: 2011-04-08 --- Bebelplatz: Bauarbeiten, gesperrt	2:inwork 9679,12388 9702,12307 9708,12235
 #
-#: last_checked: 2012-02-17 vvv
-#: next_check: 2012-05-01 vvv
+#: last_checked: 2012-03-16 vvv
+#: next_check: 2012-10-01 vvv
 Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
 Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9869,12297
 Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9808,12182 9801,12245 9795,12293 9780,12401
+Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12395
 #: next_check: ^^^
 #: last_checked: ^^^
 # 
@@ -2005,11 +2001,7 @@ Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973
 Ella-Trebe-Str.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 7937,13109 7941,13014 7948,12918
 # 
 #XXX del --- #: last_checked: 2011-03-04 --- #: next_check: 2011-05-15 --- Brüderstr.: Bauarbeiten, gesperrt	2:inwork 10385,11985 10284,12113
-# 
-#: last_checked: 2011-05-20
-#: next_check: 2011-08-01
-Alex-Wedding-Str.: Bauarbeiten, komplett gesperrt	2:inwork 11085,13239 11045,13183
-# 
+#XXX del --- #: last_checked: 2011-05-20 --- #: next_check: 2011-08-01 --- Alex-Wedding-Str.: Bauarbeiten, komplett gesperrt	2:inwork 11085,13239 11045,13183
 #XXX del (für Radfahrer ist das Abbiegen möglich) --- #: next_check: 2012-06-01 vvv --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4088.html --- Mauerstr.: Einbiegen in die Behrenstr. nicht möglich	3:inwork 9076,12054 9064,12156 9054,12154 --- Mauerstr.: Einbiegen in die Behrenstr. nicht möglich	3:inwork 9076,12054 9064,12156 9164,12172 --- Behrenstr.: Einbiegen in die Mauerstr. nicht möglich	3:inwork 9054,12154 9064,12156 9076,12054 --- Behrenstr.: Einbiegen in die Mauerstr. nicht möglich	3:inwork 9164,12172 9064,12156 9076,12054 --- #: next_check: ^^^
 # 
 #: last_checked: 2011-11-13
@@ -2023,10 +2015,11 @@ Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,127
 #XXX del --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1002/nachricht3772.html --- #: next_check: 2010-10-01 --- Brücke über A10: Sperrung vom 15.02.2010 bis 01.10.2010	2:inwork 15337,24593 15490,24848
 #XXX del --- #: last_checked: 2010-09-11 --- #: next_check: 2010-12-31 --- #: XXX der Neubau wird "N" oder "NH" sein und Radwege haben --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0907/nachricht3563.html --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1005/nachricht3870.html --- #: by: http://www.altglienicke.de/aktuell.php : Sperrung aufgehoben (20.05.11) --- Wegedornbrücke: Vollsperrung, Neubau	2:inwork 20385,593 20442,564 20510,530 20534,501
 # 
-#: next_check: 2012-03-17
+#: next_check: 2012-12-17
 #: last_checked: 2012-02-17
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1108/nachricht4438.html
-Rathausbrücke: gesperrt (Neubau), Fertigstellung und Verkehrsfreigabe im Frühjahr 2012	2:inwork 10362,12351 10422,12395
+#: by: IM_012342 (bis 2013)
+Rathausbrücke: gesperrt (Neubau), Fertigstellung und Verkehrsfreigabe im Frühjahr 2013	2:inwork 10362,12351 10422,12395
 # 
 #: last_checked: 2012-01-18
 #: next_check: 2012-03-15
@@ -2176,7 +2169,7 @@ Clayallee: Mittlestreifen wg. Leitplanke nicht zu queren	3nocross 1955,7531 1967
 Clayallee: Mittelstreifen schlecht zu queren	3nocross 2116,7740 2094,7719 2036,7653
 #: by: MichaelM
 Clayallee: Mittelstreifen	3nocross 1136,3878 1152,3918 1214,4075
-Am Zirkus	1 9239,12923 9170,13031 9145,13020 9118,13070
+# XXX --- zurzeit (2012-03-16) wegen Bauarbeiten Einbahnstraße in andere Richtung --- Am Zirkus	1 9239,12923 9170,13031 9145,13020 9118,13070
 Adele-Schreiber-Krieger-Str.	1s 8737,12757 8596,12748
 Virchowweg: schmale Toreinfahrt, Fußgänger und Bordstein	0:10 8548,13577
 tragen (ca. 20 Stufen)	0:45 8536,12758

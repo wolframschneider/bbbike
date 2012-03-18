@@ -8,7 +8,6 @@ auf linken Gehweg fahren, Straßenseite an der Corneliusstr. wechseln	CP; 6732,11
 bereits an der Kreuzung An der Urania/Kurfürstenstr. die Straßenseite wechseln	PI; 6740,10755 6685,10690 6745,10619
 bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	PI; 6935,8208 7001,8161 7250,8223
 am Domäne-Markt Richtung Hochbahnhof Hallesches Tor abbiegen	CP; 9536,10064 9579,10122 9599,10175
-Fußgängerampel am Spittelmarkt zum Wechseln der Straßenseite benutzen, zwischen den Hochhäusern zur Axel-Springer-Str.	CP; 10240,11740 10213,11728 10153,11666
 auf linken Gehweg fahren, Straßenseite an der Fußgängerampel Yorckstr./Katzbachstr. wechseln	CP; 8773,9524 8648,9526 8595,9495
 von der Brandenburgischen in die Paderborner: bereits an der Ampel Zähringerstr. auf den linken Gehweg wechseln	PI; 3930,9919 3906,10035 3720,9996
 zur Prenzlauer Promenade: bei der Ampel an der Autobahnausfahrt die Straßenseite wechseln	CP2; 11907,19749 11933,19590
@@ -138,7 +137,7 @@ An der Kreuzung ca. 50m vor der Jugenerholungsstätte links	CP; 1558,6729 1512,65
 Den rechten Weg direkt an den Grundstücken entlang wählen	CP2; 761,7922 614,8006
 (Luisenstr. - Hufelandweg): durch die Gebäudedurchfahrt	CP2; 8665,13353 8582,13355
 (Hufelandweg - Luisenstr.): durch die Gebäudedurchfahrt	CP2; 8582,13355 8665,13353
-Helga-Hahnemann-Str.: Zugang rechts vom grossen Parkplatz, nicht ausgeschildert	CP2; 9415,13315 9385,13174
+Helga-Hahnemann-Str.: Zugang rechts vom grossen Parkplatz, nicht ausgeschildert	CP2; 9415,13315 9408,13282
 Theodor-Heuss-Weg: beginnt links vom Spielplatz der Kita	CP2; 9250,14658 9223,14608
 zur Gustav-Heinemann-Brücke durch schmalen Durchbruch in der Böschung	CP2; 8032,12889 8053,12871
 zum Spreeufer: den Garten hinunter, am Ende ist ein Durchbruch nach rechts	CP2; 8116,12938 8053,12871
@@ -353,3 +352,6 @@ Suermondtstr. - Orankestrand: bereits an der Kreuzung Augustastr. die Straßensei
 Hasenheide - Park: bereits an der Kreuzung Hasenheide/Jahnstr. auf den linken Gehweg wechseln	PI; 11500,9116 11449,9125 11439,9049
 Hasenheide - Park: bereits an der Ampel Neue Welt auf den linken Gehweg wechseln	PI; 11629,9086 11550,9104 11515,9066
 Park - Hasenheide: auf dem linken Gehweg bis zur Ampel fahren	CP; 11515,9066 11550,9104 11500,9116
+Hermann-Stöhr-Platz: diagonal über die Grünfläche	CS 12453,11790 12409,11902
+(Fischerstr. - Lückstr.): ausgeschildert "KGA Sanssouci, Parz. 1-34, 76-90"	CP2; 16404,10286 16488,10381
+(Lückstr. - Fischerstr.): Einfahrt in Parkplatz	CP2; 16601,10650 16587,10613

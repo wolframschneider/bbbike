@@ -316,7 +316,7 @@ function toogleVia(via_field, via_message, via_input, visible) {
 
 function oS(tag) { // openStreet
     if (window.history) {
-        open("./?" + "startname=" + escape(tag.innerHTML), "BBBike");
+        open("./?" + "startstreet=" + escape(tag.innerHTML), "BBBike");
     }
 }
 
