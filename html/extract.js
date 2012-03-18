@@ -229,8 +229,7 @@ function osm_init() {
         if ($("#square_km")) {
             var html = "area covers " + large_int(skm) + " square km";
             if (config.show_filesize) {
-                var size = skm / 1000;
-                html += ", approx. " + Math.floor(size * 0.75) + "-" + Math.ceil(size * 2) + "MB OSM data";
+                html += show_filesize(skm);
             }
             $("#square_km").html(html);
         }
@@ -240,6 +239,22 @@ function osm_init() {
         } else {
             $("#export_osm_too_large").hide();
         }
+    }
+
+    function show_filesize(skm) {
+        var size = skm / 1000;
+        var format = $("select[name=format] option:selected").val();
+
+        var factor = 1; // PBF
+        if (format == "osm.gz") {
+            factor = 2;
+        } else if (format == "osm.bz2") {
+            factor = 1.5;
+        } else if (format == "osm.xz") {
+            factor = 1.4;
+        }
+
+        return ", approx. " + Math.floor(factor * size * 0.75) + "-" + Math.ceil(factor * size * 2) + "MB OSM data";
     }
 
     function getMapLayers() {
@@ -269,6 +284,12 @@ function osm_init() {
         $("#mapnik_image_height").html(size.h);
 
         validateControls();
+    }
+
+    if ($("select[name=format]")) {
+        $("select[name=format]").change(function () {
+            validateControls()
+        });
     }
 
     startExport();
