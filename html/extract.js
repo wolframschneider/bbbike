@@ -17,6 +17,8 @@ var config = {
     "sw": [-122.9, 37.2],
     "ne": [-121.7, 37.9],
 
+    "show_filesize": 1,
+
     "dummy": ""
 };
 
@@ -225,7 +227,12 @@ function osm_init() {
 
         var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
         if ($("#square_km")) {
-            $("#square_km").html("area covers " + large_int(skm) + " square km");
+            var html = "area covers " + large_int(skm) + " square km";
+            if (config.show_filesize) {
+                var size = skm / 1000;
+                html += ", approx. " + Math.floor(size * 0.75) + "-" + Math.ceil(size * 2) + "MB OSM data";
+            }
+            $("#square_km").html(html);
         }
 
         if (skm > config.max_skm) {
