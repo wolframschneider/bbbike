@@ -2758,7 +2758,10 @@ EOF
 	    #print $icon_image;
 	    my $input_size = is_mobile($q) ? 20 : 42;
 
-	    print qq{<input id="$searchinput" size="$input_size" type="text" name="$type" value="" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
+	    my $startstreet = $q->param("startstreet") || "";
+	    my $value = $searchinput eq 'suggest_start' ? CGI::escapeHTML($startstreet) : "";
+	   
+	    print qq{<input id="$searchinput" size="$input_size" type="text" name="$type" value="$value" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
 
 	   if ($enable_opensearch_suggestions) { 
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
@@ -2766,6 +2769,12 @@ EOF
 		my $deferRequestBy = is_mobile($q) ? 500 : 100;
 		my $maxHeight = is_mobile($q) ? 300 : 160;
 		my $width = is_mobile($q) ? 400 : 300;
+
+		# plot street if given by a parameter (e.g. from /street.html)
+	        my $plot_street;
+	        if ($value) {
+		   $plot_street = qq/homemap_street_timer({ "target": { "id": "suggest_start" }}, 200); /;
+	        }
 	    print qq|
 
 <script type="text/javascript">
@@ -2779,6 +2788,7 @@ EOF
 	          geocoder: function (address, callback) { googleCodeAddress(address, callback); } 
 	        }
 	);
+        $plot_street
 </script>
 
 |;
