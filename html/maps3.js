@@ -183,13 +183,31 @@ function runReplay(none, none2, toogleColor) {
     // zoom in
     map.setZoom(zoom > zoom_min ? zoom : zoom_min);
 
-    var start = marker_list_points[0];
+    runReplayRoute(0);
+}
+
+function runReplayRoute(offset) {
+    if (!offset || offset < 0) offset = 0;
+
+    if (offset >= marker_list.length) return;
+
+    var start = marker_list[offset];
+
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(start[0], start[1]),
+        icon: bbbike.icons.white,
+        map: map
+    });
 
     var bounds = new google.maps.LatLngBounds;
     bounds.extend(new google.maps.LatLng(start[0], start[1]));
     map.setCenter(bounds.getCenter());
 
-    // alert("foo: " + map.getZoom());
+    debug("offset: " + offset + " length: " + marker_list.length);
+
+    setTimeout(function () {
+        runReplayRoute(offset + 1);
+    }, 200);
 }
 
 function toogleFullScreen(none, none2, toogleColor) {
