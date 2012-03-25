@@ -76,6 +76,7 @@ var bbbike = {
         Smoothness: true,
         VeloLayer: true,
         MaxSpeed: true,
+        Replay: true,
         LandShading: true
     },
 
@@ -173,6 +174,23 @@ var layers = {};
 //////////////////////////////////////////////////////////////////////
 // functions
 //
+
+function runReplay(none, none2, toogleColor) {
+    var fullscreen = state.fullscreen;
+    var zoom = map.getZoom();
+    var zoom_min = 16;
+
+    // zoom in
+    map.setZoom(zoom > zoom_min ? zoom : zoom_min);
+
+    var start = marker_list_points[0];
+
+    var bounds = new google.maps.LatLngBounds;
+    bounds.extend(new google.maps.LatLng(start[0], start[1]));
+    map.setCenter(bounds.getCenter());
+
+    // alert("foo: " + map.getZoom());
+}
 
 function toogleFullScreen(none, none2, toogleColor) {
     var fullscreen = state.fullscreen;
@@ -1390,6 +1408,14 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "layer": "Replay",
+        "enabled": bbbike.mapLayers.Replay,
+        "active": layer == "helicopter" ? true : false,
+        "callback": runReplay,
+        "lang": lang
+    });
+
+    custom_layer(map, {
         "id": "google_PanoramioLayer",
         "layer": "PanoramioLayer",
         "enabled": bbbike.mapLayers.PanoramioLayer,
@@ -1933,6 +1959,7 @@ function translate_mapcontrol(word, lang) {
             "bing_satellite": "Bing (Sat)",
             "bing_hybrid": "Bing (Hybrid)",
             "FullScreen": "Full Screen View",
+            "Replay": "Replay",
             "SlideShow": "Map Slide Show",
             "esri": "Esri",
             "esri_topo": "Esri Topo",
@@ -1979,6 +2006,7 @@ function translate_mapcontrol(word, lang) {
             "Land Shading": "Reliefkarte",
             "VeloLayer": "Velo-Layer",
             "MaxSpeed": "Tempo Limit",
+            "Replay": "Replay",
             "Via": "Via"
         },
         "es": {
