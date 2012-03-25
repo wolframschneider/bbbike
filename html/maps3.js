@@ -141,6 +141,7 @@ var bbbike = {
 
 var state = {
     fullscreen: false,
+    replay: false,
 
     // tags to hide in full screen mode
     non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo"],
@@ -176,38 +177,52 @@ var layers = {};
 //
 
 function runReplay(none, none2, toogleColor) {
-    var fullscreen = state.fullscreen;
+    state.replay = true;
     var zoom = map.getZoom();
     var zoom_min = 16;
 
     // zoom in
     map.setZoom(zoom > zoom_min ? zoom : zoom_min);
 
-    runReplayRoute(0);
-}
-
-function runReplayRoute(offset) {
-    if (!offset || offset < 0) offset = 0;
-
-    if (offset >= marker_list.length) return;
-
-    var start = marker_list[offset];
-
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(start[0], start[1]),
+        // position: new google.maps.LatLng(start[0], start[1]),
         icon: bbbike.icons.white,
         map: map
     });
 
+    runReplayRoute(0, marker);
+    state.replay = false;
+
+    toogleColor(true);
+}
+
+function runReplayRoute(offset, marker) {
+    if (!offset || offset < 0) offset = 0;
+    if (offset >= marker_list.length) return;
+
+    // last element in route list
+    if (offset + 1 == marker_list.length) {
+        marker.setMap(null); // delete marker from map
+        return;
+    }
+
+    // speed to move the map
+    var timeout = 100;
+
+    var start = marker_list[offset];
+    var pos = new google.maps.LatLng(start[0], start[1]);
+
+    marker.setPosition(pos);
+
     var bounds = new google.maps.LatLngBounds;
-    bounds.extend(new google.maps.LatLng(start[0], start[1]));
+    bounds.extend(pos);
     map.setCenter(bounds.getCenter());
 
     debug("offset: " + offset + " length: " + marker_list.length);
 
     setTimeout(function () {
-        runReplayRoute(offset + 1);
-    }, 200);
+        runReplayRoute(offset + 1, marker);
+    }, timeout);
 }
 
 function toogleFullScreen(none, none2, toogleColor) {
@@ -1428,7 +1443,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     custom_layer(map, {
         "layer": "Replay",
         "enabled": bbbike.mapLayers.Replay,
-        "active": layer == "helicopter" ? true : false,
+        "active": layer == "replay" ? true : false,
         "callback": runReplay,
         "lang": lang
     });
