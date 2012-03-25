@@ -181,6 +181,9 @@ function runReplay(none, none2, toogleColor) {
     var zoom = map.getZoom();
     var zoom_min = 16;
 
+    // speed to move the map
+    var timeout = 100;
+
     // zoom in
     map.setZoom(zoom > zoom_min ? zoom : zoom_min);
 
@@ -190,13 +193,16 @@ function runReplay(none, none2, toogleColor) {
         map: map
     });
 
-    runReplayRoute(0, marker);
-    state.replay = false;
+    runReplayRoute(0, marker, timeout);
 
+
+    setTimeout(function () {
+    state.replay = false;
     toogleColor(true);
+    }, timeout * marker_list.length);
 }
 
-function runReplayRoute(offset, marker) {
+function runReplayRoute(offset, marker, timeout) {
     if (!offset || offset < 0) offset = 0;
     if (offset >= marker_list.length) return;
 
@@ -205,9 +211,6 @@ function runReplayRoute(offset, marker) {
         marker.setMap(null); // delete marker from map
         return;
     }
-
-    // speed to move the map
-    var timeout = 100;
 
     var start = marker_list[offset];
     var pos = new google.maps.LatLng(start[0], start[1]);
@@ -221,7 +224,7 @@ function runReplayRoute(offset, marker) {
     debug("offset: " + offset + " length: " + marker_list.length);
 
     setTimeout(function () {
-        runReplayRoute(offset + 1, marker);
+        runReplayRoute(offset + 1, marker, timeout);
     }, timeout);
 }
 
