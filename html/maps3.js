@@ -182,7 +182,7 @@ function runReplay(none, none2, toogleColor) {
 
     state.replay = true;
     var zoom = map.getZoom();
-    var zoom_min = 16;
+    var zoom_min = 15;
 
     // zoom in
     map.setZoom(zoom > zoom_min ? zoom : zoom_min);
@@ -198,7 +198,8 @@ function runReplay(none, none2, toogleColor) {
             toogleColor(true);
         };
 
-    runReplayRoute(0, marker, cleanup);
+    runReplayRouteElevations(0, marker, cleanup);
+    // runReplayRoute(0, marker, cleanup);
 }
 
 function runReplayRoute(offset, marker, cleanup) {
@@ -224,10 +225,40 @@ function runReplayRoute(offset, marker, cleanup) {
     bounds.extend(pos);
     map.setCenter(bounds.getCenter());
 
-    debug("offset: " + offset + " length: " + marker_list.length);
-
+    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length); // + " height: " + elevations[offset].location.lat);
     setTimeout(function () {
         runReplayRoute(offset + 1, marker, cleanup);
+    }, timeout);
+}
+
+function runReplayRouteElevations(offset, marker, cleanup) {
+    // speed to move the map
+    var timeout = 300;
+    var step = 2;
+
+    if (!offset || offset < 0) offset = 0;
+    if (offset >= elevations.length) return;
+
+    // last element in route list
+    if (offset + step == elevations.length) {
+        marker.setMap(null); // delete marker from map
+        cleanup();
+        return;
+    }
+
+    var start = elevations[offset].location;
+    var pos = new google.maps.LatLng(start.lat(), start.lng());
+
+    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length);
+
+    marker.setPosition(pos);
+
+    var bounds = new google.maps.LatLngBounds;
+    bounds.extend(pos);
+    map.setCenter(bounds.getCenter());
+
+    setTimeout(function () {
+        runReplayRouteElevations(offset + step, marker, cleanup);
     }, timeout);
 }
 
@@ -401,7 +432,7 @@ function is_supported_maptype(maptype, list) {
     return 0;
 }
 
-function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam, layer) {
+function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam, layer, is_route) {
     bbbike.mapTypeControlOptions.mapTypeIds = [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN];
     state.maplist = init_google_map_list();
 
@@ -1448,7 +1479,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     custom_layer(map, {
         "layer": "Replay",
-        "enabled": bbbike.mapLayers.Replay,
+        "enabled": bbbike.mapLayers.Replay && is_route,
+        // display only on route result page
         "active": layer == "replay" ? true : false,
         "callback": runReplay,
         "lang": lang
