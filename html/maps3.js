@@ -177,12 +177,12 @@ var layers = {};
 //
 
 function runReplay(none, none2, toogleColor) {
+    // still running
+    if (state.replay) return;
+
     state.replay = true;
     var zoom = map.getZoom();
     var zoom_min = 16;
-
-    // speed to move the map
-    var timeout = 100;
 
     // zoom in
     map.setZoom(zoom > zoom_min ? zoom : zoom_min);
@@ -193,22 +193,25 @@ function runReplay(none, none2, toogleColor) {
         map: map
     });
 
-    runReplayRoute(0, marker, timeout);
+    var cleanup = function () {
+            state.replay = false;
+            toogleColor(true);
+        };
 
-
-    setTimeout(function () {
-    state.replay = false;
-    toogleColor(true);
-    }, timeout * marker_list.length);
+    runReplayRoute(0, marker, cleanup);
 }
 
-function runReplayRoute(offset, marker, timeout) {
+function runReplayRoute(offset, marker, cleanup) {
+    // speed to move the map
+    var timeout = 300;
+
     if (!offset || offset < 0) offset = 0;
     if (offset >= marker_list.length) return;
 
     // last element in route list
     if (offset + 1 == marker_list.length) {
         marker.setMap(null); // delete marker from map
+        cleanup();
         return;
     }
 
@@ -224,7 +227,7 @@ function runReplayRoute(offset, marker, timeout) {
     debug("offset: " + offset + " length: " + marker_list.length);
 
     setTimeout(function () {
-        runReplayRoute(offset + 1, marker, timeout);
+        runReplayRoute(offset + 1, marker, cleanup);
     }, timeout);
 }
 
