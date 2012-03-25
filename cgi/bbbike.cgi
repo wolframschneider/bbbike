@@ -6034,6 +6034,8 @@ EOF
 		}
 	    }
 
+	    print qq{<tt><span id="debug"></span></tt>} if !is_production($q);
+
 	    print qq{<div id="bbbike_graphic">\n};
 	    print qq{<div class="box">\n};
 	    print "<form name=showmap method=" .
