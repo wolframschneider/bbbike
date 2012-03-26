@@ -76,6 +76,7 @@ var bbbike = {
         Smoothness: true,
         VeloLayer: true,
         MaxSpeed: true,
+        Replay: true,
         LandShading: true
     },
 
@@ -107,6 +108,7 @@ var bbbike = {
         "red": '/images/mm_20_red.png',
         "white": '/images/mm_20_white.png',
         "yellow": '/images/mm_20_yellow.png',
+        "bicycle_large": '/images/srtbike.gif',
 
         "blue_dot": "/images/blue-dot.png",
         "green_dot": "/images/green-dot.png",
@@ -140,6 +142,7 @@ var bbbike = {
 
 var state = {
     fullscreen: false,
+    replay: false,
 
     // tags to hide in full screen mode
     non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo"],
@@ -173,6 +176,142 @@ var layers = {};
 //////////////////////////////////////////////////////////////////////
 // functions
 //
+
+function runReplay(none, none2, toogleColor) {
+    // still running
+    if (state.replay) {
+        state.replay = false;
+        return;
+    }
+
+    state.replay = true;
+    var zoom = map.getZoom();
+    var zoom_min = 15;
+
+    // zoom in
+    map.setZoom(zoom > zoom_min ? zoom : zoom_min);
+
+    var marker = new google.maps.Marker({
+        // position: new google.maps.LatLng(start[0], start[1]),
+        icon: bbbike.icons.bicycle_large,
+        map: map
+    });
+
+    var cleanup = function (text) {
+            if (text) {
+                toogleColor(false, text);
+            } else {
+                state.replay = false;
+                toogleColor(true);
+            }
+        };
+
+    runReplayRouteElevations(0, marker, cleanup, get_driving_time());
+    // runReplayRoute(0, marker, cleanup);
+}
+
+
+function runReplayRouteElevations(offset, marker, cleanup, time) {
+
+    // speed to move the map
+    var timeout = 300;
+    var step = 2;
+    if (elevation_obj && elevation_obj.route_length > 0) {
+        timeout = timeout * elevation_obj.route_length / 16;
+    }
+
+    if (!offset || offset < 0) offset = 0;
+    if (offset >= elevations.length) return;
+
+    var seconds = offset / elevations.length * time;
+
+    // last element in route list, or replay was stopped
+    if (offset + step == elevations.length || !state.replay) {
+        marker.setMap(null); // delete marker from map
+        cleanup(readableTime(seconds));
+        setTimeout(function () {
+            cleanup();
+        }, 3000);
+        return;
+    }
+
+    var start = elevations[offset].location;
+    var pos = new google.maps.LatLng(start.lat(), start.lng());
+
+    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout + " seconds: " + readableTime(seconds));
+
+    marker.setPosition(pos);
+
+    var bounds = new google.maps.LatLngBounds;
+    bounds.extend(pos);
+    map.setCenter(bounds.getCenter());
+
+    cleanup(readableTime(seconds));
+    setTimeout(function () {
+        runReplayRouteElevations(offset + step, marker, cleanup, time);
+    }, timeout);
+}
+
+
+function runReplayRoute(offset, marker, cleanup) {
+    // speed to move the map
+    var timeout = 300;
+    if (elevation_obj && elevation_obj.route_length > 0) {
+        timeout * elevation_obj.route_length / 10;
+    }
+
+    if (!offset || offset < 0) offset = 0;
+    if (offset >= marker_list.length) return;
+
+    // last element in route list
+    if (offset + 1 == marker_list.length) {
+        marker.setMap(null); // delete marker from map
+        cleanup();
+        return;
+    }
+
+    var start = marker_list[offset];
+    var pos = new google.maps.LatLng(start[0], start[1]);
+
+    marker.setPosition(pos);
+
+    var bounds = new google.maps.LatLngBounds;
+    bounds.extend(pos);
+    map.setCenter(bounds.getCenter());
+
+    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout); // + " height: " + elevations[offset].location.lat);
+    setTimeout(function () {
+        runReplayRoute(offset + 1, marker, cleanup);
+    }, timeout);
+}
+
+// "driving_time":"0:27:10|0:19:15|0:15:20|0:13:25" => 0:15:20 => 920 seconds
+
+function readableTime(time) {
+    var hour = 0;
+    var min = 0;
+    var seconds = 0;
+
+    hour = Math.floor(time / 3600);
+    min = Math.floor(time / 60);
+    seconds = Math.floor(time % 60);
+
+    if (hour < 10) hour = "0" + hour;
+    if (min < 10) min = "0" + min;
+    if (seconds < 10) seconds = "0" + seconds;
+    return hour + ":" + min + ":" + seconds;
+}
+
+function get_driving_time() {
+    var time = 0;
+    if (elevation_obj && elevation_obj.driving_time) {
+        var speed = elevation_obj.driving_time.split("|");
+        var t = speed[2];
+        var t2 = t.split(":");
+        time = t2[0] * 3600 + t2[1] * 60 + t2[2] * 1;
+    }
+    return time;
+}
 
 function toogleFullScreen(none, none2, toogleColor) {
     var fullscreen = state.fullscreen;
@@ -344,7 +483,7 @@ function is_supported_maptype(maptype, list) {
     return 0;
 }
 
-function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam, layer) {
+function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam, layer, is_route) {
     bbbike.mapTypeControlOptions.mapTypeIds = [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN];
     state.maplist = init_google_map_list();
 
@@ -1390,6 +1529,15 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "layer": "Replay",
+        "enabled": bbbike.mapLayers.Replay && is_route,
+        // display only on route result page
+        "active": layer == "replay" ? true : false,
+        "callback": runReplay,
+        "lang": lang
+    });
+
+    custom_layer(map, {
         "id": "google_PanoramioLayer",
         "layer": "PanoramioLayer",
         "enabled": bbbike.mapLayers.PanoramioLayer,
@@ -1933,6 +2081,7 @@ function translate_mapcontrol(word, lang) {
             "bing_satellite": "Bing (Sat)",
             "bing_hybrid": "Bing (Hybrid)",
             "FullScreen": "Full Screen View",
+            "Replay": "Replay",
             "SlideShow": "Map Slide Show",
             "esri": "Esri",
             "esri_topo": "Esri Topo",
@@ -1979,6 +2128,7 @@ function translate_mapcontrol(word, lang) {
             "Land Shading": "Reliefkarte",
             "VeloLayer": "Velo-Layer",
             "MaxSpeed": "Tempo Limit",
+            "Replay": "Replay",
             "Via": "Via"
         },
         "es": {
@@ -2190,14 +2340,17 @@ function LayerControl(controlDiv, map, opt) {
 
     // grey (off) <-> green (on)
 
-    function toogleColor(toogle) {
+    function toogleColor(toogle, text) {
         controlUI.style.color = toogle ? '#888888' : '#228b22';
+        controlText.innerHTML = (text ? text + " " : "") + translate_mapcontrol(layerText, lang);
     }
 
     if (layer == "FullScreen") {
         controlUI.title = 'Click to enable/disable ' + translate_mapcontrol(layerText, lang);
     } else if (layer == "SlideShow") {
         controlUI.title = 'Click to run ' + translate_mapcontrol(layerText, lang);
+    } else if (layer == "Replay") {
+        controlUI.title = 'Click to replay route';
     } else {
         controlUI.title = 'Click to add the layer ' + layerText;
     }

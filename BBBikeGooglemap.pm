@@ -328,6 +328,7 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
       if $gmap_api_version == 2;
 
     $region = "other" if $region !~ /^(de|eu|other)$/;
+    my $is_route = scalar(@$route);
 
     if ( !$nomap ) {
         $html .= <<EOF;
@@ -343,7 +344,7 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     var marker_list_points = [ $route_points ];
 
     city = "$city";
-    bbbike_maps_init("$map", $marker_list, "$lang", false, "$region", "$zoom_param", "$layer" );
+    bbbike_maps_init("$map", $marker_list, "$lang", false, "$region", "$zoom_param", "$layer", $is_route );
     if (document.getElementById("suggest_start")) {
 	init_markers({"lang":"$lang"});
     }
@@ -362,7 +363,7 @@ EOF
     if ( $route_length ne '' ) {
 
         $html .= <<EOF;
-elevation_initialize(map, {
+     var elevation_obj = {
 	"driving_time":"$driving_time",
 	"area":$marker_list,
 	"lang":"$lang",
@@ -372,7 +373,8 @@ elevation_initialize(map, {
 	"zielname": "$zielname",
 	"vianame": "$vianame",
 	"maptype":"cycle"
-});
+    };
+    elevation_initialize(map, elevation_obj);
 EOF
     }
 
