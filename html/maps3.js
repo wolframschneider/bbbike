@@ -197,9 +197,13 @@ function runReplay(none, none2, toogleColor) {
         map: map
     });
 
-    var cleanup = function () {
-            state.replay = false;
-            toogleColor(true);
+    var cleanup = function (text) {
+            if (text) {
+                toogleColor(false, text);
+            } else {
+                state.replay = false;
+                toogleColor(true);
+            }
         };
 
     runReplayRouteElevations(0, marker, cleanup, get_driving_time());
@@ -271,6 +275,7 @@ function runReplayRouteElevations(offset, marker, cleanup, time) {
     bounds.extend(pos);
     map.setCenter(bounds.getCenter());
 
+    cleanup(readableTime(seconds));
     setTimeout(function () {
         runReplayRouteElevations(offset + step, marker, cleanup, time);
     }, timeout);
@@ -2331,14 +2336,18 @@ function LayerControl(controlDiv, map, opt) {
 
     // grey (off) <-> green (on)
 
-    function toogleColor(toogle) {
+    function toogleColor(toogle, text) {
         controlUI.style.color = toogle ? '#888888' : '#228b22';
+
+        if (text) controlText.innerHTML = text + " " + translate_mapcontrol(layerText, lang);
     }
 
     if (layer == "FullScreen") {
         controlUI.title = 'Click to enable/disable ' + translate_mapcontrol(layerText, lang);
     } else if (layer == "SlideShow") {
         controlUI.title = 'Click to run ' + translate_mapcontrol(layerText, lang);
+    } else if (layer == "Replay") {
+        controlUI.title = 'Click to replay route';
     } else {
         controlUI.title = 'Click to add the layer ' + layerText;
     }
