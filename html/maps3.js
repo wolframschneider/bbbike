@@ -211,6 +211,48 @@ function runReplay(none, none2, toogleColor) {
 }
 
 
+function runReplayRouteElevations(offset, marker, cleanup, time) {
+
+    // speed to move the map
+    var timeout = 300;
+    var step = 2;
+    if (elevation_obj && elevation_obj.route_length > 0) {
+        timeout = timeout * elevation_obj.route_length / 16;
+    }
+
+    if (!offset || offset < 0) offset = 0;
+    if (offset >= elevations.length) return;
+
+    var seconds = offset / elevations.length * time;
+
+    // last element in route list, or replay was stopped
+    if (offset + step == elevations.length || !state.replay) {
+        marker.setMap(null); // delete marker from map
+        cleanup(readableTime(seconds));
+        setTimeout(function () {
+            cleanup();
+        }, 3000);
+        return;
+    }
+
+    var start = elevations[offset].location;
+    var pos = new google.maps.LatLng(start.lat(), start.lng());
+
+    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout + " seconds: " + readableTime(seconds));
+
+    marker.setPosition(pos);
+
+    var bounds = new google.maps.LatLngBounds;
+    bounds.extend(pos);
+    map.setCenter(bounds.getCenter());
+
+    cleanup(readableTime(seconds));
+    setTimeout(function () {
+        runReplayRouteElevations(offset + step, marker, cleanup, time);
+    }, timeout);
+}
+
+
 function runReplayRoute(offset, marker, cleanup) {
     // speed to move the map
     var timeout = 300;
@@ -240,44 +282,6 @@ function runReplayRoute(offset, marker, cleanup) {
     debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout); // + " height: " + elevations[offset].location.lat);
     setTimeout(function () {
         runReplayRoute(offset + 1, marker, cleanup);
-    }, timeout);
-}
-
-function runReplayRouteElevations(offset, marker, cleanup, time) {
-
-    // speed to move the map
-    var timeout = 300;
-    var step = 2;
-    if (elevation_obj && elevation_obj.route_length > 0) {
-        timeout = timeout * elevation_obj.route_length / 16;
-    }
-
-    if (!offset || offset < 0) offset = 0;
-    if (offset >= elevations.length) return;
-
-    // last element in route list
-    if (offset + step == elevations.length || !state.replay // stop replay
-    ) {
-        marker.setMap(null); // delete marker from map
-        cleanup();
-        return;
-    }
-    var seconds = offset / elevations.length * time;
-
-    var start = elevations[offset].location;
-    var pos = new google.maps.LatLng(start.lat(), start.lng());
-
-    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout + " seconds: " + readableTime(seconds));
-
-    marker.setPosition(pos);
-
-    var bounds = new google.maps.LatLngBounds;
-    bounds.extend(pos);
-    map.setCenter(bounds.getCenter());
-
-    cleanup(readableTime(seconds));
-    setTimeout(function () {
-        runReplayRouteElevations(offset + step, marker, cleanup, time);
     }, timeout);
 }
 
@@ -2338,8 +2342,7 @@ function LayerControl(controlDiv, map, opt) {
 
     function toogleColor(toogle, text) {
         controlUI.style.color = toogle ? '#888888' : '#228b22';
-
-        if (text) controlText.innerHTML = text + " " + translate_mapcontrol(layerText, lang);
+        controlText.innerHTML = (text ? text + " " : "") + translate_mapcontrol(layerText, lang);
     }
 
     if (layer == "FullScreen") {
