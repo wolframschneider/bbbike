@@ -363,7 +363,7 @@ EOF
     if ( $route_length ne '' ) {
 
         $html .= <<EOF;
-elevation_initialize(map, {
+     var elevation_obj = {
 	"driving_time":"$driving_time",
 	"area":$marker_list,
 	"lang":"$lang",
@@ -373,7 +373,8 @@ elevation_initialize(map, {
 	"zielname": "$zielname",
 	"vianame": "$vianame",
 	"maptype":"cycle"
-});
+    };
+    elevation_initialize(map, elevation_obj);
 EOF
     }
 
