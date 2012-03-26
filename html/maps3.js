@@ -108,6 +108,7 @@ var bbbike = {
         "red": '/images/mm_20_red.png',
         "white": '/images/mm_20_white.png',
         "yellow": '/images/mm_20_yellow.png',
+        "bicycle_large": '/images/srtbike.gif',
 
         "blue_dot": "/images/blue-dot.png",
         "green_dot": "/images/green-dot.png",
@@ -192,7 +193,7 @@ function runReplay(none, none2, toogleColor) {
 
     var marker = new google.maps.Marker({
         // position: new google.maps.LatLng(start[0], start[1]),
-        icon: bbbike.icons.white,
+        icon: bbbike.icons.bicycle_large,
         map: map
     });
 
@@ -262,7 +263,7 @@ function runReplayRouteElevations(offset, marker, cleanup, time) {
     var start = elevations[offset].location;
     var pos = new google.maps.LatLng(start.lat(), start.lng());
 
-    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout + " seconds: " + seconds);
+    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout + " seconds: " + readableTime(seconds));
 
     marker.setPosition(pos);
 
@@ -277,6 +278,20 @@ function runReplayRouteElevations(offset, marker, cleanup, time) {
 
 // "driving_time":"0:27:10|0:19:15|0:15:20|0:13:25" => 0:15:20 => 920 seconds
 
+function readableTime(time) {
+    var hour = 0;
+    var min = 0;
+    var seconds = 0;
+
+    hour = Math.floor(time / 3600);
+    min = Math.floor(time / 60);
+    seconds = Math.floor(time % 60);
+
+    if (hour < 10) hour = "0" + hour;
+    if (min < 10) min = "0" + min;
+    if (seconds < 10) seconds = "0" + seconds;
+    return hour + ":" + min + ":" + seconds;
+}
 
 function get_driving_time() {
     var time = 0;
