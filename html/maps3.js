@@ -178,7 +178,10 @@ var layers = {};
 
 function runReplay(none, none2, toogleColor) {
     // still running
-    if (state.replay) return;
+    if (state.replay) {
+        state.replay = false;
+        return;
+    }
 
     state.replay = true;
     var zoom = map.getZoom();
@@ -198,9 +201,10 @@ function runReplay(none, none2, toogleColor) {
             toogleColor(true);
         };
 
-    runReplayRouteElevations(0, marker, cleanup);
+    runReplayRouteElevations(0, marker, cleanup, get_driving_time());
     // runReplayRoute(0, marker, cleanup);
 }
+
 
 function runReplayRoute(offset, marker, cleanup) {
     // speed to move the map
@@ -234,7 +238,8 @@ function runReplayRoute(offset, marker, cleanup) {
     }, timeout);
 }
 
-function runReplayRouteElevations(offset, marker, cleanup) {
+function runReplayRouteElevations(offset, marker, cleanup, time) {
+
     // speed to move the map
     var timeout = 300;
     var step = 2;
@@ -246,16 +251,18 @@ function runReplayRouteElevations(offset, marker, cleanup) {
     if (offset >= elevations.length) return;
 
     // last element in route list
-    if (offset + step == elevations.length) {
+    if (offset + step == elevations.length || !state.replay // stop replay
+    ) {
         marker.setMap(null); // delete marker from map
         cleanup();
         return;
     }
+    var seconds = offset / elevations.length * time;
 
     var start = elevations[offset].location;
     var pos = new google.maps.LatLng(start.lat(), start.lng());
 
-    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout);
+    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout + " seconds: " + seconds);
 
     marker.setPosition(pos);
 
@@ -264,8 +271,22 @@ function runReplayRouteElevations(offset, marker, cleanup) {
     map.setCenter(bounds.getCenter());
 
     setTimeout(function () {
-        runReplayRouteElevations(offset + step, marker, cleanup);
+        runReplayRouteElevations(offset + step, marker, cleanup, time);
     }, timeout);
+}
+
+// "driving_time":"0:27:10|0:19:15|0:15:20|0:13:25" => 0:15:20 => 920 seconds
+
+
+function get_driving_time() {
+    var time = 0;
+    if (elevation_obj && elevation_obj.driving_time) {
+        var speed = elevation_obj.driving_time.split("|");
+        var t = speed[2];
+        var t2 = t.split(":");
+        time = t2[0] * 3600 + t2[1] * 60 + t2[2] * 1;
+    }
+    return time;
 }
 
 function toogleFullScreen(none, none2, toogleColor) {
