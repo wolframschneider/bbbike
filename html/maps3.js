@@ -227,10 +227,10 @@ function runReplayRouteElevations(offset, marker, cleanup, time) {
 
     // last element in route list, or replay was stopped
     if (offset + step == elevations.length || !state.replay) {
-        marker.setMap(null); // delete marker from map
         cleanup(readableTime(seconds));
         setTimeout(function () {
             cleanup();
+            marker.setMap(null); // delete marker from map
         }, 3000);
         return;
     }
