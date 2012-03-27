@@ -3382,7 +3382,7 @@ sub is_production {
     my $q = shift;
 
     return 1 if -e "/tmp/is_production";
-    return $q->virtual_host() =~ /^www\.bbbike\.org$/i ? 1 : 0;
+    return $q->virtual_host() =~ /^www[123]?\.bbbike\.org$/i ? 1 : 0;
 }
 
 sub is_resultpage {
@@ -6034,6 +6034,8 @@ EOF
 		}
 	    }
 
+	    print qq{<tt><span id="debug"></span></tt>} if !is_production($q);
+
 	    print qq{<div id="bbbike_graphic">\n};
 	    print qq{<div class="box">\n};
 	    print "<form name=showmap method=" .
@@ -8030,7 +8032,7 @@ sub header {
 	     #-lang => 'de-DE',
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
-	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
+	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner kostenlos, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
 		     'copyright'=>'(c) 1998-2012 Slaven Rezic + Wolfram Schneider',
 		     @viewport
 		    },
