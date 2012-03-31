@@ -25,7 +25,22 @@ var config = {
 // Initialise the 'map' object
 var map;
 
+function init_map_size() {
+    var resize = null;
+
+    // set map height depending on the free space on the browser window
+    setMapHeight();
+
+    jQuery(window).resize(function () {
+        if (resize) clearTimeout(resize);
+        resize = setTimeout(function () {
+            setMapHeight();
+        }, 500);
+    });
+}
+
 function init() {
+    init_map_size();
 
     map = new OpenLayers.Map("map", {
         controls: [
@@ -384,3 +399,11 @@ function debug(text, id) {
 
     tag.innerHTML = "debug: " + text; // + " " + today;
 }
+
+function setMapHeight() {
+    var height = jQuery(window).height() - jQuery('#top').height() - jQuery('#sidebar').height() - 50;
+    if (height < 200) height = 200;
+    jQuery('#map').height(height);
+
+    debug("height: " + height + " d.height: " + jQuery(document).height() + " w.height: " + jQuery(window).height() + " top.h: " + jQuery('#top').height());
+};
