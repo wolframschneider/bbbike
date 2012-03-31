@@ -88,7 +88,7 @@ function init() {
     map.zoomToExtent(bounds);
 
     if (!map.getCenter()) {
-        alert("foo");
+        // alert("foo");
         var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
         map.setCenter(lonLat, zoom);
     }
