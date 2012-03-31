@@ -1,11 +1,6 @@
 // Copyright (c) by http://www.openstreetmap.org/export - OSM License, 2012
 // Copyright (c) 2012 Wolfram Schneider, http://bbbike.org
 // 
-// Start position for the map (hardcoded here for simplicity)
-var lat = 52.51703;
-var lon = 13.38885;
-var zoom = 10;
-
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
@@ -104,12 +99,6 @@ function init() {
 
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
-
-    if (!map.getCenter()) {
-        // alert("foo");
-        var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
-        map.setCenter(lonLat, zoom);
-    }
 
     osm_init(opt);
 }
