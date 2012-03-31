@@ -1,6 +1,5 @@
-// Copyright by http://www.openstreetmap.org/export
-// OSM License, 2012
-// http://bbbike.org
+// Copyright (c) by http://www.openstreetmap.org/export - OSM License, 2012
+// Copyright (c) 2012 Wolfram Schneider, http://bbbike.org
 // 
 // Start position for the map (hardcoded here for simplicity)
 var lat = 52.51703;
