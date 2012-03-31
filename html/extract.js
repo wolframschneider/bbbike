@@ -42,6 +42,9 @@ function init_map_size() {
 
 function init() {
     init_map_size();
+    var opt = {
+        "back_button": 0
+    };
 
     map = new OpenLayers.Map("map", {
         controls: [
@@ -77,6 +80,8 @@ function init() {
     // read from input, back button pressed?
     if (check_lat_form(1)) {
         // bounds = new OpenLayers.Bounds( $("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val() );
+        opt.back_button = 1;
+
         var sw_lng = $("#sw_lng").val();
         var sw_lat = $("#sw_lat").val();
         var ne_lng = $("#ne_lng").val();
@@ -85,12 +90,12 @@ function init() {
         bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
         // back button: reset coordinates to original values
-        setTimeout(function () {
+        opt.back_function = function () {
             $("#sw_lng").val(sw_lng);
             $("#sw_lat").val(sw_lat);
             $("#ne_lng").val(ne_lng);
             $("#ne_lat").val(ne_lat);
-        }, 500);
+        };
     }
 
     // default city
@@ -107,10 +112,10 @@ function init() {
         map.setCenter(lonLat, zoom);
     }
 
-    osm_init();
+    osm_init(opt);
 }
 
-function osm_init() {
+function osm_init(opt) {
     var vectors;
     var box;
     var transform;
@@ -151,6 +156,15 @@ function osm_init() {
 
         $("#drag_box").click(startDrag);
         setBounds(map.getExtent());
+
+        // implement history for back button
+        if (opt.back_button) {
+            setTimeout(function () {
+                opt.back_function();
+                boundsChanged();
+            }, 500);
+        }
+
     }
 
     function boundsChanged() {
@@ -322,7 +336,7 @@ function osm_init() {
         });
     }
 
-    startExport();
+    startExport(opt);
 }
 
 // 240000 -> 240,000
