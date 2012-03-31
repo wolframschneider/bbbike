@@ -76,7 +76,21 @@ function init() {
 
     // read from input, back button pressed?
     if (check_lat_form(1)) {
-        bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
+        // bounds = new OpenLayers.Bounds( $("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val() );
+        var sw_lng = $("#sw_lng").val();
+        var sw_lat = $("#sw_lat").val();
+        var ne_lng = $("#ne_lng").val();
+        var ne_lat = $("#ne_lat").val();
+
+        bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
+
+        // back button: reset coordinates to original values
+        setTimeout(function () {
+            $("#sw_lng").val(sw_lng);
+            $("#sw_lat").val(sw_lat);
+            $("#ne_lng").val(ne_lng);
+            $("#ne_lat").val(ne_lat);
+        }, 500);
     }
 
     // default city
