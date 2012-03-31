@@ -192,6 +192,8 @@ function osm_init(opt) {
         $("#drag_box").html("Drag a box on the map to select an area");
 
         clearBox();
+        setBounds(map.getExtent());
+        // setBounds(bounds);
         box.activate();
     };
 
