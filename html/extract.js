@@ -31,11 +31,12 @@ function init_map_size() {
     // set map height depending on the free space on the browser window
     setMapHeight();
 
+    // reset map size, 3x a second
     jQuery(window).resize(function () {
         if (resize) clearTimeout(resize);
         resize = setTimeout(function () {
             setMapHeight();
-        }, 500);
+        }, 300);
     });
 }
 
@@ -401,9 +402,11 @@ function debug(text, id) {
 }
 
 function setMapHeight() {
-    var height = jQuery(window).height() - jQuery('#top').height() - jQuery('#sidebar').height() - 50;
+    var height = jQuery(window).height() - jQuery('#top').height() - jQuery('#sidebar').height() - jQuery('#footer').height() - 100;
     if (height < 200) height = 200;
     jQuery('#map').height(height);
 
-    debug("height: " + height + " d.height: " + jQuery(document).height() + " w.height: " + jQuery(window).height() + " top.h: " + jQuery('#top').height());
+    // debug("height: " + height + " d.height: " + jQuery(document).height() + " w.height: " + jQuery(window).height() + " top.h: " + jQuery('#top').height());
 };
+
+// EOF
