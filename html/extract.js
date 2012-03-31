@@ -1,12 +1,6 @@
-// Copyright by http://www.openstreetmap.org/export
-// OSM License, 2012
-// http://bbbike.org
+// Copyright (c) by http://www.openstreetmap.org/export - OSM License, 2012
+// Copyright (c) 2012 Wolfram Schneider, http://bbbike.org
 // 
-// Start position for the map (hardcoded here for simplicity)
-var lat = 52.51703;
-var lon = 13.38885;
-var zoom = 10;
-
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
@@ -25,7 +19,26 @@ var config = {
 // Initialise the 'map' object
 var map;
 
+function init_map_size() {
+    var resize = null;
+
+    // set map height depending on the free space on the browser window
+    setMapHeight();
+
+    // reset map size, 3x a second
+    jQuery(window).resize(function () {
+        if (resize) clearTimeout(resize);
+        resize = setTimeout(function () {
+            setMapHeight();
+        }, 300);
+    });
+}
+
 function init() {
+    init_map_size();
+    var opt = {
+        "back_button": 0
+    };
 
     map = new OpenLayers.Map("map", {
         controls: [
@@ -51,6 +64,13 @@ function init() {
     map.addLayer(new OpenLayers.Layer.OSM("OSM Hike&Bike", ["http://a.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png", "http://b.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png"], {
         numZoomLevels: 18
     }));
+    map.addLayer(new OpenLayers.Layer.OSM("OSM Transport", ["http://a.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png", "http://b.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png"], {
+        numZoomLevels: 19
+    }));
+
+    map.addLayer(new OpenLayers.Layer.OSM("Mapquest OSM", ["http://otile1.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png", "http://otile2.mqcdn.com/tiles/1.0.0/${z}/${x}/${y}.png"], {
+        numZoomLevels: 19
+    }));
     map.addLayer(new OpenLayers.Layer.OSM("Mapquest Satellite", ["http://mtile01.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png", "http://mtile02.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png"], {
         numZoomLevels: 19
     }));
@@ -60,7 +80,23 @@ function init() {
 
     // read from input, back button pressed?
     if (check_lat_form(1)) {
-        bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
+        // bounds = new OpenLayers.Bounds( $("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val() );
+        opt.back_button = 1;
+
+        var sw_lng = $("#sw_lng").val();
+        var sw_lat = $("#sw_lat").val();
+        var ne_lng = $("#ne_lng").val();
+        var ne_lat = $("#ne_lat").val();
+
+        bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
+
+        // back button: reset coordinates to original values
+        opt.back_function = function () {
+            $("#sw_lng").val(sw_lng);
+            $("#sw_lat").val(sw_lat);
+            $("#ne_lng").val(ne_lng);
+            $("#ne_lat").val(ne_lat);
+        };
     }
 
     // default city
@@ -71,16 +107,10 @@ function init() {
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
 
-    if (!map.getCenter()) {
-        alert("foo");
-        var lonLat = new OpenLayers.LonLat(lon, lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
-        map.setCenter(lonLat, zoom);
-    }
-
-    osm_init();
+    osm_init(opt);
 }
 
-function osm_init() {
+function osm_init(opt) {
     var vectors;
     var box;
     var transform;
@@ -121,6 +151,15 @@ function osm_init() {
 
         $("#drag_box").click(startDrag);
         setBounds(map.getExtent());
+
+        // implement history for back button
+        if (opt.back_button) {
+            setTimeout(function () {
+                opt.back_function();
+                boundsChanged();
+            }, 500);
+        }
+
     }
 
     function boundsChanged() {
@@ -148,6 +187,8 @@ function osm_init() {
         $("#drag_box").html("Drag a box on the map to select an area");
 
         clearBox();
+        setBounds(map.getExtent());
+        // setBounds(bounds);
         box.activate();
     };
 
@@ -292,7 +333,7 @@ function osm_init() {
         });
     }
 
-    startExport();
+    startExport(opt);
 }
 
 // 240000 -> 240,000
@@ -384,3 +425,13 @@ function debug(text, id) {
 
     tag.innerHTML = "debug: " + text; // + " " + today;
 }
+
+function setMapHeight() {
+    var height = jQuery(window).height() - jQuery('#top').height() - jQuery('#sidebar').height() - jQuery('#footer').height() - 100;
+    if (height < 200) height = 200;
+    jQuery('#map').height(height);
+
+    // debug("height: " + height + " d.height: " + jQuery(document).height() + " w.height: " + jQuery(window).height() + " top.h: " + jQuery('#top').height());
+};
+
+// EOF
