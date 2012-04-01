@@ -145,7 +145,7 @@ var state = {
     replay: false,
 
     // tags to hide in full screen mode
-    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo"],
+    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo", "bottom", "language_switch", "headline"],
 
     // keep state of non map tags
     non_map_tags_val: {},
@@ -381,7 +381,7 @@ function resizeFullScreen(fullscreen) {
 
     if (!tag) return;
 
-    var style = ["width", "height", "marginLeft", "marginRight"];
+    var style = ["width", "height", "marginLeft", "marginRight", "top", "right", "left", "right"];
     if (!fullscreen) {
         // keep old state
         for (var i = 0; i < style.length; i++) {
@@ -389,9 +389,8 @@ function resizeFullScreen(fullscreen) {
         }
 
         tag.style.width = "99%";
-        tag.style.height = "90%";
-        tag.style.marginLeft = "0%";
-        tag.style.marginRight = "0%";
+        tag.style.height = "98%";
+        tag.style.left = tag.style.right = tag.style.top = tag.style.bottom = tag.style.marginLeft = tag.style.marginRight = "0px";
     } else {
         // restore old state
         for (var i = 0; i < style.length; i++) {

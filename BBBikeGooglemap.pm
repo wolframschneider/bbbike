@@ -305,6 +305,7 @@ div#BBBikeGooglemap {
 	margin-right: 5%; 
 	padding: 0em; 
         top: 0em; 
+	left: 0em;
 }
 </style>
 EOF

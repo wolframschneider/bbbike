@@ -3022,6 +3022,15 @@ EOF
 		print qq{<div id="map_area">\n};
 		&BBBikeAds::adsense_linkblock if &is_production($q) && !is_mobile($q);
 		print qq{</div>\n\n};
+	        
+		print <<EOF;
+<style type="text/css">
+div#BBBikeGooglemap { top: -6.8em; }
+div#bottom { top: -6.7em; }
+</style>
+EOF
+
+ 
 	        my $maps = BBBikeGooglemap->new();
 	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'region' => $region, 'cache' =>$q->param('cache')||0, 'nomap' =>  is_mobile($q) );
 	    }
