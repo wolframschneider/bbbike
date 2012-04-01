@@ -2307,6 +2307,7 @@ sub choose_form {
 <div id="routing">
 @{[ &language_switch($bbbike_local_script_url) ]}
 @{[ &headline ]}
+@{[ &span_debug ]}
 
 <table>
 <tr>
@@ -8170,6 +8171,11 @@ EOF
     }
 }
 
+sub span_debug {
+   my $span_debug = is_production($q) ? "" : qq{<tt><span id="debug"></span></tt>\n};
+   return $span_debug;
+}
+
 sub footer { print footer_as_string() }
 
 sub footer_as_string {
@@ -8217,7 +8223,6 @@ if ($osm_data) {
     $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
 }
 
-my $span_debug = is_production($q) ? "" : qq{<tt><span id="debug"></span></tt>\n};
 
 my $rss_icon = "";
 $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="14" height="14" title="}
@@ -8236,6 +8241,7 @@ my $s_copyright = <<EOF;
 
 <div id="bottom">
 <div id="footer">
+
 <div id="footer_top">
 <a class="mobile_link" href="/">home</a> |
 <a href="/help.html">$help</a> |
@@ -8243,22 +8249,25 @@ my $s_copyright = <<EOF;
 <a href="$community_link">$donate</a> |
 <a title="search time: $real_time seconds" href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
 $list_of_all_streets $permalink_text
-$span_debug
-</div>
-</div> <!-- footer -->
 
-<div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
-<hr>
-(&copy;) 1998-2012 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
-Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
-<div id="footer_community">
+<span id="footer_community">
   <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="$donate_title" border="0"></a>
   <a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
   <a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="$twitter_title" alt=""></a>
   <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="$facebook_title"></a>
   $google_plusone
   $rss_icon
-</div>
+</span>
+
+</div> <!-- footer_top -->
+
+</div> <!-- footer -->
+
+<div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
+<hr>
+(&copy;) 1998-2012 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
+Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
+
 </div> <!-- copyright -->
 
 <div id="other_cities">
