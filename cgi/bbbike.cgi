@@ -2978,8 +2978,8 @@ function " . $type . "char_init() {}
             my $ie6hack = $slippymap_url->url(-absolute=>1);
             $ie6hack =~ s,/+[^/]+$,,;
 
-	    print "<p></p>\n";
-	
+	    #print "<p></p>\n";
+	    #print "<hr/>\n";
             print qq{<div style="display:none" id="streetmap"></div>\n};
 
 	    print qq{<!-- use div.text() as local variable to map -->\n};
