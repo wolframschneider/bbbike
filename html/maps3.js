@@ -2762,36 +2762,30 @@ function reset() {
     document.getElementById('chart_div').style.display = 'none';
 }
 
-function smallerMap(step, id) {
+function smallerMap(step, id, id2) {
     if (!id) id = "BBBikeGooglemap";
-    if (!step) step = 1;
+    if (!step) step = 2;
 
     var tag = document.getElementById(id);
     if (!tag) return;
 
-    var margin = tag.style.marginLeft || "18.4em";
-    var width = tag.style.width || "74%";
+    var width = tag.style.width || "75%";
 
-    // match "18.4em" and increase it by step=1 to 19.4
-    var matches = margin.match(/^([0-9\.\-]+)([a-z]+)$/);
+    // match "75%" and increase it by step=1 
+    var matches = width.match(/^([0-9\.\-]+)%$/);
 
-    var unit, m;
+    var unit = "%";
+    var m = 0;
     if (matches) {
-        unit = matches[2];
-        m = parseFloat(matches[0]) + step;
-    } else {
-        m = "0";
-        unit = "em";
+        m = parseFloat(matches[0]) - step;
     }
+    if (m <= 0 || m > 105) m = 75;
 
-    // alert("foo: " + m + unit);
-    tag.style.marginLeft = m + unit;
+    // make map smaller, and move it right
+    tag.style.width = m + unit;
+    tag.style.left = (100 - m) + unit;
 
-    matches = width.match(/^([0-9\.\-]+)%$/);
-    width = parseFloat(matches[0]) + step * -1.3;
-
-    width = (width < 0 || width > 100) ? 100 : width;
-    tag.style.width = width + "%";
+    // debug("M: " + m + " " + tag.style.width + " " + tag.style.left );
 }
 
 //
