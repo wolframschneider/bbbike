@@ -2763,12 +2763,13 @@ EOF
 
 	    my $searchinput = 'suggest_' . $type;
 	    #print $icon_image;
-	    my $input_size = is_mobile($q) ? 20 : 42;
+	    my $input_size = is_mobile($q) ? 20 : 26;
+            my $maxlength = 128;
 
 	    my $startstreet = $q->param("startstreet") || "";
 	    my $value = $searchinput eq 'suggest_start' ? CGI::escapeHTML($startstreet) : "";
 	   
-	    print qq{<input id="$searchinput" size="$input_size" type="text" name="$type" value="$value" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
+	    print qq{<input id="$searchinput" maxlength="$maxlength" size="$input_size" type="text" name="$type" value="$value" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
 
 	   if ($enable_opensearch_suggestions) { 
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
