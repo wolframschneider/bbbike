@@ -243,7 +243,7 @@ div#nomap {
 div#routing { 
 	position: absolute; 
 	/* left: 0px; */
-	width: 20%;
+	width: 24%;
 	background-color: white;
 	z-index: 1000; 
 }
