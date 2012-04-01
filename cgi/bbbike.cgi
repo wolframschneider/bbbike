@@ -936,6 +936,9 @@ if ($lang ne "de") {
     }
 }
 
+my $headline = "";
+my $bbbike_local_script_url;
+
 $BBBikeAds::enable_google_adsense = $enable_google_adsense;
 $BBBikeAds::enable_google_adsense_start = $enable_google_adsense_start;
 $BBBikeAds::enable_google_adsense_street = $enable_google_adsense_street;
@@ -2302,6 +2305,9 @@ sub choose_form {
 
     print <<EOF if ($bi->{'can_table'});
 <div id="routing">
+@{[ &language_switch($bbbike_local_script_url) ]}
+@{[ &headline ]}
+
 <table>
 <tr>
 EOF
@@ -2343,7 +2349,7 @@ EOF
 	    &social_link;
 
 	    print qq{<a class="$class logo" href="$url" title="}, M("BBBike for mobile devices"), qq{"><img class="logo" width="16" height="16" alt="" src="/images/phone.png">[}, M("mobil"), qq{]</a>\n};
-	    print "&nbsp;" x 15;
+	    print "&nbsp;" x 10;
 	    print qq{<a style="font-size:small" title="}, M("Karte nach rechts schieben"), qq{" href="javascript:smallerMap(1.5)">&gt;&gt;</a>\n};
 	    print qq{<a style="font-size:small" title="}, M("Karte nach links schieben"), qq{" href="javascript:smallerMap(-1.5)">&lt;&lt;</a>\n};
         }
@@ -3123,6 +3129,38 @@ EOF
 
     print $q->end_html;
     exit(0);
+}
+
+sub language_switch {
+    my $bbbike_local_script = shift;
+
+    print qq{<span id="language_switch">\n};
+
+    my $counter = 0;
+    foreach my $l (@supported_lang) {
+        print " | " if $counter++ > 0;
+        if ( $l eq $lang ) {
+            print qq{<span class="current_language" title="},
+              M("aktuelle Sprache"), ": ", M($l), qq{">$l</span>\n};
+        }
+        else {
+            print
+qq{<a rel="nofollow" href="/$l$bbbike_local_script" title="switch map language to },
+              M($l), qq{">$l</a>\n};
+        }
+    }
+    print
+      qq{| <a href="$bbbike_local_script" title="switch map language to },
+      M($local_lang), qq{">local</a>\n}
+      if $selected_lang;
+    print qq{</span>\n};
+
+    return;
+}
+
+sub headline {
+   print qq{<span id="headline">$headline</span>\n};
+   return;
 }
 
 sub berlinmap_with_choices {
@@ -7884,6 +7922,7 @@ sub header {
         $bbbike_local_script =~ s,/streets.html\?all=[123]$,/streets.html,;
         $bbbike_local_script =~ s,/\?all=[123]$,/streets.html,;
     }
+    $bbbike_local_script_url = $bbbike_local_script;
 
     if (!$smallform) {
 	push @$head,
@@ -8053,26 +8092,27 @@ sub header {
 	   print qq{<div id="ad_top">\n};
 	}
 
-	print qq{<span id="headline">\n<h2>\n};
+	#print qq{<span id="headline">\n<h2>\n};
+        $headline = "\n<h2>";
 	if ($printmode) {
-	    print "$args{-title}";
-	    print "<img alt=\"\" src=\"$bbbike_images/srtbike.gif\" hspace=10>";
+	    $headline .= "$args{-title}";
+	    $headline .= "<img alt=\"\" src=\"$bbbike_images/srtbike.gif\" hspace=10>";
 	} else {
 	    my $use_css = !$bi->{'css_buggy'};
 	    my $title = $title2;
 	    if ($is_beta) {
 		$title = "BB<span style='font-style:italic;'>&#x03B2;</span>ike</a>";
 	    }
-	    print "<a href='$bbbike_url' title='" . M("Zurück zur Hauptseite") . "' style='text-decoration:none; color:black;'>$title";
-	    print "<img";
+	    $headline .= "<a href='$bbbike_url' title='" . M("Zurück zur Hauptseite") . "' style='text-decoration:none; color:black;'>$title";
+	    $headline .= "<img";
 	    if ($use_css) {
-		print ' style="position:relative; top:15px; left:-15px;"';
+		$headline .= ' style="position:relative; top:15px; left:-15px;"';
 	    }
-	    print " id=\"headlogo\" alt=\"\" src=\"$bbbike_images/srtbike.gif\" border=0>";
-	    print "</a>";
+	    $headline .= " id=\"headlogo\" alt=\"\" src=\"$bbbike_images/srtbike.gif\" border=0>";
+	    $headline .= "</a>";
 	}
-	print "</h2>\n";
-	print "</span>\n";
+	$headline .= "</h2>\n";
+	#print "</span>\n";
     } else {
 	print "<h1>BBBike</h1>";
     }
@@ -8080,25 +8120,15 @@ sub header {
         my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
+	#&headline if is_resultpage($q);
+
 	print qq{<div id="top_right">};
         if ($enable_current_weather) {
-	    print qq{\n<span id="current_weather"> </span>\n};
+	    #print qq{\n<span id="current_weather"> </span>\n};
 	}
 
 	if (!$printmode && !&is_mobile($q)) {
-	  print qq{<span id="language_switch">\n};
-	
-	  my $counter = 0;
-	  foreach my $l (@supported_lang) {
-	    print " | " if $counter++ > 0;
-	    if ($l eq $lang) {
-		print qq{<span class="current_language" title="}, M("aktuelle Sprache"), ": ", M($l), qq{">$l</span>\n};
-	    } else {
-	        print qq{<a rel="nofollow" href="/$l$bbbike_local_script" title="switch map language to }, M($l), qq{">$l</a>\n};
-	    }
-	  }
-	  print qq{| <a href="$bbbike_local_script" title="switch map language to }, M($local_lang), qq{">local</a>\n} if $selected_lang;
-	  print qq{</span>\n};
+           # &language_switch($bbbike_local_script_url);
 	}
 
 	if (0) {
@@ -8204,6 +8234,7 @@ my $donate_title = M("Spende an BBBike.org");
 my $twitter_title = M("Folge uns auf twitter.com/BBBikeWorld");
 my $s_copyright = <<EOF;
 
+<div id="bottom">
 <div id="footer">
 <div id="footer_top">
 <a class="mobile_link" href="/">home</a> |
@@ -8214,7 +8245,7 @@ my $s_copyright = <<EOF;
 $list_of_all_streets $permalink_text
 $span_debug
 </div>
-</div>
+</div> <!-- footer -->
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
@@ -8228,11 +8259,12 @@ Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Projec
   $google_plusone
   $rss_icon
 </div>
-</div>
+</div> <!-- copyright -->
 
 <div id="other_cities">
 $other_cities
-</div>
+</div> <!-- other cities -->
+</div> <!-- bottom -->
 EOF
 
 
