@@ -296,8 +296,20 @@ div#footer {
 }
 
 div#footer_top { text-align: left; }
-span#footer_community { position: relative; left: 15%; }
-div#other_cities { font-size: small; text-align: center; padding-bottom: 0.5em }
+
+span#footer_community {
+  position: relative;
+  left: 15%;
+}
+
+div#other_cities {
+  font-size: small;
+  text-align: center;
+  padding-bottom: 0.5em
+  padding-top: 0.5em
+  width: 70%;
+  padding-left: 15%;
+}
 
 span#housenumber { font-size: small; }
 

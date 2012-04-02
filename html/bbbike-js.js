@@ -194,6 +194,7 @@ content+="</div>\n";infoWindow.setContent(content);infoWindow.open(map,marker);g
 function googleCodeAddress(address,callback){var box=state.marker_list;var bounds=new google.maps.LatLngBounds;bounds.extend(new google.maps.LatLng(box[0][0],box[0][1]),new google.maps.LatLng(box[1][0],box[1][1]));if(!state.geocoder){state.geocoder=new google.maps.Geocoder();}
 state.geocoder.geocode({'address':address,'bounds':bounds},function(results,status){if(status==google.maps.GeocoderStatus.OK){var autocomplete='{ query:"'+address+'", suggestions:[';var streets=[];for(var i=0;i<results.length;i++){if(inside_area({lat:results[i].geometry.location.lat(),lng:results[i].geometry.location.lng()})){streets.push('"'+format_address(results[i].formatted_address)+' ['+granularity(results[i].geometry.location.lng())+','+granularity(results[i].geometry.location.lat())+',1]"');}}
 autocomplete+=streets.join(",");autocomplete+='] }';callback(autocomplete);}else{}});}
+function toogleDiv(id,value){var tag=document.getElementById(id);if(!tag)return;tag.style.display=tag.style.display=="none"?"block":"none";}
 function createXmlHttpRequest(){try{if(typeof ActiveXObject!='undefined'){return new ActiveXObject('Microsoft.XMLHTTP');}else if(window["XMLHttpRequest"]){return new XMLHttpRequest();}}catch(e){}
 return null;};function downloadUrl(url,callback){var status=-1;var request=createXmlHttpRequest();if(!request){return false;}
 request.onreadystatechange=function(){if(request.readyState==4){try{status=request.status;}catch(e){}

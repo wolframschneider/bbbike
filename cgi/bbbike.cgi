@@ -8262,7 +8262,9 @@ my $s_copyright = <<EOF;
 <a href="/tools.html" title="BBBike tools and applications">$app</a> |
 <a href="$community_link">$donate</a> |
 <a title="search time: $real_time seconds" href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
-$list_of_all_streets $permalink_text
+$list_of_all_streets
+| <a href='javascript:toogleDiv("other_cities")'>@{[M("weitere St&auml;dte") ]}</a>
+$permalink_text
 
 <span id="footer_community">
   <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="$donate_title" border="0"></a>
@@ -8284,7 +8286,7 @@ Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Projec
 
 </div> <!-- copyright -->
 
-<div id="other_cities">
+<div id="other_cities" style="display:none">
 $other_cities
 </div> <!-- other cities -->
 </div> <!-- bottom -->
