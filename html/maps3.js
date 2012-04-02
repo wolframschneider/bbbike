@@ -381,16 +381,16 @@ function resizeFullScreen(fullscreen) {
 
     if (!tag) return;
 
-    var style = ["width", "height", "marginLeft", "marginRight", "top", "right", "left", "right"];
+    var style = ["width", "height", "marginLeft", "marginRight", "right", "left", "top", "bottom"];
     if (!fullscreen) {
         // keep old state
         for (var i = 0; i < style.length; i++) {
             state.map_style[style[i]] = tag.style[style[i]];
+            tag.style[style[i]] = "0px";
         }
 
         tag.style.width = "99%";
-        tag.style.height = "98%";
-        tag.style.left = tag.style.right = tag.style.top = tag.style.bottom = tag.style.marginLeft = tag.style.marginRight = "0px";
+        tag.style.height = "99%";
     } else {
         // restore old state
         for (var i = 0; i < style.length; i++) {
