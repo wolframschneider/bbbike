@@ -3127,7 +3127,7 @@ function googleCodeAddress(address, callback) {
 function toogleDiv(id, value) {
     var tag = document.getElementById(id);
     if (!tag) return;
-    
+
     tag.style.display = tag.style.display == "none" ? "block" : "none";
 }
 
