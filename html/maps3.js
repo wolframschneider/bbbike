@@ -566,6 +566,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 	    });
 	    */
 
+        $(window).resize(function (e) {
+            setMapHeight();
+        });
+
 
         if (marker_list.length == 2 && without_area != 1 && bbbike.area.visible) {
             var x1 = marker_list[0][0];
@@ -1577,6 +1581,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     google.maps.event.addListener(map, "maptypeid_changed", function () {
         hideGoogleLayers();
     });
+
+    setTimeout(function () {
+        setMapHeight();
+    }, 200);
 }
 
 // layers which works only on google maps
@@ -3129,6 +3137,18 @@ function toogleDiv(id, value) {
     if (!tag) return;
 
     tag.style.display = tag.style.display == "none" ? "block" : "none";
+    setMapHeight();
 }
+
+/* set map height, depending on footer height */
+
+function setMapHeight() {
+    var height = jQuery(window).height() - jQuery('#bottom').height() - 20;
+    if (height < 200) height = 200;
+
+    jQuery('#BBBikeGooglemap').height(height);
+
+    debug("height: " + height);
+};
 
 // EOF
