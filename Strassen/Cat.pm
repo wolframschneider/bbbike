@@ -29,10 +29,10 @@ use vars qw(%filetype_to_cat %file_to_cat);
     (
      "borders"	      => [qw(Z)],
      # XXX Information duplicated in data/Makefile
-     "gesperrt"	      => [qw(1 2 3 3nocross),
+     "gesperrt"	      => [sub { /^(1|2|3|3nocross)(:inwork)?$/ },
 			  sub { /^0:\d+(:-?\d+)?$/ },
 			  sub { /^BNP:\d+(:-?\d+(:trailer=(no|\d+))?)?$/ },
-			  sub { /^1s(:q\d)?$/ },
+			  sub { /^1s(:q\d)?(:inwork)?$/ },
 			  '1::igndisp',
 			 ],
      "fragezeichen"   => [qw(? ?? F:? F:??)],
@@ -113,6 +113,8 @@ my %older_file_to_cat =
      "hoehe"			=> [qw(X XXX ? ???)],
      "housenumbers"		=> [qw(HNR)],
      "kneipen"			=> [qw(X)],
+     "inaccessible_strassen"    => [qw(X)],
+     "inaccessible_landstrassen"=> [qw(X)],
      "label"			=> [sub { /^(90)?([ns][ew]?|[ew])$/ }],
      "landstrassen"		=> $filetype_to_cat{"landstrassen"},
      "landstrassen-cooked"	=> $filetype_to_cat{"landstrassen"},
@@ -218,9 +220,6 @@ sub check_cat {
     }
     for my $_cat (@cat) {
 	$_cat =~ s{^(.+?)::.*$}{$1}; # XXX will change
-    }
-    for my $_cat (@cat) {
-	$_cat =~ s{::?inwork$}{}; # XXX will probably change, too
     }
     my @msg;
  CHECK_CAT: {

@@ -89,6 +89,7 @@ Privatstraße der DB	CS 5710,7820 6275,7847
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3347,6460 3449,6863
 #: add_fragezeichen: wird dieser Weg tatsächlich nachts geschlossen?
 #: XXX_prog: should not appear in fragezeichen-outdoor-nextcheck!
+#: note: gegen 19:15 abends ist hier reger Fußgängerverkehr (Sportler!)
 (Weg über das Sportgelände): evtl. nachts geschlossen	CS 13252,14179 13385,13992
 Borgmannstr.: zwei Bodenschwellen, rechs vorbei fahren	CS 22513,5747 22531,5871
 Hermann-Blankenstein-Str.: Tor für Kfz evtl. geschlossen, auf Gehweg ausweichen	CS 13886,13668 13858,13719
@@ -1295,3 +1296,4 @@ Eisbärenweg: Privatstraße	CS 6909,17796 6950,17669
 (Zobtener Str. - Fischerstr.): durch eine Kleingartenanlage	CS 16353,10207 16404,10286
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Straße verläuft zwischen Bahnstrecke und Wohnhäusern	CS 17210,11950 17201,11975 17137,11969 17023,11908 17026,11888
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11027,13279 11085,13239
+Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CS 7795,13093 7867,13127 7938,13150

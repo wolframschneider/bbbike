@@ -1,9 +1,3 @@
-#
-# $Id: Makefile,v 1.24 2008/02/02 22:11:33 eserte Exp $
-#
-
-# läuft nicht mit 5.004 oder älter
-
 PERL?=		perl
 TEST_FILES=	*.t
 
@@ -12,12 +6,20 @@ test:
 	    'runtests(@ARGV)' $(TEST_FILES)
 
 test-shuffle:
-	LANG=C $(PERL) -w -I.. -I../lib -MTest::Harness -e \
-	    'BEGIN { if (!eval q{ use List::Util qw(shuffle); 1 }) { *shuffle = sub { @_ }; } } runtests(shuffle @ARGV)' $(TEST_FILES)
+	LANG=C $(PERL) -w -I.. -I../lib -MTest::Harness -MList::Util=shuffle -e \
+	    'runtests(shuffle @ARGV)' $(TEST_FILES)
 
 test-no-cgi:
-	LANG=C $(PERL) -w -I.. -I../lib -MTest::Harness -e \
-	    'runtests(grep { !/^cgi/ && !/^wapcgi/ && !/^radzeit/ && !/^wwwdata/ } @ARGV)' $(TEST_FILES)
+	LANG=C BBBIKE_TEST_NO_CGI_TESTS=1 $(PERL) -w -I.. -I../lib -MTest::Harness -e \
+	    'runtests(@ARGV)' $(TEST_FILES)
+
+prove-no-cgi:
+	LANG=C BBBIKE_TEST_NO_CGI_TESTS=1 $(PERL) -S prove -w -I.. -I../lib $(TEST_FILES)
+
+# This is basically test-no-cgi, but works with dmake
+# (dmake+windows cannot ?=, env shell syntax, single quotes, * expansion)
+test-on-windows:
+	perl -w -I.. -I../lib -MTest::Harness -e "$$ENV{{BBBIKE_TEST_NO_CGI_TESTS}} = 1; runtests(<*.t>)" 
 
 interactive:
 	./cgi2.pl -v -netscape -today

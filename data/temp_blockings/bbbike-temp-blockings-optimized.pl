@@ -1072,7 +1072,8 @@ userdel	q4::inwork 425,8766 490,8716
          'text' => 'Schadowstr. (Mitte): Baustelle, Straße vollständig gesperrt (bis Ende 03/12) in beiden Richtungen zwischen Unter den Linden und Dorotheenstr., 16.05.2011 07:00 Uhr bis 31.03.2012 17:00 Uhr ',
          'from' => 1305435600,
          'id' => 2210,
-         'data' => 'userdel	q4::inwork 9028,12307 9016,12416 9008,12485
+         'data' => '#: last_checked: 2012-03-16
+userdel	q4::inwork 9028,12307 9016,12416 9008,12485
 ',
          'type' => 'handicap'
        },
@@ -1104,7 +1105,8 @@ userdel	q4::inwork 425,8766 490,8716
          'text' => 'Dorotheenstr. (Mitte): Baustelle, Fahrtrichtung gesperrt (bis Ende 04/12) Richtung Friedrichstr. zwischen Wilhelmstr. und Schadowstr., 06.06.2011 07:00 Uhr bis 30.04.2012 17:00 Uhr ',
          'from' => 1307250000,
          'id' => 2224,
-         'data' => 'userdel	q4::inwork; 8775,12457 8907,12472 9008,12485
+         'data' => '#: last_checked: 2012-03-16
+userdel	q4::inwork; 8775,12457 8907,12472 9008,12485
 ',
          'type' => 'handicap'
        },
@@ -1135,16 +1137,7 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1107/nachricht4418.html',
-         'until' => 1331568000,
-         'text' => 'Instandsetzung der Pankgrafenbrücke, ab dem 18.07.2011 bis Mitte März 2012, Einschränkungen möglich',
-         'from' => 1310763434,
-         'id' => 2252,
-         'data' => 'userdel	q4::inwork 13953,23497 14173,23426
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1158,10 +1151,10 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        {
-         'source_id' => 'LS/S-SG33-W/10/173',
-         'until' => 1356994800,
-         'text' => 'Wildau: L401: Straßenbau OD Wildau, Einmündung Richard-Sorge-Straße bis Stichkanal ab 15.08.11 Vollsperrung Richtung Königs Wusterhausen, 30.08.2010 bis 31.12.2012 ',
-         'from' => 1313272800,
+         'source_id' => 'LS/S-SG33-W/11/303',
+         'until' => 1333144800,
+         'text' => 'Wildau: L401: Straßenbau OD Wildau, Einmündung Richard-Sorge-Straße bis Stichkanal Richtungsverkehr zw. Bergstr. und Freiheitsstr., 15.12.2011 bis 30.03.2012 ',
+         'from' => 1332272539,
          'id' => 2265,
          'data' => 'userdel	q3::inwork; 26679,-8825 26381,-9753
 ',
@@ -1323,16 +1316,7 @@ userdel	2::inwork 19968,16 19940,52
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120220.1530.366402.html',
-         'until' => 1331766000,
-         'text' => 'Orankestrand wegen Bauarbeiten gesperrt, bis ungefähr März 2012, siehe http://www.berlin.de/ba-lichtenberg/presse/archiv/20120220.1530.366402.html',
-         'from' => 1330026300,
-         'id' => 2314,
-         'data' => 'userdel	2::inwork 15479,16060 15592,16069 15664,16115 15731,16208
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120223.1505.366579.html',
          'until' => 1346968800,
@@ -1358,10 +1342,10 @@ userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 
        {
          'source_id' => 'INKO_093369',
          'until' => 1341068400,
-         'text' => 'Behrenstr. (Mitte): Fahrbahn gesperrt (bis Ende 06/12) zwischen Glinkastr. und Friedrichstr.',
+         'text' => 'Behrenstr. (Mitte): Fahrbahn gesperrt (bis Ende 06/12) zwischen Glinkastr. und Friedrichstr., Richtung Friedrichstraße',
          'from' => 1329631200,
          'id' => 2317,
-         'data' => 'userdel	q4::inwork 9373,12197 9164,12172
+         'data' => 'userdel	q4::inwork; 9164,12172 9373,12197
 ',
          'type' => 'handicap'
        },
@@ -1387,6 +1371,27 @@ Am Schloss Schönhausen	2::night 10308,19297 10350,19182 10390,19069
 Am Schloss Schönhausen	2::night 10249,19148 10350,19182
 #: by: ^^^
 '
+       },
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park: bei Veranstaltungen im Berghain u.U. nicht passierbar',
+         'from' => undef,
+         'id' => 2321,
+         'data' => '	2::night 13002,11705 13042,11749
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'l.epperlein',
+         'until' => undef,
+         'text' => 'Sredzkistr. komplett zwischen Husemannstr. und Kollwitzstr. gesperrt. Dauer der Sperrung ist unbekannt.',
+         'from' => undef,
+         'id' => 2322,
+         'data' => '#: XXX vor Ort erkunden; wann wird die Baustelle aufgehoben?
+userdel	q4::inwork 11436,14741 11271,14755
+',
+         'type' => 'handicap'
        }
      
 );

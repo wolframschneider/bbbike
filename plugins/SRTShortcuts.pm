@@ -887,18 +887,26 @@ sub set_layer_highlightning {
 }
 
 # Very hardcoded to my own environment:
-# * images in ~/images/from_handy/Fotos
+# * images in ~/images/from_handy/Fotos and ~/images/nikon/**
 # * gps tracks in ~/src/bbbike/misc/gps_data
 sub add_todays_geocoded_images {
+    require File::Find;
     require File::Glob;
     require File::Temp;
-    # XXX Support for nikon images missing
     my(@l) = localtime;
     my $y = $l[5]+1900;
     my $m = $l[4]+1;
     my $d = $l[3];
     my $glob = sprintf "$ENV{HOME}/images/from_handy/Fotos/%04d-%02d/%02d%02d%04d*.jpg", $y,$m,$d,$m,$y;
     my @images = File::Glob::bsd_glob($glob);
+    File::Find::find(sub {
+			 if (-f $_ && $_ =~ m{.jpg$}i) {
+			     my(@s) = stat($_);
+			     if (time-$s[9] < 86400) {
+				 push @images, $File::Find::name;
+			     }
+			 }
+		     }, "$ENV{HOME}/images/nikon");
     if (!@images) {
 	main::status_message("No images found with glob '$glob'", "warn");
 	return;
@@ -1707,12 +1715,15 @@ sub street_name_experiment_one {
 		my $begin_i = $i-1;
 		my $end_i = $i;
 		while ($end_i < $#c) {
-		    my($deg, undef) = schnittwinkel(@{ $c[$i-1] }, @{ $c[$i] }, @{ $c[$end_i+1] });
+		    # Wrap schnittwinkel into eval{}, as especially
+		    # for osm data zero-length arcs are possible
+		    my($deg, undef) = eval { schnittwinkel(@{ $c[$i-1] }, @{ $c[$i] }, @{ $c[$end_i+1] }) };
 		    last if ($deg > TOLERANT_ANGLE);
 		    $end_i++;
 		}
 		while ($begin_i > 0) {
-		    my($deg, undef) = schnittwinkel(@{ $c[$begin_i-1] }, @{ $c[$i-1] }, @{ $c[$i] });
+		    # eval{} -> see above
+		    my($deg, undef) = eval { schnittwinkel(@{ $c[$begin_i-1] }, @{ $c[$i-1] }, @{ $c[$i] }) };
 		    last if ($deg > TOLERANT_ANGLE);
 		    $begin_i--;
 		}

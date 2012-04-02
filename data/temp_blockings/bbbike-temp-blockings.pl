@@ -19007,6 +19007,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_093372',
        data  => <<EOF,
+#: last_checked: 2012-03-16
 userdel	q4::inwork 9028,12307 9016,12416 9008,12485
 EOF
      },
@@ -19148,6 +19149,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_093371',
        data  => <<EOF,
+#: last_checked: 2012-03-16
 userdel	q4::inwork; 8775,12457 8907,12472 9008,12485
 EOF
      },
@@ -19528,11 +19530,11 @@ EOF
 userdel	q4::inwork 16104,19165 15647,19165
 EOF
      },
-     { from  => 1313272800, # 2011-08-14 00:00
-       until => 1356994800, # 2013-01-01 00:00
-       text  => 'Wildau: L401: Straßenbau OD Wildau, Einmündung Richard-Sorge-Straße bis Stichkanal ab 15.08.11 Vollsperrung Richtung Königs Wusterhausen, 30.08.2010 bis 31.12.2012 ',
+     { from  => 1332272539, # 2012-03-20 20:42
+       until => 1333144800, # 2012-03-31 00:00
+       text  => 'Wildau: L401: Straßenbau OD Wildau, Einmündung Richard-Sorge-Straße bis Stichkanal Richtungsverkehr zw. Bergstr. und Freiheitsstr., 15.12.2011 bis 30.03.2012 ',
        type  => 'handicap',
-       source_id => 'LS/S-SG33-W/10/173',
+       source_id => 'LS/S-SG33-W/11/303',
        data  => <<EOF,
 userdel	q3::inwork; 26679,-8825 26381,-9753
 EOF
@@ -19985,6 +19987,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120220.1530.366402.html',
        data  => <<EOF,
+#: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20120220.1530.366402.html (Weg wieder geöffnet, allerdings nur ein Drittel der ursprünglichen Breite)
 userdel	2::inwork 15479,16060 15592,16069 15664,16115 15731,16208
 EOF
      },
@@ -20010,11 +20013,11 @@ EOF
      },
      { from  => 1329631200, # 2012-02-19 07:00
        until => 1341068400, # 2012-06-30 17:00
-       text  => 'Behrenstr. (Mitte): Fahrbahn gesperrt (bis Ende 06/12) zwischen Glinkastr. und Friedrichstr.',
+       text  => 'Behrenstr. (Mitte): Fahrbahn gesperrt (bis Ende 06/12) zwischen Glinkastr. und Friedrichstr., Richtung Friedrichstraße',
        type  => 'handicap',
        source_id => 'INKO_093369',
        data  => <<EOF,
-userdel	q4::inwork 9373,12197 9164,12172
+userdel	q4::inwork; 9164,12172 9373,12197
 EOF
      },
      { from  => 1330419240, # 2012-02-28 09:54
@@ -20044,6 +20047,25 @@ EOF
 Am Schloss Schönhausen	2::night 10308,19297 10350,19182 10390,19069
 Am Schloss Schönhausen	2::night 10249,19148 10350,19182
 #: by: ^^^
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park: bei Veranstaltungen im Berghain u.U. nicht passierbar',
+       type  => 'gesperrt',
+       recurring => 1,
+       data  => <<EOF,
+	2::night 13002,11705 13042,11749
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Sredzkistr. komplett zwischen Husemannstr. und Kollwitzstr. gesperrt. Dauer der Sperrung ist unbekannt.',
+       type  => 'handicap',
+       source_id => 'l.epperlein',
+       data  => <<EOF,
+#: XXX vor Ort erkunden; wann wird die Baustelle aufgehoben?
+userdel	q4::inwork 11436,14741 11271,14755
 EOF
      },
     );

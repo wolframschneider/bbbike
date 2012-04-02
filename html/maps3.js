@@ -38,7 +38,7 @@ var bbbike = {
         Apple: true,
 
         YahooMapMapType: true,
-        YahooHybridMapType: true,
+
         YahooSatelliteMapType: true,
 
         BingMapMapType: true,
@@ -74,6 +74,9 @@ var bbbike = {
         SlideShow: true,
         FullScreen: true,
         Smoothness: true,
+        VeloLayer: true,
+        MaxSpeed: true,
+        Replay: true,
         LandShading: true
     },
 
@@ -90,7 +93,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple", "velo_layer", "max_speed"],
 
     area: {
         visible: true,
@@ -105,6 +108,7 @@ var bbbike = {
         "red": '/images/mm_20_red.png',
         "white": '/images/mm_20_white.png',
         "yellow": '/images/mm_20_yellow.png',
+        "bicycle_large": '/images/srtbike.gif',
 
         "blue_dot": "/images/blue-dot.png",
         "green_dot": "/images/green-dot.png",
@@ -138,9 +142,10 @@ var bbbike = {
 
 var state = {
     fullscreen: false,
+    replay: false,
 
     // tags to hide in full screen mode
-    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo"],
+    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo", "bottom", "language_switch", "headline"],
 
     // keep state of non map tags
     non_map_tags_val: {},
@@ -171,6 +176,142 @@ var layers = {};
 //////////////////////////////////////////////////////////////////////
 // functions
 //
+
+function runReplay(none, none2, toogleColor) {
+    // still running
+    if (state.replay) {
+        state.replay = false;
+        return;
+    }
+
+    state.replay = true;
+    var zoom = map.getZoom();
+    var zoom_min = 15;
+
+    // zoom in
+    map.setZoom(zoom > zoom_min ? zoom : zoom_min);
+
+    var marker = new google.maps.Marker({
+        // position: new google.maps.LatLng(start[0], start[1]),
+        icon: bbbike.icons.bicycle_large,
+        map: map
+    });
+
+    var cleanup = function (text) {
+            if (text) {
+                toogleColor(false, text);
+            } else {
+                state.replay = false;
+                toogleColor(true);
+            }
+        };
+
+    runReplayRouteElevations(0, marker, cleanup, get_driving_time());
+    // runReplayRoute(0, marker, cleanup);
+}
+
+
+function runReplayRouteElevations(offset, marker, cleanup, time) {
+
+    // speed to move the map
+    var timeout = 300;
+    var step = 2;
+    if (elevation_obj && elevation_obj.route_length > 0) {
+        timeout = timeout * elevation_obj.route_length / 16;
+    }
+
+    if (!offset || offset < 0) offset = 0;
+    if (offset >= elevations.length) return;
+
+    var seconds = offset / elevations.length * time;
+
+    // last element in route list, or replay was stopped
+    if (offset + step == elevations.length || !state.replay) {
+        cleanup(readableTime(seconds));
+        setTimeout(function () {
+            cleanup();
+            marker.setMap(null); // delete marker from map
+        }, 3000);
+        return;
+    }
+
+    var start = elevations[offset].location;
+    var pos = new google.maps.LatLng(start.lat(), start.lng());
+
+    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout + " seconds: " + readableTime(seconds));
+
+    marker.setPosition(pos);
+
+    var bounds = new google.maps.LatLngBounds;
+    bounds.extend(pos);
+    map.setCenter(bounds.getCenter());
+
+    cleanup(readableTime(seconds));
+    setTimeout(function () {
+        runReplayRouteElevations(offset + step, marker, cleanup, time);
+    }, timeout);
+}
+
+
+function runReplayRoute(offset, marker, cleanup) {
+    // speed to move the map
+    var timeout = 300;
+    if (elevation_obj && elevation_obj.route_length > 0) {
+        timeout * elevation_obj.route_length / 10;
+    }
+
+    if (!offset || offset < 0) offset = 0;
+    if (offset >= marker_list.length) return;
+
+    // last element in route list
+    if (offset + 1 == marker_list.length) {
+        marker.setMap(null); // delete marker from map
+        cleanup();
+        return;
+    }
+
+    var start = marker_list[offset];
+    var pos = new google.maps.LatLng(start[0], start[1]);
+
+    marker.setPosition(pos);
+
+    var bounds = new google.maps.LatLngBounds;
+    bounds.extend(pos);
+    map.setCenter(bounds.getCenter());
+
+    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout); // + " height: " + elevations[offset].location.lat);
+    setTimeout(function () {
+        runReplayRoute(offset + 1, marker, cleanup);
+    }, timeout);
+}
+
+// "driving_time":"0:27:10|0:19:15|0:15:20|0:13:25" => 0:15:20 => 920 seconds
+
+function readableTime(time) {
+    var hour = 0;
+    var min = 0;
+    var seconds = 0;
+
+    hour = Math.floor(time / 3600);
+    min = Math.floor(time / 60);
+    seconds = Math.floor(time % 60);
+
+    if (hour < 10) hour = "0" + hour;
+    if (min < 10) min = "0" + min;
+    if (seconds < 10) seconds = "0" + seconds;
+    return hour + ":" + min + ":" + seconds;
+}
+
+function get_driving_time() {
+    var time = 0;
+    if (elevation_obj && elevation_obj.driving_time) {
+        var speed = elevation_obj.driving_time.split("|");
+        var t = speed[2];
+        var t2 = t.split(":");
+        time = t2[0] * 3600 + t2[1] * 60 + t2[2] * 1;
+    }
+    return time;
+}
 
 function toogleFullScreen(none, none2, toogleColor) {
     var fullscreen = state.fullscreen;
@@ -240,17 +381,16 @@ function resizeFullScreen(fullscreen) {
 
     if (!tag) return;
 
-    var style = ["width", "height", "marginLeft", "marginRight"];
+    var style = ["width", "height", "marginLeft", "marginRight", "right", "left", "top", "bottom"];
     if (!fullscreen) {
         // keep old state
         for (var i = 0; i < style.length; i++) {
             state.map_style[style[i]] = tag.style[style[i]];
+            tag.style[style[i]] = "0px";
         }
 
         tag.style.width = "99%";
-        tag.style.height = "90%";
-        tag.style.marginLeft = "0%";
-        tag.style.marginRight = "0%";
+        tag.style.height = "99%";
     } else {
         // restore old state
         for (var i = 0; i < style.length; i++) {
@@ -342,7 +482,7 @@ function is_supported_maptype(maptype, list) {
     return 0;
 }
 
-function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam, layer) {
+function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam, layer, is_route) {
     bbbike.mapTypeControlOptions.mapTypeIds = [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN];
     state.maplist = init_google_map_list();
 
@@ -571,6 +711,37 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         name: "BBBIKE-SMOOTHNESS",
         minZoom: 1,
         maxZoom: 18
+    };
+
+    var velo_layer_options = {
+        bbbike: {
+            "name": "Velo-Layer",
+            "description": "Velo-Layer, by osm.t-i.ch/bicycle/map"
+        },
+        getTileUrl: function (a, z) {
+            return "http://toolserver.org/tiles/bicycle/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "VELO-LAYER",
+        minZoom: 1,
+        maxZoom: 19
+    };
+    var max_speed_options = {
+        bbbike: {
+            "name": "Max Speed",
+            "description": "Max Speed, by wince.dentro.info/koord/osm/KosmosMap.htm"
+        },
+        getTileUrl: function (a, z) {
+            return "http://wince.dentro.info/koord/osm/tiles/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "MAX-SPEED",
+        minZoom: 1,
+        maxZoom: 15
     };
 
     // Land Shading overlay
@@ -1246,6 +1417,16 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 return new google.maps.ImageMapType(bbbike_smoothness_options);
             }
         },
+        "velo_layer": function () {
+            if (bbbike.mapLayers.VeloLayer) {
+                return new google.maps.ImageMapType(velo_layer_options);
+            }
+        },
+        "max_speed": function () {
+            if (bbbike.mapLayers.MaxSpeed) {
+                return new google.maps.ImageMapType(max_speed_options);
+            }
+        },
         "land_shading": function () {
             if (bbbike.mapLayers.LandShading) {
                 return new google.maps.ImageMapType(land_shading_options);
@@ -1290,6 +1471,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     if (bbbike.mapLayers.Smoothness && (city == "bbbike" || city == "Berlin" || city == "Oranienburg" || city == "Potsdam" || city == "FrankfurtOder")) {
         custom_layer(map, {
+            "id": "bbbike_smoothness",
             "layer": "Smoothness",
             "enabled": bbbike.mapLayers.Smoothness,
             "active": layer == "smoothness" ? true : false,
@@ -1298,7 +1480,30 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         });
     }
 
+    if (bbbike.mapLayers.VeloLayer && is_european(region)) {
+        custom_layer(map, {
+            "id": "velo_layer",
+            "layer": "VeloLayer",
+            "enabled": bbbike.mapLayers.VeloLayer,
+            "active": layer == "velo_layer" ? true : false,
+            "callback": add_velo_layer,
+            "lang": lang
+        });
+    }
+
+    if (bbbike.mapLayers.MaxSpeed && is_european(region)) {
+        custom_layer(map, {
+            "id": "max_speed",
+            "layer": "MaxSpeed",
+            "enabled": bbbike.mapLayers.MaxSpeed,
+            "active": layer == "max_speed" ? true : false,
+            "callback": add_max_speed_layer,
+            "lang": lang
+        });
+    }
+
     custom_layer(map, {
+        "id": "land_shading",
         "layer": "Land Shading",
         "enabled": bbbike.mapLayers.LandShading,
         "active": layer == "land_shading" ? true : false,
@@ -1323,6 +1528,16 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "layer": "Replay",
+        "enabled": bbbike.mapLayers.Replay && is_route,
+        // display only on route result page
+        "active": layer == "replay" ? true : false,
+        "callback": runReplay,
+        "lang": lang
+    });
+
+    custom_layer(map, {
+        "id": "google_PanoramioLayer",
         "layer": "PanoramioLayer",
         "enabled": bbbike.mapLayers.PanoramioLayer,
         "active": layer == "panoramio" ? true : false,
@@ -1331,6 +1546,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "id": "google_BicyclingLayer",
         "layer": "BicyclingLayer",
         "enabled": bbbike.mapLayers.BicyclingLayer,
         "active": layer == "bicycling" ? true : false,
@@ -1339,6 +1555,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "id": "google_TrafficLayer",
         "layer": "TrafficLayer",
         "enabled": bbbike.mapLayers.TrafficLayer,
         "active": layer == "traffic" ? true : false,
@@ -1381,6 +1598,22 @@ function init_custom_layers(layer) {
     if (bbbike.mapLayers.LandShading) {
         layers.land_shadingLayer = layer.land_shading();
     }
+    if (bbbike.mapLayers.VeloLayer) {
+        layers.veloLayer = layer.velo_layer();
+    }
+    if (bbbike.mapLayers.MaxSpeed) {
+        layers.maxSpeedLayer = layer.max_speed();
+    }
+}
+
+
+function debug_layer(layer) {
+    var data = layer;
+    for (var l in layerControl) {
+        data += " " + l + ": " + layerControl[l];
+    }
+
+    debug(data);
 }
 
 // add bicycle routes and lanes to map, by google maps
@@ -1419,14 +1652,35 @@ function add_smoothness_layer(map, enable) {
     }
 }
 
+function add_velo_layer(map, enable) {
+    if (!layers.veloLayer) return;
+
+    if (enable) {
+        map.overlayMapTypes.setAt(1, layers.veloLayer);
+    } else {
+        map.overlayMapTypes.setAt(1, null);
+    }
+}
+
+function add_max_speed_layer(map, enable) {
+    if (!layers.maxSpeedLayer) return;
+
+    if (enable) {
+        map.overlayMapTypes.setAt(2, layers.maxSpeedLayer);
+    } else {
+        map.overlayMapTypes.setAt(2, null);
+    }
+}
+
 function add_land_shading_layer(map, enable) {
+    debug_layer("shading");
 
     if (!layers.land_shadingLayer) return;
 
     if (enable) {
-        map.overlayMapTypes.setAt(0, layers.land_shadingLayer);
+        map.overlayMapTypes.setAt(3, layers.land_shadingLayer);
     } else {
-        map.overlayMapTypes.setAt(0, null);
+        map.overlayMapTypes.setAt(3, null);
     }
 }
 
@@ -1826,11 +2080,14 @@ function translate_mapcontrol(word, lang) {
             "bing_satellite": "Bing (Sat)",
             "bing_hybrid": "Bing (Hybrid)",
             "FullScreen": "Full Screen View",
+            "Replay": "Replay",
             "SlideShow": "Map Slide Show",
             "esri": "Esri",
             "esri_topo": "Esri Topo",
             "mapbox": "MapBox",
             "apple": "Apple",
+            "VeloLayer": "Velo-Layer",
+            "MaxSpeed": "Speed Limit",
             "bing_birdview": "Bing (Sat)" // Birdview
         },
 
@@ -1868,6 +2125,9 @@ function translate_mapcontrol(word, lang) {
             "Destination": "Ziel",
             "Smoothness": "Fahrbahnqualit&auml;t",
             "Land Shading": "Reliefkarte",
+            "VeloLayer": "Velo-Layer",
+            "MaxSpeed": "Tempo Limit",
+            "Replay": "Replay",
             "Via": "Via"
         },
         "es": {
@@ -1992,8 +2252,12 @@ function setCustomBold(maptype, log) {
         currentText[maptype].style.background = "#4682B4";
     }
 
+    maptype_usage(maptype);
+}
+
+function maptype_usage(maptype) {
     // get information about map type and log maptype
-    if (bbbike.maptype_usage && log) {
+    if (bbbike.maptype_usage) {
         var url = "/cgi/maptype.cgi?city=" + city + "&maptype=" + maptype;
 
         downloadUrl(url, function (data, responseCode) {
@@ -2007,7 +2271,6 @@ function setCustomBold(maptype, log) {
         });
     }
 }
-
 
 // hide google layers on non-google custom maps
 
@@ -2034,9 +2297,15 @@ function hideGoogleLayers(maptype) {
 }
 
 var layerControl = {
+/*
     TrafficLayer: false,
     BicyclingLayer: false,
-    PanoramioLayer: false
+    PanoramioLayer: false,
+    Smoothness: true,
+    VeloLayer: true,
+    MaxSpeed: true,
+    LandShading: false
+*/
 };
 
 function LayerControl(controlDiv, map, opt) {
@@ -2044,6 +2313,7 @@ function LayerControl(controlDiv, map, opt) {
     var enabled = opt.active;
     var callback = opt.callback;
     var lang = opt.lang;
+    var id = opt.id;
 
     // Set CSS styles for the DIV containing the control
     // Setting padding to 5 px will offset the control
@@ -2064,37 +2334,22 @@ function LayerControl(controlDiv, map, opt) {
     controlUI.style.textAlign = 'center';
 
     var layerText = layer;
-    if (layer == "BicyclingLayer") {
-        layerText = "cycle layer";
-        callback(map, enabled);
-    }
-    if (layer == "TrafficLayer") {
-        layerText = "traffic layer";
-        callback(map, enabled);
-    }
-    if (layer == "PanoramioLayer") {
-        layerText = "Panoramio";
-        callback(map, enabled);
-    }
-
-    // ???
-    if (layer == "Smoothness") {
-        callback(map, enabled);
-    }
-
-    layerControl.layer = enabled;
+    layerControl[layer] = false; // true // enabled; 
+    toogleColor(true);
 
     // grey (off) <-> green (on)
 
-    function toogleColor(toogle) {
+    function toogleColor(toogle, text) {
         controlUI.style.color = toogle ? '#888888' : '#228b22';
+        controlText.innerHTML = (text ? text + " " : "") + translate_mapcontrol(layerText, lang);
     }
-    toogleColor(!layerControl.layer);
 
     if (layer == "FullScreen") {
         controlUI.title = 'Click to enable/disable ' + translate_mapcontrol(layerText, lang);
     } else if (layer == "SlideShow") {
         controlUI.title = 'Click to run ' + translate_mapcontrol(layerText, lang);
+    } else if (layer == "Replay") {
+        controlUI.title = 'Click to replay route';
     } else {
         controlUI.title = 'Click to add the layer ' + layerText;
     }
@@ -2115,9 +2370,11 @@ function LayerControl(controlDiv, map, opt) {
 
     // switch enabled <-> disabled
     google.maps.event.addDomListener(controlUI, 'click', function () {
-        toogleColor(layerControl.layer);
-        layerControl.layer = layerControl.layer ? false : true;
-        callback(map, layerControl.layer, toogleColor);
+        toogleColor(layerControl[layer]);
+        layerControl[layer] = layerControl[layer] ? false : true;
+        callback(map, layerControl[layer], toogleColor);
+
+        if (layerControl[layer]) maptype_usage(layer);
     });
 
 }
@@ -2139,7 +2396,8 @@ function custom_layer(map, opt) {
     if (!opt.enabled) return;
 
     var layerControlDiv = document.createElement('DIV');
-    var layerControl = new LayerControl(layerControlDiv, map, opt);
+    var layerControl = LayerControl(layerControlDiv, map, opt);
+    debug_layer(opt.id);
 
     layerControlDiv.index = 1;
     map.controls[google.maps.ControlPosition.RIGHT_TOP].push(layerControlDiv);
@@ -2503,36 +2761,30 @@ function reset() {
     document.getElementById('chart_div').style.display = 'none';
 }
 
-function smallerMap(step, id) {
+function smallerMap(step, id, id2) {
     if (!id) id = "BBBikeGooglemap";
-    if (!step) step = 1;
+    if (!step) step = 2;
 
     var tag = document.getElementById(id);
     if (!tag) return;
 
-    var margin = tag.style.marginLeft || "18.4em";
-    var width = tag.style.width || "74%";
+    var width = tag.style.width || "75%";
 
-    // match "18.4em" and increase it by step=1 to 19.4
-    var matches = margin.match(/^([0-9\.\-]+)([a-z]+)$/);
+    // match "75%" and increase it by step=1 
+    var matches = width.match(/^([0-9\.\-]+)%$/);
 
-    var unit, m;
+    var unit = "%";
+    var m = 0;
     if (matches) {
-        unit = matches[2];
-        m = parseFloat(matches[0]) + step;
-    } else {
-        m = "0";
-        unit = "em";
+        m = parseFloat(matches[0]) - step;
     }
+    if (m <= 0 || m > 105) m = 75;
 
-    // alert("foo: " + m + unit);
-    tag.style.marginLeft = m + unit;
+    // make map smaller, and move it right
+    tag.style.width = m + unit;
+    tag.style.left = (100 - m) + unit;
 
-    matches = width.match(/^([0-9\.\-]+)%$/);
-    width = parseFloat(matches[0]) + step * -1.3;
-
-    width = (width < 0 || width > 100) ? 100 : width;
-    tag.style.width = width + "%";
+    // debug("M: " + m + " " + tag.style.width + " " + tag.style.left );
 }
 
 //

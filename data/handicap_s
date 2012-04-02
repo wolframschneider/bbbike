@@ -4,10 +4,8 @@
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
 Sembritzkystr.: Bauarbeiten, Einbahnstraße	q3::inwork; 7203,5488 7186,5453 7157,5418 7095,5317 7018,5201
-Beuthstr. - Spittelmarkt: Gehweg, Bauarbeiten	q4::inwork 10229,11618 10213,11728
-Spittelmarkt: Gehweg, Bordstein, Bauarbeiten	q4::inwork 10166,11592 10153,11666 10213,11728
 Axel-Springer-Str.: Bauarbeiten	q4::inwork 10166,11592 10136,11529
-Axel-Springer-Str.: Bauarbeiten, Gehwege können schon benutzt werden	q3:inwork 10166,11592 10202,11669 10213,11728
+Axel-Springer-Str.: Bauarbeiten, Gehwege können schon benutzt werden	q3::inwork 10166,11592 10201,11631 10213,11728
 Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Gartenstr. und Hessische Str. gesperrt	q4::inwork; 9383,13978 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
 Alt-Stralau: Bauarbeiten an der Brücke, enge Durchfahrt	q3::inwork 14652,10201 14558,10264
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9890,12161 9875,12257 9869,12297
@@ -24,6 +22,7 @@ Elcknerplatz, Borgmannstr.: Bauarbeiten, Einbahnstraße	q4::inwork; 22428,6063 22
 Kantstr.: Bauarbeiten am Zoofenster, Fahrbahn Richtung Westen gesperrt	q4::inwork; 5652,11004 5613,10963
 Burgstraße: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 10166,12777 10132,12941
 Anna-Louisa-Karsch-Str.: vor der Friedrichsbrücke auf den linken Gehweg fahren	q3::inwork; 10264,12826 10166,12777
+Am Zirkus: Baustelle, Einbahnstraße	q3::inwork; 9170,13031 9239,12923
 Wuhlewanderweg: steiler Anstieg, Fußgänger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gefälle, Fußgänger	q4; 21970,12153 21998,12204
 (An der Wuhle, östliches Ufer): Fußgänger	q1 21323,8481 21333,8355 21371,8289 21594,8107 21627,8024 21629,7921
@@ -240,7 +239,7 @@ Am Rummelsburger See: Fußgänger, kurvenreich	q1 15787,9321 15819,9430 15749,9558
 Am Rummelsburger See: teilweise enge Kurven, Fußgänger an schönen Tagen	q2 15453,10415 15457,10342 15496,10277 15518,10234 15604,10204 15601,10179 15645,10147 15713,10035 15786,9957 15790,9920 15828,9875 15914,9858 15931,9846
 Am Rummelsburger See: Fußgänger an schönen Tagen	q1 15931,9846 16000,9784 16046,9746 16123,9692 16120,9653 16182,9591 16268,9670 16347,9594
 Unterführung unter Adlergestell und S-Bahn ist sehr eng, nicht für Anhänger geeignet	q3 20939,2413 20810,2398
-Vorfahrt Reichstagsgebäude: Fußgänger	q3 8400,12417 8399,12616
+Vorfahrt Reichstagsgebäude: Fußgänger	q4 8400,12417 8399,12616
 Am Teltowkanal: kurverreich und recht eng	q1 3751,1402 3695,1308 3619,1207 3458,1063 3366,1007
 Körnerpark: Fußgänger, Bordsteine	q3 12703,7370 12722,7261
 Fregestr. zur Feuerbachstr.: Gehweg, Fußgänger	q2 5618,6388 5582,6360
@@ -292,7 +291,7 @@ Schloßplatz Köpenick: Fußgänger, Straßenbahn, Lieferverkehr	q2 22111,4562 22093,
 Torstr. - Weydingerstr.: Bordsteine	q2 11079,13492 11108,13513
 Gustav-Heinemann-Brücke: Fußgänger, enge Brücke	q3 8116,12938 8110,13042
 Beruner Str.: Rampen, Fußgänger, U-Bahn-Ausgang	q3 20143,10731 20215,10554
-(Parkweg Spreebogenpark): besonders an Wochenenden tagsüber sehr viele Fußgänger	q2 8017,12826 8021,12839 8046,12870 8072,12902 8116,12938 8168,12945 8235,12945 8302,12933 8341,12911 8417,12846
+(Parkweg Spreebogenpark): besonders an Wochenenden tagsüber sehr viele Fußgänger	q2 8017,12826 8036,12855 8046,12870 8072,12902 8116,12938 8168,12945 8235,12945 8302,12933 8341,12911 8417,12846
 Spreeuferweg: besonders an Wochenenden tagsüber viele Fußgänger	q1 7904,12803 7945,12878 7966,12913 8044,12989 8159,13032
 Spreeuferweg: besonders an Wochenenden tagsüber viele Fußgänger	q1 8277,13032 8315,13005 8401,12973 8464,12919 8498,12870 8529,12757 8566,12661 8587,12642 8635,12629 8754,12622
 Spreeuferweg: besonders an Wochenenden tagsüber viele Fußgänger	q1 8635,12629 8709,12605 8756,12608
@@ -522,7 +521,7 @@ Görresstr.: enge Straße	q1 5066,7668 5188,7536 5272,7458 5318,7424
 Stendaler Platz: Fußgänger, Spielplatz	q2 6394,14085 6489,14071
 Washingtonplatz: querende Fußgänger, Taxis	q2; 7937,13126 8106,13130
 Washingtonplatz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 8106,13130 7937,13126
-südliches Spreeufer: besonders an Wochenenden tagsüber sehr viele Fußgänger	q2 7437,12368 7529,12496 7670,12576
+südliches Spreeufer: besonders an Wochenenden tagsüber sehr viele Fußgänger	q2 7437,12368 7561,12527 7670,12576
 (Ruwersteig - Klüsserather Weg): gemeinsamer Rad- und Gehweg, eng und kurvig	q2 19364,13033 19376,13092 19425,13089
 (Fontanestr. - Kopenhagener Str.): Fußgänger	q2 7522,19804 7518,19762 7617,19748
 Oleanderstr.: Fußgänger, Bordsteine	q2 14271,14024 14298,14015
@@ -922,6 +921,13 @@ Zur Kreutzigerstr.: enger Hausdurchgang	q3 14291,12220 14285,12190
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz)	q2 17023,11908 17026,11888
 Märkischer Platz: Fußgänger, Bordstein	q2 11111,12027 11077,12062
 (Fischerinsel - Grünstraßenbrücke): Fußgänger, niedriger Bordstein	q2 10474,11843 10517,11795
+(Rampe Wriezener Park): Fußgänger, Bordstein	q3 13427,11431 13421,11423
+(Rampe Wriezener Park): Fußgänger, enge Rampe, kein Geländer	q3 13421,11423 13459,11388
+(Wriezener Park): Fußgänger	q2 13513,11351 13459,11388 13417,11416 13407,11416 13323,11497 13261,11572 13239,11567 13175,11649
+Wriezener Park: Fußgänger, Bordstein	q3 13261,11572 13270,11581
+(Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park): einige Fußgänger	q1 12986,11699 13002,11705 13042,11749 13175,11649 13208,11658
+Oranienplatz: einige Fußgänger	q1 11264,10804 11227,10821
+Oranienplatz: einige Fußgänger	q1 11275,10723 11253,10778 11227,10821
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q3 11805,19071 11895,19183 11927,19308
 Ebersstr.: Schüler	q2 7245,8583 7292,8631
 Straße 103 (Niederschönhausen): enge Straße	q1 10914,20065 11051,19789
@@ -1049,7 +1055,7 @@ Hüttenweg: keine abgesenkten Bordsteine an der Kreuzung "Auf dem Grat"	q1 1964,5
 Schloßpark Charlottenburg: Fußgänger	q1 3231,12749 3127,12793 3055,12973 3020,13234 2996,13255 2980,13332 3003,13355 2953,13489 2950,13552
 Spreeweg: eng und unübersichtlich	q2 2950,13552 2922,13594 2859,13686 2777,13712 2568,13662 2260,13540
 Lefèvrestr.: enge Straße	q1 4987,6902 4993,6812 5014,6752 5040,6706 5137,6651 5215,6643
-(Paul-Löbe-Allee - südl. Spreeufer): Biergarten am HDKDW	q4 7741,12581 7670,12576
+(Paul-Löbe-Allee - südl. Spreeufer): Biergarten am HDKDW	q4 7741,12586 7710,12585
 (südliches Spreeufer): Biergarten am HDKDW	q4 7745,12603 7710,12585 7670,12576
 Robert-von-Ostertag-Str.: Pferde und Reiter	q1 -613,1949 -745,2320
 Hackerstr.: schmale Straße, schlecht einzusehen	q1 4999,6397 5020,6434 5065,6515 5101,6579 5137,6651 5184,6723
@@ -1108,7 +1114,7 @@ An der Brauerei: Fußgänger	q1 13291,13290 13283,13311 13381,13354
 An der Brauerei: Fußgänger	q2 13283,13311 13235,13414
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12851,12602 13108,12859 13046,12956 12878,13229
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12773,12683 13046,12956
-Ritterstr.: Fußgänger	q1 9763,11148 9861,11103
+Ritterstr.: Fußgänger	q3::inwork 9763,11148 9861,11103
 Elisenstr.: Fußgänger	q2 5808,5332 5810,5340 5822,5388
 Mittelstr. (Steglitz): Fußgänger	q2 5111,5337 5203,5278
 Goebenstr.: Fußgänger	q1 5606,4726 5555,4743 5535,4756 5509,4773 5478,4792
@@ -1151,7 +1157,7 @@ Käuzchensteig: Fußgänger, Bordsteine	q1 1918,6456 1895,6470
 (Parkweg Robert-Stolz-Anlage): Fußgänger, schmal	q3 1869,7525 1946,7580
 (Luisenstr. - Hufelandweg): Fußgänger	q3 8665,13353 8582,13355
 Rahel-Hirsch-Weg: Fußgänger	q3 8582,13355 8595,13375 8587,13436 8586,13440
-Helga-Hahnemann-Str.: Fußgänger, schmal	q2 9415,13315 9385,13174
+Helga-Hahnemann-Str.: Fußgänger, schmal	q2 9415,13315 9408,13282 9385,13174
 An der Karolinenhöhe: Fußgänger, spielende Kinder	q3 -5900,11726 -5848,11779 -5892,11820 -5847,11876
 Obstallee: Bodenschwellen, Fußgänger, spielende Kinder	q3 -5421,12450 -5896,12607
 Leubnitzweg: Fußgänger (Wohngebiet), Bordsteine	q3 -5385,12540 -5421,12450
@@ -1737,7 +1743,6 @@ Trusetaler Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 2
 Blumberger Damm: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 21731,15748 21719,15666
 Dorfstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 18144,18813 18161,18814
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 11027,13279 11085,13239
-Fischerinsel: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 10450,11823 10474,11843 10604,11941
 Josef-Nawrocki-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 25802,4823 25802,4681 25724,4706 25691,4716 25554,4758 25552,4829
 Askanischer Platz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 8882,10905 8938,10872 8983,10846 9022,10857
 Helbigstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 20109,4087 20339,3779 20362,3750
@@ -1771,7 +1776,6 @@ Zeltinger Platz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 2
 Ludolfinger Platz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 2277,25033 2245,25016 2205,25042 2192,25083 2216,25117 2277,25094 2285,25059 2277,25033
 Sewanstr. - Balatonstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 17705,10232 17741,10386
 Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich): gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
-Ella-Trebe-Str.: Einbahnstraße wegen Bauarbeiten: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp;:inwork 7937,13109 7941,13014 7948,12918
 (Los-Angeles-Platz): gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 5681,10696 5822,10609
 Seekorso: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; -8376,6579 -8354,6590
 Seekorso: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; -8339,6578 -8364,6562
