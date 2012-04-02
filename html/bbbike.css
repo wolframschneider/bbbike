@@ -364,5 +364,7 @@ form input[type=submit] {
 
 /* span#headline { text-align: center; } */
 
+/* dynamically increase size of input fields */
+input#suggest_start, input#suggest_via, input#suggest_ziel { width: 97%; } 
 
 

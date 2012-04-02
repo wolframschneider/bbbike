@@ -2429,7 +2429,10 @@ EOF
     }
 
     
-    print "<table id=inputtable>\n" if ($bi->{'can_table'});
+    if ($bi->{'can_table'}) {
+       	print qq{<table id=inputtable width="100%">\n};
+	#print qq{<th></th><th width="100%"></th><th></th>\n};
+    }
 
     my $shown_unknown_street_helper = 0;
 
@@ -2470,7 +2473,7 @@ EOF
 
 	    my $table_title = M("$printtype eingeben oder Marker auf der Karte setzen");
 	    # start.gif
-	    print qq{<tr id=${type}tr $style $bgcolor_s><td id="icon_$type" bgcolor="$icon_bgcolor" align=center valign=middle width=40><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:6px; padding-top:4px; padding-left:4px; padding-right:4px;" } : "") . qq{src="$imagetype" border=0 alt="$table_title" title="$table_title"></a></td>};
+	    print qq{<tr id=${type}tr $style $bgcolor_s><td id="icon_$type" bgcolor="$icon_bgcolor"><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:6px; padding-top:4px; padding-left:4px; padding-right:4px;" } : "") . qq{src="$imagetype" border=0 alt="$table_title" title="$table_title"></a></td>};
 	    my $color = {'start' => '#e0e0e0',
 			 'via'   => '#c0c0c0',
 			 'ziel'  => '#a0a0a0',
@@ -2758,7 +2761,7 @@ EOF
 	if ($tryempty) {
 	    if (!$no_td) {
 		# align=center was a mistake
-		print "<td align=left>" if $bi->{'can_table'};
+		print qq{<td align=left width="100%">} if $bi->{'can_table'};
 	    }
 
 	    my $searchinput = 'suggest_' . $type;
@@ -2768,8 +2771,9 @@ EOF
 
 	    my $startstreet = $q->param("startstreet") || "";
 	    my $value = $searchinput eq 'suggest_start' ? CGI::escapeHTML($startstreet) : "";
-	   
-	    print qq{<input id="$searchinput" maxlength="$maxlength" size="$input_size" type="text" name="$type" value="$value" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
+	  
+            # size="$input_size" 
+	    print qq{<input id="$searchinput" maxlength="$maxlength" type="text" name="$type" value="$value" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
 
 	   if ($enable_opensearch_suggestions) { 
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
@@ -2909,11 +2913,11 @@ function " . $type . "char_init() {}
         }
 	if ($bi->{'can_table'}) {
 	    if ($type eq 'start') { 
-	    	print qq{<td id="via_message" style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message')" title="}, M("Via-Punkt hinzuf&uuml;gen (optional)"), qq{">via</a></td></tr>\n};
+	    	print qq{<td id="via_message" style="font-size:small"><a href="javascript:toogleVia('viatr', 'via_message')" title="}, M("Via-Punkt hinzuf&uuml;gen (optional)"), qq{">via</a></td></tr>\n};
 	    } elsif ($type eq 'via') { 
-	    	print qq{<td id="via_message_off" style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("Via-Punkt entfernen"), qq{">off</a></td></tr>\n};
+	    	print qq{<td id="via_message_off" style="font-size:small"><a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("Via-Punkt entfernen"), qq{">off</a></td></tr>\n};
 	    } else {
-		print qq{<td width=40>&nbsp;</td></tr>\n};
+		print qq{<td>&nbsp;</td></tr>\n};
 	    }
 	} else {
 	    print "<p>\n";
