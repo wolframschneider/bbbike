@@ -299,7 +299,8 @@ div#copyright { margin-bottom: 0.5em }
 
 span#footer_community {
   position: relative;
-  left: 15%;
+  left: 8%;
+  width: 100%;
 }
 
 div#other_cities {
