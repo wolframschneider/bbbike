@@ -554,17 +554,17 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             map.setZoom(parseInt(zoomParam));
         }
 
-/*
+	/* XXX: danger!
 	    // re-center after resize of map window
 	    $(window).resize( function(e) { 
-			map.setCenter(bounds.getCenter()); 
-			// var zoom = map.getBoundsZoomLevel(bounds)
-			map.fitBounds(bounds_padding);
-			var zoom = map.getZoom();
-
+		var current_zoom = map.getZoom();
+		// map.setCenter(bounds.getCenter()); 
+		var zoom = map.getBoundsZoomLevel(bounds)
+		map.fitBounds(bounds_padding);
+		var zoom = map.getZoom();
 			map.setZoom( zoom < 16 ? zoom : 15); 
 	    });
-	    */
+	*/
 
         $(window).resize(function (e) {
             setMapHeight();
