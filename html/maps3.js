@@ -554,17 +554,21 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             map.setZoom(parseInt(zoomParam));
         }
 
-/*
+/* XXX: danger!
 	    // re-center after resize of map window
 	    $(window).resize( function(e) { 
-			map.setCenter(bounds.getCenter()); 
-			// var zoom = map.getBoundsZoomLevel(bounds)
-			map.fitBounds(bounds_padding);
-			var zoom = map.getZoom();
-
+		var current_zoom = map.getZoom();
+		// map.setCenter(bounds.getCenter()); 
+		var zoom = map.getBoundsZoomLevel(bounds)
+		map.fitBounds(bounds_padding);
+		var zoom = map.getZoom();
 			map.setZoom( zoom < 16 ? zoom : 15); 
 	    });
-	    */
+	*/
+
+        $(window).resize(function (e) {
+            setMapHeight();
+        });
 
 
         if (marker_list.length == 2 && without_area != 1 && bbbike.area.visible) {
@@ -1577,6 +1581,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     google.maps.event.addListener(map, "maptypeid_changed", function () {
         hideGoogleLayers();
     });
+
+    setTimeout(function () {
+        setMapHeight();
+    }, 200);
 }
 
 // layers which works only on google maps
@@ -3124,5 +3132,23 @@ function googleCodeAddress(address, callback) {
     });
 }
 
+function toogleDiv(id, value) {
+    var tag = document.getElementById(id);
+    if (!tag) return;
+
+    tag.style.display = tag.style.display == "none" ? "block" : "none";
+    setMapHeight();
+}
+
+/* set map height, depending on footer height */
+
+function setMapHeight() {
+    var height = jQuery(window).height() - jQuery('#bottom').height() - 20;
+    if (height < 200) height = 200;
+
+    jQuery('#BBBikeGooglemap').height(height);
+
+    debug("height: " + height);
+};
 
 // EOF

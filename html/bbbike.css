@@ -263,16 +263,15 @@ div#routes {
 
 div#BBBikeGooglemap { 
         width: 75%; 
-        height: 88%;
+        height: 92.5%;
 	position: relative;
 	/* margin-left: 22.4em;  */
-	border: 1px solid #979797;z-index: 0; 
+	border: 0px solid #979797;z-index: 0; 
 	right: 0em;
 	left: 25%;
 }
 div#bottom {
 	position: relative;
-        height: 12%;
 }
 
 div#adsense_linkblock { 
@@ -296,8 +295,21 @@ div#footer {
 }
 
 div#footer_top { text-align: left; }
-span#footer_community { position: relative; left: 15%; }
-div#other_cities { font-size: small; text-align: center; padding-bottom: 0.5em }
+div#copyright { margin-bottom: 0.5em }
+
+span#footer_community {
+  position: relative;
+  left: 8%;
+  width: 100%;
+}
+
+div#other_cities {
+  font-size: small;
+  text-align: center;
+  padding-top: 0.5em
+  width: 70%;
+  padding-left: 15%;
+}
 
 span#housenumber { font-size: small; }
 
