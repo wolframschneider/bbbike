@@ -554,7 +554,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             map.setZoom(parseInt(zoomParam));
         }
 
-	/* XXX: danger!
+/* XXX: danger!
 	    // re-center after resize of map window
 	    $(window).resize( function(e) { 
 		var current_zoom = map.getZoom();
