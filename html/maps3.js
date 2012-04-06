@@ -69,6 +69,7 @@ var bbbike = {
         TrafficLayer: true,
         BicyclingLayer: true,
         PanoramioLayer: false,
+        WeatherLayer: true,
 
         // enable full screen mode
         SlideShow: true,
@@ -1541,6 +1542,15 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "id": "google_WeatherLayer",
+        "layer": "WeatherLayer",
+        "enabled": bbbike.mapLayers.WeatherLayer,
+        "active": layer == "weather" ? true : false,
+        "callback": add_weather_layer,
+        "lang": lang
+    });
+
+    custom_layer(map, {
         "id": "google_PanoramioLayer",
         "layer": "PanoramioLayer",
         "enabled": bbbike.mapLayers.PanoramioLayer,
@@ -1592,6 +1602,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 function init_google_layers() {
     layers.bicyclingLayer = new google.maps.BicyclingLayer();
     layers.trafficLayer = new google.maps.TrafficLayer();
+    layers.weatherLayer = new google.maps.weather.WeatherLayer();
 
     // need to download library first
     layers.panoramioLayer = false;
@@ -1633,6 +1644,16 @@ function add_bicycle_layer(map, enable) {
         layers.bicyclingLayer.setMap(map);
     } else {
         layers.bicyclingLayer.setMap(null);
+    }
+}
+
+function add_weather_layer(map, enable) {
+    if (!layers.weatherLayer) return;
+
+    if (enable) {
+        layers.weatherLayer.setMap(map);
+    } else {
+        layers.weatherLayer.setMap(null);
     }
 }
 
@@ -2096,6 +2117,7 @@ function translate_mapcontrol(word, lang) {
             "apple": "Apple",
             "VeloLayer": "Velo-Layer",
             "MaxSpeed": "Speed Limit",
+            "WeatherLayer": "Weather",
             "bing_birdview": "Bing (Sat)" // Birdview
         },
 
@@ -2121,6 +2143,7 @@ function translate_mapcontrol(word, lang) {
             "German Mapnik, by OpenStreetMap": "Mapnik in deutschem Kartenlayout, von OpenStreetMap",
 
             "bing_birdview": "Bing (Sat)",
+            "WeatherLayer": "Wetter",
 
             "Set start point": "Setze Startpunkt",
             "Set destination point": "Setze Zielpunkt",
@@ -2300,6 +2323,13 @@ function hideGoogleLayers(maptype) {
         var div = document.getElementById("TrafficLayer");
         if (div) div.style.visibility = value;
     }, timeout - (value == "hidden" ? 500 : -500));
+
+/*
+    setTimeout(function () {
+        var div = document.getElementById("WeatherLayer");
+        if (div) div.style.visibility = value;
+    }, timeout - (value == "hidden" ? 900 : -900));
+    */
 
     setCustomBold(maptype, 1);
 }

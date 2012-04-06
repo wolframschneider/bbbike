@@ -144,6 +144,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_google_adsense_linkblock
 	    $enable_google_adsense_street_linkblock
 	    $enable_panoramio_photos
+	    $enable_google_weather_layer
 	    $enable_elevation
 	    $dos_run_timeout
 	    $show_real_time
@@ -8033,7 +8034,13 @@ sub header {
 	    # push(@$head, qq|<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>|);
 
 	    my $google_maps_url = "http://maps.googleapis.com/maps/api/js?sensor=$sensor&amp;language=$my_lang";
-	    $google_maps_url .= "&amp;libraries=panoramio" if $enable_panoramio_photos && is_resultpage($q);
+	    my @google_libs;
+	    push (@google_libs, "panoramio") if $enable_panoramio_photos && is_resultpage($q);
+	    push (@google_libs, "weather") if $enable_google_weather_layer;
+	    
+	    if (scalar(@google_libs) > 0) {
+	        $google_maps_url .= "&amp;libraries=" . join (",", @google_libs);
+	    }
 
 	    push(@$head, qq|<script type="text/javascript" src="$google_maps_url"></script>|);
 	    push @javascript, 'maps3.js';
