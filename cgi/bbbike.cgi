@@ -8035,7 +8035,7 @@ sub header {
 
 	    my $google_maps_url = "http://maps.googleapis.com/maps/api/js?sensor=$sensor&amp;language=$my_lang";
 	    my @google_libs;
-	    push (@google_libs, "panoramio") if $enable_panoramio_photos && is_resultpage($q);
+	    push (@google_libs, "panoramio") if $enable_panoramio_photos; # && is_resultpage($q);
 	    push (@google_libs, "weather") if $enable_google_weather_layer;
 	    
 	    if (scalar(@google_libs) > 0) {

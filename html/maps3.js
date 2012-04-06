@@ -68,7 +68,7 @@ var bbbike = {
     mapLayers: {
         TrafficLayer: true,
         BicyclingLayer: true,
-        PanoramioLayer: false,
+        PanoramioLayer: true,
         WeatherLayer: true,
 
         // enable full screen mode
@@ -2120,6 +2120,7 @@ function translate_mapcontrol(word, lang) {
             "WeatherLayer": "Weather",
             "BicyclingLayer": "Google Bicyling",
             "TrafficLayer": "Google Traffic",
+            "PanoramioLayer": "Panoramio",
 
             "bing_birdview": "Bing (Sat)" // last 
         },
