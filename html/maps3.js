@@ -2110,7 +2110,7 @@ function translate_mapcontrol(word, lang) {
             "bing_hybrid": "Bing (Hybrid)",
             "FullScreen": "Full Screen View",
             "Replay": "Replay",
-            "SlideShow": "Map Slide Show",
+            "SlideShow": "Slide Show",
             "esri": "Esri",
             "esri_topo": "Esri Topo",
             "mapbox": "MapBox",
@@ -2118,7 +2118,10 @@ function translate_mapcontrol(word, lang) {
             "VeloLayer": "Velo-Layer",
             "MaxSpeed": "Speed Limit",
             "WeatherLayer": "Weather",
-            "bing_birdview": "Bing (Sat)" // Birdview
+            "BicyclingLayer": "Google Bicyling",
+            "TrafficLayer": "Google Traffic",
+
+            "bing_birdview": "Bing (Sat)" // last 
         },
 
         // rest
@@ -2141,6 +2144,9 @@ function translate_mapcontrol(word, lang) {
             "Cycle, by OpenStreetMap": "Fahrrad, von OpenStreetMap",
             "Public Transport, by OpenStreetMap": "Öffentlicher Personennahverkehr, von OpenStreetMap",
             "German Mapnik, by OpenStreetMap": "Mapnik in deutschem Kartenlayout, von OpenStreetMap",
+            "SlideShow": "Slideshow",
+            "BicyclingLayer": "Google Fahrrad",
+            "TrafficLayer": "Google Verkehr",
 
             "bing_birdview": "Bing (Sat)",
             "WeatherLayer": "Wetter",
@@ -2306,7 +2312,6 @@ function maptype_usage(maptype) {
 // hide google only layers on 
 // non-google custom maps
 //
-
 
 function hideGoogleLayers(maptype) {
     if (!maptype) {
