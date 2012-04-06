@@ -2303,7 +2303,10 @@ function maptype_usage(maptype) {
     }
 }
 
-// hide google layers on non-google custom maps
+// hide google only layers on 
+// non-google custom maps
+//
+
 
 function hideGoogleLayers(maptype) {
     if (!maptype) {
@@ -2311,7 +2314,6 @@ function hideGoogleLayers(maptype) {
     }
 
     var value = is_supported_maptype(maptype, bbbike.available_custom_maps) ? "hidden" : "visible";
-
     var timeout = value == "hidden" ? 2000 : 1000;
 
     setTimeout(function () {
