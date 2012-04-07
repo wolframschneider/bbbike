@@ -1524,27 +1524,21 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
-        "layer": "FullScreen",
-        "enabled": bbbike.mapLayers.FullScreen,
-        "active": layer == "fullscreen" ? true : false,
-        "callback": toogleFullScreen,
-        "lang": lang
-    });
-
-    custom_layer(map, {
-        "layer": "SlideShow",
-        "enabled": bbbike.mapLayers.SlideShow,
-        "active": layer == "slideshow" ? true : false,
-        "callback": runSlideShow,
-        "lang": lang
-    });
-
-    custom_layer(map, {
         "layer": "Replay",
         "enabled": bbbike.mapLayers.Replay && is_route,
         // display only on route result page
         "active": layer == "replay" ? true : false,
         "callback": runReplay,
+        "lang": lang
+    });
+
+
+    custom_layer(map, {
+        "id": "google_PanoramioLayer",
+        "layer": "PanoramioLayer",
+        "enabled": bbbike.mapLayers.PanoramioLayer,
+        "active": layer == "panoramio" ? true : false,
+        "callback": add_panoramio_layer,
         "lang": lang
     });
 
@@ -1558,11 +1552,18 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
-        "id": "google_PanoramioLayer",
-        "layer": "PanoramioLayer",
-        "enabled": bbbike.mapLayers.PanoramioLayer,
-        "active": layer == "panoramio" ? true : false,
-        "callback": add_panoramio_layer,
+        "layer": "SlideShow",
+        "enabled": bbbike.mapLayers.SlideShow,
+        "active": layer == "slideshow" ? true : false,
+        "callback": runSlideShow,
+        "lang": lang
+    });
+
+    custom_layer(map, {
+        "layer": "FullScreen",
+        "enabled": bbbike.mapLayers.FullScreen,
+        "active": layer == "fullscreen" ? true : false,
+        "callback": toogleFullScreen,
         "lang": lang
     });
 
