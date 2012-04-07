@@ -38,7 +38,7 @@ var bbbike = {
         Apple: true,
 
         YahooMapMapType: true,
-	YahooHybridMapType: false,
+        YahooHybridMapType: false,
         YahooSatelliteMapType: true,
 
         BingMapMapType: true,
