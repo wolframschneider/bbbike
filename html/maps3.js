@@ -118,7 +118,7 @@ var bbbike = {
         "yellow_dot": "/images/yellow-dot.png",
 
         "start": "/images/dd-start.png",
-        "dest": "/images/dd-end.png",
+        "ziel": "/images/dd-end.png",
         "via": "/images/yellow-dot.png",
 
         "shadow": "/images/shadow-dot.png",
@@ -1857,7 +1857,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
         content += "<p>" + address + "</p>\n";
         for (var i = 0; i < type.length; i++) {
             if (i > 0) content += " | ";
-            content += "<a href='#' onclick='javascript:setMarker(\"" + type[i] + "\", " + pos.lat() + ", " + pos.lng() + ");'>" + type[i] + "</a>" + "\n";
+            content += "<a href='#' onclick='javascript:setMarker(\"" + type[i] + "\", " + pos.lat() + ", " + pos.lng() + ");'>" + translate_mapcontrol(type[i]) + "</a>" + "\n";
         }
 
         content += "</span>\n";
@@ -2188,6 +2188,10 @@ function translate_mapcontrol(word, lang) {
             "TrafficLayer": "Google Traffic",
             "PanoramioLayer": "Panoramio",
 
+            "start": "Start",
+            "ziel": "Destination",
+            "via": "Via",
+
             "bing_birdview": "Bing (Sat)" // last 
         },
 
@@ -2232,6 +2236,11 @@ function translate_mapcontrol(word, lang) {
             "VeloLayer": "Velo-Layer",
             "MaxSpeed": "Tempo Limit",
             "Replay": "Replay",
+
+            "start": "Start",
+            "ziel": "Ziel",
+            "via": "Via",
+
             "Via": "Via"
         },
         "es": {
@@ -2801,7 +2810,7 @@ function loadRoute(opt) {
 
 function RouteMarker(opt) {
 
-    // up to 3 markers: [ start, dest, via ]
+    // up to 3 markers: [ start, ziel, via ]
     var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.yellow];
 
     for (var i = 0; i < marker_list_points.length; i++) {
@@ -2900,7 +2909,7 @@ function smallerMap(step, id, id2) {
 }
 
 //
-// set start/via/destination markers
+// set start/via/ziel markers
 // zoom level is not known yet, try it 0.5 seconds later
 //
 
@@ -2943,7 +2952,7 @@ function _init_markers(opt) {
     var pos_lat = lat - (lat - sw.lat()) / dist; //  down
     padding = (ne.lng() - lng) / 16; // distance beteen markers on map, 1/x of the map
     var pos_start = new google.maps.LatLng(pos_lat, pos_lng);
-    var pos_dest = new google.maps.LatLng(pos_lat, pos_lng + padding);
+    var pos_ziel = new google.maps.LatLng(pos_lat, pos_lng + padding);
     var pos_via = new google.maps.LatLng(pos_lat, pos_lng + 2.0 * padding);
 
     // shadow for markers, if moved
@@ -2957,12 +2966,12 @@ function _init_markers(opt) {
         icon: bbbike.icons["start"] // icon: "/images/start_ptr.png"
     });
 
-    var marker_dest = new google.maps.Marker({
-        position: pos_dest,
+    var marker_ziel = new google.maps.Marker({
+        position: pos_ziel,
         clickable: true,
         draggable: true,
         title: translate_mapcontrol("Set destination point", lang),
-        icon: bbbike.icons["dest"] // icon: "/images/ziel_ptr.png"
+        icon: bbbike.icons["ziel"] // icon: "/images/ziel_ptr.png"
     });
 
     var marker_via = new google.maps.Marker({
@@ -2982,10 +2991,10 @@ function _init_markers(opt) {
         marker_start.setMap(map);
         state.markers.marker_start = marker_start;
     }
-    if (state.markers_drag.marker_dest == null) {
-        if (state.markers.marker_dest) state.markers.marker_dest.setMap(null);
-        marker_dest.setMap(map);
-        state.markers.marker_dest = marker_dest;
+    if (state.markers_drag.marker_ziel == null) {
+        if (state.markers.marker_ziel) state.markers.marker_ziel.setMap(null);
+        marker_ziel.setMap(map);
+        state.markers.marker_ziel = marker_ziel;
     }
     if (state.markers_drag.marker_via == null) {
         if (state.markers.marker_via) state.markers.marker_via.setMap(null);
@@ -3001,9 +3010,9 @@ function _init_markers(opt) {
         state.markers_drag.marker_start = marker_start;
         find_street(marker_start, "suggest_start", shadow)
     });
-    google.maps.event.addListener(marker_dest, event, function () {
-        state.markers_drag.marker_dest = marker_dest;
-        find_street(marker_dest, "suggest_ziel", shadow)
+    google.maps.event.addListener(marker_ziel, event, function () {
+        state.markers_drag.marker_ziel = marker_ziel;
+        find_street(marker_ziel, "suggest_ziel", shadow)
     });
     google.maps.event.addListener(marker_via, event, function () {
         state.markers_drag.marker_via = marker_via;
