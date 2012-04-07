@@ -3004,7 +3004,10 @@ function _init_markers(opt) {
     });
     google.maps.event.addListener(marker_via, event, function () {
         state.markers_drag.marker_via = marker_via;
-        find_street(marker_via, "suggest_via", shadow)
+        find_street(marker_via, "suggest_via", shadow, function () {
+            var tag = document.getElementById("viatr");
+            if (tag && tag.style.display == "none") toogleVia('viatr', 'via_message');
+        });
     });
 }
 
@@ -3029,7 +3032,7 @@ function debug(text, id) {
     tag.innerHTML = "debug: " + text; // + " " + today;
 }
 
-function find_street(marker, input_id, shadow) {
+function find_street(marker, input_id, shadow, callback) {
     var latLng = marker.getPosition();
 
     var input = document.getElementById(input_id);
@@ -3046,7 +3049,8 @@ function find_street(marker, input_id, shadow) {
 
         display_current_crossing(marker, input_id, {
             "lng": granularity(latLng.lng()),
-            "lat": granularity(latLng.lat())
+            "lat": granularity(latLng.lat()),
+            "callback": callback
         });
 
         var type = input_id.substr(8);
@@ -3105,7 +3109,9 @@ function _display_current_crossing(marker, id, obj) {
     }
     downloadUrl(url, function (data, responseCode) {
         if (responseCode == 200) {
+            if (obj.callback) obj.callback();
             updateCrossing(marker, id, data);
+
         } else if (responseCode == -1) {
             alert("Data request timed out. Please try later.");
         } else {
