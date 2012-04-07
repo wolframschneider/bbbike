@@ -2112,7 +2112,7 @@ function translate_mapcontrol(word, lang) {
             "bing_map_old": "Bing (old)",
             "bing_satellite": "Bing (Sat)",
             "bing_hybrid": "Bing (Hybrid)",
-            "FullScreen": "Full Screen View",
+            "FullScreen": "Fullscreen",
             "Replay": "Replay",
             "SlideShow": "Slide Show",
             "esri": "Esri",
