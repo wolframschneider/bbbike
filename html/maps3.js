@@ -384,6 +384,7 @@ function runSlideShow(none, none2, toogleColor) {
     var delay = 6000;
     var counter = 0;
 
+    var zoom = map.getZoom();
     var currentMaptype = map.getMapTypeId()
     var maplist = reorder_map(state.maplist, currentMaptype);
     maplist.push(currentMaptype);
@@ -394,13 +395,16 @@ function runSlideShow(none, none2, toogleColor) {
     for (var i = 0; i < maplist.length; i++) {
         var maptype = maplist[i];
 
-        (function (maptype, timeout) {
+        (function (maptype, timeout, zoom) {
             var timer = setTimeout(function () {
                 map.setMapTypeId(maptype);
-            }, timeout);
+                // keep original zoom, could be changed
+                // by a map with zoom level up to 14 only
+                map.setZoom(zoom);
+            }, timeout, zoom);
 
             state.slideShowMaps.push(timer);
-        })(maptype, delay * counter++);
+        })(maptype, delay * counter++, zoom);
     }
 
     // last action, reset color of control
