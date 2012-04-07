@@ -8,9 +8,9 @@ var map; // main map object
 var bbbike = {
     // map type by google
     mapTypeControlOptions: {
+        mapTypeNames: ["ROADMAP", "TERRAIN", "SATELLITE", "HYBRID"],
         // moved to bbbike_maps_init(), because the JS object google is not defiend yet
         mapTypeIds: [],
-        // google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
     },
 
     // enable Google Arial View: 45 Imagery
@@ -484,7 +484,10 @@ function is_supported_maptype(maptype, list) {
 }
 
 function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam, layer, is_route) {
-    bbbike.mapTypeControlOptions.mapTypeIds = [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN];
+    // init google map types by name and order
+    for (var i = 0; i < bbbike.mapTypeControlOptions.mapTypeNames.length; i++) {
+        bbbike.mapTypeControlOptions.mapTypeIds.push(google.maps.MapTypeId[bbbike.mapTypeControlOptions.mapTypeNames[i]]);
+    }
     state.maplist = init_google_map_list();
 
     if (!is_supported_map(maptype)) {
