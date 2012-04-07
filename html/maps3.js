@@ -38,7 +38,7 @@ var bbbike = {
         Apple: true,
 
         YahooMapMapType: true,
-
+        YahooHybridMapType: false,
         YahooSatelliteMapType: true,
 
         BingMapMapType: true,
@@ -1439,6 +1439,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         },
     };
 
+    // keep in order for slide show
+    // top postion
     mapControls.bbbike_mapnik();
     mapControls.bbbike_mapnik_german();
     mapControls.mapnik();
@@ -1448,6 +1450,14 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.public_transport();
     mapControls.ocm_transport();
     mapControls.ocm_landscape();
+    mapControls.esri();
+    mapControls.esri_topo();
+    mapControls.mapbox();
+    mapControls.apple();
+
+    // bottom postion
+    mapControls.mapnik_bw();
+    mapControls.tah();
     mapControls.bing_map();
     mapControls.bing_map_old();
     mapControls.yahoo_map();
@@ -1458,12 +1468,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.yahoo_satellite();
     mapControls.bing_hybrid();
     mapControls.yahoo_hybrid();
-    mapControls.tah();
-    mapControls.mapnik_bw();
-    mapControls.esri();
-    mapControls.esri_topo();
-    mapControls.mapbox();
-    mapControls.apple();
 
     map.setMapTypeId(maptype);
     if (is_supported_maptype(maptype, bbbike.available_custom_maps)) {
