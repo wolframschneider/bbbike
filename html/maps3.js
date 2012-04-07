@@ -1760,6 +1760,15 @@ var street = "";
 var street_cache = [];
 var data_cache = [];
 
+
+function setMarker(type, lat, lng) {
+    var marker = state.markers_drag["marker_" + type];
+    debug(state.markers_drag.marker_start);
+
+    marker.setPosition(new google.maps.LatLng(lat, lng));
+    find_street(marker, "suggest_" + type, null);
+}
+
 function getStreet(map, city, street, strokeColor, noCleanup) {
     var streetnames = 3; // if set, display a info window with the street name
     var autozoom = 13; // if set, zoom to the streets
@@ -1787,12 +1796,23 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
         return plotStreet(data_cache[url]);
     }
 
-    function addInfoWindow(marker, address) {
+
+
+    function addInfoWindowStreet(marker, address, pos) {
         var infoWindow = new google.maps.InfoWindow({
             maxWidth: 500
         });
+
+        // var pos = marker.getPosition();
+        var type = ["start", "via", "dest"];
+
         var content = "<span id=\"infoWindowContent\">\n"
         content += "<p>" + address + "</p>\n";
+        for (var i = 0; i < type.length; i++) {
+            if (i > 0) content += " | ";
+            content += "<a href='#' onclick='javascript:setMarker(\"" + type[i] + "\", " + pos.lat() + ", " + pos.lng() + ");'>" + type[i] + "</a>" + "\n";
+        }
+
         content += "</span>\n";
         infoWindow.setContent(content);
         infoWindow.open(map, marker);
@@ -1800,7 +1820,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
         // close info window after 4 seconds
         setTimeout(function () {
             infoWindow.close()
-        }, 4000)
+        }, 6000)
 
     };
 
@@ -1865,15 +1885,14 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
                     map: map
                 });
 
-                google.maps.event.addListener(marker, "click", function (marker, street) {
+                google.maps.event.addListener(marker, "click", function (marker, street, position) {
                     return function (event) {
-                        addInfoWindow(marker, street);
+                        addInfoWindowStreet(marker, street, position);
                     }
-                }(marker, street));
+                }(marker, street, streets_route[pos]));
 
                 if (streets_list.length <= 10) {
-                    addInfoWindow(marker, street);
-
+                    addInfoWindowStreet(marker, street, streets_route[pos]);
                 }
 
                 street_cache.push(marker);
@@ -2978,7 +2997,7 @@ function find_street(marker, input_id, shadow) {
         input.setAttribute("value", value);
 
         // set shadow to indicate an active marker
-        marker.setShadow(shadow);
+        if (shadow) marker.setShadow(shadow);
 
         display_current_crossing(marker, input_id, {
             "lng": granularity(latLng.lng()),
