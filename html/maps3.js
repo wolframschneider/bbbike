@@ -38,7 +38,7 @@ var bbbike = {
         Apple: true,
 
         YahooMapMapType: true,
-
+	YahooHybridMapType: false,
         YahooSatelliteMapType: true,
 
         BingMapMapType: true,
@@ -1456,6 +1456,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.apple();
 
     // bottom postion
+    mapControls.mapnik_bw();
+    mapControls.tah();
     mapControls.bing_map();
     mapControls.bing_map_old();
     mapControls.yahoo_map();
@@ -1466,8 +1468,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.yahoo_satellite();
     mapControls.bing_hybrid();
     mapControls.yahoo_hybrid();
-    mapControls.tah();
-    mapControls.mapnik_bw();
 
     map.setMapTypeId(maptype);
     if (is_supported_maptype(maptype, bbbike.available_custom_maps)) {
