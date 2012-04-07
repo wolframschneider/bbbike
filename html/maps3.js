@@ -1807,7 +1807,9 @@ var data_cache = [];
 
 
 function setMarker(type, lat, lng) {
-    var marker = state.markers_drag["marker_" + type];
+    var marker = state.markers["marker_" + type];
+    if (type == "via") displayVia();
+
     debug(state.markers_drag.marker_start);
 
     marker.setPosition(new google.maps.LatLng(lat, lng));
@@ -1849,7 +1851,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
         });
 
         // var pos = marker.getPosition();
-        var type = ["start", "via", "dest"];
+        var type = ["start", "via", "ziel"];
 
         var content = "<span id=\"infoWindowContent\">\n"
         content += "<p>" + address + "</p>\n";
@@ -2992,6 +2994,7 @@ function _init_markers(opt) {
     }
 
 
+
     // var event = 'position_changed'; // "drag", Firefox bug
     var event = 'drag'; // "drag", Firefox bug
     google.maps.event.addListener(marker_start, event, function () {
@@ -3005,10 +3008,14 @@ function _init_markers(opt) {
     google.maps.event.addListener(marker_via, event, function () {
         state.markers_drag.marker_via = marker_via;
         find_street(marker_via, "suggest_via", shadow, function () {
-            var tag = document.getElementById("viatr");
-            if (tag && tag.style.display == "none") toogleVia('viatr', 'via_message');
+            displayVia()
         });
     });
+}
+
+function displayVia() {
+    var tag = document.getElementById("viatr");
+    if (tag && tag.style.display == "none") toogleVia('viatr', 'via_message');
 }
 
 // round up to 1.1 meters
