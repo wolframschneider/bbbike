@@ -380,4 +380,4 @@ form input[type=submit] {
 /* dynamically increase size of input fields */
 input#suggest_start, input#suggest_via, input#suggest_ziel { width: 97%; } 
 
-
+span#debug { font-size: small; }

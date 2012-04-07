@@ -2308,7 +2308,6 @@ sub choose_form {
 <div id="routing">
 @{[ &language_switch($bbbike_local_script_url) ]}
 @{[ &headline ]}
-@{[ &span_debug ]}
 
 <table>
 <tr>
@@ -2997,8 +2996,10 @@ function " . $type . "char_init() {}
 	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
 
     print "</form>\n";
-    print "</td></tr></table>\n</div>\n" if $bi->{'can_table'};
+    print "</td></tr></table>\n" if $bi->{'can_table'};
 
+    print &span_debug;
+    print "</div> <!-- routing -->\n\n";
 	
 
 	    my $BBBikeGooglemap = 1;
