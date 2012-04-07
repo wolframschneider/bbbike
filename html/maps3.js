@@ -1806,14 +1806,18 @@ var street_cache = [];
 var data_cache = [];
 
 
-function setMarker(type, lat, lng) {
+function setMarker(type, address, lat, lng) {
     var marker = state.markers["marker_" + type];
     if (type == "via") displayVia();
 
-    debug(state.markers_drag.marker_start);
+    var id = "suggest_" + type;
 
     marker.setPosition(new google.maps.LatLng(lat, lng));
-    find_street(marker, "suggest_" + type, null);
+    // find_street(marker, "suggest_" + type, null);
+    // { query:"7.44007,46.93205", suggestions:["7.44042,46.93287     Bondelistr./"] }
+    var data = '{query:"' + lng + "," + lat + '", suggestions:["' + lng + "," + lat + "\t" + address + '"]}';
+    updateCrossing(marker, id, data);
+    debug("data: " + data);
 }
 
 function getStreet(map, city, street, strokeColor, noCleanup) {
@@ -1857,7 +1861,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
         content += "<p>" + address + "</p>\n";
         for (var i = 0; i < type.length; i++) {
             if (i > 0) content += " | ";
-            content += "<a href='#' onclick='javascript:setMarker(\"" + type[i] + "\", " + pos.lat() + ", " + pos.lng() + ");'>" + translate_mapcontrol(type[i]) + "</a>" + "\n";
+            content += "<a href='#' onclick='javascript:setMarker(\"" + type[i] + '", "' + address + '", ' + granularity(pos.lat()) + ", " + granularity(pos.lng()) + ");'>" + translate_mapcontrol(type[i]) + "</a>" + "\n";
         }
 
         content += "</span>\n";
@@ -1867,7 +1871,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
         // close info window after 4 seconds
         setTimeout(function () {
             infoWindow.close()
-        }, 6000)
+        }, 5000)
 
     };
 
@@ -3148,6 +3152,9 @@ function set_input_field(id, value) {
 
     debug("crossing: " + id + " " + value);
 }
+
+// data: { query:"7.44007,46.93205", suggestions:["7.44042,46.93287	Bondelistr./"] }
+
 
 function updateCrossing(marker, id, data) {
 
