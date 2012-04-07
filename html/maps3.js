@@ -8,7 +8,7 @@ var map; // main map object
 var bbbike = {
     // map type by google
     mapTypeControlOptions: {
-        mapTypeNames: ["ROADMAP", "TERRAIN", "SATELLITE", "HYBRID"],
+        mapTypeNames: ["SATELLITE", "HYBRID", "ROADMAP", "TERRAIN"],
         // moved to bbbike_maps_init(), because the JS object google is not defiend yet
         mapTypeIds: [],
     },
@@ -337,6 +337,35 @@ function toogleFullScreen(none, none2, toogleColor) {
     state.fullscreen = fullscreen ? false : true;
 }
 
+// start slide show left from current map
+
+
+function reorder_map(maplist, currentMaptype) {
+    var list = [];
+    var later = [];
+    var flag = 0;
+
+    // Maps: A B C D E F
+    // rotate from D: C B A F E D
+    for (var i = 0; i < maplist.length; i++) {
+        var maptype = maplist[i];
+
+        // everything which is left of the current map
+        if (flag) {
+            list.push(maptype);
+        } else { // right
+            later.push(maptype);
+            if (maptype == currentMaptype) flag = 1;
+        }
+    }
+
+    for (var i = 0; i < later.length; i++) {
+        list.push(later[i]);
+    }
+    debug(list.length + " " + list.join(" "));
+    return list;
+}
+
 function runSlideShow(none, none2, toogleColor) {
     // stop running slide show
     if (state.slideShowMaps.length > 0) {
@@ -353,9 +382,10 @@ function runSlideShow(none, none2, toogleColor) {
     var counter = 0;
 
     var currentMaptype = map.getMapTypeId()
-    var maplist = state.maplist;
+    var maplist = reorder_map(state.maplist, currentMaptype);
     maplist.push(currentMaptype);
 
+    // active, stop button
     toogleColor(false);
 
     for (var i = 0; i < maplist.length; i++) {
