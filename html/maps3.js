@@ -828,7 +828,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var mapnik_bw_options = {
         bbbike: {
             "name": "Mapnik (b/w)",
-            "description": "Black/White Mapnik, by OpenStreetMap.org and wikimedia.org"
+            "description": "Mapnik Black and White, by OpenStreetMap.org and wikimedia.org"
         },
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".www.toolserver.org/tiles/bw-mapnik/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -942,7 +942,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var mapquest_options = {
         bbbike: {
             "name": "MapQuest",
-            "description": "MapQuest, by mapquest.de"
+            "description": "MapQuest, by mapquest.com"
         },
         getTileUrl: function (a, z) {
             return "http://otile" + randomServer(4) + ".mqcdn.com/tiles/1.0.0/osm/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -957,8 +957,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     var mapquest_satellite_options = {
         bbbike: {
-            "name": "MapQuest (Sat)",
-            "description": "MapQuest Satellite, by mapquest.de"
+            "name": "MapQuest Sat",
+            "description": "MapQuest Satellite, by mapquest.com"
         },
         getTileUrl: function (a, z) {
             return "http://mtile0" + randomServer(4) + ".mqcdn.com/tiles/1.0.0/vy/sat/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -1024,8 +1024,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     };
     var yahoo_hybrid_options = {
         bbbike: {
-            "name": "Yahoo (Hybrid)",
-            "description": "Yahoo (Hybrid), by maps.yahoo.com",
+            "name": "Yahoo Hybrid",
+            "description": "Yahoo Hybrid, by maps.yahoo.com",
         },
         getTileUrl: function (a, z) {
             return "http://us.maps3.yimg.com/aerial.maps.yimg.com/png?v=1.1&t=h&s=256&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
@@ -1039,8 +1039,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     };
     var yahoo_satellite_options = {
         bbbike: {
-            "name": "Yahoo (Sat)",
-            "description": "Yahoo (Satellite)",
+            "name": "Yahoo Sat",
+            "description": "Yahoo Satellite, by maps.yahoo.com",
         },
         getTileUrl: function (a, z) {
             return "http://aerial.maps.yimg.com/ximg?t=a&v=1.7&s=256&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
@@ -1083,7 +1083,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var bing_map_options = {
         bbbike: {
             "name": "Bing",
-            "description": "Bing, by Microsoft"
+            "description": "Bing, by maps.bing.com and Microsoft"
         },
         getTileUrl: function (a, z) {
             return getTileUrlBingVirtualearth(a, z, "r")
@@ -1098,7 +1098,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     var bing_hybrid_options = {
         bbbike: {
-            "name": "Bing (Hybrid)",
+            "name": "Bing Hybrid",
             "description": "Bing Hybrid, by maps.bing.com and Microsoft"
         },
         getTileUrl: function (a, z) {
@@ -1113,7 +1113,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     };
     var bing_satellite_options = {
         bbbike: {
-            "name": "Bing (Sat)",
+            "name": "Bing Sat",
             "description": "Bing Satellite, by maps.bing.com and Microsoft"
         },
         getTileUrl: function (a, z) {
