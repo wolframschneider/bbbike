@@ -8,7 +8,7 @@ var map; // main map object
 var bbbike = {
     // map type by google
     mapTypeControlOptions: {
-        mapTypeNames: ["SATELLITE", "HYBRID", "ROADMAP", "TERRAIN"],
+        mapTypeNames: ["ROADMAP", "TERRAIN", "SATELLITE", "HYBRID"],
         // moved to bbbike_maps_init(), because the JS object google is not defiend yet
         mapTypeIds: [],
     },
@@ -339,7 +339,6 @@ function toogleFullScreen(none, none2, toogleColor) {
 
 // start slide show left from current map
 
-
 function reorder_map(maplist, currentMaptype) {
     var list = [];
     var later = [];
@@ -354,15 +353,19 @@ function reorder_map(maplist, currentMaptype) {
         if (flag) {
             list.push(maptype);
         } else { // right
+            if (maptype == currentMaptype) {
+                // list.push(maptype); // start with current map and a delay
+                flag = 1;
+            }
             later.push(maptype);
-            if (maptype == currentMaptype) flag = 1;
         }
     }
 
     for (var i = 0; i < later.length; i++) {
         list.push(later[i]);
     }
-    debug(list.length + " " + list.join(" "));
+
+    // debug(list.length + " " + list.join(" "));
     return list;
 }
 
