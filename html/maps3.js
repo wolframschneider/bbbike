@@ -161,6 +161,7 @@ var state = {
     markers_drag: [],
 
     timeout_crossing: null,
+    timeout_menu: null,
 
     // street lookup events
     timeout: null,
@@ -168,6 +169,7 @@ var state = {
     marker_list: [],
 
     lang: "en",
+
 
     // IE bugs
     dummy: 0
@@ -1639,7 +1641,9 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     // google.maps.event.clearListeners(map, 'rightclick');
     google.maps.event.addListener(map, "rightclick", function (event) {
         var zoom = map.getZoom();
-        debug("rightclick " + zoom + " " + pixelPos(event));
+
+        // on start page only
+        if (state.markers.marker_start) debug("rightclick " + zoom + " " + pixelPos(event));
         // map.setZoom(zoom + 1);
     });
 
@@ -1665,14 +1669,14 @@ function pixelPos(event) {
     if (!menu_div) {
         menu_div = document.createElement('div');
 
-        menu_div.style.padding = '12px';
-        menu_div.style.margin = '12px';
+        menu_div.style.padding = '8px';
+        menu_div.style.margin = '2px';
 
         // Set CSS for the control border
         menu_div.style.backgroundColor = 'white';
         menu_div.style.borderStyle = 'solid';
         menu_div.style.borderWidth = '0px';
-        menu_div.style.cursor = 'pointer';
+        // menu_div.style.cursor = 'pointer';
         menu_div.style.textAlign = 'center';
 
         menu_div.id = "start_menu";
@@ -1693,14 +1697,17 @@ function pixelPos(event) {
 
     for (var i = 0; i < type.length; i++) {
         if (i > 0) content += " | ";
-        content += "<a href='#' onclick='javascript:setMarker(\"" + type[i] + '", "' + address + '", ' + granularity(event.latLng.lat()) + ", " + granularity(event.latLng.lng()) + ");'>" + translate_mapcontrol(type[i]) + "</a>" + "\n";
+        content += "<a href='#' onclick='javascript:setMarker(\"" + type[i] + '", "' + address + '", ' + granularity(event.latLng.lat()) + ", " + granularity(event.latLng.lng()) + ', "start_menu"' + ");'>" + translate_mapcontrol(type[i]) + "</a>" + "\n";
     }
 
     menu_div.innerHTML = content;
 
-    google.maps.event.addDomListener(menu_div, 'mouseout', function () {
-        debug("got click");
-        // menu_div.style.display = "none";
+    if (state.timeout_menu) clearTimeout(state.timeout_menu);
+    google.maps.event.addDomListenerOnce(menu_div, 'mouseout', function () {
+        debug("got mouseout");
+        state.timeout_menu = setTimeout(function () {
+            menu_div.style.display = "none";
+        }, 6000);
     });
 
     return "x: " + point.x + "y: " + point.y;
@@ -1872,7 +1879,7 @@ var street_cache = [];
 var data_cache = [];
 
 
-function setMarker(type, address, lat, lng) {
+function setMarker(type, address, lat, lng, div) {
     var marker = state.markers["marker_" + type];
     if (type == "via") displayVia();
 
@@ -1882,6 +1889,12 @@ function setMarker(type, address, lat, lng) {
     // no address - look in database
     if (!address || address == "") {
         find_street(marker, id);
+
+        // hide div after we move a marker
+        if (div) {
+            var tag = document.getElementById(div);
+            if (tag) tag.style.display = "none";
+        }
     }
 
     // address is known, fake resonse
