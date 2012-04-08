@@ -110,6 +110,7 @@ var bbbike = {
         "white": '/images/mm_20_white.png',
         "yellow": '/images/mm_20_yellow.png',
         "bicycle_large": '/images/srtbike.gif',
+        "bicycle_ico": '/images/srtbike.ico',
 
         "blue_dot": "/images/blue-dot.png",
         "green_dot": "/images/green-dot.png",
@@ -194,7 +195,7 @@ function runReplay(none, none2, toogleColor) {
 
     var marker = new google.maps.Marker({
         // position: new google.maps.LatLng(start[0], start[1]),
-        icon: bbbike.icons.bicycle_large,
+        icon: bbbike.icons.bicycle_ico,
         map: map
     });
 
@@ -215,7 +216,7 @@ function runReplay(none, none2, toogleColor) {
 function runReplayRouteElevations(offset, marker, cleanup, time) {
 
     // speed to move the map
-    var timeout = 300;
+    var timeout = 200;
     var step = 2;
     if (elevation_obj && elevation_obj.route_length > 0) {
         timeout = timeout * elevation_obj.route_length / 16;
@@ -241,11 +242,8 @@ function runReplayRouteElevations(offset, marker, cleanup, time) {
 
     debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout + " seconds: " + readableTime(seconds));
 
+    map.panTo(pos);
     marker.setPosition(pos);
-
-    var bounds = new google.maps.LatLngBounds;
-    bounds.extend(pos);
-    map.setCenter(bounds.getCenter());
 
     cleanup(readableTime(seconds));
     setTimeout(function () {
@@ -1635,6 +1633,12 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     // map changed
     google.maps.event.addListener(map, "maptypeid_changed", function () {
         hideGoogleLayers();
+    });
+
+    google.maps.event.clearListeners(map, 'rightclick');
+    google.maps.event.addListener(map, "rightclick", function () {
+	var zoom = map.getZoom();
+        debug("rightclick " + zoom);
     });
 
     setTimeout(function () {
