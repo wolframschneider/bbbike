@@ -545,6 +545,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         zoomControl: bbbike.controls.zoomControl,
         scaleControl: bbbike.controls.scaleControl,
         panControl: bbbike.controls.panControl,
+        // disableDoubleClickZoom: true
         mapTypeControlOptions: {
             mapTypeIds: bbbike.mapTypeControlOptions.mapTypeIds
         },
@@ -1635,16 +1636,77 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         hideGoogleLayers();
     });
 
-    google.maps.event.clearListeners(map, 'rightclick');
-    google.maps.event.addListener(map, "rightclick", function () {
-	var zoom = map.getZoom();
-        debug("rightclick " + zoom);
+    // google.maps.event.clearListeners(map, 'rightclick');
+    google.maps.event.addListener(map, "rightclick", function (event) {
+        var zoom = map.getZoom();
+        debug("rightclick " + zoom + " " + pixelPos(event));
+        // map.setZoom(zoom + 1);
     });
 
     setTimeout(function () {
         setMapHeight();
     }, 200);
 }
+
+function pixelPos(event) {
+
+    var topRight = map.getProjection().fromLatLngToPoint(map.getBounds().getNorthEast());
+    var bottomLeft = map.getProjection().fromLatLngToPoint(map.getBounds().getSouthWest());
+    var scale = Math.pow(2, map.getZoom());
+    // var worldPoint=map.getProjection().fromLatLngToPoint(marker.getPosition());
+    var worldPoint = map.getProjection().fromLatLngToPoint(event.latLng);
+
+    var point = new google.maps.Point((worldPoint.x - bottomLeft.x) * scale, (worldPoint.y - topRight.y) * scale);
+
+    var map_div = document.getElementById("map");
+    var menu_div = document.getElementById("start_menu");
+
+    // create start menu
+    if (!menu_div) {
+        menu_div = document.createElement('div');
+
+        menu_div.style.padding = '12px';
+        menu_div.style.margin = '12px';
+
+        // Set CSS for the control border
+        menu_div.style.backgroundColor = 'white';
+        menu_div.style.borderStyle = 'solid';
+        menu_div.style.borderWidth = '0px';
+        menu_div.style.cursor = 'pointer';
+        menu_div.style.textAlign = 'center';
+
+        menu_div.id = "start_menu";
+        menu_div.style.position = "absolute";
+
+        map_div.appendChild(menu_div);
+    }
+
+    menu_div.style.display = "block";
+    // setTimeout(function () { menu_div.style.display = "none";}, 8000);
+    menu_div.style.left = point.x + "px";
+    menu_div.style.top = point.y + "px";
+
+    var content = ""; // "foobar " + "x: " + point.x + "y: " + point.y + "<br/>\n";
+    // var pos = marker.getPosition();
+    var type = ["start", "via", "ziel"];
+    var address = "";
+
+    for (var i = 0; i < type.length; i++) {
+        if (i > 0) content += " | ";
+        content += "<a href='#' onclick='javascript:setMarker(\"" + type[i] + '", "' + address + '", ' + granularity(event.latLng.lat()) + ", " + granularity(event.latLng.lng()) + ");'>" + translate_mapcontrol(type[i]) + "</a>" + "\n";
+    }
+
+    menu_div.innerHTML = content;
+
+    google.maps.event.addDomListener(menu_div, 'mouseout', function () {
+        debug("got click");
+        // menu_div.style.display = "none";
+    });
+
+    return "x: " + point.x + "y: " + point.y;
+}
+
+
 
 // layers which works only on google maps
 
@@ -1815,13 +1877,22 @@ function setMarker(type, address, lat, lng) {
     if (type == "via") displayVia();
 
     var id = "suggest_" + type;
-
     marker.setPosition(new google.maps.LatLng(lat, lng));
-    // find_street(marker, "suggest_" + type, null);
-    // { query:"7.44007,46.93205", suggestions:["7.44042,46.93287     Bondelistr./"] }
-    var data = '{query:"' + lng + "," + lat + '", suggestions:["' + lng + "," + lat + "\t" + address + '"]}';
-    updateCrossing(marker, id, data);
-    debug("data: " + data);
+
+    // no address - look in database
+    if (!address || address == "") {
+        find_street(marker, id);
+    }
+
+    // address is known, fake resonse
+    else {
+
+        // find_street(marker, "suggest_" + type, null);
+        // { query:"7.44007,46.93205", suggestions:["7.44042,46.93287     Bondelistr./"] }
+        var data = '{query:"' + lng + "," + lat + '", suggestions:["' + lng + "," + lat + "\t" + address + '"]}';
+        updateCrossing(marker, id, data);
+        debug("data: " + data);
+    }
 }
 
 function getStreet(map, city, street, strokeColor, noCleanup) {
@@ -3158,7 +3229,6 @@ function set_input_field(id, value) {
 }
 
 // data: { query:"7.44007,46.93205", suggestions:["7.44042,46.93287	Bondelistr./"] }
-
 
 function updateCrossing(marker, id, data) {
 
