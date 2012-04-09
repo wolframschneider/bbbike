@@ -714,7 +714,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             "description": "German Mapnik, by OpenStreetMap.de"
         },
         getTileUrl: function (a, z) {
-            return "http://" + randomServerOSM() + ".tile.openstreetmap.de/tiles/osmde/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM(4) + ".tile.openstreetmap.de/tiles/osmde/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
@@ -731,8 +731,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             "description": "BBBike Mapnik, by bbbike.de"
         },
         getTileUrl: function (a, z) {
-            // return "http://" + randomServerOSM() + ".tile.openstreetmap.de/tiles/osmde/" + z + "/" + a.x + "/" + a.y + ".png";
-            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/mapnik/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM(3) + ".tile.bbbike.org/osm/mapnik/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
@@ -749,7 +748,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             "description": "BBBike Smoothness, by bbbike.de"
         },
         getTileUrl: function (a, z) {
-            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/bbbike-smoothness/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM(3) + ".tile.bbbike.org/osm/bbbike-smoothness/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
@@ -814,7 +813,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             "description": "BBBike Mapnik German, by bbbike.de"
         },
         getTileUrl: function (a, z) {
-            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/mapnik-german/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM(3) + ".tile.bbbike.org/osm/mapnik-german/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
@@ -1179,10 +1178,22 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         return server + ""; // string
     }
 
-    // OSM use up to 3 servers: "a", "b", "c"
+    // OSM use up to 3 or 4 servers: "a", "b", "c", "d"
+    // default is 3 servers
 
-    function randomServerOSM() {
-        return randomServer(["a", "b"]);
+    function randomServerOSM(number) {
+        var tile_servers = ["a", "b", "c", "d"];
+        var max = 3;
+        if (max > tile_servers.length) max = tile_servers.length;
+
+        if (!number || number > tile_servers.length || number < 0) number = max;
+
+        var data = [];
+        for (var i = 0; i < number; i++) {
+            data.push(tile_servers[i]);
+        }
+
+        return randomServer(data);
     }
 
     //
