@@ -547,7 +547,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         zoomControl: bbbike.controls.zoomControl,
         scaleControl: bbbike.controls.scaleControl,
         panControl: bbbike.controls.panControl,
-        // disableDoubleClickZoom: true
+        disableDoubleClickZoom: false,
         mapTypeControlOptions: {
             mapTypeIds: bbbike.mapTypeControlOptions.mapTypeIds
         },
@@ -1638,13 +1638,25 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         hideGoogleLayers();
     });
 
-    // google.maps.event.clearListeners(map, 'rightclick');
+    google.maps.event.clearListeners(map, 'rightclick');
     google.maps.event.addListener(map, "rightclick", function (event) {
         var zoom = map.getZoom();
 
+        // Firefox 4.x and later bug
+        (function (zoom) {
+            var timeout = 10;
+            var timer = setTimeout(function () {
+                var z = map.getZoom();
+                if (z + 1 == zoom) {
+                    map.setZoom(zoom);
+                    debug("reset zoom level to: " + zoom);
+                }
+            }, timeout);
+        })(zoom);
+
         // on start page only
         if (state.markers.marker_start) debug("rightclick " + zoom + " " + pixelPos(event));
-        // map.setZoom(zoom + 1);
+
     });
 
     setTimeout(function () {
