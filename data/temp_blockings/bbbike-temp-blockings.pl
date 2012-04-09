@@ -5365,7 +5365,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003144',
        data  => <<EOF,
-userdel	1::inwork 11323,12484 11209,12430 11092,12375 11084,12395 11059,12450 10954,12635
+userdel	1::inwork 11329,12497 11209,12430 11092,12375 11084,12395 11059,12450 10954,12635
 userdel	1::inwork 10954,12635 11057,12715 11105,12764 11134,12793
 EOF
      },
@@ -9773,7 +9773,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006622',
        data  => <<EOF,
-userdel	1::inwork 11134,12793 11207,12706 11252,12644 11323,12484
+userdel	1::inwork 11134,12793 11207,12706 11252,12644 11329,12497
 EOF
      },
      { from  => 1189893600, # 2007-09-16 00:00
@@ -16914,7 +16914,7 @@ EOF
        text  => 'Voltairestr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht oder nur schwer möglich',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 11209,12430 11323,12484
+userdel	2::temp 11209,12430 11329,12497
 EOF
      },
      { from  => 1290960699, # PERIODISCH! # früher: 1258207217, # 2009-11-14 15:00
@@ -19002,8 +19002,8 @@ userdel	q4::inwork 52119,43318 50799,43130
 EOF
      },
      { from  => 1305435600, # 2011-05-15 07:00
-       until => 1333206000, # 2012-03-31 17:00
-       text  => 'Schadowstr. (Mitte): Baustelle, Straße vollständig gesperrt (bis Ende 03/12) in beiden Richtungen zwischen Unter den Linden und Dorotheenstr., 16.05.2011 07:00 Uhr bis 31.03.2012 17:00 Uhr ',
+       until => 1338476400, # 2012-05-31 17:00
+       text  => 'Schadowstr. (Mitte): Baustelle, Straße vollständig gesperrt (bis Ende 05/12) in beiden Richtungen zwischen Unter den Linden und Dorotheenstr., 16.05.2011 07:00 Uhr bis 31.05.2012 17:00 Uhr ',
        type  => 'handicap',
        source_id => 'INKO_093372',
        data  => <<EOF,
@@ -19410,13 +19410,13 @@ userdel	q4::inwork; 16507,7254 16615,7062
 EOF
      },
      { from  => 1310763434, # 2011-07-15 22:57
-       until => 1331568000, # 2012-03-12 17:00 # until => 1333231200, # 2012-04-01 00:00
-       text  => 'Instandsetzung der Pankgrafenbrücke, ab dem 18.07.2011 bis Mitte März 2012, Einschränkungen möglich',
+       until => 1341093600, # 201207010000 1331568000, # 2012-03-12 17:00 # until => 1333231200, # 2012-04-01 00:00
+       text  => 'Instandsetzung der Pankgrafenbrücke bis Anfang Juli 2012, Einschränkungen möglich',
        type  => 'handicap',
        # auch: 'INKO_108508'
-       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1107/nachricht4418.html',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1204/nachricht4628.html',
        data  => <<EOF,
-userdel	q4::inwork 13953,23497 14173,23426
+userdel	q4::inwork 13953,23497 13976,23490 14173,23426
 EOF
      },
      { from  => 1281243600, # 2010-08-08 07:00
