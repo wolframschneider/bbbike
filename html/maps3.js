@@ -35,6 +35,8 @@ var bbbike = {
         EsriTopo: true,
         MapBox: true,
         Apple: true,
+        Toner: true,
+        Watercolor: true,
 
         YahooMapMapType: true,
         YahooHybridMapType: false,
@@ -50,6 +52,8 @@ var bbbike = {
     mapPosition: {
         "default": "TOP_RIGHT",
         "mapnik_bw": "BOTTOM_RIGHT",
+        "toner": "BOTTOM_RIGHT",
+        "watercolor": "BOTTOM_RIGHT",
         "bing_map": "BOTTOM_RIGHT",
         "bing_map_old": "BOTTOM_RIGHT",
         "bing_hybrid": "BOTTOM_RIGHT",
@@ -92,7 +96,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple", "velo_layer", "max_speed"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple", "velo_layer", "max_speed", "toner", "watercolor"],
 
     area: {
         visible: true,
@@ -1141,6 +1145,38 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 14
     };
 
+    var toner_options = {
+        bbbike: {
+            "name": "Toner",
+            "description": "Toner, by maps.stamen.com"
+        },
+        getTileUrl: function (a, z) {
+            return "http://" + randomServerOSM(4) + ".tile.stamen.com/toner/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "toner",
+        minZoom: 1,
+        maxZoom: 19
+    };
+
+    var watercolor_options = {
+        bbbike: {
+            "name": "Watercolor",
+            "description": "Watercolor, by maps.stamen.com"
+        },
+        getTileUrl: function (a, z) {
+            return "http://" + randomServerOSM(4) + ".tile.stamen.com/watercolor/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "toner",
+        minZoom: 1,
+        maxZoom: 19
+    };
+
     //
     // select a tiles random server. The argument is either an interger or a 
     // list of server names , e.g.:
@@ -1430,6 +1466,20 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("mapbox", lang, mapbox_options.bbbike);
             }
         },
+        "toner": function () {
+            if (bbbike.mapType.Toner) {
+                var TonerType = new google.maps.ImageMapType(toner_options);
+                map.mapTypes.set("toner", TonerType);
+                custom_map("toner", lang, toner_options.bbbike);
+            }
+        },
+        "watercolor": function () {
+            if (bbbike.mapType.Watercolor) {
+                var WatercolorType = new google.maps.ImageMapType(watercolor_options);
+                map.mapTypes.set("watercolor", WatercolorType);
+                custom_map("watercolor", lang, watercolor_options.bbbike);
+            }
+        },
         "apple": function () {
             if (bbbike.mapType.Apple) {
                 var AppleMapType = new google.maps.ImageMapType(apple_options);
@@ -1482,6 +1532,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     // bottom postion
     mapControls.mapnik_bw();
+    mapControls.toner();
+    mapControls.watercolor();
     mapControls.bing_map();
     mapControls.bing_map_old();
     mapControls.yahoo_map();
@@ -2273,6 +2325,8 @@ function translate_mapcontrol(word, lang) {
             "BicyclingLayer": "Google Bicyling",
             "TrafficLayer": "Google Traffic",
             "PanoramioLayer": "Panoramio",
+            "toner": "Toner",
+            "watercolor": "Watercolor",
 
             "start": "Start",
             "ziel": "Destination",
@@ -2321,6 +2375,7 @@ function translate_mapcontrol(word, lang) {
             "Land Shading": "Reliefkarte",
             "VeloLayer": "Velo-Layer",
             "MaxSpeed": "Tempo Limit",
+            "Watercolor": "Aquarell",
             "Replay": "Replay",
 
             "start": "Start",
