@@ -25,7 +25,6 @@ var bbbike = {
         CycleMapType: true,
         PublicTransportMapType: true,
         HikeBikeMapType: true,
-        TahMapType: true,
         BBBikeMapnikMapType: true,
         BBBikeMapnikGermanMapType: true,
         OCMLandscape: true,
@@ -50,7 +49,6 @@ var bbbike = {
 
     mapPosition: {
         "default": "TOP_RIGHT",
-        "tah": "BOTTOM_RIGHT",
         "mapnik_bw": "BOTTOM_RIGHT",
         "bing_map": "BOTTOM_RIGHT",
         "bing_map_old": "BOTTOM_RIGHT",
@@ -94,7 +92,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple", "velo_layer", "max_speed"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple", "velo_layer", "max_speed"],
 
     area: {
         visible: true,
@@ -841,22 +839,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 18
     };
 
-    var tah_options = {
-        bbbike: {
-            "name": "Tile@Home",
-            "description": "Tile at Home, by OpenStreetMap.org"
-        },
-        getTileUrl: function (a, z) {
-            return "http://" + randomServerOSM() + ".tah.openstreetmap.org/Tiles/tile/" + z + "/" + a.x + "/" + a.y + ".png";
-        },
-        isPng: true,
-        opacity: 1.0,
-        tileSize: new google.maps.Size(256, 256),
-        name: "TAH",
-        minZoom: 1,
-        maxZoom: 17
-    };
-
     // http://www.öpnvkarte.de/
     var public_transport_options = {
         bbbike: {
@@ -1316,15 +1298,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             }
         },
 
-
-        "tah": function () {
-            if (bbbike.mapType.TahMapType) {
-                var TahMapType = new google.maps.ImageMapType(tah_options);
-                map.mapTypes.set("tah", TahMapType);
-                custom_map("tah", lang, tah_options.bbbike);
-            }
-        },
-
         "cycle": function () {
             if (bbbike.mapType.CycleMapType) {
                 var CycleMapType = new google.maps.ImageMapType(cycle_options);
@@ -1509,7 +1482,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     // bottom postion
     mapControls.mapnik_bw();
-    mapControls.tah();
     mapControls.bing_map();
     mapControls.bing_map_old();
     mapControls.yahoo_map();
@@ -2275,7 +2247,6 @@ function translate_mapcontrol(word, lang) {
         "en": {
             "mapnik": "Mapnik",
             "cycle": "Cycle",
-            "tah": "Tile@Home",
             "hike_bike": "Hike&amp;Bike",
             "public_transport": "Public Transport",
             "mapnik_de": "Mapnik (de)",
