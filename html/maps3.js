@@ -1244,7 +1244,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     var bing_birdview_options = {
         bbbike: {
-            "name": "Bing (Sat)",
+            "name": "Bing Sat",
             "description": "Bing Satellite and Bird View, by Microsoft"
         },
         getTileUrl: function (a, z) {
@@ -2258,8 +2258,8 @@ function translate_mapcontrol(word, lang) {
             "yahoo_satellite": "Yahoo (Sat)",
             "bing_map": "Bing",
             "bing_map_old": "Bing (old)",
-            "bing_satellite": "Bing (Sat)",
-            "bing_hybrid": "Bing (Hybrid)",
+            "bing_satellite": "Bing Sat",
+            "bing_hybrid": "Bing Hybrid",
             "FullScreen": "Fullscreen",
             "Replay": "Replay",
             "SlideShow": "Slide Show",
@@ -2278,7 +2278,7 @@ function translate_mapcontrol(word, lang) {
             "ziel": "Destination",
             "via": "Via",
 
-            "bing_birdview": "Bing (Sat)" // last 
+            "bing_birdview": "Bing Sat" // last 
         },
 
         // rest
@@ -2305,7 +2305,7 @@ function translate_mapcontrol(word, lang) {
             "BicyclingLayer": "Google Fahrrad",
             "TrafficLayer": "Google Verkehr",
 
-            "bing_birdview": "Bing (Sat)",
+            "bing_birdview": "Bing Sat",
             "WeatherLayer": "Wetter",
 
             "Set start point": "Setze Startpunkt",
