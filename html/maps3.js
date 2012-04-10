@@ -807,7 +807,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     // BBBike data in mapnik german
     var bbbike_mapnik_german_options = {
         bbbike: {
-            "name": "BBBike (DE)",
+            "name": "BBBike (de)",
             "description": "BBBike Mapnik German, by bbbike.de"
         },
         getTileUrl: function (a, z) {
