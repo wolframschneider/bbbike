@@ -7,7 +7,7 @@ push @temp_blocking,
          'text' => 'Weinmeisterstr. (Mitte) in Richtung Alexanderplatz gesperrt',
          'from' => undef,
          'id' => 1567,
-         'data' => '#: last_checked: 2012-02-01
+         'data' => '#: last_checked: 2012-04-27
 userdel	q4::inwork; 10350,13376 10527,13257
 ',
          'type' => 'gesperrt'
@@ -312,7 +312,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Schloßpark Charlottenburg: bei Dunkelheit geschlossen',
          'from' => undef,
          'id' => 1811,
-         'data' => '	2::night 3332,12742 3231,12749 3127,12793 3055,12973 3020,13234 2996,13255 2980,13332 3003,13355 2953,13489 2950,13552
+         'data' => '	2::night 3332,12742 3231,12749 3127,12793 3065,12975 3016,13315 2987,13448 2953,13489 2950,13552
 ',
          'type' => 'gesperrt'
        },
@@ -649,7 +649,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'from' => undef,
          'id' => 1956,
          'data' => '#: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
-	2::night 10473,15549 10607,15142
+	2::night 10456,15561 10607,15142
 ',
          'type' => 'gesperrt'
        },
@@ -811,7 +811,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im April bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Mai bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -899,10 +899,10 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
-         'source_id' => '106200475',
-         'until' => 1341093600,
-         'text' => 'Lichterfeld-Schacksdorf: L60: Havarie, Straßenzustand Lauchhammer - Licherfelde Umleitung: Lauchhammer - Grünwalde - Staupitz - Sorno - Finsterwalde - Schacksdorf - Lichterfelde, 22.07.2010 bis 30.06.2012 ',
-         'from' => 1324669252,
+         'source_id' => '126200259',
+         'until' => 1380578400,
+         'text' => 'Lichterfeld-Schacksdorf: L60: Baumaßnahme der LMBV Lauchhammer - Licherfelde und umgekehrt, 23.04.2012 bis 30.09.2013 ',
+         'from' => 1335556384,
          'id' => 2108,
          'data' => 'userdel	2::inwork 37809,-92300 37918,-93202 37419,-94853 37230,-95682
 ',
@@ -997,7 +997,8 @@ userdel	3 13034,7319 13047,7234 13150,7254
          'text' => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Ende 12/2012) stadteinwärts zwischen Breite Str. und Florastr. ',
          'from' => 1254641760,
          'id' => 2172,
-         'data' => 'userdel	q4::inwork; 10680,18380 10755,18231 10829,18083 10846,17992
+         'data' => '#: next_check: 2012-05-15
+userdel	q4::inwork; 10680,18380 10755,18231 10829,18083 10846,17992
 ',
          'type' => 'handicap'
        },
@@ -1012,11 +1013,11 @@ userdel	3 13034,7319 13047,7234 13150,7254
        undef,
        {
          'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110303.0840.333719.html',
-         'until' => undef,
-         'text' => 'Auerbachtunnel: einspurige Verkehrsführung, Regelung mit Ampel',
-         'from' => undef,
+         'until' => 1356908400,
+         'text' => 'Auerbachtunnel: Fahrbahn wegen Bauarbeiten gesperrt, bis Ende 2012',
+         'from' => 1335462672,
          'id' => 2182,
-         'data' => '#: next_check: 2011-04-01
+         'data' => '#: next_check: 2012-11-15
 userdel	q4::inwork 425,8766 490,8716
 ',
          'type' => 'handicap'
@@ -1063,7 +1064,18 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       undef,
+       {
+         'until' => 1337551140,
+         'text' => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 27.4.2012 bis zum 20.5.2012',
+         'from' => 1335477600,
+         'id' => 2207,
+         'data' => 'userdel	q4::temp 11177,8985 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
+userdel	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
+userdel	q4::temp 11275,8387 11230,8402
+userdel	q4::temp 11333,8582 11255,8591 11193,8568 11133,8560
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        {
@@ -1072,7 +1084,7 @@ userdel	q4::inwork 425,8766 490,8716
          'text' => 'Schadowstr. (Mitte): Baustelle, Straße vollständig gesperrt (bis Ende 05/12) in beiden Richtungen zwischen Unter den Linden und Dorotheenstr., 16.05.2011 07:00 Uhr bis 31.05.2012 17:00 Uhr ',
          'from' => 1305435600,
          'id' => 2210,
-         'data' => '#: last_checked: 2012-03-16
+         'data' => '#: last_checked: 2012-04-28
 userdel	q4::inwork 9028,12307 9016,12416 9008,12485
 ',
          'type' => 'handicap'
@@ -1099,17 +1111,7 @@ userdel	q4::inwork 9028,12307 9016,12416 9008,12485
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'INKO_093371',
-         'until' => 1335798000,
-         'text' => 'Dorotheenstr. (Mitte): Baustelle, Fahrtrichtung gesperrt (bis Ende 04/12) Richtung Friedrichstr. zwischen Wilhelmstr. und Schadowstr., 06.06.2011 07:00 Uhr bis 30.04.2012 17:00 Uhr ',
-         'from' => 1307250000,
-         'id' => 2224,
-         'data' => '#: last_checked: 2012-03-16
-userdel	q4::inwork; 8775,12457 8907,12472 9008,12485
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1217,10 +1219,12 @@ userdel	3 12992,7545 13015,7440 12925,7425
        {
          'source_id' => 'INKO_078941',
          'until' => 1351699200,
-         'text' => 'Blankenburger Straße: Richtung Dietzgenstraße zwischen Lindenberger Straße und Siegfriedstraße wegen Bauarbeiten gesperrt, 05.10.2011 11:00 Uhr bis 31.10.2012 17:00 Uhr',
+         'text' => 'Blankenburger Straße: Richtung Dietzgenstraße zwischen Lindenberger Straße und Siegfriedstraße wegen Bauarbeiten gesperrt; Herthaplatz ist teilweise eine Einbahnstraße; 05.10.2011 11:00 Uhr bis 31.10.2012 17:00 Uhr',
          'from' => 1317679200,
          'id' => 2290,
          'data' => 'userdel	q4::inwork; 11148,19838 11051,19789 10948,19737 10829,19676 10742,19632
+#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/blankenburger-strasse2.html
+userdel	q4::inwork; 10614,19907 10599,19957
 ',
          'type' => 'handicap'
        },
@@ -1263,24 +1267,16 @@ userdel	2::inwork 19750,11730 19827,11686 19881,11591
        {
          'source_id' => 'IM_017746',
          'until' => 1346425200,
-         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, mögliche Behinderungen, bis 31.08.2012 ',
+         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, Fahrbahn gesperrt, bis 31.08.2012 ',
          'from' => 1314604800,
          'id' => 2308,
          'data' => '#: note: am 2012-03-09 geprüft, Radfahrer konnten problemlos passieren
-userdel	q4::inwork 10723,14772 10838,14962 10881,15047
+#: note: am 2012-04-27 geprüft, Fahrbahn ist absperrt (nur die Straßenbahn wird durchgelassen), Radfahrer können nur den Gehweg benutzen
+userdel	q4::inwork 10723,14772 10838,14962
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_016853',
-         'until' => 1334322000,
-         'text' => 'Heinrich-Mann-Str. (Pankow): Baustelle, Straße vollständig gesperrt (bis Mitte 04/12) in beiden Richtungen zwischen Schönholzer Str. und Cottastr. ',
-         'from' => 1295269680,
-         'id' => 2309,
-         'data' => 'userdel	q4::inwork 9881,18354 9821,18392
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4399.html',
@@ -1385,11 +1381,44 @@ Am Schloss Schönhausen	2::night 10249,19148 10350,19182
        {
          'source_id' => 'l.epperlein',
          'until' => undef,
-         'text' => 'Sredzkistr. komplett zwischen Husemannstr. und Kollwitzstr. gesperrt. Dauer der Sperrung ist unbekannt.',
+         'text' => 'Sredzkistr.: Fahrbahn zwischen Husemannstr. und Kollwitzstr. komplett gesperrt. Dauer der Sperrung ist unbekannt.',
          'from' => undef,
          'id' => 2322,
-         'data' => '#: XXX vor Ort erkunden; wann wird die Baustelle aufgehoben?
+         'data' => '#: last_checked: 2012-04-27
 userdel	q4::inwork 11436,14741 11271,14755
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_018622',
+         'until' => 1337983200,
+         'text' => 'Buckower Damm (Neukölln): Baustelle, Straße vollständig gesperrt zwischen Johannisthaler Chaussee und An den Achterhöfen, 30.03.2012 bis 25.05.2012 15:00 Uhr ',
+         'from' => 1335556039,
+         'id' => 2323,
+         'data' => 'userdel	q4::inwork 12817,2031 12911,1815
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'IM_018679',
+         'until' => 1336482000,
+         'text' => 'Köthener Str. (Marzahn): Bauarbeiten Straße vollständig gesperrt zwischen Dessauer Str. und Wuhletalstr., 20.04.2012 07:41 Uhr bis 08.05.2012 15:00 Uhr ',
+         'from' => 1334814060,
+         'id' => 2325,
+         'data' => 'userdel	q4::inwork 20485,17784 20542,17911 20576,17994
+',
+         'type' => 'handicap'
+       },
+       undef,
+       undef,
+       {
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/organisationseinheiten/tief/index.html',
+         'until' => 1337464800,
+         'text' => 'Grünauer Straße: Vollsperrung zwischen Normannenstraße und Köpenicker Straße aufgrund eines defekten Regenentwässerungskanal, Bauzeit vom 07.05.12 bis 19.05.12',
+         'from' => 1336255200,
+         'id' => 2328,
+         'data' => 'userdel	q4::inwork 19771,1793 19898,1704
 ',
          'type' => 'handicap'
        }

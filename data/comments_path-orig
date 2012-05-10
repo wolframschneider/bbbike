@@ -130,8 +130,8 @@ Frankfurter Allee - Kreutzigerstr.: Einfahrt in Hausdurchgang	CP2; 14291,12220 1
 #: XXX_prog: eigentlich nicht notwendig, da als RW8/RW9 bereits gekennzeichnet. Allerdings wird das im CGI noch gar nicht visualisiert. Vielleicht in der der stilisierten Straßenführung auf der *rechten* (falschen) Seite unterbringen?
 Lennéstr: Radweg Richtung Ebertstr. auf der linken Seite im Tiergarten	CS; 8172,11679 8203,11686 8225,11692 8335,11718 8438,11753 8489,11782 8571,11846
 #: XXX_indoor: hmm, folgende zwei Datensätze sind mit keinen Konsequenzen verbunden. nach permanent temp_blockings verschieben? oder Penalty einplanen? Auf jeden Fall nicht bei GPS-Tracks gesondert ausgeben.
-Jüdenstr.: unbequemes Passieren der Grunerstr.	CP; 10778,12493 10800,12461 10831,12371
-Jüdenstr.: unbequemes Passieren der Grunerstr.	CP; 10831,12371 10800,12461 10778,12493
+Jüdenstr.: unbequemes Passieren der Grunerstr.	CP; 10766,12511 10800,12461 10831,12371
+Jüdenstr.: unbequemes Passieren der Grunerstr.	CP; 10831,12371 10800,12461 10766,12511
 #: XXX_prog: RL:ja, GPS:jein (wegen spitzem Winkel) (evtl. ein Kandidat für comments_misc)
 #: note: und nicht der Asphaltstraße
 dem Schotterweg folgen	CP; 24210,37562 24193,37725 24208,37830
@@ -482,3 +482,4 @@ Hermann-Stöhr-Platz: diagonal über die Grünfläche	CS 12453,11790 12409,11902
 (Fischerstr. - Lückstr.): ausgeschildert "KGA Sanssouci, Parz. 1-34, 76-90"	CP2; 16404,10286 16488,10381
 (Lückstr. - Fischerstr.): Einfahrt in Parkplatz	CP2; 16601,10650 16587,10613
 Oranienplatz: diagonal über den Platz	CP2; 11275,10723 11253,10778
+(Wohngebiet): Einfahrt gegenüber der Dresdener Str.	CP2; 11052,11414 11131,11579

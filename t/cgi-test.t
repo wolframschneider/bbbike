@@ -23,13 +23,16 @@ use FindBin;
 use lib ($FindBin::RealBin, "$FindBin::RealBin/..");
 
 use CGI qw();
+use Data::Dumper ();
 use Getopt::Long;
 use Safe ();
+use Time::HiRes qw(time);
 
 use BBBikeUtil qw(is_in_path);
 use BBBikeTest qw(get_std_opts like_html unlike_html $cgidir
 		  xmllint_string gpxlint_string kmllint_string
 		  using_bbbike_test_cgi check_cgi_testing
+		  validate_bbbikecgires_xml_string
 		);
 
 sub bbbike_cgi_search ($$);
@@ -38,7 +41,7 @@ sub bbbike_cgi_geocode ($$);
 check_cgi_testing;
 
 #plan 'no_plan';
-plan tests => 70;
+plan tests => 75;
 
 if (!GetOptions(get_std_opts("cgidir"),
 	       )) {
@@ -50,6 +53,7 @@ using_bbbike_test_cgi;
 my $testcgi = "$cgidir/bbbike-test.cgi";
 my $ua = LWP::UserAgent->new;
 $ua->agent("BBBike-Test/1.0");
+$ua->env_proxy;
 
 {
     my $resp = bbbike_cgi_geocode +{start => 'Kottbusser Damm/Maybachstr.',
@@ -143,7 +147,9 @@ $ua->agent("BBBike-Test/1.0");
 
     {
 	my $resp = bbbike_cgi_search +{%route_params, output_as => 'xml'}, 'XML output';
-	xmllint_string($resp->decoded_content, 'Well-formedness of XML output');
+	my $content = $resp->decoded_content(charset => "none");
+	xmllint_string($content, 'Well-formedness of XML output');
+	validate_bbbikecgires_xml_string($content, 'Validation of XML output');
     }
 }
 
@@ -161,7 +167,9 @@ SKIP: {
 
     {
 	my $resp = bbbike_cgi_search +{%route_params, output_as => 'xml'}, 'XML output';
-	my $doc = $p->parse_string($resp->decoded_content(charset => "none"));
+	my $content = $resp->decoded_content(charset => "none");
+	validate_bbbikecgires_xml_string($content, 'Validation of XML output');
+	my $doc = $p->parse_string($content);
 	my $startname = $doc->findvalue('/BBBikeRoute/Route/Point[position()=1]/Strname');
 	is($startname, 'Wilhelmshöhe', 'Expected startname in right encoding');
     }
@@ -196,6 +204,7 @@ SKIP: {
     {
 	my $resp = bbbike_cgi_search +{%noroute_params, output_as => 'xml'}, 'No route, XML output';
 	my $content = $resp->decoded_content(charset => 'none');
+	validate_bbbikecgires_xml_string($content);
 	my $doc = $p->parse_string($content);
 	like($doc->findvalue('/BBBikeRoute/Error'), qr{.+}, 'Found expected error message')
 	    or diag $content;
@@ -310,13 +319,35 @@ SKIP: {
 
 }
 
+{
+    no warnings 'qw';
+    # Rund um den Kreuzberg
+    my @test_points = qw(13.382267,52.484989 13.376560,52.485016 13.376766,52.489392 13.386351,52.490061 13.385901,52.484986 13.382267,52.484989);
+    my $start = shift @test_points;
+    my $goal  = pop @test_points;
+    # Rest of @test_points are Via points
+
+    my $safe = Safe->new;
+    my $resp = bbbike_cgi_search +{startc_wgs84 => $start,
+				   viac_wgs84   => [@test_points],
+				   zielc_wgs84  => $goal,
+				   output_as    => 'perldump',
+				  },'Search route with multiple via points';
+    my $res = $safe->reval($resp->decoded_content);
+    like join("; ", map { $_->{Strname} } @{ $res->{Route} }), qr{Dudenstr.*Katzbachstr.*Kreuzbergstr.*Mehringdamm.*Dudenstr},
+	'Rund um Kreuzberg'
+	    or diag(Data::Dumper->new([$res],[qw()])->Indent(1)->Useqq(1)->Dump);
+}
+
 sub bbbike_cgi_search ($$) {
     my($params, $testname) = @_;
     $params->{pref_seen} = 1;
     $params->{pref_speed} = 20 if !exists $params->{pref_speed};
     my $url = $testcgi . '?' . CGI->new($params)->query_string;
+    my $t0 = time;
     my $resp = $ua->get($url);
-    ok($resp->is_success, $testname);
+    my $t1 = time;
+    ok($resp->is_success, "$testname (time=" . sprintf("%.4fs",$t1-$t0) . ")");
     $resp;
 }
 
