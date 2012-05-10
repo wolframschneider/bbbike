@@ -5,7 +5,7 @@ var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
     "color_error": "red",
-    "max_skm": 240000,
+    "max_skm": 480000,
 
     // map box for San Francisco, default
     "sw": [-122.9, 37.2],
