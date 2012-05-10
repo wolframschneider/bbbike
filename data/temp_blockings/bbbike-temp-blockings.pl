@@ -3582,7 +3582,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002419',
        data  => <<EOF,
-userdel	q4; 8553,11638 8837,11676
+userdel	q4; 8553,11638 8743,11663 8837,11676
 EOF
      },
      { from  => 1137279600, # 2006-01-15 00:00
@@ -6467,7 +6467,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003844',
        data  => <<EOF,
-userdel	2::temp 10738,12364 10684,12423 10644,12469 10601,12521 10437,12703
+userdel	2::temp 10738,12364 10673,12434 10644,12469 10601,12521 10437,12703
 EOF
      },
      { from  => 1161542089, # 2006-10-22 20:34
@@ -8447,7 +8447,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005661',
        data  => <<EOF,
-userdel	1::inwork 9000,11727 8837,11676 8553,11638
+userdel	1::inwork 9000,11727 8837,11676 8743,11663 8553,11638
 EOF
      },
      { from  => 1195515804, #  undef
@@ -8763,7 +8763,7 @@ EOF
        data  => <<EOF,
 userdel	2::inwork 1971,12368 1935,12761 1901,13061
 userdel	2::inwork 1858,13231 1610,13380 1545,13418
-userdel	2::inwork 929,14261 990,14062 1053,13790 1124,13599
+userdel	2::inwork 931,14268 984,14086 1053,13790 1124,13599
 userdel	2::inwork 1159,13541 1175,13513 1193,13485 1488,13454
 EOF
      },
@@ -13318,7 +13318,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_011184',
        data  => <<EOF,
-#: last_checked: 2012-02-01
+#: last_checked: 2012-04-27
 userdel	q4::inwork; 10350,13376 10527,13257
 EOF
      },
@@ -15104,8 +15104,8 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_013844',
        data  => <<EOF,
-userdel	2::temp 5253,12079 5231,12122 5194,12176 5250,12296 5325,12234
-userdel	2::temp 5194,12176 5133,12240 5203,12387 5250,12296
+userdel	2::temp 5253,12079 5231,12122 5181,12195 5243,12303 5325,12234
+userdel	2::temp 5181,12195 5133,12240 5203,12387 5243,12303
 EOF
      },
      { from  => 1249414524, # undef
@@ -15393,7 +15393,7 @@ EOF
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
-	2::night 3332,12742 3231,12749 3127,12793 3055,12973 3020,13234 2996,13255 2980,13332 3003,13355 2953,13489 2950,13552
+	2::night 3332,12742 3231,12749 3127,12793 3065,12975 3016,13315 2987,13448 2953,13489 2950,13552
 EOF
      },
      { from  => undef, #
@@ -16646,7 +16646,7 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
-	2::night 10473,15549 10607,15142
+	2::night 10456,15561 10607,15142
 EOF
      },
      { from  => undef, #
@@ -17090,7 +17090,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014849',
        data  => <<EOF,
-userdel	q4::inwork; 17142,3393 17274,3267 17525,3029 17741,2824 17894,2783
+userdel	q4::inwork; 17142,3393 17194,3343 17274,3267 17525,3029 17741,2824 17894,2783
 EOF
      },
      { from  => 1260745200, # 2009-12-14 00:00
@@ -17697,7 +17697,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015726',
        data  => <<EOF,
-userdel	q4::inwork; -269,14178 -245,14343 -248,14518
+userdel	q4::inwork; -269,14178 -245,14343 -283,14523
 EOF
      },
      { from  => 1274188260, # 2010-05-18 15:11
@@ -18089,11 +18089,11 @@ EOF
 userdel	q4::inwork -49042,-3647 -48542,-2958 -48338,-2586
 EOF
      },
-     { from  => 1324669252, # 2011-12-23 20:40
-       until => 1341093600, # 2012-07-01 00:00
-       text  => 'Lichterfeld-Schacksdorf: L60: Havarie, Straßenzustand Lauchhammer - Licherfelde Umleitung: Lauchhammer - Grünwalde - Staupitz - Sorno - Finsterwalde - Schacksdorf - Lichterfelde, 22.07.2010 bis 30.06.2012 ',
+     { from  => 1335556384, # 2012-04-27 21:53
+       until => 1380578400, # 2013-10-01 00:00
+       text  => 'Lichterfeld-Schacksdorf: L60: Baumaßnahme der LMBV Lauchhammer - Licherfelde und umgekehrt, 23.04.2012 bis 30.09.2013 ',
        type  => 'gesperrt',
-       source_id => '106200475',
+       source_id => '126200259',
        data  => <<EOF,
 userdel	2::inwork 37809,-92300 37918,-93202 37419,-94853 37230,-95682
 EOF
@@ -18665,6 +18665,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_018078',
        data  => <<EOF,
+#: next_check: 2012-05-15
 userdel	q4::inwork; 10680,18380 10755,18231 10829,18083 10846,17992
 EOF
      },
@@ -18750,13 +18751,13 @@ EOF
 userdel	2::inwork 25212,-4025 25269,-4041 25320,-4049
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
-       text  => 'Auerbachtunnel: einspurige Verkehrsführung, Regelung mit Ampel',
+     { from  => 1335462672, # 
+       until => 1356908400, # XXX
+       text  => 'Auerbachtunnel: Fahrbahn wegen Bauarbeiten gesperrt, bis Ende 2012',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110303.0840.333719.html',
        data  => <<EOF,
-#: next_check: 2011-04-01
+#: next_check: 2012-11-15
 userdel	q4::inwork 425,8766 490,8716
 EOF
      },
@@ -18975,12 +18976,15 @@ EOF
 userdel	2::temp 13178,10623 13206,10651 13305,10789 13332,10832
 EOF
      },
-     { from  => 1303941600, # 2011-04-28 00:00
-       until => 1306101599, # 2011-05-22 23:59
-       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 29.04. - 22.05.2011 ',
+     { from  => 1335477600, # PERIODISCH!
+       until => 1337551140,
+       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 27.4.2012 bis zum 20.5.2012',
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::temp 11177,8985 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
+userdel	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
+userdel	q4::temp 11275,8387 11230,8402
+userdel	q4::temp 11333,8582 11255,8591 11193,8568 11133,8560
 EOF
      },
      { from  => 1304805600, # 2011-05-08 00:00
@@ -19007,7 +19011,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_093372',
        data  => <<EOF,
-#: last_checked: 2012-03-16
+#: last_checked: 2012-04-28
 userdel	q4::inwork 9028,12307 9016,12416 9008,12485
 EOF
      },
@@ -19149,7 +19153,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_093371',
        data  => <<EOF,
-#: last_checked: 2012-03-16
+#: last_checked: 2012-04-20
 userdel	q4::inwork; 8775,12457 8907,12472 9008,12485
 EOF
      },
@@ -19375,7 +19379,7 @@ EOF
        source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1107/nachricht4413.html',
        data  => <<EOF,
 #: XXX bis Sommer 2012 werden noch weitere Brücken am Rudower Fließ instandgesetzt
-userdel	2::inwork 16135,473 16148,458 16122,403
+userdel	2::inwork 16135,473 16148,458 16130,420 16122,403
 userdel	2::inwork 16148,458 16169,458
 EOF
      },
@@ -19762,11 +19766,13 @@ EOF
      },
      { from  => 1317679200, # 2011-10-04 00:00
        until => 1351699200, # 2012-10-31 17:00
-       text  => 'Blankenburger Straße: Richtung Dietzgenstraße zwischen Lindenberger Straße und Siegfriedstraße wegen Bauarbeiten gesperrt, 05.10.2011 11:00 Uhr bis 31.10.2012 17:00 Uhr',
+       text  => 'Blankenburger Straße: Richtung Dietzgenstraße zwischen Lindenberger Straße und Siegfriedstraße wegen Bauarbeiten gesperrt; Herthaplatz ist teilweise eine Einbahnstraße; 05.10.2011 11:00 Uhr bis 31.10.2012 17:00 Uhr',
        type  => 'handicap',
        source_id => 'INKO_078941',
        data  => <<EOF,
 userdel	q4::inwork; 11148,19838 11051,19789 10948,19737 10829,19676 10742,19632
+#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/blankenburger-strasse2.html
+userdel	q4::inwork; 10614,19907 10599,19957
 EOF
      },
      { from  => 1317592800, # 2011-10-03 00:00
@@ -19793,7 +19799,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_018013',
        data  => <<EOF,
-userdel	q4::inwork; 386,14162 990,14062
+userdel	q4::inwork; 386,14162 984,14086
 EOF
      },
      { from  => 1318716000, # 2011-10-16 00:00
@@ -19924,12 +19930,13 @@ EOF
      },
      { from  => 1314604800, # 2011-08-29 10:00
        until => 1346425200, # 2012-08-31 17:00
-       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, mögliche Behinderungen, bis 31.08.2012 ',
+       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, Fahrbahn gesperrt, bis 31.08.2012 ',
        type  => 'handicap',
        source_id => 'IM_017746',
        data  => <<EOF,
 #: note: am 2012-03-09 geprüft, Radfahrer konnten problemlos passieren
-userdel	q4::inwork 10723,14772 10838,14962 10881,15047
+#: note: am 2012-04-27 geprüft, Fahrbahn ist absperrt (nur die Straßenbahn wird durchgelassen), Radfahrer können nur den Gehweg benutzen
+userdel	q4::inwork 10723,14772 10838,14962
 EOF
      },
      { from  => 1295269680, # 2011-01-17 14:08
@@ -20060,12 +20067,67 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Sredzkistr. komplett zwischen Husemannstr. und Kollwitzstr. gesperrt. Dauer der Sperrung ist unbekannt.',
+       text  => 'Sredzkistr.: Fahrbahn zwischen Husemannstr. und Kollwitzstr. komplett gesperrt. Dauer der Sperrung ist unbekannt.',
        type  => 'handicap',
        source_id => 'l.epperlein',
        data  => <<EOF,
-#: XXX vor Ort erkunden; wann wird die Baustelle aufgehoben?
+#: last_checked: 2012-04-27
 userdel	q4::inwork 11436,14741 11271,14755
+EOF
+     },
+     { from  => 1335556039, # 2012-04-27 21:47
+       until => 1337983200, # 2012-05-26 00:00
+       text  => 'Buckower Damm (Neukölln): Baustelle, Straße vollständig gesperrt zwischen Johannisthaler Chaussee und An den Achterhöfen, 30.03.2012 bis 25.05.2012 15:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_018622',
+       data  => <<EOF,
+userdel	q4::inwork 12817,2031 12911,1815
+EOF
+     },
+     { from  => 1334764800, # 2012-04-18 18:00
+       until => 1335189600, # 2012-04-23 16:00
+       text  => 'Str. des 17.Juni zwischen Yitzhak-Rabin-Str. und Platz des 18.März sowie Ebertstr. gesperrt (Internationales Kinderfest, bis 23.04.12)',
+       type  => 'gesperrt',
+       source_id => 'IM_018665',
+       data  => <<EOF,
+userdel	2::temp 8610,12254 8538,12245 8214,12205 8089,12190 8055,12186
+userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165
+EOF
+     },
+     { from  => 1334814060, # 2012-04-19 07:41
+       until => 1336482000, # 2012-05-08 15:00
+       text  => 'Köthener Str. (Marzahn): Bauarbeiten Straße vollständig gesperrt zwischen Dessauer Str. und Wuhletalstr., 20.04.2012 07:41 Uhr bis 08.05.2012 15:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_018679',
+       data  => <<EOF,
+userdel	q4::inwork 20485,17784 20542,17911 20576,17994
+EOF
+     },
+     { from  => 1335088800, # 2012-04-22 12:00
+       until => 1336136400, # 2012-05-04 15:00
+       text  => 'Chausseestr. (Mitte) in Höhe Wöhlertstr.: Baustelle, Fahrtrichtung Richtung Müllerstr. gesperrt, 23.04.2012 12:00 Uhr bis 04.05.2012 15:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'INKO_112232',
+       data  => <<EOF,
+userdel	q4::inwork; 8527,14352 8442,14456 8346,14576
+EOF
+     },
+     { from  => 1335854115, # 
+       until => 1335909540, # 2012-05-01 23:59
+       text  => 'Str. des 17.Juni zwischen Yitzhak-Rabin-Str. und Platz des 18.März sowie Ebertstr. gesperrt (Veranstaltung zum 1. Mai)',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp 8610,12254 8538,12245 8214,12205 8089,12190 8055,12186
+userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165
+EOF
+     },
+     { from  => 1336255200, # 2012-05-06 00:00
+       until => 1337464800, # 2012-05-20 00:00
+       text  => 'Grünauer Straße: Vollsperrung zwischen Normannenstraße und Köpenicker Straße aufgrund eines defekten Regenentwässerungskanal, Bauzeit vom 07.05.12 bis 19.05.12',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/organisationseinheiten/tief/index.html',
+       data  => <<EOF,
+userdel	q4::inwork 19771,1793 19898,1704
 EOF
      },
     );

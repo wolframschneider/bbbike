@@ -132,7 +132,6 @@ Schmetterlingsplatz	Pl 693,9129
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/43re.pdf/file?y=2011
 #: next_check: 2012-01-18 (Umbenennung wird dann wirksam)
 Rankeplatz	Pl 5529,10453
-Herbert-Lewin-Platz	Pl 5518,12159
 Inge-Beisheim-Platz	Pl 8473,11634
 Platz am Königstor	Pl 11706,13635
 Akademieplatz	Pl 19206,2848
@@ -232,6 +231,7 @@ Kamisardenplatz	Pl 12067,23241
 Plaza San Rafael del Sur	Pl 13325,10565
 Letteplatz	Pl 7998,17564
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file
+#: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20120419.1745.369008.html
 Fred-Löwenberg-Platz	Pl 21616,13900
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file
 #: by: http://www.spd-fraktion-steglitz-zehlendorf.de/index.php?option=com_content&view=article&id=92:marga-meusel-platz-antrag-drs-1496&catid=35:antraege-anfragen&Itemid=69
@@ -280,6 +280,8 @@ Funkturm	Pl 2016,11034
 Europa-Center	Pl 5782,10884
 Olympiastadion	Pl -514,11991
 Waldbühne	Pl -1398,11803
+Volkspark Jungfernheide	Pl 2431,15290
+Volkspark Wilmersdorf	Pl 5669,8207
 Schloß Charlottenburg	Pl 3034,12502
 Schloß Bellevue	Pl 7039,12314
 Schloß Schönhausen	Pl 10350,19182
@@ -294,6 +296,9 @@ Strandbad Müggelsee	Pl 29089,4759
 Strandbad Wannsee	Pl -4684,3318
 Wannseehafen	Pl -4905,1514
 Tegel-Center	Pl 2295,20358
+Nikolskoe	Pl -8881,1668
+Moorlake	Pl -9606,1389
+Ökowerk Teufelssee	Pl -977,9425
 #: note: der Punkt ist der gegenüberliegende auf dem Festland
 Pfaueninsel	Pl -8564,2276
 Museumsinsel	Pl 9948,12631
