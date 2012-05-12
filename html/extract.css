@@ -18,3 +18,22 @@ div#copyright {
 }
 
 body { margin: 10px;  padding: 0px; }
+
+div#intro { position:static; } 
+
+div#message {
+ position:absolute;
+ top:0.5em;
+ left: 34em;
+ min-width: 10em;
+ max-width: 30em;
+}
+
+div#table {
+ position:relative;
+ top:0;
+ left:0;
+ width: 32em;
+}
+
+input[type=submit] { margin-top: 0.5em; }
