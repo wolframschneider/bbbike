@@ -427,7 +427,7 @@ function debug(text, id) {
 }
 
 function setMapHeight() {
-    var height = jQuery(window).height() - jQuery('#top').height() - jQuery('#sidebar').height() - jQuery('#footer').height() - 100 + 10 ;
+    var height = jQuery(window).height() - jQuery('#top').height() - jQuery('#sidebar').height() - jQuery('#footer').height() - 100 + 10;
     if (height < 200) height = 200;
     jQuery('#map').height(height);
 
