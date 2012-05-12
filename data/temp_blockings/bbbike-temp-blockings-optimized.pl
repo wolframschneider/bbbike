@@ -1400,16 +1400,7 @@ userdel	q4::inwork 11436,14741 11271,14755
          'type' => 'handicap'
        },
        undef,
-       {
-         'source_id' => 'IM_018679',
-         'until' => 1336482000,
-         'text' => 'Köthener Str. (Marzahn): Bauarbeiten Straße vollständig gesperrt zwischen Dessauer Str. und Wuhletalstr., 20.04.2012 07:41 Uhr bis 08.05.2012 15:00 Uhr ',
-         'from' => 1334814060,
-         'id' => 2325,
-         'data' => 'userdel	q4::inwork 20485,17784 20542,17911 20576,17994
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1419,6 +1410,24 @@ userdel	q4::inwork 11436,14741 11271,14755
          'from' => 1336255200,
          'id' => 2328,
          'data' => 'userdel	q4::inwork 19771,1793 19898,1704
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1337119199,
+         'text' => 'Vollsperrung der Bahnbrücke Karlshorst: 10. bis 15. Mai 2012 (Sperrung der Fahrbahn)',
+         'from' => 1336764755,
+         'id' => 2329,
+         'data' => 'userdel	q4::inwork 18722,8582 18709,8423
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1338602400,
+         'text' => 'Vollsperrung der Bahnbrücke Karlshorst: 26. Mai 2012, 5 Uhr bis 2. Juni 2012, 4 Uhr (Sperrung der Fahrbahn)',
+         'from' => 1338001200,
+         'id' => 2330,
+         'data' => 'userdel	q4::inwork 18722,8582 18709,8423
 ',
          'type' => 'handicap'
        }

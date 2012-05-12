@@ -489,8 +489,8 @@ Mangerstr.: Bauarbeiten bis November 2011, danach vielleicht etwas besseres Klei
 #: by: http://www.potsdam.de/cms/beitrag/10056300/757395/
 Mauerweg: evtl. existiert hier bereits ein geschotterter Radweg parallel zur Straße	? -8799,3778 -9064,3667 -9156,3451 -9399,3297 -9530,3165 -9999,2615 -10105,2458
 #
-#: last_checked: 2012-02-17 vvv
-#: next_check: 2012-04-15 vvv
+#: last_checked: 2012-05-08 vvv
+#: next_check: 2012-08-15 vvv
 #: XXX Eintrag in Berlin.coords.data fehlt: PLZ=10117
 Prinzengasse: Genaue Lage? Qualität?	?::inwork 9938,12246 9950,12219
 #: XXX Eintrag in Berlin.coords.data fehlt: PLZ=10117
@@ -640,7 +640,8 @@ Treitschkestr.: Situation hier nach der Eröffnung des "Boulevard Berlin"?	? 5219
 Umfahrung der Drängelgitter	? 6526,20998 6565,21004 6560,21055
 # 
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1204/nachricht4638.html
-#: next_check: 2012-05-01
+#: last_checked: 2012-05-07
+#: next_check: 2012-06-15
 Dresdener Str.: Einfahrt für Kfz von Süden bald nicht möglich	?::inwork 11189,10831 11162,10919
 # 
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20120329.0935.368110.html vvv
@@ -3252,15 +3253,8 @@ Sotzmannstr.: Qualität? Ist das tatsächlich die Sotzmannstr.?	? -4629,12835 -455
 #XXX del --- hier ist nur ein Einkaufszentrum --- #: XXX fehlt bei Berlin.coords.data: --- Märkische Zeile: gibt es tatsächlich einen Weg diesen Namens hier? Für Radfahrer relevant?	? 6855,21481 6874,21183
 Langenbeckstr.: ist die gesamte Straße asphaltiert?	? 24793,9860 25020,9728
 # 
-#: by: detailnetz vvv
-#: XXX fehlt in Berlin.coords.data vvv
-Gebrüder-Hirth-Str.: Qualität? Ist die Straße schon komplett fertiggestellt?	? 19626,-1318 19717,-1520 19717,-1549 19710,-1699
-#: XXX ^^^
-#: by: ^^^
-# 
 #: by: http://www.cdu-fraktion-tk.de/image/inhalte/file/Amtsblatt_Nr__30.pdf
 B96a - Schützenstr.: Wo genau liegt die Verbindungsstraße? Qualität?	? 19858,-843 19869,-816
-Wehrmathen/Uranusstr. - Siriusstr./Ortolfstr.: Qualität? Dürfen Radfahrer hier fahren?	? 18904,-573 18928,-506 18950,-490 18990,-371 18997,-351
 Kramnitzer Weg: Qualität der Verlängerung nach Westen hin? Existiert eine Ausschilderung	? -9353,5012 -9395,5025 -9537,5083 -9617,5086
 Schlesingerstr.: existiert ein Zugang von der Schlesingerstr. zum Uferweg?	? 4968,13060 4973,13083
 #: XXX wo genau?
@@ -3273,8 +3267,6 @@ Radweg zwischen Wublitzstr. und Laubenweg: Ist der Radweg bereits fertig? Qualit
 Alleestr./Weinmeinsterstr.: existiert hier eine Ampel?	? -12557,11
 #: by: http://www.potsdam.de/cms/beitrag/10068810/966975/
 Radweg in der Bergstraße: wo genau?	? -17968,7253 -18232,6565
-#: XXX genaue Wegführung?
-Radweg: Qualität? Straßenschilder? Nachts beleuchtet?	? 20797,-1262 20783,-1266 20396,-1370 20388,-1373 20373,-1375 20046,-1449 20032,-1451 20018,-1456 19726,-1518 19717,-1520 19706,-1520 19618,-1531
 #: last_checked: 2012-05-06 (existiert, war aber ausgeschaltet)
 Am Seegraben/Alexander-Meißner-Str.: Ampel in Vorbereitung	?::inwork 19894,-835
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4100.html
@@ -3499,6 +3491,46 @@ Am Meisenwinkel: Wo genau liegt die Straße? Qualität?	? 9109,20470 9145,20431
 #: XXX   Provenceweg
 #: XXX   Picardieweg
 Anlage Frohsinn: Benennung von 11 Privatwegen, wo genau, Qualität?	? 10873,22065 10841,21949
+#
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/19re.pdf/file?y=2012
+#: XXX fehlen alle in Berlin.coords.data, PLZ=13158 und PLZ=13159
+#: XXX (Schreibweise nochmal prüfen!)
+#: XXX   Kräuterweg
+#: XXX   Kräuterplatz
+#: XXX   Wildkräuterweg
+#: XXX   Gebirgskräuterweg
+#: XXX   Feldkräuterweg
+#: XXX   Wasserkräuterweg
+#: XXX   Wiesenkräuterweg
+#: XXX   Heilkräuterweg
+#: XXX   Anisweg
+#: XXX   Basilikumweg
+#: XXX   Chiliweg
+#: XXX   Dillweg
+#: XXX   Dinkelweg
+#: XXX   Eisenkrautweg
+#: XXX   Estragonweg
+#: XXX   Frauenmantelweg
+#: XXX   Gierschweg
+#: XXX   Goldrutenweg
+#: XXX   Hamamelisweg
+#: XXX   Huflattichweg
+#: XXX   Ingwerweg
+#: XXX   Johanniskrautweg
+#: XXX   Kümmelweg
+#: XXX   Kampferweg
+#: XXX   Lorbeerweg
+#: XXX   Majoranweg
+#: XXX   Nachtkerzenweg
+#: XXX   Oreganoweg
+#: XXX   Pfefferminzweg
+#: XXX   Queckenweg
+#: XXX   Rotkleeweg
+#: XXX   Schnittlauchweg
+#: XXX   Thymianweg
+#: XXX   Brunnenkresseweg
+#: XXX   Currykrautweg
+Neue Privatstraßen in der Kolonie Einigkeit	? 9897,21861 9456,21937 8931,22056 8591,22224 8504,22281 8452,22105 8755,21962 8712,21858 8642,21886 8602,21804 8704,21750 8608,21507 8722,21437 8786,21397 8892,21324 9413,21659
 # 
 #: XXX: westliches Ende sah asphaltiert aus
 #: XXX: Straßenschilder? Das könnte der "Falkenberger Fußsteig" sein, wovon es aber nur wenige Referenzen im Netz gibt, u.a. bei http://www.berlin.de/ba-lichtenberg/buergerservice/stadtplanung/index.php?strasse=falkenberger+fu%C3%9Fsteig&strasse_mit=--+Bitte+ausw%C3%A4hlen+--&plz=--+Bitte+ausw%C3%A4hlen+--#results
@@ -3807,3 +3839,8 @@ Lahnstr: existieren in der Lahnstraße Radstreifen?	? 13095,6926 13278,6967 13500
 #: XXX fehlt in Berlin.coords.data
 Violastr.: existiert diese Straße? Mit Straßenschildern? Qualität?	? 16610,19836 16550,19829 16471,19825 16411,19824
 Hartriegelstr. - Michael-Brückner-Str.: Nachts beleuchtet?	? 18695,5076 18622,5049 18514,5028 18425,5032
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/19re.pdf/file?y=2012 vvv
+#: XXX neue private Straßen entstehen, fehlen in Berlin.coords.data
+Lübarser Aue: Qualität? Wo wird sich die Straße befinden?	?::inwork 7185,22466 7147,22393
+Am Rodelberg: Qualität? Wo wird sich die Straße befinden?	?::inwork 7257,22381 7296,22458
+#: by: ^^^
