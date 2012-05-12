@@ -37,3 +37,13 @@ div#table {
 }
 
 input[type=submit] { margin-top: 0.5em; }
+
+table tr td { padding: 3px; }
+
+/* large green submit button, to focus user actions */
+form input[type=submit] { 
+        color: green; 
+        font-size: large; 
+        margin-bottom: 0.4em; 
+}
+
