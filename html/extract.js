@@ -5,7 +5,7 @@ var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
     "color_error": "red",
-    "max_skm": 480000,
+    "max_skm": 960000,
 
     // map box for San Francisco, default
     "sw": [-122.9, 37.2],
@@ -295,7 +295,7 @@ function osm_init(opt) {
             factor = 1.3;
         }
 
-        return ", approx. " + Math.floor(factor * size * 0.75) + "-" + Math.ceil(factor * size * 2) + " MB OSM data";
+        return ", approx. " + Math.floor(factor * size * 0.25) + "-" + Math.ceil(factor * size * 2) + " MB OSM data";
     }
 
     function getMapLayers() {
