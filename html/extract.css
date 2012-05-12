@@ -3,9 +3,17 @@ div#all {
 	max-width: 100%;
 	padding-top: 0px; 
 	padding-left: 0px; 
-	padding-right: 30px; 
+	padding-right: 0px; 
 }
 
 div#map { width: 100%; height: 100%; }
 
 #debug { color: red; font-size: small; }
+
+div#footer_community { display: none; }
+
+div#copyright { 
+  font-size: x-small; 
+  margin: 0px;
+  padding: 0px;
+}
