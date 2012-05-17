@@ -3421,7 +3421,7 @@ function setMapHeight() {
 };
 
 function setMapWidth() {
-    var width = jQuery(window).width() - jQuery('#routing').width() - 60;
+    var width = jQuery(window).width() - jQuery('#sidebar').width() - 60;
     if (width < 200) width = 200;
 
     jQuery('#BBBikeGooglemap').width(width);
