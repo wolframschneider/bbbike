@@ -243,6 +243,15 @@ div#nomap {
 div#routing { 
 	position: absolute; 
 	/* left: 0px; */
+	width: 24.5%;
+        margin-right: 0.5em;
+	background-color: white;
+	z-index: 1000; 
+}
+
+div#sidebar { 
+	position: absolute; 
+	/* left: 0px; */
 	width: 21em;
         padding-right: 0.5em;
 	background-color: white;
