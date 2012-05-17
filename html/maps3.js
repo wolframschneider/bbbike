@@ -1765,9 +1765,11 @@ function pixelPos(event) {
 // layers which works only on google maps
 
 function init_google_layers() {
-    layers.bicyclingLayer = new google.maps.BicyclingLayer();
-    layers.trafficLayer = new google.maps.TrafficLayer();
-    layers.weatherLayer = new google.maps.weather.WeatherLayer();
+    try {
+        layers.bicyclingLayer = new google.maps.BicyclingLayer();
+        layers.trafficLayer = new google.maps.TrafficLayer();
+        layers.weatherLayer = new google.maps.weather.WeatherLayer();
+    } catch (e) {}
 
     // need to download library first
     layers.panoramioLayer = false;
@@ -3417,5 +3419,15 @@ function setMapHeight() {
 
     debug("height: " + height);
 };
+
+function setMapWidth() {
+    var width = jQuery(window).width() - jQuery('#routing').width() - 60;
+    if (width < 200) width = 200;
+
+    jQuery('#BBBikeGooglemap').width(width);
+
+    debug("width: " + width);
+};
+
 
 // EOF
