@@ -76,8 +76,9 @@ Germanenstr. (oder nur das kleine Stück bis Waldsteg?)	?::projected 8406,19081 8
 #: by: Tagesspiegel vom 2009-04-12, soll 2009 realisiert werden
 #: corrected_by: MoPo 2009-08-01, soll 2010 realisiert werden
 # auch im Tsp vom 2010-03-26 erwähnt
-#: next_check: 2011-10-01
+#: next_check: 2012-05-31
 #: last_checked: 2011-06-12
+#: XXX Markierungsarbeiten bis 2012-05-31 zwischen Afrikanische Str. und Seestr.
 Müllerstr.	?::projected 6790,16018 6659,16133 6608,16180 6450,16325 6444,16331 6433,16342 6311,16457 6208,16546 6103,16635 6019,16712 5937,16784 5900,16817 5777,16924 5589,17081 5486,17169
 #
 #: by: Tagesspiegel vom 2009-04-12, soll 2009 realisiert werden
@@ -124,6 +125,14 @@ Fahrradstraße in der Lauenburger Str.	?::projected 5870,4992 5905,5088 5927,5182
 #
 #: section ignorieren vvv
 #: section Straßen in Bau und Planung vvv
+# 
+#: last_checked: 2012-05-12 vvv
+#: next_check: 2013-01-01 vvv
+Straße in Bau, Name? Qualität? Genauer Verlauf?	? -13432,782 -13615,844
+Straße in Bau, Name? Qualität? Genauer Verlauf?	? -13433,693 -13642,750
+Verlängerung der Jochen-Klepper-Str. in Bau	? -13436,595 -13668,669
+#: next_check ^^^
+#: last_checked ^^^
 # 
 #: last_checked: 2012-05-06 (noch keine Anzeichen)
 #: next_check: 2013-03-01
@@ -667,7 +676,7 @@ Gustav-Hartmann-Platz: wo genau befindet sich der Platz?	? -4744,1466
 # 
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20120302.1240.366909.html
 #: by: http://www.berlin.de/ba-treptow-koepenick/organisationseinheiten/tief/index.html?date=20120505
-#: next_check: 2012-07-31
+#: next_check: 2012-07-13
 Königsheideweg: Geh- und Radwegarbeiten im Königsheideweg - gibt es danach hier Radwege?	?::inwork 16784,4913 16554,5022 16362,5112 16279,5170
 #XXX del --- trotz Bauarbeiten weiterhin ausgeschildert --- Radroutenwegführung überprüfen	? 9890,12161 9875,12257 9869,12297 9852,12409
 Vulkanstr./Landsberger Allee - Große Leegestr.: hier existiert wohl eine Radwegführung mit Ampel, genauer anschauen!	? 15838,14319 15837,14324 15923,14334 15922,14344 15920,14357
@@ -1022,7 +1031,7 @@ Sawallstr. (Erkner): mäßiges Kopfsteinpflaster, Q2	? 34024,1360 34181,1349
 #: by: Ramona Hesse vvv
 #: XXX anonymous meint aber: Beton, Q2
 Am Schlangenfenn (Potsdam): guter Asphalt, Q0	? -10516,-5498 -10585,-5528 -10630,-5553 -10712,-5594 -10758,-5502 -10630,-5440
-Am Schlangenfenn (Potsdam): guter Asphalt, Q0	? -10585,-5528 -10630,-5440 -10652,-5393 -10804,-5464
+Am Schlangenfenn (Potsdam): guter Asphalt, Q0	? -10585,-5528 -10630,-5440 -10652,-5393 -10836,-5477
 #: by: ^^^
 #: by: anonymous
 Am Upstall, Fahrland: Asphalt, Q0	? -16009,7063 -16011,7252 -16010,7299 -15998,7329 -15967,7362 -15929,7375 -15891,7375 -15815,7375
@@ -2980,7 +2989,8 @@ Paul-Wegener-Str.: Qualität?	? -6949,-4389 -7049,-4505
 #: XXX Verknüpfungen zu den angrenzenden Straßen?
 Priesterweg (Potsdam): Qualität? Teilweise für Autos gesperrt?	? -6767,-4463 -6940,-4609 -7038,-4699 -7172,-4776 -7199,-4797 -7873,-4811
 #: XXX laut osm cobblestone
-Alt-Drewitz (Potsdam): Qualität? Wird die Straße mit oder ohne Bindestrich geschrieben?	? -8101,-4749 -8150,-4849 -8141,-4962 -8186,-5161 -8165,-5236
+#: XXX in Potsdam.coords.data ohne Bindestrich
+Alt Drewitz (Potsdam): Qualität? Wird die Straße mit oder ohne Bindestrich geschrieben?	? -8101,-4749 -8150,-4849 -8141,-4962 -8186,-5161 -8165,-5236
 Kirchstr. (Potsdam): Qualität?	? -7534,-5904 -7473,-5743 -7561,-5659 -7796,-5447 -7910,-5356 -8057,-5350
 #: XXX str_cont_ausnahme-Eintrag:
 Am Friedhof (Potsdam): Qualität?	? -7722,-5701 -7728,-5839 -7719,-5916
@@ -3211,7 +3221,6 @@ Striewitzweg (Teltow): Qualität in den verschiedenen Abschnitten der Straße? Ist
 #: last_checked: 2010-05
 Bau einer Radfahrer- und Fußgängerbrücke in Friedrichsthal	?::inwork 1860,42884 1907,42835
 Altdöbern - Calau: Qualität?	? 55259,-83091 55388,-83077 55768,-82862 54521,-79452 54572,-78865 54600,-77483 53827,-76082
-Kutscherweg (Potsdam): Qualität? Einbahnstraße, auch für Radfahrer gültig?	? -13627,-150 -13781,-109
 # 
 #: by: http://www.cdu-fraktion-tk.de/image/inhalte/file/Amtsblatt_51%5B1%5D.pdf
 #: XXX liegt die Straße tatsächlich hier?
@@ -3369,17 +3378,20 @@ Peter-Altmann-Str. (Potsdam-Bornim): Qualität?	? -16003,1539 -16097,1596 -16120,
 Ritterspornweg (Potsdam-Bornim): Qualität?	? -15978,1589 -16027,1618 -16072,1643
 Am Phloxgarten (Potsdam-Bornim): Qualität?	? -15980,1690 -16027,1618
 Gillis-Grafström-Str. (Potsdam-Bornim): Qualität?	? -16000,1727 -16036,1707 -16072,1643 -16097,1596
-#: by: http://www.potsdam.de/cms/dokumente/10041363_620110/675f27c5/Amtsblatt2008_4.pdf
-#: note: hier Privatstraße
-Schmiedegasse (Potsdam): verläuft die Schmiedegasse bis zur Pappelallee? Qualität der Fahrbahn?	? -13581,-10 -13561,117
 # 
 #: XXX fehlt in Potsdam.coords.data vvv
 #: note: Privatstraße vvv
+#: last_checked: 2012-05-12 (Bauarbeiten im Gange)
+#: next_check: 2012-08-01
 #: by: http://www.potsdam.de/cms/dokumente/10073161_1189396/13ef9d53/AblPdm1_11.pdf vvv
 Bienenwinkel (Potsdam): Qualität? Genauer Verlauf der Straße?	? -13345,1962 -13316,2003 -13279,1958
+#: last_checked: 2012-05-12 (Bauarbeiten erkennen, aber ist das überhaupt die richtige Straße?)
+#: next_check: 2012-08-01
 Zum Exerzierhaus (Potsdam): Qualität? Genauer Verlauf der Straße?	? -13108,2010 -12981,2014
 #: by: ^^^
 #: note: ^^^
+Horst-Bienek-Str. (Potsdam): Qualität? Genauer Verlauf der Straße? Genauer Straßenname?	? -13696,572 -13668,669 -13642,750 -13615,844
+# 
 #: by: http://www.potsdam.de/cms/dokumente/10072610_974248/9aba6281/abl16_10.pdf
 #: by: http://www.potsdam.de/cms/dokumente/10081131_1189396/883b581e/abl05_11.pdf
 Zum Mühlenteich (Potsdam-Golm): Qualität? Genauer Verlauf der Straße?	? -18962,128 -19159,178
@@ -3389,9 +3401,6 @@ Thomas-Müntzer-Str. (Potsdam-Golm): Qualität?	? -18889,-591 -18882,-573 -18833,-
 Falknerstr. (Potsdam-Golm): Qualität?	? -18889,-591 -18889,-641 -18939,-739
 #: XXX ^^^
 # 
-Karen-Jeppe-Str. (Potsdam): Qualität?	? -13327,116 -13232,98 -13189,85
-#: by: http://www.potsdam.de/cms/dokumente/10070563_974248/47b27bac/Amtsblatt_13_10.pdf (Lage der Straße)
-Richard-Schäfer-Str. (Potsdam): Qualität?	? -13226,157 -13166,146 -13160,166 -13225,179
 #: XXX laut osm "paved"
 #: XXX fehlt in Potsdam.coords.data
 Paarener Dorfstraße (Potsdam-Uetz-Paaren): Qualität?	? -21443,8306 -21412,8481 -21390,8578 -21226,8822 -20996,8861 -20405,9004
@@ -3492,6 +3501,8 @@ Am Meisenwinkel: Wo genau liegt die Straße? Qualität?	? 9109,20470 9145,20431
 #: XXX   Picardieweg
 Anlage Frohsinn: Benennung von 11 Privatwegen, wo genau, Qualität?	? 10873,22065 10841,21949
 #
+#: section ignorieren vvv
+#: XXX ignore because of check_nearest errors
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/19re.pdf/file?y=2012
 #: XXX fehlen alle in Berlin.coords.data, PLZ=13158 und PLZ=13159
 #: XXX (Schreibweise nochmal prüfen!)
@@ -3531,6 +3542,7 @@ Anlage Frohsinn: Benennung von 11 Privatwegen, wo genau, Qualität?	? 10873,22065
 #: XXX   Brunnenkresseweg
 #: XXX   Currykrautweg
 Neue Privatstraßen in der Kolonie Einigkeit	? 9897,21861 9456,21937 8931,22056 8591,22224 8504,22281 8452,22105 8755,21962 8712,21858 8642,21886 8602,21804 8704,21750 8608,21507 8722,21437 8786,21397 8892,21324 9413,21659
+#: section ^^^
 # 
 #: XXX: westliches Ende sah asphaltiert aus
 #: XXX: Straßenschilder? Das könnte der "Falkenberger Fußsteig" sein, wovon es aber nur wenige Referenzen im Netz gibt, u.a. bei http://www.berlin.de/ba-lichtenberg/buergerservice/stadtplanung/index.php?strasse=falkenberger+fu%C3%9Fsteig&strasse_mit=--+Bitte+ausw%C3%A4hlen+--&plz=--+Bitte+ausw%C3%A4hlen+--#results
@@ -3844,3 +3856,9 @@ Hartriegelstr. - Michael-Brückner-Str.: Nachts beleuchtet?	? 18695,5076 18622,50
 Lübarser Aue: Qualität? Wo wird sich die Straße befinden?	?::inwork 7185,22466 7147,22393
 Am Rodelberg: Qualität? Wo wird sich die Straße befinden?	?::inwork 7257,22381 7296,22458
 #: by: ^^^
+# 
+#: XXX alle in Potsdam-Grube vvv
+Aalsteig (Potsdam): Qualität?	? -19584,4326
+#: XXX ^^^
+Ahornstr. (Potsdam): Qualität?	? -8829,-2741 -8870,-2876
+Alter Torfweg (Potsdam): Qualität? Existieren Straßenschilder?	? -10836,-5477 -10829,-5608 -10917,-5739 -11089,-5909
