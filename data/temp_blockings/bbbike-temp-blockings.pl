@@ -1,7 +1,7 @@
 # -*- mode: bbbike; coding: iso-8859-1 -*-
 # temp-blocking
 # XXX undef old entries
-# iso2epoch: date -j 2011MMDDhhmm +%s
+# iso2epoch: date -j 2012MMDDhhmm +%s
 #            date +%s
 require Time::Local;
 @temp_blocking =
@@ -13942,9 +13942,9 @@ EOF
 userdel	q4::inwork 9098,42254 9043,42165 9032,42153
 EOF
      },
-     { from  => 1306533600, #1241414920, # 2009-05-04 07:28
-       until => 1306699200, #1241528400, # 2009-05-05 15:00
-       text  => 'Preußenallee (Charlottenburg) in beiden Richtungen zwischen Marathonallee und Badenallee Veranstaltung, Straße vollständig gesperrt (28. und 29. Mai 2011)',
+     { from  => 1337378400, # 1306533600, #1241414920, # 2009-05-04 07:28
+       until => 1337551200, # 1306699200, #1241528400, # 2009-05-05 15:00
+       text  => 'Preußenallee (Charlottenburg) in beiden Richtungen zwischen Marathonallee und Badenallee Veranstaltung (Frühling in der Preußenallee), Straße wahrscheinlich vollständig gesperrt (19. und 20. Mai 2012)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork 596,11951 585,11830 572,11698 563,11601
@@ -19148,8 +19148,8 @@ userdel	q4::inwork; 11603,15455 11502,15527
 EOF
      },
      { from  => 1307250000, # 2011-06-05 07:00
-       until => 1335798000, # 2012-04-30 17:00
-       text  => 'Dorotheenstr. (Mitte): Baustelle, Fahrtrichtung gesperrt (bis Ende 04/12) Richtung Friedrichstr. zwischen Wilhelmstr. und Schadowstr., 06.06.2011 07:00 Uhr bis 30.04.2012 17:00 Uhr ',
+       until => 1341068400, # 2012-06-30 17:00
+       text  => 'Dorotheenstr. (Mitte): Baustelle, Fahrtrichtung gesperrt Richtung Friedrichstr. zwischen Wilhelmstr. und Schadowstr., 06.06.2011 07:00 Uhr bis 30.06.2012 17:00 Uhr ',
        type  => 'handicap',
        source_id => 'INKO_093371',
        data  => <<EOF,
@@ -20144,6 +20144,40 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::inwork 18722,8582 18709,8423
+EOF
+     },
+     { from  => undef, # 
+       until => 1341093600, # 2012-07-01 00:00
+       text  => 'Peace Wall/Friedensmauer; auf Gehweg ausweichen (bis Juli 2012)',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::temp 9521,10926 9535,10820
+EOF
+     },
+     { from  => 1336943422, # 2012-05-13 23:10
+       until => 1337551200, # 2012-05-21 00:00
+       text  => 'Ersatzneubau Brücke über den Stierngraben Brücke über den Stierngraben bei Kaakstedt, Vollsperrung zw. Suckow und Gerswalde und umgekehrt 07.05.2012 bis 20.05.2012',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 35887,85385 34920,85944
+EOF
+     },
+     { from  => 1336420800, # 2012-05-07 22:00
+       until => 1347289200, # 2012-09-10 17:00
+       text  => 'Spanische Allee (Nikolassee): Bauarbeiten an den Bahnbrücken, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Regelung mit provisorischen Ampeln bis Mitte September 2012',
+       type  => 'handicap',
+       source_id => 'IM_018769',
+       data  => <<EOF,
+userdel	q4::inwork -3648,2881 -3736,2849
+EOF
+     },
+     { from  => 1336944008, # 2012-05-13 23:20
+       until => 1339797600, # 2012-06-16 00:00
+       text  => 'Wünsdorfer Str. (Lichtenrade) zwischen Prinzessinnenstr. und Blohmstr zwischen 14.05.2012 und 15.06.2012 Baustelle, Vollsperrung',
+       type  => 'handicap',
+       source_id => 'INKO_112449',
+       data  => <<EOF,
+userdel	q4::inwork 10096,-2137 10021,-1918
 EOF
      },
     );
