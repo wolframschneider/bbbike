@@ -302,9 +302,9 @@ function osm_init(opt) {
             factor_time = 2;
         }
 
-        var time = 600 + size / 5 + (size * 0.6 * factor_time);
+        var time = 600 + size / 3 + (size * 0.7 * factor_time);
         var result = ", approx. " + Math.floor(factor * size * 0.25) + "-" + Math.ceil(factor * size * 2) + " MB OSM data";
-        if (size < config.max_skm) {
+        if (skm < config.max_skm) {
             result += ", min. extract time: " + Math.ceil(time / 60) + " minutes";
         }
         return result;
