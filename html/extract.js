@@ -302,10 +302,13 @@ function osm_init(opt) {
             factor_time = 2;
         }
 
-        var time = 600 + size / 3 + (size * 0.7 * factor_time);
+        var time_min = 600 + (size / 3 + (size * 0.7 * factor_time)) / 4;
+        var time_max = 600 + size / 3 + (size * 0.7 * factor_time);
         var result = ", approx. " + Math.floor(factor * size * 0.25) + "-" + Math.ceil(factor * size * 2) + " MB OSM data";
         if (skm < config.max_skm) {
-            result += ", min. extract time: " + Math.ceil(time / 60) + " minutes";
+            var min = Math.ceil(time_min / 60);
+            var max = Math.ceil(time_max / 60);
+            result += ", approx. extract time: " + min + (min != max ? "-" + max : "") + " minutes";
         }
         return result;
     }
