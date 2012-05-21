@@ -47,3 +47,6 @@ form input[type=submit] {
         margin-bottom: 0.4em; 
 }
 
+div#export_osm_too_large { color: red }
+
+

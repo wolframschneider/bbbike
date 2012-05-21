@@ -287,15 +287,30 @@ function osm_init(opt) {
         var format = $("select[name=format] option:selected").val();
 
         var factor = 1; // PBF
+        var factor_time = 0; // PBF
         if (format == "osm.gz") {
             factor = 2;
+            factor_time = 0.5;
         } else if (format == "osm.bz2") {
             factor = 1.5;
+            factor_time = 1;
         } else if (format == "osm.xz") {
             factor = 1.3;
+            factor_time = 0.4;
+        } else if (format == "garmin-osm.zip" || format == "garmin-cycle.zip") {
+            factor = 0.8;
+            factor_time = 2;
         }
 
-        return ", approx. " + Math.floor(factor * size * 0.25) + "-" + Math.ceil(factor * size * 2) + " MB OSM data";
+        var time_min = 600 + (size / 3 + (size * 0.7 * factor_time)) / 4;
+        var time_max = 600 + size / 3 + (size * 0.7 * factor_time);
+        var result = ", approx. " + Math.floor(factor * size * 0.25) + "-" + Math.ceil(factor * size * 2) + " MB OSM data";
+        if (skm < config.max_skm) {
+            var min = Math.ceil(time_min / 60);
+            var max = Math.ceil(time_max / 60);
+            result += ", approx. extract time: " + min + (min != max ? "-" + max : "") + " minutes";
+        }
+        return result;
     }
 
     function getMapLayers() {
