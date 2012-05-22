@@ -1596,14 +1596,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "lang": lang
     });
 
-    custom_layer(map, {
-        "layer": "Replay",
-        "enabled": bbbike.mapLayers.Replay && is_route,
-        // display only on route result page
-        "active": layer == "replay" ? true : false,
-        "callback": runReplay,
-        "lang": lang
-    });
 
 
     custom_layer(map, {
@@ -1641,6 +1633,15 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "layer": "Replay",
+        "enabled": bbbike.mapLayers.Replay && is_route,
+        // display only on route result page
+        "active": layer == "replay" ? true : false,
+        "callback": runReplay,
+        "lang": lang
+    });
+
+    custom_layer(map, {
         "id": "google_BicyclingLayer",
         "layer": "BicyclingLayer",
         "enabled": bbbike.mapLayers.BicyclingLayer,
@@ -1657,7 +1658,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "callback": add_traffic_layer,
         "lang": lang
     });
-
 
     setTimeout(function () {
         hideGoogleLayers();
