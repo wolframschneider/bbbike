@@ -45,9 +45,9 @@ userdel auto	3 9702,10129 9827,10051 9837,9856
 userdel auto	3 9579,10122 9599,10175 9593,10238
 EOF
      },
-     { from  => 1307743200, # Time::Local::timelocal(reverse(2010-1900,5-1,23,0,0,0)), # PERIODISCH!
-       until => 1307915940, # Time::Local::timelocal(reverse(2010-1900,5-1,23,23,59,25)), # PERIODISCH!
-       text  => 'Karneval der Kulturen, 12.6.2011',
+     { from  => Time::Local::timelocal(reverse(2012-1900,5-1,27,0,0,0)), # PERIODISCH!
+       until => Time::Local::timelocal(reverse(2012-1900,5-1,27,23,59,25)), # PERIODISCH!
+       text  => 'Karneval der Kulturen, 27.5.2012',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9242,9694 9043,9745 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
@@ -6760,7 +6760,7 @@ EOF
        text  => 'B 166 Berliner Str., Lindenallee OD Schwedt Deckenerneuerung Vollsperrung 21.11.2006-28.11.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 69480,73471 69238,73315
+userdel	q4::inwork 69480,73471 69302,73357 69238,73315
 EOF
      },
      { from  => 1164612153, # 2006-11-27 08:22
@@ -9739,7 +9739,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006462',
        data  => <<EOF,
-userdel	2::temp 13915,20944 13562,20913 13576,20849
+userdel	2::temp 13909,20928 13562,20913 13576,20849
 EOF
      },
      { from  => undef, # 
@@ -11473,9 +11473,9 @@ userdel	q4::inwork 3257,-10374 2629,-10301 2580,-11069
 userdel	q4::inwork 1867,-10228 2629,-10301
 EOF
      },
-     { from  => 1307570400, # 1243578210, # 2009-05-29 08:23
-       until => 1308002340, # Time::Local::timelocal(reverse(2009-1900,6-1,2,5,0,0)), # 1180753200, # 2007-06-02 05:00
-       text  => 'Straßen um den Blücherplatz Kreuzberg Blücherplatz, Waterlooufer: Mehringdamm - Zossener Str., Blücherstr.: Mehringdamm - Zossener Str., Zossener Str.: Waterlooufer-Blücherstr. gesperrt (10. - 13.06.2011)',
+     { from  => 1337887258, # 1307570400, # 1243578210, # 2009-05-29 08:23
+       until => Time::Local::timelocal(reverse(2012-1900,5-1,29,6,0,0)), # 1180753200, # 2007-06-02 05:00
+       text  => 'Straßen um den Blücherplatz Kreuzberg Blücherplatz, Waterlooufer: Mehringdamm - Zossener Str., Blücherstr.: Mehringdamm - Zossener Str., Zossener Str.: Waterlooufer-Blücherstr. gesperrt (24. - 29.05.2011)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 9521,10010 9448,10014
@@ -12787,7 +12787,7 @@ EOF
        text  => 'L 025 Schmölln - LG - Penkun zw. Landesgrenze und Schmölln grundhafter Straßenbau Vollsperrung 29.09.2008-23.12.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 55977,100103 56268,99856 56856,99683 57516,99296
+userdel	2::inwork 55977,100103 56188,99924 56268,99856 56856,99683 57042,99574 57516,99296
 EOF
      },
      { from  => 1223416800, # 2008-10-08 00:00
@@ -14828,11 +14828,11 @@ EOF
 userdel	2::inwork 45489,76653 45010,77128 44326,77553 43888,77919 43560,78752
 EOF
      },
-     { from  => 1247468400, # 2009-07-13 09:00
-       until => 1281016800, # 2010-08-05 16:00
-       text  => 'Hobrechtsfelder Chaussee - Bucher Str.: Brückenneubau, Straße vollständig gesperrt, 14.07.2009 09:00 Uhr bis 05.08.2010 16:00 Uhr',
+     { from  => 1337887384, # 1247468400, # 2009-07-13 09:00
+       until => Time::Local::timelocal(reverse(2012-1900,5-1,31,17,0,0)), # 1281016800, # 2010-08-05 16:00
+       text  => 'Hobrechtsfelder Chaussee - Bucher Str.: Brückenneubau, Straße vollständig gesperrt, bis zum 31.05.2012',
        type  => 'gesperrt',
-       source_id => 'IM_013617',
+       source_id => 'INKO_113068',
        data  => <<EOF,
 userdel	2::inwork 14314,25193 14219,25013 14029,24753
 EOF
@@ -18210,7 +18210,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016256',
        data  => <<EOF,
-userdel	q4::inwork; 12575,18275 12606,18215 12693,18081 12736,17998
+userdel	q4::inwork; 12575,18275 12597,18235 12693,18081 12736,17998
 EOF
      },
      { from  => 1284532129, # undef
@@ -19066,7 +19066,7 @@ EOF
        source_id => 'IM_017318',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110530.1300.346009.html
-userdel	2::inwork 15383,9191 14819,9462 14780,9480 14310,9692
+userdel	2::inwork 15383,9191 14883,9431 14819,9462 14780,9480 14310,9692
 EOF
      },
      { from  => undef, # 
@@ -19139,7 +19139,7 @@ userdel	2::inwork 97780,-91551 97468,-91292
 EOF
      },
      { from  => 1299564000, # 2011-03-08 07:00
-       until => 1349114400, # 2012-10-01 20:00
+       until => 1337887761, # XXX? 1349114400, # 2012-10-01 20:00
        text  => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt Richtung Schönhauser Allee zwischen Dunckerstr. und Schliemannstr., 09.03.2011 bis 01.10.2012 ',
        type  => 'handicap',
        source_id => 'IM_017000',
@@ -20155,7 +20155,7 @@ userdel	q4::temp 9521,10926 9535,10820
 EOF
      },
      { from  => 1336943422, # 2012-05-13 23:10
-       until => 1337551200, # 2012-05-21 00:00
+       until => 1337887165, # 1337551200, # 2012-05-21 00:00
        text  => 'Ersatzneubau Brücke über den Stierngraben Brücke über den Stierngraben bei Kaakstedt, Vollsperrung zw. Suckow und Gerswalde und umgekehrt 07.05.2012 bis 20.05.2012',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -20178,6 +20178,32 @@ EOF
        source_id => 'INKO_112449',
        data  => <<EOF,
 userdel	q4::inwork 10096,-2137 10021,-1918
+EOF
+     },
+     { from  => 1337887553, # 2012-05-24 21:25
+       until => 1341612000, # 2012-07-07 00:00
+       text  => 'Prenzlau: K7324: Straßenbauarbeiten Prenzlau, zw. OL Wollenthin und Bündigershof Umleitung: über Prenzlau, 02.04.2012 bis 06.07.2012 ',
+       type  => 'gesperrt',
+       source_id => '127310045',
+       data  => <<EOF,
+userdel	2::inwork 42981,101756 42922,101898 42875,102012 42912,102131 43131,102293 43262,102525 43200,102737
+EOF
+     },
+     { from  => 1336899120, # 2012-05-13 10:52
+       until => 1338566400, # 2012-06-01 18:00
+       text  => 'Wühlischstr. (Friedrichshain): Baustelle, Fahrtrichtung Richtung Warschauer Str. zwischen Gryphiusstr. und Seumestr. gesperrt, als Radfahrer kann man langsam und vorsichtig passieren, 14.05.2012 10:52 Uhr bis 01.06.2012 18:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_018810',
+       data  => <<EOF,
+userdel	q3::inwork; 14434,11465 14369,11489 14305,11514
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Sredzkistr. zwischen Schönhauser Allee und Knaackstr: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 10893,14705 11101,14768
 EOF
      },
     );

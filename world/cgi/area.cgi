@@ -52,7 +52,7 @@ sub footer {
 <hr/>
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
-(&copy;) 2008-2012 <a href="http://bbbike.org">BBBike.org</a> // Map data by <a href="http://www.openstreetmap.org/" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
+(&copy;) 2008-2012 <a href="http://bbbike.org">BBBike.org</a> // Map data (&copy;) <a href="http://www.openstreetmap.org/" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
 <div id="footer_community">
 </div>
 </div>
@@ -139,12 +139,13 @@ sub header {
         $base = "$www_bbbike_org/cgi/";
     }
 
+#my @javascript = ( "http://www.google.com/jsapi?hl=de", "http://maps.googleapis.com/maps/api/js?sensor=false&amp;language=de&amp;libraries=panoramio,weather", "/html/bbbike-js.js");
     my @javascript = (
         "../html/jquery-1.4.2.min.js",
 "../html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js",
 "http://maps.google.com/maps/api/js?sensor=$sensor&amp;libraries=weather,panoramio",
         "../html/bbbike.js",
-        "../html/maps3.js",
+        "../html/maps3.js"
     );
 
     return $q->start_html(
@@ -239,6 +240,8 @@ usage: $0 [ options ]
 
 --debug={0..2}          debug level, default: $debug
 --offline               run offline
+--city=name             given city name
+--download=url          download site
 EOF
 }
 
@@ -259,6 +262,8 @@ GetOptions(
 
 die usage if $help;
 
+$download_bbbike_org = "" if $offline;
+
 my $database = "world/etc/cities.csv";
 $database = "../$database" if -e "../$database";
 
@@ -276,7 +281,7 @@ print qq{<div id="sidebar">}, &download_area($city), qq{</div>\n};
 print qq{<div id="BBBikeGooglemap" style="height:94%">\n};
 print qq{<div id="map"></div>\n};
 
-my $map_type = $city_area ? "mapnik" : "terrain";
+my $map_type = "hike_bike";
 print &js_jump($map_type);
 print &js_map;
 
@@ -357,6 +362,8 @@ foreach my $c (@city_list) {
       . ( $offline ? "../$c/" : qq{?city=$c} )
       . qq{">$c</a>\n};
 }
+print
+qq{\n| <span id="maplink"><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=http:%2F%2Fwww.bbbike.org%2Fbbbike-world.kml&amp;ie=UTF8&amp;t=p&amp;ll=52.961875,12.128906&amp;spn=22.334434,47.460938&amp;z=4" >View on a Map</a></span>\n};
 print qq{<p/></div><!-- more cities -->\n};
 
 print &footer( "cities" => \@city_list, 'city' => $city );

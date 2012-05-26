@@ -24,6 +24,7 @@ use Email::Valid;
 use Digest::MD5 qw(md5_hex);
 use Net::SMTP;
 use GIS::Distance::Lite;
+use HTTP::Date;
 
 use strict;
 use warnings;
@@ -116,7 +117,7 @@ sub header {
     return $q->header( -charset => 'utf-8', @cookie ) .
 
       $q->start_html(
-        -title => 'BBBike @ World extracts',
+        -title => 'BBBike @ World: OpenStreetMap extracts',
         -head  => $q->meta(
             {
                 -http_equiv => 'Content-Type',
@@ -186,13 +187,15 @@ sub footer {
 
 <div id="footer">
   <div id="footer_top">
-    <a href="../">home</a> $extracts | <a href="../community.html#donate">donate</a>
+    <a href="../">home</a> $extracts | 
+    <a href="http://download.bbbike.org/osm/">download</a> | 
+    <a href="../community.html#donate">donate</a>
   </div>
   <hr/>
   <div id="copyright">
     (&copy;) 2011-2012 <a href="http://www.bbbike.org">BBBike.org</a> 
     by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> //
-    Map data <a href="http://www.openstreetmap.org/" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
+    Map data (&copy;) <a href="http://www.openstreetmap.org/" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
   <div id="footer_community"></div>
   </div>
 </div>
@@ -226,8 +229,8 @@ EOF
 
 sub message {
     return <<EOF;
-<b>BBBike @ World extracts</b>:
-This site allow you to extracts areas from the <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">planet.osm</a>.
+<b>BBBike @ World OpenStreetMap extracts</b>:
+this site allow you to extracts areas from the <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">planet.osm</a>.
 The maximum area size is @{[ large_int($max_skm) ]} square km.
 
 It takes between 10-30 minutes to extract an area. You will be notified by e-mail if your extract is ready for download.
@@ -284,7 +287,8 @@ sub check_input {
 
     sub Param {
         my $param = shift;
-        my $data = $qq->param($param) || "";
+        my $data  = $qq->param($param);
+        $data = "" if !defined $data;
 
         $data =~ s/^\s+//;
         $data =~ s/\s+$//;
@@ -377,6 +381,7 @@ EOF
         'ne_lat' => $ne_lat,
         'ne_lng' => $ne_lng,
         'skm'    => $skm,
+        'date'   => time2str(time),
         'time'   => time(),
     };
 

@@ -164,27 +164,31 @@ fetch-extracts fetch:
 osm2pbf: osm-readme
 	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.gz\0, ' | ${XARGS} -n 1 -0 -P${MAX_OSM2PBF} ${OSM2PBF}
 
-osm2garmin: osm2garmin-osm osm2garmin-cycle
+osm2garmin: osm2garmin-osm osm2garmin-cycle osm2garmin-leisure
 osm2garmin-osm:
 	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | ${XARGS} -n 1 -0 -P${MAX_OSM2GARMIN} ${OSM2GARMIN}
 
 osm2garmin-cycle:
 	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | env ext=garmin-cycle.zip ${XARGS} -n 1 -0 -P${MAX_OSM2GARMIN} ${OSM2GARMIN}
 
-osm-index:
-	for i in ${CITIES}; do \
-	    (cd cgi; ./area.cgi --offline --city=$$i ) > ${OSM_DIR}/$$i/index.html; \
-	done
+osm2garmin-leisure:
+	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | env ext=garmin-leisure.zip ${XARGS} -n 1 -0 -P${MAX_OSM2GARMIN} ${OSM2GARMIN}
 
 osm-readme:
 	for i in ${CITIES}; do \
 	    perl -npe "s/%{city}/$$i/g" world/download/etc/CITY.txt > ${OSM_DIR}/$$i/HEADER.txt; \
         done
 
+osm-html:
+	cd cgi; \
+	for i in ${CITIES}; do \
+	  ./area.cgi --offline --city=$$i > ../${OSM_DIR}/$$i/index.html & \
+        done; wait
 
 cities-parallel:
 	@echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ./world/bin/cities-parallel --xargs ${MAX_OSMOSIS} cities-pbf | ${TIME} xargs -0 -n1 -P${MAX_OSMOSIS} /bin/sh -c
 	${MAKE} -f Makefile.osm check-osm-gzip
+	${MAKE} -f Makefile.osm osm-html
 
 _cities:
 	@echo ${CITIES} | \
@@ -318,7 +322,7 @@ ${CITIES}:
 	
 ######################################################################
 
-rsync: sync-sitemap osm-header _rsync
+rsync: sync-sitemap osm-header _rsync rsync-osm
 rsync-bg: _rsync
 
 _rsync:
@@ -371,7 +375,7 @@ create-bbbike-web-symlinks: create-bbbike-web-symlinks-bbbike.en.cgi index updat
 		  ( cd $$lang && ln -fs ../$$city ); \
 		done; \
 	done
-	for script in MyCgiSimple.pm  api.cgi area.cgi livesearch.cgi  location.cgi maptype.cgi slippymap.cgi  street-coord.cgi crossing.cgi streets.cgi  weather.cgi languages.cgi extract.cgi; do \
+	for script in MyCgiSimple.pm  api.cgi area.cgi livesearch.cgi  location.cgi maptype.cgi slippymap.cgi  street-coord.cgi crossing.cgi streets.cgi  weather.cgi languages.cgi extract.cgi livesearch-extract.cgi; do \
 	   ( cd ${BBBIKE_WEB_DIR}/cgi && ln -fs ../world/cgi/$$script ); \
 	done
 	cp -f world/web/index.de.html world/web/de/index.html

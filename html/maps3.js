@@ -149,7 +149,7 @@ var state = {
     replay: false,
 
     // tags to hide in full screen mode
-    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo", "bottom", "language_switch", "headline"],
+    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo", "bottom", "language_switch", "headline", "sidebar"],
 
     // keep state of non map tags
     non_map_tags_val: {},
@@ -1596,14 +1596,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "lang": lang
     });
 
-    custom_layer(map, {
-        "layer": "Replay",
-        "enabled": bbbike.mapLayers.Replay && is_route,
-        // display only on route result page
-        "active": layer == "replay" ? true : false,
-        "callback": runReplay,
-        "lang": lang
-    });
 
 
     custom_layer(map, {
@@ -1641,6 +1633,15 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
+        "layer": "Replay",
+        "enabled": bbbike.mapLayers.Replay && is_route,
+        // display only on route result page
+        "active": layer == "replay" ? true : false,
+        "callback": runReplay,
+        "lang": lang
+    });
+
+    custom_layer(map, {
         "id": "google_BicyclingLayer",
         "layer": "BicyclingLayer",
         "enabled": bbbike.mapLayers.BicyclingLayer,
@@ -1657,7 +1658,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "callback": add_traffic_layer,
         "lang": lang
     });
-
 
     setTimeout(function () {
         hideGoogleLayers();

@@ -7407,22 +7407,29 @@ sub crossing_text {
     warn "crossing_text: $c, ", join " ", caller(), "\n" if $debug >= 2;
 
     all_crossings();
-    if (!exists $crossings->{$c}) {
-	new_kreuzungen();
-	my(@nearest) = $kr->nearest_coord($c);
-	if (!@nearest || !exists $crossings->{$nearest[0]}) {
-	    # Should not happen, but try to be smart
-	    my $crossing_text = eval {
-		my($px,$py) = convert_data_to_wgs84(split /,/, $c);
-		"N $py / O $px";
-	    };
-	    if ($@) {
-		warn $@;
-		$crossing_text = "???";
+ TRY_SCOPES: {
+	if (!exists $crossings->{$c}) {
+	    new_kreuzungen();
+	    my(@nearest) = $kr->nearest_coord($c);
+	    if (!@nearest || !exists $crossings->{$nearest[0]}) {
+		my $new_scope = increment_scope();
+		if (!$new_scope) {
+		    # Last resort, probably far away
+		    my $crossing_text = eval {
+			my($px,$py) = convert_data_to_wgs84(split /,/, $c);
+			"N $py / O $px";
+		    };
+		    if ($@) {
+			warn $@;
+			$crossing_text = "???";
+		    }
+		    return $crossing_text;
+		}
+		get_streets_rebuild_dependents();
+		goto TRY_SCOPES;
+	    } else {
+		$c = $nearest[0];
 	    }
-	    return $crossing_text;
-	} else {
-	    $c = $nearest[0];
 	}
     }
     nice_crossing_name(@{ $crossings->{$c} });
@@ -8296,7 +8303,7 @@ $permalink_text
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
 (&copy;) 1998-2012 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
-Map data by <a href="http://www.openstreetmap.org/">OpenStreetMap.org</a> contributors<br >
+Map data (&copy;) <a href="http://www.openstreetmap.org/">OpenStreetMap.org</a> contributors<br >
 
 </div> <!-- copyright -->
 
