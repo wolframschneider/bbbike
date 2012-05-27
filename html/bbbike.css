@@ -256,6 +256,11 @@ div#sidebar {
         padding-right: 0.5em;
 	background-color: white;
 	z-index: 1000; 
+
+	/* scroll city list if to long */
+	overflow-y: auto;
+	overflow-x: auto;
+	height: 90%;
 }
 
 div#routes {
