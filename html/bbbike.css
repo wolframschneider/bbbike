@@ -350,6 +350,7 @@ span#language_switch { font-size: small; }
 img.logo { border: 0px; }
 a.logo { border: 0px; text-decoration:none }
 span.current_language { font-size: large; }
+span.city { font-size: large; }
 
 
 /* 
