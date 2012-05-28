@@ -8,8 +8,10 @@ var config = {
     "max_skm": 960000,
 
     // map box for San Francisco, default
-    "sw": [-122.9, 37.2],
-    "ne": [-121.7, 37.9],
+    "city": {
+        "sw": [-122.9, 37.2],
+        "ne": [-121.7, 37.9]
+    },
 
     "show_filesize": 1,
 
@@ -18,6 +20,43 @@ var config = {
 
 // Initialise the 'map' object
 var map;
+
+// select an area to display on the map
+
+
+function select_city(name) {
+    var city = {
+        "Berlin": {
+            "sw": [12.875, 52.329],
+            "ne": [13.902, 52.705]
+        },
+        "SanFrancisco": {
+            "sw": [-122.9, 37.2],
+            "ne": [-121.7, 37.9]
+        },
+        "NewYork": {
+            "sw": [-75, 40.1],
+            "ne": [-72.9, 41.1]
+        },
+        "Copenhagen": {
+            "sw": [11.8, 55.4],
+            "ne": [13.3, 56]
+        }
+    }
+
+    if (name && city[name]) {
+        return city[name];
+    }
+
+    var key;
+    var list = new Array;
+    for (key in city) {
+        list.push(key);
+    }
+
+    key = list[parseInt(Math.random() * list.length)];
+    return city[key];
+}
 
 function init_map_size() {
     var resize = null;
@@ -101,7 +140,8 @@ function init() {
 
     // default city
     else {
-        bounds = new OpenLayers.Bounds(config.sw[0], config.sw[1], config.ne[0], config.ne[1]);
+        var c = select_city();
+        bounds = new OpenLayers.Bounds(c.sw[0], c.sw[1], c.ne[0], c.ne[1]);
     }
 
     bounds.transform(epsg4326, map.getProjectionObject());
