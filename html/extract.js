@@ -23,7 +23,6 @@ var map;
 
 // select an area to display on the map
 
-
 function select_city(name) {
     var city = {
         "Berlin": {
