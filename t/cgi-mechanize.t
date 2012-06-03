@@ -134,7 +134,7 @@ if (!@browsers) {
 @browsers = map { "$_ BBBikeTest/1.0" } @browsers;
 
 my $outer_berlin_tests = 30;
-my $tests = 129 + $outer_berlin_tests;
+my $tests = 133 + $outer_berlin_tests;
 plan tests => $tests * @browsers;
 
 if ($WWW::Mechanize::VERSION == 1.32) {
@@ -391,6 +391,7 @@ for my $browser (@browsers) {
     ######################################################################
     # A street in Potsdam but not in "landstrassen"
 
+ XXX: { ; }
  XXX_PETRI_DANK: {
 
 	$get_agent->();
@@ -425,7 +426,8 @@ for my $browser (@browsers) {
 		|\Q(Lennéstr. - Ökonomieweg, Sanssouci) (Potsdam)/Lennéstr. (Potsdam)\E
 		|\Q(Lennéstr. - Ökonomieweg, Sanssouci) (Potsdam)/(Hans-Sachs-Str. - Lennéstr.) (Potsdam)/Lennéstr. (Potsdam)\E
 		|\Q(Lennéstr. - Ökonomieweg, Sanssouci)/(Hans-Sachs-Str. - Lennéstr.)/Lennéstr. (Potsdam)\E
-	       )}ix,  "Correct goal resolution (Hans-Sachs-Str. ... or Lennéstr. ... or Ökonomieweg ...)");
+		|\QRömische Bäder\E
+	       )}ix,  "Correct goal resolution (Hans-Sachs-Str. ... or Lennéstr. ... or Ökonomieweg ... or Römische Bäder)");
 	}
 	$like_long_data->(qr{(\QSchlänitzseer Weg (Potsdam-Bornim)/Feldweg (Potsdam-Schlänitzsee)\E
 			     |\QKönigsdamm (Grube)/Schlänitzseer Weg (Marquardt)\E # before adding the extra point between Schlänitzseer Weg and Feldweg
@@ -688,7 +690,6 @@ for my $browser (@browsers) {
 	}
     }
 
- XXX: { ; }
     {
 	# Ausweichroute ohne Ergebnis (weil Start und/oder Ziel im gesperrten Gebiet liegen)
 	$get_agent->();
@@ -1130,13 +1131,14 @@ sub simulate_abc_click {
     $agent->submit;
 }
 
-# Generates two tests, returns $root (or not, if XML::LibXML is not available)
+# Generates three tests, returns $root (or not, if XML::LibXML is not available)
 sub handle_xml_response ($) {
     my $resp = shift;
     ok $resp->is_success, "Success for " . $resp->request->url
 	or diag $resp->status_line;
     my $xml = $resp->decoded_content(charset => "none"); # using decoded_content with charset decoding is problematic
     xmllint_string($xml, "XML output OK");
+    validate_bbbikecgires_xml_string($xml, 'XML validation OK');
     my $root;
     if (eval { require XML::LibXML; 1 }) {
 	my $p = XML::LibXML->new;

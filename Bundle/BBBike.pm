@@ -69,6 +69,8 @@ YAML::Syck	- optional für die Testsuite, könnte auch YAML.pm in Zukunft ersetzen
 
 JSON::XS	- optional für JSON-Dumps der BBBike-Route und diverse Serialisierungsaufgaben
 
+Kwalify	- optional für Validierung in der Testsuite
+
 Mail::Mailer 1.53	- falls man aus bbbike heraus E-Mails mit der Routenbeschreibung verschicken will
 
 MIME::Lite	- Versenden von Benutzer-Kommentaren im Webinterface
@@ -178,8 +180,6 @@ Tk::ExecuteCommand	- Bessere Fehlerberichte im temp_blockings-Editor
 Algorithm::Diff	- Unterschiede im temp_blockings-Editor anzeigen
 
 Sort::Naturally	- Für natürliches Sortieren von bbd-Dateien
-
-Geo::Coder::Google 0.06	- Geocoding über Googlemaps (API v2)
 
 Geo::Coder::Googlev3	- Geocoding über Googlemaps (API v3)
 

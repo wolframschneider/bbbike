@@ -104,6 +104,29 @@ sub add_button {
 	(-disabledforeground => "black",
 	 -menuitems =>
 	 [
+	  [Cascade => "Old VMZ/LBVS stuff",
+	   -font => $main::font{'bold'},
+	   -menuitems =>
+	   [
+	    [Button => "Show recent VMZ diff (new version)",
+	     -command => sub { show_new_vmz_diff() },
+	    ],
+	    "-",
+	    [Button => 'VMZ/LBVS lister',
+	     -command => sub { show_vmz_lbvs_files() },
+	    ],
+	    "-",
+	    [Button => "Show recent VMZ diff",
+	     -command => sub { show_vmz_diff() },
+	    ],
+	    (map { [Button => "VMZ version $_", -command => [sub { show_vmz_diff($_[0]) }, $_] ] } (0 .. 5)),
+	    "-",
+	    [Button => "Show recent LBVS diff",
+	     -command => sub { show_lbvs_diff() },
+	    ],
+	    (map { [Button => "LBVS version $_", -command => [sub { show_lbvs_diff($_[0]) }, $_] ] } (0 .. 5)),
+	   ],
+	  ],
 	  [Button => 'GPS downloads (not on biokovo)',
 	   -state => 'disabled',
 	   -font => $main::font{'bold'},
@@ -467,27 +490,6 @@ EOF
 				 ),
 	       ],
 	      ],
-	      [Cascade => $do_compound->("Old VMZ/LBVS stuff"), -menuitems =>
-	       [
-		[Button => "Show recent VMZ diff (new version)",
-		 -command => sub { show_new_vmz_diff() },
-		],
-		"-",
-		[Button => $do_compound->('VMZ/LBVS lister'),
-		 -command => sub { show_vmz_lbvs_files() },
-		],
-		"-",
-		[Button => "Show recent VMZ diff",
-		 -command => sub { show_vmz_diff() },
-		],
-		(map { [Button => "VMZ version $_", -command => [sub { show_vmz_diff($_[0]) }, $_] ] } (0 .. 5)),
-		"-",
-		[Button => "Show recent LBVS diff",
-		 -command => sub { show_lbvs_diff() },
-		],
-		(map { [Button => "LBVS version $_", -command => [sub { show_lbvs_diff($_[0]) }, $_] ] } (0 .. 5)),
-	       ],
-	      ],
 	      ($main::devel_host ? [Cascade => $do_compound->("Karte")] : ()),
 	      [Button => $do_compound->("Mark Layer"),
 	       -command => sub { mark_layer_dialog() },
@@ -575,6 +577,9 @@ EOF
 		 } qw(- XXX_busroute - snowy very_snowy dry_cold - grade1 grade2 grade3)
 		),
 	       ],
+	      ],
+	      [Button => $do_compound->("Fragezeichen on route"),
+	       -command => sub { fragezeichen_on_route() },
 	      ],
 	      "-",
 	      [Cascade => $do_compound->("Rare or old"), -menu => $rare_or_old_menu],
@@ -2555,6 +2560,61 @@ sub do_winter_optimization {
 	    }
 	    $pen;
 	};
+    }
+}
+
+use vars qw($fragezeichen_on_route_nextcheck_only);
+$fragezeichen_on_route_nextcheck_only = 1;
+sub fragezeichen_on_route {
+    eval {
+	require File::Temp;
+	require Route;
+	require Route::Heavy;
+	my($tmp1fh,$tmp1file) = File::Temp::tempfile(SUFFIX => ".bbr", UNLINK => 1) or die $!;
+	my($tmp2fh,$tmp2file) = File::Temp::tempfile(SUFFIX => ".bbd", UNLINK => 1) or die $!;
+	main::load_save_route(1, $tmp1file);
+	my $s = Route::as_strassen($tmp1file,
+				   name => 'Route',
+				   cat => 'X',
+				   fuzzy => 0,
+				  );
+	if (!$s) {
+	    die "$tmp1file lässt sich nicht konvertieren";
+	}
+	$s->write($tmp2file);
+
+	my $cmdline = "$bbbike_rootdir/miscsrc/fragezeichen_on_route.pl" . ($fragezeichen_on_route_nextcheck_only ? " -nextcheck-only" : "") . " $tmp2file";
+	my $res = `$cmdline`;
+	if (!$res) {
+	    die "Cannot get any fragezeichen on route (using $cmdline)";
+	}
+
+	unlink $tmp1file;
+	unlink $tmp2file;
+    
+	my $token = 'fragezeichen_on_route';
+	my $t = main::redisplay_top($main::top, $token, -title => 'Fragezeichen on route');
+	if (!$t) {
+	    $t = $main::toplevel{$token};
+	    $_->destroy for ($t->children);
+	}
+	my $txt = $t->Scrolled('ROText', -font => $main::font{'fixed'}, -scrollbars => "ose")->pack(qw(-fill both -expand 1));
+	$txt->insert("end", $res);
+	my $bf = $t->Frame->pack(-fill => 'x');
+	$bf->Button(-text => "Print",
+		    -command => sub {
+			open my $ofh, "|-", "lpr" or die $!;
+			print $ofh $res;
+			close $ofh or die $!;
+			main::status_message("Sent to printer", "infodlg");
+		    })->pack(-side => "left");
+	$bf->Checkbutton(-text => 'nextcheck only',
+			 -variable => \$fragezeichen_on_route_nextcheck_only,
+			 -command => sub { fragezeichen_on_route() },
+			)->pack(-side => 'left');			     
+    };
+    if ($@) {
+	main::status_message("An error happened: $@", "error");
     }
 }
 

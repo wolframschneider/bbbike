@@ -32,7 +32,7 @@ use lib ($FindBin::RealBin,
 	 "$FindBin::RealBin/..",
 	 "$FindBin::RealBin/../lib",
 	);
-use BBBikeTest qw(check_cgi_testing xmllint_string gpxlint_string kmllint_string);
+use BBBikeTest qw(check_cgi_testing xmllint_string gpxlint_string kmllint_string validate_bbbikecgires_xml_string);
 
 eval { require Compress::Zlib };
 
@@ -63,6 +63,7 @@ my %skip;
 
 my $ua = new LWP::UserAgent;
 $ua->agent("BBBike-Test/1.0");
+$ua->env_proxy;
 
 if (!GetOptions("cgiurl=s" => sub {
 		    @urls = $_[1];
@@ -95,7 +96,7 @@ if (!@urls) {
 }
 
 my $ortsuche_tests = 11;
-plan tests => (240 + $ortsuche_tests) * scalar @urls;
+plan tests => (254 + $ortsuche_tests) * scalar @urls;
 
 my $default_hdrs;
 if (defined &Compress::Zlib::memGunzip && $do_accept_gzip) {
@@ -190,6 +191,7 @@ for my $cgiurl (@urls) {
 	    } elsif ($output_as eq 'xml') {
 		like $resp->header('Content-Disposition'), qr{attachment; filename=.*\.xml$}, 'xml filename';
 		xmllint_string($content, "xmllint check for $output_as");
+		validate_bbbikecgires_xml_string($content, "schema check for output_as=$output_as");
 	    } elsif ($output_as =~ m{^( gpx-track
 				     |  gpx-route
 				     )$}x) {
@@ -251,6 +253,22 @@ for my $cgiurl (@urls) {
     {
 	my $content = std_get "$action?zielname=Nuthewinkel+%28Potsdam%29&zielplz=&zielc=-11225%2C-2878&startc=-11833%2C-63&startname=Helmholtzstr.+%28Potsdam%29&startplz=&pref_seen=1&pref_speed=21&pref_cat=&pref_quality=&pref_ampel=yes&scope=", testname => "Potsdam => Potsdam";
 	like_html $content, qr/angekommen/, "Angekommen!";
+    }
+
+ XXX: 
+    {
+	my $content = std_get "$action?startc_wgs84=13.028141,52.390967", testname => "Crossing in Potsdam, direct wgs84 coordinate";
+	like_html $content, qr{\QKastanienallee/Kantstr. (Potsdam)}, "Found crossing name";
+    }
+
+    {
+	my $content = std_get "$action?startc_wgs84=13.971133,53.924910", testname => "Crossing in wide region, direct wgs84 coordinate";
+	like_html $content, qr{\QMorgenitz - Krienke/Suckow - Morgenitz/Morgenitz - Mellenthin}, "Found crossing name";
+    }
+
+    {
+	my $content = std_get "$action?startc_wgs84=10.039791,54.623759", testname => "Crossing outside BBBike scope, direct wgs84 coordinate";
+	like_html $content, qr{N 54\.6237\d+ / O 10\.03979\d+}, "Found coordinate without crossing name";
     }
 
  SKIP: {
@@ -376,7 +394,7 @@ for my $cgiurl (@urls) {
 	          'second ImportantAngleCrossingName';
     }
 
- XXX: {
+    {
 	# Test possible "Aktuelle Position verwenden" flows
 	my($x,$y) = (10920,13139);
 
@@ -831,12 +849,13 @@ sub std_get ($;@) {
     wantarray ? ($content, $resp) : $content;
 }
 
-# One test
+# Two tests
 sub std_get_route ($;@) {
     my($url, %opts) = @_;
     local $Test::Builder::Level = $Test::Builder::Level + 1;
     my($content, $resp) = std_get($url, %opts);
     my $route = $cpt->reval($content);
+    ok validate_output_as($route), 'Validation';
     if (is ref $route, 'HASH', 'Route result is a HASH') {
 	wantarray ? ($route, $resp) : $route;
     } else {
@@ -866,50 +885,6 @@ sub uncompr {
     }
 }
 
-# REPO BEGIN
-# REPO NAME file_name_is_absolute /home/e/eserte/src/repository 
-# REPO MD5 89d0fdf16d11771f0f6e82c7d0ebf3a8
-BEGIN {
-    if (eval { require File::Spec; defined &File::Spec::file_name_is_absolute }) {
-	*file_name_is_absolute = \&File::Spec::file_name_is_absolute;
-    } else {
-	*file_name_is_absolute = sub {
-	    my $file = shift;
-	    my $r;
-	    if ($^O eq 'MSWin32') {
-		$r = ($file =~ m;^([a-z]:(/|\\)|\\\\|//);i);
-	    } else {
-		$r = ($file =~ m|^/|);
-	    }
-	    $r;
-	};
-    }
-}
-# REPO END
-# REPO BEGIN
-# REPO NAME is_in_path /home/e/eserte/src/repository 
-# REPO MD5 81c0124cc2f424c6acc9713c27b9a484
-sub is_in_path {
-    my($prog) = @_;
-    return $prog if (file_name_is_absolute($prog) and -f $prog and -x $prog);
-    require Config;
-    my $sep = $Config::Config{'path_sep'} || ':';
-    foreach (split(/$sep/o, $ENV{PATH})) {
-	if ($^O eq 'MSWin32') {
-	    # maybe use $ENV{PATHEXT} like maybe_command in ExtUtils/MM_Win32.pm?
-	    return "$_\\$prog"
-		if (-x "$_\\$prog.bat" ||
-		    -x "$_\\$prog.com" ||
-		    -x "$_\\$prog.exe" ||
-		    -x "$_\\$prog.cmd");
-	} else {
-	    return "$_/$prog" if (-x "$_/$prog" && !-d "$_/$prog");
-	}
-    }
-    undef;
-}
-# REPO END
-
 sub my_uri_escape {
     my $toencode = shift;
     return undef unless defined($toencode);
@@ -933,4 +908,36 @@ sub unlike_html ($$$) {
     my($content, $rx, $testname) = @_;
     local $Test::Builder::Level = $Test::Builder::Level+1;
     BBBikeTest::unlike_long_data($content, $rx, $testname, '.html');
+}
+
+{
+    my $schema;
+    sub validate_output_as {
+	my($data) = @_;
+	my $res = 1;
+    SKIP: {
+	    if (!defined $schema) {
+		if (!eval { require Kwalify; require YAML::Syck; 1 }) {
+		    diag "Kwalify and YAML::Syck needed for schema validation, but not available.";
+		    $schema = 0;
+		} else {
+		    my $schema_file = "$FindBin::RealBin/../misc/bbbikecgires.kwalify";
+		    if (!-r $schema_file) {
+			diag "Schema file $schema_file is missing.";
+			$schema = 0;
+		    } else {
+			$schema = YAML::Syck::LoadFile($schema_file);
+		    }
+		}
+	    }
+
+	    if ($schema) {
+		if (!eval { Kwalify::validate($schema, $data) }) {
+		    diag $@;
+		    $res = 0;
+		}
+	    }
+	}
+	$res;
+    }
 }

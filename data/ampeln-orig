@@ -154,6 +154,7 @@
 	X 13588,11490
 	X 13651,11731
 	X 13696,11920
+#: XXX_prog keine Ampel in N-S-Richtung. Beim (Fußgänger-)Abbiegen von N->E gibt es eine Ampel nur an einer Fahrbahn.
 	X 13745,12118
 	X 13785,12292
 	F 13472,12337
@@ -278,6 +279,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9444,11616
 	X 9386,12092
 	X 9358,12351
+#: XXX wird zu X nach Eröffnung der Axel-Springer-Str.
+#: last_checked: 2012-05-31
+#: next_check: 2012-06-15
 	F 10213,11728
 	X 10512,12039
 	X 10738,12364
@@ -302,6 +306,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10920,13139
 	X 10755,13152
 	X 11170,13475
+#: XXX Ampelanlange wird umgebaut (Richtung Kreuzung)
+#: by: http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20120514.1415.370100.html
+#: next_check: 2013-03-01
 	F 10511,14418
 	X 10003,14088
 	X 9800,14722
@@ -353,9 +360,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4743,7212
 	X 4787,7203
 	X 4021,6729
-	X 4084,6766
+	X 4061,6753
 	X 3947,6814
-	X 4000,6852
+	X 3981,6850
 	X 3216,6393
 	X 3707,5758
 	X 4520,5793
@@ -969,7 +976,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2029,20331
 	X 127,17176
 	X -344,15200
-	X -248,14518
+	X -283,14523
 	X 1479,14343
 	X 1360,14375
 	X 2087,14078
@@ -1163,7 +1170,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 14310,9692
 	X 9918,13733
 	X 8570,15107
-	X 6849,14831
+# del	X 6849,14831
 	X 6334,14756
 	X 3711,16481
 	X 3788,16621
@@ -1241,7 +1248,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 13566,20540
 	X 13912,17320
 	X 14559,16912
-	X 14244,17095
+	X 14235,17103
 	F 14595,15980
 	X 17240,11791
 	X 22484,11270
@@ -1286,7 +1293,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX_prog: keine Ampel aus Richtung Birkbuschstr.
 	X 4807,5131
 	X 25519,4830
-	X 990,14062
+	X 984,14086
 	X 6497,16652
 	X 6704,16898
 	X 8226,11458
@@ -1384,8 +1391,8 @@ nur Richtung O	X 8142,7221
 #: note: "F" laut Luftbild
 	F -3043,16601
 	X -2959,17507
-	X -303,15526
-	X 468,15640
+	X -302,15546
+	X 449,15654
 	X 1238,15705
 	X 3033,15694
 	X 4102,18298
@@ -1578,7 +1585,7 @@ nur Richtung O	X 8142,7221
 	X 3507,3635
 	X 1080,1637
 	X 85,1322
-	X -535,1875
+	X -541,1883
 	X 751,2860
 	F 578,3380
 	F 932,3422
@@ -1751,6 +1758,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	F 10427,15699
 # aufgehoben, by: Kaja Kruse:	X 10713,15746
 	B 34385,2609
+#: note: Sa und So wahrscheinlich permanent ausgeschaltet
 	X 1053,13790
 	B 12755,-12554
 	B 11601,-7560
@@ -1973,7 +1981,7 @@ Industriebahn	B0 -2410,13746
 	B 49463,69701
 	B 50401,70720
 	B 55594,74156
-	B 63233,76089
+	B 63230,76070
 	B 65411,75684
 	B 68641,74483
 	B 63363,90636
@@ -2111,8 +2119,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8626,23432
 #: by: Jonas Laehnemann:
 #: note: Luftbild
 	F 760,975
-#: note: Luftbild
-	X 16450,1691
+	F 16459,1680
 #: note: Luftbild
 	F 16815,1278
 #: note: Luftbild
@@ -2368,9 +2375,7 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 #: note: Luftbild:
 	X 20210,13776
 	F 20474,14442
-#: note: Luftbild:
 	F 838,14530
-#: note: Luftbild:
 	F 11367,1710
 #: note: Luftbild:
 	F 11166,3732
@@ -2445,9 +2450,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 6522,12662
 #: note: Luftbild:
 	X 4775,21522
-	X 4089,6668
-	X 4125,6728
-#: note: Luftbild:
+	X 4074,6681
+	X 4107,6718
 	F 11148,19838
 #: note: Luftbild:
 	F 14633,2145
@@ -2559,7 +2563,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 24435,10065
 	F 25546,5359
 #: by: Germar Molter
-	F 11062,15008
+#: note: keine reine Fußgängerampel: Radfahrer zwischen Knaackstr. und Lychener Str. müssen sie auch benutzen (mit Anforderung)
+	F 11056,15009
 	F 12158,7449
 	B 19302,-734
 #: note: Luftbild
@@ -2659,14 +2664,17 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 8206,12757
 	F 13999,2727
 	B0 17953,15221
-#: note: provisorische Ampel (2011-10-20)
+#: note: provisorische Ampel (2012-04-20)
+#: XXX Siehe auch Baustelle in der Voßstr.
+#: last_checked: 2012-04-20
+#: next_check: 2012-06-01
 	X 9000,11727
 	X 25451,14018
 #: by: ossi vvv
 	X 19732,3340
 	X 19324,2939
-#: XXX genaue Position?
 #: note: wahrscheinlich mit der Ampel am Adlergestell synchronisiert
+#: note: südliche Ampel dient auch als Straßenbahnampel
 	F 19842,3419
 #: XXX genaue Position?
 	X 19111,2777
@@ -2676,6 +2684,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 13648,13334
 #: XXX_prog: Ampel gilt nicht auf dem Radweg
 	F 13163,12382
+	X -284,14738
+	F 608,14423
+	X 1709,14243
+	X 7992,20515
+	F 198,4580
+	F 3582,1537
+	F 5793,1211
 ################################################################################
 #: note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10067917/966975/
@@ -2718,7 +2733,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -14859,421
 	X -13091,-8
 	X -13111,-136
-	X -13561,117
+	X -13553,115
 	X -14435,357
 	X -14676,418
 	F -13141,1945
@@ -2829,6 +2844,18 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	X 25912,-11956
 	F 26300,-11864
 	F 26085,-5839
+	X 18423,-843
+#: XXX: Ampel am 2012-05-06 noch ausgeschaltet, wird wahrscheinlich mit BER in Betrieb gehen vvv
+#: next_check: 2012-06-03 vvv
+	X 19909,-2863
+	F 18861,-3921
+#: XXX ^^^
+#: next_check ^^^
+	X 20802,-4032
+	X 21013,-4308
+	X 69236,73732
+	B 52205,72352
+# 
 #: note: ^^^
 ################################################################################
 #: by: Andreas Titz vvv

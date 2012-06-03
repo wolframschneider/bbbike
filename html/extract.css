@@ -1,11 +1,52 @@
 /* for http://extract.bbbike.org only */
 div#all {
 	max-width: 100%;
-	padding-top: 0px; 
-	padding-left: 0px; 
-	padding-right: 30px; 
+	padding: 0px;
+	margin: 0px;
 }
 
 div#map { width: 100%; height: 100%; }
 
 #debug { color: red; font-size: small; }
+
+div#footer_community { display: none; }
+
+div#copyright { 
+  font-size: x-small; 
+  margin: 0px;
+  padding: 0px;
+}
+
+body { margin: 10px;  padding: 0px; }
+
+div#intro { position:static; } 
+
+div#message {
+ position:absolute;
+ top:0.5em;
+ left: 34em;
+ min-width: 10em;
+ max-width: 30em;
+}
+
+div#table {
+ position:relative;
+ top:0;
+ left:0;
+ width: 32em;
+}
+
+input[type=submit] { margin-top: 0.5em; }
+
+table tr td { padding: 3px; }
+
+/* large green submit button, to focus user actions */
+form input[type=submit] { 
+        color: green; 
+        font-size: large; 
+        margin-bottom: 0.4em; 
+}
+
+div#export_osm_too_large { color: red }
+
+

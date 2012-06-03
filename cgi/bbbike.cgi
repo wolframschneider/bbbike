@@ -1305,8 +1305,12 @@ foreach my $type (qw(start via ziel)) {
 	$q->delete($type . "charimg.y");
     } elsif (defined $q->param($type . 'c_wgs84') and
 	     $q->param($type . 'c_wgs84') ne '') {
-	my($x,$y) = convert_wgs84_to_data(split /,/, $q->param($type . 'c_wgs84'));
-	$q->param($type . 'c', "$x,$y");
+	my @new_params;
+	for my $old_param ($q->param($type . 'c_wgs84')) {
+	    my($x,$y) = convert_wgs84_to_data(split /,/, $old_param);
+	    push @new_params, "$x,$y";
+	}
+	$q->param($type . 'c', @new_params);
 	$q->delete($type . 'c_wgs84');
     }
 
@@ -4211,13 +4215,13 @@ sub make_netz {
 
 sub search_coord {
     my $startcoord  = $q->param('startc');
-    my $viacoord    = $q->param('viac');
     my $zielcoord   = $q->param('zielc');
+    my($viacoord, @more_viacoords) = $q->param('viac');
     my(@custom)     = $q->param('custom');
     my %custom      = map { ($_ => 1) } @custom;
 
     my $via_array = (defined $viacoord && $viacoord ne ''
-		     ? [$viacoord]
+		     ? [$viacoord, @more_viacoords]
 		     : []);
 
     # Technically more correct it would be to adjust the scope
@@ -5177,8 +5181,11 @@ sub display_route {
 			$penalty_lost += $penalty;
 		    }
 		}
-		$etappe_comment = join("; ", @comments) if @comments;
-		$etappe_comment_html = join("; ", @comments_html) if @comments_html;
+		# XXX Leere Kommentartexte explizit entfernen. Diese
+		# gibt es z.B. in comments_cyclepath. Siehe auch
+		# "comments_cyclepath handling" in TODO-bbbike.
+		$etappe_comment = join("; ", grep { $_ ne "" } @comments) if @comments;
+		$etappe_comment_html = join("; ", grep { $_ ne "" } @comments_html) if @comments_html;
 	    }
 
 	    if ($has_fragezeichen_routelist) {
@@ -7403,22 +7410,29 @@ sub crossing_text {
     warn "crossing_text: $c, ", join " ", caller(), "\n" if $debug >= 2;
 
     all_crossings();
-    if (!exists $crossings->{$c}) {
-	new_kreuzungen();
-	my(@nearest) = $kr->nearest_coord($c);
-	if (!@nearest || !exists $crossings->{$nearest[0]}) {
-	    # Should not happen, but try to be smart
-	    my $crossing_text = eval {
-		my($px,$py) = convert_data_to_wgs84(split /,/, $c);
-		"N $py / O $px";
-	    };
-	    if ($@) {
-		warn $@;
-		$crossing_text = "???";
+ TRY_SCOPES: {
+	if (!exists $crossings->{$c}) {
+	    new_kreuzungen();
+	    my(@nearest) = $kr->nearest_coord($c);
+	    if (!@nearest || !exists $crossings->{$nearest[0]}) {
+		my $new_scope = increment_scope();
+		if (!$new_scope) {
+		    # Last resort, probably far away
+		    my $crossing_text = eval {
+			my($px,$py) = convert_data_to_wgs84(split /,/, $c);
+			"N $py / O $px";
+		    };
+		    if ($@) {
+			warn $@;
+			$crossing_text = "???";
+		    }
+		    return $crossing_text;
+		}
+		get_streets_rebuild_dependents();
+		goto TRY_SCOPES;
+	    } else {
+		$c = $nearest[0];
 	    }
-	    return $crossing_text;
-	} else {
-	    $c = $nearest[0];
 	}
     }
     nice_crossing_name(@{ $crossings->{$c} });
@@ -8292,7 +8306,7 @@ $permalink_text
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
 (&copy;) 1998-2012 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
-Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
+Map data (&copy;) <a href="http://www.openstreetmap.org/">OpenStreetMap.org</a> contributors<br >
 
 </div> <!-- copyright -->
 

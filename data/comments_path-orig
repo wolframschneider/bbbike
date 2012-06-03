@@ -72,6 +72,8 @@ Fußgängerampel auf der rechten Seite benutzen	CP; 9810,14066 9918,13733 10177,13
 Kopernikusstr./Warschauer Str.: Fußgängerampel auf der linken Seite zum Überqueren der Warschauer Str. benutzen	CP; 13467,11778 13651,11731 13895,11663
 #: XXX_prog: RL:ja, GPS:nein (in der Realität kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert)
 Kopernikusstr./Warschauer Str.: Fußgängerampel auf der linken Seite benutzen	CP; 13467,11778 13651,11731 13696,11920
+#: XXX_prog: RL:ja, GPS:nein (in der Realität kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert)
+Rennbahnstr./Bernkasteler Str.: Fußgängerampel auf der linken Seite zum Überqueren der Berliner Allee benutzen	CP; 14510,16916 14559,16912 14673,16895
 Wisbyer Str. Richtung Dunckerstr.: bereits an der Prenzlauer Allee den linken Gehweg benutzen	PI; 12091,16209 12026,16247 11939,16084
 Stahlheimer Richtung Wisbyer Str.: Fußgängerampel auf der linken Seite zum Überqueren der Wisbyer Str. benutzen	CP; 11618,16183 11727,16358 11673,16367
 Varnhagenstr Richtung Wisbyer Str.: linken Gehweg bis zur Fußgängerampel benutzen	CP; 11680,16151 11808,16343 11750,16354
@@ -130,8 +132,8 @@ Frankfurter Allee - Kreutzigerstr.: Einfahrt in Hausdurchgang	CP2; 14291,12220 1
 #: XXX_prog: eigentlich nicht notwendig, da als RW8/RW9 bereits gekennzeichnet. Allerdings wird das im CGI noch gar nicht visualisiert. Vielleicht in der der stilisierten Straßenführung auf der *rechten* (falschen) Seite unterbringen?
 Lennéstr: Radweg Richtung Ebertstr. auf der linken Seite im Tiergarten	CS; 8172,11679 8203,11686 8225,11692 8335,11718 8438,11753 8489,11782 8571,11846
 #: XXX_indoor: hmm, folgende zwei Datensätze sind mit keinen Konsequenzen verbunden. nach permanent temp_blockings verschieben? oder Penalty einplanen? Auf jeden Fall nicht bei GPS-Tracks gesondert ausgeben.
-Jüdenstr.: unbequemes Passieren der Grunerstr.	CP; 10778,12493 10800,12461 10831,12371
-Jüdenstr.: unbequemes Passieren der Grunerstr.	CP; 10831,12371 10800,12461 10778,12493
+Jüdenstr.: unbequemes Passieren der Grunerstr.	CP; 10766,12511 10800,12461 10831,12371
+Jüdenstr.: unbequemes Passieren der Grunerstr.	CP; 10831,12371 10800,12461 10766,12511
 #: XXX_prog: RL:ja, GPS:jein (wegen spitzem Winkel) (evtl. ein Kandidat für comments_misc)
 #: note: und nicht der Asphaltstraße
 dem Schotterweg folgen	CP; 24210,37562 24193,37725 24208,37830
@@ -448,8 +450,7 @@ Am Sandberg: Straße nicht ausgeschildert	CP2; 20144,8355 20149,8318
 Am Wriezener Karree: nicht ausgeschildert	CP2; 12959,11631 12726,11851
 Bahnhofstr. - Park: bereits an der Ampel Friedrichshagener Str. auf die linke Straßenseite wechseln	PI; 22123,5452 22087,5404 22043,5346 22046,5305
 Clayallee - Biesalskistr.: bereits an der Ampel Schützallee auf die linke Straßenseite wechseln	PI; 1136,3878 1152,3918 1130,3930
-#: by: christian (...chrisb...):
-Schäferstege - Parkanlage: schräg links über Spielplatz	CP2; 13366,20897 13332,20898
+#XXX del --- #: by: christian (...chrisb...): --- Schäferstege - Parkanlage: schräg links über Spielplatz	CP2; 13366,20897 13332,20898
 #: note: Radweg Richtung Süden ist tiefer gelegen als die Fahrbahn
 Schönefelder Chaussee - Venusstr.: Linksabbiegen in die Venusstr. nur von der Fahrbahn oder vom linken Gehweg aus möglich	PI; 18892,330 18860,248 19138,141
 Str. 106 - Indira-Gandhi-Str.: Abbigemöglichkeit zur rechten Hand an der Einmündung Fritz-Lesch-Str.	CP; 14666,14845 14828,15050 14650,15750
@@ -482,3 +483,4 @@ Hermann-Stöhr-Platz: diagonal über die Grünfläche	CS 12453,11790 12409,11902
 (Fischerstr. - Lückstr.): ausgeschildert "KGA Sanssouci, Parz. 1-34, 76-90"	CP2; 16404,10286 16488,10381
 (Lückstr. - Fischerstr.): Einfahrt in Parkplatz	CP2; 16601,10650 16587,10613
 Oranienplatz: diagonal über den Platz	CP2; 11275,10723 11253,10778
+(Wohngebiet): Einfahrt gegenüber der Dresdener Str.	CP2; 11052,11414 11131,11579

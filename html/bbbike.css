@@ -244,9 +244,23 @@ div#routing {
 	position: absolute; 
 	/* left: 0px; */
 	width: 24.5%;
-        margin-right: 0.5%;
+        margin-right: 0.5em;
 	background-color: white;
 	z-index: 1000; 
+}
+
+div#sidebar { 
+	position: absolute; 
+	/* left: 0px; */
+	width: 26em;
+        padding-right: 0.5em;
+	background-color: white;
+	z-index: 1000; 
+
+	/* scroll city list if to long */
+	overflow-y: auto;
+	overflow-x: auto;
+	height: 90%;
 }
 
 div#routes {
@@ -341,6 +355,7 @@ span#language_switch { font-size: small; }
 img.logo { border: 0px; }
 a.logo { border: 0px; text-decoration:none }
 span.current_language { font-size: large; }
+span.city { font-size: large; }
 
 
 /* 
