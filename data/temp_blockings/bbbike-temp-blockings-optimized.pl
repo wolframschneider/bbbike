@@ -200,16 +200,7 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'INKO_113068',
-         'until' => 1338476400,
-         'text' => 'Hobrechtsfelder Chaussee - Bucher Str.: Brückenneubau, Straße vollständig gesperrt, bis zum 31.05.2012',
-         'from' => 1337887384,
-         'id' => 1747,
-         'data' => 'userdel	2::inwork 14314,25193 14219,25013 14029,24753
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -820,7 +811,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Mai bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juni bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -951,18 +942,6 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'until' => 1356994800,
-         'text' => 'Braunschweiger Str./Karl-Marx-Str.: Abbiegen nicht möglich (bzw. nur auf dem Gehweg) bis 31.12.2012',
-         'from' => 1284745737,
-         'id' => 2134,
-         'data' => 'userdel	3 13150,7254 13047,7234 13058,7165
-userdel	3 13058,7165 13047,7234 13150,7254
-userdel	3 13150,7254 13047,7234 13034,7319
-userdel	3 13034,7319 13047,7234 13150,7254
-',
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
@@ -1000,17 +979,8 @@ userdel	3 13034,7319 13047,7234 13150,7254
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_018078',
-         'until' => 1356969600,
-         'text' => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Ende 12/2012) stadteinwärts zwischen Breite Str. und Florastr. ',
-         'from' => 1254641760,
-         'id' => 2172,
-         'data' => '#: next_check: 2012-05-15
-userdel	q4::inwork; 10680,18380 10755,18231 10829,18083 10846,17992
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1074,19 +1044,18 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       undef,
-       undef,
        {
-         'source_id' => 'INKO_093372',
-         'until' => 1338476400,
-         'text' => 'Schadowstr. (Mitte): Baustelle, Straße vollständig gesperrt (bis Ende 05/12) in beiden Richtungen zwischen Unter den Linden und Dorotheenstr., 16.05.2011 07:00 Uhr bis 31.05.2012 17:00 Uhr ',
-         'from' => 1305435600,
-         'id' => 2210,
-         'data' => '#: last_checked: 2012-04-28
-userdel	q4::inwork 9028,12307 9016,12416 9008,12485
+         'source_id' => 'LS/O-SG33-E/11/044',
+         'until' => 1339106399,
+         'text' => 'Flieth-Stegelitz: L24: Brücke über den Stierngraben bei Kaakstedt, geplante Vollsperrung 05.06. - 07.06.12 ',
+         'from' => 1338760800,
+         'id' => 2208,
+         'data' => 'userdel	2::inwork 35887,85385 34920,85944
 ',
-         'type' => 'handicap'
+         'type' => 'gesperrt'
        },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1240,16 +1209,7 @@ userdel	2::inwork 19750,11730 19827,11686 19881,11591
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20111030.0735.361648.html',
-         'until' => 1338501600,
-         'text' => 'Baumaßnahmen in der Parkanlage an der Südseite der Krummen Lanke, Sperrungen möglich (bis Frühsommer 2012)',
-         'from' => undef,
-         'id' => 2303,
-         'data' => 'userdel	2::inwork -1245,4414 -1185,4450 -1139,4575 -1134,4706 -971,4971 -724,5080 -604,5228
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1257,12 +1217,13 @@ userdel	2::inwork 19750,11730 19827,11686 19881,11591
        {
          'source_id' => 'IM_017746',
          'until' => 1346425200,
-         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, Fahrbahn gesperrt, bis 31.08.2012 ',
+         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, Fahrbahn manchmal gesperrt, bis 31.08.2012 ',
          'from' => 1314604800,
          'id' => 2308,
          'data' => '#: note: am 2012-03-09 geprüft, Radfahrer konnten problemlos passieren
 #: note: am 2012-04-27 geprüft, Fahrbahn ist absperrt (nur die Straßenbahn wird durchgelassen), Radfahrer können nur den Gehweg benutzen
-userdel	q4::inwork 10723,14772 10838,14962
+#: note: am 2012-05-30 geprüft, Radfahrer konnten problemlos passieren
+userdel	q3::inwork 10723,14772 10838,14962
 ',
          'type' => 'handicap'
        },
@@ -1386,15 +1347,7 @@ userdel	q4::inwork 11436,14741 11271,14755
        undef,
        undef,
        undef,
-       {
-         'until' => 1338602400,
-         'text' => 'Vollsperrung der Bahnbrücke Karlshorst: 26. Mai 2012, 5 Uhr bis 2. Juni 2012, 4 Uhr (Sperrung der Fahrbahn)',
-         'from' => 1338001200,
-         'id' => 2330,
-         'data' => 'userdel	q4::inwork 18722,8582 18709,8423
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1341093600,
          'text' => 'Peace Wall/Friedensmauer; auf Gehweg ausweichen (bis Juli 2012)',
@@ -1435,16 +1388,7 @@ userdel	q4::inwork 11436,14741 11271,14755
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_018810',
-         'until' => 1338566400,
-         'text' => 'Wühlischstr. (Friedrichshain): Baustelle, Fahrtrichtung Richtung Warschauer Str. zwischen Gryphiusstr. und Seumestr. gesperrt, als Radfahrer kann man langsam und vorsichtig passieren, 14.05.2012 10:52 Uhr bis 01.06.2012 18:00 Uhr ',
-         'from' => 1336899120,
-         'id' => 2336,
-         'data' => 'userdel	q3::inwork; 14434,11465 14369,11489 14305,11514
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Sredzkistr. zwischen Schönhauser Allee und Knaackstr: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
@@ -1453,6 +1397,49 @@ userdel	q4::inwork 11436,14741 11271,14755
          'data' => 'userdel	q4::inwork 10893,14705 11101,14768
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1206/nachricht4684.html',
+         'until' => 1338919200,
+         'text' => 'Vollsperrung der Pankgrafenstraße im Bereich der Pankgrafenbrücke am 5. Juni 2012',
+         'from' => 1338778800,
+         'id' => 2338,
+         'data' => 'userdel	2::inwork 13953,23497 13976,23490 14173,23426
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_018829',
+         'until' => 1341068400,
+         'text' => 'Behrenstr. (Mitte): Baustelle, Fahrtrichtung gesperrt (bis Ende 06/12) Richtung Friedrichstr. zwischen Mauerstr. und Glinkastr. ',
+         'from' => 1338204660,
+         'id' => 2339,
+         'data' => 'userdel	q4::inwork; 9064,12156 9164,12172
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_018838',
+         'until' => 1343664000,
+         'text' => 'Klingsorstr. (Steglitz): Fahrbahnschäden, Vollsperrung in beiden Richtungen zwischen Hindenburgdamm und Birkbuschstr., bis Ende Juli 2012 ',
+         'from' => 1338283200,
+         'id' => 2340,
+         'data' => 'userdel	q4::inwork 4932,4152 5068,4259
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1341352799,
+         'text' => 'Fanmeile EM 2012: Sperrung der Straße des 17. Juni und umliegenden Straßen, bis 3. Juli 2012',
+         'from' => 1338750610,
+         'id' => 2341,
+         'data' => 'userdel	2::temp 8573,12325 8540,12420
+userdel	2::temp 8089,12190 8214,12205 8538,12245 8610,12254
+userdel	2::temp 8354,12416 8546,12279 8538,12245 8600,12165 8595,12066
+userdel	2::temp 7383,12095 7816,12150 8055,12186 8119,12414
+userdel	2::temp 8546,12279 8570,12302
+',
+         'type' => 'gesperrt'
        }
      
 );
