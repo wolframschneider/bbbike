@@ -128,11 +128,10 @@ Annemirl-Bauer-Platz	Pl 14669,11152
 Boddinplatz	Pl 12104,8299
 Kläre-Bloch-Platz	Pl 2953,11830
 Schmetterlingsplatz	Pl 693,9129
-#: XXX Umbenennung zum Friedrich-Hollaender-Platz
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/43re.pdf/file?y=2011
-#: next_check: 2012-01-18 (Umbenennung wird dann wirksam)
-Rankeplatz	Pl 5529,10453
-Herbert-Lewin-Platz	Pl 5518,12159
+#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20120601.0850.370854.html
+#: oldname: -20120618: Rankeplatz
+Friedrich-Hollaender-Platz	Pl 5529,10453
 Inge-Beisheim-Platz	Pl 8473,11634
 Platz am Königstor	Pl 11706,13635
 Akademieplatz	Pl 19206,2848
@@ -232,6 +231,7 @@ Kamisardenplatz	Pl 12067,23241
 Plaza San Rafael del Sur	Pl 13325,10565
 Letteplatz	Pl 7998,17564
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file
+#: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20120419.1745.369008.html
 Fred-Löwenberg-Platz	Pl 21616,13900
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file
 #: by: http://www.spd-fraktion-steglitz-zehlendorf.de/index.php?option=com_content&view=article&id=92:marga-meusel-platz-antrag-drs-1496&catid=35:antraege-anfragen&Itemid=69
@@ -253,6 +253,7 @@ Markus-Reich-Platz	Pl 13989,15589
 Innsbrucker Platz	Pl 6418,7958
 Carlo-Schmid-Platz	Pl -5118,13053
 Max-Beckmann-Platz	Pl 3490,23472
+Im Kinderland	Pl -475,4809
 ######################################################################
 #: section faked_plaetze vvv
 # Keine offiziellen Straßennamen, sondern
@@ -280,6 +281,8 @@ Funkturm	Pl 2016,11034
 Europa-Center	Pl 5782,10884
 Olympiastadion	Pl -514,11991
 Waldbühne	Pl -1398,11803
+Volkspark Jungfernheide	Pl 2431,15290
+Volkspark Wilmersdorf	Pl 5669,8207
 Schloß Charlottenburg	Pl 3034,12502
 Schloß Bellevue	Pl 7039,12314
 Schloß Schönhausen	Pl 10350,19182
@@ -289,18 +292,32 @@ Hauptbahnhof	Pl 7880,13315
 Siegessäule	Pl 6828,12031
 Insel der Jugend	Pl 15675,9090
 Johannesstift	Pl -3953,17941
+#: alias: Strandbad Wendenschloß
 Seebad Wendenschloß	Pl 23869,1282
 Strandbad Müggelsee	Pl 29089,4759
 Strandbad Wannsee	Pl -4684,3318
+#: alias: Freibad Tegeler See
+#: alias: Strandbad Tegelsee
+Strandbad Tegel	Pl -629,18977
+Strandbad Orankesee	Pl 15793,16162
+Strandbad Weißensee	Pl 14510,16549
+Strandbad Grünau	Pl 24571,514
+#: alias: Freibad Jungfernheide
+Strandbad Jungfernheide	Pl 1498,15196
+#: note: Badestelle
+Bürgerablage	Pl -2905,19636
+Badewiese Gatow	Pl -4383,8380
 Wannseehafen	Pl -4905,1514
 Tegel-Center	Pl 2295,20358
+Nikolskoe	Pl -8881,1668
+Moorlake	Pl -9606,1389
+Ökowerk Teufelssee	Pl -977,9425
 #: note: der Punkt ist der gegenüberliegende auf dem Festland
 Pfaueninsel	Pl -8564,2276
 Museumsinsel	Pl 9948,12631
 #: XXX_prog: populäre Brücken, sollten auch automatisch aus brunnels verwendet werden vvv
 Modersohnbrücke	Pl 14096,11134
 Warschauer Brücke	Pl 13476,11174
-Moltkebrücke	Pl 7936,12906
 Weidendammer Brücke	Pl 9280,12883
 Bösebrücke	Pl 9883,16557
 #: XXX_prog ^^^
@@ -337,7 +354,25 @@ Sanssouci	Pl -14355,-606
 Telegrafenberg	Pl -12391,-3296
 Sacrow	Pl -10363,2151
 Park Babelsberg	Pl -10832,-75
+Park Sanssouci	Pl -14171,-1026
 Brandenburger Tor	Pl -13556,-1140
+Nauener Tor	Pl -12878,-665
+Jägertor	Pl -13231,-763
+Russische Kolonie	Pl -12947,106
+Alexandrowka	Pl -12947,106
+Cecilienhof	Pl -12081,1168
+Charlottenhof	Pl -15044,-1807
+Chinesisches Teehaus	Pl -14622,-1138
+Communs	Pl -16062,-993
+Drachenhaus	Pl -15243,-656
+Belvedere	Pl -15703,-400
+Humboldtbrücke	Pl -11884,-936
+Marmorpalais	Pl -12115,409
+Orangerie	Pl -14669,-686
+Römische Bäder	Pl -14865,-1118
+Schloß Babelsberg	Pl -10709,-62
+Schloß Lindstedt	Pl -16006,-80
+Pfingstberg	Pl -12796,1037
 #: append_comment ^^^^^^^^^^^^^
 #: XXX_prog ^^^
 #: section ^^^

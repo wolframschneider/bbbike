@@ -84,7 +84,7 @@ als Puschkinallee 6c, 6d ausgeschildert	CP2; 13995,9834 14076,10011
 Durch Toreinfahrt (immer offen)	CP2; 14043,10928 14107,10911
 als Sackgasse ausgeschildert	CP2; 14672,10760 14564,10792
 Radfahren durch den Park erlaubt	CS 6526,1688 6679,1734 6848,1809
-Kein MIV-Durchgangsverkehr, nur Anlieger und Linienverkehr	CS -13036,342 -13011,299
+Kein MIV-Durchgangsverkehr, nur Anlieger und Linienverkehr	CS -13036,342 -12992,244
 Teltower Weg: nicht ausgeschildert	CP2; -107,5880 -174,5941
 Kreisverkehr	Roundabout 19907,12501
 Röntgentaler Weg: durch den Schloßpark	CS 16166,25767 16222,25829 16532,26174
@@ -179,7 +179,6 @@ ausgeschildert nach Charlottenhof	CP2; -14500,-2012 -14536,-1943
 ausgeschildert mit Tafel "Windfeld Randowhöhe" und "Wolliner Weg"	CP2; 52527,98581 52471,98189
 ausgeschildert zum Sportplatz	CP2; 13535,10184 13371,9974
 Route nach Prenzlau ausgeschildert	CP2; 50420,96012 50188,95514
-Privatstraße	CS -519,4737 -552,4698 -581,4662
 als Julius-Leber-Brücke ausgeschildert	CP; 7604,8927 7563,8871 7548,8879
 Ausgeschildert als Matheshöher Weg	CP2; 49488,96427 49056,96700
 Ausgeschildert als Britzer Str.	CP2; 33044,51831 33415,51839
@@ -205,12 +204,12 @@ Eingang Columbiadamm/Golßener Str. kann nachts nicht als Ausgang benutzt werden	
 Weg zwischen Habermannsee und Butzensee	CS 23522,10456 23468,10423 23431,10435 23193,10426 23024,10455 22978,10451
 Mollergasse: Straße ist nicht ausgeschildert	CS 9892,12596 9894,12564
 Schmellwitzer Weg: Privatstraße	CS 20005,11383 19984,11319 19801,11360
-Altenauer Weg: Zufahrt wegen Hecke schwer erkennbar	CP2; 5435,1390 5419,1395
+Altenauer Weg: Zufahrt wegen Hecke schwer erkennbar	CP2; 5435,1390 5406,1400
 (Celsiusstr. - Müllerstr.): S-Bahnunterführung mit Rampen	CS 4311,746 4225,753 4250,763
 Grenzstr. - Tuchmacherstr.: "Eingang" zum Fußweg kann leicht verpasst werden, nur eine schmale Lücke zwischen den Grundstücken	CP2; -10412,-1218 -10423,-1248
-Privatstraße	CS -253,5049 -225,4949 -190,4878 -146,4814
+Privatstraße, Anlieger frei	CS -253,5049 -225,4949 -190,4878 -146,4814
 Privatstraße	CS -188,5061 -145,4916 -97,4849
-Privatstraße	CS -114,5077 -85,4949 -48,4888
+Privatstraße, Anlieger frei	CS -114,5077 -85,4949 -48,4888
 Pflanzenkübel am besten auf dem linken Gehweg umfahren	CS; -1604,2324 -1401,2391 -1248,2451
 Pflanzenkübel am besten auf dem rechten Gehweg umfahren	CS; -1248,2451 -1401,2391 -1604,2324
 Nicht ausgeschildert	CP2; 27568,1188 27810,987
@@ -275,7 +274,7 @@ Straße 366: Privatstraße, 10 km/h	CS -3145,22004 -3281,22011
 Straße 367: Privatstraße, 10 km/h	CS -3256,22134 -3281,22011 -3281,21894
 Straße 368: Privatstraße, 10 km/h	CS -3310,21892 -3281,21894 -3240,21896
 Adelheidallee: Privat, kein öffentlicher Zugang	CS 1687,20782 1527,20840
-(Hauffallee - Blankenburger Pflasterweg): nicht ausgeschildert	CS 14288,19459 14328,19527 14372,19666 14354,19858
+(Hauffallee - Blankenburger Pflasterweg): nicht ausgeschildert	CS 14284,19451 14328,19527 14364,19613 14374,19728 14338,19830 14348,19861
 Steffenshagener Str.: Privatstraße	CS 22983,11098 23159,11097
 Münsterberger Weg: nicht ausgeschildert	CP2; 24029,11363 24173,11328
 Püttlinger Str.: Privatstraße	CS 21275,11942 21273,11882
@@ -346,3 +345,25 @@ Eisbärenweg: Privatstraße	CS 6909,17796 6950,17669
 (Zobtener Str. - Fischerstr.): durch eine Kleingartenanlage	CS 16353,10207 16404,10286
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Straße verläuft zwischen Bahnstrecke und Wohnhäusern	CS 17210,11950 17201,11975 17137,11969 17023,11908 17026,11888
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11027,13279 11085,13239
+Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CS 7795,13093 7867,13127 7938,13150
+Petrusweg: Anlieger frei	CS 15225,1553 15217,1463
+Am Rudower Waldrand: Anlieger frei	CS 15467,349 15476,332 15600,116 15707,-6
+Gertrud-Dorka-Weg: Privatstraße	CS 17848,-173 17796,-97
+Landhausweg: Anlieger frei	CS 16308,1585 16464,1194 16489,1185
+Ausgeschildert zum Heckerdamm 181-213 und zur Siedlung Juliusruh	CP2; 3765,14746 3735,14419
+(Goerdelerdamm - Nonnendamm): Anlieger frei	CS 3103,14187 3007,14078
+(Goerdelerdamm - Nonnendamm): Anlieger frei	CS 2247,13805 2149,13775
+Ausgeschildert als Wohlrabedamm 24-30	CP2; 1216,13978 1259,14028
+Am Igelgrund: Privatstraße	CS 9068,20446 9131,20507
+Sterndamm: Richtung Groß-Berliner Damm	CP2; 17645,5328 17705,5223
+Vergissmeinnichtweg: nur für Berechtigte	CS 21582,185 21608,85
+(Schmiedegasse - Pappelallee): Privatstraße	CS -13581,-10 -13558,88
+Kutscherweg: Privatstraße	CS -13620,-131 -13700,-106 -13775,-85
+Schmiedegasse: Privatstraße	CS -13627,-150 -13660,-163 -13764,-140 -13785,-125
+Zur Alten Flussbadeanstalt: nicht ausgeschildert	CP2; 16432,9673 16389,9633
+Ausgeschildert als "Zum Deisterpfad"	CP2; -21,5104 -18,5083
+vor der Bahnbrücke rechts abbiegen	CP; -287,2583 -197,2634 -174,2616
+hinter der Bahnbrücke links abbiegen	CP; -155,2658 -197,2634 -174,2616
+Posaunenweg: Privatstraße	CS 11797,20601 11828,20625 11874,20656 11915,20686 11919,20745 11923,20781
+Dr.-Dorsch-Allee: Privatstraße	CS 11285,23079 10855,23403
+(Pasewalker Str. - Einsiedelring): privat	CS 12039,20538 11996,20545

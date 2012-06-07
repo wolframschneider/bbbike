@@ -1293,7 +1293,7 @@ if ($devel_host && $set_toplevel_icon) {
 
 if ($splash_screen) {
     $splash_screen->Raise; # raise after the first ->update on $top, otherwise on Windows the splash screen will stay obscured by the main window
-    $splash_screen->Update(0.0);
+    $splash_screen->Update(0.0, 'raise splash');
 }
 
 # Exceed-Bug
@@ -1476,7 +1476,7 @@ $ctrl_frame = $frame->Frame->pack(-anchor => 'w', -fill => 'x');
 
 ##### Topframe #######################################################
 
-$splash_screen->Update(0.1) if $splash_screen;
+$splash_screen->Update(0.1, 'create top') if $splash_screen;
 
 $menuarrow_photo = load_photo($top, 'menupfeil');
 
@@ -1928,7 +1928,7 @@ if ($flat_relief) {
     }
 }
 
-$splash_screen->Update(0.2) if $splash_screen;
+$splash_screen->Update(0.2, 'create iconframe') if $splash_screen;
 
 do_iconframe() if $do_iconframe;
 if ($standard_menubar) {
@@ -4417,7 +4417,7 @@ if (!$MM_DRAG_IS_OBSOLETE) {
 
 } # do_iconframe
 
-$splash_screen->Update(0.3) if $splash_screen;
+$splash_screen->Update(0.3, 'load photos') if $splash_screen;
 
 ##### sonstige Bilder #####
 ## DEBUG_BEGIN
@@ -4579,7 +4579,7 @@ $sx->grid(-row => 1, -column => 0, -sticky => 'ew');
 use constant UPDATE_FRAC_BEFORE_PLOTTING => 0.4;
 use constant UPDATE_FRAC_AFTER_PLOTTING => 0.7;
 
-$splash_screen->Update(UPDATE_FRAC_BEFORE_PLOTTING) if $splash_screen;
+$splash_screen->Update(UPDATE_FRAC_BEFORE_PLOTTING, 'start plotting') if $splash_screen;
 
 ##### initiales Zeichnen ######################################
 ## DEBUG_BEGIN
@@ -4627,7 +4627,7 @@ foreach (keys %init_str_draw) {
     if ($@ && !$no_original_datadir) {
 	die $@;
     }
-    $splash_screen->Update((($_update_i++)/$_update_steps)*(UPDATE_FRAC_AFTER_PLOTTING - UPDATE_FRAC_BEFORE_PLOTTING)+UPDATE_FRAC_BEFORE_PLOTTING)
+    $splash_screen->Update((($_update_i++)/$_update_steps)*(UPDATE_FRAC_AFTER_PLOTTING - UPDATE_FRAC_BEFORE_PLOTTING)+UPDATE_FRAC_BEFORE_PLOTTING, "plot str $_")
 	if $splash_screen;
 }
 foreach (keys %init_p_draw) {
@@ -4642,7 +4642,7 @@ foreach (keys %init_p_draw) {
     if ($@ && !$no_original_datadir) {
 	die $@;
     }
-    $splash_screen->Update((($_update_i++)/$_update_steps)*(UPDATE_FRAC_AFTER_PLOTTING - UPDATE_FRAC_BEFORE_PLOTTING)+UPDATE_FRAC_BEFORE_PLOTTING)
+    $splash_screen->Update((($_update_i++)/$_update_steps)*(UPDATE_FRAC_AFTER_PLOTTING - UPDATE_FRAC_BEFORE_PLOTTING)+UPDATE_FRAC_BEFORE_PLOTTING, "plot p $_")
 	if $splash_screen;
 }
 # Höhen einlesen
@@ -4665,11 +4665,11 @@ if (!$search_route_flag && !(defined $set_mode && $set_mode eq 'edit')) {
 ## DEBUG_END
 $progress->FinishGroup;
 
-$splash_screen->Update(UPDATE_FRAC_AFTER_PLOTTING) if $splash_screen;
+$splash_screen->Update(UPDATE_FRAC_AFTER_PLOTTING, 'finished plotting') if $splash_screen;
 
 set_bindings();
 
-$splash_screen->Update(0.8) if $splash_screen;
+$splash_screen->Update(0.8, 'after plotting') if $splash_screen;
 
 $last_loaded_obj =
     {
@@ -4694,7 +4694,7 @@ scrollregion_best();
 # XXX should be after deiconify, otherwise center does not work (?)
 center_best();
 
-$splash_screen->Update(0.9) if $splash_screen;
+$splash_screen->Update(0.9, 'finalization') if $splash_screen;
 
 set_mouse_desc();
 
@@ -4757,7 +4757,11 @@ if (defined $initial_layers && $initial_layers ne "") {
     }
 }
 
-$splash_screen->Destroy if $splash_screen; undef $splash_screen;
+if ($splash_screen) {
+    $splash_screen->Update(1, 'destroying splash');
+    $splash_screen->Destroy;
+    undef $splash_screen;
+}
 
 choose_streets()                            if $init_choose_street;
 
@@ -9600,6 +9604,7 @@ sub load_save_route {
     status_message("");
     my $path;
     my $ext = $bbbike_route_ext;
+    my $interactively_selected_filename = 0;
     if (!defined $file) {
 	my $method = $save ? "getSaveFile" : "getOpenFile";
 	$file = $top->$method
@@ -9615,6 +9620,7 @@ sub load_save_route {
 	     ));
 	return if !defined $file;
 	$oldpath = dirname $file;
+	$interactively_selected_filename = 1;
     }
     if (!-f $file && !file_name_is_absolute($file)) { # unvollständiger Dateiname
         $file = catfile($bbbike_routedir, "$file.$ext");
@@ -9640,7 +9646,7 @@ sub load_save_route {
 		die M"Leere Routendatei";
 	    }
 
-	    add_last_loaded($file, $last_loaded_obj);
+	    add_last_loaded($file, $last_loaded_obj) if $interactively_selected_filename;
 	    @coords = ();
 	    my $i;
 	    my($minx, $miny, $maxx, $maxy);
@@ -9704,7 +9710,7 @@ sub load_save_route {
 	if ($@) {
 	    status_message($@, 'err');
 	} else {
-	    add_last_loaded($file, $last_loaded_obj);
+	    add_last_loaded($file, $last_loaded_obj) if $interactively_selected_filename;
 	}
     }
 }
@@ -14132,122 +14138,129 @@ sub show_info {
 	# XXX maybe use Karte::trim_accuracy instead of int?
 	my $real_coords = join(",", map { int } anti_transpose($coords[0], $coords[1]));
 
-	my $mapserver_logo_photo = load_photo($top, 'mapserver_logo', -persistent => 1);
-	my $need_indentation = !$mapserver_logo_photo;
-	for my $def (@mapserver_def) {
-	    my($mapserver_url, $mapserver_label, $is_local) = @$def;
-	    my $url = "$mapserver_url/coords=" . $real_coords;
-	    $url .= "/mapext=" . join(",",@mapext);
-	    if (@layers) {
-		$url .= "/" . join("/", map { "layer=$_" } @layers);
-	    }
-	    if ($mapserver_logo_photo) {
-		$info_text->imageCreate("end", -image => $mapserver_logo_photo,
-					-align => "bottom", -padx => 2, -pady => 2);
-	    }
-	    $info_text->insert("end", $mapserver_label, ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
-	    $show_url->($linkcount, $url);
-	    $info_text->insert("end", "\n");
-	    $linkcount++;
-
-	    if ($advanced && !$is_local) {
+	if ($city_obj->cityname eq 'Berlin') { # only mapserver links for Berlin data
+	    my $mapserver_logo_photo = load_photo($top, 'mapserver_logo', -persistent => 1);
+	    my $need_indentation = !$mapserver_logo_photo;
+	    for my $def (@mapserver_def) {
+		my($mapserver_url, $mapserver_label, $is_local) = @$def;
+		my $url = "$mapserver_url/coords=" . $real_coords;
+		$url .= "/mapext=" . join(",",@mapext);
+		if (@layers) {
+		    $url .= "/" . join("/", map { "layer=$_" } @layers);
+		}
 		if ($mapserver_logo_photo) {
 		    $info_text->imageCreate("end", -image => $mapserver_logo_photo,
 					    -align => "bottom", -padx => 2, -pady => 2);
 		}
-		$info_text->insert("end", $mapserver_label . " (kurzer Link)",
-				   ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
-		$show_url->($linkcount, sub {
-				if (exists $long_url_to_short_url{$url}) {
-				    return $long_url_to_short_url{$url};
-				}
-				if (!eval { require WWW::Shorten; WWW::Shorten->import(); 1 }) {
-				    status_message("Das Modul WWW::Shorten ist nicht vorhanden.", "die");
-				}
-				my $short_url = makeashorterlink($url);
-				$long_url_to_short_url{$url} = $short_url;
-				$short_url;
-			    });
+		$info_text->insert("end", $mapserver_label, ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
+		$show_url->($linkcount, $url);
 		$info_text->insert("end", "\n");
 		$linkcount++;
+
+		if ($advanced && !$is_local) {
+		    if ($mapserver_logo_photo) {
+			$info_text->imageCreate("end", -image => $mapserver_logo_photo,
+						-align => "bottom", -padx => 2, -pady => 2);
+		    }
+		    $info_text->insert("end", $mapserver_label . " (kurzer Link)",
+				       ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
+		    $show_url->($linkcount, sub {
+				    if (exists $long_url_to_short_url{$url}) {
+					return $long_url_to_short_url{$url};
+				    }
+				    if (!eval { require WWW::Shorten; WWW::Shorten->import(); 1 }) {
+					status_message("Das Modul WWW::Shorten ist nicht vorhanden.", "die");
+				    }
+				    my $short_url = makeashorterlink($url);
+				    $long_url_to_short_url{$url} = $short_url;
+				    $short_url;
+				});
+		    $info_text->insert("end", "\n");
+		    $linkcount++;
+		}
 	    }
 	}
 
-	my @bbbike_cgi_def = ([$BBBike::BBBIKE_DIRECT_WWW, "BBBike im WWW"]);
-	if ($devel_host) {
-	    push @bbbike_cgi_def, [defined $ENV{BBBIKE_TEST_CGIDIR} ? "$ENV{BBBIKE_TEST_CGIDIR}/bbbike.cgi" : "http://localhost/bbbike/cgi/bbbike.cgi", "lokal: BBBike im WWW"];
-	}
+	if ($city_obj->cityname eq 'Berlin') { # only bbbike.de links for Berlin data (XXX but maybe bbbike.org links could be done instead?)
+	    my @bbbike_cgi_def = ([$BBBike::BBBIKE_DIRECT_WWW, "BBBike im WWW"]);
+	    if ($devel_host) {
+		push @bbbike_cgi_def, [defined $ENV{BBBIKE_TEST_CGIDIR} ? "$ENV{BBBIKE_TEST_CGIDIR}/bbbike.cgi" : "http://localhost/bbbike/cgi/bbbike.cgi", "lokal: BBBike im WWW"];
+	    }
 
-	my $zielname = "";
-	{
-	    my $is_first = 1;
-	    for my $def (@bbbike_cgi_def) {
-		my $bbbike_cgi_url = $def->[0];
+	    my $zielname = "";
+	    {
+		my $is_first = 1;
+		for my $def (@bbbike_cgi_def) {
+		    my $bbbike_cgi_url = $def->[0];
 
-		my $need_indentation;
-		if ($srtbike16_icon) {
-		    $info_text->imageCreate("end", -image => $srtbike16_icon,
-					    -align => "bottom", -padx => 2, -pady => 1);
-		} else {
-		    $need_indentation = 1;
+		    my $need_indentation;
+		    if ($srtbike16_icon) {
+			$info_text->imageCreate("end", -image => $srtbike16_icon,
+						-align => "bottom", -padx => 2, -pady => 1);
+		    } else {
+			$need_indentation = 1;
+		    }
+
+		    $info_text->insert("end", $def->[1],
+				       ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
+		    $info_text->insert("end", " ");
+		    if ($is_first) {
+			my $zielname_e = $info_text->Entry(-textvariable => \$zielname,
+							   -width => 10);
+			$info_text->insert("end", " Zielname:");
+			$info_text->windowCreate("end", -window => $zielname_e);
+			$is_first = 0;
+		    }
+
+		    my $www_link_menu = $info_text->Menu(-title => M"Linkmenü",
+							 -tearoff => 0);
+		    $www_link_menu->command
+			(-label => M"Link kopieren als Ziel",
+			 -command => sub { $copy_link->() },
+			);
+		    $www_link_menu->command
+			(-label => M"Link kopieren als Start",
+			 -command => sub {
+			     my $current_start_link_url = $show_info_url;
+			     $current_start_link_url =~ s{ziel}{start}g;
+			     $copy_link->($current_start_link_url);
+			 });
+		    $www_link_menu->command
+			(-label => M"Link kopieren als Start und Ziel",
+			 -command => sub {
+			     my $current_start_link_url = $show_info_url;
+			     $current_start_link_url =~ s{ziel}{start}g;
+			     my $complete_link_url = "$current_start_link_url\n$show_info_url";
+			     $copy_link->($complete_link_url);
+			 });
+
+		    $show_url->($linkcount, sub {
+				    require CGI;
+				    # sigh, ";" still makes problems...
+				    my $zielname = $zielname;
+				    if ($Tk::VERSION >= 804) {
+					$zielname = Encode::encode("iso-8859-1", $zielname);
+				    }
+				    CGI->import('-oldstyle_urls');
+				    my $q = CGI->new({zielc    => $real_coords,
+						      zielname => $zielname,
+						     });
+				    my $url = "$bbbike_cgi_url?" . $q->query_string;
+				    $url;
+				},
+				$www_link_menu,
+			       );
+		    $info_text->insert("end", "\n");
+		    $linkcount++;
 		}
-
-		$info_text->insert("end", $def->[1],
-				   ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
-		$info_text->insert("end", " ");
-		if ($is_first) {
-		    my $zielname_e = $info_text->Entry(-textvariable => \$zielname,
-						       -width => 10);
-		    $info_text->insert("end", " Zielname:");
-		    $info_text->windowCreate("end", -window => $zielname_e);
-		    $is_first = 0;
-		}
-
-		my $www_link_menu = $info_text->Menu(-title => M"Linkmenü",
-						     -tearoff => 0);
-		$www_link_menu->command
-		    (-label => M"Link kopieren als Ziel",
-		     -command => sub { $copy_link->() },
-		    );
-		$www_link_menu->command
-		    (-label => M"Link kopieren als Start",
-		     -command => sub {
-			 my $current_start_link_url = $show_info_url;
-			 $current_start_link_url =~ s{ziel}{start}g;
-			 $copy_link->($current_start_link_url);
-		     });
-		$www_link_menu->command
-		    (-label => M"Link kopieren als Start und Ziel",
-		     -command => sub {
-			 my $current_start_link_url = $show_info_url;
-			 $current_start_link_url =~ s{ziel}{start}g;
-			 my $complete_link_url = "$current_start_link_url\n$show_info_url";
-			 $copy_link->($complete_link_url);
-		     });
-
-		$show_url->($linkcount, sub {
-				require CGI;
-				# sigh, ";" still makes problems...
-				my $zielname = $zielname;
-				if ($Tk::VERSION >= 804) {
-				    $zielname = Encode::encode("iso-8859-1", $zielname);
-				}
-				CGI->import('-oldstyle_urls');
-				my $q = CGI->new({zielc    => $real_coords,
-						  zielname => $zielname,
-						 });
-				my $url = "$bbbike_cgi_url?" . $q->query_string;
-				$url;
-			    },
-			    $www_link_menu,
-			   );
-		$info_text->insert("end", "\n");
-		$linkcount++;
 	    }
 	}
 
-	if ($advanced && grep { $_ eq 'fz' } @tags) {
-	    $need_indentation = 1; # XXX unless I have an icon
+	if ($advanced
+	    && !$city_obj->is_osm_source # no fragezeichen form link for osm data
+	    && grep { $_ eq 'fz' } @tags
+	   ) {
+	    my $need_indentation = 1; # XXX unless I have an icon
 	    $info_text->insert("end", "fragezeichenform",
 			       ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
 	    $show_url->($linkcount, sub {
@@ -14300,12 +14313,7 @@ sub show_info {
 		$info_text->insert("end", $label,
 				   ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
 		$show_url->($linkcount, sub {
-				my $zielname = $zielname;
-				if ($Tk::VERSION >= 804) {
-				    $zielname = Encode::encode("iso-8859-1", $zielname);
-				}
 				require CGI;
-				my $wpt = "$zielname!$px,$py";
 				my $center = "$px,$py";
 				my $zoom;
 				if ($mapscale_scale < 2000) {
@@ -14319,8 +14327,7 @@ sub show_info {
 				} else {
 				    $zoom = 14;
 				}
-				my $q2 = CGI->new({ #wpt => $wpt, # XXX wpt or center --- TBD what is better suited
-						    center => $center,
+				my $q2 = CGI->new({ center => $center,
 						    zoom => $zoom,
 						    autosel => 1,
 						    maptype => "hybrid",
@@ -19235,6 +19242,7 @@ sub plugin_menu {
 			   (-title => M("Plugin laden"),
 			    -filetypes => [[M"Perl-Module" => '.pm'],
 					   [M"Alle Dateien" => '*']],
+			    -initialdir => "$FindBin::RealBin/plugins",
 			   );
 		       if (defined $file) {
 			   load_plugin($file);

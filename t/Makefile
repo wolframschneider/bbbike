@@ -1,4 +1,5 @@
 PERL?=		perl
+# TEST_FILES must be a single argument
 TEST_FILES=	*.t
 
 test:
@@ -6,12 +7,15 @@ test:
 	    'runtests(@ARGV)' $(TEST_FILES)
 
 test-shuffle:
-	LANG=C $(PERL) -w -I.. -I../lib -MTest::Harness -e \
-	    'BEGIN { if (!eval q{ use List::Util qw(shuffle); 1 }) { *shuffle = sub { @_ }; } } runtests(shuffle @ARGV)' $(TEST_FILES)
+	LANG=C $(PERL) -w -I.. -I../lib -MTest::Harness -MList::Util=shuffle -e \
+	    'runtests(shuffle @ARGV)' $(TEST_FILES)
 
 test-no-cgi:
 	LANG=C BBBIKE_TEST_NO_CGI_TESTS=1 $(PERL) -w -I.. -I../lib -MTest::Harness -e \
 	    'runtests(@ARGV)' $(TEST_FILES)
+
+prove-no-cgi:
+	(cd .. && LANG=C BBBIKE_TEST_NO_CGI_TESTS=1 $(PERL) -S prove -w -I -Ilib t/$(TEST_FILES))
 
 # This is basically test-no-cgi, but works with dmake
 # (dmake+windows cannot ?=, env shell syntax, single quotes, * expansion)

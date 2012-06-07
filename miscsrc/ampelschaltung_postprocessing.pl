@@ -21,7 +21,9 @@ use lib ("$FindBin::RealBin/..",
 	 "$FindBin::RealBin/../lib"
 	);
 
+use Getopt::Long;
 use Storable qw(dclone);
+use Time::Local qw(timelocal);
 
 use Ampelschaltung;
 
@@ -29,6 +31,23 @@ use constant MAX_CYCLE_TIME => 121;
 
 sub D ($) { }
 #sub D ($) { warn $_[0] }
+
+my $filter_year;
+my $with_summary;
+my $as_yaml_file;
+GetOptions(
+	   "filter-year=i" => \$filter_year,
+	   "with-summary" => \$with_summary,
+	   "as-yaml-file=s" => \$as_yaml_file,
+	  )
+    or die "usage: $0 [-filter-year ....] [-with-summary] [-as-yaml-file out.yaml]";
+
+my $filter_start;
+my $filter_end;
+if ($filter_year) {
+    $filter_start = timelocal(0,0,0,1,0,$filter_year);
+    $filter_end   = timelocal(59,59,23,31,11,$filter_year);
+}
 
 my $as = Ampelschaltung2->new;
 $as->open("$FindBin::RealBin/../misc/ampelschaltung.txt") or die;
@@ -38,6 +57,26 @@ for (@aes) {
     # XXX for easier dumping later
     delete $_->{Root};
 }
+
+@aes = grep {
+    my $use = 1;
+    if (defined $filter_start) {
+	if (!$_->{TimeEpoch} && !$_->{RedTimeEpoch} && !$_->{GreenTimeEpoch}) {
+	    $use = 0;
+	} elsif (
+		 ($_->{TimeEpoch}      && $_->{TimeEpoch}      < $filter_start)
+		 || ($_->{RedTimeEpoch}   && $_->{RedTimeEpoch}   < $filter_start)
+		 || ($_->{GreenTimeEpoch} && $_->{GreenTimeEpoch} < $filter_start)
+	    
+		 || ($_->{TimeEpoch}      && $_->{TimeEpoch}      > $filter_end)
+		 || ($_->{RedTimeEpoch}   && $_->{RedTimeEpoch}   > $filter_end)
+		 || ($_->{GreenTimeEpoch} && $_->{GreenTimeEpoch} > $filter_end)
+		) {
+	    $use = 0;
+	}
+    }
+    $use;
+} @aes;
 
 my %ampel_data;
 for my $ae (@aes) {
@@ -164,14 +203,22 @@ my @sorted_ampel_data_with_cycles_keys = do {
 	    [ $_, split(/,/, $f[0]), @f[1..$#f] ];
 	} keys %ampel_data_with_cycles;
 };
+
+my @out_data;
     
 for my $key (@sorted_ampel_data_with_cycles_keys) {
     my $header_printed;
+    my @cycles;
+    my @reds;
+    my @greens;
+    my $record = {};
     for my $ae_or_cd (@{ $ampel_data_with_cycles{$key} }) {
 	if ($ae_or_cd->can('as_string')) {
 	    if (!$header_printed) {
 		print $ae_or_cd->{Crossing} . " $key\n";
 		$header_printed = 1;
+		$record->{crossing} = $ae_or_cd->{Crossing};
+		@{$record}{qw(coord from_dir to_dir)} = split /\|/, $key;
 	    }
 	    print "    ", $ae_or_cd->as_string, "\n";
 	} else {
@@ -193,13 +240,30 @@ for my $key (@sorted_ampel_data_with_cycles_keys) {
 		    $green_percent = int($green/$cycle*100);
 		}
 	    }
+	    if ($with_summary) {
+		push @cycles, $cycle if defined $cycle;
+		push @reds,   $red   if defined $red;
+		push @greens, $green if defined $green;
+	    }
 	    printf "  cycle:%-2s | red:%-2s %-5s | green:%-2s %-5s\n",
 		$cycle,
 		    $red, (defined $red_percent ? "($red_percent%)" : ""),
 			$green, (defined $green_percent ? "($green_percent%)" : "");
 	}
     }
+    if ($with_summary && (@cycles || @reds || @greens)) {
+	print "  SUMMARY: cycles: @cycles | reds: @reds | greens: @greens\n";
+	$record->{cycles} = \@cycles;
+	$record->{reds}   = \@reds;
+	$record->{greens} = \@greens;
+    }
     print "-"x70, "\n";
+    push @out_data, $record;
+}
+
+if ($as_yaml_file) {
+    require YAML::Syck;
+    YAML::Syck::DumpFile($as_yaml_file, \@out_data);
 }
 
 #require Data::Dumper; print STDERR "Line " . __LINE__ . ", File: " . __FILE__ . "\n" . Data::Dumper->new([\%ampel_data_with_cycles],[qw()])->Indent(1)->Useqq(1)->Dump; # XXX

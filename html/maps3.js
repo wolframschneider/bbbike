@@ -8,9 +8,9 @@ var map; // main map object
 var bbbike = {
     // map type by google
     mapTypeControlOptions: {
+        mapTypeNames: ["ROADMAP", "TERRAIN", "SATELLITE", "HYBRID"],
         // moved to bbbike_maps_init(), because the JS object google is not defiend yet
         mapTypeIds: [],
-        // google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN]
     },
 
     // enable Google Arial View: 45 Imagery
@@ -25,7 +25,6 @@ var bbbike = {
         CycleMapType: true,
         PublicTransportMapType: true,
         HikeBikeMapType: true,
-        TahMapType: true,
         BBBikeMapnikMapType: true,
         BBBikeMapnikGermanMapType: true,
         OCMLandscape: true,
@@ -36,9 +35,11 @@ var bbbike = {
         EsriTopo: true,
         MapBox: true,
         Apple: true,
+        Toner: true,
+        Watercolor: true,
 
         YahooMapMapType: true,
-
+        YahooHybridMapType: false,
         YahooSatelliteMapType: true,
 
         BingMapMapType: true,
@@ -50,8 +51,9 @@ var bbbike = {
 
     mapPosition: {
         "default": "TOP_RIGHT",
-        "tah": "BOTTOM_RIGHT",
         "mapnik_bw": "BOTTOM_RIGHT",
+        "toner": "BOTTOM_RIGHT",
+        "watercolor": "BOTTOM_RIGHT",
         "bing_map": "BOTTOM_RIGHT",
         "bing_map_old": "BOTTOM_RIGHT",
         "bing_hybrid": "BOTTOM_RIGHT",
@@ -68,7 +70,8 @@ var bbbike = {
     mapLayers: {
         TrafficLayer: true,
         BicyclingLayer: true,
-        PanoramioLayer: false,
+        PanoramioLayer: true,
+        WeatherLayer: true,
 
         // enable full screen mode
         SlideShow: true,
@@ -76,6 +79,7 @@ var bbbike = {
         Smoothness: true,
         VeloLayer: true,
         MaxSpeed: true,
+        Replay: true,
         LandShading: true
     },
 
@@ -92,7 +96,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "tah", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple", "velo_layer", "max_speed"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple", "velo_layer", "max_speed", "toner", "watercolor"],
 
     area: {
         visible: true,
@@ -107,6 +111,8 @@ var bbbike = {
         "red": '/images/mm_20_red.png',
         "white": '/images/mm_20_white.png',
         "yellow": '/images/mm_20_yellow.png',
+        "bicycle_large": '/images/srtbike.gif',
+        "bicycle_ico": '/images/srtbike.ico',
 
         "blue_dot": "/images/blue-dot.png",
         "green_dot": "/images/green-dot.png",
@@ -115,7 +121,7 @@ var bbbike = {
         "yellow_dot": "/images/yellow-dot.png",
 
         "start": "/images/dd-start.png",
-        "dest": "/images/dd-end.png",
+        "ziel": "/images/dd-end.png",
         "via": "/images/yellow-dot.png",
 
         "shadow": "/images/shadow-dot.png",
@@ -140,9 +146,10 @@ var bbbike = {
 
 var state = {
     fullscreen: false,
+    replay: false,
 
     // tags to hide in full screen mode
-    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo"],
+    non_map_tags: ["copyright", "weather_forecast_html", "top_right", "other_cities", "footer", "routing", "route_table", "routelist", "link_list", "bbbike_graphic", "chart_div", "routes", "headlogo", "bottom", "language_switch", "headline", "sidebar"],
 
     // keep state of non map tags
     non_map_tags_val: {},
@@ -156,6 +163,7 @@ var state = {
     markers_drag: [],
 
     timeout_crossing: null,
+    timeout_menu: null,
 
     // street lookup events
     timeout: null,
@@ -163,6 +171,7 @@ var state = {
     marker_list: [],
 
     lang: "en",
+
 
     // IE bugs
     dummy: 0
@@ -173,6 +182,139 @@ var layers = {};
 //////////////////////////////////////////////////////////////////////
 // functions
 //
+
+function runReplay(none, none2, toogleColor) {
+    // still running
+    if (state.replay) {
+        state.replay = false;
+        return;
+    }
+
+    state.replay = true;
+    var zoom = map.getZoom();
+    var zoom_min = 15;
+
+    // zoom in
+    map.setZoom(zoom > zoom_min ? zoom : zoom_min);
+
+    var marker = new google.maps.Marker({
+        // position: new google.maps.LatLng(start[0], start[1]),
+        icon: bbbike.icons.bicycle_ico,
+        map: map
+    });
+
+    var cleanup = function (text) {
+            if (text) {
+                toogleColor(false, text);
+            } else {
+                state.replay = false;
+                toogleColor(true);
+            }
+        };
+
+    runReplayRouteElevations(0, marker, cleanup, get_driving_time());
+    // runReplayRoute(0, marker, cleanup);
+}
+
+
+function runReplayRouteElevations(offset, marker, cleanup, time) {
+
+    // speed to move the map
+    var timeout = 200;
+    var step = 2;
+    if (elevation_obj && elevation_obj.route_length > 0) {
+        timeout = timeout * elevation_obj.route_length / 16;
+    }
+
+    if (!offset || offset < 0) offset = 0;
+    if (offset >= elevations.length) return;
+
+    var seconds = offset / elevations.length * time;
+
+    // last element in route list, or replay was stopped
+    if (offset + step == elevations.length || !state.replay) {
+        cleanup(readableTime(seconds));
+        setTimeout(function () {
+            cleanup();
+            marker.setMap(null); // delete marker from map
+        }, 3000);
+        return;
+    }
+
+    var start = elevations[offset].location;
+    var pos = new google.maps.LatLng(start.lat(), start.lng());
+
+    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout + " seconds: " + readableTime(seconds));
+
+    map.panTo(pos);
+    marker.setPosition(pos);
+
+    cleanup(readableTime(seconds));
+    setTimeout(function () {
+        runReplayRouteElevations(offset + step, marker, cleanup, time);
+    }, timeout);
+}
+
+
+function runReplayRoute(offset, marker, cleanup) {
+    // speed to move the map
+    var timeout = 300;
+    if (elevation_obj && elevation_obj.route_length > 0) {
+        timeout * elevation_obj.route_length / 10;
+    }
+
+    if (!offset || offset < 0) offset = 0;
+    if (offset >= marker_list.length) return;
+
+    // last element in route list
+    if (offset + 1 == marker_list.length) {
+        marker.setMap(null); // delete marker from map
+        cleanup();
+        return;
+    }
+
+    var start = marker_list[offset];
+    var pos = new google.maps.LatLng(start[0], start[1]);
+
+    marker.setPosition(pos);
+
+    var bounds = new google.maps.LatLngBounds;
+    bounds.extend(pos);
+    map.setCenter(bounds.getCenter());
+
+    debug("offset: " + offset + " length: " + marker_list.length + " elevations: " + elevations.length + " timeout: " + timeout); // + " height: " + elevations[offset].location.lat);
+    setTimeout(function () {
+        runReplayRoute(offset + 1, marker, cleanup);
+    }, timeout);
+}
+
+// "driving_time":"0:27:10|0:19:15|0:15:20|0:13:25" => 0:15:20 => 920 seconds
+
+function readableTime(time) {
+    var hour = 0;
+    var min = 0;
+    var seconds = 0;
+
+    hour = Math.floor(time / 3600);
+    min = Math.floor(time / 60);
+    seconds = Math.floor(time % 60);
+
+    if (hour < 10) hour = "0" + hour;
+    if (min < 10) min = "0" + min;
+    if (seconds < 10) seconds = "0" + seconds;
+    return hour + ":" + min + ":" + seconds;
+}
+
+function get_driving_time() {
+    var time = 0;
+    if (elevation_obj && elevation_obj.driving_time) {
+        var speed = elevation_obj.driving_time.split("|");
+        var t = speed[2];
+        var t2 = t.split(":");
+        time = t2[0] * 3600 + t2[1] * 60 + t2[2] * 1;
+    }
+    return time;
+}
 
 function toogleFullScreen(none, none2, toogleColor) {
     var fullscreen = state.fullscreen;
@@ -197,6 +339,38 @@ function toogleFullScreen(none, none2, toogleColor) {
     state.fullscreen = fullscreen ? false : true;
 }
 
+// start slide show left from current map
+
+function reorder_map(maplist, currentMaptype) {
+    var list = [];
+    var later = [];
+    var flag = 0;
+
+    // Maps: A B C D E F
+    // rotate from D: C B A F E D
+    for (var i = 0; i < maplist.length; i++) {
+        var maptype = maplist[i];
+
+        // everything which is left of the current map
+        if (flag) {
+            list.push(maptype);
+        } else { // right
+            if (maptype == currentMaptype) {
+                // list.push(maptype); // start with current map and a delay
+                flag = 1;
+            }
+            later.push(maptype);
+        }
+    }
+
+    for (var i = 0; i < later.length; i++) {
+        list.push(later[i]);
+    }
+
+    // debug(list.length + " " + list.join(" "));
+    return list;
+}
+
 function runSlideShow(none, none2, toogleColor) {
     // stop running slide show
     if (state.slideShowMaps.length > 0) {
@@ -212,22 +386,27 @@ function runSlideShow(none, none2, toogleColor) {
     var delay = 6000;
     var counter = 0;
 
+    var zoom = map.getZoom();
     var currentMaptype = map.getMapTypeId()
-    var maplist = state.maplist;
+    var maplist = reorder_map(state.maplist, currentMaptype);
     maplist.push(currentMaptype);
 
+    // active, stop button
     toogleColor(false);
 
     for (var i = 0; i < maplist.length; i++) {
         var maptype = maplist[i];
 
-        (function (maptype, timeout) {
+        (function (maptype, timeout, zoom) {
             var timer = setTimeout(function () {
                 map.setMapTypeId(maptype);
-            }, timeout);
+                // keep original zoom, could be changed
+                // by a map with zoom level up to 14 only
+                map.setZoom(zoom);
+            }, timeout, zoom);
 
             state.slideShowMaps.push(timer);
-        })(maptype, delay * counter++);
+        })(maptype, delay * counter++, zoom);
     }
 
     // last action, reset color of control
@@ -242,17 +421,16 @@ function resizeFullScreen(fullscreen) {
 
     if (!tag) return;
 
-    var style = ["width", "height", "marginLeft", "marginRight"];
+    var style = ["width", "height", "marginLeft", "marginRight", "right", "left", "top", "bottom"];
     if (!fullscreen) {
         // keep old state
         for (var i = 0; i < style.length; i++) {
             state.map_style[style[i]] = tag.style[style[i]];
+            tag.style[style[i]] = "0px";
         }
 
         tag.style.width = "99%";
-        tag.style.height = "90%";
-        tag.style.marginLeft = "0%";
-        tag.style.marginRight = "0%";
+        tag.style.height = "99%";
     } else {
         // restore old state
         for (var i = 0; i < style.length; i++) {
@@ -344,8 +522,11 @@ function is_supported_maptype(maptype, list) {
     return 0;
 }
 
-function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam, layer) {
-    bbbike.mapTypeControlOptions.mapTypeIds = [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN];
+function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoomParam, layer, is_route) {
+    // init google map types by name and order
+    for (var i = 0; i < bbbike.mapTypeControlOptions.mapTypeNames.length; i++) {
+        bbbike.mapTypeControlOptions.mapTypeIds.push(google.maps.MapTypeId[bbbike.mapTypeControlOptions.mapTypeNames[i]]);
+    }
     state.maplist = init_google_map_list();
 
     if (!is_supported_map(maptype)) {
@@ -368,6 +549,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         zoomControl: bbbike.controls.zoomControl,
         scaleControl: bbbike.controls.scaleControl,
         panControl: bbbike.controls.panControl,
+        disableDoubleClickZoom: false,
         mapTypeControlOptions: {
             mapTypeIds: bbbike.mapTypeControlOptions.mapTypeIds
         },
@@ -416,17 +598,21 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             map.setZoom(parseInt(zoomParam));
         }
 
-/*
+/* XXX: danger!
 	    // re-center after resize of map window
 	    $(window).resize( function(e) { 
-			map.setCenter(bounds.getCenter()); 
-			// var zoom = map.getBoundsZoomLevel(bounds)
-			map.fitBounds(bounds_padding);
-			var zoom = map.getZoom();
-
+		var current_zoom = map.getZoom();
+		// map.setCenter(bounds.getCenter()); 
+		var zoom = map.getBoundsZoomLevel(bounds)
+		map.fitBounds(bounds_padding);
+		var zoom = map.getZoom();
 			map.setZoom( zoom < 16 ? zoom : 15); 
 	    });
-	    */
+	*/
+
+        $(window).resize(function (e) {
+            setMapHeight();
+        });
 
 
         if (marker_list.length == 2 && without_area != 1 && bbbike.area.visible) {
@@ -510,7 +696,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var mapnik_options = {
         bbbike: {
             "name": "Mapnik",
-            "description": "Mapnik, by OpenStreetMap"
+            "description": "Mapnik, by OpenStreetMap.org"
         },
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".tile.openstreetmap.org/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -527,10 +713,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var mapnik_de_options = {
         bbbike: {
             "name": "Mapnik (de)",
-            "description": "German Mapnik, by OpenStreetMap"
+            "description": "German Mapnik, by OpenStreetMap.de"
         },
         getTileUrl: function (a, z) {
-            return "http://" + randomServerOSM() + ".tile.openstreetmap.de/tiles/osmde/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM(4) + ".tile.openstreetmap.de/tiles/osmde/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
@@ -544,11 +730,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var bbbike_mapnik_options = {
         bbbike: {
             "name": "BBBike",
-            "description": "BBBike Mapnik, by Slaven Rezic"
+            "description": "BBBike Mapnik, by bbbike.de"
         },
         getTileUrl: function (a, z) {
-            // return "http://" + randomServerOSM() + ".tile.openstreetmap.de/tiles/osmde/" + z + "/" + a.x + "/" + a.y + ".png";
-            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/mapnik/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM(3) + ".tile.bbbike.org/osm/mapnik/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
@@ -562,10 +747,10 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var bbbike_smoothness_options = {
         bbbike: {
             "name": "BBBike (Smoothness)",
-            "description": "BBBike Smoothness, by Slaven Rezic"
+            "description": "BBBike Smoothness, by bbbike.de"
         },
         getTileUrl: function (a, z) {
-            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/bbbike-smoothness/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM(3) + ".tile.bbbike.org/osm/bbbike-smoothness/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
@@ -626,11 +811,11 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     // BBBike data in mapnik german
     var bbbike_mapnik_german_options = {
         bbbike: {
-            "name": "BBBike (DE)",
-            "description": "BBBike Mapnik German, by Slaven Rezic"
+            "name": "BBBike (de)",
+            "description": "BBBike Mapnik German, by bbbike.de"
         },
         getTileUrl: function (a, z) {
-            return "http://" + randomServerOSM() + ".tile.bbbike.org/osm/mapnik-german/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM(3) + ".tile.bbbike.org/osm/mapnik-german/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
@@ -645,7 +830,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var mapnik_bw_options = {
         bbbike: {
             "name": "Mapnik (b/w)",
-            "description": "Black/White Mapnik, by OpenStreetMap"
+            "description": "Mapnik Black and White, by OpenStreetMap.org and wikimedia.org"
         },
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".www.toolserver.org/tiles/bw-mapnik/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -658,27 +843,11 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 18
     };
 
-    var tah_options = {
-        bbbike: {
-            "name": "Tile@Home",
-            "description": "Tile at Home, by OpenStreetMap"
-        },
-        getTileUrl: function (a, z) {
-            return "http://" + randomServerOSM() + ".tah.openstreetmap.org/Tiles/tile/" + z + "/" + a.x + "/" + a.y + ".png";
-        },
-        isPng: true,
-        opacity: 1.0,
-        tileSize: new google.maps.Size(256, 256),
-        name: "TAH",
-        minZoom: 1,
-        maxZoom: 17
-    };
-
     // http://www.öpnvkarte.de/
     var public_transport_options = {
         bbbike: {
             "name": "Public Transport",
-            "description": "Public Transport, by OpenStreetMap"
+            "description": "Public Transport, by öpnvkarte.de and OpenStreetMap.org"
         },
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".tile.xn--pnvkarte-m4a.de/tilegen/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -695,7 +864,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var hike_bike_options = {
         bbbike: {
             "name": "Hike&Bike",
-            "description": "Hike&Bike, by OpenStreetMap"
+            "description": "Hike&Bike, by OpenStreetMap.org and wikimedia.org"
         },
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".www.toolserver.org/tiles/hikebike/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -727,7 +896,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var ocm_transport_options = {
         bbbike: {
             "name": "Transport",
-            "description": "Transport, by OpenCycleMap"
+            "description": "Transport, by OpenCycleMap.org"
         },
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".tile2.opencyclemap.org/transport/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -743,7 +912,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var ocm_landscape_options = {
         bbbike: {
             "name": "Landscape",
-            "description": "Landscape, by OpenCycleMap"
+            "description": "Landscape, by OpenCycleMap.org"
         },
         getTileUrl: function (a, z) {
             return "http://" + randomServerOSM() + ".tile3.opencyclemap.org/landscape/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -759,7 +928,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var mapquest_options = {
         bbbike: {
             "name": "MapQuest",
-            "description": "MapQuest, by mapquest.de"
+            "description": "MapQuest, by mapquest.com"
         },
         getTileUrl: function (a, z) {
             return "http://otile" + randomServer(4) + ".mqcdn.com/tiles/1.0.0/osm/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -774,8 +943,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     var mapquest_satellite_options = {
         bbbike: {
-            "name": "MapQuest (Sat)",
-            "description": "MapQuest Satellite, by mapquest.de"
+            "name": "MapQuest Sat",
+            "description": "MapQuest Satellite, by mapquest.com"
         },
         getTileUrl: function (a, z) {
             return "http://mtile0" + randomServer(4) + ".mqcdn.com/tiles/1.0.0/vy/sat/" + z + "/" + a.x + "/" + a.y + ".png";
@@ -827,7 +996,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var yahoo_map_options = {
         bbbike: {
             "name": "Yahoo",
-            "description": "Yahoo"
+            "description": "Yahoo, by maps.yahoo.com"
         },
         getTileUrl: function (a, z) {
             return "http://png.maps.yimg.com/png?t=m&v=4.1&s=256&f=j&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
@@ -841,8 +1010,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     };
     var yahoo_hybrid_options = {
         bbbike: {
-            "name": "Yahoo (Hybrid)",
-            "description": "Yahoo (Hybrid)",
+            "name": "Yahoo Hybrid",
+            "description": "Yahoo Hybrid, by maps.yahoo.com",
         },
         getTileUrl: function (a, z) {
             return "http://us.maps3.yimg.com/aerial.maps.yimg.com/png?v=1.1&t=h&s=256&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
@@ -856,8 +1025,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     };
     var yahoo_satellite_options = {
         bbbike: {
-            "name": "Yahoo (Sat)",
-            "description": "Yahoo (Satellite)",
+            "name": "Yahoo Sat",
+            "description": "Yahoo Satellite, by maps.yahoo.com",
         },
         getTileUrl: function (a, z) {
             return "http://aerial.maps.yimg.com/ximg?t=a&v=1.7&s=256&x=" + a.x + "&y=" + (((1 << z) >> 1) - 1 - a.y) + "&z=" + (18 - z);
@@ -900,7 +1069,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     var bing_map_options = {
         bbbike: {
             "name": "Bing",
-            "description": "Bing, by Microsoft"
+            "description": "Bing, by maps.bing.com and Microsoft"
         },
         getTileUrl: function (a, z) {
             return getTileUrlBingVirtualearth(a, z, "r")
@@ -915,8 +1084,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     var bing_hybrid_options = {
         bbbike: {
-            "name": "Bing (Hybrid)",
-            "description": "Bing (Hybrid), by Microsoft"
+            "name": "Bing Hybrid",
+            "description": "Bing Hybrid, by maps.bing.com and Microsoft"
         },
         getTileUrl: function (a, z) {
             return getTileUrlBing(a, z, "h")
@@ -930,8 +1099,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     };
     var bing_satellite_options = {
         bbbike: {
-            "name": "Bing (Sat)",
-            "description": "Bing Satellite, by Microsoft"
+            "name": "Bing Sat",
+            "description": "Bing Satellite, by maps.bing.com and Microsoft"
         },
         getTileUrl: function (a, z) {
             return getTileUrlBing(a, z, "a");
@@ -976,6 +1145,38 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 14
     };
 
+    var toner_options = {
+        bbbike: {
+            "name": "Toner",
+            "description": "Toner, by maps.stamen.com"
+        },
+        getTileUrl: function (a, z) {
+            return "http://" + randomServerOSM(4) + ".tile.stamen.com/toner/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "toner",
+        minZoom: 1,
+        maxZoom: 19
+    };
+
+    var watercolor_options = {
+        bbbike: {
+            "name": "Watercolor",
+            "description": "Watercolor, by maps.stamen.com"
+        },
+        getTileUrl: function (a, z) {
+            return "http://" + randomServerOSM(4) + ".tile.stamen.com/watercolor/" + z + "/" + a.x + "/" + a.y + ".png";
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "toner",
+        minZoom: 1,
+        maxZoom: 19
+    };
+
     //
     // select a tiles random server. The argument is either an interger or a 
     // list of server names , e.g.:
@@ -995,10 +1196,22 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         return server + ""; // string
     }
 
-    // OSM use up to 3 servers: "a", "b", "c"
+    // OSM use up to 3 or 4 servers: "a", "b", "c", "d"
+    // default is 3 servers
 
-    function randomServerOSM() {
-        return randomServer(["a", "b"]);
+    function randomServerOSM(number) {
+        var tile_servers = ["a", "b", "c", "d"];
+        var max = 3;
+        if (max > tile_servers.length) max = tile_servers.length;
+
+        if (!number || number > tile_servers.length || number < 0) number = max;
+
+        var data = [];
+        for (var i = 0; i < number; i++) {
+            data.push(tile_servers[i]);
+        }
+
+        return randomServer(data);
     }
 
     //
@@ -1067,7 +1280,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
 
     var bing_birdview_options = {
         bbbike: {
-            "name": "Bing (Sat)",
+            "name": "Bing Sat",
             "description": "Bing Satellite and Bird View, by Microsoft"
         },
         getTileUrl: function (a, z) {
@@ -1118,15 +1331,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 var MapnikBwMapType = new google.maps.ImageMapType(mapnik_bw_options);
                 map.mapTypes.set("mapnik_bw", MapnikBwMapType);
                 custom_map("mapnik_bw", lang, mapnik_bw_options.bbbike);
-            }
-        },
-
-
-        "tah": function () {
-            if (bbbike.mapType.TahMapType) {
-                var TahMapType = new google.maps.ImageMapType(tah_options);
-                map.mapTypes.set("tah", TahMapType);
-                custom_map("tah", lang, tah_options.bbbike);
             }
         },
 
@@ -1262,6 +1466,20 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("mapbox", lang, mapbox_options.bbbike);
             }
         },
+        "toner": function () {
+            if (bbbike.mapType.Toner) {
+                var TonerType = new google.maps.ImageMapType(toner_options);
+                map.mapTypes.set("toner", TonerType);
+                custom_map("toner", lang, toner_options.bbbike);
+            }
+        },
+        "watercolor": function () {
+            if (bbbike.mapType.Watercolor) {
+                var WatercolorType = new google.maps.ImageMapType(watercolor_options);
+                map.mapTypes.set("watercolor", WatercolorType);
+                custom_map("watercolor", lang, watercolor_options.bbbike);
+            }
+        },
         "apple": function () {
             if (bbbike.mapType.Apple) {
                 var AppleMapType = new google.maps.ImageMapType(apple_options);
@@ -1296,6 +1514,8 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         },
     };
 
+    // keep in order for slide show
+    // top postion
     mapControls.bbbike_mapnik();
     mapControls.bbbike_mapnik_german();
     mapControls.mapnik();
@@ -1305,6 +1525,15 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.public_transport();
     mapControls.ocm_transport();
     mapControls.ocm_landscape();
+    mapControls.esri();
+    mapControls.esri_topo();
+    mapControls.mapbox();
+    mapControls.apple();
+
+    // bottom postion
+    mapControls.mapnik_bw();
+    mapControls.toner();
+    mapControls.watercolor();
     mapControls.bing_map();
     mapControls.bing_map_old();
     mapControls.yahoo_map();
@@ -1315,12 +1544,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.yahoo_satellite();
     mapControls.bing_hybrid();
     mapControls.yahoo_hybrid();
-    mapControls.tah();
-    mapControls.mapnik_bw();
-    mapControls.esri();
-    mapControls.esri_topo();
-    mapControls.mapbox();
-    mapControls.apple();
 
     map.setMapTypeId(maptype);
     if (is_supported_maptype(maptype, bbbike.available_custom_maps)) {
@@ -1373,11 +1596,23 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "lang": lang
     });
 
+
+
     custom_layer(map, {
-        "layer": "FullScreen",
-        "enabled": bbbike.mapLayers.FullScreen,
-        "active": layer == "fullscreen" ? true : false,
-        "callback": toogleFullScreen,
+        "id": "google_PanoramioLayer",
+        "layer": "PanoramioLayer",
+        "enabled": bbbike.mapLayers.PanoramioLayer,
+        "active": layer == "panoramio" ? true : false,
+        "callback": add_panoramio_layer,
+        "lang": lang
+    });
+
+    custom_layer(map, {
+        "id": "google_WeatherLayer",
+        "layer": "WeatherLayer",
+        "enabled": bbbike.mapLayers.WeatherLayer,
+        "active": layer == "weather" ? true : false,
+        "callback": add_weather_layer,
         "lang": lang
     });
 
@@ -1390,11 +1625,19 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     });
 
     custom_layer(map, {
-        "id": "google_PanoramioLayer",
-        "layer": "PanoramioLayer",
-        "enabled": bbbike.mapLayers.PanoramioLayer,
-        "active": layer == "panoramio" ? true : false,
-        "callback": add_panoramio_layer,
+        "layer": "FullScreen",
+        "enabled": bbbike.mapLayers.FullScreen,
+        "active": layer == "fullscreen" ? true : false,
+        "callback": toogleFullScreen,
+        "lang": lang
+    });
+
+    custom_layer(map, {
+        "layer": "Replay",
+        "enabled": bbbike.mapLayers.Replay && is_route,
+        // display only on route result page
+        "active": layer == "replay" ? true : false,
+        "callback": runReplay,
         "lang": lang
     });
 
@@ -1416,7 +1659,6 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "lang": lang
     });
 
-
     setTimeout(function () {
         hideGoogleLayers();
     }, 5000);
@@ -1430,13 +1672,104 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     google.maps.event.addListener(map, "maptypeid_changed", function () {
         hideGoogleLayers();
     });
+
+    google.maps.event.clearListeners(map, 'rightclick');
+    google.maps.event.addListener(map, "rightclick", function (event) {
+        var zoom = map.getZoom();
+
+        // Firefox 4.x and later bug
+        (function (zoom) {
+            var timeout = 10;
+            var timer = setTimeout(function () {
+                var z = map.getZoom();
+                if (z + 1 == zoom) {
+                    map.setZoom(zoom);
+                    debug("reset zoom level to: " + zoom);
+                }
+            }, timeout);
+        })(zoom);
+
+        // on start page only
+        if (state.markers.marker_start) debug("rightclick " + zoom + " " + pixelPos(event));
+
+    });
+
+    setTimeout(function () {
+        setMapHeight();
+    }, 200);
 }
+
+function pixelPos(event) {
+
+    var topRight = map.getProjection().fromLatLngToPoint(map.getBounds().getNorthEast());
+    var bottomLeft = map.getProjection().fromLatLngToPoint(map.getBounds().getSouthWest());
+    var scale = Math.pow(2, map.getZoom());
+    // var worldPoint=map.getProjection().fromLatLngToPoint(marker.getPosition());
+    var worldPoint = map.getProjection().fromLatLngToPoint(event.latLng);
+
+    var point = new google.maps.Point((worldPoint.x - bottomLeft.x) * scale, (worldPoint.y - topRight.y) * scale);
+
+    var map_div = document.getElementById("map");
+    var menu_div = document.getElementById("start_menu");
+
+    // create start menu
+    if (!menu_div) {
+        menu_div = document.createElement('div');
+
+        menu_div.style.padding = '8px';
+        menu_div.style.margin = '2px';
+
+        // Set CSS for the control border
+        menu_div.style.backgroundColor = 'white';
+        menu_div.style.borderStyle = 'solid';
+        menu_div.style.borderWidth = '0px';
+        // menu_div.style.cursor = 'pointer';
+        menu_div.style.textAlign = 'center';
+
+        menu_div.id = "start_menu";
+        menu_div.style.position = "absolute";
+
+        map_div.appendChild(menu_div);
+    }
+
+    menu_div.style.display = "block";
+    // setTimeout(function () { menu_div.style.display = "none";}, 8000);
+    menu_div.style.left = point.x + "px";
+    menu_div.style.top = point.y + "px";
+
+    var content = ""; // "foobar " + "x: " + point.x + "y: " + point.y + "<br/>\n";
+    // var pos = marker.getPosition();
+    var type = ["start", "via", "ziel"];
+    var address = "";
+
+    for (var i = 0; i < type.length; i++) {
+        if (i > 0) content += " | ";
+        content += "<a href='#' onclick='javascript:setMarker(\"" + type[i] + '", "' + address + '", ' + granularity(event.latLng.lat()) + ", " + granularity(event.latLng.lng()) + ', "start_menu"' + ");'>" + translate_mapcontrol(type[i]) + "</a>" + "\n";
+    }
+
+    menu_div.innerHTML = content;
+
+    if (state.timeout_menu) clearTimeout(state.timeout_menu);
+    google.maps.event.addDomListenerOnce(menu_div, 'mouseout', function () {
+        debug("got mouseout");
+        state.timeout_menu = setTimeout(function () {
+            menu_div.style.display = "none";
+        }, 6000);
+    });
+
+    return "x: " + point.x + "y: " + point.y;
+}
+
+
 
 // layers which works only on google maps
 
 function init_google_layers() {
-    layers.bicyclingLayer = new google.maps.BicyclingLayer();
-    layers.trafficLayer = new google.maps.TrafficLayer();
+    try {
+        layers.bicyclingLayer = new google.maps.BicyclingLayer();
+        layers.trafficLayer = new google.maps.TrafficLayer();
+        layers.weatherLayer = new google.maps.weather.WeatherLayer();
+    } catch (e) {}
 
     // need to download library first
     layers.panoramioLayer = false;
@@ -1478,6 +1811,16 @@ function add_bicycle_layer(map, enable) {
         layers.bicyclingLayer.setMap(map);
     } else {
         layers.bicyclingLayer.setMap(null);
+    }
+}
+
+function add_weather_layer(map, enable) {
+    if (!layers.weatherLayer) return;
+
+    if (enable) {
+        layers.weatherLayer.setMap(map);
+    } else {
+        layers.weatherLayer.setMap(null);
     }
 }
 
@@ -1584,6 +1927,36 @@ var street = "";
 var street_cache = [];
 var data_cache = [];
 
+
+function setMarker(type, address, lat, lng, div) {
+    var marker = state.markers["marker_" + type];
+    if (type == "via") displayVia();
+
+    var id = "suggest_" + type;
+    marker.setPosition(new google.maps.LatLng(lat, lng));
+
+    // no address - look in database
+    if (!address || address == "") {
+        find_street(marker, id);
+
+        // hide div after we move a marker
+        if (div) {
+            var tag = document.getElementById(div);
+            if (tag) tag.style.display = "none";
+        }
+    }
+
+    // address is known, fake resonse
+    else {
+
+        // find_street(marker, "suggest_" + type, null);
+        // { query:"7.44007,46.93205", suggestions:["7.44042,46.93287     Bondelistr./"] }
+        var data = '{query:"' + lng + "," + lat + '", suggestions:["' + lng + "," + lat + "\t" + address + '"]}';
+        updateCrossing(marker, id, data);
+        debug("data: " + data);
+    }
+}
+
 function getStreet(map, city, street, strokeColor, noCleanup) {
     var streetnames = 3; // if set, display a info window with the street name
     var autozoom = 13; // if set, zoom to the streets
@@ -1611,12 +1984,23 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
         return plotStreet(data_cache[url]);
     }
 
-    function addInfoWindow(marker, address) {
+
+
+    function addInfoWindowStreet(marker, address, pos) {
         var infoWindow = new google.maps.InfoWindow({
             maxWidth: 500
         });
+
+        // var pos = marker.getPosition();
+        var type = ["start", "via", "ziel"];
+
         var content = "<span id=\"infoWindowContent\">\n"
         content += "<p>" + address + "</p>\n";
+        for (var i = 0; i < type.length; i++) {
+            if (i > 0) content += " | ";
+            content += "<a href='#' onclick='javascript:setMarker(\"" + type[i] + '", "' + address + '", ' + granularity(pos.lat()) + ", " + granularity(pos.lng()) + ");'>" + translate_mapcontrol(type[i]) + "</a>" + "\n";
+        }
+
         content += "</span>\n";
         infoWindow.setContent(content);
         infoWindow.open(map, marker);
@@ -1624,7 +2008,7 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
         // close info window after 4 seconds
         setTimeout(function () {
             infoWindow.close()
-        }, 4000)
+        }, 5000)
 
     };
 
@@ -1689,15 +2073,14 @@ function getStreet(map, city, street, strokeColor, noCleanup) {
                     map: map
                 });
 
-                google.maps.event.addListener(marker, "click", function (marker, street) {
+                google.maps.event.addListener(marker, "click", function (marker, street, position) {
                     return function (event) {
-                        addInfoWindow(marker, street);
+                        addInfoWindowStreet(marker, street, position);
                     }
-                }(marker, street));
+                }(marker, street, streets_route[pos]));
 
                 if (streets_list.length <= 10) {
-                    addInfoWindow(marker, street);
-
+                    addInfoWindowStreet(marker, street, streets_route[pos]);
                 }
 
                 street_cache.push(marker);
@@ -1918,7 +2301,6 @@ function translate_mapcontrol(word, lang) {
         "en": {
             "mapnik": "Mapnik",
             "cycle": "Cycle",
-            "tah": "Tile@Home",
             "hike_bike": "Hike&amp;Bike",
             "public_transport": "Public Transport",
             "mapnik_de": "Mapnik (de)",
@@ -1930,17 +2312,29 @@ function translate_mapcontrol(word, lang) {
             "yahoo_satellite": "Yahoo (Sat)",
             "bing_map": "Bing",
             "bing_map_old": "Bing (old)",
-            "bing_satellite": "Bing (Sat)",
-            "bing_hybrid": "Bing (Hybrid)",
-            "FullScreen": "Full Screen View",
-            "SlideShow": "Map Slide Show",
+            "bing_satellite": "Bing Sat",
+            "bing_hybrid": "Bing Hybrid",
+            "FullScreen": "Fullscreen",
+            "Replay": "Replay",
+            "SlideShow": "Slide Show",
             "esri": "Esri",
             "esri_topo": "Esri Topo",
             "mapbox": "MapBox",
             "apple": "Apple",
             "VeloLayer": "Velo-Layer",
             "MaxSpeed": "Speed Limit",
-            "bing_birdview": "Bing (Sat)" // Birdview
+            "WeatherLayer": "Weather",
+            "BicyclingLayer": "Google Bicyling",
+            "TrafficLayer": "Google Traffic",
+            "PanoramioLayer": "Panoramio",
+            "toner": "Toner",
+            "watercolor": "Watercolor",
+
+            "start": "Start",
+            "ziel": "Destination",
+            "via": "Via",
+
+            "bing_birdview": "Bing Sat" // last 
         },
 
         // rest
@@ -1963,8 +2357,12 @@ function translate_mapcontrol(word, lang) {
             "Cycle, by OpenStreetMap": "Fahrrad, von OpenStreetMap",
             "Public Transport, by OpenStreetMap": "Öffentlicher Personennahverkehr, von OpenStreetMap",
             "German Mapnik, by OpenStreetMap": "Mapnik in deutschem Kartenlayout, von OpenStreetMap",
+            "SlideShow": "Slideshow",
+            "BicyclingLayer": "Google Fahrrad",
+            "TrafficLayer": "Google Verkehr",
 
-            "bing_birdview": "Bing (Sat)",
+            "bing_birdview": "Bing Sat",
+            "WeatherLayer": "Wetter",
 
             "Set start point": "Setze Startpunkt",
             "Set destination point": "Setze Zielpunkt",
@@ -1979,6 +2377,13 @@ function translate_mapcontrol(word, lang) {
             "Land Shading": "Reliefkarte",
             "VeloLayer": "Velo-Layer",
             "MaxSpeed": "Tempo Limit",
+            "Watercolor": "Aquarell",
+            "Replay": "Replay",
+
+            "start": "Start",
+            "ziel": "Ziel",
+            "via": "Via",
+
             "Via": "Via"
         },
         "es": {
@@ -2123,7 +2528,9 @@ function maptype_usage(maptype) {
     }
 }
 
-// hide google layers on non-google custom maps
+// hide google only layers on 
+// non-google custom maps
+//
 
 function hideGoogleLayers(maptype) {
     if (!maptype) {
@@ -2131,7 +2538,6 @@ function hideGoogleLayers(maptype) {
     }
 
     var value = is_supported_maptype(maptype, bbbike.available_custom_maps) ? "hidden" : "visible";
-
     var timeout = value == "hidden" ? 2000 : 1000;
 
     setTimeout(function () {
@@ -2143,6 +2549,13 @@ function hideGoogleLayers(maptype) {
         var div = document.getElementById("TrafficLayer");
         if (div) div.style.visibility = value;
     }, timeout - (value == "hidden" ? 500 : -500));
+
+/*
+    setTimeout(function () {
+        var div = document.getElementById("WeatherLayer");
+        if (div) div.style.visibility = value;
+    }, timeout - (value == "hidden" ? 900 : -900));
+    */
 
     setCustomBold(maptype, 1);
 }
@@ -2190,14 +2603,17 @@ function LayerControl(controlDiv, map, opt) {
 
     // grey (off) <-> green (on)
 
-    function toogleColor(toogle) {
+    function toogleColor(toogle, text) {
         controlUI.style.color = toogle ? '#888888' : '#228b22';
+        controlText.innerHTML = (text ? text + " " : "") + translate_mapcontrol(layerText, lang);
     }
 
     if (layer == "FullScreen") {
         controlUI.title = 'Click to enable/disable ' + translate_mapcontrol(layerText, lang);
     } else if (layer == "SlideShow") {
         controlUI.title = 'Click to run ' + translate_mapcontrol(layerText, lang);
+    } else if (layer == "Replay") {
+        controlUI.title = 'Click to replay route';
     } else {
         controlUI.title = 'Click to add the layer ' + layerText;
     }
@@ -2537,7 +2953,7 @@ function loadRoute(opt) {
 
 function RouteMarker(opt) {
 
-    // up to 3 markers: [ start, dest, via ]
+    // up to 3 markers: [ start, ziel, via ]
     var icons = [bbbike.icons.green, bbbike.icons.red, bbbike.icons.yellow];
 
     for (var i = 0; i < marker_list_points.length; i++) {
@@ -2609,40 +3025,34 @@ function reset() {
     document.getElementById('chart_div').style.display = 'none';
 }
 
-function smallerMap(step, id) {
+function smallerMap(step, id, id2) {
     if (!id) id = "BBBikeGooglemap";
-    if (!step) step = 1;
+    if (!step) step = 2;
 
     var tag = document.getElementById(id);
     if (!tag) return;
 
-    var margin = tag.style.marginLeft || "18.4em";
-    var width = tag.style.width || "74%";
+    var width = tag.style.width || "75%";
 
-    // match "18.4em" and increase it by step=1 to 19.4
-    var matches = margin.match(/^([0-9\.\-]+)([a-z]+)$/);
+    // match "75%" and increase it by step=1 
+    var matches = width.match(/^([0-9\.\-]+)%$/);
 
-    var unit, m;
+    var unit = "%";
+    var m = 0;
     if (matches) {
-        unit = matches[2];
-        m = parseFloat(matches[0]) + step;
-    } else {
-        m = "0";
-        unit = "em";
+        m = parseFloat(matches[0]) - step;
     }
+    if (m <= 0 || m > 105) m = 75;
 
-    // alert("foo: " + m + unit);
-    tag.style.marginLeft = m + unit;
+    // make map smaller, and move it right
+    tag.style.width = m + unit;
+    tag.style.left = (100 - m) + unit;
 
-    matches = width.match(/^([0-9\.\-]+)%$/);
-    width = parseFloat(matches[0]) + step * -1.3;
-
-    width = (width < 0 || width > 100) ? 100 : width;
-    tag.style.width = width + "%";
+    // debug("M: " + m + " " + tag.style.width + " " + tag.style.left );
 }
 
 //
-// set start/via/destination markers
+// set start/via/ziel markers
 // zoom level is not known yet, try it 0.5 seconds later
 //
 
@@ -2685,7 +3095,7 @@ function _init_markers(opt) {
     var pos_lat = lat - (lat - sw.lat()) / dist; //  down
     padding = (ne.lng() - lng) / 16; // distance beteen markers on map, 1/x of the map
     var pos_start = new google.maps.LatLng(pos_lat, pos_lng);
-    var pos_dest = new google.maps.LatLng(pos_lat, pos_lng + padding);
+    var pos_ziel = new google.maps.LatLng(pos_lat, pos_lng + padding);
     var pos_via = new google.maps.LatLng(pos_lat, pos_lng + 2.0 * padding);
 
     // shadow for markers, if moved
@@ -2699,12 +3109,12 @@ function _init_markers(opt) {
         icon: bbbike.icons["start"] // icon: "/images/start_ptr.png"
     });
 
-    var marker_dest = new google.maps.Marker({
-        position: pos_dest,
+    var marker_ziel = new google.maps.Marker({
+        position: pos_ziel,
         clickable: true,
         draggable: true,
         title: translate_mapcontrol("Set destination point", lang),
-        icon: bbbike.icons["dest"] // icon: "/images/ziel_ptr.png"
+        icon: bbbike.icons["ziel"] // icon: "/images/ziel_ptr.png"
     });
 
     var marker_via = new google.maps.Marker({
@@ -2724,10 +3134,10 @@ function _init_markers(opt) {
         marker_start.setMap(map);
         state.markers.marker_start = marker_start;
     }
-    if (state.markers_drag.marker_dest == null) {
-        if (state.markers.marker_dest) state.markers.marker_dest.setMap(null);
-        marker_dest.setMap(map);
-        state.markers.marker_dest = marker_dest;
+    if (state.markers_drag.marker_ziel == null) {
+        if (state.markers.marker_ziel) state.markers.marker_ziel.setMap(null);
+        marker_ziel.setMap(map);
+        state.markers.marker_ziel = marker_ziel;
     }
     if (state.markers_drag.marker_via == null) {
         if (state.markers.marker_via) state.markers.marker_via.setMap(null);
@@ -2736,20 +3146,28 @@ function _init_markers(opt) {
     }
 
 
+
     // var event = 'position_changed'; // "drag", Firefox bug
     var event = 'drag'; // "drag", Firefox bug
     google.maps.event.addListener(marker_start, event, function () {
         state.markers_drag.marker_start = marker_start;
         find_street(marker_start, "suggest_start", shadow)
     });
-    google.maps.event.addListener(marker_dest, event, function () {
-        state.markers_drag.marker_dest = marker_dest;
-        find_street(marker_dest, "suggest_ziel", shadow)
+    google.maps.event.addListener(marker_ziel, event, function () {
+        state.markers_drag.marker_ziel = marker_ziel;
+        find_street(marker_ziel, "suggest_ziel", shadow)
     });
     google.maps.event.addListener(marker_via, event, function () {
         state.markers_drag.marker_via = marker_via;
-        find_street(marker_via, "suggest_via", shadow)
+        find_street(marker_via, "suggest_via", shadow, function () {
+            displayVia()
+        });
     });
+}
+
+function displayVia() {
+    var tag = document.getElementById("viatr");
+    if (tag && tag.style.display == "none") toogleVia('viatr', 'via_message');
 }
 
 // round up to 1.1 meters
@@ -2773,7 +3191,7 @@ function debug(text, id) {
     tag.innerHTML = "debug: " + text; // + " " + today;
 }
 
-function find_street(marker, input_id, shadow) {
+function find_street(marker, input_id, shadow, callback) {
     var latLng = marker.getPosition();
 
     var input = document.getElementById(input_id);
@@ -2786,11 +3204,12 @@ function find_street(marker, input_id, shadow) {
         input.setAttribute("value", value);
 
         // set shadow to indicate an active marker
-        marker.setShadow(shadow);
+        if (shadow) marker.setShadow(shadow);
 
         display_current_crossing(marker, input_id, {
             "lng": granularity(latLng.lng()),
-            "lat": granularity(latLng.lat())
+            "lat": granularity(latLng.lat()),
+            "callback": callback
         });
 
         var type = input_id.substr(8);
@@ -2849,7 +3268,9 @@ function _display_current_crossing(marker, id, obj) {
     }
     downloadUrl(url, function (data, responseCode) {
         if (responseCode == 200) {
+            if (obj.callback) obj.callback();
             updateCrossing(marker, id, data);
+
         } else if (responseCode == -1) {
             alert("Data request timed out. Please try later.");
         } else {
@@ -2870,6 +3291,8 @@ function set_input_field(id, value) {
 
     debug("crossing: " + id + " " + value);
 }
+
+// data: { query:"7.44007,46.93205", suggestions:["7.44042,46.93287	Bondelistr./"] }
 
 function updateCrossing(marker, id, data) {
 
@@ -2977,6 +3400,34 @@ function googleCodeAddress(address, callback) {
         }
     });
 }
+
+function toogleDiv(id, value) {
+    var tag = document.getElementById(id);
+    if (!tag) return;
+
+    tag.style.display = tag.style.display == "none" ? "block" : "none";
+    setMapHeight();
+}
+
+/* set map height, depending on footer height */
+
+function setMapHeight() {
+    var height = jQuery(window).height() - jQuery('#bottom').height() - 20;
+    if (height < 200) height = 200;
+
+    jQuery('#BBBikeGooglemap').height(height);
+
+    debug("height: " + height);
+};
+
+function setMapWidth() {
+    var width = jQuery(window).width() - jQuery('#sidebar').width() - 60;
+    if (width < 200) width = 200;
+
+    jQuery('#BBBikeGooglemap').width(width);
+
+    debug("width: " + width);
+};
 
 
 // EOF

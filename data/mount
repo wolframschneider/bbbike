@@ -22,6 +22,7 @@ Steigung 8.5% (Teufelsseechaussee [Auffahrt zum ehem. Horchposten])	St; -850,994
 Steigung 8.5% (Teufelsseechaussee [Auffahrt zum ehem. Horchposten])	St; -839,9968 -826,9977
 Steigung 8.5% (Teufelsseechaussee [Auffahrt zum ehem. Horchposten])	St; -826,9977 -817,9968
 Steigung 8.3% (Steffenshagener Str.)	St; 22983,11098 22991,11133
+Steigung 8.2% ((Krankenhaus Hedwigshöhe - Buntzelstr.))	St; 22166,312 21996,268
 Steigung 8.1% (Teufelsseechaussee [Auffahrt zum ehem. Horchposten])	St; -818,9894 -809,9867
 Steigung 8.1% (Teufelsseechaussee [Auffahrt zum ehem. Horchposten])	St; -817,9968 -818,9894
 Steigung 8.1% (Teufelsseechaussee [Auffahrt zum ehem. Horchposten])	St; -809,9867 -791,9854
@@ -81,6 +82,7 @@ Steigung 5.9% (Moorlakeweg)	St; -9224,1417 -9085,1347
 Steigung 5.9% (Christinenstr.)	St; 10649,13860 10695,13952
 Steigung 5.8% (Seglerweg: Qualität?)	St; -5885,1786 -5961,1767
 Steigung 5.8% (Hochkirchstr.)	St; 8102,9262 8100,9240
+Steigung 5.6% (Höhensteig)	St; 21712,215 21799,234
 Steigung 5.6% (Cordesstr.)	St; 1382,10124 1318,10031
 Steigung 5.5% (Nikolskoer Weg)	St; -8759,1793 -8775,1748
 Steigung 5.5% (Nikolskoer Weg)	St; -8489,2088 -8759,1793
@@ -333,6 +335,7 @@ Steigung 3.0% (Kranzallee)	St; -617,10990 -679,10934
 Steigung 3.0% (Hermsdorfer Damm)	St; 2533,22253 2587,22332
 Steigung 3.0% (Fontanestr. (Grunewald))	St; 972,8626 930,8746
 Steigung 3.0% (Bänschstr.)	St; 14319,12629 14188,12664
+Steigung 3.0% (Buntzelstr.)	St; 22166,312 22145,208
 Steigung 3.0% (Blissestr.)	St; 4784,8508 4788,8347
 Steigung 2.9% (Willibald-Alexis-Str.)	St; 9596,9092 9669,9080
 Steigung 2.9% (Wilhelmstr. (Wilhelmstadt))	St; -5501,11251 -5564,11209
@@ -415,8 +418,8 @@ Steigung 2.6% (Spandauer Damm)	St; -264,13009 -205,12985
 Steigung 2.6% (Sickingenstr.)	St; 5102,14005 5224,14031
 Steigung 2.6% (Röblingstr.)	St; 7497,5610 7477,5475
 Steigung 2.6% (Röblingstr.)	St; 7477,5475 7492,5415
-Steigung 2.6% (Rosestr.)	St; 21497,1042 21350,852
-Steigung 2.6% (Rosestr.)	St; 21350,852 21202,727
+Steigung 2.6% (Rosestr.)	St; 21497,1042 21329,832
+Steigung 2.6% (Rosestr.)	St; 21329,832 21202,727
 Steigung 2.6% (Reuterstr. (Neukölln))	St; 12195,8436 12216,8323
 Steigung 2.6% (Quastenhornweg)	St; -7595,4374 -7557,4340
 Steigung 2.6% (Quastenhornweg)	St; -7557,4340 -7473,4306
@@ -702,6 +705,7 @@ Steigung 1.9% (Seebadstr. (Kladow))	St; -8392,6373 -8523,6323
 Steigung 1.9% (Seebadstr. (Kladow))	St; -8337,6398 -8392,6373
 Steigung 1.9% (Saarstr.)	St; 5799,6841 5811,6833
 Steigung 1.9% (Saarstr.)	St; 5644,6936 5799,6841
+Steigung 1.9% (Onkel-Tom-Str.)	St; 79,5405 88,5136
 Steigung 1.9% (Neue Kantstr.)	St; 2252,11037 2016,11034
 Steigung 1.9% (Morusstr.)	St; 12466,7946 12446,8032
 Steigung 1.9% (Mittelweg (Neukölln))	St; 12647,7672 12520,7694
@@ -744,7 +748,6 @@ Steigung 1.8% (Schildhornweg)	St; -2967,9320 -2956,9307
 Steigung 1.8% (Saatwinkler Damm)	St; 5074,14718 5062,14681
 Steigung 1.8% (Reichpietschufer)	St; 7828,11133 8000,11137
 Steigung 1.8% (Puccinistr.)	St; 13700,15501 13776,15546
-Steigung 1.8% (Onkel-Tom-Str.)	St; 79,5405 103,5123
 Steigung 1.8% (Möllendorffstr.)	St; 15557,12473 15550,12625
 Steigung 1.8% (Möllendorffstr.)	St; 15530,12412 15557,12473
 Steigung 1.8% (Morusstr.)	St; 12466,7946 12478,7878
@@ -804,6 +807,7 @@ Steigung 1.7% (Stralsunder Str. (Gesundbrunnen))	St; 9250,14658 9341,14701
 Steigung 1.7% (Sophie-Charlotten-Str.)	St; 2631,11371 2609,11503
 Steigung 1.7% (Sakrower Kirchweg)	St; -7080,4896 -7131,4742
 Steigung 1.7% (Reichsstr.)	St; -103,12868 23,12739
+Steigung 1.7% (Quermatenweg)	St; 88,5136 -21,5104
 Steigung 1.7% (Nußbaumallee)	St; 1795,12247 1732,12224
 Steigung 1.7% (Monumentenstr.)	St; 8480,9080 8598,9074
 Steigung 1.7% (Kyllmannstr. (Wannsee))	St; -6179,1570 -6248,1607
@@ -896,7 +900,6 @@ Steigung 1.5% (Schwedter Str. (Mitte, Prenzlauer Berg))	St; 10933,14122 10830,14
 Steigung 1.5% (Sandheideweg)	St; -4547,11280 -4564,11180
 Steigung 1.5% (Saarbrücker Str.)	St; 11257,13647 11060,13865
 Steigung 1.5% (Reichsstr.)	St; -129,12947 -103,12868
-Steigung 1.5% (Quermatenweg)	St; 103,5123 -21,5099
 Steigung 1.5% (Pillkaller Allee)	St; 45,11482 22,11362
 Steigung 1.5% (Pillkaller Allee)	St; 22,11362 14,11215
 Steigung 1.5% (Pillkaller Allee)	St; 14,11215 21,11167
@@ -998,7 +1001,6 @@ Steigung 1.4% (Feuerbachstr.)	St; 5582,6360 5702,6381
 Steigung 1.4% (Eichkampstr.)	St; 693,9129 890,9399
 Steigung 1.4% (Dr.-Kleusberg-Promenade)	St; -4585,9836 -4571,9764
 Steigung 1.4% (Dickhardtstr.)	St; 5817,7223 5824,6974
-Steigung 1.4% (Delbrückstr. (Neukölln))	St; 13125,6717 12981,6689
 Steigung 1.4% (Danziger Str.)	St; 12317,14535 12128,14640
 Steigung 1.4% (Bürgerstr. (Britz))	St; 13307,6359 13239,6344
 Steigung 1.4% (Blumberger Damm)	St; 21782,16253 21724,15955
@@ -1187,7 +1189,6 @@ Steigung 1.1% (Wilhelmsaue)	St; 4777,8731 4456,8703
 Steigung 1.1% (Westendallee)	St; 208,12305 232,12207
 Steigung 1.1% (Westendallee)	St; 179,12434 208,12305
 Steigung 1.1% (Wendenstr.)	St; 20580,1406 20539,1285
-Steigung 1.1% (Walterstr.)	St; 13125,6717 13014,6833
 Steigung 1.1% (Wallenbergstr.)	St; 4457,8484 4315,8478
 Steigung 1.1% (Waldallee)	St; -8213,6349 -8290,6307
 Steigung 1.1% (Usedomer Str.)	St; 9275,14846 9437,14926

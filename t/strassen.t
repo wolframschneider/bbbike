@@ -46,8 +46,9 @@ my $zebrastreifen_tests = 3;
 my $encoding_tests = 10;
 my $multistrassen_tests = 11;
 my $initless_tests = 3;
+my $global_directive_tests = 3;
 
-plan tests => $basic_tests + $doit_tests + $strassen_orig_tests + $zebrastreifen_tests + $encoding_tests + $multistrassen_tests + $initless_tests;
+plan tests => $basic_tests + $doit_tests + $strassen_orig_tests + $zebrastreifen_tests + $encoding_tests + $multistrassen_tests + $initless_tests + $global_directive_tests;
 
 goto XXX if $do_xxx;
 
@@ -310,7 +311,7 @@ SKIP: {
     my $s = Strassen->new($f, NoRead => 1);
     $s->read_data(ReadOnlyGlobalDirectives => 1);
     my $glob_dir = Strassen->get_global_directives($f);
-    like($glob_dir->{"category_image.Zs"}->[0], qr{\Qverkehrszeichen/Zeichen_350.svg:24x24});
+    like($glob_dir->{"category_image.Zs"}->[0], qr{\Qverkehrszeichen/Zeichen_350.svg:\E\d+x\d+});
     is($glob_dir->{"title"}->[0], "Zebrastreifen in Berlin");
     is($glob_dir->{"emacs-mode"}->[0], "-*- bbbike -*-", "Test the emacs-mode hack");
 }
@@ -514,6 +515,14 @@ EOF
     my $s2 = Strassen->new_from_data_string($data2, UseLocalDirectives => 1);
     is_deeply(\@warnings, [], 'No warnings in complicated nested case');
 }
-   
+
+{ # $global_directive_tests
+    my $s = Strassen->new;
+    $s->set_global_directive('some' => 'thing');
+    is $s->get_global_directive('some'), 'thing', 'set/get global directive';
+    $s->set_global_directive('some' => 'thing', 'else');
+    is $s->get_global_directive('some'), 'thing', 'after setting multiple values';
+    is_deeply $s->get_global_directives, { some => [qw(thing else)] }, 'get_global_directives';
+}
 
 __END__

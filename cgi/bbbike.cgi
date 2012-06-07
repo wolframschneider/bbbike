@@ -144,6 +144,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_google_adsense_linkblock
 	    $enable_google_adsense_street_linkblock
 	    $enable_panoramio_photos
+	    $enable_google_weather_layer
 	    $enable_elevation
 	    $dos_run_timeout
 	    $show_real_time
@@ -936,6 +937,9 @@ if ($lang ne "de") {
     }
 }
 
+my $headline = "";
+my $bbbike_local_script_url;
+
 $BBBikeAds::enable_google_adsense = $enable_google_adsense;
 $BBBikeAds::enable_google_adsense_start = $enable_google_adsense_start;
 $BBBikeAds::enable_google_adsense_street = $enable_google_adsense_street;
@@ -1301,8 +1305,12 @@ foreach my $type (qw(start via ziel)) {
 	$q->delete($type . "charimg.y");
     } elsif (defined $q->param($type . 'c_wgs84') and
 	     $q->param($type . 'c_wgs84') ne '') {
-	my($x,$y) = convert_wgs84_to_data(split /,/, $q->param($type . 'c_wgs84'));
-	$q->param($type . 'c', "$x,$y");
+	my @new_params;
+	for my $old_param ($q->param($type . 'c_wgs84')) {
+	    my($x,$y) = convert_wgs84_to_data(split /,/, $old_param);
+	    push @new_params, "$x,$y";
+	}
+	$q->param($type . 'c', @new_params);
 	$q->delete($type . 'c_wgs84');
     }
 
@@ -2302,6 +2310,9 @@ sub choose_form {
 
     print <<EOF if ($bi->{'can_table'});
 <div id="routing">
+@{[ &language_switch($bbbike_local_script_url) ]}
+@{[ &headline ]}
+
 <table>
 <tr>
 EOF
@@ -2343,7 +2354,7 @@ EOF
 	    &social_link;
 
 	    print qq{<a class="$class logo" href="$url" title="}, M("BBBike for mobile devices"), qq{"><img class="logo" width="16" height="16" alt="" src="/images/phone.png">[}, M("mobil"), qq{]</a>\n};
-	    print "&nbsp;" x 15;
+	    print "&nbsp;" x 10;
 	    print qq{<a style="font-size:small" title="}, M("Karte nach rechts schieben"), qq{" href="javascript:smallerMap(1.5)">&gt;&gt;</a>\n};
 	    print qq{<a style="font-size:small" title="}, M("Karte nach links schieben"), qq{" href="javascript:smallerMap(-1.5)">&lt;&lt;</a>\n};
         }
@@ -2422,7 +2433,10 @@ EOF
     }
 
     
-    print "<table id=inputtable>\n" if ($bi->{'can_table'});
+    if ($bi->{'can_table'}) {
+       	print qq{<table id=inputtable width="100%">\n};
+	#print qq{<th></th><th width="100%"></th><th></th>\n};
+    }
 
     my $shown_unknown_street_helper = 0;
 
@@ -2463,7 +2477,7 @@ EOF
 
 	    my $table_title = M("$printtype eingeben oder Marker auf der Karte setzen");
 	    # start.gif
-	    print qq{<tr id=${type}tr $style $bgcolor_s><td id="icon_$type" bgcolor="$icon_bgcolor" align=center valign=middle width=40><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:6px; padding-top:4px; padding-left:4px; padding-right:4px;" } : "") . qq{src="$imagetype" border=0 alt="$table_title" title="$table_title"></a></td>};
+	    print qq{<tr id=${type}tr $style $bgcolor_s><td id="icon_$type" bgcolor="$icon_bgcolor"><a name="$type"><img } . (!$bi->{'css_buggy'} ? qq{style="padding-bottom:6px; padding-top:4px; padding-left:4px; padding-right:4px;" } : "") . qq{src="$imagetype" border=0 alt="$table_title" title="$table_title"></a></td>};
 	    my $color = {'start' => '#e0e0e0',
 			 'via'   => '#c0c0c0',
 			 'ziel'  => '#a0a0a0',
@@ -2751,17 +2765,19 @@ EOF
 	if ($tryempty) {
 	    if (!$no_td) {
 		# align=center was a mistake
-		print "<td align=left>" if $bi->{'can_table'};
+		print qq{<td align=left width="100%">} if $bi->{'can_table'};
 	    }
 
 	    my $searchinput = 'suggest_' . $type;
 	    #print $icon_image;
-	    my $input_size = is_mobile($q) ? 20 : 42;
+	    my $input_size = is_mobile($q) ? 20 : 26;
+            my $maxlength = 128;
 
 	    my $startstreet = $q->param("startstreet") || "";
 	    my $value = $searchinput eq 'suggest_start' ? CGI::escapeHTML($startstreet) : "";
-	   
-	    print qq{<input id="$searchinput" size="$input_size" type="text" name="$type" value="$value" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
+	  
+            # size="$input_size" 
+	    print qq{<input id="$searchinput" maxlength="$maxlength" type="text" name="$type" value="$value" class="ac_input" spellcheck="false" >}; # if !$no_input_streetname;
 
 	   if ($enable_opensearch_suggestions) { 
        		my $city = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
@@ -2901,11 +2917,11 @@ function " . $type . "char_init() {}
         }
 	if ($bi->{'can_table'}) {
 	    if ($type eq 'start') { 
-	    	print qq{<td id="via_message" style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message')" title="}, M("Via-Punkt hinzuf&uuml;gen (optional)"), qq{">via</a></td></tr>\n};
+	    	print qq{<td id="via_message" style="font-size:small"><a href="javascript:toogleVia('viatr', 'via_message')" title="}, M("Via-Punkt hinzuf&uuml;gen (optional)"), qq{">via</a></td></tr>\n};
 	    } elsif ($type eq 'via') { 
-	    	print qq{<td id="via_message_off" style="font-size:small" width=40><a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("Via-Punkt entfernen"), qq{">off</a></td></tr>\n};
+	    	print qq{<td id="via_message_off" style="font-size:small"><a href="javascript:toogleVia('viatr', 'via_message', 'suggest_via')" title="}, M("Via-Punkt entfernen"), qq{">off</a></td></tr>\n};
 	    } else {
-		print qq{<td width=40>&nbsp;</td></tr>\n};
+		print qq{<td>&nbsp;</td></tr>\n};
 	    }
 	} else {
 	    print "<p>\n";
@@ -2970,8 +2986,8 @@ function " . $type . "char_init() {}
             my $ie6hack = $slippymap_url->url(-absolute=>1);
             $ie6hack =~ s,/+[^/]+$,,;
 
-	    print "<p></p>\n";
-	
+	    #print "<p></p>\n";
+	    #print "<hr/>\n";
             print qq{<div style="display:none" id="streetmap"></div>\n};
 
 	    print qq{<!-- use div.text() as local variable to map -->\n};
@@ -2984,8 +3000,10 @@ function " . $type . "char_init() {}
 	(defined $q->param("scope") ? $q->param("scope") : "") . "'>";
 
     print "</form>\n";
-    print "</td></tr></table>\n</div>\n" if $bi->{'can_table'};
+    print "</td></tr></table>\n" if $bi->{'can_table'};
 
+    print &span_debug;
+    print "</div> <!-- routing -->\n\n";
 	
 
 	    my $BBBikeGooglemap = 1;
@@ -3015,6 +3033,15 @@ EOF
 		print qq{<div id="map_area">\n};
 		&BBBikeAds::adsense_linkblock if &is_production($q) && !is_mobile($q);
 		print qq{</div>\n\n};
+	        
+		print <<EOF;
+<style type="text/css">
+div#BBBikeGooglemap { top: -6.8em; }
+div#bottom { top: -6.7em; }
+</style>
+EOF
+
+ 
 	        my $maps = BBBikeGooglemap->new();
 	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'region' => $region, 'cache' =>$q->param('cache')||0, 'nomap' =>  is_mobile($q) );
 	    }
@@ -3123,6 +3150,38 @@ EOF
 
     print $q->end_html;
     exit(0);
+}
+
+sub language_switch {
+    my $bbbike_local_script = shift;
+
+    print qq{<span id="language_switch">\n};
+
+    my $counter = 0;
+    foreach my $l (@supported_lang) {
+        print " | " if $counter++ > 0;
+        if ( $l eq $lang ) {
+            print qq{<span class="current_language" title="},
+              M("aktuelle Sprache"), ": ", M($l), qq{">$l</span>\n};
+        }
+        else {
+            print
+qq{<a rel="nofollow" href="/$l$bbbike_local_script" title="switch map language to },
+              M($l), qq{">$l</a>\n};
+        }
+    }
+    print
+      qq{| <a href="$bbbike_local_script" title="switch map language to },
+      M($local_lang), qq{">local</a>\n}
+      if $selected_lang;
+    print qq{</span>\n};
+
+    return;
+}
+
+sub headline {
+   print qq{<span id="headline">$headline</span>\n};
+   return;
 }
 
 sub berlinmap_with_choices {
@@ -3382,7 +3441,7 @@ sub is_production {
     my $q = shift;
 
     return 1 if -e "/tmp/is_production";
-    return $q->virtual_host() =~ /^www\.bbbike\.org$/i ? 1 : 0;
+    return $q->virtual_host() =~ /^www[123]?\.bbbike\.org$/i ? 1 : 0;
 }
 
 sub is_resultpage {
@@ -4156,13 +4215,13 @@ sub make_netz {
 
 sub search_coord {
     my $startcoord  = $q->param('startc');
-    my $viacoord    = $q->param('viac');
     my $zielcoord   = $q->param('zielc');
+    my($viacoord, @more_viacoords) = $q->param('viac');
     my(@custom)     = $q->param('custom');
     my %custom      = map { ($_ => 1) } @custom;
 
     my $via_array = (defined $viacoord && $viacoord ne ''
-		     ? [$viacoord]
+		     ? [$viacoord, @more_viacoords]
 		     : []);
 
     # Technically more correct it would be to adjust the scope
@@ -5122,8 +5181,11 @@ sub display_route {
 			$penalty_lost += $penalty;
 		    }
 		}
-		$etappe_comment = join("; ", @comments) if @comments;
-		$etappe_comment_html = join("; ", @comments_html) if @comments_html;
+		# XXX Leere Kommentartexte explizit entfernen. Diese
+		# gibt es z.B. in comments_cyclepath. Siehe auch
+		# "comments_cyclepath handling" in TODO-bbbike.
+		$etappe_comment = join("; ", grep { $_ ne "" } @comments) if @comments;
+		$etappe_comment_html = join("; ", grep { $_ ne "" } @comments_html) if @comments_html;
 	    }
 
 	    if ($has_fragezeichen_routelist) {
@@ -6033,6 +6095,8 @@ EOF
 			      'region' => $region, 'cache' => $q->param('cache') || 0, 'debug' => $debug, 'nomap' => is_mobile($qq) );
 		}
 	    }
+
+	    print qq{<tt><span id="debug"></span></tt>} if !is_production($q);
 
 	    print qq{<div id="bbbike_graphic">\n};
 	    print qq{<div class="box">\n};
@@ -7346,22 +7410,29 @@ sub crossing_text {
     warn "crossing_text: $c, ", join " ", caller(), "\n" if $debug >= 2;
 
     all_crossings();
-    if (!exists $crossings->{$c}) {
-	new_kreuzungen();
-	my(@nearest) = $kr->nearest_coord($c);
-	if (!@nearest || !exists $crossings->{$nearest[0]}) {
-	    # Should not happen, but try to be smart
-	    my $crossing_text = eval {
-		my($px,$py) = convert_data_to_wgs84(split /,/, $c);
-		"N $py / O $px";
-	    };
-	    if ($@) {
-		warn $@;
-		$crossing_text = "???";
+ TRY_SCOPES: {
+	if (!exists $crossings->{$c}) {
+	    new_kreuzungen();
+	    my(@nearest) = $kr->nearest_coord($c);
+	    if (!@nearest || !exists $crossings->{$nearest[0]}) {
+		my $new_scope = increment_scope();
+		if (!$new_scope) {
+		    # Last resort, probably far away
+		    my $crossing_text = eval {
+			my($px,$py) = convert_data_to_wgs84(split /,/, $c);
+			"N $py / O $px";
+		    };
+		    if ($@) {
+			warn $@;
+			$crossing_text = "???";
+		    }
+		    return $crossing_text;
+		}
+		get_streets_rebuild_dependents();
+		goto TRY_SCOPES;
+	    } else {
+		$c = $nearest[0];
 	    }
-	    return $crossing_text;
-	} else {
-	    $c = $nearest[0];
 	}
     }
     nice_crossing_name(@{ $crossings->{$c} });
@@ -7882,6 +7953,7 @@ sub header {
         $bbbike_local_script =~ s,/streets.html\?all=[123]$,/streets.html,;
         $bbbike_local_script =~ s,/\?all=[123]$,/streets.html,;
     }
+    $bbbike_local_script_url = $bbbike_local_script;
 
     if (!$smallform) {
 	push @$head,
@@ -7977,7 +8049,13 @@ sub header {
 	    # push(@$head, qq|<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>|);
 
 	    my $google_maps_url = "http://maps.googleapis.com/maps/api/js?sensor=$sensor&amp;language=$my_lang";
-	    $google_maps_url .= "&amp;libraries=panoramio" if $enable_panoramio_photos && is_resultpage($q);
+	    my @google_libs;
+	    push (@google_libs, "panoramio") if $enable_panoramio_photos; # && is_resultpage($q);
+	    push (@google_libs, "weather") if $enable_google_weather_layer;
+	    
+	    if (scalar(@google_libs) > 0) {
+	        $google_maps_url .= "&amp;libraries=" . join (",", @google_libs);
+	    }
 
 	    push(@$head, qq|<script type="text/javascript" src="$google_maps_url"></script>|);
 	    push @javascript, 'maps3.js';
@@ -8030,7 +8108,7 @@ sub header {
 	     #-lang => 'de-DE',
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
-	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
+	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner kostenlos, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
 		     'copyright'=>'(c) 1998-2012 Slaven Rezic + Wolfram Schneider',
 		     @viewport
 		    },
@@ -8051,26 +8129,27 @@ sub header {
 	   print qq{<div id="ad_top">\n};
 	}
 
-	print qq{<span id="headline">\n<h2>\n};
+	#print qq{<span id="headline">\n<h2>\n};
+        $headline = "\n<h2>";
 	if ($printmode) {
-	    print "$args{-title}";
-	    print "<img alt=\"\" src=\"$bbbike_images/srtbike.gif\" hspace=10>";
+	    $headline .= "$args{-title}";
+	    $headline .= "<img alt=\"\" src=\"$bbbike_images/srtbike.gif\" hspace=10>";
 	} else {
 	    my $use_css = !$bi->{'css_buggy'};
 	    my $title = $title2;
 	    if ($is_beta) {
 		$title = "BB<span style='font-style:italic;'>&#x03B2;</span>ike</a>";
 	    }
-	    print "<a href='$bbbike_url' title='" . M("Zurück zur Hauptseite") . "' style='text-decoration:none; color:black;'>$title";
-	    print "<img";
+	    $headline .= "<a href='$bbbike_url' title='" . M("Zurück zur Hauptseite") . "' style='text-decoration:none; color:black;'>$title";
+	    $headline .= "<img";
 	    if ($use_css) {
-		print ' style="position:relative; top:15px; left:-15px;"';
+		$headline .= ' style="position:relative; top:15px; left:-15px;"';
 	    }
-	    print " id=\"headlogo\" alt=\"\" src=\"$bbbike_images/srtbike.gif\" border=0>";
-	    print "</a>";
+	    $headline .= " id=\"headlogo\" alt=\"\" src=\"$bbbike_images/srtbike.gif\" border=0>";
+	    $headline .= "</a>";
 	}
-	print "</h2>\n";
-	print "</span>\n";
+	$headline .= "</h2>\n";
+	#print "</span>\n";
     } else {
 	print "<h1>BBBike</h1>";
     }
@@ -8078,25 +8157,15 @@ sub header {
         my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
+	#&headline if is_resultpage($q);
+
 	print qq{<div id="top_right">};
         if ($enable_current_weather) {
-	    print qq{\n<span id="current_weather"> </span>\n};
+	    #print qq{\n<span id="current_weather"> </span>\n};
 	}
 
 	if (!$printmode && !&is_mobile($q)) {
-	  print qq{<span id="language_switch">\n};
-	
-	  my $counter = 0;
-	  foreach my $l (@supported_lang) {
-	    print " | " if $counter++ > 0;
-	    if ($l eq $lang) {
-		print qq{<span class="current_language" title="}, M("aktuelle Sprache"), ": ", M($l), qq{">$l</span>\n};
-	    } else {
-	        print qq{<a rel="nofollow" href="/$l$bbbike_local_script" title="switch map language to }, M($l), qq{">$l</a>\n};
-	    }
-	  }
-	  print qq{| <a href="$bbbike_local_script" title="switch map language to }, M($local_lang), qq{">local</a>\n} if $selected_lang;
-	  print qq{</span>\n};
+           # &language_switch($bbbike_local_script_url);
 	}
 
 	if (0) {
@@ -8126,7 +8195,9 @@ EOF
 
 	}
 
+	&language_switch($bbbike_local_script_url) if &is_resultpage($q) || !&is_startpage($q);
 	print qq{</div>\n};
+        &headline if &is_resultpage($q) || !&is_startpage($q);
 
 	#&adsense_linkblock if &is_production($q) && !is_mobile($q);
     }
@@ -8136,6 +8207,11 @@ EOF
 	while(<U>) { print }
 	close U;
     }
+}
+
+sub span_debug {
+   my $span_debug = is_production($q) ? "" : qq{<tt><span id="debug"></span></tt>\n};
+   return $span_debug;
 }
 
 sub footer { print footer_as_string() }
@@ -8185,7 +8261,6 @@ if ($osm_data) {
     $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
 }
 
-my $span_debug = is_production($q) ? "" : qq{<tt><span id="debug"></span></tt>\n};
 
 my $rss_icon = "";
 $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="14" height="14" title="}
@@ -8202,35 +8277,43 @@ my $donate_title = M("Spende an BBBike.org");
 my $twitter_title = M("Folge uns auf twitter.com/BBBikeWorld");
 my $s_copyright = <<EOF;
 
+<div id="bottom">
 <div id="footer">
+
 <div id="footer_top">
 <a class="mobile_link" href="/">home</a> |
 <a href="/help.html">$help</a> |
 <a href="/tools.html" title="BBBike tools and applications">$app</a> |
 <a href="$community_link">$donate</a> |
 <a title="search time: $real_time seconds" href="/cgi/livesearch.cgi?city=$city_script">$livesearch</a> |
-$list_of_all_streets $permalink_text
-$span_debug
-</div>
-</div>
+$list_of_all_streets
+| <a href='javascript:toogleDiv("other_cities")'>@{[M("weitere St&auml;dte") ]}</a>
+$permalink_text
 
-<div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
-<hr>
-(&copy;) 1998-2012 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
-Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project<br >
-<div id="footer_community">
+<span id="footer_community">
   <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="$donate_title" border="0"></a>
   <a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>
   <a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="$twitter_title" alt=""></a>
   <a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="$facebook_title"></a>
   $google_plusone
   $rss_icon
-</div>
-</div>
+</span>
 
-<div id="other_cities">
+</div> <!-- footer_top -->
+
+</div> <!-- footer -->
+
+<div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
+<hr>
+(&copy;) 1998-2012 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
+Map data (&copy;) <a href="http://www.openstreetmap.org/">OpenStreetMap.org</a> contributors<br >
+
+</div> <!-- copyright -->
+
+<div id="other_cities" style="display:none">
 $other_cities
-</div>
+</div> <!-- other cities -->
+</div> <!-- bottom -->
 EOF
 
 

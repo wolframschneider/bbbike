@@ -31,7 +31,9 @@ BEGIN {
 
 use BBBikeTest;
 
-plan tests => 32;
+sub load_from_file_and_check ($);
+
+plan tests => 54;
 
 use_ok("Strassen::KML")
     or exit 1; # avoid recursive calls to Strassen::new
@@ -47,7 +49,7 @@ isa_ok($s, "Strassen");
 
     my @sample_coords = get_sample_coordinates_1();
 
-    my $s = Strassen::KML->new($file);
+    my $s = Strassen::KML->new($file, map => 'bbbike');
     isa_ok($s, "Strassen", "File <$file> loaded OK");
     my @data = @{ $s->data };
     is($data[0], "Tour\tX @sample_coords\n", "Expected translated coordinates");
@@ -59,7 +61,7 @@ isa_ok($s, "Strassen");
     print $fh2 $kml;
     close $fh2 or die $!;
 
-    my $s2 = Strassen::KML->new($file2);
+    my $s2 = Strassen::KML->new($file2, map => 'bbbike');
     isa_ok($s2, "Strassen", "Roundtrip: KML loaded OK");
 
     $s->init;
@@ -77,9 +79,7 @@ isa_ok($s, "Strassen");
     }
     ok(!@errors, "Coordinates within tolerance after roundtrip");
 
-    my $s0 = Strassen->new($file);
-    isa_ok($s, "Strassen", ".kml detection in Strassen::Core seems OK");
-    is_deeply($s0->data, $s->data, "No difference between Strassen and Strassen::KML loading");
+    load_from_file_and_check $file;
 }
 
 {
@@ -92,10 +92,12 @@ isa_ok($s, "Strassen");
 
     local $Strassen::KML::TEST_SET_NAMESPACE_DECL_URI_HACK = 1;
     $Strassen::KML::TEST_SET_NAMESPACE_DECL_URI_HACK = $Strassen::KML::TEST_SET_NAMESPACE_DECL_URI_HACK if 0; # cease -w
-    my $s = Strassen::KML->new($file);
+    my $s = Strassen::KML->new($file, map => 'bbbike');
     isa_ok($s, "Strassen", "File <$file> loaded OK");
     my @data = @{ $s->data };
     is($data[0], "Tour\tX @sample_coords\n", "Expected translated coordinates with namespace decl hack");
+
+    load_from_file_and_check $file;
 }
 
 {
@@ -104,10 +106,12 @@ isa_ok($s, "Strassen");
     close $tmpfh or die $!;
 
     my @sample_data = get_sample_data_polygons();
-    my $s = Strassen::KML->new($tmpfile);
+    my $s = Strassen::KML->new($tmpfile, map => 'bbbike');
     isa_ok($s, "Strassen", "File <$tmpfile> loaded OK");
     my @data = @{ $s->data };
     is_deeply \@data, \@sample_data;
+
+    load_from_file_and_check $tmpfile;
 }
 
 for my $kml_filename ('doc.kml',
@@ -125,12 +129,12 @@ for my $kml_filename ('doc.kml',
 	die "Can't write to $tmpfile";
     }
 
-    my $s = Strassen::KML->new($tmpfile);
+    my $s = Strassen::KML->new($tmpfile, map => 'bbbike');
     isa_ok($s, "Strassen", "File <$tmpfile> loaded OK");
     my @data = @{ $s->data };
     is($data[0], "Tour\tX @sample_coords\n", "Expected translated coordinates in .kmz file (mail kml file: $kml_filename)");
 
-    my $s0 = Strassen->new($tmpfile);
+    my $s0 = Strassen->new($tmpfile, map => 'bbbike');
     isa_ok($s, "Strassen", ".kmz detection in Strassen::Core seems OK");
     is_deeply($s0->data, $s->data, "No difference between Strassen and Strassen::KML loading");
 }
@@ -270,6 +274,37 @@ EOF
 
 sub get_sample_data_polygons {
     ("Mitte	X 8294,13544 8298,13544 8310,13522 8305,13513\n");
+}
+
+# 8 tests
+sub load_from_file_and_check ($) {
+    my($filename) = @_;
+
+    my $s_kml = do {
+	my $s = Strassen::KML->new($filename);
+	isa_ok $s, "Strassen";
+	isa_ok $s, "Strassen::KML";
+	$s;
+    };
+
+    my $s_magic = do {
+	my $s = Strassen->new_by_magic($filename);
+	isa_ok $s, "Strassen";
+	isa_ok $s, "Strassen::KML";
+	$s;
+    };
+
+    my $s = do {
+	my $s = Strassen->new($filename);
+	isa_ok $s, "Strassen";
+	isa_ok $s, "Strassen::KML";
+	$s;
+    };
+
+    is_deeply $s->data, $s_kml->data, 'Strassen and Strassen::KML loading';
+    is_deeply $s_magic->data, $s_kml->data, 'magic check';
+
+    $s_kml;
 }
 
 __END__

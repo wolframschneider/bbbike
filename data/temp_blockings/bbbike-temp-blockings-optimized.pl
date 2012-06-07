@@ -7,7 +7,7 @@ push @temp_blocking,
          'text' => 'Weinmeisterstr. (Mitte) in Richtung Alexanderplatz gesperrt',
          'from' => undef,
          'id' => 1567,
-         'data' => '#: last_checked: 2012-02-01
+         'data' => '#: last_checked: 2012-04-27
 userdel	q4::inwork; 10350,13376 10527,13257
 ',
          'type' => 'gesperrt'
@@ -312,7 +312,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Schloßpark Charlottenburg: bei Dunkelheit geschlossen',
          'from' => undef,
          'id' => 1811,
-         'data' => '	2::night 3332,12742 3231,12749 3127,12793 3055,12973 3020,13234 2996,13255 2980,13332 3003,13355 2953,13489 2950,13552
+         'data' => '	2::night 3332,12742 3231,12749 3127,12793 3065,12975 3016,13315 2987,13448 2953,13489 2950,13552
 ',
          'type' => 'gesperrt'
        },
@@ -649,7 +649,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'from' => undef,
          'id' => 1956,
          'data' => '#: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
-	2::night 10473,15549 10607,15142
+	2::night 10456,15561 10607,15142
 ',
          'type' => 'gesperrt'
        },
@@ -811,7 +811,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juni bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -899,10 +899,10 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
-         'source_id' => '106200475',
-         'until' => 1341093600,
-         'text' => 'Lichterfeld-Schacksdorf: L60: Havarie, Straßenzustand Lauchhammer - Licherfelde Umleitung: Lauchhammer - Grünwalde - Staupitz - Sorno - Finsterwalde - Schacksdorf - Lichterfelde, 22.07.2010 bis 30.06.2012 ',
-         'from' => 1324669252,
+         'source_id' => '126200259',
+         'until' => 1380578400,
+         'text' => 'Lichterfeld-Schacksdorf: L60: Baumaßnahme der LMBV Lauchhammer - Licherfelde und umgekehrt, 23.04.2012 bis 30.09.2013 ',
+         'from' => 1335556384,
          'id' => 2108,
          'data' => 'userdel	2::inwork 37809,-92300 37918,-93202 37419,-94853 37230,-95682
 ',
@@ -942,18 +942,6 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'until' => 1356994800,
-         'text' => 'Braunschweiger Str./Karl-Marx-Str.: Abbiegen nicht möglich (bzw. nur auf dem Gehweg) bis 31.12.2012',
-         'from' => 1284745737,
-         'id' => 2134,
-         'data' => 'userdel	3 13150,7254 13047,7234 13058,7165
-userdel	3 13058,7165 13047,7234 13150,7254
-userdel	3 13150,7254 13047,7234 13034,7319
-userdel	3 13034,7319 13047,7234 13150,7254
-',
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
@@ -991,16 +979,8 @@ userdel	3 13034,7319 13047,7234 13150,7254
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_018078',
-         'until' => 1356969600,
-         'text' => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Ende 12/2012) stadteinwärts zwischen Breite Str. und Florastr. ',
-         'from' => 1254641760,
-         'id' => 2172,
-         'data' => 'userdel	q4::inwork; 10680,18380 10755,18231 10829,18083 10846,17992
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1012,11 +992,11 @@ userdel	3 13034,7319 13047,7234 13150,7254
        undef,
        {
          'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110303.0840.333719.html',
-         'until' => undef,
-         'text' => 'Auerbachtunnel: einspurige Verkehrsführung, Regelung mit Ampel',
-         'from' => undef,
+         'until' => 1356908400,
+         'text' => 'Auerbachtunnel: Fahrbahn wegen Bauarbeiten gesperrt, bis Ende 2012',
+         'from' => 1335462672,
          'id' => 2182,
-         'data' => '#: next_check: 2011-04-01
+         'data' => '#: next_check: 2012-11-15
 userdel	q4::inwork 425,8766 490,8716
 ',
          'type' => 'handicap'
@@ -1064,18 +1044,15 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       undef,
-       undef,
        {
-         'source_id' => 'INKO_093372',
-         'until' => 1333206000,
-         'text' => 'Schadowstr. (Mitte): Baustelle, Straße vollständig gesperrt (bis Ende 03/12) in beiden Richtungen zwischen Unter den Linden und Dorotheenstr., 16.05.2011 07:00 Uhr bis 31.03.2012 17:00 Uhr ',
-         'from' => 1305435600,
-         'id' => 2210,
-         'data' => '#: last_checked: 2012-03-16
-userdel	q4::inwork 9028,12307 9016,12416 9008,12485
+         'source_id' => 'LS/O-SG33-E/11/044',
+         'until' => 1339106399,
+         'text' => 'Flieth-Stegelitz: L24: Brücke über den Stierngraben bei Kaakstedt, geplante Vollsperrung 05.06. - 07.06.12 ',
+         'from' => 1338760800,
+         'id' => 2208,
+         'data' => 'userdel	2::inwork 35887,85385 34920,85944
 ',
-         'type' => 'handicap'
+         'type' => 'gesperrt'
        },
        undef,
        undef,
@@ -1089,23 +1066,16 @@ userdel	q4::inwork 9028,12307 9016,12416 9008,12485
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_017000',
-         'until' => 1349114400,
-         'text' => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt Richtung Schönhauser Allee zwischen Dunckerstr. und Schliemannstr., 09.03.2011 bis 01.10.2012 ',
-         'from' => 1299564000,
-         'id' => 2223,
-         'data' => 'userdel	q4::inwork; 11603,15455 11502,15527
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
+       undef,
        {
          'source_id' => 'INKO_093371',
-         'until' => 1335798000,
-         'text' => 'Dorotheenstr. (Mitte): Baustelle, Fahrtrichtung gesperrt (bis Ende 04/12) Richtung Friedrichstr. zwischen Wilhelmstr. und Schadowstr., 06.06.2011 07:00 Uhr bis 30.04.2012 17:00 Uhr ',
+         'until' => 1341068400,
+         'text' => 'Dorotheenstr. (Mitte): Baustelle, Fahrtrichtung gesperrt Richtung Friedrichstr. zwischen Wilhelmstr. und Schadowstr., 06.06.2011 07:00 Uhr bis 30.06.2012 17:00 Uhr ',
          'from' => 1307250000,
          'id' => 2224,
-         'data' => '#: last_checked: 2012-03-16
+         'data' => '#: last_checked: 2012-04-20
 userdel	q4::inwork; 8775,12457 8907,12472 9008,12485
 ',
          'type' => 'handicap'
@@ -1137,29 +1107,29 @@ userdel	q4::inwork; 8775,12457 8907,12472 9008,12485
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
-         'source_id' => 'LS/S-SG33-W/10/173',
-         'until' => 1356994800,
-         'text' => 'Wildau: L401: Straßenbau OD Wildau, Einmündung Richard-Sorge-Straße bis Stichkanal ab 15.08.11 Vollsperrung Richtung Königs Wusterhausen, 30.08.2010 bis 31.12.2012 ',
-         'from' => 1313272800,
-         'id' => 2265,
-         'data' => 'userdel	q3::inwork; 26679,-8825 26381,-9753
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1204/nachricht4628.html',
+         'until' => 1341093600,
+         'text' => 'Instandsetzung der Pankgrafenbrücke bis Anfang Juli 2012, Einschränkungen möglich',
+         'from' => 1310763434,
+         'id' => 2252,
+         'data' => 'userdel	q4::inwork 13953,23497 13976,23490 14173,23426
 ',
          'type' => 'handicap'
        },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1186,16 +1156,7 @@ userdel	q4::inwork; 8775,12457 8907,12472 9008,12485
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_017750',
-         'until' => 1338386400,
-         'text' => 'Lahnstr. (Neukölln): Baustelle, Fahrtrichtung gesperrt Richtung Neuköllnische Allee zwischen Karl-Marx-Str. und Naumburger Str., 04.09.2011 11:00 Uhr bis 30.05.2012 16:00 Uhr ',
-         'from' => 1315040400,
-         'id' => 2282,
-         'data' => 'userdel	q4::inwork; 13236,6489 13455,6559 13520,6583
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1356994800,
          'text' => 'Jonasstr./Karl-Marx-Str.: Abbiegen nicht möglich (bzw. nur auf dem Gehweg)',
@@ -1217,10 +1178,12 @@ userdel	3 12992,7545 13015,7440 12925,7425
        {
          'source_id' => 'INKO_078941',
          'until' => 1351699200,
-         'text' => 'Blankenburger Straße: Richtung Dietzgenstraße zwischen Lindenberger Straße und Siegfriedstraße wegen Bauarbeiten gesperrt, 05.10.2011 11:00 Uhr bis 31.10.2012 17:00 Uhr',
+         'text' => 'Blankenburger Straße: Richtung Dietzgenstraße zwischen Lindenberger Straße und Siegfriedstraße wegen Bauarbeiten gesperrt; Herthaplatz ist teilweise eine Einbahnstraße; 05.10.2011 11:00 Uhr bis 31.10.2012 17:00 Uhr',
          'from' => 1317679200,
          'id' => 2290,
          'data' => 'userdel	q4::inwork; 11148,19838 11051,19789 10948,19737 10829,19676 10742,19632
+#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/blankenburger-strasse2.html
+userdel	q4::inwork; 10614,19907 10599,19957
 ',
          'type' => 'handicap'
        },
@@ -1246,16 +1209,7 @@ userdel	2::inwork 19750,11730 19827,11686 19881,11591
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20111030.0735.361648.html',
-         'until' => 1338501600,
-         'text' => 'Baumaßnahmen in der Parkanlage an der Südseite der Krummen Lanke, Sperrungen möglich (bis Frühsommer 2012)',
-         'from' => undef,
-         'id' => 2303,
-         'data' => 'userdel	2::inwork -1245,4414 -1185,4450 -1139,4575 -1134,4706 -971,4971 -724,5080 -604,5228
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1263,24 +1217,17 @@ userdel	2::inwork 19750,11730 19827,11686 19881,11591
        {
          'source_id' => 'IM_017746',
          'until' => 1346425200,
-         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, mögliche Behinderungen, bis 31.08.2012 ',
+         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, Fahrbahn manchmal gesperrt, bis 31.08.2012 ',
          'from' => 1314604800,
          'id' => 2308,
          'data' => '#: note: am 2012-03-09 geprüft, Radfahrer konnten problemlos passieren
-userdel	q4::inwork 10723,14772 10838,14962 10881,15047
+#: note: am 2012-04-27 geprüft, Fahrbahn ist absperrt (nur die Straßenbahn wird durchgelassen), Radfahrer können nur den Gehweg benutzen
+#: note: am 2012-05-30 geprüft, Radfahrer konnten problemlos passieren
+userdel	q3::inwork 10723,14772 10838,14962
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_016853',
-         'until' => 1334322000,
-         'text' => 'Heinrich-Mann-Str. (Pankow): Baustelle, Straße vollständig gesperrt (bis Mitte 04/12) in beiden Richtungen zwischen Schönholzer Str. und Cottastr. ',
-         'from' => 1295269680,
-         'id' => 2309,
-         'data' => 'userdel	q4::inwork 9881,18354 9821,18392
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4399.html',
@@ -1342,10 +1289,10 @@ userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 
        {
          'source_id' => 'INKO_093369',
          'until' => 1341068400,
-         'text' => 'Behrenstr. (Mitte): Fahrbahn gesperrt (bis Ende 06/12) zwischen Glinkastr. und Friedrichstr.',
+         'text' => 'Behrenstr. (Mitte): Fahrbahn gesperrt (bis Ende 06/12) zwischen Glinkastr. und Friedrichstr., Richtung Friedrichstraße',
          'from' => 1329631200,
          'id' => 2317,
-         'data' => 'userdel	q4::inwork 9373,12197 9164,12172
+         'data' => 'userdel	q4::inwork; 9164,12172 9373,12197
 ',
          'type' => 'handicap'
        },
@@ -1371,6 +1318,128 @@ Am Schloss Schönhausen	2::night 10308,19297 10350,19182 10390,19069
 Am Schloss Schönhausen	2::night 10249,19148 10350,19182
 #: by: ^^^
 '
+       },
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park: bei Veranstaltungen im Berghain u.U. nicht passierbar',
+         'from' => undef,
+         'id' => 2321,
+         'data' => '	2::night 13002,11705 13042,11749
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'l.epperlein',
+         'until' => undef,
+         'text' => 'Sredzkistr.: Fahrbahn zwischen Husemannstr. und Kollwitzstr. komplett gesperrt. Dauer der Sperrung ist unbekannt.',
+         'from' => undef,
+         'id' => 2322,
+         'data' => '#: last_checked: 2012-04-27
+userdel	q4::inwork 11436,14741 11271,14755
+',
+         'type' => 'handicap'
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'until' => 1341093600,
+         'text' => 'Peace Wall/Friedensmauer; auf Gehweg ausweichen (bis Juli 2012)',
+         'from' => undef,
+         'id' => 2331,
+         'data' => 'userdel	q4::temp 9521,10926 9535,10820
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'IM_018769',
+         'until' => 1347289200,
+         'text' => 'Spanische Allee (Nikolassee): Bauarbeiten an den Bahnbrücken, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Regelung mit provisorischen Ampeln bis Mitte September 2012',
+         'from' => 1336420800,
+         'id' => 2333,
+         'data' => 'userdel	q4::inwork -3648,2881 -3736,2849
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'INKO_112449',
+         'until' => 1339797600,
+         'text' => 'Wünsdorfer Str. (Lichtenrade) zwischen Prinzessinnenstr. und Blohmstr zwischen 14.05.2012 und 15.06.2012 Baustelle, Vollsperrung',
+         'from' => 1336944008,
+         'id' => 2334,
+         'data' => 'userdel	q4::inwork 10096,-2137 10021,-1918
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => '127310045',
+         'until' => 1341612000,
+         'text' => 'Prenzlau: K7324: Straßenbauarbeiten Prenzlau, zw. OL Wollenthin und Bündigershof Umleitung: über Prenzlau, 02.04.2012 bis 06.07.2012 ',
+         'from' => 1337887553,
+         'id' => 2335,
+         'data' => 'userdel	2::inwork 42981,101756 42922,101898 42875,102012 42912,102131 43131,102293 43262,102525 43200,102737
+',
+         'type' => 'gesperrt'
+       },
+       undef,
+       {
+         'until' => undef,
+         'text' => 'Sredzkistr. zwischen Schönhauser Allee und Knaackstr: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
+         'from' => undef,
+         'id' => 2337,
+         'data' => 'userdel	q4::inwork 10893,14705 11101,14768
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1206/nachricht4684.html',
+         'until' => 1338919200,
+         'text' => 'Vollsperrung der Pankgrafenstraße im Bereich der Pankgrafenbrücke am 5. Juni 2012',
+         'from' => 1338778800,
+         'id' => 2338,
+         'data' => 'userdel	2::inwork 13953,23497 13976,23490 14173,23426
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_018829',
+         'until' => 1341068400,
+         'text' => 'Behrenstr. (Mitte): Baustelle, Fahrtrichtung gesperrt (bis Ende 06/12) Richtung Friedrichstr. zwischen Mauerstr. und Glinkastr. ',
+         'from' => 1338204660,
+         'id' => 2339,
+         'data' => 'userdel	q4::inwork; 9064,12156 9164,12172
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_018838',
+         'until' => 1343664000,
+         'text' => 'Klingsorstr. (Steglitz): Fahrbahnschäden, Vollsperrung in beiden Richtungen zwischen Hindenburgdamm und Birkbuschstr., bis Ende Juli 2012 ',
+         'from' => 1338283200,
+         'id' => 2340,
+         'data' => 'userdel	q4::inwork 4932,4152 5068,4259
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1341352799,
+         'text' => 'Fanmeile EM 2012: Sperrung der Straße des 17. Juni und umliegenden Straßen, bis 3. Juli 2012',
+         'from' => 1338750610,
+         'id' => 2341,
+         'data' => 'userdel	2::temp 8573,12325 8540,12420
+userdel	2::temp 8089,12190 8214,12205 8538,12245 8610,12254
+userdel	2::temp 8354,12416 8546,12279 8538,12245 8600,12165 8595,12066
+userdel	2::temp 7383,12095 7816,12150 8055,12186 8119,12414
+userdel	2::temp 8546,12279 8570,12302
+',
+         'type' => 'gesperrt'
        }
      
 );

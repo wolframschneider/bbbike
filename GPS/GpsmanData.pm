@@ -445,16 +445,16 @@ sub parse_and_set_coordinate {
 	# XXX no ParsedLongitude/Latitude support for UTM/UPS yet
 	my($ze,$zn,$x,$y) = @{$f_ref}[$$f_i_ref .. $$f_i_ref+3];
 	$$f_i_ref += 4;
-	my($lat, $long) = Karte::UTM::UTMToDegrees($ze,$zn,$x,$y,$self->DatumFormat);
-	$lat  = ($lat  >= 0 ? "N" : "S") . abs($lat);
-	$long = ($long >= 0 ? "E" : "W") . abs($long);
+	($lat, $long) = Karte::UTM::UTMToDegrees($ze,$zn,$x,$y,$self->DatumFormat);
+	$lat  *= -1 if $lat < 0;
+	$long *= -1 if $long < 0;
     } else {
 	$parsed_lat = $lat  = $f_ref->[$$f_i_ref++];
 	$parsed_long = $long = $f_ref->[$$f_i_ref++];
+	my $converter = $self->CurrentConverter;
+	$lat  = $converter->($lat);
+	$long = $converter->($long);
     }
-    my $converter = $self->CurrentConverter;
-    $lat  = $converter->($lat);
-    $long = $converter->($long);
     $obj->Latitude($lat);
     $obj->Longitude($long);
     $obj->ParsedLatitude($parsed_lat);
@@ -589,9 +589,17 @@ sub parse {
 	} elsif (/^!Position:\s+(\S+)$/) {
 	    my $pos_format = $1;
 	    $self->change_position_format($pos_format);
-	} elsif (/^!NB:/) {
-	    # ignore comment
+	} elsif (/^!NB/) {
+	    # overread text remarks
+	    while($i <= $#lines) {
+		last if $lines[$i] eq '';
+		$i++;
+	    }
 	} elsif (/^!/) {
+	    if (/^!RS:/) {
+		# currently ignored
+		next;
+	    }
 	    if ($multiple && @data) {
 		# we already have data for one track/route/...
 		if ($beginref) {
@@ -846,7 +854,12 @@ sub write {
 
 sub header_as_string {
     my $self = shift;
-    my $s = "% Written by $0 [" . __PACKAGE__ . "]\n\n";
+    require POSIX;
+    # deliberately not following the exact date/time format used in gpsman:
+    # - use month number instead of abbreviated name
+    # - use timezone offset instead of name
+    my $datetime = POSIX::strftime("%Y-%m-%d %H:%M:%S %z", localtime);
+    my $s = "% Written by $0 [" . __PACKAGE__ . "] $datetime\n\n";
     # XXX:
     $s .= "!Format: " . join(" ",
 			     $self->_POSITION_FORMAT_FOR_WRITING,

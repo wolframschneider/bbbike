@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2006,2007,2010,2011 Slaven Rezic. All rights reserved.
+# Copyright (C) 2006,2007,2010,2011,2012 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -20,20 +20,23 @@ push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.20;
+$VERSION = 1.22;
 
 use vars qw(%images);
 
 sub register {
     _create_images();
     my $lang = $Msg::lang || 'de';
+    my $is_berlin = $main::city_obj && $main::city_obj->cityname eq 'Berlin';
     # this order will be reflected in show_info
-    $main::info_plugins{__PACKAGE__ . "_DeinPlan"} =
-	{ name => "Pharus (dein-plan)",
-	  callback => sub { showmap_deinplan(@_) },
-	  callback_3_std => sub { showmap_url_deinplan(@_) },
-	  ($images{Pharus} ? (icon => $images{Pharus}) : ()),
-	};
+    if ($is_berlin) {
+	$main::info_plugins{__PACKAGE__ . "_DeinPlan"} =
+	    { name => "Pharus (dein-plan)",
+	      callback => sub { showmap_deinplan(@_) },
+	      callback_3_std => sub { showmap_url_deinplan(@_) },
+	      ($images{Pharus} ? (icon => $images{Pharus}) : ()),
+	    };
+    }
     if (0) {
 	# 2010-09-30: website still exists, but map does not work with
 	# three browsers (Seamonkey 1, Firefox 3, Chrome)
@@ -75,19 +78,14 @@ sub register {
 	  callback_3_std => sub { showmap_url_mapcompare(@_) },
 	  ($images{Geofabrik} ? (icon => $images{Geofabrik}) : ()),
 	};
-    # Uses now the same maps as Bing
-    $main::info_plugins{__PACKAGE__ . "_MultiMap"} =
-	{ name => "MultiMap",
-	  callback => sub { showmap(@_) },
-	  callback_3_std => sub { showmap_url(@_) },
-	  ($images{MultiMap} ? (icon => $images{MultiMap}) : ()),
-	};
-    $main::info_plugins{__PACKAGE__ . "_BvgStadtplan"} =
-	{ name => "BVG-Stadtplan",
-	  callback => sub { showmap_bvgstadtplan(@_) },
-	  callback_3_std => sub { showmap_url_bvgstadtplan(@_) },
-	  ($images{BvgStadtplan} ? (icon => $images{BvgStadtplan}) : ()),
-	};
+    if ($is_berlin) {
+	$main::info_plugins{__PACKAGE__ . "_BvgStadtplan"} =
+	    { name => "BVG-Stadtplan",
+	      callback => sub { showmap_bvgstadtplan(@_) },
+	      callback_3_std => sub { showmap_url_bvgstadtplan(@_) },
+	      ($images{BvgStadtplan} ? (icon => $images{BvgStadtplan}) : ()),
+	    };
+    }
     if (0) {
 	# Does not work anymore: URL gets redirected to
 	# http://intl.local.live.com/ page.
@@ -104,13 +102,15 @@ sub register {
 	  callback_3_std => sub { showmap_url_bikemapnet(@_) },
 	  ($images{BikeMapNet} ? (icon => $images{BikeMapNet}) : ()),
 	};
-    # Down: 2010-09-30
-    $main::info_plugins{__PACKAGE__ . "_BerlinerStadtplan24"} =
-	{ name => "www.berliner-stadtplan24.com",
-	  callback => sub { showmap_berliner_stadtplan24(@_) },
-	  callback_3_std => sub { showmap_url_berliner_stadtplan24(@_) },
-	  ($images{BerlinerStadtplan24} ? (icon => $images{BerlinerStadtplan24}) : ()),
-	};
+    if ($is_berlin) {
+	# Down: 2010-09-30
+	$main::info_plugins{__PACKAGE__ . "_BerlinerStadtplan24"} =
+	    { name => "www.berliner-stadtplan24.com",
+	      callback => sub { showmap_berliner_stadtplan24(@_) },
+	      callback_3_std => sub { showmap_url_berliner_stadtplan24(@_) },
+	      ($images{BerlinerStadtplan24} ? (icon => $images{BerlinerStadtplan24}) : ()),
+	    };
+    }
     $main::info_plugins{__PACKAGE__ . "_Geocaching"} =
 	{ name => "geocaching.com",
 	  callback => sub { showmap_geocaching(@_) },
@@ -129,10 +129,16 @@ sub register {
 	  callback_3_std => sub { showmap_url_yahoo_de(@_) },
 	  ($images{YahooDe} ? (icon => $images{YahooDe}) : ()),
 	};
-    $main::info_plugins{__PACKAGE__ . "_Bing"} =
+    $main::info_plugins{__PACKAGE__ . "_Bing_Birdseye"} =
 	{ name => "bing (Bird's eye)",
-	  callback => sub { showmap_bing(@_) },
-	  callback_3_std => sub { showmap_url_bing(@_) },
+	  callback => sub { showmap_bing_birdseye(@_) },
+	  callback_3_std => sub { showmap_url_bing_birdseye(@_) },
+	  ($images{Bing} ? (icon => $images{Bing}) : ()),
+	};
+    $main::info_plugins{__PACKAGE__ . "_Bing_Street"} =
+	{ name => "bing (Street)",
+	  callback => sub { showmap_bing_street(@_) },
+	  callback_3_std => sub { showmap_url_bing_street(@_) },
 	  ($images{Bing} ? (icon => $images{Bing}) : ()),
 	};
     $main::info_plugins{__PACKAGE__ . '_AllMaps'} =
@@ -159,17 +165,6 @@ LkZbX5OHiHlICBUTDhQUHU+UljgSP0IzIZ0UGaCVUgBAe3x4URINCQ0dW4dtDBR1fXpyQRAD
 GLdGh1AAPXdxQz4RD1RpVRQrh0UGY3MWF0kyU2ApcDkYh0QObFYBAmdKZCIAbzvmeUsJYWgL
 L2sxahs37JA4cUiLAhhpyojhkeCKGTo1CiDL84VIghE0ShAoUEGHiQIanBz6wqVFgo0NHigg
 cOCByJFfuqhIlYpDkyMiKU7ywsTGBw8sioh8mQeL0aNIkwYCADs=
-EOF
-    }
-
-    if (!defined $images{MultiMap}) {
-	# Got from: http://www.multimap.com/favicon.ico
-	# and scaled to 16x16
-	$images{MultiMap} = $main::top->Photo
-	    (-format => 'gif',
-	     -data => <<EOF);
-R0lGODlhEAAQAMIDAAAAAAAAgP8AAP///////////////////yH5BAEAAAQALAAAAAAQABAA
-AAMtOLrc/jDKQFWFNOchuh9VGHACZ4rg2JklWq1lO6LwOd9Srj+A0zO/3yC4KzoSADs=
 EOF
     }
 
@@ -439,37 +434,6 @@ IzFSJgKlwg8hUkJNiYdDpHg0UIefyPAblgK+r4ihNZAIbAdLFED8HIuF78GYkwQGCnkLRzKG
 hyMhADs=
 EOF
     }
-}
-
-######################################################################
-# MultiMap
-
-sub showmap_url {
-    my(%args) = @_;
-
-    my $px = $args{px};
-    my $py = $args{py};
-    my $scale = $args{mapscale_scale};
-    my @allowed_scales = (5000, 10000, 25000, 50000, 100000, 200000,
-			  500_000, 1_000_000, 2_000_000, 4_000_000,
-			  10_000_000, 20_000_000, 40_000_000);
- TRY: {
-	for my $i (0 .. $#allowed_scales-1) {
-	    if ($scale < ($allowed_scales[$i]+$allowed_scales[$i+1])/2) {
-		$scale = $allowed_scales[$i];
-		last TRY;
-	    }
-	}
-	$scale = $allowed_scales[0];
-    }
-	
-    sprintf "http://www.multimap.com/map/browse.cgi?scale=%d&lon=%f&lat=%f", $scale, $px, $py;
-}
-
-sub showmap {
-    my(%args) = @_;
-    my $url = showmap_url(%args);
-    start_browser($url);
 }
 
 ######################################################################
@@ -874,7 +838,7 @@ sub showmap_yahoo_de {
 ######################################################################
 # Bing
 
-sub showmap_url_bing {
+sub showmap_url_bing_birdseye {
     my(%args) = @_;
     my $px = $args{px};
     my $py = $args{py};
@@ -883,9 +847,24 @@ sub showmap_url_bing {
 	$py, $px, $scale, $py, $px;
 }
 
-sub showmap_bing {
+sub showmap_bing_birdseye {
     my(%args) = @_;
-    my $url = showmap_url_bing(%args);
+    my $url = showmap_url_bing_birdseye(%args);
+    start_browser($url);
+}
+
+sub showmap_url_bing_street {
+    my(%args) = @_;
+    my $px = $args{px};
+    my $py = $args{py};
+    my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
+    sprintf "http://www.bing.com/maps/?cp=%s~%s&lvl=%s",
+	$py, $px, $scale;
+}
+
+sub showmap_bing_street {
+    my(%args) = @_;
+    my $url = showmap_url_bing_street(%args);
     start_browser($url);
 }
 

@@ -109,6 +109,8 @@ my @req_table =
    'optional für die Testsuite, könnte auch YAML.pm in Zukunft ersetzen'],
   [qw/JSON::XS	0	all	2	base/,
    'optional für JSON-Dumps der BBBike-Route und diverse Serialisierungsaufgaben'],
+  [qw/Kwalify	0	all	0	devel/,
+   'optional für Validierung in der Testsuite'],
 
   [qw/Mail::Mailer	1.53	unix	0	mail/,
    'falls man aus bbbike heraus E-Mails mit der Routenbeschreibung verschicken will'],
@@ -231,8 +233,10 @@ my @req_table =
   [qw/Sort::Naturally	0	all	0	base/,
    'Für natürliches Sortieren von bbd-Dateien'],
 
-  [qw/Geo::Coder::Google	0.06	all	0	plugin/,
-   'Geocoding über Googlemaps (API v2)'], # alternative: Geo::Coder::GoogleMaps 0.03
+  ## Not enabled anymore in non-advanced mode, superseded by
+  ## Geo::Coder::Googlev3
+  #  [qw/Geo::Coder::Google	0.06	all	0	plugin/,
+  #   'Geocoding über Googlemaps (API v2)'], # alternative: Geo::Coder::GoogleMaps 0.03
   [qw/Geo::Coder::Googlev3	0	all	0	plugin/,
    'Geocoding über Googlemaps (API v3)'],
   [qw/Geo::Coder::Bing	0.10	all	0	plugin/,

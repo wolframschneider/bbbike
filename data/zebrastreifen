@@ -1,6 +1,6 @@
 #: emacs-mode: -*- bbbike -*-
 #: title: Zebrastreifen in Berlin
-#: category_image.Zs: ../misc/verkehrszeichen/Zeichen_350.svg:24x24=1:12000,xxx
+#: category_image.Zs: ../misc/verkehrszeichen/Zeichen_350.svg:16x16=1:12000,xxx
 #: XXX_category_image.Zs: ../misc/verkehrszeichen/42_350.gif
 #:
 # Die Sammlung hier ist bei weiten nicht vollständig und wird
@@ -21,7 +21,7 @@ Neue Krugallee/Am Plänterwald	Zs 15706,8631
 Neue Krugallee/Dammweg	Zs 15878,8338
 Neue Krugallee/Eichbuschallee	Zs 16131,7895
 Fürstenwalder Damm/Jastrower Weg	Zs 23668,5475
-Florastr. (vor S Pankow)	Zs 10739,17943
+Florastr. (vor S Pankow)	Zs 10721,17938
 Wilmersdorfer Str./Schillerstr.	Zs 3718,11453
 Spandau: Adamstr. vor Konkordiastr.	Zs -4069,12558
 Mitte: Annenstraße	Zs 10958,11500
@@ -148,14 +148,14 @@ Sophie-Charlotten-Straße/Seelingstraße	Zs 2504,11990
 #     * Harbigstraße/Waldschulallee
 #: by: ^^^
 Stargarder/Dunckerstr.	Zs 11582,15467
+Stargarder/Greifenhagener	Zs 11071,15776
 Silbersteinstr./Bambachstr.	Zs 11986,6697
 Silbersteinstr./vor Hertastr.	Zs 12560,6819
 General-Pape-Str./Südkreuz	Zs 7957,7617
 Manfred-von-Richthofen-Str./Adolf-Scheidt-Platz	Zs 8724,8021
 Bahnhofstr./Hubertusdamm	Zs 14622,23263
 Florastr./Heynstr.	Zs 10196,17772
-#: note: Luftbild
-Friedrich-Engels-Str./Kastanienallee	Zs 8892,20617
+Friedrich-Engels-Str./Kastanienallee	Zs 8887,20622
 Uhlandstr./Lessingstr.	Zs 7560,20447
 Buchberger Str./Weg zum S Nöldnerplatz	Zs 15731,11270
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-lichtenberg/presse/archiv/20071116.1100.89038.html vvv
@@ -173,15 +173,13 @@ Vincent-van-Gogh-Straße/Ecke Randowstraße	Zs 18424,17908
 Volkradstraße/Ecke Moldaustraße	Zs 17510,10568
 Rummelsburger Straße/Höhe Eggersdorfer Straße/Delbrückstr.	Zs 17180,10845
 #: by: ^^^
-#: note: Luftbild
-Fritz-Reuter-Allee/Britzer Park	Zs 13476,3857
+Fritz-Reuter-Allee/Britzer Park	Zs 13463,3854
 #: note: Luftbild
 Rosenthaler Weg/Arnouxstr.	Zs 11569,22436
 Behmstr./Zingster Str.	Zs 9285,16032
 Allee der Kosmonauten	Zs 20262,14225
 Oberfeldstr./Ketschendorfer Weg	Zs 20847,14063
 Oberfeldstr./Eitelstr.	Zs 20770,13450
-#: note: Luftbild
 Sterndamm/Megedestr.	Zs 17237,4232
 Heinrich-Grüber-Platz/Planitzstr.	Zs 22885,11927
 Heinrich-Grüber-Platz/Wilhelmsmühlenweg	Zs 22890,11955
@@ -410,3 +408,20 @@ Ostpreußendamm/Lippstädter Str.	Zs 3657,749
 #: XXX genaue Position?
 Köpenicker Straße/Ecke Dohlengrund	Zs 21288,10431
 Proskauer/Bänsch	Zs 14327,12658
+Weidenweg/Auerstr.	Zs 13009,12523
+Groß-Ziethener Chaussee	Zs 15533,486
+Halemweg/Heckerdamm	Zs 2370,14799
+Kastanienallee/Bratvogelweg	Zs 8318,20547
+Hauptstr./Edelweißstr.	Zs 7743,20028
+Hauptstr./Hertzstr.	Zs 7679,19885
+Wichertstr./Dunckerstr.	Zs 11726,15732
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20120515.0915.370139.html
+#: XXX genaue Position?
+#: XXX Fertigstellung: 2012-07-15
+Wünsdorfer/Prinzessinnenstr.	Zs 10089,-2115
+Onkel-Tom-Str./Riemeisterstr.	Zs 90,5120
+#: XXX genaue Position?
+Onkel-Tom-Str.	Zs 79,5405
+#: XXX genaue Position?
+Heinersdorfer/Grabenstr.	Zs 5342,1624
+

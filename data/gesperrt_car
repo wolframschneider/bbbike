@@ -61,7 +61,7 @@ Großgörschen/Kulmer	3 7609,9463 7771,9479 7829,9723
 Großgörschen/Kulmer	3 7771,9389 7771,9479 7829,9723
 Herbartstr.	1 2340,11045 2372,10941 2476,10790 2498,10665
 Breite Str. Pankow	1 10609,18384 10680,18380
-Gormannstr.	1 10463,13747 10445,13675 10406,13543 10390,13493 10372,13436
+Gormannstr.	1 10463,13747 10445,13675 10406,13543 10390,13493
 Reichenberger Str.	1 11291,10438 11393,10390
 Weserstr.	1 12074,9217 12005,9211 11888,9189
 Friedenstr.	1 12325,13148 12386,13085
@@ -79,7 +79,7 @@ Mangerstr. (Potsdam)	1 -12064,-284 -12108,-291 -12265,-418
 Rudolf-Breitscheid-Str.	1 -10446,-1947 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
 Bendastr.	1 12689,6905 12702,6846
 Bendastr.	1 12793,6407 12781,6470 12759,6563 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
-Puschkin/Bulgarische	1 13829,9905 13884,9882 13995,9834 14193,9746 14310,9692 14780,9480 14819,9462 15383,9191 15561,8903 15591,8848 15378,8668 15166,8489
+Puschkin/Bulgarische	1 13829,9905 13884,9882 13995,9834 14193,9746 14310,9692 14780,9480 14819,9462 14883,9431 15383,9191 15561,8903 15591,8848 15378,8668 15166,8489
 Karl-Marx-Str./Schönstedt	3nocross::ignrte 12500,8504 12540,8458 12562,8432 12582,8408
 Karl-Marx-Str. -> Schönstedtstr.: Karl-Marx-Str./Schönstedt	3::igndisp 12500,8504 12540,8458 12649,8535
 Schönstedtstr. -> Karl-Marx-Str.: Karl-Marx-Str./Schönstedt	3::igndisp 12649,8535 12540,8458 12562,8432
@@ -213,10 +213,10 @@ Gustav-Freytag-Str. (Grunewald)	1 834,8273 815,8283 748,8456 765,8481
 Schumannstr.	1 8581,13013 8628,13033 8703,13045 8963,13117
 Albrechtstr. (Mitte)	1 8963,13117 9001,13039 9046,12933 9106,12795
 Charitéstr.	1 8693,12951 8628,13033
-Spandauer Str. (Mitte)	3nocross::ignrte 10738,12364 10684,12423 10644,12469 10601,12521
-Gustav-Böß-Str. -> Spandauer Str.: Spandauer Str. (Mitte)	3::igndisp 10778,12493 10684,12423 10738,12364
-Spandauer Str. -> Gustav-Böß-Str.: Spandauer Str. (Mitte)	3::igndisp 10644,12469 10684,12423 10778,12493
-Spandauer Str. -> Am Nußbaum: Spandauer Str. (Mitte)	3::igndisp 10684,12423 10644,12469 10626,12455
+Spandauer Str. (Mitte)	3nocross::ignrte 10738,12364 10673,12434 10644,12469 10601,12521
+Gustav-Böß-Str. -> Spandauer Str.: Spandauer Str. (Mitte)	3::igndisp 10766,12511 10673,12434 10738,12364
+Spandauer Str. -> Gustav-Böß-Str.: Spandauer Str. (Mitte)	3::igndisp 10644,12469 10673,12434 10766,12511
+Spandauer Str. -> Am Nußbaum: Spandauer Str. (Mitte)	3::igndisp 10673,12434 10644,12469 10626,12455
 Am Nußbaum -> Spandauer Str.: Spandauer Str. (Mitte)	3::igndisp 10626,12455 10644,12469 10601,12521
 Siegfriedstr.	1 12340,6947 12477,6975 12664,7013 12810,7047 12843,7093 12872,7134
 Onkel-Herse-Str.	1 13680,4715 13757,4729 13836,4759 13853,4759 13939,4778
@@ -265,13 +265,13 @@ Landsberger Allee -> Pöhlbergstr: Straßenbahn	3::igndisp 21584,15753 21475,15705
 Landsberger Allee -> Schönagelstr.: Straßenbahn	3::igndisp 21475,15705 21584,15753 21602,15908
 Schönagelstr. -> Landsberger Allee: Straßenbahn	3::igndisp 21602,15908 21584,15753 21694,15802
 Topsstr.	1 10607,15142 10886,15251
-Schönhauser Allee	3nocross::ignrte 10902,15422 10917,15525 10938,15670
+Schönhauser Allee	3nocross::ignrte 10902,15422 10917,15525 10941,15697
 Buchholzer Str. -> Schönhauser Allee: Schönhauser Allee	3::igndisp 11055,15504 10917,15525 10902,15422
-Buchholzer Str. -> Milastr.: Schönhauser Allee	3::igndisp 11055,15504 10917,15525 10786,15544
-Schönhauser Allee -> Buchholzer Str.: Schönhauser Allee	3::igndisp 10938,15670 10917,15525 11055,15504
-Schönhauser Allee -> Milastr.: Schönhauser Allee	3::igndisp 10902,15422 10917,15525 10786,15544
-Milastr. -> Buchholzer Str.: Schönhauser Allee	3::igndisp 10786,15544 10917,15525 11055,15504
-Milastr. -> Schönhauser Allee: Schönhauser Allee	3::igndisp 10786,15544 10917,15525 10938,15670
+Buchholzer Str. -> Milastr.: Schönhauser Allee	3::igndisp 11055,15504 10917,15525 10768,15534
+Schönhauser Allee -> Milastr.: Schönhauser Allee	3::igndisp 10902,15422 10917,15525 10768,15534
+Milastr. -> Buchholzer Str.: Schönhauser Allee	3::igndisp 10768,15534 10917,15525 11055,15504
+Milastr. -> Schönhauser Allee: Schönhauser Allee	3::igndisp 10768,15534 10917,15525 10941,15697
+Schönhauser Allee -> Buchholzer Str.: Schönhauser Allee	3::igndisp 10941,15697 10917,15525 11055,15504
 Am Kupfergraben	1 9754,12775 9810,12712 9867,12651 9919,12613
 Uthmannstr.	1 13150,7845 12914,7785
 Herrnhuter Str.	1 12898,7832 13103,7889
@@ -364,6 +364,7 @@ Mimosenweg	2 17668,2187 17657,2213
 Straßenbahntrasse	3nocross::ignrte 14621,16563 14619,16672 14619,16682 14608,16772 14559,16912
 Berliner Allee -> Falkenberger Str.: Straßenbahntrasse	3::igndisp 14608,16772 14619,16682 14723,16691
 Falkenberger Str. -> Berliner Allee: Straßenbahntrasse	3::igndisp 14723,16691 14619,16682 14619,16672
+Caseler Str. -> Berliner Allee: Straßenbahntrasse	3::igndisp 14700,16790 14608,16772 14619,16682
 Berliner Allee -> Caseler Str.: Straßenbahntrasse	3::igndisp 14559,16912 14608,16772 14700,16790
 Sredzkistr. (ab Parkhaus Kulturbrauerei)	1 11101,14768 10893,14705
 Bahnübergang nur für Fußgänger/Radfahrer	3 20610,12050 20624,12133 20627,12162
@@ -711,12 +712,12 @@ Abbiegen verboten	3nocross::ignrte 10313,11805 10299,11786 10240,11740
 Spittelmarkt -> Kurstr.: Abbiegen verboten	3::igndisp 10240,11740 10299,11786 10274,11805
 Kurstr. -> Spittelmarkt: Abbiegen verboten	3::igndisp 10274,11805 10299,11786 10313,11805
 Mittelstreifen	3nocross::ignrte 10738,12364 10800,12461 10878,12560 10954,12635
-Jüdenstr. -> Grunerstr.: Mittelstreifen	3::igndisp 10778,12493 10800,12461 10878,12560
-Jüdenstr. -> Jüdenstr.: Mittelstreifen	3::igndisp 10778,12493 10800,12461 10831,12371
+Jüdenstr. -> Grunerstr.: Mittelstreifen	3::igndisp 10766,12511 10800,12461 10878,12560
+Jüdenstr. -> Jüdenstr.: Mittelstreifen	3::igndisp 10766,12511 10800,12461 10831,12371
 Grunerstr. -> Jüdenstr.: Mittelstreifen	3::igndisp 10878,12560 10800,12461 10831,12371
-Jüdenstr. -> Jüdenstr.: Mittelstreifen	3::igndisp 10831,12371 10800,12461 10778,12493
+Jüdenstr. -> Jüdenstr.: Mittelstreifen	3::igndisp 10831,12371 10800,12461 10766,12511
 Jüdenstr. -> Grunerstr.: Mittelstreifen	3::igndisp 10831,12371 10800,12461 10738,12364
-Grunerstr. -> Jüdenstr.: Mittelstreifen	3::igndisp 10738,12364 10800,12461 10778,12493
+Grunerstr. -> Jüdenstr.: Mittelstreifen	3::igndisp 10738,12364 10800,12461 10766,12511
 Klosterstr. -> Grunerstr.: Mittelstreifen	3::igndisp 10952,12401 10878,12560 10800,12461
 Grunerstr. -> Klosterstr.: Mittelstreifen	3::igndisp 10954,12635 10878,12560 10952,12401
 Bayernring	1 8616,8605 8455,8567 8371,8543
@@ -738,7 +739,10 @@ Ofener Str. -> Sansibarstr.: Mittelstreifen	3::igndisp 6256,16601 6208,16546 610
 Ofener Str. -> Müllerstr.: Mittelstreifen	3::igndisp 6256,16601 6208,16546 6311,16457
 B110 nach Swinoujscie: kein Grenzübergang für Autos	2 62279,166179 62213,166173
 Mittelstreifen	3nocross::ignrte 16643,1460 16698,1392 16815,1278
+Am Rudower Fließ -> Neuköllner Str.: Mittelstreifen	3::igndisp 16650,1356 16698,1392 16643,1460
+Am Rudower Fließ -> Am Hanffgraben: Mittelstreifen	3::igndisp 16650,1356 16698,1392 16805,1488
 Neuköllner Str. -> Am Hanffgraben: Mittelstreifen	3::igndisp 16643,1460 16698,1392 16805,1488
+Neuköllner Str. -> Am Rudower Fließ: Mittelstreifen	3::igndisp 16815,1278 16698,1392 16650,1356
 Mittelstreifen	3nocross::ignrte 13151,14855 13110,14879 12812,15053
 Einsteinstr. -> Storkower Str.: Mittelstreifen	3::igndisp 13143,14935 13110,14879 13151,14855
 Storkower Str. -> Einsteinstr.: Mittelstreifen	3::igndisp 12812,15053 13110,14879 13143,14935
@@ -779,9 +783,9 @@ Prenzlauer Promenade -> Brauhausstr.: Straßenbahntrasse	3::igndisp 12010,16774 1
 Mittelstreifen	3nocross::ignrte 12114,12546 12134,12540 12360,12505
 Karl-Marx-Allee -> Krautstr./Blumenstr.: Mittelstreifen	3::igndisp 12360,12505 12134,12540 12125,12490
 Krautstr./Blumenstr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 12125,12490 12134,12540 12114,12546
-Mittelstreifen	3nocross::ignrte 10240,11740 10213,11728 9981,11689
+Mittelstreifen	3nocross::ignrte 10240,11740 10213,11728 10128,11714 9981,11689
 Spittelmarkt -> Axel-Springer-Str.: Mittelstreifen	3::igndisp 10240,11740 10213,11728 10201,11631
-Axel-Springer-Str. -> Leipziger Str.: Mittelstreifen	3::igndisp 10201,11631 10213,11728 9981,11689
+Axel-Springer-Str. -> Leipziger Str.: Mittelstreifen	3::igndisp 10201,11631 10213,11728 10128,11714
 Niederwallstr./Spittelmarkt: nur Abbiegen nach rechts erlaubt	3 10183,11770 10240,11740 10320,11627
 Niederwallstr./Spittelmarkt: nur Abbiegen nach rechts erlaubt	3 10183,11770 10240,11740 10299,11786
 Kleineweg: nur für Anlieger	2:Anlieger 9126,8025 9130,7804 9132,7661
@@ -861,7 +865,6 @@ Mittelstreifen	3nocross::ignrte 8438,8676 8334,8655 8371,8543
 Loewenhardtdamm -> Loewenhardtdamm: Mittelstreifen	3::igndisp 8371,8543 8334,8655 8306,8722
 Loewenhardtdamm -> Höhndorfstr.: Mittelstreifen	3::igndisp 8306,8722 8334,8655 8438,8676
 Friedbergstr.	1 3012,10812 3204,10895
-Caseler Str.	1 14732,16770 14700,16790 14608,16772
 Betonblöcke (aber für Radfahrer passierbar)	3nocross::ignrte 9777,10719 9805,10791 9829,10830 9935,11067
 Lindenstr. -> Markgrafenstr.: Betonblöcke (aber für Radfahrer passierbar)	3::igndisp 9777,10719 9805,10791 9786,10971
 Markgrafenstr. -> Lindenstr.: Betonblöcke (aber für Radfahrer passierbar)	3::igndisp 9786,10971 9805,10791 9829,10830
@@ -893,9 +896,9 @@ Am Kanal -> Am Kanal: verboten	3::igndisp -12317,-1212 -12549,-1277 -12666,-1311
 Mittelstr. (Potsdam)	1 -12884,-769 -12712,-734
 Emma-Herwegh-Str.	1 7791,13166 7595,12980
 Margarete-Kühn-Str.: Poller am Salzufer	3 5203,12387 5133,12240 5018,12322
-Margarete-Kühn-Str.: Poller am Salzufer	3 5203,12387 5133,12240 5194,12176
+Margarete-Kühn-Str.: Poller am Salzufer	3 5203,12387 5133,12240 5181,12195
 Margarete-Kühn-Str.: Poller am Salzufer	3 5018,12322 5133,12240 5203,12387
-Margarete-Kühn-Str.: Poller am Salzufer	3 5194,12176 5133,12240 5203,12387
+Margarete-Kühn-Str.: Poller am Salzufer	3 5181,12195 5133,12240 5203,12387
 Eberswalder Str. (Bernau)	1 23109,30968 23103,30923 22922,30640
 Rutnikstr. - Möllendorffstr.: Abbiegen verboten	3 15648,12687 15546,12690 15550,12625
 Torgauer Str.: nur für Anlieger	2:Anlieger 7446,8200 7402,8208 7250,8223 7001,8161
@@ -1011,7 +1014,7 @@ Gounodstr. -> Indira-Gandhi-Str.: Straßenbahntrasse	3::igndisp 14520,15937 14597
 Indira-Gandhi-Str. -> Gounodstr.: Straßenbahntrasse	3::igndisp 14609,15921 14597,15970 14520,15937
 Meyerbeerstr. -> Indira-Gandhi-Str.: Straßenbahntrasse	3::igndisp 14484,16035 14576,16069 14550,16161
 Indira-Gandhi-Str. -> Meyerbeerstr.: Straßenbahntrasse	3::igndisp 14595,15980 14576,16069 14484,16035
-Lenther Steig	1 1024,14889 1037,14814 1042,14721
+Lenther Steig	1 1022,14898 1037,14814 1042,14721
 Mittelstreifen	3nocross::ignrte 6150,7673 6083,7582 5955,7406
 Wielandstr. -> Hauptstr.: Mittelstreifen	3::igndisp 6081,7215 6083,7582 5955,7406
 Hauptstr. -> Wielandstr.: Mittelstreifen	3::igndisp 6150,7673 6083,7582 6081,7215
@@ -1316,3 +1319,35 @@ Geschwister-Scholl-Str. (Potsdam)	1 -14909,-1818 -14733,-1812
 Feuerbachstr. (Potsdam)	1 -14140,-1390 -13879,-1445
 Jadeweg	1 -3850,13756 -3878,13636 -4011,13656
 Fischerinsel	1 10429,11807 10474,11843 10604,11941
+Landhausweg: Schranke	3 16308,1585 16464,1194 16489,1185
+Landhausweg: Schranke	3 16489,1185 16464,1194 16308,1585
+Danziger/Knaack/Lychener	3nocross::ignrte 11154,14985 11056,15009 10881,15047
+Knaackstr. -> Danziger Str.: Danziger/Knaack/Lychener	3::igndisp 11038,14972 11056,15009 10881,15047
+Knaackstr. -> Lychener Str.: Danziger/Knaack/Lychener	3::igndisp 11038,14972 11056,15009 11236,15312
+Danziger Str. -> Knaackstr.: Danziger/Knaack/Lychener	3::igndisp 11154,14985 11056,15009 11038,14972
+Danziger Str. -> Lychener Str.: Danziger/Knaack/Lychener	3::igndisp 10881,15047 11056,15009 11236,15312
+Lychener Str. -> Knaackstr.: Danziger/Knaack/Lychener	3::igndisp 11236,15312 11056,15009 11038,14972
+Lychener Str. -> Danziger Str.: Danziger/Knaack/Lychener	3::igndisp 11236,15312 11056,15009 11154,14985
+Thaters Privatweg	1 4148,15205 4103,15137 3892,14944 3893,14911 3899,14868 3956,14750
+Heinickeweg	1 2224,14825 2210,14696 2207,14576
+Jungfernsteig	1 938,14457 862,14463
+Kapellensteig	1 936,14518 938,14457 937,14391
+Wattstr.	1 998,14516 998,14435 999,14390
+Handjerystr./Schmiljanstr.	3 5494,6960 5574,7018 5624,7113
+Handjerystr./Schmiljanstr.	3 5494,6960 5574,7018 5569,7022
+(Am Carlsgarten - Waldowallee)	2 19460,7954 19504,8003 19558,8064
+Straßenbahntrasse	3nocross::ignrte -13456,500 -13436,595 -13433,693
+Georg-Hermann-Allee -> Jochen-Klepper-Str.: Straßenbahntrasse	3::igndisp -13433,693 -13436,595 -13270,563
+Jochen-Klepper-Str. -> Georg-Hermann-Allee: Straßenbahntrasse	3::igndisp -13270,563 -13436,595 -13456,500
+Straßenbahntrasse	3nocross::ignrte -13433,693 -13432,782 -13429,1069
+Kutscherweg: Poller	3 -13620,-131 -13700,-106 -13775,-85
+Kutscherweg: Poller	3 -13775,-85 -13700,-106 -13620,-131
+Dresdner Str.: Einfahrt vom Oranienplatz gesperrt	3 11159,10769 11189,10831 11162,10919
+Rennbahnstr. -> Bernkastler	3 14510,16916 14559,16912 14673,16895
+Rennbahnstr. -> Berliner Allee	3 14510,16916 14559,16912 14535,17003
+Stephaniweg: Poller	3 4836,1659 4855,1616 4800,1582
+Stephaniweg: Poller	3 4836,1659 4855,1616 4895,1523
+Stephaniweg: Poller	3 4836,1659 4855,1616 4942,1649
+Blaumeisenweg	1 5194,1690 5251,1543
+Töpferweg: Poller	3 13238,2521 13309,2410 13103,2271
+Töpferweg: Poller	3 13238,2521 13309,2410 13367,2322

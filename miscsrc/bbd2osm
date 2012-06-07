@@ -493,7 +493,15 @@ sub _handle_highway_like {
     }
     push @segments, [[@node_ids[$begin_split_index..$#node_ids]], [@last_tags]];
 
-    if ($optimize_for == OPTIMIZE_FOR_MAPNIK) {
+    # Usually the descriptive street names in the form "(A - B)" are
+    # only clutter for the mapnik or garmin maps. Also the "[...]"
+    # additions can be removed here.
+    #
+    # Theoretically these names could be used in garmin's address
+    # search. But it seems that the longish "(A - B)" names are
+    # winning over the shorter street names, so avoid them also here.
+    if ($optimize_for == OPTIMIZE_FOR_GARMIN ||
+	$optimize_for == OPTIMIZE_FOR_MAPNIK) {
 	undef $name if $name =~ m{^\(.*\)$};
 	if (defined $name) {
 	    $name =~ s{\s+\[.*\]$}{};
@@ -1076,6 +1084,40 @@ sub handle_comments_route_like {
 	    $next_way_id++;
 	}
     }
+}
+
+# See bbbike-aux/misc/mk-green-ampel-net.pl
+sub handle_trafficlightmap_like {
+    my($r, $dir) = @_;
+    if ($r->[Strassen::CAT] !~ m{^(green|red)X;}) {
+	warn "Unexpected category $r->[Strassen::CAT], ignoring...";
+	return;
+    }
+    my $cat = $1;
+    my @node_ids = map {
+	my($px,$py) = $Karte::Polar::obj->trim_accuracy($Karte::Polar::obj->standard2map(split /,/, $_));
+	my $node_id = maybe_add_node($px,$py);
+	$node_id;
+    } @{ $r->[Strassen::COORDS] };
+
+    print $wayfh qq{<way id="$next_way_id" visible="true">\n};
+    for my $node_id (@node_ids) {
+	print $wayfh qq{  <nd ref="$node_id"/>\n};
+    }
+#    print $wayfh qq{  <tag k="bbbike:trafficlightmap" v="$cat" />\n};
+#    print $wayfh qq{  <tag k="bbbike:tlm" v="$cat" />\n};
+    #XXX hack, reuse bus lane signature here
+    if ($cat eq 'green') {
+	print $wayfh qq{  <tag k="cycleway" v="lane" />\n};
+	print $wayfh qq{  <tag k="bbbike:usage" v="mandatory" />\n};
+    } elsif ($cat eq 'red') {
+	print $wayfh qq{  <tag k="psv" v="yes" />\n};
+	print $wayfh qq{  <tag k="bbbike:times" v="always" />\n};
+    } else {
+	die;
+    }
+    print $wayfh qq{</way>\n};
+    $next_way_id++;
 }
 
 seek $nodefh, 0, SEEK_SET
