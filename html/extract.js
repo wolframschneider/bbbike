@@ -14,6 +14,7 @@ var config = {
     },
 
     "show_filesize": 1,
+    "city_name_optional": false,
 
     "dummy": ""
 };
@@ -423,7 +424,7 @@ function checkform() {
 
         if (e.value == "") {
             // optional forms fields
-            if (e.name == "city") continue;
+            if (config.city_name_optional && e.name == "city") continue;
 
             e.style.background = color_error;
             e.focus();
