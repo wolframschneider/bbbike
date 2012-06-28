@@ -1659,9 +1659,9 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         "lang": lang
     });
 
-    setTimeout(function () {
-        hideGoogleLayers();
-    }, 5000);
+    setTimeout(function () { hideGoogleLayers(maptype); }, 300); // fast CPU
+    setTimeout(function () { hideGoogleLayers(maptype); }, 1000);
+    // setTimeout(function () { hideGoogleLayers(); }, 2000);
 
     // enable Google Arial View
     if (bbbike.mapImagery45 > 0) {
@@ -2538,19 +2538,19 @@ function hideGoogleLayers(maptype) {
     }
 
     var value = is_supported_maptype(maptype, bbbike.available_custom_maps) ? "hidden" : "visible";
-    var timeout = value == "hidden" ? 2000 : 1000;
+    var timeout = 0; // value == "hidden" ? 2000 : 1000;
 
     setTimeout(function () {
         var div = document.getElementById("BicyclingLayer");
         if (div) div.style.visibility = value;
-    }, timeout);
+    }, timeout + (value == "hidden" ? 0 : 0));
 
     setTimeout(function () {
         var div = document.getElementById("TrafficLayer");
         if (div) div.style.visibility = value;
-    }, timeout - (value == "hidden" ? 500 : -500));
+    }, timeout  + (value == "hidden" ? 0 : 0));
 
-/*
+    /*
     setTimeout(function () {
         var div = document.getElementById("WeatherLayer");
         if (div) div.style.visibility = value;
