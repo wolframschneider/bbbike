@@ -85,6 +85,8 @@ var bbbike = {
 
     // default map
     mapDefault: "mapnik",
+    mapDefaultDE: "mapnik_de",
+
     //mapDefault: "terrain",
     // visible controls
     controls: {
@@ -530,7 +532,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     state.maplist = init_google_map_list();
 
     if (!is_supported_map(maptype)) {
-        maptype = bbbike.mapDefault;
+        maptype = is_european(region) && lang == "de" ? bbbike.mapDefaultDE : bbbike.mapDefault;
         if (city == "bbbike" && is_supported_map("bbbike_mapnik")) {
             maptype = "bbbike_mapnik";
         }
