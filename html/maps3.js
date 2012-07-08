@@ -174,6 +174,7 @@ var state = {
 
     lang: "en",
 
+    maptype_usage: "",
 
     // IE bugs
     dummy: 0
@@ -2520,6 +2521,10 @@ function maptype_usage(maptype) {
     // get information about map type and log maptype
     if (bbbike.maptype_usage) {
         var url = "/cgi/maptype.cgi?city=" + city + "&maptype=" + maptype;
+
+	if (state.maptype == maptype)
+	    return;
+	state.maptype = maptype;
 
         downloadUrl(url, function (data, responseCode) {
             if (responseCode == 200) {
