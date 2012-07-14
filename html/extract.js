@@ -94,7 +94,9 @@ function init() {
     });
 
     map.addLayer(new OpenLayers.Layer.OSM("Esri Topographic", "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}.png", {
-	tileOptions: { crossOriginKeyword: null }, 
+        tileOptions: {
+            crossOriginKeyword: null
+        },
         attribution: "",
         numZoomLevels: 18
     }));
@@ -102,20 +104,28 @@ function init() {
     map.addLayer(new OpenLayers.Layer.OSM.Mapnik("OSM Mapnik"));
     map.addLayer(new OpenLayers.Layer.OSM.CycleMap("OSM CycleMap"));
     map.addLayer(new OpenLayers.Layer.OSM("OSM Hike&Bike", ["http://a.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png", "http://b.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png"], {
-	tileOptions: { crossOriginKeyword: null }, 
+        tileOptions: {
+            crossOriginKeyword: null
+        },
         numZoomLevels: 18
     }));
     map.addLayer(new OpenLayers.Layer.OSM("OSM Transport", ["http://a.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png", "http://b.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png"], {
-	tileOptions: { crossOriginKeyword: null }, 
+        tileOptions: {
+            crossOriginKeyword: null
+        },
         numZoomLevels: 19
     }));
 
     map.addLayer(new OpenLayers.Layer.OSM("Mapquest OSM", ["http://otile1.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png", "http://otile2.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png"], {
-	tileOptions: { crossOriginKeyword: null }, 
-	numZoomLevels: 19
+        tileOptions: {
+            crossOriginKeyword: null
+        },
+        numZoomLevels: 19
     }));
     map.addLayer(new OpenLayers.Layer.OSM("Mapquest Satellite", ["http://mtile01.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png", "http://mtile02.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png"], {
-	tileOptions: { crossOriginKeyword: null }, 
+        tileOptions: {
+            crossOriginKeyword: null
+        },
         numZoomLevels: 19
     }));
 
