@@ -2522,9 +2522,8 @@ function maptype_usage(maptype) {
     if (bbbike.maptype_usage) {
         var url = "/cgi/maptype.cgi?city=" + city + "&maptype=" + maptype;
 
-	if (state.maptype == maptype)
-	    return;
-	state.maptype = maptype;
+        if (state.maptype == maptype) return;
+        state.maptype = maptype;
 
         downloadUrl(url, function (data, responseCode) {
             if (responseCode == 200) {
