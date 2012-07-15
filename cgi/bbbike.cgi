@@ -129,7 +129,6 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $warn_message $use_utf8 $data_is_wgs84
 	    $enable_homemap_streets
 	    $warn_message $use_utf8 $data_is_wgs84 $osm_data
-<<<<<<< HEAD
 	    $gmap_api_version
 	    $enable_current_postion
 	    $enable_weather_forecast
@@ -154,9 +153,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_latlng_search
 	    $enable_input_colors
 	    $skip_second_page
-=======
 	    $bbbike_start_js_version $bbbike_css_version
->>>>>>> eserte/master
 	   );
 
 $gmap_api_version = 3;
@@ -4054,15 +4051,12 @@ print qq{<tr><td>@{[ M("Ampeln vermeiden") ]}:</td><td><input type=checkbox name
 if !$osm_data || ($datadir =~ m,data-osm/(.+), && $1 eq 'berlin');
 
     print <<EOF;
-<<<<<<< HEAD
 <tr><td>@{[ M("Unterwegs mit") ]}:</td><td><select $bi->{hfill} name="pref_specialvehicle">
 <option @{[ $specialvehicle_checked->("")          ]}>@{[ M("nichts weiter") ]} <!-- expr? XXX -->
 <option @{[ $specialvehicle_checked->("trailer")   ]}>@{[ M("Anhänger") ]}
 <option @{[ $specialvehicle_checked->("childseat") ]}>@{[ M("Kindersitz mit Kind") ]}
 </select></td></tr>
-=======
-<tr><td><label for="pref_ampel">@{[ M("Ampeln vermeiden") ]}:</label></td><td><input type=checkbox name="pref_ampel" id="pref_ampel" value="yes" @{[ $default_ampel?"checked":"" ]}></td>
->>>>>>> eserte/master
+<!-- <tr><td><label for="pref_ampel">@{[ M("Ampeln vermeiden") ]}:</label></td><td><input type=checkbox name="pref_ampel" id="pref_ampel" value="yes" @{[ $default_ampel?"checked":"" ]}></td> -->
 EOF
 
     if ($include_outer_region) {
@@ -8016,14 +8010,10 @@ sub header {
     delete @args{qw(-contents -up)};
     my $printmode = delete $args{-printmode};
     if ($bi->{'can_css'} && !exists $args{-style}) {
-<<<<<<< HEAD
 
-         my @css = $printmode ? "$bbbike_html/bbbikeprint.css" : "$bbbike_html/bbbike.css";
+         my @css = $printmode ? "$bbbike_html/bbbikeprint.css" : "$bbbike_html/bbbike.css?v=$bbbike_css_version";
          push (@css, "$bbbike_html/streets.css") if $is_streets;
 	$args{-style} = {-src => \@css };
-=======
-	$args{-style} = {-src => "$bbbike_html/" . ($printmode ? "bbbikeprint" : "bbbike") . ".css?v=" . $bbbike_css_version};
->>>>>>> eserte/master
 #XXX del:
 #  <<EOF;
 #  $std_css
