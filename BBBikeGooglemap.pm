@@ -332,7 +332,7 @@ qq{<script type="text/javascript"> google.load("maps", $gmap_api_version); </scr
     my $is_route = scalar(@$route);
 
     if ( !$nomap ) {
-	my $m = $map eq 'default' && $route_length ne '' ? "cycle" : $map;
+        my $m = $map eq 'default' && $route_length ne '' ? "cycle" : $map;
 
         $html .= <<EOF;
 
