@@ -129,6 +129,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $warn_message $use_utf8 $data_is_wgs84
 	    $enable_homemap_streets
 	    $warn_message $use_utf8 $data_is_wgs84 $osm_data
+<<<<<<< HEAD
 	    $gmap_api_version
 	    $enable_current_postion
 	    $enable_weather_forecast
@@ -153,6 +154,9 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_latlng_search
 	    $enable_input_colors
 	    $skip_second_page
+=======
+	    $bbbike_start_js_version $bbbike_css_version
+>>>>>>> eserte/master
 	   );
 
 $gmap_api_version = 3;
@@ -1095,6 +1099,7 @@ $nice_berlinmap = 0;
 $nice_abcmap    = 0;
 
 $bbbike_start_js_version = '1.23';
+$bbbike_css_version = '1.01';
 
 use vars qw(@b_and_p_plz_multi_files %is_usable_without_strassen %same_single_point_optimization);
 @b_and_p_plz_multi_files = 
@@ -3854,6 +3859,7 @@ sub make_crossing_choose_html {
 	    if ($use_select) {
 		$html .= "<option value=\"$_\">";
 	    } else {
+		$html .= "<label>";
 		$html .=
 		    "<input type=radio name=" . $type . "c " .
 			"value=\"$_\"";
@@ -3863,7 +3869,7 @@ sub make_crossing_choose_html {
 		$html .= "> ";
 	    }
 	    $html .= join("/", map { Strasse::strip_bezirk($_) } @kreuzung);
-	    $html .= "<br>" unless $use_select;
+	    $html .= "</label><br>" unless $use_select;
 	    $html .= "\n";
 	}
     }
@@ -4048,11 +4054,15 @@ print qq{<tr><td>@{[ M("Ampeln vermeiden") ]}:</td><td><input type=checkbox name
 if !$osm_data || ($datadir =~ m,data-osm/(.+), && $1 eq 'berlin');
 
     print <<EOF;
+<<<<<<< HEAD
 <tr><td>@{[ M("Unterwegs mit") ]}:</td><td><select $bi->{hfill} name="pref_specialvehicle">
 <option @{[ $specialvehicle_checked->("")          ]}>@{[ M("nichts weiter") ]} <!-- expr? XXX -->
 <option @{[ $specialvehicle_checked->("trailer")   ]}>@{[ M("Anh‰nger") ]}
 <option @{[ $specialvehicle_checked->("childseat") ]}>@{[ M("Kindersitz mit Kind") ]}
 </select></td></tr>
+=======
+<tr><td><label for="pref_ampel">@{[ M("Ampeln vermeiden") ]}:</label></td><td><input type=checkbox name="pref_ampel" id="pref_ampel" value="yes" @{[ $default_ampel?"checked":"" ]}></td>
+>>>>>>> eserte/master
 EOF
 
     if ($include_outer_region) {
@@ -4062,7 +4072,7 @@ EOF
     }
     if (1) {
 	print <<EOF;
-<tr><td>@{[ M("Unbeleuchtete Wege vermeiden") ]}:</td><td><input type=checkbox name="pref_unlit" value="NL" @{[ $default_unlit?"checked":"" ]}></td>
+<tr><td><label for="pref_unlit">@{[ M("Unbeleuchtete Wege vermeiden") ]}:</label></td><td><input type=checkbox name="pref_unlit" id="pref_unlit" value="NL" @{[ $default_unlit?"checked":"" ]}></td>
 EOF
 	if ($include_outer_region) {
 	    print <<EOF;
@@ -4090,7 +4100,7 @@ EOF
 	$geo && $geo->can('skip_feature') && !$geo->skip_feature('faehren')
     }) {
 	print <<EOF;
-<tr><td>@{[ M("F‰hren benutzen") ]}:</td><td><input type=checkbox name="pref_ferry" value="use" @{[ $default_ferry?"checked":"" ]}></td></tr>
+<tr><td><label for="pref_ferry">@{[ M("F‰hren benutzen") ]}:</label></td><td><input type=checkbox name="pref_ferry" id="pref_ferry" value="use" @{[ $default_ferry?"checked":"" ]}></td></tr>
 EOF
     }
     if ($enable_elevation) {
@@ -4118,8 +4128,8 @@ EOF
     if ($use_fragezeichen) {
 	print <<EOF;
 <tr>
- <td>@{[ M("Unbekannte Straﬂen mit einbeziehen") ]}:</td>
- <td><input type=checkbox name="pref_fragezeichen" value=yes @{[ $default_fragezeichen?"checked":"" ]}></td>
+ <td><label for="pref_fragezeichen">@{[ M("Unbekannte Straﬂen mit einbeziehen") ]}:</label></td>
+ <td><input type=checkbox name="pref_fragezeichen" id="pref_fragezeichen" value=yes @{[ $default_fragezeichen?"checked":"" ]}></td>
 EOF
 	if (!$is_m) {
 	    print <<EOF;
@@ -8006,10 +8016,14 @@ sub header {
     delete @args{qw(-contents -up)};
     my $printmode = delete $args{-printmode};
     if ($bi->{'can_css'} && !exists $args{-style}) {
+<<<<<<< HEAD
 
          my @css = $printmode ? "$bbbike_html/bbbikeprint.css" : "$bbbike_html/bbbike.css";
          push (@css, "$bbbike_html/streets.css") if $is_streets;
 	$args{-style} = {-src => \@css };
+=======
+	$args{-style} = {-src => "$bbbike_html/" . ($printmode ? "bbbikeprint" : "bbbike") . ".css?v=" . $bbbike_css_version};
+>>>>>>> eserte/master
 #XXX del:
 #  <<EOF;
 #  $std_css

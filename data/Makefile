@@ -157,8 +157,7 @@ slow-checks:	check-categories \
 		check-coords.data \
 		persistent-tmp
 
-persistent-tmp:	${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor-nextcheck.bbd \
-		${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd \
+persistent-tmp:	fragezeichen-outdoor-nextcheck \
 		${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd \
 		${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd \
 		${PERSISTENTTMPDIR}/.check_fragezeichen-indoor-nextcheck.bbd \
@@ -175,6 +174,10 @@ persistent-tmp:	${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor-nextcheck.bbd \
 		${PERSISTENTTMPDIR}/non-faked-strassen \
 		${PERSISTENTTMPDIR}/XXX.bbd \
 		${PERSISTENTTMPDIR}/plz-b.bbd
+
+# popular target
+fragezeichen-outdoor-nextcheck:	${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor-nextcheck.bbd \
+				${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd
 
 .for i in $(XXX_TARGETS)
 persistent-tmp:	${PERSISTENTTMPDIR}/XXX-$(i).bbd
@@ -492,7 +495,8 @@ ampelschaltung:	ampelschaltung-orig
 gesperrt .gesperrt.tmp:	gesperrt-orig strassen landstrassen landstrassen2 comments_path routing_helper-orig
 	-@$(WRITEABLE) gesperrt
 	$(CONVERT2HAFAS) -specsperre=strassen,landstrassen,landstrassen2 \
-	    -specsperre-exceptions=comments_path gesperrt-orig > .gesperrt.tmp
+	    -specsperre-exceptions=comments_path gesperrt-orig |\
+	    ${RESOLVE_STARS} ${ALL_STREETS} - > .gesperrt.tmp
 	$(REPLACESTRASSEN) -catexpr 's/:q\d//' < .gesperrt.tmp > gesperrt~
 	${GREPSTRASSEN} -ignoreglobaldirectives -catrx ';$$' routing_helper-orig |\
 	    ${REPLACESTRASSEN} -catexpr 's/.*/1::igndisp/' -revcoords >> gesperrt~
@@ -516,9 +520,8 @@ gesperrt_$(i):	gesperrt_$(i)-orig $(i)bahn
 
 gesperrt_car:	gesperrt_car-orig strassen landstrassen landstrassen2 ${PERSISTENTTMPDIR}/gesperrt-without-nocross
 	-@$(WRITEABLE) $@
-	$(CONVERT2HAFAS) -specsperre=strassen,landstrassen,landstrassen2 \
-	    gesperrt_car-orig |\
-	${RESOLVE_STARS} -sperrefile ${PERSISTENTTMPDIR}/gesperrt-without-nocross ${ALL_STREETS} - > gesperrt_car~
+	$(CONVERT2HAFAS) -specsperre=strassen,landstrassen,landstrassen2 gesperrt_car-orig |\
+	    ${RESOLVE_STARS} -sperrefile ${PERSISTENTTMPDIR}/gesperrt-without-nocross ${ALL_STREETS} - > gesperrt_car~
 	mv gesperrt_car~ gesperrt_car
 	-@$(READONLY) $@
 

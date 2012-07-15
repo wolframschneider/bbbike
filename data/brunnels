@@ -52,7 +52,7 @@ Oderstraßenbrücke	Br 11672,6737 11663,6806
 Schichauweg, S-Bahnbrücke	Br 9640,-833 9693,-815
 Germelmannbrücke	Br 8750,5173 8784,5095
 Stubenrauchbrücke (Tempelhof)	Br 9182,5332 9192,5272
-Colditzbrücke	Br 9847,5630 9875,5561
+Colditzbrücke	Br 9863,5637 9893,5569
 Komturbrücke	Br 10243,5777 10243,5683
 Mussehlbrücke	Br 11124,5787 11190,5856
 Wilhelm-Borgmann-Brücke	Br 12052,5710 12107,5651
@@ -140,7 +140,7 @@ Schwedter Steg	Br 10080,15858 10005,16150
 Schönfließer Str., S-Bahnbrücke	Br 10593,16037 10581,15936
 Greifenhagener Str., S-Bahnbrücke	Br 11176,15958 11150,15908
 Pappelallee, S-Bahnbrücke	Br 11373,15789 11393,15823
-Schönhauser Allee, S-Bahnbrücke	Br 10975,16010 10971,15944
+Schönhauser Allee, S-Bahnbrücke	Br 10975,16010 10969,15944
 Dunckerbrücke	Br 11662,15568 11698,15627
 Prenzlauer Allee, S-Bahnbrücke	Br 11891,15413 11905,15462
 Kniprodenstraßenbrücke	Br 13301,14516 13367,14588
@@ -229,7 +229,7 @@ Liebknechtbrücke	Br 10243,12546 10300,12587
 Rathausbrücke	Br 10362,12351 10422,12395
 Mühlendammbrücke	Br 10574,12131 10625,12206
 Jannowitzbrücke	Br 11325,12021 11347,12181
-Emil-Schulz-Brücke	Br 4212,2675 4251,2637 4343,2607
+Emil-Schulz-Brücke	Br 4212,2675 4251,2637 4284,2626
 Eugen-Kleine-Brücke	Br 3696,1445 3751,1402
 Bäkebrücke	Br 4591,3089 4655,3060
 Krahmersteg	Br 4791,3395 4862,3363
@@ -351,7 +351,7 @@ Pyramidenbrücke	Br 21569,5730 21596,5693
 Zitadellenbrücke	Br -2656,14582 -2652,14559
 Zugbrücke Zitadelle	Br -2682,14681 -2688,14703
 Werdauer Brücke	Br 6774,7755 6691,7633
-Rudelsburger Brücke	Br 13787,22114 13795,22131
+Rudelsburger Brücke	Br 13766,22119 13780,22141
 Nördliche Rhinstraßenbrücke	Br 18181,14110 18184,14078
 Pyramidenringbrücke	Br 18354,14196 18383,14184
 Maselake-Klappbrücke	Br -2445,16610 -2504,16558
@@ -418,7 +418,7 @@ Havellandbrücke	Br -70554,38960 -70719,38954
 Peenebrücke Wolgast	Br 32743,183832 32848,183868 32956,183906
 Zecheriner Brücke	Br 35953,162870 36080,162883 36480,162910
 Rügendamm	Br -12789,211901 -12373,212278 -11913,212694
-Autobahnbrücke	Br 13139,22401 13395,22365
+Autobahnbrücke	Br 13139,22401 13399,22377
 Winterhuder Steg	Br -6963,14331 -6933,14317 -6934,14291 -6937,14262
 Bahnunterführung am Mauerweg	Tu 4034,-255 3982,-181
 Schneckenbrücke	Br 2012,3356 2009,3362 1980,3409 1977,3414
@@ -503,6 +503,7 @@ Brücke über das Rudower Fließ	Br 16464,1014 16458,1023
 	Br 17018,321 17009,305
 Siebenendenwegbrücke	Br -6,4491 -22,4512
 Zinnowwegbrücke	Br -376,4102 -388,4119
+Brücke über Autobahn und Panke	Br 13168,21706 13046,21734
 Elbebrücke	Br -108535,-32884 -108293,-33023
 Brücke über die Alte Elbe	Br -107949,-33102 -107748,-33161
 Brücke über die Hohensaaten-Friedrichsthaler-Wasserstraße	Br 69465,72943 69331,73165

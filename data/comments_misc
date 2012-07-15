@@ -1,3 +1,5 @@
+#: #: -*- coding: iso-8859-1 -*-
+#:
 als Zionskirchstr. ausgeschildert	CS 10306,14247 10389,14274
 als Zionskirchstr. ausgeschildert	CS 10306,14247 10277,14350 10315,14386 10365,14372 10389,14274
 Autobahnunterführung ist nur 2,10m hoch	CS 21306,-975 21393,-871
@@ -36,7 +38,7 @@ Tor (Sperrung möglich?)	CP 58041,164268 58324,164202 59544,164184
 Alternativ auch Fahrt auf dem Lärmschutzwall möglich	CS 17557,17999 16990,18694
 Keine Straße ausgeschildert, am Bahndamm halten	CS; 12645,11673 12596,11696
 Paralleler Uferweg an der Spree nur über zwei Treppen erreichbar	CS 10300,12587 10355,12551 10411,12471 10422,12395
-unter der S-Bahnbrücke: Glassplitter	CS 6184,20550 6298,20599
+unter der S-Bahnbrücke: Glassplitter	CS 6184,20550 6286,20585
 Hegelstr.: Ausweichmöglichkeit auf Nebenstraße mit Kopfsteinpflaster oder grünen Mittelstreifen mit Parkweg	CS -13625,-902 -13468,-847 -13433,-831 -13231,-763 -13137,-728 -13067,-706 -12878,-665
 Kreisverkehr	Roundabout 60197,12001
 Kreisverkehr	Roundabout 61156,11478
@@ -344,7 +346,7 @@ Eisbärenweg: Privatstraße	CS 6909,17796 6950,17669
 (Tiefhornweg): Uferpromenade	CS -7318,2567 -7420,2563 -7562,2431 -7833,2277 -8085,2252 -8141,2211 -8262,2178 -8328,2181 -8400,2156
 (Zobtener Str. - Fischerstr.): durch eine Kleingartenanlage	CS 16353,10207 16404,10286
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Straße verläuft zwischen Bahnstrecke und Wohnhäusern	CS 17210,11950 17201,11975 17137,11969 17023,11908 17026,11888
-(Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11027,13279 11085,13239
+(Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11018,13286 11085,13239
 Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CS 7795,13093 7867,13127 7938,13150
 Petrusweg: Anlieger frei	CS 15225,1553 15217,1463
 Am Rudower Waldrand: Anlieger frei	CS 15467,349 15476,332 15600,116 15707,-6
@@ -354,7 +356,7 @@ Ausgeschildert zum Heckerdamm 181-213 und zur Siedlung Juliusruh	CP2; 3765,14746
 (Goerdelerdamm - Nonnendamm): Anlieger frei	CS 3103,14187 3007,14078
 (Goerdelerdamm - Nonnendamm): Anlieger frei	CS 2247,13805 2149,13775
 Ausgeschildert als Wohlrabedamm 24-30	CP2; 1216,13978 1259,14028
-Am Igelgrund: Privatstraße	CS 9068,20446 9131,20507
+Am Igelgrund: Privatstraße	CS 9068,20446 9126,20515
 Sterndamm: Richtung Groß-Berliner Damm	CP2; 17645,5328 17705,5223
 Vergissmeinnichtweg: nur für Berechtigte	CS 21582,185 21608,85
 (Schmiedegasse - Pappelallee): Privatstraße	CS -13581,-10 -13558,88
@@ -367,3 +369,29 @@ hinter der Bahnbrücke links abbiegen	CP; -155,2658 -197,2634 -174,2616
 Posaunenweg: Privatstraße	CS 11797,20601 11828,20625 11874,20656 11915,20686 11919,20745 11923,20781
 Dr.-Dorsch-Allee: Privatstraße	CS 11285,23079 10855,23403
 (Pasewalker Str. - Einsiedelring): privat	CS 12039,20538 11996,20545
+Hermann-Günther-Str.: Privatstraße	CS 8235,20109 8237,20098 8258,19983 8272,19908
+Am Tempelgraben: Privatstraße	CS 8288,20128 8291,20112 8315,19993 8325,19934
+Kabelitzweg: Privatstraße	CS 8351,20492 8035,20451
+Centweg: Privatstraße	CS 8401,22013 8382,21991 8275,22045
+Distelweg: Privatstraße	CS 8587,21218 8484,21282
+Quantzstr. - Potsdamer Chaussee: beim Linksabbiegen kann man nicht auf dem Radweg hinter der Autobahnauffahrt gelangen; dies ist erst später möglich	CP; -3044,1578 -3113,1692 -3184,1643
+Golfweg: Privatstraße, nur für Mitglieder	CS -7975,785 -8136,700
+Eduard-Spranger-Promenade: nicht ausgeschildert	CS 4284,2626 4655,3060 4862,3363 4951,3516
+Kirchmeisterweg: Privatstraße	CS 4980,1870 4958,1844 5007,1718 5035,1723
+Zufahrt über Wanderparkplatz	CP2; 869,6085 866,6328
+Privatstraße	CS 6090,20570 6143,20464
+Privatstraße	CS 6022,20547 6090,20414
+Privatstraße	CS 5959,20524 6030,20385
+Privatstraße	CS 5900,20487 5970,20353
+Privatstraße	CS 5842,20451 5904,20327
+An den Fließtalhöfen: Privatstraße	CS 4474,23119 4432,23066 4444,22989
+Nicht ausgeschildert	CP2; 3915,24200 4031,24218
+Ponyweg: Privatstraße	CS 2064,26713 2015,26716
+Mustangweg: Privatstraße	CS 2108,26608 2068,26609 2008,26610
+Haflingerpfad: Privatstraße	CS 2063,26518 2068,26609
+Lipizzanerweg: Privatstraße	CS 2110,26505 2063,26518 2008,26515 2008,26610 2009,26688
+Criolloweg: Privatstraße	CS 2110,26399 2065,26389 2004,26403 2005,26495
+Fuchsring: Privatstraße	CS 2065,26389 2065,26308 2065,26193 1994,26196 2000,26307 2004,26403
+Rappenweg: Privatstraße	CS 2108,26312 2065,26308 2000,26307
+Place Molière: Schulgelände	CS 4334,21540 4347,21531 4382,21493
+Place Molière: Schulgelände	CS 4366,21482 4330,21464 4307,21506

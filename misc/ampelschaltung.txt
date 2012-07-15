@@ -530,9 +530,9 @@ Sa, 14.11.1998
 10512,12039   Gertraudenstr/Fischerinsel         SW->NO 70  15:01:41  15:02:01
 10738,12364   Molkenmarkt                        SW->NO 70  15:03:35  15:03:55
 11134,12793   Grunerstr/Alexanderstr             SW->NO     15:06:57  15:06:07
-11228,12951   Grunerstr/Karl-Marx-Allee          S->N       15:08:02  15:06:55
-11228,12951   Grunerstr/Karl-Marx-Allee          S->W       15:08:08
-10920,13139   Alexanderplatz/Karl-Liebknecht-Str O->SW      15:09:04
+11226,12945   Grunerstr/Karl-Marx-Allee          S->N       15:08:02  15:06:55
+11226,12945   Grunerstr/Karl-Marx-Allee          S->W       15:08:08
+10923,13156   Alexanderplatz/Karl-Liebknecht-Str O->SW      15:09:04
 10755,13152   Memhardstr/Rosa-Luxemburg-Str      O->W                 15:09:27
 10746,13673   Rosa-Luxemburg-Platz               SO->N      15:11:43
 10933,14122   Schönhauser Allee/Metzer S (Auto)  S->N       15:14:06  15:13:06
@@ -1076,8 +1076,8 @@ Mi, 28.04.1999
 7687,16770    Osloer Str./Reinickendorfer Str./  S->N       20:21:56
 7602,17399    Markstr./Residenzstr./Holländerst  S->N       20:23:29  20:22:45
 7587,17532    Residenzstr./Pankower Allee        S->N   70  20:23:26  20:22:53
-7466,17904    Residenzstr./?                     S->N       20:25:19  20:24:45
-7350,18262    Residenzstr./Emmentaler Str.       S->N   70  20:25:34  20:24:56
+7453,17899    Residenzstr./?                     S->N       20:25:19  20:24:45
+7335,18257    Residenzstr./Emmentaler Str.       S->N   70  20:25:34  20:24:56
 7232,18572    Residenzstr./Lindauer Allee/Kopen  S->N       20:27:24  20:27:56
 7329,18996    Kopenhagener/?                     S->N   70  20:28:51  20:29:21
 
@@ -1086,7 +1086,7 @@ Mi, 28.04.1999
 Do, 29.04.1999
 7329,18996    Kopenhagener/?                     N->S   60  00:26:29  00:26:46
 7217,18681    Kopenhagener Str./Klemkestr./Alt-  N->S       00:27:52  00:28:17
-7466,17904    Residenzstr/?                      N->S   AUS
+7453,17899    Residenzstr/?                      N->S   AUS
 7587,17532    Residenzstr./Pankower Allee        N->S   60  00:29:54  00:30:21
 7602,17399    Markstr./Residenzstr./Holländerst  N->S       00:31:54
 7687,16770    Osloer Str./Reinickendorfer Str./  N->S   60  00:32:54  00:33:09
@@ -1274,7 +1274,7 @@ Fr, 11.07.2003 (00:00:00 = 09:44:06)
 12295,12197   Andreas/Singer                     O->W       +00:24    +00:42
 11768,12006   Michaelkirch/Lichtenberger         N->W                 +02:28
 11351,12221   Holzmarktstr./Brückenstr.          O->S       +03:54    +02:44
-9981,11689    Leipziger/Jerusalemer              O->W       +08:48
+9987,11690    Leipziger/Jerusalemer              O->W       +08:48
 9701,11656    Leipziger/Markgrafen               O->W       +09:34
 9268,11590    Leipziger/Mauerstr                 O->W       +11:00
 9058,11564    Leipziger/Wilhelmstr.              O->W                 +11:30
@@ -1317,7 +1317,7 @@ Fr, 11.07.2003 (00:00:00 = 17:35:10)
 9058,11564    Leipziger/Wilhelm                  W->O       +21:09
 9268,11590    Leipziger/Mauerstr                 W->O       +21:21
 9444,11616    Leipziger/Friedrichstr.            W->O       +21:38
-9981,11689    Leipziger/Jerusalemer              W->O       +23:28?
+9987,11690    Leipziger/Jerusalemer              W->O       +23:28?
 11768,12006   Holzmarktstr/Lichtenberger         W->N   90  +27:48    +28:08
 11768,12006   Holzmarktstr/Lichtenberger         W->O   90  +27:30    +27:42
 12295,12197   Singer/Andreas                     W->O       +31:00    +31:18
@@ -1769,7 +1769,7 @@ Do, 25.02.2010
 10350,13376   Rosenthaler Str./Weinmeisterstr./  W->O       00:08:07
 10527,13257   Neue Schönhauser Str./Alte Schönh  W->O       00:09:05
 10755,13152   Münzstr./Memhardstr./Rosa-Luxembu  W->O       00:10:29
-11228,12951   Karl-Marx-Allee/Alexanderstr./Ott  W->O       00:13:02
+11226,12945   Karl-Marx-Allee/Alexanderstr./Ott  W->O       00:13:02
 12028,12519   Strausberger Platz/Lichtenberger   W->O       00:16:57
 12869,12425   Karl-Marx-Allee/Straße der Parise  W->O                 00:19:58
 12869,12425   Karl-Marx-Allee/Straße der Parise  W->O       00:20:41
@@ -1972,8 +1972,8 @@ Mi, 11.04.2012
 10463,13747   Torstr./Gormannstr.                W->O                 23:42:59
 10463,13747   Torstr./Gormannstr.                W->O       23:43:31
 10746,13673   Alte Schönhauser Str./Rosa-Luxemb  W->O       23:44:28
-11170,13475   Karl-Liebknecht-Str./Mollstr./Pre  W->O                 23:45:31
-11170,13475   Karl-Liebknecht-Str./Mollstr./Pre  W->O       23:46:28
+11155,13482   Karl-Liebknecht-Str./Mollstr./Pre  W->O                 23:45:31
+11155,13482   Karl-Liebknecht-Str./Mollstr./Pre  W->O       23:46:28
 11446,13294   Otto-Braun-Str./Mollstr.           W->O                 23:47:11
 11446,13294   Otto-Braun-Str./Mollstr.           W->O       23:48:03
 12128,13079   Lichtenberger Str./Platz der Vere  W->O                 23:49:43
@@ -2157,7 +2157,7 @@ Fr, 20.04.2012
 11351,12221   Holzmarktstr./Alexanderstr./Stral  O->W                 08:02:41
 11351,12221   Holzmarktstr./Alexanderstr./Stral  O->W       08:03:43
 10738,12364   Mühlendamm/Stralauer Str./Gruners  SO->NW     08:06:00
-9981,11689    Leipziger Str./Jerusalemer Str.    O->W       18:30:22
+9987,11690    Leipziger Str./Jerusalemer Str.    O->W       18:30:22
 9701,11656    Leipziger Str./Markgrafenstr.      O->W                 18:30:42
 9701,11656    Leipziger Str./Markgrafenstr.      O->W       18:31:29
 9268,11590    Leipziger Str./Mauerstr.           O->W                 18:32:31
@@ -2169,9 +2169,9 @@ Fr, 20.04.2012
 8861,12125    Wilhelmstr./Behrenstr.             S->N       18:39:20
 8804,12280    Wilhelmstr./Unter den Linden/Pari  S->N       18:40:07
 10309,12854   Spandauer Str./Anna-Louisa-Karsch  W->O       18:48:45
-11027,13075                                      W->O       18:53:33
+11033,13086                                      W->O       18:53:33
 11139,13008   Alexanderstr./Alexanderplatz/Bern  W->O       18:54:01
-11228,12951   Karl-Marx-Allee/Alexanderstr./Ott  W->O       18:57:56
+11226,12945   Karl-Marx-Allee/Alexanderstr./Ott  W->O       18:57:56
 11635,12745   Karl-Marx-Allee/Schillingstr.      W->O                 18:58:37
 11635,12745   Karl-Marx-Allee/Schillingstr.      W->O       18:59:10
 12028,12519   Strausberger Platz/Lichtenberger   W->O       19:01:36

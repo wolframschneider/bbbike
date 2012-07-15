@@ -78,7 +78,6 @@ Bendastr.	1 12793,6407 12781,6470 12759,6563 12743,6645 12726,6727 12722,6748 12
 Puschkin/Bulgarische	1 13829,9905 13884,9882 13995,9834 14193,9746 14310,9692 14780,9480 14819,9462 14883,9431 15383,9191 15561,8903 15591,8848 15378,8668 15166,8489
 Karl-Marx-Str./Schönstedt	3nocross 12500,8504 12540,8458 12562,8432 12582,8408
 Hoffmannstr./Elsenstr.	3 14076,10011 14289,9870 14405,10027
-Jerusalemer/Leipziger	3 9892,11752 9896,11703 9898,11679 9981,11689
 Behren/Ebert	3 8861,12125 8743,12099 8737,12098 8595,12066 8581,11896 8571,11846
 UdL/Universitätsstr.	3nocross 9475,12365 9601,12380 9656,12386 9695,12390
 Kolonnenstr. -> Hohenfriedbergstr.	3 7709,8777 7795,8765 7791,8882
@@ -106,9 +105,9 @@ Alt-Mariendorf (Nord)	1 9065,3693 9106,3703 9275,3753 9410,3793 9731,3889
 # seit November/Dezember 2007 (Bau der Ampel) nicht mehr: Modersohnstr. - B96a	3 14007,10802 13919,10583 13986,10549 14103,10489
 Almstadtstr.	1 10790,13565 10767,13443 10757,13401 10699,13173
 Schendelgasse	1 10653,13493 10703,13467 10767,13443
-Mulackstr.	1 10304,13575 10406,13543 10535,13509 10640,13471
-Hirtenstr. - Karl-Liebknecht-Str.	3 10923,13317 11015,13264 11021,13271 11027,13279 11080,13350 11092,13366
-Karl-Liebknecht-Str. - Hirtenstr.	3 10920,13139 11015,13264 10923,13317
+Mulackstr.	1 10308,13575 10406,13543 10535,13509 10640,13471
+Hirtenstr. - Karl-Liebknecht-Str.	3 10923,13317 11005,13269 11012,13278 11018,13286 11070,13357 11081,13372
+Karl-Liebknecht-Str. - Hirtenstr.	3 10923,13156 10976,13229 11005,13269 10923,13317
 Parochialstr.	1 10952,12401 11040,12415
 Waisenstr.	1 11040,12415 11032,12439 11059,12450
 Waisenstr.	1 11040,12415 11049,12386 11094,12243
@@ -118,7 +117,7 @@ Sonnenallee - Tellstr.	3 12242,8972 12320,8927 12402,9080
 Tellstr. - Sonnenallee	3 12402,9080 12320,8927 12438,8859
 Lettestr	1 11268,15360 11368,15301 11480,15229
 Kleine Auguststr.	1 10049,13528 9996,13678
-Steinstr. (Mitte)	1 10603,13395 10390,13493 10282,13546
+Steinstr. (Mitte)	1 10603,13395 10390,13493 10311,13537 10286,13548
 #: by: Sonja Wienert: (Einbahnstraße nur für Autofahrer)
 Roennebergstr.	1 5533,6753 5357,6932
 Matternstr.	1 13798,13003 13579,12904
@@ -138,7 +137,7 @@ Kühlebornweg	1 5161,4664 5075,4600 5004,4709
 Gartenstr.	1 22467,3889 22275,4032 22261,4105 22273,4216
 Wichmannstr.	1 6462,11069 6552,11006 6681,10959 6824,10904
 Lützowufer	1 6873,11011 6732,11106 6626,11178 6582,11202
-Mulackstr.	1 10304,13575 10406,13543 10535,13509 10640,13471
+Mulackstr.	1 10308,13575 10406,13543 10535,13509 10640,13471
 Kirchhofstr.	1 13188,7590 13117,7471 13027,7368
 Siegfriedstr.	1 12664,7013 12810,7047 12843,7093 12872,7134
 Prenzlauer Allee/Sredzkistr.	3nocross 11662,14695 11642,14625 11582,14448
@@ -148,7 +147,7 @@ Wismarplatz	3 14449,11742 14416,11815 14395,11753
 Simon-Dach-Str.	1 13954,11647 13981,11746 14006,11843
 Simon-Dach-Str.	1 14045,11965 14006,11843
 #: by: Gregor (bluege):
-Buchhorster Str.	1 7620,20635 7793,20580 7866,20556 7992,20515
+Buchhorster Str.	1 7620,20635 7736,20598 7793,20580 7866,20556 7979,20528
 Handjerystr.	1 5641,7189 5624,7113 5574,7018
 #: by: Michael Dinter: Einbahnstraße nicht für Radfahrer:
 #: confirmed_by: srt
@@ -190,7 +189,7 @@ Händelallee	1 6082,12273 6130,12232 6280,12222 6265,12134 5998,12105 5961,12134
 Wundstr.	1 2252,11037 2272,11074 2346,11147
 Kühler Weg	1 841,9914 743,9772 616,9602
 Wilhelmstr.: vor der britischen Botschaft dauerhaft für Kfz gesperrt	2 8861,12125 8804,12280
-Schönhauser Allee: U-Bahnviadukt und Straßenbahn	3nocross 11019,16465 11004,16360 10997,16280 10990,16197 10982,16121
+Schönhauser Allee: U-Bahnviadukt und Straßenbahn	3nocross 11019,16465 11004,16360 10997,16280 10989,16197 10982,16121
 Prenzlauer Allee: Straßenbahn	3nocross 11860,15309 11877,15366 11891,15413
 Greifswalder Str.: Straßenbahn	3nocross 12473,14763 12422,14692 12403,14663 12371,14615
 Greifswalder Str.: Straßenbahntrasse	3nocross 12709,15112 12737,15154 12870,15342
@@ -340,7 +339,7 @@ Jägerallee/Hegelallee: Durchfahrt verboten	3 -13221,-718 -13231,-763 -13236,-797
 Jägerallee/Hegelallee: Durchfahrt verboten	3 -13236,-797 -13231,-763 -13221,-718
 Osloer Str.: Straßenbahntrasse	3nocross 9455,16609 9331,16624 9210,16638 8939,16668
 Osloer Str.: Straßenbahntrasse	3nocross 8260,16740 8196,16746 8144,16750 7763,16779
-Seestr.: Straßenbahntrasse	3nocross 7606,16746 7456,16620 7417,16587 7403,16575 7388,16561 7295,16477 7231,16418
+Seestr.: Straßenbahntrasse	3nocross 7606,16746 7456,16620 7417,16587 7403,16575 7295,16477 7231,16418
 Bismarckstr.: Mittelstreifen	3nocross 3690,11629 3844,11649 3898,11655
 Lenbachstr.: Einbahnstraße (genau genommen nur das östlichste Stück)	1 5888,6520 6070,6570
 Augustenburger Platz: nur für Taxen und Anlieger	2:Anlieger 6561,15041 6537,15156 6562,15177
@@ -411,8 +410,6 @@ Rosenthaler Weg: Straßenbahntrasse	3nocross 11271,22328 11383,22369 11484,22406 
 Delbrückstr.	1 12743,6645 12468,6592
 Emser Str.	1 13058,7165 12872,7134
 Stuthirtenweg: Gitter	3 * 13542,1268 *
-Gertraudenstr.: Abbiegen verboten	3nocross 10512,12039 10460,11979 10391,11898
-Gertraudenstr.: Abbiegen verboten	3nocross 10313,11805 10299,11786 10240,11740
 Grunerstr.: Mittelstreifen	3nocross 10738,12364 10800,12461 10878,12560 10954,12635
 Bayernring	1 8616,8605 8455,8567 8371,8543
 Georg-Hermann-Allee (Potsdam): (teilweise) Einbahnstraße	1 -13429,1069 -13418,1668
@@ -430,7 +427,7 @@ Mariendorfer Damm: Mittelstreifen	3nocross 9248,4904 9239,4980 9207,5185
 #: note: Luftbild
 Hindenburgdamm: Mittelstreifen	3nocross 4507,4755 4515,4581 4521,4484
 #: note: Luftbild
-Berliner Str./Masurenstr.: Straßenbahntrasse	3nocross 10892,17491 10894,17470 10900,17397
+Berliner Str./Masurenstr.: Straßenbahntrasse	3nocross 10878,17490 10880,17469 10886,17396
 #: note: Luftbild
 Müllerstr.: Mittelstreifen	3nocross 6608,16180 6450,16325 6444,16331
 #: note: Luftbild
@@ -449,9 +446,11 @@ Berliner Allee -> Rossinistr.	3 13432,15843 13401,15821 13456,15760
 #: note: Luftbild:
 Prenzlauer Promenade: Straßenbahntrasse	3nocross 12010,16774 12017,16734 12046,16568
 Karl-Marx-Allee: Mittelstreifen	3nocross 12114,12546 12134,12540 12360,12505
-Leipziger Str.: Mittelstreifen	3nocross 10240,11740 10213,11728 10128,11714 9981,11689
-Niederwallstr./Spittelmarkt: nur Abbiegen nach rechts erlaubt	3 10183,11770 10240,11740 10320,11627
-Niederwallstr./Spittelmarkt: nur Abbiegen nach rechts erlaubt	3 10183,11770 10240,11740 10299,11786
+#XXX del --- Leipziger Str.: Mittelstreifen	3nocross 10240,11740 10213,11728 10128,11714 9987,11690 9981,11689
+#XXX del --- Niederwallstr./Spittelmarkt: nur Abbiegen nach rechts erlaubt	3 10183,11770 10205,11758 10240,11740 10320,11627
+#XXX del --- Niederwallstr./Spittelmarkt: nur Abbiegen nach rechts erlaubt	3 10183,11770 10205,11758 10240,11740 10299,11786
+#XXX del --- Gertraudenstr.: Abbiegen verboten	3nocross 10512,12039 10460,11979 10391,11898
+#XXX del --- Gertraudenstr.: Abbiegen verboten	3nocross 10313,11805 10299,11786 10240,11740
 Kleineweg: nur für Anlieger	2:Anlieger 9126,8025 9130,7804 9132,7661
 Kleineweg: nur für Anlieger	2:Anlieger 9115,7645 9120,7600 9145,7522 9097,7469
 Peter-Strasser-Weg: nur für Anlieger	2:Anlieger 9240,7797 9130,7804
@@ -647,7 +646,7 @@ Rütlistr.: Durchfahrt verboten	2 12565,9200 12490,9056
 Wustermarker Str.:	1 -4385,14305 -4556,14349
 #: note: public imagery vvv
 Hundekehlestr.: Mittelstreifen	3nocross 2346,7684 2460,7658 2576,7634
-Berliner Str.	3nocross 10859,17854 10871,17722 10892,17491
+Berliner Str.	3nocross 10849,17848 10858,17721 10878,17490
 Lietzenburger Str.	3nocross 5063,10384 5207,10399 5329,10422
 Greifswalder Str.: Straßenbahntrasse	3nocross 12228,14404 12177,14335 12077,14186
 Sybelstr.	1 3978,10582 3883,10577
@@ -786,3 +785,33 @@ Rennbahnstr. -> Berliner Allee	3 14510,16916 14559,16912 14535,17003
 Stephaniweg: Poller	3 4836,1659 4855,1616 *
 Blaumeisenweg	1 5194,1690 5251,1543
 Töpferweg: Poller	3 13238,2521 13309,2410 *
+Hoppestr.	1 8617,18310 8482,18284
+Straße 134: Poller	3 * 9276,20745 *
+Straßebahntrasse	3nocross 11012,13278 11018,13286 11070,13357
+Hasselwerderstr	1 18268,5739 18164,5701 18023,5623
+Haagstr.	1 -2920,2472 -2882,2373 -3030,2349
+Borussenstr.: außer Linienverkehr; für den Radverkehr gibt es einen linksseitigen Radweg	1 -3736,2849 -3758,2678
+Teutonenstr. (Nikolassee)	1 -3519,2180 -3610,2237 -3689,2267 -3742,2287
+#: by: Dennis Anton ("für Radfahrer freigegeben")
+Goltzstr. (Spandau)	1 -2838,16951 -2946,16869 -3031,16807
+#: by: Stefan Klinkusch ("für Radfahrer freigegeben") vvv
+Lindenufer	1 -3275,14114 -3135,14183
+#: by: (URL existiert nicht mehr) http://www.berlin.de/ba-spandau/presse/archiv/20051205.1215.33112.html
+Mauerstr.	1 -3316,14169 -3275,14114
+#: by: ^^^
+Simmelstr.: keine Durchfahrt für Autos	3 * 7615,17684 *
+Lindauer Allee: Mittelstreifen	3nocross 7232,18572 7119,18582 6924,18599
+#: note: an der anderen Seite (Alt-Hermsdorf) ist auch ein Tor, welches aber nicht geschlossen war
+An den Fließtalhöfen: Tor, freier Durchgang für Fußgänger	3 * 4444,22989 *
+Oranienburger Str.: Mittelstreifen	3nocross 5447,20614 5469,20462 5481,20379
+Sittestr.: Schranke, Verbot für alle Fahrzeuge	3 * 5850,19205 *
+Residenzstr.: Mittelstreifen	3nocross 7335,18257 7291,18392 7269,18460
+# by: Juliane (alberts...)
+Pfirsichweg	1 -4696,9263 -4755,9120
+#: XXX_prog leider funktioniert die 3nocross-Definition hier nicht, wegen der routing_helper-Einträge in der Nähe vvv
+#Leipziger Str.: Mittelstreifen	3nocross 9898,11679 9981,11689 9987,11690 10128,11714
+Leipziger: Mittelstreifen	3 9987,11690 9981,11689 9982,11681
+Leipziger: Mittelstreifen	3 9982,11681 9981,11689 9898,11679
+#: XXX_prog ^^^
+Seestr.: Straßenbahntrasse	3nocross 7403,16575 7417,16587 7456,16620
+Groninger Str.: Sackgasse für Autos	3 7439,16350 7403,16575 *

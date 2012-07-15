@@ -57,7 +57,7 @@ Roseneck (Grunewald)	Pl 2116,7740
 Weddingplatz	Pl 7929,15006
 Nürnberger Platz	Pl 5706,10216
 Wartburgplatz	Pl 6445,8934
-Prenzlauer Tor	Pl 11170,13475
+Prenzlauer Tor	Pl 11155,13482
 Betlehemkirchplatz	Pl 9405,11413
 Rudolfplatz	Pl 14011,10812
 Weberwiese	Pl 13068,12332
@@ -165,7 +165,6 @@ Paul-Henckels-Platz	Pl 4255,5712
 #: oldname: -200910: Hohenzollernplatz (Lichtenrade)
 Hermione-von-Preuschen-Platz	Pl 9756,-2415 9864,-2411
 Platz an der Eiche	Pl 19898,8410
-#: add_fragezeichen: Guernicaplatz oder Guernica-Platz geschrieben?
 Guernicaplatz	Pl -2026,2742
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20090604.1355.129318.html
 Sderotplatz	Pl 669,3119
@@ -254,6 +253,7 @@ Innsbrucker Platz	Pl 6418,7958
 Carlo-Schmid-Platz	Pl -5118,13053
 Max-Beckmann-Platz	Pl 3490,23472
 Im Kinderland	Pl -475,4809
+Julius-Posener-Platz	Pl -3249,2002
 ######################################################################
 #: section faked_plaetze vvv
 # Keine offiziellen Straßennamen, sondern

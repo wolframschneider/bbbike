@@ -101,9 +101,7 @@ Cecilienstr./Garzauer Str.	Zs 21716,13855
 Eisenacher Str./Kyritzer Str.	Zs 22580,15115
 Gothaer Str.	Zs 22912,14887
 Alte Hellersdorfer Str.	Zs 23089,14567
-#: note: Luftbild
 Frohnauer Brücke	Zs 2312,25121
-#: note: Luftbild
 Frohnauer Brücke	Zs 2396,25181
 Heinrich-Grüber-Str.	Zs 22935,12088
 Lissabonallee	Zs -1438,2079
@@ -134,8 +132,6 @@ Heiligenseestraße/Am Dachsbau	Zs -1654,22119
 Gorkistraße/Miraustraße	Zs 3321,20545
 Am Freibad/Am Vierrutenberg	Zs 5809,23420
 ## in Planung für 2007:
-# - Maximiliankorso/Alemannenstraße
-# - Dianastraße/Fürst-Bismarck-Straße und
 # - Ruppiner Chaussee/Stolpmünder Weg. 
 #: by: ^^^
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20070625.1140.80710.html vvv
@@ -256,14 +252,12 @@ Bernau, Richtung Ladeburg	Zs 22315,31106
 Grüntal	Zs 31274,37795
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20090401.1110.124517.html
 Am Heidebergplan	Zs -7136,14742
-#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0906/nachricht3478.html
-#: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20090715.0820.132257.html
 Provinzstr./Kühnemannstr.	Zs 8545,17787
 #: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20090715.0820.132257.html vvv
 Zabel-Krüger-Damm/Schluchseestr.	Zs 5006,22507
 #: XXX Realisierung noch 2009
 Gotthardstr./Höhe Kita	Zs 6142,17798
-#: XXX Realisierung noch 2009
+#: confirmed_by: srt
 Ludolfingerplatz/Maximiliankorso	Zs 2216,25117
 #: by: ^^^
 #: note: am 2009-07-29 noch nicht aktiv gewesen, mittlerweile aber: http://www.berlin.de/ba-pankow/presse/archiv/20090828.1330.136793.html
@@ -337,6 +331,7 @@ Malchower Weg/Biesterfelder	Zs 17106,16456
 Grunewaldstr.	Zs 7218,9321
 Feuerbachstr./Fregestr.	Zs 5597,6360
 Neumann/Vinetastr.	Zs 11575,17016
+Neumannstr./Laudaer Str.	Zs 11455,17673
 Exerzierstr./Gottschedstr.	Zs 8296,16430
 Transvaal/Togostr.	Zs 6097,16214
 Britzer Str./Rotkopfweg	Zs 10976,3708
@@ -360,9 +355,7 @@ Bhf. Zepernick	Zs 18852,28287
 Große-Leege-Str./Schöneicher	Zs 16686,15441
 Oranienstr./Prinzessinnenstr.	Zs 10950,10852
 Gartenstr./Feldstr.	Zs 8959,14522
-#: XXX in Bau
-#: last_checked: 2011-06-12
-Gartenstr.	Zs 8728,14864
+Gartenstr.	Zs 8720,14877
 Ruppiner Chaussee/Stolpmünder Weg	Zs -1635,24113
 Hönower Weg	Zs 26885,13135
 Monumentenstr./Hohenfriedbergstr.	Zs 7766,9122
@@ -424,4 +417,15 @@ Onkel-Tom-Str./Riemeisterstr.	Zs 90,5120
 Onkel-Tom-Str.	Zs 79,5405
 #: XXX genaue Position?
 Heinersdorfer/Grabenstr.	Zs 5342,1624
-
+Schönholzer Weg/Edelweißstr.	Zs 8230,19956
+Königin-Luise-Str./Lansstr.	Zs 3096,5678
+Spanische Allee/Altvaterstr.	Zs -3246,2906
+Maximiliankorso/Alemannenstraße	Zs 1748,25240
+Welfenallee/Ludolfingerplatz	Zs 2281,25027
+Frohnauer Brücke/Ludolfingerplatz	Zs 2283,25097
+Dianastraße/Fürst-Bismarck-Straße	Zs 4038,22397
+Schönwalder/Pankeweg	Zs 8266,15134
+Lehrter/Kruppstr.	Zs 7320,14143
+#: XXX genaue Position?
+#: by: http://www.berlin.de/ba-spandau/presse/archiv/20120712.1025.372492.html
+Elisabethstr./Schönwalder Str.	Zs -3387,15410
