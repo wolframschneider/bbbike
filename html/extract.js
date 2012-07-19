@@ -504,6 +504,10 @@ function setMapHeight() {
     // debug("height: " + height + " d.height: " + jQuery(document).height() + " w.height: " + jQuery(window).height() + " top.h: " + jQuery('#top').height());
 };
 
+/*
+ * geo location
+ *
+ */
 function locateMe() {
     if (!navigator || !navigator.geolocation) return;
 
@@ -521,9 +525,17 @@ function locateMe_tag() {
     return jQuery("#tools-pageload");
 }
 
+function setStartPos(lon, lat, zoom) {
+    var lonlat = new OpenLayers.LonLat(lon, lat);
+    var proj4326 = new OpenLayers.Projection('EPSG:4326');
+
+    var center = lonlat.clone();
+    center.transform(proj4326, map.getProjectionObject());
+    map.setCenter(center, zoom);
+}
+
 function locateMe_cb(position) {
-    var pos = new MapPosition(position.coords.longitude, position.coords.latitude, 14);
-    setStartPos(1, pos.getLonLat(), pos.zoom);
+    setStartPos(position.coords.longitude, position.coords.latitude, 10);
     locateMe_tag().hide();
     debug("set position: " + pos.lat + "," + pos.lon);
 }
