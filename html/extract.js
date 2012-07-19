@@ -504,4 +504,34 @@ function setMapHeight() {
     // debug("height: " + height + " d.height: " + jQuery(document).height() + " w.height: " + jQuery(window).height() + " top.h: " + jQuery('#top').height());
 };
 
+function locateMe() {
+    if (!navigator || !navigator.geolocation) return;
+
+    var tag = locateMe_tag();
+    if (tag) {
+        tag.show();
+        navigator.geolocation.getCurrentPosition(locateMe_cb, locateMe_error);
+        setTimeout(function () {
+            tag.hide();
+        }, 5000); // paranoid
+    }
+}
+
+function locateMe_tag() {
+    return jQuery("#tools-pageload");
+}
+
+function locateMe_cb(position) {
+    var pos = new MapPosition(position.coords.longitude, position.coords.latitude, 14);
+    setStartPos(1, pos.getLonLat(), pos.zoom);
+    locateMe_tag().hide();
+    debug("set position: " + pos.lat + "," + pos.lon);
+}
+
+function locateMe_error(error) {
+    debug("could not found position");
+    locateMe_tag().hide();
+    return;
+}
+
 // EOF
