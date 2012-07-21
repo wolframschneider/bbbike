@@ -49,4 +49,5 @@ form input[type=submit] {
 
 div#export_osm_too_large { color: red }
 
+#locate { position:absolute; right: 0; }
 

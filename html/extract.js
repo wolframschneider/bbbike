@@ -504,4 +504,46 @@ function setMapHeight() {
     // debug("height: " + height + " d.height: " + jQuery(document).height() + " w.height: " + jQuery(window).height() + " top.h: " + jQuery('#top').height());
 };
 
+/*
+ * geo location
+ *
+ */
+function locateMe() {
+    if (!navigator || !navigator.geolocation) return;
+
+    var tag = locateMe_tag();
+    if (tag) {
+        tag.show();
+        navigator.geolocation.getCurrentPosition(locateMe_cb, locateMe_error);
+        setTimeout(function () {
+            tag.hide();
+        }, 5000); // paranoid
+    }
+}
+
+function locateMe_tag() {
+    return jQuery("#tools-pageload");
+}
+
+function setStartPos(lon, lat, zoom) {
+    var lonlat = new OpenLayers.LonLat(lon, lat);
+    var proj4326 = new OpenLayers.Projection('EPSG:4326');
+
+    var center = lonlat.clone();
+    center.transform(proj4326, map.getProjectionObject());
+    map.setCenter(center, zoom);
+}
+
+function locateMe_cb(position) {
+    setStartPos(position.coords.longitude, position.coords.latitude, 10);
+    locateMe_tag().hide();
+    debug("set position: " + pos.lat + "," + pos.lon);
+}
+
+function locateMe_error(error) {
+    debug("could not found position");
+    locateMe_tag().hide();
+    return;
+}
+
 // EOF
