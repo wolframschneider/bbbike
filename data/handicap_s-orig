@@ -44,6 +44,7 @@ Voßstr.: gesperrte Fahrbahn (Baustelle), Ausweichen auf Gehweg	q3::inwork 8743,1
 #: next_check: 2013-05-31 vvv
 #: by: wosch & IM_017330
 #: XXX siehe auch temporäre Ampel an der Chausseestr.
+#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1207/nachricht4724.html
 Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Gartenstr. und Hessische Str. gesperrt	q4::inwork; 9383,13978 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
 Scharnhorststr.: Einbahnstraßenregelung, auf Gehweg ausweichen	q3::inwork; 8450,13599 8314,13826
 Schwarzer Weg: Einbahnstraßenregelung, auf Gehweg ausweichen	q3::inwork; 8429,13903 8574,13666
@@ -79,17 +80,19 @@ Helmerdingstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg kann benutzt werden	q4::i
 #: next_check: ^^^
 #: last_checked: ^^^
 # 
-#: last_checked: 2012-07-13
+#: last_checked: 2012-07-20
 #: next_check: 2012-08-25
-Rathausstr.: Fußgänger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521 10704,12595
+#: XXX danach q1 und mit Eintrag unten verknüpfen, falls hier keine Fahrbahn mehr sein wird
+Rathausstr.: Fußgänger, enge Stelle vor dem Roten Rathaus	q2::inwork 10601,12521 10704,12595
 # 
 #XXX del --- #: last_checked: 2011-02-27 --- #: next_check: 2011-07-15 --- Am Carlsgarten: Bauarbeiten	q4::inwork 19460,7954 19372,8012 19334,8046
 # 
-#: last_checked: 2012-05-21 vvv
-#: next_check: 2012-07-21 vvv
+#: last_checked: 2012-07-20 vvv
+#: next_check: 2012-08-30 vvv
+#: XXX siehe auch Eintrag in fragezeichen-orig (Ampel in Bau)
 #: note: komplette Fertigstellung und Verkehrsfreigabe im Frühjahr 2013
 Rathausbrücke: provisorischer Fußgängerweg auf der Rathausbrücke, ggfs. schieben	q4::inwork 10362,12351 10422,12395
-Rathausstr. zwischen Breite Str. und Poststr.: Fahrbahn wegen Brückenbauarbeiten gesperrt	q3::inwork 10281,12310 10362,12351
+Rathausstr. zwischen Breite Str. und Poststr.: Fahrbahn wegen Brückenbauarbeiten gesperrt	q2::inwork 10281,12310 10362,12351
 Rathausstr. zwischen Breite Str. und Poststr.: Fahrbahn wegen Brückenbauarbeiten gesperrt	q4::inwork 10422,12395 10476,12432
 # 
 #: next_check: ^^^
@@ -163,6 +166,7 @@ Am Müggelsee: Fußgänger	q2 25474,2848 25667,2787 25857,2654 26006,2615 26158,264
 Pestalozzistr.: Fußgängerzone	q3 3721,11230 3770,11231 3822,11231
 (Zufahrt am NKZ): Bordsteine, Fußgänger/Lieferverkehr	q3 11291,10438 11311,10505 11343,10528
 Alexanderplatz: Fußgängerverkehr	q2 11139,13008 10970,12822 10923,12779
+Rathausstr.: Fußgänger	q1 10923,12779 10704,12595
 Dircksenstr.: langsame Straßenbahnen, Fußgänger	q2 10970,12822 10849,12944
 Dircksenstr.: Fußgänger	q2 10970,12822 11007,12773 11030,12741 11087,12780 11105,12764
 Gontardstr.: langsame Straßenbahnen, Fußgänger	q2 10740,12960 10793,12906 10923,12779
@@ -244,7 +248,10 @@ Volkspark Friedrichshain: Fußgänger	q1 11857,13596 11842,13576
 Volkspark Friedrichshain: Fußgänger	q1 12194,13307 12177,13283
 Volkspark Friedrichshain: Fußgänger	q1 12148,13348 12131,13333
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20120418.1330.368930.html
-Luisenhain: Radfahren erlaubt, Fußgänger haben Vorrang	q2- 22196,4847 22147,4831 22043,4562 22057,4531 22071,4501
+Luisenhain: Radfahren erlaubt, Fußgänger haben Vorrang	q2- 22196,4847 22153,4840 22074,4664 22057,4618 22043,4562 22057,4531 22071,4501
+(Rathaus Köpenick - Luisenhain): Fußgänger	q2- 22133,4644 22074,4664
+(Uferweg): Fußgänger, teilweise eng	q2- 22433,4887 22326,4940 22310,4935 22241,4911 22204,4910 22180,4938 22146,4934 22131,4914 22153,4861 22153,4840
+(Freiheit/Lindenstr. - Uferweg): Fußgänger	q2 22196,4847 22204,4910
 (S-Bahnhof - Schlachtensee): Radfahren erlaubt, Fußgänger haben Vorrang	q2 -2365,3582 -2403,3641 -2396,3652 -2396,3666
 Uferweg am Schlachtensee: Radfahren erlaubt, Fußgänger haben Vorrang	q2 -3348,3055 -3384,3212 -3353,3298 -3324,3382 -3087,3646 -2937,3740 -2813,3775 -2494,3758 -2347,3884 -2080,4228 -1935,4303 -1831,4300 -1663,4218
 Uferweg am Schlachtensee: Fußgänger, Cafe mit Kellnerverkehr	q3 -1663,4218 -1503,4133
@@ -401,7 +408,7 @@ Elbingeroder Weg: hohe Bordsteine	q3 13178,9062 13146,9085
 (An der Apostelkirche - Kurfürstenstr.): Fußgänger, Bordsteine	q3 7312,10505 7315,10537
 Marie-Elisabeth-Lüders-Steg: eng, Fußgänger	q2 8415,12749 8551,12746
 Kleine Andreasstr.: Gehweg, Bordsteine	q3 12211,12128 12279,12113
-Fritz-Schiff-Weg: Fußgänger	q1 13465,12502 13484,12436 13472,12337
+Fritz-Schiff-Weg: Fußgänger	q1 13463,12507 13484,12436 13472,12337
 (Molkenmarkt - Parochialstr.): Bordsteine	q2 10738,12364 10831,12371
 (Crellestr. - Julius-Leber-Brücke): Fußgänger	q2 7535,9087 7555,8978 7509,8929 7497,8916
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10364,11896 10329,11842 10373,11781 10517,11795 10672,11870 10776,11942 10824,11992
@@ -1256,6 +1263,9 @@ Am Leitbruch: Fußgänger	q4 4062,22069 4130,21961
 #: XXX_prog BS nach Norden
 Primusweg: Fußgänger, Bordstein	q4 5651,19953 5666,19926 5704,19902 5715,19888
 Neptunstr.: Fußgänger	q2 8354,17270 8352,17285 8345,17350 8324,17362 8262,17361
+#: XXX_prog BS nach Osten hin
+#: note: Parklücke ist durch Parkverbotsschilder gesichert
+Mühsamstr.: Bordstein	q2 13232,12628 13273,12649
 #
 ######################### User Contributions #################################
 # 
@@ -1580,7 +1590,7 @@ Bautzener Platz: Fufgänger, Bordsteine	q2 8102,9262 8183,9260
 (Verlängerte Diesterwegstr.): Fußgänger	q2 12078,15160 12107,15229
 (Anton-Saefkow-Str. - John-Schehr-Str.): Fußgänger, Schranken	q1 13084,14472 13009,14371 12949,14292
 Ernst-Fürstenberg-Str.: Fußgänger	q1 13049,14141 12992,14196
-An der Brauerei: Fußgänger	q1 13291,13290 13283,13311 13381,13354
+An der Brauerei: Fußgänger	q1 13290,13294 13283,13311 13381,13354
 An der Brauerei: Fußgänger	q2 13283,13311 13235,13414
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12851,12602 13108,12859 13046,12956 12878,13229
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12773,12683 13046,12956
@@ -2183,7 +2193,7 @@ Bat-Yam-Platz: Fußgänger	q1 14515,2212 14545,2206 14633,2145
 Saalmannsteig: Fußgänger	q2 5410,19050 5284,19043 5181,19037
 #: by: Stefan Dietrich:
 #: corrected_by: srt/policy (q3 -> q1)
-Jägerstr. (Köpenick): enge Straße	q1 22390,4702 22355,4660 22312,4593
+Jägerstr. (Köpenick): enge Straße	q1 22395,4678 22365,4676 22355,4660 22312,4593
 #: by: Roger Menge:
 (Swakopmunder Str. - Charles-Corcelle-Ring): Fußgänger	q2 5223,16783 5141,16799 5091,16810 5035,16819 5000,16826
 #: by: catrin (ruehl) vvv

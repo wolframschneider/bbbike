@@ -108,15 +108,11 @@ sub add_button {
 	   -font => $main::font{'bold'},
 	   -menuitems =>
 	   [
-	    [Button => "Show recent VMZ diff (new version)",
-	     -command => sub { show_new_vmz_diff() },
-	    ],
-	    "-",
-	    [Button => 'VMZ/LBVS lister',
+	    [Button => 'VMZ/LBVS lister (old files)',
 	     -command => sub { show_vmz_lbvs_files() },
 	    ],
 	    "-",
-	    [Button => "Show recent VMZ diff",
+	    [Button => "Show recent VMZ diff (old version)",
 	     -command => sub { show_vmz_diff() },
 	    ],
 	    (map { [Button => "VMZ version $_", -command => [sub { show_vmz_diff($_[0]) }, $_] ] } (0 .. 5)),
@@ -468,6 +464,9 @@ EOF
 	      ],
 	      [Button => $do_compound->('VMZ'),
 	       -command => sub { newvmz_process() },
+	      ],
+	      [Button => $do_compound->("Show recent VMZ diff"),
+	       -command => sub { show_new_vmz_diff() },
 	      ],
 	      [Cascade => $do_compound->("VMZ-Detailnetz"), -menuitems =>
 	       [
@@ -2601,9 +2600,16 @@ sub fragezeichen_on_route {
 	my $txt = $t->Scrolled('ROText', -font => $main::font{'fixed'}, -scrollbars => "ose")->pack(qw(-fill both -expand 1));
 	$txt->insert("end", $res);
 	my $bf = $t->Frame->pack(-fill => 'x');
+	my $printer_needs_utf8;
+	if ($ENV{HOST} && $ENV{HOST} eq 'cvrsnica') { # here cups is running, maybe this is the case for all cups systems?
+	    $printer_needs_utf8 = 1;
+	}
 	$bf->Button(-text => "Print",
 		    -command => sub {
 			open my $ofh, "|-", "lpr" or die $!;
+			if ($printer_needs_utf8) {
+			    binmode $ofh, ':utf8';
+			}
 			print $ofh $res;
 			close $ofh or die $!;
 			main::status_message("Sent to printer", "infodlg");
@@ -2611,7 +2617,10 @@ sub fragezeichen_on_route {
 	$bf->Checkbutton(-text => 'nextcheck only',
 			 -variable => \$fragezeichen_on_route_nextcheck_only,
 			 -command => sub { fragezeichen_on_route() },
-			)->pack(-side => 'left');			     
+			)->pack(-side => 'left');
+	$bf->Checkbutton(-text => 'printer needs utf-8',
+			 -variable => \$printer_needs_utf8,
+			)->pack(-side => 'left');
     };
     if ($@) {
 	main::status_message("An error happened: $@", "error");

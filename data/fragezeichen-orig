@@ -105,6 +105,11 @@ Fahrradstraße in der Lauenburger Str.	?::projected 5870,4992 5905,5088 5927,5182
 #: section ignorieren vvv
 #: section Straßen in Bau und Planung vvv
 # 
+#: last_checked: 2012-07-20
+#: next_check: 2012-08-30
+#: XXX siehe auch Einträge in handicap_s-orig
+Breite Str./Rathausstr.: Ampel in Bau	?::inwork	10281,12310
+# 
 #: last_checked: 2012-06-12
 #: next_check: 2012-08-01
 Marthashof: Qualität nach den Bauarbeiten?	?::inwork 10440,14730 10550,14770
@@ -516,7 +521,7 @@ Fürstenwalder Allee: Bau von Radverkehrsanlagen	? 29714,4461 29728,4435 29813,43
 Radwegbau Welzower Steig: wie ist die Qualität (Fahrbahnbeschaffenheit) des Radwegs?	?::inwork 6320,21777 6370,21689 6428,21648 6478,21652 6508,21646 6529,21620 6576,21414
 # 
 #: last_checked: 2012-05-25 vvv
-#: next_check: 2012-09-01 vvv
+#: next_check: 2012-10-01 vvv
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20120207.1005.365838.html vvv
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20120625.1405.371942.html (Ende der Bauarbeiten: Ende 2012) vvv
 Radverkehrsanlagen um den Knotenpunkt Weißenseer Weg/Konrad-Wolf-Str.: Radweg wird auf dem Gehweg geführt	? 14960,14746 15052,14585
@@ -606,9 +611,6 @@ Sternstr. (Drewitz): gibt es hier einen Radweg? In beide Richtungen?	? -7917,-47
 Neubrücker Str.: Vorfahrtsregelung?	? 1364,25882 1213,25813 1135,25765 1057,25695 975,25627 885,25578 727,25504 639,25478
 Schildower Str.: wie weit gehen die Radwege Richtung Osten?	? 4303,23767 4397,24033 4425,24067 4510,24170 4614,24233 4683,24275 4705,24284 4779,24321
 Zabel-Krüger-Damm: wie weit geht der Radweg Richtung Osten?	? 4898,22459 5006,22507 5142,22581 5260,22634 5368,22669 5423,22685 5574,22747 5619,22766 5672,22788
-# 
-#: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20120615.2125.371601.html
-Uferweg entlang der Freiheit/Köpenick: Genaue Wegführung? Für Radfahrer befahrbar? Qualität? Nachts beleuchtet?	? 22433,4887 22318,4908 22210,4881 22147,4831
 # 
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20120604.0610.370890.html
 Lanke-Aue: wo genau befindet sich der Park?	? 7435,3488 7490,3471 7506,3543 7449,3549
