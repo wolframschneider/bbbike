@@ -15,7 +15,7 @@ var config = {
 
     "show_filesize": 1,
     "city_name_optional": false,
-    
+
     "max_size": {
         "default": 1024,
         "osm.obf.zip": 200,
@@ -328,7 +328,7 @@ function osm_init(opt) {
 
         var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
         var filesize = show_filesize(skm);
-        
+
         if ($("#square_km")) {
             var html = "area covers " + large_int(skm) + " square km";
             if (config.show_filesize) {
@@ -337,11 +337,11 @@ function osm_init(opt) {
             $("#square_km").html(html);
         }
 
-        if (skm > config.max_skm) { 
+        if (skm > config.max_skm) {
             $("#size").html("Max area size: " + config.max_skm + "skm.");
             $("#export_osm_too_large").show();
-        } else if (filesize.size_max > config.max_size.default) {
-            $("#size").html("Max file size: " + config.max_size.default + " MB.");
+        } else if (filesize.size_max > config.max_size["default"]) {
+            $("#size").html("Max file size: " + config.max_size["default"] + " MB.");
             $("#export_osm_too_large").show();
         } else if (filesize.format == "osm.obf.zip" && filesize.size_max > config.max_size["osm.obf.zip"]) {
             // Osmand works only for small areas less than 200MB
@@ -382,15 +382,19 @@ function osm_init(opt) {
         var time_max = 600 + (size * factor_time * 2);
         var size_min = Math.floor(factor * size * 0.25);
         var size_max = Math.ceil(factor * size * 2);
-        
+
         var html = ", approx. " + size_min + "-" + size_max + " MB OSM data";
         if (skm < config.max_skm) {
             var min = Math.ceil(time_min / 60);
             var max = Math.ceil(time_max / 60);
             html += ", approx. extract time: " + min + (min != max ? "-" + max : "") + " minutes";
         }
-        
-        var obj = { "html": html, "size_max":  size_max, "format": format };
+
+        var obj = {
+            "html": html,
+            "size_max": size_max,
+            "format": format
+        };
         return obj;
     }
 
