@@ -355,6 +355,12 @@ function osm_init(opt) {
         } else if (format == "garmin-osm.zip" || format == "garmin-cycle.zip") {
             factor = 0.8;
             factor_time = 2;
+        } else if (format == "osm.shp.zip") {
+            factor = 1.5;
+            factor_time = 1;
+        } else if (format == "osm.obf.zip") {
+            factor = 1.2;
+            factor_time = 10;
         }
 
         var time_min = 600 + (size / 3 + (size * 0.7 * factor_time)) / 4;
