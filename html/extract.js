@@ -16,6 +16,11 @@ var config = {
     "show_filesize": 1,
     "city_name_optional": false,
 
+    "max_size": {
+        "default": 1024,
+        "osm.obf.zip": 200,
+    },
+
     "dummy": ""
 };
 
@@ -322,15 +327,21 @@ function osm_init(opt) {
         var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
 
         var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
+        var filesize = show_filesize(skm);
+
         if ($("#square_km")) {
             var html = "area covers " + large_int(skm) + " square km";
             if (config.show_filesize) {
-                html += show_filesize(skm);
+                html += filesize.html;
             }
             $("#square_km").html(html);
         }
 
-        if (skm > config.max_skm) {
+        if (skm > config.max_skm || filesize.size_max > config.max_size.
+    default) {
+            $("#export_osm_too_large").show();
+        } else if (filesize.format == "osm.obf.zip" && filesize.size_max > config.max_size["osm.obf.zip"]) {
+            // Osmand works only for small areas less than 200MB
             $("#export_osm_too_large").show();
         } else {
             $("#export_osm_too_large").hide();
@@ -365,13 +376,22 @@ function osm_init(opt) {
 
         var time_min = 600 + (size * factor_time);
         var time_max = 600 + (size * factor_time * 2);
-        var result = ", approx. " + Math.floor(factor * size * 0.25) + "-" + Math.ceil(factor * size * 2) + " MB OSM data";
+        var size_min = Math.floor(factor * size * 0.25);
+        var size_max = Math.ceil(factor * size * 2);
+
+        var html = ", approx. " + size_min + "-" + size_max + " MB OSM data";
         if (skm < config.max_skm) {
             var min = Math.ceil(time_min / 60);
             var max = Math.ceil(time_max / 60);
-            result += ", approx. extract time: " + min + (min != max ? "-" + max : "") + " minutes";
+            html += ", approx. extract time: " + min + (min != max ? "-" + max : "") + " minutes";
         }
-        return result;
+
+        var obj = {
+            "html": html,
+            "size_max": size_max,
+            "format": format
+        };
+        return obj;
     }
 
     function getMapLayers() {
