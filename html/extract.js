@@ -350,21 +350,21 @@ function osm_init(opt) {
             factor = 1.5;
             factor_time = 1;
         } else if (format == "osm.xz") {
-            factor = 1.3;
+            factor = 1.8;
             factor_time = 0.4;
-        } else if (format == "garmin-osm.zip" || format == "garmin-cycle.zip") {
+        } else if (format.match(/^garmin-(osm|cycle|leisure)\.zip$/)) {
             factor = 0.8;
             factor_time = 2;
         } else if (format == "osm.shp.zip") {
             factor = 1.5;
             factor_time = 1;
         } else if (format == "osm.obf.zip") {
-            factor = 1.2;
-            factor_time = 10;
+            factor = 1.4;
+            factor_time = 20;
         }
 
-        var time_min = 600 + (size / 3 + (size * 0.7 * factor_time)) / 4;
-        var time_max = 600 + size / 3 + (size * 0.7 * factor_time);
+        var time_min = 600 + (size * factor_time);
+        var time_max = 600 + (size * factor_time * 2);
         var result = ", approx. " + Math.floor(factor * size * 0.25) + "-" + Math.ceil(factor * size * 2) + " MB OSM data";
         if (skm < config.max_skm) {
             var min = Math.ceil(time_min / 60);
