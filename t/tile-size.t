@@ -7,7 +7,7 @@ use TileSize;
 use strict;
 use warnings;
 
-plan tests => 30;
+plan tests => 31;
 
 my $tile = new TileSize( 'debug' => 0 );
 
@@ -30,8 +30,8 @@ is( $tile->area_size( 0.1,  0,    3,    3 ),   9 );
 is( $tile->area_size( 0.1,  0.1,  2.9,  2.9 ), 9 );
 
 # dummy
-is( $tile->area_size( 0,    0,    0,    0 ),   0 );
-is( $tile->area_size( -180,    -90,    -180,    -90 ),   0 );
+is( $tile->area_size( 0,    0,   0,    0 ),   0 );
+is( $tile->area_size( -180, -90, -180, -90 ), 0 );
 
 # count with 50% size of fractal tiles
 is( $tile->area_size( 0.1, 0.1,  2.9,  2.9,  1 ), 5 );
@@ -42,13 +42,17 @@ is( $tile->area_size( 0.5, 49.5, 15.5, 54,   1 ), 68 );
 is( $tile->area_size( 0.5, 49.5, 16.5, 54.1, 1 ), 81 );
 
 # count with real size of fractal tiles
-is( int($tile->area_size( 0.1,  0.1,  2.9,  2.9,  2 )*10)/10, 7.8 );
-is( int($tile->area_size( 0.8,  0.8,  2.2,  2.2,  2 )*10)/10, 1.9 );
-is( int($tile->area_size( 1.0,  1.0,  2,  2,  2 )*10)/10, 1 );
-is( int($tile->area_size( 10.1, 50.1, 12.9, 52.9, 2 )*10)/10, 7.8 );
-is( int($tile->area_size( 15.1, 55.1, 17.9, 57.5, 2 )*10)/10, 6.7 );
-is( int($tile->area_size( 1.1,  1.0,  2,  2,  2 )*10)/10, 0.9 );
-is( int($tile->area_size( 1.5,  1.0,  2,  2,  2 )*10)/10, 0.5 );
-is( int($tile->area_size( 1.5,  1.5,  2,  2,  2 )*100+0.5)/100, 0.25 );
+is( int( $tile->area_size( 0.1,  0.1,  2.9,  2.9,  2 ) * 10 ) / 10, 7.8 );
+is( int( $tile->area_size( 0.8,  0.8,  2.2,  2.2,  2 ) * 10 ) / 10, 1.9 );
+is( int( $tile->area_size( 1.0,  1.0,  2,    2,    2 ) * 10 ) / 10, 1 );
+is( int( $tile->area_size( 10.1, 50.1, 12.9, 52.9, 2 ) * 10 ) / 10, 7.8 );
+is( int( $tile->area_size( 15.1, 55.1, 17.9, 57.5, 2 ) * 10 ) / 10, 6.7 );
+is( int( $tile->area_size( 1.1,  1.0,  2,    2,    2 ) * 10 ) / 10, 0.9 );
+is( int( $tile->area_size( 1.5,  1.0,  2,    2,    2 ) * 10 ) / 10, 0.5 );
+is( int( $tile->area_size( 1.5, 1.5, 2, 2, 2 ) * 100 + 0.5 ) / 100, 0.25 );
+
+$tile =
+  new TileSize( 'debug' => 0, 'database' => "world/etc/tile/tile-pbf.csv" );
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 160312 );
 
 __END__
