@@ -7,11 +7,22 @@ use TileSize;
 use strict;
 use warnings;
 
-plan tests => 1;
+plan tests => 2;
 
 my $tile = new TileSize;
-print $tile->total, "\n";
 
 ok(1);
+
+is( $tile->total, 64800 );
+
+is( $tile->area_size( 0,    0,    1,    1 ),   1 );
+is( $tile->area_size( 0.2,  0.2,  1,    1 ),   1 );
+is( $tile->area_size( 0.2,  0.2,  0.8,  0.8 ), 1 );
+is( $tile->area_size( -180, -90,  -179, -89 ), 1 );
+is( $tile->area_size( 0,    0,    2,    2 ),   4 );
+is( $tile->area_size( -2,   -2,   0,    0 ),   4 );
+is( $tile->area_size( -1,   -1,   1,    1 ),   4 );
+is( $tile->area_size( -1.5, -1.5, 1.5,  1.5 ), 16 );
+is( $tile->area_size( -1.5, -1.5, 1,    1 ),   9 );
 
 __END__
