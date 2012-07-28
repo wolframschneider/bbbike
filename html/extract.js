@@ -323,7 +323,7 @@ function osm_init(opt) {
         // return height + " " + width;
     }
 
-    function validateControls() {
+    function validateControlsGuess() {
         var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
 
         var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
@@ -352,7 +352,48 @@ function osm_init(opt) {
         }
     }
 
-    function show_filesize(skm) {
+    function validateControls() {
+        var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
+
+        var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
+        var format = $("select[name=format] option:selected").val();
+
+        var url = "/cgi/tile-size.cgi?format=" + format + "&lat_sw=" + $("#sw_lat").val() + "&lng_sw=" + $("#sw_lng").val() + "&lat_ne=" + $("#ne_lat").val() + "&lng_ne=" + $("#ne_lng").val();
+
+        jQuery.getJSON(url, function (data) {
+            debug("size: " + data.size);
+
+            var filesize = show_filesize(skm, data.size);
+            show_skm(skm, filesize);
+        });
+
+        function show_skm(skm, filesize) {
+            if ($("#square_km")) {
+                var html = "area covers " + large_int(skm) + " square km";
+                if (config.show_filesize) {
+                    html += filesize.html;
+                }
+                $("#square_km").html(html);
+            }
+
+            if (skm > config.max_skm) {
+                $("#size").html("Max area size: " + config.max_skm + "skm.");
+                $("#export_osm_too_large").show();
+            } else if (filesize.size_max > config.max_size["default"]) {
+                $("#size").html("Max file size: " + config.max_size["default"] + " MB.");
+                $("#export_osm_too_large").show();
+            } else if (filesize.format == "osm.obf.zip" && filesize.size_max > config.max_size["osm.obf.zip"]) {
+                // Osmand works only for small areas less than 200MB
+                $("#size").html("Max osmand file size: " + config.max_size["osm.obf.zip"] + " MB.");
+                $("#export_osm_too_large").show();
+            } else {
+                $("#export_osm_too_large").hide();
+            }
+        }
+
+    }
+
+    function show_filesize(skm, real_size) {
         var size = skm / 1000;
         var format = $("select[name=format] option:selected").val();
 
@@ -384,6 +425,13 @@ function osm_init(opt) {
         var size_max = Math.ceil(factor * size * 2);
 
         var html = ", approx. " + size_min + "-" + size_max + " MB OSM data";
+
+        // we have real data, no need to guess
+        if (real_size) {
+            html = ", ~" + Math.round(real_size / 1024 * 10) / 10 + "MB " + format + " data";
+            size_max = real_size / 1024;
+        }
+
         if (skm < config.max_skm) {
             var min = Math.ceil(time_min / 60);
             var max = Math.ceil(time_max / 60);
