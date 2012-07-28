@@ -7,9 +7,9 @@ use TileSize;
 use strict;
 use warnings;
 
-plan tests => 2;
+plan tests => 2 + 10;
 
-my $tile = new TileSize;
+my $tile = new TileSize( 'debug' => 0 );
 
 ok(1);
 
@@ -24,5 +24,6 @@ is( $tile->area_size( -2,   -2,   0,    0 ),   4 );
 is( $tile->area_size( -1,   -1,   1,    1 ),   4 );
 is( $tile->area_size( -1.5, -1.5, 1.5,  1.5 ), 16 );
 is( $tile->area_size( -1.5, -1.5, 1,    1 ),   9 );
+is( $tile->area_size( 0,    50,   15,   54 ),  60 );
 
 __END__
