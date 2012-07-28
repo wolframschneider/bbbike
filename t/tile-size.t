@@ -9,6 +9,9 @@ use warnings;
 
 plan tests => 1;
 
+my $tile = new TileSize;
+print $tile->total, "\n";
+
 ok(1);
 
 __END__
