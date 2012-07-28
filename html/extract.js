@@ -396,7 +396,10 @@ function osm_init(opt) {
     function show_filesize(skm, real_size) {
         var size = skm / 1000;
         var format = $("select[name=format] option:selected").val();
-
+        
+        if (real_size) 
+            size = real_size/1024;
+            
         var factor = 1; // PBF
         var factor_time = 0; // PBF
         if (format == "osm.gz") {
@@ -418,7 +421,7 @@ function osm_init(opt) {
             factor = 1.4;
             factor_time = 20;
         }
-
+            
         var time_min = 600 + (size * factor_time);
         var time_max = 600 + (size * factor_time * 2);
         var size_min = Math.floor(factor * size * 0.25);
