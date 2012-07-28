@@ -20350,11 +20350,11 @@ EOF
      },
      { from  => 1339649580, # 2012-06-14 06:53
        until => 1354298400, # 2012-11-30 19:00
-       text  => 'Dammweg (Plänterwald): Baustelle, Straße vollständig gesperrt In beiden Richtungen zwischen Köpenicker Landstr. und Neue Krugallee, 15.06.2012 06:53 Uhr bis 30.11.2012 19:00 Uhr ',
+       text  => 'Dammweg (Plänterwald): Baustelle, Straße vollständig gesperrt In beiden Richtungen zwischen Köpenicker Landstr. und Orionstr., 15.06.2012 06:53 Uhr bis 30.11.2012 19:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_018917',
        data  => <<EOF,
-userdel	q4::inwork 15874,8345 15758,8243 15698,8191 15561,8072
+userdel	q4::inwork 15758,8243 15698,8191 15561,8072
 EOF
      },
      { from  => 1340082000, # 2012-06-19 07:00
@@ -20473,6 +20473,25 @@ EOF
        source_id => 'INKO_113869',
        data  => <<EOF,
 userdel	q4::inwork; -2706,13291 -2699,13359 -2669,13488
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Park am Gleisdreieck, Wege im Westpark: wegen Bauarbeiten können die Wege unpassierbar sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 8309,10368 8278,10384 8296,10438
+userdel	2::inwork 8278,10384 8263,10349 8258,10338
+userdel	2::inwork 8263,10349 8315,10347 8333,10167 8360,10133
+EOF
+     },
+     { from  => 1343332800, # 2012-07-26 22:00
+       until => 1343617200, # 2012-07-30 05:00
+       text  => 'Buckower Chaussee (Marienfelde): Baustelle, Vollsperrung Höhe S-Bahnhof Buckower Chaussee, möglicherweise für Radfahrer langsam passierbar (bis Montag, 05:00)',
+       type  => 'handicap',
+       source_id => 'INKO_113563',
+       data  => <<EOF,
+userdel	q4::inwork 9178,556 9158,551 9069,506
 EOF
      },
     );

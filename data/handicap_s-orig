@@ -42,7 +42,7 @@ Voßstr.: gesperrte Fahrbahn (Baustelle), Ausweichen auf Gehweg	q3::inwork 8743,1
 # 
 #: last_checked: 2012-07-16 vvv
 #: next_check: 2013-05-31 vvv
-#: by: wosch & IM_017330
+#: by: wosch & IM_017330 & IM_019009 & INKO_113944
 #: XXX siehe auch temporäre Ampel an der Chausseestr. sowie an der Luisenstr.
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1207/nachricht4724.html
 Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Gartenstr. und Hessische Str. gesperrt	q4::inwork; 9383,13978 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723 8659,13708 8626,13692 8619,13689
@@ -1270,6 +1270,8 @@ Neptunstr.: Fußgänger	q2 8354,17270 8352,17285 8345,17350 8324,17362 8262,17361
 #: note: Parklücke ist durch Parkverbotsschilder gesichert
 Mühsamstr.: Bordstein	q2 13232,12628 13273,12649
 (Neufährer Steig - Hennigsdorfer Str.): eng	q2 -2151,23379 -2180,23384 -2248,23409
+(neben dem U-Bahn-Viadukt): Fußgänger	q1 7906,10098 7928,10094 8027,10076
+(Dennewitzstr., hinterer Weg): Fußgänger	q1 8027,10076 8029,10106 8074,10292 8061,10310
 #
 ######################### User Contributions #################################
 # 

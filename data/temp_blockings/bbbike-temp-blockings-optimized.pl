@@ -1392,10 +1392,10 @@ userdel	q4::inwork 10379,14963 10366,14992
        {
          'source_id' => 'IM_018917',
          'until' => 1354298400,
-         'text' => 'Dammweg (Plänterwald): Baustelle, Straße vollständig gesperrt In beiden Richtungen zwischen Köpenicker Landstr. und Neue Krugallee, 15.06.2012 06:53 Uhr bis 30.11.2012 19:00 Uhr ',
+         'text' => 'Dammweg (Plänterwald): Baustelle, Straße vollständig gesperrt In beiden Richtungen zwischen Köpenicker Landstr. und Orionstr., 15.06.2012 06:53 Uhr bis 30.11.2012 19:00 Uhr ',
          'from' => 1339649580,
          'id' => 2351,
-         'data' => 'userdel	q4::inwork 15874,8345 15758,8243 15698,8191 15561,8072
+         'data' => 'userdel	q4::inwork 15758,8243 15698,8191 15561,8072
 ',
          'type' => 'handicap'
        },
@@ -1490,6 +1490,27 @@ userdel	q3::inwork 11920,14468 11642,14625
          'from' => 1342940400,
          'id' => 2364,
          'data' => 'userdel	q4::inwork; -2706,13291 -2699,13359 -2669,13488
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Park am Gleisdreieck, Wege im Westpark: wegen Bauarbeiten können die Wege unpassierbar sein',
+         'from' => undef,
+         'id' => 2365,
+         'data' => 'userdel	2::inwork 8309,10368 8278,10384 8296,10438
+userdel	2::inwork 8278,10384 8263,10349 8258,10338
+userdel	2::inwork 8263,10349 8315,10347 8333,10167 8360,10133
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'INKO_113563',
+         'until' => 1343617200,
+         'text' => 'Buckower Chaussee (Marienfelde): Baustelle, Vollsperrung Höhe S-Bahnhof Buckower Chaussee, möglicherweise für Radfahrer langsam passierbar (bis Montag, 05:00)',
+         'from' => 1343332800,
+         'id' => 2366,
+         'data' => 'userdel	q4::inwork 9178,556 9158,551 9069,506
 ',
          'type' => 'handicap'
        }

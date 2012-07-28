@@ -306,12 +306,13 @@ Oderstr.: Am Flughafen Tempelhof entlang	green1 11472,7899 11498,7750 11515,7654
 (Treptower Park)	green2 14529,9141 14601,9201 14748,9420 14780,9480
 (Treptower Park: am Rosengarten)	green2 14819,9462 14910,9643
 (Treptower Park: südl./westl. des Karpfenteichs)	green2 15378,8668 15335,8714 15036,8728 14949,8773 14906,8822 14854,8964
-(Treptower Park: nördl. des Karpfenteichs)	green2 14614,9052 14854,8964 15057,8910 15159,8934 15192,8966 15196,9033 15154,9106 15025,9171 14950,9307 14898,9364 14883,9431
+(Treptower Park: nördl. des Karpfenteichs)	green2 14614,9052 14854,8964 15057,8910 15159,8934 15181,8967 15187,9038 15154,9106 15025,9171 14950,9307 14898,9364 14883,9431
 (Treptower Park: östl. des Karpfenteichs)	green2 15335,8714 15235,8841 15223,8893 15159,8934
 (Treptower Park)	green2 14310,9692 14316,9542 14347,9452 14398,9373 14485,9271 14601,9201
 (Treptower Park)	green2 14242,9448 14316,9542 14384,9565 14512,9528 14635,9441 14748,9420
 (Treptower Park: zur Karpfenteichstr.)	green2 14852,8799 14906,8822
 (Treptower Park - Moosdorfstr.)	green2 14398,9373 14382,9299
+(Treptower Park)	green2 15181,8967 15245,8916
 (Alt-Treptow - Insel der Jugend)	green2 15561,8903 15626,8964 15653,8989 15675,9090
 Treptower Park	green2 15638,9020 15626,8964
 Treptower Park/Plänterwald	green1 15591,8848 15680,8914 15793,8984
@@ -884,9 +885,9 @@ Lindenberger Weg (Blankenburg, Stadtrandsiedlung Malchow)	green2 15158,21049 155
 (Straße 70 - Am Luchgraben)	green2 16459,22118 16519,22216 16594,22188
 (Straße 70 - Ingwäonenweg)	green2 16423,22141 16486,22267 16495,22350 16421,22433 16415,22467 16442,22505
 (Pankeweg)	green2 16580,26154 16616,26158 16655,26127 16686,26128 16895,26295 16928,26311 17043,26407 17363,26609 17376,26582 17418,26518
-(Yorckstr. - Park am Gleisdreieck)	green1 8358,9568 8357,9598 8349,9697
+(Yorckstr. - Park am Gleisdreieck)	green1 8358,9568 8357,9598 8353,9642 8350,9685 8349,9697
 (Park am Gleisdreieck, Querweg)	green2 8335,9702 8349,9697 8446,9670 8497,9654 8540,9644
-(Park am Gleisdreieck, Berlin-Leipzig)	green2 8343,9993 8338,9971 8335,9702 8333,9583
+(Park am Gleisdreieck, Berlin-Leipzig)	green2 8296,10438 8278,10384 8309,10368 8315,10347 8333,10167 8360,10133 8338,9971 8335,9702 8333,9583
 (Park am Gleisdreieck, Generalszug)	green2 8338,9971 8521,9911 8571,9896 8652,9870 8733,9841
 (Park am Gleisdreieck, östlicher Weg)	green2 8726,10056 8652,9870
 (zum Park am Gleisdreieck)	green1 8677,10224 8614,10095 8579,10030
@@ -894,6 +895,8 @@ Lindenberger Weg (Blankenburg, Stadtrandsiedlung Malchow)	green2 15158,21049 155
 (Hornstr. - Park am Gleisdreieck)	green2 8779,9829 8761,9765 8722,9743
 (Park am Gleisdreieck, südöstlicher Weg)	green2 8722,9743 8540,9644 8508,9551 8477,9562 8426,9572
 (Rampe Hornstr. - Generalszug)	green2 8733,9841 8722,9743
+(Park am Gleisdreieck)	green2 8278,10384 8263,10349 8258,10338
+(Park am Gleisdreieck, Weg über dem Tunnelmund)	green2 8263,10349 8315,10347
 (Grenzallee - Britzer Hafensteg)	green1 13881,6634 13831,6588 13857,6523 13864,6415 13984,6270 13997,6216 13951,6190 13883,6163
 (Carl-Steffeck-Str. - Nahariyastr.)	green1 11494,-1468 11564,-1460 11619,-1459
 (Kloster-Zinna-Str. - Mauerweg)	green1 11712,-289 11819,-286
