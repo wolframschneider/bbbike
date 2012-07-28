@@ -7,9 +7,9 @@ use TileSize;
 use strict;
 use warnings;
 
-plan tests => 2 + 18;
+plan tests => 2 + 20;
 
-my $tile = new TileSize( 'debug' => 0 );
+my $tile = new TileSize( 'debug' => 2 );
 
 ok(1);
 
@@ -36,5 +36,10 @@ is( $tile->area_size( 0.5, 50,   15,   54,   1 ), 58 );
 is( $tile->area_size( 0.5, 50,   15.5, 54,   1 ), 60 );
 is( $tile->area_size( 0.5, 49.5, 15.5, 54,   1 ), 68 );
 is( $tile->area_size( 0.5, 49.5, 16.5, 54.1, 1 ), 81 );
+
+# count with real size of fractal tiles
+is( $tile->area_size( 0.1,  0.1,  2.9,  2.9, 2 ), 5 );
+is( $tile->area_size( 10.1,  50.1,  12.9,  52.9, 2 ), 5 );
+is( $tile->area_size( 15.1,  55.1,  17.9,  57.9, 2 ), 5 );
 
 __END__
