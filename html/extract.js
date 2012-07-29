@@ -156,6 +156,8 @@ function init() {
             $("#ne_lng").val(ne_lng);
             $("#ne_lat").val(ne_lat);
         };
+
+        validateControls();
     }
 
     // default city
