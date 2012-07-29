@@ -174,7 +174,6 @@ function init() {
 
 // override standard OpenLayers permalink method
 
-
 function permalink_init() {
     OpenLayers.Control.Permalink.prototype.createParams = function (center, zoom, layers) {
         var params = OpenLayers.Util.getParameters(this.base);
@@ -182,8 +181,10 @@ function permalink_init() {
         params.sw_lat = $("#sw_lat").val();
         params.ne_lng = $("#ne_lng").val();
         params.ne_lat = $("#ne_lat").val();
-
         params.format = $("select[name=format] option:selected").val();
+
+        // not supported yet
+        // params.layers = layers;
         // params.city = $("#city").val();
         return params;
     };
