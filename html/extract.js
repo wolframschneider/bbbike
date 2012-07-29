@@ -5,7 +5,7 @@ var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
     "color_error": "red",
-    "max_skm": 960000,
+    "max_skm": 8000000,
 
     // map box for San Francisco, default
     "city": {
@@ -17,7 +17,7 @@ var config = {
     "city_name_optional": false,
 
     "max_size": {
-        "default": 1024,
+        "default": 512,
         "osm.obf.zip": 200,
     },
 
@@ -338,7 +338,7 @@ function osm_init(opt) {
         }
 
         if (skm > config.max_skm) {
-            $("#size").html("Max area size: " + config.max_skm + "skm.");
+            $("#size").html("Max area size: " + config.max_skm + " square km!");
             $("#export_osm_too_large").show();
         } else if (filesize.size_max > config.max_size["default"]) {
             $("#size").html("Max file size: " + config.max_size["default"] + " MB.");
@@ -361,8 +361,7 @@ function osm_init(opt) {
         var url = "/cgi/tile-size.cgi?format=" + format + "&lat_sw=" + $("#sw_lat").val() + "&lng_sw=" + $("#sw_lng").val() + "&lat_ne=" + $("#ne_lat").val() + "&lng_ne=" + $("#ne_lng").val();
 
         jQuery.getJSON(url, function (data) {
-            debug("size: " + data.size);
-
+            // debug("size: " + data.size);
             var filesize = show_filesize(skm, data.size);
             show_skm(skm, filesize);
         });
@@ -396,10 +395,9 @@ function osm_init(opt) {
     function show_filesize(skm, real_size) {
         var size = skm / 1000;
         var format = $("select[name=format] option:selected").val();
-        
-        if (real_size) 
-            size = real_size/1024;
-            
+
+        if (real_size) size = real_size / 1024;
+
         var factor = 1; // PBF
         var factor_time = 0; // PBF
         if (format == "osm.gz") {
@@ -421,7 +419,7 @@ function osm_init(opt) {
             factor = 1.4;
             factor_time = 20;
         }
-            
+
         var time_min = 600 + (size * factor_time);
         var time_max = 600 + (size * factor_time * 2);
         var size_min = Math.floor(factor * size * 0.25);
