@@ -167,7 +167,31 @@ function init() {
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
 
+    permalink_init();
+
     osm_init(opt);
+}
+
+// override standard OpenLayers permalink method
+
+
+function permalink_init() {
+    OpenLayers.Control.Permalink.prototype.createParams = function (center, zoom, layers) {
+        var params = OpenLayers.Util.getParameters(this.base);
+        params.sw_lng = $("#sw_lng").val();
+        params.sw_lat = $("#sw_lat").val();
+        params.ne_lng = $("#ne_lng").val();
+        params.ne_lat = $("#ne_lat").val();
+
+        params.format = $("select[name=format] option:selected").val();
+        // params.city = $("#city").val();
+        return params;
+    };
+
+    // wait a moment for inital permalink, to read values from forms
+    setTimeout(function () {
+        map.addControl(new OpenLayers.Control.Permalink('permalink'))
+    }, 1000);
 }
 
 function osm_init(opt) {
@@ -354,13 +378,13 @@ function osm_init(opt) {
 
     // wait 0.2 seconds before starting validate
     var _validate_timeout;
+
     function validateControls() {
-	if (_validate_timeout)
-		clearTimeout(_validate_timeout);
-	_validate_timeout = setTimeout(function () {
-           validateControlsAjax(); 
+        if (_validate_timeout) clearTimeout(_validate_timeout);
+        _validate_timeout = setTimeout(function () {
+            validateControlsAjax();
         }, 200);
-		
+
     }
 
     function validateControlsAjax() {
