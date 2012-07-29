@@ -352,7 +352,18 @@ function osm_init(opt) {
         }
     }
 
+    // wait 0.2 seconds before starting validate
+    var _validate_timeout;
     function validateControls() {
+	if (_validate_timeout)
+		clearTimeout(_validate_timeout);
+	_validate_timeout = setTimeout(function () {
+           validateControlsAjax(); 
+        }, 200);
+		
+    }
+
+    function validateControlsAjax() {
         var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
 
         var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
