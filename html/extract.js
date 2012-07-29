@@ -24,6 +24,9 @@ var config = {
     "dummy": ""
 };
 
+// global variables
+var state = {};
+
 // Initialise the 'map' object
 var map;
 
@@ -157,7 +160,9 @@ function init() {
             $("#ne_lat").val(ne_lat);
         };
 
-        validateControls();
+        setTimeout(function () {
+            state.validateControls()
+        }, 50);
     }
 
     // default city
@@ -382,13 +387,14 @@ function osm_init(opt) {
     // wait 0.2 seconds before starting validate
     var _validate_timeout;
 
-    function validateControls() {
-        if (_validate_timeout) clearTimeout(_validate_timeout);
-        _validate_timeout = setTimeout(function () {
-            validateControlsAjax();
-        }, 200);
+    var validateControls = function () {
+            if (_validate_timeout) clearTimeout(_validate_timeout);
+            _validate_timeout = setTimeout(function () {
+                validateControlsAjax();
+            }, 200);
 
-    }
+        }
+    state.validateControls = validateControls;
 
     function validateControlsAjax() {
         var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
