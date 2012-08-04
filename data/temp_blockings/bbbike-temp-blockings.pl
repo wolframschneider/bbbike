@@ -4732,7 +4732,7 @@ EOF
        data  => <<EOF,
 userdel	2::temp 8021,11636 8016,11770 8172,11679
 userdel	2::temp 7816,12150 7875,12363
-userdel	2::temp 7504,11512 7382,11588 7163,11738 7287,11763 7535,11677 7591,11639 7621,11620 7669,11586 7696,11621 7735,11656 7796,11681 7901,11684 8016,11770
+userdel	2::temp 7504,11512 7382,11588 7163,11738 7287,11763 7535,11677 7606,11629 7621,11620 7669,11586 7696,11621 7735,11656 7796,11681 7901,11684 8016,11770
 userdel	2::temp 7669,11586 7711,11558
 userdel	2::temp 8022,12016 8016,11770 7801,11875 7717,11918 7663,11946 7570,11855 7223,11897 7182,11870 7173,11864 7073,11798 7163,11738 6980,11583 6809,11570
 userdel	2::temp 7039,12314 7383,12095
@@ -4740,7 +4740,7 @@ userdel	2::temp 7073,11798 6778,11742
 userdel	2::temp 8354,12416 8546,12279
 userdel	2::temp 7382,11588 7356,11517
 userdel	2::temp 6809,11979 7073,11798
-userdel	2::temp 8225,11692 8223,11796 8222,11881 8215,12156 8214,12205
+userdel	2::temp 8203,11686 8210,11775 8222,11881 8215,12156 8214,12205
 userdel	2::temp 8119,12414 8055,12186
 userdel	2::temp 8055,12186 8048,12135 8034,12093 8004,12074 7999,12040 8022,12016 8052,12033 8057,12065 8034,12093
 userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
@@ -8004,7 +8004,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005359',
        data  => <<EOF,
-userdel	2::temp 8172,11679 8021,11636 7816,11571 7717,11540
+userdel	2::temp 8172,11679 8094,11657 8021,11636 7816,11571 7717,11540
 EOF
      },
      { from  => 1178221257, # 2007-05-03 21:40
@@ -17923,10 +17923,10 @@ userdel	2::temp 8021,11636 8016,11770 7801,11875 7717,11918 7663,11946
 userdel	2::temp 7796,11681 7816,11571
 userdel	2::temp 8022,12016 8016,11770 7901,11684
 userdel	2::temp 7816,12150 7875,12363
-userdel	2::temp 7711,11558 7669,11586 7621,11620 7591,11639
+userdel	2::temp 7711,11558 7669,11586 7621,11620 7606,11629
 userdel	2::temp 8055,12186 8048,12135 8034,12093
 userdel	2::temp 7822,11952 7832,12036
-userdel	2::temp 8172,11679 8016,11770 8156,11863 8223,11796
+userdel	2::temp 8172,11679 8016,11770 8156,11863 8210,11775
 userdel	2::temp 7696,11621 7735,11656
 userdel	2::temp 7039,12314 7383,12095
 userdel	2::temp 7795,11823 7777,11787
@@ -18984,12 +18984,12 @@ EOF
 userdel	1::temp 1574,11379 1625,11380 1834,11408 1960,11426 2109,11441
 EOF
      },
-     { from  => 1312581600, # 1186214400, # 2007-08-04 10:00 zweiter Termin im Sommer # PERIODISCH!
-       until => 1312754400, # 1186344000, # 2007-08-05 22:00
-       text  => 'Open Air Gallery am 7. August 2011 auf der Oberbaumbrücke ',
+     { from  => 1344031200, # 2012-08-04 00:00 zweiter Termin im Sommer # PERIODISCH!
+       until => 1344211200, # 2012-08-06 02:00
+       text  => 'Open Air Gallery am 5. August 2012 auf der Oberbaumbrücke ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 13178,10623 13206,10651 13305,10789 13332,10832
+userdel	q4::temp 13178,10623 13206,10651 13305,10789 13332,10832
 EOF
      },
      { from  => 1335477600, # PERIODISCH!
@@ -19520,11 +19520,11 @@ EOF
 userdel	2::inwork 3079,19045 2993,18962
 EOF
      },
-     { from  => 1312430400, # 2011-08-04 06:00
-       until => 1312776000, # 2011-08-08 06:00
-       text  => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung, Straßen nördlich der Karl-Marx-Str. vollständig gesperrt, 05.08.2011 06:00 Uhr bis 08.08.2011 06:00 Uhr ',
+     { from  => 1343894400, # 2012-08-02 10:00
+       until => 1344211200, # 2012-08-06 02:00
+       text  => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung, Straßen nördlich der Karl-Marx-Str. vollständig gesperrt (bis 06.08.12, 02:00)',
        type  => 'gesperrt',
-       source_id => 'IM_017646',
+       source_id => 'IM_019026',
        data  => <<EOF,
 userdel	2::temp 12360,12505 12364,12589
 userdel	2::temp 12891,12549 12869,12425
