@@ -269,6 +269,7 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
          'id' => 1808,
          'data' => '#: note: Sperrung bestätigt von Stefan (s.sms): vvv
 #: note: genauere Uhrzeit von Dieter Heimann
+#: confirmed_by: um 20:30 Uhr steht man vor einem geschlossenen Tor, zumindest an der Nordostseite (2012-08)
 Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21683,6946 21498,7153 21475,7500 21497,7597 21546,7635
 Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21475,7500 21341,7487 21025,7349
 #: note: ^^^
@@ -811,7 +812,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juli bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im August bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -1024,6 +1025,15 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
+       {
+         'until' => 1344211200,
+         'text' => 'Open Air Gallery am 5. August 2012 auf der Oberbaumbrücke ',
+         'from' => 1344031200,
+         'id' => 2206,
+         'data' => 'userdel	q4::temp 13178,10623 13206,10651 13305,10789 13332,10832
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -1079,8 +1089,18 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'source_id' => 'IM_019026',
+         'until' => 1344211200,
+         'text' => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung, Straßen nördlich der Karl-Marx-Str. vollständig gesperrt (bis 06.08.12, 02:00)',
+         'from' => 1343894400,
+         'id' => 2262,
+         'data' => 'userdel	2::temp 12360,12505 12364,12589
+userdel	2::temp 12891,12549 12869,12425
+userdel	2::temp 12635,12629 12606,12471
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,

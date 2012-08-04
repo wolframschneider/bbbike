@@ -293,7 +293,7 @@ Hertelstr.	1 4893,6900 4787,6899
 Karl-Marx-Platz	1 12980,7597 13100,7626
 Karl-Marx-Platz	1 13100,7626 12991,7549
 Olympischer Platz	1 -157,11943 -505,11882 -514,11991 -272,12039 -193,12051 -110,12019
-Aristotelessteig	1 18452,9755 18435,9639 18660,9599
+#XXX del --- keine Einbahnstraßenregelung hier mitbekommen --- Aristotelessteig	1 18452,9755 18435,9639 18660,9599
 Berlinickestr.	1 5088,5495 5016,5401
 #: by: Lea:
 Florapromenade	1 10211,17432 10321,17453 10311,17764
@@ -1988,7 +1988,7 @@ Schwingtor an der Luiseninsel	BNP:5 7696,11621
 Schwingtor an der Luiseninsel	BNP:5 7735,11656
 #: confirmed_by: ^^^
 #: by: ^^^
-Schranke	BNP:1::trailer=5 25558,997
+Schranke	BNP:1::trailer=5 25552,997
 enges Drängelgitter	BNP:5 100,3
 #: by: antje weiss dorn: vvv
 Drängelgitter	BNP:4 13909,18835
@@ -2153,6 +2153,10 @@ Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,1029
 #: last_checked: 2011-04-30
 #: next_check: 2012-03-01
 Brücke im Tiergarten: gesperrt	2:inwork 6406,11784 6467,11780
+# 
+#: last_checked: 2012-08-03
+#: next_check: 2012-09-10
+Queralleebrücke: wegen Bauarbeiten gesperrt, voraussichtlich bis September 2012	2:inwork 7621,11620 7649,11717
 # 
 #XXX del --- #: by: tobias wirnsberger, Matthias Stief --- #: last_checked: 2011-08-24 (srt, von der Bahn aus) --- #: next_check: 2011-12-01 --- Unterführung unter Adlergestell und Bahn: wegen Brückenerneuerung gesperrt	2:inwork 20810,2398 20939,2413
 #
