@@ -45,6 +45,7 @@ cgi/area.cgi
 cgi/crossing.cgi
 cgi/livesearch-extract.cgi
 cgi/extract.cgi
+cgi/tile-size.cgi
 data-osm.bbbike.tgz
 data-osm.bbbike/
 data-osm.old/
