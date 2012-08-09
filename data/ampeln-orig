@@ -1530,7 +1530,7 @@ nur Richtung O	X 8142,7221
 	X -4412,12179
 	X -4351,12460
 	F 404,12414
-	X 1286,11834
+	F 1264,11840
 	F 1775,11135
 	X 3358,12258
 	X 10453,-2133
@@ -1964,7 +1964,7 @@ Industriebahn	B0 -2410,13746
 	F 12532,11008
 	X 4828,10356
 	F 11285,14515
-# Baustellenampel, existiert nicht mehr (2009-07)	X 10635,13207
+# XXX del --- Baustellenampel, existiert nicht mehr (2009-07)	X 10635,13207
 	F 11905,15462
 	X 7880,13315
 	X 8017,13629
@@ -2104,7 +2104,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8626,23432
 	B0 -5551,16323
 	B0 -5609,15780
 	B0 -5680,15112
-	B0 -5770,14837
+	B0 -5718,14828
 #: section: ^^^
 	X 9183,15909
 #: XXX_prog: Ampel nur in Richtung Norden
@@ -2574,16 +2574,16 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 9781,16569
 #: note: provisorische Ampel
 #: note: Ausfahrt Neuköllner Tor
-	X 13078,7033
+	X::inwork 13078,7033
 #: XXX_prog: Ampel gilt nur in Richtung Nordwest, in der anderen Richtung nur für Linksabbieger
 	X 20451,2869
 #: note: provisorische Ampel
-	X 20064,3278
+	X::inwork 20064,3278
 	F 3995,12173
 	F 22031,9142
 	F 15356,3759
 #: note: provisorische Ampel
-	X 14906,10820
+	X::inwork 14906,10820
 	F 8667,5372
 	F 5807,12070
 	F 6846,15202
@@ -2657,7 +2657,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 16166,25767
 	F 16475,25526
 #: note: provisorische Ampel (2011-08-28)
-	X 16669,25373
+	X::inwork 16669,25373
 	F 16606,25141
 	X 17885,4912
 	F 730,2734
@@ -2720,6 +2720,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: last_checked ^^^
 #: XXX ^^^
 	F 17122,18765
+#: by: Stefan Klinkusch:
+	F -7762,14067
+	F -4924,14535
+#: XXX Baustellenampel
+#: last_checked: 2012-08-04
+	X::inwork -6861,15129
+	F 20614,18481
 ################################################################################
 #: note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10067917/966975/
@@ -2837,10 +2844,14 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX noch provisorisch, aber wird wahrscheinlich dauerhaft sein
 #: last_checked: 2012-01-07
 #: next_check: 2012-02-15
-	X 18417,10738
+	X::inwork 18417,10738
 #: note: ^^^
 ################################################################################
 #: note: Ampeln elsewhere vvv
+	F -13778,4260
+	X -8906,11139
+	X -9578,13509
+	X -9585,13233
 	B 41198,55961
 	X 18671,22604
 	X 19658,24589
