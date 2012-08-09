@@ -154,6 +154,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_input_colors
 	    $skip_second_page
 	    $bbbike_start_js_version $bbbike_css_version
+	    $use_file_cache $file_cache
 	   );
 
 $gmap_api_version = 3;
@@ -232,6 +233,14 @@ with the C<localroutefile> parameter.
 =cut
 
 undef $local_route_dir;
+
+=item $use_file_cache
+
+Cache some requests.
+
+=cut
+
+$use_file_cache = 0;
 
 =back
 
@@ -1464,6 +1473,24 @@ if (defined $q->param("ossp") && $q->param("ossp") !~ m{^\s*$}) {
     }
 }
 
+# Try cache?
+if ($use_file_cache) {
+    my $output_as = $q->param('output_as');
+    if ($output_as && $output_as =~ m{^(kml-track)$}) {
+	require BBBikeCGICache;
+	$file_cache = BBBikeCGICache->new($Strassen::datadirs[0], $Strassen::Util::cacheprefix);
+	if ($file_cache->exists_content($q)) {
+	    my($content, $meta) = $file_cache->get_content($q);
+	    if ($content && $meta) {
+warn "DEBUG: Cache hit for " . $q->query_string;
+		http_header(@{ $meta->{headers} || [] });
+		print $content;
+		my_exit(0);
+	    }
+	}
+    }
+}
+
 # Check if startc is valid and delete if not
 # scvf=startcvalidfor
 if ($q->param('startc') && $q->param('scvf') && $q->param('scvf') ne $q->param('start')) {
@@ -1538,6 +1565,15 @@ if (defined $q->param('begin')) {
 		     );
 	}
     }
+    my_exit(0);
+} elsif (defined $q->param('clean_expired_cache')) {
+    require BBBikeCGICache;
+    my $file_cache = BBBikeCGICache->new($Strassen::datadirs[0], $Strassen::Util::cacheprefix);
+    http_header(-type => 'text/plain',
+		@no_cache,
+	       );
+    my $res = $file_cache->clean_expired_cache;
+    print "DONE. $res->{count_success} directory/ies deleted, $res->{count_errors} error/s\n";
     my_exit(0);
 } elsif (defined $q->param('drawmap')) {
     my($x,$y) = split /,/, $q->param('drawmap');
@@ -4787,14 +4823,19 @@ sub display_route {
     if (defined $output_as && $output_as eq 'kml-track') {
 	require Strassen::KML;
 	my $filename = filename_from_route($startname, $zielname, "track") . ".kml";
-	http_header
+	my @headers =
 	    (-type => "application/vnd.google-earth.kml+xml",
 	     -Content_Disposition => "attachment; filename=$filename",
 	    );
+	http_header(@headers);
 	my $s = $route_to_strassen_object->();
 	my $s_kml = Strassen::KML->new($s);
 	$s_kml->{"GlobalDirectives"}->{"map"}[0] = "polar" if $data_is_wgs84;
-	print $s_kml->bbd2kml(startgoalicons => 1);
+	my $kml_output = $s_kml->bbd2kml(startgoalicons => 1);
+	print $kml_output;
+	if ($file_cache) {
+	    $file_cache->put_content($q, $kml_output, {headers => \@headers});
+	}
 	return;
     }
 
