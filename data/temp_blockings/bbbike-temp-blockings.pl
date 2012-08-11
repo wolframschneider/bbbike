@@ -6043,7 +6043,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003701',
        data  => <<EOF,
-userdel	2::temp 7587,17532 7540,17675 7491,17793 7477,17832 7453,17899 7432,17964 7426,17981 7405,18047 7335,18257 7291,18392 7269,18460 7232,18572
+userdel	2::temp 7579,17532 7572,17558 7540,17675 7491,17793 7477,17832 7453,17899 7432,17964 7426,17981 7405,18047 7335,18257 7291,18392 7269,18460 7232,18572
 EOF
      },
      { from  => 1221024854, #  undef
@@ -6788,7 +6788,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004242',
        data  => <<EOF,
-userdel	1::inwork 8211,17585 8095,17574 7998,17564 7915,17557 7841,17551 7828,17550 7675,17538 7587,17532
+userdel	1::inwork 8211,17585 8095,17574 7998,17564 7915,17557 7841,17551 7828,17550 7675,17538 7579,17532
 EOF
      },
      { from  => 1165266184, # 2006-12-04 22:03
@@ -8953,7 +8953,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004242',
        data  => <<EOF,
-userdel	1::inwork 8211,17585 8095,17574 7998,17564 7915,17557 7841,17551 7828,17550 7675,17538 7587,17532
+userdel	1::inwork 8211,17585 8095,17574 7998,17564 7915,17557 7841,17551 7828,17550 7675,17538 7579,17532
 EOF
      },
      { from  => undef, # 
@@ -10219,7 +10219,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006852',
        data  => <<EOF,
-userdel	2::temp 7335,18257 7405,18047 7426,17981 7432,17964 7453,17899 7477,17832 7491,17793 7540,17675 7587,17532
+userdel	2::temp 7335,18257 7405,18047 7426,17981 7432,17964 7453,17899 7477,17832 7491,17793 7540,17675 7572,17558 7579,17532
 EOF
      },
      { from  => 1192489272, # 2007-10-16 01:01
@@ -10446,7 +10446,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_007023',
        data  => <<EOF,
-userdel	1::inwork 6878,17315 6995,17322 7031,17323 7104,17326 7308,17306 7379,17295 7602,17399
+userdel	1::inwork 6878,17315 6995,17322 7031,17323 7104,17326 7288,17308 7379,17295 7602,17399
 EOF
      },
      { from  => 1194130800, # 2007-11-04 00:00
@@ -14679,7 +14679,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_013407',
        data  => <<EOF,
-userdel	2::temp 7587,17532 7540,17675 7491,17793 7477,17832 7453,17899 7432,17964 7426,17981 7405,18047 7335,18257
+userdel	2::temp 7579,17532 7572,17558 7540,17675 7491,17793 7477,17832 7453,17899 7432,17964 7426,17981 7405,18047 7335,18257
 EOF
      },
      { from  => 1246831200, # 2009-07-06 00:00
@@ -20461,8 +20461,8 @@ userdel	q2::inwork 7437,12368 7215,12295 7039,12314
 EOF
      },
      { from  => 1342945020, # 2012-07-22 10:17
-       until => 1347289200, # 2012-09-10 17:00
-       text  => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Mitte 09/12) stadtauswärts zwischen Mühlenstr. und Elsa-Brandström-Str.',
+       until => 1349103600, # 2012-10-01 17:00
+       text  => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Anfang 10/12) stadtauswärts zwischen Mühlenstr. und Elsa-Brändström-Str. ',
        type  => 'handicap',
        source_id => 'IM_019006',
        data  => <<EOF,
@@ -20513,6 +20513,33 @@ EOF
        source_id => 'IM_019043',
        data  => <<EOF,
 userdel	q4::inwork; 10953,15787 11086,15772
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Adalbertstr.: Fahrbahn in Richtung Kottbusser Tor gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: next_check: 2012-09-10
+userdel	q4::inwork; 11389,10463 11393,10390
+EOF
+     },
+     { from  => 1344535200, # 2012-08-09 20:00
+       until => 1344826800, # 2012-08-13 05:00
+       text  => 'Sperrung der Bösebrücke ("Bornholmer Brücke") in Fahrtrichtung Ost von Freitag, den 10.08.2012, 20:00 Uhr bis Montag, den 13.08.2012, 5:00 Uhr, Ausweichen auf gegenüberliegenden Gehweg möglich',
+       type  => 'handicap',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1208/nachricht4740.html',
+       data  => <<EOF,
+userdel	q4::inwork; 9781,16569 9816,16565 9883,16557 9998,16547
+EOF
+     },
+     { from  => 1345140000, # 2012-08-16 20:00
+       until => 1345431600, # 2012-08-20 05:00
+       text  => 'Sperrung der Bösebrücke ("Bornholmer Brücke") in Fahrtrichtung West von Freitag, den 17.08.2012, 20:00 Uhr bis Montag, den 20.08.2012, 5:00 Uhr, Ausweichen auf gegenüberliegenden Gehweg möglich',
+       type  => 'handicap',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1208/nachricht4740.html',
+       data  => <<EOF,
+userdel	q4::inwork; 9998,16547 9883,16557 9816,16565 9781,16569
 EOF
      },
     );
