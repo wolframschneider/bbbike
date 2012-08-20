@@ -185,7 +185,7 @@ Immanuelkirchstr. - Greifswalder Str.: Fuﬂg‰ngerfurt (Dr‰ngelgitter) benutzen	CP
 Greifswalder Str. - Immanuelkirchstr.: Fuﬂg‰ngerfurt (Dr‰ngelgitter) benutzen	CP; 11820,13804 11946,13993 11727,14111
 Kietz - Kietzer Str.: zum ‹berqueren der Straﬂe Fuﬂg‰ngerampel links benutzen	CP; 22364,4429 22383,4470 22372,4496 22358,4521
 Kietz - M¸ggelheimer Str.: zum ‹berqueren der Straﬂe Fuﬂg‰ngerampel links benutzen	CP; 22364,4429 22383,4470 22341,4483
-Kietz - Amtsstr.: zum ‹berqueren der Straﬂe Fuﬂg‰ngerampel links benutzen	CP; 22364,4429 22383,4470 22495,4523
+#XXX del --- Kietz - Amtsstr.: zum ‹berqueren der Straﬂe Fuﬂg‰ngerampel links benutzen	CP; 22364,4429 22419,4457 22495,4523
 als "Neue Dorfstr." ausgeschildert	CS; 52490,75434 52181,75778
 als "Wiesenweg" ausgeschildert	CS; 52215,83681 52346,83150
 #: by: Susan Richter: vvv
@@ -400,12 +400,7 @@ Heerstr. - Preuﬂenallee: bereits an der Kreuzung Teufelsseestr./Heerstr. die Str
 Preuﬂenallee - Heerstr.: auf der linken Gehwegseite bis zur Ampel L‰nderallee vorfahren und dann die Straﬂenseite wechseln	CP; 551,11462 585,11256 704,11273
 Schorlemerallee - Gregor-Mendel-Str.: etwa 20 Meter vor der Kreuzung die Straﬂenseite wechseln	PI; 3459,6484 3664,6523 3650,6665
 Gregor-Mendel-Str. - Schorlemerallee: ‹berquerungsmˆglichkeit ca. 20 Meter zur rechten Seite	CP; 3650,6665 3664,6523 3836,6550
-#: by: norbert winkelmann: vvv
-Welzower Steig: links des Grabens halten	CP; 6529,21620 6508,21646 6478,21652
-Welzower Steig: links des Grabens halten	CP; 6223,21952 6257,22005 6111,22155
-Welzower Steig: rechts des Grabens halten	CP; 6111,22155 6257,22005 6223,21952
-Welzower Steig: rechts des Grabens halten	CP; 6478,21652 6508,21646 6529,21620
-#: by: ^^^
+#XXX del --- die Radwegf¸hrung ist mittlerweile eindeutig --- #: by: norbert winkelmann: vvv --- Welzower Steig: links des Grabens halten	CP; 6529,21620 6511,21649 6478,21652 --- Welzower Steig: links des Grabens halten	CP; 6223,21952 6257,22005 6111,22155 --- Welzower Steig: rechts des Grabens halten	CP; 6111,22155 6257,22005 6223,21952 --- Welzower Steig: rechts des Grabens halten	CP; 6478,21652 6511,21649 6529,21620 --- #: by: ^^^
 Rahel-Hirsch-Str. - Ella-Trebe-Str.: bereits an der Ampel Alt-Moabit/Moltkebr¸cke auf den linken Gehweg wechseln	PI; 7936,12906 7948,12918 7941,13014
 Babelsberger Str. - Uferweg: bereits an der Ampel den Radweg auf der linken Straﬂenseite benutzen	PI; -12493,-1896 -12420,-1853 -12335,-1725
 Ausgeschildert Richtung Buga-Park	CP2; -14305,2184 -14100,2144
@@ -493,3 +488,11 @@ Mutter-Mochow-Weg - Potsdamer Chaussee: linken Gehweg bis zur Kurstr. benutzen	C
 Potsdamer Chaussee - Wiesenschlag: bereits an der Kurstr. auf den linken Gehweg wechseln	PI; -2023,2279 -2074,2258 -2036,2150
 Seestr./Groninger Str. - Weg am Kombibad: die Seestr. an der Fuﬂg‰ngerampel ¸berqueren	PI; 7403,16575 7417,16587 7298,16725
 Friedenstr. - Schulweg: bereits an der Pufendorfstr. auf den linken Gehweg wechseln	PI; 12616,12844 12594,12866 12483,12682
+#: by: Stefan Klinkusch vvv
+Brunsb¸tteler Damm - Weg zur Staakener Feldstr.: bereits an der Fuﬂg‰ngerampel auf den linken Gehweg wechseln	PI; -7762,14067 -7716,14031 -7647,13985
+#: note: zwei Metalls‰ulen hier
+Winzerstr. - Heerstr.: auf den rechten Weg einbiegen	CP2; -4687,11885 -4637,11982
+#: by: ^^^
+Residenzstr. - Am Sch‰fersee: bereits an der Ampel Pankower Allee auf den linken Gehweg wechseln	PI; 7579,17532 7572,17558 7477,17544
+Residenzstr. - Lettestr.: bereits an der Ampel Markstr./Residenzstr. auf den linken Gehweg wechseln	PI; 7602,17399 7684,17435 7707,17445
+Am Stand - Klemkestr.: den linken Gehweg bis zur Kreuzung Lampesteig benutzen	CP; 7484,18778 7492,18699 7520,18701

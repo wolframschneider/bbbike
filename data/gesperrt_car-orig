@@ -38,8 +38,8 @@ Hagelberger Str.	3 8648,9526 8773,9524 8769,9290
 Warschauer - Marchlewskistr.	3 13476,11174 13493,11217 13541,11355 13496,11384
 Holtei von S - Boxhagener	3 14575,11407 14639,11512 14577,11582
 Boxhagener von W - Holtei	3 14577,11582 14639,11512 14710,11626
-Holtei von N - Boxhagener	3 14710,11626 14639,11512 14771,11345
-Boxhagener von E - Holtei	3 14771,11345 14639,11512 14575,11407
+Holtei von N - Boxhagener	3 14710,11626 14639,11512 14752,11369 14771,11345
+Boxhagener von E - Holtei	3 14771,11345 14752,11369 14639,11512 14575,11407
 Bachstr. - 17. Juni (?)	3 5790,12026 5775,11975 5758,11895 5900,11913
 Fasanen - Hertzallee (nur für BVG frei)	3 5456,11742 5360,11510 5356,11500 5587,11397
 Fasanenstr.	1 5198,10234 5207,10399
@@ -818,3 +818,12 @@ Seestr.: Straßenbahntrasse	3nocross 7403,16575 7417,16587 7456,16620
 Groninger Str.: Sackgasse für Autos	3 7439,16350 7403,16575 *
 Florastr.: Poller	3 * 1938,28171 *
 Gartenstr. (Schwedt)	1 68940,73310 68884,73376 68854,73406
+Krumme Str.	1 4029,12158 3999,12050 3977,11854
+Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,14749
+#: by: http://www.flickr.com/photos/lapidarium42/7708833948/in/pool-gwb
+Eylauer Str.: Einfahrt gesperrt	3 * 8480,9080 8472,8776
+Scharnhorststr.: Poller	3 7883,14508 7801,14450 *
+Lindauer Allee: Mittelstreifen	3nocross 5635,18776 5713,18777 5791,18778
+#: note: genug lichte Breite für Radfahrer
+Eisbärenweg: Schranken an beiden Einfahrten	2 6950,17669 6909,17796
+Bismarckstr.: Mittelstreifen	3nocross 4345,11710 4507,11728 4737,11768

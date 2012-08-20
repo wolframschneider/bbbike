@@ -32,10 +32,10 @@ Adlergestell	X 21541,1739
 Joachim-Tiburtius-Brücke	X 5345,5994
 Joachim-Tiburtius-Brücke	X 5414,5939
 Zitadellenweg	X -1768,14605
-Faucherweg	X -1141,14814
-Faucherweg	X -896,14888
 (Am Rosengarten)	X 18834,12228
 (Am Rosengarten)	X 18867,12265
+(Zufahrt ehem. Einkaufszentrum)	X 17010,14269
+(Zufahrt ehem. Einkaufszentrum)	X 17060,14255
 Hönower Wiesenweg	X 17271,9159
 Spindlersfelder Str.	X 21075,4769
 Spindlersfelder Str.	X 21080,4702
@@ -90,6 +90,7 @@ Lankestrand	X -3679,11248
 Lankestrand	X -3673,11216
 Am Konsulat	X 9990,19644
 Sonnenkieker	X 22669,13842
+Am Krummen Weg	X -7248,14826
 Heimstättenweg	X 4323,6131
 Bebelplatz	X 9795,12293
 (Fußgängertunnel Sybelstr.)	X 3781,10569
@@ -102,6 +103,7 @@ Wiebestr.	X 4495,13107
 (Machandelweg - Rossitter Weg)	X -76,12236
 Thüringerallee	X 1342,11020
 (nördliches Spreeufer)	X 5346,12845
+B5: Berlin - Hamburg	X -9443,13363
 B5: Berlin - Hamburg	X -10122,13391
 (An der Oder)	X 89215,-6605
 (An der Oder)	X 89243,-6760

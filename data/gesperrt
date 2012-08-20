@@ -250,6 +250,7 @@ Otto-von-Simson-Str.	1 2560,5044 2627,5095 2835,5410
 In den neuen Gärten	1 7111,3432 7318,3306 7359,3349 7409,3331 7472,3308
 Braillestr.	1 4430,5324 4477,5250 4512,5199
 Mudrackzeile	1 6985,17812 7020,17690
+Mariabrunner Weg	1 6841,17781 6909,17796 6985,17812
 Gustav-Müller-Str.	1 7643,8634 7642,8815
 Gustav-Müller-Platz	1 7644,8560 7614,8599 7643,8634 7682,8598 7644,8560
 Niederlagstr.	2:inwork 9943,12364 9934,12418
@@ -471,7 +472,7 @@ Alt-Biesdorf	1 21108,11628 20963,11618 20633,11651 20549,11659 20375,11694
 Privatstr. 14	1s 13159,17196 13103,17280
 Bernkasteler Str.	1s 15208,16939 15015,16908 14923,16901 14923,16914
 Wiedenbrücker Weg	1 4207,1113 4220,1175 4141,1282
-Am Langen Weg:	1 -7033,14984 -7024,14880 -7015,14772 -7011,14693 -7013,14578
+Am Langen Weg:	1 -7033,14984 -7026,14890 -7015,14772 -7011,14693 -7013,14578
 Hans-Sachs-Str.	1 3141,4023 3214,4066
 Wehneltsteig	1 1256,14217 1305,14384
 Bernhard-Bästlein-Str.	1 15595,14041 15593,13768
@@ -700,6 +701,11 @@ Olbrichweg	1 5787,19326 5879,19352
 Genfer Str.	1 6890,18190 6821,18216 6683,18243
 Eckertstr.	1s 13598,12554 13585,12584
 Am Kupfergraben	1s 9867,12651 9810,12712 9754,12775
+Leistikowstr.	1 1188,11861 1133,11664
+Am Krummen Weg	1 -7169,14849 -7026,14890
+Am Krummen Weg	1 -7169,14849 -7248,14826
+Henricistr.	1 5993,19477 5858,19437
+Breslauer Platz	1s 5810,7337 5902,7334
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -761,6 +767,7 @@ Nietnerstr.	2 -13855,1673 -13843,1668
 Hechtsprung (Groß Glienicke)	1 -9703,6278 -9860,6288 -9962,6295 -10045,6292
 (Potsdamer Chaussee - Dorfstr.)	1 -9547,6865 -9565,6954 -9616,6980
 Tuchmacherstr.	1 -10463,-1343 -10610,-1596 -10636,-1667
+Ribbeckweg	1 -9720,6589 -9928,6599 -9932,6558
 Freilichtbühne Schwedt	2 69562,73280 69634,73330
 Bahnhofstr.	1s 26103,-11861 26300,-11864
 Bernau - Tempelfelde	1 23179,31047 23103,30923
@@ -778,7 +785,7 @@ Lützlow: Gehweg auf gleichem Niveau wie Fahrbahn	1s 52431,94119 52422,94028 5235
 Lindenstr. (Frankfurt/Oder)	1 88960,-6639 88836,-6002
 Carthausplatz (Frankfurt/Oder)	1 88945,-6733 88890,-6691 88960,-6639
 Gubener Str. (Frankfurt/Oder)	1 88945,-6733 88890,-6691 88881,-6462 88775,-6151 88759,-5911
-B5 (paralleler Radweg existiert)	2 -9005,13354 -9583,13368 -10122,13391 -11253,13707
+B5 (paralleler Radweg existiert)	2 -9005,13354 -9443,13363 -10122,13391 -11253,13707
 Niemegk	1 -37263,-37723 -37263,-37584 -37216,-37587 -37188,-37728 -37263,-37723
 Bahnhofstr. (Fürstenberg)	1 -8839,86313 -8711,86273
 Fürstenberg	1 -8777,85887 -8680,85652
@@ -860,6 +867,28 @@ Zeltinger Platz	1s 2404,25187 2355,25252 2395,25273 2446,25265 2490,25211 2486,2
 Ludolfinger Platz	1s 2277,25033 2245,25016 2205,25042 2192,25083 2216,25117 2277,25094 2285,25059 2277,25033
 Sewanstr. - Balatonstr.	1s 17705,10232 17741,10386
 Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich)	1s 18377,9366 18490,9387
+Mittelstreifen	3nocross::ignrte 6422,15708 6555,15827 6661,15921
+Antwerpener Str. -> Seestr.: Mittelstreifen	3::igndisp 6690,15671 6555,15827 6422,15708
+Antwerpener Str. -> Togostr.: Mittelstreifen	3::igndisp 6690,15671 6555,15827 6530,15849
+Seestr. -> Togostr.: Mittelstreifen	3::igndisp 6422,15708 6555,15827 6530,15849
+Togostr. -> Antwerpener Str.: Mittelstreifen	3::igndisp 6530,15849 6555,15827 6690,15671
+Togostr. -> Seestr.: Mittelstreifen	3::igndisp 6530,15849 6555,15827 6661,15921
+Seestr. -> Antwerpener Str.: Mittelstreifen	3::igndisp 6661,15921 6555,15827 6690,15671
+Abbiegen nicht möglich	3nocross::ignrte 7602,17399 7684,17435 7902,17166
+Residenzstr. -> Fahlandgasse: Abbiegen nicht möglich	3::igndisp 7602,17399 7684,17435 7681,17475
+Fahlandgasse -> Letteallee: Abbiegen nicht möglich	3::igndisp 7681,17475 7684,17435 7707,17445
+Fahlandgasse -> Residenzstr.: Abbiegen nicht möglich	3::igndisp 7681,17475 7684,17435 7902,17166
+Mittelstreifen	3nocross::ignrte 7579,17532 7572,17558 7540,17675
+Am Schäfersee -> Residenzstr.: Mittelstreifen	3::igndisp 7477,17544 7572,17558 7540,17675
+Mittelstreifen	3nocross::ignrte 5550,18775 5635,18776 5713,18777
+Pfifferlingweg -> Lindauer Allee: Mittelstreifen	3::igndisp 5635,18736 5635,18776 5550,18775
+Lindauer Allee -> Pfifferlingweg: Mittelstreifen	3::igndisp 5713,18777 5635,18776 5635,18736
+Mittelstreifen	3nocross::ignrte 5713,18777 5791,18778 5869,18779
+Holzweidepfad -> Lindauer Allee: Mittelstreifen	3::igndisp 5792,18727 5791,18778 5713,18777
+Lindauer Allee -> Holzweidepfad: Mittelstreifen	3::igndisp 5869,18779 5791,18778 5792,18727
+Mittelstreifen	3nocross::ignrte 5906,16403 5700,16584 5596,16662
+Querweg durch die Dauerkolonie Togo -> Togostr.: Mittelstreifen	3::igndisp 5900,16817 5700,16584 5906,16403
+Togostr. -> Querweg durch die Dauerkolonie Togo: Mittelstreifen	3::igndisp 5596,16662 5700,16584 5900,16817
 Mittelstreifen	3nocross::ignrte 21251,18508 21163,18347 21009,18055
 Märkische Allee -> Flämingstr.: Mittelstreifen	3::igndisp 21251,18508 21163,18347 21220,18323
 Flämingstr. -> Märkische Allee: Mittelstreifen	3::igndisp 21220,18323 21163,18347 21009,18055
@@ -925,9 +954,11 @@ umbequemes Überqueren wegen Bordsteinen	3nocross::ignrte 11329,12497 11340,12443
 Schillingstr. -> Alexanderstr.: umbequemes Überqueren wegen Bordsteinen	3::igndisp 11462,12384 11340,12443 11355,12306
 Mittelstreifen	3nocross::ignrte 8777,9601 8648,9526 8595,9495
 Yorckstr. -> Hagelberger Str.: Mittelstreifen	3::igndisp 8777,9601 8648,9526 8773,9524
-Mittelstreifen	3nocross::ignrte 7492,18699 7520,18701 7609,18707 7690,18716
-Klemkestr. -> Armbrustweg: Mittelstreifen	3::igndisp 7690,18716 7609,18707 7626,18606
-Armbrustweg -> Klemkestr.: Mittelstreifen	3::igndisp 7626,18606 7609,18707 7520,18701
+Mittelstreifen	3nocross::ignrte 7434,18695 7492,18699 7520,18701
+Klemkestr. -> Am Stand: Mittelstreifen	3::igndisp 7434,18695 7492,18699 7484,18778
+Mittelstreifen	3nocross::ignrte 7520,18701 7599,18705 7690,18716
+Klemkestr. -> Armbrustweg: Mittelstreifen	3::igndisp 7690,18716 7599,18705 7620,18615
+Armbrustweg -> Klemkestr.: Mittelstreifen	3::igndisp 7620,18615 7599,18705 7520,18701
 Straßenbahntrasse	3nocross::ignrte 14619,16682 14608,16772 14559,16912
 Caseler Str. -> Berliner Allee: Straßenbahntrasse	3::igndisp 14700,16790 14608,16772 14619,16682
 Berliner Allee -> Caseler Str.: Straßenbahntrasse	3::igndisp 14559,16912 14608,16772 14700,16790
@@ -1863,6 +1894,9 @@ Kiepenheuerallee -> Johannes-Lepsius-Str.: Straßenbahntrasse	3::igndisp -13157,3
 Mittelstreifen	3nocross::ignrte -3824,13350 -3813,13404 -3803,13464
 Kerstenweg -> Wilhelmstr.: Mittelstreifen	3::igndisp -3705,13386 -3813,13404 -3824,13350
 Wilhelmstr. -> Kerstenweg: Mittelstreifen	3::igndisp -3803,13464 -3813,13404 -3705,13386
+Mittelstreifen	3nocross::ignrte -4882,12061 -4637,11982 -4500,11937
+Heerstr. -> Winzerstr.: Mittelstreifen	3::igndisp -4500,11937 -4637,11982 -4687,11885
+Winzerstr. -> Heerstr.: Mittelstreifen	3::igndisp -4687,11885 -4637,11982 -4882,12061
 abgeschlossenes Tor	3 8235,20109 8237,20098 8258,19983
 abgeschlossenes Tor	3 8258,19983 8237,20098 8235,20109
 abgeschlossenes Tor	3 8288,20128 8291,20112 8315,19993
@@ -2013,7 +2047,7 @@ tragen (Durchgang unter der U-Bahn zur Warschauer Str., 15 Stufen)	0:20:-255 134
 tragen (Treppe, 12 Stufen)	0:20:-87 7370,6451
 tragen (Bahnübergang ehem. Bhf. Satzkorn)	0:60:89 -19150,7320
 tragen (Bahnübergang ehem. Bhf. Satzkorn)	0:60:57 -19183,7299
-schieben (Rampe Schmöckwitzwerdersteg)	0:30:-155 30533,-3124
+schieben (Rampe Schmöckwitzwerdersteg)	0:30:-156 30534,-3105
 schieben (Rampe Schmöckwitzwerdersteg)	0:30:30 30546,-3072
 tragen (Treppe Mansfelder Str.)	0:30:-269 3619,9331
 tragen (22 Stufen)	0:30:-263 9557,12992
@@ -2061,8 +2095,17 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
 tragen (31 Stufen oder Kinderwagenrampe)	0:40:-256 13168,21706
+Tor	BNP:1:-110:trailer=3 10483,14720
+Tor	BNP:1:72:trailer=3 10476,14741
+Schranke, lichte Breite 120cm	BNP:1:-71:trailer=3 -7685,15092
+Poller, lichte Breite 100cm	BNP:1:-255:trailer=5 -7109,15286
+Schranke	BNP:1:-123:trailer=5 -3300,14039
+weites Drängelgitter	BNP:1:-237:trailer=5 -3437,14029
 Drängelgitter	BNP:3:-79:trailer=10 7928,10094
 enger Eingang zum Friedrich-Ludwig-Jahn-Sportpark	BNP:30:-19:trailer=no 10583,15208
+Metallstange	BNP:3:-72:trailer=10 -5070,11199
+Metallstange	BNP:3:-72:trailer=10 -5082,11155
+Drängelgitter/Schranke	BNP:3:-194:trailer=10 -8113,13467
 Schranke	BNP:3:-27:trailer=10 -3441,13270
 Drängelgitter	BNP:3:4:trailer=10 -4760,13980
 Schranke	BNP:3:51:trailer=10 8828,13434
@@ -2154,6 +2197,7 @@ Einfahrsperre für Autos	BNP:0:7:trailer=2 19003,9800
 sehr enge Stelle	BNP:0:-188:trailer=no 31909,2802
 sehr enge Stelle	BNP:0:-217:trailer=no 1184,13544
 sehr enger Weg	BNP:0:-101:trailer=no 12515,22898
+am Oder-Spree-Kanal: teilweise enger Pfad	BNP:0:-253:trailer=no 29457,-2835
 enges Drängelgitter	BNP:5:-206:trailer=no 30862,3816
 Schranke, Durchfahrtsbreite nur 80cm	BNP:3:78:trailer=no -1342,13134
 Schranke, Durchfahrtsbreite nur 60cm	BNP:3:-232:trailer=no -784,16658
@@ -2190,7 +2234,6 @@ Drängelgitter am Bahnübergang	BNP:3:-21 11612,5253
 Schranke	BNP:0:-81 9265,6361
 Schranke, kann von Fahrrädern umfahren werden	BNP:3:-259 668,25047
 Schranke, kann von Radfahrern umfahren werden	BNP:3:-146 9178,21072
-Drängelgitter	BNP:3:-48 5939,22330
 Schranke	BNP:3:-248 8566,22434
 Drängelgitter	BNP:3:-108 6908,5053
 Schranke	BNP:5:-81 11162,6379
@@ -2226,8 +2269,8 @@ Schranke	BNP:3:-130 6869,15441
 Drängelgitter	BNP:5:3 24759,11666
 Drängelgitter	BNP:5:-17 24815,11329
 Drängelgitter	BNP:5:-136 7935,4466
-Drängelgitter	BNP:5:-138 6560,21055
-Drängelgitter	BNP:5:-183 6613,21116
+Drängelgitter	BNP:5:-151 6526,21015
+Drängelgitter	BNP:5:-139 6548,21041
 Drängelgitter/Schranke	BNP:5:-180 10012,5210
 Schranke	BNP:5:-102 12571,7899
 Drängelgitter	BNP:5:34:trailer=10 14453,9929
@@ -2292,6 +2335,9 @@ Schranke (lichte Breite ca. 120cm)	BNP:2:-50:trailer=8 14448,4501
 Schranke (lichte Breite ca. 120cm)	BNP:2:-53:trailer=8 14709,4307
 Schranke (lichte Breite ca. 100cm)	BNP:3:-45:trailer=10 15179,3901
 Tor	BNP:5:-57 26888,13976
+Drängelgitter	BNP:3:64:trailer=10 49739,-90894
+Parkplatz des ehem. Möbelhauses ist eingezäunt	2:inwork 16965,14235 17010,14269 17060,14255 17221,14268
+Rudi-Dutschke-Weg	2:inwork 2627,5095 2913,5294
 Voßstr.: gesperrte Fahrbahn (Baustelle), kein Ausweichen möglich	2:inwork 8837,11676 9000,11727
 Zur Monumentenhalle: Straße wird wahrscheinlich neu gebaut	2:inwork 8376,8859 8409,8904 8389,9087
 Billy-Wilder-Promenade: wegen Bauarbeiten an umliegenden Wohnhäusern gesperrt	2:inwork 2528,1501 2584,1376
@@ -2312,7 +2358,6 @@ Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9869,12297
 Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9808,12182 9801,12245 9795,12293 9780,12401
 Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12395
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
-Boyenweg - Uferweg: wegen Bauarbeiten gesperrt	2:inwork 7886,14518 7787,14473
 Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12748
 Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14795,10473 14805,10518
@@ -2696,9 +2741,9 @@ Straßenbahn	3nocross::ignrte 16837,17440 16947,17506 17159,17631
 Falkenberger Chaussee -> Rüdickenstr.: Straßenbahn	3::igndisp 17159,17631 16947,17506 16992,17472
 Rüdickenstr. -> Falkenberger Chaussee: Straßenbahn	3::igndisp 16992,17472 16947,17506 16837,17440
 Rudolf-Reusch-Str. [Wohngebiet]	1 15732,12562 15657,12562 15657,12648 15732,12650
-Letteallee	1 8226,17479 8110,17470 8014,17475 7845,17460 7684,17435
+Letteallee	1 8226,17479 8110,17470 8014,17468 7845,17455 7707,17445 7684,17435
 Mickestr.	1 8185,17352 8134,17398 8110,17470
-Kühleweinstr.	1 8014,17475 8043,17282 8088,17218
+Kühleweinstr.	1 8014,17468 8043,17282 8088,17218
 Seekorso	1 -8828,6418 -8776,6425 -8682,6435 -8578,6462 -8470,6515 -8376,6579
 Seekorso	1s -8376,6579 -8354,6590
 Seekorso	1 -8354,6590 -8301,6635 -8249,6680 -8199,6720 -8144,6762 -8087,6806 -8032,6852 -7975,6900 -7921,6946 -7871,6990

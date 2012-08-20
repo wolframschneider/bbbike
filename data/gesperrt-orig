@@ -280,6 +280,7 @@ Otto-von-Simson-Str.	1 2560,5044 2627,5095 2835,5410
 In den neuen Gärten	1 7111,3432 7318,3306 7359,3349 7409,3331 7472,3308
 Braillestr.	1 4430,5324 4477,5250 4512,5199
 Mudrackzeile	1 6985,17812 7020,17690
+Mariabrunner Weg	1 6841,17781 6909,17796 6985,17812
 Gustav-Müller-Str.	1 7643,8634 7642,8815
 Gustav-Müller-Platz	1 7644,8560 7614,8599 7643,8634 7682,8598 7644,8560
 #XXX del --- #: XXX Wird die Einbahnstraßenregelung hier aufgehoben? --- #: last_checked: 2012-03-06 --- #: next_check: 2012-04-20 --- Niederlagstr.	1:q3 9972,12184 9961,12273
@@ -361,12 +362,14 @@ Bleicheroder Str.	1 11268,18851 11439,18890 11526,18929 11622,18964 11727,19001 
 Renée-Sintenis-Platz	1 5642,7255 5664,7244 5675,7224 5661,7202 5641,7189 5621,7204 5614,7223 5624,7244 5642,7255
 Spreepark	2 16023,8860 16161,8852
 #: by: Felix Schröder
+#: confirmed_by: srt
 Staakener Str.	1 -4112,14242 -4390,14257
 Langensteiner Weg	1 7282,4716 7335,4879 7437,4855
 #: by: Susanne Kuby:
 #: confirmed_by: srt
 Lowise-Reuter-Ring	1 13680,4715 13589,4681 13560,4681 13511,4695 13482,4718 13468,4766 13476,4812 13503,4846 13540,4861 13574,4862 13639,4850 13675,4855
 #: by: Gisela Mauer:
+#: confirmed_by: srt
 Pfahlerstr.	1 5301,18447 5423,18438 5541,18435
 #: by: Juliane Bölker:
 Harnackstr.	1 15848,11528 15881,11621 15871,11690 15911,11790 15984,11827 16099,11786 16134,11774
@@ -396,8 +399,8 @@ Boschpoler Platz	1 20540,13773 20665,13759
 Kienbergstr.	1 21287,14963 21225,14907 21217,14721 21122,14713
 Engelmannweg	1 4531,18217 4492,18013 4462,17892 4429,17763
 #: by: Steffen Berthold
+#: confirmed_by: srt
 Waldowstr.	1 5536,18234 5537,18309 5541,18435 5541,18451 5543,18555 5545,18590 5547,18665 5550,18775
-#: add_fragezeichen: Gilt die Einbahnstraßenregelung zwischen Ollenhauerstr. und Waldowstr. auch für Radfahrer oder nur für Autofahrer?
 Kienhorststr.	1 5543,18555 5324,18560
 Halbauer Weg	1 7720,3148 7719,3219 7734,3290 7753,3371
 #: by: Guido (guidoh):
@@ -422,7 +425,7 @@ Herbert-Bayer-Str.	1 12911,17021 12846,16971 12898,16898 12923,16873
 Rudolf-Baschant-Str.	1 12898,16898 12837,16853
 Wilhelm-Wagenfeld-Str.	1 12877,17039 12853,17024 12810,16994 12797,16983 12789,16977
 Johannes-Itten-Str.	1 12797,16983 12850,16911 12813,16884
-#: add_fragezeichen: Gilt die Einbahnstraßenregelung auch für Radfahrer oder nur für Autofahrer?
+#: by: Stefan Klinkusch
 Riensbergstr.	1 -740,15306 -764,15480
 Saganer Str.: Bahngelände	2 16654,9748 16710,9702 16747,9695 17020,9463 17231,9186 17271,9159
 Triniusstr.	1 18339,6660 18273,6606
@@ -439,6 +442,7 @@ Tassostr.	1 13679,16286 13645,16192 13659,16151 13642,16118 13625,16054 13621,15
 #: by: rr riva w.m.s:
 Heimat	1 1032,1325 994,1485 968,1479 941,1603
 #: by: MIchael Wedel:
+#: confirmed_by: srt
 Techowpromenade	1 5219,20467 5185,20358 5173,20275 5170,20182
 (Kastanienallee - Schönhauser Allee)	1 10884,14952 10838,14962
 Lossebergplatz	1 16070,23566 16094,23554 16095,23539 16079,23535 16064,23547 16070,23566
@@ -503,7 +507,7 @@ Zufahrt zu Germaniagarten/Oberlandgarten	1 11240,6350 11205,6358 11200,6372 1121
 Germaniagarten	1 11224,6244 11206,6252 11220,6323 11237,6326 11252,6319 11243,6246 11224,6244
 Oberlandgarten	1 11246,6403 11230,6413 11238,6470 11253,6473 11269,6466 11264,6409 11246,6403
 Alt-Tempelhof	1 9512,6652 9249,6642 9154,6638 9054,6631 8949,6644 9052,6664 9247,6687 9338,6694 9512,6652
-#: add_fragezeichen: Gilt die Einbahnstraßenregelung auch für Radfahrer oder nur für Autofahrer?
+#: by: Stefan Klinkusch:
 Baumgartensteg	1 -2882,13474 -2937,13399
 #: by: Brüning:
 Geisenheimer Str.	1 4391,7258 4462,7137 4530,7021
@@ -607,7 +611,8 @@ Privatstr. 14	1s:q3 13159,17196 13103,17280
 Bernkasteler Str.	1s:q3 15208,16939 15015,16908 14923,16901 14923,16914
 Wiedenbrücker Weg	1 4207,1113 4220,1175 4141,1282
 #: by: Kamai:
-Am Langen Weg:	1 -7033,14984 -7024,14880 -7015,14772 -7011,14693 -7013,14578
+#: confirmed_by: srt
+Am Langen Weg:	1 -7033,14984 -7026,14890 -7015,14772 -7011,14693 -7013,14578
 # 
 #: by: Beate Wolter
 #: confirmed_by: sandor
@@ -913,6 +918,11 @@ Genfer Str.	1 6890,18190 6821,18216 6683,18243
 #: note: enge Hausdurchfahrt
 Eckertstr.	1s:q3 13598,12554 13585,12584
 Am Kupfergraben	1s:q2 9867,12651 9810,12712 9754,12775
+Leistikowstr.	1 1188,11861 1133,11664
+Am Krummen Weg	1 -7169,14849 -7026,14890
+Am Krummen Weg	1 -7169,14849 -7248,14826
+Henricistr.	1 5993,19477 5858,19437
+Breslauer Platz	1s:q3 5810,7337 5902,7334
 ######################################################################
 #
 # Potsdam
@@ -973,6 +983,7 @@ Hechtsprung (Groß Glienicke)	1 -9703,6278 -9860,6288 -9962,6295 -10045,6292
 (Potsdamer Chaussee - Dorfstr.)	1 -9547,6865 -9565,6954 -9616,6980
 #: by: a.fuchs:
 Tuchmacherstr.	1 -10463,-1343 -10610,-1596 -10636,-1667
+Ribbeckweg	1 -9720,6589 -9928,6599 -9932,6558
 ###################################################################### 
 # elsewhere in Brandenburg
 #: note: möglicherweise nur im Frühling/Sommer?
@@ -998,7 +1009,7 @@ Lützlow: Gehweg auf gleichem Niveau wie Fahrbahn	1s:q1 52431,94119 52422,94028 5
 Lindenstr. (Frankfurt/Oder)	1 88960,-6639 88836,-6002
 Carthausplatz (Frankfurt/Oder)	1 88945,-6733 88890,-6691 88960,-6639
 Gubener Str. (Frankfurt/Oder)	1 88945,-6733 88890,-6691 88881,-6462 88775,-6151 88759,-5911
-B5 (paralleler Radweg existiert)	2 -9005,13354 -9583,13368 -10122,13391 -11253,13707
+B5 (paralleler Radweg existiert)	2 -9005,13354 -9443,13363 -10122,13391 -11253,13707
 Niemegk	1 -37263,-37723 -37263,-37584 -37216,-37587 -37188,-37728 -37263,-37723
 Bahnhofstr. (Fürstenberg)	1 -8839,86313 -8711,86273
 Fürstenberg	1 -8777,85887 -8680,85652
@@ -1105,6 +1116,13 @@ Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich)	1s:q2 18377,9366
 # gesperrte Wegführung (nicht möglich zu umgehen --- wenn es eine
 # Umgehung gibt, sollte sie in comments_path-orig als PI; kommentiert sein)
 # 
+Seestr.: Mittelstreifen	3nocross 6422,15708 6555,15827 6661,15921
+#: note: auf dem Radweg gibt es noch zusätzlich Absperrgitter
+Residenzstr.: Abbiegen nicht möglich	3nocross 7602,17399 7684,17435 7902,17166
+Residenzstr.: Mittelstreifen	3nocross 7579,17532 7572,17558 7540,17675
+Lindauer Allee: Mittelstreifen	3nocross 5550,18775 5635,18776 5713,18777
+Lindauer Allee: Mittelstreifen	3nocross 5713,18777 5791,18778 5869,18779
+Togostr.: Mittelstreifen	3nocross 5906,16403 5700,16584 5596,16662
 Märkische Allee: Mittelstreifen	3nocross 21251,18508 21163,18347 21009,18055
 Alt-Biesdorf: Mittelstreifen	3nocross 21108,11628 21251,11560 21311,11528
 Kurt-Schumacher-Damm: Mittelstreifen	3nocross 4704,17101 4931,17174 4997,17241
@@ -1116,6 +1134,7 @@ Munsterdamm: Mittelstreifen	3nocross 6771,5273 6767,5233 6747,5010
 Puschkinallee: Hecken	3nocross 13789,9949 13711,10022 13579,10146
 Urbanstr.: unbequem passierbarer Mittelstreifen (hohe Kanten)	3nocross 11274,9492 11383,9446 11509,9392
 #: by: Rainer (ghostviewer...)
+#: confirmed_by: srt
 Aroser Allee: Mittelstreifen	3nocross 6689,17911 6711,17839 6739,17749
 #: by: ruth mantei:
 Buschkrugallee: Mittelstreifen mit hoher Kante	3nocross 13809,5257 13824,5204 13892,4955
@@ -1137,7 +1156,8 @@ Altstädter Ring: Mittelstreifen mit Zaun	3nocross -3501,14365 -3506,14306 -3517,
 Kaiser-Wilhelm-Str.: Mittelstreifen	3nocross 6996,3761 6957,3699 6782,3491
 Alexanderstr.: umbequemes Überqueren wegen Bordsteinen	3nocross 11329,12497 11340,12443 11355,12306
 Yorckstr.: Mittelstreifen	3nocross 8777,9601 8648,9526 8595,9495
-Klemkestr.: Mittelstreifen	3nocross 7492,18699 7520,18701 7609,18707 7690,18716
+Klemkestr.: Mittelstreifen	3nocross 7434,18695 7492,18699 7520,18701
+Klemkestr.: Mittelstreifen	3nocross 7520,18701 7599,18705 7690,18716
 Berliner Allee: Straßenbahntrasse	3nocross 14619,16682 14608,16772 14559,16912
 #: by: jan (...matrix):
 #: confirmed_by: srt
@@ -1417,8 +1437,10 @@ Berliner Str.: Straßenbahnhaltestelle	3nocross -11307,133 -11390,72 -11494,-4
 Hasenheide: Mittelstreifen	3nocross 11500,9116 11449,9125 11136,9183
 Hasenheide: Mittelstreifen	3nocross 11500,9116 11550,9104 11629,9086
 Kiepenheuerallee: Straßenbahntrasse	3nocross -13311,462 -13203,434 -13157,394
-#: by: Stefan Klinkusch:
+#: by: Stefan Klinkusch: vvv
 Wilhelmstr.: Mittelstreifen	3nocross -3824,13350 -3813,13404 -3803,13464
+Heerstr.: Mittelstreifen	3nocross -4882,12061 -4637,11982 -4500,11937
+#: by: ^^^
 abgeschlossenes Tor	3 * 8237,20098 *
 abgeschlossenes Tor	3 * 8291,20112 *
 #
@@ -1536,6 +1558,7 @@ tragen (flache Treppe, wenige Stufen)	0:10 6530,6786
 tragen (ca. 10 Stufen)	0:20 26407,161781
 #: by: Wolfhard Schleese:
 #: by: http://farm8.staticflickr.com/7096/7159727043_61b258fa72_c.jpg
+#: confirmed_by: srt
 tragen (15 Stufen oder steile Kinderwagenrampe)	0:30 2956,24373
 #: by: Moritz (acros):
 #: XXX_prog: should be Treppe with more than one point: 2827,23059 2854,23062 2886,23045
@@ -1617,7 +1640,7 @@ tragen (Durchgang unter der U-Bahn zur Warschauer Str., 15 Stufen)	0:20 13437,10
 tragen (Treppe, 12 Stufen)	0:20 7370,6451
 tragen (Bahnübergang ehem. Bhf. Satzkorn)	0:60 -19150,7320
 tragen (Bahnübergang ehem. Bhf. Satzkorn)	0:60 -19183,7299
-schieben (Rampe Schmöckwitzwerdersteg)	0:30 30533,-3124
+schieben (Rampe Schmöckwitzwerdersteg)	0:30 30534,-3105
 schieben (Rampe Schmöckwitzwerdersteg)	0:30 30546,-3072
 tragen (Treppe Mansfelder Str.)	0:30 3619,9331
 tragen (22 Stufen)	0:30 9557,12992
@@ -1698,9 +1721,19 @@ tragen (31 Stufen oder Kinderwagenrampe)	0:40 13168,21706
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+Tor	BNP:1::trailer=3 10483,14720
+Tor	BNP:1::trailer=3 10476,14741
+Schranke, lichte Breite 120cm	BNP:1::trailer=3 -7685,15092
+Poller, lichte Breite 100cm	BNP:1::trailer=5 -7109,15286
+Schranke	BNP:1::trailer=5 -3300,14039
+weites Drängelgitter	BNP:1::trailer=5 -3437,14029
 Drängelgitter	BNP:3::trailer=10 7928,10094
 enger Eingang zum Friedrich-Ludwig-Jahn-Sportpark	BNP:30::trailer=no 10583,15208
 #: by: Stefan Klinkusch: vvv
+Metallstange	BNP:3::trailer=10 -5070,11199
+Metallstange	BNP:3::trailer=10 -5082,11155
+#: XXX was genau von beiden?
+Drängelgitter/Schranke	BNP:3::trailer=10 -8113,13467
 Schranke	BNP:3::trailer=10 -3441,13270
 Drängelgitter	BNP:3::trailer=10 -4760,13980
 #: by: ^^^
@@ -1812,6 +1845,8 @@ sehr enge Stelle	BNP:0::trailer=no 31909,2802
 sehr enge Stelle	BNP:0::trailer=no 1184,13544
 #: XXX_prog: "künstlicher" Eintrag, um Anhänger auszusperren, siehe auch handicap_s
 sehr enger Weg	BNP:0::trailer=no 12515,22898
+#: XXX_prog: "künstlicher" Eintrag, um Anhänger auszusperren, siehe auch handicap_s
+am Oder-Spree-Kanal: teilweise enger Pfad	BNP:0::trailer=no 29457,-2835
 enges Drängelgitter	BNP:5::trailer=no 30862,3816
 Schranke, Durchfahrtsbreite nur 80cm	BNP:3::trailer=no -1342,13134
 Schranke, Durchfahrtsbreite nur 60cm	BNP:3::trailer=no -784,16658
@@ -1867,7 +1902,7 @@ Schranke	BNP:0 9265,6361
 #: by: Wolfhard Schleese: vvv
 Schranke, kann von Fahrrädern umfahren werden	BNP:3 668,25047
 Schranke, kann von Radfahrern umfahren werden	BNP:3 9178,21072
-Drängelgitter	BNP:3 5939,22330
+#XXX del --- Drängelgitter	BNP:3
 Schranke	BNP:3 8566,22434
 #: by: ^^^
 #: by: rupnor@...
@@ -1925,8 +1960,8 @@ Drängelgitter	BNP:5 24815,11329
 #: by: ^^^
 #: by: Christian (chrispan):
 Drängelgitter	BNP:5 7935,4466
-Drängelgitter	BNP:5 6560,21055
-Drängelgitter	BNP:5 6613,21116
+Drängelgitter	BNP:5 6526,21015
+Drängelgitter	BNP:5 6548,21041
 Drängelgitter/Schranke	BNP:5 10012,5210
 Schranke	BNP:5 12571,7899
 #: note: Abstand zwischen den versetzten Gittern ca. 135cm
@@ -2017,12 +2052,21 @@ Schranke (lichte Breite ca. 120cm)	BNP:2::trailer=8 14448,4501
 Schranke (lichte Breite ca. 120cm)	BNP:2::trailer=8 14709,4307
 Schranke (lichte Breite ca. 100cm)	BNP:3::trailer=10 15179,3901
 Tor	BNP:5 26888,13976
+Drängelgitter	BNP:3::trailer=10 49739,-90894
 #
 ############################################################################
 #
 #: section temporäre Sperrungen (Baustellen etc.) vvvvvvvvvvvvvvvvvvvvvvvvvv
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# 
+#: by: Kai Wagner
+Parkplatz des ehem. Möbelhauses ist eingezäunt	2:inwork 16965,14235 17010,14269 17060,14255 17221,14268
+#
+#: XXX möglicherweise wird es den Weg in Zukunft gar nicht mehr geben
+#: by: Xenia B.
+#: next_check: 2013-06-01
+Rudi-Dutschke-Weg	2:inwork 2627,5095 2913,5294
 # 
 #: last_checked: 2012-07-13
 #: next_check: 2012-12-01
@@ -2047,8 +2091,8 @@ Marx-Engels-Forum: wegen U-Bahn-Bauarbeiten Durchgang zur Rathausstr. nicht mögl
 #: next_check: 2013-03-17
 B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich des alten Flughafens	2:inwork 18578,-1538 18680,-1506 18798,-1581 18866,-1674
 # 
-#: last_checked: 2012-04-28
-#: next_check: 2012-07-15
+#: last_checked: 2012-08-10
+#: next_check: 2012-10-15
 Am Pankepark: Bauarbeiten, gesperrt	2:inwork 8152,14130 8246,14184
 # 
 #: last_checked: 2012-07-11
@@ -2075,7 +2119,7 @@ Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552
 Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
 # 
 #XXX del --- #: last_checked: 2012-03-23 --- #: next_check: 2012-04-25 --- Spreeufer: wegen Bauarbeiten gesperrt	2:inwork 8596,12576 8495,12651 8473,12753
-#XXX del --- #: last_checked: 2011-12-17 --- #: next_check: 2012-01-15 --- (Leuthener Platz - Wilhelm-Kabus-Str.): Bauzäune	2:inwork 7716,8356 7837,8354 7893,8327
+#XXX del --- #: last_checked: 2011-12-17 --- #: next_check: 2012-01-15 --- (Leuthener Platz - Wilhelm-Kabus-Str.): Bauzäune	2:inwork 7716,8356 7807,8354 7893,8327
 #XXX del --- #: last_checked: 2011-09-27 --- #: next_check: 2011-10-15 --- (General-Pape-Str. - Gontermannstr.): Bauzäune	2:inwork 8106,8290 8202,8293 8265,8305 8276,8295
 # 
 #: last_checked: 2011-08-02
@@ -2098,8 +2142,8 @@ Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,2
 #: note: abgeschlossener Zaun
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
 #
-#: last_checked: 2012-06-05
-#: next_check: 2012-08-01
+#: last_checked: 2012-08-16
+#: next_check: 2012-12-01
 #: XXX mit den Bauarbeiten "An den Eldenaer Höfen" koordinieren
 Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405,12953 14686,12873
 #
@@ -2118,10 +2162,6 @@ Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12
 #: last_checked: 2012-06-07
 #: next_check: 2012-10-15
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
-# 
-#: last_checked: 2012-04-28
-#: next_check: 2012-07-15
-Boyenweg - Uferweg: wegen Bauarbeiten gesperrt	2:inwork 7886,14518 7787,14473
 # 
 #XXX del --- #: last_checked: 2011-12-25 --- #: next_check: 2012-01-01 --- #: XXX evenuell bleibt dieser Teil dauerhaft gesperrt, weil hier ein Einkaufszentrum entsteht? --- #: XXX auch die Ampel an der Kreuzung prüfen --- Treitschkestr.: Bauarbeiten am Kaufhaus, bis 2012	2:inwork 5219,6215 5125,6262 4971,6345
 # 
@@ -2145,7 +2185,7 @@ Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,127
 #XXX del --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1002/nachricht3772.html --- #: next_check: 2010-10-01 --- Brücke über A10: Sperrung vom 15.02.2010 bis 01.10.2010	2:inwork 15337,24593 15490,24848
 #XXX del --- #: last_checked: 2010-09-11 --- #: next_check: 2010-12-31 --- #: XXX der Neubau wird "N" oder "NH" sein und Radwege haben --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0907/nachricht3563.html --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1005/nachricht3870.html --- #: by: http://www.altglienicke.de/aktuell.php : Sperrung aufgehoben (20.05.11) --- Wegedornbrücke: Vollsperrung, Neubau	2:inwork 20385,593 20442,564 20510,530 20534,501
 # 
-#: last_checked: 2012-07-21
+#: last_checked: 2012-08-10
 #: next_check: 2012-10-15
 #: XXX abhängiger Eintrag in vorfahrt-orig sowie in ampeln-orig (auskommentierte Ampel)
 Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14795,10473 14805,10518
@@ -2442,9 +2482,11 @@ Drängelgitter	BNP:5 5860,805
 Drängelgitter	BNP:5 5682,767
 Straßenbahn	3nocross 16837,17440 16947,17506 17159,17631
 Rudolf-Reusch-Str. [Wohngebiet]	1 15732,12562 15657,12562 15657,12648 15732,12650
-Letteallee	1 8226,17479 8110,17470 8014,17475 7845,17460 7684,17435
+#: confirmed_by: srt
+Letteallee	1 8226,17479 8110,17470 8014,17468 7845,17455 7707,17445 7684,17435
+#: confirmed_by: srt
 Mickestr.	1 8185,17352 8134,17398 8110,17470
-Kühleweinstr.	1 8014,17475 8043,17282 8088,17218
+Kühleweinstr.	1 8014,17468 8043,17282 8088,17218
 Seekorso	1 -8828,6418 -8776,6425 -8682,6435 -8578,6462 -8470,6515 -8376,6579
 Seekorso	1s:q4 -8376,6579 -8354,6590
 Seekorso	1 -8354,6590 -8301,6635 -8249,6680 -8199,6720 -8144,6762 -8087,6806 -8032,6852 -7975,6900 -7921,6946 -7871,6990

@@ -37,6 +37,7 @@ var bbbike = {
         Apple: true,
         Toner: true,
         Watercolor: true,
+        NokiaTraffic: true,
 
         YahooMapMapType: true,
         YahooHybridMapType: false,
@@ -53,6 +54,7 @@ var bbbike = {
         "default": "TOP_RIGHT",
         "mapnik_bw": "BOTTOM_RIGHT",
         "toner": "BOTTOM_RIGHT",
+        "nokia_traffic": "BOTTOM_RIGHT",
         "watercolor": "BOTTOM_RIGHT",
         "bing_map": "BOTTOM_RIGHT",
         "bing_map_old": "BOTTOM_RIGHT",
@@ -98,7 +100,7 @@ var bbbike = {
     },
 
     available_google_maps: ["roadmap", "terrain", "satellite", "hybrid"],
-    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple", "velo_layer", "max_speed", "toner", "watercolor"],
+    available_custom_maps: ["bing_birdview", "bing_map", "bing_map_old", "bing_hybrid", "bing_satellite", "yahoo_map", "yahoo_hybrid", "yahoo_satellite", "public_transport", "ocm_transport", "ocm_landscape", "hike_bike", "mapnik_de", "mapnik_bw", "mapnik", "cycle", "bbbike_mapnik", "bbbike_mapnik_german", "bbbike_smoothness", "land_shading", "mapquest", "mapquest_satellite", "esri", "esri_topo", "mapbox", "apple", "velo_layer", "max_speed", "toner", "watercolor", "nokia_traffic"],
 
     area: {
         visible: true,
@@ -1180,6 +1182,22 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         maxZoom: 19
     };
 
+    var nokia_traffic_options = {
+        bbbike: {
+            "name": "NokiaTraffic",
+            "description": "Nokia Traffic, by maps.nokia.com"
+        },
+        getTileUrl: function (a, z) {
+            return nokia(a, z, "normal.day.grey");
+        },
+        isPng: true,
+        opacity: 1.0,
+        tileSize: new google.maps.Size(256, 256),
+        name: "nokia_traffic",
+        minZoom: 1,
+        maxZoom: 19
+    };
+
     //
     // select a tiles random server. The argument is either an interger or a 
     // list of server names , e.g.:
@@ -1296,6 +1314,24 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
         minZoom: 1,
         maxZoom: 18 // 23
     };
+
+    function nokia(a, z, name, servers) {
+        // [http://4.maptile.lbs.ovi.com/maptiler/v2/maptile/a2e328a0c5/normal.day/${z}/${x}/${y}/256/png8?app_id=SqE1xcSngCd3m4a1zEGb&token=r0sR1DzqDkS6sDnh902FWQ&lg=ENG"]
+        var app_id = "SqE1xcSngCd3m4a1zEGb";
+        var token = "r0sR1DzqDkS6sDnh902FWQ&lg";
+        var url_prefix = "maptile.lbs.ovi.com/maptiler/v2/maptile/a2e328a0c5";
+
+        if (!servers || servers.length == 0) {
+            servers = (name == "normal.day.grey" ? ["a", "b", "c", "d"] : ["1", "2", "3", "4"]);
+        }
+        if (name == "normal.day.grey") { // traffic
+            url_prefix = "mrsmon.lbs.ovi.com/maptiler/v2/traffictile/b8abea5c78";
+        }
+
+        var url = "http://" + randomServer(servers) + "." + url_prefix + "/" + name + "/" + z + "/" + a.x + "/" + a.y + "/256/png8?app_id=" + app_id + "&token=" + token + "lg=ENG";
+
+        return url;
+    }
 
     var mapControls = {
         "mapnik": function () {
@@ -1483,6 +1519,13 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
                 custom_map("watercolor", lang, watercolor_options.bbbike);
             }
         },
+        "nokia_traffic": function () {
+            if (bbbike.mapType.NokiaTraffic) {
+                var NokiaTrafficType = new google.maps.ImageMapType(nokia_traffic_options);
+                map.mapTypes.set("nokia_traffic", NokiaTrafficType);
+                custom_map("nokia_traffic", lang, nokia_traffic_options.bbbike);
+            }
+        },
         "apple": function () {
             if (bbbike.mapType.Apple) {
                 var AppleMapType = new google.maps.ImageMapType(apple_options);
@@ -1537,6 +1580,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
     mapControls.mapnik_bw();
     mapControls.toner();
     mapControls.watercolor();
+    mapControls.nokia_traffic();
     mapControls.bing_map();
     mapControls.bing_map_old();
     mapControls.yahoo_map();
@@ -2335,6 +2379,7 @@ function translate_mapcontrol(word, lang) {
             "PanoramioLayer": "Panoramio",
             "toner": "Toner",
             "watercolor": "Watercolor",
+            "NokiaTraffic": "Nokia Traffic",
 
             "start": "Start",
             "ziel": "Destination",
@@ -2369,6 +2414,7 @@ function translate_mapcontrol(word, lang) {
 
             "bing_birdview": "Bing Sat",
             "WeatherLayer": "Wetter",
+            "NokiaTraffic": "Nokia Verkehr",
 
             "Set start point": "Setze Startpunkt",
             "Set destination point": "Setze Zielpunkt",

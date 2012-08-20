@@ -1,74 +1,6 @@
-$#temp_blocking = 1566;
+$#temp_blocking = 1624;
 push @temp_blocking,
 (
-       {
-         'source_id' => 'IM_011184',
-         'until' => undef,
-         'text' => 'Weinmeisterstr. (Mitte) in Richtung Alexanderplatz gesperrt',
-         'from' => undef,
-         'id' => 1567,
-         'data' => '#: last_checked: 2012-06-17
-userdel	q4::inwork; 10350,13376 10527,13257
-',
-         'type' => 'gesperrt'
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
          'until' => undef,
          'text' => 'Anwohner haben den Uferweg am Griebnitzsee versperrt',
@@ -1025,15 +957,6 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       {
-         'until' => 1344211200,
-         'text' => 'Open Air Gallery am 5. August 2012 auf der Oberbaumbrücke ',
-         'from' => 1344031200,
-         'id' => 2206,
-         'data' => 'userdel	q4::temp 13178,10623 13206,10651 13305,10789 13332,10832
-',
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
@@ -1089,18 +1012,8 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_019026',
-         'until' => 1344211200,
-         'text' => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung, Straßen nördlich der Karl-Marx-Str. vollständig gesperrt (bis 06.08.12, 02:00)',
-         'from' => 1343894400,
-         'id' => 2262,
-         'data' => 'userdel	2::temp 12360,12505 12364,12589
-userdel	2::temp 12891,12549 12869,12425
-userdel	2::temp 12635,12629 12606,12471
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1338,12 +1251,12 @@ userdel	q4::inwork 10893,14705 11101,14768
        undef,
        {
          'until' => undef,
-         'text' => 'Gleimstr./Stargarder Str.: Bauarbeiten in Höhe Schönhauser Allee, Einbahnstraße Richtung Westen',
+         'text' => 'Gleimstr.: Bauarbeiten zwischen Ystadter Str. und Schönhauser Allee, Einbahnstraße Richtung Westen',
          'from' => undef,
          'id' => 2342,
          'data' => '#: last_checked: 2012-07-22 (an der Ystadter Str.)
 #: next_check: 2012-08-10
-userdel	q3::inwork; 10423,15698 10427,15699 10564,15721 10713,15746 10953,15787 11086,15772
+userdel	q3::inwork; 10423,15698 10427,15699 10564,15721 10713,15746 10953,15787
 ',
          'type' => 'handicap'
        },
@@ -1369,16 +1282,7 @@ userdel	q4::inwork 10379,14963 10366,14992
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120612.1440.371422.html',
-         'until' => 1344031200,
-         'text' => 'Sanierung Wanderweg am Hermsdorfer See, Sperrung im Zeitraum vom 15.06.2012 bis voraussichtlich 03.08.2012 ',
-         'from' => 1339624800,
-         'id' => 2346,
-         'data' => 'userdel	2::inwork 4801,22897 5054,23025 5127,23042 5205,23094 5232,23139
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1406,7 +1310,7 @@ userdel	q4::inwork 10379,14963 10366,14992
        {
          'source_id' => 'IM_018927',
          'until' => 1349017200,
-         'text' => 'Saalestr. (Neukölln): Straße vollständig gesperrt (bis Ende 09/12) in beiden Richtungen zwischen Karl-Marx-Str. und Wipperstr. ',
+         'text' => 'Saalestr. (Neukölln): Fahrbahn gesperrt (bis Ende 09/12) in beiden Richtungen zwischen Karl-Marx-Str. und Wipperstr. ',
          'from' => 1340082000,
          'id' => 2352,
          'data' => 'userdel	q4::inwork 13161,7173 13058,7165
@@ -1424,16 +1328,7 @@ userdel	q4::inwork 10379,14963 10366,14992
          'type' => 'handicap'
        },
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120703.1445.372223.html',
-         'until' => 1344117599,
-         'text' => 'Arbeiten in der Frohnauer Straße: während der Baumaßnahme ist die Frohnauer Straße zwischen Falkentaler Steig und Alemannenstraße in Richtung Alemannstraße gesperrt (vom 9. Juli 2012 bis voraussichtlich 4. August 2012)',
-         'from' => 1341698400,
-         'id' => 2355,
-         'data' => 'userdel	q4::inwork; 2492,24325 2469,24391 2325,24486 2262,24505 2146,24535 2058,24576 1925,24599 1878,24619 1868,24633 1838,24675 1802,24707 1736,24722
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1470,8 +1365,8 @@ userdel	q3::inwork 11920,14468 11642,14625
        },
        {
          'source_id' => 'IM_019006',
-         'until' => 1347289200,
-         'text' => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Mitte 09/12) stadtauswärts zwischen Mühlenstr. und Elsa-Brandström-Str.',
+         'until' => 1349103600,
+         'text' => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Anfang 10/12) stadtauswärts zwischen Mühlenstr. und Elsa-Brändström-Str. ',
          'from' => 1342945020,
          'id' => 2363,
          'data' => 'userdel	q4::inwork; 10927,17022 10908,17142
@@ -1496,6 +1391,59 @@ userdel	q3::inwork 11920,14468 11642,14625
          'data' => 'userdel	2::inwork 8309,10368 8278,10384 8296,10438
 userdel	2::inwork 8278,10384 8263,10349 8258,10338
 userdel	2::inwork 8263,10349 8315,10347 8333,10167 8360,10133
+',
+         'type' => 'gesperrt'
+       },
+       undef,
+       {
+         'source_id' => 'INKO_113817',
+         'until' => 1346364000,
+         'text' => 'Chemnitzer Str. (Kaulsdorf): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Alt-Kaulsdorf und Am Niederfeld, 16.07.2012 bis 30.08.2012 ',
+         'from' => 1344282201,
+         'id' => 2367,
+         'data' => 'userdel	q4::inwork 22484,11270 22436,11054
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_019043',
+         'until' => 1355580000,
+         'text' => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt Richtung Prenzlauer Allee zwischen Schönhauser Allee und Greifenhagener Str., bis Mitte Dezember 2012',
+         'from' => 1344142800,
+         'id' => 2368,
+         'data' => 'userdel	q4::inwork; 10953,15787 11086,15772
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Adalbertstr.: Fahrbahn in Richtung Kottbusser Tor gesperrt',
+         'from' => undef,
+         'id' => 2369,
+         'data' => '#: next_check: 2012-09-10
+userdel	q4::inwork; 11389,10463 11393,10390
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1208/nachricht4740.html',
+         'until' => 1345431600,
+         'text' => 'Sperrung der Bösebrücke ("Bornholmer Brücke") in Fahrtrichtung West von Freitag, den 17.08.2012, 20:00 Uhr bis Montag, den 20.08.2012, 5:00 Uhr, Ausweichen auf gegenüberliegenden Gehweg möglich',
+         'from' => 1345140000,
+         'id' => 2371,
+         'data' => 'userdel	q4::inwork; 9998,16547 9883,16557 9816,16565 9781,16569
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Weserstr. - Boxhagener Str.: Tor in einer Hausdurchfahrt, womöglich nachts versperrt',
+         'from' => undef,
+         'id' => 2372,
+         'data' => '#: XXX überprüfen, ob das überhaupt stimmt
+userdel	2::night 14838,11410 14776,11400
 ',
          'type' => 'gesperrt'
        }

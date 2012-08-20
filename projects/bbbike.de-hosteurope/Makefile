@@ -44,7 +44,8 @@ KREISFAHRT_YEAR?=	2011
 
 EXTRA_MISCSRC_FILES=	bbd2esri \
 			relevant_errorlog.pl \
-			winter_optimization.pl
+			winter_optimization.pl \
+			FixRemoteAddrHandler.pm
 EXTRA_MISC_FILES=	gpx.xsd bbbikecgires.kwalify bbbikecgires.rnc
 EXTRA_HTML_FILES=	Makefile newstreetform.tpl.html \
 			opensearch/bbbike-opensearch.tpl.src \
@@ -84,6 +85,7 @@ DEPLOY_TARGETS=			prepare-bbbike-data \
 				init-environment \
 				test \
 				create-all-maps \
+				clean-expired-cache \
 				post-deploy-info
 
 # only bbbike data, no program, no mapserver
@@ -172,11 +174,7 @@ TARGET=hosteurope
 .ifndef TARGET
 .for t in ${DEPLOY_LOCAL_TARGETS}
 .if make($t)
-.if ${HOST} == "devpc01.iconmobile.de"
-TARGET=devpc01
-.else
 TARGET=bbbike.hosteurope.herceg.de
-.endif
 .endif
 .endfor
 .endif
@@ -209,26 +207,12 @@ TARGET=hosteurope
       make(deploy-local-no-test) || \
       make(backup-local)         || \
       make(test-local)
-.if ${HOST} == "devpc01.iconmobile.de"
-TARGET=devpc01
-.else
 TARGET=bbbike.hosteurope.herceg.de
-.endif
 .elif make(automatic-deployment) || \
       make(automatic-deployment-temp-blockings)
 # no TARGET=
 .else
 .error "Please set TARGET to hosteurope or bbbike.hosteurope.herceg.de"
-.endif
-.endif
-
-.ifdef TARGET
-.if ${TARGET} == "devpc01"
-MAPSERVER_EXE=	$(HOME)/work2/mapserver/mapserv.cgi
-LOCAL_URL=	http://localhost:8080/bbbike
-LOCAL_CGI_URL=	http://localhost:8080/bbbike/cgi
-LOCAL_HTML_URL=	http://localhost:8080/bbbike
-DATA_DIR=	data
 .endif
 .endif
 
@@ -764,6 +748,9 @@ create-all-maps:
 
 init-environment:
 	lwp-request -m GET 'http://${BBBIKE_HOSTEUROPE_HOST}/cgi-bin/bbbike.cgi?init_environment=1'
+
+clean-expired-cache:
+	lwp-request -m GET 'http://${BBBIKE_HOSTEUROPE_HOST}/cgi-bin/bbbike.cgi?clean_expired_cache=1'
 
 init-local-environment:
 	lwp-request -m GET '${LOCAL_CGI_URL}/bbbike.cgi?init_environment=1'
