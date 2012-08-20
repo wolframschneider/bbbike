@@ -17,16 +17,15 @@ div#copyright {
   padding: 0px;
 }
 
-body { margin: 10px;  padding: 0px; }
+body {
+  margin: 10px;
+  padding: 0px;
+}
 
 div#intro { position:static; } 
 
 div#message {
- position:absolute;
- top:0.5em;
- left: 34em;
- min-width: 10em;
- max-width: 30em;
+ position:relative;
 }
 
 div#table {
@@ -50,4 +49,15 @@ form input[type=submit] {
 div#export_osm_too_large { color: red }
 
 #locate { position:absolute; right: 0; }
+
+#sidebar_left {
+	width: 17em;
+	position: absolute;
+}
+
+#sidebar_content, #map {
+	left: 17.5em;
+	position: relative;
+	width: 100%;
+}
 

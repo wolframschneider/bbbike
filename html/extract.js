@@ -620,9 +620,14 @@ function debug(text, id) {
 }
 
 function setMapHeight() {
-    var height = jQuery(window).height() - jQuery('#top').height() - jQuery('#sidebar').height() - jQuery('#footer').height() - 100 + 10;
+    var height = jQuery(window).height() - jQuery('#footer').height() - 50;
+    var width = jQuery(window).width() - jQuery('#sidebar_left').width() - 50;
     if (height < 200) height = 200;
+    
+    jQuery('#content').height(height);
+    jQuery('#content').width(width);
     jQuery('#map').height(height);
+    jQuery('#map').width(width);
 
     // debug("height: " + height + " d.height: " + jQuery(document).height() + " w.height: " + jQuery(window).height() + " top.h: " + jQuery('#top').height());
 };
