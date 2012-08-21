@@ -1,6 +1,6 @@
 // Copyright (c) by http://www.openstreetmap.org/export - OSM License, 2012
 // Copyright (c) 2012 Wolfram Schneider, http://bbbike.org
-// 
+//
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
@@ -70,14 +70,14 @@ function init_map_size() {
     var resize = null;
 
     // set map height depending on the free space on the browser window
-    setMapHeight();
+    setTimeout(function () { setMapHeight(); }, 100);
 
     // reset map size, 3x a second
     jQuery(window).resize(function () {
         if (resize) clearTimeout(resize);
         resize = setTimeout(function () {
             setMapHeight();
-        }, 300);
+        }, 500);
     });
 }
 
@@ -333,7 +333,7 @@ function osm_init(opt) {
         transform.setFeature(feature);
     }
 
-    // size of an area in square km 
+    // size of an area in square km
 
     function square_km(x1, y1, x2, y2) { // SW x NE
         var height = OpenLayers.Util.distVincenty({
@@ -620,10 +620,10 @@ function debug(text, id) {
 }
 
 function setMapHeight() {
-    var height = jQuery(window).height() - jQuery('#footer').height() - 50;
-    var width = jQuery(window).width() - jQuery('#sidebar_left').width() - 50;
+    var height = jQuery(window).height() - jQuery('#footer').height() - 10;
+    var width = jQuery(window).width() - jQuery('#sidebar_left').width() - 14;
     if (height < 200) height = 200;
-    
+
     jQuery('#content').height(height);
     jQuery('#content').width(width);
     jQuery('#map').height(height);

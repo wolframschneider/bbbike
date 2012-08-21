@@ -11,18 +11,23 @@ div#map { width: 100%; height: 100%; }
 
 div#footer_community { display: none; }
 
-div#copyright { 
-  font-size: x-small; 
+div#copyright {
+  font-size: x-small;
   margin: 0px;
   padding: 0px;
 }
 
 body {
-  margin: 10px;
+  margin: 4px;
   padding: 0px;
 }
 
-div#intro { position:static; } 
+div#border {
+	padding: 4px;
+	background-color: #FFF;
+}
+
+div#intro { position:static; }
 
 div#message {
  position:relative;
@@ -40,10 +45,10 @@ input[type=submit] { margin-top: 0.5em; }
 table tr td { padding: 3px; }
 
 /* large green submit button, to focus user actions */
-form input[type=submit] { 
-        color: green; 
-        font-size: large; 
-        margin-bottom: 0.4em; 
+form input[type=submit] {
+        color: green;
+        font-size: large;
+        margin-bottom: 0.4em;
 }
 
 div#export_osm_too_large { color: red }
@@ -51,12 +56,13 @@ div#export_osm_too_large { color: red }
 #locate { position:absolute; right: 0; }
 
 #sidebar_left {
-	width: 17em;
+	width: 18em;
 	position: absolute;
+	margin-right: 0.5em;
 }
 
 #sidebar_content, #map {
-	left: 17.5em;
+	left: 18em;
 	position: relative;
 	width: 100%;
 }
