@@ -70,7 +70,7 @@ function init_map_size() {
     var resize = null;
 
     // set map height depending on the free space on the browser window
-    setTimeout(function () { setMapHeight(); }, 100);
+    setMapHeight();
 
     // reset map size, 3x a second
     jQuery(window).resize(function () {
