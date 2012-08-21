@@ -11,6 +11,8 @@ div#map { width: 100%; height: 100%; }
 
 div#footer_community { display: none; }
 
+div#footer { margin: 0.5em; }
+
 div#copyright {
   font-size: x-small;
   margin: 0px;
@@ -18,26 +20,30 @@ div#copyright {
 }
 
 body {
-  margin: 4px;
+  margin: 0px;
   padding: 0px;
 }
 
 div#border {
-	padding: 4px;
+	padding: 0px;
 	background-color: #FFF;
 }
 
-div#intro { position:static; }
+div#intro {
+	position:static;
+	margin: 0.5em;
+}
 
 div#message {
- position:relative;
+	position:relative;
 }
 
 div#table {
  position:relative;
  top:0;
  left:0;
- width: 32em;
+ width: 18em;
+ margin: 0.0em;
 }
 
 input[type=submit] { margin-top: 0.5em; }
@@ -58,7 +64,6 @@ div#export_osm_too_large { color: red }
 #sidebar_left {
 	width: 18em;
 	position: absolute;
-	margin-right: 0.5em;
 }
 
 #sidebar_content, #map {
@@ -66,3 +71,6 @@ div#export_osm_too_large { color: red }
 	position: relative;
 	width: 100%;
 }
+
+#sidebar_content { padding: 0px; margin: 0px; }
+
