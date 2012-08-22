@@ -620,12 +620,15 @@ function debug(text, id) {
 }
 
 function setMapHeight() {
-    var height = jQuery(window).height() - jQuery('#footer').height() -28;
-    var width = jQuery(window).width() - jQuery('#sidebar_left').width() - 1;
+    var height = jQuery(window).height();
+    var width = jQuery(window).width() - jQuery('#sidebar_left').width();
     if (height < 200) height = 200;
 
-    jQuery('#content').height(height);
-    jQuery('#content').width(width);
+    // jQuery('#content').height(height);
+    // jQuery('#content').width(width);
+    width = Math.floor(width);
+    height = Math.floor(height);
+    
     jQuery('#map').width(width);
     jQuery('#map').height(height);
 
