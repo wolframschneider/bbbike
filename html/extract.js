@@ -628,7 +628,7 @@ function setMapHeight() {
     // jQuery('#content').width(width);
     width = Math.floor(width);
     height = Math.floor(height);
-    
+
     jQuery('#map').width(width);
     jQuery('#map').height(height);
 
