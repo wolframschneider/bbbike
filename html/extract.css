@@ -42,8 +42,9 @@ div#table {
  position:relative;
  top:0;
  left:0;
- width: 18em;
+ width: 21em;
  margin: 0.0em;
+ border-spacing: 1px;
 }
 
 input[type=submit] { margin-top: 0.5em; }
@@ -54,7 +55,8 @@ table tr td { padding: 3px; }
 form input[type=submit] {
         color: green;
         font-size: large;
-        margin-bottom: 0.4em;
+	margin-top: 0.3em;
+	margin-bottom: 0em;
 }
 
 div#export_osm_too_large { color: red }
@@ -76,3 +78,4 @@ div#export_osm_too_large { color: red }
 
 #sidebar_content { padding: 0px; margin: 0px; }
 
+hr { margin-top: 0.2em; margin-bottom: 0.2em; }
