@@ -155,7 +155,8 @@ slow-checks:	check-categories \
 		inaccessible_strassen inaccessible_landstrassen \
 		check-line-lengths check-dates \
 		check-coords.data \
-		persistent-tmp
+		persistent-tmp \
+		plz-test
 
 persistent-tmp:	fragezeichen-outdoor-nextcheck \
 		${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd \
@@ -186,7 +187,11 @@ persistent-tmp:	${PERSISTENTTMPDIR}/XXX-$(i).bbd
 # more checks, but even slower (about four minutes)
 really-slow-checks:	check-crossings-important \
 			check-nearest \
-			check-urls
+			check-urls \
+			plz-test
+
+plz-test:
+	cd $(BBBIKEDIR) && prove t/plz.t
 
 # this adds also "check-crossings-less-important", but the results of
 # these checks there were never looked at, so really not important...

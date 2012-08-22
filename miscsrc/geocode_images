@@ -9,7 +9,7 @@
 #
 
 use strict;
-our $VERSION = 1.31;
+our $VERSION = 1.32;
 
 use Cwd qw(realpath);
 use File::Spec;
@@ -28,6 +28,9 @@ use GPS::GpsmanData;
 use Karte::Standard;
 use Karte::Polar;
 use BBBikeUtil qw(s2hm is_in_path);
+
+sub parse_clock_adjust_file ($);
+sub _isodate_to_epoch ($);
 
 my $gps_data_dir = "$FindBin::RealBin/../misc/gps_data";
 my $no_gps_data_dir;
@@ -108,47 +111,11 @@ if (!-d $thumbnail_dir) {
 }
 
 my @cam_delta_mapping;
+my @ignore_mapping;
 if ($clock_adjust_file) {
     undef $clock_gps;
     undef $clock_camera;
-    open my $fh, $clock_adjust_file
-	or die "Can't open file $clock_adjust_file: $!";
-    while(<$fh>) {
-	chomp;
-	next if m{^\s*\#};
-	next if m{^\s*$};
-	my(@fields) = split /\s+/;
-	if (@fields != 3 && @fields != 4) {
-	    die <<EOF;
-Cannot parse line '$_' in $clock_adjust_file, must be either
-
-    isodate gpstime cameratime
-
-or
-
-    isodatetimefrom isodatetimeto gpstime cameratime
-EOF
-	}
-	my($from, $to, $gps, $camera);
-	if (@fields == 3) {
-	    $from = $fields[0] . 'T00:00:00';
-	    $to   = $fields[0] . 'T23:59:59';
-	    ($gps, $camera) = @fields[1,2];
-	} else {
-	    ($from, $to, $gps, $camera) = @fields;
-	}
-	my $from_epoch = do {
-	    my($Y,$M,$D,$h,$m,$s) = $from =~ $lax_iso_date_qr
-		or die "Cannot parse date '$from' as ISO date";
-	    timelocal($s,$m,$h,$D,$M-1,$Y-1900);
-	};
-	my $to_epoch = do {
-	    my($Y,$M,$D,$h,$m,$s) = $to   =~ $lax_iso_date_qr
-		or die "Cannot parse date '$to' as ISO date";
-	    timelocal($s,$m,$h,$D,$M-1,$Y-1900);
-	};
-	push @cam_delta_mapping, [$from_epoch, $to_epoch, get_cam_delta($gps, $camera)];
-    }
+    parse_clock_adjust_file $clock_adjust_file;
 }
 
 my $cam_delta = 0;
@@ -312,6 +279,7 @@ sub get_image_location {
     }
 
     my $epoch = timelocal($S,$M,$H,$d,$m-1,$y-1900);
+    return if check_ignore($epoch);
     my $this_cam_delta = get_matching_cam_delta($epoch) || $cam_delta;
     $epoch -= $this_cam_delta;
     my @l = localtime $epoch;
@@ -731,6 +699,80 @@ sub get_matching_cam_delta {
     undef;
 }
 
+sub check_ignore {
+    my($epoch) = @_;
+    for my $def (@ignore_mapping) {
+	my($from_epoch, $to_epoch, $reason) = @$def;
+	if ($from_epoch <= $epoch && $epoch <= $to_epoch) {
+	    warn "Ignore $epoch because of '$reason' ($from_epoch..$to_epoch)\n" if $debug;
+	    return 1;
+	}
+    }
+    0;
+}
+
+# Side effects:
+# - populate @cam_delta_mapping (adding to existing entries)
+sub parse_clock_adjust_file ($) {
+    my $clock_adjust_file = shift;
+    open my $fh, $clock_adjust_file
+	or die "Can't open file $clock_adjust_file: $!";
+    while(<$fh>) {
+	chomp;
+	next if m{^\s*\#};
+	next if m{^\s*$};
+	my(@fields) = split /\s+/, $_, 4;
+	if (@fields != 3 && @fields != 4) {
+	    die <<EOF;
+Cannot parse line '$_' in $clock_adjust_file, must be either
+
+    isodate gpstime cameratime
+
+or
+
+    isodatetimefrom isodatetimeto gpstime cameratime
+
+or
+
+    isodatetimefrom isodatetimeto Ignore: reason...
+
+EOF
+	}
+
+	# Is it the extended format ("Ignore:" ...)?
+	if (@fields == 4 && $fields[2] =~ m{^(.*):$}) {
+	    if ($1 ne 'Ignore') {
+		die <<EOF;
+Cannot parse line '$_' in $clock_adjust_file,
+unhandled keyword '$1:', only 'Ignore:' is allowed.
+EOF
+	    }
+	    # Ignore:
+	    my($from, $to, undef, $reason) = @fields;
+	    push @ignore_mapping, [_isodate_to_epoch($from), _isodate_to_epoch($to), $reason];
+	} else {
+	    my($from, $to, $gps, $camera);
+	    if (@fields == 3) {
+		$from = $fields[0] . 'T00:00:00';
+		$to   = $fields[0] . 'T23:59:59';
+		($gps, $camera) = @fields[1,2];
+	    } else {
+		($from, $to, $gps, $camera) = @fields;
+	    }
+	    my $from_epoch = _isodate_to_epoch $from;
+	    my $to_epoch   = _isodate_to_epoch $to;
+	    push @cam_delta_mapping, [$from_epoch, $to_epoch, get_cam_delta($gps, $camera)];
+	}
+    }
+}
+
+sub _isodate_to_epoch ($) {
+    my $isodate = shift;
+    my($Y,$M,$D,$h,$m,$s) = $isodate =~ $lax_iso_date_qr
+	or die "Cannot parse date '$isodate' as ISO date";
+    timelocal($s,$m,$h,$D,$M-1,$Y-1900);
+}
+
 __END__
 
 =head1 NAME
@@ -766,8 +808,8 @@ where the -clockgps value is what is visible on the photo and the
 -clockcamera value is what is visible in the EXIF data of the photo.
 
 It is also possible to maintain a database of such clock adjustments
-in a file. This is just a text file with whitespace-separated fields,
-either:
+in a file (which is specified with the C<-clockadjustfile> option).
+This is just a text file with whitespace-separated fields, either:
 
    ISO_date_time_from	ISO_date_time_to	gps_time	camera_time
 
@@ -781,12 +823,29 @@ ISO date is YYYYMMDD, with possible separators).
 The first field or first two fields denote the validity time of the
 adjustment.
 
+There's currently no time zone support. Currently it is assumed that
+the times of the photo files have the local time zone. This may change
+in the future.
+
+=head2 Ignoring photo files
+
+The C<-clockadjustfile> file can also be used to ignore photo files
+completely. Just put lines in the form
+
+   ISO_date_time_from	ISO_date_time_to	Ignore:	some text explaining the reason
+
+with the string "Ignore:" in the third field.
+
 =head1 EXAMPLES
 
 Assuming photos are located in files and subdirectories of the
-directory ~/images and the generated bbd should go to /tmp:
+directory ~/images, the gps tracks are in the default location
+(subdirectory misc/gps_data relative to the bbbike source directory),
+and the generated bbd should go to /tmp:
 
     ~/src/bbbike/miscsrc/geocode_images -o /tmp/geocoded_images.bbd ~/images
+
+The directory of gps tracks may be changed with the C<-gpsdatadir> option.
 
 Or using a "find" before:
 
