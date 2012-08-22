@@ -66,7 +66,7 @@ div#export_osm_too_large { color: red }
 	position: absolute;
 }
 
-#sidebar_content, #map {
+#map {
 	left: 18em;
 	position: relative;
 	width: 100%;
