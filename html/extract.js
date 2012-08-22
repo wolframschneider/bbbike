@@ -677,4 +677,8 @@ function locateMe_error(error) {
     return;
 }
 
+function google_plusone() {
+    jQuery.getScript('https://apis.google.com/js/plusone.js');
+    $('.gplus').remove();
+}
 // EOF
