@@ -79,3 +79,5 @@ div#export_osm_too_large { color: red }
 #sidebar_content { padding: 0px; margin: 0px; }
 
 hr { margin-top: 0.2em; margin-bottom: 0.2em; }
+
+#result { margin-top: 1em; padding: 0.5em; padding-bottom: 4em; }
