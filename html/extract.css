@@ -62,14 +62,14 @@ div#export_osm_too_large { color: red }
 #locate { position:absolute; right: 0; }
 
 #sidebar_left, #footer {
-	width: 19em;
+	width: 22em;
 	position: absolute;
 }
 
 #footer { bottom: 0em; }
 
 #map {
-	left: 19em;
+	left: 22em;
 	position: relative;
 	width: 100%;
 }
