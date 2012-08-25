@@ -8,9 +8,15 @@
 
 # configure city to test
 BEGIN {
-    my $city = "Cusco";
+    my $city = "SanFrancisco";
 
     $ENV{BBBIKE_DATADIR} = $ENV{DATA_DIR} = "data-osm/$city";
+    my $hoehe = "$ENV{BBBIKE_DATADIR}/hoehe";
+
+    if (! -e $hoehe ) {
+	print "1..0 # skip no file '$hoehe' does not exists\n";
+       exit;
+    }
 }
 
 use FindBin;
