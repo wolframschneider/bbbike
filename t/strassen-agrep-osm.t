@@ -13,6 +13,15 @@ use Data::Dumper;
 use strict;
 use warnings;
 
+BEGIN {
+    our $strassen = "data-osm/Berlin/strassen";
+
+    if (! -r $strassen) {
+	print "1..0 # skip no File '$strassen' does not exists\n";
+        exit;
+    }
+}
+
 my @search_types = ( "agrep", "String::Approx", "perl" );
 
 my @streets = (
@@ -24,14 +33,8 @@ my @streets = (
 
 my $debug = 0;
 
-my $strassen = "data-osm/Berlin/strassen";
 
-if (! -r $strassen) {
-    diag "File '$strassen' does not exists, ignore tests\n";
-    exit(0);
-} else {
-    plan tests => scalar(@streets) * 3;
-}
+plan tests => scalar(@streets) * 3;
 
 my $s_utf8   = Strassen->new($strassen);
 
