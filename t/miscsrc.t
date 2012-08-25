@@ -14,10 +14,9 @@ use Getopt::Long;
 BEGIN {
     if (!eval q{
 	use Test::More 'no_plan'; # number of tests varies
-        use Tk;
 	1;
     }) {
-	print "1..0 # skip no Test::More or Tk module\n";
+	print "1..0 # skip no Test::More module\n";
 	exit;
     }
 }
@@ -52,6 +51,9 @@ for my $f (@files) {
 	    if $f =~ m{/FixRemoteAddrHandler\.pm$} && !eval { require Apache2::Const; 1 } && !eval { require Apache::Constants; 1 };
 	myskip "$f works only with installed Tk::Zinc", 1
 	    if $f =~ m{/tkzincbbbike$} && !eval { require Tk::Zinc; 1 };
+
+	myskip "$f works only with installed Tk", 1
+	    if $f =~ m{miscsrc/(bbbike_chooser.pl|BBBikeRouteLister.pm|trafficlightgraph.pl)$} && !eval { require Tk; 1};
 
 	my @add_opts;
 	if ($f =~ m{\.pm$}) {
