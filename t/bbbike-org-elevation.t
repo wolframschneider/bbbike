@@ -46,6 +46,7 @@ use strict;
 use warnings;
 
 #plan tests => 50;
+plan tests => 1;
 my $debug = 2;
 
 my $s     = Strassen::Lazy->new("strassen");
