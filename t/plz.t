@@ -83,6 +83,11 @@ if (!GetOptions("create!" => \$create,
     die "Usage: $0 [-create] [-xxx] [-v] [-[no]extern] [-levenshtein]";
 }
 
+if (!$create && !-d $tmpdir) {
+    diag "Run in create mode first, no previous data found\n";
+    $create = 1;
+}
+
 if ($create) {
     plan 'no_plan';
 } else {
@@ -645,11 +650,6 @@ sub testplz {
 sub do_file {
     my $res = shift;
     my $file = ++$test_file;
-
-    if (!$create && !-d $tmpdir) {
-	diag "Run in create mode first\n";
-	$create = 1;
-    }
 
     if ($create) {
 	if (!-d $tmpdir) {
