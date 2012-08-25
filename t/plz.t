@@ -646,6 +646,11 @@ sub do_file {
     my $res = shift;
     my $file = ++$test_file;
 
+    if (!$create && !-d $tmpdir) {
+	diag "Run in create mode first\n";
+	$create = 1;
+    }
+
     if ($create) {
 	if (!-d $tmpdir) {
 	    require File::Path;
