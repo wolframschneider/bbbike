@@ -53,7 +53,8 @@ unless ($fast) {
     system("cd $FindBin::RealBin/../data && $make storable >/dev/null 2>&1");
 }
 
-for $ext ("", ".st") {
+my @list = (""); # ("", ".st")
+for $ext (@list) {
     if ($bench) {
 	my $t = timeit(1, 'do_tests()');
 	$times{$token} += $t->[$_] for (1..4);
