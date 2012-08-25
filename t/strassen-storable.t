@@ -34,7 +34,7 @@ BEGIN {
 # normal: 0.078125
 # Storable: 0.4375
 
-BEGIN { plan tests => 8 }
+BEGIN { plan tests => 4 }
 
 use vars qw($fast $bench $v);
 
