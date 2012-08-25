@@ -18,6 +18,7 @@ BEGIN { $bbbike_root = "/home/e/eserte/src/bbbike" }
 use lib (
 	 $bbbike_root,
 	 "$bbbike_root/lib",
+	"lib"
 	);
 
 use File::Temp qw(tempfile);
