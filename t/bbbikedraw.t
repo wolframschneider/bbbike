@@ -158,6 +158,11 @@ if ($^O eq 'MSWin32' && !eval { require Cairo; 1 }) {
     @modules = grep { !/^PDFCairo/ } @modules;
 }
 
+if ($ENV{BBBIKE_TEST_NO_MAPSERVER}) {
+    diag "Skip Mapserver tests BBBIKE_TEST_NO_MAPSERVER=$ENV{BBBIKE_TEST_NO_MAPSERVER} ...\n";
+    @modules = grep { !/^MapServer/ } @modules;
+}
+
 # No Mapserver for Windows
 if ($^O eq 'MSWin32') {
     diag "Skip Mapserver tests on Windows...\n";
