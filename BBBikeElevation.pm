@@ -221,7 +221,7 @@ sub elevation_net {
 
         my $s = StrassenNetz->new($streets);
         $s->make_net;
-        $s->source($streets);
+        $s->set_source($streets);
 
         $steigung_net = StrassenNetz->new($streets);
         $steigung_net->make_net;
