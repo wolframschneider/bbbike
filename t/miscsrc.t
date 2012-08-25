@@ -14,9 +14,10 @@ use Getopt::Long;
 BEGIN {
     if (!eval q{
 	use Test::More 'no_plan'; # number of tests varies
+        use Tk;
 	1;
     }) {
-	print "1..0 # skip no Test::More module\n";
+	print "1..0 # skip no Test::More or Tk module\n";
 	exit;
     }
 }

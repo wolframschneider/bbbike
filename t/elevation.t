@@ -8,7 +8,7 @@
 
 # configure city to test
 BEGIN {
-    my $city = "SanFrancisco";
+    my $city = "Cusco";
 
     $ENV{BBBIKE_DATADIR} = $ENV{DATA_DIR} = "data-osm/$city";
 }

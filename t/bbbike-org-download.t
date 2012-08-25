@@ -23,6 +23,10 @@ BEGIN {
 	print "1..0 # skip no Test::More module\n";
 	exit;
     }
+    if ($ENV{BBBIKE_TEST_NO_NETWORK}) {
+	print "1..0 # skip due no network\n";
+	exit;
+    }
 }
 
 plan 'no_plan';
@@ -41,9 +45,11 @@ my @listing;
 }
 
 {
+    my $random = $ENV{BBBIKE_TEST_SLOW_NETWORK} ? 0 : 1;
+
     my($dir) = tempdir("bbbike.org_download_XXXXXXXX", CLEANUP => 1, TMPDIR => 1)
 	or die "Cannot create temporary directory: $!";
-    my $city = $listing[rand(@listing)];
+    my $city = $random ? $listing[rand(@listing)] : 'Cusco';
     system($^X, $download_script, "-city", $city, "-o", $dir, "-agentsuffix", " (testing)");
     is $?, 0, "Downloading city '$city'";
     ok -d "$dir/$city", "Directory $dir/$city exists";

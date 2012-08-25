@@ -113,6 +113,8 @@ strassen-inline2-update:
 	-rm -f Strassen-Inline2/Inline2.pm
 	mv Strassen-Inline2/Inline.pm Strassen-Inline2/Inline2.pm
 
+distclean: clean
+
 clean:	ext-bbbikexs-clean \
 	ext-virtarray-clean \
 	ext-strassennetz-cnetfile-clean \

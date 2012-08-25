@@ -68,7 +68,9 @@ div#export_osm_too_large { color: red }
 	position: absolute;
 }
 
-#footer { bottom: 0em; }
+#footer {
+	bottom: 0em;
+}
 
 #map {
 	left: 22em;
