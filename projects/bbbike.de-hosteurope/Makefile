@@ -19,6 +19,7 @@
 #  test-local:	Run all tests locally.
 #  deploy:	Do everything from preparing to rsync'ing and testing.
 #  deploy-local:	Prepare a local distribution for testing. Do not rsync.
+#  deploy-pps:		Do a deployment to a pps system (bbbike-pps).
 #  test-makefile:	Same as deploy-local, but each make command has to
 #			be confirmed.
 #
@@ -41,6 +42,7 @@ TEMP_BLOCKINGS_DIR=	data/temp_blockings
 BBBIKE_HOSTEUROPE_SSH_HOST?=	${BBBIKE_HOSTEUROPE_HOST}
 STERNFAHRT_YEAR?=	2007
 KREISFAHRT_YEAR?=	2011
+TARGET_LIVE=		hosteurope
 
 EXTRA_MISCSRC_FILES=	bbd2esri \
 			relevant_errorlog.pl \
@@ -166,7 +168,7 @@ MKDIST_STYLE=	cp
 .ifndef TARGET
 .for t in ${DEPLOY_TARGETS}
 .if make($t)
-TARGET=hosteurope
+TARGET=${TARGET_LIVE}
 .endif
 .endfor
 .endif
@@ -201,7 +203,7 @@ MAPSERVER_TARGET=${TARGET}
       make(clean-cache-files-on-remote) || \
       make(diff-temp-blockings)      || \
       make(prepare-kreisfahrt-dist)
-TARGET=hosteurope
+TARGET=${TARGET_LIVE}
 .elif make(deploy-local)         || \
       make(deploy-local-data)    || \
       make(deploy-local-no-test) || \
@@ -209,10 +211,11 @@ TARGET=hosteurope
       make(test-local)
 TARGET=bbbike.hosteurope.herceg.de
 .elif make(automatic-deployment) || \
-      make(automatic-deployment-temp-blockings)
+      make(automatic-deployment-temp-blockings) || \
+      make(deploy-pps)
 # no TARGET=
 .else
-.error "Please set TARGET to hosteurope or bbbike.hosteurope.herceg.de"
+.error "Please set TARGET to ${TARGET_LIVE} or bbbike.hosteurope.herceg.de"
 .endif
 .endif
 
@@ -328,6 +331,9 @@ deploy-local:		${DEPLOY_LOCAL_TARGETS}
 
 .ORDER:			${DEPLOY_LOCAL_NO_TEST_TARGETS}
 deploy-local-no-test:	${DEPLOY_LOCAL_NO_TEST_TARGETS}
+
+deploy-pps:
+			${MAKE} deploy TARGET=bbbike-pps
 
 .ORDER:			${DEPLOY_DATA_TARGETS}
 deploy-data:		${DEPLOY_DATA_TARGETS}
@@ -764,6 +770,8 @@ post-deploy-local-info:
 	@echo "    ${MAKE} deploy"
 
 post-deploy-info:
+.ifdef TARGET
+.if ${TARGET} == ${TARGET_LIVE}
 	@echo "**********************************************************************"
 	@echo "Consider to do the following things now:"
 	@echo "* Update the fragezeichen_list pages:"
@@ -774,6 +782,8 @@ post-deploy-info:
 	@echo "    git push"
 	@echo "* Send all messages in GNUS' drafts folder"
 	@echo ""
+.endif
+.endif
 
 post-automatic-deploy-info:
 	@echo "**********************************************************************"
@@ -786,8 +796,8 @@ post-automatic-deploy-info:
 automatic-deployment:
 	-@${XTERM_CONF_TITLE} "BBBike pre-deployment git update"
 	$(HOME)/src/bbbike-aux/misc/bbbike-checkin-hosteurope.pl -update
-	-@${XTERM_CONF_TITLE} "BBBike local deployment"
-	nice ${MAKE} deploy-local NO_PARALLEL=1
+	-@${XTERM_CONF_TITLE} "BBBike pps deployment"
+	nice ${MAKE} deploy-pps NO_PARALLEL=1
 	-@${XTERM_CONF_TITLE} "BBBike deployment"
 	${MAKE} deploy
 	-@${XTERM_CONF_TITLE} "BBBike post deployment stuff"
