@@ -1,0 +1,67 @@
+#!/usr/local/bin/perl
+
+BEGIN {
+    system( "which", "osmium2shape" );
+    print "1..0 # skip no osmium2shape found, skip tests\n" if $?;
+    exit;
+}
+
+use FindBin;
+use lib ( "$FindBin::RealBin/..", "$FindBin::RealBin/../lib",
+    "$FindBin::RealBin", );
+
+use Getopt::Long;
+use Data::Dumper qw(Dumper);
+use Test::More;
+use File::Temp qw(tempfile);
+use IO::File;
+use Digest::MD5 qw(md5_hex);
+use File::stat;
+
+use strict;
+use warnings;
+
+plan tests => 4;
+
+my $pbf_file = 't/data-osm/Cusco.osm.pbf';
+my $pbf_md5  = "6dc9df64ddc42347bbb70bc134b4feda";
+
+# min size of garmin zip file
+my $min_size = 200_000;
+
+sub md5_file {
+    my $file = shift;
+    my $fh = new IO::File $file, "r";
+    die "open file $file: $!\n" if !defined $fh;
+
+    my $data;
+    while (<$fh>) {
+        $data .= $_;
+    }
+
+    $fh->close;
+
+    my $md5 = md5_hex($data);
+    return $md5;
+}
+
+######################################################################
+is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched" );
+
+my ( $fh, $tempfile ) = tempfile;
+my $prefix = $pbf_file;
+$prefix =~ s/\.pbf$//;
+my $st = 0;
+
+system(qq[world/bin/pbf2osm --shape $pbf_file]);
+is( $?, 0, "pbf2osm --shape converter" );
+my $out = "$prefix.shp.zip";
+$st = stat($out) or die "Cannot stat $out\n";
+
+system(qq[unzip -t $out]);
+is( $?, 0, "valid zip file" );
+
+my $size = $st->size;
+cmp_ok( $size, '>', $min_size, "$out: $size > $min_size" );
+
+__END__
