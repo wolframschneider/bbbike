@@ -37,8 +37,8 @@ sub md5_file {
 my $pbf_file  = 't/data-osm/Cusco.osm.pbf';
 my $pbf_file2 = 't/data-osm/Cusco2.osm.pbf';
 my $pbf_md5   = "6dc9df64ddc42347bbb70bc134b4feda";
-my $pbf2_md5  = "771752ab5a16e80720d5c5fb88d577ad";
-my $osm_md5   = "72a3c123a5c3c348f518a55f2b5c1e39";
+my $pbf2_md5  = "6dc9df64ddc42347bbb70bc134b4feda";
+my $osm_md5   = "d222cfe84480b8f0ac0081eaf6e2c2ce";
 my ( $fh, $tempfile ) = tempfile;
 
 is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched: $pbf_file" );
@@ -46,22 +46,22 @@ is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched: $pbf_file" );
 system(
 qq[world/bin/pbf2osm $pbf_file2 | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
 );
-is( $?, 0, "pbf2osm converter" );
-is( $osm_md5, md5_file($tempfile), "osm md5 checksum matched" );
+is( $?,                  0,        "pbf2osm converter" );
+is( md5_file($tempfile), $osm_md5, "osm md5 checksum matched" );
 
 system( "cp", $pbf_file, $pbf_file2 );
-is( $?, 0, "copy" );
-is( $pbf_md5, md5_file($pbf_file2), "md5 checksum matched: $pbf_file2" );
+is( $?,                   0,        "copy" );
+is( md5_file($pbf_file2), $pbf_md5, "md5 checksum matched: $pbf_file2" );
 
 system( "world/bin/pbf2pbf", $pbf_file2 );
 is( $?, 0, "pbf2pbf $pbf_file2" );
-is( $pbf2_md5, md5_file($pbf_file2),
+is( md5_file($pbf_file2), $pbf2_md5,
     "md5 checksum matched after running pbf2pbf: $pbf_file2" );
 
 system(
 qq[world/bin/pbf2osm $pbf_file2 | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
 );
-is( $?, 0, "pbf2osm converter" );
-is( $osm_md5, md5_file($tempfile), "osm md5 checksum matched" );
+is( $?,                  0,        "pbf2osm converter" );
+is( md5_file($tempfile), $osm_md5, "osm md5 checksum matched" );
 
 __END__
