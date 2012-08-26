@@ -13339,7 +13339,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_011938',
        data  => <<EOF,
-userdel	q4::inwork; 15052,14585 15272,14691 15345,14736 15383,14759
+userdel	q4::inwork; 15058,14575 15174,14638 15272,14691 15345,14736 15383,14759
 EOF
      },
      { from  => 1244065297, # 2009-06-03 23:41
@@ -18818,7 +18818,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_105791',
        data  => <<EOF,
-userdel	q4::inwork; 15052,14585 15272,14691
+userdel	q4::inwork; 15058,14575 15174,14638 15272,14691
 EOF
      },
      { from  => 1299740460, # 2011-03-10 08:01
@@ -19641,11 +19641,11 @@ EOF
 userdel	q4::inwork 10881,15047 10838,14962 10723,14772
 EOF
      },
-     { from  => 1314259200, # 2011-08-25 10:00
-       until => 1314576000, # 2011-08-29 02:00
-       text  => 'Berliner Allee (Weißensee): Veranstaltung, Fahrtrichtung gesperrt, stadteinwärts zwischen Pistoriusstr. und Langhansstr., 26.08.2011 10:00 Uhr bis 29.08.2011 02:00 Uhr ',
+     { from  => 1345708800, # 2012-08-23 10:00
+       until => 1346025600, # 2012-08-27 02:00
+       text  => 'Berliner Allee (Weißensee): Veranstaltung, Fahrtrichtung gesperrt stadteinwärts zwischen Pistoriusstr. und Langhansstr., 24.08.2012 10:00 Uhr bis 27.08.2012 02:00 Uhr ',
        type  => 'handicap',
-       source_id => 'IM_017716',
+       source_id => 'IM_019098',
        data  => <<EOF,
 userdel	q4::temp; 14014,16106 13826,16026 13737,15994 13630,15956
 userdel	q4::temp; 13623,15954 13512,15909
@@ -20018,7 +20018,7 @@ userdel	2::inwork 15479,16060 15592,16069 15664,16115 15731,16208
 EOF
      },
      { from  => 1330988400, # 2012-03-06 00:00
-       until => 1346968800, # 2012-09-07 00:00
+       until => 1345921074, # 2012-09-07 00:00 1346968800 # --- vorzeitig fertig geworden --- http://www.berlin.de/ba-reinickendorf/presse/archiv/20120824.1505.374170.html
        text  => 'Buddestraße, Sperrung von Bernstorffstraße bis Gorkistraße wegen Bauarbeiten',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120223.1505.366579.html',
