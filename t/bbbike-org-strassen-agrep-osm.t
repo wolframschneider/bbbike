@@ -14,6 +14,7 @@ use strict;
 use warnings;
 
 my $strassen = "data-osm/Berlin/strassen";
+
 BEGIN {
     my $strassen = "data-osm/Berlin/strassen";
 
