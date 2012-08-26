@@ -48,7 +48,7 @@ sub pdf_title {
 
     # return "BBBike"; # old style
 
-    my $url = $out->{Url};
+    my $url = $out->{Url} || "http://BBBike.org";
     $url =~ s,/+$,,;
     my $city;
     if ($url =~ m,/([^/]+)$,) {
