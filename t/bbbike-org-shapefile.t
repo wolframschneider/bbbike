@@ -21,7 +21,7 @@ use File::stat;
 use strict;
 use warnings;
 
-plan tests => 4;
+plan tests => 3;
 
 my $pbf_file = 't/data-osm/Cusco.osm.pbf';
 my $pbf_md5  = "6dc9df64ddc42347bbb70bc134b4feda";
