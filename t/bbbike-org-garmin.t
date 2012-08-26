@@ -42,7 +42,7 @@ sub md5_file {
 }
 
 ######################################################################
-is( $pbf_md5, md5_file($pbf_file), "md5 check sum matched" );
+is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched" );
 
 my ( $fh, $tempfile ) = tempfile;
 my $prefix = $pbf_file;
