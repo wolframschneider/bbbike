@@ -2,7 +2,7 @@
 
 use LWP::UserAgent;
 use Encode;
-use utf8; # test contains unicode characters, see Test::More::UTF8;
+use utf8;    # test contains unicode characters, see Test::More::UTF8;
 
 use strict;
 use warnings;
@@ -28,6 +28,7 @@ binmode \*STDOUT, "utf8";
 binmode \*STDERR, "utf8";
 
 my @cities = qw/Berlin Cottbus Toronto/;
+
 # unicode cities
 my @cities_utf8 = ( "Київ", "‏بيروت", "新加坡共和国" );
 
@@ -75,7 +76,7 @@ my @list = (
     },
 );
 
-my $count = 3 * scalar(@list);
+my $count = 3 * scalar(@list) + 2;
 foreach my $obj (@list) {
     $count += scalar( @{ $obj->{'match'} } );
 }
@@ -105,5 +106,10 @@ foreach my $obj (@list) {
         like $content, qr{$match}, qq{Found string '$match'};
     }
 }
+
+my $url  = "http://tile.bbbike.org/osm/mapnik-german/15/17602/10746.png";
+my $resp = $ua->get($url);
+is( $resp->content_type, "image/png", "$url content type image/png" );
+cmp_ok( $resp->content_length, ">", 10_000, "content length > 10k" );
 
 __END__
