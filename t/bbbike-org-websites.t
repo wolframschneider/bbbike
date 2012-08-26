@@ -74,6 +74,12 @@ my @list = (
         'min_size' => 5_000,
         'match'    => [ "</html>", "Choose map type", ' src="js/mc.js"' ]
     },
+    {
+        'page' => 'http://tile.bbbike.org/osm/mapnik-german/15/17602/10746.png',
+        'min_size'  => 10_000,
+        'match'     => [],
+        'mime_type' => 'image/png'
+    },
 );
 
 my $count = 3 * scalar(@list) + 2;
@@ -93,23 +99,19 @@ foreach my $obj (@list) {
     my $resp = $ua->get($url);
     ok( $resp->is_success, $url );
 
-    ok( $resp->content_is_html, "page $url is HTML" );
+    my $mime_type = exists $obj->{mime_type} ? $obj->{mime_type} : "text/html";
+    is( $resp->content_type, $mime_type, "page $url is $mime_type" );
     cmp_ok( $resp->content_length, ">", $obj->{min_size},
             "page $url is greather than: "
           . $resp->content_length . " > "
           . $obj->{min_size} );
 
     my $content = $resp->decoded_content;
-    next if !exists $obj->{'match'};
 
+    next if !exists $obj->{'match'};
     foreach my $match ( @{ $obj->{'match'} } ) {
         like $content, qr{$match}, qq{Found string '$match'};
     }
 }
-
-my $url  = "http://tile.bbbike.org/osm/mapnik-german/15/17602/10746.png";
-my $resp = $ua->get($url);
-is( $resp->content_type, "image/png", "$url content type image/png" );
-cmp_ok( $resp->content_length, ">", 10_000, "content length > 10k" );
 
 __END__
