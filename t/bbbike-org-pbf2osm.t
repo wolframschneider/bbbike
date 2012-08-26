@@ -16,8 +16,7 @@ use Digest::MD5 qw(md5_hex);
 use strict;
 use warnings;
 
-plan tests => 1;
-my $debug = 2;
+plan tests => 13;
 
 sub md5_file {
     my $file = shift;
