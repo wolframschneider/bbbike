@@ -13,9 +13,10 @@ BEGIN {
     $ENV{BBBIKE_DATADIR} = $ENV{DATA_DIR} = "data-osm/$city";
     my $hoehe = "$ENV{BBBIKE_DATADIR}/hoehe";
 
-    if (! -e $hoehe ) {
-	print "1..0 # skip no file '$hoehe' does not exists, skip test\n";
-       exit;
+    if ( !-e $hoehe ) {
+        print "1..0 # skip no file '$hoehe' does not exists, skip test\n";
+        print qq{       please run: make CITIES="$city" fetch convert\n};
+        exit;
     }
 }
 

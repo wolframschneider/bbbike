@@ -16,8 +16,9 @@ use warnings;
 BEGIN {
     our $strassen = "data-osm/Berlin/strassen";
 
-    if (! -r $strassen) {
-	print "1..0 # skip no File '$strassen' does not exists\n";
+    if ( !-r $strassen ) {
+        print "1..0 # skip no File '$strassen' does not exists\n";
+        print qq{please run: make CITIES="Berlin" fetch convert\n};
         exit;
     }
 }
@@ -33,10 +34,9 @@ my @streets = (
 
 my $debug = 0;
 
-
 plan tests => scalar(@streets) * 3;
 
-my $s_utf8   = Strassen->new($strassen);
+my $s_utf8 = Strassen->new($strassen);
 
 # agrep or perl
 # String::Approx or perl
