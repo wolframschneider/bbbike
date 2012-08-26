@@ -2,8 +2,10 @@
 
 BEGIN {
     system( "which", "osmium2shape" );
-    print "1..0 # skip no osmium2shape found, skip tests\n" if $?;
-    exit;
+    if ($?) {
+        print "1..0 # skip no osmium2shape found, skip tests\n";
+        exit;
+    }
 }
 
 use FindBin;
