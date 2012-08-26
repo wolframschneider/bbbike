@@ -53,6 +53,16 @@ my @list = (
         'min_size' => 2_000,
         'match'    => [qr{</html>}]
     },
+    {
+        'page'     => 'http://tile.bbbike.org/osm/',
+        'min_size' => 1_500,
+        'match'    => [qr{</html>}]
+    },
+    {
+        'page'     => 'http://tile.bbbike.org/mc/',
+        'min_size' => 5_000,
+        'match'    => [qr{</html>}]
+    },
 );
 
 plan tests => 4 * scalar(@list);
