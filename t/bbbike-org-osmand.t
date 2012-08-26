@@ -52,11 +52,11 @@ my $st = 0;
 system(qq[world/bin/pbf2osm --osmand $pbf_file]);
 is( $?, 0, "pbf2osm --osmand converter" );
 my $out = "$prefix.obf.zip";
+$st = stat($out) or die "Cannot stat $out\n";
 
 system(qq[unzip -t $out]);
 is( $?, 0, "valid zip file" );
 
-$st = stat($out);
 my $size = $st->size;
 cmp_ok( $size, '>', $min_size, "$out: $size > $min_size" );
 

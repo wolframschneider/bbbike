@@ -53,11 +53,11 @@ my $st = 0;
 system(qq[world/bin/pbf2osm --garmin $pbf_file osm]);
 is( $?, 0, "pbf2osm --garmin converter" );
 my $out = "$prefix.garmin-osm.zip";
+$st = stat($out) or die "Cannot stat $out\n";
 
 system(qq[unzip -t $out]);
 is( $?, 0, "valid zip file" );
 
-$st = stat($out);
 cmp_ok( $st->size, '>', $min_size, "$out greather than $min_size" );
 
 # known styles
