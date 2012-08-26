@@ -1,11 +1,10 @@
-#!/usr/bin/perl -w
+#!/usr/local/bin/perl
 # -*- perl -*-
 
 #
 # Author: Slaven Rezic
 #
 
-use strict;
 
 use FindBin;
 use lib ("$FindBin::RealBin/..",
@@ -18,6 +17,9 @@ use Strassen::Util;
 use Benchmark;
 use Getopt::Long;
 use Data::Dumper;
+
+use strict;
+use warnings;
 
 BEGIN {
     if (!eval q{
