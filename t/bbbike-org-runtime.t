@@ -1,0 +1,26 @@
+#!/usr/local/bin/perl
+
+BEGIN { }
+
+use FindBin;
+use lib ( "$FindBin::RealBin/..", "$FindBin::RealBin/../lib",
+    "$FindBin::RealBin", );
+
+use Test::More;
+
+use strict;
+use warnings;
+
+my @program = qw(world/bin/bbbike-build-runtime
+  world/bin/bbbike-build-runtime-perl.pl);
+
+plan tests => scalar(@program);
+
+######################################################################
+#
+foreach my $prog (@program) {
+    system($prog);
+    is( $?, 0, "$prog" );
+}
+
+__END__
