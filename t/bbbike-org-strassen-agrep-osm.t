@@ -13,8 +13,9 @@ use Data::Dumper;
 use strict;
 use warnings;
 
+my $strassen = "data-osm/Berlin/strassen";
 BEGIN {
-    our $strassen = "data-osm/Berlin/strassen";
+    my $strassen = "data-osm/Berlin/strassen";
 
     if ( !-r $strassen ) {
         print qq{1..0 # skip no File '$strassen' does not exists\n};
