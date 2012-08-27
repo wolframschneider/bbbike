@@ -82,7 +82,7 @@ my @list = (
     },
 );
 
-my $count = 3 * scalar(@list) + 2;
+my $count = 3 * scalar(@list);
 foreach my $obj (@list) {
     $count += scalar( @{ $obj->{'match'} } );
 }
