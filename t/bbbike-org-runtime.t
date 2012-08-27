@@ -12,7 +12,9 @@ use strict;
 use warnings;
 
 my @program = qw(world/bin/bbbike-build-runtime
-  world/bin/bbbike-build-runtime-perl.pl);
+  world/bin/bbbike-build-runtime-perl.pl
+  world/bin/bbbike-build-runtime-perl-devel.pl
+);
 
 plan tests => scalar(@program);
 
