@@ -44,7 +44,7 @@ my ( $fh, $tempfile ) = tempfile;
 is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched: $pbf_file" );
 
 system(
-qq[world/bin/pbf2osm $pbf_file2 | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
+qq[world/bin/pbf2osm $pbf_file | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
 );
 is( $?,                  0,        "pbf2osm converter" );
 is( md5_file($tempfile), $osm_md5, "osm md5 checksum matched" );
