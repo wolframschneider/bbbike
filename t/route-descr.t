@@ -17,6 +17,7 @@ use Route;
 use Route::Descr;
 use Strassen::Core;
 use Strassen::StrassenNetz;
+use Data::Dumper;
 
 use BBBikeTest qw(using_bbbike_test_data);
 
@@ -41,10 +42,18 @@ my %stdargs = (-net => $net);
 
 no warnings 'qw'; # because of (x,y)
 
+sub bbbike_world_ext {
+   my $out = shift;
+
+   map { delete $out->{$_} } qw/City_en City_local Url/;
+}
+
 {
     my @coords = map {[split /,/]} qw(8291,8773 8425,8775 8472,8776 8594,8777 8763,8780 8982,8781 9063,8935 9111,9036 9115,9046 9150,9152 9170,9206 9211,9354 9248,9350 9280,9476 9334,9670 9387,9804 9334,9670 9280,9476 9248,9350 9225,9111 9224,9053 9225,9038 9227,8890 9229,8785);
     {
 	my $out = Route::Descr::convert(%stdargs, -route => Route->new_from_realcoords([@coords]));
+	bbbike_world_ext($out);
+
 	is_deeply $out, {
 			 "Title" => "Route von Dudenstr. bis Mehringdamm",
 			 "Start" => "Dudenstr.",
@@ -62,6 +71,8 @@ no warnings 'qw'; # because of (x,y)
     }
     {
 	my $out = Route::Descr::convert(%stdargs, -lang => 'en', -route => Route->new_from_realcoords([@coords]));
+	bbbike_world_ext($out);
+
 	is_deeply $out, {
 			 "Title" => "Route from Dudenstr. to Mehringdamm",
 			 "Start" => "Dudenstr.",
@@ -83,6 +94,8 @@ no warnings 'qw'; # because of (x,y)
     my @coords = map {[split /,/]} qw(7866,9918 7906,10098 7813,10112 7702,10146 7698,10147 7579,10183);
     {
 	my $out = Route::Descr::convert(%stdargs, -route => Route->new_from_realcoords([@coords]));
+	bbbike_world_ext($out);
+
 	is_deeply $out, {
 			 "Title" => "Route von B\374lowstr. (Sch\366neberg) bis B\374lowstr. (Sch\366neberg)",
 			 "Start" => "B\374lowstr. (Sch\366neberg)",
@@ -97,6 +110,8 @@ no warnings 'qw'; # because of (x,y)
 
     {
 	my $out = Route::Descr::convert(%stdargs, -lang => 'en', -route => Route->new_from_realcoords([@coords]));
+	bbbike_world_ext($out);
+
 	is_deeply $out, {
 			 "Title" => "Route from B\374lowstr. (Sch\366neberg) to B\374lowstr. (Sch\366neberg)",
 			 "Start" => "B\374lowstr. (Sch\366neberg)",
@@ -114,6 +129,8 @@ no warnings 'qw'; # because of (x,y)
     my @coords = map {[split /,/]} qw(8291,8773 8425,8775 8472,8776 8594,8777 8689,8779 8763,8780 8982,8781 9063,8935);
     add_missing_points(\@coords);
     my $out = Route::Descr::convert(%stdargs, -route => Route->new_from_realcoords([@coords]));
+    bbbike_world_ext($out);
+
     is_deeply $out, {
 		     "Title" => "Route von Dudenstr. bis Methfesselstr.",
 		     "Start" => "Dudenstr.",
@@ -131,6 +148,8 @@ no warnings 'qw'; # because of (x,y)
     my @coords = map {[split /,/]} qw(13711,10022 13789,9949 13829,9905 13884,9882 13995,9834);
     {
 	my $out = Route::Descr::convert(%stdargs, -route => Route->new_from_realcoords([@coords]));
+        bbbike_world_ext($out);
+
 	is_deeply $out, {
 			 "Title" => "Route von Puschkinallee bis Puschkinallee",
 			 "Start" => "Puschkinallee",
@@ -144,6 +163,8 @@ no warnings 'qw'; # because of (x,y)
     }
     {
 	my $out = Route::Descr::convert(%stdargs, -lang => 'en', -route => Route->new_from_realcoords([@coords]));
+        bbbike_world_ext($out);
+
 	is_deeply $out, {
 			 "Title" => "Route from Puschkinallee to Puschkinallee",
 			 "Start" => "Puschkinallee",
