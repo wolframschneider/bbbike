@@ -115,7 +115,7 @@ sub convert {
 	die "Invalid argument to outout method";
     }
     $VERBOSE = $verbose if defined $verbose;
-    &init_msg($lang) if $lang;
+    init_msg($lang);
 
     # if no translation is available, fall back to english
     if ($lang && $lang ne 'en' && $lang ne 'de' && !$msg) {
@@ -169,9 +169,11 @@ sub convert {
 		@lines && $lines[-1]->[2] eq $strname && $extra && $extra->{ImportantAngleCrossingName};
 	    if ($winkel < 30 && (!$extra || !$extra->{ImportantAngle})) {
 		$richtung = "";
+	    } elsif ($winkel >= 160 && $winkel <= 200) { # +/- 20° from 180°
+		$richtung = M('umdrehen');
 	    } else {
 		$richtung =
-		    ($winkel <= 45 ? 'halb' : '') .
+		    ($winkel <= 45 ? M('halb') : '') .
 			($richtung eq 'l' ? M('links') : M('rechts')) . ' ' .
 			    "($winkel°) ";
 		if (($lang||'') eq 'en') {

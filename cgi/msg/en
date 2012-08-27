@@ -270,5 +270,6 @@ return {
     "Start eingeben oder Marker auf der Karte setzen" => "Enter start street name or set marker on the map",
     "Ziel eingeben oder Marker auf der Karte setzen"  => "Enter destination street name or set marker on the map",
     "Via eingeben oder Marker auf der Karte setzen"   => "Enter via street name or set marker on the map",
+    "umdrehen"                                        => "turn around",
 };
 
