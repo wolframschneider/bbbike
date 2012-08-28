@@ -162,7 +162,7 @@ function init() {
 
         setTimeout(function () {
             state.validateControls()
-        }, 50);
+        }, 250);
     }
 
     // default city
