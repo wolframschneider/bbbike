@@ -82,16 +82,19 @@ function init_map_size() {
 }
 
 function init() {
+    initKeyPress();
+
     init_map_size();
     var opt = {
         "back_button": 0
     };
 
+    var keyboard = new OpenLayers.Control.KeyboardDefaults({}); // "observeElement": jQuery("#map")} );
     map = new OpenLayers.Map("map", {
         controls: [
         new OpenLayers.Control.Navigation(), new OpenLayers.Control.PanZoomBar(), new OpenLayers.Control.ScaleLine({
             geodesic: true
-        }), new OpenLayers.Control.MousePosition(), new OpenLayers.Control.Attribution(), new OpenLayers.Control.LayerSwitcher(), new OpenLayers.Control.KeyboardDefaults()],
+        }), new OpenLayers.Control.MousePosition(), new OpenLayers.Control.Attribution(), new OpenLayers.Control.LayerSwitcher(), keyboard],
 
         maxExtent: new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
         maxResolution: 156543.0339,
@@ -100,6 +103,7 @@ function init() {
         projection: new OpenLayers.Projection("EPSG:900913"),
         displayProjection: new OpenLayers.Projection("EPSG:4326")
     });
+
 
     map.addLayer(new OpenLayers.Layer.OSM("Esri Topographic", "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}.png", {
         tileOptions: {
@@ -681,4 +685,43 @@ function google_plusone() {
     jQuery.getScript('https://apis.google.com/js/plusone.js');
     $('.gplus').remove();
 }
+
+
+/*
+  here are dragons!
+  code copied from js/OpenLayers-2.11/OpenLayers.js: OpenLayers.Control.KeyboardDefaults
+
+  see also: http://www.mediaevent.de/javascript/Extras-Javascript-Keycodes.html
+*/
+function initKeyPress() {
+    // move all maps left/right/top/down
+
+    function moveMap(direction, option) {
+        var animate = false;
+
+        map.pan(direction, option, {
+            animate: animate
+        });
+    };
+
+    OpenLayers.Control.KeyboardDefaults.observeElement = jQuery("#map");
+
+    OpenLayers.Control.KeyboardDefaults.prototype.defaultKeyPress = function (evt) {
+        switch (evt.keyCode) {
+        case OpenLayers.Event.KEY_LEFT:
+            moveMap(-this.slideFactor, 0);
+            break;
+        case OpenLayers.Event.KEY_RIGHT:
+            moveMap(this.slideFactor, 0);
+            break;
+        case OpenLayers.Event.KEY_UP:
+            moveMap(0, -this.slideFactor);
+            break;
+        case OpenLayers.Event.KEY_DOWN:
+            moveMap(0, this.slideFactor);
+            break;
+        }
+    };
+};
+
 // EOF
