@@ -166,7 +166,7 @@ function init() {
 
         setTimeout(function () {
             state.validateControls()
-        }, 50);
+        }, 250);
     }
 
     // default city
@@ -316,12 +316,19 @@ function osm_init(opt) {
 
         bounds = bounds.clone().transform(map.getProjectionObject(), epsg4326);
 
-        $("#sw_lng").val(Math.round(bounds.left * decimals) / decimals);
-        $("#sw_lat").val(Math.round(bounds.bottom * decimals) / decimals);
-        $("#ne_lng").val(Math.round(bounds.right * decimals) / decimals);
-        $("#ne_lat").val(Math.round(bounds.top * decimals) / decimals);
+        function v(value) {
+            var val = Math.round(value * decimals) / decimals;
+            if (val < -180) {
+                val += 360;
+            }
+            return val;
+        }
 
-        // $('input[name=sw_lat]', parent.document).attr("value", 'foo');
+        $("#sw_lng").val(v(bounds.left));
+        $("#sw_lat").val(v(bounds.bottom));
+        $("#ne_lng").val(v(bounds.right));
+        $("#ne_lat").val(v(bounds.top));
+
         mapnikSizeChanged();
     }
 
