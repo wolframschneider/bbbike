@@ -368,7 +368,6 @@ function osm_init(opt) {
 
     // deprecated, replaced by validateControlsAjax()
 
-
     function validateControlsGuess() {
         var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
 
