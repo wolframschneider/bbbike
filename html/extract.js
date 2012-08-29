@@ -320,7 +320,10 @@ function osm_init(opt) {
             var val = Math.round(value * decimals) / decimals;
             if (val < -180) {
                 val += 360;
+            } else if (val > 180) {
+                val -= 360;
             }
+
             return val;
         }
 
