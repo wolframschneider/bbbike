@@ -164,9 +164,7 @@ function init() {
             $("#ne_lat").val(ne_lat);
         };
 
-        setTimeout(function () {
-            state.validateControls()
-        }, 250);
+        // setTimeout(function () { state.validateControls() }, 50);
     }
 
     // default city
@@ -253,9 +251,8 @@ function osm_init(opt) {
             setTimeout(function () {
                 opt.back_function();
                 boundsChanged();
-            }, 500);
+            }, 50);
         }
-
     }
 
     function boundsChanged() {
@@ -368,6 +365,9 @@ function osm_init(opt) {
         return Math.round(height * width + 0.5);
         // return height + " " + width;
     }
+
+    // deprecated, replaced by validateControlsAjax()
+
 
     function validateControlsGuess() {
         var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
