@@ -286,7 +286,7 @@ Gustav-Müller-Str.	1 7643,8634 7642,8815
 Gustav-Müller-Platz	1 7644,8560 7614,8599 7643,8634 7682,8598 7644,8560
 #XXX del --- #: XXX Wird die Einbahnstraßenregelung hier aufgehoben? --- #: last_checked: 2012-03-06 --- #: next_check: 2012-04-20 --- Niederlagstr.	1:q3 9972,12184 9961,12273
 #Niederlagstr.	1 9943,12364 9934,12418
-#: last_checked: 2012-08-25
+#: last_checked: 2012-08-30
 #: next_check: 2013-01-01
 #: XXX danach evtl. wieder Einbahnstraße wiederherstellen, siehe oben
 Niederlagstr.	2:inwork 9943,12364 9934,12418
@@ -717,7 +717,7 @@ Privatstr. 13	1 13171,17335 13103,17280 13018,17264
 Preunelstr.	1 13012,17332 12965,17324 12930,17302 12865,17381
 #: by: ^^^
 Mollstr. (Richtungsfahrbahn)	1::igndisp 11723,13139 11843,13090 11904,13075 11958,13079 11985,13075
-Mollstr. (Richtungsfahrbahn)	1::igndisp 11985,13075 11966,13074 11905,13069 11881,13072 11839,13083 11739,13131 11723,13139
+Mollstr. (Richtungsfahrbahn)	1::igndisp 11985,13075 11966,13074 11905,13069 11839,13083 11739,13131 11723,13139
 Spittelmarkt (Richtungsfahrbahn)	1::igndisp 10213,11728 10238,11741 10299,11786
 Spittelmarkt (Richtungsfahrbahn)	1::igndisp 10299,11786 10240,11740 10213,11728
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -283,14523 -457,14536 -914,14602
@@ -1445,6 +1445,9 @@ Kiepenheuerallee: Straßenbahntrasse	3nocross -13311,462 -13203,434 -13157,394
 Wilhelmstr.: Mittelstreifen	3nocross -3824,13350 -3813,13404 -3803,13464
 Heerstr.: Mittelstreifen	3nocross -4882,12061 -4637,11982 -4500,11937
 #: by: ^^^
+Spandauer Str.: Straßenbahntrasse	3nocross 10437,12703 10387,12760 10360,12793
+Invalidenstr.: Mittelstreifen	3nocross 7814,13284 7840,13296 7880,13315
+Alt-Moabit: Mittelstreifen, hohe Bordsteine und parkende Autos	3nocross 7821,12934 7776,12943 7595,12980
 abgeschlossenes Tor	3 * 8237,20098 *
 abgeschlossenes Tor	3 * 8291,20112 *
 #
@@ -2072,7 +2075,11 @@ Drängelgitter	BNP:3::trailer=10 49739,-90894
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
-#: last_checked: 2012-08-23
+#: last_checked: 2012-08-31
+#: next_check: 2013-02-01
+Alt-Moabit - Invalidenstr.: wegen Bauarbeiten für die Straßenbahnanbindung gesperrt	2:inwork 7443,13008 7416,13058
+# 
+#: last_checked: 2012-08-30
 #: next_check: 2012-11-01
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
 #: XXX siehe auch Eintrag in handicap_s-orig
@@ -2116,7 +2123,7 @@ B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich de
 #: next_check: 2012-10-15
 Am Pankepark: Bauarbeiten, gesperrt	2:inwork 8152,14130 8246,14184
 # 
-#: last_checked: 2012-08-25
+#: last_checked: 2012-08-30
 #: next_check: 2012-10-15
 Scharrenstr.: wegen Bauarbeiten komplett gesperrt	2:inwork 10418,12016 10480,12077
 # 
@@ -2137,7 +2144,7 @@ Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552
 #: XXX wo gibt es Informationen hierzu?
 #: by: Kai Wagner (permanente Sperrung)
 #: confirmed_by: srt
-#: last_checked: 2012-07-23
+#: last_checked: 2012-08-31
 Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
 # 
 #XXX del --- #: last_checked: 2012-03-23 --- #: next_check: 2012-04-25 --- Spreeufer: wegen Bauarbeiten gesperrt	2:inwork 8596,12576 8495,12651 8473,12753
@@ -2159,8 +2166,8 @@ Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,2
 # 
 # XXX del --- laut http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a115_avus/de/bau.shtml?y=20120731 seit April schon offen! --- #: by: somebody via phone call ---#: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a115_avus/de/bau.shtml --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4396.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1110/nachricht4504.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1201/nachricht4557.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1206/nachricht4691.html---#: by: INKO_109786---#: last_checked: 2012-07-05---#: next_check: 2012-11-15---Hüttenweg: Sperrung wegen Bau an der Autobahn, wahrscheinlich bis Ende November 2012	2:inwork -739,6838 -927,6888
 # 
-#: last_checked: 2012-04-28
-#: next_check: 2012-07-15
+#: last_checked: 2012-08-30
+#: next_check: 2013-01-15
 #: note: abgeschlossener Zaun
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
 #
@@ -2181,13 +2188,13 @@ Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12
 #: next_check: ^^^
 #: last_checked: ^^^
 # 
-#: last_checked: 2012-08-25
+#: last_checked: 2012-08-30
 #: next_check: 2013-01-15
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #XXX del --- #: last_checked: 2011-12-25 --- #: next_check: 2012-01-01 --- #: XXX evenuell bleibt dieser Teil dauerhaft gesperrt, weil hier ein Einkaufszentrum entsteht? --- #: XXX auch die Ampel an der Kreuzung prüfen --- Treitschkestr.: Bauarbeiten am Kaufhaus, bis 2012	2:inwork 5219,6215 5125,6262 4971,6345
 # 
-#: last_checked: 2012-07-16
+#: last_checked: 2012-08-31
 #: next_check: 2013-01-15
 Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973
 # 
@@ -2282,9 +2289,9 @@ Kleiststr.: schwierig zu querender Mittelstreifen	3nocross 6532,10529 6636,10492
 Bundesallee: Queren nicht möglich	3nocross 5360,8197 5359,8140 5357,8013
 (Los-Angeles-Platz)	1s:q3 5681,10696 5822,10609
 Bregenzer Str.	1 4278,10262 4227,10014
-Tor zum Spielplatz	BNP:10 11865,13027
-Tor zum Spielplatz	BNP:10 11874,13048
-Tor zum Spielplatz	BNP:10 11815,13045
+Schwingtor zum Spielplatz	BNP:10 11865,13027
+Schwingtor zum Spielplatz	BNP:10 11874,13048
+Schwingtor zum Spielplatz	BNP:10 11815,13045
 tragen (Treppe, 14 Stufen)	0:20 8190,10960
 Matthäikirchplatz	1 7897,11287 7931,11391 7954,11399
 Matthäikirchplatz	1 7954,11399 7965,11380 7934,11275
@@ -2345,7 +2352,7 @@ Kniprodestr.: schlecht zu querender Mittelstreifen (Bordsteine, Verkehr)	3nocros
 #: by: rjoop
 (Treppe zur Putlitzbrücke): tragen, 35 Stufen	0:40 6209,14245
 An der Putlitzbrücke: Mittelstreifen schlecht zu überqueren	3nocross 6226,13951 6228,14077 6230,14184 6234,14247 6237,14309
-Rathenower Str.: schwierig zu querender Mittelstreifen	3nocross 7195,13046 7207,13118 7131,13261
+Rathenower Str.: schwierig zu querender Mittelstreifen	3nocross 7172,13051 7187,13126 7161,13190
 Eichkatzweg	1 1137,9921 1026,9772 925,9644
 Lärchenweg	1 1046,9989 1093,9952 1137,9921 1157,9907 1238,9869
 schieben - einzelne Stufen	0:20 1372,8011

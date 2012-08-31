@@ -102,8 +102,8 @@ Kolonie Frühauf: Sanierung der Radfahrverbindung. Welchen Belag wird der Weg dan
 # 
 #: XXX auch die Südpanke einzeichnen, falls sie sichtbar ist
 #: XXX wahrscheinlich sehr guter Beton, wahrscheinlich unbeleuchtet
-#: last_checked: 2012-08-10
-#: next_check: 2012-09-01
+#: last_checked: 2012-08-31
+#: next_check: 2012-10-01
 neuer Weg an der Südpanke: wo genau wird der Weg verlaufen? Nachts beleuchtet? Qualität?	?::inwork 8481,13936 8329,14120
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/31re.pdf/file
@@ -125,8 +125,9 @@ Tempelhofer Weg: wann werden hier Radstreifen angelegt?	? 12507,5228 12205,5545
 #: by: ^^^
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/20re.pdf/file?y=2012 ("geplanter Straßenname")
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/37re.pdf/file?y=2012 (Lage)
 #: XXX fehlt auch in Berlin.coords.data
-Fechinger Weg: entsteht hier irgendwo diese Straße?	?::projected 21298,11830 21363,11887
+Fechinger Weg: bereits fertiggestellt? Qualität? Genaue Lage?	?::projected 21373,11941 21371,11845 21430,11794
 # 
 #: last_checked: 2012-05-12 vvv
 #: next_check: 2013-01-01 vvv
@@ -579,10 +580,11 @@ Mittenwalde - Telz: Radweg in Bau	?::inwork 19835,-16307 19263,-16584 17784,-171
 # Das heißt diese Strecken werden nicht bei einer erweiterten Suche aufgenommen
 # und dem CGI-Benutzer auch nicht präsentiert.
 # 
+# XXX NEW	Friedrichstr. (Mitte): Baustelle, Straße vollständig gesperrt, eine Umleitung ist eingerichtet in beiden Richtungen zwischen Mittelstr. und Unter den Linden, 29.08.2012 07:00 Uhr bis 23.10.2012 16:00 Uhr	INKO_115395
+Friedrichstr.: hier auch für Radfahrer gesperrt?	?::inwork 9343,12464 9358,12351
 Kuglerstr.: genaue Qualität des Asphalts?	? 12030,15968 11961,16002 11900,16036
 Kuglerstr.: genaue Qualität des Asphalts?	? 11758,16111 11680,16151 11618,16183
 B2: gibt es hier Radwege?	? -9972,6846 -9854,6890 -9640,6971
-wo fängt die Radspur in der Müllerstr./Chausseestr. an	? 8246,14675 8153,14769 8138,14786 8057,14876
 #
 #: XXX: alter Eintrag von Johannes (...schmeisser...), nochmal prüfen!
 Sternstr. (Drewitz): gibt es hier einen Radweg? In beide Richtungen?	? -7917,-4792 -7969,-4828 -8021,-4937 -8033,-5049 -8053,-5116 -8113,-5204 -8116,-5221 -8165,-5236
@@ -600,7 +602,7 @@ Ottomar-Geschke-Str.: es scheint ein Zweirichtungsweg zu existieren. Prüfen!	? 2
 #: XXX fehlt in Berlin.coords.data
 Carpinusweg: Am Hegewinkel entsteht ein neues Wohngebiet, eventuell entsteht diese Straße hier?	?::inwork 759,5174 858,5085
 # 
-#XXX --- nein, hier passiert bestimmt nichts --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/21re.pdf/file?y=2012--- Rüdickenstr./Matenstr.: wird dieser Straßenabschnitt "eingezogen"?	? 17486,17266 17582,17335
+#XXX --- nein, hier passiert bestimmt nichts --- #: b!!!y: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/21re.pdf/file?y=2012--- Rüdickenstr./Matenstr.: wird dieser Straßenabschnitt "eingezogen"?	? 17486,17266 17582,17335
 # 
 Treitschkestr.: Situation hier nach der Eröffnung des "Boulevard Berlin"?	? 5125,6262 4971,6345 4854,6413
 # 
@@ -3045,13 +3047,6 @@ Heinrich-Grüber-Str. - Waldheimer Str.: Wie ist die Qualität des Weges? Nachts b
 #XXX del --- existiert nicht --- Putenweg - Waßmannsdorfer Chaussee: für Radfahrer befahrbar? Qualität?	? 16346,-394 16400,-409
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/56re.pdf/file?y=2011
-#: XXX laut osm cobblestone -> bestätigt, Kopfsteinpflaster
-#: XXX für Autos nicht befahrbar -> NN
-#: XXX anscheinend kein Straßenschild auf der nördlichen Seite
-#: XXX fehlt in Berlin.coords.data
-Deportationsweg: Existieren Straßenschilder? Nachts beleuchtet?	? 6920,14365 6857,14488
-# 
-#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/56re.pdf/file?y=2011
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/28re.pdf/file?y=2012
 #: XXX Privatstraße
 #: XXX fehlt in Berlin.coords.data
@@ -3205,11 +3200,3 @@ Emmentaler Str.: Ist die Straße eine Vorfahrtstraße?	? 7510,18364 7594,18427
 Adlergestell - Bohnsdorfer Str.: Qualität des südöstlichen Abschnitts? Ist der Weg hier auch unbeleuchtet?	? 22091,1317 22161,1193
 #: XXX laut osm "paved", im nördlichen Teil asphaltiert
 Waldweg zum Campingplatz: Qualität der Straße?	? 29208,71 29512,-619 29297,-717 28915,-1147 28565,-1339 28248,-1473 28162,-1294 28033,-1259 27845,-1324 27758,-1358
-#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1208/nachricht4747.html
-#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/includes/docs/doc495_120814moabiterwerderfussradweg_luftbild_ausschnittfoto.senstdtumswup.jpg
-#: XXX asphaltiert, beleuchtet, einige Fußgänger
-Weg am Moabiter Werder: genaue Lage des Weges? Kann die Straße Alt-Moabit überquert werden?	? 7644,12758 7795,12939
-#: XXX by wosch: ca. 2m breiter Fuß/Radweg, keine Schlaglöcher
-Döberitzer Verbindung: Wegbeschaffenheit? Nachts beleuchtet? Existieren Straßenschilder? Existiert eine Verbindung zur Döberitzer Str.?	? 7344,13435 7738,13627
-#: XXX Evtl. auch Mittelstreifen in der Invalidenstr. einzeichnen
-Weg durch den Gefängnispark: Qualität? Nachts beleuchtet? Wird der Park nachts geschlossen? Zeitverlust durch Drängelgitter?	? 7842,13324 7747,13504 7670,13464

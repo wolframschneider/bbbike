@@ -861,7 +861,15 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
+       {
+         'until' => 1346626800,
+         'text' => 'Turmstraße (Moabit): Veranstaltung, Straße vollständig gesperrt (31.08.2012 bis 02.09.2012) in beiden Richtungen zwischen Stromstr. und Waldstr.',
+         'from' => 1346295600,
+         'id' => 2129,
+         'data' => 'userdel	2::temp 5368,13406 5560,13382 5705,13359 5857,13342 5956,13330 6011,13330 6112,13327 6228,13324
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -1103,8 +1111,8 @@ userdel	2::inwork 19750,11730 19827,11686 19881,11591
        undef,
        {
          'source_id' => 'IM_017746',
-         'until' => 1346425200,
-         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, Fahrbahn manchmal gesperrt, bis 31.08.2012 ',
+         'until' => 1347721200,
+         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, Fahrbahn manchmal gesperrt, bis 15.09.2012 ',
          'from' => 1314604800,
          'id' => 2308,
          'data' => '#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/kastanienallee_pb.html
@@ -1163,7 +1171,7 @@ userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 
          'text' => 'Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Friedrichstr. gesperrt',
          'from' => undef,
          'id' => 2317,
-         'data' => '#: last_checked: 2012-08-23
+         'data' => '#: last_checked: 2012-08-30
 #: next_check: 2012-09-23
 userdel	q4::inwork; 9164,12172 9373,12197
 ',
@@ -1386,16 +1394,7 @@ userdel	2::inwork 8263,10349 8315,10347 8333,10167 8360,10133
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'INKO_113817',
-         'until' => 1346364000,
-         'text' => 'Chemnitzer Str. (Kaulsdorf): Baustelle, Straße vollständig gesperrt in beiden Richtungen zwischen Alt-Kaulsdorf und Am Niederfeld, 16.07.2012 bis 30.08.2012 ',
-         'from' => 1344282201,
-         'id' => 2367,
-         'data' => 'userdel	q4::inwork 22484,11270 22436,11054
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_019043',
          'until' => 1355580000,
@@ -1429,16 +1428,7 @@ userdel	2::night 14838,11410 14776,11400
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_019090',
-         'until' => 1346425200,
-         'text' => 'Köthener Brücke (Tiergarten): Baustelle, Straße vollständig gesperrt in beiden Richtungen, 17.08.2012 14:12 Uhr bis 31.08.2012 17:00 Uhr ',
-         'from' => 1345119120,
-         'id' => 2373,
-         'data' => 'userdel	q4::inwork 8443,10777 8430,10710
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_019071',
          'until' => 1351695600,
@@ -1458,6 +1448,17 @@ userdel	2::night 14838,11410 14776,11400
 userdel	q4::inwork 11615,15114 11595,15058
 ',
          'type' => 'handicap'
+       },
+       {
+         'until' => 1347227999,
+         'text' => 'Gauklerfest, Straßen am Schinkelplatz gesperrt, vom 30. August bis 09. September 2012',
+         'from' => 1346282867,
+         'id' => 2376,
+         'data' => 'userdel	2::temp 9994,12368 10008,12274 10010,12259 10035,12209
+userdel	2::temp 10008,12274 10058,12290 9996,12401
+userdel	2::temp 10091,12232 10058,12290
+',
+         'type' => 'gesperrt'
        }
      
 );

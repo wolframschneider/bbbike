@@ -28,7 +28,7 @@ Alte Jakobstr.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 10489,11405 10436,11344 1
 Elcknerplatz, Borgmannstr.: Bauarbeiten, Einbahnstraﬂe	q4::inwork; 22428,6063 22478,6041 22544,6037 22539,5956
 Kantstr.: Bauarbeiten am Zoofenster, Fahrbahn Richtung Westen gesperrt	q4::inwork; 5652,11004 5613,10963 5494,10973
 Burgstraﬂe: Bauarbeiten, Einbahnstraﬂenregelung	q4::inwork; 10166,12777 10132,12941
-Anna-Louisa-Karsch-Str.: vor der Friedrichsbr¸cke auf den rechten Gehweg fahren	q4::inwork; 10264,12826 10166,12777
+Anna-Louisa-Karsch-Str.: vor der Friedrichsbr¸cke auf den linken Gehweg fahren	q3::inwork; 10264,12826 10166,12777
 Am Zirkus: Baustelle, Einbahnstraﬂe	q3::inwork; 9170,13031 9239,12923
 Am Kupfergraben: Baustelle, Einbahnstraﬂe	q3::inwork; 9867,12651 9919,12613
 Wuhlewanderweg: steiler Anstieg, Fuﬂg‰nger	q4; 21998,12204 21970,12153
@@ -322,7 +322,7 @@ Uferweg, Mentzelpark: Fuﬂg‰nger, eng	q3 21761,4979 21821,4918 21834,4889
 (Mentzelpark): Fuﬂg‰nger	q1 21761,4979 21778,4916 21834,4889 21848,4882
 (Mentzelpark): Fuﬂg‰nger	q1 21726,4896 21741,4889 21778,4916
 Heinrich-Lassen-Park: Fuﬂg‰nger	q2 6664,8787 6740,8682 6815,8691 6912,8617
-(Uferweg am Nordhafen): Fuﬂg‰nger	q1 7753,14528 7695,14545 7498,14658
+(Uferweg am Nordhafen): Fuﬂg‰nger	q1 7753,14528 7695,14545 7496,14660
 An der Malche: teilweise eng und kurvig	q1 1106,20424 1032,20580 895,20523 834,20610 625,20738
 Am Friedhof: recht enger Radweg	q1 6380,17836 6376,17687 6347,17381
 Gerlachsheimer Weg: Fuﬂg‰nger	q2 13151,7914 13251,7972
@@ -459,7 +459,7 @@ Am Flutgraben: Fuﬂg‰nger	q1 13371,9974 13333,9929
 (Uferweg zum Ernst-Heilmann-Steg): sanfte Rampe, Fuﬂg‰nger	q2 13241,9995 13270,10030
 (Ernst-Heilmann-Steg): Fuﬂg‰nger, zwei Bodenschwellen	q3 13270,10030 13306,10006 13371,9974
 Buschrosenplatz: enge Straﬂe	q1 13002,5548 13054,5556 13075,5470
-Friedrichsbr¸cke: Engstellen wegen Bauarbeiten, Umweg ¸ber Burgstr.	q4 10086,12725 10166,12777
+Friedrichsbr¸cke: Engstellen wegen Bauarbeiten	q3 10086,12725 10166,12777
 (Hornbach-Parkplatz): Parkplatzbetrieb	q1 11871,5195 11867,5226 11705,5221 11654,5245 11598,5316 11579,5311
 Nollendorfplatz: Gehweg oder Parkplatz Richtung Motzstr. benutzen	q3; 7033,10328 6971,10346
 (Bl¸cherplatz - Waterloo-Ufer): Fuﬂg‰nger, Bordsteine	q2 9631,10142 9687,10180
@@ -1036,6 +1036,8 @@ Henrionweg: eng	q3 11154,21760 11145,21698
 (Weg zum Hohenschˆnhauser Tor): Fuﬂg‰nger	q1 15367,14512 15221,14550
 (Hohenschˆnhauser Tor): Fuﬂg‰nger (Einkaufszentrum)	q4 15221,14550 15058,14575
 (Anlieferung Hohenschˆnhauser Tor): Lieferverkehr, Fuﬂg‰nger	q1 15110,14486 15221,14550 15174,14638
+(Weg durch den Geschichtspark): Fuﬂg‰nger	q1 7840,13296 7822,13323 7811,13344 7784,13392 7767,13431 7732,13484 7651,13447
+(Elisabeth-Abegg-Str. - Weg am Moabiter Werder): Fuﬂg‰nger, kurvig	q4 7837,12860 7838,12870 7827,12880 7812,12884 7809,12901 7801,12910 7788,12907 7787,12918
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q3 11805,19071 11895,19183 11927,19308
 Ebersstr.: Sch¸ler	q2 7245,8583 7292,8631
 Straﬂe 103 (Niederschˆnhausen): enge Straﬂe	q1 10914,20065 11051,19789
@@ -1116,7 +1118,7 @@ Germendorfer Str.: enge Straﬂe mit parkenden Autos	q0 6376,20951 6494,20944 6977
 Wentowsteig: enge Straﬂe mit parkenden Autos	q1 6924,20695 6945,20805 6955,20859 6962,20895 6977,20984
 (Spreeuferweg): Fuﬂg‰nger	q1 4537,12531 4501,12544 4334,12551
 (Schˆnholzer Heide, parallel zur Friesenstr.): Fuﬂg‰nger	q1 8765,19288 8784,19253 8954,19151 9446,18855 9475,18862
-Nordufer: teilweise sehr schmaler Radweg	q1 7212,14738 7433,14656 7467,14632
+Nordufer: teilweise sehr schmaler Radweg	q1 7212,14738 7433,14656 7464,14636
 (Weg am Nordgraben): schmaler Weg, m‰ﬂiger Fuﬂg‰ngerverkehr	q2 3563,20589 3537,20624 3470,20683 3391,20746 3312,20789 3152,20852 3094,20905 3062,20923 3032,20930 2919,20910 2570,20837
 (Weg am Waldfriedhof Dahlem): Kurven	q2 1051,5525 825,5420 541,5306
 (Waldweg parallel zur Flanaganstr. zwischen H¸ttenweg und Im Jagen): starke Steigungen und Gef‰lle	q2 1051,5525 1697,5938
@@ -1192,7 +1194,7 @@ Bissingzeile: Einspurig, eng bei Gegenverkehr	q1 7959,10910 8113,10786
 (Berolinastr.): Fuﬂg‰nger	q1 11921,12990 11865,13027
 (Berolinastr.): Fuﬂg‰nger	q1 11815,13045 11719,13088
 (Berolinastr.): Weg am Spielplatz vorbei	q2 11865,13027 11815,13045
-(Berolinastr. - Mollstr.): Fuﬂg‰nger	q1 11865,13027 11874,13048 11881,13072
+(Berolinastr. - Mollstr.): Fuﬂg‰nger	q1 11865,13027 11874,13048 11905,13069
 (Berolinastr. - Mollstr.): Fuﬂg‰nger	q1 11608,12985 11681,13161
 (Lichtenberger Str.): Fuﬂg‰nger	q1 12054,12903 12039,12675
 (Verbindungsweg): Fuﬂg‰nger	q1 11646,13465 11703,13422

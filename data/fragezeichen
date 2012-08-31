@@ -1437,7 +1437,6 @@ Hechtgraben - Wartenberger Weg: Qualität? Nachts beleuchtet?	? 16163,18780 16319
 Am Luchgraben - B2: Qualität?	? 17060,20381 17009,20447 16787,20515 16748,20586 16768,20728 16752,20898 16643,21035
 B2 - Lindenberger Weg: Qualität?	? 16643,21035 16576,21165
 Heinrich-Grüber-Str. - Waldheimer Str.: Wie ist die Qualität des Weges? Nachts beleuchtet?	? 24495,13780 24524,13763 24599,13817 24771,13949
-Deportationsweg: Existieren Straßenschilder? Nachts beleuchtet?	? 6920,14365 6857,14488
 Feldspatzwenweg: Qualität? Wo genau befindet sich die Straße?	? 7609,23108 7583,23177 7804,23253 7831,23192
 Weg im Volkspark Wittenau: wie geht es weiter?	? 5356,21146 4942,20830
 Reinickes Hof: existiert eine Verbindung zum Saalmannsteig? Qualität?	? 5281,18996
@@ -1506,9 +1505,6 @@ Dannenwalder Str.: Ist die Straße eine Vorfahrtstraße?	? 7255,20793 7280,20895
 Emmentaler Str.: Ist die Straße eine Vorfahrtstraße?	? 7510,18364 7594,18427
 Adlergestell - Bohnsdorfer Str.: Qualität des südöstlichen Abschnitts? Ist der Weg hier auch unbeleuchtet?	? 22091,1317 22161,1193
 Waldweg zum Campingplatz: Qualität der Straße?	? 29208,71 29512,-619 29297,-717 28915,-1147 28565,-1339 28248,-1473 28162,-1294 28033,-1259 27845,-1324 27758,-1358
-Weg am Moabiter Werder: genaue Lage des Weges? Kann die Straße Alt-Moabit überquert werden?	? 7644,12758 7795,12939
-Döberitzer Verbindung: Wegbeschaffenheit? Nachts beleuchtet? Existieren Straßenschilder? Existiert eine Verbindung zur Döberitzer Str.?	? 7344,13435 7738,13627
-Weg durch den Gefängnispark: Qualität? Nachts beleuchtet? Wird der Park nachts geschlossen? Zeitverlust durch Drängelgitter?	? 7842,13324 7747,13504 7670,13464
 # added from ampeln-orig
 geschlossen bei Bedarf (?) (Zbr)	? 27657,-11741
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?) (B)	? 40248,14503
