@@ -7,7 +7,7 @@ use TileSize;
 use strict;
 use warnings;
 
-plan tests => 31;
+plan tests => 35;
 
 my $tile = new TileSize( 'debug' => 0 );
 
@@ -84,7 +84,7 @@ is(
 cmp_ok( $tile->area_size( 178.9, -18.3, -166.9, -8.4, 2 ), ">", 0 );
 cmp_ok(
     $tile->area_size( -172.68, -18.53, 173.12, -8.64, TileSize::FRACTAL_REAL ),
-    ">", 2_000
+    ">", 3_000
 );
 
 # test with real planet.osm data
