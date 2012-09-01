@@ -139,7 +139,7 @@ for my $f (@files) {
 		        | BBBikeDraw/PDFCairo.pm
 		      )$}x && !eval { require Cairo; 1};
 	# The following skips only if explicite no cgi-testing requested
-	if ($ENV{BBBIKE_TEST_NO_CGI_TESTS}) {
+	if ($ENV{BBBIKE_TEST_NO_CGI_TESTS} || $ENV{BBBIKE_TEST_NO_APACHE}) {
 	    myskip "$f needs Apache::Session::Counted", $tests_per_file
 	        if $f =~ m{^( BBBikeApacheSessionCounted\.pm
 		            | BBBikeApacheSessionCountedHandler\.pm
