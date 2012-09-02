@@ -22,6 +22,10 @@ BEGIN {
 	exit;
     }
 
+    if ($ENV{BBBIKE_TEST_ORG}) {
+	print "1..0 # skip due bbbike.de test only\n";
+	exit;
+    }
     if ($ENV{BBBIKE_TEST_SLOW_NETWORK}) {
 	print "1..0 # skip due slow network\n";
 	exit;
