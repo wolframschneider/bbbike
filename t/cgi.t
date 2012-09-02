@@ -65,6 +65,8 @@ my $ua = new LWP::UserAgent;
 $ua->agent("BBBike-Test/1.0");
 $ua->env_proxy;
 
+$skip{mapserver} = $ENV{BBBIKE_TEST_NO_MAPSERVER};
+
 if (!GetOptions("cgiurl=s" => sub {
 		    @urls = $_[1];
 		},
