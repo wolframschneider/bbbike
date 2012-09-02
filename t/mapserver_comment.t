@@ -16,6 +16,10 @@ use Encode qw(encode_utf8);
 no utf8;
 
 BEGIN {
+    if ($ENV{BBBIKE_TEST_NO_MAPSERVER}) {
+	print "1..0 # skip the mapserver\n";
+	exit;
+    }
     my @errors;
     for my $check (
 		   q{use Email::MIME; 1},
