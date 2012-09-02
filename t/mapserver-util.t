@@ -17,6 +17,10 @@ BEGIN {
 	print "1..0 # skip no WWW::Mechanize, WWW::Mechanize::FormFiller and/or Test::More modules\n";
 	exit;
     }
+    if ($ENV{BBBIKE_TEST_NO_MAPSERVER}) {
+	print "1..0 # skip mapserver tests\n";
+	exit;
+    }
 }
 
 use FindBin;
