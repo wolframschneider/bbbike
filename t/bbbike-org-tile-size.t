@@ -7,7 +7,7 @@ use TileSize;
 use strict;
 use warnings;
 
-plan tests => 35;
+plan 'no_plan';
 
 my $tile = new TileSize( 'debug' => 0 );
 
@@ -86,6 +86,19 @@ cmp_ok(
     $tile->area_size( -172.68, -18.53, 173.12, -8.64, TileSize::FRACTAL_REAL ),
     ">", 3_000
 );
+cmp_ok( $tile->area_size( 179.9, -18, +180, +18, TileSize::FRACTAL_100 ), "==", 36 );
+cmp_ok( $tile->area_size( 179, 0, 180, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( 179, 0, -180, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( -180, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( +180, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( +179, -1, -179, 1, TileSize::FRACTAL_100 ), "==", 4 );
+
+# illegal query
+cmp_ok( $tile->area_size( +179, 0, +178, 1, TileSize::FRACTAL_100 ), "==", 0 );
+cmp_ok( $tile->area_size( -178, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 0 );
+
+cmp_ok( $tile->area_size( -179, 0, 180, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( -179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 1 );
 
 # test with real planet.osm data
 $tile =
