@@ -103,7 +103,7 @@ for my $search_def (@search_types) {
 	    # see _strip_strasse and _expand_strasse in PLZ.pm
 	    {
 		local $TODO = undef if $encoding eq 'latin1' && $search_def eq 'agrep'; # this is working just accidentally, so turn TODO off
-		$check->("Dudenstraße", ["Dudenstr."]);
+		$check->("Dudenstra.e", ["Dudenstr."]);
 	    }
 	    $check->("Dudenstrasse", ["Dudenstr."]);
 	}
