@@ -32,6 +32,7 @@ is( $tile->area_size( 0.1,  0.1,  2.9,  2.9 ), 9 );
 is( $tile->area_size( 0.1, 0.1, 2.9, 2.9, TileSize::FRACTAL_100 ), 9 );
 is( $tile->area_size( -2.9, 0.1, -0.1, 2.9, TileSize::FRACTAL_100 ), 9 );
 is( $tile->area_size( -2.9, -2.9, -0.1, -0.1, TileSize::FRACTAL_100 ), 9 );
+is( $tile->area_size( -1, -1, -0, -2, TileSize::FRACTAL_100 ), 0 );
 is( $tile->area_size( 0,   50,  15,  54,  TileSize::FRACTAL_100 ), 60 );
 
 # dummy
