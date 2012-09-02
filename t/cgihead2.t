@@ -67,7 +67,6 @@ push @var, (qw(
 	       $BBBike::BBBIKE_MAPSERVER_ADDRESS_URL
 	       $BBBike::BBBIKE_MAPSERVER_DIRECT
 	       $BBBike::BBBIKE_MAPSERVER_INDIRECT
-	       $BBBike::BBBIKE_GOOGLEMAP_URL
 	       $BBBike::BBBIKE_LEAFLET_URL
 	       $BBBike::BBBIKE_LEAFLET_CGI_URL
 	       $BBBike::SF_DISTFILE_SOURCE
@@ -183,7 +182,7 @@ sub check_url {
 	    if ($resp->code == 500 && $resp->message =~ /No route to host/i); # 'Bad hostname' was part of this regexp, but this mask a real test failure!
 	#warn $resp->content;
 	ok($resp->is_success, "Successful request of $url")
-	    or diag $resp->status_line . " " . $resp->content;
+	    or diag "$url " . $resp->status_line . " " . $resp->content;
 	my $content_type = $resp->content_type;
 	if ($url eq $BBBike::BBBIKE_UPDATE_DATA_CGI ||
 	    $url eq $BBBike::BBBIKE_UPDATE_DIST_CGI ||
