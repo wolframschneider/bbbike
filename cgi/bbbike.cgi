@@ -818,11 +818,16 @@ my $is_streets;
       $selected_lang = $lang;
 
       $lang = "en" if $lang eq 'm'; # mobile
+  } elsif ($path eq '/cgi/bbbike.cgi' && $q->url() =~ /localhost/) {
+      # original bbbike.cgi script
+      $selected_lang = $lang = $local_lang = 'de';
   }
+
   $local_lang = &my_lang($lang, 1);
 
   $lang = $local_lang if $local_lang && !$selected_lang;
   $is_streets = &is_streets($q);
+  warn "lang: $lang, local_lang: $local_lang '$path'\n" if $debug >= 2;
 }
 
 # local language links redirect: /de/Berlin/ -> /Berlin/
