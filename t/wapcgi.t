@@ -23,6 +23,11 @@ BEGIN {
 	print "1..0 # skip no Test module\n";
 	exit;
     }
+ 
+    if ($ENV{BBBIKE_TEST_NO_APACHE}) {
+	print "1..0 # skip no apache\n";
+	exit;
+    }
 
     eval q{ use Image::Info qw(image_info) };
 }
