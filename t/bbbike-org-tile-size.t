@@ -86,8 +86,8 @@ is(
 # date border, Fiji island
 cmp_ok( $tile->area_size( 178.9, -18.3, -166.9, -8.4, 2 ), ">", 0 );
 cmp_ok(
-    $tile->area_size( -172.68, -18.53, 173.12, -8.64, TileSize::FRACTAL_REAL ),
-    ">", 3_000
+    $tile->area_size( +172.68, -18.53, -173.12, -8.64, TileSize::FRACTAL_REAL ),
+    ">", 100
 );
 cmp_ok( $tile->area_size( 179.9, -18, +180, +18, TileSize::FRACTAL_100 ),
     "==", 36 );
@@ -100,9 +100,15 @@ cmp_ok( $tile->area_size( +179, -1, -179, 1, TileSize::FRACTAL_100 ), "==", 4 );
 # illegal query
 cmp_ok( $tile->area_size( +179, 0, +178, 1, TileSize::FRACTAL_100 ), "==", 0 );
 cmp_ok( $tile->area_size( -178, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 0 );
+cmp_ok( $tile->area_size( -179.5, 0, -179, 1, TileSize::FRACTAL_100 ), "==",
+    1 );
+cmp_ok( $tile->area_size( +179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 1 );
 
-cmp_ok( $tile->area_size( -179, 0, 180,  1, TileSize::FRACTAL_100 ), "==", 1 );
-cmp_ok( $tile->area_size( -179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( -180, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( -179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 0 );
+
+cmp_ok( $tile->area_size( -180, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 0 );
+cmp_ok( $tile->area_size( +180, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 0 );
 
 # test with real planet.osm data
 $tile =
