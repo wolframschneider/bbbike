@@ -108,13 +108,16 @@ if (defined &Compress::Zlib::memGunzip && $do_accept_gzip) {
     $default_hdrs = HTTP::Headers->new();
 }
 
+my $message = qr/Dieses Programm sucht .*Fahrrad-.*Routen in Berlin/;
+$message = qr/Willkommen beim Radroutenplaner BBBike! Wir helfen Dir, eine sch/ if $ENV{BBBIKE_TEST_ORG};
+
 for my $cgiurl (@urls) {
     my $action;
     {
 	my($content, $resp) = std_get $cgiurl;
 	like $resp->header('Content_Type'),
 	    qr{^text/html(?:; charset=(?:ISO-8859-1|utf-8))?$}, "Expect text/html (regardless which charset)";
-	like_html $content, qr/Dieses Programm sucht .*Fahrrad-.*Routen in Berlin/,
+	like_html $content, $message,
 	    "Expected introduction text in body";
 	if ($content =~ /form action=\"([^\"]+)\"/i) {
 	    pass "Form found";
