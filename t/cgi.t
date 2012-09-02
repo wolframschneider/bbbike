@@ -66,6 +66,7 @@ $ua->agent("BBBike-Test/1.0");
 $ua->env_proxy;
 
 $skip{mapserver} = $ENV{BBBIKE_TEST_NO_MAPSERVER};
+$skip{palmdoc} = $ENV{BBBIKE_TEST_NO_MAPSERVER};
 
 if (!GetOptions("cgiurl=s" => sub {
 		    @urls = $_[1];
@@ -76,9 +77,10 @@ if (!GetOptions("cgiurl=s" => sub {
 		"xxx" => \$do_xxx,
 		"v!" => \$v,
 		"skip-mapserver!" => \$skip{mapserver},
+		"skip-palmdoc!" => \$skip{palmdoc},
 		"accept-gzip!" => \$do_accept_gzip,
 	       )) {
-    die "usage: $0 [-cgiurl url] [-fast] [-ortsuche] [-display] [-v] [-skip-mapserver] [-noaccept-gzip] [-xxx]";
+    die "usage: $0 [-cgiurl url] [-fast] [-ortsuche] [-display] [-v] [-skip-mapserver] [-skip-palmdoc] [-noaccept-gzip] [-xxx]";
 }
 
 if (!@urls) {
@@ -165,6 +167,8 @@ for my $cgiurl (@urls) {
     SKIP: {
 	    skip "No mapserver tests", 2
 		if $output_as eq 'mapserver' && $skip{mapserver};
+	    skip "No palmdoc tests", 2
+		if $output_as eq 'palmdoc' && $skip{palmdoc};
 
 	    my($content, $resp) = std_get "$action?startname=Dudenstr.&startplz=10965&startc=9222%2C8787&zielname=Grimmstr.+%28Kreuzberg%29&zielplz=10967&zielc=11036%2C9592&pref_seen=1&output_as=$output_as",
 					 testname => "Route result output_as=$output_as";
