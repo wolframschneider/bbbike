@@ -47,17 +47,22 @@ if (!defined $html_dir) {
 my @prog = qw(
 	      bbbike.cgi
 	      bbbike.en.cgi
-	      bbbike2.cgi
-	      bbbike2.en.cgi
-	      mapserver_address.cgi
-	      mapserver_comment.cgi
 	      wapbbbike.cgi
-	      bbbike-data.cgi
-	      bbbike-snapshot.cgi
 	      bbbikegooglemap.cgi
 	     );
+if (!$ENV{BBBIKE_TEST_NO_MAPSERVER}) {
+    push @prog, qw(
+	      mapserver_address.cgi
+              mapserver_comment.cgi
+	      bbbike-snapshot.cgi
+	      bbbike2.cgi
+	      bbbike2.en.cgi
+	      bbbike-data.cgi
+		);
+}
+
 if ($cgi_dir !~ m{(bbbike.hosteurope|radzeit)\Q.herceg.de}) {
-    push @prog, "bbbikegooglemap2.cgi";
+    push @prog, "bbbikegooglemap2.cgi" if !$ENV{BBBIKE_TEST_NO_MAPSERVER};
 }
 
 my @static = qw(
@@ -78,13 +83,15 @@ $mapserver_prog_url = $ENV{BBBIKE_TEST_MAPSERVERURL};
 if (!defined $mapserver_prog_url) {
     do "$FindBin::RealBin/../cgi/bbbike.cgi.config";
 }
+
+$mapserver_prog_url = undef if $ENV{BBBIKE_TEST_NO_MAPSERVER};
 if (defined $mapserver_prog_url) {
     push @prog, $mapserver_prog_url;
 } else {
     diag("No URL for mapserv defined");
 }
 
-my $extra_tests = 7;
+my $extra_tests = 3;
 plan tests => scalar(@prog) + scalar(@static) + $extra_tests;
 
 delete $ENV{PERL5LIB}; # override Test::Harness setting
