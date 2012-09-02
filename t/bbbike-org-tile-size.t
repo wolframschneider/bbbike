@@ -29,11 +29,11 @@ is( $tile->area_size( 0,    50,   15,   54 ),  60 );
 is( $tile->area_size( 0.1,  0,    3,    3 ),   9 );
 is( $tile->area_size( 0.1,  0.1,  2.9,  2.9 ), 9 );
 
-is( $tile->area_size( 0.1, 0.1, 2.9, 2.9, TileSize::FRACTAL_100 ), 9 );
-is( $tile->area_size( -2.9, 0.1, -0.1, 2.9, TileSize::FRACTAL_100 ), 9 );
+is( $tile->area_size( 0.1,  0.1,  2.9,  2.9,  TileSize::FRACTAL_100 ), 9 );
+is( $tile->area_size( -2.9, 0.1,  -0.1, 2.9,  TileSize::FRACTAL_100 ), 9 );
 is( $tile->area_size( -2.9, -2.9, -0.1, -0.1, TileSize::FRACTAL_100 ), 9 );
-is( $tile->area_size( -1, -1, -0, -2, TileSize::FRACTAL_100 ), 0 );
-is( $tile->area_size( 0,   50,  15,  54,  TileSize::FRACTAL_100 ), 60 );
+is( $tile->area_size( -1,   -1,   -0,   -2,   TileSize::FRACTAL_100 ), 0 );
+is( $tile->area_size( 0,    50,   15,   54,   TileSize::FRACTAL_100 ), 60 );
 
 # dummy
 is( $tile->area_size( 0,    0,   0,    0 ),   0 );
@@ -89,18 +89,19 @@ cmp_ok(
     $tile->area_size( -172.68, -18.53, 173.12, -8.64, TileSize::FRACTAL_REAL ),
     ">", 3_000
 );
-cmp_ok( $tile->area_size( 179.9, -18, +180, +18, TileSize::FRACTAL_100 ), "==", 36 );
-cmp_ok( $tile->area_size( 179, 0, 180, 1, TileSize::FRACTAL_100 ), "==", 1 );
-cmp_ok( $tile->area_size( 179, 0, -180, 1, TileSize::FRACTAL_100 ), "==", 1 );
-cmp_ok( $tile->area_size( -180, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 1 );
-cmp_ok( $tile->area_size( +180, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( 179.9, -18, +180, +18, TileSize::FRACTAL_100 ),
+    "==", 36 );
+cmp_ok( $tile->area_size( 179,  0,  180,  1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( 179,  0,  -180, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( -180, 0,  -179, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( +180, 0,  -179, 1, TileSize::FRACTAL_100 ), "==", 1 );
 cmp_ok( $tile->area_size( +179, -1, -179, 1, TileSize::FRACTAL_100 ), "==", 4 );
 
 # illegal query
 cmp_ok( $tile->area_size( +179, 0, +178, 1, TileSize::FRACTAL_100 ), "==", 0 );
 cmp_ok( $tile->area_size( -178, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 0 );
 
-cmp_ok( $tile->area_size( -179, 0, 180, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( -179, 0, 180,  1, TileSize::FRACTAL_100 ), "==", 1 );
 cmp_ok( $tile->area_size( -179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 1 );
 
 # test with real planet.osm data
