@@ -810,12 +810,12 @@ EOF
 	}
     }
 
-    {
+    if ($ENV{BBBIKE_TEST_ORG_LATER}) {
 	my $content = std_get $cgiurl . "?scope=wideregion&detailmapx=2&detailmapy=6&type=start&detailmap.x=200&detailmap.y=226";
 	like_html $content, qr{diese Koordinaten konnte keine Kreuzung gefunden werden}, "No crossing for coords in the Döberitzer Heide";
     }
 
-    {
+    if ($ENV{BBBIKE_TEST_ORG_LATER}) {
 	my $content = std_get $cgiurl . "?scope=wideregion&detailmapx=3&detailmapy=8&type=start&detailmap.x=304&detailmap.y=331";
 	like_html $content, qr{Rudolf-Breitscheid-Str}, "Crossing in Potsdam near Berlin, should get a street in Potsdam";
     }

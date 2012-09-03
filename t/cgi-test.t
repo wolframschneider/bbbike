@@ -17,6 +17,10 @@ BEGIN {
 	print "1..0 # skip no HTML::Form, LWP::UserAgent and/or Test::More modules\n";
 	exit;
     }
+    if ($ENV{BBBIKE_TEST_ORG_LATER}) {
+	print "1..0 # skip BBBIKE_TEST_ORG_LATER\n";
+	exit;
+    }
 }
 
 use FindBin;
