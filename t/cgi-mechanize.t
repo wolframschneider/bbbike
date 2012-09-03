@@ -21,6 +21,10 @@ BEGIN {
 	print "1..0 # skip no Test::More, URI::URL and/or WWW::Mechanize modules\n";
 	exit;
     }
+    if ($ENV{BBBIKE_TEST_ORG}) {
+	print "1..0 # skip on bbbike.org\n";
+	exit;
+    }
 }
 
 ######################################################################
