@@ -100,7 +100,7 @@ if (!@urls) {
 }
 
 my $ortsuche_tests = 11;
-$ortsuche_tests -= 7 if $ENV{BBBIKE_TEST_ORG_LATER};
+$ortsuche_tests -= 17 if $ENV{BBBIKE_TEST_ORG_LATER};
 
 plan tests => (254 + $ortsuche_tests) * scalar @urls;
 
