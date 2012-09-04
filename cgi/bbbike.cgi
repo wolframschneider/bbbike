@@ -2388,7 +2388,10 @@ EOF
 	    my $url = $q->url(-full=>0, -absolute=>1);
 	    $url =~ s,^/m/,/,;
 	    &social_link;
-	    print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+	    print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">classic view</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#android">Android App</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#iphone">iPhone App</a>\n};
+
         } else {
 	    my $url = $q->url(-full=>0, -absolute => 1);
 	    $url =~ s,^/\w\w/,/m/, || $url =~ s,/,/m/,;
@@ -5583,7 +5586,9 @@ EOF
 	    my $url = $q->url(-full=>0, -absolute=>1, -query=>1);
             $url =~ s,^/m/,/,;
             #&social_link;
-            print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+            print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">classic view</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#android">Android App</a>\n};
+            print qq{ <a class="mobile_link" href="/help.html#iphone">iPhone App</a>\n};
 	    print qq{</span>\n\n};
 
 	    print <<EOF;
