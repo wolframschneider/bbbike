@@ -100,9 +100,9 @@ if (!@urls) {
 }
 
 my $ortsuche_tests = 11;
-$ortsuche_tests -= 17 if $ENV{BBBIKE_TEST_ORG_LATER};
+my $bbbike_org = $ENV{BBBIKE_TEST_ORG_LATER} ? 7 : 0;
 
-plan tests => (254 + $ortsuche_tests) * scalar @urls;
+plan tests => (254 + $ortsuche_tests - $bbbike_org ) * scalar @urls;
 
 my $default_hdrs;
 if (defined &Compress::Zlib::memGunzip && $do_accept_gzip) {
