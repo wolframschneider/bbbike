@@ -851,7 +851,7 @@ if ($local_lang eq $selected_lang) {
   my $all = defined $q->param('all') ? $q->param('all') : 0;
 
   # request from internal IP address 10.x.x.x
-  my $local_host = $q->remote_host() =~ /^(10\.|127\.0\.0\.1)/ ? 1 : 0;
+  my $local_host = $q->remote_host() =~ /^(10\.|127\.0\.0\.2)/ ? 1 : 0;
 
   if ($q->param('cache') || $q->param('generate_cache') || $all >= 3 || $local_host) {
      eval {
@@ -2388,7 +2388,10 @@ EOF
 	    my $url = $q->url(-full=>0, -absolute=>1);
 	    $url =~ s,^/m/,/,;
 	    &social_link;
-	    print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+	    print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">classic view</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#android">Android App</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#iphone">iPhone App</a>\n};
+
         } else {
 	    my $url = $q->url(-full=>0, -absolute => 1);
 	    $url =~ s,^/\w\w/,/m/, || $url =~ s,/,/m/,;
@@ -5583,7 +5586,9 @@ EOF
 	    my $url = $q->url(-full=>0, -absolute=>1, -query=>1);
             $url =~ s,^/m/,/,;
             #&social_link;
-            print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+            print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">classic view</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#android">Android App</a>\n};
+            print qq{ <a class="mobile_link" href="/help.html#iphone">iPhone App</a>\n};
 	    print qq{</span>\n\n};
 
 	    print <<EOF;
@@ -5810,7 +5815,7 @@ for my $etappe (@out_route) {
 		print "<a class=ms href='#' onclick='return ms($etappe->{Coord})'>"
 		    if $can_jslink;
 		print $strname;
-		if ($important_angle_crossing_name) {
+		if ($important_angle_crossing_name && $important_angle_crossing_name ne $strname) {
 		    print " (" . M("Ecke") . " " . $important_angle_crossing_name . ")";
 		}
 		print "</a>"

@@ -744,7 +744,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im August bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -861,15 +861,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'until' => 1346626800,
-         'text' => 'Turmstraße (Moabit): Veranstaltung, Straße vollständig gesperrt (31.08.2012 bis 02.09.2012) in beiden Richtungen zwischen Stromstr. und Waldstr.',
-         'from' => 1346295600,
-         'id' => 2129,
-         'data' => 'userdel	2::temp 5368,13406 5560,13382 5705,13359 5857,13342 5956,13330 6011,13330 6112,13327 6228,13324
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1191,16 +1183,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10350,19182
 #: by: ^^^
 '
        },
-       {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park: bei Veranstaltungen im Berghain u.U. nicht passierbar',
-         'from' => undef,
-         'id' => 2321,
-         'data' => '	2::night 13002,11705 13042,11749
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Sredzkistr.: Fahrbahn zwischen Rykestr. und Kollwitzstr. komplett gesperrt. Dauer der Sperrung ist unbekannt.',
@@ -1347,8 +1330,8 @@ userdel	q4::inwork 10379,14963 10366,14992
          'text' => 'Christburger Str.: Fahrbahn an der Prenzlauer Allee gesperrt, Ausweichen auf Gehweg',
          'from' => undef,
          'id' => 2361,
-         'data' => '#: last_checked: 2012-07-16
-userdel	q3::inwork 11920,14468 11642,14625
+         'data' => '#: last_checked: 2012-09-01
+userdel	q3::inwork 11912,14486 11642,14625
 ',
          'type' => 'handicap'
        },
@@ -1459,6 +1442,18 @@ userdel	2::temp 10008,12274 10058,12290 9996,12401
 userdel	2::temp 10091,12232 10058,12290
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'wosch',
+         'until' => undef,
+         'text' => 'Hussitenstr.: Fahrbahn zwischen Stralsunder Str. und Usedomer Str. gesperrt, Ausweichen auf Gehweg',
+         'from' => undef,
+         'id' => 2377,
+         'data' => '#: last_checked: 2012-09-01 (wosch)
+#: next_check: 2012-12-01
+userdel	q4::inwork 9112,14771 9250,14658
+',
+         'type' => 'handicap'
        }
      
 );

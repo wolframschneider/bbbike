@@ -86,17 +86,13 @@ Fußgängerampel links benutzen	CP; 6033,10403 6020,10351 6147,10383
 Fußgängerampel vor der Passauer Str. zum Überqueren der Lietzenburger Str. benutzen	CP; 6147,10383 6020,10351 5997,10286
 #: XXX_prog: RL:ja, GPS:nein (in der Realität kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert)
 Fußgängerampel links benutzen	CP; 14723,16691 14619,16682 14619,16672
-#: XXX_prog: RL:ja, GPS:nein (in der Realität kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert)
-Münchener Str., über Hohenstaufenstr.: Fußgängerampel auf der linken Seite zum Überqueren der Hohenstaufenstr. benutzen	CP; 6210,9833 6209,9772 6224,9544
-#: XXX_prog: RL:ja, GPS:nein (in der Realität kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert)
-Münchener Str., über Hohenstaufenstr.: Fußgängerampel auf der rechten Seite zum Überqueren der Hohenstaufenstr. benutzen	CP; 6224,9544 6209,9772 6210,9833
-#: XXX_prog die zusätzliche Strecke sollte auch noch berücksichtigt werden
-#: XXX_prog: RL:ja, GPS:nein (in der Realität kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert)
-Münchener Str., Richtung Martin-Luther-Str.: Fußgängerampel auf der linken Seite benutzen	CP; 6210,9833 6209,9772 6241,9772
-#: XXX_prog: RL:ja, GPS:ja (da es doch immerhin 30 Meter bis zur Kreuzung sind)
-Hohenstaufenstr. zur Münchener Str.: frühzeitig Fußgängerampel nach links benutzen	PI; 6241,9772 6209,9772 6224,9544
-#: XXX_prog: RL:ja, GPS:ja (da es doch immerhin 30 Meter bis zur Ampel sind und Radfahrer evtl. nach links fahren würden)
-Münchener Str. zur Nachodstr.: Fußgängerampel auf der rechten Seite benutzen	CP; 6224,9544 6209,9772 6108,9772
+#XXX del --- #: XXX_prog: RL:ja, GPS:nein (in der Realität kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert) --- Münchener Str., über Hohenstaufenstr.: Fußgängerampel auf der linken Seite zum Überqueren der Hohenstaufenstr. benutzen	CP; 6210,9833 6209,9777 6209,9772 6210,9753 6224,9544
+#XXX del --- #: XXX_prog: RL:ja, GPS:nein (in der Realität kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert) --- Münchener Str., über Hohenstaufenstr.: Fußgängerampel auf der rechten Seite zum Überqueren der Hohenstaufenstr. benutzen	CP; 6224,9544 6210,9753 6209,9772 6209,9777 6210,9833
+#XXX del --- #: XXX_prog die zusätzliche Strecke sollte auch noch berücksichtigt werden --- #: XXX_prog: RL:ja, GPS:nein (in der Realität kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert) --- Münchener Str., Richtung Martin-Luther-Str.: Fußgängerampel auf der linken Seite benutzen	CP; 6210,9833 6209,9777 6209,9773 6241,9772
+#XXX del --- #: XXX_prog: RL:ja, GPS:ja (da es doch immerhin 30 Meter bis zur Kreuzung sind) --- Hohenstaufenstr. zur Münchener Str.: frühzeitig Fußgängerampel nach links benutzen	PI; 6241,9772 6209,9773 6210,9753 6224,9544
+#XXX del --- #: XXX_prog: RL:ja, GPS:ja (da es doch immerhin 30 Meter bis zur Ampel sind und Radfahrer evtl. nach links fahren würden) --- Münchener Str. zur Nachodstr.: Fußgängerampel auf der rechten Seite benutzen	CP; 6224,9544 6210,9753 6209,9772 6108,9772
+Fußgängerampel östlich der Münchener Str. zum Überqueren benutzen	CP; 6209,9772 6241,9772 6209,9773
+an der Fußgängerampel vor der Münchener Str. auf den linken Gehweg wechseln	CP; 6502,9782 6241,9772 6209,9771
 Thomas-Dehler-Str. - Stülerstr.: nach dem Abbiegen zunächst auf dem linken Gehweg bleiben	CP; 6654,11460 6716,11439 6825,11486
 Gervinusstr./Lewishamstr.: linken Gehweg bis zur Ampel an der Mommsenstr. benutzen	CP; 3839,10904 3631,10784 3644,10759
 #: XXX_prog: RL:ja, GPS:nein
@@ -177,11 +173,11 @@ Torstr. - Straßburger Str.: Fußgängerfurt (Drängelgitter) ca. 50m westlich der K
 #### ^^^ REVIEW RL:ja/nein, GPS:ja/nein SOWIE CP;+Crossing name UNTIL HERE ^^^ ##############################
 Käthe-Niederkirchner-Str - Greifswalder Str.: Fußgängerfurt (Drängelgitter) ca. 50m nord-östlich der Kreuzung benutzen	CP; 12148,13961 11991,14060 11946,13993
 Greifswalder Str. - Käthe-Niederkirchner-Str: Fußgängerfurt (Drängelgitter) ca. 50m nord-östlich der Kreuzung benutzen oder schon an der Marienburger die Straßenseite wechseln	PI; 12077,14186 11991,14060 12148,13961
-Heinrich-Roller-Str. - Greifswalder Str.: Fußgängerfurt (Drängelgitter) benutzen	CP; 11616,13911 11820,13804 11946,13993
-Greifswalder Str. - Heinrich-Roller-Str.: Fußgängerfurt (Drängelgitter) benutzen	CP; 11706,13635 11820,13804 11616,13911
+Heinrich-Roller-Str. - Greifswalder Str.: Fußgängerfurt (Drängelgitter) benutzen	CP; 11602,13920 11820,13804 11946,13993
+Greifswalder Str. - Heinrich-Roller-Str.: Fußgängerfurt (Drängelgitter) benutzen	CP; 11706,13635 11820,13804 11602,13920
 #: by: ^^^
-Immanuelkirchstr. - Greifswalder Str.: Fußgängerfurt (Drängelgitter) benutzen	CP; 11727,14111 11946,13993 11991,14060
-Greifswalder Str. - Immanuelkirchstr.: Fußgängerfurt (Drängelgitter) benutzen	CP; 11820,13804 11946,13993 11727,14111
+Immanuelkirchstr. - Greifswalder Str.: Fußgängerfurt (Drängelgitter) benutzen	CP; 11713,14118 11946,13993 11991,14060
+Greifswalder Str. - Immanuelkirchstr.: Fußgängerfurt (Drängelgitter) benutzen	CP; 11820,13804 11946,13993 11713,14118
 Kietz - Kietzer Str.: zum Überqueren der Straße Fußgängerampel links benutzen	CP; 22364,4429 22383,4470 22372,4496 22358,4521
 Kietz - Müggelheimer Str.: zum Überqueren der Straße Fußgängerampel links benutzen	CP; 22364,4429 22383,4470 22341,4483
 #XXX del --- Kietz - Amtsstr.: zum Überqueren der Straße Fußgängerampel links benutzen	CP; 22364,4429 22419,4457 22495,4523
@@ -244,7 +240,7 @@ Drängelgitter auf der rechten Seite unter der Hochbahn	CP; 11295,16199 10997,162
 (Scottweg - Tharauer Allee): Weg beginnt links neben dem Garagenparkplatz	CP2; -1403,11279 -1505,11307
 Alexandrinenstr.: Gehweg benutzen, nicht die Straße zu den Parkplätzen	CP2; 10678,11172 10818,11269
 Spreehagen - Langendamm: der Weg startet etwas versteckt direkt hinter dem Ortsausgang Spreenhagen an einer großen Bushaltestelle auf der linken Seite.	CP; 43593,-6607 43695,-6701 43738,-6684
-Ella-Kay-Str. - Danziger Str.: zunächst den linken Gehweg bis zur Ampel an der Winsstr. benutzen	CP; 12089,14891 11990,14714 12040,14688
+Ella-Kay-Str. - Danziger Str.: zunächst den linken Gehweg bis zur Ampel an der Winsstr. benutzen	CP; 12089,14891 11990,14714 12025,14695
 Ladenbergstr. - Altensteinstr.: an der Kreuzung Habelschwerdter Allee Fußgängerampel auf der linken Seite benutzen	CP; 2858,4372 2997,4378 3033,4503
 Ladenbergstr. - Habelschwerdter Allee: an der Kreuzung Fußgängerampel auf der linken Seite benutzen	CP; 2858,4372 2997,4378 2857,4578
 zum Mehringplatz: hinter dem BVG-Wartehäuschen in den Gehweg einbiegen	CP2; 9873,10285 9668,10306
@@ -423,7 +419,7 @@ Gustav-Adolf-Str. - Prenzlauer Promenade: auf dem linken Gehweg bis zur Ampel fa
 Caligariplatz - Prenzlauer Promenade: auf dem linken Gehweg bis zur Ampel fahren	CP; 12121,16317 12097,16263 12090,16199
 Am Alten Markt: Richtung TFH/Friedrich-Ebert-Str. abbiegen	CP; -12624,-1598 -12619,-1549 -12780,-1545
 Richtung Bergmannstr.	CP2; 10564,9292 10547,9233
-Ausgeschildert als: Zur Straße 545	CP2; 30357,3555 30378,3501
+Ausgeschildert als "Zur Straße 545"	CP2; 30357,3555 30378,3501
 Virchowstr. - Landsberger Allee: auf dem linken Geh-/Radweg bis zur Ampel fahren	CP; 12916,13368 12979,13280 13078,13330
 #: by: Juliane (alberts...) vvv
 (Gruberzeile - Weinmeisterhornweg): an Wohnhäusern vorbei, dann nach rechts abbiegen neben der Grundschule	CS; -5735,11793 -5584,11706 -5590,11651 -5623,11552
@@ -497,3 +493,6 @@ Winzerstr. - Heerstr.: auf den rechten Weg einbiegen	CP2; -4687,11885 -4637,1198
 Residenzstr. - Am Schäfersee: bereits an der Ampel Pankower Allee auf den linken Gehweg wechseln	PI; 7579,17532 7572,17558 7477,17544
 Residenzstr. - Lettestr.: bereits an der Ampel Markstr./Residenzstr. auf den linken Gehweg wechseln	PI; 7602,17399 7684,17435 7707,17445
 Am Stand - Klemkestr.: den linken Gehweg bis zur Kreuzung Lampesteig benutzen	CP; 7484,18778 7492,18699 7520,18701
+Ausgeschildert als "Zur Wickeder Str."	CP2; 2821,18831 2794,18836
+Ausgeschildert als "Zur Wilhelm-Blume-Allee"	CP2; 2570,20837 2469,20812
+Straße an der Fußgängerampel vor der Moschee überqueren	CP; 10691,8532 10796,8498 10799,8504

@@ -39,7 +39,7 @@ Breitenbachplatz (Westseite)	1 4292,6558 4218,6583 4111,6651 4074,6681 4021,6729
 Breitenbachplatz (Ostseite)	1 3981,6850 4061,6753 4107,6718 4146,6693 4250,6625 4292,6558
 Inselstr. Schwanenwerder	1 -5310,4216 -5393,4211 -5453,4274 -5471,4412 -5442,4526 -5386,4539 -5341,4511 -5358,4404 -5356,4296 -5310,4216
 Bayerischer Platz	1 6063,9106 6053,9224 6084,9242 6131,9241 6161,9128 6152,9091 6118,9078 6083,9082 6063,9106
-orthodoxe Kirche	1 3952,8980 3932,8989 3835,9044
+orthodoxe Kirche	1 3952,8980 3835,9044
 U-Bahn Dahlem	1 3216,6393 3123,6318 3023,6246 2950,6141 2898,5947 2823,5672 2797,5624 2746,5537 2523,5114 2469,5043 2313,4901 2190,4823 2079,4769 2027,4792
 U-Bahn Dahlem	1 2027,4792 2095,4805 2169,4854 2217,4884 2288,4932 2454,5067 2499,5144 2717,5578
 Am Großen Wannsee	1 -5869,1261 -5848,1379 -5867,1449 -5901,1562 -5929,1649 -5961,1767 -6025,1999 -6021,2068 -5945,2381 -5749,2701 -5722,2714 -5663,2609 -5653,2481 -5719,2323 -5836,2119 -5893,1969 -5903,1872 -5885,1791 -5815,1649 -5645,1504 -5588,1454 -5518,1396 -5499,1349
@@ -70,14 +70,13 @@ Alt-Blankenburg	1 13576,20849 13562,20913 13909,20928
 Alt-Blankenburg	1 13909,20928 13576,20849
 Seestr.	1 5062,14681 5233,14753 5440,14840
 Seestr.	1 5440,14840 5264,14671 5071,14614
-Waidmannsluster Damm	1 2142,20849 1835,21427 1882,21468 2205,20885
+Waidmannsluster Damm	1 2144,20870 1835,21427 1882,21468 2195,20898
 Flughafen Tegel	1 2819,16141 2757,16194 2713,16286 2756,16344 2832,16343 2863,16280 2819,16141
 Jakob-Kaiser-Platz	1 2795,14161 2811,14196 2831,14219 2857,14222 2896,14187 2892,14149 2860,14118 2825,14128 2795,14161
 Kurt-Schumacher-Damm (Süd)	1 2831,14219 2803,14288 2793,14374 2904,14748
 Kurt-Schumacher-Damm (Süd)	1 2960,14746 2847,14356 2857,14222
-Kurt-Schumacher-Damm (Nord)	1 3564,16294 3643,16437
-Kurt-Schumacher-Damm (Nord)	1 3676,16497 3753,16638 3853,16825 3948,16849
-Kurt-Schumacher-Damm (Nord)	1 3948,16849 3788,16621 3711,16481 3585,16252
+Kurt-Schumacher-Damm (Nord)	1 3564,16294 3643,16437 3676,16497 3753,16638 3853,16825 3940,16861
+Kurt-Schumacher-Damm (Nord)	1 3940,16861 3788,16621 3711,16481 3585,16252
 Ferdinand-Friedensburg-Platz	1 -914,14602 -1357,14533 -1392,14527 -1508,14508 -1369,14644 -1119,14659 -925,14631
 Falkenseer Platz	1 -3352,14676 -3368,14723 -3355,14764 -3295,14777 -3251,14741 -3247,14713 -3255,14685 -3301,14669 -3352,14676
 Fasanenstr.	1 5207,10399 5229,10716 5242,10918 5247,10992 5268,11274
@@ -288,7 +287,7 @@ Dorotheenstr.	1 18653,8922 18770,8898
 Alte Späthbrücke	2 14466,5087 14544,5123
 Katzengraben	1 22451,4749 22465,4690
 Schwiegersteig	1 1134,14721 1130,14823 1112,14918
-Moränenweg	1 3208,21425 3304,21205
+Moränenweg	1 3208,21425 3295,21202
 Graacher Str.	1 14672,17085 14533,17084
 Wehlener Str.	1 14673,17003 14535,17003
 Riastr.	1 18247,9158 18201,8984
@@ -368,7 +367,7 @@ Spindlersfelder Str.	2 21324,3691 21215,3919 21143,4150 21130,4239 21080,4702 21
 Rathausstr.:	1 15651,12214 15628,12246 15576,12315 15537,12367
 Alt-Marzahn	1 21112,15396 21042,15428 20967,15458 20796,15559 20903,15545 20988,15505 21051,15464 21112,15396
 Bonifaziusstr.	1 2635,21559 2699,21401 2714,21369 2728,21336 2760,21269 2840,21141
-Bonifaziusstr.	1 2819,21128 2737,21256 2690,21363 2621,21538
+Bonifaziusstr.	1 2819,21128 2737,21256 2691,21360 2621,21538
 Sandgrasweg	1 2851,21089 2819,21128
 Sandgrasweg	1 2840,21141 2866,21103
 Max-Eyth-Str.	1 2506,6606 2566,6531 2611,6495
@@ -440,7 +439,7 @@ Werrastr.: Firmengelände	2 13802,8195 13697,8279
 Neuendorfer Str.	1 -3295,14777 -3228,14794
 Neuendorfer Str.	1 -3228,14794 -3251,14741
 Büdnerring	1 7997,18524 7902,18575 7892,18603 7926,18665 8037,18673 8063,18659 8066,18632 7997,18524
-Steilpfad	1 3376,21224 3280,21477
+Steilpfad	1s 3375,21230 3280,21477
 Jebensstr.	1 5587,11397 5459,11135
 Breitenbachplatz	1 4107,6718 4074,6681 3983,6599 3925,6604 3938,6651 4021,6729 4061,6753
 Südwestkorso	1 4061,6753 4206,6820
@@ -536,8 +535,16 @@ Privatstr. 13	1 13171,17335 13103,17280 13018,17264
 Preunelstr.	1 13012,17332 12965,17324 12930,17302 12865,17381
 Mollstr. (Richtungsfahrbahn)	1::igndisp 11723,13139 11843,13090 11904,13075 11958,13079 11985,13075
 Mollstr. (Richtungsfahrbahn)	1::igndisp 11985,13075 11966,13074 11905,13069 11839,13083 11739,13131 11723,13139
+Mollstr. (Straßenbahntrasse)	3nocross::ignrte 11985,13075 11966,13074 11905,13069 11839,13083 11739,13131 11723,13139
+Badstr. (Richtungsfahrbahn)	1::igndisp 8659,16327 8543,16364 8516,16393 8486,16425
+Badstr. (Richtungsfahrbahn)	1::igndisp 8486,16425 8518,16394 8544,16365 8659,16327
+Badstr. (Gitter auf Mittelstreifen)	3nocross::ignrte 8659,16327 8543,16364 8516,16393 8486,16425
 Spittelmarkt (Richtungsfahrbahn)	1::igndisp 10213,11728 10238,11741 10299,11786
 Spittelmarkt (Richtungsfahrbahn)	1::igndisp 10299,11786 10240,11740 10213,11728
+Spittelmarkt (Mittelstreifen)	3nocross::ignrte 10213,11728 10240,11740 10299,11786
+Hohenstaufenstr. (Richtungsfahrbahn)	1::igndisp 6108,9772 6209,9773 6241,9772
+Hohenstaufenstr. (Richtungsfahrbahn)	1::igndisp 6241,9772 6209,9772 6108,9772
+Hohenstaufenstr. (Mittelstreifen mit Gitter)	3nocross::ignrte 6108,9772 6209,9773 6241,9772
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -283,14523 -457,14536 -914,14602
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -925,14631 -283,14523
 Lötschbergstr.	1s 20161,11715 20150,11512
@@ -706,6 +713,9 @@ Am Krummen Weg	1 -7169,14849 -7026,14890
 Am Krummen Weg	1 -7169,14849 -7248,14826
 Henricistr.	1 5993,19477 5858,19437
 Breslauer Platz	1s 5810,7337 5902,7334
+Desideriusweg	1 2830,21378 2728,21336
+Am Ansitz	1 3913,21977 3855,22055
+Am Vierrutenberg etc.	1 5712,23785 5676,23971 5780,23997 5792,23943 5787,23840 5712,23785
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Hochstraße	3nocross::ignrte -11399,-1339 -11461,-1424 -11540,-1543
@@ -1001,6 +1011,8 @@ Fuststr. -> Edisonstr.: Straßenbahn	3::igndisp 17823,7203 17934,7029 18010,7133
 Mittelstreifen	3nocross::ignrte -5039,15618 -5154,15651 -5373,15714 -5473,15742
 Falkenseer Chaussee -> Remscheider Str.: Mittelstreifen	3::igndisp -5039,15618 -5154,15651 -5192,15517
 Remscheider Str. -> Falkenseer Chaussee: Mittelstreifen	3::igndisp -5192,15517 -5154,15651 -5373,15714
+Oberhauser Str. -> Falkenseer Chaussee: Mittelstreifen	3::igndisp -5426,15528 -5373,15714 -5473,15742
+Falkenseer Chaussee -> Oberhauser Str.: Mittelstreifen	3::igndisp -5154,15651 -5373,15714 -5426,15528
 Straßenbahntrasse	3nocross::ignrte 20269,14256 20241,14016 20210,13776
 Cecilienstr. -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 20281,14012 20241,14016 20210,13776
 Allee der Kosmonauten -> Cecilienstr.: Straßenbahntrasse	3::igndisp 20269,14256 20241,14016 20281,14012
@@ -1167,7 +1179,7 @@ Wuhlewanderweg -> Alt-Biesdorf: unbequemes Passieren des Mittelstreifens	3::ignd
 wegen Absperrgitter nicht überquerbar	3nocross::ignrte 16961,16042 16917,16001 16819,15912
 Große-Leege-Str. -> Konrad-Wolf-Str.: wegen Absperrgitter nicht überquerbar	3::igndisp 16922,15977 16917,16001 16819,15912
 Konrad-Wolf-Str. -> Große-Leege-Str.: wegen Absperrgitter nicht überquerbar	3::igndisp 16961,16042 16917,16001 16922,15977
-Mittelstreifen nicht passierbar	3nocross::ignrte 2996,15771 2960,15847 2913,15944 2819,16141
+Mittelstreifen nicht passierbar	3nocross::ignrte 2975,15813 2960,15847 2913,15944 2819,16141
 Zum Flughafen Tegel -> Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2913,15944 2960,15847 2996,15930
 Knoten am Flughafen Tegel -> Zum Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2880,15884 2960,15847 2913,15944
 Knoten am Flughafen Tegel -> Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2880,15884 2960,15847 2996,15930
@@ -1196,13 +1208,6 @@ Wadzeckstr. -> Karl-Liebknecht-Str.: Straßenbahntrasse	3::igndisp 11146,13328 11
 Straßenbahntrasse	3nocross::ignrte 10923,13156 10976,13229 11005,13269
 Keibelstr. -> Karl-Liebknecht-Str.: Straßenbahntrasse	3::igndisp 11045,13183 10976,13229 10923,13156
 Karl-Liebknecht-Str. -> Keibelstr.: Straßenbahntrasse	3::igndisp 11005,13269 10976,13229 11045,13183
-Gitter auf Mittelstreifen	3nocross::ignrte 8659,16327 8543,16364 8516,16393 8486,16425
-Badstr. -> Gropiusstr.: Gitter auf Mittelstreifen	3::igndisp 8659,16327 8543,16364 8534,16355
-Badstr. -> Travemünder Str.: Gitter auf Mittelstreifen	3::igndisp 8516,16393 8543,16364 8592,16406
-Travemünder Str. -> Badstr.: Gitter auf Mittelstreifen	3::igndisp 8592,16406 8543,16364 8659,16327
-Travemünder Str. -> Gropiusstr.: Gitter auf Mittelstreifen	3::igndisp 8592,16406 8543,16364 8534,16355
-Gropiusstr. -> Badstr.: Gitter auf Mittelstreifen	3::igndisp 8534,16355 8543,16364 8516,16393
-Gropiusstr. -> Travemünder Str.: Gitter auf Mittelstreifen	3::igndisp 8534,16355 8543,16364 8592,16406
 Straßenbahntrasse	3nocross::ignrte 24120,14526 24097,14575 24030,14717
 Heidenauer Str. -> Riesaer Str.: Straßenbahntrasse	3::igndisp 24146,14594 24097,14575 24120,14526
 Riesaer Str. -> Heidenauer Str.: Straßenbahntrasse	3::igndisp 24030,14717 24097,14575 24146,14594
@@ -1491,13 +1496,15 @@ Frankfurter Allee -> Liebigstr.: unbequem passierbarer Mittelstreifen	3::igndisp
 unbequem passierbarer Mittelstreifen	3nocross::ignrte 9701,11656 9898,11679 9981,11689
 Leipziger Str. -> Jerusalemer Str.: unbequem passierbarer Mittelstreifen	3::igndisp 9701,11656 9898,11679 9896,11703
 Jerusalemer Str. -> Leipziger Str.: unbequem passierbarer Mittelstreifen	3::igndisp 9896,11703 9898,11679 9981,11689
-Mittelstreifen mit Straßenbahn	3nocross::ignrte 12177,14335 12228,14404 12266,14460 12317,14535
-Greifswalder Str. -> Jablonskistr.: Mittelstreifen mit Straßenbahn	3::igndisp 12177,14335 12228,14404 11955,14531
-Jablonskistr. -> Greifswalder Str.: Mittelstreifen mit Straßenbahn	3::igndisp 11955,14531 12228,14404 12266,14460
+Mittelstreifen mit Straßenbahn	3nocross::ignrte 12177,14335 12188,14350 12228,14404 12266,14460 12317,14535
+Pasteurstr. -> Greifswalder Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12335,14246 12188,14350 12177,14335
+Greifswalder Str. -> Pasteurstr.: Mittelstreifen mit Straßenbahn	3::igndisp 12228,14404 12188,14350 12335,14246
+Jablonskistr. -> Greifswalder Str.: Mittelstreifen mit Straßenbahn	3::igndisp 11941,14539 12228,14404 12266,14460
+Greifswalder Str. -> Jablonskistr.: Mittelstreifen mit Straßenbahn	3::igndisp 12188,14350 12228,14404 11941,14539
 Greifswalder Str. -> Dietrich-Bonhoeffer-Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12317,14535 12266,14460 12556,14230
-Chodowieckistr. -> Greifswalder Str.: Mittelstreifen mit Straßenbahn	3::igndisp 11992,14599 12266,14460 12317,14535
-Chodowieckistr. -> Dietrich-Bonhoeffer-Str.: Mittelstreifen mit Straßenbahn	3::igndisp 11992,14599 12266,14460 12556,14230
-Greifswalder Str. -> Chodowieckistr.: Mittelstreifen mit Straßenbahn	3::igndisp 12228,14404 12266,14460 11992,14599
+Chodowieckistr. -> Greifswalder Str.: Mittelstreifen mit Straßenbahn	3::igndisp 11977,14607 12266,14460 12317,14535
+Chodowieckistr. -> Dietrich-Bonhoeffer-Str.: Mittelstreifen mit Straßenbahn	3::igndisp 11977,14607 12266,14460 12556,14230
+Greifswalder Str. -> Chodowieckistr.: Mittelstreifen mit Straßenbahn	3::igndisp 12228,14404 12266,14460 11977,14607
 Mittelstreifen mit Straßenbahn	3nocross::ignrte 12422,14692 12473,14763 12520,14833 12584,14928
 Olga-Benario-Prestes-Str. -> Greifswalder Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12653,14653 12473,14763 12422,14692
 Greifswalder Str. -> Olga-Benario-Prestes-Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12520,14833 12473,14763 12653,14653
@@ -1509,8 +1516,8 @@ Mittelstreifen mit Straßenbahn	3nocross::ignrte 12709,15112 12737,15154 12870,15
 Greifswalder Str. -> Naugarder Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12709,15112 12737,15154 12693,15225
 Naugarder Str. -> Greifswalder Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12693,15225 12737,15154 12870,15342
 Mittelstreifen mit Straßenbahn	3nocross::ignrte 11642,14625 11662,14695 11681,14759
-Jablonskistr. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn	3::igndisp 11955,14531 11662,14695 11642,14625
-Prenzlauer Allee -> Jablonskistr.: Mittelstreifen mit Straßenbahn	3::igndisp 11681,14759 11662,14695 11955,14531
+Jablonskistr. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn	3::igndisp 11941,14539 11662,14695 11642,14625
+Prenzlauer Allee -> Jablonskistr.: Mittelstreifen mit Straßenbahn	3::igndisp 11681,14759 11662,14695 11941,14539
 Mittelstreifen mit Straßenbahn, aber Furt in der Nähe	3nocross::ignrte 11801,15132 11828,15210 11852,15281
 Hiddenseer Str. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn, aber Furt in der Nähe	3::igndisp 11657,15271 11828,15210 11852,15281
 Prenzlauer Allee -> Hiddenseer Str.: Mittelstreifen mit Straßenbahn, aber Furt in der Nähe	3::igndisp 11801,15132 11828,15210 11657,15271
@@ -1518,8 +1525,8 @@ Mittelstreifen mit Straßenbahn, aber Ampel in der Nähe	3nocross::ignrte 11776,15
 Stubbenkammerstr. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn, aber Ampel in der Nähe	3::igndisp 11636,15191 11801,15132 11828,15210
 Prenzlauer Allee -> Stubbenkammerstr.: Mittelstreifen mit Straßenbahn, aber Ampel in der Nähe	3::igndisp 11776,15060 11801,15132 11636,15191
 Mittelstreifen mit Straßenbahn, hier aber Fußgängerfurt vorhanden	3nocross::ignrte 11712,14868 11681,14759 11662,14695
-Chodowieckistr. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn, hier aber Fußgängerfurt vorhanden	3::igndisp 11992,14599 11681,14759 11662,14695
-Prenzlauer Allee -> Chodowieckistr.: Mittelstreifen mit Straßenbahn, hier aber Fußgängerfurt vorhanden	3::igndisp 11712,14868 11681,14759 11992,14599
+Chodowieckistr. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn, hier aber Fußgängerfurt vorhanden	3::igndisp 11977,14607 11681,14759 11662,14695
+Prenzlauer Allee -> Chodowieckistr.: Mittelstreifen mit Straßenbahn, hier aber Fußgängerfurt vorhanden	3::igndisp 11712,14868 11681,14759 11977,14607
 Mittelstreifen mit Straßenbahn	3nocross::ignrte 12071,16130 12030,15968 11997,15834
 Prenzlauer Allee -> Kuglerstr.: Mittelstreifen mit Straßenbahn	3::igndisp 11997,15834 12030,15968 11961,16002
 Kuglerstr. -> Prenzlauer Allee [Wohngebiet]: Mittelstreifen mit Straßenbahn	3::igndisp 11961,16002 12030,15968 12154,15902
@@ -1534,9 +1541,9 @@ Zelterstr. -> Küselstr.: Straßenbahntrasse	3::igndisp 11852,15765 11967,15700 12
 Mittelstreifen mit Straßenbahn	3nocross::ignrte 11712,14868 11610,14886 11545,14897
 Rykestr. -> Danziger Str.: Mittelstreifen mit Straßenbahn	3::igndisp 11526,14693 11610,14886 11545,14897
 Danziger Str. -> Rykestr.: Mittelstreifen mit Straßenbahn	3::igndisp 11712,14868 11610,14886 11526,14693
-Mittelstreifen mit Straßenbahn	3nocross::ignrte 12317,14535 12128,14640 12040,14688
+Mittelstreifen mit Straßenbahn	3nocross::ignrte 12317,14535 12128,14640 12025,14695
 Lilli-Henoch-Str. -> Danziger Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12189,14767 12128,14640 12317,14535
-Danziger Str. -> Lilli-Henoch-Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12040,14688 12128,14640 12189,14767
+Danziger Str. -> Lilli-Henoch-Str.: Mittelstreifen mit Straßenbahn	3::igndisp 12025,14695 12128,14640 12189,14767
 Mittelstreifen mit Straßenbahn	3nocross::ignrte 10746,13673 10640,13700 10569,13719 10463,13747
 Angermünder Str. -> Torstr.: Mittelstreifen mit Straßenbahn	3::igndisp 10703,13832 10640,13700 10746,13673
 Torstr. -> Angermünder Str.: Mittelstreifen mit Straßenbahn	3::igndisp 10569,13719 10640,13700 10703,13832
@@ -1689,8 +1696,8 @@ Karl-Marx-Allee -> Berolinastr.: Mittelstreifen	3::igndisp 11226,12945 11289,129
 Berolinastr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 11600,12857 11589,12768 11635,12745
 Karl-Marx-Allee -> Berolinastr.: Mittelstreifen	3::igndisp 11289,12908 11589,12768 11600,12857
 unbequem zu überqueren (Bordsteine)	3nocross::ignrte 10796,8498 10911,8457 11225,8350 11266,8336
-Hasenheide, am Rixdorfer Teich -> Columbiadamm: unbequem zu überqueren (Bordsteine)	3::igndisp 10929,8503 10911,8457 11225,8350
-Columbiadamm -> Hasenheide, am Rixdorfer Teich: unbequem zu überqueren (Bordsteine)	3::igndisp 10796,8498 10911,8457 10929,8503
+Hasenheide, am Rixdorfer Teich -> Columbiadamm: unbequem zu überqueren (Bordsteine)	3::igndisp 10913,8463 10911,8457 11225,8350
+Columbiadamm -> Hasenheide, am Rixdorfer Teich: unbequem zu überqueren (Bordsteine)	3::igndisp 10796,8498 10911,8457 10913,8463
 Columbiadamm -> Hasenheide, westlicher Weg: unbequem zu überqueren (Bordsteine)	3::igndisp 10911,8457 11225,8350 11230,8402
 Hasenheide, westlicher Weg -> Columbiadamm: unbequem zu überqueren (Bordsteine)	3::igndisp 11230,8402 11225,8350 11266,8336
 Mittelstreifen	3nocross::ignrte 4807,5131 4766,5208 4745,5283
@@ -1906,6 +1913,8 @@ abgeschlossenes Tor	3 8235,20109 8237,20098 8258,19983
 abgeschlossenes Tor	3 8258,19983 8237,20098 8235,20109
 abgeschlossenes Tor	3 8288,20128 8291,20112 8315,19993
 abgeschlossenes Tor	3 8315,19993 8291,20112 8288,20128
+verschloßenes Tor	3 3781,16175 3796,16202 3836,16273
+verschloßenes Tor	3 3836,16273 3796,16202 3781,16175
 tragen (3 Stufen, kann auf einer inoffiziellen Rampe umfahren werden)	0:10:-176 8029,10106
 tragen (ca. 20 Stufen, kann auf Rampen umfahren werden)	0:30:-156 -5561,12909
 tragen (wenige Stufen)	0:5:-161 -5446,13137
@@ -2100,6 +2109,10 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
 tragen (31 Stufen oder Kinderwagenrampe)	0:40:-256 13168,21706
+Drängelgitter	BNP:3:-220:trailer=10 5394,23172
+Drängelgitter	BNP:3:-93:trailer=10 3816,22602
+Drängelgitter	BNP:3:-68:trailer=10 3869,22581
+enges Drängelgitter (60cm)	BNP:5:-94:trailer=no 3101,20649
 Schranke	BNP:3:-192:trailer=10 17201,13510
 Schranke	BNP:3:-185:trailer=10 17200,13530
 Schranke	BNP:3:-195:trailer=10 8470,23986
@@ -2365,6 +2378,7 @@ Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8
 Sonnenkieker: Bauarbeiten	2:inwork 22610,13808 22669,13842 22692,13836
 Tegeler Hafen: Weg über Insel gesperrt	2 1756,20405 1736,20441 1742,20464 1762,20505 1761,20539
 Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,20603
+Uferweg am Tegeler Hafen: Weg wegen Bauarbeiten gesperrt	2:inwork 1861,20467 1826,20492 1761,20539 1741,20571
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
 Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405,12953 14686,12873
 Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
@@ -2934,3 +2948,8 @@ Badstr., linker Gehweg	1::igndisp 8486,16425 8486,16412 8534,16355
 Tempelhofer Ufer, linker Gehweg	1::igndisp 8661,10377 8717,10322 8804,10303
 Leipziger Str., linker Gehweg	1::igndisp 9985,11711 9896,11703
 zur Ampel Jerusalemer Str.	1::igndisp 9982,11681 9987,11690 9985,11711
+Columbiadamm, linker Gehweg	1::igndisp 10913,8463 10799,8504 10796,8498
+#: note: Münchener Str./Hohenstaufenstr.: von Norden nach Süden vvv
+Hohenstaufenstr., linker Gehweg bis zur Fußgängerampel	1::igndisp 6241,9772 6209,9774
+zur Münchener Str. auf dem linken Gehweg	1::igndisp 6209,9771 6241,9772
+#: note: ^^^

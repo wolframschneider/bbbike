@@ -100,7 +100,9 @@ if (!@urls) {
 }
 
 my $ortsuche_tests = 11;
-plan tests => (254 + $ortsuche_tests) * scalar @urls;
+my $bbbike_org = $ENV{BBBIKE_TEST_ORG_LATER} ? 7 : 0;
+
+plan tests => (254 + $ortsuche_tests - $bbbike_org ) * scalar @urls;
 
 my $default_hdrs;
 if (defined &Compress::Zlib::memGunzip && $do_accept_gzip) {
@@ -236,7 +238,9 @@ for my $cgiurl (@urls) {
 	    like_html $content, qr/Start.*Zoologischer Garten/, "Start is Zoologischer Garten";
 	    unlike_html $content, qr/\bZoo\b/, "Zoo not found (same point optimization)";
 	}
+	if (!$ENV{BBBIKE_TEST_ORG_LATER}) {
 	unlike_html $content, qr/\(\)/, "No empty parenthesis";
+	}
     }
 
     {
@@ -810,12 +814,12 @@ EOF
 	}
     }
 
-    {
+    if (!$ENV{BBBIKE_TEST_ORG_LATER}) {
 	my $content = std_get $cgiurl . "?scope=wideregion&detailmapx=2&detailmapy=6&type=start&detailmap.x=200&detailmap.y=226";
 	like_html $content, qr{diese Koordinaten konnte keine Kreuzung gefunden werden}, "No crossing for coords in the Döberitzer Heide";
     }
 
-    {
+    if (!$ENV{BBBIKE_TEST_ORG_LATER}) {
 	my $content = std_get $cgiurl . "?scope=wideregion&detailmapx=3&detailmapy=8&type=start&detailmap.x=304&detailmap.y=331";
 	like_html $content, qr{Rudolf-Breitscheid-Str}, "Crossing in Potsdam near Berlin, should get a street in Potsdam";
     }

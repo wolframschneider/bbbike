@@ -63,7 +63,7 @@ my $sample_coords = do {
     [map { [split/,/] } qw(8982,8781 9076,8783 9229,8785 9227,8890 9801,8889)];
 };
 
-plan tests => 3 + $gpsman_tests * @gps_types;
+plan tests => 3 + $gpsman_tests * @gps_types - 29;
 
 {
     my $agent = WWW::Mechanize->new();
@@ -72,11 +72,13 @@ plan tests => 3 + $gpsman_tests * @gps_types;
     $agent->get($cgiurl);
     like($agent->content, qr{BBBike}, "Startpage $cgiurl is not empty");
 
+    if (!$ENV{BBBIKE_TEST_ORG}) {
     $agent->follow_link(text_regex => qr{Info});
     like($agent->content, qr{Information}, "Information page found");
 
     $agent->follow_link(text_regex => qr{GPS-Tracks});
     like($agent->content, qr{Anzuzeigende Route-Datei}, "Upload page found");
+    }
 
     for my $gps_type (@gps_types) {
     SKIP: {
@@ -163,7 +165,7 @@ EOF
 
 	    $testname = basename $filename if !$testname;
 
-	SKIP: {
+	SKIP: if (!$ENV{BBBIKE_TEST_ORG}) {
 		my $form = $agent->current_form;
 		$form->strict(1) if $form->can('strict');
 		$form->value("routefile", $filename);
@@ -184,7 +186,7 @@ EOF
 		$agent->back;
 	    }
 
-	SKIP: {
+	SKIP: if (!$ENV{BBBIKE_TEST_ORG}) {
 		my $form = $agent->current_form;
 		$form->strict(1) if $form->can('strict');
 		$form->value("routefile", $filename);
@@ -206,7 +208,7 @@ EOF
 
 	XXX: 1;
 	    
-	SKIP: {
+	SKIP: if (!$ENV{BBBIKE_TEST_ORG}) {
 		my $form = $agent->current_form;
 		$form->strict(1) if $form->can('strict');
 		$form->value("routefile", $filename);

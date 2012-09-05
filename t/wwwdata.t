@@ -45,7 +45,7 @@ check_cgi_testing;
 
 if (!defined &note) { *note = \&diag }
 
-plan tests => 48;
+plan tests => $ENV{BBBIKE_TEST_ORG} ? 31 : 48;
 
 my $htmldir = $ENV{BBBIKE_TEST_HTMLDIR};
 if (!$htmldir) {
@@ -100,7 +100,7 @@ for my $do_accept_gzip (0, 1) {
 	($resp, $content);
     };
 
-    {
+    if (!$ENV{BBBIKE_TEST_ORG}) {
 	my $url = "$datadir/.modified";
 	my($resp, $content) = $basic_tests->($url);
 	my @error_lines;
@@ -151,7 +151,7 @@ EOF
     }
 
     # Simulate old BBBike application
-    {
+    if (!$ENV{BBBIKE_TEST_ORG}) {
 	my $url = "$datadir/strassen";
 	my($resp, $content) = $basic_tests->($url,
 					     ua => $ua316,
