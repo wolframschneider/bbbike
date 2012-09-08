@@ -63,7 +63,8 @@ my $sample_coords = do {
     [map { [split/,/] } qw(8982,8781 9076,8783 9229,8785 9227,8890 9801,8889)];
 };
 
-plan tests => 3 + $gpsman_tests * @gps_types - 29;
+my $bbbike_org = $ENV{BBBIKE_TEST_ORG} ? 12 : 0;
+plan tests => 3 + $gpsman_tests * @gps_types - 29 - $bbbike_org;
 
 {
     my $agent = WWW::Mechanize->new();
