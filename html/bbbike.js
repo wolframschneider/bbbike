@@ -128,13 +128,18 @@ function updateWeather(data) {
         span.innerHTML = message;
     }
 
-    span = document.getElementById("weather_forecast");
-    if (span) {
-        message = renderWeatherForecast(js.forecast);
-        if (message == "") {
-            message = ": no data available";
+    var span_fc = document.getElementById("weather_forecast");
+    if (span_fc) {
+        var message_fc = renderWeatherForecast(js.forecast);
+        // no forecast, use current weather only
+        if (message_fc == "") {
+            // message = ": no data available";
+            if (w.stationName) message_fc += w.stationName + ", ";
+            message_fc += message;
+            if (w.humidity > 0) message_fc += ", humidity: " + w.humidity + "%";
         }
-        span.innerHTML = message;
+
+        span_fc.innerHTML = message_fc;
     }
 }
 
