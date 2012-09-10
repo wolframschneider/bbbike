@@ -181,6 +181,7 @@ sub bbbike_world_ext {
     my @coords = map {[split /,/]} qw(6209,9772 6241,9772 6209,9773);
     {
 	my $out = Route::Descr::convert(%stdargs, -route => Route->new_from_realcoords([@coords]));
+        bbbike_world_ext($out);
 	is_deeply $out, {
 			 "Title" => "Route von Hohenstaufenstr. bis Hohenstaufenstr.",
 			 "Start" => "Hohenstaufenstr.",
