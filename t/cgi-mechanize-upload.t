@@ -181,12 +181,16 @@ EOF
 		cmp_ok($content, "ne", "", "Non-empty content")
 		    or diag "Error for uploaded file $filename";
 
-		local $TODO;
-		if ($^O eq 'freebsd' && $gps_type =~ m{^bbr} && do { require POSIX; POSIX::strftime("%FT%T", localtime) lt "2012-09-12T10:00:00" }) {
-		    $TODO = "Known to fail on freebsd, see http://www.freebsd.org/cgi/query-pr.cgi?pr=171353";
-		}
-
-		image_ok \$content, "png from $testname";
+		image_ok \$content, "png from $testname"
+		    or do {
+			if ($^O eq 'freebsd') {
+			    diag <<EOF;
+Test is known to fail on freebsd 9.0 if perl is compiled without -pthread
+(which is the default). See http://www.freebsd.org/cgi/query-pr.cgi?pr=171353
+Consider to upgrade the port.
+EOF
+			}
+		    };
 		if ($do_display) {
 		    do_display(\$content, "png");
 		}
@@ -244,7 +248,7 @@ EOF
 		like($agent->ct, qr{^image/}, "It's an image (png or gif) (from $testname)");
 		my $image_content = $agent->content;
 		cmp_ok($image_content, "ne", "", "Non-empty content");
-		image_ok \$content, "png or gif from $testname";
+		image_ok \$image_content, "png or gif from $testname";
 		if ($do_display) {
 		    # Hopefully a png viewer can display gifs as well...
 		    do_display(\$image_content, "png");
