@@ -24,7 +24,7 @@ my @images =
   qw/mm_20_yellow.png srtbike72.png srtbike114.png srtbike57.png shadow-dot.png dest.gif purple-dot.png mm_20_white.png ubahn.gif mm_20_red.png sbahn.gif printer.gif printer_narrow.gif ziel.gif mm_20_green.png yellow-dot.png dd-end.png dd-start.png phone.png via.gif start.gif twitter-t.png spinning_wheel32.gif srtbike.gif srtbike1.ico rss-icon.png google-plusone-t.png flattr-compact.png facebook-like.png twitter-b.png donate.png facebook-t.png/;
 
 if ( !$ENV{BBBIKE_TEST_SLOW_NETWORK} ) {
-    plan tests => @images * (MYGET+1);
+    plan tests => @images * ( MYGET + 1 );
 }
 else {
     plan 'no_plan';
@@ -53,8 +53,12 @@ sub myget {
 
 sub images {
     foreach my $image (@images) {
-        my $res       = myget("$homepage/images/$image", 60);
-        my $mime_type = "image/" . ($image =~ /\.gif$/ ? "gif" : $image =~ /\.ico$/ ? "x-icon" : "png");
+        my $res = myget( "$homepage/images/$image", 60 );
+        my $mime_type =
+          "image/"
+          . ( $image =~ /\.gif$/ ? "gif"
+            : $image =~ /\.ico$/ ? "x-icon"
+            :                      "png" );
         is( $res->content_type, $mime_type, "$image is $mime_type" );
     }
 }
