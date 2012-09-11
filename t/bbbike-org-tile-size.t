@@ -9,7 +9,7 @@ use warnings;
 
 plan 'no_plan';
 
-my $tile = new TileSize( 'debug' => 0 );
+my $tile = new TileSize( 'debug' => -1 );
 
 ok(1);
 
