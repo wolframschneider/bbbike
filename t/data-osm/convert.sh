@@ -6,13 +6,13 @@
 dir=$(dirname $0)
 : ${city=Cusco}
 
-osm=$dir/${city}
-data_osm=$dir/${city}-data-osm
+osm=$dir/tmp/${city}
+data_osm=$dir/tmp/${city}-data-osm
 
-rm -rf $osm
-mkdir $osm
+rm -rf $osm $data_osm
+mkdir -p $osm
 
-( cd $osm; ln -s ../$city.osm.pbf )
+( cd $osm; ln -s ../../$city.osm.pbf )
 world/bin/pbf2osm --gzip $osm/$city.osm.pbf
 
 make -s TIME="" DATA_OSM_DIR=$data_osm OSM_DIR=$dir CITIES="$city" convert
