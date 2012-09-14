@@ -158,8 +158,8 @@ sub convert {
 }
 
 sub checksum {
-    my $md5 = md5_file("t/data-osm/Cusco/checksum");
-    my $md5_checksum = "1ed502a012336782f743d1b33b085524";
+    my $md5          = md5_file("t/data-osm/Cusco/checksum");
+    my $md5_checksum = "8994280d099134fa2d6d4d254394bf6f";
     is( $md5, $md5_checksum, "md5 checksum" );
 }
 
