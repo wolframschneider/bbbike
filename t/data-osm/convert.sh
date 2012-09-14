@@ -12,7 +12,8 @@ data_osm=$dir/${city}-data-osm
 rm -rf $osm
 mkdir $osm
 
-( cd $osm; ln -s ../$city.osm.gz )
+( cd $osm; ln -s ../$city.osm.pbf )
+world/bin/pbf2osm --gzip $osm/$city.osm.pbf
 
 make -s TIME="" DATA_OSM_DIR=$data_osm OSM_DIR=$dir CITIES="$city" convert
 
