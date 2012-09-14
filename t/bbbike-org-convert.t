@@ -161,7 +161,7 @@ sub convert {
 
 sub checksum {
     my $md5          = md5_file("$prefix/Cusco/checksum");
-    my $md5_checksum = "77d789d8315a8b34e045512dae38e6e8";
+    my $md5_checksum = "6edc75084339cf486aab0561a842045f";
     is( $md5, $md5_checksum, "md5 checksum" );
 }
 
