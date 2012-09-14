@@ -54,11 +54,12 @@ sub myget {
 sub images {
     foreach my $image (@images) {
         my $res = myget( "$homepage/images/$image", 60 );
-        my $mime_type =
-          "image/"
-          . ( $image =~ /\.gif$/ ? "gif"
+        my $mime_type = "image/"
+          . (
+              $image =~ /\.gif$/ ? "gif"
             : $image =~ /\.ico$/ ? "x-icon"
-            :                      "png" );
+            : "png"
+          );
         is( $res->content_type, $mime_type, "$image is $mime_type" );
     }
 }
