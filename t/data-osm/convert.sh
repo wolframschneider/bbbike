@@ -5,6 +5,7 @@
 
 dir=$(dirname $0)
 : ${city=Cusco}
+: ${MD5=`which md5 md5sum false | head -1`}
 
 prefix=$dir/tmp
 osm=$prefix/${city}
@@ -19,5 +20,5 @@ world/bin/pbf2osm --gzip $osm/$city.osm.pbf
 POI_DB=poi_tmp; export POI_DB
 make -s GIT_ID=none TIME="" DATA_OSM_DIR=$data_osm OSM_DIR=$prefix CITIES="$city" convert
 
-( cd $data_osm/$city; find . ! -name '*.gz' -type f -print0 | xargs -0 md5sum | sort ) > $osm/checksum 
+( cd $data_osm/$city; find . ! -name '*.gz' -type f -print0 | xargs -0 $MD5 | sort ) > $osm/checksum 
 
