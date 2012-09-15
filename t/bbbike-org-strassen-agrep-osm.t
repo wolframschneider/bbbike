@@ -19,7 +19,7 @@ BEGIN {
     my $strassen = "data-osm/Berlin/strassen";
 
     if ( !-r $strassen ) {
-        print qq{1..0 # skip no File '$strassen' does not exists\n};
+        print qq{1..0 # skip '$strassen' does not exists\n};
         print qq{       please run: make CITIES="Berlin" fetch convert\n};
         exit;
     }

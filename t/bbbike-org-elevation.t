@@ -11,7 +11,7 @@ BEGIN {
     my $hoehe = "$ENV{BBBIKE_DATADIR}/hoehe";
 
     if ( !-e $hoehe ) {
-        print "1..0 # skip no file '$hoehe' does not exists, skip test\n";
+        print "1..0 # skip '$hoehe' does not exists\n";
         print qq{       please run: make CITIES="$city" fetch convert\n};
         exit;
     }
