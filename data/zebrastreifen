@@ -69,8 +69,7 @@ Rennbahnstr./Pasedagplatz	Zs 14095,17196
 Triftstr.	Zs 12014,22996
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20030721.13801.html vvv
 Hermann-Hesse-Str./Pastor-Niemöller-Platz	Zs 9801,19290
-#: XXX genaue Position???
-Achillesstr. vor Grundschule	Zs 15700,24003
+Achillesstr. vor Grundschule	Zs 15703,24011
 Bizetstr./Smetanastr.	Zs 14067,15984
 Bizetstr./Lindenallee	Zs 14293,16066
 Blankenburger Str./Siegfriedstr.	Zs 10758,19637
@@ -153,7 +152,7 @@ Bahnhofstr./Hubertusdamm	Zs 14622,23263
 Florastr./Heynstr.	Zs 10196,17772
 Friedrich-Engels-Str./Kastanienallee	Zs 8887,20622
 Uhlandstr./Lessingstr.	Zs 7560,20447
-Buchberger Str./Weg zum S Nöldnerplatz	Zs 15731,11270
+Buchberger Str./Weg zum S Nöldnerplatz	Zs 15721,11280
 Liebenwalder Straße/Ecke Heilgenstadter Straße	Zs 16846,14661
 Wartenberger Straße/Ecke Anna-Ebermann-Straße	Zs 17644,16695
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-lichtenberg/presse/archiv/20071116.1100.89038.html vvv
@@ -252,9 +251,10 @@ Parkstr./Amalienstr.	Zs 13974,16643
 Bernau, Richtung Ladeburg	Zs 22315,31106
 Grüntal	Zs 31274,37795
 Am Heidebergplan	Zs -7148,14779
-Provinzstr./Kühnemannstr.	Zs 8545,17787
+Provinzstr./Kühnemannstr.	Zs 8538,17774
 #: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20090715.0820.132257.html vvv
-Zabel-Krüger-Damm/Schluchseestr.	Zs 5006,22507
+#: confirmed_by: srt
+Zabel-Krüger-Damm/Schluchseestr.	Zs 5024,22521
 #: XXX Realisierung noch 2009
 Gotthardstr./Höhe Kita	Zs 6142,17798
 #: confirmed_by: srt
@@ -396,9 +396,7 @@ Manteuffelstr./Naunynstr.	Zs 12008,10543
 #: by: http://www.flickr.com/photos/drggkkrueger/5826991387/in/pool-gwb
 #: by: http://farm3.staticflickr.com/2194/5826991387_e538283e0f_z.jpg
 Ostpreußendamm/Lippstädter Str.	Zs 3657,749
-#: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20111230.1240.364422.html
-#: XXX genaue Position?
-Köpenicker Straße/Ecke Dohlengrund	Zs 21288,10431
+Köpenicker Straße/Ecke Dohlengrund	Zs 21273,10458
 Proskauer/Bänsch	Zs 14327,12658
 Weidenweg/Auerstr.	Zs 13009,12523
 Groß-Ziethener Chaussee	Zs 15533,486
@@ -441,3 +439,6 @@ Seebadstr.	Zs 4512,23169
 #: confirmed_by: srt
 Bernauer Str./Oelder Weg	Zs 1981,18743
 Eichhorster Weg	Zs 6099,21373
+Apollofalterallee/Lindenstr.	Zs 21426,11160
+Wiesenstr./Pankeweg	Zs 8164,15840
+Calauer Str./Finsterwalder Str.	Zs 6479,21968

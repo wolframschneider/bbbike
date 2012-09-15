@@ -40,9 +40,9 @@ check_cgi_testing;
 my @gps_types = ("trk", "ovl", "bbr",
 		 "bbr-generated", "ovl-generated", "trk-generated",
 		);
-my $png_tests = 2;
+my $png_tests = 4;
 my $pdf_tests = 2;
-my $mapserver_tests = 5;
+my $mapserver_tests = 7;
 my $gpsman_tests = $png_tests + $pdf_tests + $mapserver_tests;
 my $only;
 
@@ -63,7 +63,8 @@ my $sample_coords = do {
     [map { [split/,/] } qw(8982,8781 9076,8783 9229,8785 9227,8890 9801,8889)];
 };
 
-plan tests => 3 + $gpsman_tests * @gps_types - 29;
+my $bbbike_org = $ENV{BBBIKE_TEST_ORG} ? 12 : 0;
+plan tests => 3 + $gpsman_tests * @gps_types - 29 - $bbbike_org;
 
 {
     my $agent = WWW::Mechanize->new();
@@ -179,6 +180,17 @@ EOF
 		my $content = $agent->content;
 		cmp_ok($content, "ne", "", "Non-empty content")
 		    or diag "Error for uploaded file $filename";
+
+		image_ok \$content, "png from $testname"
+		    or do {
+			if ($^O eq 'freebsd') {
+			    diag <<EOF;
+Test is known to fail on freebsd 9.0 if perl is compiled without -pthread
+(which is the default). See http://www.freebsd.org/cgi/query-pr.cgi?pr=171353
+Consider to upgrade the port.
+EOF
+			}
+		    };
 		if ($do_display) {
 		    do_display(\$content, "png");
 		}
@@ -236,6 +248,7 @@ EOF
 		like($agent->ct, qr{^image/}, "It's an image (png or gif) (from $testname)");
 		my $image_content = $agent->content;
 		cmp_ok($image_content, "ne", "", "Non-empty content");
+		image_ok \$image_content, "png or gif from $testname";
 		if ($do_display) {
 		    # Hopefully a png viewer can display gifs as well...
 		    do_display(\$image_content, "png");

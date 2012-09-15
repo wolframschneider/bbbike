@@ -906,7 +906,7 @@ EOF
        text  => 'B 96a; (Bahnhofstr., Hauptstr.); OD Schildow Kanal- und Straßenbau Vollsperrung 20.09.2004-01.01.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 8493,25378 8370,25539
+userdel	q4 8488,25390 8370,25539
 userdel	q4 8370,25539 8182,25608
 EOF
      },
@@ -1062,10 +1062,11 @@ userdel	q4 21646,30961 21001,30933 20794,30899
 userdel	q4 21646,30961 21955,30976
 EOF
      },
-     { from  => 1097208000, # 2004-10-08 06:00
-       until => 1097442000, # 2004-10-10 23:00
-       text  => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Kürbisfest, Straße gesperrt, Dauer: 09.10.2004 06:00 Uhr bis 10.10.2004 23:00 Uhr ',
+     { from  => 1346968800, # 2012-09-07 00:00
+       until => 1347228000, # 2012-09-10 00:00
+       text  => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstalung, Straße gesperrt (bis 09.09.12 nachts)',
        type  => 'handicap',
+       source_id => 'IM_019153',
        data  => <<EOF,
 userdel	q4; 6687,8385 6765,8480 6912,8617 6990,8685 7009,8705 7105,8788 7201,8870 7275,8960
 EOF
@@ -6043,7 +6044,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003701',
        data  => <<EOF,
-userdel	2::temp 7579,17532 7572,17558 7540,17675 7491,17793 7477,17832 7453,17899 7432,17964 7426,17981 7405,18047 7335,18257 7291,18392 7269,18460 7232,18572
+userdel	2::temp 7579,17532 7572,17558 7540,17675 7491,17793 7477,17832 7453,17899 7432,17964 7426,17981 7405,18047 7335,18257 7291,18392 7269,18460 7233,18562 7198,18575
 EOF
      },
      { from  => 1221024854, #  undef
@@ -9021,7 +9022,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006015',
        data  => <<EOF,
-userdel	2::temp 6442,22240 6492,22113 6485,21955 6373,21810 6320,21777 6269,21748 6093,21648 5923,21522
+userdel	2::temp 6434,22244 6484,22098 6473,21969 6373,21810 6320,21777 6269,21748 6093,21648 5923,21522
 EOF
      },
      { from  => 1184018400, # 2007-07-10 00:00
@@ -11341,7 +11342,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_008423',
        data  => <<EOF,
-userdel	1::inwork 7832,20219 7957,20182 8062,20133 8196,20096
+userdel	1::inwork 7832,20219 7937,20175 8040,20124 8196,20096
 EOF
      },
      { from  => 1209496288, # 2008-04-29 21:11
@@ -12358,7 +12359,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009757',
        data  => <<EOF,
-userdel	2::temp 9385,13174 9245,13162
+userdel	2::temp 9385,13174 9250,13163
 EOF
      },
      { from  => 1219523521, # 2008-08-23 22:32
@@ -12385,7 +12386,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009715',
        data  => <<EOF,
-userdel	1::inwork 11455,15916 11581,15831 11736,15727 11941,15586
+userdel	1::inwork 11455,15916 11567,15842 11736,15727 11941,15586
 EOF
      },
      { from  => 1219879654, # 2008-08-28 01:27
@@ -12839,7 +12840,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_010271',
        data  => <<EOF,
-userdel	q4::inwork 9810,12712 9867,12651
+userdel	q4::inwork 9810,12712 9870,12657
 EOF
      },
      { from  => 1223933669, # 2008-10-13 23:34
@@ -17561,7 +17562,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_015565',
        data  => <<EOF,
-userdel	2::temp 9259,13050 9413,13071 9553,13079
+userdel	2::temp 9262,13050 9413,13071 9553,13079
 EOF
      },
      { from  => 1272607309, # 2010-04-30 08:01
@@ -18269,11 +18270,11 @@ EOF
 userdel	2::temp 5370,6486 5424,6584 5533,6753 5644,6936 5817,7223
 EOF
      },
-     { from  => 1284091200, # 2010-09-10 06:00 # PERIODISCH!
-       until => 1284337800, # 2010-09-13 02:30
-       text  => 'Bahnhofstraße (Lichtenrade): Veranstaltung, Straße vollständig gesperrt (bis ca. 13.09.10, 2 Uhr) in beiden Richtungen zwischen Goltzstr. und Steinstr. ',
+     { from  => 1346968800, # 2012-09-07 00:00 # PERIODISCH!
+       until => 1347228000, # 2012-09-10 00:00
+       text  => 'Bahnhofstraße (Lichtenrade): Veranstaltung, Straße vollständig gesperrt zwischen Goltzstr. und Steinstr. (bis 09.09.12 nachts)',
        type  => 'handicap',
-       source_id => 'IM_016305',
+       source_id => 'IM_019152',
        data  => <<EOF,
 userdel	q4::temp 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
 EOF
@@ -18499,7 +18500,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101105.1400.317649.html',
        data  => <<EOF,
-userdel	q4::inwork; 7855,18697 7785,18730 7690,18716 7599,18705 7520,18701 7492,18699 7434,18695 7320,18688 7217,18681
+userdel	q4::inwork; 7855,18697 7785,18730 7690,18716 7599,18705 7520,18701 7492,18699 7434,18695 7217,18681
 EOF
      },
      { from  => 1289156455, # 2010-11-07 20:00
@@ -19601,7 +19602,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_017672',
        data  => <<EOF,
-userdel	2::temp 4273,20021 4319,20182
+userdel	2::temp 4262,20025 4319,20182
 EOF
      },
      { from  => undef, #
@@ -19734,11 +19735,11 @@ EOF
 userdel	2::inwork 872,24330 905,24113 831,24054 764,24065 609,24215 237,24374 195,24389 132,24390 78,24364 -406,23934
 EOF
      },
-     { from  => 1316062800, # 2011-09-15 07:00
-       until => 1316383140, # 2011-09-18 23:59
-       text  => 'Hauptstr. (Rosenthal): Veranstaltung, Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 16.09.2011 07:00 Uhr bis 18.09.2011 23:59 Uhr ',
+     { from  => 1347508800, # 2012-09-13 06:00 PERIODISCH? ca. 2. Wochenende im September
+       until => 1347832740, # 2012-09-16 23:59
+       text  => 'Hauptstr. (Rosenthal): Veranstaltung, Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 14.09.2012 06:00 Uhr bis 16.09.2012 23:59 Uhr',
        type  => 'handicap',
-       source_id => 'IM_017830',
+       source_id => 'IM_019184',
        data  => <<EOF,
 userdel	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
 EOF
@@ -19805,7 +19806,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20111006.1020.360727.html',
        data  => <<EOF,
-userdel	q4::inwork 4613,19279 4690,19446
+userdel	q4::inwork 4608,19287 4690,19446
 EOF
      },
      { from  => 1318229040, # 2011-10-10 08:44
@@ -19861,14 +19862,12 @@ EOF
 userdel	q4::inwork 9085,13919 8935,13844
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1347099450, # undef, # 
+       until => 1347099453, # undef, # XXX
        text  => 'Alt-Friedrichsfelde - Weißenhöher Straße: Bauarbeiten, Durchfahrt könnte gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2011-10-22
-#: XXX Zaun auf der westlichen Seite, kann aber umfahren werden; Matsch...
-userdel	2::inwork 19750,11730 19827,11686 19881,11591
+userdel	2::inwork 19750,11730 19827,11686 19879,11595 19881,11591
 EOF
      },
      { from  => 1325955689, # 
@@ -19984,8 +19983,9 @@ EOF
        data  => <<EOF,
 #: by: http://www.altglienicke24.de/meldungen.html
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1201/nachricht4563.html
+#: by: http://pf-tk.de/ai1ec_event/podiumsdiskussion-wie-weiter-im-kolner-viertel/?instance_id=
 #: XXX wann wird die Brücke wieder eröffnet?
-#: next_check: 2012-03-01
+#: next_check: 2013-03-01
 userdel	2::inwork 19968,16 19940,52
 EOF
      },
@@ -20519,7 +20519,8 @@ EOF
        text  => 'Adalbertstr.: Fahrbahn in Richtung Kottbusser Tor gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check: 2012-09-10
+#: last_checked: 2012-09-07
+#: next_check: 2012-09-20
 userdel	q4::inwork; 11389,10463 11393,10390
 EOF
      },
@@ -20597,6 +20598,51 @@ EOF
 #: last_checked: 2012-09-01 (wosch)
 #: next_check: 2012-12-01
 userdel	q4::inwork 9112,14771 9250,14658
+EOF
+     },
+     { from  => 1346825940, # 2012-09-05 08:19
+       until => 1347444000, # 2012-09-12 12:00
+       text  => 'Klingsorstr. (Steglitz): Baustelle, Richtung Hindenburgdamm zwischen Birkbuschstr. und Amfortasweg gesperrt, bis Mitte September 2012 ',
+       type  => 'handicap',
+       source_id => 'IM_019149',
+       data  => <<EOF,
+userdel	q4::inwork; 5271,4547 5214,4445
+EOF
+     },
+     { from  => 1346558400, # 2012-09-02 06:00
+       until => 1347890400, # 2012-09-17 16:00
+       text  => 'Rosenthaler Str. (Mitte): zwischen Neue Schönhauser Str. und Hackescher Markt Baustelle, Fahrbahn gesperrt (bis Mitte 09/12)',
+       type  => 'handicap',
+       source_id => 'INKO_113178_COPY_5',
+       data  => <<EOF,
+userdel	q4::inwork 10310,13227 10264,13097
+EOF
+     },
+     { from  => 1347746400, # 2012-09-16 00:00
+       until => 1350165599, # 2012-10-13 23:59
+       text  => 'Straßenbau in der Alfred-Kowalke-Straße östlich der Straße Am Tierpark, Straße ist gesperrt, 17. September 2012 bis 13. Oktober 2012 ',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120914.1355.375249.html',
+       data  => <<EOF,
+userdel	2::inwork 18286,11275 18409,11348 18477,11388 18618,11452
+EOF
+     },
+     { from  => 1347508800, # 2012-09-13 06:00
+       until => 1347825600, # 2012-09-16 22:00
+       text  => 'Bergstr. (Steglitz): Veranstaltung, Straße zwischen Körnerst. und Heesestr. gesperrt, 14.09.2012 06:00 Uhr bis 16.09.2012 22:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_019185',
+       data  => <<EOF,
+userdel	q4::temp 5465,5726 5290,5704
+EOF
+     },
+     { from  => 1347429180, # 2012-09-12 07:53
+       until => 1347832740, # 2012-09-16 23:59
+       text  => 'Spanische Allee (Zehlendorf): Baustelle, Straße unter den Bahnbrücken vollständig gesperrt (bis 16.09.12 nachts)',
+       type  => 'gesperrt',
+       source_id => 'IM_019192',
+       data  => <<EOF,
+userdel	2::inwork -3736,2849 -3648,2881
 EOF
      },
     );

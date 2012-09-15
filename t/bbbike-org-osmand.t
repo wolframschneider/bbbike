@@ -1,4 +1,5 @@
 #!/usr/local/bin/perl
+# Copyright (c) Sep 2012 Wolfram Schneider, http://bbbike.org
 
 BEGIN { }
 
@@ -44,7 +45,7 @@ sub md5_file {
 ######################################################################
 is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched" );
 
-my ( $fh, $tempfile ) = tempfile;
+my $tempfile = File::Temp->new( SUFFIX => ".osm" );
 my $prefix = $pbf_file;
 $prefix =~ s/\.pbf$//;
 my $st = 0;

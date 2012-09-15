@@ -1,16 +1,17 @@
-#!/usr/bin/perl -w
-# -*- perl -*-
+#!/usr/local/bin/perl 
+# Copyright (c) Sep 2012 Wolfram Schneider, http://bbbike.org
 
 #
 # Author: Slaven Rezic
 #
 
-use strict;
 use FindBin;
 use lib ( "$FindBin::RealBin/..", "$FindBin::RealBin/../lib", );
 
 use File::Temp qw(tempdir);
 use Strassen::Core ();
+use strict;
+use warnings;
 
 BEGIN {
     if (
@@ -44,7 +45,7 @@ my @listing;
     chomp( @listing = `$^X $download_script` );
 
     # 2012-03-16: there are 231 cities available + original bbbike data
-    cmp_ok scalar(@listing), ">=", 100, 'More than 100 cities found';
+    cmp_ok scalar(@listing), ">=", 235, 'More than 200 cities found';
 
     ok grep { $_ eq 'Wien' } @listing, 'Found Wien in listing';
 }

@@ -294,7 +294,7 @@ Sonnenallee - Anzengruberstr.: Sonnenallee schon an Innstr. oder erst an der Fin
 Rudower Chaussee - Max-Born-Str.: Rudower Chaussee kann über Fußgängerfurt gequert werden	CP; 19071,2746 19111,2777 19064,2867
 Max-Born-Str. - Rudower Chaussee: Rudower Chaussee kann über Fußgängerfurt gequert werden	CP; 19064,2867 19111,2777 19206,2848
 Kulmer Str./Goebenstr.: Fußgängerampel an der linken Seite zum Überqueren der Goebenstr. benutzen	CP; 7771,9479 7829,9723 7848,9814
-zur Kietzer Str.: gegenüber der Mauritiuskirchstr. in die Grünanlage einfahren	CP2; 15349,11911 15298,11892
+zur Kietzer Str.: gegenüber der Mauritiuskirchstr. in die Grünanlage einfahren	CP2; 15349,11911 15301,11876
 Zufahrt zum Gartenbauamt	CP2; 9150,9152 9080,9163
 Ellwanger Str. - Attilastr.: Attilastr. in Höhe der Neckarsulmer Str. überqueren	CP; 7382,4503 7450,4397 7482,4416 7601,4485
 Attilastr. - Ellwanger Str.: bereits an der Rottweiler Str. die Straßenseite wechseln	PI; 7368,4342 7410,4373 7450,4397 7382,4503
@@ -496,3 +496,4 @@ Am Stand - Klemkestr.: den linken Gehweg bis zur Kreuzung Lampesteig benutzen	CP
 Ausgeschildert als "Zur Wickeder Str."	CP2; 2821,18831 2794,18836
 Ausgeschildert als "Zur Wilhelm-Blume-Allee"	CP2; 2570,20837 2469,20812
 Straße an der Fußgängerampel vor der Moschee überqueren	CP; 10691,8532 10796,8498 10799,8504
+Schulzendorfer Str. - Reinickendorfer Str.: bereits an der Ampel Müllerstr./Schulzendorfer Str. auf den linken Gehweg wechseln	PI; 8057,14876 8091,14895 8037,14958

@@ -8,6 +8,7 @@
 #
 #: temporary vvv
 # 
+#: last_checked: 2012-09-07
 #: next_check: 2012-10-17
 Modersohnstr.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 14181,11434 14134,11272
 # 
@@ -40,7 +41,7 @@ Gartenstr.: Einbahnstraße zwischen Invalidenstr. und Tieckstr. (Bauarbeiten)	q4:
 #: XXX laut INKO_113363 bis Ende März 2013 gesperrt
 Voßstr.: gesperrte Fahrbahn (Baustelle), Ausweichen auf Gehweg	q3::inwork 8743,11663 8837,11676
 # 
-#: last_checked: 2012-09-01 vvv
+#: last_checked: 2012-09-10 vvv
 #: next_check: 2013-05-31 vvv
 #: by: wosch & IM_017330 & IM_019009 & INKO_113944
 #: XXX siehe auch temporäre Ampel an der Chausseestr. sowie an der Luisenstr.
@@ -81,28 +82,28 @@ Helmerdingstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg kann benutzt werden	q4::i
 #: next_check: ^^^
 #: last_checked: ^^^
 # 
-#: last_checked: 2012-09-03
+#: last_checked: 2012-09-04
 #: next_check: 2012-10-01
 Marchlewskistr.: Bauarbeiten, Ausweichen auf Gehweg	q4::inwork 13496,11384 13473,11456
 # 
-#: last_checked: 2012-09-03
+#: last_checked: 2012-09-04
 #: next_check: 2012-10-15
 #: XXX danach q1 und mit Eintrag unten verknüpfen, falls hier in Zukunft keine Fahrbahn mehr sein wird
 Rathausstr.: Fußgänger, enge Stelle vor dem Roten Rathaus	q2::inwork 10601,12521 10704,12595
 # 
 #: last_checked: 2012-08-30 vvv
 #: next_check: 2012-09-10 vvv
-#: XXX siehe auch Eintrag in fragezeichen-orig (Ampel in Bau)
 #: note: komplette Fertigstellung und Verkehrsfreigabe im Frühjahr 2013
-Rathausbrücke: provisorischer Fußgängerweg auf der Rathausbrücke, ggfs. schieben	q4::inwork 10362,12351 10422,12395
-Rathausstr. zwischen Breite Str. und Poststr.: Fahrbahn wegen Brückenbauarbeiten gesperrt	q2::inwork 10281,12310 10362,12351
-Rathausstr. zwischen Breite Str. und Poststr.: Fahrbahn wegen Brückenbauarbeiten gesperrt	q4::inwork 10422,12395 10476,12432
+Rathausstr. und Rathausbrücke: Behinderungen wegen Bauarbeiten möglich	q2::inwork 10281,12310 10362,12351 10422,12395 10476,12432
 #: next_check: ^^^
 #: last_checked: ^^^
 # 
-#: last_checked: 2012-08-10
-#: next_check: 2012-09-01
-Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10489,11405 10436,11344 10244,11160
+#: last_checked: 2012-09-07 vvv
+#: next_check: 2012-09-20 vvv
+Alte Jakobstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 10489,11405 10436,11344
+Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10436,11344 10244,11160
+#: next_check: ^^^
+#: last_checked: ^^^
 # 
 #: last_checked: 2012-08-01
 #: next_check: 2012-09-01
@@ -126,9 +127,9 @@ Anna-Louisa-Karsch-Str.: vor der Friedrichsbrücke auf den linken Gehweg fahren	q
 #: next_check: 2012-10-15
 Am Zirkus: Baustelle, Einbahnstraße	q3::inwork; 9170,13031 9239,12923
 # 
-#: last_checked: 2012-09-02
+#: last_checked: 2012-09-10
 #: next_check: 2012-10-15
-Am Kupfergraben: Baustelle, Einbahnstraße	q3::inwork; 9867,12651 9919,12613
+Am Kupfergraben: Baustelle, Einbahnstraße	q3::inwork; 9870,12657 9900,12643 9919,12613
 # 
 #: temporary ^^^
 ######################################################################
@@ -341,7 +342,7 @@ Ludwigkirchplatz: Gehweg	q2 4905,10069 4863,10077
 (Rad- und Wanderweg an Spree und Landwehrkanal): Fußgänger, teilweise eng	q2 3396,12741 3476,12735 3582,12704 3763,12624 3888,12618 4131,12641 4340,12578 4529,12570 4642,12491 4829,12357 5045,12243 5147,12164 5261,12004 5361,11910
 #: note: Radfahren erlaubt, Fußgänger haben Vorrang
 Spreeufer: Fußgänger, besonders an schönen Tagen	q2 10166,12777 10105,12855 9977,12912 9944,12921 9930,12947 9900,12942 9714,12995
-Spreeufer: Fußgänger	q2 9707,12974 9557,12992 9533,12994 9508,12991 9271,12952
+Spreeufer: Fußgänger	q2 9707,12974 9557,12992 9533,12994 9508,12991 9272,12952
 Henriette-Herz-Platz: Straßenbahn	q2 10132,12941 10255,12959 10312,12982 10371,13006
 Monbijoupark - Henriette-Herz-Platz: Fußgänger	q1 9977,12912 10132,12941
 Monbijoubrücke: Fußgänger	q1 9707,12974 9680,12916 9661,12876
@@ -425,7 +426,8 @@ Fritz-Schiff-Weg: Fußgänger	q1 13463,12507 13484,12436 13472,12337
 (Crellestr. - Julius-Leber-Brücke): Fußgänger	q2 7535,9087 7555,8978 7509,8929 7497,8916
 (Fischerinsel, Spreekanalufer): Fußgänger	q1 10364,11896 10329,11842 10373,11781 10517,11795 10672,11870 10776,11942 10824,11992
 (Baikalstr. - Rummelsburger Str.): Fußgänger	q1 17281,10598 17249,10666
-(Baikalstr. - Rummelsburger Str.): Fußgänger	q1 17249,10702 17228,10860
+(Baikalstr. - Rummelsburger Str.): Fußgänger	q1 17249,10702 17247,10755 17261,10827 17258,10870
+(Tränkegraben - Eggersdorfer Str./Rummelsburger Str.): Fußgänger	q1 17261,10827 17228,10860
 Verl. Pücklerstr.: Fußgänger, Hundeauslaufgebiet	q1 1558,6729 1364,6691 1170,6654 967,6620 905,6631 880,6645 832,6607 778,6603 698,6567 546,6583 369,6594 306,6582 218,6571
 Weimarer Str.: Fußgänger	q1 4101,11347 4101,11233
 Norwegerstr. - Behmstr.: Rampe	q2 10022,16237 10026,16165 10055,16104 10045,16157
@@ -514,7 +516,7 @@ Egidysteg: eng, Fußgänger	q3 3099,22211 3134,22153
 (Weg am Tegeler Fließ): Fußgänger	q1 5596,23970 5409,23816 5297,23633 5214,23420 5242,23156 5232,23139 5205,23094 5127,23042 5054,23025 4824,22907 4731,22904 4693,22897 4626,22914
 (Weg am Tegeler Fließ): Fußgänger	q1 4608,22931 4402,22877 4306,22914 4163,22907
 (Weg am Tegeler Fließ): Fußgänger, eng	q2 5860,24067 5693,24037 5596,23970
-(Schildower Weg): Fußgänger	q1 7877,24037 7675,23968 7615,23884 7185,23749
+(Schildower Weg): Fußgänger	q1 7877,24037 7675,23968 7615,23884 7571,23885 7339,23782 7312,23775 7185,23749
 (Mehrower Allee, Unterführung zum S-Bahnhof): Rampe, Fußgänger	q4 20547,17084 20533,17051 20439,17103
 Altvaterstr.: Fußgänger, Bordsteine	q2 -3117,3107 -3170,3070 -3223,3034
 #: note: laut Luftbild
@@ -530,7 +532,7 @@ Ceciliengärten: schmale Rampe oder Treppe	q3 6356,7479 6289,7472
 Sebastianstr.: Absperrung für Autos, mit Anhänger unbequem passierbar	q1 10918,11084 10939,11045
 (Weg am Humboldthain): Radfahren erlaubt, Fußgänger haben Vorrang	q1 9255,15816 9092,15789 8934,15740
 Tasdorfer Str. - Wilhelm-Guddorf-Str.: Fußgänger	q1 15393,11590 15423,11667
-(Grünes Band): Radfahren erlaubt, Fußgänger haben Vorrang	q1 15349,11911 15298,11892 15327,11724 15328,11636 15377,11555 15412,11510 15414,11487 15445,11455 15515,11416
+(Grünes Band): Radfahren erlaubt, Fußgänger haben Vorrang	q1 15349,11911 15301,11876 15327,11724 15328,11636 15377,11555 15412,11510 15414,11487 15445,11455 15515,11416
 Am Bahndamm: Radfahren offiziell nicht erlaubt	q2 7662,4529 7772,4306
 Am Bahndamm: Fußgänger	q1 7772,4306 7795,4242 8106,3410 8259,3349
 Edenkobener Steg: Fußgänger	q1 6627,4187 6645,4254
@@ -1332,6 +1334,18 @@ Alt-Tegel: Fußgänger	q3 1462,20133 1457,20159
 (Uferweg am Tegeler Hafen - Am Tegeler Hafen): 3x kurze und steile Rampe	q4 1858,20431 1871,20399
 (Am Rosensteg - An der Heide): eng	q3 3065,20646 3101,20649 3109,20650
 (Rosentreterpromenade - Ziekowstr.): schmal	q2+ 4156,21175 4060,21147 3649,21102 3456,21071 2911,20953 2571,20886
+(Oskar-Ziethen-Krankenhaus): Krankenhausgelände, Fußgänger	q2 16541,12064 16556,12180
+(U-Bahnunterführung Elsterwerdaer Platz): Fußgänger	q3 21137,11294 21086,11321
+#: XXX_prog: BS (an der westlichen Seite)
+Frankfurter Allee/Harnackstr.: hoher abgeschrägter Bordstein	q2 15941,11855 15989,11834
+#: XXX_prog: BS
+Alter Bernauer Heerweg: eng, Bordstein zur Wittenauer Str.	q3 6641,22756 6770,22801
+#: XXX_prog: BS
+Kolonie Dreieck - Klemkepark: Hunde, Stufe zur Klemkestr.	q3 8260,18765 8188,18819
+#: XXX_prog: BS (low) (südliche Seite)
+(Saalmannsteig - Reinickes Hof): einige Fußgänger, niedriger Bordstein am Wendehammer	q1- 5284,19043 5281,18996
+#: XXX_prog: BS (zumindest an der Nordseite)
+Ulrichsteiner Weg: Bordstein	q2 6093,21648 6066,21691
 #
 ######################### User Contributions #################################
 # 
@@ -1449,8 +1463,7 @@ Spandauer Str.: enge Straße	q1 -6442,14186 -6261,14213
 Achenbachstr.: nicht so breite Straße	q1 -3360,14974 -3322,14814
 #: by: Hartmut (stahn):
 Herrnholzweg: enge Straße	q1 6279,23170 6491,22915
-#: by: Sabine Hochstadt:
-Hausotterstr.: sehr schmal, auf beiden Seiten parkende Autos	q1 8592,18128 8348,18071 8135,18028 7957,17967 7772,17915 7477,17832
+#XXX --- del --- nicht schmaler als vergleichbare Straßen --- #: by: Sabine Hochstadt: --- Hausotterstr.: sehr schmal, auf beiden Seiten parkende Autos	q1 8592,18128 8348,18071 8135,18028 7957,17967 7860,17940 7772,17915 7477,17832
 #: by: Marcel (marcls): vvv
 Prettauer Pfad: enge Straße	q1 3384,1297 3577,1541
 Prettauer Pfad: enge Straße	q1 3358,1331 3384,1297 3437,1218
@@ -1504,7 +1517,7 @@ Wentowsteig: enge Straße mit parkenden Autos	q1 6924,20695 6945,20805 6955,20859
 #: by: Peter Held:
 (Spreeuferweg): Fußgänger	q1 4537,12531 4501,12544 4334,12551
 #: by: Johannes Nerger:
-(Schönholzer Heide, parallel zur Friesenstr.): Fußgänger	q1 8765,19288 8784,19253 8947,19166 9446,18855 9475,18862
+(Schönholzer Heide, parallel zur Friesenstr.): Fußgänger	q1 8765,19288 8791,19249 8947,19166 9446,18855 9475,18862
 #: by: Felix Beutler:
 Nordufer: teilweise sehr schmaler Radweg	q1 7212,14738 7433,14656 7464,14636
 #: by: Jörn Busch:
@@ -2044,7 +2057,7 @@ Würzburger Str.: enge Straße	q0- 11681,-1951 11886,-1930 11919,-1927 12082,-1908
 # corrected_by: srt (removed): --- Hauptweg (Biesdorf): enger Weg	q2 20821,8438 20834,8694
 Hauptweg (Biesdorf): enger Weg	q2 20834,8694 20799,8965 20802,9297
 #: by: ^^^
-Hallichpromenade: Fußweg	q2 5388,20606 5447,20614
+Hallichpromenade: Fußweg	q2 5388,20606 5441,20613
 #: by: paula* (gwendolen...):
 #: corrected_by: srt (nur die Hausdurchfahrt ist eng)
 Allmendeweg: enge Hausdurchfahrt	q1+ 3071,21801 3155,21572
@@ -2261,6 +2274,8 @@ Diethelmweg: enge Straße	q1 21649,13995 21677,14241 21696,14430
 #: corrected_by: srt (nothing -> q1)
 Bat-Yam-Platz: Fußgänger	q1 14515,2212 14545,2206 14633,2145
 #: by: Marcus Kuhn:
+#: confirmed_by: srt
+#: note: Fußgängerverkehr zum S-Bahnhof
 Saalmannsteig: Fußgänger	q2 5410,19050 5284,19043 5181,19037
 #: by: Stefan Dietrich:
 #: corrected_by: srt/policy (q3 -> q1)
@@ -2269,7 +2284,7 @@ Jägerstr. (Köpenick): enge Straße	q1 22395,4678 22365,4676 22355,4660 22312,4593
 (Swakopmunder Str. - Charles-Corcelle-Ring): Fußgänger	q2 5223,16783 5141,16799 5091,16810 5035,16819 5000,16826
 #: by: catrin (ruehl) vvv
 #: corrected_by: srt/policy (q2 -> q1)
-Kolonie Dreieck - Klemkepark: Hunde	q1 8260,18765 8188,18819 8101,18846 7988,18861 7850,18881 7794,18881 7793,18894 7710,18902 7621,18894 7574,18874
+Kolonie Dreieck - Klemkepark: Hunde	q1 8188,18819 8101,18846 7988,18861 7846,18884 7802,18883 7781,18897 7710,18902 7609,18891 7574,18874
 Klemkepark - Kopenhagener Str./Freiheitsweg: Hunde	q1 7574,18874 7576,18837 7480,18828 7394,18820 7332,18818 7313,18781 7248,18793
 #: by: ^^^
 #: by: Detlef Liebe: vvv
@@ -2297,7 +2312,7 @@ Battenheimer Weg: enge Straße	q1 11762,1040 11681,1031 11393,1243
 #: by: MaPo: vvv
 #XXX del --- #: corrected_by: srt (q1 -> q0-) --- Fürst-Bismarck-Str.: enge Straße	q0- 4032,22374 3923,22535
 #: corrected_by: srt (q2 -> q0-)
-Birnbaumring: enge Straße	q0- 8661,24952 8751,24988 8785,25014 8825,25052 8871,25109 8922,25212 8856,25267 8776,25332 8735,25366 8673,25418 8584,25371 8529,25361
+Birnbaumring: enge Straße	q0- 8661,24952 8751,24988 8785,25014 8825,25052 8871,25109 8922,25212 8856,25267 8776,25332 8735,25366 8673,25418 8584,25371 8501,25358
 #: by: ^^^
 #: by: Florian (olf-kcots):
 Stavenhagener Str.: enge Straße	q1 13634,5126 13534,5111 13444,5097 13359,5086
@@ -2348,8 +2363,10 @@ Freudenberger Weg: als Gehweg ausgeschildert, Borsteinkanten	q1 -4967,15414 -478
 (Wunderwaldstr. - Dyrotzer Str.): schmal	q2 -5442,14738 -5481,14622
 Frieda-Arnheim-Promenade: einige Fußgänger, Bordstein zur Triftstraße	q1 -2830,15208 -2801,15280 -2779,15358 -2801,15365
 #: by: ^^^
-#: by: verena kauffmann:
-Büdnerring: enge Straße	q1 7861,18333 7997,18524 8066,18632 8063,18659 8037,18673 7926,18665 7892,18603 7902,18575 7997,18524
+#: by: verena kauffmann: vvv
+#XXX del --- hier nicht eng --- Büdnerring: enge Straße	q1 7861,18333 7997,18524
+Büdnerring: enge Straße	q1 7997,18524 8066,18632 8063,18659 8037,18673 7926,18665 7892,18603 7902,18575 7997,18524
+#: by: ^^^
 #: by: Röthig
 #: corrected_by: srt/policy (q2 -> q1)
 Schneegansweg: enge Straße	q1 -786,22110 -762,22216 -725,22355
@@ -2632,7 +2649,7 @@ Langenbeckplatz: enge Straße	q1 25030,9626 25095,9627 25086,9733 25020,9728 2503
 (Réaumurstr. - Fürstenstr., S-Bahnunterführung): Fußgänger	q3 4279,459 4218,439 4158,461 4136,505
 #: by: Bertil Schwotzer vvv
 #: corrected_by: srt/policy (q2 -> q0-)
-Beerbaumstr.: enge Straße	q0- 15692,24040 15730,24051 15759,24033 15843,23980 15906,24088
+Beerbaumstr.: enge Straße	q0- 15689,24045 15723,24060 15755,24039 15843,23980 15906,24088
 (Beerbaumstr. - Karower Chaussee): schmal	q2 15906,24088 15940,24142
 #: by: ^^^
 #: by: Sabine Bernsmann-...:
@@ -2825,7 +2842,7 @@ Stadtgärten: kurvige Straße	q2 11544,21897 11575,21888 11566,21829 11534,21831
 Jochen-Klepper-Weg: kombinierter Rad- und Fußweg, Fußgänger haben Vorrang	q1 -3030,2266 -2784,2358 -2690,2385 -2372,2477
 # 
 #: by: Ilka Liss:
-Frommpromenade: enge Straße	q0- 5469,20462 5350,20495 5257,20551
+Frommpromenade: enge Straße	q0- 5463,20461 5350,20495 5257,20551
 # 
 #: by: Sophie Haid:
 #: corrected_by: srt/policy (q2 -> q0-)

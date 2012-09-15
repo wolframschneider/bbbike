@@ -2388,7 +2388,10 @@ EOF
 	    my $url = $q->url(-full=>0, -absolute=>1);
 	    $url =~ s,^/m/,/,;
 	    &social_link;
-	    print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+	    print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">classic view</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#android">Android App</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#iphone">iPhone App</a>\n};
+
         } else {
 	    my $url = $q->url(-full=>0, -absolute => 1);
 	    $url =~ s,^/\w\w/,/m/, || $url =~ s,/,/m/,;
@@ -5074,20 +5077,25 @@ sub display_route {
 		    $richtung = $richtung_html = "";
 		    $raw_direction = "";
 		} else {
-		    $raw_direction =
-			($winkel <= 45 ? 'h' : '') .
-			    ($richtung eq 'l' ? 'l' : 'r');
-		    $richtung =
-			($winkel <= 45 ? M('halb') : '') .
-			    ($richtung eq 'l' ? M('links') : M('rechts')) .
-				" ($winkel°) ";
-		    if ($lang eq 'en') {
-			$richtung .= "-&gt;";
+		    if ($winkel >= 160 && $winkel <= 200) { # +/- 20° from 180°
+			$richtung = $richtung_html = M('umdrehen');
+			$raw_direction = 'u';
 		    } else {
-			if ($same_streetname_important_angle) {
-			    $richtung .= "weiter " . Strasse::de_artikel_dativ($strname);
+			$raw_direction =
+			    ($winkel <= 45 ? 'h' : '') .
+				($richtung eq 'l' ? 'l' : 'r');
+			$richtung =
+			    ($winkel <= 45 ? M('halb') : '') .
+				($richtung eq 'l' ? M('links') : M('rechts')) .
+				    " ($winkel°) ";
+			if ($lang eq 'en') {
+			    $richtung .= "-&gt;";
 			} else {
-			    $richtung .= Strasse::de_artikel($strname);
+			    if ($same_streetname_important_angle) {
+				$richtung .= "weiter " . Strasse::de_artikel_dativ($strname);
+			    } else {
+				$richtung .= Strasse::de_artikel($strname);
+			    }
 			}
 		    }
 		    if ($is_m && !$bi->{cannot_unicode_arrows}) {
@@ -5095,6 +5103,7 @@ sub display_route {
 					  'hl' => '&#x21d6;',
 					  'hr' => '&#x21d7;',
 					  'r'  => '&#x21d2;',
+					  'u'  => '&#x21b6;',
 					 }->{$raw_direction};
 		    } else {
 			$richtung_html = $richtung;
@@ -5583,7 +5592,9 @@ EOF
 	    my $url = $q->url(-full=>0, -absolute=>1, -query=>1);
             $url =~ s,^/m/,/,;
             #&social_link;
-            print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+            print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">classic view</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#android">Android App</a>\n};
+            print qq{ <a class="mobile_link" href="/help.html#iphone">iPhone App</a>\n};
 	    print qq{</span>\n\n};
 
 	    print <<EOF;
@@ -7256,7 +7267,7 @@ sub get_streets {
 	}
     }
 
-    $crossings = {};
+    undef $crossings;
 
     $g_str;
 }
@@ -7300,7 +7311,7 @@ sub get_orte {
 }
 
 sub all_crossings {
-    if (scalar keys %$crossings == 0) {
+    if (!$crossings) {
 	my $str = get_streets();
 	$crossings = $str->all_crossings(RetType => 'hash',
 					 UseCache => 1);
@@ -8904,8 +8915,7 @@ sub draw_route_from_fh {
 	$res = Route::load($file, { }, -fuzzy => 1);
     };
     my $err = $@;
-    ## XXX unlink later...
-    #unlink $file;
+    unlink $file;
 
     if ($res->{RealCoords}) {
 	$q->param('draw', 'all');

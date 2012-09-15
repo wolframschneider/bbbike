@@ -227,8 +227,8 @@ var w=js.weather.weatherObservation;if(w.temperature==0&&w.dewPoint==0&&w.humidi
 var message=w.temperature+" &deg;C";if(w.clouds&&w.clouds.substring(0,2)!="n/"){message+=", "+w.clouds;}
 if(w.windSpeed>0){message+=', max. wind '+parseInt(w.windSpeed,10)+"m/s";}
 var span=document.getElementById("current_weather");if(span){span.innerHTML=message;}
-span=document.getElementById("weather_forecast");if(span){message=renderWeatherForecast(js.forecast);if(message==""){message=": no data available";}
-span.innerHTML=message;}}
+var span_fc=document.getElementById("weather_forecast");if(span_fc){var message_fc=renderWeatherForecast(js.forecast);if(message_fc==""){if(w.stationName)message_fc+=w.stationName+", ";message_fc+=message;if(w.humidity>0)message_fc+=", humidity: "+w.humidity+"%";}
+span_fc.innerHTML=message_fc;}}
 function renderWeatherForecast(js){if(!js||js==""||!js.weather){return"";}
 return google_weather(js);}
 function higlightCity(data,obj){var pos=eval("("+data+")");if(!pos||pos.length<1||pos[0]=="NO_CITY"){return;}
