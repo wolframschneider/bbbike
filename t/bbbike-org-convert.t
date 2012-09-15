@@ -3,7 +3,6 @@
 BEGIN { }
 
 use Test::More;
-use File::Temp qw(tempfile);
 use IO::File;
 use File::stat;
 use Digest::MD5 qw(md5_hex);

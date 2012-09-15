@@ -39,7 +39,7 @@ my $pbf_file2 = 't/data-osm/Cusco2.osm.pbf';
 my $pbf_md5   = "6dc9df64ddc42347bbb70bc134b4feda";
 my $pbf2_md5  = "6dc9df64ddc42347bbb70bc134b4feda";
 my $osm_md5   = "d222cfe84480b8f0ac0081eaf6e2c2ce";
-my ( $fh, $tempfile ) = tempfile;
+my $tempfile  = File::Temp->new( SUFFIX => ".osm" );
 
 is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched: $pbf_file" );
 

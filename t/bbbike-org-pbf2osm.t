@@ -40,7 +40,7 @@ my $osm_md5  = "d222cfe84480b8f0ac0081eaf6e2c2ce";
 
 is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched" );
 
-my ( $fh, $tempfile ) = tempfile;
+my $tempfile = File::Temp->new( SUFFIX => ".osm" );
 
 system(
 qq[world/bin/pbf2osm t/data-osm/Cusco.osm.pbf | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
