@@ -9,16 +9,18 @@ BEGIN {
     }
 }
 
+use utf8;
 use Getopt::Long;
 use Test::More;
 use File::stat;
+use Encode;
 
 use strict;
 use warnings;
 
 my @files = qw[index.m.html index.de.html index.en.html index.html];
 
-plan tests => 1 + scalar(@files) * 5 - 1;
+plan tests => 1 + scalar(@files) * 5;
 
 ######################################################################
 system(qq[make -s tagcloud]);
@@ -32,6 +34,7 @@ foreach my $file (@files) {
 
     cmp_ok( $size, '>', $min_size, "$file: $size > $min_size" );
     my $data = `cat $file`;
+    $data = decode_utf8($data);
 
     like( $data, qr|</html>|,           "check html elements" );
     like( $data, qr|<title>.+</title>|, "check html elements" );
@@ -45,6 +48,15 @@ foreach my $file (@files) {
 qr|<span class="tagcloud\d+"><a class="C_Berlin" href="Berlin/">Berlin</a></span>|,
         "check html elements in $file"
     ) if $file !~ m,/index.m.html$,;
+
+    if ( $file =~ m,/index.html$, ) {
+        like(
+            $data,
+qr|<span class="tagcloud\d+"><a class="C_Sofia" href="Sofia/">София</a></span>|,
+            "check html elements in $file"
+        );
+    }
+
 }
 
 __END__
