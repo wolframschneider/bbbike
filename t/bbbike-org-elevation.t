@@ -1,10 +1,7 @@
-#!/usr/bin/perl -w
-# -*- perl -*-
+#!/usr/local/bin/perl
+# Copyright (c) Sep 2012 Wolfram Schneider, http://bbbike.org
 
-#
-# $Id: strassennetz.t,v 1.23 2009/02/05 22:19:09 eserte Exp $
 # Author: Slaven Rezic
-#
 
 # configure city to test
 BEGIN {

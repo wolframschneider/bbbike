@@ -1,5 +1,5 @@
-#!/usr/bin/perl
-# -*- perl -*-
+#!/usr/local/bin/perl
+# Copyright (c) Sep 2012 Wolfram Schneider, http://bbbike.org
 
 # Author: Slaven Rezic
 

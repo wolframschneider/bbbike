@@ -1,16 +1,17 @@
-#!/usr/bin/perl -w
-# -*- perl -*-
+#!/usr/local/bin/perl 
+# Copyright (c) Sep 2012 Wolfram Schneider, http://bbbike.org
 
 #
 # Author: Slaven Rezic
 #
 
-use strict;
 use FindBin;
 use lib ( "$FindBin::RealBin/..", "$FindBin::RealBin/../lib", );
 
 use File::Temp qw(tempdir);
 use Strassen::Core ();
+use strict;
+use warnings;
 
 BEGIN {
     if (
