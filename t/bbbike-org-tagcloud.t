@@ -20,7 +20,7 @@ use warnings;
 
 my @files = qw[index.m.html index.de.html index.en.html index.html];
 
-plan tests => 1 + scalar(@files) * 5;
+plan tests => 1 + scalar(@files) * 5 + 1;
 
 ######################################################################
 system(qq[make -s tagcloud]);
@@ -43,6 +43,8 @@ foreach my $file (@files) {
         qr| href="http://twitter.com/BBBikeWorld" |,
         "check html elements"
     );
+
+    # special checks
     like(
         $data,
 qr|<span class="tagcloud\d+"><a class="C_Berlin" href="Berlin/">Berlin</a></span>|,
@@ -53,6 +55,14 @@ qr|<span class="tagcloud\d+"><a class="C_Berlin" href="Berlin/">Berlin</a></span
         like(
             $data,
 qr|<span class="tagcloud\d+"><a class="C_Sofia" href="Sofia/">София</a></span>|,
+            "check utf8 html elements in $file"
+        );
+    }
+
+    if ( $file =~ m,/index.en.html$, ) {
+        like(
+            $data,
+qr|<span class="tagcloud\d+"><a class="C_Sofia" href="Sofia/">Sofia</a></span>|,
             "check html elements in $file"
         );
     }
