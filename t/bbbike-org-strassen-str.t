@@ -17,9 +17,6 @@ plan tests => 3;
 my $strassen = 't/data-osm/Berlin/strassen';
 my $str      = 't/data-osm/Berlin/str';
 
-# min size of garmin zip file
-my $min_size = 200_000;
-
 sub md5_file {
     my $file = shift;
     my $fh = new IO::File $file, "r";
