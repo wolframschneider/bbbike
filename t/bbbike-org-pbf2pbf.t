@@ -35,14 +35,12 @@ sub md5_file {
     return $md5;
 }
 
-for ( 1 .. 3 ) {
+my $pbf_file = 't/data-osm/tmp/Cusco.osm.pbf';
+if ( !-f $pbf_file ) {
     system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
-    last if !$?;
-    warn "symlink failed: $!\n" if $?;
-    sleep 0.5;
+    die "symlink failed: $!\n" if $?;
 }
 
-my $pbf_file  = 't/data-osm/tmp/Cusco.osm.pbf';
 my $pbf_file2 = 't/data-osm/tmp/Cusco2.osm.pbf';
 my $pbf_md5   = "6dc9df64ddc42347bbb70bc134b4feda";
 my $pbf2_md5  = "6dc9df64ddc42347bbb70bc134b4feda";
