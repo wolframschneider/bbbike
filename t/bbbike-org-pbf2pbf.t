@@ -35,8 +35,12 @@ sub md5_file {
     return $md5;
 }
 
-system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
-die "symlink failed: $!\n" if $?;
+for ( 1 .. 3 ) {
+    system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
+    last if !$?;
+    warn "symlink failed: $!\n" if $?;
+    sleep 0.5;
+}
 
 my $pbf_file  = 't/data-osm/tmp/Cusco.osm.pbf';
 my $pbf_file2 = 't/data-osm/tmp/Cusco2.osm.pbf';
