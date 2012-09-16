@@ -160,8 +160,12 @@ sub convert {
 }
 
 sub checksum {
-    my $md5          = md5_file("$prefix/Cusco/checksum");
-    my $md5_checksum = "6edc75084339cf486aab0561a842045f";
+    my $md5 = md5_file("$prefix/Cusco/checksum");
+    my $md5_checksum =
+      $^O =~ m{darwin}i
+      ? "3a4d3b223e58dcc4e374d916dd4e7d2b"
+      : "6edc75084339cf486aab0561a842045f";
+
     is( $md5, $md5_checksum, "md5 checksum" );
 }
 
