@@ -623,7 +623,10 @@ sub is_float ($$;$) {
 }
 
 sub get_pmake () {
-    $^O =~ m{bsd}i ? "make" : is_in_path("freebsd-make") ? "freebsd-make" : "pmake";
+    $^O =~ m{bsd}i ? "make" : 
+	is_in_path("freebsd-make") ? "freebsd-make" : 
+	is_in_path("bsdmake") ? "bsdmake" : 
+	"pmake";
 }
 
 sub _update_bbbike_test_data () {
