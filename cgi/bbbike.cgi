@@ -853,7 +853,7 @@ if ($local_lang eq $selected_lang) {
   # request from internal IP address 10.x.x.x
   my $local_host = $q->remote_host() =~ /^(10\.|127\.0\.0\.2)/ ? 1 : 0;
 
-  if ($q->param('cache') || $q->param('generate_cache') || $all >= 3 || $local_host) {
+  if ($q->param('cache') || $q->param('generate_cache') || $q->param("renice") || $all >= 3 || $local_host) {
      eval {
 	require BSD::Resource;
 
