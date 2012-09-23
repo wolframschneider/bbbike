@@ -38,6 +38,7 @@ my @stages = qw(filtertracks trackdata statistics output);
 my %stages = map {($_,1)} @stages;
 
 my @cols_sorted = qw(file fromtime vehicles device diffalt mount velocity length difftime);
+my %is_alpha_col = map{($_=>1)} qw(file vehicles device);
 
 #my $tracks_file = "$FindBin::RealBin/../tmp/streets-accurate-categorized-split.bbd";
 my $tracks_file = "$FindBin::RealBin/../tmp/streets-polar.bbd";
@@ -52,6 +53,7 @@ my @filter_stat;
 my $v;
 my $tsv;
 my $coordsys;
+my $reverse;
 GetOptions("stage=s" => \$start_stage,
 	   "state=s" => \$state_file,
 
@@ -69,6 +71,7 @@ GetOptions("stage=s" => \$start_stage,
 
 	   'coordsys=s' => \$coordsys,
 
+	   "reverse!" => \$reverse,
 	   "tsv" => \$tsv,
 	   "v+" => \$v,
 	  ) or die "usage?";
@@ -474,7 +477,11 @@ sub stage_output {
     }
 
     die "Invalid -sortby" if !exists $results[0]->{$sortby};
-    @results = sort { $a->{$sortby} <=> $b->{$sortby} } @results;
+    if ($is_alpha_col{$sortby}) {
+	@results = sort { $a->{$sortby} cmp $b->{$sortby} } @results;
+    } else {
+	@results = sort { $a->{$sortby} <=> $b->{$sortby} } @results;
+    }
 
     if ($tsv) {
 	for (@results) {
@@ -631,6 +638,12 @@ sub parse_intersection_lines {
 	    @$vias_ref = @fences[1..$#fences-1];
 	}
 	@$to_ref   = @{$fences[-1]};
+
+	if ($reverse) {
+	    my @temp = @$from_ref;
+	    @$from_ref = @$to_ref;
+	    @$to_ref = @temp;
+	}
     }
 
     if ($coordsys) {

@@ -140,7 +140,7 @@ Pannierstr.	1 12202,8895 12242,8972
 Stolzenfelsstr.	1s:q2 19436,8183 19423,8146 19333,8165 19171,8280 18949,8437 18787,8540 18722,8582
 #XXX del --- Dönhoffstr.	1 18726,8633 18609,8717 18514,8773 18447,8818 18372,8869 18296,8920 18201,8984 18136,9072
 Bersarinplatz	1 13742,12538 13698,12544 13678,12571 13686,12611 13695,12643 13727,12642 13747,12642 13767,12626 13761,12578 13742,12538
-Petersburger Platz	1 13467,12978 13559,12779
+Petersburger Platz	1 13470,12990 13559,12779
 Dernburgstr.	1 2498,10665 2378,10677 2333,10710 2252,11037
 Schuckertdamm	1 741,14827 1022,14898 1056,14906 1112,14918 1200,14943 1343,14972 1465,14963
 Am Kleinen Wannsee	1 -5499,1349 -5485,1274 -5535,1204 -5742,1142
@@ -200,8 +200,8 @@ Atzpodienstr.	1 16485,12384 16445,12193 16413,11906
 Alt-Lietzow	1 4219,12324 4101,12356 4066,12368 4079,12411 4137,12411 4250,12390
 Martin-Wagner-Ring	1 12796,3821 12895,3991 12941,4015 12995,4003 13007,3949 12913,3743
 Wilskistr.	1 -402,4012 -343,4056 -303,4086 -219,4149 -158,4236 27,4447 195,4588 301,4643 418,4696 528,4747 636,4765 798,4766
-Grazer Platz	1 6442,6788 6529,6798 6679,6816 6793,6814
-Grazer Platz	1 6801,6736 6686,6735 6546,6720 6517,6717 6451,6710
+Grazer Platz	1 6442,6788 6529,6798 6668,6815 6793,6814
+Grazer Platz	1 6801,6736 6676,6734 6546,6720 6517,6717 6451,6710
 Putlitzstr.	1 6267,14184 6264,13995 6226,13951
 Langhansstr. (außer Tram)	1 12045,16574 12189,16578 12409,16475
 Triftstr. (Buchholz)	1 12018,23040 12178,23034
@@ -248,7 +248,7 @@ Tannenweg	1 -3023,17889 -3012,17940 -3028,18024
 Erlenweg	1 -3228,18103 -3327,18007
 Aspenweg	1 -3000,18192 -3020,18188 -3050,18164 -3096,18119 -3111,18105 -3168,18051 -3203,18014 -3224,17943
 Aspenweg	1 -3288,17831 -3244,17883 -3224,17943
-Pintschstr.	1 13341,13191 13438,12965
+Pintschstr.	1 13339,13196 13435,12973
 #XXX del! --- Wolliner Str.	1 10405,14425 10320,14608
 Splanemannstr.	1 18301,9946 18389,9925 18408,10041 18403,10077
 Burgherrenstr.	1 8969,8640 9076,8783
@@ -448,6 +448,7 @@ Heimat	1 1032,1325 994,1485 968,1479 941,1603
 #: confirmed_by: srt
 Techowpromenade	1 5219,20467 5185,20358 5173,20275 5170,20182
 (Kastanienallee - Schönhauser Allee)	1 10884,14952 10838,14962
+Kastanienallee	1 10838,14962 10881,15047
 Lossebergplatz	1 16070,23566 16094,23554 16095,23539 16079,23535 16064,23547 16070,23566
 Spindlersfelder Str.	2 21324,3691 21215,3919 21143,4150 21130,4239 21080,4702 21075,4769 21065,4957
 Rathausstr.:	1 15651,12214 15628,12246 15576,12315 15537,12367
@@ -459,7 +460,7 @@ Sandgrasweg	1 2851,21089 2819,21128
 Sandgrasweg	1 2840,21141 2866,21103
 #: confirmed_by ^^^
 Max-Eyth-Str.	1 2506,6606 2566,6531 2611,6495
-(IKEA-Zufahrt)	1 8204,6958 8229,7154
+(IKEA-Zufahrt)	1 8204,6958 8213,7028 8229,7154
 #: by: anonymous:
 Neumarkplan	1 12483,3929 12569,3764 12572,3731 12560,3697 12530,3669 12485,3658 12445,3674 12420,3707 12415,3743 12421,3767 12483,3929
 #: confirmed_by: srt
@@ -740,6 +741,11 @@ Hohenstaufenstr. (Richtungsfahrbahn)	1::igndisp 6108,9772 6209,9773 6241,9772
 Hohenstaufenstr. (Richtungsfahrbahn)	1::igndisp 6241,9772 6209,9772 6108,9772
 Hohenstaufenstr. (Mittelstreifen mit Gitter)	3nocross::ignrte 6108,9772 6209,9773 6241,9772
 #: note ^^^
+#: note: Mittelstreifen vvv
+Prellerweg (Richtungsfahrbahn)	1::igndisp 6757,5858 6895,5873 7078,5887
+Prellerweg (Richtungsfahrbahn)	1::igndisp 7078,5887 6895,5870 6757,5858
+Prellerweg (Mittelstreifen)	3nocross::ignrte 6757,5858 6895,5873 7078,5887
+#: note ^^^
 # 
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -283,14523 -457,14536 -914,14602
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -925,14631 -283,14523
@@ -954,6 +960,7 @@ Am Vierrutenberg etc.	1 5712,23785 5676,23971 5780,23997 5792,23943 5787,23840 5
 (Parkplatz Residenzstr. - Kopenhagener Str.)	1::igndisp 7204,18634 7233,18562
 #: note: eigentlich keine Einbahnstraße, aber in der Praxis wird man immer gegen der Uhrzeigersinn fahren
 Schmiedebankplatz	1 16165,23168 16114,23202 16122,23219 16141,23243 16243,23174 16229,23150 16218,23134 16165,23168
+IKEA-Parkplatz	1 7834,7131 7924,7185 8020,7185
 ######################################################################
 #
 # Potsdam
@@ -1195,7 +1202,7 @@ Berliner Allee: Straßenbahntrasse	3nocross 14619,16682 14608,16772 14559,16912
 #: confirmed_by: srt
 Berliner Allee: Straßenbahntrasse	3nocross 13401,15821 13432,15843 13487,15888
 #: note: Luftbild
-Gülzower Str.: Mittelstreifen	3 22603,12359 22388,12190 22424,12183
+Gülzower Str.: Mittelstreifen	3 22603,12359 22388,12190 22400,12171
 Oranienburger Str. (Wittenau): Mittelstreifen	3nocross 5343,21250 5349,21198 5356,21146 5382,21001
 Oranienburger Str.: Straßenbahnhaltestelle	3nocross 9225,13389 9281,13374 9415,13315
 Brauhausstr. -> Prenzlauer Promenade: Straßenbahntrasse	3 12211,16688 12017,16734 12045,16574
@@ -1248,8 +1255,8 @@ Müggelheimer Str.: Straßenbahntrasse	3nocross 22674,4309 22812,4236 22965,4124
 Prenzlauer Promenade: Straßenbahntrasse	3nocross 12090,16199 12097,16263 12077,16380
 #: note: Luftbild: vvv
 Prenzlauer Promenade: Straßenbahntrasse	3nocross 12051,16535 12077,16380 12097,16263
-Petersburger Str.: Straßenbahntrasse	3nocross 13622,12806 13579,12904 13537,13003
-Petersburger Str.: Straßenbahntrasse	3nocross 13537,13003 13487,13115 13434,13234
+Petersburger Str.: Straßenbahntrasse	3nocross 13622,12806 13579,12904 13530,13014
+Petersburger Str.: Straßenbahntrasse	3nocross 13530,13014 13487,13115 13434,13234
 Petersburger Str.: Straßenbahntrasse	3nocross 13330,13468 13381,13354 13393,13326 13434,13234
 #: note: ^^^
 Stubenrauchstr.: Bahntrasse	3nocross 16635,2796 16677,2856 16779,2993
@@ -1374,7 +1381,7 @@ Müllerstr.: Zaun auf dem Mittelstreifen	3nocross 6781,16026 6914,15908 6936,1588
 Indira-Gandhi-Str.: Straßenbahntrasse	3nocross 14597,15970 14609,15921 14650,15750
 Indira-Gandhi-Str.: Straßenbahntrasse	3nocross 14550,16161 14522,16260 14499,16341
 #XXX del --- das Überqueren ist möglich! --- Weißenseer Weg: Straßenbahntrasse	3nocross 15058,14575 15110,14486 15164,14392
-Lichtenberger Brücke: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3nocross 16737,11866 16851,11852 16962,11833 17037,11820 17151,11801
+Lichtenberger Brücke: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3nocross 16737,11866 16851,11852 16962,11833 17037,11820 17121,11806 17151,11801
 #: by: Kerstin Pantos:
 Kolonnenstr.: Mittelinsel mit Geländer	3nocross 7709,8777 7642,8815 7563,8871
 Mollstr.: Straßenbahntrasse	3nocross 11446,13294 11524,13247 11557,13228 11681,13161
@@ -1427,7 +1434,6 @@ Heylstr.: breiter Mittelstreifen, enge Querungsmöglichkeit nur für Fußgänger, Bo
 Große-Leege-Str.: Mittelstreifen mit Bordsteinen und parkenden Autos	3nocross 15899,14598 15972,14681 16035,14748
 Köpenicker Landstraße: Mittelstreifen mit Bordsteienen	3nocross 16353,7226 16195,7398 15920,7697
 Max-Born-Str.: Straßenbahntrasse	3nocross 19053,2890 19021,2946 18951,3069
-Prellerweg: Mittelstreifen	3nocross 6765,5863 6895,5873 7078,5887
 Ostseestr.: Mittelstreifen	3nocross 12090,16199 12232,16110 12347,16039
 Schildhornstreifen: Mittelstreifen vor dem Autobahnanschluss	3nocross 4292,6558 4338,6528 4423,6477
 Adlergestell: Mittelstreifen	3nocross 19735,3643 19812,3561 19857,3514 19904,3464
@@ -2164,10 +2170,7 @@ B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich de
 #: next_check: 2012-10-15
 Am Pankepark: Bauarbeiten, gesperrt	2:inwork 8152,14130 8246,14184
 # 
-#: last_checked: 2012-08-30
-#: next_check: 2012-10-15
-Scharrenstr.: wegen Bauarbeiten komplett gesperrt	2:inwork 10418,12016 10480,12077
-# 
+#XXX del --- #: last_checked: 2012-08-30 --- #: next_check: 2012-10-15 --- Scharrenstr.: wegen Bauarbeiten komplett gesperrt	2:inwork 10418,12016 10480,12077
 #XXX del --- #: last_checked: 2012-05-01 --- #: next_check: 2012-07-15 --- Paul-und-Paula-Ufer: wegen Bodensanierungsarbeiten komplett gesperrt	2:inwork 14884,10508 14906,10587
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20120217.1445.366291.html
@@ -2246,7 +2249,7 @@ Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973
 #XXX del --- #: last_checked: 2011-05-20 --- #: next_check: 2011-08-01 --- Alex-Wedding-Str.: Bauarbeiten, komplett gesperrt	2:inwork 11085,13239 11045,13183
 #XXX del (für Radfahrer ist das Abbiegen möglich) --- #: next_check: 2012-06-01 vvv --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4088.html --- Mauerstr.: Einbiegen in die Behrenstr. nicht möglich	3:inwork 9076,12054 9064,12156 9054,12154 --- Mauerstr.: Einbiegen in die Behrenstr. nicht möglich	3:inwork 9076,12054 9064,12156 9164,12172 --- Behrenstr.: Einbiegen in die Mauerstr. nicht möglich	3:inwork 9054,12154 9064,12156 9076,12054 --- Behrenstr.: Einbiegen in die Mauerstr. nicht möglich	3:inwork 9164,12172 9064,12156 9076,12054 --- #: next_check: ^^^
 # 
-#: last_checked: 2012-09-02
+#: last_checked: 2012-09-15
 #: next_check: 2012-12-01
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12748
 # 
@@ -2257,8 +2260,8 @@ Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,127
 #XXX del --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1002/nachricht3772.html --- #: next_check: 2010-10-01 --- Brücke über A10: Sperrung vom 15.02.2010 bis 01.10.2010	2:inwork 15337,24593 15490,24848
 #XXX del --- #: last_checked: 2010-09-11 --- #: next_check: 2010-12-31 --- #: XXX der Neubau wird "N" oder "NH" sein und Radwege haben --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0907/nachricht3563.html --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1005/nachricht3870.html --- #: by: http://www.altglienicke.de/aktuell.php : Sperrung aufgehoben (20.05.11) --- Wegedornbrücke: Vollsperrung, Neubau	2:inwork 20385,593 20442,564 20510,530 20534,501
 # 
-#: last_checked: 2012-08-10
-#: next_check: 2012-10-15
+#: last_checked: 2012-09-19
+#: next_check: 2012-10-19
 #: XXX abhängiger Eintrag in vorfahrt-orig sowie in ampeln-orig (auskommentierte Ampel)
 Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14795,10473 14805,10518
 # 
@@ -2371,7 +2374,7 @@ Schranke	BNP:10 12605,13356
 tragen (ca. 5 x 9 Stufen)	0:120 13853,13712
 Danziger Str.: Straßenbahnschienen	3nocross 12901,14093 12975,13990 13037,13897 13100,13803
 Danziger Str.: Straßenbahnschienen	3nocross 13100,13803 13166,13707 13225,13620
-Pintschstr.	1 13341,13191 13438,12965
+Pintschstr.	1 13339,13196 13435,12973
 Landsberger Allee	3nocross 12386,13085 12585,13118 12685,13135
 Landsberger Allee	3nocross 20525,15571 20641,15622 20796,15667
 Landsberger Allee: Straßenbahntrasse	3nocross 13635,13605 13702,13634 13854,13701
