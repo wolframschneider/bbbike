@@ -26,11 +26,15 @@ use warnings;
 
 plan tests => 4;
 
-system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
-die "symlink failed: $!\n" if $?;
+my $prefix   = 't/data-osm/tmp';
+my $pbf_file = "$prefix/Cusco.osm.pbf";
 
-my $pbf_file = 't/data-osm/tmp/Cusco.osm.pbf';
-my $pbf_md5  = "6dc9df64ddc42347bbb70bc134b4feda";
+if ( !-f $pbf_file ) {
+    system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
+    die "symlink failed: $!\n" if $?;
+}
+
+my $pbf_md5 = "6dc9df64ddc42347bbb70bc134b4feda";
 
 # min size of garmin zip file
 my $min_size = 200_000;

@@ -35,13 +35,16 @@ sub md5_file {
     return $md5;
 }
 
-system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
-die "symlink failed: $!\n" if $?;
-
 my $prefix   = 't/data-osm/tmp';
 my $pbf_file = "$prefix/Cusco.osm.pbf";
-my $pbf_md5  = "6dc9df64ddc42347bbb70bc134b4feda";
-my $osm_md5  = "d222cfe84480b8f0ac0081eaf6e2c2ce";
+
+if ( !-f $pbf_file ) {
+    system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
+    die "symlink failed: $!\n" if $?;
+}
+
+my $pbf_md5 = "6dc9df64ddc42347bbb70bc134b4feda";
+my $osm_md5 = "d222cfe84480b8f0ac0081eaf6e2c2ce";
 
 is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched" );
 

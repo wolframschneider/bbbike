@@ -744,7 +744,7 @@ EOF
        text  => 'Die Naumannstraße ist zwischen Torgauer Straße und Tempelhofer Weg von 27.08.04, 07.00 Uhr bis 28.08.04, 20.00 Uhr gesperrt. Grund Bauarbeiten.',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 7725,8033 7713,8001 7717,7879 7717,7759
+userdel	2 7733,8023 7713,8001 7717,7879 7717,7830 7696,7771
 EOF
      },
      { from  => 1093730400, # 2004-08-29 00:00
@@ -1085,7 +1085,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002432',
        data  => <<EOF,
-userdel	q4 7717,7759 7717,7879 7713,8001 7725,8033
+userdel	q4 7696,7771 7717,7830 7717,7879 7713,8001 7733,8023
 EOF
      },
      { from  => 1097964000, # 2004-10-17 00:00
@@ -16372,7 +16372,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS_157063303',
        data  => <<EOF,
-userdel	q4::inwork 7709,8777 7713,8600 7716,8370 7716,8356 7715,8308 7710,8051 7725,8033 7713,8001 7717,7879 7717,7759
+userdel	q4::inwork 7709,8777 7713,8600 7716,8370 7716,8356 7715,8308 7710,8051 7733,8023 7713,8001 7717,7879 7717,7830 7696,7771
 EOF
      },
      { from  => 1255816800, # 2009-10-18 00:00
@@ -16623,7 +16623,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014786',
        data  => <<EOF,
-userdel	q4::inwork; 7716,8356 7715,8308 7710,8051 7725,8033 7713,8001 7717,7879
+userdel	q4::inwork; 7716,8356 7715,8308 7710,8051 7733,8023 7713,8001 7717,7879
 EOF
      },
      { from  => 1259938062, # 
@@ -18259,7 +18259,7 @@ EOF
        text  => 'Die Wilhelm-Kabus-Str. ist noch nicht komplett fertig gestellt. Unter Umständen ist die Durchfahrt nicht möglich!',
        type  => 'handicap',
        data  => <<EOF,
-	2::inwork 7725,8033 7793,8043 7834,8085 7859,8252 7893,8327 7942,8380 8078,8772
+	2::inwork 7733,8023 7793,8043 7834,8085 7859,8252 7893,8327 7942,8380 8078,8772
 EOF
      },
      { from  => 1309471200, # 1284091200, # 2010-09-10 06:00 # zweiter Termin im Jahr! # PERIODISCH!
@@ -18518,7 +18518,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016620',
        data  => <<EOF,
-userdel	q4::inwork; 24556,12172 24530,12296
+userdel	q4::inwork; 24556,12181 24530,12296
 EOF
      },
      { from  => 1289373706, # 2010-11-10 08:21
@@ -18645,7 +18645,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20101126.1415.320541.html',
        data  => <<EOF,
-userdel	q4::inwork; 7491,7675 7316,7814
+userdel	q4::inwork; 7480,7683 7316,7814
 EOF
      },
      { from  => 1292184575, # 2010-12-12 21:09
@@ -19052,7 +19052,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_107373',
        data  => <<EOF,
-userdel	q4::inwork; 24554,12100 24556,12172 24530,12296
+userdel	q4::inwork; 24554,12100 24556,12181 24530,12296
 EOF
      },
      { from  => 1301202000, # 2011-03-27 07:00
@@ -19942,19 +19942,16 @@ EOF
 userdel	q4::inwork 8634,13588 8626,13641 8619,13689
 EOF
      },
-     { from  => 1314604800, # 2011-08-29 10:00
-       until => 1347721200, # 2012-09-15 17:00
-       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schönhauser Allee, Fahrbahn manchmal gesperrt, bis 15.09.2012 ',
+     { from  => 1348076973, # 1314604800, # 2011-08-29 10:00
+       until => 1380636000, # 2013-10-01 16:00, # 1347721200, # 2012-09-15 17:00
+       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schwedter Str., Fahrbahn gesperrt, bis Herbst 2013',
        type  => 'handicap',
-       source_id => 'IM_017746',
+       source_id => 'IM_019212',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/kastanienallee_pb.html
-#: note: am 2012-03-09 geprüft, Radfahrer konnten problemlos passieren
-#: note: am 2012-04-27 geprüft, Fahrbahn ist absperrt (nur die Straßenbahn wird durchgelassen), Radfahrer können nur den Gehweg benutzen
-#: note: am 2012-05-30 geprüft, Radfahrer konnten problemlos passieren
-#: note: am 2012-06-12 geprüft, Fahrbahn ist absperrt (nur die Straßenbahn wird durchgelassen), Radfahrer können nur den Gehweg benutzen
-#: note: am 2012-07-16 geprüft, Radfahrer konnten problemlos passieren
-userdel	q4::inwork 10723,14772 10838,14962
+#: note: nur die halbe Strecke ist gesperrt, deshalb q3
+#: note: am 2012-09-19 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
+userdel	q3::inwork 10534,14460 10723,14772
 EOF
      },
      { from  => 1295269680, # 2011-01-17 14:08
@@ -20224,8 +20221,9 @@ EOF
        text  => 'Sredzkistr. zwischen Schönhauser Allee und Knaackstr: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-07-16
-userdel	q4::inwork 10893,14705 11101,14768
+#: last_checked: 2012-09-19
+#: note: etwa 50 Meter an der Schönhauser Alee gesperrt
+userdel	q3::inwork 10893,14705 11101,14768
 EOF
      },
      { from  => 1338778800,
@@ -20519,8 +20517,8 @@ EOF
        text  => 'Adalbertstr.: Fahrbahn in Richtung Kottbusser Tor gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-09-07
-#: next_check: 2012-09-20
+#: last_checked: 2012-09-19
+#: next_check: 2012-10-20
 userdel	q4::inwork; 11389,10463 11393,10390
 EOF
      },
@@ -20572,7 +20570,7 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Senefelderst.: Fahrbahn vor der Raumerstr. gesperrt, Ausweichen auf Gehweg erforderlich',
+       text  => 'Senefelderstr.: Fahrbahn vor der Raumerstr. gesperrt, Ausweichen auf Gehweg erforderlich',
        type  => 'handicap',
        data  => <<EOF,
 #: last_checked: 2012-08-24
@@ -20643,6 +20641,33 @@ EOF
        source_id => 'IM_019192',
        data  => <<EOF,
 userdel	2::inwork -3736,2849 -3648,2881
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Oderberger Str.: Fahrbahn zwischen Kastanienallee und Choriner Str. wegen Bauarbeiten gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2012-09-19
+userdel	q4::inwork 10870,14689 10723,14772
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Choriner Str.: Einbahnstraße in Höhe Oderberger Str., Richtung Schönhauser Allee gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2012-09-19
+userdel	q4::inwork; 10870,14689 10893,14705
+EOF
+     },
+     { from  => 1348437600, # 2012-09-24 00:00
+       until => 1355525999, # 2012-12-14 23:59
+       text  => 'Sanierung der Rheinsteinstraße zwischen Zwieseler Str. und Königswinterstraße, Teile der Fahrbahn sind gesperrt, vom 24. September bis zum 14. Dezember 2012 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120921.1525.375622.html',
+       data  => <<EOF,
+userdel	q4::inwork 18998,8784 19078,8817 19120,8835 19173,8857 19316,8933 19510,9035 19629,9094 19634,9192
 EOF
      },
     );
