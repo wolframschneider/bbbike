@@ -133,7 +133,6 @@ An der Schillingbrücke	1 12026,11348 12056,11390
 Schulze-Delitzsch-Platz	1 11155,11750 11048,11745 11022,11782
 Schulze-Delitzsch-Platz	1 11022,11782 11155,11750
 Weydemeyerstr.	1 11905,13069 11910,13055 12062,12986 12054,12903
-Gipsstr.	1 10350,13376 10199,13446 10026,13521
 Dorotheenstr.	1 9870,12657 9744,12601 9682,12590 9580,12581 9454,12558
 Dorotheenstr. (Straßenbahn)	1s 9454,12558 9330,12529
 Georgenstr.	1 9434,12669 9568,12688 9659,12704 9754,12775
@@ -886,13 +885,6 @@ Sewanstr. - Balatonstr.	1s 17705,10232 17741,10386
 Hönower Str. (Karlshorst) (Ausweichen auf Sandbankette möglich)	1s 18377,9366 18490,9387
 Gitter auf dem Mittelstreifen	3nocross::ignrte 8057,14876 8091,14895 8219,14897
 Reinickendorfer Str. -> Schulzendorfer Str.: Gitter auf dem Mittelstreifen	3::igndisp 8037,14958 8091,14895 8219,14897
-Mittelstreifen	3nocross::ignrte 6422,15708 6555,15827 6661,15921
-Antwerpener Str. -> Seestr.: Mittelstreifen	3::igndisp 6690,15671 6555,15827 6422,15708
-Antwerpener Str. -> Togostr.: Mittelstreifen	3::igndisp 6690,15671 6555,15827 6530,15849
-Seestr. -> Togostr.: Mittelstreifen	3::igndisp 6422,15708 6555,15827 6530,15849
-Togostr. -> Antwerpener Str.: Mittelstreifen	3::igndisp 6530,15849 6555,15827 6690,15671
-Togostr. -> Seestr.: Mittelstreifen	3::igndisp 6530,15849 6555,15827 6661,15921
-Seestr. -> Antwerpener Str.: Mittelstreifen	3::igndisp 6661,15921 6555,15827 6690,15671
 Abbiegen nicht möglich	3nocross::ignrte 7602,17399 7684,17435 7902,17166
 Holländerstr. -> Fahlandgasse: Abbiegen nicht möglich	3::igndisp 7602,17399 7684,17435 7681,17475
 Fahlandgasse -> Letteallee: Abbiegen nicht möglich	3::igndisp 7681,17475 7684,17435 7707,17445
@@ -2322,8 +2314,8 @@ Drängelgitter	BNP:3:-153:trailer=no 12904,10141
 Drängelgitter	BNP:1:-154:trailer=3 12833,9998
 Schranke (Privatstr.)	BNP:5:-180 25039,5304
 Schranke	BNP:2:85:trailer=4 9907,11752
-Schranke	BNP:5:50:trailer=10 10112,11796
-Schranke	BNP:3:86:trailer=6 9698,10348
+Schranke	BNP:5:43:trailer=10 10112,11796
+Schranke	BNP:3:89:trailer=6 9698,10348
 Drängelgitter	BNP:3:-12:trailer=6 12682,7514
 Barriere	BNP:5:-2 17301,7645
 Drängelgitter	BNP:3:-77:trailer=10 24398,4842
