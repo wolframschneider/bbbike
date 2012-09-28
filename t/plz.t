@@ -83,7 +83,7 @@ if (!GetOptions("create!" => \$create,
     die "Usage: $0 [-create] [-xxx] [-v] [-[no]extern] [-levenshtein]";
 }
 
-if (!$create && !-d $tmpdir) {
+if (!$create && !-d $expected_dir) {
     diag "Run in create mode first, no previous data found\n";
     $create = 1;
 }
