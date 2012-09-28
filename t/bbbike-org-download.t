@@ -60,7 +60,8 @@ my @listing;
 }
 
 {
-    my $random = $ENV{BBBIKE_TEST_SLOW_NETWORK} ? 0 : $ENV{BBBIKE_LONG_TESTS} ? 1 : 0;
+    my $random =
+      $ENV{BBBIKE_TEST_SLOW_NETWORK} ? 0 : $ENV{BBBIKE_LONG_TESTS} ? 1 : 0;
 
     my ($dir) =
       tempdir( "bbbike.org_download_XXXXXXXX", CLEANUP => 1, TMPDIR => 1 )
