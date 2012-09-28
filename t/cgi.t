@@ -60,6 +60,13 @@ my $do_accept_gzip = 1;
 my $v = 0;
 my %skip;
 
+if ($ENV{BBBIKE_TEST_SKIP_MAPSERVER}) {
+    $skip{mapserver} = 1;
+}
+if ($ENV{BBBIKE_TEST_SKIP_PALMDOC}) {
+    $skip{palmdoc} = 1;
+}
+
 my $ua = new LWP::UserAgent;
 $ua->agent("BBBike-Test/1.0");
 $ua->env_proxy;
@@ -167,7 +174,7 @@ for my $cgiurl (@urls) {
     SKIP: {
 	    skip "No mapserver tests", 2
 		if $output_as eq 'mapserver' && $skip{mapserver};
-	    skip "No palmdoc tests", 2
+	    skip "No palmdoc tests", 4
 		if $output_as eq 'palmdoc' && $skip{palmdoc};
 
 	    my($content, $resp) = std_get "$action?startname=Dudenstr.&startplz=10965&startc=9222%2C8787&zielname=Grimmstr.+%28Kreuzberg%29&zielplz=10967&zielc=11036%2C9592&pref_seen=1&output_as=$output_as",
