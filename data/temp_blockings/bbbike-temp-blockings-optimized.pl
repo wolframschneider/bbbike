@@ -704,7 +704,16 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_019233',
+         'until' => 1349046000,
+         'text' => 'Müllerstr. (Wedding): Veranstaltung, Straße zwischen Seestr. und Luxemburger Str. gesperrt, 28.09.2012 05:00 Uhr bis 01.10.2012 01:00 Uhr ',
+         'from' => 1348714800,
+         'id' => 2039,
+         'data' => 'userdel	2::temp 6781,16026 6914,15908 6936,15888 7043,15793 7129,15717 7198,15656
+',
+         'type' => 'gesperrt'
+       },
        {
          'until' => undef,
          'text' => 'Anwohner haben den Uferweg am Groß Glienicker See versperrt',
@@ -1044,18 +1053,7 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       {
-         'until' => 1356994800,
-         'text' => 'Jonasstr./Karl-Marx-Str.: Abbiegen nicht möglich (bzw. nur auf dem Gehweg)',
-         'from' => undef,
-         'id' => 2283,
-         'data' => 'userdel	3 12925,7425 13015,7440 13027,7368
-userdel	3 13027,7368 13015,7440 12925,7425
-userdel	3 12925,7425 13015,7440 12992,7545
-userdel	3 12992,7545 13015,7440 12925,7425
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1151,8 +1149,8 @@ userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 
          'text' => 'Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Friedrichstr. gesperrt',
          'from' => undef,
          'id' => 2317,
-         'data' => '#: last_checked: 2012-08-30
-#: next_check: 2012-09-23
+         'data' => '#: last_checked: 2012-09-26
+#: next_check: 2012-10-23
 userdel	q4::inwork; 9164,12172 9373,12197
 ',
          'type' => 'handicap'
@@ -1211,17 +1209,7 @@ userdel	q3::inwork 10893,14705 11101,14768
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Gleimstr.: Bauarbeiten zwischen Ystadter Str. und Schönhauser Allee, Einbahnstraße Richtung Westen',
-         'from' => undef,
-         'id' => 2342,
-         'data' => '#: last_checked: 2012-07-22 (an der Ystadter Str.)
-#: next_check: 2012-08-10
-userdel	q3::inwork; 10423,15698 10427,15699 10564,15721 10713,15746 10953,15787
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1349877000,
          'text' => 'Kastanienallee (Rosenthal): Bauarbeiten, zwischen Friedrich-Engels-Str. und Eschenallee in Richtung Osten gesperrt, bis Mitte Oktober 2012',
@@ -1295,16 +1283,7 @@ userdel	q4::inwork 10379,14963 10366,14992
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_019067',
-         'until' => 1348538400,
-         'text' => 'Karlshorster Str. (Lichtenberg): Brückenarbeiten, Sperrung zwischen Nöldnerstr. und Türrschmidtstr., Fußgänger und Radfahrer können langsam passieren, 09.07.2012 bis 25.09.2012 04:00 Uhr',
-         'from' => 1341727200,
-         'id' => 2360,
-         'data' => 'userdel	q4::inwork 15272,10790 15279,10862
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Christburger Str.: Fahrbahn an der Prenzlauer Allee gesperrt, Ausweichen auf Gehweg',
@@ -1315,16 +1294,7 @@ userdel	q3::inwork 11912,14486 11642,14625
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20120719.1310.372734.html',
-         'until' => 1348610399,
-         'text' => 'Straßenbauarbeiten John-Foster-Dulles-Allee zwischen Spreeweg und Zeltenplatz, 23.7. - 25.9.2012, Fahrbahn ist gesperrt, der nördliche Gehweg kann benutzt werden',
-         'from' => 1342994400,
-         'id' => 2362,
-         'data' => 'userdel	q2::inwork 7437,12368 7215,12295 7039,12314
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_019006',
          'until' => 1349103600,
@@ -1408,7 +1378,7 @@ userdel	2::night 14838,11410 14776,11400
          'text' => 'Senefelderstr.: Fahrbahn vor der Raumerstr. gesperrt, Ausweichen auf Gehweg erforderlich',
          'from' => undef,
          'id' => 2375,
-         'data' => '#: last_checked: 2012-08-24
+         'data' => '#: last_checked: 2012-09-29
 userdel	q4::inwork 11615,15114 11595,15058
 ',
          'type' => 'handicap'
@@ -1469,6 +1439,39 @@ userdel	q4::inwork; 10870,14689 10893,14705
          'data' => 'userdel	q4::inwork 18998,8784 19078,8817 19120,8835 19173,8857 19316,8933 19510,9035 19629,9094 19634,9192
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'INKO_115461',
+         'until' => 1349964000,
+         'text' => 'Eisenacher Str. (Tempelhof): Baustelle, Richtung Richtung Rixdorfer Str. zwischen Mariendorfer Damm und Kosleckstr. gesperrt, 24.09.2012 07:00 Uhr bis 11.10.2012 16:00 Uhr ',
+         'from' => 1348376400,
+         'id' => 2386,
+         'data' => 'userdel	q4::inwork; 9277,4664 9405,4667 9494,4658 9695,4638 10010,4606
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_019236',
+         'until' => 1349092800,
+         'text' => 'Scheidemannstr. / John-Foster-Dulles-Allee: Straße wegen Marathon-Vorbereitungen zwischen Heinrich-von-Gagern-Str. und Große Querallee gesperrt, 27.09.2012 06:00 Uhr bis 01.10.2012 14:00 Uhr ',
+         'from' => 1348632000,
+         'id' => 2387,
+         'data' => 'userdel	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_019235',
+         'until' => 1349647140,
+         'text' => 'Sperrungen wegen Marathon und Tag der deutschen Einheit: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Behrenstr. und Scheidemannstr., Yitzak-Rabin-Str., 28.09.2012 06:00 Uhr bis 07.10.2012 23:59 Uhr',
+         'from' => 1348718400,
+         'id' => 2388,
+         'data' => 'userdel	2::temp 8573,12325 8540,12420
+userdel	2::temp 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 6828,12031
+userdel	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+userdel	2::temp 8119,12414 8055,12186
+',
+         'type' => 'gesperrt'
        }
      
 );

@@ -65,8 +65,8 @@ Egon-Erwin-Kisch-Straße, vor der Einmündung der Grevesmühlener Straße	Zs 17678,1
 #: confirmed_by: srt
 Rennbahnstr./Pasedagplatz	Zs 14095,17196
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20031209.17192.html
-#: XXX genaue Position nicht sicher
-Triftstr.	Zs 12014,22996
+#: confirmed_by: srt
+Triftstr.	Zs 12018,23005
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20030721.13801.html vvv
 Hermann-Hesse-Str./Pastor-Niemöller-Platz	Zs 9801,19290
 Achillesstr. vor Grundschule	Zs 15703,24011
@@ -145,7 +145,8 @@ Sophie-Charlotten-Straße/Seelingstraße	Zs 2504,11990
 Stargarder/Dunckerstr.	Zs 11582,15467
 Stargarder/Greifenhagener	Zs 11071,15776
 Silbersteinstr./Bambachstr.	Zs 11986,6697
-Silbersteinstr./vor Hertastr.	Zs 12560,6819
+Silbersteinstr./vor Hertastr.	Zs 12567,6818
+Oberlandstr./Holzmannstr.	Zs 11466,6593
 General-Pape-Str./Südkreuz	Zs 7957,7617
 Manfred-von-Richthofen-Str./Adolf-Scheidt-Platz	Zs 8724,8021
 Bahnhofstr./Hubertusdamm	Zs 14622,23263
@@ -442,3 +443,5 @@ Apollofalterallee/Lindenstr.	Zs 21426,11160
 Wiesenstr./Pankeweg	Zs 8164,15840
 Calauer Str./Finsterwalder Str.	Zs 6479,21968
 Perleberger/Lübecker	Zs 6381,13734
+#: XXX genaue Position?
+Dannenwalder Weg	Zs 7269,21005

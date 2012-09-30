@@ -1693,10 +1693,7 @@ nur Richtung O	X 8142,7221
 	X 15080,11905
 	X 6454,8653
 #XXX Kynaststr./Alt-Stralau - evtl. wird es nach den Bauarbeiten hier wieder eine Ampel geben	X 14652,10201
-#: XXX Baustellenampel, wahrscheinlich wegen der Sperrung Karlshorster Str.
-#: last_checked: 2012-09-19
-#: next_check: 2012-09-25
-	X::inwork 14832,10512
+#XXX del --- #: XXX Baustellenampel, wahrscheinlich wegen der Sperrung Karlshorster Str. --- #: last_checked: 2012-09-19 --- #: next_check: 2012-09-25 ---	X::inwork 14832,10512
 	F 13030,7346
 #XXX del:	X 12510,6508
 #XXX del:	X 12553,6423
@@ -2149,7 +2146,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	F 17202,10355
 	X 10830,17985
 	X -2026,2742
-#: note: Luftbild
+#: note: die Kreuzung mit der Gravensteinstr. gehört auch zu der Ampelanlage
 	X 12187,22486
 	F 8110,13042
 	B 45152,-53482
@@ -2542,9 +2539,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: by: andk
 	X 8078,8772
 	F 9781,16569
-#: note: provisorische Ampel
 #: note: Ausfahrt Neuköllner Tor
-	X::inwork 13078,7033
+	X 13076,7044
 #: XXX_prog: Ampel gilt nur in Richtung Nordwest, in der anderen Richtung nur für Linksabbieger
 	X 20451,2869
 #: note: provisorische Ampel
@@ -2572,7 +2568,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 11913,19144
 	F 12122,22185
 # XXX --- del (laut http://www.berlin.de/ba-pankow/presse/archiv/20110608.1725.347135.html) --- #: note: provisorische Ampel --- X 9848,20764
-	F 7549,21231
+	F 7535,21229
 	F 6829,21160
 #: note: public imagery
 	X 21165,18715
@@ -2712,6 +2708,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 3216,21431
 	F 9540,15238
 	X 7987,6775
+	F 7155,21744
 # 
 ################################################################################
 #: note: Potsdam vvv

@@ -5120,7 +5120,7 @@ EOF
        text  => 'Neubau der Treptower Straße in Neukölln, Sperrung zwischen Kiefholzstraße und Heidelberger Straße (Anliegerverkehr ist frei) (bis Ende 2006) ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 13857,8601 14015,8798 14145,8971
+userdel	q4::inwork 13860,8599 14015,8798 14151,8967
 EOF
      },
      { from  => 1153955394, # 2006-07-27 01:09
@@ -5454,7 +5454,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003250',
        data  => <<EOF,
-userdel	1::inwork 12067,23241 12129,23117 12178,23034
+userdel	1::inwork 12067,23241 12129,23117 12185,23021
 EOF
      },
      { from  => 1155592800, # 2006-08-15 00:00
@@ -6915,7 +6915,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004418',
        data  => <<EOF,
-userdel	2::inwork 14145,8971 14015,8798 13857,8601
+userdel	2::inwork 14151,8967 14015,8798 13860,8599
 EOF
      },
      { from  => 1171050907, # 2007-02-09 20:55
@@ -7046,7 +7046,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004638',
        data  => <<EOF,
-userdel	1::inwork 12178,23034 12213,22884 12187,22486
+userdel	1::inwork 12185,23021 12214,22918 12187,22486
 EOF
      },
      { from  => 1170802800, # 2007-02-07 00:00
@@ -8945,7 +8945,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_004418',
        data  => <<EOF,
-userdel	2::inwork 13857,8601 14015,8798 14145,8971
+userdel	2::inwork 13860,8599 14015,8798 14151,8967
 EOF
      },
      { from  => 1183412580, # 2007-07-02 23:43
@@ -9004,7 +9004,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20070703.1505.81257.html',
        data  => <<EOF,
-userdel	1::inwork 12667,16699 12602,16727 12472,16783 12257,16876 12241,16900
+userdel	1::inwork 12667,16699 12602,16727 12472,16783 12257,16876 12230,16915
 EOF
      },
      { from  => 1183704492, # 2007-07-06 08:48
@@ -9022,7 +9022,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006015',
        data  => <<EOF,
-userdel	2::temp 6434,22244 6484,22098 6473,21969 6373,21810 6320,21777 6269,21748 6093,21648 5923,21522
+userdel	2::temp 6434,22244 6484,22098 6480,22053 6473,21969 6436,21897 6373,21810 6320,21777 6269,21748 6093,21648 5923,21522
 EOF
      },
      { from  => 1184018400, # 2007-07-10 00:00
@@ -10371,7 +10371,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006966',
        data  => <<EOF,
-userdel	2::inwork 12983,6904 13095,6926
+userdel	2::inwork 12973,6902 13095,6926
 EOF
      },
      { from  => 1194044400, # 2007-11-03 00:00
@@ -14555,7 +14555,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013086',
        data  => <<EOF,
-userdel	q4::inwork 12562,18483 12570,18351 12575,18275
+userdel	q4::inwork 12553,18501 12560,18374 12575,18275
 EOF
      },
      { from  => 1246398622, # 2009-06-30 23:50
@@ -17002,16 +17002,16 @@ EOF
        text  => 'Richardplatz (Neukölln) und die Durchfahrt aller angrenzenden Straßen Rixdorfer Weihnachtsmarkt, Straße vollständig gesperrt (02.12.2011 bis 04.12.2011)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 13423,7707 13426,7674
-userdel	2 13423,7707 13297,7654
+userdel	2 13416,7712 13426,7674
+userdel	2 13416,7712 13297,7654
 userdel	2 13426,7674 13400,7642 13303,7622
 userdel	2 12980,7597 13100,7626 13177,7644
 userdel	2 13188,7590 13177,7644
 userdel	2 13188,7590 13303,7622
 userdel	2 13297,7654 13303,7622
 userdel	2 13297,7654 13177,7644
-userdel auto	3 13446,7879 13423,7707 13426,7674 13560,7646
-userdel auto	3 13560,7646 13426,7674 13423,7707 13446,7879
+userdel auto	3 13444,7879 13416,7712 13426,7674 13560,7646
+userdel auto	3 13560,7646 13426,7674 13416,7712 13444,7879
 EOF
      },
      { from  => 1212876000, # 2008-06-08 00:00
@@ -17367,10 +17367,11 @@ EOF
 userdel	2::inwork 39239,101950 39066,102017
 EOF
      },
-     { from  => 1305756000, # 1270235753, # 2010-04-02 21:15 # erster Termin im Jahr
-       until => 1306101600, # 1270504799, # 2010-04-05 23:59
-       text  => 'Müllerstr. (Wedding): Veranstaltung, gesperrt (20. bis 22. Mai 2011) in beiden Richtungen zwischen Nazarethkirchstr. und Seestr. ',
+     { from  => 1348714800, # 2012-09-27 05:00 PERIODISCH, zwei Termine im Jahr
+       until => 1349046000, # 2012-10-01 01:00
+       text  => 'Müllerstr. (Wedding): Veranstaltung, Straße zwischen Seestr. und Luxemburger Str. gesperrt, 28.09.2012 05:00 Uhr bis 01.10.2012 01:00 Uhr ',
        type  => 'gesperrt',
+       source_id => 'IM_019233',
        data  => <<EOF,
 userdel	2::temp 6781,16026 6914,15908 6936,15888 7043,15793 7129,15717 7198,15656
 EOF
@@ -17821,7 +17822,7 @@ userdel auto	3 7816,12150 8055,12186 8048,12135
 userdel auto	3 8861,12125 8901,12008 8972,11810
 userdel auto	3 8048,12135 8055,12186 7816,12150
 userdel auto	3 9201,11968 9183,12076 9385,12098
-userdel auto	3 9865,10227 9873,10285 9856,10358
+userdel auto	3 9865,10227 9873,10285 9858,10350
 userdel auto	3 9865,10227 9873,10285 9668,10306
 userdel auto	3 9409,10226 9404,10250 9239,10313
 userdel auto	3 8766,12541 8775,12457 8804,12280
@@ -17845,8 +17846,8 @@ userdel auto	3 9131,10716 9323,10791 9539,10820
 userdel auto	3 9385,12098 9183,12076 9201,11968
 userdel auto	3 8554,12593 8540,12420 8573,12325
 userdel auto	3 9108,12635 9123,12500 9330,12529
-userdel auto	3 9856,10358 9873,10285 9668,10306
-userdel auto	3 9856,10358 9873,10285 9865,10227
+userdel auto	3 9858,10350 9873,10285 9668,10306
+userdel auto	3 9858,10350 9873,10285 9865,10227
 userdel auto	3 8070,12409 8119,12414 8123,12615
 userdel auto	3 9343,12464 9130,12433 9016,12416
 userdel auto	3 8479,11493 8542,11502 8596,11508
@@ -17860,7 +17861,7 @@ userdel auto	3 8123,12615 8119,12414 8070,12409
 userdel auto	3 9592,10263 9593,10238 9599,10175
 userdel auto	3 9064,12156 9076,12054 9108,11961
 userdel auto	3 9064,12156 9164,12172 9373,12197
-userdel auto	3 9668,10306 9873,10285 9856,10358
+userdel auto	3 9668,10306 9873,10285 9858,10350
 userdel auto	3 9668,10306 9873,10285 9865,10227
 userdel auto	3 9527,10389 9388,10393 9250,10563
 userdel auto	3 10083,10192 10122,10294 10178,10411
@@ -18500,7 +18501,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101105.1400.317649.html',
        data  => <<EOF,
-userdel	q4::inwork; 7855,18697 7785,18730 7690,18716 7599,18705 7520,18701 7492,18699 7434,18695 7217,18681
+userdel	q4::inwork; 7855,18697 7785,18730 7676,18713 7599,18705 7520,18701 7492,18699 7434,18695 7217,18681
 EOF
      },
      { from  => 1289156455, # 2010-11-07 20:00
@@ -19715,15 +19716,15 @@ EOF
 userdel	q4::inwork; 13236,6489 13455,6559 13520,6583
 EOF
      },
-     { from  => undef, # 
-       until => 1356994800, # 2013-01-01 00:00
+     { from  => 1348699380, # undef, # 
+       until => 1348699383, # 1356994800, # 2013-01-01 00:00
        text  => 'Jonasstr./Karl-Marx-Str.: Abbiegen nicht möglich (bzw. nur auf dem Gehweg)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	3 12925,7425 13015,7440 13027,7368
 userdel	3 13027,7368 13015,7440 12925,7425
-userdel	3 12925,7425 13015,7440 12992,7545
-userdel	3 12992,7545 13015,7440 12925,7425
+userdel	3 12925,7425 13015,7440 13008,7470 12992,7545
+userdel	3 12992,7545 13008,7470 13015,7440 12925,7425
 EOF
      },
      { from  => 1318507200, # 2011-10-13 14:00
@@ -20041,8 +20042,8 @@ EOF
 ## früher:
 #       source_id => 'INKO_093369',
        data  => <<EOF,
-#: last_checked: 2012-08-30
-#: next_check: 2012-09-23
+#: last_checked: 2012-09-26
+#: next_check: 2012-10-23
 userdel	q4::inwork; 9164,12172 9373,12197
 EOF
      },
@@ -20265,13 +20266,11 @@ userdel	2::temp 7383,12095 7816,12150 8055,12186 8119,12414
 userdel	2::temp 8546,12279 8570,12302
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1348929655, # undef, # 
+       until => 1348929658, # undef, # XXX
        text  => 'Gleimstr.: Bauarbeiten zwischen Ystadter Str. und Schönhauser Allee, Einbahnstraße Richtung Westen',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-07-22 (an der Ystadter Str.)
-#: next_check: 2012-08-10
 userdel	q3::inwork; 10423,15698 10427,15699 10564,15721 10713,15746 10953,15787
 EOF
      },
@@ -20573,7 +20572,7 @@ EOF
        text  => 'Senefelderstr.: Fahrbahn vor der Raumerstr. gesperrt, Ausweichen auf Gehweg erforderlich',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-08-24
+#: last_checked: 2012-09-29
 userdel	q4::inwork 11615,15114 11595,15058
 EOF
      },
@@ -20668,6 +20667,36 @@ EOF
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120921.1525.375622.html',
        data  => <<EOF,
 userdel	q4::inwork 18998,8784 19078,8817 19120,8835 19173,8857 19316,8933 19510,9035 19629,9094 19634,9192
+EOF
+     },
+     { from  => 1348376400, # 2012-09-23 07:00
+       until => 1349964000, # 2012-10-11 16:00
+       text  => 'Eisenacher Str. (Tempelhof): Baustelle, Richtung Richtung Rixdorfer Str. zwischen Mariendorfer Damm und Kosleckstr. gesperrt, 24.09.2012 07:00 Uhr bis 11.10.2012 16:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'INKO_115461',
+       data  => <<EOF,
+userdel	q4::inwork; 9277,4664 9405,4667 9494,4658 9695,4638 10010,4606
+EOF
+     },
+     { from  => 1348632000, # 2012-09-26 06:00
+       until => 1349092800, # 2012-10-01 14:00
+       text  => 'Scheidemannstr. / John-Foster-Dulles-Allee: Straße wegen Marathon-Vorbereitungen zwischen Heinrich-von-Gagern-Str. und Große Querallee gesperrt, 27.09.2012 06:00 Uhr bis 01.10.2012 14:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'IM_019236',
+       data  => <<EOF,
+userdel	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
+EOF
+     },
+     { from  => 1348718400, # 2012-09-27 06:00
+       until => 1349647140, # 2012-10-07 23:59
+       text  => 'Sperrungen wegen Marathon und Tag der deutschen Einheit: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Behrenstr. und Scheidemannstr., Yitzak-Rabin-Str., 28.09.2012 06:00 Uhr bis 07.10.2012 23:59 Uhr',
+       type  => 'gesperrt',
+       source_id => 'IM_019235',
+       data  => <<EOF,
+userdel	2::temp 8573,12325 8540,12420
+userdel	2::temp 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 6828,12031
+userdel	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+userdel	2::temp 8119,12414 8055,12186
 EOF
      },
     );

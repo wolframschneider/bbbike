@@ -99,6 +99,16 @@ foreach (@blocked_type) {
 $s = MultiStrassen->new(@s_files);
 $blocked = MultiStrassen->new(@blocked_files);
 
+{
+    my $_encoding = $s->get_global_directive('encoding');
+    $encoding = $_encoding if defined $_encoding;
+}
+
+{
+    my $_map = $s->get_global_directive('map');
+    $map = $_map if defined $_map;
+}
+
 my %carry_points;
 $blocked->init;
 while(1) {

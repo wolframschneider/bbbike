@@ -53,8 +53,25 @@ for my $f (@files) {
 	    if $f =~ m{/tkzincbbbike$} && !eval { require Tk::Zinc; 1 };
 
 	myskip "$f works only with installed Tk", 1
-	    if $f =~ m{miscsrc/(bbbike_chooser.pl|BBBikeRouteLister.pm|trafficlightgraph.pl)$} && !eval { require Tk; 1};
-
+	    if $f =~ m{/( bbbike_chooser.pl
+		       |  BBBikeRouteLister.pm
+		       |  trafficlightgraph.pl
+		       )$}x && !eval { require Tk; 1 };
+	myskip "$f works only with installed Statistics::Descriptive", 1
+	    if $f =~ m{/( convert_berlinmap.pl
+		       |  Cov.pm
+		       )$}x && !eval { require Statistics::Descriptive; 1 };
+	myskip "$f works only with installed Text::Table", 1
+	    if $f =~ m{/( track_stats.pl
+		       |  XXX_new_comments.pl
+		       )$}x && !eval { require Text::Table; 1 };
+	myskip "$f works only with installed MIME::Parser", 1
+	    if $f =~ m{/visualize_user_input.pl$} && !eval { require MIME::Parser; 1 };
+	myskip "$f works only with installed File::ReadBackwards", 1
+	    if $f =~ m{/replay_accesslog$} && !eval { require File::ReadBackwards; 1 };
+	myskip "$f works only with installed DB_File::Lock", 1
+	    if $f =~ m{/correct_data.pl$} && !eval { require DB_File::Lock; 1 };
+	
 	my @add_opts;
 	if ($f =~ m{\.pm$}) {
 	    push @add_opts, "-Ilib", "-Imiscsrc";
