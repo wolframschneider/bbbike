@@ -330,7 +330,7 @@ Torfstraßensteg	Br 6824,14821 6847,14735
 Daimlerstr.	Br 8552,2243 8559,2203 8588,2176
 S-Bhf. Wuhlheide	Br 20653,7289 20609,7200
 Lichtensteinbrücke	Br 6309,11443 6252,11367
-Gertraudenbrücke	Br 10299,11786 10313,11805 10350,11846
+Gertraudenbrücke	Br 10299,11786 10314,11804 10349,11847
 Alte Gertraudenbrücke	Br 10295,11856 10317,11875
 Jungfernbrücke	Br 10206,11997 10223,12010
 Kronprinzenbrücke	Br 8417,12846 8503,12895
@@ -445,7 +445,7 @@ Havellandbrücke	Br -70554,38960 -70719,38954
 Peenebrücke Wolgast	Br 32743,183832 32848,183868 32956,183906
 Zecheriner Brücke	Br 35953,162870 36080,162883 36480,162910
 Rügendamm	Br -12789,211901 -12373,212278 -11913,212694
-Autobahnbrücke	Br 13139,22401 13399,22377
+Autobahnbrücke	Br 13139,22401 13404,22384
 Winterhuder Steg	Br -6963,14331 -6933,14317 -6934,14291 -6937,14262
 Bahnunterführung am Mauerweg	Tu 4034,-255 3982,-181
 Schneckenbrücke	Br 2012,3356 2009,3362 1980,3409 1977,3414
@@ -543,6 +543,7 @@ Brücke über Autobahn und Panke	Br 13168,21706 13046,21734
 Havelbrücke	Br -3371,13987 -3285,13947 -3159,13886
 	Br 11248,25403 11272,25373
 	Br 7776,12943 7821,12934
+Brücke über den Nordgraben	Br 11039,21632 11073,21680
 #: section ^^^
 #
 ## Brandenburg und weiter ####################################################
