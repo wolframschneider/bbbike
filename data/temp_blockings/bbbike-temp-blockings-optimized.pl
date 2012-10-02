@@ -404,8 +404,9 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Park am Nordbahnhof: im Sommerhalbjahr zwischen 6.30 und 22.00 Uhr geöffnet, im Winterhalbjahr zwischen 7.30 und 19.00 Uhr',
          'from' => undef,
          'id' => 1826,
-         'data' => '	2::night 8825,14401 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
-	2::night 8913,14485 9176,14181 9147,14151 9224,14169
+         'data' => '	2::night 8825,14401 8868,14442 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
+	2::night 8913,14485 9169,14189 9176,14181 9147,14151 9224,14169
+	2::night 9169,14189 9144,14169 8868,14442
 ',
          'type' => 'gesperrt'
        },
@@ -704,16 +705,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_019233',
-         'until' => 1349046000,
-         'text' => 'Müllerstr. (Wedding): Veranstaltung, Straße zwischen Seestr. und Luxemburger Str. gesperrt, 28.09.2012 05:00 Uhr bis 01.10.2012 01:00 Uhr ',
-         'from' => 1348714800,
-         'id' => 2039,
-         'data' => 'userdel	2::temp 6781,16026 6914,15908 6936,15888 7043,15793 7129,15717 7198,15656
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Anwohner haben den Uferweg am Groß Glienicker See versperrt',
@@ -753,7 +745,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -1199,7 +1191,7 @@ userdel	q3::inwork 11436,14741 11526,14693
          'text' => 'Sredzkistr. zwischen Schönhauser Allee und Knaackstr: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
          'from' => undef,
          'id' => 2337,
-         'data' => '#: last_checked: 2012-09-19
+         'data' => '#: last_checked: 2012-09-30 (wosch)
 #: note: etwa 50 Meter an der Schönhauser Alee gesperrt
 userdel	q3::inwork 10893,14705 11101,14768
 ',
@@ -1257,16 +1249,7 @@ userdel	q4::inwork 10379,14963 10366,14992
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_018927',
-         'until' => 1349017200,
-         'text' => 'Saalestr. (Neukölln): Fahrbahn gesperrt (bis Ende 09/12) in beiden Richtungen zwischen Karl-Marx-Str. und Wipperstr. ',
-         'from' => 1340082000,
-         'id' => 2352,
-         'data' => 'userdel	q4::inwork 13161,7173 13058,7165
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'INKO_111688',
          'until' => 1354464000,
@@ -1295,16 +1278,7 @@ userdel	q3::inwork 11912,14486 11642,14625
          'type' => 'handicap'
        },
        undef,
-       {
-         'source_id' => 'IM_019006',
-         'until' => 1349103600,
-         'text' => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Anfang 10/12) stadtauswärts zwischen Mühlenstr. und Elsa-Brändström-Str. ',
-         'from' => 1342945020,
-         'id' => 2363,
-         'data' => 'userdel	q4::inwork; 10927,17022 10908,17142
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'INKO_113869',
          'until' => 1354291200,
@@ -1390,7 +1364,7 @@ userdel	q4::inwork 11615,15114 11595,15058
          'text' => 'Hussitenstr.: Fahrbahn zwischen Stralsunder Str. und Usedomer Str. gesperrt, Ausweichen auf Gehweg',
          'from' => undef,
          'id' => 2377,
-         'data' => '#: last_checked: 2012-09-01 (wosch)
+         'data' => '#: last_checked: 2012-09-30 (wosch)
 #: next_check: 2012-12-01
 userdel	q4::inwork 9112,14771 9250,14658
 ',
@@ -1415,7 +1389,7 @@ userdel	q4::inwork 9112,14771 9250,14658
          'text' => 'Oderberger Str.: Fahrbahn zwischen Kastanienallee und Choriner Str. wegen Bauarbeiten gesperrt',
          'from' => undef,
          'id' => 2383,
-         'data' => '#: last_checked: 2012-09-19
+         'data' => '#: last_checked: 2012-09-30 (wosch)
 userdel	q4::inwork 10870,14689 10723,14772
 ',
          'type' => 'handicap'
@@ -1450,16 +1424,7 @@ userdel	q4::inwork; 10870,14689 10893,14705
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_019236',
-         'until' => 1349092800,
-         'text' => 'Scheidemannstr. / John-Foster-Dulles-Allee: Straße wegen Marathon-Vorbereitungen zwischen Heinrich-von-Gagern-Str. und Große Querallee gesperrt, 27.09.2012 06:00 Uhr bis 01.10.2012 14:00 Uhr ',
-         'from' => 1348632000,
-         'id' => 2387,
-         'data' => 'userdel	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'IM_019235',
          'until' => 1349647140,
