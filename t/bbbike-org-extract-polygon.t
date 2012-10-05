@@ -1,5 +1,5 @@
 #!/usr/local/bin/perl
-# Copyright (c) Sep 2012 Wolfram Schneider, http://bbbike.org
+# Copyright (c) Oct 2012 Wolfram Schneider, http://bbbike.org
 
 BEGIN { }
 
@@ -7,77 +7,90 @@ use FindBin;
 use lib ( "$FindBin::RealBin/..", "$FindBin::RealBin/../lib",
     "$FindBin::RealBin", );
 
-use Getopt::Long;
-use Data::Dumper qw(Dumper);
 use Test::More;
-use File::Temp qw(tempfile);
-use IO::File;
-use Digest::MD5 qw(md5_hex);
-use File::stat;
+use IO::Dir;
+use Data::Dumper;
+use JSON;
+use Math::Polygon::Calc;
+use Math::Polygon::Transform;
 
 use strict;
 use warnings;
 
-plan tests => 13;
+my $debug = 1;
 
-my $pbf_file = 't/data-osm/tmp/Cusco.osm.pbf';
+my $json_dir       = "t/extract/json";
+my $json_dir_large = "t/extract/json-large";
+my @json_files     = get_json_files( $json_dir, $json_dir_large );
+plan tests => scalar(@json_files) * 4;
 
-if ( !-f $pbf_file ) {
-    system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
-    die "symlink failed: $!\n" if $?;
+sub get_json_files {
+    my @dirs = @_;
+    my @files;
+    foreach my $dir (@dirs) {
+        my $dh = IO::Dir->new($dir);
+        if ( !defined $dh ) {
+            die "open dir '$dir': $!\n";
+        }
+
+        while ( defined( my $filename = $dh->read ) ) {
+            push @files, "$dir/$filename" if $filename =~ /\.json$/;
+        }
+    }
+    return @files;
 }
 
-my $pbf_md5 = "6dc9df64ddc42347bbb70bc134b4feda";
-
-# min size of garmin zip file
-my $min_size = 200_000;
-
-sub md5_file {
+# read a json (or perl) array from file into perl scalar
+sub get_json_from_file {
     my $file = shift;
-    my $fh = new IO::File $file, "r";
-    die "open file $file: $!\n" if !defined $fh;
 
-    my $data;
-    while (<$fh>) {
-        $data .= $_;
+    local $/;
+    open( my $fh, '<', $file ) or die "open $file: $!\n";
+
+    my $perl = decode_json(<$fh>);
+
+    return $perl;
+}
+
+sub validate {
+    my $file = shift;
+    my $max = shift || 1024;
+    my $same = '0.001';
+
+    my $poly = get_json_from_file($file);
+    diag "Test file $file, same=$same\n";
+
+    print Dumper($poly) if $debug >= 2;
+
+    # max. 10 meters accuracy
+    my @poly = polygon_simplify( 'same' => $same, @$poly );
+
+    # but not more than N points
+    if ( scalar(@poly) > 1024 ) {
+        diag "Resize 0.01 $#poly\n";
+        @poly = polygon_simplify( 'same' => 0.01, @$poly );
+        if ( scalar(@poly) > 1024 ) {
+            diag "Resize 1024 points $#poly\n";
+            @poly = polygon_simplify( max_points => 1024, @poly );
+        }
     }
 
-    $fh->close;
+    my ( $xmin, $ymin, $xmax, $ymax ) = polygon_bbox @$poly;
 
-    my $md5 = md5_hex($data);
-    return $md5;
+    cmp_ok( scalar(@poly), '<', scalar(@$poly),
+        "reduce polygon size: @{[ $#poly + 1]} < @{[ $#$poly + 1]}" );
+
+    like( $xmin, qr/^\-?[0-9]+(\.[0-9]+)?$/, "$xmin is float\n" );
+    cmp_ok( scalar(@poly), '>',  16,       "more than 16 points" );
+    cmp_ok( scalar(@poly), '<=', $max + 1, "less equeal $max points" );
+
 }
 
 ######################################################################
-is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched" );
+foreach my $file (@json_files) {
 
-my $tempfile = File::Temp->new( SUFFIX => ".osm" );
-my $prefix = $pbf_file;
-$prefix =~ s/\.pbf$//;
-my $st = 0;
-
-# any style
-system(qq[world/bin/pbf2osm --garmin $pbf_file osm]);
-is( $?, 0, "pbf2osm --garmin converter" );
-my $out = "$prefix.garmin-osm.zip";
-$st = stat($out) or die "Cannot stat $out\n";
-
-system(qq[unzip -t $out]);
-is( $?, 0, "valid zip file" );
-
-cmp_ok( $st->size, '>', $min_size, "$out greather than $min_size" );
-
-# known styles
-foreach my $style (qw/cycle leisure osm/) {
-    system(qq[world/bin/pbf2osm --garmin-$style $pbf_file]);
-    is( $?, 0, "pbf2osm --garmin-$style converter" );
-
-    $out = "$prefix.garmin-$style.zip";
-    system(qq[unzip -tqq $out]);
-    is( $?, 0, "valid zip file" );
-    $st = stat($out);
-    my $size = $st->size;
-    cmp_ok( $size, '>', $min_size, "$out: $size > $min_size" );
+    #cmp_ok( $file, 'ne', "foo", "sss" );
+    validate($file);
 }
 
 __END__
