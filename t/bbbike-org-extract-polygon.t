@@ -66,12 +66,12 @@ sub validate {
     my @poly = polygon_simplify( 'same' => $same, @$poly );
 
     # but not more than N points
-    if ( scalar(@poly) > 1024 ) {
+    if ( scalar(@poly) > $max ) {
         diag "Resize 0.01 $#poly\n";
         @poly = polygon_simplify( 'same' => 0.01, @$poly );
-        if ( scalar(@poly) > 1024 ) {
-            diag "Resize 1024 points $#poly\n";
-            @poly = polygon_simplify( max_points => 1024, @poly );
+        if ( scalar(@poly) > $max ) {
+            diag "Resize $max points $#poly\n";
+            @poly = polygon_simplify( max_points => $max, @poly );
         }
     }
 
