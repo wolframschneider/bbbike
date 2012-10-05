@@ -54,7 +54,7 @@ sub get_json_from_file {
 
 sub validate {
     my $file = shift;
-    my $max = shift || 1024;
+    my $max  = shift || 1024;
     my $same = '0.001';
 
     my $poly = get_json_from_file($file);
@@ -75,12 +75,11 @@ sub validate {
         }
     }
 
-    my ( $xmin, $ymin, $xmax, $ymax ) = polygon_bbox @$poly;
-
     cmp_ok( scalar(@poly), '<', scalar(@$poly),
         "reduce polygon size: @{[ $#poly + 1]} < @{[ $#$poly + 1]}" );
 
-    like( $xmin, qr/^\-?[0-9]+(\.[0-9]+)?$/, "$xmin is float\n" );
+    my ( $xmin, $ymin, $xmax, $ymax ) = polygon_bbox @$poly;
+    like( $xmin, qr/^\-?[0-9]+(\.[0-9]+)?$/, "polygon box: $xmin is float\n" );
     cmp_ok( scalar(@poly), '>',  16,       "more than 16 points" );
     cmp_ok( scalar(@poly), '<=', $max + 1, "less equeal $max points" );
 
