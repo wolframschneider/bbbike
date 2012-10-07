@@ -846,6 +846,7 @@ Im Vogtland	1 6657,23334 6684,23308 6727,23287
 Mollstr.: Überquerungsmöglichkeit nur für BVG frei	3nocross 11557,13228 11681,13161 11723,13139
 Weidenweg - Str. der Pariser Kommune: Linksabbiegen verboten (Wendemöglichkeit an der Palisadenstr.)	3 13025,12523 12891,12549 12869,12425
 Seestr.: Mittelstreifen	3nocross 6422,15708 6555,15827 6661,15921
+#: note: Öffnung für Radfahrer im Sommer 2012
 Gipsstr.	1 10350,13376 10199,13446 10026,13521
 Mühlenstr.: Fahrbahn ist nur für die Straßenbahn offen	1 12040,22519 11940,22587
 Burgwallstr.:	3 12993,21112 12952,21012 *
@@ -853,3 +854,6 @@ Wüstensperlingweg: Poller	3 12941,20855 12835,20670 12814,20648
 Wüstensperlingweg: Poller	3 12814,20648 12835,20670 12941,20855
 Lichtwarkweg: Poller	3 -2863,17968 -2881,17857 *
 Saatwinkler Damm	3 -624,15494 -302,15546 *
+Seestr. (Bad Saarow): Poller	3 * 55469,-11859 *
+Seestr. (Bad Saarow): Poller	3 * 54776,-11895 *
+Seestr. (Bad Saarow): Poller	3 * 54681,-11900 *
