@@ -57,7 +57,7 @@ my @list = (
     {
         'page'     => 'http://extract.bbbike.org',
         'min_size' => 5_000,
-        'match'    => [ "</html>", "It takes between" ]
+        'match'    => [ "</html>", "about" ]
     },
     {
         'page'     => 'http://download.bbbike.org/osm/',
