@@ -9466,7 +9466,7 @@ EOF
        text  => 'B 246 Bahnübergang Wendisch Rietz Siedlung, OT Neue Mühle Gleiserneuerung Vollsperrung 13.08.2007-28.08.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 53048,-21761 52992,-21793 52982,-21800 52932,-21834
+userdel	2::inwork 52964,-21786 52927,-21822
 EOF
      },
      { from  => 1187301600, # 2007-08-17 00:00
@@ -12323,7 +12323,7 @@ EOF
        text  => 'L 035 B246 Glienicke - Bad Saarow zw. Diensdorf und Pieskow Straßenbauarbeiten Vollsperrung 21.08.2008-30.11.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 56323,-16537 56600,-15729 56415,-14916
+userdel	2::inwork 56312,-16543 56600,-15729 56485,-15230 56404,-14881
 EOF
      },
      { from  => 1219523350, # 2008-08-23 22:29
@@ -13090,7 +13090,7 @@ EOF
        text  => 'K 7318 Blankenburg - Potzlow Bahnübergang in der OD Seehausen Gleisbauarbeiten Vollsperrung 05.12.2008-10.12.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 41424,91331 41385,91309 41358,91294
+userdel	2::inwork 41424,91331 41395,91313 41358,91294
 EOF
      },
      { from  => 1231455600, # 2009-01-09 00:00
@@ -13098,7 +13098,7 @@ EOF
        text  => 'K 7318 Blankenburg - Potzlow Bahnübergang in der OD Seehausen Gleisbauarbeiten Vollsperrung 10.01.2009-11.01.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 41424,91331 41385,91309 41358,91294
+userdel	2::inwork 41424,91331 41395,91313 41358,91294
 EOF
      },
      { from  => 1227394800, # 2008-11-23 00:00
@@ -13106,7 +13106,7 @@ EOF
        text  => 'K 7318 Blankenburg - Potzlow Bahnübergang in der OD Seehausen Gleisbauarbeiten Vollsperrung 24.11.2008-28.11.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 41424,91331 41385,91309 41358,91294
+userdel	2::inwork 41424,91331 41395,91313 41358,91294
 EOF
      },
      { from  => 1227135600, # 2008-11-20 00:00
@@ -15125,7 +15125,7 @@ EOF
        text  => 'B 246 zw. Glienicke und Wendisch Rietz Deckenerneuerung Vollsperrung 10.08.2009-28.08.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 53048,-21761 53596,-21448 54370,-20977 55783,-21082 57404,-20885
+userdel	2::inwork 53843,-21346 54296,-20909 56184,-21060 57404,-20885
 EOF
      },
      { from  => 1249768800, # 2009-08-09 00:00
@@ -20182,9 +20182,9 @@ EOF
 userdel	2::inwork 35887,85385 34920,85944
 EOF
      },
-     { from  => 1336420800, # 2012-05-07 22:00
-       until => 1347289200, # 2012-09-10 17:00
-       text  => 'Spanische Allee (Nikolassee): Bauarbeiten an den Bahnbrücken, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Regelung mit provisorischen Ampeln bis Mitte September 2012',
+     { from  => 1349635594, # 2012-10-07 20:46
+       until => 1350684000, # 2012-10-20 00:00
+       text  => 'Spanische Allee (Nikolassee): Bauarbeiten an den Bahnbrücken, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Regelung mit provisorischen Ampeln bis Mitte Oktober 2012',
        type  => 'handicap',
        source_id => 'IM_018769',
        data  => <<EOF,
@@ -20358,8 +20358,8 @@ userdel	q4::inwork 15758,8243 15698,8191 15561,8072
 EOF
      },
      { from  => 1340082000, # 2012-06-19 07:00
-       until => 1349017200, # 2012-09-30 17:00
-       text  => 'Saalestr. (Neukölln): Fahrbahn gesperrt (bis Ende 09/12) in beiden Richtungen zwischen Karl-Marx-Str. und Wipperstr. ',
+       until => 1351699200, # 2012-10-31 17:00
+       text  => 'Saalestr. (Neukölln): Fahrbahn in beiden Richtungen zwischen Karl-Marx-Str. und Wipperstr. bis Ende Oktober 2012 gesperrt',
        type  => 'handicap',
        source_id => 'IM_018927',
        data  => <<EOF,
@@ -20458,8 +20458,8 @@ userdel	q2::inwork 7437,12368 7215,12295 7039,12314
 EOF
      },
      { from  => 1342945020, # 2012-07-22 10:17
-       until => 1349103600, # 2012-10-01 17:00
-       text  => 'Berliner Str. (Pankow): Baustelle, Fahrtrichtung gesperrt (bis Anfang 10/12) stadtauswärts zwischen Mühlenstr. und Elsa-Brändström-Str. ',
+       until => 1351612800, # 2012-10-30 17:00
+       text  => 'Berliner Str. (Pankow): Baustelle, stadtauswärts zwischen Mühlenstr. und Elsa-Brändström-Str. bis Ende 10/2012 gesperrt',
        type  => 'handicap',
        source_id => 'IM_019006',
        data  => <<EOF,
@@ -20551,8 +20551,8 @@ userdel	2::night 14838,11410 14776,11400
 EOF
      },
      { from  => 1345119120, # 2012-08-16 14:12
-       until => 1346425200, # 2012-08-31 17:00
-       text  => 'Köthener Brücke (Tiergarten): Baustelle, Straße vollständig gesperrt in beiden Richtungen, 17.08.2012 14:12 Uhr bis 31.08.2012 17:00 Uhr ',
+       until => 1351699200, # 2012-10-31 17:00
+       text  => 'Köthener Brücke (Tiergarten): Baustelle, Straße gesperrt bis Ende Oktober 2012',
        type  => 'handicap',
        source_id => 'IM_019090',
        data  => <<EOF,
@@ -20667,7 +20667,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120921.1525.375622.html',
        data  => <<EOF,
-userdel	q4::inwork 18998,8784 19078,8817 19120,8835 19173,8857 19316,8933 19510,9035 19629,9094 19634,9192
+userdel	q4::inwork 18998,8784 19078,8817 19120,8835 19173,8857 19316,8933 19510,9035 19629,9094
 EOF
      },
      { from  => 1348376400, # 2012-09-23 07:00
@@ -20698,6 +20698,24 @@ userdel	2::temp 8573,12325 8540,12420
 userdel	2::temp 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 6828,12031
 userdel	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 userdel	2::temp 8119,12414 8055,12186
+EOF
+     },
+     { from  => 1348981200, # 2012-09-30 07:00
+       until => 1350136800, # 2012-10-13 16:00
+       text  => 'Roelckestr. (Weißensee): Baustelle, Straße zwischen Rennbahnstr. und Amalienstr. bis Mitte Oktober 2012 gesperrt ',
+       type  => 'handicap',
+       source_id => 'INKO_115090',
+       data  => <<EOF,
+userdel	q4::inwork 13589,16965 13767,17136 13818,17201 13839,17227 13912,17320
+EOF
+     },
+     { from  => 1348981200, # 2012-09-30 07:00
+       until => 1351260000, # 2012-10-26 16:00
+       text  => 'Schulenburgstr. (Spandau): Baustelle, Richtung Ruhlebener Str. ab Tiefwerderweg gesperrt, bis Ende Oktober 2012 ',
+       type  => 'handicap',
+       source_id => 'INKO_113279',
+       data  => <<EOF,
+userdel	q4::inwork; -2960,13203 -2728,13269 -2706,13291
 EOF
      },
     );
