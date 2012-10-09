@@ -145,7 +145,7 @@ function init() {
     var bounds;
 
     // read from input, back button pressed?
-    if (check_lat_form(1)) {
+    if (check_lnglat_form(1)) {
         // bounds = new OpenLayers.Bounds( $("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val() );
         opt.back_button = 1;
 
@@ -258,8 +258,8 @@ function osm_init(opt) {
     function boundsChanged() {
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
 
-        if (!check_lat_form()) {
-            alert("lat or lng value is out of range -180 ... 180");
+        if (!check_lnglat_form()) {
+            alert("lng or lat value is out of range -180 ... 180, -90 .. 90");
             return;
         }
 
@@ -556,9 +556,17 @@ function large_int(number) {
 
 // validate lat or lng values
 
-function check_lat(lat) {
-    if (lat == NaN || lat == "") return false;
-    if (lat >= -180 && lat <= 180) return true;
+function check_lat(number) {
+    return check_coord(number, 90)
+}
+
+function check_lng(number) {
+    return check_coord(number, 180)
+}
+
+function check_coord(number, max) {
+    if (number == NaN || number == "") return false;
+    if (number >= -max && number <= max) return true;
 
     return false;
 }
@@ -602,13 +610,13 @@ function checkform() {
 }
 
 
-function check_lat_form(noerror) {
+function check_lnglat_form(noerror) {
     var ret = true;
     var coord = config.coord;
 
     for (var i = 0; i < coord.length; i++) {
         var val = $(coord[i]).val();
-        if (check_lat(val)) {
+        if (i % 2 == 0 ? check_lng(val) : check_lat(val)) {
             $(coord[i]).css("background", config.color_normal);
         } else {
             if (!noerror) $(coord[i]).css("background", config.color_error);
