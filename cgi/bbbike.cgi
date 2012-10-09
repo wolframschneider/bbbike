@@ -2400,9 +2400,12 @@ EOF
 	    &social_link;
 
 	    print qq{<a class="$class logo" href="$url" title="}, M("BBBike for mobile devices"), qq{"><img class="logo" width="16" height="16" alt="" src="/images/phone.png">[}, M("mobil"), qq{]</a>\n};
+
 	    print "&nbsp;" x 10;
 	    print qq{<a style="font-size:small" title="}, M("Karte nach rechts schieben"), qq{" href="javascript:smallerMap(1.5)">&gt;&gt;</a>\n};
+	    print qq{<img onclick='javascript:displayCurrentPosition([[8.03000,48.73000], [8.81000,49.27000]], "de");' src="/images/location_icon.png">\n};
 	    print qq{<a style="font-size:small" title="}, M("Karte nach links schieben"), qq{" href="javascript:smallerMap(-1.5)">&lt;&lt;</a>\n};
+
         }
 	print qq{</span>\n};
 
