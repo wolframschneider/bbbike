@@ -644,16 +644,14 @@ function check_lnglat_form(noerror) {
 }
 
 function debug(text, id) {
-    if (!id) {
-        id = "debug";
-    }
+    // log to JavaScript console
+    if (console && console.log) console.log("BBBike extract: " + text);
 
-    var tag = document.getElementById(id);
-    var today = new Date();
-
+    if (!id) id = "debug";
+    var tag = jQuery("#" + id);
     if (!tag) return;
 
-    tag.innerHTML = "debug: " + text; // + " " + today;
+    tag.html("debug: " + text);
 }
 
 function setMapHeight() {
