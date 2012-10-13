@@ -50,7 +50,7 @@ EOF
        text  => 'Karneval der Kulturen, 27.5.2012',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 11909,9155 11824,8995 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
+userdel	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753 9002,9731 8777,9601 8648,9526 8595,9495 8358,9568 8192,9619
 userdel	2::temp 10713,9260 10670,9286 10639,9304 10564,9292
 userdel	3 8773,9524 8777,9601 8779,9812
 userdel	3 8779,9812 8777,9601 8773,9524
@@ -76,8 +76,8 @@ userdel	3 10705,9234 10713,9260 10747,9326
 userdel	3 10747,9326 10713,9260 10705,9234
 userdel	3 11141,9107 11136,9183 11208,9345 11274,9492
 userdel	3 11274,9492 11208,9345 11136,9183 11141,9107
-userdel	3 11998,8872 11880,8955 11824,8995 11882,8527
-userdel	3 11882,8527 11824,8995 11880,8955 11998,8872
+userdel	3 11998,8872 11880,8955 11831,8989 11845,8824 11879,8672 11882,8527
+userdel	3 11882,8527 11879,8672 11845,8824 11831,8989 11880,8955 11998,8872
 EOF
      },
      { from  => Time::Local::timelocal(reverse(2003-1900,6-1,19,6,0,0)),
@@ -5316,8 +5316,8 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003157',
        data  => <<EOF,
-userdel	1::inwork 10923,13156 10781,13002
-userdel	1::inwork 10781,13002 10706,13043
+userdel	1::inwork 10923,13156 10776,13005
+userdel	1::inwork 10776,13005 10706,13043
 userdel	3::inwork 10755,13152 10923,13156 11033,13086 11139,13008
 EOF
      },
@@ -6470,7 +6470,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003844',
        data  => <<EOF,
-userdel	2::temp 10738,12364 10673,12434 10644,12469 10601,12521 10437,12703
+userdel	2::temp 10738,12364 10673,12434 10644,12469 10601,12521 10431,12709
 EOF
      },
      { from  => 1161542089, # 2006-10-22 20:34
@@ -10672,7 +10672,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_007387',
        data  => <<EOF,
-userdel	1::inwork 10902,13604 10746,13673
+userdel	1::inwork 10898,13632 10746,13673
 EOF
      },
      { from  => 1197500400, # 2007-12-13 00:00
@@ -13173,7 +13173,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010810',
        data  => <<EOF,
-userdel	2::inwork 19806,1903 19771,1793
+userdel	2::inwork 19803,1911 19771,1793
 EOF
      },
      { from  => 1228675001, # 2008-12-07 19:36
@@ -19447,7 +19447,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016196',
        data  => <<EOF,
-userdel	q4::inwork 19812,1923 19840,2010 19939,2074 20100,2247
+userdel	q4::inwork 19819,1980 19840,2010 19939,2074 20100,2247
 EOF
      },
      { from  => 1312229266, # 2011-08-01 22:07
@@ -19931,7 +19931,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_018211',
        data  => <<EOF,
-userdel	q4::inwork 19806,1903 19771,1793
+userdel	q4::inwork 19803,1911 19771,1793
 #XXX del: userdel	q4::inwork 19771,1793 19728,1660 19679,1571
 EOF
      },
@@ -20086,13 +20086,12 @@ EOF
 	2::night 13002,11705 13042,11749
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1350075439, # undef, # 
+       until => 1350075443, # undef, # XXX
        text  => 'Sredzkistr.: Fahrbahn zwischen Rykestr. und Kollwitzstr. komplett gesperrt. Dauer der Sperrung ist unbekannt.',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-08-24
-userdel	q3::inwork 11436,14741 11526,14693
+userdel	q3::inwork 11436,14741 11535,14688
 EOF
      },
      { from  => 1335556039, # 2012-04-27 21:47
@@ -20444,7 +20443,7 @@ EOF
        text  => 'Christburger Str.: Fahrbahn an der Prenzlauer Allee gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-09-01
+#: last_checked: 2012-10-12
 userdel	q3::inwork 11912,14486 11642,14625
 EOF
      },
@@ -20512,13 +20511,15 @@ EOF
 userdel	q4::inwork; 10953,15787 11086,15772
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1342594800, # 2012-07-18 09:00
+       until => 1350054000, # 2012-10-12 17:00
        text  => 'Adalbertstr.: Fahrbahn in Richtung Kottbusser Tor gesperrt',
        type  => 'handicap',
+       source_id => 'INKO_114376',
        data  => <<EOF,
-#: last_checked: 2012-09-19
-#: next_check: 2012-10-20
+#: last_checked: 2012-10-11
+#: next_check: 2012-10-12
+#: XXX see also Adalbertstr. (Kreuzberg): Leitungsarbeiten, Fahrtrichtung gesperrt (bis Mitte 10/12) Richtung Kottbusser Tor zwischen Oranienstr. und Kottbusser Tor, 19.07.2012 09:00 Uhr bis 12.10.2012 17:00 Uhr¦INKO_114376¦http://asp.vmzberlin.com/VMZ_LSBB_MELDUNGEN_WEB/Meldungskarte.jsp?back=true&map=true&x=52.50035&y=13.41862&zoom=13&meldungId=INKO_114376
 userdel	q4::inwork; 11389,10463 11393,10390
 EOF
      },
@@ -20701,7 +20702,7 @@ userdel	2::temp 8119,12414 8055,12186
 EOF
      },
      { from  => 1348981200, # 2012-09-30 07:00
-       until => 1350136800, # 2012-10-13 16:00
+       until => 1350482400, # 2012-10-17 16:00
        text  => 'Roelckestr. (Weißensee): Baustelle, Straße zwischen Rennbahnstr. und Amalienstr. bis Mitte Oktober 2012 gesperrt ',
        type  => 'handicap',
        source_id => 'INKO_115090',
@@ -20716,6 +20717,24 @@ EOF
        source_id => 'INKO_113279',
        data  => <<EOF,
 userdel	q4::inwork; -2960,13203 -2728,13269 -2706,13291
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Friedrich-Engels-Str. (Rosenthal) Richtung Märkisches Viertel zwischen Platananenstr. und Nordendstr. Baustelle, Fahrtrichtung gesperrt',
+       type  => 'handicap',
+       source_id => 'IM_019272',
+       data  => <<EOF,
+userdel	q4::inwork; 9355,19789 9333,19853 9300,19949 9266,20048 9235,20125 9149,20336
+EOF
+     },
+     { from  => 1350252000, # 2012-10-15 00:00
+       until => 1351551600, # 2012-10-30 00:00
+       text  => 'Dörpfeldstraße: wegen Gleisbauarbeiten zwischen Anna-Seghers-Straße und Thomas-Müntzer-Straße als Einbahnstraße in Richtung Osten geführt (15.10.2012 bis 29.10.2012)',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20121012.1220.376513.html',
+       data  => <<EOF,
+userdel	q4::inwork; 20012,3532 20082,3578 20136,3609 20149,3617
 EOF
      },
     );

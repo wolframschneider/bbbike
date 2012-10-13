@@ -59,7 +59,7 @@ Richtung Teufelssee/Saubucht	CP2; -3475,6780 -3418,6747
 ausgeschildert Richtung Breitenbachplatz	CP2; 3346,7369 3397,7333
 als Ganghoferstr. ausgeschildert	CP2; 12960,8246 12918,8232
 #: XXX_prog: sollte besser als eine Art gerichteter BNP dargestellt werden
-Sredzkistr. - Christburger Str.: Drängelgitter auf dem Mittelstreifen	CP 11526,14693 11642,14625 11912,14486
+Sredzkistr. - Christburger Str.: Drängelgitter auf dem Mittelstreifen	CP 11535,14688 11642,14625 11912,14486
 #: XXX_prog: sollte besser als eine Art gerichteter BNP dargestellt werden
 Pasteurstr. - Christburger Str.: Drängelgitter auf dem Mittelstreifen	CP; 12335,14246 12188,14350 12177,14335
 Christburger Str. - Pasteurstr.: Drängelgitter auf dem Mittelstreifen	CP; 11912,14486 12177,14335 12188,14350
@@ -1024,6 +1024,8 @@ Zugang zum Bad	culdesac_pseudo 7306,13418
 	culdesac -3041,18090
 	culdesac -3206,17263
 	culdesac_pseudo -1347,15506
+	culdesac_pseudo 16041,3718
+	culdesac 16340,3517
 #: section ^^^
 ######################################################################
 # busroute
@@ -1053,7 +1055,7 @@ Bus 265	busroute_N 11022,11782 11048,11745 11155,11750
 Bus 120	busroute_N 8450,13599 8313,13839 8200,14016 8184,14052 8152,14130 8077,14227 8054,14257 7938,14426 8246,14675
 Bus 245, Bus 247	busroute_N 9085,13919 9015,14014 9061,14050 9167,14127 9192,14145 9224,14169
 Bus 240	busroute_N 8634,13588 8673,13597 8775,13606
-Bus 100	busroute_N 10755,13152 10706,13043 10781,13002
+Bus 100	busroute_N 10755,13152 10706,13043 10776,13005
 Bus 247	busroute_N 10170,14905 10111,15018 10071,15096 10018,15211 9996,15400 9917,15613 9734,15579 9726,15575 9578,15500 9443,15430
 Bus 247	busroute_N 9642,15038 9437,14926 9275,14846 9112,14771 9048,14681 8953,14758 8870,14637
 Bus 247	busroute_N 8456,15235 8607,15426 8886,15799 8923,15850 9134,15953
@@ -1202,7 +1204,7 @@ Bus 160	busroute_N 17522,3653 17762,3243 17799,3183 17910,3004 18014,2830 18017,
 Bus 265	busroute_N 17520,4649 17676,4540 17797,4441
 Bus 265	busroute_N 17881,4521 17826,4730 17792,4875 17885,4912
 Bus 162	busroute_N 19251,1240 19107,1403 19061,1457 18974,1559 18916,1626 18888,1658 18839,1715 18807,1758 18804,1791 18863,1950 18881,2062
-Bus 160	busroute_N 18922,2238 19017,2214 19194,2157 19244,2141 19602,1989 19806,1903
+Bus 160	busroute_N 18922,2238 19017,2214 19194,2157 19244,2141 19602,1989 19803,1911
 Bus 163, Bus 260	busroute_N 20277,2463 20116,2639 19978,2790 19878,2899 19746,3029 19697,3074 19581,3184
 Bus 160	busroute_N 19817,1404 19843,1375 19907,1404 19981,1397 19955,1509 20226,1416 20347,1398 20365,1394 20381,1390 20539,1285 20653,1211 20694,1175 20813,1014 20836,982 20960,819 21089,639 21116,605 21164,476 21182,436
 Bus 160, Bus 260	busroute_N 18860,248 19138,141 19297,80
@@ -1526,7 +1528,7 @@ Eisbärenweg: Privatstraße	CS 6909,17796 6950,17669
 (Zobtener Str. - Fischerstr.): durch eine Kleingartenanlage	CS 16353,10207 16404,10286
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Straße verläuft zwischen Bahnstrecke und Wohnhäusern	CS 17210,11950 17201,11975 17137,11969 17023,11908 17026,11888
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11018,13286 11085,13239
-Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CS 7795,13093 7867,13127 7938,13150
+Agnes-Zahn-Harnack-Str.: nicht ausgeschildert	CS 7795,13093 7867,13127 7938,13150
 Petrusweg: Anlieger frei	CS 15225,1553 15217,1463
 Am Rudower Waldrand: Anlieger frei	CS 15467,349 15476,332 15600,116 15707,-6
 Gertrud-Dorka-Weg: Privatstraße	CS 17848,-173 17796,-97
@@ -1621,3 +1623,5 @@ Görschstr.: ausgeschildert "Zur In den Floragärten"	CP2; 10066,17636 10014,17646
 Krangener Weg: Privatstraße	CS 7079,21008 7093,20874
 Stephanusring: Privatstraße	CS 11934,22108 11890,22123 11863,22146 11876,22212 11950,22162
 Karlshöhe: Privatstraße	CS 12058,23227 11224,23879
+der Anfang ist noch als Knaackstr. ausgeschildert	CP2; 11380,14316 11374,14363
+als Knaackstr. ausgeschildert	CP2; 11374,14363 11331,14350

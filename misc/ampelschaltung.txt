@@ -161,7 +161,7 @@ Mo, 26.10.1998
 11632,8302    Columbiadamm/Fontanestr.           W->O       21:14:18  21:14:00
 11898,8362    Flughafenstr./Hermannstr (Auto)    W->O       21:15:25? 21:14:50
 11898,8362    Flughafenstr./Hermannstr (Rad)     W->O       21:15:25? 21:14:40
-11824,8995    Hermannstr./Karl-Marx-Str.         S->N       21:17:57  21:17:25
+11831,8989    Hermannstr./Karl-Marx-Str.         S->N       21:17:57  21:17:25
 12156,8760    Karl-Marx-Str./Reuterstr.          NW->SO 50  21:18:47  21:18:17
 12483,8834    Weichselstr./Sonnenallee           S->N   50  21:19:58  21:20:10
 13849,9310    Kiefholzstr./Elsenstr.             O->W   70  21:29:03  21:29:18
@@ -262,7 +262,7 @@ Do, 29.10.1998
 10564,9292    Gneisenaustr/Südstern 1            W->O       19:57:53  19:57:20
 10713,9260    Gneisenaustr/Südstern 2            W->O                 19:58:25
 11136,9183    Hasenheide/Graefestr.              W->O       19:59:18  19:58:49
-11824,8995    Hasenheide/Hermannstr.             W->O       20:01:43  20:01:01
+11831,8989    Hasenheide/Hermannstr.             W->O       20:01:43  20:01:01
 12156,8760    Karl-Marx-Str./Reuterstr.          NW->SO     20:02:17  20:02:47
 12500,8504    Karl-Marx-Str./Flughafenstr.       NW->SO     20:04:00  20:03:18
 12598,8390    Karl-Marx-Str./Erkstr.             NW->SO 60  20:05:01  20:04:36
@@ -732,7 +732,7 @@ Fr, 09.04.1999
 # Punkt	      Kreuzung                           Dir    Zyk grün      rot
 # ----------------------------------------------------------------------------
 Fr, 09.04.1999
-10437,12703   Spandauer Str./Karl-Liebknecht-St  NW->SO     23:29:58  23:28:58
+10431,12709   Spandauer Str./Karl-Liebknecht-St  NW->SO     23:29:58  23:28:58
 10601,12521   Rathausstr./Spandauer Str.         NW->SO     23:31:22  23:30:39
 10738,12364   Mühlendamm/Stralauer Str./Gruners  NW->SO 70  23:31:32  23:31:42
 11351,12221   Brückenstr./Holzmarktstr./Alexand  W->O       23:34:26
@@ -1972,8 +1972,8 @@ Mi, 11.04.2012
 10463,13747   Torstr./Gormannstr.                W->O                 23:42:59
 10463,13747   Torstr./Gormannstr.                W->O       23:43:31
 10746,13673   Alte Schönhauser Str./Rosa-Luxemb  W->O       23:44:28
-11155,13482   Karl-Liebknecht-Str./Mollstr./Pre  W->O                 23:45:31
-11155,13482   Karl-Liebknecht-Str./Mollstr./Pre  W->O       23:46:28
+11160,13492   Karl-Liebknecht-Str./Mollstr./Pre  W->O                 23:45:31
+11160,13492   Karl-Liebknecht-Str./Mollstr./Pre  W->O       23:46:28
 11446,13294   Otto-Braun-Str./Mollstr.           W->O                 23:47:11
 11446,13294   Otto-Braun-Str./Mollstr.           W->O       23:48:03
 12128,13079   Lichtenberger Str./Platz der Vere  W->O                 23:49:43
