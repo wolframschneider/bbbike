@@ -16,9 +16,10 @@ var config = {
     "show_filesize": 1,
     "city_name_optional": false,
 
+    // in MB
     "max_size": {
-        "default": 512,
-        "osm.obf.zip": 200,
+        "default": 768,
+        "osm.obf.zip": 250,
     },
 
     "dummy": ""
