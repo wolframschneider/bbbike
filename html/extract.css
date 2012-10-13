@@ -83,3 +83,10 @@ div#export_osm_too_large { color: red }
 hr { margin-top: 0.2em; margin-bottom: 0.2em; }
 
 #result { margin-top: 1em; padding: 0.5em; padding-bottom: 4em; }
+
+span#noscript { 
+    color: red;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
