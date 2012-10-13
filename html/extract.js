@@ -648,9 +648,11 @@ function debug(text, id) {
     if (console && console.log) console.log("BBBike extract: " + text);
 
     if (!id) id = "debug";
+
     var tag = jQuery("#" + id);
     if (!tag) return;
 
+    // log to HTML page
     tag.html("debug: " + text);
 }
 
