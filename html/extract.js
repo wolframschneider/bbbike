@@ -433,6 +433,12 @@ function osm_init(opt) {
                 $("#square_km").html(html);
             }
 
+            // keep area size in forms
+            var area_size = $("#as");
+            if (area_size) {
+                area_size.attr("value", filesize.size_max);
+            }
+
             if (skm > config.max_skm) {
                 $("#size").html("Max area size: " + config.max_skm + "skm.");
                 $("#export_osm_too_large").show();
@@ -573,7 +579,7 @@ function check_coord(number, max) {
 }
 
 function checkform() {
-    var ret = true;
+    var ret = 0;
     var color_normal = "white";
     var color_error = "red";
 
@@ -588,26 +594,35 @@ function checkform() {
 
             e.style.background = color_error;
             e.focus();
-            ret = false;
+            ret = 1;
             continue;
         }
 
         if (e.name == "sw_lat" || e.name == "sw_lng" || e.name == "ne_lat" || e.name == "ne_lng") {
             if (!check_lat(e.value)) {
                 e.style.background = color_error;
-                ret = false;
+                ret = 1;
                 continue;
             }
+        }
+
+        // check area size in MB
+        if (e.name == "as") {
+            var format = $("select[name=format] option:selected").val();
+            var max_size = config.max_size[format] ? config.max_size[format] : config.max_size["default"];
+            if (e.value < 0 || e.value > max_size) ret = 2;
+            debug(format + " " + max_size + " " + e.value);
         }
 
         // reset color
         e.style.background = color_normal;
     }
 
-    if (!ret) {
-        alert("Please fill out all fields!");
+    if (ret > 0) {
+        alert(ret == 1 ? "Please fill out all fields!" : "Use a smaller area!");
     }
-    return ret;
+
+    return ret == 0 ? true : false;
 }
 
 
