@@ -547,7 +547,155 @@ function osm_init(opt) {
     }
 
     startExport(opt);
+    setTimeout(function () {
+        $("#controls").show();
+        polygon_init();
+    }, 1000);
+
+    var controls;
+
+    function polygon_init() {
+        var vectors;
+
+        OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '4';
+        var renderer = OpenLayers.Layer.Vector.prototype.renderers;
+
+        vectors = new OpenLayers.Layer.Vector("Vector Layer", {
+            renderers: renderer
+        });
+
+        map.addLayer(vectors);
+
+        if (console && console.log) {
+            function report(event) {
+                console.log(event.type, event.feature ? event.feature.id : event.components);
+                if (event.feature) {
+                    if (event.type == "featuremodified" || event.type == "sketchcomplete") {
+                        serialize(event.feature);
+                    }
+                    if (event.type == "sketchcomplete") {
+                        document.getElementById('modifyToggle').checked = true;
+                        toggleControl(document.getElementById('modifyToggle'));
+                    }
+                }
+            }
+
+            vectors.events.on({
+                "beforefeaturemodified": report,
+                "featuremodified": report,
+                "afterfeaturemodified": report,
+                "vertexmodified": report,
+                "sketchmodified": report,
+                "sketchstarted": report,
+                "sketchcomplete": report
+            });
+        }
+
+        controls = {
+            polygon: new OpenLayers.Control.DrawFeature(vectors, OpenLayers.Handler.Polygon),
+            modify: new OpenLayers.Control.ModifyFeature(vectors)
+        };
+
+        for (var key in controls) {
+            map.addControl(controls[key]);
+        }
+
+        function v(value) {
+            return value
+        };
+
+        function serialize(obj, flag) {
+
+            // WTF? no bounds, trye again a little bit later
+            if (!flag && obj.geometry.bounds == null) {
+                setTimeout(function () {
+                    serialize(obj, 1)
+                }, 500);
+                return;
+            }
+
+            var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+
+            var bounds = obj.geometry.bounds.clone().transform(map.getProjectionObject(), epsg4326);
+            var feature = obj.clone(); // work on a clone
+            feature.geometry.transform(map.getProjectionObject(), epsg4326);
+
+            var vec = feature.geometry.getVertices();
+            var data = "p: " + vec.length + "<br/>";
+
+            for (var i = 0; i < vec.length; i++) {
+                if (i > 0) data += '!';
+                data += vec[i].x + "," + vec[i].y;
+            }
+
+            if (bounds != null) {
+                $("#sw_lng").val(v(bounds.left));
+                $("#sw_lat").val(v(bounds.bottom));
+                $("#ne_lng").val(v(bounds.right));
+                $("#ne_lat").val(v(bounds.top));
+                validateControlsAjax();
+            }
+            debug(data);
+        }
+
+        var options = {
+/*
+                hover: true,
+                onSelect: serialize,
+                clickoutFeature: serialize,
+                outFeature: serialize,
+                overFeature: serialize,
+		*/
+        };
+
+        var select = new OpenLayers.Control.SelectFeature(vectors, options);
+        map.addControl(select);
+        select.activate();
+
+        var out_options = {
+            'internalProjection': map.baseLayer.projection,
+            'externalProjection': new OpenLayers.Projection("EPSG:4326")
+        };
+
+        controls.polygon.activate();
+        document.getElementById('polygonToggle').checked = true;
+    }
+
+    state.update = function update() {
+        // reset modification mode
+        controls.modify.mode = OpenLayers.Control.ModifyFeature.RESHAPE;
+        var rotate = document.getElementById("rotate").checked;
+
+        if (rotate) {
+            controls.modify.mode |= OpenLayers.Control.ModifyFeature.ROTATE;
+            controls.modify.mode |= OpenLayers.Control.ModifyFeature.RESIZE;
+            //    controls.modify.mode &= ~OpenLayers.Control.ModifyFeature.RESHAPE;
+            controls.modify.mode |= OpenLayers.Control.ModifyFeature.DRAG;
+            controls.modify.mode &= ~OpenLayers.Control.ModifyFeature.RESHAPE;
+        } else {
+            controls.modify.createVertices = document.getElementById("createVertices").checked;
+        }
+    }
+
+    state.toggleControl = function toggleControl(element) {
+        for (key in controls) {
+            var control = controls[key];
+            if (element.value == key && element.checked) {
+                control.activate();
+            } else {
+                control.deactivate();
+            }
+        }
+    }
 }
+
+function update() {
+    return state.update()
+};
+
+function toggleControl(element) {
+    return state.toggleControl(element)
+};
 
 // 240000 -> 240,000
 
