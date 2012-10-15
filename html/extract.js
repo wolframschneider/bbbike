@@ -689,11 +689,11 @@ function osm_init(opt) {
     }
 }
 
-function update() {
+function polygon_update() {
     return state.update()
 };
 
-function toggleControl(element) {
+function polygon_toggleControl(element) {
     return state.toggleControl(element)
 };
 
