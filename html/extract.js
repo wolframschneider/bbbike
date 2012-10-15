@@ -575,7 +575,7 @@ function osm_init(opt) {
                     }
                     if (event.type == "sketchcomplete") {
                         document.getElementById('modifyToggle').checked = true;
-                        toggleControl(document.getElementById('modifyToggle'));
+                        polygon_toggleControl(document.getElementById('modifyToggle'));
                     }
                 }
             }
@@ -604,16 +604,15 @@ function osm_init(opt) {
             return value
         };
 
-        function serialize(obj, flag) {
+        /* WTF? no bounds, trye again a little bit later */
 
-            // WTF? no bounds, trye again a little bit later
-            if (!flag && obj.geometry.bounds == null) {
-                setTimeout(function () {
-                    serialize(obj, 1)
-                }, 500);
-                return;
-            }
+        function serialize(feature) {
+            setTimeout(function () {
+                _serialize(feature)
+            }, 500);
+        }
 
+        function _serialize(obj) {
             var epsg4326 = new OpenLayers.Projection("EPSG:4326");
 
             var bounds = obj.geometry.bounds.clone().transform(map.getProjectionObject(), epsg4326);
