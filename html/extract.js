@@ -750,7 +750,7 @@ function checkform() {
         }
 
         if (e.name == "sw_lat" || e.name == "sw_lng" || e.name == "ne_lat" || e.name == "ne_lng") {
-            if (!check_lat(e.value)) {
+            if (e.name.match(/_lat/) ? !check_lat(e.value) : !check_lng(e.value)) {
                 e.style.background = color_error;
                 ret = 1;
                 continue;
