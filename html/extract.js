@@ -605,22 +605,26 @@ function osm_init(opt) {
         };
 
         /* WTF? no bounds, trye again a little bit later */
-
+	/*
         function serialize(feature) {
             setTimeout(function () {
                 _serialize(feature)
             }, 500);
         }
+	*/
 
-        function _serialize(obj) {
+        function serialize(obj) {
             var epsg4326 = new OpenLayers.Projection("EPSG:4326");
 
-            var bounds = obj.geometry.bounds.clone().transform(map.getProjectionObject(), epsg4326);
+            // var bounds = obj.geometry.bounds.clone().transform(map.getProjectionObject(), epsg4326);
             var feature = obj.clone(); // work on a clone
             feature.geometry.transform(map.getProjectionObject(), epsg4326);
+	    feature.geometry.calculateBounds();
+	    var bounds = feature.geometry.bounds;
 
             var vec = feature.geometry.getVertices();
             var data = "p: " + vec.length + "<br/>";
+	    data += parseInt(feature.geometry.getGeodesicArea()/100000)/10 + " sqkm<br/>";
 
             for (var i = 0; i < vec.length; i++) {
                 if (i > 0) data += '!';
