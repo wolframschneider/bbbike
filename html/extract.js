@@ -601,10 +601,13 @@ function osm_init(opt) {
 
             data += parseInt(polygon_area / 100000) / 10 + " sqkm<br/>";
 
+            var coords = "";
             for (var i = 0; i < vec.length; i++) {
                 if (i > 0) data += '!';
-                data += vec[i].x + "," + vec[i].y;
+                coords += vec[i].x + "," + vec[i].y;
             }
+            data += coords;
+            $("#coords").attr("value", coords);
 
             if (bounds != null) {
                 $("#sw_lng").val(v(bounds.left));
@@ -616,14 +619,7 @@ function osm_init(opt) {
             debug(data);
         }
 
-        var options = {
-/*
-                hover: true,
-                onSelect: serialize,
-                clickoutFeature: serialize,
-                outFeature: serialize,
-                overFeature: serialize,
-		*/
+        var options = { /* hover: true, onSelect: serialize, */
         };
 
         var select = new OpenLayers.Control.SelectFeature(vectors, options);
