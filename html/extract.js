@@ -603,7 +603,7 @@ function osm_init(opt) {
 
             var coords = "";
             for (var i = 0; i < vec.length; i++) {
-                if (i > 0) data += '!';
+                if (i > 0) coords += '!';
                 coords += vec[i].x + "," + vec[i].y;
             }
             data += coords;
