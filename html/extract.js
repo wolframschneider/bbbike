@@ -611,7 +611,7 @@ function checkform() {
             var format = $("select[name=format] option:selected").val();
             var max_size = config.max_size[format] ? config.max_size[format] : config.max_size["default"];
             if (e.value < 0 || e.value > max_size) ret = 2;
-            debug(format + " " + max_size + " " + e.value);
+            // debug(format + " " + max_size + " " + e.value);
         }
 
         // reset color
