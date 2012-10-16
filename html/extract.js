@@ -368,10 +368,6 @@ function osm_init(opt) {
         return (height * width);
     }
 
-    function my_round(val) {
-        return Math.round(val * 10 + 0.5) / 10;
-    }
-
     // wait 0.2 seconds before starting validate
     var _validate_timeout;
 
@@ -402,7 +398,7 @@ function osm_init(opt) {
 
         function show_skm(skm, filesize) {
             if ($("#square_km")) {
-                var html = "area covers " + large_int(my_round(skm)) + " square km";
+                var html = "area covers " + large_int(skm) + " square km";
                 if (config.show_filesize) {
                     html += filesize.html;
                 }
@@ -682,6 +678,8 @@ function polygon_toggleControl(element) {
 // 240000 -> 240,000
 
 function large_int(number) {
+    number = Math.round(number);
+
     var string = String(number);
 
     if (number < 1000) {
