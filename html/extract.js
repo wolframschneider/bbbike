@@ -26,7 +26,9 @@ var config = {
 };
 
 // global variables
-var state = {};
+var state = {
+    polygon: {}
+};
 
 // Initialise the 'map' object
 var map;
@@ -363,39 +365,11 @@ function osm_init(opt) {
             lon: y1
         });
 
-        return Math.round(height * width + 0.5);
-        // return height + " " + width;
+        return (height * width);
     }
 
-    // deprecated, replaced by validateControlsAjax()
-
-    function validateControlsGuess() {
-        var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
-
-        var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
-        var filesize = show_filesize(skm);
-
-        if ($("#square_km")) {
-            var html = "area covers " + large_int(skm) + " square km";
-            if (config.show_filesize) {
-                html += filesize.html;
-            }
-            $("#square_km").html(html);
-        }
-
-        if (skm > config.max_skm) {
-            $("#size").html("Max area size: " + config.max_skm + " square km!");
-            $("#export_osm_too_large").show();
-        } else if (filesize.size_max > config.max_size["default"]) {
-            $("#size").html("Max file size: " + config.max_size["default"] + " MB.");
-            $("#export_osm_too_large").show();
-        } else if (filesize.format == "osm.obf.zip" && filesize.size_max > config.max_size["osm.obf.zip"]) {
-            // Osmand works only for small areas less than 200MB
-            $("#size").html("Max osmand file size: " + config.max_size["osm.obf.zip"] + " MB.");
-            $("#export_osm_too_large").show();
-        } else {
-            $("#export_osm_too_large").hide();
-        }
+    function my_round(val) {
+        return Math.round(val * 10 + 0.5) / 10;
     }
 
     // wait 0.2 seconds before starting validate
@@ -415,18 +389,20 @@ function osm_init(opt) {
 
         var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
         var format = $("select[name=format] option:selected").val();
+        var polygon = state.polygon.area && skm > 0 ? (state.polygon.area / skm / 1000000) : 1;
 
         var url = "/cgi/tile-size.cgi?format=" + format + "&lat_sw=" + $("#sw_lat").val() + "&lng_sw=" + $("#sw_lng").val() + "&lat_ne=" + $("#ne_lat").val() + "&lng_ne=" + $("#ne_lng").val();
 
+        console.log("polygon: " + polygon);
+
         jQuery.getJSON(url, function (data) {
-            // debug("size: " + data.size);
-            var filesize = show_filesize(skm, data.size);
-            show_skm(skm, filesize);
+            var filesize = show_filesize(skm * polygon, data.size * polygon);
+            show_skm(skm * polygon, filesize);
         });
 
         function show_skm(skm, filesize) {
             if ($("#square_km")) {
-                var html = "area covers " + large_int(skm) + " square km";
+                var html = "area covers " + large_int(my_round(skm)) + " square km";
                 if (config.show_filesize) {
                     html += filesize.html;
                 }
@@ -605,7 +581,7 @@ function osm_init(opt) {
         };
 
         /* WTF? no bounds, trye again a little bit later */
-	/*
+/*
         function serialize(feature) {
             setTimeout(function () {
                 _serialize(feature)
@@ -619,12 +595,15 @@ function osm_init(opt) {
             // var bounds = obj.geometry.bounds.clone().transform(map.getProjectionObject(), epsg4326);
             var feature = obj.clone(); // work on a clone
             feature.geometry.transform(map.getProjectionObject(), epsg4326);
-	    feature.geometry.calculateBounds();
-	    var bounds = feature.geometry.bounds;
+            feature.geometry.calculateBounds();
+            var bounds = feature.geometry.bounds;
 
             var vec = feature.geometry.getVertices();
             var data = "p: " + vec.length + "<br/>";
-	    data += parseInt(feature.geometry.getGeodesicArea()/100000)/10 + " sqkm<br/>";
+            var polygon_area = feature.geometry.getGeodesicArea();
+            state.polygon.area = polygon_area;
+
+            data += parseInt(polygon_area / 100000) / 10 + " sqkm<br/>";
 
             for (var i = 0; i < vec.length; i++) {
                 if (i > 0) data += '!';
