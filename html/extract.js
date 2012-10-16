@@ -756,7 +756,7 @@ function check_lnglat_form(noerror) {
 
     for (var i = 0; i < coord.length; i++) {
         var val = $(coord[i]).val();
-        if (i % 2 == 0 ? check_lng(val) : check_lat(val)) {
+        if (coord[i].match(/_lng$/) ? check_lng(val) : check_lat(val)) {
             $(coord[i]).css("background", config.color_normal);
         } else {
             if (!noerror) $(coord[i]).css("background", config.color_error);
