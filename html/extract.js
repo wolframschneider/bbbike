@@ -156,6 +156,7 @@ function init() {
         var sw_lat = $("#sw_lat").val();
         var ne_lng = $("#ne_lng").val();
         var ne_lat = $("#ne_lat").val();
+        var coords = $("#coords").val();
 
         bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
@@ -165,6 +166,7 @@ function init() {
             $("#sw_lat").val(sw_lat);
             $("#ne_lng").val(ne_lng);
             $("#ne_lat").val(ne_lat);
+            $("#coords").val(coords);
         };
 
         // setTimeout(function () { state.validateControls() }, 50);
