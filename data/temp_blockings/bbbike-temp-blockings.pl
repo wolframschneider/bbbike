@@ -6487,7 +6487,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003899',
        data  => <<EOF,
-userdel	1::inwork 8306,8722 8334,8655 8371,8543
+userdel	1::inwork 8306,8722 8334,8655 8380,8545
 EOF
      },
      { from  => 1162681200, # 2006-11-05 00:00
@@ -7316,7 +7316,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004915',
        data  => <<EOF,
-userdel	2::inwork 8306,8722 8237,8685 8221,8631 8106,8290 8093,8251 7955,7840
+userdel	2::inwork 8306,8722 8237,8685 8215,8631 8101,8292 8088,8254 7955,7840
 EOF
      },
      { from  => 1173913200, # 2007-03-15 00:00
@@ -18911,7 +18911,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016132',
        data  => <<EOF,
-userdel	q4::inwork; 7949,7607 7943,7708 7951,7801 7955,7840 8093,8251 8106,8290 8221,8631 8237,8685 8306,8722
+userdel	q4::inwork; 7949,7607 7943,7708 7951,7801 7955,7840 8088,8254 8101,8292 8215,8631 8237,8685 8306,8722
 EOF
      },
      { from  => 1302411000, # 2011-04-10 06:50
@@ -20479,8 +20479,10 @@ EOF
        text  => 'Park am Gleisdreieck, Wege im Westpark: wegen Bauarbeiten können die Wege unpassierbar sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2012-07-24 vvv
-userdel	2::inwork 8309,10368 8278,10384 8296,10438
+#: last_checked: 2012-10-16 vvv
+userdel	2::inwork 8309,10368 8278,10384 8296,10438 8328,10585 8332,10637 8341,10721
+userdel	2::inwork 8328,10585 8270,10613
+userdel	2::inwork 8318,10738 8270,10613 8264,10460
 userdel	2::inwork 8278,10384 8263,10349 8258,10338
 userdel	2::inwork 8263,10349 8315,10347 8333,10167 8360,10133
 #: last_checked ^^^
@@ -20563,7 +20565,7 @@ userdel	q4::inwork 8443,10777 8430,10710
 EOF
      },
      { from  => 1343706240, # 2012-07-31 05:44
-       until => 1351695600, # 2012-10-31 16:00
+       until => 1350503220, # 1351695600, # 2012-10-31 16:00
        text  => 'Uhlandstr. (Charlottenburg): Baustelle, Straße vollständig gesperrt In beiden Richtungen zwischen Steinplatz und Kantstr., 01.08.2012 05:44 Uhr bis 31.10.2012 16:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_019071',
@@ -20721,12 +20723,13 @@ EOF
 userdel	q4::inwork; -2960,13203 -2728,13269 -2706,13291
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1350502082, # undef, # 
+       until => 1350502086, # undef, # XXX
        text  => 'Friedrich-Engels-Str. (Rosenthal) Richtung Märkisches Viertel zwischen Platananenstr. und Nordendstr. Baustelle, Fahrtrichtung gesperrt',
        type  => 'handicap',
        source_id => 'IM_019272',
        data  => <<EOF,
+#: by: http://www.berlin.de/ba-pankow/presse/archiv/20121015.1240.376583.html (Verzögerung bei den Bauarbeiten)
 userdel	q4::inwork; 9355,19789 9333,19853 9300,19949 9266,20048 9235,20125 9149,20336
 EOF
      },
@@ -20737,6 +20740,24 @@ EOF
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20121012.1220.376513.html',
        data  => <<EOF,
 userdel	q4::inwork; 20012,3532 20082,3578 20136,3609 20149,3617
+EOF
+     },
+     { from  => 1348376400, # 2012-09-23 07:00
+       until => 1352905200, # 2012-11-14 16:00
+       text  => 'Eisenacher Str. zwischen Kosleckweg und Äneasstr Richtung Rixdorfer Str. Baustelle, Fahrbahn gesperrt, bis Mitte November 2012',
+       type  => 'handicap',
+       source_id => 'INKO_115461',
+       data  => <<EOF,
+userdel	q4::inwork; 10010,4606 10183,4583 10270,4571
+EOF
+     },
+     { from  => 1350363600, # 2012-10-16 07:00
+       until => 1353682800, # 2012-11-23 16:00
+       text  => 'Kurfürstenstr. zwischen Genthiner Str. und Einemstr. Richtung Westen Baustelle, Fahrbahn gesperrt, bis 23. November 2012 ',
+       type  => 'handicap',
+       source_id => 'INKO_114523',
+       data  => <<EOF,
+userdel	q4::inwork; 7315,10537 7117,10611 7115,10612 6972,10665
 EOF
      },
     );
