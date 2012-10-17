@@ -519,12 +519,17 @@ function osm_init(opt) {
     }
 
     startExport(opt);
+
     setTimeout(function () {
         $("#controls").show();
         polygon_init();
     }, 1000);
 
     var controls;
+
+    function osm_round(number) {
+        return parseInt(number * 10000 + 0.5) / 10000;
+    }
 
     function polygon_init() {
         var vectors;
@@ -604,7 +609,7 @@ function osm_init(opt) {
             var coords = "";
             for (var i = 0; i < vec.length; i++) {
                 if (i > 0) coords += '|';
-                coords += vec[i].x + "," + vec[i].y;
+                coords += osm_round(vec[i].x) + "," + osm_round(vec[i].y);
             }
             data += coords;
             $("#coords").attr("value", coords);
