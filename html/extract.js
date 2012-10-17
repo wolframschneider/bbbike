@@ -210,6 +210,7 @@ function permalink_init() {
 }
 
 var vectors;
+
 function osm_init(opt) {
     var box;
     var transform;
@@ -283,6 +284,7 @@ function osm_init(opt) {
 
     function startDrag() {
         $("#drag_box").html("Drag a box on the map to select an area");
+        $("#polygon_controls").hide();
 
         clearBox();
         setBounds(map.getExtent());
@@ -300,6 +302,7 @@ function osm_init(opt) {
         validateControls();
 
         $("#drag_box").html("Manually select a different area");
+        $("#polygon_controls").show();
     }
 
     function transformComplete(event) {
@@ -535,7 +538,6 @@ function osm_init(opt) {
 
     function polygon_init() {
         // var vectors;
-
         OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '4';
         var renderer = OpenLayers.Layer.Vector.prototype.renderers;
 
@@ -649,7 +651,7 @@ function osm_init(opt) {
         }
     }
 
-    /*
+/*
     state.toggleControl = function toggleControl(element, flag) {
 	if (flag == undefined)
 	    flag = element.checked;
