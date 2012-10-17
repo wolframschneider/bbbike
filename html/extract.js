@@ -602,6 +602,7 @@ function osm_init(opt) {
             var bounds = feature.geometry.bounds;
 
             var vec = feature.geometry.getVertices();
+
             var data = "p: " + vec.length + "<br/>";
             var polygon_area = feature.geometry.getGeodesicArea();
             state.polygon.area = polygon_area;
@@ -623,7 +624,7 @@ function osm_init(opt) {
                 $("#ne_lat").val(v(bounds.top));
                 validateControlsAjax();
             }
-            debug(data);
+            // debug(data);
         }
 
         var options = { /* hover: true, onSelect: serialize, */
