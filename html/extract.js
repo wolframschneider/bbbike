@@ -530,7 +530,7 @@ function osm_init(opt) {
     var controls;
 
     function osm_round(number) {
-        return parseInt(number * 10000 + 0.5) / 10000;
+        return parseInt(number * 1000 + 0.5) / 10000;
     }
 
     function polygon_init() {
@@ -580,7 +580,7 @@ function osm_init(opt) {
         }
 
         function v(value) {
-            return value
+            return osm_round(value);
         };
 
         /* WTF? no bounds, trye again a little bit later */
