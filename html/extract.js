@@ -209,8 +209,8 @@ function permalink_init() {
     }, 1000);
 }
 
+var vectors;
 function osm_init(opt) {
-    var vectors;
     var box;
     var transform;
     var markerLayer;
@@ -534,7 +534,7 @@ function osm_init(opt) {
     }
 
     function polygon_init() {
-        var vectors;
+        // var vectors;
 
         OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '4';
         var renderer = OpenLayers.Layer.Vector.prototype.renderers;
@@ -553,8 +553,8 @@ function osm_init(opt) {
                         serialize(event.feature);
                     }
                     if (event.type == "sketchcomplete") {
-                        document.getElementById('modifyToggle').checked = true;
-                        polygon_toggleControl(document.getElementById('modifyToggle'));
+                        // document.getElementById('modifyToggle').checked = true;
+                        // polygon_toggleControl(document.getElementById('modifyToggle'));
                     }
                 }
             }
@@ -582,15 +582,6 @@ function osm_init(opt) {
         function v(value) {
             return osm_round(value);
         };
-
-        /* WTF? no bounds, trye again a little bit later */
-/*
-        function serialize(feature) {
-            setTimeout(function () {
-                _serialize(feature)
-            }, 500);
-        }
-	*/
 
         function serialize(obj) {
             var epsg4326 = new OpenLayers.Projection("EPSG:4326");
@@ -639,8 +630,7 @@ function osm_init(opt) {
             'externalProjection': new OpenLayers.Projection("EPSG:4326")
         };
 
-        controls.polygon.activate();
-        document.getElementById('polygonToggle').checked = true;
+        controls.modify.activate();
     }
 
     state.update = function update() {
@@ -659,16 +649,21 @@ function osm_init(opt) {
         }
     }
 
-    state.toggleControl = function toggleControl(element) {
+    /*
+    state.toggleControl = function toggleControl(element, flag) {
+	if (flag == undefined)
+	    flag = element.checked;
+
         for (key in controls) {
             var control = controls[key];
-            if (element.value == key && element.checked) {
+            if (element.value == key && flag) {
                 control.activate();
             } else {
                 control.deactivate();
             }
         }
     }
+    */
 }
 
 function polygon_update() {
