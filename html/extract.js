@@ -714,13 +714,15 @@ function checkform() {
     var color_normal = "white";
     var color_error = "red";
 
-
     var inputs = $("form#extract input");
     // debug("inputs elements: " + inputs.length); return false;
     for (i = 0; i < inputs.length; ++i) {
         var e = inputs[i];
 
         if (e.value == "") {
+	    // ignore hidden input fields for check, e.g. "coords"
+	    if (e.type == "hidden") continue;
+
             // optional forms fields
             if (config.city_name_optional && e.name == "city") continue;
 
@@ -743,7 +745,6 @@ function checkform() {
             var format = $("select[name=format] option:selected").val();
             var max_size = config.max_size[format] ? config.max_size[format] : config.max_size["default"];
             if (e.value < 0 || e.value > max_size) ret = 2;
-            // debug(format + " " + max_size + " " + e.value);
         }
 
         // reset color
