@@ -85,7 +85,6 @@ function init_map_size() {
 }
 
 function init() {
-    debug(document.height + " " + document.width);
 
 
     initKeyPress();
@@ -792,6 +791,7 @@ function setMapHeight() {
     jQuery('#map').width(width);
     jQuery('#map').height(height);
 
+    debug(document.height + " " + document.width);
     // hide help messages on small screens
     setTimeout(function () {
         jQuery(window).height() < 480 ? $(".normalscreen").hide() : $(".normalscreen").show()
