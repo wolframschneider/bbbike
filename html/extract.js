@@ -539,6 +539,8 @@ function osm_init(opt) {
     function polygon_init() {
         // var vectors;
         OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '4';
+        OpenLayers.Feature.Vector.style['default']['pointRadius'] = '12';
+
         var renderer = OpenLayers.Layer.Vector.prototype.renderers;
 
         vectors = new OpenLayers.Layer.Vector("Vector Layer", {
