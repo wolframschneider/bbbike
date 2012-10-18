@@ -410,6 +410,7 @@ function osm_init(opt) {
                     html += filesize.html;
                     $("#square_km_small").html(large_int(skm) + " skm");
                     $("#size_small").html("~" + Math.round(filesize.size_max * 10) / 10 + " MB");
+                    $("#time_small").html(filesize.time + " min");
                 }
                 $("#square_km").html(html);
             }
@@ -478,15 +479,19 @@ function osm_init(opt) {
             size_max = real_size / 1024;
         }
 
+        var time = "";
         if (skm < config.max_skm) {
             var min = Math.ceil(time_min / 60);
             var max = Math.ceil(time_max / 60);
-            html += ", approx. extract time: " + min + (min != max ? "-" + max : "") + " minutes";
+            time = min + (min != max ? "-" + max : "");
+
+            html += ", approx. extract time: " + time + " minutes";
         }
 
         var obj = {
             "html": html,
             "size_max": size_max,
+            "time": time,
             "format": format
         };
         return obj;
