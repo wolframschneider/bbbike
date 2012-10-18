@@ -85,6 +85,9 @@ function init_map_size() {
 }
 
 function init() {
+    debug(document.height + " " + document.width);
+
+
     initKeyPress();
 
     init_map_size();
@@ -702,6 +705,7 @@ function checkform() {
     var color_normal = "white";
     var color_error = "red";
 
+
     var inputs = $("form#extract input");
     // debug("inputs elements: " + inputs.length); return false;
     for (i = 0; i < inputs.length; ++i) {
@@ -772,7 +776,7 @@ function debug(text, id) {
     if (!tag) return;
 
     // log to HTML page
-    tag.html("debug: " + text);
+    tag.html(text);
 }
 
 function setMapHeight() {
@@ -787,6 +791,11 @@ function setMapHeight() {
 
     jQuery('#map').width(width);
     jQuery('#map').height(height);
+
+    // hide help messages on small screens
+    setTimeout(function () {
+        jQuery(window).height() < 480 ? $(".normalscreen").hide() : $(".normalscreen").show()
+    }, 2000);
 
     // debug("height: " + height + " d.height: " + jQuery(document).height() + " w.height: " + jQuery(window).height() + " top.h: " + jQuery('#top').height());
 };
