@@ -464,6 +464,9 @@ function osm_init(opt) {
         } else if (format == "osm.obf.zip") {
             factor = 1.4;
             factor_time = 20;
+        } else if (format.match(/^navit\.zip$/)) {
+            factor = 0.8;
+            factor_time = 1;
         }
 
         var time_min = 600 + (size * factor_time);
