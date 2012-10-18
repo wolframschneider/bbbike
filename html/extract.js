@@ -642,32 +642,20 @@ function osm_init(opt) {
         controls.modify.mode = OpenLayers.Control.ModifyFeature.RESHAPE;
         var rotate = document.getElementById("rotate").checked;
 
+        // rotate, resize
         if (rotate) {
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.ROTATE;
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.RESIZE;
             //    controls.modify.mode &= ~OpenLayers.Control.ModifyFeature.RESHAPE;
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.DRAG;
             controls.modify.mode &= ~OpenLayers.Control.ModifyFeature.RESHAPE;
-        } else {
+        }
+
+        // add new points
+        else {
             controls.modify.createVertices = document.getElementById("createVertices").checked;
         }
     }
-
-/*
-    state.toggleControl = function toggleControl(element, flag) {
-	if (flag == undefined)
-	    flag = element.checked;
-
-        for (key in controls) {
-            var control = controls[key];
-            if (element.value == key && flag) {
-                control.activate();
-            } else {
-                control.deactivate();
-            }
-        }
-    }
-    */
 }
 
 function polygon_update() {
