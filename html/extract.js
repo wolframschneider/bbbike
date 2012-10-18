@@ -791,13 +791,18 @@ function setMapHeight() {
     jQuery('#map').width(width);
     jQuery('#map').height(height);
 
-    debug(document.height + " " + document.width);
-    // hide help messages on small screens
-    setTimeout(function () {
-        jQuery(window).height() < 480 ? $(".normalscreen").hide() : $(".normalscreen").show()
-    }, 2000);
+    debug($(window).height() + " " + $(window).width());
 
-    // debug("height: " + height + " d.height: " + jQuery(document).height() + " w.height: " + jQuery(window).height() + " top.h: " + jQuery('#top').height());
+    // hide help messages on small screens
+    if (jQuery(window).height() < 480) {
+        setTimeout(function () {
+            $(".normalscreen").hide()
+        }, 2500);
+    } else {
+        setTimeout(function () {
+            $(".normalscreen").show()
+        }, 250);
+    }
 };
 
 /*
