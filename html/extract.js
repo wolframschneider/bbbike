@@ -408,6 +408,8 @@ function osm_init(opt) {
                 var html = "area covers " + large_int(skm) + " square km";
                 if (config.show_filesize) {
                     html += filesize.html;
+                    $("#square_km_small").html(large_int(skm) + " skm");
+                    $("#size_small").html("~" + Math.round(filesize.size_max * 10) / 10 + " MB");
                 }
                 $("#square_km").html(html);
             }
@@ -472,7 +474,7 @@ function osm_init(opt) {
 
         // we have real data, no need to guess
         if (real_size) {
-            html = ", ~" + Math.round(real_size / 1024 * 10) / 10 + "MB " + format + " data";
+            html = ", ~" + Math.round(real_size / 1024 * 10) / 10 + "MB"; //  + format + " data";
             size_max = real_size / 1024;
         }
 
