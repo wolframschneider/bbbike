@@ -411,8 +411,8 @@ function osm_init(opt) {
                     $("#square_km_small").html(large_int(skm) + " skm");
                     $("#size_small").html("~" + Math.round(filesize.size_max * 10) / 10 + " MB");
                     $("#time_small").html(filesize.time + " min");
+                    // $("#square_km").html(html);
                 }
-                $("#square_km").html(html);
             }
 
             // keep area size in forms
