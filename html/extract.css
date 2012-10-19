@@ -99,6 +99,7 @@ span#noscript {
 span#square_km_small, span#size_small, span#time_small { 
 	font-size: small; 
 	font-style: italic;
+	color: grey;
 }
 
 input#city, input#email { width: 95%; } 
