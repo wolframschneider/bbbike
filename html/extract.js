@@ -202,14 +202,14 @@ function permalink_init() {
 
         // not supported yet
         // params.layers = layers;
-        // params.city = $("#city").val();
+        params.city = $("#city").val();
         return params;
     };
 
     // wait a moment for inital permalink, to read values from forms
     setTimeout(function () {
         map.addControl(new OpenLayers.Control.Permalink('permalink'))
-    }, 1000);
+    }, 200);
 }
 
 var vectors;
@@ -410,7 +410,7 @@ function osm_init(opt) {
                 if (config.show_filesize) {
                     html += filesize.html;
                     $("#square_km_small").html(large_int(skm) + " skm");
-                    var fs = filesize.size_max < 1 ? Math.round(filesize.size_max * 10) / 10 : Math.round(filesize.size_max);
+                    var fs = filesize.size < 1 ? Math.round(filesize.size * 10) / 10 : Math.round(filesize.size);
                     $("#size_small").html("~" + fs + " MB");
                     $("#time_small").html(filesize.time + " min");
                     // $("#square_km").html(html);
@@ -420,16 +420,16 @@ function osm_init(opt) {
             // keep area size in forms
             var area_size = $("#as");
             if (area_size) {
-                area_size.attr("value", filesize.size_max);
+                area_size.attr("value", filesize.size);
             }
 
             if (skm > config.max_skm) {
                 $("#size").html("Max area size: " + config.max_skm + "skm.");
                 $("#export_osm_too_large").show();
-            } else if (filesize.size_max > config.max_size["default"]) {
+            } else if (filesize.size > config.max_size["default"]) {
                 $("#size").html("Max file size: " + config.max_size["default"] + " MB.");
                 $("#export_osm_too_large").show();
-            } else if (filesize.format == "osm.obf.zip" && filesize.size_max > config.max_size["osm.obf.zip"]) {
+            } else if (filesize.format == "osm.obf.zip" && filesize.size > config.max_size["osm.obf.zip"]) {
                 // Osmand works only for small areas less than 200MB
                 $("#size").html("Max osmand file size: " + config.max_size["osm.obf.zip"] + " MB.");
                 $("#export_osm_too_large").show();
@@ -442,53 +442,59 @@ function osm_init(opt) {
 
     function show_filesize(skm, real_size) {
         var extract_time = 600; // standard extract time in seconds for PBF
-        debug("skm: " + skm + " size: " + real_size);
-
-        var size = skm / 1000;
         var format = $("select[name=format] option:selected").val();
+        var size = real_size ? real_size / 1024 : 0;
+        debug("skm: " + parseInt(skm) + " size: " + real_size + "MB " + format);
 
-        if (real_size) size = real_size / 1024;
+        var filesize = {
+            "osm.pbf": {
+                "size": 1,
+                "time": 1
+            },
+            "osm.gz": {
+                "size": 2,
+                "time": 0.5
+            },
+            "osm.bz2": {
+                "size": 1.5,
+                "time": 1
+            },
+            "osm.xz": {
+                "size": 1.8,
+                "time": 0.4
+            },
+            "garmin-osm.zip": {
+                "size": 0.8,
+                "time": 2
+            },
+            "garmin-cycle.zip": {
+                "size": 0.8,
+                "time": 2
+            },
+            "garmin-leisure.zip": {
+                "size": 0.9,
+                "time": 3
+            },
+            "shp.zip": {
+                "size": 1.5,
+                "time": 1
+            },
+            "obf.zip": {
+                "size": 1.4,
+                "time": 10
+            },
+            "navit.zip": {
+                "size": 0.8,
+                "time": 1
+            },
+        };
+        var factor = filesize[format].size;
+        var factor_time = filesize[format].time;
 
-        // additional time and size factor for formats
-        var factor = 1; // PBF
-        var factor_time = 0; // PBF
-        if (format == "osm.gz") {
-            factor = 2;
-            factor_time = 0.5;
-        } else if (format == "osm.bz2") {
-            factor = 1.5;
-            factor_time = 1;
-        } else if (format == "osm.xz") {
-            factor = 1.8;
-            factor_time = 0.4;
-        } else if (format.match(/^garmin-(osm|cycle|leisure)\.zip$/)) {
-            factor = 0.8;
-            factor_time = 2;
-        } else if (format == "osm.shp.zip") {
-            factor = 1.5;
-            factor_time = 1;
-        } else if (format == "osm.obf.zip") {
-            factor = 1.4;
-            factor_time = 20;
-        } else if (format.match(/^navit\.zip$/)) {
-            factor = 0.8;
-            factor_time = 1;
-        }
+        var time_min = extract_time + 0.6 * size + (size * factor_time);
+        var time_max = extract_time + 0.6 * size + (size * factor_time * 2);
 
-        var time_min = extract_time + (size * factor_time);
-        var time_max = extract_time + (size * factor_time * 2);
-
-        var size_min = Math.floor(factor * size * 0.25);
-        var size_max = Math.ceil(factor * size * 2);
-
-        var html = ", approx. " + size_min + "-" + size_max + " MB OSM data";
-
-        // we have real data, no need to guess
-        if (real_size) {
-            html = ", ~" + Math.round(real_size / 1024 * 10) / 10 + "MB"; //  + format + " data";
-            size_max = real_size / 1024;
-        }
-
+        var html = ", ~" + Math.round(size * 10) / 10 + "MB"; //  + format + " data";
         var time = "";
         if (skm < config.max_skm) {
             var min = Math.ceil(time_min / 60);
@@ -500,8 +506,11 @@ function osm_init(opt) {
 
         var obj = {
             "html": html,
-            "size_max": size_max,
+            // text message
+            "size": size,
+            // size in MB
             "time": time,
+            // time in minutes
             "format": format
         };
 
@@ -822,6 +831,8 @@ function setMapHeight() {
             $(".normalscreen").show()
         }, 250);
     }
+
+    permalink_init();
 };
 
 /*
