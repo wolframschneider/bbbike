@@ -33,6 +33,7 @@ var state = {
 // Initialise the 'map' object
 var map;
 
+var console; // IE8
 // select an area to display on the map
 
 function select_city(name) {
@@ -396,7 +397,7 @@ function osm_init(opt) {
 
         var url = "/cgi/tile-size.cgi?format=" + format + "&lat_sw=" + $("#sw_lat").val() + "&lng_sw=" + $("#sw_lng").val() + "&lat_ne=" + $("#ne_lat").val() + "&lng_ne=" + $("#ne_lng").val();
 
-        console.log("polygon: " + polygon);
+        debug("polygon: " + polygon);
 
         jQuery.getJSON(url, function (data) {
             var filesize = show_filesize(skm * polygon, data.size * polygon);
@@ -409,7 +410,8 @@ function osm_init(opt) {
                 if (config.show_filesize) {
                     html += filesize.html;
                     $("#square_km_small").html(large_int(skm) + " skm");
-                    $("#size_small").html("~" + Math.round(filesize.size_max * 10) / 10 + " MB");
+                    var fs = filesize.size_max < 1 ? Math.round(filesize.size_max * 10) / 10 : Math.round(filesize.size_max);
+                    $("#size_small").html("~" + fs + " MB");
                     $("#time_small").html(filesize.time + " min");
                     // $("#square_km").html(html);
                 }
@@ -439,11 +441,15 @@ function osm_init(opt) {
     }
 
     function show_filesize(skm, real_size) {
+        var extract_time = 600; // standard extract time in seconds for PBF
+        debug("skm: " + skm + " size: " + real_size);
+
         var size = skm / 1000;
         var format = $("select[name=format] option:selected").val();
 
         if (real_size) size = real_size / 1024;
 
+        // additional time and size factor for formats
         var factor = 1; // PBF
         var factor_time = 0; // PBF
         if (format == "osm.gz") {
@@ -469,8 +475,9 @@ function osm_init(opt) {
             factor_time = 1;
         }
 
-        var time_min = 600 + (size * factor_time);
-        var time_max = 600 + (size * factor_time * 2);
+        var time_min = extract_time + (size * factor_time);
+        var time_max = extract_time + (size * factor_time * 2);
+
         var size_min = Math.floor(factor * size * 0.25);
         var size_max = Math.ceil(factor * size * 2);
 
@@ -497,6 +504,7 @@ function osm_init(opt) {
             "time": time,
             "format": format
         };
+
         return obj;
     }
 
@@ -720,8 +728,8 @@ function checkform() {
         var e = inputs[i];
 
         if (e.value == "") {
-	    // ignore hidden input fields for check, e.g. "coords"
-	    if (e.type == "hidden") continue;
+            // ignore hidden input fields for check, e.g. "coords"
+            if (e.type == "hidden") continue;
 
             // optional forms fields
             if (config.city_name_optional && e.name == "city") continue;
