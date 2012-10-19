@@ -244,9 +244,11 @@ function osm_init(opt) {
             irregular: true
         });
         transform.events.register("transformcomplete", transform, transformComplete);
-        map.addControl(transform);
 
+	/*
+        map.addControl(transform);
         map.events.register("moveend", map, mapMoved);
+	*/
 
         // $("#sidebar_title").html("Export");
         $("#ne_lat").change(boundsChanged);
