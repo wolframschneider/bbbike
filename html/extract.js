@@ -22,6 +22,8 @@ var config = {
         "osm.obf.zip": 250,
     },
 
+    debug: 0,
+
     "dummy": ""
 };
 
@@ -794,8 +796,14 @@ function check_lnglat_form(noerror) {
 }
 
 function debug(text, id) {
+    // no debug at all
+    if (config.debug < 0) return;
+
     // log to JavaScript console
     if (console && console.log) console.log("BBBike extract: " + text);
+
+    // no debug on html page
+    if (config.debug == 0) return;
 
     if (!id) id = "debug";
 
