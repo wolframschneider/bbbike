@@ -353,7 +353,8 @@ function osm_init(opt) {
         var feature = new OpenLayers.Feature.Vector(bounds.toGeometry());
 
         vectors.addFeatures(feature);
-        transform.setFeature(feature);
+
+        // transform.setFeature(feature);
     }
 
     // size of an area in square km
