@@ -88,11 +88,9 @@ function init_map_size() {
 }
 
 function init() {
-
-
     initKeyPress();
-
     init_map_size();
+
     var opt = {
         "back_button": 0
     };
@@ -122,13 +120,16 @@ function init() {
     }));
 
     map.addLayer(new OpenLayers.Layer.OSM.Mapnik("OSM Mapnik"));
+
     map.addLayer(new OpenLayers.Layer.OSM.CycleMap("OSM CycleMap"));
+
     map.addLayer(new OpenLayers.Layer.OSM("OSM Hike&Bike", ["http://a.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png", "http://b.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png"], {
         tileOptions: {
             crossOriginKeyword: null
         },
         numZoomLevels: 18
     }));
+
     map.addLayer(new OpenLayers.Layer.OSM("OSM Transport", ["http://a.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png", "http://b.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png"], {
         tileOptions: {
             crossOriginKeyword: null
@@ -142,6 +143,7 @@ function init() {
         },
         numZoomLevels: 19
     }));
+
     map.addLayer(new OpenLayers.Layer.OSM("Mapquest Satellite", ["http://mtile01.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png", "http://mtile02.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png"], {
         tileOptions: {
             crossOriginKeyword: null
@@ -173,8 +175,6 @@ function init() {
             $("#ne_lat").val(ne_lat);
             $("#coords").val(coords);
         };
-
-        // setTimeout(function () { state.validateControls() }, 50);
     }
 
     // default city
@@ -249,7 +249,6 @@ function osm_init(opt) {
         map.addControl(transform);
         map.events.register("moveend", map, mapMoved);
 
-        // $("#sidebar_title").html("Export");
         $("#ne_lat").change(boundsChanged);
         $("#sw_lng").change(boundsChanged);
         $("#ne_lng").change(boundsChanged);
@@ -357,7 +356,7 @@ function osm_init(opt) {
         var feature = new OpenLayers.Feature.Vector(bounds.toGeometry());
 
         vectors.addFeatures(feature);
-        // transform.setFeature(feature);
+        // transform.setFeature(feature); // hidden rectangle
     }
 
     // size of an area in square km
@@ -522,6 +521,9 @@ function osm_init(opt) {
         return obj;
     }
 
+    // ???
+
+
     function getMapLayers() {
         return "M";
     }
@@ -572,8 +574,8 @@ function osm_init(opt) {
 
     function polygon_init() {
         // var vectors;
-        OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '4';
-        OpenLayers.Feature.Vector.style['default']['pointRadius'] = '12';
+        OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '3';
+        OpenLayers.Feature.Vector.style['default']['pointRadius'] = '14';
 
         var renderer = OpenLayers.Layer.Vector.prototype.renderers;
 
@@ -677,7 +679,7 @@ function osm_init(opt) {
         controls.modify.mode = OpenLayers.Control.ModifyFeature.RESHAPE;
         var rotate = document.getElementById("rotate").checked;
 
-        // rotate, resize
+        // rotate, resize, move
         if (rotate) {
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.ROTATE;
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.RESIZE;
@@ -701,7 +703,7 @@ function polygon_toggleControl(element) {
     return state.toggleControl(element)
 };
 
-// 240000 -> 240,000
+/* 240000 -> 240,000 */
 
 function large_int(number) {
     number = Math.round(number);
@@ -715,7 +717,7 @@ function large_int(number) {
     }
 }
 
-// validate lat or lng values
+/* validate lat or lng values */
 
 function check_lat(number) {
     return check_coord(number, 90)
