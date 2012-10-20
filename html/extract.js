@@ -79,7 +79,7 @@ function init_map_size() {
     setMapHeight();
 
     // reset map size, 3x a second
-    jQuery(window).resize(function () {
+    $(window).resize(function () {
         if (resize) clearTimeout(resize);
         resize = setTimeout(function () {
             setMapHeight();
@@ -95,7 +95,7 @@ function init() {
         "back_button": 0
     };
 
-    var keyboard = new OpenLayers.Control.KeyboardDefaults({}); // "observeElement": jQuery("#map")} );
+    var keyboard = new OpenLayers.Control.KeyboardDefaults({}); // "observeElement": $("#map")} );
     map = new OpenLayers.Map("map", {
         controls: [
         new OpenLayers.Control.Navigation(), new OpenLayers.Control.PanZoomBar(), new OpenLayers.Control.ScaleLine({
@@ -403,7 +403,7 @@ function osm_init(opt) {
 
         debug("polygon: " + polygon);
 
-        jQuery.getJSON(url, function (data) {
+        $.getJSON(url, function (data) {
             var filesize = show_filesize(skm * polygon, data.size * polygon);
             show_skm(skm * polygon, filesize);
         });
@@ -522,7 +522,6 @@ function osm_init(opt) {
     }
 
     // ???
-
 
     function getMapLayers() {
         return "M";
@@ -677,7 +676,7 @@ function osm_init(opt) {
     state.update = function update() {
         // reset modification mode
         controls.modify.mode = OpenLayers.Control.ModifyFeature.RESHAPE;
-        var rotate = jQuery("#rotate:checked").val();
+        var rotate = $("#rotate:checked").val();
 
         // rotate, resize, move
         if (rotate) {
@@ -690,7 +689,7 @@ function osm_init(opt) {
 
         // add new points
         else {
-            controls.modify.createVertices = jQuery("#createVertices:checked").val();
+            controls.modify.createVertices = $("#createVertices:checked").val();
         }
     }
 }
@@ -813,7 +812,7 @@ function debug(text, id) {
 
     if (!id) id = "debug";
 
-    var tag = jQuery("#" + id);
+    var tag = $("#" + id);
     if (!tag) return;
 
     // log to HTML page
@@ -821,22 +820,22 @@ function debug(text, id) {
 }
 
 function setMapHeight() {
-    var height = jQuery(window).height();
-    var width = jQuery(window).width() - jQuery('#sidebar_left').width();
+    var height = $(window).height();
+    var width = $(window).width() - $('#sidebar_left').width();
     if (height < 200) height = 200;
 
-    // jQuery('#content').height(height);
-    // jQuery('#content').width(width);
+    // $('#content').height(height);
+    // $('#content').width(width);
     width = Math.floor(width);
     height = Math.floor(height);
 
-    jQuery('#map').width(width);
-    jQuery('#map').height(height);
+    $('#map').width(width);
+    $('#map').height(height);
 
     debug($(window).height() + " " + $(window).width());
 
     // hide help messages on small screens
-    if (jQuery(window).height() < 480) {
+    if ($(window).height() < 480) {
         setTimeout(function () {
             $(".normalscreen").hide()
         }, 2500);
@@ -867,7 +866,7 @@ function locateMe() {
 }
 
 function locateMe_tag() {
-    return jQuery("#tools-pageload");
+    return $("#tools-pageload");
 }
 
 function setStartPos(lon, lat, zoom) {
@@ -892,7 +891,7 @@ function locateMe_error(error) {
 }
 
 function google_plusone() {
-    jQuery.getScript('https://apis.google.com/js/plusone.js');
+    $.getScript('https://apis.google.com/js/plusone.js');
     $('.gplus').remove();
 }
 
@@ -914,7 +913,7 @@ function initKeyPress() {
         });
     };
 
-    OpenLayers.Control.KeyboardDefaults.observeElement = jQuery("#map");
+    OpenLayers.Control.KeyboardDefaults.observeElement = $("#map");
 
     OpenLayers.Control.KeyboardDefaults.prototype.defaultKeyPress = function (evt) {
         switch (evt.keyCode) {
