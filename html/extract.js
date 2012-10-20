@@ -215,6 +215,7 @@ function permalink_init() {
 }
 
 var vectors;
+var vectors_back;
 
 function osm_init(opt) {
     var box;
@@ -348,13 +349,14 @@ function osm_init(opt) {
     function clearBox() {
         transform.deactivate();
         vectors.destroyFeatures();
+        // rectangle from back button
+        if (vectors_back) vectors_back.destroyFeatures();
     }
 
     function drawBox(bounds) {
         var feature = new OpenLayers.Feature.Vector(bounds.toGeometry());
 
         vectors.addFeatures(feature);
-
         // transform.setFeature(feature);
     }
 
@@ -575,6 +577,7 @@ function osm_init(opt) {
 
         var renderer = OpenLayers.Layer.Vector.prototype.renderers;
 
+        vectors_back = vectors;
         vectors = new OpenLayers.Layer.Vector("Vector Layer", {
             renderers: renderer
         });
