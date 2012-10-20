@@ -677,7 +677,7 @@ function osm_init(opt) {
     state.update = function update() {
         // reset modification mode
         controls.modify.mode = OpenLayers.Control.ModifyFeature.RESHAPE;
-        var rotate = document.getElementById("rotate").checked;
+        var rotate = jQuery("#rotate:checked").val();
 
         // rotate, resize, move
         if (rotate) {
@@ -690,7 +690,7 @@ function osm_init(opt) {
 
         // add new points
         else {
-            controls.modify.createVertices = document.getElementById("createVertices").checked;
+            controls.modify.createVertices = jQuery("#createVertices:checked").val();
         }
     }
 }
