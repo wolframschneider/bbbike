@@ -79,7 +79,7 @@ function init_map_size() {
     setMapHeight();
 
     // reset map size, 3x a second
-    jQuery(window).resize(function () {
+    $(window).resize(function () {
         if (resize) clearTimeout(resize);
         resize = setTimeout(function () {
             setMapHeight();
@@ -88,16 +88,14 @@ function init_map_size() {
 }
 
 function init() {
-
-
     initKeyPress();
-
     init_map_size();
+
     var opt = {
         "back_button": 0
     };
 
-    var keyboard = new OpenLayers.Control.KeyboardDefaults({}); // "observeElement": jQuery("#map")} );
+    var keyboard = new OpenLayers.Control.KeyboardDefaults({}); // "observeElement": $("#map")} );
     map = new OpenLayers.Map("map", {
         controls: [
         new OpenLayers.Control.Navigation(), new OpenLayers.Control.PanZoomBar(), new OpenLayers.Control.ScaleLine({
@@ -122,13 +120,16 @@ function init() {
     }));
 
     map.addLayer(new OpenLayers.Layer.OSM.Mapnik("OSM Mapnik"));
+
     map.addLayer(new OpenLayers.Layer.OSM.CycleMap("OSM CycleMap"));
+
     map.addLayer(new OpenLayers.Layer.OSM("OSM Hike&Bike", ["http://a.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png", "http://b.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png"], {
         tileOptions: {
             crossOriginKeyword: null
         },
         numZoomLevels: 18
     }));
+
     map.addLayer(new OpenLayers.Layer.OSM("OSM Transport", ["http://a.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png", "http://b.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png"], {
         tileOptions: {
             crossOriginKeyword: null
@@ -142,6 +143,7 @@ function init() {
         },
         numZoomLevels: 19
     }));
+
     map.addLayer(new OpenLayers.Layer.OSM("Mapquest Satellite", ["http://mtile01.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png", "http://mtile02.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png"], {
         tileOptions: {
             crossOriginKeyword: null
@@ -173,8 +175,6 @@ function init() {
             $("#ne_lat").val(ne_lat);
             $("#coords").val(coords);
         };
-
-        // setTimeout(function () { state.validateControls() }, 50);
     }
 
     // default city
@@ -186,9 +186,8 @@ function init() {
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
 
-    permalink_init();
-
     osm_init(opt);
+    permalink_init();
 }
 
 // override standard OpenLayers permalink method
@@ -196,25 +195,52 @@ function init() {
 function permalink_init() {
     OpenLayers.Control.Permalink.prototype.createParams = function (center, zoom, layers) {
         var params = OpenLayers.Util.getParameters(this.base);
+
+        // not needed
+        delete params.lat;
+        delete params.lon;
+        delete params.zoom;
+
         params.sw_lng = $("#sw_lng").val();
         params.sw_lat = $("#sw_lat").val();
         params.ne_lng = $("#ne_lng").val();
         params.ne_lat = $("#ne_lat").val();
         params.format = $("select[name=format] option:selected").val();
 
-        // not supported yet
-        // params.layers = layers;
         params.city = $("#city").val();
+        if (!params.city) delete params.city;
+
+        params.coords = $("#coords").val(); // polygon
+        if (!params.coords) delete params.coords;
+
+        //layers        
+        layers = layers || this.map.layers;
+        params.layers = '';
+        for (var i = 0, len = layers.length; i < len; i++) {
+            var layer = layers[i];
+
+            if (layer.isBaseLayer) {
+                params.layers += (layer == this.map.baseLayer) ? "B" : "0";
+            } else {
+                params.layers += (layer.getVisibility()) ? "T" : "F";
+            }
+        }
+
         return params;
     };
 
     // wait a moment for inital permalink, to read values from forms
+    var permalink = new OpenLayers.Control.Permalink('permalink');
+    state.permalink = permalink;
+
     setTimeout(function () {
-        map.addControl(new OpenLayers.Control.Permalink('permalink'))
+        map.addControl(permalink);
     }, 200);
 }
 
+
 var vectors;
+var vectors_back;
 
 function osm_init(opt) {
     var box;
@@ -248,11 +274,12 @@ function osm_init(opt) {
         map.addControl(transform);
         map.events.register("moveend", map, mapMoved);
 
-        // $("#sidebar_title").html("Export");
         $("#ne_lat").change(boundsChanged);
         $("#sw_lng").change(boundsChanged);
         $("#ne_lng").change(boundsChanged);
         $("#sw_lat").change(boundsChanged);
+
+        $("#city").change(updatePermalink);
 
         $("#drag_box").click(startDrag);
         setBounds(map.getExtent());
@@ -348,14 +375,24 @@ function osm_init(opt) {
     function clearBox() {
         transform.deactivate();
         vectors.destroyFeatures();
+        // rectangle from back button
+        if (vectors_back) vectors_back.destroyFeatures();
+
+        $("#coords").attr("value", "");
     }
 
     function drawBox(bounds) {
         var feature = new OpenLayers.Feature.Vector(bounds.toGeometry());
 
         vectors.addFeatures(feature);
+        // transform.setFeature(feature); // hidden rectangle
+    }
 
-        // transform.setFeature(feature);
+    function updatePermalink() {
+        if (state.permalink) {
+            debug("updatePermalink");
+            state.permalink.updateLink();
+        }
     }
 
     // size of an area in square km
@@ -402,7 +439,7 @@ function osm_init(opt) {
 
         debug("polygon: " + polygon);
 
-        jQuery.getJSON(url, function (data) {
+        $.getJSON(url, function (data) {
             var filesize = show_filesize(skm * polygon, data.size * polygon);
             show_skm(skm * polygon, filesize);
         });
@@ -441,6 +478,7 @@ function osm_init(opt) {
             }
         }
 
+        updatePermalink();
     }
 
     function show_filesize(skm, real_size) {
@@ -520,6 +558,8 @@ function osm_init(opt) {
         return obj;
     }
 
+    // ???
+
     function getMapLayers() {
         return "M";
     }
@@ -570,11 +610,12 @@ function osm_init(opt) {
 
     function polygon_init() {
         // var vectors;
-        OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '4';
-        OpenLayers.Feature.Vector.style['default']['pointRadius'] = '12';
+        OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '3';
+        OpenLayers.Feature.Vector.style['default']['pointRadius'] = '14';
 
         var renderer = OpenLayers.Layer.Vector.prototype.renderers;
 
+        vectors_back = vectors;
         vectors = new OpenLayers.Layer.Vector("Vector Layer", {
             renderers: renderer
         });
@@ -672,9 +713,9 @@ function osm_init(opt) {
     state.update = function update() {
         // reset modification mode
         controls.modify.mode = OpenLayers.Control.ModifyFeature.RESHAPE;
-        var rotate = document.getElementById("rotate").checked;
+        var rotate = $("#rotate:checked").val();
 
-        // rotate, resize
+        // rotate, resize, move
         if (rotate) {
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.ROTATE;
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.RESIZE;
@@ -685,7 +726,7 @@ function osm_init(opt) {
 
         // add new points
         else {
-            controls.modify.createVertices = document.getElementById("createVertices").checked;
+            controls.modify.createVertices = $("#createVertices:checked").val();
         }
     }
 }
@@ -698,7 +739,7 @@ function polygon_toggleControl(element) {
     return state.toggleControl(element)
 };
 
-// 240000 -> 240,000
+/* 240000 -> 240,000 */
 
 function large_int(number) {
     number = Math.round(number);
@@ -712,7 +753,7 @@ function large_int(number) {
     }
 }
 
-// validate lat or lng values
+/* validate lat or lng values */
 
 function check_lat(number) {
     return check_coord(number, 90)
@@ -808,7 +849,7 @@ function debug(text, id) {
 
     if (!id) id = "debug";
 
-    var tag = jQuery("#" + id);
+    var tag = $("#" + id);
     if (!tag) return;
 
     // log to HTML page
@@ -816,22 +857,22 @@ function debug(text, id) {
 }
 
 function setMapHeight() {
-    var height = jQuery(window).height();
-    var width = jQuery(window).width() - jQuery('#sidebar_left').width();
+    var height = $(window).height();
+    var width = $(window).width() - $('#sidebar_left').width();
     if (height < 200) height = 200;
 
-    // jQuery('#content').height(height);
-    // jQuery('#content').width(width);
+    // $('#content').height(height);
+    // $('#content').width(width);
     width = Math.floor(width);
     height = Math.floor(height);
 
-    jQuery('#map').width(width);
-    jQuery('#map').height(height);
+    $('#map').width(width);
+    $('#map').height(height);
 
     debug($(window).height() + " " + $(window).width());
 
     // hide help messages on small screens
-    if (jQuery(window).height() < 480) {
+    if ($(window).height() < 480) {
         setTimeout(function () {
             $(".normalscreen").hide()
         }, 2500);
@@ -862,7 +903,7 @@ function locateMe() {
 }
 
 function locateMe_tag() {
-    return jQuery("#tools-pageload");
+    return $("#tools-pageload");
 }
 
 function setStartPos(lon, lat, zoom) {
@@ -887,7 +928,7 @@ function locateMe_error(error) {
 }
 
 function google_plusone() {
-    jQuery.getScript('https://apis.google.com/js/plusone.js');
+    $.getScript('https://apis.google.com/js/plusone.js');
     $('.gplus').remove();
 }
 
@@ -909,7 +950,7 @@ function initKeyPress() {
         });
     };
 
-    OpenLayers.Control.KeyboardDefaults.observeElement = jQuery("#map");
+    OpenLayers.Control.KeyboardDefaults.observeElement = $("#map");
 
     OpenLayers.Control.KeyboardDefaults.prototype.defaultKeyPress = function (evt) {
         switch (evt.keyCode) {
