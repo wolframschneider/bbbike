@@ -214,13 +214,13 @@ function permalink_init() {
         if (!params.coords) delete params.coords;
 
         //layers        
-        layers = layers || this.map.layers;
+        layers = layers || map.layers;
         params.layers = '';
         for (var i = 0, len = layers.length; i < len; i++) {
             var layer = layers[i];
 
             if (layer.isBaseLayer) {
-                params.layers += (layer == this.map.baseLayer) ? "B" : "0";
+                params.layers += (layer == map.baseLayer) ? "B" : "0";
             } else {
                 params.layers += (layer.getVisibility()) ? "T" : "F";
             }
@@ -479,9 +479,10 @@ function osm_init(opt) {
             } else {
                 $("#export_osm_too_large").hide();
             }
+
+            updatePermalink();
         }
 
-        updatePermalink();
     }
 
     function show_filesize(skm, real_size) {
