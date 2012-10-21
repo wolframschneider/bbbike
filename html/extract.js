@@ -186,9 +186,8 @@ function init() {
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
 
-    permalink_init();
-
     osm_init(opt);
+    permalink_init();
 }
 
 // override standard OpenLayers permalink method
@@ -196,15 +195,33 @@ function init() {
 function permalink_init() {
     OpenLayers.Control.Permalink.prototype.createParams = function (center, zoom, layers) {
         var params = OpenLayers.Util.getParameters(this.base);
+
+        // not needed
+        delete params.lat;
+        delete params.lon;
+        delete params.zoom;
+
         params.sw_lng = $("#sw_lng").val();
         params.sw_lat = $("#sw_lat").val();
         params.ne_lng = $("#ne_lng").val();
         params.ne_lat = $("#ne_lat").val();
         params.format = $("select[name=format] option:selected").val();
 
-        // not supported yet
-        // params.layers = layers;
         params.city = $("#city").val();
+        params.coords = $("#coords").val(); // polygon
+        //layers        
+        layers = layers || this.map.layers;
+        params.layers = '';
+        for (var i = 0, len = layers.length; i < len; i++) {
+            var layer = layers[i];
+
+            if (layer.isBaseLayer) {
+                params.layers += (layer == this.map.baseLayer) ? "B" : "0";
+            } else {
+                params.layers += (layer.getVisibility()) ? "T" : "F";
+            }
+        }
+
         return params;
     };
 
@@ -213,6 +230,7 @@ function permalink_init() {
         map.addControl(new OpenLayers.Control.Permalink('permalink'))
     }, 200);
 }
+
 
 var vectors;
 var vectors_back;
