@@ -230,8 +230,11 @@ function permalink_init() {
     };
 
     // wait a moment for inital permalink, to read values from forms
+    var permalink = new OpenLayers.Control.Permalink('permalink');
+    state.permalink = permalink;
+
     setTimeout(function () {
-        map.addControl(new OpenLayers.Control.Permalink('permalink'))
+        map.addControl(permalink);
     }, 200);
 }
 
@@ -383,6 +386,13 @@ function osm_init(opt) {
         // transform.setFeature(feature); // hidden rectangle
     }
 
+    function updatePermalink() {
+        if (state.permalink) {
+            debug("updatePermalink");
+            state.permalink.updateLink();
+        }
+    }
+
     // size of an area in square km
 
     function square_km(x1, y1, x2, y2) { // SW x NE
@@ -466,6 +476,7 @@ function osm_init(opt) {
             }
         }
 
+        updatePermalink();
     }
 
     function show_filesize(skm, real_size) {
