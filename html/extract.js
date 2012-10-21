@@ -208,7 +208,11 @@ function permalink_init() {
         params.format = $("select[name=format] option:selected").val();
 
         params.city = $("#city").val();
+        if (!params.city) delete params.city;
+
         params.coords = $("#coords").val(); // polygon
+        if (!params.coords) delete params.coords;
+
         //layers        
         layers = layers || this.map.layers;
         params.layers = '';
@@ -368,6 +372,8 @@ function osm_init(opt) {
         vectors.destroyFeatures();
         // rectangle from back button
         if (vectors_back) vectors_back.destroyFeatures();
+
+        $("#coords").attr("value", "");
     }
 
     function drawBox(bounds) {
