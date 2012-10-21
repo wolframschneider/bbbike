@@ -155,8 +155,7 @@ slow-checks:	check-categories \
 		persistent-tmp
 
 persistent-tmp:	fragezeichen-outdoor-nextcheck \
-		${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd \
-		${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd \
+		fragezeichen-outdoor \
 		${PERSISTENTTMPDIR}/.check_fragezeichen-indoor-nextcheck.bbd \
 		${PERSISTENTTMPDIR}/fragezeichen-indoor-nextcheck.bbd \
 		${PERSISTENTTMPDIR}/.check_fragezeichen-nextcheck.bbd \
@@ -173,9 +172,12 @@ persistent-tmp:	fragezeichen-outdoor-nextcheck \
 		${PERSISTENTTMPDIR}/XXX.bbd \
 		${PERSISTENTTMPDIR}/plz-b.bbd
 
-# popular target
+# popular targets
 fragezeichen-outdoor-nextcheck:	${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor-nextcheck.bbd \
 				${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd
+
+fragezeichen-outdoor:		${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd \
+				${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd
 
 .for i in $(XXX_TARGETS)
 persistent-tmp:	${PERSISTENTTMPDIR}/XXX-$(i).bbd
@@ -844,16 +846,12 @@ ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd ${PERSISTENTTMPDIR}/.
 		Makefile \
 		${SOURCE_TARGETS:S|$|-orig|} \
 		${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
-	echo -n > ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
-	echo "#: line_dash: 8, 5" >> ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
-	echo "#: line_width: 5" >> ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
-	echo "#:" >> ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
-	${MISCSRCDIR}/create_fragezeichen_nextcheck.pl --${doormode}-mode \
+	${MISCSRCDIR}/create_fragezeichen_nextcheck.pl --preamble --${doormode}-mode \
 	    --fragezeichen-mode fragezeichen-orig \
 	    --no-fragezeichen-mode \
 	    ${SOURCE_TARGETS:S|fragezeichen||:S|$|-orig|} \
 	    ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd \
-		>> ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
+		> ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
 	mv -f ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~ ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd
 	touch ${PERSISTENTTMPDIR}/.check_fragezeichen-${doormode}-nextcheck.bbd
 .endfor
@@ -863,19 +861,14 @@ ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd ${PERSISTENTTMPDIR}/.check_fragezei
 		Makefile \
 		${SOURCE_TARGETS:S|$|-orig|} \
 		${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
-	echo -n > ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
-	echo "#: line_dash: 8, 5" >> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
-	echo "#: line_width: 5" >> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
-	echo "#: category_color.?: #cf5050" >> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
-	echo "#:" >> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
-	${MISCSRCDIR}/create_fragezeichen_nextcheck.pl \
-	    --today=2999-12-31 \
+	${MISCSRCDIR}/create_fragezeichen_nextcheck.pl --preamble \
+	    --coloring '#6c0000 +1m #ec8888 +6m #f2a0a0 +1y #fcc8c8 +5y #fdd8d8'\
 	    --outdoor-mode \
 	    --fragezeichen-mode fragezeichen-orig \
 	    --no-fragezeichen-mode \
 	    ${SOURCE_TARGETS:S|fragezeichen||:S|$|-orig|} \
 	    ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd \
-		>> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
+		> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
 	mv -f ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~ ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd
 	touch ${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd
 
@@ -1138,14 +1131,14 @@ CRON_WRAPPER=
 # Specify ADDITIONAL_CHECK_FOREVER_TARGETS make variable on command
 # line for more things to do...
 check-forever:
-	-nice ${FOREVER_TWO_ERRORS} ${CRON_WRAPPER} ${MAKE} check all ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd ${ADDITIONAL_CHECK_FOREVER_TARGETS}
+	-nice ${FOREVER_TWO_ERRORS} ${CRON_WRAPPER} ${MAKE} check all fragezeichen-outdoor-nextcheck fragezeichen-outdoor ${ADDITIONAL_CHECK_FOREVER_TARGETS}
 	@-alarm -nicedown
 	@-xterm-conf -deiconify -raise
 	xmessage "check-forever failed"
 
 # Like check-forever, but build first, then check (all calls the check target)
 all-forever:
-	-nice ${FOREVER_TWO_ERRORS} ${CRON_WRAPPER} ${MAKE} ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd all
+	-nice ${FOREVER_TWO_ERRORS} ${CRON_WRAPPER} ${MAKE} fragezeichen-outdoor-nextcheck fragezeichen-outdoor all
 	@-alarm -nicedown
 	@-xterm-conf -deiconify -raise
 	xmessage "all-forever failed"

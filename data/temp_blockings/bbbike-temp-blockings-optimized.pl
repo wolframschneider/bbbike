@@ -494,7 +494,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Am Kupfergraben und am Zeughaus: Berliner Kunst- und Nostalgiemarkt, Samstag und Sonntag ca. 11-17 Uhr, nur Schieben möglich',
          'from' => undef,
          'id' => 1887,
-         'data' => '	q4::temp:clock 9754,12775 9661,12876 9618,12907 9529,12925
+         'data' => '	q4::temp:clock 9754,12775 9661,12876 9618,12907 9533,12925
 	q4::temp:clock 9919,12613 9956,12523 9984,12426
 ',
          'type' => 'gesperrt'
@@ -753,14 +753,15 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10298,8245
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10042,8270 10298,8245 10575,8218
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11381,7775 11460,7447 11518,7314
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11388,7777 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9386,7326 9300,7312 9302,7294 9242,7286
 (Weg parallel zum Tempelhofer Damm)	2::night  9300,7312 9281,7651 9281,7795
 (Eingang Peter-Strasser-Weg)	2::night 9281,7795 9240,7811
 (Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9362,7616 9281,7651
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Peter-Strasser-Weg)	2::night 9562,7796 9372,7798 9281,7795
-(Südliche Landebahn)	2::night 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11593,7314
-(Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 11279,7768 11381,7775 11430,7781 11460,7802
+(Südliche Landebahn)	2::night 9461,7190 9509,7195 9677,7206 11332,7305 11518,7314 11593,7314
+(Südliche Landebahn - Rundkurs)	2::night 11332,7305 11438,7371 11460,7447
+(Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 11279,7768 11388,7777 11430,7781 11460,7802
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11005,8064 10909,8003
@@ -1090,6 +1091,7 @@ userdel	q4::inwork; 10614,19907 10599,19957
          'data' => '#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/kastanienallee_pb.html
 #: note: nur die halbe Strecke ist gesperrt, deshalb q3
 #: note: am 2012-09-19 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
+#: note: am 2012-10-18 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
 userdel	q3::inwork 10530,14452 10723,14772
 ',
          'type' => 'handicap'
@@ -1173,16 +1175,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10344,19181
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_018769',
-         'until' => 1350684000,
-         'text' => 'Spanische Allee (Nikolassee): Bauarbeiten an den Bahnbrücken, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Regelung mit provisorischen Ampeln bis Mitte Oktober 2012',
-         'from' => 1349635594,
-         'id' => 2333,
-         'data' => 'userdel	q4::inwork -3648,2881 -3736,2849
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1210,9 +1203,11 @@ userdel	q3::inwork 10893,14705 11101,14768
          'from' => undef,
          'id' => 2345,
          'data' => '#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/oderberger_strasse.html (allerdings sind die Bauzeiten schon jetzt weit überschritten)
-#: last_checked: 2012-07-16
-userdel	q4::inwork 10401,14963 10379,14963 10370,14946 10380,14911
-userdel	q4::inwork 10379,14963 10366,14992
+#: last_checked: 2012-10-18 (aber Asphaltierung in Gange)
+#: next_check: 2012-10-20
+userdel	q4::inwork 10401,14963 10379,14963
+#XXX del --- hier nicht mehr --- userdel	q4::inwork 10379,14963 10370,14946 10380,14911
+#XXX del --- hier nicht mehr --- userdel	q4::inwork 10379,14963 10366,14992
 ',
          'type' => 'handicap'
        },
@@ -1384,7 +1379,7 @@ userdel	q4::inwork 9112,14771 9250,14658
          'text' => 'Oderberger Str.: Fahrbahn zwischen Kastanienallee und Choriner Str. wegen Bauarbeiten gesperrt',
          'from' => undef,
          'id' => 2383,
-         'data' => '#: last_checked: 2012-09-30 (wosch)
+         'data' => '#: last_checked: 2012-10-18
 userdel	q4::inwork 10870,14689 10723,14772
 ',
          'type' => 'handicap'
@@ -1394,7 +1389,7 @@ userdel	q4::inwork 10870,14689 10723,14772
          'text' => 'Choriner Str.: Einbahnstraße in Höhe Oderberger Str., Richtung Schönhauser Allee gesperrt',
          'from' => undef,
          'id' => 2384,
-         'data' => '#: last_checked: 2012-09-19
+         'data' => '#: last_checked: 2012-10-18
 userdel	q4::inwork; 10870,14689 10893,14705
 ',
          'type' => 'handicap'

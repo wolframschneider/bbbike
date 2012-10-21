@@ -106,7 +106,7 @@ download-${land}.osm.bz2:
 # cd just for checking:
 	mkdir -p ${OSM_DOWNLOAD_DIR}
 	cd ${OSM_DOWNLOAD_DIR} && true
-	wget http://download.geofabrik.de/osm/europe/germany/${land}.osm.bz2 -O ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~
+	wget http://download.geofabrik.de/openstreetmap/europe/germany/${land}.osm.bz2 -O ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~
 	mv ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~ ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2
 .endfor
 
@@ -115,7 +115,7 @@ download-${land}.osm.bz2:
 # cd just for checking:
 	mkdir -p ${OSM_DOWNLOAD_DIR}
 	cd ${OSM_DOWNLOAD_DIR} && true
-	wget http://download.geofabrik.de/osm/europe/${land}.osm.bz2 -O ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~
+	wget http://download.geofabrik.de/openstreetmap/europe/${land}.osm.bz2 -O ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~
 	mv ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~ ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2
 .endfor
 
@@ -350,7 +350,7 @@ do-garmindata-dist:	${BBBIKETMPDIR}/bbbike_routable_gmapsupp.img
 
 garmindata-sf-release:	do-garmindata-dist
 	@echo "Go to https://sourceforge.net/downloads/bbbike/bbbikedata-b_de/"
-	@echo "Create a YYYYMMDD directory and upload /tmp/bbbike-b_de-garmin-$(TODAY_DATE).zip"
+	@echo "Create a folder $(TODAY_DATE) , change to this folder and upload /tmp/bbbike-b_de-garmin-$(TODAY_DATE).zip"
 #	@echo "Really upload bbbike-b_de-garmin-$(TODAY_DATE).zip to SourceForge?"
 #	@cd /tmp && ls -l bbbike-b_de-garmin-$(TODAY_DATE).zip
 #	@echo "Press CTRL-C to abort. Return to continue release."
