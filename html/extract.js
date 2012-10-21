@@ -186,6 +186,32 @@ function init() {
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
 
+    function plot_polygon(poly) {
+        var poly = [
+            [13.035278100287, 52.351686721667],
+            [13.051757592475, 52.741701370105],
+            [13.496703881537, 52.895509963855],
+            [13.908691186225, 52.64282441698],
+            [14.040527123725, 52.296755081042],
+            [13.705444115912, 52.170412307605],
+            [13.035278100287, 52.351686721667]
+        ];
+        var features = [];
+        var points = [];
+        for (var i = 0; i < poly.length; i++) {
+            var point = new OpenLayers.Geometry.Point(poly[i][0], poly[i][1]);
+            points.push(point);
+        }
+        var site_style = {};
+
+        var linear_ring = new OpenLayers.Geometry.LinearRing(points);
+        var polygonFeature = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Polygon(linear_ring));
+
+        features.push(polygonFeature);
+
+        return features;
+    }
+
     osm_init(opt);
     permalink_init();
 }
