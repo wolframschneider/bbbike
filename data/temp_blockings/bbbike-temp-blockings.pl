@@ -6552,7 +6552,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_003935',
        data  => <<EOF,
-userdel	q4::inwork; 14902,10859 14923,10954 14950,11049 14988,11130
+userdel	q4::inwork; 14902,10859 14928,10970 14950,11049 14988,11130
 EOF
      },
      { from  => 1155592800, # 2006-08-15 00:00
@@ -8552,7 +8552,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110714.0755.351214.html',
        data  => <<EOF,
-userdel	2::temp 14464,9927 14500,9856 14674,9764 14697,9726 14910,9643
+userdel	2::temp 14464,9927 14465,9900 14500,9856 14674,9764 14697,9726 14910,9643
 userdel	2::temp 14500,9856 14483,9843
 EOF
      },
@@ -9213,7 +9213,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006151',
        data  => <<EOF,
-userdel	1::inwork 14988,11130 14994,11120 15060,11006 15085,10956 15113,10916 15144,10905
+userdel	1::inwork 14988,11130 15060,11006 15085,10956 15113,10916 15144,10905
 EOF
      },
      { from  => 1185055200, # 2007-07-22 00:00
@@ -11559,7 +11559,7 @@ EOF
        text  => 'Kynaststraße wird ab 2.6.2008 gesperrt. Unter Umständen wird dann die Untere Kynaststraße befahrbar sein.',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 14988,11130 14950,11049 14923,10954 14902,10859 14880,10808 14828,10628 14805,10518
+userdel	2::inwork 14988,11130 14950,11049 14928,10970 14902,10859 14880,10808 14828,10628 14805,10518
 EOF
      },
      { from  => 1211493600, # 2008-05-23 00:00
@@ -12095,7 +12095,7 @@ EOF
        data  => <<EOF,
 userdel	2::temp 8417,12846 8503,12895
 userdel	2::temp 7936,12906 8017,12826
-userdel	2::temp 8737,12757 8596,12748 8551,12746
+userdel	2::temp 8737,12757 8596,12760 8545,12760
 userdel	2::temp 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
 userdel	2::temp 8514,12877 8545,12760
 userdel	2::temp 8775,12457 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 6828,12031
@@ -12192,7 +12192,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009533',
        data  => <<EOF,
-userdel	2::temp 12360,12505 12364,12589
+userdel	2::temp 12360,12505 12362,12540 12364,12589
 userdel	2::temp 12891,12549 12869,12425
 EOF
      },
@@ -15308,7 +15308,7 @@ EOF
        source_id => 'LMS_2386386548',
        data  => <<EOF,
 userdel	q4::temp 12635,12629 12606,12471
-userdel	q4::temp 12360,12505 12364,12589
+userdel	q4::temp 12360,12505 12362,12540 12364,12589
 userdel	q4::temp 12891,12549 12869,12425
 EOF
      },
@@ -16064,7 +16064,7 @@ EOF
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
-	q4::temp:clock 9754,12775 9661,12876 9618,12907 9529,12925
+	q4::temp:clock 9754,12775 9661,12876 9618,12907 9533,12925
 	q4::temp:clock 9919,12613 9956,12523 9984,12426
 EOF
      },
@@ -16124,7 +16124,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014201',
        data  => <<EOF,
-userdel	q4::temp 8540,12420 8400,12417 8354,12416 8119,12414 8123,12615 8207,12616 8306,12617 8399,12616
+userdel	q4::temp 8540,12420 8400,12417 8354,12416 8119,12414 8123,12615 8207,12616 8306,12617 8348,12617 8399,12616
 EOF
      },
      { from  => 1253359000, # 2009-09-19 13:16
@@ -17564,7 +17564,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_015565',
        data  => <<EOF,
-userdel	2::temp 9262,13050 9413,13071 9553,13079
+userdel	2::temp 9262,13050 9413,13071 9559,13087
 EOF
      },
      { from  => 1272607309, # 2010-04-30 08:01
@@ -17658,14 +17658,15 @@ EOF
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10298,8245
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10042,8270 10298,8245 10575,8218
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11381,7775 11460,7447 11518,7314
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11388,7777 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9386,7326 9300,7312 9302,7294 9242,7286
 (Weg parallel zum Tempelhofer Damm)	2::night  9300,7312 9281,7651 9281,7795
 (Eingang Peter-Strasser-Weg)	2::night 9281,7795 9240,7811
 (Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9362,7616 9281,7651
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Peter-Strasser-Weg)	2::night 9562,7796 9372,7798 9281,7795
-(Südliche Landebahn)	2::night 9461,7190 9509,7195 9677,7206 11359,7307 11518,7314 11593,7314
-(Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 11279,7768 11381,7775 11430,7781 11460,7802
+(Südliche Landebahn)	2::night 9461,7190 9509,7195 9677,7206 11332,7305 11518,7314 11593,7314
+(Südliche Landebahn - Rundkurs)	2::night 11332,7305 11438,7371 11460,7447
+(Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 11279,7768 11388,7777 11430,7781 11460,7802
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11005,8064 10909,8003
@@ -19040,7 +19041,7 @@ EOF
        data  => <<EOF,
 #: by: http://www.tempelhoferfreiheit.de/ueber-die-tempelhofer-freiheit/aktuelles/die-challenge-bibendum-startet/
 #: by: http://www.tempelhoferfreiheit.de/fileadmin/user_upload/Ueber_die_Tempelhofer_Freiheit/Aktuelles/Plan_ChallengeBibendum2011-THF.jpg
-userdel	2::temp 11355,7871 11381,7775 11279,7768 9653,7635 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10042,8270 10298,8245 10360,8521 10644,8363 10803,8251 11005,8064 10909,8003
+userdel	2::temp 11355,7871 11388,7777 11279,7768 9653,7635 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10042,8270 10298,8245 10360,8521 10644,8363 10803,8251 11005,8064 10909,8003
 userdel	2::temp 9362,7616 9522,7624 9525,7558
 userdel	2::temp 10360,8521 10384,8628
 userdel	2::temp 10575,8218 10729,8152 10598,8270 10575,8218 10298,8245
@@ -19387,7 +19388,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_096636',
        data  => <<EOF,
-userdel	2::inwork 9524,12950 9529,12925
+userdel	2::inwork 9534,12953 9533,12925
 EOF
      },
      { from  => 1310335200, # 2011-07-11 00:00
@@ -19528,7 +19529,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_019026',
        data  => <<EOF,
-userdel	2::temp 12360,12505 12364,12589
+userdel	2::temp 12360,12505 12362,12540 12364,12589
 userdel	2::temp 12891,12549 12869,12425
 userdel	2::temp 12635,12629 12606,12471
 EOF
@@ -19953,6 +19954,7 @@ EOF
 #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/kastanienallee_pb.html
 #: note: nur die halbe Strecke ist gesperrt, deshalb q3
 #: note: am 2012-09-19 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
+#: note: am 2012-10-18 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
 userdel	q3::inwork 10530,14452 10723,14772
 EOF
      },
@@ -20297,9 +20299,11 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/oderberger_strasse.html (allerdings sind die Bauzeiten schon jetzt weit überschritten)
-#: last_checked: 2012-07-16
-userdel	q4::inwork 10401,14963 10379,14963 10370,14946 10380,14911
-userdel	q4::inwork 10379,14963 10366,14992
+#: last_checked: 2012-10-18 (aber Asphaltierung in Gange)
+#: next_check: 2012-10-20
+userdel	q4::inwork 10401,14963 10379,14963
+#XXX del --- hier nicht mehr --- userdel	q4::inwork 10379,14963 10370,14946 10380,14911
+#XXX del --- hier nicht mehr --- userdel	q4::inwork 10379,14963 10366,14992
 EOF
      },
      { from  => 1339624800, # 2012-06-14 00:00
@@ -20653,7 +20657,7 @@ EOF
        text  => 'Oderberger Str.: Fahrbahn zwischen Kastanienallee und Choriner Str. wegen Bauarbeiten gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-09-30 (wosch)
+#: last_checked: 2012-10-18
 userdel	q4::inwork 10870,14689 10723,14772
 EOF
      },
@@ -20662,7 +20666,7 @@ EOF
        text  => 'Choriner Str.: Einbahnstraße in Höhe Oderberger Str., Richtung Schönhauser Allee gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-09-19
+#: last_checked: 2012-10-18
 userdel	q4::inwork; 10870,14689 10893,14705
 EOF
      },
