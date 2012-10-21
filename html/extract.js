@@ -279,6 +279,8 @@ function osm_init(opt) {
         $("#ne_lng").change(boundsChanged);
         $("#sw_lat").change(boundsChanged);
 
+        $("#city").change(updatePermalink);
+
         $("#drag_box").click(startDrag);
         setBounds(map.getExtent());
 
