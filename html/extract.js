@@ -226,6 +226,9 @@ function permalink_init() {
             }
         }
 
+        // keep copy for submit
+        $("#layers").attr("value", params.layers);
+
         return params;
     };
 
