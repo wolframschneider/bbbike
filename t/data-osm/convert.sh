@@ -3,6 +3,8 @@
 #
 # extract a city for further tests
 
+set -e
+
 dir=$(dirname $0)
 : ${city=Cusco}
 : ${MD5=`which md5 md5sum false | head -1`}
