@@ -157,7 +157,7 @@ function init() {
     // read from input, back button pressed?
     if (check_lnglat_form(1)) {
         // bounds = new OpenLayers.Bounds( $("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val() );
-        opt.back_button = 1;
+        opt.back_button = 0;
 
         var sw_lng = $("#sw_lng").val();
         var sw_lat = $("#sw_lat").val();
@@ -175,19 +175,47 @@ function init() {
             $("#ne_lat").val(ne_lat);
             $("#coords").val(coords);
         };
+
+        setTimeout(function () {
+            vectors.addFeatures(plot_polygon(string2coords(coords)));
+        }, 700);
     }
 
     // default city
     else {
         var c = select_city();
+        debug(c);
+        var list = [
+            [c.sw[0], c.sw[1]],
+            [c.sw[0], c.sw[1]],
+            [c.ne[0], c.ne[1]],
+            [c.sw[0], c.ne[1]]
+        ];
+        if (coords) {
+            list = string2coords(coords);
+        }
         bounds = new OpenLayers.Bounds(c.sw[0], c.sw[1], c.ne[0], c.ne[1]);
-    }
 
+        setTimeout(function () {
+            vectors.addFeatures(plot_polygon(list));
+        }, 500);
+    }
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
 
+    function string2coords(coords) {
+        var list = [];
+        if (!coords) return list;
+        var _list = coords.split("|");
+        for (var i = 0; i < _list.length; i++) {
+            var pos = _list[i].split(",");
+            list.push(pos);
+        }
+        return list;
+    }
+
     function plot_polygon(poly) {
-        var poly = [
+        var _poly = [
             [13.035278100287, 52.351686721667],
             [13.051757592475, 52.741701370105],
             [13.496703881537, 52.895509963855],
@@ -196,10 +224,16 @@ function init() {
             [13.705444115912, 52.170412307605],
             [13.035278100287, 52.351686721667]
         ];
+
+        if (!poly) poly = _poly; // test
+        //poly = _poly;
+        debug("polygon length: " + poly.length + " " + poly[0][0] + "," + poly[0][1]);
+
         var features = [];
         var points = [];
         for (var i = 0; i < poly.length; i++) {
             var point = new OpenLayers.Geometry.Point(poly[i][0], poly[i][1]);
+            point.transform(epsg4326, map.getProjectionObject());
             points.push(point);
         }
         var site_style = {};
@@ -209,11 +243,14 @@ function init() {
 
         features.push(polygonFeature);
 
+        // map.setCenter(new OpenLayers.LonLat( poly[0] ).transform(epsg4326, map.getProjectionObject()), 7);
         return features;
     }
 
+
     osm_init(opt);
     permalink_init();
+
 }
 
 // override standard OpenLayers permalink method
@@ -402,6 +439,8 @@ function osm_init(opt) {
     }
 
     function clearBox() {
+        debug("clearBox");
+
         transform.deactivate();
         vectors.destroyFeatures();
         // rectangle from back button
