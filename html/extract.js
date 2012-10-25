@@ -15,7 +15,7 @@ var config = {
 
     "show_filesize": 1,
     "city_name_optional": false,
-    "enable_polygon": false,
+    "enable_polygon": true,
 
     // in MB
     "max_size": {
