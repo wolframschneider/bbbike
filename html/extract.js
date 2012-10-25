@@ -15,7 +15,7 @@ var config = {
 
     "show_filesize": 1,
     "city_name_optional": false,
-    "enable_polygon": true,
+    "enable_polygon": false,
 
     // in MB
     "max_size": {
@@ -386,7 +386,7 @@ function osm_init(opt) {
 
     function startDrag() {
         $("#drag_box").html("Drag a box on the map to select an area");
-        $("#polygon_controls").hide();
+        if (config.enable_polygon) $("#polygon_controls").hide();
 
         clearBox();
         setBounds(map.getExtent());
@@ -404,7 +404,7 @@ function osm_init(opt) {
         validateControls();
 
         $("#drag_box").html("Manually select a different area");
-        $("#polygon_controls").show();
+        if (config.enable_polygon) $("#polygon_controls").show();
     }
 
     function transformComplete(event) {
@@ -457,7 +457,9 @@ function osm_init(opt) {
         var feature = new OpenLayers.Feature.Vector(bounds.toGeometry());
 
         vectors.addFeatures(feature);
-        // transform.setFeature(feature); // hidden rectangle
+        if (!config.enable_polygon) {
+            transform.setFeature(feature); // hidden rectangle
+        }
     }
 
     function updatePermalink() {
@@ -670,10 +672,12 @@ function osm_init(opt) {
 
     startExport(opt);
 
-    setTimeout(function () {
-        $("#controls").show();
-        polygon_init();
-    }, 1000);
+    if (config.enable_polygon) {
+        setTimeout(function () {
+            $("#controls").show();
+            polygon_init();
+        }, 1000);
+    }
 
     var controls;
 
