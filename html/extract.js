@@ -15,6 +15,7 @@ var config = {
 
     "show_filesize": 1,
     "city_name_optional": false,
+    "enable_polygon": true,
 
     // in MB
     "max_size": {
@@ -176,9 +177,11 @@ function init() {
             $("#coords").val(coords);
         };
 
-        setTimeout(function () {
-            vectors.addFeatures(plot_polygon(string2coords(coords)));
-        }, 700);
+        if (config.enable_polygon) {
+            setTimeout(function () {
+                vectors.addFeatures(plot_polygon(string2coords(coords)));
+            }, 700);
+        }
     }
 
     // default city
@@ -196,9 +199,11 @@ function init() {
         }
         bounds = new OpenLayers.Bounds(c.sw[0], c.sw[1], c.ne[0], c.ne[1]);
 
-        setTimeout(function () {
-            vectors.addFeatures(plot_polygon(list));
-        }, 500);
+        if (config.enable_polygon) {
+            setTimeout(function () {
+                vectors.addFeatures(plot_polygon(list));
+            }, 500);
+        }
     }
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
@@ -250,7 +255,6 @@ function init() {
 
     osm_init(opt);
     permalink_init();
-
 }
 
 // override standard OpenLayers permalink method
