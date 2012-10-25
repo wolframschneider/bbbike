@@ -158,7 +158,7 @@ function init() {
     // read from input, back button pressed?
     if (check_lnglat_form(1)) {
         // bounds = new OpenLayers.Bounds( $("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val() );
-        opt.back_button = 0;
+        opt.back_button = config.enable_polygon ? 0 : 1;;
 
         var sw_lng = $("#sw_lng").val();
         var sw_lat = $("#sw_lat").val();
