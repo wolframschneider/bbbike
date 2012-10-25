@@ -19,7 +19,7 @@ var config = {
     // in MB
     "max_size": {
         "default": 768,
-        "osm.obf.zip": 250,
+        "obf.zip": 250,
     },
 
     debug: 0,
