@@ -390,7 +390,11 @@ function osm_init(opt) {
         validateControls();
 
         $("#drag_box").html("Manually select a different area");
-        if (config.enable_polygon) $("#polygon_controls").show();
+        if (config.enable_polygon) {
+            $("#polygon_controls").show();
+            $("#createVertices").attr("checked", "checked"); // always start menu with polygon
+            debug("foo foo foo");
+        }
     }
 
     function transformComplete(event) {
