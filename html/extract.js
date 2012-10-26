@@ -157,14 +157,13 @@ function init() {
 
     // read from input, back button pressed?
     if (check_lnglat_form(1)) {
-        // bounds = new OpenLayers.Bounds( $("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val() );
-        opt.back_button = config.enable_polygon ? 0 : 1;;
-
         var sw_lng = $("#sw_lng").val();
         var sw_lat = $("#sw_lat").val();
         var ne_lng = $("#ne_lng").val();
         var ne_lat = $("#ne_lat").val();
         var coords = $("#coords").val();
+
+        opt.back_button = config.enable_polygon && coords ? 0 : 1;;
 
         bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
@@ -177,7 +176,7 @@ function init() {
             $("#coords").val(coords);
         };
 
-        if (config.enable_polygon) {
+        if (config.enable_polygon && coords) {
             setTimeout(function () {
                 vectors.addFeatures(plot_polygon(string2coords(coords)));
             }, 700);
@@ -187,24 +186,11 @@ function init() {
     // default city
     else {
         var c = select_city();
-        debug(c);
-        var list = [
-            [c.sw[0], c.sw[1]],
-            [c.sw[0], c.sw[1]],
-            [c.ne[0], c.ne[1]],
-            [c.sw[0], c.ne[1]]
-        ];
-        if (coords) {
-            list = string2coords(coords);
-        }
+        debug(c.sw[0] + "," + c.sw[1] + " " + c.ne[0] + "," + c.ne[1]);
         bounds = new OpenLayers.Bounds(c.sw[0], c.sw[1], c.ne[0], c.ne[1]);
-
-        if (config.enable_polygon) {
-            setTimeout(function () {
-                vectors.addFeatures(plot_polygon(list));
-            }, 500);
-        }
     }
+
+
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
 
