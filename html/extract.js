@@ -19,7 +19,7 @@ var config = {
 
     "show_filesize": true,
     "city_name_optional": false,
-    "enable_polygon": true,
+    "enable_polygon": false,
 
     // in MB
     "max_size": {
@@ -167,11 +167,12 @@ function init() {
         var ne_lat = $("#ne_lat").val();
         var coords = $("#coords").val();
 
-        opt.back_button = 0; // config.enable_polygon && coords ? 0 : 1;;
         bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
         // back button: reset coordinates to original values
         opt.back_function = function () {
+            return;
+
             $("#sw_lng").val(sw_lng);
             $("#sw_lat").val(sw_lat);
             $("#ne_lng").val(ne_lng);
@@ -186,6 +187,8 @@ function init() {
                 var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
                 vectors.addFeatures(plot_polygon(polygon));
             }, 700);
+        } else {
+            opt.back_button = 1;
         }
     }
 
@@ -364,10 +367,7 @@ function osm_init(opt) {
 
         // implement history for back button
         if (opt.back_button) {
-            setTimeout(function () {
-                opt.back_function();
-                boundsChanged();
-            }, 50);
+            boundsChanged();
         }
     }
 
