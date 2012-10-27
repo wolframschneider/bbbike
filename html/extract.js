@@ -14,7 +14,7 @@ var config = {
     },
 
     "show_filesize": 1,
-    "city_name_optional": false,
+    "city_name_optional": true,
     "enable_polygon": true,
 
     // in MB
@@ -163,8 +163,7 @@ function init() {
         var ne_lat = $("#ne_lat").val();
         var coords = $("#coords").val();
 
-        opt.back_button = config.enable_polygon && coords ? 0 : 1;;
-
+        opt.back_button = 0; // config.enable_polygon && coords ? 0 : 1;;
         bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
         // back button: reset coordinates to original values
@@ -174,11 +173,14 @@ function init() {
             $("#ne_lng").val(ne_lng);
             $("#ne_lat").val(ne_lat);
             $("#coords").val(coords);
+
+            debug("coords: " + coords);
         };
 
-        if (config.enable_polygon && coords) {
+        if (config.enable_polygon) {
             setTimeout(function () {
-                vectors.addFeatures(plot_polygon(string2coords(coords)));
+                var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
+                vectors.addFeatures(plot_polygon(polygon));
             }, 700);
         }
     }
@@ -206,6 +208,8 @@ function init() {
     }
 
     function plot_polygon(poly) {
+        debug("plot polygon: " + poly);
+
         var _poly = [
             [13.035278100287, 52.351686721667],
             [13.051757592475, 52.741701370105],
@@ -241,6 +245,20 @@ function init() {
 
     osm_init(opt);
     permalink_init();
+}
+
+/* create a 5 point polygon based on 2 rectangle points */
+
+function rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat) {
+    var p = [];
+
+    p.push([sw_lng, sw_lat]);
+    p.push([ne_lng, sw_lat]);
+    p.push([ne_lng, ne_lat]);
+    p.push([sw_lng, ne_lat]);
+    p.push([sw_lng, sw_lat]);
+
+    return p;
 }
 
 // override standard OpenLayers permalink method
@@ -393,7 +411,6 @@ function osm_init(opt) {
         if (config.enable_polygon) {
             $("#polygon_controls").show();
             $("#createVertices").attr("checked", "checked"); // always start menu with polygon
-            debug("foo foo foo");
         }
     }
 
@@ -501,7 +518,7 @@ function osm_init(opt) {
 
         var url = "/cgi/tile-size.cgi?format=" + format + "&lat_sw=" + $("#sw_lat").val() + "&lng_sw=" + $("#sw_lng").val() + "&lat_ne=" + $("#ne_lat").val() + "&lng_ne=" + $("#ne_lng").val();
 
-        debug("polygon: " + polygon);
+        debug("polygon size: " + polygon);
 
         $.getJSON(url, function (data) {
             var filesize = show_filesize(skm * polygon, data.size * polygon);
@@ -550,7 +567,7 @@ function osm_init(opt) {
         var extract_time = 600; // standard extract time in seconds for PBF
         var format = $("select[name=format] option:selected").val();
         var size = real_size ? real_size / 1024 : 0;
-        debug("skm: " + parseInt(skm) + " size: " + real_size + "MB " + format);
+        debug("skm: " + parseInt(skm) + " size: " + Math.round(size) + "MB " + format);
 
         var filesize = {
             "osm.pbf": {
