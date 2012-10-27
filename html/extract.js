@@ -688,8 +688,7 @@ function osm_init(opt) {
     function polygon_init() {
         // var vectors;
         OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '3';
-        OpenLayers.Feature.Vector.style['default']['pointRadius'] = '14';
-
+        OpenLayers.Feature.Vector.style['default']['pointRadius'] = '14'; // huge points for tablets
         var renderer = OpenLayers.Layer.Vector.prototype.renderers;
 
         vectors_back = vectors;
