@@ -1,6 +1,10 @@
-// Copyright (c) by http://www.openstreetmap.org/export - OSM License, 2012
-// Copyright (c) 2012 Wolfram Schneider, http://bbbike.org
-//
+/*
+ Copyright (c) by http://www.openstreetmap.org/export - OSM License, 2012
+ Copyright (c) 2012 Wolfram Schneider, http://bbbike.org
+*/
+
+// HTML5
+// "use strict"
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
