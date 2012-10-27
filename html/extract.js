@@ -795,14 +795,13 @@ function osm_init(opt) {
         }
 
         // add new points
-        else {
-            // controls.modify.createVertices = $("#createVertices:checked").val();
-        }
+        controls.modify.createVertices = rotate ? false : true;
+
+        // debug("r: " + controls.modify.createVertices);
     }
 }
 
 // called from HTML page
-
 
 function polygon_update() {
     return state.update()
