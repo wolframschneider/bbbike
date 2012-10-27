@@ -718,17 +718,17 @@ function osm_init(opt) {
                     serialize(event.feature);
                 }
             }
-
-            vectors.events.on({
-                "beforefeaturemodified": report,
-                "featuremodified": report,
-                "afterfeaturemodified": report,
-                "vertexmodified": report,
-                "sketchmodified": report,
-                "sketchstarted": report,
-                "sketchcomplete": report
-            });
         }
+
+        vectors.events.on({
+            "beforefeaturemodified": report,
+            "featuremodified": report,
+            "afterfeaturemodified": report,
+            "vertexmodified": report,
+            "sketchmodified": report,
+            "sketchstarted": report,
+            "sketchcomplete": report
+        });
 
         controls = {
             polygon: new OpenLayers.Control.DrawFeature(vectors, OpenLayers.Handler.Polygon),
