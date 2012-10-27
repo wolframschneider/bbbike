@@ -613,8 +613,9 @@ function osm_init(opt) {
             "navit.zip": {
                 "size": 0.8,
                 "time": 1
-            },
+            }
         };
+
         var factor = filesize[format].size;
         var factor_time = filesize[format].time;
 
