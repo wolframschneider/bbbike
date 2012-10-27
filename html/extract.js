@@ -40,9 +40,10 @@ var state = {
 // Initialise the 'map' object
 var map;
 
-var console; // IE8
-// select an area to display on the map
-
+var console; // IE8 has no console.log()
+/*
+  select an area to display on the map
+*/
 function select_city(name) {
     var city = {
         "Berlin": {
@@ -115,7 +116,6 @@ function init() {
         displayProjection: new OpenLayers.Projection("EPSG:4326")
     });
 
-
     map.addLayer(new OpenLayers.Layer.OSM("Esri Topographic", "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}.png", {
         tileOptions: {
             crossOriginKeyword: null
@@ -156,6 +156,7 @@ function init() {
         numZoomLevels: 19
     }));
 
+
     var epsg4326 = new OpenLayers.Projection("EPSG:4326");
     var bounds;
 
@@ -171,8 +172,7 @@ function init() {
 
         // back button: reset coordinates to original values
         opt.back_function = function () {
-            return;
-
+/*
             $("#sw_lng").val(sw_lng);
             $("#sw_lat").val(sw_lat);
             $("#ne_lng").val(ne_lng);
@@ -180,6 +180,7 @@ function init() {
             $("#coords").val(coords);
 
             debug("coords: " + coords);
+            */
         };
 
         if (config.enable_polygon) {
@@ -215,20 +216,6 @@ function init() {
     }
 
     function plot_polygon(poly) {
-        debug("plot polygon: " + poly);
-
-        var _poly = [
-            [13.035278100287, 52.351686721667],
-            [13.051757592475, 52.741701370105],
-            [13.496703881537, 52.895509963855],
-            [13.908691186225, 52.64282441698],
-            [14.040527123725, 52.296755081042],
-            [13.705444115912, 52.170412307605],
-            [13.035278100287, 52.351686721667]
-        ];
-
-        if (!poly) poly = _poly; // test
-        //poly = _poly;
         debug("polygon length: " + poly.length + " " + poly[0][0] + "," + poly[0][1]);
 
         var features = [];
@@ -238,24 +225,21 @@ function init() {
             point.transform(epsg4326, map.getProjectionObject());
             points.push(point);
         }
-        var site_style = {};
 
         var linear_ring = new OpenLayers.Geometry.LinearRing(points);
         var polygonFeature = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Polygon(linear_ring));
-
         features.push(polygonFeature);
 
-        // map.setCenter(new OpenLayers.LonLat( poly[0] ).transform(epsg4326, map.getProjectionObject()), 7);
         return features;
     }
-
 
     osm_init(opt);
     permalink_init();
 }
 
-/* create a 5 point polygon based on 2 rectangle points */
-
+/*
+  create a 5 point polygon based on 2 rectangle points
+*/
 function rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat) {
     var p = [];
 
@@ -269,6 +253,7 @@ function rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat) {
 }
 
 // override standard OpenLayers permalink method
+
 
 function permalink_init() {
     OpenLayers.Control.Permalink.prototype.createParams = function (center, zoom, layers) {
@@ -858,8 +843,7 @@ function checkform() {
     var color_normal = "white";
     var color_error = "red";
 
-    var inputs = $("form#extract input");
-    // debug("inputs elements: " + inputs.length); return false;
+    var inputs = $("form#extract input"); // debug("inputs elements: " + inputs.length); return false;
     for (i = 0; i < inputs.length; ++i) {
         var e = inputs[i];
 
