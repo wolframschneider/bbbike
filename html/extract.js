@@ -808,8 +808,8 @@ function osm_init(opt) {
         if (rotate) {
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.ROTATE;
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.RESIZE;
-            //    controls.modify.mode &= ~OpenLayers.Control.ModifyFeature.RESHAPE;
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.DRAG;
+            
             controls.modify.mode &= ~OpenLayers.Control.ModifyFeature.RESHAPE;
         }
 
