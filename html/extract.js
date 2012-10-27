@@ -717,10 +717,6 @@ function osm_init(opt) {
                 if (event.type == "featuremodified" || event.type == "sketchcomplete") {
                     serialize(event.feature);
                 }
-                if (event.type == "sketchcomplete") {
-                    // document.getElementById('modifyToggle').checked = true;
-                    // polygon_toggleControl(document.getElementById('modifyToggle'));
-                }
             }
 
             vectors.events.on({
