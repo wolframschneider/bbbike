@@ -711,17 +711,15 @@ function osm_init(opt) {
 
         map.addLayer(vectors);
 
-        if (console && console.log) {
-            function report(event) {
-                console.log(event.type, event.feature ? event.feature.id : event.components);
-                if (event.feature) {
-                    if (event.type == "featuremodified" || event.type == "sketchcomplete") {
-                        serialize(event.feature);
-                    }
-                    if (event.type == "sketchcomplete") {
-                        // document.getElementById('modifyToggle').checked = true;
-                        // polygon_toggleControl(document.getElementById('modifyToggle'));
-                    }
+        function report(event) {
+            debug(event.type, event.feature ? event.feature.id : event.components);
+            if (event.feature) {
+                if (event.type == "featuremodified" || event.type == "sketchcomplete") {
+                    serialize(event.feature);
+                }
+                if (event.type == "sketchcomplete") {
+                    // document.getElementById('modifyToggle').checked = true;
+                    // polygon_toggleControl(document.getElementById('modifyToggle'));
                 }
             }
 
@@ -809,7 +807,7 @@ function osm_init(opt) {
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.ROTATE;
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.RESIZE;
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.DRAG;
-            
+
             controls.modify.mode &= ~OpenLayers.Control.ModifyFeature.RESHAPE;
         }
 
