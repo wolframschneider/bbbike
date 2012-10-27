@@ -13,17 +13,17 @@ var config = {
         "ne": [-121.7, 37.9]
     },
 
-    "show_filesize": 1,
-    "city_name_optional": true,
+    "show_filesize": true,
+    "city_name_optional": flase,
     "enable_polygon": true,
 
     // in MB
     "max_size": {
         "default": 768,
-        "obf.zip": 250,
+        "obf.zip": 250
     },
 
-    debug: 0,
+    debug: 1,
 
     "dummy": ""
 };
@@ -923,13 +923,13 @@ function check_lnglat_form(noerror) {
 
 function debug(text, id) {
     // no debug at all
-    if (config.debug < 0) return;
+    if (config.debug < 1) return;
 
     // log to JavaScript console
     if (console && console.log) console.log("BBBike extract: " + text);
 
     // no debug on html page
-    if (config.debug == 0) return;
+    if (config.debug <= 1) return;
 
     if (!id) id = "debug";
 
