@@ -40,7 +40,13 @@ var state = {
 // Initialise the 'map' object
 var map;
 
-var console; // IE8 has no console.log()
+// Sic! IE8 has no console.log()
+var console;
+
+// polygon & rectangle variables
+var vectors;
+var vectors_back;
+
 /*
   select an area to display on the map
 */
@@ -254,7 +260,6 @@ function rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat) {
 
 // override standard OpenLayers permalink method
 
-
 function permalink_init() {
     OpenLayers.Control.Permalink.prototype.createParams = function (center, zoom, layers) {
         var params = OpenLayers.Util.getParameters(this.base);
@@ -305,8 +310,6 @@ function permalink_init() {
 }
 
 
-var vectors;
-var vectors_back;
 
 function osm_init(opt) {
     var box;
