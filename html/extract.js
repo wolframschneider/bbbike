@@ -14,7 +14,7 @@ var config = {
     },
 
     "show_filesize": true,
-    "city_name_optional": flase,
+    "city_name_optional": false,
     "enable_polygon": true,
 
     // in MB
