@@ -783,7 +783,7 @@ function osm_init(opt) {
     state.update = function update() {
         // reset modification mode
         controls.modify.mode = OpenLayers.Control.ModifyFeature.RESHAPE;
-        var rotate = $("#rotate:checked").val();
+        var rotate = $("#rotate").attr("checked");
 
         // rotate, resize, move
         if (rotate) {
@@ -796,10 +796,13 @@ function osm_init(opt) {
 
         // add new points
         else {
-            controls.modify.createVertices = $("#createVertices:checked").val();
+            // controls.modify.createVertices = $("#createVertices:checked").val();
         }
     }
 }
+
+// called from HTML page
+
 
 function polygon_update() {
     return state.update()
