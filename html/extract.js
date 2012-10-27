@@ -522,7 +522,7 @@ function osm_init(opt) {
 
         var url = "/cgi/tile-size.cgi?format=" + format + "&lat_sw=" + $("#sw_lat").val() + "&lng_sw=" + $("#sw_lng").val() + "&lat_ne=" + $("#ne_lat").val() + "&lng_ne=" + $("#ne_lng").val();
 
-        debug("polygon size: " + polygon);
+        debug("p frac: " + polygon);
 
         $.getJSON(url, function (data) {
             var filesize = show_filesize(skm * polygon, data.size * polygon);
