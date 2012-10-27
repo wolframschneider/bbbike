@@ -5,6 +5,8 @@
 
 // HTML5
 // "use strict"
+
+// central config
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
