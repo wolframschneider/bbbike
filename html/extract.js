@@ -749,6 +749,7 @@ function osm_init(opt) {
 
             data += parseInt(polygon_area / 100000) / 10 + " sqkm<br/>";
 
+            // store coords data in a hidden forms input field
             var coords = "";
             for (var i = 0; i < vec.length; i++) {
                 if (i > 0) coords += '|';
