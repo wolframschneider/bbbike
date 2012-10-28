@@ -5,7 +5,6 @@
 
 // HTML5
 // "use strict"
-
 // central config
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
@@ -743,11 +742,9 @@ function osm_init(opt) {
 
             var vec = feature.geometry.getVertices();
 
-            var data = "p: " + vec.length + "<br/>";
+            debug("p len: " + vec.length);
             var polygon_area = feature.geometry.getGeodesicArea();
             state.polygon.area = polygon_area;
-
-            data += parseInt(polygon_area / 100000) / 10 + " sqkm<br/>";
 
             // store coords data in a hidden forms input field
             var coords = "";
@@ -755,7 +752,6 @@ function osm_init(opt) {
                 if (i > 0) coords += '|';
                 coords += osm_round(vec[i].x) + "," + osm_round(vec[i].y);
             }
-            data += coords;
             $("#coords").attr("value", coords);
 
             if (bounds != null) {
@@ -765,7 +761,6 @@ function osm_init(opt) {
                 $("#ne_lat").val(v(bounds.top));
                 validateControlsAjax();
             }
-            // debug(data);
         }
 
         var options = { /* hover: true, onSelect: serialize, */
