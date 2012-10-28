@@ -19,7 +19,7 @@ var config = {
     },
 
     "show_filesize": true,
-    "city_name_optional": false,
+    "city_name_optional": true,
     "enable_polygon": true,
 
     // in MB
@@ -451,6 +451,9 @@ function osm_init(opt) {
         if (vectors_back) vectors_back.destroyFeatures();
 
         $("#coords").attr("value", "");
+        $("#as").attr("value", "");
+        $("#pg").attr("value", "");
+        state.polygon.area = 0;
     }
 
     function drawBox(bounds) {
@@ -507,11 +510,14 @@ function osm_init(opt) {
 
         var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
         var format = $("select[name=format] option:selected").val();
+
+        // value: 0...1
         var polygon = state.polygon.area && skm > 0 ? (state.polygon.area / skm / 1000000) : 1;
+        $("#pg").attr("value", polygon);
 
         var url = "/cgi/tile-size.cgi?format=" + format + "&lat_sw=" + $("#sw_lat").val() + "&lng_sw=" + $("#sw_lng").val() + "&lat_ne=" + $("#ne_lat").val() + "&lng_ne=" + $("#ne_lng").val();
 
-        debug("p frac: " + polygon);
+        debug("p frac: " + polygon + " skm: " + skm);
 
         $.getJSON(url, function (data) {
             var filesize = show_filesize(skm * polygon, data.size * polygon);
