@@ -519,7 +519,7 @@ function osm_init(opt) {
         var format = $("select[name=format] option:selected").val();
 
         if (!state.polygon.area && $("#pg").val()) {
-            debug("found: " + $("#pg").val() + " as: " + $("#as").val());
+            debug("found pg: " + $("#pg").val() + " as: " + $("#as").val());
         }
 
         // value: 0...1
