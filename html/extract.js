@@ -19,7 +19,7 @@ var config = {
     },
 
     "show_filesize": true,
-    "city_name_optional": true,
+    "city_name_optional": false,
     "enable_polygon": true,
 
     // in MB
@@ -359,7 +359,7 @@ function osm_init(opt) {
         // implement history for back button
         if (opt.back_button) {
             opt.back_function();
-            // boundsChanged();
+            boundsChanged();
         }
     }
 
