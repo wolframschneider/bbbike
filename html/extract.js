@@ -178,12 +178,24 @@ function init() {
         bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
         // back button: reset coordinates to original values
-        opt.back_function = function () {};
+        opt.back_function = function () {
+            $("#sw_lng").val(sw_lng);
+            $("#sw_lat").val(sw_lat);
+            $("#ne_lng").val(ne_lng);
+            $("#ne_lat").val(ne_lat);
+            $("#coords").val(coords);
+
+            debug("coords: " + coords);
+            state.validateControls();
+            map.events.unregister("moveend", map, state.mapMoved);
+        };
 
         if (config.enable_polygon) {
             setTimeout(function () {
                 var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
                 vectors.addFeatures(plot_polygon(polygon));
+                opt.back_function();
+
             }, 700);
         } else {
             opt.back_button = 1;
@@ -346,11 +358,14 @@ function osm_init(opt) {
 
         // implement history for back button
         if (opt.back_button) {
-            boundsChanged();
+            opt.back_function();
+            // boundsChanged();
         }
     }
 
     function boundsChanged() {
+        debug("boundsChanged");
+
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
 
         if (!check_lnglat_form()) {
@@ -403,9 +418,11 @@ function osm_init(opt) {
     }
 
     function mapMoved() {
+        // debug("mapMoved");
         setBounds(map.getExtent());
         validateControls();
     }
+    state.mapMoved = mapMoved;
 
     function setBounds(bounds) {
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
@@ -500,6 +517,10 @@ function osm_init(opt) {
 
         var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
         var format = $("select[name=format] option:selected").val();
+
+        if (!state.polygon.area && $("#pg").val()) {
+            debug("found: " + $("#pg").val() + " as: " + $("#as").val());
+        }
 
         // value: 0...1
         var polygon = state.polygon.area && skm > 0 ? (state.polygon.area / skm / 1000000) : 1;
