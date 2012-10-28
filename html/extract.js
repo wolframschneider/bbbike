@@ -178,7 +178,7 @@ function init() {
         bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
         // back button: reset coordinates to original values
-        opt.back_function = function () { };
+        opt.back_function = function () {};
 
         if (config.enable_polygon) {
             setTimeout(function () {
@@ -197,41 +197,41 @@ function init() {
         bounds = new OpenLayers.Bounds(c.sw[0], c.sw[1], c.ne[0], c.ne[1]);
     }
 
-
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
 
-    function string2coords(coords) {
-        var list = [];
-        if (!coords) return list;
-        var _list = coords.split("|");
-        for (var i = 0; i < _list.length; i++) {
-            var pos = _list[i].split(",");
-            list.push(pos);
-        }
-        return list;
-    }
-
-    function plot_polygon(poly) {
-        debug("polygon length: " + poly.length + " " + poly[0][0] + "," + poly[0][1]);
-
-        var features = [];
-        var points = [];
-        for (var i = 0; i < poly.length; i++) {
-            var point = new OpenLayers.Geometry.Point(poly[i][0], poly[i][1]);
-            point.transform(epsg4326, map.getProjectionObject());
-            points.push(point);
-        }
-
-        var linear_ring = new OpenLayers.Geometry.LinearRing(points);
-        var polygonFeature = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Polygon(linear_ring));
-        features.push(polygonFeature);
-
-        return features;
-    }
-
     osm_init(opt);
     permalink_init();
+}
+
+function string2coords(coords) {
+    var list = [];
+    if (!coords) return list;
+    var _list = coords.split("|");
+    for (var i = 0; i < _list.length; i++) {
+        var pos = _list[i].split(",");
+        list.push(pos);
+    }
+    return list;
+}
+
+function plot_polygon(poly) {
+    debug("polygon length: " + poly.length + " " + poly[0][0] + "," + poly[0][1]);
+
+    var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+    var features = [];
+    var points = [];
+    for (var i = 0; i < poly.length; i++) {
+        var point = new OpenLayers.Geometry.Point(poly[i][0], poly[i][1]);
+        point.transform(epsg4326, map.getProjectionObject());
+        points.push(point);
+    }
+
+    var linear_ring = new OpenLayers.Geometry.LinearRing(points);
+    var polygonFeature = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Polygon(linear_ring));
+    features.push(polygonFeature);
+
+    return features;
 }
 
 /*
