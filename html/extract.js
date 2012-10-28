@@ -178,17 +178,7 @@ function init() {
         bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
         // back button: reset coordinates to original values
-        opt.back_function = function () {
-/*
-            $("#sw_lng").val(sw_lng);
-            $("#sw_lat").val(sw_lat);
-            $("#ne_lng").val(ne_lng);
-            $("#ne_lat").val(ne_lat);
-            $("#coords").val(coords);
-
-            debug("coords: " + coords);
-            */
-        };
+        opt.back_function = function () { };
 
         if (config.enable_polygon) {
             setTimeout(function () {
