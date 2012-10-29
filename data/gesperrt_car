@@ -273,7 +273,7 @@ Schönhauser Allee -> Milastr.: Schönhauser Allee	3::igndisp 10902,15422 10917,15
 Milastr. -> Buchholzer Str.: Schönhauser Allee	3::igndisp 10768,15534 10917,15525 11055,15504
 Milastr. -> Schönhauser Allee: Schönhauser Allee	3::igndisp 10768,15534 10917,15525 10941,15697
 Schönhauser Allee -> Buchholzer Str.: Schönhauser Allee	3::igndisp 10941,15697 10917,15525 11055,15504
-Am Kupfergraben	1 9754,12775 9810,12712 9870,12657 9900,12643 9919,12613
+Am Kupfergraben	1 9754,12775 9815,12705 9870,12657 9900,12643 9919,12613
 Uthmannstr.	1 13150,7845 12914,7785
 Herrnhuter Str.	1 12898,7832 13103,7889
 Richardstr.	1 12870,8087 12792,8190
@@ -1429,8 +1429,8 @@ Voigtstr. - Pettenkoferstr.	1 14862,12777 14834,12767
 Gryphius/Boxhagener Str.	3 14550,11732 14513,11657 14496,11620
 Gryphius/Boxhagener Str.	3 14550,11732 14513,11657 14561,11600
 Straßenbahntrasse	3nocross::ignrte 10387,12760 10360,12793 10309,12854
-St.-Wolfgang-Str. -> Spandauer Str.: Straßenbahntrasse	3::igndisp 10285,12744 10360,12793 10309,12854
-Spandauer Str. -> St.-Wolfgang-Str.: Straßenbahntrasse	3::igndisp 10387,12760 10360,12793 10285,12744
+St. Wolfgang-Str. -> Spandauer Str.: Straßenbahntrasse	3::igndisp 10285,12744 10360,12793 10309,12854
+Spandauer Str. -> St. Wolfgang-Str.: Straßenbahntrasse	3::igndisp 10387,12760 10360,12793 10285,12744
 Oskar-Ziethen-Krankenhaus: Schranke und Tor	3 16512,11894 16541,12064 16556,12180
 Oskar-Ziethen-Krankenhaus: Schranke und Tor	3 16556,12180 16541,12064 16512,11894
 Grünspechtweg: Schranke	3 6988,23244 7059,23127 7171,22942

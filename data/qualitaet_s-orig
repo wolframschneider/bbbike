@@ -261,7 +261,7 @@ Gartenstr.: Kopfsteinpflaster	Q2 8663,14960 8570,15107
 Gerichstr.: Kopfsteinpflaster	Q2 8456,15235 8570,15107
 #XXX del --- nicht mehr --- Liesenstr.: Kopfsteinpflaster, OK	Q1 8671,14919 8653,14899 8562,14798
 Am Kupfergraben: teilweise schlechtes Kopfsteinpflaster, Ausweichen auf Gehweg möglich	Q3 9533,12925 9618,12907 9661,12876
-Am Kupfergraben: Asphalt	Q0 9661,12876 9754,12775 9810,12712 9870,12657
+Am Kupfergraben: Asphalt	Q0 9661,12876 9754,12775 9815,12705 9870,12657
 Geschwister-Scholl-Str.: Kopfsteinpflaster	Q2 9533,12925 9550,12760
 Marchlewskistr.: Kopfsteinpflaster	Q2 13217,11936 13275,11830
 Pillauer Str.: Kopfsteinpflaster	Q2 13366,11651 13270,11581
@@ -3157,7 +3157,7 @@ Nieberstr.: Asphalt	Q0 17885,4912 17792,4875 17760,4867
 Landfliegerstr.: Asphalt	Q0 18050,4649 18157,4742 18202,4786 18236,4807
 Sportfliegerstr.: Asphalt	Q0 18157,4742 18343,4545 18423,4459
 Louis-Blériot-Str.: Asphalt	Q0 18343,4545 18235,4449
-Herrmann-Dorner-Allee: Asphalt (Fahrbahn und Radwege)	Q0 18928,3701 18860,3634 18755,3531 18689,3465 18624,3402 18511,3290 18395,3176 18347,3129 18374,2971 18445,2642 18496,2471
+Hermann-Dorner-Allee: Asphalt (Fahrbahn und Radwege)	Q0 18928,3701 18860,3634 18755,3531 18689,3465 18624,3402 18511,3290 18395,3176 18347,3129 18374,2971 18445,2642 18496,2471
 Wagner-Régeny-Str.: Asphalt	Q0 19732,3340 19657,3417 19581,3495 19487,3593 19377,3721
 Georg-Schendel-Str.: Asphalt	Q0 19125,3491 19377,3721
 Hans-Schmidt-Str.: Asphalt	Q0 19581,3495 19449,3358 19348,3253
@@ -3672,7 +3672,7 @@ Am Binsengrund: Asphalt	Q0 21435,10255 21556,10232 21566,10230
 #: XXX_osm laut osm "track"
 Garziner Platz: Asphalt	Q0 20945,10286 20947,10137
 Eberhard-Roters-Platz: Asphalt	Q0 9026,8916 8990,8915 8954,8914
-Alte Brauerei: Asphalt	Q0 8954,8914 8953,8886 8814,8881
+Alte Brauerei: Asphalt	Q0 8954,8914 8953,8886 8814,8881 8815,8944 8954,8914
 (Zufahrt zum Viktoria-Quartier): Asphalt	Q0 9111,9036 9099,9034 9052,8934 9026,8916
 (Saarower Weg - Fürstenwalder Allee): unbefestigter Weg	Q2 31041,3794 30987,3583 30993,3557
 Hartlebenstr.: Beton	Q0- 26080,5946 26073,5847
@@ -13111,7 +13111,7 @@ Jeverstr.: Asphalt	Q0 5681,5743 5681,5768 5679,5853 5677,5868 5674,5901 5699,594
 #: by: ^^^
 # 
 #: by: Felix Lippert:
-Berghofer Weg: guter Beton	Q0 30979,3941 30950,3985 30871,4111 30847,4137 30789,4159 30749,4165 30655,4186
+Berghofer Weg: guter Beton	Q0 30979,3941 30950,3985 30871,4111 30847,4137 30794,4154 30749,4165 30655,4186
 # 
 #: by: Claudia Brinkmann: vvv
 #: confirmed_by: srt (nördlicher Abschnitt)
@@ -21766,9 +21766,9 @@ Heidereutergasse: Asphalt	Q0 10427,12873 10390,12842
 #: corrected_by: srt (Gehwegplatten -> Kopfsteinpflaster (neu))
 (Rosenstr. - Karl-Liebknecht-Str.): Kopfsteinpflaster	Q2 10476,12829 10525,12789
 # XXX del Straße existiert zurzeit nicht: Museumstr.: Asphalt	Q0 9943,12642 9884,12712
-# XXX del: no, looks good enough: Hegelplatz: Asphalt mit Löchern	Q1 9682,12590 9671,12644
+# XXX del: no, looks good enough: Hegelplatz: Asphalt mit Löchern	Q1 9682,12590 9673,12661
 #: confirmed_by: srt
-Bauhofstr.: Asphalt mit Löchern	Q1 9810,12712 9671,12644
+Bauhofstr.: Asphalt mit Löchern	Q1 9815,12705 9673,12661
 Panoramastr.: Asphalt	Q0 10793,12906 10734,12850
 Spandauer Str. [Gehweg]: Gehwegplatten	Q0 10584,12507 10626,12455 10665,12413 10723,12346
 Poststr.: Kopfsteinpflaster	Q2 10476,12432 10536,12355 10553,12333 10569,12311 10607,12268 10629,12293 10659,12259

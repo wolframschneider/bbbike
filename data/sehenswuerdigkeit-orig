@@ -21,6 +21,7 @@ Neue Nationalgalerie	F:SW|IMG:museum 7911,11241 7891,11174 7952,11159 7972,11223
 Staatsbibliothek	F:SW 8077,11228 8063,11203 8088,11198 8084,11159 8150,11149 8191,11231 8190,11336 8159,11306 8109,11219
 Martin-Gropius-Bau	F:SW 8923,11238 8931,11168 8862,11161 8854,11230
 Abgeordnetenhaus	F:SW 8903,11378 8913,11289 8819,11278 8811,11367
+Topographie des Terrors	F:SW 8995,11220 9055,11226 9061,11167 9001,11163
 Schauspielhaus	F:SW|IMG:theater 9541,12000 9573,12001 9589,11937 9550,11934
 Französischer Dom	F:SW|IMG:sehenswuerdigkeit_img/franzoesischer_dom|ANCHOR:s 9552,12062 9610,12073 9618,12044 9550,12035
 Deutscher Dom	F:SW|IMG:church 9644,11894 9647,11855 9583,11851 9578,11890
@@ -458,6 +459,7 @@ Polizei in der Friesenstr.	F:SW 9868,8739 9924,8738 9924,8751 9895,8751 9896,877
 Schwerbelastungskörper	SW 8258,8659
 Rathaus Wannsee	SW -6774,1040
 St.-Michael-Kirche	SW|IMG:church -6683,1060
+#: url: http://www.stadtentwicklung.berlin.de/cgi-bin/hidaweb/getdoc.pl?DOK_TPL=lda_doc.tpl&KEY=obj%2009045778
 ehem. Wasserwerk Köpenick	SW 26191,1005
 #: section Volkspark Humboldthain vvv
 Flakturm (Humboldthain)	SW 9006,15728
@@ -568,6 +570,7 @@ Berliner Ensemble	F:SW 9110,12885 9138,12892 9125,12941 9098,12933
 Bundespräsidialamt	SW 6828,12171
 Carillon	SW 7835,12410
 Maxim-Gorki-Theater	F:SW|IMG:theater 9765,12599 9784,12601 9790,12556 9773,12553
+Palais am Festungsgraben	F:SW 9790,12538 9832,12544 9835,12525 9792,12521
 Neues Museum	F:SW|IMG:museum 9967,12664 10007,12688 9941,12764 9904,12733
 #: alias: Neue Kommandantur
 Kommandantenhaus	F:SW 9988,12393 9990,12373 9945,12368 9944,12388
@@ -649,6 +652,8 @@ Dorfkirche Buckow	SW|IMG:church 12425,1851
 Dorfkirche Lichtenrade	SW|IMG:church 11124,-1559
 St.-Laurentius-Stadtkirche	SW|IMG:church 22211,4755
 Christuskirche	SW|IMG:church 18686,6549
+#: note: Ausgrabungsstelle
+Großer Jüdenhof	SW 10827,12443
 #: section ^^^
 ######################################################################
 #
