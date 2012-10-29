@@ -124,21 +124,26 @@ function init() {
     });
 
     map.addLayer(new OpenLayers.Layer.OSM("Esri Topographic", "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}.png", {
+        attribution: '<a href="http://www.esri.com/">(&copy;) Esri</a>',
         tileOptions: {
             crossOriginKeyword: null
         },
-        attribution: "",
         numZoomLevels: 18
     }));
 
-    map.addLayer(new OpenLayers.Layer.OSM.Mapnik("OSM Mapnik"));
+    map.addLayer(new OpenLayers.Layer.OSM.Mapnik("OSM Mapnik", {
+        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>'
+    }));
 
-    map.addLayer(new OpenLayers.Layer.OSM.CycleMap("OSM CycleMap"));
+    map.addLayer(new OpenLayers.Layer.OSM.CycleMap("OSM CycleMap", {
+        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.opencyclemap.org/">(&copy) OpenCycleMap</a>'
+    }));
 
     map.addLayer(new OpenLayers.Layer.OSM("OSM Hike&Bike", ["http://a.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png", "http://b.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png"], {
         tileOptions: {
             crossOriginKeyword: null
         },
+        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>',
         numZoomLevels: 18
     }));
 
@@ -146,6 +151,7 @@ function init() {
         tileOptions: {
             crossOriginKeyword: null
         },
+        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>',
         numZoomLevels: 19
     }));
 
@@ -153,6 +159,7 @@ function init() {
         tileOptions: {
             crossOriginKeyword: null
         },
+        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.mapquest.com/">(&copy;) MapQuest</a>',
         numZoomLevels: 19
     }));
 
@@ -160,6 +167,7 @@ function init() {
         tileOptions: {
             crossOriginKeyword: null
         },
+        attribution: '<a href="http://www.mapquest.com/">(&copy;) MapQuest</a>',
         numZoomLevels: 19
     }));
 
