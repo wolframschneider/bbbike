@@ -213,7 +213,7 @@ function init() {
     // default city
     else {
         var c = select_city();
-        debug(c.sw[0] + "," + c.sw[1] + " " + c.ne[0] + "," + c.ne[1]);
+        debug("default city: " + c.sw[0] + "," + c.sw[1] + " " + c.ne[0] + "," + c.ne[1]);
         bounds = new OpenLayers.Bounds(c.sw[0], c.sw[1], c.ne[0], c.ne[1]);
     }
 
