@@ -591,7 +591,6 @@ function check_lnglat_form(noerror) {
 
 // write to JS console or debug tag
 
-
 function debug(text, id) {
     // no debug at all
     if (config.debug < 1) return;
@@ -729,8 +728,10 @@ function polygon_menu(enabled) {
     enabled ? $("#polygon_controls").show() : $("#polygon_controls").hide();
 
     // always start menu with polygon
+    $("#createVertices").removeAttr("checked");
+    $("#rotate").removeAttr("checked");
+
     $("#createVertices").attr("checked", "checked");
-    $("#rotate").attr("checked", "");
 }
 
 /*
