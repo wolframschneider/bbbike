@@ -5,6 +5,8 @@
 
 // HTML5
 // "use strict"
+
+
 // central config
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
@@ -46,7 +48,6 @@ var console;
 
 // polygon & rectangle variables
 var vectors;
-var vectors_back;
 
 /*
   select an area to display on the map
@@ -462,8 +463,6 @@ function osm_init(opt) {
 
         transform.deactivate();
         vectors.destroyFeatures();
-        // rectangle from back button
-        if (vectors_back) vectors_back.destroyFeatures();
 
         $("#coords").attr("value", "");
         $("#as").attr("value", "");
@@ -788,6 +787,7 @@ function osm_init(opt) {
         controls.modify.activate();
     }
 
+    // called from HTML page
     state.update = function update() {
         // reset modification mode
         controls.modify.mode = OpenLayers.Control.ModifyFeature.RESHAPE;
@@ -804,13 +804,10 @@ function osm_init(opt) {
 
         // add new points
         controls.modify.createVertices = rotate ? false : true;
-
-        // debug("r: " + controls.modify.createVertices);
     }
 }
 
 // called from HTML page
-
 function polygon_update() {
     return state.update()
 };
