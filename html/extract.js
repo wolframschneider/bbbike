@@ -461,8 +461,6 @@ function extract_init(opt) {
         }
     state.validateControls = validateControls;
 
-
-
     function mapnikSizeChanged() {
         var size = mapnikImageSize($("#mapnik_scale").val());
 
@@ -486,8 +484,6 @@ function extract_init(opt) {
             polygon_init();
         }, 1000);
     }
-
-
 }
 
 // called from HTML page
@@ -592,6 +588,9 @@ function check_lnglat_form(noerror) {
 
     return ret;
 }
+
+// write to JS console or debug tag
+
 
 function debug(text, id) {
     // no debug at all
@@ -1050,7 +1049,6 @@ function polygon_init() {
         controls.modify.createVertices = rotate ? false : true;
     }
 }
-
 
 
 // EOF
