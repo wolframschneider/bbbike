@@ -1024,10 +1024,12 @@ function polygon_init() {
         }
     }
 
-    var options = {}; /* hover: true, onSelect: serialize, */
+/*
+    var options = {}; // hover: true, onSelect: serialize,
     var select = new OpenLayers.Control.SelectFeature(vectors, options);
     map.addControl(select);
     select.activate();
+    */
 
     controls.modify.activate();
 
