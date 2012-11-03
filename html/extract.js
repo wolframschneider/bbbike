@@ -217,7 +217,7 @@ function plot_polygon(poly) {
 
     var linear_ring = new OpenLayers.Geometry.LinearRing(points);
     var polygonFeature = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Polygon(linear_ring));
-    
+
     return polygonFeature;
 }
 
@@ -965,6 +965,10 @@ function polygon_init() {
                 serialize(event.feature);
             }
         }
+    }
+
+    vectors.onFeatureInsert = function () {
+        debug("rectangle/polygon created");
     }
 
     vectors.events.on({
