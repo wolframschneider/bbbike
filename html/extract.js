@@ -717,13 +717,6 @@ function osm_init(opt) {
         OpenLayers.Feature.Vector.style['default']['pointRadius'] = '14'; // huge points for tablets
         var renderer = OpenLayers.Layer.Vector.prototype.renderers;
 
-        vectors_back = vectors;
-        vectors = new OpenLayers.Layer.Vector("Vector Layer", {
-            renderers: renderer
-        });
-
-        map.addLayer(vectors);
-
         function report(event) {
             debug(event.type, event.feature ? event.feature.id : event.components);
             if (event.feature) {
