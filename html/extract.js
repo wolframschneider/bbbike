@@ -237,7 +237,7 @@ function string2coords(coords) {
 }
 
 function plot_polygon(poly) {
-    debug("polygon length: " + poly.length + " " + poly[0][0] + "," + poly[0][1]);
+    debug("polygon length: " + poly.length);
 
     var epsg4326 = new OpenLayers.Projection("EPSG:4326");
     var features = [];
