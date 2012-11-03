@@ -19,7 +19,7 @@ var config = {
     },
 
     "show_filesize": true,
-    "city_name_optional": true,
+    "city_name_optional": false,
     "enable_polygon": true,
 
     // in MB
@@ -28,7 +28,7 @@ var config = {
         "obf.zip": 250
     },
 
-    debug: 1,
+    debug: 0,
 
     "dummy": ""
 };
