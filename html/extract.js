@@ -461,15 +461,7 @@ function extract_init(opt) {
         }
     state.validateControls = validateControls;
 
-    function mapnikImageSize(scale) {
-        var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
-        var epsg4326 = new OpenLayers.Projection("EPSG:4326");
-        var epsg900913 = new OpenLayers.Projection("EPSG:900913");
 
-        bounds.transform(epsg4326, epsg900913);
-
-        return new OpenLayers.Size(Math.round(bounds.getWidth() / scale / 0.00028), Math.round(bounds.getHeight() / scale / 0.00028));
-    }
 
     function mapnikSizeChanged() {
         var size = mapnikImageSize($("#mapnik_scale").val());
@@ -495,103 +487,7 @@ function extract_init(opt) {
         }, 1000);
     }
 
-    var controls;
 
-    function polygon_init() {
-        OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '3';
-        OpenLayers.Feature.Vector.style['default']['pointRadius'] = '14'; // huge points for tablets
-        var renderer = OpenLayers.Layer.Vector.prototype.renderers;
-
-        function report(event) {
-            debug(event.type, event.feature ? event.feature.id : event.components);
-            if (event.feature) {
-                if (event.type == "featuremodified" || event.type == "sketchcomplete") {
-                    serialize(event.feature);
-                }
-            }
-        }
-
-        vectors.events.on({
-            "beforefeaturemodified": report,
-            "featuremodified": report,
-            "afterfeaturemodified": report,
-            "vertexmodified": report,
-            "sketchmodified": report,
-            "sketchstarted": report,
-            "sketchcomplete": report
-        });
-
-        controls = {
-            polygon: new OpenLayers.Control.DrawFeature(vectors, OpenLayers.Handler.Polygon),
-            modify: new OpenLayers.Control.ModifyFeature(vectors)
-        };
-
-        for (var key in controls) {
-            map.addControl(controls[key]);
-        }
-
-        function v(value) {
-            return osm_round(value);
-        };
-
-        function serialize(obj) {
-            var epsg4326 = new OpenLayers.Projection("EPSG:4326");
-
-            // var bounds = obj.geometry.bounds.clone().transform(map.getProjectionObject(), epsg4326);
-            var feature = obj.clone(); // work on a clone
-            feature.geometry.transform(map.getProjectionObject(), epsg4326);
-            feature.geometry.calculateBounds();
-            var bounds = feature.geometry.bounds;
-
-            var vec = feature.geometry.getVertices();
-
-            debug("p len: " + vec.length);
-            var polygon_area = feature.geometry.getGeodesicArea();
-            state.polygon.area = polygon_area;
-
-            // store coords data in a hidden forms input field
-            var coords = "";
-            for (var i = 0; i < vec.length; i++) {
-                if (i > 0) coords += '|';
-                coords += v(vec[i].x) + "," + v(vec[i].y);
-            }
-            $("#coords").attr("value", coords);
-
-            if (bounds != null) {
-                $("#sw_lng").val(v(bounds.left));
-                $("#sw_lat").val(v(bounds.bottom));
-                $("#ne_lng").val(v(bounds.right));
-                $("#ne_lat").val(v(bounds.top));
-                validateControlsAjax();
-            }
-        }
-
-        var options = {}; /* hover: true, onSelect: serialize, */
-        var select = new OpenLayers.Control.SelectFeature(vectors, options);
-        map.addControl(select);
-        select.activate();
-
-        controls.modify.activate();
-    }
-
-    // called from HTML page
-    state.update = function update() {
-        // reset modification mode
-        controls.modify.mode = OpenLayers.Control.ModifyFeature.RESHAPE;
-        var rotate = $("#rotate").attr("checked");
-
-        // rotate, resize, move
-        if (rotate) {
-            controls.modify.mode |= OpenLayers.Control.ModifyFeature.ROTATE;
-            controls.modify.mode |= OpenLayers.Control.ModifyFeature.RESIZE;
-            controls.modify.mode |= OpenLayers.Control.ModifyFeature.DRAG;
-
-            controls.modify.mode &= ~OpenLayers.Control.ModifyFeature.RESHAPE;
-        }
-
-        // add new points
-        controls.modify.createVertices = rotate ? false : true;
-    }
 }
 
 // called from HTML page
@@ -1045,5 +941,116 @@ function show_filesize(skm, real_size) {
 function osm_round(number) {
     return parseInt(number * 1000 + 0.5) / 1000;
 }
+
+function mapnikImageSize(scale) {
+    var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
+    var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+    var epsg900913 = new OpenLayers.Projection("EPSG:900913");
+
+    bounds.transform(epsg4326, epsg900913);
+
+    return new OpenLayers.Size(Math.round(bounds.getWidth() / scale / 0.00028), Math.round(bounds.getHeight() / scale / 0.00028));
+}
+
+
+function polygon_init() {
+    var controls;
+
+    OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '3';
+    OpenLayers.Feature.Vector.style['default']['pointRadius'] = '14'; // huge points for tablets
+    var renderer = OpenLayers.Layer.Vector.prototype.renderers;
+
+    function report(event) {
+        debug(event.type, event.feature ? event.feature.id : event.components);
+        if (event.feature) {
+            if (event.type == "featuremodified" || event.type == "sketchcomplete") {
+                serialize(event.feature);
+            }
+        }
+    }
+
+    vectors.events.on({
+        "beforefeaturemodified": report,
+        "featuremodified": report,
+        "afterfeaturemodified": report,
+        "vertexmodified": report,
+        "sketchmodified": report,
+        "sketchstarted": report,
+        "sketchcomplete": report
+    });
+
+    controls = {
+        polygon: new OpenLayers.Control.DrawFeature(vectors, OpenLayers.Handler.Polygon),
+        modify: new OpenLayers.Control.ModifyFeature(vectors)
+    };
+
+    for (var key in controls) {
+        map.addControl(controls[key]);
+    }
+
+    function v(value) {
+        return osm_round(value);
+    };
+
+    function serialize(obj) {
+        var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+
+        // var bounds = obj.geometry.bounds.clone().transform(map.getProjectionObject(), epsg4326);
+        var feature = obj.clone(); // work on a clone
+        feature.geometry.transform(map.getProjectionObject(), epsg4326);
+        feature.geometry.calculateBounds();
+        var bounds = feature.geometry.bounds;
+
+        var vec = feature.geometry.getVertices();
+
+        debug("p len: " + vec.length);
+        var polygon_area = feature.geometry.getGeodesicArea();
+        state.polygon.area = polygon_area;
+
+        // store coords data in a hidden forms input field
+        var coords = "";
+        for (var i = 0; i < vec.length; i++) {
+            if (i > 0) coords += '|';
+            coords += v(vec[i].x) + "," + v(vec[i].y);
+        }
+        $("#coords").attr("value", coords);
+
+        if (bounds != null) {
+            $("#sw_lng").val(v(bounds.left));
+            $("#sw_lat").val(v(bounds.bottom));
+            $("#ne_lng").val(v(bounds.right));
+            $("#ne_lat").val(v(bounds.top));
+            validateControlsAjax();
+        }
+    }
+
+    var options = {}; /* hover: true, onSelect: serialize, */
+    var select = new OpenLayers.Control.SelectFeature(vectors, options);
+    map.addControl(select);
+    select.activate();
+
+    controls.modify.activate();
+
+    // called from HTML page
+    state.update = function update() {
+        // reset modification mode
+        controls.modify.mode = OpenLayers.Control.ModifyFeature.RESHAPE;
+        var rotate = $("#rotate").attr("checked");
+
+        // rotate, resize, move
+        if (rotate) {
+            controls.modify.mode |= OpenLayers.Control.ModifyFeature.ROTATE;
+            controls.modify.mode |= OpenLayers.Control.ModifyFeature.RESIZE;
+            controls.modify.mode |= OpenLayers.Control.ModifyFeature.DRAG;
+
+            controls.modify.mode &= ~OpenLayers.Control.ModifyFeature.RESHAPE;
+        }
+
+        // add new points
+        controls.modify.createVertices = rotate ? false : true;
+    }
+}
+
+
 
 // EOF
