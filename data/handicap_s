@@ -22,8 +22,8 @@ Schwarzer Weg: Einbahnstraßenregelung, auf Gehweg ausweichen	q3::inwork; 8426,13
 Hessische Str.: Sackgasse zur Invalidenstr.	q3::inwork 8775,13606 8690,13723
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9875,12257 9869,12297
 Rathausstr.: Fußgänger, enge Stelle vor dem Roten Rathaus	q2::inwork 10601,12521 10704,12595
-Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10489,11405 10437,11352
 Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10437,11352 10256,11160
+Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10489,11405 10437,11352
 Neue Grünstr.: Einbahnstraßenregelung wegen Bauarbeiten in der Alten Jakobstr.	q3::inwork; 10389,11390 10446,11470
 Burgstraße: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 10166,12777 10132,12941
 Anna-Louisa-Karsch-Str.: vor der Friedrichsbrücke auf den linken Gehweg fahren	q3::inwork; 10264,12826 10166,12777
@@ -276,7 +276,7 @@ Barsekowstr.: Fußgänger	q1 5344,4672 5417,4647 5476,4626 5589,4617
 (Stadtpark Steglitz): Fußgänger	q1 5797,4846 5826,4819 5909,4798 5945,4828 6018,4850
 Dieffenbachstr.: Bodenschwellen	q1 11141,9732 11346,9655 11541,9576
 Schönleinstr.: Bodenschwellen	q1 11560,9524 11541,9576 11594,9604
-Hoffmannstr.: Bodenschwellen	q1 14289,9870 14076,10011
+Hoffmannstr.: Bodenschwellen (2x)	q1 14289,9870 14076,10011
 Lausitzer Platz: zahlreiche Bodenschwellen	q2 12197,10494 12172,10585
 Lausitzer Platz: zahlreiche Bodenschwellen	q2 12328,10442 12274,10612
 (Grünanlage Egon-Erwin-Kisch-Str. - Falkenberger Chaussee): Fußgänger	q2 17678,18171 17744,18016
@@ -1087,6 +1087,8 @@ Mendelssohnstr.: Fußgänger, Bordstein	q3 11598,13598 11652,13564
 (Wiese vor dem Reichstag): Fußgänger, Bordsteine, Radfahren nicht erlaubt	q3 8354,12416 8348,12617
 Rosenfelder Ring: Einbahnstraße, Ausweichen auf Gehweg	q3; 18140,11932 18139,11833
 (Weg über das Sportgelände): zu manchen Zeiten reger Fußgängerverkehr	q1 13252,14179 13385,13992
+Schliemannstr. [über Helmholtzplatz]: Fußgänger	q2 11368,15301 11334,15248
+(Museumsinsel): Fußgänger, besonders zu Museumsöffnungszeiten	q2 10017,12675 9972,12732 9987,12744 9952,12791
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q3 11805,19071 11895,19183 11927,19308
 Ebersstr.: Schüler	q2 7245,8583 7292,8631
 Straße 103 (Niederschönhausen): enge Straße	q1 10914,20065 11051,19789

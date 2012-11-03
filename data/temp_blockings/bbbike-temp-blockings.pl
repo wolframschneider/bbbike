@@ -19784,10 +19784,10 @@ userdel	q4::inwork; 9212,13471 9340,13510 9394,13528 9517,13571 9571,13590 9668,
 EOF
      },
      { from  => 1317679200, # 2011-10-04 00:00
-       until => 1351699200, # 2012-10-31 17:00
-       text  => 'Blankenburger Straße: Richtung Dietzgenstraße zwischen Lindenberger Straße und Siegfriedstraße wegen Bauarbeiten gesperrt; Herthaplatz ist teilweise eine Einbahnstraße; 05.10.2011 11:00 Uhr bis 31.10.2012 17:00 Uhr',
+       until => 1352476800, # 2012-11-09 17:00
+       text  => 'Blankenburger Straße: Richtung Dietzgenstraße zwischen Lindenberger Straße und Siegfriedstraße wegen Bauarbeiten gesperrt; Herthaplatz ist teilweise eine Einbahnstraße; 05.10.2011 11:00 Uhr bis 09.11.2012 17:00 Uhr',
        type  => 'handicap',
-       source_id => 'INKO_078941',
+       source_id => 'INKO_078941_COPY_1',
        data  => <<EOF,
 userdel	q4::inwork; 11148,19838 11051,19789 10948,19737 10829,19676 10742,19632
 #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/blankenburger-strasse2.html
@@ -19947,7 +19947,7 @@ EOF
      },
      { from  => 1348076973, # 1314604800, # 2011-08-29 10:00
        until => 1380636000, # 2013-10-01 16:00, # 1347721200, # 2012-09-15 17:00
-       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schwedter Str., Fahrbahn gesperrt, bis Herbst 2013',
+       text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schwedter Str., Fahrbahn ist manchmal gesperrt, bis Herbst 2013',
        type  => 'handicap',
        source_id => 'IM_019212',
        data  => <<EOF,
@@ -19955,6 +19955,7 @@ EOF
 #: note: nur die halbe Strecke ist gesperrt, deshalb q3
 #: note: am 2012-09-19 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
 #: note: am 2012-10-18 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
+#: note: am 2012-10-31 am südlichen Ende vorbeigefahren, möglicherweise war heute die Schranke nicht aktiv
 userdel	q3::inwork 10530,14452 10723,14772
 EOF
      },
@@ -20294,8 +20295,8 @@ EOF
 userdel	q4::inwork 19328,5304 19405,5284 19445,5271
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1351726607, # undef
+       until => 1351726612, # undef, # XXX
        text  => 'Oderberger Str./Schwedter Str.: Bauarbeiten, Fahrbahn ist gesperrt. Dauer der Sperrung ist unbekannt.',
        type  => 'handicap',
        data  => <<EOF,
@@ -20434,13 +20435,13 @@ EOF
 userdel	q4::inwork 9358,12351 9369,12253
 EOF
      },
-     { from  => 1341727200, # 2012-07-08 08:00
-       until => 1348538400, # 2012-09-25 04:00
-       text  => 'Karlshorster Str. (Lichtenberg): Brückenarbeiten, Sperrung zwischen Nöldnerstr. und Türrschmidtstr., Fußgänger und Radfahrer können langsam passieren, 09.07.2012 bis 25.09.2012 04:00 Uhr',
+     { from  => 1351810800, # 2012-11-02 00:00
+       until => 1352084400, # 2012-11-05 04:00
+       text  => 'Karlshorster Str. (Lichtenberg): Brückenarbeiten, Sperrung der Fahrbahn, Fußgänger und Radfahrer können wahrscheinlich langsam passieren, 03.11.2012 bis 05.11.2012 04:00 Uhr',
        type  => 'handicap',
-       source_id => 'IM_019067',
+       source_id => 'INKO_115760',
        data  => <<EOF,
-userdel	q4::inwork 15272,10790 15279,10862
+userdel	q4::inwork 15261,10738 15272,10790 15279,10862
 EOF
      },
      { from  => undef, # 
@@ -20448,7 +20449,7 @@ EOF
        text  => 'Christburger Str.: Fahrbahn an der Prenzlauer Allee gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-10-12
+#: last_checked: 2012-10-31
 userdel	q3::inwork 11912,14486 11642,14625
 EOF
      },
@@ -20462,8 +20463,8 @@ userdel	q2::inwork 7437,12368 7215,12295 7039,12314
 EOF
      },
      { from  => 1342945020, # 2012-07-22 10:17
-       until => 1351612800, # 2012-10-30 17:00
-       text  => 'Berliner Str. (Pankow): Baustelle, stadtauswärts zwischen Mühlenstr. und Elsa-Brändström-Str. bis Ende 10/2012 gesperrt',
+       until => 1352217600, # 2012-11-06 17:00
+       text  => 'Berliner Str. (Pankow): Baustelle, stadtauswärts zwischen Mühlenstr. und Elsa-Brändström-Str. bis Anfang November 2012 gesperrt',
        type  => 'handicap',
        source_id => 'IM_019006',
        data  => <<EOF,
@@ -20521,13 +20522,12 @@ userdel	q4::inwork; 10953,15787 11086,15772
 EOF
      },
      { from  => 1342594800, # 2012-07-18 09:00
-       until => 1350054000, # 2012-10-12 17:00
+       until => 1351724340, # 1350054000, # 2012-10-12 17:00
        text  => 'Adalbertstr.: Fahrbahn in Richtung Kottbusser Tor gesperrt',
        type  => 'handicap',
        source_id => 'INKO_114376',
        data  => <<EOF,
-#: last_checked: 2012-10-11
-#: next_check: 2012-10-12
+#: last_checked: 2012-10-29
 #: XXX see also Adalbertstr. (Kreuzberg): Leitungsarbeiten, Fahrtrichtung gesperrt (bis Mitte 10/12) Richtung Kottbusser Tor zwischen Oranienstr. und Kottbusser Tor, 19.07.2012 09:00 Uhr bis 12.10.2012 17:00 Uhr¦INKO_114376¦http://asp.vmzberlin.com/VMZ_LSBB_MELDUNGEN_WEB/Meldungskarte.jsp?back=true&map=true&x=52.50035&y=13.41862&zoom=13&meldungId=INKO_114376
 userdel	q4::inwork; 11389,10463 11393,10390
 EOF
@@ -20551,18 +20551,18 @@ userdel	q4::inwork; 9998,16547 9883,16557 9816,16565 9781,16569
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
-       text  => 'Weserstr. - Boxhagener Str.: Tor in einer Hausdurchfahrt, womöglich nachts versperrt',
+       until => undef, #
+       text  => 'Weserstr. - Boxhagener Str.: Tor in einer Hausdurchfahrt, nachts gesperrt',
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
-#: XXX überprüfen, ob das überhaupt stimmt
+#: note: geprüft am 2012-11-02 (gegen 22:30)
 userdel	2::night 14838,11410 14776,11400
 EOF
      },
      { from  => 1345119120, # 2012-08-16 14:12
-       until => 1351699200, # 2012-10-31 17:00
-       text  => 'Köthener Brücke (Tiergarten): Baustelle, Straße gesperrt bis Ende Oktober 2012',
+       until => 1355587200, # 2012-12-15 17:00
+       text  => 'Köthener Brücke (Tiergarten): Baustelle, Straße gesperrt bis Mitte Dezember 2012',
        type  => 'handicap',
        source_id => 'IM_019090',
        data  => <<EOF,
@@ -20583,7 +20583,7 @@ EOF
        text  => 'Senefelderstr.: Fahrbahn vor der Raumerstr. gesperrt, Ausweichen auf Gehweg erforderlich',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-09-29
+#: last_checked: 2012-10-31
 userdel	q4::inwork 11615,15114 11595,15058
 EOF
      },
@@ -20782,6 +20782,26 @@ EOF
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-mitte/buergerdienste/parkraumbewirtschaftung.html (Zone 3)
 userdel	2::temp::igndisp 10805,12468 10803,12470
+EOF
+     },
+     { from  => 1351638000, # 2012-10-31 00:00
+       until => 1355785199, # 2012-12-17 23:59
+       text  => 'Fahrbahnflächeninstandsetzung in der Winterstraße, voraussichtlich vom 1. November 2012 bis zum 17. Dezember 2012 wird die Fahrbahn wegen Bauarbeiten voll gesperrt ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20121030.1450.377336.html',
+       data  => <<EOF,
+userdel	q4::inwork 8296,18154 8116,18115
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Richardstr.: Baustelle zwischen Böhmische Str. und Richardplatz, Fahrtrichtung gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2012-11-02
+#: next_check: 2012-11-19
+#: XXX möglicherweise wird die Straße danach asphaltiert sein
+userdel	q4::inwork; 13339,7452 13303,7622
 EOF
      },
     );
