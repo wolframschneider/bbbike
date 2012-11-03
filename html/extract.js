@@ -712,7 +712,6 @@ function osm_init(opt) {
     }
 
     function polygon_init() {
-        // var vectors;
         OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '3';
         OpenLayers.Feature.Vector.style['default']['pointRadius'] = '14'; // huge points for tablets
         var renderer = OpenLayers.Layer.Vector.prototype.renderers;
@@ -781,17 +780,10 @@ function osm_init(opt) {
             }
         }
 
-        var options = { /* hover: true, onSelect: serialize, */
-        };
-
+        var options = {}; /* hover: true, onSelect: serialize, */
         var select = new OpenLayers.Control.SelectFeature(vectors, options);
         map.addControl(select);
         select.activate();
-
-        var out_options = {
-            'internalProjection': map.baseLayer.projection,
-            'externalProjection': new OpenLayers.Projection("EPSG:4326")
-        };
 
         controls.modify.activate();
     }
