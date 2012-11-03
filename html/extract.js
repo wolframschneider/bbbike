@@ -727,7 +727,7 @@ function initKeyPress() {
 function polygon_menu(enabled) {
     enabled ? $("#polygon_controls").show() : $("#polygon_controls").hide();
 
-    // always start menu with polygon
+    // always start menu with polygon vertices
     $("#createVertices").removeAttr("checked");
     $("#rotate").removeAttr("checked");
 
