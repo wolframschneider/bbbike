@@ -208,7 +208,6 @@ function plot_polygon(poly) {
     debug("polygon length: " + poly.length);
 
     var epsg4326 = new OpenLayers.Projection("EPSG:4326");
-    var features = [];
     var points = [];
     for (var i = 0; i < poly.length; i++) {
         var point = new OpenLayers.Geometry.Point(poly[i][0], poly[i][1]);
@@ -218,9 +217,8 @@ function plot_polygon(poly) {
 
     var linear_ring = new OpenLayers.Geometry.LinearRing(points);
     var polygonFeature = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Polygon(linear_ring));
-    features.push(polygonFeature);
-
-    return features;
+    
+    return polygonFeature;
 }
 
 /*
