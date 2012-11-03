@@ -445,33 +445,6 @@ function osm_init(opt) {
         }
     }
 
-    function updatePermalink() {
-        if (state.permalink) {
-            debug("updatePermalink");
-            state.permalink.updateLink();
-        }
-    }
-
-    // size of an area in square km
-
-    function square_km(x1, y1, x2, y2) { // SW x NE
-        var height = OpenLayers.Util.distVincenty({
-            lat: x1,
-            lon: y1
-        }, {
-            lat: x1,
-            lon: y2
-        });
-        var width = OpenLayers.Util.distVincenty({
-            lat: x1,
-            lon: y1
-        }, {
-            lat: x2,
-            lon: y1
-        });
-
-        return (height * width);
-    }
 
     // wait 0.2 seconds before starting validate
     var _validate_timeout;
@@ -485,144 +458,6 @@ function osm_init(opt) {
         }
     state.validateControls = validateControls;
 
-    function validateControlsAjax() {
-        var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
-
-        var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
-        var format = $("select[name=format] option:selected").val();
-
-        if (!state.polygon.area && $("#pg").val()) {
-            debug("found pg: " + $("#pg").val() + " as: " + $("#as").val());
-        }
-
-        // value: 0...1
-        var polygon = state.polygon.area && skm > 0 ? (state.polygon.area / skm / 1000000) : 1;
-        $("#pg").attr("value", polygon);
-
-        var url = "/cgi/tile-size.cgi?format=" + format + "&lat_sw=" + $("#sw_lat").val() + "&lng_sw=" + $("#sw_lng").val() + "&lat_ne=" + $("#ne_lat").val() + "&lng_ne=" + $("#ne_lng").val();
-
-        debug("p frac: " + polygon + " skm: " + skm);
-
-        $.getJSON(url, function (data) {
-            var filesize = show_filesize(skm * polygon, data.size * polygon);
-            show_skm(skm * polygon, filesize);
-        });
-
-        function show_skm(skm, filesize) {
-            if ($("#square_km")) {
-                var html = "area covers " + large_int(skm) + " square km";
-                if (config.show_filesize) {
-                    html += filesize.html;
-                    $("#square_km_small").html(large_int(skm) + " skm");
-                    var fs = filesize.size < 1 ? Math.round(filesize.size * 10) / 10 : Math.round(filesize.size);
-                    $("#size_small").html("~" + fs + " MB");
-                    $("#time_small").html(filesize.time + " min");
-                    // $("#square_km").html(html);
-                }
-            }
-
-            // keep area size in forms
-            var area_size = $("#as");
-            if (area_size) {
-                area_size.attr("value", filesize.size);
-            }
-
-            if (skm > config.max_skm) {
-                $("#size").html("Max area size: " + config.max_skm + "skm.");
-                $("#export_osm_too_large").show();
-            } else if (filesize.size > config.max_size["default"]) {
-                $("#size").html("Max file size: " + config.max_size["default"] + " MB.");
-                $("#export_osm_too_large").show();
-            } else if (filesize.format == "osm.obf.zip" && filesize.size > config.max_size["osm.obf.zip"]) {
-                // Osmand works only for small areas less than 200MB
-                $("#size").html("Max osmand file size: " + config.max_size["osm.obf.zip"] + " MB.");
-                $("#export_osm_too_large").show();
-            } else {
-                $("#export_osm_too_large").hide();
-            }
-
-            updatePermalink();
-        }
-
-    }
-
-    function show_filesize(skm, real_size) {
-        var extract_time = 600; // standard extract time in seconds for PBF
-        var format = $("select[name=format] option:selected").val();
-        var size = real_size ? real_size / 1024 : 0;
-        debug("skm: " + parseInt(skm) + " size: " + Math.round(size) + "MB " + format);
-
-        var filesize = {
-            "osm.pbf": {
-                "size": 1,
-                "time": 1
-            },
-            "osm.gz": {
-                "size": 2,
-                "time": 0.5
-            },
-            "osm.bz2": {
-                "size": 1.5,
-                "time": 1
-            },
-            "osm.xz": {
-                "size": 1.8,
-                "time": 0.4
-            },
-            "garmin-osm.zip": {
-                "size": 0.8,
-                "time": 2
-            },
-            "garmin-cycle.zip": {
-                "size": 0.8,
-                "time": 2
-            },
-            "garmin-leisure.zip": {
-                "size": 0.9,
-                "time": 3
-            },
-            "shp.zip": {
-                "size": 1.5,
-                "time": 1
-            },
-            "obf.zip": {
-                "size": 1.4,
-                "time": 10
-            },
-            "navit.zip": {
-                "size": 0.8,
-                "time": 1
-            }
-        };
-
-        var factor = filesize[format].size;
-        var factor_time = filesize[format].time;
-
-        var time_min = extract_time + 0.6 * size + (size * factor_time);
-        var time_max = extract_time + 0.6 * size + (size * factor_time * 2);
-
-        var html = ", ~" + Math.round(size * 10) / 10 + "MB"; //  + format + " data";
-        var time = "";
-        if (skm < config.max_skm) {
-            var min = Math.ceil(time_min / 60);
-            var max = Math.ceil(time_max / 60);
-            time = min + (min != max ? "-" + max : "");
-
-            html += ", approx. extract time: " + time + " minutes";
-        }
-
-        var obj = {
-            "html": html,
-            // text message
-            "size": size,
-            // size in MB
-            "time": time,
-            // time in minutes
-            "format": format
-        };
-
-        return obj;
-    }
 
     // ???
 
@@ -1052,6 +887,173 @@ function select_city(name) {
 
     key = list[parseInt(Math.random() * list.length)];
     return city[key];
+}
+
+function updatePermalink() {
+    if (state.permalink) {
+        debug("updatePermalink");
+        state.permalink.updateLink();
+    }
+}
+
+function show_skm(skm, filesize) {
+    if ($("#square_km")) {
+        var html = "area covers " + large_int(skm) + " square km";
+        if (config.show_filesize) {
+            html += filesize.html;
+            $("#square_km_small").html(large_int(skm) + " skm");
+            var fs = filesize.size < 1 ? Math.round(filesize.size * 10) / 10 : Math.round(filesize.size);
+            $("#size_small").html("~" + fs + " MB");
+            $("#time_small").html(filesize.time + " min");
+            // $("#square_km").html(html);
+        }
+    }
+
+    // keep area size in forms
+    var area_size = $("#as");
+    if (area_size) {
+        area_size.attr("value", filesize.size);
+    }
+
+    if (skm > config.max_skm) {
+        $("#size").html("Max area size: " + config.max_skm + "skm.");
+        $("#export_osm_too_large").show();
+    } else if (filesize.size > config.max_size["default"]) {
+        $("#size").html("Max file size: " + config.max_size["default"] + " MB.");
+        $("#export_osm_too_large").show();
+    } else if (filesize.format == "osm.obf.zip" && filesize.size > config.max_size["osm.obf.zip"]) {
+        // Osmand works only for small areas less than 200MB
+        $("#size").html("Max osmand file size: " + config.max_size["osm.obf.zip"] + " MB.");
+        $("#export_osm_too_large").show();
+    } else {
+        $("#export_osm_too_large").hide();
+    }
+
+    updatePermalink();
+}
+
+
+// size of an area in square km
+
+function square_km(x1, y1, x2, y2) { // SW x NE
+    var height = OpenLayers.Util.distVincenty({
+        lat: x1,
+        lon: y1
+    }, {
+        lat: x1,
+        lon: y2
+    });
+    var width = OpenLayers.Util.distVincenty({
+        lat: x1,
+        lon: y1
+    }, {
+        lat: x2,
+        lon: y1
+    });
+
+    return (height * width);
+}
+
+function validateControlsAjax() {
+    var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
+
+    var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
+    var format = $("select[name=format] option:selected").val();
+
+    if (!state.polygon.area && $("#pg").val()) {
+        debug("found pg: " + $("#pg").val() + " as: " + $("#as").val());
+    }
+
+    // value: 0...1
+    var polygon = state.polygon.area && skm > 0 ? (state.polygon.area / skm / 1000000) : 1;
+    $("#pg").attr("value", polygon);
+
+    var url = "/cgi/tile-size.cgi?format=" + format + "&lat_sw=" + $("#sw_lat").val() + "&lng_sw=" + $("#sw_lng").val() + "&lat_ne=" + $("#ne_lat").val() + "&lng_ne=" + $("#ne_lng").val();
+
+    debug("p frac: " + polygon + " skm: " + skm);
+
+    $.getJSON(url, function (data) {
+        var filesize = show_filesize(skm * polygon, data.size * polygon);
+        show_skm(skm * polygon, filesize);
+    });
+}
+
+function show_filesize(skm, real_size) {
+    var extract_time = 600; // standard extract time in seconds for PBF
+    var format = $("select[name=format] option:selected").val();
+    var size = real_size ? real_size / 1024 : 0;
+    debug("skm: " + parseInt(skm) + " size: " + Math.round(size) + "MB " + format);
+
+    var filesize = {
+        "osm.pbf": {
+            "size": 1,
+            "time": 1
+        },
+        "osm.gz": {
+            "size": 2,
+            "time": 0.5
+        },
+        "osm.bz2": {
+            "size": 1.5,
+            "time": 1
+        },
+        "osm.xz": {
+            "size": 1.8,
+            "time": 0.4
+        },
+        "garmin-osm.zip": {
+            "size": 0.8,
+            "time": 2
+        },
+        "garmin-cycle.zip": {
+            "size": 0.8,
+            "time": 2
+        },
+        "garmin-leisure.zip": {
+            "size": 0.9,
+            "time": 3
+        },
+        "shp.zip": {
+            "size": 1.5,
+            "time": 1
+        },
+        "obf.zip": {
+            "size": 1.4,
+            "time": 10
+        },
+        "navit.zip": {
+            "size": 0.8,
+            "time": 1
+        }
+    };
+
+    var factor = filesize[format].size;
+    var factor_time = filesize[format].time;
+
+    var time_min = extract_time + 0.6 * size + (size * factor_time);
+    var time_max = extract_time + 0.6 * size + (size * factor_time * 2);
+
+    var html = ", ~" + Math.round(size * 10) / 10 + "MB"; //  + format + " data";
+    var time = "";
+    if (skm < config.max_skm) {
+        var min = Math.ceil(time_min / 60);
+        var max = Math.ceil(time_max / 60);
+        time = min + (min != max ? "-" + max : "");
+
+        html += ", approx. extract time: " + time + " minutes";
+    }
+
+    var obj = {
+        "html": html,
+        // text message
+        "size": size,
+        // size in MB
+        "time": time,
+        // time in minutes
+        "format": format
+    };
+
+    return obj;
 }
 
 // EOF
