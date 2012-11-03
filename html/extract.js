@@ -217,7 +217,7 @@ function plot_polygon(poly) {
 
     var linear_ring = new OpenLayers.Geometry.LinearRing(points);
     var polygonFeature = new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Polygon(linear_ring));
-    
+
     return polygonFeature;
 }
 
