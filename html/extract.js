@@ -5,7 +5,6 @@
 
 // HTML5
 // "use strict"
-
 // central config
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
@@ -48,57 +47,7 @@ var console;
 // polygon & rectangle variables
 var vectors;
 
-/*
-  select an area to display on the map
-*/
-function select_city(name) {
-    var city = {
-        "Berlin": {
-            "sw": [12.875, 52.329],
-            "ne": [13.902, 52.705]
-        },
-        "SanFrancisco": {
-            "sw": [-122.9, 37.2],
-            "ne": [-121.7, 37.9]
-        },
-        "NewYork": {
-            "sw": [-75, 40.1],
-            "ne": [-72.9, 41.1]
-        },
-        "Copenhagen": {
-            "sw": [11.8, 55.4],
-            "ne": [13.3, 56]
-        }
-    }
-
-    if (name && city[name]) {
-        return city[name];
-    }
-
-    var key;
-    var list = new Array;
-    for (key in city) {
-        list.push(key);
-    }
-
-    key = list[parseInt(Math.random() * list.length)];
-    return city[key];
-}
-
-function init_map_size() {
-    var resize = null;
-
-    // set map height depending on the free space on the browser window
-    setMapHeight();
-
-    // reset map size, 3x a second
-    $(window).resize(function () {
-        if (resize) clearTimeout(resize);
-        resize = setTimeout(function () {
-            setMapHeight();
-        }, 500);
-    });
-}
+////////////////////////////////////////////////////////////////////////////////
 
 function init() {
     initKeyPress();
@@ -227,6 +176,21 @@ function init() {
     permalink_init();
 }
 
+function init_map_size() {
+    var resize = null;
+
+    // set map height depending on the free space on the browser window
+    setMapHeight();
+
+    // reset map size, 3x a second
+    $(window).resize(function () {
+        if (resize) clearTimeout(resize);
+        resize = setTimeout(function () {
+            setMapHeight();
+        }, 500);
+    });
+}
+
 function string2coords(coords) {
     var list = [];
     if (!coords) return list;
@@ -237,6 +201,8 @@ function string2coords(coords) {
     }
     return list;
 }
+
+/* create a polygon based on a points list, which can be added to a vector */
 
 function plot_polygon(poly) {
     debug("polygon length: " + poly.length);
@@ -322,7 +288,6 @@ function permalink_init() {
         map.addControl(permalink);
     }, 200);
 }
-
 
 
 function osm_init(opt) {
@@ -810,7 +775,6 @@ function osm_init(opt) {
 
 // called from HTML page
 
-
 function polygon_update() {
     return state.update()
 };
@@ -1051,6 +1015,43 @@ function polygon_menu(enabled) {
     // always start menu with polygon
     $("#createVertices").attr("checked", "checked");
     $("#rotate").attr("checked", "");
+}
+
+/*
+  select an area to display on the map
+*/
+function select_city(name) {
+    var city = {
+        "Berlin": {
+            "sw": [12.875, 52.329],
+            "ne": [13.902, 52.705]
+        },
+        "SanFrancisco": {
+            "sw": [-122.9, 37.2],
+            "ne": [-121.7, 37.9]
+        },
+        "NewYork": {
+            "sw": [-75, 40.1],
+            "ne": [-72.9, 41.1]
+        },
+        "Copenhagen": {
+            "sw": [11.8, 55.4],
+            "ne": [13.3, 56]
+        }
+    }
+
+    if (name && city[name]) {
+        return city[name];
+    }
+
+    var key;
+    var list = new Array;
+    for (key in city) {
+        list.push(key);
+    }
+
+    key = list[parseInt(Math.random() * list.length)];
+    return city[key];
 }
 
 // EOF
