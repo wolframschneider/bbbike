@@ -967,6 +967,10 @@ function polygon_init() {
         }
     }
 
+    vectors.onFeatureInsert = function () {
+        debug("rectangle/polygon created");
+    }
+
     vectors.events.on({
         "beforefeaturemodified": report,
         "featuremodified": report,
