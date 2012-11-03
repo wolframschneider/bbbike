@@ -19,7 +19,7 @@ var config = {
     },
 
     "show_filesize": true,
-    "city_name_optional": false,
+    "city_name_optional": true,
     "enable_polygon": true,
 
     // in MB
@@ -125,7 +125,7 @@ function init() {
     var bounds;
 
     // read from input, back button pressed?
-    if (check_lnglat_form(1)) {
+    if (check_lnglat_form(true)) {
         var sw_lng = $("#sw_lng").val();
         var sw_lat = $("#sw_lat").val();
         var ne_lng = $("#ne_lng").val();
@@ -172,7 +172,7 @@ function init() {
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
 
-    osm_init(opt);
+    extract_init(opt);
     permalink_init();
 }
 
@@ -290,18 +290,20 @@ function permalink_init() {
 }
 
 
-function osm_init(opt) {
+function extract_init(opt) {
     var box;
     var transform;
     var markerLayer;
     var markerControl;
 
     function startExport() {
+        // main vector
         vectors = new OpenLayers.Layer.Vector("Vector Layer", {
             displayInLayerSwitcher: false
         });
         map.addLayer(vectors);
 
+        // start with a rectangle first
         box = new OpenLayers.Control.DrawFeature(vectors, OpenLayers.Handler.RegularPolygon, {
             handlerOptions: {
                 sides: 4,
@@ -313,6 +315,7 @@ function osm_init(opt) {
         box.handler.callbacks.done = endDrag;
         map.addControl(box);
 
+        // resize retangle, but not rotate or add points
         transform = new OpenLayers.Control.TransformFeature(vectors, {
             rotate: false,
             irregular: true
@@ -458,13 +461,6 @@ function osm_init(opt) {
         }
     state.validateControls = validateControls;
 
-
-    // ???
-
-    function getMapLayers() {
-        return "M";
-    }
-
     function mapnikImageSize(scale) {
         var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
@@ -473,12 +469,6 @@ function osm_init(opt) {
         bounds.transform(epsg4326, epsg900913);
 
         return new OpenLayers.Size(Math.round(bounds.getWidth() / scale / 0.00028), Math.round(bounds.getHeight() / scale / 0.00028));
-    }
-
-    function roundScale(scale) {
-        var precision = 5 * Math.pow(10, Math.floor(Math.LOG10E * Math.log(scale)) - 2);
-
-        return precision * Math.ceil(scale / precision);
     }
 
     function mapnikSizeChanged() {
@@ -506,10 +496,6 @@ function osm_init(opt) {
     }
 
     var controls;
-
-    function osm_round(number) {
-        return parseInt(number * 1000 + 0.5) / 1000;
-    }
 
     function polygon_init() {
         OpenLayers.Feature.Vector.style['default']['strokeWidth'] = '3';
@@ -567,7 +553,7 @@ function osm_init(opt) {
             var coords = "";
             for (var i = 0; i < vec.length; i++) {
                 if (i > 0) coords += '|';
-                coords += osm_round(vec[i].x) + "," + osm_round(vec[i].y);
+                coords += v(vec[i].x) + "," + v(vec[i].y);
             }
             $("#coords").attr("value", coords);
 
@@ -1054,6 +1040,10 @@ function show_filesize(skm, real_size) {
     };
 
     return obj;
+}
+
+function osm_round(number) {
+    return parseInt(number * 1000 + 0.5) / 1000;
 }
 
 // EOF
