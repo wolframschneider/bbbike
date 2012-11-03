@@ -6,7 +6,6 @@
 // HTML5
 // "use strict"
 
-
 // central config
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
@@ -188,6 +187,8 @@ function init() {
 
         // back button: reset coordinates to original values
         opt.back_function = function () {
+            debug("get coords from back button");
+
             $("#sw_lng").val(sw_lng);
             $("#sw_lat").val(sw_lat);
             $("#ne_lng").val(ne_lng);
@@ -197,6 +198,7 @@ function init() {
             debug("coords: " + coords);
             state.validateControls();
             map.events.unregister("moveend", map, state.mapMoved);
+            polygon_menu(true);
         };
 
         if (config.enable_polygon) {
@@ -397,7 +399,7 @@ function osm_init(opt) {
 
     function startDrag() {
         $("#drag_box").html("Drag a box on the map to select an area");
-        if (config.enable_polygon) $("#polygon_controls").hide();
+        if (config.enable_polygon) polygon_menu(false);
 
         clearBox();
         setBounds(map.getExtent());
@@ -416,8 +418,7 @@ function osm_init(opt) {
 
         $("#drag_box").html("Manually select a different area");
         if (config.enable_polygon) {
-            $("#polygon_controls").show();
-            $("#createVertices").attr("checked", "checked"); // always start menu with polygon
+            polygon_menu(true);
         }
     }
 
@@ -808,12 +809,10 @@ function osm_init(opt) {
 }
 
 // called from HTML page
+
+
 function polygon_update() {
     return state.update()
-};
-
-function polygon_toggleControl(element) {
-    return state.toggleControl(element)
 };
 
 /* 240000 -> 240,000 */
@@ -1045,5 +1044,13 @@ function initKeyPress() {
         }
     };
 };
+
+function polygon_menu(enabled) {
+    enabled ? $("#polygon_controls").show() : $("#polygon_controls").hide();
+
+    // always start menu with polygon
+    $("#createVertices").attr("checked", "checked");
+    $("#rotate").attr("checked", "");
+}
 
 // EOF
