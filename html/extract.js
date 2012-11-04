@@ -132,6 +132,10 @@ function init() {
         var ne_lat = $("#ne_lat").val();
         var coords = $("#coords").val();
 
+        if (coords == "0,0,0") { // to long URL, ignore
+            coords = "";
+        }
+
         bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
         // back button: reset coordinates to original values
