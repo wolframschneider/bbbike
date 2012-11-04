@@ -1062,16 +1062,14 @@ function polygon_init() {
 jQuery(document).ready(function () {
     if (jQuery('#tools-helpwin').length == 0) return;
 
-    // jQuery('#tools-switcher').bind('change', chooseTool);
     jQuery('#tools-helpwin').jqm({
         ajax: '/extract-mini.html',
-        trigger: 'a#tools-helptrigger',
+        trigger: 'a.tools-helptrigger',
         overlay: 0,
         onLoad: function (hash) {
             hash.w.jqmAddClose('.dialog-close');
         }
     });
 });
-
 
 // EOF
