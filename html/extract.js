@@ -4,7 +4,8 @@
 */
 
 // HTML5
-// "use strict"
+"use strict"
+
 // central config
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
@@ -531,7 +532,7 @@ function checkform() {
     var color_error = "red";
 
     var inputs = $("form#extract input"); // debug("inputs elements: " + inputs.length); return false;
-    for (i = 0; i < inputs.length; ++i) {
+    for (var i = 0; i < inputs.length; ++i) {
         var e = inputs[i];
 
         if (e.value == "") {
