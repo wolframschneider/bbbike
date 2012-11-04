@@ -8136,7 +8136,7 @@ sub header {
     push @javascript, 'bbbike.js';
     if ($enable_opensearch_suggestions) {
 	my $city = $osm_data && $datadir =~ m,data-osm/(.+), ? $1 : 'Berlin';
-	push @javascript, "jquery-1.4.2.min.js", "devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete.js";
+	push @javascript, "jquery/jquery-1.4.2.min.js", "devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete.js";
     }
 
     if (is_production($q)) {
