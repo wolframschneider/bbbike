@@ -8376,7 +8376,7 @@ $permalink_text
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
 (&copy;) 1998-2012 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
-Map data (&copy;) <a href="http://www.openstreetmap.org/">OpenStreetMap.org</a> contributors<br >
+Map data (&copy;) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap.org</a> contributors<br >
 
 </div> <!-- copyright -->
 
