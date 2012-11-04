@@ -671,8 +671,8 @@ function setStartPos(lon, lat, zoom) {
     map.setCenter(center, zoom);
 }
 
-function locateMe_cb(position) {
-    setStartPos(position.coords.longitude, position.coords.latitude, 10);
+function locateMe_cb(pos) {
+    setStartPos(pos.coords.longitude, pos.coords.latitude, 10);
     locateMe_tag().hide();
     debug("set position: " + pos.lat + "," + pos.lon);
 }
