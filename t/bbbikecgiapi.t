@@ -30,7 +30,7 @@ $tests -= 2 if $ENV{BBBIKE_TEST_ORG};
 
 plan tests => $tests;
 
-my $ua = LWP::UserAgent->new;
+my $ua = LWP::UserAgent->new(keep_alive => 1);
 $ua->agent('BBBike-Test/1.0');
 $ua->env_proxy;
 

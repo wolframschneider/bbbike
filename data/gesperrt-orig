@@ -310,7 +310,6 @@ Reiherbeize	1 444,4498 593,4262
 Mendelssohnstr.	1 11598,13598 11550,13642 11545,13690
 Am Bäkequell	1 4593,5235 4656,5101
 Sella-Hasse-Str.	1 20948,16612 20791,16679 20861,16819
-Buggenhagenstr.	1 14425,13780 14370,13615
 Schollenhof	1 3238,21448 3155,21572 3236,21601 3280,21477
 Siegfried-Aufhäuser-Platz	1 13952,7497 13941,7522 13953,7548 13980,7548
 Saltykowstr.	1 12726,7887 12865,7923
@@ -443,10 +442,6 @@ Wustermarker Str.	1 -5097,14599 -5111,14486 -5004,14454 -4981,14442 -4750,14393
 Gartenstr. (Köpenick)	1 22419,4457 22382,4361 22362,4331 22302,4255 22279,4220
 Spitzerstr.	1 22319,4197 22358,4282 22425,4370 22451,4441
 Zitadellenweg/BMW-Betriebswerk	2 -1993,14594 -1768,14605 -1616,14527
-#: by: misersky:
-#: XXX wird die Einbahnstraße für Radfahrer wegen der Radroute geöffnet?
-#: XXX Baumaßnahme 3.34 (Realisierung bis 2010)
-Tassostr.	1 13679,16286 13645,16192 13659,16151 13642,16118 13625,16054 13621,15990 13630,15956
 #: by: rr riva w.m.s:
 Heimat	1 1032,1325 994,1485 968,1479 941,1603
 #: by: MIchael Wedel:
@@ -668,7 +663,7 @@ Enckevortweg	1 18530,10887 18570,10768 18587,10716 18596,10675
 Schulze-Boysen-Str./Frankfurter Allee	1 15597,11957 15592,11881 15738,11851
 Rübezahlstr.	1 15136,7106 15222,7162
 Wegastr	1 15222,7162 15175,7221
-Möllendorffstr.	1 15515,13134 15566,12953 15563,12860 15546,12690
+Möllendorffstr.	1 15515,13134 15531,13022 15561,12950 15563,12860 15546,12690
 Möllendorffstr.	1 15546,12690 15516,12838 15515,13134
 Joachimsthaler Str. (Hohenschönhausen)	1 17117,14885 17129,14804 17063,14797 16943,14785
 Otto-Brahm-Str.	1 14440,15682 14400,15787 14365,15778 14282,15746 14317,15642
@@ -991,6 +986,9 @@ Alfred-Kowalke-Str.	1 18027,11244 18059,11256 18179,11278 18229,11256
 Alfred-Kowalke-Str.	1 18229,11256 18202,11253 18061,11240 18027,11244
 Wittenbergplatz	1 6171,10657 6228,10646 6292,10627 6353,10583
 Wittenbergplatz	1 6353,10583 6268,10588 6216,10614 6171,10657
+Amalienstr.	1s:q3 13789,16775 13722,16843 13653,16907 13589,16965
+Pasedagplatz	1 14099,17195 14150,17255 14170,17249
+Pasedagplatz	1s:q3 14174,17226 14144,17165
 ######################################################################
 #
 # Potsdam
@@ -1174,7 +1172,7 @@ Stephanstr.	1s 6523,4491 6360,4504
 Am Poetensteig, Gramzow	1s:q1 50043,90187 50107,89717
 #: by: Juliane Bölker:
 Atzpodienstr. (Umgehung auf Gehweg möglich)	1s:q3 16485,12384 16509,12518 16564,12513
-Behrenstr./Bebelplatz	1s:q3 9801,12245 9743,12239 9708,12235 9674,12231 9631,12227
+# REMOVED (wegen der Bauarbeiten an der Staatsoper ist die Einbahnstraßenregelung aufgehoben) --- Behrenstr./Bebelplatz	1s:q3 9801,12245 9743,12239 9708,12235 9674,12231 9631,12227
 Halenseestr.	1s:q2 2297,9827 2166,10020 2121,10089 2030,10253 1988,10328 1951,10435
 Zeltinger Platz	1s:q4 2404,25187 2355,25252 2395,25273 2446,25265 2490,25211 2486,25156 2451,25123 2404,25187
 Ludolfinger Platz	1s:q4 2277,25033 2245,25016 2205,25042 2192,25083 2216,25117 2277,25094 2285,25059 2277,25033
@@ -1216,7 +1214,7 @@ Hauptstr.: Straßenbahntrasse	3nocross 15639,10469 15404,10633 15379,10651
 Hauptstr.: Straßenbahntrasse	3nocross 16004,10204 16114,10123 16138,10105
 #: by: Heike Steinhardt ("eher nicht empfehlenswert")
 #: confirmed_by: srt
-Kniprodestr.: Grünstreifen	3nocross 13654,14905 13749,15013 13838,15113
+Kniprodestr.: Grünstreifen	3nocross 13644,14915 13744,15018 13823,15111
 An der Wuhlheide: Mittelstreifen	3nocross 19578,6165 19405,6276 19276,6359
 Heerstr.: nicht überquerbar	3nocross 456,11233 585,11256 704,11273
 #: by: Sabine (schaeffler)
@@ -1263,7 +1261,6 @@ Siemensdamm: Mittelstreifen	3nocross 1133,14387 1057,14389 999,14390 937,14391 8
 Siemensdamm: Mittelstreifen	3nocross 1133,14387 1182,14384 1246,14384 1305,14384 1360,14375
 Siemensdamm: Mittelstreifen	3nocross 1360,14375 1420,14369 1479,14343
 Suermondtstr: Straßenbahntrasse	3nocross 16095,16331 16260,16282 16416,16236
-Suermondtstr: Straßenbahntrasse	3nocross 16416,16236 16515,16207 16660,16165
 #: by: Vicky (senchi):
 #: confirmed_by: srt
 Berliner Allee: Straßenbahntrasse	3nocross 14499,16341 14556,16391 14610,16522
@@ -1320,7 +1317,7 @@ Riesaer Str.: Straßenbahntrasse	3nocross 24198,14454 24162,14487 24120,14526
 Riesaer Str.: Straßenbahntrasse	3nocross 24721,14293 24870,14244 24930,14225 24983,14208 25095,14171
 Rummelsburger Str.: wegen Überführung nicht überquerbar	3nocross 17527,7812 17681,7589 17839,7365 18010,7133
 Detmolder Str.: Mittelstreifen nicht passierbar	3nocross 4469,8037 4659,7982 4793,7992
-Rhinstr.: Straßenbahntrasse	3nocross 18215,12132 18216,12239 18216,12262 18220,12450
+Rhinstr.: Straßenbahntrasse	3nocross 18215,12123 18216,12239 18216,12262 18220,12450
 Rhinstr.: Straßenbahntrasse	3nocross 18181,14110 18184,14078 18187,14039 18206,13817
 Rhinstr.: Straßenbahntrasse	3nocross 17829,15015 17886,14899 17937,14795 17991,14684 18057,14549
 Allee der Kosmonauten: Straßenbahntrasse	3nocross 19628,13517 19726,13524 19807,13529 19837,13531 19894,13535 20073,13535 20150,13562
@@ -1520,16 +1517,21 @@ Invalidenstr.: Mittelstreifen	3nocross 7814,13284 7840,13296 7880,13315
 Alt-Moabit: Mittelstreifen, hohe Bordsteine und parkende Autos	3nocross 7821,12934 7776,12943 7595,12980
 Köpenicker Str.: Mittelstreifen	3nocross 21137,11294 21134,11331 21124,11462
 Märkische Allee/Alt-Friedrichsfelde	3 20018,11698 20026,11663 20064,11687
+Hansastr.: Mittelstreifen	3nocross 15662,16656 15735,16698 15776,16721
 abgeschlossenes Tor	3 * 8237,20098 *
 abgeschlossenes Tor	3 * 8291,20112 *
 abgeschlossenes Tor	3 * 3796,16202 *
 abgeschlossenes Tor	3 * 5083,22149 *
+#: note: theoretisch kommt man als Radfahrer weiter südwestlich zur Konrad-Wolf-Str., allerdings ist dort auch ein Tor, welches vielleicht nachts abgeschlossen ist
+abgeschlossenes Tor	3 * 15835,15092 *
 #
 ####################################################################
 #
 # Stellen, an denen getragen werden muß:
 # die Zahl hinter dem ":" entspricht ungefähr den verlorenen Sekunden
 # 
+tragen (7 weite Stufen)	0:30 15759,16671
+tragen (6 Stufen)	0:12 15915,16526
 tragen (8 Stufen)	0:12 18184,9626
 tragen (3 Stufen, kann auf einer inoffiziellen Rampe umfahren werden)	0:10 8029,10106
 #: by: Stefan Klinkusch:
@@ -1663,8 +1665,7 @@ tragen (ca. 35 Stufen)	0:30 3361,15784
 #: by: Alwin (...schock):
 #: corrected_by: srt (40 -> 4x8)
 tragen (4 x 8 Stufen)	0:30 1761,3208
-#: note: Luftbild (Stufenanzahl)
-tragen (ca. 30 Stufen)	0:30 17757,11761
+tragen (36 Stufen)	0:35 17759,11768
 tragen (15 Stufen)	0:30 4710,23263
 tragen (ca. 30 Stufen)	0:30 1179,13532
 tragen (7 Stufen)	0:20 9762,16119
@@ -1679,7 +1680,7 @@ tragen (Treppe)	0:30 4808,3404
 tragen (zwei Treppen, je ca. 10 Stufen)	0:30 8822,16873
 tragen (Treppe)	0:30 14390,5443
 tragen (Treppe)	0:30 14325,5409
-tragen (ca. 35 Stufen)	0:30 18180,12262
+tragen (28 Stufen)	0:30 18180,12262
 tragen (S-Bhf. Marzahn)	0:30 19571,15417
 tragen (S-Bhf. Marzahn)	0:30 19638,15431
 tragen (13 Stufen)	0:30 7923,12876
@@ -2194,7 +2195,7 @@ Carlsgarten - Wuhlheide: wegen Bauarbeiten Durchfahrtsmöglichkeit zweifelhaft; e
 #: next_check: 2013-02-01
 Alt-Moabit - Invalidenstr.: wegen Bauarbeiten für die Straßenbahnanbindung gesperrt	2:inwork 7443,13008 7416,13058
 # 
-#: last_checked: 2012-11-02
+#: last_checked: 2012-11-05
 #: next_check: 2013-03-01
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
 #: XXX siehe auch Eintrag in handicap_s-orig
@@ -2211,8 +2212,8 @@ Parkplatz des ehem. Möbelhauses ist eingezäunt	2:inwork 17010,14269 17060,14255 
 #: next_check: 2013-06-01
 Rudi-Dutschke-Weg	2:inwork 2627,5095 2913,5294
 # 
-#: last_checked: 2012-10-23
-#: next_check: 2012-12-01
+#: last_checked: 2012-11-05
+#: next_check: 2013-03-15
 #: XXX Siehe auch Baustellenampel an der Wilhelmstr.
 #: XXX Siehe auch handicap in der Voßstr.
 #: XXX laut INKO_113363 bis Ende März 2013 gesperrt
@@ -2226,8 +2227,8 @@ Zur Monumentenhalle: Straße wird wahrscheinlich neu gebaut	2:inwork 8376,8859 84
 #: next_check: 2013-01-01
 Billy-Wilder-Promenade: wegen Bauarbeiten an umliegenden Wohnhäusern gesperrt	2:inwork 2528,1501 2584,1376
 # 
-#: last_checked: 2012-10-25
-#: next_check: 2012-12-01
+#: last_checked: 2012-11-05
+#: next_check: 2013-03-01
 Marx-Engels-Forum: wegen U-Bahn-Bauarbeiten Durchgang zur Rathausstr. nicht möglich	2:inwork 10411,12471 10422,12395
 # 
 #: last_checked: 2012-05-06
@@ -2291,16 +2292,17 @@ Uferweg am Tegeler Hafen: Weg wegen Bauarbeiten gesperrt	2:inwork 1861,20467 182
 #: note: abgeschlossener Zaun
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
 #
-#: last_checked: 2012-08-16
+#: last_checked: 2012-11-04
 #: next_check: 2012-12-01
 #: XXX mit den Bauarbeiten "An den Eldenaer Höfen" koordinieren
-Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405,12953 14686,12873
+Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405,12953 14682,12874
 #
 # REMOVED --- #: last_checked: 2011-04-30 --- Tiergartenufer: Bauarbeiten, gesperrt	2:inwork 5711,11841 5543,11837 5478,11860
 # REMOVED --- #: last_checked: 2011-04-08 --- Bebelplatz: Bauarbeiten, gesperrt	2:inwork 9679,12388 9702,12307 9708,12235
 #
-#: last_checked: 2012-10-19 vvv
-#: next_check: 2012-12-01 vvv
+#: last_checked: 2012-11-05 vvv
+#: next_check: 2013-03-01 vvv
+#: XXX siehe auch aufgehobene Einbahnstraßenregelung oben (Behrenstr./Bebelplatz)
 Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
 Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9869,12297
 Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9808,12182 9801,12245 9795,12293 9780,12401
@@ -2308,8 +2310,8 @@ Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12
 #: next_check: ^^^
 #: last_checked: ^^^
 # 
-#: last_checked: 2012-10-25
-#: next_check: 2013-01-15
+#: last_checked: 2012-11-05
+#: next_check: 2013-03-01
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 # REMOVED (Boulevard Berlin!) --- #: last_checked: 2011-12-25 --- #: next_check: 2012-01-01 --- #: XXX evenuell bleibt dieser Teil dauerhaft gesperrt, weil hier ein Einkaufszentrum entsteht? --- #: XXX auch die Ampel an der Kreuzung prüfen --- Treitschkestr.: Bauarbeiten am Kaufhaus, bis 2012	2:inwork 5219,6215 5125,6262 4971,6345
