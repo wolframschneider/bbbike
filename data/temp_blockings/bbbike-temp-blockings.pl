@@ -3010,7 +3010,7 @@ EOF
        text  => 'Ehrlichstr. (Lichtenberg) zwischen Wildensteiner Str. und Treskowallee Baustelle, gesperrt (bis 23.10.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 18147,8583 18225,8532 18322,8470 18391,8425 18461,8377 18528,8331 18615,8269 18676,8236
+userdel	q4 18151,8589 18228,8537 18322,8470 18391,8425 18461,8377 18528,8331 18615,8269 18676,8236
 EOF
      },
      { from  => undef, # 
@@ -4552,7 +4552,7 @@ EOF
        text  => 'Mögliche Behinderungen wegen eines Flugspektakels am Flughafen Tempelhof, 27.5. von 8 bis 24 Uhr ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 10213,8665 9801,8683 9570,8715 9395,8726 9364,8640 9321,8607 9233,8597
+userdel	q4 10209,8661 9801,8683 9570,8715 9395,8726 9364,8640 9321,8607 9233,8597
 userdel	q4 9395,8726 9272,8781 9229,8785 9229,8718 9233,8597 9238,8410 9238,8253 9239,8099 9240,8028 9240,7991 9240,7811 9242,7658 9242,7325 9242,7286 9242,7218 9242,7145
 userdel auto	3 9227,8890 9229,8785 9076,8783
 userdel auto	3 9076,8783 9229,8785 9227,8890
@@ -6198,7 +6198,7 @@ EOF
        text  => 'Ehrlichstraße zwischen Trautenauerstraße und Blockdammweg gesperrt. Dauer 07.10.2006 06:00 Uhr bis 20.10.2006 18:00 Uhr. ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 17729,8850 17879,8773 17929,8737 17993,8689 18005,8681 18080,8626 18147,8583
+userdel	2::inwork 17729,8850 17879,8773 17929,8742 17997,8695 18009,8687 18086,8634 18151,8589
 EOF
      },
      { from  => 1160107200, # 2006-10-06 06:00
@@ -6687,9 +6687,9 @@ EOF
 userdel	2::inwork -31993,-726 -32143,-211 -32153,-176
 EOF
      },
-     { from  => 1321916400, # 2011-11-22 00:00 # PERIODISCH! # früher: 1163480400, # 2006-11-14 06:00
-       until => 1324940399, # 2011-12-26 23:59 # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
-       text  => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: der Bereich Oberwallstr., Niederlagstr., Am Schinkelplatz gesperrt, vom 23.11.-26.12.2010',
+     { from  => 1353884400, # 1321916400, # 2011-11-22 00:00 # PERIODISCH! # früher: 1163480400, # 2006-11-14 06:00
+       until => 1356562740, # 1324940399, # 2011-12-26 23:59 # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
+       text  => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: der Bereich Oberwallstr., Niederlagstr., Am Schinkelplatz gesperrt, vom 26.11.-26.12.2012',
        type  => 'gesperrt',
        source_id => 'http://www.berliner-weihnacht.de/',
        data  => <<EOF,
@@ -7316,7 +7316,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004915',
        data  => <<EOF,
-userdel	2::inwork 8306,8722 8237,8685 8215,8631 8101,8292 8088,8254 7955,7840
+userdel	2::inwork 8306,8722 8237,8685 8215,8631 8100,8288 8088,8254 7955,7840
 EOF
      },
      { from  => 1173913200, # 2007-03-15 00:00
@@ -16914,16 +16914,16 @@ EOF
 userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998 24927,-87720
 EOF
      },
-     { from  => 1321311600, # PERIODISCH! # früher: 1258045387, # 2009-11-12 18:03
-       until => 1325372340, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
+     { from  => 1352934000, # 1321311600, # PERIODISCH! # früher: 1258045387, # 2009-11-12 18:03
+       until => 1356994740, # 1325372340, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
        text  => 'Voltairestr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht oder nur schwer möglich',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 11209,12430 11329,12497
 EOF
      },
-     { from  => 1290960699, # PERIODISCH! # früher: 1258207217, # 2009-11-14 15:00
-       until => 1293836399, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
+     { from  => 1352734264, # 1290960699, # PERIODISCH! # früher: 1258207217, # 2009-11-14 15:00
+       until => 1356994740, # 1293836399, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
        text  => 'Gendarmenmarkt: Weihnachtsmarkt, Durchfahrt nicht möglich (Eintritt!)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -18912,7 +18912,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016132',
        data  => <<EOF,
-userdel	q4::inwork; 7949,7607 7943,7708 7951,7801 7955,7840 8088,8254 8101,8292 8215,8631 8237,8685 8306,8722
+userdel	q4::inwork; 7949,7607 7943,7708 7951,7801 7955,7840 8088,8254 8100,8288 8215,8631 8237,8685 8306,8722
 EOF
      },
      { from  => 1302411000, # 2011-04-10 06:50
@@ -19000,7 +19000,7 @@ EOF
        text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 27.4.2012 bis zum 20.5.2012',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::temp 11177,8985 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
+userdel	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
 userdel	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
 userdel	q4::temp 11275,8387 11230,8402
 userdel	q4::temp 11333,8582 11255,8591 11193,8568 11133,8560
@@ -20046,7 +20046,7 @@ EOF
 ## früher:
 #       source_id => 'INKO_093369',
        data  => <<EOF,
-#: last_checked: 2012-11-05
+#: last_checked: 2012-11-14
 #: next_check: 2013-03-01
 #: XXX ab Glinkastr. nur ungefähr die halbe Strecke bis zur Friedrichstr. gesperrt, deshalb q3
 userdel	q3::inwork; 9164,12172 9373,12197
@@ -20226,7 +20226,7 @@ EOF
        text  => 'Sredzkistr. zwischen Schönhauser Allee und Knaackstr: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-09-30 (wosch)
+#: last_checked: 2012-11-14
 #: note: etwa 50 Meter an der Schönhauser Alee gesperrt
 userdel	q3::inwork 10893,14705 11101,14768
 EOF
@@ -20527,7 +20527,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_114376',
        data  => <<EOF,
-#: last_checked: 2012-10-29
+#: last_checked: 2012-11-10
 #: XXX see also Adalbertstr. (Kreuzberg): Leitungsarbeiten, Fahrtrichtung gesperrt (bis Mitte 10/12) Richtung Kottbusser Tor zwischen Oranienstr. und Kottbusser Tor, 19.07.2012 09:00 Uhr bis 12.10.2012 17:00 Uhr¦INKO_114376¦http://asp.vmzberlin.com/VMZ_LSBB_MELDUNGEN_WEB/Meldungskarte.jsp?back=true&map=true&x=52.50035&y=13.41862&zoom=13&meldungId=INKO_114376
 userdel	q4::inwork; 11389,10463 11393,10390
 EOF
@@ -20578,12 +20578,11 @@ EOF
 userdel	q4::inwork 5102,11006 5122,11300
 EOF
      },
-     { from  => undef, # 
-       until => undef, # XXX
+     { from  => 1352918929, # undef, # 
+       until => 1352918932, # undef, # XXX
        text  => 'Senefelderstr.: Fahrbahn vor der Raumerstr. gesperrt, Ausweichen auf Gehweg erforderlich',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-10-31
 userdel	q4::inwork 11615,15114 11595,15058
 EOF
      },
@@ -20667,7 +20666,7 @@ EOF
        text  => 'Choriner Str.: Einbahnstraße in Höhe Oderberger Str., Richtung Schönhauser Allee gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-10-18
+#: last_checked: 2012-11-14
 userdel	q4::inwork; 10870,14689 10893,14705
 EOF
      },
@@ -20802,6 +20801,38 @@ EOF
 #: next_check: 2012-11-19
 #: XXX möglicherweise wird die Straße danach asphaltiert sein
 userdel	q4::inwork; 13339,7452 13303,7622
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Sredzkistr.: Kreuzungsbereich in Höhe Hosemannstr. gesperrt, Ausweichen auf Gehweg',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2012-11-14 vvv
+#: XXX je 30 Meter vor und hinter der Kreuzung ist gesperrt vvv
+userdel	q2::inwork 11436,14741 11271,14755
+userdel	q3::inwork 11271,14755 11187,14763
+#: XXX ^^^
+#: last_checked ^^^
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Kollwitzplatz: Wochenmarkt Samstag 9-18 Uhr',
+       type  => 'gesperrt',
+       source_id => 'http://www.berliner-zeitung.de/berlin/kollwitzplatz-mit-sack-und-pack-,10809148,11393926.html',
+       recurring => 1,
+       data  => <<EOF,
+	q4::temp:clock 11317,14564 11285,14515 11229,14422
+EOF
+     },
+     { from  => 1352847600, # 2012-11-14 00:00
+       until => 1354229999, # 2012-11-29 23:59
+       text  => 'Straßenbauarbeiten in der Zionskirchstraße von Kastanienallee bis Choriner Straße, Fahrbahn ist gesperrt, vom 15. November 2012 bis ca. 29. November 2012 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20121114.1215.378008.html',
+       data  => <<EOF,
+userdel	q4::inwork 10558,14176 10426,14262
 EOF
      },
     );
