@@ -21,7 +21,7 @@ Skalitzer Str.	1 12899,10595 12985,10665
 Oppelner Str.	1 13028,10629 12978,10581
 Oberbaumstr.	1 12985,10665 13015,10659 13082,10634
 Oberbaumstr.	1 13082,10634 13028,10629
-am Hackeschen Markt (Süd)	1 10132,12941 10117,12966 10097,12997 9932,13109
+am Hackeschen Markt (Süd)	1 10132,12941 10117,12966 10105,13004 9932,13109
 am Hackeschen Markt (Nord)	1 9932,13109 10077,13100 10220,13098 10264,13097
 Dennewitzplatz	1 7866,9918 7813,10112
 Dennewitzplatz	1 7813,10112 7906,10098
@@ -188,7 +188,8 @@ Nalepastr. am Rundfunkgebäude	2 17076,8443 17059,8097
 Kirchstr.	1 22196,4847 22240,4768 22246,4711 22284,4653 22314,4604
 Kietzer Str.	1s:q3 22372,4496 22383,4470
 # REMOVED (hier keine Einbahnstraße, nur eine Sackgasse) --- Ontarioseestr.	1 18552,10135 18577,10023
-Ontarioseestr.	1 18577,10023 18408,10041 18339,10048
+Ontarioseestr.	1 18577,10023 18408,10041
+# REMOVED (hier jetzt eine Sackgasse für Autos) --- Ontarioseestr.	1 18408,10041 18339,10048
 Degnerstr. (außer Tram)	1 16448,15593 16475,15659
 Henriette-Herz-Platz	1 10371,13006 10312,12982 10255,12959
 Savignyplatz	1 4921,11017 4920,10933 4868,10934 4817,10943 4827,11025 4835,11092 4880,11088 4926,11081 4921,11017
@@ -253,7 +254,8 @@ Aspenweg	1 -3000,18196 -3020,18194 -3050,18173 -3096,18119 -3111,18105 -3168,180
 Aspenweg	1 -3288,17831 -3244,17883 -3224,17943
 Pintschstr.	1 13339,13196 13435,12973
 # REMOVED (stimmt nicht (mehr?)) --- Wolliner Str.	1 10405,14425 10320,14608
-Splanemannstr.	1 18301,9946 18389,9925 18408,10041 18403,10077
+Splanemannstr.	1 18301,9946 18389,9925 18408,10041
+Ontarioseestr.	1 18408,10041 18403,10077
 Burgherrenstr.	1 8969,8640 9076,8783
 Travestr.	1 14835,11840 14897,11801 14981,11751
 Müggelstr.	1 14897,11801 14965,11921
@@ -267,7 +269,7 @@ Wöhlertstr.	1 8442,14456 8669,14550
 Pflugstr.	1 8669,14550 8776,14364
 Schwartzkopffstr.	1s:q4 8776,14364 8607,14253
 Strausberger Str.	1 12416,13045 12368,13031
-Große Präsidentenstr.	1 10097,12997 10220,13098
+Große Präsidentenstr.	1 10105,13004 10220,13098
 Naumannstr.	1 7709,8777 7707,8915
 Gritznerstr.	1 4507,6320 4555,6403
 Duisburger Str.	1 4183,10144 3874,10153
@@ -686,7 +688,7 @@ Kaulsdorfer Str.	1 22075,6967 22049,7085
 Steinträgerweg	1 12987,2220 13023,2093
 #: by: anonymous and osm
 Am Kurzen Weg	1 -7180,14351 -7172,14459 -7185,14574
-Straßenbahnwendestelle Virchowstr.	1 12916,13368 13081,13457
+Straßenbahnwendestelle Virchowstr.	1 12925,13373 13081,13457
 Am Friedrichshain	1 12065,13851 12104,13913 12147,13887 12106,13828
 Potsdamer Chausee: explizit für Radfahrer verboten	1 -8797,7638 -8405,7751
 #: by: Maria Hach
@@ -913,8 +915,8 @@ Mark-Twain-Str.	1 24321,14410 24349,14500
 A.T.U-Einfahrt: Tor, außerhalb der Öffnungszeiten (Mo-Fr bis 20 Uhr, Sa bis 16 Uhr) gesperrt	2 8546,9468 8561,9482
 (Erfurter Str. - Wexstr.)	1 6260,8011 6261,8058
 Rubensstr.	1 6429,7876 6307,7893
-Bäumerplan	1 8527,7928 8553,7795
-Bäumerplan	1 8512,7757 8467,7913
+Bäumerplan	1 8527,7939 8553,7795
+Bäumerplan	1 8512,7757 8466,7918
 Mierendorffstr.	1 3645,13189 3542,13063
 Hüttigpfad	1 4810,15000 4887,14931 5057,14824 5095,14792
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.)	1s:q3 11018,13286 11085,13239
@@ -1337,6 +1339,7 @@ Brandenburgische Str.: Tunneleinfahrt Adenauerplatz	3nocross 3852,10236 3874,101
 Treskowallee: Straßenbahntrasse	3nocross 18809,9133 18790,9018 18770,8898
 Treskowallee: Straßenbahntrasse	3nocross 18010,7133 18086,7243 18382,7724
 Treskowallee: Straßenbahntrasse	3nocross 18413,7774 18570,8025 18657,8163
+Treskowallee: Straßenbahntrasse	3nocross 18867,9464 18834,9256 18809,9133
 Bundesallee: unbequem passierbarer Mittelstreifen	3nocross 5463,9961 5464,9914 5467,9866
 Marzahner Kreuz: Linksabbiegen nicht möglich	3nocross 19694,15141 19738,15143 19852,15201
 Marzahner Kreuz: Linksabbiegen nicht möglich	3nocross 19681,15405 19582,15221 19506,15002 19466,14910 19422,14793
@@ -1383,7 +1386,7 @@ Prenzlauer Allee: Mittelstreifen mit Straßenbahn, hier aber Fußgängerfurt vorhan
 #: XXX_prog: eine Überquerungsmöglichkeit existiert 60m weiter südlich
 Prenzlauer Allee: Mittelstreifen mit Straßenbahn	3nocross 12071,16130 12030,15968 11997,15834
 Prenzlauer Allee: Straßenbahntrasse	3nocross 11941,15586 11967,15700 11997,15834
-Danziger Str.: Mittelstreifen mit Straßenbahn	3nocross 11709,14856 11609,14881 11545,14897
+Danziger Str.: Mittelstreifen mit Straßenbahn	3nocross 11709,14856 11609,14881 11535,14900
 Danziger Str.: Mittelstreifen mit Straßenbahn	3nocross 12317,14535 12128,14640 12025,14695
 Torstr.: Mittelstreifen mit Straßenbahn	3nocross 10746,13673 10640,13700 10569,13719 10463,13747
 Yorckstr.: Linksabbiegen verboten (und unbequem)	3nocross 8192,9619 8097,9650 7938,9694
@@ -2174,6 +2177,9 @@ Drängelgitter	BNP:3::trailer=10 49739,-90894
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: last_checked: 2012-11-12
+Helmerdingstr.: Bauarbeiten, Fahrbahn gesperrt	2:inwork 14465,11195 14442,11101
+# 
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20121026.1415.377154.html
 #: next_check: 2013-03-31
 #: XXX nach den Bauarbeiten bessere Qualität? Zurzeit nur Q1-, siehe qualitaet_s-orig
@@ -2195,7 +2201,7 @@ Carlsgarten - Wuhlheide: wegen Bauarbeiten Durchfahrtsmöglichkeit zweifelhaft; e
 #: next_check: 2013-02-01
 Alt-Moabit - Invalidenstr.: wegen Bauarbeiten für die Straßenbahnanbindung gesperrt	2:inwork 7443,13008 7416,13058
 # 
-#: last_checked: 2012-11-05
+#: last_checked: 2012-11-12
 #: next_check: 2013-03-01
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
 #: XXX siehe auch Eintrag in handicap_s-orig
@@ -2291,7 +2297,7 @@ Uferweg am Tegeler Hafen: Weg wegen Bauarbeiten gesperrt	2:inwork 1861,20467 182
 #: next_check: 2013-01-15
 #: note: abgeschlossener Zaun
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
-#
+# 
 #: last_checked: 2012-11-04
 #: next_check: 2012-12-01
 #: XXX mit den Bauarbeiten "An den Eldenaer Höfen" koordinieren
@@ -2299,8 +2305,8 @@ Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14405
 #
 # REMOVED --- #: last_checked: 2011-04-30 --- Tiergartenufer: Bauarbeiten, gesperrt	2:inwork 5711,11841 5543,11837 5478,11860
 # REMOVED --- #: last_checked: 2011-04-08 --- Bebelplatz: Bauarbeiten, gesperrt	2:inwork 9679,12388 9702,12307 9708,12235
-#
-#: last_checked: 2012-11-05 vvv
+# 
+#: last_checked: 2012-11-12 vvv
 #: next_check: 2013-03-01 vvv
 #: XXX siehe auch aufgehobene Einbahnstraßenregelung oben (Behrenstr./Bebelplatz)
 Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
