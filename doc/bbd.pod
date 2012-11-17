@@ -515,6 +515,11 @@ An (official) URL referring to more information.
 Some postprocessing code may add the following line with the
 descriptive text I<string> to the F<fragezeichen> file.
 
+=item C<complete: yesI<|>no>
+
+May be used to mark a feature as complete or incomplete (e.g. cycle
+routes).
+
 =back
 
 =head3 Obsolete and to-be-decided directives
@@ -1094,7 +1099,15 @@ attribute is already handled in a couple of data files
 =item Tu
 
 The map item is in a tunnel. This is already handled in F<sbahn>,
-F<rbahn> and F<strassen_bab>.
+F<rbahn>, F<ubahn>, F<strassen_bab>, and F<wasser*>.
+
+Note that not every BBBike renderer may render a tunnel specially. The
+Perl/Tk application has complete render support for all tunnel
+categories (see also the below ones). The PDFCairo renderer has simple
+support for tunnels (drawn as dashed lines). The PDF and GD renderers
+draw tunnels like normal lines, except for tunneled waterways, which
+are currently completely ignored. All other renderers (e.g. Mapserver)
+draw all tunnels like normal lines.
 
 =item Tu_
 
@@ -1159,6 +1172,15 @@ Mark a temporary blocking which is recurring. Currently rendered with
 a "clock" sign.
 
 =back
+
+=head1 CONVENTIONS
+
+Lines which are to be removed, but still should be kept as a kind of
+"historical documentation", may be turned into a comment with
+"REMOVED" as the first word. Multiple lines may be joined into one
+line, separated by a "---". For example:
+
+    # REMOVED --- #: confirmed_by: me --- old entry X 1234,5678 9876,5432
 
 =head1 EXAMPLES
 

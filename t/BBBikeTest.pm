@@ -43,7 +43,8 @@ use BBBikeUtil qw(is_in_path);
 	      xmllint_string xmllint_file gpxlint_string gpxlint_file kmllint_string
 	      validate_bbbikecgires_xml_string
 	      eq_or_diff is_long_data like_long_data unlike_long_data
-	      like_html unlike_html is_float using_bbbike_test_cgi check_cgi_testing
+	      like_html unlike_html is_float using_bbbike_test_cgi using_bbbike_test_data check_cgi_testing
+	      get_pmake image_ok
 	    ),
 	   @opt_vars);
 
@@ -475,6 +476,10 @@ sub kmllint_string {
 		}
 	    }
 
+	    if (!$schema_file) {
+		Test::More::skip("skipping schema tests", 1);
+	    }
+
 	    require File::Temp;
 	    my($tmpfh,$tmpfile) = File::Temp::tempfile(SUFFIX => ".xml", UNLINK => 1)
 		or die $!;
@@ -621,11 +626,36 @@ sub is_float ($$;$) {
     }
 }
 
-sub using_bbbike_test_cgi () {
-    my $make = $^O =~ m{bsd}i ? "make" : is_in_path("freebsd-make") ? "freebsd-make" : "pmake";
+sub get_pmake () {
+    $^O =~ m{bsd}i ? "make" : 
+	is_in_path("freebsd-make") ? "freebsd-make" : 
+	is_in_path("bsdmake") ? "bsdmake" : 
+	"pmake";
+}
+
+sub _update_bbbike_test_data () {
+    my $make = get_pmake;
     # -f BSDmakefile needed for old pmake (which may be found in Debian)
-    system("cd $testdir/data && $make -f BSDmakefile");
-    Test::More::diag("Error running make, expect test failures...") if $? != 0;
+    my $cmd = "cd $testdir/data-test && $make -f BSDmakefile";
+    system $cmd;
+    Test::More::diag("Error running '$cmd', expect test failures...") if $? != 0;
+}
+
+# Call this function whenever you make use of the data set in t/data.
+sub using_bbbike_test_data () {
+    _update_bbbike_test_data;
+    # Note: no local here!
+    $Strassen::Util::cacheprefix = "test_b_de";
+    @Strassen::datadirs = ("$testdir/data-test");
+    if (0) { # cease -w
+	$Strassen::Util::cacheprefix = $Strassen::Util::cacheprefix;
+	@Strassen::datadirs = @Strassen::datadirs;
+    }
+}
+
+# Call this function whenever you make use of the bbbike-test.cgi script.
+sub using_bbbike_test_cgi () {
+    _update_bbbike_test_data;
 }
 
 sub check_cgi_testing () {
@@ -633,6 +663,75 @@ sub check_cgi_testing () {
 	print "1..0 # skip Requested to not test cgi functionality.\n";
 	exit 0;
     }
+}
+
+# Two tests. Call with either an image filename or a stringref
+# containing image content. Returns false if any of the tests failed,
+# otherwise true.
+sub image_ok ($;$) {
+    my($in, $testlabel) = @_;
+    if ($testlabel) {
+	$testlabel = " ($testlabel)";
+    } else {
+	$testlabel = "";
+    }
+    local $Test::Builder::Level = $Test::Builder::Level+1;
+
+    my $fails = 0;
+
+    if (0) { # anytopnm does not return with non-zero on problems
+    SKIP: {
+	    Test::More::skip("IPC::Run needed for better image testing", 2)
+		    if !eval { require IPC::Run; 1 };
+	    Test::More::skip("anytopnm needed for better image testing", 2)
+		    if !is_in_path('anytopnm');
+	    
+	    my $out;
+	    my $full_testlabel = "anytopnm runs fine with image " . (ref $in ? "content" : "file '$in'") . "$testlabel";
+	    Test::More::ok(IPC::Run::run(['anytopnm'], '<', $in, '>', \$out), $full_testlabel)
+		    or $fails++;
+	    Test::More::like(substr($out,0,2), qr{^P\d+}, "Output looks like a netpbm file$testlabel")
+		    or $fails++;
+	}
+    } else {
+    SKIP: {
+	    Test::More::skip("IPC::Run needed for better image testing", 2)
+		    if !eval { require IPC::Run; 1 };
+	    Test::More::skip("Image::Info needed for better image testing", 2)
+		    if !eval { require Image::Info; 1 };
+	    my $ret = Image::Info::image_type($in);
+	    if ($ret->{error} && !ref $in && $in =~ m{\.wbmp$}) { # wbmp cannot be detected by Image::Info
+		$ret = {file_type => "WBMP" };
+	    }
+	    if ($ret->{error}) {
+		Test::More::fail($ret->{error} . $testlabel) for (1..2);
+		$fails = 2;
+	    } else {
+		my $converter = { GIF  => "giftopnm",
+				  PNG  => "pngtopnm",
+				  JPEG => "jpegtopnm",
+				  ICO  => "winicontoppm",
+				  XPM  => "xpmtoppm",
+				  XBM  => "xbmtopbm",
+				  WBMP => "wbmptopbm",
+				}->{$ret->{file_type}};
+		if (!$converter) {
+		    Test::More::diag("No converter for '$ret->{file_type}' found, fallback to 'anytopnm'");
+		    $converter = 'anytopnm';
+		}
+		Test::More::skip("Converter '$converter' not available", 2)
+			if !is_in_path($converter);
+		my $out;
+		my $full_testlabel = "$converter runs fine with image " . (ref $in ? "content" : "file '$in'") . "$testlabel";
+		Test::More::ok(IPC::Run::run([$converter], '<', $in, '2>', '/dev/null', '>', \$out), $full_testlabel)
+		    or $fails++;
+		Test::More::like(substr($out,0,2), qr{^P\d+}, "Output looks like a netpbm file$testlabel")
+		    or $fails++;
+	    }
+	}
+    }
+
+    $fails ? 0 : 1;
 }
 
 1;

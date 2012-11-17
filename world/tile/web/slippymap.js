@@ -118,7 +118,7 @@ function init() {
         numZoomLevels: 18
     }));
 
-    map.addLayer(new OpenLayers.Layer.OSM("OSM MapBox", ["http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets/${z}/${x}/${y}.png", "http://b.tiles.mapbox.com/v3/mapbox.mapbox-streets/${z}/${x}/${y}.png"], {
+    map.addLayer(new OpenLayers.Layer.OSM("MapBox (OSM)", ["http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets/${z}/${x}/${y}.png", "http://b.tiles.mapbox.com/v3/mapbox.mapbox-streets/${z}/${x}/${y}.png"], {
         numZoomLevels: 17
     }));
 
@@ -235,11 +235,34 @@ function init() {
         numZoomLevels: 18
     }));
 
+    map.addLayer(new OpenLayers.Layer.WMS("Soviet Military Topo", "http://78.46.61.141/cgi-bin/tilecache-2.11/tilecache.py", {
+        layers: "topomapper_gmerc",
+        format: 'image/jpeg'
+    }, {
+        'buffer': 1,
+        srs: 'EPSG:900913',
+        'numZoomLevels': 14,
+        wrapDateLine: true,
+        transparent: false,
+        'attribution': 'Map data hosted by <a href="http://www.atlogis.com/">Atlogis</a>'
+    }));
+    // topomapper.setTileSize(new OpenLayers.Size(256, 256));
+    // map.addLayer(topomapper);
+
     function bing() {
         var apiKey = "AqTGBsziZHIJYYxgivLBf0hVdrAk9mWO5cQcb8Yux8sW5M8c8opEC2lZqKR1ZZXf";
 
         // var map = new OpenLayers.Map( 'map');
-        var road = new OpenLayers.Layer.Bing({
+        var road = new OpenLayers.Layer.Bing(
+
+        // XXX: bing.com returns a wrong zoom level in JSON API call
+        OpenLayers.Util.extend({
+            initLayer: function () {
+                // pretend we have a zoomMin of 0
+                this.metadata.resourceSets[0].resources[0].zoomMin = 0;
+                OpenLayers.Layer.Bing.prototype.initLayer.apply(this, arguments);
+            }
+        }, {
             key: apiKey,
             type: "Road",
             // custom metadata parameter to request the new map style - only useful
@@ -247,16 +270,32 @@ function init() {
             metadataParams: {
                 mapVersion: "v1"
             }
-        });
-        var aerial = new OpenLayers.Layer.Bing({
+        }));
+
+        var aerial = new OpenLayers.Layer.Bing(OpenLayers.Util.extend({
+            initLayer: function () {
+                // pretend we have a zoomMin of 0
+                this.metadata.resourceSets[0].resources[0].zoomMin = 0;
+                OpenLayers.Layer.Bing.prototype.initLayer.apply(this, arguments);
+            }
+        }, {
             key: apiKey,
-            type: "Aerial"
-        });
-        var hybrid = new OpenLayers.Layer.Bing({
+            type: "Aerial",
+            'numZoomLevels': 18
+        }));
+
+        var hybrid = new OpenLayers.Layer.Bing(OpenLayers.Util.extend({
+            initLayer: function () {
+                // pretend we have a zoomMin of 0
+                this.metadata.resourceSets[0].resources[0].zoomMin = 0;
+                OpenLayers.Layer.Bing.prototype.initLayer.apply(this, arguments);
+            }
+        }, {
             key: apiKey,
             type: "AerialWithLabels",
-            name: "Bing Aerial With Labels"
-        });
+            name: "Bing Aerial With Labels",
+            'numZoomLevels': 18
+        }));
 
         map.addLayers([road, aerial, hybrid]);
     };

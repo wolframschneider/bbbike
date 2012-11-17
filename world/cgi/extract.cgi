@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/usr/local/bin/perl -T
 # Copyright (c) 2011-2012 Wolfram Schneider, http://bbbike.org
 #
 # extract.cgi - extracts areas in a batch job
@@ -16,6 +16,7 @@
 #
 
 use CGI qw/-utf8 unescape escapeHTML/;
+use CGI::Carp;
 use IO::File;
 use JSON;
 use Data::Dumper;
@@ -25,6 +26,8 @@ use Digest::MD5 qw(md5_hex);
 use Net::SMTP;
 use GIS::Distance::Lite;
 use HTTP::Date;
+use Math::Polygon::Calc;
+use Math::Polygon::Transform;
 
 use strict;
 use warnings;
@@ -43,29 +46,51 @@ my $spool_dir = '/var/cache/extract';
 # sent out emails as
 my $email_from = 'BBBike Admin <bbbike@bbbike.org>';
 
-my $option = {
+our $option = {
+    'homepage'        => 'http://download.bbbike.org/osm/extract',
+    'script_homepage' => 'http://extract.bbbike.org',
+
     'max_extracts'              => 50,
     'default_format'            => 'osm.pbf',
     'city_name_optional'        => 0,
     'city_name_optional_coords' => 1,
-    'max_skm'                   => 8_000_000,    # max. area in square km
-    'max_size'                  => 512_000,      # max area in KB size
-    'confirm' => 0,    # request to confirm request with a click on an URL
+    'max_skm'                   => 24_000_000,    # max. area in square km
+    'max_size'                  => 768_000,       # max area in KB size
+
+    # request to confirm request with a click on an URL
+    # -1: do not check email, 0: check email address, 1: sent out email
+    'confirm' => 0,
+
+    # max count of gps points for a polygon
+    'max_coords' => 256 * 256,
+
+    'enable_polygon' => 1,
 };
 
 my $formats = {
-    'osm.pbf' => 'Protocolbuffer Binary Format (PBF)',
+    'osm.pbf' => 'Protocolbuffer Binary (PBF)',
     'osm.gz'  => "OSM XML gzip'd",
     'osm.bz2' => "OSM XML bzip'd",
     'osm.xz'  => "OSM XML 7z (xz)",
 
-    'osm.shp.zip'        => "OSM Shapefile (ESRI)",
+    'shp.zip'            => "Shapefile (Esri)",
     'garmin-osm.zip'     => "Garmin OSM",
     'garmin-cycle.zip'   => "Garmin Cycle",
     'garmin-leisure.zip' => "Garmin Leisure",
-
-    'osm.obf.zip' => "Osmand (OBF)",
+    'navit.zip'          => "Navit",
+    'obf.zip'            => "Osmand (OBF)",
+    'o5m.gz'             => "o5m gzip'd",
+    'o5m.bz2'            => "o5m bzip'd",
 };
+
+#
+# Parse user config file.
+# This allows to override standard config values
+#
+my $config_file = "../.bbbike-extract.rc";
+if ( -e $config_file ) {
+    require $config_file;
+}
 
 my $spool = {
     'incoming'  => "$spool_dir/incoming",
@@ -93,7 +118,9 @@ sub header {
     if ( $type eq 'homepage' ) {
         push @javascript, "../html/OpenLayers/2.12/OpenLayers-min.js",
           "../html/OpenLayers/2.12/OpenStreetMap.js",
-          "../html/jquery-1.7.1.min.js", "../html/extract.js";
+          "../html/jquery/jquery-1.7.1.min.js",
+          "../html/jquery/jqModal-2009.03.01-r14.js",
+          "../html/extract.js";
         @onload = ( -onLoad, 'init();' );
     }
 
@@ -124,7 +151,7 @@ sub header {
     return $q->header( -charset => 'utf-8', @cookie ) .
 
       $q->start_html(
-        -title => 'BBBike planet.osm extracts - OpenStreetMap data',
+        -title => 'Planet.osm extracts | BBBike.org',
         -head  => [
             $q->meta(
                 {
@@ -136,7 +163,7 @@ sub header {
                 {
                     -name => 'description',
                     -content =>
-'Extracts OpenStreetMap areas in OSM, PBF, Garmin, Osmand or ESRI shapefile format'
+'Extracts OpenStreetMap areas in OSM, PBF, Garmin, Osmand or Esri shapefile format'
                 }
             )
         ],
@@ -169,13 +196,28 @@ EOF
 }
 
 sub manual_area {
+    my $img_prefix = '/html/OpenLayers/2.12/theme/default/img';
+
     return <<EOF;
  <div id="manual_area">
   <div id="sidebar_content">
     <span class="export_hint">
-      <a href="#" id="drag_box">Manually select a different area</a>
-    </span> -
+      <a href="#" id="drag_box">Manually select a different area</a><br/>
+    </span> 
     <span id="square_km"></span>
+
+    <div id="polygon_controls" style="display:none">
+	<input id="createVertices" type="radio" name="type" onclick="polygon_update()" />
+	<label for="createVertices">add points to polygon
+	<img src="$img_prefix/add_point_on.png" /> <br/>
+	</label>
+
+	<input id="rotate" type="radio" name="type" onclick="polygon_update()" />
+	<label for="rotate">rotate, resize or drag polygon
+	<img src="$img_prefix/move_feature_on.png" />
+	</label>
+    </div>
+
   </div> <!-- sidebar_content -->
  </div><!-- manual_area -->
 EOF
@@ -184,11 +226,24 @@ EOF
 sub footer_top {
     my $q    = shift;
     my %args = @_;
+    my $css  = $args{'css'} || "";
 
     my $locate =
-      $args{'map'} ? ' | <a href="javascript:locateMe()">where am I?</a>' : "";
+      $args{'map'}
+      ? '<br/><a href="javascript:locateMe()">where am I?</a>'
+      : "";
+    $locate = "";    # disable
+
+    if ($css) {
+        $css = "\n<style>$css</style>\n";
+    }
+
+    my $donate = qq{<p class="normalscreen" id="big_donate_image">}
+      . qq{<a href="/community.html"><img class="logo" height="47" width="126" src="/images/btn_donateCC_LG.gif"/></a>};
 
     return <<EOF;
+  $donate
+  $css
   <div id="footer_top">
     <a href="../">home</a> |
     <a href="../extract.html">help</a> |
@@ -212,12 +267,12 @@ sub footer {
     return <<EOF;
 
 <div id="footer">
-  @{[ &footer_top($q, $args{'map'}) ]}
+  @{[ &footer_top($q, 'map' => $args{'map'}, 'css' => $args{'css'} ) ]}
   <div id="copyright">
   <hr/>
-    (&copy;) 2011-2012 <a href="http://www.bbbike.org">BBBike.org</a>
-    by <a href="http://wolfram.schneider.org">Wolfram Schneider</a>
-    Map data (&copy;) <a href="http://www.openstreetmap.org/" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
+    (&copy;) 2012 <a href="http://www.bbbike.org">BBBike.org</a>
+    by <a href="http://wolfram.schneider.org">Wolfram Schneider</a><br/>
+    Map data (&copy;) <a href="http://www.openstreetmap.org/copyright" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
   <div id="footer_community"></div>
   </div>
 </div>
@@ -263,12 +318,16 @@ EOF
 
 sub message {
     return <<EOF;
+<span id="noscript"><noscript>Please enable JavaScript in your browser. Thanks!</noscript></span>
 @{[ &social_links ]}
-<b align="right">BBBike extracts</b>
-allows you to extracts areas from the <a href="http://wiki.openstreetmap.org/wiki/Planet.osm">planet.osm</a> in OSM, PBF, Garmin, Osmand or ESRI shapefile format.
-The maximum area size is @{[ large_int($max_skm) ]} square km, or @{[ large_int($option->{max_size}/1000) ]}MB file size.
+<span align="right">
+BBBike extract -
+</span> 
+<span id="tools-titlebar">
+ <span id="tools-help"><a class='tools-helptrigger' href='#'><span>about</span></a></span>
+ <span class="jqmWindow" id="tools-helpwin"></span>
+</span>
 
-It takes between 10-30 minutes to extract an area. You will be notified by e-mail if your extract is ready for download.
 <span id="debug"></span>
 EOF
 }
@@ -289,6 +348,137 @@ EOF
     $data .= qq{    <div id="$id">\n};
 
     return $data;
+}
+
+# call back URL
+sub script_url {
+    my $option = shift;
+    my $obj    = shift;
+
+    my $coords = "";
+    if ( scalar( @{ $obj->{'coords'} } ) > 100 ) {
+        $coords = "0,0,0";
+        warn "Coordinates to long for URL, skipped\n" if $debug >= 2;
+    }
+    else {
+        $coords = join '|', ( map { "$_->[0],$_->[1]" } @{ $obj->{'coords'} } );
+    }
+
+    my $script_url = $option->{script_homepage} . "/?";
+    $script_url .=
+"sw_lng=$obj->{sw_lng}&sw_lat=$obj->{sw_lat}&ne_lng=$obj->{ne_lng}&ne_lat=$obj->{ne_lat}";
+    $script_url .= "&format=$obj->{'format'}";
+    $script_url .= "&coords=" . CGI::escape($coords) if $coords ne "";
+
+    return $script_url;
+}
+
+# fewer points, max. 1024 points in a polygon
+sub normalize_polygon {
+    my $poly = shift;
+    my $max = shift || 1024;
+
+    my $same = '0.001';
+    warn "Polygon input: " . Dumper($poly) if $debug >= 3;
+
+    # max. 10 meters accuracy
+    my @poly = polygon_simplify( 'same' => $same, @$poly );
+
+    # but not more than N points
+    if ( scalar(@poly) > $max ) {
+        warn "Resize 0.01 $#poly\n" if $debug >= 1;
+        @poly = polygon_simplify( 'same' => 0.01, @$poly );
+        if ( scalar(@poly) > $max ) {
+            warn "Resize $max points $#poly\n" if $debug >= 1;
+            @poly = polygon_simplify( max_points => $max, @poly );
+        }
+    }
+
+    return @poly;
+}
+
+# get coordinates from a string or a file handle
+sub extract_coords {
+    my $coords = shift;
+
+    if ( ref $coords ne "" ) {
+        my $fh_file = $coords;
+
+        binmode $fh_file, ":raw";
+        local $/ = "";
+        my $data = <$fh_file>;
+        undef $fh_file;
+        $coords = $data;
+    }
+
+    return $coords;
+}
+
+#
+# upload poly file to extract an area:
+#
+# curl -sSf -F "submit=extract" -F "email=nobody@gmail.com" -F "city=Karlsruhe" -F "format=osm.pbf" \
+#   -F "coords=@karlsruhe.poly" http://extract.bbbike.org | lynx -nolist -dump -stdin
+#
+sub parse_coords {
+    my $coords = shift;
+
+    if ( $coords =~ /\|/ ) {
+        return parse_coords_string($coords);
+    }
+    elsif ( $coords =~ /\[/ ) {
+        return parse_coords_json($coords);
+    }
+    elsif ( $coords =~ /END/ ) {
+        return parse_coords_poly($coords);
+    }
+    else {
+        warn "No known coords system found: '$coords'\n";
+        return ();
+    }
+}
+
+sub parse_coords_json {
+    my $coords = shift;
+
+    my $perl;
+    eval { $perl = decode_json($coords) };
+    if ($@) {
+        warn "decode_json: $@ for $coords\n";
+        return ();
+    }
+
+    return @$perl;
+}
+
+sub parse_coords_poly {
+    my $coords = shift;
+
+    my @list = split "\n", $coords;
+    my @data;
+    foreach (@list) {
+        next if !/^\s+/;
+        chomp;
+
+        my ( $lng, $lat ) = split;
+        push @data, [ $lng, $lat ];
+    }
+
+    return @data;
+}
+
+sub parse_coords_string {
+    my $coords = shift;
+    my @data;
+
+    my @coords = split /\|/, $coords;
+
+    foreach my $point (@coords) {
+        my ( $lng, $lat ) = split ",", $point;
+        push @data, [ $lng, $lat ];
+    }
+
+    return @data;
 }
 
 #
@@ -315,13 +505,17 @@ sub check_input {
         print "<p>", $no_escape ? $message : escapeHTML($message), "</p>\n";
     }
 
+    sub is_lng { return is_coord( shift, 180 ); }
+    sub is_lat { return is_coord( shift, 90 ); }
+
     sub is_coord {
         my $number = shift;
+        my $max    = shift;
 
         return 0 if $number eq "";
         return 0 if $number !~ /^[\-\+]?[0-9]+(\.[0-9]+)?$/;
 
-        return $number <= 180 && $number >= -180 ? 1 : 0;
+        return $number <= $max && $number >= -$max ? 1 : 0;
     }
 
     sub Param {
@@ -342,6 +536,9 @@ sub check_input {
     my $sw_lng = Param("sw_lng");
     my $ne_lat = Param("ne_lat");
     my $ne_lng = Param("ne_lng");
+    my $coords = Param("coords");
+    my $layers = Param("layers");
+    my $pg     = Param("pg");
 
     if ( !exists $formats->{$format} ) {
         error("Unknown error format '$format'");
@@ -358,24 +555,72 @@ sub check_input {
     elsif ( !Email::Valid->address($email) ) {
         error("E-mail address '$email' is not valid.");
     }
-    error("sw lat '$sw_lat' is out of range -180 ... 180")
-      if !is_coord($sw_lat);
+
+    my $skm = 0;
+
+    # polygon, N points
+    my @coords = ();
+    $coords = extract_coords($coords);
+
+    if ($coords) {
+        if ( !$option->{enable_polygon} ) {
+            error("A polygon is not supported, use a rectangle instead");
+            goto NEXT;
+        }
+
+        @coords = parse_coords($coords);
+        error(  "to many coordinates for polygon: "
+              . scalar(@coords) . ' > '
+              . $option->{max_coords} )
+          if $#coords > $option->{max_coords};
+        @coords = &normalize_polygon( \@coords );
+
+        if ( scalar(@coords) <= 2 ) {
+            error("Need more than 2 points.");
+            error("Maybe the input file is corrupt?") if scalar(@coords) == 0;
+            goto NEXT;
+        }
+
+        foreach my $point (@coords) {
+            error("lng '$point->[0]' is out of range -180 ... 180")
+              if !is_lng( $point->[0] );
+            error("lat '$point->[1]' is out of range -90 ... 90")
+              if !is_lat( $point->[1] );
+        }
+
+        ( $sw_lng, $sw_lat, $ne_lng, $ne_lat ) = polygon_bbox(@coords);
+        warn "Calculate poygone bbox: ",
+          "sw_lng: $sw_lng, sw_lat: $sw_lat, ne_lng: $ne_lng, ne_lat: $ne_lat\n"
+          if $debug >= 1;
+    }
+
+    # rectangle, 2 points
+    error("sw lat '$sw_lat' is out of range -90 ... 90")
+      if !is_lat($sw_lat);
     error("sw lng '$sw_lng' is out of range -180 ... 180")
-      if !is_coord($sw_lng);
-    error("ne lat '$ne_lat' is out of range -180 ... 180")
-      if !is_coord($ne_lat);
+      if !is_lng($sw_lng);
+    error("ne lat '$ne_lat' is out of range -90 ... 90")
+      if !is_lat($ne_lat);
     error("ne lng '$ne_lng' is out of range -180 ... 180")
-      if !is_coord($ne_lng);
+      if !is_lng($ne_lng);
 
-    error("ne lng '$ne_lng' must be larger than sw lng '$sw_lng'")
-      if $ne_lng <= $sw_lng;
-    error("ne lat '$ne_lat' must be larger than sw lat '$sw_lat'")
-      if $ne_lat <= $sw_lat;
+    $pg = 1 if !$pg || $pg > 1 || $pg <= 0;
 
-    my $skm = square_km( $sw_lat, $sw_lng, $ne_lat, $ne_lng );
-    error(
+    if ( !$error ) {
+        error("ne lng '$ne_lng' must be larger than sw lng '$sw_lng'")
+          if $ne_lng <= $sw_lng
+              && !( $sw_lng > 0 && $ne_lng < 0 );    # date border
+
+        error("ne lat '$ne_lat' must be larger than sw lat '$sw_lat'")
+          if $ne_lat <= $sw_lat;
+
+        $skm = square_km( $sw_lat, $sw_lng, $ne_lat, $ne_lng, $pg );
+        error(
 "Area is to large: @{[ large_int($skm) ]} square km, must be smaller than @{[ large_int($max_skm) ]} square km."
-    ) if $skm > $max_skm;
+        ) if $skm > $max_skm;
+    }
+
+  NEXT:
 
     if ( $city eq '' ) {
         if ( $option->{'city_name_optional'} ) {
@@ -389,15 +634,31 @@ sub check_input {
         }
     }
 
+    if ( $layers ne "" && $layers !~ /^[BTF0]+$/ ) {
+        error("layers '$layers' is out of range");
+    }
+
     if ($error) {
         print qq{<p class="error">The input data is not valid. };
         print "Please click on the back button of your browser ";
         print "and correct the values!</p>\n";
 
+        print "<br/>" x 4;
         print &footer($q);
         return;
     }
     else {
+
+        # display coordinates, but not more than 32
+        my $coordinates =
+          @coords
+          ? encode_json(
+            $#coords < 32
+            ? \@coords
+            : [ @coords[ 0 .. 15 ], "to long to read..." ]
+          )
+          : "$sw_lng,$sw_lat x $ne_lng,$ne_lat";
+
         print <<EOF;
 <p>Thanks - the input data looks good.</p><p>
 It takes between 10-30 minutes to extract an area from planet.osm,
@@ -406,43 +667,61 @@ You will be notified by e-mail if your extract is ready for download.
 Please follow the instruction in the email to proceed your request.</p>
 
 <p align='left'>Area: "@{[ escapeHTML($city) ]}" covers @{[ large_int($skm) ]} square km <br/>
-Coordinates: @{[ escapeHTML("$sw_lng,$sw_lat x $ne_lng,$ne_lat") ]} <br/>
+Coordinates: @{[ escapeHTML($coordinates) ]} <br/>
 Format: $format
 </p>
 
 <p>Press the back button to get the same area in a different format, or to request a new area.</p>
-
-<p>Sincerely, your BBBike\@World admin</p>
 EOF
 
     }
 
+    my $script_url = &script_url(
+        $option,
+        {
+            'sw_lat' => $sw_lat,
+            'sw_lng' => $sw_lng,
+            'ne_lat' => $ne_lat,
+            'ne_lng' => $ne_lng,
+            'format' => $format,
+            'layers' => $layers,
+            'coords' => \@coords,
+        }
+    );
+
     my $obj = {
-        'email'  => $email,
-        'format' => $format,
-        'city'   => $city,
-        'sw_lat' => $sw_lat,
-        'sw_lng' => $sw_lng,
-        'ne_lat' => $ne_lat,
-        'ne_lng' => $ne_lng,
-        'skm'    => $skm,
-        'date'   => time2str(time),
-        'time'   => time(),
+        'email'           => $email,
+        'format'          => $format,
+        'city'            => $city,
+        'sw_lat'          => $sw_lat,
+        'sw_lng'          => $sw_lng,
+        'ne_lat'          => $ne_lat,
+        'ne_lng'          => $ne_lng,
+        'coords'          => \@coords,
+        'layers'          => $layers,
+        'skm'             => $skm,
+        'date'            => time2str(time),
+        'time'            => time(),
+        'script_url'      => $script_url,
+        'coords_original' => $debug >= 2 ? $coords : "",
     };
 
     my $json      = new JSON;
-    my $json_text = $json->pretty->encode($obj);
+    my $json_text = $json->utf8->pretty->encode($obj);
 
     my ( $key, $json_file ) = &save_request($obj);
     my $mail_error = "";
     if (
         !$key
         || (
-            $mail_error = send_email_confirm(
-                'q'       => $q,
-                'obj'     => $obj,
-                'key'     => $key,
-                'confirm' => $option->{'confirm'}
+            $option->{'confirm'} >= 0
+            && (
+                $mail_error = send_email_confirm(
+                    'q'       => $q,
+                    'obj'     => $obj,
+                    'key'     => $key,
+                    'confirm' => $option->{'confirm'}
+                )
             )
         )
       )
@@ -468,13 +747,16 @@ EOF
         }
 
         else {
-            print qq{<hr/>\n};
             print
-qq{<p>We appreciate any feedback, suggestions and a <a href="../community.html#donate">donation</a>!</p>\n};
+              qq{<p>We appreciate any feedback, suggestions },
+              qq{and a <a href="../community.html#donate">donation</a>! },
+qq{You can support us via PayPal, Flattr or bank wire transfer.\n},
+              qq{<br/>} x 5,
+              "</p>\n";
         }
     }
 
-    print &footer($q);
+    print &footer( $q, 'css' => '#footer { width: 95%; }' );
 }
 
 # save request in incoming spool
@@ -505,7 +787,7 @@ To proceeed, please click on the following link:
 
 othewise just ignore this e-mail.
 
-Sincerely, your BBBike admin
+Sincerely, your BBBike extract admin
 
 --
 http://BBBike.org - Your Cycle Route Planner
@@ -538,23 +820,29 @@ sub send_email {
     my $smtp = new Net::SMTP( $mail_server, Hello => "localhost", Debug => 0 )
       or die "can't make SMTP object\n";
 
+    # validate e-mail addresses - even if we don't sent out an email yet
     $smtp->mail($from) or die "can't send email from $from\n";
     $smtp->to(@to)     or die "can't use SMTP recipient '$to'\n";
     $smtp->verify(@to) or die "can't verify SMTP recipient '$to'\n";
-    if ($confirm) {
+
+    # sent out an email and ask to confirm
+    # configured by: $option->{'conform'}
+    if ( $confirm > 0 ) {
         $smtp->data($data) or die "can't email data to '$to'\n";
     }
+
     $smtp->quit() or die "can't send email to '$to'\n";
 }
 
 # ($lat1, $lon1 => $lat2, $lon2);
 sub square_km {
-    my ( $x1, $y1, $x2, $y2 ) = @_;
+    my ( $x1, $y1, $x2, $y2, $factor ) = @_;
+    $factor = 1 if !defined $factor;
 
     my $height = GIS::Distance::Lite::distance( $x1, $y1 => $x1, $y2 ) / 1000;
     my $width  = GIS::Distance::Lite::distance( $x1, $y1 => $x2, $y1 ) / 1000;
 
-    return int( $height * $width );
+    return int( $height * $width * $factor );
 }
 
 # 240000 -> 240,000
@@ -569,25 +857,26 @@ sub save_request {
     my $obj = shift;
 
     my $json      = new JSON;
-    my $json_text = $json->pretty->encode($obj);
+    my $json_text = $json->utf8->pretty->encode($obj);
 
     my $key = md5_hex( encode_utf8($json_text) . rand() );
     my $spool_dir =
-      $option->{'confirm'} ? $spool->{"incoming"} : $spool->{"confirmed"};
-    my $incoming = "$spool_dir/$key.json.tmp";
+      $option->{'confirm'} > 0 ? $spool->{"incoming"} : $spool->{"confirmed"};
+    my $job = "$spool_dir/$key.json.tmp";
 
-    my $fh = new IO::File $incoming, "w";
-    binmode $fh, ":utf8";
+    warn "Store request $job: $json_text\n" if $debug;
+
+    my $fh = new IO::File $job, "w";
     if ( !defined $fh ) {
-        warn "Cannot open $incoming: $!\n";
+        warn "Cannot open $job: $!\n";
         return;
     }
+    binmode $fh, ":utf8";
 
-    warn "Store request: $json_text\n" if $debug;
     print $fh $json_text, "\n";
     $fh->close;
 
-    return ( $key, $incoming );
+    return ( $key, $job );
 }
 
 # foo.json.tmp -> foo.json
@@ -681,67 +970,95 @@ sub homepage {
 
     print qq{<div id="table">\n};
     print $q->table(
+        { -width => '100%' },
         $q->Tr(
             {},
             [
                 $q->td(
                     [
-"<span title='Give the city or area to extract a name. The name is optional, but better fill it out to find it later again.'>Name of area to extract</span><br/>"
+"<span class='normalscreen' title='Give the city or area to extract a name. "
+                          . "The name is optional, but better fill it out to find it later again.'>Name of area to extract<br/></span>"
                           . $q->textfield(
                             -name => 'city',
                             -id   => 'city',
-                            -size => 34
+                            -size => 28
                           )
                     ]
                 ),
                 $q->td(
                     [
-"<span title='Required, you will be notified by e-mail if your extract is ready for download.'>Your email address (*)</span><br/>"
+"<span title='Required, you will be notified by e-mail if your extract is ready for download.'>"
+                          . "Your email address (<a class='tools-helptrigger' href='#'>?</a></span>)</span><br/>"
                           . $q->textfield(
                             -name  => 'email',
-                            -size  => 34,
+                            -size  => 28,
                             -value => $default_email
                           )
+                          . $q->hidden(
+                            -name  => 'as',
+                            -value => "0",
+                            -id    => 'as'
+                          )
+                          . $q->hidden(
+                            -name  => 'pg',
+                            -value => "0",
+                            -id    => 'pg'
+                          )
+                          . $q->hidden(
+                            -name  => 'coords',
+                            -value => "",
+                            -id    => 'coords'
+                          )
+                          . $q->hidden(
+                            -name  => 'layers',
+                            -value => "",
+                            -id    => 'layers'
+                          ),
+'<span id="time_small" title="approx. extract time in minutes"></span>'
                     ]
                 ),
                 $q->td(
                     [
-"<span title='South West, valid values: -180 .. 180'>Left lower corner (South-West)</span><br/>"
+"<span class='normalscreen' title='South West, valid values: -180 .. 180'>Left lower corner (South-West)<br/></span>"
                           . "&nbsp;&nbsp; $lng: "
                           . $q->textfield(
                             -name => 'sw_lng',
                             -id   => 'sw_lng',
-                            -size => 7
+                            -size => 8
                           )
                           . " $lat: "
                           . $q->textfield(
                             -name => 'sw_lat',
                             -id   => 'sw_lat',
-                            -size => 7
-                          )
+                            -size => 8
+                          ),
+'<span id="square_km_small" title="area covers N square kilometers"></span>'
                     ]
                 ),
                 $q->td(
                     [
-"<span title='North East, valid values: -180 .. 180'>Right top corner (North-East)</span><br/>"
+"<span class='normalscreen' title='North East, valid values: -180 .. 180'>Right top corner (North-East)<br/></span>"
                           . "&nbsp;&nbsp; $lng: "
                           . $q->textfield(
                             -name => 'ne_lng',
                             -id   => 'ne_lng',
-                            -size => 7
+                            -size => 8
                           )
                           . " $lat: "
                           . $q->textfield(
                             -name => 'ne_lat',
                             -id   => 'ne_lat',
-                            -size => 7
-                          )
+                            -size => 8
+                          ),
+'<span title="file data size approx." id="size_small"></span>'
                     ]
                 ),
 
                 $q->td(
                     [
-"<span title='PBF: fast and compact data, OSM XML gzip: standard OSM format, twice as large'>Format: </span>"
+"<span class='normalscreen' title='PBF: fast and compact data, OSM XML gzip: standard OSM format, "
+                          . "twice as large, Garmin format in different styles, Esri shapefile format, "
+                          . "Osmand for Androids'>Format (<a class='tools-helptrigger' href='#'>?</a></span>)<br/></span>"
                           . $q->popup_menu(
                             -name   => 'format',
                             -values => [
@@ -751,17 +1068,15 @@ sub homepage {
                             -labels  => $formats,
                             -default => $default_format
                           )
-                          . "<br/>"
+                          . " <span class='normalscreen'><br/></span> "
                           . $q->submit(
                             -title => 'start extract',
                             -name  => 'submit',
                             -value => 'extract',
-
-                            #-id    => 'extract'
+                            -id    => 'extract'
                           )
                     ]
                 ),
-
             ]
         )
     );
@@ -776,7 +1091,6 @@ sub homepage {
     #
     #    #-id    => 'extract'
     #);
-
     print $q->end_form;
     print &export_osm;
     print qq{<hr/>\n};

@@ -1,6 +1,4 @@
 #
-# $Id: Makefile,v 2.213 2009/02/18 22:53:47 eserte Exp $
-#
 # This Makefile is only usable with a modern version of BSD make (also known
 # as "pmake"). The source for pmake can be found at
 #
@@ -131,7 +129,6 @@ all:	targets data-images check .modified .rsync_include make_misc
 .BEGIN:
 	@$(PERL) -e 'for (@ARGV) { do { unlink($$_) and warn "Removed $$_\n" } if (-M $$_ >= 1) }' \
 		.check_bbbike-temp-blockings-optimized \
-		.check_dates \
 		${PERSISTENTTMPDIR}/.check_fragezeichen-nextcheck.bbd \
 		${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd \
 		${PERSISTENTTMPDIR}/.check_fragezeichen-indoor-nextcheck.bbd \
@@ -153,17 +150,17 @@ slow-checks:	check-categories \
 		check-names \
 		.check_targets \
 		inaccessible_strassen inaccessible_landstrassen \
-		check-line-lengths check-dates \
+		check-line-lengths \
 		check-coords.data \
 		persistent-tmp
 
 persistent-tmp:	fragezeichen-outdoor-nextcheck \
-		${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd \
-		${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd \
+		fragezeichen-outdoor \
 		${PERSISTENTTMPDIR}/.check_fragezeichen-indoor-nextcheck.bbd \
 		${PERSISTENTTMPDIR}/fragezeichen-indoor-nextcheck.bbd \
 		${PERSISTENTTMPDIR}/.check_fragezeichen-nextcheck.bbd \
 		${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd \
+		${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org \
 		${PERSISTENTTMPDIR}/strassen_in_planung.bbd \
 		${PERSISTENTTMPDIR}/projektierte_radstreifen.bbd \
 		${PERSISTENTTMPDIR}/all-upload-fragezeichen.wpt \
@@ -175,9 +172,12 @@ persistent-tmp:	fragezeichen-outdoor-nextcheck \
 		${PERSISTENTTMPDIR}/XXX.bbd \
 		${PERSISTENTTMPDIR}/plz-b.bbd
 
-# popular target
+# popular targets
 fragezeichen-outdoor-nextcheck:	${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor-nextcheck.bbd \
 				${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd
+
+fragezeichen-outdoor:		${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd \
+				${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd
 
 .for i in $(XXX_TARGETS)
 persistent-tmp:	${PERSISTENTTMPDIR}/XXX-$(i).bbd
@@ -226,7 +226,7 @@ _f_raw_${f}:=${f:S/-cooked$//}
 $f:	${_f_raw_${f}} inaccessible_landstrassen
 	-@${WRITEABLE} $@
 	$(PERL) -I${BBBIKEDIR} -I${BBBIKEDIR}/lib -MStrassen -e \
-	    '$$s = Strassen->new($$ARGV[0]); $$ina = Strassen->new($$ARGV[1]); $$s->new_with_removed_points($$ina)->write("-")' \
+	    '$$s = Strassen->new($$ARGV[0], UseLocalDirectives => 1); $$ina = Strassen->new($$ARGV[1]); $$s->new_with_removed_points($$ina)->write("-")' \
 	    ${_f_raw_${f}} inaccessible_landstrassen \
 	    > $@~
 	mv $@~ $@
@@ -803,6 +803,7 @@ fragezeichen-cooked:	fragezeichen strassen landstrassen landstrassen2
 	-@$(WRITEABLE) $@
 	cat fragezeichen-orig |\
 	        ${GREPSTRASSEN} -v -sectionrx "ignorieren" |\
+	        ${GREPSTRASSEN} -special filternextcheck |\
 	    ${CONVERT_ORIG} > $@~
 	@echo "# added from ampeln-orig" >> $@~
 	grep '?' ${DATADIR}/ampeln-orig | \
@@ -845,16 +846,12 @@ ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd ${PERSISTENTTMPDIR}/.
 		Makefile \
 		${SOURCE_TARGETS:S|$|-orig|} \
 		${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
-	echo -n > ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
-	echo "#: line_dash: 8, 5" >> ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
-	echo "#: line_width: 5" >> ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
-	echo "#:" >> ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
-	${MISCSRCDIR}/create_fragezeichen_nextcheck.pl --${doormode}-mode \
+	${MISCSRCDIR}/create_fragezeichen_nextcheck.pl --preamble --${doormode}-mode \
 	    --fragezeichen-mode fragezeichen-orig \
 	    --no-fragezeichen-mode \
 	    ${SOURCE_TARGETS:S|fragezeichen||:S|$|-orig|} \
 	    ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd \
-		>> ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
+		> ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
 	mv -f ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~ ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd
 	touch ${PERSISTENTTMPDIR}/.check_fragezeichen-${doormode}-nextcheck.bbd
 .endfor
@@ -864,18 +861,14 @@ ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd ${PERSISTENTTMPDIR}/.check_fragezei
 		Makefile \
 		${SOURCE_TARGETS:S|$|-orig|} \
 		${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
-	echo -n > ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
-	echo "#: line_dash: 8, 5" >> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
-	echo "#: line_width: 5" >> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
-	echo "#:" >> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
-	${MISCSRCDIR}/create_fragezeichen_nextcheck.pl \
-	    --today=2999-12-31 \
+	${MISCSRCDIR}/create_fragezeichen_nextcheck.pl --preamble \
+	    --coloring '#6c0000 +1m #ec8888 +6m #f2a0a0 +1y #fcc8c8 +5y #fdd8d8'\
 	    --outdoor-mode \
 	    --fragezeichen-mode fragezeichen-orig \
 	    --no-fragezeichen-mode \
 	    ${SOURCE_TARGETS:S|fragezeichen||:S|$|-orig|} \
 	    ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd \
-		>> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
+		> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
 	mv -f ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~ ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd
 	touch ${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd
 
@@ -920,6 +913,12 @@ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd ${PERSISTENTTMPDIR}/.check_fragez
 	-rm -f /tmp/nextcheck.bbd
 	mv -f ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd
 	touch ${PERSISTENTTMPDIR}/.check_fragezeichen-nextcheck.bbd
+
+${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org:	*-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
+	-@$(WRITEABLE) $@
+	${MISCSRCDIR}/fragezeichen2org.pl *-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd > $@~
+	mv $@~ $@
+	-@$(READONLY) $@
 
 ${PERSISTENTTMPDIR}/projektierte_radstreifen.bbd:	fragezeichen-orig
 	cat fragezeichen-orig | ${GREPSTRASSEN} -sectionrx "projektierte Radstreifen" | ${CONVERT2HAFAS} -basefile fragezeichen-orig > $@
@@ -1123,18 +1122,23 @@ ${PERSISTENTTMPDIR}/fragezeichen-matches.bbd:	fragezeichen ${DATADIR}/strassen $
 # allow one error, and fail if the 2nd one is encountered
 FOREVER_INTERVAL?=	30
 FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  'open LOCK, ">", ".check_forever.lck" or die $$!; flock LOCK, LOCK_EX|LOCK_NB or die $$!; @cmd=@ARGV; while() { system(@cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; sleep $(FOREVER_INTERVAL) } unlink ".check_forever.lck"'
+.if exists($(HOME)/bin/sh/cron-wrapper)
+CRON_WRAPPER=$(HOME)/bin/sh/cron-wrapper
+.else
+CRON_WRAPPER=
+.endif
 
 # Specify ADDITIONAL_CHECK_FOREVER_TARGETS make variable on command
 # line for more things to do...
 check-forever:
-	-nice ${FOREVER_TWO_ERRORS} ${MAKE} check all ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd ${ADDITIONAL_CHECK_FOREVER_TARGETS}
+	-nice ${FOREVER_TWO_ERRORS} ${CRON_WRAPPER} ${MAKE} check all fragezeichen-outdoor-nextcheck fragezeichen-outdoor ${ADDITIONAL_CHECK_FOREVER_TARGETS}
 	@-alarm -nicedown
 	@-xterm-conf -deiconify -raise
 	xmessage "check-forever failed"
 
 # Like check-forever, but build first, then check (all calls the check target)
 all-forever:
-	-nice ${FOREVER_TWO_ERRORS} ${MAKE} ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd all
+	-nice ${FOREVER_TWO_ERRORS} ${CRON_WRAPPER} ${MAKE} fragezeichen-outdoor-nextcheck fragezeichen-outdoor all
 	@-alarm -nicedown
 	@-xterm-conf -deiconify -raise
 	xmessage "all-forever failed"
@@ -1412,8 +1416,8 @@ GESPERRT_CATRX='^(0:\d+(:-?\d+)?|1|1s(:q\d)?|2|3|3nocross|BNP:\d+(:-?\d+(:traile
 .for i in $(COMMENTS_PARTIAL)
 .check_comments1:	.check_${i}_1
 
-.check_${i}_1:	$i .strassen.tmp landstrassen landstrassen2 faehren fragezeichen
-	$(CHECK_POINTS) $i .strassen.tmp landstrassen landstrassen2 faehren fragezeichen
+.check_${i}_1:	$i strassen landstrassen landstrassen2 faehren fragezeichen
+	$(CHECK_POINTS) $i strassen landstrassen landstrassen2 faehren fragezeichen
 	@touch $@
 
 .endfor
@@ -1560,15 +1564,6 @@ count-streets:
 	@echo -n "Landstraßen:   "; grep -v "^#" landstrassen landstrassen2 | ${CUT} -f1 | sort -u | wc -l
 	@echo -n "  Potsdam:     "; fgrep "(Potsdam)" landstrassen | grep -v "^(" | ${CUT} -f1 -d"(" | sort -u | wc -l
 	@echo -n "  Oranienburg: "; grep -v "^#" landstrassen | fgrep "(Oranienburg" | ${CUT} -f1 -d"(" | sort -u | wc -l
-
-check-dates:	.check_dates
-
-.check_dates:	*-orig ${MISCSRCDIR}/check_dates
-	@(echo "Expired today (`date`)": ;\
-	 ${PERL_UTF8} ${MISCSRCDIR}/check_dates *-orig ;\
-	 echo "Expired in the next two weeks:" ;\
-	 ${PERL_UTF8} ${MISCSRCDIR}/check_dates -reldays 14 *-orig ) 2>&1 | tee $@~
-	mv $@~ $@
 
 check-crossings:	check-crossings-important \
 			check-crossings-less-important

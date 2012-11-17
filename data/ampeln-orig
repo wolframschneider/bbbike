@@ -5,14 +5,14 @@
 	X 9229,8785
 	X 8982,8781
 	X 8594,8777
-	X 8291,8773
+	X 8298,8774
 	X 8598,9074
 	X 8389,9087
 	X 8598,9264
 	X 8595,9495
 	X 8777,9601
 	X 8969,9320
-	X 9043,9745
+	X 9044,9753
 	X 9334,9670
 	X 9248,9350
 	X 9395,8726
@@ -55,12 +55,12 @@
 	X 7820,10768
 	X 8947,10956
 	X 9234,11056
-	X 9199,11166
-	X 9486,11208
+	X 9196,11165
+	X 9492,11209
 	X 9388,10393
 	X 9770,10590
-	X 9313,10789
-	X 9266,10936
+	X 9323,10791
+	X 9275,10932
 	X 9873,10285
 	X 10020,11262
 	X 10122,10294
@@ -72,12 +72,12 @@
 	F 11316,10372
 	X 10357,9813
 	X 10134,9860
-	X 10244,11160
+	X 10256,11160
 	X 10198,9405
 	X 10306,9640
 	X 10564,9292
 	X 10713,9260
-	X 10213,8665
+	X 10209,8661
 	F 10796,8498
 	F 11266,8336
 #: related vvv
@@ -93,7 +93,7 @@
 	X 11500,9116
 	X 11509,9392
 	X 11909,9155
-	X 11824,8995
+	X 11831,8989
 	X 11673,9720
 	X 12152,9023
 	X 12242,8972
@@ -131,16 +131,16 @@
 	X 14089,9610
 	X 14193,9746
 	X 13614,9333
-	X 15263,10747
+	X 15261,10738
 	X 14641,10552
 	X 14918,11249
 	X 16032,10842
 	X 15639,10469
-	X 16460,10699
+	X 16468,10695
 	X 18286,11275
 #: XXX_prog: in O-W und W-O-Richtung verliert man garantiert 1:30 min, wenn man auf dem Radweg (Benutzungsplicht!) fährt
 	X 18220,11710
-	X 18215,12132
+	X 18215,12123
 	X 18597,12162
 	X 19173,13478
 	X 19628,13517
@@ -157,7 +157,7 @@
 #: XXX_prog keine Ampel in N-S-Richtung. Beim (Fußgänger-)Abbiegen von N->E gibt es eine Ampel nur an einer Fahrbahn.
 	X 13745,12118
 	X 13785,12292
-	F 13472,12337
+	F 13448,12340
 Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängerampel	X 12869,12425
 	X 12497,11459
 	X 15361,12071
@@ -167,7 +167,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: ^^^
 	F 15367,12815
 	X 15515,13134
-	X 15502,13539
+	X 15513,13539
 	X 16866,13532
 #: XXX_prog Fußgängerüberweg auf der westl. Seite fehlt, und macht einige Wege (von N nach S) länger
 	X 14218,13834
@@ -176,16 +176,16 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 7709,8777
 	X 7563,8871
 	X 7497,8916
-	F 7325,8936
+	F 7315,8941
 	X 7275,8960
 	X 7201,8870
 #: XXX_prog nur eine Ampel: vvv
 	X 7009,8705
-	X 6990,8685
+	X 6989,8687
 #: XXX_prog ^^^
 	F 7105,8788
 	X 6687,8385
-	X 7655,9188
+	X 7647,9196
 # aufgehoben (gesehen 2009-05)	X 7782,9115
 	X 7479,9357
 	X 7526,9791
@@ -226,8 +226,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6145,10975
 	X 5652,11004
 	X 5542,11075
-	X 5494,10973
-	X 5484,10810
+	X 5488,10978
+	X 5475,10808
 	F 5656,10876
 	X 5782,10884
 	X 5458,10443
@@ -236,7 +236,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5463,9961
 	X 5725,9846
 	X 5912,9788
-	X 5026,10038
+	X 5013,10039
 	X 5229,10716
 	X 5076,10658
 	X 5102,11006
@@ -245,7 +245,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4921,11017
 	X 4827,11025
 	X 5166,11343
-	X 5063,10384
+	X 5047,10381
 	X 5381,11847
 	X 5478,11860
 	X 5900,11913
@@ -277,7 +277,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9164,12172
 	X 9058,11564
 	X 9444,11616
-	X 9386,12092
+	X 9385,12098
 	X 9358,12351
 	X 10213,11728
 	X 10512,12039
@@ -285,24 +285,24 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11351,12221
 	X 11242,11720
 	X 11091,11379
-	X 10437,12703
+	X 10431,12709
 	X 10601,12521
 #: related vvv
 	X 11134,12793
 	F 11105,12764
 #: related ^^^
 	X 11226,12945
-	F 10740,12960
-	F 10781,13002
+	F 10733,12967
+	F 10776,13005
 	F 9054,12154
-	X 9605,13248
+	X 9611,13245
 	X 10264,13097
 	X 10350,13376
 	X 10177,13766
 	X 10746,13673
 	X 10923,13156
 	X 10755,13152
-	X 11155,13482
+	X 11160,13492
 #: XXX Ampelanlange wird umgebaut (Richtung Kreuzung)
 #: by: http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20120514.1415.370100.html
 #: next_check: 2013-03-01
@@ -310,11 +310,13 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10003,14088
 	X 9800,14722
 	X 10881,15047
+#: XXX_prog: Radfahrer Richtung Norden haben möglicherweise Dauergrün oder bevorzugt lange Grün
+	X 10884,14952
 	X 10953,15787
 	X 11019,16465
 	X 10927,17022
 	X 10774,17277
-	X 7491,7675
+	X 7480,7683
 	X 7499,7880
 	X 7497,8168
 	X 7193,7950
@@ -322,10 +324,10 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6468,8109
 	X 6409,8026
 	X 6307,7893
-	X 6652,7138
+	X 6641,7142
 	X 6389,7196
 	X 8319,7084
-	X 8625,8174
+	X 8632,8174
 	X 8642,7876
 	X 9240,8028
 	X 8715,7384
@@ -349,7 +351,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9308,4407
 	X 5644,6936
 	X 5817,7223
-	X 5381,7201
+	X 5397,7205
 	X 5357,8013
 	X 5356,7862
 	X 5635,8011
@@ -439,7 +441,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 14617,7243
 	X 13474,8060
 	X 13107,8343
-	X 15758,6204
+	X 15765,6212
 	X 16143,6750
 	X 16428,7144
 	X 17290,6228
@@ -483,7 +485,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10527,13257
 	X 8119,12414
 	X 6653,12067
-	F 10157,12491
+	F 10155,12494
 	F 10682,10494
 	F 7631,9770
 	X 15117,12106
@@ -502,7 +504,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10680,18380
 	X 10089,18180
 	X 9881,18354
-	X 11712,14868
+	X 11709,14856
 	X 12317,14535
 	X 13330,13468
 	X 14006,13761
@@ -530,27 +532,28 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8788,16264
 	X 7824,16170
 	X 8939,16668
-	X 7232,18572
+	X 7198,18575
 	X 7217,18681
 	X 5114,17500
 	X 5486,17169
 	X 6311,16457
 	X 6245,15558
 	X 7597,14417
-	X 7378,14559
+	X 7373,14566
 	X 7180,14419
+	X 7123,14367
 	X 7277,15586
 	X 6630,15100
 	X 6781,16026
 	X 7687,16770
-	X 7363,13023
-	X 7195,13046
+	X 7346,13022
+	X 7172,13051
 	X 6214,13225
 	X 6228,13324
 	X 6230,13596
 	X 6493,13822
 	X 6730,14021
-	X 6765,5863
+	X 6757,5858
 	X 7690,4552
 	X 7601,4485
 	X 6625,3314
@@ -607,13 +610,13 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4057,9648
 	X 4009,9465
 	X 3920,9068
-	X 4984,9675
+	X 4976,9670
 	X 3521,9059
 	X 4280,8188
 	X 4783,8557
 	X 6753,10446
 	X 9330,12529
-	X 9251,13109
+	X 9255,13109
 	X 8607,15426
 	X 8024,15401
 	X 8016,15085
@@ -654,7 +657,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10946,12241
 	X 12295,12197
 	X 12822,12067
-	X 12184,11652
+	X 12180,11657
 	X 14639,11512
 	X 14575,11407
 	X 7086,8579
@@ -663,14 +666,14 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5312,6382
 	X 6004,9771
 	X 4439,9983
-	X 5004,9842
+	X 4993,9843
 	X 4151,10026
 	X 13277,8211
 #: note: möglicherweise nur während der Schulzeit eingeschaltet
 	X 14758,7373
-	X 15229,7785
+	X 15221,7778
 	F 15557,7404
-	X 15719,6218
+	X 15724,6229
 	X 15058,6784
 	F 16274,6929
 	X 18245,5551
@@ -688,7 +691,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 15256,14237
 	X 18234,13500
 	X 8542,11502
-	X 9162,11286
+	X 9155,11283
 	F 8972,11810
 	X 8172,11679
 	F 8065,11349
@@ -754,7 +757,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2348,9398
 	X 3127,9522
 	X 15303,8343
-	X 15561,8072
+	X 15557,8077
 	X 14051,6731
 	X 13712,6656
 	X 10558,9763
@@ -798,7 +801,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 18881,2062
 	X 18934,2703
 	X 16699,10611
-	X 17072,8714
+	X 17067,8725
 	X 1471,3909
 	X 1136,3878
 	X 458,3697
@@ -825,7 +828,6 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3930,17920
 	X 2821,18831
 	X 1858,20740
-#: note: Luftbild:
 	X 9215,3599
 	X 9146,3101
 	X 9695,1563
@@ -879,7 +881,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	B 9158,551
 	X 5328,13019
 	X 5185,13078
-	X 5256,13420
+	X 5248,13434
 	X 5368,13406
 	X 5907,16000
 	X 3644,10759
@@ -977,7 +979,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 1479,14343
 	X 1360,14375
 	X 2087,14078
-	X 2902,14006
+	X 2881,14061
 	X 3038,13612
 	X 3123,13274
 	X 3711,13202
@@ -993,15 +995,17 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11907,19749
 	X 8540,12420
 	X 7936,12906
-	X 7129,12741
+	X 7111,12743
+#: XXX_indoor eigentlich eine Fußgängerampel, ca. 25 Meter östlich
+#: XXX_prog aber beim Linksabbiegen aus der Frankfurter würde man sie trotzdem benutzen, sollte ins Routing einfließen!
 	X 16413,11906
 	X 6757,13112
 	X 5975,13256
 	X 5956,13330
 	X -1369,14644
 	X -1357,14533
-	X 5062,14681
-	X 5071,14614
+	X 5049,14675
+	X 5057,14607
 	X 5700,15043
 	X 13072,15590
 	X 13316,15758
@@ -1027,6 +1031,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6388,7999
 	X 9000,9509
 	X 12360,12505
+#: XXX_prog evtl. mit der Ampel an der Karl-Marx-Allee zusammen geschaltet, aber nur, wenn man geradeaus fährt, nicht wenn man aus der Karl-Marx abbiegt
+	F 12362,12540
 	X 8443,10777
 	X 7453,17899
 	X 7579,17532
@@ -1051,7 +1057,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6445,9538
 	X 6514,10088
 	X 5329,10422
-	F 6223,10634
+	F 6216,10614
+	F 6228,10646
 	X 4267,10724
 	X 4518,12350
 # an der Deutschlandhalle, nur bei Veranstaltungen an vvv
@@ -1070,16 +1077,16 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12830,8031
 	X 12898,7832
 	X 11154,14985
-	X 12040,14688
+	X 12025,14695
 	X 12621,14313
 	X 13434,13234
-	X 13537,13003
+	X 13530,13014
 	X 12901,14093
 	X 14702,12157
 	X 16207,11937
 	X 6575,8469
 	X 5361,7423
-	X 8260,16740
+	X 8249,16741
 	X 7970,17087
 	X 8900,15146
 	X 6071,10127
@@ -1090,7 +1097,6 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11368,13170
 	X 8093,16438
 	X 5376,18773
-#: note: laut Luftbild:
 	F 14203,2859
 	X 13057,14267
 	X 13292,13931
@@ -1111,7 +1117,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6661,13130
 	X 12045,16574
 	X 12986,23392
-	B 12957,26186
+	B 12944,26163
 	X 11556,10869
 	X 10397,10852
 	X 6665,2836
@@ -1132,8 +1138,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12563,9536
 	X 12630,8722
 	X 5231,13843
-	X 5224,14031
-	X 5217,14255
+	X 5220,14043
+	X 5205,14253
 	X 5753,15096
 	X 5581,16708
 	X 3888,1221
@@ -1175,7 +1181,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3676,16497
 	X 2960,14746
 	X 2904,14748
-	X 3407,13599
+	X 3395,13605
 	X 3741,13558
 	X 4271,13735
 	X 6817,13862
@@ -1200,8 +1206,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6215,16340
 	X 7534,10850
 	X 7415,10883
-	X 6679,6816
-	X 6686,6735
+	X 6668,6815
+	X 6676,6734
 	X 6360,4504
 	X 6120,4214
 	X 4700,2662
@@ -1250,6 +1256,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 14559,16912
 	X 14235,17103
 	F 14595,15980
+#: note: beim Überqueren der Straße Alt-Friedrichsfelde muss die Fußgängerampel auf der östlichen Seite benutzt werden, keine Anforderungsampel (Stand 2012-11-03)
 	X 17240,11791
 	X 22484,11270
 	X 23402,5483
@@ -1338,15 +1345,15 @@ nur Richtung O	X 8142,7221
 	X 15845,23717
 	X -1654,18711
 	X -130,21396
-	X 2205,20885
-	X 2142,20849
+	X 2195,20898
+	X 2144,20870
 	X 2573,21008
 	X 1955,20435
 	X 3563,20589
-# XXXdel? nicht mehr da???	X 2854,19992
+# REMOVED (Ampel ist jetzt etwas weiter nördlich) ---	X 2854,19992
 	X 4597,20778
 	X 4319,20182
-	X 4273,20021
+	X 4262,20025
 	X 3820,19688
 	X 3546,19477
 	X 3165,19136
@@ -1358,15 +1365,15 @@ nur Richtung O	X 8142,7221
 	X 4497,19539
 	X 4935,20574
 	X 4953,20624
-	X 4780,20115
+	X 4780,20116
 	X 5201,20103
 	X 5517,20120
-	X 5481,20379
+	X 5475,20381
 	F 5341,21266
 	X 5819,21057
-	X 5934,21513
-	X 6382,21109
-	X 6286,20585
+	X 5923,21522
+	X 6371,21110
+	X 6279,20587
 	F 6439,20632
 	X 7251,21202
 	X 6962,21174
@@ -1480,7 +1487,7 @@ nur Richtung O	X 8142,7221
 	X 1133,14387
 	X 4547,13232
 	X 5705,13359
-	X 5560,13382
+	F 5569,13381
 	X 6299,14660
 	X 7138,15437
 	X 7020,15314
@@ -1490,19 +1497,20 @@ nur Richtung O	X 8142,7221
 	X 9443,15430
 	X 9917,15613
 	X 10629,14299
-	X 11545,14897
+	X 11535,14900
 	X 11776,15060
 	X 11119,15385
-	X 11506,14230
-	X 11835,14309
+#: note: Autos können nicht aus der Knaack in die Immanuelkirchstr., demnach eine Fußgängerampel
+	F 11506,14230
+	X 11821,14317
 	X 12786,13185
 	X 13026,14234
 	X 13438,14675
 	X 13543,13568
-	F 13654,14905
+	F 13644,14915
 	X 12870,15342
-	X 13283,12895
-	X 13756,13103
+	X 13276,12903
+	X 13747,13110
 	X 13844,12900
 	X 13078,13330
 	X 14770,14048
@@ -1510,7 +1518,7 @@ nur Richtung O	X 8142,7221
 	X 15838,14319
 	X 16310,14378
 	X 15580,14880
-#XXX del:	X 16331,15486
+# REMOVED (Fußgängerampel ist jetzt etwas weiter südwestlich) ---	X 16331,15486
 	X 17254,14451
 	X 17488,15766
 	X 17848,14523
@@ -1549,7 +1557,7 @@ nur Richtung O	X 8142,7221
 	X 11149,-1274
 	X 11054,-740
 	X 1345,184
-#XXX del	X 31447,3372
+# REMOVED (hier existiert nichts, Stand 2010) ---	X 31447,3372
 	F 21496,3849
 	F 20136,3609
 	X 19251,1240
@@ -1590,15 +1598,14 @@ nur Richtung O	X 8142,7221
 	X 751,2860
 	F 578,3380
 	F 932,3422
-	X -2243,3371
+	X -2245,3378
 	X -3861,2837
 	F -6950,752
 	X 30410,5450
-#: note: Luftbild (für F)
 	F 25018,5756
 	X 22513,5747
 	X 22294,5777
-	X 22682,6495
+	X 22675,6498
 	X 18492,6893
 	F 17919,6978
 	X 17520,4649
@@ -1638,15 +1645,13 @@ nur Richtung O	X 8142,7221
 	X -8116,6167
 	X 21977,9023
 	X 18676,8236
-	X 18800,9743
+	X 18807,9746
 	X 14614,9052
 	X 5360,7554
 	X 5783,9060
 	X 5189,9397
 	X 4957,9437
-#: note: laut Luftbild:
 	F 5799,6841
-#: note: laut Luftbild:
 	X -772,13199
 	X 3961,7288
 	X 3083,7587
@@ -1680,7 +1685,6 @@ nur Richtung O	X 8142,7221
 	X 9568,12688
 	X 8775,12457
 	X 8695,11015
-	X 8123,12615
 	X 5223,9810
 	X 3930,9919
 	F 3982,9761
@@ -1694,14 +1698,11 @@ nur Richtung O	X 8142,7221
 	X 4572,7936
 	X 15080,11905
 	X 6454,8653
-#XXX Kynaststr./Alt-Stralau - evtl. wird es nach den Bauarbeiten hier wieder eine Ampel geben	X 14652,10201
-#: XXX Baustellenampel, wahrscheinlich wegen der Sperrung Karlshorster Str.
-#: last_checked: 2012-08-21
-#: next_check: 2012-09-25
-	X::inwork 14832,10512
+# TEMPORARILY REMOVED --- Kynaststr./Alt-Stralau - evtl. wird es nach den Bauarbeiten hier wieder eine Ampel geben	X 14652,10201
+# REMOVED --- #: note: temporäre Baustellenampel, ist immer bei einer Sperrung der Karlshorster Str. eingeschaltet --- #: last_checked: 2012-11-02 --- #: next_check: 2012-11-05 --- X::inwork 14832,10512
 	F 13030,7346
-#XXX del:	X 12510,6508
-#XXX del:	X 12553,6423
+# REMOVED (keine Ampel (mehr?), evtl. wegen BAB) ---	X 12510,6508
+# REMOVED (keine Ampel (mehr?), evtl. wegen BAB) ---	X 12553,6423
 	X 13261,6456
 	X 13294,6386
 	X 8715,12956
@@ -1710,7 +1711,7 @@ nur Richtung O	X 8142,7221
 	X 10849,17848
 	F 5618,14981
 	F 17816,5733
-	X 18737,9901
+	X 18742,9903
 	X 10408,9800
 	X 9972,12184
 	F 12612,12470
@@ -1751,7 +1752,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: by: Olaf Schulz vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 	F 11310,14953
 #: by ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-#XXX del --- existiert nicht mehr --- #: by: Joern (js): ---	F 11593,15051
+# REMOVED (existiert nicht mehr, hier ist jetzt eine Spielstraße) --- #: by: Joern (js): ---	F 11593,15051
 	X 5421,8337
 #: XXX_prog: lange Wartezeiten für Radfahrer (zwei Umläufe)
 	X 8241,11024
@@ -1781,7 +1782,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	X 8571,11846
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?)	B 40248,14503
 Bahn kommt ca. halbstündlich	B 43081,77252
-Bahn kommt ca. halbstündlich	B 41385,91309
+Bahn kommt ca. halbstündlich	B 41395,91313
 Bahn kommt ca. halbstündlich oder öfter	B 27139,37340
 Bahn kommt ca. halbstündlich, mit Aufforderungsknopf zum Öffnen der Schranke	B 42086,79436
 Bahn kommt ca. halbstündlich, mit Aufforderungsknopf zum Öffnen der Schranke	B 41323,96820
@@ -1877,15 +1878,15 @@ UBB, halbstündlich	B 51270,179246
 	F 5085,11413
 	X 15144,10905
 	X 15272,10790
-	F 11269,13411
+	F 11270,13412
 	X 14170,10675
 	X 14153,6795
 #: by: Andreas Mühlhausen: vvv
 	X 9418,11804
 	F 14619,16672
 	F 18179,16534
-	X 5324,7205
-	X 5357,7202
+	X 5314,7217
+	X 5352,7184
 # removed, duplicate	F 11368,13170
 #: by: ^^^
 #: by: davidbest:
@@ -1901,7 +1902,7 @@ S-Bahn ca. alle 10 Minuten	B 10865,-4464
 	F 2334,5739
 	F 4437,5335
 #: by: mfuss75:
-	X 7102,12613
+	X 7092,12614
 	F 1800,3903
 	F 1847,3620
 	F 5182,8880
@@ -1918,9 +1919,8 @@ S-Bahn ca. alle 10 Minuten	B 10865,-4464
 	B -6182,71661
 	B -6100,73876
 	F 6459,8272
-#: note: Luftbild
 	F 1028,11309
-	X 13151,13367
+	F 13164,13374
 #: section Ampeln in Brandenburg vvv
 # nur besondere Ampeln werden hier aufgeführt
 	X 6399,-1793
@@ -1955,7 +1955,7 @@ S-Bahn ca. alle 10 Minuten	B 10865,-4464
 	F 1205,10114
 	F 2282,11463
 	F -4648,11560
-	X 10819,11664
+	X 10815,11662
 	X -1709,653
 	X -1668,-1709
 	X -3368,-4430
@@ -1969,13 +1969,12 @@ Industriebahn	B0 -2410,13746
 	F 12532,11008
 	X 4828,10356
 	F 11285,14515
-# XXX del --- Baustellenampel, existiert nicht mehr (2009-07)	X 10635,13207
+# REMOVED (Baustellenampel, existiert nicht mehr, 2009-07) ---	X 10635,13207
 	F 11905,15462
 	X 7880,13315
 	X 8017,13629
-#: note: Luftbild
 	B 15580,-26698
-	X 7717,7759
+	X 7696,7771
 	F 12204,13719
 	X 19783,12955
 	F 18191,18557
@@ -2000,17 +1999,16 @@ Industriebahn	B0 -2410,13746
 	F -5877,6308
 	F 8831,13973
 	X 8442,14456
-	F 13744,12529
+	F 13732,12526
 	F 9294,12765
 	X 9224,14169
 	Zbr 1721,20603
 #: by: Tomislav:
 	Zbr 35066,4548
 nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
-	F 5045,7635
+	F 5051,7631
 #: note: laut Luftbild:
 	X 3805,2196
-#: note: laut Luftbild:
 	F 14745,2710
 #: note: laut Luftbild:
 	X -6031,12605
@@ -2026,7 +2024,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	X 22724,6608
 	X 20277,2463
 	X 20201,2392
-	F 6721,6343
+	F 6710,6342
 	B 25109,12196
 	B 25269,-4041
 	B 24872,-3095
@@ -2047,28 +2045,23 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	B0 15350,1636
 	B0 14621,1798
 	B0 13559,2205
-#: note: laut Luftbild: vvv
 	B0 14224,1925
 	B0 14512,1818
+#: note: laut Luftbild:
 #: XXX_prog: Gilt nur in Südwestrichtung!
 	B0 15799,1690
-#: note: ^^^
 	B0 12231,4365
 	B0 12363,4175
 	B0 12673,3627
 	B0 13189,2736
 	B0 13302,2554
 	B0 13418,2357
-#: note: laut Luftbild:
 	F 14252,1945
 	F 1901,13061
 	F 9474,16297
 	F 12990,11006
-#: note: laut Luftbild:
 	X 21624,11379
-#: note: laut Luftbild:
 	X 21398,11482
-#: note: laut Luftbild:
 	X 21860,11278
 	X 17829,15015
 	X 12736,11186
@@ -2081,9 +2074,8 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	X 22785,6984
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20050128.0855.23450.html und Luftbild:
 	X 8634,18787
-#: note: laut Luftbild
 	X 8668,18744
-#: by: Detlef Neubauer [AM], Luftbild
+#: by: Detlef Neubauer [AM]
 	F 16857,12600
 	X 11722,10533
 	X 5219,6215
@@ -2100,7 +2092,6 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	X 17017,16716
 	X 11329,12497
 	X 18929,2454
-#: note: Luftbild
 	F 20322,3725
 #: note: wahrscheinlich eine Anforderungsampel
 	F 9771,12400
@@ -2117,30 +2108,23 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	X 12645,11673
 	F 6058,10988
 	F 6413,7017
-#: note: Luftbild
 #: by: thekla1707...
+#: confirmed_by: srt
 	F 6321,5818
 	F 14819,9462
 #: by: Jonas Laehnemann:
 #: note: Luftbild
 	F 760,975
 	F 16459,1680
-#: note: Luftbild
 	F 16815,1278
-#: note: Luftbild
 	X 17725,11228
-#: note: Luftbild
 	F -7504,4847
-#: note: Luftbild
 #: by: Achim Stenzel:
 	F 6362,4894
-#: note: Luftbild
 	F 17425,18997
-#: note: Luftbild
 	B -12751,-8997
 	X 13867,9864
 	X 13884,9882
-#: note: Luftbild
 	B 27705,-26035
 	B 27995,-27157
 #: note: Luftbild
@@ -2168,7 +2152,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	F 17202,10355
 	X 10830,17985
 	X -2026,2742
-#: note: Luftbild
+#: note: die Kreuzung mit der Gravensteinstr. gehört auch zu der Ampelanlage
 	X 12187,22486
 	F 8110,13042
 	B 45152,-53482
@@ -2284,18 +2268,16 @@ nur Museumsbetrieb der Heidekrautbahn	B0 11616,30519
 	B 22501,-102573
 	F 5373,10981
 #: note: war früher (ca. 2006?) ein Zebrastreifen
-	F 18729,8650
+	F 18733,8650
 	X 18709,8423
-#: note: Luftbild
 	F 4920,9029
 	B 51081,-73709
-	B 52982,-21800
+	B 52964,-21786
 #: note: Luftbild
 	B -13357,37176
 	B 18101,-35914
 #: note: Luftbild
 	B 22928,-46895
-#: note: Luftbild
 	X 21647,15496
 #: note: Luftbild
 	B -19043,-11944
@@ -2311,12 +2293,9 @@ nur Museumsbetrieb der Heidekrautbahn	B0 11616,30519
 #: note: Luftbild
 	B 40249,186550
 	F 10777,10930
-#: note: Luftbild
 	X 2663,1199
-#: note: Luftbild
 	F 1946,604
 	F 1722,271
-#: note: Luftbild
 	F 9391,3651
 #: note: Luftbild
 	F 16589,14400
@@ -2324,15 +2303,15 @@ nur Museumsbetrieb der Heidekrautbahn	B0 11616,30519
 	B 5401,128721
 	B 24754,77507
 	B -54891,-35326
-	X 14056,13386
+	X 14052,13389
 	X 14109,13449
 	F 8144,16750
-	F 4123,11680
+	F 4123,11683
 	F 10943,6498
 	X 4991,5531
 	B 24165,-103467
-#: note: Luftbild vvv
 	X 21251,12767
+#: note: Luftbild vvv
 	B -21066,67757
 	B -19695,59899
 	B -19996,46176
@@ -2373,57 +2352,46 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	F 8953,10366
 #: note: Luftbild:
 	B 11077,-5335
-#: note: Luftbild:
 	F 5574,5819
-#: note: Luftbild:
 	F 2745,12467
-#: note: Luftbild:
 	X 20210,13776
 	F 20474,14442
 	F 838,14530
 	F 11367,1710
-#: note: Luftbild:
 	F 11166,3732
 	F 13323,6322
-#: note: Luftbild:
 	F 15219,16759
 	F 11775,9234
 	F 9242,7218
-#: note: Luftbild:
 	F 6745,4999
 	B0 14641,1771
 	F 18177,-449
 	X 17855,1629
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20080404.1415.97645.html
 	X 21789,5427
-#: note: Luftbild:
 	X 21088,9175
 	F 4650,18817
 	X 16004,10204
 #: note: seit 2008-05-27 eingeschaltet:
 	X 13919,10583
-#XXX del: #: temporary:Modersohnstr. (zurzeit durch eine Ampel ersetzt, wahrscheinlich bis 2010-05-31, Neubau der Kynastbrücke)	F
 	X 21115,271
 	X 17477,6031
 #: note: Luftbild:
 	B -63533,72983
 	F 13737,14204
-	X 9504,12108
-	F 13149,10539
+	X 9510,12113
+	F 13142,10530
 	F 9245,6352
 	F 10815,6036
 	X 14421,5465
 	B 47463,70752
 	X 3983,2454
-#: note: Luftbild:
 	F 6433,16342
 #: note: Luftbild:
 	X 11871,5195
 #: note: Luftbild:
 	X 12060,5204
-#: note: Luftbild:
 	F 2580,24028
-#: note: Luftbild:
 	X 13401,15821
 	B 60676,170842
 	B 44287,133631
@@ -2442,6 +2410,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 13520,6583
 #: note: Luftbild:
 	F 6315,3974
+#: XXX_prog: Ampel eigentlich 20m nach Norden versetzt (die Ampelzählung müsste für die Querstraße korrigiert werden...)
 	F 7728,16538
 	X 5004,12771
 	F 5754,13170
@@ -2458,7 +2427,6 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 4074,6681
 	X 4107,6718
 	F 11148,19838
-#: note: Luftbild:
 	F 14633,2145
 	X 9267,15790
 	X 8079,16953
@@ -2478,7 +2446,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 19785,11760
 	X 21324,3691
 	X -7484,13770
-	F 17993,8689
+	F 17997,8695
 	F 8337,13541
 	B 56315,83428
 	B 59937,36197
@@ -2498,7 +2466,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 5479,2464
 	F 10736,12285
 #: note: die genaue Position ist südlich der Einmündung, aber querende Radfahrer müssen die Ampel immer nehmen
-	F 13597,11526
+	F 13603,11538
 	F 18585,10278
 	F 22455,1812
 	F 14519,7301
@@ -2511,7 +2479,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	B -26873,-34493
 #: XXX_prog: nur in Richtung Westen
 	X 585,11256
-	F 18343,11041
+#: XXX_prog: Radfahrer auf dem Radweg Richtung Süden sind nicht betroffen
+	F 18327,11105
 	F 11012,13278
 	F 14964,14123
 	F 15074,12850
@@ -2543,7 +2512,6 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F -6911,13817
 #: note: Luftbild
 	F -4793,9970
-#: note: Luftbild
 	F 20788,4008
 	F 14842,8809
 	F -3011,1761
@@ -2559,6 +2527,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	B -48114,-2344
 	B 9342,-90771
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1008/nachricht3979.html
+#: confirmed_by: srt
 	X 13256,26863
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20100805.1445.305319.html
 	X -7365,15306
@@ -2577,9 +2546,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: by: andk
 	X 8078,8772
 	F 9781,16569
-#: note: provisorische Ampel
 #: note: Ausfahrt Neuköllner Tor
-	X::inwork 13078,7033
+	X 13076,7044
 #: XXX_prog: Ampel gilt nur in Richtung Nordwest, in der anderen Richtung nur für Linksabbieger
 	X 20451,2869
 #: note: provisorische Ampel
@@ -2597,7 +2565,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Luftbild
 	X 3408,13210
 #: by: andk
-	X 7725,8033
+#: confirmed_by: srt
+	X 7733,8023
 	X 17533,14484
 	X 18166,14277
 	F 11070,13357
@@ -2606,10 +2575,9 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 6347,17381
 	F 11913,19144
 	F 12122,22185
-# XXX --- del (laut http://www.berlin.de/ba-pankow/presse/archiv/20110608.1725.347135.html) --- #: note: provisorische Ampel --- X 9848,20764
-	F 7549,21231
+# REMOVED (entfernt, laut http://www.berlin.de/ba-pankow/presse/archiv/20110608.1725.347135.html) --- #: note: provisorische Ampel --- X 9848,20764
+	F 7535,21229
 	F 6829,21160
-#: note: public imagery
 	X 21165,18715
 	X 7830,4667
 	F 2629,7771
@@ -2622,7 +2590,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	B 21792,169304
 	F -8603,6973
 #: XXX_prog: Ampel gilt nicht für Radfahrer
-	F 15451,13697
+	F 15468,13700
 #: note: Ampel ist wahrscheinlich nur zu Geschäftszeiten des Einkaufszentrums eingeschaltet
 	F 13125,17758
 	F 7602,305
@@ -2631,9 +2599,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 7483,3440
 	B -5882,14210
 	X 14028,5325
+#: note: zweifache Anforderungsampel in/aus Richtung Rathausstr.
+#: XXX_prog: in Richtung Osten eigentlich nur eine Fußgängerampel, in Richtung Westen eine richtige Ampel
 	X 15670,12022
-#: note: Luftbild
-	F 4861,20241
+	F 4864,20247
 	F 16602,25646
 #: XXX_prog: Strecke ist außer Betrieb! B0 oder was?
 	B0 26090,86927
@@ -2718,13 +2687,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX ^^^
 # 
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung an der Invalidenstraße) vvv
-#: last_checked: 2012-07-16 vvv
+#: last_checked: 2012-10-08 vvv
 #: next_check: 2013-05-31 vvv
-	X::inwork 8735,14093
+	X::inwork 8732,14098
 	X::inwork 8879,13913
 	X::inwork 8634,13588
-	X::inwork 8429,13903
-	X::inwork 8314,13826
+	X::inwork 8426,13909
+	X::inwork 8313,13839
 #: next_check ^^^
 #: last_checked ^^^
 #: XXX ^^^
@@ -2742,7 +2711,26 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 10281,12310
 #: note: Straßenbahn kreuzt
 	X 15922,14344
-# 
+#: last_checked: 2012-10-23
+	F::inwork 9063,12051
+	F 2814,20035
+	F 3216,21431
+	F 9540,15238
+	X 7987,6775
+	F 7155,21744
+	F 9822,14067
+#: XXX_prog Ampel existiert nur in Richtung Norden
+	X 5086,14504
+#: note: Ampel ist wahrscheinlich nur werktags eingeschaltet
+	X 1932,14146
+	F -2866,17760
+	X -2728,17038
+	F 8769,10818
+#: XXX_prog Ampel würde man auch beim Linksabbiegen aus der Greifswalder benutzen
+#: XXX_prog die beiden Überquerungen sind unabhängig voneinander geschaltet, typischerweise verlängert das die Wartezeiten
+#: note: Anforderungsampel
+	F 11952,14002
+	X 8577,11896
 ################################################################################
 #: note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10067917/966975/
@@ -2857,13 +2845,19 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -13778,4492
 	X -13067,-706
 	F -11133,262
-#: XXX noch provisorisch, aber wird wahrscheinlich dauerhaft sein
-#: last_checked: 2012-01-07
-#: next_check: 2012-02-15
-	X::inwork 18417,10738
+	X 18417,10738
 #: note: ^^^
 ################################################################################
 #: note: Ampeln elsewhere vvv
+	X 23109,30968
+	X 39873,102249
+	X 39715,101866
+	X 39682,101543
+	X 39962,101085
+#: note: Ampel kann beim Rechtsabbiegen aus Richtung Schmölln umfahren werden
+	X 41193,100575
+	F 53182,-17704
+	X 8182,25608
 	X 33103,-85728
 	X 33060,-85292
 	F -13778,4260
@@ -2894,7 +2888,7 @@ unbeschrankter Bahnübergang	B0 56520,16826
 	B 58025,14188
 	F 13642,-997
 	F 13885,-775
-	B 55825,-11622
+	B 55814,-11586
 	B -17963,-7670
 	F 18911,27124
 	X 19377,27432
@@ -2903,7 +2897,7 @@ unbeschrankter Bahnübergang	B0 56520,16826
 	F 20704,29485
 Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	X 56461,82273
-	X 23024,30523
+	X 23015,30519
 	X 37151,48074
 	X 37391,48095
 	X 36581,48125
@@ -2949,7 +2943,7 @@ Bernauer Str. / Koblenzer Str. / Mathias-Thesen-Str.	F -25,39151
 Bernauer Str. / Lehnitzstr. / Sachsenhausener Str.	X -1253,38715
 Bernauer Str. / Mittelstr. / Liebigstr.	F -1010,38798
 Bernauer Str. / Stralsunder Str.	X -853,38856
-#XXX del beim Umbau Schloßplatz entfernt	Breite Str. / Kanalstr. / Blutgasse	F -1571,38406
+# REMOVED (beim Umbau Schloßplatz entfernt) ---	Breite Str. / Kanalstr. / Blutgasse	F -1571,38406
 Germendorfer Allee / Eichendorffstr.	F -2715,38240
 Havelstr. / Nicolaikirche	F -1720,38268
 Saarlandstr. / Nauener Str.	F -576,36956

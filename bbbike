@@ -3333,17 +3333,11 @@ unless ($skip_features{"sehenswuerdigkeiten"}) {
 	$am->command
 	    (-label => M"Auffrischen der aktuellen Sperrungen",
 	     -command => sub {
-		 if (!$show_active_temp_blockings) {
-		     $show_active_temp_blockings = 1;
-		 }
-		 activate_temp_blockings($show_active_temp_blockings);
+		 gui_activate_temp_blockings();
 	     },
 	    );
 	if ($advanced) {
-	    $am->command
-		(-label => M"Sperrungen zeichnen für Datum",
-		 -command => \&active_temp_blockings_for_date_dialog,
-		);
+	    $am->separator;
 	    $am->command
 		(-label => M"Aktuelle und zukünftige Sperrungen zeichnen",
 		 -command => sub {
@@ -3352,18 +3346,23 @@ unless ($skip_features{"sehenswuerdigkeiten"}) {
 		 },
 		);
 	    $am->command
-		(-label => M"Frühere und zukünftige Sperrungen zeichnen",
-		 -command => sub {
-		     $show_active_temp_blockings = 1;
-		     activate_temp_blockings($show_active_temp_blockings, -from => 0);
-		 },
-		);
-	    $am->command
 		(-label => M"Speichern für temp_blockings",
 		 -command => sub {
 		     require BBBikeEdit;
 		     BBBikeEdit::temp_blockings_editor();
 		 }
+		);
+	    $am->separator;
+	    $am->command
+		(-label => M"Sperrungen zeichnen für Datum",
+		 -command => \&active_temp_blockings_for_date_dialog,
+		);
+	    $am->command
+		(-label => M"Frühere und zukünftige Sperrungen zeichnen",
+		 -command => sub {
+		     $show_active_temp_blockings = 1;
+		     activate_temp_blockings($show_active_temp_blockings, -from => 0);
+		 },
 		);
 	}
     }
@@ -5090,6 +5089,9 @@ sub handle_options {
 	      $f2;
 	  },
 	  var => \$center_on_coord],
+	 ['center2c','=s',undef, # XXX currently not really used, but some day may be used together with center_view2
+	  nogui => 1,
+	  var => \$center_on_coord2],
 	 ['choosestreet','!',1,
 	  label => M"Beim Starten Straßenauswahl zeigen",
 	  var => \$init_choose_street],
@@ -5306,8 +5308,6 @@ sub handle_options {
 	    label => M"Cache für WWW-Karten verwenden", var => \$use_wwwcache],
 	  ) : ()
 	 ),
-	 ['wwwslow','!',1,
-	  label => M"WWW ist langsam", var => \$www_is_slow],
 	 ['proxy','=s', undef,
 	  label => M"HTTP-Proxy (Format: http://host:port/)", var => \$proxy],
 	 ['cachedir','=s',undef,
@@ -5443,7 +5443,7 @@ speicherplatzsparender.",
 	 ['autoinstall','!',0,
 	  label => M"Auto-Installation vom CPAN (experimentell!)", var => \$auto_install_cpan],
 	 ['pp','!',0,
-	  label => M"Kurvenpunkte und Kreuzungen zeichnen", var => \$init_p_draw{'pp'}],
+	  label => M"Kurvenpunkte und Kreuzungen zeichnen", var => \$init_p_draw{'pp'}, nosave => 1, nogui => 1],
 	 ['advanced','!',undef, var => \$advanced,
 	  label => M"Advanced mode"],
 	 ['public','!',undef, nogui => 1,
@@ -5635,10 +5635,9 @@ sub standard_selection_handle {
 
 sub load_photos {
     # Note that some rarely used photos are loaded on-demand.
-    $flag_photo{'start'} = load_photo($top, 'flag2_bl');
-    $flag_photo{'via'}   = load_photo($top, 'flag_via');
-    $flag_photo{'ziel'}  = load_photo($top, 'flag_ziel');
-    @flag_offset         = (4, 15);
+    $flag_photo{'start'} = load_photo($top, 'flag2_bl_centered');
+    $flag_photo{'via'}   = load_photo($top, 'flag_via_centered');
+    $flag_photo{'ziel'}  = load_photo($top, 'flag_ziel_centered');
     $ampel_photo         = load_photo($top, 'ampel');
     $ampel_klein2_photo  = load_photo($top, 'ampel_klein2');
     $ampelf_photo        = load_photo($top, 'ampelf');
@@ -7693,10 +7692,11 @@ sub set_bindings {
 		   require BBBikeAdvanced;
 		   start_ptksh();
 	       });
-    $top->bind("<Control-R>" => sub {
-		   require BBBikeAdvanced;
-		   reload_new_modules();
-	       });
+    ## XXX Duplicate binding!
+    #$top->bind("<Control-R>" => sub {
+    #		   require BBBikeAdvanced;
+    #		   reload_new_modules();
+    #	       });
     bind_nomod($top, "<S>" => sub {
 		   set_map_mode(MM_SEARCH);
 	       });
@@ -10995,6 +10995,19 @@ sub activate_temp_blockings {
     }
 }
 
+sub gui_activate_temp_blockings {
+    if (!$show_active_temp_blockings) {
+	$show_active_temp_blockings = 1;
+    }
+    activate_temp_blockings($show_active_temp_blockings);
+}
+
+sub refresh_temp_blockings {
+    if ($show_active_temp_blockings) {
+	activate_temp_blockings($show_active_temp_blockings);
+    }
+}
+
 sub apply_temp_blockings {
     make_net() if !$net;
     add_temp_blockings_to_net();
@@ -11498,10 +11511,13 @@ sub config_symbol {
 	$c->itemconfigure($tag_fg, -image => get_symbol_scale($abk));
 	if ($abk eq 'u') {
 	    $c->itemconfigure('u-U0-fg', -image => get_symbol_scale('u-U0'));
+	    $c->itemconfigure('u-UBau-fg', -image => get_symbol_scale('u-UBau'));
 	} elsif ($abk eq 'b') {
 	    $c->itemconfigure('b-S0-fg', -image => get_symbol_scale('b-S0'));
+	    $c->itemconfigure('b-SBau-fg', -image => get_symbol_scale('b-SBau'));
 	} elsif ($abk eq 'r') {
 	    $c->itemconfigure('r-R0-fg', -image => get_symbol_scale('r-R0'));
+	    $c->itemconfigure('r-RBau-fg', -image => get_symbol_scale('r-RBau'));
 	    $c->itemconfigure('r-RP-fg', -image => get_symbol_scale('r-RP'));
 	}
 	$c->itemconfigure($tag_label, -font => "$sans_serif_font_family -12");
@@ -11582,26 +11598,8 @@ sub plot_point {
 	return bbbikelazy_add_data("p", $abk, $filename, {exists $args{NameDraw} ? (NameDraw => $args{NameDraw}) : ()});
     }
 
-    # XXX $ignore code fehlt noch...
-    my $restrict;
-    if (exists $str_restrict{$abk}) {
-	my $all_set = 1;
-	my($k,$v);
-	my @restrict;
-	while(($k,$v) = each %{$str_restrict{$abk}}) {
-	    if (!$v) {
-		$all_set = 0;
-	    } else {
-		$k =~ s/([?*])/\\$1/g; # quote special, XXX mehr davon bei Bedarf
-		push @restrict, $k;
-	    }
-	}
-	if ($all_set || !@restrict) {
-	    undef $restrict;
-	} else {
-	    $restrict = '^(' . join('|', @restrict) . ")\$";
-	}
-    }
+    # XXX die anderen Rückgabewerte (..._list, $ignore) werden noch ignoriert
+    my($restrict) = _set_restrict($abk);
 
     my $default_width;
     if (defined $args{Width}) { $default_width = $args{Width} }
@@ -14606,6 +14604,9 @@ sub show_info {
 		$linkcount++;
 	    }
 	    $info_text->insert("end", "BBBike:\t$sx,$sy\n");
+	    if (defined $px && defined $py) {
+		$info_text->insert("end", "Wikipedia-Markup:\tNS=$py|EW=$px");
+	    }
 	    $info_text->insert("end", "\n");
 	}
 
@@ -14770,6 +14771,15 @@ EOF
 		my $text = splice @tags, 2, 1;
 		unshift @tags, $text, "";
 	    }
+
+	    # XXX slightly hackish: link to the OSM node/way/... browser
+	    for (@tags) {
+		if (my($type,$id) = $_ =~ m{^osm-(node|way|relation)-(\d+)$}) {
+		    push @tags, "http://www.openstreetmap.org/browse/$type/$id";
+		    last;
+		}
+	    }
+
 	    push @internal_canvas_tags, join("\n", @tags), undef;
 	}
     }
@@ -14913,6 +14923,10 @@ sub reset_free_layer {
     delete $layer_line_shorten_end{$abk};
     delete $layer_name{$abk};
     delete $layer_icon{$abk};
+    delete $p_name_draw{$abk};
+    delete $str_name_draw{$abk};
+    delete $no_overlap_label{$abk};
+    delete $do_outline_text{$abk};
     remove_from_stack($abk);
 }
 
@@ -15318,8 +15332,8 @@ sub set_flag {
 	    return;
 	}
 	# XXX $nr may or may not be meaningful here
-	$c->createImage($x - $flag_offset[0], $y - $flag_offset[1],
-			-anchor => "nw",
+	$c->createImage($x, $y,
+			-anchor => 'c',
 			-image => $flag_photo{$type},
 			-tags => ['route', "route-$nr", $type . 'flag']);
     }
@@ -16030,7 +16044,7 @@ sub scale_width {
     foreach (qw(lsa-X lsa-B lsa-B0 lsa-F lsa-Zbr rest kn vf-Vf vf-Kz u b), ($XXX_use_old_R_symbol ? () : ('r'))) {
 	$c->itemconfigure($_ . '-fg && !attrib-inwork', -image => get_symbol_scale($_, $scale));
     }
-    foreach (qw(u-U0 b-S0 r-R0 r-RP)) { # overwrite the previous settings of u,b,r
+    foreach (qw(u-U0 u-UBau b-S0 b-SBau r-R0 r-RBau r-RP)) { # overwrite the previous settings of u,b,r
 	$c->itemconfigure($_ . '-fg', -image => get_symbol_scale($_, $scale));
     }
     foreach (qw(attrib-inwork)) {
@@ -16395,7 +16409,7 @@ sub get_symbol_scale {
 	    $photo = load_photo($top, $filename, -persistent => 1);
 	}
 	return $photo;
-    } elsif ($tag eq 'u' || $tag eq 'b' || $tag eq 'u-U0' || $tag eq 'b-S0') {
+    } elsif ($tag eq 'u' || $tag eq 'b' || $tag eq 'u-U0' || $tag eq 'b-S0' || $tag eq 'u-UBau' || $tag eq 'b-SBau') {
 	my $photo;
 	my $base = $tag =~ m{^b} ? "sbahn" : "ubahn";
 	my $filename;
@@ -16407,7 +16421,7 @@ sub get_symbol_scale {
 	    $filename = $base . "_mini";
 	}
 	if ($filename) {
-	    if ($tag =~ m{^[ub]-[US]0$}) {
+	    if ($tag =~ m{^[ub]-[US](0|Bau)$}) {
 		$photo = load_photo($top, $filename, -persistent => 1, -palette => 256, -gamma => 3);
 	    } else {
 		$photo = load_photo($top, $filename, -persistent => 1);
@@ -17947,11 +17961,7 @@ sub show_route_strname {
 	my $ges_entf = 0;
 	my($next_entf, $ges_entf_s, $next_winkel, $next_richtung, $next_extra)
 	  = ("", "", undef, "");
-	my($aggr_begin_dist, $aggr_streets) = (0, "");
-	my $aggr_dir = undef;
 	my $last_str;
-	my ($out_dist, $out_total_dist, $out_dir, $out_str);
-	my $out_dist_add;
 	my %seen_comments;
 	for(my $i = 0; $i <= $#search_route; $i++) {
 	    my($str, $index_arr);
@@ -18033,18 +18043,10 @@ sub show_route_strname {
 		}
 	    }
 
-	    ($out_dist, $out_dir, $out_str)
-		= ($entf_s, $richtung, $str);
-	    if (defined $out_dist_add) {
-		$out_dist += $out_dist_add;
-		undef $out_dist_add;
-	    }
-	    $out_total_dist = $ges_entf_s;
-
-	    $route_strname_lbox->add($i, -text => $out_dist);
-	    $route_strname_lbox->itemCreate($i, 1, -text => $out_total_dist);
-	    $route_strname_lbox->itemCreate($i, 2, -text => $out_dir);
-	    $route_strname_lbox->itemCreate($i, 3, -text => $out_str);
+	    $route_strname_lbox->add($i, -text => $entf_s);
+	    $route_strname_lbox->itemCreate($i, 1, -text => $ges_entf_s);
+	    $route_strname_lbox->itemCreate($i, 2, -text => $richtung);
+	    $route_strname_lbox->itemCreate($i, 3, -text => $str);
 
 	    my $etappe_comment = "";
 	    if ($do_route_strnames_comments && $comments_net &&
@@ -18082,8 +18084,8 @@ sub show_route_strname {
 		$etappe_comment = join("; ", @comments) if @comments;
 	    }
 	    $route_strname_lbox->itemCreate($i, 4, -text => $etappe_comment);
-	    push @route_info, [($out_dist||""), ($out_total_dist||""),
-			       $out_dir || "", $out_str || ""];
+	    push @route_info, [($entf_s||""), ($ges_entf_s||""),
+			       ($richtung||""), ($str || "")];
 	}
 	$ges_entf_s = "(" . m2km($ges_entf+$next_entf) . ")";
 	my $i = $#search_route + 1;
@@ -18155,6 +18157,7 @@ sub show_route_strname {
     my $endb = $bf->Button(Name => 'end',
 			   -command => $withdraw_sub,
 			  );
+    $t->bind('<Escape>' => sub { $endb->invoke });
     push @bfb, $endb;
     push @bfb, $bf->Button
       (-text => M"Sichern (Text)",
@@ -21232,10 +21235,23 @@ sub accept_drop {
 # Return the start and goal streets of the current route
 ### AutoLoad Sub
 sub get_route_description {
+    my(%args) = @_;
+    my $with_via = exists $args{-withvia} ? delete $args{-withvia} : 1;
+    if (%args) {
+	warn "WARNING: get_route_description called with extra arguments: " . join(" ", %args);
+    }
+
     my $text = "";
     my @search_route = @{ get_act_search_route() };
     if (@search_route) {
-	$text = $search_route[0][StrassenNetz::ROUTE_NAME] . " - " . $search_route[-1][StrassenNetz::ROUTE_NAME];
+	$text = $search_route[0][StrassenNetz::ROUTE_NAME];
+	if ($with_via && @search_route_points > 2) { # do we have a via?
+	    # XXX This is a simple solution. A better one use the
+	    # farthest point instead the point in the middle of the
+	    # list.
+	    $text .= " - " . $search_route[@search_route/2][StrassenNetz::ROUTE_NAME];
+	}
+	$text .= " - " . $search_route[-1][StrassenNetz::ROUTE_NAME];
     }
     $text;
 }

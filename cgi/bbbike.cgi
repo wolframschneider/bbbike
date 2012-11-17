@@ -818,11 +818,16 @@ my $is_streets;
       $selected_lang = $lang;
 
       $lang = "en" if $lang eq 'm'; # mobile
+  } elsif ($path eq '/cgi/bbbike.cgi' && $q->url() =~ /localhost/) {
+      # original bbbike.cgi script
+      $selected_lang = $lang = $local_lang = 'de';
   }
+
   $local_lang = &my_lang($lang, 1);
 
   $lang = $local_lang if $local_lang && !$selected_lang;
   $is_streets = &is_streets($q);
+  warn "lang: $lang, local_lang: $local_lang '$path'\n" if $debug >= 2;
 }
 
 # local language links redirect: /de/Berlin/ -> /Berlin/
@@ -846,9 +851,9 @@ if ($local_lang eq $selected_lang) {
   my $all = defined $q->param('all') ? $q->param('all') : 0;
 
   # request from internal IP address 10.x.x.x
-  my $local_host = $q->remote_host() =~ /^(10\.|127\.0\.0\.1)/ ? 1 : 0;
+  my $local_host = $q->remote_host() =~ /^(10\.|127\.0\.0\.2)/ ? 1 : 0;
 
-  if ($q->param('cache') || $q->param('generate_cache') || $all >= 3 || $local_host) {
+  if ($q->param('cache') || $q->param('generate_cache') || $q->param("renice") || $all >= 3 || $local_host) {
      eval {
 	require BSD::Resource;
 
@@ -1482,7 +1487,7 @@ if ($use_file_cache) {
 	if ($file_cache->exists_content($q)) {
 	    my($content, $meta) = $file_cache->get_content($q);
 	    if ($content && $meta) {
-warn "DEBUG: Cache hit for " . $q->query_string;
+		warn "DEBUG: Cache hit for " . $q->query_string if $debug;
 		http_header(@{ $meta->{headers} || [] });
 		print $content;
 		my_exit(0);
@@ -2383,7 +2388,10 @@ EOF
 	    my $url = $q->url(-full=>0, -absolute=>1);
 	    $url =~ s,^/m/,/,;
 	    &social_link;
-	    print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+	    print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">classic view</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#android">Android App</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#iphone">iPhone App</a>\n};
+
         } else {
 	    my $url = $q->url(-full=>0, -absolute => 1);
 	    $url =~ s,^/\w\w/,/m/, || $url =~ s,/,/m/,;
@@ -2392,9 +2400,12 @@ EOF
 	    &social_link;
 
 	    print qq{<a class="$class logo" href="$url" title="}, M("BBBike for mobile devices"), qq{"><img class="logo" width="16" height="16" alt="" src="/images/phone.png">[}, M("mobil"), qq{]</a>\n};
+
 	    print "&nbsp;" x 10;
 	    print qq{<a style="font-size:small" title="}, M("Karte nach rechts schieben"), qq{" href="javascript:smallerMap(1.5)">&gt;&gt;</a>\n};
+	    print qq{<img onclick='javascript:displayCurrentPosition([[8.03000,48.73000], [8.81000,49.27000]], "de");' src="/images/location_icon.png">\n};
 	    print qq{<a style="font-size:small" title="}, M("Karte nach links schieben"), qq{" href="javascript:smallerMap(-1.5)">&lt;&lt;</a>\n};
+
         }
 	print qq{</span>\n};
 
@@ -5069,20 +5080,25 @@ sub display_route {
 		    $richtung = $richtung_html = "";
 		    $raw_direction = "";
 		} else {
-		    $raw_direction =
-			($winkel <= 45 ? 'h' : '') .
-			    ($richtung eq 'l' ? 'l' : 'r');
-		    $richtung =
-			($winkel <= 45 ? M('halb') : '') .
-			    ($richtung eq 'l' ? M('links') : M('rechts')) .
-				" ($winkel°) ";
-		    if ($lang eq 'en') {
-			$richtung .= "-&gt;";
+		    if ($winkel >= 160 && $winkel <= 200) { # +/- 20° from 180°
+			$richtung = $richtung_html = M('umdrehen');
+			$raw_direction = 'u';
 		    } else {
-			if ($same_streetname_important_angle) {
-			    $richtung .= "weiter " . Strasse::de_artikel_dativ($strname);
+			$raw_direction =
+			    ($winkel <= 45 ? 'h' : '') .
+				($richtung eq 'l' ? 'l' : 'r');
+			$richtung =
+			    ($winkel <= 45 ? M('halb') : '') .
+				($richtung eq 'l' ? M('links') : M('rechts')) .
+				    " ($winkel°) ";
+			if ($lang eq 'en') {
+			    $richtung .= "-&gt;";
 			} else {
-			    $richtung .= Strasse::de_artikel($strname);
+			    if ($same_streetname_important_angle) {
+				$richtung .= "weiter " . Strasse::de_artikel_dativ($strname);
+			    } else {
+				$richtung .= Strasse::de_artikel($strname);
+			    }
 			}
 		    }
 		    if ($is_m && !$bi->{cannot_unicode_arrows}) {
@@ -5090,6 +5106,7 @@ sub display_route {
 					  'hl' => '&#x21d6;',
 					  'hr' => '&#x21d7;',
 					  'r'  => '&#x21d2;',
+					  'u'  => '&#x21b6;',
 					 }->{$raw_direction};
 		    } else {
 			$richtung_html = $richtung;
@@ -5578,7 +5595,9 @@ EOF
 	    my $url = $q->url(-full=>0, -absolute=>1, -query=>1);
             $url =~ s,^/m/,/,;
             #&social_link;
-            print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">[classic view]</a>\n};
+            print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">classic view</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#android">Android App</a>\n};
+            print qq{ <a class="mobile_link" href="/help.html#iphone">iPhone App</a>\n};
 	    print qq{</span>\n\n};
 
 	    print <<EOF;
@@ -5805,7 +5824,7 @@ for my $etappe (@out_route) {
 		print "<a class=ms href='#' onclick='return ms($etappe->{Coord})'>"
 		    if $can_jslink;
 		print $strname;
-		if ($important_angle_crossing_name) {
+		if ($important_angle_crossing_name && $important_angle_crossing_name ne $strname) {
 		    print " (" . M("Ecke") . " " . $important_angle_crossing_name . ")";
 		}
 		print "</a>"
@@ -7251,7 +7270,7 @@ sub get_streets {
 	}
     }
 
-    $crossings = {};
+    undef $crossings;
 
     $g_str;
 }
@@ -7295,7 +7314,7 @@ sub get_orte {
 }
 
 sub all_crossings {
-    if (scalar keys %$crossings == 0) {
+    if (!$crossings) {
 	my $str = get_streets();
 	$crossings = $str->all_crossings(RetType => 'hash',
 					 UseCache => 1);
@@ -8117,7 +8136,7 @@ sub header {
     push @javascript, 'bbbike.js';
     if ($enable_opensearch_suggestions) {
 	my $city = $osm_data && $datadir =~ m,data-osm/(.+), ? $1 : 'Berlin';
-	push @javascript, "jquery-1.4.2.min.js", "devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete.js";
+	push @javascript, "jquery/jquery-1.4.2.min.js", "devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete.js";
     }
 
     if (is_production($q)) {
@@ -8357,7 +8376,7 @@ $permalink_text
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
 (&copy;) 1998-2012 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
-Map data (&copy;) <a href="http://www.openstreetmap.org/">OpenStreetMap.org</a> contributors<br >
+Map data (&copy;) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap.org</a> contributors<br >
 
 </div> <!-- copyright -->
 
@@ -8899,8 +8918,7 @@ sub draw_route_from_fh {
 	$res = Route::load($file, { }, -fuzzy => 1);
     };
     my $err = $@;
-    ## XXX unlink later...
-    #unlink $file;
+    unlink $file;
 
     if ($res->{RealCoords}) {
 	$q->param('draw', 'all');

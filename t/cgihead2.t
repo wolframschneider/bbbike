@@ -20,6 +20,7 @@ use lib (
 use BBBikeVar;
 use BBBikeTest qw(check_cgi_testing);
 use File::Basename;
+use Sys::Hostname qw(hostname);
 
 BEGIN {
     if (!eval q{
@@ -37,6 +38,11 @@ BEGIN {
 }
 
 check_cgi_testing;
+
+if (hostname !~ m{\.(rezic|herceg)\.de$}) {
+    plan skip_all => "Live server tests only activated on author systems";
+    exit 0;
+}
 
 use constant MSDOS_MIME_TYPE => qr{^application/(octet-stream|x-msdos-program|x-msdownload)$};
 
@@ -67,7 +73,6 @@ push @var, (qw(
 	       $BBBike::BBBIKE_MAPSERVER_ADDRESS_URL
 	       $BBBike::BBBIKE_MAPSERVER_DIRECT
 	       $BBBike::BBBIKE_MAPSERVER_INDIRECT
-	       $BBBike::BBBIKE_GOOGLEMAP_URL
 	       $BBBike::BBBIKE_LEAFLET_URL
 	       $BBBike::BBBIKE_LEAFLET_CGI_URL
 	       $BBBike::SF_DISTFILE_SOURCE
@@ -102,7 +107,7 @@ for my $var (@var) {
 
 plan tests => 1 + 3 * (scalar(map { @$_ } values %url) + @compat_urls);
 
-my $ua = LWP::UserAgent->new;
+my $ua = LWP::UserAgent->new(keep_alive => 10);
 $ua->agent('BBBike-Test/1.0');
 $ua->env_proxy;
 
@@ -183,7 +188,7 @@ sub check_url {
 	    if ($resp->code == 500 && $resp->message =~ /No route to host/i); # 'Bad hostname' was part of this regexp, but this mask a real test failure!
 	#warn $resp->content;
 	ok($resp->is_success, "Successful request of $url")
-	    or diag $resp->status_line . " " . $resp->content;
+	    or diag "$url " . $resp->status_line . " " . $resp->content;
 	my $content_type = $resp->content_type;
 	if ($url eq $BBBike::BBBIKE_UPDATE_DATA_CGI ||
 	    $url eq $BBBike::BBBIKE_UPDATE_DIST_CGI ||

@@ -24,6 +24,8 @@ $VERSION = 1.22;
 
 use vars qw(%images);
 
+my $map_compare_use_bbbike_org = 1;
+
 sub register {
     _create_images();
     my $lang = $Msg::lang || 'de';
@@ -78,14 +80,23 @@ sub register {
 	  callback_3_std => sub { showmap_url_mapcompare(@_) },
 	  ($images{Geofabrik} ? (icon => $images{Geofabrik}) : ()),
 	};
-    if ($is_berlin) {
-	$main::info_plugins{__PACKAGE__ . "_BvgStadtplan"} =
-	    { name => "BVG-Stadtplan",
-	      callback => sub { showmap_bvgstadtplan(@_) },
-	      callback_3_std => sub { showmap_url_bvgstadtplan(@_) },
-	      ($images{BvgStadtplan} ? (icon => $images{BvgStadtplan}) : ()),
+    if ($map_compare_use_bbbike_org) {
+	$main::info_plugins{__PACKAGE__ . "_MapCompare_BBBike"} =
+	    { name => "Map Compare (profile BBBike)",
+	      callback => sub { showmap_mapcompare(@_, profile => "bbbike") },
+	      callback_3_std => sub { showmap_url_mapcompare(@_, profile => "bbbike") },
+	      ($images{Geofabrik} ? (icon => $images{Geofabrik}) : ()),
 	    };
     }
+    ## Not permalinkable anymore
+    # if ($is_berlin) {
+    # 	$main::info_plugins{__PACKAGE__ . "_BvgStadtplan"} =
+    # 	    { name => "BVG-Stadtplan",
+    # 	      callback => sub { showmap_bvgstadtplan(@_) },
+    # 	      callback_3_std => sub { showmap_url_bvgstadtplan(@_) },
+    # 	      ($images{BvgStadtplan} ? (icon => $images{BvgStadtplan}) : ()),
+    # 	    };
+    # }
     if (0) {
 	# Does not work anymore: URL gets redirected to
 	# http://intl.local.live.com/ page.
@@ -102,15 +113,6 @@ sub register {
 	  callback_3_std => sub { showmap_url_bikemapnet(@_) },
 	  ($images{BikeMapNet} ? (icon => $images{BikeMapNet}) : ()),
 	};
-    if ($is_berlin) {
-	# Down: 2010-09-30
-	$main::info_plugins{__PACKAGE__ . "_BerlinerStadtplan24"} =
-	    { name => "www.berliner-stadtplan24.com",
-	      callback => sub { showmap_berliner_stadtplan24(@_) },
-	      callback_3_std => sub { showmap_url_berliner_stadtplan24(@_) },
-	      ($images{BerlinerStadtplan24} ? (icon => $images{BerlinerStadtplan24}) : ()),
-	    };
-    }
     $main::info_plugins{__PACKAGE__ . "_Geocaching"} =
 	{ name => "geocaching.com",
 	  callback => sub { showmap_geocaching(@_) },
@@ -305,21 +307,6 @@ yy6kzDWz2Da02Dm02Uev0kiw0kC02EC12D632je630O22T653EW52z694EG830W73Uy83Uq9
 AAAAEAAKAAAHjoBzc29lVGOCTyVDgoyCWCsXSYJsVhtmjY05N3JzcVEcQZhrV0dNGVlcPR87
 HUZOanNhMSw0GhAWHkJpQA8jKBFdGDBuYikMLWhzTCE8FG0uFQFaYAsmKiSCJzZnB1BeAAhI
 altzIi+CMiBzSmRLBjoJRFU1A+RzXwUzVUUKOHA/DgRIkNJoygQCDXzACQQAOw==
-EOF
-    }
-
-    if (!defined $images{BerlinerStadtplan24}) {
-	$images{BerlinerStadtplan24} = $main::top->Photo
-	    (-format => 'gif',
-	     -data => <<EOF);
-R0lGODlhEAAQAPUAAFxYWFxcWFxYXFxcXGBcWGBcXGBgYGRkZGhkaHBscHR0dHx4eHx8eIB8
-eIB8gIiEhIiIiIyMjJCMjJCQkJiUmJycnKCcnKiopKyorKyssLy8vMDAwMTExMjIyMzIzMzM
-zNDQ0NTU1NjU0NjY2Nzc3ODg4OTk5Ojo6PDw8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAAIf4V
-Q3JlYXRlZCB3aXRoIFRoZSBHSU1QACwAAAAAEAAQAAAGgECUcEgsGo9IVGnJ5EwaE5KQCToM
-BNdBNmICeToWLRZLKBQGDop2EGCLAoQ4AWDIXAaFeGAPjwMCChsfeGtaZnltCRooGAwLCmZi
-AwSJiw54AmZYVwRaiigQApkFmVmUA4onIRUQCghXh6eBSiMgHRKwmZ0DDxtTTMDBJUnExUJB
-ADs=
 EOF
     }
 
@@ -605,47 +592,61 @@ sub _copy_link {
 }
 
 ######################################################################
-# Map Compare (Geofabrik)
+# Map Compare (Geofabrik resp. bbbike.org)
 
 sub showmap_url_mapcompare {
     my(%args) = @_;
+
+    my $profile = delete $args{profile};
 
     my $px = $args{px};
     my $py = $args{py};
 
     my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
-    my $map0 = 'googlehybrid';
+    if ($map_compare_use_bbbike_org) {
+	$scale = 18 if $scale > 18;
+    }
+    my $map0 = $map_compare_use_bbbike_org ? 'google-hybrid' : 'googlehybrid';
     #my $map1 = 'tah';
-    #my $map1 = 'mapnik';
-    my $map1 = 'cyclemap';
-    sprintf 'http://tools.geofabrik.de/mc/?mt0=%s&mt1=%s&lat=%s&lon=%s&zoom=%d',
+    my $map1 = 'mapnik';
+    #my $map1 = 'cyclemap';
+    my $common_qs = sprintf 'mt0=%s&mt1=%s&lat=%s&lon=%s&zoom=%d',
 	$map0, $map1, $py, $px, $scale;
+    if ($profile) {
+	$common_qs .= "&profile=$profile";
+    }
+    if ($map_compare_use_bbbike_org) {
+	'http://tile.bbbike.org/mc/?num=2&' . $common_qs;
+    } else {
+	'http://tools.geofabrik.de/mc/?' . $common_qs;
+    }
 }
 
 sub showmap_mapcompare { start_browser(showmap_url_mapcompare(@_)) }
 
-######################################################################
-# BVG-Stadtplan
-
-sub showmap_url_bvgstadtplan {
-    my(%args) = @_;
-
-    my $px = $args{px};
-    my $py = $args{py};
-    my $scale = $args{mapscale_scale};
-
-    my $map_zoom;
-    if    ($scale < 18000) { $map_zoom = 4 } # best is 12000
-    elsif ($scale > 37000) { $map_zoom = 3 } # best is 50000
-    else                   { $map_zoom = 2 } # best is 25000
-    sprintf "http://www.fahrinfo-berlin.de/Stadtplan/index?language=d&client=fahrinfo&mode=show&zoom=%d&ld=0.1&seqnr=1&location=,,WGS84,%s,%s&label=", $map_zoom, $px, $py
-}
-
-sub showmap_bvgstadtplan {
-    my(%args) = @_;
-    my $url = showmap_url_bvgstadtplan(%args);
-    start_browser($url);
-}
+## XXX del? not permalinkable anymore...
+#######################################################################
+## BVG-Stadtplan
+#
+#sub showmap_url_bvgstadtplan {
+#    my(%args) = @_;
+#
+#    my $px = $args{px};
+#    my $py = $args{py};
+#    my $scale = $args{mapscale_scale};
+#
+#    my $map_zoom;
+#    if    ($scale < 18000) { $map_zoom = 4 } # best is 12000
+#    elsif ($scale > 37000) { $map_zoom = 3 } # best is 50000
+#    else                   { $map_zoom = 2 } # best is 25000
+#    sprintf "http://www.fahrinfo-berlin.de/Stadtplan/index?language=d&client=fahrinfo&mode=show&zoom=%d&ld=0.1&seqnr=1&location=,,WGS84,%s,%s&label=", $map_zoom, $px, $py
+#}
+#
+#sub showmap_bvgstadtplan {
+#    my(%args) = @_;
+#    my $url = showmap_url_bvgstadtplan(%args);
+#    start_browser($url);
+#}
 
 ######################################################################
 # maps.live.com
@@ -726,46 +727,6 @@ sub showmap_bikemapnet {
 }
 
 ######################################################################
-# Berliner-Stadtplan24.com, does not work in seamonkey, but works in
-# firefox
-
-sub showmap_url_berliner_stadtplan24 {
-    my(%args) = @_;
-
-    #my $y_wgs = sprintf "%.2f", (Karte::Polar::ddd2dmm($py))[1];
-    #my $x_wgs = sprintf "%.2f", (Karte::Polar::ddd2dmm($px))[1];
-    (my $y_wgs = $args{py}) =~ s{\.}{,};
-    (my $x_wgs = $args{px}) =~ s{\.}{,};
-    my $zoom = "100";
-    my $mapscale_scale = $args{mapscale_scale};
-    if ($mapscale_scale) {
-	if ($mapscale_scale < 13000) {
-	    $zoom = 100;
-	} elsif ($mapscale_scale < 18000) {
-	    $zoom = 75;
-	} elsif ($mapscale_scale < 26000) {
-	    $zoom = 50;
-	} else {
-	    $zoom = 27;
-	}
-    }
-    ## Does not work anymore?
-    #my $url = "http://www.berliner-stadtplan.com/?y_wgs=${y_wgs}%27&x_wgs=${x_wgs}%27&zoom=$zoom&size=500x400&sub.x=15&sub.y=7";
-    ## But this works. Be nice and tell the Pharus guys where this request came from:
-    #my $url = "http://www.berliner-stadtplan24.com/topic/bln/str/x_wgs/${x_wgs}/y_wgs/${y_wgs}/from/bbbike.html";
-    ## Since 2007-08-01 everything changed. Now it is:
-    ## http://www.berliner-stadtplan24.com/berlin/gps_x/13,4439/gps_y/52,514.html
-    my $url = "http://www.berliner-stadtplan24.com/berlin/gps_x/${x_wgs}/gps_y/${y_wgs}.html";
-    $url;
-}
-
-sub showmap_berliner_stadtplan24 {
-    my(%args) = @_;
-    my $url = showmap_url_berliner_stadtplan24(%args);
-    start_browser($url);
-}
-
-######################################################################
 # Geocaching.com
 
 sub showmap_url_geocaching {
@@ -813,19 +774,10 @@ sub showmap_url_yahoo_de {
 
     my $px = $args{px};
     my $py = $args{py};
-    my $scale = $args{mapscale_scale};
-    my @allowed_scales = (undef, 4500, 15000, 50000, 125000);
- TRY: {
-	for my $i (1 .. $#allowed_scales) {
-	    if ($scale < ($allowed_scales[$i]+$allowed_scales[$i+1])/2) {
-		$scale = $i;
-		last TRY;
-	    }
-	}
-	$scale = $#allowed_scales;
-    }
+    my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
+    $scale = 20 if $scale > 20;
 
-    sprintf "http://de.routenplaner.yahoo.com/maps_result?ds=n&name=Hallo&desc=&lat=%s&lon=%s&zoomin=yes&mag=%d",
+    sprintf "http://de.maps.yahoo.com/#q1=++&lat=%s&lon=%s&zoom=%d&mvt=m&trf=0",
 	$py, $px, $scale;
 }
 

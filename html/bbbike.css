@@ -252,7 +252,7 @@ div#routing {
 div#sidebar { 
 	position: absolute; 
 	/* left: 0px; */
-	width: 26em;
+	width: 21em;
         padding-right: 0.5em;
 	background-color: white;
 	z-index: 1000; 
@@ -415,4 +415,6 @@ span.tagcloud7 { font-size: 14px; }
 span.tagcloud8 { font-size: 15px; }
 span.tagcloud9 { font-size: 16px; }
 span.tagcloud10 { font-size: 17px; }
+
+#big_donate_image { text-align:center; }
 

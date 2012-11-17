@@ -47,17 +47,22 @@ if (!defined $html_dir) {
 my @prog = qw(
 	      bbbike.cgi
 	      bbbike.en.cgi
-	      bbbike2.cgi
-	      bbbike2.en.cgi
-	      mapserver_address.cgi
-	      mapserver_comment.cgi
 	      wapbbbike.cgi
-	      bbbike-data.cgi
-	      bbbike-snapshot.cgi
 	      bbbikegooglemap.cgi
 	     );
+if (!$ENV{BBBIKE_TEST_NO_MAPSERVER}) {
+    push @prog, qw(
+	      mapserver_address.cgi
+              mapserver_comment.cgi
+	      bbbike-snapshot.cgi
+	      bbbike2.cgi
+	      bbbike2.en.cgi
+	      bbbike-data.cgi
+		);
+}
+
 if ($cgi_dir !~ m{(bbbike.hosteurope|radzeit)\Q.herceg.de}) {
-    push @prog, "bbbikegooglemap2.cgi";
+    push @prog, "bbbikegooglemap2.cgi" if !$ENV{BBBIKE_TEST_NO_MAPSERVER};
 }
 
 my @static = qw(
@@ -78,14 +83,20 @@ $mapserver_prog_url = $ENV{BBBIKE_TEST_MAPSERVERURL};
 if (!defined $mapserver_prog_url) {
     do "$FindBin::RealBin/../cgi/bbbike.cgi.config";
 }
+
+$mapserver_prog_url = undef if $ENV{BBBIKE_TEST_NO_MAPSERVER};
 if (defined $mapserver_prog_url) {
     push @prog, $mapserver_prog_url;
 } else {
     diag("No URL for mapserv defined");
 }
 
-my $extra_tests = 7;
+my $extra_tests = 3;
 plan tests => scalar(@prog) + scalar(@static) + $extra_tests;
+
+my $ua = LWP::UserAgent->new(keep_alive => 1);
+$ua->agent('BBBike-Test/1.0');
+$ua->env_proxy;
 
 delete $ENV{PERL5LIB}; # override Test::Harness setting
 for my $prog (@prog) {
@@ -106,7 +117,7 @@ for my $static (@static) {
 
 # Check for Bot traps
 {
-    my $java_ua = LWP::UserAgent->new;
+    my $java_ua = LWP::UserAgent->new(keep_alive => 1);
     $java_ua->agent('Java/1.6.0_06 BBBike-Test/1.0');
     $java_ua->env_proxy;
     $java_ua->requests_redirectable([]);
@@ -127,9 +138,6 @@ sub check_url {
 	$prog = basename $url;
     }
     (my $safefile = $prog) =~ s/[^A-Za-z0-9._-]/_/g;
-    my $ua = LWP::UserAgent->new;
-    $ua->agent('BBBike-Test/1.0');
-    $ua->env_proxy;
     my $resp = $ua->head($url);
     ok($resp->is_success, $url) or diag $resp->content;
 

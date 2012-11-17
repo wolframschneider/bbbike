@@ -1,16 +1,30 @@
-#!/usr/bin/perl -w
-# -*- perl -*-
+#!/usr/local/bin/perl 
+# Copyright (c) Sep 2012 Wolfram Schneider, http://bbbike.org
 
 #
 # Author: Slaven Rezic
 #
 
-use strict;
+# NOTE: this test is controlled by three environment variables:
+#
+# - BBBIKE_TEST_NO_NETWORK: if set to a perl-true value,
+#   then this test is completely skipped
+#
+# - BBBIKE_LONG_TESTS: if set to a perl-true value,
+#   then a random city will be chosen for download (which may
+#   result in loading big data files)
+#
+# - BBBIKE_TEST_SLOW_NETWORK: if set to a perl-true value,
+#   then always a quite small city will be downloaded,
+#   regardless of the BBBIKE_LONG_TESTS setting
+
 use FindBin;
 use lib ( "$FindBin::RealBin/..", "$FindBin::RealBin/../lib", );
 
 use File::Temp qw(tempdir);
 use Strassen::Core ();
+use strict;
+use warnings;
 
 BEGIN {
     if (
@@ -27,10 +41,6 @@ BEGIN {
         print "1..0 # skip due no network\n";
         exit;
     }
-    if ($ENV{BBBIKE_TEST_NO_NETWORK}) {
-	print "1..0 # skip due no network\n";
-	exit;
-    }
 }
 
 plan 'no_plan';
@@ -44,13 +54,14 @@ my @listing;
     chomp( @listing = `$^X $download_script` );
 
     # 2012-03-16: there are 231 cities available + original bbbike data
-    cmp_ok scalar(@listing), ">=", 100, 'More than 100 cities found';
+    cmp_ok scalar(@listing), ">=", 235, 'More than 200 cities found';
 
     ok grep { $_ eq 'Wien' } @listing, 'Found Wien in listing';
 }
 
 {
-    my $random = $ENV{BBBIKE_TEST_SLOW_NETWORK} ? 0 : 1;
+    my $random =
+      $ENV{BBBIKE_TEST_SLOW_NETWORK} ? 0 : $ENV{BBBIKE_LONG_TESTS} ? 1 : 0;
 
     my ($dir) =
       tempdir( "bbbike.org_download_XXXXXXXX", CLEANUP => 1, TMPDIR => 1 )

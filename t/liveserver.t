@@ -14,14 +14,19 @@ use lib ("$FindBin::RealBin/..",
 BEGIN {
     if (!eval q{
 	use Test::More;
+	use LWP::ConnCache;
 	use LWP::UserAgent;
 	use Compress::Zlib;
 	1;
     }) {
-	print "1..0 # skip no Test::More, Compress::Zlib and/or LWP::UserAgent modules\n";
+	print "1..0 # skip no Test::More, Compress::Zlib, LWP::ConnCache and/or LWP::UserAgent modules\n";
 	exit;
     }
 
+    if ($ENV{BBBIKE_TEST_ORG}) {
+	print "1..0 # skip due bbbike.de test only\n";
+	exit;
+    }
     if ($ENV{BBBIKE_TEST_SLOW_NETWORK}) {
 	print "1..0 # skip due slow network\n";
 	exit;
@@ -36,18 +41,15 @@ use Strassen::Core;
 
 my $bbbike_url               = "http://bbbike.de";
 my $bbbike_data_url          = "http://bbbike.de/BBBike/data";
-my $bbbike_data_fallback_url = "http://bbbike.radzeit.de/BBBike/data";
-#my $bbbike_data_local_url    = "http://radzeit/BBBike/data";
-my $bbbike_data_local_url    = "http://bbbike.hosteurope/BBBike/data";
+my $bbbike_pps_url           = "http://bbbike-pps";
+my $bbbike_data_pps_url      = "http://bbbike-pps/BBBike/data";
 
 my @urls;
 if ($ENV{BBBIKE_TEST_HTMLDIR}) {
     push @urls, "$ENV{BBBIKE_TEST_HTMLDIR}/data";
 } else {
     push @urls, $bbbike_data_url;
-## XXX permanently broken:
-#    push @urls, $bbbike_data_fallback_url;
-    push @urls, $bbbike_data_local_url;
+    push @urls, $bbbike_data_pps_url;
 }
 
 my $tests_per_url = 17;
@@ -55,11 +57,13 @@ plan tests => $tests_per_url * scalar(@urls) + 2;
 
 my $ua_string = 'BBBike-Test/1.0';
 
-my $ua = LWP::UserAgent->new;
+my $conn_cache = LWP::ConnCache->new(total_capacity => 10);
+
+my $ua = LWP::UserAgent->new(conn_cache => $conn_cache);
 $ua->agent($ua_string);
 $ua->env_proxy;
 
-my $uagzip = LWP::UserAgent->new;
+my $uagzip = LWP::UserAgent->new(conn_cache => $conn_cache);
 $uagzip->agent($ua_string);
 $uagzip->env_proxy;
 $uagzip->default_headers->push_header('Accept-Encoding' => 'gzip');
@@ -67,10 +71,9 @@ $uagzip->default_headers->push_header('Accept-Encoding' => 'gzip');
 $Http::user_agent .= " (BBBike-Test/1.0)";
 
 for my $url (@urls) {
-    local $TODO;
  SKIP: {
-	skip("local URL works only on herceg.local", $tests_per_url)
-	    if $url eq $bbbike_data_local_url && hostname !~ m{\.herceg\.(de|local)};
+	skip("pps system not reachable", $tests_per_url)
+	    if $url eq $bbbike_data_pps_url && !$ua->head($bbbike_pps_url)->is_success;
 
 	{
 	    my $resp = $ua->get("$url/temp_blockings/bbbike-temp-blockings-optimized.pl");

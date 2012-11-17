@@ -1,4 +1,5 @@
 #!/usr/local/bin/perl
+# Copyright (c) Sep 2012 Wolfram Schneider, http://bbbike.org
 
 BEGIN { }
 
@@ -34,17 +35,22 @@ sub md5_file {
     return $md5;
 }
 
-my $pbf_file  = 't/data-osm/Cusco.osm.pbf';
-my $pbf_file2 = 't/data-osm/Cusco2.osm.pbf';
+my $pbf_file = 't/data-osm/tmp/Cusco.osm.pbf';
+if ( !-f $pbf_file ) {
+    system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
+    die "symlink failed: $!\n" if $?;
+}
+
+my $pbf_file2 = 't/data-osm/tmp/Cusco2.osm.pbf';
 my $pbf_md5   = "6dc9df64ddc42347bbb70bc134b4feda";
 my $pbf2_md5  = "6dc9df64ddc42347bbb70bc134b4feda";
 my $osm_md5   = "d222cfe84480b8f0ac0081eaf6e2c2ce";
-my ( $fh, $tempfile ) = tempfile;
+my $tempfile  = File::Temp->new( SUFFIX => ".osm" );
 
 is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched: $pbf_file" );
 
 system(
-qq[world/bin/pbf2osm $pbf_file2 | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
+qq[world/bin/pbf2osm $pbf_file | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
 );
 is( $?,                  0,        "pbf2osm converter" );
 is( md5_file($tempfile), $osm_md5, "osm md5 checksum matched" );

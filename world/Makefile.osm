@@ -41,6 +41,7 @@ OSM2GARMIN=	world/bin/osm2garmin
 OSM2GARMIN_CYCLE=	world/bin/pbf2osm --garmin-cycle
 OSM2SHAPE=	world/bin/osm2shape
 OSM2OSMAND=	world/bin/osm2osmand
+OSM2NAVIT=	world/bin/osm2navit
 
 CITIES_DB=	world/etc/cities.csv
 CITIES_FILE=world/etc/cities.txt
@@ -71,6 +72,7 @@ WEB_GROUP=	www-data
 EXTRACTS_SPOOL_DIR=/var/cache/extract
 POSTGIS_STYLE=/usr/share/osm2pgsql/osm2pgsql/bbbike.style
 WEB_SERVER=	www.bbbike.org
+API_SERVER=	api.bbbike.org/api/0.2
 LOG_DIR=tmp
 BBBIKE_PARTITION=	/bbbike
 
@@ -140,7 +142,7 @@ convert-bbbike-full: build-runtime-perl
 # convert bbbike files from wgs84, much faster
 convert-bbbike: build-runtime-perl
 	echo ${CITIES} | ${XARGS} -E " " -n4 -P${MAX_VCPU} ./world/bin/wgs84-to-bbbike
-	tar --exclude='_*' -cf - ${DATA_DIR} | ${NICE} ${BZIP2} > ${DATA_OSM_BBBIKE_DIR}/data.tbz.tmp
+	tar --exclude='_*' -cf - ${DATA_DIR} | ${NICE} bzip2 > ${DATA_OSM_BBBIKE_DIR}/data.tbz.tmp
 	mv -f ${DATA_OSM_BBBIKE_DIR}/data.tbz.tmp ${DATA_OSM_BBBIKE_DIR}/data.tbz
 
 _tarball:
@@ -214,7 +216,7 @@ _pbf2pbf:
 _pbf2pbf-checksum: 
 	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | ${XARGS} -n 1 -0 -P${MAX_PBF2OSM} ${OSM_CHECKSUM}
 
-osm2garmin: osm2garmin-osm osm2garmin-cycle osm2garmin-leisure check-garmin-zip 
+osm2garmin: osm2garmin-osm osm2garmin-cycle osm2garmin-leisure check-zip 
 
 osm2garmin-osm:
 	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | ${XARGS} -n 1 -0 -P${MAX_OSM2GARMIN} ${OSM2GARMIN}
@@ -229,6 +231,9 @@ osm2shape osm2shp:
 
 osm2obf osm2osmand:
 	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | ${XARGS} -n 1 -0 -P${MAX_OSM2OSMAND} ${OSM2OSMAND}
+osm2navit:
+	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | ${XARGS} -n 1 -0 -P${MAX_OSM2OSMAND} ${OSM2NAVIT}
+
 
 osm-readme:
 	for i in ${CITIES}; do \
@@ -239,6 +244,7 @@ osm-html:
 	cd cgi; \
 	for i in ${CITIES}; do \
 	  ./area.cgi --offline --city=$$i > ../${OSM_DIR}/$$i/index.html & \
+	  ( cd ../${OSM_DIR}/$$i; sort -k2 $$i.osm.*.md5 ; sort -k2 $$i.osm*.sha256 ) > ../${OSM_DIR}/$$i/CHECKSUM.txt; \
         done; wait
 
 _cities-parallel:
@@ -309,14 +315,14 @@ planet-streets:
 check-osm: check-osm-gzip check-osm-error
 
 check-osm-gzip:
-	@find ${OSM_DIR} -name '*.gz' -print0 | ${XARGS} -0 -n8 -P${MAX_VCPU} gzip -t
+	@find ${OSM_DIR} -name '*.gz' -print0 | ${XARGS} -0 -n8 -P${MAX_CPU} ${GZIP} -t
 
-check-garmin-zip:
-	@find ${OSM_DIR} -name '*.zip' -print0 | ${XARGS} -0 -n1 -P${MAX_VCPU} unzip -qq -t
+check-zip:
+	@find ${OSM_DIR} -name '*.zip' -print0 | ${XARGS} -0 -n1 -P${MAX_CPU} unzip -qq -t
 	find ${OSM_DIR} -name '*.zip' -size -10k
 
 check-osm-error:
-	@find ${OSM_DIR} -name '*.gz' -print0 | ${XARGS} -0 -n8 -P${MAX_VCPU} zegrep -l '<error>' || true
+	@find ${OSM_DIR} -name '*.gz' -print0 | ${XARGS} -0 -n8 -P${MAX_CPU} zegrep -l '<error>' || true
 
 cleanup-osm-error:
 	${MAKE} -f Makefile.osm check-osm 2>&1 | grep ^gzip | awk '{ print $$2 }' | ${PERL} -npe 's,:,,' | sort -u | ${XARGS} rm -f
@@ -324,6 +330,18 @@ cleanup-osm-error:
 
 check-data-osm:
 	echo ${CITIES} | ${XARGS} -E " " -n1 -P${MAX_VCPU} ./world/bin/check-data-osm
+
+check-routing:
+	echo ${CITIES} | ${XARGS} -E " " -n8 -P1 ./world/bin/routing-validate.pl --number=1 | \
+	  ${XARGS} -0 -n1 -P${MAX_CPU} sh -c 
+	echo ${CITIES} | ${XARGS} -E " " -n8 -P1 ./world/bin/routing-validate.pl --number=50 | \
+	  ${XARGS} -0 -n1 -P${MAX_CPU} sh -c 
+
+check-routing-fast:
+	@echo ${CITIES} | ${XARGS} -E " " -n1 -P${MAX_CPU} ./world/bin/routing-validate.pl --number=1 | \
+	  ${XARGS} -0 -n1 -P${MAX_CPU} /bin/sh -c
+	@echo ${CITIES} | ${XARGS} -E " " -n1 -P${MAX_CPU} ./world/bin/routing-validate.pl --number=4 | \
+	  ${XARGS} -0 -n1 -P${MAX_CPU} /bin/sh -c
 
 convert2: convert3 convert-workarounds
 # using GNU xargs -P parallel
@@ -333,7 +351,9 @@ convert3:
 	echo ${CITIES} " " | ${PERL} -npe 's/\s+/-convert /g' | \
 	   ${XARGS} -n 1 -P ${MAX_VCPU} ${TIME} ${MAKE} -f Makefile.osm
 
-check:
+check: test
+
+check-bbd:
 	for i in ${CITIES}; do echo ${DATA_OSM_DIR}/$$i; done | \
 	  ${XARGS} -n 1 -P ${MAX_CPU} ./miscsrc/check_bbd --debug=0 -dir
 
@@ -426,7 +446,7 @@ create-bbbike-web-symlinks-bbbike.en.cgi:
 update-feed:
 	${MAKE} -C world/web/feed
 
-create-bbbike-web-symlinks: create-bbbike-web-symlinks-bbbike.en.cgi index update-feed
+create-bbbike-web-symlinks: create-bbbike-web-symlinks-bbbike.en.cgi index update-feed bbbike-org-t
 	ln -fs world/Makefile.osm ${BBBIKE_WEB_DIR}
 	ln -fs Makefile.osm Makefile
 	cd world/web; \
@@ -457,6 +477,10 @@ create-bbbike-web-symlinks: create-bbbike-web-symlinks-bbbike.en.cgi index updat
 			*) ${PERL} -npe "s,<a href=\"../$$i/\" title=\"(.*?)\">$$i</a>,<span class=\"current_language\" title=\"$1\">$$i</span>,"  world/web/index.en.html > world/web/$$i/index.html;; \
 		esac \
 	done
+
+bbbike-org-t:
+	cd world/web; ln -fs ../../data
+	cd cgi; ln -fs bbbike.cgi bbbike-test.cgi
 
 TAGCLOUD=	world/bin/tagcloud 
 MOBILE_LINKS=	world/bin/mobile-links 
@@ -561,13 +585,23 @@ update-database: build-runtime
 	@${MAKE} -s -f Makefile.osm opensearch-bbbike
 	${TIME} ./world/bin/update-database
 
-PERL_SCRIPTS=	BBBikeGooglemap.pm BBBikeElevation.pm miscsrc/osm2bbd-poi t/elevation.t
-_perltidy:
-	echo ${PERL_SCRIPTS} | ${XARGS} -n1 -P${MAX_VCPU} -E " " ${PERL} -cw 
+PERL_SCRIPTS=	BBBikeGooglemap.pm BBBikeElevation.pm miscsrc/osm2bbd-poi t/bbbike-org-*.t
+_perlcheck:
+	@echo ${PERL_SCRIPTS} | ${XARGS} -n1 -P${MAX_VCPU} -E " " ${PERL} -cw >/dev/null 2>&1
+
+_perltidy: _perlcheck
 	echo ${PERL_SCRIPTS} | ${XARGS} -n2 -P${MAX_VCPU} -E " " perltidy -b
 
 perltidy:
 	${MAKE} _perltidy
+	${MAKE} -C cgi/msg $@	
+	${MAKE} -C world/bin $@	
+	${MAKE} -C world/cgi $@	
+	${MAKE} -C world/web/feed $@	
+	git diff
+
+perlcheck:
+	${MAKE} _perlcheck
 	${MAKE} -C cgi/msg $@	
 	${MAKE} -C world/bin $@	
 	${MAKE} -C world/cgi $@	
@@ -586,6 +620,7 @@ create-sitemap:
 
 sync-sitemap: create-sitemap
 	rsync -a world/web/sitemap.xml.gz ${BBBIKE_SERVER}${BBBIKE_WEBSERVER_DIR}/world/web
+	rsync -a world/download/sitemap.xml.gz ${BBBIKE_SERVER}${BBBIKE_WEBSERVER_DIR}/../download.bbbike.org
 
 update-files: kml create-osp index update-robots.txt create-bbbike-web-symlinks java-config update-javascript #create-sitemap
 
@@ -625,7 +660,7 @@ cache-heater-common:
 	du -hs ${BBBIKE_CACHE_DIR}/
 	if `ls ${BBBIKE_CACHE_DIR}/* 2>/dev/null`; then du -hs ${BBBIKE_CACHE_DIR}/*; fi
 	echo ${CITIES} | ${PERL} -npe 's/ /\n/g' | \
-	   ${PERL} -ne 'chomp; print "http://'${WEB_SERVER}'/$$_/?generate_cache=1\0"' | \
+	   ${PERL} -ne 'chomp; print "http://'${WEB_SERVER}'/$$_/?generate_cache=1\0"; print "http://'${API_SERVER}'/$$_/?generate_cache=1\0"' | \
 	   ${XARGS} -0 -n1 -P${MAX_CPU} curl -sS >/dev/null
 	@echo "cache usage after"
 	du -hs ${BBBIKE_CACHE_DIR}/
@@ -689,7 +724,8 @@ extract-gc:
 extract-gc7:
 	find ${EXTRACTS_SPOOL_DIR} -type f -mtime +14  -print0 | xargs -0 rm -f
 	
-staging:
+staging: 
+	${MAKE} -f Makefile.osm -s perlcheck 2>/dev/null
 	git push
 	cd /usr/local/www/bbbike.org/; git diff; git pull; ${MAKE} -s update-files; git diff
 
@@ -723,7 +759,7 @@ tile-convert:
 	#find ${_pbf_dir} -name '*.pbf' -print0 | ${NICE} ${TIME} xargs -0 -n1 -P${MAX_CPU} ${OSM_CHECKSUM}
 	#find ${_pbf_dir} -name '*.osm.gz' -print0 | ${NICE} ${TIME} xargs -0 -n1 -P${MAX_CPU} ${OSM_CHECKSUM}
 
-tile-extract tile: tile-lng tile-lnglat tile-lng-run tile-lnglat-run
+tile-extract: tile-lng tile-lnglat tile-lng-run tile-lnglat-run
 
 tile-csv:
 	for format in pbf gz garmin-cycle.zip shp.zip obf.zip; do \
@@ -739,6 +775,10 @@ tile-checksum:
 
 tile-distclean:
 	rm -rf ${TILES_DIR}
+
+# for errors look in ./tile/tmp
+tile: tile-extract tile-convert tile-checksum tile-csv 
+
 
 DOWNLOAD_PREFIX=/usr/local/www/download.bbbike.org
 download-bbbike-org-install:
@@ -783,6 +823,12 @@ osmand-devel:
 	   zip -rq $$dir.zip $$dir; \
 	   ls -l `pwd`/$$dir.zip
 
+test-org:
+	./world/bin/update-lighttpd-template
+
+test prove:
+	time prove -j${MAX_CPU}
+
 help:
 	@echo "bbbike version: ${GIT_ID}"
 	@echo ""
@@ -796,7 +842,7 @@ help:
 	@echo "  [ jsbeautifier | perltidy | tidy ]"
 	@echo ""
 	@echo "  [ bbbike-osm2pbf | osm2pbf | pbf2osm ]"
-	@echo "  [ osm2garmin | osm2shape | osm2osmand ]"
+	@echo "  [ osm2garmin | osm2shape | osm2osmand | osm2navit ]"
 	@echo "  [ bbbike2wgs84-mapnik | bbbike-mapnik-config ]"
 	@echo "  [ bbbike-mapnik-postgis ]"
 	@echo ""
@@ -807,7 +853,9 @@ help:
 	@echo "  [ create-bbbike-web-symlinks | kml | create-osp | index ]"
 	@echo "  [ convert-wgs84 | convert-bbbike | convert-bbbike-full ]"
 	@echo "  [ city-count | city-reorder | city-file | check-osm | cleanup-osm-error ]"
+	@echo "  [ check-routing | check-routing-fast | perlcheck ]"
 	@echo "  [ city-memory | varnish-purge-all ]"
+	@echo "  [ osm-html ]"
 	@echo ""
 	@echo "  [ elevation-fetch | elevation-update | elevation-check | elevation-repair ]"
 	@echo ""
@@ -818,7 +866,8 @@ help:
 	@echo ""
 	@echo "  [ staging | extract-bbbike-org-install | extract-distclean ]"
 	@echo "  [ extract-gc | extract-gc7 | extract-gc-osm ]"
-	@echo "  [ tile | tile-convert | tile-csv | tile-distclean ]"
+	@echo "  [ tile | tile-extract | tile-convert | tile-csv | tile-checksum | tile-distclean ]"
+	@echo "  [ test-org | test ]"
 	@echo ""
 	@echo "see also ./world/README"
 

@@ -34,7 +34,7 @@ Platz der Republik	Pl 8119,12414
 Oranienburger Tor (Mitte)	Pl 9225,13389
 Nordbahnhof	Pl 9383,13978
 Kollwitzplatz	Pl 11229,14422
-Lustgarten	Pl 10170,12498
+Lustgarten	Pl 10176,12506
 Molkenmarkt	Pl 10738,12364
 Jannowitzbrücke	Pl 11351,12221
 Heinrichplatz	Pl 11722,10533
@@ -50,18 +50,17 @@ Kurt-Schumacher-Platz	Pl 5114,17500
 Mexikoplatz	Pl -1102,3345
 Dahlem-Dorf	Pl 2771,5678
 Senefelderplatz	Pl 10933,14122
-Elsterwerdaer Platz	Pl 21124,11462
 Richard-Wagner-Platz	Pl 3763,12279
 Nauener Platz	Pl 7824,16170
 Roseneck (Grunewald)	Pl 2116,7740
 Weddingplatz	Pl 7929,15006
 Nürnberger Platz	Pl 5706,10216
 Wartburgplatz	Pl 6445,8934
-Prenzlauer Tor	Pl 11155,13482
-Betlehemkirchplatz	Pl 9405,11413
+Prenzlauer Tor	Pl 11160,13492
+Bethlehemkirchplatz	Pl 9405,11413
 Rudolfplatz	Pl 14011,10812
 Weberwiese	Pl 13068,12332
-Kolpingplatz	Pl 7232,18572
+Kolpingplatz	Pl 7198,18575
 George-Grosz-Platz	Pl 4503,10497
 Karl-August-Platz	Pl 3986,11347
 Elsterplatz	Pl 2406,8050
@@ -102,7 +101,7 @@ Pfarrer-Hurtienne-Platz	Pl 12187,22486
 Steinplatz (Friedrichshagen)	Pl 26062,5776
 Imchenplatz	Pl -6811,4893
 Piesporter Platz	Pl 15286,17300
-#XXX del --- Breslauer Platz	Pl 5817,7223
+# REMOVED --- Breslauer Platz	Pl 5817,7223
 Kaisereiche	Pl 5644,6936
 Schillerplatz	Pl 5074,7207
 Garbátyplatz	Pl 10705,17931
@@ -115,10 +114,10 @@ Esperantoplatz	Pl 13761,7328
 Andreasplatz	Pl 12295,12197
 Grieser Platz	Pl 2947,9367
 #: XXX_prog: ist es OK, mehr als einen Punkt für einen Platz zu haben?
-Traveplatz	Pl 14835,11840 14802,11784 14794,11770 14856,11740 14946,11697 14977,11754 14897,11801 14835,11840
+Traveplatz	Pl 14835,11840 14802,11784 14794,11770 14856,11740 14946,11697 14981,11751 14897,11801 14835,11840
 #: XXX_prog: ist es OK, mehr als einen Punkt für einen Platz zu haben?
-Alfred-Döblin-Platz	Pl 11162,10919 11150,11030 11105,10945 11162,10919
-Wilhelmplatz	Pl -7232,445 -7180,378
+Alfred-Döblin-Platz	Pl 11162,10919 11150,11030 11109,10943 11162,10919
+Wilhelmplatz (Wannsee)	Pl -7232,445 -7180,378
 Leon-Jessel-Platz	Pl 4700,9179
 Zwirngrabendreieck	Pl 10298,13076
 Andreas-Hofer-Platz	Pl 10655,16904
@@ -152,6 +151,7 @@ Scholzplatz	Pl -1499,10990
 Dennewitzplatz	Pl 7906,10098
 Peter-Weiss-Platz	Pl 24226,15121 24232,15060 24303,15070 24281,15138
 Otto-Rosenberg-Platz	Pl 19991,16322
+#: XXX_indoor: http://de.wikipedia.org/wiki/Liste_der_Stra%C3%9Fen_und_Pl%C3%A4tze_in_Berlin-Mitte#W listet hier auch den Wilhelmplatz auf, aber eigentlich müsste dieser unter "Weitere, nicht mehr vorhandene Straßennamen in Mitte" aufgeführt werden?
 Zietenplatz	Pl 9000,11727 9075,11756 9171,11777
 #: oldname: -2008: Platz S
 Betty-Hirsch-Platz	Pl 2206,7637
@@ -174,10 +174,14 @@ Albert-Schweitzer-Platz	Pl 11998,8872
 Kurt-Pfennig-Platz	Pl 9706,6802
 Hahn-Meitner-Platz	Pl -8013,255
 Bernhard-Lichtenberg-Platz	Pl 2821,18831
-#XXX del --- #: note: mittlerweile existiert ein Straßenschild, trotzdem ist es recht unscheinbar, und deshalb der Platz nicht an die Kreuzung gesetzt --- Caroline-Herschel-Platz	Pl 14759,11339
+# REMOVED (-> strassen) --- #: note: mittlerweile existiert ein Straßenschild, trotzdem ist es recht unscheinbar, und deshalb der Platz nicht an die Kreuzung gesetzt --- Caroline-Herschel-Platz	Pl 14759,11339
 #: note: es existieren keine Straßenschilder oder sonstige Hinweise auf den Platz
 O2-Platz	Pl 12990,11006
-Schloßplatz (Hermsdorf)	Pl 3953,23401
+#: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120918.1615.375418.html
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/37re.pdf/file?y=2012
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/40re.pdf/file?y=2012
+#: oldname: -20110822: Schloßplatz (Hermsdorf)
+Dr.-Ilse-Kassel-Platz	Pl 3953,23401
 Hohenzollernplatz (Nikolassee)	Pl -3692,2549
 Helene-Jung-Platz	Pl 17750,152
 Alice-Herz-Platz	Pl 24179,12260
@@ -186,7 +190,7 @@ Graffplatz	Pl 26605,13217
 Cajamarcaplatz	Pl 17782,5698
 Danewendplatz	Pl 15167,23470
 Platz an den Kasematen	Pl 16444,23298
-Schmiedebankplatz	Pl 16173,23165
+Schmiedebankplatz	Pl 16165,23168
 Rotraut-Richter-Platz	Pl 15466,2049
 Anneliese-und-Georg-Groscurth-Platz	Pl 1638,12250
 Reinhardtplatz	Pl 9134,6467
@@ -223,7 +227,7 @@ Rudower Spinne	Pl 16908,1217
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110224.0905.332693.html
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/20re.pdf/file
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110906.1720.357692.html (Name ab 2011-09-14)
-Roederplatz	Pl 15502,13539
+Roederplatz	Pl 15513,13539
 Kamisardenplatz	Pl 12067,23241
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/23re.pdf/file
 Plaza San Rafael del Sur	Pl 13325,10565
@@ -243,7 +247,7 @@ Lipschitzplatz	Pl 14633,2145
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/28re.pdf/file
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20110920.0625.359202.html
 Franz-Amrehn-Platz	Pl 5165,6119
-Clara-Zetkin-Platz	Pl 22574,13017
+Clara-Zetkin-Platz	Pl 22572,13025
 Paul-Levi-Platz	Pl 25041,14016
 Erich-Hermann-Platz	Pl 9982,-1818
 Hermann-Wundrich-Platz	Pl 11055,-1741
@@ -253,6 +257,12 @@ Carlo-Schmid-Platz	Pl -5118,13053
 Max-Beckmann-Platz	Pl 3490,23472
 Im Kinderland	Pl -475,4809
 Julius-Posener-Platz	Pl -3249,2002
+#: XXX Ist der Name offiziell? Existieren Straßenschilder?
+(Bahnhofsplatz)	Pl 3621,23548
+Henri-Dunant-Platz	Pl -4972,15297
+Frans-Hals-Platz	Pl 25805,12906
+Platz der Märzrevolution	Pl 9764,12492
+Marion-Gräfin-Dönhoff-Platz	Pl 9981,11689
 ######################################################################
 #: section faked_plaetze vvv
 # Keine offiziellen Straßennamen, sondern
@@ -275,7 +285,7 @@ Thielplatz	Pl 2313,4901
 #: note: entspricht dem Eingang Hardenbergplatz
 Zoo	Pl 5698,11333
 Reichstag	Pl 8400,12417
-Mettmannplatz	Pl 7498,14658
+Mettmannplatz	Pl 7496,14660
 Funkturm	Pl 2016,11034
 Europa-Center	Pl 5782,10884
 Olympiastadion	Pl -514,11991
@@ -284,7 +294,7 @@ Volkspark Jungfernheide	Pl 2431,15290
 Volkspark Wilmersdorf	Pl 5669,8207
 Schloß Charlottenburg	Pl 3034,12502
 Schloß Bellevue	Pl 7039,12314
-Schloß Schönhausen	Pl 10350,19182
+Schloß Schönhausen	Pl 10344,19181
 Jagdschloß Grunewald	Pl 880,6645
 Lehrter Bahnhof	Pl 7880,13315
 Hauptbahnhof	Pl 7880,13315
@@ -322,6 +332,7 @@ Bösebrücke	Pl 9883,16557
 #: XXX_prog ^^^
 #: XXX_prog: systematischer Fehler: alle Punkte in Potsdam/Berlin.coords.data müssen tatsächlich in strassen oder plaetze verfügbar sein
 Schleuseninsel im Tiergarten	Pl 5758,11630
+Eiskeller	Pl -7964,19490
 # 
 #: section Eingänge vvv
 # Hier werden nur Eingänge für Flächen aufgenommen, die für Radfahrer gesperrt sind.
@@ -341,6 +352,7 @@ Zoologischer Garten [Elefantentor]	Pl 6058,10988
 Tierpark [Eingang Bärenschaufenster]	Pl 18554,10354
 Tierpark [Eingang Schloss]	Pl 18343,11041
 Naturpark Schöneberger Südgelände [Eingang Priesterweg]	Pl 7296,5872
+Rotes Rathaus	Pl 10704,12595
 #: section ^
 # 
 #: append_comment Potsdam vvvvv
@@ -387,7 +399,7 @@ Agathe-Lasch-Platz	Pl 3111,10116
 Bocksfeldplatz	Pl -4312,11720
 Metzer Platz	Pl -3715,13003
 Wörther Platz	Pl -3392,12928
-Joachimstaler Platz	Pl 5484,10810
+Joachimstaler Platz	Pl 5475,10808
 Kuno-Fischer-Platz	Pl 2679,10931
 Shakespeareplatz	Pl 3898,11655
 Fröbelplatz	Pl 11870,15004
@@ -406,7 +418,6 @@ Sparrplatz	Pl 7436,14964
 Barnimplatz	Pl 21843,18198
 Nentershäuser Platz	Pl 537,2772
 Medaillonplatz	Pl 15775,10092 15749,10112 15709,10145 15788,10252 15858,10202
-Max-Fettling-Platz	Pl 12605,13356
 Bernkastler Platz	Pl 6660,3739
 Oskar-Lange-Platz	Pl 5421,1786 5396,1774
 Paul-Poser-Platz	Pl 1732,24402 1750,24433 1776,24416 1758,24389 1732,24402

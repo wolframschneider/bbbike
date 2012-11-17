@@ -93,7 +93,6 @@ GPS/MPS.pm
 GPS/MyNMEA.pm
 GPS/Ovl.pm
 GPS/SerialStty.pm
-GPS/Unknown1.pm
 GPS/Util.pm
 GPS/WaypointPlus.pm
 Geography.pm
@@ -439,7 +438,9 @@ html/bbbike_small.en.html
 html/bbbike_small.html
 html/bbbike_start.js
 html/bbbike_util.js
+html/bbbikeleaflet.css
 html/bbbikeleaflet.html
+html/bbbikeleaflet.js
 html/bbbikepod.css
 html/bbbikeprint.css
 html/empty.html

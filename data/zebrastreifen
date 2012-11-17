@@ -26,7 +26,7 @@ Wilmersdorfer Str./Schillerstr.	Zs 3718,11453
 Spandau: Adamstr. vor Konkordiastr.	Zs -4069,12558
 Mitte: Annenstraße	Zs 10958,11500
 Adalbertstraße	Zs 11421,10509
-Rüdersdorfer	Zs 12690,12143
+Rüdersdorfer Str.	Zs 12697,12157
 Ostkreuz	Zs 14793,10837
 Manfred-von-Richthofen-Str. Ecke Schulenburgring	Zs 9002,8596
 Manfred-von-Richthofen-Str. Ecke Wolffring	Zs 8812,8360
@@ -49,7 +49,7 @@ Stresemannstr.	Zs 9210,10614
 #: confirmed_by: srt
 Harzer Str.	Zs 13670,8745
 Wilhelmstr./Reichstagufer	Zs 8766,12541
-Friedrichstr./Puttkamer Str.	Zs 9506,10959
+Friedrichstr./Puttkamer Str.	Zs 9522,10979
 Südwestkorso/Laubenheimer	Zs 4437,6953
 Kaulsdorfer/Bahrendorfer	Zs 21963,7431
 Kaulsdorfer/Feuersteiner	Zs 21709,7995
@@ -65,12 +65,11 @@ Egon-Erwin-Kisch-Straße, vor der Einmündung der Grevesmühlener Straße	Zs 17678,1
 #: confirmed_by: srt
 Rennbahnstr./Pasedagplatz	Zs 14095,17196
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20031209.17192.html
-#: XXX genaue Position nicht sicher
-Triftstr.	Zs 12014,22996
+#: confirmed_by: srt
+Triftstr.	Zs 12018,23005
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20030721.13801.html vvv
 Hermann-Hesse-Str./Pastor-Niemöller-Platz	Zs 9801,19290
-#: XXX genaue Position???
-Achillesstr. vor Grundschule	Zs 15700,24003
+Achillesstr. vor Grundschule	Zs 15703,24011
 Bizetstr./Smetanastr.	Zs 14067,15984
 Bizetstr./Lindenallee	Zs 14293,16066
 Blankenburger Str./Siegfriedstr.	Zs 10758,19637
@@ -82,6 +81,7 @@ Soldiner Brücke	Zs 8904,17059
 Dürerplatz	Zs 6244,7033
 Dürerplatz	Zs 6227,7012
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20061006.1345.48494.html
+#: confirmed_by: srt
 Pistoriusstr./Woelckpromenade	Zs 13652,16297
 Pistoriusstr./Mirbachplatz	Zs 13403,16394
 #: note: Luftbild
@@ -106,6 +106,7 @@ Frohnauer Brücke	Zs 2396,25181
 Heinrich-Grüber-Str.	Zs 22935,12088
 Lissabonallee	Zs -1438,2079
 Waldowallee/Rheinsteinstr.	Zs 19177,8848
+Waldowallee/Am Rheinischen Viertel	Zs 19288,8572
 Am Niederfeld/Am Feldberg	Zs 22857,11007
 Heiligenseestr./Reiherallee	Zs -1049,21692
 Hüttenweg (3x)	Zs 1220,5345
@@ -129,7 +130,8 @@ Buntzel/Paradiesstr.	Zs 21371,-308
 Finsterwalder Straße/Ulrichsteiner Weg	Zs 6093,21648
 Heiligenseestraße/Am Dachsbau	Zs -1654,22119
 Gorkistraße/Miraustraße	Zs 3321,20545
-Am Freibad/Am Vierrutenberg	Zs 5809,23420
+#: confirmed_by: srt
+Am Freibad/Am Vierrutenberg	Zs 5765,23457
 ## in Planung für 2007:
 # - Ruppiner Chaussee/Stolpmünder Weg. 
 #: by: ^^^
@@ -145,14 +147,15 @@ Sophie-Charlotten-Straße/Seelingstraße	Zs 2504,11990
 Stargarder/Dunckerstr.	Zs 11582,15467
 Stargarder/Greifenhagener	Zs 11071,15776
 Silbersteinstr./Bambachstr.	Zs 11986,6697
-Silbersteinstr./vor Hertastr.	Zs 12560,6819
+Silbersteinstr./vor Hertastr.	Zs 12567,6818
+Oberlandstr./Holzmannstr.	Zs 11466,6593
 General-Pape-Str./Südkreuz	Zs 7957,7617
 Manfred-von-Richthofen-Str./Adolf-Scheidt-Platz	Zs 8724,8021
 Bahnhofstr./Hubertusdamm	Zs 14622,23263
 Florastr./Heynstr.	Zs 10196,17772
 Friedrich-Engels-Str./Kastanienallee	Zs 8887,20622
 Uhlandstr./Lessingstr.	Zs 7560,20447
-Buchberger Str./Weg zum S Nöldnerplatz	Zs 15731,11270
+Buchberger Str./Weg zum S Nöldnerplatz	Zs 15721,11280
 Liebenwalder Straße/Ecke Heilgenstadter Straße	Zs 16846,14661
 Wartenberger Straße/Ecke Anna-Ebermann-Straße	Zs 17644,16695
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-lichtenberg/presse/archiv/20071116.1100.89038.html vvv
@@ -211,8 +214,7 @@ Hannemannstr./Riesestr.	Zs 13251,5513
 #: note: Luftbild
 Neue Grottkauer Str.	Zs 23553,13875
 Lobeckstr./Wassertorstr.	Zs 10489,10575
-#: note: ungenaue Position
-Bessemerstr.	Zs 7978,6128
+Bessemerstr.	Zs 7983,6231
 Hotel Estrel	Zs 14189,7608
 Poelchaustr./Murtzaner Ring	Zs 19541,14473
 Hohenfriedbergstr.	Zs 7793,8897
@@ -251,9 +253,10 @@ Parkstr./Amalienstr.	Zs 13974,16643
 Bernau, Richtung Ladeburg	Zs 22315,31106
 Grüntal	Zs 31274,37795
 Am Heidebergplan	Zs -7148,14779
-Provinzstr./Kühnemannstr.	Zs 8545,17787
+Provinzstr./Kühnemannstr.	Zs 8538,17774
 #: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20090715.0820.132257.html vvv
-Zabel-Krüger-Damm/Schluchseestr.	Zs 5006,22507
+#: confirmed_by: srt
+Zabel-Krüger-Damm/Schluchseestr.	Zs 5024,22521
 #: XXX Realisierung noch 2009
 Gotthardstr./Höhe Kita	Zs 6142,17798
 #: confirmed_by: srt
@@ -376,8 +379,7 @@ Bahnhofstr.	Zs 14896,23083
 #: XXX in Bau
 #: last_checked: 2011-09-01
 Friedenstr./Weinstr.	Zs 11989,13461
-#: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20110901.1335.357063.html
-Ziekowstr./Hatzfeldtallee	Zs 2584,20615
+Ziekowstr./Hatzfeldtallee	Zs 2570,20633
 Königsheideweg/Herrenhausstr.	Zs 17681,4536
 Andreasstr./Lange Str.	Zs 12243,11948
 Seehofstr./Jänickestr.	Zs 1591,2223
@@ -396,9 +398,7 @@ Manteuffelstr./Naunynstr.	Zs 12008,10543
 #: by: http://www.flickr.com/photos/drggkkrueger/5826991387/in/pool-gwb
 #: by: http://farm3.staticflickr.com/2194/5826991387_e538283e0f_z.jpg
 Ostpreußendamm/Lippstädter Str.	Zs 3657,749
-#: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20111230.1240.364422.html
-#: XXX genaue Position?
-Köpenicker Straße/Ecke Dohlengrund	Zs 21288,10431
+Köpenicker Straße/Ecke Dohlengrund	Zs 21273,10458
 Proskauer/Bänsch	Zs 14327,12658
 Weidenweg/Auerstr.	Zs 13009,12523
 Groß-Ziethener Chaussee	Zs 15533,486
@@ -436,3 +436,22 @@ Stabholzgarten	Zs -3372,14110
 Galenstr./Kemmannweg	Zs -3820,14290
 Lettestr./Kühleweinstr.	Zs 8001,17467
 Seebadstr.	Zs 4512,23169
+#: by: http://www.flickr.com/photos/42855526@N05/7902642652/in/pool-39413187@N00/
+#: by: http://farm9.staticflickr.com/8296/7902642652_54fb18aa51_b.jpg
+#: confirmed_by: srt
+Bernauer Str./Oelder Weg	Zs 1981,18743
+Eichhorster Weg	Zs 6099,21373
+Apollofalterallee/Lindenstr.	Zs 21426,11160
+Wiesenstr./Pankeweg	Zs 8164,15840
+Calauer Str./Finsterwalder Str.	Zs 6479,21968
+Perleberger/Lübecker	Zs 6381,13734
+#: XXX genaue Position?
+Dannenwalder Weg	Zs 7269,21005
+Huttenstr./Wiebestr.	Zs 4626,13524
+Gerichtstr./Pankeweg	Zs 8303,15301
+Hirschberger/Schreiberhauer	Zs 15201,11069
+Möckernstr./Hornstr.	Zs 8779,9829
+Saalestr./S-Bhf. Neukölln	Zs 13245,7194
+Hertha-Block-Promenade/General-Pape-Str.	Zs 8101,8292
+Hertha-Block-Promenade/Wilhelm-Kabus-Str.	Zs 7893,8327
+Jungstr./Scharnweberstr.	Zs 14682,11975

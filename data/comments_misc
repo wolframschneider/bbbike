@@ -3,12 +3,11 @@
 als Zionskirchstr. ausgeschildert	CS 10306,14247 10389,14274
 als Zionskirchstr. ausgeschildert	CS 10306,14247 10277,14350 10315,14386 10365,14372 10389,14274
 Autobahnunterführung ist nur 2,10m hoch	CS 21306,-975 21393,-871
-Einbahnstr., aber Radweg vorhanden	CS; 23109,30968 23103,30923 22922,30640
+Einbahnstr., aber Radweg vorhanden	CS; 23109,30968 23103,30923 23084,30893 22917,30635
 Gillweg: entlang der Autobahn	CS 2585,9653 2484,9671 2394,9714
 Bismarckplatz: als Hubertusallee ausgeschildert	CS; 2348,9398 2380,9402
 Bismarckplatz: als Caspar-Theyß-Str. ausgeschildert	CP2; 2389,9434 2380,9402
 als Lützowplatz ausgeschildert	CS; 6873,11011 6824,10904
-als Wismarplatz ausgeschildert	CS 14449,11742 14395,11753
 als Eichkampstr. ausgeschildert	CS; 693,9129 731,9103
 Richtung Grunewaldturm	CP2; 676,9104 197,9069
 als "Ökoweg" ausgeschildert	CS; 676,9104 383,9305
@@ -31,14 +30,15 @@ Richtung S-Bhf.	CP2; -4001,2858 -3956,2787
 Richtung Teufelssee/Saubucht	CP2; -3475,6780 -3418,6747
 ausgeschildert Richtung Breitenbachplatz	CP2; 3346,7369 3397,7333
 als Ganghoferstr. ausgeschildert	CP2; 12960,8246 12918,8232
-Sredzkistr. - Christburger Str.: Drängelgitter auf dem Mittelstreifen	CP 11526,14693 11642,14625 11920,14468
-Christburger Str. - Pasteurstr.: Drängelgitter auf dem Mittelstreifen	CP 11920,14468 12177,14335 12335,14246
+Sredzkistr. - Christburger Str.: Drängelgitter auf dem Mittelstreifen	CP 11535,14688 11642,14625 11912,14486
+Pasteurstr. - Christburger Str.: Drängelgitter auf dem Mittelstreifen	CP; 12335,14246 12188,14350 12177,14335
+Christburger Str. - Pasteurstr.: Drängelgitter auf dem Mittelstreifen	CP; 11912,14486 12177,14335 12188,14350
 Sellin - Benz: schwierig zu findender Waldweg	CS 53932,172900 53868,172725 53906,172550 53574,172367 53383,171931 53203,171896 52806,171507
 Tor (Sperrung möglich?)	CP 58041,164268 58324,164202 59544,164184
 Alternativ auch Fahrt auf dem Lärmschutzwall möglich	CS 17557,17999 17267,18343 17159,18375 17111,18479 17040,18571 17002,18578 16936,18658
 Keine Straße ausgeschildert, am Bahndamm halten	CS; 12645,11673 12596,11696
 Paralleler Uferweg an der Spree nur über zwei Treppen erreichbar	CS 10300,12587 10355,12551 10411,12471 10422,12395
-unter der S-Bahnbrücke: Glassplitter	CS 6184,20550 6286,20585
+unter der S-Bahnbrücke: Glassplitter	CS 6184,20550 6279,20587
 Hegelstr.: Ausweichmöglichkeit auf Nebenstraße mit Kopfsteinpflaster oder grünen Mittelstreifen mit Parkweg	CS -13625,-902 -13468,-847 -13433,-831 -13231,-763 -13137,-728 -13067,-706 -12878,-665
 Kreisverkehr	Roundabout 60197,12001
 Kreisverkehr	Roundabout 61156,11478
@@ -50,10 +50,12 @@ Kreisverkehr	Roundabout -10090,6868
 Kreisverkehr	Roundabout 25069,35558
 Kreisverkehr	Roundabout 26302,-11712
 Kreisverkehr	Roundabout -8815,13214
+Kreisverkehr	Roundabout 56197,-14830
+Kreisverkehr	Roundabout 55743,-11726
+Kreisverkehr	Roundabout 18903,9244
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 344,22346 742,22666
 Privatstraße der DB	CS 5710,7820 6275,7847
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3347,6460 3449,6863
-(Weg über das Sportgelände): evtl. nachts geschlossen	CS 13252,14179 13385,13992
 Borgmannstr.: zwei Bodenschwellen, rechs vorbei fahren	CS 22513,5747 22531,5871
 Hermann-Blankenstein-Str.: Tor für Kfz evtl. geschlossen, auf Gehweg ausweichen	CS 13886,13668 13858,13719
 Georg-Wilhelm-Str.: 3 Bodenschwellen, rechts vorbei fahren	CS 2708,10245 2691,10047
@@ -64,11 +66,11 @@ Sybelstr.: Bordsteine	CS 3739,10576 3712,10566
 Apeldorner Weg: Bordsteine	CP; 3775,8771 3848,8689 3868,8759
 Apeldorner Weg: Bordsteine	CP; 3831,8674 3848,8689 3868,8759
 Apeldorner Weg: Bordsteine	CP; 3928,8598 3848,8689 3868,8759
-Apeldorner Weg: Bordsteine	CP; 3952,8980 3932,8989 3868,8759
-Apeldorner Weg: kein Straßenname ausgeschildert; Weg verläuft westl. direkt an der BAB (104)	CS 3848,8689 3868,8759 3932,8989
+Apeldorner Weg: Bordsteine	CP2; 3952,8980 3868,8759
+Apeldorner Weg: kein Straßenname ausgeschildert; Weg verläuft westl. direkt an der BAB (104)	CS 3848,8689 3868,8759 3952,8980
 (Wallenbergstr. - Rudolstätter Str.): Bordsteine	CP; 3964,8559 4029,8482 4139,8485
 (Wallenbergstr. - Rudolstätter Str.): Bordsteine	CP; 4139,8356 4029,8482 4139,8485
-Virchowweg: Gelände der Charité	CS 8548,13577 8503,13553 8379,13457 8371,13399 8434,13310 8602,13075 8628,13033
+Virchowweg: Gelände der Charité	CS 8548,13577 8503,13553 8379,13457 8371,13399 8434,13310 8602,13075 8622,13042 8628,13033
 Hufelandweg: Gelände der Charité	CS 8503,13553 8554,13476 8504,13441 8538,13388 8582,13355 8618,13306 8630,13172 8632,13133 8602,13075
 Bonhoefferweg: Gelände der Charité	CS 8538,13388 8487,13351 8434,13310
 Sauerbruchweg: Gelände der Charité	CS 8487,13351 8555,13260 8605,13200 8630,13172
@@ -93,7 +95,7 @@ Kreisverkehr	Roundabout 19907,12501
 Röntgentaler Weg: durch den Schloßpark	CS 16166,25767 16222,25829 16532,26174
 (Autobahnzubringer): Fahrbahn ist Kraftfahrzeugstraße	CS 18036,2531 18247,2490 18496,2471
 (In den Gärten - Hochspannungsweg): Privatweg	CS 11724,1629 11704,1692 11718,1771 11652,1959
-Privatweg, Durchfahrt eigentlich verboten, aber möglich	CS 19726,11743 19750,11730 19827,11686 19881,11591
+Privatweg, Durchfahrt eigentlich verboten, aber möglich	CS 19750,11730 19827,11686 19879,11595 19881,11591
 Dreipfuhlpark: Freigegeben für Radfahrer	CS 1536,3780 1523,3904 1520,4006 1524,4054 1548,4168 1608,4313 1670,4477 1692,4575 1682,4607 1689,4630 1698,4653
 Seefelder Str.: Schranken, für Radler gut passierbar	CS 17341,16136 17344,16081
 (Malteserstr. - Hanielweg): Geschützte Grünanlage, Radfahren verboten	CS 7451,1818 7534,1818 7562,1796
@@ -112,7 +114,7 @@ Poller	CS -9031,5984
 Poller	CS -8929,5984
 ausgeschildert "zum Bahnhof"	CS; 20772,-104623 20754,-104514
 Am Stand - Klemkepark: Torbogen in der Häuserfront in den Klemkepark benutzen	CS 7484,18778 7480,18828
-Begasstr. - Riemenschneiderweg: Hausdurchfahrten	CS 6513,7005 6662,7018 6770,7027
+Begasstr. - Riemenschneiderweg: Hausdurchfahrten	CS 6513,7005 6650,7017 6770,7027
 "Brücke" ausgeschildert	CP; 2452,281 2195,42 2175,71
 Gartentor, Zufahrt zum Gemeindehaus (dürfte immer offen sein)	CS 2201,43954
 Freienbrinker Saum: die Straße führt am Waldrand entlang, in der Dunkelheit ist mit Wildschweinen zu rechnen	CS 30124,4664 30254,4692 30369,4697 30478,4715 30527,4724 30588,4720 30636,4717 30686,4731 30810,4765 30857,4770 30913,4766 31011,4750 31118,4768 31209,4781 31224,4775 31311,4742 31339,4726 31364,4711 31424,4658
@@ -136,7 +138,6 @@ Hintersee - Rieth: ehemalige Bahnstrecke	CS 66282,136950 66202,137084 66069,1373
 Tordurchfahrt	CS 9341,6163 9367,6160
 (Am Nuthetal - Wetzlarer Str.): Weg entlang der Straßenbahntrasse	CS -9544,-3913 -9531,-3917 -9461,-3879 -9440,-3872 -9391,-3864 -9328,-3871 -9276,-3891 -9240,-3912 -9217,-3897 -9186,-3853 -9157,-3842 -9134,-3851 -9114,-3846 -9064,-3866 -9047,-3889
 (Wetzlarer Str. - Stern-Center): Weg entlang der Schnellstraße	CS -8970,-3923 -8975,-3946 -8708,-4025 -8687,-4015 -8634,-4035 -8579,-4074 -8448,-4098 -8324,-4087 -8096,-4106 -8038,-4093
-An den Haselbüschen: Sackgasse, kein Durchgang zur Daumstr.	CS; -1273,15539 -1291,15580 -1402,15592
 Pfähle und hohe Bordsteine	CP2 2211,4280 2254,4376
 Uferweg am Plötzensee	CS 5618,14981 5518,15236 5291,15424 5073,15619 5036,15615 5008,15592 5051,15508 5084,15415 5005,15213
 (Im Schäferfeld - Wetzlarer Str.): am Baggersee entlang	CS -8563,-3805 -8562,-3849 -8661,-3971 -8982,-3860 -9002,-3896 -8970,-3923
@@ -198,11 +199,11 @@ Am Lindenplatz: Privatstraße	CS 17838,10878 17856,10961
 (Marthastr. - Dietzgenstr.): durch den Brosepark	CS 10383,19911 10167,19797
 Willstätterstr.: Privatstraße, nur Zufahrt zum Betriebsgelände	CS 14193,6556 14306,6651
 Eingang Kienitzer Str. kann nachts nicht als Ausgang benutzt werden	CS; 11489,7748 11498,7750
-Eingang Allerstr. kann nachts nicht als Ausgang benutzt werden	CS; 11507,7647 11515,7654
-Eingang Okerstr. kann nachts nicht als Ausgang benutzt werden	CS; 11528,7528 11536,7533
-Eingang Leinestr. kann nachts nicht als Ausgang benutzt werden	CS; 11547,7432 11553,7437
+Eingang Allerstr. kann nachts nicht als Ausgang benutzt werden	CS; 11507,7647 11516,7654
+Eingang Okerstr. kann nachts nicht als Ausgang benutzt werden	CS; 11528,7528 11540,7534
+Eingang Leinestr. kann nachts nicht als Ausgang benutzt werden	CS; 11547,7432 11558,7438
 Eingang Oderstr. kann nachts nicht als Ausgang benutzt werden	CS; 11598,7264 11608,7267
-Eingang Peter-Strasser-Weg kann nachts nicht als Ausgang benutzt werden	CS; 9281,7795 9240,7797
+Eingang Peter-Strasser-Weg kann nachts nicht als Ausgang benutzt werden	CS; 9281,7795 9240,7811
 Eingang Columbiadamm/Golßener Str. kann nachts nicht als Ausgang benutzt werden	CS; 10360,8521 10384,8628
 Weg zwischen Habermannsee und Butzensee	CS 23522,10456 23468,10423 23431,10435 23193,10426 23024,10455 22978,10451
 Mollergasse: Straße ist nicht ausgeschildert	CS 9892,12596 9894,12564
@@ -215,7 +216,7 @@ Privatstraße	CS -188,5061 -145,4916 -97,4849
 Privatstraße, Anlieger frei	CS -114,5077 -85,4949 -48,4888
 Pflanzenkübel am besten auf dem linken Gehweg umfahren	CS; -1604,2324 -1401,2391 -1248,2451
 Pflanzenkübel am besten auf dem rechten Gehweg umfahren	CS; -1248,2451 -1401,2391 -1604,2324
-Nicht ausgeschildert	CP2; 27568,1188 27810,987
+nicht ausgeschildert	CP2; 27568,1188 27810,987
 (Lindenstr. - Bahnhofstr.): Abkürzung durch den Park	CS 22017,5159 22046,5305 22043,5346
 Weg am Friedhof	CS 11608,7267 11687,7284 12180,7387
 Kaulsdorfer Gärten: Privatstraße	CS 21859,9822 21893,9902
@@ -227,6 +228,7 @@ Steffenstr.: nicht ausgeschildert, Zufahrt zum Sportforum	CP2; 15580,14880 15568
 Hohenschönhauser Str.: ausgeschildert "Zu den Sport- und Tennisplätzen"	CP2; 14754,14406 14682,14572
 An den Feldtmanngärten: Privatstraße	CS 15810,17512 15802,17446 15537,17484 15271,17439
 Segitzdamm: als Oranienplatz ausgeschildert	CP2; 11159,10769 11133,10704
+Legiendamm: als Oranienplatz ausgeschildert	CP2; 11275,10723 11301,10783
 Im Gartenheim: offiziell Einfahrt verboten; an beiden Eingängen Tore, aber ohne Schloss	CS 5707,4777 5690,4744 5659,4761 5677,4794
 Sternblütenweg: Privatstraße	CS 21591,488 21617,387
 Lindenblütenstr.: Privatstraße	CS 21703,388 21671,509
@@ -311,9 +313,9 @@ Am Rundling: nur frei für Anlieger	CS 17927,3737 17927,3771 17927,3788
 Simsonweg: nicht ausgeschildert	CP2; 8354,12416 8546,12279
 Simsonweg: nicht ausgeschildert	CP2; 8546,12279 8354,12416
 Jänickestr. - Dahlemer Weg: Privatstraße	CS 1702,1278 1707,1256 1742,1118
-Ausgeschildert als Jasminpfad	CS 8259,8628 8221,8631
+Ausgeschildert als Jasminpfad	CS 8259,8628 8215,8631
 Ausgeschildert als Rosenpromenade	CS 8265,8305 8259,8628
-Jasminpfad: Tor 1 der Kleingartenanlage	CP2; 8221,8631 8259,8628
+Jasminpfad: Tor 1 der Kleingartenanlage	CP2; 8215,8631 8259,8628
 Teilestr. - Schaffhausener Str.: vor der Autobahnbrücke links abbiegen	CP2; 11068,6006 11077,6028
 Königstuhlweg: nicht ausgeschildert	CS 10334,2321 10214,2348
 Straße 482: nicht ausgeschildert	CS 11120,1384 11146,1413 11156,1463
@@ -323,7 +325,7 @@ Ausschilderung "Wanderweg 1"	CP2; 15965,16482 15990,16479
 Ausschilderung "Wanderweg 3"	CP2; 15506,17973 15825,18385
 Florentinestr.: nicht ausgeschildert	CP2; 16397,20069 16299,20063
 unter der Stadtbahnbrücke	CS 11278,12185 11351,12221
-Nicht ausgeschildert	CP2; 24804,14811 24679,14762
+nicht ausgeschildert	CP2; 24804,14811 24679,14762
 Ausschilderung: zum Fahrrad-PR-Parkplatz	CP2; 24836,14839 24798,14964
 Ausschilderung: zum Fahrrad-PR-Parkplatz	CP2; 24944,14915 24925,14969
 Rampe zum U-Bahnhof Louis-Lewin-Str.	CP2; 24850,15092 24814,15073
@@ -338,24 +340,24 @@ Straße 181: Anlieger frei	CS 16991,-81 16989,-147 17036,-421 17065,-589 17076,-6
 Nikolaus-Ehlen-Weg: Privatstraße	CS 17308,-36 17215,94 17176,90
 (Kanzlerweg - Schreiberring): Privatweg	CS 8839,8168 8861,8242
 (Kanzlerweg - Schreiberring): Tordurchfahrt	CP2; 8861,8242 8839,8168
-(Rumeyplan - Kanzlerweg): Privatweg	CS 8899,7788 8839,7904
-(Rumeyplan - Kanzlerweg): Tordurchfahrt	CP2; 8899,7788 8839,7904
+(Rumeyplan - Kanzlerweg): Privatweg	CS 8895,7797 8839,7904
+(Rumeyplan - Kanzlerweg): Tordurchfahrt	CP2; 8895,7797 8839,7904
 Fritschweg: Privatstraße	CS 4173,6284 4142,6166 4123,6163 4118,6091
-Am Klötzgraben: Privatstraße	CS 6651,23020 6741,23117 6779,23139 6817,23167 6890,23213
+Am Klötzgraben: Privatstraße	CS 6651,23020 6741,23117 6779,23139 6817,23167 6882,23209
 Eisbärenweg: Privatstraße	CS 6909,17796 6950,17669
 über den Luisenstädtischen Grünzug	CS 11190,10619 11145,10638
 (Tiefhornweg): Uferpromenade	CS -7318,2567 -7420,2563 -7562,2431 -7833,2277 -8085,2252 -8141,2211 -8262,2178 -8328,2181 -8400,2156
 (Zobtener Str. - Fischerstr.): durch eine Kleingartenanlage	CS 16353,10207 16404,10286
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Straße verläuft zwischen Bahnstrecke und Wohnhäusern	CS 17210,11950 17201,11975 17137,11969 17023,11908 17026,11888
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11018,13286 11085,13239
-Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CS 7795,13093 7867,13127 7938,13150
+Agnes-Zahn-Harnack-Str.: nicht ausgeschildert	CS 7795,13093 7867,13127 7938,13150
 Petrusweg: Anlieger frei	CS 15225,1553 15217,1463
 Am Rudower Waldrand: Anlieger frei	CS 15467,349 15476,332 15600,116 15707,-6
 Gertrud-Dorka-Weg: Privatstraße	CS 17848,-173 17796,-97
 Landhausweg: Anlieger frei	CS 16308,1585 16464,1194 16489,1185
 Ausgeschildert zum Heckerdamm 181-213 und zur Siedlung Juliusruh	CP2; 3765,14746 3735,14419
 (Goerdelerdamm - Nonnendamm): Anlieger frei	CS 3103,14187 3007,14078
-(Goerdelerdamm - Nonnendamm): Anlieger frei	CS 2247,13805 2149,13775
+(Goerdelerdamm - Nonnendamm): Richtung Schleuse Charlottenburg	CP2; 2149,13775 2247,13805
 Ausgeschildert als Wohlrabedamm 24-30	CP2; 1216,13978 1259,14028
 Am Igelgrund: Privatstraße	CS 9068,20446 9126,20515
 Sterndamm: Richtung Groß-Berliner Damm	CP2; 17645,5328 17705,5223
@@ -367,7 +369,7 @@ Ausgeschildert als "Zum Deisterpfad"	CP2; -21,5104 -18,5083
 vor der Bahnbrücke rechts abbiegen	CP; -287,2583 -197,2634 -174,2616
 hinter der Bahnbrücke links abbiegen	CP; -155,2658 -197,2634 -174,2616
 Posaunenweg: Privatstraße	CS 11797,20601 11828,20625 11874,20656 11915,20686 11919,20745 11923,20781
-Dr.-Dorsch-Allee: Privatstraße	CS 11285,23079 10855,23403
+Dr.-Dorsch-Allee: Privatstraße	CS 11285,23079 11253,23103 11088,23227 10855,23403
 (Pasewalker Str. - Einsiedelring): privat	CS 12039,20538 11996,20545
 Hermann-Günther-Str.: Privatstraße	CS 8235,20109 8237,20098 8258,19983 8272,19908
 Am Tempelgraben: Privatstraße	CS 8288,20128 8291,20112 8315,19993 8325,19934
@@ -385,7 +387,7 @@ Privatstraße	CS 5959,20524 6030,20385
 Privatstraße	CS 5900,20487 5970,20353
 Privatstraße	CS 5842,20451 5904,20327
 An den Fließtalhöfen: Privatstraße	CS 4474,23119 4432,23066 4444,22989
-Nicht ausgeschildert	CP2; 3915,24200 4031,24218
+nicht ausgeschildert	CP2; 3915,24200 4031,24218
 Ponyweg: Privatstraße	CS 2064,26713 2015,26716
 Mustangweg: Privatstraße	CS 2108,26608 2068,26609 2008,26610
 Haflingerpfad: Privatstraße	CS 2063,26518 2068,26609
@@ -403,6 +405,41 @@ Mühlenbachring: private Wohnstraße	CS -7534,13936 -7556,13894 -7564,13817 -7637,
 ausgeschildert LEG Brandenburg	CP2; -8634,9626 -8595,9582
 nach rechts abbiegen, um Drängelgitter am Spielplatz zu umfahren	CP; 6503,20978 6519,21002 6565,21004
 nach links abbiegen, um Drängelgitter am Spielplatz zu umfahren	CP; 6596,21062 6560,21055 6565,21004
-(Weserstr. - Boxhagener Str.): Gewerbegelände, Lidl-Parkplatz	CS 14949,11474 14838,11410 14776,11400 14752,11369
-Lichtweg: Privatstraße	CS 1300,18292 1337,18427
+(Weserstr. - Boxhagener Str.): Gewerbegelände	CS 14949,11474 14838,11410
+(Weserstr. - Boxhagener Str.): Schreibfeder-Passage	CS 14776,11400 14838,11410
+(Weserstr. - Boxhagener Str.): Lidl-Parkplatz	CS 14776,11400 14752,11369
+Lichtweg: Privatstraße	CS 1301,18297 1337,18427
 Am Wäldchen (Blankenfelde): Privatstraße	CS 8826,24501 8905,24573 8972,24641 9032,24700
+Laufstrecke im Fritz-Schloß-Park	CS 7132,13503 7195,13430 7255,13444 7266,13500 7144,13609 7165,13659 7191,13679 7178,13708 7097,13834 7035,13808 7022,13776 7029,13742 7071,13690 7056,13584 7132,13503
+Straße 185 (Lübars): Privatstraße	CS 6037,22830 6083,22772
+Straße 186 (Lübars): Privatstraße	CS 6083,22772 6153,22828
+Straße 187 (Lübars): Privatstraße	CS 6175,22803 6153,22828 6115,22877
+Am Alten Lokschuppen: nicht ausgeschildert	CS 15730,11279 15708,11193 15752,11115 15805,10949
+Creienfelder Weg: Privatstraße	CS 6817,23167 6712,23252
+Rosenthaler Str.: Richtung Kleine Rosenthaler Str.	CP2; 10313,13493 10311,13537
+(Schlitzer Str. - Welzower Steig): ausgeschildert als "Welzower Steig"	CP2; 6162,21938 6257,22005
+(Finsterwalder Str. - Quickborner Str.): am Bruckstückengraben, auch als "Möbelweg" bekannt	CS 6434,22244 6651,22324 6755,22331 7439,22306
+nicht ausgeschildert	CP2; 8501,25358 8584,25371
+nicht ausgeschildert	CP2; 8776,25332 8722,25296
+Waldweg (Blankenfelde): Privatstraße	CS 9757,26351 9812,26385
+Wiesenweg (Blankenfelde): Privatstraße	CS 9776,26298 9848,26349
+Bergweg: Privatstraße	CS 9796,26244 9898,26310
+Höhenweg: Privatstraße	CS 9940,26273 9812,26186
+Ausgeschildert als Schönerlinder Str.	CP2; 11929,23946 11514,24284
+Mühlenweg (Karow): Privatstraße	CS 15347,22275 15411,22369 15445,22352
+vorbei am Spree-Center	CS 22801,13096 22842,13089 22883,13013
+(Verlängerung der Kraetkestr.): Privatstraße	CS 23937,12746 24026,12729
+Amelieweg: Privatstraße	CS 22861,12390 22805,12456 22759,12420 22814,12353
+Görschstr.: ausgeschildert "Zur In den Floragärten"	CP2; 10066,17636 10014,17646
+Krangener Weg: Privatstraße	CS 7079,21008 7093,20874
+Stephanusring: Privatstraße	CS 11934,22108 11890,22123 11863,22146 11876,22212 11950,22162
+Karlshöhe: Privatstraße	CS 12058,23227 11224,23879
+der Anfang ist noch als Knaackstr. ausgeschildert	CP2; 11380,14316 11374,14363
+als Knaackstr. ausgeschildert	CP2; 11374,14363 11331,14350
+ausgeschildert als Fritz-Kortner-Str. 1-1e; Privatstraße	CP2; 19320,8027 19443,7937
+ausgeschildert als Maria-Matray-Str.; Privatstraße	CP2; 19443,7937 19320,8027
+nicht ausgeschildert	CP2; 11545,13690 11550,13642
+entlang des Marzahn-Hohenschönhauser Grenzgrabens	CS 18094,13505 18054,13477 17978,13328 17906,13141
+(Wuhlewanderweg - Bahnhofstr.): am Forum Köpenick, kurzer Abschnitt mit Parkhausverkehr	CS 22204,6016 22332,5949 22358,5918
+(Bahrfeldtstr. - Fischzug): als Bahrfeldtstr. ausgeschildert, Privatstraße	CP2; 14921,10047 14969,10138
+(Bahrfeldtstr. - Fischzug): Privatstraße	CP2; 14993,10188 14969,10138

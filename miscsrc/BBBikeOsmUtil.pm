@@ -4,7 +4,7 @@
 # $Id: BBBikeOsmUtil.pm,v 1.15 2009/01/27 19:11:28 eserte Exp eserte $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2008 Slaven Rezic. All rights reserved.
+# Copyright (C) 2008,2012 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,7 +16,7 @@ package BBBikeOsmUtil;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.15 $ =~ /(\d+)\.(\d+)/);
+$VERSION = 1.16;
 
 use vars qw(%osm_layer %images @cover_grids %seen_grids $last_osm_file $defer_restacking
 	  );
@@ -47,9 +47,9 @@ my $ltlnqr = qr{([-+]?\d+(?:\.\d+)?)};
 my $osm_download_file_qr       = qr{/download_$ltlnqr,$ltlnqr,$ltlnqr,$ltlnqr\.osm(?:\.gz|\.bz2)?$};
 
 use vars qw($OSM_API_URL $OSM_FALLBACK_API_URL);
-#$OSM_API_URL = "http://www.openstreetmap.org/api/0.5";
 $OSM_API_URL = "http://www.openstreetmap.org/api/0.6";
-$OSM_FALLBACK_API_URL = "http://www.informationfreeway.org/api/0.6";
+## XXX The informationfreeway URL redirects to xapi.openstreetmap.org, which does not exist anymore
+#$OSM_FALLBACK_API_URL = "http://www.informationfreeway.org/api/0.6";
 
 use vars qw($MERKAARTOR_MAS_BASE $MERKAARTOR_MAS $ALLICONS_QRC $USE_MERKAARTOR_ICONS %ICON_NAME_TO_PHOTO);
 
@@ -58,8 +58,9 @@ use constant YSTEP => 0.05;
 use constant MARGIN_X => 0.06; # MARGIN... needs to be larger than ...STEP
 use constant MARGIN_Y => 0.06;
 
-# taken from osm2bbd
-use constant CONSTRUCTION_RX => qr{^(?:construction|planned|proposed)$};
+use constant ABANDONED_RX    => qr{^(?:abandoned|disused)$}; # the past ...
+use constant CONSTRUCTION_RX => qr{^(?:construction)$};      # ... the near future ...
+use constant PLANNED_RX      => qr{^(?:planned|proposed)$};  # ... and the far future (or never) ...
 
 sub register {
     _create_images();
@@ -122,6 +123,7 @@ sub mirror_and_plot_osm_files {
 		my $success = 0;
 		my $err;
 		for my $rooturl ($OSM_API_URL, $OSM_FALLBACK_API_URL) {
+		    next if !$rooturl;
 		    my $url = "$rooturl/map?bbox=$this_x0,$this_y0,$this_x1,$this_y1";
 		    main::status_message("Mirror $url ...", "info"); $main::top->update;
 		    main::IncBusy($main::top);
@@ -213,6 +215,7 @@ sub get_download_url {
 }
 
 sub get_fallback_download_url {
+    return if !$OSM_FALLBACK_API_URL;
     my($x0,$y0,$x1,$y1) = @_;
     my $url = "$OSM_FALLBACK_API_URL/map?bbox=$x0,$y0,$x1,$y1";
     $url;
@@ -236,7 +239,7 @@ sub download_and_plot_visible_area {
     eval {
 	my $resp = $ua->get($url, ':content_file' => $tmpfile);
 	if (!$resp->is_success) {
-	    if ($withfallback) {
+	    if ($withfallback && $url2) {
 		my $resp2 = $ua->get($url2, ':content_file' => $tmpfile);
 		if (!$resp->is_success) {
 		    die "Could not download $url: " . $resp->status_line . " and $url2: " . $resp2->status_line . "\n";
@@ -454,7 +457,8 @@ sub plot_osm_files {
 	    my %item_args;
 	    my %line_item_args;
 	    # following some stuff which is not that interesting for BBBike editing
-	    if ((exists $tag{'railway'} && $tag{'railway'} =~ m{^(?:abandoned|disused)$}) ||
+	    if ((exists $tag{'railway'} && ($tag{'railway'} =~ ABANDONED_RX || $tag{'railway'} =~ PLANNED_RX)) ||
+		(exists $tag{'highway'} && ($tag{'highway'} =~ ABANDONED_RX || $tag{'highway'} =~ PLANNED_RX)) ||
 		(exists $tag{'man_made'} && $tag{'man_made'} eq 'pipeline') ||
 		exists $tag{'barrier'} ||
 		exists $tag{'mj10777:admin_levels'}
@@ -477,7 +481,8 @@ sub plot_osm_files {
 	    } elsif (exists $tag{'highway'} && $tag{'highway'} eq 'steps') {
 		$item_args{'-dash'} = [1,2],
 		$item_args{'-width'} = 5;
-	    } elsif (exists $tag{'highway'} && $tag{'highway'} =~ CONSTRUCTION_RX) {
+	    } elsif ((exists $tag{'highway'} && $tag{'highway'} =~ CONSTRUCTION_RX) ||
+		     (exists $tag{'railway'} && $tag{'railway'} =~ CONSTRUCTION_RX)) {
 		$item_args{'-dash'} = '.'; 
 	    } elsif (exists $tag{'boundary'}) {
 		$item_args{'-dash'} = '.-'; # looks like a boundary, n'est-ce pas?
@@ -756,10 +761,11 @@ sub _get_map_conv {
 
 sub _best_merkaartor_work_dir {
     for my $merkaartor_work_dir
-	("/usr/local/src/work/merkaartor",
+	(
+	 "/usr/local/src/work/merkaartor",
+	 bsd_glob("/usr/ports/astro/merkaartor/work/merkaartor-*"), # for FreeBSD port
 	 "$ENV{HOME}/work/merkaartor", # use 'git clone git://gitorious.org/merkaartor/main.git merkaartor' in ~/work
 	 "$ENV{HOME}/work2/merkaartor",
-	 "/usr/ports/astro/merkaartor/work/merkaartor-0.13.2", # for FreeBSD port
 	) {
 	if (-r "$merkaartor_work_dir/Icons/AllIcons.qrc" &&
 	    bsd_glob("$merkaartor_work_dir/Styles/*.mas")

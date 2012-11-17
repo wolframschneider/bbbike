@@ -188,8 +188,7 @@ if(state.markers_drag.marker_via==null){if(state.markers.marker_via)state.marker
 var event='drag';google.maps.event.addListener(marker_start,event,function(){state.markers_drag.marker_start=marker_start;find_street(marker_start,"suggest_start",shadow)});google.maps.event.addListener(marker_ziel,event,function(){state.markers_drag.marker_ziel=marker_ziel;find_street(marker_ziel,"suggest_ziel",shadow)});google.maps.event.addListener(marker_via,event,function(){state.markers_drag.marker_via=marker_via;find_street(marker_via,"suggest_via",shadow,function(){displayVia()});});}
 function displayVia(){var tag=document.getElementById("viatr");if(tag&&tag.style.display=="none")toogleVia('viatr','via_message');}
 function granularity(val,gran){var granularity=gran||bbbike.granularity;return parseInt(val*granularity)/granularity;}
-function debug(text,id){if(!id){id="debug";}
-var tag=document.getElementById(id);var today=new Date();if(!tag)return;tag.innerHTML="debug: "+text;}
+function debug(text,id){if(console&&console.log)console.log("BBBike extract: "+text);if(!id)id="debug";var tag=jQuery("#"+id);if(!tag)return;tag.html("debug: "+text);}
 function find_street(marker,input_id,shadow,callback){var latLng=marker.getPosition();var input=document.getElementById(input_id);if(input){if(input_id=="XXXsuggest_via"){toogleVia('viatr','via_message',null,true);}
 var value=granularity(latLng.lng())+','+granularity(latLng.lat());input.setAttribute("value",value);if(shadow)marker.setShadow(shadow);display_current_crossing(marker,input_id,{"lng":granularity(latLng.lng()),"lat":granularity(latLng.lat()),"callback":callback});var type=input_id.substr(8);var color=document.getElementById("icon_"+type);if(bbbike.dark_icon_colors&&color){color.setAttribute("bgcolor",type=="start"?"green":type=="ziel"?"red":"yellow");}}else{debug("Unknonw: "+input_id);}}
 function inside_area(obj){var area=state.marker_list;var bottomLeft=area[0];var topRight=area[1];var result;if(obj.lng>=bottomLeft[1]&&obj.lng<=topRight[1]&&obj.lat>=bottomLeft[0]&&obj.lat<=topRight[0]){result=1;}else{result=0;}
@@ -227,8 +226,8 @@ var w=js.weather.weatherObservation;if(w.temperature==0&&w.dewPoint==0&&w.humidi
 var message=w.temperature+" &deg;C";if(w.clouds&&w.clouds.substring(0,2)!="n/"){message+=", "+w.clouds;}
 if(w.windSpeed>0){message+=', max. wind '+parseInt(w.windSpeed,10)+"m/s";}
 var span=document.getElementById("current_weather");if(span){span.innerHTML=message;}
-span=document.getElementById("weather_forecast");if(span){message=renderWeatherForecast(js.forecast);if(message==""){message=": no data available";}
-span.innerHTML=message;}}
+var span_fc=document.getElementById("weather_forecast");if(span_fc){var message_fc=renderWeatherForecast(js.forecast);if(message_fc==""){if(w.stationName)message_fc+=w.stationName+", ";message_fc+=message;if(w.humidity>0)message_fc+=", humidity: "+w.humidity+"%";}
+span_fc.innerHTML=message_fc;}}
 function renderWeatherForecast(js){if(!js||js==""||!js.weather){return"";}
 return google_weather(js);}
 function higlightCity(data,obj){var pos=eval("("+data+")");if(!pos||pos.length<1||pos[0]=="NO_CITY"){return;}

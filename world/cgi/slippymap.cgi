@@ -13,18 +13,11 @@
 
 package BBBikeGooglemap;
 
-use FindBin;
-use lib (
-    grep { -d } (
-        "$FindBin::RealBin/..",
-        "$FindBin::RealBin/../..",
-        "$FindBin::RealBin/../lib",
+use lib "../";
+use lib "../..";
+use lib "../lib";
+use lib "../../lib";
 
-        # für Radzeit:
-        "$FindBin::RealBin/../BBBike",
-        "$FindBin::RealBin/../BBBike/lib",
-    )
-);
 use CGI qw(:standard);
 use CGI::Carp;
 use File::Basename qw(dirname);
@@ -115,8 +108,8 @@ sub run {
     my $filename = param("gpxfile");
     if ( defined $filename ) {
         ( my $ext = $filename ) =~ s{^.*\.}{.};
-        require Strassen::Core;
-        require File::Temp;
+        use Strassen::Core;
+        use File::Temp;
         my $fh = upload("gpxfile");
         if ( !$fh ) {
             $self->{errormessageupload} = "Upload-Datei fehlt!";
@@ -272,7 +265,7 @@ sub get_html {
           $wpts->[0][1];
     }
     else {
-        require Geography::Berlin_DE;
+        use Geography::Berlin_DE;
         ( $centerx, $centery ) =
           $converter->( split /,/, Geography::Berlin_DE->center() );
     }
@@ -1155,7 +1148,7 @@ EOF
         new GLatLngBounds(new GLatLng(-90,-180), new GLatLng(90,180)), 0,
         '(<a rel="license" target="_ccbysa" href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>)');
     var copyrightCollection =
-        new GCopyrightCollection('Map data &copy; 2011-2012 <a target="_osm" href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors');
+        new GCopyrightCollection('Map data &copy; 2011-2012 <a target="_osm" href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> Contributors');
     copyrightCollection.addCopyright(copyright);
 
     map.addMapType(G_PHYSICAL_MAP);
@@ -1447,7 +1440,7 @@ EOF
   <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em; " >
 (&copy;) 2008-2012 <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a> &amp; <a href="http://wolfram.schneider.org">Wolfram Schneider</a> 
 // <a href="http://www.bbbike.de">http://www.bbbike.de</a> <br/>
-  Map data by the <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br />
+  Map data by the <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> Project // <a href="http://wiki.openstreetmap.org/wiki/OpenStreetMap_License">OpenStreetMap License</a> <br />
   </div>
 </div>
   </div> <!-- nomap -->
@@ -1468,7 +1461,7 @@ EOF
 sub hrefify {
     my ($text) = @_;
 
-    require HTML::Entities;
+    use HTML::Entities;
     my $enc = sub {
         HTML::Entities::encode_entities_numeric( $_[0],
             q{<>&"'\\\\\177-\x{fffd}} );

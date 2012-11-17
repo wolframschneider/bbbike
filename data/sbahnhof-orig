@@ -92,10 +92,10 @@ Mexikoplatz	SB -1069,3247
 Schlachtensee	SB -2287,3573
 #: note Rampe und Aufzug nur zur Wannseebahn und nur von der Borussenstr. (Richtung Strandbad Wannsee)
 #: attrs bg
-Nikolassee (Wannseebahn)	SB -3684,2606
+Nikolassee (Wannseebahn)	SB -3693,2614
 Nikolassee	SB -3736,2625
 #: attrs bg
-Wannsee	SB -4677,1420
+Wannsee	SB -4688,1429
 #: attrs bg
 Griebnitzsee	SC -8107,-1596
 Grunewald	SB 789,9046
@@ -126,17 +126,17 @@ Alexanderplatz	SA 10856,12897
 #: attrs bg
 Jannowitzbrücke	SA 11398,12103
 #: attrs bg (auf der Ostseite große Aufzüge, leider häufig kaputt, nur von der Seite Am Ostbahnhof niveaufrei erreichar; auf der Westseite normale Aufzüge, nur von der Seite Erich-Steinfurth-Str. erreichbar)
-Ostbahnhof	SA 12609,11662
+Ostbahnhof	SA 12535,11712
 Warschauer Str.	SA 13571,11234
 Ostkreuz	SA 14847,10892
 #: attrs bg
-Rummelsburg	SB 15454,10711
+Rummelsburg	SB 15458,10717
 Nöldnerplatz	SB 15829,10932
 #: attrs bg
 #: note: People Mover
 Betriebsbhf. Rummelsburg	SB 16877,9840
 #: attrs bg
-Karlshorst	SB 18801,8501
+Karlshorst	SB 18796,8492
 Wuhlheide	SB 20724,7160
 #: attrs bg
 Köpenick	SB 22530,6100
@@ -277,7 +277,7 @@ Schönfließ	SC 5712,28711
 Bergfelde b. Berlin	SC 4293,29252
 Zepernick	SC 18899,28383
 #: attrs bg
-Bernau-Friedenstal	SC 21038,29414
+Bernau-Friedenstal	SC 21006,29415
 #: attrs bg
 Bernau	SC 22841,30263
 #: attrs bf (problemlos)
@@ -322,7 +322,7 @@ Zehlendorf Süd	S0 -509,1987
 Düppel	S0 -1501,1486
 Gartenfeld	S0 -235,15477
 Siemensstadt	S0 737,14670
-Wernerwerk	S0 1667,14025
+Wernerwerk	S0 1675,14228
 Siemensstadt-Fürstenbrunn	S0 1204,13374
 #: alias: Kolonnenstr.
 #: attrs bg

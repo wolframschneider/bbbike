@@ -17,6 +17,7 @@ div#copyright {
   font-size: small;
   margin: 0px;
   padding: 0px;
+  text-align: left;
 }
 
 body {
@@ -31,7 +32,7 @@ div#border {
 
 div#intro {
 	position:static;
-	margin: 0.5em;
+	margin: 0.3em;
 }
 
 div#message {
@@ -46,6 +47,11 @@ div#table {
  margin: 0.0em;
  border-spacing: 1px;
 }
+
+table {
+ border-spacing: 0px;
+}
+
 
 input[type=submit] { margin-top: 0.5em; }
 
@@ -83,3 +89,67 @@ div#export_osm_too_large { color: red }
 hr { margin-top: 0.2em; margin-bottom: 0.2em; }
 
 #result { margin-top: 1em; padding: 0.5em; padding-bottom: 4em; }
+
+span#noscript { 
+    color: red;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+span#square_km_small, span#size_small, span#time_small { 
+	font-size: small; 
+	font-style: italic;
+	color: grey;
+}
+
+input#city, input#email { width: 95%; } 
+
+.jqmWindow {
+    display: none;
+    
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    
+    margin-left: -350px;
+    width: 700px;
+    
+    background-color: #EEE;
+    color: #333;
+    border: 1px solid black;
+}
+
+* html .jqmWindow {
+     position: absolute;
+     top: expression((document.documentElement.scrollTop || document.body.scrollTop) + Math.round(17 * (
+document.documentElement.offsetHeight || document.body.clientHeight) / 100) + 'px');
+}
+
+.jqmOverlay { background-color: #000; }
+
+div.dialog-title {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2px 6px;
+    font-weight: bold;
+}
+
+div.dialog-title img {
+    position: absolute;
+    right: 2px;
+}
+
+div.dialog-msg {
+    padding: 12px;
+    // height: 600px;
+    overflow: auto;
+    font-size: 100%;
+}
+
+div.dialog-msg td {
+    vertical-align: top;
+    padding: 2px 0px;
+    border-bottom: 1px dotted #ffffff;
+    font-size: small;
+}
+

@@ -1,6 +1,10 @@
+# Network options:
 # BBBIKE_TEST_SLOW_NETWORK=1
 # BBBIKE_TEST_NO_NETWORK=1
+#
+# Web server options:
 # BBBIKE_TEST_NO_CGI_TESTS=1
+# BBBIKE_TEST_NO_APACHE=1
 # BBBIKE_TEST_NO_MAPSERVER=1
 
 PERL?=		perl
@@ -21,6 +25,13 @@ test-no-cgi:
 
 prove-no-cgi:
 	(cd .. && LANG=C BBBIKE_TEST_NO_CGI_TESTS=1 $(PERL) -S prove -w -I -Ilib t/$(TEST_FILES))
+
+test-cgi-lite:
+	LANG=C BBBIKE_TEST_SKIP_MAPSERVER=1 BBBIKE_TEST_SKIP_PALMDOC=1 $(PERL) -w -I.. -I../lib -MTest::Harness -e \
+	    'runtests(@ARGV)' $(TEST_FILES)
+
+prove-cgi-lite:
+	(cd .. && LANG=C BBBIKE_TEST_SKIP_MAPSERVER=1 BBBIKE_TEST_SKIP_PALMDOC=1 $(PERL) -S prove -w -I -Ilib t/$(TEST_FILES))
 
 # This is basically test-no-cgi, but works with dmake
 # (dmake+windows cannot ?=, env shell syntax, single quotes, * expansion)

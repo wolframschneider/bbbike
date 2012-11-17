@@ -4,6 +4,7 @@
 # tile-size.cgi - compute size of an tile from planet.osm
 
 use CGI;
+use CGI::Carp;
 use IO::File;
 use lib '../world/bin';
 use lib '../bin';
@@ -12,7 +13,11 @@ use TileSize;
 use strict;
 use warnings;
 
-my $debug  = 2;
+my $debug = 2;
+
+# $TileSize::debug = 2;
+
+# map format to database
 my %format = (
     "osm.pbf"            => "pbf",
     "pbf"                => "pbf",
@@ -21,13 +26,17 @@ my %format = (
     "gz"                 => "osm.gz",
     "osm.xz"             => "osm.gz",
     "osm.bz2"            => "osm.gz",
-    "osm.shp.zip"        => "shp.zip",
+    "shp.zip"            => "shp.zip",
     "shp"                => "shp.zip",
-    "osm.obf.zip"        => "obf.zip",
+    "obf.zip"            => "obf.zip",
     "obf"                => "obf.zip",
     "garmin-cycle.zip"   => "garmin-cycle.zip",
     "garmin-osm.zip"     => "garmin-cycle.zip",
-    "garmin-leisure.zip" => "garmin-cycle.zip"
+    "garmin-leisure.zip" => "garmin-cycle.zip",
+    "navit.zip"          => "obf.zip",
+    "navit"              => "obf.zip",
+    "o5m.gz"             => "pbf",
+    "o5m.bz2"            => "pbf",
 );
 
 ######################################################################
@@ -69,10 +78,15 @@ my $ext;
 if ( $format && $format{$format} ) {
     $ext = $format{$format};
 
-    # guess factor
+    # guess factor based on similar data
     $factor_format *= 1.3  if $format eq 'garmin-leisure.zip';
+    $factor_format *= 0.65 if $format eq 'navit.zip';
+
     $factor_format *= 0.7  if $format eq 'osm.bz2';
     $factor_format *= 0.75 if $format eq 'osm.xz';
+
+    $factor_format *= 0.88 if $format eq 'o5m.bz2';
+    $factor_format *= 1.04 if $format eq 'o5m.gz';
 }
 else {
     $ext = $format{"pbf"};
@@ -100,10 +114,11 @@ $factor = 1 if $factor < 0 || $factor > 100;
 my $size =
   $factor *
   $factor_format *
-  $tile->area_size( $lng_sw, $lat_sw, $lng_ne, $lat_ne, 2 );
+  $tile->area_size( $lng_sw, $lat_sw, $lng_ne, $lat_ne,
+    TileSize::FRACTAL_REAL );
 $size = int( $size * 10 + 0.5 ) / 10;
 
-warn "size: $size, factor $factor, format: $format,",
+warn "size: $size, factor $factor, format: $format, ",
   "area: $lng_sw,$lat_sw,$lng_ne,$lat_ne\n"
   if $debug >= 2;
 

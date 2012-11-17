@@ -41,8 +41,11 @@ abdeckung.bbd: abdeckung.bbd-orig ../data/berlin_ortsteile
 # checks
 check:	.check_ampelschaltung2
 
-validate:
+validate:	${BBBIKETMPDIR}/.validate_garmin_devcap
+
+${BBBIKETMPDIR}/.validate_garmin_devcap: garmin_devcap.kwalify garmin_devcap.yaml
 	pkwalify -f garmin_devcap.kwalify garmin_devcap.yaml
+	touch ${BBBIKETMPDIR}/.validate_garmin_devcap
 
 .check_ampelschaltung2:	ampelschaltung-orig.txt ${DATADIR}/ampeln-orig
 	$(CHECK_POINTS) -ampelschaltung2 -warn \
@@ -103,7 +106,7 @@ download-${land}.osm.bz2:
 # cd just for checking:
 	mkdir -p ${OSM_DOWNLOAD_DIR}
 	cd ${OSM_DOWNLOAD_DIR} && true
-	wget http://download.geofabrik.de/osm/europe/germany/${land}.osm.bz2 -O ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~
+	wget http://download.geofabrik.de/openstreetmap/europe/germany/${land}.osm.bz2 -O ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~
 	mv ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~ ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2
 .endfor
 
@@ -112,7 +115,7 @@ download-${land}.osm.bz2:
 # cd just for checking:
 	mkdir -p ${OSM_DOWNLOAD_DIR}
 	cd ${OSM_DOWNLOAD_DIR} && true
-	wget http://download.geofabrik.de/osm/europe/${land}.osm.bz2 -O ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~
+	wget http://download.geofabrik.de/openstreetmap/europe/${land}.osm.bz2 -O ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~
 	mv ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~ ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2
 .endfor
 
@@ -296,14 +299,16 @@ BBBIKE_FAT_ROUTABLE_GMAPSUPP_SOURCES+=	${BBBIKETMPDIR}/trafficlightmap25.img
 
 ${BBBIKETMPDIR}/bbbike_fat_routable_gmapsupp.img: ${BBBIKE_FAT_ROUTABLE_GMAPSUPP_SOURCES} ${BBBIKEMKGMAPDIR}/typ/M000002a.TYP
 	cd ${BBBIKETMPDIR} && \
-	    ${MKGMAP} --family-id=42 --family-name="Slavens Map" \
+	    ${MKGMAP} --family-id=42 --family-name="BBBike Berlin Fat" \
+	       --description="BBBike Berlin Fat" \
 	       --index \
 	       --gmapsupp ${BBBIKE_FAT_ROUTABLE_GMAPSUPP_SOURCES} ${BBBIKEMKGMAPDIR}/typ/M000002a.TYP
 	mv ${BBBIKETMPDIR}/gmapsupp.img ${BBBIKETMPDIR}/bbbike_fat_routable_gmapsupp.img
 
 ${BBBIKETMPDIR}/bbbike_routable_gmapsupp.img: ${BBBIKE_ROUTABLE_GMAPSUPP_SOURCES} ${BBBIKEMKGMAPDIR}/typ/M000002a.TYP
 	cd ${BBBIKETMPDIR} && \
-	    ${MKGMAP} --family-id=42 --family-name="Slavens Map" \
+	    ${MKGMAP} --family-id=42 --family-name="BBBike Berlin" \
+	       --description="BBBike Berlin" \
 	       --index \
 	       --gmapsupp ${BBBIKE_ROUTABLE_GMAPSUPP_SOURCES} ${BBBIKEMKGMAPDIR}/typ/M000002a.TYP
 	mv ${BBBIKETMPDIR}/gmapsupp.img ${BBBIKETMPDIR}/bbbike_routable_gmapsupp.img
@@ -347,9 +352,7 @@ do-garmindata-dist:	${BBBIKETMPDIR}/bbbike_routable_gmapsupp.img
 
 garmindata-sf-release:	do-garmindata-dist
 	@echo "Go to https://sourceforge.net/downloads/bbbike/bbbikedata-b_de/"
-	@echo "Create a YYYYMMDD directory and upload /tmp/bbbike-b_de-garmin-$(TODAY_DATE).zip"
-#	@echo "Really upload bbbike-b_de-garmin-$(TODAY_DATE).zip to SourceForge?"
-#	@cd /tmp && ls -l bbbike-b_de-garmin-$(TODAY_DATE).zip
-#	@echo "Press CTRL-C to abort. Return to continue release."
-#	@read yn
-#	cd /tmp && sf-upload -groupid 19142 -packageid 207826 -r $(TODAY_DATE) -f bbbike-b_de-garmin-$(TODAY_DATE).zip
+	@echo "Create a folder $(TODAY_DATE)"
+	@echo "Then upload the file:"
+	@echo ""
+	@echo "    rsync -v /tmp/bbbike-b_de-garmin-$(TODAY_DATE).zip eserte@frs.sourceforge.net:/home/frs/project/bbbike/bbbikedata-b_de/$(TODAY_DATE)/"

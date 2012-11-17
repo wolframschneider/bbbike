@@ -199,7 +199,7 @@ use vars qw($hs_check $plzmcmd $ampelstatus_label_text
 	    $balloon $c_balloon $leave_after $ch
 	    $map_bg $map_color $steady_mark $lowmem $slowcpu
 	    $use_contexthelp $use_logo $use_dialog
-	    $center_on_str $center_on_coord
+	    $center_on_str $center_on_coord $center_on_coord2
 	    $center_loaded_route $zoom_loaded_route
 	    $zoom_new_route $zoom_new_route_chooseort
 	    $set_mode $init_with_edittools $texteditor
@@ -210,7 +210,7 @@ use vars qw($export_txt_mode $export_txt_min_angle $gps_waypoints
 	    $gps_waypointlength $gps_waypointsymbol $gps_waypointcharset
 	    $gps_needuniqueroutenumber
 	   );
-use vars qw($www_is_slow $do_www $really_no_www $no_map
+use vars qw($do_www $really_no_www $no_map
 	    %save_route $multistrassen
 	    @coords @names @rbahn_coords
 	    $abbiege_optimierung $abbiege_penalty
@@ -262,7 +262,7 @@ use vars qw(%category_rot_font);
 use vars qw($frame $ctrl_frame);
 use vars qw($hs_label $str_label);
 use vars qw($misc_frame $misc_frame2 $DockFrame $Checkbutton $Radiobutton);
-use vars qw(%flag_photo @flag_offset);
+use vars qw(%flag_photo);
 use vars qw($berlin_overview_photo); # wird bei Bedarf nachgeladen
 ##### Statuszeile/Progress Bar #####
 use vars qw($status_label $status_button $status_button_column

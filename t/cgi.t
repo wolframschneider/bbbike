@@ -53,7 +53,6 @@ if (defined $ENV{BBBIKE_TEST_CGIURL}) {
 
 my $cpt = Safe->new;
 
-my $fast = 0;
 my $ortsuche = 0; # XXX funktioniert nicht mehr
 my $do_display = 0;
 my $do_xxx;
@@ -61,22 +60,32 @@ my $do_accept_gzip = 1;
 my $v = 0;
 my %skip;
 
-my $ua = new LWP::UserAgent;
+if ($ENV{BBBIKE_TEST_SKIP_MAPSERVER}) {
+    $skip{mapserver} = 1;
+}
+if ($ENV{BBBIKE_TEST_SKIP_PALMDOC}) {
+    $skip{palmdoc} = 1;
+}
+
+my $ua = LWP::UserAgent->new(keep_alive => 1);
 $ua->agent("BBBike-Test/1.0");
 $ua->env_proxy;
+
+$skip{mapserver} = $ENV{BBBIKE_TEST_NO_MAPSERVER};
+$skip{palmdoc} = $ENV{BBBIKE_TEST_NO_MAPSERVER};
 
 if (!GetOptions("cgiurl=s" => sub {
 		    @urls = $_[1];
 		},
-		"fast!" => \$fast,
 		"ortsuche!" => \$ortsuche,
 		"display!" => \$do_display,
 		"xxx" => \$do_xxx,
 		"v!" => \$v,
 		"skip-mapserver!" => \$skip{mapserver},
+		"skip-palmdoc!" => \$skip{palmdoc},
 		"accept-gzip!" => \$do_accept_gzip,
 	       )) {
-    die "usage: $0 [-cgiurl url] [-fast] [-ortsuche] [-display] [-v] [-skip-mapserver] [-noaccept-gzip] [-xxx]";
+    die "usage: $0 [-cgiurl url] [-fast] [-ortsuche] [-display] [-v] [-skip-mapserver] [-skip-palmdoc] [-noaccept-gzip] [-xxx]";
 }
 
 if (!@urls) {
@@ -96,7 +105,9 @@ if (!@urls) {
 }
 
 my $ortsuche_tests = 11;
-plan tests => (254 + $ortsuche_tests) * scalar @urls;
+my $bbbike_org = $ENV{BBBIKE_TEST_ORG_LATER} ? 7 : 0;
+
+plan tests => (254 + $ortsuche_tests - $bbbike_org ) * scalar @urls;
 
 my $default_hdrs;
 if (defined &Compress::Zlib::memGunzip && $do_accept_gzip) {
@@ -106,13 +117,16 @@ if (defined &Compress::Zlib::memGunzip && $do_accept_gzip) {
     $default_hdrs = HTTP::Headers->new();
 }
 
+my $message = qr/Dieses Programm sucht .*Fahrrad-.*Routen in Berlin/;
+$message = qr/Willkommen beim Radroutenplaner BBBike! Wir helfen Dir, eine sch/ if $ENV{BBBIKE_TEST_ORG};
+
 for my $cgiurl (@urls) {
     my $action;
     {
 	my($content, $resp) = std_get $cgiurl;
 	like $resp->header('Content_Type'),
 	    qr{^text/html(?:; charset=(?:ISO-8859-1|utf-8))?$}, "Expect text/html (regardless which charset)";
-	like_html $content, qr/Dieses Programm sucht .*Fahrrad-.*Routen in Berlin/,
+	like_html $content, $message,
 	    "Expected introduction text in body";
 	if ($content =~ /form action=\"([^\"]+)\"/i) {
 	    pass "Form found";
@@ -160,6 +174,8 @@ for my $cgiurl (@urls) {
     SKIP: {
 	    skip "No mapserver tests", 2
 		if $output_as eq 'mapserver' && $skip{mapserver};
+	    skip "No palmdoc tests", 2
+		if $output_as eq 'palmdoc' && $skip{palmdoc};
 
 	    my($content, $resp) = std_get "$action?startname=Dudenstr.&startplz=10965&startc=9222%2C8787&zielname=Grimmstr.+%28Kreuzberg%29&zielplz=10967&zielc=11036%2C9592&pref_seen=1&output_as=$output_as",
 					 testname => "Route result output_as=$output_as";
@@ -227,7 +243,9 @@ for my $cgiurl (@urls) {
 	    like_html $content, qr/Start.*Zoologischer Garten/, "Start is Zoologischer Garten";
 	    unlike_html $content, qr/\bZoo\b/, "Zoo not found (same point optimization)";
 	}
+	if (!$ENV{BBBIKE_TEST_ORG_LATER}) {
 	unlike_html $content, qr/\(\)/, "No empty parenthesis";
+	}
     }
 
     {
@@ -801,12 +819,12 @@ EOF
 	}
     }
 
-    {
+    if (!$ENV{BBBIKE_TEST_ORG_LATER}) {
 	my $content = std_get $cgiurl . "?scope=wideregion&detailmapx=2&detailmapy=6&type=start&detailmap.x=200&detailmap.y=226";
 	like_html $content, qr{diese Koordinaten konnte keine Kreuzung gefunden werden}, "No crossing for coords in the Döberitzer Heide";
     }
 
-    {
+    if (!$ENV{BBBIKE_TEST_ORG_LATER}) {
 	my $content = std_get $cgiurl . "?scope=wideregion&detailmapx=3&detailmapy=8&type=start&detailmap.x=304&detailmap.y=331";
 	like_html $content, qr{Rudolf-Breitscheid-Str}, "Crossing in Potsdam near Berlin, should get a street in Potsdam";
     }

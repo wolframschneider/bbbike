@@ -4,6 +4,7 @@
 # livesearch-extract.cgi - extractbbbike.org live extracts
 
 use CGI qw/-utf-8 unescape escapeHTML/;
+use CGI::Carp;
 use URI;
 use URI::QueryParam;
 
@@ -190,7 +191,7 @@ $data
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
-(&copy;) 2008-2012 <a href="http://bbbike.org">BBBike.org</a> // Map data (&copy;) <a href="http://www.openstreetmap.org/" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
+(&copy;) 2008-2012 <a href="http://bbbike.org">BBBike.org</a> // Map data (&copy;) <a href="http://www.openstreetmap.org/copyright" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
 <div id="footer_community">
 </div>
 </div>
@@ -200,7 +201,7 @@ EOF
 sub css_map {
     return <<EOF;
 <style type="text/css">
-div#BBBikeGooglemap { left: 18em; }
+div#BBBikeGooglemap, div#nomap { left: 18em; }
 div#sidebar { width: 17em; }
 </style>
 
@@ -242,6 +243,9 @@ sub statistic {
     if ( $ns ne 'text' ) {
         print qq{<div id="BBBikeGooglemap" style="height:92%">\n};
         print qq{<div id="map"></div>\n};
+    }
+    else {
+        print qq{<div id="nomap" style="height:92%">\n};
     }
 
     print <<EOF;
@@ -294,9 +298,11 @@ EOF
     my $counter       = 0;
     my $counter_total = 0;
     my @cities;
+    my %format;
 
     foreach my $o (@d) {
         $counter_total++;
+        $format{ $o->{"format"} }++;
 
         my $data =
 qq|$o->{"sw_lng"},$o->{"sw_lat"}!$o->{"ne_lng"},$o->{"ne_lat"},$o->{"format"}|;
@@ -333,8 +339,11 @@ qq|$o->{"sw_lng"},$o->{"sw_lat"}!$o->{"ne_lng"},$o->{"ne_lat"},$o->{"format"}|;
         $d .= "<br/>total: $counter_total";
     }
 
+    $d .= join "<br/>", "", "", map { "$_ ($format{$_})" }
+      reverse sort { $format{$a} <=> $format{$b} } keys %format;
+
     if ( $date ne "" ) {
-        $d .= "<br/>the localtime is in UTC";
+        $d .= "<br/><br/>the localtime is in UTC";
     }
 
     print qq{\n\$("div#sidebar").html('$d');\n\n};

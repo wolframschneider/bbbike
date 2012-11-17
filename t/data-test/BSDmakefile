@@ -1,0 +1,37 @@
+EMPTY_FILES=	Potsdam.coords.data gesperrt \
+		handicap_s handicap_l qualitaet_s qualitaet_l \
+		ampeln fragezeichen berlin landstrassen landstrassen2 \
+		comments_cyclepath comments_danger comments_ferry comments_misc comments_mount \
+		comments_route comments_tram comments_scenic plaetze \
+		upgrade_scope_hint faehren green wasserstrassen wasserumland wasserumland2 \
+		orte orte2 orte_city
+NON_EMPTY_FILES=	strassen gesperrt
+
+all:	Berlin.coords.data ${EMPTY_FILES}
+
+Berlin.coords.data:	strassen
+	perl -I../.. -I../../lib -MStrassen::Core -MStrassen::Strasse -e 'Strassen->new_stream(shift)->read_stream(sub { my $$r = shift; my($$s,@cps) = Strasse::split_street_citypart($$r->[0]); @cps = "" if !@cps; for my $$cp (@cps) { print "$$s|$$cp||$$r->[1][0]\n" }})' ${.CURDIR}/strassen > Berlin.coords.data~
+	chmod 644 Berlin.coords.data~
+	mv Berlin.coords.data~ Berlin.coords.data
+
+.for f in ${EMPTY_FILES}
+$f:
+	touch $f
+	chmod 644 $f
+.endfor
+
+# The following is used for tests with wgs84 data (e.g. needed for osm
+# wgs84 experiments)
+WGS84_DATADIR=/tmp/test_wgs84
+wgs84-data:
+	mkdir -p ${WGS84_DATADIR}
+	chmod 755 ${WGS84_DATADIR}
+.for f in ${NON_EMPTY_FILES}
+	../../miscsrc/convert_coordsys standard polar < $f > ${WGS84_DATADIR}/$f
+	chmod 644 ${WGS84_DATADIR}/$f
+.endfor
+.for f in ${EMPTY_FILES} Berlin.coords.data
+	touch ${WGS84_DATADIR}/$f
+	chmod 644 ${WGS84_DATADIR}/$f
+.endfor
+	echo '$$meta = { coordsys => q{wgs84}, };' > ${WGS84_DATADIR}/meta.dd

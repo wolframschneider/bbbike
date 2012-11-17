@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2009 Slaven Rezic. All rights reserved.
+# Copyright (C) 2009,2012 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,110 +16,127 @@ use strict;
 use FindBin;
 use lib ("$FindBin::RealBin/..",
 	 "$FindBin::RealBin/../lib",
+	 $FindBin::RealBin,
 	);
 
-use Date::Calc qw(Add_Delta_Days);
+use Getopt::Long;
 use POSIX qw(strftime);
 
-use Strassen::Core;
+use StrassenNextCheck;
 
 my $fragezeichen_mode = 0;
 my $door_mode = 'out';
 my $today = strftime "%Y-%m-%d", localtime;
+my $do_preamble;
+my $coloring;
 my $verbose;
 
-for my $arg (@ARGV) {
-    if ($arg =~ m{^--?(.*)$}) {
-	$arg = $1;
-	if ($arg eq 'fragezeichen-mode') {
-	    $fragezeichen_mode = 1;
-	} elsif ($arg eq 'no-fragezeichen-mode') {
-	    $fragezeichen_mode = 0;
-	} elsif ($arg eq 'indoor-mode') {
-	    $door_mode = 'in';
-	} elsif ($arg eq 'outdoor-mode') {
-	    $door_mode = 'out';
-	} elsif ($arg =~ m{^today=(.*)$}) {
-	    $today = $1;
-	    if ($today !~ m{^\d{4}-\d{2}-\d{2}$}) {
-		die "Unexpected argument for --today '$today', expected YYYY-MM-DD";
-	    }
-	} elsif ($arg eq 'verbose') {
-	    $verbose = 1;
+my @actions;
+
+GetOptions(
+	   "today=s" => \$today,
+	   "verbose" => \$verbose,
+	   "preamble" => \$do_preamble,
+	   "coloring=s" => \$coloring,
+	   "fragezeichen-mode"    => sub { push @actions, sub { $fragezeichen_mode = 1 } },
+	   "no-fragezeichen-mode" => sub { push @actions, sub { $fragezeichen_mode = 0 } },
+	   "indoor-mode"          => sub { push @actions, sub { $door_mode = 'in' } },
+	   "outdoor-mode"         => sub { push @actions, sub { $door_mode = 'out' } },
+	   "<>"                   => sub { my $f = $_[0]; push @actions, sub { handle_file($f) } },
+	  )
+    or die "usage: $0 [--today YYYY-MM-DD] [--verbose] [--fragezeichen-mode|--no-fragezeichen-mode|--indoor-mode|--outdoor-mode] ...";
+
+if ($today !~ m{^\d{4}-\d{2}-\d{2}$}) {
+    die "Unexpected argument for --today '$today', expected YYYY-MM-DD";
+}
+
+if (!@actions) {
+    warn "No actions, nothing to do...\n";
+    exit;
+}
+
+my %colors;
+my @time_limits;
+if ($coloring) {
+    my $today_epoch = do {
+	my($Y,$m,$d) = split /-/, $today;
+	require Time::Local;
+	Time::Local::timelocal(0,0,0,$d,$m-1,$Y);
+    };
+    my @items = split /\s+/, $coloring;
+    my $cat = '?';
+    $colors{$cat} = shift @items;
+    for(my $i=0; $i<$#items; $i+=2) {
+	$cat .= '?';
+	my($interval,$color) = @items[$i,$i+1];
+	if (my($count,$unit) = $interval =~ m{^\+(\d+)([dwmy])$}) {
+	    my $epoch = $today_epoch + $count * {d => 1, w => 7, m => 30, y => 365}->{$unit} * 86400;
+	    my $date = strftime "%Y-%m-%d", localtime $epoch;
+	    $colors{$cat} = $color;
+	    push @time_limits, [$date, $cat];
 	} else {
-	    die "Unknown argument -$arg";
+	    die "Invalid interval '$interval'\n";
 	}
-    } else {
-	handle_file($arg);
     }
+}
+
+if ($do_preamble) {
+    print <<'EOF';
+#: line_dash: 8, 5
+#: line_width: 5
+EOF
+    if (%colors) {
+	for my $cat (sort { length $a <=> length $b} keys %colors) {
+	    print "#: category_color.$cat: $colors{$cat}\n";
+	}
+    }
+    print <<'EOF';
+#:
+EOF
+}
+
+for my $action (@actions) {
+    $action->();
 }
 
 sub handle_file {
     my($file) = @_;
     if ($verbose) { print STDERR "$file... " }
-    my $s = Strassen->new_stream($file);
+    my $s = StrassenNextCheck->new_stream($file);
 
-    my $check_frequency_days = 30;
-    my $glob_dir = $s->get_global_directives;
-    if ($glob_dir && $glob_dir->{check_frequency}) {
-	($check_frequency_days) = $glob_dir->{check_frequency}[0] =~ m{(\d+)};
-    }
-
-    $s->read_stream
+    $s->read_stream_nextcheck_records
 	(sub {
 	     my($r, $dir) = @_;
 
 	     my $check_now; # undef: not given, 0: given and not now, 1: given and now
-
 	     my $add_name;
 
-	     if (exists $dir->{next_check}) {
-		 my($y,$m,$d) = $dir->{next_check}[0] =~ m{(\d{4})-(\d{2})-(\d{2})};
-		 if (!$y) {
-		     ($y,$m) = $dir->{next_check}[0] =~ m{(\d{4})-(\d{2})};
-		     $d=1;
-		 }
-		 if (!$y) {
-		     warn "*** WARN: Malformed next_check directive '$dir->{next_check}[0]' in '$file', ignoring...\n";
-		 } else {
-		     my $date = sprintf "%04d-%02d-%02d", $y,$m,$d;
-		     if ($date lt $today) {
-			 $add_name = "(next check: $date)";
-			 $check_now = 1;
-		     } else {
-			 $check_now = 0;
+	     my $cat;
+
+	     if ($dir->{_nextcheck_date} && $dir->{_nextcheck_date}[0]) {
+		 if ($dir->{_nextcheck_date}[0] le $today) {
+		     if ($dir->{_nextcheck_label} && $dir->{_nextcheck_label}[0]) {
+			 $add_name = "($dir->{_nextcheck_label}[0])";
 		     }
-		 }
-	     } elsif (exists $dir->{last_checked}) {
-		 my($y,$m,$d) = $dir->{last_checked}[0] =~ m{(\d{4})-(\d{2})-(\d{2})};
-		 if (!$y) {
-		     ($y,$m) = $dir->{last_checked}[0] =~ m{(\d{4})-(\d{2})};
-		     $d=1;
-		 }
-		 if (!$y) {
-		     warn "*** WARN: Malformed last_checked directive '$dir->{next_check}[0]' in '$file', ignoring...\n";
-		 } else {
-		     my $check_frequency_days = $check_frequency_days;
-		     if (exists $dir->{check_frequency}) {
-			 ($check_frequency_days) = $dir->{check_frequency}[0] =~ m{(\d+)}; # XXX duplicated, see above
-		     }
-		     my $last_checked_date = sprintf "%04d-%02d-%02d", $y,$m,$d;
-		     ($y,$m,$d) = Add_Delta_Days($y,$m,$d, $check_frequency_days);
-		     my $date = sprintf "%04d-%02d-%02d", $y,$m,$d;
-		     if ($date lt $today) {
-			 $add_name = "(last checked: $last_checked_date)";
-			 $check_now = 1;
-		     } else {
-			 $check_now = 0;
-		     }
-		 }
-	     } elsif ($r->[Strassen::NAME] =~ m{(\d{4})-(\d{2})-(\d{2})}) {
-		 my($y,$m,$d) = ($1,$2,$3);
-		 my $date = sprintf "%04d-%02d-%02d", $y,$m,$d;
-		 if ($date lt $today) {
 		     $check_now = 1;
 		 } else {
-		     $check_now = 0;
+		 CHECK_TIME_LIMITS: {
+			 if (@time_limits) {
+			     for my $time_limit (@time_limits) {
+				 my($date, $_cat) = @$time_limit;
+				 if ($dir->{_nextcheck_date}[0] le $date) {
+				     $cat = $_cat;
+				     if ($r->[Strassen::CAT] =~ m{:(inwork|projected)}) {
+					 $cat .= "::$1";
+				     }
+				     $add_name = "($dir->{_nextcheck_label}[0])";
+				     $check_now = 1;
+				     last CHECK_TIME_LIMITS;
+				 }
+			     }
+			 }
+			 $check_now = 0;
+		     }
 		 }
 	     }
 
@@ -159,19 +176,20 @@ sub handle_file {
 		 }
 	     }
 
-	     my $cat;
-	     if ($r->[Strassen::CAT] =~ m{^\?}) {
-		 $cat = $r->[Strassen::CAT];
-	     } elsif ($r->[Strassen::CAT] =~ m{:inwork}) {
-		 $cat = '?::inwork';
-	     } else {
-		 $cat = '?';
+	     if (!defined $cat) {
+		 if ($r->[Strassen::CAT] =~ m{^\?}) {
+		     $cat = $r->[Strassen::CAT];
+		 } elsif ($r->[Strassen::CAT] =~ m{:(inwork|projected)}) {
+		     $cat = "?::$1";
+		 } else {
+		     $cat = '?';
+		 }
 	     }
 
 	     # XXX better!!!
 	     $add_name =~ s{[\t\r\n]}{ }g if defined $add_name;
 	     print $r->[Strassen::NAME] . (defined $add_name ? (length $r->[Strassen::NAME] ? ' ' : '') . $add_name : '') . "\t$cat " . join(" ", @{ $r->[Strassen::COORDS] }) . "\n";
-	 });
+	 }, passthru_without_nextcheck => 1);
 
     if ($verbose) { print STDERR "done\n" }
 }

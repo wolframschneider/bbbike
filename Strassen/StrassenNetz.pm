@@ -1433,34 +1433,35 @@ sub new_search {
 sub nearest_street {
     my($self, $c1, $c2) = @_;
     my $rueckwaerts = 0;
-    my(@str);
-    return undef if !exists $self->{Net}{$c1};
-    @str = keys %{ $self->{Net}{$c1} };
-    if (!@str) {
+    my @neighbors = keys %{ $self->{Net}{$c1} };
+    if (!@neighbors) {
 	($c1, $c2) = ($c2, $c1);
 	$rueckwaerts = 1;
-	@str = keys %{ $self->{Net}{$c1} };
-	if (!@str) {
+	@neighbors = keys %{ $self->{Net}{$c1} };
+	if (!@neighbors) {
 	    warn "Kann weder $c1 noch $c2 in Net2Name finden"
-	      if $VERBOSE;
-	    return undef;
+		if $VERBOSE;
+	    return (undef, undef);
 	}
     }
 
-    my($x1,$y1) = split(/,/, $c1);
-    my($x2,$y2) = split(/,/, $c2);
+    my($x1,$y1) = split /,/, $c1;
+    my($x2,$y2) = split /,/, $c2;
 
-    my @winkel;
-
-    for(my $i = 0; $i <= $#str; $i++) {
-	my($xn,$yn) = split(/,/, $str[$i]);
+    my $best_winkel;
+    my $best_neighbor_i;
+    for my $neighbor_i (0 .. $#neighbors) {
+	my($xn,$yn) = split /,/, $neighbors[$neighbor_i];
 	my(undef,$w) = Strassen::Util::abbiegen([$x1,$y1], [$x2,$y2], [$xn,$yn]);
-	$w = 0 if !defined $w || $w =~ /nan/i; # ???
-	push @winkel, [$w, $i];
+	$w = 0 if !defined $w;
+	if (!defined $best_winkel || $best_winkel > $w) {
+	    $best_winkel = $w;
+	    $best_neighbor_i = $neighbor_i;
+	    last if $w == 0; # no improvements possible, shortcut
+	}
     }
 
-    @winkel = sort { $a->[0] <=> $b->[0] } @winkel;
-    my($pos,$rueckwaerts2) = $self->net2name($c1, $str[$winkel[0]->[1]]);
+    my($pos,$rueckwaerts2) = $self->net2name($c1, $neighbors[$best_neighbor_i]);
     ($pos, $rueckwaerts ^ $rueckwaerts2);
 }
 
@@ -1921,13 +1922,26 @@ sub del_net {
     }
 }
 
-# Der erste Punkt in @points ist der einzufügende, die beiden anderen
-# existieren bereits. Rückwärts-Eigenschaft wird beachtet.
+# add_net: inject additional points into the net, typically a point
+# between two points in a street segment.
+#
+# Parameters are:
+# - $pos:         position (index) of the the street segment
+# - $points[0]:   the inserted point as [$x,$y]
+# - $points[1,2]: the neighbors of the inserted point, also as [$x,$y]
+#
+# Internally the data structures AdditionalNet, AdditionalDelNet and
+# AdditionalDelNet2Name exist which have all operations done here
+# recorded, and which are used in reset() to undo the additional points.
+#
+# Limited support for WideNet exists.
 ### AutoLoad Sub
 sub add_net {
     my($self, $pos, @points) = @_;
     return unless defined $pos;
     die 'Es müssen genau 3 Punkte in @points sein!' if @points != 3;
+    my $Net = $self->{Net};
+    my $Net2Name = $self->{Net2Name};
     # additional check: for (@points) { die "add_net: all points should be array refs" if !UNIVERSAL::isa($_,"ARRAY") }
     my($startx, $starty) = @{$points[0]};
     require Route;
@@ -1938,8 +1952,7 @@ sub add_net {
 	$ex_point[$_] = Route::_coord_as_string($points[$_]);
     }
     my $rueckwaerts = 0;
-    if ($self->{Net2Name} &&
-	exists $self->{Net2Name}{$ex_point[2]}{$ex_point[1]}) {
+    if ($Net2Name && exists $Net2Name->{$ex_point[2]}{$ex_point[1]}) {
         $rueckwaerts = 1;
     }
 
@@ -1947,31 +1960,40 @@ sub add_net {
     for($i=1; $i<=2; $i++) {
         my $s = $ex_point[$i];
 	my $entf = $entf[$i] = Strassen::Util::strecke($points[0], $points[$i]);
-	if (!exists $self->{Net}{$starts}{$s}) {
-	    $self->store_to_hash($self->{Net}, $starts, $s, $entf);
-	    #$self->{Net}{$starts}{$s} = $entf;
+	if (!exists $Net->{$starts}{$s}) {
+	    $self->store_to_hash($Net, $starts, $s, $entf);
 	    push @{$self->{AdditionalNet}}, [$starts, $s];
 	}
-	if (!exists $self->{Net}{$s}{$starts}) {
-	    $self->store_to_hash($self->{Net}, $s, $starts, $entf);
-	    #$self->{Net}{$s}{$starts} = $entf;
+	if (!exists $Net->{$s}{$starts}) {
+	    $self->store_to_hash($Net, $s, $starts, $entf);
 	    push @{$self->{AdditionalNet}}, [$s, $starts];
 	}
 	# XXX $pos ist hier immer definiert...
-	if ($self->{Net2Name} &&
-	    !exists $self->{Net2Name}{$starts}{$s} &&
+	if ($Net2Name && !exists $Net2Name->{$starts}{$s} &&
 	    defined $pos) {
   	    if (($i == 1 && $rueckwaerts) || $i == 2) {
-		$self->store_to_hash($self->{Net2Name}, $starts, $s, $pos);
-	        #$self->{Net2Name}{$starts}{$s} = $pos;
+		$self->store_to_hash($Net2Name, $starts, $s, $pos);
 	    } else {
-		$self->store_to_hash($self->{Net2Name}, $s, $starts, $pos);
-	        #$self->{Net2Name}{$s}{$starts} = $pos;
+		$self->store_to_hash($Net2Name, $s, $starts, $pos);
             }
 	}
     }
 
+    if (exists $Net->{$ex_point[1]}{$ex_point[2]}) {
+	push @{$self->{AdditionalDelNet}}, [$ex_point[1], $ex_point[2], delete $Net->{$ex_point[1]}{$ex_point[2]}];
+	if ($Net2Name && exists $Net2Name->{$ex_point[1]}{$ex_point[2]}) {
+	    push @{$self->{AdditionalDelNet2Name}}, [$ex_point[1], $ex_point[2], delete $Net2Name->{$ex_point[1]}{$ex_point[2]}];
+	}
+    }
+    if (exists $Net->{$ex_point[2]}{$ex_point[1]}) {
+	push @{$self->{AdditionalDelNet}}, [$ex_point[2], $ex_point[1], delete $Net->{$ex_point[2]}{$ex_point[1]}];
+	if ($Net2Name && exists $Net2Name->{$ex_point[2]}{$ex_point[1]}) {
+	    push @{$self->{AdditionalDelNet2Name}}, [$ex_point[2], $ex_point[1], delete $Net2Name->{$ex_point[2]}{$ex_point[1]}];
+	}
+    }
+
     if ($self->{WideNet}) {
+	# XXX AdditionalDelNet and AdditionalDelNet2Name support is missing
 	my $wide_neighbors = $self->{WideNet}{WideNeighbors};
 	my $intermediates_hash = $self->{WideNet}{Intermediates};
 
@@ -2035,6 +2057,7 @@ warn "#XXXny";
     }
 }
 
+# del_add_net() undos all operations done in preceding add_net() calls.
 ### AutoLoad Sub
 sub del_add_net {
     my $self = shift;
@@ -2045,8 +2068,19 @@ sub del_add_net {
 	    delete $self->{Net2Name}{$b->[0]}{$b->[1]};
 	}
     }
-    @{$self->{Additional}} = ();
     @{$self->{AdditionalNet}} = ();
+
+    foreach my $def (reverse @{$self->{AdditionalDelNet} || []}) {
+	my($p1,$p2,$val) = @$def;
+	$self->{Net}{$p1}{$p2} = $val;
+    }
+    @{$self->{AdditionalDelNet}} = ();
+
+    foreach my $def (reverse @{$self->{AdditionalDelNet2Name} || []}) {
+	my($p1,$p2,$val) = @$def;
+	$self->{Net2Name}{$p1}{$p2} = $val;
+    }
+    @{$self->{AdditionalDelNet2Name}} = ();
 }
 
 *reachable = \&reachable_1;

@@ -41,7 +41,6 @@ DATA_DIR=		data
 TEMP_BLOCKINGS_DIR=	data/temp_blockings
 BBBIKE_HOSTEUROPE_SSH_HOST?=	${BBBIKE_HOSTEUROPE_HOST}
 STERNFAHRT_YEAR?=	2007
-KREISFAHRT_YEAR?=	2011
 TARGET_LIVE=		hosteurope
 
 EXTRA_MISCSRC_FILES=	bbd2esri \
@@ -419,7 +418,7 @@ prepare-bbbike-dist-prog-bbbike:	\
 				prepare-bbbike-dist-prog-bbbike-images
 
 prepare-bbbike-dist-prog-bbbike-copy:
-	cd ${BBBIKE_ROOT_DIR} && ${MAKE} distcheck
+	cd ${BBBIKE_ROOT_DIR} && ${MAKE} distcheck-fatal
 	cd ${BBBIKE_ROOT_DIR} && ${MAKE} permission
 	(umask 022; cd ${BBBIKE_ROOT_DIR} && perl "-MExtUtils::Manifest=manicopy,maniread" -e "manicopy(maniread(),'${CURDIR}/BBBike', '${MKDIST_STYLE}');")
 
@@ -462,6 +461,8 @@ prepare-bbbike-dist-prog-bbbike-cgi:
 	cd ${CURDIR}/cgi-bin && ln -s bbbike.cgi bbbike2.en.cgi
 	rm -f ${CURDIR}/cgi-bin/bbbikeleaflet.en.cgi
 	cd ${CURDIR}/cgi-bin && ln -s bbbikeleaflet.cgi bbbikeleaflet.en.cgi
+	rm -f ${CURDIR}/cgi-bin/bbbike-test.en.cgi
+	cd ${CURDIR}/cgi-bin && ln -s bbbike.cgi bbbike-test.en.cgi
 # Fix permissions
 # Make sure that /usr/lib/cgi-bin/* isn't touched, otherwise make will fail
 	(cd ${CURDIR}/cgi-bin && chmod ugo+r `find . -maxdepth 1 | xargs -L1 readlink | grep -v /usr/lib/cgi-bin`)
@@ -515,7 +516,7 @@ prepare-bbbike-dist-prog-bbbike-t:
 	    cp -pf ${BBBIKE_ROOT_DIR}/t/$f ${CURDIR}/BBBike/t/$f; \
 	fi
 .endfor
-	rsync -av --cvs-exclude ${BBBIKE_ROOT_DIR}/t/data/ ${CURDIR}/BBBike/t/data/
+	rsync -av --cvs-exclude ${BBBIKE_ROOT_DIR}/t/data-test/ ${CURDIR}/BBBike/t/data-test/
 .for f in ${TESTS_SERVER_ON_REMOTE}
 	if [ ! -e ${CURDIR}/BBBike/t/$f -o ${CURDIR}/t/$f -nt ${CURDIR}/BBBike/t/$f ] ; then \
 	    cp -pf ${CURDIR}/t/$f ${CURDIR}/BBBike/t/$f; \
@@ -661,7 +662,8 @@ prepare-sternfahrt${STERNFAHRT_YEAR}-dist-data:
 
 # Call once kreisfahrt files have changed:
 prepare-kreisfahrt-dist:
-	rsync --cvs-exclude -a ${BBBIKE_ROOT_DIR}/misc/kreisfahrt_${KREISFAHRT_YEAR}/ ${CURDIR}/BBBike/misc/kreisfahrt_${KREISFAHRT_YEAR}/
+	rsync --cvs-exclude -a ${BBBIKE_ROOT_DIR}/misc/kreisfahrt_anyyear/ ${CURDIR}/BBBike/misc/kreisfahrt_anyyear/
+	chmod ugo+r,ugo-x ${CURDIR}/BBBike/misc/kreisfahrt_anyyear/*.png
 
 prepare-additional-dist-images:
 	cp -pf ${BBBIKE_ROOT_DIR}/images/logo-fahrradstadt_75.png \
@@ -839,6 +841,9 @@ post-automatic-deploy-info:
 	@echo "* Push BBBike git repo to github"
 	@echo "    git push"
 	@echo "* Send all messages in GNUS' drafts folder"
+	@echo "* Set tags:"
+	@echo '    git tag -a -m "automatic deployment" deployment/bbbikede/'`date +%Y%m%d`
+	@echo "    git tag -f deployment/bbbikede/current"
 	@echo ""
 
 automatic-deployment:
@@ -853,7 +858,8 @@ automatic-deployment:
 	-( tkmessage -center "BBBike deployment finished, possibly interactive stuff follows..." &)
 	-@${XTERM_CONF_TITLE} "BBBike post-deployment git update"
 	$(HOME)/src/bbbike-aux/misc/bbbike-checkin-hosteurope.pl -after-sync
-	-@${MAKE} post-automatic-deploy-info TARGET=${TARGET}
+# XXX for some reason TARGET=${TARGET} does not work here...
+	-@${MAKE} post-automatic-deploy-info TARGET=${TARGET_LIVE}
 	-@${XTERM_CONF_TITLE} "BBBike deployment finished"
 
 automatic-deployment-temp-blockings:

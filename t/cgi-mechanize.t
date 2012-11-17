@@ -21,6 +21,10 @@ BEGIN {
 	print "1..0 # skip no Test::More, URI::URL and/or WWW::Mechanize modules\n";
 	exit;
     }
+    if ($ENV{BBBIKE_TEST_ORG}) {
+	print "1..0 # skip on bbbike.org\n";
+	exit;
+    }
 }
 
 ######################################################################
@@ -131,7 +135,7 @@ if (!@browsers) {
 	   "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; [eburo v1.3]; Wanadoo 7.0 ; NaviWoo1.1)"
 	  );
 }
-@browsers = map { "$_ BBBikeTest/1.0" } @browsers;
+@browsers = map { "$_ BBBike-Test/1.0" } @browsers;
 
 my $outer_berlin_tests = 30;
 my $tests = 133 + $outer_berlin_tests;
@@ -343,9 +347,10 @@ for my $browser (@browsers) {
 			     Nöldnerstr.*
 			     Lückstr.*
 			     Sewanstr.*
-			     Dathepromenade.*
-			     Erieseering.*
-			     Sewanstr.*
+			     (Dathepromenade.*
+			      Erieseering.*
+			      Sewanstr.*
+			     )? # since 2012-11-11 BBBike is choosing a straight route via Sewanstr.
 			     Am.Tierpark.*
 			     Richard-Kolkwitz-Weg.*
 			     Rägeliner.Str.*

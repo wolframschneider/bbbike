@@ -1,4 +1,5 @@
 #!/usr/local/bin/perl
+# Copyright (c) Sep 2012 Wolfram Schneider, http://bbbike.org
 
 BEGIN {
     system( "which", "osmium2shape" );
@@ -25,8 +26,15 @@ use warnings;
 
 plan tests => 4;
 
-my $pbf_file = 't/data-osm/Cusco.osm.pbf';
-my $pbf_md5  = "6dc9df64ddc42347bbb70bc134b4feda";
+my $prefix   = 't/data-osm/tmp';
+my $pbf_file = "$prefix/Cusco.osm.pbf";
+
+if ( !-f $pbf_file ) {
+    system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
+    die "symlink failed: $!\n" if $?;
+}
+
+my $pbf_md5 = "6dc9df64ddc42347bbb70bc134b4feda";
 
 # min size of garmin zip file
 my $min_size = 200_000;
@@ -50,8 +58,8 @@ sub md5_file {
 ######################################################################
 is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched" );
 
-my ( $fh, $tempfile ) = tempfile;
-my $prefix = $pbf_file;
+my $tempfile = File::Temp->new( SUFFIX => ".osm" );
+$prefix = $pbf_file;
 $prefix =~ s/\.pbf$//;
 my $st = 0;
 

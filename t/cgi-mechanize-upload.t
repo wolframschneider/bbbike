@@ -40,9 +40,9 @@ check_cgi_testing;
 my @gps_types = ("trk", "ovl", "bbr",
 		 "bbr-generated", "ovl-generated", "trk-generated",
 		);
-my $png_tests = 2;
+my $png_tests = 4;
 my $pdf_tests = 2;
-my $mapserver_tests = 5;
+my $mapserver_tests = 7;
 my $gpsman_tests = $png_tests + $pdf_tests + $mapserver_tests;
 my $only;
 
@@ -63,7 +63,8 @@ my $sample_coords = do {
     [map { [split/,/] } qw(8982,8781 9076,8783 9229,8785 9227,8890 9801,8889)];
 };
 
-plan tests => 3 + $gpsman_tests * @gps_types;
+my $bbbike_org = $ENV{BBBIKE_TEST_ORG} ? 12 : 0;
+plan tests => 3 + $gpsman_tests * @gps_types - 29 - $bbbike_org;
 
 {
     my $agent = WWW::Mechanize->new();
@@ -72,11 +73,13 @@ plan tests => 3 + $gpsman_tests * @gps_types;
     $agent->get($cgiurl);
     like($agent->content, qr{BBBike}, "Startpage $cgiurl is not empty");
 
+    if (!$ENV{BBBIKE_TEST_ORG}) {
     $agent->follow_link(text_regex => qr{Info});
     like($agent->content, qr{Information}, "Information page found");
 
     $agent->follow_link(text_regex => qr{GPS-Tracks});
     like($agent->content, qr{Anzuzeigende Route-Datei}, "Upload page found");
+    }
 
     for my $gps_type (@gps_types) {
     SKIP: {
@@ -163,7 +166,7 @@ EOF
 
 	    $testname = basename $filename if !$testname;
 
-	SKIP: {
+	SKIP: if (!$ENV{BBBIKE_TEST_ORG}) {
 		my $form = $agent->current_form;
 		$form->strict(1) if $form->can('strict');
 		$form->value("routefile", $filename);
@@ -177,6 +180,18 @@ EOF
 		my $content = $agent->content;
 		cmp_ok($content, "ne", "", "Non-empty content")
 		    or diag "Error for uploaded file $filename";
+
+		image_ok \$content, "png from $testname"
+		    or do {
+			if ($^O eq 'freebsd') {
+			    diag <<EOF;
+Test is known to fail on freebsd 9.0 if XML::LibXML is compiled
+without -pthread. See http://www.freebsd.org/cgi/query-pr.cgi?pr=171353
+Consider to recompile libxml2 (with the proposed patch) and then recompile
+p5-XML-LibXML.
+EOF
+			}
+		    };
 		if ($do_display) {
 		    do_display(\$content, "png");
 		}
@@ -184,7 +199,7 @@ EOF
 		$agent->back;
 	    }
 
-	SKIP: {
+	SKIP: if (!$ENV{BBBIKE_TEST_ORG}) {
 		my $form = $agent->current_form;
 		$form->strict(1) if $form->can('strict');
 		$form->value("routefile", $filename);
@@ -206,7 +221,7 @@ EOF
 
 	XXX: 1;
 	    
-	SKIP: {
+	SKIP: if (!$ENV{BBBIKE_TEST_ORG}) {
 		my $form = $agent->current_form;
 		$form->strict(1) if $form->can('strict');
 		$form->value("routefile", $filename);
@@ -234,6 +249,7 @@ EOF
 		like($agent->ct, qr{^image/}, "It's an image (png or gif) (from $testname)");
 		my $image_content = $agent->content;
 		cmp_ok($image_content, "ne", "", "Non-empty content");
+		image_ok \$image_content, "png or gif from $testname";
 		if ($do_display) {
 		    # Hopefully a png viewer can display gifs as well...
 		    do_display(\$image_content, "png");

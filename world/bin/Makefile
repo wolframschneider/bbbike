@@ -5,8 +5,10 @@ NCPU=`../bin/ncpu`
 
 ALL:=	$(shell file * | egrep perl | awk '{print $$1}' | perl -ne 's/://; print if !/.bak$$/' | sort)
 
-perltidy:
-	echo ${ALL} | xargs -n1 -P${NCPU} -E " " perl -I. -cw 
+perlcheck:
+	@echo ${ALL} | xargs -n1 -P${NCPU} -E " " perl -I. -cw 2>/dev/null
+
+perltidy: perlcheck
 	echo ${ALL} | xargs -n2 -P${NCPU} -E " " perltidy -b
 
 clean distclean:

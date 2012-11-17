@@ -49,9 +49,9 @@ Sundgauer Str.	SB 1751,3239
 Zehlendorf	SB 709,2633
 Mexikoplatz	SB -1069,3247
 Schlachtensee	SB -2287,3573
-Nikolassee (Wannseebahn)	SB -3684,2606
+Nikolassee (Wannseebahn)	SB -3693,2614
 Nikolassee	SB -3736,2625
-Wannsee	SB -4677,1420
+Wannsee	SB -4688,1429
 Griebnitzsee	SC -8107,-1596
 Grunewald	SB 789,9046
 Messe Süd (Eichkamp)	SB 1321,10175
@@ -67,13 +67,13 @@ Bellevue	SA 6604,12628
 Hackescher Markt	SA 10295,12996
 Alexanderplatz	SA 10856,12897
 Jannowitzbrücke	SA 11398,12103
-Ostbahnhof	SA 12609,11662
+Ostbahnhof	SA 12535,11712
 Warschauer Str.	SA 13571,11234
 Ostkreuz	SA 14847,10892
-Rummelsburg	SB 15454,10711
+Rummelsburg	SB 15458,10717
 Nöldnerplatz	SB 15829,10932
 Betriebsbhf. Rummelsburg	SB 16877,9840
-Karlshorst	SB 18801,8501
+Karlshorst	SB 18796,8492
 Wuhlheide	SB 20724,7160
 Köpenick	SB 22530,6100
 Hirschgarten	SB 24023,6036
@@ -146,7 +146,7 @@ Mühlenbeck-Mönchsmühle	SC 8851,27676
 Schönfließ	SC 5712,28711
 Bergfelde b. Berlin	SC 4293,29252
 Zepernick	SC 18899,28383
-Bernau-Friedenstal	SC 21038,29414
+Bernau-Friedenstal	SC 21006,29415
 Bernau	SC 22841,30263
 Strausberg Nord	SC 44484,21068
 Strausberg Stadt	SC 43151,19585
@@ -172,7 +172,7 @@ Zehlendorf Süd	S0 -509,1987
 Düppel	S0 -1501,1486
 Gartenfeld	S0 -235,15477
 Siemensstadt	S0 737,14670
-Wernerwerk	S0 1667,14025
+Wernerwerk	S0 1675,14228
 Siemensstadt-Fürstenbrunn	S0 1204,13374
 Julius-Leber-Brücke	SA 7534,8895
 Waßmannsdorf	SBau 14761,-4102

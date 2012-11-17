@@ -20,6 +20,8 @@ $VERSION = '1.05';
 use Encode;
 use Cwd qw(abs_path);
 use File::Basename qw(dirname);
+
+use BBBikeCalc;
 use Strassen::Strasse;
 
 my $VERBOSE = 1;
@@ -115,7 +117,7 @@ sub convert {
 	die "Invalid argument to outout method";
     }
     $VERBOSE = $verbose if defined $verbose;
-    &init_msg($lang) if $lang;
+    init_msg($lang);
 
     # if no translation is available, fall back to english
     if ($lang && $lang ne 'en' && $lang ne 'de' && !$msg) {
@@ -169,9 +171,11 @@ sub convert {
 		@lines && $lines[-1]->[2] eq $strname && $extra && $extra->{ImportantAngleCrossingName};
 	    if ($winkel < 30 && (!$extra || !$extra->{ImportantAngle})) {
 		$richtung = "";
+	    } elsif ($winkel >= 160 && $winkel <= 200) { # +/- 20° from 180°
+		$richtung = M('umdrehen');
 	    } else {
 		$richtung =
-		    ($winkel <= 45 ? 'halb' : '') .
+		    ($winkel <= 45 ? M('halb') : '') .
 			($richtung eq 'l' ? M('links') : M('rechts')) . ' ' .
 			    "($winkel°) ";
 		if (($lang||'') eq 'en') {
@@ -192,13 +196,14 @@ sub convert {
 	    $entf = sprintf "%s %.2f km", M("nach"), $entf/1000;
 
 	} elsif ($#{ $r->path } > 1) {
-	    #XXX aktivieren, wenn BBBikeCalc ein "richtiges" Modul ist
-#  	    # XXX main:: ist haesslich
-#  	    $richtung = "nach " .
-#  		uc(#main::opposite_direction #XXX why???
-#  		   (main::line_to_canvas_direction
-#  		    (@{ $r->path->[0] },
-#  		     @{ $r->path->[1] })));
+	    my($x1,$y1) = @{ $r->path->[0] };
+	    my($x2,$y2) = @{ $r->path->[1] };
+	    my $raw_direction = uc(BBBikeCalc::line_to_canvas_direction($x1,$y1,$x2,$y2));
+	    {
+		my $lang = !defined $lang || $lang eq '' ? "de" : $lang;
+		$richtung = ($lang eq 'en' ? "towards" : "nach") . " " .
+		    BBBikeCalc::localize_direction($raw_direction, $lang);
+	    }
 	}
 
 	if ($comments_net) {

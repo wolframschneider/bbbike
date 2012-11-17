@@ -4,11 +4,13 @@
 # osm2bbd-workarounds - wrapper script for osm-to-bbbike data conversion
 
 set -e
+export LANG=C
 
 prefix=$1
 city=$2
 
 time=time
+: ${POI_DB=poi}
 
 if test -z "$prefix" -o -z "$city"; then
 	echo "usage $0 prefix city"
@@ -59,8 +61,14 @@ do
 done
 
 echo "Run search_inaccessible_points"
-$time miscsrc/search_inaccessible_points -encoding utf-8 -map polar -q -cache -shorter -street $prefix/$city/strassen -street $prefix/$city/faehren \
-  -blocked $prefix/$city/gesperrt -blockedtype einbahn -blockedtype sperre  > $prefix/$city/inaccessible_strassen.tmp
+$time miscsrc/search_inaccessible_points -q \
+  -cache -shorter \
+  -street $prefix/$city/strassen \
+  -street $prefix/$city/faehren \
+  -blocked $prefix/$city/gesperrt \
+  -blockedtype einbahn \
+  -blockedtype sperre  > $prefix/$city/inaccessible_strassen.tmp
+
 mv -f $prefix/$city/inaccessible_strassen.tmp $prefix/$city/inaccessible_strassen
 
 # strasse -> str
@@ -74,8 +82,8 @@ perl -i.all -ne 'print if !/\t$/' $prefix/$city/opensearch.crossing.10
 
 # Point of Interests
 echo "Run osm2bbd-poi"
-mkdir -p ../osm/poi
-$time env CITY=$prefix/$city ./miscsrc/osm2bbd-poi --storable=../osm/poi/$city.db > $prefix/$city/poi
+mkdir -p ../osm/$POI_DB
+$time env CITY=$prefix/$city ./miscsrc/osm2bbd-poi --storable=../osm/$POI_DB/$city.db > $prefix/$city/poi
 
 $p/strasse-str $prefix/$city/poi
 

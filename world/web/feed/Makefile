@@ -7,12 +7,15 @@ RSS=		bbbike-world.xml
 
 all: ${RSS}
 
-bbbike-world.xml: ${FEED_SCRIPT} perltidy
-	${FEED_SCRIPT} | tidy -xml -i > $@ 2> $@.log
+bbbike-world.xml: ${FEED_SCRIPT}
+	${FEED_SCRIPT} | tidy -w 140 -xml -i -ascii > $@.tmp 2> $@.log
+	mv -f $@.tmp $@
 	rm -f $@.log
 
-perltidy:
-	perl -cw ${FEED_SCRIPT} 2>/dev/null || perl -cw ${FEED_SCRIPT}
+perlcheck:
+	@perl -cw ${FEED_SCRIPT} 2>/dev/null || perl -cw ${FEED_SCRIPT} 2>/dev/null
+
+perltidy: perlcheck
 	perltidy -b ${FEED_SCRIPT}
 
 clean:

@@ -25,15 +25,20 @@ use BBBikeTest qw(check_cgi_testing $cgidir);
 
 check_cgi_testing;
 
-plan tests => 12;
+my $tests = 12;
+$tests -= 2 if $ENV{BBBIKE_TEST_ORG};
 
-my $ua = LWP::UserAgent->new;
-$ua->agent('BBBikeTest/1.0');
+plan tests => $tests;
+
+my $ua = LWP::UserAgent->new(keep_alive => 1);
+$ua->agent('BBBike-Test/1.0');
 $ua->env_proxy;
 
 my $cgiurl = "$cgidir/bbbike-test.cgi";
 
-{
+if ($ENV{BBBIKE_TEST_ORG}) {
+    diag "skip outside scope (Mannheim)";
+} else {
     my $data = do_revgeocode_api_call(8.4704348, 49.6046202, 'outside scope (Mannheim)');
     is_deeply($data, {crossing  => undef,
 		      bbbikepos => undef,
