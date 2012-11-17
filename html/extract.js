@@ -906,6 +906,14 @@ function show_filesize(skm, real_size) {
             "size": 1.4,
             "time": 10
         },
+        "o5m.gz": {
+            "size": 1.04,
+            "time": 1
+        },
+        "o5m.bz2": {
+            "size": 0.88,
+            "time": 1.1
+        },
         "navit.zip": {
             "size": 0.8,
             "time": 1
