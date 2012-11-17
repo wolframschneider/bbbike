@@ -84,7 +84,7 @@ if ( !$ENV{BBBIKE_TEST_SLOW_NETWORK} ) {
 "$homepage/html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js",
         1_000
     );
-    myget( "$homepage/html/jquery-1.4.2.min.js", 20_000 );
+    myget( "$homepage/html/jquery/jquery-1.4.2.min.js", 20_000 );
 }
 
 __END__
