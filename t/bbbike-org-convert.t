@@ -164,7 +164,7 @@ sub checksum {
     my $md5_checksum =
       $^O =~ m{darwin}i
       ? "db9f5b2cae816cf162acbe0a2a2187e5"
-      : "7dd663444f461e50bb9ca424f532ea41";
+      : "fc7a2e17fd0aa669a626149c4427e7ff";
 
     is( $md5, $md5_checksum, "md5 checksum" );
 }
