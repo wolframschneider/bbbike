@@ -2557,10 +2557,10 @@ EOF
 		print "\n";
 	    }
 	    print "<input type=hidden name=" . $type
-	      . "name value=\"$$nameref\">\n";
+	      . 'name value="' . CGI::escapeHTML($$nameref) . qq{">\n};
 	    if ($$ortref) {
 		print "<input type=hidden name=" . $type
-		    . "ort value=\"$$ortref\">\n";
+		    . 'ort value="' . CGI::escapeHTML($$ortref) . qq{">\n};
 	    }
 	    if (defined $q->param($type . "plz")) {
 		print "<input type=hidden name=${type}plz value=\""
@@ -3700,6 +3700,7 @@ EOF
 
     all_crossings();
 
+    print "<!-- check -->";
     print "<form action=\"$bbbike_script\">";
 
     foreach my $param (qw/_start _ziel _via/) {
@@ -3759,7 +3760,7 @@ EOF
             print "<br>\n";
 	} else {
 	    if (defined $plz and $plz eq '') {
-		print $strname;
+		print CGI::escapeHTML($strname);
 	    } else {
 		print coord_or_stadtplan_link($strname, $c || $coords[0], $plz, $is_ort{$type});
 	    }
@@ -3770,7 +3771,7 @@ EOF
 	# Parameter durchschleifen...
 	if (defined $strname) {
 	    print "<input type=hidden name=" . $type .
-	      "name value=\"$strname\">";
+	      'name value="' . CGI::escapeHTML($strname) . '">';
 	}
 	if (defined $q->param($type . "plz")) {
 	    print "<input type=hidden name=" . $type . "plz value=\"" .
