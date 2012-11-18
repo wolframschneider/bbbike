@@ -78,7 +78,7 @@ sub output {
     my $start_y = $page_height-80;
     my $y = $start_y;
 
-    my $url = $out->{Url};
+    my $url = $out->{Url} || "http://www.bbbike.org";
     $url =~ s,/+$,,;
     my $city;
     if ($url =~ m,/([^/]+)$,) {
@@ -86,7 +86,7 @@ sub output {
     }
 
     my $title = "BBBike.org$url";
-    $title .= " // " . $out->{City_en} if $city && $city ne $out->{City_en};
+    $title .= " // " . $out->{City_en} if $city && $out->{City_en} && $city ne $out->{City_en};
 
     $page->stringc($font, 24, $page_width/2, $y, $title ); $y -= 24+3;
 
