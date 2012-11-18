@@ -31,7 +31,7 @@ binmode \*STDERR, "utf8";
 my @cities = qw/Berlin Cottbus Toronto/;
 
 # unicode cities
-my @cities_utf8 = ( "Київ", "‏بيروت", "新加坡共和国" );
+my @cities_utf8 = ( "Київ", "‏بيروت", "กรุงเทพมหานคร" );
 
 my @list = (
     {
