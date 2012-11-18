@@ -14,7 +14,7 @@ Skalitzer Str.	1 12899,10595 12985,10665
 Oppelner Str.	1 13028,10629 12978,10581
 Oberbaumstr.	1 12985,10665 13015,10659 13082,10634
 Oberbaumstr.	1 13082,10634 13028,10629
-am Hackeschen Markt (S¸d)	1 10132,12941 10117,12966 10097,12997 9932,13109
+am Hackeschen Markt (S¸d)	1 10132,12941 10117,12966 10105,13004 9932,13109
 am Hackeschen Markt (Nord)	1 9932,13109 10077,13100 10220,13098 10264,13097
 Dennewitzplatz	1 7866,9918 7813,10112
 Dennewitzplatz	1 7813,10112 7906,10098
@@ -163,7 +163,7 @@ Anzengruberstr.	1 12865,8346 12689,8289
 Nalepastr. am Rundfunkgeb‰ude	2 17076,8443 17059,8097
 Kirchstr.	1 22196,4847 22240,4768 22246,4711 22284,4653 22314,4604
 Kietzer Str.	1s 22372,4496 22383,4470
-Ontarioseestr.	1 18577,10023 18408,10041 18339,10048
+Ontarioseestr.	1 18577,10023 18408,10041
 Degnerstr. (auﬂer Tram)	1 16448,15593 16475,15659
 Henriette-Herz-Platz	1 10371,13006 10312,12982 10255,12959
 Savignyplatz	1 4921,11017 4920,10933 4868,10934 4817,10943 4827,11025 4835,11092 4880,11088 4926,11081 4921,11017
@@ -220,7 +220,8 @@ Erlenweg	1 -3226,18109 -3327,18007
 Aspenweg	1 -3000,18196 -3020,18194 -3050,18173 -3096,18119 -3111,18105 -3168,18051 -3203,18014 -3224,17943
 Aspenweg	1 -3288,17831 -3244,17883 -3224,17943
 Pintschstr.	1 13339,13196 13435,12973
-Splanemannstr.	1 18301,9946 18389,9925 18408,10041 18403,10077
+Splanemannstr.	1 18301,9946 18389,9925 18408,10041
+Ontarioseestr.	1 18408,10041 18403,10077
 Burgherrenstr.	1 8969,8640 9076,8783
 Travestr.	1 14835,11840 14897,11801 14981,11751
 M¸ggelstr.	1 14897,11801 14965,11921
@@ -234,7 +235,7 @@ Wˆhlertstr.	1 8442,14456 8669,14550
 Pflugstr.	1 8669,14550 8776,14364
 Schwartzkopffstr.	1s 8776,14364 8607,14253
 Strausberger Str.	1 12416,13045 12368,13031
-Groﬂe Pr‰sidentenstr.	1 10097,12997 10220,13098
+Groﬂe Pr‰sidentenstr.	1 10105,13004 10220,13098
 Naumannstr.	1 7709,8777 7707,8915
 Gritznerstr.	1 4507,6320 4555,6403
 Duisburger Str.	1 4183,10144 3874,10153
@@ -514,7 +515,7 @@ Kaulsdorfer Str.	1 22075,6967 22049,7085
 (KGA Rahnsdorf S¸d, Birkenweg): kein Durchfangsverkehr, abgesperrtes Tor	2 30345,3277 30389,3314 30393,3437 30378,3501
 Steintr‰gerweg	1 12987,2220 13023,2093
 Am Kurzen Weg	1 -7180,14351 -7172,14459 -7185,14574
-Straﬂenbahnwendestelle Virchowstr.	1 12916,13368 13081,13457
+Straﬂenbahnwendestelle Virchowstr.	1 12925,13373 13081,13457
 Am Friedrichshain	1 12065,13851 12104,13913 12147,13887 12106,13828
 Potsdamer Chausee: explizit f¸r Radfahrer verboten	1 -8797,7638 -8405,7751
 Bˆsensteinweg	1 9943,1543 9847,1571 9771,1641
@@ -680,8 +681,8 @@ Mark-Twain-Str.	1 24321,14410 24349,14500
 A.T.U-Einfahrt: Tor, auﬂerhalb der ÷ffnungszeiten (Mo-Fr bis 20 Uhr, Sa bis 16 Uhr) gesperrt	2 8546,9468 8561,9482
 (Erfurter Str. - Wexstr.)	1 6260,8011 6261,8058
 Rubensstr.	1 6429,7876 6307,7893
-B‰umerplan	1 8527,7928 8553,7795
-B‰umerplan	1 8512,7757 8467,7913
+B‰umerplan	1 8527,7939 8553,7795
+B‰umerplan	1 8512,7757 8466,7918
 Mierendorffstr.	1 3645,13189 3542,13063
 H¸ttigpfad	1 4810,15000 4887,14931 5057,14824 5095,14792
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.)	1s 11018,13286 11085,13239
@@ -962,7 +963,7 @@ Mittelstreifen mit hoher Kante	3nocross::ignrte 13939,4778 13914,4877 13892,4955
 D¸rtenstr. -> Buschkrugallee: Mittelstreifen mit hoher Kante	3::igndisp 13874,4867 13914,4877 13892,4955
 Buschkrugallee -> D¸rtenstr.: Mittelstreifen mit hoher Kante	3::igndisp 13939,4778 13914,4877 13874,4867
 Straﬂenbahntrasse	3nocross::ignrte 12878,13229 12979,13280 13078,13330
-Landsberger Allee -> Virchowstr.: Straﬂenbahntrasse	3::igndisp 12878,13229 12979,13280 12916,13368
+Landsberger Allee -> Virchowstr.: Straﬂenbahntrasse	3::igndisp 12878,13229 12979,13280 12925,13373
 Straﬂenbahntrasse	3nocross::ignrte 15639,10469 15404,10633 15379,10651
 Hauptstr. (Rummelsburg) [Wohngebiet] -> Hauptstr.: Straﬂenbahntrasse	3::igndisp 15358,10562 15404,10633 15379,10651
 Hauptstr. -> Hauptstr. (Rummelsburg) [Wohngebiet]: Straﬂenbahntrasse	3::igndisp 15639,10469 15404,10633 15358,10562
@@ -1345,6 +1346,9 @@ Straﬂenbahntrasse	3nocross::ignrte 18010,7133 18086,7243 18382,7724
 Eichgestell -> Treskowallee: Straﬂenbahntrasse	3::igndisp 18186,7200 18086,7243 18010,7133
 Treskowallee -> Eichgestell: Straﬂenbahntrasse	3::igndisp 18382,7724 18086,7243 18186,7200
 Straﬂenbahntrasse	3nocross::ignrte 18413,7774 18570,8025 18657,8163
+Straﬂenbahntrasse	3nocross::ignrte 18867,9464 18834,9256 18809,9133
+Rolandseck -> Treskowallee: Straﬂenbahntrasse	3::igndisp 18903,9244 18834,9256 18809,9133
+Treskowallee -> Rolandseck: Straﬂenbahntrasse	3::igndisp 18867,9464 18834,9256 18903,9244
 unbequem passierbarer Mittelstreifen	3nocross::ignrte 5463,9961 5464,9914 5467,9866
 Regensburger Str. -> Pariser Str.: unbequem passierbarer Mittelstreifen	3::igndisp 5541,9923 5464,9914 5416,9928
 Pariser Str. -> Regensburger Str.: unbequem passierbarer Mittelstreifen	3::igndisp 5416,9928 5464,9914 5541,9923
@@ -1552,8 +1556,8 @@ K¸selstr. -> Prenzlauer Allee: Straﬂenbahntrasse	3::igndisp 12058,15621 11967,15
 K¸selstr. -> Zelterstr.: Straﬂenbahntrasse	3::igndisp 12058,15621 11967,15700 11852,15765
 Zelterstr. -> Prenzlauer Allee: Straﬂenbahntrasse	3::igndisp 11852,15765 11967,15700 11997,15834
 Zelterstr. -> K¸selstr.: Straﬂenbahntrasse	3::igndisp 11852,15765 11967,15700 12058,15621
-Mittelstreifen mit Straﬂenbahn	3nocross::ignrte 11709,14856 11609,14881 11545,14897
-Rykestr. -> Danziger Str.: Mittelstreifen mit Straﬂenbahn	3::igndisp 11535,14688 11609,14881 11545,14897
+Mittelstreifen mit Straﬂenbahn	3nocross::ignrte 11709,14856 11609,14881 11535,14900
+Rykestr. -> Danziger Str.: Mittelstreifen mit Straﬂenbahn	3::igndisp 11535,14688 11609,14881 11535,14900
 Danziger Str. -> Rykestr.: Mittelstreifen mit Straﬂenbahn	3::igndisp 11709,14856 11609,14881 11535,14688
 Mittelstreifen mit Straﬂenbahn	3nocross::ignrte 12317,14535 12128,14640 12025,14695
 Lilli-Henoch-Str. -> Danziger Str.: Mittelstreifen mit Straﬂenbahn	3::igndisp 12189,14767 12128,14640 12317,14535
@@ -2407,6 +2411,8 @@ Schranke (lichte Breite ca. 120cm)	BNP:2:-53:trailer=8 14709,4307
 Schranke (lichte Breite ca. 100cm)	BNP:3:-45:trailer=10 15179,3901
 Tor	BNP:5:-57 26888,13976
 Dr‰ngelgitter	BNP:3:64:trailer=10 49739,-90894
+Helsingforser Str.: Bauarbeiten, auch der Gehweg ist wohl nicht passierbar	2:inwork 13496,11384 13427,11431
+Helmerdingstr.: Bauarbeiten, Fahrbahn gesperrt	2:inwork 14465,11195 14442,11101
 (Bellevuepark): Asphaltbauarbeiten	2:inwork 22794,5583 22855,5554 22835,5452 22851,5321
 Margarete-Steffin-Str.: wegen Bauarbeiten gesperrt	2:inwork 8315,13181 8406,13127 8525,12958
 Gleisdreieckpark: noch in Bau	2:inwork 8270,10613 8199,10634
