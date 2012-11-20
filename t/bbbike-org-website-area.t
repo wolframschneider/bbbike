@@ -23,8 +23,9 @@ my @cities   = qw/Berlin Zuerich Toronto Moscow/;
 use constant MYGET => 3;
 
 my $garmin = 1;    # 0, 1
+
 if ( !$ENV{BBBIKE_TEST_SLOW_NETWORK} ) {
-    plan tests => scalar(@cities) * ( MYGET * 4 + 5 + 7 * $garmin );
+    plan tests => scalar(@cities) * ( MYGET * 4 + 5 + 5 * $garmin );
 }
 else {
     plan 'no_plan';
@@ -81,20 +82,23 @@ qr|Start bicycle routing for .*?href="http://www.bbbike.org/$city/">|,
             "routing link"
         );
 
-        foreach my $ext (qw/gz pbf pbf.sha256 pbf.md5 gz.md5 gz.sha256/) {
+        foreach my $ext (qw/gz pbf/) {
             like( $res->decoded_content, qr|$path/$city/$city.osm.$ext"|,
                 "$path/$city/$city.osm.$ext" );
         }
 
         if ($garmin) {
             foreach my $ext (
-                qw/osm.garmin-cycle.zip osm.garmin-leisure.zip osm.garmin-osm.zip osm.shp.zip poly/
+                qw/osm.garmin-cycle.zip osm.garmin-leisure.zip osm.garmin-osm.zip osm.shp.zip osm.navit.zip poly/
               )
             {
                 like( $res->decoded_content, qr|$path/$city/$city.$ext"|,
                     "$path/$city/$city.$ext" );
             }
         }
+
+        like( $res->decoded_content, qr|$path/$city/CHECKSUM.txt"|,
+            "CHECKSUM.txt" );
     }
 }
 
