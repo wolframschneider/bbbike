@@ -1078,7 +1078,7 @@ jQuery(document).ready(function () {
         onLoad: function (hash) {
             hash.w.jqmAddClose('.dialog-close');
         }
-    });
+    }).draggable();
 });
 
 // EOF

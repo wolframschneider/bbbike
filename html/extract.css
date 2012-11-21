@@ -153,3 +153,15 @@ div.dialog-msg td {
     font-size: small;
 }
 
+img.logo { border: 0px; }
+span#social { padding-right: 0.5em }
+div#header_links { font-size: small; }
+span.current_language { font-size: large; }
+span#language_switch a { color: green; }
+
+span#maplink { font-size: small; }
+div#footer { font-size: small; text-align: center; padding-top: 0.7em; }
+div#footer_top { text-align: left; }
+div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
+a         {text-decoration: none; color: green; }
+
