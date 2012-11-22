@@ -1072,7 +1072,7 @@ jQuery(document).ready(function () {
     if (jQuery('#tools-helpwin').length == 0) return;
 
     jQuery('#tools-helpwin').jqm({
-        ajax: '/extract-mini.html',
+        ajax: '@href',
         trigger: 'a.tools-helptrigger',
         overlay: 0,
         onLoad: function (hash) {
