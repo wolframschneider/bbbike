@@ -3,8 +3,8 @@
  Copyright (c) 2012 Wolfram Schneider, http://bbbike.org
 */
 
-// HTML5
-"use strict"
+// HTML5: may not work on Android devices!
+// "use strict"
 
 // central config
 var config = {
