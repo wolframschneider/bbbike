@@ -112,12 +112,14 @@ input#city, input#email { width: 95%; }
     left: 50%;
     
     margin-left: -350px;
-    width: 640px;
+    // width: 640px;
     
     background-color: #EEE;
     color: #333;
     border: 1px solid black;
 }
+.jqmWindowLarge { width: 640px; }
+.jqmWindowSmall { width: 340px; }
 
 * html .jqmWindow {
      position: absolute;
@@ -165,4 +167,5 @@ div#footer_top { text-align: left; }
 div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
 a         {text-decoration: none; color: green; }
 
-a.tools-helptrigger img { height: 13px; width: 13px; }
+a.tools-helptrigger img, a.tools-helptrigger-small img { height: 13px; width: 13px; }
+
