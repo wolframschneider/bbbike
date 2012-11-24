@@ -167,5 +167,9 @@ div#footer_top { text-align: left; }
 div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
 a         {text-decoration: none; color: green; }
 
-a.tools-helptrigger img, a.tools-helptrigger-small img { height: 13px; width: 13px; }
+a.tools-helptrigger img, a.tools-helptrigger-small img { 
+   height: 13px;
+   width: 13px;
+   border: 0;
+}
 
