@@ -171,5 +171,10 @@ a.tools-helptrigger img, a.tools-helptrigger-small img {
    height: 13px;
    width: 13px;
    border: 0;
+   opacity:0.75;
+}
+
+a.tools-helptrigger:hover img, a.tools-helptrigger-small:hover img { 
+  opacity: 1.0;
 }
 
