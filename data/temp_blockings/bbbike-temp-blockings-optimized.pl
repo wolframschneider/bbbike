@@ -2339,13 +2339,13 @@ userdel	3 8374,11479 8389,11378 8427,11365
          'from' => 1354809600,
          'id' => 1998,
          'data' => 'userdel	2::temp 13416,7712 13426,7674
-userdel	2::temp 13416,7712 13297,7654
+userdel	2::temp 13416,7712 13288,7653
 userdel	2::temp 13426,7674 13400,7642 13303,7622
 userdel	2::temp 12980,7597 13100,7626 13177,7644
 userdel	2::temp 13188,7590 13177,7644
 userdel	2::temp 13188,7590 13303,7622
-userdel	2::temp 13297,7654 13303,7622
-userdel	2::temp 13297,7654 13177,7644
+userdel	2::temp 13288,7653 13303,7622
+userdel	2::temp 13288,7653 13177,7644
 ',
          'type' => 'gesperrt'
        },
@@ -2447,7 +2447,7 @@ userdel	2::temp 13297,7654 13177,7644
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im November von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Dezember von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -2818,16 +2818,7 @@ userdel	2::inwork 19968,16 19940,52
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'LS/O-SG33-F/12/014',
-         'until' => 1354316400,
-         'text' => 'Fredersdorf-Vogelsdorf: L30: Ersatzneubau Brücke über das Mühlenfließ OD Fredersdorf, möglicherweise komplett gesperrt, 06.02.2012 bis 30.11.2012 ',
-         'from' => 1329680038,
-         'id' => 2312,
-         'data' => 'userdel	2::inwork 34913,13893 35382,13974
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2923,9 +2914,9 @@ userdel	q3::inwork 10893,14705 11101,14768
        undef,
        {
          'source_id' => 'INKO_111688',
-         'until' => 1354464000,
+         'until' => 1354633200,
          'text' => 'Siemensstr. (Oberschöneweide): Baustelle, Fahrtrichtung gesperrt (bis Anfang 12/12) Richtung Edisonstr. zwischen Wattstr. und Edisonstr',
-         'from' => 1341219600,
+         'from' => 1341133200,
          'id' => 2353,
          'data' => 'userdel	q4::inwork; 17766,6616 17860,6644 17962,6674
 ',
@@ -2950,16 +2941,7 @@ userdel	q3::inwork 11912,14486 11642,14625
        },
        undef,
        undef,
-       {
-         'source_id' => 'INKO_113869',
-         'until' => 1354291200,
-         'text' => 'Pichelswerderstr. (Spandau): Baustelle, Fahrtrichtung gesperrt (bis Ende 11/2012) Richtung Freiheit zwischen Ruhlebener Str. und Gewerbehof',
-         'from' => 1342940400,
-         'id' => 2364,
-         'data' => 'userdel	q4::inwork; -2706,13291 -2699,13359 -2669,13488
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Park am Gleisdreieck, Wege im Westpark: wegen Bauarbeiten können die Wege unpassierbar sein',
@@ -3089,16 +3071,7 @@ userdel	q4::inwork; 9149,20336 9235,20125 9266,20048 9300,19949 9333,19853 9355,
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20121025.1210.377071.html',
-         'until' => 1354316399,
-         'text' => 'Fahrbahnsanierung der Rathausstraße vom 5. November 2012 bis Ende November 2012, Fahrbahn ist gesperrt',
-         'from' => 1352070000,
-         'id' => 2395,
-         'data' => 'userdel	q4::inwork 15537,12367 15576,12315 15628,12246 15651,12214
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'recurring' => 1,
@@ -3125,9 +3098,8 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'text' => 'Richardstr.: Baustelle zwischen Böhmische Str. und Richardplatz, Fahrtrichtung gesperrt',
          'from' => undef,
          'id' => 2398,
-         'data' => '#: last_checked: 2012-11-02
-#: next_check: 2012-11-19
-#: XXX möglicherweise wird die Straße danach asphaltiert sein
+         'data' => '#: XXX bis wann ist die Baustelle fertig?
+#: last_checked: 2012-11-26
 userdel	q4::inwork; 13339,7452 13303,7622
 ',
          'type' => 'handicap'
@@ -3161,16 +3133,7 @@ userdel	q3::inwork 11271,14755 11187,14763
          'type' => 'gesperrt',
          'id' => 2400
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20121114.1215.378008.html',
-         'until' => 1354229999,
-         'text' => 'Straßenbauarbeiten in der Zionskirchstraße von Kastanienallee bis Choriner Straße, Fahrbahn ist gesperrt, vom 15. November 2012 bis ca. 29. November 2012 ',
-         'from' => 1352847600,
-         'id' => 2401,
-         'data' => 'userdel	q4::inwork 10558,14176 10426,14262
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-pankow/verwaltung/tiefbau/nb_schulstr.html',
          'until' => 1412114400,
@@ -3183,23 +3146,27 @@ userdel	q4::inwork 10479,18007 10498,18014 10473,18113 10545,18143 10582,18159
 ',
          'type' => 'handicap'
        },
+       undef,
+       undef,
        {
-         'until' => 1354316400,
-         'text' => 'Hoeppnerstraße zwischen Werner-Voß-Damm und Mohnickesteig: halbseitige Sperrung mit Einbahnstraßenregelung in Fahrtrichtung Boelckestraße, vom 29.10.2012 bis 30.11.2012 ',
-         'from' => 1351465200,
-         'id' => 2403,
-         'data' => 'userdel	q4::inwork; 8604,7381 8479,7389 8429,7403 8386,7430 8376,7440 8302,7508 8267,7572 8263,7611
+         'until' => undef,
+         'text' => 'Emser Straße: Bauarbeiten, Fahrbahn gesperrt',
+         'from' => undef,
+         'id' => 2405,
+         'data' => '#: last_checked: 2012-11-26
+userdel	q4::inwork 12872,7134 13058,7165
 ',
          'type' => 'handicap'
        },
        {
-         'until' => 1354316400,
-         'text' => 'Nuthestraße zwischen Steinstraße und Bodmerstraße: Vollsperrung vom 05.11.2012 bis 30.11.2012 ',
-         'from' => 1351983600,
-         'id' => 2404,
-         'data' => 'userdel	q4::inwork 10293,-1904 10243,-1876 10099,-1482
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20121128.1200.378696.html',
+         'until' => 1375308000,
+         'text' => 'Weg am Nordgraben: Weg wird saniert und ist möglicherweise nicht passierbar',
+         'from' => undef,
+         'id' => 2406,
+         'data' => 'userdel	2::inwork 6378,20460 6428,20487 6487,20512 6601,20542 7083,20584 7289,20618
 ',
-         'type' => 'handicap'
+         'type' => 'gesperrt'
        }
      
 );

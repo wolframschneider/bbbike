@@ -2682,7 +2682,7 @@ EOF
        text  => 'Glienicker Straße zwischen Grünauer Straße und Nipkowstraße Richtung Adlergestell wegen Bauarbeiten gesperrt bis 15.10.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 21823,4210 21679,4059 21496,3849 21489,3841 21411,3760 21357,3705 21324,3691 21308,3644 21275,3607 21244,3571 21198,3522 21153,3484 21055,3415 20967,3343 20832,3170
+userdel	q4; 21823,4210 21679,4059 21496,3849 21489,3841 21411,3760 21357,3705 21324,3691 21308,3644 21275,3607 21244,3571 21198,3522 21153,3484 21055,3415 20967,3343 20927,3292 20832,3170
 EOF
      },
      { from  => 1125351382, # 2005-08-29 23:36
@@ -4387,7 +4387,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LMS_1146113785841',
        data  => <<EOF,
-userdel	2 9098,12687 9117,12705 9209,12795
+userdel	2 9098,12687 9117,12705 9171,12758 9209,12795
 userdel	2 9280,12883 9209,12795
 EOF
      },
@@ -17012,13 +17012,13 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 13416,7712 13426,7674
-userdel	2::temp 13416,7712 13297,7654
+userdel	2::temp 13416,7712 13288,7653
 userdel	2::temp 13426,7674 13400,7642 13303,7622
 userdel	2::temp 12980,7597 13100,7626 13177,7644
 userdel	2::temp 13188,7590 13177,7644
 userdel	2::temp 13188,7590 13303,7622
-userdel	2::temp 13297,7654 13303,7622
-userdel	2::temp 13297,7654 13177,7644
+userdel	2::temp 13288,7653 13303,7622
+userdel	2::temp 13288,7653 13177,7644
 EOF
      },
      { from  => 1212876000, # 2008-06-08 00:00
@@ -20380,8 +20380,8 @@ EOF
 userdel	q4::inwork 13161,7173 13058,7165
 EOF
      },
-     { from  => 1341219600, # 2012-07-02 11:00
-       until => 1354464000, # 2012-12-02 17:00
+     { from  => 1341133200, # 2012-07-01 11:00
+       until => 1354633200, # 2012-12-04 16:00
        text  => 'Siemensstr. (Oberschöneweide): Baustelle, Fahrtrichtung gesperrt (bis Anfang 12/12) Richtung Edisonstr. zwischen Wattstr. und Edisonstr',
        type  => 'handicap',
        source_id => 'INKO_111688',
@@ -20815,9 +20815,8 @@ EOF
        text  => 'Richardstr.: Baustelle zwischen Böhmische Str. und Richardplatz, Fahrtrichtung gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-11-02
-#: next_check: 2012-11-19
-#: XXX möglicherweise wird die Straße danach asphaltiert sein
+#: XXX bis wann ist die Baustelle fertig?
+#: last_checked: 2012-11-26
 userdel	q4::inwork; 13339,7452 13303,7622
 EOF
      },
@@ -20882,6 +20881,24 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4::inwork 10293,-1904 10243,-1876 10099,-1482
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Emser Straße: Bauarbeiten, Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2012-11-26
+userdel	q4::inwork 12872,7134 13058,7165
+EOF
+     },
+     { from  => undef, # 
+       until => 1375308000, # 2013-08-01 00:00
+       text  => 'Weg am Nordgraben: Weg wird saniert und ist möglicherweise nicht passierbar',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20121128.1200.378696.html',
+       data  => <<EOF,
+userdel	2::inwork 6378,20460 6428,20487 6487,20512 6601,20542 7083,20584 7289,20618
 EOF
      },
     );
