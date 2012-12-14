@@ -1074,7 +1074,7 @@ jQuery(document).ready(function () {
     jQuery('#tools-helpwin').jqm({
         ajax: '@href',
         trigger: 'a.tools-helptrigger, a.tools-helptrigger-small',
-        overlay: 0,
+        overlay: 25,
         onLoad: function (hash) {
             hash.w.jqmAddClose('.dialog-close');
 
