@@ -14,7 +14,7 @@ use BBBikePlugin;
 push @ISA, "BBBikePlugin";
 
 use strict;
-use vars qw($VERSION $viewer_cursor $viewer $original_image_viewer $geometry $viewer_menu $viewer_sizes_menu);
+use vars qw($VERSION $viewer_cursor $viewer $original_image_viewer $geometry $viewer_menu $viewer_sizes_menu $exiftool_path);
 $VERSION = 1.25;
 
 use BBBikeUtil qw(file_name_is_absolute is_in_path);
@@ -36,6 +36,8 @@ my $iso_date_rx = qr{(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})};
 $viewer = "_internal" if !defined $viewer;
 $original_image_viewer = ($^O eq 'MSWin32' ? '_wwwbrowser' : 'xzgv') if !defined $original_image_viewer;
 $geometry = "third" if !defined $geometry;
+
+my $exif_viewer_toplevel_name = "BBBikeViewImages_ExifViewer";
 
 sub register {
     my $pkg = __PACKAGE__;
@@ -411,21 +413,29 @@ sub show_image_viewer {
 		    # place.
 		    my $f = $image_viewer_toplevel->Frame->pack(-fill => "x", -side => "top");
 
-		    my $first_button = $f->Button(-class => "SmallBut", -text => "|<")->pack(-side => "left");
+		    my $first_button = $f->Button(-class => "SmallBut", -text => "|<", -state => 'disabled')->pack(-side => "left");
 		    $image_viewer_toplevel->Advertise(FirstButton => $first_button);
 		    $main::balloon->attach($first_button, -msg => M"Erstes Bild") if ($main::balloon);
+		    $image_viewer_toplevel->bind("<Home>" => sub { $first_button->invoke });
 
-		    my $prev_button = $f->Button(-class => "SmallBut", -text => "<<")->pack(-side => "left");
+		    my $prev_button = $f->Button(-class => "SmallBut", -text => "<<", -state => 'disabled')->pack(-side => "left");
 		    $image_viewer_toplevel->Advertise(PrevButton => $prev_button);
 		    $main::balloon->attach($prev_button, -msg => M"Vorheriges Bild") if ($main::balloon);
+		    for my $key ('BackSpace', 'b', 'Left') {
+			$image_viewer_toplevel->bind("<$key>" => sub { $prev_button->invoke });
+		    }
 
-		    my $next_button = $f->Button(-class => "SmallBut", -text => ">>")->pack(-side => "left");
+		    my $next_button = $f->Button(-class => "SmallBut", -text => ">>", -state => 'disabled')->pack(-side => "left");
 		    $image_viewer_toplevel->Advertise(NextButton => $next_button);
 		    $main::balloon->attach($next_button, -msg => M"Nächstes Bild") if ($main::balloon);
+		    for my $key ('space', 'Right') {
+			$image_viewer_toplevel->bind("<$key>" => sub { $next_button->invoke });
+		    }
 
-		    my $last_button = $f->Button(-class => "SmallBut", -text => ">|")->pack(-side => "left");
+		    my $last_button = $f->Button(-class => "SmallBut", -text => ">|", -state => 'disabled')->pack(-side => "left");
 		    $image_viewer_toplevel->Advertise(LastButton => $last_button);
 		    $main::balloon->attach($last_button, -msg => M"Letztes Bild") if ($main::balloon);
+		    $image_viewer_toplevel->bind("<End>" => sub { $last_button->invoke });
 
 		    my $n_of_m_label = $f->Label->pack(-side => "left");
 		    $image_viewer_toplevel->Advertise(NOfMLabel => $n_of_m_label);
@@ -444,7 +454,7 @@ sub show_image_viewer {
 						 )->pack(-side => "right", -anchor => "e");
 		    $main::balloon->attach($close_button, -msg => M"Viewer schließen") if ($main::balloon);
 		    for my $key (qw(Escape q)) {
-			$image_viewer_toplevel->bind("<$key>" => sub { $image_viewer_toplevel->destroy });
+			$image_viewer_toplevel->bind("<$key>" => sub { $close_button->invoke });
 		    }
 
 		    my $orig_button = $f->Button(-class => "SmallBut",
@@ -452,6 +462,15 @@ sub show_image_viewer {
 						)->pack(-side => "right", -anchor => "e");
 		    $image_viewer_toplevel->Advertise(OrigButton => $orig_button);
 		    $main::balloon->attach($orig_button, -msg => M"Originalbild mit externen Viewer zeigen") if ($main::balloon);
+		    # o=orig, z=zoom (latter matches the binding in xzgv), v=view (like in mapivi)
+		    $image_viewer_toplevel->bind("<$_>" => sub { $orig_button->invoke }) for ('o', 'v', 'z');
+
+		    my $info_button = $f->Button(-class => "SmallBut",
+						 -text => 'i',
+						)->pack(-side => "right", -anchor => "e");
+		    $image_viewer_toplevel->Advertise(InfoButton => $info_button);
+		    $main::balloon->attach($info_button, -msg => M"Bildinformation zeigen") if ($main::balloon);
+		    $image_viewer_toplevel->bind('<i>' => sub { $info_button->invoke });
 
 		    my $image_viewer_label = $image_viewer_toplevel->Label->pack(-fill => "both", -expand => 1,
 										 -side => "bottom");
@@ -504,48 +523,44 @@ sub show_image_viewer {
 		my @args     = (-canvas => $c, -allimages => $all_image_inx, '-current');
 		my @cmd_args = (\&show_image_viewer, @args);
 		# First
-		if (@$all_image_inx > 1 && defined $prev_inx) {
-		    $image_viewer_toplevel->Subwidget("FirstButton")->configure(-command => [@cmd_args, $all_image_inx->[0]],
-										-state => "normal");
-		    $image_viewer_toplevel->bind("<Home>" => sub { show_image_viewer(@args, $all_image_inx->[0]) });
-		} else {
-		    $image_viewer_toplevel->Subwidget("FirstButton")->configure(-state => "disabled");
-		    $image_viewer_toplevel->bind("<Home>" => \&Tk::NoOp);
+		{
+		    my $b = $image_viewer_toplevel->Subwidget("FirstButton");
+		    if (@$all_image_inx > 1 && defined $prev_inx) {
+			$b->configure(-command => [@cmd_args, $all_image_inx->[0]],
+				      -state => "normal");
+		    } else {
+			$b->configure(-state => "disabled");
+		    }
 		}
 		# Prev
-		if (defined $prev_inx) {
-		    $image_viewer_toplevel->Subwidget("PrevButton")->configure(-command => [@cmd_args, $prev_inx],
-									       -state => "normal");
-		    for my $key ('BackSpace', 'b', 'Left') {
-			$image_viewer_toplevel->bind("<$key>" => sub { show_image_viewer(@args, $prev_inx) });
-		    }
-		} else {
-		    $image_viewer_toplevel->Subwidget("PrevButton")->configure(-state => "disabled");
-		    for my $key ('BackSpace', 'b', 'Left') {
-			$image_viewer_toplevel->bind("<$key>" => \&Tk::NoOp);
+		{
+		    my $b = $image_viewer_toplevel->Subwidget("PrevButton");
+		    if (defined $prev_inx) {
+			$b->configure(-command => [@cmd_args, $prev_inx],
+				      -state => "normal");
+		    } else {
+			$b->configure(-state => "disabled");
 		    }
 		}
 		# Next
-		if (defined $next_inx) {
-		    $image_viewer_toplevel->Subwidget("NextButton")->configure(-command => [@cmd_args, $next_inx],
-									       -state => "normal");
-		    for my $key ('space', 'Right') {
-			$image_viewer_toplevel->bind("<$key>" => sub { show_image_viewer(@args, $next_inx) });
-		    }
-		} else {
-		    $image_viewer_toplevel->Subwidget("NextButton")->configure(-state => "disabled");
-		    for my $key ('space', 'Right') {
-			$image_viewer_toplevel->bind("<$key>" => \&Tk::NoOp);
+		{
+		    my $b = $image_viewer_toplevel->Subwidget("NextButton");
+		    if (defined $next_inx) {
+			$b->configure(-command => [@cmd_args, $next_inx],
+				       -state => "normal");
+		    } else {
+			$b->configure(-state => "disabled");
 		    }
 		}
 		# Last
-		if (@$all_image_inx > 1 && defined $next_inx) {
-		    $image_viewer_toplevel->Subwidget("LastButton")->configure(-command => [@cmd_args, $all_image_inx->[-1]],
-									       -state => "normal");
-		    $image_viewer_toplevel->bind("<End>" => sub { show_image_viewer(@args, $all_image_inx->[-1]) });
-		} else {
-		    $image_viewer_toplevel->Subwidget("LastButton")->configure(-state => "disabled");
-		    $image_viewer_toplevel->bind("<End>" => \&Tk::NoOp);
+		{
+		    my $b = $image_viewer_toplevel->Subwidget("LastButton");
+		    if (@$all_image_inx > 1 && defined $next_inx) {
+			$b->configure(-command => [@cmd_args, $all_image_inx->[-1]],
+				       -state => "normal");
+		    } else {
+			$b->configure(-state => "disabled");
+		    }
 		}
 
 		# XXX It would be nice if we would show here not only
@@ -553,8 +568,8 @@ sub show_image_viewer {
 		# current image being first in list. Unfortunately,
 		# look how complicated it is to get to $abs_file :-(
 		$image_viewer_toplevel->Subwidget("OrigButton")->configure(-command => [\&orig_viewer, $abs_file]);
-		# o=orig, z=zoom (latter matches the binding in xzgv)
-		$image_viewer_toplevel->bind("<$_>" => sub { orig_viewer($abs_file) }) for ('o', 'z');
+
+		$image_viewer_toplevel->Subwidget("InfoButton")->configure(-command => [\&exif_viewer, $abs_file]);
 
 		$image_viewer_toplevel->Subwidget("NOfMLabel")->configure(-text => $this_index_in_array->() . "/" . @$all_image_inx);
 
@@ -667,6 +682,9 @@ sub show_image_viewer {
 	    warn "Try $cmd...\n";
 	    system("$cmd&");
 	}
+
+	fill_exif_viewer_if_active($abs_file);
+
 	return 1;
     } else {
 	#require Data::Dumper;
@@ -745,6 +763,8 @@ sub orig_viewer {
 	viewer_xzgv('--zoom', '--zoom-reduce-only', '--fullscreen', @_);
     } elsif ($use_original_image_viewer eq 'display') {
 	viewer_display(imagemagick_maxpect_args(), @_);
+    } elsif ($use_original_image_viewer eq 'xv') {
+	viewer_xv('-maxpect', @_);
     } else {
 	my $cmd = "$use_original_image_viewer @_";
 	warn "Try $cmd...\n";
@@ -767,6 +787,80 @@ sub find_best_external_viewer {
 	"eog";
     } else {
 	undef;
+    }
+}
+
+sub exif_viewer {
+    my($image_path) = @_;
+
+    _check_exiftool() or return;
+
+    my $exif_toplevel = main::redisplay_top($main::top,
+					    $exif_viewer_toplevel_name,
+					    -raise => 1,
+					    -transient => 0,
+					    -title => M"Bildinformation",
+					   );
+    if (!defined $exif_toplevel) {
+	$exif_toplevel = $main::toplevel{$exif_viewer_toplevel_name};
+    } else {
+	my $pager = $exif_toplevel->Scrolled('ROText',
+					     -scrollbars => 'oe',
+					     -font => $main::font{'fixed'},
+					    )->pack(qw(-fill both -expand 1));
+	$pager->focus;
+	$exif_toplevel->Advertise(Pager => $pager);
+
+	for my $key (qw(Escape q)) {
+	    $exif_toplevel->bind("<$key>" => sub { $exif_toplevel->destroy });
+	}
+    }
+
+    _fill_exif_viewer($exif_toplevel, $image_path);
+}
+
+sub _check_exiftool {
+    if (!defined $exiftool_path) {
+	$exiftool_path = is_in_path('exiftool');
+	if (!$exiftool_path) {
+	    $exiftool_path = 0; # remember failure
+	    main::perlmod_install_advice('Image::ExifTool');
+	    return;
+	}
+    }
+    if (!$exiftool_path) {
+	return;
+    }
+
+    1;
+}
+
+sub _fill_exif_viewer {
+    my($exif_toplevel, $image_path) = @_;
+
+    _check_exiftool() or return;
+
+    my $pager = $exif_toplevel->Subwidget('Pager');
+    $pager->delete('1.0', 'end');
+
+    my $info_text;
+    open my $fh, "-|", $exiftool_path, $image_path
+	or main::status_message($!, "die");
+    while(<$fh>) {
+	$info_text .= $_;
+    }
+    close $fh
+	or main::status_message($!, "die");
+
+    $pager->insert('end', $info_text);    
+}
+
+sub fill_exif_viewer_if_active {
+    my($image_path) = @_;
+
+    my $exif_toplevel = $main::toplevel{$exif_viewer_toplevel_name};
+    if ($exif_toplevel && Tk::Exists($exif_toplevel)) {
+	_fill_exif_viewer($exif_toplevel, $image_path);
     }
 }
 
