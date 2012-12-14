@@ -6693,15 +6693,18 @@ EOF
      },
      { from  => 1353884400, # 1321916400, # 2011-11-22 00:00 # PERIODISCH! # früher: 1163480400, # 2006-11-14 06:00
        until => 1356562740, # 1324940399, # 2011-12-26 23:59 # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
-       text  => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: der Bereich Oberwallstr., Niederlagstr., Am Schinkelplatz gesperrt, vom 26.11.-26.12.2012',
+       text  => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: Schinkelplatz teilweise gesperrt, vom 26.11.-26.12.2012',
        type  => 'gesperrt',
        source_id => 'http://www.berliner-weihnacht.de/',
        data  => <<EOF,
 userdel	2::temp 10008,12274 9994,12368
-userdel	2::temp 9943,12364 9961,12273 9972,12184
+# REMOVED (passierbar!) --- userdel	2::temp 9943,12364 9961,12273 9972,12184
 userdel	2::temp 10010,12259 10035,12209
-userdel	2::temp 9852,12409 9869,12297 9875,12257 9890,12161
-userdel	2::temp 9961,12273 9875,12257
+# REMOVED (2012 nicht gesperrt) --- userdel	2::temp 9852,12409 9869,12297 9875,12257 9890,12161
+userdel	2::temp 10008,12274 10058,12290
+userdel	2::temp 10091,12232 10058,12290 9996,12401
+# REMOVED (2012 nicht gesperrt) --- userdel	2::temp 9961,12273 9875,12257
+userdel	q4::temp 9994,12368 9996,12401 9984,12426
 EOF
      },
      { from  => 1163718000, # 2006-11-17 00:00
@@ -20038,26 +20041,23 @@ userdel	q4::inwork 2295,20358 2241,20487
 EOF
      },
      { from  => 1330902000, # 2012-03-05 00:00
-       until => 1388530799, # 2013-12-31 23:59
-       text  => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende 2013',
+       until => 1370037600, # Mitte 2013 # 1388530799, # 2013-12-31 23:59
+       text  => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Mitte 2013',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html',
+       source_id => 'INKO_111647', # auch: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html
        data  => <<EOF,
 #: XXX nach den Bauarbeiten Radwege auf beiden Seiten
-#: next_check: 2013-12-01
+#: next_check: 2013-06-01
 userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 EOF
      },
      { from  => undef, # 1329631200, # 2012-02-19 07:00
-       until => undef, # 1341068400, # 2012-06-30 17:00
+       until => 1401573600, # Mitte 2014 # undef, # 1341068400, # 2012-06-30 17:00
        text  => 'Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Friedrichstr. gesperrt',
        type  => 'handicap',
-## früher:
-#       source_id => 'INKO_093369',
+       source_id => 'INKO_093369',
        data  => <<EOF,
-#: last_checked: 2012-11-14
-#: next_check: 2013-03-01
-#: XXX ab Glinkastr. nur ungefähr die halbe Strecke bis zur Friedrichstr. gesperrt, deshalb q3
+#: note: ab Glinkastr. nur ungefähr die halbe Strecke bis zur Friedrichstr. gesperrt, deshalb q3
 userdel	q3::inwork; 9164,12172 9373,12197
 EOF
      },

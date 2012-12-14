@@ -805,14 +805,17 @@ userdel	2::temp 5656,10876 5652,11004
        {
          'source_id' => 'http://www.berliner-weihnacht.de/',
          'until' => 1356562740,
-         'text' => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: der Bereich Oberwallstr., Niederlagstr., Am Schinkelplatz gesperrt, vom 26.11.-26.12.2012',
+         'text' => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: Schinkelplatz teilweise gesperrt, vom 26.11.-26.12.2012',
          'from' => 1353884400,
          'id' => 790,
          'data' => 'userdel	2::temp 10008,12274 9994,12368
-userdel	2::temp 9943,12364 9961,12273 9972,12184
+# REMOVED (passierbar!) --- userdel	2::temp 9943,12364 9961,12273 9972,12184
 userdel	2::temp 10010,12259 10035,12209
-userdel	2::temp 9852,12409 9869,12297 9875,12257 9890,12161
-userdel	2::temp 9961,12273 9875,12257
+# REMOVED (2012 nicht gesperrt) --- userdel	2::temp 9852,12409 9869,12297 9875,12257 9890,12161
+userdel	2::temp 10008,12274 10058,12290
+userdel	2::temp 10091,12232 10058,12290 9996,12401
+# REMOVED (2012 nicht gesperrt) --- userdel	2::temp 9961,12273 9875,12257
+userdel	q4::temp 9994,12368 9996,12401 9984,12426
 ',
          'type' => 'gesperrt'
        },
@@ -2808,25 +2811,24 @@ userdel	2::inwork 19968,16 19940,52
        undef,
        undef,
        {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html',
-         'until' => 1388530799,
-         'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende 2013',
+         'source_id' => 'INKO_111647',
+         'until' => 1370037600,
+         'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Mitte 2013',
          'from' => 1330902000,
          'id' => 2316,
          'data' => '#: XXX nach den Bauarbeiten Radwege auf beiden Seiten
-#: next_check: 2013-12-01
+#: next_check: 2013-06-01
 userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 ',
          'type' => 'handicap'
        },
        {
-         'until' => undef,
+         'source_id' => 'INKO_093369',
+         'until' => 1401573600,
          'text' => 'Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Friedrichstr. gesperrt',
          'from' => undef,
          'id' => 2317,
-         'data' => '#: last_checked: 2012-11-14
-#: next_check: 2013-03-01
-#: XXX ab Glinkastr. nur ungefähr die halbe Strecke bis zur Friedrichstr. gesperrt, deshalb q3
+         'data' => '#: note: ab Glinkastr. nur ungefähr die halbe Strecke bis zur Friedrichstr. gesperrt, deshalb q3
 userdel	q3::inwork; 9164,12172 9373,12197
 ',
          'type' => 'handicap'
