@@ -45,13 +45,11 @@ my @list = (
     {
         'page' =>
           'http://api.maps.yahoo.com/ajaxymap?v=3.0&appid=euzuro-openlayers',
-        'min_size'  => 1_000,
+        'min_size'  => 800,
         'match'     => [],
-        'mime_type' => 'text/javascript'
+        'mime_type' => 'text/html'
     }
 );
-
-@list = ();
 
 my @javascript = qw(
   http://mc.bbbike.org/mc/js/OpenLayers/2.12/OpenLayers-min.js
@@ -168,12 +166,12 @@ foreach my $obj (@list) {
 
     my $mime_type = exists $obj->{mime_type} ? $obj->{mime_type} : "text/html";
     is( $resp->content_type, $mime_type, "page $url is $mime_type" );
-    cmp_ok( $resp->content_length, ">", $obj->{min_size},
-            "page $url is greather than: "
-          . $resp->content_length . " > "
-          . $obj->{min_size} );
 
     my $content = $resp->decoded_content;
+    my $length =
+      defined $resp->content_length ? $resp->content_length : length($content);
+    cmp_ok( $length, ">", $obj->{min_size},
+        "page $url is greather than: " . $length . " > " . $obj->{min_size} );
 
     next if !exists $obj->{'match'};
     foreach my $match ( @{ $obj->{'match'} } ) {
