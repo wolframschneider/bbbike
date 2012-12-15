@@ -10,7 +10,7 @@ BEGIN {
         exit;
     }
 
-    if ($ENV{BBBIKE_TEST_NO_NETWORK}) {
+    if ( $ENV{BBBIKE_TEST_NO_NETWORK} ) {
         print "1..0 # skip due no network\n";
         exit;
     }
@@ -28,14 +28,15 @@ plan tests => 2;
 my $url_file = 't/mc/tile-url.txt';
 
 ######################################################################
-my ($fh, $tempfile) = tempfile();
+my ( $fh, $tempfile ) = tempfile();
 
-my $data = q[perl -ne 'chomp; print qq{curl -sSf "$_" || echo "$_" >&2 \0}' ] . qq[$url_file | xargs -0 -n1 -P8 /bin/sh -c > $tempfile];
+my $data = q[perl -ne 'chomp; print qq{curl -sSf "$_" || echo "$_" >&2 \0}' ]
+  . qq[$url_file | xargs -0 -n1 -P8 /bin/sh -c > $tempfile];
 system($data);
 is( $?, 0, "Map Compare: tested all tile images" );
 
-my $st       = stat($tempfile);
-cmp_ok ($st->size, '>', 1_721_000, 'Got enough image tile data');
+my $st = stat($tempfile);
+cmp_ok( $st->size, '>', 1_721_000, 'Got enough image tile data' );
 
 unlink $tempfile;
 
