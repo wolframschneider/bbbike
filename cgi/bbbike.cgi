@@ -2403,7 +2403,7 @@ EOF
 
 	    print "&nbsp;" x 10;
 	    print qq{<a style="font-size:small" title="}, M("Karte nach rechts schieben"), qq{" href="javascript:smallerMap(1.5)">&gt;&gt;</a>\n};
-	    print qq{<img onclick='javascript:displayCurrentPosition([[8.03000,48.73000], [8.81000,49.27000]], "de");' src="/images/location_icon.png">\n};
+	    print qq{<img onclick='javascript:displayCurrentPosition([[8.03000,48.73000], [8.81000,49.27000]], "de");' src="/images/location-icon.png">\n};
 	    print qq{<a style="font-size:small" title="}, M("Karte nach links schieben"), qq{" href="javascript:smallerMap(-1.5)">&lt;&lt;</a>\n};
 
         }
