@@ -1304,9 +1304,9 @@ EOF
 userdel	q4 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13165,-34 13176,-161 13215,-570 13225,-681 13230,-712 13300,-1252
 EOF
      },
-     { from  => 1355439600, # 2012-12-14 00:00 # 1354356000, # 1292626800, # PERIODISCH, an allen Advents-Wochenenden! # früher: 1102654800, # 2004-12-10 06:00
-       until => 1355698799, # 2012-12-16 23:59 # 1354471200, # 1292799599, # PERIODISCH, an allen Advents-Wochenenden! # früher: 1102892400, # 2004-12-13 00:00
-       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt. 15.12. - 16.12.2012 ',
+     { from  => 1356044400, # 2012-12-21 00:00 # 1354356000, # 1292626800, # PERIODISCH, an allen Advents-Wochenenden! # früher: 1102654800, # 2004-12-10 06:00
+       until => 1356303599, # 2012-12-23 23:59 # 1354471200, # 1292799599, # PERIODISCH, an allen Advents-Wochenenden! # früher: 1102892400, # 2004-12-13 00:00
+       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt. 22.12. - 23.12.2012 ',
        type  => 'gesperrt',
        source_id => 'http://www.sophienstrasse-berlin.de/?y=2012',
        data  => <<EOF,
@@ -3246,7 +3246,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4 14355,12752
-userdel	q4 13960,12866 13979,12861 14096,12827
+userdel	q4 13960,12866 13979,12861 14066,12836 14096,12827
 userdel	q4 13960,12866 13844,12900
 EOF
      },
@@ -3500,8 +3500,8 @@ EOF
 userdel	2::inwork -19908,17940 -18793,18169
 EOF
      },
-     { from  => 1355439600, # 2012-12-14 00:00 # 1354356000, # 1324076400, # 2011-11-26 11:00, PERIODISCH! an allen Adventssamstagen
-       until => 1355608800, # 2012-12-15 23:00 # 1354390200, # 1324150200, # 2011-11-26 20:30, PERIODISCH! an allen Adventssamstagen
+     { from  => 1356044400, # 2012-12-21 00:00 # 1354356000, # 1324076400, # 2011-11-26 11:00, PERIODISCH! an allen Adventssamstagen
+       until => 1356217199, # 2012-12-22 23:59 # 1354390200, # 1324150200, # 2011-11-26 20:30, PERIODISCH! an allen Adventssamstagen
        text  => 'Lichtenrader Weihnachtsmarkt: Bahnhofstr. (Lichtenrade) in beiden Richtungen zwischen Steinstr. und Goltzstr gesperrt (alle Adventssamstage von 11:00 bis 20:30) ',
        type  => 'gesperrt',
        source_id => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-lichtenrade.html?y=2012',
@@ -15314,7 +15314,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS_2386386548',
        data  => <<EOF,
-userdel	q4::temp 12635,12629 12606,12471
+userdel	q4::temp 12635,12629 12596,12472
 userdel	q4::temp 12360,12505 12362,12540 12364,12589
 userdel	q4::temp 12891,12549 12869,12425
 EOF
@@ -19542,7 +19542,7 @@ EOF
        data  => <<EOF,
 userdel	2::temp 12360,12505 12362,12540 12364,12589
 userdel	2::temp 12891,12549 12869,12425
-userdel	2::temp 12635,12629 12606,12471
+userdel	2::temp 12635,12629 12596,12472
 EOF
      },
      { from  => 1312520400, # 2011-08-05 07:00
@@ -20041,7 +20041,7 @@ userdel	q4::inwork 2295,20358 2241,20487
 EOF
      },
      { from  => 1330902000, # 2012-03-05 00:00
-       until => 1370037600, # Mitte 2013 # 1388530799, # 2013-12-31 23:59
+       until => 1370005200, # 2013-05-31 15:00
        text  => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Mitte 2013',
        type  => 'handicap',
        source_id => 'INKO_111647', # auch: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html
@@ -20052,7 +20052,7 @@ userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 
 EOF
      },
      { from  => undef, # 1329631200, # 2012-02-19 07:00
-       until => 1401573600, # Mitte 2014 # undef, # 1341068400, # 2012-06-30 17:00
+       until => 1404140400, # 2014-06-30 17:00
        text  => 'Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Friedrichstr. gesperrt',
        type  => 'handicap',
        source_id => 'INKO_093369',
@@ -20522,7 +20522,7 @@ userdel	q4::inwork 22484,11270 22436,11054
 EOF
      },
      { from  => 1344142800, # 2012-08-05 07:00
-       until => 1355580000, # 2012-12-15 15:00
+       until => 1356098400, # 2012-12-21 15:00
        text  => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt Richtung Prenzlauer Allee zwischen Schönhauser Allee und Greifenhagener Str., bis Mitte Dezember 2012',
        type  => 'handicap',
        source_id => 'IM_019043',
@@ -20571,7 +20571,7 @@ userdel	2::night 14838,11410 14776,11400
 EOF
      },
      { from  => 1345119120, # 2012-08-16 14:12
-       until => 1356105600, # 2012-12-21 17:00
+       until => 1355862384, # 1356105600, # 2012-12-21 17:00
        text  => 'Köthener Brücke (Tiergarten): Baustelle, Straße gesperrt bis Mitte Dezember 2012',
        type  => 'handicap',
        source_id => 'IM_019090',
@@ -20742,16 +20742,16 @@ userdel	q4::inwork; -2960,13203 -2728,13269 -2706,13291
 EOF
      },
      { from  => 1353366000, # 2012-11-20 00:00
-       until => 1388530800, # 2014-01-01 00:00
-       text  => 'Friedrich-Engels-Str. stadteinwärts zwischen Nordendstr. und Platananenstr. Baustelle, Fahrtrichtung gesperrt (bis 2014)',
+       until => 1386169200, # 2013-12-04 16:00
+       text  => 'Friedrich-Engels-Str. stadteinwärts zwischen Nordendstr. und Platananenstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 2013/Anfang 2014)',
        type  => 'handicap',
-       source_id => 'IM_019272',
+       source_id => 'IM_019421',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20121015.1240.376583.html (Verzögerung bei den Bauarbeiten)
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20121115.1100.378059.html
 #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/friedrich_engels_strasse.html?date=20121116
-#: by: IM_019421 (allerdings hier nur bis Dezember 2013?)
-#: next_check: 2014-01-01
+#: by: IM_019421 (allerdings hier nur bis Dezember 2013)
+#: next_check: 2013-12-04
 #: XXX danach bessere Straßenqualität? Radstreifen?
 userdel	q4::inwork; 9149,20336 9235,20125 9266,20048 9300,19949 9333,19853 9355,19789
 EOF
@@ -20890,6 +20890,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: last_checked: 2012-12-02
+#: next_check: 2012-12-16
 userdel	q4::inwork 12872,7134 13058,7165
 EOF
      },
@@ -20900,6 +20901,51 @@ EOF
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20121128.1200.378696.html',
        data  => <<EOF,
 userdel	2::inwork 6378,20460 6428,20487 6487,20512 6601,20542 7083,20584 7289,20618
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Potsdamer Wassertaxi: fährt nur im Sommer an Wochenenden und Feiertagen',
+       type  => 'gesperrt',
+       source_id => 'http://www.potsdamer-wassertaxi.de/fahrplan.php?y=2012',
+       data  => <<EOF,
+#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+	2::temp -12149,1436 -12057,1530 -11789,1502 -11323,1330 -10320,1494 -10098,1745 -10086,1886
+	2::temp -10086,1886 -10055,1628
+#: XXX_prog ^^^
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Fähren F21, F23, F24: fahren nur ab ca. April bis Anfang Oktober, fahren nicht am Montag',
+       type  => 'gesperrt',
+       source_id => 'http://www.bvg.de/index.php/de/3777/name/Faehrlinie+F21.html', # und 23 und 24
+       data  => <<EOF,
+#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+	2::temp 27090,-2253 27420,-2067 27492,-1880 27490,-1710 27425,-1601 27374,-1573
+	2::temp 29406,3776 29367,3690 29395,3572 29297,3456 29131,3489 29084,3331 29113,3324 29195,3191 29553,2934 29569,2909 29604,2931 29797,2918 29945,3001 29959,3031
+	2::temp 29959,3031 29968,2986
+#: XXX_prog ^^^
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Karniner Fähre: fährt nur von Mai bis Oktober',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+	2::temp 38674,160390 37644,160344 38049,160420 38325,160573
+#: XXX_prog ^^^
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Westklüne - Ostklüne: keine offizielle Fähre, aber wenn man Glück hat, kann man per Ruderboot übergesetzt werden',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+	2::temp 42506,161075 42450,161090
+#: XXX_prog ^^^
 EOF
      },
     );

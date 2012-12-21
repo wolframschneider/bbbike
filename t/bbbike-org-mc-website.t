@@ -90,7 +90,7 @@ my @png = qw(
 my @css = qw(
   http://mc.bbbike.org/mc/css/common.css
   http://mc.bbbike.org/mc/css/mc.css
-  http://mc.bbbike.org/mc/css/style.css
+  http://mc.bbbike.org/mc/css/OpenLayers/style.css
 );
 
 my @html = qw(
