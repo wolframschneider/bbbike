@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# Copyright (c) Sep 2012 Wolfram Schneider, http://bbbike.org
+# Copyright (c) Sep 2012-2013 Wolfram Schneider, http://bbbike.org
 
 use Test::More;
 use strict;

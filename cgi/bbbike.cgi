@@ -6032,7 +6032,7 @@ for my $etappe (@out_route) {
 
 	if ($printmode) {
 	    my $url = $q->url(-base => 1);
-	    print "<hr><br>", $fontstr, qq{(&copy;) 1998-2012 <a href="$url">$url</a>\n};
+	    print "<hr><br>", $fontstr, qq{(&copy;) 1998-2013 <a href="$url">$url</a>\n};
 
 	    goto END_OF_HTML;
 	}
@@ -8185,7 +8185,7 @@ sub header {
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner kostenlos, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
-		     'copyright'=>'(c) 1998-2012 Slaven Rezic + Wolfram Schneider',
+		     'copyright'=>'(c) 1998-2013 Slaven Rezic + Wolfram Schneider',
 		     @viewport
 		    },
 	     -author => $BBBike::EMAIL,
@@ -8382,7 +8382,7 @@ $permalink_text
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
-(&copy;) 1998-2012 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
+(&copy;) 1998-2013 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data (&copy;) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap.org</a> contributors<br >
 
 </div> <!-- copyright -->
