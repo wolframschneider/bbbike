@@ -155,6 +155,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $skip_second_page
 	    $bbbike_start_js_version $bbbike_css_version
 	    $use_file_cache $file_cache
+	    $use_smart_app_banner
 	   );
 
 $gmap_api_version = 3;
@@ -7982,6 +7983,11 @@ sub header {
     }
     push @$head, "<base target='_top'>"; # Can't use -target option here
     push @$head, $q->meta({-http_equiv => 'Content-Type', -content  => 'text/html; charset=utf-8'}) if $use_utf8;
+
+    if ($use_smart_app_banner && &is_startpage($q) && !is_streets($q)) {
+    	push @$head, $q->meta({-name => 'apple-itunes-app',
+    			   -content => "app-id=555616117,affiliate-data=partnerId=007"}) 
+    }
 
     push @$head, cgilink({-rel  => "shortcut icon",
   			  -href => "$bbbike_images/srtbike1.ico",
