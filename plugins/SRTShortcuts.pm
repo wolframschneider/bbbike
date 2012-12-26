@@ -953,9 +953,27 @@ sub md5_file {
 }
 
 sub newvmz_process {
+    my @vmztool_args;
+    # XXX It would be nice to rebuild the both "sourceid" files using
+    # the targets in data/Makefile. But: the build process probably
+    # does not work well if there are multiple parallel processes, and
+    # I have usually an endless build loop running... so invent some
+    # kind of locking maybe?
+    if (-e "$bbbike_rootdir/tmp/sourceid-all.yml") {
+	push @vmztool_args, "-existsid-current", "$bbbike_rootdir/tmp/sourceid-all.yml";
+    } else {
+	main::status_message("'$bbbike_rootdir/tmp/sourceid-all.yml' is not built!", "die");
+    }
+    if (-e "$bbbike_rootdir/tmp/sourceid-current.yml") {
+	push @vmztool_args, "-existsid-all", "$bbbike_rootdir/tmp/sourceid-current.yml";
+    } else {
+	main::status_message("'$bbbike_rootdir/tmp/sourceid-current.yml' is not built!", "die");
+    }
+
     my $bbd = "$vmz_lbvs_directory/diffnewvmz.bbd";
     rename $bbd, "$vmz_lbvs_directory/diffnewvmz.old.bbd";
     my @cmd = ($^X, "$bbbike_rootdir/miscsrc/VMZTool.pm",
+	       @vmztool_args,
 	       "-oldstore", "$vmz_lbvs_directory/newvmz.yaml",
 	       "-newstore", "$vmz_lbvs_directory/newvmz.new.yaml",
 	       "-outbbd", $bbd,
@@ -999,18 +1017,18 @@ sub fill_vmz_lbvs_files {
 
 sub _vmz_lbvs_splitter {
     my($line) = @_;
-    my($type, $content, $id);
+    my($type, $content, $id, $inuse);
     if ($line =~ m{¦}) {
 	# new style
-	($type, $content, $id) = split /¦/, $line; # ignore everything after 3rd column
+	($type, $content, $id, undef, $inuse) = split /¦/, $line; # ignore 4th column (url) and everything after 5th
     } else {
 	($type, $content) = split /:\s+/, $line, 2;
     }
-    ($type, $content, $id);
+    ($type, $content, $id, $inuse);
 }
 
 sub _vmz_lbvs_columnwidths {
-    (200, 900, 200);
+    (200, 1200, 200, 100);
 }
 
 sub show_vmz_diff {
