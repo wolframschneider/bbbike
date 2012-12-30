@@ -5388,7 +5388,7 @@ sub display_route {
 	    my $filename = filename_from_route($startname, $zielname) . ".txt";
 	    http_header
 		(-type => "text/plain",
-		 @no_cache,
+		 @weak_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
 		);
 	    print Data::Dumper->new([$res], ['route'])->Dump;
@@ -5402,7 +5402,7 @@ sub display_route {
 	    my $filename = filename_from_route($startname, $zielname) . ".yml";
 	    http_header
 		(-type => "text/plain", # XXX text/yaml ?
-		 @no_cache,
+		 @weak_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
 		);
 	    if ($is_short) {
@@ -5416,7 +5416,7 @@ sub display_route {
 	    require JSON::XS;
 	    http_header
 		(-type => "application/json",
-		 @no_cache, # XXX why?
+		 @weak_cache,
 		);
 	    if ($is_short) {
 		my $short_res = {LongLatPath => $res->{LongLatPath}};
@@ -5432,7 +5432,7 @@ sub display_route {
 	} elsif ($output_as eq 'geojson') {
 	    http_header
 		(-type => "application/json",
-		 @no_cache, # XXX why?
+		 @weak_cache,
 		);
 	    require BBBikeGeoJSON;
 	    print BBBikeGeoJSON::bbbikecgires_to_geojson_json($res);
@@ -5460,7 +5460,7 @@ sub display_route {
 	    http_header
 		(-type => 'application/xml',
 		 -charset => '', # to suppress default of iso-8859-1
-		 @no_cache,
+		 @weak_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
 		);
 	    my $new_res = {};
