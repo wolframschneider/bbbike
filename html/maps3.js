@@ -1124,7 +1124,7 @@ function bbbike_maps_init(maptype, marker_list, lang, without_area, region, zoom
             "description": "MapBox OSM, by mapbox.com"
         },
         getTileUrl: function (a, z) {
-            return "http://" + randomServerOSM() + ".tiles.mapbox.com/v3/mapbox.mapbox-streets/" + z + "/" + a.x + "/" + a.y + ".png";
+            return "http://" + randomServerOSM() + ".tiles.mapbox.com/v3/examples.map-vyofok3q/" + z + "/" + a.x + "/" + a.y + ".png";
         },
         isPng: true,
         opacity: 1.0,
