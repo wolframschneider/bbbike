@@ -8,7 +8,7 @@ Modersohnstr.: Bauarbeiten, Einbahnstraﬂenregelung	q3::inwork; 14134,11272 14181
 Helsingforser Str.: Bauarbeiten, Einbahnstraﬂe, u.U. Ausweichen auf Gehweg	q3::inwork; 13496,11384 13541,11355
 Helsingforser Platz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q4::inwork 13473,11456 13427,11431
 G‰rtnerstr.: Baustelle, Einbahnstraﬂenregelung	q3::inwork; 14247,11681 14272,11775 14311,11884
-Alt-Stralau: Bauarbeiten an der Br¸cke, enge Durchfahrt	q3::inwork 14652,10201 14558,10264
+Alt-Stralau: Asphaltierungsarbeiten unter der Br¸cke	q3::inwork 14652,10201 14558,10264
 Friedrichstr.: Fahrbahn zwischen Unter den Linden und Mittelstraﬂe gesperrt, Ausweichen auf Gehweg mˆglich	q4::inwork 9343,12464 9358,12351
 Friedrichstr. (Mitte): Fahrbahn wegen Bauarbeiten gesperrt, Ausweichen auf Gehweg schiebend mˆglich	q4::inwork 9358,12351 9369,12253 9373,12197
 Charlottenstr.: Einbahnstraﬂenregelung	q4::inwork; 9475,12365 9489,12263 9496,12215
@@ -30,6 +30,7 @@ Anna-Louisa-Karsch-Str.: vor der Friedrichsbr¸cke auf den linken Gehweg fahren	q
 Am Zirkus: Baustelle, Einbahnstraﬂe	q3::inwork; 9167,13046 9239,12923
 Am Kupfergraben: Baustelle, Einbahnstraﬂe	q3::inwork; 9870,12657 9900,12643 9919,12613
 Elcknerplatz, Borgmannstr.: Bauarbeiten, Einbahnstraﬂe	q4::inwork; 22478,6041 22544,6037 22539,5956
+Platz der Stadt Hof: Bauarbeiten (in Zukunft wird hier eine Fuﬂg‰ngerzone entstehen), Fahrbahn ist gesperrt	q4::inwork 12753,8187 12792,8190
 Wuhlewanderweg: steiler Anstieg, Fuﬂg‰nger	q4; 21998,12204 21970,12153
 Wuhlewanderweg: steiles Gef‰lle, Fuﬂg‰nger	q4; 21970,12153 21998,12204
 (An der Wuhle, ˆstliches Ufer): Fuﬂg‰nger	q1 21323,8481 21333,8355 21371,8289 21594,8107 21627,8024 21629,7921
@@ -182,10 +183,10 @@ Gotenstr./Cheruskerstr. - Kolonnenstr.: Fuﬂg‰nger	q2 7488,8768 7548,8879
 Nettelbeckplatz: Fuﬂg‰nger	q2 8024,15401 7989,15412 7891,15417
 Nettelbeckplatz: Fuﬂg‰nger	q2 7953,15362 7989,15412
 Nettelbeckplatz: Fuﬂg‰nger	q2 7975,15500 7989,15412
-Volkspark Wilmersdorf: kombinierter Rad- und Fuﬂweg	q1 5919,8417 5805,8352 5666,8345 5533,8478 5481,8506
+Volkspark Wilmersdorf: kombinierter Rad- und Fuﬂweg	q1 5919,8417 5805,8352 5666,8345 5533,8478 5465,8511
 zum Volksparksteg: kombinierter Rad- und Fuﬂweg, enge Kurven	q3 5533,8478 5531,8458
 Volksparksteg: kombinierter Rad- und Fuﬂweg	q1 5531,8458 5417,8519
-Volkspark Wilmersdorf: kombinierter Rad- und Fuﬂweg	q1 5481,8506 5417,8519 5347,8562
+Volkspark Wilmersdorf: kombinierter Rad- und Fuﬂweg	q1 5465,8511 5417,8519 5347,8562
 (zur Thomas-Dehler-Str.): Fuﬂg‰nger, Bordsteine	q4 6654,11460 6716,11439
 Ernststr.: Fuﬂg‰nger	q2 2497,19503 2700,19527
 (S-Bahnunterf¸hrung Wartenberg): Fuﬂg‰nger	q1 16923,18650 16936,18658 16998,18695
@@ -460,7 +461,7 @@ Am Flutgraben: Fuﬂg‰nger	q1 13371,9974 13333,9929
 (Uferweg zum Ernst-Heilmann-Steg): sanfte Rampe, Fuﬂg‰nger	q2 13241,9995 13270,10030
 (Ernst-Heilmann-Steg): Fuﬂg‰nger, zwei Bodenschwellen	q3 13270,10030 13306,10006 13371,9974
 Buschrosenplatz: enge Straﬂe	q1 13002,5548 13054,5556 13075,5470
-Friedrichsbr¸cke: Engstellen wegen Bauarbeiten	q3::inwork 10054,12699 10086,12725 10166,12777
+Friedrichsbr¸cke: Engstellen wegen Bauarbeiten	q4::inwork 10054,12699 10086,12725 10166,12777
 (Hornbach-Parkplatz): Parkplatzbetrieb	q1 11871,5195 11867,5226 11705,5221 11654,5245 11598,5316 11579,5311
 Nollendorfplatz: Gehweg oder Parkplatz Richtung Motzstr. benutzen	q3; 7033,10328 6971,10346
 (Bl¸cherplatz - Waterloo-Ufer): Fuﬂg‰nger, Bordsteine	q2 9631,10142 9687,10180
@@ -1266,8 +1267,8 @@ Alice-Salomon-Park: getrennte Wege f¸r Radfahrer und Fuﬂg‰nger, Bordsteine	q2 68
 (Loewenhardtdamm - Hˆhndorfstr.): Fuﬂg‰nger, Bordsteine, Schranken	q2 8334,8655 8438,8676
 (Weg d. Kol. Papestr.): Fuﬂg‰nger	q1 8215,8631 8259,8628 8265,8305
 (zum Bayernring): Fuﬂg‰nger	q1 8455,8567 8531,8404
-Bautzener Platz: Fuﬂg‰nger, Bordsteine	q2 8182,9240 8100,9240
-Bautzener Platz: Fufg‰nger, Bordsteine	q2 8102,9262 8183,9260
+Bautzener Platz: Fuﬂg‰nger, Bordsteine	q3 8182,9240 8100,9240
+Bautzener Platz: Fufg‰nger, Bordsteine	q3 8102,9262 8183,9260
 (Danziger Str. - Lilli-Henoch-Str.): Fuﬂg‰nger	q2 12128,14640 12189,14767 12220,14779 12255,14849 12241,14865 12314,15008
 (Prenzlauer Allee - Lilli-Henoch-Str.): Fuﬂg‰nger	q2 11877,15366 11942,15358 12107,15229 12215,15115 12284,15068 12314,15008
 (Prenzlauer Allee - Lilly-Henoch-Str.): Fuﬂg‰nger	q2 11860,15309 11919,15314 11942,15358
