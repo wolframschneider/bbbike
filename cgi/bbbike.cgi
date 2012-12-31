@@ -9298,6 +9298,11 @@ sub _is_real_street {
     $type eq 'street' || $type eq 'projected street';
 }
 
+sub _bbbikeleaflet_url {
+    (my $href = $bbbike_script) =~ s{/bbbike2?(\.en)?\.cgi}{/bbbikeleaflet$1.cgi};
+    $href;
+}
+
 ######################################################################
 #
 # Information
@@ -9472,12 +9477,15 @@ Installation des <a href="$bbbike_html/opensearch/opensearch.html">Suchplugins</
 </form>
 EOF
     }
+    {
+       my $href = _bbbikeleaflet_url();
     print <<EOF;
 <h4 id="leaflet">BBBike &amp; Leaflet</h4>
 Noch in Entwicklung: 
-BBBike-Routen auf einer <a href="bbbikeleaflet.cgi">Leaflet-Karte</a> suchen.<br/>
+BBBike-Routen auf einer <a href="$href">Leaflet-Karte</a> suchen.<br/>
 Um Start- und Zielpunkt zu setzen, einfach Doppel-Klicks oder -Taps machen.
 EOF
+    }
     print <<EOF;
 <h4 id="googlemaps">BBBike auf Google Maps</h4>
 Noch in Entwicklung: 
