@@ -2311,14 +2311,12 @@ sub choose_form {
     }
 
     my %header_args = @weak_cache;
-    $header_args{-expires} = '+6d';
+    $header_args{-expires} = '+1d';
     http_header(%header_args);
     my @extra_headers;
-
     if ($bi->{'text_browser'} && !$bi->{'mobile_device'}) {
 	push @extra_headers, -up => $BBBike::HOMEPAGE;
     }
-
     my $onloadscript = "";
 
     if ($nice_berlinmap || $nice_abcmap) {
