@@ -1,5 +1,5 @@
 #!/usr/local/bin/perl -T
-# Copyright (c) 2011-2012 Wolfram Schneider, http://bbbike.org
+# Copyright (c) 2011-2013 Wolfram Schneider, http://bbbike.org
 #
 # extract.cgi - extracts areas in a batch job
 #
@@ -112,16 +112,15 @@ sub header {
     my %args = @_;
     my $type = $args{-type} || "";
 
-    my @javascript = ();    #"../html/bbbike-js.js";
     my @onload;
     my @cookie;
+    my @css = "../html/extract.css";
+
     if ( $type eq 'homepage' ) {
-        push @javascript, "../html/OpenLayers/2.12/OpenLayers-min.js",
-          "../html/OpenLayers/2.12/OpenStreetMap.js",
-          "../html/jquery/jquery-1.7.1.min.js",
-          "../html/jquery/jqModal-2009.03.01-r14.js",
-          "../html/extract.js";
         @onload = ( -onLoad, 'init();' );
+    }
+    else {
+        push @css, "../html/extract-center.css";
     }
 
     # store last used selected in cookies for further usage
@@ -167,15 +166,9 @@ sub header {
                 }
             )
         ],
-        -style => {
-            'src' => [
+        -style => { 'src' => \@css, },
 
-                #"../html/bbbike.css",
-                "../html/luft.css",
-                "../html/extract.css"
-            ]
-        },
-        -script => [ map { { 'src' => $_ } } @javascript ],
+        # -script => [ map { { 'src' => $_ } } @javascript ],
         @onload,
       );
 }
@@ -202,19 +195,20 @@ sub manual_area {
  <div id="manual_area">
   <div id="sidebar_content">
     <span class="export_hint">
-      <a href="#" id="drag_box">Manually select a different area</a><br/>
+      <a id="drag_box">Manually select a different area</a>
+      <a class='tools-helptrigger' href='/extract-dialog-select-area.html'><img src='/html/help-16px.png' alt="" /></a><br/>
     </span> 
     <span id="square_km"></span>
 
     <div id="polygon_controls" style="display:none">
 	<input id="createVertices" type="radio" name="type" onclick="polygon_update()" />
 	<label for="createVertices">add points to polygon
-	<img src="$img_prefix/add_point_on.png" /> <br/>
+	<img src="$img_prefix/add_point_on.png" alt=""/>  <a class='tools-helptrigger' href='/extract-dialog-polygon.html'><img src='/html/help-16px.png' alt="" /></a><br/>
 	</label>
 
 	<input id="rotate" type="radio" name="type" onclick="polygon_update()" />
 	<label for="rotate">rotate, resize or drag polygon
-	<img src="$img_prefix/move_feature_on.png" />
+	<img src="$img_prefix/move_feature_on.png" alt="move feature"/>
 	</label>
     </div>
 
@@ -239,7 +233,7 @@ sub footer_top {
     }
 
     my $donate = qq{<p class="normalscreen" id="big_donate_image">}
-      . qq{<a href="/community.html"><img class="logo" height="47" width="126" src="/images/btn_donateCC_LG.gif"/></a>};
+      . qq{<a href="/community.html"><img class="logo" height="47" width="126" src="/images/btn_donateCC_LG.gif" alt="donate"/></a></p>};
 
     return <<EOF;
   $donate
@@ -264,13 +258,19 @@ sub footer {
     my $locate =
       $args{'map'} ? ' | <a href="javascript:locateMe()">where am I?</a>' : "";
 
+    my @js =
+      qw(OpenLayers/2.12/OpenLayers-min.js OpenLayers/2.12/OpenStreetMap.js jquery/jquery-1.7.1.min.js
+      jquery/jqModal-2009.03.01-r14.js jquery/jquery-ui-1.9.1.custom.min.js extract.js);
+    my $javascript = join "\n",
+      map { qq{<script src="../html/$_" type="text/javascript"></script>} } @js;
+
     return <<EOF;
 
 <div id="footer">
   @{[ &footer_top($q, 'map' => $args{'map'}, 'css' => $args{'css'} ) ]}
   <div id="copyright">
   <hr/>
-    (&copy;) 2012 <a href="http://www.bbbike.org">BBBike.org</a>
+    (&copy;) 2013 <a href="http://www.bbbike.org">BBBike.org</a>
     by <a href="http://wolfram.schneider.org">Wolfram Schneider</a><br/>
     Map data (&copy;) <a href="http://www.openstreetmap.org/copyright" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
   <div id="footer_community"></div>
@@ -279,7 +279,11 @@ sub footer {
 
 </div></div></div> <!-- layout -->
 
+$javascript
 $analytics
+<script type="text/javascript">
+  jQuery('#pageload-indicator').hide();
+</script>
 
 </body>
 </html>
@@ -291,7 +295,7 @@ sub social_links {
     <span id="social">
     <a href="http://www.facebook.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="BBBike on Facebook" /></a>
     <a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld" /></a>
-    <a class="gplus" onmouseover="javascript:google_plusone();" ><img alt="" src="/images/google-plusone-t.png"></a><g:plusone href="http://extract.bbbike.org" size="small" count="false"></g:plusone>
+    <a class="gplus" onmouseover="javascript:google_plusone();" ><img alt="" src="/images/google-plusone-t.png"/></a><g:plusone href="http://extract.bbbike.org" size="small" count="false"></g:plusone>
     <a href="http://www.bbbike.org/feed/bbbike-world.xml"><img class="logo" width="14" height="14" title="What's new on BBBike.org" src="/images/rss-icon.png" alt="" /></a>
     &nbsp;
     </span>
@@ -320,12 +324,13 @@ sub message {
     return <<EOF;
 <span id="noscript"><noscript>Please enable JavaScript in your browser. Thanks!</noscript></span>
 @{[ &social_links ]}
-<span align="right">
+<span id="toolbar">
 BBBike extract -
 </span> 
 <span id="tools-titlebar">
- <span id="tools-help"><a class='tools-helptrigger' href='#'><span>about</span></a></span>
- <span class="jqmWindow" id="tools-helpwin"></span>
+ <span id="tools-help"><a class='tools-helptrigger' href='/extract-mini.html'><span>about</span></a></span>
+ <span id="pageload-indicator">&nbsp;<img src="/html/indicator.gif" alt="" title="Loading JavaScript libraries" /></span>
+ <span class="jqmWindow jqmWindowLarge" id="tools-helpwin"></span>
 </span>
 
 <span id="debug"></span>
@@ -751,12 +756,13 @@ EOF
               qq{<p>We appreciate any feedback, suggestions },
               qq{and a <a href="../community.html#donate">donation</a>! },
 qq{You can support us via PayPal, Flattr or bank wire transfer.\n},
-              qq{<br/>} x 5,
+              qq{<br/>} x 4,
               "</p>\n";
         }
     }
 
-    print &footer( $q, 'css' => '#footer { width: 95%; }' );
+    print &footer( $q,
+        'css' => '#footer { width: 90%; padding-bottom: 20px; }' );
 }
 
 # save request in incoming spool
@@ -977,7 +983,7 @@ sub homepage {
                 $q->td(
                     [
 "<span class='normalscreen' title='Give the city or area to extract a name. "
-                          . "The name is optional, but better fill it out to find it later again.'>Name of area to extract<br/></span>"
+                          . "The name is optional, but better fill it out to find it later again.'>Name of area to extract <a class='tools-helptrigger-small' href='/extract-dialog-name.html'><img src='/html/help-16px.png' alt='' /></a><br/></span>"
                           . $q->textfield(
                             -name => 'city',
                             -id   => 'city',
@@ -988,7 +994,7 @@ sub homepage {
                 $q->td(
                     [
 "<span title='Required, you will be notified by e-mail if your extract is ready for download.'>"
-                          . "Your email address (<a class='tools-helptrigger' href='#'>?</a></span>)</span><br/>"
+                          . "Your email address <a class='tools-helptrigger-small' href='/extract-dialog-email.html'><img src='/html/help-16px.png' alt=''/></a><br/></span>"
                           . $q->textfield(
                             -name  => 'email',
                             -size  => 28,
@@ -1058,7 +1064,7 @@ sub homepage {
                     [
 "<span class='normalscreen' title='PBF: fast and compact data, OSM XML gzip: standard OSM format, "
                           . "twice as large, Garmin format in different styles, Esri shapefile format, "
-                          . "Osmand for Androids'>Format (<a class='tools-helptrigger' href='#'>?</a></span>)<br/></span>"
+                          . "Osmand for Androids'>Format <a class='tools-helptrigger' href='/extract-dialog-format.html'><img src='/html/help-16px.png' alt=''/></a><br/></span>"
                           . $q->popup_menu(
                             -name   => 'format',
                             -values => [
@@ -1073,7 +1079,8 @@ sub homepage {
                             -title => 'start extract',
                             -name  => 'submit',
                             -value => 'extract',
-                            -id    => 'extract'
+
+                            #-id    => 'submit'
                           )
                     ]
                 ),
@@ -1106,7 +1113,7 @@ sub locate_message {
     return <<EOF;
 <span id="locate">
 <span style="display:none" id="tools-pageload">Please wait... <img src="/images/indicator.gif" alt="loading" /></span>
-<a title="where am I?" href="javascript:locateMe()"><img src="/images/location_icon.png" width="25" height="23" alt="loading" border="0"/></a>
+<a title="where am I?" href="javascript:locateMe()"><img src="/images/location-icon.png" width="25" height="23" alt="loading" border="0"/></a>
 </span>
 EOF
 }

@@ -1,5 +1,5 @@
 #!/usr/local/bin/perl
-# Copyright (c) 2012 Wolfram Schneider, http://bbbike.org
+# Copyright (c) 2012-2013 Wolfram Schneider, http://bbbike.org
 #
 # livesearch-extract.cgi - extractbbbike.org live extracts
 
@@ -191,7 +191,7 @@ $data
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
-(&copy;) 2008-2012 <a href="http://bbbike.org">BBBike.org</a> // Map data (&copy;) <a href="http://www.openstreetmap.org/copyright" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
+(&copy;) 2008-2013 <a href="http://bbbike.org">BBBike.org</a> // Map data (&copy;) <a href="http://www.openstreetmap.org/copyright" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
 <div id="footer_community">
 </div>
 </div>
@@ -232,7 +232,7 @@ sub statistic {
             { 'src' => "http://www.google.com/jsapi?hl=en" },
             {
                 'src' =>
-"http://maps.googleapis.com/maps/api/js?sensor=false&amp;language=en"
+"http://maps.googleapis.com/maps/api/js?v=3.9&sensor=false&language=en&libraries=weather,panoramio"
             },
             { 'src' => "../html/bbbike-js.js" }
         ],

@@ -151,8 +151,8 @@ KW: Kopfsteinpflaster	Q2 26419,-12089 26427,-11850 26395,-11699
 KW: Kopfsteinpflaster	Q2 26177,-11648 25859,-11559 25618,-11642
 Ragow: Asphalt	Q0 20843,-12781 20528,-12859 20408,-13031 20134,-13333 19800,-13610 19494,-13746
 Ragow (Köpenicker Str.): Asphalt	Q0 20127,-12521 20408,-13031
-Trebbiner Str.: Kopfsteinpflaster, aber glatter Radweg vorhanden	Q2 11165,-5318 11291,-4485
-Trebbiner Str.: mäßiges Kopfsteinpflaster	Q2 11338,-3945 11671,-3400
+Trebbiner Str.: Asphalt	Q0 11165,-5318 11291,-4485
+Trebbiner Str.: Fahrbahn mäßiges Kopfsteinpflaster, Gehweg asphaltiert	Q0 11338,-3945 11671,-3400
 Schöneicher Str.: Kopfsteinpflaster	Q2 30587,8490 30700,8462 31221,8312
 Schöneiche: Kopfsteinpflaster	Q2 30587,8490 30409,8500 30290,8562
 Neuenhagen: Kopfsteinpflaster	Q2 30815,13170 30910,13101 30982,12947 31148,12804 31043,12392 31021,12174
@@ -426,8 +426,8 @@ Mangerstr. (Potsdam): Asphalt	Q0 -12064,-284 -12108,-291 -12265,-418
 Wilhelm-Leuschner-Str.: schlechtes Kopfsteinpflaster (Potsdam)	Q3 -10059,374 -10097,200
 Gutenbergstr. (Potsdam): schlechtes Kopfsteinpflaster	Q3 -12886,-869 -13025,-901 -13158,-930 -13264,-952 -13433,-991
 Gutenbergstr. (Potsdam): mäßiger Beton	Q1 -13433,-991 -13553,-1020 -13576,-1026
-Jägerstr. (Potsdam): mäßiges Kopfsteinpflaster, südlich der Brandenburger Str. eher schlechter	Q2 -13067,-706 -13058,-740 -13025,-901 -13005,-1002 -12984,-1110
-Dortustr. (Potsdam): Kopfsteinpflaster	Q2 -13187,-1150 -13173,-1039 -13158,-930 -13140,-766 -13137,-728
+Jägerstr. (Potsdam): mäßiges Kopfsteinpflaster, südlich der Brandenburger Str. eher schlechter	Q2 -13064,-715 -13058,-740 -13025,-901 -13005,-1002 -12984,-1110
+Dortustr. (Potsdam): Kopfsteinpflaster	Q2 -13187,-1150 -13173,-1039 -13158,-930 -13140,-766 -13137,-737
 Bäckerstr. (Potsdam): Asphalt	Q0 -13314,-1226 -13287,-1231 -13203,-1246
 Lindenstr. (Potsdam): Kopfsteinpflaster	Q2 -13231,-763 -13236,-797 -13264,-952 -13289,-1071 -13305,-1176 -13314,-1226 -13350,-1403
 Lindenstr. (Potsdam): Asphalt	Q0 -13350,-1403 -13366,-1499
@@ -1360,7 +1360,7 @@ Im Tal: Kopfsteinpflaster	Q2 -882,-1220 -940,-1256 -1112,-1123 -1310,-1137
 Am Weinberg: Kopfsteinpflaster, etwas kleinteiliger	Q2 -1348,-1098 -1310,-1137 -1112,-1353 -940,-1256
 Allee am Forsthaus: schlechtes Kopfsteinpflaster, teilweise mit Sandbanketten, und teilweise unebener Sandweg	Q3 -1503,-1328 -1607,-1389 -1698,-1384 -1976,-1325 -2071,-1259 -2262,-1317 -2334,-1392 -2614,-1434
 Leiblstr.: Kopfsteinpflaster	Q2 -12545,-698 -12262,-612
-Mittelstr.: Kopfsteinpflaster	Q2 -12545,-698 -12712,-734 -12884,-769
+Mittelstr.: Kopfsteinpflaster	Q2 -12545,-698 -12697,-729 -12884,-769
 Am Schafgraben: Parkweg	Q1 -14500,-2012 -14536,-1943 -14571,-1881 -14612,-1809
 (Schafgraben - Maybachstr.): Parkweg	Q1 -14536,-1943 -14705,-1949
 (Maybachstr. - Geschwister-Scholl-Str.): Asphalt/Beton	Q0 -14705,-1949 -14733,-1812
@@ -1372,7 +1372,7 @@ Karl-Gruhl-Str.: Asphalt	Q0 -9837,-1612 -9905,-1627 -10102,-1522 -10119,-1515 -1
 Oderstr.: Betonstraße	Q1 818,-298 595,-310
 Oderstr.: Asphalt	Q0 595,-310 525,-347 240,-519 -395,-920 -882,-1220
 Brandenburger Str.: grobes Pflaster	Q1 -12883,-976 -13005,-1002 -13173,-1039 -13289,-1071 -13410,-1101 -13556,-1140
-Brandenburger Str.: etwas besseres Kopfsteinpflaster	Q1 -12883,-976 -12784,-956
+Brandenburger Str.: etwas besseres Kopfsteinpflaster	Q1 -12883,-976 -12801,-960
 Welsow - Bruchhagen: Asphalt	Q0 49075,74662 48437,74675 48262,74825
 Schönermark - Biesenbrow: Asphalt	Q0 51812,78462 50637,79674 50493,79806 50593,80084
 Zichow - Zehnebeck: Feldweg, feiner Schotter; kurzes Stück Kopfsteinpflaster	Q2 52049,88323 52125,88661
@@ -1424,7 +1424,7 @@ Wielandstr.: Kopfsteinpflaster	Q2 -14019,-2122 -14052,-2110 -14120,-2109 -14236,
 Schillerstr.: Kopfsteinpflaster	Q2 -14252,-1978 -14236,-2125
 Grillparzerstr.: Kopfsteinpflaster	Q2 -14128,-1955 -14120,-2109
 Hermann-Elflein-Str.: Kopfsteinpflaster	Q2 -13468,-847 -13461,-870 -13433,-991 -13410,-1101 -13392,-1196
-Benkertstr.: Kopfsteinpflaster	Q2 -12730,-627 -12712,-734 -12693,-827
+Benkertstr.: Kopfsteinpflaster	Q2 -12719,-630 -12697,-729 -12677,-823
 Hegelallee (Nebenfahrbahn): Kopfsteinpflaster	Q2 -13590,-912 -13461,-870 -13236,-797
 Hegelallee (Nebenfahrbahn): schlechtes Kopfsteinpflaster	Q3 -13236,-797 -13140,-766 -13058,-740 -12911,-696
 Am Templiner See: Asphalt	Q0 -14359,-2142 -14411,-2180
@@ -1551,9 +1551,9 @@ Hebbelstr.: mäßiges bis schlechtes Kopfsteinpflaster	Q3 -12571,-581 -12621,-359
 Hebbelstr.: schlechtes Kopfsteinpflaster	Q3 -12621,-359 -12637,-292
 Eisenhartstr.: asphaltiert	Q0 -12821,-417 -12779,-294 -12637,-8
 Puschkinallee: glatte Pflasterung	Q1 -12812,371 -12812,271 -12862,-27
-Russische Kolonie: Asphalt	Q0 -13036,342 -12992,244 -12947,106 -12862,-27
-Russische Kolonie: kleinteiliges Kopfsteinpflaster	Q1 -13091,-8 -13068,-115
-Russische Kolonie: wassergebundene Decke	Q1 -13091,-8 -12947,106 -12833,261 -12812,271
+Russische Kolonie: Asphalt	Q0 -13036,342 -12992,244 -12950,115 -12862,-27
+Russische Kolonie: kleinteiliges Kopfsteinpflaster	Q1 -13091,-8 -13074,-70 -13039,-127
+Russische Kolonie: wassergebundene Decke	Q1 -13091,-8 -12950,115 -12833,261 -12812,271
 Mauerstr. (Potsdam): geflickter Asphalt	Q1 -13433,-831 -13519,-625
 Katharinenholzstr.: Asphalt, einige Kopfsteinpflasterabschnitte mit asphaltierten Fahrgassen	Q0 -15556,429 -15086,63 -15023,13 -14949,-45
 Leest - Wublitzbrücke: asphaltiert	Q0 -21028,2527 -21335,2233 -21483,1960
@@ -1729,7 +1729,7 @@ Schloßstr.: Kopfsteinpflaster	Q2 -12946,-1659 -12940,-1625 -12927,-1576 -12923,-
 (Lustgarten): wassergebundene Decke	Q1 -12931,-1761 -12678,-1812
 Am Hinzenberg: Beton	Q0 -12708,-1928 -12894,-2111 -12946,-2119
 Am Hinzenberg: gute Pflasterung	Q0 -12708,-1928 -12678,-1812 -12669,-1768
-Am Alten Markt: gepflastert	Q2 -12583,-1552 -12619,-1549 -12780,-1545
+Am Alten Markt: gepflastert	Q2 -12583,-1552 -12619,-1549 -12677,-1536 -12780,-1545
 Schwertfegerstr.: teils schlechtes Kopfsteinpflaster	Q3 -12793,-1498 -12870,-1493
 Am Neuen Markt: mäßiges bis schlechtes Kopfsteinpflaster	Q2 -12882,-1565 -12870,-1493
 Am Neuen Markt: teils schlechtes Kopfsteinpflaster	Q3 -12870,-1493 -12865,-1462 -12913,-1451
@@ -3408,3 +3408,4 @@ Seeweg: Verbundsteinpflaster	Q1 19352,-961 19404,-1076
 Franz-Mehring-Str.: mäßiger Asphalt	Q1 -9313,-2429 -9218,-2129 -9164,-1947
 (Marienfelder Str./Hubertusstr. - Mauerradweg): Trampelpfad	Q2 10040,-3202 10051,-3173
 Marie-Juchacz-Str. (Potsdam): Asphalt	Q0 -7369,-5648 -7398,-5650 -7472,-5652 -7537,-5620 -7592,-5565 -7655,-5517 -7713,-5470 -7767,-5415
+Alt Drewitz: sehr schlechtes Kopfsteinpflaster	Q3 -8101,-4749 -8150,-4849 -8141,-4962 -8150,-5004 -8189,-5159 -8195,-5176 -8165,-5236

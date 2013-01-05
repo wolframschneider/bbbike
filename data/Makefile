@@ -125,14 +125,10 @@ TODAY_DATE!=	date +'%Y%m%d'
 .ORDER: targets data-images check .modified .rsync_include make_misc
 all:	targets data-images check .modified .rsync_include make_misc
 
-# These targets have to be rebuild once a day
+# Some targets have to be rebuild once a day. These should depend on
+# ".check_daily"
 .BEGIN:
-	@$(PERL) -e 'for (@ARGV) { do { unlink($$_) and warn "Removed $$_\n" } if (-M $$_ >= 1) }' \
-		.check_bbbike-temp-blockings-optimized \
-		${PERSISTENTTMPDIR}/.check_fragezeichen-nextcheck.bbd \
-		${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd \
-		${PERSISTENTTMPDIR}/.check_fragezeichen-indoor-nextcheck.bbd \
-		${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor-nextcheck.bbd
+	@$(PERL) -e '$$_ = ".check_daily"; if (!-e $$_ || -M $$_ >= 1) { open my $$fh, ">", $$_ or die "Cannot touch $$_" }'
 
 targets:	${TARGETS}
 
@@ -154,30 +150,31 @@ slow-checks:	check-categories \
 		check-coords.data \
 		persistent-tmp
 
-persistent-tmp:	fragezeichen-outdoor-nextcheck \
-		fragezeichen-outdoor \
-		${PERSISTENTTMPDIR}/.check_fragezeichen-indoor-nextcheck.bbd \
+persistent-tmp:	fragezeichen-outdoor \
+		fragezeichen-outdoor-nextcheck \
 		${PERSISTENTTMPDIR}/fragezeichen-indoor-nextcheck.bbd \
-		${PERSISTENTTMPDIR}/.check_fragezeichen-nextcheck.bbd \
 		${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd \
 		${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org \
-		${PERSISTENTTMPDIR}/strassen_in_planung.bbd \
-		${PERSISTENTTMPDIR}/projektierte_radstreifen.bbd \
-		${PERSISTENTTMPDIR}/all-upload-fragezeichen.wpt \
-		${PERSISTENTTMPDIR}/my-upload-fragezeichen.wpt \
+		${PERSISTENTTMPDIR}/sourceid-current.yml \
+		$(PERSISTENTTMPDIR)/sourceid-all.yml \
 		${PERSISTENTTMPDIR}/Berlin.coords.bbd \
 		${PERSISTENTTMPDIR}/Potsdam.coords.bbd \
 		${PERSISTENTTMPDIR}/non-faked-plaetze \
 		${PERSISTENTTMPDIR}/non-faked-strassen \
 		${PERSISTENTTMPDIR}/XXX.bbd \
-		${PERSISTENTTMPDIR}/plz-b.bbd
+		${PERSISTENTTMPDIR}/plz-b.bbd \
+		${PERSISTENTTMPDIR}/berlin-fragezeichen-poi.gpx
+
+rare-persistent-tmp:	\
+		${PERSISTENTTMPDIR}/all-upload-fragezeichen.wpt \
+		${PERSISTENTTMPDIR}/my-upload-fragezeichen.wpt \
+		${PERSISTENTTMPDIR}/strassen_in_planung.bbd \
+		${PERSISTENTTMPDIR}/projektierte_radstreifen.bbd
 
 # popular targets
-fragezeichen-outdoor-nextcheck:	${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor-nextcheck.bbd \
-				${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd
+fragezeichen-outdoor-nextcheck:	${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd
 
-fragezeichen-outdoor:		${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd \
-				${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd
+fragezeichen-outdoor:		${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd
 
 .for i in $(XXX_TARGETS)
 persistent-tmp:	${PERSISTENTTMPDIR}/XXX-$(i).bbd
@@ -841,8 +838,8 @@ ${XXX_TARGETS:C/^/${PERSISTENTTMPDIR}\/.XXX-/:C/$/-$(i)/}:	$(i)-orig
 .endfor
 
 .for doormode in indoor outdoor
-.ORDER: ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd ${PERSISTENTTMPDIR}/.check_fragezeichen-${doormode}-nextcheck.bbd
-${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd ${PERSISTENTTMPDIR}/.check_fragezeichen-${doormode}-nextcheck.bbd:	\
+${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd:	\
+		.check_daily \
 		Makefile \
 		${SOURCE_TARGETS:S|$|-orig|} \
 		${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
@@ -853,11 +850,10 @@ ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd ${PERSISTENTTMPDIR}/.
 	    ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd \
 		> ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~
 	mv -f ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd~ ${PERSISTENTTMPDIR}/fragezeichen-${doormode}-nextcheck.bbd
-	touch ${PERSISTENTTMPDIR}/.check_fragezeichen-${doormode}-nextcheck.bbd
 .endfor
 
-.ORDER: ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd ${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd
-${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd ${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd:	\
+${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd:	\
+		.check_daily \
 		Makefile \
 		${SOURCE_TARGETS:S|$|-orig|} \
 		${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
@@ -870,10 +866,9 @@ ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd ${PERSISTENTTMPDIR}/.check_fragezei
 	    ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd \
 		> ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~
 	mv -f ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd~ ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd
-	touch ${PERSISTENTTMPDIR}/.check_fragezeichen-outdoor.bbd
 
-.ORDER: ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd ${PERSISTENTTMPDIR}/.check_fragezeichen-nextcheck.bbd
-${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd ${PERSISTENTTMPDIR}/.check_fragezeichen-nextcheck.bbd:	\
+${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd:	\
+		.check_daily \
 		Makefile \
 		ampeln-orig \
 		fragezeichen-orig \
@@ -912,7 +907,6 @@ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd ${PERSISTENTTMPDIR}/.check_fragez
 .endfor
 	-rm -f /tmp/nextcheck.bbd
 	mv -f ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd
-	touch ${PERSISTENTTMPDIR}/.check_fragezeichen-nextcheck.bbd
 
 ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org:	*-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
 	-@$(WRITEABLE) $@
@@ -958,7 +952,8 @@ ${PERSISTENTTMPDIR}/plz-b.bbd:	$(PERSISTENTTMPDIR)/plz.sql
 	grep -i berlin $> | ${PERL} $(MISCSRCDIR)/parse_mapbender_plz.pl > $@
 
 $(PERSISTENTTMPDIR)/plz.sql:	$(PERSISTENTTMPDIR)/plz.zip
-	cd `dirname $>` && unzip -q -o `basename $>`
+	cd `dirname $>` && unzip -q -o `basename $>` plz.sql
+	touch -r $(PERSISTENTTMPDIR)/plz.zip $(PERSISTENTTMPDIR)/plz.sql
 
 $(PERSISTENTTMPDIR)/plz.zip:
 	wget -O ${PERSISTENTTMPDIR}/plz.zip http://prdownloads.sourceforge.net/mapbender/plz.zip?download
@@ -1069,6 +1064,7 @@ ${PERSISTENTTMPDIR}/.fragezeichen-other-source:	${DATADIR}/qualitaet_s-orig ${DA
 
 PREFIXMAP=sperr=SP,kopfstein=KP,qualität=QU,mäßig.geeignet=QU,radweg=RW,benutzungspflich=RW,bau=BA,vorfahrt=VF,name=NA,bezeichn=NA,vorfahrt=VF,ampel=AM
 
+# XXX not really in use...
 ${PERSISTENTTMPDIR}/all-upload-fragezeichen.wpt:	fragezeichen Makefile
 	${PERL} ${MISCSRCDIR}/bbd2gpsman.pl -filter nearby=200 \
 	    -prefix XXX -match name \
@@ -1096,17 +1092,41 @@ ${PERSISTENTTMPDIR}/all-upload-fragezeichen.wpt:	fragezeichen Makefile
 
 # The both bboxes are: Potsdam and central Berlin (Mitte,
 # Friedrichshain, Kreuzberg)
+# XXX not really in use...
 ${PERSISTENTTMPDIR}/my-upload-fragezeichen.wpt:	fragezeichen Makefile
 	${MAKE} /tmp/upload-restricted-fragezeichen.wpt \
 	    RESTRICT_BBOX="-8250,2025,-15000,-2675 16500,15375,4625,5984 26687,-316,9090,9005"
 	cp -pf /tmp/upload-restricted-fragezeichen.wpt $@
 
-temp_blockings/bbbike-temp-blockings-optimized.pl:	temp_blockings/bbbike-temp-blockings.pl .check_bbbike-temp-blockings-optimized
+temp_blockings/bbbike-temp-blockings-optimized.pl:	temp_blockings/bbbike-temp-blockings.pl .check_daily
 	-@$(WRITEABLE) $@
 	${PERL} $(MISCSRCDIR)/check_bbbike_temp_blockings \
 	    -action output_future_nonrecurring \
 	    -action dump_future_as_perl > $@
-	touch .check_bbbike-temp-blockings-optimized
+	-@$(READONLY) $@
+
+# Another fragezeichen POI approach: restrict to whole
+# of Berlin, use only the center coordinate, use
+# the fragezeichen-nextcheck.bbd file as input,
+# create a gpx file
+${PERSISTENTTMPDIR}/berlin-fragezeichen-poi.gpx: ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck-middlepoint.bbd
+	-@$(WRITEABLE) $@
+	${PERL} ${MISCSRCDIR}/restrict_bbd_data.pl \
+		-polygon-bbd berlin \
+		-strdata $> \
+		-o - |\
+	    ${PERL} ${MISCSRCDIR}/bbd2gpsman.pl \
+		-filter nearby=200 \
+		-prefix XXX \
+		-match name \
+		-prefixmap ${PREFIXMAP} \
+		-symbol danger |\
+	    ${PERL} ${MISCSRCDIR}/gpsman2gpx - > $@
+	-@$(READONLY) $@
+
+${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck-middlepoint.bbd: ${PERSISTENTTMPDIR}/fragezeichen-outdoor-nextcheck.bbd
+	-@$(WRITEABLE) $@
+	${REPLACESTRASSEN} -coordsexpr 'my @c = split / /, $$_; $$_ = $$c[@c/2]' $> > $@
 	-@$(READONLY) $@
 
 # XXX Optimierungsmöglichkeit: aus "fragezeichen" alle Strecken herausnehmen, die bereits auf Strecken in strassen+landstrassen matchen
@@ -1142,8 +1162,6 @@ all-forever:
 	@-alarm -nicedown
 	@-xterm-conf -deiconify -raise
 	xmessage "all-forever failed"
-
-.OPTIONAL: .check_bbbike-temp-blockings-optimized
 
 # It is legal for fragezeichen points to not be on strassen, so this is
 # only informative...
@@ -1825,6 +1843,14 @@ $(PERSISTENTTMPDIR)/bbbike-temp-blockings-nonrecurring.bbd: $(PERSISTENTTMPDIR)/
 
 $(PERSISTENTTMPDIR)/bbbike-temp-blockings-recurring.bbd: $(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.yml
 	$(TEMP_BLOCKINGS_TASKS) yml_to_recurring_bbd $> > $@~
+	mv -f $@~ $@
+
+$(PERSISTENTTMPDIR)/sourceid-all.yml: $(PERSISTENTTMPDIR)/bbbike-temp-blockings.bbd handicap_s-orig gesperrt_s-orig fragezeichen-orig
+	$(TEMP_BLOCKINGS_TASKS) bbd_to_existsid $> > $@~
+	mv -f $@~ $@
+
+$(PERSISTENTTMPDIR)/sourceid-current.yml: $(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.bbd handicap_s-orig gesperrt_s-orig fragezeichen-orig
+	$(TEMP_BLOCKINGS_TASKS) bbd_to_existsid $> > $@~
 	mv -f $@~ $@
 
 ######################################################################

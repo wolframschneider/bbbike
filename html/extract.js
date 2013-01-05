@@ -3,9 +3,8 @@
  Copyright (c) 2012 Wolfram Schneider, http://bbbike.org
 */
 
-// HTML5
-"use strict"
-
+// HTML5: may not work on Android devices!
+// "use strict"
 // central config
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
@@ -1068,17 +1067,25 @@ function polygon_init() {
     }
 }
 
+// dialog help windows
 jQuery(document).ready(function () {
     if (jQuery('#tools-helpwin').length == 0) return;
 
     jQuery('#tools-helpwin').jqm({
-        ajax: '/extract-mini.html',
-        trigger: 'a.tools-helptrigger',
-        overlay: 0,
+        ajax: '@href',
+        trigger: 'a.tools-helptrigger, a.tools-helptrigger-small',
+        overlay: 25,
         onLoad: function (hash) {
             hash.w.jqmAddClose('.dialog-close');
+
+            // resize for smaller windows?
+            if (jQuery(hash.t).attr('class') == 'tools-helptrigger-small') {
+                hash.w.removeClass("jqmWindowLarge").addClass("jqmWindowSmall");
+            } else {
+                hash.w.removeClass("jqmWindowSmall").addClass("jqmWindowLarge");
+            }
         }
-    });
+    }).draggable();
 });
 
 // EOF

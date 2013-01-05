@@ -1,20 +1,414 @@
-$#temp_blocking = 789;
+$#temp_blocking = 393;
 push @temp_blocking,
 (
        {
-         'source_id' => 'http://www.berliner-weihnacht.de/',
-         'until' => 1356562740,
-         'text' => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: der Bereich Oberwallstr., Niederlagstr., Am Schinkelplatz gesperrt, vom 26.11.-26.12.2012',
-         'from' => 1353884400,
-         'id' => 790,
-         'data' => 'userdel	2::temp 10008,12274 9994,12368
-userdel	2::temp 9943,12364 9961,12273 9972,12184
-userdel	2::temp 10010,12259 10035,12209
-userdel	2::temp 9852,12409 9869,12297 9875,12257 9890,12161
-userdel	2::temp 9961,12273 9875,12257
+         'source_id' => 'http://www.berlin.de/orte/weihnachtsmaerkte/weihnachtsmarkt-gedaechtniskirche/index.php?y=2012',
+         'until' => 1357513199,
+         'text' => 'Weihnachtsmarkt an der Gedächtniskirche, vom 26. November 2012 bis 06. Januar 2013',
+         'from' => 1353798000,
+         'id' => 394,
+         'data' => '# sowieso schon mit q4 markiert, deshalb -> 2
+userdel	2::temp 5829,10964 5782,10884
+userdel	2::temp 5656,10876 5652,11004
 ',
          'type' => 'gesperrt'
        },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1493,46 +1887,40 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'until' => 1356994740,
-         'text' => 'Voltairestr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht oder nur schwer möglich',
-         'from' => 1352934000,
-         'id' => 1988,
-         'data' => 'userdel	2::temp 11209,12430 11329,12497
+         'source_id' => 'IM_019485',
+         'until' => 1357167540,
+         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr. (bis 02.01. nachts)',
+         'from' => undef,
+         'id' => 2010,
+         'data' => 'userdel	2::temp 8731,12270 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 8119,12414
+userdel	2::temp 8522,12239 8466,12197
+userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1356994740,
-         'text' => 'Gendarmenmarkt: Weihnachtsmarkt, Durchfahrt nicht möglich (Eintritt!)',
-         'from' => 1352734264,
-         'id' => 1989,
-         'data' => 'userdel	2::temp 9536,11912 9668,11928
-userdel	2::temp 9524,12010 9656,12021
-',
-         'type' => 'gesperrt'
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        undef,
        undef,
        undef,
@@ -1610,7 +1998,7 @@ userdel	2::temp 9524,12010 9656,12021
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im November von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Januar von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -1782,12 +2170,14 @@ userdel	2::temp 9524,12010 9656,12021
        undef,
        undef,
        {
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110303.0840.333719.html',
-         'until' => 1356908400,
-         'text' => 'Auerbachtunnel: Fahrbahn wegen Bauarbeiten gesperrt, bis Ende 2012',
+         'source_id' => 'IM_016416',
+         'until' => 1377985740,
+         'text' => 'Auerbachtunnel: Fahrbahn wegen Bauarbeiten gesperrt, bis Sommer 2013',
          'from' => 1335462672,
          'id' => 2182,
-         'data' => '#: next_check: 2012-11-15
+         'data' => '#: next_check: 2013-08-31
+#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110303.0840.333719.html
+#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4355&options=4 (Endedatum bestätigt)
 userdel	q4::inwork 425,8766 490,8716
 ',
          'type' => 'handicap'
@@ -1918,7 +2308,19 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'INKO_078941_COPY_1',
+         'until' => 1362092400,
+         'text' => 'Blankenburger Straße: Richtung Dietzgenstraße zwischen Lindenberger Straße und Siegfriedstraße wegen Bauarbeiten gesperrt; Herthaplatz ist teilweise eine Einbahnstraße; 05.10.2011 11:00 Uhr bis März 2013',
+         'from' => 1317679200,
+         'id' => 2290,
+         'data' => '#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/blankenburger-strasse2.html?date=20121116 vvv
+userdel	q4::inwork; 11148,19838 11051,19789 10948,19737 10829,19676 10742,19632
+userdel	q4::inwork; 10614,19907 10599,19957
+#: by: ^^^
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        undef,
@@ -1968,39 +2370,29 @@ userdel	2::inwork 19968,16 19940,52
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'LS/O-SG33-F/12/014',
-         'until' => 1354316400,
-         'text' => 'Fredersdorf-Vogelsdorf: L30: Ersatzneubau Brücke über das Mühlenfließ OD Fredersdorf, möglicherweise komplett gesperrt, 06.02.2012 bis 30.11.2012 ',
-         'from' => 1329680038,
-         'id' => 2312,
-         'data' => 'userdel	2::inwork 34913,13893 35382,13974
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
        {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html',
-         'until' => 1388530799,
-         'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende 2013',
+         'source_id' => 'INKO_111647',
+         'until' => 1370005200,
+         'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Mitte 2013',
          'from' => 1330902000,
          'id' => 2316,
          'data' => '#: XXX nach den Bauarbeiten Radwege auf beiden Seiten
-#: next_check: 2013-12-01
+#: next_check: 2013-06-01
 userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 ',
          'type' => 'handicap'
        },
        {
-         'until' => undef,
+         'source_id' => 'INKO_093369',
+         'until' => 1404140400,
          'text' => 'Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Friedrichstr. gesperrt',
          'from' => undef,
          'id' => 2317,
-         'data' => '#: last_checked: 2012-11-14
-#: next_check: 2013-03-01
-#: XXX ab Glinkastr. nur ungefähr die halbe Strecke bis zur Friedrichstr. gesperrt, deshalb q3
+         'data' => '#: note: ab Glinkastr. nur ungefähr die halbe Strecke bis zur Friedrichstr. gesperrt, deshalb q3
 userdel	q3::inwork; 9164,12172 9373,12197
 ',
          'type' => 'handicap'
@@ -2071,16 +2463,7 @@ userdel	q3::inwork 10893,14705 11101,14768
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'INKO_111688',
-         'until' => 1354464000,
-         'text' => 'Siemensstr. (Oberschöneweide): Baustelle, Fahrtrichtung gesperrt (bis Anfang 12/12) Richtung Edisonstr. zwischen Wattstr. und Edisonstr',
-         'from' => 1341219600,
-         'id' => 2353,
-         'data' => 'userdel	q4::inwork; 17766,6616 17860,6644 17962,6674
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2099,26 +2482,8 @@ userdel	q3::inwork 11912,14486 11642,14625
          'type' => 'handicap'
        },
        undef,
-       {
-         'source_id' => 'IM_019006',
-         'until' => 1353254400,
-         'text' => 'Berliner Str. (Pankow): Baustelle, stadtauswärts zwischen Mühlenstr. und Elsa-Brändström-Str. bis Mitte November 2012 gesperrt',
-         'from' => 1342945020,
-         'id' => 2363,
-         'data' => 'userdel	q4::inwork; 10927,17022 10908,17142
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'INKO_113869',
-         'until' => 1354291200,
-         'text' => 'Pichelswerderstr. (Spandau): Baustelle, Fahrtrichtung gesperrt (bis Ende 11/2012) Richtung Freiheit zwischen Ruhlebener Str. und Gewerbehof',
-         'from' => 1342940400,
-         'id' => 2364,
-         'data' => 'userdel	q4::inwork; -2706,13291 -2699,13359 -2669,13488
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        {
          'until' => undef,
          'text' => 'Park am Gleisdreieck, Wege im Westpark: wegen Bauarbeiten können die Wege unpassierbar sein',
@@ -2138,15 +2503,26 @@ userdel	2::inwork 8263,10349 8315,10347 8333,10167 8360,10133
        undef,
        {
          'source_id' => 'IM_019043',
-         'until' => 1355580000,
-         'text' => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt Richtung Prenzlauer Allee zwischen Schönhauser Allee und Greifenhagener Str., bis Mitte Dezember 2012',
+         'until' => 1363356000,
+         'text' => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt Richtung Prenzlauer Allee zwischen Schönhauser Allee und Greifenhagener Str., bis Mitte März 2013',
          'from' => 1344142800,
          'id' => 2368,
          'data' => 'userdel	q4::inwork; 10953,15787 11086,15772
 ',
          'type' => 'handicap'
        },
-       undef,
+       {
+         'source_id' => 'INKO_114376',
+         'until' => undef,
+         'text' => 'Adalbertstr.: Fahrbahn in Richtung Kottbusser Tor gesperrt',
+         'from' => 1342594800,
+         'id' => 2369,
+         'data' => '#: last_checked: 2012-12-21
+#: XXX see also Adalbertstr. (Kreuzberg): Leitungsarbeiten, Fahrtrichtung gesperrt (bis Mitte 10/12) Richtung Kottbusser Tor zwischen Oranienstr. und Kottbusser Tor, 19.07.2012 09:00 Uhr bis 12.10.2012 17:00 Uhr¦INKO_114376¦http://asp.vmzberlin.com/VMZ_LSBB_MELDUNGEN_WEB/Meldungskarte.jsp?back=true&map=true&x=52.50035&y=13.41862&zoom=13&meldungId=INKO_114376
+userdel	q4::inwork; 11389,10463 11393,10390
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        {
@@ -2161,27 +2537,18 @@ userdel	2::night 14838,11410 14776,11400
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_019090',
-         'until' => 1355587200,
-         'text' => 'Köthener Brücke (Tiergarten): Baustelle, Straße gesperrt bis Mitte Dezember 2012',
-         'from' => 1345119120,
-         'id' => 2373,
-         'data' => 'userdel	q4::inwork 8443,10777 8430,10710
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
        {
-         'source_id' => 'wosch',
          'until' => undef,
          'text' => 'Hussitenstr.: Fahrbahn zwischen Stralsunder Str. und Usedomer Str. gesperrt, Ausweichen auf Gehweg',
          'from' => undef,
          'id' => 2377,
-         'data' => '#: last_checked: 2012-09-30 (wosch)
-#: next_check: 2012-12-01
+         'data' => '#: last_checked: 2012-12-25 (Sackgassenschild existiert noch)
+#: next_check: 2013-02-01
+#: by: wosch
 userdel	q4::inwork 9112,14771 9250,14658
 ',
          'type' => 'handicap'
@@ -2196,7 +2563,9 @@ userdel	q4::inwork 9112,14771 9250,14658
          'text' => 'Oderberger Str.: Fahrbahn zwischen Kastanienallee und Choriner Str. wegen Bauarbeiten gesperrt',
          'from' => undef,
          'id' => 2383,
-         'data' => '#: last_checked: 2012-11-14
+         'data' => '#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/oderberger_strasse.html?date=20121116
+#: last_checked: 2012-11-14
+#: next_check: 2012-12-31
 userdel	q4::inwork 10870,14689 10723,14772
 ',
          'type' => 'handicap'
@@ -2206,23 +2575,13 @@ userdel	q4::inwork 10870,14689 10723,14772
          'text' => 'Choriner Str.: Einbahnstraße in Höhe Oderberger Str., Richtung Schönhauser Allee gesperrt',
          'from' => undef,
          'id' => 2384,
-         'data' => '#: last_checked: 2012-11-14
+         'data' => '#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/oderberger_strasse.html?date=20121116
+#: last_checked: 2012-11-14
+#: next_check: 2012-12-31
 userdel	q4::inwork; 10870,14689 10893,14705
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120921.1525.375622.html',
-         'until' => 1355525999,
-         'text' => 'Sanierung der Rheinsteinstraße zwischen Zwieseler Str. und Königswinterstraße, Teile der Fahrbahn sind gesperrt, vom 24. September bis zum 14. Dezember 2012 ',
-         'from' => 1348437600,
-         'id' => 2385,
-         'data' => 'userdel	q4::inwork 18998,8784 19078,8817 19120,8835 19169,8856 19316,8933 19510,9035 19629,9094
-',
-         'type' => 'handicap'
-       },
-       undef,
-       undef,
        undef,
        undef,
        undef,
@@ -2230,29 +2589,29 @@ userdel	q4::inwork; 10870,14689 10893,14705
        undef,
        undef,
        {
-         'source_id' => 'INKO_114523',
-         'until' => 1353682800,
-         'text' => 'Kurfürstenstr. zwischen Genthiner Str. und Einemstr. Richtung Westen Baustelle, Fahrbahn gesperrt, bis 23. November 2012 ',
-         'from' => 1350363600,
-         'id' => 2394,
-         'data' => 'userdel	q4::inwork; 7315,10537 7117,10611 7115,10612 6972,10665
+         'source_id' => 'IM_019421',
+         'until' => 1386169200,
+         'text' => 'Friedrich-Engels-Str. stadteinwärts zwischen Nordendstr. und Platananenstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 2013/Anfang 2014)',
+         'from' => 1353366000,
+         'id' => 2391,
+         'data' => '#: by: http://www.berlin.de/ba-pankow/presse/archiv/20121015.1240.376583.html (Verzögerung bei den Bauarbeiten)
+#: by: http://www.berlin.de/ba-pankow/presse/archiv/20121115.1100.378059.html
+#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/friedrich_engels_strasse.html?date=20121116
+#: by: IM_019421 (allerdings hier nur bis Dezember 2013)
+#: next_check: 2013-12-04
+#: XXX danach bessere Straßenqualität? Radstreifen?
+userdel	q4::inwork; 9149,20336 9235,20125 9266,20048 9300,19949 9333,19853 9355,19789
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20121025.1210.377071.html',
-         'until' => 1354316399,
-         'text' => 'Fahrbahnsanierung der Rathausstraße vom 5. November 2012 bis Ende November 2012, Fahrbahn ist gesperrt',
-         'from' => 1352070000,
-         'id' => 2395,
-         'data' => 'userdel	q4::inwork 15537,12367 15576,12315 15628,12246 15651,12214
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Jüdenstr.: das Überqueren der Grunerstr. ist insbesondere außerhalb der Parkbewirtschaftungszeiten (abends, am Wochenende) sehr unbequem',
+         'text' => 'Jüdenstr.: das Überqueren der Grunerstr. ist insbesondere außerhalb der Parkbewirtschaftungszeiten (abends, am Wochenende) sehr unbequem (eng parkende Autos)',
          'from' => undef,
          'id' => 2396,
          'data' => '#: by: http://www.berlin.de/ba-mitte/buergerdienste/parkraumbewirtschaftung.html (Zone 3)
@@ -2260,24 +2619,14 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20121030.1450.377336.html',
-         'until' => 1355785199,
-         'text' => 'Fahrbahnflächeninstandsetzung in der Winterstraße, voraussichtlich vom 1. November 2012 bis zum 17. Dezember 2012 wird die Fahrbahn wegen Bauarbeiten voll gesperrt ',
-         'from' => 1351638000,
-         'id' => 2397,
-         'data' => 'userdel	q4::inwork 8296,18154 8116,18115
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Richardstr.: Baustelle zwischen Böhmische Str. und Richardplatz, Fahrtrichtung gesperrt',
          'from' => undef,
          'id' => 2398,
-         'data' => '#: last_checked: 2012-11-02
-#: next_check: 2012-11-19
-#: XXX möglicherweise wird die Straße danach asphaltiert sein
+         'data' => '#: XXX bis wann ist die Baustelle fertig?
+#: last_checked: 2012-12-27
 userdel	q4::inwork; 13339,7452 13303,7622
 ',
          'type' => 'handicap'
@@ -2299,7 +2648,11 @@ userdel	q3::inwork 11271,14755 11187,14763
        {
          'source_id' => 'http://www.berliner-zeitung.de/berlin/kollwitzplatz-mit-sack-und-pack-,10809148,11393926.html',
          'recurring' => 1,
-         'data' => '	q4::temp:clock 11317,14564 11285,14515 11229,14422
+         'data' => '#: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3228&options=4 vvv
+	q4::temp:clock 11317,14564 11285,14515 11229,14422
+#: XXX_prog: q3, weil nur ca. 35m betroffen sind 
+	q3::temp:clock 11317,14564 11436,14741
+#: by: ^^^
 ',
          'until' => undef,
          'from' => undef,
@@ -2307,15 +2660,111 @@ userdel	q3::inwork 11271,14755 11187,14763
          'type' => 'gesperrt',
          'id' => 2400
        },
+       undef,
        {
-         'source_id' => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20121114.1215.378008.html',
-         'until' => 1354229999,
-         'text' => 'Straßenbauarbeiten in der Zionskirchstraße von Kastanienallee bis Choriner Straße, Fahrbahn ist gesperrt, vom 15. November 2012 bis ca. 29. November 2012 ',
-         'from' => 1352847600,
-         'id' => 2401,
-         'data' => 'userdel	q4::inwork 10558,14176 10426,14262
+         'source_id' => 'http://www.berlin.de/ba-pankow/verwaltung/tiefbau/nb_schulstr.html',
+         'until' => 1412114400,
+         'text' => 'Neubau der Schulstraße, Bauabschnitt zwischen Duseke- und Grunowstraße',
+         'from' => undef,
+         'id' => 2402,
+         'data' => '#: XXX: zweiter Bauabschnitt wird bis zur Berliner Str. gehen
+#: next_check: 2013-06-01
+userdel	q4::inwork 10479,18007 10498,18014 10473,18113 10545,18143 10582,18159
 ',
          'type' => 'handicap'
+       },
+       undef,
+       undef,
+       undef,
+       {
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20121128.1200.378696.html',
+         'until' => 1375308000,
+         'text' => 'Weg am Nordgraben: Weg wird saniert und ist möglicherweise nicht passierbar',
+         'from' => undef,
+         'id' => 2406,
+         'data' => 'userdel	2::inwork 6378,20460 6428,20487 6487,20512 6601,20542 7083,20584 7289,20618
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.potsdamer-wassertaxi.de/fahrplan.php?y=2012',
+         'until' => undef,
+         'text' => 'Potsdamer Wassertaxi: fährt nur im Sommer an Wochenenden und Feiertagen',
+         'from' => undef,
+         'id' => 2407,
+         'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+	2::temp -12149,1436 -12057,1530 -11789,1502 -11323,1330 -10320,1494 -10098,1745 -10086,1886
+	2::temp -10086,1886 -10055,1628
+#: XXX_prog ^^^
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.bvg.de/index.php/de/3777/name/Faehrlinie+F21.html',
+         'until' => undef,
+         'text' => 'Fähren F21, F23, F24: fahren nur ab ca. April bis Anfang Oktober, fahren nicht am Montag',
+         'from' => undef,
+         'id' => 2408,
+         'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+	2::temp 27090,-2253 27420,-2067 27492,-1880 27490,-1710 27425,-1601 27374,-1573
+	2::temp 29406,3776 29367,3690 29395,3572 29297,3456 29131,3489 29084,3331 29113,3324 29195,3191 29553,2934 29569,2909 29604,2931 29797,2918 29945,3001 29959,3031
+	2::temp 29959,3031 29968,2986
+#: XXX_prog ^^^
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'text' => 'Karniner Fähre: fährt nur von Mai bis Oktober',
+         'from' => undef,
+         'id' => 2409,
+         'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+	2::temp 38674,160390 37644,160344 38049,160420 38325,160573
+#: XXX_prog ^^^
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'text' => 'Westklüne - Ostklüne: keine offizielle Fähre, aber wenn man Glück hat, kann man per Ruderboot übergesetzt werden',
+         'from' => undef,
+         'id' => 2410,
+         'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+	2::temp 42506,161075 42450,161090
+#: XXX_prog ^^^
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'text' => 'Hertzbergstr.: Bauarbeiten zwischen Böhmische Str. und Sonnenallee',
+         'from' => undef,
+         'id' => 2411,
+         'data' => '#: last_checked: 2012-12-27
+#: XXX bis wann ist die Baustelle fertig?
+userdel	q4::inwork; 13444,7879 13474,8060
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_019489',
+         'until' => 1358981999,
+         'text' => 'Straße des 17. Juni: wegen der Fashion Week gesperrt, bis 23. Januar 2013',
+         'from' => 1357040979,
+         'id' => 2412,
+         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Friedhofswege nachts gesperrt',
+         'from' => undef,
+         'id' => 2413,
+         'data' => '	2::night 12851,12602 13108,12859 13046,12956 12878,13229
+	2::night 12773,12683 13046,12956
+'
        }
      
 );

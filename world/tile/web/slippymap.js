@@ -1,5 +1,5 @@
 /* Copyright (c) 2011 OpenLayers
- * Copyright (c) 2012 Wolfram Schneider, http://bbbike.org
+ * Copyright (c) 2012-2013 Wolfram Schneider, http://bbbike.org
  * /
 
 /* run JavaScript code in strict mode, HTML5 */
@@ -43,7 +43,9 @@ function init() {
         projection: new OpenLayers.Projection("EPSG:900913"),
         displayProjection: new OpenLayers.Projection("EPSG:4326")
     });
-    map.addControl(new OpenLayers.Control.KeyboardDefaults());
+    map.addControl(new OpenLayers.Control.KeyboardDefaults({
+        observeElement: document.getElementById("map")
+    }));
 
     // This is the layer that uses the locally stored tiles
     map.addLayer(new OpenLayers.Layer.OSM("BBBike.org Mapnik (de)", "mapnik-german/${z}/${x}/${y}.png", {
@@ -118,8 +120,15 @@ function init() {
         numZoomLevels: 18
     }));
 
-    map.addLayer(new OpenLayers.Layer.OSM("MapBox (OSM)", ["http://a.tiles.mapbox.com/v3/mapbox.mapbox-streets/${z}/${x}/${y}.png", "http://b.tiles.mapbox.com/v3/mapbox.mapbox-streets/${z}/${x}/${y}.png"], {
+    map.addLayer(new OpenLayers.Layer.OSM("MapBox (OSM)", ["http://a.tiles.mapbox.com/v3/examples.map-vyofok3q/${z}/${x}/${y}.png", "http://b.tiles.mapbox.com/v3/examples.map-vyofok3q/${z}/${x}/${y}.png"], {
         numZoomLevels: 17
+    }));
+
+    map.addLayer(new OpenLayers.Layer.OSM("Maptookit Topo (OSM)", ['http://tile1.maptoolkit.net/terrain/${z}/${x}/${y}.png', 'http://tile2.maptoolkit.net/terrain/${z}/${x}/${y}.png'], {
+        numZoomLevels: 19,
+        tileOptions: {
+            crossOriginKeyword: null
+        },
     }));
 
     map.addLayer(new OpenLayers.Layer.OSM("Esri", "http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/${z}/${y}/${x}.png", {
@@ -158,26 +167,35 @@ function init() {
         numZoomLevels: 19
     }));
 
-    // 1.. 4.maptile.lbs.ovi.com/maptiler/v2/maptile/a2e328a0c5/<terrain.day>/3/2/2/256/png8?app_id=<id>&token=<id>
-    map.addLayer(new OpenLayers.Layer.OSM("Nokia Map", nokia("normal.day"), {
-        numZoomLevels: 19
+    map.addLayer(new OpenLayers.Layer.Nokia("Nokia Map", {
+        type: "normal.day",
+        app_id: "SqE1xcSngCd3m4a1zEGb",
+        token: "r0sR1DzqDkS6sDnh902FWQ"
     }));
-    map.addLayer(new OpenLayers.Layer.OSM("Nokia Terrain", nokia("terrain.day"), {
-        numZoomLevels: 19
+    map.addLayer(new OpenLayers.Layer.Nokia("Nokia Terrain", {
+        type: "terrain.day",
+        app_id: "SqE1xcSngCd3m4a1zEGb",
+        token: "r0sR1DzqDkS6sDnh902FWQ"
     }));
-    map.addLayer(new OpenLayers.Layer.OSM("Nokia Satellite", nokia("satellite.day"), {
-        numZoomLevels: 19
+    map.addLayer(new OpenLayers.Layer.Nokia("Nokia Satellite", {
+        type: "satellite.day",
+        app_id: "SqE1xcSngCd3m4a1zEGb",
+        token: "r0sR1DzqDkS6sDnh902FWQ"
     }));
-    map.addLayer(new OpenLayers.Layer.OSM("Nokia Hybrid", nokia("hybrid.day"), {
-        numZoomLevels: 19
+    map.addLayer(new OpenLayers.Layer.Nokia("Nokia Hybrid", {
+        type: "hybrid.day",
+        app_id: "SqE1xcSngCd3m4a1zEGb",
+        token: "r0sR1DzqDkS6sDnh902FWQ"
     }));
-    map.addLayer(new OpenLayers.Layer.OSM("Nokia Public Transit", nokia("normal.day.transit"), {
-        numZoomLevels: 19
+    map.addLayer(new OpenLayers.Layer.Nokia("Nokia Public Transit", {
+        type: "normal.day.transit",
+        app_id: "SqE1xcSngCd3m4a1zEGb",
+        token: "r0sR1DzqDkS6sDnh902FWQ"
     }));
-
-    // http://d.mrsmon.lbs.ovi.com/maptiler/v2/traffictile/b8abea5c78/normal.day.grey/12/2197/1341/256/png8?app_id=SqE1xcSngCd3m4a1zEGb&token=r0sR1DzqDkS6sDnh902FWQ&lg=ENG
-    map.addLayer(new OpenLayers.Layer.OSM("Nokia Traffic", nokia("normal.day.grey"), {
-        numZoomLevels: 19
+    map.addLayer(new OpenLayers.Layer.Nokia("Nokia Traffic", {
+        type: "normal.day.grey",
+        app_id: "SqE1xcSngCd3m4a1zEGb",
+        token: "r0sR1DzqDkS6sDnh902FWQ"
     }));
 
     map.addLayer(new OpenLayers.Layer.OSM("Apple iPhoto (OSM)", ["http://gsp2.apple.com/tile?api=1&style=slideshow&layers=default&lang=de_DE&z=${z}&x=${x}&y=${y}&v=9"], {
@@ -253,10 +271,8 @@ function init() {
         var apiKey = "AqTGBsziZHIJYYxgivLBf0hVdrAk9mWO5cQcb8Yux8sW5M8c8opEC2lZqKR1ZZXf";
 
         // var map = new OpenLayers.Map( 'map');
-        var road = new OpenLayers.Layer.Bing(
-
         // XXX: bing.com returns a wrong zoom level in JSON API call
-        OpenLayers.Util.extend({
+        var road = new OpenLayers.Layer.Bing(OpenLayers.Util.extend({
             initLayer: function () {
                 // pretend we have a zoomMin of 0
                 this.metadata.resourceSets[0].resources[0].zoomMin = 0;
@@ -303,27 +319,6 @@ function init() {
 
     // http://xbb.uz/openlayers/i-Yandex.Maps
 
-    function nokia(name, servers) {
-        // [http://4.maptile.lbs.ovi.com/maptiler/v2/maptile/a2e328a0c5/normal.day/${z}/${x}/${y}/256/png8?app_id=SqE1xcSngCd3m4a1zEGb&token=r0sR1DzqDkS6sDnh902FWQ&lg=ENG"]
-        var app_id = "SqE1xcSngCd3m4a1zEGb";
-        var token = "r0sR1DzqDkS6sDnh902FWQ&lg";
-        var url_prefix = "maptile.lbs.ovi.com/maptiler/v2/maptile/a2e328a0c5";
-
-        if (!servers || servers.length == 0) {
-            servers = (name == "normal.day.grey" ? ["a", "b", "c", "d"] : ["1", "2", "3", "4"]);
-        }
-        if (name == "normal.day.grey") { // traffic
-            url_prefix = "mrsmon.lbs.ovi.com/maptiler/v2/traffictile/b8abea5c78";
-        }
-
-        var url_list = [];
-        for (var i = 0; i < servers.length; i++) {
-            url_list.push("http://" + servers[i] + "." + url_prefix + "/" + name + "/${z}/${x}/${y}/256/png8?app_id=" + app_id + "&token=" + token + "lg=ENG");
-        }
-
-        return url_list;
-    }
-
     function yandex_getTileURL(bounds) {
         var r = this.map.getResolution();
         var maxExt = (this.maxExtent) ? this.maxExtent : YaBounds;
@@ -342,7 +337,6 @@ function init() {
             return url + "&x=" + x + "&y=" + y + "&z=" + z;
         }
     };
-
 
     var YaBounds = new OpenLayers.Bounds(-20037508, -20002151, 20037508, 20072865);
 
@@ -364,6 +358,13 @@ function init() {
         attribution: '<a href="http://beta-maps.yandex.ru/">Яндекс.Карты</a>'
     }));
 
+    map.addLayer(new OpenLayers.Layer.OSM("Waze", ["http://tiles1.waze.com/tiles/${z}/${x}/${y}.png", "http://tiles2.waze.com/tiles/${z}/${x}/${y}.png"], {
+        tileOptions: {
+            crossOriginKeyword: null
+        },
+        numZoomLevels: 19
+    }));
+
 
     // This is the end of the layer
     // Begin of overlay
@@ -378,7 +379,6 @@ function init() {
         numZoomLevels: 19,
         noOpaq: true
     }));
-
 
     map.addLayer(new OpenLayers.Layer.TMS("ADFC Radwegenetz", "", {
         type: 'png',

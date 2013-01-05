@@ -229,7 +229,7 @@ Pölnitzweg/Röbellweg	Zs 16380,26325
 Dahlwitzer/Hamburger	Zs 26666,13864
 Pankower Allee/Kühlweinstr.	Zs 7989,17558
 Morusstr./Nähe Kopfstr.	Zs 12483,7857
-Wrangelstr./Mariannenplatz	Zs 11974,11048
+Wrangelstr./Mariannenplatz	Zs 11978,11033
 S-Bhf. Schlachtensee	Zs -2365,3582
 Köpenicker/Selgenauer	Zs 17234,1743
 Köpenicker/Hadubrand	Zs 21058,8387
@@ -427,6 +427,7 @@ Schönwalder/Pankeweg	Zs 8266,15134
 Lehrter/Kruppstr.	Zs 7320,14143
 #: XXX genaue Position?
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20120712.1025.372492.html
+#: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=5387&options=4
 Elisabethstr./Schönwalder Str.	Zs -3387,15410
 Britzer Str.	Zs 18352,5488
 Schwedt, Vierradener Chaussee	Zs 69009,75559
@@ -455,3 +456,15 @@ Saalestr./S-Bhf. Neukölln	Zs 13245,7194
 Hertha-Block-Promenade/General-Pape-Str.	Zs 8101,8292
 Hertha-Block-Promenade/Wilhelm-Kabus-Str.	Zs 7893,8327
 Jungstr./Scharnweberstr.	Zs 14682,11975
+#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4281&options=4
+#: XXX wurde hier tatsächlich schon ein Zebrastreifen angelegt?
+Saatwinkler Damm	Zs 4523,15538
+#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4383&options=4
+Mierendorffstr.	Zs 3437,12954
+#: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=3777&options=4 (seit Juni 2012)
+#: XXX genaue Position?
+Gatower Str./Emil-Basdeck-Str.	Zs -4767,9597
+#: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=3856&options=4 (seit 2012-05-02)
+#: XXX genaue Position?
+Kladower Damm	Zs -7082,5144
+Eldenaer Str./Liebigstr.	Zs 14088,12830

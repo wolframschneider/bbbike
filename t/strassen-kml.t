@@ -33,7 +33,7 @@ use BBBikeTest;
 
 sub load_from_file_and_check ($);
 
-plan tests => 54;
+plan tests => 66;
 
 use_ok("Strassen::KML")
     or exit 1; # avoid recursive calls to Strassen::new
@@ -177,6 +177,32 @@ for my $kml_filename ('doc.kml',
     like($kml_string, qr{&#\d+;}s, "escaped entities found");
 }
 
+{
+    my($tmpfh,$tmpfile) = tempfile(SUFFIX => '.kml', UNLINK => 1) or die $!;
+    print $tmpfh get_sample_kml_multigeometry_linestring();
+    close $tmpfh or die $!;
+
+    load_from_file_and_check $tmpfile;
+
+    {
+	my @sample_data = ("Route\tX -11023,336 -11003,346 -10997,349\n");
+	my $s = Strassen::KML->new($tmpfile, map => 'bbbike');
+	isa_ok($s, "Strassen", "File <$tmpfile> loaded OK");
+	my @data = @{ $s->data };
+	is_deeply \@data, \@sample_data;
+    }
+
+    {
+	my @sample_data = ("Route\tX 13.085528,52.412301 13.085827,52.412391 13.085915,52.412417\n");
+	my $s = Strassen::KML->new($tmpfile); # leave it as WGS84 data
+	isa_ok($s, "Strassen", "File <$tmpfile> loaded OK");
+	my @data = @{ $s->data };
+	is_deeply \@data, \@sample_data;
+    }
+}
+
+######################################################################
+# Sample KMLs
 sub get_sample_kml_1 {
     <<'EOF';
 <?xml version="1.0" encoding="UTF-8"?>
@@ -272,9 +298,18 @@ sub get_sample_kml_polygons {
 EOF
 }
 
+sub get_sample_kml_multigeometry_linestring {
+    <<'EOF';
+<?xml version="1.0" encoding="UTF-8"?> <kml xmlns="http://earth.google.com/kml/2.2"><Document><name>B.iCycle Track from 2009-09-28_16.06.55.kml</name><Style id="roadStyle"><LineStyle><color>F03399FF</color><width>10</width></LineStyle></Style><Placemark><name>Route</name><styleUrl>#roadStyle</styleUrl><MultiGeometry><LineString><coordinates>13.085528,52.412301,0 13.085827,52.412391,0 13.085915,52.412417,0  </coordinates></LineString></MultiGeometry></Placemark></Document></kml>
+EOF
+}
+
 sub get_sample_data_polygons {
     ("Mitte	X 8294,13544 8298,13544 8310,13522 8305,13513\n");
 }
+
+######################################################################
+# Helpers
 
 # 8 tests
 sub load_from_file_and_check ($) {

@@ -1,5 +1,5 @@
 #!/usr/local/bin/perl
-# Copyright (c) 2009-2012 Wolfram Schneider, http://bbbike.org
+# Copyright (c) 2009-2013 Wolfram Schneider, http://bbbike.org
 #
 # area.cgi - which areas are covered by bbbike.org
 
@@ -53,7 +53,7 @@ sub footer {
 <hr/>
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
-(&copy;) 2008-2012 <a href="http://bbbike.org">BBBike.org</a> // Map data (&copy;) <a href="http://www.openstreetmap.org/copyright" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
+(&copy;) 2008-2013 <a href="http://bbbike.org">BBBike.org</a> // Map data (&copy;) <a href="http://www.openstreetmap.org/copyright" title="OpenStreetMap License">OpenStreetMap.org</a> contributors
 <div id="footer_community">
 </div>
 </div>
@@ -188,7 +188,7 @@ sub header {
     my @javascript = (
         "../html/jquery/jquery-1.4.2.min.js",
 "../html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js",
-"http://maps.google.com/maps/api/js?sensor=$sensor&amp;libraries=weather,panoramio",
+"http://maps.googleapis.com/maps/api/js?v=3.9&sensor=false&language=en&libraries=weather,panoramio",
         "../html/bbbike.js",
         "../html/maps3.js"
     );

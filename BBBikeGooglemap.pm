@@ -372,9 +372,9 @@ EOF
 	"lang":"$lang",
 	"route_length":"$route_length",
 	"city":"$city",
-	"startname":"$startname",
-	"zielname": "$zielname",
-	"vianame": "$vianame",
+	"startname":"@{[ CGI::escapeHTML($startname) ]}",
+	"zielname": "@{[ CGI::escapeHTML($zielname) ]}",
+	"vianame":  "@{[ CGI::escapeHTML($vianame) ]}",
 	"maptype":"cycle"
     };
     elevation_initialize(map, elevation_obj);

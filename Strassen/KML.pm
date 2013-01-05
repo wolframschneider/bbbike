@@ -78,7 +78,11 @@ sub _kmldoc2bbd {
 	if (!$coords) {
 	    $coords = $placemark_node->findvalue('./MultiGeometry/Polygon/outerBoundaryIs/LinearRing/coordinates');
 	    if (!$coords) {
-		next;
+		$coords = $placemark_node->findvalue('./MultiGeometry/LineString/coordinates');
+		if (!$coords) {
+		    warn "kml2bbd: Cannot find coordinates in Placemark";
+		    next;
+		}
 	    }
 	    ## XXX yes? no?
 	    #$cat = "F:$cat";
@@ -88,7 +92,8 @@ sub _kmldoc2bbd {
 		my($lon,$lat) = split /,/, $_;
 		join(",", $converter->($lon,$lat));
 	    } else {
-		$_;
+		my($x,$y) = split /,/, $_; # throwing the elevation away, if any
+		join(",", $x,$y);
 	    }
 	} grep { !/^\s+$/ } split ' ', $coords;
 	if (@c) {

@@ -155,6 +155,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $skip_second_page
 	    $bbbike_start_js_version $bbbike_css_version
 	    $use_file_cache $file_cache
+	    $use_smart_app_banner
 	   );
 
 $gmap_api_version = 3;
@@ -1999,7 +2000,7 @@ sub choose_form {
 	   ) {
 	    $nice_berlinmap = $nice_abcmap = 1;
 	    $prefer_png = 1;
-	} elsif ($bi->is_browser_version("MSIE", 5.0, 9999999)) { # mit IE 8 getestet
+	} elsif ($bi->is_browser_version("MSIE", 5.0, 9.999999)) { # mit IE 8 getestet, mit IE 10 (Surface) geht's nicht! (XXX)
 	    $nice_berlinmap = $nice_abcmap = 1;
 	    # png was for long time unsupported by IE
 	} elsif ($bi->is_browser_version("Opera", 9.0, 9999999)) { # mit 9.80 getestet
@@ -2310,14 +2311,12 @@ sub choose_form {
     }
 
     my %header_args = @weak_cache;
-    $header_args{-expires} = '+6d';
+    $header_args{-expires} = '+1d';
     http_header(%header_args);
     my @extra_headers;
-
     if ($bi->{'text_browser'} && !$bi->{'mobile_device'}) {
 	push @extra_headers, -up => $BBBike::HOMEPAGE;
     }
-
     my $onloadscript = "";
 
     if ($nice_berlinmap || $nice_abcmap) {
@@ -2403,7 +2402,7 @@ EOF
 
 	    print "&nbsp;" x 10;
 	    print qq{<a style="font-size:small" title="}, M("Karte nach rechts schieben"), qq{" href="javascript:smallerMap(1.5)">&gt;&gt;</a>\n};
-	    print qq{<img onclick='javascript:displayCurrentPosition([[8.03000,48.73000], [8.81000,49.27000]], "de");' src="/images/location_icon.png">\n};
+	    print qq{<img onclick='javascript:displayCurrentPosition([[8.03000,48.73000], [8.81000,49.27000]], "de");' src="/images/location-icon.png">\n};
 	    print qq{<a style="font-size:small" title="}, M("Karte nach links schieben"), qq{" href="javascript:smallerMap(-1.5)">&lt;&lt;</a>\n};
 
         }
@@ -2557,10 +2556,10 @@ EOF
 		print "\n";
 	    }
 	    print "<input type=hidden name=" . $type
-	      . "name value=\"$$nameref\">\n";
+	      . 'name value="' . CGI::escapeHTML($$nameref) . qq{">\n};
 	    if ($$ortref) {
 		print "<input type=hidden name=" . $type
-		    . "ort value=\"$$ortref\">\n";
+		    . 'ort value="' . CGI::escapeHTML($$ortref) . qq{">\n};
 	    }
 	    if (defined $q->param($type . "plz")) {
 		print "<input type=hidden name=${type}plz value=\""
@@ -3700,6 +3699,7 @@ EOF
 
     all_crossings();
 
+    print "<!-- check -->";
     print "<form action=\"$bbbike_script\">";
 
     foreach my $param (qw/_start _ziel _via/) {
@@ -3759,7 +3759,7 @@ EOF
             print "<br>\n";
 	} else {
 	    if (defined $plz and $plz eq '') {
-		print $strname;
+		print CGI::escapeHTML($strname);
 	    } else {
 		print coord_or_stadtplan_link($strname, $c || $coords[0], $plz, $is_ort{$type});
 	    }
@@ -3770,7 +3770,7 @@ EOF
 	# Parameter durchschleifen...
 	if (defined $strname) {
 	    print "<input type=hidden name=" . $type .
-	      "name value=\"$strname\">";
+	      'name value="' . CGI::escapeHTML($strname) . '">';
 	}
 	if (defined $q->param($type . "plz")) {
 	    print "<input type=hidden name=" . $type . "plz value=\"" .
@@ -5388,7 +5388,7 @@ sub display_route {
 	    my $filename = filename_from_route($startname, $zielname) . ".txt";
 	    http_header
 		(-type => "text/plain",
-		 @no_cache,
+		 @weak_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
 		);
 	    print Data::Dumper->new([$res], ['route'])->Dump;
@@ -5402,7 +5402,7 @@ sub display_route {
 	    my $filename = filename_from_route($startname, $zielname) . ".yml";
 	    http_header
 		(-type => "text/plain", # XXX text/yaml ?
-		 @no_cache,
+		 @weak_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
 		);
 	    if ($is_short) {
@@ -5416,7 +5416,7 @@ sub display_route {
 	    require JSON::XS;
 	    http_header
 		(-type => "application/json",
-		 @no_cache, # XXX why?
+		 @weak_cache,
 		);
 	    if ($is_short) {
 		my $short_res = {LongLatPath => $res->{LongLatPath}};
@@ -5432,7 +5432,7 @@ sub display_route {
 	} elsif ($output_as eq 'geojson') {
 	    http_header
 		(-type => "application/json",
-		 @no_cache, # XXX why?
+		 @weak_cache,
 		);
 	    require BBBikeGeoJSON;
 	    print BBBikeGeoJSON::bbbikecgires_to_geojson_json($res);
@@ -5460,7 +5460,7 @@ sub display_route {
 	    http_header
 		(-type => 'application/xml',
 		 -charset => '', # to suppress default of iso-8859-1
-		 @no_cache,
+		 @weak_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
 		);
 	    my $new_res = {};
@@ -6030,7 +6030,7 @@ for my $etappe (@out_route) {
 
 	if ($printmode) {
 	    my $url = $q->url(-base => 1);
-	    print "<hr><br>", $fontstr, qq{(&copy;) 1998-2012 <a href="$url">$url</a>\n};
+	    print "<hr><br>", $fontstr, qq{(&copy;) 1998-2013 <a href="$url">$url</a>\n};
 
 	    goto END_OF_HTML;
 	}
@@ -6790,6 +6790,15 @@ sub draw_route {
 	if ($q->param('imagetype') eq 'googlemaps') {
 	    $bbbikedraw_args{Module} = "BBBikeGoogleMaps";
 	    $bbbikedraw_args{BBBikeRoute} = $route;
+            if ($is_beta) {
+                if (0) { # cease -w
+                    $BBBikeDraw::BBBikeGoogleMaps::bbbike_googlemaps_url = $BBBikeDraw::BBBikeGoogleMaps::bbbike_googlemaps_url;
+                    $BBBikeDraw::BBBikeGoogleMaps::maptype = $BBBikeDraw::BBBikeGoogleMaps::maptype;
+                }
+                $BBBikeDraw::BBBikeGoogleMaps::bbbike_googlemaps_url = _bbbikegooglemap_url();
+                $BBBikeDraw::BBBikeGoogleMaps::maptype = "bbbikeorg";
+            }
+
 	} elsif ($q->param('imagetype') eq 'googlemapsstatic') {
 	    $bbbikedraw_args{Module} = "GoogleMapsStatic";
 	    $q->param('imagetype', 'png'); # XXX hacky...
@@ -7982,6 +7991,11 @@ sub header {
     push @$head, "<base target='_top'>"; # Can't use -target option here
     push @$head, $q->meta({-http_equiv => 'Content-Type', -content  => 'text/html; charset=utf-8'}) if $use_utf8;
 
+    if ($use_smart_app_banner && &is_startpage($q) && !is_streets($q)) {
+    	push @$head, $q->meta({-name => 'apple-itunes-app',
+    			   -content => "app-id=555616117,affiliate-data=partnerId=2206068"}) 
+    }
+
     push @$head, cgilink({-rel  => "shortcut icon",
   			  -href => "$bbbike_images/srtbike1.ico",
   			  -type => "image/x-icon", # according to wikipedia official IANA type is image/vnd.microsoft.icon
@@ -8117,7 +8131,7 @@ sub header {
 
 	    # push(@$head, qq|<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.3&amp;sensor=$sensor&amp;language=$my_lang"></script>|);
 
-	    my $google_maps_url = "http://maps.googleapis.com/maps/api/js?sensor=$sensor&amp;language=$my_lang";
+	    my $google_maps_url = "http://maps.googleapis.com/maps/api/js?v=3.9&amp;sensor=$sensor&amp;language=$my_lang";
 	    my @google_libs;
 	    push (@google_libs, "panoramio") if $enable_panoramio_photos; # && is_resultpage($q);
 	    push (@google_libs, "weather") if $enable_google_weather_layer;
@@ -8178,7 +8192,7 @@ sub header {
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad-Routenplaner kostenlos, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
-		     'copyright'=>'(c) 1998-2012 Slaven Rezic + Wolfram Schneider',
+		     'copyright'=>'(c) 1998-2013 Slaven Rezic + Wolfram Schneider',
 		     @viewport
 		    },
 	     -author => $BBBike::EMAIL,
@@ -8375,7 +8389,7 @@ $permalink_text
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
-(&copy;) 1998-2012 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
+(&copy;) 1998-2013 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data (&copy;) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap.org</a> contributors<br >
 
 </div> <!-- copyright -->
@@ -9291,6 +9305,16 @@ sub _is_real_street {
     $type eq 'street' || $type eq 'projected street';
 }
 
+sub _bbbikeleaflet_url {
+    (my $href = $bbbike_script) =~ s{/bbbike2?(\.en)?\.cgi}{/bbbikeleaflet$1.cgi};
+    $href;
+}
+
+sub _bbbikegooglemap_url {
+    (my $href = $bbbike_script) =~ s{/bbbike2?(\.en)?\.cgi}{"/bbbikegooglemap" . ($is_beta ? "2" : "") . ".cgi"}e;
+    $href;
+}
+
 ######################################################################
 #
 # Information
@@ -9465,16 +9489,19 @@ Installation des <a href="$bbbike_html/opensearch/opensearch.html">Suchplugins</
 </form>
 EOF
     }
+    {
+       my $href = _bbbikeleaflet_url();
     print <<EOF;
 <h4 id="leaflet">BBBike &amp; Leaflet</h4>
 Noch in Entwicklung: 
-BBBike-Routen auf einer <a href="bbbikeleaflet.cgi">Leaflet-Karte</a> suchen.<br/>
+BBBike-Routen auf einer <a href="$href">Leaflet-Karte</a> suchen.<br/>
 Um Start- und Zielpunkt zu setzen, einfach Doppel-Klicks oder -Taps machen.
 EOF
+    }
     print <<EOF;
 <h4 id="googlemaps">BBBike auf Google Maps</h4>
 Noch in Entwicklung: 
-BBBike-Routen auf <a href="@{[ bbbikegooglemap_basename() ]}?mapmode=search;maptype=hybrid">Google Maps</a> suchen
+BBBike-Routen auf <a href="@{[ _bbbikegooglemap_url() ]}?mapmode=search;maptype=hybrid">Google Maps</a> suchen
 EOF
     if ($can_palmdoc) {
 	print <<EOF;
@@ -9489,24 +9516,8 @@ EOF
     print "<hr><p>\n";
 
     print "<h3 id='hardsoftware'>Hard- und Software</h3>\n";
-    # funktioniert nur auf dem CS-Server
     my $os;
-    if (open(INFO, "/usr/INFO/Rechnertabelle")) {
-	my $host;
-	eval q{local $SIG{'__DIE__'};
-	       require Sys::Hostname;
-	       $host = Sys::Hostname::hostname();
-	   };
-	while(<INFO>) {
-	    if (/^$host:/o) {
-		print "Hardware: " . (split /:/)[2] . "<p>\n";
-		$os = (split /:/)[3];
-		last;
-	    }
-	}
-	close INFO;
-    }
-    unless (defined $os or $^O eq 'MSWin32') {
+    unless (defined $os || $^O eq 'MSWin32') {
 	open UNAME, "-|" or exec qw(uname -sr);
 	my $uname = <UNAME>;
 	close UNAME;
@@ -9582,7 +9593,7 @@ EOF
 Verwendete Software:
 <ul>
 <li><a href="$perl_url">perl $]</a><a href="$perl_url"><img border=0 align=right src="http://www.perlfoundation.org/attachment/perl_trademark/perl_powered-1.png" alt="Perl"></a>
-<li>perl-Module:<a href="$cpan"><img border=0 align=right src="http://theoryx5.uwinnipeg.ca/images/cpan.jpg" alt="CPAN"></a>
+<li>perl-Module:<a href="$cpan"><img border=0 align=right src="http://www.cpan.org/misc/images/cpan.png" alt="CPAN"></a>
 <ul>
 <li><a href="${scpan}CGI">CGI $CGI::VERSION</a>
 EOF

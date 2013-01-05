@@ -1,5 +1,5 @@
 #!/bin/sh
-# Copyright (c) 2009-2012 Wolfram Schneider, http://bbbike.org
+# Copyright (c) 2009-2013 Wolfram Schneider, http://bbbike.org
 #
 # bbbike-merge - git merge from bbbike.de / master branch
 
@@ -35,7 +35,7 @@ cd bbbike
 git_opt=""
 $verbose || git_opt="-q"
 if ! git merge $git_opt eserte/master; then
-   echo "merged failed: $dir"
+   echo "merged failed: $dir/bbbike"
    exit 1
 fi
 

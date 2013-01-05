@@ -1,5 +1,5 @@
 ###############################################################
-# Copyright (c) 2008-2012 Wolfram Schneider, http://bbbike.org
+# Copyright (c) 2008-2013 Wolfram Schneider, http://bbbike.org
 #
 # Get and convert OpenStreetMap.org data to BBBike
 #
@@ -64,6 +64,7 @@ ELEVATION_SCRIPT=world/bin/elevation-database
 MAX_ELEVATION_SCRIPTS=	1
 BBBIKE_SERVER=""
 BBBIKE_WEBSERVER_DIR=/usr/local/www/bbbike.org
+BBBIKE_WEBSERVER_DOWNLOAD_DIR=/usr/local/www/download.bbbike.org
 BBBIKE_WEB_DIR= ./
 CACHE_HEATER_MAX=50
 TMP=world/tmp
@@ -514,8 +515,12 @@ bbbike2wgs84:
 
 bbbike2wgs84-mapnik:
 	if test -e ${LOG_DIR}/bbbike-mapnik.osm.gz; then mv -f ${LOG_DIR}/bbbike-mapnik.osm.gz ${LOG_DIR}/bbbike-mapnik.osm.gz.old; fi
-	${NICE} ./miscsrc/bbd2osm --optimize-for=mapnik | ${GZIP} > ${LOG_DIR}/bbbike-mapnik.osm.gz.tmp
+	${NICE} ./miscsrc/bbd2osm --optimize-for=mapnik ${DATA_DIR} | ${GZIP} > ${LOG_DIR}/bbbike-mapnik.osm.gz.tmp
 	mv -f ${LOG_DIR}/bbbike-mapnik.osm.gz.tmp ${LOG_DIR}/bbbike-mapnik.osm.gz
+
+bbbike-tile-update:
+	cd ../bbbike-eserte && git pull
+	${MAKE} DATA_DIR=../bbbike-eserte/data bbbike2wgs84-mapnik  bbbike-mapnik-postgis tile-distclean
 
 bbbike-mapnik-config:
 	if test -e ${POSTGIS_STYLE}; then \
@@ -557,6 +562,7 @@ clean: rotate-data-osm
 
 clean-cache cache-clean:
 	du -hs ${BBBIKE_CACHE_DIR}/
+	du -hs ${BBBIKE_CACHE_DIR}/*
 	mkdir -p ${BBBIKE_CACHE_DIR}/${WEB_SERVER} ${BBBIKE_CACHE_DIR}/localhost
 	mkdir -p ${BBBIKE_CACHE_DIR}/tmp.$$$$; \
 	    mv -f ${BBBIKE_CACHE_DIR}/*bbbike.org ${BBBIKE_CACHE_DIR}/localhost ${BBBIKE_CACHE_DIR}/tmp.$$$$ || true; \
@@ -752,20 +758,22 @@ tile-lng-run:
 _pbf_dir=${TILES_DIR}/lnglat/
 _max_size= #-size +100k"
 tile-convert:
-	find ${_pbf_dir} -name '*.pbf' -print0 | ${NICE} ${TIME} xargs -0 -n90 -P${MAX_CPU} ${PBF2OSM} --gzip
+	find ${_pbf_dir} -name '*.pbf' -print0 | ${NICE} ${TIME} xargs -0 -n36 -P${MAX_CPU} ${PBF2OSM} --gzip
 	find ${_pbf_dir} -name '*.pbf' ${_max_size} -print0 | osm_checksum=true ${NICE} ${TIME} xargs -0 -n1 -P${MAX_VCPU} ${OSM2SHAPE}
+	find ${_pbf_dir} -name '*.osm.gz' ${_max_size} -print0 | osm_checksum=true ${NICE} ${TIME} xargs -0 -n1 -P${MAX_VCPU} ${OSM2NAVIT}
 	find ${_pbf_dir} -name '*.pbf' ${_max_size} -print0 | osm_checksum=true ${NICE} ${TIME} xargs -0 -n1 -P${MAX_VCPU} ${OSM2GARMIN_CYCLE}
-	find ${_pbf_dir} -name '*.pbf' ${_max_size} -print0 | osm_checksum=true max_jobs=1 ${NICE} ${TIME} xargs -0 -n1 -P${MAX_CPU} ${OSM2OSMAND}
-	#find ${_pbf_dir} -name '*.pbf' -print0 | ${NICE} ${TIME} xargs -0 -n1 -P${MAX_CPU} ${OSM_CHECKSUM}
-	#find ${_pbf_dir} -name '*.osm.gz' -print0 | ${NICE} ${TIME} xargs -0 -n1 -P${MAX_CPU} ${OSM_CHECKSUM}
+	find ${_pbf_dir} -name '*.pbf' ${_max_size} -print0 | osm_checksum=true max_jobs=1 java_heap=1500M ${NICE} ${TIME} xargs -0 -n1 -P${MAX_VCPU} ${OSM2OSMAND}
 
 tile-extract: tile-lng tile-lnglat tile-lng-run tile-lnglat-run
 
 tile-csv:
-	for format in pbf gz garmin-cycle.zip shp.zip obf.zip; do \
+	rm -f ${TILES_DIR}/etc/tile-*.csv
+	mkdir -p ${TILES_DIR}/etc
+	for format in pbf osm.gz garmin-cycle.zip shp.zip navit.zip obf.zip; do \
 	   ( cd ${TILES_DIR}/lnglat; find . -name '*.'$$format | xargs du -k |sort -n | \
-	     perl -npe 's,\S+/p_(.*?)\.osm\.\S+,\1,; s,_, ,g' ) > ${TILES_DIR}/tile-$$format.csv; \
+	     perl -npe 's,\S+/planet_(.*?)\.osm\.\S+,\1,; s,_, ,g' ) > ${TILES_DIR}/etc/tile-$$format.csv; \
 	done
+	ls -l ${TILES_DIR}/etc/tile-*.csv
 
 tile-checksum:
 	cd ${_pbf_dir}; pwd=`pwd`; \
@@ -775,6 +783,9 @@ tile-checksum:
 
 tile-distclean:
 	rm -rf ${TILES_DIR}
+
+tile-rsync:
+	rsync -av ${TILES_DIR}/lnglat/ ${BBBIKE_WEBSERVER_DOWNLOAD_DIR}/osm/planet/${TILES_DIR}/lnglat/
 
 # for errors look in ./tile/tmp
 tile: tile-extract tile-convert tile-checksum tile-csv 
@@ -844,7 +855,7 @@ help:
 	@echo "  [ bbbike-osm2pbf | osm2pbf | pbf2osm ]"
 	@echo "  [ osm2garmin | osm2shape | osm2osmand | osm2navit ]"
 	@echo "  [ bbbike2wgs84-mapnik | bbbike-mapnik-config ]"
-	@echo "  [ bbbike-mapnik-postgis ]"
+	@echo "  [ bbbike-mapnik-postgis | bbbike-tile-update ]"
 	@echo ""
 	@echo "  [ clean | dist-clean | clean-cache | clean-planet | clean-tile ]"
 	@echo ""
@@ -866,7 +877,8 @@ help:
 	@echo ""
 	@echo "  [ staging | extract-bbbike-org-install | extract-distclean ]"
 	@echo "  [ extract-gc | extract-gc7 | extract-gc-osm ]"
-	@echo "  [ tile | tile-extract | tile-convert | tile-csv | tile-checksum | tile-distclean ]"
+	@echo "  [ tile | tile-extract | tile-convert | tile-csv | tile-checksum ]"
+	@echo "  [ tile-distclean | tile-rsync ]"
 	@echo "  [ test-org | test ]"
 	@echo ""
 	@echo "see also ./world/README"

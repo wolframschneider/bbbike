@@ -411,6 +411,7 @@ Am Feuchten Winkel|Heinersdorf|13129|12143,19484
 Am Feuchten Winkel|Pankow|13189|12143,19484
 Am Fichtenberg|Lichterfelde|12165|4215,5419
 Am Fichtenberg|Steglitz|12165|4215,5419
+Am Filmlager|Köpenick|12555|22802,5325
 Am Finkenherd|Falkenhagener Feld|13589|-6809,15684
 Am Fischtal|Zehlendorf|14169|682,4436
 Am Fliederbusch|Westend|14055|1269,9946
@@ -697,6 +698,7 @@ Am Weidendamm|Mitte|10117|9444,12864
 Am Weihenhorst|Karlshorst|10318|17590,8231
 Am Weinhang|Kreuzberg|10965|8950,8989
 Am Weißen Steg|Zehlendorf|14165|324,2253
+Am Werksgarten|Köpenick|12555|22754,4919
 Am Westkreuz|Charlottenburg|14055|2195,10452
 Am Wieselbau|Zehlendorf|14169|317,5002
 Am Wiesenende|Lübars|13469|6655,22748
@@ -775,6 +777,7 @@ An der Bucht|Rummelsburg|10317|15465,10481
 An der Dorfkirche|Marienfelde|12277|8039,834
 An der Eiche|Karlshorst|10318|19952,8174
 An der Felgenlake|Falkenhagener Feld|13589|-6750,15277
+An der Filmfabrik|Köpenick|12555|22851,5321
 An der Fließwiese|Westend|14052|-839,12836
 An der Gatower Heide|Kladow|14089|-8408,7429
 An der Hasenfurt|Heiligensee|13503|-992,22546
@@ -788,6 +791,7 @@ An der Kappe|Spandau|13583|-4505,14510
 An der Karlshorster Heide|Karlshorst|10318|19050,7931
 An der Karolinenhöhe|Staaken|13593|-5868,11800
 An der Karolinenhöhe|Wilhelmstadt|13593|-5868,11800
+An der Kieler Brücke|Mitte|10115|7883,14508
 An der Kleinbahn (Kolonie)|Rudow|12355|16864,-420
 An der Kolonnade|Mitte|10117|8964,11798
 An der Kommandantur|Mitte|10117|9994,12368
@@ -1953,7 +1957,7 @@ Bundesallee|Friedenau|12161|5348,8248
 Bundesallee|Wilmersdorf|10715|5348,8248
 Bundesallee|Wilmersdorf|10717|5348,8248
 Bundesallee|Wilmersdorf|10719|5348,8248
-Bundesplatz|Wilmersdorf|10715|5348,8248
+Bundesplatz|Wilmersdorf|10715|5357,8013
 Bundesratufer|Moabit|10555|6007,12865
 Bundesring|Tempelhof|12101|8943,8073
 Bundschuhweg|Frohnau|13465|3559,25760
@@ -3344,7 +3348,7 @@ Frankfurter Tor|Friedrichshain|10243|13807,12232
 Franklinstr.|Charlottenburg|10587|5300,12706
 Frans-Hals-Platz|Mahlsdorf|12623|25805,12906
 Frans-Hals-Str.|Mahlsdorf|12623|25615,12912
-Franz-Amrehn-Platz|Steglitz|12163|5165,6119
+Franz-Amrehn-Platz|Steglitz|12163|5137,6066
 Franz-Cornelsen-Weg|Wilmersdorf|14197|3612,7335
 Franz-Ehrlich-Str.|Adlershof|12489|19767,3307
 Franz-Grothe-Weg|Dahlem|14195|2946,6217
@@ -4596,6 +4600,8 @@ Haydnstr.|Steglitz|12203|4739,4536
 Haynauer Str.|Lankwitz|12249|8008,2831
 Haßfurter Weg|Pankow|13189|11888,18338
 Haßlingerweg|Reinickendorf|13409|7847,16968
+Hebammensteigbrücke|Französisch Buchholz|13127|13168,21706
+Hebammensteig|Französisch Buchholz|13127|13008,21783
 Hebbelstr.|Charlottenburg|10585|3297,11967
 Hechelstr.|Reinickendorf|13403|4845,17807
 Hechtgraben|Dahlem|14195|3133,5572
@@ -5055,6 +5061,7 @@ Hohenzollernstr.|Hermsdorf|13467|3173,23610
 Hohenzollernstr.|Lichtenrade|12307|9570,-2311
 Hohenzollernstr.|Wannsee|14109|-6530,788
 Hohenzollernstr.|Zehlendorf|14163|262,2712
+Hoher Bogen|Wilmersdorf|10713|3831,8674
 Hoher Steinweg|Spandau|13597|-2967,14566
 Hoher Wallgraben|Karlshorst|10318|17962,8217
 Hoher Weg|Friedrichshagen|12587|23648,5395
@@ -5427,6 +5434,7 @@ Jathoweg|Wittenau|13437|5363,20192
 Jean-Calas-Weg|Französisch Buchholz|13127|11822,23074
 Jean-Jaurès-Str.|Waidmannslust|13469|4613,22016
 Jean-Jaurès-Str.|Wittenau|13469|4613,22016
+Jean-Monnet-Str.|Moabit|10557|7948,13474
 Jean-Paul-Weg|Lichtenrade|12305|9613,228
 Jeanette-Wolff-Str.|Rudow|12355|17704,-257
 Jeanne-Mammen-Bogen|Charlottenburg|10623|4954,10876
@@ -10405,6 +10413,7 @@ Sodtkestr.|Prenzlauer Berg|10409|12346,15677
 Soester Str.|Lichterfelde|12207|4101,1012
 Sohnreystr.|Steglitz|12169|6861,4914
 Söhtstr.|Lichterfelde|12203|4091,3440
+Sokratesweg|Karlshorst|10318|18514,9552
 Soldauer Allee|Westend|14055|669,11003
 Soldauer Platz|Westend|14055|622,10980
 Soldiner Str.|Gesundbrunnen|13359|8689,17097
@@ -11843,7 +11852,7 @@ Veteranenstr.|Mitte|10119|10211,14139
 Vetschauer Allee|Karolinenhof|12527|26188,-1237
 Via Tilia|Wannsee|14109|-7548,-1097
 Vicki-Baum-Str.|Rummelsburg|10317|15753,10353
-Victor-Klemperer-Platz|Marzahn|12679|20648,15884
+Victor-Klemperer-Platz|Marzahn|12679|20714,15834
 Viebahnstr.|Schmöckwitz|12527|25432,-2404
 Viehtrift|Prenzlauer Berg|10247|14029,12954
 Vienweg|Französisch Buchholz|13127|11977,22801

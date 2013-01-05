@@ -82,11 +82,20 @@ targobank_osm.bbd:	../data_berlin_osm_bbbike/_unhandled
 	 perl -nle '/(citibank|targobank)/i and do { s{\tX }{\tIMG:${BBBIKEAUXDIR}/images/targobank.png }; print }' ../data_berlin_osm_bbbike/_unhandled) > targobank_osm.bbd~
 	mv targobank_osm.bbd~ targobank_osm.bbd
 
-upload-personal: $(HOME)/.bbbike/personal.wpt
-	gpsman readput GPSMan WP $(HOME)/.bbbike/personal.wpt
+#upload-personal: $(HOME)/.bbbike/personal.wpt
+#	gpsman readput GPSMan WP $(HOME)/.bbbike/personal.wpt
+#
+#$(HOME)/.bbbike/personal.wpt:	$(HOME)/.bbbike/personal.bbd
+#	${GREPSTRASSEN} -catrx ':GPS' $(HOME)/.bbbike/personal.bbd | ${MISCSRCDIR}/bbd2gpsman.pl -symbol danger > $(HOME)/.bbbike/personal.wpt
 
-$(HOME)/.bbbike/personal.wpt:	$(HOME)/.bbbike/personal.bbd
-	${GREPSTRASSEN} -catrx ':GPS' $(HOME)/.bbbike/personal.bbd | ${MISCSRCDIR}/bbd2gpsman.pl -symbol danger > $(HOME)/.bbbike/personal.wpt
+$(HOME)/.bbbike/personal.gpi:	$(HOME)/.bbbike/personal.bbd
+	${GREPSTRASSEN} -v -namerx '^OLD' $> | ${MISCSRCDIR}/bbd2gpx - | gpsbabel -i gpx -o garmin_gpi /dev/stdin $@
+
+upload-personal: $(HOME)/.bbbike/personal.gpi
+	@echo "Please execute the following as as root:"
+	@echo ""
+	@echo "    mount /mnt/garmin && cp $(HOME)/.bbbike/personal.gpi /mnt/garmin/garmin/poi/ && umount /mnt/garmin"
+	@echo ""
 
 ######################################################################
 # OSM downloads
@@ -350,9 +359,13 @@ do-garmindata-dist:	${BBBIKETMPDIR}/bbbike_routable_gmapsupp.img
 	cd /tmp && \
 	    zip -r bbbike-b_de-garmin-$(TODAY_DATE).zip bbbike-b_de-garmin
 
-garmindata-sf-release:	do-garmindata-dist
-	@echo "Go to https://sourceforge.net/downloads/bbbike/bbbikedata-b_de/"
-	@echo "Create a folder $(TODAY_DATE)"
-	@echo "Then upload the file:"
+garmindata-sf-release:	do-garmindata-dist garmindata-sf-release-show-notice:
+
+garmindata-sf-release-show-notice:
+	@echo "Upload the file:"
 	@echo ""
 	@echo "    rsync -v /tmp/bbbike-b_de-garmin-$(TODAY_DATE).zip eserte@frs.sourceforge.net:/home/frs/project/bbbike/bbbikedata-b_de/$(TODAY_DATE)/"
+	@echo ""
+	@echo "Then check if things were created correctly in "
+	@echo "    https://sourceforge.net/downloads/bbbike/bbbikedata-b_de"
+	@echo "    https://sourceforge.net/downloads/bbbike/bbbikedata-b_de/$(TODAY_DATE)"

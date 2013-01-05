@@ -112,12 +112,14 @@ input#city, input#email { width: 95%; }
     left: 50%;
     
     margin-left: -350px;
-    width: 700px;
+    // width: 640px;
     
     background-color: #EEE;
     color: #333;
     border: 1px solid black;
 }
+.jqmWindowLarge { width: 640px; }
+.jqmWindowSmall { width: 340px; }
 
 * html .jqmWindow {
      position: absolute;
@@ -151,5 +153,28 @@ div.dialog-msg td {
     padding: 2px 0px;
     border-bottom: 1px dotted #ffffff;
     font-size: small;
+}
+
+img.logo { border: 0px; }
+span#social { padding-right: 0.5em }
+div#header_links { font-size: small; }
+span.current_language { font-size: large; }
+span#language_switch a { color: green; }
+
+span#maplink { font-size: small; }
+div#footer { font-size: small; text-align: center; padding-top: 0.7em; }
+div#footer_top { text-align: left; }
+div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
+a         {text-decoration: none; color: green; }
+
+a.tools-helptrigger img, a.tools-helptrigger-small img { 
+   height: 13px;
+   width: 13px;
+   border: 0;
+   opacity:0.75;
+}
+
+a.tools-helptrigger:hover img, a.tools-helptrigger-small:hover img { 
+  opacity: 1.0;
 }
 

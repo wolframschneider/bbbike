@@ -352,8 +352,11 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5644,6936
 	X 5817,7223
 	X 5397,7205
+#: note: zusammenhängende Ampelanlage vvv
 	X 5357,8013
-	X 5356,7862
+	X 5331,8012
+#: note ^^^
+	X 5346,7860
 	X 5635,8011
 	X 4788,7257
 	X 4743,7212
@@ -427,10 +430,10 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11979,8014
 	X 12317,7007
 	X 12753,8187
-	X 12980,7597
+	X 12974,7598
 	F 12992,7545
-	X 13058,7165
-	X 13095,6926
+	X 13051,7157
+	X 13085,6925
 	X 12649,6833
 	X 13236,6489
 	X 13566,5792
@@ -766,6 +769,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 17736,5441
 	X 17645,5328
 #: note: Ampel ohne Fuß/Radquerung der Michael-Brückner-Str.
+#: XXX eventuell wird diese Einschränkung aufgehoben:
+#: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4
+#: last_checked: 2012-10-21
 	X 18080,5376
 	X 19904,3464
 	X 20565,2754
@@ -954,7 +960,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4708,9498
 	X 4732,9925
 	X 16414,25575
-	X 12693,18081
+	X 12690,18079
 	X 12736,17998
 	X 12010,16774
 	X 11997,15834
@@ -1085,7 +1091,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 14702,12157
 	X 16207,11937
 	X 6575,8469
-	X 5361,7423
+	X 5352,7428
 	X 8249,16741
 	X 7970,17087
 	X 8900,15146
@@ -1541,6 +1547,8 @@ nur Richtung O	X 8142,7221
 	X -5513,12266
 	X -4412,12179
 	X -4351,12460
+#: note: nachts zwischen 22 Uhr und 5 Uhr ausgeschaltet; Anforderungsampel, Wartezeit für Fußgänger zwischen 5 Sekunden und 1 Minute
+#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4408&options=4 (Zeiten)
 	F 404,12414
 	F 1264,11840
 	F 1775,11135
@@ -1647,7 +1655,7 @@ nur Richtung O	X 8142,7221
 	X 18676,8236
 	X 18807,9746
 	X 14614,9052
-	X 5360,7554
+	X 5350,7554
 	X 5783,9060
 	X 5189,9397
 	X 4957,9437
@@ -1753,7 +1761,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	F 11310,14953
 #: by ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # REMOVED (existiert nicht mehr, hier ist jetzt eine Spielstraße) --- #: by: Joern (js): ---	F 11593,15051
-	X 5421,8337
+	X 5399,8344
 #: XXX_prog: lange Wartezeiten für Radfahrer (zwei Umläufe)
 	X 8241,11024
 #: XXX_indoor eigentlich zwei Fußgängerampeln in ca. 50-100m Abstand
@@ -2501,6 +2509,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 14802,11784
 	X -1810,16391
 	X -1675,16813
+#: note: Bedarfsampelm, am Wochenende abgeschaltet (by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4302&options=4)
 	F -2072,13403
 	F 417,12115
 	F 6438,11141
@@ -2532,6 +2541,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20100805.1445.305319.html
 	X -7365,15306
 #: note: am Wochenende ausgeschaltet (immer?)
+#: XXX Ampel wird vielleicht zur Roedernstr. verlegt
+#: by: http://www.berlin.de/ba-marzahn-hellersdorf/bvv-online/vo020.asp?VOLFDNR=4836&options=4
 	F 23933,8879
 #: note: am Wochenende ausgeschaltet (immer?)
 	F 24435,10065
@@ -2547,7 +2558,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 8078,8772
 	F 9781,16569
 #: note: Ausfahrt Neuköllner Tor
-	X 13076,7044
+	X 13068,7043
 #: XXX_prog: Ampel gilt nur in Richtung Nordwest, in der anderen Richtung nur für Linksabbieger
 	X 20451,2869
 #: note: provisorische Ampel
@@ -2641,7 +2652,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: provisorische Ampel
 #: XXX Siehe auch Baustelle in der Voßstr.
 #: last_checked: 2012-07-13
-#: next_check: 2012-12-01
+#: next_check: 2013-03-15
 	X::inwork 9000,11727
 	X 25451,14018
 #: by: ossi vvv
@@ -2650,7 +2661,6 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: wahrscheinlich mit der Ampel am Adlergestell synchronisiert
 #: note: südliche Ampel dient auch als Straßenbahnampel
 	F 19842,3419
-#: XXX genaue Position?
 	X 19111,2777
 #: by: ^^^
 	F 4651,6037
@@ -2676,7 +2686,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 10127,19992
 	F 5628,14063
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Under den Linden) vvv
-#: last_checked: 2012-07-16 vvv
+#: last_checked: 2012-11-25 vvv
 #: next_check: 2013-12-31 vvv
 	X::inwork 9123,12500
 	X::inwork 9280,12883
@@ -2687,7 +2697,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX ^^^
 # 
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung an der Invalidenstraße) vvv
-#: last_checked: 2012-10-08 vvv
+#: last_checked: 2012-12-25 vvv
 #: next_check: 2013-05-31 vvv
 	X::inwork 8732,14098
 	X::inwork 8879,13913
@@ -2731,6 +2741,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Anforderungsampel
 	F 11952,14002
 	X 8577,11896
+#: by: http://www.berlin.de/ba-steglitz-zehlendorf/bvv-online/vo020.asp?VOLFDNR=4315&options=4
+	F 6834,4805
+#: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20121129.1435.378795.html vvv
+	X 20832,3170
+	X 20927,3292
+#: by: ^^^
+	X 4937,6205
 ################################################################################
 #: note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10067917/966975/
@@ -2745,7 +2762,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -13516,-1517
 	X -13879,-1445
 	X -13625,-902
-	X -12878,-665
+	X -12877,-655
 	X -13231,-763
 	X -12265,-418
 	X -12045,-757
@@ -2831,7 +2848,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F -11160,-2014
 	F -10702,-1851
 	F -12247,-1858
-	F -11540,-1543
+	F -11571,-1583
 	F -12661,-14
 	F -13137,-278
 	F -13811,182
@@ -2843,9 +2860,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F -13212,-1356
 	F -7214,-4362
 	X -13778,4492
-	X -13067,-706
+	X -13044,-709
 	F -11133,262
 	X 18417,10738
+#: XXX temporäre Ampel?
+#: last_checked: 2012-12-09
+	F -12531,-781
+	F -12223,-713
 #: note: ^^^
 ################################################################################
 #: note: Ampeln elsewhere vvv
