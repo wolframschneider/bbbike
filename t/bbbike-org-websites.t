@@ -79,7 +79,8 @@ my @list = (
         'match'    => [ "</html>", "Choose map type", ' src="js/mc.js"' ]
     },
     {
-        'page' => 'http://a.tile.bbbike.org/osm/mapnik-german/15/17602/10746.png',
+        'page' =>
+          'http://a.tile.bbbike.org/osm/mapnik-german/15/17602/10746.png',
         'min_size'  => 10_000,
         'match'     => [],
         'mime_type' => 'image/png'
