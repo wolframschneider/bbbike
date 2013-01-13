@@ -37,7 +37,7 @@ system($data);
 is( $?, 0, "Map Compare: tested all tile images" );
 
 my $st = stat($tempfile);
-cmp_ok( $st->size, '>', 1_710_000, 'Got enough image tile data' );
+cmp_ok( $st->size, '>', 1_680_000, 'Got enough image tile data' );
 
 unlink $tempfile;
 
