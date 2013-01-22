@@ -32,7 +32,7 @@ my ( $fh, $tempfile ) = tempfile();
 
 my $data =
   q[perl -ne 'chomp; print qq{curl -sSf "$_" || echo "$_" >&2 \0} if !/^\s*#/' ]
-  . qq[$url_file | xargs -0 -n1 -P8 /bin/sh -c > $tempfile];
+  . qq[$url_file | xargs -0 -n1 -P2 /bin/sh -c > $tempfile];
 system($data);
 is( $?, 0, "Map Compare: tested all tile images" );
 
