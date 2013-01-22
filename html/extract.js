@@ -157,7 +157,16 @@ function init() {
         if (config.enable_polygon) {
             setTimeout(function () {
                 var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
-                vectors.addFeatures(plot_polygon(polygon));
+                var feature = plot_polygon(polygon);
+                vectors.addFeatures(feature);
+                if (coords) {
+                    // trigger a recalculation of polygon size
+                    setTimeout(function () {
+                        vectors.events.triggerEvent("sketchcomplete", {
+                            "feature": feature
+                        });
+                    }, 500);
+                }
                 opt.back_function();
 
             }, 700);
@@ -848,6 +857,8 @@ function validateControlsAjax() {
         debug("found pg: " + $("#pg").val() + " as: " + $("#as").val());
     }
 
+    //
+    // polygon area in relation to the bounding rectangle box.
     // value: 0...1
     var polygon = state.polygon.area && skm > 0 ? (state.polygon.area / skm / 1000000) : 1;
     $("#pg").attr("value", polygon);
@@ -856,7 +867,16 @@ function validateControlsAjax() {
 
     debug("p frac: " + polygon + " skm: " + skm);
 
+    // plot area size and file size
     $.getJSON(url, function (data) {
+        // adjust polygon size for huge data, the area size is usually not normal (e.g. sea coast)
+        if (data.size > 50000) {
+            // min. size factor 0.3 or 0.5 for very large areas
+            var p = polygon + (1 - polygon) * (data.size > 300000 ? 0.5 : 0.3);
+            debug("reset polygon of size: " + data.size + " from polygon: " + polygon + " to: " + p);
+            polygon = p;
+        }
+
         var filesize = show_filesize(skm * polygon, data.size * polygon);
         show_skm(skm * polygon, filesize);
     });
@@ -971,7 +991,7 @@ function polygon_init() {
     var renderer = OpenLayers.Layer.Vector.prototype.renderers;
 
     function report(event) {
-        debug(event.type, event.feature ? event.feature.id : event.components);
+        debug("report: " + event.type); // + " " + event.feature ? event.feature.id : event.components);
         if (event.feature) {
             if (event.type == "featuremodified" || event.type == "sketchcomplete") {
                 serialize(event.feature);
@@ -1007,6 +1027,8 @@ function polygon_init() {
     };
 
     function serialize(obj) {
+        debug("serialize");
+
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
 
         // var bounds = obj.geometry.bounds.clone().transform(map.getProjectionObject(), epsg4326);
@@ -1018,6 +1040,7 @@ function polygon_init() {
         var vec = feature.geometry.getVertices();
 
         debug("p len: " + vec.length);
+        // Calculate the approximate area of the polygon were it projected onto the earth.
         var polygon_area = feature.geometry.getGeodesicArea();
         state.polygon.area = polygon_area;
 
