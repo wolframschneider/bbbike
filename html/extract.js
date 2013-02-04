@@ -1078,7 +1078,7 @@ function polygon_init() {
 
         // rotate, resize, move
         if (rotate) {
-            controls.modify.mode |= OpenLayers.Control.ModifyFeature.ROTATE;
+            // controls.modify.mode |= OpenLayers.Control.ModifyFeature.ROTATE;
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.RESIZE;
             controls.modify.mode |= OpenLayers.Control.ModifyFeature.DRAG;
 
