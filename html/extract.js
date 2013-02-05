@@ -883,7 +883,7 @@ function validateControlsAjax() {
 }
 
 function show_filesize(skm, real_size) {
-    var extract_time = 600; // standard extract time in seconds for PBF
+    var extract_time = 800; // standard extract time in seconds for PBF
     var format = $("select[name=format] option:selected").val();
     var size = real_size ? real_size / 1024 : 0;
     debug("skm: " + parseInt(skm) + " size: " + Math.round(size) + "MB " + format);
