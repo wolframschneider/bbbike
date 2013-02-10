@@ -25,7 +25,8 @@ var config = {
     // in MB
     "max_size": {
         "default": 768,
-        "obf.zip": 250
+        "obf.zip": 250,
+        "mapsforge-osm.zip": 150
     },
 
     debug: 0,
@@ -814,9 +815,9 @@ function show_skm(skm, filesize) {
     } else if (filesize.size > config.max_size["default"]) {
         $("#size").html("Max file size: " + config.max_size["default"] + " MB.");
         $("#export_osm_too_large").show();
-    } else if (filesize.format == "obf.zip" && filesize.size > config.max_size["obf.zip"]) {
+    } else if (config.max_size[filesize.format] && filesize.size > config.max_size[filesize.format]) {
         // Osmand works only for small areas less than 200MB
-        $("#size").html("Max osmand file size: " + config.max_size["obf.zip"] + " MB.");
+        $("#size").html("Max osmand file size: " + config.max_size[filesize.format] + " MB.");
         $("#export_osm_too_large").show();
     } else {
         $("#export_osm_too_large").hide();
@@ -932,6 +933,10 @@ function show_filesize(skm, real_size) {
         "o5m.bz2": {
             "size": 0.88,
             "time": 1.1
+        },
+        "mapsforge-osm.zip": {
+            "size": 1.1,
+            "time": 11
         },
         "navit.zip": {
             "size": 0.8,
