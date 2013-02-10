@@ -814,9 +814,9 @@ function show_skm(skm, filesize) {
     } else if (filesize.size > config.max_size["default"]) {
         $("#size").html("Max file size: " + config.max_size["default"] + " MB.");
         $("#export_osm_too_large").show();
-    } else if (filesize.format == "osm.obf.zip" && filesize.size > config.max_size["osm.obf.zip"]) {
+    } else if (filesize.format == "obf.zip" && filesize.size > config.max_size["obf.zip"]) {
         // Osmand works only for small areas less than 200MB
-        $("#size").html("Max osmand file size: " + config.max_size["osm.obf.zip"] + " MB.");
+        $("#size").html("Max osmand file size: " + config.max_size["obf.zip"] + " MB.");
         $("#export_osm_too_large").show();
     } else {
         $("#export_osm_too_large").hide();
