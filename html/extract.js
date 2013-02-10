@@ -576,7 +576,7 @@ function checkform() {
     }
 
     if (ret > 0) {
-        alert(ret == 1 ? "Please fill out all fields!" : "Use a smaller area!");
+        alert(ret == 1 ? "Please fill out all fields!" : "Use a smaller area! Max size: " + max_size + "MB");
     }
 
     return ret == 0 ? true : false;
