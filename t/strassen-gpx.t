@@ -31,13 +31,6 @@ use BBBikeTest qw(gpxlint_string);
 
 use Route;
 
-# XXX Temporary until segfaults with XML::Twig/XML::LibXML are resolved...
-if (do { require POSIX; POSIX::strftime("%F", localtime) } lt "2013-01-15") {
-    delete $ENV{BBBIKE_LONG_TESTS};
-} else {
-    warn "Please remove/resolve this TODO...";
-}
-
 sub keep_file ($$);
 sub load_from_file_and_check ($$);
 
@@ -119,7 +112,7 @@ for my $use_xml_module (@variants) {
 	    deep_strassen_check($s, $s2, $xml_res);
 
 	    # Parsing from file
-	    my($ofh, $ofilename) = tempfile(UNLINK => 1, SUFFIX => ".gpx");
+	    my($ofh, $ofilename) = tempfile(UNLINK => 1, SUFFIX => "_strassen_gpx.gpx");
 	    print $ofh $gpx_sample;
 	    close $ofh;
 
@@ -164,7 +157,7 @@ for my $use_xml_module (@variants) {
 	    deep_strassen_check($s, $s2, $xml_res);
 
 	    # Parsing from file
-	    my($ofh, $ofilename) = tempfile(UNLINK => 1, SUFFIX => ".gpx");
+	    my($ofh, $ofilename) = tempfile(UNLINK => 1, SUFFIX => "_strassen_gpx.gpx");
 	    print $ofh $gpx_sample;
 	    close $ofh;
 
@@ -198,7 +191,17 @@ for my $use_xml_module (@variants) {
 	    $parsed_rte{$use_xml_module} = $s->as_string;
 	}
 
+	SKIP:
 	{
+	    # See also http://www.freebsd.org/cgi/query-pr.cgi?pr=174917
+	    # and https://rt.cpan.org/Ticket/Display.html?id=83037
+	    skip "Possible segfault with large files", 3
+		if (
+		    $do_long_tests                 # fails only with large files (20_000 or 100_000 build nodes)
+		    && $] < 5.016                     # does not fail with perl 5.16.x
+		    && $use_xml_module eq 'XML::Twig' # does not fail with libxml2
+		   );
+
 	    # Data file with points only
 	    my $data_file = File::Spec->file_name_is_absolute($bbdfile) ? $bbdfile : "$FindBin::RealBin/../data/$bbdfile";
 	    my $s0 = Strassen->new($data_file);
@@ -209,7 +212,7 @@ for my $use_xml_module (@variants) {
 
 ## Cannot reproduce this anymore, neither with perl5.8.8/XML::Twig 3.26 nor with perl5.10.0/XML::Twig 3.32
 # 	    local $TODO;
-# 	    if ($Strassen::GPX::use_xml_module eq 'XML::Twig' && $XML::Twig::VERSION <= 3.32) {
+	    # 	    if ($Strassen::GPX::use_xml_module eq 'XML::Twig' && $XML::Twig::VERSION <= 3.32) {
 # 		$TODO = "Possible XML::Twig problem, missing preamble or missing encoding of data";
 # 	    }
 	    gpxlint_string($xml_res, "xmllint for bbd2gpx output ($bbdfile)");
@@ -229,7 +232,7 @@ for my $use_xml_module (@variants) {
 # 	    if ($Strassen::GPX::use_xml_module eq 'XML::Twig' && $XML::Twig::VERSION <= 3.32) {
 # 		$TODO = "Possible XML::Twig problem, missing preamble or missing encoding of data";
 # 	    }
-	    gpxlint_string($xml_res, "xmllint for bbd2gpx output ($bbdfile)");
+	    gpxlint_string($xml_res, "xmllint for bbd2gpx output ($bbdfile_with_lines)");
 	}
 
 	{
@@ -406,7 +409,7 @@ SKIP: {
 }
 
 {
-    my($fh,$file) = tempfile(SUFFIX => ".gpx", UNLINK => 1);
+    my($fh,$file) = tempfile(SUFFIX => "_strassen_gpx.gpx", UNLINK => 1);
     print {$fh} gpx_sample_trk();
     close $fh;
 

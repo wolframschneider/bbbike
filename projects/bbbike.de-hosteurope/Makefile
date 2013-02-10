@@ -212,6 +212,7 @@ TARGET=bbbike.hosteurope.herceg.de
 .elif make(automatic-deployment) || \
       make(automatic-deployment-temp-blockings) || \
       make(automatic-deployment--check-prerequisites) || \
+      make(after-deployment-set-tags) || \
       make(deploy-pps)
 # no TARGET=
 .else
@@ -365,6 +366,8 @@ deploy-local:		${DEPLOY_LOCAL_TARGETS}
 deploy-local-no-test:	${DEPLOY_LOCAL_NO_TEST_TARGETS}
 
 deploy-pps:
+			-@mkdir -p .last
+			-@date >> .last/start-deploy-pps
 			${MAKE} deploy TARGET=bbbike-pps
 
 .ORDER:			${DEPLOY_DATA_TARGETS}
@@ -843,9 +846,12 @@ post-automatic-deploy-info:
 	@echo "    git push"
 	@echo "* Send all messages in GNUS' drafts folder"
 	@echo "* Set tags:"
-	@echo '    git tag -a -m "automatic deployment" deployment/bbbikede/'`date +%Y%m%d`
-	@echo "    git tag -f deployment/bbbikede/current"
+	@echo "    ${MAKE} after-deployment-set-tags"
 	@echo ""
+
+after-deployment-set-tags:
+	git tag -a -m "automatic deployment" deployment/bbbikede/`date +%Y%m%d`
+	git tag -f deployment/bbbikede/current
 
 automatic-deployment: automatic-deployment--check-prerequisites
 	-@${XTERM_CONF_TITLE} "BBBike pre-deployment git update"

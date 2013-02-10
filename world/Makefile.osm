@@ -32,6 +32,7 @@ MAX_PBF2OSM=	${MAX_CPU}
 MAX_OSM2OSMAND=	${MAX_CPU}
 
 XARGS=		${NICE} `which gxargs xargs | head -1`
+XARGS5=		`which gxargs xargs | head -1`
 TIME=		time
 OSM2PBF=	world/bin/osm2pbf
 PBF2OSM=	world/bin/pbf2osm
@@ -50,6 +51,7 @@ DB=world/bin/bbbike-db --city-database=${CITIES_DB}
 GZIP:=             $(shell which pigz gzip | head -1)
 BZIP2:=            $(shell which pbzip2 bzip2 | head -1)
 OSMOSIS=	osmosis -q
+OSMOSIS_BUFFER_CAPACITY=6000
 
 OSM_DIR=	osm
 OSP_DIR=	osp
@@ -63,8 +65,9 @@ LANGUAGES=	m da de en es fr hr nl pl pt ru zh
 ELEVATION_SCRIPT=world/bin/elevation-database
 MAX_ELEVATION_SCRIPTS=	1
 BBBIKE_SERVER=""
-BBBIKE_WEBSERVER_DIR=/usr/local/www/bbbike.org
+
 BBBIKE_WEBSERVER_DOWNLOAD_DIR=/usr/local/www/download.bbbike.org
+BBBIKE_WEBSERVER_DIR=/usr/local/www/bbbike.org
 BBBIKE_WEB_DIR= ./
 CACHE_HEATER_MAX=50
 TMP=world/tmp
@@ -72,8 +75,9 @@ RM_BG=	world/bin/rm-bg
 WEB_GROUP=	www-data
 EXTRACTS_SPOOL_DIR=/var/cache/extract
 POSTGIS_STYLE=/usr/share/osm2pgsql/osm2pgsql/bbbike.style
-WEB_SERVER=	www.bbbike.org
-API_SERVER=	api.bbbike.org/api/0.2
+BBBIKE_WEB_SERVER	?= www.bbbike.org
+BBBIKE_API_SERVER	?= api.bbbike.org
+API_DIR=	api/0.2
 LOG_DIR=tmp
 BBBIKE_PARTITION=	/bbbike
 
@@ -172,14 +176,14 @@ _osmosis_opt_pbf:
 	fi
 
 cities-poly: poly
-	${NICE5} ${BZIP2} -dc ${OSM_PLANET} | ${NICE5} ${OSMOSIS} --rx enableDateParsing=no /dev/stdin --buffer bufferCapacity=2000 --tee `${MAKE} CITIES_DB=${CITIES_DB} CITIES="${CITIES}" -s -f Makefile.osm city-count` `${MAKE} CITIES_DB=${CITIES_DB} CITIES="${CITIES}" -s -f Makefile.osm _osmosis_opt`
+	${NICE5} ${BZIP2} -dc ${OSM_PLANET} | ${NICE5} ${OSMOSIS} --rx enableDateParsing=no /dev/stdin --buffer bufferCapacity=${OSMOSIS_BUFFER_CAPACITY} --tee `${MAKE} CITIES_DB=${CITIES_DB} CITIES="${CITIES}" -s -f Makefile.osm city-count` `${MAKE} CITIES_DB=${CITIES_DB} CITIES="${CITIES}" -s -f Makefile.osm _osmosis_opt`
 
 _cities-osm: poly
-	${NICE5} ${OSMOSIS} --read-pbf ${OSM_PLANET_PBF} --buffer bufferCapacity=2000 --tee `${MAKE} -s CITIES="${CITIES}" CITIES_DB=${CITIES_DB} -f Makefile.osm city-count` `${MAKE} -s CITIES="${CITIES}" CITIES_DB=${CITIES_DB} -f Makefile.osm _osmosis_opt`
+	${NICE5} ${OSMOSIS} --read-pbf ${OSM_PLANET_PBF} --buffer bufferCapacity=${OSMOSIS_BUFFER_CAPACITY} --tee `${MAKE} -s CITIES="${CITIES}" CITIES_DB=${CITIES_DB} -f Makefile.osm city-count` `${MAKE} -s CITIES="${CITIES}" CITIES_DB=${CITIES_DB} -f Makefile.osm _osmosis_opt`
 
 _cities-pbf: poly
-	${NICE5} ${OSMOSIS} --read-pbf ${OSM_PLANET_PBF} --buffer bufferCapacity=2000 --tee `${MAKE} -s CITIES="${CITIES}" CITIES_DB=${CITIES_DB} -f Makefile.osm city-count` `${MAKE} -s CITIES="${CITIES}" CITIES_DB=${CITIES_DB} -f Makefile.osm _osmosis_opt_pbf`
-	${MAKE} -f Makefile.osm CITIES="${CITIES}" _pbf2pbf
+	${NICE5} ${OSMOSIS} --read-pbf ${OSM_PLANET_PBF} --buffer bufferCapacity=${OSMOSIS_BUFFER_CAPACITY} --tee `${MAKE} -s CITIES="${CITIES}" CITIES_DB=${CITIES_DB} -f Makefile.osm city-count` `${MAKE} -s CITIES="${CITIES}" CITIES_DB=${CITIES_DB} -f Makefile.osm _osmosis_opt_pbf`
+	test "$$NO_PBF2PBF" = "true" || ${MAKE} -f Makefile.osm CITIES="${CITIES}" _pbf2pbf
 
 cities-pbf cities: _cities-pbf
 	${MAKE} -f Makefile.osm _pbf2pbf-checksum 
@@ -211,7 +215,7 @@ _pbf2pbf:
 	if [ "$$OSM_DIR_NOSUBDIR" = "true" ]; then \
 	  echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_.osm.pbf\0, ' | ${XARGS} -n32 -0 -P${MAX_PBF2OSM} ${PBF2PBF}; \
 	else \
-	  echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | ${XARGS} -n8 -0 -P${MAX_PBF2OSM} ${PBF2PBF}; \
+	  echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | ${XARGS} -n1 -0 -P${MAX_PBF2OSM} ${PBF2PBF}; \
 	fi
 
 _pbf2pbf-checksum: 
@@ -520,7 +524,7 @@ bbbike2wgs84-mapnik:
 
 bbbike-tile-update:
 	cd ../bbbike-eserte && git pull
-	${MAKE} DATA_DIR=../bbbike-eserte/data bbbike2wgs84-mapnik  bbbike-mapnik-postgis tile-distclean
+	${MAKE} DATA_DIR=../bbbike-eserte/data bbbike2wgs84-mapnik  bbbike-mapnik-postgis tile-cache-cleanup
 
 bbbike-mapnik-config:
 	if test -e ${POSTGIS_STYLE}; then \
@@ -547,7 +551,7 @@ rsync-tgz:
 	rsync -a ${DATA_OSM_BBBIKE_DIR}/ ${BBBIKE_SERVER}/usr/local/www/download.bbbike.org/bbbike/${DATA_OSM_DIR}
 	rsync -a world/etc/cities.csv ${BBBIKE_SERVER}/usr/local/www/download.bbbike.org/bbbike/${DATA_OSM_DIR}
 
-clean-tile:
+clean-tile tile-cache-cleanup:
 	world/bin/tile-cache-cleanup
 
 clean: rotate-data-osm
@@ -562,11 +566,11 @@ clean: rotate-data-osm
 
 clean-cache cache-clean:
 	du -hs ${BBBIKE_CACHE_DIR}/
-	du -hs ${BBBIKE_CACHE_DIR}/*
-	mkdir -p ${BBBIKE_CACHE_DIR}/${WEB_SERVER} ${BBBIKE_CACHE_DIR}/localhost
-	mkdir -p ${BBBIKE_CACHE_DIR}/tmp.$$$$; \
-	    mv -f ${BBBIKE_CACHE_DIR}/*bbbike.org ${BBBIKE_CACHE_DIR}/localhost ${BBBIKE_CACHE_DIR}/tmp.$$$$ || true; \
-	    rm -rf ${BBBIKE_CACHE_DIR}/tmp.$$$$ &
+	-du -hs ${BBBIKE_CACHE_DIR}/*
+	mkdir -p ${BBBIKE_CACHE_DIR}/${BBBIKE_WEB_SERVER} ${BBBIKE_CACHE_DIR}/localhost
+	mkdir -p ${BBBIKE_CACHE_DIR}/.tmp.$$$$; \
+	    mv -f ${BBBIKE_CACHE_DIR}/*bbbike.org ${BBBIKE_CACHE_DIR}/localhost ${BBBIKE_CACHE_DIR}/.tmp.$$$$ || true; \
+	    rm -rf ${BBBIKE_CACHE_DIR}/.tmp.$$$$ &
 	find /var/cache/lighttpd -type f -print0 | ${PERL} -n0e unlink
 
 cache-gc:
@@ -666,7 +670,7 @@ cache-heater-common:
 	du -hs ${BBBIKE_CACHE_DIR}/
 	if `ls ${BBBIKE_CACHE_DIR}/* 2>/dev/null`; then du -hs ${BBBIKE_CACHE_DIR}/*; fi
 	echo ${CITIES} | ${PERL} -npe 's/ /\n/g' | \
-	   ${PERL} -ne 'chomp; print "http://'${WEB_SERVER}'/$$_/?generate_cache=1\0"; print "http://'${API_SERVER}'/$$_/?generate_cache=1\0"' | \
+	   ${PERL} -ne 'chomp; print "http://'${BBBIKE_WEB_SERVER}'/$$_/?generate_cache=1\0"; print "http://'${BBBIKE_API_SERVER}/${API_DIR}'/$$_/?generate_cache=1\0"' | \
 	   ${XARGS} -0 -n1 -P${MAX_CPU} curl -sS >/dev/null
 	@echo "cache usage after"
 	du -hs ${BBBIKE_CACHE_DIR}/
@@ -674,16 +678,16 @@ cache-heater-common:
 
 cache-heater-streets: cache-heater-homepage cache-heater-opensearch
 	echo ${CITIES} | ${PERL} -npe 's/ /\n/g' | \
-		${PERL} -e 'while(<>) { chomp; push @a, "http://'${WEB_SERVER}'/$$_/streets.html"; push @b, "http://'${WEB_SERVER}'/en/$$_/streets.html" } print join "\0", @a, @b, ""' | \
+		${PERL} -e 'while(<>) { chomp; push @a, "http://'${BBBIKE_WEB_SERVER}'/$$_/streets.html"; push @b, "http://'${BBBIKE_WEB_SERVER}'/en/$$_/streets.html" } print join "\0", @a, @b, ""' | \
 		${XARGS} -0 -n1 -P${MAX_CPU} curl -sS >/dev/null
 
 cache-heater-homepage: cache-heater-osp
 	echo ${CITIES} | ${PERL} -npe 's/ /\n/g' | \
-		${PERL} -e 'while(<>) { chomp; push @a, "http://'${WEB_SERVER}'/$$_/"; push @b, "http://'${WEB_SERVER}'/en/$$_/"; push @c, "http://'${WEB_SERVER}'/m/$$_/" } print join "\0", @a, @b, @c, ""' | \
+		${PERL} -e 'while(<>) { chomp; push @a, "http://'${BBBIKE_WEB_SERVER}'/$$_/"; push @b, "http://'${BBBIKE_WEB_SERVER}'/en/$$_/"; push @c, "http://'${BBBIKE_WEB_SERVER}'/m/$$_/" } print join "\0", @a, @b, @c, ""' | \
 		${XARGS} -0 -n1 -P${MAX_CPU} curl -sS >/dev/null
 
 cache-heater-osp:
-	find osp -name '*.xml' -print0 | perl -n0e 'print qq{http://'${WEB_SERVER}'/$$_}' | \
+	find osp -name '*.xml' -print0 | perl -n0e 'print qq{http://'${BBBIKE_WEB_SERVER}'/$$_}' | \
 		${XARGS} -0 -n1 -P${MAX_CPU} curl -sS >/dev/null
 
 cache-heater-opensearch:
@@ -747,13 +751,16 @@ tile-lnglat:
 	./world/bin/tile-lnglat.pl > ${TILES_DIR}/lnglat.sh
 
 tile-lnglat-run:
-	${TIME} env OSM_DIR_NOSUBDIR=true ${XARGS} -0 -n1 -P${MAX_CPU} /bin/sh -c < ${TILES_DIR}/lnglat.sh
+	${TIME} env NO_PBF2PBF=true OSM_DIR_NOSUBDIR=true ${XARGS5} -0 -n1 -P${MAX_CPU} /bin/sh -c < ${TILES_DIR}/lnglat.sh
 
 tile-lng-run:
-	env OSM_DIR_NOSUBDIR=true LOG_DIR=${TILES_DIR}/tmp ${MAKE} -s LOG_DIR=${TILES_DIR}/tmp -f Makefile.osm \
+	env OSM_DIR_NOSUBDIR=true NO_PBF2PBF=true LOG_DIR=${TILES_DIR}/tmp ${MAKE} -s LOG_DIR=${TILES_DIR}/tmp -f Makefile.osm \
 	   CITIES_FILE=${TILES_DIR}/cities/cities2.txt CITIES_DB=${TILES_DIR}/cities/cities2.csv \
 	   MAX_CPU=${MAX_CPU} JAVACMD_OPTIONS2= OSM_DIR=${TILES_DIR}/lng _cities-parallel-pbf
 
+tile-pbf2pbf:
+	find ${_pbf_dir} -name '*.pbf' -size -500k -print0 | ${NICE} ${TIME} xargs -0 -n36 -P${MAX_CPU2} ${PBF2PBF}
+	find ${_pbf_dir} -name '*.pbf' ! -size -500k -print0 | ${NICE} ${TIME} xargs -0 -n1 -P${MAX_CPU} ${PBF2PBF}
 
 _pbf_dir=${TILES_DIR}/lnglat/
 _max_size= #-size +100k"
@@ -764,7 +771,7 @@ tile-convert:
 	find ${_pbf_dir} -name '*.pbf' ${_max_size} -print0 | osm_checksum=true ${NICE} ${TIME} xargs -0 -n1 -P${MAX_VCPU} ${OSM2GARMIN_CYCLE}
 	find ${_pbf_dir} -name '*.pbf' ${_max_size} -print0 | osm_checksum=true max_jobs=1 java_heap=1500M ${NICE} ${TIME} xargs -0 -n1 -P${MAX_VCPU} ${OSM2OSMAND}
 
-tile-extract: tile-lng tile-lnglat tile-lng-run tile-lnglat-run
+tile-extract: tile-lng tile-lnglat tile-lng-run tile-lnglat-run tile-pbf2pbf
 
 tile-csv:
 	rm -f ${TILES_DIR}/etc/tile-*.csv
@@ -778,7 +785,7 @@ tile-csv:
 tile-checksum:
 	cd ${_pbf_dir}; pwd=`pwd`; \
 	for i in *; do \
-	   cd $$pwd/$$i && ( md5sum `ls -v planet*` > CHECKSUM.md5; shasum -a 256 `ls -v planet*` > CHECKSUM.sha256 & );  \
+	   cd $$pwd/$$i && ( md5sum `ls -v planet*.*` > CHECKSUM.md5; shasum -a 256 `ls -v planet*.*` > CHECKSUM.sha256 & );  \
 	done; wait
 
 tile-distclean:

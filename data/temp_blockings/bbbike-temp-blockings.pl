@@ -337,7 +337,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006461',
        data  => <<EOF,
-userdel	2 6228,13324 6112,13327 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5368,13406 5248,13434
+userdel	2 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5368,13406 5248,13434
 EOF
      },
      { from  => Time::Local::timelocal(reverse(2004-1900,4-1,30,12,0,0)),
@@ -788,7 +788,7 @@ EOF
        text  => 'Turmstraße zwischen Kreuzung Beusselstraße und Kreuzung Stromstraße sowie Thusneldaallee: Straße gesperrt (Turmstraßenfest), Dauer: 03.09.2004 02:00 Uhr bis 06.09.2004 02:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 5248,13434 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6112,13327 6228,13324
+userdel	2 5248,13434 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 userdel	2 5975,13256 5956,13330
 EOF
      },
@@ -2129,7 +2129,7 @@ userdel	2 10091,12232 10035,12209 9972,12184
 userdel	2 9812,12145 9890,12161
 userdel	2 9890,12161 9972,12184
 userdel	2 10174,12284 10109,12238
-userdel	2 10174,12284 10199,12251 10281,12310
+userdel	2 10174,12284 10199,12251 10285,12306
 EOF
      },
      { from  => 1118988173, # 2005-06-17 08:02
@@ -2632,8 +2632,8 @@ EOF
        text  => 'Luckauer Str. (Kreuzberg) in beiden Richtungen zwischen Oranienstr. und Waldemarstr. Baustelle, Straße vollständig gesperrt (bis02.09.2005)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 11150,11030 11109,10943
-userdel	2 11109,10943 11049,10816
+userdel	2 11150,11030 11110,10946
+userdel	2 11110,10946 11049,10816
 EOF
      },
      { from  => 1124742735, # 2005-08-22 22:32
@@ -3153,9 +3153,9 @@ userdel	2 -12306,-496 -12262,-612
 userdel	2 -12529,-789 -12515,-889 -12512,-911 -12575,-1031
 userdel	2 -12529,-789 -12219,-726
 userdel	2 -12529,-789 -12677,-823
-userdel	2 -12045,-757 -12148,-934
-userdel	2 -12148,-934 -12248,-1107
-userdel	2 -12148,-934 -12100,-962
+userdel	2 -12045,-757 -12168,-965
+userdel	2 -12168,-965 -12248,-1107
+userdel	2 -12168,-965 -12100,-962
 userdel	2 -11910,-945 -12100,-962
 userdel	2 -12285,-1174 -12248,-1107
 userdel	2 -12285,-1174 -12359,-1096 -12488,-999
@@ -4898,7 +4898,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_002950',
        data  => <<EOF,
-userdel	2 6228,13324 6112,13327 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5368,13406
+userdel	2 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5368,13406
 EOF
      },
      { from  => 1151099435, # 2006-06-23 23:50
@@ -5614,7 +5614,7 @@ EOF
        text  => 'Turmstraßenfest vom 01.09. bis 03.09.2006 (zwischen Strom- und Waldstraße) ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6112,13327 6228,13324
+userdel	2::temp 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 EOF
      },
      { from  => 1156456800, # 2006-08-25 00:00
@@ -8056,7 +8056,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005384',
        data  => <<EOF,
-userdel	2::temp 6228,13324 6112,13327 6011,13330 5956,13330 5857,13342 5705,13359
+userdel	2::temp 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359
 EOF
      },
      { from  => 1304632800, # 1178379282, # 2007-05-05 17:34 # erster Termin im Jahr
@@ -11340,7 +11340,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_008375',
        data  => <<EOF,
-userdel	2::temp 5705,13359 5857,13342 5956,13330 6011,13330 6112,13327 6228,13324
+userdel	2::temp 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 EOF
      },
      { from  => 1223933558, # 2008-10-13 23:32
@@ -11447,7 +11447,7 @@ EOF
        text  => 'Kleine Gertraudenstr. - Gertraudenstr.: Bauarbeiten, gesperrt ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 10391,11898 10364,11896
+# REMOVED (Weg gibt es in strassen-orig nicht mehr) --- userdel	2::inwork 10391,11898 10364,11896
 EOF
      },
      { from  => 1210019166, # 2008-05-05 22:26
@@ -12452,7 +12452,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009776',
        data  => <<EOF,
-userdel	2::temp 6228,13324 6112,13327 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5368,13406
+userdel	2::temp 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5368,13406
 EOF
      },
      { from  => 1219874400, # 2008-08-28 00:00
@@ -13830,7 +13830,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012342',
        data  => <<EOF,
-userdel	q4::inwork 10281,12310 10362,12351
+userdel	q4::inwork 10285,12306 10357,12356
 userdel	q4::inwork 10422,12395 10476,12432
 EOF
      },
@@ -17833,7 +17833,7 @@ userdel auto	3 8610,12254 8538,12245 8522,12239
 userdel auto	3 7816,12150 8055,12186 8048,12135
 userdel auto	3 8861,12125 8901,12008 8972,11810
 userdel auto	3 8048,12135 8055,12186 7816,12150
-userdel auto	3 9201,11968 9183,12076 9385,12098
+userdel auto	3 9201,11968 9183,12076 9270,12086 9385,12098
 userdel auto	3 9865,10227 9873,10285 9858,10350
 userdel auto	3 9865,10227 9873,10285 9668,10306
 userdel auto	3 9409,10226 9404,10250 9239,10313
@@ -17855,7 +17855,7 @@ userdel auto	3 9016,12416 9130,12433 9343,12464
 userdel auto	3 8972,11810 8901,12008 8861,12125
 userdel auto	3 9250,10563 9388,10393 9527,10389
 userdel auto	3 9131,10716 9323,10791 9539,10820
-userdel auto	3 9385,12098 9183,12076 9201,11968
+userdel auto	3 9385,12098 9270,12086 9183,12076 9201,11968
 userdel auto	3 8554,12593 8540,12420 8573,12325
 userdel auto	3 9108,12635 9123,12500 9330,12529
 userdel auto	3 9858,10350 9873,10285 9668,10306
@@ -17898,7 +17898,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015893',
        data  => <<EOF,
-userdel	q4::temp 5368,13406 5358,13207 5328,13019
+userdel	q4::temp 5368,13406 5351,13238 5328,13019
 EOF
      },
      { from  => 1276833600, # 2010-06-18 06:00
@@ -18306,7 +18306,7 @@ EOF
        text  => 'Turmstraße (Moabit): Veranstaltung, Straße vollständig gesperrt (31.08.2012 bis 02.09.2012) in beiden Richtungen zwischen Stromstr. und Waldstr.',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6112,13327 6228,13324
+userdel	2::temp 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 EOF
      },
      { from  => 1284271200, # 2010-09-12 08:00
@@ -18786,9 +18786,10 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016416',
        data  => <<EOF,
-#: next_check: 2013-08-31
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110303.0840.333719.html
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4355&options=4 (Endedatum bestätigt)
+#: next_check: 2013-08-31
+#: last_checked: 2013-02-02
 userdel	q4::inwork 425,8766 490,8716
 EOF
      },
@@ -19376,11 +19377,11 @@ EOF
 userdel	2::temp 9656,12021 9668,11928
 EOF
      },
-     { from  => 1341291480, # 2012-07-03 06:58
-       until => 1341590400, # 2012-07-06 18:00
-       text  => 'Platz der Luftbrücke (Tempelhof): Veranstaltung, Straße vollständig gesperrt In beiden Richtungen zwischen Columbiadamm und Tempelhofer Damm, 04.07.2012 06:58 Uhr bis 06.07.2012 18:00 Uhr ',
-       type  => 'handicap',
-       source_id => 'IM_018982',
+     { from  => 1358139600, # 2013-01-14 06:00
+       until => 1358445600, # 2013-01-17 19:00
+       text  => 'Platz der Luftbrücke (Tempelhof): Veranstaltung, Straße vollständig zwischen Tempelhofer Damm und Columbiadamm gesperrt (bis Donnerstag)',
+       type  => 'gesperrt',
+       source_id => 'IM_019522',
        data  => <<EOF,
 userdel	q4::temp 9233,8597 9321,8607 9364,8640 9395,8726
 userdel	q4::temp 9321,8607 9401,8510 9451,8548 9364,8640
@@ -20047,8 +20048,6 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_111647', # auch: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html
        data  => <<EOF,
-#: XXX nach den Bauarbeiten Radwege auf beiden Seiten
-#: next_check: 2013-06-01
 userdel	q4::inwork; -1872,24336 -1790,24260 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 EOF
      },
@@ -20236,8 +20235,8 @@ EOF
        text  => 'Sredzkistr. zwischen Schönhauser Allee und Knaackstr: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-11-14
-#: note: etwa 50 Meter an der Schönhauser Alee gesperrt
+#: last_checked: 2013-01-08
+#: note: etwa 80 Meter an der Knaackstr. gesperrt
 userdel	q3::inwork 10893,14705 11101,14768
 EOF
      },
@@ -20495,12 +20494,13 @@ EOF
        text  => 'Park am Gleisdreieck, Wege im Westpark: wegen Bauarbeiten können die Wege unpassierbar sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2012-10-16 vvv
+#: last_checked: 2013-02-06 vvv
 userdel	2::inwork 8309,10368 8278,10384 8296,10438 8328,10585 8332,10637 8341,10721
 userdel	2::inwork 8328,10585 8270,10613
-userdel	2::inwork 8318,10738 8270,10613 8264,10460
-userdel	2::inwork 8278,10384 8263,10349 8258,10338
+userdel	2::inwork 8318,10738 8270,10613 8264,10460 8239,10413 8191,10346 8145,10090
+userdel	2::inwork 8278,10384 8263,10349 8258,10338 8249,10313 8260,10183 8211,10083 8145,10090 8042,10084 8040,10076 8035,10075 8027,10076 8035,10075 8027,10076
 userdel	2::inwork 8263,10349 8315,10347 8333,10167 8360,10133
+userdel	2::inwork 8270,10613 8199,10634
 #: last_checked ^^^
 EOF
      },
@@ -20532,12 +20532,12 @@ userdel	q4::inwork; 10953,15787 11086,15772
 EOF
      },
      { from  => 1342594800, # 2012-07-18 09:00
-       until => undef, # XXX 1351724340, # 1350054000, # 2012-10-12 17:00
+       until => 1358534778, # -> moved to handicap_s-orig --- undef, # XXX 1351724340, # 1350054000, # 2012-10-12 17:00
        text  => 'Adalbertstr.: Fahrbahn in Richtung Kottbusser Tor gesperrt',
        type  => 'handicap',
        source_id => 'INKO_114376',
        data  => <<EOF,
-#: last_checked: 2012-12-21
+#: last_checked: 2013-01-18
 #: XXX see also Adalbertstr. (Kreuzberg): Leitungsarbeiten, Fahrtrichtung gesperrt (bis Mitte 10/12) Richtung Kottbusser Tor zwischen Oranienstr. und Kottbusser Tor, 19.07.2012 09:00 Uhr bis 12.10.2012 17:00 Uhr¦INKO_114376¦http://asp.vmzberlin.com/VMZ_LSBB_MELDUNGEN_WEB/Meldungskarte.jsp?back=true&map=true&x=52.50035&y=13.41862&zoom=13&meldungId=INKO_114376
 userdel	q4::inwork; 11389,10463 11393,10390
 EOF
@@ -20664,24 +20664,20 @@ userdel	2::inwork -3736,2849 -3648,2881
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1357672004, # undef, # XXX
        text  => 'Oderberger Str.: Fahrbahn zwischen Kastanienallee und Choriner Str. wegen Bauarbeiten gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/oderberger_strasse.html?date=20121116
-#: last_checked: 2012-11-14
-#: next_check: 2012-12-31
 userdel	q4::inwork 10870,14689 10723,14772
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1357672029, # undef, # XXX
        text  => 'Choriner Str.: Einbahnstraße in Höhe Oderberger Str., Richtung Schönhauser Allee gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/oderberger_strasse.html?date=20121116
-#: last_checked: 2012-11-14
-#: next_check: 2012-12-31
 userdel	q4::inwork; 10870,14689 10893,14705
 EOF
      },
@@ -20818,12 +20814,12 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2012-12-27
+#: last_checked: 2013-02-04
 userdel	q4::inwork; 13339,7452 13303,7622
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1357672098, # undef, # XXX
        text  => 'Sredzkistr.: Kreuzungsbereich in Höhe Hosemannstr. gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
@@ -20952,9 +20948,9 @@ EOF
        text  => 'Hertzbergstr.: Bauarbeiten zwischen Böhmische Str. und Sonnenallee',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-12-27
+#: last_checked: 2013-02-04
 #: XXX bis wann ist die Baustelle fertig?
-userdel	q4::inwork; 13444,7879 13474,8060
+userdel	q4::inwork; 13474,8060 13444,7879
 EOF
      },
      { from  => 1357040979, # 2013-01-01 12:49
@@ -20973,6 +20969,33 @@ EOF
        data => <<EOF,
 	2::night 12851,12602 13108,12859 13046,12956 12878,13229
 	2::night 12773,12683 13046,12956
+EOF
+     },
+     { from  => undef, # 
+       until => 1358549999, # 2013-01-18 23:59
+       text  => 'Schloßplatz: Weg an der ehemaligen Grünfläche für einige Tage gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: http://www.tagesspiegel.de/berlin/gruenflaeche-muss-dem-schloss-weichen-ab-heute-verschwindet-der-rasen-am-schlossplatz-/7593590.html
+# REMOVED (existiert nicht mehr) --- userdel	2::inwork 10155,12494 10285,12306
+EOF
+     },
+     { from  => 1359830530, # 2013-02-02 19:42
+       until => 1364770800, # 2013-04-01 01:00
+       text  => 'Charlottenstraße: Bauarbeiten zwischen Friedrich-Ebert-Straße und Dortustraße, Einbahnstraße bis voraussichtlich März 2013',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: http://www.potsdam.de/cms/beitrag/10098485/1463075
+	q3::inwork; -12881,-1092 -12984,-1110 -13187,-1150
+EOF
+     },
+     { from  => 1360350803, # 2013-02-08 20:13
+       until => 1360551600, # 2013-02-11 04:00
+       text  => 'Karlshorster Str. (Rummelsburg) gesperrt (09.02.2013 00 Uhr bis 11.02.2013 04:00 Uhr)',
+       type  => 'gesperrt',
+       source_id => 'INKO_116993',
+       data  => <<EOF,
+userdel	2::inwork 15261,10738 15272,10790 15279,10862
 EOF
      },
     );

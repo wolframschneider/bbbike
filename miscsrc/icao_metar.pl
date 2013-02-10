@@ -2,7 +2,7 @@
 # -*- perl -*-
 
 #
-# Copyright (C) 2009,2012 Slaven Rezic. All rights reserved.
+# Copyright (C) 2009,2012,2013 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -26,7 +26,7 @@ my $metar_url = "http://weather.noaa.gov/cgi-bin/mgetmetar.pl?cccc=";
 
 sub usage () {
     die <<EOF;
-usage: $0 [-wettermeldung] [ -outfile file ] datadirectory | icaofile
+usage: $0 [-wettermeldung] datadirectory | icaofile
        $0 [-wettermeldung] -near lon,lat datadirectory | icaofile
        $0 [-wettermeldung] -sitecode EDDT
 EOF
@@ -35,19 +35,15 @@ EOF
 my $wanted_site_code;
 my $wettermeldung_compatible;
 my $near;
-my $outfile;
+my $o;
 GetOptions("sitecode=s" => \$wanted_site_code,
 	   "wettermeldung!" => \$wettermeldung_compatible,
 	   "near=s" => \$near,
-	   "outfile=s" => \$outfile,
+	   "o|outfile=s" => \$o,
 	  )
     or usage;
 
 my $ua = LWP::UserAgent->new;
-
-if ($outfile) {
-   open (\*STDOUT, "> $outfile") or die "open >$outfile: $!\n";
-}
 
 my @sites;
 if ($wanted_site_code) {
@@ -129,11 +125,24 @@ for my $site_def (@sites) {
     $m->metar($metar);
 
     if ($wettermeldung_compatible) {
-	print format_wettermeldung($m);
-	if (!$wanted_site_code) {
-	    print "|$site_code";
+	my $fh = \*STDOUT;
+	my $o_tmp;
+	if ($o) {
+	    $o_tmp = "$o.~$$~";
+	    open $fh, ">", $o_tmp
+		or die "Can't write to $o_tmp: $!";
 	}
-	print "\n";
+	print $fh format_wettermeldung($m);
+	if (!$wanted_site_code) {
+	    print $fh "|$site_code";
+	}
+	print $fh "\n";
+	if ($o) {
+	    close $fh
+		or die "Can't write to $o_tmp: $!";
+	    rename "$o_tmp", $o
+		or die "Error while renaming $o_tmp to $o: $!";
+	}
     } else {
 	print "$site_code: " . $m->dump . "\n";
     }
@@ -180,7 +189,7 @@ sub format_wettermeldung {
 	$wind_avg = sprintf "%.1f", mph_to_ms($m->WIND_MPH);
     }
 
-    my $pressure = $m->slp || $m->{ALT_HP} || ''; # XXX If missing: can slp (sea level pressure) be calculated from pressure?
+    my $pressure = $m->pressure || '';
     
     join('|',
 	 $l[3].".".$l[4].".".$l[5],
@@ -196,18 +205,77 @@ sub format_wettermeldung {
 	);
 }
 
-sub kts_to_ms { $_[0] / 1.852    / 3.6 }
-sub mph_to_ms { $_[0] / 1.609344 / 3.6 }
+sub kts_to_ms { $_[0] * 1.852    / 3.6 }
+sub mph_to_ms { $_[0] * 1.609344 / 3.6 }
 
 __END__
 
-=head1 TODO
+=head1 NAME
 
-Aufrufoptionen:
+icao_metar.pl - fetch and parse the most important weather data
 
- * datadir/icaobbd: return data for all in file
- * datadir/icaobbd -near ...: return data for the nearest sitecode
- * datadir/icaobbd -sitecode ...: file not used!
- * -sitecode: return data fo this site
+=head1 SYNOPSIS
+
+       icao_metar.pl [-wettermeldung] datadirectory | icaofile
+       icao_metar.pl [-wettermeldung] -near lon,lat datadirectory | icaofile
+       icao_metar.pl [-wettermeldung] -sitecode EDDT
+
+=head1 DESCRIPTION
+
+This program fetches weather information (expressed as METAR data) for
+a given airport from NOAA, and prints this information.
+
+When using the switch C<-wettermeldung>, then one pipe-separated line
+with the following fields is printed:
+
+=over
+
+=item * date in the format DD.MM.YYYY (day and month may be single digit)
+
+=item * time in the format HH.MM (hour may be single digit)
+
+=item * temperature in degrees Celsius (integer or with floating point)
+
+=item * pressure in hPa (integer or with floating point, optional, may be empty)
+
+=item * wind direction (using abbrevs like "NW" or "S")
+
+=item * max. wind speed in Beaufort (or m/s?)
+
+=item * humidity (in percent, optional, may be empty)
+
+=item * average wind speed in Beaufort (or m/s?)
+
+=item * precipitation (in mm, optional, may be empty)
+
+=item * weather condition (human readable text, may be English or German, optional)
+
+=back
+
+There are three possibilities to select the location:
+
+=over
+
+=item * specifying a bbd data directory containing an "icao" file or
+directly an "icao" bbd file
+
+In this case, all airports with an icao code are tried until the first
+one has a result from the NOAA server.
+
+=item * also specifying a data directory or icao file, but together
+with a C<-near I<lon,lat>> option
+
+In this case, the list of airports is sorted by distance to the
+specified coordinate first.
+
+=item * directly by specifying an icao code
+
+For example "EDDT" for Berlin-Tegel.
+
+=back
+
+=head1 AUTHOR
+
+Slaven Rezic
 
 =cut

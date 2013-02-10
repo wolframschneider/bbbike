@@ -49,7 +49,7 @@ use constant MSDOS_MIME_TYPE => qr{^application/(octet-stream|x-msdos-program|x-
 {
     use POSIX qw(strftime);
     use constant TODO_FREEBSD_PKG_ERRORS => 0; # "2012-01-22T12:00:00" gt strftime("%FT%T", localtime) && 'BBBike packages for FreeBSD not available, need more research';
-    use constant TODO_CS_TU_BERLIN_UNREACHABLE => 0; # "2013-01-03T12:00:00" gt strftime("%FT%T", localtime) && 'BBBike diplom location not reachable (user.cs.tu-berlin.de down, permanently?)';
+    use constant TODO_CS_TU_BERLIN_UNREACHABLE => "2013-02-04T20:00:00" gt strftime("%FT%T", localtime) && 'BBBike diplom location not reachable (user.cs.tu-berlin.de down)';
 }
 
 my @var;
@@ -100,6 +100,7 @@ plan tests => 1 + 3 * (scalar(map { @$_ } values %url));
 my $ua = LWP::UserAgent->new(keep_alive => 10);
 $ua->agent('BBBike-Test/1.0');
 $ua->env_proxy;
+$ua->timeout(10);
 
 # seems to be necessary (for my system? for the freebsd server?)
 $ENV{FTP_PASSIVE} = 1;

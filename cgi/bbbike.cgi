@@ -5,7 +5,7 @@
 # $Id: bbbike.cgi,v 9.30 2009/04/04 11:13:58 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998-2012 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2013 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -541,7 +541,10 @@ $show_weather = 1;
 
 =item @weather_cmdline
 
-The command line for the weather information fetching program.
+The command line for the weather information fetching program. The
+program must implement the C<-o> option to write down a file which
+conforms to the "wettermeldung2" format as described in
+F<miscsrc/icao_metar.pl>.
 
 =cut
 
@@ -759,6 +762,13 @@ Set to a true value if data originates from OpenStreetMap.
 =cut
 
 $osm_data = 0;
+
+=item $Strassen::Util::cacheprefix
+
+Define a unique prefix if multiple bbbike.cgi installations with
+different data sets are running on the same system. Typically this
+should be a short string consisting of a city and country abbrev, e.g.
+C<b_de> for Berlin in Germany.
 
 =back
 
@@ -1292,6 +1302,9 @@ init_bikepower($q);
 
 use vars qw($wettermeldung_file);
 $wettermeldung_file = "$tmp_dir/wettermeldung-$<";
+if (defined $Strassen::Util::cacheprefix) {
+    $wettermeldung_file .= "-" . $Strassen::Util::cacheprefix;
+}
 # Wettermeldungen so früh wie möglich versuchen zu holen
 if ($show_weather || $bp_obj) {
     start_weather_proc();
@@ -6527,25 +6540,37 @@ EOF
 	    $wind_dir =~ s{O$}{E}; # the only difference between de and en: east/ost
 	}
 	print "<tr><td>" . M("Windrichtung") . ":</td><td>$wind_dir&nbsp;</td></tr>\n";
-	my($kmh, $windtext);
-	eval { local $SIG{'__DIE__'};
-	       require Met::Wind;
-	       $kmh      = Met::Wind::wind_velocity([$res[5], 'm/s'],
-						    'km/h');
-	       if ($kmh >= 5) {
-		   $kmh = sprintf("%d",$kmh); # keine Pseudogenauigkeit, bitte
-	       }
-	       $windtext = Met::Wind::wind_velocity([$res[5], 'm/s'],
-						    $lang eq 'en' ? 'text_en' : 'text_de');
-	   };
-	print "<tr><td>" . M("Windgeschwindigkeit") . ":</td><td>";
-	if (defined $kmh) {
-	    print "$kmh km/h";
-	} else {
-	    print "$res[5] m/s";
+	my $wind_unit_label;
+	my $wind_val = $res[5];
+	if (defined $wind_val && length $wind_val) {
+	    $wind_unit_label = M("Windspitzen");
+	} elsif (defined $res[7] && length $res[7]) {
+	    $wind_val = $res[7];
+	    $wind_unit_label = M("mittlere Windgeschwindigkeit");
 	}
-	if (defined $windtext) {
-	    print " ($windtext)";
+	if (!defined $wind_val) {
+	    print "<tr><td></td><td>";
+	} else {
+	    my($kmh, $windtext);
+	    eval { local $SIG{'__DIE__'};
+		   require Met::Wind;
+		   $kmh      = Met::Wind::wind_velocity([$wind_val, 'm/s'],
+							'km/h');
+		   if ($kmh >= 5) {
+		       $kmh = sprintf("%d",$kmh); # keine Pseudogenauigkeit, bitte
+		   }
+		   $windtext = Met::Wind::wind_velocity([$wind_val, 'm/s'],
+							$lang eq 'en' ? 'text_en' : 'text_de');
+	    };
+	    print "<tr><td>$wind_unit_label:</td><td>";
+	    if (defined $kmh) {
+		print "$kmh km/h";
+	    } else {
+		print "$wind_val m/s";
+	    }
+	    if (defined $windtext) {
+		print " ($windtext)";
+	    }
 	}
 	print "$fontend</td></tr>\n";
 	print "</table></center>\n";
@@ -8176,6 +8201,19 @@ sub header {
     $args{-style} = {-src => \@css } if !$printmode;
 
     my $enable_google_analytics_uacct = delete $args{'-google_analytics_uacct'};
+
+#print $q->start_html
+#	(%args,
+#	 -lang => 'de-DE',
+#	 -BGCOLOR => '#ffffff',
+#	 ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
+#	 -meta=>{'keywords'=>'berlin fahrrad route bike karte suche cycling route routing routenplaner routenplanung fahrradroutenplaner radroutenplaner entfernungsrechner',
+#		 'copyright'=>'(c) 1998-2013 Slaven Rezic',
+#		 ($is_m ? ('viewport'=>'width=320; initial-scale=1.0, max-scale=1.0, user-scalable=no') : ()),
+#		},
+#	 -author => $BBBike::EMAIL,
+#	);
+
     if (!$smallform) {
 
 	my $title2 = delete $args{-title2};	
@@ -9699,7 +9737,7 @@ Slaven Rezic <slaven@rezic.de>
 
 =head1 COPYRIGHT
 
-Copyright (C) 1998-2012 Slaven Rezic. All rights reserved.
+Copyright (C) 1998-2013 Slaven Rezic. All rights reserved.
 This is free software; you can redistribute it and/or modify it under the
 terms of the GNU General Public License, see the file COPYING.
 

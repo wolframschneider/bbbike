@@ -207,7 +207,7 @@ sub manual_area {
 	</label>
 
 	<input id="rotate" type="radio" name="type" onclick="polygon_update()" />
-	<label for="rotate">rotate, resize or drag polygon
+	<label for="rotate">resize or drag polygon
 	<img src="$img_prefix/move_feature_on.png" alt="move feature"/>
 	</label>
     </div>
@@ -361,6 +361,8 @@ sub script_url {
     my $obj    = shift;
 
     my $coords = "";
+    my $city = $obj->{'city'} || "";
+
     if ( scalar( @{ $obj->{'coords'} } ) > 100 ) {
         $coords = "0,0,0";
         warn "Coordinates to long for URL, skipped\n" if $debug >= 2;
@@ -374,6 +376,7 @@ sub script_url {
 "sw_lng=$obj->{sw_lng}&sw_lat=$obj->{sw_lat}&ne_lng=$obj->{ne_lng}&ne_lat=$obj->{ne_lat}";
     $script_url .= "&format=$obj->{'format'}";
     $script_url .= "&coords=" . CGI::escape($coords) if $coords ne "";
+    $script_url .= "&city=" . CGI::escape($city) if $city ne "";
 
     return $script_url;
 }
@@ -691,6 +694,7 @@ EOF
             'format' => $format,
             'layers' => $layers,
             'coords' => \@coords,
+            'city'   => $city,
         }
     );
 
@@ -982,15 +986,59 @@ sub homepage {
             [
                 $q->td(
                     [
-"<span class='normalscreen' title='Give the city or area to extract a name. "
-                          . "The name is optional, but better fill it out to find it later again.'>Name of area to extract <a class='tools-helptrigger-small' href='/extract-dialog-name.html'><img src='/html/help-16px.png' alt='' /></a><br/></span>"
+"<span class='normalscreen lnglatbox' title='South West, valid values: -180 .. 180'>Left lower corner (South-West)<br/>"
+                          . "&nbsp;&nbsp; $lng: "
                           . $q->textfield(
-                            -name => 'city',
-                            -id   => 'city',
-                            -size => 28
+                            -name => 'sw_lng',
+                            -id   => 'sw_lng',
+                            -size => 8
+                          )
+                          . " $lat: "
+                          . $q->textfield(
+                            -name => 'sw_lat',
+                            -id   => 'sw_lat',
+                            -size => 8
+                          ),
+'</span><span id="square_km_small" title="area covers N square kilometers"></span>'
+                    ]
+                ),
+
+                $q->td(
+                    [
+"<span class='normalscreen lnglatbox' title='North East, valid values: -180 .. 180'>Right top corner (North-East)<br/>"
+                          . "&nbsp;&nbsp; $lng: "
+                          . $q->textfield(
+                            -name => 'ne_lng',
+                            -id   => 'ne_lng',
+                            -size => 8
+                          )
+                          . " $lat: "
+                          . $q->textfield(
+                            -name => 'ne_lat',
+                            -id   => 'ne_lat',
+                            -size => 8
+                          ),
+'</span><span title="file data size approx." id="size_small"></span>'
+                    ]
+                ),
+
+                $q->td(
+                    [
+"<span class='normalscreen' title='PBF: fast and compact data, OSM XML gzip: standard OSM format, "
+                          . "twice as large, Garmin format in different styles, Esri shapefile format, "
+                          . "Osmand for Androids'>Format <a class='tools-helptrigger' href='/extract-dialog-format.html'><img src='/html/help-16px.png' alt=''/></a><br/></span>"
+                          . $q->popup_menu(
+                            -name   => 'format',
+                            -values => [
+                                sort { $formats->{$a} cmp $formats->{$b} }
+                                  keys %$formats
+                            ],
+                            -labels  => $formats,
+                            -default => $default_format
                           )
                     ]
                 ),
+
                 $q->td(
                     [
 "<span title='Required, you will be notified by e-mail if your extract is ready for download.'>"
@@ -1023,65 +1071,28 @@ sub homepage {
 '<span id="time_small" title="approx. extract time in minutes"></span>'
                     ]
                 ),
+
                 $q->td(
                     [
-"<span class='normalscreen' title='South West, valid values: -180 .. 180'>Left lower corner (South-West)<br/></span>"
-                          . "&nbsp;&nbsp; $lng: "
+"<span class='normalscreen' title='Give the city or area to extract a name. "
+                          . "The name is optional, but better fill it out to find it later again.'>Name of area to extract <a class='tools-helptrigger-small' href='/extract-dialog-name.html'><img src='/html/help-16px.png' alt='' /></a><br/></span>"
                           . $q->textfield(
-                            -name => 'sw_lng',
-                            -id   => 'sw_lng',
-                            -size => 8
+                            -name => 'city',
+                            -id   => 'city',
+                            -size => 28
                           )
-                          . " $lat: "
-                          . $q->textfield(
-                            -name => 'sw_lat',
-                            -id   => 'sw_lat',
-                            -size => 8
-                          ),
-'<span id="square_km_small" title="area covers N square kilometers"></span>'
-                    ]
-                ),
-                $q->td(
-                    [
-"<span class='normalscreen' title='North East, valid values: -180 .. 180'>Right top corner (North-East)<br/></span>"
-                          . "&nbsp;&nbsp; $lng: "
-                          . $q->textfield(
-                            -name => 'ne_lng',
-                            -id   => 'ne_lng',
-                            -size => 8
-                          )
-                          . " $lat: "
-                          . $q->textfield(
-                            -name => 'ne_lat',
-                            -id   => 'ne_lat',
-                            -size => 8
-                          ),
-'<span title="file data size approx." id="size_small"></span>'
                     ]
                 ),
 
                 $q->td(
                     [
-"<span class='normalscreen' title='PBF: fast and compact data, OSM XML gzip: standard OSM format, "
-                          . "twice as large, Garmin format in different styles, Esri shapefile format, "
-                          . "Osmand for Androids'>Format <a class='tools-helptrigger' href='/extract-dialog-format.html'><img src='/html/help-16px.png' alt=''/></a><br/></span>"
-                          . $q->popup_menu(
-                            -name   => 'format',
-                            -values => [
-                                sort { $formats->{$a} cmp $formats->{$b} }
-                                  keys %$formats
-                            ],
-                            -labels  => $formats,
-                            -default => $default_format
-                          )
-                          . " <span class='normalscreen'><br/></span> "
-                          . $q->submit(
+                        $q->submit(
                             -title => 'start extract',
                             -name  => 'submit',
                             -value => 'extract',
 
                             #-id    => 'submit'
-                          )
+                        )
                     ]
                 ),
             ]
@@ -1122,7 +1133,9 @@ sub export_osm {
     return <<EOF;
   <div id="export_osm">
     <div id="export_osm_too_large" style="display:none">
-      <span class="export_heading error">Area Too Large. <span id="size"></span> Please zoom in!</span>
+      <span class="export_heading error">Area too large. <span id="size"></span>
+      Please zoom in!
+      You may also download <a target="_help" href="/extract.html#other_extract_services">pre-extracted areas</a> from other services</span>
       <div class="export_details"></div>
     </div>
   </div> <!-- export_osm -->

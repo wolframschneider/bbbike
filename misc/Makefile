@@ -89,7 +89,8 @@ targobank_osm.bbd:	../data_berlin_osm_bbbike/_unhandled
 #	${GREPSTRASSEN} -catrx ':GPS' $(HOME)/.bbbike/personal.bbd | ${MISCSRCDIR}/bbd2gpsman.pl -symbol danger > $(HOME)/.bbbike/personal.wpt
 
 $(HOME)/.bbbike/personal.gpi:	$(HOME)/.bbbike/personal.bbd
-	${GREPSTRASSEN} -v -namerx '^OLD' $> | ${MISCSRCDIR}/bbd2gpx - | gpsbabel -i gpx -o garmin_gpi /dev/stdin $@
+	${GREPSTRASSEN} -v -namerx '^OLD' $> | ${MISCSRCDIR}/bbd2gpx - | gpsbabel -i gpx -o garmin_gpi,alerts=0,category="Personal" /dev/stdin $@~
+	mv $@~ $@
 
 upload-personal: $(HOME)/.bbbike/personal.gpi
 	@echo "Please execute the following as as root:"
@@ -101,14 +102,16 @@ upload-personal: $(HOME)/.bbbike/personal.gpi
 # OSM downloads
 
 OSM_DOWNLOAD_DIR=	download/osm
-GERMANY_STATES=		berlin brandenburg hamburg hessen mecklenburg-vorpommern sachsen sachsen-anhalt schleswig-holstein
-GERMANY_STATES_RULES=	${GERMANY_STATES:S/^/download-/:S/$/.osm.bz2/}
-EUROPE_COUNTRIES=	germany croatia bosnia-herzegovina czech_republic
-EUROPE_COUNTRIES_RULES=	${EUROPE_COUNTRIES:S/^/download-/:S/$/.osm.bz2/}
+GERMANY_STATES=			berlin brandenburg hamburg hessen mecklenburg-vorpommern sachsen sachsen-anhalt schleswig-holstein
+GERMANY_STATES_BZ2_RULES=	${GERMANY_STATES:S/^/download-/:S/$/.osm.bz2/}
+GERMANY_STATES_PBF_RULES=	${GERMANY_STATES:S/^/download-/:S/$/.osm.pbf/}
+EUROPE_COUNTRIES=		germany croatia bosnia-herzegovina czech_republic
+EUROPE_COUNTRIES_BZ2_RULES=	${EUROPE_COUNTRIES:S/^/download-/:S/$/.osm.bz2/}
+EUROPE_COUNTRIES_BZ2_RULES=	${EUROPE_COUNTRIES:S/^/download-/:S/$/.osm.pbf/}
 
-osm-download-all:	osm-download-geofabrik reload-tiled-berlin
+osm-download-all:	osm-download-geofabrik-bz2 reload-tiled-berlin
 
-osm-download-geofabrik:	${GERMANY_STATES_RULES} ${EUROPE_COUNTRIES_RULES}
+osm-download-geofabrik-bz2:	${GERMANY_STATES_BZ2_RULES} ${EUROPE_COUNTRIES_BZ2_RULES}
 
 .for land in ${GERMANY_STATES}
 download-${land}.osm.bz2:
@@ -117,6 +120,13 @@ download-${land}.osm.bz2:
 	cd ${OSM_DOWNLOAD_DIR} && true
 	wget http://download.geofabrik.de/openstreetmap/europe/germany/${land}.osm.bz2 -O ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~
 	mv ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~ ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2
+
+download-${land}.osm.pbf:
+# cd just for checking:
+	mkdir -p ${OSM_DOWNLOAD_DIR}
+	cd ${OSM_DOWNLOAD_DIR} && true
+	wget http://download.geofabrik.de/openstreetmap/europe/germany/${land}.osm.pbf -O ${OSM_DOWNLOAD_DIR}/${land}.osm.pbf~
+	mv ${OSM_DOWNLOAD_DIR}/${land}.osm.pbf~ ${OSM_DOWNLOAD_DIR}/${land}.osm.pbf
 .endfor
 
 .for land in ${EUROPE_COUNTRIES}
@@ -126,6 +136,13 @@ download-${land}.osm.bz2:
 	cd ${OSM_DOWNLOAD_DIR} && true
 	wget http://download.geofabrik.de/openstreetmap/europe/${land}.osm.bz2 -O ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~
 	mv ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2~ ${OSM_DOWNLOAD_DIR}/${land}.osm.bz2
+
+download-${land}.osm.pbf:
+# cd just for checking:
+	mkdir -p ${OSM_DOWNLOAD_DIR}
+	cd ${OSM_DOWNLOAD_DIR} && true
+	wget http://download.geofabrik.de/openstreetmap/europe/${land}.osm.pbf -O ${OSM_DOWNLOAD_DIR}/${land}.osm.pbf~
+	mv ${OSM_DOWNLOAD_DIR}/${land}.osm.pbf~ ${OSM_DOWNLOAD_DIR}/${land}.osm.pbf
 .endfor
 
 ######################################################################

@@ -30,13 +30,14 @@ my $url_file = 't/mc/tile-url.txt';
 ######################################################################
 my ( $fh, $tempfile ) = tempfile();
 
-my $data = q[perl -ne 'chomp; print qq{curl -sSf "$_" || echo "$_" >&2 \0}' ]
-  . qq[$url_file | xargs -0 -n1 -P8 /bin/sh -c > $tempfile];
+my $data =
+  q[perl -ne 'chomp; print qq{curl -sSf "$_" || echo "$_" >&2 \0} if !/^\s*#/' ]
+  . qq[$url_file | xargs -0 -n1 -P2 /bin/sh -c > $tempfile];
 system($data);
 is( $?, 0, "Map Compare: tested all tile images" );
 
 my $st = stat($tempfile);
-cmp_ok( $st->size, '>', 1_710_000, 'Got enough image tile data' );
+cmp_ok( $st->size, '>', 1_680_000, 'Got enough image tile data' );
 
 unlink $tempfile;
 

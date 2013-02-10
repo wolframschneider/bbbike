@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2008,2009,2010,2011,2012 Slaven Rezic. All rights reserved.
+# Copyright (C) 2008,2009,2010,2011,2012,2013 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,7 +16,7 @@ use FindBin;
 use lib "$FindBin::RealBin/..";
 
 use vars qw($VERSION);
-$VERSION = 0.15;
+$VERSION = 0.16;
 
 use Cwd qw(cwd realpath);
 use Data::Dumper;
@@ -197,7 +197,6 @@ if ($lang) {
 my %unhandled;
 my %out;
 my %resolve_node_later;
-my %resolved;
 my @bbox_wgs84;
 my %global_directives;
 my %place_to_population;
@@ -257,8 +256,8 @@ my %smoothness_to_de = ('excellent'     => 'ausgezeichnet',
 
 use constant HIGHWAY_BAB_RX => qr{^(?:motorway|motorway_link|trunk|trunk_link)$};
 use constant HIGHWAY_HH_RX  => qr{^(?:primary|primary_link)$};
-use constant HIGHWAY_H_RX   => qr{^(?:secondary)$};
-use constant HIGHWAY_NH_RX  => qr{^(?:tertiary)$};
+use constant HIGHWAY_H_RX   => qr{^(?:secondary|secondary_link)$};
+use constant HIGHWAY_NH_RX  => qr{^(?:tertiary|tertiary_link)$};
 use constant HIGHWAY_N_RX   => qr{^(?:residential|unclassified|service|minor)$};
 
 use constant CONSTRUCTION_RX => qr{^(?:construction)$};
@@ -778,8 +777,14 @@ for my $osm_file (@osm_files) {
 			resolve_node_later("railway", $name, $ll);
 			$next2->();
 		    }
-		} elsif ($railway_cat =~ m{^(?:crossing|level_crossing)$}) {
+		} elsif ($railway_cat eq 'level_crossing') {
 		    push @or, ["ampeln", "B"];
+		} elsif ($railway_cat eq 'crossing') {
+		    # railway=level_crossing is for roads, and
+		    # railway=crossing for pedestrian crossings,
+		    # mainly on tramways, which should not be rendered
+		    # at all
+		    $next2->();
 		} elsif ($railway_cat eq 'tram_stop') { # takes precedence over highway=bus_stop
 		    add_underline(\@or, '_oepnv', 'Tramstop');
 		} else {
@@ -811,7 +816,7 @@ for my $osm_file (@osm_files) {
 	    } elsif (exists $tag{'place'}) {
 		my $place = $tag{'place'};
 		my $population = exists $tag{'population'} ? $tag{'population'} : $tag{'openGeoDB:population'};
-		if ($population && $place !~ m{^(suburb|state)$}) { # "Mahlsdorf" is a suburb, but with a population tag; "Sachsen" has place=state
+		if ($population && $place !~ m{^(neighbourhood|suburb|state)$}) { # "Mahlsdorf" is a suburb, but with a population tag; "Sachsen" has place=state
 		    my $cat;
 		    if ($population >= 200000) {
 			$cat = 6;
@@ -839,11 +844,13 @@ for my $osm_file (@osm_files) {
 			push @or, ["orte", 3];
 		    } elsif ($place eq 'city') {
 			push @or, ["orte", 5];
-		    } elsif ($place eq 'island') {
+		    } elsif ($place =~ m{^(island|islet)$}) {
 			# XXX an interim solution --- a better solution
 			# would check for the coastline of this island and
 			# create a proper F:I item
 			push @or, ["wasserstrassen", "I"],
+		    } elsif ($place eq 'neighbourhood') {
+			# ignore
 		    } else {
 			$unhandled{"node-place=$place"}++;
 		    }
@@ -1069,8 +1076,17 @@ for my $osm_file (@osm_files) {
 		    push @or, ["rbahn", "R0".$addcat];
 		    resolve_node_now('railway', 'rbahnhof', "R0", \@nodes);
 		} elsif ($railway_cat =~ CONSTRUCTION_RX) { # ignoring PROJECTED_RX
-		    push @or, ["rbahn", "RBau".$addcat];
-		    resolve_node_now('railway', 'rbahnhof', "RBau", \@nodes);
+		    my $construction = $tag{'construction'} || '';
+		    if ($construction eq 'subway') {
+			push @or, ["ubahn", "UBau".$addcat];
+			resolve_node_now('railway', 'ubahnhof', "UBau", \@nodes);
+		    } elsif ($construction eq 'light_rail') {
+			push @or, ["sbahn", "SBau".$addcat];
+			resolve_node_now('railway', 'sbahnhof', "SBau", \@nodes);
+		    } else {
+			push @or, ["rbahn", "RBau".$addcat];
+			resolve_node_now('railway', 'rbahnhof', "RBau", \@nodes);
+		    }
 		} elsif ($railway_cat =~ m{^(?:narrow_gauge)$}) { # z.B. Parkeisenbahnen
 		    push @or, ["rbahn", "RP".$addcat];
 		    resolve_node_now('railway', 'rbahnhof', "RP", \@nodes);
@@ -1490,12 +1506,6 @@ for my $osm_file (@osm_files) {
 		} else {
 		    $unhandled{"boundary=$boundary"}++;
 		}
-	    } elsif ($place) {
-		if      ($place eq 'airport') {
-		    push @or, ["flaechen", "F:Ae"];
-		} else {
-		    $unhandled{"place=$place"}++;
-		}
 	    } elsif (exists $tag{'sport'}) {
 		my $sport = $tag{'sport'};
 		if      ($sport =~ m{^(?:soccer|athletics)$}) {
@@ -1544,6 +1554,12 @@ for my $osm_file (@osm_files) {
 
 		    # e.g. greenfield (= Bauerwartungsland)
 		    $unhandled{"landuse=$landuse"}++;
+		}
+	    } elsif ($place) {
+		if      ($place eq 'airport') {
+		    push @or, ["flaechen", "F:Ae"];
+		} else {
+		    $unhandled{"place=$place"}++;
 		}
 	    } elsif (exists $tag{'route'}) {
 		my $route = $tag{'route'};
@@ -1763,18 +1779,42 @@ if ($handle_relations) {
 		    for my $member (@members) {
 			push @or, ['_boundary', 'Z'.$admin_level, $member];
 		    }
+		} elsif ($tag{type} eq 'multipolygon' &&
+			 (
+			  ($tag{waterway} && $tag{waterway} eq 'riverbank') ||
+			  ($tag{natural} && $tag{natural} eq 'water')
+			 )
+			) {
+		    my $new_members = process_multipolygon(\@members, $id);
+		    my @islands_or;
+		    my @waters_or;
+		    for my $member (@$new_members) {
+			my $role = $member->{role} || '';
+			if ($role eq 'inner') {
+			    push @islands_or, ['wasserstrassen', 'F:I', $member, name => '']; # explicitely reset name (it's valid for the water only)
+			} elsif ($role eq 'outer') {
+			    push @waters_or, ['wasserstrassen', 'F:W', $member];
+			}
+		    }
+		    # order is important here!
+		    push @or, @waters_or, @islands_or;
 		}
 
 	    OUTPUT_RECORD: for my $or (@or) {
 		    my($out_file, $cat, $member, %args) = @$or;
 
 		    my $name = $name;
-		    if ($args{name}) {
+		    if (defined $args{name}) {
 			$name = $args{name};
 		    }
 
-		    my $member_id = $member->{'ref'};
-		    if (!exists $way2nodes{$member_id}) {
+		    my $nodes;
+		    if ($member->{'nodes'}) {
+			$nodes = $member->{'nodes'};
+		    } else {
+			$nodes = $way2nodes{$member->{'ref'}};
+		    }
+		    if (!$nodes) {
 			## Don't warn; it's usual that not all
 			## relation members are part of the osm
 			## download:
@@ -1782,7 +1822,7 @@ if ($handle_relations) {
 		    } else {
 			$out{$out_file} ||= [];
 			my $out_array = $out{$out_file};
-			my @coords = map { $node2ll{$_} } @{ $way2nodes{$member_id} };
+			my @coords = map { $node2ll{$_} } @$nodes;
 			if ($out_array) {
 			    # Check for continuations:
 			    my $last_record = $out_array->[-1];
@@ -1874,10 +1914,68 @@ if (%unhandled && $debug >= 1) {
 
 ######################################################################
 
+# Loosely following the algorithm ideas from
+# http://wiki.openstreetmap.org/wiki/Relation:multipolygon/Algorithm
+# Only the "Ring Assignment" steps are done here, and there's also
+# no backtracking here.
+sub process_multipolygon {
+    my($members, $relation_id) = @_;
+
+    my @new_members;
+    my $mpc = MultipolygonCandidates->new;
+
+    for my $member (@$members) {
+	my $nodes = $way2nodes{$member->{ref}};
+	next if !$nodes; # member may be ignored
+	my $role = $member->{role};
+	if ($nodes->[0] == $nodes->[-1]) { # way is closed
+	    push @new_members, $member;
+	} else {
+	    $member->{nodes} = [@$nodes]; # copy nodes!
+	    $mpc->add($member);
+	}
+    }
+
+    while (!$mpc->is_empty) {
+	my $member = $mpc->pick_one;
+	$mpc->del($member);
+	my $member_nodes = $member->{nodes};
+	my $end_node = $member_nodes->[-1];
+	my $another_member = $mpc->pick_one_end($end_node);
+	if (!$another_member) {
+	    if ($debug) {
+		warn "multipolygon processing: member $member->{ref} in relation $relation_id looks incomplete, ignoring...\n";
+	    }
+	} else {
+	    $mpc->del($another_member);
+	    my $another_member_nodes = $another_member->{nodes};
+	    if ($another_member_nodes->[0] == $end_node) {
+		push @$member_nodes, @{ $another_member_nodes }[1..$#$another_member_nodes];
+	    } else {
+		my @reversed_another_member_nodes = reverse @$another_member_nodes;
+		push @$member_nodes, @reversed_another_member_nodes[1..$#reversed_another_member_nodes];
+	    }
+	    if ($member_nodes->[0] == $member_nodes->[-1]) {
+		push @new_members, $member;
+	    } else {
+		$mpc->add($member);
+	    }
+	}
+    }
+
+    return \@new_members;
+}
+
 # Decide whether U/S-Bahn is a real "public" railway or just a service
 # one. Heuristics could work for Germany, but is currently restricted
 # to Berlin.
+#
+# XXX srt (2013-01-06): this heuristics does not work anymore. service
+# rails can now only be detected by checking relations, see relation
+# id="2679163" for an example (U6)
 sub is_rail_service {
+    return 0; # XXX detection does not work anymore!!!
+
     my($type, $name, $nodes_ref) = @_;
     return 0 if ($type eq 'U' && $name =~ /^U\s*\d/);
     return 0 if ($type eq 'S' && $name =~ /^S\s*\d/);
@@ -1897,7 +1995,6 @@ sub resolve_node_later {
 sub resolve_node_now {
     my($osm_layer, $bbbike_layer, $bbbike_cat, $nodes_ref) = @_;
     my $r = $resolve_node_later{$osm_layer};
-    my $resolved = $resolved{$osm_layer};
     my $normalize_name = {ubahnhof => \&normalize_name_ubahnhof,
 			  sbahnhof => \&normalize_name_sbahnhof,
 			 }->{$bbbike_layer};
@@ -1908,7 +2005,6 @@ sub resolve_node_now {
 	    $name = $normalize_name->($name) if $normalize_name;
 	    push @{$out{$bbbike_layer}}, [$name, [$coord], $bbbike_cat];
 	    delete $r->{$coord};
-	    $resolved->{$coord}++;
 	}
     }
 }
@@ -1926,9 +2022,7 @@ sub resolve_node_fallback {
     print STDERR "unresolved:\n" if $debug;
     for my $osm_layer (keys %resolve_node_later) {
 	print STDERR "  $osm_layer:\n" if $debug;
-	my $resolved = $resolved{$osm_layer};
 	while(my($coord, $name) = each %{ $resolve_node_later{$osm_layer} }) {
-	    next if $resolved->{$coord};
 	    if ($osm_layer eq 'railway') {
 		my($file, $cat);
  		if ($name =~ s{^U(|-Bhf)\s+}{}) {
@@ -2303,6 +2397,65 @@ sub currmem {
     }
 }
 # REPO END
+
+{
+    package MultipolygonCandidates;
+
+    sub new {
+	my($class) = @_;
+	bless {ends => {}}, $class;
+    }
+
+    sub add {
+	my($self, $member) = @_;
+	my $nodes = $member->{nodes};
+	my $ends = $self->{ends};
+	$ends->{$nodes->[0]}->{$member} = $member;
+	$ends->{$nodes->[-1]}->{$member} = $member;
+    }
+    sub del {
+	my($self, $member) = @_;
+	my $nodes = $member->{nodes};
+	my $ends = $self->{ends};
+	
+	for my $node ($nodes->[0], $nodes->[-1]) {
+	    delete $ends->{$node}->{$member};
+	    $self->_check_empty($node);
+	}
+    }
+
+    sub is_empty {
+	my($self) = @_;
+	!keys %{ $self->{ends} }; # check + reset
+    }
+    sub pick_one {
+	my($self) = @_;
+	my $ends = $self->{ends};
+	keys %$ends; # reset iterator
+	my($node, $v) = each %$ends;
+	keys %$v; # reset iterator
+	my(undef, $member) = each %$v;
+	$member;
+    }
+
+    sub pick_one_end {
+	my($self, $node) = @_;
+	my $ends = $self->{ends};
+	if (!$ends->{$node} || !keys %{ $ends->{$node} }) {
+	    return undef;
+	}
+	my($member_key, $member) = each %{ $ends->{$node} };
+	return $member;
+    }
+
+    sub _check_empty {
+	my($self, $node) = @_;
+	my $ends = $self->{ends};
+  	if (!keys %{ $ends->{$node} }) {
+	    delete $ends->{$node};
+	}
+    }
+}
 
 __END__
 

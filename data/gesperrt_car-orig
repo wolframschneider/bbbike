@@ -48,14 +48,14 @@ Naumannstr. N - H	3 7707,8915 7709,8777 7713,8600
 zum Mariannenplatz	2 11950,11157 11921,11185
 # ... kompliziert ... mit vorgeschriebenen Fahrtrichtungen hätte man
 # sich die Hälfte gespart ...
-Großgörschen/Kulmer	3 7609,9463 7771,9479 7829,9723
-Großgörschen/Kulmer	3 7609,9463 7771,9479 7882,9490
-Großgörschen/Kulmer	3 7829,9723 7771,9479 7609,9463
-Großgörschen/Kulmer	3 7829,9723 7771,9479 7771,9389
-Großgörschen/Kulmer	3 7829,9723 7771,9479 7609,9463
-Großgörschen/Kulmer	3 7882,9490 7771,9479 7609,9463
-Großgörschen/Kulmer	3 7609,9463 7771,9479 7829,9723
-Großgörschen/Kulmer	3 7771,9389 7771,9479 7829,9723
+# REMOVED (gemeldet von andk, 2013-02-08) --- Großgörschen/Kulmer	3 7609,9463 7771,9479 7829,9723
+# REMOVED (gemeldet von andk, 2013-02-08) --- Großgörschen/Kulmer	3 7609,9463 7771,9479 7882,9490
+# REMOVED (gemeldet von andk, 2013-02-08) --- Großgörschen/Kulmer	3 7829,9723 7771,9479 7609,9463
+# REMOVED (gemeldet von andk, 2013-02-08) --- Großgörschen/Kulmer	3 7829,9723 7771,9479 7771,9389
+# REMOVED (gemeldet von andk, 2013-02-08) --- Großgörschen/Kulmer	3 7829,9723 7771,9479 7609,9463
+# REMOVED (gemeldet von andk, 2013-02-08) --- Großgörschen/Kulmer	3 7882,9490 7771,9479 7609,9463
+# REMOVED (gemeldet von andk, 2013-02-08) --- Großgörschen/Kulmer	3 7609,9463 7771,9479 7829,9723
+# REMOVED (gemeldet von andk, 2013-02-08) --- Großgörschen/Kulmer	3 7771,9389 7771,9479 7829,9723
 Herbartstr.	1 2340,11045 2372,10941 2476,10790 2498,10665
 Breite Str. Pankow	1 10609,18384 10680,18380
 Gormannstr.	1 10463,13747 10445,13675 10406,13543 10390,13493
@@ -71,7 +71,7 @@ Hagelberger - Mehringdamm	3nocross 9334,9670 9280,9476 9248,9350
 Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
 # Potsdam vvv
 Mangerstr. (Potsdam)	1 -12064,-284 -12108,-291 -12265,-418
-Rudolf-Breitscheid-Str.	1 -10446,-1947 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
+Rudolf-Breitscheid-Str.	1 -10429,-1944 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
 # ^^^
 Bendastr.	1 12689,6905 12702,6846
 Bendastr.	1 12793,6407 12781,6470 12759,6563 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
@@ -405,10 +405,10 @@ Rudower Chaussee: Mittelstreifen	3nocross 15980,2318 15804,2512 15736,2593
 Freiertweg - Lichtenrader Damm	3 10827,467 10638,403 10676,299
 Glasbläserallee: Tore versperren die Durchfahrt, Radfahrer können passieren	2 14888,10385 14835,10272
 Hornstr.	1 8779,9851 8988,9783 8980,9751 8779,9812
-Hafenplatz	3 8700,10766 8628,10818 8659,10910
-Hafenplatz	3 8659,10910 8628,10818 8700,10766
-Hafenplatz	3 8483,10900 8628,10818 8700,10766
-Hafenplatz	3 8700,10766 8628,10818 8483,10900
+Hafenplatz	3 8678,10749 8622,10801 8659,10910
+Hafenplatz	3 8659,10910 8622,10801 8678,10749
+Hafenplatz	3 8483,10900 8622,10801 8678,10749
+Hafenplatz	3 8678,10749 8622,10801 8483,10900
 Askanischer Platz	1 8865,10974 8859,10939 8882,10905
 #: note: Luftbild
 Rosenthaler Weg: Straßenbahntrasse	3nocross 11271,22328 11383,22369 11484,22406 11583,22442
@@ -466,7 +466,7 @@ Schönhauser Allee: Abbiegen verboten	3 10703,13832 10779,13793 10832,13877
 Straßenbahntrasse	3nocross 21796,4517 21775,4470 21773,4440
 Kietz	1 22279,4220 22292,4279 22312,4329 22334,4383 22339,4396 22364,4429 22383,4470
 Mittelstreifen	3nocross 5705,13359 5857,13342 5956,13330
-Mittelstreifen	3nocross 6228,13324 6112,13327 6011,13330
+Mittelstreifen	3nocross 6228,13324 6115,13328 6105,13328 6011,13330
 #: note: Luftbild:
 Straßenbahntrasse	3nocross 10933,22179 10997,22203 11077,22236
 #: by: Sara Köhler:
@@ -484,7 +484,7 @@ Adlergestell/Weerthstr.: keine Abbiegemöglichkeit	3nocross 20064,3278 20010,3340
 Hardenbergstr./Jebensstr.: Mittelstreifen	3nocross 5542,11075 5459,11135 5268,11274
 #: note: Luftbild:
 Alt-Moabit/Calvinstr.: Mittelstreifen	3nocross 6757,13112 6860,13093 6966,13075
-Krautstr. - Kleine Markusstr.: Barriere	3 11967,12042 11937,12127 11958,12195
+Krautstr. - Kleine Markusstr.: Barriere	3 11958,12112 11937,12127 11958,12195
 Spreewaldplatz	1 12243,10274 12292,10374 12274,10436
 Am Juliusturm/Zitadelle: Mittelstreifen	3nocross -2793,14505 -2646,14525 -2597,14532
 #: note: Luftbild:
@@ -763,8 +763,9 @@ Rochlitzer Weg: Schranke	3 * 16117,927 15999,880
 Großer Stern	1 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936 6685,11954 6642,12010 6653,12067 6690,12104 6725,12113
 Markelstr.	1 5269,6305 5020,6434
 Geschwister-Scholl-Str. (Potsdam)	1 -14909,-1818 -14733,-1812
-#: XXX Einbahnstraßenregelung nochmal überprüfen
 #: by: http://www.potsdam.de/cms/ziel/996205/DE/?date=20120210
+#: confirmed_by: srt
+#: note: genauer genommen eine Sackgasse für den West-Ost-Verkehr
 Feuerbachstr. (Potsdam)	1 -14140,-1390 -13879,-1445
 #: by: kaffeeschluerfer
 Jadeweg	1 -3850,13756 -3878,13636 -4011,13656
@@ -786,6 +787,8 @@ Straßenbahntrasse	3nocross -13456,500 -13436,595 -13433,693
 Straßenbahntrasse	3nocross -13433,693 -13432,782 -13429,1069
 Kutscherweg: Poller	3 * -13700,-106 *
 Dresdner Str.: Einfahrt vom Oranienplatz gesperrt	3 * 11189,10831 11162,10919
+#: note: könnte auch die andere Richtung gesperrt sein
+Sebastianstr.: Einfahrt gesperrt	3 11162,10919 11110,10946 *
 Rennbahnstr. -> Bernkastler	3 14510,16916 14559,16912 14673,16895
 Rennbahnstr. -> Berliner Allee	3 14510,16916 14559,16912 14535,17003
 Stephaniweg: Poller	3 4836,1659 4855,1616 *
@@ -883,3 +886,4 @@ Stadtheide (Potsdam)	1 -15432,-2763 -15504,-2984 -15537,-3091 -15501,-3122
 Stormstr. (Potsdam)	1 -15243,-2459 -15168,-2529 -15060,-2626
 #: by: ^^^
 Frankfurter Allee: Mittelstreifen	3nocross 13885,12279 14020,12261 14208,12235
+Schloßplatz - Rathausbrücke	3 10199,12251 10285,12306 10357,12356

@@ -5,10 +5,13 @@
 #:
 Oberbaumbrücke: Umfahrung wegen Baustelle, etwas Zeitverlust	q3::inwork; 13332,10832 13305,10789
 Modersohnstr.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 14134,11272 14181,11434
-Helsingforser Str.: Bauarbeiten, Einbahnstraße, u.U. Ausweichen auf Gehweg	q3::inwork; 13496,11384 13541,11355
+Helmerdingstr.: Bauarbeiten	q3::inwork 14465,11195 14442,11101
 Helsingforser Platz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q4::inwork 13473,11456 13427,11431
+Marchlewskistr.: Bauarbeiten, Einbahnstraße	q2::inwork; 13473,11456 13366,11651 13295,11792
+Rüdersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 12822,12067 12740,12128
+Rüdersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 12740,12128 12575,12223
 Gärtnerstr.: Baustelle, Einbahnstraßenregelung	q3::inwork; 14247,11681 14272,11775
-Alt-Stralau: Asphaltierungsarbeiten unter der Brücke	q3::inwork 14652,10201 14558,10264
+Alt-Stralau: Asphaltierungsarbeiten unter der Brücke, Fahrbahn gesperrt, Gehweg passierbar	q3::inwork 14652,10201 14558,10264
 Friedrichstr.: Fahrbahn zwischen Unter den Linden und Mittelstraße gesperrt, Ausweichen auf Gehweg möglich	q4::inwork 9343,12464 9358,12351
 Friedrichstr. (Mitte): Fahrbahn wegen Bauarbeiten gesperrt, Ausweichen auf Gehweg schiebend möglich	q4::inwork 9358,12351 9369,12253 9373,12197
 Charlottenstr.: Einbahnstraßenregelung	q4::inwork; 9475,12365 9489,12263 9496,12215
@@ -29,6 +32,7 @@ Burgstraße: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 10166,12777 10132,12
 Anna-Louisa-Karsch-Str.: vor der Friedrichsbrücke auf den linken Gehweg fahren	q3::inwork; 10264,12826 10166,12777
 Am Zirkus: Baustelle, Einbahnstraße	q3::inwork; 9167,13046 9239,12923
 Am Kupfergraben: Baustelle, Einbahnstraße	q3::inwork; 9870,12657 9900,12643 9919,12613
+Adalbertstr.: Fahrbahn in Richtung Kottbusser Tor gesperrt	q4::inwork; 11389,10463 11393,10390
 Elcknerplatz, Borgmannstr.: Bauarbeiten, Einbahnstraße	q4::inwork; 22478,6041 22544,6037 22539,5956
 Platz der Stadt Hof: Bauarbeiten (in Zukunft wird hier eine Fußgängerzone entstehen), Fahrbahn ist gesperrt	q4::inwork 12753,8187 12792,8190
 Wuhlewanderweg: steiler Anstieg, Fußgänger	q4; 21998,12204 21970,12153
@@ -73,7 +77,8 @@ Görlitzer Park: Fußgänger	q2 12761,10195 12769,10211 12774,10222
 Görlitzer Park: Fußgänger	q2 13145,9920 12987,10007 12869,10071 12802,10097
 Görlitzer Park: Fußgänger	q2 12670,10160 12567,10211 12543,10223 12506,10244 12384,10368 12328,10442
 Görlitzer Park: Fußgänger	q2 12814,9966 12833,9998 12869,10071 12904,10141 12911,10156
-Görlitzer Park, Rondell: Fußgänger	q2 12802,10097 12737,10051 12690,10062 12659,10119 12670,10160 12712,10192 12761,10195 12801,10146 12802,10097
+Görlitzer Park, Rondell: Bauarbeiten, Fußgänger	q3::inwork 12802,10097 12801,10146 12761,10195 12712,10192 12670,10160
+Görlitzer Park, Rondell: Fußgänger	q2 12802,10097 12737,10051 12690,10062 12659,10119 12670,10160
 Görlitzer Park: Fußgänger, eng	q2 12802,10097 12670,10160
 Görlitzer Park: eng, Kurven, Fußgänger	q2 12507,10130 12504,10172 12516,10202 12543,10223
 Görlitzer Park: Fußgänger	q2 12543,10223 12580,10252 12611,10299
@@ -97,7 +102,7 @@ Tiergarten: Parkweg	q1 7777,12098 7772,12040 7717,11918 7706,11878 7701,11798 76
 Tiergarten: Parkweg, Bordstein	q3 7514,12387 7529,12361
 Tiergarten: Parkweg	q1 7529,12361 7544,12346 7564,12337 7587,12340 7603,12353
 Tiergarten: Parkweg, Bordstein	q3 7603,12353 7627,12380
-(Bremer Weg - Fasanerieallee): Parkweg	q1 6342,11878 6379,11843 6406,11784 6467,11780 6540,11754
+(Bremer Weg - Fasanerieallee): Parkweg	q1 6337,11887 6379,11843 6406,11784 6467,11780 6540,11754
 Parkweg: enge Brücke, Fußweg	q2 14310,9692 14361,9772 14404,9847 14448,9922 14453,9929 14558,10082 14597,10129 14626,10162 14652,10201
 Hasenheide: Fußgänger	q1 11266,8336 11275,8387 11282,8428 11279,8489 11255,8591 11182,8983 11141,9107 11136,9183
 Hasenheide: Fußgänger	q1 11141,9107 11115,9100 11098,9046 11100,8974 11137,8738 11193,8568 11235,8454 11230,8402 11225,8350
@@ -323,7 +328,7 @@ Uferweg, Mentzelpark: Fußgänger	q1 21487,5425 21512,5404 21600,5221 21680,5079 2
 Uferweg, Mentzelpark: Fußgänger, eng	q3 21761,4979 21821,4918 21834,4889
 (Mentzelpark): Fußgänger	q1 21761,4979 21778,4916 21834,4889 21848,4882
 (Mentzelpark): Fußgänger	q1 21726,4896 21741,4889 21778,4916
-Heinrich-Lassen-Park: Fußgänger	q2 6664,8787 6740,8682 6815,8691 6912,8617
+Heinrich-Lassen-Park: Fußgänger, Radfahren offiziell nicht erlaubt	q2 6664,8787 6705,8730 6740,8682 6815,8691 6912,8617
 (Uferweg am Nordhafen): Fußgänger	q1 7753,14528 7695,14545 7496,14660
 An der Malche: teilweise eng und kurvig	q1 1106,20424 1032,20580 895,20523 834,20610 625,20738
 Am Friedhof: recht enger Radweg	q1 6380,17836 6376,17687 6347,17381
@@ -383,7 +388,6 @@ Haewererweg: enge Durchfahrt, Bordstein	q1 12125,1282 12097,1243
 Kaiser-Wilhelm-Platz: einige Fußgänger	q2 7201,8870 7307,8945
 Kernhofer Str.: Fußgänger, Supermarkt	q2 15369,10921 15355,10875
 Ceciliengärten: schmale Rampe oder Treppe	q3 6356,7479 6289,7472
-Sebastianstr.: Absperrung für Autos, mit Anhänger unbequem passierbar	q1 10911,11080 10934,11038
 (Weg am Humboldthain): Radfahren erlaubt, Fußgänger haben Vorrang	q1 9255,15816 9092,15789 8934,15740
 Tasdorfer Str. - Wilhelm-Guddorf-Str.: Fußgänger	q1 15393,11590 15423,11667
 (Grünes Band): Radfahren erlaubt, Fußgänger haben Vorrang	q1 15349,11911 15301,11876 15327,11724 15328,11636 15377,11555 15412,11510 15414,11487 15445,11455 15515,11416
@@ -445,7 +449,7 @@ Wustermarker Str.: Fußgänger, Bordsteine	q2 -4750,14393 -4678,14382
 Firlstr.: zwei Bodenschwellen	q1 18574,6401 18645,6511
 (Florastr. - Schloßstr.): Fußgänger	q2 5234,6086 5165,6119
 Pankeweg: enger Pfad	q2 13365,22743 13321,22586 13295,22545 13290,22377 13354,22327
-(Bremer Weg): Fußgänger	q1 5900,11913 5923,11873 6296,11890 6342,11878 6409,11925 6573,11943 6642,12010
+(Bremer Weg): Fußgänger	q1 5900,11913 5923,11873 6296,11890 6337,11887 6384,11926 6550,11954 6642,12010
 (Bremer Weg): Fußgänger	q1 6828,12031 6857,11992 7460,12054 7777,12098 7827,12105 8018,12131 8048,12135 8107,12145 8215,12156 8466,12197 8522,12239 8538,12245
 Oberlandgarten: Fußgänger, Bordsteine	q2 11250,6555 11256,6502 11253,6473
 Germaniagarten: Fußgänger, Bordsteine	q2 11209,6166 11224,6244
@@ -933,7 +937,6 @@ Elisabeth-Schwarzhaupt-Platz: einige Fußgänger	q1 9274,13963 9167,14127
 (Erkelenzdamm - Prinzessinnenstr.): Bordsteine, parkende Autos, Fußgänger	q4 11190,10619 11145,10638
 (Bethanienpark): Fußgänger	q1 11799,10848 11776,10860 11752,10878 11668,10916
 (Bethanienpark): Fußgänger, Bordstein	q3 11668,10916 11589,10947
-(Hildegard-Knef-Platz - Lotte-Laserstein-Str.): Bordstein	q2 7774,7724 7757,7682
 (Blücherplatz - Johanniterstr.): Fußgänger, Bordstein	q2 9702,10129 9816,10119 9837,10117
 Idealpassage: Fußgänger, eng, Schrittgeschwindigkeit	q3 12434,8776 12578,8654
 (entlang der Hedwigskathedrale): Fußgänger, eine (umfahrbare) Stufe	q2 9808,12182 9775,12178 9771,12190 9747,12205
@@ -954,7 +957,6 @@ Wriezener Park: Fußgänger, Bordstein	q3 13261,11572 13270,11581
 (Am Wriezener Bahnhof - Helsingforser Str./Wriezener Park): einige Fußgänger	q1 12986,11699 13002,11705 13042,11749 13175,11649 13208,11658
 Oranienplatz: einige Fußgänger	q1 11264,10804 11227,10821
 Oranienplatz: einige Fußgänger	q1 11275,10723 11253,10778 11227,10821
-(Schloßplatz, entlang der Rasenfläche): Fußgänger, Radfahren verboten	q4 10281,12310 10155,12494
 Grüner Weg: einige Fußgänger	q1 13728,3332 13775,3500
 (Imbuschweg - Anna-Siemsen-Weg): einige Fußgänger	q1 14245,2704 14231,2693 14228,2588 14254,2566
 Max-Pallenberg-Pfad: Bordstein	q2 15460,1764 15465,1953
@@ -1098,6 +1100,8 @@ Grimmstr. [ehemaliges Urbankrankenhaus]: Wohngebiet	q2 11072,9711 11040,9724 110
 (Vorfahrt am Bahnhof Friedrichstr.): eng, Taxis, querende Fußgänger	q2 9171,12758 9303,12718
 Selkestr.: Fußgänger, Bordsteine	q3 12722,7261 12741,7224
 (Schildhornstr. - Treitschkestr./Hackerstr.): einige Fußgänger	q1 4937,6205 4997,6331 5015,6363 4999,6397
+Eyke-von-Repkow-Platz: einige Fußgänger, Bordsteine	q3 5556,12536 5531,12501
+(Alexandrinenstr. - Wassertorstr.): Fußgänger	q1 10293,10645 10401,10601 10431,10606 10492,10582
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q3 11805,19071 11895,19183 11927,19308
 Ebersstr.: Schüler	q2 7242,8586 7288,8635
 Straße 103 (Niederschönhausen): enge Straße	q1 10914,20065 11051,19789
@@ -1131,7 +1135,7 @@ Friedrichstr. (Lichterfelde): Fuß- und Radweg	q1 2890,3561 2712,3602
 Rampen	q3 1610,13380 1551,13377
 (Krankenhausgelände): eher schmaler Gehweg	q1 2688,12701 2555,12686
 (Schloßpark Charlottenburg, westlicher Weg): Fußgänger	q1 2858,13530 2813,13416 2685,13380 2607,13374 2625,13229 2688,12701 2717,12463
-(Uferweg): teilweise relativ schmal, Fußgänger	q1 5185,13078 5144,13075 5076,13116 4940,13168 4742,13157 4751,13245
+(Uferweg): teilweise relativ schmal, Fußgänger	q1 5166,13087 5144,13075 5076,13116 4940,13168 4742,13157 4751,13245
 Sparrstr. - Triftstr.: Gehweg	q1 7303,15173 7241,15293
 (Max-Lingner-Str. - Maximilianstr.): schmaler Fußweg und Parkplatz	q2 11107,17340 10892,17330
 (Seecktstr. - Wilhelmstr.): breiter Gehweg	q0 -4017,13167 -3886,13120
@@ -1247,9 +1251,10 @@ Bissingzeile: Einspurig, eng bei Gegenverkehr	q1 7959,10910 8113,10786
 (Karl-Marx-Allee - Berolinastr.): Fußgänger	q1 11419,12944 11367,12940
 (Karl-Marx-Allee - Berolinastr.): Fußgänger	q1 11600,12857 11589,12768
 (Berolinastr.): Fußgänger	q1 11844,12926 11885,12905 11952,12871
-(Berlolinastr.): Fußgänger	q1 11885,12905 11906,12947 11921,12990 11983,12949
+(Berolinastr.): Fußgänger	q1 11885,12905 11906,12947 11921,12990
+(Berolinastr.): Fußgänger, Bordstein	q2 11921,12990 11983,12949
 (Berolinastr.): Fußgänger	q1 11921,12990 11865,13027
-(Berolinastr.): Fußgänger	q1 11815,13045 11719,13088
+(Berolinastr.): Fußgänger, Bordstein	q2 11815,13045 11719,13088
 (Berolinastr.): Weg am Spielplatz vorbei	q2 11865,13027 11815,13045
 (Berolinastr. - Mollstr.): Fußgänger	q1 11865,13027 11874,13048 11905,13069
 (Berolinastr. - Mollstr.): Fußgänger	q1 11608,12985 11681,13161
@@ -1342,10 +1347,10 @@ Swinemünder Str.: Fußgänger	q1 10085,14863 10029,14974 9988,15057 9929,15174 985
 (Unterführung Schloßbrücke): Fußgänger, teilweise eng	q2 3396,12741 3332,12742
 (Unterführung Schloßbrücke): Fußgänger, sehr eng	q3 3332,12742 3231,12749
 Sesenheimer Str.: Fußgänger, Bordsteine	q2 3866,11473 3874,11380
-(südliches Spreeufer): Fußgänger	q2 5186,12843 5173,12973 5128,13012 4973,13083 4837,13091 4733,13076 4711,13055 4644,13003 4627,12951 4599,12789 4759,12681
-(Heisenbergstr. - südliches Spreeufer): Fußgänger	q2 5065,13010 5128,13012
-(Kucharskistr. - südliches Spreeufer): Fußgänger	q2 4848,13066 4837,13091
-(Clara-von-Simson-Str. - südliches Spreeufer): Fußgänger	q2 4732,13030 4711,13055
+(südliches Spreeufer): Fußgänger	q2 5186,12843 5173,12973 5128,13012 4994,13092 4915,13114 4822,13109 4748,13092 4694,13064 4644,13003 4627,12951 4599,12789 4759,12681
+(Heisenbergstr. - südliches Spreeufer): Fußgänger	q2 5120,12963 5173,12973
+(Kucharskistr. - südliches Spreeufer): Fußgänger	q2 4829,13089 4822,13109
+(Clara-von-Simson-Str. - südliches Spreeufer): Fußgänger	q2 4732,13030 4694,13064
 (Carnotstr. - südliches Spreeufer): Fußgänger	q2 4678,12938 4627,12951
 Schleswiger Ufer: schmal, Fußgänger	q2 5858,12425 5894,12480 5940,12542
 Cuxhavener Str.: Wohngebiet, Fußgänger	q2 5894,12480 5919,12423
@@ -1410,7 +1415,6 @@ Propststr.: Touristen	q3 10492,12289 10553,12333 10611,12378 10639,12394 10665,1
 Eiergasse: Touristen	q3 10671,12356 10700,12315
 Am Nußbaum: Touristen	q3 10644,12469 10626,12455 10611,12444 10597,12405 10611,12378
 (Am Nußbaum): Touristen	q3 10597,12405 10536,12355
-Kleine Gertraudenstr.: Fußgänger	q1 10332,11929 10364,11896 10391,11898
 (Scottweg - Tharauer Allee): Fußgänger, Bordstein	q1 -1403,11279 -1505,11307
 Zimmerstr. (Wilhelmstadt): Fußgänger	q1 -3962,12973 -3942,12957
 Brüderstr. (Wilhelmstadt): Fußgänger	q1 -3999,12912 -3967,12891

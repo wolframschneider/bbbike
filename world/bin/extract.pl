@@ -734,7 +734,9 @@ sub convert_send_email {
 
             $job_counter++;
             copy_to_trash($json_file) if $keep;
-            push @unlink, $json_file;
+
+            # unlink json file if done right now
+            unlink($json_file) or die "unlink: $json_file: $!\n";
         }
 
         warn "Running convert and email time: ", time() - $time, " seconds\n"
@@ -826,6 +828,10 @@ sub _convert_send_email {
         my $pbf_file = $obj->{'pbf_file'};
         my $city     = mkgmap_description( $obj->{'city'} );
         my @system;
+
+        $ENV{BBBIKE_EXTRACT_URL} = &script_url( $option, $obj );
+        $ENV{BBBIKE_EXTRACT_COORDS} =
+qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
 
         ###################################################################
         # converted file name
@@ -1000,8 +1006,13 @@ sub _convert_send_email {
         my $message = <<EOF;
 Hi,
 
-your requested OpenStreetMap area "$obj->{'city'}" was extracted 
-from planet.osm
+your requested OpenStreetMap area "$obj->{'city'}" was extracted from planet.osm
+To download the file, please click on the following link:
+
+  $url
+
+The file will be available for the next 48 hours. Please download the
+file as soon as possible.
 
  Name: $obj->{"city"}
  Coordinates: $obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}
@@ -1014,17 +1025,9 @@ from planet.osm
  SHA256 checksum: $checksum
  License: OpenStreetMap License
 
-To download the file, please click on the following link:
-
-  $url
-
-The file will be available for the next 48 hours. Please 
-download the file as soon as possible.
-
-We appreciate any feedback, suggestions and a donation! 
+We appreciate any feedback, suggestions and a donation!
 You can support us via PayPal, Flattr or bank wire transfer.
 http://www.BBBike.org/community.html
-
 
 Sincerely, the BBBike extract Fairy
 

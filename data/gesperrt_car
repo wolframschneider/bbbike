@@ -54,14 +54,6 @@ Fasanenstr.	1 5198,10234 5207,10399
 Naumannstr. - Kolonnenstr.	3 7713,8600 7709,8777 7642,8815
 Naumannstr. N - H	3 7707,8915 7709,8777 7713,8600
 zum Mariannenplatz	2 11950,11157 11921,11185
-Großgörschen/Kulmer	3 7609,9463 7771,9479 7829,9723
-Großgörschen/Kulmer	3 7609,9463 7771,9479 7882,9490
-Großgörschen/Kulmer	3 7829,9723 7771,9479 7609,9463
-Großgörschen/Kulmer	3 7829,9723 7771,9479 7771,9389
-Großgörschen/Kulmer	3 7829,9723 7771,9479 7609,9463
-Großgörschen/Kulmer	3 7882,9490 7771,9479 7609,9463
-Großgörschen/Kulmer	3 7609,9463 7771,9479 7829,9723
-Großgörschen/Kulmer	3 7771,9389 7771,9479 7829,9723
 Herbartstr.	1 2340,11045 2372,10941 2476,10790 2498,10665
 Breite Str. Pankow	1 10609,18384 10680,18380
 Gormannstr.	1 10463,13747 10445,13675 10406,13543 10390,13493
@@ -79,7 +71,7 @@ Mehringdamm -> Hagelberger Str.: Hagelberger - Mehringdamm	3::igndisp 9248,9350 
 Hagelberger Str. -> Mehringdamm: Hagelberger - Mehringdamm	3::igndisp 9000,9509 9280,9476 9334,9670
 Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
 Mangerstr. (Potsdam)	1 -12064,-284 -12108,-291 -12265,-418
-Rudolf-Breitscheid-Str.	1 -10446,-1947 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
+Rudolf-Breitscheid-Str.	1 -10429,-1944 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
 Bendastr.	1 12689,6905 12702,6846
 Bendastr.	1 12793,6407 12781,6470 12759,6563 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
 Puschkin/Bulgarische	1 14193,9746 14310,9692 14780,9480 14819,9462 14883,9431 15383,9191 15442,9095 15452,9079 15561,8903 15591,8848 15378,8668 15166,8489
@@ -694,10 +686,10 @@ Neuköllner Str. -> Primelweg: Mittelstreifen	3::igndisp 15736,2593 15804,2512 15
 Freiertweg - Lichtenrader Damm	3 10827,467 10638,403 10676,299
 Glasbläserallee: Tore versperren die Durchfahrt, Radfahrer können passieren	2 14888,10385 14835,10272
 Hornstr.	1 8779,9851 8988,9783 8980,9751 8779,9812
-Hafenplatz	3 8700,10766 8628,10818 8659,10910
-Hafenplatz	3 8659,10910 8628,10818 8700,10766
-Hafenplatz	3 8483,10900 8628,10818 8700,10766
-Hafenplatz	3 8700,10766 8628,10818 8483,10900
+Hafenplatz	3 8678,10749 8622,10801 8659,10910
+Hafenplatz	3 8659,10910 8622,10801 8678,10749
+Hafenplatz	3 8483,10900 8622,10801 8678,10749
+Hafenplatz	3 8678,10749 8622,10801 8483,10900
 Askanischer Platz	1 8865,10974 8859,10939 8882,10905
 Straßenbahntrasse	3nocross::ignrte 11271,22328 11383,22369 11484,22406 11583,22442
 Rosenthaler Weg -> Schweizer Tal: Straßenbahntrasse	3::igndisp 11484,22406 11383,22369 11559,22235
@@ -814,9 +806,9 @@ Kietz	1 22279,4220 22292,4279 22312,4329 22334,4383 22339,4396 22364,4429 22383,
 Mittelstreifen	3nocross::ignrte 5705,13359 5857,13342 5956,13330
 Bremer Str. -> Turmstr.: Mittelstreifen	3::igndisp 5868,13441 5857,13342 5956,13330
 Turmstr. -> Bremer Str.: Mittelstreifen	3::igndisp 5705,13359 5857,13342 5868,13441
-Mittelstreifen	3nocross::ignrte 6228,13324 6112,13327 6011,13330
-Wilhelmshavener Str. -> Turmstr.: Mittelstreifen	3::igndisp 6104,13522 6112,13327 6228,13324
-Turmstr. -> Wilhelmshavener Str.: Mittelstreifen	3::igndisp 6011,13330 6112,13327 6104,13522
+Mittelstreifen	3nocross::ignrte 6228,13324 6115,13328 6105,13328 6011,13330
+Wilhelmshavener Str. -> Turmstr.: Mittelstreifen	3::igndisp 6104,13522 6105,13328 6115,13328
+Turmstr. -> Wilhelmshavener Str.: Mittelstreifen	3::igndisp 6011,13330 6105,13328 6104,13522
 Straßenbahntrasse	3nocross::ignrte 10933,22179 10997,22203 11077,22236
 Guyotstr. -> Rosenthaler Weg: Straßenbahntrasse	3::igndisp 11056,21978 10997,22203 10933,22179
 Rosenthaler Weg -> Guyotstr.: Straßenbahntrasse	3::igndisp 11077,22236 10997,22203 11056,21978
@@ -845,7 +837,7 @@ Hardenbergstr. -> Yva-Bogen: Mittelstreifen	3::igndisp 5542,11075 5459,11135 542
 Mittelstreifen	3nocross::ignrte 6757,13112 6860,13093 6966,13075
 Alt-Moabit -> Calvinstr.: Mittelstreifen	3::igndisp 6966,13075 6860,13093 6802,12797
 Calvinstr. -> Alt-Moabit: Mittelstreifen	3::igndisp 6802,12797 6860,13093 6757,13112
-Krautstr. - Kleine Markusstr.: Barriere	3 11967,12042 11937,12127 11958,12195
+Krautstr. - Kleine Markusstr.: Barriere	3 11958,12112 11937,12127 11958,12195
 Spreewaldplatz	1 12243,10274 12292,10374 12274,10436
 Mittelstreifen	3nocross::ignrte -2793,14505 -2646,14525 -2597,14532
 Zitadelle -> Am Juliusturm: Mittelstreifen	3::igndisp -2652,14559 -2646,14525 -2597,14532
@@ -1353,6 +1345,9 @@ Straßenbahntrasse	3nocross::ignrte -13433,693 -13432,782 -13429,1069
 Kutscherweg: Poller	3 -13620,-131 -13700,-106 -13775,-85
 Kutscherweg: Poller	3 -13775,-85 -13700,-106 -13620,-131
 Dresdner Str.: Einfahrt vom Oranienplatz gesperrt	3 11159,10769 11189,10831 11162,10919
+Sebastianstr.: Einfahrt gesperrt	3 11162,10919 11110,10946 10934,11038
+Sebastianstr.: Einfahrt gesperrt	3 11162,10919 11110,10946 11049,10816
+Sebastianstr.: Einfahrt gesperrt	3 11162,10919 11110,10946 11150,11030
 Rennbahnstr. -> Bernkastler	3 14510,16916 14559,16912 14673,16895
 Rennbahnstr. -> Berliner Allee	3 14510,16916 14559,16912 14535,17003
 Stephaniweg: Poller	3 4836,1659 4855,1616 4800,1582
@@ -1499,3 +1494,4 @@ Stormstr. (Potsdam)	1 -15243,-2459 -15168,-2529 -15060,-2626
 Mittelstreifen	3nocross::ignrte 13885,12279 14020,12261 14208,12235
 zur Pablo-Neruda-Bibliothek -> Frankfurter Allee: Mittelstreifen	3::igndisp 14008,12181 14020,12261 13885,12279
 Frankfurter Allee -> zur Pablo-Neruda-Bibliothek: Mittelstreifen	3::igndisp 14208,12235 14020,12261 14008,12181
+Schloßplatz - Rathausbrücke	3 10199,12251 10285,12306 10357,12356

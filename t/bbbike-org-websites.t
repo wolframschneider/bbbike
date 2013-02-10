@@ -69,17 +69,18 @@ my @list = (
           [ "</html>", "select your own region", "offers a database dump" ]
     },
     {
-        'page'     => 'http://tile.bbbike.org/osm/',
+        'page'     => 'http://mc.bbbike.org/osm/',
         'min_size' => 1_500,
         'match'    => [ "</html>", qq/ id="map">/ ]
     },
     {
-        'page'     => 'http://tile.bbbike.org/mc/',
+        'page'     => 'http://mc.bbbike.org/mc/',
         'min_size' => 5_000,
         'match'    => [ "</html>", "Choose map type", ' src="js/mc.js"' ]
     },
     {
-        'page' => 'http://tile.bbbike.org/osm/mapnik-german/15/17602/10746.png',
+        'page' =>
+          'http://a.tile.bbbike.org/osm/mapnik-german/15/17602/10746.png',
         'min_size'  => 10_000,
         'match'     => [],
         'mime_type' => 'image/png'
