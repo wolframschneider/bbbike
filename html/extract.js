@@ -181,8 +181,13 @@ function init() {
     // default city
     else {
         var c = select_city();
+        var sw_lng = c.sw[0];
+        var sw_lat = c.sw[1];
+        var ne_lng = c.ne[0];
+        var ne_lat = c.ne[1];
+
         debug("default city: " + c.sw[0] + "," + c.sw[1] + " " + c.ne[0] + "," + c.ne[1]);
-        bounds = new OpenLayers.Bounds(c.sw[0], c.sw[1], c.ne[0], c.ne[1]);
+        bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
         if (config.simple) {
 
             opt.back_function = function () {
@@ -201,7 +206,7 @@ function init() {
             };
 
             setTimeout(function () {
-                var polygon = coords ? string2coords(coords) : rectangle2polygon(c.sw[0], c.sw[1], c.ne[0], c.ne[1]);
+                var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
                 var feature = plot_polygon(polygon);
                 vectors.addFeatures(feature);
                 if (coords) {
