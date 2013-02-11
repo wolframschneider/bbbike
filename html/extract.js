@@ -26,7 +26,7 @@ var config = {
     "max_size": {
         "default": 768,
         "obf.zip": 250,
-        "mapsforge-osm.zip": 150
+        "mapsforge-osm.zip": 350
     },
 
     debug: 0,
@@ -935,8 +935,8 @@ function show_filesize(skm, real_size) {
             "time": 1.1
         },
         "mapsforge-osm.zip": {
-            "size": 1.1,
-            "time": 11
+            "size": 0.8,
+            "time": 14
         },
         "navit.zip": {
             "size": 0.8,
