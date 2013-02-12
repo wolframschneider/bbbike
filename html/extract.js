@@ -21,6 +21,8 @@ var config = {
     "show_filesize": true,
     "city_name_optional": false,
     "enable_polygon": true,
+    "polygon_rotate": true,
+    "simple": true,
 
     // in MB
     "max_size": {
@@ -179,8 +181,46 @@ function init() {
     // default city
     else {
         var c = select_city();
+        var sw_lng = c.sw[0];
+        var sw_lat = c.sw[1];
+        var ne_lng = c.ne[0];
+        var ne_lat = c.ne[1];
+
         debug("default city: " + c.sw[0] + "," + c.sw[1] + " " + c.ne[0] + "," + c.ne[1]);
-        bounds = new OpenLayers.Bounds(c.sw[0], c.sw[1], c.ne[0], c.ne[1]);
+        bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
+        if (config.simple) {
+
+            opt.back_function = function () {
+                debug("get coords from back button");
+
+                $("#sw_lng").val(sw_lng);
+                $("#sw_lat").val(sw_lat);
+                $("#ne_lng").val(ne_lng);
+                $("#ne_lat").val(ne_lat);
+                $("#coords").val(coords);
+
+                debug("coords: " + coords);
+                state.validateControls();
+                map.events.unregister("moveend", map, state.mapMoved);
+                polygon_menu(true);
+            };
+
+            setTimeout(function () {
+                var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
+                var feature = plot_polygon(polygon);
+                vectors.addFeatures(feature);
+                if (coords) {
+                    // trigger a recalculation of polygon size
+                    setTimeout(function () {
+                        vectors.events.triggerEvent("sketchcomplete", {
+                            "feature": feature
+                        });
+                    }, 500);
+                }
+                opt.back_function();
+
+            }, 700);
+        }
     }
 
     bounds.transform(epsg4326, map.getProjectionObject());
@@ -399,6 +439,7 @@ function extract_init(opt) {
         $("#drag_box").html("Manually select a different area");
         if (config.enable_polygon) {
             polygon_menu(true);
+            polygon_update();
         }
     }
 
@@ -494,6 +535,7 @@ function extract_init(opt) {
         setTimeout(function () {
             $("#controls").show();
             polygon_init();
+            polygon_update();
         }, 1000);
     }
 }
@@ -743,7 +785,7 @@ function polygon_menu(enabled) {
     $("#createVertices").removeAttr("checked");
     $("#rotate").removeAttr("checked");
 
-    $("#createVertices").attr("checked", "checked");
+    config.polygon_rotate ? $("#rotate").attr("checked", "checked") : $("#createVertices").attr("checked", "checked");
 }
 
 /*
