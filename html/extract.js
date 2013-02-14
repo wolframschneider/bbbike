@@ -1100,7 +1100,7 @@ function polygon_init() {
             coords += v(vec[i].x) + "," + v(vec[i].y);
         }
 
-        is_rectangle(vec, bounds) ? $("#coords").attr("value", coords) : $("#coords").attr("value", "");
+        is_rectangle(vec, bounds) ? $("#coords").attr("value", "") : $("#coords").attr("value", coords);
         debug("is rec: " + is_rectangle(vec, bounds));
 
         if (bounds != null) {
