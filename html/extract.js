@@ -128,7 +128,8 @@ function init() {
     var bounds;
 
     // read from input, back button pressed?
-    if (check_lnglat_form(true)) {
+    var back_botton = check_lnglat_form(true);
+    if (back_botton) {
         var sw_lng = $("#sw_lng").val();
         var sw_lat = $("#sw_lat").val();
         var ne_lng = $("#ne_lng").val();
@@ -138,9 +139,22 @@ function init() {
         if (coords == "0,0,0") { // to long URL, ignore
             coords = "";
         }
-
         bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
+    }
 
+    // default city
+    else {
+        var c = select_city();
+        var sw_lng = c.sw[0];
+        var sw_lat = c.sw[1];
+        var ne_lng = c.ne[0];
+        var ne_lat = c.ne[1];
+
+        debug("default city: " + c.sw[0] + "," + c.sw[1] + " " + c.ne[0] + "," + c.ne[1]);
+        bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
+    }
+
+    if (config.simple || back_botton) {
         // back button: reset coordinates to original values
         opt.back_function = function () {
             debug("get coords from back button");
@@ -174,52 +188,7 @@ function init() {
 
             }, 700);
         } else {
-            opt.back_button = 1;
-        }
-    }
-
-    // default city
-    else {
-        var c = select_city();
-        var sw_lng = c.sw[0];
-        var sw_lat = c.sw[1];
-        var ne_lng = c.ne[0];
-        var ne_lat = c.ne[1];
-
-        debug("default city: " + c.sw[0] + "," + c.sw[1] + " " + c.ne[0] + "," + c.ne[1]);
-        bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
-        if (config.simple) {
-
-            opt.back_function = function () {
-                debug("get coords from back button");
-
-                $("#sw_lng").val(sw_lng);
-                $("#sw_lat").val(sw_lat);
-                $("#ne_lng").val(ne_lng);
-                $("#ne_lat").val(ne_lat);
-                $("#coords").val(coords);
-
-                debug("coords: " + coords);
-                state.validateControls();
-                map.events.unregister("moveend", map, state.mapMoved);
-                polygon_menu(true);
-            };
-
-            setTimeout(function () {
-                var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
-                var feature = plot_polygon(polygon);
-                vectors.addFeatures(feature);
-                if (coords) {
-                    // trigger a recalculation of polygon size
-                    setTimeout(function () {
-                        vectors.events.triggerEvent("sketchcomplete", {
-                            "feature": feature
-                        });
-                    }, 500);
-                }
-                opt.back_function();
-
-            }, 700);
+            if (back_botton) opt.back_button = 1;
         }
     }
 
