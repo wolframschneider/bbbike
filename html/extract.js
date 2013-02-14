@@ -129,12 +129,13 @@ function init() {
 
     // read from input, back button pressed?
     var back_botton = check_lnglat_form(true);
+    var coords = "";
     if (back_botton) {
         var sw_lng = $("#sw_lng").val();
         var sw_lat = $("#sw_lat").val();
         var ne_lng = $("#ne_lng").val();
         var ne_lat = $("#ne_lat").val();
-        var coords = $("#coords").val();
+        coords = $("#coords").val();
 
         if (coords == "0,0,0") { // to long URL, ignore
             coords = "";
@@ -1066,7 +1067,9 @@ function polygon_init() {
             if (i > 0) coords += '|';
             coords += v(vec[i].x) + "," + v(vec[i].y);
         }
-        $("#coords").attr("value", coords);
+
+        is_rectangle(vec, bounds) ? $("#coords").attr("value", coords) : $("#coords").attr("value", "");
+        debug("is rec: " + is_rectangle(vec, bounds));
 
         if (bounds != null) {
             $("#sw_lng").val(v(bounds.left));
@@ -1104,7 +1107,19 @@ function polygon_init() {
         // add new points
         controls.modify.createVertices = rotate ? false : true;
     }
+
+
+    function is_rectangle(vec, bounds) {
+        if (vec.length != 4) return false;
+
+        if (
+        v(bounds.left) == v(vec[0].x) && v(bounds.bottom) == v(vec[0].y) && v(bounds.right) == v(vec[1].x) && v(bounds.bottom) == v(vec[1].y) && v(bounds.right) == v(vec[2].x) && v(bounds.top) == v(vec[2].y) && v(bounds.left) == v(vec[3].x) && v(bounds.top) == v(vec[3].y)) {
+            return true;
+        }
+        return false;
+    }
 }
+
 
 // dialog help windows
 jQuery(document).ready(function () {
