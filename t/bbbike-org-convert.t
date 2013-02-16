@@ -61,7 +61,7 @@ my @size_76c = qw(
   strassen_bab
   temp_blockings/bbbike-temp-blockings.pl
   wasserstrassen
-  );
+);
 
 my @size_10k = qw/
   _boundary.gz
