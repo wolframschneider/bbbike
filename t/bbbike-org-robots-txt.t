@@ -81,7 +81,7 @@ my @password = qw(
   z.tile.bbbike.org
 );
 
-foreach my $item (@production) {
+foreach my $item ( @production, @aliases, @development ) {
     push @list,
       {
         'page'      => "http://$item/robots.txt",
