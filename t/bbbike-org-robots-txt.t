@@ -30,124 +30,68 @@ BEGIN {
 binmode \*STDOUT, "utf8";
 binmode \*STDERR, "utf8";
 
-my @cities = qw/Berlin Cottbus Toronto/;
+my @list = ();
 
-# unicode cities
-
-my @list = (
-    {
-        'page' =>
-'http://maps.googleapis.com/maps/api/js?v=3.9&sensor=false&language=en&libraries=weather,panoramio',
-        'min_size'  => 1_000,
-        'match'     => [],
-        'mime_type' => 'text/javascript'
-    },
-    {
-        'page' =>
-          'http://api.maps.yahoo.com/ajaxymap?v=3.0&appid=euzuro-openlayers',
-        'min_size'  => 800,
-        'match'     => [],
-        'mime_type' => 'text/html'
-    }
+my @production = qw(
+  www.bbbike.org
+  download.bbbike.org
+  extract.bbbike.org
+  mc.bbbike.org
+  a.tile.bbbike.org
+  b.tile.bbbike.org
+  c.tile.bbbike.org
+  d.tile.bbbike.org
+  api.bbbike.org
 );
 
-my @javascript = qw(
-  http://mc.bbbike.org/mc/js/OpenLayers/2.12/OpenLayers-min.js
-  http://mc.bbbike.org/mc/js/OpenLayers/2.12/OpenStreetMap.js
-  http://mc.bbbike.org/mc/js/common.js
-  http://mc.bbbike.org/mc/js/jqModal/jqModal-2009.03.01-r14.js
-  http://mc.bbbike.org/mc/js/jquery/jquery-1.7.min.js
-  http://mc.bbbike.org/mc/js/jquery/jquery-ui-1.7.2.custom.min.js
-  http://mc.bbbike.org/mc/js/jquery/jquery.cookie.js
-  http://mc.bbbike.org/mc/js/mc.js
+my @aliases = qw(
+  cyclerouteplanner.org
+  cyclerouteplanner.com
 );
 
-my @gif = qw(
-  http://mc.bbbike.org/mc/img/bg-right.gif
-  http://mc.bbbike.org/mc/img/help.gif
-  http://mc.bbbike.org/mc/img/indicator.gif
+my @development = qw(
+  www2.bbbike.org
+  www4.bbbike.org
+  dev.bbbike.org
+  dev2.bbbike.org
+  dev4.bbbike.org
+  devel.bbbike.org
+  devel2.bbbike.org
+  devel4.bbbike.org
+  tile.bbbike.org
+  extract2.bbbike.org
+  download2.bbbike.org
+  download3.bbbike.org
 );
 
-my @png = qw(
-  http://mc.bbbike.org/mc/img/bg-bottom.png
-  http://mc.bbbike.org/mc/img/bg-top.png
-  http://mc.bbbike.org/mc/img/cross.png
-  http://mc.bbbike.org/mc/img/location-icon.png
-  http://mc.bbbike.org/mc/img/social/facebook-t.png
-  http://mc.bbbike.org/mc/img/social/google-plusone-t.png
-  http://mc.bbbike.org/mc/img/social/rss-icon.png
-  http://mc.bbbike.org/mc/img/social/twitter-t.png
-  http://mc.bbbike.org/mc/img/theme/geofabrik/img/east-mini.png
-  http://mc.bbbike.org/mc/img/theme/geofabrik/img/north-mini.png
-  http://mc.bbbike.org/mc/img/theme/geofabrik/img/slider.png
-  http://mc.bbbike.org/mc/img/theme/geofabrik/img/south-mini.png
-  http://mc.bbbike.org/mc/img/theme/geofabrik/img/west-mini.png
-  http://mc.bbbike.org/mc/img/theme/geofabrik/img/zoom-minus-mini.png
-  http://mc.bbbike.org/mc/img/theme/geofabrik/img/zoom-plus-mini.png
-  http://mc.bbbike.org/mc/img/theme/geofabrik/img/zoombar.png
+my @not_used = qw(
+  dev3.bbbike.org
+  devel3.bbbike.org
+  www3.bbbike.org
+  e.tile.bbbike.org
+  f.tile.bbbike.org
+  u.tile.bbbike.org
+  v.tile.bbbike.org
+  w.tile.bbbike.org
 );
 
-my @css = qw(
-  http://mc.bbbike.org/mc/css/common.css
-  http://mc.bbbike.org/mc/css/mc.css
-  http://mc.bbbike.org/mc/css/OpenLayers/style.css
+my @password = qw(
+  x.tile.bbbike.org
+  y.tile.bbbike.org
+  z.tile.bbbike.org
 );
 
-my @html = qw(
-  http://mc.bbbike.org/mc/
-);
-
-foreach my $item (@png) {
+foreach my $item (@production) {
     push @list,
       {
-        'page'      => $item,
-        'min_size'  => 200,
-        'match'     => [],
-        'mime_type' => 'image/png'
+        'page'      => "http://$item/robots.txt",
+        'min_size'  => 20,
+        'match'     => ["User-agent:"],
+        'mime_type' => 'text/plain'
       };
 }
 
-foreach my $item (@gif) {
-    push @list,
-      {
-        'page'      => $item,
-        'min_size'  => 200,
-        'match'     => [],
-        'mime_type' => 'image/gif'
-      };
-}
-
-foreach my $item (@html) {
-    push @list,
-      {
-        'page'      => $item,
-        'min_size'  => 2_000,
-        'match'     => [ '</html>', '<head>', '<body>' ],
-        'mime_type' => 'text/html'
-      };
-}
-
-foreach my $item (@css) {
-    push @list,
-      {
-        'page'      => $item,
-        'min_size'  => 1_500,
-        'match'     => [ 'top:', 'border:', 'font-size:' ],
-        'mime_type' => 'text/css'
-      };
-}
-
-foreach my $item (@javascript) {
-    push @list,
-      {
-        'page'      => $item,
-        'min_size'  => 1_900,
-        'match'     => [],
-        'mime_type' => 'application/javascript'
-      };
-}
-
-my $count = 3 * scalar(@list);
+my $count = 1 * scalar(@list);
 foreach my $obj (@list) {
     $count += scalar( @{ $obj->{'match'} } );
 }
@@ -164,7 +108,7 @@ foreach my $obj (@list) {
     my $resp = $ua->get($url);
     ok( $resp->is_success, $url );
 
-    my $mime_type = exists $obj->{mime_type} ? $obj->{mime_type} : "text/html";
+    my $mime_type = exists $obj->{mime_type} ? $obj->{mime_type} : "text/plain";
     is( $resp->content_type, $mime_type, "page $url is $mime_type" );
 
     my $content = $resp->decoded_content;
