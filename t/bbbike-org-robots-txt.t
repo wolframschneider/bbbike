@@ -91,7 +91,7 @@ foreach my $item ( @production, @aliases, @development ) {
       };
 }
 
-my $count = 1 * scalar(@list);
+my $count = 3 * scalar(@list);
 foreach my $obj (@list) {
     $count += scalar( @{ $obj->{'match'} } );
 }
