@@ -15,7 +15,7 @@
 #: source_id: INKO_113418
 Oberbaumbrücke: Umfahrung wegen Baustelle, etwas Zeitverlust	q3::inwork; 13332,10832 13305,10789
 # 
-#: last_checked: 2013-02-16 vvv
+#: last_checked: 2013-02-17 vvv
 #: next_check: 2013-03-15 vvv
 #: source_id: IM_019476
 Modersohnstr.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 14134,11272 14181,11434
@@ -42,7 +42,7 @@ Rüdersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inw
 #: last_checked ^^^
 # 
 #: source_id: LMS_3261840849
-#: last_checked: 2013-02-05
+#: last_checked: 2013-02-17
 Gärtnerstr.: Baustelle, Einbahnstraßenregelung	q3::inwork; 14247,11681 14272,11775
 # REMOVED --- Bauarbeiten beendet --- Mainzer Str., Gärtnerstr.: Baustelle, Einbahnstraßenregelung	q3::inwork; 14311,11884 14357,12011
 # 
@@ -224,7 +224,7 @@ Rathausstr.: Fußgänger	q1 10923,12779 10704,12595
 Dircksenstr.: langsame Straßenbahnen, Fußgänger	q2 10970,12822 10849,12944
 Dircksenstr.: Fußgänger	q2 10970,12822 11007,12773 11030,12741 11087,12780 11105,12764
 Gontardstr.: langsame Straßenbahnen, Fußgänger	q2 10733,12967 10793,12906 10923,12779
-Uferweg im Treptower Park: Fußgänger, besonders an schönen Tagen	q2 15793,8984 15638,9020 15527,9096 15513,9144 15432,9322 15321,9448 15174,9554 15052,9584 14910,9643 14697,9726 14674,9764 14500,9856 14483,9843 14460,9871 14448,9922
+Uferweg im Treptower Park: Fußgänger, besonders an schönen Tagen	q2 15778,8990 15638,9020 15527,9096 15513,9144 15432,9322 15321,9448 15174,9554 15052,9584 14910,9643 14697,9726 14674,9764 14500,9856 14483,9843 14460,9871 14448,9922
 (S-Bahnhof - Treptower Hafen): Fußgänger, besonders an schönen Tagen	q2 14361,9772 14436,9784 14483,9843
 Treptower Park, am Rosengarten: Fußgänger	q2 14819,9462 14910,9643
 Treptower Park: Fußgänger	q1 14697,9726 14645,9710 14575,9648 14496,9705 14361,9772
@@ -1368,7 +1368,7 @@ Havelbrücke: Fußgänger	q2 -3371,13987 -3437,14029 -3445,14033
 (Glacisweg - Ramin-Park): eng, Fußgänger	q2 -3887,14405 -3855,14399 -3844,14430
 Reckeweg: eng	q3 -7109,15286 -7133,15287
 Am Krummen Weg: offiziell nur für Fußgänger	q2 -6891,14891 -7026,14890
-Am Krug: offiziell nur für Fußgänger	q2 -7149,14768 -7015,14772
+Am Krug: offiziell nur für Fußgänger	q2 -7149,14768 -7021,14772 -7015,14772
 (Am Langen Weg - Ungewitterweg): eng	q3 -7033,14984 -7075,15021 -7088,15046 -7116,15053
 (Am Zeppelinpark - Sommerbad West-Staaken): einige Fußgänger	q1 -8426,13818 -8232,13846
 (entlang der Autobahn): einige Fußgänger	q1 6489,7908 6437,7968
@@ -2285,7 +2285,7 @@ Blochmannstr.: enge Straße	q1 5097,988 5036,949 4986,959 4925,961 4862,975 4788,
 Schenkestr.: enge Straße	q1 17961,8312 17794,8429
 #: by: anonymous
 #: corrected_by: srt/policy (q2 -> q1)
-Knöterichpfad: enge Straße, Gartensiedlung	q1 -7842,14683 -7808,14939 -7783,15059
+Knöterichpfad: enge Straße, Gartensiedlung	q1 -7842,14683 -7808,14939 -7784,15065
 # 
 #: by: Tweety87...: vvv
 #: XXX_prog: Gegenrichtung ist durch 1s:q4 abgedeckt, sollte besser gelöst sein...
@@ -2997,6 +2997,11 @@ Bulgenbachweg: enge Straße	q0- 3431,26192 3452,26160 3478,26119 3520,26081 3574,
 Schmöckwitzwerder Süd: enge Straße	q1 30343,-3454 30133,-3840
 # 
 #: by: Stefan Klinkusch: vvv
+Lohrer Pfad: kombinierter Fuß- und Radweg, eng	q3 -8386,14882 -8295,14948
+(Bahnweg, KGA Gartenbauverein Staaken): sehr enger Weg, einige Fußgänger	q3 -7433,14308 -7340,14320 -7184,14310 -6942,14291 -6943,14262 -6937,14262
+#: XXX_prog: BS Bordstein am Perwenitzer Weg
+Perwenitzer Weg: Bordstein	q3 -3924,15915 -3942,15926
+Gummiweg: sehr eng, zwei entgegengesetzt fahrende Radfahrer können einander nur schwierig passieren	q3 -7891,13616 -7931,13469
 #: confirmed_by: anonymous
 Ederkopfweg: enge Straße	q0- -4729,14958 -4761,14961 -4807,14990 -4879,15008
 Iznikstr.: enge Straße	q0- -2140,16909 -2119,17015
@@ -3029,3 +3034,6 @@ Narzissenpfad: enge Straße	q0- -7387,14951 -7523,14969
 (Am Rosenanger - Am Sandkrug, Entenschnabel): stark abschüssig, eine 30cm-Stufe	q4; 3462,24702 3489,24659 3535,24626
 (Am Sandkrug, Entenschnabel - Am Rosenanger): starke Steigung, eine 30cm-Stufe	q4; 3535,24626 3489,24659 3462,24702
 #: by: ^^^
+# 
+#: by: j. bethsold
+(Lankegrabenpark): langsam befahrbar, eng, Hundebetrieb	q3 7364,3193 7409,3331 7458,3451
