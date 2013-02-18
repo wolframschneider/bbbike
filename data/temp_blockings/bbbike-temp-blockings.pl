@@ -5772,7 +5772,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_83350',
        data  => <<EOF,
-userdel	q4::inwork; 12979,13280 12878,13229 12786,13185 12685,13135 12585,13118 12386,13085
+userdel	q4::inwork; 12979,13280 12878,13229 12786,13185 12685,13135 12585,13118 12382,13097
 EOF
      },
      { from  => 1158618023, # 2006-09-19 00:20
@@ -13089,7 +13089,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010662',
        data  => <<EOF,
-userdel	2::inwork 12177,13283 12128,13079
+userdel	2::inwork 12177,13283 12126,13088
 EOF
      },
      { from  => 1228345200, # 2008-12-04 00:00
@@ -17219,7 +17219,7 @@ userdel	q3::inwork 9444,11616 9432,11702
 EOF
      },
      { from  => undef, # 
-       until => undef, #
+       until => 1360787052, # XXX -> schon lange als permanenten Sperrung in gesperrt-orig
        text  => 'Friedrich-Ebert-Platz: bei Bundestagssitzungen gesperrt',
        type  => 'gesperrt',
        recurring => 1,
@@ -19970,6 +19970,7 @@ EOF
 #: note: am 2012-09-19 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
 #: note: am 2012-10-18 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
 #: note: am 2012-10-31 am südlichen Ende vorbeigefahren, möglicherweise war heute die Schranke nicht aktiv
+#: note: am 2013-02-11 geprüft, keine Schranke, aber nur für "Linienverkehr frei"
 userdel	q3::inwork 10530,14452 10723,14772
 EOF
      },
@@ -19993,15 +19994,15 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Sperrung Fußgängerbrücke Altglienicke.',
+       text  => 'Vollsperrung der Fußgängerbrücke Altglienicke, mindestens bis zum Sommer 2013',
        type  => 'gesperrt',
        source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4399.html',
        data  => <<EOF,
 #: by: http://www.altglienicke24.de/meldungen.html
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1201/nachricht4563.html
 #: by: http://pf-tk.de/ai1ec_event/podiumsdiskussion-wie-weiter-im-kolner-viertel/?instance_id=
-#: XXX wann wird die Brücke wieder eröffnet?
-#: next_check: 2013-03-01
+#: by: http://www.morgenpost.de/bezirke/article112374495/Fussgaengerbruecke-wird-repariert.html (Reparatur ab Juni 2013, 2 Monate Bauzeit)
+#: next_check: 2013-07-31
 userdel	2::inwork 19968,16 19940,52
 EOF
      },
@@ -20235,7 +20236,7 @@ EOF
        text  => 'Sredzkistr. zwischen Schönhauser Allee und Knaackstr: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2013-01-08
+#: last_checked: 2013-02-11
 #: note: etwa 80 Meter an der Knaackstr. gesperrt
 userdel	q3::inwork 10893,14705 11101,14768
 EOF
@@ -20454,11 +20455,10 @@ userdel	2::inwork 15261,10738 15272,10790 15279,10862
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1360611352, # undef, # XXX
        text  => 'Christburger Str.: Fahrbahn an der Prenzlauer Allee gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-10-31
 userdel	q3::inwork 11912,14486 11642,14625
 EOF
      },
@@ -20819,11 +20819,11 @@ userdel	q4::inwork; 13339,7452 13303,7622
 EOF
      },
      { from  => undef, # 
-       until => 1357672098, # undef, # XXX
+       until => undef, # XXX
        text  => 'Sredzkistr.: Kreuzungsbereich in Höhe Hosemannstr. gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2012-11-14 vvv
+#: last_checked: 2013-02-11 vvv
 #: XXX je 30 Meter vor und hinter der Kreuzung ist gesperrt vvv
 userdel	q2::inwork 11436,14741 11271,14755
 userdel	q3::inwork 11271,14755 11187,14763
