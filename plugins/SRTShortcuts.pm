@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2003,2004,2008,2009,2010,2011 Slaven Rezic. All rights reserved.
+# Copyright (C) 2003,2004,2008,2009,2010,2011,2012,2013 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -25,7 +25,7 @@ BEGIN {
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.86;
+$VERSION = 1.87;
 
 use your qw(%MultiMap::images $BBBikeLazy::mode
 	    %main::line_width %main::p_width %main::str_draw %main::p_draw
@@ -68,9 +68,12 @@ use vars qw(%want_plot_type_file %layer_for_type_file);
 use vars qw($want_winter_optimization);
 $want_winter_optimization = '' if !defined $want_winter_optimization;
 
+use vars qw(%images);
+
 sub register {
     my $pkg = __PACKAGE__;
     $BBBikePlugin::plugins{$pkg} = $pkg;
+    _create_images();
     add_button();
     add_keybindings();
     define_subs();
@@ -85,6 +88,37 @@ sub unregister {
     remove_keybindings();
     BBBikePlugin::remove_menu_button(__PACKAGE__."_menu");
     delete $BBBikePlugin::plugins{$pkg};
+}
+
+sub _create_images {
+    if (!defined $images{VIZ}) {
+	# Got from: http://www.vmz-info.de/vmz-fuercho-5.1.1.1/images/liferay.ico
+	# Converted with convert + mmencode -b
+	$images{VIZ} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFz
+UkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAA
+AiJQTFRFL06DGj9/ETd5d4mqprXFhZ+9hJ69o7PEz9fdyNfmyNflx9Hb+vr6////G0CACjWB
+ACt6bYOqp7nMh6fKhqbKo7XJ09vj0uPz0uPyzNjkEzh7ACp6AB9zZXylorXJgKLHf6DHnrHG
+0Nnhz+Hyz+HxydbjfI6tcIara4GnqrXIxM3Wrr3Prb3Pw8zW3uLm2ODo2N7kp7bGprjNorbL
+wsvV1drf0drk0Nrj193i/fz7/vz7//792+DlyNXgztvmxtDZh6C+iKbKgaLHrLvN0drj0uLz
+0OHy0tzm/Pv72ODny9zt0uTzxNPhhp+9hqXKgKHHq7rN0NnizuDx0dvl2eDny93u0uT0xdPh
+p7XGpLbKoLPIw8vW09zm0dzl2d/l/Pv6/f384OPnz9jg093kzdXbzdXa0dnh2t/l0dvk0tzl
+197jx8/YoLHGprbKprTFxtPg0+P019/n0tvl0d3msL7PfZzCh6bKgp29xdPf1t/n09zl0eLz
+0t3nsb/Pfp3DiafKhJ6+xtDYztnly9fj//38/v382N7j0Nvk1dzhxc7Xn7PIprnNpLTG3uPm
+rr3Os7zMboGndImtfI6s+/v6y9fhzd/vzd/wz9ngobPHfp7EgKDFn7PLcYaqABxuACt5DzN3
+z9vl0uP009zjprjLhqTJpbjOeYyuACh3CjaBFDt9+/v7yNLaxtXhxtXiztbbqbfHiKK/pbXH
+hJSxFjd5H0SCLEyCxY87YQAAAAFiS0dEDfa0YfUAAAEJSURBVBjTY2BgZGJmYWVj5+Dk4ubh
+5eVl4OMXEBQSFhEVE5eQBAtIScvIyskrKCopq6iCBdTUNTS1tHV09fT1DXiAgMHQyNjE1Mzc
+wtLKytrG1s6ewcHRydnF1c3dA6jc08vbh8HXzz8g0C0oGCQQEhoWzhARGRVtERMbFx8fn5CY
+lJzCkCqWphfv4RGfnpGZlZ2Tm8eQX6BcaMXL61EUpFxcUlpWzlAhrlJpCRSoUq6uqa2rb2Bo
+bGo2aLG2bm1rD+7o7OruYQA5xsbTsze7r0S3f8LESQxA2yZPmTpt+oyZs2bPmTtvPlhggfjC
+RYuXOC5dtnzFSpDAqtVr1q5b77Bh46bNW7YCAKJlS6V7R7bEAAAAJXRFWHRkYXRlOmNyZWF0
+ZQAyMDEzLTAyLTE5VDIxOjQyOjUxKzAxOjAws5ftwQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAx
+Mi0wOC0xNFQxNjoyODo1MCswMjowMOv6tcMAAAAASUVORK5CYII=
+EOF
+    }
 }
 
 sub add_button {
@@ -104,6 +138,7 @@ sub add_button {
 	(-disabledforeground => "black",
 	 -menuitems =>
 	 [
+	  ($main::devel_host ? [Cascade => "Karte"] : ()),
 	  [Cascade => "Old VMZ/LBVS stuff",
 	   -font => $main::font{'bold'},
 	   -menuitems =>
@@ -121,6 +156,10 @@ sub add_button {
 	     -command => sub { show_lbvs_diff() },
 	    ],
 	    (map { [Button => "LBVS version $_", -command => [sub { show_lbvs_diff($_[0]) }, $_] ] } (0 .. 5)),
+	    "-",
+	    [Button => "Select any file as VMZ/LBVS diff",
+	     -command => sub { select_vmz_lbvs_diff() },
+	    ],
 	   ],
 	  ],
 	  [Button => 'GPS downloads (not on biokovo)',
@@ -367,6 +406,49 @@ EOF
 		layer_checkbutton('Restaurants', 'str',
 				  "$bbbike_rootdir/data_berlin_osm/restaurants"),
 		[Button => "Current route", -command => sub { add_current_route_as_layer() }],
+		[Cascade => 'Berlin/Potsdam coords', -menuitems =>
+		 [
+		  [Button => "Add Berlin.coords.data",
+		   -command => sub { add_coords_data("Berlin.coords.bbd") },
+		  ],
+# 		  [Button => "Add Berlin.coords.data with labels",
+# 		   -command => sub { add_coords_data("Berlin.coords.bbd", 1) },
+# 		  ],
+		  [Button => "Add Berlin-by-citypart data",
+		   -command => sub { choose_Berlin_by_data("$bbbike_rootdir/tmp/Berlin.coords-by-citypart") },
+		  ],
+		  [Button => "Add Berlin-by-zip data",
+		   -command => sub { choose_Berlin_by_data("$bbbike_rootdir/tmp/Berlin.coords-by-zip") },
+		  ],
+		  [Button => "Add Potsdam.coords.data",
+		   -command => sub { add_coords_data("Potsdam.coords.bbd") },
+		  ],
+# 		  [Button => "Add Potsdam.coords.data with labels",
+# 		   -command => sub { add_coords_data("Potsdam.coords.bbd", 1) },
+# 		  ],
+		 ]
+		],
+		[Cascade => "VMZ-Detailnetz", -menuitems =>
+		 [	
+		  layer_checkbutton('strassen', 'str',
+				    "$bbbike_auxdir/vmz/bbd/strassen",
+				    below => $str_layer_level,
+				   ),
+		  [Button => 'gesperrt', -command => sub { add_new_nonlazy_layer('sperre', "$bbbike_auxdir/vmz/bbd/gesperrt") }],
+		  layer_checkbutton('qualitaet', 'str',
+				    "$bbbike_auxdir/vmz/bbd/qualitaet_s",
+				    above => $str_layer_level,
+				   ),
+		  layer_checkbutton('radwege', 'str',
+				    "$bbbike_auxdir/vmz/bbd/radwege",
+				    above => $str_layer_level,
+				   ),
+		  layer_checkbutton('ampeln', 'str', # yes, str, otherwise symbol is not plotted
+				    "$bbbike_auxdir/vmz/bbd/ampeln",
+				    above => $str_layer_level,
+				   ),
+		 ],
+		],
 	       ],
 	      ],
 	      [Cascade => $do_compound->('OSM Live data', $MultiMap::images{OpenStreetMap}), -menuitems =>
@@ -440,56 +522,12 @@ EOF
 		},
 	       ]
 	      ],
-	      [Cascade => $do_compound->('Berlin/Potsdam coords'), -menuitems =>
-	       [
-		[Button => "Add Berlin.coords.data",
-		 -command => sub { add_coords_data("Berlin.coords.bbd") },
-		],
-# 		[Button => "Add Berlin.coords.data with labels",
-# 		 -command => sub { add_coords_data("Berlin.coords.bbd", 1) },
-# 		],
-		[Button => "Add Berlin-by-citypart data",
-		 -command => sub { choose_Berlin_by_data("$bbbike_rootdir/tmp/Berlin.coords-by-citypart") },
-		],
-		[Button => "Add Berlin-by-zip data",
-		 -command => sub { choose_Berlin_by_data("$bbbike_rootdir/tmp/Berlin.coords-by-zip") },
-		],
-		[Button => "Add Potsdam.coords.data",
-		 -command => sub { add_coords_data("Potsdam.coords.bbd") },
-		],
-# 		[Button => "Add Potsdam.coords.data with labels",
-# 		 -command => sub { add_coords_data("Potsdam.coords.bbd", 1) },
-# 		],
-	       ]
-	      ],
-	      [Button => $do_compound->('VMZ'),
+	      [Button => $do_compound->('VMZ', $images{VIZ}),
 	       -command => sub { newvmz_process() },
 	      ],
 	      [Button => $do_compound->("Show recent VMZ diff"),
 	       -command => sub { show_new_vmz_diff() },
 	      ],
-	      [Cascade => $do_compound->("VMZ-Detailnetz"), -menuitems =>
-	       [
-		layer_checkbutton('strassen', 'str',
-				  "$bbbike_auxdir/vmz/bbd/strassen",
-				  below => $str_layer_level,
-				 ),
-		[Button => 'gesperrt', -command => sub { add_new_nonlazy_layer('sperre', "$bbbike_auxdir/vmz/bbd/gesperrt") }],
-		layer_checkbutton('qualitaet', 'str',
-				  "$bbbike_auxdir/vmz/bbd/qualitaet_s",
-				  above => $str_layer_level,
-				 ),
-		layer_checkbutton('radwege', 'str',
-				  "$bbbike_auxdir/vmz/bbd/radwege",
-				  above => $str_layer_level,
-				 ),
-		layer_checkbutton('ampeln', 'str', # yes, str, otherwise symbol is not plotted
-				  "$bbbike_auxdir/vmz/bbd/ampeln",
-				  above => $str_layer_level,
-				 ),
-	       ],
-	      ],
-	      ($main::devel_host ? [Cascade => $do_compound->("Karte")] : ()),
 	      [Button => $do_compound->("Mark Layer"),
 	       -command => sub { mark_layer_dialog() },
 	      ],
@@ -583,6 +621,24 @@ EOF
 	      [Button => $do_compound->("Multi-page PDF"),
 	       -command => sub { multi_page_pdf() },
 	      ],
+	      [Cascade => $do_compound->("Development"), -menuitems =>
+	       [
+		[Button => "Show Karte canvas items",
+		 -command => sub {
+		     my $wd = _get_tk_widgetdump();
+		     $Tk::WidgetDump::ref2widget{$main::c} = $main::c; # XXX hack
+		     $wd->canvas_dump($main::c);
+		 },
+		],
+		[Button => "Show Karte canvas bindings",
+		 -command => sub {
+		     my $wd = _get_tk_widgetdump();
+		     $Tk::WidgetDump::ref2widget{$main::c} = $main::c; # XXX hack
+		     $wd->show_bindings($main::c);
+		 },
+		],
+	       ]
+	      ],
 	      "-",
 	      [Cascade => $do_compound->("Rare or old"), -menu => $rare_or_old_menu],
 	      "-",
@@ -608,9 +664,9 @@ EOF
     my $menu = $mmf->Subwidget(__PACKAGE__ . "_menu_menu");
     $menu->configure(-disabledforeground => "black");
     if ($main::devel_host) {
-	my $map_menuitem = $menu->index("Karte");
-	$menu->entryconfigure($map_menuitem,
-			      -menu => main::get_map_button_menu($menu));
+	my $map_menuitem = $rare_or_old_menu->index("Karte");
+	$rare_or_old_menu->entryconfigure($map_menuitem,
+					  -menu => main::get_map_button_menu($menu));
     }
 }
 
@@ -1029,6 +1085,24 @@ sub _vmz_lbvs_splitter {
 
 sub _vmz_lbvs_columnwidths {
     (200, 1200, 200, 100);
+}
+
+sub select_vmz_lbvs_diff {
+    require Tk::PathEntry;
+    my $t = $main::top->Toplevel(-title => "Select VMZ file");
+    my $file;
+    my $weiter = 0;
+    my $pe = $t->PathEntry
+	(-textvariable => \$file,
+	 -selectcmd => sub { $weiter = 1 },
+	 -cancelcmd => sub { $weiter = -1 },
+	)->pack(-fill => "x", -expand => 1, -side => "left");
+    $pe->focus;
+    $t->waitVariable(\$weiter);
+    $t->destroy;
+    if ($weiter == 1 && $file) {
+	show_any_diff($file, "vmz");
+    }
 }
 
 sub show_vmz_diff {
@@ -2671,6 +2745,18 @@ sub multi_page_pdf {
     if ($@) {
 	main::status_message("An error happened: $@", "error");
     }
+}
+
+use vars qw($WIDGETDUMP_W);
+sub _get_tk_widgetdump {
+    if (Tk::Exists($WIDGETDUMP_W)) {
+	return $WIDGETDUMP_W;
+    }
+    require Tk::WidgetDump;
+    Tk::WidgetDump->VERSION('1.38_51');
+    $WIDGETDUMP_W = $main::top->WidgetDump;
+    $WIDGETDUMP_W->iconify;
+    $WIDGETDUMP_W;
 }
 
 1;
