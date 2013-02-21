@@ -31,7 +31,7 @@ var config = {
         "mapsforge-osm.zip": 350
     },
 
-    debug: 0,
+    debug: 1,
 
     "dummy": ""
 };
@@ -914,15 +914,22 @@ function validateControlsAjax() {
 
     // plot area size and file size
     $.getJSON(url, function (data) {
+        var size = data.size
+        var error = 5000000;
+        if (size == 'undefined' || size < 0) {
+            debug("error in tile size: " + size + ", reset to " + error);
+            size = error;
+        }
+
         // adjust polygon size for huge data, the area size is usually not normal (e.g. sea coast)
-        if (data.size > 50000) {
+        if (size > 50000) {
             // min. size factor 0.3 or 0.5 for very large areas
-            var p = polygon + (1 - polygon) * (data.size > 300000 ? 0.5 : 0.3);
-            debug("reset polygon of size: " + data.size + " from polygon: " + polygon + " to: " + p);
+            var p = polygon + (1 - polygon) * (size > 300000 ? 0.5 : 0.3);
+            debug("reset polygon of size: " + size + " from polygon: " + polygon + " to: " + p);
             polygon = p;
         }
 
-        var filesize = show_filesize(skm * polygon, data.size * polygon);
+        var filesize = show_filesize(skm * polygon, size * polygon);
         show_skm(skm * polygon, filesize);
     });
 }
