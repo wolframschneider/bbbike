@@ -33,7 +33,7 @@ is( $tile->area_size( 0.1,  0.1,  2.9,  2.9 ), 9 );
 is( $tile->area_size( 0.1,  0.1,  2.9,  2.9,  TileSize::FRACTAL_100 ), 9 );
 is( $tile->area_size( -2.9, 0.1,  -0.1, 2.9,  TileSize::FRACTAL_100 ), 9 );
 is( $tile->area_size( -2.9, -2.9, -0.1, -0.1, TileSize::FRACTAL_100 ), 9 );
-is( $tile->area_size( -1,   -1,   -0,   -2,   TileSize::FRACTAL_100 ), 0 );
+is( $tile->area_size( -1,   -1,   -0,   -0,   TileSize::FRACTAL_100 ), 1 );
 is( $tile->area_size( 0,    50,   15,   54,   TileSize::FRACTAL_100 ), 60 );
 
 # dummy
@@ -99,16 +99,16 @@ cmp_ok( $tile->area_size( +180, 0,  -179, 1, TileSize::FRACTAL_100 ), "==", 1 );
 cmp_ok( $tile->area_size( +179, -1, -179, 1, TileSize::FRACTAL_100 ), "==", 4 );
 
 # illegal query
-cmp_ok( $tile->area_size( +179, 0, +178, 1, TileSize::FRACTAL_100 ), "==", 0 );
-cmp_ok( $tile->area_size( -178, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 0 );
+cmp_ok( $tile->area_size( +179, 0, +178, 1, TileSize::FRACTAL_100 ), "==", -1 );
+cmp_ok( $tile->area_size( -178, 0, -179, 1, TileSize::FRACTAL_100 ), "==", -1 );
 cmp_ok( $tile->area_size( -179.5, 0, -179, 1, TileSize::FRACTAL_100 ), "==",
     1 );
 cmp_ok( $tile->area_size( +179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 1 );
 
 cmp_ok( $tile->area_size( -180, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 1 );
-cmp_ok( $tile->area_size( -179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 0 );
+cmp_ok( $tile->area_size( -179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", -1 );
 
-cmp_ok( $tile->area_size( -180, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 0 );
+cmp_ok( $tile->area_size( -180, 0, +180, 1, TileSize::FRACTAL_100 ), "==", -1 );
 cmp_ok( $tile->area_size( +180, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 0 );
 
 # test with real planet.osm data
