@@ -111,6 +111,14 @@ cmp_ok( $tile->area_size( -179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", -1 );
 cmp_ok( $tile->area_size( -180, 0, +180, 1, TileSize::FRACTAL_100 ), "==", -1 );
 cmp_ok( $tile->area_size( +180, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 0 );
 
+cmp_ok( $tile->area_size( -280, 0, -279, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( 280, 0, 290, 1, TileSize::FRACTAL_100 ), "==", -1 );
+cmp_ok( $tile->area_size( 80, 80, 81, 91, TileSize::FRACTAL_100 ), "==", -1 );
+cmp_ok( $tile->area_size( 80, 80, 81, 90.00001, TileSize::FRACTAL_100 ), "==", -1 );
+cmp_ok( $tile->area_size( -90.00001, 80, 81, -89, TileSize::FRACTAL_100 ), "==", -1 );
+cmp_ok( $tile->area_size( 359, 0, 360, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( 359, 0, 361, 1, TileSize::FRACTAL_100 ), "==", -1 );
+
 # test with real planet.osm data
 $tile =
   new TileSize( 'debug' => 0, 'database' => "world/etc/tile/tile-pbf.csv" );
