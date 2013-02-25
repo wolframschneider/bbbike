@@ -1,33 +1,39 @@
-# $Id: Makefile.doc,v 1.7 2006/09/10 22:46:48 eserte Exp $
-
-# This will probably only work under FreeBSD, and also
-# only if /usr/doc is populated with a doc repository.
-
 # The following FreeBSD packages are necessary:
-#    openjade docbook-310 dsssl-docbook-modular docbook-xsl jadetex
+#    docbook-5.0 docbook-xsl
 # (This list might be incomplete)
+#
+# In Debian, docbook-xsl needs to be installed
+#
+# The pdf target is highly experimental. Under FreeBSD, the
+# textproc/fop package is required. The results are not yet
+# optional (no non-latin1 characters, some stringparam
+# seem to be ignored)
 
-MAINTAINER=	slaven@rezic.de
-DOC=		HOWTO_edit_bbbike_data
-
-# See also:
-# http://lists.freebsd.org/pipermail/freebsd-doc/2003-December/002999.html
-LANG?=unknown
-LC_ALL?=unknown
-.if ${LANG} != C || ${LC_ALL} != C
-.error Please make sure the LANG and LC_ALL variables are set to C
+.if exists(/usr/local/share/xsl/docbook)
+DOCBOOK_XSL_DIR=/usr/local/share/xsl/docbook
+.elif exists(/usr/share/xml/docbook/stylesheet/docbook-xsl)
+DOCBOOK_XSL_DIR=/usr/share/xml/docbook/stylesheet/docbook-xsl
+.else
+.error Cannot find docbook xsl
 .endif
 
-SRCS=		${DOC}.sgml
-FORMATS?=	html
+all:	html
 
-## This makes no difference, why?
-#HAS_INDEX=	true
-WITH_ARTICLE_TOC?= YES
+html:	HOWTO_edit_bbbike_data.html
 
-DOC_PREFIX?=	/usr/doc
-DSLHTML?=       ${DOC_PREFIX}/share/sgml/freebsd.dsl
-DSLPRINT?=      ${DOC_PREFIX}/share/sgml/freebsd.dsl
-LANGCODE=       de_DE.ISO8859-1
+pdf:	/tmp/HOWTO_edit_bbbike_data.pdf
 
-.include "${DOC_PREFIX}/share/mk/doc.project.mk"
+HOWTO_edit_bbbike_data.html: HOWTO_edit_bbbike_data.xml Makefile.doc
+	xsltproc \
+	    --stringparam html.stylesheet docbook5.css \
+	    --stringparam section.autolabel 1 \
+	    --stringparam toc.section.depth 1 \
+	    --output HOWTO_edit_bbbike_data.html ${DOCBOOK_XSL_DIR}/html/docbook.xsl HOWTO_edit_bbbike_data.xml
+
+/tmp/HOWTO_edit_bbbike_data.pdf: HOWTO_edit_bbbike_data.xml Makefile.doc
+	xsltproc \
+	    --stringparam paper.type A4 \
+	    --stringparam section.autolabel 1 \
+	    --stringparam toc.section.depth 1 \
+            --output /tmp/HOWTO_edit_bbbike_data.fo ${DOCBOOK_XSL_DIR}/fo/docbook.xsl HOWTO_edit_bbbike_data.xml
+	fop -fo /tmp/HOWTO_edit_bbbike_data.fo -pdf /tmp/HOWTO_edit_bbbike_data.pdf
