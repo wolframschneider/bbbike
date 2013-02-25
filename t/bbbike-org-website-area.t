@@ -83,7 +83,7 @@ qr|Start bicycle routing for .*?href="http://www.bbbike.org/$city/">|,
         );
 
         foreach my $ext (qw/gz pbf/) {
-            like( $res->decoded_content, qr|$path/$city/$city.osm.$ext"|,
+            like( $res->decoded_content, qr|($path/$city)?/$city.osm.$ext"|,
                 "$path/$city/$city.osm.$ext" );
         }
 
@@ -92,12 +92,12 @@ qr|Start bicycle routing for .*?href="http://www.bbbike.org/$city/">|,
                 qw/osm.garmin-cycle.zip osm.garmin-leisure.zip osm.garmin-osm.zip osm.shp.zip osm.navit.zip poly/
               )
             {
-                like( $res->decoded_content, qr|$path/$city/$city.$ext"|,
+                like( $res->decoded_content, qr|($path/$city)?/$city.$ext"|,
                     "$path/$city/$city.$ext" );
             }
         }
 
-        like( $res->decoded_content, qr|$path/$city/CHECKSUM.txt"|,
+        like( $res->decoded_content, qr|($path/$city)?/CHECKSUM.txt"|,
             "CHECKSUM.txt" );
     }
 }
