@@ -1260,18 +1260,7 @@ userdel	2::night 14838,11410 14776,11400
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Hussitenstr.: Fahrbahn zwischen Stralsunder Str. und Usedomer Str. gesperrt, Ausweichen auf Gehweg',
-         'from' => undef,
-         'id' => 2377,
-         'data' => '#: last_checked: 2012-12-25 (Sackgassenschild existiert noch)
-#: next_check: 2013-02-01
-#: by: wosch
-userdel	q4::inwork 9112,14771 9250,14658
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1333,7 +1322,7 @@ userdel	q4::inwork; 13339,7452 13303,7622
          'text' => 'Sredzkistr.: Kreuzungsbereich in Höhe Hosemannstr. gesperrt, Ausweichen auf Gehweg',
          'from' => undef,
          'id' => 2399,
-         'data' => '#: last_checked: 2013-02-11 vvv
+         'data' => '#: last_checked: 2013-02-23 vvv
 #: XXX je 30 Meter vor und hinter der Kreuzung ist gesperrt vvv
 userdel	q2::inwork 11436,14741 11271,14755
 userdel	q3::inwork 11271,14755 11187,14763
@@ -1385,34 +1374,37 @@ userdel	q4::inwork 10479,18007 10498,18014 10473,18113 10545,18143 10582,18159
        },
        {
          'source_id' => 'http://www.potsdamer-wassertaxi.de/fahrplan.php?y=2012',
-         'until' => undef,
-         'text' => 'Potsdamer Wassertaxi: fährt nur im Sommer an Wochenenden und Feiertagen',
-         'from' => undef,
-         'id' => 2407,
+         'recurring' => 1,
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 	2::temp -12149,1436 -12057,1530 -11789,1502 -11323,1330 -10320,1494 -10098,1745 -10086,1886
 	2::temp -10086,1886 -10055,1628
 #: XXX_prog ^^^
 ',
-         'type' => 'gesperrt'
+         'until' => undef,
+         'from' => undef,
+         'text' => 'Potsdamer Wassertaxi: fährt nur im Sommer an Wochenenden und Feiertagen',
+         'type' => 'gesperrt',
+         'id' => 2407
        },
        {
          'source_id' => 'http://www.bvg.de/index.php/de/3777/name/Faehrlinie+F21.html',
-         'until' => undef,
-         'text' => 'Fähren F21, F23, F24: fahren nur ab ca. April bis Anfang Oktober, fahren nicht am Montag',
-         'from' => undef,
-         'id' => 2408,
+         'recurring' => 1,
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 	2::temp 27090,-2253 27420,-2067 27492,-1880 27490,-1710 27425,-1601 27374,-1573
 	2::temp 29406,3776 29367,3690 29395,3572 29297,3456 29131,3489 29084,3331 29113,3324 29195,3191 29553,2934 29569,2909 29604,2931 29797,2918 29945,3001 29959,3031
 	2::temp 29959,3031 29968,2986
 #: XXX_prog ^^^
 ',
-         'type' => 'gesperrt'
+         'until' => undef,
+         'from' => undef,
+         'text' => 'Fähren F21, F23, F24: fahren nur ab ca. April bis Anfang Oktober, fahren nicht am Montag',
+         'type' => 'gesperrt',
+         'id' => 2408
        },
        {
          'until' => undef,
          'text' => 'Karniner Fähre: fährt nur von Mai bis Oktober',
+         'recurring' => 1,
          'from' => undef,
          'id' => 2409,
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
@@ -1424,6 +1416,7 @@ userdel	q4::inwork 10479,18007 10498,18014 10473,18113 10545,18143 10582,18159
        {
          'until' => undef,
          'text' => 'Westklüne - Ostklüne: keine offizielle Fähre, aber wenn man Glück hat, kann man per Ruderboot übergesetzt werden',
+         'recurring' => 1,
          'from' => undef,
          'id' => 2410,
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv

@@ -10,12 +10,9 @@
 # 
 ### Friedrichshain ###
 # 
-#: last_checked: 2013-02-15
-#: next_check: 2013-02-21
-#: source_id: INKO_113418
-Oberbaumbrücke: Umfahrung wegen Baustelle, etwas Zeitverlust	q3::inwork; 13332,10832 13305,10789
+# REMOVED --- #: last_checked: 2013-02-15 --- #: next_check: 2013-02-21 --- #: source_id: INKO_113418 --- Oberbaumbrücke: Umfahrung wegen Baustelle, etwas Zeitverlust	q3::inwork; 13332,10832 13305,10789
 # 
-#: last_checked: 2013-02-20 vvv
+#: last_checked: 2013-02-26 vvv
 #: next_check: 2013-03-15 vvv
 #: source_id: IM_019476
 Modersohnstr.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 14134,11272 14181,11434
@@ -26,17 +23,17 @@ Modersohnstr.: Bauarbeiten, Einbahnstraßenregelung	q3::inwork; 14134,11272 14181
 #: last_checked: 2013-02-16
 Helmerdingstr.: Bauarbeiten	q3::inwork 14465,11195 14442,11101
 # 
-#: last_checked: 2013-02-16 vvv
+#: last_checked: 2013-02-25 vvv
 #: XXX siehe auch den Eintrag in gesperrt-orig
 # REMOVED (Sackgasse) --- Marchlewskistr., Helsingforser Str.: Bauarbeiten, u.U. Ausweichen auf Gehweg	q3::inwork; 13473,11456 13496,11384
 # REMOVED (Einbahnstraße) --- Helsingforser Str.: Bauarbeiten, Einbahnstraße, u.U. Ausweichen auf Gehweg	q3::inwork; 13496,11384 13541,11355
 Helsingforser Platz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q4::inwork 13473,11456 13427,11431
 #: last_checked ^^^
 # 
-#: last_checked: 2013-02-20
+#: last_checked: 2013-02-26
 Marchlewskistr.: Bauarbeiten, Einbahnstraße	q2::inwork; 13366,11651 13295,11792
 # 
-#: last_checked: 2013-02-20 vvv
+#: last_checked: 2013-02-26 vvv
 # REMOVED --- Rüdersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q2::inwork 12822,12067 12740,12128
 Rüdersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 12740,12128 12575,12223
 #: last_checked ^^^
@@ -77,8 +74,8 @@ Charlottenstr.: wegen Bauarbeiten eine Einbahnstraße Richtung Süden	q4::inwork; 
 #: last_checked: 2013-02-20
 Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwork; 9580,12581 9601,12380
 # 
-#: last_checked: 2013-02-14 vvv
-#: next_check: 2013-02-28 vvv
+#: last_checked: 2013-02-23 vvv
+#: next_check: 2013-03-03 vvv
 Gartenstr.: Einbahnstraße zwischen Invalidenstr. und Tieckstr. (Bauarbeiten)	q4::inwork; 9510,13823 9383,13978
 Tieckstr.: Einbahnstraße zwischen Borsigstr. und Gartenstr. (Bauarbeiten)	q3::inwork; 9376,13765 9510,13823 
 #: next_check ^^^
@@ -92,7 +89,7 @@ Tieckstr.: Einbahnstraße zwischen Borsigstr. und Gartenstr. (Bauarbeiten)	q3::in
 #: XXX laut INKO_113363 bis Ende März 2013 gesperrt
 Voßstr.: gesperrte Fahrbahn (Baustelle), Ausweichen auf Gehweg	q3::inwork 8743,11663 8837,11676
 # 
-#: last_checked: 2013-02-20 vvv
+#: last_checked: 2013-02-23 vvv
 #: next_check: 2013-12-31 vvv
 #: source_id: IM_017330
 #: source_id: INKO_113944
@@ -137,13 +134,13 @@ Rathausstr.: Fußgänger, enge Stelle vor dem Roten Rathaus	q2::inwork 10601,12521
 # REMOVED --- #: last_checked: 2013-01-28 --- #: next_check: 2013-02-06 --- Zimmerstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10072,11384 9945,11371 9737,11349
 # REMOVED (das Einfahrt verboten-Schild hängt noch, wurde allerdings wahrscheinlich vergessen - 2013-02-06) --- #: last_checked: 2013-01-28 --- Jerusalemer Str.: Bauarbeiten, Einbahnstraße	q3::inwork; 9949,11470 9935,11566
 # 
-#: last_checked: 2013-02-07
+#: last_checked: 2013-02-25
 Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10437,11352 10256,11160
 # 
-#: last_checked: 2013-02-19 vvv
-# REMOVED (vielleicht nur temporär?) --- Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10489,11405 10437,11352
+#: last_checked: 2013-02-25 vvv
+Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10437,11352 10489,11405
 # REMOVED (see below) --- Neue Grünstr.: Einbahnstraßenregelung wegen Bauarbeiten in der Alten Jakobstr.	q3::inwork; 10389,11390 10446,11470
-Neue Grünstr.: Fahrbahn gesperrt wegen Bauarbeiten	q3::inwork 10389,11390 10446,11470
+Neue Grünstr.: Fahrbahn gesperrt wegen Bauarbeiten	q4::inwork 10389,11390 10446,11470
 #: last_checked: ^^^
 # 
 #: last_checked: 2013-02-05 vvv
@@ -164,7 +161,7 @@ Am Kupfergraben: Baustelle, Einbahnstraße	q3::inwork; 9870,12657 9900,12643 9919
 #: XXX see also Adalbertstr. (Kreuzberg): Leitungsarbeiten, Fahrtrichtung gesperrt (bis Mitte 10/12) Richtung Kottbusser Tor zwischen Oranienstr. und Kottbusser Tor, 19.07.2012 09:00 Uhr bis 12.10.2012 17:00 Uhr¦INKO_114376¦http://asp.vmzberlin.com/VMZ_LSBB_MELDUNGEN_WEB/Meldungskarte.jsp?back=true&map=true&x=52.50035&y=13.41862&zoom=13&meldungId=INKO_114376
 #: source_id: INKO_114376
 #: source_id: IM_019321
-#: last_checked: 2013-02-10
+#: last_checked: 2013-02-25
 Adalbertstr.: Fahrbahn in Richtung Kottbusser Tor gesperrt	q4::inwork; 11389,10463 11393,10390
 # 
 ### Köpenick ###
@@ -246,7 +243,7 @@ Görlitzer Park: Fußgänger	q2 12814,9966 12833,9998 12869,10071 12904,10141 12911
 #: XXX evtl. nach den Bauarbeiten asphaltiert oder zumindest besser gepflastert/gewalzt? Vielleicht wird auch der südliche Halbkreis neu gemacht?
 #: XXX nach den Bauarbeiten den normalen Eintrag wieder aktivieren
 #: by: http://unsergoerli.de/wegebau-am-rondell-ab-november/ (Asphaltierung!)
-#: last_checked: 2013-02-06
+#: last_checked: 2013-02-25
 Görlitzer Park, Rondell: Bauarbeiten, Fußgänger	q3::inwork 12802,10097 12801,10146 12761,10195 12712,10192 12670,10160
 #Görlitzer Park, Rondell: Fußgänger	q2 12802,10097 12801,10146 12761,10195 12712,10192 12670,10160
 Görlitzer Park, Rondell: Fußgänger	q2 12802,10097 12737,10051 12690,10062 12659,10119 12670,10160
@@ -296,7 +293,7 @@ Uferweg an den Treptowers: enger und kurviger Weg	q3 14500,9856 14465,9900 14464
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20070810.1330.83363.html
 #: confirmed_by: srt
 Denewitzstr.: kombinierter Fuß- und Radweg	q1 8061,10310 7947,10155
-Linienstr.: Gehweg	q2 11104,13456 11135,13452
+Linienstr.: Gehweg	q2 11104,13456 11131,13455
 Böcklerpark: gemeinsamer Fuß- und Radweg	q2 10885,10045 10723,10088 10521,10126
 Böcklerpark: enge Kurven, manchmal Fußgänger auf dem Radweg	q3 10967,10092 10917,10068 10885,10045
 Böcklerpark: enge Kurven, Fußgänger	q3 10923,10113 10917,10068
@@ -1317,7 +1314,7 @@ Vergissmeinnichtweg: Bodenschwellen	q1 21582,185 21608,85
 #: XXX_prog BS zur Thaerstr.
 (Bersarinplatz - Thaerstr.): Fußgänger, Bordstein	q2 13747,12642 13761,12690
 #: XXX_prog BS zur Thaerstr.
-(Thaerstr. - Bersarinplatz): Fußgänger, Bordstein	q2 13761,12690 13727,12642
+(Thaerstr. - Bersarinplatz): Fußgänger, Bordstein	q2 13761,12690 13695,12643
 Ottmachauer Steig: eng, Fußgänger, einzelne Stufen vor Hauseingängen	q3 -369,4631 -337,4657 -424,4717 -435,4687
 #: XXX_prog BS am Sackgassenhammer
 Alsbacher Weg: Bordstein	q1 -824,4682 -831,4636
@@ -1484,6 +1481,7 @@ Eyke-von-Repkow-Platz: einige Fußgänger, Bordsteine	q3 5556,12536 5531,12501
 (Weg an der Südpanke - Am Pankepark): einige Fußgänger	q1 8323,14142 8290,14119
 (Rhinstr. - Am Mühlenberg): einige Fußgänger, Rampe	q1- 18220,11710 18242,11793 18258,11827
 (Kolonie Sanssouci): einige Fußgänger	q1 16488,10381 16297,10636 16246,10641
+Müggelstr., Hausdurchfahrt: einige Fußgänger	q1 14837,11706 14856,11740
 ######################### User Contributions #################################
 # 
 #: by: Michael Kiekbusch
@@ -1820,8 +1818,9 @@ An der Brauerei: Fußgänger	q2 13283,13311 13235,13414
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12851,12602 13108,12859 13046,12956 12878,13229
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12773,12683 13046,12956
 #: XXX nach den Bauarbeiten vielleicht wieder q1? Und inwork streichen
-#: last_checked: 2013-01-28
-#: next_check: 2013-03-01
+#: XXX siehe auch Eintrag in qualitaet_s-orig
+#: last_checked: 2013-02-25
+#: next_check: 2013-04-25
 Ritterstr.: Fußgänger	q3::inwork 9763,11148 9861,11103
 Elisenstr.: Fußgänger	q2 5808,5332 5810,5340 5822,5388
 Mittelstr. (Steglitz): Fußgänger	q2 5111,5337 5203,5278
