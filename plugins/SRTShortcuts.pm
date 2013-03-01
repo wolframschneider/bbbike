@@ -109,6 +109,46 @@ RBdPOI6IqSZgy3BJDktRR5A7w514wRJ8AtaGUGHkMDeVAAAAAElFTkSuQmCC
 EOF
     }
 
+    if (!defined $images{car_cross}) {
+	# Created from bbbike-aux/images/car-cross.png
+	$images{car_cross} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dE
+AP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90CGRUGNraovaAAAAAd
+aVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAQFJREFUOMuVkD1KA0EU
+gL9dSfCniVh5CA9g4xHiMSy0tooYa/US6dOLhQeQgNgIgmAZshYWNmHZ3c8isyjLrhkfDAxv
+3ve99wZBoRBOiAhhX5gGTuqLkK+TNGGhoJHolLTAq9rOhxg4piCmwV+S89gVuyTlfz65S1Kf
+VjhtJhKYA++NdEVsCOOW7nErtMA3wtQQp1A+TiZPqjHwWL0s8jy/GI0ETEHAg37/Wb1bB5dZ
+lj0ABVD+FgBew61qKxy8x8AiwB8pZANY7oIb4B54Nhy+Jq6MdVwlP4I3oAfshClIId2GwSb0
+UuAIKlo6r9bST3UZRn5Rv9TFFtwfwtzZTKvKbyU8I7/i8L+dAAAAAElFTkSuQmCC
+EOF
+    }
+
+    if (!defined $images{camera}) {
+	# Created from bbbike-aux/images/camera.png
+	$images{camera} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dE
+AP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90CGgcHOTIbSYAAAALU
+SURBVDjLjZNNa11VFIbftdfe5+um99x7bRRbksZgTBvR0DpxUIT6F8SBjp0IggOFTpyIYwf9
+B51UqI7agaWTFoqIQontwNA2/UAUjMn1JOfe87332cuR0kEpPvMXHnh5SERARHgKvbS0Qs71
+3hjjl1dW5IdbN/A8CM9Hra1tEAAcO3bi2eNb168kd359+GE+L+Or31+798vW3b3xaHR4+dtL
+v7977pwHgNXVNXr06IEAwJnTb6CsGnK9gADQ6c233ouTweWu69Tu3i6KopgqUjuk1I9K8ZWu
+7X/K810LGDWZjJBl+/4/g803Nz8qivrjumnOiO/hpUdVNxAPMCuEQXD1/OdfvP/Z+U+6p9W/
++vLTcHpQeDq5vvGNte4Dazu0XSWjNCWtNbIsR922YM13jiTJJe/9VEAqCoOqrqsTnXXLRKqk
+xcWXt9PhwimRHoMklNdPrVMYhri/8xh/PfnNNrbXBUAkAs2MwSBBVbWoqgrMBN117SveJ0JK
+iDXjz909YaPBrBBo1q11BCEAgn8vJ6WgjYbRBK0UHltn1713rAhQrLH4wgTeWGS9o2BhAWc3
+TmKYDqSYlzT9O0M+K7F0fF3iKCTt+/6PKDSvta0gTVO8c/ZtCgKF7e37IECiwODo0TG99OKE
+suxQyrIiEZLVlWUyhqF7L5TEMSajEdJ0SINBjLatpbMOACg7OMTtrbuIowCddeScR9O29PPt
+LSFSpI0xERGxYkZnLWb5DCJCIgCB0HUWWXYAEQ/nBXEUoSxr7E+nxKyh4zgm5zzN5gUmnMJ2
+DtY6dK1DYIIsjnHPhMGw712sPIRANRG9yqxjo02ujTY3m7adQHAcRDSbl1JVjZsXNbPW342T
+6EJrbUMIYh0wBGKJ1aJWKg2CoNZK8ddlVV00bCIRUfm8lFleyKwopffYf/Lg4fQZge383xIx
+TMdqPDqirLUAFJgZ+WyOpqlhjJF/AHqpZ2nFH6CCAAAAAElFTkSuQmCC
+EOF
+    }
+
     if (!defined $images{VIZ}) {
 	# Got from: http://www.vmz-info.de/vmz-fuercho-5.1.1.1/images/liferay.ico
 	# Converted with convert + mmencode -b
@@ -348,19 +388,19 @@ EOF
 				  maybe_orig_file => 1,
 				  above => $str_layer_level,
 				 ),
-		[Button => $do_compound->("gesperrt_car"), -command => sub { add_new_nonlazy_maybe_orig_layer("sperre", "gesperrt_car") }],
+		[Button => $do_compound->("gesperrt_car", $images{car_cross}), -command => sub { add_new_nonlazy_maybe_orig_layer("sperre", "gesperrt_car") }],
 ## XXX no support for "sperre" type yet:
-#		layer_checkbutton([$do_compound->('gesperrt_car')]
+#		layer_checkbutton([$do_compound->('gesperrt_car', $images{car_cross})]
 #				  'sperre', 'gesperrt_car,
 #				  maybe_orig_file => 1),
 		layer_checkbutton([$do_compound->('brunnels', $images{bridge})],
 				  'str', "$main::datadir/brunnels",
 				  maybe_orig_file => 1),
-		layer_checkbutton([$do_compound->('geocoded images')],
+		layer_checkbutton([$do_compound->('geocoded images', $images{camera})],
 				  'str', "$ENV{HOME}/.bbbike/geocoded_images.bbd",
 				  above => $str_layer_level,
 				 ),
-		[Button => $do_compound->("today's geocoded images"), -command => sub { add_todays_geocoded_images() }],
+		[Button => $do_compound->("today's geocoded images", $images{camera}), -command => sub { add_todays_geocoded_images() }],
 		layer_checkbutton([$do_compound->('fragezeichen-outdoor-nextcheck')],
 				  'str', "$bbbike_rootdir/tmp/fragezeichen-outdoor-nextcheck.bbd",
 				  below_above_cb => sub {
