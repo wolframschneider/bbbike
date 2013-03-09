@@ -133,6 +133,6 @@ cmp_ok( $tile->area_size( 280,  0, 281,  1, TileSize::FRACTAL_100 ), "==", 1 );
 # test with real planet.osm data
 $tile =
   new TileSize( 'debug' => 0, 'database' => "world/etc/tile/tile-pbf.csv" );
-is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 165656 );
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 164172 );
 
 __END__
