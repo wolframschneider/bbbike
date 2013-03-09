@@ -135,4 +135,32 @@ $tile =
   new TileSize( 'debug' => 0, 'database' => "world/etc/tile/tile-pbf.csv" );
 is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 164172 );
 
+$tile = new TileSize(
+    'debug'    => 0,
+    'database' => "world/etc/tile/tile-garmin-cycle.zip.csv"
+);
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 143032 );
+
+$tile = new TileSize(
+    'debug'    => 0,
+    'database' => "world/etc/tile/tile-mapsforge-osm.zip.csv"
+);
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 87116 );
+
+$tile = new TileSize( 'debug' => 0,
+    'database' => "world/etc/tile/tile-navit.zip.csv" );
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 136964 );
+
+$tile =
+  new TileSize( 'debug' => 0, 'database' => "world/etc/tile/tile-obf.zip.csv" );
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 227620 );
+
+$tile =
+  new TileSize( 'debug' => 0, 'database' => "world/etc/tile/tile-osm.gz.csv" );
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 335848 );
+
+$tile =
+  new TileSize( 'debug' => 0, 'database' => "world/etc/tile/tile-shp.zip.csv" );
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 194908 );
+
 __END__
