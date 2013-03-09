@@ -147,8 +147,10 @@ $tile = new TileSize(
 );
 is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 87116 );
 
-$tile = new TileSize( 'debug' => 0,
-    'database' => "world/etc/tile/tile-navit.zip.csv" );
+$tile = new TileSize(
+    'debug'    => 0,
+    'database' => "world/etc/tile/tile-navit.zip.csv"
+);
 is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 136964 );
 
 $tile =
