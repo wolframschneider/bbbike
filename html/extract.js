@@ -303,7 +303,7 @@ function permalink_init() {
         delete params.lon;
         delete params.zoom;
 
-        params.lang = $("#active_language").val();
+        params.lang = $("span#active_language").text();
 
         params.sw_lng = $("#sw_lng").val();
         params.sw_lat = $("#sw_lat").val();
