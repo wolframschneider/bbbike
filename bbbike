@@ -115,7 +115,7 @@ use BBBikeGlobalVars 1.012;
 # "autouse" cannot be used on modules with non-standard import functions
 BEGIN {
     %autouse_func =
-	('BBBikeMail'	=> [qw(enter_send_mail enter_send_fax)],
+	('BBBikeMail'	=> [qw(enter_send_mail)],
 	 'Text::Wrap'	=> [qw(wrap)],
 	 'File::Copy'	=> [qw(copy mv)],
 	 'BBBikeGPS'
@@ -460,10 +460,6 @@ use vars qw($balloon_info_from_all_tags_closeenough);
 $balloon_info_from_all_tags_closeenough = 3; # was 5, then 4
 
 # Var section: street and point attributes
-if ($devel_host && !grep { "danger" eq $_ } @Strassen::Dataset::comments_types) {
-    push @Strassen::Dataset::comments_types, "danger";
-}
-@comments_types = @Strassen::Dataset::comments_types;
 $init_str_draw{'s'} = 1;      # draw streets by default
 for (qw(s l r b u w f v e z g gP gD gBO sBAB fz wr)) { $p_sub_draw{"pp-$_"} = 1} # this list should cover most keys of %str_file (but not the dependent ones like "comm" or "qs")
 $init_p_draw{'lsa'} = 1;
@@ -759,6 +755,12 @@ eval { local $SIG{'__DIE__'};
 
 handle_options();
 
+# at this point the $devel_host setting is valid (_set_public was maybe called)
+if ($devel_host && !$public && !grep { "danger" eq $_ } @Strassen::Dataset::comments_types) {
+    push @Strassen::Dataset::comments_types, "danger";
+}
+@comments_types = @Strassen::Dataset::comments_types;
+
 if ($lowmem) {
     @image_type_order = ('xpm', 'gif', 'jpg', 'png');
 }
@@ -971,9 +973,6 @@ if (defined $init_scope) {
 if ($visual) {
     push(@extra_args, -visual => $visual);
 }
-if (defined $Plugin::brinfo{'xwindow_id'}) {
-    push(@extra_args, "-use" => $Plugin::brinfo{'xwindow_id'});
-}
 
 if ($Tk::VERSION < 803 || $Tk::VERSION >= 804.025) {
     eval { require Tk::UnderlineAll };
@@ -1080,13 +1079,8 @@ if ($run_under_kde) {
 #BEGIN{mymstat("after KDE initialisation");} mymstat("after KDE initialisation");
 ## DEBUG_END
 
-# Are we running exceed?
-$exceed = ($top->server =~ /Hummingbird/);
-
 if (!defined $focus_policy) {
-    if ($exceed) {
-	$focus_policy = 'click';
-    } elsif ($os eq 'unix') {
+    if ($os eq 'unix') {
 	#XXX $focus_policy = 'follow';
 	$focus_policy = 'click';
     } else {
@@ -1293,8 +1287,8 @@ if ($splash_screen) {
     $splash_screen->Update(0.0, 'raise splash');
 }
 
-# Exceed-Bug
-$capstyle_round = ($exceed ? "projecting" : "round");
+# Define something else on X server bugs (e.g. "projecting")
+$capstyle_round = "round";
 
 # erst hier ist die @power-Zuweisung abgeschlossen
 for(my $i=0; $i <= $#power; $i++) {
@@ -5152,9 +5146,9 @@ sub handle_options {
 	  label => M"Geometry", var => \$geometry],
 	 ['maximized','!',0,
 	  label => M"immer maximiert öffnen", var => \$open_maximized],
-	 ['scaling','=f',undef,
-	  label => M"Skalierung", var => \$scaling],
-	 ['visual','=s',undef,
+	 ['scaling','=f',undef, nogui => 1,
+	  label => M"X11-Skalierung", var => \$scaling],
+	 ['visual','=s',undef, nogui => 1,
 	  label => M"Visual", var => \$visual],
 	 ['scale','=s',undef,
 	  label => M"Skalierung", nogui => 1,
@@ -5699,56 +5693,48 @@ sub load_photos {
 }
 
 sub set_default_geometry {
-    if (defined $Plugin::brinfo{x_len} and
-	defined $Plugin::brinfo{y_len}) {
-	$top->geometry($Plugin::brinfo{x_len} . "x" . $Plugin::brinfo{y_len});
+    if ($geometry && !$open_maximized) {
+	@want_extends = parse_geometry_string($geometry);
+	if (!$want_extends[GEOMETRY_WIDTH] || !$want_extends[GEOMETRY_HEIGHT]) { # test on 0 or undef
+	    ($want_extends[GEOMETRY_WIDTH], $want_extends[GEOMETRY_HEIGHT]) =
+		($top->screenwidth, $top->screenheight);
+	}
+	if (!defined $want_extends[GEOMETRY_X] || !defined $want_extends[GEOMETRY_Y]) {
+	    ($want_extends[GEOMETRY_X], $want_extends[GEOMETRY_Y]) = (0, 0);
+	}
     } else {
-	if ($geometry && !$open_maximized) {
-	    @want_extends = parse_geometry_string($geometry);
-	    if (!$want_extends[GEOMETRY_WIDTH] || !$want_extends[GEOMETRY_HEIGHT]) { # test on 0 or undef
-		($want_extends[GEOMETRY_WIDTH], $want_extends[GEOMETRY_HEIGHT]) =
-		    ($top->screenwidth, $top->screenheight);
-	    }
-	    if (!defined $want_extends[GEOMETRY_X] || !defined $want_extends[GEOMETRY_Y]) {
-		($want_extends[GEOMETRY_X], $want_extends[GEOMETRY_Y]) = (0, 0);
-	    }
-	} else {
-	    @want_extends = (0, 0, $top->screenwidth, $top->screenheight);
-	}
-	if ($kde) {
-	    @max_extends = $kde->client_window_region();
-	} elsif ($os eq 'win') {
-	    @max_extends = Win32Util::client_window_region($top);
-	} elsif ($^O eq 'darwin') {
-	    @max_extends = MacOSXUtil::client_window_region($top);
-	} else {
-	    if (
-		# check for broken ->property on 64bit platforms
-		($Tk::VERSION >= 804.027501 || $Config{longsize} == 4) &&
-		$top->property("exists", "_NET_CURRENT_DESKTOP", "root") &&
-		$top->property("exists", "_NET_WORKAREA", "root")
-	       ) {
-		(undef, my $desktop) = $top->property("get", "_NET_CURRENT_DESKTOP", "root");
-		if (defined $desktop) {
-		    my @vals = ($top->property("get", "_NET_WORKAREA", "root"))[$desktop*4+1 .. $desktop*4+4];
-		    if (@vals && defined $vals[0]) {
-			@max_extends = @vals;
-		    }
-		}
-		#$max_extends[2]-=10; # XXX hmmm, does not need to be necessary on gnome/metacity
-		#$max_extends[3]-=24; # XXX "
-	    }
-	}
-	if (!@max_extends) {
-	    # XXX guess width/height of wm borders and title bar
-	    @max_extends = (0, 0, $top->screenwidth-10, $top->screenheight-24);
-	}
-	if ($exceed) {
-	    $max_extends[GEOMETRY_HEIGHT] -= 35; # possible task bar --- but what to do if the taskbar is not at the standard location or has more than one row?
-	}
-
-	crop_geometry(\@want_extends, \@max_extends);
+	@want_extends = (0, 0, $top->screenwidth, $top->screenheight);
     }
+    if ($kde) {
+	@max_extends = $kde->client_window_region();
+    } elsif ($os eq 'win') {
+	@max_extends = Win32Util::client_window_region($top);
+    } elsif ($^O eq 'darwin') {
+	@max_extends = MacOSXUtil::client_window_region($top);
+    } else {
+	if (
+	    # check for broken ->property on 64bit platforms
+	    ($Tk::VERSION >= 804.027501 || $Config{longsize} == 4) &&
+	    $top->property("exists", "_NET_CURRENT_DESKTOP", "root") &&
+	    $top->property("exists", "_NET_WORKAREA", "root")
+	   ) {
+	    (undef, my $desktop) = $top->property("get", "_NET_CURRENT_DESKTOP", "root");
+	    if (defined $desktop) {
+		my @vals = ($top->property("get", "_NET_WORKAREA", "root"))[$desktop*4+1 .. $desktop*4+4];
+		if (@vals && defined $vals[0]) {
+		    @max_extends = @vals;
+		}
+	    }
+	    #$max_extends[2]-=10; # XXX hmmm, does not need to be necessary on gnome/metacity
+	    #$max_extends[3]-=24; # XXX "
+	}
+    }
+    if (!@max_extends) {
+	# XXX guess width/height of wm borders and title bar
+	@max_extends = (0, 0, $top->screenwidth-10, $top->screenheight-24);
+    }
+
+    crop_geometry(\@want_extends, \@max_extends);
 }
 
 
@@ -18281,18 +18267,20 @@ sub show_route_strname {
       (-text => M"Drucken",
        -command => sub { $print_text_sub->($ps_fixed_font||"Courier7") },
       );
-    push @bfb, $bf->Button
-      (-text => M"Mail",
-       -command => sub {
-	   if (@route_info) {
-	       $show_route_start = "???" unless $show_route_start;
-	       $show_route_ziel  = "???" unless $show_route_ziel;
-	       enter_send_mail
-		 (Mfmt("BBBike-Route von %s bis %s",
-		       $show_route_start, $show_route_ziel),
-		  -data => route_info_to_text());
-	   }
-       });
+    if (_can_send_mail()) {
+	push @bfb, $bf->Button
+	    (-text => M"Mail",
+	     -command => sub {
+		 if (@route_info) {
+		     $show_route_start = "???" unless $show_route_start;
+		     $show_route_ziel  = "???" unless $show_route_ziel;
+		     enter_send_mail
+			 (Mfmt("BBBike-Route von %s bis %s",
+			       $show_route_start, $show_route_ziel),
+			  -data => route_info_to_text());
+		 }
+	     });
+    }
     $t->bind('<Up>'   => sub { $route_strname_lbox->yview(scroll => -1,
 							  'units') });
     $t->bind("<Down>" => sub { $route_strname_lbox->yview(scroll => 1,
@@ -20320,6 +20308,7 @@ sub show_logo { # und About
 		 )->pack(-anchor => 'w', -expand => 1,
 			 -fill => 'x');
     }
+
     # Send mail to software maintainer
     my $mail_b =
 	$f->$Button_or_Label
@@ -20948,11 +20937,14 @@ sub set_fonts {
  		$pt = $pt*12/14;
  	    }
  	    $top->fontConfigure($font{'normal'}, -size => sprintf("%.f", $pt));
- 	    $top->optionAdd('*font' => $font{'normal'}, 'userDefault');
 	}
-	if ($os eq 'win') {
-	    $top->optionAdd('*font' => $font{'normal'}, 'userDefault');
-	}
+
+	# This looks like a no-op, as $font{normal} was usually
+	# determined from the default font in the option database. But
+	# with this setting the _Tk font name_ is forced to be used.
+	# This is a requirement to see immediate effects when changing
+	# the font using FontDialog.
+	$top->optionAdd('*font' => $font{'normal'}, 'userDefault');
 
 	foreach (qw(veryhuge huge verylarge large bold
 		    reduced small tiny fixed standard fix15)) {
@@ -21066,10 +21058,9 @@ sub set_fonts {
 	}
     }
 
-    @font = ();
-    foreach (qw(tiny small reduced normal large verylarge huge veryhuge)) {
-	push @font, $_;
-    }
+    # Array of sorted fonts (by size) used e.g. in
+    # get_orte_label_font()
+    @font = qw(tiny small reduced normal large verylarge huge veryhuge);
 
     for my $font (@font) {
 	my $font_key = $font."-italic";
@@ -22196,6 +22187,14 @@ sub soft_flash {
 	}
     };
     $next_color_state->();
+}
+
+sub _can_send_mail {
+    return $BBBikeMail::can_send_mail if defined $BBBikeMail::can_send_mail;
+
+    require BBBikeMail;
+    BBBikeMail::capabilities();
+    $BBBikeMail::can_send_mail;
 }
 
 # REPO BEGIN
