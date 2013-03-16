@@ -422,7 +422,10 @@ function extract_init(opt) {
     }
 
     function startDrag() {
-        $("#drag_box").html("Drag a box on the map to select an area");
+        // $("#drag_box").html("Drag a box on the map to select an area");
+        $("#drag_box_manually").hide();
+        $("#drag_box_drag").show();
+
         if (config.enable_polygon) polygon_menu(false);
 
         clearBox();
@@ -440,7 +443,10 @@ function extract_init(opt) {
         box.deactivate();
         validateControls();
 
-        $("#drag_box").html("Manually select a different area");
+        // $("#drag_box").html("Manually select a different area");
+        $("#drag_box_drag").hide();
+        $("#drag_box_manually").show();
+
         if (config.enable_polygon) {
             polygon_menu(true);
             polygon_update();
