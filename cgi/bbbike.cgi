@@ -8111,6 +8111,13 @@ sub header {
 
 
     }
+    if (0 && $is_beta) {
+	push @$head, cgilink({-rel => 'search',
+			      -title => 'BBBike',
+			      -href => "$bbbike_html/opensearch/bbbike-opensearch-" . ($lang eq 'en ' ? $lang : 'de') . ".xml",
+			      -type => 'application/opensearchdescription+xml',
+			     });
+    }
     delete @args{qw(-contents -up)};
     my $printmode = delete $args{-printmode};
     if ($bi->{'can_css'} && !exists $args{-style}) {

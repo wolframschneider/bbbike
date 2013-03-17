@@ -78,6 +78,8 @@ push @var, (qw(
 	       $BBBike::SF_DISTFILE_SOURCE
 	       $BBBike::SF_DISTFILE_WINDOWS
 	       $BBBike::SF_DISTFILE_DEBIAN
+	       $BBBike::SF_DISTFILE_DEBIAN_I386
+	       $BBBike::SF_DISTFILE_DEBIAN_AMD64
 	       $BBBike::DISTFILE_FREEBSD_I386
 	       $BBBike::DISTFILE_FREEBSD_ALL
 	      ),
@@ -142,6 +144,10 @@ for my $var (@var) {
 
 SKIP: {
     my $no_tests = 1;
+    skip "Test does not apply anymore", $no_tests;
+    # That's because $BBBike::DISTDIR is now set to a different
+    # download link, not using anymore the sf mirrors.
+
     my $bsd_port_dir = "/usr/ports";
     if (-d $bsd_port_dir) {
 	chdir "$bsd_port_dir/Mk" or die "Cannot chdir into Mk directory: $!";
@@ -162,19 +168,27 @@ sub check_url {
     my($url, $var) = @_;
 
     ok(defined $url, (defined $var ? "$var -> $url" : $url));
-    my $method = "head";
-    if ($url =~ m{user.cs.tu-berlin.de}) {
-	$method = "get";	# HEAD does not work here
-    }
-    my $resp = $ua->$method($url);
-    my $redir_url = $resp->request->uri;
-    if ($redir_url eq $url) {
-	$redir_url = "(not redirected)";
-    } else {
-	$redir_url = "(redirected to $redir_url)";
-    }
+
  SKIP: {
 	my $no_tests = 2;
+
+	our %checked;
+	if ($checked{$url}++) {
+	    skip("$url was already checked", $no_tests);
+	}
+
+	my $method = "head";
+	if ($url =~ m{user.cs.tu-berlin.de}) {
+	    $method = "get";	# HEAD does not work here
+	}
+	my $resp = $ua->$method($url);
+	my $redir_url = $resp->request->uri;
+	if ($redir_url eq $url) {
+	    $redir_url = "(not redirected)";
+	} else {
+	    $redir_url = "(redirected to $redir_url)";
+	}
+
 	skip("No internet available", $no_tests)
 	    if ($resp->code == 500 && $resp->message =~ /No route to host/i); # 'Bad hostname' was part of this regexp, but this mask a real test failure!
 	#warn $resp->content;
