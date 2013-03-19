@@ -2,20 +2,21 @@
 # -*- perl -*-
 
 #
-# $Id: mkrpm.pl,v 1.9 2008/03/01 21:30:48 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1999,2010 Slaven Rezic. All rights reserved.
+# Copyright (C) 1999,2010,2013 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
-# Mail: eserte@cs.tu-berlin.de
-# WWW:  http://user.cs.tu-berlin.de/~eserte/
+# Mail: slaven@rezic.de
+# WWW:  http://bbbike.sourceforge.net
 #
 
 use FindBin;
 use lib ("$FindBin::RealBin/..", "$FindBin::RealBin/../..");
 use MetaPort;
+
+use POSIX qw(strftime setlocale LC_TIME);
 
 use strict;
 
@@ -25,6 +26,8 @@ use vars qw($bbbike_base $bbbike_archiv
 use vars qw($bbbike_comment $bbbike_descr);
 
 chdir "$FindBin::RealBin" or die $!;
+
+setlocale LC_TIME, 'C';
 
 # my $rpms = "/usr/local/src/redhat/RPMS/i386";
 # my $inst_dir = "/usr/local/BBBike";
@@ -68,22 +71,30 @@ EOF
 #     }
 # }
 
-open my $RPM, ">", "bbbike.rpm.spec"
-    or die "Cannot write to bbbike.rpm.spec: $!";
+my $today_date = strftime "%a %h %d %Y", localtime;
+
+my $need_318_fixes = $BBBike::SF_DISTFILE_SOURCE_ALT eq 'http://heanet.dl.sourceforge.net/project/bbbike/BBBike/3.18/BBBike-3.18.tar.gz';
+
+my $specfile = "BBBike.rpm.spec";
+
+open my $RPM, ">", $specfile
+    or die "Cannot write to $specfile: $!";
 print $RPM <<EOF;
 ### DO NOT EDIT! CREATED AUTOMATICALLY BY $0! ###
 %define __prefix        %{_prefix}
 Name: BBBike
 Version: $bbbike_version
 Release: $release
-License: GPL
-Group: Applications/Productivity
+License: GPL-2.0
+Group: Productivity/Scientific/Other
 AutoReqProv: no
+# XXX once we build the "ext" stuff the following should be removed
+BuildArch: noarch
 Requires: perl >= 5.005, perl(Tk) >= 800
 Prefix: %{__prefix}
 URL: $BBBike::BBBIKE_SF_WWW
 Packager: $BBBike::EMAIL
-Source: $BBBike::DISTFILE_SOURCE
+Source: $BBBike::SF_DISTFILE_SOURCE_ALT
 Summary: $bbbike_comment
 
 # Needed by RHEL5 (only)?
@@ -110,6 +121,18 @@ print $RPM <<'EOF';
 %setup
 
 %build
+grep '/\.'      MANIFEST | awk '{print $1}' | xargs rm
+grep '\.[cht]$' MANIFEST | awk '{print $1}' | xargs rm
+EOF
+if ($need_318_fixes) {
+    # The following files cause a high badness when running rpmlint,
+    # which in turn causes the SUSE builds to fail completely.
+    print $RPM <<'EOF';
+rm cgi/bbbike.psgi
+rm tkbikepwr
+EOF
+}
+print $RPM <<'EOF';
 
 %install
 mkdir -p $RPM_BUILD_ROOT%{_prefix}/lib/BBBike
@@ -128,6 +151,12 @@ rm -f %{_bindir}/bbbike
 %dir %{_prefix}/lib/BBBike
 %{_prefix}/lib/BBBike/*
 
+EOF
+
+print $RPM <<"EOF";
+%changelog
+* $today_date Slaven Rezic <$BBBike::EMAIL> - $BBBike::STABLE_VERSION-1
+- new version of BBBike
 EOF
 
 # print RPM "%files\n";
@@ -174,42 +203,13 @@ EOF
 
 close $RPM
     or die $!;
-warn "INFO: Created RPM spec file as bbbike.rpm.spec\n";
+warn "INFO: Created RPM spec file as $specfile\n";
 
 if ($do_build) {
     warn "INFO: Building rpm...\n";
-    system 'rpm', "-bb", "bbbike.rpm.spec";
+    system 'rpm', "-bb", $specfile;
 } else {
     warn "INFO: No rpm build requested...\n";
 }
 
-# open(REL, ">.rpm.release") or die "Can't write release info";
-# print REL "$bbbike_version $release\n";
-# close REL;
-
 __END__
-
-=head1 TODO
-
-rpmlint warns on these:
-
-  BBBike.i586: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/BBBike/ext/Strassen-Inline2/ppport.h
-  BBBike.i586: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/BBBike/ext/Strassen-Inline/ppport.h
-  BBBike.i586: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/BBBike/ext/Strassen-Inline/heap.c
-  BBBike.i586: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/BBBike/ext/Strassen-Inline/heap.h
-  BBBike.i586: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/BBBike/ext/StrassenNetz-CNetFile/ppport.h
-  BBBike.i586: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/BBBike/ext/BBBikeXS/sqrt.h
-  BBBike.i586: E: devel-file-in-non-devel-package (Badness: 50) /usr/lib/BBBike/ext/BBBikeXS/sqrt.c
-
-Probably should be excluded --- how to do it, is there some exclude
-mechanism?
-
-Probably should also exclude these:
-
-  BBBike.i586: W: wrong-script-end-of-line-encoding /usr/lib/BBBike/bbbike.bat
-  BBBike.i586: W: wrong-script-end-of-line-encoding /usr/lib/BBBike/cbbbike.bat
-  BBBike.i586: W: wrong-script-end-of-line-encoding /usr/lib/BBBike/bbbike-activeperl.bat
-
-And also exclude all test files: */t/*.pl, */t/*.t
-
-=cut
