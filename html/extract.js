@@ -807,6 +807,8 @@ function select_city(name) {
             "sw": [12.875, 52.329],
             "ne": [13.902, 52.705]
         },
+
+/*
         "SanFrancisco": {
             "sw": [-122.9, 37.2],
             "ne": [-121.7, 37.9]
@@ -819,6 +821,7 @@ function select_city(name) {
             "sw": [11.8, 55.4],
             "ne": [13.3, 56]
         }
+	*/
     }
 
     if (name && city[name]) {
