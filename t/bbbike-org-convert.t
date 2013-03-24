@@ -156,7 +156,7 @@ sub check_files {
 sub convert {
     my $shell = 't/data-osm/convert.sh';
     system($shell);
-    is( $?, 0, "convert tity" );
+    is( $?, 0, "convert city" );
 }
 
 sub checksum {
