@@ -129,6 +129,7 @@ opensearch/bbbike-opensearch-en.gif:
 bbbikeleaflet.en.html:
 	ln -s bbbikeleaflet.html bbbikeleaflet.en.html
 
+<<<<<<< HEAD
 ######################################################################
 #
 BBBIKE_WORLD_JAVASCRIPT_FILES=\
@@ -148,6 +149,10 @@ jsbeautifier js:
 	for i in ${BBBIKE_WORLD_JAVASCRIPT_FILES}; do \
 	   jsbeautifier -j $$i > $@.tmp && mv -f $@.tmp $$i; \
 	done
+
+# found json2.js at https://raw.github.com/douglascrockford/JSON-js/master/json2.js
+json2.min.js: json2.js
+	jsmin < $> > $@
 
 clean:
 	rm -f *.bak
