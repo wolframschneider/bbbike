@@ -553,7 +553,7 @@ install:
 
 EOF
     my($INSTALL_PREFIX, $BBBIKE_DEST_DIR);
-    if (-f "/etc/debian-release") {
+    if (-f "/etc/debian-release" || -f "/etc/debian_version") {
 	print STDERR "Choosing Debian layout (/usr/lib/BBBike, executable in /usr/bin)...\n";
 	$INSTALL_PREFIX = "/usr";
 	$BBBIKE_DEST_DIR = "/usr/lib/BBBike";
@@ -590,21 +590,52 @@ EOF
     $out .= <<EOF;
 INSTALL_PREFIX?=	$INSTALL_PREFIX
 BBBIKE_DEST_DIR?=	$BBBIKE_DEST_DIR
+REAL_BBBIKE_DEST_DIR?=	\$(BBBIKE_DEST_DIR)
 
-EOF
-    $out .= <<'EOF';
-install-to-usr-local:
-	-rm -rf ${BBBIKE_DEST_DIR}
-	cp -R . ${BBBIKE_DEST_DIR}
-	find ${BBBIKE_DEST_DIR} | xargs chmod ugo+r
-	find ${BBBIKE_DEST_DIR} -perm -u=x | xargs chmod go+x
+do--symlink-bbbikeexe:
+	[ -d \${INSTALL_PREFIX}/bin ] || mkdir -p \${INSTALL_PREFIX}/bin
 EOF
     for my $f (@bbbikeexe) {
 	$out .= <<EOF;
 	-rm -f \${INSTALL_PREFIX}/bin/$f
-	ln -s \${BBBIKE_DEST_DIR}/$f \${INSTALL_PREFIX}/bin/$f
+	ln -s \${REAL_BBBIKE_DEST_DIR}/$f \${INSTALL_PREFIX}/bin/$f
 EOF
     }
+
+    $out .= <<'EOF';
+
+install-to-usr-local:	do--install-to-usr-local do--symlink-bbbikeexe
+
+do--install-to-usr-local:
+	-rm -rf ${BBBIKE_DEST_DIR}
+	cp -R . ${BBBIKE_DEST_DIR}
+	find ${BBBIKE_DEST_DIR} | xargs chmod ugo+r
+	find ${BBBIKE_DEST_DIR} -perm -u=x | xargs chmod go+x
+
+install-using-eui:	distdir do--install-using-eui do--symlink-bbbikeexe
+
+do--install-using-eui:
+	-rm -rf ${BBBIKE_DEST_DIR}
+	[ -d ${BBBIKE_DEST_DIR} ] || mkdir -p ${BBBIKE_DEST_DIR}
+	$(PERL) -MExtUtils::Install -e 'install({ "$(DISTVNAME)" => "$(BBBIKE_DEST_DIR)" }, $(VERBINST), 0, 0, ["/debian/.*"], 1)'
+
+install-freedesktop:
+	[ -d ${INSTALL_PREFIX}/share/applications ] || mkdir -p ${INSTALL_PREFIX}/share/applications
+	for size in 128x128 72x72 64x64 48x48 32x32 16x16 scalable; do \
+	    [ -d ${INSTALL_PREFIX}/share/icons/hicolor/$$size/apps ] || mkdir -p ${INSTALL_PREFIX}/share/icons/hicolor/$$size/apps; \
+	done
+	perl -Ilib -MText::ScriptTemplate -e '$$t=Text::ScriptTemplate->new; $$t->setq(BBBIKE_ROOTDIR => "$(REAL_BBBIKE_DEST_DIR)"); print $$t->load("kde/bbbike.desktop.tst")->fill' > ${INSTALL_PREFIX}/share/applications/bbbike.desktop~
+	mv ${INSTALL_PREFIX}/share/applications/bbbike.desktop~ ${INSTALL_PREFIX}/share/applications/bbbike.desktop
+	install -m644 images/srtbike114.png   ${INSTALL_PREFIX}/share/icons/hicolor/128x128/apps/bbbike.png
+	install -m644 images/srtbike72.png    ${INSTALL_PREFIX}/share/icons/hicolor/72x72/apps/bbbike.png
+	install -m644 images/srtbike57.png    ${INSTALL_PREFIX}/share/icons/hicolor/64x64/apps/bbbike.png
+	install -m644 images/srtbike48a.png   ${INSTALL_PREFIX}/share/icons/hicolor/48x48/apps/bbbike.png
+	install -m644 images/srtbike32.xpm    ${INSTALL_PREFIX}/share/icons/hicolor/32x32/apps/bbbike.xpm
+	install -m644 images/srtbike16.xpm    ${INSTALL_PREFIX}/share/icons/hicolor/16x16/apps/bbbike.xpm
+	install -m644 images/srtbike_logo.svg ${INSTALL_PREFIX}/share/icons/hicolor/scalable/apps/bbbike.svg
+
+EOF
+
     return $out;
 
     # XXX disabled for now --- the installer does not work with newer
