@@ -129,7 +129,6 @@ opensearch/bbbike-opensearch-en.gif:
 bbbikeleaflet.en.html:
 	ln -s bbbikeleaflet.html bbbikeleaflet.en.html
 
-<<<<<<< HEAD
 ######################################################################
 #
 BBBIKE_WORLD_JAVASCRIPT_FILES=\
