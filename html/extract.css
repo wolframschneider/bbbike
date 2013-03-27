@@ -68,6 +68,7 @@ form input[type=submit] {
 div#export_osm_too_large { color: red }
 
 #locate { position:absolute; right: 0; }
+#social { position:absolute; right: 20px; bottom: -2px; }
 
 #sidebar_left, #footer {
 	width: 22em;
