@@ -108,7 +108,15 @@ for my $file (@files) {
 			     $any_dist = $dist_m;
 			 }
 		     }
-		     my $headline = "** TODO <$date $wd> $subject";
+		     my $prio;
+		     if ($prio = $dir->{priority}) {
+			 $prio = $prio->[0];
+			 if ($prio !~ m{^#[ABC]$}) {
+			     warn "WARN: priority should be #A..#C, not '$prio', ignoring...\n";
+			     undef $prio;
+			 }
+		     }
+		     my $headline = "** TODO <$date $wd> " . ($prio ? "[$prio] " : "") . $subject;
 		     if ($dist_tag) {
 			 if (length($headline) + 1 + length($dist_tag) < ORG_MODE_HEADLINE_LENGTH) {
 			     $headline .= " " x (ORG_MODE_HEADLINE_LENGTH-length($headline)-length($dist_tag));
@@ -151,7 +159,7 @@ if ($centerc) {
 	}
 	return $cmp if $cmp != 0;
 	return $b->{date} cmp $a->{date};
-    } grep { $_->{date} lt $today } @records;
+    } grep { $_->{date} le $today } @records;
 }
 
 binmode STDOUT, ':utf8';
