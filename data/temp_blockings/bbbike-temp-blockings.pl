@@ -16642,13 +16642,12 @@ EOF
 userdel	q4::inwork; 9580,12581 9601,12380
 EOF
      },
-     { from  => undef, #
-       until => undef, #
+     { from  => 1364144751, # REMOVED -> permanent gesperrt (früher recurring)
+       until => 1364144754, #
        text  => '(Drorystr. - Braunschweiger Str., Spielplatz): nachts werden die Tore geschlossen',
        type  => 'gesperrt',
-       recurring => 1,
        data  => <<EOF,
-	2::night 13520,7485 13601,7366
+	2::night 13518,7477 13601,7366
 EOF
      },
      { from  => undef, #
@@ -20236,12 +20235,12 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Sredzkistr. zwischen Schönhauser Allee und Knaackstr: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
+       text  => 'Sredzkistr. zwischen Knaackstr. und Hagenauer Str.: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2013-02-11
-#: note: etwa 80 Meter an der Knaackstr. gesperrt
-userdel	q3::inwork 10893,14705 11101,14768
+#: last_checked: 2013-03-26
+#: note: einige Meter östlich der Knaackstr. gesperrt
+userdel	q3::inwork 11101,14768 11187,14763
 EOF
      },
      { from  => 1338778800,
@@ -20525,8 +20524,8 @@ EOF
 userdel	q4::inwork 22484,11270 22436,11054
 EOF
      },
-     { from  => 1363633473, # 2013-03-18 20:04
-       until => 1364767199, # 2013-03-31 23:59
+     { from  => 1344142800, # 2012-08-05 07:00
+       until => 1364479200, # 2013-03-28 15:00
        text  => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt Richtung Prenzlauer Allee zwischen Schönhauser Allee und Greifenhagener Str., bis Ende März 2013',
        type  => 'handicap',
        source_id => 'IM_019043',
@@ -20814,20 +20813,22 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-02-04
+#: last_checked: 2013-03-24
 userdel	q4::inwork; 13339,7452 13303,7622
 EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Sredzkistr.: Kreuzungsbereich in Höhe Hosemannstr. gesperrt, Ausweichen auf Gehweg',
+       text  => 'Sredzkistr./Husemannstr.: Kreuzungsbereich gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2013-02-23 vvv
+#: last_checked: 2013-03-26 vvv
 #: XXX je 30 Meter vor und hinter der Kreuzung ist gesperrt vvv
 userdel	q2::inwork 11436,14741 11271,14755
 userdel	q3::inwork 11271,14755 11187,14763
 #: XXX ^^^
+#: XXX ebenfalls Umweg notwendig
+userdel	q2::inwork 11293,14957 11271,14755 11255,14572
 #: last_checked ^^^
 EOF
      },
@@ -20948,12 +20949,14 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1369994400, # 2013-05-31 (laut Baustellenschild)
        text  => 'Hertzbergstr.: Bauarbeiten zwischen Böhmische Str. und Sonnenallee',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2013-02-04
-#: XXX bis wann ist die Baustelle fertig?
+#: last_checked: 2013-03-24
+#: next_check: 2013-05-31
+#: XXX ist die Baustelle tatsächlich Ende Mai fertig?
+#: note: in der Gegenrichtung (Richardplatz -> Sonnenallee) offiziell nur für Anwohner offen
 userdel	q4::inwork; 13474,8060 13444,7879
 EOF
      },
@@ -21002,8 +21005,8 @@ EOF
 userdel	2::inwork 15261,10738 15272,10790 15279,10862
 EOF
      },
-     { from  => 1361390117, # 2013-02-20 20:55
-       until => 1364767199, # 2013-03-31 23:59
+     { from  => 1361168940, # 2013-02-18 07:29
+       until => 1364227200, # 2013-03-25 17:00
        text  => 'Fürstenwalder Damm (Köpenick) Richtung Bölschestr. zwischen Müggelseedamm und Mühlweg Baustelle, Fahrtrichtung gesperrt (bis Ende 03/13)',
        type  => 'handicap',
        source_id => 'IM_019584',

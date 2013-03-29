@@ -566,16 +566,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => '(Drorystr. - Braunschweiger Str., Spielplatz): nachts werden die Tore geschlossen',
-         'from' => undef,
-         'id' => 1955,
-         'data' => '	2::night 13520,7485 13601,7366
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => undef,
          'recurring' => 1,
@@ -1156,12 +1147,12 @@ Am Schloss Schönhausen	2::night 10249,19148 10344,19181
        undef,
        {
          'until' => undef,
-         'text' => 'Sredzkistr. zwischen Schönhauser Allee und Knaackstr: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
+         'text' => 'Sredzkistr. zwischen Knaackstr. und Hagenauer Str.: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
          'from' => undef,
          'id' => 2337,
-         'data' => '#: last_checked: 2013-02-11
-#: note: etwa 80 Meter an der Knaackstr. gesperrt
-userdel	q3::inwork 10893,14705 11101,14768
+         'data' => '#: last_checked: 2013-03-26
+#: note: einige Meter östlich der Knaackstr. gesperrt
+userdel	q3::inwork 11101,14768 11187,14763
 ',
          'type' => 'handicap'
        },
@@ -1222,9 +1213,9 @@ userdel	2::inwork 8270,10613 8199,10634
        undef,
        {
          'source_id' => 'IM_019043',
-         'until' => 1364767199,
+         'until' => 1364479200,
          'text' => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt Richtung Prenzlauer Allee zwischen Schönhauser Allee und Greifenhagener Str., bis Ende März 2013',
-         'from' => 1363633473,
+         'from' => 1344142800,
          'id' => 2368,
          'data' => 'userdel	q4::inwork; 10953,15787 11086,15772
 ',
@@ -1301,21 +1292,23 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'from' => undef,
          'id' => 2398,
          'data' => '#: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-02-04
+#: last_checked: 2013-03-24
 userdel	q4::inwork; 13339,7452 13303,7622
 ',
          'type' => 'handicap'
        },
        {
          'until' => undef,
-         'text' => 'Sredzkistr.: Kreuzungsbereich in Höhe Hosemannstr. gesperrt, Ausweichen auf Gehweg',
+         'text' => 'Sredzkistr./Husemannstr.: Kreuzungsbereich gesperrt, Ausweichen auf Gehweg',
          'from' => undef,
          'id' => 2399,
-         'data' => '#: last_checked: 2013-02-23 vvv
+         'data' => '#: last_checked: 2013-03-26 vvv
 #: XXX je 30 Meter vor und hinter der Kreuzung ist gesperrt vvv
 userdel	q2::inwork 11436,14741 11271,14755
 userdel	q3::inwork 11271,14755 11187,14763
 #: XXX ^^^
+#: XXX ebenfalls Umweg notwendig
+userdel	q2::inwork 11293,14957 11271,14755 11255,14572
 #: last_checked ^^^
 ',
          'type' => 'handicap'
@@ -1415,12 +1408,14 @@ userdel	q4::inwork 10479,18007 10498,18014 10473,18113 10545,18143 10582,18159
          'type' => 'gesperrt'
        },
        {
-         'until' => undef,
+         'until' => 1369994400,
          'text' => 'Hertzbergstr.: Bauarbeiten zwischen Böhmische Str. und Sonnenallee',
          'from' => undef,
          'id' => 2411,
-         'data' => '#: last_checked: 2013-02-04
-#: XXX bis wann ist die Baustelle fertig?
+         'data' => '#: last_checked: 2013-03-24
+#: next_check: 2013-05-31
+#: XXX ist die Baustelle tatsächlich Ende Mai fertig?
+#: note: in der Gegenrichtung (Richardplatz -> Sonnenallee) offiziell nur für Anwohner offen
 userdel	q4::inwork; 13474,8060 13444,7879
 ',
          'type' => 'handicap'
@@ -1444,17 +1439,6 @@ userdel	q4::inwork; 13474,8060 13444,7879
          'id' => 2415,
          'data' => '#: by: http://www.potsdam.de/cms/beitrag/10098485/1463075
 	q3::inwork; -12881,-1092 -12984,-1110 -13187,-1150
-',
-         'type' => 'handicap'
-       },
-       undef,
-       {
-         'source_id' => 'IM_019584',
-         'until' => 1364767199,
-         'text' => 'Fürstenwalder Damm (Köpenick) Richtung Bölschestr. zwischen Müggelseedamm und Mühlweg Baustelle, Fahrtrichtung gesperrt (bis Ende 03/13)',
-         'from' => 1361390117,
-         'id' => 2417,
-         'data' => 'userdel	q4::inwork; 23950,5342 24049,5380 24162,5424 24285,5472 24366,5504 24471,5544 24700,5633
 ',
          'type' => 'handicap'
        }
