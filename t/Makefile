@@ -57,3 +57,6 @@ kira-test:
 	env BBBIKE_TEST_DRAW_ONLY_MODULES=GD/png,GD/jpeg,Imager/png,Imager/jpeg,SVG,PDF,BBBikeGoogleMaps \
 	    $(MAKE) test-no-cgi PERL=/cygdrive/c/Perl/bin/perl
 
+distclean:
+	rm -rf data-osm/tmp
+
