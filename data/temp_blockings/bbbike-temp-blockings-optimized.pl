@@ -727,7 +727,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im April bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -1103,18 +1103,7 @@ userdel	2::inwork 19968,16 19940,52
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'INKO_093369',
-         'until' => 1404140400,
-         'text' => 'Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Friedrichstr. gesperrt',
-         'from' => undef,
-         'id' => 2317,
-         'data' => '#: note: ab Glinkastr. nur ungefähr die halbe Strecke bis zur Friedrichstr. gesperrt, deshalb q3
-userdel	q3::inwork; 9164,12172 9373,12197
-#userdel	q3::inwork 9164,12172 9373,12197
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1211,16 +1200,7 @@ userdel	2::inwork 8270,10613 8199,10634
        },
        undef,
        undef,
-       {
-         'source_id' => 'IM_019043',
-         'until' => 1364479200,
-         'text' => 'Stargarder Str. (Prenzlauer Berg): Baustelle, Fahrtrichtung gesperrt Richtung Prenzlauer Allee zwischen Schönhauser Allee und Greifenhagener Str., bis Ende März 2013',
-         'from' => 1344142800,
-         'id' => 2368,
-         'data' => 'userdel	q4::inwork; 10953,15787 11086,15772
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1432,15 +1412,18 @@ userdel	q4::inwork; 13474,8060 13444,7879
 '
        },
        undef,
+       undef,
+       undef,
+       undef,
        {
-         'until' => 1364770800,
-         'text' => 'Charlottenstraße: Bauarbeiten zwischen Friedrich-Ebert-Straße und Dortustraße, Einbahnstraße bis voraussichtlich März 2013',
-         'from' => 1359830530,
-         'id' => 2415,
-         'data' => '#: by: http://www.potsdam.de/cms/beitrag/10098485/1463075
-	q3::inwork; -12881,-1092 -12984,-1110 -13187,-1150
+         'source_id' => 'IM_019680',
+         'until' => 1365184800,
+         'text' => 'Hüttenweg (Grunewald): Brückenbauarbeiten, Vollsperrung bis Freitag, 20:00',
+         'from' => 1364875200,
+         'id' => 2418,
+         'data' => 'userdel	2::inwork -739,6838 -927,6888
 ',
-         'type' => 'handicap'
+         'type' => 'gesperrt'
        }
      
 );

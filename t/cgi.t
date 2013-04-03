@@ -32,7 +32,11 @@ use lib ($FindBin::RealBin,
 	 "$FindBin::RealBin/..",
 	 "$FindBin::RealBin/../lib",
 	);
-use BBBikeTest qw(check_cgi_testing xmllint_string gpxlint_string kmllint_string validate_bbbikecgires_xml_string);
+use BBBikeTest qw(
+		     check_cgi_testing xmllint_string gpxlint_string kmllint_string
+		     validate_bbbikecgires_xml_string validate_bbbikecgires_json_string
+		     validate_bbbikecgires_yaml_string validate_bbbikecgires_data
+		);
 
 eval { require Compress::Zlib };
 
@@ -218,11 +222,27 @@ for my $cgiurl (@urls) {
 		like $resp->header('Content-Disposition'), qr{attachment; filename=.*\.kml$}, 'kml filename';
 		kmllint_string($content, "xmllint check for $output_as");
 	    } elsif ($output_as =~ m{^(json|geojson$)}) {
-		require JSON::XS;
-		my $data = eval { JSON::XS::decode_json($content) };
-		my $err = $@;
-		ok $data, "Decoded JSON content"
-		    or diag $err;
+		if ($output_as eq 'json') {
+		    validate_bbbikecgires_json_string($content, 'json content');
+		} else {
+		    # json-short and geojson are not valid against the bbbikecgires schema
+		    require JSON::XS;
+		    my $data = eval { JSON::XS::decode_json($content) };
+		    my $err = $@;
+		    ok $data, "Decoded JSON content"
+			or diag $err;
+		}
+	    } elsif ($output_as =~ m{^yaml}) {
+		if ($output_as eq 'yaml') {
+		    validate_bbbikecgires_yaml_string($content, 'yaml content');
+		} else {
+		    # the yaml-short variant has no schema
+		    require YAML::Syck;
+		    my $data = eval { YAML::Syck::Load($content) };
+		    my $err = $@;
+		    ok $data, "Decoded YAML content"
+			or diag $err;
+		}
 	    }
 	}
     }
@@ -870,7 +890,7 @@ sub std_get_route ($;@) {
     local $Test::Builder::Level = $Test::Builder::Level + 1;
     my($content, $resp) = std_get($url, %opts);
     my $route = $cpt->reval($content);
-    ok validate_output_as($route), 'Validation';
+    validate_bbbikecgires_data($route, 'Validation');
     if (is ref $route, 'HASH', 'Route result is a HASH') {
 	wantarray ? ($route, $resp) : $route;
     } else {
@@ -923,36 +943,4 @@ sub unlike_html ($$$) {
     my($content, $rx, $testname) = @_;
     local $Test::Builder::Level = $Test::Builder::Level+1;
     BBBikeTest::unlike_long_data($content, $rx, $testname, '.html');
-}
-
-{
-    my $schema;
-    sub validate_output_as {
-	my($data) = @_;
-	my $res = 1;
-    SKIP: {
-	    if (!defined $schema) {
-		if (!eval { require Kwalify; require YAML::Syck; 1 }) {
-		    diag "Kwalify and YAML::Syck needed for schema validation, but not available.";
-		    $schema = 0;
-		} else {
-		    my $schema_file = "$FindBin::RealBin/../misc/bbbikecgires.kwalify";
-		    if (!-r $schema_file) {
-			diag "Schema file $schema_file is missing.";
-			$schema = 0;
-		    } else {
-			$schema = YAML::Syck::LoadFile($schema_file);
-		    }
-		}
-	    }
-
-	    if ($schema) {
-		if (!eval { Kwalify::validate($schema, $data) }) {
-		    diag $@;
-		    $res = 0;
-		}
-	    }
-	}
-	$res;
-    }
 }

@@ -6877,8 +6877,6 @@ sub draw_route {
 	}
 	http_header
 	    (-type => "application/pdf",
-	     -expires => '+6d',
-	     -charset => '', # CGI 3.52..3.55 writes charset for non text/* stuff, see https://rt.cpan.org/Public/Bug/Display.html?id=67100
 	     @header_args,
 	     -Content_Disposition => "inline; filename=$filename.pdf",
 	    );
@@ -6928,8 +6926,6 @@ sub draw_route {
     if (!$header_written && !$draw->module_handles_all_cgi) {
 	http_header
 	    (-type => $draw->mimetype,
-		-expires => '+6d',
-	     -charset => '', # CGI 3.52..3.55 writes charset even for image/* stuff, see https://rt.cpan.org/Public/Bug/Display.html?id=67100
 	     @header_args,
 	     -Content_Disposition => "inline; filename=bbbike.".$draw->suffix,
 	    );
@@ -7876,7 +7872,6 @@ sub http_header {
 
     my @add_header_args;
     push @add_header_args, etag(), (-Vary => "User-Agent");
-
     if ($q->param("as_attachment")) {
 	push @add_header_args, -Content_Disposition => "attachment;file=" . $q->param("as_attachment");
     }
