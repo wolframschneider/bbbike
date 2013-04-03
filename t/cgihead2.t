@@ -193,8 +193,8 @@ sub check_url {
 	    if ($resp->code == 500 && $resp->message =~ /No route to host/i); # 'Bad hostname' was part of this regexp, but this mask a real test failure!
 	#warn $resp->content;
 	ok($resp->is_success, "Successful request of $url")
-	    or diag "$url " . $resp->status_line . " " . $resp->content;
-	my $content_type = $resp->content_type;
+	    or diag $resp->status_line . " " . $resp->content;
+	my $content_type = $resp->header('content-type');
 	if ($url eq $BBBike::BBBIKE_UPDATE_DATA_CGI ||
 	    $url eq $BBBike::BBBIKE_UPDATE_DIST_CGI ||
 	    $url =~ m{\.zip$}) {
@@ -202,9 +202,9 @@ sub check_url {
 	} elsif ($url =~ m{\.tar\.gz$}) {
 	    is($content_type, "application/x-gzip", "Expected type (gzip)") or diag("For URL $url $redir_url");
 	} elsif ($url =~ m{/\.modified$}) {
-	    is($content_type, "text/plain", "Expected type (plain text)") or diag("For URL $url $redir_url");
+	    like($content_type, qr{^text/plain}, "Expected type (plain text)") or diag("For URL $url $redir_url");
 	} elsif ($url =~ m{wap}) {
-	    is($content_type, "text/vnd.wap.wml", "Expected type (wml)") or diag("For URL $url $redir_url");
+	    like($content_type, qr{^text/vnd.wap.wml}, "Expected type (wml)") or diag("For URL $url $redir_url");
 	} elsif ($url =~ m{\.exe$}) {
 	    like($content_type, MSDOS_MIME_TYPE, "Expected type (binary or msdos program)")
 		or diag("For URL $url $redir_url");
@@ -221,7 +221,7 @@ sub check_url {
 	    like($content_type, qr{^application/(octet-stream|x-debian-package)$}, "Expected type (debian package), got $content_type")
 		or diag("For URL $url $redir_url");
 	} else {
-	    is($content_type, "text/html", "Expected type (html)") or diag("For URL $url $redir_url");
+	    like($content_type, qr{^text/html}, "Expected type (html)") or diag("For URL $url $redir_url");
 	}
     }
 }
