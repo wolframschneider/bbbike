@@ -28,7 +28,7 @@ var config = {
     "max_size": {
         "default": 768,
         "obf.zip": 250,
-        "mapsforge-osm.zip": 270
+        "mapsforge-osm.zip": 100
     },
 
     debug: 1,
