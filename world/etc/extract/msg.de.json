@@ -1,0 +1,72 @@
+{
+    "Your email address": "Deine E-Mail Adresse",
+    "about": "info",
+    "extract": "extrakt",
+    "Format": "Format",
+    "Name of area to extract": "Name der zu extrahierenden Region",
+    "Manually select a different area": "Manuell andere Region ausw&auml;hlen",
+    "Drag a box on the map to select an area": "Ziehe eine Box auf der Karte um eine Region ausw&auml;hlen",
+    "add points to polygon": "Punkte zum Polygon hinzuf&uuml;gen",
+    "resize or drag polygon": "Polygon vergr&ouml;ssern oder verschieben",
+    "help": "hilfe",
+    "livesearch": "livesuche",
+    "donate": "spenden",
+    "Left lower corner (South-West)": "Ecke untern links (S&uuml;d-West)",
+    "Right top corner (North-East)": "Ecke oben rechts (Nord-Ost)",
+
+
+    "EXTRACT_CONFIRMED": [
+        "<p>Danke - die Eingabedaten sind korrekt.</p><p>",
+        "Es dauert ca. 15-30 Minuten um eine Region aus der Planet.osm Datei auszuschneiden - ",
+        " in Abh&auml;ngigkeit der Gr&ouml;sse der Region und der Systemauslastung.",
+        "Du wirst per E-Mail benachrichtigt, wenn das Extrakt fertig zum Downloaden ist.",
+        "Bitte folge den Anweisungen in der E-Mail um den Extrakt-Auftrag abzuschliessen.</p>",
+        "",
+        "<p align='left'>Area: '%s' ist %s qkm gross<br/>",
+        "Koordinaten: %s <br/>",
+        "Format: %s",
+        "</p>",
+        "",
+        "<p>Dr&uuml;cke die Back-Taste um die gleiche Region in einem anderen Format zu extrahieren, oder um eine neue Region auszuw&auml;hlen.</p>"
+        ],
+
+    "EXTRACT_DONATION": [
+        "<p><a href='../community.de.html#donate'>Spenden</a> sind willkommen! ",
+        "Du kannst uns via PayPal, Flattr oder Bank&uuml;berweisung unterst&uuml;tzen."
+        ],
+
+    "EXTRACT_EMAIL": [
+        "Hallo,",
+        "",
+        "die gewünschte Region '%s' wurde aus dem OpenStreetMap Planet.osm extrahiert.",
+        "Um die Datei zu downloaden, klicke bitte auf den folgenden Link:",
+        "",
+        "  %s",
+        "",
+        "Die Datei ist für die nächsten 48h verfügbar.",
+        "Bitte downloade die Datei umgehend.",
+        "",
+        " Name: %s",
+        " Koordinaten: %s",
+        " Script URL: %s",
+        " Quadratkilometer: %s",
+        " Granularity: 10,000 (1.1 meters)",
+        " Osmosis options: %s",
+        " Format: %s",
+        " Dateigrösse: %s",
+        " SHA256 checksum: %s",
+        " Letzte planet.osm Datenbank update: %s",
+        " Lizenz: OpenStreetMap License",
+        "",
+        "Spenden sind willkommen! ",
+        "Du kannst uns via PayPal, Flattr oder Banküberweisung unterstützen",
+        "http://www.BBBike.org/community.de.html",
+        "",
+        "Danke, die BBBike Extrakt Fee",
+        "",
+        "-- ",
+        "http://www.BBBike.org - Dein Fahrrad-Routenplanner"
+        ],
+
+    "dummy": "dummy"
+}

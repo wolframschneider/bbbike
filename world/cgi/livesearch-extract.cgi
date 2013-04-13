@@ -219,7 +219,7 @@ sub statistic {
 
     my $sensor = is_mobile($q) ? 'true' : 'false';
     print $q->start_html(
-        -title => 'BBBike @ World livesearch',
+        -title => 'BBBike extract livesearch',
         -head  => [
             $q->meta(
                 {
@@ -339,19 +339,21 @@ qq|$o->{"sw_lng"},$o->{"sw_lat"}!$o->{"ne_lng"},$o->{"ne_lat"},$o->{"format"}|;
               . qq,\\')">$_->{'city'}</a>,
           } sort { $a->{'city'} cmp $b->{'city'} } @cities
     );
-    $d .= "<hr/>unique total: " . scalar(@cities);
+
+    my $summary = "unique total: " . scalar(@cities);
     if ( scalar(@cities) < $counter_total && $counter_total < $max ) {
-        $d .= "<br/>total: $counter_total";
+        $summary .= "<br/>total: $counter_total";
     }
 
-    $d .= join "<br/>", "", "", map { "$_ ($format{$_})" }
+    $summary .= join "<br/>", "", "", map { "$_ ($format{$_})" }
       reverse sort { $format{$a} <=> $format{$b} } keys %format;
 
     if ( $date ne "" ) {
-        $d .= "<br/><br/>the localtime is in UTC";
+        $summary .= "<br/><br/>All times are given as UTC";
     }
 
-    print qq{\n\$("div#sidebar").html('$d');\n\n};
+    my $html = $summary . "<hr/>" . $d;
+    print qq{\n\$("div#sidebar").html('$html');\n\n};
 
     my $city = $q->param('city') || "";
     if ( $city && exists $city_center->{$city} ) {

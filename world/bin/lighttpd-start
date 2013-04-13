@@ -4,7 +4,7 @@
 # start web server for testing
 #
 
-PATH=$HOME/bin:/usr/local/bin:/opt/local/sbin:/usr/sbin:/bin:/usr/bin; export PATH
+PATH=/usr/local/bin:/opt/local/sbin:/usr/sbin:/bin:/usr/bin; export PATH
 
 set -e
 
@@ -13,7 +13,7 @@ if [ -e $HOME/.bbbikerc ]; then
 fi
 
 PWD=$(pwd)
-USER=$(logname)
+USER=$(whoami)
 export PWD USER
 
 : ${BBBIKE_LIGHTTPD_FILE=`pwd`/world/etc/lighttpd/test-more.conf}

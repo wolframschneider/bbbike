@@ -14,9 +14,9 @@ use warnings;
 my $prefix = "t/data-osm/tmp";
 
 my @files =
-  qw/Berlin.coords.data Potsdam.coords.data _boundary.gz _building.gz _education.gz _landuse.gz _leisure.gz _motortraffic.gz _natural.gz _oepnv.gz _power.gz _public_services.gz _shop.gz _sport.gz _tourism.gz ampeln berlin borders comments_cyclepath comments_danger comments_ferry comments_kfzverkehr comments_misc comments_mount comments_path comments_route comments_scenic comments_tram deutschland faehren flaechen fragezeichen gesperrt gesperrt_car gesperrt_r gesperrt_s gesperrt_u green handicap_l handicap_s hoehe icao inaccessible_strassen kneipen landstrassen landstrassen2 meta.dd meta.yml nolighting opensearch.crossing.10 opensearch.crossing.10.all.gz opensearch.crossing.100 opensearch.crossing.100.all.gz opensearch.street-coordinates opensearch.streetnames orte orte2 orte_city plaetze poi.gz qualitaet_l qualitaet_s radwege radwege_exact rbahn rbahnhof restaurants sbahn sbahnhof sehenswuerdigkeit strassen strassen-orig.gz strassen_bab temp_blockings ubahn ubahnhof wasserstrassen wasserumland wasserumland2/;
+  qw(Berlin.coords.data Potsdam.coords.data _boundary.gz _building.gz _education.gz _landuse.gz _leisure.gz _motortraffic.gz _natural.gz _oepnv.gz _power.gz _public_services.gz _shop.gz _sport.gz _tourism.gz ampeln berlin borders comments_cyclepath comments_danger comments_ferry comments_kfzverkehr comments_misc comments_mount comments_path comments_route comments_scenic comments_tram deutschland faehren flaechen fragezeichen gesperrt gesperrt_car gesperrt_r gesperrt_s gesperrt_u green handicap_l handicap_s hoehe icao inaccessible_strassen kneipen landstrassen landstrassen2 meta.dd meta.yml nolighting opensearch.crossing.10 opensearch.crossing.10.all.gz opensearch.crossing.100 opensearch.crossing.100.all.gz opensearch.street-coordinates opensearch.streetnames orte orte2 orte_city plaetze poi.gz qualitaet_l qualitaet_s radwege radwege_exact rbahn rbahnhof restaurants sbahn sbahnhof sehenswuerdigkeit strassen strassen-orig.gz strassen_bab ubahn ubahnhof wasserstrassen wasserumland wasserumland2 temp_blockings/bbbike-temp-blockings.pl);
 
-my @size_76c = qw/
+my @size_76c = qw(
   _boundary.gz
   _building.gz
   _education.gz
@@ -59,9 +59,9 @@ my @size_76c = qw/
   strassen
   strassen-orig.gz
   strassen_bab
-  temp_blockings
+  temp_blockings/bbbike-temp-blockings.pl
   wasserstrassen
-  /;
+);
 
 my @size_10k = qw/
   _boundary.gz
@@ -133,7 +133,7 @@ sub check_files {
         my $file = "$dir/$f";
         my $st   = stat($file);
 
-        cmp_ok( $st ? $st->size : 0, ">", 76, "check size > 76 bytes $file" );
+        cmp_ok( $st ? $st->size : 0, ">=", 76, "check size >= 76 bytes $file" );
     }
 
     foreach my $f (@size_10k) {
@@ -156,7 +156,7 @@ sub check_files {
 sub convert {
     my $shell = 't/data-osm/convert.sh';
     system($shell);
-    is( $?, 0, "convert tity" );
+    is( $?, 0, "convert city" );
 }
 
 sub checksum {

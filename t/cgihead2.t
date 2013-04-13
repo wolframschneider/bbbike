@@ -78,6 +78,8 @@ push @var, (qw(
 	       $BBBike::SF_DISTFILE_SOURCE
 	       $BBBike::SF_DISTFILE_WINDOWS
 	       $BBBike::SF_DISTFILE_DEBIAN
+	       $BBBike::SF_DISTFILE_DEBIAN_I386
+	       $BBBike::SF_DISTFILE_DEBIAN_AMD64
 	       $BBBike::DISTFILE_FREEBSD_I386
 	       $BBBike::DISTFILE_FREEBSD_ALL
 	      ),
@@ -142,6 +144,10 @@ for my $var (@var) {
 
 SKIP: {
     my $no_tests = 1;
+    skip "Test does not apply anymore", $no_tests;
+    # That's because $BBBike::DISTDIR is now set to a different
+    # download link, not using anymore the sf mirrors.
+
     my $bsd_port_dir = "/usr/ports";
     if (-d $bsd_port_dir) {
 	chdir "$bsd_port_dir/Mk" or die "Cannot chdir into Mk directory: $!";
@@ -162,25 +168,33 @@ sub check_url {
     my($url, $var) = @_;
 
     ok(defined $url, (defined $var ? "$var -> $url" : $url));
-    my $method = "head";
-    if ($url =~ m{user.cs.tu-berlin.de}) {
-	$method = "get";	# HEAD does not work here
-    }
-    my $resp = $ua->$method($url);
-    my $redir_url = $resp->request->uri;
-    if ($redir_url eq $url) {
-	$redir_url = "(not redirected)";
-    } else {
-	$redir_url = "(redirected to $redir_url)";
-    }
+
  SKIP: {
 	my $no_tests = 2;
+
+	our %checked;
+	if ($checked{$url}++) {
+	    skip("$url was already checked", $no_tests);
+	}
+
+	my $method = "head";
+	if ($url =~ m{user.cs.tu-berlin.de}) {
+	    $method = "get";	# HEAD does not work here
+	}
+	my $resp = $ua->$method($url);
+	my $redir_url = $resp->request->uri;
+	if ($redir_url eq $url) {
+	    $redir_url = "(not redirected)";
+	} else {
+	    $redir_url = "(redirected to $redir_url)";
+	}
+
 	skip("No internet available", $no_tests)
 	    if ($resp->code == 500 && $resp->message =~ /No route to host/i); # 'Bad hostname' was part of this regexp, but this mask a real test failure!
 	#warn $resp->content;
 	ok($resp->is_success, "Successful request of $url")
-	    or diag "$url " . $resp->status_line . " " . $resp->content;
-	my $content_type = $resp->content_type;
+	    or diag $resp->status_line . " " . $resp->content;
+	my $content_type = $resp->header('content-type');
 	if ($url eq $BBBike::BBBIKE_UPDATE_DATA_CGI ||
 	    $url eq $BBBike::BBBIKE_UPDATE_DIST_CGI ||
 	    $url =~ m{\.zip$}) {
@@ -188,9 +202,9 @@ sub check_url {
 	} elsif ($url =~ m{\.tar\.gz$}) {
 	    is($content_type, "application/x-gzip", "Expected type (gzip)") or diag("For URL $url $redir_url");
 	} elsif ($url =~ m{/\.modified$}) {
-	    is($content_type, "text/plain", "Expected type (plain text)") or diag("For URL $url $redir_url");
+	    like($content_type, qr{^text/plain}, "Expected type (plain text)") or diag("For URL $url $redir_url");
 	} elsif ($url =~ m{wap}) {
-	    is($content_type, "text/vnd.wap.wml", "Expected type (wml)") or diag("For URL $url $redir_url");
+	    like($content_type, qr{^text/vnd.wap.wml}, "Expected type (wml)") or diag("For URL $url $redir_url");
 	} elsif ($url =~ m{\.exe$}) {
 	    like($content_type, MSDOS_MIME_TYPE, "Expected type (binary or msdos program)")
 		or diag("For URL $url $redir_url");
@@ -207,7 +221,7 @@ sub check_url {
 	    like($content_type, qr{^application/(octet-stream|x-debian-package)$}, "Expected type (debian package), got $content_type")
 		or diag("For URL $url $redir_url");
 	} else {
-	    is($content_type, "text/html", "Expected type (html)") or diag("For URL $url $redir_url");
+	    like($content_type, qr{^text/html}, "Expected type (html)") or diag("For URL $url $redir_url");
 	}
     }
 }

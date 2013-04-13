@@ -1,6 +1,5 @@
 #! /usr/bin/perl
 # -*- perl -*-
-# $Id: Makefile.PL,v 1.153 2009/01/22 22:51:16 eserte Exp $
 
 use 5.005;
 
@@ -228,9 +227,9 @@ my @req_table =
    'Prereq für Geo::Distance::XS'], # diese Version ohne Warnungen
   [qw/Geo::METAR        0       all     4       base/,
    'Wetterdaten im METAR-Format'],
-  [qw/Tk::ExecuteCommand	0	all	1	base/,
+  [qw/Tk::ExecuteCommand	0	all	0	base/,
    'Bessere Fehlerberichte im temp_blockings-Editor'],
-  [qw/Algorithm::Diff	0	all	1	base/,
+  [qw/Algorithm::Diff	0	all	0	base/,
    'Unterschiede im temp_blockings-Editor anzeigen'],
   [qw/Sort::Naturally	0	all	0	base/,
    'Für natürliches Sortieren von bbd-Dateien'],
@@ -247,6 +246,8 @@ my @req_table =
    'Geocoding über Cloudmade'],
   [qw/Geo::Coder::OSM	0	all	0	plugin/,
    'Geocoding mit OpenStreetMap-Daten'],
+  [qw/Geo::Coder::PlaceFinder	0	all	0	plugin/,
+   'Geocoding mit Yahoo PlaceFinder'],
   [qw/Flickr::API	0	all	0	plugin/,
    'Flickr-Bilder in BBBike anzeigen'],
 
@@ -343,13 +344,6 @@ if ($make_bundle) {
     exit make_windist_bundle() if $make_bundle eq 'windist';
     die "Should not happen: unhandled value <$make_bundle>";
 }
-# OSD descriptions (not really used):
-exit make_pi_osd('win')
-    if $0 =~ /make_pi_osd/ && defined $ARGV[0] && $ARGV[0] eq 'win';
-exit make_pi_osd()       if $0 =~ /make_pi_osd/;
-exit make_small_pi_osd('win')
-    if $0 =~ /make_small_pi_osd/ && defined $ARGV[0] && $ARGV[0] eq 'win';
-exit make_small_pi_osd()      if $0 =~ /make_small_pi_osd/;
 
 my $fileref = ExtUtils::Manifest::maniread();
 my $exe_files =
@@ -460,59 +454,6 @@ sub make_general_bundle {
     0;
 }
 
-sub make_pi_osd {
-    die "Not supported anymore (changes for new REQTABLE_REQ needed!)";
-    my $os = shift || 'unix';
-    make_general_pi_osd(0, "BBBike-$os.osd", $os);
-}
-
-sub make_small_pi_osd {
-    die "Not supported anymore (changes for new REQTABLE_REQ needed!)";
-    my $os = shift || 'unix';
-    make_general_pi_osd(1, "BBBike_small-$os.osd", $os);
-}
-
-sub make_general_pi_osd {
-    die "Not supported anymore (changes for new REQTABLE_REQ needed!)";
-    my $type = shift;
-    my $file = shift;
-    my $os   = shift;
-
-    my(%prereq, @prereq);
-    {
-	my(@res) = build_prereq($os, 0);
-	%prereq = %{$res[0]};
-	@prereq = @{$res[1]};
-    }
-
-    open(OSD, ">$file") or die "Can't write OSD $file: $!";
-    (my $xml_abstract = $abstract) =~ s/ü/ue/g; # XXX
-    print OSD <<EOF;
-<SOFTPKG NAME="BBBike" VERSION="$version_major,$version_minor,0,0">
-<TITLE>BBBike</TITLE>
-<ABSTRACT>$xml_abstract</ABSTRACT>
-<AUTHOR>$author</AUTHOR>
-<LICENSE HREF="LICENSE" />
-<IMPLEMENTATION>
- <CODEBASE HREF="http://prdownloads.sourceforge.net/bbbike/BBBike-$BBBike::STABLE_VERSION.tar.gz" />
- <INSTALL EXEC="perl">BBBike-$BBBike::STABLE_VERSION/install.pl</INSTALL>
-</IMPLEMENTATION>
-EOF
-    foreach my $prereq (@prereq) {
-	next if $prereq->[REQTABLE_REQ] < $type;
-	(my $ppm_dist = $prereq->[REQTABLE_MODNAME]) =~ s/::/-/g;
-	print OSD <<EOF;
-<DEPENDENCY NAME="$prereq->[REQTABLE_MODNAME]">
- <CODEBASE TYPE="ppm" PACKAGE="$ppm_dist"/>
- <CODEBASE TYPE="cpan" PACKAGE="$prereq->[REQTABLE_MODNAME]"/>
-</DEPENDENCY>
-EOF
-    }
-    print OSD "</SOFTPKG>";
-    close OSD;
-    0;
-}
-
 WriteMakefile
   (
    'NAME'	  => 'BBBike',
@@ -612,7 +553,7 @@ install:
 
 EOF
     my($INSTALL_PREFIX, $BBBIKE_DEST_DIR);
-    if (-f "/etc/debian-release") {
+    if (-f "/etc/debian-release" || -f "/etc/debian_version") {
 	print STDERR "Choosing Debian layout (/usr/lib/BBBike, executable in /usr/bin)...\n";
 	$INSTALL_PREFIX = "/usr";
 	$BBBIKE_DEST_DIR = "/usr/lib/BBBike";
@@ -649,21 +590,52 @@ EOF
     $out .= <<EOF;
 INSTALL_PREFIX?=	$INSTALL_PREFIX
 BBBIKE_DEST_DIR?=	$BBBIKE_DEST_DIR
+REAL_BBBIKE_DEST_DIR?=	\$(BBBIKE_DEST_DIR)
 
-EOF
-    $out .= <<'EOF';
-install-to-usr-local:
-	-rm -rf ${BBBIKE_DEST_DIR}
-	cp -R . ${BBBIKE_DEST_DIR}
-	find ${BBBIKE_DEST_DIR} | xargs chmod ugo+r
-	find ${BBBIKE_DEST_DIR} -perm -u=x | xargs chmod go+x
+do--symlink-bbbikeexe:
+	[ -d \${INSTALL_PREFIX}/bin ] || mkdir -p \${INSTALL_PREFIX}/bin
 EOF
     for my $f (@bbbikeexe) {
 	$out .= <<EOF;
 	-rm -f \${INSTALL_PREFIX}/bin/$f
-	ln -s \${BBBIKE_DEST_DIR}/$f \${INSTALL_PREFIX}/bin/$f
+	ln -s \${REAL_BBBIKE_DEST_DIR}/$f \${INSTALL_PREFIX}/bin/$f
 EOF
     }
+
+    $out .= <<'EOF';
+
+install-to-usr-local:	do--install-to-usr-local do--symlink-bbbikeexe
+
+do--install-to-usr-local:
+	-rm -rf ${BBBIKE_DEST_DIR}
+	cp -R . ${BBBIKE_DEST_DIR}
+	find ${BBBIKE_DEST_DIR} | xargs chmod ugo+r
+	find ${BBBIKE_DEST_DIR} -perm -u=x | xargs chmod go+x
+
+install-using-eui:	distdir do--install-using-eui do--symlink-bbbikeexe
+
+do--install-using-eui:
+	-rm -rf ${BBBIKE_DEST_DIR}
+	[ -d ${BBBIKE_DEST_DIR} ] || mkdir -p ${BBBIKE_DEST_DIR}
+	$(PERL) -MExtUtils::Install -e 'install({ "$(DISTVNAME)" => "$(BBBIKE_DEST_DIR)" }, $(VERBINST), 0, 0, ["/debian/.*"], 1)'
+
+install-freedesktop:
+	[ -d ${INSTALL_PREFIX}/share/applications ] || mkdir -p ${INSTALL_PREFIX}/share/applications
+	for size in 128x128 72x72 64x64 48x48 32x32 16x16 scalable; do \
+	    [ -d ${INSTALL_PREFIX}/share/icons/hicolor/$$size/apps ] || mkdir -p ${INSTALL_PREFIX}/share/icons/hicolor/$$size/apps; \
+	done
+	perl -Ilib -MText::ScriptTemplate -e '$$t=Text::ScriptTemplate->new; $$t->setq(BBBIKE_ROOTDIR => "$(REAL_BBBIKE_DEST_DIR)"); print $$t->load("kde/bbbike.desktop.tst")->fill' > ${INSTALL_PREFIX}/share/applications/bbbike.desktop~
+	mv ${INSTALL_PREFIX}/share/applications/bbbike.desktop~ ${INSTALL_PREFIX}/share/applications/bbbike.desktop
+	install -m644 images/srtbike114.png   ${INSTALL_PREFIX}/share/icons/hicolor/128x128/apps/bbbike.png
+	install -m644 images/srtbike72.png    ${INSTALL_PREFIX}/share/icons/hicolor/72x72/apps/bbbike.png
+	install -m644 images/srtbike57.png    ${INSTALL_PREFIX}/share/icons/hicolor/64x64/apps/bbbike.png
+	install -m644 images/srtbike48a.png   ${INSTALL_PREFIX}/share/icons/hicolor/48x48/apps/bbbike.png
+	install -m644 images/srtbike32.xpm    ${INSTALL_PREFIX}/share/icons/hicolor/32x32/apps/bbbike.xpm
+	install -m644 images/srtbike16.xpm    ${INSTALL_PREFIX}/share/icons/hicolor/16x16/apps/bbbike.xpm
+	install -m644 images/srtbike_logo.svg ${INSTALL_PREFIX}/share/icons/hicolor/scalable/apps/bbbike.svg
+
+EOF
+
     return $out;
 
     # XXX disabled for now --- the installer does not work with newer

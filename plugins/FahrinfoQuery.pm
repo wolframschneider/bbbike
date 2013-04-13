@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2010 Slaven Rezic. All rights reserved.
+# Copyright (C) 2010,2013 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -11,22 +11,24 @@
 # WWW:  http://www.rezic.de/eserte/
 #
 
-# Description (de): Eine Routensuche bei Fahrinfo vornehmen
+# Description (de): Eine OePNV-Routensuche mit Fahrinfo vornehmen
+# Description (en): Do a public transport route search using Fahrinfo
 package FahrinfoQuery;
 
 use strict;
 use vars qw($VERSION @ISA);
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 use BBBikePlugin;
 push @ISA, 'BBBikePlugin';
 
-use vars qw($icon %city_border_points);
+use vars qw($icon %city_border_points $menu);
 
 use CGI qw();
 use Encode qw(encode);
 
 use BBBikeUtil qw(bbbike_root m2km kmh2ms s2ms);
+use Strassen::Core;
 use Strassen::MultiStrassen;
 use Strassen::Util;
 
@@ -40,7 +42,20 @@ $LIMIT_LB = 12;
 use vars qw($PEDES_MS);
 $PEDES_MS = kmh2ms(5);
 
+use vars qw($data_source);
+$data_source = "vbb";
+
+my $bbbike_root = bbbike_root;
+
+my $openvbb_data_url = 'http://datenfragen.de/openvbb/GTFS_VBB_Okt2012/stops.txt';
+my $openvbb_local_file = "$bbbike_root/tmp/GTFS_VBB_Okt2012_stops.txt";
+my $openvbb_bbd_file = "$bbbike_root/tmp/vbb.bbd";
+
 sub register {
+    # XXX (noch) keine Prüfung auf city==Berlin, da die Daten auch mit
+    # anderen Orten im VBB-Bereich funktionieren könnten, z.B.
+    # Frankfurt/Oder
+
     my $pkg = __PACKAGE__;
     $BBBikePlugin::plugins{$pkg} = $pkg;
     _create_image();
@@ -89,6 +104,7 @@ EOF
 
 sub add_button {
     my $mf = $main::top->Subwidget("ModePluginFrame");
+    my $mmf = $main::top->Subwidget("ModeMenuPluginFrame");
     return unless defined $mf;
 
     my $button = $mf->Button(main::image_or_text($icon, 'Fahrinfo'),
@@ -104,6 +120,36 @@ sub add_button {
 # 	    );
     $main::balloon->attach($button, -msg => M"Fahrinfo")
 	if $main::balloon;
+
+    BBBikePlugin::place_menu_button
+	    ($mmf,
+	     [
+	      [Button => 'Datenquelle',
+	       -state => 'disabled',
+	       -font => $main::font{'bold'},
+	      ],
+	      [Radiobutton => "OSM-Daten verwenden",
+	       -variable => \$data_source,
+	       -value => "osm",
+	      ],
+	      [Radiobutton => "VBB-Daten verwenden",
+	       -variable => \$data_source,
+	       -value => "vbb",
+	      ],
+	      "-",
+	      [Button => "Dieses Menü löschen",
+	       -command => sub {
+		   $mmf->afterIdle(sub {
+				       unregister();
+				   });
+	       }],
+	     ],
+	     $button,
+	     __PACKAGE__."_menu",
+	     -title => M"FahrinfoQuery",
+	    );
+
+    $menu = $mmf->Subwidget(__PACKAGE__."_menu")->menu;
 }
 
 sub choose {
@@ -115,25 +161,8 @@ sub choose {
     # XXX no support for via
     my $goal  = $main::search_route_points[-1]->[main::SRP_COORD()];
 
-    my $osm_data_dir;
- TRY_OSM_DATA_DIR: {
-	my @try_dirs = ('data_berlin_brandenburg_osm_bbbike',
-			'data_berlin_osm_bbbike',
-		       );
-	for my $try_dir (map { bbbike_root . '/' . $_ } @try_dirs) {
-	    if (-d $try_dir) {
-		$osm_data_dir = $try_dir;
-		last TRY_OSM_DATA_DIR;
-	    }
-	}
-	main::status_message(M"Es konnte keines der folgenden Verzeichnisse im BBBike-Wurzelverzeichnis gefunden werden: " . join(" ", @try_dirs) . ". Keine Haltestellensuche möglich.", "error");
-	return;
-    }
-
-    my $ms = MultiStrassen->new("$osm_data_dir/_oepnv",
-				"$osm_data_dir/ubahnhof",
-				"$osm_data_dir/sbahnhof",
-			       );
+    my $ms = get_data_object();
+    return if !$ms;
 
     my $t = $main::top->Toplevel(-title => 'Fahrinfo');
     $t->transient($main::top) if $main::transient;
@@ -187,7 +216,7 @@ sub choose {
 		    $name .= " (Potsdam)";
 		}
 		$name .= " [";
-		if ($cat !~ m{^[US]$}) {
+		if ($cat !~ m{^[US]$} && $cat ne 'X') {
 		    $name .= "$cat; ";
 		}
 		$name .= m2km($stop->{Dist}, 1);
@@ -221,7 +250,9 @@ sub choose {
 	my($lb, $stops) = @$def;
 	$lb->bind('<Double-1>' => sub {
 		      my($cursel) = $lb->curselection;
+		      my $conv = $ms->get_conversion(-tomap => $main::coord_system);
 		      my $coord = $stops->[$cursel]->{StreetObj}->[Strassen::COORDS()]->[0];
+		      $coord = $conv->($coord) if $conv;
 		      main::mark_point(-coords => [[[ main::transpose(split /,/, $coord) ]]],
 				       -clever_center => 1,
 				      );
@@ -261,7 +292,8 @@ sub start_browser {
 sub get_nearest {
     my($s, $xy) = @_;
     my($x,$y) = split /,/, $xy;
-    $s->make_grid(UseCache => 1, Exact => 1) unless $s->{Grid};
+    $s->make_grid(UseCache => 1, Exact => 1, -tomap => $main::coord_system) unless $s->{Grid};
+    my $conv = $s->get_conversion(-tomap => $main::coord_system);
     my @res;
     {
 	my %seen;
@@ -275,7 +307,9 @@ sub get_nearest {
 		    $seen{$n}++;
 		    my $r = $s->get($n);
 		    next if $r->[Strassen::NAME] =~ m{^\s*$}; # no name -> no use!
-		    my($px,$py) = split /,/, $r->[Strassen::COORDS]->[0];
+		    my $p0 = $r->[Strassen::COORDS]->[0];
+		    $p0 = $conv->($p0) if $conv;
+		    my($px,$py) = split /,/, $p0;
 		    my $this_mindist = Strassen::Util::strecke([$px,$py], [$x,$y]);
 		    my $line = {StreetObj  => $r,
 				Dist       => $this_mindist,
@@ -307,6 +341,103 @@ sub _inside_any {
 
 sub inside_berlin  { _inside_any($_[0], 'berlin') }
 sub inside_potsdam { _inside_any($_[0], 'potsdam') }
+
+sub get_data_object {
+    my $obj;
+
+    if      ($data_source eq 'osm') {
+	my $osm_data_dir;
+    TRY_OSM_DATA_DIR: {
+	    my @try_dirs = ('data_berlin_brandenburg_osm_bbbike',
+			    'data_berlin_osm_bbbike',
+			   );
+	    for my $try_dir (map { bbbike_root . '/' . $_ } @try_dirs) {
+		if (-d $try_dir) {
+		    $osm_data_dir = $try_dir;
+		    last TRY_OSM_DATA_DIR;
+		}
+	    }
+	    main::status_message(M"Es konnte keines der folgenden Verzeichnisse im BBBike-Wurzelverzeichnis gefunden werden: " . join(" ", @try_dirs) . ". Keine Haltestellensuche möglich mit der Datenquelle 'osm'.", "die");
+	}
+
+	$obj = MultiStrassen->new("$osm_data_dir/_oepnv",
+				  "$osm_data_dir/ubahnhof",
+				  "$osm_data_dir/sbahnhof",
+				 );
+    } elsif ($data_source eq 'vbb') {
+	if (!_provide_vbb_stops()) {
+	    return;
+	}
+	$obj = Strassen->new($openvbb_bbd_file);
+    } else {
+	main::status_message("Unhandled data source '$data_source'", 'die');
+    }
+
+    $obj;
+}
+
+sub _provide_vbb_stops {
+    if (-s $openvbb_bbd_file) {
+	return 1;
+    }
+
+    if ($main::top->messageBox(
+			       -icon => "question",
+			       -message => "Download $openvbb_data_url?", # XXX Msg!
+			       -type => "YesNo"
+			      ) !~ /yes/i) {
+	main::status_message("Not possible to use FahrinfoQuery with this data_source", "error"); # XXX Msg!
+	return;
+    }
+
+    if (!eval { _prereq_check_vbb_stops() }) {
+	main::status_message("Prerequisites missing. Error message is: $@. Maybe you should install these perl modules?", "error");
+	return;
+    }
+
+    if (!eval { _download_vbb_stops() }) {
+	main::status_message("Downloading failed. Error message is: $@", "error");
+	return;
+    }
+
+    if (!eval { _convert_vbb_stops() }) {
+	main::status_message("Conversion failed. Error message is: $@", "error");
+	return;
+    }
+
+    1;
+}
+
+sub _prereq_check_vbb_stops {
+    require LWP::UserAgent; # for download
+    require Text::CSV_XS; # for conversion, see vbb-stops-to-bbd.pl
+    1;
+}
+
+sub _download_vbb_stops {
+    require LWP::UserAgent;
+    require BBBikeHeavy;
+    my $ua = BBBikeHeavy::get_uncached_user_agent();
+    die "Can't get default user agent" if !$ua;
+    my $resp = $ua->get($openvbb_data_url, ':content_file' => "$openvbb_local_file~");
+    if (!$resp->is_success || !-s "$openvbb_local_file~") {
+	die "Failed to download $openvbb_data_url: " . $resp->status_line;
+    }
+    rename "$openvbb_local_file~", $openvbb_local_file
+	or die "Failed to rename $openvbb_local_file~ to $openvbb_local_file: $!";
+    1;
+}
+
+sub _convert_vbb_stops {
+    my $script = bbbike_root . '/miscsrc/vbb-stops-to-bbd.pl';
+    system("$script $openvbb_local_file > $openvbb_bbd_file~");
+    if ($? || !-s "$openvbb_bbd_file~") {
+	die "Failure to convert $openvbb_local_file to $openvbb_bbd_file~";
+    }
+    rename "$openvbb_bbd_file~", $openvbb_bbd_file
+	or die "Failed to rename $openvbb_bbd_file~ to $openvbb_bbd_file: $!";
+    1;
+}
 
 1;
 

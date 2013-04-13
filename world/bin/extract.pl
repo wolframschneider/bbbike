@@ -35,6 +35,8 @@ use warnings;
 $ENV{'PATH'} = "/usr/local/bin:/bin:/usr/bin";
 $ENV{'OSM_CHECKSUM'} = 'false';    # disable md5 checksum files
 
+#$ENV{'BBBIKE_EXTRACT_LANG'} = 'en';       # default language
+
 # group writable file
 umask(002);
 
@@ -69,11 +71,14 @@ our $option = {
     'file_prefix' => 'planet_',
 
     # reset max_jobs if load is to high
-    'max_loadavg'      => 8,
+    'max_loadavg'      => 10,
     'max_loadavg_jobs' => 2,    # 0: stop running at all
 
     # 4196 polygones is enough for the queue
     'max_coords' => 4 * 1024,
+
+    'language'     => "en",
+    'message_path' => "world/etc/extract",
 };
 
 ######################################################################
@@ -91,15 +96,28 @@ my $formats = {
     'garmin-cycle.zip'   => "Garmin Cycle",
     'garmin-leisure.zip' => "Garmin Leisure",
     'navit.zip'          => "Navit",
+    'mapsforge-osm.zip'  => "mapsforge OSM",
 };
+
+# translations
+my $msg;
+my $language = $option->{'language'};
 
 #
 # Parse user config file.
 # This allows to override standard config values
 #
 my $config_file = "$ENV{HOME}/.bbbike-extract.rc";
+if ( $ENV{BBBIKE_EXTRACT_PROFILE} ) {
+    $config_file = $ENV{BBBIKE_EXTRACT_PROFILE};
+}
 if ( -e $config_file ) {
+    warn "Load config file: $config_file\n" if $option->{"debug"} >= 2;
     require $config_file;
+}
+else {
+    warn "config file: $config_file not found, ignored\n"
+      if $option->{"debug"} >= 2;
 }
 
 my $spool = {
@@ -122,7 +140,7 @@ my $osmosis_options = "omitmetadata=true granularity=10000";    # message
 my $nice_level_converter =
   exists $option->{"nice_level_converter"}
   ? $option->{"nice_level_converter"}
-  : $nice_level + 1;
+  : $nice_level + 3;
 
 # test & debug
 $planet_osm =
@@ -136,6 +154,7 @@ $planet_osm =
 # timeout handler
 sub set_alarm {
     my $time = shift;
+    my $message = shift || "";
 
     $time = $alarm if !defined $time;
 
@@ -148,15 +167,16 @@ sub set_alarm {
         local $SIG{HUP} = "IGNORE";
         kill 1, -$$;
 
-        sleep 1;
         local $SIG{TERM} = "IGNORE";
         kill 15, -$$;
+        kill 15, -$$;
 
-        warn "Send a hang-up to all childs. Exit\n";
-        exit 1;
+        warn "Send a hang-up to all childs.\n";
+
+        #exit 1;
     };
 
-    warn "set alarm time to: $time seconds\n" if $debug >= 1;
+    warn "set alarm time to: $time seconds $message\n" if $debug >= 1;
     alarm($time);
 }
 
@@ -199,10 +219,13 @@ sub square_km {
 # 240000 -> 240,000
 sub large_int {
     my $int = shift;
+    my $lang = shift || "en";
 
     return $int if $int < 1_000;
 
-    my $number = substr( $int, 0, -3 ) . "," . substr( $int, -3, 3 );
+    my $sep = $lang eq "de" ? "." : ",";
+
+    my $number = substr( $int, 0, -3 ) . $sep . substr( $int, -3, 3 );
     return $number;
 }
 
@@ -219,18 +242,12 @@ sub parse_jobs {
     foreach my $f (@$files) {
         my $file = "$dir/$f";
 
-        my $fh = new IO::File $file, "r" or die "open $file: $!\n";
-        binmode $fh, ":utf8";
-
-        my $json_text;
-        while (<$fh>) {
-            $json_text .= $_;
-        }
-        $fh->close;
+        my $json_text = read_data($file);
 
         my $json = new JSON;
-        my $json_perl = eval { $json->utf8->decode($json_text) };
+        my $json_perl = eval { $json->decode($json_text) };
         die "json $file $@" if $@;
+        json_compat($json_perl);
 
         $json_perl->{"file"} = $f;
 
@@ -256,7 +273,7 @@ sub parse_jobs {
                 my $obj  = shift @{ $hash->{$email} };
                 my $city = $obj->{'city'};
 
-                my $length_coords = scalar( @{ $obj->{'coords'} } );
+                my $length_coords = 0;
 
                 # do not add a large polygone to an existing list
                 if ( $length_coords > $max_coords && $counter_coords > 0 ) {
@@ -289,6 +306,16 @@ sub parse_jobs {
     return @list;
 }
 
+sub json_compat {
+    my $obj = shift;
+
+    # be backward compatible with old *.json files
+    if ( !( exists $obj->{'coords'} && ref $obj->{'coords'} eq 'ARRAY' ) ) {
+        $obj->{'coords'} = [];
+    }
+    return $obj;
+}
+
 # create a unique job id for each extract request
 sub get_job_id {
     my @list = @_;
@@ -296,7 +323,7 @@ sub get_job_id {
     my $json = new JSON;
     my $data = "";
     foreach my $key (@list) {
-        $data .= $json->utf8->encode($key);
+        $data .= $json->encode($key);
     }
 
     my $key = md5_hex( encode_utf8($data) );
@@ -307,7 +334,7 @@ sub get_job_id {
 sub file_lnglat {
     my $obj    = shift;
     my $file   = $option->{'file_prefix'};
-    my $coords = $obj->{coords};
+    my $coords = $obj->{coords} || [];
 
     # rectangle
     if ( !scalar(@$coords) ) {
@@ -393,7 +420,7 @@ sub create_poly_files {
 
         warn "rename $from -> $to\n" if $debug >= 2;
         my $json = new JSON;
-        my $data = $json->utf8->pretty->encode($job);
+        my $data = $json->pretty->encode($job);
 
         store_data( $to, $data );
         unlink($from) or die "unlink $from: $!\n";
@@ -542,6 +569,7 @@ sub run_extracts {
         @data = "true";
     }
 
+    warn "Use planet.osm file $planet_osm\n" if $debug == 1;
     warn "Run extracts: " . join( " ", @data ), "\n" if $debug >= 2;
     return ( \@data, \@fixme );
 }
@@ -651,6 +679,7 @@ sub reorder_pbf {
         'osm.xz'             => 2.5,
         'shp.zip'            => 1.3,
         'obf.zip'            => 10,
+        'mapsforge-osm.zip'  => 15,
         'navit.zip'          => 1.1,
         'garmin-osm.zip'     => 3,
         'garmin-cycle.zip'   => 3,
@@ -663,9 +692,11 @@ sub reorder_pbf {
 
         my $json_text = read_data($json_file);
         my $json      = new JSON;
-        my $obj       = $json->utf8->decode($json_text);
-        my $pbf_file  = $obj->{'pbf_file'};
-        my $format    = $obj->{'format'};
+        my $obj       = $json->decode($json_text);
+        json_compat($obj);
+
+        my $pbf_file = $obj->{'pbf_file'};
+        my $format   = $obj->{'format'};
 
         my $st   = stat($pbf_file);
         my $size = $st->size * $format{$format};
@@ -758,7 +789,8 @@ sub get_json {
     my $json_file = shift;
     my $json_text = read_data($json_file);
     my $json      = new JSON;
-    my $obj       = $json->utf8->decode($json_text);
+    my $obj       = $json->decode($json_text);
+    json_compat($obj);
 
     warn "json: $json_file\n" if $debug >= 3;
     warn "json: $json_text\n" if $debug >= 3;
@@ -796,6 +828,7 @@ sub script_url {
     }
     my $layers = $obj->{'layers'} || "";
     my $city   = $obj->{'city'}   || "";
+    my $lang   = $obj->{'lang'}   || "";
 
     my $script_url = $option->{script_homepage} . "/?";
     $script_url .=
@@ -805,6 +838,7 @@ sub script_url {
     $script_url .= "&layers=" . CGI::escape($layers)
       if $layers && $layers !~ /^B/;
     $script_url .= "&city=" . CGI::escape($city) if $city ne "";
+    $script_url .= "&lang=" . CGI::escape($lang) if $lang ne "en" && $lang;
 
     return $script_url;
 }
@@ -816,22 +850,26 @@ sub _convert_send_email {
     my $alarm      = $args{'alarm'};
     my $test_mode  = $args{'test_mode'};
 
-    &set_alarm($alarm);
+    my $obj2 = get_json($json_file);
+    &set_alarm( $alarm, $obj2->{'pbf_file'} . " " . $obj2->{'format'} );
 
     # all scripts are in these directory
     my $dirname = dirname($0);
 
     my @unlink;
     {
-        my $obj      = get_json($json_file);
-        my $format   = $obj->{'format'};
-        my $pbf_file = $obj->{'pbf_file'};
-        my $city     = mkgmap_description( $obj->{'city'} );
+        my $obj       = get_json($json_file);
+        my $format    = $obj->{'format'};
+        my $pbf_file  = $obj->{'pbf_file'};
+        my $poly_file = $obj->{'poly_file'};
+        my $city      = mkgmap_description( $obj->{'city'} );
+        my $lang      = $obj->{'lang'} || "en";
         my @system;
 
         $ENV{BBBIKE_EXTRACT_URL} = &script_url( $option, $obj );
         $ENV{BBBIKE_EXTRACT_COORDS} =
 qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
+        $ENV{'BBBIKE_EXTRACT_LANG'} = $lang;
 
         ###################################################################
         # converted file name
@@ -898,6 +936,8 @@ qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
         elsif ( $format =~ /^garmin-(osm|cycle|leisure).zip$/ ) {
             my $style = $1;
             $file =~ s/\.pbf$/.$format/;
+            $file =~ s/.zip$/.$lang.zip/ if $lang ne "en";
+
             if ( !cached_format( $file, $pbf_file ) ) {
                 @system = (
                     @nice, "$dirname/pbf2osm", "--garmin-$style", $pbf_file,
@@ -911,6 +951,8 @@ qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
         }
         elsif ( $format eq 'shp.zip' ) {
             $file =~ s/\.pbf$/.$format/;
+            $file =~ s/.zip$/.$lang.zip/ if $lang ne "en";
+
             if ( !cached_format( $file, $pbf_file ) ) {
                 @system =
                   ( @nice, "$dirname/pbf2osm", "--shape", $pbf_file, $city );
@@ -923,6 +965,8 @@ qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
         }
         elsif ( $format eq 'obf.zip' ) {
             $file =~ s/\.pbf$/.$format/;
+            $file =~ s/.zip$/.$lang.zip/ if $lang ne "en";
+
             if ( !cached_format( $file, $pbf_file ) ) {
                 @system =
                   ( @nice, "$dirname/pbf2osm", "--osmand", $pbf_file, $city );
@@ -935,6 +979,8 @@ qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
         }
         elsif ( $format eq 'navit.zip' ) {
             $file =~ s/\.pbf$/.$format/;
+            $file =~ s/.zip$/.$lang.zip/ if $lang ne "en";
+
             if ( !cached_format( $file, $pbf_file ) ) {
                 @system =
                   ( @nice, "$dirname/pbf2osm", "--navit", $pbf_file, $city );
@@ -945,6 +991,26 @@ qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
                 system(@system) == 0 or die "system @system failed: $?";
             }
         }
+        elsif ( $format =~ /^mapsforge-(osm).zip$/ ) {
+            my $style = $1;
+            $file =~ s/\.pbf$/.$format/;
+            $file =~ s/.zip$/.$lang.zip/ if $lang ne "en";
+
+            if ( !cached_format( $file, $pbf_file ) ) {
+                @system = (
+                    @nice, "$dirname/pbf2osm", "--mapsforge-$style", $pbf_file,
+                    $city
+                );
+
+                warn "@system\n" if $debug >= 2;
+                @system = 'true' if $test_mode;
+
+                system(@system) == 0 or die "system @system failed: $?";
+            }
+        }
+
+        # cleanup poly file after successfull convert
+        push @unlink, $poly_file if defined $poly_file;
 
         next if $test_mode;
 
@@ -986,6 +1052,8 @@ qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
 
         # unlink temporary .pbf files after all files are proceeds
         if (@unlink) {
+            warn "Unlink temp files: " . join( "", @unlink ) . "\n"
+              if $debug >= 2;
             unlink(@unlink) or die "unlink: @unlink: $!\n";
         }
 
@@ -996,44 +1064,64 @@ qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
             square_km(
                 $obj->{"sw_lat"}, $obj->{"sw_lng"},
                 $obj->{"ne_lat"}, $obj->{"ne_lng"}
-            )
+            ),
+            $obj->{'lang'}
         );
 
         next if !$send_email;
 
         my $script_url = &script_url( $option, $obj );
+        my $database_update =
+          gmtime( stat( $option->{planet_osm} )->mtime ) . " UTC";
 
-        my $message = <<EOF;
-Hi,
+        $msg = get_msg( $obj->{"lang"} || "en" );
 
-your requested OpenStreetMap area "$obj->{'city'}" was extracted from planet.osm
-To download the file, please click on the following link:
+        my $text = join "\n", @{ $msg->{EXTRACT_EMAIL} };
+        my $message = sprintf( $text,
+            $obj->{'city'},
+            $url,
+            $obj->{'city'},
+qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}],
+            $script_url,
+            $square_km,
+            $osmosis_options,
+            $obj->{"format"},
+            $file_size,
+            $checksum,
+            $database_update );
 
-  $url
-
-The file will be available for the next 48 hours. Please download the
-file as soon as possible.
-
- Name: $obj->{"city"}
- Coordinates: $obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}
- Script URL: $script_url
- Square kilometre: $square_km
- Granularity: 10,000 (1.1 meters)
- Osmosis options: $osmosis_options
- Format: $obj->{"format"}
- File size: $file_size
- SHA256 checksum: $checksum
- License: OpenStreetMap License
-
-We appreciate any feedback, suggestions and a donation!
-You can support us via PayPal, Flattr or bank wire transfer.
-http://www.BBBike.org/community.html
-
-Sincerely, the BBBike extract Fairy
-
---
-http://www.BBBike.org - Your Cycle Route Planner
-EOF
+#        my $message = <<EOF;
+#Hi,
+#
+#your requested OpenStreetMap area "$obj->{'city'}" was extracted from planet.osm
+#To download the file, please click on the following link:
+#
+#  $url
+#
+#The file will be available for the next 48 hours. Please download the
+#file as soon as possible.
+#
+# Name: $obj->{"city"}
+# Coordinates: $obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}
+# Script URL: $script_url
+# Square kilometre: $square_km
+# Granularity: 10,000 (1.1 meters)
+# Osmosis options: $osmosis_options
+# Format: $obj->{"format"}
+# File size: $file_size
+# SHA256 checksum: $checksum
+# Last planet.osm database update: $database_update
+# License: OpenStreetMap License
+#
+#We appreciate any feedback, suggestions and a donation!
+#You can support us via PayPal, Flattr or bank wire transfer.
+#http://www.BBBike.org/community.html
+#
+#Sincerely, the BBBike extract Fairy
+#
+#--
+#http://www.BBBike.org - Your Cycle Route Planner
+#EOF
 
         eval {
             _send_email( $obj->{'email'},
@@ -1098,7 +1186,9 @@ sub file_size {
 
 # cat file
 sub read_data {
-    my ($file) = @_;
+    my $file = shift;
+
+    warn "open file '$file'\n" if $debug >= 3;
 
     my $fh = new IO::File $file, "r" or die "open $file: $!\n";
     binmode $fh, ":utf8";
@@ -1107,8 +1197,8 @@ sub read_data {
     while (<$fh>) {
         $data .= $_;
     }
-    $fh->close;
 
+    $fh->close;
     return $data;
 }
 
@@ -1143,6 +1233,48 @@ sub remove_lock {
     unlink($lockfile) or die "unlink $lockfile: $!\n";
 }
 
+sub get_msg {
+    my $language = shift || $option->{'language'};
+
+    my $file = $option->{'message_path'} . "/msg.$language.json";
+    if ( !-e $file ) {
+        warn "Language file $file not found, ignored\n" . qx(pwd);
+        return {};
+    }
+
+    warn "Open message file $file for language $language\n" if $debug >= 1;
+    my $json_text = read_data($file);
+
+    my $json = new JSON;
+    my $json_perl = eval { $json->decode($json_text) };
+    die "json $file $@" if $@;
+
+    warn Dumper($json_perl) if $debug >= 3;
+    return $json_perl;
+}
+
+sub M {
+    my $key = shift;
+
+    my $text;
+    if ( $msg && exists $msg->{$key} ) {
+        $text = $msg->{$key};
+
+        #} elsif ($msg_en && exists $msg_en->{$key}) {
+        #    warn "Unknown translation local lang $lang: $key\n";
+        #    $text = $msg_en->{$key};
+    }
+    else {
+        if ( $debug >= 1 && $msg ) {
+            warn "Unknown translation: $key\n"
+              if $debug >= 2 || $language ne "en";
+        }
+        $text = $key;
+    }
+
+    return $text;
+}
+
 sub cleanup_jobdir {
     my %args    = @_;
     my $job_dir = $args{'job_dir'};
@@ -1162,6 +1294,8 @@ sub cleanup_jobdir {
         warn "Oops, $job_dir not found\n";
         return;
     }
+
+    system( 'ls', '-la', $job_dir ) if $debug >= 3;
 
     if ( $errors && $keep ) {
         my $to_dir = "$failed_dir/" . basename($job_dir);
@@ -1221,8 +1355,9 @@ sub run_jobs {
     }
 
     # Oops, are jobs are in use, give up
-    die "Cannot get lock for jobs 1..$max_jobs\n"
+    die "Cannot get lock for jobs 1..$max_jobs\n" . qx(uptime)
       if !$lockfile;
+
     warn "Use lockfile $lockfile\n" if $debug;
 
     my @list = parse_jobs(
@@ -1242,7 +1377,7 @@ sub run_jobs {
     );
 
     # be paranoid, give up after N hours (java bugs?)
-    &set_alarm($alarm);
+    &set_alarm( $alarm, "osmosis" );
 
     ###########################################################
     # main
@@ -1290,6 +1425,8 @@ sub run_jobs {
         'keep'    => 1,
         'errors'  => $errors
     );
+
+    return $errors;
 }
 
 ######################################################################
@@ -1332,7 +1469,7 @@ while ( my ( $key, $val ) = each %$spool ) {
 my @files = get_jobs( $spool->{'confirmed'} );
 if ( !scalar(@files) ) {
     print "Nothing to do\n" if $debug >= 2;
-    exit;
+    exit 0;
 }
 
 if ( defined $timeout ) {
@@ -1347,15 +1484,16 @@ if ( $loadavg > $option->{max_loadavg} ) {
     if ( $max_loadavg_jobs >= 1 ) {
         warn
 "Load avarage $loadavg is to high, reset max jobs to: $max_loadavg_jobs\n"
-          if $debug >= 2;
+          if $debug >= 1;
         $max_jobs = $max_loadavg_jobs;
     }
+
     else {
         die "Load avarage $loadavg is to high, give up!\n";
     }
 }
 
-&run_jobs(
+my $errors = &run_jobs(
     'test_mode'  => $test_mode,
     'max_jobs'   => $max_jobs,
     'send_email' => $send_email,
@@ -1363,4 +1501,7 @@ if ( $loadavg > $option->{max_loadavg} ) {
     'files'      => \@files
 );
 
+exit($errors);
+
 1;
+

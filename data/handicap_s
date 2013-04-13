@@ -3,27 +3,28 @@
 #: note: XXX_* categorization done 2008-01-26
 #: note: "Parkweg" sollte hier vielleicht nicht verwendet werden, sondern nur in qualitaet_s-orig? Oder wenigstens die gleichen Wege nicht in beiden Dateien so benannt werden? Oder wenigstens beim Ausgeben der Routenliste doppelte ausfiltern?
 #:
-Oberbaumbr¸cke: Umfahrung wegen Baustelle, etwas Zeitverlust	q3::inwork; 13332,10832 13305,10789
 Modersohnstr.: Bauarbeiten, Einbahnstraﬂenregelung	q3::inwork; 14134,11272 14181,11434
-Helmerdingstr.: Bauarbeiten	q3::inwork 14465,11195 14442,11101
 Helsingforser Platz: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q4::inwork 13473,11456 13427,11431
-Marchlewskistr.: Bauarbeiten, Einbahnstraﬂe	q2::inwork; 13473,11456 13366,11651 13295,11792
-R¸dersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 12822,12067 12740,12128
-R¸dersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg	q3::inwork 12740,12128 12575,12223
-G‰rtnerstr.: Baustelle, Einbahnstraﬂenregelung	q3::inwork; 14247,11681 14272,11775
+Marchlewskistr.: Bauarbeiten, Einbahnstraﬂe	q2::inwork; 13366,11651 13295,11792
 Alt-Stralau: Asphaltierungsarbeiten unter der Br¸cke, Fahrbahn gesperrt, Gehweg passierbar	q3::inwork 14652,10201 14558,10264
+Markgrafendamm - Modersohnstr.: Bauarbeiten, Fahrbahn gesperrt, enger Gehweg kann benutzt werden	q3::inwork 14672,10760 14564,10792
 Friedrichstr.: Fahrbahn zwischen Unter den Linden und Mittelstraﬂe gesperrt, Ausweichen auf Gehweg mˆglich	q4::inwork 9343,12464 9358,12351
 Friedrichstr. (Mitte): Fahrbahn wegen Bauarbeiten gesperrt, Ausweichen auf Gehweg schiebend mˆglich	q4::inwork 9358,12351 9369,12253 9373,12197
 Charlottenstr.: Einbahnstraﬂenregelung	q4::inwork; 9475,12365 9489,12263 9496,12215
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraﬂe Richtung S¸den	q4::inwork; 9475,12365 9462,12481 9454,12558
 Universit‰tsstr.: Fahrbahn wegen Bauarbeiten in Richtung S¸den gesperrt	q4::inwork; 9580,12581 9601,12380
+Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Friedrichstr. gesperrt	q3::inwork; 9164,12172 9373,12197
 Gartenstr.: Einbahnstraﬂe zwischen Invalidenstr. und Tieckstr. (Bauarbeiten)	q4::inwork; 9510,13823 9383,13978
+Tieckstr.: Einbahnstraﬂe zwischen Borsigstr. und Gartenstr. (Bauarbeiten)	q3::inwork; 9376,13765 9510,13823
 Voﬂstr.: gesperrte Fahrbahn (Baustelle), Ausweichen auf Gehweg	q3::inwork 8743,11663 8837,11676
 Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Gartenstr. und Hessische Str. gesperrt	q4::inwork; 9383,13978 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723 8659,13708 8626,13692 8619,13689
 Scharnhorststr.: Einbahnstraﬂenregelung, auf Gehweg ausweichen	q3::inwork; 8450,13599 8313,13839
 Schwarzer Weg: Einbahnstraﬂenregelung, auf Gehweg ausweichen	q3::inwork; 8426,13909 8574,13666
 Hessische Str.: Sackgasse zur Invalidenstr.	q3::inwork 8775,13606 8690,13723
+Heidestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 8048,13578 8092,13467
+Ella-Trebe-Str./Berta-Benz-Str./Katharina-Paulus-Str./Ilse-Schaeffer-Str.: Einbahnstraﬂenregelung wegen Bauarbeiten	q3::inwork; 7937,13109 7941,13014 7872,13022 7867,13106 7937,13109
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9875,12257 9869,12297
+Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9869,12297 9852,12409
 Rathausstr.: Fuﬂg‰nger, enge Stelle vor dem Roten Rathaus	q2::inwork 10601,12521 10704,12595
 Alte Jakobstr.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 10437,11352 10256,11160
 Alte Jakobstr.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 10489,11405 10437,11352
@@ -68,7 +69,7 @@ Rathausstr.: Fuﬂg‰nger	q1 10923,12779 10704,12595
 Dircksenstr.: langsame Straﬂenbahnen, Fuﬂg‰nger	q2 10970,12822 10849,12944
 Dircksenstr.: Fuﬂg‰nger	q2 10970,12822 11007,12773 11030,12741 11087,12780 11105,12764
 Gontardstr.: langsame Straﬂenbahnen, Fuﬂg‰nger	q2 10733,12967 10793,12906 10923,12779
-Uferweg im Treptower Park: Fuﬂg‰nger, besonders an schˆnen Tagen	q2 15793,8984 15638,9020 15527,9096 15513,9144 15432,9322 15321,9448 15174,9554 15052,9584 14910,9643 14697,9726 14674,9764 14500,9856 14483,9843 14460,9871 14448,9922
+Uferweg im Treptower Park: Fuﬂg‰nger, besonders an schˆnen Tagen	q2 15778,8990 15638,9020 15527,9096 15513,9144 15432,9322 15321,9448 15174,9554 15052,9584 14910,9643 14697,9726 14674,9764 14500,9856 14483,9843 14460,9871 14448,9922
 (S-Bahnhof - Treptower Hafen): Fuﬂg‰nger, besonders an schˆnen Tagen	q2 14361,9772 14436,9784 14483,9843
 Treptower Park, am Rosengarten: Fuﬂg‰nger	q2 14819,9462 14910,9643
 Treptower Park: Fuﬂg‰nger	q1 14697,9726 14645,9710 14575,9648 14496,9705 14361,9772
@@ -119,7 +120,7 @@ Kolonie Albrechtshˆhe: einige Fuﬂg‰nger	q1 10260,5953 9931,5985
 Am Landwehrkanal: Parkweg	q1 12739,9576 12801,9554 12919,9584 12981,9672 13086,9825 13145,9861 13241,9995
 Uferweg an den Treptowers: enger und kurviger Weg	q3 14500,9856 14465,9900 14464,9927 14509,9997 14432,10059 14373,10046
 Denewitzstr.: kombinierter Fuﬂ- und Radweg	q1 8061,10310 7947,10155
-Linienstr.: Gehweg	q2 11104,13456 11135,13452
+Linienstr.: Gehweg	q2 11104,13456 11131,13455
 Bˆcklerpark: gemeinsamer Fuﬂ- und Radweg	q2 10885,10045 10723,10088 10521,10126
 Bˆcklerpark: enge Kurven, manchmal Fuﬂg‰nger auf dem Radweg	q3 10967,10092 10917,10068 10885,10045
 Bˆcklerpark: enge Kurven, Fuﬂg‰nger	q3 10923,10113 10917,10068
@@ -185,7 +186,7 @@ Am Volkspark: Parkweg	q1 5745,8194 5925,8219
 Karl-Marx-Allee - Marchlewskistr.: Gehweg	q2 12869,12425 12950,12340 12985,12303
 Lange Str. [vor Kaufhof]: Fuﬂg‰nger	q2 12409,11902 12522,11837
 Hermann-Stˆhr-Platz: Fuﬂg‰nger	q2 12453,11790 12409,11902
-Gotenstr./Cheruskerstr. - Kolonnenstr.: Fuﬂg‰nger	q2 7488,8768 7548,8879
+Gotenstr./Cheruskerstr. - Kolonnenstr.: Fuﬂg‰nger	q2 7485,8777 7531,8848 7563,8871
 Nettelbeckplatz: Fuﬂg‰nger	q2 8024,15401 7989,15412 7891,15417
 Nettelbeckplatz: Fuﬂg‰nger	q2 7953,15362 7989,15412
 Nettelbeckplatz: Fuﬂg‰nger	q2 7975,15500 7989,15412
@@ -262,13 +263,13 @@ Mussehlstr.: Bordsteine (Bayernring und Wolffring)	q3 8842,8561 8756,8453 8711,8
 (Fritz-Br‰uning-Promenade): Bordsteine, Fuﬂg‰nger	q3 8731,8020 8623,8018
 (Teltowkanal, Nordufer): Fuﬂg‰nger (eigentlich f¸r Radfahrer verboten)	q2 8750,5173 9118,5328 9145,5323 9182,5332
 (Kynaststr. - Uferwanderweg): Fuﬂg‰nger	q1 14843,10621 14911,10587
-(Kynaststr. - Paul-und-Paula-Ufer): Fuﬂg‰nger	q1 14821,10478 14868,10467
+(Kynaststr. - Paul-und-Paula-Ufer): Fuﬂg‰nger	q1 14797,10476 14820,10473 14868,10467
 Am Rummelsburger See: Fuﬂg‰nger, kurvenreich	q1 15787,9321 15819,9430 15749,9558 15741,9590 15703,9605 15600,9695 15626,9710 15583,9779 15545,9818 15465,9860 15347,9922 15295,10022 15260,10048 15314,10121 15261,10167 15204,10201 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411 14864,10451 14868,10467 14884,10508 14911,10587 14937,10598 14990,10581 15100,10637 15248,10562
 Am Rummelsburger See: teilweise enge Kurven, Fuﬂg‰nger an schˆnen Tagen	q2 15453,10415 15457,10342 15496,10277 15518,10234 15604,10204 15606,10179 15645,10147 15713,10035 15786,9957 15790,9920 15828,9875 15914,9858 15931,9846
 Am Rummelsburger See: Fuﬂg‰nger an schˆnen Tagen	q1 15931,9846 16002,9787 16049,9749 16123,9692 16120,9653 16182,9591 16268,9670 16347,9594
 Am Teltowkanal: kurverreich und recht eng	q1 3751,1402 3695,1308 3619,1207 3458,1063 3366,1007
 Kˆrnerpark: Fuﬂg‰nger, Bordsteine	q3 12703,7370 12722,7261
-Fregestr. zur Feuerbachstr.: Gehweg, Fuﬂg‰nger	q2 5618,6388 5582,6360
+Fregestr. zur Feuerbachstr.: Gehweg, Fuﬂg‰nger	q2 5629,6407 5582,6360
 Weisestr.: Bordsteine	q3 11767,8330 11770,8292
 Helgol‰nder Ufer - Stromstr.: Fuﬂg‰nger	q2 6551,12901 6535,12934 6271,12985 6278,13053 6183,13083
 Bundesratufer: Rampe, Fuﬂg‰nger	q2 6165,12985 6106,12989
@@ -440,7 +441,7 @@ Viktoriapark: Fuﬂg‰nger, kurze Rampe, Pf‰hle	q1 5013,6003 4981,5939 4957,5894
 Teltowkanalpromenade: eng, nicht anh‰ngertauglich	q2 2079,-12 1924,-188 1593,-317 1471,-311
 (Wohnanlage Friedastr.): Fuﬂg‰nger, Bordsteine	q3 16887,11545 16759,11582
 (Eitelstr. - Bahnhof Lichtenberg): Fuﬂg‰nger	q3 16727,11611 16766,11603
-Bennigsenstr.: enge Straﬂe	q1 5807,7771 5957,7773 6195,7775 6215,7761
+Bennigsenstr.: enge Straﬂe	q1 5807,7771 5957,7773 6195,7775 6209,7765
 Perelsplatz: Fuﬂg‰nger, Park	q2 5809,7712 5636,7709
 Gustav-Rickelt-Weg: eng, Fuﬂg‰nger, Bordsteine	q2 4226,6712 4223,6796 4206,6820
 Unterf¸hrung unter der Stromstr.: Fuﬂg‰nger, eng	q2 6218,12975 6180,12972
@@ -460,7 +461,7 @@ Bayernring: enge Straﬂe	q1 8380,8545 8455,8567 8616,8605
 Bulgarische Str.: kein Radweg, Gehweg benutzen	q2; 15591,8848 15378,8668 15166,8489
 Hedwigskirchgasse: Fuﬂg‰nger	q1 9743,12239 9747,12205
 Hedwigskirchgasse: Bordsteine, Fuﬂg‰nger	q2 9747,12205 9756,12139
-Zufahrt Franz-Mehring-Platz: Bordstein	q1 12740,12128 12699,12041
+Zufahrt Franz-Mehring-Platz: flacher Bordstein	q1 12735,12131 12691,12042
 Am Flutgraben: Fuﬂg‰nger, sechs Bodenschwellen	q3 13535,10184 13371,9974
 Am Flutgraben: Fuﬂg‰nger	q1 13371,9974 13333,9929
 (Uferweg zum Ernst-Heilmann-Steg): sanfte Rampe, Fuﬂg‰nger	q2 13241,9995 13270,10030
@@ -479,7 +480,7 @@ Grazer Platz: Fuﬂg‰nger, Bordsteine	q2 6546,6720 6530,6786 6529,6798
 Achenbachpromenade: Fuﬂg‰nger, Radfahren erlaubt	q1 8763,8780 8748,8587 8722,8527 8715,8459
 Wildensteiner Str.: enge Straﬂe	q1 18528,8331 18416,8163 18365,8094 18333,8059
 Linienstr./Oranienburger Str.: Fuﬂg‰nger	q2 9225,13389 9296,13397
-Fontanestr.: zwei Schwellen, kˆnnen umfahren werden	q1 18240,6845 18254,6679
+Fontanestr.: zwei Schwellen, kˆnnen evtl. umfahren werden	q1 18240,6845 18254,6679
 Triniusstr.: zwei Schwellen, kˆnnen umfahren werden	q1 18417,6775 18339,6660
 Kiautschoustr.: Fuﬂg‰nger, Bordsteine	q3 6837,14848 6853,14854
 (Warschauer Br¸cke - Tamara-Danz-Str.): Fuﬂg‰nger, Bordsteine	q4 13493,11217 13513,11206 13503,11179 13479,11147
@@ -593,7 +594,7 @@ Harkortstr.: Bodenschwellen	q1 7570,5508 7621,5494
 (Plauener Str. - K¸llstedter Str.): Fuﬂg‰nger	q2 17352,14827 17363,14760
 Orankeweg: einige Bodenschwellen, ohne Anh‰nger leicht umfahrbar	q0 14934,15860 15313,15858 15395,15852 15453,15848
 (Gounodstr. - Otto-Brahm-Str.): abschnittsweise eng und kurvig	q1 14435,15904 14451,15873 14383,15848 14349,15825 14365,15778
-Gounodstr.: Fuﬂg‰nger	q1 14259,15816 14272,15837 14366,15877
+Gounodstr.: Fuﬂg‰nger	q1 14239,15810 14251,15828 14366,15877
 Seidenberger Str.: Bordstein, Gel‰nder	q3 12379,16998 12373,17007
 Mulackstr.: enge Straﬂe	q1 10640,13471 10535,13509 10406,13543 10308,13575
 R¸ckerstr.: enge Straﬂe	q1 10597,13647 10535,13509
@@ -658,7 +659,7 @@ Don-Ugoletti-Platz - Regattastr.: Fuﬂg‰nger, Bordsteine	q1 22449,1569 22478,1602
 Ede-und-Unku-Weg: Fuﬂg‰nger, Radfahren erlaubt	q1 15140,11811 15122,11834 15121,11899
 Chiemseestr.: enge Straﬂe	q1 22204,1496 22334,1553
 (Kˆnigsheideweg - Am Alten Fenn): eng	q3 17037,4794 17060,4848
-(Am Alten Fenn - S¸dostallee): teilweise recht eng, Anh‰nger sollten parallelen Weg benutzen	q2 17295,5387 17300,5423 17366,5551
+(Am Alten Fenn - S¸dostallee): teilweise recht eng, Anh‰nger sollten parallelen Weg benutzen	q2 17295,5387 17300,5423 17326,5463 17366,5551
 (D‰meritzstr. - D‰meritzsee): Radfahren verboten	q4 32512,2621 32558,2562
 (Lindenstr. - Bahnhofstr.): gemeinsamer Rad- und Gehweg	q1 22017,5159 22046,5305 22043,5346
 Waldpromenade: eng	q2 23792,7861 23710,7940 23668,7967
@@ -973,7 +974,7 @@ Spreeufer: unter der Rohrdammbr¸cke sehr eng	q3 1124,13536 1184,13544
 (Parkweg im Business Park Berlin): Fuﬂg‰nger	q1 20797,-1262 20783,-1266 20396,-1370 20388,-1373 20373,-1375 20046,-1449 20032,-1451 20018,-1456 19726,-1518 19717,-1520 19706,-1520 19618,-1531
 Vergissmeinnichtweg: Bodenschwellen	q1 21582,185 21608,85
 (Bersarinplatz - Thaerstr.): Fuﬂg‰nger, Bordstein	q2 13747,12642 13761,12690
-(Thaerstr. - Bersarinplatz): Fuﬂg‰nger, Bordstein	q2 13761,12690 13727,12642
+(Thaerstr. - Bersarinplatz): Fuﬂg‰nger, Bordstein	q2 13761,12690 13695,12643
 Ottmachauer Steig: eng, Fuﬂg‰nger, einzelne Stufen vor Hauseing‰ngen	q3 -369,4631 -337,4657 -424,4717 -435,4687
 Alsbacher Weg: Bordstein	q1 -824,4682 -831,4636
 Rauweilersteig: Fuﬂg‰nger	q1 -580,3912 -545,3919 -429,4043
@@ -1019,7 +1020,7 @@ Havelbr¸cke: Fuﬂg‰nger	q2 -3371,13987 -3437,14029 -3445,14033
 (Glacisweg - Ramin-Park): eng, Fuﬂg‰nger	q2 -3887,14405 -3855,14399 -3844,14430
 Reckeweg: eng	q3 -7109,15286 -7133,15287
 Am Krummen Weg: offiziell nur f¸r Fuﬂg‰nger	q2 -6891,14891 -7026,14890
-Am Krug: offiziell nur f¸r Fuﬂg‰nger	q2 -7149,14768 -7015,14772
+Am Krug: offiziell nur f¸r Fuﬂg‰nger	q2 -7149,14768 -7021,14772 -7015,14772
 (Am Langen Weg - Ungewitterweg): eng	q3 -7033,14984 -7075,15021 -7088,15046 -7116,15053
 (Am Zeppelinpark - Sommerbad West-Staaken): einige Fuﬂg‰nger	q1 -8426,13818 -8232,13846
 (entlang der Autobahn): einige Fuﬂg‰nger	q1 6489,7908 6437,7968
@@ -1038,12 +1039,12 @@ An der Nordbahn: eng	q2 6447,20305 6349,20396
 Caroline-Herschel-Platz: Fuﬂg‰nger	q2 14752,11369 14737,11347
 am Oder-Spree-Kanal: teilweise enger Pfad	q3 29037,-2817 29101,-2794 29457,-2835 29559,-2866
 Strandbad	q3 30015,-3906 29783,-3739 29597,-3674
-(Magistratsweg - Maulbeerallee): Fuﬂg‰nger (Schule)	q1 -6051,12673 -5613,12750 -5594,12832
+(Magistratsweg - Maulbeerallee): Fuﬂg‰nger (Schule)	q1 -6051,12673 -5830,12712 -5613,12750 -5594,12832
 Henrionweg: eng	q3 11154,21760 11145,21698
 (Weg zum Hohenschˆnhauser Tor): Fuﬂg‰nger	q1 15367,14512 15221,14550
 (Hohenschˆnhauser Tor): Fuﬂg‰nger (Einkaufszentrum)	q4 15221,14550 15058,14575
 (Anlieferung Hohenschˆnhauser Tor): Lieferverkehr, Fuﬂg‰nger	q1 15110,14486 15221,14550 15174,14638
-(Weg durch den Geschichtspark): Fuﬂg‰nger	q1 7840,13296 7822,13323 7811,13344 7784,13392 7767,13431 7732,13484 7651,13447
+(Weg durch den Geschichtspark): Fuﬂg‰nger	q1 7842,13292 7822,13323 7811,13344 7784,13392 7767,13431 7732,13484 7651,13447
 (Elisabeth-Abegg-Str. - Weg am Moabiter Werder): Fuﬂg‰nger, eng, kurvig	q4 7837,12860 7838,12870 7827,12880 7812,12884 7809,12901 7801,12910 7788,12907 7787,12918
 (Wickeder Str. - Seidelstr./Holzhauser Str.): eng, Fuﬂg‰nger	q3 2713,18851 2720,18836 2768,18825 2794,18836 2821,18831
 Alt-Tegel: Fuﬂg‰nger	q3 1529,20131 1462,20133 1397,20125
@@ -1072,9 +1073,10 @@ Schneefinkweg: enger Pfad	q3 12812,20239 12808,20233 12782,20191 12778,20184 127
 Schneefinkweg: enger Pfad	q3 12675,19974 12651,19928 12622,19874
 Tigerfinkweg: Bordstein	q3 12963,19971 12952,19947
 (Weg im Acker-Park): Radfahren verboten, Bordstein an der Bergstr.	q4 9873,13872 9816,13857 9810,13866 9741,13850
-Park am Nordbahnhof: Fuﬂg‰nger	q1 9224,14169 9147,14151 9176,14181 9169,14189 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
+Park am Nordbahnhof: Fuﬂg‰nger	q1 9224,14169 9147,14151 9181,14186 9175,14193 9119,14255 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
 Park am Nordbahnhof: Fuﬂg‰nger	q1 8913,14485 8868,14442 8825,14401
-Park am Nordbahnhof: Fuﬂg‰nger	q1 9169,14189 9144,14169 8868,14442
+Park am Nordbahnhof: Fuﬂg‰nger	q1 9175,14193 9144,14169 9081,14232 8868,14442
+Park am Nordbahnhof: Fuﬂg‰nger	q1 9119,14255 9081,14232 8992,14176
 (an der Panke - Mauerweg): einige Fuﬂg‰nger	q1 7878,14514 7889,14519 7943,14453 7989,14478 8050,14558 8103,14582 8232,14689
 Bordstein	q3 -2452,17408 -2451,17421
 Neuenahrer Weg: Bodenschwellen, kaum umfahrbar	q2 -2540,18105 -2728,18149
@@ -1102,6 +1104,15 @@ Selkestr.: Fuﬂg‰nger, Bordsteine	q3 12722,7261 12741,7224
 (Schildhornstr. - Treitschkestr./Hackerstr.): einige Fuﬂg‰nger	q1 4937,6205 4997,6331 5015,6363 4999,6397
 Eyke-von-Repkow-Platz: einige Fuﬂg‰nger, Bordsteine	q3 5556,12536 5531,12501
 (Alexandrinenstr. - Wassertorstr.): Fuﬂg‰nger	q1 10293,10645 10401,10601 10431,10606 10492,10582
+(Weg an der S¸dpanke): einige Fuﬂg‰nger	q1 8478,13941 8447,13983 8380,14024 8344,14133 8307,14175 8294,14194
+(Weg an der S¸dpanke - Am Pankepark): einige Fuﬂg‰nger, Rampe	q2 8307,14175 8323,14142
+(Weg an der S¸dpanke - Am Pankepark): einige Fuﬂg‰nger	q1 8323,14142 8290,14119
+(Rhinstr. - Am M¸hlenberg): einige Fuﬂg‰nger, Rampe	q1 18220,11710 18242,11793 18258,11827
+(Kolonie Sanssouci): einige Fuﬂg‰nger	q1 16488,10381 16297,10636 16246,10641
+M¸ggelstr., Hausdurchfahrt: einige Fuﬂg‰nger	q1 14837,11706 14856,11740
+(Bushaltenstelle und Straﬂenbahnwendestelle Schˆneweide): ggfs. Gehwege benutzen	q4 17736,5441 17675,5521 17588,5573 17578,5566
+(Frˆbel-Kindergarten - Oststr.): Fuﬂg‰nger, Kindergarten	q3 17416,5388 17455,5355
+(Schˆnburger Str. - Bosestr./Blumenthalstr.): Radfahren verboten, Bordsteine an beiden Enden	q4 8953,6492 8930,6295
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q3 11805,19071 11895,19183 11927,19308
 Ebersstr.: Sch¸ler	q2 7242,8586 7288,8635
 Straﬂe 103 (Niederschˆnhausen): enge Straﬂe	q1 10914,20065 11051,19789
@@ -1128,7 +1139,7 @@ Engadiner Weg: enge Straﬂe, evtl. Gegenverkehr	q1 3716,2063 3818,2070 3851,2148 
 Am Triftpark: Temposchwellen	q2 4450,20388 4407,20412 4386,20444 4407,20482 4436,20531 4498,20515
 Eschershauser Weg: parkende Autos, un¸bersichtlich	q1 -190,4776 -146,4814 -97,4849 -48,4888 10,4932 110,4950
 Begasstr.: eng	q1 6275,7004 6414,7009
-Friedrichsruher Str.: sehr eng	q1 6637,5952 6522,5933 6326,5912 6134,5894 6007,5882 5935,5874 5851,5863 5694,5845 5679,5853
+Friedrichsruher Str.: sehr eng	q1 6637,5952 6508,5931 6326,5912 6134,5894 6007,5882 5935,5874 5851,5863 5694,5845 5679,5853
 Schˆnhauser Str.: eng	q1 5803,6403 5824,6240 5834,6142 5845,6049 5847,5961 5851,5863 5850,5765
 Jeverstr.: eng	q1 5681,5743 5681,5768 5679,5853 5677,5868 5674,5901 5699,5949 5748,6051 5776,6118 5834,6142
 Friedrichstr. (Lichterfelde): Fuﬂ- und Radweg	q1 2890,3561 2712,3602
@@ -1243,8 +1254,8 @@ Kamminer Str.: un¸bersichtliche Kreuzungen, parkende PKWs	q1 3248,12954 3292,131
 (Kolonieweg a. d. Forkenbeckstr.): Fuﬂg‰nger, teilweise eng	q3 3218,8233 3230,8194 3635,8099 3709,8082 3753,8073 3779,8105
 Claire-Waldoff-Weg: Fuﬂg‰nger	q2 3635,8099 3587,7560
 Bissingzeile: Einspurig, eng bei Gegenverkehr	q1 7959,10910 8113,10786
-(Volkspark Friedrichshain, parallel zur Friedenstr.): Fuﬂg‰nger, kurze Rampe	q3 12386,13085 12387,13107
-(Volkspark Friedrichshain, parallel zur Friedenstr.): Fuﬂg‰nger	q1 12387,13107 12344,13157 12244,13240 12185,13298 12141,13341 12060,13422 12005,13481 11957,13528 11857,13596 11823,13610 11785,13625
+(Volkspark Friedrichshain, parallel zur Friedenstr.): Fuﬂg‰nger, kurze Rampe	q3 12382,13097 12380,13120
+(Volkspark Friedrichshain, parallel zur Friedenstr.): Fuﬂg‰nger	q1 12380,13120 12344,13157 12244,13240 12185,13298 12141,13341 12060,13422 12005,13481 11957,13528 11857,13596 11823,13610 11785,13625
 (Weydemeyerstr.): Fuﬂg‰nger	q1 11890,12750 11818,12785 11805,12760
 (Weydemeyerstr.): einige Fuﬂg‰nger	q0 11933,12701 11971,12785 11921,12810
 (Karl-Marx-Allee): Fuﬂg‰nger, Bordsteine	q1 11584,12863 11600,12857 11622,12850 11725,12809
@@ -1256,7 +1267,7 @@ Bissingzeile: Einspurig, eng bei Gegenverkehr	q1 7959,10910 8113,10786
 (Berolinastr.): Fuﬂg‰nger	q1 11921,12990 11865,13027
 (Berolinastr.): Fuﬂg‰nger, Bordstein	q2 11815,13045 11719,13088
 (Berolinastr.): Weg am Spielplatz vorbei	q2 11865,13027 11815,13045
-(Berolinastr. - Mollstr.): Fuﬂg‰nger	q1 11865,13027 11874,13048 11905,13069
+(Berolinastr. - Mollstr.): Fuﬂg‰nger, Bordstein	q2 11865,13027 11874,13048 11896,13075
 (Berolinastr. - Mollstr.): Fuﬂg‰nger	q1 11608,12985 11681,13161
 (Lichtenberger Str.): Fuﬂg‰nger	q1 12054,12903 12039,12675
 (Verbindungsweg): Fuﬂg‰nger	q1 11646,13465 11703,13422
@@ -1332,8 +1343,8 @@ K‰uzchensteig: Fuﬂg‰nger, Bordsteine	q1 1918,6456 1895,6470
 Rahel-Hirsch-Weg: Fuﬂg‰nger	q3 8582,13355 8595,13375 8587,13436 8586,13440
 Helga-Hahnemann-Str.: Fuﬂg‰nger, schmal	q2 9415,13315 9408,13282 9385,13174
 An der Karolinenhˆhe: Fuﬂg‰nger, spielende Kinder	q3 -5900,11726 -5848,11779 -5892,11820 -5847,11876
-Obstallee: Bodenschwellen, Fuﬂg‰nger, spielende Kinder	q3 -5421,12450 -5896,12607
-Leubnitzweg: Fuﬂg‰nger (Wohngebiet), Bordsteine	q3 -5385,12540 -5421,12450
+Obstallee: Bodenschwellen, Fuﬂg‰nger, spielende Kinder	q3 -5437,12440 -5890,12579
+Leubnitzweg: Fuﬂg‰nger (Wohngebiet), Bordsteine	q3 -5385,12540 -5400,12509 -5437,12440
 Enger Steig: Fuﬂg‰nger, Bordsteine	q1 -4263,11582 -4302,11669
 Enger Steig: Fuﬂg‰nger, Bordsteine	q1 -4310,11770 -4278,11873
 (Parkweg Swinem¸nder Str.): Fuﬂg‰nger	q1 10189,14649 10228,14564
@@ -1587,7 +1598,7 @@ Sendener Weg: enge Straﬂe	q0 964,18321 1040,18283 1178,18223 1221,18332 1281,184
 Gilgenburger Str.: enge Straﬂe	q1 24387,5672 24434,5645 24549,5685 24666,5726
 Blochmannstr.: enge Straﬂe	q1 5097,988 5036,949 4986,959 4925,961 4862,975 4788,1023 4702,1147 4634,1245
 Schenkestr.: enge Straﬂe	q1 17961,8312 17794,8429
-Knˆterichpfad: enge Straﬂe, Gartensiedlung	q1 -7842,14683 -7808,14939 -7783,15059
+Knˆterichpfad: enge Straﬂe, Gartensiedlung	q1 -7842,14683 -7808,14939 -7784,15065
 Hartmannsweilerweg: enge Straﬂe	q1; 17,3471 41,3510 16,3744
 Hartmannsweilerweg: enge Straﬂe	q1 16,3744 -1,3857 -36,3924 -219,4149
 Zietenstr. (Lankwitz): enge Straﬂe	q1 6196,2204 6108,2326 6065,2443 5971,2691
@@ -1871,6 +1882,16 @@ Eduard-Spranger-Promenade: Verbot f¸r Radfahrer	q4 4284,2626 4655,3060 4862,3363
 Rosenpl¸terweg: enge Straﬂe	q0 3657,26240 3431,26192 3328,26193
 Bulgenbachweg: enge Straﬂe	q0 3431,26192 3452,26160 3478,26119 3520,26081 3574,26060 3647,26060
 Schmˆckwitzwerder S¸d: enge Straﬂe	q1 30343,-3454 30133,-3840
+(Schiffahrtsufer - Betckestr.): einige Fuﬂg‰nger	q1 -3441,13270 -3352,13135 -3338,13118 -3210,12887 -3218,12843 -3214,12779 -3170,12595
+(zum R‰cknitzer Steig): einige Fuﬂg‰nger	q1 -5535,12631 -5559,12557
+(Magistratsweg - Blasewitzer Ring/Reclamweg): einige Fuﬂg‰nger	q1 -5830,12712 -5808,12631 -5559,12557 -5400,12509
+(Magistratsweg - Blasewitzer Ring/Reclamweg): einige Fuﬂg‰nger, hohe Bordsteinkante	q2 -5400,12509 -5196,12452
+Annenweg: enger Weg, hohe Bordsteinkante	q3 -5121,8283 -5118,8290 -5094,8391 -5093,8398
+(Finkenkruger Weg - Eichholzbahn): enger Weg	q2 -7420,14520 -7431,14521 -7439,14521 -7452,14472 -7481,14379 -7559,14379
+Lohrer Pfad: kombinierter Fuﬂ- und Radweg, eng	q3 -8386,14882 -8295,14948
+(Bahnweg, KGA Gartenbauverein Staaken): sehr enger Weg, einige Fuﬂg‰nger	q3 -7433,14308 -7340,14320 -7184,14310 -6942,14291 -6943,14262 -6937,14262
+Perwenitzer Weg: Bordstein	q3 -3924,15915 -3942,15926
+Gummiweg: sehr eng, zwei entgegengesetzt fahrende Radfahrer kˆnnen einander nur schwierig passieren	q3 -7891,13616 -7931,13469
 Ederkopfweg: enge Straﬂe	q0 -4729,14958 -4761,14961 -4807,14990 -4879,15008
 Iznikstr.: enge Straﬂe	q0 -2140,16909 -2119,17015
 David-Francke-Str.: Bordsteinkante	q3 -2154,16660 -2137,16658
@@ -1888,16 +1909,19 @@ Narzissenpfad: enge Straﬂe	q0 -7387,14951 -7523,14969
 (Pankeweg zwischen Pankstr. und Wiesenstr.): einige Fuﬂg‰nger	q1 8140,15859 8129,15701 8156,15614
 (Am Rosenanger - Am Sandkrug, Entenschnabel): stark absch¸ssig, eine 30cm-Stufe	q4; 3462,24702 3489,24659 3535,24626
 (Am Sandkrug, Entenschnabel - Am Rosenanger): starke Steigung, eine 30cm-Stufe	q4; 3535,24626 3489,24659 3462,24702
+(Lankegrabenpark): langsam befahrbar, eng, Hundebetrieb	q3 7364,3193 7409,3331 7458,3451
+Verl‰ngerte Schulzendorfer Str.: Fuﬂg‰nger	q1 2150,22464 2015,22435 1834,22421 1583,22376 1505,22368 1411,22365 1266,22401 1094,22504 670,22646 636,22658 587,22646 520,22624 439,22620 289,22618 194,22547
 Dennewitzplatz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 7906,10098 7866,9918
 Eichborndamm: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 4240,19019 4232,18981
 Richterstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 22092,999 22120,886
 Richterstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 22075,779 22007,711
 Stolzenfelsstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 19447,8175 19400,8147 19333,8165 19171,8280 18949,8437 18787,8540 18731,8577
-Weydemeyerstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 11905,13069 11910,13055 12062,12986 12054,12903
+Weydemeyerstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 11896,13075 11904,13058 12062,12986 12054,12903
 Dorotheenstr. (Straﬂenbahn): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 9454,12558 9330,12529
 Revaler Str. (Straﬂenbahn): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 13588,11490 13473,11456
 Kietzer Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 22372,4496 22383,4470
 Fanningerstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 16890,12135 16794,12144
+Lauterstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 5817,7223 5810,7337
 Tannenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -3023,17889 -3012,17940 -3028,18027
 Tannenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -3038,18063 -3028,18027
 Isarstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 12349,8464 12368,8356
@@ -1944,12 +1968,11 @@ Quedlinburger Str.: nur die Durchfahrt ist verboten: gegen die Einbahnstraﬂenric
 Trusetaler Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 21285,17276 21360,17261 21352,17210 21451,17189 21435,17097
 Blumberger Damm: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 21731,15748 21719,15666
 Dorfstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 18144,18813 18161,18814
-(Alex-Wedding-Str. - Karl-Liebknecht-Str.): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 11018,13286 11085,13239
+(Alex-Wedding-Str. - Karl-Liebknecht-Str.): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 11012,13278 11085,13239
 Caseler Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 14732,16770 14700,16790 14608,16772
 An den Flieﬂtalhˆfen: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 4474,23119 4432,23066 4444,22989
 Eckertstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 13598,12554 13585,12584
-Am Kupfergraben: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 9870,12657 9815,12705 9754,12775
-Breslauer Platz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 5810,7337 5902,7334
+Breslauer Platz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 5810,7337 5897,7337
 Lichtwarkweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -2900,18214 -2880,18060
 Akazienweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -3112,18000 -3136,17976 -3155,17925
 Buchenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -2968,18038 -3028,18027 -3083,18010
@@ -1957,6 +1980,8 @@ Eschenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -3306,1
 Lindenweg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; -3111,18105 -3076,18053 -3038,18063
 Amalienstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 13789,16775 13722,16843 13653,16907 13589,16965
 Pasedagplatz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 14174,17226 14144,17165
+Aristotelessteig: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 18527,9623 18660,9599
+Ella-Trebe-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 7938,13302 7938,13150
 Josef-Nawrocki-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 25802,4823 25802,4681 25724,4706 25691,4716 25554,4758 25552,4829
 Askanischer Platz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 8882,10905 8938,10872 8983,10846 9022,10857
 Helbigstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 20109,4087 20339,3779 20362,3750
@@ -1967,7 +1992,6 @@ Zionskirchstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q1::igndisp; 10
 Walsroder Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 6395,5154 6295,5158 6202,5163 6094,5171
 H¸nensteig: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 6419,5048 6387,5057 6395,5154
 Paul-Lincke-Ufer: Uferweg ist als Alternative vorhanden. Allerdings kann man aus der Lausitzer Str. nicht in den Uferweg einbiegen: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 12119,9823 11946,9913 11735,10022 11512,10105
-Czeminskistr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 7604,8927 7563,8871
 Stallschreiberstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q1::igndisp; 10489,11405 10620,11244 10678,11172
 Jahnstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 11500,9116 11509,9392
 Schulenburgring: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 9027,8431 9022,8581 9006,8602
@@ -1981,7 +2005,6 @@ Ahornallee: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 1589,1
 Lindenallee: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 1429,11523 1403,11428
 Alt-Tegel: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 1668,20156 1753,20191 1907,20265
 Alt-Tegel: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 1668,20156 1529,20131 1543,20060 1630,20097 1668,20156
-Am Treptower Park: entgegen der Richtung auf dem Parkstreifen: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q1::igndisp; 14739,8919 14614,9052 14563,9106 14529,9141 14443,9233 14382,9299 14242,9448 14179,9515 14089,9610
 May-Ayim-Ufer: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q1::igndisp; 13206,10651 13077,10747
 Atzpodienstr. (Umgehung auf Gehweg mˆglich): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 16485,12384 16509,12518 16564,12513
 Halenseestr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 2297,9827 2166,10020 2121,10089 2030,10253 1988,10328 1951,10435
@@ -2011,3 +2034,4 @@ Columbiadamm, linker Gehweg	q3::igndisp; 10796,8498 10799,8504 10913,8463
 Hohenstaufenstr., linker Gehweg bis zur Fuﬂg‰ngerampel	q3::igndisp; 6209,9774 6241,9772
 zur M¸nchener Str. auf dem linken Gehweg	q3::igndisp; 6241,9772 6209,9771
 #: note: ^^^
+Karl-Lieknecht-Str., linker Gehweg	q3::igndisp; 11082,13371 11070,13357

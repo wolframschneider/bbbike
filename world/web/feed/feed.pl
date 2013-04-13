@@ -13,10 +13,20 @@ my $homepage = $ENV{'BBBIKE_HOMEPAGE'} || 'http://www.bbbike.org';
 
 sub self_mod_time {
     my $file = $0;
-    my $st = stat($file) or die "stat $file: $!\n";
+    my $git  = 1;
 
-    return POSIX::strftime( XML::Atom::SimpleFeed::W3C_DATETIME,
-        gmtime( $st->mtime ) );
+    if ($git) {
+        my $mtime = qx(git log feed.pl | head -3 | tail -1);
+        $mtime =~ s/^Date:\s*//;
+        return $mtime;
+    }
+
+    else {
+
+        my $st = stat($file) or die "stat $file: $!\n";
+        return POSIX::strftime( XML::Atom::SimpleFeed::W3C_DATETIME,
+            gmtime( $st->mtime ) );
+    }
 }
 
 my $feed = XML::Atom::SimpleFeed->new(
@@ -37,6 +47,70 @@ my $feed = XML::Atom::SimpleFeed->new(
 # TODO
 # - larger area for most cities, up top 30 km radius the centr of the city
 #
+$feed->add_entry(
+    title =>
+qq{<a href="http://extract.bbbike.org/?lang=ru">BBBike extract service</a> now in Russian.},
+    id      => 'd6f59d1bb8315958eb25b197de28d25c',
+    content => {
+        type => 'html',
+        content =>
+qq{<a href="http://extract.bbbike.org/?lang=ru">BBBike extract service</a> now in Russian.},
+    },
+    updated  => '2013-03-31T13:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title =>
+qq{<a href="http://extract.bbbike.org/?lang=fr">BBBike extract service</a> now in French.},
+    id      => 'd6f59d1bb8315958eb25b187de28d25c',
+    content => {
+        type => 'html',
+        content =>
+qq{<a href="http://extract.bbbike.org/?lang=fr">BBBike extract service</a> now in French.},
+    },
+    updated  => '2013-03-26T13:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title =>
+qq{<a href="http://extract.bbbike.org/?lang=es">BBBike extract service</a> now in Spanish.},
+    id      => 'd6f59d1bb8315958eb25b187de28d25d',
+    content => {
+        type => 'html',
+        content =>
+qq{<a href="http://extract.bbbike.org/?lang=es">BBBike extract service</a> now in Spanish.},
+    },
+    updated  => '2013-03-26T13:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title =>
+qq{Den <a href="http://extract.bbbike.org/?lang=de">BBBike extract service</a> gibt es jetzt auch auf deutsch.},
+    id      => 'd6f59d1bb8315958eb25b187de28d25b',
+    content => {
+        type => 'html',
+        content =>
+qq{Den <a href="http://extract.bbbike.org/?lang=de">BBBike extract service</a> gibt es jetzt auch auf deutsch.},
+    },
+    updated  => '2013-03-17T13:30:02Z',
+    category => 'News',
+);
+
+$feed->add_entry(
+    title =>
+qq{The <a href="http://extract.bbbike.org/">BBBike extract service</a> supports now mapsforge format},
+    id      => 'd6f59d1bb8315958eb25b187de28d25b',
+    content => {
+        type => 'html',
+        content =>
+qq{The <a href="http://extract.bbbike.org/">BBBike extract service</a> supports now mapsforge format for Android devices},
+    },
+    updated  => '2013-02-10T13:30:02Z',
+    category => 'News',
+);
 
 $feed->add_entry(
     title => 'Added new cities',

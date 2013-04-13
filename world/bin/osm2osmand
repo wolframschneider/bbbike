@@ -4,11 +4,13 @@
 # osm2osmand  - convert a .pbf file to osmand .obf
 #
 
-PATH=$HOME/bin:/usr/local/bin:/bin:/usr/bin; export PATH
+PATH=/usr/local/bin:/bin:/usr/bin; export PATH
 
-: ${osmand_home="$HOME/opt/OsmAndMapCreator-development"}
 : ${java_heap=1G}
 : ${max_jobs=2}
+: ${BBBIKE_EXTRACT_LANG=en}
+: ${BBBIKE_OPT_DIR="/var/lib/bbbike/opt"}
+: ${osmand_home="$BBBIKE_OPT_DIR/OsmAndMapCreator-development"}
 
 java_opt=-Xmx${java_heap}
 
@@ -36,6 +38,9 @@ file=$1
 city="$2"
 test -e "$file" || usage "file $file does not exists"
 : ${osm_checksum=`dirname $0`/osm-checksum}
+
+template=$(dirname $0)/../etc/extract/$(basename $0).$BBBIKE_EXTRACT_LANG.sh
+case $template in /*) ;; *) template=$(pwd)/$template ;; esac
 
 : ${debug=false}
 pwd=$(pwd)
@@ -82,7 +87,7 @@ else
    # file to large
    split_dir=data/osm
    echo ">>> Run splitter" >> $logfile
-   java $java_opt -jar $HOME/opt/splitter/splitter.jar --output-dir=$split_dir  --max-nodes=4000000 --mapid=$mapid $file >> $logfile 2>&1 || error
+   java $java_opt -jar $BBBIKE_OPT_DIR/splitter/splitter.jar --output-dir=$split_dir  --max-nodes=4000000 --mapid=$mapid $file >> $logfile 2>&1 || error
 
    prefix=`basename $file .osm.pbf`
    for i in $split_dir/*.osm.pbf
@@ -140,35 +145,18 @@ do
     fi
 done
 
-cat << EOF > README.txt
-Map data (c) OpenStreetMap contributors, http://www.openstreetmap.org
-Extracts created by BBBike, http://BBBike.org
-OsmAnd by osmand.net, http://code.google.com/p/osmand
-
-
-Please read the OsmAnd homepage how to use obf files:
-
-  http://osmand.net
-
-
-This osmand file was created on: $date
-GPS rectangle coordinates (lng,lat): $BBBIKE_EXTRACT_COORDS
-Script URL: $BBBIKE_EXTRACT_URL
-Name of area: $city
-
-We appreciate any feedback, suggestions and a donation! You can support us via
-PayPal, Flattr or bank wire transfer: http://www.BBBike.org/community.html
-
-thanks, Wolfram Schneider
-
---
-http://www.BBBike.org - Your Cycle Route Planner
-EOF
+BBBIKE_EXTRACT_COORDS=$BBBIKE_EXTRACT_COORDS BBBIKE_EXTRACT_URL=$BBBIKE_EXTRACT_URL \
+  date=$date city=$city sh $template > README.txt
 
 $text2html < README.txt > README.html
 
+case $BBBIKE_EXTRACT_LANG in
+  en ) ext2="" ;;
+   * ) ext2=".${BBBIKE_EXTRACT_LANG}" ;;
+esac
+
 cd ..
-zip_file=`dirname $file`/$obf.osm.obf.zip
+zip_file=`dirname $file`/$obf.osm.obf${ext2}.zip
 zip -q -r - -- $(basename $obf_dir) | \
   ( cd $pwd;
     cat > $zip_file.tmp && mv $zip_file.tmp $zip_file

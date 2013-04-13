@@ -1,0 +1,131 @@
+#!/bin/sh
+# Copyright (c) 2012-2013 Wolfram Schneider, http://bbbike.org
+#
+# osm2mapsforge - convert a osm/pbf file to mapsforge
+#
+
+PATH=/usr/local/bin:/bin:/usr/bin; export PATH
+: ${BBBIKE_EXTRACT_LANG=en}
+
+set -e
+
+usage () {
+   echo "$@"
+   echo "usage file [ style ] [ title ]"
+   echo ""
+   echo "style: osm"
+   exit 1
+}
+
+error () {
+    message="$@"
+
+    echo "$message"
+    echo "file: $file"
+    cat $logfile
+    exit 1
+}
+
+file=$1
+city=$3
+
+test -z "$file" && usage "missing file"
+
+map_style="osm"
+
+# absolute file path
+case $file in /*) ;; *) file=$(pwd)/$file ;; esac
+
+text2html=$(dirname $0)/text2html.sh
+case $text2html in /*) ;; *) text2html=$(pwd)/$text2html ;; esac
+
+template=$(dirname $0)/../etc/extract/$(basename $0).$BBBIKE_EXTRACT_LANG.sh
+case $template in /*) ;; *) template=$(pwd)/$template ;; esac
+
+test -e "$file" || usage "file $file does not exists"
+: ${osm_checksum=`dirname $0`/osm-checksum}
+
+test -z "$ext" && ext=${2-"osm"}
+: ${debug=false}
+
+hd_mode="type=ram"
+size=$(du -ks -L "$file" | awk '{ print $1}')
+: ${java_heap=4G}
+if [ $size -gt 120000 ]; then
+   hd_mode="type=hd"
+elif [ $size -gt 80000 ]; then
+  java_heap=6G
+fi
+
+pwd=$(pwd)
+JAVACMD_OPTIONS=-Xmx${java_heap}; export JAVACMD_OPTIONS
+
+etc_dir=`dirname $0`/../etc/mkgmap
+# absolute path
+case $etc_dir in /* ) ;; *) etc_dir=$pwd/$etc_dir ;; esac
+
+case $ext in
+   osm | mapsforge-osm.zip )
+	ext=mapsforge-osm.zip
+	;;
+
+   *) usage ;;
+esac
+
+
+test -z "$file" && usage
+
+# use RAM disk if available
+if [ -e /bbbike/tmpfs ]; then
+    _tmp=/bbbike/tmpfs
+else
+    _tmp=/bbbike/tmp
+fi
+: ${TMPDIR=$_tmp}
+
+tmpdir=`mktemp -d ${TMPDIR}/mapsforge.$(basename $ext .zip).XXXXXXXXXXX`
+
+mapsforge=`basename $file | perl -npe 's/\.osm(\.pbf|\.gz|\.bz2)?$//'`
+mapsforge_dir=$tmpdir/$mapsforge-`basename $ext .zip`
+mkdir -p $mapsforge_dir
+
+logfile=$mapsforge_dir/logfile.txt
+touch $logfile
+
+# mkgmap bug
+if [ ! -s $file ]; then
+    : #error "file size is zero, give up!"
+fi
+
+date=$(date -u)
+coords=$(echo $mapsforge | perl -npe 's,planet_,,; s/_/ /g')
+description=$(echo $description | perl -npe '$_=substr($_,0,50)')
+
+cd $mapsforge_dir
+
+BBBIKE_EXTRACT_COORDS=$BBBIKE_EXTRACT_COORDS BBBIKE_EXTRACT_URL=$BBBIKE_EXTRACT_URL \
+  date=$date city=$city map_style=$map_style sh $template > README.txt
+
+$text2html < README.txt > README.html
+
+echo ">>> Run osmosis, mapsforge writer map style: $map_style" >> $logfile
+osmosis --read-pbf $file --mapfile-writer $hd_mode file=$mapsforge.map >> $logfile  2>&1 || error
+
+if egrep -ql '^java\.lang\.|OsmosisRuntimeException' $logfile; then
+    error
+fi
+
+case $BBBIKE_EXTRACT_LANG in
+  en ) ext2=$ext ;;
+   * ) ext2=$(echo $ext | perl -npe "s/\.zip\$/.${BBBIKE_EXTRACT_LANG}.zip/") ;;
+esac
+
+cd ..
+mapsforge_zip=`dirname $file`/$mapsforge.osm.${ext2}
+zip -q -r - -- `basename $mapsforge_dir` | \
+  ( cd $pwd;
+    cat > $mapsforge_zip.tmp && mv $mapsforge_zip.tmp $mapsforge_zip
+    $osm_checksum $mapsforge_zip
+  )
+
+$debug || rm -rf $tmpdir

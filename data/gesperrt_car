@@ -35,7 +35,7 @@ Hermannstr. - Flughafen	3 11884,8492 11898,8362 12083,8411
 Karlshorster - Nöldner	3nocross::ignrte 15279,10862 15272,10790 15261,10738
 Nöldnerstr. -> Karlshorster Str.: Karlshorster - Nöldner	3::igndisp 15388,10758 15272,10790 15261,10738
 Karlshorster Str. -> Nöldnerstr.: Karlshorster - Nöldner	3::igndisp 15279,10862 15272,10790 15388,10758
-Weydemeyerstr. - Mollstr.	3 11910,13055 11905,13069 11839,13083
+Weydemeyerstr. - Mollstr.	3 11904,13058 11896,13075 11840,13085
 Neue Schönhauser	1 10527,13257 10423,13215 10310,13227
 Hagelberger Str.	3 8777,9601 8773,9524 8648,9526
 Hagelberger Str.	3 9000,9509 8773,9524 8648,9526
@@ -59,7 +59,7 @@ Breite Str. Pankow	1 10609,18384 10680,18380
 Gormannstr.	1 10463,13747 10445,13675 10406,13543 10390,13493
 Reichenberger Str.	1 11291,10438 11393,10390
 Weserstr.	1 12074,9217 12005,9211 11888,9189
-Friedenstr.	1 12325,13148 12386,13085
+Friedenstr.	1 12325,13148 12382,13097
 Fasanenstr.	1 5223,9810 5209,9978
 Kopfstr.	1 12478,7878 12327,7847 12220,7822 12176,7811 12041,7788
 Am Treptower Park	1 15166,8489 15079,8575 15070,8584 15002,8651 14934,8717 14852,8799 14842,8809 14739,8919 14614,9052 14563,9106 14529,9141 14443,9233 14382,9299 14242,9448 14179,9515 14089,9610
@@ -108,14 +108,19 @@ Allerstr.	1 11879,7720 12055,7751
 Hiddenseer Str.	1 11657,15271 11828,15210
 Koserstr.	1 2950,6141 3112,6090 3118,6140 3209,6206 3309,6270
 Offenbacher Str.	1 4506,7734 4559,7672 4785,7609 5045,7623
-Wassergasse	1 11034,11895 11022,11782
+Wassergasse	1 11034,11895 11024,11789
 Kienitzer Str.	1 12830,8031 12692,7996 12583,7974 12466,7946
 Alt-Mariendorf (Nord)	1 9065,3693 9106,3703 9275,3753 9410,3793 9731,3889
 Almstadtstr.	1 10790,13565 10767,13443 10757,13401 10699,13173
 Schendelgasse	1 10653,13493 10703,13467 10767,13443
 Mulackstr.	1 10308,13575 10406,13543 10535,13509 10640,13471
-Hirtenstr. - Karl-Liebknecht-Str.	3 10923,13317 11005,13269 11012,13278 11018,13286 11070,13357 11081,13372
-Karl-Liebknecht-Str. - Hirtenstr.	3 10923,13156 10976,13229 11005,13269 10923,13317
+Straßenbahntrasse	3nocross::ignrte 10976,13229 11012,13278 11070,13357
+Karl-Liebknecht-Str. -> Alex-Wedding-Str.: Straßenbahntrasse	3::igndisp 11070,13357 11012,13278 11085,13239
+Karl-Liebknecht-Str. -> Hirtenstr.: Straßenbahntrasse	3::igndisp 10976,13229 11012,13278 10925,13322
+Alex-Wedding-Str. -> Karl-Liebknecht-Str.: Straßenbahntrasse	3::igndisp 11085,13239 11012,13278 10976,13229
+Alex-Wedding-Str. -> Hirtenstr.: Straßenbahntrasse	3::igndisp 11085,13239 11012,13278 10925,13322
+Hirtenstr. -> Karl-Liebknecht-Str.: Straßenbahntrasse	3::igndisp 10925,13322 11012,13278 11070,13357
+Hirtenstr. -> Alex-Wedding-Str.: Straßenbahntrasse	3::igndisp 10925,13322 11012,13278 11085,13239
 Parochialstr.	1 10952,12401 11040,12415
 Waisenstr.	1 11040,12415 11032,12439 11059,12450
 Waisenstr.	1 11040,12415 11049,12386 11094,12243
@@ -156,7 +161,7 @@ Christburger Str. -> Sredzkistr.: Prenzlauer Allee/Sredzkistr.	3::igndisp 11912,
 Christburger Str. -> Prenzlauer Allee: Prenzlauer Allee/Sredzkistr.	3::igndisp 11912,14486 11642,14625 11582,14448
 Gärtnerstr.	1 14211,11552 14247,11681 14272,11775
 Wismarplatz	1 14395,11753 14416,11815
-Wismarplatz	3 14449,11742 14416,11815 14395,11753
+Wismarplatz	3 14461,11738 14416,11815 14395,11753
 Simon-Dach-Str.	1 13954,11647 13981,11746 14006,11843
 Simon-Dach-Str.	1 14045,11965 14006,11843
 Buchhorster Str.	1 7620,20635 7736,20598 7793,20580 7866,20556 7979,20528
@@ -203,7 +208,7 @@ Eichkatzweg	1 925,9644 794,9472
 Zikadenweg	1 703,9538 835,9707 937,9841 1046,9989 1047,10002 1159,10149
 Oberhaardter Weg	1 765,8481 911,8374
 Gustav-Freytag-Str. (Grunewald)	1 834,8273 815,8283 748,8456 765,8481
-Schumannstr.	1 8581,13013 8628,13033 8701,13058 8964,13124
+Schumannstr.	1 8701,13058 8964,13124
 Albrechtstr. (Mitte)	1 8964,13124 9001,13039 9046,12933 9106,12795
 Charitéstr.	1 8693,12951 8628,13033
 Spandauer Str. (Mitte)	3nocross::ignrte 10738,12364 10673,12434 10644,12469 10601,12521
@@ -854,10 +859,15 @@ Gormannstr. -> Torstr.: Straßenbahntrasse	3::igndisp 10445,13675 10463,13747 102
 Torstr. -> Gormannstr.: Straßenbahntrasse	3::igndisp 10287,13783 10463,13747 10480,13871
 Straßenbahntrasse	3nocross::ignrte 10746,13673 10898,13632 11111,13518 11160,13492
 Torstr. -> Zolastr.: Straßenbahntrasse	3::igndisp 11111,13518 10898,13632 10872,13570
+Zolastr. -> Torstr.: Straßenbahntrasse	3::igndisp 10872,13570 10898,13632 11117,13521
 Zolastr. -> Straßburger Str.: Straßenbahntrasse	3::igndisp 10872,13570 10898,13632 11052,13870
 Zolastr. -> Torstr.: Straßenbahntrasse	3::igndisp 10872,13570 10898,13632 10746,13673
+Torstr. -> Torstr.: Straßenbahntrasse	3::igndisp 11117,13521 10898,13632 11111,13518
+Torstr. -> Zolastr.: Straßenbahntrasse	3::igndisp 11117,13521 10898,13632 10872,13570
 Straßburger Str. -> Torstr.: Straßenbahntrasse	3::igndisp 11052,13870 10898,13632 11111,13518
 Straßburger Str. -> Zolastr.: Straßenbahntrasse	3::igndisp 11052,13870 10898,13632 10872,13570
+Straßburger Str. -> Torstr.: Straßenbahntrasse	3::igndisp 11052,13870 10898,13632 11117,13521
+Torstr. -> Torstr.: Straßenbahntrasse	3::igndisp 10746,13673 10898,13632 11117,13521
 Torstr. -> Straßburger Str.: Straßenbahntrasse	3::igndisp 10746,13673 10898,13632 11052,13870
 Weydingerstr. -> Torstr.: Straßenbahntrasse	3::igndisp 11079,13492 11111,13518 10898,13632
 Torstr. -> Weydingerstr.: Straßenbahntrasse	3::igndisp 11160,13492 11111,13518 11079,13492
@@ -935,8 +945,8 @@ Feurigstr. -> Gustav-Freytag-Str.: Überqueren verboten	3::igndisp 7012,8511 6807
 Feurigstr. -> Dominicusstr.: Überqueren verboten	3::igndisp 7012,8511 6807,8309 6935,8208
 Dominicusstr. -> Gustav-Freytag-Str.: Überqueren verboten	3::igndisp 6935,8208 6807,8309 6779,8279
 Dominicusstr. -> Feurigstr.: Überqueren verboten	3::igndisp 6687,8385 6807,8309 7012,8511
-Schranke	3 9061,14050 8825,14401 8776,14364
-Schranke	3 8776,14364 8825,14401 9061,14050
+Schranke	3 9070,14058 8992,14176 8825,14401 8776,14364
+Schranke	3 8776,14364 8825,14401 8992,14176 9070,14058
 Plonzstr.	1 16227,12280 16252,12411
 Seddiner -> Hohenschönhausener Weg: Poller	3 18215,12123 18408,12105 18420,11864
 Seddiner -> Hohenschönhausener Weg: Poller	3 18559,12105 18408,12105 18420,11864
@@ -1017,9 +1027,9 @@ Indira-Gandhi-Str. -> Gounodstr.: Straßenbahntrasse	3::igndisp 14609,15921 14597
 Meyerbeerstr. -> Indira-Gandhi-Str.: Straßenbahntrasse	3::igndisp 14484,16035 14576,16069 14550,16161
 Indira-Gandhi-Str. -> Meyerbeerstr.: Straßenbahntrasse	3::igndisp 14595,15980 14576,16069 14484,16035
 Lenther Steig	1 1022,14898 1037,14814 1042,14721
-Mittelstreifen	3nocross::ignrte 6150,7673 6083,7582 5955,7406
-Wielandstr. -> Hauptstr.: Mittelstreifen	3::igndisp 6081,7215 6083,7582 5955,7406
-Hauptstr. -> Wielandstr.: Mittelstreifen	3::igndisp 6150,7673 6083,7582 6081,7215
+Mittelstreifen	3nocross::ignrte 6144,7677 6082,7594 5955,7420
+Hauptstr. -> Wielandstr.: Mittelstreifen	3::igndisp 6144,7677 6082,7594 6081,7215
+Wielandstr. -> Hauptstr.: Mittelstreifen	3::igndisp 6081,7215 6082,7594 5955,7420
 Fehmarner Str.	1 6709,14782 6528,15000
 Mittelstreifen	3nocross::ignrte 1960,11426 1834,11408 1625,11380
 Soorstr. -> Kaiserdamm: Mittelstreifen	3::igndisp 1878,11268 1834,11408 1625,11380
@@ -1359,9 +1369,6 @@ Töpferweg: Poller	3 13238,2521 13309,2410 13367,2322
 Hoppestr.	1 8617,18310 8482,18284
 Straße 134: Poller	3 9192,20719 9276,20745 9398,20784
 Straße 134: Poller	3 9398,20784 9276,20745 9192,20719
-Straßebahntrasse	3nocross::ignrte 11012,13278 11018,13286 11070,13357
-Karl-Liebknecht-Str. -> Alex-Wedding-Str.: Straßebahntrasse	3::igndisp 11070,13357 11018,13286 11085,13239
-Alex-Wedding-Str. -> Karl-Liebknecht-Str.: Straßebahntrasse	3::igndisp 11085,13239 11018,13286 11012,13278
 Hasselwerderstr	1 18268,5739 18164,5701 18023,5623
 Haagstr.	1 -2920,2472 -2882,2373 -3030,2349
 Borussenstr.: außer Linienverkehr; für den Radverkehr gibt es einen linksseitigen Radweg	1 -3736,2849 -3758,2678
@@ -1495,3 +1502,8 @@ Mittelstreifen	3nocross::ignrte 13885,12279 14020,12261 14208,12235
 zur Pablo-Neruda-Bibliothek -> Frankfurter Allee: Mittelstreifen	3::igndisp 14008,12181 14020,12261 13885,12279
 Frankfurter Allee -> zur Pablo-Neruda-Bibliothek: Mittelstreifen	3::igndisp 14208,12235 14020,12261 14008,12181
 Schloßplatz - Rathausbrücke	3 10199,12251 10285,12306 10357,12356
+Europaplatz	1 8015,13303 7938,13302
+Am Kupfergraben	1 9754,12775 9815,12705 9870,12657
+Am Treptower Park	1 14739,8919 14614,9052 14563,9106 14529,9141 14443,9233 14382,9299 14242,9448 14179,9515 14089,9610
+Czeminskistr.	1 7604,8927 7563,8871
+Berlinickestr.	1 5076,5500 5016,5401

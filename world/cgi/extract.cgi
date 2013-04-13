@@ -38,14 +38,6 @@ umask(002);
 binmode \*STDOUT, ":utf8";
 binmode \*STDERR, ":utf8";
 
-my $debug = 1;
-
-# spool directory. Should be at least 100GB large
-my $spool_dir = '/var/cache/extract';
-
-# sent out emails as
-my $email_from = 'BBBike Admin <bbbike@bbbike.org>';
-
 our $option = {
     'homepage'        => 'http://download.bbbike.org/osm/extract',
     'script_homepage' => 'http://extract.bbbike.org',
@@ -64,7 +56,14 @@ our $option = {
     # max count of gps points for a polygon
     'max_coords' => 256 * 256,
 
-    'enable_polygon' => 1,
+    'enable_polygon'      => 1,
+    'email_valid_mxcheck' => 1,
+
+    'debug'               => "2",
+    'language'            => "en",
+    'request_method'      => "GET",
+    'supported_languages' => [qw/en de es fr ru/],
+    'message_path'        => "../world/etc/extract",
 };
 
 my $formats = {
@@ -81,16 +80,40 @@ my $formats = {
     'obf.zip'            => "Osmand (OBF)",
     'o5m.gz'             => "o5m gzip'd",
     'o5m.bz2'            => "o5m bzip'd",
+    'mapsforge-osm.zip'  => "Mapsforge OSM",
 };
+
+###
+# global variables
+#
+my $language       = $option->{'language'};
+my $extract_dialog = '/extract-dialog';
 
 #
 # Parse user config file.
 # This allows to override standard config values
 #
 my $config_file = "../.bbbike-extract.rc";
+if ( CGI->new->url( -full => 1 ) =~ m,^http://extract[2-4]?-pro[2-4]?\., ) {
+    $config_file = '../.bbbike-extract-pro.rc';
+    warn "Use extract pro config file $config_file\n"
+      if $option->{"debug"} >= 2;
+}
+
 if ( -e $config_file ) {
+    warn "Load config file: $config_file\n" if $option->{"debug"} >= 2;
     require $config_file;
 }
+else {
+    warn "config file: $config_file not found, ignored\n"
+      if $option->{"debug"} >= 2;
+}
+
+# sent out emails as
+my $email_from = 'BBBike Admin <bbbike@bbbike.org>';
+
+# spool directory. Should be at least 100GB large
+my $spool_dir = $option->{'spool_dir'} || '/var/cache/extract';
 
 my $spool = {
     'incoming'  => "$spool_dir/incoming",
@@ -101,11 +124,29 @@ my $spool = {
 my $max_skm = $option->{'max_skm'};
 
 # use "GET" or "POST" for forms
-my $request_method = "GET";
+my $request_method = $option->{request_method};
+
+# translations
+my $msg;
+my $debug = $option->{'debug'};
 
 ######################################################################
 # helper functions
 #
+
+sub webservice {
+    my $q = shift;
+
+    my @ns = qw/json/;
+
+    my $ns = $q->param("ns");
+    if ( defined $ns && grep { $_ eq $ns } @ns ) {
+        return $ns;
+    }
+    else {
+        return "";
+    }
+}
 
 sub header {
     my $q    = shift;
@@ -114,7 +155,10 @@ sub header {
 
     my @onload;
     my @cookie;
-    my @css = "../html/extract.css";
+    my @css     = "../html/extract.css";
+    my @expires = ();
+
+    my $ns = webservice($q);
 
     if ( $type eq 'homepage' ) {
         @onload = ( -onLoad, 'init();' );
@@ -147,9 +191,25 @@ sub header {
         push @cookie, -cookie => \@cookies;
     }
 
-    return $q->header( -charset => 'utf-8', @cookie ) .
+    # do not cache requests
+    if ( $type eq 'check_input' ) {
+        @expires = ( -expires => "+0s" );
+    }
 
-      $q->start_html(
+    my $data = "";
+    if ( $ns eq 'json' ) {
+        $data .= $q->header(
+            -charset      => 'utf-8',
+            -content_type => 'application/json'
+        );
+        $data .= "/* JavaScript comments follow as HTML\n\n"
+          ;    # XXX: all outputs in comments
+    }
+    else {
+        $data .= $q->header( -charset => 'utf-8', @cookie );
+    }
+
+    $data .= $q->start_html(
         -title => 'Planet.osm extracts | BBBike.org',
         -head  => [
             $q->meta(
@@ -162,7 +222,7 @@ sub header {
                 {
                     -name => 'description',
                     -content =>
-'Extracts OpenStreetMap areas in OSM, PBF, Garmin, Osmand or Esri shapefile format'
+'Extracts OpenStreetMap areas in OSM, PBF, Garmin, Osmand, mapsforge, Navit, or Esri shapefile format (as rectangle or polygon).'
                 }
             )
         ],
@@ -170,7 +230,9 @@ sub header {
 
         # -script => [ map { { 'src' => $_ } } @javascript ],
         @onload,
-      );
+    ) if !$ns;
+
+    return $data;
 }
 
 # see ../html/extract.js
@@ -195,19 +257,22 @@ sub manual_area {
  <div id="manual_area">
   <div id="sidebar_content">
     <span class="export_hint">
-      <a id="drag_box">Manually select a different area</a>
-      <a class='tools-helptrigger' href='/extract-dialog-select-area.html'><img src='/html/help-16px.png' alt="" /></a><br/>
+      <a id="drag_box">
+        <span id="drag_box_manually">@{[ M("Manually select a different area") ]}</span>
+        <span id="drag_box_drag" style="display:none">@{[ M("Drag a box on the map to select an area") ]}</span>
+      </a>
+      <a class='tools-helptrigger' href='$extract_dialog/$language/select-area.html'><img src='/html/help-16px.png' alt="" /></a><br/>
     </span> 
     <span id="square_km"></span>
 
     <div id="polygon_controls" style="display:none">
 	<input id="createVertices" type="radio" name="type" onclick="polygon_update()" />
-	<label for="createVertices">add points to polygon
-	<img src="$img_prefix/add_point_on.png" alt=""/>  <a class='tools-helptrigger' href='/extract-dialog-polygon.html'><img src='/html/help-16px.png' alt="" /></a><br/>
+	<label for="createVertices">@{[ M("add points to polygon") ]}
+	<img src="$img_prefix/add_point_on.png" alt=""/>  <a class='tools-helptrigger' href='$extract_dialog/$language/polygon.html'><img src='/html/help-16px.png' alt="" /></a><br/>
 	</label>
 
 	<input id="rotate" type="radio" name="type" onclick="polygon_update()" />
-	<label for="rotate">resize or drag polygon
+	<label for="rotate">@{[ M("resize or drag polygon") ]}
 	<img src="$img_prefix/move_feature_on.png" alt="move feature"/>
 	</label>
     </div>
@@ -232,18 +297,21 @@ sub footer_top {
         $css = "\n<style>$css</style>\n";
     }
 
+    my $community_link =
+      $language eq 'de' ? "/community.de.html" : "/community.html";
     my $donate = qq{<p class="normalscreen" id="big_donate_image">}
-      . qq{<a href="/community.html"><img class="logo" height="47" width="126" src="/images/btn_donateCC_LG.gif" alt="donate"/></a></p>};
+      . qq{<a href="$community_link#donate"><img class="logo" height="47" width="126" src="/images/btn_donateCC_LG.gif" alt="donate"/></a></p>};
 
     return <<EOF;
   $donate
   $css
   <div id="footer_top">
     <a href="../">home</a> |
-    <a href="../extract.html">help</a> |
+    <a href="../extract.html">@{[ M("help") ]}</a> |
     <a href="http://download.bbbike.org/osm/">download</a> |
-    <a href="/cgi/livesearch-extract.cgi">livesearch</a> |
-    <a href="../community.html#donate">donate</a> $locate
+    <!-- <a href="/cgi/livesearch-extract.cgi">@{[ M("livesearch") ]}</a> | -->
+    <a href="http://mc.bbbike.org/mc/">map compare</a> |
+    <a href="$community_link#donate">@{[ M("donate") ]}</a> $locate
   </div>
 EOF
 }
@@ -252,8 +320,12 @@ sub footer {
     my $q    = shift;
     my %args = @_;
 
+    my $ns = webservice($q);
+    return if $ns;
+
     my $analytics = &google_analytics;
-    my $url = $q->url( -relative => 1 );
+    my $url       = $q->url( -relative => 1 );
+    my $error     = $args{'error'} || 0;
 
     my $locate =
       $args{'map'} ? ' | <a href="javascript:locateMe()">where am I?</a>' : "";
@@ -285,6 +357,7 @@ $analytics
   jQuery('#pageload-indicator').hide();
 </script>
 
+<!-- bbbike_extract_status: $error -->
 </body>
 </html>
 EOF
@@ -297,9 +370,33 @@ sub social_links {
     <a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="Follow us on twitter.com/BBBikeWorld" /></a>
     <a class="gplus" onmouseover="javascript:google_plusone();" ><img alt="" src="/images/google-plusone-t.png"/></a><g:plusone href="http://extract.bbbike.org" size="small" count="false"></g:plusone>
     <a href="http://www.bbbike.org/feed/bbbike-world.xml"><img class="logo" width="14" height="14" title="What's new on BBBike.org" src="/images/rss-icon.png" alt="" /></a>
-    &nbsp;
     </span>
 EOF
+}
+
+sub language_links {
+    my $q        = shift;
+    my $language = shift;
+
+    my $qq   = CGI->new($q);
+    my $data = qq{<span id="language">\n};
+
+    foreach my $l ( @{ $option->{'supported_languages'} } ) {
+        if ( $l ne $language ) {
+            $l eq $option->{'language'}
+              ? $qq->delete("lang")
+              : $qq->param( "lang", $l );
+
+            $data .= qq{<a href="} . $qq->url( -query => 1 ) . qq{">$l</a>\n};
+        }
+        else {
+            $data .= qq{<span id="active_language">$l</span>\n};
+        }
+
+    }
+    $data .= qq{</span>\n};
+
+    return $data;
 }
 
 sub google_analytics {
@@ -321,14 +418,17 @@ EOF
 }
 
 sub message {
+    my $q        = shift;
+    my $language = shift;
+
     return <<EOF;
 <span id="noscript"><noscript>Please enable JavaScript in your browser. Thanks!</noscript></span>
-@{[ &social_links ]}
-<span id="toolbar">
-BBBike extract -
-</span> 
+<span id="toolbar"></span>
+
 <span id="tools-titlebar">
- <span id="tools-help"><a class='tools-helptrigger' href='/extract-mini.html'><span>about</span></a></span>
+ @{[ &language_links($q, $language) ]}
+ @{[ &social_links ]} - 
+ <span id="tools-help"><a class='tools-helptrigger' href='$extract_dialog/$language/about.html' title='info'><span>@{[ M("about") ]} extracts</span></a> - </span>
  <span id="pageload-indicator">&nbsp;<img src="/html/indicator.gif" alt="" title="Loading JavaScript libraries" /></span>
  <span class="jqmWindow jqmWindowLarge" id="tools-helpwin"></span>
 </span>
@@ -340,6 +440,9 @@ EOF
 sub layout {
     my $q    = shift;
     my %args = @_;
+
+    my $ns = webservice($q);
+    return "" if $ns ne "";
 
     my $data = <<EOF;
   <div id="all">
@@ -361,7 +464,8 @@ sub script_url {
     my $obj    = shift;
 
     my $coords = "";
-    my $city = $obj->{'city'} || "";
+    my $city   = $obj->{'city'} || "";
+    my $lang   = $obj->{'lang'} || "";
 
     if ( scalar( @{ $obj->{'coords'} } ) > 100 ) {
         $coords = "0,0,0";
@@ -377,6 +481,7 @@ sub script_url {
     $script_url .= "&format=$obj->{'format'}";
     $script_url .= "&coords=" . CGI::escape($coords) if $coords ne "";
     $script_url .= "&city=" . CGI::escape($city) if $city ne "";
+    $script_url .= "&lang=" . CGI::escape($lang) if $lang ne "";
 
     return $script_url;
 }
@@ -489,15 +594,47 @@ sub parse_coords_string {
     return @data;
 }
 
+#sub get_languageXXX {
+#    my $q = shift;
+#
+#    my $lang = $option->{'language'} || "en";
+#    my $l = $q->param("lang");
+#
+#    if ( $l && grep { $l eq $_ } @{ $option->{supported_languages} } ) {
+#        $lang = $1;
+#    }
+#
+#    return $lang;
+#}
+
 #
 # validate user input
 # reject wrong values
 #
 sub check_input {
     my %args = @_;
+    my $q    = $args{'q'};
 
-    my $q = $args{'q'};
+    my $ns = webservice($q);
+    if ( !$ns || $ns ne 'json' ) {
+        return _check_input(@_);
+    }
+
+    # XXX: we put HTML output in JavaScript comments
+    my $error = _check_input(@_);
+    print "\n\nJavaScript comments in HTML ends here */\n\n";
+
+    my $json_text = encode_json( { "status" => $error } );
+    print "$json_text\n\n";
+}
+
+sub _check_input {
+    my %args = @_;
+    my $q    = $args{'q'};
+
     our $qq = $q;
+
+    my $lang = get_language($q);
 
     print &header( $q, -type => 'check_input' );
     print &layout( $q, 'check_input' => 1 );
@@ -547,6 +684,7 @@ sub check_input {
     my $coords = Param("coords");
     my $layers = Param("layers");
     my $pg     = Param("pg");
+    my $as     = Param("as");
 
     if ( !exists $formats->{$format} ) {
         error("Unknown error format '$format'");
@@ -560,7 +698,13 @@ sub check_input {
             1
         );
     }
-    elsif ( !Email::Valid->address($email) ) {
+    elsif (
+        !Email::Valid->address(
+            -address => $email,
+            -mxcheck => $option->{'email_valid_mxcheck'}
+        )
+      )
+    {
         error("E-mail address '$email' is not valid.");
     }
 
@@ -614,6 +758,8 @@ sub check_input {
 
     $pg = 1 if !$pg || $pg > 1 || $pg <= 0;
 
+    error("as '$as' must be greather than zero") if $as <= 0;
+
     if ( !$error ) {
         error("ne lng '$ne_lng' must be larger than sw lng '$sw_lng'")
           if $ne_lng <= $sw_lng
@@ -652,8 +798,12 @@ sub check_input {
         print "and correct the values!</p>\n";
 
         print "<br/>" x 4;
-        print &footer($q);
-        return;
+        print &footer(
+            $q,
+            'error' => $error,
+            'css'   => '#footer { width: 90%; padding-bottom: 20px; }'
+        );
+        return $error;
     }
     else {
 
@@ -667,20 +817,9 @@ sub check_input {
           )
           : "$sw_lng,$sw_lat x $ne_lng,$ne_lat";
 
-        print <<EOF;
-<p>Thanks - the input data looks good.</p><p>
-It takes between 10-30 minutes to extract an area from planet.osm,
-depending on the size of the area and the system load.
-You will be notified by e-mail if your extract is ready for download.
-Please follow the instruction in the email to proceed your request.</p>
-
-<p align='left'>Area: "@{[ escapeHTML($city) ]}" covers @{[ large_int($skm) ]} square km <br/>
-Coordinates: @{[ escapeHTML($coordinates) ]} <br/>
-Format: $format
-</p>
-
-<p>Press the back button to get the same area in a different format, or to request a new area.</p>
-EOF
+        my $text = join "\n", @{ $msg->{EXTRACT_CONFIRMED} };
+        printf( $text,
+            escapeHTML($city), large_int($skm), $coordinates, $format );
 
     }
 
@@ -695,6 +834,7 @@ EOF
             'layers' => $layers,
             'coords' => \@coords,
             'city'   => $city,
+            'lang'   => $lang,
         }
     );
 
@@ -713,10 +853,11 @@ EOF
         'time'            => time(),
         'script_url'      => $script_url,
         'coords_original' => $debug >= 2 ? $coords : "",
+        'lang'            => $lang,
     };
 
-    my $json      = new JSON;
-    my $json_text = $json->utf8->pretty->encode($obj);
+    #my $json      = new JSON;
+    #my $json_text = $json->utf8->pretty->encode($obj);
 
     my ( $key, $json_file ) = &save_request($obj);
     my $mail_error = "";
@@ -753,20 +894,19 @@ EOF
             print qq{<p class="error">I'm so sorry,},
               qq{ I couldn't save your request.\n},
               qq{Please contact the BBBike.org maintainer!</p>};
+            $error++;
         }
 
         else {
-            print
-              qq{<p>We appreciate any feedback, suggestions },
-              qq{and a <a href="../community.html#donate">donation</a>! },
-qq{You can support us via PayPal, Flattr or bank wire transfer.\n},
-              qq{<br/>} x 4,
-              "</p>\n";
+            print join "\n", @{ $msg->{EXTRACT_DONATION} };
+            print qq{<br/>} x 4, "</p>\n";
         }
     }
 
     print &footer( $q,
         'css' => '#footer { width: 90%; padding-bottom: 20px; }' );
+
+    return $error;
 }
 
 # save request in incoming spool
@@ -840,6 +980,10 @@ sub send_email {
     if ( $confirm > 0 ) {
         $smtp->data($data) or die "can't email data to '$to'\n";
     }
+    else {
+
+        # do not sent mail body data
+    }
 
     $smtp->quit() or die "can't send email to '$to'\n";
 }
@@ -867,7 +1011,7 @@ sub save_request {
     my $obj = shift;
 
     my $json      = new JSON;
-    my $json_text = $json->utf8->pretty->encode($obj);
+    my $json_text = $json->pretty->encode($obj);
 
     my $key = md5_hex( encode_utf8($json_text) . rand() );
     my $spool_dir =
@@ -941,7 +1085,7 @@ qq{<p class="error">I'm so sorry, I couldn't find a key for your request.\n},
     else {
         print
           qq{<p class="">Thanks - your request has been confirmed.\n},
-          qq{It takes usually 10-30 minutes to extract the data.\n},
+          qq{It takes usually 15-30 minutes to extract the data.\n},
 qq{You will be notified by e-mail if your extract is ready for download. Stay tuned!</p>};
 
         print qq{<hr/>\n<p>We appreciate any feedback, suggestions },
@@ -954,15 +1098,15 @@ qq{You will be notified by e-mail if your extract is ready for download. Stay tu
 # startpage
 sub homepage {
     my %args = @_;
-
-    my $q = $args{'q'};
+    my $q    = $args{'q'};
 
     print &header( $q, -type => 'homepage' );
     print &layout($q);
 
     print qq{<div id="intro">\n};
 
-    print qq{<div id="message">\n}, &message, &locate_message, "</div>\n";
+    print qq{<div id="message">\n}, &message( $q, $language ), &locate_message,
+      "</div>\n";
     print "<hr/>\n\n";
 
     print $q->start_form(
@@ -978,6 +1122,8 @@ sub homepage {
     my $default_format = $q->cookie( -name => "format" )
       || $option->{'default_format'};
 
+    print $q->hidden( "lang", $language ), "\n\n";
+
     print qq{<div id="table">\n};
     print $q->table(
         { -width => '100%' },
@@ -986,7 +1132,7 @@ sub homepage {
             [
                 $q->td(
                     [
-"<span class='normalscreen lnglatbox' title='South West, valid values: -180 .. 180'>Left lower corner (South-West)<br/>"
+"<span class='normalscreen lnglatbox' title='South West, valid values: -180 .. 180'>@{[ M('Left lower corner (South-West)') ]}<br/>"
                           . "&nbsp;&nbsp; $lng: "
                           . $q->textfield(
                             -name => 'sw_lng',
@@ -1005,7 +1151,7 @@ sub homepage {
 
                 $q->td(
                     [
-"<span class='normalscreen lnglatbox' title='North East, valid values: -180 .. 180'>Right top corner (North-East)<br/>"
+"<span class='normalscreen lnglatbox' title='North East, valid values: -180 .. 180'>@{[ M('Right top corner (North-East)') ]}<br/>"
                           . "&nbsp;&nbsp; $lng: "
                           . $q->textfield(
                             -name => 'ne_lng',
@@ -1026,7 +1172,7 @@ sub homepage {
                     [
 "<span class='normalscreen' title='PBF: fast and compact data, OSM XML gzip: standard OSM format, "
                           . "twice as large, Garmin format in different styles, Esri shapefile format, "
-                          . "Osmand for Androids'>Format <a class='tools-helptrigger' href='/extract-dialog-format.html'><img src='/html/help-16px.png' alt=''/></a><br/></span>"
+                          . "Osmand for Androids'>@{[ M('Format') ]} <a class='tools-helptrigger' href='$extract_dialog/$language/format.html'><img src='/html/help-16px.png' alt=''/></a><br/></span>"
                           . $q->popup_menu(
                             -name   => 'format',
                             -values => [
@@ -1042,7 +1188,8 @@ sub homepage {
                 $q->td(
                     [
 "<span title='Required, you will be notified by e-mail if your extract is ready for download.'>"
-                          . "Your email address <a class='tools-helptrigger-small' href='/extract-dialog-email.html'><img src='/html/help-16px.png' alt=''/></a><br/></span>"
+                          . M("Your email address")
+                          . " <a class='tools-helptrigger-small' href='$extract_dialog/$language/email.html'><img src='/html/help-16px.png' alt=''/></a><br/></span>"
                           . $q->textfield(
                             -name  => 'email',
                             -size  => 28,
@@ -1050,7 +1197,7 @@ sub homepage {
                           )
                           . $q->hidden(
                             -name  => 'as',
-                            -value => "0",
+                            -value => "-1",
                             -id    => 'as'
                           )
                           . $q->hidden(
@@ -1075,7 +1222,7 @@ sub homepage {
                 $q->td(
                     [
 "<span class='normalscreen' title='Give the city or area to extract a name. "
-                          . "The name is optional, but better fill it out to find it later again.'>Name of area to extract <a class='tools-helptrigger-small' href='/extract-dialog-name.html'><img src='/html/help-16px.png' alt='' /></a><br/></span>"
+                          . "The name is optional, but better fill it out to find it later again.'>@{[ M('Name of area to extract') ]} <a class='tools-helptrigger-small' href='$extract_dialog/$language/name.html'><img src='/html/help-16px.png' alt='' /></a><br/></span>"
                           . $q->textfield(
                             -name => 'city',
                             -id   => 'city',
@@ -1089,9 +1236,8 @@ sub homepage {
                         $q->submit(
                             -title => 'start extract',
                             -name  => 'submit',
-                            -value => 'extract',
-
-                            #-id    => 'submit'
+                            -value => M('extract'),
+                            -id    => 'submit'
                         )
                     ]
                 ),
@@ -1142,17 +1288,88 @@ sub export_osm {
 EOF
 }
 
+sub get_language {
+    my $q = shift;
+    my $language = shift || $language;
+
+    my $lang = $q->param("lang") || $q->param("language");
+    return $language if !defined $lang;
+
+    if ( grep { $_ eq $lang } @{ $option->{'supported_languages'} } ) {
+        warn "language: $lang\n" if $debug >= 1;
+        return $lang;
+    }
+
+    # default language
+    else {
+        return $language;
+    }
+}
+
+sub get_msg {
+    my $language = shift || $option->{'language'};
+
+    my $file = $option->{'message_path'} . "/msg.$language.json";
+    if ( !-e $file ) {
+        warn "Language file $file not found, ignored\n" . qx(pwd);
+        return {};
+    }
+
+    warn "Open message file $file for language $language\n" if $debug >= 1;
+    my $fh = new IO::File $file, "r" or die "open $file: $!\n";
+    binmode $fh, ":utf8";
+
+    my $json_text;
+    while (<$fh>) {
+        $json_text .= $_;
+    }
+    $fh->close;
+
+    my $json = new JSON;
+    my $json_perl = eval { $json->decode($json_text) };
+    die "json $file $@" if $@;
+
+    warn Dumper($json_perl) if $debug >= 3;
+    return $json_perl;
+}
+
+sub M {
+    my $key = shift;
+
+    my $text;
+    if ( $msg && exists $msg->{$key} ) {
+        $text = $msg->{$key};
+
+        #} elsif ($msg_en && exists $msg_en->{$key}) {
+        #    warn "Unknown translation local lang $lang: $key\n";
+        #    $text = $msg_en->{$key};
+    }
+    else {
+        if ( $debug >= 1 && $msg ) {
+            warn "Unknown translation: $key\n"
+              if $debug >= 2 || $language ne "en";
+        }
+        $text = $key;
+    }
+
+    return $text;
+}
+
 ######################################################################
 # main
 my $q = new CGI;
 
-my $action = $q->param("submit") || ( $q->param("key") ? "key" : "" );
-if ( $action eq "extract" ) {
+$language = get_language( $q, $language );
+$msg = get_msg($language);
+
+if ( $q->param("submit") ) {
     &check_input( 'q' => $q );
 }
-elsif ( $action eq 'key' ) {
-    &confirm_key( 'q' => $q );
-}
+
+# legacy
+#elsif ( $q->param("key") ) {
+#    &confirm_key( 'q' => $q );
+#}
 else {
     &homepage( 'q' => $q );
 }

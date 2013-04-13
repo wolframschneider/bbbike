@@ -37,16 +37,21 @@ use BBBikeTest qw(get_std_opts like_html unlike_html $cgidir
 		  xmllint_string gpxlint_string kmllint_string
 		  using_bbbike_test_cgi check_cgi_testing
 		  validate_bbbikecgires_xml_string
+		  validate_bbbikecgires_data
 		);
 
 sub bbbike_cgi_search ($$);
 sub bbbike_en_cgi_search ($$);
 sub bbbike_cgi_geocode ($$);
+sub bbbike_en_cgi_geocode ($$);
+sub _bbbike_lang_cgi ($);
 
 check_cgi_testing;
 
+my $json_xs_tests = 4;
+my $json_xs_2_tests = 5;
 #plan 'no_plan';
-plan tests => 81;
+plan tests => 103 + $json_xs_tests + $json_xs_2_tests;
 
 if (!GetOptions(get_std_opts("cgidir"),
 	       )) {
@@ -59,6 +64,30 @@ my $testcgi = "$cgidir/bbbike-test.cgi";
 my $ua = LWP::UserAgent->new(keep_alive => 1);
 $ua->agent("BBBike-Test/1.0");
 $ua->env_proxy;
+
+{
+    my $resp = bbbike_cgi_geocode +{start => 'Total unbekannter Weg'}, 'Completely unknown street';
+    like_html($resp->decoded_content, qr{Total unbekannter Weg.*?ist nicht bekannt.*?Checkliste}s);
+}
+
+{
+    my $resp = bbbike_en_cgi_geocode +{start => 'Total unbekannter Weg'}, 'Completely unknown street';
+    like_html($resp->decoded_content, qr{Total unbekannter Weg.*?is unknown.*?Checklist}s);
+}
+
+{
+    my $resp = bbbike_cgi_geocode +{start => 'Unbekannter Weg'}, 'Unknown street';
+    my $content = $resp->decoded_content;
+    like_html($content, qr{Unbekannter Weg.*?ist nicht bekannt.*?Stra.*?eintragen}s);
+    like_html($content, qr{Die n.*?chste bekannte Kreuzung ist:.*?Dudenstr./Mehringdamm.*?und wird f.*?r die Suche verwendet}s);
+}
+
+{
+    my $resp = bbbike_en_cgi_geocode +{start => 'Unbekannter Weg'}, 'Unknown street';
+    my $content = $resp->decoded_content;
+    like_html($content, qr{Unbekannter Weg.*?is unknown.*?register this street}s);
+    like_html($content, qr{The next known crossing is:.*?Dudenstr./Mehringdamm.*?and will be used for route search}s);
+}
 
 {
     my $resp = bbbike_cgi_geocode +{start => 'Kottbusser Damm/Maybachstr.',
@@ -96,6 +125,61 @@ $ua->env_proxy;
 				    ziel => 'Yorckstr.',
 				   }, 'Find normal street';
     not_on_crossing_pref_page($resp);
+}
+
+{
+    # "inofficial" streets not found in Berlin.coords.data
+    my $resp = bbbike_cgi_geocode +{start => 'Alt-Treptow',
+				    ziel => 'Rosengarten',
+				   }, 'Inofficial street';
+    on_crossing_pref_page($resp);
+    my $content = $resp->decoded_content;
+    like $content, qr{\Q(Rosengarten}, 'Found Rosengarten with parenthesis';
+}
+
+{
+    # oldname, not unique
+    my $resp = bbbike_cgi_geocode +{start => 'Kochstr.',
+				    ziel => 'Dudenstr.',
+				   }, 'oldname';
+    not_on_crossing_pref_page($resp);
+    my $content = $resp->decoded_content;
+    like $content, qr{Rudi-Dutschke-Str.*alter Name.*Kochstr}, 'Found old name note';
+}
+
+{
+    # oldname, not unique, English
+    my $resp = bbbike_en_cgi_geocode +{start => 'Kochstr.',
+				       ziel => 'Dudenstr.',
+				   }, 'oldname (English)';
+    not_on_crossing_pref_page($resp);
+    my $content = $resp->decoded_content;
+    like $content, qr{Rudi-Dutschke-Str.*old name.*Kochstr}, 'Found old name note (English)';
+}
+
+{
+    # oldname, unique -> directly to crossing page
+    my $resp = bbbike_cgi_geocode +{start => 'Belle-Alliance-Straße',
+				    ziel => 'Dudenstr.',
+				   }, 'oldname (unique)';
+    on_crossing_pref_page($resp);
+    my $content = $resp->decoded_content;
+    like $content, qr{Mehringdamm.*alter Name.*Belle-Alliance-Str.}, 'Found old name note';
+}
+
+
+SKIP: {
+    skip "need JSON::XS", $json_xs_tests
+	if !eval { require JSON::XS; 1 };
+
+    my %route_endpoints = (startc => '9229,8785',
+			   zielc  => '9227,8890',
+			  );
+    my $resp = bbbike_cgi_search +{ %route_endpoints, output_as => 'json'}, 'json output';
+    my $data = JSON::XS::decode_json($resp->decoded_content);
+    validate_bbbikecgires_data $data, 'Mehringdamm Richtung Norden';
+    is $data->{Trafficlights}, 1, 'one traffic light seen';
+    is $data->{Route}->[0]->{DirectionString}, 'nach Norden', 'direction string seen';
 }
 
 {
@@ -286,6 +370,20 @@ SKIP: {
 		}
 	    };
     }
+
+ SKIP: {
+	# Ausweichroute with json
+	skip "need JSON::XS", $json_xs_2_tests
+	    if !eval { require JSON::XS; 1 };
+
+	my $resp = bbbike_cgi_search +{ %route_endpoints, output_as => 'json'}, 'json output';
+	my $data = JSON::XS::decode_json($resp->decoded_content);
+	validate_bbbikecgires_data $data, 'JSON data, Maybachufer';
+	my $first_blocking = $data->{AffectingBlockings}->[0];
+	is $first_blocking->{Index}, 0, 'Index of affecting blockings';
+	like $first_blocking->{Text}, qr{Maybachufer.*Wochenmarkt}, 'Text of affecting blockings';
+	like $first_blocking->{LongLatHop}->{XY}->[0], qr{^13\.\d+,52\.\d+$}, 'looks like a coordinate in Berlin';
+    }
 }
 
 {
@@ -373,10 +471,7 @@ sub bbbike_en_cgi_search ($$) {
 
 sub _bbbike_cgi_search {
     my($cgiopts, $params, $testname) = @_;
-    my $testcgi = $testcgi;
-    if ($cgiopts->{lang}) {
-	$testcgi =~ s{\.cgi}{\.$cgiopts->{lang}\.cgi};
-    }
+    my $testcgi = _bbbike_lang_cgi $cgiopts;
     $params->{pref_seen} = 1;
     $params->{pref_speed} = 20 if !exists $params->{pref_speed};
     my $url = $testcgi . '?' . CGI->new($params)->query_string;
@@ -388,12 +483,30 @@ sub _bbbike_cgi_search {
 }
 
 sub bbbike_cgi_geocode ($$) {
-    my($params, $testname) = @_;
+    _bbbike_cgi_geocode({lang=>undef},@_);
+}
+
+sub bbbike_en_cgi_geocode ($$) {
+    _bbbike_cgi_geocode({lang=>'en'},@_);
+}
+
+sub _bbbike_cgi_geocode ($$) {
+    my($cgiopts, $params, $testname) = @_;
+    my $testcgi = _bbbike_lang_cgi $cgiopts;
     $params->{pref_seen} = 0;
     my $url = $testcgi . '?' . CGI->new($params)->query_string;
     my $resp = $ua->get($url);
     ok($resp->is_success, $testname);
     $resp;
+}
+
+sub _bbbike_lang_cgi ($) {
+    my $cgiopts = shift;
+    my $testcgi = $testcgi;
+    if ($cgiopts->{lang}) {
+	$testcgi =~ s{\.cgi}{\.$cgiopts->{lang}\.cgi};
+    }
+    $testcgi;
 }
 
 sub on_crossing_pref_page {

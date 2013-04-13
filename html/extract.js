@@ -21,14 +21,17 @@ var config = {
     "show_filesize": true,
     "city_name_optional": false,
     "enable_polygon": true,
+    "polygon_rotate": true,
+    "simple": true,
 
     // in MB
     "max_size": {
         "default": 768,
-        "obf.zip": 250
+        "obf.zip": 250,
+        "mapsforge-osm.zip": 100
     },
 
-    debug: 0,
+    debug: 1,
 
     "dummy": ""
 };
@@ -125,12 +128,14 @@ function init() {
     var bounds;
 
     // read from input, back button pressed?
-    if (check_lnglat_form(true)) {
+    var back_botton = check_lnglat_form(true);
+    var coords = "";
+    if (back_botton) {
         var sw_lng = $("#sw_lng").val();
         var sw_lat = $("#sw_lat").val();
         var ne_lng = $("#ne_lng").val();
         var ne_lat = $("#ne_lat").val();
-        var coords = $("#coords").val();
+        coords = $("#coords").val();
 
         if (coords == "0,0,0") { // to long URL, ignore
             coords = "";
@@ -178,8 +183,46 @@ function init() {
     // default city
     else {
         var c = select_city();
+        var sw_lng = c.sw[0];
+        var sw_lat = c.sw[1];
+        var ne_lng = c.ne[0];
+        var ne_lat = c.ne[1];
+
         debug("default city: " + c.sw[0] + "," + c.sw[1] + " " + c.ne[0] + "," + c.ne[1]);
-        bounds = new OpenLayers.Bounds(c.sw[0], c.sw[1], c.ne[0], c.ne[1]);
+        bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
+        if (config.simple) {
+
+            opt.back_function = function () {
+                debug("get coords from back button");
+
+                $("#sw_lng").val(sw_lng);
+                $("#sw_lat").val(sw_lat);
+                $("#ne_lng").val(ne_lng);
+                $("#ne_lat").val(ne_lat);
+                $("#coords").val(coords);
+
+                debug("coords: " + coords);
+                state.validateControls();
+                map.events.unregister("moveend", map, state.mapMoved);
+                polygon_menu(true);
+            };
+
+            setTimeout(function () {
+                var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
+                var feature = plot_polygon(polygon);
+                vectors.addFeatures(feature);
+                if (coords) {
+                    // trigger a recalculation of polygon size
+                    setTimeout(function () {
+                        vectors.events.triggerEvent("sketchcomplete", {
+                            "feature": feature
+                        });
+                    }, 500);
+                }
+                opt.back_function();
+
+            }, 700);
+        }
     }
 
     bounds.transform(epsg4326, map.getProjectionObject());
@@ -259,6 +302,8 @@ function permalink_init() {
         delete params.lat;
         delete params.lon;
         delete params.zoom;
+
+        params.lang = $("span#active_language").text();
 
         params.sw_lng = $("#sw_lng").val();
         params.sw_lat = $("#sw_lat").val();
@@ -377,7 +422,10 @@ function extract_init(opt) {
     }
 
     function startDrag() {
-        $("#drag_box").html("Drag a box on the map to select an area");
+        // $("#drag_box").html("Drag a box on the map to select an area");
+        $("#drag_box_manually").hide();
+        $("#drag_box_drag").show();
+
         if (config.enable_polygon) polygon_menu(false);
 
         clearBox();
@@ -395,9 +443,13 @@ function extract_init(opt) {
         box.deactivate();
         validateControls();
 
-        $("#drag_box").html("Manually select a different area");
+        // $("#drag_box").html("Manually select a different area");
+        $("#drag_box_drag").hide();
+        $("#drag_box_manually").show();
+
         if (config.enable_polygon) {
             polygon_menu(true);
+            polygon_update();
         }
     }
 
@@ -493,6 +545,7 @@ function extract_init(opt) {
         setTimeout(function () {
             $("#controls").show();
             polygon_init();
+            polygon_update();
         }, 1000);
     }
 }
@@ -742,7 +795,7 @@ function polygon_menu(enabled) {
     $("#createVertices").removeAttr("checked");
     $("#rotate").removeAttr("checked");
 
-    $("#createVertices").attr("checked", "checked");
+    config.polygon_rotate ? $("#rotate").attr("checked", "checked") : $("#createVertices").attr("checked", "checked");
 }
 
 /*
@@ -754,6 +807,8 @@ function select_city(name) {
             "sw": [12.875, 52.329],
             "ne": [13.902, 52.705]
         },
+
+/*
         "SanFrancisco": {
             "sw": [-122.9, 37.2],
             "ne": [-121.7, 37.9]
@@ -766,6 +821,7 @@ function select_city(name) {
             "sw": [11.8, 55.4],
             "ne": [13.3, 56]
         }
+	*/
     }
 
     if (name && city[name]) {
@@ -814,9 +870,9 @@ function show_skm(skm, filesize) {
     } else if (filesize.size > config.max_size["default"]) {
         $("#size").html("Max file size: " + config.max_size["default"] + " MB.");
         $("#export_osm_too_large").show();
-    } else if (filesize.format == "obf.zip" && filesize.size > config.max_size["obf.zip"]) {
+    } else if (config.max_size[filesize.format] && filesize.size > config.max_size[filesize.format]) {
         // Osmand works only for small areas less than 200MB
-        $("#size").html("Max osmand file size: " + config.max_size["obf.zip"] + " MB.");
+        $("#size").html("Max osmand file size: " + config.max_size[filesize.format] + " MB.");
         $("#export_osm_too_large").show();
     } else {
         $("#export_osm_too_large").hide();
@@ -869,15 +925,22 @@ function validateControlsAjax() {
 
     // plot area size and file size
     $.getJSON(url, function (data) {
+        var size = data.size
+        var error = 5000000;
+        if (size == 'undefined' || size < 0) {
+            debug("error in tile size: " + size + ", reset to " + error);
+            size = error;
+        }
+
         // adjust polygon size for huge data, the area size is usually not normal (e.g. sea coast)
-        if (data.size > 50000) {
+        if (size > 50000) {
             // min. size factor 0.3 or 0.5 for very large areas
-            var p = polygon + (1 - polygon) * (data.size > 300000 ? 0.5 : 0.3);
-            debug("reset polygon of size: " + data.size + " from polygon: " + polygon + " to: " + p);
+            var p = polygon + (1 - polygon) * (size > 300000 ? 0.5 : 0.3);
+            debug("reset polygon of size: " + size + " from polygon: " + polygon + " to: " + p);
             polygon = p;
         }
 
-        var filesize = show_filesize(skm * polygon, data.size * polygon);
+        var filesize = show_filesize(skm * polygon, size * polygon);
         show_skm(skm * polygon, filesize);
     });
 }
@@ -932,6 +995,10 @@ function show_filesize(skm, real_size) {
         "o5m.bz2": {
             "size": 0.88,
             "time": 1.1
+        },
+        "mapsforge-osm.zip": {
+            "size": 0.8,
+            "time": 14
         },
         "navit.zip": {
             "size": 0.8,
@@ -1050,7 +1117,9 @@ function polygon_init() {
             if (i > 0) coords += '|';
             coords += v(vec[i].x) + "," + v(vec[i].y);
         }
-        $("#coords").attr("value", coords);
+
+        is_rectangle(vec, bounds) ? $("#coords").attr("value", "") : $("#coords").attr("value", coords);
+        debug("is rec: " + is_rectangle(vec, bounds));
 
         if (bounds != null) {
             $("#sw_lng").val(v(bounds.left));
@@ -1088,7 +1157,19 @@ function polygon_init() {
         // add new points
         controls.modify.createVertices = rotate ? false : true;
     }
+
+
+    function is_rectangle(vec, bounds) {
+        if (vec.length != 4) return false;
+
+        if (
+        v(bounds.left) == v(vec[0].x) && v(bounds.bottom) == v(vec[0].y) && v(bounds.right) == v(vec[1].x) && v(bounds.bottom) == v(vec[1].y) && v(bounds.right) == v(vec[2].x) && v(bounds.top) == v(vec[2].y) && v(bounds.left) == v(vec[3].x) && v(bounds.top) == v(vec[3].y)) {
+            return true;
+        }
+        return false;
+    }
 }
+
 
 // dialog help windows
 jQuery(document).ready(function () {

@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998,2001,2003,2005,2006,2007,2012 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998,2001,2003,2005,2006,2007,2012,2013 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -29,23 +29,19 @@ sub update_http {
     my(%modified) = %{$args{-modified}};
     my $ua;
     eval {
-## Be conservative: sieperl comes only with an ancient libwww (5.51 or so)
-# 	require LWP;
-# 	LWP->VERSION(5.802); # decoded_content
 	require LWP::UserAgent;
 	$main::public_test = $main::public_test; # peacify -w
+	$main::os = $main::os; # peacify -w
 	if ($main::public_test) {
-	    warn "Force using Http.pm for -public\n";
-	    die;
+	    if ($main::os ne 'win') {
+		warn "Force using Http.pm for -public on non-Windows systems\n";
+		die;
+	    }
 	}
 	require BBBikeHeavy;
 	$ua = BBBikeHeavy::get_uncached_user_agent();
 	die "Can't get default user agent" if !$ua;
 	$ua->timeout(180);
-## sieperl does not have compress::zlib, also decoded_content is not available
-# 	if (eval { require Compress::Zlib; 1 }) {
-# 	    $ua->default_headers->push_header('Accept-Encoding' => 'gzip');
-# 	}
     };
     if ($@ || !$ua) {
 	undef $ua;
@@ -158,27 +154,8 @@ sub update_http {
     }
 }
 
-sub update_rsync {
-    my(%args) = @_;
-    if (!is_in_path("rsync")) {
-	die "rsync wird benötigt";
-    }
-    my $src  = $args{-src}  || die "-src nicht definiert";
-    my $dest = $args{-dest} || die "-dest nicht definiert";
-    my $datadir = "$dest/data";
-    my @cmd = ("rsync", "-Pvzr", $src, $datadir);
-    warn "@cmd";
-    system(@cmd);
-    if ($?) {
-	die "Update mit rsync fehlgeschlagen";
-    } else {
-	1;
-    }
-}
-
 sub create_modified_devel {
     my(%args) = @_;
-    my $rsync_include = $args{-rsyncinclude};
     my $rootdir = "..";
     my $datadir = $ENV{BBBIKE_DATADIR} || $rootdir . "/data";
     if (!-f "$rootdir/bbbike" || !-d $datadir || !-f "$rootdir/MANIFEST") {
@@ -200,12 +177,6 @@ sub create_modified_devel {
 
     open my $ofh, ">", "$datadir/.modified~"
 	or die "Can't write to .modified~: $!";
-
-    my $rsyncfh;
-    if ($rsync_include) {
-	open $rsyncfh, ">", "$datadir/.rsync_include"
-	    or die "Can't write to .rsync_include: $!";
-    }
 
     open my $manifh, "$rootdir/MANIFEST"
 	or die "Can't open MANIFEST: $!";
@@ -231,19 +202,12 @@ sub create_modified_devel {
 		$use_mtime = $stat[9];
 	    }
 	    print $ofh join("\t", $relfilename, $use_mtime, $md5), "\n";
-	    if ($rsyncfh) {
-		print $rsyncfh "$file\n";
-	    }
 	}
     }
     close $ofh
 	or die "While writing to .modified~: $!";
     rename "$datadir/.modified~", "$datadir/.modified"
 	or die "Can't rename $datadir/.modified~ to $datadir/.modified: $!";
-    if ($rsyncfh) {
-	close $rsyncfh
-	    or die "While writing to .rsync_include: $!";
-    }
 }
 
 sub create_modified {
@@ -310,25 +274,6 @@ sub bbbike_data_update {
 
     $my_die->("FATAL: Makefile in datadir detected")
 	if (-e "$rootdir/data/Makefile");
-
- TRY_RSYNC: {
-	if ($protocol eq 'rsync') {
-	    eval {
-		$BBBike::BBBIKE_UPDATE_DATA_RSYNC = $BBBike::BBBIKE_UPDATE_DATA_RSYNC; # peacify -w
-		update_rsync(-dest => $rootdir,
-			     -src  => $BBBike::BBBIKE_UPDATE_DATA_RSYNC,
-			    );
-	    };
-	    if ($@) {
-		if ($protocol ne 'best') {
-		    $my_die->($@);
-		}
-		last TRY_RSYNC;
-	    }
-	    main::reload_all();
-	    return;
-	}
-    }
 
     # assume http (or "best")
     my(@files, %modified, %md5);

@@ -54,8 +54,8 @@ Kreisverkehr	Roundabout 56197,-14830
 Kreisverkehr	Roundabout 55743,-11726
 Kreisverkehr	Roundabout 18903,9244
 Kreisverkehr	Roundabout -11822,-1874
-(Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 344,22346 742,22666
-Privatstraße der DB	CS 5710,7820 6275,7847
+(Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 344,22346 670,22646
+Privatstraße der DB	CS 5710,7820 6273,7849
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3347,6460 3449,6863
 Borgmannstr.: zwei Bodenschwellen, rechs vorbei fahren	CS 22513,5747 22531,5871
 Hermann-Blankenstein-Str.: Tor für Kfz evtl. geschlossen, auf Gehweg ausweichen	CS 13886,13668 13858,13719
@@ -350,7 +350,7 @@ Eisbärenweg: Privatstraße	CS 6909,17796 6950,17669
 (Tiefhornweg): Uferpromenade	CS -7318,2567 -7420,2563 -7562,2431 -7833,2277 -8085,2252 -8141,2211 -8262,2178 -8328,2181 -8400,2156
 (Zobtener Str. - Fischerstr.): durch eine Kleingartenanlage	CS 16353,10207 16404,10286
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Straße verläuft zwischen Bahnstrecke und Wohnhäusern	CS 17210,11950 17201,11975 17137,11969 17023,11908 17026,11888
-(Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11018,13286 11085,13239
+(Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11012,13278 11085,13239
 Agnes-Zahn-Harnack-Str.: nicht ausgeschildert	CS 7795,13093 7867,13127 7938,13150
 Petrusweg: Anlieger frei	CS 15225,1553 15217,1463
 Am Rudower Waldrand: Anlieger frei	CS 15467,349 15476,332 15600,116 15707,-6
@@ -398,7 +398,7 @@ Fuchsring: Privatstraße	CS 2065,26389 2065,26308 2065,26193 1994,26196 2000,2630
 Rappenweg: Privatstraße	CS 2108,26312 2065,26308 2000,26307
 Place Molière: Schulgelände	CS 4334,21540 4347,21531 4382,21493
 Place Molière: Schulgelände	CS 4366,21482 4330,21464 4307,21506
-Am Bauhaus-Baumarkt abbiegen	CP2; -5173,13951 -5187,13707
+gegenüber vom Bauhaus-Baumarkt abbiegen, Weg ist mit einem Schild "TOR 8" gekennzeichnet	CP2; -5173,13951 -5187,13707
 (Azaleenstr. - Uferweg): Privatstraße	CS 23874,4929 23901,4982 23962,5031
 Zufahrt zur Trabrennbahn Karlshorst: Durchfahrt durch ehemalige Kassenhäuschen	CP2; 18709,8423 18748,8363
 Mühlendorfstr.: private Wohnstraße	CS -7637,13822 -7630,13889 -7595,13963
@@ -447,3 +447,8 @@ entlang des Marzahn-Hohenschönhauser Grenzgrabens	CS 18094,13505 18054,13477 179
 (an den Gebäuden der Deutschen Rentenversicherung): Privatstraße	CS 15322,11335 15273,11350 15168,11327 15058,11250 15010,11170
 Kaskelstraße: Privatstraße	CS 15090,11237 15058,11250
 Weg am Blankensteinpark: entlang der Stadler-Halle	CS 14289,12876 14355,13109
+Barnimstr.: nicht ausgeschildert	CP2; 11881,13147 11758,13210
+Pauline-Staegemann-Str.: nicht ausgeschildert	CP2; 11589,13305 11524,13247
+Kohstallweg: nicht ausgeschildert	CS -5535,14853 -5488,14836 -5472,14925
+Heidenelkenweg: Privatstraße	CS 16112,12622 16111,12685 16073,12685 16071,12623
+Wilhelm-Kabus-Str. - Südkreuz: Privatstraße der DB	CP2; 7713,8001 7837,7899

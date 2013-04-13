@@ -24,7 +24,17 @@ rsync
 time
 wget
 xargs
+osmconvert
 "
+
+tmpdirs="/bbbike/tmp /bbbike/tmpfs"
+for c in $tmpdirs
+do
+   if [ ! -d $c ]; then
+	echo "missing temp directory: $c"
+	error=1
+   fi
+done
 
 for c in $commands
 do

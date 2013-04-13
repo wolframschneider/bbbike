@@ -60,7 +60,7 @@ SOURCE_TARGETS+=	flaechen
 SOURCE_TARGETS+=	wasserstrassen wasserumland wasserumland2
 SOURCE_TARGETS+=	sbahn sbahnhof rbahn rbahnhof
 SOURCE_TARGETS+=	ubahn ubahnhof
-SOURCE_TARGETS+=	faehren hoehe orte orte2 orte_city
+SOURCE_TARGETS+=	faehren hoehe orte orte2 orte_city ortsschilder
 SOURCE_TARGETS+=	ampeln ampelschaltung
 SOURCE_TARGETS+=	plz potsdam deutschland grenzuebergaenge
 SOURCE_TARGETS+=	sehenswuerdigkeit obst radwege
@@ -81,7 +81,7 @@ COMPUTED_TARGETS+=	temp_blockings/bbbike-temp-blockings-optimized.pl
 COMPUTED_TARGETS+=	wasserstrassen-lowres
 COMPUTED_TARGETS+=	kneipen
 COMPUTED_TARGETS+=	fragezeichen-cooked
-COMPUTED_TARGETS+=	inaccessible_strassen inaccessible_landstrassen
+COMPUTED_TARGETS+=	inaccessible_strassen inaccessible_landstrassen oldnames
 
 # These are not computed, but useful mentioned here for fixing
 # permissions
@@ -89,7 +89,7 @@ NON_TARGETS=		upgrade_scope_hint
 
 COOKED_TARGETS=		strassen-cooked landstrassen-cooked landstrassen2-cooked
 TARGETS+=	${SOURCE_TARGETS} ${COOKED_TARGETS} ${COMPUTED_TARGETS}
-BBD_TARGETS=	${TARGETS:S/^ampelschaltung$//:S/^multi_bez_str$//:S/^temp_blockings\/bbbike-temp-blockings-optimized.pl//}
+BBD_TARGETS=	${TARGETS:S/^ampelschaltung$//:S/^multi_bez_str$//:S/^temp_blockings\/bbbike-temp-blockings-optimized.pl//:S/^oldnames$//}
 
 XXX_NON_OUTDOOR=	indoor prog checklater
 XXX_TARGETS=		outdoor ${XXX_NON_OUTDOOR}
@@ -122,8 +122,8 @@ TODAY_DATE!=	date +'%Y%m%d'
 ######################################################################
 # META TARGETS
 
-.ORDER: targets data-images check .modified .rsync_include make_misc
-all:	targets data-images check .modified .rsync_include make_misc
+.ORDER: targets data-images check .modified make_misc
+all:	targets data-images check .modified make_misc
 
 # Some targets have to be rebuild once a day. These should depend on
 # ".check_daily"
@@ -181,8 +181,8 @@ persistent-tmp:	${PERSISTENTTMPDIR}/XXX-$(i).bbd
 .endfor
 
 # more checks, but even slower (about four minutes)
-really-slow-checks:	check-crossings-important \
-			check-nearest \
+really-slow-checks:	check-nearest \
+			check-crossings-important \
 			check-urls \
 			plz-test
 
@@ -718,6 +718,12 @@ kneipen:	kneipen.yml
 	mv $@~ $@
 	-@$(READONLY) $@
 
+oldnames:	strassen Berlin.coords.data
+	-@$(WRITEABLE) $@
+	${PERL} $(MISCSRCDIR)/oldname2plz > $@~
+	mv $@~ $@
+	-@$(READONLY) $@
+
 ######################################################################
 # DATA-SPECIFIC IMAGES
 SEHENSWUERDIGKEIT_IMG_PNG_SRC=	\
@@ -743,7 +749,6 @@ ${_img_gif_${img}}: ${_img_png_${img}}
 ######################################################################
 # MORE HELPER TARGETS
 
-# This also creates .rsync_include
 .modified:	${TARGETS} ${NON_TARGETS}
 	${PERL} ${MISCSRCDIR}/create_modified
 
@@ -913,6 +918,13 @@ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org:	*-orig ${PERSISTENTTMPDIR}/bbbik
 	${MISCSRCDIR}/fragezeichen2org.pl *-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd > $@~
 	mv $@~ $@
 	-@$(READONLY) $@
+
+# exact distances, but slower, especially if dist.db is missing or fresh
+fragezeichen-nextcheck.org-exact-dist:
+	-@$(WRITEABLE) ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org
+	${MISCSRCDIR}/fragezeichen2org.pl --dist-dbfile=${PERSISTENTTMPDIR}/dist.db *-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd > ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org~
+	mv ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org~ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org
+	-@$(READONLY) ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org
 
 ${PERSISTENTTMPDIR}/projektierte_radstreifen.bbd:	fragezeichen-orig
 	cat fragezeichen-orig | ${GREPSTRASSEN} -sectionrx "projektierte Radstreifen" | ${CONVERT2HAFAS} -basefile fragezeichen-orig > $@
@@ -1098,11 +1110,13 @@ ${PERSISTENTTMPDIR}/my-upload-fragezeichen.wpt:	fragezeichen Makefile
 	    RESTRICT_BBOX="-8250,2025,-15000,-2675 16500,15375,4625,5984 26687,-316,9090,9005"
 	cp -pf /tmp/upload-restricted-fragezeichen.wpt $@
 
-temp_blockings/bbbike-temp-blockings-optimized.pl:	temp_blockings/bbbike-temp-blockings.pl .check_daily
+temp_blockings/bbbike-temp-blockings-optimized.pl:	temp_blockings/bbbike-temp-blockings.pl .check_daily \
+							strassen faehren landstrassen landstrassen2
 	-@$(WRITEABLE) $@
 	${PERL} $(MISCSRCDIR)/check_bbbike_temp_blockings \
 	    -action output_future_nonrecurring \
-	    -action dump_future_as_perl > $@
+	    -action dump_future_as_perl > $@~
+	mv $@~ $@
 	-@$(READONLY) $@
 
 # Another fragezeichen POI approach: restrict to whole
@@ -1265,7 +1279,7 @@ check-disabled:
 	@touch $@
 
 .check_plaetze1: plaetze .strassen.tmp landstrassen
-	$(CHECK_POINTS) -catrx '^Pl$$' plaetze .strassen.tmp landstrassen
+	$(CHECK_POINTS) plaetze .strassen.tmp landstrassen
 	@touch $@
 
 .check_plaetze2: ${PERSISTENTTMPDIR}/non-faked-plaetze add_plaetze
@@ -1285,7 +1299,7 @@ check-disabled:
 	@touch $@
 
 .check_hoehe:	hoehe .strassen.tmp landstrassen landstrassen2 fragezeichen
-	$(CHECK_POINTS) -catrx '^(X|\?|\?\?\?)$$' -namerx '^\d+(\.\d+)?$$' hoehe .strassen.tmp landstrassen landstrassen2 fragezeichen
+	$(CHECK_POINTS) -namerx '^\d+(\.\d+)?$$' hoehe .strassen.tmp landstrassen landstrassen2 fragezeichen
 	@touch $@
 
 .check_hoehe2:	hoehe
@@ -1293,7 +1307,7 @@ check-disabled:
 	@touch $@
 
 .check_ampeln:	ampeln .strassen.tmp landstrassen landstrassen2 fragezeichen
-	$(CHECK_POINTS) -catrx '^(X|F|B|B0|Zbr|\?)(::inwork)?$$' ampeln .strassen.tmp landstrassen landstrassen2 fragezeichen
+	$(CHECK_POINTS) ampeln .strassen.tmp landstrassen landstrassen2 fragezeichen
 	@touch $@
 
 .check_ampeln2:	ampeln
@@ -1311,7 +1325,7 @@ check-disabled:
 	@touch $@
 
 .check_ortsschilder:	ortsschilder .strassen.tmp landstrassen landstrassen2 fragezeichen
-	$(CHECK_POINTS) -catrx '^(OS|OHT)$$' ortsschilder .strassen.tmp landstrassen landstrassen2 fragezeichen
+	$(CHECK_POINTS) ortsschilder .strassen.tmp landstrassen landstrassen2 fragezeichen
 	@touch $@
 
 .check_ortsschilder2:	orte orte2 ortsschilder
@@ -1322,11 +1336,8 @@ check-disabled:
 .check_ortsschilder_dist:	orte orte2 ortsschilder
 	perl -Mopen=:locale  -MData::Dumper -I.. -I../lib -MStrassen::Util -MStrassen::Core -e 'for $$o (qw(orte orte2)) { Strassen->new_stream($$o)->read_stream(sub { $$pos{$$_[0]->[0]} = $$_[0]->[1][0]; $$cat{$$_[0]->[0]} = $$_[0]->[2] }) }; Strassen->new_stream("ortsschilder")->read_stream(sub { $$pos = $$_[0]->[1][0]; print int(Strassen::Util::strecke_s($$pos, $$pos{$$_[0]->[0]})) . " " . $$cat{$$_[0]->[0]} . " " . $$_[0]->[0] . "\n" }) ' | sort -nr | less
 
-# XXX Information duplicated in Strassen::Cat
-GESPERRT_CATRX='^(0:\d+(:-?\d+)?|1|1s(:q\d)?|2|3|3nocross|BNP:\d+(:-?\d+(:trailer=(no|\d+))?)?)(:inwork)?(::(igndisp|ignrte))?$$'
-
 .check_gesperrt1:	gesperrt .strassen.tmp landstrassen landstrassen2 fragezeichen routing_helper-orig
-	$(CHECK_POINTS) -catrx $(GESPERRT_CATRX) gesperrt .strassen.tmp landstrassen landstrassen2 fragezeichen routing_helper-orig
+	$(CHECK_POINTS) gesperrt .strassen.tmp landstrassen landstrassen2 fragezeichen routing_helper-orig
 	@touch $@
 
 # Second check is necessary because of the 3nocross entries!
@@ -1345,7 +1356,6 @@ GESPERRT_CATRX='^(0:\d+(:-?\d+)?|1|1s(:q\d)?|2|3|3nocross|BNP:\d+(:-?\d+(:traile
 	@touch $@
 .endfor
 
-# no need to check -catrx $(GESPERRT_CATRX) --- this is done elsewhere
 .check_gesperrt_car1:	gesperrt_car .strassen.tmp landstrassen landstrassen2
 	$(CHECK_POINTS) gesperrt_car .strassen.tmp landstrassen landstrassen2
 	@touch $@
@@ -1493,7 +1503,7 @@ GESPERRT_CATRX='^(0:\d+(:-?\d+)?|1|1s(:q\d)?|2|3|3nocross|BNP:\d+(:-?\d+(:traile
 
 .check_housenumbers:	housenumbers-orig housenumbers .strassen.tmp
 	$(CHECK_HOUSENUMBERS) housenumbers-orig
-	$(CHECK_POINTS) -catrx '^HNR$$' -namerx '^(ALT|SINGLE|CONT) (\d+[a-z]?)?/(\d+[a-z]?)? (\d+[a-z]?)?/(\d+[a-z]?)?$$' housenumbers .strassen.tmp
+	$(CHECK_POINTS) -namerx '^(ALT|SINGLE|CONT) (\d+[a-z]?)?/(\d+[a-z]?)? (\d+[a-z]?)?/(\d+[a-z]?)?$$' housenumbers .strassen.tmp
 	@touch $@
 
 .check_sehenswuerdigkeit:	sehenswuerdigkeit
@@ -1548,7 +1558,7 @@ GESPERRT_CATRX='^(0:\d+(:-?\d+)?|1|1s(:q\d)?|2|3|3nocross|BNP:\d+(:-?\d+(:traile
 	@touch $@
 
 .check_grenzuebergaenge:	grenzuebergaenge .strassen.tmp landstrassen landstrassen2 fragezeichen deutschland
-	$(CHECK_POINTS) -catrx '^GU$$' grenzuebergaenge .strassen.tmp landstrassen landstrassen2 fragezeichen
+	$(CHECK_POINTS) grenzuebergaenge .strassen.tmp landstrassen landstrassen2 fragezeichen
 	$(CHECK_POINTS) grenzuebergaenge deutschland
 	@touch $@
 
@@ -1597,17 +1607,15 @@ check-crossings-less-important:	${PERSISTENTTMPDIR}/crossings_gewaesser.bbd \
 				${PERSISTENTTMPDIR}/crossings_bahn.bbd \
 				${PERSISTENTTMPDIR}/crossings_gewaesser_ignore.bbd
 
-check-categories:	.check_categories
+check-categories:	${BBD_TARGETS:S/^/.check_categories_/:S/\//_/g}
 
-.check_categories:	${BBD_TARGETS}
-	@echo "Check categories..."
 .for target in ${BBD_TARGETS}
-	@echo " ${target}"
-	@$(PERL_UTF8) -I../lib -I.. -MStrassen::Cat -e '\
+.check_categories_${target:S/\//_/g}:	${target}
+	$(PERL_UTF8) -I../lib -I.. -MStrassen::Cat -e '\
 	    exit !Strassen::Cat::check_file($$ARGV[0], BBBikeVersion => "data-update");\
 	' ${target}
-.endfor
 	touch $@
+.endfor
 
 check-names:	.check_names
 
@@ -1845,11 +1853,11 @@ $(PERSISTENTTMPDIR)/bbbike-temp-blockings-recurring.bbd: $(PERSISTENTTMPDIR)/bbb
 	$(TEMP_BLOCKINGS_TASKS) yml_to_recurring_bbd $> > $@~
 	mv -f $@~ $@
 
-$(PERSISTENTTMPDIR)/sourceid-all.yml: $(PERSISTENTTMPDIR)/bbbike-temp-blockings.bbd handicap_s-orig gesperrt_s-orig fragezeichen-orig
+$(PERSISTENTTMPDIR)/sourceid-all.yml: $(PERSISTENTTMPDIR)/bbbike-temp-blockings.bbd handicap_s-orig gesperrt_s-orig fragezeichen-orig radwege-orig
 	$(TEMP_BLOCKINGS_TASKS) bbd_to_existsid $> > $@~
 	mv -f $@~ $@
 
-$(PERSISTENTTMPDIR)/sourceid-current.yml: $(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.bbd handicap_s-orig gesperrt_s-orig fragezeichen-orig
+$(PERSISTENTTMPDIR)/sourceid-current.yml: $(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.bbd handicap_s-orig gesperrt_s-orig fragezeichen-orig radwege-orig
 	$(TEMP_BLOCKINGS_TASKS) bbd_to_existsid $> > $@~
 	mv -f $@~ $@
 

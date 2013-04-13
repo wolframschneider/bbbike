@@ -18,7 +18,6 @@ Zugang durch Betonabsperrung	CP2; 21222,12501 21190,12515
 am Gartenbauamt abbiegen	CP2; 7663,11946 7570,11855
 Schillerstr. Richtung Ernst-Reuter-Platz: zunächst linken Gehweg bis zur Ampel am Ernst-Reuter-Platz benutzen	CP; 4574,11587 4900,11626 4838,11697
 Hardenbergstr. - Schillerstr.: bereits an der Knesebeckstraße auf den linken Gehweg wechseln	PI; 4919,11605 4900,11626 4574,11587
-Torstr. - Weydemeyerstr.: bereits am Mollknoten die Straßenseite wechseln	PI; 11160,13492 11111,13518 11079,13492
 Zossener - Brachvogelstr.: bereits an der Fußgängerampel Waterloo-Ufer Straßenseite wechseln	PI; 9865,10227 9858,10199 9884,10192
 Zossener - Brachvogelstr.: bereits an der Johanniterstr. vom Radstreifen auf den Gehweg wechseln	PI; 9837,10117 9858,10199 9884,10192
 Wendeschleife der Straßenbahn links umfahren	CP; 22965,4124 23368,3894 23652,3722
@@ -61,8 +60,8 @@ hinter dem "Alten Zollhaus" halbrechts abbiegen	CP; 10313,10084 10168,10085 1015
 Frankfurter Allee - Kreutzigerstr.: Einfahrt in Hausdurchgang	CP2; 14291,12220 14285,12190
 Lennéstr: Radweg Richtung Ebertstr. auf der linken Seite im Tiergarten	CS; 8172,11679 8203,11686 8225,11692 8335,11718 8438,11753 8489,11782 8571,11846
 dem Schotterweg folgen	CP; 24210,37562 24193,37725 24208,37830
-Hauptstr.: bereits an der Gustav-Holzmann-Str. die Gehwegseite wechseln	PI; 16302,9865 16262,9925 16049,9749
-Hauptstr.: wegen Straßenbahntrasse zunächst auf der linken Gehwegseite weiterfahren und an der nächsten Ampel die Gehwegseite wechseln	CP; 16049,9749 16262,9925 16191,10035
+Hauptstr.: bereits an der Gustav-Holzmann-Str. die Gehwegseite wechseln	PI; 16302,9865 16261,9925 16049,9749
+Hauptstr.: wegen Straßenbahntrasse zunächst auf der linken Gehwegseite weiterfahren und an der nächsten Ampel die Gehwegseite wechseln	CP; 16049,9749 16261,9925 16187,10033
 Rollbergstr. - Karl-Marx-Str.: zunächst auf dem linken Gehweg bleiben, an der Ampel Anzengruberstr. die Straßenseite wechseln	CP; 12528,8205 12714,8249 12689,8289
 zunächst auf dem linken Gehweg des Weißenseer Wegs bleiben, nächste Möglichkeit (Bernhard-Bästlein-Str. oder Landsberger Allee) zur Querung benutzen	CP; 15363,13531 15436,13780 15354,13998
 zur Müggelstr. Hausdurchfahrt benutzen	CS; 14856,11740 14837,11706
@@ -173,7 +172,7 @@ Caligariplatz: Richtung Heinersdorfer Str. fahren	CP2; 12097,16263 12121,16317
 Mittenwalder Str. - Zossener Str.: zunächst auf dem linken Geh/Radweg fahren, Straßenbahntrasse 100m weiter oder an der Kreuzung Kastanienallee überqueren; alternativ parallele Wohngebietsstraße benutzen	CP; 23441,15780 23411,15632 23568,15603 23617,15594
 Zossener Str. - Mittenwalder Str.: bereits an der Kreuzung Alte Hellersdorfer Str. den linken Geh/Radweg benutzen	PI; 23080,15700 23218,15671 23411,15632 23441,15780
 Staakener Str. - Magistratsweg: linken Geh/Radweg benutzen und nach der Unterführung die Straße unterqueren	CP; -6442,14286 -6465,14291 -6470,14247
-Klosterbuschweg - Staakener Str.: frühzeitig auf den linken Geh/Radweg wechseln	PI; -6461,14323 -6465,14291 -6442,14286
+Klosterbuschweg - Staakener Str.: frühzeitig auf den linken Geh/Radweg wechseln	PI; -6454,14392 -6461,14323 -6465,14291 -6442,14286
 Ellerbeker Str. - Behmstr.: links entlang des Sportplatzes fahren	CP2; 9727,16188 9754,16183
 Am Hohenzollernkanal: keine Unterquerung der Bernauer Brücke möglich	CP 44,15897 -196,16060 -224,16095 -238,16095 -822,16535 -910,16608
 Roonstr./Flotowstr.: Hindenburgdamm kann über Fußgängerfurt gequert werden	CP; 4265,4484 4515,4581 4651,4638
@@ -366,3 +365,8 @@ Treskowallee - Traberweg: bereits an der Ampel Hegemeisterweg auf den linken Geh
 Traberweg - Treskowallee: den linken Gehweg bis zur Kreuzung Ehrlichstr. benutzen	CP; 18490,8104 18570,8025 18657,8163 18676,8236
 Columbiadamm - Straße 645: ggfs. bereits an der Ampel Columbiadamm/Fontanestr. auf den linken Gehweg wechseln	PI; 11632,8302 11512,8278 11441,8280 11419,8077
 Am Tierpark [Nebenfahrbahn] - Am Tierpark: den linken Gehweg bis zur Ampel benutzen	CP; 18306,11402 18268,11391 18286,11275
+Salvador-Allende-Str. - Abzweig: bereits an der Ampel Fürstenwalder Damm auf den linken Gehweg wechseln	PI; 23402,5483 23403,5385 23428,5382
+Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichshagener Str. fahren	CP; 23428,5382 23403,5385 23404,5325
+Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17736,5441
+Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17156,6235 17056,6133 17070,6115
+Indira-Gandhi-Str. - Orankeweg: bereits an der Fußgängerampel Gounodstr. auf den linken Gehweg wechseln	PI; 14597,15970 14609,15921 14720,15905

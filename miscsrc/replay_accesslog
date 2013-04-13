@@ -2,10 +2,9 @@
 # -*- perl -*-
 
 #
-# $Id: replay_accesslog,v 1.4 2007/04/01 22:30:23 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2007 Slaven Rezic. All rights reserved.
+# Copyright (C) 2007,2013 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -14,43 +13,184 @@
 #
 
 use strict;
-use File::ReadBackwards;
 use LWP::UserAgent;
-use Time::HiRes qw(gettimeofday tv_interval);
+use Time::HiRes qw(time);
 use Getopt::Long;
 use File::Basename qw(basename);
 
-my $use_modperl;
-GetOptions("modperl" => \$use_modperl)
-    or die "usage: $0 [-modperl]";
+my($host, $m_host);
+my($compare_host, $compare_m_host);
+my $skip_lines = 0;
+GetOptions(
+	   "host=s" => \$host,
+	   "mhost=s" => \$m_host,
+	   "comparehost=s" => \$compare_host,
+	   "comparemhost=s" => \$compare_m_host,
+	   "skip-lines=i" => \$skip_lines,
+	  )
+    or die "usage: $0 [-host ...] [-mhost ...] [-comparehost ...] [-comparemhost ...] [-skip-lines number] logfile";
+
+if (!$host) {
+    $host = "bbbike-pps";
+}
+if (!$m_host) {
+    $m_host = "m.$host";
+}
+my $in_test_mode;
+if ($compare_host) {
+    require Test::Differences;
+    require Test::More;
+    Test::More::plan('no_plan');
+    $in_test_mode = 1;
+    if (!$compare_m_host) {
+	$compare_m_host = "m.$compare_host";
+    }
+}
 
 my $ua = LWP::UserAgent->new;
+if ($compare_host) {
+    # So things are easier to compare, especially there's no need to
+    # handle artificial http headers like "Link"
+    $ua->parse_head(0);
+}
 
-my $accesslog = "$ENV{HOME}/www/log/radzeit.de-access_log";
+my $accesslog = shift
+    or die "Please specify logfile";
 
-tie *BW, 'File::ReadBackwards', $accesslog
-    or die $!;
+if ($accesslog eq '-') {
+    open BW, $accesslog
+	or die "Can't open -: $!";
+} else {
+    require File::ReadBackwards;
+    tie *BW, 'File::ReadBackwards', $accesslog
+	or die $!;
+}
 while(<BW>) {
     my $logentry = parse_accesslog($_);
-    next if $logentry->{file} !~ m{^/cgi-bin/bbbike.cgi};
+    next if $logentry->{file} !~ m{^/cgi-bin/bbbike2?(\.en)?\.cgi};
     next if $logentry->{file} =~ m{coordssession=\d};
     #next if $logentry->{code} !~ m{^2};
     next if $logentry->{rtype} ne 'GET';
-    $ua->agent($logentry->{agent} . " (BBBike-Test/1.0 replay_accesslog)");
-    print STDERR "$logentry->{duration}s " . substr($logentry->{file},0,70) ."...\n";
-    my $url = "http://radzeit$logentry->{file}";
-    if ($use_modperl) {
-	$url = "http://localhost/bbbike/cgi/" . basename($logentry->{file});
+
+    if ($skip_lines > 0) {
+	$skip_lines--;
+	if ($in_test_mode) {
+	SKIP: { Test::More::skip("because of --skip-line") };
+	}
+	next;
     }
 
-    my $t0 = [gettimeofday];
-    my $resp = $ua->get($url);
-    my $elapsed = tv_interval($t0);
-    if ($resp->is_success) {
-	printf STDERR "  %.1fs OK\n", $elapsed;
-    } else {
-	print STDERR "  " . $resp->status_line . "\n";
+    $ua->agent($logentry->{agent} . " (BBBike-Test/1.0 replay_accesslog)");
+    print STDERR "$logentry->{duration}s " . substr($logentry->{file},0,70) ."...\n";
+    my $is_m = $logentry->{host} =~ m{^m\.};
+
+    my $resp;
+    my $url;
+    my $use_host = $is_m ? $m_host : $host;
+
+    {
+	$url = "http://$use_host$logentry->{file}";
+
+	my $t0 = time;
+	$resp = $ua->get($url);
+	my $elapsed = time - $t0;
+	if ($resp->is_success) {
+	    printf STDERR "  %.1fs OK\n", $elapsed;
+	} else {
+	    print STDERR "  " . $resp->status_line . "\n";
+	}
     }
+
+    if ($compare_host) {
+	my $use_compare_host = $is_m ? $compare_m_host : $compare_host;
+	my $compare_url = "http://$use_compare_host$logentry->{file}";
+
+	my $compare_resp = $ua->get($compare_url);
+
+	compare_responses($resp, $compare_resp, $url, ignore_hosts => [$use_host, $use_compare_host]);
+    }
+}
+
+sub compare_responses {
+    my($resp, $compare_resp, $testname, %opt) = @_;
+
+    my @ignore_hosts = $opt{ignore_hosts} ? @{ delete $opt{ignore_hosts} } : ();
+
+    die "Unhandled arguments: " . join(" ", %opt) if %opt;
+
+    # XXX group normalizations
+    # - necessary always (e.g. date/time differences, different session ids)
+    # - necessary only if running on different servers (e.g. perlbal vs. apache, different module versions...)
+
+    # massage responses
+    for my $r ($resp, $compare_resp) {
+	my $h = $r->headers;
+	for my $rh (
+		    'client-peer',
+		    'client-transfer-encoding', # perlbal vs. apache
+		    'content-language', # XXX who's creating this header? I see it on bbbike-pps, but not on cvrsnica
+		    'etag',
+		    'server',
+		    # date headers are theoretically the same, but
+		    # only if the requests are really handled in
+		    # the same second
+		    'client-date',
+		    'date',
+		    'expires',
+		    'last-modified',
+		   ) {
+	    $h->remove_header($rh);
+	}
+
+	my @cookies = $r->header('set-cookie');
+	if (@cookies) {
+	    for my $cookie (@cookies) {
+		# normalize time component in cookies
+		$cookie =~ s{; expires=.*}{; expires=...};
+	    }
+	    $r->header('set-cookie', \@cookies);
+	}
+
+	delete $h->{'::std_case'}; # XXX only disturbing, especially if entries here are not removed if a header was removed above
+	$r->previous(undef); # too much noise
+	$r->request(undef); # expected diffs, at least the uri/uri_canonical
+	delete $r->{_protocol}; # XXX HTTP/1.0 vs. 1.1, depending on perlbal or Apache in front
+	$r->{_rc} .= ""; # XXX stringify
+
+	# XXX normalize abs urls vs. half-abs urls, and hosts
+	my $content = $r->content;
+	for my $ignore_host (@ignore_hosts) {
+	    $content =~ s{\Qhttp://$ignore_host\E}{}g;
+	}
+	# XXX This is probably a bbbike.cgi.config option
+	$content =~ s{\Qhttp://www.bbbike.de/cgi-bin/\E(mapserver_address.cgi)}{$1}g;
+	$content =~ s{\Q/bbbike/cgi/\E(mapserver_address.cgi)}{$1}g;
+	# XXX this too
+	$content =~ s{\Qhttp://www.gpsies.com/map.do?url=/cgi-bin/bbbike.cgi}{http://www.gpsies.com/map.do?url=http://bbbike.de/cgi-bin/bbbike.cgi}g;
+	$content =~ s{\Qhttp://www.gpsies.com/map.do?url=/cgi-bin/bbbike.en.cgi}{http://www.gpsies.com/map.do?url=http://bbbike.de/cgi-bin/bbbike.cgi}g;
+        # XXX and this
+	$content =~ s{\Q/cgi-bin/bbbike.cgi?tmp=/}{/BBBike/tmp/}g;
+	# normalize session ids (coordssession, oldcs, Session in json/xml/...)
+	$content =~ s{(name=coordssession value=)"[^"]+"}{$1""}g;
+	$content =~ s{(name="oldcs" value=)"[^"]+"}{$1""}g;
+	$content =~ s{("Session":)"[^"]+"}{$1""}g; # json
+	$content =~ s{(<Session>)[^<]+}{$1}g; # xml
+	$content =~ s{^(Session:) \S+$}{$1 ~}gm; # yaml
+	$content =~ s{('Session' => )'[^']+'}{$1''}g; # perldump
+	$content =~ s{(\?coordssession=)[0-9a-f_:]+}{$1}g; # leaflet link
+	# timestamp in "dummy" param
+	$content =~ s{(/cgi-bin/bbbike2?(\.en)?\.cgi\?dummy=)\d+}{$1DUMMY}g;
+	# XML::LibXML version in gpx etc. outputs
+	$content =~ s{XML::LibXML \d+(\.\d+)+}{XML::LibXML VERSION}g;
+	# XXX missing normalizations
+	# - different (hash-based?) ordering, maybe should be normalized in bbbike.cgi by importance?
+	#   # *  91|8 km</td><td>Fu\xdfg\xe4nger; Parkweg (Teilstrecke); Asphalt mit Sch\xe4den (Teilstrecke)  |8 km</td><td>Parkweg (Teilstrecke); Fu\xdfg\xe4nger; Asphalt mit Sch\xe4den (Teilstrecke)  *
+
+	$content =~ s{(.{80})}{$1\n}g; # wrap lines for easier diff'ing
+	$r->content($content);
+    }
+
+    Test::Differences::eq_or_diff($resp, $compare_resp, $testname, {context=>5});
 }
 
 # Taken from Parse::AccessLogEntry and changed
@@ -74,10 +214,57 @@ sub parse_accesslog {
 	    my @Split=split(/\"/,$R2);
 	    $Ref->{refer}=$Split[1];
 	    $Ref->{agent}=$Split[3];
-	    ($Ref->{duration})=$Split[4] =~ m{(\d+)};
+	    if ($Split[4] =~ m{(\d+)us}) {
+		$Ref->{duration} = $1/1_000_000;
+	    } else {
+		($Ref->{duration})=$Split[4] =~ m{(\d+)};
+	    }
+	    $Ref->{host} = $Split[5];
 	}
     }
     return $Ref;
 }
 
 __END__
+
+=head1 NAME
+
+replay_accesslog - replay bbbike.cgi requests using an accesslog
+
+=head1 SYNOPSIS
+
+    cat /path/to/access_log | replay_accesslog [options] -
+
+=head1 DESCRIPTION
+
+=head2 Comparison feature
+
+To enable the comparison feature, the -comparehost switch needs to be
+specified. The installation on the compare host should be as similar
+as possible, ideally running on the same host with the same server
+software, just with a differing vhost.
+
+Currently I don't have this setup, but am comparing cvrsnica against
+bbbike-pps. The command line looks like this:
+
+   cat .../live/access.log | grep -v mapserver=1 | grep -v info=1 | grep -v all=1 | ./miscsrc/replay_accesslog -host bbbike.cvrsnica.herceg.de -comparehost bbbike-pps - -skip-lines 0 |& less
+
+Still there are known comparison problems:
+
+=over
+
+=item mapserver not configured on cvrsnica at all
+
+=item info=1 output naturally differs, as things like OS and software and modtime information are contained here
+
+=item all=1 may differ if the locale implementation are different (i.e. sort order for "u" and "ü"); may be fixed once I am using sort_german here
+
+=item same (locale) problem also with the choose_ch_form pages, which may be identified by the existence of (start|via|ziel)charimg.x=... params in URL
+
+=item there are differences in the route list (html, json...) probably because of non-deterministic hash order
+
+=back
+
+=head2 TODO
+
+=cut

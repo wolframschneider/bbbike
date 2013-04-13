@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2000-2010,2012 Slaven Rezic. All rights reserved.
+# Copyright (C) 2000-2010,2012,2013 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -15,18 +15,16 @@
 
 package BBBike;
 
-$VERSION	   = '3.18-DEVEL'; # remove "-DEVEL" for releases
-$STABLE_VERSION	   = '3.17';
-$WINDOWS_VERSION   = '3.17'; # Windows distribution
+$VERSION	   = '3.19-DEVEL'; # remove "-DEVEL" for releases
+$STABLE_VERSION	   = '3.18';
+$WINDOWS_VERSION   = '3.18'; # Windows distribution
 $FREEBSD_VERSION   = '3.17'; # (used on download page and bbbikevar.t)
-$DEBIAN_I386_VERSION  = '3.17-1'; # including revision
-$DEBIAN_AMD64_VERSION = '3.17-1'; # including revision
+$DEBIAN_I386_VERSION  = '3.18-1'; # including revision
+$DEBIAN_AMD64_VERSION = '3.18-1'; # including revision
 *DEBIAN_VERSION       = \$DEBIAN_I386_VERSION; # for backward compat
 
 $EMAIL_OLD	   = 'eserte@cs.tu-berlin.de';
 $EMAIL		   = 'slaven@rezic.de';
-#$EMAIL_NEWSTREET   = 'newstreet@bbbike.de';
-##XXX vorerst, bus Mail an bbbike.de wieder geht...
 $EMAIL_NEWSTREET   = 'slaven@rezic.de';
 # personal homepage
 $HOMEPAGE	   = 'http://www.rezic.de/eserte/';
@@ -51,8 +49,6 @@ $BBBIKE_UPDATE_DATA_DIRECT_CGI = "http://bbbike.de/cgi-bin/bbbike-data.cgi";
 $BBBIKE_UPDATE_DATA_CGI = "http://www.bbbike.de/cgi-bin/bbbike-data.cgi";
 $BBBIKE_UPDATE_DIST_DIRECT_CGI = "http://bbbike.de/cgi-bin/bbbike-snapshot.cgi";
 $BBBIKE_UPDATE_DIST_CGI = "http://www.bbbike.de/cgi-bin/bbbike-snapshot.cgi";
-#$BBBIKE_UPDATE_RSYNC = 'rsync://bbbike.de/bbbike/'; # not yet XXX
-#$BBBIKE_UPDATE_DATA_RSYNC = 'rsync://bbbike.de/bbbike_data/'; # XXX not yet
 
 # WAP version
 $BBBIKE_WAP	   = 'http://bbbike.de/wap';
@@ -63,9 +59,9 @@ $BBBIKE_MOBILE	   = 'http://m.bbbike.de';
 
 # Distribution directory for scripts. Unfortunately there's no directory
 # index available anymore at sourceforge...
-$DISTDIR	   = 'http://heanet.dl.sourceforge.net/project/bbbike';
-$DISTFILE_SOURCE   = "$DISTDIR/BBBike/$STABLE_VERSION/BBBike-$STABLE_VERSION.tar.gz";
-$DISTFILE_WINDOWS  = "$DISTDIR/BBBike/$WINDOWS_VERSION/BBBike-$WINDOWS_VERSION-Windows.exe";
+$DISTDIR	   = 'http://sourceforge.net/projects/bbbike/files';
+$DISTFILE_SOURCE   = "$DISTDIR/BBBike/$STABLE_VERSION/BBBike-$STABLE_VERSION.tar.gz/download";
+$DISTFILE_WINDOWS  = "$DISTDIR/BBBike/$WINDOWS_VERSION/BBBike-$WINDOWS_VERSION-Windows.exe/download";
 # Distribution directory for humans (link to 'show files' at sourceforge, and restricted to BBBike)
 $DISPLAY_DISTDIR   = 'http://sourceforge.net/projects/bbbike/files/BBBike/';
 $LATEST_RELEASE_DISTDIR  = "http://sourceforge.net/projects/bbbike/files/BBBike/$STABLE_VERSION/";
@@ -74,6 +70,9 @@ $DISPLAY_BBBIKE_PROJECT_DISTDIR   = 'http://sourceforge.net/projects/bbbike/file
 # These link to the intermediate SourceForge download page (only for humans)
 $SF_DISTDIR	      = 'http://sourceforge.net/projects/bbbike/files/BBBike';
 $SF_DISTFILE_SOURCE   = "$SF_DISTDIR/$STABLE_VERSION/BBBike-$STABLE_VERSION.tar.gz/download";
+# The $SF_DISTFILE_SOURCE URL may cause problems if the client expects that the URL basename is the distribution basename.
+# In this case use the following URL.
+$SF_DISTFILE_SOURCE_ALT = "http://heanet.dl.sourceforge.net/project/bbbike/BBBike/$STABLE_VERSION/BBBike-$STABLE_VERSION.tar.gz";
 $SF_DISTFILE_WINDOWS  = "$SF_DISTDIR/$WINDOWS_VERSION/BBBike-$WINDOWS_VERSION-Windows.exe/download";
 $SF_DISTFILE_DEBIAN_I386  = "$SF_DISTDIR/" . join('', $DEBIAN_I386_VERSION =~ m{(^[^-]+)}) . "/bbbike_${DEBIAN_I386_VERSION}_i386.deb/download";
 $SF_DISTFILE_DEBIAN_AMD64 = "$SF_DISTDIR/" . join('', $DEBIAN_AMD64_VERSION =~ m{(^[^-]+)}) . "/bbbike_${DEBIAN_AMD64_VERSION}_amd64.deb/download";

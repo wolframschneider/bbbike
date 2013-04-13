@@ -630,6 +630,7 @@ Am Seegraben|Altglienicke|12524|20205,-548
 Am Seegraben|Bohnsdorf|12526|20205,-548
 Am Seeschloß|Hermsdorf|13467|4841,23095
 Am Sonnenhügel|Staaken|13591|-8681,13238
+Am Spandauer Wasserturm|Spandau|13581|-4835,14223
 Am Speicher|Friedrichshain|10245|15209,10087
 Am Spielplatz|Köpenick|12559|23667,4446
 Am Sportplatz|Buch|13125|16167,25641
@@ -996,7 +997,7 @@ Atzpodienstr.|Lichtenberg|10365|16451,12467
 Auber Steig|Frohnau|13465|3140,24658
 Aubertstr.|Französisch Buchholz|13127|11171,22707
 Auerbacher Ring|Hellersdorf|12619|23638,14458
-Auerbacher Str.|Grunewald|14193|723,8753
+Auerbachstr.|Grunewald|14193|723,8753
 Auerbachtunnel|Grunewald|14193|490,8716
 Auerhahnbalz|Zehlendorf|14169|659,4645
 Auersbergstr.|Marzahn|12685|20775,15013
@@ -3537,6 +3538,7 @@ Fritz-Reuter-Str.|Niederschönhausen|13156|10736,20333
 Fritz-Reuter-Str.|Schöneberg|10827|6652,8199
 Fritz-Riedel-Str.|Prenzlauer Berg|10407|13601,13629
 Fritz-Schiff-Weg|Friedrichshain|10243|13484,12436
+Fritz-Thurm-Weg|Karlshorst|10318|19350,7741
 Fritz-Werner-Str.|Mariendorf|12107|9052,3053
 Fritz-Werner-Str.|Mariendorf|12277|9052,3053
 Fritz-Wildung-Str.|Schmargendorf|14199|3351,8678
@@ -4661,6 +4663,7 @@ Heidelberger Str.|Alt-Treptow|12435|13711,9028
 Heidelberger Str.|Neukölln|12059|13711,9028
 Heidemühler Weg|Baumschulenweg|12437|16200,6522
 Heidenauer Str.|Hellersdorf|12627|24209,14669
+Heidenelkenweg|Lichtenberg|10365|16111,12685
 Heidenfeldstr.|Friedrichshain|10249|13583,13397
 Heidenheimer Str.|Hermsdorf|13467|3531,23077
 Heidereutergasse|Mitte|10178|10404,12803
@@ -4826,6 +4829,7 @@ Hermann-Dorner-Allee|Adlershof|12489|18458,2422
 Hermann-Günther-Str.|Rosenthal|13158|8259,19978
 Hermann-Hesse-Str.|Niederschönhausen|13156|9859,19165
 Hermann-Piper-Str.|Wittenau|13403|5056,19865
+Hermann-Schmidt-Weg|Falkenhagener Feld|13589|-5317,15888
 Hermann-Stöhr-Platz|Friedrichshain|10243|12401,11886
 Hermannplatz|Kreuzberg|10967|11870,9078
 Hermannplatz|Neukölln|10967|11870,9078
@@ -7151,6 +7155,7 @@ Mandelblütenweg|Bohnsdorf|12526|21625,495
 Mandelstr.|Prenzlauer Berg|10409|12888,15578
 Mandrellaplatz|Köpenick|12555|22340,5786
 Manetstr.|Alt-Hohenschönhausen|13053|16107,15683
+Manfred-Goldschmidt-Weg|Staaken|13591|-7444,14145
 Manfred-von-Richthofen-Str.|Tempelhof|12101|8846,7696
 Manitiusstr.|Neukölln|12047|12409,9496
 Manksweg|Marzahn|12685|20491,15018
@@ -7612,6 +7617,7 @@ Molsheimer Str.|Dahlem|14195|1883,3965
 Moltkestr.|Lichterfelde|12203|4492,3780
 Mommsenstr.|Charlottenburg|10629|3744,10740
 Mommsenstr.|Lichterfelde|12203|3531,3969
+Monbijoubrücke|Mitte|10117|9680,12916
 Monbijouplatz|Mitte|10178|10049,13043
 Monbijoustr.|Mitte|10117|9726,12970
 Mönchmühler Str.|Blankenfelde|13158|8569,22444
@@ -8619,6 +8625,7 @@ Platz des 18. März|Mitte|10117|8610,12254
 Platz des 18. März|Mitte|10557|8610,12254
 Platz des 23. April|Köpenick|12555|21954,5229
 Platz des 4. Juli|Lichterfelde|14167|2843,1281
+Platz des Volksaufstandes von 1953|Mitte|10117|9058,11564
 Platz E|Hakenfelde|13589|-4920,16885
 Platz S|Neukölln|12059|14015,8798
 Platz vor dem Neuen Tor|Mitte|10115|8719,13621
@@ -10367,6 +10374,7 @@ Silbergrasweg|Niederschöneweide|12439|19743,5011
 Silberhammerweg|Heiligensee|13503|-1698,23414
 Silberlinde (Kolonie)|Baumschulenweg|12437|15479,5938
 Silbersteinstr.|Neukölln|12051|12160,6742
+Silberweidenweg|Lichtenberg|10365|16376,12874
 Silingenweg|Westend|14052|910,11119
 Silvesterweg|Hermsdorf|13465|3845,23901
 Silvesterweg|Hermsdorf|13467|3845,23901
@@ -10477,7 +10485,6 @@ Sophienstr.|Friedrichsfelde|10317|16878,11196
 Sophienstr.|Lichterfelde|12203|3705,4028
 Sophienstr.|Mitte|10178|10236,13268
 Sophienstr.|Rummelsburg|10317|16878,11196
-Sophienwerderweg|Haselhorst|13597|-1405,14052
 Sophienwerderweg|Spandau|13597|-1405,14052
 Sorauer Str.|Kreuzberg|10997|12670,10275
 Sorbenstr.|Altglienicke|12524|20263,1247

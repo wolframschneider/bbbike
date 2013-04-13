@@ -115,7 +115,7 @@ use BBBikeGlobalVars 1.012;
 # "autouse" cannot be used on modules with non-standard import functions
 BEGIN {
     %autouse_func =
-	('BBBikeMail'	=> [qw(enter_send_mail enter_send_fax)],
+	('BBBikeMail'	=> [qw(enter_send_mail)],
 	 'Text::Wrap'	=> [qw(wrap)],
 	 'File::Copy'	=> [qw(copy mv)],
 	 'BBBikeGPS'
@@ -460,10 +460,6 @@ use vars qw($balloon_info_from_all_tags_closeenough);
 $balloon_info_from_all_tags_closeenough = 3; # was 5, then 4
 
 # Var section: street and point attributes
-if ($devel_host && !grep { "danger" eq $_ } @Strassen::Dataset::comments_types) {
-    push @Strassen::Dataset::comments_types, "danger";
-}
-@comments_types = @Strassen::Dataset::comments_types;
 $init_str_draw{'s'} = 1;      # draw streets by default
 for (qw(s l r b u w f v e z g gP gD gBO sBAB fz wr)) { $p_sub_draw{"pp-$_"} = 1} # this list should cover most keys of %str_file (but not the dependent ones like "comm" or "qs")
 $init_p_draw{'lsa'} = 1;
@@ -759,6 +755,12 @@ eval { local $SIG{'__DIE__'};
 
 handle_options();
 
+# at this point the $devel_host setting is valid (_set_public was maybe called)
+if ($devel_host && !$public && !grep { "danger" eq $_ } @Strassen::Dataset::comments_types) {
+    push @Strassen::Dataset::comments_types, "danger";
+}
+@comments_types = @Strassen::Dataset::comments_types;
+
 if ($lowmem) {
     @image_type_order = ('xpm', 'gif', 'jpg', 'png');
 }
@@ -971,9 +973,6 @@ if (defined $init_scope) {
 if ($visual) {
     push(@extra_args, -visual => $visual);
 }
-if (defined $Plugin::brinfo{'xwindow_id'}) {
-    push(@extra_args, "-use" => $Plugin::brinfo{'xwindow_id'});
-}
 
 if ($Tk::VERSION < 803 || $Tk::VERSION >= 804.025) {
     eval { require Tk::UnderlineAll };
@@ -1080,13 +1079,8 @@ if ($run_under_kde) {
 #BEGIN{mymstat("after KDE initialisation");} mymstat("after KDE initialisation");
 ## DEBUG_END
 
-# Are we running exceed?
-$exceed = ($top->server =~ /Hummingbird/);
-
 if (!defined $focus_policy) {
-    if ($exceed) {
-	$focus_policy = 'click';
-    } elsif ($os eq 'unix') {
+    if ($os eq 'unix') {
 	#XXX $focus_policy = 'follow';
 	$focus_policy = 'click';
     } else {
@@ -1293,8 +1287,8 @@ if ($splash_screen) {
     $splash_screen->Update(0.0, 'raise splash');
 }
 
-# Exceed-Bug
-$capstyle_round = ($exceed ? "projecting" : "round");
+# Define something else on X server bugs (e.g. "projecting")
+$capstyle_round = "round";
 
 # erst hier ist die @power-Zuweisung abgeschlossen
 for(my $i=0; $i <= $#power; $i++) {
@@ -5152,9 +5146,9 @@ sub handle_options {
 	  label => M"Geometry", var => \$geometry],
 	 ['maximized','!',0,
 	  label => M"immer maximiert öffnen", var => \$open_maximized],
-	 ['scaling','=f',undef,
-	  label => M"Skalierung", var => \$scaling],
-	 ['visual','=s',undef,
+	 ['scaling','=f',undef, nogui => 1,
+	  label => M"X11-Skalierung", var => \$scaling],
+	 ['visual','=s',undef, nogui => 1,
 	  label => M"Visual", var => \$visual],
 	 ['scale','=s',undef,
 	  label => M"Skalierung", nogui => 1,
@@ -5683,6 +5677,7 @@ sub load_photos {
     $inwork_klein_photo  = load_photo($top, 'inwork_12');
     $achtung_photo       = load_photo($top, 'achtung');
     $cal_photo           = load_photo($top, 'cal');
+    $cal_questionmark_photo = load_photo($top, 'cal_questionmark');
     $clock_photo	 = load_photo($top, 'clock');
     $night_photo	 = load_photo($top, 'night');
     $ferry_photo         = load_photo($top, 'ferry')
@@ -5698,56 +5693,48 @@ sub load_photos {
 }
 
 sub set_default_geometry {
-    if (defined $Plugin::brinfo{x_len} and
-	defined $Plugin::brinfo{y_len}) {
-	$top->geometry($Plugin::brinfo{x_len} . "x" . $Plugin::brinfo{y_len});
+    if ($geometry && !$open_maximized) {
+	@want_extends = parse_geometry_string($geometry);
+	if (!$want_extends[GEOMETRY_WIDTH] || !$want_extends[GEOMETRY_HEIGHT]) { # test on 0 or undef
+	    ($want_extends[GEOMETRY_WIDTH], $want_extends[GEOMETRY_HEIGHT]) =
+		($top->screenwidth, $top->screenheight);
+	}
+	if (!defined $want_extends[GEOMETRY_X] || !defined $want_extends[GEOMETRY_Y]) {
+	    ($want_extends[GEOMETRY_X], $want_extends[GEOMETRY_Y]) = (0, 0);
+	}
     } else {
-	if ($geometry && !$open_maximized) {
-	    @want_extends = parse_geometry_string($geometry);
-	    if (!$want_extends[GEOMETRY_WIDTH] || !$want_extends[GEOMETRY_HEIGHT]) { # test on 0 or undef
-		($want_extends[GEOMETRY_WIDTH], $want_extends[GEOMETRY_HEIGHT]) =
-		    ($top->screenwidth, $top->screenheight);
-	    }
-	    if (!defined $want_extends[GEOMETRY_X] || !defined $want_extends[GEOMETRY_Y]) {
-		($want_extends[GEOMETRY_X], $want_extends[GEOMETRY_Y]) = (0, 0);
-	    }
-	} else {
-	    @want_extends = (0, 0, $top->screenwidth, $top->screenheight);
-	}
-	if ($kde) {
-	    @max_extends = $kde->client_window_region();
-	} elsif ($os eq 'win') {
-	    @max_extends = Win32Util::client_window_region($top);
-	} elsif ($^O eq 'darwin') {
-	    @max_extends = MacOSXUtil::client_window_region($top);
-	} else {
-	    if (
-		# check for broken ->property on 64bit platforms
-		($Tk::VERSION >= 804.027501 || $Config{longsize} == 4) &&
-		$top->property("exists", "_NET_CURRENT_DESKTOP", "root") &&
-		$top->property("exists", "_NET_WORKAREA", "root")
-	       ) {
-		(undef, my $desktop) = $top->property("get", "_NET_CURRENT_DESKTOP", "root");
-		if (defined $desktop) {
-		    my @vals = ($top->property("get", "_NET_WORKAREA", "root"))[$desktop*4+1 .. $desktop*4+4];
-		    if (@vals && defined $vals[0]) {
-			@max_extends = @vals;
-		    }
-		}
-		#$max_extends[2]-=10; # XXX hmmm, does not need to be necessary on gnome/metacity
-		#$max_extends[3]-=24; # XXX "
-	    }
-	}
-	if (!@max_extends) {
-	    # XXX guess width/height of wm borders and title bar
-	    @max_extends = (0, 0, $top->screenwidth-10, $top->screenheight-24);
-	}
-	if ($exceed) {
-	    $max_extends[GEOMETRY_HEIGHT] -= 35; # possible task bar --- but what to do if the taskbar is not at the standard location or has more than one row?
-	}
-
-	crop_geometry(\@want_extends, \@max_extends);
+	@want_extends = (0, 0, $top->screenwidth, $top->screenheight);
     }
+    if ($kde) {
+	@max_extends = $kde->client_window_region();
+    } elsif ($os eq 'win') {
+	@max_extends = Win32Util::client_window_region($top);
+    } elsif ($^O eq 'darwin') {
+	@max_extends = MacOSXUtil::client_window_region($top);
+    } else {
+	if (
+	    # check for broken ->property on 64bit platforms
+	    ($Tk::VERSION >= 804.027501 || $Config{longsize} == 4) &&
+	    $top->property("exists", "_NET_CURRENT_DESKTOP", "root") &&
+	    $top->property("exists", "_NET_WORKAREA", "root")
+	   ) {
+	    (undef, my $desktop) = $top->property("get", "_NET_CURRENT_DESKTOP", "root");
+	    if (defined $desktop) {
+		my @vals = ($top->property("get", "_NET_WORKAREA", "root"))[$desktop*4+1 .. $desktop*4+4];
+		if (@vals && defined $vals[0]) {
+		    @max_extends = @vals;
+		}
+	    }
+	    #$max_extends[2]-=10; # XXX hmmm, does not need to be necessary on gnome/metacity
+	    #$max_extends[3]-=24; # XXX "
+	}
+    }
+    if (!@max_extends) {
+	# XXX guess width/height of wm borders and title bar
+	@max_extends = (0, 0, $top->screenwidth-10, $top->screenheight-24);
+    }
+
+    crop_geometry(\@want_extends, \@max_extends);
 }
 
 
@@ -10743,6 +10730,7 @@ sub plot_sperre {
 		    for my $check (['inwork', $use_inwork_photo],
 				   ['night',  $night_photo],
 				   ['clock',  $clock_photo],
+				   ['tempmaybe', $cal_questionmark_photo],
 				   ['temp',   $cal_photo], # should be last
 				  ) {
 			my($addinfo, $photo) = @$check;
@@ -11201,7 +11189,7 @@ sub show_blockings {
 			       map { [ transpose_all(@{ Strassen::to_koord($_->[Strassen::COORDS]) }) ] }
 			       @{ $temp_blockings_on_route{$name}->{data} }
 			      ];
-		 mark_street(-coords => $coords);
+		 mark_street(-coords => $coords, -clever_center => 1);
 	     },
 	     -scrollbars => 'osoe',
 	    )->pack(qw(-fill both));
@@ -12160,12 +12148,7 @@ sub choose_ort {
 		    # - the german locale may be missing
 		    # - with various perl versions and OSes I had in the
 		    #   past problems with "use locale"
-		    my $tf_sub = \&BBBikeUtil::umlauts_for_german_locale;
-		    $lb->insert('end',
-				map { $_->[1] }
-				sort { $a->[0] cmp $b->[0] }
-				map { [ do { /^\(?(.*)/; $tf_sub->($1) }, $_] }
-				keys %orte);
+		    $lb->insert('end', BBBikeUtil::sort_german([ keys %orte ]));
 		}
 	    }
 
@@ -12405,7 +12388,8 @@ sub choose_streets {
 #                   andere Fenster verdeckt wird
 #   -dont_delete_old: alte Markierungen beibehalten
 #   -endlessmark: ?
-#   -addtag: weitere Canvas-Tags hinzufügen
+#   -addtag => $tag   : add another tag to the canvas item; this is used as the point name
+#   -addtag => \@tags : add more than one tag; by convention the first additional tag is used as the point name
 #   -inactive: Markierung reagiert nicht auf Events (insbesondere Tooltips)
 ### AutoLoad Sub
 sub mark_point {
@@ -12508,9 +12492,12 @@ sub clever_center {
 #   -coords => [[[x,y],[x2,y2]], # first line
 #               [[x3,y3],[x4,y4]], # second line
 #              ]
+#   -labels => ["first line", "second line" ...]
 #   -scrollto => [x,y]
 #   -dont_mark => 1: don't mark
 #   -dont_center => 1: don't center
+#   -clever_center: möglichst so zentrieren, dass die Markierung nicht durch
+#                   andere Fenster verdeckt wird
 ### AutoLoad Sub
 sub mark_street {
     my(%args) = @_;
@@ -14454,7 +14441,13 @@ sub show_info {
 	}
 
 	{
-	    my $need_indentation = 1;
+	    if (!$bbbike_leaflet_photo) {
+		$bbbike_leaflet_photo = load_photo($top, 'bbbike_leaflet_16');
+	    }
+	    my $need_indentation;
+	    if (!$bbbike_leaflet_photo) {
+		$need_indentation = 1;
+	    }
 	    my $show_leaflet_url = sub {
 		my($baseurl, $linkcount) = @_;
 		$show_url->($linkcount, sub {
@@ -14473,6 +14466,10 @@ sub show_info {
 	    };
 
 	    if ($devel_host) {
+		if ($bbbike_leaflet_photo) {
+		    $info_text->imageCreate('end', -image => $bbbike_leaflet_photo,
+					    -align => "bottom", -padx => 2, -pady => 1);
+		}
 		$info_text->insert("end", "BBBike Leaflet (local)",
 				   ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
 		$show_leaflet_url->("http://localhost/bbbike/html/bbbikeleaflet.html", $linkcount);
@@ -14480,6 +14477,10 @@ sub show_info {
 		$linkcount++;
 	    }
 
+	    if ($bbbike_leaflet_photo) {
+		$info_text->imageCreate('end', -image => $bbbike_leaflet_photo,
+					-align => "bottom", -padx => 2, -pady => 1);
+	    }
 	    $info_text->insert("end", "BBBike Leaflet",
 			       ["link$linkcount", ($need_indentation ? "iconindent" : ())]);
 	    $show_leaflet_url->($BBBike::BBBIKE_LEAFLET_URL, $linkcount);
@@ -18277,18 +18278,20 @@ sub show_route_strname {
       (-text => M"Drucken",
        -command => sub { $print_text_sub->($ps_fixed_font||"Courier7") },
       );
-    push @bfb, $bf->Button
-      (-text => M"Mail",
-       -command => sub {
-	   if (@route_info) {
-	       $show_route_start = "???" unless $show_route_start;
-	       $show_route_ziel  = "???" unless $show_route_ziel;
-	       enter_send_mail
-		 (Mfmt("BBBike-Route von %s bis %s",
-		       $show_route_start, $show_route_ziel),
-		  -data => route_info_to_text());
-	   }
-       });
+    if (_can_send_mail()) {
+	push @bfb, $bf->Button
+	    (-text => M"Mail",
+	     -command => sub {
+		 if (@route_info) {
+		     $show_route_start = "???" unless $show_route_start;
+		     $show_route_ziel  = "???" unless $show_route_ziel;
+		     enter_send_mail
+			 (Mfmt("BBBike-Route von %s bis %s",
+			       $show_route_start, $show_route_ziel),
+			  -data => route_info_to_text());
+		 }
+	     });
+    }
     $t->bind('<Up>'   => sub { $route_strname_lbox->yview(scroll => -1,
 							  'units') });
     $t->bind("<Down>" => sub { $route_strname_lbox->yview(scroll => 1,
@@ -20316,6 +20319,7 @@ sub show_logo { # und About
 		 )->pack(-anchor => 'w', -expand => 1,
 			 -fill => 'x');
     }
+
     # Send mail to software maintainer
     my $mail_b =
 	$f->$Button_or_Label
@@ -20944,11 +20948,14 @@ sub set_fonts {
  		$pt = $pt*12/14;
  	    }
  	    $top->fontConfigure($font{'normal'}, -size => sprintf("%.f", $pt));
- 	    $top->optionAdd('*font' => $font{'normal'}, 'userDefault');
 	}
-	if ($os eq 'win') {
-	    $top->optionAdd('*font' => $font{'normal'}, 'userDefault');
-	}
+
+	# This looks like a no-op, as $font{normal} was usually
+	# determined from the default font in the option database. But
+	# with this setting the _Tk font name_ is forced to be used.
+	# This is a requirement to see immediate effects when changing
+	# the font using FontDialog.
+	$top->optionAdd('*font' => $font{'normal'}, 'userDefault');
 
 	foreach (qw(veryhuge huge verylarge large bold
 		    reduced small tiny fixed standard fix15)) {
@@ -21062,10 +21069,9 @@ sub set_fonts {
 	}
     }
 
-    @font = ();
-    foreach (qw(tiny small reduced normal large verylarge huge veryhuge)) {
-	push @font, $_;
-    }
+    # Array of sorted fonts (by size) used e.g. in
+    # get_orte_label_font()
+    @font = qw(tiny small reduced normal large verylarge huge veryhuge);
 
     for my $font (@font) {
 	my $font_key = $font."-italic";
@@ -21132,6 +21138,12 @@ sub image_from_file {
 # persistent %photo hash for caching. -name can be set
 # for a Tcl-styled image name. In $small_icons mode every
 # image is shrinked to half width/height.
+#
+# .xpm files are loaded into a Tk::Pixmap object, not Tk::Photo
+# (unless $small_icons is active)
+#
+# .svg files are converted using the svg2photo function. In
+# this case, the options -w and -h are mandatory.
 sub load_photo {
     my($top, $file, %args) = @_;
     if (!defined $file) {
@@ -21147,36 +21159,61 @@ sub load_photo {
 	    $cache_key .= "-$key:$val";
 	}
     }
+    for my $key (qw(-w -h)) {
+	if (exists $args{$key}) {
+	    my $val = $args{$key};
+	    $cache_key .= "-$key:$val";
+	}
+    }
     return $photo{$cache_key} if exists $photo{$cache_key};
 
     my $photo;
     unless ($lowmem) {
 	eval {
 	    my @name = exists $args{-name} ? ($args{-name}) : ();
-	    if ($file =~ /.xpm$/ && !$small_icons) {
+	    my $do_subsample = $small_icons;
+	    if ($file =~ m{\.xpm$}i && !$small_icons) {
+		# Pixmap seem to be more memory-efficient, but it's
+		# not possible to do subsample operations (in case of
+		# $small_icons)
 		$photo = $top->Pixmap(@name, -file => Tk::findINC($file));
 	    } else {
 		my $path;
 		if (file_name_is_absolute($file)) {
 		    $path = $file;
-		    $photo = $top->Photo(@name, -file => $path, %photo_args);
 		} else {
 		    for my $try_file ((-d "$datadir/images" ? "$datadir/images/$file" : ()),
 				      "$FindBin::RealBin/images/$file",
 				     ) {
-			$path = try_image_suffix($try_file);
-			if (defined $path && -r $path) {
-			    $photo = $top->Photo(@name, -file => $path, %photo_args);
+			my $try_path = try_image_suffix($try_file);
+			if (defined $try_path && -r $try_path) {
+			    $path = $try_path;
 			    last;
 			}
 		    }
-		    if (!$photo) {
+		    if (!defined $path) {
 			warn "Could not find photo, try <$file> in some \@INC dirs...\n"; # XXX should never happen?
-			$photo = $top->Photo(@name, -file => Tk::findINC($file), %photo_args);
+			$path = Tk::findINC($file);
+		    }
+		}
+		if ($path) {
+		    if ($path =~ m{\.svg$}i) {
+			my $w = delete $args{-w};
+			die "-w is mandatory for svg files" if !$w;
+			my $h = delete $args{-h};
+			die "-h is mandatory for svg files" if !$h;
+			if ($small_icons) {
+			    $w /= 2;
+			    $h /= 2;
+			    $do_subsample = 0;
+			}
+			$photo = svg2photo($path, $w, $h);
+		    } else {
+			$photo = $top->Photo(@name, -file => $path, %photo_args);
 		    }
 		}
 	    }
-	    if ($small_icons && $photo) {
+	    if ($do_subsample && $photo) {
 		# XXX setting of @name missing
 		my $small_photo = $top->Photo(-width => $photo->width/2,
 					      -height => $photo->height/2,
@@ -21687,52 +21724,6 @@ sub slow_postscript_generation {
 			 -type => "YesNo") !~ /yes/i;
 }
 
-sub start_process {
-    my($token, $gather_command, $action_command) = @_;
-    if (defined $processes{$token}) {
-	status_message(M("Der Prozess $token läuft noch (PID $processes{$token}) XXX"), "die");
-	# XXX Abschiessen blabla
-    }
-    if (!$Config{d_fork}) {
-	status_message(M("fork ist nicht verfuegbar XXX"), "die");
-    }
-    require Symbol;
-    my $rdr = Symbol::gensym();
-    my $wtr = Symbol::gensym();
-    pipe($rdr, $wtr);
-    my $pid = fork;
-    if (!defined $pid) {
-	status_message(M("Der Process konnte nicht gestartet werden."), "die");
-    }
-    if ($pid == 0) {
-	# child
-	close $rdr;
-warn "gather command";
-	my $result = $gather_command->();
-warn "print result $result to $wtr";
-#	select $wtr; $| = 1;
-	print $wtr $result;
-warn "printed";
-	close $wtr;
-warn "closed";
-	sleep 99999;
-	CORE::exit(0);
-    }
-    close $wtr;
-    $processes{$token} = $pid;
-    $top->fileevent($rdr, "readable", sub {
-warn "readable";
-			local $/ = undef;
-			my $result = <$rdr>;
-warn "got $result";
-			close $rdr;
-			$processes{$token} = undef;
-warn "do action";
-			$action_command->($result)
-			    if $action_command;
-		    });
-}
-
 sub get_strassen_file {
     my $file = shift;
     if ($file =~ /-orig$/) {
@@ -21811,11 +21802,17 @@ sub handle_global_directives {
 	   line_shorten line_shorten_end
 	   name
 	  );
+    # Aliases for directives without category
     my %aliases = (
 		   category_width => "category_line_width",
+		   line_color => "str_color",
 		  );
+    # Aliases for directives with category
+    my %aliases_withcat = (
+			   line_color => "category_color",
+			  );
     my @aliases_code = (
-			sub { $_[0] =~ s{^category_dash\.}{line_dash.}; }, # was used in radwege-orig, remove some day XXX
+			sub { $_[0] =~ s{^category_dash\.}{line_dash.}; }, # was used in radwege-orig, and is still used in streets-accurate-categorized..., remove some day XXX
 		       );
 
     my $get_val = sub {
@@ -21867,6 +21864,9 @@ sub handle_global_directives {
 	} else {
 	    my($key, $cat) = $directive =~ /^([^\.]+)\.([^\.]+)/;
 	    if (defined $key) {
+		if ($aliases_withcat{$key}) {
+		    $key = $aliases_withcat{$key};
+		}
 		if ($accept_modern_style{$key}) {
 		    no strict 'refs';
 		    ${"layer_category_".$key}{$abk}{$cat} = $get_val->($key, $vals);
@@ -22022,15 +22022,7 @@ sub get_image_for_any {
 		    $w *= $factor;
 		    $h *= $factor;
 		}
-		warn "Try to convert from svg to png, geometry ${w}x${h}...\n";
-		require File::Temp;
-		require Tk::PNG;
-		my(undef,$tmpfile) = File::Temp::tempfile(SUFFIX => ".png", UNLINK => 1);
-		my @cmd = ("convert", "-geometry", "${w}x${h}", $abs_realfile, $tmpfile);
-		system(@cmd) == 0
-		    or die "Error while converting: @cmd, status=$?";
-		$p = $c->Photo(-file => $tmpfile);
-		unlink $tmpfile;
+		$p = svg2photo($abs_realfile, $w, $h);
 	    } else {
 		$p = get_image($base, $realfile);
 		if (!$p) {
@@ -22047,6 +22039,21 @@ sub get_image_for_any {
 	    $images->{$key} = $p;
 	}
     }
+    $p;
+}
+
+sub svg2photo {
+    my($file, $w, $h) = @_;
+    warn "Try to convert from svg to png, geometry ${w}x${h}...\n" if $verbose;
+    require File::Temp;
+    require Tk::PNG;
+    my(undef,$tmpfile) = File::Temp::tempfile(SUFFIX => ".png", UNLINK => 1)
+	or die "Can't create temporary file: $!";
+    my @cmd = ("convert", "-geometry", "${w}x${h}", $file, $tmpfile);
+    system(@cmd) == 0
+	or die "Error while converting: @cmd, status=$?";
+    my $p = $c->Photo(-file => $tmpfile);
+    unlink $tmpfile;
     $p;
 }
 
@@ -22191,6 +22198,14 @@ sub soft_flash {
 	}
     };
     $next_color_state->();
+}
+
+sub _can_send_mail {
+    return $BBBikeMail::can_send_mail if defined $BBBikeMail::can_send_mail;
+
+    require BBBikeMail;
+    BBBikeMail::capabilities();
+    $BBBikeMail::can_send_mail;
 }
 
 # REPO BEGIN

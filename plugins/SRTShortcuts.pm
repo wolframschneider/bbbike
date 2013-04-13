@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2003,2004,2008,2009,2010,2011 Slaven Rezic. All rights reserved.
+# Copyright (C) 2003,2004,2008,2009,2010,2011,2012,2013 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -25,7 +25,7 @@ BEGIN {
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.86;
+$VERSION = 1.87;
 
 use your qw(%MultiMap::images $BBBikeLazy::mode
 	    %main::line_width %main::p_width %main::str_draw %main::p_draw
@@ -68,9 +68,12 @@ use vars qw(%want_plot_type_file %layer_for_type_file);
 use vars qw($want_winter_optimization);
 $want_winter_optimization = '' if !defined $want_winter_optimization;
 
+use vars qw(%images);
+
 sub register {
     my $pkg = __PACKAGE__;
     $BBBikePlugin::plugins{$pkg} = $pkg;
+    _create_images();
     add_button();
     add_keybindings();
     define_subs();
@@ -85,6 +88,95 @@ sub unregister {
     remove_keybindings();
     BBBikePlugin::remove_menu_button(__PACKAGE__."_menu");
     delete $BBBikePlugin::plugins{$pkg};
+}
+
+sub _create_images {
+    if (!defined $images{bridge}) {
+	# Created from bbbike-aux/drawings/bridge.svg
+	# Bitmap exported with inkscape and converted with mmencode -b
+	# XXX this image could also be used in the bbbike legend (perl/tk,
+	# mapserver ...)
+	$images{bridge} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlw
+SFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoA
+AADuSURBVDiNzdOxLkRREMbx314KIlEolHqikfUAukmUOo1WQe0lvMKqhMYLGHqNaHUKiWQR
+iU7FXsUuWTcnGzcaX3JycuZ88883xXTquhYRizjDTmbem6CImMYpLjKzV0FmPqPGTUQsT2ie
+xSU2cQ7V2P82ZnAdEeuF5nlcYQO7mfnwA5CZffQwh71CgDWs4DUzT76KVcP0PrrrAmAwdr7V
+BIybm6rRaRbbAEq11gn+BBhoMcLHL6H/eIT2CSKiQoyetwVvH29YiIhuKcE+VnGQmUfN7sx8
+RBdPOI6IqSZgy3BJDktRR5A7w514wRJ8AtaGUGHkMDeVAAAAAElFTkSuQmCC
+EOF
+    }
+
+    if (!defined $images{car_cross}) {
+	# Created from bbbike-aux/images/car-cross.png
+	$images{car_cross} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dE
+AP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90CGRUGNraovaAAAAAd
+aVRYdENvbW1lbnQAAAAAAENyZWF0ZWQgd2l0aCBHSU1QZC5lBwAAAQFJREFUOMuVkD1KA0EU
+gL9dSfCniVh5CA9g4xHiMSy0tooYa/US6dOLhQeQgNgIgmAZshYWNmHZ3c8isyjLrhkfDAxv
+3ve99wZBoRBOiAhhX5gGTuqLkK+TNGGhoJHolLTAq9rOhxg4piCmwV+S89gVuyTlfz65S1Kf
+VjhtJhKYA++NdEVsCOOW7nErtMA3wtQQp1A+TiZPqjHwWL0s8jy/GI0ETEHAg37/Wb1bB5dZ
+lj0ABVD+FgBew61qKxy8x8AiwB8pZANY7oIb4B54Nhy+Jq6MdVwlP4I3oAfshClIId2GwSb0
+UuAIKlo6r9bST3UZRn5Rv9TFFtwfwtzZTKvKbyU8I7/i8L+dAAAAAElFTkSuQmCC
+EOF
+    }
+
+    if (!defined $images{camera}) {
+	# Created from bbbike-aux/images/camera.png
+	$images{camera} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAZiS0dE
+AP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB90CGgcHOTIbSYAAAALU
+SURBVDjLjZNNa11VFIbftdfe5+um99x7bRRbksZgTBvR0DpxUIT6F8SBjp0IggOFTpyIYwf9
+B51UqI7agaWTFoqIQontwNA2/UAUjMn1JOfe87332cuR0kEpPvMXHnh5SERARHgKvbS0Qs71
+3hjjl1dW5IdbN/A8CM9Hra1tEAAcO3bi2eNb168kd359+GE+L+Or31+798vW3b3xaHR4+dtL
+v7977pwHgNXVNXr06IEAwJnTb6CsGnK9gADQ6c233ouTweWu69Tu3i6KopgqUjuk1I9K8ZWu
+7X/K810LGDWZjJBl+/4/g803Nz8qivrjumnOiO/hpUdVNxAPMCuEQXD1/OdfvP/Z+U+6p9W/
++vLTcHpQeDq5vvGNte4Dazu0XSWjNCWtNbIsR922YM13jiTJJe/9VEAqCoOqrqsTnXXLRKqk
+xcWXt9PhwimRHoMklNdPrVMYhri/8xh/PfnNNrbXBUAkAs2MwSBBVbWoqgrMBN117SveJ0JK
+iDXjz909YaPBrBBo1q11BCEAgn8vJ6WgjYbRBK0UHltn1713rAhQrLH4wgTeWGS9o2BhAWc3
+TmKYDqSYlzT9O0M+K7F0fF3iKCTt+/6PKDSvta0gTVO8c/ZtCgKF7e37IECiwODo0TG99OKE
+suxQyrIiEZLVlWUyhqF7L5TEMSajEdJ0SINBjLatpbMOACg7OMTtrbuIowCddeScR9O29PPt
+LSFSpI0xERGxYkZnLWb5DCJCIgCB0HUWWXYAEQ/nBXEUoSxr7E+nxKyh4zgm5zzN5gUmnMJ2
+DtY6dK1DYIIsjnHPhMGw712sPIRANRG9yqxjo02ujTY3m7adQHAcRDSbl1JVjZsXNbPW342T
+6EJrbUMIYh0wBGKJ1aJWKg2CoNZK8ddlVV00bCIRUfm8lFleyKwopffYf/Lg4fQZge383xIx
+TMdqPDqirLUAFJgZ+WyOpqlhjJF/AHqpZ2nFH6CCAAAAAElFTkSuQmCC
+EOF
+    }
+
+    if (!defined $images{VIZ}) {
+	# Got from: http://www.vmz-info.de/vmz-fuercho-5.1.1.1/images/liferay.ico
+	# Converted with convert + mmencode -b
+	$images{VIZ} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<EOF);
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAAAFz
+UkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAA
+AiJQTFRFL06DGj9/ETd5d4mqprXFhZ+9hJ69o7PEz9fdyNfmyNflx9Hb+vr6////G0CACjWB
+ACt6bYOqp7nMh6fKhqbKo7XJ09vj0uPz0uPyzNjkEzh7ACp6AB9zZXylorXJgKLHf6DHnrHG
+0Nnhz+Hyz+HxydbjfI6tcIara4GnqrXIxM3Wrr3Prb3Pw8zW3uLm2ODo2N7kp7bGprjNorbL
+wsvV1drf0drk0Nrj193i/fz7/vz7//792+DlyNXgztvmxtDZh6C+iKbKgaLHrLvN0drj0uLz
+0OHy0tzm/Pv72ODny9zt0uTzxNPhhp+9hqXKgKHHq7rN0NnizuDx0dvl2eDny93u0uT0xdPh
+p7XGpLbKoLPIw8vW09zm0dzl2d/l/Pv6/f384OPnz9jg093kzdXbzdXa0dnh2t/l0dvk0tzl
+197jx8/YoLHGprbKprTFxtPg0+P019/n0tvl0d3msL7PfZzCh6bKgp29xdPf1t/n09zl0eLz
+0t3nsb/Pfp3DiafKhJ6+xtDYztnly9fj//38/v382N7j0Nvk1dzhxc7Xn7PIprnNpLTG3uPm
+rr3Os7zMboGndImtfI6s+/v6y9fhzd/vzd/wz9ngobPHfp7EgKDFn7PLcYaqABxuACt5DzN3
+z9vl0uP009zjprjLhqTJpbjOeYyuACh3CjaBFDt9+/v7yNLaxtXhxtXiztbbqbfHiKK/pbXH
+hJSxFjd5H0SCLEyCxY87YQAAAAFiS0dEDfa0YfUAAAEJSURBVBjTY2BgZGJmYWVj5+Dk4ubh
+5eVl4OMXEBQSFhEVE5eQBAtIScvIyskrKCopq6iCBdTUNTS1tHV09fT1DXiAgMHQyNjE1Mzc
+wtLKytrG1s6ewcHRydnF1c3dA6jc08vbh8HXzz8g0C0oGCQQEhoWzhARGRVtERMbFx8fn5CY
+lJzCkCqWphfv4RGfnpGZlZ2Tm8eQX6BcaMXL61EUpFxcUlpWzlAhrlJpCRSoUq6uqa2rb2Bo
+bGo2aLG2bm1rD+7o7OruYQA5xsbTsze7r0S3f8LESQxA2yZPmTpt+oyZs2bPmTtvPlhggfjC
+RYuXOC5dtnzFSpDAqtVr1q5b77Bh46bNW7YCAKJlS6V7R7bEAAAAJXRFWHRkYXRlOmNyZWF0
+ZQAyMDEzLTAyLTE5VDIxOjQyOjUxKzAxOjAws5ftwQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAx
+Mi0wOC0xNFQxNjoyODo1MCswMjowMOv6tcMAAAAASUVORK5CYII=
+EOF
+    }
 }
 
 sub add_button {
@@ -104,6 +196,7 @@ sub add_button {
 	(-disabledforeground => "black",
 	 -menuitems =>
 	 [
+	  ($main::devel_host ? [Cascade => "Karte"] : ()),
 	  [Cascade => "Old VMZ/LBVS stuff",
 	   -font => $main::font{'bold'},
 	   -menuitems =>
@@ -121,6 +214,10 @@ sub add_button {
 	     -command => sub { show_lbvs_diff() },
 	    ],
 	    (map { [Button => "LBVS version $_", -command => [sub { show_lbvs_diff($_[0]) }, $_] ] } (0 .. 5)),
+	    "-",
+	    [Button => "Select any file as VMZ/LBVS diff",
+	     -command => sub { select_vmz_lbvs_diff() },
+	    ],
 	   ],
 	  ],
 	  [Button => 'GPS downloads (not on biokovo)',
@@ -272,71 +369,71 @@ EOF
 				Width => 20),
 	      [Cascade => $do_compound->('Add layer', $main::newlayer_photo), -menuitems =>
 	       [
-		layer_checkbutton('hm96.bbd (Höhenpunkte)', 'p',
-				  "$bbbike_rootdir/misc/senat_b/hm96.bbd",
+		layer_checkbutton([$do_compound->('hm96.bbd (Höhenpunkte)')],
+				  'p', "$bbbike_rootdir/misc/senat_b/hm96.bbd",
 				  oncallback  => sub { $main::top->bind("<F12>"=> \&find_nearest_hoehe) },
 				  offcallback => sub { $main::top->bind("<F12>"=> '') },
 				 ),
-		layer_checkbutton('Zebrastreifen', 'p',
-				  "$main::datadir/zebrastreifen",
+		layer_checkbutton([$do_compound->('Zebrastreifen', main::load_photo($mf, "misc/verkehrszeichen/Zeichen_350.svg", -w => 16, -h => 16, -persistent => 1))],
+				  'p', "$main::datadir/zebrastreifen",
 				  above => $str_layer_level,
 				 ),
-		layer_checkbutton('Ortsschilder', 'p',
-				  "$main::datadir/ortsschilder",
+		layer_checkbutton([$do_compound->('Ortsschilder', main::load_photo($mf, "misc/verkehrszeichen/Zeichen_310_leer.svg", -w => 16, -h => 16, -persistent => 1))],
+				  'p', "$main::datadir/ortsschilder",
 				  maybe_orig_file => 1,
 				  above => $str_layer_level,
 				 ),
-		layer_checkbutton('routing_helper', 'str',
-				  'routing_helper',
+		layer_checkbutton([$do_compound->('routing_helper')],
+				  'str', 'routing_helper',
 				  maybe_orig_file => 1,
 				  above => $str_layer_level,
 				 ),
-		[Button => "gesperrt_car", -command => sub { add_new_nonlazy_maybe_orig_layer("sperre", "gesperrt_car") }],
+		[Button => $do_compound->("gesperrt_car", $images{car_cross}), -command => sub { add_new_nonlazy_maybe_orig_layer("sperre", "gesperrt_car") }],
 ## XXX no support for "sperre" type yet:
-#		layer_checkbutton('gesperrt_car', 'sperre',
-#		  		  'gesperrt_car,
+#		layer_checkbutton([$do_compound->('gesperrt_car', $images{car_cross})]
+#				  'sperre', 'gesperrt_car,
 #				  maybe_orig_file => 1),
-		layer_checkbutton('brunnels', 'str',
-				  "$main::datadir/brunnels",
+		layer_checkbutton([$do_compound->('brunnels', $images{bridge})],
+				  'str', "$main::datadir/brunnels",
 				  maybe_orig_file => 1),
-		layer_checkbutton('geocoded images', 'str',
-				  "$ENV{HOME}/.bbbike/geocoded_images.bbd",
+		layer_checkbutton([$do_compound->('geocoded images', $images{camera})],
+				  'str', "$ENV{HOME}/.bbbike/geocoded_images.bbd",
 				  above => $str_layer_level,
 				 ),
-		[Button => "today's geocoded images", -command => sub { add_todays_geocoded_images() }],
-		layer_checkbutton('fragezeichen-outdoor-nextcheck', 'str',
-				  "$bbbike_rootdir/tmp/fragezeichen-outdoor-nextcheck.bbd",
+		[Button => $do_compound->("today's geocoded images", $images{camera}), -command => sub { add_todays_geocoded_images() }],
+		layer_checkbutton([$do_compound->('fragezeichen-outdoor-nextcheck')],
+				  'str', "$bbbike_rootdir/tmp/fragezeichen-outdoor-nextcheck.bbd",
 				  below_above_cb => sub {
 				      $main::edit_normal_mode ? (below => $str_layer_level) : (above => $str_layer_level)
 				  },
 				 ),
-		layer_checkbutton('fragezeichen-outdoor', 'str',
-				  "$bbbike_rootdir/tmp/fragezeichen-outdoor.bbd",
+		layer_checkbutton([$do_compound->('fragezeichen-outdoor')],
+				  'str', "$bbbike_rootdir/tmp/fragezeichen-outdoor.bbd",
 				  below_above_cb => sub {
 				      $main::edit_normal_mode ? (below => $str_layer_level) : (above => $str_layer_level)
 				  },
 				 ),
-		layer_checkbutton('fragezeichen-outdoor-nextcheck-categorized', 'str',
-				  "$bbbike_rootdir/tmp/fragezeichen-outdoor-nextcheck-categorized.bbd",
+		layer_checkbutton([$do_compound->('fragezeichen-outdoor-nextcheck-categorized')],
+				  'str', "$bbbike_rootdir/tmp/fragezeichen-outdoor-nextcheck-categorized.bbd",
 				  below_above_cb => sub {
 				      $main::edit_normal_mode ? (below => $str_layer_level) : (above => $str_layer_level)
 				  },
 				 ),
-		layer_checkbutton('fragezeichen-outdoor-categorized', 'str',
-				  "$bbbike_rootdir/tmp/fragezeichen-outdoor-categorized.bbd",
+		layer_checkbutton([$do_compound->('fragezeichen-outdoor-categorized')],
+				  'str', "$bbbike_rootdir/tmp/fragezeichen-outdoor-categorized.bbd",
 				  below_above_cb => sub {
 				      $main::edit_normal_mode ? (below => $str_layer_level) : (above => $str_layer_level)
 				  },
 				 ),
-		layer_checkbutton('fragezeichen-indoor-nextcheck', 'str',
-				  "$bbbike_rootdir/tmp/fragezeichen-indoor-nextcheck.bbd"),
-		layer_checkbutton('fragezeichen-nextcheck', 'str',
-				  "$bbbike_rootdir/tmp/fragezeichen-nextcheck.bbd"),
-		layer_checkbutton('Unique matches', 'str',
-				  "$bbbike_rootdir/tmp/unique-matches.bbd",
+		layer_checkbutton([$do_compound->('fragezeichen-indoor-nextcheck')],
+				  'str', "$bbbike_rootdir/tmp/fragezeichen-indoor-nextcheck.bbd"),
+		layer_checkbutton([$do_compound->('fragezeichen-nextcheck')],
+				  'str', "$bbbike_rootdir/tmp/fragezeichen-nextcheck.bbd"),
+		layer_checkbutton([$do_compound->('Unique matches')],
+				  'str', "$bbbike_rootdir/tmp/unique-matches.bbd",
 				  above => $str_layer_level,
 				 ),
-		[Cascade => 'Unique matches since year...', -menuitems =>
+		[Cascade => $do_compound->('Unique matches since year...'), -menuitems =>
 		 [
 		  map {
 		      my $year = $_;
@@ -347,26 +444,71 @@ EOF
 		  } @acc_cat_split_streets_years,
 		 ],
 		],
-		layer_checkbutton('Weighted matches', 'str',
-				  "$bbbike_rootdir/tmp/weighted-matches.bbd",
+		layer_checkbutton([$do_compound->('Weighted matches')],
+				  'str', "$bbbike_rootdir/tmp/weighted-matches.bbd",
 				  above => $str_layer_level,
 				  Width => undef, # XXX weighted-matches.desc sets its own widths, but why it isn't winning?
 				 ),
-		[Button => "Abdeckung",
+		[Button => $do_compound->("Abdeckung"),
 		 -command => sub {
 		     local $main::p_draw{'pp-all'} = 1;
 		     add_new_layer("str", "$bbbike_rootdir/misc/abdeckung.bbd");
 		     below => '*landuse*',
 		 }
 		],
-		layer_checkbutton('Exits (ÖPNV)', 'str',
-				  "$main::datadir/exits",
+		layer_checkbutton([$do_compound->('Neue Sehenswürdigkeiten')],
+				  'str', "$bbbike_auxdir/images/sehenswuerdigkeit_img/bw/test.bbd"),
+		layer_checkbutton([$do_compound->('Exits (ÖPNV)')],
+				  'str', "$main::datadir/exits",
 				  maybe_orig_file => 1),
-		layer_checkbutton('Kneipen/Cafes', 'str',
-				  "$bbbike_rootdir/data_berlin_osm/kneipen"),
-		layer_checkbutton('Restaurants', 'str',
-				  "$bbbike_rootdir/data_berlin_osm/restaurants"),
-		[Button => "Current route", -command => sub { add_current_route_as_layer() }],
+		layer_checkbutton([$do_compound->('Kneipen/Cafes', main::load_photo($mf, 'glas', -persistent => 1))],
+				  'str', "$bbbike_rootdir/data_berlin_osm/kneipen"),
+		layer_checkbutton([$do_compound->('Restaurants', main::load_photo($mf, 'essen', -persistent => 1))],
+				  'str', "$bbbike_rootdir/data_berlin_osm/restaurants"),
+		[Button => $do_compound->("Current route"), -command => sub { add_current_route_as_layer() }],
+		[Cascade => $do_compound->('Berlin/Potsdam coords'), -menuitems =>
+		 [
+		  [Button => "Add Berlin.coords.data",
+		   -command => sub { add_coords_data("Berlin.coords.bbd") },
+		  ],
+# 		  [Button => "Add Berlin.coords.data with labels",
+# 		   -command => sub { add_coords_data("Berlin.coords.bbd", 1) },
+# 		  ],
+		  [Button => "Add Berlin-by-citypart data",
+		   -command => sub { choose_Berlin_by_data("$bbbike_rootdir/tmp/Berlin.coords-by-citypart") },
+		  ],
+		  [Button => "Add Berlin-by-zip data",
+		   -command => sub { choose_Berlin_by_data("$bbbike_rootdir/tmp/Berlin.coords-by-zip") },
+		  ],
+		  [Button => "Add Potsdam.coords.data",
+		   -command => sub { add_coords_data("Potsdam.coords.bbd") },
+		  ],
+# 		  [Button => "Add Potsdam.coords.data with labels",
+# 		   -command => sub { add_coords_data("Potsdam.coords.bbd", 1) },
+# 		  ],
+		 ]
+		],
+		[Cascade => $do_compound->("VMZ-Detailnetz", $images{VIZ}), -menuitems =>
+		 [	
+		  layer_checkbutton('strassen', 'str',
+				    "$bbbike_auxdir/vmz/bbd/strassen",
+				    below => $str_layer_level,
+				   ),
+		  [Button => 'gesperrt', -command => sub { add_new_nonlazy_layer('sperre', "$bbbike_auxdir/vmz/bbd/gesperrt") }],
+		  layer_checkbutton('qualitaet', 'str',
+				    "$bbbike_auxdir/vmz/bbd/qualitaet_s",
+				    above => $str_layer_level,
+				   ),
+		  layer_checkbutton('radwege', 'str',
+				    "$bbbike_auxdir/vmz/bbd/radwege",
+				    above => $str_layer_level,
+				   ),
+		  layer_checkbutton('ampeln', 'str', # yes, str, otherwise symbol is not plotted
+				    "$bbbike_auxdir/vmz/bbd/ampeln",
+				    above => $str_layer_level,
+				   ),
+		 ],
+		],
 	       ],
 	      ],
 	      [Cascade => $do_compound->('OSM Live data', $MultiMap::images{OpenStreetMap}), -menuitems =>
@@ -440,56 +582,12 @@ EOF
 		},
 	       ]
 	      ],
-	      [Cascade => $do_compound->('Berlin/Potsdam coords'), -menuitems =>
-	       [
-		[Button => "Add Berlin.coords.data",
-		 -command => sub { add_coords_data("Berlin.coords.bbd") },
-		],
-# 		[Button => "Add Berlin.coords.data with labels",
-# 		 -command => sub { add_coords_data("Berlin.coords.bbd", 1) },
-# 		],
-		[Button => "Add Berlin-by-citypart data",
-		 -command => sub { choose_Berlin_by_data("$bbbike_rootdir/tmp/Berlin.coords-by-citypart") },
-		],
-		[Button => "Add Berlin-by-zip data",
-		 -command => sub { choose_Berlin_by_data("$bbbike_rootdir/tmp/Berlin.coords-by-zip") },
-		],
-		[Button => "Add Potsdam.coords.data",
-		 -command => sub { add_coords_data("Potsdam.coords.bbd") },
-		],
-# 		[Button => "Add Potsdam.coords.data with labels",
-# 		 -command => sub { add_coords_data("Potsdam.coords.bbd", 1) },
-# 		],
-	       ]
-	      ],
-	      [Button => $do_compound->('VMZ'),
+	      [Button => $do_compound->('VMZ', $images{VIZ}),
 	       -command => sub { newvmz_process() },
 	      ],
 	      [Button => $do_compound->("Show recent VMZ diff"),
 	       -command => sub { show_new_vmz_diff() },
 	      ],
-	      [Cascade => $do_compound->("VMZ-Detailnetz"), -menuitems =>
-	       [
-		layer_checkbutton('strassen', 'str',
-				  "$bbbike_auxdir/vmz/bbd/strassen",
-				  below => $str_layer_level,
-				 ),
-		[Button => 'gesperrt', -command => sub { add_new_nonlazy_layer('sperre', "$bbbike_auxdir/vmz/bbd/gesperrt") }],
-		layer_checkbutton('qualitaet', 'str',
-				  "$bbbike_auxdir/vmz/bbd/qualitaet_s",
-				  above => $str_layer_level,
-				 ),
-		layer_checkbutton('radwege', 'str',
-				  "$bbbike_auxdir/vmz/bbd/radwege",
-				  above => $str_layer_level,
-				 ),
-		layer_checkbutton('ampeln', 'str', # yes, str, otherwise symbol is not plotted
-				  "$bbbike_auxdir/vmz/bbd/ampeln",
-				  above => $str_layer_level,
-				 ),
-	       ],
-	      ],
-	      ($main::devel_host ? [Cascade => $do_compound->("Karte")] : ()),
 	      [Button => $do_compound->("Mark Layer"),
 	       -command => sub { mark_layer_dialog() },
 	      ],
@@ -583,6 +681,24 @@ EOF
 	      [Button => $do_compound->("Multi-page PDF"),
 	       -command => sub { multi_page_pdf() },
 	      ],
+	      [Cascade => $do_compound->("Development"), -menuitems =>
+	       [
+		[Button => "Show Karte canvas items",
+		 -command => sub {
+		     my $wd = _get_tk_widgetdump();
+		     $Tk::WidgetDump::ref2widget{$main::c} = $main::c; # XXX hack
+		     $wd->canvas_dump($main::c);
+		 },
+		],
+		[Button => "Show Karte canvas bindings",
+		 -command => sub {
+		     my $wd = _get_tk_widgetdump();
+		     $Tk::WidgetDump::ref2widget{$main::c} = $main::c; # XXX hack
+		     $wd->show_bindings($main::c);
+		 },
+		],
+	       ]
+	      ],
 	      "-",
 	      [Cascade => $do_compound->("Rare or old"), -menu => $rare_or_old_menu],
 	      "-",
@@ -608,9 +724,9 @@ EOF
     my $menu = $mmf->Subwidget(__PACKAGE__ . "_menu_menu");
     $menu->configure(-disabledforeground => "black");
     if ($main::devel_host) {
-	my $map_menuitem = $menu->index("Karte");
-	$menu->entryconfigure($map_menuitem,
-			      -menu => main::get_map_button_menu($menu));
+	my $map_menuitem = $rare_or_old_menu->index("Karte");
+	$rare_or_old_menu->entryconfigure($map_menuitem,
+					  -menu => main::get_map_button_menu($menu));
     }
 }
 
@@ -1029,6 +1145,24 @@ sub _vmz_lbvs_splitter {
 
 sub _vmz_lbvs_columnwidths {
     (200, 1200, 200, 100);
+}
+
+sub select_vmz_lbvs_diff {
+    require Tk::PathEntry;
+    my $t = $main::top->Toplevel(-title => "Select VMZ file");
+    my $file;
+    my $weiter = 0;
+    my $pe = $t->PathEntry
+	(-textvariable => \$file,
+	 -selectcmd => sub { $weiter = 1 },
+	 -cancelcmd => sub { $weiter = -1 },
+	)->pack(-fill => "x", -expand => 1, -side => "left");
+    $pe->focus;
+    $t->waitVariable(\$weiter);
+    $t->destroy;
+    if ($weiter == 1 && $file) {
+	show_any_diff($file, "vmz");
+    }
 }
 
 sub show_vmz_diff {
@@ -2655,22 +2789,27 @@ sub fragezeichen_on_route {
 sub multi_page_pdf {
     eval {
 	require File::Temp;
+	require BBBikeProcUtil;
 	my($tmp1fh,$tmp1file) = File::Temp::tempfile(SUFFIX => ".bbr", UNLINK => 1) or die $!;
 	main::load_save_route(1, $tmp1file);
 	my @cmd = ("$bbbike_rootdir/miscsrc/split-route-bboxes.pl", $tmp1file, "-view");
-	# XXX hack for XML::LibXML & GD problem under freebsd 9.0
-	if ($^O eq 'freebsd') {
-	    unshift @cmd, "perl5.8.9";
-	}
-	if (fork == 0) {
-	    exec @cmd;
-	    warn "Something failed while running @cmd: $!";
-	    CORE::exit(1);
-	}
+	BBBikeProcUtil::double_forked_exec(@cmd);
     };
     if ($@) {
 	main::status_message("An error happened: $@", "error");
     }
+}
+
+use vars qw($WIDGETDUMP_W);
+sub _get_tk_widgetdump {
+    if (Tk::Exists($WIDGETDUMP_W)) {
+	return $WIDGETDUMP_W;
+    }
+    require Tk::WidgetDump;
+    Tk::WidgetDump->VERSION('1.38_51');
+    $WIDGETDUMP_W = $main::top->WidgetDump;
+    $WIDGETDUMP_W->iconify;
+    $WIDGETDUMP_W;
 }
 
 1;

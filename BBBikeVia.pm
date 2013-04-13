@@ -155,12 +155,12 @@ sub BBBikeVia::move_via {
     execute_and_set_map_mode_deactivate
 	(sub {
 	     for (qw(start via ziel)) {
-		 $c->bind($_."flag", "<ButtonPress-1>", "");
+		 $c->bind($_."flag", BBBikeVia::_button1(), "");
 	     }
 	 }
 	);
     for (qw(start via ziel)) {
-	$c->bind($_."flag", "<ButtonPress-1>" => [\&BBBikeVia::move_via_2, $_]);
+	$c->bind($_."flag", BBBikeVia::_button1() => [\&BBBikeVia::move_via_2, $_]);
     }
     status_message(M"Zu verschiebendes Via bzw. Start oder Ziel wählen", "info");
 }
@@ -179,7 +179,7 @@ sub BBBikeVia::move_via_2 {
     $set_route_point{$map_mode} = \&BBBikeVia::move_via_action;
     $alt_set_route_point{$map_mode} = \&BBBikeVia::move_via_alt_action;
     for (qw(start via ziel)) {
-	$c->bind($_."flag", "<ButtonPress-1>" => "");
+	$c->bind($_."flag", BBBikeVia::_button1() => "");
     }
     my $point_text = !defined $type ? M("Punkt zum Verschieben wählen") : Mfmt("Punkt wählen, wohin %s verschoben werden soll", ($type eq 'start' ? M("der Start") : M("das " . ucfirst($type))));
     status_message($point_text, "info");
@@ -230,7 +230,7 @@ sub BBBikeVia::add_via {
     execute_and_set_map_mode_deactivate
 	(sub {
 	     for (qw(start via ziel)) {
-		 $c->bind($_."flag", "<ButtonPress-1>", "");
+		 $c->bind($_."flag", BBBikeVia::_button1(), "");
 	     }
 	     BBBikeVia::unmark_all();
 	 }
@@ -257,8 +257,8 @@ sub BBBikeVia::add_via_2 {
 	return BBBikeVia::add_via_cont(1);
     }
 
-    my @tags = $c->gettags("current");
-    if (grep { $_ eq 'route' } @tags) {
+    my($found_tag, @tags) = find_below($c, 'route');
+    if ($found_tag) {
 	# Click on route
 	if ($tags[1] =~ /route-(\d+)/) {
 	    my $route_nr = $1;
@@ -291,7 +291,7 @@ sub BBBikeVia::add_via_2 {
 sub BBBikeVia::add_via_2_2 {
     set_cursor("via_add_nb1");
     for (qw(start via ziel)) {
-	$c->bind($_."flag", "<ButtonPress-1>" => \&BBBikeVia::add_via_3);
+	$c->bind($_."flag", BBBikeVia::_button1() => \&BBBikeVia::add_via_3);
     }
     BBBikeVia::unmark_neighbours();
     status_message(M"Ersten Nachbarn (Start, Via oder Ziel) wählen", "info");
@@ -302,7 +302,7 @@ sub BBBikeVia::add_via_3 {
     return if !defined $BBBikeVia::add_nb1_index;
     set_cursor("via_add_nb2");
     for (qw(start via ziel)) {
-	$c->bind($_."flag", "<ButtonPress-1>" => \&BBBikeVia::add_via_action);
+	$c->bind($_."flag", BBBikeVia::_button1() => \&BBBikeVia::add_via_action);
     }
     my $common = M"Zweiten Nachbarn (Start, Via oder Ziel) wählen";
     if ($BBBikeVia::add_nb1_index == 0) {
@@ -406,10 +406,10 @@ sub BBBikeVia::delete_via {
     };
     execute_and_set_map_mode_deactivate
 	(sub {
-	     $c->bind("viaflag", "<ButtonPress-1>", "");
+	     $c->bind("viaflag", BBBikeVia::_button1(), "");
 	 }
 	);
-    $c->bind("viaflag", "<ButtonPress-1>" => \&BBBikeVia::delete_action);
+    $c->bind("viaflag", BBBikeVia::_button1() => \&BBBikeVia::delete_action);
     status_message(M"Zu löschenden Via-Punkt auswählen", "info");
 }
 
@@ -426,14 +426,16 @@ sub BBBikeVia::delete_action {
 ######################################################################
 
 sub BBBikeVia::_find_point_from_tags {
-    my @tags = $c->gettags("current");
-    for my $tag (@tags) {
-	if ($tag =~ /^via-(\d+)/) {
-	    return $1;
-	} elsif ($tag eq 'startflag') {
-	    return 0;
-	} elsif ($tag eq 'zielflag') {
-	    return $#search_route_points;
+    my($found_item, @tags) = find_below_rx($c, ['^via-\d+', '^(?:start|ziel)flag$']);
+    if (defined $found_item) {
+	for my $tag (@tags) {
+	    if ($tag =~ /^via-(\d+)/) {
+		return $1;
+	    } elsif ($tag eq 'startflag') {
+		return 0;
+	    } elsif ($tag eq 'zielflag') {
+		return $#search_route_points;
+	    }
 	}
     }
     warn "Can't find point in @tags";
@@ -451,6 +453,15 @@ sub BBBikeVia::_get_tag_name_from_index {
     }
 }
 
+sub BBBikeVia::_button1 {
+    if ($main::MM_DRAG_IS_OBSOLETE) {
+	'<ButtonRelease-1>';
+    } else {
+	'<ButtonPress-1>';
+    }
+}
+
+$main::MM_DRAG_IS_OBSOLETE = $main::MM_DRAG_IS_OBSOLETE if 0; # cease -w
 
 1;
 

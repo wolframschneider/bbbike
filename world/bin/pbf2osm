@@ -3,6 +3,7 @@
 #
 # pbf2osm - convert PBF format to OSM XML
 
+PATH=/usr/local/bin:/bin:/bin:/usr/bin; export PATH
 set -e
 
 compress=""
@@ -12,11 +13,15 @@ osm2garmin=`dirname $0`/osm2garmin
 osm2shape=`dirname $0`/osm2shape
 osm2osmand=`dirname $0`/osm2osmand
 osm2navit=`dirname $0`/osm2navit
+osm2mapsforge=`dirname $0`/osm2mapsforge
 osm2o5m=osmconvert
 
 # max. file size in KB
 : ${max_file_size_garmin=2950000}
 : ${max_file_size_osmand=600000}
+: ${max_cpu_time=7200}
+
+ulimit -t $max_cpu_time
 
 xz=`which xz | head -n 1`
 xz_opt=-2
@@ -46,6 +51,8 @@ case $1 in
   -garmin-osm | --garmin-osm ) shift; compress=garmin; garmin_style=osm ;;
   -garmin-cycle | --garmin-cycle ) shift; compress=garmin; garmin_style=cycle ;;
   -garmin-leisure | --garmin-leisure ) shift; compress=garmin; garmin_style=leisure ;;
+  
+  -mapsforge-osm | --mapsforge-osm ) shift; compress=mapsforge; mapsforge_style=osm ;;
 esac
 
 file=$1
@@ -123,6 +130,7 @@ else
 	shape )  $osm2shape  "$file" "$city" ;;
        	osmand ) $osm2osmand "$file" "$city" ;;
        	navit )  $osm2navit  "$file" "$city" ;;
+	mapsforge ) $osm2mapsforge "$file" "$mapsforge_style" "$city" ;;
 
 	* ) echo >& 2 "Oops, unknown '$compress'"; exit 2 ;;
     esac

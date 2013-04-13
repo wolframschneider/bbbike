@@ -36,7 +36,7 @@ if ( !-f $pbf_file ) {
 
 my $pbf_md5 = "6dc9df64ddc42347bbb70bc134b4feda";
 
-# min size of garmin zip file
+# min size of zip file
 my $min_size = 200_000;
 
 sub md5_file {

@@ -33,7 +33,7 @@ is( $tile->area_size( 0.1,  0.1,  2.9,  2.9 ), 9 );
 is( $tile->area_size( 0.1,  0.1,  2.9,  2.9,  TileSize::FRACTAL_100 ), 9 );
 is( $tile->area_size( -2.9, 0.1,  -0.1, 2.9,  TileSize::FRACTAL_100 ), 9 );
 is( $tile->area_size( -2.9, -2.9, -0.1, -0.1, TileSize::FRACTAL_100 ), 9 );
-is( $tile->area_size( -1,   -1,   -0,   -2,   TileSize::FRACTAL_100 ), 0 );
+is( $tile->area_size( -1,   -1,   -0,   -0,   TileSize::FRACTAL_100 ), 1 );
 is( $tile->area_size( 0,    50,   15,   54,   TileSize::FRACTAL_100 ), 60 );
 
 # dummy
@@ -99,21 +99,70 @@ cmp_ok( $tile->area_size( +180, 0,  -179, 1, TileSize::FRACTAL_100 ), "==", 1 );
 cmp_ok( $tile->area_size( +179, -1, -179, 1, TileSize::FRACTAL_100 ), "==", 4 );
 
 # illegal query
-cmp_ok( $tile->area_size( +179, 0, +178, 1, TileSize::FRACTAL_100 ), "==", 0 );
-cmp_ok( $tile->area_size( -178, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 0 );
+cmp_ok( $tile->area_size( +179, 0, +178, 1, TileSize::FRACTAL_100 ), "==", -1 );
+cmp_ok( $tile->area_size( -178, 0, -179, 1, TileSize::FRACTAL_100 ), "==", -1 );
 cmp_ok( $tile->area_size( -179.5, 0, -179, 1, TileSize::FRACTAL_100 ), "==",
     1 );
 cmp_ok( $tile->area_size( +179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 1 );
 
 cmp_ok( $tile->area_size( -180, 0, -179, 1, TileSize::FRACTAL_100 ), "==", 1 );
-cmp_ok( $tile->area_size( -179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 0 );
+cmp_ok( $tile->area_size( -179, 0, +180, 1, TileSize::FRACTAL_100 ), "==", -1 );
 
-cmp_ok( $tile->area_size( -180, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 0 );
+cmp_ok( $tile->area_size( -180, 0, +180, 1, TileSize::FRACTAL_100 ), "==", -1 );
 cmp_ok( $tile->area_size( +180, 0, +180, 1, TileSize::FRACTAL_100 ), "==", 0 );
+
+cmp_ok( $tile->area_size( 0, 89,  1, 91,  TileSize::FRACTAL_100 ), "==", -1 );
+cmp_ok( $tile->area_size( 0, 91,  1, 92,  TileSize::FRACTAL_100 ), "==", -1 );
+cmp_ok( $tile->area_size( 0, -91, 1, -90, TileSize::FRACTAL_100 ), "==", -1 );
+cmp_ok( $tile->area_size( 0, -89, 1, -92, TileSize::FRACTAL_100 ), "==", -1 );
+
+cmp_ok( $tile->area_size( -90.1, 0, 81, -89, TileSize::FRACTAL_100 ), "==",
+    -1 );
+cmp_ok( $tile->area_size( 359, 0, 360, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( 359, 0, 361, 1, TileSize::FRACTAL_100 ), "==", -1 );
+cmp_ok( $tile->area_size( 369, 0, 391, 1, TileSize::FRACTAL_100 ), "==", -1 );
+cmp_ok( $tile->area_size( 512, 512, 512, 512, TileSize::FRACTAL_100 ),
+    "==", -1 );
+cmp_ok( $tile->area_size( -512, -512, -512, -512, TileSize::FRACTAL_100 ),
+    "==", -1 );
+
+# fixable
+cmp_ok( $tile->area_size( -280, 0, -279, 1, TileSize::FRACTAL_100 ), "==", 1 );
+cmp_ok( $tile->area_size( 280,  0, 281,  1, TileSize::FRACTAL_100 ), "==", 1 );
 
 # test with real planet.osm data
 $tile =
   new TileSize( 'debug' => 0, 'database' => "world/etc/tile/tile-pbf.csv" );
-is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 165656 );
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 164172 );
+
+$tile = new TileSize(
+    'debug'    => 0,
+    'database' => "world/etc/tile/tile-garmin-cycle.zip.csv"
+);
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 143032 );
+
+$tile = new TileSize(
+    'debug'    => 0,
+    'database' => "world/etc/tile/tile-mapsforge-osm.zip.csv"
+);
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 87116 );
+
+$tile = new TileSize(
+    'debug'    => 0,
+    'database' => "world/etc/tile/tile-navit.zip.csv"
+);
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 136964 );
+
+$tile =
+  new TileSize( 'debug' => 0, 'database' => "world/etc/tile/tile-obf.zip.csv" );
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 227620 );
+
+$tile =
+  new TileSize( 'debug' => 0, 'database' => "world/etc/tile/tile-osm.gz.csv" );
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 335848 );
+
+$tile =
+  new TileSize( 'debug' => 0, 'database' => "world/etc/tile/tile-shp.zip.csv" );
+is( int( $tile->area_size( -77.36, 39.92, -70.54, 41.27 ) ), 194908 );
 
 __END__
