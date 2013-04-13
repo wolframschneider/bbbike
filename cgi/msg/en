@@ -273,5 +273,9 @@ return {
     "umdrehen"                                        => "turn around",
     "Windspitzen' => 'Wind gusts",
     "mittlere Windgeschwindigkeit' => 'average wind speed",
+
+    "alter Name" => "old name",
+    "alter Name gültig" => "old name valid",
+
 };
 

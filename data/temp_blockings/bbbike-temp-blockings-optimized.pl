@@ -2210,8 +2210,9 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'from' => undef,
          'id' => 1826,
          'data' => '	2::night 8825,14401 8868,14442 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
-	2::night 8913,14485 9169,14189 9176,14181 9147,14151 9224,14169
-	2::night 9169,14189 9144,14169 8868,14442
+	2::night 8913,14485 9119,14255 9175,14193 9181,14186 9147,14151 9224,14169
+	2::night 9175,14193 9144,14169 9081,14232 8868,14442
+	2::night 9119,14255 9081,14232 8992,14176
 ',
          'type' => 'gesperrt'
        },
@@ -2278,7 +2279,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Breslauer Platz: Wochenmarkt Mittwoch 8-13 Uhr, Donnerstag 12-17 Uhr, Samstag 8-14 Uhr, Behinderungen möglich',
          'from' => undef,
          'id' => 1884,
-         'data' => '	q4::temp:clock 5902,7334 5810,7337 5817,7223
+         'data' => '	q4::temp:clock 5897,7337 5810,7337 5817,7223
 ',
          'type' => 'gesperrt'
        },
@@ -3016,22 +3017,7 @@ userdel	q4::temp 11333,8582 11255,8591 11193,8568 11133,8560
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_019212',
-         'until' => 1380636000,
-         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schwedter Str., Fahrbahn ist manchmal gesperrt, bis Herbst 2013',
-         'from' => 1348076973,
-         'id' => 2308,
-         'data' => '#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/kastanienallee_pb.html
-#: note: nur die halbe Strecke ist gesperrt, deshalb q3
-#: note: am 2012-09-19 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
-#: note: am 2012-10-18 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
-#: note: am 2012-10-31 am südlichen Ende vorbeigefahren, möglicherweise war heute die Schranke nicht aktiv
-#: note: am 2013-02-11 geprüft, keine Schranke, aber nur für "Linienverkehr frei"
-userdel	q3::inwork 10530,14452 10723,14772
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -3109,7 +3095,7 @@ userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,1216
          'text' => 'Sredzkistr. zwischen Knaackstr. und Hagenauer Str.: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
          'from' => undef,
          'id' => 2337,
-         'data' => '#: last_checked: 2013-03-26
+         'data' => '#: last_checked: 2013-04-11
 #: note: einige Meter östlich der Knaackstr. gesperrt
 userdel	q3::inwork 11101,14768 11187,14763
 ',
@@ -3157,11 +3143,11 @@ userdel	q3::inwork 11101,14768 11187,14763
          'text' => 'Park am Gleisdreieck, Wege im Westpark: wegen Bauarbeiten können die Wege unpassierbar sein',
          'from' => undef,
          'id' => 2365,
-         'data' => '#: last_checked: 2013-02-06 vvv
-userdel	2::inwork 8309,10368 8278,10384 8296,10438 8328,10585 8332,10637 8341,10721
+         'data' => '#: last_checked: 2013-04-08 vvv
+userdel	2::inwork 8309,10368 8278,10384 8296,10438 8328,10585 8332,10637 8341,10721 8318,10738
 userdel	2::inwork 8328,10585 8270,10613
-userdel	2::inwork 8318,10738 8270,10613 8264,10460 8239,10413 8191,10346 8145,10090
-userdel	2::inwork 8278,10384 8263,10349 8258,10338 8249,10313 8260,10183 8211,10083 8145,10090 8042,10084 8040,10076 8035,10075 8027,10076 8035,10075 8027,10076
+userdel	2::inwork 8336,10829 8318,10738 8270,10613 8264,10460 8239,10413 8191,10346 8180,10282 8145,10090
+userdel	2::inwork 8278,10384 8263,10349 8258,10338 8249,10313 8253,10265 8260,10183 8211,10083 8145,10090 8042,10084 8040,10076 8035,10075 8027,10076 8035,10075 8027,10076
 userdel	2::inwork 8263,10349 8315,10347 8333,10167 8360,10133
 userdel	2::inwork 8270,10613 8199,10634
 #: last_checked ^^^
@@ -3275,7 +3261,7 @@ userdel	q4::inwork; 13339,7452 13303,7622
          'text' => 'Sredzkistr./Husemannstr.: Kreuzungsbereich gesperrt, Ausweichen auf Gehweg',
          'from' => undef,
          'id' => 2399,
-         'data' => '#: last_checked: 2013-03-26 vvv
+         'data' => '#: last_checked: 2013-04-11 vvv
 #: XXX je 30 Meter vor und hinter der Kreuzung ist gesperrt vvv
 userdel	q2::inwork 11436,14741 11271,14755
 userdel	q3::inwork 11271,14755 11187,14763
@@ -3408,16 +3394,7 @@ userdel	q4::inwork; 13474,8060 13444,7879
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_019680',
-         'until' => 1365184800,
-         'text' => 'Hüttenweg (Grunewald): Brückenbauarbeiten, Vollsperrung bis Freitag, 20:00',
-         'from' => 1364875200,
-         'id' => 2418,
-         'data' => 'userdel	2::inwork -739,6838 -927,6888
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1367186399,
          'text' => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 26.4.2013 bis 28.4.2013 ',

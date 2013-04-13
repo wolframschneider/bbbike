@@ -81,7 +81,7 @@ COMPUTED_TARGETS+=	temp_blockings/bbbike-temp-blockings-optimized.pl
 COMPUTED_TARGETS+=	wasserstrassen-lowres
 COMPUTED_TARGETS+=	kneipen
 COMPUTED_TARGETS+=	fragezeichen-cooked
-COMPUTED_TARGETS+=	inaccessible_strassen inaccessible_landstrassen
+COMPUTED_TARGETS+=	inaccessible_strassen inaccessible_landstrassen oldnames
 
 # These are not computed, but useful mentioned here for fixing
 # permissions
@@ -89,7 +89,7 @@ NON_TARGETS=		upgrade_scope_hint
 
 COOKED_TARGETS=		strassen-cooked landstrassen-cooked landstrassen2-cooked
 TARGETS+=	${SOURCE_TARGETS} ${COOKED_TARGETS} ${COMPUTED_TARGETS}
-BBD_TARGETS=	${TARGETS:S/^ampelschaltung$//:S/^multi_bez_str$//:S/^temp_blockings\/bbbike-temp-blockings-optimized.pl//}
+BBD_TARGETS=	${TARGETS:S/^ampelschaltung$//:S/^multi_bez_str$//:S/^temp_blockings\/bbbike-temp-blockings-optimized.pl//:S/^oldnames$//}
 
 XXX_NON_OUTDOOR=	indoor prog checklater
 XXX_TARGETS=		outdoor ${XXX_NON_OUTDOOR}
@@ -718,6 +718,12 @@ kneipen:	kneipen.yml
 	mv $@~ $@
 	-@$(READONLY) $@
 
+oldnames:	strassen Berlin.coords.data
+	-@$(WRITEABLE) $@
+	${PERL} $(MISCSRCDIR)/oldname2plz > $@~
+	mv $@~ $@
+	-@$(READONLY) $@
+
 ######################################################################
 # DATA-SPECIFIC IMAGES
 SEHENSWUERDIGKEIT_IMG_PNG_SRC=	\
@@ -1104,7 +1110,8 @@ ${PERSISTENTTMPDIR}/my-upload-fragezeichen.wpt:	fragezeichen Makefile
 	    RESTRICT_BBOX="-8250,2025,-15000,-2675 16500,15375,4625,5984 26687,-316,9090,9005"
 	cp -pf /tmp/upload-restricted-fragezeichen.wpt $@
 
-temp_blockings/bbbike-temp-blockings-optimized.pl:	temp_blockings/bbbike-temp-blockings.pl .check_daily
+temp_blockings/bbbike-temp-blockings-optimized.pl:	temp_blockings/bbbike-temp-blockings.pl .check_daily \
+							strassen faehren landstrassen landstrassen2
 	-@$(WRITEABLE) $@
 	${PERL} $(MISCSRCDIR)/check_bbbike_temp_blockings \
 	    -action output_future_nonrecurring \

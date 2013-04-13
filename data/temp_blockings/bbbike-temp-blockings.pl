@@ -5180,7 +5180,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_84234_COPY_14',
        data  => <<EOF,
-userdel	1::inwork 5465,5726 5581,5741
+userdel	1::inwork 5464,5731 5581,5741
 EOF
      },
      { from  => 1153738269, # 2006-07-24 12:51
@@ -15578,8 +15578,9 @@ EOF
        recurring => 1,
        data  => <<EOF,
 	2::night 8825,14401 8868,14442 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
-	2::night 8913,14485 9169,14189 9176,14181 9147,14151 9224,14169
-	2::night 9169,14189 9144,14169 8868,14442
+	2::night 8913,14485 9119,14255 9175,14193 9181,14186 9147,14151 9224,14169
+	2::night 9175,14193 9144,14169 9081,14232 8868,14442
+	2::night 9119,14255 9081,14232 8992,14176
 EOF
      },
      { from  => 1249842805, # 2009-08-09 20:33
@@ -16069,7 +16070,7 @@ EOF
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
-	q4::temp:clock 5902,7334 5810,7337 5817,7223
+	q4::temp:clock 5897,7337 5810,7337 5817,7223
 EOF
      },
      { from  => 1254261600, # 2009-09-30 00:00
@@ -18111,7 +18112,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016077',
        data  => <<EOF,
-userdel	q4::inwork; -5030,13017 -4725,12883 -4277,12675 -4239,12626
+userdel	q4::inwork; -5030,13017 -4725,12883 -4494,12776 -4277,12675 -4239,12626
 EOF
      },
      { from  => 1273993200, # 2010-05-16 09:00
@@ -18208,7 +18209,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016121',
        data  => <<EOF,
-userdel	q4::inwork 7764,13236 7651,13447 7643,13461 7660,13506 7655,13539
+userdel	q4::inwork 7759,13246 7651,13447 7643,13461 7660,13506 7655,13539
 EOF
      },
      { from  => 1280985970, # 2010-08-05 07:26
@@ -19994,7 +19995,7 @@ userdel	q4::inwork 8634,13588 8626,13641 8619,13689
 EOF
      },
      { from  => 1348076973, # 1314604800, # 2011-08-29 10:00
-       until => 1380636000, # 2013-10-01 16:00, # 1347721200, # 2012-09-15 17:00
+       until => 1365706902, # 1380636000, # 2013-10-01 16:00, # 1347721200, # 2012-09-15 17:00
        text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schwedter Str., Fahrbahn ist manchmal gesperrt, bis Herbst 2013',
        type  => 'handicap',
        source_id => 'IM_019212',
@@ -20005,6 +20006,7 @@ EOF
 #: note: am 2012-10-18 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
 #: note: am 2012-10-31 am südlichen Ende vorbeigefahren, möglicherweise war heute die Schranke nicht aktiv
 #: note: am 2013-02-11 geprüft, keine Schranke, aber nur für "Linienverkehr frei"
+#: note: am 2013-04-11 geprüft: Radfahrer dürfen hier offiziel entlangfahren
 userdel	q3::inwork 10530,14452 10723,14772
 EOF
      },
@@ -20273,7 +20275,7 @@ EOF
        text  => 'Sredzkistr. zwischen Knaackstr. und Hagenauer Str.: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2013-03-26
+#: last_checked: 2013-04-11
 #: note: einige Meter östlich der Knaackstr. gesperrt
 userdel	q3::inwork 11101,14768 11187,14763
 EOF
@@ -20531,11 +20533,11 @@ EOF
        text  => 'Park am Gleisdreieck, Wege im Westpark: wegen Bauarbeiten können die Wege unpassierbar sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2013-02-06 vvv
-userdel	2::inwork 8309,10368 8278,10384 8296,10438 8328,10585 8332,10637 8341,10721
+#: last_checked: 2013-04-08 vvv
+userdel	2::inwork 8309,10368 8278,10384 8296,10438 8328,10585 8332,10637 8341,10721 8318,10738
 userdel	2::inwork 8328,10585 8270,10613
-userdel	2::inwork 8318,10738 8270,10613 8264,10460 8239,10413 8191,10346 8145,10090
-userdel	2::inwork 8278,10384 8263,10349 8258,10338 8249,10313 8260,10183 8211,10083 8145,10090 8042,10084 8040,10076 8035,10075 8027,10076 8035,10075 8027,10076
+userdel	2::inwork 8336,10829 8318,10738 8270,10613 8264,10460 8239,10413 8191,10346 8180,10282 8145,10090
+userdel	2::inwork 8278,10384 8263,10349 8258,10338 8249,10313 8253,10265 8260,10183 8211,10083 8145,10090 8042,10084 8040,10076 8035,10075 8027,10076 8035,10075 8027,10076
 userdel	2::inwork 8263,10349 8315,10347 8333,10167 8360,10133
 userdel	2::inwork 8270,10613 8199,10634
 #: last_checked ^^^
@@ -20686,7 +20688,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_019185',
        data  => <<EOF,
-userdel	q4::temp 5465,5726 5290,5704
+userdel	q4::temp 5464,5731 5280,5714
 EOF
      },
      { from  => 1347429180, # 2012-09-12 07:53
@@ -20858,7 +20860,7 @@ EOF
        text  => 'Sredzkistr./Husemannstr.: Kreuzungsbereich gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2013-03-26 vvv
+#: last_checked: 2013-04-11 vvv
 #: XXX je 30 Meter vor und hinter der Kreuzung ist gesperrt vvv
 userdel	q2::inwork 11436,14741 11271,14755
 userdel	q3::inwork 11271,14755 11187,14763
