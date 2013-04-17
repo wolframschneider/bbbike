@@ -153,7 +153,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $enable_input_colors
 	    $skip_second_page
 	    $bbbike_start_js_version $bbbike_css_version
-	    $use_file_cache $file_cache
+	    $use_file_cache $cache_entry
 	    $use_smart_app_banner
 	   );
 
