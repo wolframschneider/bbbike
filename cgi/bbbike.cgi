@@ -1510,7 +1510,10 @@ if ($use_file_cache) {
 	if ($cache_entry->exists_content) {
 	    my $meta = $cache_entry->get_meta;
 	    if ($meta) {
-		warn "DEBUG: Cache hit for " . $q->query_string; # if $debug;
+		if (1) { # $debug) {
+		    warn "DEBUG: Cache hit for " . $q->query_string . "\n";
+		    http_req_logging();
+		}
 		http_header(@{ $meta->{headers} || [] });
 		$cache_entry->stream_content;
 		my_exit(0);
@@ -1933,32 +1936,29 @@ sub choose_form {
 	# Überprüfen, ob eine in PLZ vorhandene Straße auch in
 	# Strassen vorhanden ist und ggfs. $....name setzen
 	if ($$nameref eq '' && $$tworef ne '') {
-	    my(@s) = split(/$delim/o, $$tworef);
-	    {
-		my($strasse, $bezirk, $plz) = @s;
-		warn "Wähle $type-Straße für $strasse/$bezirk (1st)\n" if $debug;
-		if ($bezirk =~ $outer_berlin_qr) {
-		    my $name = _outer_berlin_hack($strasse, $bezirk);
-		    if ($name) {
-			$$nameref = $name;
-			$q->param($type . 'plz', $plz);
+	    my($strasse, $bezirk, $plz) = split(/$delim/o, $$tworef);
+	    warn "Wähle $type-Straße für $strasse/$bezirk (1st)\n" if $debug;
+	    if ($bezirk =~ $outer_berlin_qr) {
+		my $name = _outer_berlin_hack($strasse, $bezirk);
+		if ($name) {
+		    $$nameref = $name;
+		    $q->param($type . 'plz', $plz);
+		}
+	    } else {
+		my $str = get_streets();
+		my $pos = $str->choose_street($strasse, $bezirk);
+		if (!defined $pos) {
+		    # Can't use upgrade_scope here:
+		    if ($str->{Scope} eq 'city') {
+			warn "Enlarge streets for umland\n" if $debug;
+			$q->param("scope", "region");
+			$str = get_streets_rebuild_dependents(); # XXX maybe wideregion too?
 		    }
-		} else {
-		    my $str = get_streets();
-		    my $pos = $str->choose_street($strasse, $bezirk);
-		    if (!defined $pos) {
-			# Can't use upgrade_scope here:
-			if ($str->{Scope} eq 'city') {
-			    warn "Enlarge streets for umland\n" if $debug;
-			    $q->param("scope", "region");
-			    $str = get_streets_rebuild_dependents(); # XXX maybe wideregion too?
-			}
-			$pos = $str->choose_street($strasse, $bezirk);
-		    }
-		    if (defined $pos) {
-			$$nameref = $str->get($pos)->[0];
-			$q->param($type . 'plz', $plz);
-		    }
+		    $pos = $str->choose_street($strasse, $bezirk);
+		}
+		if (defined $pos) {
+		    $$nameref = $str->get($pos)->[0];
+		    $q->param($type . 'plz', $plz);
 		}
 	    }
 	}
@@ -9413,6 +9413,14 @@ sub _match_to_cgival {
 sub _get_weekly_filecache { require BBBikeCGICache; BBBikeCGICache->new($Strassen::datadirs[0], _get_cache_prefix() . '_weekly', 'weekly') }
 sub _get_hourly_filecache { require BBBikeCGICache; BBBikeCGICache->new($Strassen::datadirs[0], _get_cache_prefix() . '_hourly', 'hourly') }
 sub _get_cache_prefix { $Strassen::Util::cacheprefix . ($is_beta ? '_beta' : '') . ($lang ? "_$lang" : '') }
+
+sub http_req_logging {
+    eval {
+	require JSON::XS;
+	warn "DEBUG: " . JSON::XS::encode_json({ map { ($_ => $q->http($_)) } $q->http }) . "\n";
+    };
+    warn $@ if $@;
+}
 
 ######################################################################
 #
