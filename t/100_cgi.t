@@ -58,7 +58,7 @@ if (defined $ENV{BBBIKE_TEST_CGIURL}) {
 
 my $cpt = Safe->new;
 
-my $test_file_cache = 1; # if specified, then some URLs will be fetched twice
+my $test_file_cache = 0; # if specified, then some URLs will be fetched twice
 my $do_display = 0;
 my $do_xxx;
 my $do_accept_gzip = 1;
