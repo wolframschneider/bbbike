@@ -7869,7 +7869,7 @@ sub etag {
 
 sub bbbike_result_js { $bbbike_html . "/bbbike_result.js" }
 
-# Write a HTTP header (always with Etag and Vary) and maybe enabled compression
+# Write a HTTP header (always with Vary) and maybe enabled compression
 sub http_header {
     my(%header_args) = @_;
 
@@ -7886,7 +7886,7 @@ sub http_header {
     }
 
     my @add_header_args;
-    push @add_header_args, etag(), (-Vary => "User-Agent");
+    push @add_header_args, (-Vary => "User-Agent");
     if ($q->param("as_attachment")) {
 	push @add_header_args, -Content_Disposition => "attachment;file=" . $q->param("as_attachment");
     }

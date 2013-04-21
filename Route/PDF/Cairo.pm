@@ -259,6 +259,11 @@ sub output {
     }
 
     for my $line (@lines) {
+	if ($y > DIN_A4_HEIGHT-$start_y-$start_y-10) {
+	    $cr->show_page;
+	    $y = $start_y;
+	}
+
 	my $x = $start_x;
 	my $col_i = 0;
 	my $max_y = 0;
@@ -277,10 +282,6 @@ sub output {
 	    $col_i++;
 	}
 	$y += $max_y;
-	if ($y > DIN_A4_HEIGHT-$start_y-$start_y-10) {
-	    $cr->show_page;
-	    $y = $start_y;
-	}
     }
 
     $cr->show_page;
