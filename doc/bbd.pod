@@ -214,8 +214,6 @@ proportionally to $line_width{default}. If it's six values, then this
 should represent the widths for the six standard scales defined by
 bbbike.
 
-XXX: The form with category is NYI!
-
 =item C<line_length: I<length>>
 
 =item C<line_length.I<category>: I<length>>
@@ -283,6 +281,12 @@ Define whether line items should be shortened at the end.
 
 XXX: Currently C<category_line_shorten_end.category> is used instead
 of C<line_shorten_end.category>.
+
+=item C<line_directed_weight: I<boolean>>
+
+=item C<line_directed_weight.I<category>: I<boolean>>
+
+Define whether lines are directed and present weights.
 
 =item C<item_size: I<integer>>
 

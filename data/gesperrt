@@ -151,7 +151,7 @@ Berliner Str. (Blankenfelde)	1 9490,23531 9437,23680 9415,23699
 Revaler Str. (Straßenbahn)	1s 13588,11490 13473,11456
 Molkenmarkt - zur Stralauer Str.	1 10804,12291 10772,12288 10736,12285 10675,12280
 Herrfurthplatz	1 11647,7940 11653,7982 11689,8006 11731,7998 11754,7964 11748,7922 11713,7899 11671,7904 11647,7940
-Grimmstr.	1 11023,9597 11042,9642 11072,9711 11089,9751 11136,9851 11164,9885
+Grimmstr.	1 11089,9751 11136,9851 11164,9885
 Grimmstr.	1 11164,9885 11175,9882
 Grimmstr.	1 11175,9882 11186,9861 11141,9732 11110,9661 11075,9576
 Körtestr.	1 11004,9554 11023,9597
@@ -795,7 +795,6 @@ nicht passierbarer Mittelstreifen	3nocross::ignrte -12045,-757 -11869,-907 -1161
 nicht passierbarer Mittelstreifen	3nocross::ignrte -13238,-1569 -13375,-1546 -13516,-1517
 Straßenbahntrasse	3nocross::ignrte -12758,-1654 -12730,-1681 -12659,-1700 -12567,-1817
 Mercure-Hotel -> Am Alten Markt: Straßenbahntrasse	3::igndisp -12681,-1726 -12659,-1700 -12643,-1694
-Mercure-Hotel -> Lange Brücke: Straßenbahntrasse	3::igndisp -12681,-1726 -12659,-1700 -12730,-1681
 Lange Brücke -> Mercure-Hotel: Straßenbahntrasse	3::igndisp -12567,-1817 -12659,-1700 -12681,-1726
 Am Alten Markt -> Mercure-Hotel: Straßenbahntrasse	3::igndisp -12643,-1694 -12659,-1700 -12681,-1726
 Am Alten Markt -> Lange Brücke: Straßenbahntrasse	3::igndisp -12643,-1694 -12659,-1700 -12567,-1817
@@ -1001,8 +1000,8 @@ Mittelstreifen	3nocross::ignrte 6996,3761 6957,3699 6782,3491
 Langkofelweg -> Kaiser-Wilhelm-Str.: Mittelstreifen	3::igndisp 6998,3596 6957,3699 6782,3491
 umbequemes Überqueren wegen Bordsteinen	3nocross::ignrte 11329,12497 11340,12443 11355,12331
 Schillingstr. -> Alexanderstr.: umbequemes Überqueren wegen Bordsteinen	3::igndisp 11462,12384 11340,12443 11355,12331
-Mittelstreifen	3nocross::ignrte 8777,9601 8648,9526 8595,9495
-Yorckstr. -> Hagelberger Str.: Mittelstreifen	3::igndisp 8777,9601 8648,9526 8773,9524
+Mittelstreifen	3nocross::ignrte 8777,9601 8679,9544 8595,9495
+Yorckstr. -> Hagelberger Str.: Mittelstreifen	3::igndisp 8777,9601 8679,9544 8774,9534
 Mittelstreifen	3nocross::ignrte 7434,18695 7492,18699 7520,18701
 Klemkestr. -> Am Stand: Mittelstreifen	3::igndisp 7434,18695 7492,18699 7484,18778
 Mittelstreifen	3nocross::ignrte 7520,18701 7599,18705 7676,18713
@@ -2377,7 +2376,6 @@ Drängelgitter (lichte Breite ca. 80cm)	BNP:8:-151:trailer=no 6526,21015
 Drängelgitter (lichte Breite ca. 80cm)	BNP:8:-139:trailer=no 6548,21041
 Drängelgitter/Schranke	BNP:5:-180 10012,5210
 Schranke	BNP:5:-102 12571,7899
-Drängelgitter	BNP:5:34:trailer=10 14453,9929
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2:39:trailer=4 14558,10082
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2:41:trailer=4 14597,10129
 Drängelgitter	BNP:3:-153:trailer=15 12904,10141
@@ -2442,6 +2440,7 @@ Tor	BNP:5:-57 26888,13976
 Drängelgitter	BNP:3:64:trailer=10 49739,-90894
 An der Nuthestr.: wegen Bauarbeiten bis Mitte 2014 gesperrt	2:inwork -11399,-1339 -11235,-1465 -11137,-1680 -11089,-1730 -10973,-1764
 Sperrung am zukünftigen Landtag: Bereich vor der Straßenbahnhaltestelle Richtung Norden gesperrt (8. April 2013 - 6. September 2013)	1:inwork -12758,-1654 -12772,-1577
+Sperrung am zukünftigen Landtag: Radweg Richtung Westen gesperrt (22. April 2013 - 6. September 2013)	1::inwork -12659,-1700 -12730,-1681 -12758,-1654
 Nordufer: wegen Bauarbeiten für die S21 gesperrt	2:inwork 7427,14648 7212,14738
 Spreeufer: wegen Bauarbeiten an der Friedrichsbrücke gesperrt	2:inwork 10166,12777 10105,12855
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwork 8106,13130 8102,13304
@@ -2476,7 +2475,6 @@ Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
-Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14797,10476 14805,10518
 Brücke im Tiergarten: gesperrt	2:inwork 6406,11784 6467,11780
 Behlertstr.	1 -12370,-354 -12500,-339 -12621,-359 -12821,-417
 tragen (Treppe)	0:30:-82 2279,5112

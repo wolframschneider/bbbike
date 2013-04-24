@@ -6427,7 +6427,12 @@ sub define_item_attribs {
 }
 
 sub generate_plot_functions {
-    $plotstr_draw_sub = <<'EOF';
+    my $get_arrow_code = <<'EOF';
+			       (exists $layer_category_line_arrow{$abk} && exists $layer_category_line_arrow{$abk}{$cat_hin} ? $layer_category_line_arrow{$abk}{$cat_hin}
+				: exists $layer_line_arrow{$abk} ? $layer_line_arrow{$abk}
+				: exists $category_line_arrow{$cat_hin} ? $category_line_arrow{$cat_hin} : undef)
+EOF
+    $plotstr_draw_sub = <<'EOF'
         sub {
 	    my $ret = shift;
 	    my $strname = $ret->[Strassen::NAME];
@@ -6466,11 +6471,8 @@ sub generate_plot_functions {
 		 || $category_color{$cat_rueck}
 		 || $str_color{$abk} || 'white') :
 		     'white';
-	    my $this_width_hin = ($layer_category_line_width{$abk} && $layer_category_line_width{$abk}{$cat_hin})
-		 || $category_width{$cat_hin} || $default_width || 1;
-	    my $this_width_rueck = defined $cat_rueck ?
-		(($layer_category_line_width{$abk} && $layer_category_line_width{$abk}{$cat_rueck}) || $category_width{$cat_rueck} || $default_width || 1) :
-		    1;
+	    my $this_width_hin = $category_width{$cat_hin} || $default_width || 1;
+	    my $this_width_rueck = defined $cat_rueck ?	($category_width{$cat_rueck} || $default_width || 1) : 1;
 	    my @coordlist;
 	CROSSINGS_LOOP:
 	    foreach (@kreuzungen) {
@@ -6890,6 +6892,10 @@ sub generate_plot_functions {
 			}
 			if ($str_outline{$abk}) {
 			    # XXX no $cat_rueck support yet for outlines
+			    my $arrow =
+EOF
+. $get_arrow_code . <<'EOF'
+			    ;
 			    $c->createLine
 			      (@coordlist,
 			       -fill      => $outline_color{$abk},
@@ -6900,27 +6906,39 @@ sub generate_plot_functions {
                                ($line_dash_hin ? (-dash => $line_dash_hin) : ()),
 			       ($line_capstyle_hin ? (-capstyle => $line_capstyle_hin) : ()),
 			       ($stipple ? (-stipple => $stipple) : ()),
-			       (exists $layer_category_line_arrow{$abk} && exists $layer_category_line_arrow{$abk}{$cat_hin} ? (-arrow => $layer_category_line_arrow{$abk}{$cat_hin})
-				: exists $layer_line_arrow{$abk} ? (-arrow => $layer_line_arrow{$abk})
-				: exists $category_line_arrow{$cat_hin} ? (-arrow => $category_line_arrow{$cat_hin}) : ()),
+			       ($arrow ? (-arrow => $arrow) : ()),
 			      );
 			}
 			if (defined $cat_rueck) {
-			    my $delta = $this_width_hin/2; # XXX need a better rule for this
-			    my($cl_hin,$cl_rueck) = offset_line(\@coordlist, $delta, $cat_hin ne '', $cat_rueck ne '');
+			    my $line_directed_weight = ($layer_category_line_directed_weight{$abk} && $layer_category_line_directed_weight{$abk}{$cat_hin}) || $layer_line_directed_weight{$abk};
+			    my($cl_hin,$cl_rueck);
+			    if (!$line_directed_weight) {
+				my $delta = $this_width_hin/2; # XXX need a better rule for this
+				($cl_hin,$cl_rueck) = offset_line(\@coordlist, $delta, $cat_hin ne '', $cat_rueck ne '');
+			    }
 			    for my $dir (1, -1) {
 				my($cl, $this_color, $this_width, $cat, $std_tags, $line_dash, $line_capstyle);
 				if ($dir == 1 && $cat_hin ne '') {
+				    if (!$cl_hin) {
+					($cl)       = offset_line(\@coordlist, $this_width_hin/2, 1, 0);
+					$this_width = $this_width_hin;
+				    } else {
+				        $cl         = $cl_hin;
+				        $this_width = $this_width_hin/2;
+				    }
 				    $this_color = $this_color_hin;
-				    $this_width = $this_width_hin/2;
 				    $cat        = $cat_hin;
-				    $cl         = $cl_hin; # XXX del: [@coordlist];
 				    $std_tags   = \@std_tags_hin;
 				    $line_dash  = $line_dash_hin;
 				    $line_capstyle = $line_capstyle_hin;
 				} elsif ($dir == -1 && $cat_rueck ne '') {
+				    if (!$cl_rueck) {
+					(undef, $cl_rueck) = offset_line(\@coordlist, $this_width_rueck/2, 0, 1);
+					$this_width = $this_width_rueck;
+				    } else {
+					$this_width = $this_width_rueck/2;
+				    }
 				    $this_color = $this_color_rueck;
-				    $this_width = $this_width_rueck/2;
 				    $cat        = $cat_rueck;
 				    $cl         = [];
 				    for(my $cl_i = $#$cl_rueck-1; $cl_i >= 0; $cl_i-=2) {
@@ -6932,20 +6950,21 @@ sub generate_plot_functions {
 				} else {
 				    next;
 				}
-#				my $delta = -$this_width;
-#
-#				for(my $ii = 2; $ii < $#$cl; $ii+=2) {
-#				    # atan2(y2-y1, x2-x1)
-#				    my $alpha = atan2($cl->[$ii+1]-$cl->[$ii-1], $cl->[$ii]-$cl->[$ii-2]);
-#				    my $beta  = $alpha - pi()/2;
-#				    my($dx, $dy) = ($delta*cos($beta), $delta*sin($beta));
-#				    $cl->[$ii] += $dx;
-#				    $cl->[$ii+1] += $dy;
-#				    if ($ii == 2) {
-#					$cl->[0] += $dx;
-#					$cl->[1] += $dy;
-#				    }
-#				}
+
+				my $arrow;
+				if ($line_capstyle && $line_capstyle eq 'round') {
+				    # XXX Tk problem? bad rendering with capstyle=>"round" and arrow=>something
+				    $arrow = 'none';
+				} else {
+				    $arrow = 
+EOF
+. $get_arrow_code . <<'EOF'
+			            ;
+				    if (!$arrow) {
+					$arrow = 'last';
+				    }
+				}
+
 				$c->createLine
 				    (@$cl,
 				     -fill  => $this_color,
@@ -6956,9 +6975,7 @@ sub generate_plot_functions {
 				     ($line_dash ? (-dash => $line_dash) : ()),
 				     ($line_capstyle ? (-capstyle => $line_capstyle) : ()),
 				     ($stipple ? (-stipple => $stipple) : ()),
-				     #(exists $category_line_arrow{$cat} ? (-arrow => $category_line_arrow{$cat}) : ()),
-				     # XXX Tk problem? bad rendering with capstyle=>"round" and arrow=>something
-				     -arrow => ($line_capstyle && $line_capstyle eq 'round' ? "none" : "last"),
+				     -arrow => $arrow,
 				    );
 
 				# Draw an extra point indicating the point of action for CP/CP2 items
@@ -6990,6 +7007,10 @@ sub generate_plot_functions {
 			} elsif ($cat_hin =~ $tunnel_qr) {
 			    draw_tunnel_entrance(\@coordlist, -width => $this_width_hin+4, -tags => \@std_tags_hin, -mounds => $cat_hin);
 			} else {
+			    my $arrow =
+EOF
+. $get_arrow_code . <<'EOF'
+			    ;
 			    $item = $c->createLine
 				(@coordlist,
 				 -fill      => $this_color_hin,
@@ -7000,9 +7021,7 @@ sub generate_plot_functions {
 				 ($stipple ? (-stipple => $stipple) : ()),
 				 ($line_dash_hin ? (-dash => $line_dash_hin) : ()),
 				 ($line_capstyle_hin ? (-capstyle => $line_capstyle_hin) : ()),
-			         (exists $layer_category_line_arrow{$abk} && exists $layer_category_line_arrow{$abk}{$cat_hin} ? (-arrow => $layer_category_line_arrow{$abk}{$cat_hin})
-				  : exists $layer_line_arrow{$abk} ? (-arrow => $layer_line_arrow{$abk})
-				  : exists $category_line_arrow{$cat_hin} ? (-arrow => $category_line_arrow{$cat_hin}) : ()),
+				 ($arrow ? (-arrow => $arrow) : ()),
 				);
 			}
 
@@ -7080,6 +7099,7 @@ sub generate_plot_functions {
 	    }
 	};
 EOF
+    ;
 
     # XXX maybe combine this code with parsing coords code in $plotstr_draw_sub
     my $parse_coords_code = <<'EOF';
@@ -7352,6 +7372,7 @@ EOF
 	    }
 	};
 EOF
+    ;
 }
 
 sub maybe_expand_image_file {
@@ -10399,6 +10420,11 @@ sub _set_category_width {
 	if (/^$abk-(.*)/) {
 	    my $cat = $1;
 	    $category_width{$cat} = get_line_width($_, $this_scale);
+	}
+    }
+    if ($layer_category_line_width{$abk}) {
+	while(my($cat) = each %{ $layer_category_line_width{$abk} }) {
+	    $category_width{$cat} = get_line_width($abk, $this_scale, $cat);
 	}
     }
     %category_width;
@@ -14944,6 +14970,8 @@ sub reset_free_layer {
     delete $layer_line_shorten{$abk};
     delete $layer_category_line_shorten_end{$abk};
     delete $layer_line_shorten_end{$abk};
+    delete $layer_category_line_directed_weight{$abk};
+    delete $layer_line_directed_weight{$abk};
     delete $layer_name{$abk};
     delete $layer_icon{$abk};
     delete $p_name_draw{$abk};
@@ -16294,23 +16322,38 @@ sub get_index_by_scale {
     }
 }
 
+# $tag is the same as $abk
+# $cat is optional; if set, then $layer_category_line_width information is used instead
 sub get_line_width {
-    my($tag, $myscale) = @_;
+    my($tag, $myscale, $cat) = @_;
     $myscale = $scale if !defined $myscale;
 
     my $is_outline = ($tag =~ /-out$/);
     my $add_outline = ($is_outline
 		       ? 2 : ($tag eq 'pp' || $tag eq 'p' ? 1 : 0));
     my $index = get_index_by_scale($myscale);
-    if ($is_outline && !exists $line_width{$tag}) {
+    if ($is_outline && !exists $line_width{$tag} && !defined $cat) {
 	$tag =~ s/-out$//;
     }
     if ($tag =~ /^L\d+/ &&
 	defined $default_line_width && $default_line_width == 1) {
 	1;
     } else {
-	$line_width{(exists $line_width{$tag} ? $tag : 'default')}->[$index]
-	    + $add_outline;
+	my $w;
+	if (defined $cat) {
+	    my $line_width_def = $layer_category_line_width{$tag} && $layer_category_line_width{$tag}{$cat};
+	    if (!$line_width_def) {
+		$w = $line_width{'default'}->[$index];
+	    } elsif (ref $line_width_def) {
+		$w = $line_width_def->[$index];
+	    } else {
+		# assume integer
+		$w = $line_width_def;
+	    }
+	} else {
+	    $w = $line_width{(exists $line_width{$tag} ? $tag : 'default')}->[$index];
+	}
+	$w + $add_outline;
     }
 }
 
@@ -21782,7 +21825,7 @@ sub handle_global_directives {
     return if !$glob_dir;
     # XXX One day this should contain all of @plotting_hint_line_vars
     my %accept_modern_style = map{($_,1)}
-	qw(line_arrow line_dash);
+	qw(line_arrow line_dash line_width);
     # XXX Everything else should be slowly discouraged...
     my %accept_global_hash_directives = map{($_,1)}
 	qw(category_size category_color
@@ -21794,12 +21837,13 @@ sub handle_global_directives {
     my %accept_global_hashref_directives = map{($_,1)}
 	qw(str_attrib p_attrib);
     my %accept_global_catless_directives = map{($_,1)}
-	qw(str_color outline_color line_width);
+	qw(str_color outline_color);
     my %accept_global_catless_directives_with_layer_prefix = map{($_,1)}
-	qw(line_length
+	qw(line_width line_length
 	   line_dash line_arrow
 	   line_capstyle
 	   line_shorten line_shorten_end
+	   line_directed_weight
 	   name
 	  );
     # Aliases for directives without category
