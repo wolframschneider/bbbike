@@ -1704,7 +1704,7 @@ Etwa 40 Meter nˆrdlich in der Straﬂe der Pariser Kommune eine weitere Fuﬂg‰ngera
 	X 4572,7936
 	X 15080,11905
 	X 6454,8653
-# TEMPORARILY REMOVED --- Kynaststr./Alt-Stralau - nach den Bauarbeiten wird es hier wieder eine Ampel geben	X 14652,10201
+	X 14652,10201
 # REMOVED --- #: note: tempor‰re Baustellenampel, ist immer bei einer Sperrung der Karlshorster Str. eingeschaltet --- #: last_checked: 2012-11-02 --- #: next_check: 2012-11-05 --- X::inwork 14832,10512
 	F 13030,7346
 # REMOVED (keine Ampel (mehr?), evtl. wegen BAB) ---	X 12510,6508
@@ -2247,8 +2247,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 3995,12173
 	F 22031,9142
 	F 15356,3759
-#: note: provisorische Ampel
-	X::inwork 14906,10820
+# REMOVED --- #: note: provisorische Ampel ---	X::inwork 14906,10820
 	F 8667,5372
 	F 5807,12070
 	F 6846,15202
@@ -2325,7 +2324,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	B0 17953,15221
 #: note: provisorische Ampel
 #: XXX Siehe auch Baustelle in der Voﬂstr.
-#: last_checked: 2013-02-13
+#: last_checked: 2013-04-25
 #: next_check: 2013-07-02
 	X::inwork 9000,11727
 	X 25451,14018
