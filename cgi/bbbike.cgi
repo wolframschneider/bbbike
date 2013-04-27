@@ -1054,7 +1054,7 @@ $require_Karte = sub {
     undef $require_Karte;
 };
 
-$VERSION = "11.002";
+$VERSION = "11.003";
 
 use vars qw($delim $font);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
@@ -1194,6 +1194,19 @@ if (defined $q->param('begin')) {
 
 # Used for $use_utf8=1
 eval{BBBikeCGIUtil::decode_possible_utf8_params($q);};warn $@ if $@;
+
+{
+    # Don't use RealBin here
+    my $f = "$FindBin::Bin/Botchecker_BBBike.pm";
+    if (-r $f) {
+	eval {
+	    local $SIG{'__DIE__'};
+	    do $f;
+	    Botchecker_BBBike::run($q);
+	};
+	warn $@ if $@;
+    }
+}
 
 undef $g_str; # XXX because it may already contain landstrassen etc.
 undef $net; # dito
