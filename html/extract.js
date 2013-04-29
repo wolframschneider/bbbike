@@ -446,6 +446,7 @@ function extract_init(opt) {
         // $("#drag_box").html("Manually select a different area");
         $("#drag_box_drag").hide();
         $("#drag_box_manually").show();
+        $("#manually_select").attr('checked', false);
 
         if (config.enable_polygon) {
             polygon_menu(true);
