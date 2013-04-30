@@ -8022,7 +8022,7 @@ sub header {
 
     if ($use_smart_app_banner && &is_startpage($q) && !is_streets($q)) {
     	push @$head, $q->meta({-name => 'apple-itunes-app',
-    			   -content => "app-id=555616117,affiliate-data=partnerId=2206068"}) 
+    			   -content => "app-id=639384862,affiliate-data=partnerId=2206068"}) 
     }
 
     push @$head, cgilink({-rel  => "shortcut icon",
