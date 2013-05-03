@@ -74,11 +74,11 @@ use BBBikeElevation;
 use Data::Dumper;
 
 use strict;
-use vars qw($VERSION $VERBOSE $WAP_URL
+use vars qw($VERSION $VERBOSE
 	    $debug $tmp_dir $mapdir_fs $mapdir_url $local_route_dir
 	    $bbbike_root $bbbike_images $bbbike_url $bbbike2_url $is_beta
 	    $bbbike_html
-	    $modperl_lowmem $use_imagemap $create_imagemap $detailmap_module
+	    $modperl_lowmem $detailmap_module
 	    $q %persistent %c $got_cookie
 	    $g_str $orte $orte2 $multiorte
 	    $ampeln $qualitaet_net $handicap_net
@@ -94,7 +94,7 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $bp_obj $bi $use_select
 	    $graphic_format $use_mysql_db $use_exact_streetchooser
 	    $use_module
-	    $cannot_gif_png $cannot_jpeg $cannot_pdf $cannot_svg $can_gif
+	    $cannot_jpeg $cannot_pdf $cannot_svg $can_gif
 	    $can_wbmp $can_palmdoc $can_gpx $can_kml
 	    $can_google_maps $can_gpsies_link
 	    $can_mapserver $mapserver_address_url
@@ -102,8 +102,8 @@ use vars qw($VERSION $VERBOSE $WAP_URL
 	    $mapserver_init_url $no_berlinmap $max_plz_streets $with_comments
 	    $with_cat_display
 	    $use_coord_link
-	    @weak_cache @no_cache %proc
-	    $bbbike_script $cgi $port
+	    @weak_cache @no_cache
+	    $bbbike_script
 	    $search_algorithm $use_background_image
 	    $use_apache_session $now_use_apache_session $apache_session_module $cookiename
 	    $bbbike_temp_blockings_file $bbbike_temp_blockings_optimized_file
@@ -308,29 +308,9 @@ $apache_session_module = "Apache::Session::DB_File";
 
 =back
 
-=head2 Imagemaps, graphic creation, export formats
+=head2 Graphic creation, export formats
 
 =over
-
-=item $use_imagemap
-
-Set to true, if the detail maps should use an imagemap. This feature
-seems to be supported only on Netscape running on FreeBSD or Linux.
-On other systems there may be fatal errors if this is set to true.
-Default: false.
-
-=cut
-
-$use_imagemap = 0;
-
-=item $create_imagemap
-
-If set to true, then imagemaps for C<$use_imagemap> will be created.
-Default: true.
-
-=cut
-
-$create_imagemap = 1;
 
 =item $detailmap_module
 
@@ -6264,8 +6244,8 @@ EOF
 #XXX not yet	    print " <input type=checkbox name='cb_attachment'> als Download";
 	    print "&nbsp;&nbsp; <span class=nobr>" . M("Ausgabe als") . ": <select name=imagetype " . ($bi->{'can_javascript'} ? "onchange='enable_size_details_buttons()'" : "") . ">\n";
 	    print " <option " . $imagetype_checked->("googlemaps") . ">Google Maps\n" if $can_google_maps;
-	    print " <option " . $imagetype_checked->("png") . ">PNG (" . M('Grafik') . ")\n" if $graphic_format eq 'png' && !$cannot_gif_png;
-	    print " <option " . $imagetype_checked->("gif") . ">GIF\n" if ($graphic_format eq 'gif' || $can_gif) && !$cannot_gif_png;
+	    print " <option " . $imagetype_checked->("png") . ">PNG (" . M('Grafik') . ")\n" if $graphic_format eq 'png';
+	    print " <option " . $imagetype_checked->("gif") . ">GIF\n" if ($graphic_format eq 'gif' || $can_gif);
 	    print " <option " . $imagetype_checked->("jpeg") . ">JPEG\n" unless $cannot_jpeg;
 	    print " <option " . $imagetype_checked->("wbmp") . ">WBMP\n" if $can_wbmp;
 	    print " <option " . $imagetype_checked->("pdf-auto") . ">PDF\n" unless $cannot_pdf;
@@ -6963,12 +6943,9 @@ sub create_map {
     if (!@dim) { die "No dim set" }
 
     my($img_url, $img_file);
-    my $map_file = "$mapdir_fs/berlin_map_$part.map";
 
     my $create = 1;
     my $ext;
-    my $_create_imagemap =
-	exists $args{-imagemap} ? $args{-imagemap} : $create_imagemap;
 
     my $set_img_name = sub {
 	$img_file = "$mapdir_fs/berlin_map_$part.$ext";
@@ -6981,30 +6958,24 @@ sub create_map {
 	    $ext = $_;
 #XXX	    next if $ext eq 'png' and !$bi->{'can_png'};
 	    $set_img_name->();
-	    if (-s $img_file && (!$use_imagemap || -s $map_file)) {
+	    if (-s $img_file) {
 		my(@img_file_stat)   = stat($img_file);
 		if (defined $img_file_stat[9]) {
-		    my(@map_file_stat)   = stat($img_file);
-		    if (defined $map_file_stat[9]) {
-			my(@bbbike_cgi_stat) = stat($0); # use always the "main" lang version
-			for my $str_file ($str->dependent_files) {
-			    my(@strassen_stat)   = stat($str_file);
-			    my $to_create_time =
-				min($img_file_stat[9], $map_file_stat[9]);
-			    my $check_time =
-				($check_map_time == 0 ? 0 :
-				 ($check_map_time == 1 ? $strassen_stat[9] :
-				  max($bbbike_cgi_stat[9], $strassen_stat[9])
-				 ));
-			    $create = ($to_create_time < $check_time);
-			    if ($debug) {
-				warn __LINE__ . ": time_exist=$to_create_time, " .
-				    "check_time=$check_time, create=$create\n";
-			    }
-			    last if $create;
+		    my(@bbbike_cgi_stat) = stat($0); # use always the "main" lang version
+		    for my $str_file ($str->dependent_files) {
+			my(@strassen_stat)   = stat($str_file);
+			my $to_create_time = $img_file_stat[9];
+			my $check_time =
+			    ($check_map_time == 0 ? 0 :
+			     ($check_map_time == 1 ? $strassen_stat[9] :
+			      max($bbbike_cgi_stat[9], $strassen_stat[9])
+			     ));
+			$create = ($to_create_time < $check_time);
+			if ($debug) {
+			    warn __LINE__ . ": time_exist=$to_create_time, " .
+				"check_time=$check_time, create=$create\n";
 			}
-		    } elsif ($debug) {
-			warn __LINE__ . ": Can't stat $map_file: $!\n";
+			last if $create;
 		    }
 		} elsif ($debug) {
 		    warn __LINE__ . ": Can't stat $img_file: $!\n";
@@ -7016,7 +6987,7 @@ sub create_map {
 	}
     }
 
-    if ($create || !-r $img_file || -z $img_file || !-r $map_file) {
+    if ($create || !-r $img_file || -z $img_file) {
 	eval {
 	    local $SIG{'__DIE__'};
 
@@ -7032,11 +7003,6 @@ sub create_map {
 		confess "Fehler: Die Karte $img_file~ konnte nicht erstellt werden.<br>\n";
 	    };
 	    chmod 0644, "$img_file~";
-	    open(MAP, "> $map_file~") or do {
-		print STDERR "Error code: $!\n";
-		confess "Fehler: Die Map $map_file~ konnte nicht erstellt werden.<br>\n";
-	    };
-	    chmod 0644, "$map_file~";
 	    $q->param('geometry', $detailwidth."x".$detailheight);
 	    $q->param('draw', 'str', 'ubahn', 'sbahn', 'wasser', 'flaechen', 'ort', 'berlin');
 #XXX del?	    $q->param('drawwidth', 1);
@@ -7064,20 +7030,14 @@ sub create_map {
 	    $draw->create_transpose();
 	    print "Create $img_file~...\n" if $args{-logging};
 	    $draw->draw_map();
-	    if ($_create_imagemap) {
-		$draw->make_imagemap(\*MAP);
-	    }
 	    $draw->flush();
 	    $q->delete('draw');
 	    $q->delete('geometry');
-	    close MAP;
 	    close IMG;
 
 	    if (-z "$img_file~") {
 		confess "Fehler: die erzeugte Datei $img_file~ ist 0 Bytes groﬂ.\n";
 	    }
-	    rename "$map_file~", $map_file
-		or confess "Fehler: Die Datei $map_file~ konnte nicht umbenannt werden ($!).<br>\n";
 	    rename "$img_file~", $img_file
 		or confess "Fehler: Die Datei $img_file~ konnte nicht umbenannt werden ($!).<br>\n";
 
@@ -7085,9 +7045,7 @@ sub create_map {
 	die __LINE__ . ": Warnung: $@<br>\n" if $@;
     }
 
-    (imgurl  => $img_url,
-     mapfile => $map_file,
-    );
+    (imgurl  => $img_url);
 }
 
 sub draw_map {
@@ -7095,7 +7053,7 @@ sub draw_map {
     http_header(@weak_cache);
 
     my %res = create_map(%args);
-    my($img_url, $map_file) = @res{qw(imgurl mapfile)};
+    my($img_url) = @res{qw(imgurl)};
 #require bbbikecgi_experiments;exit drawmap_with_open_layers(%args);#XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
     my($x, $y) = ($args{'-x'}, $args{'-y'});
 
@@ -7152,7 +7110,6 @@ EOF
     print
 	"</td><td><input type=image title='' name=detailmap ",
 	"src=\"$img_url\" alt=\"\" border=0 ",
-	($use_imagemap ? "usemap=\"#map\" " : ""),
 	"align=middle width=$detailwidth height=$detailheight>",
 	"</td>\n";
     if ($x < $xgridnr-1) {
@@ -7176,24 +7133,6 @@ EOF
     #print "<input type=submit name=Dummy value=\"&lt;&lt; Zur&uuml;ck\">";
     print qq{<input type=button value="&lt;&lt; } . M("Zur¸ck") . qq{" onclick="history.back(1);">};
     print "</center>";
-    print <<EOF;
-<script type="text/javascript">
-<!--
-function s(text) {
-  self.status=text;
-  return true;
-}
-// -->
-</script>
-EOF
-    if ($use_imagemap) {
-	open(MAP, $map_file)
-	    or confess "Fehler: Die Map $map_file konnte nicht geladen werden.\n<br>";
-	while(<MAP>) {
-	    print $_;
-	}
-	close MAP;
-    }
     footer();
     print "</form>\n";
     print $q->end_html;
