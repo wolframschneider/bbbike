@@ -802,6 +802,7 @@ my $is_streets;
 {
   my $q = new CGI;
   my $path = $q->url(-full => 0, -absolute => 1);
+  my $lang_parameter = $q->param("lang");
 
   # de | en | ... | m
   if ($path =~ m#^/([a-z]{1,2})/# ) {
@@ -813,15 +814,16 @@ my $is_streets;
       # original bbbike.cgi script
       $selected_lang = $lang = $local_lang = 'de';
   }
-  if (my $l = $q->param("lang")) {
-    $lang = $l if $l =~ /^([a-z]{1,2})$/;
+
+  if ($lang_parameter && $lang_parameter =~ /^([a-z]{1,2})$/) {
+      $lang = $lang_parameter;
+      $selected_lang = $lang;
   }
 
   $local_lang = &my_lang($lang, 1);
-
   $lang = $local_lang if $local_lang && !$selected_lang;
   $is_streets = &is_streets($q);
-  warn "lang: $lang, local_lang: $local_lang '$path'\n" if $debug >= 2;
+  warn "lang: $lang, local_lang: $local_lang '$path', lang_parameter=$lang_parameter\n";
 }
 
 # local language links redirect: /de/Berlin/ -> /Berlin/
