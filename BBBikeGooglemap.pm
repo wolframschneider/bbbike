@@ -239,7 +239,7 @@ sub get_html {
 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTN4WPiGfl2FX2PYZt6wyT5v7xqcg',
     );
 
-    my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new($q), -full => 1 ) );
+    my $full = URI->new( BBBikeCGI::Util::my_url( CGI->new($q), -full => 1 ) );
     my $fallback_host = "bbbike.de";
     my $host = eval { $full->host } || $fallback_host;
 
@@ -252,7 +252,7 @@ sub get_html {
 
     my $bbbikeroot      = "/BBBike";
     my $get_public_link = sub {
-        BBBikeCGIUtil::my_url( CGI->new($q), -full => 1 );
+        BBBikeCGI::Util::my_url( CGI->new($q), -full => 1 );
     };
     if ( $host eq 'bbbike.dyndns.org' ) {
         $bbbikeroot = "/bbbike";
@@ -263,7 +263,7 @@ sub get_html {
     elsif ( $host eq 'localhost' ) {
         $bbbikeroot      = "/bbbike";
         $get_public_link = sub {
-            my $link = BBBikeCGIUtil::my_url( CGI->new($q), -full => 1 );
+            my $link = BBBikeCGI::Util::my_url( CGI->new($q), -full => 1 );
             $link =~ s{localhost$bbbikeroot/cgi}{bbbike.de/cgi-bin};
             $link;
         };
