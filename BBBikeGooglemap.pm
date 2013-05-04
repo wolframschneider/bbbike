@@ -30,7 +30,7 @@ use CGI qw(:standard);
 use CGI::Carp;
 use File::Basename qw(dirname);
 use URI;
-use BBBikeCGIUtil qw();
+use BBBikeCGI::Util qw();
 use BBBikeVar;
 use Karte;
 use Karte::Polar;
