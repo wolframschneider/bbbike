@@ -3468,7 +3468,7 @@ sub is_production {
     my $q = shift;
 
     return 1 if -e "/tmp/is_production";
-    return $q->virtual_host() =~ /^www[123]?\.bbbike\.org$/i ? 1 : 0;
+    return $q->virtual_host() =~ /^www\d?\.bbbike\.org$/i ? 1 : 0;
 }
 
 sub is_resultpage {
