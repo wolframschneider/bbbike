@@ -799,10 +799,11 @@ use Time::HiRes qw( gettimeofday tv_interval );
 my $time_start = [gettimeofday];
 
 my $is_streets;
-{ my $q = new CGI;
+{
+  my $q = new CGI;
   my $path = $q->url(-full => 0, -absolute => 1);
 
-  # de | en | m
+  # de | en | ... | m
   if ($path =~ m#^/([a-z]{1,2})/# ) {
       $lang = $1;
       $selected_lang = $lang;
@@ -811,6 +812,9 @@ my $is_streets;
   } elsif ($path eq '/cgi/bbbike.cgi' && $q->url() =~ /localhost/) {
       # original bbbike.cgi script
       $selected_lang = $lang = $local_lang = 'de';
+  }
+  if (my $l = $q->param("lang")) {
+    $lang = $l if $l =~ /^([a-z]{1,2})$/;
   }
 
   $local_lang = &my_lang($lang, 1);
@@ -6004,7 +6008,7 @@ for my $etappe (@out_route) {
 		    if ($bbbike_script =~ m{^https?://[^.]+/}) { # local hostname?
 			$bbbike_script = $BBBike::BBBIKE_DIRECT_WWW;
 		    }
-		    my $href = 'http://www.gpsies.com/map.do?url=' . BBBikeCGIUtil::my_escapeHTML($qq2->url(-full=>1, -query=>1));
+		    my $href = 'http://www.gpsies.com/map.do?url=' . BBBikeCGI::Util::my_escapeHTML($qq2->url(-full=>1, -query=>1));
 		    print qq{<a title="}, M("Route auf GPSies.com hochladen"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com (upload)</a>};
 		}
 		print qq{<a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt="" title="}, M("Facebook Fanpage"), qq{"><img class="logo" src="/images/facebook-like.png" alt="" title="}, M("Facebook Fanpage"), qq{"></a>\n};
@@ -6138,7 +6142,7 @@ EOF
 		my $qq = new CGI;
 		#$qq->param( 'startname', Encode::encode( utf8 => $qq->param('startname')));
 		#$qq->param( 'zielname', Encode::encode( utf8 => $qq->param('zielname')));
-		my $permalink = BBBikeCGIUtil::my_escapeHTML($qq->url(-full=>1, -query=>1));
+		my $permalink = BBBikeCGI::Util::my_escapeHTML($qq->url(-full=>1, -query=>1));
 
 	        print qq{<div id="link_list">\n};
 	        print qq{<hr>\n};
@@ -7861,7 +7865,7 @@ sub get_google_api_key {
 'ABQIAAAAX99Vmq6XHlL56h0rQy6IShT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTN4WPiGfl2FX2PYZt6wyT5v7xqcg',
     );
 
-    my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new($q), -full => 1 ) );
+    my $full = URI->new( BBBikeCGI::Util::my_url( CGI->new($q), -full => 1 ) );
     my $fallback_host = "bbbike.de";
     my $host = eval { $full->host } || $fallback_host;
 
@@ -8296,7 +8300,7 @@ my $real_time = int ($elapsed * 100)/100;
 my $qq = new CGI;
 #$qq->param( 'startname', Encode::encode( utf8 => $qq->param('startname')));
 #$qq->param( 'zielname', Encode::encode( utf8 => $qq->param('zielname')));
-my $permalink = BBBikeCGIUtil::my_escapeHTML($qq->url(-full=>1, -query=>1));
+my $permalink = BBBikeCGI::Util::my_escapeHTML($qq->url(-full=>1, -query=>1));
 
 my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'Berlin und Potsdam';
 my $streets = $bbbike_script =~ m,/$, ? $bbbike_script . "streets.html" : "$bbbike_script?all=1";
@@ -8325,7 +8329,7 @@ if ($osm_data) {
 
 		$city_names = $city2 if !$city_names;
 
-		$other_cities .= qq{ <a href="../$city2/">} . BBBikeCGIUtil::my_escapeHTML( select_city_name($city2, $city_names, $lang) ) . "</a>\n";
+		$other_cities .= qq{ <a href="../$city2/">} . BBBikeCGI::Util::my_escapeHTML( select_city_name($city2, $city_names, $lang) ) . "</a>\n";
 	}
     }
     $other_cities .= qq{ [<a href="../">} . M("weitere St&auml;dte") . "</a>]\n";
@@ -8406,7 +8410,7 @@ EOF
     $s .= $s_copyright;
 
     use URI;
-    my $full = URI->new( BBBikeCGIUtil::my_url( CGI->new, -full => 1 ) );
+    my $full = URI->new( BBBikeCGI::Util::my_url( CGI->new, -full => 1 ) );
     my $host = eval { $full->host } || "";
 
     $s .= $s_google_analytics if $enable_google_analytics && is_production($q);
