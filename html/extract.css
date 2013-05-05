@@ -71,7 +71,7 @@ div#export_osm_too_large { color: red }
 #social { position:absolute; right: 20px; bottom: -2px; }
 
 #sidebar_left, #footer {
-	width: 24em;
+	width: 23em;
 	position: absolute;
 }
 
@@ -80,7 +80,7 @@ div#export_osm_too_large { color: red }
 }
 
 #map {
-	left: 24em;
+	left: 23em;
 	position: relative;
 	width: 100%;
 }
