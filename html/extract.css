@@ -100,7 +100,7 @@ span#noscript {
 span#square_km_small, span#size_small, span#time_small { 
 	font-size: small; 
 	font-style: italic;
-	color: grey;
+	color: #808080; /* grey; */
 }
 
 input#city, input#email { width: 95%; } 
@@ -113,7 +113,7 @@ input#city, input#email { width: 95%; }
     left: 50%;
     
     margin-left: -350px;
-    // width: 640px;
+    /* width: 640px; */
     
     background-color: #EEE;
     color: #333;
@@ -144,7 +144,7 @@ div.dialog-title img {
 
 div.dialog-msg {
     padding: 12px;
-    // height: 600px;
+    /* height: 600px; */
     overflow: auto;
     font-size: 100%;
 }
