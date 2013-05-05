@@ -185,7 +185,7 @@ a.tools-helptrigger:hover img, a.tools-helptrigger-small:hover img {
 }
 
 /* disabled by default */
-.lnglatbox { display: inline; }
-.lnglatbox_toggle { display: none; }
+.lnglatbox { display: none; }
+.lnglatbox_toggle { display: inline; }
 
 td { white-space: nowrap; }
