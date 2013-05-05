@@ -1171,11 +1171,11 @@ function polygon_init() {
     }
 }
 
-function toggle_lnglatbox () {
-   $('span.lnglatbox').toggle();
-   $('span.lnglatbox_toggle').toggle();
-   
-   $('.uncheck').attr('checked', false);
+function toggle_lnglatbox() {
+    $('span.lnglatbox').toggle();
+    $('span.lnglatbox_toggle').toggle();
+
+    $('.uncheck').attr('checked', false);
 }
 
 // dialog help windows
