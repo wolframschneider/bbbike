@@ -694,7 +694,7 @@ function setMapHeight() {
     if ($(window).height() < 480) {
         setTimeout(function () {
             $(".normalscreen").hide()
-        }, 2500);
+        }, 1500);
     } else {
         setTimeout(function () {
             $(".normalscreen").show()
@@ -1171,6 +1171,12 @@ function polygon_init() {
     }
 }
 
+function toggle_lnglatbox () {
+   $('span.lnglatbox').toggle();
+   $('span.lnglatbox_toggle').toggle();
+   
+   $('.uncheck').attr('checked', false);
+}
 
 // dialog help windows
 jQuery(document).ready(function () {

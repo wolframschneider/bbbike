@@ -179,8 +179,11 @@ a.tools-helptrigger:hover img, a.tools-helptrigger-small:hover img {
   opacity: 1.0;
 }
 
-.lnglatbox {
-    opacity: 0.4;
+.lnglatbox, .lnglatbox_toggle {
+    opacity: 0.6;
     font-size: small;
 }
 
+/* disabled by default */
+.lnglatbox { display: inline; }
+.lnglatbox_toggle { display: none; }
