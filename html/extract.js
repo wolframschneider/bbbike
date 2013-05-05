@@ -1172,8 +1172,8 @@ function polygon_init() {
 }
 
 function toggle_lnglatbox() {
-    $('span.lnglatbox').toggle();
-    $('span.lnglatbox_toggle').toggle();
+    $('.lnglatbox').toggle();
+    $('.lnglatbox_toggle').toggle();
 
     $('.uncheck').attr('checked', false);
 }
