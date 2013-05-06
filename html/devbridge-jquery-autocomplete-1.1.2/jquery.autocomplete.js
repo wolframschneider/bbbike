@@ -33,7 +33,7 @@
     this.onChangeInterval = null;
     this.ignoreValueChange = false;
     this.serviceUrl = options.serviceUrl;
-    this.geocoder = options.geocoder;
+    this.geocoder = options.geocoder; /* by bbbike */
     this.isLocal = false;
     this.options = {
       autoSubmit: false,
@@ -291,6 +291,7 @@
 	response.data = []; 
       }
 
+      // by BBBike.org 
       // if geocoder is enabled, try google geolocation service next
       if (response.suggestions.length === 0 && this.geocoder && !second_try) {
 	var me = this;
