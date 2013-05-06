@@ -3415,7 +3415,18 @@ function format_address(address) {
     return street.join(",");
 }
 
-function googleCodeAddress(address, callback) {
+function googleCodeAddress(address, callback, logger) {
+    function log_geocoder(logger, status) {
+        var logger_url = "";
+
+/* 
+     * log geocode requests status by '/cgi/log.cgi';
+     */
+        if (logger) {
+            logger_url = encodeURI(logger + "?type=gmaps-geocoder&query=" + address + "&status=" + status);
+            $.get(logger_url);
+        }
+    }
 
     // search for an address only in this specific area
     // var box = [[43.60000,-79.66000],[43.85000,-79.07000]];
@@ -3427,6 +3438,7 @@ function googleCodeAddress(address, callback) {
     if (!state.geocoder) {
         state.geocoder = new google.maps.Geocoder();
     }
+
 
     state.geocoder.geocode({
         'address': address,
@@ -3449,7 +3461,9 @@ function googleCodeAddress(address, callback) {
             autocomplete += '] }';
 
             callback(autocomplete);
+            log_geocoder(logger, "0");
         } else {
+            log_geocoder(logger, status);
             // alert("Geocode was not successful for the following reason: " + status);
         }
     });
