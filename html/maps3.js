@@ -3418,7 +3418,7 @@ function format_address(address) {
 function googleCodeAddress(address, callback, logger) {
     function log_geocoder(logger, status) {
         // log geocode requests status by '/cgi/log.cgi';
-        if (logger) {
+        if (logger && logger.url) {
             var logger_url = encodeURI(logger.url + "?type=gmaps-geocoder&city=" + logger.city + "&query=" + address + "&status=" + status);
             $.get(logger_url);
         }
