@@ -981,6 +981,10 @@ function show_filesize(skm, real_size) {
             "size": 0.9,
             "time": 3
         },
+        "garmin-bbbike.zip": {
+            "size": 0.8,
+            "time": 2
+        },
         "shp.zip": {
             "size": 1.5,
             "time": 1
