@@ -3419,11 +3419,9 @@ function googleCodeAddress(address, callback, logger) {
     function log_geocoder(logger, status) {
         var logger_url = "";
 
-/* 
-     * log geocode requests status by '/cgi/log.cgi';
-     */
+        // log geocode requests status by '/cgi/log.cgi';
         if (logger) {
-            logger_url = encodeURI(logger + "?type=gmaps-geocoder&query=" + address + "&status=" + status);
+            logger_url = encodeURI(logger.url + "?type=gmaps-geocoder&city=" + logger.city + "&query=" + address + "&status=" + status);
             $.get(logger_url);
         }
     }

@@ -2828,7 +2828,7 @@ EOF
 	          width:$width, 
 		  deferRequestBy:$deferRequestBy, 
 	          noCache: true, 
-	          geocoder: function (address, callback) { googleCodeAddress(address, callback, '/cgi/log.cgi'); },
+	          geocoder: function (address, callback) { googleCodeAddress(address, callback, { url: '/cgi/log.cgi', city:"$city"} ); },
 	        }
 	);
         $plot_street
