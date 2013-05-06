@@ -18,7 +18,8 @@ use File::stat;
 use strict;
 use warnings;
 
-plan tests => 13;
+my @garmin_styles = qw/cycle leisure osm bbbike/;
+plan tests => 4 + 3 * scalar(@garmin_styles);
 
 my $pbf_file = 't/data-osm/tmp/Cusco.osm.pbf';
 
@@ -68,7 +69,7 @@ is( $?, 0, "valid zip file" );
 cmp_ok( $st->size, '>', $min_size, "$out greather than $min_size" );
 
 # known styles
-foreach my $style (qw/cycle leisure osm/) {
+foreach my $style (@garmin_styles) {
     system(qq[world/bin/pbf2osm --garmin-$style $pbf_file]);
     is( $?, 0, "pbf2osm --garmin-$style converter" );
 
