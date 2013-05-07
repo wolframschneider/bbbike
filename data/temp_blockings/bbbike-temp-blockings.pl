@@ -330,7 +330,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2 6606,11222 6582,11202
-userdel	2 6447,11144 6438,11141 6168,11042
+userdel	2 6447,11144 6168,11042
 userdel	2 6447,11144 6582,11202
 EOF
      },
@@ -6978,7 +6978,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004447',
        data  => <<EOF,
-userdel	1::inwork 10585,10766 10682,10971
+userdel	1::inwork 10585,10766 10684,10975
 EOF
      },
      { from  => 1168462111, # 2007-01-10 21:48
@@ -8522,7 +8522,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005699',
        data  => <<EOF,
-userdel	2::temp 6145,10975 6168,11042 6438,11141 6447,11144 6582,11202
+userdel	2::temp 6145,10975 6168,11042 6447,11144 6582,11202
 EOF
      },
      { from  => 1181024556, # 2007-06-05 08:22
@@ -8607,7 +8607,7 @@ EOF
        text  => 'Holteistraße: Bauarbeiten, Fahrbahn ist nicht benutzbar',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 14535,11327 14499,11259 14465,11195
+userdel	q4::inwork 14535,11327 14506,11275 14465,11195
 EOF
      },
      { from  => 1181768521, # 
@@ -11668,7 +11668,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_008984',
        data  => <<EOF,
-userdel	1::inwork 10585,10766 10768,10686
+userdel	1::inwork 10585,10766 10776,10682
 EOF
      },
      { from  => 1214588431, # undef
@@ -12398,7 +12398,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009744',
        data  => <<EOF,
-userdel	2::temp 7333,11179 7435,11514
+userdel	2::temp 7322,11177 7435,11514
 EOF
      },
      { from  => 1219879749, # undef
@@ -20101,6 +20101,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_111647', # auch: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html
        data  => <<EOF,
+#: osm_watch: way id="23243508" version="28"
 userdel	q4::inwork; -1872,24336 -1790,24260 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 EOF
      },
@@ -20296,6 +20297,7 @@ EOF
        data  => <<EOF,
 #: last_checked: 2013-04-11
 #: note: einige Meter östlich der Knaackstr. gesperrt
+#: osm_watch: way id="196215276" version="1"
 userdel	q3::inwork 11101,14768 11187,14763
 EOF
      },
@@ -20628,7 +20630,7 @@ EOF
        data  => <<EOF,
 #: note: geprüft am 2012-11-02 (gegen 22:30 - geschlossen)
 #: note: und am 2012-11-15 (gegen 21:00 - offen)
-userdel	2::night 14838,11410 14776,11400
+userdel	2::night 14838,11410 14792,11391
 EOF
      },
      { from  => 1345119120, # 2012-08-16 14:12
@@ -20808,6 +20810,7 @@ EOF
 #: by: IM_019421 (allerdings hier nur bis Dezember 2013)
 #: next_check: 2013-12-04
 #: XXX danach bessere Straßenqualität? Radstreifen?
+#: osm_watch: way id="24930947" version="20"
 userdel	q4::inwork; 9149,20336 9235,20125 9266,20048 9300,19949 9333,19853 9355,19789
 EOF
      },
@@ -20868,12 +20871,12 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Richardstr.: Baustelle zwischen Böhmische Str. und Richardplatz, Fahrtrichtung gesperrt',
+       text  => 'Richardstr.: Baustelle zwischen Böhmische Str. und Richardplatz, Umfahrung auf dem Gehweg notwendig',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-04-29
-userdel	q4::inwork; 13339,7452 13303,7622
+#: last_checked: 2013-05-06
+userdel	q2::inwork 13339,7452 13303,7622
 EOF
      },
      { from  => undef, # 
@@ -20883,6 +20886,7 @@ EOF
        data  => <<EOF,
 #: last_checked: 2013-04-11 vvv
 #: XXX je 30 Meter vor und hinter der Kreuzung ist gesperrt vvv
+#: osm_watch: way id="196215276" version="1"
 userdel	q2::inwork 11436,14741 11271,14755
 userdel	q3::inwork 11271,14755 11187,14763
 #: XXX ^^^
@@ -21012,7 +21016,7 @@ EOF
        text  => 'Hertzbergstr.: Bauarbeiten zwischen Böhmische Str. und Sonnenallee',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2013-04-29
+#: last_checked: 2013-05-06
 #: next_check: 2013-05-31
 #: XXX ist die Baustelle tatsächlich Ende Mai fertig?
 #: note: in der Gegenrichtung (Richardplatz -> Sonnenallee) offiziell nur für Anwohner offen
@@ -21116,7 +21120,8 @@ EOF
        source_id => 'IM_019747',
        data  => <<EOF,
 #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
-userdel	q3::inwork 5268,11274 5247,10992
+#: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
+userdel	q2::inwork 5268,11274 5247,10992
 EOF
      },
      { from  => 1367100000, # 2013-04-28 00:00
@@ -21159,7 +21164,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-04-29
+#: last_checked: 2013-05-06
 #: XXX Straße wird asphaltiert (siehe auch Eintrag in fragezeichen-orig)
 userdel	q4::inwork; 13288,7653 13245,7742 13226,7775 13150,7845 13103,7889
 EOF

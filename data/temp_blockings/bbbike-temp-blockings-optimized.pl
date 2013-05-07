@@ -3038,7 +3038,8 @@ userdel	2::inwork 19968,16 19940,52
          'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Mitte 2013',
          'from' => 1330902000,
          'id' => 2316,
-         'data' => 'userdel	q4::inwork; -1872,24336 -1790,24260 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
+         'data' => '#: osm_watch: way id="23243508" version="28"
+userdel	q4::inwork; -1872,24336 -1790,24260 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 ',
          'type' => 'handicap'
        },
@@ -3091,6 +3092,7 @@ userdel	2::inwork 18731,8577 18709,8423
          'id' => 2337,
          'data' => '#: last_checked: 2013-04-11
 #: note: einige Meter östlich der Knaackstr. gesperrt
+#: osm_watch: way id="196215276" version="1"
 userdel	q3::inwork 11101,14768 11187,14763
 ',
          'type' => 'handicap'
@@ -3164,7 +3166,7 @@ userdel	2::inwork 8318,10738 8362,10779
          'id' => 2372,
          'data' => '#: note: geprüft am 2012-11-02 (gegen 22:30 - geschlossen)
 #: note: und am 2012-11-15 (gegen 21:00 - offen)
-userdel	2::night 14838,11410 14776,11400
+userdel	2::night 14838,11410 14792,11391
 ',
          'type' => 'gesperrt'
        },
@@ -3221,6 +3223,7 @@ userdel	2::temp 8119,12414 8055,12186
 #: by: IM_019421 (allerdings hier nur bis Dezember 2013)
 #: next_check: 2013-12-04
 #: XXX danach bessere Straßenqualität? Radstreifen?
+#: osm_watch: way id="24930947" version="20"
 userdel	q4::inwork; 9149,20336 9235,20125 9266,20048 9300,19949 9333,19853 9355,19789
 ',
          'type' => 'handicap'
@@ -3243,12 +3246,12 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        undef,
        {
          'until' => undef,
-         'text' => 'Richardstr.: Baustelle zwischen Böhmische Str. und Richardplatz, Fahrtrichtung gesperrt',
+         'text' => 'Richardstr.: Baustelle zwischen Böhmische Str. und Richardplatz, Umfahrung auf dem Gehweg notwendig',
          'from' => undef,
          'id' => 2398,
          'data' => '#: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-04-29
-userdel	q4::inwork; 13339,7452 13303,7622
+#: last_checked: 2013-05-06
+userdel	q2::inwork 13339,7452 13303,7622
 ',
          'type' => 'handicap'
        },
@@ -3259,6 +3262,7 @@ userdel	q4::inwork; 13339,7452 13303,7622
          'id' => 2399,
          'data' => '#: last_checked: 2013-04-11 vvv
 #: XXX je 30 Meter vor und hinter der Kreuzung ist gesperrt vvv
+#: osm_watch: way id="196215276" version="1"
 userdel	q2::inwork 11436,14741 11271,14755
 userdel	q3::inwork 11271,14755 11187,14763
 #: XXX ^^^
@@ -3367,7 +3371,7 @@ userdel	q4::inwork 10479,18007 10498,18014 10473,18113 10545,18143 10582,18159
          'text' => 'Hertzbergstr.: Bauarbeiten zwischen Böhmische Str. und Sonnenallee',
          'from' => undef,
          'id' => 2411,
-         'data' => '#: last_checked: 2013-04-29
+         'data' => '#: last_checked: 2013-05-06
 #: next_check: 2013-05-31
 #: XXX ist die Baustelle tatsächlich Ende Mai fertig?
 #: note: in der Gegenrichtung (Richardplatz -> Sonnenallee) offiziell nur für Anwohner offen
@@ -3410,7 +3414,8 @@ userdel	q4::inwork; 13474,8060 13444,7879
          'from' => 1366740818,
          'id' => 2422,
          'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
-userdel	q3::inwork 5268,11274 5247,10992
+#: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
+userdel	q2::inwork 5268,11274 5247,10992
 ',
          'type' => 'handicap'
        },
@@ -3435,59 +3440,11 @@ userdel auto	3 4358,12365 4518,12350 4601,12310
          'from' => undef,
          'id' => 2425,
          'data' => '#: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-04-29
+#: last_checked: 2013-05-06
 #: XXX Straße wird asphaltiert (siehe auch Eintrag in fragezeichen-orig)
 userdel	q4::inwork; 13288,7653 13245,7742 13226,7775 13150,7845 13103,7889
 ',
          'type' => 'handicap'
-       },
-       {
-         'source_id' => 'IM_019787',
-         'until' => 1367791199,
-         'text' => 'Bahnhofstr. (Lichtenrade) zwischen Riedingerstr. und Goltzstr. Veranstaltung, Vollsperrung (bis Sonntag, 24:00)',
-         'from' => 1367560561,
-         'id' => 2426,
-         'data' => 'userdel	2::temp 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
-',
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'http://www.berlin.de/events/2101687-2229501-avonrunning-berliner-frauenlauf.html',
-         'until' => 1367704799,
-         'text' => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt',
-         'from' => 1367560678,
-         'id' => 2427,
-         'data' => 'userdel	2::temp 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 8119,12414
-userdel	2::temp 6828,12031 7383,12095 7816,12150 8055,12186
-userdel auto	3 7460,12054 7383,12095 7039,12314
-userdel auto	3 8522,12187 8538,12245 8600,12165
-userdel auto	3 8522,12187 8538,12245 8546,12279
-userdel auto	3 8522,12187 8538,12245 8522,12239
-userdel auto	3 7875,12363 7816,12150 7827,12105
-userdel auto	3 8522,12239 8538,12245 8522,12187
-userdel auto	3 8522,12239 8538,12245 8546,12279
-userdel auto	3 8522,12239 8538,12245 8600,12165
-userdel auto	3 8546,12279 8538,12245 8600,12165
-userdel auto	3 8546,12279 8538,12245 8522,12239
-userdel auto	3 8546,12279 8538,12245 8522,12187
-userdel auto	3 8600,12165 8538,12245 8546,12279
-userdel auto	3 8600,12165 8538,12245 8522,12239
-userdel auto	3 8600,12165 8538,12245 8522,12187
-userdel auto	3 7039,12314 7383,12095 7460,12054
-userdel auto	3 7827,12105 7816,12150 7875,12363
-',
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130419.1210.383671.html',
-         'data' => 'userdel	2::temp 6244,8597 6339,8644 6454,8653
-',
-         'periodic' => 1,
-         'until' => 1367791199,
-         'from' => 1367560778,
-         'text' => 'Schöneberger Mai- und Spargelfest am 04. und 05. Mai 2013 in der Freiherr-vom-Stein-Straße',
-         'type' => 'gesperrt',
-         'id' => 2428
        }
      
 );
