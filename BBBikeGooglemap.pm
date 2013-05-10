@@ -189,7 +189,7 @@ sub get_html {
     ) = @_;
 
     #open(O, "> /tmp/a.log"); print O "nomap: $nomap\n";
-    my $log_routes = 1;
+    my $log_routes = 0;
 
     my $converter   = $self->{converter};
     my $coordsystem = $self->{coordsystem};
