@@ -119,7 +119,8 @@ function addInfoWindow(marker){var icons=[bbbike.icons.green,bbbike.icons.red,bb
 if(routeSave){routeSave.setOptions({strokeWeight:5});}
 infoWindow=new google.maps.InfoWindow({maxWidth:400});var content="<div id=\"infoWindowContent\">\n"
 content+="City: "+'<a target="_new" href="/'+opt.city+'/">'+opt.city+'</a>'+"<br/>\n";content+="<img height='12' src='"+icons[0]+"' /> "+"Start: "+opt.startname+"<br/>\n";if(opt.vianame&&opt.vianame!=""){content+="<img height='12' src='"+icons[2]+"' /> "+"Via: "+opt.vianame+"<br/>\n";}
-content+="<img height='12' src='"+icons[1]+"' /> "+"Destination: "+opt.zielname+"<br/>\n";content+="Route Length: "+opt.route_length+"km<br/>\n";content+="Driving time: "+driving_time(opt.driving_time)+"<br/>\n";if(opt.pref_speed!=""&&opt.pref_speed!="20"){content+="Preferred speed: "+opt.pref_speed+"<br/>\n";}
+content+="<img height='12' src='"+icons[1]+"' /> "+"Destination: "+opt.zielname+"<br/>\n";content+="Route Length: "+opt.route_length+"km<br/>\n";if(opt.driving_time){content+="Driving time: "+driving_time(opt.driving_time)+"<br/>\n";}
+if(opt.pref_speed!=""&&opt.pref_speed!="20"){content+="Preferred speed: "+opt.pref_speed+"<br/>\n";}
 if(opt.pref_cat!=""){content+="Preferred street category: "+opt.pref_cat+"<br/>\n";}
 if(opt.pref_quality!=""){content+="Road surface: "+opt.pref_quality+"<br/>\n";}
 if(opt.pref_unlit!=""){content+="Avoid unlit streets: "+opt.pref_unlit+"<br/>\n";}
