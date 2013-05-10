@@ -2305,11 +2305,11 @@ function plotRoute(map, opt, street) {
         }
         content += "<img height='12' src='" + icons[1] + "' /> " + "Destination: " + opt.zielname + "<br/>\n";
         content += "Route Length: " + opt.route_length + "km<br/>\n";
-        
+
         if (opt.driving_time) {
             content += "Driving time: " + driving_time(opt.driving_time) + "<br/>\n";
         }
-        
+
         // pref_cat pref_quality pref_specialvehicle pref_speed pref_ferry pref_unlit
         if (opt.pref_speed != "" && opt.pref_speed != "20") {
             content += "Preferred speed: " + opt.pref_speed + "<br/>\n";
