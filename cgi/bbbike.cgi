@@ -4733,6 +4733,36 @@ sub cgi_utf8 {
     return $qq;
 }
 
+sub driving_time {
+    my $def = shift;
+    my $speed_map = shift;
+    my %speed_map = %$speed_map;
+    my $r = $def;
+    my $penalty_lost = 0;
+    
+    my $ampel_count;
+    my $ampel_lost = 0;
+    if (defined $r->trafficlights) {
+	$ampel_count = $r->trafficlights;
+	$ampel_lost = 15*$ampel_count; # XXX do not hardcode!
+    }
+
+    
+    my $driving_time = "";
+    my $i = 0;
+    my @speeds = sort { $a <=> $b } keys %speed_map;
+    for my $speed (@speeds) {
+	my $def = $speed_map{$speed};
+	my $bold = $def->{Pref};
+	my $time = $def->{Time};
+
+	$driving_time .= "|" if $driving_time;
+	$driving_time .= make_time($time + $ampel_lost/3600 + $penalty_lost/3600) . ':' . $speed;
+    }
+    
+    return $driving_time;
+}
+
 sub route_logger_init {
     my %args = @_;
 
@@ -4860,7 +4890,28 @@ sub display_route {
     my $in_error_condition;
 
     make_netz();
-
+   
+    { 
+	my $coords = $r->as_cgi_string;
+	my $route_length = sprintf("%2.2f", $r->len/1000);
+	my $qq = route_logger_init(
+	    'q' => $q,
+	    'r' => $r,
+		
+	    'cityname' => &get_cityname(),
+	    'startname' => $startname,
+	    'zielname' => $zielname,
+	    'vianame' => $vianame,
+	    'lang' => $lang,
+		
+	    'coords' => $coords,
+	    'route_length' => $route_length,
+	    #'driving_time' => driving_time($r, \%speed_map), #$driving_time,
+	    'output_as' => $output_as,
+	);
+	route_logger_write($qq);
+    }
+	
     if (defined $output_as && $output_as eq 'palmdoc') {
 	require BBBikePalm;
 	my $filename = filename_from_route($startname, $zielname) . ".pdb";
@@ -5425,6 +5476,7 @@ sub display_route {
 	}
     }
 
+
  OUTPUT_DISPATCHER:
     if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|json|json-short|geojson|perldump|gpx-route)$/) {
 	
@@ -5471,25 +5523,6 @@ sub display_route {
 		  };
 	}
 
-	my $coords = $r->as_cgi_string;
-	my $route_length = sprintf("%2.2f", $r->len/1000);
-	my $qq = route_logger_init(
-	    'q' => $q,
-	    'r' => $r,
-		
-	    'cityname' => &get_cityname(),
-	    'startname' => $startname,
-	    'zielname' => $zielname,
-	    'vianame' => $vianame,
-	    'lang' => $lang,
-		
-	    'coords' => $coords,
-	    'route_length' => $route_length,
-	    #'driving_time' => $driving_time,
-	    'output_as' => $output_as,
-	);
-	route_logger_write($qq);
-	
 	if ($output_as eq 'perldump') {
 	    require Data::Dumper;
 	    my $filename = filename_from_route($startname, $zielname) . ".txt";
