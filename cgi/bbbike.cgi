@@ -155,6 +155,7 @@ use vars qw($VERSION $VERBOSE
 	    $bbbike_start_js_version $bbbike_css_version
 	    $use_file_cache $cache_entry
 	    $use_smart_app_banner
+	    $log_routes
 	   );
 
 $gmap_api_version = 3;
@@ -164,6 +165,8 @@ $facebook_page = 'http://www.facebook.com/BBBikeWorld';
 use vars qw($use_cooked_street_data);
 
 $gmapsv3 = 1;
+
+$log_routes = 1;
 
 #XXX in mod_perl/Apache::Registry operation there are a lot of "shared
 # variable" warnings. They seem to be not harmful, but I should get
@@ -4730,6 +4733,78 @@ sub cgi_utf8 {
     return $qq;
 }
 
+sub route_logger_init {
+    my %args = @_;
+
+    my $q = $args{'q'};
+    my $r = $args{'r'};
+    
+    my $cityname = $args{'cityname'};
+    my $zoom = $args{'zoom'};
+    my $startname = $args{'startname'};
+    my $zielname = $args{'zielname'};
+    my $vianame = $args{'$ianame'};
+    my $lang = $args{'lang'};
+    
+    my $coords = $args{'coords'};
+    my $route_length = $args{'route_length'};
+    my $driving_time = $args{'driving_time'};
+    my $output_as = $args{'output_as'};
+    
+    my $qq = CGI->new($q);
+    
+    $qq->param('coordsystem', 'wgs84');
+    $qq->param('maptype', 'cycle');
+    $qq->param('city', $cityname);
+    $qq->param('source_script', "$cityname.cgi");
+    $qq->param( 'startname', Encode::is_utf8($startname) ? $startname : Encode::encode( utf8 => $startname));
+    $qq->param( 'zielname', Encode::is_utf8($zielname) ? $zielname : Encode::encode( utf8 => $zielname));
+    $qq->param( 'vianame', Encode::is_utf8($vianame) ? $vianame : Encode::encode( utf8 => $vianame));
+    $qq->param( 'lang', $lang);
+    $qq->param( -name=>'draw', -value=>[qw/str strname sbahn wasser flaechen title/]);
+    $qq->param( 'output_as', $output_as);
+    
+    $qq->param('zoom', $zoom) if defined $zoom;
+    $qq->param( 'coords', $coords) if defined $coords;
+    $qq->param( 'route_length', sprintf("%2.2f", $r->len/1000)) if defined $r;
+    $qq->param( 'driving_time', $driving_time) if defined $driving_time;
+    
+    return $qq;
+}
+
+sub get_cityname {
+    my $cityname = $osm_data && $main::datadir =~ m,data-osm/(.+), ? $1 : 'bbbike';
+    return $cityname;
+}
+
+sub route_logger_write {
+    my $q = shift;
+
+    my $cache = $q->param('cache') || 0;
+    
+    # log route queries
+    if ( $log_routes && !$cache ) {
+
+        eval {
+
+            ## utf8 fixes
+            #if ($cgi_utf8_bug) {
+            #    foreach my $key (qw/startname zielname vianame/) {
+            #        my $val = $q->param($key);
+            #        $val = Encode::decode( "utf8", $val );
+            #
+            #        # XXX: have to run decode twice!!!
+            #        #$val = Encode::decode( "utf8", $val );
+            #
+            #        $q->param( $key, $val );
+            #    }
+            #}
+
+            my $url = $q->url( -query => 1, -full => 1 );
+            warn "URL:$url\n";
+        };
+    }    
+}
 
 sub display_route {
     my($r, %args) = @_;
@@ -5352,6 +5427,7 @@ sub display_route {
 
  OUTPUT_DISPATCHER:
     if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|json|json-short|geojson|perldump|gpx-route)$/) {
+	
 	for my $tb (@affecting_blockings) {
 	    $tb->{longlathop} = [ map { join ",", convert_data_to_wgs84(split /,/, $_) } @{ $tb->{hop} || [] } ];
 	}
@@ -5395,6 +5471,25 @@ sub display_route {
 		  };
 	}
 
+	my $coords = $r->as_cgi_string;
+	my $route_length = sprintf("%2.2f", $r->len/1000);
+	my $qq = route_logger_init(
+	    'q' => $q,
+	    'r' => $r,
+		
+	    'cityname' => &get_cityname(),
+	    'startname' => $startname,
+	    'zielname' => $zielname,
+	    'vianame' => $vianame,
+	    'lang' => $lang,
+		
+	    'coords' => $coords,
+	    'route_length' => $route_length,
+	    #'driving_time' => $driving_time,
+	    'output_as' => $output_as,
+	);
+	route_logger_write($qq);
+	
 	if ($output_as eq 'perldump') {
 	    require Data::Dumper;
 	    my $filename = filename_from_route($startname, $zielname) . ".txt";
