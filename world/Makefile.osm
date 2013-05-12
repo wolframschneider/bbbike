@@ -222,7 +222,7 @@ _pbf2pbf:
 _pbf2pbf-checksum: 
 	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | ${XARGS} -n 1 -0 -P${MAX_PBF2OSM} ${OSM_CHECKSUM}
 
-osm2garmin: osm2garmin-osm osm2garmin-cycle osm2garmin-leisure check-zip 
+osm2garmin: osm2garmin-osm osm2garmin-cycle osm2garmin-leisure osm2garmin-bbbike check-zip 
 
 osm2garmin-osm:
 	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | ${XARGS} -n 1 -0 -P${MAX_OSM2GARMIN} ${OSM2GARMIN}
@@ -231,6 +231,8 @@ osm2garmin-cycle:
 	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | env ext=garmin-cycle.zip ${XARGS} -n 1 -0 -P${MAX_OSM2GARMIN} ${OSM2GARMIN} 
 osm2garmin-leisure:
 	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | env ext=garmin-leisure.zip ${XARGS} -n 1 -0 -P${MAX_OSM2GARMIN} ${OSM2GARMIN}
+osm2garmin-bbbike:
+	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | env ext=garmin-bbbike.zip ${XARGS} -n 1 -0 -P${MAX_OSM2GARMIN} ${OSM2GARMIN}
 
 osm2shape osm2shp:
 	echo ${CITIES} | ${PERL} -npe 's/\s+/\n/g' | ${PERL} -ne 'chomp; print qq,'${OSM_DIR}'/$$_/$$_.osm.pbf\0, ' | ${XARGS} -n 1 -0 -P${MAX_OSM2SHAPE} ${OSM2SHAPE}
@@ -743,13 +745,13 @@ bbbike-cache-install:
 	chown -R ${WEB_GROUP}:${WEB_GROUP} ${BBBIKE_PARTITION}/cache
 
 extract-distclean:
-	find ${EXTRACTS_SPOOL_DIR} -type f -print0 | xargs -0 rm -f
+	find ${EXTRACTS_SPOOL_DIR}/ -type f -print0 | xargs -0 rm -f
 
 # garbage collection, 2 days
 extract-gc:
 	cd ${EXTRACTS_SPOOL_DIR}; find incoming confirmed running download osm -type f -mtime +4 -print0 | xargs -0 rm -f
-	if test -e ${BBBIKE_PARTITION}/tmpfs; then \
-	    find ${BBBIKE_PARTITION}/tmpfs -type f -mtime +1 -print0 | xargs -0 rm -f; \
+	if test -e /tmpfs; then \
+	    find /tmpfs/ -type f -mtime +1 -print0 | xargs -0 rm -f; \
 	fi
 
 # garbage collection, 7 days, all files
@@ -867,7 +869,9 @@ deb-repo:
 
 deb-bootstrap debian-bootstrap: deb-bootstrap-rsync deb-bootstrap-dir 
 bbbike-bootstrap:  update-files debian-bootstrap install-backend-lighttpd
-	sudo ${MAKE} -f Makefile.osm extract-bbbike-org-install bbbike-cache-install
+	sudo ${MAKE} -s -f Makefile.osm extract-bbbike-org-install bbbike-cache-install
+	@echo ""
+	@echo "You may also run: make staging"
 	
 install-backend-lighttpd:
 	${MAKE} -C./world/etc install-backend-lighttpd
@@ -889,8 +893,8 @@ deb-bootstrap-dir:
 	test -e /usr/local/bin/perl || sudo ln -fs /usr/bin/perl /usr/local/bin/perl
 	test -e /usr/lib/libgeos-3.2.2.so || sudo ln -fs /usr/lib/libgeos-3.2.0.so /usr/lib/libgeos-3.2.2.so
 	test -e /usr/local/bin/osmosis || sudo ln -sf ${DEB_OPT_DIR}/osmosis-0.40.1/bin/osmosis /usr/local/bin/osmosis
-	sudo mkdir -p /bbbike/tmp /bbbike/tmpfs
-	sudo chmod 7777 /bbbike/tmp /bbbike/tmpfs
+	sudo mkdir -p /bbbike/tmp /tmpfs
+	sudo chmod 7777 /bbbike/tmp /tmpfs
 	${MAKE} -s -C./ext all install >/dev/null 2>&1
 
 

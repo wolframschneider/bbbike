@@ -266,7 +266,7 @@ div#sidebar {
 div#routes {
 	position: absolute; 
 	left: 0px;
-	width: 22em;
+	width: 18em;
 	background-color: white;
 	z-index: 1000; 
 	
@@ -280,11 +280,11 @@ div#BBBikeGooglemap {
         width: 75%; 
         height: 92.5%;
 	position: relative;
-	/* margin-left: 22.4em;  */
 	border: 0px solid #979797;z-index: 0; 
 	right: 0em;
-	left: 25%;
+	left: 19em;
 }
+
 div#bottom {
 	position: relative;
 }

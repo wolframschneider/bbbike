@@ -76,12 +76,14 @@ esac
 test -z "$file" && usage
 
 # use RAM disk if available
-if [ -e /bbbike/tmpfs ]; then
-    _tmp=/bbbike/tmpfs
+if [ -e /tmpfs ]; then
+    _tmp=/tmpfs
 else
     _tmp=/bbbike/tmp
 fi
 : ${TMPDIR=$_tmp}
+
+OSMOSIS_TMPDIR="-Djava.io.tmpdir=$_tmp"; export OSMOSIS_TMPDIR
 
 tmpdir=`mktemp -d ${TMPDIR}/mapsforge.$(basename $ext .zip).XXXXXXXXXXX`
 

@@ -64,6 +64,7 @@ our $option = {
     'request_method'      => "GET",
     'supported_languages' => [qw/en de es fr ru/],
     'message_path'        => "../world/etc/extract",
+    'pro'                 => 0,
 };
 
 our $formats = {
@@ -77,7 +78,7 @@ our $formats = {
     'garmin-cycle.zip'   => "Garmin Cycle",
     'garmin-leisure.zip' => "Garmin Leisure",
 
-    #'garmin-bbbike.zip'  => "Garmin BBBike",
+    'garmin-bbbike.zip' => "Garmin BBBike",
     'navit.zip'         => "Navit",
     'obf.zip'           => "Osmand (OBF)",
     'o5m.gz'            => "o5m gzip'd",
@@ -302,8 +303,16 @@ sub footer_top {
 
     my $community_link =
       $language eq 'de' ? "/community.de.html" : "/community.html";
-    my $donate = qq{<p class="normalscreen" id="big_donate_image">}
-      . qq{<a href="$community_link#donate"><img class="logo" height="47" width="126" src="/images/btn_donateCC_LG.gif" alt="donate"/></a></p>};
+    my $donate;
+
+    if ( $option->{'pro'} ) {
+        $donate =
+qq{<p class="normalscreen" id="extract-pro" title="you are using the extract pro service">extract pro</p>\n};
+    }
+    else {
+        $donate = qq{<p class="normalscreen" id="big_donate_image">}
+          . qq{<a href="$community_link#donate"><img class="logo" height="47" width="126" src="/images/btn_donateCC_LG.gif" alt="donate"/></a></p>};
+    }
 
     return <<EOF;
   $donate
@@ -314,6 +323,7 @@ sub footer_top {
     <a href="http://download.bbbike.org/osm/">download</a> |
     <!-- <a href="/cgi/livesearch-extract.cgi">@{[ M("livesearch") ]}</a> | -->
     <a href="http://mc.bbbike.org/mc/">map compare</a> |
+    <a href="/extract.html#extract-pro">pro</a> |
     <a href="$community_link#donate">@{[ M("donate") ]}</a> $locate
   </div>
 EOF

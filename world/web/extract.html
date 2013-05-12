@@ -41,7 +41,11 @@
           <li>supports <a href="http://wiki.openstreetmap.org/wiki/PBF_Format">Protocolbuffer Binary Format (PBF)</a> format</li>
           <li>supports <a href="http://wiki.openstreetmap.org/wiki/OSM_XML">OSM XML</a>, compressed with gzip, bzip2 or 7-zip (xz)</li>
           <li>supports <a href="http://wiki.openstreetmap.org/wiki/O5m">.o5m</a> data format, compressed with gzip or bzip2</li>
-          <li>supports Garmin format, with styles for <a href="http://www.openstreetmap.org/">OSM</a>, <a href="http://www.opencyclemap.org/">cycle map</a> and leisure (<a href="http://freizeitkarte-osm.de">freizeitkarte</a>). Routing is enabled</li>
+          <li>supports Garmin format, with styles for <a href="http://www.openstreetmap.org/">OSM</a>,
+	    <a href="http://www.opencyclemap.org/">cycle map</a>,
+	    leisure (<a href="http://freizeitkarte-osm.de">freizeitkarte</a>)
+	    and <a href="http://bbbike.de">BBBike</a>. Routing is enabled
+	  </li>
           <li>supports <a href="http://en.wikipedia.org/wiki/Shapefile">Esri shapefile</a> format</li>
           <li>supports <a href="http://osmand.net">Osmand (OBF)</a> format for Android devices</li>
           <li>supports <a href="http://code.google.com/p/mapsforge/">mapsforge (map)</a> format for Android devices</li>
@@ -56,19 +60,23 @@
 	      <td>Osmand</td>
 	      <td>mapsforge</td>
 	      <td>navit</td>
+	      
 	      <td>Garmin OSM</td>
 	      <td>Garmin Cycle</td>
 	      <td>Garmin Leisure</td>
+	      <td>Garmin BBBike</td>
 	    </tr>  
 	  </thead>
 	  <tbody>
 	    <tr>
-	      <td><a href="/images/osmand-small.png"><img src="/images/osmand-micro.png" alt="" title="screen shot Osmand"/></a> </td>
-	      <td><a href="/images/mapsforge-small.png"><img src="/images/mapsforge-micro.png" alt="" title="screen shot mapsforge"/></a> </td>
-	      <td><a href="/images/navit-small.png"><img src="/images/navit-micro.png" alt="" title="screen shot navit"/></a> </td>
-	      <td><a href="/images/garmin-osm-small.png"><img src="/images/garmin-osm-micro.png" alt="" title="screen shot garmin osm"/></a></td>
-	      <td><a href="/images/garmin-cycle2-small.png"><img src="/images/garmin-cycle2-micro.png" alt="" title="screen shot garmin cycle"/></a></td>
-	      <td><a href="/images/garmin-leisure2-small.png"><img src="/images/garmin-leisure2-micro.png" alt="" title="screen shot garmin leisure"/></a></td>
+	      <td><a target="_blank" href="/images/osmand-small.png"><img src="/images/osmand-micro.png" alt="" title="screen shot Osmand"/></a></td>
+	      <td><a target="_blank" href="/images/mapsforge-small.png"><img src="/images/mapsforge-micro.png" alt="" title="screen shot mapsforge"/></a></td>
+	      <td><a target="_blank" href="/images/navit-small.png"><img src="/images/navit-micro.png" alt="" title="screen shot navit"/></a></td>
+	      
+	      <td><a target="_blank" href="/images/garmin-osm2-small.png"><img src="/images/garmin-osm2-micro.png" alt="" title="screen shot garmin osm"/></a></td>
+	      <td><a target="_blank" href="/images/garmin-cycle2-small.png"><img src="/images/garmin-cycle2-micro.png" alt="" title="screen shot garmin cycle"/></a></td>
+	      <td><a target="_blank" href="/images/garmin-leisure2-small.png"><img src="/images/garmin-leisure2-micro.png" alt="" title="screen shot garmin leisure"/></a></td>
+	      <td><a target="_blank" href="/images/garmin-bbbike2-small.png"><img src="/images/garmin-bbbike2-micro.png" alt="" title="screen shot garmin leisure"/></a></td>
 	    </tr>	  
 	  </tbody>
 	</table>
@@ -115,19 +123,23 @@
 	<table border="0" align="center">
 	  <tbody>
 	    <tr>
-	      <td><p>Garmin OSM</p><img src="/images/garmin-osm-small.png" alt="" title="screen shot garmin osm"/></td>
+	      <td><p>Garmin OSM</p><img src="/images/garmin-osm2-small.png" alt="" title="screen shot garmin osm"/></td>
 	      <td><p>Garmin Cycle</p><img src="/images/garmin-cycle2-small.png" alt="" title="screen shot garmin cycle"/></td>
+	    </tr>
+	    <tr>
 	      <td><p>Garmin Leisure</p><img src="/images/garmin-leisure2-small.png" alt="" title="screen shot garmin leisure"/></td>
+	      <td><p>Garmin BBBike</p><img src="/images/garmin-bbbike2-small.png" alt="" title="screen shot garmin BBBike"/></td>
 	    </tr>
 	  </tbody>
 	</table>
 	
-	osm: standard OpenStreetMap style<br/>
-	cycle: map style similar to opencyclemap.org<br/>
-	leisure: map style from freizeitkarte-osm.de, for outdoor activities. The .img file is ~30% larger than the osm/cycle file<br/>
-	
-
-	
+	<p/>
+	<table border="1" align="center">
+	  <tr><td>osm</td><td>standard <a target="_new" href="http://www.openstreetmap.org">OpenStreetMap style</a></td></tr>
+	  <tr><td>cycle</td><td>map style similar to <a target="_new" href="http://www.opencyclemap.org">opencyclemap.org</a></td></tr>
+	  <tr><td>leisure</td><td>map style from <a target="_new" href="http://www.freizeitkarte-osm.de">freizeitkarte-osm.de</a>, for outdoor activities. The .img file is ~30% larger than the osm/cycle file</td></tr>
+	  <tr><td>bbbike</td><td>map style from <a target="_new" href="http://www.bbbike.de/">bbbike.de</a>, for outdoor activities. Experimentell</td></tr>
+	</table>
 	
         <h3>Osmand documentation</h3>
 	<ul>
@@ -210,8 +222,19 @@
 	<p>Not supported browsers: <strike>IE6</strike>, <strike>IE7</strike>
 	</p>
 
-	<h3>Commercial Support and daily data updates</h3>
-	Feel free to <a href="http://wolfram.schneider.org/mail/mail.html">contact us</a> if you need commercial support or need database updates on a daily basis.
+	<a name="extract-pro"></a>
+	<h3>Extract Pro, Commercial Support and daily data updates</h3>
+	<p>
+	The <b>extract pro</b> service offers extracts with full meta data and a
+	daily update of the database (0:00 UTC). Due the higher system load, we cannot offer
+	this service for free.
+	</p>
+
+	<p>
+	Feel free to <a href="http://wolfram.schneider.org/mail/mail.html">contact us</a> if you need commercial support
+	or want use the extract pro service.
+	</p>	
+	
 		
         <h3>Terms of Service</h3>
 	<p>Map data (&copy;) <a href="http://www.openstreetmap.org/copyright" title="OpenStreetMap License">OpenStreetMap.org</a> contributors.</p>

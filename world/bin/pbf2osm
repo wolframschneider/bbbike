@@ -18,10 +18,9 @@ osm2o5m=osmconvert
 
 # max. file size in KB
 : ${max_file_size_garmin=2950000}
+: ${max_file_size_mapsforge=195000}
 : ${max_file_size_osmand=600000}
-: ${max_cpu_time=7200}
-
-ulimit -t $max_cpu_time
+_max_cpu_time=7200
 
 xz=`which xz | head -n 1`
 xz_opt=-2
@@ -35,14 +34,14 @@ case $1 in
   -bzip2 | --bzip2 ) shift; compress=bzip2 ;;
 
   # multi-core
-  --pbzip2 ) shift; compress=pbzip2 ;;
-  --pgzip | --pigz ) shift; compress=pgzip ;;
+  --pbzip2 ) shift; compress=pbzip2; _max_cpu_time=36000 ;;
+  --pgzip | --pigz ) shift; compress=pgzip; _max_cpu_time=10800 ;;
 
   -o5m | --o5m ) shift; compress=o5m ;;
   -o5m-gzip | --o5m-gzip ) shift; compress=o5m-gzip ;;
   -o5m-bzip2 | --o5m-bzip2 ) shift; compress=o5m-bzip2 ;;
 
-  -xz | --xz )       shift; compress=xz ;;
+  -xz | --xz )       shift; compress=xz; _max_cpu_time=10800 ;;
   -shape | --shape | -shp | --shp | --shapefile ) shift; compress=shape ;;
   -osmand | --osmand | -obf | --obf ) shift; compress=osmand ;;
   -navit | --navit ) shift; compress=navit ;;
@@ -52,9 +51,12 @@ case $1 in
   -garmin-cycle | --garmin-cycle ) shift; compress=garmin; garmin_style=cycle ;;
   -garmin-leisure | --garmin-leisure ) shift; compress=garmin; garmin_style=leisure ;;
   -garmin-bbbike | --garmin-bbbike ) shift; compress=garmin; garmin_style=bbbike ;;
-  
+
   -mapsforge-osm | --mapsforge-osm ) shift; compress=mapsforge; mapsforge_style=osm ;;
 esac
+
+: ${max_cpu_time="$_max_cpu_time"}
+ulimit -t $max_cpu_time
 
 file=$1
 city="$2"
@@ -82,16 +84,16 @@ case $compressionMethod in
 esac
 
 args=""
-for f 
+for f
 do
    ff=`echo $f | sed "s/\.pbf$/$ext.tmp/"`
    args="$args --read-pbf $f --write-xml $ff compressionMethod=$compressionMethod"
 done
 
 
-if osmosis $global_opt $args 
+if osmosis $global_opt $args
 then
-    for f 
+    for f
     do
         ff=`echo $f | sed "s/\.pbf$/$ext/"`
         mv -f $ff.tmp $ff
@@ -100,18 +102,31 @@ then
 else
     echo "File $@ failed"
     exit 2
-fi 
+fi
 }
 
 size=$(du -ks -L "$file" | awk '{ print $1}')
 case $compress in
-    garmin | navit | shape ) if [ $size -gt $max_file_size_garmin ]; then usage "file size to big: $size > $max_file_size_garmin"; fi ;;
-    osmand ) if [ $size -gt $max_file_size_osmand ]; then usage "file size to big: $size > $max_file_size_osmand"; fi ;;
+    garmin | navit | shape )
+	if [ $size -gt $max_file_size_garmin ]; then
+	  usage "file '$file' size to big: $size > $max_file_size_garmin"
+	fi
+	;;
+    osmand )
+	if [ $size -gt $max_file_size_osmand ]; then
+	  usage "file '$file' size to big: $size > $max_file_size_osmand"
+	fi
+	;;
+    mapsforge )
+	if [ $size -gt $max_file_size_mapsforge ]; then
+	  usage "file '$file' size to big: $size > $max_file_size_mapsforge"
+	fi
+	;;
     * ) ;;
 esac
 
 if [ "$compress" = "" ]; then
-    osmosis $global_opt --read-pbf "$file" --write-xml /dev/stdout 
+    osmosis $global_opt --read-pbf "$file" --write-xml /dev/stdout
 else
     f=`basename $file .pbf`
     dir=`dirname $file`
@@ -124,7 +139,7 @@ else
 
         o5m ) $osm2o5m "$file" --out-o5m ;;
         o5m-gzip ) $osm2o5m "$file" --out-o5m | $gzip > $dir/$f.o5m.gz.tmp; mv -f $dir/$f.o5m.gz.tmp $dir/$f.o5m.gz ;;
-        o5m-bzip2 ) $osm2o5m "$file" --out-o5m | $bzip2 > $dir/$f.o5m.bz2.tmp; mv -f $dir/$f.o5m.bz2.tmp $dir/$f.o5m.bz2 ;; 
+        o5m-bzip2 ) $osm2o5m "$file" --out-o5m | $bzip2 > $dir/$f.o5m.bz2.tmp; mv -f $dir/$f.o5m.bz2.tmp $dir/$f.o5m.bz2 ;;
 
 	xz ) osmosis $global_opt --read-pbf "$file" --write-xml /dev/stdout | $xz $xz_opt > $dir/$f.tmp; mv -f $dir/$f.tmp $dir/$f.xz ;;
 	garmin ) $osm2garmin "$file" "$garmin_style" "$city" ;;

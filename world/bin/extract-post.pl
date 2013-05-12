@@ -25,14 +25,16 @@ binmode \*STDERR, ":utf8";
 my $timeout = 60;
 alarm($timeout);
 
-my $format      = 'osm.pbf';
-my $city        = "";
-my $email       = "";
-my $coords_json = "";
-my $coords_perl = "";
-my $coords_poly = "";
-my $debug       = 0;
-my $url         = 'http://localhost/cgi/extract.cgi';
+my $format       = 'osm.pbf';
+my $city         = "";
+my $email        = "";
+my $coords_json  = "";
+my $extract_file = "";
+my $coords_perl  = "";
+my $coords_poly  = "";
+my $debug        = 0;
+my $url          = 'http://localhost/cgi/extract.cgi';
+my $exit_zero    = 0;
 
 sub usage () {
     <<EOF;
@@ -44,9 +46,11 @@ usage: $0 [ options ]
 --coords-json=/path/to/data.json
 --coords-perl=/path/to/data.pl
 --coords-poly=/path/to/data.poly
+--extract-file=/path/to/extract.json
 --format=format		default: $format
 --timeout=timeout	default: $timeout
 --url=url		default: $url
+--exit-zero             default: $exit_zero
 EOF
 }
 
@@ -87,6 +91,50 @@ sub get_perl_from_file {
     return $perl;
 }
 
+sub get_extract_from_file {
+    my $file = shift;
+    my $args = shift;
+
+    my $obj = get_json_from_file($file);
+
+    $args->{'city'}   = $obj->{'city'}   if $obj->{'city'};
+    $args->{'format'} = $obj->{'format'} if $obj->{'format'};
+
+    # backward compatible
+    $args->{'format'} =~ s/^osm\.(navit.zip|shp.zip|obf.zip)/$1/;
+
+    my $coords = $obj->{'coords'};
+
+    # backward compatible
+    $coords = [] if ref $coords ne 'ARRAY';
+
+    if (   !defined $coords
+        || $coords eq ""
+        || ( ref $coords eq 'ARRAY' && scalar(@$coords) == 0 ) )
+    {
+        if (   $obj->{ne_lat} ne ""
+            && $obj->{sw_lat} ne ""
+            && $obj->{sw_lng} ne ""
+            && $obj->{ne_lng} )
+        {
+            $coords = [
+                [ $obj->{sw_lng}, $obj->{sw_lat} ],
+                [ $obj->{ne_lng}, $obj->{sw_lat} ],
+                [ $obj->{ne_lng}, $obj->{ne_lat} ],
+                [ $obj->{sw_lng}, $obj->{ne_lat} ]
+            ];
+        }
+    }
+
+    warn Dumper($obj) if $debug >= 2;
+    warn Dumper( $args, $coords ) if $debug >= 2;
+
+    return (
+        perl2coords($coords), $args->{'city'},
+        $args->{'format'},    $args->{'email'}
+    );
+}
+
 # convert perl array to coords=<....> parameter
 sub perl2coords {
     my $list = shift;
@@ -103,47 +151,73 @@ sub perl2coords {
     return $data;
 }
 
+# wrapper around die with error status
+sub Die {
+    my $message = shift;
+    warn $message;
+
+    exit( !$exit_zero );
+}
+
+################################################################################
+#
+# main
+#
 my $help;
 GetOptions(
-    "debug=i"       => \$debug,
-    "email=s"       => \$email,
-    "coords-json=s" => \$coords_json,
-    "coords-perl=s" => \$coords_perl,
-    "coords-poly=s" => \$coords_poly,
-    "format=s"      => \$format,
-    "city=s"        => \$city,
-    "url=s"         => \$url,
-    "timeout=i"     => \$timeout,
-    "help"          => \$help,
+    "debug=i"        => \$debug,
+    "email=s"        => \$email,
+    "coords-json=s"  => \$coords_json,
+    "extract-file=s" => \$extract_file,
+    "coords-perl=s"  => \$coords_perl,
+    "coords-poly=s"  => \$coords_poly,
+    "format=s"       => \$format,
+    "city=s"         => \$city,
+    "url=s"          => \$url,
+    "timeout=i"      => \$timeout,
+    "exit-zero!"     => \$exit_zero,
+    "help"           => \$help,
 ) or die usage;
 
 die usage if $help;
+
+my $coords;
+if ( $extract_file ne "" ) {
+    ( $coords, $city, $format, $email ) =
+      &get_extract_from_file( $extract_file,
+        { 'city' => $city, 'email' => $email, 'format' => $format } );
+}
+else {
+    $coords = perl2coords(
+          $coords_json ? get_json_from_file($coords_json)
+        : $coords_perl ? get_perl_from_file($coords_perl)
+        : get_poly_from_file($coords_poly)
+    );
+}
 
 die "No city name is given!\n" . &usage  if $city   eq "";
 die "No email address given!\n" . &usage if $email  eq "";
 die "No format is given!\n" . &usage     if $format eq "";
 die "No coords file is given!\n" . &usage
-  if $coords_json eq "" && $coords_perl eq "" && $coords_poly eq "";
+  if $coords_json eq ""
+      && $coords_perl  eq ""
+      && $coords_poly  eq ""
+      && $extract_file eq "";
 
-my $coords = perl2coords(
-      $coords_json ? get_json_from_file($coords_json)
-    : $coords_perl ? get_perl_from_file($coords_perl)
-    : get_poly_from_file($coords_poly)
-);
-die "No coordinates found in input file!\n" if $coords eq "";
+Die "No coordinates found in input file!\n" if $coords eq "";
 
-my $ua = LWP::UserAgent->new;
+my $ua        = LWP::UserAgent->new;
+my $url_param = {
+    'submit' => 'extract',
+    'city'   => $city,
+    'format' => $format,
+    'email'  => $email,
+    'coords' => $coords,
+    'as'     => 1,
+};
 
-my $response = $ua->request(
-    POST $url,
-    [
-        'submit' => 'extract',
-        'city'   => $city,
-        'format' => $format,
-        'email'  => $email,
-        'coords' => $coords
-    ]
-);
+warn "$url @{[ Dumper($url_param) ]}\n" if $debug >= 1;
+my $response = $ua->post( $url, $url_param );
 
 if ( $response->is_success ) {
     if ( $response->decoded_content =~ / class="error">(.*?)</ ) {
@@ -155,7 +229,7 @@ if ( $response->is_success ) {
     }
 }
 else {
-    die $response->status_line;
+    Die $response->status_line;
 }
 
 1;

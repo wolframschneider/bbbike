@@ -71,7 +71,7 @@ div#export_osm_too_large { color: red }
 #social { position:absolute; right: 20px; bottom: -2px; }
 
 #sidebar_left, #footer {
-	width: 23em;
+	width: 23.5em;
 	position: absolute;
 }
 
@@ -80,7 +80,7 @@ div#export_osm_too_large { color: red }
 }
 
 #map {
-	left: 23em;
+	left: 23.5em;
 	position: relative;
 	width: 100%;
 }
@@ -189,3 +189,6 @@ a.tools-helptrigger:hover img, a.tools-helptrigger-small:hover img {
 .lnglatbox_toggle { display: inline; }
 
 td { white-space: nowrap; }
+
+#extract-pro { font-size: x-large; }
+
