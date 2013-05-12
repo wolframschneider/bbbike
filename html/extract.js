@@ -28,6 +28,7 @@ var config = {
     "max_size": {
         "default": 768,
         "obf.zip": 250,
+        "navit.zip": 512,
         "mapsforge-osm.zip": 100
     },
 
