@@ -323,6 +323,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 7499,7880
 	X 7497,8168
 	X 7193,7950
+	X 7147,8000
 	X 6935,8208
 	X 6460,8093
 	X 6409,8026
@@ -2110,7 +2111,8 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	F 2580,24028
 	X 13401,15821
 	X 6451,6710
-	F 7316,7814
+#: XXX_prog: Richtung Osten reguläre Ampel, Richtung Westen nur Fußgängerampel
+	X 7310,7818
 # REMOVED (temporäre Ampel existiert nicht mehr) --- #: XXX existiert diese Ampel noch? --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5227&options=4 ---	F 18413,7774
 	X 16187,10033
 #: by: Wolfhard Schleese vvv
@@ -2467,9 +2469,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -10559,-1901
 	X -8997,-3762
 	X -8500,-2856
-	X -14034,-571
+	X -14023,-564
 	X -14115,-1678
 	X -14279,-1820
+#: XXX_prog: Ampelanlage umfasst auch die Kreuzung Schiffbauergasse
 	X -11877,-478
 	X -12571,-581
 	X -12317,-1212
@@ -2481,7 +2484,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -15276,-2868
 	X -15669,-3311
 	X -15868,-458
-	X -15508,785
+	X -15501,795
 	X -14859,421
 	X -13091,-8
 	X -13111,-136
@@ -2509,7 +2512,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -10752,-3979
 	X -11995,-2500
 	X -11656,-2944
-	X -10682,-3960
+	X -10676,-3954
 	X -10493,-4507
 	X -10359,-4780
 	X -10249,-5048
@@ -2527,10 +2530,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -9462,-2540
 	X -9734,-1896
 	X -9735,-1845
-	X -16023,1042
+	X -16026,1044
 	X -10281,-2690
 	X -7351,-3685
-	F -16766,1399
+	F -16763,1402
 	F -16897,1518
 	F -8482,-1553
 	F -10090,-2334
@@ -2548,7 +2551,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F -13137,-278
 	F -13811,182
 	F -14485,-1998
-	F -15158,589
+	F -15155,592
 	F -12515,-889
 	F -13556,-1140
 	F -9872,-4694
@@ -2565,6 +2568,11 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	B -8417,-2867
 	B -9996,-5596
 #: note: ^^^
+	X -12358,-2278
+	F -10069,-4508
+	F -12432,-226
+#: XXX_prog: Ampelanlage gilt für die gesamte Brücke, auf der anderen Seite ist auch eine
+	X -9942,21
 ################################################################################
 #: note: Ampeln elsewhere vvv
 	B 25740,34997

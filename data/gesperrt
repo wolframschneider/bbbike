@@ -563,9 +563,13 @@ Hohenstaufenstr. (Mittelstreifen mit Gitter)	3nocross::ignrte 6108,9772 6209,977
 Prellerweg (Richtungsfahrbahn)	1::igndisp 6757,5858 6895,5873 7078,5887
 Prellerweg (Richtungsfahrbahn)	1::igndisp 7078,5887 6895,5870 6757,5858
 Prellerweg (Mittelstreifen)	3nocross::ignrte 6757,5858 6895,5873 7078,5887
-Sachsendamm/Schöneberger Str. (Richtungsfahrbahn)	1::igndisp 7946,7411 8074,7295 8142,7221 8229,7154 8319,7084
+Sachsendamm/Schöneberger Str. (Richtungsfahrbahn)	1::igndisp 7946,7411 8074,7295 8176,7194 8229,7154 8319,7084
 Sachsendamm/Schöneberger Str. (Richtungsfahrbahn)	1::igndisp 8319,7084 8224,7148 8150,7200 8069,7288 7946,7411
-Sachsendamm/Schöneberger Str. (Mittelstreifen)	3nocross::ignrte 8319,7084 8229,7154 8142,7221
+Sachsendamm/Schöneberger Str. (Mittelstreifen)	3nocross::ignrte 8319,7084 8229,7154 8176,7194
+Bundesallee: Straßentunnelrampe	3nocross::ignrte 5505,8832 5515,8709 5508,8598
+Bundesallee: Absperrung auf dem Mittelstreifen	3nocross::ignrte 5515,8709 5508,8598 5472,8507 5433,8407 5399,8344
+Bundesallee (Richtungsfahrbahn)	1::igndisp 5399,8344 5427,8412 5465,8511 5502,8599 5510,8709 5505,8832
+Bundesallee (Richtungsfahrbahn)	1::igndisp 5505,8832 5515,8709 5508,8598 5472,8507 5433,8407 5399,8344
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -283,14523 -457,14536 -914,14602
 Nonnendammallee (Richtungsfahrbahn)	1::igndisp -925,14631 -283,14523
 Lötschbergstr.	1s 20161,11715 20150,11512
@@ -764,12 +768,16 @@ Hügelschanze	1 -3881,15589 -3982,15577
 Beim Pfarrhof	1 -7292,14811 -7304,14567
 Am Kleinen Platz	1 -7248,14826 -7292,14811
 Ella-Trebe-Str.	1s 7938,13302 7938,13150
+Waldmeisterstr.	1 1736,7557 1880,7558 1930,7594
+Waldmeisterstr.	1 1956,7453 1878,7499 1722,7497
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
+(Wollestr. - Mühlenstr.)	1 -10790,-1178 -10787,-1162 -10730,-1103 -10691,-1097 -10648,-1130
+Wollestr.	1s -10717,-1227 -10984,-1574
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
 Am Neuen Garten	1 -12332,585 -12582,127
 Merkurstr.	1 -8469,-2576 -8380,-2580 -8359,-2582 -8411,-2699 -8432,-2713 -8484,-2710
-Gregor-Mendel-Str.	1 -13693,-528 -13784,-537 -13948,-564 -14034,-571
+Gregor-Mendel-Str.	1 -13693,-528 -13784,-537 -13948,-564 -14023,-564
 Schillerstr.	1 -14236,-2125 -14252,-1978
 Henning-von-Tresckow-Str.	1 -13180,-1627 -12946,-1659
 Am Lustgartenwall: Ministerien	2 -13281,-1796 -12948,-1863
@@ -778,7 +786,7 @@ Weinbergstr.	1 -13519,-625 -13257,-512
 Am Kanal	1 -12839,-1342 -12718,-1327
 Am Kanal	1 -12718,-1327 -12833,-1365
 Yorckstr.	1 -12833,-1365 -12976,-1356 -13001,-1349 -13208,-1315
-Yorckstr.	1 -13206,-1294 -13001,-1329 -12974,-1336 -12839,-1342
+Yorckstr.	1 -13206,-1294 -13001,-1329 -12839,-1342
 Joliot-Curie-Str.	1 -12549,-1277 -12542,-1305 -12526,-1356 -12500,-1437
 Am Kanal, Nebenstraße	1 -12542,-1305 -12657,-1338
 Mauerstr.	1 -13433,-831 -13519,-625
@@ -805,9 +813,9 @@ Zimmerstr.	1 -13646,-1168 -13876,-1226
 Platz der Einheit	1 -12756,-1131 -12741,-1197 -12718,-1327
 Puschkinallee	1 -13042,807 -12912,783 -12868,738 -12827,629 -12815,554 -12811,533
 Geschwister-Scholl-Str.	1 -14213,-1695 -14143,-1662 -14115,-1678
-Straßenbahntrasse	3nocross::ignrte -12780,-1545 -12793,-1498 -12833,-1365
-Friedrich-Ebert-Str. -> Schwertfegerstr.: Straßenbahntrasse	3::igndisp -12780,-1545 -12793,-1498 -12870,-1493
-Schwertfegerstr. -> Friedrich-Ebert-Str.: Straßenbahntrasse	3::igndisp -12870,-1493 -12793,-1498 -12833,-1365
+Straßenbahntrasse	3nocross::ignrte -12780,-1544 -12794,-1497 -12833,-1365
+Friedrich-Ebert-Str. -> Schwertfegerstr.: Straßenbahntrasse	3::igndisp -12780,-1544 -12794,-1497 -12870,-1493
+Schwertfegerstr. -> Friedrich-Ebert-Str.: Straßenbahntrasse	3::igndisp -12870,-1493 -12794,-1497 -12833,-1365
 tragen (Treppe, 75 Stufen und etliche Rampenabschnitte)	0:180:-201 -13772,-623
 Brücke mittlerweile gesperrt	2 -19183,7299 -19150,7320
 Prof.-Dr.-Helmert-Str.: Schranke	BNP:3:-93 -7969,-1659
@@ -820,6 +828,13 @@ Hechtsprung (Groß Glienicke)	1 -9703,6278 -9860,6288 -9962,6295 -10045,6292
 (Potsdamer Chaussee - Dorfstr.)	1 -9547,6865 -9565,6954 -9616,6980
 Tuchmacherstr.	1 -10463,-1343 -10610,-1596 -10636,-1667
 Ribbeckweg	1 -9720,6589 -9928,6599 -9932,6558
+Templiner Str.	1 -13062,-2901 -12915,-2922
+An der Vorderkappe	1 -13321,-2801 -13304,-2779 -13150,-2777 -13123,-2797
+An der Vorderkappe	1 -13123,-2797 -13209,-2829 -13257,-2821 -13321,-2801
+Ulrich-von-Hutten-Str.	1 -13456,-3099 -13481,-2956
+Johannes-R.-Becher-Str.	1 -10134,-4981 -10288,-4749
+Bertolt-Brecht-Str.	1 -10202,-4669 -9998,-4865
+Bernhard-Kellermann-Str.	1 -10183,-4402 -10277,-4471 -10399,-4335 -10360,-4236
 Freilichtbühne Schwedt	2 69562,73280 69634,73330
 Bahnhofstr.	1s 26103,-11861 26300,-11864
 Bernau - Tempelfelde	1 23179,31047 23103,30923
@@ -908,7 +923,7 @@ Jahnstr. (KW)	1s 26243,-12300 26028,-12312
 Seestr. (Potsdam)	1s -11581,559 -11584,452
 Tizianstr. (Potsdam)	1s -11424,542 -11480,621 -11581,559
 Spitzmühlenweg	1s 41728,17918 41668,17984 41556,18146
-Mangerstr. (Potsdam) (Umgehung auf Gehweg oder Uferweg möglich)	1s -12064,-284 -12108,-291 -12265,-418
+Mangerstr. (Potsdam) (Umgehung auf Gehweg oder Uferweg möglich)	1s -12054,-274 -12123,-294 -12265,-418
 Stephanstr.	1s 6523,4491 6360,4504
 Am Poetensteig, Gramzow	1s 50043,90187 50107,89717
 Atzpodienstr. (Umgehung auf Gehweg möglich)	1s 16485,12384 16509,12518 16564,12513
@@ -1379,9 +1394,6 @@ unbequem passierbarer Mittelstreifen	3nocross::ignrte 9865,10227 9858,10199 9837
 Brachvogelstr. -> Zossener Str.: unbequem passierbarer Mittelstreifen	3::igndisp 9884,10192 9858,10199 9837,10117
 Waterloo-Ufer -> Brachvogelstr.: unbequem passierbarer Mittelstreifen	3::igndisp 9825,10206 9858,10199 9884,10192
 Waterloo-Ufer -> Zossener Str.: unbequem passierbarer Mittelstreifen	3::igndisp 9825,10206 9858,10199 9865,10227
-Straßentunnelrampe	3nocross::ignrte 5505,8832 5510,8709 5502,8599
-Bundesallee -> Wilhelmsaue: Straßentunnelrampe	3::igndisp 5502,8599 5510,8709 5346,8720
-Wilhelmsaue -> Bundesallee: Straßentunnelrampe	3::igndisp 5346,8720 5510,8709 5505,8832
 Straßentunnelrampe	3nocross::ignrte 2817,4158 2944,4241 3048,4305
 Goßlerstr. -> Unter den Eichen: Straßentunnelrampe	3::igndisp 2858,4372 2944,4241 3048,4305
 Goßlerstr. -> Knesebeckstr.: Straßentunnelrampe	3::igndisp 2858,4372 2944,4241 3033,4113
@@ -1389,17 +1401,6 @@ Unter den Eichen -> Knesebeckstr.: Straßentunnelrampe	3::igndisp 3048,4305 2944,
 Knesebeckstr. -> Goßlerstr.: Straßentunnelrampe	3::igndisp 3033,4113 2944,4241 2858,4372
 Knesebeckstr. -> Unter den Eichen: Straßentunnelrampe	3::igndisp 3033,4113 2944,4241 2817,4158
 Unter den Eichen -> Goßlerstr.: Straßentunnelrampe	3::igndisp 2817,4158 2944,4241 2858,4372
-Absperrung auf dem Mittelstreifen	3nocross::ignrte 5510,8709 5502,8599 5465,8511 5427,8412 5399,8344
-Bundesallee -> Waghäuseler Str.: Absperrung auf dem Mittelstreifen	3::igndisp 5510,8709 5502,8599 5660,8591
-Waghäuseler Str. -> Bundesallee: Absperrung auf dem Mittelstreifen	3::igndisp 5660,8591 5502,8599 5465,8511
-Volkspark Wilmersdorf -> Volkspark Wilmersdorf: Absperrung auf dem Mittelstreifen	3::igndisp 5417,8519 5465,8511 5533,8478
-Volkspark Wilmersdorf -> Bundesallee: Absperrung auf dem Mittelstreifen	3::igndisp 5417,8519 5465,8511 5502,8599
-Bundesallee -> Volkspark Wilmersdorf: Absperrung auf dem Mittelstreifen	3::igndisp 5427,8412 5465,8511 5417,8519
-Volkspark Wilmersdorf -> Volkspark Wilmersdorf: Absperrung auf dem Mittelstreifen	3::igndisp 5533,8478 5465,8511 5417,8519
-Volkspark Wilmersdorf -> Bundesallee: Absperrung auf dem Mittelstreifen	3::igndisp 5533,8478 5465,8511 5427,8412
-Bundesallee -> Volkspark Wilmersdorf: Absperrung auf dem Mittelstreifen	3::igndisp 5502,8599 5465,8511 5533,8478
-Am Volkspark -> Bundesallee: Absperrung auf dem Mittelstreifen	3::igndisp 5320,8456 5427,8412 5465,8511
-Bundesallee -> Am Volkspark: Absperrung auf dem Mittelstreifen	3::igndisp 5465,8511 5427,8412 5669,8207
 unbequem passierbarer Mittelstreifen	3nocross::ignrte 9207,5185 9192,5272 9182,5332 9171,5397 9147,5534
 Am Teltowkanal, südl. Ufer -> Mariendorfer Damm: unbequem passierbarer Mittelstreifen	3::igndisp 9171,5263 9192,5272 9182,5332
 Wulfila-Ufer -> Tempelhofer Damm: unbequem passierbarer Mittelstreifen	3::igndisp 9145,5323 9182,5332 9171,5397
@@ -2151,6 +2152,8 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
 tragen (31 Stufen oder Kinderwagenrampe)	0:40:-256 13168,21706
+Drängelgitter (lichte Breite 80cm)	BNP:5:-60:trailer=no -9809,-608
+enges Drängelgitter	BNP:5:-66:trailer=no -14725,525
 Drängelgitter	BNP:3:56:trailer=10 2157,10020
 Drängelgitter an der Straßenbahntrasse	BNP:6:12:trailer=10 16665,14420
 Schranke (lichte Breite 100cm)	BNP:3:33:trailer=10 17459,5634
@@ -2444,6 +2447,7 @@ Tor	BNP:5:-57 26888,13976
 Drängelgitter	BNP:3:64:trailer=10 49739,-90894
 Sokratesweg: Bauarbeiten, gesperrt	2:inwork 18527,9623 18520,9585
 An der Nuthestr.: wegen Bauarbeiten bis Mitte 2014 gesperrt	2:inwork -11399,-1339 -11235,-1465 -11137,-1680 -11089,-1730 -10973,-1764
+Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?) gesperrt	2:inwork -11407,-1086 -11460,-1098 -11538,-1138 -11615,-1094
 Sperrung am zukünftigen Landtag: Bereich vor der Straßenbahnhaltestelle Richtung Norden gesperrt (8. April 2013 - 6. September 2013)	1:inwork -12758,-1654 -12772,-1577
 Sperrung am zukünftigen Landtag: Radweg Richtung Westen gesperrt (22. April 2013 - 6. September 2013)	1::inwork -12659,-1700 -12730,-1681 -12758,-1654
 Nordufer: wegen Bauarbeiten für die S21 gesperrt	2:inwork 7427,14648 7212,14738
@@ -3019,6 +3023,8 @@ Alt-Friedrichsfelde, linker Gehweg	1::igndisp 18228,11656 18520,11685 18624,1171
 Alt-Friedrichsfelde, linker Gehweg	1::igndisp 18624,11712 18626,11742
 Landsberger Allee, linker Gehweg	1::igndisp 15430,14272 15256,14237
 Sonnenallee, linker Gehweg	1::igndisp 13457,8069 13474,8060
+Bundesallee, linker Gehweg zur Durlacher Str.	1::igndisp 5399,8344 5438,8402
+Bundesallee, linker Gehweg zur Straße Am Volkspark	1::igndisp 5419,8415 5399,8344
 Urbanstr.	1::igndisp 11861,9183 11888,9189
 Badstr., linker Gehweg	1::igndisp 8486,16425 8486,16412 8534,16355
 Tempelhofer Ufer, linker Gehweg	1::igndisp 8661,10377 8717,10322 8804,10303

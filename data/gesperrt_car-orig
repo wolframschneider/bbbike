@@ -70,7 +70,7 @@ Hagelberger - Yorck	3nocross 8595,9495 8679,9544 8777,9601
 Hagelberger - Mehringdamm	3nocross 9334,9670 9280,9476 9248,9350
 Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
 # Potsdam vvv
-Mangerstr. (Potsdam)	1 -12064,-284 -12108,-291 -12265,-418
+Mangerstr. (Potsdam)	1 -12054,-274 -12123,-294 -12265,-418
 Rudolf-Breitscheid-Str.	1 -10429,-1944 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
 # ^^^
 Bendastr.	1 12689,6905 12702,6846
@@ -123,7 +123,7 @@ Matternstr.	1 13798,13003 13579,12904
 Ebelingstr.	1 13707,13206 13610,13169 13487,13115
 John-Schehr-Str. - Greifswalder Str.	3 12573,14581 12422,14692 12403,14663 12371,14615 12317,14535
 Prenzlauer Allee	3nocross 11828,15210 11801,15132 11776,15060 11709,14856
-Große Weinmeisterstr. (Potsdam)	1 -12557,11 -12582,127 -12618,296
+Große Weinmeisterstr. (Potsdam)	1 -12557,11 -12561,35 -12582,127 -12623,308
 #: by: Christian Marten (Einbahnstraße nur für Autofahrer)
 Stellmacherweg	1 13129,2999 13453,2930
 #: by: Andreas Mühlhausen (Einbahnstraße nur für Autofahrer) vvv
@@ -518,12 +518,12 @@ Eberswalder Str. (Bernau)	1 23109,30968 23103,30923 23084,30893 22917,30635
 Rutnikstr. - Möllendorffstr.: Abbiegen verboten	3 15648,12687 15546,12690 15550,12625
 Torgauer Str.: nur für Anlieger	2:Anlieger 7446,8200 7402,8208 7250,8223 7001,8161
 #: by: Aaron Schaar, osm:
-Hermannswerder	1 -14301,-2871 -13718,-2991
+Hermannswerder	1 -14306,-2867 -14044,-2918 -13765,-2974 -13733,-2967
 #: by: Ulf Lenski:
 Neue Schönholzer Str.	1 10089,18180 10140,18080 10179,17772
 Kleine Kurstr.	1 10230,11839 10189,11773
 Schendelgasse	1 10653,13493 10703,13467 10767,13443
-Leipziger Str. (Potsdam)	1 -12431,-2096 -12653,-2206 -12719,-2283 -12756,-2437 -12779,-2467 -12796,-2488 -12929,-2659 -13003,-2754 -13021,-2784 -13062,-2901
+Leipziger Str. (Potsdam)	1 -12431,-2096 -12534,-2125 -12712,-2256 -12743,-2387 -12756,-2437 -12779,-2467 -12796,-2488 -12879,-2573 -13003,-2754 -13022,-2776 -13062,-2901
 #: XXX_prog für Anhänger auch nicht geeignet, Mittelstreifen zu schmal
 Grunewaldstr.: Mittelstreifen	3nocross 6161,9128 6264,9156 6361,9175
 #: note: Breite zwischen Pollern ca. 150cm
@@ -560,7 +560,7 @@ Suermondtstr: Straßenbahntrasse	3nocross 15918,16383 16095,16331 16260,16282
 Paulsborner Str.: Mittelstreifen	3nocross 3587,9905 3620,9936 3706,10039
 Paulsborner Str.: Mittelstreifen	3nocross 3620,9936 3706,10039 3747,10094 3852,10236
 Eisenhartstr.	1 -12637,-8 -12779,-294 -12821,-417
-Brandenburger Str. (Potsdam): Fußgängerzone	3nocross -13556,-1140 -13410,-1101 -13289,-1071 -13173,-1039 -13005,-1002 -12883,-976
+Brandenburger Str. (Potsdam): Fußgängerzone	3nocross -13556,-1140 -13410,-1101 -13289,-1071 -13173,-1039 -12999,-1000 -12883,-976
 Eichhornstr. - Potsdamer: abbiegen verboten	3 8232,11414 8226,11458 8145,11438
 Kottbusser Damm/Schinkestr.: Mittelstreifen	3nocross 11543,10015 11623,9841 11673,9720
 #: note: Luftbild:
@@ -595,7 +595,7 @@ Liningstr.	1 13574,4862 13534,5111
 Alt-Britz:	3 12596,4320 12560,4290 *
 Leistikowstr.	1 -12512,810 -12302,718
 Am Neuen Garten	1 -12302,718 -12323,635 -12332,585
-Am Krongut - Katharinenstr.: Betonkübel	3 -15085,144 -15086,63 *
+Am Krongut: Poller	3 * -15085,91 *
 Fliederweg - Vogelweide: Poller	3 -12633,1484 -12928,1646 *
 Potsdamer Str.: Mittelstreifen	3nocross 452,3133 255,3085 161,3062
 Potsdamer Str.: Mittelstreifen	3nocross -151,2975 -49,3003 50,3031 161,3062
@@ -782,8 +782,8 @@ Wattstr.	1 998,14516 998,14435 999,14390
 Handjerystr./Schmiljanstr.	3 5494,6960 5574,7018 5624,7113
 Handjerystr./Schmiljanstr.	3 5494,6960 5574,7018 5569,7022
 (Am Carlsgarten - Waldowallee)	2 19456,7956 19478,7967 19509,7999 19558,8064
-Straßenbahntrasse	3nocross -13456,500 -13436,595 -13433,693
-Straßenbahntrasse	3nocross -13433,693 -13432,782 -13429,1069
+# REMOVED (glaube ich) --- Straßenbahntrasse	3nocross -13456,500 -13436,595 -13433,693
+Straßenbahntrasse, Drängelgitter für Radfahrer/Fußgänger	3nocross -13433,693 -13432,782 -13429,1069
 Kutscherweg: Poller	3 * -13700,-106 *
 Dresdner Str.: Einfahrt vom Oranienplatz gesperrt	3 * 11189,10831 11162,10919
 #: note: könnte auch die andere Richtung gesperrt sein
@@ -877,7 +877,7 @@ Kohlfurter Str.: provisorisch, Anlieger frei	1 11464,10102 11274,10184 11094,102
 Friedbergstr.:	3 2812,10753 2766,10750 *
 # 
 #: by: http://www.potsdam.de/cms/beitrag/10093238/1463075 vvv
-Wilhelm-Staab-Str. (Potsdam)	1 -13001,-1329 -12992,-1222 -12984,-1110
+Wilhelm-Staab-Str. (Potsdam)	1 -13001,-1329 -12981,-1222 -12961,-1105
 Bäckerstr. (Potsdam)	1 -13314,-1226 -13287,-1231 -13203,-1246
 Brandenburger Str. (Potsdam)	1 -12801,-960 -12883,-976
 #: note (Originaleintrag von Axel Dörrie)
@@ -898,3 +898,7 @@ Sembritzkistr.: nur für Radfahrer	3 * 7199,5479 *
 Egon-Erwin-Kisch-Str. [Wohngebiet]: Schranke (für Autofahrer)	3 * 17067,19004 *
 Am Tierpark: Straßenbahntrasse	3nocross 18417,10738 18446,10620 18554,10354
 Domnauer Str.: Poller	3 * 7816,5682 *
+Hermannswerder	1 -14306,-2867 -14044,-2918 -13765,-2974 -13733,-2967
+Paetowstr.: Poller	3 * -13110,-3015 *
+Am Raubfang (Potsdam)	1 -15308,1220 -15366,1249 -15436,1253 -15533,813
+Goetheplatz (Potsdam)	1 -9922,-1395 -9809,-1435

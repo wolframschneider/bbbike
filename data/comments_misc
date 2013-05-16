@@ -53,10 +53,12 @@ Kreisverkehr	Roundabout 56197,-14830
 Kreisverkehr	Roundabout 55743,-11726
 Kreisverkehr	Roundabout 18903,9244
 Kreisverkehr	Roundabout -11822,-1874
+Kreisverkehr	Roundabout 1722,-773
+Kreisverkehr	Roundabout 1677,-582
+Kreisverkehr	Roundabout 1457,-470
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 344,22346 670,22646
 Privatstraße der DB	CS 5710,7820 6273,7849
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3347,6460 3449,6863
-Borgmannstr.: zwei Bodenschwellen, rechs vorbei fahren	CS 22513,5747 22531,5871
 Hermann-Blankenstein-Str.: Tor für Kfz evtl. geschlossen, auf Gehweg ausweichen	CS 13886,13668 13858,13719
 Georg-Wilhelm-Str.: 3 Bodenschwellen, rechts vorbei fahren	CS 2708,10245 2691,10047
 Carionweg: Kette	CS 3382,9223 3370,9215
@@ -455,3 +457,7 @@ Wilhelm-Kabus-Str. - Südkreuz: Privatstraße der DB	CP2; 7713,8001 7837,7899
 Alt-Lankwitz: nur für Anlieger	CS 7407,3473 7419,3500 7249,3598 7012,3743
 Dennewitzplatz: über Parkplatz fahren	CP; 7906,10098 7813,10112 7866,9918
 Lentzeallee [Stichstraße]: Privatstraße	CS 3165,6939 3190,7047
+Fliederweg: Privatstraße	CS -14731,644 -14769,582 -14776,560 -14732,528
+(Wollestr. - Mühlenstr.): Privatstraße	CS -10648,-1130 -10691,-1097 -10730,-1103 -10787,-1162 -10790,-1178
+An der Alten Brauerei: Privatstraße	CS -10925,-1705 -10970,-1670 -11014,-1643 -10994,-1617 -10953,-1645 -10970,-1670
+(Zum Exerzierhaus - Fritz-von-der-Lancken-Str.): Hausdurchfahrt	CS -13044,1991 -13044,1931

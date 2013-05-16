@@ -103,7 +103,7 @@ Wangenheimsteg	Br 2585,9653 2628,9702
 Paulsborner Brücke	Br 2998,9408 3127,9522
 Schwarzbacher Brücke	Br 2719,9671 2730,9634
 Hohenzollerndammbrücke	Br 3379,8969 3427,9010 3467,9045
-Hoher Bogen	Br 3732,8595 3831,8674
+Hoher Bogen	Br 3713,8578 3738,8599 3831,8674
 Seehofstr., S-Bahnbrücke	Br 1126,2885 1144,2847
 Sundgauer Brücke	Br 1687,3244 1724,3187
 Onkel-Tom-Str., U-Bahnbrücke	Br 169,4676 179,4643
@@ -120,7 +120,7 @@ Tietzenweg, S-Bahnbrücke	Br 3557,4355 3587,4312
 Enzianstr., S-Bahnbrücke	Br 3859,4531 3898,4477
 Feuerbachbrücke	Br 5582,6360 5702,6381 5780,6397
 Friedenauer Brücke	Br 5896,6785 5966,6747 6019,6710
-Friedrich-Gerlach-Brücke	Br 7073,8081 7193,7950
+Friedrich-Gerlach-Brücke	Br 7073,8081 7147,8000 7193,7950
 Julius-Leber-Brücke	Br 7548,8879 7497,8916
 Langenscheidtbrücke	Br 7647,9196 7735,9121
 Kolonnenbrücke	Br 8145,8773 8209,8773 8298,8774
@@ -400,7 +400,7 @@ Königswegbrücke	Br -3407,834 -3511,776
 Aristide-Briand-Brücke	Br 3676,16497 3711,16481
 Robert-Schuman-Brücke	Br 3753,16638 3788,16621
 (Brücke über Autobahn)	Br -802,24541 -972,24498
-August-Druckenmüller-Brücke	Br 8142,7221 8074,7295
+August-Druckenmüller-Brücke	Br 8176,7194 8074,7295
 August-Druckenmüller-Brücke	Br 8069,7288 8150,7200
 Brücke über den Graben zwischen Koenigssee und Dianasee	Br 1407,8931 1386,8959 1366,8986
 Nikolai-E.-Bersarin-Brücke	Br 22696,16208 22739,16203
@@ -558,6 +558,7 @@ Burgwallsteg	Br -3352,13135 -3338,13118
 #: section ^^^
 #
 ## Brandenburg und weiter ####################################################
+Brücke über den Stadtkanal	Br -13001,-1329 -13001,-1349
 	Br -9617,13368 -9549,13365
 Elbebrücke	Br -108535,-32884 -108293,-33023
 Brücke über die Alte Elbe	Br -107949,-33102 -107748,-33161
@@ -577,7 +578,7 @@ Nuthestr./Nuthe	Br -11070,-2123 -11116,-1681
 #: XXX_prog: eigentlich die gleiche Brücke...
 Humboldtbrücke	Br -11613,-1125 -11869,-907
 Humboldtbrücke	Br -11615,-1094 -11859,-892
-Humboldtbrücke	Br -11884,-936 -11626,-1133
+Humboldtbrücke	Br -11851,-954 -11680,-1084
 Nuthestr./Neuendorfer Str.	Br -8128,-4073 -7426,-4035 -7187,-4049 -6787,-4026 -6426,-4014
 Heinrich-Mann-Allee (Bahnbrücke)	Br -12431,-2096 -12493,-1896
 Lange Brücke (Potsdam)	Br -12493,-1896 -12567,-1817

@@ -1865,8 +1865,8 @@ EOF
        text  => 'B 273; (Potsdamer Str.); OD Potsdam, OT Bornim, zw. Florastr. u. Rückertstr. Kanalarbeiten halbseitig gesperrt; Einbahnstraße 06.04.2005-24.07.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -16640,1304 -16023,1042 -15557,809 -15508,785
-userdel	q4 -16640,1304 -16727,1370 -16766,1399 -16905,1503
+userdel	q4 -16640,1304 -16026,1044 -15938,1003 -15533,813 -15501,795
+userdel	q4 -16640,1304 -16719,1369 -16742,1387 -16763,1402 -16905,1503
 EOF
      },
      { from  => 1113775200, # 2005-04-18 00:00
@@ -2834,7 +2834,7 @@ EOF
        text  => 'B 273; (Potsdamer Str.); OD Bornim, zw. Amundsenstr. u. Lindstedter Weg Kanalarbeiten halbseitig gesperrt; Einbahnstraße 25.07.2005-24.09.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -15508,785 -15557,809 -16023,1042 -16640,1304
+userdel	q4 -15501,795 -15533,813 -15938,1003 -16026,1044 -16640,1304
 EOF
      },
      { from  => 1126994400, # 2005-09-18 00:00
@@ -11199,7 +11199,7 @@ EOF
        text  => 'Rückbau der Fr.-Ebert-Str. zwischen Breite Str. und Platz der Einheit, Bauarbeiten bis Ende 2009. Unter Umständen Umfahrung über Alten Markt notwendig. ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -12758,-1654 -12772,-1577 -12780,-1545
+userdel	2::inwork -12758,-1654 -12772,-1577 -12780,-1544
 EOF
      },
      { from  => 1211228399, # 2008-05-19 22:19
@@ -15291,7 +15291,7 @@ EOF
        text  => 'Aufgrund der Arbeiten zum Straßenneubau und der Verlegung von Schmutz- und Regenwasserleitungen kommt es ab dem 29.06.2009 zu Vollsperrungen der Otto-Nagel-Straße. Begonnen wird an der Kreuzung Berliner Straße. Die gesamte Maßnahme wir voraussichtlich zum Ende des 4. Quartals abgeschlossen werden. ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -12064,-284 -11978,-348 -11877,-478
+userdel	q4::inwork -12054,-274 -11978,-348 -11877,-478
 EOF
      },
      { from  => 1251756000, # 2009-09-01 00:00
@@ -15424,9 +15424,11 @@ EOF
 	2::night -11510,810 -11562,918 -11575,1031 -11537,1206 -11544,1262 -11580,1281 -11871,1185 -11990,1214 -12124,1359 -12141,1357
 	2::night -11615,853 -11510,810 -11412,784 -11392,762 -11231,696
 (Ökonomieweg, Neuer Garten): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12528,-11 -12518,13 -12537,48 -12531,75 -12475,116 -12448,246 -12373,288 -12276,554 -12182,816 -12154,963 -12186,1118 -12148,1245 -12139,1325 -12141,1357 -12166,1384
-Neuer Garten, Westufer des Heiligen Sees: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12265,-418 -12262,-362 -12328,-212 -12331,-131 -12321,9 -12278,134 -12156,193 -12103,315 -12143,353 -12115,409 -12068,384 -11990,790 -11950,781 -11887,837 -11856,950 -11818,993
-Neuer Garten (am Portierhaus) - Weinmeisterstr.: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12331,-131 -12412,-118 -12450,-34 -12528,-11
+Neuer Garten, Westufer des Heiligen Sees: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12265,-418 -12263,-403 -12262,-362 -12328,-212 -12334,-114 -12321,9 -12278,134 -12156,193 -12103,315 -12143,353 -12115,409 -12068,384 -11990,790 -11950,781 -11887,837 -11856,950 -11818,993
+Neuer Garten (am Portierhaus) - Weinmeisterstr.: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12334,-114 -12424,-107 -12453,-36 -12518,13 -12561,35
 Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -12332,585 -12276,554 -12115,409
+	2::night -12263,-403 -12280,-385 -12306,-378 -12357,-307 -12371,-284 -12396,-298
+	2::night -12449,-186 -12440,-181 -12449,-134 -12424,-107
 EOF
      },
      { from  => undef, #
@@ -15546,7 +15548,8 @@ EOF
      },
      { from  => undef, #
        until => undef, #
-       text  => 'Preußenallee zwischen Marathonallee und Badenallee: Wochenmarkt Mo 08.00-13.00 und Do 08.00-13.00, Behinderungen möglich',
+       #: by: Stefan Klinkusch (korrigierte Wochentage)
+       text  => 'Preußenallee zwischen Marathonallee und Badenallee: Wochenmarkt Di 08.00-13.00 und Fr 08.00-13.00, Behinderungen möglich',
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
@@ -18709,7 +18712,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20101126.1415.320541.html',
        data  => <<EOF,
-userdel	q4::inwork; 7480,7683 7316,7814
+userdel	q4::inwork; 7480,7683
 EOF
      },
      { from  => 1292184575, # 2010-12-12 21:09
@@ -20102,8 +20105,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_111647', # auch: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html
        data  => <<EOF,
-#: osm_watch: way id="23243508" version="29"
-#: XXX laut osm bereits aufgehoben, aber stimmt das? (ich habe einen Eintrag in OSM erstellt)
+#: osm_watch: way id="23243508" version="30"
 userdel	q4::inwork; -1872,24336 -1790,24260 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 EOF
      },
@@ -20293,13 +20295,11 @@ userdel	q3::inwork; 14434,11465 14369,11489 14305,11514
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1368556113, # undef, # XXX
        text  => 'Sredzkistr. zwischen Knaackstr. und Hagenauer Str.: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2013-04-11
 #: note: einige Meter östlich der Knaackstr. gesperrt
-#: osm_watch: way id="196215276" version="1"
 userdel	q3::inwork 11101,14768 11187,14763
 EOF
      },
@@ -20882,19 +20882,16 @@ userdel	q2::inwork 13339,7452 13303,7622
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1368556143, # undef, # XXX
        text  => 'Sredzkistr./Husemannstr.: Kreuzungsbereich gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2013-04-11 vvv
 #: XXX je 30 Meter vor und hinter der Kreuzung ist gesperrt vvv
-#: osm_watch: way id="196215276" version="1"
 userdel	q2::inwork 11436,14741 11271,14755
 userdel	q3::inwork 11271,14755 11187,14763
 #: XXX ^^^
 #: XXX ebenfalls Umweg notwendig
 userdel	q2::inwork 11293,14957 11271,14755 11255,14572
-#: last_checked ^^^
 EOF
      },
      { from  => undef, #
@@ -20979,7 +20976,7 @@ EOF
      },
      { from  => undef,
        until => undef,
-       text  => 'Fähren F21, F23, F24: fahren nur ab ca. April bis Anfang Oktober, fahren nicht am Montag',
+       text  => 'Fähren F21, F23, F24: fahren nur ab Karfreitag bis zum 3. Oktober, fahren nicht am Montag',
        recurring => 1,
        type  => 'gesperrt',
        source_id => 'http://www.bvg.de/index.php/de/3777/name/Faehrlinie+F21.html', # und 23 und 24
@@ -21058,7 +21055,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: by: http://www.potsdam.de/cms/beitrag/10098485/1463075
-	q3::inwork; -12881,-1092 -12984,-1110 -13187,-1150
+	q3::inwork; -12881,-1092 -12961,-1105 -12973,-1106 -13187,-1150
 EOF
      },
      { from  => 1360350803, # 2013-02-08 20:13
@@ -21214,6 +21211,25 @@ EOF
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130419.1210.383671.html',
        data  => <<EOF,
 userdel	2::temp 6244,8597 6339,8644 6454,8653
+EOF
+     },
+     { from  => 1368334800, # 2013-05-12 07:00
+       until => 1369620000, # 2013-05-27 04:00
+       text  => 'Müggelseedamm (Frieddrichshagen): Baustelle, stadtauswärts zwischen Bölschestr. und Kalkseestr. bis Ende Mai 2013 gesperrt, 13.05.2013 07:00 Uhr bis 27.05.2013 04:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'INKO_114312',
+       data  => <<EOF,
+userdel	q4::inwork; 25552,4829 25720,4832 25802,4823 25948,4823 26086,4861 26237,4922 26340,4942 26500,4936
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Tegeler Str.: zwischen Triftstr. und Schlegelstr. Bauarbeiten, Ausweichen auf den Gehweg',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2013-05-08
+#: XXX wann sind die Bauarbeiten beendet?
+userdel	q4::inwork; 7085,15226 7131,15109
 EOF
      },
     );

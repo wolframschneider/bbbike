@@ -1069,16 +1069,7 @@ userdel	2::temp 6719,10347 6729,10212 6739,10120
        undef,
        undef,
        undef,
-       {
-         'periodic' => 1,
-         'until' => 1368395999,
-         'text' => 'Bölschestr. (Köpenick): Veranstaltung (Fest auf der "Bölsche"), Straße vollständig gesperrt (11. und 12. Mai 2013)',
-         'from' => 1368136800,
-         'id' => 964,
-         'data' => 'userdel	2::temp 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2016,9 +2007,11 @@ Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am 
 	2::night -11510,810 -11562,918 -11575,1031 -11537,1206 -11544,1262 -11580,1281 -11871,1185 -11990,1214 -12124,1359 -12141,1357
 	2::night -11615,853 -11510,810 -11412,784 -11392,762 -11231,696
 (Ökonomieweg, Neuer Garten): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12528,-11 -12518,13 -12537,48 -12531,75 -12475,116 -12448,246 -12373,288 -12276,554 -12182,816 -12154,963 -12186,1118 -12148,1245 -12139,1325 -12141,1357 -12166,1384
-Neuer Garten, Westufer des Heiligen Sees: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12265,-418 -12262,-362 -12328,-212 -12331,-131 -12321,9 -12278,134 -12156,193 -12103,315 -12143,353 -12115,409 -12068,384 -11990,790 -11950,781 -11887,837 -11856,950 -11818,993
-Neuer Garten (am Portierhaus) - Weinmeisterstr.: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12331,-131 -12412,-118 -12450,-34 -12528,-11
+Neuer Garten, Westufer des Heiligen Sees: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12265,-418 -12263,-403 -12262,-362 -12328,-212 -12334,-114 -12321,9 -12278,134 -12156,193 -12103,315 -12143,353 -12115,409 -12068,384 -11990,790 -11950,781 -11887,837 -11856,950 -11818,993
+Neuer Garten (am Portierhaus) - Weinmeisterstr.: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12334,-114 -12424,-107 -12453,-36 -12518,13 -12561,35
 Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -12332,585 -12276,554 -12115,409
+	2::night -12263,-403 -12280,-385 -12306,-378 -12357,-307 -12371,-284 -12396,-298
+	2::night -12449,-186 -12440,-181 -12449,-134 -12424,-107
 ',
          'type' => 'gesperrt'
        },
@@ -2152,7 +2145,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Preußenallee zwischen Marathonallee und Badenallee: Wochenmarkt Mo 08.00-13.00 und Do 08.00-13.00, Behinderungen möglich',
+         'text' => 'Preußenallee zwischen Marathonallee und Badenallee: Wochenmarkt Di 08.00-13.00 und Fr 08.00-13.00, Behinderungen möglich',
          'from' => undef,
          'id' => 1822,
          'data' => '	q4::temp:clock 589,11953 577,11837 562,11710 560,11695 550,11607
@@ -3038,8 +3031,7 @@ userdel	2::inwork 19968,16 19940,52
          'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Mitte 2013',
          'from' => 1330902000,
          'id' => 2316,
-         'data' => '#: osm_watch: way id="23243508" version="29"
-#: XXX laut osm bereits aufgehoben, aber stimmt das? (ich habe einen Eintrag in OSM erstellt)
+         'data' => '#: osm_watch: way id="23243508" version="30"
 userdel	q4::inwork; -1872,24336 -1790,24260 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 ',
          'type' => 'handicap'
@@ -3086,18 +3078,7 @@ userdel	2::inwork 18731,8577 18709,8423
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Sredzkistr. zwischen Knaackstr. und Hagenauer Str.: Teile der Fahrbahn gesperrt, Ausweichen auf Gehweg',
-         'from' => undef,
-         'id' => 2337,
-         'data' => '#: last_checked: 2013-04-11
-#: note: einige Meter östlich der Knaackstr. gesperrt
-#: osm_watch: way id="196215276" version="1"
-userdel	q3::inwork 11101,14768 11187,14763
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3256,23 +3237,7 @@ userdel	q2::inwork 13339,7452 13303,7622
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => undef,
-         'text' => 'Sredzkistr./Husemannstr.: Kreuzungsbereich gesperrt, Ausweichen auf Gehweg',
-         'from' => undef,
-         'id' => 2399,
-         'data' => '#: last_checked: 2013-04-11 vvv
-#: XXX je 30 Meter vor und hinter der Kreuzung ist gesperrt vvv
-#: osm_watch: way id="196215276" version="1"
-userdel	q2::inwork 11436,14741 11271,14755
-userdel	q3::inwork 11271,14755 11187,14763
-#: XXX ^^^
-#: XXX ebenfalls Umweg notwendig
-userdel	q2::inwork 11293,14957 11271,14755 11255,14572
-#: last_checked ^^^
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.berliner-zeitung.de/berlin/kollwitzplatz-mit-sack-und-pack-,10809148,11393926.html',
          'recurring' => 1,
@@ -3339,7 +3304,7 @@ userdel	q4::inwork 10479,18007 10498,18014 10473,18113 10545,18143 10582,18159
 ',
          'until' => undef,
          'from' => undef,
-         'text' => 'Fähren F21, F23, F24: fahren nur ab ca. April bis Anfang Oktober, fahren nicht am Montag',
+         'text' => 'Fähren F21, F23, F24: fahren nur ab Karfreitag bis zum 3. Oktober, fahren nicht am Montag',
          'type' => 'gesperrt',
          'id' => 2408
        },
@@ -3444,6 +3409,30 @@ userdel auto	3 4358,12365 4518,12350 4601,12310
 #: last_checked: 2013-05-06
 #: XXX Straße wird asphaltiert (siehe auch Eintrag in fragezeichen-orig)
 userdel	q4::inwork; 13288,7653 13245,7742 13226,7775 13150,7845 13103,7889
+',
+         'type' => 'handicap'
+       },
+       undef,
+       undef,
+       undef,
+       {
+         'source_id' => 'INKO_114312',
+         'until' => 1369620000,
+         'text' => 'Müggelseedamm (Frieddrichshagen): Baustelle, stadtauswärts zwischen Bölschestr. und Kalkseestr. bis Ende Mai 2013 gesperrt, 13.05.2013 07:00 Uhr bis 27.05.2013 04:00 Uhr ',
+         'from' => 1368334800,
+         'id' => 2429,
+         'data' => 'userdel	q4::inwork; 25552,4829 25720,4832 25802,4823 25948,4823 26086,4861 26237,4922 26340,4942 26500,4936
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Tegeler Str.: zwischen Triftstr. und Schlegelstr. Bauarbeiten, Ausweichen auf den Gehweg',
+         'from' => undef,
+         'id' => 2430,
+         'data' => '#: last_checked: 2013-05-08
+#: XXX wann sind die Bauarbeiten beendet?
+userdel	q4::inwork; 7085,15226 7131,15109
 ',
          'type' => 'handicap'
        }

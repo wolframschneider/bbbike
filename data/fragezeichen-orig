@@ -49,7 +49,7 @@ Germanenstr.	?::projected 8304,19475 8268,19558 8234,19634 8233,19695 8231,19806
 # 
 #: XXX im Baumaßnahmenkatalog ist nur der östliche Teil ab Heinrich-Heine-Str. eingezeichnet, Baumaßnahmen 1.46 (Realisierung in 2011)
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
-#: last_checked: 2013-04-29
+#: last_checked: 2013-05-15
 #: check_frequency: 60d
 Annenstr./Heinrich-Heine-Platz	?::projected 11349,11227 11249,11268 11091,11379 11052,11414 11039,11425 10915,11535 10815,11662
 # 
@@ -88,13 +88,16 @@ Schulenburgstr./Weißenburger Str.: werden hier Radspuren markiert?	?::projected 
 Hubertusallee/Teplitzer Str.: werden hier Radspuren markiert?	?::projected 2327,8717 2299,8675 2279,8638 2201,8519 2132,8422 2129,8333 2106,8075 2087,7811 2114,7742
 # 
 #: XXX Baumaßnahmen GR6.20, GR6.19 (Realisierung nach 2011)
-#: last_checked: 2013-02-02
+#: last_checked: 2013-05-12
+#: check_frequency: 90d
 #: osm_watch: way id="4323788" version="12"
 #: osm_watch: way id="23109081" version="6"
 #: osm_watch: way id="41108858" version="5"
 Kronprinzessinnenweg: werden hier Radspuren markiert?	?::projected -4001,2858 -4188,2674 -4280,2539 -4290,2304 -4181,2062 -4164,1993 -4180,1941 -4256,1831 -4368,1731 -4492,1624 -4587,1542 -4644,1514 -4744,1466 -4827,1433 -4944,1298
+# 
 #: XXX Baumaßnahme 7.4 (Realisierung nach 2011)
 Großziethener - Barnetstr.: werden hier die bestehenden Radwege verbessert oder durch Radspuren ersetzt?	?::projected 12078,-1170 12023,-1174 11953,-1181 11858,-1189 11761,-1199 11717,-1204 11666,-1209 11578,-1220 11240,-1262 11149,-1274 11003,-1303 10844,-1335 10720,-1340 10583,-1311 10492,-1266 10379,-1194 10228,-1099 10143,-1026 10082,-986 9884,-860 9815,-805 9773,-786 9693,-815
+# 
 #: XXX Baumaßnahme 7.12 (Realisierung nach 2011)
 Stein/Nuthestr.: wird hier vielleicht eine Ampel hingestellt?	?::projected 10243,-1876 10293,-1904 10297,-1955
 # 
@@ -104,18 +107,18 @@ Stein/Nuthestr.: wird hier vielleicht eine Ampel hingestellt?	?::projected 10243
 Hasenheide: werden hier vielleicht Radspuren Richtung Osten markiert oder Radwege erstellt? Was ist mit der existierenden Gegenrichtung?	?::projected 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260
 # 
 #: XXX Baumaßnahme 2.28 (Realisierung nach 2011) 
-#: last_checked: 2013-04-28
+#: last_checked: 2013-05-09
 #: next_check: 2013-06-28
 Möckernstr.: werden hier vielleicht Radspuren Richtung Süden markiert oder Radwege erstellt? Was ist mit der existierenden Gegenrichtung?	?::projected 8804,10303 8802,10290 8783,10166 8780,9968 8779,9851 8779,9829 8779,9812 8777,9601
 # 
 #: XXX Baumaßnahme 2.8, 2.16 (Realisierung 2011 und nach 2011)
-#: last_checked: 2013-05-01
-#: next_check: 2013-07-01
+#: last_checked: 2013-05-15
+#: check_frequency: 90d
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
 Skalitzer/Gitschiner Str.: werden hier Radspuren markiert?	?::projected 11335,10375 11316,10372 11130,10326 11117,10326 10975,10334 10871,10322 10708,10312 10605,10312 10363,10303 10122,10294 9948,10280
 # 
 #: XXX Baumaßnahme 2.23 (Realisierung nach 2011) vvv
-#: last_checked: 2013-05-08 vvv
+#: last_checked: 2013-05-15 vvv
 Straße der Pariser Kommune: werden hier die fehlenden Radspuren noch markiert?	?::projected; 12758,11915 12726,11851 12681,11741 12645,11673
 Straße der Pariser Kommune: werden hier die fehlenden Radspuren noch markiert?	?::projected; 12551,11515 12497,11459
 Straße der Pariser Kommune: werden hier die fehlenden Radspuren noch markiert?	?::projected 12833,12154 12850,12286 12869,12425 12891,12549
@@ -124,14 +127,14 @@ Straße der Pariser Kommune: werden hier die fehlenden Radspuren noch markiert?	?
 # 
 #: XXX Baumaßnahme 1.39 (Realisierung in 2011)
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
-#: last_checked: 2013-04-19
-#: next_check: 2013-06-01
+#: last_checked: 2013-05-15
+#: check_frequency: 60d
 Brückenstr.: werden hier Radspuren markiert?	?::projected 11325,12021 11283,11876 11242,11720
 # 
 #: XXX Baumaßnahme 1.39 (Realisierung in 2011)
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
 #: last_checked: 2013-04-18
-#: next_check: 2013-06-01
+#: check_frequency: 60d
 Schulze-Delitzsch-Platz: werden hier Radspuren markiert?	?::projected 11242,11720 11155,11750
 # 
 #: XXX Baumaßnahme 1.17 (Realisierung in 2011)
@@ -140,8 +143,8 @@ Schulze-Delitzsch-Platz: werden hier Radspuren markiert?	?::projected 11242,1172
 Markgrafenstr.: wird hier eine Radwegführung erstellt?	?::projected 9711,11543 9737,11546 9732,11574 9707,11596 9701,11656
 # 
 #: XXX Baumaßnahme 3.18 (Realisierung in 2011)
-#: last_checked: 2013-04-30 (weiterhin nur Busspuren)
-#: next_check: 2013-06-30
+#: last_checked: 2013-05-14 (weiterhin nur Busspuren)
+#: check_frequency: 60d
 Otto-Braun-Str.: werden hier Radspuren markiert?	?::projected 11446,13294 11486,13350 11539,13425 11561,13451 11652,13564 11706,13635
 # 
 #: XXX Baumaßnahme 1.47 (Realisierung nach 2011)
@@ -266,8 +269,10 @@ Gartenfelder Str.: Radspuren für 2013 geplant	?::projected; -532,15184 -569,1516
 #: next_check: 2013-08-01
 Perleberger Str., Westseite: Radspuren bis 2015 geplant	?::projected; 6230,13596 6229,13517 6228,13324
 # 
-#: next_check: 2013-06-08
+#: last_checked: 2013-05-14
+#: check_frequency: 90d
 Prinzenstr.: Radspuren bis 2015 geplant	?::projected 10605,10312 10580,10256 10521,10126 10500,10081
+# 
 Dietzgenstr.: Radspuren bis 2015 geplant	?::projected 10063,20493 10066,20323 10068,20188 10102,20092 10112,20063 10127,19992 10167,19797 10195,19703
 Heinrich-Mann-Str.: Radspuren bis 2015 geplant	?::projected 9881,18354 9821,18392 9565,18555 9567,18599 9542,18634 9495,18639 9457,18612 9366,18669 9279,18724
 Heinrich-Mann-Str.: Radspuren bis 2015 geplant	?::projected 9457,18612 9454,18570 9480,18539 9524,18531 9565,18555
@@ -283,6 +288,8 @@ Wilhelmstr.: Radspuren bis 2015 geplant	?::projected; -5501,11251 -5455,11321 -5
 #: check_frequency: 90d
 Feuerbachstr.: Radspuren bis 2015 geplant	?::projected 5582,6360 5702,6381 5780,6397 5803,6403
 # 
+#: last_checked: 2013-05-10
+#: check_frequency: 90d
 Königstr.: Radspuren bis 2015 geplant	?::projected -9412,546 -9730,514 -9969,519 -10052,521 -10269,445 -10593,476
 # 
 #: last_checked: 2013-04-13
@@ -291,9 +298,9 @@ Kamenzer Damm: Radspuren bis 2015 geplant	?::projected; 7487,3089 7115,3003
 # 
 Kaiserstr.: Radspuren bis 2015 geplant	?::projected 9308,4407 9192,4389 9079,4376
 # 
-#: last_checked: 2013-03-24
-#: next_check: 2013-06-24
-Schöneberger Str.: Radspuren bis 2015 geplant	?::projected 8735,6695 8645,6781 8496,6919 8447,6964 8319,7084
+#: last_checked: 2013-05-15
+#: check_frequency: 90d
+Schöneberger Str.: Radspuren bis 2015 geplant	?::projected 8735,6695 8645,6781 8496,6919 8447,6964 8414,6995 8319,7084
 # 
 #: last_checked: 2013-05-06
 #: next_check: 2013-09-06
@@ -506,7 +513,7 @@ Treskowallee/Waldowallee: nach den Bauarbeiten wird hier eine Ampel existieren; 
 # 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/verwaltung/org/vermessung/b-plaene/b-plaene/B-V-3.jpg
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/42re.pdf/file?y=2012
-#: last_checked: 2013-04-28
+#: last_checked: 2013-05-15
 #: next_check: 2013-10-28
 Planstraße C: Einfahrten existieren noch, aber statt einer Straße ist hier nur ein Parkplatz	?::projected 12926,11224 12848,11093
 # 
@@ -548,16 +555,14 @@ Am Filmlager: Qualität? Genaue Lage der Straße (GPS-Track?)	? 22802,5325 22808,5
 #: by: http://www.berlin.de/imperia/md/content/batempelhofschoeneberg/abtfinperswibuerg/ordnungsamt/tiefbau/stra__enbauliste_stand_2012_11_30.pdf?start&ts=1354267767&file=stra__enbauliste_stand_2012_11_30.pdf
 #: last_checked: 2013-05-06
 #: next_check: 2013-07-06
-#: osm_watch: way id="4663347" version="13"
+#: osm_watch: way id="4663347" version="14"
 Ordensmeisterstr.: werden die Radspuren noch weiter geführt?	?::projected 10339,5948 10254,5921 10027,5868 9796,5790
 # 
-#: last_checked: 2012-05-12 vvv
-#: XXX Straßen scheinen mittlerweile zu existieren vvv
-Hermann-Kasack-Str. (Potsdam): Qualität? Stimmt der Straßenname?	? -13432,782 -13615,844
-#: XXX laut DPAG-Mitteilungsblatt 3/2013 "entfällt" dieser Straßenname - oder nur die besondere Schreibweise ohne Punkt hinter "Str"?
-Reinhold-Schneider-Str. (Potsdam): Qualität? Stimmt der Straßenname?	? -13433,693 -13642,750
-Verlängerung der Jochen-Klepper-Str. (Potsdam): Qualität?	? -13436,595 -13668,669
-#: XXX ^^^
+#: last_checked: 2013-05-10 vvv
+#: next_check: 2013-09-10 vvv
+Hermann-Kasack-Str. (Potsdam): Verlängerung in Bau	?::inwork -13432,782 -13236,751
+Reinhold-Schneider-Str. (Potsdam): Verlängerung in Bau	?::inwork -13433,693 -13254,658
+#: next_check ^^^
 #: last_checked ^^^
 # 
 #: next_check: 2014-03-02 vvv
@@ -600,7 +605,7 @@ Marienfelder Chaussee: eventuell werden die Radwege hier asphaltiert?	?::project
 # 
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20120201.1215.365686.html
 #: by: http://gleisdreieck-blog.de/2011/08/15/letzte-debatte-vor-beginn-der-neuen-baumfaellsaison/
-#: last_checked: 2013-04-28 vvv
+#: last_checked: 2013-05-09 vvv
 #: next_check: 2013-11-30 vvv
 #: osm_watch: way id="187902666" version="2"
 Radweg Berlin-Leipzig, Abschnitt Yorckstr. - Monumentenstr.: wird bis Ende 2013 realisiert	?::projected 8333,9583 8338,9443 8388,9242 8337,9065
@@ -610,6 +615,7 @@ Eingang zum Flaschenhalspark	?::projected 8358,9568 8338,9443
 #: last_checked ^^^
 # 
 #: by: http://www.stadtentwicklung.berlin.de/staedtebau/foerderprogramme/stadtumbau/Schoeneberger-Schleife-Noerdl-Teilstueck-a.5712.0.html
+#: last_checked: 2013-05-15
 #: next_check: 2015-01-01
 #: osm_watch: way id="182562157" version="2"
 Radweg Berlin-Leipzig, Abschnitt Monumentenstr. - Alfred-Lion-Steg: Realisierung bis 2015	?::projected 8235,9107 8200,8920 7998,8317
@@ -747,14 +753,8 @@ Templiner-See-Str.: Qualität? Kann die Daumstr. überquert werden?	?::projected -
 #: next_check ^^^
 #: last_checked ^^^
 # 
-#: last_checked: 2011-12-25 (südöstlicher Abschnitt)
-#: next_check: 2012-03-01
-#: by: http://www.potsdam.de/cms/beitrag/10061626/966975/
-Mangerstr. (Potsdam): Bauarbeiten bis September 2011, danach asphaltiert	?::inwork -11669,-138 -11751,-58 -11831,-70 -11903,-71 -12000,-156 -12064,-284
-# 
-#: next_check: 2011-11-15
-#: by: http://www.potsdam.de/cms/beitrag/10079162/1191938/
-Mangerstr. (Potsdam): Bauarbeiten bis November 2011, danach vielleicht etwas besseres Kleinsteinpflaster?	?::inwork -12064,-284 -12000,-156 -11903,-71 -11831,-70 -11751,-58
+# REMOVED (nicht passiert) --- #: last_checked: 2011-12-25 (südöstlicher Abschnitt) --- #: next_check: 2012-03-01 --- #: by: http://www.potsdam.de/cms/beitrag/10061626/966975/ --- Mangerstr. (Potsdam): Bauarbeiten bis September 2011, danach asphaltiert	?::inwork -11669,-138 -11751,-58 -11831,-70 -11903,-71 -12000,-156 -12054,-274
+# REMOVED (passiert) --- #: next_check: 2011-11-15 --- #: by: http://www.potsdam.de/cms/beitrag/10079162/1191938/ --- Mangerstr. (Potsdam): Bauarbeiten bis November 2011, danach vielleicht etwas besseres Kleinsteinpflaster?	?::inwork -12054,-274 -12000,-156 -11903,-71 -11831,-70 -11751,-58
 # 
 #: by: http://www.potsdam.de/cms/beitrag/10056300/757395/
 Mauerweg (Potsdam-Sacrow): evtl. existiert hier bereits ein geschotterter Radweg parallel zur Straße	? -8799,3778 -9064,3667 -9156,3451 -9399,3297 -9530,3165 -9999,2615 -10105,2458
@@ -779,10 +779,7 @@ Baumaßnahmen in der Parkanlage am Schlachtensee, teilweise ist der Uferweg gespe
 #: osm_watch: way id="180800504" version="1"
 Wilhelm-Hoff-Str.: nur als Trasse erkennbar, keine Anzeichen von Bauarbeiten	?::projected 18833,3191 18892,3256 18953,3318 19125,3491
 # 
-#: by: http://www.potsdam.de/cms/beitrag/10050631/757395/
-#: by: (URL existiert nicht mehr) http://www.potsdam.de/cms/beitrag/10058808/757395/
-#: XXX wo wird die Verbindung genau entlanggeführt?
-Neuer Garten (Potsdam): neue Radwegverbindung zwischen Gotischer Bibliothek und Alleestr.	?::inwork -12265,-418 -12262,-362 -12328,-212 -12331,-131 -12412,-118 -12450,-34 -12528,-11
+# REMOVED --- #: by: http://www.potsdam.de/cms/beitrag/10050631/757395/ --- #: by: (URL existiert nicht mehr) http://www.potsdam.de/cms/beitrag/10058808/757395/ --- #: XXX wo wird die Verbindung genau entlanggeführt? --- Neuer Garten (Potsdam): neue Radwegverbindung zwischen Gotischer Bibliothek und Alleestr.	?::inwork -12265,-418 -12263,-403 -12262,-362 -12328,-212 -12334,-114 -12424,-107 -12453,-36 -12518,13 -12561,35
 # 
 #: XXX Zugleich Benennung von "Alter Markt" (im Gegensatz zum auch vorhandenen "Am Alten Markt") in der Gegend
 #: XXX siehe auch Eintrag in landstrassen-orig, eventuell wird sich die Humboldtstr. auf der anderen Seite des Schlosses befinden?
@@ -899,6 +896,39 @@ Mittenwalde - Telz: Radweg in Bau	?::inwork 19835,-16307 19263,-16584 17784,-171
 # - Fragen nach genauen Routenverläufen
 # - XXX_prog- und XXX_indoor-Einträge
 # 
+Behringstr.: Vorfahrtsstraße?	? -9692,-986 -9751,-1183 -9785,-1333
+Behringstr.: Vorfahrtsstraße?	? -9473,-762 -9445,-702
+# 
+Horstweg: hier auch Radwege?	? -10859,-3249 -10893,-3289 -11152,-3498
+Horstweg: hier auch Radwege?	? -10553,-2859 -10495,-2787 -10446,-2693 -10418,-2624 -10350,-2358 -10327,-2262
+# 
+Binsenhof: Qualität (auch Beton?)?	? -10470,-3536 -10473,-3674
+Schilfhof: Qualität (auch Asphalt?)?	? -10439,-3440 -10299,-3443 -10174,-3445
+Milanhorst: Qualität (auch Beton?)?	? -10401,-3307 -10379,-3182
+Falkenhorst: Qualität (auch Asphalt?)?	? -10498,-3164 -10397,-3164 -10379,-3182 -10301,-3255 -10299,-3443
+Sperberhorst: Qualität (auch Beton?)?	? -10528,-3053 -10532,-2940
+# 
+Drewitzer Str.: für Radfahrer geht es anscheinend weiter - Qualität, wo genau ist die Sackgasse für Autofahrer?	? -10676,-3954 -10811,-3874
+# 
+Käthe-Kollwitz-Str.: Qualität (auch Beton?)?	? -10594,-3966 -10362,-4158
+# 
+Eduard-Claudius-Str.: Qualität (auch Beton?)?	? -10725,-4032 -10714,-4011 -10676,-3954
+Eduard-Claudius-Str.: Qualität (auch Beton?)?	? -10714,-4011 -10584,-4147 -10542,-4204
+Eduard-Claudius-Str.: Qualität (auch Beton?)?	? -10542,-4204 -10615,-4254
+# 
+Tiroler Damm: Qualität (auch Beton?)?	? -10362,-4158 -10304,-4090 -10267,-4025 -10165,-3954 -10140,-3918
+# 
+#: last_checked: 2013-05-09
+#: next_check: 2013-08-09
+Am Brunnen: Bauarbeiten, danach vielleicht etwas bessere Qualität (Asphalt?)?	?::inwork; -11789,-3212 -11672,-3345
+# 
+Heinrich-Mann-Allee: Radwegsituation Richtung Nordwesten, gibt es einen zusätzlichen Radweg zum Zweirichtungsradweg auf der südwestlichen Seite?	?; -11152,-3498 -11311,-3322 -11438,-3179 -11656,-2944 -11770,-2743 -11912,-2587 -11995,-2500 -12262,-2244 -12318,-2192
+Heinrich-Mann-Allee: Nebenstraße?	? -11152,-3498 -11036,-3654 -10963,-3762 -10899,-3866 -10786,-3986 -10748,-4065
+# 
+Kunersdorfer Str. (Potsdam): Kann die Heinrich-Mann-Allee in Höhe Kunersdorfer Str. überquert werden? Oder würde man auf der Nebenstraße bleiben?	? -11423,-3431 -11311,-3322
+# 
+(Alter Tornow - Fähre): Qualität (vielleicht Verbundsteinpflaster?)? Tatsächlich NN?	? -13980,-2690 -14045,-2595
+# 
 #: osm_watch: way id="129104626" version="1"
 #: next_check: 2014-04-15
 Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: wann wird die Fortsetzung gebaut? Qualität?	?::projected 8251,14337 8442,14456
@@ -920,7 +950,7 @@ Ampel (Fußgänger? Auto?) in Bau	?::inwork 7595,12980
 #: priority: #C
 Florastr./Görschstr.: entsteht hier ein Zebrastreifen?	? 10073,17801 10033,17763
 # 
-#: last_checked: 2013-04-28
+#: last_checked: 2013-05-14
 #: next_check: 2013-05-30
 #: XXX siehe auch: gesperrt-orig, handicap_s-orig
 Grimmstr.: Einbahnstraße wiederherstellen!	? 11023,9597 11042,9642 11072,9711 11089,9751
@@ -936,8 +966,6 @@ Höhenweg am Wustrower Park: geht es hier weiter?	? 17275,18356 17564,18010 17585
 #: last_checked: 2013-04-20
 #: next_check: 2014-04-20
 Bebauungsplan 11-35: hier werden einige Straßen (verkehrsberuhigt, zumindest teilweise) entstehen	?::projected 17631,16258 17515,16215 17465,16340 17446,16393 17634,16681 17751,16603 17825,16554 17836,16522 17877,16423 17895,16373 17631,16258
-# 
-Sachsendamm/Schöneberger Str.: wo genau fängt die eine Straße an und hört die andere auf?	? 8150,7200 8224,7148
 # 
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4458
 #: next_check: 2013-08-23
@@ -1006,15 +1034,12 @@ Aronsstr.: wird hier ein Zebrastreifen entstehen?	?::projected 14562,7597 14586,
 #: next_check: 2013-06-05 (evtl. auch von wosch berichten lassen)
 Weichselplatz: vielleicht wird hier asphaltiert?	?::projected 12851,9309 12761,9190
 # 
-#: XXX wmannel meint: "Bürgersteig benutzen oder über den Spielplatz fahren"
-Wichgrafstr. - Plantagenstr.: existiert hier eine für Radfahrer befahrbare Verbindung? Qualität?	? -9930,-1687 -9813,-1664
-# 
 Fontanestr. (Lichtenrade): Qualität des Rad/Gehweg-Abschnitts?	? 9779,-605 9822,-608
 # 
 #: XXX nochmal genau vor Ort anschauen
 An der Vogelweide: Qualität? Lage? Straßenschilder?	? 8568,21863 8626,21892 8712,21858 8725,21910 8615,21955 8590,21894
 # 
-#: last_checked: 2013-04-11
+#: last_checked: 2013-05-14
 An der ehem. Blumengroßmarkthalle: hier wird eine neue Verbindung entstehen --- gepflastert (genaue Qualität?), beleuchtet	?::inwork 9777,10719 9784,10740 9733,10827 9682,10836 9666,10848
 # 
 #: next_check: 2013-05-01
@@ -1049,11 +1074,8 @@ Bäkestr.: existiert hier ein Zebrastreifen?	? 4526,3138 4701,3018
 #: note: aus dem DPAG-Mitteilungsblatt Dez 2012, PLZ=13629
 Alter Wiesenweg: Qualität? Ausgeschildert?	? 1739,15958 1581,15919
 # 
-#: by: http://www.potsdam.de/cms/dokumente/10101401_1471008/5de13165/amtsblatt_2012_14.pdf
-Charles-Tellier-Platz: genaue Lage? Qualität? Anbindung an umliegende Wege?	? -14637,462 -14574,431 -14559,465 -14625,474
-# 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5192&options=4 (BVV-Beschluss)
-#: last_checked: 2013-04-11
+#: last_checked: 2013-05-15
 #: check_frequency: 90d
 #: priority: #C
 Zossener Str.: wird die Vorfahrtsregelung hier aufgehoben?	? 9827,10051 9837,9856 9820,9718 9790,9528
@@ -1289,7 +1311,7 @@ Am Findling (Potsdam): existiert eine Ausschilderung?	? -9723,-2451
 #: by: http://www.potsdam.de/cms/ziel/996205/DE/ vvv
 Radspurensituation?	? -10633,-2086 -10673,-2128
 Radspurensituation?	? -9723,-2451 -9788,-2430 -9840,-2413 -9982,-2371
-Radschutzstreifen, genaue Situation?	? -9620,-4939 -9642,-4916 -9862,-4705 -9872,-4694 -9928,-4643 -10072,-4507 -10170,-4416 -10183,-4402 -10225,-4366 -10281,-4316 -10334,-4269 -10371,-4237 -10400,-4212 -10463,-4157 -10634,-4001 -10682,-3960
+Radschutzstreifen, genaue Situation?	? -9620,-4939 -9642,-4916 -9862,-4705 -9872,-4694 -9928,-4643
 #: by: ^^^
 # 
 #: XXX siehe osm:
@@ -1618,36 +1640,8 @@ Glindow - Pertzow: laut "Berliner Umland" witterungsabhängige Strecke	? -22862,-
 Werder - zum Plessower See: genaue Wegführung? Qualität?	? -22042,-2060 -22734,-2249 -22933,-2411 -23320,-2574
 Alt-Brieselang - Brieselang: Qualität? genaue Wegführung?	? -16914,22393 -18103,22064 -17978,21602 -18415,21465 -18378,20766 -18817,19637
 Marquardt, Hauptstr.: Laut mobil-potsdam.de: Asphaltiert	? -18811,4782
-Goetheplatz: Einbahnstraßenregelung auch für Radfahrer?	? -9809,-1435 -9902,-1445 -9922,-1395 -9809,-1435
-Fontanestr. (Potsdam): laut "mobil-potsdam.de" asphaltiert	? -9228,-1414 -9228,-1465 -9228,-1595 -9223,-1703
-Herderstr.: Qualität?	? -9228,-1465 -9131,-1465 -9033,-1459
-Espengrund: Qualität?	? -9035,-1291 -9033,-1459
-Körnerweg (Potsdam): Qualität (Laut OpenStreetMap Kopfsteinpflaster)?	? -9425,-1526 -9318,-1518 -9319,-1594
 # REMOVED (keine Einbahnstraßenregelung gesehen) --- Schornsteinfegergasse (Potsdam): Ist die Straße eine Einbahnstraße, und wenn ja, gilt das auch für Radfahrer?	? -10535,-1809 -10440,-1836 -10425,-1773
-Wichgrafstr. (Potsdam): Qualität kurz vorm Plantagenplatz?	? -9930,-1687 -9905,-1627
-Plantagenplatz: Qualität? Ist die Straße eine Einbahnstraße, und wenn ja, gilt das auch für Radfahrer?	? -9874,-1551 -9905,-1627
-Plantagenhof (Potsdam): existiert diese Straße offiziell? Wegführung? Qualität?	? -9860,-1550 -9805,-1534 -9764,-1528
-#: XXX laut osm living_street
-Concordiaweg: Qualität? Ist die Straße eine Spielstraße?	? -10278,-1140 -10261,-1143 -10208,-1155 -10105,-1178 -10059,-1189 -10019,-1198
-Herthastr. (Potsdam): Qualität?	? -9638,-1193 -9617,-1128 -9607,-1097 -9584,-1030
-#: oldname: Freyaplatz (-2007) vvv
-Gertrud-Droste-Platz (Potsdam): Qualität?	? -9470,-1031 -9515,-1059
-Gertrud-Droste-Platz (Potsdam): Qualität?	? -9457,-1053 -9500,-1086
-#: oldname ^^^
-Donarstr. (Potsdam): Qualität?	? -9515,-1059 -9584,-1030
-Hermann-Maaß-Str.: Qualität?	? -9470,-1031 -9457,-1053 -9421,-1103 -9390,-1145 -9353,-1194 -9204,-1194 -9176,-1188
-An der Sternwarte - Hermann-Maaß-Str.: In welche Richtung verläuft das Gefälle?	? -9816,-604 -9762,-625
-Baldurstr. (Potsdam): Qualität?	? -9534,-1230 -9498,-1132 -9500,-1086 -9515,-1059
-Heinestr.: Qualität (Laut OpenStreetMap Kopfsteinpflaster)?	? -9506,-1431 -9438,-1260 -9390,-1145
-Scheffelstr. (Potsdam): Qualität zwischen Herthastr. und Heinestr./Domstr.?	? -9438,-1260 -9534,-1230 -9638,-1193
-#: by: http://www.potsdam.de/cms/dokumente/10054751_761024/78660164/abl15_09.pdf (Lage)
-#: XXX anonymous meint: Kopfsteinpflaster, Q2
-Otto-Erich-Str. (Potsdam): Qualität?	? -8784,-1596 -8786,-1382 -8758,-1346 -8757,-1287
-#: XXX Fehlt bei Potsdam.coords.data:
-An der Alten Brauerei (Potsdam): Qualität?	? -10925,-1705 -10960,-1679 -11014,-1643 -10994,-1617 -10941,-1654 -10960,-1679
-Wollestr. (Potsdam): Qualität (Laut OpenStreetMap Kopfsteinpflaster)? Ist die Straße eine Einbahnstraße, und wenn ja, gilt das auch für Radfahrer?	? -10987,-1578 -10717,-1227 -10647,-1127 -10616,-1089
-Mühlenstr. (Potsdam): Qualität (Laut OpenStreetMap Kopfsteinpflaster)?	? -11094,-1577 -11056,-1528 -10790,-1178
-Jutestr. (Potsdam): Qualität (Laut OpenStreetMap Kopfsteinpflaster)?	? -10790,-1178 -10717,-1227 -10606,-1303
+Hermann-Maaß-Str.: Qualität?	? -9421,-1103 -9390,-1145 -9353,-1194 -9204,-1194 -9176,-1188
 Karl-Foerster-Str. (Potsdam): Qualität?	? -11438,-1610 -11358,-1491
 Bruno-Baum-Str. (Potsdam): Qualität?	? -11743,-1546 -11643,-1389 -11611,-1328 -11566,-1263
 Uferweg - Bruno-Baum-Str.: Qualität?	? -11753,-1334 -11611,-1328
@@ -2128,7 +2122,7 @@ Schönfließ - B167: Qualität?	? 83274,3292 83648,4018 83483,4450 83527,4852
 #: XXX: laut Aktiv Regional gut geeignet
 Neuhardenberg - Letschin: Qualität?	? 68139,21885 68350,22134 68604,23658 69163,23988 69518,24343 69645,25105
 Bestensee - Hintersiedlung: Qualität?	? 26376,-18707 26637,-18860 26644,-18866 26967,-19187 26954,-19301 26929,-19477 26864,-19685 26703,-19943 26037,-20825
-Wilhelm-Staab-Str./Yorckstr.: Überqueren des Kanals möglich?	? -13001,-1329
+# REMOVED (ja) --- Wilhelm-Staab-Str./Yorckstr.: Überqueren des Kanals möglich?	? -13001,-1329
 # REMOVED --- XXX: unklare Angaben von Nils Fiedler, leider keine Rückfrage möglich: Q1 (Asphalt); q2 (Fußgängerzone); RW1 (Radweg); Gefälle "5°"? #Mühlenfeldstr.: Steigung, wenn ja, wo genau?	? 3707,22864 3739,22693 3743,22642 3753,22534 3728,22507 3601,22484 3531,22440 3353,22348 3271,22321 3243,22311 3134,22292 3046,22292 2757,22310 2587,22332
 # REMOVED --- Dorfstr. (Malchow): seit November 2005 Bauarbeiten für neuen Radweg, bereits fertig?	? 15606,19839 15656,19946 15686,20100 15778,20350 15900,20531 16025,20631
 # REMOVED (Strecke bereits abgefahren) --- by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0506/nachricht1941.html --- "Wuhle-Hönow-Weg" --- Rad- und Fußwegverbindung zwischen Wuhle und Hönow durch Hellersdorf: genauer Verlauf? Qualität? bereits komplett fertiggestellt?	? 22579,15416 22743,15414 23067,15429 23245,15442 23270,15423 23368,15469 23484,15485 23629,15498 23633,15464 23643,15389 23895,15450 23914,15453 23941,15458 24038,15475 24076,15481 24169,15497 24303,15766 25003,15617 25984,15415 25936,15335 25990,15301 25985,15080 26014,15039
@@ -2202,7 +2196,6 @@ Marwitz - Schwante: existieren hier Radwege? Wenn ja, ist es ein Zweirichtungswe
 # REMOVED (anonymous meint "ja", selber auch in der falschen Richtung problemlos gefahren) --- östl. Radweg der Prenzlauer Prom. in Gegenrichtung, also Stadtmitte freigegeben?	? 12002,18768 11984,18650 11969,18552 11950,18529
 Heinrich-von-Kleist-Str. (Potsdam): Qualität (vermutlich Kopfsteinpflaster)?	? -10078,-2339 -10109,-2437 -10142,-2540
 Havellandkanal Richtung Norden: Qualität (wahrscheinlich Asphalt), wohin führt die Strecke?	? -8730,22254 -8734,22586
-Brauhausberg/B2: wie weit Richtung Süden reichen die Radspuren? Werden die Radspuren dann zu einem gewöhnlichen Radweg?	? -12476,-2605 -12643,-2673 -12840,-2799 -12913,-2937 -13051,-3101
 Dahme: Qualität?	? 13750,-59911 13663,-59806 13598,-59801
 Dahme: Qualität?	? 13491,-59794 13153,-59795 13484,-59914 13618,-59923
 Dahme: Qualität?	? 13491,-59794 13484,-59914
@@ -2300,6 +2293,7 @@ Rohrwebereck: Sind da noch Stichstraßen oder sind das nur Garagenzufahrten?	? -1
 Tannenweg (Potsdam): Qualität?	? -9434,164 -9440,193 -9405,204 -9453,425 -9494,441 -9539,434
 #: XXX Genauer Straßenverlauf von "neuer" und "alter" Wannseestr.?
 #: by: http://www.potsdam.de/cms/dokumente/10114884_1771576/e922e4ec/ENDFASSUNG%20Abl.%20PdmStadt%2002_13.pdf
+#: die Wannseestr. ist Einbahnstraße, offen Richtung Westen
 (Wannseestr. - Tannenstr.): genaue Straßenbezeichnungen? Qualität?	? -9568,56 -9381,89 -9389,170
 Tremsdorf - Mietgendorf: Qualität?	? -7714,-15752 -6969,-16153 -6922,-16200 -6915,-16296 -6578,-16497 -5593,-16970
 Großziethen: wie weit in Richtung Süden gehen die Radwege?	? 13124,216 13165,-34 13176,-161 13215,-570 13225,-681 13230,-712 13300,-1252
@@ -2397,8 +2391,8 @@ Beetzweg: Qualität?	? -9372,-2915 -9419,-3068 -9438,-3133 -9464,-3239
 Ulmenstr. (Potsdam): Qualität?	? -9356,-3546 -9268,-3283 -9257,-3245
 Orenstein & Koppel Str.: Qualität? Genaue Schreibweise der Straße (mit oder ohne Bindestriche?)?	? -8846,-3474 -9020,-3395 -9074,-3354 -9221,-3307 -9239,-3291 -9268,-3283 -9327,-3265 -9377,-3267 -9464,-3239
 Beetzweg - Fritz-Zubeil-Str.: Qualität? Radfahren erlaubt?	? -9464,-3239 -9494,-3242 -9531,-3408
-Am Alten Friedhof (Potsdam): Qualität?	? -11770,-2743 -11637,-2617 -11595,-2635
-Schlaatzweg: Qualität?	? -11601,-2197 -11487,-2373
+Am Alten Friedhof (Potsdam): Qualität? Kann man die Heinrich-Mann-Allee wegen der Tramtrasse überqueren?	? -11770,-2743 -11637,-2617 -11595,-2635
+Schlaatzweg: Qualität?	? -11597,-2203 -11487,-2373
 Kurze Str. (Potsdam): Qualität?	? -11635,-2414 -11475,-2454
 Kolonie Daheim (Potsdam): Qualität?	? -11487,-2373 -11472,-2406 -11475,-2454 -11481,-2525 -11487,-2618 -11466,-2698 -11437,-2748 -11203,-2868
 Kolonie Daheim (Potsdam): Qualität?	? -11481,-2525 -11595,-2635
@@ -2496,11 +2490,6 @@ Zützen - ehem. B2: Qualität?	? 66091,69964 65762,70023 65345,70168 65207,70639
 Oder-Neiße-Radweg - Stützkow: Qualität?	? 61783,66148 61731,66250 61584,66212
 Stützkow - Alt-Gatow: Qualität?	? 61584,66212 61540,66359 61445,66368 61289,66610 60834,66986 60458,66859 60100,66606 60068,66610
 Rahnsdorfer Str. (???): Qualität? In welchem Ortsteil befindet sich dieser Abschnitt?	? 25781,9966 26321,9868
-#: XXX laut osm Spielstraße:
-An der Fährwiese (Potsdam): Qualität?	? -14119,-2778 -14179,-2678 -14234,-2587 -14169,-2548 -14110,-2642 -14179,-2678
-#: XXX anonymous meint: Q2, aber ohne weitere Informationen
-Tornowstr. (Potsdam): Qualität?	? -13981,-2723 -13980,-2690 -13900,-2623 -13865,-2565 -13807,-2446 -13770,-2286 -13751,-2139
-Küsselstr. (Potsdam): Qualität?	? -13807,-2446 -13554,-2334 -13479,-2308 -13450,-2231 -13450,-2158
 Fürstenweg: Qualität?	? -3851,16360 -3870,16527 -3879,16679
 #: XXX fehlt in Berlin.coords.data
 Straße 4 (Spandau): Qualität? Für Radfahrer befahrbar? Für Autos gesperrt?	? -4160,16446 -4159,16573 -4153,16676 -4155,16776 -4155,16860 -4154,16947
@@ -2527,29 +2516,10 @@ Buckow - Lichterfelde: wo genau ist der Radweg?	? 31634,53303 32692,53191 32718,
 # REMOVED (existiert zwar, ein Gehweg in einer KGA, lohnt aber nicht aufgenommen zu werden) --- Verbindung zwischen Straße 45 und Straße 46: Qualität? Für Autos gesperrt?	? 12671,17528 12587,17603
 # REMOVED (nö, dieser Abzweig lohnt nicht) --- Eigerstr.: Qualität?	? 12991,17877 12945,17958 12912,18008 13025,18126 13043,18126
 Zur Nuthestr.: Qualität?	? -11114,-2104 -10917,-2439
-Obere Donarstr. (Potsdam): Qualität? Existiert eine Verbindung für Radfahrer zur Donarstr.?	? -10108,-796 -10020,-861 -9897,-901
 # 
 #: XXX_osm bei osm als Bruchsaler Str. bezeichnet
 Karlsruher Str. (Mahlsdorf): Qualität?	? 23582,9591 23584,9629 23585,9672 23528,9680
-An der Vorderkappe (Potsdam): Qualität? Gilt die Einbahnstraßenregelung auch für Radfahrer?	? -13021,-2784 -13123,-2797 -13135,-2783 -13304,-2779 -13329,-2800 -13209,-2829 -13123,-2797
-Uferweg auf Hermannswerder: Qualität?	? -13003,-2754 -13266,-2716 -13431,-2777 -13681,-2824 -13767,-2718 -13762,-2691 -13865,-2565 -13921,-2516 -14045,-2521 -14081,-2516 -14177,-2514 -14247,-2568 -14234,-2587
-An der Vorderkappe - Uferweg: Qualität?	? -13329,-2800 -13431,-2777
-Leiterstr. (Potsdam): Qualität?	? -13381,-2943 -13359,-3096
-Leiterstr. (Potsdam): Qualität?	? -13495,-3094 -13456,-3099 -13359,-3096 -13316,-3091
-Ulrich-von-Hutten-Str.: Qualität? Gilt die Einbahnstraßenregelung auch für Radfahrer?	? -13481,-2956 -13456,-3099
-Paetowstr. (Potsdam): Qualität?	? -13155,-2913 -13137,-3022 -13191,-3080 -13209,-3082 -13270,-3092 -13282,-3001 -13227,-2994 -13209,-3082
-Max-Planck-Str. (Potsdam): Qualität?	? -12355,-2263 -12595,-2220 -12645,-2245
-Am Havelblick (Potsdam): Qualität?	? -12335,-2571 -12462,-2568 -12492,-2555 -12442,-2389 -12623,-2367
-Finkenweg (Potsdam): Qualität?	? -12840,-2799 -12877,-2734 -12867,-2680 -12797,-2632 -12756,-2577 -12688,-2595 -12643,-2673
-Drevesstr. (Potsdam): Qualität?	? -11656,-2944 -11685,-2971 -11676,-3137 -11423,-3431 -11278,-3596
-Kunersdorfer Str. (Potsdam): Qualität? Kann die Heinrich-Mann-Allee in Höhe Kunersdorfer Str. überquert werden?	? -11676,-3137 -11739,-3141 -11789,-3212 -11819,-3302 -11792,-3372 -11722,-3458 -11547,-3502 -11504,-3502 -11423,-3431 -11311,-3322
-Am Brunnen (Potsdam): Qualität?	? -11547,-3502 -11543,-3461 -11672,-3345 -11789,-3212
-Waldstr. (Potsdam): Qualität?	? -11152,-3498 -11278,-3596 -11414,-3703
-Kottmeierstr. (Potsdam): Qualität?	? -11504,-3502 -11423,-3638
-#: XXX str_cont_ausnahme
-Heidereiterweg (Potsdam): Qualität?	? -11278,-3596 -11166,-3744
-Heidereiterweg (Potsdam): Qualität?	? -11173,-3758 -11137,-3880 -11114,-3961 -11083,-4002
-Heidereiterweg (Potsdam): Qualität?	? -11105,-4023 -10978,-4247 -10924,-4319 -10899,-4355
+Am Havelblick (Potsdam): Qualität?	? -12335,-2571 -12492,-2555 -12442,-2389 -12623,-2367
 #: by: http://www.potsdam.de/cms/beitrag/10057990/757395/
 Nuthestr.: existieren durchgängig Radwege zwischen Berliner Str. und Alt Nowawes?	? -11116,-1681 -11140,-1564 -11226,-1445 -11386,-1313
 # REMOVED (nein, keine Straße, auch aus Berlin.coords.data herausgenommen) --- Verlängerte Müggelbergallee: gibt es diese Straße? Qualität?	? 23107,1680 23231,1707
@@ -2656,53 +2626,22 @@ Zum Heizwerk (Potsdam): Qualität?	? -9597,-5392 -9583,-5366 -9441,-5109 -9402,-5
 Am Bürohochhaus (Potsdam): Qualität?	? -9402,-5039 -9199,-5153
 Meisenweg (Potsdam): Qualität?	? -9940,-4206 -9875,-4247 -9798,-4308 -9721,-4364 -9692,-4391
 Wieselkiez (Potsdam): Qualität?	? -9647,-3958 -9645,-3830
-Sperberhorst (Potsdam): Qualität?	? -10643,-3062 -10528,-3053 -10532,-2940
-Falkenhorst (Potsdam): Qualität?	? -10643,-3155 -10498,-3164 -10397,-3164 -10379,-3182 -10301,-3255 -10299,-3443
 Habichthorst (Potsdam): Qualität?	? -10498,-3164 -10498,-3266
-Milanhorst (Potsdam): Qualität?	? -10587,-3320 -10401,-3307 -10379,-3182
-Schilfhof (Potsdam): Qualität?	? -10585,-3440 -10439,-3440 -10299,-3443 -10174,-3445
-Binsenhof (Potsdam): Qualität?	? -10585,-3545 -10469,-3545 -10473,-3674
 Magnus-Zeller-Platz (Potsdam): Qualität?	? -10438,-3818 -10433,-3753
 Erlenhof (Potsdam): Qualität?	? -10228,-3894 -10227,-3873 -10224,-3767 -10224,-3730 -10206,-3685 -10202,-3585 -10148,-3585
 Wiesenhof (Potsdam): Qualität?	? -10227,-3873 -10104,-3880 -10102,-3828
 Pappelhof (Potsdam): Qualität?	? -10224,-3767 -10129,-3769
 Weidenhof (Potsdam): Qualität?	? -10224,-3730 -10371,-3724 -10374,-3651
 Inselhof (Potsdam): Qualität?	? -10206,-3685 -10021,-3683 -10020,-3655
-Käthe-Kollwitz-Str. (Potsdam): Qualität?	? -10634,-4001 -10594,-3966 -10362,-4158
-Tiroler Damm (Potsdam): Qualität?	? -10400,-4212 -10362,-4158 -10304,-4090 -10267,-4025 -10165,-3954 -10140,-3918
 #: XXX str_cont_ausnahme-Eintrag
 Unter den Eichen (Potsdam): Qualität?	? -10304,-4090 -10215,-4169
 Unter den Eichen (Potsdam): Qualität?	? -10170,-4416 -10102,-4346 -10048,-4288 -10021,-4258
-#: XXX str_cont_ausnahme-Eintrag
-Eduard-Claudius-Str. (Potsdam): Qualität?	? -10725,-4032 -10714,-4011 -10682,-3960
-Eduard-Claudius-Str. (Potsdam): Qualität?	? -10714,-4011 -10584,-4147 -10542,-4204
-Eduard-Claudius-Str. (Potsdam): Qualität?	? -10463,-4157 -10542,-4204 -10615,-4254
 Lisdorf (Potsdam): Qualität?	? -9875,-4247 -9783,-4140 -9672,-4065
 Zur Nuthe (Potsdam): Qualität?	? -9798,-4308 -9717,-4220 -9613,-4149 -9472,-4061
 Käuzchenweg (Potsdam): Qualität?	? -10048,-4288 -9808,-4484
 Am Fenn (Potsdam): Qualität?	? -10102,-4346 -10011,-4426 -9860,-4555
+Am Fenn (Potsdam): Qualität?	? -10072,-4507 -10011,-4426
 Am Stadtrand (Potsdam): Qualität?	? -9928,-4643 -9860,-4555 -9808,-4484 -9721,-4364 -9559,-4242 -9413,-4154 -9472,-4061
-Bernhard-Kellermann-Str. (Potsdam): Qualität? Einbahnstraßenregelung?	? -10371,-4237 -10399,-4335 -10277,-4471 -10183,-4402
-Kuckucksruf (Potsdam): Qualität?	? -10578,-4327 -10400,-4212
-#: alias: Johannes-Robert-Becher-Str.
-Johannes-R.-Becher-Str. (Potsdam): Qualität?	? -10134,-4981 -10288,-4749 -10403,-4498 -10493,-4507
-Friedrich-Wolf-Str. (Potsdam): Qualität?	? -10359,-4780 -10288,-4749 -10204,-4675 -10072,-4507
-Bertolt-Brecht-Str. (Potsdam): Qualität? Einbahnstraßenregelung?	? -10204,-4675 -9998,-4865
-Am Wald (Potsdam): Qualität?	? -11414,-3703 -11382,-3814 -11282,-4118 -11192,-4385 -11153,-4512
-(Kottmeierstr. - Am Wald): Qualität? Für Radfahrer befahrbar?	? -11423,-3638 -11414,-3703
-(Am Wald - Zum Kahleberg): Qualität? Für Radfahrer befahrbar?	? -11153,-4512 -11121,-4605 -11013,-4671
-Vogelsang (Potsdam): Qualität?	? -11305,-3793 -11210,-4095 -11117,-4349
-Heimrode (Potsdam): Qualität? Ist die Heinrich-Mann-Allee an dieser Stelle überquerbar?	? -11137,-3880 -10963,-3762
-Ravensbergweg (Potsdam): Qualität? Ist die Heinrich-Mann-Allee an dieser Stelle überquerbar?	? -11282,-4118 -11210,-4095 -11105,-4023 -11083,-4002 -11003,-3941 -10899,-3866
-Am Plantagenhaus (Potsdam): Qualität?	? -11003,-3941 -10827,-4172
-Hegemeisterweg (Potsdam): Qualität?	? -11192,-4385 -11117,-4349 -10978,-4247
-Am Försteracker (Potsdam): Qualität?	? -10924,-4319 -10915,-4308 -10827,-4172 -10748,-4065 -10725,-4032
-#: XXX str_cont_ausnahme-Eintrag
-Hasensprung (Potsdam): Qualität?	? -11153,-4512 -10899,-4355 -10888,-4346
-Hasensprung (Potsdam): Qualität?	? -10915,-4308 -10888,-4346 -10840,-4403
-Zum Jagenstein (Potsdam): Qualität?	? -10824,-4434 -10722,-4618 -10659,-4750 -10596,-4892 -10453,-4819 -10359,-4780
-Ginsterweg (Potsdam): Qualität?	? -10659,-4750 -10517,-4686
-Zum Kahleberg (Potsdam): Qualität?	? -11013,-4671 -10999,-4820
 Sonnentaustr. (Potsdam): Qualität?	? -10649,-5236 -10740,-5048
 Zum Teufelssee (Potsdam): Qualität?	? -10150,-5260 -10254,-5307 -10397,-5379 -10542,-5445 -10516,-5498 -10482,-5572 -10431,-5655
 Liefelds Grund (Potsdam): Qualität?	? -10397,-5379 -10344,-5504 -10482,-5572
@@ -2723,8 +2662,6 @@ Grenzweg (Mahlow): Qualität?	? 12251,-4600 13289,-4660
 Radweg zwischen Groß Schulzendorf und Ludwigsfelde: existiert bereits der Radweg? Qualität?	? 7638,-14868 7475,-14774 7135,-14839 5497,-15134 4880,-15498 4580,-15515 4453,-15366 4282,-15325 4048,-14854 3323,-14135
 #: by: http://www.nationaler-radverkehrsplan.de/neuigkeiten/news.php?id=2669
 Radweg zwischen Linthe und Brück: Qualität?	? -30940,-28490 -31197,-28211 -32763,-26409
-#: XXX: laut http://www.nationaler-radverkehrsplan.de/neuigkeiten/news.php?id=2339 mit Radweg
-Schönower Str. (Teltow): Qualität?	? 1684,-927 1722,-773 1713,-652 1677,-582 1612,-505 1457,-470
 #: XXX: laut http://www.nationaler-radverkehrsplan.de/neuigkeiten/news.php?id=2339 mit Radweg
 Zeppelinufer (Teltow): Qualität?	? 1457,-470 1338,-426 1134,-370 818,-298
 Baumgarten - Grünow: Qualität?	? 45393,105220 45647,104851 45619,104429 45554,104267 45590,103655 46020,102452 45794,102248 45805,102072
@@ -2784,37 +2721,22 @@ Am Mühlenfließ: Qualität?	? 29982,4525 29891,4605
 Schönerlinder Dorfstr.: Qualität Richtung Bahnhof?	? 12151,27606 11856,27418
 Schönerlinder Bahnhofstr.: Qualität? Ist der Bahnübergang beschrankt?	? 11856,27418 11312,27124
 Industriestr. (Schönerlinde): Qualität?	? 12126,26016 11655,26469 11621,26746 11530,26931 11360,27051 11312,27124
+#: XXX im Bereich der Gutsstr./Verlängerung Beton, und teilweise Rasengittersteine
+Kirschallee - Rückertstr.: Qualität der Wege? Unbeleuchtet?	? -13944,1764 -14171,1878 -14205,1864 -14588,1918 -15132,1992 -15560,2052 -15671,1990 -15875,2079 -15942,2110 -16004,2136 -16034,2150 -16396,2310
 #: XXX_osm fehlt bei osm
 #: XXX Ist hier auch die Straße 356 oder 365?
 Straße 357: Qualität?	? -6046,14253 -6064,14321 -6091,14391 -6146,14317
-Grabenstr. (Potsdam): Qualität?	? -15023,13 -15309,-36
-Fliederweg (Potsdam): Qualität?	? -14733,637 -14776,560 -14725,522
-Blumenstr. (Potsdam): Qualität?	? -15059,535 -15051,248
-Lendelallee (Potsdam): Qualität?	? -15633,47 -15436,64 -15442,159
-Am Raubfang (Potsdam): Qualität?	? -15557,809 -15436,1253 -15308,1220
-Schräger Weg (Potsdam-Bornim): Qualität?	? -16683,1713 -16618,1840 -16170,1908 -16049,1913
-Gersthofweg (Potsdam-Bornim): Qualität?	? -16569,1643 -16683,1437 -16727,1370
-Gutsstr. (Potsdam-Bornim): Qualität?	? -16361,1564 -16346,1591 -16314,1648 -16251,1759 -16192,1856 -16170,1908
-An der Vogelwiese (Potsdam-Bornim): Qualität?	? -16346,1591 -16407,1616 -16461,1634 -16502,1650
-Pannenbergstr. (Potsdam-Bornim): Qualität?	? -16470,1602 -16487,1548 -16477,1473 -16446,1426 -16394,1369 -16342,1324 -16280,1279 -16174,1220 -15982,1147
+# 
 #: XXX_osm: fehlt bei osm
-Zum Weizenring (Potsdam-Bornim): Qualität? Genaue Lage der Straße?	? -16566,1579 -16535,1467
+#: last_checked: 2013-05-10 (mögliche Straßenführung ab WPT, aber keine Bautätigkeit zu sehen)
+#: next_check: 2013-10-10
+Zum Weizenring (Potsdam-Bornim): Qualität? Genaue Lage der Straße?	? -16566,1579 -16498,1444
+# 
 #: XXX_osm: fehlt bei osm
+#: last_checked: 2013-05-10 (keine Anzeichen für Bautätigkeiten zu sehen)
+#: next_check: 2013-10-10
 Pomonaring (Potsdam-Bornim): Qualität? Genaue Lage der Straße?	? -15999,1387 -16046,1203 -15925,1365
-Florastr. (Potsdam-Bornim): Qualität?	? -16023,1042 -15982,1147 -15932,1238 -15859,1384 -15791,1523
-#: by: http://www.potsdam.de/cms/dokumente/10085850_1189396/5f99b441/26650AblPdmStadt11_11.pdf
-Staudenweg (Potsdam-Bornim): Qualität?	? -15932,1238 -15717,1159
-Haselnussring (Potsdam-Bornim): Qualität? Spielstraße?	? -16174,1220 -16145,1272 -16129,1306 -16108,1349 -16048,1454
-Haselnussring (Potsdam-Bornim): Qualität? Spielstraße?	? -16280,1279 -16154,1492
-Walnussring (Potsdam-Bornim): Qualität?	? -16477,1473 -16493,1462 -16541,1360 -16371,1271 -16342,1324
-#: by: http://www.potsdam.de/cms/dokumente/10090503_1471008/726adfe6/Amtsblatt_1-2012.pdf (vorher hier auch "Breiter Weg" -> oldname: -20111212)
-Amselwinkel (Potsdam-Bornim): Qualität?	? -16314,1648 -16239,1613 -16169,1740
-Breiter Weg (Potsdam-Bornim): Qualität?	? -16169,1740 -16251,1759
-Grüner Weg (Potsdam-Bornim): Qualität?	? -16192,1856 -16074,1820
-Verlängerung des Grünen Wegs: Qualität?	? -16074,1820 -16024,1806 -15692,1716 -15603,1690
-Hermann-Struve-Str. (Potsdam-Bornim): Qualität?	? -16048,1454 -16003,1539 -15978,1589 -15954,1639
-Werner-Nerlich-Bogen (Potsdam-Bornim): Qualität?	? -15791,1523 -15891,1584 -15954,1639 -15980,1690 -16000,1727 -16024,1806
-Heckenstr. (Potsdam-Bornim): Qualität?	? -16840,1639 -16958,1706 -17248,1784
+# 
 Gröbenstr. (Potsdam-Bornim): Qualität?	? -17646,1636 -18095,1928
 Am Großen Herzberg (Potsdam-Eiche): Qualität?	? -17419,551 -17083,624 -16939,671
 Herzbergstr., Verlängerung nach Eiche: Qualität?	? -17083,624 -17098,554 -17220,212
@@ -2881,10 +2803,7 @@ Radweg in der Bergstraße: wo genau?	? -17968,7253 -18232,6565
 Am Seegraben/Alexander-Meißner-Str.: Ampel in Vorbereitung	?::inwork 19894,-835
 # REMOVED (genauer Hauptweg wurde eingezeichnet, auf die Nebenwege, die sowieso für Radfahrer verboten sind, habe ich verzichtet) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/44re.pdf/file --- An der Wasserstadt: wo genau befindet sich dieser Rad- und Fußweg?	? -2484,16835 -2476,16742
 # REMOVED (hier existiert nichts) --- #: XXX fehlt in Berlin.coords.data --- Pechnelkenpfad: Qualität? Wo liegt die Straße genau?	? 16078,3503 16125,3545
-# 
-#: by: http://www.potsdam.de/cms/beitrag/10071706/966975/
-Templiner Str.: gibt es in der Templiner Straße mittlerweile Radstreifen?	? -13062,-2901 -13155,-2913 -13381,-2943 -13481,-2956 -13718,-2991
-# 
+# REMOVED (ja) --- #: by: http://www.potsdam.de/cms/beitrag/10071706/966975/ --- Templiner Str.: gibt es in der Templiner Straße mittlerweile Radstreifen?	? -13062,-2901 -13155,-2913 -13381,-2943 -13481,-2956 -13718,-2991
 # REMOVED (rj meint, dass hier kein *ausgeschilderter* Platz ist) --- #: XXX fehlt in Berlin.coords.data --- Forum (Adlershof): Wo genau liegt die Straße? Ist sie ausgeschildert? Qualität?	? 19242,3052 19328,3072
 Hohen Neuendorfer Weg (Birkenwerder): Qualität?	? 645,30634 618,30687 575,30816 564,30845 550,30867 516,30899 342,31100
 Am Alten Mörtelwerk (Potsdam-Eiche): Qualität?	? -17127,-559 -17141,-496 -17186,-451 -17211,-356 -17254,-256
@@ -2939,30 +2858,9 @@ Habichtweg (Potsdam-Golm): Qualität?	? -17782,112 -17748,219 -17725,293
 Zum Großen Herzberg (Potsdam-Golm): Qualität?	? -18042,219 -18017,316 -18026,357
 Zum Bahnhof Pirschheide (Potsdam): Qualität?	? -16151,-3770 -16050,-3982 -15982,-4032
 #: XXX fehlt in Potsdam.coords.data
-An der Hinterkappe (Potsdam): Existiert diese Straße? Ausgeschildert? Qualität?	? -13927,-3002 -14075,-3027
+An der Hinterkappe (Potsdam): Existiert diese Straße? Ausgeschildert? Qualität?	? -13940,-3163 -14075,-3027
 #: XXX fehlt in Potsdam.coords.data
 Am Küssel (Potsdam-Grube): Qualität?	? -19233,2251 -19505,2798
-Peter-Altmann-Str. (Potsdam-Bornim): Qualität?	? -16003,1539 -16097,1596 -16120,1607
-Ritterspornweg (Potsdam-Bornim): Qualität?	? -15978,1589 -16027,1618 -16072,1643
-Am Phloxgarten (Potsdam-Bornim): Qualität?	? -15980,1690 -16027,1618
-Gillis-Grafström-Str. (Potsdam-Bornim): Qualität?	? -16000,1727 -16036,1707 -16072,1643 -16097,1596
-# 
-#: note: Privatstraße vvv
-#: last_checked: 2012-05-12 (Bauarbeiten im Gange)
-#: next_check: 2012-08-01
-#: by: http://www.potsdam.de/cms/dokumente/10073161_1189396/13ef9d53/AblPdm1_11.pdf vvv
-#: XXX fehlt in Potsdam.coords.data, PLZ=14469
-#: osm_watch: way id="177903460" version="2" brb
-#: osm_watch: way id="177903458" version="2" brb
-Bienenwinkel (Potsdam): Qualität? Genauer Verlauf der Straße?	?::inwork -13345,1962 -13316,2003 -13279,1958
-#: last_checked: 2012-05-12 (erkennbare Bauarbeiten, aber ist das überhaupt die richtige Straße?)
-#: next_check: 2012-08-01
-#: XXX fehlt in Potsdam.coords.data, PLZ=14469
-Zum Exerzierhaus (Potsdam): Qualität? Genauer Verlauf der Straße?	?::inwork -13108,2010 -12981,2014
-#: by: ^^^
-#: note: ^^^
-# 
-Horst-Bienek-Str. (Potsdam): Qualität?	? -13696,572 -13668,669 -13642,750 -13615,844
 # 
 #: by: http://www.potsdam.de/cms/dokumente/10072610_974248/9aba6281/abl16_10.pdf
 #: by: http://www.potsdam.de/cms/dokumente/10081131_1189396/883b581e/abl05_11.pdf
@@ -2994,10 +2892,8 @@ Schwarzer Weg (Potsdam-Grube): Qualität?	? -19422,2220 -19433,2155 -19691,2134 -
 Schmidtshof (Potsdam-Grube): Qualität?	? -19691,2134 -19689,2191 -19927,2193 -19927,2216 -20049,2236
 #: XXX_osm: osm meint "Am Alten Bahnwerk"
 #: by: http://www.potsdam.de/cms/dokumente/10060113_761024/4f1a62f4/abl20_09.pdf
-Altes Bahnwerk (Potsdam): Qualität? Spielstraße?	? -11942,-2201 -11934,-2077
-Zum Wasserturm: Spielstraße?	? -11837,-2223 -11828,-2056
-#: note: Radfahren erlaubt
-Park Babelsberg: Qualität des Parkwegs von Alt Nowawes Richtung Humboldtbrücke	? -10505,-1166 -10519,-1117 -10614,-1055 -10713,-1072 -10793,-1139 -10910,-1271 -10994,-1307 -11081,-1303 -11225,-1225 -11332,-1071 -11359,-1069 -11425,-1001
+Altes Bahnwerk (Potsdam): Qualität? Spielstraße? Genaue Lage? Können Radfahrer direkt zur Friedrich-Engels-Str. fahren?	? -11942,-2162 -11945,-2075
+Zum Wasserturm: Spielstraße? Können Radfahrer direkt zur Friedrich-Engels-Str. fahren?	? -11842,-2183 -11842,-2054
 Radweg in Golm: Qualität? Ausschilderung?	? -18785,-77 -18769,-27 -18966,0 -18971,73 -18919,178 -18910,270 -18898,334
 #: XXX fehlt in Potsdam.coords.data
 #: XXX Es gibt auch einen Eichenweg (Fußweg) in Babelsberg
@@ -3016,12 +2912,6 @@ Kleiberweg (Potsdam-Golm): Qualität?	? -17902,162 -17855,307
 Spechtweg (Potsdam-Golm): Qualität?	? -17864,83 -17843,139
 #: XXX fehlt in Potsdam.coords.data PLZ=14476
 Sperberweg (Potsdam-Golm): Qualität?	? -17843,139 -17789,300
-#: XXX: osm meint "cobblestone"
-#: by: http://www.potsdam.de/cms/dokumente/10057376_761024/a31d30b5/Amtsblatt17_09.pdf (Lage)
-Friedrich-Wilhelm-Boelcke-Str. (Potsdam): Qualität?	? -12796,-2488 -12831,-2439 -12813,-2423 -12779,-2467
-#: XXX_osm: bei osm auch als "Friedrich-Wilhelm-Boelcke-Str." bezeichnet
-#: by: http://www.potsdam.de/cms/dokumente/10057376_761024/a31d30b5/Amtsblatt17_09.pdf (Lage)
-Zur Königlichen Hofbrauerei (Potsdam): Qualität?	? -12813,-2423 -12781,-2376
 # 
 #: XXX fehlt in Potsdam.coords.data PLZ=14476
 Am Golmer Weinberg (Potsdam-Golm): Qualität?	? -19197,-348 -19180,-292 -19175,-237
@@ -3047,7 +2937,6 @@ Am Denkmal (Groß Glienicke): Qualität?	? -9531,6901 -9424,6874
 Zum Teufelssee - Am Moosfenn (Potsdam): Qualität der Gehwegverbindung?	? -10397,-5379 -10503,-5165
 Am Pappeltor (Potsdam, Geltow): Qualität?	? -18894,-5272 -18885,-5173 -18908,-4810 -18928,-4677 -18928,-4595 -18910,-4561 -18771,-4330 -18604,-3755
 An den Kopfweiden (Potsdam): Qualität?	? -10859,-3249 -11015,-3091
-Hannes-Meyer-Str. (Potsdam): Qualität?	? -14114,580 -13958,534
 #: XXX fehlt in Potsdam.coords.data, PLZ=14471, oldname: Im Wildpark (bis ca. 2009)
 Elisenweg (Potsdam): Qualität?	? -17194,-4659 -17217,-4610 -17235,-4609 -17599,-4389 -17810,-4254 -17847,-4179
 # REMOVED (Anlage wurde genaue abgefahren) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/14re.pdf/file --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/40re.pdf/file?y=2011 --- Anlage Schildoweck: sieben neue Privatwege, wo genau, Qualität?	? 8656,24889 8592,24914 8513,24909 8404,24744 8443,24529 8656,24889
@@ -3185,15 +3074,13 @@ Mühlenweg (Potsdam-Fahrland): Qualität? Genauer Verlauf?	? -15503,6422 -15392,64
 #: by: http://www.potsdam.de/cms/dokumente/10090503_1471008/726adfe6/Amtsblatt_1-2012.pdf vvv
 #: XXX fehlt in Potsdam.coords.data, PLZ=14473 vvv
 #: osm_watch: way id="174465897" version="1" brb
+#: last_checked: 2013-05-09
+#: next_check: 2013-11-09
 An der Kornmühle (Potsdam)	?::inwork -12712,-2172 -12728,-2227
 #: osm_watch: way id="174465898" version="1" brb
+#: last_checked: 2013-05-09
+#: next_check: 2013-11-09
 Am Speicher (Potsdam)	?::inwork -12783,-2269 -12771,-2220 -12754,-2154
-#: XXX ^^^
-#: XXX fehlt in Potsdam.coords.data, PLZ=14469 vvv
-#: by: http://www.potsdam.de/cms/dokumente/10111537_1471008/c741b21e/Amtsblatt_17_12.pdf vvv
-Siegward-Sprotte-Straße (Potsdam): (Planstraße "Nord")	? -15360,409 -15380,684
-Haeberlinweg (Potsdam): (Planstraße "Süd")	? -15413,345 -15360,409 -15261,431
-#: by: ^^^
 #: XXX ^^^
 #: by: ^^^
 #: XXX ^^^
@@ -3201,7 +3088,9 @@ Haeberlinweg (Potsdam): (Planstraße "Süd")	? -15413,345 -15360,409 -15261,431
 #: by: http://www.potsdam.de/cms/dokumente/10091281_1471008/5b118cfb/2012%2002%2009Endfassung02_12.pdf
 #: XXX fehlt in Potsdam.coords.data, PLZ=14473
 #: osm_watch: way id="174465895" version="1" brb
-Altstadtblick (Potsdam): neue Straße in Potsdam, Qualität? Genauer Verlauf? (Planstraße D)	? -12698,-2243 -12728,-2227 -12771,-2220 -12803,-2219
+#: last_checked: 2013-05-09
+#: next_check: 2013-11-09
+Altstadtblick (Potsdam): neue Straße in Potsdam, Qualität? Genauer Verlauf? (Planstraße D)	? -12712,-2233 -12728,-2227 -12771,-2220 -12803,-2219
 # 
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20120405.1310.368452.html (Radfahren erlaubt)
 Preußenpark: Qualität des Weges? Nachts beleuchtet?	? 4353,9430 4281,9393
@@ -3384,8 +3273,8 @@ Waadter Zeile (Zufahrt am Supermarkt): existieren an dieser Straße Straßenschild
 #: XXX neue private Straßen entstehen, fehlen in Berlin.coords.data vvv
 #: last_checked: 2012-09-10 vvv
 #: next_check: 2013-09-10 vvv
-#: osm_watch: way id="42407759" version="1"
-#: XXX ad osm_watch: id referenziert ein nicht mehr existentes Gebäude
+#: osm_watch: way id="220390908" version="1"
+#: XXX ad osm_watch: id referenziert die construction area
 Lübarser Aue: Ist die Straße bereits fertiggestellt? Qualität? Wo befindet sich die Straße (möglichst mit GPS-Track)?	?::inwork 7185,22466 7147,22393
 Am Rodelberg: Ist die Straße bereits fertiggestellt? Qualität? Wo befindet sich die Straße (möglichst mit GPS-Track)?	?::inwork 7257,22381 7296,22458
 #: next_check ^^^
@@ -3495,12 +3384,17 @@ Potsdam Hbf - Uferweg: Qualität?	? -12247,-1858 -12210,-1857 -12200,-1813 -12165
 #: by: http://www.potsdam.de/cms/dokumente/10098106_1471008/11eddb87/ENDFASSUNG10_12.pdf vvv
 #: XXX wahrscheinlich wird zumindest in der Speicherstadt kein direkter Weg am Wasser sein
 #: by: http://www.grothgruppe.de/site/179/Speicherstadt_Potsdam.html (-> Galerie)
+#: last_checked: 2013-05-09
+#: next_check: 2014-03-09
 Uferweg von der Neuen Fahrt zum Hermannswerder: existiert der Weg bereits (oder Teile davon)? Qualität?	?::inwork -12759,-2066 -12803,-2219 -12803,-2371 -12906,-2537 -13156,-2702
 Uferweg am Groß-Glienicker See: genaue Lage im südöstlichen Bereich des Sees? Qualität?	? -9677,5430 -9478,5549 -9372,5532
 #: by ^^^
 # 
 #: by: http://www.potsdam.de/cms/dokumente/10110579_1471008/70377ba5/ENDFASSUNGAbl.%20PdmStadt%2016_12.pdf
-Am alten Dorf (Potsdam-Bornim): Qualität? Genaue Lage?	? -16806,1987 -16931,1783
+#: last_checked: 2013-05-10 (in Bau, aber ist es tatsächlich diese Straße?)
+#: next_check: 2013-08-10
+#: XXX vom Radweg aus kann man hier nicht abbiegen, man müsste auf der Fahrbahn fahren
+Am alten Dorf (Potsdam-Bornim): Qualität? Genaue Lage?	? -16800,1991 -16931,1783
 # 
 # REMOVED (-> strassen-orig etc.) --- #: last_checked: 2012-08-17 --- #: next_check: 2012-12-17 --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4045&options=4 --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4045&options=4&date=20121124 --- #: by: http://www.stadtentwicklung.berlin.de/staedtebau/foerderprogramme/stadtumbau/Wannseebahnquerung.6474.0.html --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20121214.1335.379363.html (Eröffnung) --- #: XXX genaue Koordinaten? --- Ebersstr. - Park GASAG Nordspitze, Übergang über die Wannseebahn: Qualität? Nachts beleuchtet? Hat der Übergang einen Namen?	? 7410,8593 7368,8595 7365,8595 7366,8624 7353,8633 7313,8661
 # 
@@ -3512,7 +3406,7 @@ Albertshof - Rüdnitz: Qualität?	? 27662,33209 27529,33478 27432,33943 27363,3410
 # 
 #: by: http://www.potsdam.de/cms/dokumente/10115978_1771576/bbb8d1f2/ENDFASSUNGAbl.%20PdmStadt%2004_13.pdf
 #: XXX fehlt wahrscheinlich in Potsdam.coords.data
-Im Nikolaiquartier: neue Straße, wo befindet sie sich? Qualität?	? -13026,-1164 -13162,-1263
+Im Nikolaiquartier: neue Straße, wo befindet sie sich? Qualität?	? -13094,-1158 -13162,-1263
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/___tmp/tmp/45081036283513953/283513953/00094009/09-Anlagen/01/DRS0430VK.pdf vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4529 vvv
 #: XXX Benennung von 7 Privatwegen auf dem Grundstück der KGA "Erpetal" vvv

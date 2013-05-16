@@ -70,7 +70,7 @@ Hagelberger - Mehringdamm	3nocross::ignrte 9334,9670 9280,9476 9248,9350
 Mehringdamm -> Hagelberger Str.: Hagelberger - Mehringdamm	3::igndisp 9248,9350 9280,9476 9000,9509
 Hagelberger Str. -> Mehringdamm: Hagelberger - Mehringdamm	3::igndisp 9000,9509 9280,9476 9334,9670
 Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
-Mangerstr. (Potsdam)	1 -12064,-284 -12108,-291 -12265,-418
+Mangerstr. (Potsdam)	1 -12054,-274 -12123,-294 -12265,-418
 Rudolf-Breitscheid-Str.	1 -10429,-1944 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
 Bendastr.	1 12689,6905 12702,6846
 Bendastr.	1 12793,6407 12781,6470 12759,6563 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
@@ -141,7 +141,7 @@ Prenzlauer Allee -> Raumerstr.: Prenzlauer Allee	3::igndisp 11709,14856 11776,15
 Raumerstr. -> Frˆbelstr.: Prenzlauer Allee	3::igndisp 11615,15114 11776,15060 11870,15004
 Raumerstr. -> Prenzlauer Allee: Prenzlauer Allee	3::igndisp 11615,15114 11776,15060 11801,15132
 Prenzlauer Allee -> Frˆbelstr.: Prenzlauer Allee	3::igndisp 11801,15132 11776,15060 11870,15004
-Groﬂe Weinmeisterstr. (Potsdam)	1 -12557,11 -12582,127 -12618,296
+Groﬂe Weinmeisterstr. (Potsdam)	1 -12557,11 -12561,35 -12582,127 -12623,308
 Stellmacherweg	1 13129,2999 13453,2930
 Hittorfstr	1 2442,4806 2469,4882 2516,4936 2587,4965
 LefËvrestr.	1 5360,6642 5215,6643
@@ -913,11 +913,11 @@ Margarete-K¸hn-Str.: Poller am Salzufer	3 5181,12195 5133,12240 5203,12387
 Eberswalder Str. (Bernau)	1 23109,30968 23103,30923 23084,30893 22917,30635
 Rutnikstr. - Mˆllendorffstr.: Abbiegen verboten	3 15648,12687 15546,12690 15550,12625
 Torgauer Str.: nur f¸r Anlieger	2:Anlieger 7446,8200 7402,8208 7250,8223 7001,8161
-Hermannswerder	1 -14301,-2871 -13718,-2991
+Hermannswerder	1 -14306,-2867 -14044,-2918 -13765,-2974 -13733,-2967
 Neue Schˆnholzer Str.	1 10089,18180 10140,18080 10179,17772
 Kleine Kurstr.	1 10230,11839 10189,11773
 Schendelgasse	1 10653,13493 10703,13467 10767,13443
-Leipziger Str. (Potsdam)	1 -12431,-2096 -12653,-2206 -12719,-2283 -12756,-2437 -12779,-2467 -12796,-2488 -12929,-2659 -13003,-2754 -13021,-2784 -13062,-2901
+Leipziger Str. (Potsdam)	1 -12431,-2096 -12534,-2125 -12712,-2256 -12743,-2387 -12756,-2437 -12779,-2467 -12796,-2488 -12879,-2573 -13003,-2754 -13022,-2776 -13062,-2901
 Mittelstreifen	3nocross::ignrte 6161,9128 6264,9156 6361,9175
 M¸nchener Str. -> Grunewaldstr.: Mittelstreifen	3::igndisp 6255,9194 6264,9156 6361,9175
 M¸nchener Str. -> M¸nchener Str.: Mittelstreifen	3::igndisp 6255,9194 6264,9156 6279,9034
@@ -989,7 +989,7 @@ Paulsborner Str. -> Eisenzahnstr.: Mittelstreifen	3::igndisp 3747,10094 3706,100
 Paulsborner Str. -> Eisenzahnstr.: Mittelstreifen	3::igndisp 3706,10039 3747,10094 3728,10125
 Eisenzahnstr. -> Paulsborner Str.: Mittelstreifen	3::igndisp 3728,10125 3747,10094 3852,10236
 Eisenhartstr.	1 -12637,-8 -12779,-294 -12821,-417
-Fuﬂg‰ngerzone	3nocross::ignrte -13556,-1140 -13410,-1101 -13289,-1071 -13173,-1039 -13005,-1002 -12883,-976
+Fuﬂg‰ngerzone	3nocross::ignrte -13556,-1140 -13410,-1101 -13289,-1071 -13173,-1039 -12999,-1000 -12883,-976
 Brandenburger Str. -> Hermann-Elflein-Str.: Fuﬂg‰ngerzone	3::igndisp -13289,-1071 -13410,-1101 -13392,-1196
 Brandenburger Str. -> Hermann-Elflein-Str.: Fuﬂg‰ngerzone	3::igndisp -13556,-1140 -13410,-1101 -13433,-991
 Hermann-Elflein-Str. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -13433,-991 -13410,-1101 -13289,-1071
@@ -1003,17 +1003,17 @@ Brandenburger Str. -> Lindenstr.: Fuﬂg‰ngerzone	3::igndisp -13173,-1039 -13289,-
 Lindenstr. -> Lindenstr.: Fuﬂg‰ngerzone	3::igndisp -13264,-952 -13289,-1071 -13305,-1176
 Lindenstr. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -13264,-952 -13289,-1071 -13173,-1039
 Brandenburger Str. -> Dortustr.: Fuﬂg‰ngerzone	3::igndisp -13289,-1071 -13173,-1039 -13158,-930
-Brandenburger Str. -> Dortustr.: Fuﬂg‰ngerzone	3::igndisp -13005,-1002 -13173,-1039 -13187,-1150
-Dortustr. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -13158,-930 -13173,-1039 -13005,-1002
+Brandenburger Str. -> Dortustr.: Fuﬂg‰ngerzone	3::igndisp -12999,-1000 -13173,-1039 -13187,-1150
+Dortustr. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -13158,-930 -13173,-1039 -12999,-1000
 Dortustr. -> Dortustr.: Fuﬂg‰ngerzone	3::igndisp -13158,-930 -13173,-1039 -13187,-1150
 Dortustr. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -13187,-1150 -13173,-1039 -13289,-1071
 Dortustr. -> Dortustr.: Fuﬂg‰ngerzone	3::igndisp -13187,-1150 -13173,-1039 -13158,-930
-Brandenburger Str. -> J‰gerstr.: Fuﬂg‰ngerzone	3::igndisp -13173,-1039 -13005,-1002 -13025,-901
-J‰gerstr. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -12984,-1110 -13005,-1002 -13173,-1039
-J‰gerstr. -> J‰gerstr.: Fuﬂg‰ngerzone	3::igndisp -12984,-1110 -13005,-1002 -13025,-901
-Brandenburger Str. -> J‰gerstr.: Fuﬂg‰ngerzone	3::igndisp -12883,-976 -13005,-1002 -12984,-1110
-J‰gerstr. -> J‰gerstr.: Fuﬂg‰ngerzone	3::igndisp -13025,-901 -13005,-1002 -12984,-1110
-J‰gerstr. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -13025,-901 -13005,-1002 -12883,-976
+Brandenburger Str. -> J‰gerstr.: Fuﬂg‰ngerzone	3::igndisp -13173,-1039 -12999,-1000 -13025,-901
+Brandenburger Str. -> J‰gerstr.: Fuﬂg‰ngerzone	3::igndisp -12883,-976 -12999,-1000 -12973,-1106
+J‰gerstr. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -13025,-901 -12999,-1000 -12883,-976
+J‰gerstr. -> J‰gerstr.: Fuﬂg‰ngerzone	3::igndisp -13025,-901 -12999,-1000 -12973,-1106
+J‰gerstr. -> Brandenburger Str.: Fuﬂg‰ngerzone	3::igndisp -12973,-1106 -12999,-1000 -13173,-1039
+J‰gerstr. -> J‰gerstr.: Fuﬂg‰ngerzone	3::igndisp -12973,-1106 -12999,-1000 -13025,-901
 Eichhornstr. - Potsdamer: abbiegen verboten	3 8232,11414 8226,11458 8145,11438
 Mittelstreifen	3nocross::ignrte 11543,10015 11623,9841 11673,9720
 Kottbusser Damm -> Schinkestr.: Mittelstreifen	3::igndisp 11543,10015 11623,9841 11734,9856
@@ -1061,8 +1061,8 @@ Alt-Britz:	3 12596,4320 12560,4290 12543,4386
 Alt-Britz:	3 12596,4320 12560,4290 12640,4001
 Leistikowstr.	1 -12512,810 -12302,718
 Am Neuen Garten	1 -12302,718 -12323,635 -12332,585
-Am Krongut - Katharinenstr.: Betonk¸bel	3 -15085,144 -15086,63 -15023,13
-Am Krongut - Katharinenstr.: Betonk¸bel	3 -15085,144 -15086,63 -15556,429
+Am Krongut: Poller	3 -15085,144 -15085,91 -15086,63
+Am Krongut: Poller	3 -15086,63 -15085,91 -15085,144
 Fliederweg - Vogelweide: Poller	3 -12633,1484 -12928,1646 -12926,1494
 Fliederweg - Vogelweide: Poller	3 -12633,1484 -12928,1646 -12928,1686
 Mittelstreifen	3nocross::ignrte 452,3133 255,3085 161,3062
@@ -1353,10 +1353,9 @@ Wattstr.	1 998,14516 998,14435 999,14390
 Handjerystr./Schmiljanstr.	3 5494,6960 5574,7018 5624,7113
 Handjerystr./Schmiljanstr.	3 5494,6960 5574,7018 5569,7022
 (Am Carlsgarten - Waldowallee)	2 19456,7956 19478,7967 19509,7999 19558,8064
-Straﬂenbahntrasse	3nocross::ignrte -13456,500 -13436,595 -13433,693
-Georg-Hermann-Allee -> Jochen-Klepper-Str.: Straﬂenbahntrasse	3::igndisp -13433,693 -13436,595 -13270,563
-Jochen-Klepper-Str. -> Georg-Hermann-Allee: Straﬂenbahntrasse	3::igndisp -13270,563 -13436,595 -13456,500
-Straﬂenbahntrasse	3nocross::ignrte -13433,693 -13432,782 -13429,1069
+Straﬂenbahntrasse, Dr‰ngelgitter f¸r Radfahrer/Fuﬂg‰nger	3nocross::ignrte -13433,693 -13432,782 -13429,1069
+Hermann-Kasack-Str. -> Georg-Hermann-Allee: Straﬂenbahntrasse, Dr‰ngelgitter f¸r Radfahrer/Fuﬂg‰nger	3::igndisp -13618,839 -13432,782 -13429,1069
+Georg-Hermann-Allee -> Hermann-Kasack-Str.: Straﬂenbahntrasse, Dr‰ngelgitter f¸r Radfahrer/Fuﬂg‰nger	3::igndisp -13433,693 -13432,782 -13618,839
 Kutscherweg: Poller	3 -13620,-131 -13700,-106 -13775,-85
 Kutscherweg: Poller	3 -13775,-85 -13700,-106 -13620,-131
 Dresdner Str.: Einfahrt vom Oranienplatz gesperrt	3 11159,10769 11189,10831 11162,10919
@@ -1505,7 +1504,7 @@ Kohlfurter Str.: provisorisch, Anlieger frei	1 11464,10102 11274,10184 11094,102
 Friedbergstr.:	3 2812,10753 2766,10750 2679,10931
 Friedbergstr.:	3 2812,10753 2766,10750 2697,10669
 Friedbergstr.:	3 2812,10753 2766,10750 2845,10840
-Wilhelm-Staab-Str. (Potsdam)	1 -13001,-1329 -12992,-1222 -12984,-1110
+Wilhelm-Staab-Str. (Potsdam)	1 -13001,-1329 -12981,-1222 -12961,-1105
 B‰ckerstr. (Potsdam)	1 -13314,-1226 -13287,-1231 -13203,-1246
 Brandenburger Str. (Potsdam)	1 -12801,-960 -12883,-976
 Stadtheide (Potsdam)	1 -15432,-2763 -15504,-2984 -15537,-3091 -15501,-3122
@@ -1528,3 +1527,8 @@ Erich-Kurz-Str. -> Am Tierpark: Straﬂenbahntrasse	3::igndisp 18397,10608 18446,1
 Am Tierpark -> Erich-Kurz-Str.: Straﬂenbahntrasse	3::igndisp 18554,10354 18446,10620 18397,10608
 Domnauer Str.: Poller	3 7816,5519 7816,5682 7817,5719
 Domnauer Str.: Poller	3 7817,5719 7816,5682 7816,5519
+Hermannswerder	1 -14306,-2867 -14044,-2918 -13765,-2974 -13733,-2967
+Paetowstr.: Poller	3 -13055,-3008 -13110,-3015 -13137,-3022
+Paetowstr.: Poller	3 -13137,-3022 -13110,-3015 -13055,-3008
+Am Raubfang (Potsdam)	1 -15308,1220 -15366,1249 -15436,1253 -15533,813
+Goetheplatz (Potsdam)	1 -9922,-1395 -9809,-1435
