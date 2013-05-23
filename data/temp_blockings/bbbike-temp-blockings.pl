@@ -11804,23 +11804,23 @@ EOF
 userdel	q4::temp 10533,-76130 10891,-76066 11354,-75979
 EOF
      },
-     { from  => 1214430640, # 
-       until => Time::Local::timelocal(reverse(2008-1900,7-1,2,22,0,0)), # 1214812800, # 2008-06-30 10:00
-       text  => 'Fanmeile, Straße des 17. Juni gesperrt, bis 2.7.2008 ',
+     { from  => 1369173600, # 2013-05-22 00:00
+       until => 1369605600, # 2013-05-27 00:00
+       text  => 'Fanmeile zum Champions-League-Finale, Straße des 17. Juni bis zum Großen Stern und Ebertstr. gesperrt, 23.05.2013 bis 26.05.2013',
        type  => 'gesperrt',
+       source_id => 'IM_019858',
        data  => <<EOF,
-userdel	2::temp 8055,12186 8089,12190 8214,12205 8215,12156 8222,11881
-userdel	2::temp 8214,12205 8303,12216 8538,12245 8522,12187
-userdel	2::temp 7383,12095 7816,12150 8055,12186 8048,12135 8034,12093
-userdel	2::temp 8538,12245 8522,12239 8466,12197 8215,12156 8107,12145 8048,12135 8018,12131 7827,12105 7777,12098 7460,12054
-userdel	2::temp 8089,12041 8107,12145
-userdel	2::temp 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
-userdel auto	3 8546,12279 8538,12245 8600,12165
-userdel auto	3 8546,12279 8538,12245 8610,12254
-userdel auto	3 8600,12165 8538,12245 8546,12279
-userdel auto	3 8600,12165 8538,12245 8610,12254
-userdel auto	3 8610,12254 8538,12245 8546,12279
-userdel auto	3 8610,12254 8538,12245 8600,12165
+#: by: http://www.rbb-online.de/nachrichten/sport/2013_05/champions_league_fanmeile_berlin.html
+userdel	2::temp 8600,12165 8538,12245 8610,12254 8731,12270
+userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 6828,12031
+userdel auto	3 8119,12414 8055,12186 8048,12135
+userdel auto	3 7827,12105 7816,12150 7875,12363
+userdel auto	3 8048,12135 8055,12186 8119,12414
+userdel auto	3 8522,12187 8538,12245 8522,12239
+userdel auto	3 8522,12239 8538,12245 8522,12187
+userdel auto	3 7875,12363 7816,12150 7827,12105
+userdel auto	3 7039,12314 7383,12095 7460,12054
+userdel auto	3 7460,12054 7383,12095 7039,12314
 EOF
      },
      { from  => 1214517600, # 2008-06-27 00:00 # DO NOT REUSE DATA!
@@ -15546,8 +15546,8 @@ EOF
 	q4::temp:clock 1020,496 1078,443
 EOF
      },
-     { from  => undef, #
-       until => undef, #
+     { from  => 1368817113, # undef, # by: Stefan Klinkusch: während des Wochenmarkts ist die Gegenfahrbahn in beide Richtungen befahrbar, so dass sich keine Behinderungen ergeben
+       until => 1368817119, # undef, #
        #: by: Stefan Klinkusch (korrigierte Wochentage)
        text  => 'Preußenallee zwischen Marathonallee und Badenallee: Wochenmarkt Di 08.00-13.00 und Fr 08.00-13.00, Behinderungen möglich',
        type  => 'gesperrt',
@@ -17883,7 +17883,7 @@ userdel auto	3 10178,10411 10122,10294 10083,10192
 userdel auto	3 8610,12254 8538,12245 8522,12187
 userdel auto	3 8610,12254 8538,12245 8522,12239
 userdel auto	3 7816,12150 8055,12186 8048,12135
-userdel auto	3 8861,12125 8901,12008 8972,11810
+userdel auto	3 8861,12125 8901,12008 8965,11825
 userdel auto	3 8048,12135 8055,12186 7816,12150
 userdel auto	3 9201,11968 9183,12076 9270,12086 9385,12098
 userdel auto	3 9865,10227 9873,10285 9858,10350
@@ -17904,7 +17904,7 @@ userdel auto	3 9028,12307 9141,12320 9358,12351
 userdel auto	3 9239,10313 9404,10250 9409,10226
 userdel auto	3 9058,11564 9155,11283 9478,11317
 userdel auto	3 9016,12416 9130,12433 9343,12464
-userdel auto	3 8972,11810 8901,12008 8861,12125
+userdel auto	3 8965,11825 8901,12008 8861,12125
 userdel auto	3 9250,10563 9388,10393 9527,10389
 userdel auto	3 9131,10716 9323,10791 9539,10820
 userdel auto	3 9385,12098 9270,12086 9183,12076 9201,11968
@@ -18558,7 +18558,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016591',
        data  => <<EOF,
-userdel	q4::inwork 13220,23679 13953,23497
+userdel	q4::inwork 13199,23657 13953,23497
 EOF
      },
      { from  => 1289257200, # 2010-11-09 00:00
@@ -20100,8 +20100,8 @@ userdel	q4::inwork 2295,20358 2241,20487
 EOF
      },
      { from  => 1330902000, # 2012-03-05 00:00
-       until => 1370005200, # 2013-05-31 15:00
-       text  => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Mitte 2013',
+       until => $isodate2epoch->("2013-08-30 15:00:00"), # 1370005200, # 2013-05-31 15:00
+       text  => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende August 2013',
        type  => 'handicap',
        source_id => 'INKO_111647', # auch: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html
        data  => <<EOF,

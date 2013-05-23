@@ -747,14 +747,14 @@ sub BBBikeGPS::do_draw_gpsman_data {
 	    $s->push($l);
 	    if ($s_speed) {
 		my $time = $wpt->Comment_to_unixtime($chunk);
-		$time = 0 if $is_route; # set pseudo time for routes, to force display
+		$time = 0 if !defined $time && $is_route; # set pseudo time for routes, to force display
 		if (defined $time) {
 		    if ($last_wpt) {
 			my($last_x,$last_y,$last_x0,$last_y0,$last_time,$last_alt,$last_acc) = @$last_wpt;
 			my $legtime = $time-$last_time;
 			# Do not check for $legtime==0 --- saved tracks do not
 			# have any time at all! Also routes do not have.
-			if (abs($legtime) < 60*$max_gap && !$is_new_chunk) {
+			if ($is_route || (abs($legtime) < 60*$max_gap && !$is_new_chunk)) {
 			    my $dist = sqrt(($x0-$last_x0)**2 + ($y0-$last_y0)**2);
 			    if ($last_accurate_wpt && $acc <= $accuracy_level) {
 				my(undef,undef,$last_acc_x0,$last_acc_y0) = @$last_wpt;
