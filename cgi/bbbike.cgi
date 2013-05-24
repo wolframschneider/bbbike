@@ -8512,8 +8512,11 @@ $permalink_text
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
 (&copy;) 1998-2013 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
-Map data (&copy;) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap.org</a> contributors<br >
-<a href="http://mc.bbbike.org/mc/">map compare</a> - <a href="http://extract.bbbike.org/">osm extract service</a><br/>
+Map data (&copy;) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap.org</a> contributors<br>
+<a href="/help.html#iphone">iphone</a> -
+<a href="/help.html#android">android</a> -
+<a href="http://mc.bbbike.org/mc/">map compare</a> -
+<a href="http://extract.bbbike.org/">osm extract service</a><br/>
 
 </div> <!-- copyright -->
 
