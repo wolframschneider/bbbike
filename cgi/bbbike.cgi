@@ -3273,18 +3273,6 @@ sub choose_ch_form {
 	$per_char_filtering = 1;
     }
 
-#XXX Diese locale-Manipulation mit choose_all_form verbinden, und Sortierung
-#    in eigene Subroutine auslagern.
-    use locale;
-    eval {
-	local $SIG{'__DIE__'};
-	require POSIX;
-	foreach my $locale (qw(de de_DE de_DE.ISO8859-1 de_DE.ISO_8859-1)) {
-	    # Aha. Bei &POSIX::LC_ALL gibt es eine Warnung, ohne & und mit ()
-	    # funktioniert es reibungslos.
-	    last if POSIX::setlocale( POSIX::LC_COLLATE(), $locale);
-	}
-    };
     http_header(@weak_cache);
     header();
 
@@ -3384,7 +3372,7 @@ sub choose_ch_form {
     @strlist =
 	map { $_->[1] }
 	    sort { $a->[0] cmp $b->[0] }
-		map { [ref $_ ? $_->{short} : $_, $_] }
+		map { [BBBikeUtil::german_locale_xfrm(ref $_ ? $_->{short} : $_), $_] }
 		    @strlist;
 
     print
@@ -8815,19 +8803,12 @@ sub choose_all_form {
 # 		 'á' => 'a',
 # 		);
 #    my $trans_rx = "[".join("",keys %trans)."]";
-    my %trans = %BBBikeUtil::uml_german_locale;
 
-    if ($locale_set) {
-	@strlist = sort @strlist;
-    } else {
-	@strlist = map  { $_->[1] }
-	           sort { $a->[0] cmp $b->[0] }
-		   map  { #XXX del:(my $s = $_) =~ s/($trans_rx)/$trans{$1}/ge;
-		          (my $s = $_) =~ s/($BBBikeUtil::uml_german_locale_keys_rx)/$BBBikeUtil::uml_german_locale{$1}/ge;
-			  [ $s, $_]
-		      }
-		       @strlist;
-    }
+    @strlist =
+	map  { $_->[1] }
+	    sort { $a->[0] cmp $b->[0] }
+		map { [BBBikeUtil::german_locale_xfrm($_), $_] }
+		    @strlist;
 
     my $last = "";
     my $last_initial = "";
@@ -8855,6 +8836,8 @@ sub choose_all_form {
     print "\n\n<div id='list'>";
 
     my $counter = 0;
+    my %trans = %BBBikeUtil::uml_german_locale;
+
     for(my $i = 0; $i <= $#strlist; $i++) {
 	next if ($strlist[$i] =~ /^\s*['"\(\.\,<\-]/);
 

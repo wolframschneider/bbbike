@@ -150,7 +150,7 @@ Gartenstr.	1 22467,3889 22281,4033 22263,4120 22279,4220
 Wichmannstr.	1 6462,11069 6552,11006 6681,10959 6824,10904
 Lützowufer	1 6873,11011 6732,11106 6626,11178 6582,11202
 Mulackstr.	1 10308,13575 10406,13543 10535,13509 10640,13471
-Kirchhofstr.	1 13188,7590 13117,7471 13027,7368
+Kirchhofstr.	1 13188,7590 13117,7471 13029,7353
 Siegfriedstr.	1 12664,7013 12810,7047 12843,7093 12872,7134
 Prenzlauer Allee/Sredzkistr.	3nocross::ignrte 11662,14695 11642,14625 11582,14448
 Sredzkistr. -> Prenzlauer Allee: Prenzlauer Allee/Sredzkistr.	3::igndisp 11535,14688 11642,14625 11662,14695
@@ -238,11 +238,11 @@ Erich-Weinert-Str. -> Paul-Robeson-Str.: U-Bahnviadukt und Straßenbahn	3::igndis
 Schönhauser Allee -> Rodenbergstr.: U-Bahnviadukt und Straßenbahn	3::igndisp 10997,16280 10989,16197 11253,16118
 Rodenbergstr. -> Schönhauser Allee: U-Bahnviadukt und Straßenbahn	3::igndisp 11253,16118 10989,16197 10982,16121
 Straßenbahn	3nocross::ignrte 11860,15309 11877,15366 11891,15413
-Prenzlauer Allee -> Lilli-Henoch-Str.: Straßenbahn	3::igndisp 11891,15413 11877,15366 11942,15358
-Lilli-Henoch-Str. -> Ahlbecker Str.: Straßenbahn	3::igndisp 11942,15358 11877,15366 11632,15530
-Lilli-Henoch-Str. -> Prenzlauer Allee: Straßenbahn	3::igndisp 11942,15358 11877,15366 11860,15309
+Lilli-Henoch-Str. -> Ahlbecker Str.: Straßenbahn	3::igndisp 11937,15349 11877,15366 11632,15530
+Lilli-Henoch-Str. -> Prenzlauer Allee: Straßenbahn	3::igndisp 11937,15349 11877,15366 11860,15309
+Prenzlauer Allee -> Lilli-Henoch-Str.: Straßenbahn	3::igndisp 11891,15413 11877,15366 11937,15349
+Ahlbecker Str. -> Lilli-Henoch-Str.: Straßenbahn	3::igndisp 11632,15530 11877,15366 11937,15349
 Ahlbecker Str. -> Prenzlauer Allee: Straßenbahn	3::igndisp 11632,15530 11877,15366 11891,15413
-Ahlbecker Str. -> Lilli-Henoch-Str.: Straßenbahn	3::igndisp 11632,15530 11877,15366 11942,15358
 Prenzlauer Allee -> Ahlbecker Str.: Straßenbahn	3::igndisp 11860,15309 11877,15366 11632,15530
 Straßenbahn	3nocross::ignrte 12473,14763 12422,14692 12403,14663 12371,14615
 Greifswalder Str. -> John-Schehr-Str.: Straßenbahn	3::igndisp 12473,14763 12422,14692 12573,14581
@@ -381,9 +381,9 @@ Zossener Str. -> Teupitzer Str.: Straßenbahntrasse	3::igndisp 23411,15632 23568,
 Kleinmachnower Weg: Sa und So ist die Schranke an der Kreuzung Sachlebenstraße zu, für Kfz-Verkehr demnach gesperrt	2 269,-41 665,85 941,125 1345,184
 Hentigstr.	1 18518,8778 18548,8942 18586,9172 18626,9406
 Grottewitzstr.	1 21933,152 22145,208
-Schlichtallee	3nocross::ignrte 15639,10469 15758,10578 15982,10765
+Schlichtallee	3nocross::ignrte 15639,10469 15758,10578 15880,10680 15982,10765
 Zobtener Str. -> Schlichtallee: Schlichtallee	3::igndisp 16148,10329 15758,10578 15639,10469
-Schlichtallee -> Zobtener Str.: Schlichtallee	3::igndisp 15982,10765 15758,10578 16148,10329
+Schlichtallee -> Zobtener Str.: Schlichtallee	3::igndisp 15880,10680 15758,10578 16148,10329
 Hindenburgdamm	3nocross::ignrte 4515,4760 4515,4581 4521,4484
 Hindenburgdamm -> Flotowstr.: Hindenburgdamm	3::igndisp 4515,4760 4515,4581 4651,4638
 Roonstr. -> Hindenburgdamm: Hindenburgdamm	3::igndisp 4265,4484 4515,4581 4515,4760
@@ -517,10 +517,11 @@ Gotenburger Str. -> Prinzenallee: Mittelstreifen	3::igndisp 8844,16863 9000,1680
 Prinzenallee -> Gotenburger Str.: Mittelstreifen	3::igndisp 8939,16668 9000,16803 8844,16863
 Biesentaler Str. -> Prinzenallee: Mittelstreifen	3::igndisp 9245,16758 9024,16855 9000,16803
 Prinzenallee -> Biesentaler Str.: Mittelstreifen	3::igndisp 9028,16864 9024,16855 9245,16758
-Straßenbahntrasse	3nocross::ignrte 13512,15909 13623,15954 13630,15956 13737,15994
+Straßenbahntrasse	3nocross::ignrte 13512,15909 13623,15954 13737,15994
+Mahlerstr. -> Tassostr.: Straßenbahntrasse	3::igndisp 13667,15836 13623,15954 13614,15984
 Mahlerstr. -> Berliner Allee: Straßenbahntrasse	3::igndisp 13667,15836 13623,15954 13512,15909
-Berliner Allee -> Mahlerstr.: Straßenbahntrasse	3::igndisp 13630,15956 13623,15954 13667,15836
-Berliner Allee -> Tassostr.: Straßenbahntrasse	3::igndisp 13623,15954 13630,15956 13621,15990
+Berliner Allee -> Tassostr.: Straßenbahntrasse	3::igndisp 13512,15909 13623,15954 13614,15984
+Berliner Allee -> Mahlerstr.: Straßenbahntrasse	3::igndisp 13737,15994 13623,15954 13667,15836
 Straßenbahntrasse	3nocross::ignrte 17919,6978 17919,6968 17962,6674
 Edisonstr. -> Zeppelinstr.: Straßenbahntrasse	3::igndisp 17919,6978 17919,6968 18041,6924
 Helmholtzstr. -> Edisonstr.: Straßenbahntrasse	3::igndisp 17845,6986 17919,6968 17919,6978
@@ -614,13 +615,14 @@ Neumannstr. -> Greta-Garbo-Str.: Mittelstreifen	3::igndisp 11531,17250 11519,173
 Straßenbahn	3nocross::ignrte 14045,16120 14248,16202 14371,16252
 Lindenallee -> Berliner Allee: Straßenbahn	3::igndisp 14296,16065 14248,16202 14045,16120
 Berliner Allee -> Lindenallee: Straßenbahn	3::igndisp 14371,16252 14248,16202 14296,16065
-Straßenbahn	3nocross::ignrte 13512,15909 13623,15954 13630,15956 13737,15994
+Straßenbahn	3nocross::ignrte 13512,15909 13623,15954 13737,15994
+Mahlerstr. -> Tassostr.: Straßenbahn	3::igndisp 13667,15836 13623,15954 13614,15984
 Mahlerstr. -> Berliner Allee: Straßenbahn	3::igndisp 13667,15836 13623,15954 13512,15909
-Berliner Allee -> Mahlerstr.: Straßenbahn	3::igndisp 13630,15956 13623,15954 13667,15836
-Berliner Allee -> Tassostr.: Straßenbahn	3::igndisp 13623,15954 13630,15956 13621,15990
+Berliner Allee -> Tassostr.: Straßenbahn	3::igndisp 13512,15909 13623,15954 13614,15984
+Berliner Allee -> Mahlerstr.: Straßenbahn	3::igndisp 13737,15994 13623,15954 13667,15836
 Straßenbahn	3nocross::ignrte 13401,15821 13432,15843 13487,15888 13512,15909
-Streustr. -> Berliner Allee: Straßenbahn	3::igndisp 13269,15927 13432,15843 13487,15888
-Berliner Allee -> Streustr.: Straßenbahn	3::igndisp 13401,15821 13432,15843 13269,15927
+Streustr. -> Berliner Allee: Straßenbahn	3::igndisp 13263,15930 13432,15843 13487,15888
+Berliner Allee -> Streustr.: Straßenbahn	3::igndisp 13401,15821 13432,15843 13263,15930
 Bizetstr. -> Berliner Allee: Straßenbahn	3::igndisp 13525,15784 13487,15888 13432,15843
 Berliner Allee -> Bizetstr.: Straßenbahn	3::igndisp 13512,15909 13487,15888 13525,15784
 Talsandweg: Einbahnstraße	1 3206,21179 3138,21372
@@ -950,8 +952,8 @@ Feurigstr. -> Gustav-Freytag-Str.: Überqueren verboten	3::igndisp 7012,8511 6807
 Feurigstr. -> Dominicusstr.: Überqueren verboten	3::igndisp 7012,8511 6807,8309 6935,8208
 Dominicusstr. -> Gustav-Freytag-Str.: Überqueren verboten	3::igndisp 6935,8208 6807,8309 6779,8279
 Dominicusstr. -> Feurigstr.: Überqueren verboten	3::igndisp 6687,8385 6807,8309 7012,8511
-Schranke	3 9070,14058 8992,14176 8825,14401 8776,14364
-Schranke	3 8776,14364 8825,14401 8992,14176 9070,14058
+Schranke	3 8992,14176 8825,14401 8776,14364
+Schranke	3 8776,14364 8825,14401 8992,14176
 Plonzstr.	1 16227,12280 16252,12411
 Seddiner -> Hohenschönhausener Weg: Poller	3 18215,12123 18408,12105 18420,11864
 Seddiner -> Hohenschönhausener Weg: Poller	3 18559,12105 18408,12105 18420,11864
@@ -1090,8 +1092,8 @@ Liverpooler Str. -> Müllerstr.: Mittelstreifen	3::igndisp 5995,16836 5937,16784 
 Müllerstr. -> Liverpooler Str.: Mittelstreifen	3::igndisp 5900,16817 5937,16784 5995,16836
 Querweg durch die Dauerkolonie Togo -> Müllerstr.: Mittelstreifen	3::igndisp 5700,16584 5900,16817 5777,16924
 Müllerstr. -> Querweg durch die Dauerkolonie Togo: Mittelstreifen	3::igndisp 5937,16784 5900,16817 5700,16584
-Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16734,9990 16539,10097 16353,10207 16148,10329
-Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16148,10329 16353,10207 16539,10097 16734,9990
+Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16734,9990 16539,10097 16353,10207
+Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16353,10207 16539,10097 16734,9990
 Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19478,7967 19509,7999 19558,8064
 Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 19558,8064 19509,7999 19478,7967
 Klapppfosten	3 -1612,2123 -1590,1985 -1592,1852
@@ -1136,12 +1138,12 @@ Passauer -> Lietzenburger	3 6033,10403 6020,10351 6147,10383
 Am Hanffgraben	1 16805,1488 16698,1392
 Rütlistr.: Durchfahrt verboten	2 12565,9200 12490,9056
 Wustermarker Str.:	1 -4385,14305 -4556,14349
+Mittelstreifen und Straßennbahntrasse	3nocross::ignrte 10849,17848 10858,17721 10878,17490
+Borkumstr. -> Berliner Str.: Mittelstreifen und Straßennbahntrasse	3::igndisp 10956,17735 10858,17721 10878,17490
+Berliner Str. -> Borkumstr.: Mittelstreifen und Straßennbahntrasse	3::igndisp 10849,17848 10858,17721 10956,17735
 Mittelstreifen	3nocross::ignrte 2346,7684 2460,7658 2576,7634
 Sulzaer Str. -> Hundekehlestr.: Mittelstreifen	3::igndisp 2499,7930 2460,7658 2576,7634
 Hundekehlestr. -> Sulzaer Str.: Mittelstreifen	3::igndisp 2346,7684 2460,7658 2499,7930
-Berliner Str.	3nocross::ignrte 10849,17848 10858,17721 10878,17490
-Borkumstr. -> Berliner Str.: Berliner Str.	3::igndisp 10956,17735 10858,17721 10878,17490
-Berliner Str. -> Borkumstr.: Berliner Str.	3::igndisp 10849,17848 10858,17721 10956,17735
 Lietzenburger Str.	3nocross::ignrte 5047,10381 5207,10399 5329,10422
 Fasanenstr. -> Fasanenstr.: Lietzenburger Str.	3::igndisp 5229,10716 5207,10399 5198,10234
 Fasanenstr. -> Lietzenburger Str.: Lietzenburger Str.	3::igndisp 5229,10716 5207,10399 5329,10422
@@ -1163,16 +1165,16 @@ Kurmärkische Str.	3 7337,10396 7429,10366 7444,10479
 Hentigstr.	1 18518,8778 18548,8942
 Hentigstr.	1 18548,8942 18586,9172 18626,9406
 Oberwallstr.	1 9852,12409 9869,12297 9875,12257 9890,12161
-Prenzlauer Promenade	3nocross::ignrte 11854,17656 11843,17737 11879,18057
+Prenzlauer Promenade	3nocross::ignrte 11854,17656 11843,17737 11884,18063
 Prenzlauer Promenade -> Laudaer Str.: Prenzlauer Promenade	3::igndisp 11854,17656 11843,17737 11785,17729
-Laudaer Str. -> Prenzlauer Promenade: Prenzlauer Promenade	3::igndisp 11785,17729 11843,17737 11879,18057
-Prenzlauer Promenade	3nocross::ignrte 11879,18057 11892,18146 11906,18246 11914,18303 11950,18529
-Prenzlauer Promenade -> Othellostr.: Prenzlauer Promenade	3::igndisp 11906,18246 11892,18146 11990,18104
-Othellostr. -> Prenzlauer Promenade: Prenzlauer Promenade	3::igndisp 11990,18104 11892,18146 11879,18057
-Prenzlauer Promenade -> Figarostr.: Prenzlauer Promenade	3::igndisp 11914,18303 11906,18246 12084,18197
-Figarostr. -> Prenzlauer Promenade: Prenzlauer Promenade	3::igndisp 12084,18197 11906,18246 11892,18146
+Laudaer Str. -> Prenzlauer Promenade: Prenzlauer Promenade	3::igndisp 11785,17729 11843,17737 11884,18063
+Prenzlauer Promenade	3nocross::ignrte 11884,18063 11894,18146 11907,18246 11914,18303 11950,18529
+Othellostr. -> Prenzlauer Promenade: Prenzlauer Promenade	3::igndisp 11990,18104 11894,18146 11884,18063
+Prenzlauer Promenade -> Othellostr.: Prenzlauer Promenade	3::igndisp 11907,18246 11894,18146 11990,18104
+Prenzlauer Promenade -> Figarostr.: Prenzlauer Promenade	3::igndisp 11914,18303 11907,18246 12084,18197
+Figarostr. -> Prenzlauer Promenade: Prenzlauer Promenade	3::igndisp 12084,18197 11907,18246 11894,18146
 Zeiler Weg -> Prenzlauer Promenade: Prenzlauer Promenade	3::igndisp 11835,18301 11914,18303 11950,18529
-Prenzlauer Promenade -> Zeiler Weg: Prenzlauer Promenade	3::igndisp 11906,18246 11914,18303 11835,18301
+Prenzlauer Promenade -> Zeiler Weg: Prenzlauer Promenade	3::igndisp 11907,18246 11914,18303 11835,18301
 Pasewalker Str.	3nocross::ignrte 11984,20246 11963,20136 11931,19965
 Pasewalker Str. -> Hans-Jürgen-Str.: Pasewalker Str.	3::igndisp 11931,19965 11963,20136 11939,20140
 Hans-Jürgen-Str. -> Pasewalker Str.: Pasewalker Str.	3::igndisp 11939,20140 11963,20136 11984,20246
@@ -1491,7 +1493,7 @@ Frankfurter Allee -> Rosenfelder Str.: Frankfurter Allee	3::igndisp 17151,11801 
 Ehrensfelsstr.: Durchfahrt verboten	3 18737,8686 18778,8663 18846,8616
 Ehrensfelsstr.: Durchfahrt verboten	3 18846,8616 18778,8663 18737,8686
 Buggenhagenstr.	1 14425,13780 14371,13619
-Tassostr.	1 13679,16286 13645,16192 13659,16151 13642,16118 13625,16054 13621,15990 13630,15956
+Tassostr.	1 13679,16286 13645,16192 13659,16151 13642,16118 13625,16054 13614,15984 13623,15954
 Pasedagplatz: nur für Straßenbahnen	2 14170,17249 14150,17255 14099,17195
 Straßenbahntrasse	3nocross::ignrte 16416,16236 16522,16206 16660,16165
 Am Faulen See -> Suermondtstr.: Straßenbahntrasse	3::igndisp 16551,16307 16522,16206 16660,16165
@@ -1532,3 +1534,10 @@ Paetowstr.: Poller	3 -13055,-3008 -13110,-3015 -13137,-3022
 Paetowstr.: Poller	3 -13137,-3022 -13110,-3015 -13055,-3008
 Am Raubfang (Potsdam)	1 -15308,1220 -15366,1249 -15436,1253 -15533,813
 Goetheplatz (Potsdam)	1 -9922,-1395 -9809,-1435
+Mittelstreifen	3nocross::ignrte 9161,5535 9158,5673 9176,5803
+Burgemeisterstr. -> Tempelhofer Damm: Mittelstreifen	3::igndisp 9364,5652 9158,5673 9161,5535
+Burgemeisterstr. -> Burgemeisterstr.: Mittelstreifen	3::igndisp 9364,5652 9158,5673 8981,5692
+Tempelhofer Damm -> Burgemeisterstr.: Mittelstreifen	3::igndisp 9161,5535 9158,5673 8981,5692
+Burgemeisterstr. -> Burgemeisterstr.: Mittelstreifen	3::igndisp 8981,5692 9158,5673 9364,5652
+Burgemeisterstr. -> Tempelhofer Damm: Mittelstreifen	3::igndisp 8981,5692 9158,5673 9176,5803
+Tempelhofer Damm -> Burgemeisterstr.: Mittelstreifen	3::igndisp 9176,5803 9158,5673 9364,5652

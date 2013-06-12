@@ -137,7 +137,7 @@ Gartenstr.	1 22467,3889 22281,4033 22263,4120 22279,4220
 Wichmannstr.	1 6462,11069 6552,11006 6681,10959 6824,10904
 Lützowufer	1 6873,11011 6732,11106 6626,11178 6582,11202
 Mulackstr.	1 10308,13575 10406,13543 10535,13509 10640,13471
-Kirchhofstr.	1 13188,7590 13117,7471 13027,7368
+Kirchhofstr.	1 13188,7590 13117,7471 13029,7353
 Siegfriedstr.	1 12664,7013 12810,7047 12843,7093 12872,7134
 Prenzlauer Allee/Sredzkistr.	3nocross 11662,14695 11642,14625 11582,14448
 Gärtnerstr.	1 14211,11552 14247,11681 14272,11775
@@ -244,7 +244,7 @@ Kleinmachnower Weg: Sa und So ist die Schranke an der Kreuzung Sachlebenstraße z
 Hentigstr.	1 18518,8778 18548,8942 18586,9172 18626,9406
 #: by: Hubertus Fürther [AM]
 Grottewitzstr.	1 21933,152 22145,208
-Schlichtallee	3nocross 15639,10469 15758,10578 15982,10765
+Schlichtallee	3nocross 15639,10469 15758,10578 15880,10680 15982,10765
 Hindenburgdamm	3nocross 4515,4760 4515,4581 4521,4484
 Mariannenplatz - Bethaniendamm	1 11984,11130 12012,11235
 #: by: http://www.bruhaha.de/special/suedkreuz_0612/suedkreuz-06-12-004.html vvv
@@ -319,7 +319,7 @@ Berliner Str.: Mittelstreifen	3nocross 1214,3198 1338,3300 1415,3362
 #: note: Luftbild
 Prinzenallee: Mittelstreifen	3nocross 8939,16668 9000,16803 9024,16855 9028,16864 9082,16982
 #: note: Luftbild
-Berliner Allee: Straßenbahntrasse	3nocross 13512,15909 13623,15954 13630,15956 13737,15994
+Berliner Allee: Straßenbahntrasse	3nocross 13512,15909 13623,15954 13737,15994
 #: note: Luftbild
 Edisonstr.: Straßenbahntrasse	3nocross 17919,6978 17919,6968 17962,6674
 #: note: Luftbild
@@ -364,7 +364,7 @@ Knollstr.: Poller	3 17608,61 17558,126 17490,89
 Neumannstr.: Mittelstreifen	3nocross 11549,17154 11531,17250 11519,17316 11492,17460
 #: note: Luftbild: vvv
 Berliner Allee: Straßenbahn	3nocross 14045,16120 14248,16202 14371,16252
-Berliner Allee: Straßenbahn	3nocross 13512,15909 13623,15954 13630,15956 13737,15994
+Berliner Allee: Straßenbahn	3nocross 13512,15909 13623,15954 13737,15994
 Berliner Allee: Straßenbahn	3nocross 13401,15821 13432,15843 13487,15888 13512,15909
 #: note: ^^^
 #: by: Nicolas Schier:
@@ -538,8 +538,8 @@ Else-Lasker-Schüler-Str.: Poller	3 * 7245,10499 *
 Steinbachstr.	1 19759,4160 19703,3979 19673,3888 19587,3801
 Südwestkorso: Mittelstreifen	3nocross 5091,7676 5067,7652 5051,7631
 Dominicusstr.: Überqueren verboten	3nocross 6687,8385 6807,8309 6935,8208
-Schranke	3 9070,14058 8992,14176 8825,14401 8776,14364
-Schranke	3 8776,14364 8825,14401 8992,14176 9070,14058
+Schranke	3 8992,14176 8825,14401 8776,14364
+Schranke	3 8776,14364 8825,14401 8992,14176
 Plonzstr.	1 16227,12280 16252,12411
 Seddiner -> Hohenschönhausener Weg: Poller	3 * 18408,12105 18420,11864
 Hohenschönhausener Weg -> Seddiner: Poller	3 18420,11864 18408,12105 *
@@ -603,12 +603,13 @@ Potsdamer Str.: Mittelstreifen	3nocross -151,2975 -49,3003 50,3031 161,3062
 Am Heidehof	1 -1410,2726 -1571,2669 -1612,2785
 Eisenbahnstr. (Fürstenwalde)	1 55401,-3599 55456,-4023 55447,-4247
 Krebsgang	1 14693,7168 14792,7192
+#: note öfters ist der Poller verschwunden...
 Methfesselstr.: Durchfahrt gesperrt (Poller)	3 * 9125,9078 *
 #: note: Luftbild
 Neue Filandastr./Filandatr.	3nocross 5687,5486 5671,5389 5659,5313
 Müllerstr.: Mittelstreifen	3nocross 6019,16712 5937,16784 5900,16817 5777,16924
-Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16734,9990 16539,10097 16353,10207 16148,10329
-Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16148,10329 16353,10207 16539,10097 16734,9990
+Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16734,9990 16539,10097 16353,10207
+Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16353,10207 16539,10097 16734,9990
 Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 * 19509,7999 *
 #: by: MichaelM vvv
 Klapppfosten	3 -1612,2123 -1590,1985 -1592,1852
@@ -647,9 +648,10 @@ Rütlistr.: Durchfahrt verboten	2 12565,9200 12490,9056
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20101116.1230.319115.html
 #: note: "Für Radfahrer ist in der Gegenrichtung die Benutzung des Gehweges möglich."
 Wustermarker Str.:	1 -4385,14305 -4556,14349
+#: note: großzügige Drängelgitter für Radfahrer/Fußgänger
+Berliner Str.: Mittelstreifen und Straßennbahntrasse	3nocross 10849,17848 10858,17721 10878,17490
 #: note: public imagery vvv
 Hundekehlestr.: Mittelstreifen	3nocross 2346,7684 2460,7658 2576,7634
-Berliner Str.	3nocross 10849,17848 10858,17721 10878,17490
 Lietzenburger Str.	3nocross 5047,10381 5207,10399 5329,10422
 Greifswalder Str.: Straßenbahntrasse	3nocross 12228,14404 12188,14350 12177,14335 12077,14186
 Sybelstr.	1 3978,10582 3883,10577
@@ -666,9 +668,9 @@ Hentigstr.	1 18518,8778 18548,8942
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110309.1150.334660.html (südlicher Abschnitt confirmed)
 Hentigstr.	1 18548,8942 18586,9172 18626,9406
 Oberwallstr.	1 9852,12409 9869,12297 9875,12257 9890,12161
-Prenzlauer Promenade	3nocross 11854,17656 11843,17737 11879,18057
+Prenzlauer Promenade	3nocross 11854,17656 11843,17737 11884,18063
 #: note: keine legale Überquerungsmöglichkeit für Radfahrer, aber dennoch möglich
-Prenzlauer Promenade	3nocross 11879,18057 11892,18146 11906,18246 11914,18303 11950,18529
+Prenzlauer Promenade	3nocross 11884,18063 11894,18146 11907,18246 11914,18303 11950,18529
 Pasewalker Str.	3nocross 11984,20246 11963,20136 11931,19965
 Neuer Steg	3 * 8277,19210 8209,19107
 Neuer Steg	3 8209,19107 8277,19210 *
@@ -868,7 +870,7 @@ Küstriner Str.: Barrieren	3 16123,15025 16211,15105 *
 Frankfurter Allee	3nocross 17151,11801 17240,11791 17440,11774
 Ehrensfelsstr.: Durchfahrt verboten	3 * 18778,8663 *
 Buggenhagenstr.	1 14425,13780 14371,13619
-Tassostr.	1 13679,16286 13645,16192 13659,16151 13642,16118 13625,16054 13621,15990 13630,15956
+Tassostr.	1 13679,16286 13645,16192 13659,16151 13642,16118 13625,16054 13614,15984 13623,15954
 Pasedagplatz: nur für Straßenbahnen	2 14170,17249 14150,17255 14099,17195
 #: note: für Fußgänger existiert eine Überquerungsmöglichkeit einige Meter weiter östlich
 Suermondtstr: Straßenbahntrasse	3nocross 16416,16236 16522,16206 16660,16165
@@ -902,3 +904,5 @@ Hermannswerder	1 -14306,-2867 -14044,-2918 -13765,-2974 -13733,-2967
 Paetowstr.: Poller	3 * -13110,-3015 *
 Am Raubfang (Potsdam)	1 -15308,1220 -15366,1249 -15436,1253 -15533,813
 Goetheplatz (Potsdam)	1 -9922,-1395 -9809,-1435
+#: note Überquerungsmöglichkeit für Fußgänger/Radfahrer wenige Meter nördlich von der Kreuzung
+Tempelhofer Damm: Mittelstreifen	3nocross 9161,5535 9158,5673 9176,5803

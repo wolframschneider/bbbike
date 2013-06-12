@@ -93,7 +93,7 @@ for my $file (@files) {
 		 } else {
 		     my $wd = [qw(Su Mo Tu We Th Fr Sa)]->[(localtime($epoch))[6]];
 		     my $date = "$y-$m-$d";
-		     my $subject = $r->[Strassen::NAME] || "(" . $file . "::$.)";
+		     my $subject = $r->[Strassen::NAME] || ($dir->{XXX} && join(" ", @{$dir->{XXX}})) || "(" . $file . "::$.)";
 		     my $dist_tag = '';
 		     my $any_dist; # either one way or two way dist in meters
 		     if ($centerc) {
@@ -226,7 +226,7 @@ sub _get_dist {
     my $dist_db = _get_distdb();
     my $dist = eval { $dist_db->get_dist($p1, $min_p) };
     if ($@) {
-	die "Failed to get distance between $p1 and $min_p";
+	die "Failed to get distance between $p1 and $min_p: $@";
     }
     $dist;
 }

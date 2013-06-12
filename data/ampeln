@@ -125,7 +125,7 @@
 	X 15261,10738
 	X 14641,10552
 	X 14918,11249
-	X 16032,10842
+	X 16049,10844
 	X 15639,10469
 	X 16468,10695
 	X 18286,11275
@@ -318,7 +318,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9247,6687
 	X 9254,6542
 	X 9212,6096
-	X 9147,5534
+	X 9161,5535
 	X 8606,5496
 	X 9863,6617
 	X 9207,5185
@@ -401,7 +401,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11979,8014
 	X 12317,7007
 	X 12753,8187
-	X 12974,7598
+	X 12969,7610
 	F 12992,7545
 	X 13051,7157
 	X 13085,6925
@@ -472,6 +472,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10680,18380
 	X 10089,18180
 	X 9881,18354
+	F 9891,18444
 	X 11709,14856
 	X 12317,14535
 	X 13330,13468
@@ -887,7 +888,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4327,8887
 	X 11301,15668
 	X 12090,16199
-	X 11879,18057
+	X 11884,18063
 	X 11950,18529
 	X 17003,19035
 	X 18205,18256
@@ -1365,7 +1366,6 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9727,17804
 	X 11635,16616
 	F 11554,16075
-	X 12097,16263
 	X 12409,16475
 	X 12721,15807
 	X 12943,16214
@@ -1425,7 +1425,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 7138,15437
 	X 6996,15319
 	X 7263,14873
-	F 8626,13692
+	X 8619,13689
 	X 8456,15235
 	X 9443,15430
 	X 9917,15613
@@ -1541,7 +1541,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 12794,5596
 	X 12841,5416
 	F 10181,4181
-	X 8955,5549
+	X 8968,5554
 	X 8206,6774
 	F 5070,4770
 	X 5141,5744
@@ -1646,7 +1646,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -1336,14786
 	B 20782,5206
 	X 7315,10537
-	X 8690,13723
+	F 8690,13723
 	X 11629,9086
 	X 15681,10801
 	X 21089,4731
@@ -1893,12 +1893,13 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8372,22603
 	F 7164,-473
 	F 22640,4081
 	F 9028,16864
+	F 8443,15901
 	F 5373,10981
 	F 18733,8650
 	X 18709,8423
 	F 4920,9029
 	X 21647,15496
-	X 15530,12412
+	X 15535,12420
 	X 15508,12367
 	F 10779,10934
 	X 2663,1199
@@ -1960,7 +1961,6 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	X 13401,15821
 	F 6440,6707
 	X 7310,7818
-	X 16187,10033
 	X 3754,24946
 	X 3767,24887
 	X 1398,10201
@@ -2048,7 +2048,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 6480,7992
 	F 4862,10881
 	F 30037,4176
-	F 23055,4640
+	F 23059,4635
 	X 13256,26863
 	X -7365,15306
 	F 23933,8879
@@ -2154,6 +2154,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 8631,18441
 	X 10127,19992
 	F 5628,14063
+	F::inwork 9984,12426
 	X::inwork 9123,12500
 	X::inwork 9280,12883
 	X::inwork 9343,12464
@@ -2166,6 +2167,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X::inwork 8426,13909
 	X::inwork 8313,13839
 	X::inwork 8450,13599
+	X::inwork 8775,13606
 	F 17117,18761
 	F -7762,14067
 	F -4924,14535
@@ -2221,6 +2223,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 11214,16043
 	X -3892,13960
 	X 3005,13728
+	X::inwork 23660,5477
+	F 18165,7371
 	X -12549,-1277
 	X -13051,-3101
 	X -12839,-1342
