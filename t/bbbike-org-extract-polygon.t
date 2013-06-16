@@ -58,7 +58,7 @@ sub validate {
     my $same = '0.001';
 
     my $poly = get_json_from_file($file);
-    diag "Test file $file, same=$same\n";
+    print "Test file $file, same=$same\n";
 
     print Dumper($poly) if $debug >= 2;
 
@@ -67,10 +67,10 @@ sub validate {
 
     # but not more than N points
     if ( scalar(@poly) > $max ) {
-        diag "Resize 0.01 $#poly\n";
+        print "Resize 0.01 $#poly\n";
         @poly = polygon_simplify( 'same' => 0.01, @$poly );
         if ( scalar(@poly) > $max ) {
-            diag "Resize $max points $#poly\n";
+            print "Resize $max points $#poly\n";
             @poly = polygon_simplify( max_points => $max, @poly );
         }
     }
