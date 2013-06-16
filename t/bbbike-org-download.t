@@ -56,7 +56,7 @@ my @listing;
     # 2012-03-16: there are 231 cities available + original bbbike data
     cmp_ok scalar(@listing), ">=", 235, 'More than 200 cities found';
 
-    ok grep { $_ eq 'Wien' } @listing, 'Found Wien in listing';
+    ok ((grep { $_ eq 'Wien' } @listing), 'Found Wien in listing');
 }
 
 {
