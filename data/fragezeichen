@@ -56,6 +56,7 @@ Im Schäferfeld: Qualität?	? -8098,-3680 -8198,-3696 -8317,-3775 -8404,-3824 -847
 Fichtenallee (Potsdam): Qualität?	? -8563,-3805 -8451,-3728 -8226,-3592
 Stern - Nudow: Durchfahrt möglich? Qualität (laut "Berliner Umland" witterungsabhängige Strecke)?	? -6983,-3886 -7077,-4186 -6902,-4397 -6775,-4326 -6767,-4463 -6671,-6390 -6516,-6520 -6508,-6969 -6191,-7587 -6319,-7823 -5766,-8911 -5387,-8896
 Königsdamm in Schlänitzsee: Qualität? Führt hier die F3 entlang?	? -19309,4359 -19392,4605
+Am Stichkanal: Qualität? Genaue Lage?	? -19450,4599 -19375,4360
 F3 nach Marquardt: genaue Wegführung? Qualität?	? -19392,4605 -18701,4578
 Joachimsthal - Altkünkendorf: Qualität?	? 35512,66695 38125,66800 39287,67537 39575,67262 39875,66425
 Gartz - Mescherin: Qualität?	? 75502,90490 75544,90356 75700,90288 76023,90222
@@ -1071,7 +1072,6 @@ Spektegrünzug: genauer Wegverlauf, Qualität?	? -4712,14790 -5167,14957 -5383,149
 entlang der Bahnstrecke: Qualität? Nachts beleuchtet?	? -5716,14941 -5702,15039 -5697,15098 -5695,15111 -5620,15784 -5566,16328 -5506,16954
 Wolfshorst - Spektewiesen: Qualität der Verbindung?	? -6573,15254 -6576,15294
 Theodor-Fontane-Str.: Sackgasse oder Einbahnstraßenregelung?	? -9835,6841 -9854,6890
-Adlergestell - Bohnsdorfer Str.: Qualität des südöstlichen Abschnitts? Ist der Weg hier auch unbeleuchtet?	? 22091,1317 22161,1193
 Waldweg zum Campingplatz: Qualität der Straße?	? 29208,71 29512,-619 29297,-717 28915,-1147 28565,-1339 28248,-1473 28162,-1294 28033,-1259 27845,-1324 27758,-1358
 Deilingeweg: ist der Deilingeweg ausgeschildert?	? 6259,23379 6229,23415
 (Am Grüngürtel - Weg zwischen Triftstr. und Eichborndamm): Qualität? Nachts beleuchtet?	? 4597,20508 4626,20577
@@ -1081,11 +1081,6 @@ Seeadlerweg: Qualität? Wo genau befindet sich die Straße (möglichst mit GPS-Trac
 Fischadlerweg: Qualität? Wo genau befindet sich die Straße (möglichst mit GPS-Track)?	? 16513,-211 16496,-273 16525,-338 16542,-376
 Eulenweg: Qualität? Wo genau befindet sich die Straße (möglichst mit GPS-Track)?	? 16568,-313 16525,-338
 Mathilde-Vaerting-Weg: Qualität nach den Bauarbeiten? Ist die Straße verkehrsberuhigt?	? 17610,-330 17651,-393
-Geißbartweg: Qualität?	?::inwork 16097,3595 16167,3702
-Sternliebweg: Qualität? Wo liegt die Straße genau?	?::inwork 16152,3562 16219,3665
-Silberdistelweg: Qualität? Wo liegt die Straße genau?	?::inwork 16205,3529 16263,3627
-Zwergasternweg: Qualität?	?::inwork 16254,3489 16321,3583
-Trollblumenweg: wird verlängert, Qualität der Verlängerung?	?::inwork 16028,3726 16051,3759 16104,3717
 Am Römersgrün: Straße und Wohnanlage in Bau. Genaue Lage? Qualität?	?::inwork 11708,3914 11723,3846
 Ellen-Widmann-Pfad: Existiert die Straße schon? Qualität? Wo liegt die Straße genau?	? 3750,2285 3830,2285
 Ines-Bolla-Pfad: Existiert die Straße schon? Qualität? Wo liegt die Straße genau?	? 3747,2335 3854,2332
@@ -1107,7 +1102,6 @@ Im Eck - Heinitzweg: existiert hier für Radfahrer eine Verbindung? Qualität? Nac
 Groß-Ziethener Str. - Tietjenstr.: existiert hier für Radfahrer eine Verbindung? Qualität? Nachts beleuchtet?	? 11578,-1220 11550,-1230 11559,-1363 11564,-1460 11572,-1603 11581,-1731
 Potsdam Hbf - Uferweg: Qualität?	? -12247,-1858 -12210,-1857 -12200,-1813 -12165,-1815 -12122,-1737 -12103,-1679 -12059,-1617
 Uferweg am Groß-Glienicker See: genaue Lage im südöstlichen Bereich des Sees? Qualität?	? -9677,5430 -9478,5549 -9372,5532
-Preußensiedlung: Durchfahrt möglich?	? 20971,1046 20957,1043 20863,966 20836,982
 Wandsbeker Weg: verläuft zwischen Spandauer Str. und Barmbeker Weg auch ein Teil des Wandsbeker Wegs? Qualität? Für Autos befahrbar?	? -6641,14044 -6728,14038 -6757,14061 -6765,14120
 Köhlbrandweg: Qualität des Abschnitts zwischen Wandsbeker Weg und Spandauer Str.?	? -6542,14057 -6555,14161
 Schiffahrtsufer - Betckestr.: nachts beleuchtet?	? -3441,13270 -3352,13135 -3338,13118 -3210,12887 -3218,12843 -3214,12779 -3170,12595
@@ -1121,6 +1115,7 @@ Spitzwegerichweg: (früher Wiesenweg) Qualität? Wo genau verläuft der Weg?	? 2434
 Petersilienweg: (früher Feldweg) Qualität? Wo befindet sich der Weg?	? 24388,6098 24444,6165 24515,6201 24562,6221
 Engelwurzweg: (früher Waldweg) Qualität?	? 24275,6156 24306,6210 24368,6268 24424,6296 24473,6304
 Litta-von-Stauffenberg-Weg: befindet sich der Weg hier? Qualität? Nachts beleuchtet?	? -7018,5218 -7166,5298
+Bruno-Taut-Str. - Am Gartenstadtweg: nachts beleuchtet?	? 21790,682 21783,660 21755,625 21714,601 21679,596
 # added from ampeln-orig
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4
 geschlossen bei Bedarf (?) (Zbr)	? 27657,-11741
@@ -1130,6 +1125,7 @@ S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?) (B)	? 40248,14503
 Verl. Pücklerstr. (Existieren Straßenschilder für die "Verlängerte Pücklerstr."?)	? 1558,6729 1364,6691 1170,6654 967,6620 905,6631 880,6645
 (Grünhofer Weg - Bullengraben) (liegt hier Kopfsteinpflaster oder Verbundsteinpflaster?)	? -4349,13567 -4357,13415
 (südlicher Weg im Ramin-Park) (Nachts beleuchtet?)	? -3985,14582 -3950,14519 -3920,14468 -3844,14430 -3777,14405
+(Cecilienstr. - Joachim-Ringelnatz-Str.) (Wegbeschaffenheit und Qualität der Wegverbindung? Nachts beleuchtet?)	? 22101,13616 22110,13639 22136,13735 22141,13784
 Sportforumstr. (Qualität der Sportforumstr. (asphaltiert?))	? -193,12051 -212,12095 -247,12117 -369,12175
 (Parkweg auf die Ahrensfelder Berge) (Qualität?)	? 22662,16306 22671,16408 22678,16564 22661,16639 22559,16855 22524,16889 22486,16889 22396,16846 22352,16846 22271,16934 22265,16978 22290,17028 22309,17035 22367,17000
 Birkenhain (Borkheide) (Fahrradstraße?)	? -25293,-19426 -26249,-20121
@@ -1179,6 +1175,7 @@ Müncheberg, Turm (genaue Bezeichnung?)	? 60803,11559
 Müncheberg, Turm (genaue Bezeichnung?)	? 60306,11906
 Berliner Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert (Ist die Berliner Str. zwischen Aidastr. und Romain-Rolland-Str. mittlerweile komplett asphaltiert?)	? 12736,17998 12467,17814
 Parforceweg: Waldweg? (Ist der Parforceweg ein "gewöhnlicher" Waldweg?)	? -643,7252 -728,7310 -1008,7427 -1142,7493 -1308,7558 -1328,7597 -1787,7932 -1843,8128 -2028,8270 -2078,8217 -2117,8204 -2156,8208 -2294,8232 -2386,8282
+(Wegbeschaffenheit und Qualität des Wuhlewanderwegs entlang des Kienbergs?)	? 22415,14151 22679,14450 22552,14777 22460,14820 22382,14908 22343,15115
 Schauflerpfad: mäßiges Kopfsteinpflaster (Qualität des Schauflerpfads?)	? -716,21284 -734,21360 -796,21375 -865,21361 -1128,21421 -1218,21436
 Rohrweihstr.: guter Asphalt (Ist die Rohrweihstr. asphaltiert oder hat sie Verbundsteinpflaster?)	? -2103,19833 -2073,19990 -2055,20129 -2020,20309 -1991,20312
 Jühnsdorf: Asphalt (existiert durch Jühnsdorf ein Radweg?)	? 9792,-12090 9345,-11425 9472,-11297 9578,-10891

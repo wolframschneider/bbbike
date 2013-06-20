@@ -1677,9 +1677,9 @@ EOF
        text  => 'Wassersportallee - Regattastraße, Zwischen Kreuzung Adlergestell und Kreuzung Wassersportallee in beiden Richtungen gesperrt, Baustelle, Dauer: 14.03.2005 03:00 Uhr bis 15.05.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 22453,1294 22367,1230 22287,1165 22217,1108
+userdel	q4 22453,1294 22367,1230 22287,1165 22208,1103
 userdel	q4 22453,1294 22493,1325 22560,1377 22655,1450
-userdel	q4 22217,1108 22162,1067
+userdel	q4 22208,1103 22162,1067
 EOF
      },
      { from  => 1110862800, # 2005-03-15 06:00
@@ -20064,7 +20064,9 @@ EOF
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1201/nachricht4563.html
 #: by: http://pf-tk.de/ai1ec_event/podiumsdiskussion-wie-weiter-im-kolner-viertel/?instance_id=
 #: by: http://www.morgenpost.de/bezirke/article112374495/Fussgaengerbruecke-wird-repariert.html (Reparatur ab Juni 2013, 2 Monate Bauzeit)
+#: last_checked: 2013-06-15
 #: next_check: 2013-07-31
+#: priority: #A
 userdel	2::inwork 19968,16 19940,52
 EOF
      },
@@ -20111,7 +20113,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_111647', # auch: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html
        data  => <<EOF,
-#: osm_watch: way id="23243508" version="30"
+#: osm_watch: way id="23243508" version="33"
 userdel	q4::inwork; -1872,24336 -1790,24260 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 EOF
      },
@@ -20243,8 +20245,10 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.s-bahn-berlin.de/aktuell/2013/pdf/faltblatt_bruecken_treskowstrasse.pdf
-#: XXX nächste Sperrung im Juli 2013
-#: next_check: 2013-07-06
+#: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20130618.1615.386236.html
+#: XXX nächste Sperrung: Mo 8. Juli (17 Uhr) bis So 14. Juli (4 Uhr)
+#: next_check: 2013-06-30
+#: priority: #A
 userdel	2::inwork 18731,8577 18709,8423
 EOF
      },
@@ -21136,7 +21140,7 @@ userdel	q2::inwork 5268,11274 5247,10992
 EOF
      },
      { from  => 1367100000, # 2013-04-28 00:00
-       until => $isodate2epoch->("2013-06-18 15:00:00"), # 1370815199, # 2013-06-09 23:59
+       until => 1371492094, # $isodate2epoch->("2013-06-18 15:00:00"), # 1370815199, # 2013-06-09 23:59
        text  => 'Fahrbahnsanierung Cauerstraße: Einbahnstraße, offen in Richtung Otto-Suhr-Allee, auch Einschränkungen in der Guerickestraße, von Montag, dem 29.04.2013, bis Mitte Juni',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20130424.1240.383903.html',
@@ -21353,7 +21357,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20130607.1245.385821.html',
        data  => <<EOF,
-userdel	2::inwork 16279,5170 16209,5067 16146,4974 16004,4764 15863,4554 15843,4524 15797,4456
+userdel	2::inwork 16279,5170 16209,5067 16146,4974 16004,4764 15863,4554 15843,4524 15800,4464
 EOF
      },
      { from  => 1349931600, # 2012-10-11 07:00
@@ -21374,7 +21378,7 @@ userdel	2::temp 8538,12245 8610,12254 8731,12270 8804,12280
 EOF
      },
      { from  => 1371074400, # 2013-06-13 00:00
-       until => 1371333599, # 2013-06-15 23:59
+       until => 1371315146, # 1371333599, # 2013-06-15 23:59
        text  => 'Behrenstr. zwischen Wilhelmstr. und Ebertstr.: Baustelle, Fahrbahn gesperrt, ab 14.06.2013 07 Uhr bis 15.06.2013 abends ',
        type  => 'handicap',
        source_id => 'INKO_117842',
@@ -21447,6 +21451,34 @@ userdel	2::temp 8538,12245 8546,12279
 userdel	2::temp 9016,12416 9008,12485
 userdel	2::temp 8825,11773 8837,11676 8743,11663 8553,11638
 userdel	2::temp 8438,11753 8473,11634 8553,11638 8567,11799 8571,11846
+EOF
+     },
+     { from  => 1371549600, # 2013-06-18 12:00
+       until => 1371675600, # 2013-06-19 23:00
+       text  => 'Spandauer Damm zwischen Sophie-Charlotten-Str. und Otto-Suhr-Allee: wegen des Obama-Besuchs möglicherweise nicht passierbar, 19. Juni 2003 von 12 bis 23 Uhr',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp 2414,12418 2643,12453
+userdel	2::temp 3280,12512 3189,12519 3034,12502 2786,12473 2745,12467 2717,12463
+EOF
+     },
+     { from  => 1371358800, # 2013-06-16 07:00
+       until => 1376229600, # 2013-08-11 16:00
+       text  => 'Bergiusstr.: Baustelle, Fahrbahn gesperrt, Gehweg evtl. auch nicht passierbar, bis 11.08.2013 16:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'INKO_119210',
+       data  => <<EOF,
+userdel	2::inwork 14193,6556 14144,6627 14193,6718 14153,6795
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Innstr.: Bauarbeiten, Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2013-06-18
+#: next_check: 2013-07-18
+userdel	q4::inwork 13301,8606 13262,8554 13217,8493
 EOF
      },
     );
