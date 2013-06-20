@@ -205,6 +205,7 @@ sub do_tests {
     my $routeinfo = clone($routing->RouteInfo);
     {
 	local $^W; # no "numeric" warning
+	no warnings 'numeric';
 	ok($routing->RouteInfo->[0]->{Whole} < $routing->RouteInfo->[-1]->{Whole}, "Positive distance");
     }
     ok($routing->RouteInfo->[0]->{WholeMeters} < $routing->RouteInfo->[-1]->{WholeMeters}, "Positive distance (in meters)");
@@ -226,6 +227,7 @@ sub do_tests {
 	   "Route length looks OK after continuation");
     {
 	local $^W; # no "numeric" warning
+	no warnings 'numeric';
 	
 	cmp_ok(0+$routing->RouteInfo->[$route_info_length-1]->{Whole}, "<",
 	       0+$routing->RouteInfo->[$route_info_length]->{Whole},
@@ -255,6 +257,7 @@ sub do_tests {
     is($routing->RouteInfo->[-1]->{Coords}, join(",", @{$routing->Path->[-2]}));
     {
 	local $^W = 0;
+	no warnings 'numeric';
 	like($routing->RouteInfo->[-1]->{Whole}, qr/km/);
 	ok($routing->RouteInfo->[-1]->{Whole} > $routing->RouteInfo->[-2]->{Whole}, "Distance Ok");
     }
