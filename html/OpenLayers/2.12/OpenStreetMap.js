@@ -544,7 +544,38 @@ OpenLayers.Layer.Yahoo = OpenLayers.Class(
     CLASS_NAME: "OpenLayers.Layer.Yahoo"
 });
 
+/* Nokia: openlayers/lib/OpenLayers/Layer/Nokia.js */
 
+/* Copyright (c) 2006-2013 by OpenLayers Contributors (see authors.txt for 
+ * full list of contributors). Published under the 2-clause BSD license.
+ * See license.txt in the OpenLayers distribution or repository for the
+ * full text of the license. */
+
+/* Written by Wolfram Schneider, 2012-2013
+ * Map Compare BBBike: http://mc.bbbike.org/mc
+ *
+ * based on XYZ.js and Bing.js example code
+ */
+
+/**
+ * @requires OpenLayers/Layer/XYZ.js
+ */
+
+/** 
+ * Class: OpenLayers.Layer.Nokia
+ * Nokia layer using direct tile access as provided by Nokia Maps REST Services.
+ * See http://developer.here.net/ for more
+ * information. Note: Terms of Service compliant use requires the map to be
+ * configured with an <OpenLayers.Control.Attribution> control and the
+ * attribution placed on or near the map.
+ * 
+ * Inherits from:
+ *  - <OpenLayers.Layer.XYZ>
+ */
+
+/**
+ * Example: map = new OpenLayers.Layer.Nokia("Nokia Map", { type: "normal.day", app_id: "abcdefgh"})
+ */
 OpenLayers.Layer.Nokia = OpenLayers.Class(OpenLayers.Layer.XYZ, {
     // for reference: all supported layers
     layers: ["normal.day", "terrain.day", "satellite.day", "hybrid.day", "normal.day.transit", "normal.day.grey"],
@@ -617,11 +648,11 @@ OpenLayers.Layer.Nokia = OpenLayers.Class(OpenLayers.Layer.XYZ, {
             throw "Unsupported Nokia map type: " + type;
         }
         
-        var name = options.name || this.name;
+        name = name || this.name;
         var url = this.nokiaTileSeverUrl(type, { app_id: options.app_id, token: options.token});
 
         options = OpenLayers.Util.extend({
-            numZoomLevels: 19,
+            numZoomLevels: 19
         }, options);
         
         var newArgs = [name, url, options];
@@ -638,19 +669,19 @@ OpenLayers.Layer.Nokia = OpenLayers.Class(OpenLayers.Layer.XYZ, {
         var token = opt.token;
         var servers = opt.servers;
         
-        var url_prefix = "maps.nlp.nokia.com/maptile/2.1/maptile/dea75fd608";
+        var url_prefix = "maps.nlp.nokia.com/maptile/2.1/maptile/14ca0f23ba";
     
-        // "normal.day.grey" use a different API
+        // traffic layer use a different API
         if (!servers || servers.length == 0) {
-            servers = (type == "normal.day.grey" ? ["a", "b", "c", "d"] : ["1", "2", "3", "4"]);
+            servers = (type == "newest/normal.day" ? [""] : ["1", "2", "3", "4"]);
         }
-        if (type == "normal.day.grey") { // traffic
-            url_prefix = "mrsmon.lbs.ovi.com/maptiler/v2/traffictile/b8abea5c78";
+        if (type == "newest/normal.day") { // traffic
+            url_prefix = "maps.nlp.nokia.com/maptile/2.1/traffictile";
         }
     
         var url_list = [];
         for (var i = 0; i < servers.length; i++) {
-            url_list.push("http://" + servers[i] + "." + url_prefix + "/" + type + "/${z}/${x}/${y}/256/png8?app_id=" + app_id + "&token=" + token + "&lg=ENG");
+            url_list.push("http://" + (servers[i] ? servers[i] + "." : "") + url_prefix + "/" + type + "/${z}/${x}/${y}/256/png8?app_id=" + app_id + "&token=" + token + "&lg=ENG");
         }
     
         return url_list;
@@ -685,3 +716,4 @@ function checkLayerType(layers, type) {
    }
    return false;
 }
+
