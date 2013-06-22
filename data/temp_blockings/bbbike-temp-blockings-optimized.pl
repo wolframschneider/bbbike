@@ -1798,7 +1798,17 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_019981',
+         'until' => 1373486400,
+         'text' => 'Straße des 17. Juni (Tiergarten) in beiden Richtungen zwischen Yitzhak-Rabin-Str. und Brandenburger Tor Veranstaltung, Straße vollständig gesperrt, außerdem gesperrt: Ebertstr. zwischen Behrenstr. und Dorotheenstr.',
+         'from' => 1371852000,
+         'id' => 1771,
+         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
+userdel	2::temp 8538,12245 8600,12165 8595,12066
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -2431,66 +2441,63 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'CSD am 22.6.2012',
          'from' => 1371765600,
          'id' => 2083,
-         'data' => 'userdel	2::temp 10605,10312 10363,10303 10122,10294 9948,10280 9873,10285 9593,10238 9492,10226 9404,10250 9388,10393 9384,10536 9375,10616 9368,10641 9323,10791 9275,10932 9234,11056 9196,11165 9155,11283 8720,11226 8631,11334 8602,11369 8573,11404 8542,11502 8548,11571 8553,11630 8553,11638 8567,11799 8571,11846 8577,11896 8632,11912 8783,11959 8901,12008 9063,12051 9076,12054 9183,12076 9164,12172 9141,12320 9130,12433 9123,12500 9008,12485 8907,12472 8775,12457 8540,12420 8400,12417 8354,12416 8119,12414 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245
-userdel	2::temp 8546,12279 8538,12245 8600,12165
-userdel auto	3 9108,11961 9076,12054 9064,12156
-userdel auto	3 8573,12325 8540,12420 8554,12593
-userdel auto	3 9358,12351 9141,12320 9028,12307
-userdel auto	3 9599,10175 9593,10238 9592,10263
-userdel auto	3 10178,10411 10122,10294 10083,10192
-userdel auto	3 8610,12254 8538,12245 8522,12187
-userdel auto	3 8610,12254 8538,12245 8522,12239
-userdel auto	3 7816,12150 8055,12186 8048,12135
-userdel auto	3 8861,12125 8901,12008 8965,11825
-userdel auto	3 8048,12135 8055,12186 7816,12150
-userdel auto	3 9201,11968 9183,12076 9270,12086 9385,12098
-userdel auto	3 9865,10227 9873,10285 9858,10350
-userdel auto	3 9865,10227 9873,10285 9668,10306
-userdel auto	3 9409,10226 9404,10250 9239,10313
-userdel auto	3 8766,12541 8775,12457 8804,12280
-userdel auto	3 8442,11555 8542,11502 8596,11508
-userdel auto	3 8442,11555 8542,11502 8479,11493
-userdel auto	3 8522,12239 8538,12245 8522,12187
-userdel auto	3 8522,12239 8538,12245 8610,12254
-userdel auto	3 9539,10820 9323,10791 9131,10716
-userdel auto	3 9330,12529 9123,12500 9108,12635
-userdel auto	3 8737,12098 8783,11959 8813,11825
-userdel auto	3 9559,10656 9368,10641 9210,10614
-userdel auto	3 8596,11508 8542,11502 8479,11493
-userdel auto	3 8596,11508 8542,11502 8442,11555
-userdel auto	3 9028,12307 9141,12320 9358,12351
-userdel auto	3 9239,10313 9404,10250 9409,10226
-userdel auto	3 9058,11564 9155,11283 9478,11317
-userdel auto	3 9016,12416 9130,12433 9343,12464
-userdel auto	3 8965,11825 8901,12008 8861,12125
-userdel auto	3 9250,10563 9388,10393 9527,10389
-userdel auto	3 9131,10716 9323,10791 9539,10820
-userdel auto	3 9385,12098 9270,12086 9183,12076 9201,11968
-userdel auto	3 8554,12593 8540,12420 8573,12325
-userdel auto	3 9108,12635 9123,12500 9330,12529
-userdel auto	3 9858,10350 9873,10285 9668,10306
-userdel auto	3 9858,10350 9873,10285 9865,10227
-userdel auto	3 8070,12409 8119,12414 8122,12608
-userdel auto	3 9343,12464 9130,12433 9016,12416
-userdel auto	3 8479,11493 8542,11502 8596,11508
-userdel auto	3 8479,11493 8542,11502 8442,11555
+         'data' => 'userdel	2::temp 6171,10657 6216,10614 6268,10588 6353,10583 6468,10550 6532,10529 6636,10492 6753,10446 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6985,10597 6972,10665 6918,10854 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6809,11979 6828,12031 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245 8610,12254
+userdel	2::temp 6353,10583 6292,10627 6228,10646 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808
+userdel	2::temp 7033,10396 6851,10416
+userdel auto	3 7039,12314 7383,12095 7460,12054
+userdel auto	3 7115,10612 6972,10665 6818,10725
+userdel auto	3 8600,12165 8538,12245 8546,12279
+userdel auto	3 8600,12165 8538,12245 8522,12187
+userdel auto	3 8600,12165 8538,12245 8522,12239
+userdel auto	3 5877,10486 6025,10746 6131,10939
+userdel auto	3 6216,10614 6228,10646 6250,10701
+userdel auto	3 7131,10331 7033,10328 7060,10221
+userdel auto	3 7131,10331 7033,10396 7245,10499
+userdel auto	3 6380,10704 6353,10583 6302,10462
+userdel auto	3 7002,11034 6873,11011 6732,11106
+userdel auto	3 5681,10696 5782,10884 5829,10964
+userdel auto	3 7460,12054 7383,12095 7039,12314
+userdel auto	3 6692,11365 6851,11346 7103,11247
+userdel auto	3 7827,12105 7816,12150 7875,12363
+userdel auto	3 7103,11247 6851,11346 6692,11365
+userdel auto	3 6745,10619 6753,10446 6719,10347
+userdel auto	3 6494,10440 6532,10529 6685,10690
+userdel auto	3 6787,12099 6828,12031 6857,11992
+userdel auto	3 6915,11492 6825,11486 6716,11439
+userdel auto	3 6302,10462 6353,10583 6380,10704
+userdel auto	3 7245,10499 7033,10396 7131,10331
 userdel auto	3 8522,12187 8538,12245 8522,12239
-userdel auto	3 8522,12187 8538,12245 8610,12254
-userdel auto	3 9373,12197 9164,12172 9064,12156
-userdel auto	3 9210,10614 9368,10641 9559,10656
-userdel auto	3 8743,11663 8553,11638 8473,11634
-userdel auto	3 8122,12608 8119,12414 8070,12409
-userdel auto	3 9592,10263 9593,10238 9599,10175
-userdel auto	3 9064,12156 9076,12054 9108,11961
-userdel auto	3 9064,12156 9164,12172 9373,12197
-userdel auto	3 9668,10306 9873,10285 9858,10350
-userdel auto	3 9668,10306 9873,10285 9865,10227
-userdel auto	3 9527,10389 9388,10393 9250,10563
-userdel auto	3 10083,10192 10122,10294 10178,10411
-userdel auto	3 9478,11317 9155,11283 9058,11564
-userdel auto	3 8473,11634 8553,11638 8743,11663
-userdel auto	3 8813,11825 8783,11959 8737,12098
-userdel auto	3 8804,12280 8775,12457 8766,12541
+userdel auto	3 8522,12187 8538,12245 8600,12165
+userdel auto	3 8522,12187 8538,12245 8546,12279
+userdel auto	3 6716,11439 6825,11486 6915,11492
+userdel auto	3 8048,12135 8055,12186 8119,12414
+userdel auto	3 7115,11220 6880,11110 6841,11114
+userdel auto	3 8119,12414 8055,12186 8048,12135
+userdel auto	3 6857,11992 6828,12031 6787,12099
+userdel auto	3 6732,11106 6873,11011 7002,11034
+userdel auto	3 7875,12363 7816,12150 7827,12105
+userdel auto	3 7060,10221 7033,10328 7131,10331
+userdel auto	3 6250,10701 6228,10646 6216,10614
+userdel auto	3 8546,12279 8538,12245 8522,12239
+userdel auto	3 8546,12279 8538,12245 8522,12187
+userdel auto	3 8546,12279 8538,12245 8600,12165
+userdel auto	3 6228,10646 6216,10614 6192,10542
+userdel auto	3 6980,11583 6809,11570 6524,11583
+userdel auto	3 6192,10542 6216,10614 6228,10646
+userdel auto	3 8522,12239 8538,12245 8546,12279
+userdel auto	3 8522,12239 8538,12245 8600,12165
+userdel auto	3 8522,12239 8538,12245 8522,12187
+userdel auto	3 6524,11583 6809,11570 6980,11583
+userdel auto	3 6131,10939 6025,10746 5877,10486
+userdel auto	3 6719,10347 6753,10446 6745,10619
+userdel auto	3 6681,10959 6824,10904 6740,10755
+userdel auto	3 6540,11754 6778,11742 7073,11798
+userdel auto	3 6740,10755 6824,10904 6681,10959
+userdel auto	3 7073,11798 6778,11742 6540,11754
+userdel auto	3 6841,11114 6880,11110 7115,11220
+userdel auto	3 5829,10964 5782,10884 5681,10696
+userdel auto	3 6685,10690 6532,10529 6494,10440
+userdel auto	3 6818,10725 6972,10665 7115,10612
 ',
          'type' => 'gesperrt'
        },
@@ -2856,7 +2863,7 @@ userdel	2::inwork 19968,16 19940,52
          'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende August 2013',
          'from' => 1330902000,
          'id' => 2316,
-         'data' => '#: osm_watch: way id="23243508" version="33"
+         'data' => '#: osm_watch: way id="23243508" version="34"
 userdel	q4::inwork; -1872,24336 -1790,24260 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 ',
          'type' => 'handicap'
@@ -2893,6 +2900,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10344,19181
          'data' => '#: by: http://www.s-bahn-berlin.de/aktuell/2013/pdf/faltblatt_bruecken_treskowstrasse.pdf
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20130618.1615.386236.html
 #: XXX nächste Sperrung: Mo 8. Juli (17 Uhr) bis So 14. Juli (4 Uhr)
+#: source_id: INKO_118652
 #: next_check: 2013-06-30
 #: priority: #A
 userdel	2::inwork 18731,8577 18709,8423
@@ -3005,9 +3013,9 @@ userdel	2::temp 8119,12414 8055,12186
        undef,
        undef,
        {
-         'source_id' => 'IM_019421',
+         'source_id' => 'INKO_119074',
          'until' => 1386169200,
-         'text' => 'Friedrich-Engels-Str. stadteinwärts zwischen Nordendstr. und Platananenstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 2013/Anfang 2014)',
+         'text' => 'Friedrich-Engels-Str. in beiden Richtungen zwischen Nordendstr. und Platananenstr. Baustelle, gesperrt (bis September 2013), danach wieder Einbahnstraße',
          'from' => 1353366000,
          'id' => 2391,
          'data' => '#: by: http://www.berlin.de/ba-pankow/presse/archiv/20121015.1240.376583.html (Verzögerung bei den Bauarbeiten)
@@ -3015,13 +3023,15 @@ userdel	2::temp 8119,12414 8055,12186
 #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/friedrich_engels_strasse.html?date=20121116
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20130614.1020.386081.html (Vollsperrung ab Juni 2013)
 #: by: IM_019421 (allerdings hier nur bis Dezember 2013)
-#: next_check: 2013-06-22
+#: next_check: 2013-09-01
 #: XXX von 22.6.2013 für 10 Wochen in _beiden_ Richtungen gesperrt --- danach wieder die alte Situation herstellen
+#: XXX vmz-Eintrag dafür: Friedrich-Engels-Str. (Niederschönhausen) in beiden Richtungen zwischen Nordendstr. und Platanenstr. Geplant ab: 22.06.2013 07 Uhr, Baustelle, Straße vollständig gesperrt eine Umleitung ist eingerichtet (bis auf weiteres)	INKO_119074
 #: priority: #A
-# --- next_check: 2013-12-04 (für die alte Situation)
+# --- next_check: 2013-12-04 (für die alte Situation --- q4::inwork;, IM_019421)
+#: XXX alter Text: Friedrich-Engels-Str. stadteinwärts zwischen Nordendstr. und Platananenstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 2013/Anfang 2014)
 #: XXX danach bessere Straßenqualität? Radstreifen?
 #: osm_watch: way id="24930947" version="20"
-userdel	q4::inwork; 9149,20336 9235,20125 9266,20048 9300,19949 9333,19853 9355,19789
+userdel	q4::inwork 9149,20336 9235,20125 9266,20048 9300,19949 9333,19853 9355,19789
 ',
          'type' => 'handicap'
        },
@@ -3280,15 +3290,7 @@ userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1371851999,
-         'text' => 'Pariser Platz: Durchfahrt wegen des Obama-Besuchs gesperrt, auch für Radfahrer, 14. Juni bis 21. Juni 2013',
-         'from' => 1371160800,
-         'id' => 2443,
-         'data' => 'userdel	2::temp 8538,12245 8610,12254 8731,12270 8804,12280
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130611.0925.385925.html',
@@ -3314,45 +3316,8 @@ userdel	q4::inwork -3942,12559 -3941,12545 -3941,12376
        },
        undef,
        undef,
-       {
-         'until' => 1371664800,
-         'text' => 'Pariser Platz und weite Umgebung: umfangreiche Sperrungen wegen des Obama-Besuchs, 19. Juni 2003 von 6 bis 20 Uhr',
-         'from' => 1371528000,
-         'id' => 2449,
-         'data' => '#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/26re.pdf/file?y=2013
-userdel	2::temp 9141,12320 9130,12433 9123,12500 9008,12485 8907,12472 8775,12457 8540,12420 8400,12417 8354,12416 8546,12279 8570,12302 8573,12325 8540,12420
-userdel	2::temp 8596,11508 8592,11541 8623,11580 8698,11589 8736,11557 8740,11524
-userdel	2::temp 9054,12154 8861,12125 8743,12099
-userdel	2::temp 9130,12433 9016,12416 9028,12307 9141,12320 9164,12172 9064,12156 9076,12054 9183,12076 9164,12172
-userdel	2::temp 8965,11825 8901,12008 8861,12125 8804,12280 8775,12457
-userdel	2::temp 8553,11630 8548,11571 8502,11564 8442,11555 8209,11671 8203,11686
-userdel	2::temp 8502,11564 8473,11634 8397,11624
-userdel	2::temp 8354,12416 8119,12414 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245 8610,12254 8731,12270 8804,12280 9028,12307
-userdel	2::temp 8335,11718 8438,11753 8489,11782 8571,11846 8577,11896
-userdel	2::temp 8358,11477 8301,11469 8226,11458
-userdel	2::temp 8214,12205 8215,12156 8466,12197 8522,12239
-userdel	2::temp 8548,11571 8542,11502 8479,11493 8374,11479
-userdel	2::temp 8048,12135 8107,12145 8089,12041 8091,11992 8156,11863
-userdel	2::temp 8595,12066 8577,11896 8632,11912 8783,11959 8901,12008 9063,12051
-userdel	2::temp 8210,11775 8222,11881 8284,11905 8453,12099 8522,12187 8538,12245 8600,12165 8595,12066 8737,12098 8783,11959 8813,11825
-userdel	2::temp 8107,12145 8215,12156 8222,11881 8156,11863 8210,11775 8203,11686 8225,11692 8335,11718 8397,11624 8442,11555 8542,11502 8596,11508 8740,11524 9058,11564 9000,11727 8969,11814 8825,11773 8813,11825 8567,11799
-userdel	2::temp 8538,12245 8546,12279
-userdel	2::temp 9016,12416 9008,12485
-userdel	2::temp 8825,11773 8837,11676 8743,11663 8553,11638
-userdel	2::temp 8438,11753 8473,11634 8553,11638 8567,11799 8571,11846
-',
-         'type' => 'gesperrt'
-       },
-       {
-         'until' => 1371675600,
-         'text' => 'Spandauer Damm zwischen Sophie-Charlotten-Str. und Otto-Suhr-Allee: wegen des Obama-Besuchs möglicherweise nicht passierbar, 19. Juni 2003 von 12 bis 23 Uhr',
-         'from' => 1371549600,
-         'id' => 2450,
-         'data' => 'userdel	2::temp 2414,12418 2643,12453
-userdel	2::temp 3280,12512 3189,12519 3034,12502 2786,12473 2745,12467 2717,12463
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        {
          'source_id' => 'INKO_119210',
          'until' => 1376229600,
