@@ -1340,7 +1340,11 @@ foreach my $type (qw(start via ziel)) {
 	     $q->param($type . 'c_wgs84') ne '') {
 	my @new_params;
 	for my $old_param ($q->param($type . 'c_wgs84')) {
-	    my($x,$y) = convert_wgs84_to_data(split /,/, $old_param);
+	    my($lon,$lat) = split /,/, $old_param;
+	    if ($lon == 0 && $lat == 0) {
+		send_error(reason => "Highly probably wrong coordinate $lon/$lat in '$type', refusing to continue work.");
+	    }
+	    my($x,$y) = convert_wgs84_to_data($lon,$lat);
 	    push @new_params, "$x,$y";
 	}
 	$q->param($type . 'c', @new_params);
@@ -7709,6 +7713,16 @@ sub adjust_scope_for_search {
 	    }
 	}
     }
+
+    if (!$q->param("scope")) {
+	for my $coord (@$coordsref) {
+	    if (outside_berlin($coord)) {
+		upgrade_scope("region");
+		return;
+	    }
+	}
+    }
+
 }
 
 # falls die Koordinaten nicht exakt existieren, wird der nächste Punkt
@@ -9463,6 +9477,30 @@ sub http_req_logging {
 	warn "DEBUG: " . JSON::XS::encode_json({ map { ($_ => $q->http($_)) } $q->http }) . "\n";
     };
     warn $@ if $@;
+}
+
+sub send_error {
+    my(%args) = @_;
+    my $reason = delete $args{reason} || 'Unknown error';
+    die "Unhandled args: " . join(" ", %args) if %args;
+    my $output_as = $q->param('output_as');
+    if ($output_as && $output_as eq 'json') {
+	require JSON::XS;
+	http_header
+	    (-type => "application/json",
+	     @weak_cache,
+	    );
+	print JSON::XS->new->utf8->allow_blessed(1)->encode({error => $reason});
+    } else {
+	http_header
+	    (-type => "text/plain",
+	     @weak_cache,
+	    );
+	print "Error: $reason\n";
+    }
+    warn "DEBUG: Error page sent for " . $q->query_string . ", reason: $reason\n";
+    http_req_logging();
+    my_exit 0;
 }
 
 ######################################################################

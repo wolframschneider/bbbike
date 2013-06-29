@@ -1801,7 +1801,7 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        {
          'source_id' => 'IM_019981',
          'until' => 1373486400,
-         'text' => 'Straße des 17. Juni (Tiergarten) in beiden Richtungen zwischen Yitzhak-Rabin-Str. und Brandenburger Tor Veranstaltung, Straße vollständig gesperrt, außerdem gesperrt: Ebertstr. zwischen Behrenstr. und Dorotheenstr.',
+         'text' => 'Straße des 17. Juni (Tiergarten) in beiden Richtungen zwischen Yitzhak-Rabin-Str. und Brandenburger Tor Veranstaltung (Fashion Week), Straße vollständig gesperrt, außerdem gesperrt: Ebertstr. zwischen Behrenstr. und Dorotheenstr.',
          'from' => 1371852000,
          'id' => 1771,
          'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
@@ -2435,72 +2435,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'periodic' => 1,
-         'until' => 1371938399,
-         'text' => 'CSD am 22.6.2012',
-         'from' => 1371765600,
-         'id' => 2083,
-         'data' => 'userdel	2::temp 6171,10657 6216,10614 6268,10588 6353,10583 6468,10550 6532,10529 6636,10492 6753,10446 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6985,10597 6972,10665 6918,10854 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6809,11979 6828,12031 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245 8610,12254
-userdel	2::temp 6353,10583 6292,10627 6228,10646 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808
-userdel	2::temp 7033,10396 6851,10416
-userdel auto	3 7039,12314 7383,12095 7460,12054
-userdel auto	3 7115,10612 6972,10665 6818,10725
-userdel auto	3 8600,12165 8538,12245 8546,12279
-userdel auto	3 8600,12165 8538,12245 8522,12187
-userdel auto	3 8600,12165 8538,12245 8522,12239
-userdel auto	3 5877,10486 6025,10746 6131,10939
-userdel auto	3 6216,10614 6228,10646 6250,10701
-userdel auto	3 7131,10331 7033,10328 7060,10221
-userdel auto	3 7131,10331 7033,10396 7245,10499
-userdel auto	3 6380,10704 6353,10583 6302,10462
-userdel auto	3 7002,11034 6873,11011 6732,11106
-userdel auto	3 5681,10696 5782,10884 5829,10964
-userdel auto	3 7460,12054 7383,12095 7039,12314
-userdel auto	3 6692,11365 6851,11346 7103,11247
-userdel auto	3 7827,12105 7816,12150 7875,12363
-userdel auto	3 7103,11247 6851,11346 6692,11365
-userdel auto	3 6745,10619 6753,10446 6719,10347
-userdel auto	3 6494,10440 6532,10529 6685,10690
-userdel auto	3 6787,12099 6828,12031 6857,11992
-userdel auto	3 6915,11492 6825,11486 6716,11439
-userdel auto	3 6302,10462 6353,10583 6380,10704
-userdel auto	3 7245,10499 7033,10396 7131,10331
-userdel auto	3 8522,12187 8538,12245 8522,12239
-userdel auto	3 8522,12187 8538,12245 8600,12165
-userdel auto	3 8522,12187 8538,12245 8546,12279
-userdel auto	3 6716,11439 6825,11486 6915,11492
-userdel auto	3 8048,12135 8055,12186 8119,12414
-userdel auto	3 7115,11220 6880,11110 6841,11114
-userdel auto	3 8119,12414 8055,12186 8048,12135
-userdel auto	3 6857,11992 6828,12031 6787,12099
-userdel auto	3 6732,11106 6873,11011 7002,11034
-userdel auto	3 7875,12363 7816,12150 7827,12105
-userdel auto	3 7060,10221 7033,10328 7131,10331
-userdel auto	3 6250,10701 6228,10646 6216,10614
-userdel auto	3 8546,12279 8538,12245 8522,12239
-userdel auto	3 8546,12279 8538,12245 8522,12187
-userdel auto	3 8546,12279 8538,12245 8600,12165
-userdel auto	3 6228,10646 6216,10614 6192,10542
-userdel auto	3 6980,11583 6809,11570 6524,11583
-userdel auto	3 6192,10542 6216,10614 6228,10646
-userdel auto	3 8522,12239 8538,12245 8546,12279
-userdel auto	3 8522,12239 8538,12245 8600,12165
-userdel auto	3 8522,12239 8538,12245 8522,12187
-userdel auto	3 6524,11583 6809,11570 6980,11583
-userdel auto	3 6131,10939 6025,10746 5877,10486
-userdel auto	3 6719,10347 6753,10446 6745,10619
-userdel auto	3 6681,10959 6824,10904 6740,10755
-userdel auto	3 6540,11754 6778,11742 7073,11798
-userdel auto	3 6740,10755 6824,10904 6681,10959
-userdel auto	3 7073,11798 6778,11742 6540,11754
-userdel auto	3 6841,11114 6880,11110 7115,11220
-userdel auto	3 5829,10964 5782,10884 5681,10696
-userdel auto	3 6685,10690 6532,10529 6494,10440
-userdel auto	3 6818,10725 6972,10665 7115,10612
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2863,7 +2798,7 @@ userdel	2::inwork 19968,16 19940,52
          'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende August 2013',
          'from' => 1330902000,
          'id' => 2316,
-         'data' => '#: osm_watch: way id="23243508" version="34"
+         'data' => '#: osm_watch: way id="23243508" version="35"
 userdel	q4::inwork; -1872,24336 -1790,24260 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 ',
          'type' => 'handicap'
@@ -3324,7 +3259,10 @@ userdel	q4::inwork -3942,12559 -3941,12545 -3941,12376
          'text' => 'Bergiusstr.: Baustelle, Fahrbahn gesperrt, Gehweg evtl. auch nicht passierbar, bis 11.08.2013 16:00 Uhr ',
          'from' => 1371358800,
          'id' => 2451,
-         'data' => 'userdel	2::inwork 14193,6556 14144,6627 14193,6718 14153,6795
+         'data' => '#: XXX nach den Bauarbeiten: Bergiusstr. führt direkt zur Grenzallee, ebenso neu: Ampel an der Anschlussstelle
+#: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/download/A100_UmbauAusfahrtGrenzallee.pdf
+#: next_check: 2013-08-10
+userdel	2::inwork 14193,6556 14144,6627 14193,6718 14153,6795
 ',
          'type' => 'gesperrt'
        },
@@ -3338,6 +3276,17 @@ userdel	q4::inwork -3942,12559 -3941,12545 -3941,12376
 userdel	q4::inwork 13301,8606 13262,8554 13217,8493
 ',
          'type' => 'handicap'
+       },
+       undef,
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Sommer: 21.00 bis 6.00 Uhr',
+         'from' => undef,
+         'id' => 2454,
+         'data' => 'Kleistpark	2::night 7209,9507 7275,9506 7307,9528 7351,9503 7386,9502 7414,9523 7430,9576 7416,9625 7391,9645 7347,9644 7310,9622 7277,9652 7216,9657
+Kleistpark	2::night 7430,9576 7501,9573 7520,9572
+'
        }
      
 );
