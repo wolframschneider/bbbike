@@ -241,7 +241,7 @@ Knaackstr.	1 11056,15009 11038,14972 11101,14768
 Hagenplatz	1 1149,8538 1094,8398
 Branitzer Platz	1 1346,12053 1311,12084 1311,12122 1334,12152 1374,12164 1407,12134 1414,12091 1386,12058 1346,12053
 Reutlinger Str.	1 7676,4216 7601,4485
-Sybel-/Waitzstr.	1 3883,10577 3800,10580 3744,10668 3734,10756
+Sybel-/Waitzstr.	1 3883,10585 3764,10580 3731,10640 3726,10757
 #: by: Erik Boß:
 Aßmannstr.	1 25012,5729 25048,5727 25039,5304 25039,5295
 Schönblicker Str.	1 31670,3604 31661,3665 31695,3690 31745,3679 31756,3620 31724,3592 31670,3604
@@ -273,7 +273,7 @@ Schmollerplatz/str.	1 13244,9410 13184,9340 13209,9325
 Isarstr.	1s:q4 12349,8464 12368,8356
 Zionskirchplatz	1 10306,14247 10277,14350 10315,14386 10365,14372 10389,14274
 Ohmstr.	1 11324,11689 11378,11856
-Anton-Saefkow-Str.	1 13186,14397 13084,14472 13013,14523 12901,14594 12874,14608 12782,14676 12723,14714 12520,14833
+Anton-Saefkow-Str.	1 13183,14400 13084,14472 13013,14523 12901,14594 12874,14608 12782,14676 12723,14714 12520,14833
 Spilstr.	1 3865,6758 3826,6656 3836,6550
 #: note einige Radfahrer hier in der falschen Richtung angetroffen vvv
 Wöhlertstr.	1s:q4 8442,14456 8669,14550
@@ -679,7 +679,7 @@ Wegastr	1 15222,7162 15175,7221
 Möllendorffstr.	1 15515,13134 15531,13022 15561,12950 15563,12860 15546,12690
 Möllendorffstr.	1 15546,12690 15516,12838 15515,13134
 Joachimsthaler Str. (Hohenschönhausen)	1 17117,14885 17129,14804 17063,14797 16943,14785
-Otto-Brahm-Str.	1 14440,15682 14400,15787 14365,15778 14282,15746 14317,15642
+Otto-Brahm-Str.	1 14440,15682 14400,15787 14365,15778 14282,15746 14321,15636
 Prenzlauer Allee [Wohngebiet]	1 12154,15902 12030,15968
 (Prenzlauer Allee - Ostseestr.)	1 12232,16110 12198,15999 12154,15902
 Blumenstr.	1 12125,12490 12306,12459 12305,12440
@@ -855,8 +855,8 @@ Saaleckplatz	1s:q3 5162,1110 5178,1123
 Saaleckplatz	1 5178,1123 5190,1114 5212,1074 5204,1057
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1011/nachricht4142.html
 #: note: geschlossen ab 2012-12-01, kein Wiedereröffnungstermin
-Fußgängertunnels Sybel-Waitz-Str.: provisorische Schließung	2 3712,10566 3731,10563 3781,10569 3800,10580
-Meyerinckplatz	1 4030,10575 4007,10559 3978,10582 3997,10607
+Fußgängertunnels Sybel-Waitz-Str.: provisorische Schließung	2 3712,10566 3731,10563 3759,10567 3764,10580
+Meyerinckplatz	1 4030,10575 4007,10559 3981,10590 3997,10607
 #: by: osm
 #: confirmed_by: Wilfried Spang & srt:
 Beyschlagstr.	1 21,22545 5,22384 184,22257
@@ -1057,6 +1057,7 @@ Möllendorffstr. [Wohngebiet]	1 15470,13509 15477,13268
 Oberspreestr. [Wohngebiet]	1 19614,5132 19629,5019 19679,5025 19667,5126 19614,5132
 Kornmandelweg	1 21311,13522 21345,13550
 Immortellenweg: Schulhof	2 24282,10015 24314,10096
+Walterstr.	1s:q3 13126,6687 13099,6712
 ######################################################################
 # empfohlene Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1240,7 +1241,8 @@ Ibsenstr.	1s:q1 10295,16667 10209,16674
 Eichhornstr.	1s:q3 8232,11414 8253,11306 8280,11296
 #: XXX wird hier die Einbahnstraßenregelung für Radfahrer aufgehoben?
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5407
-#: next_check: 2013-07-30
+#: last_checked: 2013-06-28
+#: check_frequency: 60d
 Paul-Junius-Str.	1s:q2 15096,12974 15092,13105
 Ahornallee	1s:q3 1589,11483 1574,11379
 Lindenallee	1s:q3 1429,11523 1403,11428
@@ -1336,7 +1338,7 @@ Falkenseer Chaussee: Mittelstreifen	3nocross -5039,15618 -5154,15651 -5373,15714
 Allee der Kosmonauten: Straßenbahntrasse	3nocross 20269,14256 20241,14016 20210,13776
 Allee der Kosmonauten: Straßenbahntrasse	3nocross 20822,14594 20868,14698 20944,14840
 Landsberger Allee: Mittelstreifen	3nocross 20260,15434 20525,15571 20641,15622
-Landsberger Allee: Mittelstreifen	3nocross 15256,14237 15430,14262 15838,14319
+Landsberger Allee: Mittelstreifen	3nocross 15256,14237 15430,14262 15850,14308
 Alt-Kaulsdorf: Mittelstreifen	3nocross 22484,11270 22756,11268 22937,11265
 Alt-Kaulsdorf: Mittelstreifen	3nocross 23101,11261 23362,11263 23447,11264 23648,11265
 Alt-Mahlsdorf: Mittelstreifen	3nocross 24175,11265 24019,11264 23848,11264 23648,11265
@@ -1476,13 +1478,14 @@ Danziger Str.: Mittelstreifen mit Straßenbahn	3nocross 11709,14856 11609,14881 1
 Danziger Str.: Mittelstreifen mit Straßenbahn	3nocross 12317,14535 12128,14640 12025,14695
 Torstr.: Mittelstreifen mit Straßenbahn	3nocross 10746,13673 10640,13700 10569,13719 10463,13747
 Yorckstr.: Linksabbiegen verboten (und unbequem)	3nocross 8192,9619 8097,9650 7938,9694
+Hauptstr./Kleistpark: unbequemes Überqueren, stark befahrene Straße	3nocross 7517,9454 7520,9572 7526,9791
 An den Treptowers: unbequemes Überqueren, stark befahrene Straße	3nocross 14501,10169 14405,10027 14289,9870
 Lichtenberger Str.: Mittelstreifen	3nocross 12028,12519 12006,12464 11920,12266
 Sachsendamm: unbequem passierbarer Mittelstreifen	3nocross 7696,7562 7859,7486 7946,7411
 Karl-Marx-Str.: Mittelstreifen	3nocross 12598,8390 12582,8408 12562,8432 12540,8458
 Karl-Marx-Str.: unbequemes Überqueren wegen parkender Autos	3nocross 12830,8031 12865,7923 12898,7832
 Flughafenstr.: Mittelstreifen (nicht unpassierbar, aber unbequem)	3nocross 11632,8302 11767,8330 11898,8362
-Stromstr.: unpassierbarer Mittelstreifen	3nocross 6183,13083 6165,12985 6157,12933 6150,12875
+Stromstr.: unpassierbarer Mittelstreifen	3nocross 6183,13083 6164,12980 6157,12933 6150,12875
 Märkische Allee: Linksabbiegen verboten	3nocross 20109,16305 20219,16523 20339,16752
 Märkische Allee: Linksabbiegen verboten	3nocross 20512,17101 20691,17463 20717,17516 20843,17745 20889,17838 20912,17872 21009,18055
 Märkische Allee: Mittelstreifen	3nocross 19896,11688 19918,11891 19939,12068 19947,12140 20002,12492
@@ -1497,7 +1500,7 @@ Mühlendamm: unbequemes Passieren des Mittelstreifens	3nocross 10675,12280 10700,
 Kurfürstendamm: unbequemes Passieren des Mittelstreifens (Bordsteine)	3nocross 5229,10716 5351,10760 5475,10808
 Möllendorffstr.: Mittelstreifen mit Straßenbahn	3nocross 15420,12178 15443,12222 15480,12306 15508,12367
 Müllerstr.: Zaun auf dem Mittelstreifen	3nocross 6781,16026 6914,15908 6936,15888 7043,15793
-Indira-Gandhi-Str.: Straßenbahntrasse	3nocross 14597,15970 14609,15921 14650,15750
+Indira-Gandhi-Str.: Straßenbahntrasse	3nocross 14597,15970 14609,15921 14653,15738
 Indira-Gandhi-Str.: Straßenbahntrasse	3nocross 14550,16161 14522,16260 14499,16341
 # REMOVED (das Überqueren ist möglich!) --- Weißenseer Weg: Straßenbahntrasse	3nocross 15058,14575 15110,14486 15164,14392
 Lichtenberger Brücke: unbequemes Passieren des Mittelstreifens (Bordsteine, starker Verkehr)	3nocross 16737,11866 16803,11859 16962,11833 17037,11820 17121,11806 17151,11801
@@ -1903,6 +1906,7 @@ tragen (31 Stufen oder Kinderwagenrampe)	0:40 13168,21706
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+Drängelgitter	BNP:3::trailer=10 6129,12976
 #: by: public imagery
 Drängelgitter	BNP:3::trailer=10 24207,10858
 #: note: enge Führung, mit Anhänger wahrscheinlich nicht oder nur mit Aufwand passierbar vvv
@@ -2266,10 +2270,7 @@ Drängelgitter (vor der Straßenbahnhaltestelle)	BNP:5 29103,4765
 Schranke	BNP:5 32192,5915
 Schranke, schwer passierbar	BNP:10 7625,9376
 Schranke	BNP:5 7612,9446
-#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4744&options=4
-#: XXX Ist eine Verbesserung in Zukunft in Sicht?
-#: next_check: 2013-05-31
-Barriere	BNP:0::trailer=30 3268,11834
+Barriere	BNP:0::trailer=3 3268,11847
 Drängelgitter	BNP:5 -5890,25875
 # REMOVED (keine Behinderungen) --- #: note: Anhänger sollten vielleicht den Gehweg benutzen --- Schranke, eine Seite eventuell offen	BNP:3::trailer=10 12490,9056
 # REMOVED (eine Hälfte der Schranke nicht mehr vorhanden) --- #: note: Anhänger sollten vielleicht den Gehweg benutzen --- Schranke, eine Seite eventuell offen	BNP:3::trailer=10 12565,9200
@@ -2327,8 +2328,9 @@ Drängelgitter	BNP:3::trailer=10 49739,-90894
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
 #: XXX_prog: ":inwork" kann als Attribut nicht genutzt werden!
-#: last_checked: 2013-06-04
-#: next_check: 2013-08-04
+#: source_id: INKO_113041
+#: last_checked: 2013-06-24
+#: check_frequency: 60d
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross 9984,12426 9934,12420 9852,12409
 # 
 #: XXX eine Umleitung existiert, ist aber von der Westseite schwierig zu finden und könnte nachts gesperrt sein
@@ -2347,8 +2349,8 @@ Uckerpromenade: wegen LAGA gesperrt (bis Oktober 2013)	2 39671,100750 39474,1009
 Seepark: wegen LAGA gesperrt (bis Oktober 2013)	2 39754,100955 39474,100982
 #: next_check ^^^
 # 
-#: last_checked: 2013-05-04
-#: next_check: 2013-07-04
+#: last_checked: 2013-06-28
+#: check_frequency: 60d
 Sokratesweg: Bauarbeiten, gesperrt	2:inwork 18527,9623 18520,9585
 # 
 #: by: http://www.potsdam.de/cms/ziel/996205/DE/?date=20130419
@@ -2376,10 +2378,7 @@ Sperrung am zukünftigen Landtag: Radweg Richtung Westen gesperrt (22. April 2013
 #: XXX geplante Fertigstellung (als Autostraße) im Dezember 2013
 Nordufer: wegen Bauarbeiten für die S21 gesperrt	2:inwork 7427,14648 7212,14738
 # 
-#: last_checked: 2013-06-04
-#: next_check: 2013-08-01
-#: XXX siehe auch Eintrag zur Friedrichsbrücke in handicap_s-orig
-Spreeufer: wegen Bauarbeiten an der Friedrichsbrücke gesperrt	2:inwork 10166,12777 10105,12855
+# REMOVED (offensichtlich wieder passierbar) --- #: last_checked: 2013-06-04 --- #: next_check: 2013-08-01 --- #: XXX siehe auch Eintrag zur Friedrichsbrücke in handicap_s-orig --- Spreeufer: wegen Bauarbeiten an der Friedrichsbrücke gesperrt	2:inwork 10166,12777 10105,12855
 # 
 #: last_checked: 2013-02-20
 #: next_check: 2015-01-01
@@ -2393,7 +2392,7 @@ Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwor
 #: by: http://www.sanierung-berlin.de/sanwa/Projekte/Helsingforser_Platz/Helsingf_Platz_Fugmann_Pr_sentation.pdf
 #: by: http://www.stadtentwicklung.berlin.de/staedtebau/foerderprogramme/stadtumbau/Helsingforser-Platz.6562.0.html
 #: XXX siehe auch Einträge in handicap_s-orig
-#: last_checked: 2013-06-03
+#: last_checked: 2013-06-27
 #: check_frequency: 90d
 Helsingforser Str.: Bauarbeiten, auch der Gehweg ist nicht passierbar	2:inwork 13496,11384 13427,11431
 # 
@@ -2404,14 +2403,14 @@ Helsingforser Str.: Bauarbeiten, auch der Gehweg ist nicht passierbar	2:inwork 1
 #: by: http://www.bmbf.de/de/16888.php (Bezug im Herbst 2014)
 Margarete-Steffin-Str.: wegen Bauarbeiten gesperrt	2:inwork 8315,13181 8406,13127 8525,12958
 # 
-#: last_checked: 2013-05-01
-#: next_check: 2013-07-01
+#: last_checked: 2013-06-27
+#: next_check: 2013-08-17
 Alt-Moabit - Invalidenstr.: wegen Bauarbeiten für die Straßenbahnanbindung gesperrt	2:inwork 7443,13008 7416,13058
 # 
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
 #: XXX siehe auch Eintrag in handicap_s-orig
-#: last_checked: 2013-06-07
-#: next_check: 2013-07-17
+#: last_checked: 2013-06-27
+#: check_frequency: 90d
 Oberwallstr.: Bauarbeiten, komplett gesperrt	2:inwork 9890,12161 9875,12257
 # 
 #: by: Kai Wagner
@@ -2467,11 +2466,11 @@ Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552
 #: by: Kai Wagner (permanente Sperrung)
 #: confirmed_by: srt
 #: osm_watch: way id="4402045" version="9"
-#: last_checked: 2013-06-02
+#: last_checked: 2013-06-27
 #: check_frequency: 100d
 Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
 # 
-#: last_checked: 2013-04-09
+#: last_checked: 2013-06-27
 #: check_frequency: 100d
 #: XXX evtl. permanent
 Vorfahrt Reichstagsgebäude: Absperrgitter, keine Durchfahrt mehr möglich	2 8400,12417 8399,12610
@@ -2497,9 +2496,9 @@ Uferweg am Tegeler Hafen: Weg wegen Bauarbeiten gesperrt	2:inwork 1861,20467 182
 # 
 # REMOVED --- laut http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a115_avus/de/bau.shtml?y=20120731 seit April schon offen! --- #: by: somebody via phone call ---#: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a115_avus/de/bau.shtml --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4396.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1110/nachricht4504.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1201/nachricht4557.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1206/nachricht4691.html---#: by: INKO_109786---#: last_checked: 2012-07-05---#: next_check: 2012-11-15---Hüttenweg: Sperrung wegen Bau an der Autobahn, wahrscheinlich bis Ende November 2012	2:inwork -739,6838 -927,6888
 # 
-#: last_checked: 2013-02-11
-#: next_check: 2013-06-11
 #: note: abgeschlossener Zaun
+#: last_checked: 2013-06-24
+#: check_frequency: 180d
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
 # 
 #: last_checked: 2013-05-08 vvv
@@ -2618,7 +2617,7 @@ Bozener Str.	1 5971,8926 5975,9094
 Kleiststr.: schwierig zu querender Mittelstreifen	3nocross 6532,10529 6636,10492 6753,10446
 # REMOVED (Richtungsfahrbahnen eingezeichnet) --- Bundesallee: Queren nicht möglich	3nocross 5354,8236 5363,8170 5376,8104 5357,8013
 (Los-Angeles-Platz)	1s:q3 5681,10696 5822,10609
-Bregenzer Str.	1 4278,10262 4227,10014
+Bregenzer Str.	1 4279,10270 4227,10014
 Schwingtor zum Spielplatz	BNP:10 11865,13027
 Schwingtor zum Spielplatz	BNP:10 11874,13048
 Schwingtor zum Spielplatz	BNP:10 11815,13045
@@ -2671,11 +2670,11 @@ Kette	BNP:5 3370,9215
 Kette	BNP:5 3264,9261
 #: corrected_by: srt/new_policy (0:240 -> 2 x 0:40; 60s for 60 steps and 20s for the way under the tunnel, divided into two) vvv
 (Fußgängertunnel Sybelstr.): 30 Stufen	0:40 3731,10563
-(Fußgängertunnel Sybelstr.): 30 Stufen	0:40 3781,10569
+(Fußgängertunnel Sybelstr.): 30 Stufen	0:40 3759,10567
 #: corrected_by ^^^
-Bregenzer Str.	1 4278,10262 4227,10014
+Bregenzer Str.	1 4279,10270 4227,10014
 Kniprodestr.: unpassierbarer Mittelstreifen (Straßenbahn, Bordsteine)	3nocross 12901,14093 12972,14173 12992,14196 13026,14234
-Kniprodestr.: schlecht zu querender Mittelstreifen (Bordsteine, Verkehr)	3nocross 13057,14267 13097,14307 13186,14397 13242,14458 13301,14516 13367,14588
+Kniprodestr.: schlecht zu querender Mittelstreifen (Bordsteine, Verkehr)	3nocross 13057,14267 13097,14307 13183,14400 13239,14461 13295,14521 13362,14593
 (Treppe zur Putlitzbrücke): tragen, ca. 35 Stufen	0:40 6253,14184
 #: by: rjoop
 (Treppe zur Putlitzbrücke): tragen, 35 Stufen	0:40 6209,14245

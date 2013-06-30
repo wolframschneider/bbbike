@@ -651,10 +651,12 @@ update-javascript:
 java-config:
 	test -r $$HOME/.osmosis || ln -fs $$HOME/projects/bbbike/world/etc/dot.osmosis $$HOME/.osmosis
 
-dist-clean devel-clean distclean: clean rotate-osm deb-clean
+dist-clean devel-clean distclean: clean rotate-osm deb-clean temp-clean
 	${RM_BG} ${OSM_DIR}
 	mkdir -p ${OSM_DIR}
 	${MAKE} -C./t distclean
+
+temp-clean:
 	rm -rf ${TMP_DIR}
 
 clean-planet:
@@ -816,6 +818,13 @@ tile-csv:
 	done
 	ls -l ${TILES_DIR}/etc/tile-*.csv
 
+tile-aws-s3:
+	cd ${TILES_DIR}/etc; \
+	  for i in tile-*.csv; do \
+	    s3put bbbike/tile/ $$i; \
+	    echo "wget http://s3.amazonaws.com/bbbike/tile/$$i"; \
+	  done
+
 tile-checksum:
 	cd ${_pbf_dir}; pwd=`pwd`; \
 	for i in *; do \
@@ -829,7 +838,7 @@ tile-rsync:
 	rsync -av ${TILES_DIR}/lnglat/ ${BBBIKE_WEBSERVER_DOWNLOAD_DIR}/osm/planet/${TILES_DIR}/lnglat/
 
 # for errors look in ./tile/tmp
-tile: tile-extract tile-convert tile-checksum tile-csv
+tile: tile-extract tile-convert tile-checksum tile-csv tile-aws-s3
 
 ##############################################################################################
 # debian package rules
@@ -857,6 +866,9 @@ deb-equivs:
 	    equivs-build $$i; \
 	done
 	ls -l ${DEB_DIR}/*.deb
+
+deb-bin:
+	${MAKE} -C./world/etc/apt/deb $@
 
 deb-clean:
 	rm -rf ${DEB_DIR}
@@ -947,13 +959,13 @@ osmand-devel:
 test-org:
 	./world/bin/lighttpd-template-update
 
-lighttpd-restart: test-org
+lighttpd-restart: temp-clean test-org
 	-killall lighttpd
 	sleep 0.9
 	mkdir -p ${TMP_DIR}
 	TMPDIR=${TMP_DIR} $$(pwd)/world/bin/lighttpd-start &
 
-test prove: lighttpd-restart
+test prove: lighttpd-restart 
 	perl -c cgi/bbbike.cgi
 	mkdir -p ${TMP_DIR}
 	TMPDIR=${TMP_DIR} LANG=C time prove -j${MAX_CPU}
@@ -996,9 +1008,9 @@ help:
 	@echo "  [ staging | extract-bbbike-org-install | extract-distclean ]"
 	@echo "  [ extract-gc | extract-gc7 | extract-gc-osm ]"
 	@echo "  [ tile | tile-extract | tile-convert | tile-csv | tile-checksum ]"
-	@echo "  [ tile-distclean | tile-rsync ]"
+	@echo "  [ tile-distclean | tile-rsync | tile-aws-s3 ]"
 	@echo "  [ test-org | lighttpd-restart | test ]"
-	@echo "  [ deb-clean | deb-perl | deb-equivs | deb-repo ]"
+	@echo "  [ deb-clean | deb-perl | deb-equivs | deb-bin | deb-repo ]"
 	@echo "  [ debian-bootstrap | bbbike-bootstrap ]"
 
 	@echo ""
