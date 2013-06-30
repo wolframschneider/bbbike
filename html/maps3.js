@@ -3238,8 +3238,7 @@ function granularity(val, gran) {
 
 function debug(text, id) {
     // log to JavaScript console
-    if (typeof console === "undefined" || typeof console.log === "undefined") { 
-	/* ARGH!!! old IE */
+    if (typeof console === "undefined" || typeof console.log === "undefined") { /* ARGH!!! old IE */
     } else {
         console.log("BBBike extract: " + text);
     }
