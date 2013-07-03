@@ -110,7 +110,7 @@ if (!@urls) {
 }
 
 my $bbbike_org = $ENV{BBBIKE_TEST_ORG_LATER} ? 7 : 0;
-plan tests => (264 - $bbbike_org + ($test_file_cache ? 6*3 : 0)) * scalar @urls;
+plan tests => (255 - $bbbike_org + ($test_file_cache ? 6*3 : 0)) * scalar @urls;
 
 my $default_hdrs;
 if (defined &Compress::Zlib::memGunzip && $do_accept_gzip) {
