@@ -16,7 +16,7 @@ zur Pasewalker Straße: bei der Ampel an der Rothenbachstr. die Straßenseite wech
 abbiegender Waldweg zur Köpenicker Str. ist nicht ausgeschildert	CP2; 20869,7116 20887,7267
 abgehender Waldweg ist etwas versteckt, Bordstein muss überquert werden	CP2; 20887,7267 20869,7116
 Zugang durch Betonabsperrung	CP2; 21222,12501 21190,12515
-am Gartenbauamt abbiegen	CP2; 7663,11946 7553,11887
+am Gartenbauamt abbiegen	CP2; 7658,11947 7634,11920
 Schillerstr. Richtung Ernst-Reuter-Platz: zunächst linken Gehweg bis zur Ampel am Ernst-Reuter-Platz benutzen	CP; 4574,11587 4900,11626 4838,11697
 Hardenbergstr. - Schillerstr.: bereits an der Knesebeckstraße auf den linken Gehweg wechseln	PI; 4919,11605 4900,11626 4574,11587
 Zossener - Brachvogelstr.: bereits an der Fußgängerampel Waterloo-Ufer Straßenseite wechseln	PI; 9865,10227 9858,10199 9884,10192
@@ -100,8 +100,6 @@ Theaterufer: zwischen Straßentunnel und Debis-Gebäude	CP2; 8261,11015 8289,11205
 Richterstr. - Rathausstr.: zum Spielplatz einbiegen	CP2; 9277,3993 9294,3921
 Linksabbiegen in die Clayallee über Fußgängerfurt	CP; 1429,3609 1064,3743 971,3534
 Linksabbiegen in die Schlettstadter Str. über Fußgängerfurt	CP; 1136,3878 1064,3743 1429,3609
-Luitpoldstr.: Queren der Martin-Luther-Str. über Furt möglich	CP; 6463,9862 6512,9866 6611,9879
-Luitpoldstr.: Queren der Martin-Luther-Str. über Furt möglich	CP; 6611,9879 6512,9866 6463,9862
 Kehlheimer/Würzburger: Queren der Lietzenburger über Kfz-Furt möglich	CP; 5894,10287 5898,10318 5909,10353
 Kehlheimer/Würzburger: Queren der Lietzenburger über Kfz-Furt möglich	CP; 5909,10353 5898,10318 5894,10287
 das Portal des Anhalter Bahnhofs links liegen lassen	CP2; 8938,10872 8912,10846

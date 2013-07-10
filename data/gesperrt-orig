@@ -1309,8 +1309,7 @@ Buschkrugallee: Mittelstreifen mit hoher Kante	3nocross 14119,4153 14048,4363 14
 Buschkrugallee: Mittelstreifen mit hoher Kante	3nocross 13939,4778 13914,4877 13892,4955
 Landsberger Allee: Straßenbahntrasse	3nocross 12878,13229 12979,13280 13078,13330
 Hauptstr.: Straßenbahntrasse	3nocross 15639,10469 15404,10633 15379,10651
-Hauptstr.: Straßenbahntrasse	3nocross 16004,10204 16114,10123 16138,10105
-Hauptstr.: Straßenbahntrasse	3nocross 16138,10105 16187,10033 16261,9925 16302,9865
+Hauptstr.: Straßenbahntrasse	3nocross 16004,10204 16114,10123 16138,10105 16187,10033 16261,9925 16302,9865
 #: by: Heike Steinhardt ("eher nicht empfehlenswert")
 #: confirmed_by: srt
 Kniprodestr.: Grünstreifen	3nocross 13644,14915 13744,15018 13823,15111
@@ -1426,7 +1425,6 @@ Bornhomer Str.: Straßenbahntrasse	3nocross 10765,16486 10699,16492 10620,16497
 Bornhomer Str.: Straßenbahntrasse	3nocross 10620,16497 10533,16505 10458,16509
 Bornhomer Str.: Straßenbahntrasse	3nocross 10458,16509 10370,16516 10282,16522 10197,16528
 Karl-Liebknecht-Str./Rosenstr.: Straßenbahntrasse	3nocross 10431,12709 10525,12789 10695,12933 10733,12967
-Martin-Luther-Str.: Mittelstreifen	3nocross 6502,9782 6512,9866 6514,9947
 Martin-Luther-Str.: Mittelstreifen	3nocross 6502,9782 6447,9661 6445,9538
 Schönhauser Allee: U-Bahnviadukt und Straßenbahn	3nocross 10997,16280 10989,16197 10982,16121
 Oberspreestr.: Straßenbahntrasse	3nocross 21579,4579 21726,4537 21796,4517
@@ -2443,7 +2441,7 @@ Rudi-Dutschke-Weg	2:inwork 2627,5095 2913,5294
 #: XXX laut INKO_113363 bis Ende Mai 2014 gesperrt
 #: source_id: INKO_113363
 #: osm_watch: way id="197160274" version="1"
-#: last_checked: 2013-05-24
+#: last_checked: 2013-07-09
 #: next_check: 2014-04-01
 Voßstr.: gesperrte Fahrbahn (Baustelle), kein Ausweichen möglich	2:inwork 8837,11676 9000,11727
 # 
@@ -2566,10 +2564,10 @@ Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,127
 # REMOVED --- #: last_checked: 2010-09-11 --- #: next_check: 2010-12-31 --- #: XXX der Neubau wird "N" oder "NH" sein und Radwege haben --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0907/nachricht3563.html --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1005/nachricht3870.html --- #: by: http://www.altglienicke.de/aktuell.php : Sperrung aufgehoben (20.05.11) --- Wegedornbrücke: Vollsperrung, Neubau	2:inwork 20385,593 20442,564 20510,530 20534,501
 # REMOVED (für Radfahrer befahrbar) --- #: last_checked: 2013-04-16 --- #: check_frequency: 7d --- #: XXX abhängiger Eintrag in vorfahrt-orig sowie in ampeln-orig (auskommentierte Ampel) --- Kynaststraße: Bauarbeiten im südlichen Abschnitt	2:inwork 14652,10201 14724,10297 14766,10372 14797,10476 14805,10518
 # 
-#: last_checked: 2013-06-12
-#: next_check: 2014-09-01
 #: by: http://www.tagesspiegel.de/berlin/haengepartie-fuer-die-loewenbruecke/4572208.html
 #: osm_watch: way id="22792488" version="5"
+#: last_checked: 2013-07-09
+#: next_check: 2014-09-01
 Löwenbrücke: gesperrt	2:inwork 6406,11784 6467,11780
 # 
 #: last_checked: 2013-07-06
