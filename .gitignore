@@ -46,6 +46,7 @@ cgi/crossing.cgi
 cgi/livesearch-extract.cgi
 cgi/extract.cgi
 cgi/tile-size.cgi
+cgi/extract-email.cgi
 data-osm.bbbike.tgz
 data-osm.bbbike/
 data-osm.old/
