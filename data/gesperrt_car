@@ -184,7 +184,7 @@ Hohenfriedbergstr.	3 7791,8882 7790,8913 7782,9115
 Hohenfriedbergstr.	3 7782,9115 7790,8913 7791,8882
 Hohenfriedbergstr. - Brunhildstr.	3 7782,9115 7790,8913 7707,8915
 Hohenfriedbergstr. - Brunhildstr.	3 7707,8915 7790,8913 7782,9115
-Olga-Benario-Prestes-Str.	1 12653,14653 12473,14763
+Olga-Benario-Prestes-Str.	1 12628,14650 12473,14763
 Filandastr.	3nocross::ignrte 5687,5486 5687,5586 5683,5672 5681,5743
 Althoffpl. -> Filandastr.: Filandastr.	3::igndisp 5609,5584 5687,5586 5683,5672
 Althoffpl. -> Kantstr.: Filandastr.	3::igndisp 5609,5584 5687,5586 5840,5588
@@ -260,11 +260,11 @@ Landsberger Allee -> Fritz-Riedel-Str.: Straßenbahn	3::igndisp 13543,13568 13635
 Hausburgstr. -> Fritz-Riedel-Str.: Straßenbahn	3::igndisp 13706,13460 13635,13605 13521,13781
 Hausburgstr. -> Landsberger Allee: Straßenbahn	3::igndisp 13706,13460 13635,13605 13543,13568
 Landsberger Allee -> Hausburgstr.: Straßenbahn	3::igndisp 13702,13634 13635,13605 13706,13460
-Straßenbahn	3nocross::ignrte 21398,15671 21475,15705 21584,15753 21694,15802
+Straßenbahn	3nocross::ignrte 21398,15671 21475,15705 21584,15753 21709,15808
 Pöhlbergstr -> Landsberger Allee: Straßenbahn	3::igndisp 21491,15671 21475,15705 21398,15671
 Landsberger Allee -> Pöhlbergstr: Straßenbahn	3::igndisp 21584,15753 21475,15705 21491,15671
 Landsberger Allee -> Schönagelstr.: Straßenbahn	3::igndisp 21475,15705 21584,15753 21602,15908
-Schönagelstr. -> Landsberger Allee: Straßenbahn	3::igndisp 21602,15908 21584,15753 21694,15802
+Schönagelstr. -> Landsberger Allee: Straßenbahn	3::igndisp 21602,15908 21584,15753 21709,15808
 Topsstr.	1 10607,15142 10886,15251
 Schönhauser Allee	3nocross::ignrte 10902,15422 10917,15525 10941,15697
 Buchholzer Str. -> Schönhauser Allee: Schönhauser Allee	3::igndisp 11055,15504 10917,15525 10902,15422
@@ -320,7 +320,7 @@ Skalitzer/Admiralstr.	3nocross::ignrte 11393,10390 11335,10375 11316,10372
 Skalitzer Str. -> Admiralstr.: Skalitzer/Admiralstr.	3::igndisp 11393,10390 11335,10375 11325,10317
 Admiralstr. -> Skalitzer Str.: Skalitzer/Admiralstr.	3::igndisp 11325,10317 11335,10375 11316,10372
 Gutenbergstr.	1 -12045,-757 -12219,-726
-Langhoffstr.	1 19817,14454 19818,14064
+Langhoffstr.	1 19817,14371 19818,14064
 Lintruper Str.	1 10307,922 10380,757
 Edison-/Siemensstr.	3 17992,6436 17962,6674 17860,6644 17766,6616
 Edisonstr.	1 17962,6674 17992,6436
@@ -1144,7 +1144,7 @@ Brückenstr.: Anlieger frei	1 17728,5756 17900,6072
 Passauer -> Lietzenburger	3 6033,10403 6020,10351 6147,10383
 Am Hanffgraben	1 16805,1488 16698,1392
 Rütlistr.: Durchfahrt verboten	2 12565,9200 12490,9056
-Wustermarker Str.:	1 -4385,14305 -4556,14349
+Wustermarker Str.:	1 -4385,14305 -4559,14341
 Mittelstreifen und Straßennbahntrasse	3nocross::ignrte 10849,17848 10858,17721 10878,17490
 Borkumstr. -> Berliner Str.: Mittelstreifen und Straßennbahntrasse	3::igndisp 10956,17735 10858,17721 10878,17490
 Berliner Str. -> Borkumstr.: Mittelstreifen und Straßennbahntrasse	3::igndisp 10849,17848 10858,17721 10956,17735
@@ -1459,8 +1459,8 @@ Feldlerchenweg: Schranke	3 7109,22919 7000,23095 6956,23166
 Auswärtiges Amt	3 9961,12094 10003,12113 9972,12184
 Im Vogtland	1 6657,23334 6684,23308 6727,23287
 Überquerungsmöglichkeit nur für BVG frei	3nocross::ignrte 11557,13228 11681,13161 11723,13139
-Berolinastr. -> Mollstr.: Überquerungsmöglichkeit nur für BVG frei	3::igndisp 11608,12985 11681,13161 11557,13228
-Mollstr. -> Berolinastr.: Überquerungsmöglichkeit nur für BVG frei	3::igndisp 11723,13139 11681,13161 11608,12985
+Berolinastr. -> Mollstr.: Überquerungsmöglichkeit nur für BVG frei	3::igndisp 11656,13100 11681,13161 11557,13228
+Mollstr. -> Berolinastr.: Überquerungsmöglichkeit nur für BVG frei	3::igndisp 11723,13139 11681,13161 11656,13100
 Weidenweg - Str. der Pariser Kommune: Linksabbiegen verboten (Wendemöglichkeit an der Palisadenstr.)	3 13025,12523 12891,12549 12869,12425
 Mittelstreifen	3nocross::ignrte 6422,15708 6555,15827 6661,15921
 Antwerpener Str. -> Seestr.: Mittelstreifen	3::igndisp 6690,15671 6555,15827 6422,15708
@@ -1578,3 +1578,6 @@ Luitpoldstr. -> Luitpoldstr.: Mittelstreifen, Überquerung für Radfahrer über Fur
 Luitpoldstr. -> Martin-Luther-Str.: Mittelstreifen, Überquerung für Radfahrer über Furt möglich	3::igndisp 6611,9879 6512,9866 6502,9782
 Martin-Luther-Str. -> Luitpoldstr.: Mittelstreifen, Überquerung für Radfahrer über Furt möglich	3::igndisp 6514,9947 6512,9866 6611,9879
 Martin-Luther-Str. -> Luitpoldstr.: Mittelstreifen, Überquerung für Radfahrer über Furt möglich	3::igndisp 6502,9782 6512,9866 6463,9862
+Straße 600: Bake	3 -6890,15692 -6939,15700 -6977,15706
+Straße 600: Bake	3 -6977,15706 -6939,15700 -6890,15692
+Wustermarker Str.: Einbahnstraße	1 -4385,14305 -4559,14341

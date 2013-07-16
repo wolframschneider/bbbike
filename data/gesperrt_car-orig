@@ -169,7 +169,7 @@ Hohenfriedbergstr.	3 7791,8882 7790,8913 7782,9115
 Hohenfriedbergstr.	3 7782,9115 7790,8913 7791,8882
 Hohenfriedbergstr. - Brunhildstr.	3 7782,9115 7790,8913 7707,8915
 Hohenfriedbergstr. - Brunhildstr.	3 7707,8915 7790,8913 7782,9115
-Olga-Benario-Prestes-Str.	1 12653,14653 12473,14763
+Olga-Benario-Prestes-Str.	1 12628,14650 12473,14763
 Filandastr.	3nocross 5687,5486 5687,5586 5683,5672 5681,5743
 Gelnitzstr.	1 22882,5834 22897,5740
 Kurfürstendamm	3nocross 2770,10024 2828,10040 2963,10078
@@ -196,7 +196,7 @@ Greifswalder Str.: Straßenbahn	3nocross 12473,14763 12422,14692 12403,14663 1237
 Greifswalder Str.: Straßenbahntrasse	3nocross 12709,15112 12737,15154 12870,15342
 Landsberger Allee: Straßenbahn	3nocross 13543,13568 13635,13605 13702,13634
 #: note: Luftbild:
-Landsberger Allee: Straßenbahn	3nocross 21398,15671 21475,15705 21584,15753 21694,15802
+Landsberger Allee: Straßenbahn	3nocross 21398,15671 21475,15705 21584,15753 21709,15808
 Topsstr.	1 10607,15142 10886,15251
 Schönhauser Allee	3nocross 10902,15422 10917,15525 10941,15697
 Am Kupfergraben	1 9754,12775 9815,12705 9870,12657 9900,12643 9919,12613
@@ -222,7 +222,7 @@ Skalitzer Str./Zeughofstr.	3nocross 12328,10442 12401,10461 12545,10496
 Stralauer/Damaschkestr.	3nocross 13678,10685 13779,10642 13919,10583
 Skalitzer/Admiralstr.	3nocross 11393,10390 11335,10375 11316,10372
 Gutenbergstr.	1 -12045,-757 -12219,-726
-Langhoffstr.	1 19817,14454 19818,14064
+Langhoffstr.	1 19817,14371 19818,14064
 #: by: Thomas Hallmann:
 Lintruper Str.	1 10307,922 10380,757
 Edison-/Siemensstr.	3 17992,6436 17962,6674 17860,6644 17766,6616
@@ -648,7 +648,7 @@ Am Hanffgraben	1 16805,1488 16698,1392
 Rütlistr.: Durchfahrt verboten	2 12565,9200 12490,9056
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20101116.1230.319115.html
 #: note: "Für Radfahrer ist in der Gegenrichtung die Benutzung des Gehweges möglich."
-Wustermarker Str.:	1 -4385,14305 -4556,14349
+Wustermarker Str.:	1 -4385,14305 -4559,14341
 #: note: großzügige Drängelgitter für Radfahrer/Fußgänger
 Berliner Str.: Mittelstreifen und Straßennbahntrasse	3nocross 10849,17848 10858,17721 10878,17490
 #: note: public imagery vvv
@@ -919,3 +919,6 @@ Temporäre Umleitungsstrecke: eigentlich nur für Versorgung und Taxis offen	2 187
 (Flughafen Berlin-Brandenburg - BAB113)	1 18497,-4285 18444,-4329 18429,-4421 18393,-4518 18222,-4592
 Elly-Beinhorn-Ring	1 18386,-4109 18423,-4094 18861,-3921 19019,-3859 19105,-3940 19158,-4083 19126,-4141 18984,-4202 18492,-4417 18480,-4374 18386,-4109
 Martin-Luther-Str.: Mittelstreifen, Überquerung für Radfahrer über Furt möglich	3nocross 6502,9782 6512,9866 6514,9947
+Straße 600: Bake	3 * -6939,15700 *
+#: note: Radfahrer dürfen den linken Gehweg in der "gesperrten" Richtung benutzen
+Wustermarker Str.: Einbahnstraße	1 -4385,14305 -4559,14341
