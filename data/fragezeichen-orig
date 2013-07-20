@@ -49,7 +49,7 @@ Germanenstr.	?::projected 8304,19475 8268,19558 8234,19634 8233,19695 8231,19806
 # 
 #: XXX im Baumaﬂnahmenkatalog ist nur der ˆstliche Teil ab Heinrich-Heine-Str. eingezeichnet, Baumaﬂnahmen 1.46 (Realisierung in 2011)
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
-#: last_checked: 2013-07-11
+#: last_checked: 2013-07-17
 #: check_frequency: 60d
 Annenstr./Heinrich-Heine-Platz	?::projected 11349,11227 11249,11268 11091,11379 11052,11414 11039,11425 10915,11535 10815,11662
 # 
@@ -126,7 +126,7 @@ Mˆckernstr.: werden hier vielleicht Radspuren Richtung S¸den markiert oder Radwe
 Skalitzer/Gitschiner Str.: werden hier Radspuren markiert?	?::projected 11335,10375 11316,10372 11130,10326 11117,10326 10975,10334 10871,10322 10708,10312 10605,10312 10363,10303 10122,10294 9948,10280
 # 
 #: XXX Baumaﬂnahme 2.23 (Realisierung nach 2011) vvv
-#: last_checked: 2013-07-13 vvv
+#: last_checked: 2013-07-19 vvv
 Straﬂe der Pariser Kommune: werden hier die fehlenden Radspuren noch markiert?	?::projected; 12758,11915 12726,11851 12681,11741 12645,11673
 Straﬂe der Pariser Kommune: werden hier die fehlenden Radspuren noch markiert?	?::projected; 12551,11515 12497,11459
 Straﬂe der Pariser Kommune: werden hier die fehlenden Radspuren noch markiert?	?::projected 12833,12154 12850,12286 12869,12425 12891,12549
@@ -228,7 +228,7 @@ Karl-Marx-Str.: wann werden hier die Radspuren markiert?	?::projected 13085,6925
 Kiefholzstr.: werden hier Radspuren markiert?	?::projected 15221,7778 15557,7404 15564,7395 15609,7347 15695,7254 15921,6994 15971,6936 16049,6852 16143,6750 16273,6609 16280,6601 16333,6544 16425,6445
 # 
 #: XXX Baumaﬂnahme 9.19 (Realisierung nach 2011)
-#: last_checked: 2013-07-06
+#: last_checked: 2013-07-17
 #: check_frequency: 90d
 Oberspreestr.: hier entstehen wahrscheinlich Radverkehrsanlagen (Radwege/spuren)	?::projected; 20949,4775 20765,4839 20689,4862 19965,5101 19737,5176 19715,5185 19632,5211 19534,5242
 # 
@@ -627,8 +627,8 @@ Dorfstr.: f¸r 2012 geplanter Zebrastreifen? Wo genau?	?::projected 19285,18489 1
 #: note: Treskowallee (Lichtenberg) in Hˆhe Waldowallee Baustelle, Fahrbahn von 2 auf 1 Fahrstreifen reduziert, ein Abbiegen aus Richtung Am Tierpark in die Waldowallee ist nicht mˆglich (bis Ende 03/2013)
 #: source_id: IM_019443
 #: osm_watch: node id="28394944" version="19"
-#: last_checked: 2013-06-21
-#: next_check: 2013-07-21
+#: last_checked: 2013-07-17
+#: next_check: 2013-08-17
 Treskowallee/Waldowallee: nach den Bauarbeiten wird hier eine Ampel existieren; wird es Radwege geben?	?::inwork 18823,9708 18865,9608 18875,9570 18867,9464 18834,9256
 # 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/verwaltung/org/vermessung/b-plaene/b-plaene/B-V-3.jpg
@@ -751,8 +751,8 @@ Fritz-Rumpf-Str. (Potsdam): Qualit‰t nach Fertigstellung?	?::projected -11307,13
 Wernerstraﬂe/Ohserring: neuer Zebrastreifen wird markiert	?::projected 23740,12824 23738,12799
 #: by: ^^^
 # 
-#: last_checked: 2013-06-01 vvv
-#: next_check: 2013-07-15 vvv
+#: last_checked: 2013-07-17 vvv
+#: next_check: 2013-09-17 vvv
 #: XXX siehe auch tempor‰re Sperrung des Weges in die Wuhlheide
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/45re.pdf/file?y=2011
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/10re.pdf/file?y=2012 vvv
@@ -1653,9 +1653,12 @@ Carpinusweg: Ist die Straﬂe bereits fertiggestellt? Qualit‰t? Wo befindet sich d
 Im Nikolaiquartier: neue Straﬂe, wo befindet sie sich? Qualit‰t?	? -13094,-1158 -13162,-1263
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5491
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/31re.pdf/file?y=2013
+#: XXX Freesienweg (Amtsblatt) oder Fresienweg (BA)? Wikipedia meint "Freesien"
+#: XXX fehlt bei Berlin.coords.data
 #: last_checked: 2013-07-03 (Bauarbeiten in Gange, keine Straﬂe zu sehen)
 #: next_check: 2014-04-15
-Fresienweg: geplante Straﬂe, wo wird sie genau liegen? Bleibt der Straﬂenname so? Qualit‰t?	?::projected 16002,12640 16004,12750
+Freesienweg: geplante Straﬂe, wo wird sie genau liegen? Wie wird der Straﬂenname genau geschrieben? Qualit‰t?	?::projected 16002,12640 16004,12750
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5489
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/30re.pdf/file?y=2013
@@ -1688,8 +1691,10 @@ Lindenschw‰rmerweg: genaue Lage? Qualit‰t? Existiert die Straﬂe schon?	? 21323,1
 # 
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/bvv-online/vo020.asp?VOLFDNR=5291
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/bvv-online/___tmp/tmp/45081036593796355/593796355/00066429/29-Anlagen/02/vzb0507_IV-Benennung_Grimmener_Strasse.pdf
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/31re.pdf/file?y=2013
 #: XXX fehlt bei Berlin.coords.data
 Grimmener Str.: genaue Lage? Qualit‰t? Existiert die Straﬂe schon?	? 21315,13146 21398,13121
+# 
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3587
 #: by: http://www.berlin.de/imperia/md/content/bapankow/pressestelle/ba-beschluesse/2013/04.06.2013_benennungsabsicht_f__r_30_privatwege_in_der_anlage_sch__nwald_und_der_kleingartenanlage__kga__am_rollberg...pdf?start&ts=1371028945&file=04.06.2013_benennungsabsicht_f__r_30_privatwege_in_der_anlage_sch__nwald_und_der_kleingartenanlage__kga__am_rollberg...pdf (mit Plan)
 # 1. Liliensteinweg
