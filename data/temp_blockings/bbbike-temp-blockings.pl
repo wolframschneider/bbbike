@@ -20115,7 +20115,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_111647', # auch: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html
        data  => <<EOF,
-#: osm_watch: way id="23243508" version="35"
+#: osm_watch: way id="23243508" version="36"
 userdel	q4::inwork; -1872,24336 -1790,24260 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 EOF
      },
@@ -21354,8 +21354,8 @@ userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245
 EOF
      },
      { from  => 1371938400, # 2013-06-23 00:00
-       until => 1374487200, # 2013-07-22 12:00
-       text  => 'Johannisthaler Chaussee von Königsheideweg bis Ligusterweg, wegen Bauarbeiten gesperrt, 24.06.2013 bis 22.07.2013',
+       until => 1374832800, # 2013-07-26 12:00
+       text  => 'Johannisthaler Chaussee von Königsheideweg bis Ligusterweg, wegen Bauarbeiten gesperrt, 24.06.2013 bis 26.07.2013',
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20130607.1245.385821.html',
        data  => <<EOF,
@@ -21566,7 +21566,7 @@ userdel	q4::inwork 15920,7697 15765,7567 15696,7507
 EOF
      },
      { from  => 1372834800, # 2013-07-03 09:00
-       until => 1376604000, # 2013-08-16 00:00
+       until => 1374185255, # 1376604000, # 2013-08-16 00:00
        text  => 'Teltower Damm (Zehlendorf): Knesebeckbrücke Baustelle, Fahrbahn gesperrt, Radfahrer müssen schieben, vom 04.07.2013 bis voraussichtlich 15.08.2013',
        type  => 'handicap',
        source_id => 'INKO_119024',
