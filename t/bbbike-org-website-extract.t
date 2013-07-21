@@ -32,8 +32,8 @@ if ( !$ENV{BBBIKE_TEST_SLOW_NETWORK} ) {
     plan tests => scalar(@homepages) *
       ( MYGET * scalar(@lang) +
           ( MYGET * scalar(@extract_dialog) * scalar(@lang) ) +
-          ( MYGET * scalar(@tags) ) +
-          31 );
+          scalar(@tags) +
+          32 );
 }
 else {
     plan 'no_plan';
