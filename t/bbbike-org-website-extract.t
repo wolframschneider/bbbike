@@ -20,6 +20,9 @@ use LWP::UserAgent;
 
 my @homepages = ( 'http://extract.bbbike.org', 'http://localhost' );
 my @lang = qw/en de ru es fr/;
+my @tags =
+  ( '</html>', '<head>', '<body[ >]', '</body>', '</head>', '<html[ >]' );
+
 my @extract_dialog =
   qw/about.html email.html format.html name.html polygon.html select-area.html/;
 
@@ -29,6 +32,7 @@ if ( !$ENV{BBBIKE_TEST_SLOW_NETWORK} ) {
     plan tests => scalar(@homepages) *
       ( MYGET * scalar(@lang) +
           ( MYGET * scalar(@extract_dialog) * scalar(@lang) ) +
+          ( MYGET * scalar(@tags) ) +
           31 );
 }
 else {
@@ -81,6 +85,13 @@ sub page_check {
         like( $res->decoded_content, qr|"garmin-cycle.zip"|, "bbbike extract" );
         like( $res->decoded_content,
             qr|Content-Type" content="text/html; charset=utf-8"|, "charset" );
+
+        foreach my $tag (@tags) {
+            like( $res->decoded_content, qr|$tag|,
+                "bbbike extract html tag: $tag" );
+        }
+
+        like( $res->decoded_content, qr|polygon_update|, "bbbike extract" );
 
         myget( "$home_url/html/jquery/jquery-ui-1.9.1.custom.min.js", 1_000 );
         myget( "$home_url/html/jquery/jquery-1.7.1.min.js",           20_000 );
