@@ -18,7 +18,10 @@ BEGIN {
 use LWP;
 use LWP::UserAgent;
 
-my @homepages = ( 'http://extract.bbbike.org', 'http://localhost' );
+my @homepages = (
+    'http://extract.bbbike.org', 'http://localhost',
+    'http://dev2.bbbike.org',    'http://dev4.bbbike.org'
+);
 my @lang = qw/en de ru es fr/;
 my @tags =
   ( '</html>', '<head>', '<body[ >]', '</body>', '</head>', '<html[ >]' );
