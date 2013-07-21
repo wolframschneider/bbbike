@@ -18,14 +18,16 @@ BEGIN {
 use LWP;
 use LWP::UserAgent;
 
-my $homepage = 'http://www.bbbike.org';
-my @cities   = qw/Berlin Zuerich Toronto Moscow/;
+my $homepage = 'http://extract.bbbike.org';
+my @lang     = qw/en de ru es fr/;
+my @extract_dialog =
+  qw/about.html email.html format.html name.html polygon.html select-area.html/;
+
 use constant MYGET => 3;
 
 if ( !$ENV{BBBIKE_TEST_SLOW_NETWORK} ) {
-    plan tests => scalar(@cities) * ( MYGET * 4 ) +
-      ( MYGET * 11 ) +
-      ( scalar(@cities) * 26 ) + 2;
+    plan tests => MYGET * scalar(@lang) +
+      ( MYGET * scalar(@extract_dialog) * scalar(@lang) ) + 31;
 }
 else {
     plan 'no_plan';
@@ -47,126 +49,41 @@ sub myget {
     is( $res->status_line, "200 OK", "status code 200" );
 
     my $content = $res->decoded_content();
-    cmp_ok( length($content), ">", $size, "greather than $size" );
+    cmp_ok( length($content), ">", $size, "greather than $size for URL $url" );
 
     return $res;
 }
 
-sub cities {
-    foreach my $city (@cities) {
-        my $url = "$homepage/$city/";
-        my $res = myget($url);
-
-        like( $res->decoded_content, qr|"real_time"|, "complete html" );
-        like( $res->decoded_content,
-            qr|Content-Type" content="text/html; charset=utf-8"|, "charset" );
-        like( $res->decoded_content, qr|rel="shortcut|, "icon" );
-        like( $res->decoded_content,
-            qr|type="application/opensearchdescription\+xml" rel="search"|,
-            "opensearch" );
-        like(
-            $res->decoded_content,
-qr|type="application/atom\+xml" rel="alternate" href="/feed/bbbike-world.xml|,
-            "rss"
-        );
-        like( $res->decoded_content, qr|src="/html/bbbike-js.js"|,
-            "bbbike-js.js" );
-        like( $res->decoded_content, qr|href="/html/bbbike.css"|,
-            "bbbike.css" );
-        like(
-            $res->decoded_content,
-            qr|<span id="language_switch">|,
-            "language switch"
-        );
-        like( $res->decoded_content, qr|href="http://twitter.com/BBBikeWorld"|,
-            "twitter" );
-        like( $res->decoded_content, qr|class="mobile_link|, "mobile link" );
-        like(
-            $res->decoded_content,
-            qr|#suggest_start\'\).autocomplete|,
-            "autocomplete start"
-        );
-        like(
-            $res->decoded_content,
-            qr|#suggest_via\'\).autocomplete|,
-            "autocomplete via"
-        );
-        like(
-            $res->decoded_content,
-            qr|#suggest_ziel\'\).autocomplete|,
-            "autocomplete ziel"
-        );
-        like(
-            $res->decoded_content,
-            qr|"/images/spinning_wheel32.gif"|,
-            "spinning wheel"
-        );
-        like( $res->decoded_content, qr|google_ad_client|, "google_ad_client" );
-        like( $res->decoded_content, qr|<div id="map"></div>|, "div#map" );
-        like( $res->decoded_content, qr|bbbike_maps_init|, "bbbike_maps_init" );
-        like( $res->decoded_content, qr|city = ".+";|,     "city" );
-        like( $res->decoded_content, qr|display_current_weather|,
-            "display_current_weather" );
-        like( $res->decoded_content, qr|displayCurrentPosition|,
-            "displayCurrentPosition" );
-        like( $res->decoded_content, qr|<div id="footer">|, "footer" );
-        like( $res->decoded_content, qr|id="other_cities"|, "other cities" );
-        like( $res->decoded_content, qr|</html>|,           "closing </html>" );
-
-        # skip other tests on slow networks (e.g. on mobile phone links)
-        next if $ENV{BBBIKE_TEST_SLOW_NETWORK};
-
-        $url = "$homepage/en/$city/";
-        myget($url);
-        $url = "$homepage/ru/$city/";
-        myget($url);
-        $url = "$homepage/de/$city/";
-
-        $res = myget( "$homepage/osp/$city.xml", 100 );
-        like(
-            $res->decoded_content,
-            qr|<InputEncoding>UTF-8</InputEncoding>|,
-            "opensearch input encoding utf8"
-        );
-        like(
-            $res->decoded_content,
-            qr|template="http://www.bbbike.org/cgi/api.cgi\?sourceid=|,
-            "opensearch template"
-        );
-        like(
-            $res->decoded_content,
-            qr|http://www.bbbike.org/images/srtbike16.gif</Image>|,
-            "opensearch icon"
-        );
-    }
-}
-
 sub html {
-    myget( "$homepage/osp/Zuerich.en.xml", 100 );
-    myget( "$homepage/osp/Toronto.de.xml", 100 );
-    myget( "$homepage/osp/Moscow.de.xml",  100 );
-    myget( "$homepage/osp/Moscow.en.xml",  100 );
+    foreach my $l (@lang) {
+        myget( "$homepage/?lang=$l", 9_000 );
+    }
+    foreach my $l (@lang) {
+        foreach my $file (@extract_dialog) {
+            myget( "$homepage/extract-dialog/$l/$file", 420 );
+        }
+    }
 
-    myget( "$homepage/html/bbbike.css", 7_000 );
-    myget( "$homepage/html/devbridge-jquery-autocomplete-1.1.2/shadow.png",
-        1_000 );
+    myget( "$homepage/html/extract.css",         3_000 );
+    myget( "$homepage/html/extract.js",          1_000 );
+    myget( "$homepage/extract.html",             12_000 );
+    myget( "$homepage/extract-screenshots.html", 4_000 );
 
     if ( !$ENV{BBBIKE_TEST_SLOW_NETWORK} ) {
-        my $res = myget( "$homepage/html/bbbike-js.js", 100_000 );
-        like( $res->decoded_content, qr|#BBBikeGooglemap|, "bbbike js" );
-        like( $res->decoded_content, qr|downloadUrl|,      "bbbike js" );
+        my $res = myget( "$homepage", 10_000 );
+        like( $res->decoded_content, qr|id="map"|,           "bbbike extract" );
+        like( $res->decoded_content, qr|polygon_update|,     "bbbike extract" );
+        like( $res->decoded_content, qr|"garmin-cycle.zip"|, "bbbike extract" );
+        like( $res->decoded_content,
+            qr|Content-Type" content="text/html; charset=utf-8"|, "charset" );
 
-        myget( "$homepage/html/streets.css", 2_000 );
-        myget( "$homepage/html/luft.css",    3_000 );
-        myget(
-"$homepage/html/devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete-min.js",
-            1_000
-        );
-        myget( "$homepage/html/jquery/jquery-1.4.2.min.js", 20_000 );
+        myget( "$homepage/html/jquery/jquery-ui-1.9.1.custom.min.js", 1_000 );
+        myget( "$homepage/html/jquery/jquery-1.7.1.min.js",           20_000 );
+        myget( "$homepage/html/OpenLayers/2.12/OpenStreetMap.js",     10_000 );
+        myget( "$homepage/html/OpenLayers/2.12/OpenLayers-min.js",    500_000 );
     }
 }
 
-&cities;
 &html;
 
 __END__
