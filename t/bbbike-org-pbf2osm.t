@@ -24,7 +24,7 @@ sub md5_file {
     my $fh = new IO::File $file, "r";
     die "open file $file: $!\n" if !defined $fh;
 
-    my $data;
+    my $data = "";
     while (<$fh>) {
         $data .= $_;
     }
