@@ -464,7 +464,7 @@ my $do_unhandled = sub {
     my @new_osm_files;
     for my $osm_file (@osm_files) {
 	if (-d $osm_file) {
-	    push @new_osm_files, grep { -f $_ && -s $_ } glob(File::Spec->catfile($osm_file,"*.{osm,osm.gz,osm.bz2}")); # XXX argh, grep duplicates functionality, see "recursive" suggestion above
+	    push @new_osm_files, grep { -f $_ && -s $_ } glob(File::Spec->catfile($osm_file,"*.{osm,osm.gz,osm.bz2,pbf}")); # XXX argh, grep duplicates functionality, see "recursive" suggestion above
 	} elsif (-z $osm_file) {
 	    # May happen while loading data, so ignore this
 	    warn "Ignore empty file <$osm_file>...\n";
@@ -495,7 +495,7 @@ if ($experiments{'polar_coord_hack'}) {
     } else {
 	my($min_lat, $max_lat);
 	# XXX taken from BBBikeOsmUtil.pm
-	my $osm_download_file_qr = qr{/download_(-?\d+\.\d+),(-?\d+\.\d+),(-?\d+\.\d+),(-?\d+\.\d+)\.osm(?:\.gz|\.bz2)?$};
+	my $osm_download_file_qr = qr{/download_(-?\d+\.\d+),(-?\d+\.\d+),(-?\d+\.\d+),(-?\d+\.\d+)\.osm(?:\.gz|\.bz2|\.pbf)?$};
 	# XXX it would be better to read the bboxes of all XML files
 	for my $osm_file (@osm_files) {
 	    if ($osm_file =~ $osm_download_file_qr) {
@@ -2243,6 +2243,9 @@ sub open_osm {
 # 	    or die "Can't open file $osm_file: $!";
 	open $fh, "-|", "bunzip2", "--stdout", $osm_file
 	    or die "Can't run bunzip2 on $osm_file: $!";
+    } elsif ($osm_file =~ m{\.pbf$}) {
+	open $fh, "-|", "osmconvert", "--out-osm", $osm_file
+	    or die "Can't run osmconvert on $osm_file: $!";
     }
 
     my @xmlparser;
