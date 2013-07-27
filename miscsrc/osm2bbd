@@ -282,6 +282,7 @@ sub bbd_chomp {
 sub init_height_db {
     my $file = shift;
 
+    warn "init height db: '$file'\n" if $debug;
     my $fd = new IO::File $file, "r"
 	or die "open '$file': $!\n";
 
@@ -2226,6 +2227,9 @@ sub open_osm {
     my $osm_file = shift;
     my($dom, $reader);
     my $fh;
+
+    warn "open osm file: '$osm_file'\n" if $debug;
+
     if ($osm_file =~ m{\.gz$}) {
 	if (!eval { require PerlIO::gzip; 1 }) {
 	    open $fh, '-|', 'gzip', '-dc', $osm_file
