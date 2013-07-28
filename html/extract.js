@@ -34,6 +34,9 @@ var config = {
 
     debug: 1,
 
+    // extract-pro service with meta data and daily updates
+    extract_pro: 0, // not used yet
+
     "dummy": ""
 };
 
@@ -352,6 +355,18 @@ function extract_init(opt) {
     var transform;
     var markerLayer;
     var markerControl;
+
+    extract_init_pro();
+
+    // extract-pro service can extract larger areas
+
+    function extract_init_pro(opt) {
+        var hostname = $(location).attr('hostname');
+        if (hostname.match(/^(extract-pro|dev)[2-4]?\.bbbike\.org/i)) {
+            config.max_size["default"] *= 2;
+            config.max_skm *= 2;
+        }
+    }
 
     function startExport() {
         // main vector
