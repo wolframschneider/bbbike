@@ -35,8 +35,8 @@ var config = {
     debug: 1,
 
     // extract-pro service with meta data and daily updates
-    extract_pro: 0, // not used yet
-
+    extract_pro: 0,
+    // not used yet
     "dummy": ""
 };
 
