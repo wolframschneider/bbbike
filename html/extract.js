@@ -34,6 +34,9 @@ var config = {
 
     debug: 1,
 
+    // extract-pro service with meta data and daily updates
+    extract_pro: 0,
+
     "dummy": ""
 };
 
@@ -352,6 +355,19 @@ function extract_init(opt) {
     var transform;
     var markerLayer;
     var markerControl;
+
+    extract_init_pro();
+
+    // extract-pro service can extract larger areas
+
+
+    function extract_init_pro(opt) {
+        if (config.extract_pro) {
+            config.max_skm *= 2;
+            config.max_size.
+        default *=2;
+        }
+    }
 
     function startExport() {
         // main vector
