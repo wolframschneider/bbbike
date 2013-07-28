@@ -50,7 +50,7 @@ my $tempfile  = File::Temp->new( SUFFIX => ".osm" );
 is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched: $pbf_file" );
 
 system(
-qq[world/bin/pbf2osm $pbf_file | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
+qq[world/bin/pbf2osm --osmosis $pbf_file | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
 );
 is( $?,                  0,        "pbf2osm converter" );
 is( md5_file($tempfile), $osm_md5, "osm md5 checksum matched" );
@@ -65,7 +65,7 @@ is( md5_file($pbf_file2), $pbf2_md5,
     "md5 checksum matched after running pbf2pbf: $pbf_file2" );
 
 system(
-qq[world/bin/pbf2osm $pbf_file2 | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
+qq[world/bin/pbf2osm --osmosis $pbf_file2 | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
 );
 is( $?,                  0,        "pbf2osm converter" );
 is( md5_file($tempfile), $osm_md5, "osm md5 checksum matched" );
