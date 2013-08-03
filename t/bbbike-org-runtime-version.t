@@ -15,6 +15,7 @@ my $debug = 1;
 
 my $versions = {
     'debian6' => [
+
         # version commands, regex to match
         [ [qw/pbzip2 --version/],  qr/ BZIP2 v1.1.1 / ],
         [ [qw/osmconvert --help/], qr/^osmconvert 0\.7T/m ],
