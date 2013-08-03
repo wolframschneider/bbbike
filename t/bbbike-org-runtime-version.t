@@ -1,5 +1,8 @@
 #!/usr/local/bin/perl
-# Copyright (c) Sep 2012-2013 Wolfram Schneider, http://bbbike.org
+# Copyright (c) Aug 2013-2013 Wolfram Schneider, http://bbbike.org
+#
+# bbbike-org-runtime-version.t - check if we are using the right command versions
+#
 
 BEGIN { }
 use Test::More;
@@ -12,6 +15,7 @@ my $debug = 1;
 
 my $versions = {
     'debian6' => [
+        # version commands, regex to match
         [ [qw/pbzip2 --version/],  qr/ BZIP2 v1.1.1 / ],
         [ [qw/osmconvert --help/], qr/^osmconvert 0\.7T/m ],
         [ [qw/osmosis -v/],        qr/^INFO: Osmosis Version 0\.40\.1/m ],
