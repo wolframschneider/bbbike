@@ -20,10 +20,10 @@ use warnings;
 
 plan tests => 6;
 
-my $pbf_file = 'world/t/data-osm/tmp/Cusco.osm.pbf';
+my $pbf_file = 't/data-osm/tmp/Cusco.osm.pbf';
 
 if ( !-f $pbf_file ) {
-    system(qw(ln -sf ../Cusco.osm.pbf world/t/data-osm/tmp));
+    system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
     die "symlink failed: $!\n" if $?;
 }
 
@@ -56,9 +56,9 @@ my $prefix = $pbf_file;
 $prefix =~ s/\.pbf$//;
 my $st = 0;
 
-system(qq[world/bin/pbf2osm --osmand $pbf_file]);
-is( $?, 0, "pbf2osm --osmand converter" );
-my $out = "$prefix.obf.zip";
+system(qq[world/bin/pbf2osm --navit $pbf_file]);
+is( $?, 0, "pbf2osm --navit converter" );
+my $out = "$prefix.navit.zip";
 $st = stat($out) or die "Cannot stat $out\n";
 
 system(qq[unzip -t $out]);
@@ -71,6 +71,9 @@ system(qq[world/bin/extract-disk-usage.sh $out > $tempfile]);
 is( $?, 0, "extract disk usage check" );
 
 my $image_size = `cat $tempfile` * 1024;
+$image_size *=
+  1.02;   # navit has good compression, add more to avoid false positive reports
+
 cmp_ok( $image_size, '>', $size, "image size: $image_size > $size" );
 
 __END__
