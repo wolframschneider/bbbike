@@ -72,5 +72,5 @@ is( $?, 0, "extract disk usage check" );
 
 my $image_size = `cat $tempfile` * 1024;
 cmp_ok( $image_size, '>', $size, "image size: $image_size > $size" );
-    
+
 __END__

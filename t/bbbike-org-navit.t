@@ -71,8 +71,9 @@ system(qq[world/bin/extract-disk-usage.sh $out > $tempfile]);
 is( $?, 0, "extract disk usage check" );
 
 my $image_size = `cat $tempfile` * 1024;
-$image_size *= 1.02; # navit has good compression, add more to avoid false positive reports
+$image_size *=
+  1.02;   # navit has good compression, add more to avoid false positive reports
 
 cmp_ok( $image_size, '>', $size, "image size: $image_size > $size" );
-    
+
 __END__
