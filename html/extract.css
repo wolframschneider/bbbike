@@ -9,17 +9,6 @@ div#map { width: 100%; height: 100%; }
 
 #debug { color: red; font-size: small; }
 
-div#footer_community { display: none; }
-
-div#footer { margin: 0.5em; }
-
-div#copyright {
-  font-size: small;
-  margin: 0px;
-  padding: 0px;
-  text-align: left;
-}
-
 body {
   margin: 0px;
   padding: 0px;
@@ -75,9 +64,6 @@ div#export_osm_too_large { color: red }
 	position: absolute;
 }
 
-#footer {
-	bottom: 0em;
-}
 
 #map {
 	left: 25.5em;
@@ -163,10 +149,24 @@ span.current_language { font-size: large; }
 span#language_switch a { color: green; }
 
 span#maplink { font-size: small; }
-div#footer { font-size: small; text-align: center; padding-top: 0.7em; }
-div#footer_top { text-align: left; }
+
+div#footer { 	bottom: 0em; }
+div#footer { text-align: center; padding-top: 0.7em; }
+div#footer { margin: 0.5em; }
+div#footer hr { width: 24.0em; padding-left: 0; margin-left: 0; }
+
+div#footer_top { text-align: left; font-size: small;}
 div#footer_community { padding-top: 0.5em; padding-bottom: 0.5em }
-a         {text-decoration: none; color: green; }
+div#footer_community { display: none; }
+
+div#copyright {
+  font-size: small;
+  margin: 0px;
+  padding: 0px;
+  text-align: left;
+}
+
+a         { text-decoration: none; color: green; }
 
 a.tools-helptrigger img, a.tools-helptrigger-small img { 
    height: 13px;
