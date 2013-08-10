@@ -12,11 +12,9 @@ var config = {
     "color_error": "red",
     "max_skm": 24000000,
 
-    // map box for San Francisco, default
-    "city": {
-        "sw": [-122.9, 37.2],
-        "ne": [-121.7, 37.9]
-    },
+    // display a box at startup
+    // see function select_city()
+    default_box: false,
 
     "show_filesize": true,
     "city_name_optional": false,
@@ -151,7 +149,10 @@ function init() {
     var epsg4326 = new OpenLayers.Projection("EPSG:4326");
     var bounds;
 
-    // read from input, back button pressed?
+/*
+     * read from input, back button pressed?
+     *
+     */
     var back_botton = check_lnglat_form(true);
     var coords = "";
     if (back_botton) {
@@ -231,26 +232,33 @@ function init() {
                 polygon_menu(true);
             };
 
-            setTimeout(function () {
-                var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
-                var feature = plot_polygon(polygon);
-                vectors.addFeatures(feature);
-                if (coords) {
-                    // trigger a recalculation of polygon size
-                    setTimeout(function () {
-                        vectors.events.triggerEvent("sketchcomplete", {
-                            "feature": feature
-                        });
-                    }, 500);
-                }
-                opt.back_function();
+            if (config.default_box) {
+                setTimeout(function () {
+                    var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
+                    var feature = plot_polygon(polygon);
+                    vectors.addFeatures(feature);
+                    if (coords) {
+                        // trigger a recalculation of polygon size
+                        setTimeout(function () {
+                            vectors.events.triggerEvent("sketchcomplete", {
+                                "feature": feature
+                            });
+                        }, 500);
+                    }
+                    opt.back_function();
 
-            }, 700);
+                }, 700);
+
+            } else {
+                debug("Do not plot default box");
+            }
         }
     }
 
-    bounds.transform(epsg4326, map.getProjectionObject());
-    map.zoomToExtent(bounds);
+    if (bounds) {
+        bounds.transform(epsg4326, map.getProjectionObject());
+        map.zoomToExtent(bounds);
+    }
 
     extract_init(opt);
     permalink_init();
@@ -506,6 +514,9 @@ function extract_init(opt) {
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
         var decimals = Math.pow(10, Math.floor(map.getZoom() / 3));
 
+        // box not set yet
+        if (!bounds) return;
+
         bounds = bounds.clone().transform(map.getProjectionObject(), epsg4326);
 
         function v(value) {
@@ -577,6 +588,7 @@ function extract_init(opt) {
     }
 
     startExport(opt);
+    startDrag();
 
     if (config.enable_polygon) {
         setTimeout(function () {
