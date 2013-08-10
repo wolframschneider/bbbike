@@ -899,7 +899,7 @@ function show_skm(skm, filesize) {
         var html = "area covers " + large_int(skm) + " square km";
         if (config.show_filesize) {
             html += filesize.html;
-            $("#square_km_small").html(large_int(skm) + " skm");
+            $("#square_km_small").html(large_int(skm) + " km<sup>2</sup>");
             var fs = filesize.size < 1 ? Math.round(filesize.size * 10) / 10 : Math.round(filesize.size);
             $("#size_small").html("~" + fs + " MB");
             $("#time_small").html(filesize.time + " min");
