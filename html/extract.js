@@ -95,6 +95,14 @@ function init() {
         attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.opencyclemap.org/">(&copy) OpenCycleMap</a>'
     }));
 
+    map.addLayer(new OpenLayers.Layer.OSM("OSM Landscape", ["http://a.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png", "http://b.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png"], {
+        tileOptions: {
+            crossOriginKeyword: null
+        },
+        attribution: '<a href="http://www.OpenStreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.opencyclemap.org/">(&copy) OpenCycleMap</a>',
+        numZoomLevels: 18
+    }));
+        
     map.addLayer(new OpenLayers.Layer.OSM("OSM Hike&Bike", ["http://a.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png", "http://b.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png"], {
         tileOptions: {
             crossOriginKeyword: null
