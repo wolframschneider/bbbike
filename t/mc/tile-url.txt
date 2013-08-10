@@ -62,3 +62,9 @@ http://sat01.maps.yandex.net/tiles?l=sat&v=1.35.0&x=2200&y=1346&z=12
 http://vec02.maps.yandex.net/tiles?l=map&v=2.2.3&x=2200&y=1346&z=12
 http://tiles4.waze.com/tiles/16/15301/25090.png
 http://www.topomapper.com/cgi-bin/tilecache-2.11b/tilecache.py?LAYERS=topomapper_gmerc&FORMAT=image%2Fjpeg&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&STYLES=&SRS=EPSG%3A900913&BBOX=1487158.8221094,6907461.3711133,1506726.7013477,6927029.2503516&WIDTH=256&HEIGHT=256
+http://korona.geog.uni-heidelberg.de:8001/tms_r.ashx?x=1103&y=673&z=11
+http://korona.geog.uni-heidelberg.de:8008/tms_rg.ashx?x=1103&y=669&z=11
+http://korona.geog.uni-heidelberg.de:8003/tms_h.ashx?x=4404&y=2684&z=13
+http://korona.geog.uni-heidelberg.de:8004/tms_hs.ashx?x=4404&y=2684&z=13
+http://korona.geog.uni-heidelberg.de:8006/tms_il.ashx?x=4404&y=2688&z=13
+http://korona.geog.uni-heidelberg.de:8007/tms_b.ashx?x=2204&y=1345&z=12
