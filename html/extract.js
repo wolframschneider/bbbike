@@ -137,6 +137,16 @@ function init() {
         numZoomLevels: 19
     }));
 
+    map.addLayer(new OpenLayers.Layer.Google("Google Physical", {
+        type: google.maps.MapTypeId.TERRAIN
+    }));
+    map.addLayer(new OpenLayers.Layer.Google("Google Satellite", {
+        type: google.maps.MapTypeId.SATELLITE
+    }));
+    map.addLayer(new OpenLayers.Layer.Google("Google Map", {
+        type: google.maps.MapTypeId.ROADMAP
+    }));
+
 
     var epsg4326 = new OpenLayers.Projection("EPSG:4326");
     var bounds;
