@@ -24,7 +24,7 @@ Kietzer Str., Brücke	Br 22358,4521 22372,4496
 Landjägerbrücke	Br 22426,4609 22458,4565
 Wendenschloßbrücke	Br 22832,4491 22862,4511
 Katzengrabenbrücke	Br 22484,4868 22581,4932
-Salvador-Allende-Brücke	Br 23420,5159 23429,5048
+Salvador-Allende-Brücke	Br 23420,5159 23433,5037
 Freiarmbrücke	Br 23492,5488 23519,5490
 #: alias: Friedrichshagener Tunnel (selten)
 Spreetunnel	Tu 25571,4553 25658,4619
@@ -384,7 +384,7 @@ Brücke über Kanal I	Br 31506,3061 31520,3065
 Brücke über Kanal I	Br 31329,3278 31316,3221
 (Güterbahnhof Greifswalder Str.)	Br 12520,15057 12727,14929
 Hermann-Blankenstein-Str.	Tu 13886,13668 13858,13719
-(Fußgängertunnel Sybelstr.)	Tu 3764,10580 3759,10567 3731,10563 3712,10566
+# REMOVED (Rückbau) --- (Fußgängertunnel Sybelstr.)	Tu 3764,10580 3759,10567 3731,10563 3712,10566
 (Durchfahrt Böschung Spreeufer)	Tu 8032,12889 8053,12871
 Siemenssteg	Br 4129,12619 4128,12637 4124,12706 4124,12721
 # REMOVED (jetzt positiv, als Brücke aufgeführt) --- (Unterführung Schloßbrücke)	Tu 3396,12741 3332,12742 3231,12749
@@ -478,7 +478,7 @@ Brücke über die Wuhle	Br 21914,12019 21936,12022
 Brücke über die Wuhle	Br 21935,12160 21970,12153
 Brücke über die Wuhle	Br 22419,15127 22343,15115
 Brücke über die Wuhle	Br 21571,7639 21591,7642
-Brücke über die Wuhle	Br 22085,5873 22083,5899
+Brücke über die Wuhle	Br 22084,5877 22083,5899
 Brücke über die Wuhle	Br 22474,17858 22537,17878
 Brücke über die B5	Br -15959,13732 -15979,13692
 Waldseebrücke	Br -961,3737 -935,3706

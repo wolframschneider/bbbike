@@ -5017,8 +5017,10 @@ sub display_route {
     my @strnames;
     my @path;
     my $penalty_lost = 0;
+    
  CALC_ROUTE_TEXT: {
 	last CALC_ROUTE_TEXT if (!$r || !$r->path_list);
+
 
 	my @bikepwr_time = (0, 0, 0);
 	#use vars qw($wind_dir $wind_v %wind_dir $wind); # XXX oben definieren
@@ -5063,7 +5065,7 @@ sub display_route {
 		$speed = $speed_default; # sane default
 	    }
 	    my $def = {};
-	    $def->{Pref} = ($q->param('pref_speed') && $speed == $q->param('pref_speed'));
+	    $def->{Pref} = ($q->param('pref_speed') && $speed == $q->param('pref_speed')) ? "1" : "";
 	    my $time;
 	    if ($handicap_net) {
 		$time = 0;
@@ -5087,13 +5089,13 @@ sub display_route {
 	    } else {
 		$time = $r->len/1000/$speed;
 	    }
-	    $def->{Time} = $time;
+	    $def->{_RawTime} = $time; # raw time without lost time due to penalties and trafficlights
 	    $speed_map{$speed} = $def;
 	}
 
 	if ($bp_obj and $bikepwr_time[0]) {
 	    for my $i (0 .. $#power) {
-		$power_map{$power[$i]} = {Time => $bikepwr_time[$i]};
+		$power_map{$power[$i]} = {_RawTime => $bikepwr_time[$i]/3600};
 	    }
 	}
 
@@ -5426,6 +5428,23 @@ sub display_route {
 			  Coord => join(",", @{$r->path->[-1]}),
 			  PathIndex => $#{$r->path},
 			 };
+
+	my $ampel_lost = (defined $r->trafficlights
+			  ? $r->trafficlights * 15 # XXX do not hardcode 15s here!
+			  : 0
+			 );
+
+	# Adjust _RawTime -> Time
+	while(my($k,$v) = each %speed_map) {
+	    $v->{Time} = $v->{_RawTime} + $ampel_lost/3600 + $penalty_lost/3600;
+	    delete $v->{_RawTime};
+	}
+	if (%power_map) {
+	    while(my($k,$v) = each %power_map) {
+		$v->{Time} = $v->{_RawTime} + $ampel_lost/3600 + $penalty_lost/3600;
+		delete $v->{_RawTime};
+	    }
+	}
     }
 
     my @affecting_blockings;
@@ -5852,6 +5871,58 @@ if (%power_map) {
 	    print ",";
 	} else {
 	    $is_first = 0;
+	}
+	
+	my $ampel_count;
+	if (defined $r->trafficlights) {
+	    $ampel_count = $r->trafficlights;
+	}
+	{
+	    my $i = 0;
+	    my @speeds = sort { $a <=> $b } keys %speed_map;
+	    for my $speed (@speeds) {
+		my $def = $speed_map{$speed};
+		my $bold = $def->{Pref};
+		my $time = $def->{Time};
+		print "<td>" . make_time($time)
+		    . "h (" . ($bold ? "<b>" : "") . M("bei")." $speed km/h" . ($bold ? "</b>" : "") . ")";
+		print "," if $speed != $speeds[-1];
+		print "</td>";
+		if ($i == 1) {
+		    print "</tr><tr><td></td>";
+		}
+		$i++;
+	    }
+	}
+	print "</tr>\n";
+	if (%power_map) {
+	    print "<tr><td></td>";
+	    my $is_first = 1;
+	    for my $power (sort { $a <=> $b } keys %power_map) {
+		my $def = $power_map{$power};
+		my $time = $def->{Time};
+		print "<td>";
+		if (!$is_first) {
+		    print ",";
+		} else {
+		    $is_first = 0;
+		}
+		print make_time($time) . "h (" . M("bei") . " $power W)", "</td>"
+	    }
+	    print "</tr>\n";
+	}
+	print "</table>\n";
+	if (defined $ampel_count) {
+	    if ($ampel_count == 0) {
+		print M("Keine Ampeln");
+	    } else {
+		print $ampel_count . " " . M("Ampel" . ($ampel_count == 1 ? "" : "n"));
+	    }
+	    print " " . M("auf der Strecke");
+	    if ($ampel_count) {
+		print " (" . M("in die Fahrzeit einbezogen") . ")";
+	    }
+	    print ".<br>\n";
 	}
 	print make_time(($power_map{$power}->{Time} + $ampel_lost + $penalty_lost)/3600) . "h (" . M("bei") . " $power W)", "</td>"
     }
