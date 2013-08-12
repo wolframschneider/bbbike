@@ -367,9 +367,10 @@ function permalink_init() {
         params.ne_lat = $("#ne_lat").val();
         params.format = $("select[name=format] option:selected").val();
 
+        params.oi = $("#oi").val();
+        if (!params.oi) delete params.oi;
         params.city = $("#city").val();
         if (!params.city) delete params.city;
-
         params.coords = $("#coords").val(); // polygon
         if (!params.coords) delete params.coords;
 
