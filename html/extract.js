@@ -14,7 +14,10 @@ var config = {
 
     // display a box at startup
     // see function select_city()
-    default_box: false,
+    "default_box": false,
+
+    // open help page at start up
+    "open_infopage": true,
 
     "show_filesize": true,
     "city_name_optional": false,
@@ -262,6 +265,25 @@ function init() {
         map.zoomToExtent(bounds);
     }
 
+    // open info page at startup, but display it only once for the user
+    if (config.open_infopage) {
+        var oi_html = $("input#oi").val();
+        var oi_cookie = jQuery.cookie("oi");
+
+        if (oi_html == 0 && !oi_cookie) {
+            debug("will open info page at startup");
+
+            jQuery.cookie("oi", 1, {
+                expires: 1
+            });
+            $("span#tools-help a").trigger("click");
+        } else {
+            debug("do not open info page again. html: " + oi_html + ", cookie: " + oi_cookie);
+        }
+
+        $("input#oi").val("1");
+    }
+
     extract_init(opt);
     permalink_init();
 }
@@ -351,7 +373,7 @@ function permalink_init() {
         params.coords = $("#coords").val(); // polygon
         if (!params.coords) delete params.coords;
 
-        //layers        
+        //layers
         layers = layers || map.layers;
         params.layers = '';
         for (var i = 0, len = layers.length; i < len; i++) {
