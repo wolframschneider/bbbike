@@ -62,6 +62,7 @@ function init() {
     init_map_size();
 
     var opt = {
+        "param": 0,
         "back_button": 0
     };
 
@@ -167,6 +168,7 @@ function init() {
         var ne_lat = $("#ne_lat").val();
         coords = $("#coords").val();
 
+        if (coords == "") opt.param = 1;
         if (coords == "0,0,0") { // to long URL, ignore
             coords = "";
         }
@@ -613,7 +615,7 @@ function extract_init(opt) {
     }
 
     startExport(opt);
-    startDrag();
+    if (opt.param == 0) startDrag();
 
     if (config.enable_polygon) {
         setTimeout(function () {
@@ -1145,7 +1147,7 @@ function polygon_init() {
     }
 
     vectors.onFeatureInsert = function () {
-        debug("rectangle/polygon created");
+        debug("rectangle or polygon was created");
     }
 
     vectors.events.on({
