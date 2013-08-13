@@ -14,7 +14,10 @@ var config = {
 
     // display a box at startup
     // see function select_city()
-    default_box: false,
+    "default_box": false,
+
+    // open help page at start up
+    "open_infopage": true,
 
     "show_filesize": true,
     "city_name_optional": false,
@@ -59,7 +62,6 @@ function init() {
     init_map_size();
 
     var opt = {
-        "param": 0,
         "back_button": 0
     };
 
@@ -165,8 +167,6 @@ function init() {
         var ne_lat = $("#ne_lat").val();
         coords = $("#coords").val();
 
-        if (coords == "") opt.param = 1;
-
         if (coords == "0,0,0") { // to long URL, ignore
             coords = "";
         }
@@ -265,6 +265,25 @@ function init() {
         map.zoomToExtent(bounds);
     }
 
+    // open info page at startup, but display it only once for the user
+    if (config.open_infopage) {
+        var oi_html = $("input#oi").val();
+        var oi_cookie = jQuery.cookie("oi");
+
+        if (oi_html == 0 && !oi_cookie) {
+            debug("will open info page at startup");
+
+            jQuery.cookie("oi", 1, {
+                expires: 1
+            });
+            $("span#tools-help a").trigger("click");
+        } else {
+            debug("do not open info page again. html: " + oi_html + ", cookie: " + oi_cookie);
+        }
+
+        $("input#oi").val("1");
+    }
+
     extract_init(opt);
     permalink_init();
 }
@@ -348,13 +367,14 @@ function permalink_init() {
         params.ne_lat = $("#ne_lat").val();
         params.format = $("select[name=format] option:selected").val();
 
+        params.oi = $("#oi").val();
+        if (!params.oi) delete params.oi;
         params.city = $("#city").val();
         if (!params.city) delete params.city;
-
         params.coords = $("#coords").val(); // polygon
         if (!params.coords) delete params.coords;
 
-        //layers        
+        //layers
         layers = layers || map.layers;
         params.layers = '';
         for (var i = 0, len = layers.length; i < len; i++) {
@@ -593,8 +613,7 @@ function extract_init(opt) {
     }
 
     startExport(opt);
-    // start drag if we are on the start page, without history
-    if (opt.param == 0) startDrag();
+    startDrag();
 
     if (config.enable_polygon) {
         setTimeout(function () {
@@ -1126,8 +1145,8 @@ function polygon_init() {
     }
 
     vectors.onFeatureInsert = function () {
-        debug("rectangle or polygon was created");
-    };
+        debug("rectangle/polygon created");
+    }
 
     vectors.events.on({
         "beforefeaturemodified": report,
