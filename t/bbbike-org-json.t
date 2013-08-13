@@ -17,8 +17,12 @@ use warnings;
 
 my $debug = 1;
 
-my @json_files = get_json_files(qw[world/etc/extract]);
-plan tests => scalar(@json_files) * 4;
+my @json_dirs = qw(ext/BBBikeXS ext/Strassen-Inline ext/Strassen-Inline2
+  ext/StrassenNetz-CNetFile ext/VectorUtil-Inline ext/VirtArray
+  t/extract/confirmed t/extract/json t/extract/json-large world/etc/extract);
+
+my @json_files = get_json_files(@json_dirs);
+plan tests => scalar(@json_files);
 
 sub get_json_files {
     my @dirs = @_;
