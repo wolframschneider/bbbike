@@ -309,8 +309,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11160,13492
 #: XXX Ampelanlange wird umgebaut (Richtung Kreuzung)
 #: by: http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20120514.1415.370100.html
-#: last_checked: 2013-06-04
-#: next_check: 2013-08-04
+#: last_checked: 2013-08-09
+#: next_check: 2013-10-07
 	F 10511,14418
 	X 10003,14088
 	X 9800,14722
@@ -1827,10 +1827,11 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: note: Fährt nur am Wochenende tagsüber während des Sommers im 15-30-Minutentakt: vvv
 	B0 20623,6136
 	B0 20561,7229
+	B0 20439,7124
 	B0 19590,6590
 	B0 20313,6841
 	B0 19961,5989
-	B0 19986,6404
+	B0 19988,6409
 	B0 20593,6082
 #: note: ^^^
 #: section ^^^
@@ -2323,10 +2324,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 24556,12056
 #: note: sonntags möglicherweise immer ausgeschaltet
 	F 24936,4838
-#: XXX Baustellenampel; wie wird die Situation nach den Bauarbeiten aussehen?
-#: last_checked: 2013-06-09
-#: next_check: 2013-07-01
-	X::inwork 23950,5342
+	X 23950,5342
 	F 11033,13086
 	F 16370,24600
 	F 16037,25915
@@ -2484,10 +2482,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 11214,16043
 	X -3892,13960
 	X 3005,13728
-#: XXX eventuell bleibt die Ampel hier permanent
-#: last_checked: 2013-06-22
-#: next_check: 2013-07-01
-	X::inwork 23660,5477
+	X 23660,5477
 	F 18165,7371
 ################################################################################
 #: note: Potsdam vvv
@@ -2658,7 +2653,7 @@ geschlossen bei Bedarf (?)	Zbr 27657,-11741
 	B 13282,-18250
 	B 13295,-18620
 	B 13412,-20513
-	B 13557,-21831
+	B 13528,-21855
 	B 16379,-29446
 	B 16630,-30953
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?)	B 40248,14503

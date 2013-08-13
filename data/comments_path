@@ -50,7 +50,7 @@ Blissestr. - Am Volkspark: bereits an der Ampel Mecklenburgische Str. auf die li
 Lietzenburger Str. - Rankestr.: bereits an der Ampel Bundesallee/Lietzenburger Str. auf den linken Gehweg wechseln	PI; 5458,10443 5529,10453 5578,10529 5636,10626
 weiter links auf Uferweg	CP; 6334,14756 5972,14820 5873,14847
 An der Wuhlheide - Wuhlewanderweg: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21470,5809 21569,5730 21596,5693 21602,5685 21744,5804
-An der Wuhlheide - Alte Försterei: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21958,6248 22000,6245
+An der Wuhlheide - Alte Försterei: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21653,6037 21737,6068 21832,6129 21869,6190 21958,6248 22000,6245
 Wuhlewanderweg - Lindenstr.: zunächst linken Gehweg benutzen, an der Cardinalstr. oder Ampel Joachimstr. die Straßenseite wechseln	CP; 21744,5804 21602,5685 21706,5541
 Mariendorfer Damm - Am Teltowkanal: bereits an der Ullsteinstr. auf den linken Gehweg wechseln	PI; 9207,5185 9196,5272 9171,5263
 hinter dem "Alten Zollhaus" halbrechts abbiegen	CP; 10313,10084 10168,10085 10158,10117 10069,10151
@@ -60,7 +60,7 @@ dem Schotterweg folgen	CP; 24210,37562 24193,37725 24208,37830
 Hauptstr.: bereits an der Gustav-Holzmann-Str. die Gehwegseite wechseln	PI; 16302,9865 16261,9925 16049,9749
 Hauptstr.: wegen Straßenbahntrasse zunächst auf der linken Gehwegseite weiterfahren und an der nächsten Ampel die Gehwegseite wechseln	CP; 16049,9749 16261,9925 16187,10033
 Rollbergstr. - Karl-Marx-Str.: zunächst auf dem linken Gehweg bleiben, an der Ampel Anzengruberstr. die Straßenseite wechseln	CP; 12528,8205 12714,8249 12689,8289
-zunächst auf dem linken Gehweg des Weißenseer Wegs bleiben, nächste Möglichkeit (Bernhard-Bästlein-Str. oder Landsberger Allee) zur Querung benutzen	CP; 15363,13531 15436,13780 15354,13998
+zunächst auf dem linken Gehweg des Weißenseer Wegs bleiben, nächste Möglichkeit (Bernhard-Bästlein-Str. oder Landsberger Allee) zur Querung benutzen	CP; 15374,13542 15436,13780 15354,13998
 zur Müggelstr. Hausdurchfahrt benutzen	CS; 14856,11740 14837,11706
 zur Müggelstr. Hausdurchfahrt benutzen	CS; 14994,12121 14994,12064
 Zugang zum Bahndamm über die Terasse der Mambo-Bar	CS; 13923,9405 13953,9372
@@ -385,3 +385,5 @@ Jüdenstr. - Falkenseer Platz: auf den linken Gehweg bis zum Falkenseer Platz fah
 Am Juliusturm - Jüdenstr.: bereits an der Ampel Hoher Steinweg auf den linken Gehweg wechseln	PI; -3150,14631 -3209,14662 -3239,14641
 Bahnhofstr. - Am Maria-Jankowski-Park: bereits an der Ampel Bahnhofstr./Lindenstr. auf den linken Gehweg wechseln	PI; 21954,5229 22043,5346 22087,5404 22018,5452
 Ausgeschildert als "Pieskower Weg"	CP; 13123,15244 13094,15196 13131,15175
+Apollofalterallee - Lindenschwärmerweg: spätestens an der Rapsweißlingstr. auf die Fahrbahn wechseln, an der Einmündung Lindenschwärmerweg fehlt eine Bordsteinabsenkung am Radweg	PI; 21249,11042 21308,11075 21294,11097
+Am Stadtpark: linken Gehweg benutzen, um Bordstein zu vermeiden	CP2; 15357,12813 15395,12762

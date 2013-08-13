@@ -1,10 +1,9 @@
 # -*- perl -*-
 
 #
-# $Id: Tk.pm,v 1.19 2009/01/25 15:36:09 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2008 Slaven Rezic. All rights reserved.
+# Copyright (C) 2008,2013 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,7 +15,7 @@ package GPS::GpsmanData::Tk;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.19 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '1.20';
 
 use base qw(Tk::Frame);
 Construct Tk::Widget 'GpsmanData';
@@ -171,15 +170,29 @@ sub OnDestroy {
     $w->_destroy_velocity_frames;
 }
 
+# $gpsman_obj may be a GPS::GpsmanData or GPS::GpsmanMultiData
+# $wpt_gpsman_obj is optional; currently only GPS::GpsmanData is supported (because get_sorted_waypoints_by_time is not available in the other)
 sub associate_object {
-    my($w, $gpsman_obj) = @_;
+    my($w, $gpsman_obj, $wpt_gpsman_obj) = @_;
     $w->{GpsmanData} = $gpsman_obj;
+    if ($wpt_gpsman_obj) {
+	$w->{WptGpsmanData} = $wpt_gpsman_obj;
+	my @sorted_wpts = $wpt_gpsman_obj->get_sorted_waypoints_by_time;
+	$w->{AssociatedWptInfo} = [ map { +{ epoch => $_->Comment_to_unixtime($wpt_gpsman_obj), wpt => $_ } } @sorted_wpts];
+    } else {
+	delete $w->{WptGpsmanData};
+	delete $w->{AssociatedWptInfo};
+    }
     $w->_clear_data_view;
     $w->_fill_data_view;
 }
 
 sub get_associated_object {
     shift->{GpsmanData};
+}
+
+sub _get_associated_wpt_info {
+    shift->{AssociatedWptInfo};
 }
 
 sub reload {
@@ -242,6 +255,38 @@ sub _fill_data_view {
     my @chunk_to_i;
     my %max_ms;
     my $last_vehicle;
+
+    my $associated_wpt_info = $w->_get_associated_wpt_info;
+    my $associated_wpt_info_i = 0;
+    my $add_associated_wpts_sub = sub {
+	my($wpt) = @_;
+	if ($associated_wpt_info) {
+	    while ($associated_wpt_info_i < @$associated_wpt_info) {
+		my $current_associated_wpt_info = $associated_wpt_info->[$associated_wpt_info_i];
+		my $do_add = 0;
+		if ($wpt) {
+		    if ($wpt->Comment_to_unixtime($w->{WptGpsmanData}) > $current_associated_wpt_info->{epoch}) {
+			$do_add = 1;
+		    }
+		} else {
+		    $do_add = 1;
+		}
+		if ($do_add) {
+		    $dv->add(++$i, -text => ""); # XXX -data?
+		    my $col_i = -1;
+		    my $current_associated_wpt = $current_associated_wpt_info->{wpt};
+		    for my $def (@wpt_cols) {
+			my $val = $current_associated_wpt->can($def) ? $current_associated_wpt->$def : '';
+			$dv->itemCreate($i, ++$col_i, -text => $val);
+		    }
+		    $associated_wpt_info_i++;
+		} else {
+		    last;
+		}
+	    }
+	}
+    };
+
     for my $chunk (@{ $w->{GpsmanData}->Chunks }) {
 	$chunk_i++;
 	my $supported = $chunk->Type eq $chunk->TYPE_TRACK;
@@ -260,6 +305,7 @@ sub _fill_data_view {
 	    my $last_wpt;
 	    for my $wpt (@{ $chunk->Track }) {
 		$wpt_i++;
+		$add_associated_wpts_sub->($wpt);
 		my $data = {Chunk => $chunk_i, Wpt => $wpt_i};
 		$dv->add(++$i, -text => "", -data => $data);
 		my $col_i = -1;
@@ -300,6 +346,7 @@ sub _fill_data_view {
 	    }
 	}
     }
+    $add_associated_wpts_sub->(undef); # the remaining associated waypoints
 
     # align VelocityGraph
     if (keys %max_ms) { # there is a maximum velocity
@@ -678,7 +725,7 @@ GPS::GpsmanData::Tk - make gpsman data visible in a Tk widget
 =head1 SYNOPSIS
 
     cd .../bbbike
-    perl -MTk -MGPS::GpsmanData -MGPS::GpsmanData::Tk -e '$w=tkinit->GpsmanData->pack(qw(-fill both -expand 1));$gps=GPS::GpsmanMultiData->new;$gps->load(shift);$w->associate_object($gps);MainLoop' ...
+    perl -MTk -Ilib -MGPS::GpsmanData -MGPS::GpsmanData::Tk -e '$w=tkinit->GpsmanData->pack(qw(-fill both -expand 1));$gps=GPS::GpsmanMultiData->new;$gps->load(shift);$w->associate_object($gps);MainLoop' ...
 
 =head1 DESCRIPTION
 
