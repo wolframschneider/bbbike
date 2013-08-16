@@ -267,7 +267,7 @@ sub transform {
 	    $ret{'day'} = $day;
 	    $ret{'night'} = $night;
 	} else {
-	    die "Cannot handled numcolors=$numcolors";
+	    warn "Cannot handled numcolors=$numcolors";
 	}
     }
     \%ret;
