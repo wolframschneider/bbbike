@@ -12,6 +12,7 @@ var config = {
     // see function select_city()
     "default_box": false,
 
+
     // open help page at start up
     "open_infopage": true,
 
@@ -40,6 +41,9 @@ var config = {
 
     // extract-pro service with meta data and daily updates
     extract_pro: 0,
+
+    // size of box in relation to the map
+    "default_box_size": 0.5,
 
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
@@ -198,10 +202,11 @@ function init() {
         map.zoomToExtent(bounds);
     }
 
-    if (config.open_infopage) open_infopage();
-
     extract_init(opt);
     permalink_init();
+
+    plot_default_box();
+    if (config.open_infopage) open_infopage();
 }
 
 function init_map() {
@@ -296,7 +301,6 @@ function init_map() {
 }
 
 // open info page at startup, but display it only once for the user
-
 
 function open_infopage() {
     var oi_html = $("input#oi").val();
@@ -650,6 +654,52 @@ function extract_init(opt) {
             polygon_update();
         }, 1000);
     }
+}
+
+function plot_default_box() {
+    debug("plot default box");
+
+    if (!check_lnglat_form()) {
+        alert("lng or lat value is out of range -180 ... 180, -90 .. 90");
+        return;
+    }
+
+    // return javascript float coordinate
+
+
+    function c(name) {
+        var val = $("#" + name).val();
+        return parseFloat(val);
+    }
+
+    var sw_lng = c("sw_lng");
+    var sw_lat = c("sw_lat");
+    var ne_lng = c("ne_lng");
+    var ne_lat = c("ne_lat");
+
+    debug("map box: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
+
+    // draw a smaller box than the map, by config default_box_size
+    if (config.default_box_size > 0 && config.default_box_size < 1) {
+        debug("default box factor: " + config.default_box_size);
+        var lng = ne_lng - sw_lng;
+        var lat = ne_lat - sw_lat;
+        var factor = (1 - config.default_box_size) / 2;
+
+        debug("lng: " + lng * factor + " " + lat * factor + " " + factor);
+
+        sw_lng += lng * factor;
+        sw_lat += lat * factor;
+
+        ne_lng -= lng * factor;
+        ne_lat -= lat * factor;
+
+        debug("default box: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
+    }
+
+    var polygon = rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
+    var feature = plot_polygon(polygon);
+    vectors.addFeatures(feature);
 }
 
 // called from HTML page
@@ -1124,7 +1174,7 @@ function show_filesize(skm, real_size) {
     if (!filesize[format]) {
         debug("Unknwon format: " + format);
     }
-    
+
     var factor = filesize[format].size ? filesize[format].size : 1;
     var factor_time = filesize[format].time ? filesize[format].time : 1;
 
