@@ -120,8 +120,13 @@ function init() {
 
             debug("coords: " + coords);
             state.validateControls();
+
+            plot_default_box_menu_on();
+
+/*
             map.events.unregister("moveend", map, state.mapMoved);
             polygon_menu(true);
+            */
         };
 
         setTimeout(function () {
@@ -643,12 +648,12 @@ function plot_default_box() {
     var feature = plot_polygon(polygon);
     vectors.addFeatures(feature);
 
-    polygon_menu(true); // display poygon menu
-    polygon_update(); // rotate by default
     plot_default_box_menu_on();
 }
 
 function plot_default_box_menu_on() {
+    polygon_menu(true); // display poygon menu
+    polygon_update(); // rotate by default
     // switch menu
     $("#drag_box_default").hide();
     $("#drag_box_select").show();
