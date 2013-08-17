@@ -15,7 +15,7 @@ package GPS::GpsmanData::Tk;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '1.20';
+$VERSION = '1.21';
 
 use base qw(Tk::Frame);
 Construct Tk::Widget 'GpsmanData';
@@ -258,34 +258,73 @@ sub _fill_data_view {
 
     my $associated_wpt_info = $w->_get_associated_wpt_info;
     my $associated_wpt_info_i = 0;
-    my $add_associated_wpts_sub = sub {
-	my($wpt) = @_;
-	if ($associated_wpt_info) {
-	    while ($associated_wpt_info_i < @$associated_wpt_info) {
-		my $current_associated_wpt_info = $associated_wpt_info->[$associated_wpt_info_i];
-		my $do_add = 0;
-		if ($wpt) {
-		    if ($wpt->Comment_to_unixtime($w->{WptGpsmanData}) > $current_associated_wpt_info->{epoch}) {
+    my $add_associated_wpts_sub;
+    my $symbol_to_img;
+    my $symbol_to_tk_photo = $w->privateData->{'symbol_to_tk_photo'};
+    if ($associated_wpt_info) {
+	require GPS::Symbols::Garmin;
+	$symbol_to_img = GPS::Symbols::Garmin::get_cached_symbol_to_img();
+	if (!$symbol_to_tk_photo) {
+	    $symbol_to_tk_photo = {};
+	    $w->privateData->{'symbol_to_tk_photo'} = $symbol_to_tk_photo;
+	}
+	$add_associated_wpts_sub = sub {
+	    my($wpt) = @_;
+	    if ($associated_wpt_info) {
+		while ($associated_wpt_info_i < @$associated_wpt_info) {
+		    my $current_associated_wpt_info = $associated_wpt_info->[$associated_wpt_info_i];
+		    my $do_add = 0;
+		    if ($wpt) {
+			if ($wpt->Comment_to_unixtime($w->{WptGpsmanData}) > $current_associated_wpt_info->{epoch}) {
+			    $do_add = 1;
+			}
+		    } else {
 			$do_add = 1;
 		    }
-		} else {
-		    $do_add = 1;
-		}
-		if ($do_add) {
-		    $dv->add(++$i, -text => ""); # XXX -data?
-		    my $col_i = -1;
-		    my $current_associated_wpt = $current_associated_wpt_info->{wpt};
-		    for my $def (@wpt_cols) {
-			my $val = $current_associated_wpt->can($def) ? $current_associated_wpt->$def : '';
-			$dv->itemCreate($i, ++$col_i, -text => $val);
+		    if ($do_add) {
+			$dv->add(++$i, -text => "", -data => {AssociatedWpt => $associated_wpt_info_i});
+			my $col_i = -1;
+			my $current_associated_wpt = $current_associated_wpt_info->{wpt};
+			for my $def (@wpt_cols) {
+			    my $val = $current_associated_wpt->can($def) ? $current_associated_wpt->$def : '';
+			    if ($def eq 'Symbol') {
+				my $val = $current_associated_wpt->$def;
+				if (defined $val && length $val && $symbol_to_img) {
+				    my $photo = $symbol_to_tk_photo->{$val};
+				    if (!$photo) {
+					my $img = $symbol_to_img->{$val};
+					if ($img) {
+					    if (-r $img) {
+						$photo = $dv->Photo(-file => $img);
+						$symbol_to_tk_photo->{$val} = $photo;
+					    } else {
+						warn "WARN: image '$img' does not exist or is not readable";
+					    }
+					} else {
+					    warn "WARN: no image symbol for '$val'";
+					}
+				    }
+				    if ($photo) {
+					$dv->itemCreate($i, ++$col_i,
+							-itemtype => 'imagetext',
+							-image => $photo,
+						       );
+				    }
+				}
+			    } else {
+				$dv->itemCreate($i, ++$col_i, -text => $val);
+			    }
+			}
+			$associated_wpt_info_i++;
+		    } else {
+			last;
 		    }
-		    $associated_wpt_info_i++;
-		} else {
-		    last;
 		}
 	    }
-	}
-    };
+	};
+    } else {
+	$add_associated_wpts_sub = sub { };
+    }
 
     for my $chunk (@{ $w->{GpsmanData}->Chunks }) {
 	$chunk_i++;
@@ -686,8 +725,13 @@ sub wpt_by_item {
     my($self, $item) = @_;
     my $dv = $self->Subwidget("data");
     my $data = $dv->info('data', $item);
-    return undef if !exists $data->{Wpt};
-    $self->{GpsmanData}->Chunks->[$data->{Chunk}]->Track->[$data->{Wpt}];
+    if      (exists $data->{AssociatedWpt}) {
+	$self->_get_associated_wpt_info->[$data->{AssociatedWpt}]->{wpt};
+    } elsif (exists $data->{Wpt}) {
+	$self->{GpsmanData}->Chunks->[$data->{Chunk}]->Track->[$data->{Wpt}];
+    } else {
+	undef;
+    }
 }
 
 sub chunk_by_item {
@@ -712,6 +756,18 @@ sub get_selected_items {
     my $dv = $self->Subwidget("data");
     my @items = $dv->info('selection');
     @items;
+}
+
+sub DESTROY {
+    my $self = shift;
+    $self->SUPER::DESTROY;
+    my $symbol_to_tk_photo = $self->privateData->{'symbol_to_tk_photo'};
+    if ($symbol_to_tk_photo) {
+	while(my($k,$v) = each %$symbol_to_tk_photo) {
+	    $v->delete;
+	    delete $symbol_to_tk_photo->{$k};
+	}
+    }
 }
 
 1;
@@ -750,7 +806,7 @@ The internal item number of the clicked item.
 
 =item -wpt
 
-The L<GPS::Gpsman::Waypoint> object of the associated clicked item, if
+The B<GPS::Gpsman::Waypoint> object of the associated clicked item, if
 any.
 
 =item -chunk
@@ -767,7 +823,7 @@ The L<GPS::GpsmanData> object of the associated clicked item, if any.
 
 =item $w->associate_object($gpsmandata)
 
-Associate a L<GPS::GpsmanMultiData> object with the widget. This will
+Associate a B<GPS::GpsmanMultiData> object with the widget. This will
 also cause to fill the gps data into the widget.
 
 =item $w->reload
@@ -790,7 +846,7 @@ to use it with a small values (a meter or less).
 
 For a given (internal) I<$item> (for example, the result from the
 L</find_items_by_lat_lon> call), return the associated
-L<GPS::Gpsman::Waypoint> object, or undef.
+B<GPS::Gpsman::Waypoint> object, or undef.
 
 =item $w->chunk_by_item($item)
 
@@ -808,7 +864,7 @@ Get a list of (internal) items which are selected.
 
 =item $w->find_items_by_wpts(@wpts)
 
-For a list of L<GPS::Gpsman::Waypoint> objects, return a list of
+For a list of B<GPS::Gpsman::Waypoint> objects, return a list of
 corresponding (internal) items. Note: comparison is done by identity
 check, so make sure that the same waypoint objects are used as input
 parameters as are associated with the GpsmanData widget.
@@ -860,11 +916,6 @@ accuracy in selected ranges)
 
 =head2 Low priority
 
-  * Callbacks, so dass BBBike auf Änderungen reagieren kann
-
-  * BBBike integration: Möglichkeit eines Callbacks für eine Selektion
-    von Punkten (BBBike: call mark_street or mark_points)
-
   * Nice to have: Scrollbereich im GPS Viewer und im BBBike-Canvas
     können sich gegenseitig setzen, so dass immer der
     korrespondierende Bereich zu sehen ist
@@ -876,10 +927,19 @@ accuracy in selected ranges)
 
 =head2 GPX support
 
-  * Better support for GPX and other data types
+  * Better support for GPX and other data types (currently only
+    viewing is possible, but not editing)
  
   * GPX-Äquivalent für ~/~~ erfinden.
 
   * GPX-Äquivalent für srt:... erfinden.
+
+=head1 AUTHOR
+
+Slaven Rezic
+
+=head1 SEE ALSO
+
+L<GPS::GpsmanData::TkViewer>.
 
 =cut
