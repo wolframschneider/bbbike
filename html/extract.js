@@ -43,7 +43,7 @@ var config = {
     extract_pro: 0,
 
     // size of box in relation to the map
-    "default_box_size": 0.5,
+    "default_box_size": 0.6,
 
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
