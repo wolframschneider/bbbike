@@ -203,6 +203,7 @@ function init() {
     }
 
     extract_init(opt);
+    extract_init_pro(opt);
     permalink_init();
 
     plot_default_box();
@@ -441,18 +442,6 @@ function extract_init(opt) {
     var markerLayer;
     var markerControl;
 
-    extract_init_pro();
-
-    // extract-pro service can extract larger areas
-
-    function extract_init_pro(opt) {
-        var hostname = $(location).attr('hostname');
-        if (hostname.match(/^(extract-pro|dev)[2-4]?\.bbbike\.org/i)) {
-            config.max_size["default"] *= 2;
-            config.max_skm *= 2;
-        }
-    }
-
     function startExport() {
         // main vector
         vectors = new OpenLayers.Layer.Vector("Vector Layer", {
@@ -656,6 +645,17 @@ function extract_init(opt) {
     }
 }
 
+// extract-pro service can extract larger areas
+
+
+function extract_init_pro(opt) {
+    var hostname = $(location).attr('hostname');
+    if (hostname.match(/^(extract-pro|dev)[2-4]?\.bbbike\.org/i)) {
+        config.max_size["default"] *= 2;
+        config.max_skm *= 2;
+    }
+}
+
 function plot_default_box() {
     debug("plot default box");
 
@@ -665,7 +665,6 @@ function plot_default_box() {
     }
 
     // return javascript float coordinate
-
 
     function c(name) {
         var val = $("#" + name).val();
