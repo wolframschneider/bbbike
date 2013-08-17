@@ -8,11 +8,6 @@
 
 // central config
 var config = {
-    // display a box at startup
-    // see function select_city()
-    "default_box": false,
-
-
     // open help page at start up
     "open_infopage": true,
 
@@ -48,6 +43,10 @@ var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
     "color_error": "red",
+
+    // display a box at startup
+    // see function select_city()
+    "default_box": false,
 
     /* ??? */
     "enable_polygon": true,
@@ -87,7 +86,6 @@ function init() {
 
     map = init_map();
 
-    var epsg4326 = new OpenLayers.Projection("EPSG:4326");
     var bounds;
 
 /*
@@ -96,6 +94,8 @@ function init() {
      */
     var back_botton = check_lnglat_form(true);
     var coords = "";
+
+/*
     if (back_botton) {
         var sw_lng = $("#sw_lng").val();
         var sw_lat = $("#sw_lat").val();
@@ -146,63 +146,9 @@ function init() {
             opt.back_button = 1;
         }
     }
+    */
 
-    // default city
-    else {
-        var c = select_city();
-        var sw_lng = c.sw[0];
-        var sw_lat = c.sw[1];
-        var ne_lng = c.ne[0];
-        var ne_lat = c.ne[1];
-
-        debug("default city: " + c.sw[0] + "," + c.sw[1] + " " + c.ne[0] + "," + c.ne[1]);
-        bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
-        if (config.simple) {
-
-            opt.back_function = function () {
-                debug("get coords from back button");
-
-                $("#sw_lng").val(sw_lng);
-                $("#sw_lat").val(sw_lat);
-                $("#ne_lng").val(ne_lng);
-                $("#ne_lat").val(ne_lat);
-                $("#coords").val(coords);
-
-                debug("coords: " + coords);
-                state.validateControls();
-
-                map.events.unregister("moveend", map, state.mapMoved);
-                polygon_menu(true);
-            };
-
-            if (config.default_box) {
-                setTimeout(function () {
-                    var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
-                    var feature = plot_polygon(polygon);
-                    vectors.addFeatures(feature);
-                    if (coords) {
-                        // trigger a recalculation of polygon size
-                        setTimeout(function () {
-                            vectors.events.triggerEvent("sketchcomplete", {
-                                "feature": feature
-                            });
-                        }, 500);
-                    }
-                    opt.back_function();
-
-                }, 700);
-
-            } else {
-                debug("Do not plot default box");
-            }
-        }
-    }
-
-    if (bounds) {
-        bounds.transform(epsg4326, map.getProjectionObject());
-        map.zoomToExtent(bounds);
-    }
-
+    move_map_to_city();
     extract_init(opt);
     extract_init_pro(opt);
     permalink_init();
@@ -212,6 +158,25 @@ function init() {
     $("#drag_box_select").click(plot_default_box_menu_off);
 
     if (config.open_infopage) open_infopage();
+}
+
+function move_map_to_city() {
+    var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+
+    // default city Berlin
+    var c = select_city();
+
+    var sw_lng = c.sw[0];
+    var sw_lat = c.sw[1];
+    var ne_lng = c.ne[0];
+    var ne_lat = c.ne[1];
+
+    debug("default city: " + c.sw[0] + "," + c.sw[1] + " " + c.ne[0] + "," + c.ne[1]);
+    var bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
+
+
+    bounds.transform(epsg4326, map.getProjectionObject());
+    map.zoomToExtent(bounds);
 }
 
 function init_map() {
@@ -665,7 +630,6 @@ function plot_default_box() {
 
     // return javascript float coordinates
 
-
     function c(name) {
         var val = $("#" + name).val();
         return parseFloat(val);
@@ -717,7 +681,6 @@ function plot_default_box_menu_on() {
 }
 
 // remove default box from map
-
 
 function plot_default_box_menu_off() {
     $("#drag_box_select_reset").attr('checked', false);
