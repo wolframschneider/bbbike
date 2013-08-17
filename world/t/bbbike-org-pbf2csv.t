@@ -38,7 +38,7 @@ sub md5_file {
     return $md5;
 }
 
-my $prefix       = 't/data-osm/tmp';
+my $prefix       = 'world/t/data-osm/tmp';
 my $pbf_file     = "$prefix/Cusco.osm.pbf";
 my $csv_file_gz  = "$prefix/Cusco.osm.csv.gz";
 my $csv_file_bz2 = "$prefix/Cusco.osm.csv.bz2";
