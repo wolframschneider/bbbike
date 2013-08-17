@@ -1,5 +1,8 @@
 #!/usr/local/bin/perl
 # Copyright (c) Sep 2012-2013 Wolfram Schneider, http://bbbike.org
+#
+# check command output of: pbf2osm --csv
+#
 
 BEGIN { }
 
@@ -17,7 +20,7 @@ use Digest::MD5 qw(md5_hex);
 use strict;
 use warnings;
 
-plan tests => 13;
+plan tests => 9;
 
 sub md5_file {
     my $file = shift;
@@ -37,9 +40,9 @@ sub md5_file {
 
 my $prefix       = 't/data-osm/tmp';
 my $pbf_file     = "$prefix/Cusco.osm.pbf";
-my $osm_file_gz  = "$prefix/Cusco.osm.gz";
-my $osm_file_bz2 = "$prefix/Cusco.osm.bz2";
-my $osm_file_xz  = "$prefix/Cusco.osm.xz";
+my $csv_file_gz  = "$prefix/Cusco.osm.csv.gz";
+my $csv_file_bz2 = "$prefix/Cusco.osm.csv.bz2";
+my $csv_file_xz  = "$prefix/Cusco.osm.csv.xz";
 
 if ( !-f $pbf_file ) {
     system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
@@ -47,46 +50,30 @@ if ( !-f $pbf_file ) {
 }
 
 my $pbf_md5 = "6dc9df64ddc42347bbb70bc134b4feda";
-my $osm_md5 = "081f6aee335948f325319718d6fd20b7";
+my $csv_md5 = "24dff23d30cf931540d585238314c7c1";
 
 is( $pbf_md5, md5_file($pbf_file), "md5 checksum matched" );
 
-my $tempfile = File::Temp->new( SUFFIX => ".osm" );
+my $tempfile = File::Temp->new( SUFFIX => ".csv" );
+
+system( qq[world/bin/pbf2osm --csv $pbf_file > $tempfile] );
+is( $?,                  0,        "pbf2osm --csv converter" );
+is( md5_file($tempfile), $csv_md5, "csv md5 checksum matched" );
 
 system(
-qq[world/bin/pbf2osm $pbf_file | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
-);
-is( $?,                  0,        "pbf2osm converter" );
-is( md5_file($tempfile), $osm_md5, "osm md5 checksum matched" );
+    qq[world/bin/pbf2osm --csv-gzip $pbf_file; zcat $csv_file_gz > $tempfile] );
+is( $?,                  0,        "pbf2osm --csv-gzip converter" );
+is( md5_file($tempfile), $csv_md5, "csv gzip md5 checksum matched" );
 
 system(
-qq[world/bin/pbf2osm --gzip $pbf_file; zcat $osm_file_gz | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
+    qq[world/bin/pbf2osm --csv-bzip2 $pbf_file; bzcat $csv_file_bz2 > $tempfile]
 );
-is( $?,                  0,        "pbf2osm --gzip converter" );
-is( md5_file($tempfile), $osm_md5, "osm gzip md5 checksum matched" );
+is( $?,                  0,        "pbf2osm --csv-bzip2 converter" );
+is( md5_file($tempfile), $csv_md5, "csv bzip2 md5 checksum matched" );
 
 system(
-qq[world/bin/pbf2osm --pgzip $pbf_file; zcat $osm_file_gz  | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
-);
-is( $?,                  0,        "pbf2osm --pgzip converter" );
-is( md5_file($tempfile), $osm_md5, "osm pigz md5 checksum matched" );
-
-system(
-qq[world/bin/pbf2osm --bzip2 $pbf_file; bzcat $osm_file_bz2 | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
-);
-is( $?,                  0,        "pbf2osm --bzip2 converter" );
-is( md5_file($tempfile), $osm_md5, "osm bzip2 md5 checksum matched" );
-
-system(
-qq[world/bin/pbf2osm --pbzip2 $pbf_file; bzcat $osm_file_bz2 | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
-);
-is( $?,                  0,        "pbf2osm --pbzip2 converter" );
-is( md5_file($tempfile), $osm_md5, "osm pbzip2 md5 checksum matched" );
-
-system(
-qq[world/bin/pbf2osm --xz $pbf_file; xzcat $osm_file_xz | perl -npe 's/timestamp=".*?"/timestamp="0"/' > $tempfile]
-);
-is( $?,                  0,        "pbf2osm --xz converter" );
-is( md5_file($tempfile), $osm_md5, "osm xz md5 checksum matched" );
+    qq[world/bin/pbf2osm --csv-xz $pbf_file; xzcat $csv_file_xz > $tempfile] );
+is( $?,                  0,        "pbf2osm --csv-xz converter" );
+is( md5_file($tempfile), $csv_md5, "csv xz md5 checksum matched" );
 
 __END__
