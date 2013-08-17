@@ -95,7 +95,6 @@ function init() {
     var back_botton = check_lnglat_form(true);
     var coords = "";
 
-/*
     if (back_botton) {
         var sw_lng = $("#sw_lng").val();
         var sw_lat = $("#sw_lat").val();
@@ -146,7 +145,6 @@ function init() {
             opt.back_button = 1;
         }
     }
-    */
 
     move_map_to_city();
     extract_init(opt);
@@ -599,7 +597,6 @@ function extract_init_pro(opt) {
 
 // return javascript float coordinates
 
-
 function cf(name) {
     var val = $("#" + name).val();
     return parseFloat(val);
@@ -614,10 +611,10 @@ function plot_default_box() {
     }
 
 
-    var sw_lng = c("sw_lng");
-    var sw_lat = c("sw_lat");
-    var ne_lng = c("ne_lng");
-    var ne_lat = c("ne_lat");
+    var sw_lng = cf("sw_lng");
+    var sw_lat = cf("sw_lat");
+    var ne_lng = cf("ne_lng");
+    var ne_lat = cf("ne_lat");
 
     debug("map box: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
 
@@ -656,7 +653,6 @@ function plot_default_box_menu_on() {
 }
 
 // remove default box from map
-
 
 function plot_default_box_menu_off() {
     $("#drag_box_select_reset").attr('checked', false);
@@ -1334,9 +1330,13 @@ function init_dialog_window() {
     }).draggable();
 }
 
-// dialog help windows
+/*******************************************************************************
+ * main
+ *
+ */
 jQuery(document).ready(function () {
-    init_dialog_window()
+    init();
+    init_dialog_window();
 });
 
 // EOF
