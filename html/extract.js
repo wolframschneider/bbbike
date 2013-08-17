@@ -206,11 +206,10 @@ function init() {
     extract_init_pro(opt);
     permalink_init();
 
-        
-    // polygon_menu(true);
-    // polygon_update();
-    plot_default_box();
-    
+    // plot_default_box();
+    $("#drag_box_default").click(plot_default_box);
+    $("#drag_box_select").click(plot_default_box_reset);
+
     if (config.open_infopage) open_infopage();
 }
 
@@ -462,6 +461,7 @@ function extract_init(opt) {
                 persist: true
             }
         });
+
         // box.handler.callbacks.done = endDrag;
         map.addControl(box);
 
@@ -515,7 +515,7 @@ function extract_init(opt) {
         mapnikSizeChanged();
     }
 
-    /*
+/*
     function startDrag() {
         // $("#drag_box").html("Drag a box on the map to select an area");
         $("#drag_box_manually").hide();
@@ -561,6 +561,7 @@ function extract_init(opt) {
         validateControls();
     }
     state.mapMoved = mapMoved;
+    state.clearBox = clearBox;
 
     function setBounds(bounds) {
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
@@ -645,7 +646,6 @@ function extract_init(opt) {
 
 // extract-pro service can extract larger areas
 
-
 function extract_init_pro(opt) {
     var hostname = $(location).attr('hostname');
     if (hostname.match(/^(extract-pro|dev)[2-4]?\.bbbike\.org/i)) {
@@ -656,13 +656,15 @@ function extract_init_pro(opt) {
 
 function plot_default_box() {
     debug("plot default box");
-    
+
     if (!check_lnglat_form()) {
         alert("lng or lat value is out of range -180 ... 180, -90 .. 90");
         return;
     }
 
     // return javascript float coordinates
+
+
     function c(name) {
         var val = $("#" + name).val();
         return parseFloat(val);
@@ -693,14 +695,29 @@ function plot_default_box() {
         debug("default box: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
     }
 
+    if (state.clearBox) state.clearBox();
+
     polygon_init();
-    
+
     var polygon = rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
     var feature = plot_polygon(polygon);
     vectors.addFeatures(feature);
-    
+
     polygon_menu(true); // display poygon menu
-    polygon_update();   // rotate by default
+    polygon_update(); // rotate by default
+    // on    
+    $("#drag_box_default").hide();
+    $("#drag_box_select").show();
+    $("#start_default_box").attr('checked', false);
+
+    // off
+    $("#drag_box_select").click(function () {
+        $("#drag_box_select_reset").attr('checked', false);
+        $("#drag_box_default").show();
+        $("#drag_box_select").hide();
+        polygon_menu(false);
+        if (state.clearBox) state.clearBox();
+    });
 }
 
 // called from HTML page
