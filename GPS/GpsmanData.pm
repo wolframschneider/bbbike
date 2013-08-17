@@ -823,6 +823,22 @@ sub make_hash {
     \%h;
 }
 
+sub sort_waypoints_by_time {
+    my($self) = @_;
+    @{ $self->Waypoints } = $self->get_sorted_waypoints_by_time;
+}
+
+sub get_sorted_waypoints_by_time {
+    my($self) = @_;
+    map {
+	$_->[1]
+    } sort {
+	$a->[0] <=> $b->[0]
+    } map {
+	[$_->Comment_to_unixtime($self), $_]
+    } @{ $self->Waypoints };
+}
+
 # XXX only waypoints/tracks, no ident clash check
 sub merge {
     my($self, $another, %args) = @_;

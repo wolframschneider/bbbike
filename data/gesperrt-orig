@@ -79,8 +79,8 @@ Knoten M‰rkische/Landsberger Allee	1 19013,14905 19175,14968 19364,15045 19480,1
 Knoten M‰rkische/Landsberger Allee	1 19852,15201 19605,15073 19408,15007 19350,14997 19156,14953 19013,14905
 Knoten M‰rkische/Landsberger Allee	1 19466,14910 19408,15007
 Knoten M‰rkische/Landsberger Allee	1 19506,15002 19551,14961 19615,14960 19643,15025 19605,15073
-Knoten M‰rkische/Landsberger Allee	1 19694,15141 19707,15206 19675,15240 19582,15221
-Knoten M‰rkische/Landsberger Allee	1 19480,15094 19582,15221
+Knoten M‰rkische/Landsberger Allee	1 19694,15141 19707,15206 19654,15219 19577,15166
+Knoten M‰rkische/Landsberger Allee	1 19480,15094 19604,15227
 Alt-Blankenburg	1 13576,20849 13562,20913 13909,20928
 Alt-Blankenburg	1 13909,20928 13576,20849
 Seestr.	1 5049,14675 5233,14753 5440,14840
@@ -852,9 +852,7 @@ Wilhelm-von-Siemens-Str.	1s:q3 9284,2624 9437,2649
 Saaleckplatz	1 5204,1057 5187,1059 5162,1098 5162,1110
 Saaleckplatz	1s:q3 5162,1110 5178,1123
 Saaleckplatz	1 5178,1123 5190,1114 5212,1074 5204,1057
-#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1011/nachricht4142.html
-#: note: geschlossen ab 2012-12-01, kein Wiedererˆffnungstermin
-Fuﬂg‰ngertunnels Sybel-Waitz-Str.: provisorische Schlieﬂung	2 3712,10566 3731,10563 3759,10567 3764,10580
+# REMOVED (Tunnel wird zur¸ckgebaut) --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1011/nachricht4142.html --- #: note: geschlossen ab 2012-12-01, kein Wiedererˆffnungstermin --- Fuﬂg‰ngertunnels Sybel-Waitz-Str.: provisorische Schlieﬂung	2 3712,10566 3731,10563 3759,10567 3764,10580
 Meyerinckplatz	1 4030,10575 4007,10559 3981,10590 3997,10607
 #: by: osm
 #: confirmed_by: Wilfried Spang & srt:
@@ -1030,7 +1028,6 @@ Wittenbergplatz	1 6171,10657 6228,10646 6292,10627 6353,10583
 Wittenbergplatz	1 6353,10583 6268,10588 6216,10614 6171,10657
 Amalienstr.	1s:q3 13789,16775 13722,16843 13653,16907 13589,16965
 Pasedagplatz	1 14099,17195 14150,17255 14170,17249
-Pasedagplatz	1s:q3 14174,17226 14144,17165
 (Vorfahrt am Bahnhof Friedrichstr.)	1 9303,12718 9171,12758
 Aristotelessteig	1s:q2 18527,9623 18660,9599
 #: by: Stefan Klinkusch vvv
@@ -1052,7 +1049,7 @@ Rosenfelder Ring	1s:q3 18140,11932 18139,11833
 Neue Promenade	1::igndisp 10263,13047 10264,13097
 Hahns M¸hle	1 24667,4900 24778,4821
 Mˆllendorffstr. [Wohngebiet]	1 15470,13509 15477,13268
-(Mˆllendorffstr. - Paul-Junius-Str.)	1 15361,13509 15470,13509
+(Mˆllendorffstr. - Paul-Junius-Str.)	1 15370,13508 15470,13509
 Oberspreestr. [Wohngebiet]	1 19614,5132 19629,5019 19679,5025 19667,5126 19614,5132
 Kornmandelweg	1 21311,13522 21345,13550
 Immortellenweg: Schulhof	2 24282,10015 24314,10096
@@ -1076,7 +1073,7 @@ Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 # 
 (Wollestr. - M¸hlenstr.)	1 -10790,-1178 -10787,-1162 -10730,-1103 -10691,-1097 -10648,-1130
 Wollestr.	1s:q3 -10717,-1227 -10984,-1574
-Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12302,718
+Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12297,738
 Am Neuen Garten	1 -12332,585 -12582,127
 # REMOVED (ge‰nderte Straﬂenf¸hrung, ˆstliche Fahrbahn ist in beide Richtungen befahrbar) --- #: XXX_outdoor: ¸berpr¸fen! Kˆnnen Radfahrer vielleicht die linke Straﬂenseite nutzen? --- Humboldtring/Hans-Marchwitza-Ring: Hochstraﬂe	3nocross -11399,-1339 -11461,-1424 -11540,-1543
 #: by: Christoph Ewert:
@@ -1191,6 +1188,8 @@ B96: Kraftfahrzeugstraﬂe	2 13772,-10251 13878,-9818 14037,-9386 13972,-9073 1388
 J¸rgen-Schumann-Allee	1 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
 J¸rgen-Schumann-Allee	1 19479,-3690 19528,-3767 19524,-3843 19454,-3956 19189,-4062 19158,-4083
 Berliner Chaussee	1 19282,-3928 19460,-3818 19539,-3810 19601,-3714
+Mehrow - Trappenfelde	1 24743,18606 24709,18578
+Mehrow - Trappenfelde	1 24696,18606 24743,18606
 ######################################################################
 # elsewhere not in Brandenburg
 B104: Mittelstreifen nicht ¸berquerbar	3nocross -974,128015 -724,127995 6,127935 298,127911
@@ -1441,7 +1440,7 @@ Treskowallee: Straﬂenbahntrasse	3nocross 18010,7133 18086,7243 18165,7371
 Treskowallee: Straﬂenbahntrasse	3nocross 18406,7760 18570,8025 18657,8163
 Treskowallee: Straﬂenbahntrasse	3nocross 18867,9464 18834,9256 18809,9133
 Bundesallee: unbequem passierbarer Mittelstreifen	3nocross 5463,9961 5464,9914 5467,9866
-Marzahner Kreuz: Linksabbiegen nicht mˆglich	3nocross 19681,15405 19582,15221 19506,15002 19466,14910 19422,14793
+Marzahner Kreuz: Linksabbiegen nicht mˆglich	3nocross 19681,15405 19664,15366 19619,15262 19604,15227 19577,15166 19506,15002 19466,14910 19422,14793
 Zossener Str.: unbequem passierbarer Mittelstreifen	3nocross 9865,10227 9858,10199 9837,10117
 Unter den Eichen: Straﬂentunnelrampe	3nocross 2817,4158 2944,4241 3048,4305
 Tempelhofer Damm: unbequem passierbarer Mittelstreifen	3nocross 9207,5185 9196,5272 9188,5333 9179,5398 9161,5535
@@ -1637,6 +1636,7 @@ abgeschlossenes Tor	3 * 15835,15092 *
 # Stellen, an denen getragen werden muﬂ:
 # die Zahl hinter dem ":" entspricht ungef‰hr den verlorenen Sekunden
 # 
+tragen (4 Stufen)	0:10 21326,11122
 tragen (8+8 Stufen)	0:25 19534,14459
 tragen (5 x 5 Stufen) bzw. steile Rampe zum Schieben benutzen	0:35 19570,13833
 tragen bzw. steile Rampe benutzen	0:30 1523,13377
@@ -1647,9 +1647,10 @@ tragen (3+5 Stufen)	0:15 9366,6150
 tragen (3+3+2+2 Stufen)	0:20 9244,3872
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130116.0915.380245.html
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4276
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130722.1530.387208.html
 #: XXX evtl. wird hier barrierefrei umgebaut werden
 #: last_checked: 2013-07-01
-#: check_frequency: 90d
+#: next_check: 2013-08-15
 tragen (10 Stufen)	0:15 8035,10075
 tragen (7 weite Stufen)	0:30 15759,16671
 tragen (6 Stufen)	0:12 15915,16526
@@ -1931,6 +1932,7 @@ tragen (31 Stufen oder Kinderwagenrampe)	0:40 13168,21706
 #
 # Kinderanh‰nger wie der Chariot Captain XL sind 87cm breit
 # 
+zwei Dr‰ngelgitter an der Straﬂenbahntrasse	BNP:5::trailer=15 21860,18718
 Dr‰ngelgitter	BNP:3::trailer=10 20703,15755
 Dr‰ngelgitter	BNP:3::trailer=10 20714,15749
 #: note: relativ gut passierbar
@@ -2004,6 +2006,7 @@ Schranke	BNP:5::trailer=10 10919,9804
 Dr‰ngelgitter, kann umfahren werden	BNP:3::trailer=10 14969,10138
 #: note: ˆfters mal offen? (mindestens einmal im Herbst 2012 geschlossen, am 2012-12-18 offen, am 2013-05-08 geschlossen, am 2013-06-07 offen)
 Schwingtor	BNP:3::trailer=10 14146,12921
+#: note: am 2013-08-15 war das Tor offen
 Schwingtor	BNP:5::trailer=10 17490,13133
 Schranke	BNP:3::trailer=10 8622,13042
 Dr‰ngelgitter	BNP:3::trailer=10 18788,27989
@@ -2151,6 +2154,8 @@ Schranke	BNP:3::trailer=no 17826,9630
 #: note: "mit Anh‰nger eng, aber langsam passierbar"
 #: confirmed_by: srt
 Einfahrsperre f¸r Autos	BNP:0::trailer=2 19003,9800
+#: XXX_prog: "k¸nstlicher" Eintrag, um Anh‰nger auszusperren, siehe auch handicap_s
+sehr enger Pfad	BNP:0::trailer=no 13733,18161
 #: XXX_prog: "k¸nstlicher" Eintrag, um Anh‰nger auszusperren, siehe auch handicap_s
 sehr enge Stelle	BNP:0::trailer=no 31909,2802
 #: XXX_prog: "k¸nstlicher" Eintrag, um Anh‰nger auszusperren, siehe auch handicap_s
@@ -2369,12 +2374,23 @@ Schranke (lichte Breite ca. 120cm)	BNP:2::trailer=8 14709,4307
 Schranke (lichte Breite ca. 100cm)	BNP:3::trailer=10 15179,3901
 Tor	BNP:5 26888,13976
 Dr‰ngelgitter	BNP:3::trailer=10 49739,-90894
+weites Dr‰ngelgitter/Schranke	BNP:1::trailer=3 23402,18067
+weites Dr‰ngelgitter/Schranke	BNP:1::trailer=3 24523,18542
 #
 ############################################################################
 #
 #: section tempor‰re Sperrungen (Baustellen etc.) vvvvvvvvvvvvvvvvvvvvvvvvvv
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+# 
+#: XXX siehe auch die Umleitungsstrecke
+#: XXX nach den Bauarbeiten asphaltiert
+#: by: http://www.strassenbauportal.de/oeffentliche_ausschreibung_vobvol_details_10317_Berlin_Strassenbauarbeiten__607379.html (Asphaltierung)
+#: by: http://www.rubu.de/verkehr-planungen.html (Dauer)
+#: by: http://www.rubu.de/mediapool/115/1150729/data/Paul_u_Paula_UL3-Uebersicht-BA.pdf (‹bersichtsplan)
+#: last_checked: 2013-08-03
+#: next_check: 2013-10-03
+Paul-und-Paula-Ufer: Sanierungsarbeiten, komplett gesperrt	2:inwork 15056,10625 14990,10581 14937,10598 14911,10587
 # 
 #: last_checked: 2013-07-13
 #: check_frequency: 100d
@@ -2402,7 +2418,7 @@ Uckerpromenade: wegen LAGA gesperrt (bis Oktober 2013)	2 39671,100750 39474,1009
 Seepark: wegen LAGA gesperrt (bis Oktober 2013)	2 39754,100955 39474,100982
 #: next_check ^^^
 # 
-#: last_checked: 2013-06-28
+#: last_checked: 2013-08-13
 #: check_frequency: 60d
 Sokratesweg: Bauarbeiten, gesperrt	2:inwork 18527,9623 18520,9585
 # 
@@ -2445,7 +2461,7 @@ Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwor
 #: by: http://www.sanierung-berlin.de/sanwa/Projekte/Helsingforser_Platz/Helsingf_Platz_Fugmann_Pr_sentation.pdf
 #: by: http://www.stadtentwicklung.berlin.de/staedtebau/foerderprogramme/stadtumbau/Helsingforser-Platz.6562.0.html
 #: XXX siehe auch Eintr‰ge in handicap_s-orig
-#: last_checked: 2013-07-20
+#: last_checked: 2013-08-08
 #: check_frequency: 90d
 Helsingforser Str.: Bauarbeiten, auch der Gehweg ist nicht passierbar	2:inwork 13496,11384 13427,11431
 # 
@@ -2493,8 +2509,8 @@ Voﬂstr.: gesperrte Fahrbahn (Baustelle), kein Ausweichen mˆglich	2:inwork 8837,1
 #: next_check: 2013-01-01
 Billy-Wilder-Promenade: wegen Bauarbeiten an umliegenden Wohnh‰usern gesperrt	2:inwork 2528,1501 2584,1376
 # 
-#: last_checked: 2013-06-21
-#: next_check: 2013-08-21
+#: last_checked: 2013-08-07
+#: next_check: 2013-09-07
 Marx-Engels-Forum: wegen U-Bahn-Bauarbeiten Durchgang zur Rathausstr. nicht mˆglich	2:inwork 10411,12471 10422,12395
 # 
 #: last_checked: 2012-05-06
@@ -2556,7 +2572,7 @@ Uferweg am Tegeler Hafen: Weg wegen Bauarbeiten gesperrt	2:inwork 1861,20467 182
 #: check_frequency: 180d
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
 # 
-#: last_checked: 2013-07-12 vvv
+#: last_checked: 2013-08-14 vvv
 #: check_frequency: 60d vvv
 #: XXX mit den Bauarbeiten "An den Eldenaer Hˆfen" in strassen-orig koordinieren vvv
 An den Eldenaer Hˆfen: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14449,12833 14594,12800
@@ -2594,7 +2610,7 @@ Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973
 # REMOVED --- #: last_checked: 2011-05-20 --- #: next_check: 2011-08-01 --- Alex-Wedding-Str.: Bauarbeiten, komplett gesperrt	2:inwork 11085,13239 11045,13183
 # REMOVED (f¸r Radfahrer ist das Abbiegen mˆglich) --- #: next_check: 2012-06-01 vvv --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4088.html --- Mauerstr.: Einbiegen in die Behrenstr. nicht mˆglich	3:inwork 9076,12054 9064,12156 9054,12154 --- Mauerstr.: Einbiegen in die Behrenstr. nicht mˆglich	3:inwork 9076,12054 9064,12156 9164,12172 --- Behrenstr.: Einbiegen in die Mauerstr. nicht mˆglich	3:inwork 9054,12154 9064,12156 9076,12054 --- Behrenstr.: Einbiegen in die Mauerstr. nicht mˆglich	3:inwork 9164,12172 9064,12156 9076,12054 --- #: next_check: ^^^
 # 
-#: last_checked: 2013-07-10
+#: last_checked: 2013-08-10
 #: check_frequency: 60d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 
@@ -2726,10 +2742,7 @@ Hohenzollerndamm: unbequem passierbarer Mittelstreifen	3nocross 3688,9051 3741,9
 Hohenzollerndamm: unpassierbarer Mittelstreifen	3nocross 3427,9010 3467,9045 3521,9059
 Kette	BNP:5 3370,9215
 Kette	BNP:5 3264,9261
-#: corrected_by: srt/new_policy (0:240 -> 2 x 0:40; 60s for 60 steps and 20s for the way under the tunnel, divided into two) vvv
-(Fuﬂg‰ngertunnel Sybelstr.): 30 Stufen	0:40 3731,10563
-(Fuﬂg‰ngertunnel Sybelstr.): 30 Stufen	0:40 3759,10567
-#: corrected_by ^^^
+# REMOVED (Tunnel wird zur¸ckgebaut) --- #: corrected_by: srt/new_policy (0:240 -> 2 x 0:40; 60s for 60 steps and 20s for the way under the tunnel, divided into two) vvv --- (Fuﬂg‰ngertunnel Sybelstr.): 30 Stufen	0:40 3731,10563 --- (Fuﬂg‰ngertunnel Sybelstr.): 30 Stufen	0:40 3759,10567 --- #: corrected_by ^^^
 Bregenzer Str.	1 4279,10270 4227,10014
 Kniprodestr.: unpassierbarer Mittelstreifen (Straﬂenbahn, Bordsteine)	3nocross 12901,14093 12972,14173 12992,14196 13026,14234
 Kniprodestr.: schlecht zu querender Mittelstreifen (Bordsteine, Verkehr)	3nocross 13057,14267 13097,14307 13183,14400 13239,14461 13295,14521 13362,14593

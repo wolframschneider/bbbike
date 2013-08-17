@@ -351,6 +351,7 @@ Steigung 3.5% ((Grünheider Weg - Fredersdorfer Weg))	St; 30849,3843 30823,3866
 Steigung 3.5% ((Grünheider Weg - Fredersdorfer Weg))	St; 30823,3866 30814,3875
 Steigung 3.4% (Wissmannstr. (Neukölln))	St; 11767,9026 11768,8739
 Steigung 3.4% (Spandauer Damm)	St; 2152,12389 1971,12368
+Steigung 3.4% (Salvador-Allende-Str.)	St; 23444,4942 23433,5037
 Steigung 3.4% (Radewiesenweg)	St; 17889,1971 17909,1881
 Steigung 3.4% (Radewiesenweg)	St; 17860,2061 17889,1971
 Steigung 3.4% (Ludwigshöheweg)	St; 27428,1026 27263,839
@@ -445,7 +446,6 @@ Steigung 3.0% (Spandauer Damm)	St; 2193,12393 2152,12389
 Steigung 3.0% (Spandauer Damm)	St; 1971,12368 1916,12358
 Steigung 3.0% (Schirnerstr.)	St; 21278,1205 21047,927
 Steigung 3.0% (Samariterstr.)	St; 14570,12478 14588,12542
-Steigung 3.0% (Salvador-Allende-Str.)	St; 23444,4942 23429,5048
 Steigung 3.0% (Ringbahnstr. (Neukölln))	St; 13072,7013 12934,6967
 Steigung 3.0% (Reuterstr. (Neukölln))	St; 12170,8548 12195,8436
 Steigung 3.0% (Neue Kulmer Str.)	St; 7771,9389 7770,9336
@@ -925,7 +925,6 @@ Steigung 2.1% (Fanningerstr.)	St; 16445,12193 16556,12180
 Steigung 2.1% (Falkentaler Steig)	St; 3012,24107 2903,24264
 Steigung 2.1% (Elmsteiner Weg)	St; 27567,936 27393,732
 Steigung 2.1% (Eisenacher Str. (Marzahn, Hellersdorf))	St; 22059,15153 21903,15174
-Steigung 2.1% (Deutschmeisterstr.)	St; 15350,12270 15315,12360
 Steigung 2.1% (Christburger Str.)	St; 11912,14486 11642,14625
 Steigung 2.1% (Brinkmannstr.)	St; 7266,5292 7216,5303
 Steigung 2.1% (Brinkmannstr.)	St; 7216,5303 7095,5317
@@ -1051,6 +1050,7 @@ Steigung 1.9% (Fregestr.)	St; 5958,7220 5957,6970
 Steigung 1.9% (Fidicinstr.)	St; 9295,9047 9459,9019
 Steigung 1.9% (Feurigstr.)	St; 7467,8863 7497,8916
 Steigung 1.9% (Dorfstr. (Kaulsdorf))	St; 22484,11270 22516,11418
+Steigung 1.9% (Deutschmeisterstr.)	St; 15350,12270 15320,12375
 Steigung 1.9% (Christburger Str.)	St; 12177,14335 11912,14486
 Steigung 1.9% (Choriner Str.)	St; 10502,14070 10558,14176
 Steigung 1.9% (Choriner Str.)	St; 10487,13928 10502,14070

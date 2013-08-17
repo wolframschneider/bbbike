@@ -196,4 +196,6 @@ td { white-space: nowrap; }
 #extract-pro { font-size: x-large; }
 
 .center { text-align: center; }
+a.large { font-size: large; }
+a.x-large { font-size: x-large; }
 

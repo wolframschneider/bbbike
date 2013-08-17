@@ -192,16 +192,18 @@ L.Map.include({
 });
 
 function doLeaflet() {
-    var bbbikeOrgMapnikGermanUrl = base_map_url + '/{z}/{x}/{y}.png',
-    bbbikeAttribution = M("Kartendaten") + ' \u00a9 2012 <a href="http://bbbike.de">Slaven Rezić</a>',
-    bbbikeTileLayer = new L.TileLayer(bbbikeOrgMapnikGermanUrl, {maxZoom: 18, attribution: bbbikeAttribution});
+    var nowYear = new Date().getFullYear();
 
-    var bbbikeOrgSmoothnessUrl = smoothness_map_url + '/{z}/{x}/{y}.png',
-    bbbikeSmoothnessTileLayer = new L.TileLayer(bbbikeOrgSmoothnessUrl, {maxZoom: 18, attribution: bbbikeAttribution});
+    var bbbikeOrgMapnikGermanUrl = base_map_url + '/{z}/{x}/{y}.png';
+    var bbbikeAttribution = M("Kartendaten") + ' \u00a9 ' + nowYear + ' <a href="http://bbbike.de">Slaven Rezić</a>';
+    var bbbikeTileLayer = new L.TileLayer(bbbikeOrgMapnikGermanUrl, {maxZoom: 18, attribution: bbbikeAttribution});
 
-    var osmMapnikUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    osmAttribution = M("Kartendaten") + ' \u00a9 2012 <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors',
-    osmTileLayer = new L.TileLayer(osmMapnikUrl, {maxZoom: 18, attribution: osmAttribution});
+    var bbbikeOrgSmoothnessUrl = smoothness_map_url + '/{z}/{x}/{y}.png';
+    var bbbikeSmoothnessTileLayer = new L.TileLayer(bbbikeOrgSmoothnessUrl, {maxZoom: 18, attribution: bbbikeAttribution});
+
+    var osmMapnikUrl = use_osm_de_map ? 'http://tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png' : 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttribution = M("Kartendaten") + ' \u00a9 ' + nowYear + ' <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors';
+    var osmTileLayer = new L.TileLayer(osmMapnikUrl, {maxZoom: 18, attribution: osmAttribution});
     
     map = new L.Map('map',
 		    {
@@ -484,17 +486,15 @@ TrackSegs.prototype.init = function() {
 TrackSegs.prototype.addPos = function(e) {
     this.polyline[this.polyline.length-1].push(e.latlng);
     if (enable_upload) {
-	var lat = e.latlng.lat.toString().replace(/(\.\d{6}).*/, "$1");
-	var lng = e.latlng.lng.toString().replace(/(\.\d{6}).*/, "$1");
-	var uplRec = {lat:lat,
-		      lng:lng,
-		      acc:e.pos.coords.accuracy,
+	var uplRec = {lat:this._trimDigits(e.latlng.lat, 6),
+		      lng:this._trimDigits(e.latlng.lng, 6),
+		      acc:this._trimDigits(e.pos.coords.accuracy, 1),
 		      time:e.pos.timestamp};
 	if (e.pos.coords.altitude != null) {
 	    uplRec.alt = e.pos.coords.altitude;
 	}
 	if (e.pos.coords.altitudeAccuracy != null) {
-	    uplRec.altacc = e.pos.coords.altitudeAccuracy;
+	    uplRec.altacc = this._trimDigits(e.pos.coords.altitudeAccuracy,1);
 	}
 	this.upload[this.upload.length-1].push(uplRec);
     }
@@ -502,4 +502,7 @@ TrackSegs.prototype.addPos = function(e) {
 TrackSegs.prototype.addGap = function(e) {
     this.polyline.push([]);
     this.upload.push([]);
+}
+TrackSegs.prototype._trimDigits = function(num,digits) {
+    return num.toString().replace(new RegExp("(\\.\\d{" + digits + "}).*"), "$1");
 }
