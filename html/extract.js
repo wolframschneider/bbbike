@@ -153,6 +153,8 @@ function init() {
     extract_init_pro(opt);
     permalink_init();
 
+    polygon_init();
+
     // plot_default_box();
     $("#drag_box_default").click(plot_default_box);
     $("#drag_box_select").click(plot_default_box_menu_off);
@@ -528,6 +530,7 @@ function extract_init(opt) {
     }
     state.mapMoved = mapMoved;
     state.clearBox = clearBox;
+    state.setBounds = setBounds;
 
     function setBounds(bounds) {
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
@@ -566,6 +569,7 @@ function extract_init(opt) {
         $("#coords").attr("value", "");
         $("#as").attr("value", "");
         $("#pg").attr("value", "");
+
         state.polygon.area = 0;
     }
 
@@ -630,6 +634,7 @@ function plot_default_box() {
 
     // return javascript float coordinates
 
+
     function c(name) {
         var val = $("#" + name).val();
         return parseFloat(val);
@@ -660,10 +665,11 @@ function plot_default_box() {
         debug("default box: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
     }
 
-    if (state.clearBox) state.clearBox();
+    if (state.clearBox) {
+        // state.clearBox();
+    }
 
-    polygon_init();
-
+    // polygon_init();
     var polygon = rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
     var feature = plot_polygon(polygon);
     vectors.addFeatures(feature);
@@ -681,6 +687,7 @@ function plot_default_box_menu_on() {
 }
 
 // remove default box from map
+
 
 function plot_default_box_menu_off() {
     $("#drag_box_select_reset").attr('checked', false);
