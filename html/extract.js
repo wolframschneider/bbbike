@@ -231,34 +231,6 @@ function init_map() {
         numZoomLevels: 18
     }));
 
-/*
-    * disabled maps
-    * 
-    map.addLayer(new OpenLayers.Layer.OSM("OSM Hike&Bike", ["http://a.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png", "http://b.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png"], {
-        tileOptions: {
-            crossOriginKeyword: null
-        },
-        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>',
-        numZoomLevels: 18
-    }));
-
-    map.addLayer(new OpenLayers.Layer.OSM("Mapquest OSM", ["http://otile1.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png", "http://otile2.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png"], {
-        tileOptions: {
-            crossOriginKeyword: null
-        },
-        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.mapquest.com/">(&copy;) MapQuest</a>',
-        numZoomLevels: 19
-    }));
-
-    map.addLayer(new OpenLayers.Layer.OSM("Mapquest Satellite", ["http://mtile01.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png", "http://mtile02.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png"], {
-        tileOptions: {
-            crossOriginKeyword: null
-        },
-        attribution: '<a href="http://www.mapquest.com/">(&copy;) MapQuest</a>',
-        numZoomLevels: 19
-    }));
-    */
-
     map.addLayer(new OpenLayers.Layer.Google("Google Physical", {
         type: google.maps.MapTypeId.TERRAIN
     }));
@@ -624,6 +596,14 @@ function extract_init_pro(opt) {
     }
 }
 
+// return javascript float coordinates
+
+
+function cf(name) {
+    var val = $("#" + name).val();
+    return parseFloat(val);
+}
+
 function plot_default_box() {
     debug("plot default box");
 
@@ -632,12 +612,6 @@ function plot_default_box() {
         return;
     }
 
-    // return javascript float coordinates
-
-    function c(name) {
-        var val = $("#" + name).val();
-        return parseFloat(val);
-    }
 
     var sw_lng = c("sw_lng");
     var sw_lat = c("sw_lat");
@@ -681,6 +655,7 @@ function plot_default_box_menu_on() {
 }
 
 // remove default box from map
+
 
 function plot_default_box_menu_off() {
     $("#drag_box_select_reset").attr('checked', false);
