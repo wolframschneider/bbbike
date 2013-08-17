@@ -198,24 +198,7 @@ function init() {
         map.zoomToExtent(bounds);
     }
 
-    // open info page at startup, but display it only once for the user
-    if (config.open_infopage) {
-        var oi_html = $("input#oi").val();
-        var oi_cookie = jQuery.cookie("oi");
-
-        if (oi_html == 0 && !oi_cookie) {
-            debug("will open info page at startup");
-
-            jQuery.cookie("oi", 1, {
-                expires: 1
-            });
-            $("span#tools-help a").trigger("click");
-        } else {
-            debug("do not open info page again. html: " + oi_html + ", cookie: " + oi_cookie);
-        }
-
-        $("input#oi").val("1");
-    }
+    if (config.open_infopage) open_infopage();
 
     extract_init(opt);
     permalink_init();
@@ -310,6 +293,27 @@ function init_map() {
     }));
 
     return map;
+}
+
+// open info page at startup, but display it only once for the user
+
+
+function open_infopage() {
+    var oi_html = $("input#oi").val();
+    var oi_cookie = jQuery.cookie("oi");
+
+    if (oi_html == 0 && !oi_cookie) {
+        debug("will open info page at startup");
+
+        jQuery.cookie("oi", 1, {
+            expires: 1
+        });
+        $("span#tools-help a").trigger("click");
+    } else {
+        debug("do not open info page again. html: " + oi_html + ", cookie: " + oi_cookie);
+    }
+
+    $("input#oi").val("1");
 }
 
 function init_map_size() {
