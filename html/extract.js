@@ -1053,6 +1053,7 @@ function show_filesize(skm, real_size) {
     var size = real_size ? real_size / 1024 : 0;
     debug("skm: " + parseInt(skm) + " size: " + Math.round(size) + "MB " + format);
 
+    // all formats *must* be configured
     var filesize = {
         "osm.pbf": {
             "size": 1,
@@ -1064,7 +1065,6 @@ function show_filesize(skm, real_size) {
         },
         "osm.bz2": {
             "size": 1.5,
-            "time": 1
         },
         "osm.xz": {
             "size": 1.8,
@@ -1088,7 +1088,6 @@ function show_filesize(skm, real_size) {
         },
         "shp.zip": {
             "size": 1.5,
-            "time": 1
         },
         "obf.zip": {
             "size": 1.4,
@@ -1096,23 +1095,18 @@ function show_filesize(skm, real_size) {
         },
         "o5m.gz": {
             "size": 1.04,
-            "time": 1
         },
         "o5m.xz": {
             "size": 0.94,
-            "time": 1
         },
         "o5m.bz2": {
             "size": 0.88,
-            "time": 1.1
         },
         "csv.gz": {
             "size": 1,
-            "time": 1
         },
         "csv.xz": {
             "size": 0.50,
-            "time": 1
         },
         "csv.bz2": {
             "size": 0.80,
@@ -1124,12 +1118,15 @@ function show_filesize(skm, real_size) {
         },
         "navit.zip": {
             "size": 0.8,
-            "time": 1
         }
     };
 
-    var factor = filesize[format].size;
-    var factor_time = filesize[format].time;
+    if (!filesize[format]) {
+        debug("Unknwon format: " + format);
+    }
+    
+    var factor = filesize[format].size ? filesize[format].size : 1;
+    var factor_time = filesize[format].time ? filesize[format].time : 1;
 
     var time_min = extract_time + 0.6 * size + (size * factor_time);
     var time_max = extract_time + 0.6 * size + (size * factor_time * 2);
