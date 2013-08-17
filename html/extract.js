@@ -214,7 +214,6 @@ function init_map() {
         attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.opencyclemap.org/">(&copy) OpenCycleMap</a>'
     }));
 
-
     map.addLayer(new OpenLayers.Layer.OSM("OSM Transport", ["http://a.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png", "http://b.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png"], {
         tileOptions: {
             crossOriginKeyword: null
@@ -234,9 +233,11 @@ function init_map() {
     map.addLayer(new OpenLayers.Layer.Google("Google Physical", {
         type: google.maps.MapTypeId.TERRAIN
     }));
+
     map.addLayer(new OpenLayers.Layer.Google("Google Satellite", {
         type: google.maps.MapTypeId.SATELLITE
     }));
+
     map.addLayer(new OpenLayers.Layer.Google("Google Map", {
         type: google.maps.MapTypeId.ROADMAP
     }));
