@@ -664,6 +664,7 @@ function plot_default_box() {
 
     // return javascript float coordinates
 
+
     function c(name) {
         var val = $("#" + name).val();
         return parseFloat(val);
@@ -704,19 +705,24 @@ function plot_default_box() {
 
     polygon_menu(true); // display poygon menu
     polygon_update(); // rotate by default
-    // on    
+    // switch menu
     $("#drag_box_default").hide();
     $("#drag_box_select").show();
     $("#start_default_box").attr('checked', false);
 
-    // off
-    $("#drag_box_select").click(function () {
-        $("#drag_box_select_reset").attr('checked', false);
-        $("#drag_box_default").show();
-        $("#drag_box_select").hide();
-        polygon_menu(false);
-        if (state.clearBox) state.clearBox();
-    });
+}
+
+// remove default box from map
+
+
+function plot_default_box_reset() {
+    $("#drag_box_select_reset").attr('checked', false);
+    $("#drag_box_default").show();
+    $("#drag_box_select").hide();
+
+    polygon_menu(false);
+    if (state.clearBox) state.clearBox();
+    setMapHeight();
 }
 
 // called from HTML page
@@ -868,6 +874,8 @@ function setMapHeight() {
             $(".normalscreen").show()
         }, 250);
     }
+
+    if (state.validateControls) state.validateControls;
 
     permalink_init();
 };
