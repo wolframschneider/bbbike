@@ -8,11 +8,6 @@
 
 // central config
 var config = {
-    "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
-    "color_normal": "white",
-    "color_error": "red",
-    "max_skm": 24000000,
-
     // display a box at startup
     // see function select_city()
     "default_box": false,
@@ -23,12 +18,15 @@ var config = {
     // run locate me function at startup
     "locate_me": false,
 
+    // show approx. file size of extract
     "show_filesize": true,
+
+    // city name required
     "city_name_optional": false,
-    "enable_polygon": true,
-    "polygon_rotate": true,
-    "simple": true,
-    // ???
+
+    // limit are size to max. square kilometers
+    "max_skm": 24000000,
+
     // max. area size in MB
     "max_size": {
         "default": 768,
@@ -43,6 +41,17 @@ var config = {
     // extract-pro service with meta data and daily updates
     extract_pro: 0,
 
+    "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
+    "color_normal": "white",
+    "color_error": "red",
+
+    /* ??? */
+    "enable_polygon": true,
+    // ??
+    "polygon_rotate": true,
+    // ??
+    "simple": true,
+    // ???
     // not used yet
     "dummy": ""
 };
