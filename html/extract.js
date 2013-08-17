@@ -107,8 +107,7 @@ function init() {
             coords = "";
         }
 
-        bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
-
+        // bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
         // back button: reset coordinates to original values
         opt.back_function = function () {
             debug("get coords from back button");
@@ -125,28 +124,27 @@ function init() {
             polygon_menu(true);
         };
 
-        if (config.enable_polygon) {
-            setTimeout(function () {
-                var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
-                var feature = plot_polygon(polygon);
-                vectors.addFeatures(feature);
-                if (coords) {
-                    // trigger a recalculation of polygon size
-                    setTimeout(function () {
-                        vectors.events.triggerEvent("sketchcomplete", {
-                            "feature": feature
-                        });
-                    }, 500);
-                }
-                opt.back_function();
+        setTimeout(function () {
+            center_city(sw_lng, sw_lat, ne_lng, ne_lat);
 
-            }, 700);
-        } else {
-            opt.back_button = 1;
-        }
+            var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
+            var feature = plot_polygon(polygon);
+            vectors.addFeatures(feature);
+            if (coords) {
+                // trigger a recalculation of polygon size
+                setTimeout(function () {
+                    vectors.events.triggerEvent("sketchcomplete", {
+                        "feature": feature
+                    });
+                }, 500);
+            }
+            opt.back_function();
+
+        }, 700);
+    } else {
+        move_map_to_city();
     }
 
-    move_map_to_city();
     extract_init(opt);
     extract_init_pro(opt);
     permalink_init();
@@ -161,8 +159,6 @@ function init() {
 }
 
 function move_map_to_city() {
-    var epsg4326 = new OpenLayers.Projection("EPSG:4326");
-
     // default city Berlin
     var c = select_city();
 
@@ -171,9 +167,14 @@ function move_map_to_city() {
     var ne_lng = c.ne[0];
     var ne_lat = c.ne[1];
 
-    debug("default city: " + c.sw[0] + "," + c.sw[1] + " " + c.ne[0] + "," + c.ne[1]);
-    var bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
+    center_city(sw_lng, sw_lat, ne_lng, ne_lat);
+}
 
+function center_city(sw_lng, sw_lat, ne_lng, ne_lat) {
+    var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+
+    debug("default city: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
+    var bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
     bounds.transform(epsg4326, map.getProjectionObject());
     map.zoomToExtent(bounds);
@@ -545,6 +546,8 @@ function extract_init(opt) {
     }
 
     function drawBox(bounds) {
+        debug("drawBox");
+
         var feature = new OpenLayers.Feature.Vector(bounds.toGeometry());
 
         vectors.addFeatures(feature);
