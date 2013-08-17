@@ -81,93 +81,7 @@ function init() {
         "back_button": 0
     };
 
-    var keyboard = new OpenLayers.Control.KeyboardDefaults({}); // "observeElement": $("#map")} );
-    map = new OpenLayers.Map("map", {
-        controls: [
-        new OpenLayers.Control.Navigation(), new OpenLayers.Control.PanZoomBar(), new OpenLayers.Control.ScaleLine({
-            geodesic: true
-        }), new OpenLayers.Control.MousePosition(), new OpenLayers.Control.Attribution(), new OpenLayers.Control.LayerSwitcher(), keyboard],
-
-        maxExtent: new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
-        maxResolution: 156543.0339,
-        numZoomLevels: 19,
-        units: 'm',
-        projection: new OpenLayers.Projection("EPSG:900913"),
-        displayProjection: new OpenLayers.Projection("EPSG:4326")
-    });
-
-
-    map.addLayer(new OpenLayers.Layer.OSM("OSM Landscape", ["http://a.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png", "http://b.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png"], {
-        tileOptions: {
-            crossOriginKeyword: null
-        },
-        attribution: '<a href="http://www.OpenStreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.opencyclemap.org/">(&copy) OpenCycleMap</a>',
-        numZoomLevels: 18
-    }));
-
-    map.addLayer(new OpenLayers.Layer.OSM.Mapnik("OSM Mapnik", {
-        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>'
-    }));
-
-    map.addLayer(new OpenLayers.Layer.OSM.CycleMap("OSM CycleMap", {
-        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.opencyclemap.org/">(&copy) OpenCycleMap</a>'
-    }));
-
-
-    map.addLayer(new OpenLayers.Layer.OSM("OSM Transport", ["http://a.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png", "http://b.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png"], {
-        tileOptions: {
-            crossOriginKeyword: null
-        },
-        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>',
-        numZoomLevels: 19
-    }));
-
-    map.addLayer(new OpenLayers.Layer.OSM("Esri Topographic", "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}.png", {
-        attribution: '<a href="http://www.esri.com/">(&copy;) Esri</a>',
-        tileOptions: {
-            crossOriginKeyword: null
-        },
-        numZoomLevels: 18
-    }));
-
-/*
-    * disabled maps
-    * 
-    map.addLayer(new OpenLayers.Layer.OSM("OSM Hike&Bike", ["http://a.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png", "http://b.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png"], {
-        tileOptions: {
-            crossOriginKeyword: null
-        },
-        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>',
-        numZoomLevels: 18
-    }));
-
-    map.addLayer(new OpenLayers.Layer.OSM("Mapquest OSM", ["http://otile1.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png", "http://otile2.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png"], {
-        tileOptions: {
-            crossOriginKeyword: null
-        },
-        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.mapquest.com/">(&copy;) MapQuest</a>',
-        numZoomLevels: 19
-    }));
-
-    map.addLayer(new OpenLayers.Layer.OSM("Mapquest Satellite", ["http://mtile01.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png", "http://mtile02.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png"], {
-        tileOptions: {
-            crossOriginKeyword: null
-        },
-        attribution: '<a href="http://www.mapquest.com/">(&copy;) MapQuest</a>',
-        numZoomLevels: 19
-    }));
-    */
-
-    map.addLayer(new OpenLayers.Layer.Google("Google Physical", {
-        type: google.maps.MapTypeId.TERRAIN
-    }));
-    map.addLayer(new OpenLayers.Layer.Google("Google Satellite", {
-        type: google.maps.MapTypeId.SATELLITE
-    }));
-    map.addLayer(new OpenLayers.Layer.Google("Google Map", {
-        type: google.maps.MapTypeId.ROADMAP
-    }));
-
+    map = init_map();
 
     var epsg4326 = new OpenLayers.Projection("EPSG:4326");
     var bounds;
@@ -305,6 +219,97 @@ function init() {
 
     extract_init(opt);
     permalink_init();
+}
+
+function init_map() {
+    var keyboard = new OpenLayers.Control.KeyboardDefaults({}); // "observeElement": $("#map")} );
+    var map = new OpenLayers.Map("map", {
+        controls: [
+        new OpenLayers.Control.Navigation(), new OpenLayers.Control.PanZoomBar(), new OpenLayers.Control.ScaleLine({
+            geodesic: true
+        }), new OpenLayers.Control.MousePosition(), new OpenLayers.Control.Attribution(), new OpenLayers.Control.LayerSwitcher(), keyboard],
+
+        maxExtent: new OpenLayers.Bounds(-20037508.34, -20037508.34, 20037508.34, 20037508.34),
+        maxResolution: 156543.0339,
+        numZoomLevels: 19,
+        units: 'm',
+        projection: new OpenLayers.Projection("EPSG:900913"),
+        displayProjection: new OpenLayers.Projection("EPSG:4326")
+    });
+
+
+    map.addLayer(new OpenLayers.Layer.OSM("OSM Landscape", ["http://a.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png", "http://b.tile3.opencyclemap.org/landscape/${z}/${x}/${y}.png"], {
+        tileOptions: {
+            crossOriginKeyword: null
+        },
+        attribution: '<a href="http://www.OpenStreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.opencyclemap.org/">(&copy) OpenCycleMap</a>',
+        numZoomLevels: 18
+    }));
+
+    map.addLayer(new OpenLayers.Layer.OSM.Mapnik("OSM Mapnik", {
+        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>'
+    }));
+
+    map.addLayer(new OpenLayers.Layer.OSM.CycleMap("OSM CycleMap", {
+        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.opencyclemap.org/">(&copy) OpenCycleMap</a>'
+    }));
+
+
+    map.addLayer(new OpenLayers.Layer.OSM("OSM Transport", ["http://a.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png", "http://b.tile2.opencyclemap.org/transport/${z}/${x}/${y}.png"], {
+        tileOptions: {
+            crossOriginKeyword: null
+        },
+        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>',
+        numZoomLevels: 19
+    }));
+
+    map.addLayer(new OpenLayers.Layer.OSM("Esri Topographic", "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}.png", {
+        attribution: '<a href="http://www.esri.com/">(&copy;) Esri</a>',
+        tileOptions: {
+            crossOriginKeyword: null
+        },
+        numZoomLevels: 18
+    }));
+
+/*
+    * disabled maps
+    * 
+    map.addLayer(new OpenLayers.Layer.OSM("OSM Hike&Bike", ["http://a.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png", "http://b.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png"], {
+        tileOptions: {
+            crossOriginKeyword: null
+        },
+        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>',
+        numZoomLevels: 18
+    }));
+
+    map.addLayer(new OpenLayers.Layer.OSM("Mapquest OSM", ["http://otile1.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png", "http://otile2.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png"], {
+        tileOptions: {
+            crossOriginKeyword: null
+        },
+        attribution: '<a href="http://www.openstreetmap.org/copyright">(&copy) OpenStreetMap contributors</a>, <a href="http://www.mapquest.com/">(&copy;) MapQuest</a>',
+        numZoomLevels: 19
+    }));
+
+    map.addLayer(new OpenLayers.Layer.OSM("Mapquest Satellite", ["http://mtile01.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png", "http://mtile02.mqcdn.com/tiles/1.0.0/vy/sat/${z}/${x}/${y}.png"], {
+        tileOptions: {
+            crossOriginKeyword: null
+        },
+        attribution: '<a href="http://www.mapquest.com/">(&copy;) MapQuest</a>',
+        numZoomLevels: 19
+    }));
+    */
+
+    map.addLayer(new OpenLayers.Layer.Google("Google Physical", {
+        type: google.maps.MapTypeId.TERRAIN
+    }));
+    map.addLayer(new OpenLayers.Layer.Google("Google Satellite", {
+        type: google.maps.MapTypeId.SATELLITE
+    }));
+    map.addLayer(new OpenLayers.Layer.Google("Google Map", {
+        type: google.maps.MapTypeId.ROADMAP
+    }));
+
+    return map;
 }
 
 function init_map_size() {
