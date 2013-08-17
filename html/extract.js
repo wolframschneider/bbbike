@@ -206,7 +206,11 @@ function init() {
     extract_init_pro(opt);
     permalink_init();
 
+        
+    // polygon_menu(true);
+    // polygon_update();
     plot_default_box();
+    
     if (config.open_infopage) open_infopage();
 }
 
@@ -511,7 +515,7 @@ function extract_init(opt) {
         mapnikSizeChanged();
     }
 
-/*
+    /*
     function startDrag() {
         // $("#drag_box").html("Drag a box on the map to select an area");
         $("#drag_box_manually").hide();
@@ -637,12 +641,10 @@ function extract_init(opt) {
 
     startExport(opt);
 
-    polygon_init();
-    polygon_menu(true);
-    polygon_update();
 }
 
 // extract-pro service can extract larger areas
+
 
 function extract_init_pro(opt) {
     var hostname = $(location).attr('hostname');
@@ -654,14 +656,13 @@ function extract_init_pro(opt) {
 
 function plot_default_box() {
     debug("plot default box");
-
+    
     if (!check_lnglat_form()) {
         alert("lng or lat value is out of range -180 ... 180, -90 .. 90");
         return;
     }
 
-    // return javascript float coordinate
-
+    // return javascript float coordinates
     function c(name) {
         var val = $("#" + name).val();
         return parseFloat(val);
@@ -692,9 +693,14 @@ function plot_default_box() {
         debug("default box: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
     }
 
+    polygon_init();
+    
     var polygon = rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
     var feature = plot_polygon(polygon);
     vectors.addFeatures(feature);
+    
+    polygon_menu(true); // display poygon menu
+    polygon_update();   // rotate by default
 }
 
 // called from HTML page
