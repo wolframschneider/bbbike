@@ -709,7 +709,7 @@ function plot_default_box() {
     plot_default_box_menu_on();
 }
 
-function plot_default_menu_on() {
+function plot_default_box_menu_on() {
     // switch menu
     $("#drag_box_default").hide();
     $("#drag_box_select").show();
