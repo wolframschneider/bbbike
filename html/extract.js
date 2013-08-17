@@ -664,7 +664,6 @@ function plot_default_box() {
 
     // return javascript float coordinates
 
-
     function c(name) {
         var val = $("#" + name).val();
         return parseFloat(val);
