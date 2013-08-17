@@ -170,6 +170,7 @@ function init() {
 
                 debug("coords: " + coords);
                 state.validateControls();
+
                 map.events.unregister("moveend", map, state.mapMoved);
                 polygon_menu(true);
             };
@@ -208,7 +209,7 @@ function init() {
 
     // plot_default_box();
     $("#drag_box_default").click(plot_default_box);
-    $("#drag_box_select").click(plot_default_box_reset);
+    $("#drag_box_select").click(plot_default_box_menu_off);
 
     if (config.open_infopage) open_infopage();
 }
@@ -705,17 +706,20 @@ function plot_default_box() {
 
     polygon_menu(true); // display poygon menu
     polygon_update(); // rotate by default
+    plot_default_box_menu_on();
+}
+
+function plot_default_menu_on() {
     // switch menu
     $("#drag_box_default").hide();
     $("#drag_box_select").show();
     $("#start_default_box").attr('checked', false);
-
 }
 
 // remove default box from map
 
 
-function plot_default_box_reset() {
+function plot_default_box_menu_off() {
     $("#drag_box_select_reset").attr('checked', false);
     $("#drag_box_default").show();
     $("#drag_box_select").hide();
