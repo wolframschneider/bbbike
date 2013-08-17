@@ -458,7 +458,7 @@ function extract_init(opt) {
                 persist: true
             }
         });
-        box.handler.callbacks.done = endDrag;
+        // box.handler.callbacks.done = endDrag;
         map.addControl(box);
 
         // resize retangle, but not rotate or add points
@@ -478,7 +478,7 @@ function extract_init(opt) {
 
         $("#city").change(updatePermalink);
 
-        $("#drag_box").click(startDrag);
+        // $("#drag_box").click(startDrag);
         setBounds(map.getExtent());
 
         // implement history for back button
@@ -511,6 +511,7 @@ function extract_init(opt) {
         mapnikSizeChanged();
     }
 
+/*
     function startDrag() {
         // $("#drag_box").html("Drag a box on the map to select an area");
         $("#drag_box_manually").hide();
@@ -543,6 +544,7 @@ function extract_init(opt) {
             polygon_update();
         }
     }
+    */
 
     function transformComplete(event) {
         setBounds(event.feature.geometry.bounds);
@@ -634,19 +636,13 @@ function extract_init(opt) {
     }
 
     startExport(opt);
-    if (opt.param == 0) startDrag();
 
-    if (config.enable_polygon) {
-        setTimeout(function () {
-            $("#controls").show();
-            polygon_init();
-            polygon_update();
-        }, 1000);
-    }
+    polygon_init();
+    polygon_menu(true);
+    polygon_update();
 }
 
 // extract-pro service can extract larger areas
-
 
 function extract_init_pro(opt) {
     var hostname = $(location).attr('hostname');
