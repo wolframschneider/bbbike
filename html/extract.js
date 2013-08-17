@@ -665,11 +665,6 @@ function plot_default_box() {
         debug("default box: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
     }
 
-    if (state.clearBox) {
-        // state.clearBox();
-    }
-
-    // polygon_init();
     var polygon = rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
     var feature = plot_polygon(polygon);
     vectors.addFeatures(feature);
