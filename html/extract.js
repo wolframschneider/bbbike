@@ -1299,8 +1299,7 @@ function toggle_lnglatbox() {
     $('.uncheck').attr('checked', false);
 }
 
-// dialog help windows
-jQuery(document).ready(function () {
+function init_dialog_window() {
     if (jQuery('#tools-helpwin').length == 0) return;
 
     jQuery('#tools-helpwin').jqm({
@@ -1318,6 +1317,11 @@ jQuery(document).ready(function () {
             }
         }
     }).draggable();
+}
+
+// dialog help windows
+jQuery(document).ready(function () {
+    init_dialog_window()
 });
 
 // EOF
