@@ -1,10 +1,11 @@
 /*
  Copyright (c) by http://www.openstreetmap.org/export - OSM License, 2012
- Copyright (c) 2012 Wolfram Schneider, http://bbbike.org
+ Copyright (c) 2012-2013 Wolfram Schneider, http://bbbike.org
 */
 
 // HTML5: may not work on Android devices!
-// "use strict"
+"use strict"
+
 // central config
 var config = {
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
@@ -19,13 +20,16 @@ var config = {
     // open help page at start up
     "open_infopage": true,
 
+    // run locate me function at startup
+    "locate_me": false,
+
     "show_filesize": true,
     "city_name_optional": false,
     "enable_polygon": true,
     "polygon_rotate": true,
     "simple": true,
-
-    // in MB
+    // ???
+    // max. area size in MB
     "max_size": {
         "default": 768,
         "obf.zip": 250,
@@ -33,10 +37,12 @@ var config = {
         "mapsforge-osm.zip": 100
     },
 
+    // display messages in browser console
     debug: 1,
 
     // extract-pro service with meta data and daily updates
     extract_pro: 0,
+
     // not used yet
     "dummy": ""
 };
@@ -115,7 +121,9 @@ function init() {
         numZoomLevels: 18
     }));
 
-/* disabled maps
+/*
+    * disabled maps
+    * 
     map.addLayer(new OpenLayers.Layer.OSM("OSM Hike&Bike", ["http://a.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png", "http://b.www.toolserver.org/tiles/hikebike/${z}/${x}/${y}.png"], {
         tileOptions: {
             crossOriginKeyword: null
