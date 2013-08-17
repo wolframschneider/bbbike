@@ -1335,7 +1335,6 @@ function init_dialog_window() {
  *
  */
 jQuery(document).ready(function () {
-    init();
     init_dialog_window();
 });
 
