@@ -634,7 +634,6 @@ function plot_default_box() {
 
     // return javascript float coordinates
 
-
     function c(name) {
         var val = $("#" + name).val();
         return parseFloat(val);
@@ -682,7 +681,6 @@ function plot_default_box_menu_on() {
 }
 
 // remove default box from map
-
 
 function plot_default_box_menu_off() {
     $("#drag_box_select_reset").attr('checked', false);
