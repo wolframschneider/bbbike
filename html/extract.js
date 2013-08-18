@@ -719,6 +719,9 @@ function debug(text, id) {
     tag.html(text);
 }
 
+// check browser window height, and re-adjust sidebar and map size
+
+
 function setMapHeight() {
     var height = $(window).height();
     var width = $(window).width() - $('#sidebar_left').width();
