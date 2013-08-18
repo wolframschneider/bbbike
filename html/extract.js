@@ -38,7 +38,7 @@ var config = {
     extract_pro: 0,
 
     // size of box in relation to the map
-    "default_box_size": 0.6,
+    "default_box_size": 0.66,
 
     "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
@@ -74,6 +74,9 @@ var console;
 var vectors;
 
 ////////////////////////////////////////////////////////////////////////////////
+// main function after page load
+//
+
 
 function init() {
     var opt = {};
@@ -81,6 +84,10 @@ function init() {
     initKeyPress();
     init_map_resize();
     map = init_map();
+
+    extract_init_pro(opt);
+    extract_init(opt);
+    polygon_init();
 
     // old extract from permalink or back button
     if (check_lnglat_form(true)) {
@@ -90,15 +97,11 @@ function init() {
         move_map_to_city();
     }
 
-    extract_init(opt);
-    extract_init_pro(opt);
-    permalink_init();
-    polygon_init();
-
     // plot_default_box();
     $("#drag_box_default").click(plot_default_box);
     $("#drag_box_select").click(plot_default_box_menu_off);
 
+    permalink_init();
     if (config.open_infopage) open_infopage();
 }
 
@@ -115,46 +118,25 @@ function move_map_to_city() {
 }
 
 function plot_polygon_back() {
-    var opt = {
-        "param": 0,
-        "back_button": 0
-    };
-
+    // setTimeout(function () {
     var sw_lng = $("#sw_lng").val();
     var sw_lat = $("#sw_lat").val();
     var ne_lng = $("#ne_lng").val();
     var ne_lat = $("#ne_lat").val();
     var coords = $("#coords").val();
 
-    if (coords == "") opt.param = 1;
     if (coords == "0,0,0") { // to long URL, ignore
         coords = "";
     }
+    debug("get coords from back button: " + coords);
 
-    // bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
-    // back button: reset coordinates to original values
-    opt.back_function = function () {
-        debug("get coords from back button");
+    center_city(sw_lng, sw_lat, ne_lng, ne_lat);
 
-        $("#sw_lng").val(sw_lng);
-        $("#sw_lat").val(sw_lat);
-        $("#ne_lng").val(ne_lng);
-        $("#ne_lat").val(ne_lat);
-        $("#coords").val(coords);
-
-        debug("coords: " + coords);
-        state.validateControls();
-
-        plot_default_box_menu_on();
-    };
-
-    setTimeout(function () {
-        center_city(sw_lng, sw_lat, ne_lng, ne_lat);
-
-        var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
-        var feature = plot_polygon(polygon);
-        vectors.addFeatures(feature);
-        if (coords) {
+    var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
+    var feature = plot_polygon(polygon);
+    vectors.addFeatures(feature);
+/*
+        if (0 && coords) {
             // trigger a recalculation of polygon size
             setTimeout(function () {
                 vectors.events.triggerEvent("sketchcomplete", {
@@ -162,9 +144,17 @@ function plot_polygon_back() {
                 });
             }, 500);
         }
-        opt.back_function();
 
-    }, 700);
+        $("#sw_lng").val(sw_lng);
+        $("#sw_lat").val(sw_lat);
+        $("#ne_lng").val(ne_lng);
+        $("#ne_lat").val(ne_lat);
+        $("#coords").val(coords);
+        */
+
+    state.validateControls();
+    plot_default_box_menu_on();
+    // }, 0);
 }
 
 function center_city(sw_lng, sw_lat, ne_lng, ne_lat) {
