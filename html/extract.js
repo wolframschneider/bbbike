@@ -77,7 +77,6 @@ var vectors;
 // main function after page load
 //
 
-
 function init() {
     var opt = {};
 
@@ -135,26 +134,9 @@ function plot_polygon_back() {
     var polygon = coords ? string2coords(coords) : rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
     var feature = plot_polygon(polygon);
     vectors.addFeatures(feature);
-/*
-        if (0 && coords) {
-            // trigger a recalculation of polygon size
-            setTimeout(function () {
-                vectors.events.triggerEvent("sketchcomplete", {
-                    "feature": feature
-                });
-            }, 500);
-        }
-
-        $("#sw_lng").val(sw_lng);
-        $("#sw_lat").val(sw_lat);
-        $("#ne_lng").val(ne_lng);
-        $("#ne_lat").val(ne_lat);
-        $("#coords").val(coords);
-        */
 
     state.validateControls();
     plot_default_box_menu_on();
-    // }, 0);
 }
 
 function center_city(sw_lng, sw_lat, ne_lng, ne_lat) {
