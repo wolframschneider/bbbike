@@ -77,6 +77,7 @@ var vectors;
 // main function after page load
 //
 
+
 function init() {
     var opt = {};
 
@@ -720,8 +721,6 @@ function debug(text, id) {
 }
 
 // check browser window height, and re-adjust sidebar and map size
-
-
 function setMapHeight() {
     var height = $(window).height();
     var width = $(window).width() - $('#sidebar_left').width();
@@ -838,6 +837,10 @@ function initKeyPress() {
     };
 };
 
+/*
+ * show/hide polygon menu for rotate/resize
+ *
+ */
 function polygon_menu(enabled) {
     enabled ? $("#polygon_controls").show() : $("#polygon_controls").hide();
 
@@ -1116,7 +1119,10 @@ function mapnikImageSize(scale) {
     return new OpenLayers.Size(Math.round(bounds.getWidth() / scale / 0.00028), Math.round(bounds.getHeight() / scale / 0.00028));
 }
 
-
+/*
+ * configure and initialise polygon objects and events
+ *
+ */
 function polygon_init() {
     var controls;
 
@@ -1244,6 +1250,10 @@ function toggle_lnglatbox() {
     $('.uncheck').attr('checked', false);
 }
 
+/*
+ * initialise jquery dialog helper windows
+ *
+ */
 function init_dialog_window() {
     if (jQuery('#tools-helpwin').length == 0) return;
 
@@ -1264,10 +1274,7 @@ function init_dialog_window() {
     }).draggable();
 }
 
-/*******************************************************************************
- * main
- *
- */
+/* after page load */
 jQuery(document).ready(function () {
     init_dialog_window();
 });
