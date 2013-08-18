@@ -77,7 +77,6 @@ var vectors;
 // main function after page load
 //
 
-
 function init() {
     var opt = {};
 
@@ -721,6 +720,8 @@ function debug(text, id) {
 }
 
 // check browser window height, and re-adjust sidebar and map size
+
+
 function setMapHeight() {
     var height = $(window).height();
     var width = $(window).width() - $('#sidebar_left').width();
@@ -734,7 +735,7 @@ function setMapHeight() {
     $('#map').width(width);
     $('#map').height(height);
 
-    debug($(window).height() + " " + $(window).width());
+    debug("setMapHeight: " + $(window).height() + " " + $(window).width());
 
     // hide help messages on small screens
     if ($(window).height() < 480) {
@@ -974,7 +975,7 @@ function validateControlsAjax() {
 
     var url = "/cgi/tile-size.cgi?format=" + format + "&lat_sw=" + $("#sw_lat").val() + "&lng_sw=" + $("#sw_lng").val() + "&lat_ne=" + $("#ne_lat").val() + "&lng_ne=" + $("#ne_lng").val();
 
-    debug("p frac: " + polygon + " skm: " + skm);
+    debug("validateControls frac: " + polygon + " skm: " + skm);
 
     // plot area size and file size
     $.getJSON(url, function (data) {
