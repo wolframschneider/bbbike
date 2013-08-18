@@ -4,8 +4,7 @@
 */
 
 // HTML5: may not work on Android devices!
-"use strict"
-
+//"use strict"
 // central config
 var config = {
     // open help page at start up
