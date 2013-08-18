@@ -432,6 +432,9 @@ function extract_init(opt) {
     state.clearBox = clearBox;
     state.setBounds = setBounds;
 
+    // set values ind show lnglat box
+
+
     function setBounds(bounds) {
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
         var decimals = Math.pow(10, Math.floor(map.getZoom() / 3));
@@ -535,6 +538,9 @@ function cf(name) {
 
 function plot_default_box() {
     debug("plot default box");
+
+    // reset to full map
+    state.setBounds(map.getExtent());
 
     if (!check_lnglat_form()) {
         alert("lng or lat value is out of range -180 ... 180, -90 .. 90");
