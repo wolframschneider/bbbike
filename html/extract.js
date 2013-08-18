@@ -79,7 +79,7 @@ function init() {
     var opt = {};
 
     initKeyPress();
-    init_map_size();
+    init_map_resize();
     map = init_map();
 
     // old extract from permalink or back button
@@ -93,7 +93,6 @@ function init() {
     extract_init(opt);
     extract_init_pro(opt);
     permalink_init();
-
     polygon_init();
 
     // plot_default_box();
@@ -262,7 +261,7 @@ function open_infopage() {
     $("input#oi").val("1");
 }
 
-function init_map_size() {
+function init_map_resize() {
     var resize = null;
 
     // set map height depending on the free space on the browser window
@@ -273,7 +272,7 @@ function init_map_size() {
         if (resize) clearTimeout(resize);
         resize = setTimeout(function () {
             setMapHeight();
-        }, 500);
+        }, 300);
     });
 }
 
