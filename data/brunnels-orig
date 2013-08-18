@@ -139,7 +139,8 @@ Alemannenbrücke	Br -3899,2002 -3827,2109
 Borussenbrücke	Br -3882,2441 -3820,2479
 #: note: im Volksmund "Spinnerbrücke"
 Spanische Allee, Autobahnbrücke	Br -3861,2837 -3736,2849
-Schönerlinder Str., S- und Autobahnbrücke	Br 11981,24260 12177,24684
+Schönerlinder Str., Autobahnbrücke	Br 11980,24276 11959,24220
+Schönerlinder Str., S-Bahnbrücke	Br 12108,24547 12136,24607
 Bucher Str., S- und Autobahnbrücke	Br 12986,23392 13012,23424 13199,23657
 Friedrichsbrücke	Br 10166,12777 10086,12725
 Wiesenbrücke	Br 8607,15426 8683,15354
@@ -174,7 +175,7 @@ Hansabrücke	Br 5869,12591 5902,12568 5940,12542
 Wullenwebersteg	Br 5657,12339 5714,12266
 Beusselbrücke	Br 5205,14253 5220,14043
 Finsterwalder Brücke	Br 6320,21777 6373,21810
-Eichwerdersteg	Br 5534,24005 5596,23970
+Eichwerdersteg	Br 5534,24005 5621,23966
 Sickingenbrücke	Br 4187,13704 4271,13735
 Kaiserin-Augusta-Brücke	Br 4296,13228 4382,13232
 Spandauer-Damm-Brücke	Br 2280,12403 2193,12393 2152,12389
@@ -298,7 +299,7 @@ Märkische Allee, Brücke über der Wuhletalstr.	Br 20717,17516 20843,17745
 Brücke am Biesdorfer Kreuz	Br 20002,12492 19947,12140
 Blumberger Damm, S-Bahnbrücke	Br 21199,12258 21190,12193 21166,12023
 Bitterfelder Brücke	Br 20372,16583 20230,16560 20150,16572
-Marzahner Brücke	Br 19350,14997 19408,15007 19605,15073
+Marzahner Brücke	Br 19350,14997 19408,15007 19614,15061
 Marzahner Brücke	Br 19563,15113 19480,15094 19364,15045
 #: XXX_prog: gleiche Brücke, nur durch Mittelstreifen getrennt
 Landsberger Allee, S-Bahnbrücke	Br 19013,14905 19156,14953
@@ -376,7 +377,7 @@ Werdauer Brücke	Br 6774,7755 6691,7633
 #: note: über die Laake
 Rudelsburger Brücke	Br 13766,22119 13780,22141
 Nördliche Rhinstraßenbrücke	Br 18181,14110 18184,14078
-Pyramidenringbrücke	Br 18354,14196 18383,14184
+Pyramidenringbrücke	Br 18354,14195 18382,14183
 Maselake-Klappbrücke	Br -2445,16610 -2504,16558
 Brücke über den Maselakekanal	Br -2152,17108 -2140,17171
 Brücke über Kanal I	Br 31362,2800 31358,2810
@@ -437,13 +438,14 @@ Karolinenbrücke	Br 1883,20639 1876,20667
 Karolinensteg	Br 1761,20539 1741,20571
 Mühlensteg	Br 1721,20603 1697,20623
 Gabrielensteg	Br 1687,20645 1668,20670
-(Brücke über das Tegeler Fließ)	Br 2361,21512 2336,21546
-(Brücke über das Tegeler Fließ)	Br 4608,22931 4626,22914
-Egidysteg	Br 3099,22211 3134,22153
+(Brücke über das Tegeler Fließ)	Br 2048,21343 2061,21308
+(Brücke über das Tegeler Fließ)	Br 2371,21524 2352,21559
+(Brücke über das Tegeler Fließ)	Br 4596,22955 4613,22928
+Egidysteg	Br 3094,22216 3134,22153
 Fließbrücke	Br 1808,20817 1787,20836
 Fußgängerunterführung Mehrower Allee	Tu 20533,17051 20439,17103
 Eisenbahnbrücke Werder	Br -21210,-2058 -21048,-2029
-Oraniendammbrücke	Br 4251,22829 4208,22866
+Oraniendammbrücke	Br 4222,22854 4193,22873
 Havellandbrücke	Br -70554,38960 -70719,38954
 Peenebrücke Wolgast	Br 32743,183832 32848,183868 32956,183906
 Zecheriner Brücke	Br 35953,162870 36080,162883 36480,162910
@@ -479,7 +481,7 @@ Brücke über die Wuhle	Br 21935,12160 21970,12153
 Brücke über die Wuhle	Br 22419,15127 22326,15116
 Brücke über die Wuhle	Br 21571,7639 21591,7642
 Brücke über die Wuhle	Br 22084,5877 22083,5899
-Brücke über die Wuhle	Br 22474,17858 22537,17878
+Brücke über die Wuhle	Br 22474,17858 22519,17879
 Brücke über die B5	Br -15959,13732 -15979,13692
 Waldseebrücke	Br -961,3737 -935,3706
 Brücke über den Spektegraben	Br -6256,15169 -6214,15211 -6175,15261
@@ -524,7 +526,7 @@ Reiterbrücke	Br 7173,11864 7182,11870
 Landoltwegbrücke	Br 2288,4932 2301,4917 2313,4901
 Poßwegbrücke	Br -429,4043 -443,4059
 Jürgengrabensteg	Br -2929,12452 -2912,12459
-Dianasteg	Br 4114,22690 4087,22714
+Dianasteg	Br 4117,22722 4106,22731
 Uhlandstraßenbrücke	Br 7637,20712 7644,20744
 Rathaussteg	Br 5176,20121 5176,20138
 Bollesteg	Br 2919,20910 2915,20932
@@ -561,6 +563,11 @@ Brücke im Springpfuhlpark	Br 19567,13858 19565,13893
 #: section ^^^
 #
 ## Brandenburg und weiter ####################################################
+Unterführung Bahnhof - Flughafen	Tu 18119,-1528 18234,-1645
+	Br 19524,-3843 19528,-3767
+Autobahnbrücke	Br 20956,24594 21058,24628
+Autobahnbrücke	Br 24709,21125 24730,21184
+Autobahnbrücke	Br 23973,21919 24010,21960
 Brücke über den Stadtkanal	Br -13001,-1329 -13001,-1349
 	Br -9617,13368 -9549,13365
 Elbebrücke	Br -108535,-32884 -108293,-33023
