@@ -433,7 +433,6 @@ function extract_init(opt) {
 
     // set values ind show lnglat box
 
-
     function setBounds(bounds) {
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
         var decimals = Math.pow(10, Math.floor(map.getZoom() / 3));
@@ -725,7 +724,6 @@ function debug(text, id) {
 }
 
 // check browser window height, and re-adjust sidebar and map size
-
 
 function setMapHeight() {
     var height = $(window).height();
