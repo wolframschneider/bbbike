@@ -76,14 +76,17 @@ var vectors;
 ////////////////////////////////////////////////////////////////////////////////
 
 function init() {
+    var opt = {};
+
     initKeyPress();
     init_map_size();
-
     map = init_map();
 
+    // old extract from permalink or back button
     if (check_lnglat_form(true)) {
         plot_polygon_back();
     } else {
+        // start from scratch 
         move_map_to_city();
     }
 
@@ -419,12 +422,6 @@ function extract_init(opt) {
 
         // $("#drag_box").click(startDrag);
         setBounds(map.getExtent());
-
-        // implement history for back button
-        if (opt.back_button) {
-            opt.back_function();
-            boundsChanged();
-        }
     }
 
     function boundsChanged() {
@@ -449,41 +446,6 @@ function extract_init(opt) {
         validateControls();
         mapnikSizeChanged();
     }
-
-/*
-    function startDrag() {
-        // $("#drag_box").html("Drag a box on the map to select an area");
-        $("#drag_box_manually").hide();
-        $("#drag_box_drag").show();
-
-        if (config.enable_polygon) polygon_menu(false);
-
-        clearBox();
-        setBounds(map.getExtent());
-        // setBounds(bounds);
-        box.activate();
-    };
-
-    function endDrag(bbox) {
-        var bounds = bbox.getBounds();
-
-        map.events.unregister("moveend", map, mapMoved);
-        setBounds(bounds);
-        drawBox(bounds);
-        box.deactivate();
-        validateControls();
-
-        // $("#drag_box").html("Manually select a different area");
-        $("#drag_box_drag").hide();
-        $("#drag_box_manually").show();
-        $("#manually_select").attr('checked', false);
-
-        if (config.enable_polygon) {
-            polygon_menu(true);
-            polygon_update();
-        }
-    }
-    */
 
     function transformComplete(event) {
         setBounds(event.feature.geometry.bounds);
