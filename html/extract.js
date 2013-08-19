@@ -222,7 +222,7 @@ function open_infopage() {
         debug("will open info page at startup");
 
         jQuery.cookie("oi", 1, {
-            expires: 1
+            expires: 7
         });
         $("span#tools-help a").trigger("click");
     } else {
