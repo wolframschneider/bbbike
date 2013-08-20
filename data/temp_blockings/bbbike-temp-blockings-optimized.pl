@@ -3304,24 +3304,14 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.kudamm-int.de/strassenfest.html',
-         'until' => 1376863199,
-         'text' => 'Uhlandstr.: Veranstaltung (Uhlandstraßenfest) zwischen Kurfürstendamm und Lietzenburger Str., Straße gesperrt, 17. und 18. August 2013',
-         'from' => 1376604000,
-         'id' => 2468,
-         'data' => 'userdel	2::temp 5047,10381 5076,10658
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'IM_020145',
          'until' => 1387555200,
          'text' => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt (auch für Radfahrer und Fußgänger), 12.08.2013 06:00 Uhr bis 20.12.2013 17:00 Uhr',
          'from' => 1376193600,
          'id' => 2469,
-         'data' => '#: XXX Umgehung durch den S-Bahnhof prüfen und ggfs. eintragen
-userdel	2::inwork 17736,5441 17886,5587
+         'data' => 'userdel	2::inwork 17736,5441 17886,5587
 ',
          'type' => 'gesperrt'
        }
