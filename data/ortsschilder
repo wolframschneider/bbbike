@@ -210,9 +210,9 @@ Groß Luckow	OS 37354,125599
 Gollmitz	OS 30789,99365
 Gollmitz	OS 29963,99171
 Wilhelmshof	OS 31129,103246
-Boitzenburg	OS 21980,95754
+Boitzenburg	OS 21977,95749
 Boitzenburg	OS 22963,95207
-Hardenbeck	OS 19336,95235
+Hardenbeck	OS 19316,95227
 Brüsenwalde	OS 13427,93659
 Lychen	OS 1090,89570
 Fürstenberg	OS -8242,87530
@@ -332,10 +332,14 @@ Schwanebeck|b. Berlin	OS 18073,23456
 Schwanebeck|b. Berlin	OS 17622,24160
 Schwanebeck|b. Berlin	OS 17190,24695
 Schwanebeck|b. Berlin	OS 18015,25653
-Lindenberg|b. Berlin	OS 18073,23456
+Schwanebeck|b. Berlin	OS 19790,24572
+Schwanebeck|b. Berlin	OS 19395,24634
+Schwanebeck-West	OS 18583,24966
 Lindenberg|b. Berlin	OS 18597,20898
-Lindenberg|b. Berlin	OS 17773,21793
+Lindenberg|b. Berlin	OS 17752,21797
 Lindenberg|b. Berlin	OS 18349,22132
+Lindenberg|b. Berlin	OS 18339,22271
+Lindenberg|b. Berlin	OS 18073,23456
 Zepernick	OS 18178,26668
 Zepernick	OS 20482,28536
 Leest	OS -20616,2567
@@ -637,6 +641,9 @@ Schönefeld	OS 17181,-2257
 Schönefeld	OS 18853,-1656
 Schönefeld	OS 19611,-4030
 Ahrensfelde	OS 20971,19616
+Ahrensfelde	OS 21442,18880
+Ahrensfelde	OS 22685,19122
+Ahrensfelde	OS 21868,18896
 Drense	OS 47381,101165
 Grünow	OS 45080,101325
 Lanke	OS 20858,38828
@@ -674,8 +681,13 @@ Berlin	OS 25005,15636
 Berlin	OS 24708,7636
 Berlin	OS 24789,7756
 Berlin	OS 25781,9966
+Mehrow	OS 25327,19421
+Mehrow	OS 24484,18569
 Eiche	OS 22809,16240
 Eiche	OS 23175,16119
+Eiche	OS 23700,18746
+Eiche	OS 23091,18928
+Eiche	OS 22860,18555
 Ravenstein	OHT 25507,7428
 Großziethen	OS 12023,-1174
 Großziethen	OS 14890,136
@@ -720,3 +732,8 @@ Wendisch Rietz Ausbau	OHT 54810,-19312
 Wendisch Rietz	OS 51987,-21228
 Wendisch Rietz	OS 52100,-19769
 Potsdam	OS -16800,1991
+Blumberg	OS 24863,21549
+Blumberg	OS 25239,21918
+Blumberg	OS 23479,22805
+Birkholz	OS 21833,24426
+Birkholz	OS 21433,24738

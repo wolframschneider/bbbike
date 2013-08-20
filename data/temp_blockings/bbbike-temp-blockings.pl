@@ -1297,7 +1297,7 @@ EOF
        text  => 'L 23; (Templin-Lychen); OD Lychen Straßenbau Vollsperrung 17.11.2004-20.12.2004 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 3125,88753 2797,89387
+userdel	q4 3153,88773 3049,88989 2864,89396 2797,89387
 EOF
      },
      { from  => 1116572111, # 2005-05-20 08:55
@@ -1567,8 +1567,8 @@ EOF
        text  => 'L 791; (Luckenwalder Str.); Bahnübergang in Zossen, Havarie, Vollsperrung, 19.02.2005-25.02.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 13557,-21831 13014,-22300
-userdel	2 13557,-21831 13960,-21244
+userdel	2 13528,-21855 13014,-22300
+userdel	2 13528,-21855 13960,-21244
 EOF
      },
      { from  => 1109280022, # 2005-02-24 22:20
@@ -1759,7 +1759,7 @@ EOF
        text  => 'L 23; (Templin-Lychen); OD Lychen, Kreuzungsber. Straßenbau Vollsperrung 29.03.2005-03.05.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	q4 3125,88753 2797,89387
+userdel	q4 3153,88773 3049,88989 2864,89396 2797,89387
 EOF
      },
      { from  => 1113084000, # 2005-04-10 00:00
@@ -2338,7 +2338,7 @@ EOF
        text  => 'B 158; (Freienwalder Chaussee); OD Blumberg, zw. Kietz u. Elisenauer Ch. Deckenerneuerung Vollsperrung 28.07.2005-02.08.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 24735,22556 24951,22681
+userdel	q4 24709,22522 24951,22681
 EOF
      },
      { from  => 1130018400, # 2005-10-23 00:00
@@ -2588,7 +2588,7 @@ EOF
        text  => 'L 793; (Alfred-Kühne-Str.); OD Ludwigsfelde, am OA in Ri. A 10 Einbau Anschlussgleis Vollsperrung 24.08.2005-10.09.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 2629,-10301 2580,-11069 2423,-11316 2001,-11983 1709,-12428
+userdel	2 2629,-10301 2580,-11069 2423,-11316 2001,-11983 1695,-12417
 EOF
      },
      { from  => 1161627703, # 2006-10-23 20:21
@@ -3701,7 +3701,7 @@ EOF
        text  => 'Berlin-Lübars: Am Freibad in beiden Richtungen Wasser auf der Fahrbahn, gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 5727,23485 5297,23633
+userdel	2 5727,23485 5316,23661
 EOF
      },
      { from  => undef, # 
@@ -4094,7 +4094,7 @@ EOF
        text  => 'L 079 Ludwigsfelde-Ahrensdorf zw. Ludwigsfelde und Ahrensdorf Straßenbauarbeiten Vollsperrung 12.04.2006-23.04.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -2086,-9891 -1245,-9999
+userdel	2 -2058,-9925 -1495,-10029
 EOF
      },
      { from  => 1145570400, # 2006-04-21 00:00
@@ -4522,7 +4522,7 @@ EOF
        text  => 'L 079 Ludwigsfelde-Ahrensdorf zw. Ludwigsfelde und Ahrensdorf Straßenbauarbeiten Vollsperrung 20.05.2006-21.05.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -2086,-9891 -1245,-9999 -862,-9933
+userdel	2 -2058,-9925 -1495,-10029 -862,-9933
 EOF
      },
      { from  => 1147845153, # 2006-05-17 07:52
@@ -6936,7 +6936,7 @@ EOF
        text  => 'L 025 Schönermark-LG-Woldegk Brücke über den Dammseegraben am OA Fürstenwerder Brückenneubau Vollsperrung 18.12.2006-22.12.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 20336,110197 20035,110983
+userdel	2::inwork 20423,110164 20035,110983
 EOF
      },
      { from  => 1167692400, # 2007-01-02 00:00
@@ -7167,7 +7167,7 @@ EOF
        text  => 'L 025 Fürstenwerder-Woldegk Brücke über den Dammseegraben am OA Fürstenwerder Änderung Wasserführung Vollsperrung 12.02.2007-15.02.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 20035,110983 20336,110197 20631,109980
+userdel	2::inwork 20035,110983 20423,110164 20679,110040
 EOF
      },
      { from  => 1172790000, # 2007-03-02 00:00
@@ -7684,7 +7684,7 @@ EOF
        text  => 'L 015 zw. Gollmitz u. Berkholz u. Boitzenburg Deckensanierung Vollsperrung 10.04.2007-22.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 29760,99768 27416,98865 26759,98614 26304,98234 26128,97916 25974,97619 24828,97295 24216,96897 23278,96396
+userdel	2::inwork 29760,99768 27887,98987 27416,98865 26773,98564 26332,98221 26174,97897 25950,97572 24777,97198 24290,96842
 EOF
      },
      { from  => undef, # 
@@ -7742,7 +7742,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005138',
        data  => <<EOF,
-userdel	1::inwork 9443,15430 8900,15146
+userdel	1::inwork 9443,15430 9141,15272 8900,15146
 EOF
      },
      { from  => 1176069600, # 2007-04-09 00:00
@@ -7899,7 +7899,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005213',
        data  => <<EOF,
-userdel	2::inwork 12721,15807 12642,15668 12559,15524
+userdel	2::inwork 12721,15807 12642,15668 12556,15518
 EOF
      },
      { from  => 1177103024, # 2007-04-20 23:03
@@ -8383,8 +8383,8 @@ EOF
        text  => 'Sperrungen im Neuen Garten wegen des G8-Vorbereitungstreffens, bis 2007-05-30 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp -12139,1325 -12094,1273 -12081,1168
-userdel	2::temp -12166,1384 -12141,1357 -12139,1325 -12148,1245 -12186,1118 -12154,963 -12182,816
+userdel	2::temp -12133,1323 -12094,1273 -12081,1168
+userdel	2::temp -12166,1384 -12135,1358 -12133,1323 -12141,1267 -12161,1211 -12180,1131 -12154,963 -12182,788
 userdel	2::temp -11818,993 -11871,1087 -12081,1168
 userdel	2::temp -11887,837 -11856,950
 userdel	2::temp -11581,559 -11650,590 -11603,721 -11615,853 -11715,959
@@ -8591,7 +8591,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005738',
        data  => <<EOF,
-userdel	2::inwork 12721,15807 12642,15668 12559,15524 12466,15359 12421,15278
+userdel	2::inwork 12721,15807 12642,15668 12556,15518 12466,15359 12421,15278
 EOF
      },
      { from  => $isodate2epoch->("2013-08-08 00:00:00"), # 1 Tag Vorlauf
@@ -10453,7 +10453,7 @@ EOF
        text  => 'Bauarbeiten am Ostkreuz, Durchfahrt nicht mehr möglich',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 14911,10587 14843,10621
+userdel	2::inwork 14911,10587 14875,10605 14843,10621
 EOF
      },
      { from  => 1193776707, # 2007-10-30 21:38
@@ -12040,7 +12040,7 @@ EOF
        text  => 'B 002 zw. Bernau und Stadtgrenze Berlin Deckenerneuerung, Radwegbau Richtungsverkehr 07.07.2008-08.08.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 19658,24589 19602,24153 19565,24028 19393,23690
+userdel	1::inwork 19658,24589 19627,24445 19593,24154 19565,24028 19393,23690
 EOF
      },
      { from  => 1216321760, # 
@@ -13009,7 +13009,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_010519',
        data  => <<EOF,
-userdel	q4::inwork 12463,15774 12384,15618 12299,15463
+userdel	q4::inwork 12463,15774 12375,15615 12299,15463
 EOF
      },
      { from  => 1230474690, # 2008-12-28 15:31
@@ -13740,7 +13740,7 @@ EOF
        text  => 'B 158 Blumberg - Werneuchen zw. Blumberg u. Seefeld Deckenerneuerung Vollsperrung 14.04.2009-13.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 28531,24375 28246,24272 27608,23776 27283,23503 26936,23104 26764,23083 25641,22864 25295,22655 24951,22681 24735,22556
+userdel	2::inwork 28531,24375 28246,24272 27608,23776 27283,23503 26936,23104 26764,23083 25641,22864 25295,22655 24951,22681 24709,22522
 EOF
      },
      { from  => 1239919200, # 2009-04-17 00:00
@@ -14150,7 +14150,7 @@ EOF
        text  => 'L 025 Prenzlau - Fürstenwerder zw. OA Schönermark u. OE Kraatz Straßenbauarbeiten Vollsperrung 25.05.2009-31.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 28511,103728 28338,104176 27732,105878 27213,107158 25934,109206 25606,109314
+userdel	2::inwork 28511,103728 28338,104176 27754,105827 27250,107145 26089,109088 25974,109208 25836,109313 25662,109362
 EOF
      },
      { from  => 1242712036, # 2009-05-19 07:47
@@ -15427,16 +15427,17 @@ EOF
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
-	2::night -11615,853 -11715,959 -11818,993 -11871,1087 -12081,1168 -12094,1273 -12139,1325
+	2::night -11615,853 -11715,959 -11818,993 -11871,1087 -12081,1168 -12094,1273 -12133,1323
 	2::night -11650,590 -11603,721 -11615,853
-	2::night -11510,810 -11562,918 -11575,1031 -11537,1206 -11544,1262 -11580,1281 -11871,1185 -11990,1214 -12124,1359 -12141,1357
+	2::night -11510,810 -11562,918 -11575,1031 -11537,1206 -11544,1262 -11580,1281 -11871,1185 -11990,1214 -12124,1359 -12135,1358
 	2::night -11615,853 -11510,810 -11412,784 -11392,762 -11231,696
-(Ökonomieweg, Neuer Garten): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12528,-11 -12518,13 -12537,48 -12531,75 -12475,116 -12448,246 -12373,288 -12276,554 -12182,816 -12154,963 -12186,1118 -12148,1245 -12139,1325 -12141,1357 -12166,1384
-Neuer Garten, Westufer des Heiligen Sees: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12265,-418 -12263,-403 -12262,-362 -12328,-212 -12334,-114 -12321,9 -12278,134 -12156,193 -12103,315 -12143,353 -12115,409 -12068,384 -11990,790 -11950,781 -11887,837 -11856,950 -11818,993
+(Ökonomieweg, Neuer Garten): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12528,-11 -12518,13 -12537,48 -12531,75 -12475,116 -12448,246 -12373,288 -12276,554 -12205,732 -12182,788 -12154,963 -12180,1131 -12161,1211 -12141,1267 -12133,1323 -12135,1358 -12166,1384
+Neuer Garten, Westufer des Heiligen Sees: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12265,-418 -12263,-403 -12262,-362 -12328,-212 -12334,-114 -12321,9 -12293,110 -12222,186 -12227,219 -12177,283 -12115,409 -12068,384 -11990,790 -11950,781 -11887,837 -11856,950 -11818,993
 Neuer Garten (am Portierhaus) - Weinmeisterstr.: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12334,-114 -12424,-107 -12453,-36 -12518,13 -12561,35
 Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -12332,585 -12276,554 -12115,409
 	2::night -12263,-403 -12280,-385 -12306,-378 -12357,-307 -12371,-284 -12396,-298
 	2::night -12449,-186 -12440,-181 -12449,-134 -12424,-107
+(Ökonomieweg - Leistikowstr.)	2::night -12205,732 -12266,731 -12297,738
 EOF
      },
      { from  => undef, #
@@ -15713,7 +15714,7 @@ EOF
        text  => 'L 025 Schönermark - Fürstenwerder - Woldegk zw. OL Kraatz u. Fürstenwerder u. LG Deckenerneuerung Vollsperrung 17.08.2009-02.10.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 21007,109931 21285,109895 22504,109807 23242,109707
+userdel	2::inwork 21007,109931 21277,109903 21482,109900 22042,109882 23242,109707
 EOF
      },
      { from  => 1250978400, # 2009-08-23 00:00
@@ -15947,7 +15948,7 @@ EOF
        text  => 'L 015 Berliner Straße OL Lychen, zw. Brücke Nesselpfuhlfließ u. Schlüßstr. Kanal- u. Straßenausbau Vollsperrung 15.09.2009-15.09.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 1544,89701 1907,89597
+userdel	2::inwork 1544,89701 1782,89633 1907,89597
 EOF
      },
      { from  => 1252015200, # 2009-09-04 00:00
@@ -17494,7 +17495,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LSO-SG33-E10030',
        data  => <<EOF,
-userdel	2::inwork 25170,18422 25654,17351
+userdel	2::inwork 25232,18413 25654,17351
 EOF
      },
      { from  => 1274300034, # 2010-05-19 22:13
@@ -18210,7 +18211,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20100720.1055.303592.html',
        data  => <<EOF,
-userdel	q4::inwork 22605,15111 22449,15127 22419,15127 22343,15115 22059,15153
+userdel	q4::inwork 22605,15111 22449,15127 22419,15127 22326,15116 22059,15153
 EOF
      },
      { from  => 1281128604, # 2010-08-08 00:00 1281218400
@@ -18520,7 +18521,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101025.1235.315920.html',
        data  => <<EOF,
-userdel	2::inwork 5534,24005 5596,23970
+userdel	2::inwork 5534,24005 5621,23966
 EOF
      },
      { from  => 1288479600, # 2010-10-31 01:00
@@ -18842,7 +18843,7 @@ userdel	2::inwork 25212,-4025 25269,-4041 25320,-4049
 EOF
      },
      { from  => 1335462672, # 
-       until => 1377985740, # 1356908400, # XXX
+       until => 1376157170, # möglicherweise beendet --- 1377985740, # 1356908400, # XXX
        text  => 'Auerbachtunnel: Fahrbahn wegen Bauarbeiten gesperrt, bis Sommer 2013',
        type  => 'handicap',
        source_id => 'IM_016416',
@@ -19303,7 +19304,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_107899',
        data  => <<EOF,
-userdel	q4::inwork 11796,18482 11698,18446
+userdel	q4::inwork 11796,18482 11696,18454
 EOF
      },
      { from  => 1308592800, # 2011-06-20 20:00
@@ -19627,7 +19628,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_107049',
        data  => <<EOF,
-userdel	q4::inwork 16104,19165 15647,19165
+userdel	q4::inwork 16104,19165 16011,19158 15642,19179
 EOF
      },
      { from  => 1332272539, # 2012-03-20 20:42
@@ -20023,7 +20024,7 @@ userdel	q4::inwork 8634,13588 8626,13641 8619,13689
 EOF
      },
      { from  => 1348076973, # 1314604800, # 2011-08-29 10:00
-       until => 1365706902, # 1380636000, # 2013-10-01 16:00, # 1347721200, # 2012-09-15 17:00
+       until => 1380636000, # 2013-10-01 16:00, # 1347721200, # 2012-09-15 17:00
        text  => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schwedter Str., Fahrbahn ist manchmal gesperrt, bis Herbst 2013',
        type  => 'handicap',
        source_id => 'IM_019212',
@@ -20035,6 +20036,7 @@ EOF
 #: note: am 2012-10-31 am südlichen Ende vorbeigefahren, möglicherweise war heute die Schranke nicht aktiv
 #: note: am 2013-02-11 geprüft, keine Schranke, aber nur für "Linienverkehr frei"
 #: note: am 2013-04-11 geprüft: Radfahrer dürfen hier offiziell entlangfahren
+#: note: am 2013-08-14 geprüft: Fahrbahn war gesperrt
 userdel	q3::inwork 10530,14452 10723,14772
 EOF
      },
@@ -20116,7 +20118,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_111647', # auch: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html
        data  => <<EOF,
-#: osm_watch: way id="23243508" version="36"
+#: osm_watch: way id="23243508" version="37"
 userdel	q4::inwork; -1872,24336 -1790,24260 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 EOF
      },
@@ -20397,7 +20399,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20120612.1440.371422.html',
        data  => <<EOF,
-userdel	2::inwork 4824,22907 5054,23025 5127,23042 5205,23094 5232,23139
+userdel	2::inwork 4824,22907 4876,22955 4944,22978 4993,23020 5037,23036 5100,23045 5206,23103 5232,23139
 EOF
      },
      { from  => $isodate2epoch->("2013-09-12 16:00:00"), # 1 Tag Vorlauf
@@ -20678,7 +20680,7 @@ userdel	q4::inwork 11615,15114 11595,15058
 EOF
      },
      { from  => $isodate2epoch->("2013-07-31 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2013-08-11 23:59:59"),
+       until => $isodate2epoch->("2013-07-31 00:00:00"), # XXX Das Gauklerfest 2013 wurde abgesagt!!!
        periodic => 1,
        text  => 'Gauklerfest, Straßen am Schinkelplatz gesperrt, vom 1. August bis 11. August 2013',
        type  => 'gesperrt',
@@ -20935,14 +20937,11 @@ EOF
      },
      { from  => undef, # 
        until => 1412114400, # 2014-10-01 00:00
-       text  => 'Neubau der Schulstraße, Bauabschnitt zwischen Duseke- und Grunowstraße',
+       text  => 'Neubau der Schulstraße, Bauabschnitt zwischen Grunowstraße und Berliner Straße',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-pankow/verwaltung/tiefbau/nb_schulstr.html',
+       source_id => 'http://www.berlin.de/ba-pankow/verwaltung/tiefbau/nb_schulstr.html?date=20130814',
        data  => <<EOF,
-#: XXX: zweiter Bauabschnitt wird bis zur Berliner Str. gehen
-#: last_checked: 2013-06-04
-#: next_check: 2013-08-04
-userdel	q4::inwork 10473,18113 10545,18143 10582,18159
+userdel	q4::inwork 10582,18159 10755,18231
 EOF
      },
      { from  => 1351465200, # 2012-10-29 00:00
@@ -21179,7 +21178,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-06-04
+#: last_checked: 2013-08-08
 #: check_frequency: 60d
 #: XXX Straße wird asphaltiert (siehe auch Eintrag in fragezeichen-orig)
 userdel	q4::inwork; 13288,7653 13245,7742 13226,7775 13150,7845 13103,7889
@@ -21393,7 +21392,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130611.0925.385925.html',
        data  => <<EOF,
-#: XXX eventuell ist es erst jetzt gesperrt worden? --- Ordensmeisterstr. (Tempelhof): Baustelle, Fahrtrichtung gesperrt, eine Umleitung ist eingerichtet (bis Mitte 08/13) Richtung Komturstr. zwischen Colditzstr. und Komturstr., 08.07.2013 07:00 Uhr bis 16.08.2013 16:00 Uhr	INKO_119177
+#: XXX eventuell ist es erst jetzt gesperrt worden? --- Ordensmeisterstr. (Tempelhof): Baustelle, Fahrtrichtung gesperrt, eine Umleitung ist eingerichtet (bis Mitte 09/13) Richtung Komturstr. zwischen Colditzstr. und Komturstr., 08.07.2013 07:00 Uhr bis 20.09.2013 16:00 Uhr	INKO_119177	INUSE
 #: source_id: INKO_119177
 userdel	q4::inwork; 9796,5790 10027,5868 10254,5921
 EOF
@@ -21468,14 +21467,14 @@ userdel	2::temp 3280,12512 3189,12519 3034,12502 2786,12473 2745,12467 2717,1246
 EOF
      },
      { from  => 1371358800, # 2013-06-16 07:00
-       until => 1376229600, # 2013-08-11 16:00
-       text  => 'Bergiusstr.: Baustelle, Fahrbahn gesperrt, Gehweg evtl. auch nicht passierbar, bis 11.08.2013 16:00 Uhr ',
+       until => $isodate2epoch->("2013-08-23 16:00:00"), # 1376229600, # 2013-08-11 16:00
+       text  => 'Bergiusstr.: Baustelle, Fahrbahn gesperrt, Gehweg evtl. auch nicht passierbar, bis 23.08.2013 16:00 Uhr ',
        type  => 'gesperrt',
        source_id => 'INKO_119210',
        data  => <<EOF,
 #: XXX nach den Bauarbeiten: Bergiusstr. führt direkt zur Grenzallee, ebenso neu: Ampel an der Anschlussstelle
 #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/download/A100_UmbauAusfahrtGrenzallee.pdf
-#: next_check: 2013-08-10
+#: next_check: 2013-08-23
 userdel	2::inwork 14193,6556 14144,6627 14193,6718 14153,6795
 EOF
      },
@@ -21484,7 +21483,7 @@ EOF
        text  => 'Innstr.: Bauarbeiten, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2013-07-20
+#: last_checked: 2013-08-08
 #: check_frequency: 30d
 userdel	q4::inwork 13301,8606 13262,8554 13217,8493
 EOF
@@ -21630,11 +21629,38 @@ EOF
      },
      { from  => 1374381000, # 2013-07-21 06:30
        until => 1377525600, # 2013-08-26 16:00
-       text  => 'Herzbergstr.(Lichtenberg): Fahrbahn zwischen Möllendorffstraße und Vulkanstraße gesperrt, ggfs. auf Gehweg ausweichen, bis Ende August ',
+       text  => 'Herzbergstr.(Lichtenberg): Fahrbahn zwischen Möllendorffstraße und Vulkanstraße gesperrt, ggfs. auf Gehweg ausweichen (Radfahren erlaubt), bis Ende August ',
        type  => 'handicap',
        source_id => 'INKO_119665',
        data  => <<EOF,
 userdel	q3::inwork 15513,13539 15653,13542 15724,13544 15896,13547
+EOF
+     },
+     { from  => undef, # 
+       until => 1381831200, # 2013-10-15 12:00
+       text  => 'Robert-Siewert-Str.: Bauarbeiten zwischen Brehmstr. und Zwieseler Str., Fahrbahn gesperrt, teilweise auch Einschränkungen am Geh-/Radweg, bis Mitte Oktober 2013',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20130729.0645.387322.html',
+       data  => <<EOF,
+userdel	q4::inwork 19398,9833 19459,9842 19536,9853 19669,9876
+EOF
+     },
+     { from  => 1376604000, # 2013-08-16 00:00
+       until => 1376863199, # 2013-08-18 23:59
+       text  => 'Uhlandstr.: Veranstaltung (Uhlandstraßenfest) zwischen Kurfürstendamm und Lietzenburger Str., Straße gesperrt, 17. und 18. August 2013',
+       type  => 'gesperrt',
+       source_id => 'http://www.kudamm-int.de/strassenfest.html', # und http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20130812.1235.387804.html
+       data  => <<EOF,
+userdel	2::temp 5047,10381 5076,10658
+EOF
+     },
+     { from  => 1376193600, # 2013-08-11 06:00
+       until => 1387555200, # 2013-12-20 17:00
+       text  => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt (auch für Radfahrer und Fußgänger), 12.08.2013 06:00 Uhr bis 20.12.2013 17:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'IM_020145',
+       data  => <<EOF,
+userdel	2::inwork 17736,5441 17886,5587
 EOF
      },
     );

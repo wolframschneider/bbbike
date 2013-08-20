@@ -123,22 +123,22 @@ Dabendorf	R 13303,-18833
 Zossen	R 13431,-20775
 Wünsdorf-Waldstadt	R 15545,-26610
 Neuhof	R 16387,-29522
-Baruth (Mark)	R 18690,-38440
+Baruth (Mark)	R 18740,-38418
 Klasdorf	R 21020,-42586
 Golßen (Niederlausitz)	R 23193,-47694
-Drahnsdorf	R 23772,-54417
-Luckau-Uckro	R 25796,-61489
-Walddrehna	R 26513,-70163
+Drahnsdorf	R 23799,-54415
+Luckau-Uckro	R 25814,-61479
+Walddrehna	R 26571,-70171
 Doberlug-Kirchhain	R 23340,-86911
-Rückersdorf	R 24113,-93224
+Rückersdorf	R 24136,-93228
 Hohenleipisch	R 24321,-100627
 Finsterwalde (Elster)	R 33232,-85117
 Uebigau	R 5165,-91360
 Beutersitz	R 9517,-90747
 Schönborn	R 16901,-89222
 Ludwigsfelde	RC 1617,-12044
-Teltow	RC 3620,-2183
-Großbeeren	RC 2735,-6109
+Teltow	RC 3575,-2172
+Großbeeren	RC 2693,-6095
 Birkengrund	RC 1875,-10129
 Thyrow	RC 1071,-18033
 Trebbin	R -666,-21019
@@ -178,9 +178,9 @@ Prenzlau	R 39987,102437
 Neuruppin Rheinsberger Tor	R -30869,57510
 Gildenhall	R -28898,58134
 Altruppin	R -27559,58939
-Ahrensfelde	RB 21199,18617
-Ahrensfelde Friedhof	RC 21695,19691
-Ahrensfelde Nord	RC 22343,20983
+Ahrensfelde	RB 21218,18601
+Ahrensfelde Friedhof	RC 21748,19650
+Ahrensfelde Nord	RC 22394,20948
 Blumberg	RC 24307,22436
 Seefeld	RC 28729,23995
 Werneuchen	RC 32908,26088
@@ -323,7 +323,7 @@ Berlin-Staaken	RB -7506,14349
 Dallgow-Döberitz	RC -13131,14910
 Elstal	RC -17129,15268
 Wustermark	RC -21187,15667
-Buschow (Rathenow)	R -42628,19726
+Buschow	R -42628,19726
 Nennhausen	R -50618,20357
 Cottbus-Willmersdorf Nord	R 78673,-64386
 Peitz	R0 79946,-59208

@@ -1026,17 +1026,6 @@ userdel	q4 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-21
        undef,
        undef,
        undef,
-       {
-         'periodic' => 1,
-         'until' => 1376258399,
-         'text' => 'Treptower Hafenfest 9.8.2013 - 11.8.2013',
-         'from' => 1375912800,
-         'id' => 1010,
-         'data' => 'userdel	2::temp 14464,9927 14465,9900 14500,9856 14674,9764 14697,9726 14910,9643
-userdel	2::temp 14500,9856 14483,9843
-',
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
@@ -1457,16 +1446,8 @@ userdel	2::temp 14500,9856 14483,9843
        undef,
        undef,
        undef,
-       {
-         'periodic' => 1,
-         'until' => 1375646400,
-         'text' => 'Müllerstr. (Wedding) in beiden Richtungen zwischen Leopoldplatz und Seestr. Veranstaltung (Stadtteilfest Müllerstraße), Straße vollständig gesperrt (2. bis 4. August 2013)',
-         'from' => 1375358400,
-         'id' => 1431,
-         'data' => 'userdel	2::temp 6781,16026 6914,15908 6936,15888 7043,15793 7129,15717 7198,15656 7277,15586
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -1873,16 +1854,17 @@ Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am 
          'text' => 'Neuer Garten: Wege sind nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet',
          'from' => undef,
          'id' => 1809,
-         'data' => '	2::night -11615,853 -11715,959 -11818,993 -11871,1087 -12081,1168 -12094,1273 -12139,1325
+         'data' => '	2::night -11615,853 -11715,959 -11818,993 -11871,1087 -12081,1168 -12094,1273 -12133,1323
 	2::night -11650,590 -11603,721 -11615,853
-	2::night -11510,810 -11562,918 -11575,1031 -11537,1206 -11544,1262 -11580,1281 -11871,1185 -11990,1214 -12124,1359 -12141,1357
+	2::night -11510,810 -11562,918 -11575,1031 -11537,1206 -11544,1262 -11580,1281 -11871,1185 -11990,1214 -12124,1359 -12135,1358
 	2::night -11615,853 -11510,810 -11412,784 -11392,762 -11231,696
-(Ökonomieweg, Neuer Garten): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12528,-11 -12518,13 -12537,48 -12531,75 -12475,116 -12448,246 -12373,288 -12276,554 -12182,816 -12154,963 -12186,1118 -12148,1245 -12139,1325 -12141,1357 -12166,1384
-Neuer Garten, Westufer des Heiligen Sees: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12265,-418 -12263,-403 -12262,-362 -12328,-212 -12334,-114 -12321,9 -12278,134 -12156,193 -12103,315 -12143,353 -12115,409 -12068,384 -11990,790 -11950,781 -11887,837 -11856,950 -11818,993
+(Ökonomieweg, Neuer Garten): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12528,-11 -12518,13 -12537,48 -12531,75 -12475,116 -12448,246 -12373,288 -12276,554 -12205,732 -12182,788 -12154,963 -12180,1131 -12161,1211 -12141,1267 -12133,1323 -12135,1358 -12166,1384
+Neuer Garten, Westufer des Heiligen Sees: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12265,-418 -12263,-403 -12262,-362 -12328,-212 -12334,-114 -12321,9 -12293,110 -12222,186 -12227,219 -12177,283 -12115,409 -12068,384 -11990,790 -11950,781 -11887,837 -11856,950 -11818,993
 Neuer Garten (am Portierhaus) - Weinmeisterstr.: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet 	2::night -12334,-114 -12424,-107 -12453,-36 -12518,13 -12561,35
 Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -12332,585 -12276,554 -12115,409
 	2::night -12263,-403 -12280,-385 -12306,-378 -12357,-307 -12371,-284 -12396,-298
 	2::night -12449,-186 -12440,-181 -12449,-134 -12424,-107
+(Ökonomieweg - Leistikowstr.)	2::night -12205,732 -12266,731 -12297,738
 ',
          'type' => 'gesperrt'
        },
@@ -2589,20 +2571,7 @@ userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,1216
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_016416',
-         'until' => 1377985740,
-         'text' => 'Auerbachtunnel: Fahrbahn wegen Bauarbeiten gesperrt, bis Sommer 2013',
-         'from' => 1335462672,
-         'id' => 2182,
-         'data' => '#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20110303.0840.333719.html
-#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4355&options=4 (Endedatum bestätigt)
-#: next_check: 2013-08-31
-#: last_checked: 2013-02-02
-userdel	q4::inwork 425,8766 490,8716
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2691,18 +2660,7 @@ userdel	q4::inwork 425,8766 490,8716
        undef,
        undef,
        undef,
-       {
-         'periodic' => 1,
-         'until' => 1375660800,
-         'text' => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung, Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (bis 05.08.12, 02:00)',
-         'from' => 1375344000,
-         'id' => 2262,
-         'data' => 'userdel	2::temp 12360,12505 12362,12540 12364,12589
-userdel	2::temp 12891,12549 12869,12425
-userdel	2::temp 12635,12629 12596,12472
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2725,16 +2683,7 @@ userdel	2::temp 12635,12629 12596,12472
        undef,
        undef,
        undef,
-       {
-         'periodic' => 1,
-         'until' => 1376258399,
-         'text' => 'Berliner Allee (Weißensee): Veranstaltung (Blumenfest Weißensee), Fahrtrichtung gesperrt stadteinwärts vom Weißen See bis zum Antonplatz, 9.8.2013 bis 11.8.2013',
-         'from' => 1375912800,
-         'id' => 2275,
-         'data' => 'userdel	q4::temp; 14499,16341 14371,16252 14248,16202 14045,16120 14014,16106 13826,16026 13737,15994 13623,15954 13512,15909
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2776,7 +2725,24 @@ userdel	2::temp 12635,12629 12596,12472
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_019212',
+         'until' => 1380636000,
+         'text' => 'Kastanienallee (Prenzlauer Berg): Bauarbeiten zwischen Oderberger Str. und Schwedter Str., Fahrbahn ist manchmal gesperrt, bis Herbst 2013',
+         'from' => 1348076973,
+         'id' => 2308,
+         'data' => '#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/kastanienallee_pb.html
+#: note: nur die halbe Strecke ist gesperrt, deshalb q3
+#: note: am 2012-09-19 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
+#: note: am 2012-10-18 geprüft, Schranke, nur Straßenbahnen werden durchgelassen
+#: note: am 2012-10-31 am südlichen Ende vorbeigefahren, möglicherweise war heute die Schranke nicht aktiv
+#: note: am 2013-02-11 geprüft, keine Schranke, aber nur für "Linienverkehr frei"
+#: note: am 2013-04-11 geprüft: Radfahrer dürfen hier offiziell entlangfahren
+#: note: am 2013-08-14 geprüft: Fahrbahn war gesperrt
+userdel	q3::inwork 10530,14452 10723,14772
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        {
@@ -2807,7 +2773,7 @@ userdel	2::inwork 19968,16 19940,52
          'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende August 2013',
          'from' => 1330902000,
          'id' => 2316,
-         'data' => '#: osm_watch: way id="23243508" version="36"
+         'data' => '#: osm_watch: way id="23243508" version="37"
 userdel	q4::inwork; -1872,24336 -1790,24260 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 ',
          'type' => 'handicap'
@@ -2913,18 +2879,7 @@ userdel	2::night 14838,11410 14792,11391
        undef,
        undef,
        undef,
-       {
-         'periodic' => 1,
-         'until' => 1376258399,
-         'text' => 'Gauklerfest, Straßen am Schinkelplatz gesperrt, vom 1. August bis 11. August 2013',
-         'from' => 1375221600,
-         'id' => 2376,
-         'data' => 'userdel	2::temp 9994,12368 10008,12274 10010,12259 10035,12209
-userdel	2::temp 10008,12274 10058,12290 9996,12401
-userdel	2::temp 10091,12232 10058,12290
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3004,15 +2959,12 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        },
        undef,
        {
-         'source_id' => 'http://www.berlin.de/ba-pankow/verwaltung/tiefbau/nb_schulstr.html',
+         'source_id' => 'http://www.berlin.de/ba-pankow/verwaltung/tiefbau/nb_schulstr.html?date=20130814',
          'until' => 1412114400,
-         'text' => 'Neubau der Schulstraße, Bauabschnitt zwischen Duseke- und Grunowstraße',
+         'text' => 'Neubau der Schulstraße, Bauabschnitt zwischen Grunowstraße und Berliner Straße',
          'from' => undef,
          'id' => 2402,
-         'data' => '#: XXX: zweiter Bauabschnitt wird bis zur Berliner Str. gehen
-#: last_checked: 2013-06-04
-#: next_check: 2013-08-04
-userdel	q4::inwork 10473,18113 10545,18143 10582,18159
+         'data' => 'userdel	q4::inwork 10582,18159 10755,18231
 ',
          'type' => 'handicap'
        },
@@ -3114,7 +3066,7 @@ userdel	q2::inwork 5258,11285 5247,10992
          'from' => undef,
          'id' => 2425,
          'data' => '#: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-06-04
+#: last_checked: 2013-08-08
 #: check_frequency: 60d
 #: XXX Straße wird asphaltiert (siehe auch Eintrag in fragezeichen-orig)
 userdel	q4::inwork; 13288,7653 13245,7742 13226,7775 13150,7845 13103,7889
@@ -3212,13 +3164,13 @@ userdel	q4::inwork -3942,12559 -3941,12545 -3941,12376
        undef,
        {
          'source_id' => 'INKO_119210',
-         'until' => 1376229600,
-         'text' => 'Bergiusstr.: Baustelle, Fahrbahn gesperrt, Gehweg evtl. auch nicht passierbar, bis 11.08.2013 16:00 Uhr ',
+         'until' => 1377266400,
+         'text' => 'Bergiusstr.: Baustelle, Fahrbahn gesperrt, Gehweg evtl. auch nicht passierbar, bis 23.08.2013 16:00 Uhr ',
          'from' => 1371358800,
          'id' => 2451,
          'data' => '#: XXX nach den Bauarbeiten: Bergiusstr. führt direkt zur Grenzallee, ebenso neu: Ampel an der Anschlussstelle
 #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/download/A100_UmbauAusfahrtGrenzallee.pdf
-#: next_check: 2013-08-10
+#: next_check: 2013-08-23
 userdel	2::inwork 14193,6556 14144,6627 14193,6718 14153,6795
 ',
          'type' => 'gesperrt'
@@ -3228,7 +3180,7 @@ userdel	2::inwork 14193,6556 14144,6627 14193,6718 14153,6795
          'text' => 'Innstr.: Bauarbeiten, Fahrbahn gesperrt',
          'from' => undef,
          'id' => 2452,
-         'data' => '#: last_checked: 2013-07-20
+         'data' => '#: last_checked: 2013-08-08
 #: check_frequency: 30d
 userdel	q4::inwork 13301,8606 13262,8554 13217,8493
 ',
@@ -3331,25 +3283,37 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_020034',
-         'until' => 1375710600,
-         'text' => 'Neumannstr. (Pankow): Baustelle, Straße zwischen Thulestr. und Eschengraben gesperrt, bis 05.08.2013 ',
-         'from' => 1373460600,
-         'id' => 2465,
-         'data' => 'userdel	q4::inwork 11635,16616 11621,16749
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'INKO_119665',
          'until' => 1377525600,
-         'text' => 'Herzbergstr.(Lichtenberg): Fahrbahn zwischen Möllendorffstraße und Vulkanstraße gesperrt, ggfs. auf Gehweg ausweichen, bis Ende August ',
+         'text' => 'Herzbergstr.(Lichtenberg): Fahrbahn zwischen Möllendorffstraße und Vulkanstraße gesperrt, ggfs. auf Gehweg ausweichen (Radfahren erlaubt), bis Ende August ',
          'from' => 1374381000,
          'id' => 2466,
          'data' => 'userdel	q3::inwork 15513,13539 15653,13542 15724,13544 15896,13547
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20130729.0645.387322.html',
+         'until' => 1381831200,
+         'text' => 'Robert-Siewert-Str.: Bauarbeiten zwischen Brehmstr. und Zwieseler Str., Fahrbahn gesperrt, teilweise auch Einschränkungen am Geh-/Radweg, bis Mitte Oktober 2013',
+         'from' => undef,
+         'id' => 2467,
+         'data' => 'userdel	q4::inwork 19398,9833 19459,9842 19536,9853 19669,9876
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'IM_020145',
+         'until' => 1387555200,
+         'text' => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt (auch für Radfahrer und Fußgänger), 12.08.2013 06:00 Uhr bis 20.12.2013 17:00 Uhr',
+         'from' => 1376193600,
+         'id' => 2469,
+         'data' => 'userdel	2::inwork 17736,5441 17886,5587
+',
+         'type' => 'gesperrt'
        }
      
 );

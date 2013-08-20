@@ -111,7 +111,7 @@ Lietzenburger Str. - Rankestr.: bereits an der Ampel Bundesallee/Lietzenburger S
 weiter links auf Uferweg	CP; 6334,14756 5972,14820 5873,14847
 An der Wuhlheide - Wuhlewanderweg: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21470,5809 21569,5730 21596,5693 21602,5685 21744,5804
 #: XXX_prog: RL:ja, GPS:nein
-An der Wuhlheide - Alte Försterei: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21958,6248 22000,6245
+An der Wuhlheide - Alte Försterei: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21653,6037 21737,6068 21832,6129 21869,6190 21958,6248 22000,6245
 Wuhlewanderweg - Lindenstr.: zunächst linken Gehweg benutzen, an der Cardinalstr. oder Ampel Joachimstr. die Straßenseite wechseln	CP; 21744,5804 21602,5685 21706,5541
 Mariendorfer Damm - Am Teltowkanal: bereits an der Ullsteinstr. auf den linken Gehweg wechseln	PI; 9207,5185 9196,5272 9171,5263
 # REMOVED (-> routing_helper-orig) --- #: note: schlecht passierbarer Mittelstreifen --- Jerusalemer - Leipziger Str.: zunächst linken Gehweg benutzen, an der Ampel Jerusalemer Str. die Straßenseite wechseln	CP; 9892,11752 9896,11703 9898,11679 9981,11689
@@ -129,7 +129,7 @@ dem Schotterweg folgen	CP; 24210,37562 24193,37725 24208,37830
 Hauptstr.: bereits an der Gustav-Holzmann-Str. die Gehwegseite wechseln	PI; 16302,9865 16261,9925 16049,9749
 Hauptstr.: wegen Straßenbahntrasse zunächst auf der linken Gehwegseite weiterfahren und an der nächsten Ampel die Gehwegseite wechseln	CP; 16049,9749 16261,9925 16187,10033
 Rollbergstr. - Karl-Marx-Str.: zunächst auf dem linken Gehweg bleiben, an der Ampel Anzengruberstr. die Straßenseite wechseln	CP; 12528,8205 12714,8249 12689,8289
-zunächst auf dem linken Gehweg des Weißenseer Wegs bleiben, nächste Möglichkeit (Bernhard-Bästlein-Str. oder Landsberger Allee) zur Querung benutzen	CP; 15363,13531 15436,13780 15354,13998
+zunächst auf dem linken Gehweg des Weißenseer Wegs bleiben, nächste Möglichkeit (Bernhard-Bästlein-Str. oder Landsberger Allee) zur Querung benutzen	CP; 15374,13542 15436,13780 15354,13998
 #: note: längere Durchfahrt, deshalb ist CS; hier OK:
 #: XXX_prog: RL:ja, GPS:nein
 zur Müggelstr. Hausdurchfahrt benutzen	CS; 14856,11740 14837,11706
@@ -331,10 +331,10 @@ Genslerstr. - Am Wasserwerk: zum Überqueren der Landsberger Allee Fußgängerampel
 Landsberger Allee - Am Wasserwerk: zum Linksabbiegen entweder schon an der Siegfriedstr. die Straßenseite wechseln oder die Fußgängerampel hinter der Einmündung benutzen	PI; 16852,14412 16632,14390 16634,14373 16659,14192
 #: XXX_indoor ^^^
 Stubenrauchstr. - Wegerichstr.: Fußgängerübergang am Glockenblumenweg benutzen	CP; 16547,2680 16475,2586 16538,2543
-Mühlenstr. - Vinetastr.: Fußgängerampel auf der linken Seite zum Überqueren der Kreuzung nutzen	CP; 10862,17087 10927,17022 11267,17017
-Vinetastr. - Berliner Str.: Fußgängerampel auf der rechten Seite zum Überqueren der Kreuzung nutzen	CP; 11267,17017 10927,17022 10975,16896
-Vinetastr. - Brennerstr.: Fußgängerampel auf der rechten Seite zum Überqueren der Kreuzung nutzen	CP; 11267,17017 10927,17022 10656,17018
-Vinetastr. - Mühlenstr.: die Fahrradampel links benutzen	CP; 11267,17017 10927,17022 10862,17087
+Mühlenstr. - Vinetastr.: Fußgängerampel auf der linken Seite zum Überqueren der Kreuzung nutzen	CP; 10862,17087 10927,17022 11267,17027
+Vinetastr. - Berliner Str.: Fußgängerampel auf der rechten Seite zum Überqueren der Kreuzung nutzen	CP; 11267,17027 10927,17022 10975,16896
+Vinetastr. - Brennerstr.: Fußgängerampel auf der rechten Seite zum Überqueren der Kreuzung nutzen	CP; 11267,17027 10927,17022 10656,17018
+Vinetastr. - Mühlenstr.: die Fahrradampel links benutzen	CP; 11267,17027 10927,17022 10862,17087
 # REMOVED (alle Wege sind jetzt eingezeichnet) --- Admiralbrücke - Böckhstr.: Gehweg zur Böckhstr. benutzen	PI; 11177,9935 11170,9919 11163,9903 11200,9889
 # REMOVED (nicht nötig, direktes Überqueren möglich) --- Allee der Kosmonauten - Annenstr.: Zebrastreifen zum Überqueren der Straßenbahntrasse benutzen	CP; 20281,14361 20269,14256 20376,14244
 # REMOVED (nicht nötig, direktes Überqueren möglich) --- Annenstr. - Allee der Kosmonauten.: Zebrastreifen zum Überqueren der Straßenbahntrasse benutzen	CP; 20376,14244 20269,14256 20241,14016
@@ -499,6 +499,7 @@ Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichsh
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17736,5441
 Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17156,6235 17056,6133 17070,6115
 Indira-Gandhi-Str. - Orankeweg: bereits an der Fußgängerampel Gounodstr. auf den linken Gehweg wechseln	PI; 14597,15970 14609,15921 14720,15905
+#: note: wobei der Bordstein in Höhe Gleisdreieckpark relativ flach ist und man hier auch abbiegen könnte
 Köthener Brücke - Gleisdreieckpark: ab der Ampel den linken Gehweg benutzen	PI; 8430,10710 8362,10779 8357,10764
 Richtung Blockdammwegbrücke fahren	PI; 17729,8850 17754,8863 17760,8853
 Podbielskiallee - Pacelliallee: Fußgängerampel zum Linksabbiegen benutzen	CP; 2953,6743 2723,7029 2714,6857
@@ -523,3 +524,6 @@ Jüdenstr. - Falkenseer Platz: auf den linken Gehweg bis zum Falkenseer Platz fah
 Am Juliusturm - Jüdenstr.: bereits an der Ampel Hoher Steinweg auf den linken Gehweg wechseln	PI; -3150,14631 -3209,14662 -3239,14641
 Bahnhofstr. - Am Maria-Jankowski-Park: bereits an der Ampel Bahnhofstr./Lindenstr. auf den linken Gehweg wechseln	PI; 21954,5229 22043,5346 22087,5404 22018,5452
 Ausgeschildert als "Pieskower Weg"	CP; 13123,15244 13094,15196 13131,15175
+Apollofalterallee - Lindenschwärmerweg: spätestens an der Rapsweißlingstr. auf die Fahrbahn wechseln, an der Einmündung Lindenschwärmerweg fehlt eine Bordsteinabsenkung am Radweg	PI; 21249,11042 21308,11075 21294,11097
+Am Stadtpark: linken Gehweg benutzen, um Bordstein zu vermeiden	CP2; 15357,12813 15395,12762
+Hellersdorfer Weg: für die Weiterfahrt Richtung Norden empfiehlt es sich, an der Kreuzung Landsberger Chaussee die Fahrbahn und nicht den Gehweg zu benutzen	PI; 23159,16086 23175,16119 23193,16159 23263,16354

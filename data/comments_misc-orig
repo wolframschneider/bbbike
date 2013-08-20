@@ -106,12 +106,6 @@ Georg-Wilhelm-Str.: 3 Bodenschwellen, rechts vorbei fahren	CS 2708,10245 2691,10
 Carionweg: Kette	CS 3382,9223 3370,9215
 #: XXX_prog: doubled in gesperrt_orig, but needs implementation in Perl/Tk version
 Sesselmannweg: Kette	CS 3264,9261 3332,9181
-#: XXX_prog: should be superseded by a superiour BNP-like implementation vvv
-(Waitzstr. - Lewishamstr.): Bordsteine	CS 3764,10580 3739,10576
-Sybelstr.: Bordsteine	CS 3739,10576 3712,10566
-Apeldorner Weg: Bordsteine	CP; * 3848,8689 3868,8759
-Apeldorner Weg: Bordsteine	CP2; 3952,8980 3868,8759
-#: XXX_prog: ^^^
 Apeldorner Weg: kein Straßenname ausgeschildert; Weg verläuft westl. direkt an der BAB (104)	CS 3848,8689 3868,8759 3952,8980
 #: XXX_prog: should be superseded by a superiour BNP-like implementation
 (Wallenbergstr. - Rudolstätter Str.): Bordsteine	CP; * 4029,8482 4139,8485
@@ -138,7 +132,7 @@ Am Petersberg: Privatstraße	CS 990,5581 825,5420
 (Alt-Lankwitz - Kamenzer Damm): Rampe für Radfahrer	CS 8026,3298 8036,3253
 als Puschkinallee 6c, 6d ausgeschildert	CP2; 13995,9834 14076,10011
 Durch Toreinfahrt (immer offen)	CP2; 14043,10928 14107,10911
-als Sackgasse ausgeschildert	CP2; 14672,10760 14564,10792
+als Sackgasse ausgeschildert	CP2; 14672,10760 14566,10783
 Radfahren durch den Park erlaubt	CS 6534,1702 6673,1748 6844,1813
 #: XXX_indoor: vielleicht nach comments_kfzverkehr verschieben?
 Kein MIV-Durchgangsverkehr, nur Anlieger und Linienverkehr	CS -13036,342 -12992,244
@@ -189,7 +183,7 @@ Freienbrinker Saum: die Straße führt am Waldrand entlang, in der Dunkelheit ist 
 (Deutschhofer Allee - Unter den Birken): in der Dämmerung ist mit Wildschweinen zu rechnen	CS 21940,8158 22077,8104 22199,8028 22600,7711
 Petriplatz: zusätzliche Ausschilderung "Zur Brüderstr."	CS; 10460,11979 10418,12016
 DB-Gelände: bei starken Regenfällen regelmäßig eine große und tiefe Pfütze, die die Durchfahrt erschwert	CS 14107,10911 14043,10928
-Straße 77: die Straße ist nicht ausgeschildert	CS 15402,12390 15315,12360
+Straße 77: die Straße ist nicht ausgeschildert	CS 15402,12390 15320,12375
 # REMOVED (das gilt für das gesamte Märchenland, deshalb Kommentar entfernt) --- #: by: antje weiss dorn: --- Drosselbartweg: Radfahren erlaubt	CS 13899,18833 13909,18835 13953,18842 13967,18842 13993,18833 14061,18791 14206,18700 14218,18674 14222,18666
 (Seeburger Str./Seecktstr. - Bullengraben): Zufahrt über Supermarktparkplatz (Lidl)	CS; -4299,13304 -4372,13384
 #: by: Ralf Henze vvv
@@ -202,7 +196,7 @@ Zur Pariser Str.: Hausdurchfahrt benutzen	CS; 5464,9914 5416,9928
 #: note: "unechter" Kreisverkehr, auf der südlichen Fahrbahn kaum merkbar, auf der nördlichen aber schon
 Kreisverkehr	Roundabout 11393,10390
 # 
-#: section: ignorieren vvv
+#: ignore vvv
 #: XXX_prog: it's not clear what to do with this in the routelist (currently shown) or while rendering (currently ignored in normal perl/tk mode) vvv
 Kreisverkehr	Roundabout 4818,2279 4824,2266 4813,2256 4803,2257 4796,2271 4803,2280 4818,2279
 Kreisverkehr	Roundabout 19414,15132
@@ -229,7 +223,7 @@ Kreisverkehr	Roundabout 13300,-1252
 #: note: mit benutzungspflichtigen Radwegen hier
 Kreisverkehr	Roundabout 15949,-5422
 #: XXX_prog ^^^
-#: section ^^^
+#: ignore ^^^
 #
 ######################################################################
 # cul-de-sac
@@ -243,7 +237,7 @@ Kreisverkehr	Roundabout 15949,-5422
 # Zum einen kann überprüft werden, ob eine Sackgasse tatsächlich eine
 # Sackgasse ist oder nur ein Datenfehler.
 #
-#: section: ignorieren vvv
+#: ignore vvv
 	culdesac 19748,8517
 	culdesac_pseudo 19577,8438
 	culdesac_pseudo 19526,8458
@@ -295,7 +289,9 @@ Weiterfahrt durch die Kleingartenanlage möglich, allerdings nur tagsüber während
 	culdesac_pseudo 16587,10613
 	culdesac_pseudo 15433,12686
 	culdesac_pseudo 15395,12762
+	culdesac_pseudo 15454,12519
 	culdesac_pseudo 14285,12190
+	culdesac_pseudo 15320,12375
 	culdesac 16541,12064
 	culdesac 17230,12481
 	culdesac 18766,13257
@@ -696,6 +692,7 @@ Zugang zum Bad	culdesac_pseudo 7306,13418
 	culdesac_pseudo 14599,10039
 	culdesac_pseudo 15181,10154
 	culdesac_pseudo 15044,10297
+	culdesac_pseudo 14977,10348
 	culdesac_pseudo 14888,10385
 	culdesac_pseudo 15513,10298
 	culdesac_pseudo 15334,10528
@@ -757,9 +754,9 @@ Zugang zum Bad	culdesac_pseudo 7306,13418
 	culdesac_pseudo 13958,8106
 	culdesac_pseudo 15384,15884
 	culdesac_pseudo 15313,15848
-	culdesac 16471,19825
+	culdesac 16472,19818
 	culdesac 16550,19829
-	culdesac 16633,20174
+	culdesac_pseudo 16633,20174
 	culdesac_pseudo 16384,19678
 	culdesac_pseudo 16161,18687
 	culdesac 24938,13811
@@ -907,7 +904,7 @@ Zugang zum Bad	culdesac_pseudo 7306,13418
 	culdesac_pseudo 5635,18736
 	culdesac 5744,18449
 	culdesac_pseudo 5713,18739
-	culdesac 10038,15418
+	culdesac_pseudo 10038,15418
 	culdesac_pseudo 7062,17500
 	culdesac_pseudo 3077,22234
 	culdesac_pseudo 2319,22264
@@ -1163,7 +1160,19 @@ Zugang zum Bad	culdesac_pseudo 7306,13418
 	culdesac_pseudo 19842,13765
 	culdesac_pseudo 21211,15009
 	culdesac_pseudo 21574,16547
-#: section ^^^
+	culdesac 21187,11132
+	culdesac_pseudo 21326,11122
+	culdesac 21396,11242
+	culdesac_pseudo 13733,18161
+	culdesac_pseudo 13751,18180
+	culdesac_pseudo 12911,15865
+#: note: man kann via Treppe zur Landsberger Allee
+	culdesac_pseudo 18938,14768
+	culdesac_pseudo 20693,15144
+	culdesac 22568,17956
+	culdesac 22670,17916
+	culdesac 18445,4035
+#: ignore ^^^
 ######################################################################
 # busroute
 #
@@ -1171,7 +1180,7 @@ Zugang zum Bad	culdesac_pseudo 7306,13418
 # übergeordneten Straßen befinden. Das könnte z.B. für die
 # Winteroptimierung verwendet werden.
 #
-#: section: ignorieren vvv
+#: ignore vvv
 Bus 184	busroute_N 7949,7607 8263,7611 8267,7572 8302,7508 8376,7440 8386,7430 8429,7403 8479,7389 8604,7381 8715,7384 8806,7382 8879,7378 8971,7359 9051,7340 9107,7297 9242,7286
 Bus 106, Bus 204	busroute_N 7578,8358 7494,8364 7497,8168
 Bus 140	busroute_N 8969,9320 9000,9509 9044,9753
@@ -1359,18 +1368,18 @@ Bus X69	busroute_N 22324,6397 22539,6258
 Bus 167, ...	busroute_N 23435,4179 23655,4205 23753,4218 23879,4233 24135,4264 24181,4270
 Bus 190	busroute_N 21025,7349 21341,7487 21475,7500
 Bus 190	busroute_N 21175,9989 20947,9999 20703,10004 20706,10047 20708,10144 20711,10230 20713,10293 20716,10434 21017,10423 21288,10431
-Bus 398	busroute_N 21135,10995 21249,11042 21385,11119 21420,11150 21537,11256 21624,11379
+Bus 398	busroute_N 21135,10995 21249,11042 21308,11075 21354,11101 21385,11119 21420,11150 21535,11267 21624,11379
 Bus 108	busroute_N 21124,11462 20959,11465 20828,11466 20641,11480 20623,11481 20525,11488 20549,11659 20575,11698
 Bus 192	busroute_N 18597,12162 19086,12134 19143,12078 19142,11804 19135,11713 19121,11681 19035,11671 19005,11705 19005,11767 19004,11780
 Bus 108, Bus 192	busroute_N 19389,11761 19142,11804
 Bus 108	busroute_N 19142,11804 19064,11805 18853,11780
 Bus 192	busroute_N 20656,12415 20629,12177 20627,12162 20790,12146
 Bus 191	busroute_N 19687,14469 19729,14564 19777,14673 19800,14726 19873,14884 19902,14945 20010,15142 20117,15282 20286,15382 20260,15434 20222,15519
-Bus 195	busroute_N 21599,15213 21718,15198 21809,15186 21903,15174 22059,15153 22343,15115 22419,15127 22449,15127 22605,15111 22726,15082 22886,15095
+Bus 195	busroute_N 21599,15213 21718,15198 21809,15186 21903,15174 22059,15153 22326,15116 22419,15127 22449,15127 22605,15111 22726,15082 22899,15073
 Bus 191, ...	busroute_N 20222,15519 19962,15343 19824,15347 19768,15361 19681,15405
 Bus X54	busroute_N 18365,17382 18428,17497 18635,17649 18556,17752 18482,17847 18412,17920 18304,18071 18242,18146 18205,18256
 Bus 256	busroute_N 17003,19035 16999,18930 17044,18859 17109,18772 17117,18761 17260,18579 17502,18286 17574,18196 17678,18171 17768,18160 17843,18078
-Bus 256	busroute_N 18009,18946 18061,19097 18066,19143 18074,19227 18109,19352 18544,19722 18690,19830 18771,19892 18821,19936 18945,20042 18811,19640 18728,19666 18643,19692 18544,19722
+Bus 256	busroute_N 18009,18946 18061,19097 18066,19143 18074,19227 18109,19352 18544,19722 18690,19830 18771,19892 18821,19936 18955,20050 18816,19648 18730,19672 18644,19695 18544,19722
 Bus 195	busroute_N 24968,15307 24794,15270 24651,15239 24451,15181 24281,15138 24226,15121 24232,15060 24215,15057 24139,15046 24063,15035 23960,15021
 Bus X69	busroute_N 28225,1009 28348,1147 28488,1307 28545,1373 28591,1421 28632,1469 28817,1679 28904,1781 28978,1864 29077,1973 29115,2015 29414,2373
 Bus 122, Bus 155	busroute_N 7672,19869 7556,19882 7333,19911 7209,19928 7205,20047 7201,20161 7231,20266 7321,20426 7577,20450 7711,20463 7809,20420 7900,20378
@@ -1384,7 +1393,7 @@ Bus 322	busroute_N 4810,21730 4655,21939 4613,21997 4581,22106 4456,22278
 Bus M85	busroute_N 8098,13419 8102,13304 8106,13130 8110,13042
 Bus 347	busroute_N 13541,11355 13496,11384 13427,11431 13473,11456 13496,11384
 Bus 248	busroute_N 8642,7876 8553,7795 8512,7757 8465,7699 8378,7623 8263,7611
-#: section: ^^^
+#: ignore ^^^
 ######################################################################
 #: by: Dagmar Schilka
 (Spießweg - Hermsdorfer Str.): Rad- und Fußweg	CS 4827,20862 4644,20952
@@ -1648,11 +1657,11 @@ Kolonie Fröhliche Eintracht	CP2; 10012,5231 10012,5210
 Straße 188: Anlieger frei	CS 16048,1091 15935,1043
 Straße 181: Anlieger frei	CS 16991,-81 16989,-147 17036,-421 17065,-589 17076,-644
 Nikolaus-Ehlen-Weg: Privatstraße	CS 17308,-36 17215,94 17176,90
-#: section: ignorieren vvv
+#: ignore vvv
 #: XXX_indoor: würde besser unter sehenswuerdigkeit passen
 Gaslaternen-Freilichtmuseum Berlin	CS 5903,11683 5835,11768 5858,11863 5900,11913
-#: section ^^^
-#: section: ignorieren vvv
+#: ignore ^^^
+#: ignore vvv
 Suarezstr.: Wochenmarkt Do 9.00-15.00, aber anscheinend nur auf dem Bürgersteig	CS 2921,10928 2845,10840
 Mierendorffplatz: Wochenmarkt Mi+Sa, 8.00-13.00, zwar auf der Fahrbahn, aber der Radweg scheint weiterhin befahrbar zu sein	CS 3534,13098 3645,13189
 Fehrbelliner Platz: Wochenmarkt Di+Do, 11.00-16.00, sowie Kunst- und Trödelmarkt Sa+So 10.00-16.00, nur auf der Parkplatzfläche	CS 4339,9224
@@ -1667,7 +1676,8 @@ Schillingstr.: Wochenmarkt, Di,Do,Fr, 09.00-17.00, Gehweg ist betroffen, man kan
 Ackerstr.: Wochenmarkt, Do, 11.00-18.00, anscheinend nur Halteverbot	CS; 9048,14681 9197,14562
 Jagowstr.: Wochenmarkt, Mi+Sa, 08.00-13.00, anscheinend nur Halteverbot	CS; 5601,12756 5543,12664
 Koppenstr.: Wochenmarkt Di+Do 10.00-18.00, die Farbahn ist trotzdem befahrbar	CS 12635,12629 12596,12472
-#: section ^^^
+Nettelbeckplatz: Wochenmarkt Di+Fr, 11-18 Uhr, aber anscheinend nur im "Rondellbereich" und somit keine Beeinträchtigung für Radfahrer	CS 7891,15417 7989,15412 8024,15401
+#: ignore ^^^
 (Kanzlerweg - Schreiberring): Privatweg	CS 8839,8168 8861,8242
 (Kanzlerweg - Schreiberring): Tordurchfahrt	CP2; 8861,8242 8839,8168
 (Rumeyplan - Kanzlerweg): Privatweg	CS 8895,7797 8839,7904
@@ -1821,12 +1831,12 @@ unter der S-Bahnbrücke	CP2; 24650,6034 24647,5981
 ausgeschildert als Weydemeyerstr. 3-18	CP2; 11805,12760 11818,12785
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file?y=2013
 #: XXX evtl. wird zur Benennung ausgeschildert werden
-#: last_checked: 2013-07-08
-#: next_check: 2013-08-01 (Benennung wird wirksam)
+#: last_checked: 2013-08-08
+#: check_frequency: 30d
 Fromet-und-Moses-Mendelssohn-Platz: nicht ausgeschildert	CS 9797,10771 9733,10827 9682,10836 9666,10848
 Hauptstr., linker Gehweg: an der Ampel Hauptstr./Hildegard-Marcusson-Str. auf die linke Seite wechseln	CP2; 16004,10204 16018,10212
 (Otisstr. - Wackerweg): Privatgelände	CP2; 3680,18913 3753,18889
-#: section: ignorieren
+#: ignore
 Torstr./Gartenstr.: Überquerungshilfe existiert	CS 9668,13629
 ausgeschildert Kolonie Grünlandtal	CP2; 3604,20603 3852,20415
 Friedrichsgracht: nicht ausgeschildert	CP2; 10109,12238 10207,12055
@@ -1847,3 +1857,11 @@ Straße 357: Privatstraße	CS -6046,14253 -6053,14278 -6064,14321 -6091,14391 -614
 (Weg an der Havel - Stabholzgarten): Bahnunterführung	CS -3494,13980 -3462,14041
 Kolonie Golfplatz	CP2; 797,12659 969,13290
 Am Rosengarten: nicht ausgeschildert	CP2; 18654,12255 18707,12225
+Weg ist schwierig zu erkennen	CP2; 18445,9887 18436,9842
+#: url: http://www.wuhlheide.de/de/programm/
+#: note: Zeitverlust ca. 2 Minuten
+An einigen Tagen im Sommer ist das Eichgestell vor der Freilichtbühne wegen Veranstaltungen gesperrt, in diesem Fall die Freilichtbühne nördlich umfahren	CS 19995,6406 20106,6357 20200,6321
+Am Bahnhof Wuhlheide: nicht ausgeschildert	CP2; 20635,7119 20654,7136
+Lindenschwärmerweg: Privatstraße	CS 21308,11075 21294,11097 21187,11132
+Fechinger Weg: Privatstraße	CS 21409,11941 21411,11863 21456,11825
+Wischbergweg: im Kleingartenbereich nicht ausgeschildert	CP2; 13617,18045 13733,18161
