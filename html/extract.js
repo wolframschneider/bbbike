@@ -43,17 +43,9 @@ var config = {
     "color_normal": "white",
     "color_error": "red",
 
-    // display a box at startup
-    // see function select_city()
-    "default_box": false,
-
-    /* ??? */
-    "enable_polygon": true,
     // ??
     "polygon_rotate": true,
-    // ??
-    "simple": true,
-    // ???
+
     // not used yet
     "dummy": ""
 };
@@ -66,11 +58,11 @@ var state = {
 // Initialise the 'map' object
 var map;
 
-// Sic! IE8 has no console.log()
-var console;
-
 // polygon & rectangle variables
 var vectors;
+
+// Sic! IE8 has no console.log()
+var console;
 
 ////////////////////////////////////////////////////////////////////////////////
 // main function after page load
@@ -480,9 +472,6 @@ function extract_init(opt) {
         var feature = new OpenLayers.Feature.Vector(bounds.toGeometry());
 
         vectors.addFeatures(feature);
-        if (!config.enable_polygon) {
-            transform.setFeature(feature); // hidden rectangle
-        }
     }
 
 
@@ -580,7 +569,7 @@ function plot_default_box() {
 
 function plot_default_box_menu_on() {
     polygon_menu(true); // display poygon menu
-    polygon_update(); // rotate by default
+    polygon_update();
     // switch menu
     $("#drag_box_default").hide();
     $("#drag_box_select").show();
