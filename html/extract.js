@@ -466,9 +466,15 @@ function extract_init(opt) {
         transform.deactivate();
         vectors.destroyFeatures();
 
+        // reset hidden variables
         $("#coords").attr("value", "");
         $("#as").attr("value", "");
         $("#pg").attr("value", "");
+
+        // reset visible skm / filesize / time estimates
+        $("#square_km_small").html("");
+        $("#size_small").html("");
+        $("#time_small").html("");
 
         state.polygon.area = 0;
         state.box = 0;
