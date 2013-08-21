@@ -901,7 +901,7 @@ function updatePermalink() {
 }
 
 function show_skm(skm, filesize) {
-    if ($("#square_km")) {
+    if ($("#square_km").length) {
         var html = "area covers " + large_int(skm) + " square km";
         if (config.show_filesize) {
             html += filesize.html;
