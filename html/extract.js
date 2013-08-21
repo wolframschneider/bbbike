@@ -53,7 +53,7 @@ var config = {
 // global variables
 var state = {
     box: 0,
-    // 0: none, 1: box, 2: polygon
+    /* 0: none, 1: box, 2: polygon, 3: polygon back or permalink */
     polygon: {}
 };
 
@@ -130,6 +130,8 @@ function plot_polygon_back() {
 
     state.validateControls();
     plot_default_box_menu_on();
+
+    state.box = 3;
 }
 
 function center_city(sw_lng, sw_lat, ne_lng, ne_lat) {
@@ -255,7 +257,7 @@ function string2coords(coords) {
 /* create a polygon based on a points list, which can be added to a vector */
 
 function plot_polygon(poly) {
-    debug("polygon length: " + poly.length);
+    debug("plot polygon, length: " + poly.length);
 
     var epsg4326 = new OpenLayers.Projection("EPSG:4326");
     var points = [];
@@ -474,9 +476,9 @@ function extract_init(opt) {
 
     function drawBox(bounds) {
         debug("drawBox");
+        state.box = 1;
 
         var feature = new OpenLayers.Feature.Vector(bounds.toGeometry());
-
         vectors.addFeatures(feature);
     }
 
@@ -571,6 +573,7 @@ function plot_default_box() {
     vectors.addFeatures(feature);
 
     plot_default_box_menu_on();
+    state.box = 1;
 }
 
 function plot_default_box_menu_on() {
@@ -704,7 +707,7 @@ function debug(text, id) {
     if (config.debug < 1) return;
 
     // log to JavaScript console
-    if (console && console.log) console.log("BBBike extract: " + text);
+    if (console && console.log) console.log("BBBike extract: " + state.box + " " + text);
 
     // no debug on html page
     if (config.debug <= 1) return;
@@ -1167,6 +1170,7 @@ function polygon_init() {
 
     function serialize(obj) {
         debug("serialize");
+        state.box = 2;
 
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
 
