@@ -238,6 +238,7 @@ function init_map_resize() {
     $(window).resize(function () {
         if (resize) clearTimeout(resize);
         resize = setTimeout(function () {
+            debug("resize event");
             setMapHeight();
         }, 300);
     });
@@ -1191,7 +1192,7 @@ function polygon_init() {
 
         var vec = feature.geometry.getVertices();
 
-        debug("p len: " + vec.length);
+        debug("serialize polygon len: " + vec.length);
         // Calculate the approximate area of the polygon were it projected onto the earth.
         var polygon_area = feature.geometry.getGeodesicArea();
         state.polygon.area = polygon_area;
