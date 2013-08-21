@@ -959,13 +959,16 @@ function square_km(x1, y1, x2, y2) { // SW x NE
 }
 
 function validateControlsAjax() {
+    debug("validateControlsAjax state.box: " + state.box);
+    if (state.box == 0) return;
+
     var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
 
     var skm = square_km($("#sw_lat").val(), $("#sw_lng").val(), $("#ne_lat").val(), $("#ne_lng").val());
     var format = $("select[name=format] option:selected").val();
 
     if (!state.polygon.area && $("#pg").val()) {
-        debug("found pg: " + $("#pg").val() + " as: " + $("#as").val());
+        debug("validateControlsAjax found polygon: " + $("#pg").val() + " as: " + $("#as").val());
     }
 
     //
