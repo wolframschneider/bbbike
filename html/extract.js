@@ -453,7 +453,7 @@ function extract_init(opt) {
         $("#sw_lat").val(v(bounds.bottom));
         $("#ne_lng").val(v(bounds.right));
         $("#ne_lat").val(v(bounds.top));
-        debug("set bounds: " + bounds.left + "," + bounds.bottom + " " + bound.right + "," + bounds.top)
+        debug("set bounds: " + bounds.left + "," + bounds.bottom + " " + bounds.right + "," + bounds.top)
 
         mapnikSizeChanged();
     }
