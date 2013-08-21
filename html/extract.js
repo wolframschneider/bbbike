@@ -378,6 +378,8 @@ function extract_init(opt) {
         transform.events.register("transformcomplete", transform, transformComplete);
 
         map.addControl(transform);
+
+        // moving the map top/bottom/left/right
         map.events.register("moveend", map, mapMoved);
 
         $("#ne_lat").change(boundsChanged);
@@ -420,10 +422,13 @@ function extract_init(opt) {
     }
 
     function mapMoved() {
-        // debug("mapMoved");
-        setBounds(map.getExtent());
-        validateControls();
+        debug("mapMoved");
+        if (state.box == 0) {
+            setBounds(map.getExtent());
+            validateControls();
+        }
     }
+
     state.mapMoved = mapMoved;
     state.clearBox = clearBox;
     state.setBounds = setBounds;
@@ -432,7 +437,7 @@ function extract_init(opt) {
 
     function setBounds(bounds) {
         debug("setBounds");
-
+        // debug(arguments.callee.caller);
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
         var decimals = Math.pow(10, Math.floor(map.getZoom() / 3));
 
