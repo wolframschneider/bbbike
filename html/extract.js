@@ -45,13 +45,14 @@ var config = {
 
     // ??
     "polygon_rotate": true,
-
+    
     // not used yet
     "dummy": ""
 };
 
 // global variables
 var state = {
+    box: 0, // 0: none, 1: box, 2: polygon
     polygon: {}
 };
 
@@ -426,6 +427,8 @@ function extract_init(opt) {
     // set values ind show lnglat box
 
     function setBounds(bounds) {
+        debug("setBounds");
+        
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
         var decimals = Math.pow(10, Math.floor(map.getZoom() / 3));
 
@@ -449,6 +452,7 @@ function extract_init(opt) {
         $("#sw_lat").val(v(bounds.bottom));
         $("#ne_lng").val(v(bounds.right));
         $("#ne_lat").val(v(bounds.top));
+        debug("set bounds: " + bounds.left + "," + bounds.bottom + " " + bound.right + "," + bounds.top)
 
         mapnikSizeChanged();
     }
@@ -464,6 +468,7 @@ function extract_init(opt) {
         $("#pg").attr("value", "");
 
         state.polygon.area = 0;
+        state.box = 0;
     }
 
     function drawBox(bounds) {
