@@ -45,14 +45,15 @@ var config = {
 
     // ??
     "polygon_rotate": true,
-    
+
     // not used yet
     "dummy": ""
 };
 
 // global variables
 var state = {
-    box: 0, // 0: none, 1: box, 2: polygon
+    box: 0,
+    // 0: none, 1: box, 2: polygon
     polygon: {}
 };
 
@@ -428,7 +429,7 @@ function extract_init(opt) {
 
     function setBounds(bounds) {
         debug("setBounds");
-        
+
         var epsg4326 = new OpenLayers.Projection("EPSG:4326");
         var decimals = Math.pow(10, Math.floor(map.getZoom() / 3));
 
