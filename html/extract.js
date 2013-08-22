@@ -27,6 +27,10 @@ var config = {
         "default": 768,
         "obf.zip": 250,
         "navit.zip": 512,
+        "garmin-bbbike.zip": 650,
+        "garmin-osm.zip": 768,
+        "garmin-cycle.zip": 650,
+        "garmin-leisure.zip": 650,
         "mapsforge-osm.zip": 100
     },
 
@@ -436,6 +440,9 @@ function clearBox() {
     $("#size_small").html("");
     $("#time_small").html("");
 
+    // reset warnings
+    $("#export_osm_too_large").hide();
+
     state.polygon.area = 0;
     state.box = 0;
 }
@@ -564,12 +571,12 @@ function plot_default_box() {
     var polygon = rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
     var feature = plot_polygon(polygon);
     vectors.addFeatures(feature);
-    
+
     setBounds(feature.geometry.bounds);
     plot_default_box_menu_on();
     // setBounds(map.getExtent());
 }
-        
+
 function plot_default_box_menu_on() {
     polygon_menu(true); // display poygon menu
     polygon_update();
@@ -857,7 +864,7 @@ function select_city(name) {
             "ne": [13.902, 52.705]
         },
 
-        /*
+/*
         "SanFrancisco": {
             "sw": [-122.9, 37.2],
             "ne": [-121.7, 37.9]
