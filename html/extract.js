@@ -114,6 +114,8 @@ function move_map_to_city() {
 }
 
 function plot_polygon_back() {
+    state.box = 3;
+
     // setTimeout(function () {
     var sw_lng = $("#sw_lng").val();
     var sw_lat = $("#sw_lat").val();
@@ -135,7 +137,6 @@ function plot_polygon_back() {
     validateControls();
     plot_default_box_menu_on();
 
-    state.box = 3;
 }
 
 function center_city(sw_lng, sw_lat, ne_lng, ne_lat) {
