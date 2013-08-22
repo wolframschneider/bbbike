@@ -386,29 +386,9 @@ function extract_init(opt) {
     $("#sw_lng").change(boundsChanged);
     $("#ne_lng").change(boundsChanged);
     $("#sw_lat").change(boundsChanged);
-
     $("#city").change(updatePermalink);
 
-    // $("#drag_box").click(startDrag);
     setBounds(map.getExtent());
-
-    // state.mapMoved = mapMoved;
-    // set values ind show lnglat box
-/*
-    // wait 0.2 seconds before starting validate
-    var _validate_timeout;
-
-    var validateControls = function () {
-            if (_validate_timeout) clearTimeout(_validate_timeout);
-            _validate_timeout = setTimeout(function () {
-                validateControls();
-            }, 200);
-
-        }
-    state.validateControls = validateControls;
-    */
-
-
 
     if ($("select[name=format]").length) {
         $("select[name=format]").change(function () {
