@@ -2859,7 +2859,7 @@ EOF
        text  => 'K 6424; (Dahlwitzer Landstr.-Münchehofe-B 1); OD Münchehofe Straßenausbau Vollsperrung 12.09.2005-31.12.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 28619,9588 26851,9005
+userdel	q4 28619,9588 26928,9004
 EOF
      },
      { from  => 1127772000, # 2005-09-27 00:00
@@ -9095,7 +9095,7 @@ EOF
        text  => 'L 033 zw. Kreuz. Hönow und Krz. Landsberger Ch./ Stendaler Str. Deckeninstandsetzung Vollsperrung 06.08.2007-17.08.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 25506,15585 25866,15543 25955,15531 26071,15470
+userdel	2::inwork 25528,15587 25866,15543 25955,15531 26071,15470
 EOF
      },
      { from  => 1184709600, # 2007-07-18 00:00
@@ -9211,7 +9211,7 @@ EOF
        text  => 'L 033 zw. Kreuz. Hönow und Krz. Landsberger Ch./ Stendaler Str. Deckeninstandsetzung Vollsperrung 06.08.2007-17.08.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 26336,15473 26175,15461 26071,15470 25955,15531 25866,15543 25506,15585 25342,15609 25007,15650 23893,15893
+userdel	2::inwork 26336,15473 26175,15461 26071,15470 25955,15531 25866,15543 25528,15587 25007,15650 23992,15894 23965,15894 23895,15904
 EOF
      },
      { from  => 1186092000, # 2007-08-03 00:00
@@ -18212,7 +18212,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20100720.1055.303592.html',
        data  => <<EOF,
-userdel	q4::inwork 22605,15111 22449,15127 22419,15127 22326,15116 22059,15153
+userdel	q4::inwork 22605,15111 22578,15114 22449,15127 22419,15127 22326,15116 22059,15153
 EOF
      },
      { from  => 1281128604, # 2010-08-08 00:00 1281218400
@@ -20723,7 +20723,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120914.1355.375249.html',
        data  => <<EOF,
-userdel	2::inwork 18286,11275 18409,11348 18477,11388 18619,11463
+userdel	2::inwork 18286,11275 18421,11344 18477,11388 18619,11463
 EOF
      },
      { from  => 1347508800, # 2012-09-13 06:00
@@ -21475,6 +21475,8 @@ EOF
        data  => <<EOF,
 #: XXX nach den Bauarbeiten: Bergiusstr. führt direkt zur Grenzallee, ebenso neu: Ampel an der Anschlussstelle
 #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/download/A100_UmbauAusfahrtGrenzallee.pdf
+#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1308/nachricht5044.html
+#: prio: #A
 #: next_check: 2013-08-23
 userdel	2::inwork 14193,6556 14144,6627 14193,6718 14153,6795
 EOF
@@ -21594,19 +21596,23 @@ EOF
        text  => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
        type  => 'gesperrt',
        data  => <<EOF,
-#: osm_watch: way id="80221295" version="17" brb
+#: XXX bei osm jetzt mit bicycle=yes getaggt vvv
+#: add_fragezeichen: Wurde das Verbot für Radfahrer mittlerweile wieder aufgehoben? vvv
+#: osm_watch: way id="80221295" version="18" brb
 	2 19158,-4083 19189,-4062 19454,-3956 19524,-3843 19528,-3767 19479,-3690
-#: osm_watch: way id="83106248" version="13" brb
+#: osm_watch: way id="83106248" version="14" brb
 	2 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
-#: osm_watch: way id="60482011" version="24" brb
-#: osm_watch: way id="192153919" version="1" brb
-#: osm_watch: way id="192153925" version="4" brb
-#: osm_watch: way id="136089841" version="17" brb
+#: osm_watch: way id="60482011" version="25" brb
+#: osm_watch: way id="192153919" version="2" brb
+#: osm_watch: way id="192153925" version="5" brb
+#: osm_watch: way id="136089841" version="18" brb
 	2 19479,-3690 19443,-3540 19558,-3155 19626,-3031 19808,-2953 19909,-2863 19941,-2759 19909,-2677 19575,-2358 19346,-2337 19236,-2298 19131,-2145 18866,-1674 18936,-1581
 	2 19131,-2145 19198,-2118
 	2 19909,-2863 19996,-2880
 #: note: hier auch, sehr wahrscheinlich
 	2 19601,-3714 19539,-3810 19460,-3818 19282,-3928
+#: add_fragezeichen ^^^
+#: XXX ^^^
 EOF
      },
      { from  => undef,
