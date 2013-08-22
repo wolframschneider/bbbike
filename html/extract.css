@@ -188,8 +188,12 @@ a.tools-helptrigger:hover img, a.tools-helptrigger-small:hover img {
 }
 
 /* disabled by default */
+/*
 .lnglatbox { display: none; }
 .lnglatbox_toggle { display: inline; }
+*/
+.lnglatbox { display: inline; }
+.lnglatbox_toggle { display: none; }
 
 td { white-space: nowrap; }
 

@@ -350,151 +350,51 @@ function extract_init(opt) {
     var markerLayer;
     var markerControl;
 
-    function startExport() {
-        // main vector
-        vectors = new OpenLayers.Layer.Vector("Vector Layer", {
-            displayInLayerSwitcher: false
-        });
-        map.addLayer(vectors);
+    // main vector
+    vectors = new OpenLayers.Layer.Vector("Vector Layer", {
+        displayInLayerSwitcher: false
+    });
+    map.addLayer(vectors);
 
-        // start with a rectangle first
-        box = new OpenLayers.Control.DrawFeature(vectors, OpenLayers.Handler.RegularPolygon, {
-            handlerOptions: {
-                sides: 4,
-                snapAngle: 90,
-                irregular: true,
-                persist: true
-            }
-        });
-
-        // box.handler.callbacks.done = endDrag;
-        map.addControl(box);
-
-        // resize retangle, but not rotate or add points
-        transform = new OpenLayers.Control.TransformFeature(vectors, {
-            rotate: false,
-            irregular: true
-        });
-        transform.events.register("transformcomplete", transform, transformComplete);
-
-        map.addControl(transform);
-
-        // moving the map top/bottom/left/right
-        map.events.register("moveend", map, mapMoved);
-
-        $("#ne_lat").change(boundsChanged);
-        $("#sw_lng").change(boundsChanged);
-        $("#ne_lng").change(boundsChanged);
-        $("#sw_lat").change(boundsChanged);
-
-        $("#city").change(updatePermalink);
-
-        // $("#drag_box").click(startDrag);
-        setBounds(map.getExtent());
-    }
-
-    function boundsChanged() {
-        debug("boundsChanged");
-
-        var epsg4326 = new OpenLayers.Projection("EPSG:4326");
-
-        if (!check_lnglat_form()) {
-            alert("lng or lat value is out of range -180 ... 180, -90 .. 90");
-            return;
+    // start with a rectangle first
+    box = new OpenLayers.Control.DrawFeature(vectors, OpenLayers.Handler.RegularPolygon, {
+        handlerOptions: {
+            sides: 4,
+            snapAngle: 90,
+            irregular: true,
+            persist: true
         }
+    });
 
-        var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
+    // box.handler.callbacks.done = endDrag;
+    map.addControl(box);
 
-        bounds.transform(epsg4326, map.getProjectionObject());
+    // resize retangle, but not rotate or add points
+    transform = new OpenLayers.Control.TransformFeature(vectors, {
+        rotate: false,
+        irregular: true
+    });
+    transform.events.register("transformcomplete", transform, transformComplete);
+    state.transform = transform;
 
-        map.events.unregister("moveend", map, mapMoved);
-        map.zoomToExtent(bounds);
+    map.addControl(transform);
 
-        clearBox();
-        drawBox(bounds);
-        validateControls();
-        mapnikSizeChanged();
-    }
+    // moving the map top/bottom/left/right
+    map.events.register("moveend", map, mapMoved);
 
-    function transformComplete(event) {
-        setBounds(event.feature.geometry.bounds);
-        validateControls();
-    }
+    $("#ne_lat").change(boundsChanged);
+    $("#sw_lng").change(boundsChanged);
+    $("#ne_lng").change(boundsChanged);
+    $("#sw_lat").change(boundsChanged);
 
-    function mapMoved() {
-        debug("mapMoved");
-        if (state.box == 0) {
-            setBounds(map.getExtent());
-            validateControls();
-        }
-    }
+    $("#city").change(updatePermalink);
 
-    state.mapMoved = mapMoved;
-    state.clearBox = clearBox;
-    state.setBounds = setBounds;
+    // $("#drag_box").click(startDrag);
+    setBounds(map.getExtent());
 
+    // state.mapMoved = mapMoved;
     // set values ind show lnglat box
-
-    function setBounds(bounds) {
-        debug("setBounds");
-        // debug(arguments.callee.caller);
-        var epsg4326 = new OpenLayers.Projection("EPSG:4326");
-        var decimals = Math.pow(10, Math.floor(map.getZoom() / 3));
-
-        // box not set yet
-        if (!bounds) return;
-
-        bounds = bounds.clone().transform(map.getProjectionObject(), epsg4326);
-
-        function v(value) {
-            var val = Math.round(value * decimals) / decimals;
-            if (val < -180) {
-                val += 360;
-            } else if (val > 180) {
-                val -= 360;
-            }
-
-            return val;
-        }
-
-        $("#sw_lng").val(v(bounds.left));
-        $("#sw_lat").val(v(bounds.bottom));
-        $("#ne_lng").val(v(bounds.right));
-        $("#ne_lat").val(v(bounds.top));
-        debug("set bounds: " + bounds.left + "," + bounds.bottom + " " + bounds.right + "," + bounds.top)
-
-        mapnikSizeChanged();
-    }
-
-    function clearBox() {
-        debug("clearBox");
-
-        transform.deactivate();
-        vectors.destroyFeatures();
-
-        // reset hidden variables
-        $("#coords").attr("value", "");
-        $("#as").attr("value", "");
-        $("#pg").attr("value", "");
-
-        // reset visible skm / filesize / time estimates
-        $("#square_km_small").html("");
-        $("#size_small").html("");
-        $("#time_small").html("");
-
-        state.polygon.area = 0;
-        state.box = 0;
-    }
-
-    function drawBox(bounds) {
-        debug("drawBox");
-        state.box = 1;
-
-        var feature = new OpenLayers.Feature.Vector(bounds.toGeometry());
-        vectors.addFeatures(feature);
-    }
-
-
+/*
     // wait 0.2 seconds before starting validate
     var _validate_timeout;
 
@@ -506,25 +406,126 @@ function extract_init(opt) {
 
         }
     state.validateControls = validateControls;
+    */
 
-    function mapnikSizeChanged() {
-        var size = mapnikImageSize($("#mapnik_scale").val());
 
-        $("#mapnik_image_width").html(size.w);
-        $("#mapnik_image_height").html(size.h);
 
-        validateControls();
-    }
-
-    if ($("select[name=format]")) {
+    if ($("select[name=format]").length) {
         $("select[name=format]").change(function () {
             validateControls()
         });
     }
-
-    startExport(opt);
-
 }
+
+function boundsChanged() {
+    debug("boundsChanged");
+
+    var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+
+    if (!check_lnglat_form()) {
+        alert("lng or lat value is out of range -180 ... 180, -90 .. 90");
+        return;
+    }
+
+    var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
+
+    bounds.transform(epsg4326, map.getProjectionObject());
+
+    map.events.unregister("moveend", map, mapMoved);
+    map.zoomToExtent(bounds);
+
+    clearBox();
+    drawBox(bounds);
+    validateControls();
+    mapnikSizeChanged();
+}
+
+
+state.clearBox = clearBox;
+
+function clearBox() {
+    debug("clearBox");
+
+    state.transform.deactivate();
+    vectors.destroyFeatures();
+
+    // reset hidden variables
+    $("#coords").attr("value", "");
+    $("#as").attr("value", "");
+    $("#pg").attr("value", "");
+
+    // reset visible skm / filesize / time estimates
+    $("#square_km_small").html("");
+    $("#size_small").html("");
+    $("#time_small").html("");
+
+    state.polygon.area = 0;
+    state.box = 0;
+}
+
+
+function drawBox(bounds) {
+    debug("drawBox");
+    state.box = 1;
+
+    var feature = new OpenLayers.Feature.Vector(bounds.toGeometry());
+    vectors.addFeatures(feature);
+}
+
+function transformComplete(event) {
+    setBounds(event.feature.geometry.bounds);
+    validateControls();
+}
+
+function mapMoved() {
+    debug("mapMoved");
+    if (state.box == 0) {
+        setBounds(map.getExtent());
+        validateControls();
+    }
+}
+
+function mapnikSizeChanged() {
+    var size = mapnikImageSize($("#mapnik_scale").val());
+
+    $("#mapnik_image_width").html(size.w);
+    $("#mapnik_image_height").html(size.h);
+
+    validateControls();
+}
+
+function setBounds(bounds) {
+    debug("setBounds");
+    // debug(arguments.callee.caller);
+    var epsg4326 = new OpenLayers.Projection("EPSG:4326");
+    var decimals = Math.pow(10, Math.floor(map.getZoom() / 3));
+
+    // box not set yet
+    if (!bounds) return;
+
+    bounds = bounds.clone().transform(map.getProjectionObject(), epsg4326);
+
+    function v(value) {
+        var val = Math.round(value * decimals) / decimals;
+        if (val < -180) {
+            val += 360;
+        } else if (val > 180) {
+            val -= 360;
+        }
+
+        return val;
+    }
+
+    $("#sw_lng").val(v(bounds.left));
+    $("#sw_lat").val(v(bounds.bottom));
+    $("#ne_lng").val(v(bounds.right));
+    $("#ne_lat").val(v(bounds.top));
+    debug("set bounds: " + bounds.left + "," + bounds.bottom + " " + bounds.right + "," + bounds.top)
+
+    mapnikSizeChanged();
+}
+state.setBounds = setBounds;
+
 
 // extract-pro service can extract larger areas
 
