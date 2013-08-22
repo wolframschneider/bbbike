@@ -128,7 +128,7 @@ function plot_polygon_back() {
     var feature = plot_polygon(polygon);
     vectors.addFeatures(feature);
 
-    state.validateControls();
+    validateControls();
     plot_default_box_menu_on();
 
     state.box = 3;
@@ -420,9 +420,6 @@ function boundsChanged() {
     mapnikSizeChanged();
 }
 
-
-state.clearBox = clearBox;
-
 function clearBox() {
     debug("clearBox");
 
@@ -504,8 +501,6 @@ function setBounds(bounds) {
 
     mapnikSizeChanged();
 }
-state.setBounds = setBounds;
-
 
 // extract-pro service can extract larger areas
 
@@ -528,7 +523,7 @@ function plot_default_box() {
     debug("plot default box");
 
     // reset to full map
-    state.setBounds(map.getExtent());
+    setBounds(map.getExtent());
 
     if (!check_lnglat_form()) {
         alert("lng or lat value is out of range -180 ... 180, -90 .. 90");
@@ -586,7 +581,7 @@ function plot_default_box_menu_off() {
     $("#drag_box_select").hide();
 
     polygon_menu(false);
-    if (state.clearBox) state.clearBox();
+    clearBox();
     setMapHeight();
 }
 
@@ -742,7 +737,7 @@ function setMapHeight() {
         }, 250);
     }
 
-    if (state.validateControls) state.validateControls;
+    validateControls();
 
     permalink_init();
 };
