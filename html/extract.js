@@ -471,6 +471,10 @@ function mapnikSizeChanged() {
     validateControls();
 }
 
+/*
+ * set the bounds box values (sw, ne) by a given box
+ *
+ */
 function setBounds(bounds) {
     debug("setBounds");
     // debug(arguments.callee.caller);
@@ -497,7 +501,7 @@ function setBounds(bounds) {
     $("#sw_lat").val(v(bounds.bottom));
     $("#ne_lng").val(v(bounds.right));
     $("#ne_lat").val(v(bounds.top));
-    debug("set bounds: " + bounds.left + "," + bounds.bottom + " " + bounds.right + "," + bounds.top)
+    debug("set bounds box: " + bounds.left + "," + bounds.bottom + " " + bounds.right + "," + bounds.top)
 
     mapnikSizeChanged();
 }
@@ -556,14 +560,16 @@ function plot_default_box() {
         debug("default box: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
     }
 
+    state.box = 1;
     var polygon = rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat);
     var feature = plot_polygon(polygon);
     vectors.addFeatures(feature);
-
+    
+    setBounds(feature.geometry.bounds);
     plot_default_box_menu_on();
-    state.box = 1;
+    // setBounds(map.getExtent());
 }
-
+        
 function plot_default_box_menu_on() {
     polygon_menu(true); // display poygon menu
     polygon_update();
@@ -851,7 +857,7 @@ function select_city(name) {
             "ne": [13.902, 52.705]
         },
 
-/*
+        /*
         "SanFrancisco": {
             "sw": [-122.9, 37.2],
             "ne": [-121.7, 37.9]
@@ -995,7 +1001,7 @@ function show_filesize(skm, real_size) {
     var extract_time = 800; // standard extract time in seconds for PBF
     var format = $("select[name=format] option:selected").val();
     var size = real_size ? real_size / 1024 : 0;
-    debug("skm: " + parseInt(skm) + " size: " + Math.round(size) + "MB " + format);
+    debug("show filesize skm: " + parseInt(skm) + " size: " + Math.round(size) + "MB " + format);
 
     // all formats *must* be configured
     var filesize = {
