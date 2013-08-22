@@ -676,8 +676,11 @@ function checkform() {
         e.style.background = color_normal;
     }
 
-    if (ret > 0) {
-        alert(ret == 1 ? "Please fill out all fields!" : "Use a smaller area! Max size: " + max_size + "MB");
+    if (state.box == 0) {
+        alert(M("Please create a bounding box first"));
+        ret = 3;
+    } else if (ret > 0) {
+        alert(ret == 1 ? alert(M("Please fill out all fields!")) : M("Use a smaller area! Max size: ") + max_size + "MB");
     }
 
     return ret == 0 ? true : false;
@@ -1278,6 +1281,10 @@ function init_dialog_window() {
             }
         }
     }).draggable();
+}
+
+function M(message) {
+    return message;
 }
 
 /* after page load */
