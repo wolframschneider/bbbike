@@ -407,7 +407,7 @@ function boundsChanged() {
     var epsg4326 = new OpenLayers.Projection("EPSG:4326");
 
     if (!check_lnglat_form()) {
-        alert("lng or lat value is out of range -180 ... 180, -90 .. 90");
+        alert(M("lng or lat value is out of range -180 ... 180, -90 .. 90"));
         return;
     }
 
@@ -537,7 +537,7 @@ function plot_default_box() {
     setBounds(map.getExtent());
 
     if (!check_lnglat_form()) {
-        alert("lng or lat value is out of range -180 ... 180, -90 .. 90");
+        alert(M("lng or lat value is out of range -180 ... 180, -90 .. 90"));
         return;
     }
 
@@ -1282,6 +1282,8 @@ function init_dialog_window() {
         }
     }).draggable();
 }
+
+/* localized messages */
 
 function M(message) {
     return message;
