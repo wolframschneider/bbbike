@@ -136,7 +136,6 @@ function plot_polygon_back() {
 
     validateControls();
     plot_default_box_menu_on();
-
 }
 
 function center_city(sw_lng, sw_lat, ne_lng, ne_lat) {
@@ -297,6 +296,8 @@ function rectangle2polygon(sw_lng, sw_lat, ne_lng, ne_lat) {
 // override standard OpenLayers permalink method
 
 function permalink_init() {
+    debug("permalink init");
+
     OpenLayers.Control.Permalink.prototype.createParams = function (center, zoom, layers) {
         var params = OpenLayers.Util.getParameters(this.base);
 
@@ -343,9 +344,7 @@ function permalink_init() {
     var permalink = new OpenLayers.Control.Permalink('permalink');
     state.permalink = permalink;
 
-    setTimeout(function () {
-        map.addControl(permalink);
-    }, 200);
+    map.addControl(permalink);
 }
 
 
@@ -752,8 +751,7 @@ function setMapHeight() {
     }
 
     validateControls();
-
-    permalink_init();
+    // permalink_init();
 };
 
 /*
