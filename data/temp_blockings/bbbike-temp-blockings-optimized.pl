@@ -3170,6 +3170,8 @@ userdel	q4::inwork -3942,12559 -3941,12545 -3941,12376
          'id' => 2451,
          'data' => '#: XXX nach den Bauarbeiten: Bergiusstr. führt direkt zur Grenzallee, ebenso neu: Ampel an der Anschlussstelle
 #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/download/A100_UmbauAusfahrtGrenzallee.pdf
+#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1308/nachricht5044.html
+#: prio: #A
 #: next_check: 2013-08-23
 userdel	2::inwork 14193,6556 14144,6627 14193,6718 14153,6795
 ',
@@ -3256,19 +3258,23 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
          'text' => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
          'from' => undef,
          'id' => 2463,
-         'data' => '#: osm_watch: way id="80221295" version="17" brb
+         'data' => '#: XXX bei osm jetzt mit bicycle=yes getaggt vvv
+#: add_fragezeichen: Wurde das Verbot für Radfahrer mittlerweile wieder aufgehoben? vvv
+#: osm_watch: way id="80221295" version="18" brb
 	2 19158,-4083 19189,-4062 19454,-3956 19524,-3843 19528,-3767 19479,-3690
-#: osm_watch: way id="83106248" version="13" brb
+#: osm_watch: way id="83106248" version="14" brb
 	2 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
-#: osm_watch: way id="60482011" version="24" brb
-#: osm_watch: way id="192153919" version="1" brb
-#: osm_watch: way id="192153925" version="4" brb
-#: osm_watch: way id="136089841" version="17" brb
+#: osm_watch: way id="60482011" version="25" brb
+#: osm_watch: way id="192153919" version="2" brb
+#: osm_watch: way id="192153925" version="5" brb
+#: osm_watch: way id="136089841" version="18" brb
 	2 19479,-3690 19443,-3540 19558,-3155 19626,-3031 19808,-2953 19909,-2863 19941,-2759 19909,-2677 19575,-2358 19346,-2337 19236,-2298 19131,-2145 18866,-1674 18936,-1581
 	2 19131,-2145 19198,-2118
 	2 19909,-2863 19996,-2880
 #: note: hier auch, sehr wahrscheinlich
 	2 19601,-3714 19539,-3810 19460,-3818 19282,-3928
+#: add_fragezeichen ^^^
+#: XXX ^^^
 ',
          'type' => 'gesperrt'
        },
@@ -3304,26 +3310,36 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.kudamm-int.de/strassenfest.html',
-         'until' => 1376863199,
-         'text' => 'Uhlandstr.: Veranstaltung (Uhlandstraßenfest) zwischen Kurfürstendamm und Lietzenburger Str., Straße gesperrt, 17. und 18. August 2013',
-         'from' => 1376604000,
-         'id' => 2468,
-         'data' => 'userdel	2::temp 5047,10381 5076,10658
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'IM_020145',
          'until' => 1387555200,
          'text' => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt (auch für Radfahrer und Fußgänger), 12.08.2013 06:00 Uhr bis 20.12.2013 17:00 Uhr',
          'from' => 1376193600,
          'id' => 2469,
-         'data' => '#: XXX Umgehung durch den S-Bahnhof prüfen und ggfs. eintragen
-userdel	2::inwork 17736,5441 17886,5587
+         'data' => 'userdel	2::inwork 17736,5441 17886,5587
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_020168',
+         'until' => 1381485600,
+         'text' => 'Neumannstr. (Pankow): Baustelle, zwischen Thulestr. und Eschengraben Richtung Norden gesperrt, bis 11.10.2013 ',
+         'from' => 1376816220,
+         'id' => 2470,
+         'data' => 'userdel	q4::inwork; 11635,16616 11621,16749
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_020183',
+         'until' => 1381500000,
+         'text' => 'Thulestr. (Pankow): Baustelle zwischen Neumannstraße und Talstr., Fahrbahn gesperrt, bis 11.10.2013 ',
+         'from' => 1376816220,
+         'id' => 2471,
+         'data' => 'userdel	q4::inwork 11825,16666 11767,16631 11725,16626 11635,16616
+',
+         'type' => 'handicap'
        }
      
 );
