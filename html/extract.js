@@ -842,8 +842,8 @@ function polygon_menu(enabled) {
 }
 
 /*
-  select an area to display on the map
-*/
+ * select an area to display on the map
+ */
 function select_city(name) {
     var city = {
         "Berlin": {
