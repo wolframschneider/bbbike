@@ -501,7 +501,7 @@ function extract_init(opt) {
     var validateControls = function () {
             if (_validate_timeout) clearTimeout(_validate_timeout);
             _validate_timeout = setTimeout(function () {
-                validateControlsAjax();
+                validateControls();
             }, 200);
 
         }
@@ -970,8 +970,8 @@ function square_km(x1, y1, x2, y2) { // SW x NE
     return (height * width);
 }
 
-function validateControlsAjax() {
-    debug("validateControlsAjax state.box: " + state.box);
+function validateControls() {
+    debug("validateControls state.box: " + state.box);
     if (state.box == 0) return;
 
     var bounds = new OpenLayers.Bounds($("#sw_lng").val(), $("#sw_lat").val(), $("#ne_lng").val(), $("#ne_lat").val());
@@ -980,7 +980,7 @@ function validateControlsAjax() {
     var format = $("select[name=format] option:selected").val();
 
     if (!state.polygon.area && $("#pg").val()) {
-        debug("validateControlsAjax found polygon: " + $("#pg").val() + " as: " + $("#as").val());
+        debug("validateControls found polygon: " + $("#pg").val() + " as: " + $("#as").val());
     }
 
     //
@@ -1217,7 +1217,7 @@ function polygon_init() {
             $("#sw_lat").val(v(bounds.bottom));
             $("#ne_lng").val(v(bounds.right));
             $("#ne_lat").val(v(bounds.top));
-            validateControlsAjax();
+            validateControls();
         }
     }
 
