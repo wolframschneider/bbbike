@@ -813,6 +813,7 @@ fragezeichen-cooked:	fragezeichen strassen landstrassen landstrassen2
 .create_fragezeichen:	fragezeichen-orig ${DATADIR}/ampeln-orig \
 		${PERSISTENTTMPDIR}/.fragezeichen-other-source \
 		${SOURCE_TARGETS:S|^|${PERSISTENTTMPDIR}/.fragezeichen-|} \
+		${PERSISTENTTMPDIR}/.fragezeichen-bbbike-temp-blockings-optimized \
 		Makefile
 	-@$(WRITEABLE) $@
 	cat fragezeichen-orig |\
@@ -823,8 +824,12 @@ fragezeichen-cooked:	fragezeichen strassen landstrassen landstrassen2
 	grep '?' ${DATADIR}/ampeln-orig | \
 	    $(SED) -e 's/	\([^ ]*\)/ (\1)	?/' | \
 	    ${CONVERT2HAFAS} -basefile ${DATADIR}/ampeln-orig -- - >> $@~
+	@echo "# added from other ${PERSISTENTTMPDIR}/.fragezeichen-other-source" >> $@~
+	cat ${PERSISTENTTMPDIR}/.fragezeichen-other-source >> $@~
 	@echo "# added from other sources: (${SOURCE_TARGETS})" >> $@~
-	cat ${PERSISTENTTMPDIR}/.fragezeichen-other-source ${SOURCE_TARGETS:S|^|${PERSISTENTTMPDIR}/.fragezeichen-|} >> $@~
+	cat ${SOURCE_TARGETS:S|^|${PERSISTENTTMPDIR}/.fragezeichen-|} >> $@~
+	@echo "# added from bbbike-temp-blockings-optimized" >> $@~
+	cat ${PERSISTENTTMPDIR}/.fragezeichen-bbbike-temp-blockings-optimized >> $@~
 	cmp -s $@~ $@ && rm $@~ || mv $@~ $@
 	touch .create_fragezeichen
 	-@$(READONLY) $@
@@ -834,6 +839,10 @@ ${PERSISTENTTMPDIR}/.fragezeichen-$(i):	$(i)-orig
 	${GREPSTRASSEN_UTF8} -special fragezeichen ${DATADIR}/$(i)-orig > /dev/null
 	cp -f /tmp/fragezeichen_$(i)-orig.bbd $@
 .endfor
+
+${PERSISTENTTMPDIR}/.fragezeichen-bbbike-temp-blockings-optimized:	${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
+	${GREPSTRASSEN_UTF8} -special fragezeichen $> > /dev/null
+	cp -f /tmp/fragezeichen_bbbike-temp-blockings-optimized.bbd.bbd $@
 
 ######################################################################
 # OTHER HELPER LAYERS, NOT INCLUDED IN STANDARD DIST
@@ -934,7 +943,7 @@ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org:	*-orig ${PERSISTENTTMPDIR}/bbbik
 # exact distances, but slower, especially if dist.db is missing or fresh
 fragezeichen-nextcheck.org-exact-dist:
 	-@$(WRITEABLE) ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org
-	${MISCSRCDIR}/fragezeichen2org.pl --dist-dbfile=${PERSISTENTTMPDIR}/dist.db *-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd > ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org~
+	${MISCSRCDIR}/fragezeichen2org.pl --plan-dir=${HOME}/.bbbike/gps_uploads --dist-dbfile=${PERSISTENTTMPDIR}/dist.db *-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd > ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org~
 	mv ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org~ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org
 	-@$(READONLY) ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org
 
