@@ -589,7 +589,7 @@ function plot_default_box_menu_on() {
 // remove default box from map
 
 function plot_default_box_menu_off() {
-    $("#drag_box_select_reset").attr('checked', false);
+    // $("#drag_box_select_reset").attr('checked', false);
     $("#drag_box_default").show();
     $("#drag_box_select").hide();
 
