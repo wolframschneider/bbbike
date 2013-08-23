@@ -89,7 +89,7 @@ function init() {
     if (check_lnglat_form(true)) {
         plot_polygon_back();
     } else {
-        // start from scratch 
+        // start from scratch
         move_map_to_city();
     }
 
@@ -644,9 +644,13 @@ function checkform() {
     for (var i = 0; i < inputs.length; ++i) {
         var e = inputs[i];
 
+
         if (e.value == "") {
             // ignore hidden input fields for check, e.g. "coords"
             if (e.type == "hidden") continue;
+
+            // check only named input fields
+            if (e.name == "") continue;
 
             // optional forms fields
             if (config.city_name_optional && e.name == "city") continue;
@@ -669,7 +673,9 @@ function checkform() {
         if (e.name == "as") {
             var format = $("select[name=format] option:selected").val();
             var max_size = config.max_size[format] ? config.max_size[format] : config.max_size["default"];
-            if (e.value < 0 || e.value > max_size) ret = 2;
+            if (e.value < 0 || e.value > max_size) {
+                ret = 2;
+            }
         }
 
         // reset color
