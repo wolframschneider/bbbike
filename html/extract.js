@@ -443,8 +443,10 @@ function clearBox() {
     // reset warnings
     $("#export_osm_too_large").hide();
 
+
     state.polygon.area = 0;
     state.box = 0;
+
 }
 
 
@@ -535,6 +537,7 @@ function plot_default_box() {
 
     // reset to full map
     setBounds(map.getExtent());
+    validateControls();
 
     if (!check_lnglat_form()) {
         alert(M("lng or lat value is out of range -180 ... 180, -90 .. 90"));
