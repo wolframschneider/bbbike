@@ -677,7 +677,7 @@ function checkform() {
     }
 
     if (state.box == 0) {
-        alert(M("Please create a bounding box first"));
+        alert(M("Please create a bounding box first!"));
         ret = 3;
     } else if (ret > 0) {
         alert(ret == 1 ? M("Please fill out all fields!") : M("Use a smaller area! Max size: ") + max_size + "MB");
