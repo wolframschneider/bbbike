@@ -43,7 +43,7 @@ var config = {
     // size of box in relation to the map
     "default_box_size": 0.66,
 
-    "coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
+    "id_coord": ["#sw_lng", "#sw_lat", "#ne_lng", "#ne_lat"],
     "color_normal": "white",
     "color_error": "red",
 
@@ -114,6 +114,7 @@ function move_map_to_city() {
 }
 
 function plot_polygon_back() {
+    debug("plot polygon back");
     state.box = 3;
 
     var sw_lng = $("#sw_lng").val();
@@ -138,9 +139,9 @@ function plot_polygon_back() {
 }
 
 function center_city(sw_lng, sw_lat, ne_lng, ne_lat) {
+    debug("center city: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
+    
     var epsg4326 = new OpenLayers.Projection("EPSG:4326");
-
-    debug("default city: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
     var bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
     bounds.transform(epsg4326, map.getProjectionObject());
@@ -697,7 +698,7 @@ function checkform() {
 
 function check_lnglat_form(noerror) {
     var ret = true;
-    var coord = config.coord;
+    var coord = config.id_coord;
 
     for (var i = 0; i < coord.length; i++) {
         var val = $(coord[i]).val();
@@ -706,9 +707,11 @@ function check_lnglat_form(noerror) {
         } else {
             if (!noerror) $(coord[i]).css("background", config.color_error);
             ret = false;
+            // debug("check_lnglat_form: " + coord[i] + " " + val);
         }
     }
 
+    debug("check_lnglat_form: " + ret);
     return ret;
 }
 
