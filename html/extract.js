@@ -140,7 +140,7 @@ function plot_polygon_back() {
 
 function center_city(sw_lng, sw_lat, ne_lng, ne_lat) {
     debug("center city: " + sw_lng + "," + sw_lat + " " + ne_lng + "," + ne_lat);
-    
+
     var epsg4326 = new OpenLayers.Projection("EPSG:4326");
     var bounds = new OpenLayers.Bounds(sw_lng, sw_lat, ne_lng, ne_lat);
 
@@ -875,9 +875,10 @@ function select_city(name) {
         "Berlin": {
             "sw": [12.875, 52.329],
             "ne": [13.902, 52.705]
-        },
+        }
 
 /*
+	,
         "SanFrancisco": {
             "sw": [-122.9, 37.2],
             "ne": [-121.7, 37.9]
@@ -1034,7 +1035,7 @@ function show_filesize(skm, real_size) {
             "time": 0.5
         },
         "osm.bz2": {
-            "size": 1.5,
+            "size": 1.5
         },
         "osm.xz": {
             "size": 1.8,
@@ -1057,26 +1058,26 @@ function show_filesize(skm, real_size) {
             "time": 2
         },
         "shp.zip": {
-            "size": 1.5,
+            "size": 1.5
         },
         "obf.zip": {
             "size": 1.4,
             "time": 10
         },
         "o5m.gz": {
-            "size": 1.04,
+            "size": 1.04
         },
         "o5m.xz": {
-            "size": 0.94,
+            "size": 0.94
         },
         "o5m.bz2": {
-            "size": 0.88,
+            "size": 0.88
         },
         "csv.gz": {
-            "size": 1,
+            "size": 1
         },
         "csv.xz": {
-            "size": 0.50,
+            "size": 0.50
         },
         "csv.bz2": {
             "size": 0.80,
@@ -1087,7 +1088,7 @@ function show_filesize(skm, real_size) {
             "time": 14
         },
         "navit.zip": {
-            "size": 0.8,
+            "size": 0.8
         }
     };
 
