@@ -1,5 +1,8 @@
 #!/usr/local/bin/perl
 # Copyright (c) Sep 2012-2013 Wolfram Schneider, http://bbbike.org
+#
+# check pbf2osm results for a *.pbf with zero file size
+#
 
 BEGIN { }
 
@@ -17,7 +20,9 @@ use Digest::MD5 qw(md5_hex);
 use strict;
 use warnings;
 
-my $debug   = 0;
+my $debug = 0;
+
+# 0: success, 1: non-zero exit status
 my %formats = (
 
     # osmconvert
