@@ -116,7 +116,6 @@ function move_map_to_city() {
 function plot_polygon_back() {
     state.box = 3;
 
-    // setTimeout(function () {
     var sw_lng = $("#sw_lng").val();
     var sw_lat = $("#sw_lat").val();
     var ne_lng = $("#ne_lng").val();
@@ -244,7 +243,7 @@ function init_map_resize() {
         resize = setTimeout(function () {
             debug("resize event");
             setMapHeight();
-        }, 300);
+        }, 200);
     });
 }
 
