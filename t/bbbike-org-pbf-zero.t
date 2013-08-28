@@ -66,7 +66,7 @@ my $pbf_md5  = "d41d8cd98f00b204e9800998ecf8427e";
 my $tempfile = File::Temp->new( SUFFIX => ".osm" );
 
 if ( !-f $pbf_file ) {
-    system(qw(touch $pbf_file));
+    system("touch $pbf_file");
     die "touch $pbf_file failed: $!\n" if $?;
 }
 
