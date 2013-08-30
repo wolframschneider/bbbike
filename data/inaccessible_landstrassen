@@ -60,6 +60,7 @@ Krumpuhler Weg	X 1302,18398
 (Tegeler Hafen - An der Mühle)	X 1668,20670
 Feldstr. (Bohnsdorf)	X 21055,-723
 Feldstr. (Bohnsdorf)	X 21209,-734
+Ingwerweg	X 9282,21589
 An den Eldenaer Höfen	X 14594,12800
 Am Pankepark	X 8186,14150
 Paddlerweg	X -3625,11250
@@ -75,7 +76,6 @@ Heimstättenweg	X 4323,6131
 (Westhafenstr. - Beusselstr.)	X 5997,14444
 (Westhafenstr. - Beusselstr.)	X 5920,14422
 Margarete-Steffin-Str.	X 8406,13127
-(Parkplatz Charité)	X 8800,13389
 Wiebestr.	X 4495,13107
 (Machandelweg - Rossitter Weg)	X -76,12236
 Thüringerallee	X 1342,11020
@@ -83,17 +83,6 @@ Thüringerallee	X 1342,11020
 (Schiffahrtsufer - Spandauer Burgwall)	X -3462,13256
 (Schiffahrtsufer - Spandauer Burgwall)	X -3467,13240
 (ehemalige Hollmannstr.)	X 9869,10672
-B96: Berlin - Baruth	X 13382,-6353
-B96: Berlin - Baruth	X 13638,-6738
-B96: Berlin - Baruth	X 13575,-7073
-B96: Berlin - Baruth	X 13550,-7265
-B96: Berlin - Baruth	X 13598,-7705
-B96: Berlin - Baruth	X 13584,-8205
-B96: Berlin - Baruth	X 13600,-8488
-B96: Berlin - Baruth	X 13720,-8736
-B96: Berlin - Baruth	X 13886,-8957
-B96: Berlin - Baruth	X 13972,-9073
-B96: Berlin - Baruth	X 14037,-9386
 B96a: Berlin - Mahlow	X 16209,-3558
 B96a: Berlin - Mahlow	X 15991,-3877
 B96a: Berlin - Mahlow	X 15751,-4002
@@ -101,6 +90,7 @@ B96a: Berlin - Mahlow	X 12807,-4353
 B5: Berlin - Hamburg	X -9549,13365
 B5: Berlin - Hamburg	X -9617,13368
 B5: Berlin - Hamburg	X -10122,13391
+B1/B5: Berlin - Müncheberg	X 27209,10666
 (An der Oder)	X 89215,-6605
 (An der Oder)	X 89243,-6760
 (An der Oder)	X 89321,-6884
@@ -158,6 +148,3 @@ Usedom - Ahlbeck	X 60601,170748
 (An der Freilichtbühne) (Prenzlau)	X 39474,100982
 (Stadtpark Prenzlau) (Prenzlau)	X 39923,101339
 Brüderstr. (Schwedt)	X 68810,73316
-Fähre Liepnitzsee zum Großen Werder	X 17348,38393
-Fähre Liepnitzsee zum Großen Werder	X 17448,38277
-Fähre Liepnitzsee zum Großen Werder	X 17692,38138
