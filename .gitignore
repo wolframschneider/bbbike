@@ -60,3 +60,5 @@ data-osm.old2
 osm.old
 osm.old2
 world/web/sitemap.xml.gz
+world/download/sitemap.xml.gz
+world/web/garmin/
