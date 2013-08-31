@@ -199,11 +199,9 @@ div#footer {
     text-align: center;
     padding-top: 0.7em;
     bottom: 0em;
-    margin: 0.5em;
 }
 
 div#footer hr {
-    width: 24.0em;
     padding-left: 0;
     margin-left: 0;
 }
@@ -211,6 +209,7 @@ div#footer hr {
 div#footer_top {
     text-align: left;
     font-size: small;
+    padding-left: 0.5em;
 }
 
 div#footer_community {
@@ -222,7 +221,8 @@ div#footer_community {
 div#copyright {
     font-size: small;
     margin: 0px;
-    padding: 0px;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
     text-align: left;
 }
 
