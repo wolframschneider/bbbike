@@ -82,10 +82,6 @@ table tr td {
     padding-bottom: 2px;
 }
 
-input[type=submit] {
-    margin-top: 0.5em;
-}
-
 /* large green submit button, to focus user actions */
 form input[type=submit] {
     color: green;
