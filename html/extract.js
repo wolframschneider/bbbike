@@ -244,7 +244,7 @@ function init_map_resize() {
         resize = setTimeout(function () {
             debug("resize event");
             setMapHeight();
-        }, 200);
+        }, 0);
     });
 }
 
