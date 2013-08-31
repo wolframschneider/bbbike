@@ -43,7 +43,6 @@ div#map {
 #sidebar_left, #footer {
     width: 24.5em;
     position: absolute;
-    
     /* border-right-color: red; border-right-style: dashed; border-right-width: 1px; */
 }
 
@@ -61,7 +60,7 @@ div#intro hr {
     margin-left: -0.3em;
     margin-right: -0.3em;
 }
-	
+
 div#message {
     position: relative;
 }
@@ -322,3 +321,4 @@ span#noscript {
 }
 
 /* EOF */
+
