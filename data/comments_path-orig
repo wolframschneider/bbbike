@@ -28,9 +28,9 @@ Rasthof Avus: zweite Möglichkeit nach rechts	CP; 1939,10446 1870,10406 1833,1042
 bereits an der Ampel am Ringcenter die Straßenseite wechseln	PI; 15361,12071 15294,11964 15317,11953
 bereits an der Ampel "Am Containerbahnhof" die Straßenseite wechseln	PI; 15420,12178 15443,12222 15350,12270
 bis zur Ampel an der Scharnweberstr. auf dem linken Gehweg vorfahren	CP; 15317,11953 15294,11964 15248,11880
-bereits bei der Fußgängerampel am Lützowplatz die Straßenseite wechseln	PI; 6824,10904 6873,11011 6732,11106
+bereits bei der Fußgängerampel am Lützowplatz die Straßenseite wechseln	PI; 6824,10904 6873,11011 6742,11099
 bereits bei der Ampel an der Corneliusstr. die Straßenseite wechseln	PI; 6880,11110 6882,11061 6873,11011 7002,11034
-auf linken Gehweg fahren, Straßenseite an der Corneliusstr. wechseln	CP; 6732,11106 6873,11011 6882,11061
+auf linken Gehweg fahren, Straßenseite an der Corneliusstr. wechseln	CP; 6742,11099 6873,11011 6882,11061
 bereits an der Kreuzung An der Urania/Kurfürstenstr. die Straßenseite wechseln	PI; 6740,10755 6685,10690 6745,10619
 bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	PI; 6935,8208 7001,8161 7250,8223
 #: XXX_prog: RL:ja, GPS:nein
@@ -237,8 +237,8 @@ Prenzlauer Allee - Kanzowstr.: bereits an der Fußgängerampel kurz vor der Kreuzu
 Frankfurter Allee - Liebigstr.: frühzeitig auf den Gehweg wechseln (wegen Grünfläche)	PI; 14208,12235 14020,12261 13885,12279 13927,12370
 Falkenberger Chaussee: Zufahrt zur Wartenberger Str.	CS; 17400,17790 17440,17746 17531,17802 17650,17875
 Langhansstr. - Allee der Kosmonauten: Zufahrt zum Parkweg schwierig einzusehen, einfach geradeaus fahren	CP2; 19818,14064 19847,14019
-In den Gärten - Marienfelder Chaussee: 100m auf der linken Straßenseite vorfahren	CP; 11724,1629 11765,1522 11865,1564
-Marienfelder Chaussee - In den Gärten: bereits am Quarzweg die Straßenseite wechseln	PI; 11475,1404 11765,1522 11724,1629
+In den Gärten - Marienfelder Chaussee: 100m auf der linken Straßenseite vorfahren	CP; 11724,1629 11744,1577 11765,1522 11865,1564
+Marienfelder Chaussee - In den Gärten: bereits am Quarzweg die Straßenseite wechseln	PI; 11476,1398 11765,1522 11744,1577 11724,1629
 Lange Brücke - Freundschaftsinsel: wegen der Tramtrasse bereits vor der Langen Brücke die Straßenseite wechseln	PI; -12758,-1654 -12730,-1681 -12659,-1700 -12567,-1817 -12396,-1681
 Freundschaftsinsel - Potsdam Hbf: wegen der Tramtrasse zunächst auf dem Gehweg bis zur nächsten Ampel vorfahren	CP; -12396,-1681 -12567,-1817 -12493,-1896
 Zum Barnimer Dörferweg: am Waidmannsluster Damm auf den Gehweg fahren, nicht auf die Radspur fahren (wegen eines nicht überwindbaren Geländers)	PI; 1858,20740 1808,20817 1787,20836 1750,20868 1712,20907 1819,21116
@@ -308,7 +308,7 @@ Darbystr. - Falkenseer Chaussee: zunächst auf dem linken Gehweg bis zur Frankenw
 B1 - Ilsensteinweg: bereits an der Ampel Spanische Allee die Gehwegseite wechseln	PI; -1646,2434 -1626,2441 -1724,2743
 Ilsensteinweg - B1: ggfs. die Ampel an der Spanischen Allee zur rechten Hand zum Überqueren der Straße benutzen	CP; -1724,2743 -1626,2441 -1340,2554
 Theodorstr. - Alt-Mahlsdorf: ggfs. die nächste Ampel benutzen	CP; 24907,11186 24893,11252 24824,11256
-Alt-Mahlsdorf - Theodorstr.: frühzeitig auf den linken Gehweg wechseln	PI; 25144,11215 24893,11252 24907,11186
+Alt-Mahlsdorf - Theodorstr.: frühzeitig auf den linken Gehweg wechseln	PI; 25138,11215 24893,11252 24907,11186
 Daumstr. - Glindowseestr.: bereits an der Kreuzung Daumstr./An den Rohrbruchwiesen die Straßenseite wechseln	PI; -1675,16813 -1710,16735 -1555,16696
 Glindowseestr. - Daumstr.: zunächst auf der linken Gehwegseite fahren und dann die Straßenseite wechseln	CP; -1555,16696 -1710,16735 -1746,16667
 #: by: Andreas Titz vvv
@@ -445,6 +445,7 @@ Munsterdamm - Kottesteig: bereits 40m vor der Kreuzung die Straßenseite wechseln
 Schorlemerallee - Albrecht-Thaer-Weg: bereits an der Kreuzung Schweinfurthstr. die Straßenseite wechseln	PI; 3306,6453 3347,6460 3449,6863
 Alemannenallee - Badenallee: Fußgängerampel rechts zum Überqueren der Heerstr. benutzen	CP; 1065,11216 943,11302 743,11462
 Badenallee - Alemannenallee: Fußgängerampel links zum Überqueren der Heerstr. benutzen	CP; 743,11462 943,11302 1065,11216
+#: XXX_prog: RL:ja, GPS:ja (default, bestätigt)
 bereits an der Ampel Parchimer Allee/Onkel-Bräsig-Str. auf die linke Straßenseite wechseln	PI; 13305,4504 13266,4503 13098,4452
 Weg am Marzahn-Hohenschönhauser Grenzgraben: zum Überqueren der Boxberger Str. rechts halten, um Bordsteine zu vermeiden	CP; 19313,16130 19361,16145 19427,16179
 Weg am Marzahn-Hohenschönhauser Grenzgraben: zum Überqueren der Boxberger Str. links halten, um Bordsteine zu vermeiden	CP; 19427,16179 19361,16145 19313,16130
@@ -513,7 +514,7 @@ Park am Gleisdreieck: rechten Weg wählen	CS; 8357,10764 8340,10753 8318,10738
 Park am Gleisdreieck: rechten Weg wählen	CS; 8336,10829 8318,10738
 Mahlerstr. - Tassostr.: Überquerungsmöglichkeit über die Berliner Allee auf der linken Seite	CP; 13667,15836 13623,15954 13614,15984
 Tassostr. - Mahlerstr.: Überquerungsmöglichkeit über die Berliner Allee auf der rechzten Seite	CP; 13614,15984 13623,15954 13667,15836
-Storkower Str. - Schneeglöckchenstr.: hinter Burger King abbiegen	CP; 14006,13761 13964,13830 14037,13842
+Storkower Str. - Schneeglöckchenstr.: hinter Burger King abbiegen	CP; 14006,13761 13964,13830 14032,13823 14049,13846
 Karl-Lade-Str.: links von der Straßenbahnstrasse halten	CP2; 14821,13674 14995,13645
 Karl-Lade-Str.: rechts von der Straßenbahnstrasse bleiben	CP2; 14821,13674 14987,13621
 (Fritz-Lesch-Str. - Orankestr.): frühzeitig auf den linken Gehweg wechseln (wegen Bordstein)	CP2; 15311,15679 15313,15848
@@ -529,3 +530,6 @@ Am Stadtpark: linken Gehweg benutzen, um Bordstein zu vermeiden	CP2; 15357,12813
 Hellersdorfer Weg: für die Weiterfahrt Richtung Norden empfiehlt es sich, an der Kreuzung Landsberger Chaussee die Fahrbahn und nicht den Gehweg zu benutzen	PI; 23162,16095 23175,16119 23193,16159 23263,16354
 Mahlsdorfer Str.: zur Weiterfahrt Richtung B1 oder Dorfstr. nicht den Radweg benutzen, da hier keine Verbindung besteht	CP2; 26280,15332 26332,15381
 Kyritzer Str.: nicht ausgeschildert	CP2; 22573,15552 22579,15416
+Buckower Damm - Britzer Park: bereits an der Kreuzung Mohriner Allee auf den linken Gehweg wechseln	PI; 12564,4308 12637,4014 12805,4020
+Britzer Park - Buckower Damm: linken Gehweg bis zur Ampel benutzen	CP; 12805,4020 12637,4014 12655,3882
+Magdalenenstr. - Frankfurter Allee: linken Gehweg bis zur Ampel benutzen	CP; 16158,12191 16127,11950 16207,11937

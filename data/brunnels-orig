@@ -66,8 +66,8 @@ Mussehlbrücke	Br 11128,5782 11196,5851
 Wilhelm-Borgmann-Brücke	Br 12052,5710 12110,5654
 Britzer Brücke	Br 12718,5845 12699,5909
 Rungiusbrücke	Br 13064,5953 13077,5893
-Buschkrugbrücke	Br 13434,6080 13483,5973
-Britzer Hafensteg	Br 13951,6190 13997,6216
+Buschkrugbrücke	Br 13430,6086 13483,5973
+Britzer Hafensteg	Br 13949,6192 13993,6221
 Grenzalleebrücke	Br 13785,6675 13883,6682
 Neuköllnische Brücke	Br 13970,7105 14011,7103 14069,7100
 Sonnenbrücke	Br 14095,7568 14174,7505
@@ -141,7 +141,8 @@ Borussenbrücke	Br -3882,2441 -3820,2479
 Spanische Allee, Autobahnbrücke	Br -3861,2837 -3736,2849
 Schönerlinder Str., Autobahnbrücke	Br 11980,24276 11959,24220
 Schönerlinder Str., S-Bahnbrücke	Br 12108,24547 12136,24607
-Bucher Str., S- und Autobahnbrücke	Br 12986,23392 13012,23424 13199,23657
+Bucher Str., Autobahnbrücke	Br 12880,23314 12913,23339
+Bucher Str., S-Bahnbrücke	Br 13012,23424 13199,23657
 Friedrichsbrücke	Br 10166,12777 10086,12725
 Wiesenbrücke	Br 8607,15426 8683,15354
 Grenzstr., S-Bahnbrücke	Br 8654,15201 8614,15156
@@ -231,8 +232,8 @@ General-Ganeval-Brücke	Br 2975,15813 3033,15694
 #: note: einige Referenzen bezeichnen die Brücke als "Alt-Moabiter Brücke" (z.B. Straßenreinigungsverzeichnis, http://www.staedte-fotos.de/name/einzelbild/number/12944/kategorie/Deutschland~Berlin~Stadtansichten.html), aber in der Realität steht hier "Moabiter Brücke"
 Moabiter Brücke	Br 6580,12775 6608,12858
 Marggraffbrücke	Br 16677,6892 16720,6845
-Monbijoubrücke	Br 9661,12876 9680,12916
-Nördliche Monbijoubrücke	Br 9680,12916 9707,12974
+Monbijoubrücke	Br 9654,12882 9683,12913
+Nördliche Monbijoubrücke	Br 9683,12913 9707,12974
 Eiserne Brücke	Br 9919,12613 9948,12631
 Schloßbrücke	Br 9984,12426 10024,12431
 #: alias: Inselbrücke (Spreekanal)
@@ -452,7 +453,7 @@ Havellandbrücke	Br -70554,38960 -70719,38954
 Peenebrücke Wolgast	Br 32743,183832 32848,183868 32956,183906
 Zecheriner Brücke	Br 35953,162870 36080,162883 36480,162910
 Rügendamm	Br -12789,211901 -12373,212278 -11913,212694
-Autobahnbrücke	Br 13139,22401 13404,22384
+Königsteinbrücke	Br 13139,22401 13404,22384
 Winterhuder Steg	Br -6963,14331 -6933,14317 -6934,14291 -6937,14262
 Bahnunterführung am Mauerweg	Tu 4034,-255 3982,-181
 Schneckenbrücke	Br 2012,3356 2009,3362 1980,3409 1977,3414
@@ -570,13 +571,14 @@ Autobahnbrücke	Br 20956,24594 21058,24628
 Autobahnbrücke	Br 24709,21125 24730,21184
 Autobahnbrücke	Br 23973,21919 24010,21960
 Autobahnbrücke	Br 29131,16204 29178,16259
+Autobahnbrücke	Br 38048,68993 38096,68983
 Brücke über den Stadtkanal	Br -13001,-1329 -13001,-1349
 	Br -9617,13368 -9549,13365
 Elbebrücke	Br -108535,-32884 -108293,-33023
 Brücke über die Alte Elbe	Br -107949,-33102 -107748,-33161
 Brücke über die Hohensaaten-Friedrichsthaler-Wasserstraße	Br 69465,72943 69331,73165
+Brücke über L40	Br 9593,-4234 9585,-4291
 Brücke der B2	Br 54530,74354 54577,74390
-Brücke der B96	Br 13972,-9073 13886,-8957
 Brücke über Finowkanal	Br 37909,48248 37900,48350
 Brücke über Finowkanal	Br 37128,48358 37159,48481
 Baumgartenbrücke	Br -19189,-5697 -19449,-5977
@@ -618,7 +620,7 @@ Eisenbahnbrücke über den Templiner See	Br -15652,-4441 -15537,-4535
 Eisenbahnbrücke über den Sacrow-Paretzer Kanal	Br -18701,4574 -18722,4681
 Brücke über Eisenbahn	Br -724,127995 6,127935
 Bahnbrücke	Br 18578,-1130 18539,-1021
-Brücke über Mauerweg	Br 11709,-3382 11686,-3321
+Brücke über Mauerweg	Br 11701,-3360 11686,-3321
 Brücke über die Wezlarer Str. und Eisenbahn	Br -9062,-3853 -8981,-3896
 Brücke über die Nuthe	Br -9531,-3917 -9461,-3879
 Brücke über die Nuthe	Br -9306,-4259 -9267,-4231

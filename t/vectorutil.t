@@ -24,7 +24,7 @@ use Getopt::Long;
 use BBBikeTest qw(is_float);
 use Strassen::Util qw();
 
-plan tests => 18;
+plan tests => 20;
 
 my $do_bench;
 my $do_xxx;
@@ -139,42 +139,75 @@ goto XXX if $do_xxx;
 
 {
     my @coordlist                = (0,0, 100,0, 200,100);
-    my @expected_coordlist_hin   = (0,3, 100,3, 200,103);
-    my @expected_coordlist_rueck = (0,-3, 100,-3, 200,-3);
-    local $TODO = "Expected coords are not correct";
-    test_offset_line(\@coordlist, 3, \@expected_coordlist_hin, \@expected_coordlist_rueck, 'offset_line, with 45° polyline');
+    my @expected_coordlist_hin   = (0,3, 98.757,3, 197.879,102.121);
+    my @expected_coordlist_rueck = (0,-3, 100,-3, 101.148,-2.772, 102.121,-2.121, 202.121,97.879);
+    test_offset_line(\@coordlist, 3, \@expected_coordlist_hin, \@expected_coordlist_rueck, 'offset_line, with 45°/right polyline');
+}
+
+{
+    my @coordlist                = (0,0, 100,0, 200,-100);
+    my @expected_coordlist_hin   = (0,3, 100,3, 101.148,2.772, 102.121,2.121, 202.121,-97.879);
+    my @expected_coordlist_rueck = (0,-3, 98.757,-3, 197.879,-102.121);
+    test_offset_line(\@coordlist, 3, \@expected_coordlist_hin, \@expected_coordlist_rueck, 'offset_line, with 45°/left polyline');
 }
 
 {
     my @coordlist                = (0,0, 100,0, 100,100);
     my @expected_coordlist_hin   = (0,3, 97,3, 97,100);
-    my @expected_coordlist_rueck = (0,-3, 103,-3, 103,100);
-    test_offset_line(\@coordlist, 3, \@expected_coordlist_hin, \@expected_coordlist_rueck, 'offset_line, with 90° polyline');
+    my @expected_coordlist_rueck = (0,-3, 100,-3, 102.121,-2.121, 103,0, 103,100);
+    test_offset_line(\@coordlist, 3, \@expected_coordlist_hin, \@expected_coordlist_rueck, 'offset_line, with 90°/right polyline');
 }
 
 XXX: {
     my @coordlist                = (0,0, 100,0, 0,0);
-    my @expected_coordlist_hin   = (0,3, 97,3, 0,3);
-    local $TODO = "Needs work!";
-    test_offset_line(\@coordlist, 3, \@expected_coordlist_hin, undef, 'offset_line, with 180° polyline');
+    my @expected_coordlist_hin   = (0,3, 100,3, 103,0, 100,-3, 0,-3);
+    my @expected_coordlist_rueck = (0,-3, 100,-3, 103,0, 100,3, 0,3);
+    test_offset_line(\@coordlist, 3, \@expected_coordlist_hin, \@expected_coordlist_rueck, 'offset_line, with 180° polyline');
+}
+
+{
+    my @coordlist                = (0,0, -100,0, 0,0);
+    my @expected_coordlist_hin   = (0,-3, -100,-3, -103,0, -100,3, 0,3);
+    my @expected_coordlist_rueck = (0,3, -100,3, -103,0, -100,-3, 0,-3);
+    test_offset_line(\@coordlist, 3, \@expected_coordlist_hin, \@expected_coordlist_rueck, 'offset_line, with 180° polyline');
 }
 
 # One test.
 sub test_offset_line {
     my($coordlist, $delta, $expected_coordlist_hin, $expected_coordlist_rueck, $testname) = @_;
     my($cl_hin, $cl_rueck) = offset_line($coordlist, $delta, 1, defined $expected_coordlist_rueck);
-    my @errors;
-    for my $i (0 .. $#$cl_hin) {
-	if (abs($cl_hin->[$i] - $expected_coordlist_hin->[$i]) > 0.01) {
-	    push @errors, "hin, index=$i: got=$cl_hin->[$i], expected=$expected_coordlist_hin->[$i]\n";
+
+    my(@got_hin, @expected_hin, @got_rueck, @expected_rueck);
+    my $get_got_expected_pair = sub {
+	my($got_arr_ref, $expected_arr_ref, $inx) = @_;
+	if ($got_arr_ref->[$inx] == $expected_arr_ref->[$inx]) {
+	    ($got_arr_ref->[$inx], $expected_arr_ref->[$inx]);
+	} elsif (abs($got_arr_ref->[$inx] - $expected_arr_ref->[$inx]) <= 0.01) {
+	    ($got_arr_ref->[$inx] . "(+-0.01)", $got_arr_ref->[$inx] . "(+-0.01)");
+	} else {
+	    ("!".$got_arr_ref->[$inx]."!", "!".$expected_arr_ref->[$inx]."!"); # will fail
 	}
-	if (defined $expected_coordlist_rueck) {
-	    if (abs($cl_rueck->[$i] - $expected_coordlist_rueck->[$i]) > 0.01) {
-		push @errors, "rueck, index=$i: got=$cl_rueck->[$i], expected=$expected_coordlist_rueck->[$i]\n";
-	    }
+    };
+
+    for my $i (0 .. $#$cl_hin) {
+	my($got,$expected) = $get_got_expected_pair->($cl_hin, $expected_coordlist_hin, $i);
+	push @got_hin, $got;
+	push @expected_hin, $expected;
+    }
+    if (defined $expected_coordlist_rueck) {
+	for my $i (0 .. $#$cl_rueck) {
+	    my($got,$expected) = $get_got_expected_pair->($cl_rueck, $expected_coordlist_rueck, $i);
+	    push @got_rueck, $got;
+	    push @expected_rueck, $expected;
 	}
     }
-    is "@errors", "", $testname;
+
+    local $Test::Builder::Level = $Test::Builder::Level+1;
+    if (@got_rueck) {
+	is_deeply ["@got_hin", "@got_rueck"], ["@expected_hin", "@expected_rueck"], $testname;
+    } else {
+	is "@got_hin", "@expected_hin", $testname;
+    }
 }
 
 __END__
