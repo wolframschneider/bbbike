@@ -31,7 +31,7 @@ div#all {
  */
 div#map {
     position: relative;
-    left: 24.6em;
+    left: 24.5em; /* must be exact the same as sidebar left, see setMapHeight() in extract.js */
     width: 100%;
     height: 100%;
 }
