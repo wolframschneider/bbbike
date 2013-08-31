@@ -52,7 +52,10 @@ input[type=submit] {
 }
 
 table tr td {
-    padding: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 /* large green submit button, to focus user actions */
@@ -272,6 +275,10 @@ a.tools-helptrigger:hover img, a.tools-helptrigger-small:hover img {
 .lnglatbox_toggle {
     display: inline;
 }
+/*
+.lnglatbox { display: inline; }
+.lnglatbox_toggle { display: none; }
+*/
 
 td {
     white-space: nowrap;
