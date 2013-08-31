@@ -3,9 +3,9 @@ push @temp_blocking,
 (
        {
          'periodic' => 1,
-         'until' => 1378666800,
+         'until' => 1378674000,
          'text' => 'Bahnhofstraße, zwischen Goltzstraße und Steinstraße Wein- und Winzerfest, vom 7.9.2013 11:00 bis 8.9.2013 21:00',
-         'from' => 1378458000,
+         'from' => 1378465200,
          'id' => 31,
          'data' => '#: by: http://www.family-and-friends-ev.de/3.html
 #: by: http://www.ag-bahnhofstrasse.de/weinfest.html
@@ -94,9 +94,9 @@ userdel	2::temp 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129
        undef,
        undef,
        {
-         'until' => 1378670400,
+         'until' => 1378677600,
          'text' => 'Alt-Rudow zwischen Krokusstr. und Neudecker Weg Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (7. und 8. Septermber 2013)',
-         'from' => 1378454400,
+         'from' => 1378461600,
          'id' => 112,
          'data' => 'userdel	2::temp 16610,1715 16805,1488 16849,1437 16975,1262
 ',
@@ -128,9 +128,9 @@ userdel	2::temp 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129
        undef,
        {
          'periodic' => 1,
-         'until' => 1379268000,
+         'until' => 1379275200,
          'text' => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstaltung (Herbstfest auf der Hauptstraße), Straße gesperrt (14.9.2013 10:00 - 15.9.2013 20:00)',
-         'from' => 1379059200,
+         'from' => 1379066400,
          'id' => 137,
          'data' => 'userdel	q4; 6687,8385 6765,8480 6912,8617 6989,8687 7009,8705 7105,8788 7201,8870 7275,8960
 ',
@@ -416,9 +416,9 @@ userdel	2::temp 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129
        undef,
        undef,
        {
-         'until' => 1386543599,
+         'until' => 1386547199,
          'text' => 'Lichtenrader Weihnachtsmarkt: Bahnhofstr. (Lichtenrade) in beiden Richtungen zwischen Steinstr. und Goltzstr gesperrt (am 7. und 8. Dezember 2013)',
-         'from' => 1386284400,
+         'from' => 1386288000,
          'id' => 417,
          'data' => '#: by: http://www.ag-bahnhofstrasse.de/weihnachtsmarkt.html
 userdel	q4 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
@@ -740,9 +740,9 @@ userdel	q4 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-21
        undef,
        {
          'periodic' => 1,
-         'until' => 1381096799,
+         'until' => 1381103999,
          'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 5. und 6.10.2013',
-         'from' => 1380837600,
+         'from' => 1380844800,
          'id' => 731,
          'data' => 'userdel	2::temp 7006,9282 7022,9211 7044,9163 7110,9024
 ',
@@ -2128,7 +2128,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Am Kupfergraben und am Zeughaus: Antik-, Buch- und Kunstmarkt, Samstag und Sonntag ca. 10-17 Uhr, nur Schieben möglich',
          'from' => undef,
          'id' => 1887,
-         'data' => '	q4::temp:clock 9754,12775 9661,12876 9618,12907 9533,12925
+         'data' => '	q4::temp:clock 9754,12775 9654,12882 9618,12907 9533,12925
 	q4::temp:clock 9919,12613 9956,12523 9984,12426
 ',
          'type' => 'gesperrt'
@@ -2157,9 +2157,9 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'periodic' => 1,
-         'until' => 1379872800,
+         'until' => 1379880000,
          'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbst in der Preußenallee), Straße vollständig gesperrt (21. und 22. September 2013) ',
-         'from' => 1379667600,
+         'from' => 1379674800,
          'id' => 1910,
          'data' => 'userdel	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
 ',
@@ -2303,9 +2303,9 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'periodic' => 1,
-         'until' => 1388566800,
+         'until' => 1388570400,
          'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr.',
-         'from' => 1388394000,
+         'from' => 1388397600,
          'id' => 2010,
          'data' => 'userdel	2::temp 8731,12270 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 8119,12414
 userdel	2::temp 8522,12239 8466,12197
@@ -2343,9 +2343,9 @@ userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,1216
        undef,
        {
          'periodic' => 1,
-         'until' => 1378058400,
+         'until' => 1378065600,
          'text' => 'Müllerstr. (Wedding): Veranstaltung (traditionelles Müllerstraßenfest), Straße zwischen Seestr. und Luxemburger Str. gesperrt, 30.08.2013 10:00 - 01.09.2013 20:00',
-         'from' => 1377763200,
+         'from' => 1377770400,
          'id' => 2039,
          'data' => 'userdel	2::temp 6781,16026 6914,15908 6936,15888 7043,15793 7129,15717 7198,15656 7277,15586
 ',
@@ -2511,9 +2511,9 @@ userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,1216
        undef,
        {
          'periodic' => 1,
-         'until' => 1378065600,
+         'until' => 1378072800,
          'text' => 'Turmstraße (Moabit): Veranstaltung (Turmstraßenfest), Straße zwischen Stromstr. und Waldstr. vollständig gesperrt (30.08.2013 bis 01.09.2012)',
-         'from' => 1377777600,
+         'from' => 1377784800,
          'id' => 2129,
          'data' => 'userdel	2::temp 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 ',
@@ -2691,9 +2691,9 @@ userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,1216
        undef,
        {
          'periodic' => 1,
-         'until' => 1379282399,
+         'until' => 1379289599,
          'text' => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., Veranstaltung (Fest an der Panke), Straße vollständig gesperrt (14.09.2013 und 15.09.2013)',
-         'from' => 1379023200,
+         'from' => 1379030400,
          'id' => 2281,
          'data' => 'userdel	2::temp 10609,18384 10567,18366 10502,18338 10463,18321 10449,18315 10281,18241 10240,18193 10320,18197 10469,18262 10487,18270 10660,18345
 ',
@@ -2769,8 +2769,8 @@ userdel	2::inwork 19968,16 19940,52
        undef,
        {
          'source_id' => 'INKO_111647',
-         'until' => 1377867600,
-         'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende August 2013',
+         'until' => 1387548000,
+         'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende Dezember 2013',
          'from' => 1330902000,
          'id' => 2316,
          'data' => '#: osm_watch: way id="23243508" version="37"
@@ -2821,9 +2821,9 @@ Am Schloss Schönhausen	2::night 10249,19148 10344,19181
        undef,
        {
          'periodic' => 1,
-         'until' => 1379282399,
+         'until' => 1379289599,
          'text' => 'Veranstaltung auf dem Mariannenplatz "Berlin lacht", 13.-15. September 2013',
-         'from' => 1378994400,
+         'from' => 1379001600,
          'id' => 2347,
          'data' => 'userdel	2::temp 11770,10774 11841,10747 11897,10887 11958,11045
 ',
@@ -2893,9 +2893,9 @@ userdel	2::night 14838,11410 14792,11391
        undef,
        {
          'periodic' => 1,
-         'until' => 1381096799,
+         'until' => 1381103999,
          'text' => 'Sperrungen wegen Marathon und Tag der deutschen Einheit: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Behrenstr. und Scheidemannstr., Yitzak-Rabin-Str., 29.09.2013 bis 06.10.2013',
-         'from' => 1380319200,
+         'from' => 1380326400,
          'id' => 2388,
          'data' => 'userdel	2::temp 8573,12325 8540,12420
 userdel	2::temp 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 6828,12031
@@ -3079,20 +3079,7 @@ userdel	q4::inwork; 13288,7653 13245,7742 13226,7775 13150,7845 13103,7889
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.suppeundmucke.de/',
-         'data' => 'userdel	2::temp 14096,11134 14076,11057 14043,10928 14026,10869
-userdel	2::temp 13886,10939 14026,10869 13896,10851 13856,10864
-userdel	2::temp 14011,10812 13896,10851
-userdel	2::temp 13886,10939 13856,10864
-',
-         'periodic' => 1,
-         'until' => 1377381599,
-         'from' => 1377208800,
-         'text' => 'SUPPE&MUCKE 2013 am 24. August am Rudolfplatz',
-         'type' => 'gesperrt',
-         'id' => 2432
-       },
+       undef,
        {
          'source_id' => 'http://www.xhain.info/termine/fiesta-kreutziga.htm',
          'data' => 'userdel	2::temp 14161,11930 14285,12190
@@ -3133,7 +3120,7 @@ userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 
        undef,
        {
          'source_id' => 'INKO_115299',
-         'until' => 1381068000,
+         'until' => 1381075200,
          'text' => 'Friedrich-Krause-Ufer (Moabit) Richtung Föhrer Brücke Höhe Kraftwerk: Baustelle, Fahrtrichtung gesperrt, Ausweichen auf Gehweg, bis Anfang Oktober 2013',
          'from' => 1349931600,
          'id' => 2442,
@@ -3143,7 +3130,17 @@ userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 
        },
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130611.0925.385925.html',
+         'until' => 1379685600,
+         'text' => 'Ordensmeisterstraße: Bauarbeiten zwischen Komturstr. und Colditzstr., Fahrbahn in Richtung Osten gesperrt, bis Mitte September',
+         'from' => 1371506400,
+         'id' => 2445,
+         'data' => '#: source_id: INKO_119177
+userdel	q3::inwork; 9796,5790 10027,5868 10254,5921
+',
+         'type' => 'handicap'
+       },
        {
          'source_id' => 'http://www.berlin.de/ba-spandau/presse/archiv/20130613.1320.386040.html',
          'until' => 1385938799,
@@ -3196,17 +3193,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Mainzer Straße (Wilmersdorf): Wochenmarkt Montag und Donnerstag 8-13 Uhr, Behinderungen möglich',
-         'from' => undef,
-         'id' => 2456,
-         'data' => '#: XXX wo genau ist der Wochenmarkt?
-	q4::temp:clock 5066,8140 5177,8139
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => undef,
          'recurring' => 1,
@@ -3278,24 +3265,15 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        {
          'source_id' => 'INKO_119665',
-         'until' => 1377871200,
-         'text' => 'Herzbergstr.(Lichtenberg): Fahrbahn zwischen Möllendorffstraße und Vulkanstraße gesperrt, ggfs. auf Gehweg ausweichen (Radfahren erlaubt), bis Ende August ',
+         'until' => 1379944800,
+         'text' => 'Herzbergstr.(Lichtenberg): Fahrbahn zwischen Möllendorffstraße und Vulkanstraße gesperrt, ggfs. auf Gehweg ausweichen (Radfahren erlaubt), bis Ende September 2013',
          'from' => 1374381000,
          'id' => 2466,
          'data' => 'userdel	q3::inwork 15513,13539 15653,13542 15724,13544 15896,13547
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20130729.0645.387322.html',
-         'until' => 1381831200,
-         'text' => 'Robert-Siewert-Str.: Bauarbeiten zwischen Brehmstr. und Zwieseler Str., Fahrbahn gesperrt, teilweise auch Einschränkungen am Geh-/Radweg, bis Mitte Oktober 2013',
-         'from' => undef,
-         'id' => 2467,
-         'data' => 'userdel	q4::inwork 19398,9833 19459,9842 19536,9853 19669,9876
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'source_id' => 'IM_020145',
@@ -3327,25 +3305,114 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_020178',
-         'until' => 1377467999,
-         'text' => 'Kastanienallee und Oderberger Str.: Straßenfest bis 25. August 2013 ',
-         'from' => 1377324347,
-         'id' => 2472,
-         'data' => 'userdel	2::temp 10881,15047 10838,14962 10723,14772 10870,14689
-userdel	2::temp 10401,14963 10723,14772 10530,14452
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => 1378072799,
          'text' => 'Gleisdreieckpark: radioeins Parkfest, Behinderungen möglich, bis 1. September 2013',
          'from' => 1377324534,
          'id' => 2473,
-         'data' => 'userdel	2::temp 8652,9870 8571,9896
+         'data' => '#: note: außerhalb der Bühnenprogrammzeiten keine Behinderungen
+userdel	q3::temp 8652,9870 8571,9896
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1380172611,
+         'text' => 'Britzer Park: Bauarbeiten, Zufahrt zur Gutschmidtstr. komplett gesperrt',
+         'from' => undef,
+         'id' => 2474,
+         'data' => 'userdel	2::inwork 12726,3870 12805,4020
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.liepnitzinsel.de/faehre.php',
+         'recurring' => 1,
+         'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+	2::temp 17391,38405 17448,38277 17692,38138
+#: XXX_prog ^^^
+',
+         'until' => undef,
+         'from' => undef,
+         'text' => 'Fähre Liepnitzsee: fährt nur ab Ende März bis Ende Oktober',
+         'type' => 'gesperrt',
+         'id' => 2475
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130827.1005.388421.html',
+         'until' => 1380146399,
+         'text' => 'Manfred-von-Richthofen-Str.: Bauarbeiten zwischen Kaiserkorso und Wolffring, Fahrbahn in Richtung Süden gesperrt, vom 09.09.2013 bis voraussichtlich zum 25.09.2013',
+         'from' => 1378591200,
+         'id' => 2476,
+         'data' => '#: XXX danach wird die Sperrung umgedreht, ebenfalls für ca. 2,5 Wochen
+#: next_check: 2013-09-24
+userdel	q4::inwork; 9099,8670 9006,8602 8919,8508 8851,8424 8807,8353
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1380578400,
+         'text' => 'Höhndorfstr.: Bauarbeiten, Fahrbahn gesperrt, vom 09.09.2013 bis zum 30.09.2013',
+         'from' => 1378591200,
+         'id' => 2477,
+         'data' => 'userdel	q4::inwork 8425,8775 8438,8676 8455,8567
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1379109599,
+         'text' => 'Totilastr.: Bauarbeiten zwischen Wittekindstr. und Alboinstr., Fahrbahn gesperrt, voraussichtlich in den ersten September-Wochen',
+         'from' => 1378332000,
+         'id' => 2478,
+         'data' => 'userdel	q4::inwork 8374,5598 8276,5601 8176,5610
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Landschaftspark Herzberge: nachts gesperrt',
+         'from' => undef,
+         'id' => 2479,
+         'data' => 'userdel	2::night 13437,10992 13471,10983
+userdel	2::night 17490,13133 17489,13125
+userdel	2::night 17671,13132 17698,13134
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20130828.1240.388504.html',
+         'until' => 1388530799,
+         'text' => 'Alt-Lübars zwischen Quickborner Straße und Zabel-Krüger-Damm: Bauarbeiten, Fahrbahn gesperrt, bis Ende 2013',
+         'from' => 1377731580,
+         'id' => 2480,
+         'data' => 'userdel	q4::inwork 6805,23554 6801,23474 6764,23396
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_020213',
+         'until' => 1378407600,
+         'text' => 'Mauerstr. (Mitte): Veranstaltung, Fahrbahn zwischen Taubenstr. und Jägerstr. gesperrt (ggfs. auf Gehweg ausweichen), Einbiegen in die Jägerstr. nicht möglich, bis zum 05.09.2013',
+         'from' => 1377665400,
+         'id' => 2481,
+         'data' => 'userdel	q2::temp 9108,11961 9144,11866
+	3::temp 9201,11968 9108,11961 9076,12054
+	3::temp 9076,12054 9108,11961 9201,11968
+	3::temp 9201,11968 9108,11961 9144,11866
+	3::temp 9144,11866 9108,11961 9201,11968
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20130830.1005.388628.html',
+         'until' => 1379541599,
+         'text' => 'Scheidemannstr.: Bauarbeiten, Fahrbahn zwischen Ebertstr. und Yitzhak-Rabin-Str. gesperrt, 02. September 2013 bis 18. September 2013 ',
+         'from' => 1377986400,
+         'id' => 2482,
+         'data' => 'userdel	q4::inwork 8119,12414 8354,12416 8400,12417 8540,12420
+',
+         'type' => 'handicap'
        }
      
 );
