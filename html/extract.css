@@ -38,7 +38,7 @@ div#map {
 
 div#intro {
     position: static;
-    margin: 0.3em;
+    padding: 0.3em;
 }
 
 div#message {
@@ -53,6 +53,8 @@ div#message {
 #sidebar_left, #footer {
     width: 24.5em;
     position: absolute;
+    
+    border-right-color: red; border-right-style: dashed;
 }
 
 #sidebar_content {
