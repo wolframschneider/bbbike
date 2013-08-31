@@ -177,8 +177,13 @@ EOF
 
 {
     my $resp = $ua316->get("$datadir/label", 'If-Modified-Since' => time2str(time));
+    if ($ENV{BBBIKE_TEST_NO_APACHE}) {
+    ok $resp->code==200, 'Probably data/label hack'
+	or diag $resp->as_string;
+    } else {
     ok $resp->code==304, 'Probably data/label hack'
 	or diag $resp->as_string;
+    }
 }
 
 while(my($url,$v) = each %contents) {
