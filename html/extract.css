@@ -73,15 +73,15 @@ table {
     border-spacing: 0px;
 }
 
-input[type=submit] {
-    margin-top: 0.5em;
-}
-
 table tr td {
     padding-left: 3px;
     padding-right: 3px;
     padding-top: 2px;
     padding-bottom: 2px;
+}
+
+input[type=submit] {
+    margin-top: 0.5em;
 }
 
 /* large green submit button, to focus user actions */
@@ -107,18 +107,15 @@ div#export_osm_too_large {
     bottom: -2px;
 }
 
-
 hr {
     margin-top: 0.2em;
     margin-bottom: 0.2em;
 }
 
-
 span#square_km_small, span#size_small, span#time_small {
     font-size: small;
     font-style: italic;
     color: #808080;
- /* grey; */
 }
 
 /* set width of input fields in left column to max. available size */
@@ -131,8 +128,6 @@ input#city, input#email {
     padding: 0.5em;
     padding-bottom: 4em;
 }
-
-
 
 img.logo {
     border: 0px;
@@ -158,14 +153,10 @@ span#maplink {
     font-size: small;
 }
 
-
-
 a {
     text-decoration: none;
     color: green;
 }
-
-
 
 .lnglatbox, .lnglatbox_toggle {
     opacity: 0.6;
