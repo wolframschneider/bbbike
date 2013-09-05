@@ -84,7 +84,7 @@ use vars qw($VERSION $VERBOSE
 	    $ampeln $qualitaet_net $handicap_net
 	    $strcat_net $radwege_strcat_net $radwege_net $routen_net $comments_net
 	    $green_net $unlit_streets_net
-	    $crossings $kr %cached_plz $net
+	    $crossings $kr $culdesac_cached %cached_plz $net
 	    $sperre_tragen $sperre_narrowpassage
 	    $overview_map $city
 	    $use_umland $use_umland_jwd $use_special_destinations
@@ -3849,26 +3849,37 @@ sub make_crossing_choose_html {
     my $i = 0;
     my %used;
     my $ecke_printed = 0;
-    foreach (@$coords_ref) {
-	if ($used{$_}) {
+    for my $c (@$coords_ref) {
+	if ($used{$c}) {
 	    next;
 	} else {
-	    $used{$_}++;
+	    $used{$c}++;
 	}
-	if (exists $crossings->{$_}) {
-	    my @kreuzung;
-	    foreach (@{$crossings->{$_}}) {
-		if ($_ ne $strname) {
-		    push(@kreuzung, $_);
+	my @kreuzung;
+	if (exists $crossings->{$c}) {
+	    for my $crossing (@{$crossings->{$c}}) {
+		if ($crossing ne $strname) {
+		    push(@kreuzung, $crossing);
 		}
 	    }
-	    if (@kreuzung == 0) {
-		# May happen if all street names at the crossing are the same
-		next;
+	}
+	if (@kreuzung == 0) {
+	    # May happen if all street names at the crossing are the same
+	    # or if there's simply no crossing. But maybe a culdesac?
+	    my $culdesac = get_culdesac_hash();
+	    if ($culdesac && $culdesac->{$c}) {
+		push @kreuzung, $culdesac->{$c};
 	    }
-	    for (@kreuzung) {
-		if (m{^\s*$}) {
-		    $_ = $no_name;
+	}
+	if (@kreuzung == 0) {
+	    # Still nothing, ignore this coord
+	    next;
+	}
+
+	{
+	    for my $kreuzung (@kreuzung) {
+		if ($kreuzung =~ m{^\s*$}) {
+		    $kreuzung = '(' . M("Straﬂe ohne Namen") . ')';
 		}
 	    }
 	    {
@@ -3890,12 +3901,12 @@ sub make_crossing_choose_html {
 	    }
 
 	    if ($use_select) {
-		$html .= "<option value=\"$_\">";
+		$html .= "<option value=\"$c\">";
 	    } else {
 		$html .= "<label>";
 		$html .=
 		    "<input type=radio name=" . $type . "c " .
-			"value=\"$_\"";
+			"value=\"$c\"";
 		if ($i++ == 0) {
 		    $html .= " checked";
 		}
@@ -7506,6 +7517,20 @@ sub all_crossings {
 	$crossings = $str->all_crossings(RetType => 'hash',
 					 UseCache => 1);
     }
+}
+
+sub get_culdesac_hash {
+    # $culdesac_cached: defined but false: no culdesac file available
+    if (!defined $culdesac_cached) {
+	eval {
+	    $culdesac_cached = Strassen->new('culdesac')->get_hashref;
+	};
+	if (!$culdesac_cached || $@) {
+	    warn "WARN: culdesac data could not be loaded: $@";
+	    $culdesac_cached = 0;
+	}
+    }
+    $culdesac_cached;
 }
 
 sub new_kreuzungen {
