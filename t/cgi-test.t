@@ -55,9 +55,9 @@ my $json_xs_tests = 4;
 my $json_xs_2_tests = 5;
 my $yaml_syck_tests = 5;
 #plan 'no_plan';
-plan tests => 116 + $json_xs_0_tests + $json_xs_tests + $json_xs_2_tests + $yaml_syck_tests;
+plan tests => 125 + $json_xs_0_tests + $json_xs_tests + $json_xs_2_tests + $yaml_syck_tests;
 
-if (!GetOptions(get_std_opts("cgidir"),
+if (!GetOptions(get_std_opts("cgidir", "simulate-skips"),
 	       )) {
     die "usage!";
 }
@@ -153,6 +153,46 @@ SKIP: {
 	{
 	    local $TODO = "Approx is too good here";
 	    on_crossing_pref_page($resp2);
+	}
+    }
+}
+
+{
+    my $resp = bbbike_cgi_geocode +{start => 'Kleine Parkstr.',
+				    via => 'Wilhelmshöhe',
+				    ziel => 'Blücherplatz',
+				   }, 'A street with culdesac';
+    on_crossing_pref_page($resp);
+    my $content = $resp->decoded_content;
+ SKIP: {
+	my $doc = libxml_parse_html_or_skip 3, $content;
+	{
+	    my $found_culdesac = !!$doc->findnodes('//select//option[normalize-space(.)="Sackgassenende, Gartenbauamt"]');
+	    ok $found_culdesac, 'Seen culdesac';
+	}
+	{
+	    my $found_culdesac = !!$doc->findnodes('//select//option[normalize-space(.)="Sackgassenende"]');
+	    ok $found_culdesac, 'Seen culdesac (default entry)';
+	}
+	{
+	    my $found_culdesac = !!$doc->findnodes('//select//option[normalize-space(.)="Sackgassenende, AGB"]');
+	    ok $found_culdesac, 'Seen culdesac, not crossing name';
+	}
+    }
+    unlike_html $content, qr{Johanniterstr.}, 'Not seen, instead culdesac (prioritized) was seen';
+}
+
+{
+    my $resp = bbbike_en_cgi_geocode +{start => 'Wilhelmshöhe',
+				       ziel => 'Dudenstr.',
+				      }, 'culdesac (English)';
+    on_crossing_pref_page($resp);
+    my $content = $resp->decoded_content;
+ SKIP: {
+	my $doc = libxml_parse_html_or_skip 1, $content;
+	{
+	    my $found_culdesac = !!$doc->findnodes('//select//option[normalize-space(.)="cul-de-sac"]');
+	    ok $found_culdesac, 'Seen culdesac (default entry; English)';
 	}
     }
 }
@@ -578,12 +618,12 @@ sub _bbbike_lang_cgi ($) {
 
 sub on_crossing_pref_page {
     my($resp) = @_;
-    like_html($resp->decoded_content, 'Genaue Kreuzung angeben:', 'On crossing/pref page');
+    like_html($resp->decoded_content, qr{(?:Genaue Kreuzung angeben|Choose crossing):}, 'On crossing/pref page');
 }
 
 sub not_on_crossing_pref_page {
     my($resp) = @_;
-    unlike_html($resp->decoded_content, 'Genaue Kreuzung angeben:', 'Not on crossing/pref page');
+    unlike_html($resp->decoded_content, qr{(?:Genaue Kreuzung angeben|Choose crossing):}, 'Not on crossing/pref page');
 }
 
 sub on_routelist_page {

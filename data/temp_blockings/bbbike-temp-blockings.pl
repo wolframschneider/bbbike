@@ -874,7 +874,7 @@ EOF
        text  => 'Platz des 4. Juli zwischen Goerzallee und Osteweg gesperrt, Sportveranstaltung. Dauer: 04.09.2004 und 05.09.2004 jeweils von 07:00 Uhr bis 20:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 2632,1706 2843,1281
+userdel	2 2624,1704 2824,1273
 EOF
      },
      { from  => $isodate2epoch->("2013-09-06 10:00:00"), # 1 Tag Vorlauf
@@ -5047,7 +5047,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003018',
        data  => <<EOF,
-userdel	2::inwork 4409,3173 4591,3089 4655,3060 4832,2975
+userdel	2::inwork 4411,3180 4587,3097 4655,3060 4832,2975
 EOF
      },
      { from  => 1152396000, # 2006-07-09 00:00
@@ -6290,7 +6290,7 @@ EOF
        text  => 'L 863 B 5 Wustermark-L 86 Ketzin OD Wernitz Straßen- u. Radwegbau Vollsperrung 16.10.2006-15.11.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -22149,16586 -22959,16242 -24275,15746
+userdel	q4::inwork -22149,16586 -22959,16242 -23588,16023 -23724,16032 -23863,15938 -24005,15824 -24275,15746
 EOF
      },
      { from  => 1161295200, # 2006-10-20 00:00
@@ -7199,7 +7199,7 @@ EOF
        text  => 'Paul-Schwarz-Promenade zwischen Krahmerstr. und Klinikum bis auf weiteres wegen Bauarbeiten gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 4835,3415 4921,3593 4970,3684 5093,3912 5145,3984 5225,4095
+userdel	2::inwork 4822,3431 4910,3599 5018,3810 5074,3900 5139,3997 5225,4095
 EOF
      },
      { from  => 1175726892, # 1176069600 2007-04-09 00:00
@@ -17726,7 +17726,7 @@ EOF
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10298,8245
-(Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11543,7369 11593,7314 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
+(Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11543,7369 11593,7314 11596,7280 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 9525,7558 9522,7624 9562,7796 9619,7930 9709,8127 9784,8209 9884,8265 10037,8269 10298,8245 10575,8218
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 10575,8218 10729,8152 10909,8003 11090,7916 11264,7882 11355,7871 11388,7777 11460,7447 11518,7314
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Tempelhofer Damm)	2::night 9525,7558 9431,7425 9386,7326 9300,7312 9302,7294 9242,7286
@@ -17734,7 +17734,7 @@ EOF
 (Eingang Peter-Strasser-Weg)	2::night 9281,7795 9240,7811
 (Nördliche Landebahn - Eingang Peter-Strasser-Weg)	2::night 9362,7616 9281,7651
 (Rundkurs auf dem Flughafen Tempelhof - Eingang Peter-Strasser-Weg)	2::night 9562,7796 9372,7798 9281,7795
-(Südliche Landebahn)	2::night 9461,7190 9509,7195 9677,7206 11332,7305 11518,7314 11593,7314
+(Südliche Landebahn)	2::night 9461,7190 9509,7195 9677,7206 11332,7305 11518,7314 11555,7314 11593,7314
 (Südliche Landebahn - Rundkurs)	2::night 11332,7305 11438,7371 11460,7447
 (Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 10204,7680 11279,7768 11388,7777 11430,7781 11460,7802
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
@@ -17749,6 +17749,7 @@ EOF
 (Flughafen Tempelhof - Eingang Oderstr.)	2::night 11598,7264 11608,7267
 (Eingang Tempelhofer Damm - südliche Landebahn)	2::night 9302,7294 9351,7241 9461,7190
 (Alter Hafen)	2::night 10204,7680 10134,7797 10076,8040 10037,8269
+(Südliche Landebahn - Eingang Oderstr.)	2::night 11555,7314 11596,7280 11608,7267
 EOF
      },
      { from  => 1304110406, # 2011-04-29 22:53
@@ -18648,7 +18649,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20101111.1155.318374.html',
        data  => <<EOF,
-userdel	q4::inwork 3983,9343 4230,9229
+userdel	q4::inwork 3983,9343 4224,9241
 EOF
      },
      { from  => 1289775600, # 2010-11-15 00:00
@@ -20580,7 +20581,7 @@ userdel	2::inwork 8336,10829 8318,10738 8270,10613 8264,10460 8237,10418 8191,10
 userdel	2::inwork 8278,10384 8263,10349 8258,10338 8249,10313 8253,10265 8260,10183 8211,10083 8145,10090 8042,10084 8040,10076 8035,10075 8027,10076 8035,10075 8027,10076
 userdel	2::inwork 8263,10349 8315,10347 8333,10167 8360,10133
 userdel	2::inwork 8270,10613 8236,10623 8199,10634
-userdel	2::inwork 8159,10430 8237,10418 8278,10384
+userdel	2::inwork 8159,10430 8199,10424 8237,10418 8278,10384
 userdel	2::inwork 8341,10721 8357,10764 8362,10779
 #: next_check ^^^
 #: last_checked ^^^
@@ -20834,6 +20835,7 @@ EOF
 #: next_check: 2013-12-04
 #: XXX danach bessere Straßenqualität? Radstreifen?
 #: osm_watch: way id="24930947" version="20"
+#: source_id: IM_020259 (zusätzlich)
 userdel	q4::inwork; 9149,20336 9235,20125 9266,20048 9300,19949 9333,19853 9355,19789
 EOF
      },
@@ -21477,12 +21479,15 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Innstr.: Bauarbeiten, Fahrbahn gesperrt',
+       text  => 'Innstr./Wildenbruchplatz: Bauarbeiten, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2013-08-08
-#: check_frequency: 30d
-userdel	q4::inwork 13301,8606 13262,8554 13217,8493
+#: last_checked: 2013-09-04 vvv
+#: check_frequency: 60d vvv
+	q4::inwork 13301,8606 13314,8624 13366,8694
+	q4::inwork 13314,8624 13218,8693
+#: check_frequency ^^^
+#: last_checked ^^^
 EOF
      },
      { from  => 1371816000, # 2013-06-21 14:00, 1 Tag Vorlauf
@@ -21739,7 +21744,7 @@ EOF
 userdel	q4::inwork 8425,8775 8438,8676 8455,8567
 EOF
      },
-     { from  => $isodate2epoch->("2013-09-05 00:00:00"),
+     { from  => $isodate2epoch->("2013-09-04 00:00:00"),
        until => $isodate2epoch->("2013-09-13 23:59:59"),
        text  => 'Totilastr.: Bauarbeiten zwischen Wittekindstr. und Alboinstr., Fahrbahn gesperrt, voraussichtlich in den ersten September-Wochen',
        type  => 'handicap',
@@ -21787,6 +21792,15 @@ EOF
        source_id => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20130830.1005.388628.html',
        data  => <<EOF,
 userdel	q4::inwork 8119,12414 8354,12416 8400,12417 8540,12420
+EOF
+     },
+     { from  => 1378332000, # 2013-09-05 00:00
+       until => 1378677599, # 2013-09-08 23:59
+       text  => 'Platz der Luftbrücke: Straße wegen Veranstaltung gesperrt, 06.09.2013 bis 08.09.2013 ',
+       type  => 'gesperrt',
+       source_id => 'IM_020269',
+       data  => <<EOF,
+userdel	2::temp 9395,8726 9364,8640 9321,8607 9233,8597
 EOF
      },
     );
