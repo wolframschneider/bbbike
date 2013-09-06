@@ -1885,6 +1885,7 @@ if ($parsefor) {
 		     radwege_exact fragezeichen
 		     Berlin.coords.data Potsdam.coords.data
 		     plaetze ampeln green nolighting
+		     culdesac
 		    )) {
 	touch $file;
     }
