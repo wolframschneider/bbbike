@@ -274,8 +274,9 @@ return {
     "Windspitzen' => 'Wind gusts",
     "mittlere Windgeschwindigkeit' => 'average wind speed",
 
-    "alter Name"        => "old name",
-    "alter Name gültig" => "old name valid",
-    'Sackgassenende'    => 'cul-de-sac',
+    "alter Name"                     => "old name",
+    "alter Name gültig"              => "old name valid",
+    'Sackgassenende'                 => 'cul-de-sac',
+    'Fehler: Sitzung ist abgelaufen' => 'Error: Session expired',
 };
 
