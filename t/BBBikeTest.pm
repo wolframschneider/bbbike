@@ -757,7 +757,7 @@ sub get_pmake () {
 sub _update_bbbike_test_data () {
     my $make = get_pmake;
     # -f BSDmakefile needed for old pmake (which may be found in Debian)
-    my $cmd = qq{cd $testdir/data-test && MFLAGS="" $make -f BSDmakefile};
+    my $cmd = qq{cd $testdir/data-test && MFLAGS="" MAKEFLAGS="" $make -f BSDmakefile};
     system $cmd;
     Test::More::diag("Error running '$cmd', expect test failures...") if $? != 0;
 }
