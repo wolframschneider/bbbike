@@ -18649,7 +18649,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20101111.1155.318374.html',
        data  => <<EOF,
-userdel	q4::inwork 3983,9343 4230,9229
+userdel	q4::inwork 3983,9343 4224,9241
 EOF
      },
      { from  => 1289775600, # 2010-11-15 00:00
@@ -20581,7 +20581,7 @@ userdel	2::inwork 8336,10829 8318,10738 8270,10613 8264,10460 8237,10418 8191,10
 userdel	2::inwork 8278,10384 8263,10349 8258,10338 8249,10313 8253,10265 8260,10183 8211,10083 8145,10090 8042,10084 8040,10076 8035,10075 8027,10076 8035,10075 8027,10076
 userdel	2::inwork 8263,10349 8315,10347 8333,10167 8360,10133
 userdel	2::inwork 8270,10613 8236,10623 8199,10634
-userdel	2::inwork 8159,10430 8237,10418 8278,10384
+userdel	2::inwork 8159,10430 8199,10424 8237,10418 8278,10384
 userdel	2::inwork 8341,10721 8357,10764 8362,10779
 #: next_check ^^^
 #: last_checked ^^^
@@ -21792,6 +21792,15 @@ EOF
        source_id => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20130830.1005.388628.html',
        data  => <<EOF,
 userdel	q4::inwork 8119,12414 8354,12416 8400,12417 8540,12420
+EOF
+     },
+     { from  => 1378332000, # 2013-09-05 00:00
+       until => 1378677599, # 2013-09-08 23:59
+       text  => 'Platz der Luftbrücke: Straße wegen Veranstaltung gesperrt, 06.09.2013 bis 08.09.2013 ',
+       type  => 'gesperrt',
+       source_id => 'IM_020269',
+       data  => <<EOF,
+userdel	2::temp 9395,8726 9364,8640 9321,8607 9233,8597
 EOF
      },
     );

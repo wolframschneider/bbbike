@@ -3844,6 +3844,8 @@ EOF
 sub make_crossing_choose_html {
     my($strname, $type, $coords_ref) = @_;
 
+    my $culdesac = get_culdesac_hash();
+
     my $html = "";
 
     my $i = 0;
@@ -3856,24 +3858,27 @@ sub make_crossing_choose_html {
 	    $used{$c}++;
 	}
 	my @kreuzung;
-	if (exists $crossings->{$c}) {
-	    for my $crossing (@{$crossings->{$c}}) {
-		if ($crossing ne $strname) {
-		    push(@kreuzung, $crossing);
+	# If there's a culdesac entry, then use it
+	if ($culdesac && exists $culdesac->{$c}) {
+	    my $culdesac_name = $culdesac->{$c};
+	    if (!defined $culdesac_name || !length $culdesac_name) {
+		$culdesac_name = M('Sackgassenende');
+	    }
+	    push @kreuzung, $culdesac_name;
+	}
+	if (@kreuzung == 0) {
+	    # Most common case: a normal crossing
+	    if (exists $crossings->{$c}) {
+		for my $crossing (@{$crossings->{$c}}) {
+		    if ($crossing ne $strname) {
+			push(@kreuzung, $crossing);
+		    }
 		}
 	    }
-	}
-	if (@kreuzung == 0) {
-	    # May happen if all street names at the crossing are the same
-	    # or if there's simply no crossing. But maybe a culdesac?
-	    my $culdesac = get_culdesac_hash();
-	    if ($culdesac && $culdesac->{$c}) {
-		push @kreuzung, $culdesac->{$c};
+	    if (@kreuzung == 0) {
+		# Still nothing, ignore this coord
+		next;
 	    }
-	}
-	if (@kreuzung == 0) {
-	    # Still nothing, ignore this coord
-	    next;
 	}
 
 	{

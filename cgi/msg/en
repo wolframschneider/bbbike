@@ -276,6 +276,6 @@ return {
 
     "alter Name"        => "old name",
     "alter Name gültig" => "old name valid",
-
+    'Sackgassenende' => 'cul-de-sac',
 };
 
