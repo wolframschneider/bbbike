@@ -14,6 +14,13 @@
 
 use strict;
 
+BEGIN {
+    if ($ENV{BBBIKE_TEST_FAST}) {
+        print "1..0 # skip BBBIKE_TEST_FAST\n";
+        exit;
+    }
+}
+
 use Test::More;
 use LWP::UserAgent;
 use URI::WithBase;

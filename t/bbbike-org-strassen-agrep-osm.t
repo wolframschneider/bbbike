@@ -3,15 +3,22 @@
 
 # Author: Slaven Rezic
 
+use strict;
+use warnings;
+
+BEGIN {
+    if ($ENV{BBBIKE_TEST_FAST}) {
+        print "1..0 # skip BBBIKE_TEST_FAST\n";
+        exit;
+    }
+}
+
 use Test::More;
 use FindBin;
 use lib ( "$FindBin::RealBin/..", "$FindBin::RealBin/../lib" );
 use Strassen::Core;
 use Time::HiRes qw( gettimeofday tv_interval );
 use Data::Dumper;
-
-use strict;
-use warnings;
 
 my $strassen = "data-osm/Berlin/strassen";
 
