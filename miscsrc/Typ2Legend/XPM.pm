@@ -17,6 +17,7 @@ package
 use strict;
 use vars qw($VERSION);
 $VERSION = '0.01';
+our $debug = 0;
 
 use Storable qw(dclone);
 
@@ -267,7 +268,7 @@ sub transform {
 	    $ret{'day'} = $day;
 	    $ret{'night'} = $night;
 	} else {
-	    warn "Cannot handle numcolors=$numcolors";
+	    warn "Cannot handle numcolors=$numcolors" if $debug >= 1;
 	}
     }
     \%ret;
