@@ -18,10 +18,9 @@ use File::stat;
 use strict;
 use warnings;
 
-my @garmin_styles = qw/cycle leisure osm bbbike/;
-plan tests => 4 + 5 * scalar(@garmin_styles);
+plan tests => 6;
 
-my $pbf_file = 't/data-osm/tmp/Cusco.osm.pbf';
+my $pbf_file = 'world/t/data-osm/tmp/Cusco.osm.pbf';
 
 if ( !-f $pbf_file ) {
     system(qw(ln -sf ../Cusco.osm.pbf t/data-osm/tmp));
@@ -30,7 +29,7 @@ if ( !-f $pbf_file ) {
 
 my $pbf_md5 = "6dc9df64ddc42347bbb70bc134b4feda";
 
-# min size of garmin zip file
+# min size of zip file
 my $min_size = 200_000;
 
 sub md5_file {
@@ -57,34 +56,24 @@ my $prefix = $pbf_file;
 $prefix =~ s/\.pbf$//;
 my $st = 0;
 
-# any style
-system(qq[world/bin/pbf2osm --garmin $pbf_file osm]);
-is( $?, 0, "pbf2osm --garmin converter" );
-my $out = "$prefix.garmin-osm.zip";
+system(qq[world/bin/pbf2osm --navit $pbf_file]);
+is( $?, 0, "pbf2osm --navit converter" );
+my $out = "$prefix.navit.zip";
 $st = stat($out) or die "Cannot stat $out\n";
 
 system(qq[unzip -t $out]);
 is( $?, 0, "valid zip file" );
 
-cmp_ok( $st->size, '>', $min_size, "$out greather than $min_size" );
+my $size = $st->size;
+cmp_ok( $size, '>', $min_size, "$out: $size > $min_size" );
 
-# known styles
-foreach my $style (@garmin_styles) {
-    system(qq[world/bin/pbf2osm --garmin-$style $pbf_file]);
-    is( $?, 0, "pbf2osm --garmin-$style converter" );
+system(qq[world/bin/extract-disk-usage.sh $out > $tempfile]);
+is( $?, 0, "extract disk usage check" );
 
-    $out = "$prefix.garmin-$style.zip";
-    system(qq[unzip -tqq $out]);
-    is( $?, 0, "valid zip file" );
-    $st = stat($out);
-    my $size = $st->size;
-    cmp_ok( $size, '>', $min_size, "$out: $size > $min_size" );
+my $image_size = `cat $tempfile` * 1024;
+$image_size *=
+  1.02;   # navit has good compression, add more to avoid false positive reports
 
-    system(qq[world/bin/extract-disk-usage.sh $out > $tempfile]);
-    is( $?, 0, "extract disk usage check" );
-
-    my $image_size = `cat $tempfile` * 1024;
-    cmp_ok( $image_size, '>', $size, "image size: $image_size > $size" );
-}
+cmp_ok( $image_size, '>', $size, "image size: $image_size > $size" );
 
 __END__
