@@ -7,6 +7,11 @@
 # OS = Ortsschild
 # OHT = Ortshinweistafel
 # 
+# Editor notes: the name mentioned here should be as spelled on the sign.
+# There are check scripts which check all names here against orte/orte2.
+# If there are differences, then the name as found in orte/orte2 should
+# be marked with a "linked" directive.
+# 
 Prenzlau	OS 41313,100608
 Prenzlau	OS 41817,103329
 Prenzlau	OS 36972,100027
@@ -166,6 +171,8 @@ Heringsdorf	OS 58487,172961
 Ahlbeck	OS 59540,172359
 Ahlbeck	OS 60363,170713
 Ahlbeck	OS 61861,170883
+#: linked: Swinoujscie
+#: XXX_prog: is there a reason why orte2 is written as latin1? backward-compat with ancient bbbike versions?
 Świnoujście	OS 62473,169641
 Korswandt	OS 58312,168956
 Ulrichshorst	OS 56709,168439
@@ -337,11 +344,11 @@ Schwanebeck|b. Berlin	OS 19931,25260
 Schwanebeck|b. Berlin	OS 19565,24028
 #: note: existiert das Schild hier noch?
 Schwanebeck|b. Berlin	OS 18073,23456
-#: note: eigentlich Schwanebeck-West vvv
-Schwanebeck|b. Berlin	OS 17622,24160
-Schwanebeck|b. Berlin	OS 17190,24695
-Schwanebeck|b. Berlin	OS 18015,25653
-#: note ^^^
+#: linked: Schwanebeck|b. Berlin vvv
+Schwanebeck-West	OS 17622,24160
+Schwanebeck-West	OS 17190,24695
+Schwanebeck-West	OS 18015,25653
+#: linked ^^^
 Schwanebeck|b. Berlin	OS 19790,24572
 Schwanebeck|b. Berlin	OS 19395,24634
 Schwanebeck-West	OS 18583,24966
@@ -358,11 +365,11 @@ Zepernick	OS 18178,26668
 Zepernick	OS 20482,28536
 Leest	OS -20616,2567
 Grube	OS -19656,2362
-#: XXX_prog: eigentlich "Dahlwitz-Hoppegarten, Gemeinde Hoppegarten", aber Check-Skripte verlangen einen gleichnamigen Ort in orte(2)-orig! vvv
-Dahlwitz	OS 26791,10388
-Dahlwitz	OS 25922,11127
-Dahlwitz	OS 26449,10953
-#: XXX_prog ^^^
+#: linked: Dahlwitz vvv
+Dahlwitz-Hoppegarten, Gemeinde Hoppegarten	OS 26791,10388
+Dahlwitz-Hoppegarten, Gemeinde Hoppegarten	OS 25922,11127
+Dahlwitz-Hoppegarten, Gemeinde Hoppegarten	OS 26449,10953
+#: linked ^^^
 Hönow	OS 26493,15515
 Hönow	OS 25528,15587
 Hönow	OS 27451,14108
@@ -449,8 +456,8 @@ Waltersdorf	OS 21535,-4790
 Waltersdorf	OS 21696,-2925
 Waltersdorf	OS 20951,-4235
 Schulzendorf|b. Eichwalde	OS 21764,-4869
-#REMOVED (existiert nicht mehr) --- Kienberg|(bei Waltersdorf)	OS 20236,-3167
-#REMOVED (existiert nicht mehr) --- Kienberg|(bei Waltersdorf)	OS 20103,-2868
+# REMOVED (existiert nicht mehr) --- Kienberg|(bei Waltersdorf)	OS 20236,-3167
+# REMOVED (existiert nicht mehr) --- Kienberg|(bei Waltersdorf)	OS 20103,-2868
 # REMOVED (tatsächlich? Müsste aber, da ja etwas weiter wieder ein Schild steht) --- Siedlung Hubertus	OS 21088,-2461
 Siedlung Hubertus	OS 21062,-2006
 Siedlung Hubertus	OS 20211,-2805
@@ -635,6 +642,7 @@ Niederfinow	OS 45322,48104
 Niederfinow	OS 42849,49552
 Trampe	OS 39350,42740
 Trampe	OS 38848,41198
+#: linked: Tuchen
 Tuchen-Klobbicke	OS 37425,39993
 Klobbicke	OS 36426,39424
 Tuchen	OS 36139,39155
@@ -711,10 +719,10 @@ Pinnow|bei Gerswalde	OS 34750,90372
 Buchholz|bei Gerswalde	OS 32377,89414
 Buchholz|bei Gerswalde	OS 31661,89289
 Sachsenhausen	OS -476,40852
-#: note: ausgeschildert ist "Mittenwalde Ortsteil Blankensee" vvv
-Blankensee|(Mittenwalde)	OS 29344,87921
-Blankensee|(Mittenwalde)	OS 27977,87375
-#: note: ^^^
+#: linked: Blankensee|(Mittenwalde) vvv
+Mittenwalde Ortsteil Blankensee	OS 29344,87921
+Mittenwalde Ortsteil Blankensee	OS 27977,87375
+#: linked: ^^^
 Mittenwalde|b. Templin	OS 26799,86909
 Mittenwalde|b. Templin	OS 24969,87287
 Herzfelde|bei Klosterwalde	OS 22917,87978
@@ -768,8 +776,8 @@ Biesendahlshof	OS 63798,89230
 Biesendahlshof	OS 63517,88597
 Niederfelde	OHT 66087,84469
 Niederfelde	OHT 66263,84195
-#: XXX_prog: eigentlich "Dallgow-Döberitz", aber Check-Skripte verlangen einen gleichnamigen Ort in orte(2)-orig!
-Dallgow	OS -9503,12227
+#: linked: Dallgow
+Dallgow-Döberitz	OS -9503,12227
 Seeburg	OS -9034,11411
 Seeburg	OS -8809,10915
 Groß Glienicke	OHT -9935,7406

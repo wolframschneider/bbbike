@@ -10453,7 +10453,7 @@ EOF
        text  => 'Bauarbeiten am Ostkreuz, Durchfahrt nicht mehr möglich',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 14911,10587 14875,10605 14843,10621
+userdel	2::inwork 14911,10587 14843,10621
 EOF
      },
      { from  => 1193776707, # 2007-10-30 21:38
@@ -13917,7 +13917,7 @@ EOF
        text  => 'L 075 Mahlow - Großziethen zw. Kreuzg. B96A u. Kleinziethen Deckeninstandsetzung Vollsperrung 27.04.2009-15.05.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 13506,-2809 13373,-3234 13321,-3678 13301,-4355 13237,-4511 13215,-4564 13289,-4660
+userdel	2::inwork 13506,-2809 13393,-3084 13373,-3234 13321,-3678 13302,-4314 13301,-4355 13237,-4511 13215,-4564 13289,-4660
 EOF
      },
      { from  => 1240783200, # 2009-04-27 00:00
@@ -18078,6 +18078,10 @@ EOF
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
+#: note: nicht gesperrt: 2010-07-09 (Fr) gegen 22 Uhr
+#: note: nicht gesperrt: 2011-07-16 (Sa) gegen 16 Uhr
+#: note: nicht gesperrt: 2012-07-19 (Do) gegen 14 Uhr
+#: note: nicht gesperrt: 2013-09-07 (Sa) gegen 13 Uhr
 userdel	2::temp 18870,5833 18932,5926
 EOF
      },
@@ -21023,6 +21027,7 @@ EOF
        until => undef,
        recurring => 1,
        text  => 'Westklüne - Ostklüne: keine offizielle Fähre, aber wenn man Glück hat, kann man per Ruderboot übergesetzt werden',
+       permanent => 1,
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX_prog temporäre Lösung für saisonale Fähren vvv
@@ -21617,6 +21622,7 @@ EOF
      { from  => undef,
        until => undef,
        text  => 'Karl-Bonhoeffer-Nervenklinik: für Unbefugte ist das Befahren nicht erlaubt',
+       permanent => 1,
        type  => 'gesperrt',
        data  => <<EOF,
 #: note: Der Hinweis existiert nur am Nordeingang, aber nicht am Südeingang
@@ -21728,13 +21734,16 @@ EOF
      },
      { from  => 1378591200, # 2013-09-08 00:00
        until => 1380146399, # 2013-09-25 23:59
-       text  => 'Manfred-von-Richthofen-Str.: Bauarbeiten zwischen Kaiserkorso und Wolffring, Fahrbahn in Richtung Süden gesperrt, vom 09.09.2013 bis voraussichtlich zum 25.09.2013',
+       text  => 'Manfred-von-Richthofen-Str.: Bauarbeiten zwischen Kaiserkorso und Bayernring, Fahrbahn in Richtung Süden gesperrt, vom 09.09.2013 bis voraussichtlich zum 25.09.2013',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130827.1005.388421.html',
        data  => <<EOF,
-#: XXX danach wird die Sperrung umgedreht, ebenfalls für ca. 2,5 Wochen
+#: XXX danach wird die Sperrung umgedreht, ebenfalls für ca. 2,5 Wochen, wird evtl. bis zum Wolffsring ausgeweitet?
+#: source_id: IM_020294
+#: last_checked: 2013-09-09
 #: next_check: 2013-09-24
-userdel	q4::inwork; 9099,8670 9006,8602 8919,8508 8851,8424 8807,8353
+userdel	q4::inwork; 9099,8670 9006,8602 8919,8508
+# REMOVED (hier noch nicht) --- userdel	q4::inwork; 8919,8508 8851,8424 8807,8353
 EOF
      },
      { from  => 1378591200, # 2013-09-08 00:00
@@ -21822,6 +21831,14 @@ EOF
        data  => <<EOF,
 userdel	2::temp 8606,16973 8677,17154
 userdel	2::temp 8503,16716 8583,16914
+EOF
+     },
+     { from  => 1378576083, # 2013-09-07 19:48
+       until => 1380499200, # 2013-09-30 02:00
+       text  => 'Ostendstr.: Einbahnstraße Richtung Osten wegen Bauarbeiten an den Straßenbahngleisen, bis 30.09.2013 02:00',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork; 19958,5950 19681,5924 19650,5920 19403,5885 19388,5883 19273,5866 19024,5830 18932,5926
 EOF
      },
     );
