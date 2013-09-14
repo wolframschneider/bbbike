@@ -164,7 +164,7 @@ Paul-Junius-Str	1 15084,13276 15082,13369 15220,13377
 #: by: Rolf Schröder <001301c0fe12$f9c9eb00$fe78a8c0@pc166>
 Marksburgstr.	1 18319,9218 18430,9199 18511,9185 18586,9172 18697,9153 18809,9133
 Griechische Allee	1 17962,6674 18005,6681 18077,6690 18125,6694 18254,6679 18339,6660 18494,6588
-Griechische Allee	1 18494,6588 18429,6582 18273,6606 18159,6642 18080,6670 18008,6672 17962,6674
+Griechische Allee	1 18494,6588 18429,6582 18273,6606 18159,6642 18079,6678 18008,6672 17962,6674
 Hardenbergplatz	1 5542,11075 5565,11147 5666,11362 5698,11333 5600,11114 5542,11075
 (Waterloo-Ufer - Zossener Str.)	1 9858,10199 9825,10206
 Greinerstr.	1 8340,3242 8327,2975
@@ -1027,7 +1027,7 @@ Lindenweg	1s:q3 -3111,18105 -3076,18053 -3038,18063
 Küsterstr.	1 -624,15494 -593,15300 -569,15167
 Straßburger Str.	1 11270,14131 11239,14123 11236,14153
 Rykestr./Knaackstr.	1 11331,14350 11374,14363 11380,14316
-#XXX --- hmmm kann doch keine Einbahnstraßenregelung hier erkennen --- Waldowallee	1 18875,9570 18916,9468
+#XXX --- hmmm kann doch keine Einbahnstraßenregelung hier erkennen --- Waldowallee	1 18878,9517 18901,9499 18916,9468
 Waldowallee	1 18916,9468 18867,9464
 Alfred-Kowalke-Str.	1 18027,11244 18059,11256 18179,11278 18229,11256
 Alfred-Kowalke-Str.	1 18229,11256 18202,11253 18061,11240 18027,11244
@@ -1091,7 +1091,7 @@ Knoten Märkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,1160
 Wollestr.	1s:q3 -10717,-1227 -10984,-1574
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12297,738
 Am Neuen Garten	1 -12332,585 -12582,127
-# REMOVED (geänderte Straßenführung, östliche Fahrbahn ist in beide Richtungen befahrbar) --- #: XXX_outdoor: überprüfen! Können Radfahrer vielleicht die linke Straßenseite nutzen? --- Humboldtring/Hans-Marchwitza-Ring: Hochstraße	3nocross -11399,-1339 -11461,-1424 -11540,-1543
+# REMOVED (geänderte Straßenführung, östliche Fahrbahn ist in beide Richtungen befahrbar) --- #: XXX: überprüfen! Können Radfahrer vielleicht die linke Straßenseite nutzen? --- Humboldtring/Hans-Marchwitza-Ring: Hochstraße	3nocross -11399,-1339 -11461,-1424 -11540,-1543
 #: by: Christoph Ewert:
 Merkurstr.	1 -8469,-2576 -8380,-2580 -8359,-2582 -8411,-2699 -8432,-2713 -8484,-2710
 Gregor-Mendel-Str.	1 -13693,-528 -13784,-537 -13948,-564 -14023,-564
@@ -1130,7 +1130,6 @@ Friedrich-Ebert-Str.: Straßenbahntrasse	3nocross -12780,-1544 -12794,-1497 -1283
 tragen (Treppe, 75 Stufen und etliche Rampenabschnitte)	0:180 -13772,-623
 #: by: rjoop
 Brücke mittlerweile gesperrt	2 -19183,7299 -19150,7320
-Prof.-Dr.-Helmert-Str.: Schranke	BNP:3 -7969,-1659
 (Kiezstr. - Wall am Kiez)	1 -13397,-1729 -13374,-1709
 Kiezstr.: Mittelstreifen	3nocross -13450,-1595 -13374,-1709 -13328,-1790
 Ruinenbergstr.	1 -13794,178 -13918,-164
@@ -1269,7 +1268,7 @@ Waldweg	1s 25496,2429 24981,2580
 Schulenburgring	1s:q3 9027,8431 9022,8581 9006,8602
 Neue Schönhauser Str.	1s:q3 10527,13257 10423,13215 10310,13227
 Kirchhofstr.	1s:q3 13188,7590 13117,7471 13029,7353
-#: next_check: 2013-09-14
+#: next_check: 2013-09-20
 #: XXX von 1s:q3 -> 1s:q4 degradiert, weil wegen der Umleitung hier mehr Verkehr ist - später wieder aufheben
 Niemannstr.	1s:q4 14254,11377 14211,11229
 Björnsonstr	1s:q1 10209,16674 10197,16528
@@ -1571,7 +1570,7 @@ Linksabbiegen in den Wolfensteindamm gefährlich/unbequem	3nocross 4772,5069 4692
 #: by ^^^
 Hauptstr.: Mittelstreifen	3nocross 6687,8385 6765,8480 6912,8617 6989,8687
 #: by: Jirka Klaue:
-Am Tierpark: Straßenbahntrasse	3nocross 18631,10167 18585,10278 18554,10354 18446,10620
+Am Tierpark: Straßenbahntrasse	3nocross 18585,10278 18554,10354 18446,10620
 Am Tierpark: Straßenbahntrasse	3nocross 18286,11275 18268,11391 18216,11656
 Mühlenstr.: Mittelstreifen ohne Überquerungshilfe	3nocross 12497,11459 12539,11416 12576,11375 12641,11288
 Mühlenstr.: Mittelstreifen ohne Überquerungshilfe	3nocross 12990,11006 13080,10956 13144,10921
@@ -1968,6 +1967,14 @@ tragen (31 Stufen oder Kinderwagenrampe)	0:40 13168,21706
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+Drängelgitter	BNP:3::trailer=10 10062,15927
+#: XXX eventuell temporär wegen der Baustraße
+#: XXX siehe auch in zebrastreifen-orig
+#: last_checked: 2013-09-13
+#: next_check: 2014-03-13
+zwei weite Drängelgitter	BNP:4::trailer=12 10038,15418
+Schranke	BNP:3 -7969,-1659
+Drängelgitter	BNP:3::trailer=10 18126,9075
 Drängelgitter	BNP:3::trailer=10 27115,11335
 Schranke	BNP:3::trailer=10 22004,17470
 zwei Drängelgitter an der Straßenbahntrasse	BNP:5::trailer=15 21860,18718
@@ -2038,6 +2045,7 @@ Schranke	BNP:3::trailer=10 -4117,15255
 Schranke	BNP:3::trailer=10 15090,11237
 #: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=7030&options=4
 #: XXX genaue Position der Schranke?
+#: prio: #C
 Schranke	BNP:3::trailer=10 -822,16535
 #: note: in Richtung Dieffenbachstr. recht eng, in die andere Richtung ist mehr Platz
 Schranke	BNP:5::trailer=10 10919,9804
@@ -2330,7 +2338,7 @@ Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2::trailer=4 14597,1012
 # XXX während der Bauarbeiten entfernt (2010-10) --- wird es jemals wieder eingesetzt? --- Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2::trailer=4 14626,10162
 #: note: 90cm Öffnung, 90cm zum versetzten Gitter -> 63cm lichte Breite
 #: note: hmmm, heute (2012-10-16) habe ich einen Radfahrer mit Croozer da durchfahren gesehen -> trailer=no -> trailer=15
-Drängelgitter	BNP:3::trailer=15 12904,10141
+Drängelgitter	BNP:3::trailer=15 12901,10134
 #: note: relativ großzügige Öffnung
 Drängelgitter	BNP:1::trailer=3 12833,9998
 Schranke (Privatstr.)	BNP:5 25039,5304
@@ -2454,8 +2462,8 @@ Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross 99
 # REMOVED (eine direkte Umleitung entlang des Bauzauns existiert) --- #: XXX eine Umleitung existiert, ist aber von der Westseite schwierig zu finden und könnte nachts gesperrt sein --- #: last_checked: 2013-05-27 --- #: next_check: 2013-08-27 --- An der Charité: wegen Bauarbeiten gesperrt	2:inwork 8828,13434 8843,13408 8808,13377 8764,13372
 # 
 #: osm_watch: way id="201628184" version="3"
-#: last_checked: 2013-05-27
-#: next_check: 2013-09-27
+#: last_checked: 2013-09-13
+#: next_check: 2014-02-13
 In den Floragärten: Baustelle	2:inwork 9895,17649 9997,17646
 # 
 #: next_check: 2013-10-06 vvv
@@ -2464,7 +2472,7 @@ Uckerpromenade: wegen LAGA gesperrt (bis Oktober 2013)	2 39671,100750 39474,1009
 Seepark: wegen LAGA gesperrt (bis Oktober 2013)	2 39754,100955 39474,100982
 #: next_check ^^^
 # 
-#: last_checked: 2013-08-13
+#: last_checked: 2013-09-11
 #: check_frequency: 60d
 Sokratesweg: Bauarbeiten, gesperrt	2:inwork 18527,9623 18520,9585
 # 
@@ -2509,7 +2517,7 @@ Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwor
 #: by: http://www.sanierung-berlin.de/sanwa/Projekte/Helsingforser_Platz/Helsingf_Platz_Fugmann_Pr_sentation.pdf
 #: by: http://www.stadtentwicklung.berlin.de/staedtebau/foerderprogramme/stadtumbau/Helsingforser-Platz.6562.0.html
 #: XXX siehe auch Einträge in handicap_s-orig
-#: last_checked: 2013-09-09
+#: last_checked: 2013-09-11
 #: check_frequency: 60d
 Helsingforser Str.: Bauarbeiten, auch der Gehweg ist nicht passierbar	2:inwork 13496,11384 13427,11431
 # 
@@ -2893,7 +2901,7 @@ Treskowallee: Straßenbahntrasse	3nocross 18631,10167 18694,10018 18703,9997 1874
 # REMOVED --- Treskowallee: Straßenbahntrasse	3nocross 18807,9746 18763,9837 18742,9903
 #: by: Christian Schweda [AM]
 #: confirmed_by: srt
-Treskowallee: Straßenbahn	3nocross 18875,9570 18865,9608 18823,9708
+Treskowallee: Straßenbahn	3nocross 18878,9517 18875,9570 18865,9608 18823,9708
 Treskowallee: Straßenbahn	3nocross 18807,9746 18823,9708 18865,9608
 #: by: Kay-Uwe Ludwig [AM] vvv
 Niehofer Str.	1 16942,16174 16815,16214 16692,16253

@@ -898,7 +898,7 @@ EOF
        text  => 'Gleim-Tunnel: Baustelle, Straße vollständig gesperrt (bis 01.10.2004)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 9917,15613 9992,15625 10122,15647
+userdel	2 9917,15613 9992,15625 10130,15647
 EOF
      },
      { from  => 1094421600, # 2004-09-06 00:00
@@ -1206,7 +1206,7 @@ EOF
        text  => 'Gleimstr. (Mitte) in beiden Richtungen zwischen Gleimtunnel und Graunstr. Baustelle, Straße vollständig gesperrt (bis 29.11.2004)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 9917,15613 9992,15625 10122,15647
+userdel	2 9917,15613 9992,15625 10130,15647
 EOF
      },
      { from  => 1098828000, # 2004-10-27 00:00
@@ -3323,7 +3323,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_002866',
        data  => <<EOF,
-userdel	q4; 17766,6616 17860,6644 17962,6674
+userdel	q4; 17766,6616 17842,6639 17860,6644 17962,6674
 EOF
      },
      { from  => 1132097451, # 2005-11-16 00:30
@@ -3360,7 +3360,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_002441',
        data  => <<EOF,
-userdel	1 17614,6571 17766,6616 17860,6644 17962,6674
+userdel	1 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
 EOF
      },
      { from  => 1130799600, # 2005-11-01 00:00
@@ -11410,7 +11410,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_008562',
        data  => <<EOF,
-userdel	q4::inwork; 17614,6571 17766,6616 17860,6644 17962,6674
+userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
 EOF
      },
      { from  => undef, # 2008-05-12 00:00 1210543200
@@ -17669,7 +17669,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015641',
        data  => <<EOF,
-userdel	q4::inwork 17962,6674 17860,6644 17766,6616 17614,6571
+userdel	q4::inwork 17962,6674 17860,6644 17842,6639 17766,6616 17614,6571
 EOF
      },
      { from  => 1273091803, # 2010-05-05 22:36
@@ -20076,6 +20076,7 @@ EOF
 #: by: http://pf-tk.de/ai1ec_event/podiumsdiskussion-wie-weiter-im-kolner-viertel/?instance_id=
 #: by: http://www.morgenpost.de/bezirke/article112374495/Fussgaengerbruecke-wird-repariert.html (Reparatur ab Juni 2013, 2 Monate Bauzeit)
 #: by: http://www.altglienicke24.de/aktuelles.html (Eröffnung Mitte September)
+#: osm_watch: way id="152354629" version="2"
 #: last_checked: 2013-08-02 (von der Bahn aus gesehen)
 #: next_check: 2013-09-15
 #: priority: #A
@@ -20468,7 +20469,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_111688',
        data  => <<EOF,
-userdel	q4::inwork; 17766,6616 17860,6644 17962,6674
+userdel	q4::inwork; 17766,6616 17842,6639 17860,6644 17962,6674
 EOF
      },
      { from  => 1341515513, # 2012-07-05 21:11
@@ -20730,11 +20731,12 @@ EOF
 userdel	2::inwork 18286,11275 18421,11344 18477,11388 18619,11463
 EOF
      },
-     { from  => 1347508800, # 2012-09-13 06:00
-       until => 1347825600, # 2012-09-16 22:00
-       text  => 'Bergstr. (Steglitz): Veranstaltung, Straße zwischen Körnerst. und Heesestr. gesperrt, 14.09.2012 06:00 Uhr bis 16.09.2012 22:00 Uhr ',
+     { from  => 1378958400, # 2013-09-12 06:00
+       until => 1379268000, # 2013-09-15 20:00
+       text  => 'Bergstr.: Veranstaltung (Bergstraßenfest), Straße zwischen Körnerstr. und Heesestr. gesperrt, bis 15.09.2013 20:00 Uhr ',
        type  => 'handicap',
-       source_id => 'IM_019185',
+       periodic => 1,
+       source_id => 'IM_020306',
        data  => <<EOF,
 userdel	q4::temp 5464,5731 5280,5714
 EOF
@@ -21554,7 +21556,7 @@ EOF
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
-	q4::temp:clock 10354,14987 10238,15316
+	q4::temp:clock 10354,14987 10240,15318
 EOF
      },
      { from  => 1372568400, # 2013-06-30 07:00
@@ -21841,7 +21843,7 @@ userdel	q4::inwork; 19958,5950 19681,5924 19650,5920 19403,5885 19388,5883 19273
 EOF
      },
      { from  => 1378332000, # 2013-09-05 00:00
-       until => 1379282399, # 2013-09-15 23:59
+       until => 1379099350, # 1379282399, # 2013-09-15 23:59
        text  => 'Behrenstr. (Mitte) Richtung Friedrichstr. zwischen Wilhelmstraße und Glinkastraße, Baustelle, Fahrtrichtung gesperrt, bis Mitte September 2013 ',
        type  => 'handicap',
        source_id => 'INKO_119615',
