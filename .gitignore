@@ -63,3 +63,7 @@ world/web/sitemap.xml.gz
 world/download/sitemap.xml.gz
 world/web/garmin/
 data/temp_blockings/bbbike-temp-blockings-optimized.pl
+BBBikeAds.pm
+BBBikeElevation.pm
+BBBikeGooglemap.pm
+BBBikeWorldDB.pm
