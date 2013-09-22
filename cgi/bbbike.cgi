@@ -867,7 +867,7 @@ if ($local_lang eq $selected_lang) {
 
 
 #warn "xxx: city: $datadir, lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
-warn "$datadir does not exists!\n" if ! -d "../$datadir";
+warn "data $datadir does not exists!\n" if ! -d "../$datadir";
 
 #if ($config_master =~ s{^(.*)\.(en)(\.cgi)$}{$1$3}) {
 
@@ -920,6 +920,11 @@ if ($osm_data) {
 
     my $geo = get_geography_object();
     my $name = $geo->{city_names};
+
+    if (!$name) {
+	warn "Alert: No city name, reset name=$city, no osm data given?\n";
+	$name = $city;
+    }
 
     $local_city_name = select_city_name($city, $name, $lang);
     $en_city_name = select_city_name($city, $name, "en");
