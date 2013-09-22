@@ -28,9 +28,9 @@ Rasthof Avus: zweite Möglichkeit nach rechts	CP; 1939,10446 1870,10406 1833,1042
 bereits an der Ampel am Ringcenter die Straßenseite wechseln	PI; 15361,12071 15294,11964 15317,11953
 bereits an der Ampel "Am Containerbahnhof" die Straßenseite wechseln	PI; 15420,12178 15443,12222 15350,12270
 bis zur Ampel an der Scharnweberstr. auf dem linken Gehweg vorfahren	CP; 15317,11953 15294,11964 15248,11880
-bereits bei der Fußgängerampel am Lützowplatz die Straßenseite wechseln	PI; 6824,10904 6873,11011 6732,11106
+bereits bei der Fußgängerampel am Lützowplatz die Straßenseite wechseln	PI; 6824,10904 6873,11011 6742,11099
 bereits bei der Ampel an der Corneliusstr. die Straßenseite wechseln	PI; 6880,11110 6882,11061 6873,11011 7002,11034
-auf linken Gehweg fahren, Straßenseite an der Corneliusstr. wechseln	CP; 6732,11106 6873,11011 6882,11061
+auf linken Gehweg fahren, Straßenseite an der Corneliusstr. wechseln	CP; 6742,11099 6873,11011 6882,11061
 bereits an der Kreuzung An der Urania/Kurfürstenstr. die Straßenseite wechseln	PI; 6740,10755 6685,10690 6745,10619
 bereits an der Kreuzung Sachsendamm/Dominicusstr./Ebersstr. die Straßenseite wechseln	PI; 6935,8208 7001,8161 7250,8223
 #: XXX_prog: RL:ja, GPS:nein
@@ -46,7 +46,7 @@ zur Pasewalker Straße: bei der Ampel an der Rothenbachstr. die Straßenseite wech
 abbiegender Waldweg zur Köpenicker Str. ist nicht ausgeschildert	CP2; 20869,7116 20887,7267
 abgehender Waldweg ist etwas versteckt, Bordstein muss überquert werden	CP2; 20887,7267 20869,7116
 #: XXX_prog: RL:ja, GPS:nein (gehört das nicht zu comments_misc?)
-Zugang durch Betonabsperrung	CP2; 21222,12501 21190,12515
+Zugang durch Betonabsperrung	CP2; 21221,12484 21190,12515
 #: XXX_prog: RL:ja, GPS:nein
 am Gartenbauamt abbiegen	CP2; 7658,11947 7634,11920
 Schillerstr. Richtung Ernst-Reuter-Platz: zunächst linken Gehweg bis zur Ampel am Ernst-Reuter-Platz benutzen	CP; 4574,11587 4900,11626 4838,11697
@@ -75,9 +75,9 @@ Kopernikusstr./Warschauer Str.: Fußgängerampel auf der linken Seite benutzen	CP;
 #: XXX_prog: RL:ja, GPS:nein (in der Realität kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert)
 #: XXX eventuell wird es hier in Zukunft Verbesserungen geben, siehe BVV-Beschluss
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3277&options=4
-#: last_checked: 2013-04-30
-#: next_check: 2013-09-30
-Rennbahnstr./Bernkasteler Str.: Fußgängerampel auf der linken Seite zum Überqueren der Berliner Allee benutzen	CP; 14510,16916 14559,16912 14673,16895
+#: last_checked: 2013-09-06
+#: check_frequency: 150d
+Rennbahnstr./Bernkasteler Str.: Fußgängerampel auf der linken Seite zum Überqueren der Berliner Allee benutzen	CP; 14528,16910 14558,16907 14673,16895
 Wisbyer Str. Richtung Dunckerstr.: bereits an der Prenzlauer Allee den linken Gehweg benutzen	PI; 12090,16199 12012,16250 11925,16086
 Stahlheimer Richtung Wisbyer Str.: Fußgängerampel auf der linken Seite zum Überqueren der Wisbyer Str. benutzen	CP; 11618,16183 11727,16358 11673,16367
 Varnhagenstr Richtung Wisbyer Str.: linken Gehweg bis zur Fußgängerampel benutzen	CP; 11680,16151 11808,16343 11750,16354
@@ -111,7 +111,7 @@ Lietzenburger Str. - Rankestr.: bereits an der Ampel Bundesallee/Lietzenburger S
 weiter links auf Uferweg	CP; 6334,14756 5972,14820 5873,14847
 An der Wuhlheide - Wuhlewanderweg: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21470,5809 21569,5730 21596,5693 21602,5685 21744,5804
 #: XXX_prog: RL:ja, GPS:nein
-An der Wuhlheide - Alte Försterei: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21958,6248 22000,6245
+An der Wuhlheide - Alte Försterei: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21653,6037 21737,6068 21832,6129 21869,6190 21958,6248 22000,6245
 Wuhlewanderweg - Lindenstr.: zunächst linken Gehweg benutzen, an der Cardinalstr. oder Ampel Joachimstr. die Straßenseite wechseln	CP; 21744,5804 21602,5685 21706,5541
 Mariendorfer Damm - Am Teltowkanal: bereits an der Ullsteinstr. auf den linken Gehweg wechseln	PI; 9207,5185 9196,5272 9171,5263
 # REMOVED (-> routing_helper-orig) --- #: note: schlecht passierbarer Mittelstreifen --- Jerusalemer - Leipziger Str.: zunächst linken Gehweg benutzen, an der Ampel Jerusalemer Str. die Straßenseite wechseln	CP; 9892,11752 9896,11703 9898,11679 9981,11689
@@ -129,7 +129,7 @@ dem Schotterweg folgen	CP; 24210,37562 24193,37725 24208,37830
 Hauptstr.: bereits an der Gustav-Holzmann-Str. die Gehwegseite wechseln	PI; 16302,9865 16261,9925 16049,9749
 Hauptstr.: wegen Straßenbahntrasse zunächst auf der linken Gehwegseite weiterfahren und an der nächsten Ampel die Gehwegseite wechseln	CP; 16049,9749 16261,9925 16187,10033
 Rollbergstr. - Karl-Marx-Str.: zunächst auf dem linken Gehweg bleiben, an der Ampel Anzengruberstr. die Straßenseite wechseln	CP; 12528,8205 12714,8249 12689,8289
-zunächst auf dem linken Gehweg des Weißenseer Wegs bleiben, nächste Möglichkeit (Bernhard-Bästlein-Str. oder Landsberger Allee) zur Querung benutzen	CP; 15363,13531 15436,13780 15354,13998
+zunächst auf dem linken Gehweg des Weißenseer Wegs bleiben, nächste Möglichkeit (Bernhard-Bästlein-Str. oder Landsberger Allee) zur Querung benutzen	CP; 15374,13542 15436,13780 15354,13998
 #: note: längere Durchfahrt, deshalb ist CS; hier OK:
 #: XXX_prog: RL:ja, GPS:nein
 zur Müggelstr. Hausdurchfahrt benutzen	CS; 14856,11740 14837,11706
@@ -194,7 +194,8 @@ Kehlheimer/Würzburger: Queren der Lietzenburger über Kfz-Furt möglich	CP; 5894,1
 Kehlheimer/Würzburger: Queren der Lietzenburger über Kfz-Furt möglich	CP; 5909,10353 5898,10318 5894,10287
 das Portal des Anhalter Bahnhofs links liegen lassen	CP2; 8938,10872 8912,10846
 (Geßlerstr. - Monumentenstr.): Zufahrt über den Parkplatz an der Sportanlage	CP2; 7970,8886 7964,9060
-(Geßlerstr. - Monumentenstr.): Ausgeschildert als Monumentenstr. 13 a-c	CP2; 8014,9126 8009,9063
+#: note: 13a-c auf der einen Straßenseite, 13d auf der anderen
+(Geßlerstr. - Monumentenstr.): ausgeschildert als Monumentenstr. 13 a-c bzw. 13 d	CP2; 8014,9126 8009,9063
 (Wintgensstr. - General-Pape-Str.): Zufahrt durch Tor im Wohnhaus, seitlich am Torgitter vorbei	CP2; 8260,7911 8207,7909
 rechts an der Tiefgarageneinfart vorbei, Vorsicht Kette!	CP; 13385,13992 13485,14054 13585,14117
 Vorsicht Kette! (auf Höhe der Tiefgarageneinfahrt)	CP; 13585,14117 13485,14054 13385,13992
@@ -218,7 +219,7 @@ Theodor-Heuss-Weg: beginnt links vom Spielplatz der Kita	CP2; 9250,14658 9223,14
 zur Gustav-Heinemann-Brücke durch schmalen Durchbruch in der Böschung	CP2; 8032,12889 8053,12871
 zum Spreeufer: den Garten hinunter, am Ende ist ein Durchbruch nach rechts	CP2; 8116,12938 8053,12871
 zum Fußgängertunnel S-Bhf Jungfernheide: Über den Parkplatz zum S-Bahn-Zugang	CP2; 3320,13796 3365,13695
-Zufahrt zu den Grundstücken direkt am Bahndamm nehmen	CP2; 3717,13743 3508,13727
+Zufahrt zu den Grundstücken direkt am Bahndamm nehmen	CP2; 3713,13787 3508,13727
 Zufahrt zur Kolonie ist schwierig zu finden (enges Tor)	CP2; 10190,16930 10209,16674
 #: XXX_prog mit einer Punkt-Penalty versehen, wenn das möglich ist vvv
 Drängelgitter auf der linken Seite unter der Hochbahn	CP; 10754,16305 10997,16280 11295,16199
@@ -237,8 +238,8 @@ Prenzlauer Allee - Kanzowstr.: bereits an der Fußgängerampel kurz vor der Kreuzu
 Frankfurter Allee - Liebigstr.: frühzeitig auf den Gehweg wechseln (wegen Grünfläche)	PI; 14208,12235 14020,12261 13885,12279 13927,12370
 Falkenberger Chaussee: Zufahrt zur Wartenberger Str.	CS; 17400,17790 17440,17746 17531,17802 17650,17875
 Langhansstr. - Allee der Kosmonauten: Zufahrt zum Parkweg schwierig einzusehen, einfach geradeaus fahren	CP2; 19818,14064 19847,14019
-In den Gärten - Marienfelder Chaussee: 100m auf der linken Straßenseite vorfahren	CP; 11724,1629 11765,1522 11865,1564
-Marienfelder Chaussee - In den Gärten: bereits am Quarzweg die Straßenseite wechseln	PI; 11475,1404 11765,1522 11724,1629
+In den Gärten - Marienfelder Chaussee: 100m auf der linken Straßenseite vorfahren	CP; 11724,1629 11744,1577 11765,1522 11865,1564
+Marienfelder Chaussee - In den Gärten: bereits am Quarzweg die Straßenseite wechseln	PI; 11476,1398 11765,1522 11744,1577 11724,1629
 Lange Brücke - Freundschaftsinsel: wegen der Tramtrasse bereits vor der Langen Brücke die Straßenseite wechseln	PI; -12758,-1654 -12730,-1681 -12659,-1700 -12567,-1817 -12396,-1681
 Freundschaftsinsel - Potsdam Hbf: wegen der Tramtrasse zunächst auf dem Gehweg bis zur nächsten Ampel vorfahren	CP; -12396,-1681 -12567,-1817 -12493,-1896
 Zum Barnimer Dörferweg: am Waidmannsluster Damm auf den Gehweg fahren, nicht auf die Radspur fahren (wegen eines nicht überwindbaren Geländers)	PI; 1858,20740 1808,20817 1787,20836 1750,20868 1712,20907 1819,21116
@@ -308,9 +309,10 @@ Darbystr. - Falkenseer Chaussee: zunächst auf dem linken Gehweg bis zur Frankenw
 B1 - Ilsensteinweg: bereits an der Ampel Spanische Allee die Gehwegseite wechseln	PI; -1646,2434 -1626,2441 -1724,2743
 Ilsensteinweg - B1: ggfs. die Ampel an der Spanischen Allee zur rechten Hand zum Überqueren der Straße benutzen	CP; -1724,2743 -1626,2441 -1340,2554
 Theodorstr. - Alt-Mahlsdorf: ggfs. die nächste Ampel benutzen	CP; 24907,11186 24893,11252 24824,11256
-Alt-Mahlsdorf - Theodorstr.: frühzeitig auf den linken Gehweg wechseln	PI; 25144,11215 24893,11252 24907,11186
+Alt-Mahlsdorf - Theodorstr.: frühzeitig auf den linken Gehweg wechseln	PI; 25138,11215 24893,11252 24907,11186
 Daumstr. - Glindowseestr.: bereits an der Kreuzung Daumstr./An den Rohrbruchwiesen die Straßenseite wechseln	PI; -1675,16813 -1710,16735 -1555,16696
 Glindowseestr. - Daumstr.: zunächst auf der linken Gehwegseite fahren und dann die Straßenseite wechseln	CP; -1555,16696 -1710,16735 -1746,16667
+Langer-See-Str. - Daumstr.: zunächst auf der linken Gehwegseite bis zur Ampel fahren	CP; -1857,16766 -1710,16735 -1675,16813
 #: by: Andreas Titz vvv
 # Liebigstr.
 Am Ende der Straße RECHTS neben dem Tor weiterfahren	CP; -1100,39025 -965,39065 -909,39073
@@ -331,10 +333,10 @@ Genslerstr. - Am Wasserwerk: zum Überqueren der Landsberger Allee Fußgängerampel
 Landsberger Allee - Am Wasserwerk: zum Linksabbiegen entweder schon an der Siegfriedstr. die Straßenseite wechseln oder die Fußgängerampel hinter der Einmündung benutzen	PI; 16852,14412 16632,14390 16634,14373 16659,14192
 #: XXX_indoor ^^^
 Stubenrauchstr. - Wegerichstr.: Fußgängerübergang am Glockenblumenweg benutzen	CP; 16547,2680 16475,2586 16538,2543
-Mühlenstr. - Vinetastr.: Fußgängerampel auf der linken Seite zum Überqueren der Kreuzung nutzen	CP; 10862,17087 10927,17022 11267,17017
-Vinetastr. - Berliner Str.: Fußgängerampel auf der rechten Seite zum Überqueren der Kreuzung nutzen	CP; 11267,17017 10927,17022 10975,16896
-Vinetastr. - Brennerstr.: Fußgängerampel auf der rechten Seite zum Überqueren der Kreuzung nutzen	CP; 11267,17017 10927,17022 10656,17018
-Vinetastr. - Mühlenstr.: die Fahrradampel links benutzen	CP; 11267,17017 10927,17022 10862,17087
+Mühlenstr. - Vinetastr.: Fußgängerampel auf der linken Seite zum Überqueren der Kreuzung nutzen	CP; 10862,17087 10927,17022 11267,17027
+Vinetastr. - Berliner Str.: Fußgängerampel auf der rechten Seite zum Überqueren der Kreuzung nutzen	CP; 11267,17027 10927,17022 10975,16896
+Vinetastr. - Brennerstr.: Fußgängerampel auf der rechten Seite zum Überqueren der Kreuzung nutzen	CP; 11267,17027 10927,17022 10656,17018
+Vinetastr. - Mühlenstr.: die Fahrradampel links benutzen	CP; 11267,17027 10927,17022 10862,17087
 # REMOVED (alle Wege sind jetzt eingezeichnet) --- Admiralbrücke - Böckhstr.: Gehweg zur Böckhstr. benutzen	PI; 11177,9935 11170,9919 11163,9903 11200,9889
 # REMOVED (nicht nötig, direktes Überqueren möglich) --- Allee der Kosmonauten - Annenstr.: Zebrastreifen zum Überqueren der Straßenbahntrasse benutzen	CP; 20281,14361 20269,14256 20376,14244
 # REMOVED (nicht nötig, direktes Überqueren möglich) --- Annenstr. - Allee der Kosmonauten.: Zebrastreifen zum Überqueren der Straßenbahntrasse benutzen	CP; 20376,14244 20269,14256 20241,14016
@@ -378,7 +380,7 @@ Kleine Andreasstr.: Einfahrt befindet sich links von der Kaiser's-Parkplatzeinfa
 Zitadelle - Am Juliusturm: bis zur Ampel am Zitadellenweg auf dem linken Gehweg vorfahren	CP; -2668,14635 -2656,14582 -2652,14559 -2646,14525 -2597,14532
 Am Juliusturm - Zitadelle: an der Ampel "An der Spreeschanze" die Straßenseite wechseln und zurückfahren	CP; -2793,14505 -2646,14525 -2652,14559 -2656,14582 -2668,14635
 Loewenhardtdamm - Höhndorfstr.: bereits an der General-Pape-Str. auf den linken Gehweg wechseln	PI; 8306,8722 8334,8655 8438,8676
-Ausgeschildert zum Bayernring	CP2; 8531,8404 8455,8567
+Ausgeschildert zum Bayernring	CP2; 8531,8404 8454,8574
 Mehringdamm - Wilhelmshöhe: bereits an der Fidicinstr. die Straßenseite wechseln	PI; 9224,9053 9225,9111 9186,9107
 #: by: Steini (immerlocker)
 Kaiser-Wilhelm-Str. - Langkofelweg: bereits an der Ampel Edenkobener Weg die Straßenseite wechseln	PI; 6996,3761 6957,3699 6998,3596
@@ -445,6 +447,7 @@ Munsterdamm - Kottesteig: bereits 40m vor der Kreuzung die Straßenseite wechseln
 Schorlemerallee - Albrecht-Thaer-Weg: bereits an der Kreuzung Schweinfurthstr. die Straßenseite wechseln	PI; 3306,6453 3347,6460 3449,6863
 Alemannenallee - Badenallee: Fußgängerampel rechts zum Überqueren der Heerstr. benutzen	CP; 1065,11216 943,11302 743,11462
 Badenallee - Alemannenallee: Fußgängerampel links zum Überqueren der Heerstr. benutzen	CP; 743,11462 943,11302 1065,11216
+#: XXX_prog: RL:ja, GPS:ja (default, bestätigt)
 bereits an der Ampel Parchimer Allee/Onkel-Bräsig-Str. auf die linke Straßenseite wechseln	PI; 13305,4504 13266,4503 13098,4452
 Weg am Marzahn-Hohenschönhauser Grenzgraben: zum Überqueren der Boxberger Str. rechts halten, um Bordsteine zu vermeiden	CP; 19313,16130 19361,16145 19427,16179
 Weg am Marzahn-Hohenschönhauser Grenzgraben: zum Überqueren der Boxberger Str. links halten, um Bordsteine zu vermeiden	CP; 19427,16179 19361,16145 19313,16130
@@ -499,6 +502,7 @@ Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichsh
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17736,5441
 Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17156,6235 17056,6133 17070,6115
 Indira-Gandhi-Str. - Orankeweg: bereits an der Fußgängerampel Gounodstr. auf den linken Gehweg wechseln	PI; 14597,15970 14609,15921 14720,15905
+#: note: wobei der Bordstein in Höhe Gleisdreieckpark relativ flach ist und man hier auch abbiegen könnte
 Köthener Brücke - Gleisdreieckpark: ab der Ampel den linken Gehweg benutzen	PI; 8430,10710 8362,10779 8357,10764
 Richtung Blockdammwegbrücke fahren	PI; 17729,8850 17754,8863 17760,8853
 Podbielskiallee - Pacelliallee: Fußgängerampel zum Linksabbiegen benutzen	CP; 2953,6743 2723,7029 2714,6857
@@ -512,7 +516,7 @@ Park am Gleisdreieck: rechten Weg wählen	CS; 8357,10764 8340,10753 8318,10738
 Park am Gleisdreieck: rechten Weg wählen	CS; 8336,10829 8318,10738
 Mahlerstr. - Tassostr.: Überquerungsmöglichkeit über die Berliner Allee auf der linken Seite	CP; 13667,15836 13623,15954 13614,15984
 Tassostr. - Mahlerstr.: Überquerungsmöglichkeit über die Berliner Allee auf der rechzten Seite	CP; 13614,15984 13623,15954 13667,15836
-Storkower Str. - Schneeglöckchenstr.: hinter Burger King abbiegen	CP; 14006,13761 13964,13830 14037,13842
+Storkower Str. - Schneeglöckchenstr.: hinter Burger King abbiegen	CP; 14006,13761 13964,13830 14032,13823 14049,13846
 Karl-Lade-Str.: links von der Straßenbahnstrasse halten	CP2; 14821,13674 14995,13645
 Karl-Lade-Str.: rechts von der Straßenbahnstrasse bleiben	CP2; 14821,13674 14987,13621
 (Fritz-Lesch-Str. - Orankestr.): frühzeitig auf den linken Gehweg wechseln (wegen Bordstein)	CP2; 15311,15679 15313,15848
@@ -523,3 +527,12 @@ Jüdenstr. - Falkenseer Platz: auf den linken Gehweg bis zum Falkenseer Platz fah
 Am Juliusturm - Jüdenstr.: bereits an der Ampel Hoher Steinweg auf den linken Gehweg wechseln	PI; -3150,14631 -3209,14662 -3239,14641
 Bahnhofstr. - Am Maria-Jankowski-Park: bereits an der Ampel Bahnhofstr./Lindenstr. auf den linken Gehweg wechseln	PI; 21954,5229 22043,5346 22087,5404 22018,5452
 Ausgeschildert als "Pieskower Weg"	CP; 13123,15244 13094,15196 13131,15175
+Apollofalterallee - Lindenschwärmerweg: spätestens an der Rapsweißlingstr. auf die Fahrbahn wechseln, an der Einmündung Lindenschwärmerweg fehlt eine Bordsteinabsenkung am Radweg	PI; 21249,11042 21308,11075 21294,11097
+Am Stadtpark: linken Gehweg benutzen, um Bordstein zu vermeiden	CP2; 15357,12813 15395,12762
+Hellersdorfer Weg: für die Weiterfahrt Richtung Norden empfiehlt es sich, an der Kreuzung Landsberger Chaussee die Fahrbahn und nicht den Gehweg zu benutzen	PI; 23162,16095 23175,16119 23193,16159 23263,16354
+Mahlsdorfer Str.: zur Weiterfahrt Richtung B1 oder Dorfstr. nicht den Radweg benutzen, da hier keine Verbindung besteht	CP2; 26280,15332 26332,15381
+Kyritzer Str.: nicht ausgeschildert	CP2; 22573,15552 22579,15416
+Buckower Damm - Britzer Park: bereits an der Kreuzung Mohriner Allee auf den linken Gehweg wechseln	PI; 12564,4308 12637,4014 12805,4020
+Britzer Park - Buckower Damm: linken Gehweg bis zur Ampel benutzen	CP; 12805,4020 12637,4014 12655,3882
+Magdalenenstr. - Frankfurter Allee: linken Gehweg bis zur Ampel benutzen	CP; 16158,12191 16127,11950 16207,11937
+Malchower Chaussee - Hohenschönhauser Weg: bereits an der Kreuzung Malchower Chaussee/Ortnitstr. auf den linken Radweg wechseln	PI; 15611,18603 15600,18551 15825,18385

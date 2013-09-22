@@ -5,8 +5,8 @@ Hackescher Markt	Pl 10264,13097
 Rosenthaler Platz	Pl 10177,13766
 Kleistpark	Pl 7479,9357
 Hochmeisterplatz	Pl 3431,9763
-Fehrbelliner Platz	Pl 4347,9290
-Julius-Morgenroth-Platz	Pl 4230,9229
+Fehrbelliner Platz	Pl 4342,9301
+Julius-Morgenroth-Platz	Pl 4224,9241
 Emser Platz	Pl 4708,9498
 Walther-Schreiber-Platz	Pl 5370,6486
 Bundesplatz	Pl 5357,8013
@@ -71,7 +71,7 @@ Leopoldplatz (Wedding)	Pl 7277,15586
 Leopoldplatz (Lichtenrade)	Pl 10831,-2919
 Max-Josef-Metzger-Platz	Pl 7474,15408
 Pekinger Platz	Pl 6964,14849
-Falkplatz	Pl 10122,15647
+Falkplatz	Pl 10130,15647
 Humannplatz	Pl 11455,15916
 Antonplatz	Pl 13512,15909
 Arnold-Schönberg-Platz	Pl 14063,15976
@@ -118,7 +118,7 @@ Boddinplatz	Pl 12104,8299
 Kläre-Bloch-Platz	Pl 2953,11830
 Schmetterlingsplatz	Pl 693,9129
 Friedrich-Hollaender-Platz	Pl 5529,10453
-Inge-Beisheim-Platz	Pl 8473,11634
+Inge-Beisheim-Platz	Pl 8473,11638
 Platz am Königstor	Pl 11706,13635
 Akademieplatz	Pl 19206,2848
 Dorothea-Schlegel-Platz	Pl 9108,12635
@@ -126,7 +126,7 @@ Heiligegeistkirchplatz	Pl 10360,12793
 Helmholtzplatz	Pl 11368,15301
 Wilhelm-Hasenclever-Platz	Pl 7231,16418
 Adam-Kuckhoff-Platz	Pl 4788,7257
-Liane-Berkowitz-Platz	Pl 4886,7402 4884,7327 4836,7327 4886,7402
+Liane-Berkowitz-Platz	Pl 4874,7382 4874,7326 4836,7327 4874,7382
 Ahrensfelder Platz	Pl 21251,18508
 Hanne-Sobek-Platz	Pl 9134,15953
 Ludwig-Beck-Platz	Pl 4385,4032 4234,4020 4307,3959
@@ -160,7 +160,6 @@ Hohenzollernplatz (Nikolassee)	Pl -3692,2549
 Helene-Jung-Platz	Pl 17750,152
 Alice-Herz-Platz	Pl 24179,12260
 Graffplatz	Pl 26605,13217
-Cajamarcaplatz	Pl 17782,5698
 Danewendplatz	Pl 15167,23470
 Platz an den Kasematen	Pl 16444,23298
 Schmiedebankplatz	Pl 16165,23168
@@ -195,7 +194,7 @@ Roederplatz	Pl 15513,13539
 Kamisardenplatz	Pl 12067,23241
 Plaza San Rafael del Sur	Pl 13325,10565
 Letteplatz	Pl 7998,17564
-Fred-Löwenberg-Platz	Pl 21616,13900
+Fred-Löwenberg-Platz	Pl 21615,13892
 Marga-Meusel-Platz	Pl -745,3401
 Havelkaiser-Platz	Pl -2334,16624
 Lipschitzplatz	Pl 14633,2145
@@ -216,6 +215,7 @@ Frans-Hals-Platz	Pl 25805,12906
 Platz der Märzrevolution	Pl 9764,12492
 Marion-Gräfin-Dönhoff-Platz	Pl 9981,11689
 Platz des Volksaufstandes von 1953	Pl 9058,11564
+Platz A	Pl 12799,19242
 Kottbusser Tor	Pl 11393,10390
 Anhalter Bahnhof	Pl 8947,10956
 Flughafen Tempelhof	Pl 9884,8265
@@ -235,7 +235,7 @@ Europa-Center	Pl 5782,10884
 Olympiastadion	Pl -514,11991
 Waldbühne	Pl -1398,11803
 Volkspark Jungfernheide	Pl 2431,15290
-Volkspark Wilmersdorf	Pl 5669,8207
+Volkspark Wilmersdorf	Pl 5651,8218
 Schloß Charlottenburg	Pl 3034,12502
 Schloß Bellevue	Pl 7039,12314
 Schloß Schönhausen	Pl 10344,19181
@@ -243,6 +243,7 @@ Jagdschloß Grunewald	Pl 880,6645
 Lehrter Bahnhof	Pl 7880,13315
 Hauptbahnhof	Pl 7880,13315
 Siegessäule	Pl 6828,12031
+Müggelturm	Pl 25676,1508
 Insel der Jugend	Pl 15675,9090
 Johannesstift	Pl -3953,17941
 Seebad Wendenschloß	Pl 23869,1282
@@ -267,9 +268,27 @@ Modersohnbrücke	Pl 14096,11134
 Warschauer Brücke	Pl 13476,11174
 Weidendammer Brücke	Pl 9280,12883
 Bösebrücke	Pl 9883,16557
+Eugen-Kleine-Brücke	Pl 3696,1445
 Schleuseninsel im Tiergarten	Pl 5758,11630
 Eiskeller	Pl -7964,19490
 Ahrensfelder Berge	Pl 22382,16961
+Zentraler Festplatz	Pl 3546,16143
+Revierförsterei Tegelsee	Pl -51,19654
+Schleuse Plötzensee	Pl 4809,15214
+Schleuse Charlottenburg	Pl 2548,13796
+Rudolf-Virchow-Krankenhaus	Pl 6537,15156
+DRK Kliniken Berlin-Westend	Pl 1971,12368
+Waldfriedhof Zehlendorf	Pl -2671,1988
+Waldfriedhof Müggelheim	Pl 29116,502
+Waldfriedhof Grünau	Pl 23469,640
+Waldfriedhof Oberschöneweide	Pl 19372,6579
+Wasserwerk an der Wuhlheide	Pl 19463,7117
+Avus Innenraum	Pl 1692,10348
+Avus Nordkurve	Pl 1870,10406
+Julius-Hirsch-Sportanlage	Pl 556,10122
+Hans-Rosenthal-Sportanlage	Pl 743,9772
+Wally-Wittmann-Sportanlage	Pl 863,10363
+Sportplatz Maikäferpfad	Pl 748,9981
 Botanischer Garten [Eingang Unter den Eichen]	Pl 4153,5001
 Botanischer Garten [Eingang Königin-Luise-Platz]	Pl 3707,5758
 Gärten der Welt [Eingang Eisenacher Str.]	Pl 22059,15153
@@ -316,6 +335,7 @@ Schloß Babelsberg (Potsdam)	Pl -10709,-62
 Schloß Lindstedt (Potsdam)	Pl -16006,-80
 Pfingstberg (Potsdam)	Pl -12796,1037
 Stern-Center (Potsdam)	Pl -7749,-4297
+Neuer Markt (Potsdam)	Pl -12865,-1462
 Habermannplatz	Pl 4715,8977
 Birger-Forell-Platz	Pl 4788,8318
 Brabanter Platz	Pl 4473,8351

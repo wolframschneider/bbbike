@@ -293,6 +293,13 @@ if ($do_linklist) {
 	}
 
 	if (!defined $current_ignore_routelist) {
+	    # This handles the directive "XXX_prog: no_routelist".
+	    # Naming here is somewhat ambiguous: the directive
+	    # "ignore_routelist" means that an entry should not appear
+	    # in radroute.html at all. "XXX_prog: no_routelist" just
+	    # means that the "Routenliste" button is missing in
+	    # radroute.html, but the entry is still there with a
+	    # "Karte" button.
 	    $current_ignore_routelist = ($s->get_directive->{XXX_prog}->[0]||'') eq 'no_routelist' ? 1 : 0;
 	}
 
@@ -425,7 +432,7 @@ EOF
 	$html .= ' id="submitbutton"';
     }
     $html .= <<EOF;
- type="submit" onclick='this.form.showroutelist.value="0";' value="@{[ CGI::escapeHTML($maplabel) ]}" />
+ type="submit" onclick='this.form.showroutelist.value="0"; this.form.imagetype.value="$imagetype";' value="@{[ CGI::escapeHTML($maplabel) ]}" />
  <input type="hidden" name="showroutelist" value="0" />
 EOF
     if ($routelistlabel) {

@@ -51,7 +51,7 @@ my %older_file_to_cat;
      "qualitaet"      => [qw(Q0 Q1 Q2 Q3)],
      "radwege"	      => [qw(RW0 RW1 RW2 RW3 RW4 RW5 RW6 RW7 RW8 RW9 RW10 RW)],
      "rbahn"	      => [sub { /^R(?:|0|A|B|C|Bau|G|P)(?:::(?:_?Tu_?|Br))?$/ }],
-     "sbahn"	      => [sub { /^S(?:0|A|B|C|Bau)(?:::_?Tu_?)?$/ }],
+     "sbahn"	      => [sub { /^S(?:0|A|B|C|Bau)(?:::(?:_?Tu_?|Br))?$/ }],
      "sehenswuerdigkeit" => [qw(F:SW SW F:Shop Shop),
 			     sub {
 				 my $anchor  = qr{\|ANCHOR:[news]};
@@ -102,6 +102,7 @@ my %older_file_to_cat;
      "comments_route"		=> [qw(radroute)],
      "comments_scenic"		=> [qw(CS), sub { m{^View:([-+]?\d+):([-+]?\d+)} }], # XXX duplicated as $viewangle_qr in bbbike
      "comments_tram"		=> [qw(CS)],
+     "culdesac"  	        => [qw(culdesac culdesac_pseudo)],
      "deutschland"		=> $filetype_to_cat{"borders"},
      "exits"			=> [qw(X)],
      "faehren"			=> [qw(Q QQ)], # XXX QQ may be removed again some day

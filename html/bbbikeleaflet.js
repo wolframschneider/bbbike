@@ -69,6 +69,7 @@ var routeLayer;
 var searchState = "start";
 var startLatLng;
 var map;
+var routelistPopup;
 
 var defaultLatLng = [52.516224, 13.377463]; // Brandenburger Tor, good for Berlin
 
@@ -90,6 +91,7 @@ var smoothness_map_url_mapping = { 'stable':'http://{s}.tile.bbbike.org/osm/bbbi
 var mapset = q.get('mapset') || 'stable';
 var base_map_url = base_map_url_mapping[mapset] || base_map_url_mapping['stable'];
 var smoothness_map_url = smoothness_map_url_mapping[mapset] || smoothness_map_url_mapping['stable'];
+var accel;
 
 /*
  * Provides L.Map with convenient shortcuts for using browser geolocation features.
@@ -192,16 +194,18 @@ L.Map.include({
 });
 
 function doLeaflet() {
-    var bbbikeOrgMapnikGermanUrl = base_map_url + '/{z}/{x}/{y}.png',
-    bbbikeAttribution = M("Kartendaten") + ' \u00a9 2012 <a href="http://bbbike.de">Slaven Rezić</a>',
-    bbbikeTileLayer = new L.TileLayer(bbbikeOrgMapnikGermanUrl, {maxZoom: 18, attribution: bbbikeAttribution});
+    var nowYear = new Date().getFullYear();
 
-    var bbbikeOrgSmoothnessUrl = smoothness_map_url + '/{z}/{x}/{y}.png',
-    bbbikeSmoothnessTileLayer = new L.TileLayer(bbbikeOrgSmoothnessUrl, {maxZoom: 18, attribution: bbbikeAttribution});
+    var bbbikeOrgMapnikGermanUrl = base_map_url + '/{z}/{x}/{y}.png';
+    var bbbikeAttribution = M("Kartendaten") + ' \u00a9 ' + nowYear + ' <a href="http://bbbike.de">Slaven Rezić</a>';
+    var bbbikeTileLayer = new L.TileLayer(bbbikeOrgMapnikGermanUrl, {maxZoom: 18, attribution: bbbikeAttribution});
 
-    var osmMapnikUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-    osmAttribution = M("Kartendaten") + ' \u00a9 2012 <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors',
-    osmTileLayer = new L.TileLayer(osmMapnikUrl, {maxZoom: 18, attribution: osmAttribution});
+    var bbbikeOrgSmoothnessUrl = smoothness_map_url + '/{z}/{x}/{y}.png';
+    var bbbikeSmoothnessTileLayer = new L.TileLayer(bbbikeOrgSmoothnessUrl, {maxZoom: 18, attribution: bbbikeAttribution});
+
+    var osmMapnikUrl = use_osm_de_map ? 'http://tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png' : 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+    var osmAttribution = M("Kartendaten") + ' \u00a9 ' + nowYear + ' <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors';
+    var osmTileLayer = new L.TileLayer(osmMapnikUrl, {maxZoom: 18, attribution: osmAttribution});
     
     map = new L.Map('map',
 		    {
@@ -222,7 +226,10 @@ function doLeaflet() {
 
     routeLayer = new L.GeoJSON();
     map.addLayer(routeLayer);
-    layersControl.addOverlay(routeLayer, "Route");
+
+    if (enable_accel) {
+	accel = new AccelHandler();
+    }
 
     var trackPolyline;
     var trackSegs = new TrackSegs();
@@ -235,18 +242,28 @@ function doLeaflet() {
 
 	onAdd: function (map) {
 	    var container = L.DomUtil.create('div', 'anycontrol');
-	    container.innerHTML = "LOC";
+	    var label = "LOC";
+	    if (enable_accel) {
+		label += "+ACCEL";
+	    }
+	    container.innerHTML = label;
 	    L.DomUtil.addClass(container, "anycontrol_inactive");
 	    trackingRunning = false;
 	    container.onclick = function() {
 		if (trackingRunning) {
 		    map.my_stopLocate();
+		    if (accel) {
+			accel.stop();
+		    }
 		    L.DomUtil.removeClass(container, "anycontrol_active");
 		    L.DomUtil.addClass(container, "anycontrol_inactive");
 		    trackingRunning = false;
 		    removeLocation();
 		} else {
 		    map.my_locate({watch:true, setView:false});
+		    if (accel) {
+			accel.start();
+		    }
 		    L.DomUtil.removeClass(container, "anycontrol_inactive");
 		    L.DomUtil.addClass(container, "anycontrol_active");
 		    trackingRunning = true;
@@ -331,7 +348,8 @@ function doLeaflet() {
 	    }
 	    map.panTo(e.latlng);
 	    if (!lastLatLon || !lastLatLon.equals(e.latlng)) {
-		trackSegs.addPos(e);
+		var accelres = accel ? accel.flush() : null;
+		trackSegs.addPos(e, accelres);
 		lastLatLon = e.latlng;
 		if (trackPolyline && map.hasLayer(trackPolyline)) {
 		    map.removeLayer(trackPolyline);
@@ -431,6 +449,9 @@ function showRouteResult(request) {
 	    var json = "geojson = " + request.responseText;
 	    eval(json);
 	    showRoute(geojson);
+	    if (enable_routelist) {
+		populateRouteList(geojson);
+	    }
 	}
 	map.removeLayer(loadingMarker);
 	searchState = 'start';
@@ -474,32 +495,134 @@ function setLoadingMarker(latLng) {
     map.addLayer(loadingMarker);
 }
 
+function populateRouteList(geojson) {
+    var routelist = document.getElementById('routelist');
+    var result = geojson.properties.result;
+    var route = result.Route;
+
+    var html = '<div id="routelist">'
+    html += "<div>Länge: " + sprintf("%.2f", result.Len / 1000) + " km</div>\n";
+
+    var pref_speed;
+    var pref_time;
+    for(var speed in result.Speed) {
+	if (result.Speed[speed].Pref == "1") {
+	    pref_speed = speed;
+	    pref_time = result.Speed[speed].Time;
+	    break;
+	}
+    }
+    if (pref_speed) {
+	var h = parseInt(pref_time);
+	var m = parseInt((pref_time-h)*60);
+	html += "<div>Fahrzeit (" + pref_speed + " km/h): " + h + "h" + m + "min</div>\n";
+    }
+
+    html += "<table>\n";
+    html += "<tr><th>Etappe</th><th>Richtung</th><th>Straße</th></tr>\n";
+    for(var i=0; i<route.length; i++) {
+	var elem = route[i];
+	html += "<tr>";
+	html += "<td>" + sprintf("%.2f", elem.Dist/1000) + " km</td>";
+	html += "<td>" + elem.DirectionHtml + "</td>";
+	var coord = L.GeoJSON.coordsToLatLng(geojson.geometry.coordinates[elem.PathIndex]);
+	html += '<td onclick="routelistPopup.setLatLng(new L.LatLng('+coord.lat+','+coord.lng+'))">' + escapeHtml(elem.Strname) + "</a></td>";
+	html += "</tr>\n";
+    }
+    html += "</table>\n";
+    html += "</div>\n";
+    routelistPopup = L.popup({maxWidth: window.innerWidth<1024 ? window.innerWidth/2 : 512,
+			      maxHeight: window.innerHeight*0.8,
+			      offset: new L.Point(0, -6)})
+	.setLatLng(L.GeoJSON.coordsToLatLng(geojson.geometry.coordinates[0]))
+	.setContent(html)
+	.openOn(map);
+}
+
+// from https://gist.github.com/BMintern/1795519
+// XXX is this fine or too hackish?
+function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+}
+
+////////////////////////////////////////////////////////////////////////
+
+function AccelHandler() {
+    this.scrollarray = new ScrollArray(20);
+}
+
+AccelHandler.prototype.start = function() {
+    var _this = this;
+    this.devicemotionlistener = function(event) {
+	var now = Date.now();
+	var g = event.accelerationIncludingGravity;
+	_this.scrollarray.push({'x':g.x,'y':g.y,'z':g.z,'time':now});
+    };
+    this.scrollarray.empty();
+    window.addEventListener("devicemotion", this.devicemotionlistener, true);
+};
+
+AccelHandler.prototype.stop = function() {
+    if (this.devicemotionlistener) {
+	window.removeEventListener("devicemotion", this.devicemotionlistener, true);
+	this.devicemotionlistener = null;
+    }
+};
+
+AccelHandler.prototype.flush = function() {
+    var res = this.scrollarray.as_array();
+    this.scrollarray.empty();
+    return res;
+};
+
+//////////////////////////////////////////////////////////////////////
+
 function TrackSegs() {
     this.init();
 }
 TrackSegs.prototype.init = function() {
     this.polyline = [[]];
     this.upload = [[]];
-}
-TrackSegs.prototype.addPos = function(e) {
+};
+TrackSegs.prototype.addPos = function(e, accelres) {
     this.polyline[this.polyline.length-1].push(e.latlng);
     if (enable_upload) {
-	var lat = e.latlng.lat.toString().replace(/(\.\d{6}).*/, "$1");
-	var lng = e.latlng.lng.toString().replace(/(\.\d{6}).*/, "$1");
-	var uplRec = {lat:lat,
-		      lng:lng,
-		      acc:e.pos.coords.accuracy,
+	var uplRec = {lat:this._trimDigits(e.latlng.lat, 6),
+		      lng:this._trimDigits(e.latlng.lng, 6),
+		      acc:this._trimDigits(e.pos.coords.accuracy, 1),
 		      time:e.pos.timestamp};
 	if (e.pos.coords.altitude != null) {
 	    uplRec.alt = e.pos.coords.altitude;
 	}
 	if (e.pos.coords.altitudeAccuracy != null) {
-	    uplRec.altacc = e.pos.coords.altitudeAccuracy;
+	    uplRec.altacc = this._trimDigits(e.pos.coords.altitudeAccuracy,1);
+	}
+	if (accelres) {
+	    var accelUplRecs = [];
+	    var firstTime;
+	    for(var i=0; i<accelres.length; i++) {
+		var accelUplRec = {x:this._trimDigits(accelres[i].x, 2),
+				   y:this._trimDigits(accelres[i].y, 2),
+				   z:this._trimDigits(accelres[i].z, 2)};
+		if (i == 0) {
+		    accelUplRec.time = accelres[i].time;
+		    firstTime = accelres[i].time;
+		} else {
+		    accelUplRec.dt = accelres[i].time - firstTime;
+		}
+		accelUplRecs.push(accelUplRec);
+	    }
+	    uplRec.accel = accelUplRecs;
 	}
 	this.upload[this.upload.length-1].push(uplRec);
     }
-}
+};
 TrackSegs.prototype.addGap = function(e) {
     this.polyline.push([]);
     this.upload.push([]);
-}
+};
+TrackSegs.prototype._trimDigits = function(num,digits) {
+    return num.toString().replace(new RegExp("(\\.\\d{" + digits + "}).*"), "$1");
+};

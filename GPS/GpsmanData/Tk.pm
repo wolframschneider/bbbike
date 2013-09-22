@@ -1,10 +1,9 @@
 # -*- perl -*-
 
 #
-# $Id: Tk.pm,v 1.19 2009/01/25 15:36:09 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2008 Slaven Rezic. All rights reserved.
+# Copyright (C) 2008,2013 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,7 +15,7 @@ package GPS::GpsmanData::Tk;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = sprintf("%d.%02d", q$Revision: 1.19 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '1.21';
 
 use base qw(Tk::Frame);
 Construct Tk::Widget 'GpsmanData';
@@ -28,6 +27,7 @@ use Tk::ItemStyle;
 
 use BBBikeUtil qw(ms2kmh);
 use GPS::GpsmanData;
+use GPS::GpsmanData::VehicleInfo ();
 
 my @wpt_cols = qw(Ident Comment Latitude Longitude Altitude Symbol Accuracy Velocity VelocityGraph);
 
@@ -54,24 +54,6 @@ my @wpt_cols = qw(Ident Comment Latitude Longitude Altitude Symbol Accuracy Velo
       }
     }
 }
-
-my %vehicle_to_color = (
-			# get all vehicles with:
-			# cd .../misc/gps_data
-			# perl -nle 'm{srt:vehicle=(\S+)} and print $1' *.trk | sort | uniq -c
-			'bike'   => 'darkblue',
-			'bus'    => 'violet',
-			'car'    => 'darkgrey',
-			'ferry'  => 'lightblue',
-			'funicular' => 'red',
-			'pedes'  => 'orange',
-			'plane'  => 'black',
-			's-bahn' => 'green',
-			'ship'   => 'lightblue',
-			'train'  => 'darkgreen',
-			'tram'   => 'red',
-			'u-bahn' => 'blue',
-		       );
 
 sub Populate {
     my($w, $args) = @_;
@@ -171,15 +153,29 @@ sub OnDestroy {
     $w->_destroy_velocity_frames;
 }
 
+# $gpsman_obj may be a GPS::GpsmanData or GPS::GpsmanMultiData
+# $wpt_gpsman_obj is optional; currently only GPS::GpsmanData is supported (because get_sorted_waypoints_by_time is not available in the other)
 sub associate_object {
-    my($w, $gpsman_obj) = @_;
+    my($w, $gpsman_obj, $wpt_gpsman_obj) = @_;
     $w->{GpsmanData} = $gpsman_obj;
+    if ($wpt_gpsman_obj) {
+	$w->{WptGpsmanData} = $wpt_gpsman_obj;
+	my @sorted_wpts = $wpt_gpsman_obj->get_sorted_waypoints_by_time;
+	$w->{AssociatedWptInfo} = [ map { +{ epoch => $_->Comment_to_unixtime($wpt_gpsman_obj), wpt => $_ } } @sorted_wpts];
+    } else {
+	delete $w->{WptGpsmanData};
+	delete $w->{AssociatedWptInfo};
+    }
     $w->_clear_data_view;
     $w->_fill_data_view;
 }
 
 sub get_associated_object {
     shift->{GpsmanData};
+}
+
+sub _get_associated_wpt_info {
+    shift->{AssociatedWptInfo};
 }
 
 sub reload {
@@ -242,6 +238,77 @@ sub _fill_data_view {
     my @chunk_to_i;
     my %max_ms;
     my $last_vehicle;
+
+    my $associated_wpt_info = $w->_get_associated_wpt_info;
+    my $associated_wpt_info_i = 0;
+    my $add_associated_wpts_sub;
+    my $symbol_to_img;
+    my $symbol_to_tk_photo = $w->privateData->{'symbol_to_tk_photo'};
+    if ($associated_wpt_info) {
+	require GPS::Symbols::Garmin;
+	$symbol_to_img = GPS::Symbols::Garmin::get_cached_symbol_to_img();
+	if (!$symbol_to_tk_photo) {
+	    $symbol_to_tk_photo = {};
+	    $w->privateData->{'symbol_to_tk_photo'} = $symbol_to_tk_photo;
+	}
+	$add_associated_wpts_sub = sub {
+	    my($wpt) = @_;
+	    if ($associated_wpt_info) {
+		while ($associated_wpt_info_i < @$associated_wpt_info) {
+		    my $current_associated_wpt_info = $associated_wpt_info->[$associated_wpt_info_i];
+		    my $do_add = 0;
+		    if ($wpt) {
+			if ($wpt->Comment_to_unixtime($w->{WptGpsmanData}) > $current_associated_wpt_info->{epoch}) {
+			    $do_add = 1;
+			}
+		    } else {
+			$do_add = 1;
+		    }
+		    if ($do_add) {
+			$dv->add(++$i, -text => "", -data => {AssociatedWpt => $associated_wpt_info_i});
+			my $col_i = -1;
+			my $current_associated_wpt = $current_associated_wpt_info->{wpt};
+			for my $def (@wpt_cols) {
+			    my $val = $current_associated_wpt->can($def) ? $current_associated_wpt->$def : '';
+			    if ($def eq 'Symbol') {
+				my $val = $current_associated_wpt->$def;
+				if (defined $val && length $val && $symbol_to_img) {
+				    my $photo = $symbol_to_tk_photo->{$val};
+				    if (!$photo) {
+					my $img = $symbol_to_img->{$val};
+					if ($img) {
+					    if (-r $img) {
+						$photo = $dv->Photo(-file => $img);
+						$symbol_to_tk_photo->{$val} = $photo;
+					    } else {
+						warn "WARN: image '$img' does not exist or is not readable";
+					    }
+					} else {
+					    warn "WARN: no image symbol for '$val'";
+					}
+				    }
+				    if ($photo) {
+					$dv->itemCreate($i, ++$col_i,
+							-itemtype => 'imagetext',
+							-image => $photo,
+						       );
+				    }
+				}
+			    } else {
+				$dv->itemCreate($i, ++$col_i, -text => $val);
+			    }
+			}
+			$associated_wpt_info_i++;
+		    } else {
+			last;
+		    }
+		}
+	    }
+	};
+    } else {
+	$add_associated_wpts_sub = sub { };
+    }
+
     for my $chunk (@{ $w->{GpsmanData}->Chunks }) {
 	$chunk_i++;
 	my $supported = $chunk->Type eq $chunk->TYPE_TRACK;
@@ -260,6 +327,7 @@ sub _fill_data_view {
 	    my $last_wpt;
 	    for my $wpt (@{ $chunk->Track }) {
 		$wpt_i++;
+		$add_associated_wpts_sub->($wpt);
 		my $data = {Chunk => $chunk_i, Wpt => $wpt_i};
 		$dv->add(++$i, -text => "", -data => $data);
 		my $col_i = -1;
@@ -300,6 +368,7 @@ sub _fill_data_view {
 	    }
 	}
     }
+    $add_associated_wpts_sub->(undef); # the remaining associated waypoints
 
     # align VelocityGraph
     if (keys %max_ms) { # there is a maximum velocity
@@ -355,7 +424,7 @@ sub _adjust_overview {
 	if (!$vehicle) {
 	    #warn "No vehicle found in chunk";
 	} else {
-	    my $color = $vehicle_to_color{$vehicle} || '#ffdead';
+	    my $color = GPS::GpsmanData::VehicleInfo::get_vehicle_color($vehicle) || '#ffdead';
 	    if (!defined $next_i) {
 		$next_i = $w->{_max_i};
 	    }
@@ -459,7 +528,7 @@ sub _track_attributes_editor {
 			     -autolimitheight => 1,
 			     -autolistwidth => 1,
 			     -listheight => 12, # hmmm, -autolimitheight does not work? or do i misunderstand this option?
-			     -choices => [sort keys %vehicle_to_color],
+			     -choices => [GPS::GpsmanData::VehicleInfo::all_vehicles()],
 			     ($brands_be
 			      ? (-browsecmd => sub { my(undef, $new_value) = @_; $fill_brands->($new_value) })
 			      : ()
@@ -639,8 +708,13 @@ sub wpt_by_item {
     my($self, $item) = @_;
     my $dv = $self->Subwidget("data");
     my $data = $dv->info('data', $item);
-    return undef if !exists $data->{Wpt};
-    $self->{GpsmanData}->Chunks->[$data->{Chunk}]->Track->[$data->{Wpt}];
+    if      (exists $data->{AssociatedWpt}) {
+	$self->_get_associated_wpt_info->[$data->{AssociatedWpt}]->{wpt};
+    } elsif (exists $data->{Wpt}) {
+	$self->{GpsmanData}->Chunks->[$data->{Chunk}]->Track->[$data->{Wpt}];
+    } else {
+	undef;
+    }
 }
 
 sub chunk_by_item {
@@ -667,6 +741,18 @@ sub get_selected_items {
     @items;
 }
 
+sub DESTROY {
+    my $self = shift;
+    $self->SUPER::DESTROY;
+    my $symbol_to_tk_photo = $self->privateData->{'symbol_to_tk_photo'};
+    if ($symbol_to_tk_photo) {
+	while(my($k,$v) = each %$symbol_to_tk_photo) {
+	    $v->delete if $v;
+	    delete $symbol_to_tk_photo->{$k};
+	}
+    }
+}
+
 1;
 
 __END__
@@ -678,7 +764,7 @@ GPS::GpsmanData::Tk - make gpsman data visible in a Tk widget
 =head1 SYNOPSIS
 
     cd .../bbbike
-    perl -MTk -MGPS::GpsmanData -MGPS::GpsmanData::Tk -e '$w=tkinit->GpsmanData->pack(qw(-fill both -expand 1));$gps=GPS::GpsmanMultiData->new;$gps->load(shift);$w->associate_object($gps);MainLoop' ...
+    perl -MTk -Ilib -MGPS::GpsmanData -MGPS::GpsmanData::Tk -e '$w=tkinit->GpsmanData->pack(qw(-fill both -expand 1));$gps=GPS::GpsmanMultiData->new;$gps->load(shift);$w->associate_object($gps);MainLoop' ...
 
 =head1 DESCRIPTION
 
@@ -703,7 +789,7 @@ The internal item number of the clicked item.
 
 =item -wpt
 
-The L<GPS::Gpsman::Waypoint> object of the associated clicked item, if
+The B<GPS::Gpsman::Waypoint> object of the associated clicked item, if
 any.
 
 =item -chunk
@@ -720,7 +806,7 @@ The L<GPS::GpsmanData> object of the associated clicked item, if any.
 
 =item $w->associate_object($gpsmandata)
 
-Associate a L<GPS::GpsmanMultiData> object with the widget. This will
+Associate a B<GPS::GpsmanMultiData> object with the widget. This will
 also cause to fill the gps data into the widget.
 
 =item $w->reload
@@ -743,7 +829,7 @@ to use it with a small values (a meter or less).
 
 For a given (internal) I<$item> (for example, the result from the
 L</find_items_by_lat_lon> call), return the associated
-L<GPS::Gpsman::Waypoint> object, or undef.
+B<GPS::Gpsman::Waypoint> object, or undef.
 
 =item $w->chunk_by_item($item)
 
@@ -761,7 +847,7 @@ Get a list of (internal) items which are selected.
 
 =item $w->find_items_by_wpts(@wpts)
 
-For a list of L<GPS::Gpsman::Waypoint> objects, return a list of
+For a list of B<GPS::Gpsman::Waypoint> objects, return a list of
 corresponding (internal) items. Note: comparison is done by identity
 check, so make sure that the same waypoint objects are used as input
 parameters as are associated with the GpsmanData widget.
@@ -813,11 +899,6 @@ accuracy in selected ranges)
 
 =head2 Low priority
 
-  * Callbacks, so dass BBBike auf Änderungen reagieren kann
-
-  * BBBike integration: Möglichkeit eines Callbacks für eine Selektion
-    von Punkten (BBBike: call mark_street or mark_points)
-
   * Nice to have: Scrollbereich im GPS Viewer und im BBBike-Canvas
     können sich gegenseitig setzen, so dass immer der
     korrespondierende Bereich zu sehen ist
@@ -829,10 +910,19 @@ accuracy in selected ranges)
 
 =head2 GPX support
 
-  * Better support for GPX and other data types
+  * Better support for GPX and other data types (currently only
+    viewing is possible, but not editing)
  
   * GPX-Äquivalent für ~/~~ erfinden.
 
   * GPX-Äquivalent für srt:... erfinden.
+
+=head1 AUTHOR
+
+Slaven Rezic
+
+=head1 SEE ALSO
+
+L<GPS::GpsmanData::TkViewer>.
 
 =cut

@@ -1,10 +1,9 @@
 # -*- perl -*-
 
 #
-# $Id: BBBikeGPS.pm,v 1.51 2009/02/21 21:24:03 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2003,2008 Slaven Rezic. All rights reserved.
+# Copyright (C) 2003,2008,2013 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -85,8 +84,9 @@ sub BBBikeGPS::gps_interface {
     $extra_args{-routetoname} = $routetoname if $routetoname;
     
     eval {
+	my $route_obj = Route->new_from_realcoords(\@realcoords, -searchroutepoints => \@search_route_points);
 	my $res = $modobj->convert_from_route
-	    (Route->new_from_realcoords(\@realcoords),
+	    ($route_obj,
 	     -streetobj   => $multistrassen || $str_obj{'s'},
 	     -netobj      => $net,
 	     -routename   => $gps_route_info->{Name},
@@ -104,11 +104,32 @@ sub BBBikeGPS::gps_interface {
 			  -res => $res,
 			  -test => $extra_args{-test},
 			  -top => $top);
+	if ($do_gps_upload_hist) {
+	    BBBikeGPS::gps_upload_history($route_obj, -gpsrouteinfo => $gps_route_info);
+	}
     };
     if ($@) {
 	status_message
 	    (Mfmt("Schreiben auf <%s> nicht möglich: %s", $file, $@), 'err');
     }
+}
+
+sub BBBikeGPS::gps_upload_history {
+    my($route_obj, %opts) = @_;
+    my $gps_route_info = delete $opts{'-gpsrouteinfo'};
+    die "Unhandled arguments: " . join(" ", %opts) if %opts;
+    if (!-d $gps_upload_dir) {
+	mkdir $gps_upload_dir, 0700;
+	if (!-d $gps_upload_dir) {
+	    main::status_message(Mfmt("Das Verzeichnis %s konnte nicht erzeugt werden. Grund: %s", $gps_upload_dir, $!), "error");
+	    return;
+	}
+    }
+    my $route_name = $gps_route_info->{Name};
+    $route_name =~ s{[^A-Za-z0-9_-]}{_}g;
+    require POSIX;
+    my $path = "$gps_upload_dir/" . POSIX::strftime("%Y%m%d_%H%M%S", localtime) . "_" . $route_name. ".bbr";
+    $route_obj->save_object($path);
 }
 
 sub get_route_simplification_mapping {
@@ -572,81 +593,6 @@ sub BBBikeGPS::get_cfc_file {
     "$main::bbbike_configdir/speed_color_mapping.cfc";
 }
 
-use vars qw($symbol_to_img);
-use File::Glob qw();
-use File::Temp qw();
-
-# the "ugly" interface, setting the global $symbol_to_img hash ref
-sub BBBikeGPS::make_symbol_to_img {
-    my $must_recreate = 1;
-    if ($symbol_to_img) {
-	$must_recreate = 0;
-	for my $file (values %$symbol_to_img) {
-	    if (!-f $file) {
-		$must_recreate = 1;
-		last;
-	    }
-	}
-    }
-    return if !$must_recreate;
-
-    $symbol_to_img = BBBikeGPS::get_symbol_to_img();
-}
-
-# the "clean" interface for make_symbol_to_img, returns a hash ref
-sub BBBikeGPS::get_symbol_to_img {
-    my $symbol_to_img = {};
-    # Try to find a gpsman gmicons directory for "official" Garmin
-    # symbols
-    {
-	my @gmicons;
-	for my $candidate ("/usr/share/gpsman/gmicons", # Debian default
-			   "/usr/local/share/gpsman/gmsrc/gmicons", # the FreeBSD location
-			  ) {
-	    if (-d $candidate) {
-		@gmicons = File::Glob::bsd_glob("$candidate/*15x15.gif");
-		last if @gmicons;
-	    }
-	}
-	if (!@gmicons) {
-	    warn "NOTE: no gpsman/gmicons directory found, no support for Garmin symbols.\n";
-	} else {
-	    require File::Basename;
-	    for my $gmicon (@gmicons) {
-		my $iconname = File::Basename::basename($gmicon);
-		$iconname =~ s{15x15.gif$}{};
-		$symbol_to_img->{$iconname} = $gmicon;
-	    }
-	}
-    }
-    # Now the user-defined symbols. Here's room for different "userdef
-    # symbol sets", which may be per-vehicle, per-user, per-year etc.
-    my $userdef_symbol_dir = BBBikeUtil::bbbike_root()."/misc/garmin_userdef_symbols/bike2008";
-    if (!-d $userdef_symbol_dir) {
-	warn "NOTE: directory <$userdef_symbol_dir> with userdefined garmin symbols not found.\n";
-    } else {
-	for my $f (File::Glob::bsd_glob("$userdef_symbol_dir/*.bmp")) {
-	    my($inx) = $f =~ m{(\d+)\.bmp$};
-	    next if !defined $inx; # non parsable bmp filename
-	    $symbol_to_img->{"user:" . (7680 + $inx)} = $f;
-	}
-    }
-
-    # bbd: IMG:... syntax cannot handle whitespace, so create symlinks
-    # without whitespace if necessary (may happen on Windows systems)
-    for my $iconname (keys %$symbol_to_img) {
-	my $f = $symbol_to_img->{$iconname};
-	if ($f =~ m{\s}) {
-	    my($tmpnam) = File::Temp::tmpnam() . ".bmp";
-	    symlink $f, $tmpnam
-		or die "Can't create symlink $tmpnam -> $f: $!";
-	    $f = $tmpnam;
-	    $symbol_to_img->{$iconname} = $f;
-	}
-    }
-    $symbol_to_img;
-}
-
 use vars qw($global_draw_gpsman_data_s $global_draw_gpsman_data_p);
 $global_draw_gpsman_data_s = 1 if !defined $global_draw_gpsman_data_s;
 $global_draw_gpsman_data_p = 1 if !defined $global_draw_gpsman_data_p;
@@ -669,7 +615,8 @@ sub BBBikeGPS::do_draw_gpsman_data {
 	BBBikeGPS::load_cfc_mapping();
     }
 
-    BBBikeGPS::make_symbol_to_img();
+    require GPS::Symbols::Garmin;
+    my $symbol_to_img = GPS::Symbols::Garmin::get_cached_symbol_to_img();
 
     require GPS::GpsmanData;
 
@@ -698,6 +645,8 @@ sub BBBikeGPS::do_draw_gpsman_data {
     my $last_accurate_wpt;
     my $is_new_chunk;
     my $vehicle;
+    my $last_vehicle;
+    my @pos2vehicle;
     my $brand;
     my %brand; # per vehicle
     foreach my $chunk (@{ $gps->Chunks }) {
@@ -791,6 +740,13 @@ sub BBBikeGPS::do_draw_gpsman_data {
 			    $path_graph_elem->accuracy($max_acc);
 			    push @add_wpt_prop, $path_graph_elem;
 
+			    if ($show_track_graph && defined $vehicle) {
+				if (!defined $last_vehicle || $vehicle ne $last_vehicle) {
+				    push @pos2vehicle, {wholedist => $whole_dist, wholetime => $whole_time, vehicle => $vehicle};
+				    $last_vehicle = $vehicle;
+				}
+			    }
+
 			    my $s_cat = "#000000";
 			    if ($is_route) {
 				$s_cat = 'Rte';
@@ -851,6 +807,11 @@ sub BBBikeGPS::do_draw_gpsman_data {
 	}
     }
 
+    if (@pos2vehicle) {
+	# finalize; vehicle here not necessary
+	push @pos2vehicle, {wholedist => $whole_dist, wholetime => $whole_time};
+    }
+
     if ($s_speed) {
 	my $msg = "";
 	$msg .= "Total distance = " . BBBikeUtil::m2km($whole_dist, 2) . "\n";
@@ -894,6 +855,7 @@ sub BBBikeGPS::do_draw_gpsman_data {
     BBBikeGPS::draw_track_graph({-top => $top,
 				 -wpt => \@add_wpt_prop,
 				 -accuracylevel => $accuracy_level,
+				 -pos2vehicle => \@pos2vehicle,
 				})
 	    if $show_track_graph;
 
@@ -944,6 +906,7 @@ sub BBBikeGPS::draw_track_graph {
     my $smooth_ref = $o->{-smoothref};
     my $accuracy_level = $o->{-accuracylevel};
     my $against = $o->{-against}; # XXX only to be used if also -type is set!
+    my $pos2vehicle = $o->{-pos2vehicle};
 
     my %unit = (speed => "km/h",
 		grade => "%",
@@ -1440,6 +1403,33 @@ sub BBBikeGPS::draw_track_graph {
 	}
     }
 
+    {
+	# vehicle boxes
+	if ($pos2vehicle && @$pos2vehicle) {
+	    require GPS::GpsmanData::VehicleInfo;
+	    for my $type (@types) {
+		my $whole_what = $whole_what{$type};
+		for my $i (1 .. $#$pos2vehicle) {
+		    my $def0 = $pos2vehicle->[$i-1];
+		    my $def1 = $pos2vehicle->[$i];
+		    my $whole0 = $def0->{$whole_what};
+		    my $whole1 = $def1->{$whole_what};
+		    if (defined $whole0 && defined $whole1) {
+			my $vehicle = $def0->{vehicle};
+			my $color = GPS::GpsmanData::VehicleInfo::get_vehicle_color($vehicle);
+			if (defined $color) {
+			    $color = BBBikeGPS::_make_lighter_color($color);
+			    my $x0 = $c_x{$type} + ($c_w{$type}/$max_x{$type})*$whole0;
+			    my $x1 = $c_x{$type} + ($c_w{$type}/$max_x{$type})*$whole1;
+			    $graph_c{$type}->createRectangle($x0, $def_c_top, $x1, $def_c_top+$c_h{$type}, -fill => $color, -outline => $color, -tags => 'vehiclebox');
+			    $graph_c{$type}->lower('vehiclebox');
+			}
+		    }
+		}
+	    }
+	}
+    }
+
     # bind <1> to mark point
     foreach (@types) {
 	my $type = $_;
@@ -1452,6 +1442,27 @@ sub BBBikeGPS::draw_track_graph {
 				  -clever_center => 1);
 	     });
     }
+}
+
+# XXX Maybe should be moved to a utility module? Or use a CPAN module?
+sub BBBikeGPS::_make_lighter_color {
+    my $color = shift; # expected an X11 color
+    my($r,$g,$b);
+    if (eval { require Imager::Color; 1 }) {
+	my $ic = Imager::Color->new($color);
+	my($h,$s,$v) = $ic->hsv;
+	$s = 0.2*$v; # make more 'greyish', # map [0 -> 0; 0 -> 0.2]
+	$v = 0.2*$v+0.8; # make brighter: # map [0 -> 0.8; 1 -> 1]
+	$ic = Imager::Color->new(hsv=>[$h,$s,$v]);
+	($r,$g,$b) = $ic->rgba;
+    } else {
+	# Simple fallback
+	my $tk = (Tk::MainWindow::Existing())[0]; # pick a random Tk window
+	my($r,$g,$b) = $tk->rgb($color);
+	my $by = 32*4;
+	($r,$g,$b) = map { ( $_ + $by > 255) ? 255 : $_ + $by  } ($r, $g, $b);
+    }
+    sprintf '#%02x%02x%02x', $r, $g, $b;
 }
 
 package BBBikeGPS;

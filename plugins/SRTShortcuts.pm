@@ -378,6 +378,11 @@ EOF
 				  'p', "$main::datadir/zebrastreifen",
 				  above => $str_layer_level,
 				 ),
+		layer_checkbutton([$do_compound->('Sackgassen', main::load_photo($mf, "misc/verkehrszeichen/Zeichen_357.svg", -w => 16, -h => 16, -persistent => 1))],
+				  'p', "$main::datadir/culdesac",
+				  maybe_orig_file => 1,
+				  above => $str_layer_level,
+				 ),
 		layer_checkbutton([$do_compound->('Ortsschilder', main::load_photo($mf, "misc/verkehrszeichen/Zeichen_310_leer.svg", -w => 16, -h => 16, -persistent => 1))],
 				  'p', "$main::datadir/ortsschilder",
 				  maybe_orig_file => 1,
@@ -598,6 +603,9 @@ EOF
 	       [
 		[Button => $do_compound->("local bbbike.cgi"),
 		 -command => sub { current_search_in_bbbike_cgi() },
+		],
+		[Button => $do_compound->("BBBike.org (Berlin)"),
+		 -command => sub { current_search_in_bbbike_org_cgi() },
 		],
 		[Button => $do_compound->("komoot"),
 		 -command => sub { current_search_in_komoot() },
@@ -1465,46 +1473,13 @@ sub add_any_streets_bbd {
 sub mark_layer_dialog {
     main::additional_layer_dialog
 	    (-title => "Layer markieren",
-	     -cb => \&mark_layer,
+	     -cb => \&main::mark_layer,
 	     -token => 'mark_additional_layer',
 	    );
 }
 
-sub mark_layer {
-    my $abk = shift;
-    my $s;
- TRY_LAYER: {
-	$s = $main::str_obj{$abk};
-	last TRY_LAYER if $s;
-	if ($main::str_file{$abk}) {
-	    $s = Strassen->new($main::str_file{$abk});
-	    last TRY_LAYER if $s;
-	}
-
-	$s = $main::p_obj{$abk};
-	last TRY_LAYER if $s;
-	if ($main::p_file{$abk}) {
-	    $s = Strassen->new($main::p_file{$abk});
-	    last TRY_LAYER if $s;
-	}
-	main::status_message("Cannot get street or point object for <$abk>", "die");
-    }
-    my @mc;
-    $s->init;
-    while(1) {
-	my $r = $s->next;
-	last if !@{ $r->[Strassen::COORDS()] };
-	push @mc, [ map { [ main::transpose(split /,/) ] } @{ $r->[Strassen::COORDS()] }];
-    }
-    if (@mc) {
-	main::mark_street(-coords => [@mc], -dont_scroll => 1, -dont_center => 1);
-    } else {
-	main::status_message("No points found in street object", "info");
-    }
-}
-
 sub mark_most_recent_layer {
-    mark_layer($main::most_recent_str_layer)
+    main::mark_layer($main::most_recent_str_layer)
 	if defined $main::most_recent_str_layer;
 }
 
@@ -1530,6 +1505,39 @@ sub current_search_in_bbbike_cgi {
 			pref_seen => 1, # gelogen
 		      })->query_string;
     my $url = "http://localhost/bbbike/cgi/bbbike.cgi?$qs";
+    main::status_message("Der WWW-Browser wird mit der URL $url gestartet.", "info");
+    require WWWBrowser;
+    WWWBrowser::start_browser($url);
+}
+
+sub current_search_in_bbbike_org_cgi {
+    if (@main::search_route_points < 2) {
+	main::status_message("Not enough points", "die");
+    }
+    if (@main::search_route_points > 3) {
+	main::status_message("Too many points, bbbike.cgi only supports one via", "die");
+    }
+    my $inx = 0;
+    my($start, $via, $goal);
+    $start = $main::search_route_points[$inx++]->[0];
+    if (@main::search_route_points == 3) {
+	$via = $main::search_route_points[$inx++]->[0];
+    }
+    $goal = $main::search_route_points[$inx]->[0];
+
+    require Karte::Polar;
+    my $o = $Karte::Polar::obj;
+    for my $coord ($start, (defined $via ? $via : ()), $goal) {
+	$coord = join(",", $o->trim_accuracy($o->standard2map(split /,/, $coord)));
+    }
+
+    require CGI;
+    my $qs = CGI->new({ startc_wgs84 => $start,
+			($via ? (viac_wgs84 => $via) : ()),
+			zielc_wgs84 => $goal,
+			pref_seen => 1, # gelogen
+		      })->query_string;
+    my $url = "http://www.bbbike.org/Berlin/?$qs";
     main::status_message("Der WWW-Browser wird mit der URL $url gestartet.", "info");
     require WWWBrowser;
     WWWBrowser::start_browser($url);
@@ -1799,16 +1807,9 @@ sub street_name_experiment_init {
 	} elsif (abs($r + pi) < 0.1) {
 	    $r = -3.1;
 	}
-	my $mat;
 	my $a1 = $size*cos($r);
 	my $s1 = sin($r);
-	foreach ($a1, $size*$s1, $size*-$s1, $a1) {
-	    if ($mat) {
-		$mat .= " ";
-	    }
-	    $mat .= $_;
-	}
-	'matrix=' . $mat;
+	'matrix=' . join(" ", $a1, $size*$s1, $size*-$s1, $a1);
     };
 
     ## The normal Vera font, usually
@@ -1941,192 +1942,35 @@ sub street_name_experiment_one {
 sub gps_data_viewer {
     my($gps_file) = @_;
 
-    require BBBikeEdit;
-    require BBBikeUtil;
-    require GPS::GpsmanData::Any;
-    require GPS::GpsmanData::Tk;
-    require Karte::Polar;
-    require Tk::PathEntry;
-    my $t = $main::top->Toplevel(-title => "GPS data viewer");
+    require GPS::GpsmanData::TkViewer;
+
+    my $t = GPS::GpsmanData::TkViewer->gps_data_viewer($main::top,
+						       -gpsfile => $gps_file,
+						       -statsargscb => sub {
+							   my %stats_args;
+							   require Strassen::MultiStrassen;
+
+							   my $areas = eval {
+							       MultiStrassen->new("$bbbike_rootdir/data/berlin_ortsteile", "$bbbike_rootdir/data/potsdam");
+							   };
+							   if (!$areas) {
+							       warn "Can't create areas for Stats: $@";
+							   } else {
+							       $stats_args{areas} = $areas;
+							   }
+
+							   my $places = eval {
+							       MultiStrassen->new("$bbbike_rootdir/data/orte", "$bbbike_rootdir/data/orte2");
+							   };
+							   if (!$places) {
+							       warn "Can't create places for Stats: $@";
+							   } else {
+							       $stats_args{places} = $places;
+							   }
+							   %stats_args;
+						       },
+						      );
     $main::toplevel{gps_data_viewer} = $t; # XXX what about an existing GPS data viewer?
-    $t->geometry("1000x400");
-    my $gps_view;
-    my $gps;
-
-    use vars qw($gps_data_viewer_file $gps_data_dir);
-    $gps_data_dir = "$FindBin::RealBin/misc/gps_data" if !defined $gps_data_dir;
-    $gps_data_viewer_file = $gps_data_dir             if !defined $gps_data_viewer_file;
-    $gps_data_viewer_file = $FindBin::RealBin         if !defined $gps_data_viewer_file;
-
-    my $show_file = sub {
-	if (defined $gps_data_viewer_file) {
-	    #XXX do it as late as possible, before the first edit operation: BBBikeEdit::ask_for_co($main::top, $gps_data_viewer_file);
-	    $gps = GPS::GpsmanData::Any->load($gps_data_viewer_file, -editable => 1);
-	    $gps_view->associate_object($gps);
-	}
-    };
-    my $unplot_file = sub {
-	if ($BBBikeEdit::recent_gps_point_layer) {
-	    main::delete_layer($BBBikeEdit::recent_gps_point_layer);
-	    undef $BBBikeEdit::recent_gps_point_layer;
-	}
-	if ($BBBikeEdit::recent_gps_street_layer) {
-	    main::delete_layer($BBBikeEdit::recent_gps_street_layer);
-	    undef $BBBikeEdit::recent_gps_street_layer;
-	}
-    };
-    my $show_and_plot_file = sub {
-	if (defined $gps_data_viewer_file) {
-	    $show_file->();
-	    $unplot_file->();
-	    BBBikeEdit::edit_gps_track($gps_data_viewer_file);
-	    if (defined $BBBikeEdit::recent_gps_street_layer) {
-		mark_layer($BBBikeEdit::recent_gps_street_layer);
-	    }
-	}
-    };
-    
-    {
-	my $f = $t->Frame->pack(qw(-fill x));
-	$f->Label(-text => "File:")->pack(qw(-side left));
-	my $pe =
-	    $f->PathEntry
-		(-textvariable => \$gps_data_viewer_file,
-		 -width => BBBikeUtil::max(length($gps_data_viewer_file), 40),
-		 -height => 20,
-		)->pack(-fill => "x", -expand => 1, -side => "left");
-	$pe->focus;
-	my $showb = 
-	    $f->Button(-text => "Show",
-		       -command => sub {
-			   $show_file->();
-		       }
-		      )->pack(-side => "left");
-	my $plotandshowb =
-	    $f->Button(-text => "Show & Plot",
-		       -command => sub {
-			   $show_and_plot_file->();
-		       }
-		      )->pack(-side => "left");
-	$f->Button(-text => 'Unplot',
-		   -command => sub {
-		       $unplot_file->();
-		   }
-		  )->pack(-side => 'left');
-	$pe->configure(-selectcmd => sub {
-			   $plotandshowb->focus;
-		       });
-    }
-
-    my $vehicles_to_brands;
-    if (-r "$gps_data_dir/vehicles_brands.yml" && eval { require BBBikeYAML; 1 }) {
-	$vehicles_to_brands = BBBikeYAML::LoadFile("$gps_data_dir/vehicles_brands.yml");
-    }
-    my $gps_devices;
-    if (-r "$gps_data_dir/gps_devices.yml" && eval { require BBBikeYAML; 1 }) {
-	$gps_devices = BBBikeYAML::LoadFile("$gps_data_dir/gps_devices.yml");
-    }
-
-    $gps_view = $t->GpsmanData(-command => sub {
-				   my(%args) = @_;
-				   my $wpt = $args{-wpt};
-				   if ($wpt) {
-				       my($x,$y) = $Karte::Polar::obj->map2standard($wpt->Longitude, $wpt->Latitude);
-				       main::mark_point(-coords => [[[ main::transpose($x,$y) ]]],
-							-clever_center => 1,
-							-inactive => 1,
-						       );
-				   }
-			       },
-			       -selectforeground => 'black',
-			       -selectbackground => 'green',
-			       -velocity => 'per_vehicle',
-			       -vehiclestobrands => $vehicles_to_brands,
-			       -gpsdevices => $gps_devices,
-			      )->pack(qw(-fill both -expand 1));
-
-    {
-	my $f = $t->Frame->pack(qw(-fill x));
-	$f->Button(-text => "Select premature points",
-		   -command => sub {
-		       require GPS::GpsmanData::Analyzer;
-		       my $anlzr = GPS::GpsmanData::Analyzer->new($gps);
-		       my @wpts = $anlzr->find_premature_samples;
-		       if (@wpts) {
-			   $gps_view->select_items(grep { defined $_ } $gps_view->find_items_by_wpts(@wpts));
-			   # XXX this is bad: dialog is modal and it's not possible to view all the selection
-			   # XXX also, at least LongDialog should be used here
-			   my $yn = $t->messageBox(-message => "Remove selected " . scalar(@wpts) . " item(s)?",
-						   -type => "YesNo");
-			   if (lc $yn eq 'yes') {
-			       my $edit = GPS::GpsmanData::DirectEdit->new($gps);
-			       my @lines = grep { defined $_ } map { $gps->LineInfo->get_line_by_wpt($_) } @wpts;
-			       my @operations = $edit->remove_lines(\@lines, -dryrun => 1);
-			       # XXX very bad formatting, maybe use a custom DialogBox here?
-			       my $yn = $t->messageBox(-message => "Are you sure?\n" . join("\n", map { join " ", @$_ } @operations),
-						       -type => "YesNo");
-			       if (lc $yn eq 'yes') {
-				   $edit->run_operations(\@operations);
-				   $gps_view->reload;
-				   my @operations = $edit->remove_empty_track_segments(-dryrun => 1);
-				   if (@operations) {
-				       my $yn = $t->messageBox(-message => "Remove empty track segments?\n" . join("\n", map { join " ", @$_ } @operations),
-							       -type => "YesNo");
-				       if (lc $yn eq 'yes') {
-					   $edit->run_operations(\@operations);
-					   $gps_view->reload;
-				       }
-				   }
-			       }
-			   }
-		       }
-		   })->pack(-side => "left");
-	$f->Button(-text => "Set accuracy for selection",
-		   -command => sub {
-		       my @sel_items = $gps_view->get_selected_items;
-		       my @wpts = grep { defined } map { $gps_view->wpt_by_item($_) } @sel_items;
-		       my $last_accuracy;
-		       for (@wpts) {
-			   if (!defined $last_accuracy) {
-			       $last_accuracy = $_->Accuracy;
-			   } elsif ($last_accuracy != $_->Accuracy) {
-			       my $yn = $t->messageBox(-message => "Differing accuracies in selected waypoints. Proceed nevertheless?",
-						       -type => "YesNo");
-			       return if (lc $yn ne 'yes');
-			   }
-		       }
-		       require Tk::DialogBox;
-		       my $dlg = $t->DialogBox(-title => "Accuracy", -buttons => ["OK", "Cancel"]);
-		       $dlg->add("Label", -text => "Set accuracy to:")->pack;
-		       my $new_accuracy = $last_accuracy;
-		       $dlg->add("Radiobutton", -value => 0, -text => "!", -variable => \$new_accuracy)->pack;
-		       $dlg->add("Radiobutton", -value => 1, -text => "~", -variable => \$new_accuracy)->pack;
-		       $dlg->add("Radiobutton", -value => 2, -text => "~~", -variable => \$new_accuracy)->pack;
-		       my $answer = $dlg->Show;
-		       return if ($answer ne 'OK');
-		       return if $new_accuracy == $last_accuracy;
-		       my $edit = GPS::GpsmanData::DirectEdit->new($gps);
-		       my @lines = grep { defined $_ } map { $gps->LineInfo->get_line_by_wpt($_) } @wpts;
-		       $edit->set_accuracies(\@lines, $new_accuracy);
-		       $gps_view->reload;
-		   })->pack(-side => "left");
-	$f->Button(-text => 'Statistics',
-		   -command => sub {
-		       require GPS::GpsmanData::Stats;
-		       require BBBikeYAML;
-		       my $stats = GPS::GpsmanData::Stats->new($gps);
-		       $stats->run_stats;
-		       my $tt = $t->Toplevel(-title => 'GPS data statistics');
-		       my $txt = $tt->Scrolled('ROText', -width => 30, -scrollbars => 'osoe')->pack(qw(-fill both -expand 1));
-		       $txt->insert('end', BBBikeYAML::Dump($stats->human_readable));
-		       $tt->Button(-text => 'Close', -command => sub { $tt->destroy })->pack;
-		   })->pack(-side => 'left');
-    }
-
-    if (defined $gps_file) {
-	$gps_data_viewer_file = $gps_file;
-	$show_and_plot_file->();
-    }
 }
 
 ######################################################################

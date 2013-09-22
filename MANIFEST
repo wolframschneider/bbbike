@@ -4,6 +4,7 @@ BBBikeAdvanced.pm
 BBBikeAlarm.pm
 BBBikeApacheSessionCounted.pm
 BBBikeApacheSessionCountedHandler.pm
+BBBikeCanvasUtil.pm
 BBBikeCGI/API.pm
 BBBikeCGI/Cache.pm
 BBBikeCGI/Util.pm
@@ -92,11 +93,14 @@ GPS/GpsmanData/SportsTracker.pm
 GPS/GpsmanData/Stats.pm
 GPS/GpsmanData/Strassen.pm
 GPS/GpsmanData/Tk.pm
+GPS/GpsmanData/TkViewer.pm
+GPS/GpsmanData/VehicleInfo.pm
 GPS/KML.pm
 GPS/MPS.pm
 GPS/MyNMEA.pm
 GPS/Ovl.pm
 GPS/SerialStty.pm
+GPS/Symbols/Garmin.pm
 GPS/Util.pm
 GPS/WaypointPlus.pm
 Geography.pm
@@ -265,6 +269,7 @@ data/comments_path
 data/comments_route
 data/comments_scenic
 data/comments_tram
+data/culdesac
 data/deutschland
 data/faehren
 data/flaechen
@@ -478,6 +483,7 @@ html/opensearch/opensearch.html
 html/opensearch/opensearch.js
 html/pleasewait.html
 html/presse.html
+html/scrollarray.js
 html/shortfragezeichenform.html
 html/shortfragezeichenform.utf8.html
 html/sprintf.js

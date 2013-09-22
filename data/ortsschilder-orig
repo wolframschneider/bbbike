@@ -7,6 +7,11 @@
 # OS = Ortsschild
 # OHT = Ortshinweistafel
 # 
+# Editor notes: the name mentioned here should be as spelled on the sign.
+# There are check scripts which check all names here against orte/orte2.
+# If there are differences, then the name as found in orte/orte2 should
+# be marked with a "linked" directive.
+# 
 Prenzlau	OS 41313,100608
 Prenzlau	OS 41817,103329
 Prenzlau	OS 36972,100027
@@ -166,6 +171,8 @@ Heringsdorf	OS 58487,172961
 Ahlbeck	OS 59540,172359
 Ahlbeck	OS 60363,170713
 Ahlbeck	OS 61861,170883
+#: linked: Swinoujscie
+#: XXX_prog: is there a reason why orte2 is written as latin1? backward-compat with ancient bbbike versions?
 Świnoujście	OS 62473,169641
 Korswandt	OS 58312,168956
 Ulrichshorst	OS 56709,168439
@@ -216,9 +223,9 @@ Groß Luckow	OS 37354,125599
 Gollmitz	OS 30789,99365
 Gollmitz	OS 29963,99171
 Wilhelmshof	OS 31129,103246
-Boitzenburg	OS 21980,95754
+Boitzenburg	OS 21977,95749
 Boitzenburg	OS 22963,95207
-Hardenbeck	OS 19336,95235
+Hardenbeck	OS 19316,95227
 Brüsenwalde	OS 13427,93659
 Lychen	OS 1090,89570
 Fürstenberg	OS -8242,87530
@@ -308,8 +315,8 @@ Joachimsthal	OS 32876,62792
 Joachimsthal	OS 31877,65202
 Friedrichswalde	OS 30282,68716
 Friedrichswalde	OS 29834,70069
-Ringenwalde	OS 30264,72584
-Ringenwalde	OS 30369,73359
+Ringenwalde|(Uckermark)	OS 30264,72584
+Ringenwalde|(Uckermark)	OS 30369,73359
 Wildau|b. Eichhorst	OS 26028,56303
 Eichhorst	OS 25395,53549
 Eichhorst	OS 25734,54179
@@ -335,29 +342,48 @@ Bernau|b. Berlin	OS 20482,28536
 Bernau|b. Berlin	OS 23954,31612
 Schwanebeck|b. Berlin	OS 19931,25260
 Schwanebeck|b. Berlin	OS 19565,24028
+#: note: existiert das Schild hier noch?
 Schwanebeck|b. Berlin	OS 18073,23456
-Schwanebeck|b. Berlin	OS 17622,24160
-Schwanebeck|b. Berlin	OS 17190,24695
-Schwanebeck|b. Berlin	OS 18015,25653
-Lindenberg|b. Berlin	OS 18073,23456
+#: linked: Schwanebeck|b. Berlin vvv
+Schwanebeck-West	OS 17622,24160
+Schwanebeck-West	OS 17190,24695
+Schwanebeck-West	OS 18015,25653
+#: linked ^^^
+Schwanebeck|b. Berlin	OS 19790,24572
+Schwanebeck|b. Berlin	OS 19395,24634
+Schwanebeck-West	OS 18583,24966
+#: note: südlicher Teil von Lindenberg vvv
 Lindenberg|b. Berlin	OS 18597,20898
-#: XXX abgeschätzter Punkt
-Lindenberg|b. Berlin	OS 17773,21793
-#: XXX abgeschätzter Punkt
+Lindenberg|b. Berlin	OS 17752,21797
 Lindenberg|b. Berlin	OS 18349,22132
+#: note ^^^
+#: note nördlicher Teil von Lindenberg vvv
+Lindenberg|b. Berlin	OS 18339,22271
+Lindenberg|b. Berlin	OS 18073,23456
+#: note ^^^
 Zepernick	OS 18178,26668
 Zepernick	OS 20482,28536
 Leest	OS -20616,2567
 Grube	OS -19656,2362
-Dahlwitz	OS 26449,10953
-Hönow	OS 26538,15523
-Hönow	OS 25506,15585
+#: linked: Dahlwitz vvv
+Dahlwitz-Hoppegarten, Gemeinde Hoppegarten	OS 26791,10388
+Dahlwitz-Hoppegarten, Gemeinde Hoppegarten	OS 25922,11127
+Dahlwitz-Hoppegarten, Gemeinde Hoppegarten	OS 26449,10953
+#: linked ^^^
+Hönow	OS 26493,15515
+Hönow	OS 25528,15587
 Hönow	OS 27451,14108
 Hönow	OS 26874,14070
 Hönow	OS 26173,14154
 Hönow	OS 25922,14153
 Hönow	OS 25776,14149
 Hönow	OS 25418,14538
+Hönow	OS 25523,14122
+Hönow	OS 26592,14117
+Hönow	OS 27687,15059
+Hönow	OS 27051,15392
+Hönow	OS 26014,15039
+Hönow	OS 26902,15658
 Altlandsberg	OS 32941,18121
 Altlandsberg	OS 31053,15975
 Altlandsberg	OS 30335,16649
@@ -430,8 +456,8 @@ Waltersdorf	OS 21535,-4790
 Waltersdorf	OS 21696,-2925
 Waltersdorf	OS 20951,-4235
 Schulzendorf|b. Eichwalde	OS 21764,-4869
-#REMOVED (existiert nicht mehr) --- Kienberg|(bei Waltersdorf)	OS 20236,-3167
-#REMOVED (existiert nicht mehr) --- Kienberg|(bei Waltersdorf)	OS 20103,-2868
+# REMOVED (existiert nicht mehr) --- Kienberg|(bei Waltersdorf)	OS 20236,-3167
+# REMOVED (existiert nicht mehr) --- Kienberg|(bei Waltersdorf)	OS 20103,-2868
 # REMOVED (tatsächlich? Müsste aber, da ja etwas weiter wieder ein Schild steht) --- Siedlung Hubertus	OS 21088,-2461
 Siedlung Hubertus	OS 21062,-2006
 Siedlung Hubertus	OS 20211,-2805
@@ -616,6 +642,7 @@ Niederfinow	OS 45322,48104
 Niederfinow	OS 42849,49552
 Trampe	OS 39350,42740
 Trampe	OS 38848,41198
+#: linked: Tuchen
 Tuchen-Klobbicke	OS 37425,39993
 Klobbicke	OS 36426,39424
 Tuchen	OS 36139,39155
@@ -648,7 +675,12 @@ Waldesruh	OS 24644,7543
 Waldesruh	OS 24812,7999
 Waldesruh	OS 24813,8594
 Waldesruh	OS 24885,7970
-Waldesruh	OS 25868,9225
+Waldesruh	OS 25886,9251
+Waldesruh	OS 24736,8093
+Waldesruh	OS 24753,8251
+Waldesruh	OS 25169,9114
+Waldesruh	OS 25344,9364
+Waldesruh	OS 25476,9561
 Schönefeld	OS 18588,-438
 Schönefeld	OS 19662,-511
 Schönefeld	OS 17236,-602
@@ -660,6 +692,9 @@ Schönefeld	OS 17181,-2257
 Schönefeld	OS 18853,-1656
 Schönefeld	OS 19611,-4030
 Ahrensfelde	OS 20971,19616
+Ahrensfelde	OS 21442,18880
+Ahrensfelde	OS 22685,19122
+Ahrensfelde	OS 21868,18896
 #: XXX abgeschätzter Punkt
 Drense	OS 47381,101165
 #: XXX abgeschätzter Punkt
@@ -684,10 +719,10 @@ Pinnow|bei Gerswalde	OS 34750,90372
 Buchholz|bei Gerswalde	OS 32377,89414
 Buchholz|bei Gerswalde	OS 31661,89289
 Sachsenhausen	OS -476,40852
-#: note: ausgeschildert ist "Mittenwalde Ortsteil Blankensee" vvv
-Blankensee|(Mittenwalde)	OS 29344,87921
-Blankensee|(Mittenwalde)	OS 27977,87375
-#: note: ^^^
+#: linked: Blankensee|(Mittenwalde) vvv
+Mittenwalde Ortsteil Blankensee	OS 29344,87921
+Mittenwalde Ortsteil Blankensee	OS 27977,87375
+#: linked: ^^^
 Mittenwalde|b. Templin	OS 26799,86909
 Mittenwalde|b. Templin	OS 24969,87287
 Herzfelde|bei Klosterwalde	OS 22917,87978
@@ -696,24 +731,33 @@ Klosterwalde	OS 19681,85491
 Klosterwalde	OS 19533,85103
 Birkenstein	OS 26904,13065
 Birkenstein	OS 27566,13555
-Berlin	OS 25641,11128
+Berlin	OS 25632,11132
 Berlin	OS 25005,15636
 Berlin	OS 24708,7636
 Berlin	OS 24789,7756
 Berlin	OS 25781,9966
+Berlin	OS 23965,15894
+Berlin	OS 11663,-3266
+Berlin	OS 26745,8455
+Mehrow	OS 25327,19421
+Mehrow	OS 24484,18569
 Eiche	OS 22809,16240
 Eiche	OS 23175,16119
+Eiche	OS 23700,18746
+Eiche	OS 23091,18928
+Eiche	OS 22860,18555
 Ravenstein	OHT 25507,7428
 Großziethen	OS 12023,-1174
 Großziethen	OS 14890,136
-Dahmsdorf	OS 58368,15372
-Münchehofe	OS 59989,17394
-Münchehofe	OS 60119,17916
+Dahmsdorf|b. Müncheberg	OS 58368,15372
+Münchehofe|(Märkische Schweiz)	OS 59989,17394
+Münchehofe|(Märkische Schweiz)	OS 60119,17916
 Buckow|(Märkische Schweiz)	OS 56458,18864
 Buckow|(Märkische Schweiz)	OS 55982,17893
 Waldsieversdorf	OS 56591,16565
 Waldsieversdorf	OS 56695,15918
 Teltow	OS 3721,195
+Teltow	OS 3467,560
 Glienicke|/Nordbahn	OS 3741,24942
 Glienicke|/Nordbahn	OS 3459,25595
 Glienicke|/Nordbahn	OS 6172,24604
@@ -732,8 +776,8 @@ Biesendahlshof	OS 63798,89230
 Biesendahlshof	OS 63517,88597
 Niederfelde	OHT 66087,84469
 Niederfelde	OHT 66263,84195
-#: XXX_prog: eigentlich "Dallgow-Döberitz", aber Check-Skripte verlangen einen gleichnamigen Ort in orte(2)-orig!
-Dallgow	OS -9503,12227
+#: linked: Dallgow
+Dallgow-Döberitz	OS -9503,12227
 Seeburg	OS -9034,11411
 Seeburg	OS -8809,10915
 Groß Glienicke	OHT -9935,7406
@@ -749,3 +793,14 @@ Wendisch Rietz Ausbau	OHT 54810,-19312
 Wendisch Rietz	OS 51987,-21228
 Wendisch Rietz	OS 52100,-19769
 Potsdam	OS -16800,1991
+Blumberg	OS 24863,21549
+Blumberg	OS 25239,21918
+Blumberg	OS 23479,22805
+Birkholz	OS 21833,24426
+Birkholz	OS 21433,24738
+Seeberg	OS 29269,16380
+Seeberg	OS 29912,16507
+Waldblick	OS 10470,-3169
+Waldblick	OS 9647,-4057
+Waldblick	OS 10210,-4010
+Mahlow	OS 9559,-4445
