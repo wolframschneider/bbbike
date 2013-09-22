@@ -3016,7 +3016,9 @@ function " . $type . "char_init() {}
 	        $slippymap_url->param( 'area', $area );
 		my @center =  exists $geo->{'center'} ? @{ $geo->{'center'} } : @{ $geo->{'bbox_wgs84'} };
 		@weather_coords = ( $center[1], $center[0] );
-	    } 
+	    } elsif (is_localhost($q)) {
+		@weather_coords = ( 0,0);
+ 	    } 
 
 	    elsif (exists $geo->{'center'}) {
                $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) ) 
@@ -3477,6 +3479,12 @@ sub is_production {
 
     return 1 if -e "/tmp/is_production";
     return $q->virtual_host() =~ /^www\d?\.bbbike\.org$/i ? 1 : 0;
+}
+
+sub is_localhost {
+    my $q = shift;
+
+    return $q->virtual_host() =~ /^localhost$/i ? 1 : 0;
 }
 
 sub is_resultpage {
