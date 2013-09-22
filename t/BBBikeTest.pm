@@ -756,6 +756,7 @@ sub get_pmake () {
 
 sub _update_bbbike_test_data () {
     my $make = get_pmake;
+    local $ENV{MAKEFLAGS}; # protect from gnu make brain damage (MAKEFLAGS is set to "w" in recursive calls)
     # -f BSDmakefile needed for old pmake (which may be found in Debian)
     my $cmd = qq{cd $testdir/data-test && MFLAGS="" MAKEFLAGS="" $make -f BSDmakefile};
     system $cmd;
