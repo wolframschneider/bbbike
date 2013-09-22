@@ -3017,6 +3017,7 @@ function " . $type . "char_init() {}
 		my @center =  exists $geo->{'center'} ? @{ $geo->{'center'} } : @{ $geo->{'bbox_wgs84'} };
 		@weather_coords = ( $center[1], $center[0] );
 	    } elsif (is_localhost($q)) {
+		warn "Reset weather coordinates for localhost\n";
 		@weather_coords = ( 0,0);
  	    } 
 
