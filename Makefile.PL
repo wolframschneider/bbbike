@@ -122,6 +122,8 @@ my @req_table =
    'für das Caching beim CGI-Programm'],
   [qw/Digest::MD5	0	all	2	cgi/,
    'für den File-Cache im CGI-Programm'],
+  [qw/DB_File		0	all	2|4	base/,
+   'Caching, Sessionhandling etc.'],
   [qw/MLDBM		0	all	0|4	base/],
   [qw/GD		1.18	all	2	base/,
    'zum On-the-fly-Erzeugen von Grafiken beim CGI-Programm'],
@@ -373,6 +375,12 @@ sub build_prereq {
 	    if ($type != 0) {
 		next if ($_->[REQTABLE_REQ] & $type) == 0;
 	    }
+	    if (($ENV{TRAVIS}||'') eq 'true') { # XXX actually, check for "batch environment where difficult modules cannot be installed easily"
+		next if $_->[REQTABLE_MODNAME] =~ m{^(
+							Image::Magick # needs exact matching imagemagick library version
+						    |   Geo::GDAL     # dito
+						    )$}x;
+	    }
 	    $prereq{$_->[REQTABLE_MODNAME]} = $_->[REQTABLE_VERSION];
 	    push @prereq, $_;
 	}
@@ -508,16 +516,31 @@ ext:
 }
 
 sub MY::test {
+    my $is_travis = ($ENV{TRAVIS}||'') eq 'true';
     my $out = "test ::\n";
+
+    # XXX This is some kind of hack, travis skips the "make all" step (rightly, I should fix my deps!)
+    if ($is_travis && -r "ext/Makefile") {
+	$out .= <<'EOF';
+	$(MAKE) ext PERL=$(FULLPERL)
+EOF
+    }
+
     if (-d "ESRI") {
 	$out .= <<'EOF';
 	cd ESRI && $(TEST_F) Makefile && $(MAKE) test $(PASTHRU)
 EOF
     }
     if (-r "t/Makefile") {
-	$out .= <<'EOF';
+	if ($is_travis) { # XXX actually, should check for no-cgi setup
+	    $out .= <<'EOF';
+	cd t && BBBIKE_TEST_FOR_LIVE=1 $(MAKE) test-no-cgi PERL=$(FULLPERL)
+EOF
+	} else {
+	    $out .= <<'EOF';
 	cd t && $(MAKE) test PERL=$(FULLPERL)
 EOF
+	}
     }
     if (-r "ext/Makefile") {
 	$out .= <<'EOF'; # XXX "build" should not be here!
