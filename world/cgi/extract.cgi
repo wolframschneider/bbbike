@@ -60,18 +60,21 @@ our $option = {
     'enable_polygon'      => 1,
     'email_valid_mxcheck' => 1,
 
-    'debug'               => "2",
-    'language'            => "en",
-    'request_method'      => "GET",
-    'supported_languages' => [qw/en de es fr ru/],
+    'debug'          => "2",
+    'language'       => "en",
+    'request_method' => "GET",
+
+    #'supported_languages' => [qw/en de es fr ru/],
+    'supported_languages' => [qw/en de/],
     'message_path'        => "../world/etc/extract",
     'pro'                 => 0,
 
-    'with_google_maps' => 1,
+    'with_google_maps'        => 1,
+    'enable_google_analytics' => 1,
 };
 
 our $formats = {
-    'osm.pbf' => 'Protocolbuffer Binary (PBF)',
+    'osm.pbf' => 'Protocolbuffer (PBF)',
     'osm.gz'  => "OSM XML gzip'd",
     'osm.bz2' => "OSM XML bzip'd",
     'osm.xz'  => "OSM XML 7z (xz)",
@@ -298,16 +301,16 @@ sub manual_area {
   <div id="sidebar_content">
     <span class="export_hint">
       <span id="drag_box">
-        <span id="drag_box_manually" style="display:none"><input id="manually_select" type="radio" />
-            @{[ M("Manually select a different area") ]}
+        <span id="drag_box_select" style="display:none">
+            <button class="link">@{[ M("Select a different area") ]}</button>
             <a class='tools-helptrigger' href='$extract_dialog/$language/select-area.html'><img src='/html/help-16px.png' alt="" /></a>
+            <p></p>
         </span>
-        <span id="drag_box_drag">
-            <!--
-            @{[ M("Drag a box on the map to select an area") ]}
+        <span id="drag_box_default">
+            @{[ M("Move the map to your desired location") ]}. <br/>
+            @{[ M("Then click") ]} <button class="link">@{[ M("here") ]}</button> @{[ M("to create the bounding box") ]}.
             <a class='tools-helptrigger' href='$extract_dialog/$language/select-area.html'><img src='/html/help-16px.png' alt="" /></a>
-            -->
-            <span>@{[ M("EXTRACT_USAGE") ]}</span>
+            <br/>
         </span>
       </span>
     </span>
@@ -315,18 +318,18 @@ sub manual_area {
 
     <div id="polygon_controls" style="display:none">
 	<input id="createVertices" type="radio" name="type" onclick="polygon_update()" />
-	<label for="createVertices">@{[ M("add points to polygon") ]}
+	<label class="link" for="createVertices">@{[ M("add points to polygon") ]}
 	<img src="$img_prefix/add_point_on.png" alt=""/>  <a class='tools-helptrigger' href='$extract_dialog/$language/polygon.html'><img src='/html/help-16px.png' alt="" /></a><br/>
 	</label>
 
 	<input id="rotate" type="radio" name="type" onclick="polygon_update()" />
-	<label for="rotate">@{[ M("resize or drag polygon") ]}
+	<label class="link" for="rotate">@{[ M("resize or drag polygon") ]}
 	<img src="$img_prefix/move_feature_on.png" alt="move feature"/>
 	</label>
-        
+
         <span>@{[ M("EXTRACT_USAGE2") ]}</span>
     </div>
-    
+
 
   </div> <!-- sidebar_content -->
  </div><!-- manual_area -->
@@ -385,7 +388,7 @@ sub footer {
     my $ns = webservice($q);
     return if $ns;
 
-    my $analytics = &google_analytics;
+    my $analytics = &google_analytics($q);
     my $url       = $q->url( -relative => 1 );
     my $error     = $args{'error'} || 0;
 
@@ -471,6 +474,15 @@ sub language_links {
 }
 
 sub google_analytics {
+    my $q = shift;
+
+    my $url = $q->url( -base => 1 );
+
+    return "" if !$option->{"enable_google_analytics"};
+    if ( $url !~ m,^http://(www|extract)[2-4]?\., ) {
+        return "";    # devel installation
+    }
+
     return <<EOF;
 <script type="text/javascript">
 //<![CDATA[
@@ -1218,7 +1230,7 @@ sub homepage {
                             -size => 8
                           )
                           . '</span>',
-qq{<span title="hide longitude,latitude box" class="lnglatbox" onclick="javascript:toggle_lnglatbox ();"><input class="uncheck" type="radio" />hide lnglat</span>}
+qq{<span title="hide longitude,latitude box" class="lnglatbox" onclick="javascript:toggle_lnglatbox ();"><input class="uncheck" type="radio" />@{[ M("hide") ]} lnglat</span>}
                     ]
                 ),
 
@@ -1262,7 +1274,7 @@ qq{<span title="hide longitude,latitude box" class="lnglatbox" onclick="javascri
                   . $q->td(
                     { "class" => "center" },
                     [
-qq{<span title="show longitude,latitude box" class="lnglatbox_toggle" onclick="javascript:toggle_lnglatbox ();"><input class="uncheck" type="radio" />show lnglat</span><br/>\n}
+qq{<span title="show longitude,latitude box" class="lnglatbox_toggle" onclick="javascript:toggle_lnglatbox ();"><input class="uncheck" type="radio" />@{[ M("show") ]} lnglat</span><br/>\n}
                           . '<span class="center" id="square_km_small" title="area covers N square kilometers"></span>'
                     ]
                   ),

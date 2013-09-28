@@ -5,6 +5,15 @@
 # Author: Slaven Rezic
 #
 
+use strict;
+use warnings;
+
+BEGIN {
+    if ($ENV{BBBIKE_TEST_FAST}) {
+        print "1..0 # skip BBBIKE_TEST_FAST\n";
+        exit;
+    }
+}
 
 use FindBin;
 use lib ("$FindBin::RealBin/..",
@@ -17,9 +26,6 @@ use Strassen::Util;
 use Benchmark;
 use Getopt::Long;
 use Data::Dumper;
-
-use strict;
-use warnings;
 
 BEGIN {
     if (!eval q{

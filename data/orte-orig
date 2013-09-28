@@ -162,7 +162,7 @@ Schlepzig	2 45182,-41534
 Diedersdorf	1 7506,-7471
 Blankenfelde	2 10115,-8276
 Mahlow	2 11165,-5318
-Waldblick	0 10192,-3477
+Waldblick	0 10185,-3478
 Klein Kienitz	0 16026,-10830
 Brusendorf	1 18197,-10627
 Groß Kienitz	1 14913,-9037
@@ -354,8 +354,7 @@ Friedersdorf|b. Seelow	1 77759,12767
 Dolgelin	2 78805,11331
 Lietzen	1 74186,8159
 Libbenichen	1 80731,9206
-#: XXX_prog: Großgemeinde ohne Ortskern?
-Fichtenhöhe	1 79462,7750
+#: XXX_prog: zugehörige Großgemeinde (wahrscheinlich): Fichtenhöhe
 Alt Mahlisch	1 79462,7750
 Neu Mahlisch	1 77250,9375
 Falkenhagen|bei Seelow	2 72607,3668
@@ -429,7 +428,7 @@ Falkenberg|(Oderbruch)	2 47628,44635
 Bralitz	1 50572,48457
 Altranft	2 55627,41154
 Altreetz	2 61425,40876
-Britz	2 37650,53211
+Britz	2 37846,52750
 Chorin	2 41250,55694
 Sandkrug	1 41654,53939
 Senftenhütte	1 40389,59318
@@ -970,7 +969,7 @@ Tauche	1 62742,-27242
 Giesensdorf	1 60565,-29039
 Stremmen	1 62837,-29785
 #: XXX_prog zugehörige Großgemeinde: Dahlwitz-Hoppegarten
-Dahlwitz	2 27036,11142
+Dahlwitz	2 27047,11144
 Hoppegarten|(Mark)	2 28510,12507
 Waldesruh	0 25389,8558
 Münchehofe|b. Dahlwitz	1 28660,9920

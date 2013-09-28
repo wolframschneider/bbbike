@@ -500,7 +500,7 @@ The next block is part of a named section. Sections may be nested.
 =item C<ignore>
 
 The next line/block is ignored for some processing instructions. For
-example, "culdesac" entries in F<comments_misc-orig> are skipped when
+example, "busroute_N" entries in F<comments_misc-orig> are skipped when
 creating F<comments_misc>.
 
 =item C<append_comment: I<comment>>
@@ -581,11 +581,30 @@ routes).
 A priority for checks. The priority string should be something between
 C<#A> (highest) and C<#C> (lowest).
 
+=item C<linked: I<string>>
+
+May be used for check purposes. Currently only utilized in
+F<ortsschilder-orig>, where the linked name is to be used to do checks
+against F<orte-orig>/F<orte2-orig>.
+
 =back
 
 =head3 Obsolete and to-be-decided directives
 
 =over
+
+=item C<off: I<when> I<comment>>
+
+Currently used in F<ampeln-orig>, needs to be decided on the exact
+format and even on the directive name. Example entry:
+
+    #: off: night (seen 2001-12-25)
+
+The I<comment> part may be completely missing.
+
+Currently the following labels are used in the I<when> part: C<night>,
+C<weekend>, C<holiday>, week day names, C<except_schooltime>,
+C<except_event>, I<HH:MM-HH:MM>.
 
 =item C<internal_note: I<string>>
 

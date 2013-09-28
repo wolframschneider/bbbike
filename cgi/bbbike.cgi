@@ -84,7 +84,7 @@ use vars qw($VERSION $VERBOSE
 	    $ampeln $qualitaet_net $handicap_net
 	    $strcat_net $radwege_strcat_net $radwege_net $routen_net $comments_net
 	    $green_net $unlit_streets_net
-	    $crossings $kr %cached_plz $net
+	    $crossings $kr $culdesac_cached %cached_plz $net
 	    $sperre_tragen $sperre_narrowpassage
 	    $overview_map $city
 	    $use_umland $use_umland_jwd $use_special_destinations
@@ -127,6 +127,7 @@ use vars qw($VERSION $VERBOSE
 	    $nice_abc_list
 	    $warn_message $use_utf8 $data_is_wgs84
 	    $enable_homemap_streets
+	    $include_outer_region @outer_berlin_places $outer_berlin_qr $outer_berlin_subplaces_qr
 	    $warn_message $use_utf8 $data_is_wgs84 $osm_data
 	    $gmap_api_version
 	    $enable_current_postion
@@ -770,6 +771,7 @@ $newstreetform_encoding = "";
 			"Glienicke/Nordbahn", "Dahlewitz",
 		       );
 $outer_berlin_qr = "^(?:" . join("|", map { quotemeta } @outer_berlin_places) . ")\$"; $outer_berlin_qr = qr{$outer_berlin_qr};
+$outer_berlin_subplaces_qr = "^(?:" . join("|", map { quotemeta } @outer_berlin_places) . ")(-|\$)"; $outer_berlin_subplaces_qr = qr{$outer_berlin_subplaces_qr};
 
 ####################################################################
 
@@ -865,7 +867,7 @@ if ($local_lang eq $selected_lang) {
 
 
 #warn "xxx: city: $datadir, lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
-warn "$datadir does not exists!\n" if ! -d "../$datadir";
+warn "data $datadir does not exists!\n" if ! -d "../$datadir";
 
 #if ($config_master =~ s{^(.*)\.(en)(\.cgi)$}{$1$3}) {
 
@@ -918,6 +920,11 @@ if ($osm_data) {
 
     my $geo = get_geography_object();
     my $name = $geo->{city_names};
+
+    if (!$name) {
+	warn "Alert: No city name, reset name=$city, no osm data given?\n";
+	$name = $city;
+    }
 
     $local_city_name = select_city_name($city, $name, $lang);
     $en_city_name = select_city_name($city, $name, "en");
@@ -2227,11 +2234,14 @@ sub choose_form {
 		}
 	    }
 
-	    if (@$matchref == 1 && do {
-		my $first_rec_file_index = $matchref->[0]->get_field("i");
-		$first_rec_file_index = '' if !defined $first_rec_file_index;
-		$is_usable_without_strassen{$first_rec_file_index}
-	    }) {
+	    if (@$matchref == 1
+		&& $plz_scope eq 'Berlin/Potsdam' # important: %is_usable_without_strassen only valid for Berlin/Potsdam!
+		&& do {
+		     my $first_rec_file_index = $matchref->[0]->get_field("i");
+		     $first_rec_file_index = '' if !defined $first_rec_file_index;
+		     $is_usable_without_strassen{$first_rec_file_index}
+		 }
+	       ) {
 		$$nameref = $matchref->[0]->get_name;
 		$$tworef = _match_to_cgival($matchref->[0]);
 		$q->param($type . 'c', $matchref->[0]->get_coord);
@@ -2246,7 +2256,7 @@ sub choose_form {
 					 $match->get_citypart);
 		warn "W‰hle $type-Straﬂe f¸r $strasse/$bezirk (2nd)\n"
 		    if $debug;
-		if ($bezirk =~ $outer_berlin_qr) {
+		if ($bezirk =~ $outer_berlin_subplaces_qr) {
 		    my $name = _outer_berlin_hack($strasse, $bezirk);
 		    if ($name) {
 			$$nameref = $name;
@@ -2349,7 +2359,9 @@ EOF
 	# Eine Addition aller aktuellen Straﬂen, die bei luise-berlin
 	# aufgef¸hrt sind, ergibt als Summe 10129
 	# Da aber auch einige "unoffizielle" Wege in der DB sind, d¸rften es an die 11000 werden
-	my($bln_str, $all_bln_str, $pdm_str) = (10500, 11000, 420);
+	# ---> es sind aber mehr als 11000. Am besten, ich lasse $all_bln_str weg...
+        # ---> es sind doch weniger als 11000, ich runde aber trotzdem auf
+	my($bln_str, $pdm_str) = (11000, 550);
 	# XXX Use format number to get a comma in between.
 
 	my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
@@ -3004,7 +3016,10 @@ function " . $type . "char_init() {}
 	        $slippymap_url->param( 'area', $area );
 		my @center =  exists $geo->{'center'} ? @{ $geo->{'center'} } : @{ $geo->{'bbox_wgs84'} };
 		@weather_coords = ( $center[1], $center[0] );
-	    } 
+	    } elsif (is_localhost($q)) {
+		warn "Reset weather coordinates for localhost\n";
+		@weather_coords = ( 0,0);
+ 	    } 
 
 	    elsif (exists $geo->{'center'}) {
                $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) ) 
@@ -3467,6 +3482,12 @@ sub is_production {
     return $q->virtual_host() =~ /^www\d?\.bbbike\.org$/i ? 1 : 0;
 }
 
+sub is_localhost {
+    my $q = shift;
+
+    return $q->virtual_host() =~ /^localhost$/i ? 1 : 0;
+}
+
 sub is_resultpage {
     my $q = shift;
 
@@ -3839,31 +3860,47 @@ EOF
 sub make_crossing_choose_html {
     my($strname, $type, $coords_ref) = @_;
 
+    my $culdesac = get_culdesac_hash();
+
     my $html = "";
 
     my $i = 0;
     my %used;
     my $ecke_printed = 0;
-    foreach (@$coords_ref) {
-	if ($used{$_}) {
+    for my $c (@$coords_ref) {
+	if ($used{$c}) {
 	    next;
 	} else {
-	    $used{$_}++;
+	    $used{$c}++;
 	}
-	if (exists $crossings->{$_}) {
-	    my @kreuzung;
-	    foreach (@{$crossings->{$_}}) {
-		if ($_ ne $strname) {
-		    push(@kreuzung, $_);
+	my @kreuzung;
+	# If there's a culdesac entry, then use it
+	if ($culdesac && exists $culdesac->{$c}) {
+	    my $culdesac_name = $culdesac->{$c};
+	    if (!defined $culdesac_name || !length $culdesac_name) {
+		$culdesac_name = M('Sackgassenende');
+	    }
+	    push @kreuzung, $culdesac_name;
+	}
+	if (@kreuzung == 0) {
+	    # Most common case: a normal crossing
+	    if (exists $crossings->{$c}) {
+		for my $crossing (@{$crossings->{$c}}) {
+		    if ($crossing ne $strname) {
+			push(@kreuzung, $crossing);
+		    }
 		}
 	    }
 	    if (@kreuzung == 0) {
-		# May happen if all street names at the crossing are the same
+		# Still nothing, ignore this coord
 		next;
 	    }
-	    for (@kreuzung) {
-		if (m{^\s*$}) {
-		    $_ = $no_name;
+	}
+
+	{
+	    for my $kreuzung (@kreuzung) {
+		if ($kreuzung =~ m{^\s*$}) {
+		    $kreuzung = '(' . M("Straﬂe ohne Namen") . ')';
 		}
 	    }
 	    {
@@ -3885,12 +3922,12 @@ sub make_crossing_choose_html {
 	    }
 
 	    if ($use_select) {
-		$html .= "<option value=\"$_\">";
+		$html .= "<option value=\"$c\">";
 	    } else {
 		$html .= "<label>";
 		$html .=
 		    "<input type=radio name=" . $type . "c " .
-			"value=\"$_\"";
+			"value=\"$c\"";
 		if ($i++ == 0) {
 		    $html .= " checked";
 		}
@@ -5489,8 +5526,7 @@ sub display_route {
 
 
  OUTPUT_DISPATCHER:
-    if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|json|json-short|geojson|perldump|gpx-route)$/) {
-	
+    if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|json|json-short|geojson|geojson-short|perldump|gpx-route)$/) {
 	for my $tb (@affecting_blockings) {
 	    $tb->{longlathop} = [ map { join ",", convert_data_to_wgs84(split /,/, $_) } @{ $tb->{hop} || [] } ];
 	}
@@ -5583,13 +5619,14 @@ sub display_route {
 	    if ($cache_entry) {
 		$cache_entry->put_content($json_output, {headers => \@headers});
 	    }
-	} elsif ($output_as eq 'geojson') {
+	} elsif ($output_as =~ m{^geojson(-short)?$}) {
+	    my $is_short = !!$1;
 	    http_header
 		(-type => "application/json",
 		 @weak_cache,
 		);
 	    require BBBikeGeoJSON;
-	    print BBBikeGeoJSON::bbbikecgires_to_geojson_json($res);
+	    print BBBikeGeoJSON::bbbikecgires_to_geojson_json($res, short => $is_short);
 	} elsif ($output_as eq 'gpx-route') {
 	    require Strassen::GPX;
 	    my $filename = filename_from_route($startname, $zielname) . ".gpx";
@@ -6892,7 +6929,6 @@ sub draw_route {
     my $draw;
     my $route; # optional Route object
 
-    my $session_is_expired;
     if (defined $q->param('coordssession')) {
 	if (my $sess = tie_session($q->param('coordssession'))) {
 	    # Note: the session data specified by coordssession could
@@ -6904,7 +6940,7 @@ sub draw_route {
 	    # We can hopefully safely cache if a session id was involved.
 	    @cache = @weak_cache;
 	} else {
-	    $session_is_expired = 1;
+	    return show_session_expired_error();
 	}
     }
 
@@ -7096,10 +7132,12 @@ sub draw_route {
     };
     if ($@) {
 	my $err = "Fehler in BBBikeDraw: $@";
-	http_header(-type => 'text/html',
-		    @no_cache,
-		   );
-	print "<body>$err</body>";
+	if (!$header_written) {
+	    http_header(-type => 'text/html',
+			@no_cache,
+		       );
+	    print "<body>$err</body>";
+	} # else just die
 	die $err;
     }
 
@@ -7129,11 +7167,7 @@ sub draw_route {
 	}
     };
     if ($@) {
-	if ($session_is_expired) {
-	    die "Cannot draw image because session is expired";
-	} else {
-	    die $@;
-	}
+	die $@;
     }
 }
 
@@ -7501,6 +7535,20 @@ sub all_crossings {
 	$crossings = $str->all_crossings(RetType => 'hash',
 					 UseCache => 1);
     }
+}
+
+sub get_culdesac_hash {
+    # $culdesac_cached: defined but false: no culdesac file available
+    if (!defined $culdesac_cached) {
+	eval {
+	    $culdesac_cached = Strassen->new('culdesac')->get_hashref;
+	};
+	if (!$culdesac_cached || $@) {
+	    warn "WARN: culdesac data could not be loaded: $@";
+	    $culdesac_cached = 0;
+	}
+    }
+    $culdesac_cached;
 }
 
 sub new_kreuzungen {
@@ -9585,6 +9633,19 @@ sub send_error {
     warn "DEBUG: Error page sent for " . $q->query_string . ", reason: $reason\n";
     http_req_logging();
     my_exit 0;
+}
+
+sub show_session_expired_error {
+    http_header
+	(-type => 'text/html',
+	 @no_cache,
+	);
+    header(-title => M('Fehler: Sitzung ist abgelaufen'));
+    print <<EOF;
+<a href="$bbbike_script?begin=1"><b>@{[ M("Neue Anfrage") ]}</b></a><p>
+EOF
+    footer();
+    warn "Cannot draw image because session is expired";
 }
 
 ######################################################################

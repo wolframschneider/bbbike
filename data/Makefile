@@ -73,6 +73,7 @@ SOURCE_TARGETS+=	gesperrt gesperrt_car
 SOURCE_TARGETS+=	gesperrt_$(i)
 .endfor
 SOURCE_TARGETS+=	${COMMENTS_PARTIAL} fragezeichen exits
+SOURCE_TARGETS+=	culdesac
 
 # These do not have a -orig file of their own, or another type of source file
 COMPUTED_TARGETS=	sbahnhof_bg ubahnhof_bg berlin berlin_ortsteile
@@ -138,7 +139,9 @@ targets-clean:
 	-rm -f .strassen.tmp
 
 fix-permissions:
-	$(READABLE) $(TARGETS) $(NON_TARGETS) temp_blockings/bbbike-temp-blockings.pl temp_blockings/*.bbd
+	for i in $(TARGETS) $(NON_TARGETS) temp_blockings/bbbike-temp-blockings.pl temp_blockings/*.bbd; do \
+	     [ -e $$i ] && $(READABLE) $$i || echo "$$i does not exist, skip fix-permission task"; \
+	done
 
 # Useful checks, but normally too slow for a quick build
 # XXX merge with sort-Berlin.coords.data rule below?
@@ -730,6 +733,14 @@ exits:	exits-orig
 	mv $@~ $@
 	-@$(READONLY) $@
 
+culdesac:	culdesac-orig
+	-@$(WRITEABLE) $@
+	cat $> | \
+	    ${GREPSTRASSEN} -preserveglobaldirectives -v -directive 'ignore=' | \
+	    ${CONVERT2HAFAS} - > $@~
+	mv $@~ $@
+	-@$(READONLY) $@
+
 kneipen:	kneipen.yml
 	-@$(WRITEABLE) $@
 	${PERL} $(MISCSRCDIR)/yaml2bbd $> > $@~
@@ -775,15 +786,17 @@ ${_img_gif_${img}}: ${_img_png_${img}}
 make_misc:
 	cd $(MISCDIR) && ${MAKE} ${MAKEFLAGS} 
 
-# create Storable versions of data files
+# Create Storable versions of data files
 # handling of Storable files is up to twice as fast as normal bbd files, but not well-tested, so it is not done by default
+#
+# This target assumes that all bbd files are up-to-date.
 STORABLE_TARGETS=${BBD_TARGETS:S/$/.st/}
-storable:	${STORABLE_TARGETS}
-
+storable:
 .for i in ${BBD_TARGETS}
-$i.st: $i
-	$(PERL) -I.. -I../lib ../Strassen/Storable.pm -v -u -f $i $i.st
-	$(READABLE) $i.st
+	@if [ ! -e $i.st -o $i.st -ot $i ] ; then \
+	    $(PERL) -I.. -I../lib ../Strassen/Storable.pm -v -u -f $i $i.st; \
+	    $(READABLE) $i.st; \
+	fi
 .endfor
 
 ######################################################################
@@ -943,7 +956,7 @@ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org:	*-orig ${PERSISTENTTMPDIR}/bbbik
 # exact distances, but slower, especially if dist.db is missing or fresh
 fragezeichen-nextcheck.org-exact-dist:
 	-@$(WRITEABLE) ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org
-	${MISCSRCDIR}/fragezeichen2org.pl --plan-dir=${HOME}/.bbbike/gps_uploads --dist-dbfile=${PERSISTENTTMPDIR}/dist.db *-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd > ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org~
+	${MISCSRCDIR}/fragezeichen2org.pl --plan-dir=${HOME}/.bbbike/gps_uploads --with-searches-weight --dist-dbfile=${PERSISTENTTMPDIR}/dist.db *-orig ${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd > ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org~
 	mv ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org~ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org
 	-@$(READONLY) ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.org
 
@@ -1245,6 +1258,7 @@ report-checks:
 do-checks:	.check_empty_lines \
 	.check_strassen1 .check_strassen2 .check_strassen_potsdam .check_strassen_cont .check_strassen_consecutive \
 	.check_plaetze1 .check_plaetze2 .check_strassen_plaetze_unique \
+	.check_missing_streets \
 	.check_hoehe .check_hoehe2 \
 	.check_ampeln .check_ampeln2 \
 	.check_gesperrt1 .check_gesperrt2 \
@@ -1268,6 +1282,7 @@ do-checks:	.check_empty_lines \
 	.check_comments_tram_2 .check_comments_kfzverkehr_2 \
 	.check_comments_scenic_2 \
 	.check_exits \
+	.check_culdesac .check_culdesac_2 \
 	.check_temp_blockings .check_grenzuebergaenge \
 	.check_berlin .check_potsdam \
 	.check_ortsschilder .check_ortsschilder2
@@ -1338,6 +1353,10 @@ check-disabled:
 	@rm -f /tmp/strassen-names /tmp/plaetze-names
 	@touch $@
 
+.check_missing_streets: ${MISCSRCDIR}/missing_streets.pl strassen fragezeichen-orig Berlin.coords.data
+	${MISCSRCDIR}/missing_streets.pl
+	@touch $@
+
 .check_hoehe:	hoehe .strassen.tmp landstrassen landstrassen2 fragezeichen
 	$(CHECK_POINTS) -namerx '^\d+(\.\d+)?$$' hoehe .strassen.tmp landstrassen landstrassen2 fragezeichen
 	@touch $@
@@ -1368,13 +1387,13 @@ check-disabled:
 	$(CHECK_POINTS) ortsschilder .strassen.tmp landstrassen landstrassen2 fragezeichen
 	@touch $@
 
-.check_ortsschilder2:	orte orte2 ortsschilder
-	perl -MData::Dumper -I.. -I../lib -MStrassen::Core -e '$$seen{"Berlin"} = 1; for $$o (qw(orte orte2)) { Strassen->new_stream($$o)->read_stream(sub { $$seen{$$_[0]->[0]}++; for (@{ $$_[1]->{alias} || [] }) { $$seen{$$_ }++ } }, UseLocalDirectives => 1) }; Strassen->new_stream("ortsschilder")->read_stream(sub { $$seen{$$_[0]->[0]}++ or $$error{$$_[0]->[0]}++ }); if (%error) { die Dumper(\%error) }' 
+.check_ortsschilder2:	orte orte2 ortsschilder-orig
+	perl -MData::Dumper -I.. -I../lib -MStrassen::Core -e '$$seen{"Berlin"} = 1; for $$o (qw(orte orte2)) { Strassen->new_stream($$o)->read_stream(sub { my($$r) = @_; my $$label = $$r->[0]; $$seen{$$label}++; }) }; Strassen->new_stream("ortsschilder-orig")->read_stream(sub { my($$r, $$dir) = @_; my $$label = "@{ $$dir->{linked} || [] }" || $$r->[0]; $$seen{$$label}++ or $$error{$$label}++ }, UseLocalDirectives => 1); if (%error) { die Dumper(\%error) }' 
 	@touch $@
 
 # Interactive test
-.check_ortsschilder_dist:	orte orte2 ortsschilder
-	perl -Mopen=:locale  -MData::Dumper -I.. -I../lib -MStrassen::Util -MStrassen::Core -e 'for $$o (qw(orte orte2)) { Strassen->new_stream($$o)->read_stream(sub { $$pos{$$_[0]->[0]} = $$_[0]->[1][0]; $$cat{$$_[0]->[0]} = $$_[0]->[2] }) }; Strassen->new_stream("ortsschilder")->read_stream(sub { $$pos = $$_[0]->[1][0]; print int(Strassen::Util::strecke_s($$pos, $$pos{$$_[0]->[0]})) . " " . $$cat{$$_[0]->[0]} . " " . $$_[0]->[0] . "\n" }) ' | sort -nr | less
+.check_ortsschilder_dist:	orte orte2 ortsschilder-orig
+	perl -MData::Dumper -I.. -I../lib -MStrassen::Util -MStrassen::Core -Mopen=:locale -e 'for $$o (qw(orte orte2)) { Strassen->new_stream($$o)->read_stream(sub { my($$r) = @_; my $$label = $$r->[0]; $$pos{$$label} = $$r->[1][0]; $$cat{$$label} = $$r->[2] }) }; Strassen->new_stream("ortsschilder-orig")->read_stream(sub { my($$r, $$dir) = @_; my $$label = "@{ $$dir->{linked} || [] }" || $$r->[0]; $$pos = $$r->[1][0]; printf "%.1fkm cat=%s %s\n", Strassen::Util::strecke_s($$pos, $$pos{$$label})/1000, $$cat{$$label}, $$label }, UseLocalDirectives => 1) ' | sort -nr | less
 
 .check_gesperrt1:	gesperrt .strassen.tmp landstrassen landstrassen2 fragezeichen routing_helper-orig
 	$(CHECK_POINTS) gesperrt .strassen.tmp landstrassen landstrassen2 fragezeichen routing_helper-orig
@@ -1602,6 +1621,16 @@ check-disabled:
 	$(CHECK_POINTS) grenzuebergaenge deutschland
 	@touch $@
 
+.check_culdesac:	culdesac .strassen.tmp landstrassen landstrassen2 fragezeichen
+	$(CHECK_POINTS) culdesac .strassen.tmp landstrassen landstrassen2 fragezeichen
+	@touch $@
+
+# Check also the orig variant, because currently too much is
+# ignored...
+.check_culdesac_2:	culdesac-orig .strassen.tmp landstrassen landstrassen2 fragezeichen
+	$(CHECK_POINTS) culdesac-orig .strassen.tmp landstrassen landstrassen2 fragezeichen
+	@touch $@
+
 .for city in berlin potsdam
 .check_$(city):	$(city)
 	grep -v '^#' $(city) | perl -nle '$$line++; END { die "Expected exactly one line" if $$line != 1 }'
@@ -1628,10 +1657,10 @@ check-line-lengths:	.check_line_lengths
 	@touch $@
 
 count-streets:
-	@echo -n "Berlin:        "; grep -v "^#" strassen | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 -d"(" | sort -u | wc -l
+	@echo -n "Berlin:        "; grep -v "^#" strassen                            | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
 	@echo -n "Landstraﬂen:   "; grep -v "^#" landstrassen landstrassen2 | ${CUT} -f1 | sort -u | wc -l
-	@echo -n "  Potsdam:     "; fgrep "(Potsdam)" landstrassen | grep -v "^(" | ${CUT} -f1 -d"(" | sort -u | wc -l
-	@echo -n "  Oranienburg: "; grep -v "^#" landstrassen | fgrep "(Oranienburg" | ${CUT} -f1 -d"(" | sort -u | wc -l
+	@echo -n "  Potsdam:     "; grep -v "^#" landstrassen | fgrep "(Potsdam)"    | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
+	@echo -n "  Oranienburg: "; grep -v "^#" landstrassen | fgrep "(Oranienburg" | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
 
 check-crossings:	check-crossings-important \
 			check-crossings-less-important

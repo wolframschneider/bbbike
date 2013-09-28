@@ -779,7 +779,7 @@ sub reorder_pbf {
         my $pbf_file = $obj->{'pbf_file'};
         my $format   = $obj->{'format'};
 
-        my $st   = stat($pbf_file);
+        my $st = stat($pbf_file) or die "stat $pbf_file: $!\n";
         my $size = $st->size * $format{$format};
 
         $hash{$json_file} = $size;
@@ -1233,10 +1233,18 @@ qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
 
         my $text = M("EXTRACT_EMAIL");
         my $granularity;
-        if ( ref $osmosis_options eq 'ARRAY' && grep { /^granularity=10000$/ }
-            @$osmosis_options )
+        if ( grep { /^granularity=10000$/ } @{ $option->{"osmosis_options"} } )
         {
-            $granularity = "10,001 (1.1 meters)";
+            $granularity = "10,000 (1.1 meters)";
+        }
+        elsif ( grep { /^granularity=1000$/ }
+            @{ $option->{"osmosis_options"} } )
+        {
+            $granularity = "1,000 (11 cm)";
+        }
+        elsif ( grep { /^granularity=100$/ } @{ $option->{"osmosis_options"} } )
+        {
+            $granularity = "100 (1.1 cm)";
         }
         else {
             $granularity = "full";
@@ -1290,15 +1298,13 @@ qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}],
 #http://www.BBBike.org - Your Cycle Route Planner
 #EOF
 
-        my @args = (
-            $obj->{'email'},
-            "BBBike extract: area is ready for download: '"
-              . $obj->{'city'}
-              . "', format="
-              . $obj->{'format'},
-            $message,
-            $option->{'bcc'}
-        );
+        my $subject =
+            "BBBike extract: area '"
+          . $obj->{'city'}
+          . "', format="
+          . $obj->{'format'}
+          . " is ready for download";
+        my @args = ( $obj->{'email'}, $subject, $message, $option->{'bcc'} );
 
         my $email_rest_enabled = $option->{"email_rest_enabled"};
         warn "email_rest_enabled: $email_rest_enabled\n" if $debug >= 2;

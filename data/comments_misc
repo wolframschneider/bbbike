@@ -39,6 +39,7 @@ Keine Straße ausgeschildert, am Bahndamm halten	CS; 12645,11673 12596,11696
 Paralleler Uferweg an der Spree nur über zwei Treppen erreichbar	CS 10300,12587 10355,12551 10411,12471 10422,12395
 unter der S-Bahnbrücke: Glassplitter	CS 6184,20550 6279,20587
 Hegelstr.: Ausweichmöglichkeit auf Nebenstraße mit Kopfsteinpflaster oder grünen Mittelstreifen mit Parkweg	CS -13625,-902 -13468,-847 -13433,-831 -13231,-763 -13137,-737 -13064,-715 -13044,-709 -12877,-655
+Kreisverkehr	Roundabout 16355,9622 16355,9603 16376,9602 16388,9614 16389,9633 16368,9632 16355,9622
 Kreisverkehr	Roundabout 27079,15430
 Kreisverkehr	Roundabout 60197,12001
 Kreisverkehr	Roundabout 61156,11478
@@ -67,7 +68,7 @@ Sesselmannweg: Kette	CS 3264,9261 3332,9181
 Apeldorner Weg: kein Straßenname ausgeschildert; Weg verläuft westl. direkt an der BAB (104)	CS 3848,8689 3868,8759 3952,8980
 (Wallenbergstr. - Rudolstätter Str.): Bordsteine	CP; 3964,8559 4029,8482 4139,8485
 (Wallenbergstr. - Rudolstätter Str.): Bordsteine	CP; 4139,8356 4029,8482 4139,8485
-Virchowweg: Gelände der Charité	CS 8548,13577 8503,13553 8379,13457 8371,13399 8434,13310 8602,13075 8622,13042 8628,13033
+Virchowweg: Gelände der Charité	CS 8548,13577 8503,13553 8377,13463 8371,13399 8434,13310 8602,13075 8622,13042 8628,13033
 Hufelandweg: Gelände der Charité	CS 8503,13553 8554,13476 8504,13441 8538,13388 8582,13355 8618,13306 8630,13172 8632,13133 8602,13075
 Bonhoefferweg: Gelände der Charité	CS 8538,13388 8487,13351 8434,13310
 Sauerbruchweg: Gelände der Charité	CS 8487,13351 8555,13260 8605,13200 8630,13172
@@ -96,7 +97,7 @@ Privatweg, Durchfahrt eigentlich verboten, aber möglich	CS 19735,11721 19830,116
 Dreipfuhlpark: Freigegeben für Radfahrer	CS 1536,3780 1523,3904 1520,4006 1524,4054 1548,4168 1608,4313 1670,4477 1692,4575 1682,4607 1689,4630 1698,4653
 Seefelder Str.: Schranken, für Radler gut passierbar	CS 17341,16136 17344,16081
 (Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6762,1226 6702,1197 6700,1184
-(Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6667,1189 6596,1198 6528,1207 6501,1207 6481,1210 6406,1218
+(Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6667,1189 6596,1198 6528,1207 6501,1207 6481,1210 6409,1218
 (Parkweg Blankenhainer Str. - Hildburghauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6578,1595 6528,1573 6517,1479 6515,1418 6479,1312 6481,1210 6487,1169 6455,1101 6467,1028
 (Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5514,580 5571,614 5671,637 5615,735 5576,800 5584,808 5571,864 5540,919
 (Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5578,936 5540,919 5358,822
@@ -104,7 +105,7 @@ Seefelder Str.: Schranken, für Radler gut passierbar	CS 17341,16136 17344,16081
 (Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5571,614 5533,663
 (Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5539,773 5576,800
 (Hildburghauser Str. - Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 6467,1028 6436,921 6421,892 6414,833 6367,825 6360,825 6352,825 6267,834 6259,835 6250,834 6172,822 6163,822 6155,821 6075,821 6066,821 6057,821 5975,821 5964,821 5954,819 5875,807 5867,807 5860,805 5781,800 5742,798 5682,767 5675,764 5615,735 5590,719
-(Parkweg Schloßpark Lichterfelde): Radfahren erlaubt	CS 4601,3704 4664,3712 4699,3707 4725,3685 4754,3651 4830,3607 4874,3617 4921,3593
+(Parkweg Schloßpark Lichterfelde): Radfahren erlaubt	CS 4601,3704 4664,3712 4699,3707 4725,3685 4754,3651 4830,3607 4874,3617 4910,3599
 (Parkweg Bäkepark): Radfahren erlaubt	CS 5337,4192 5320,4217 5246,4240 5129,4262 5100,4285 5015,4339 4957,4448 4870,4609 4848,4668 4795,4801 4760,4843 4742,4885
 Poller	CS -9031,5984
 Poller	CS -8929,5984
@@ -114,7 +115,7 @@ Begasstr. - Riemenschneiderweg: Hausdurchfahrten	CS 6513,7005 6650,7017 6770,702
 "Brücke" ausgeschildert	CP; 2452,281 2195,42 2175,71
 Gartentor, Zufahrt zum Gemeindehaus (dürfte immer offen sein)	CS 2201,43954
 Freienbrinker Saum: die Straße führt am Waldrand entlang, in der Dunkelheit ist mit Wildschweinen zu rechnen	CS 30124,4664 30254,4692 30369,4697 30478,4715 30527,4724 30588,4720 30636,4717 30686,4731 30810,4765 30857,4770 30913,4766 31011,4750 31118,4768 31209,4781 31224,4775 31311,4742 31339,4726 31364,4711 31424,4658
-(Deutschhofer Allee - Unter den Birken): in der Dämmerung ist mit Wildschweinen zu rechnen	CS 21940,8158 22077,8104 22199,8028 22600,7711
+(Deutschhofer Allee - Unter den Birken): in der Dämmerung ist mit Wildschweinen zu rechnen	CS 21978,8132 22077,8104 22181,8009 22631,7692
 Petriplatz: zusätzliche Ausschilderung "Zur Brüderstr."	CS; 10460,11979 10418,12016
 DB-Gelände: bei starken Regenfällen regelmäßig eine große und tiefe Pfütze, die die Durchfahrt erschwert	CS 14107,10911 14043,10928
 Straße 77: die Straße ist nicht ausgeschildert	CS 15402,12390 15320,12375
@@ -347,7 +348,8 @@ in Höhe Erkelenzdamm 5 abbiegen	CP2; 11192,10629 11145,10638
 (Zobtener Str. - Fischerstr.): durch eine Kleingartenanlage	CS 16353,10207 16404,10286
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Straße verläuft zwischen Bahnstrecke und Wohnhäusern	CS 17210,11950 17201,11975 17137,11969 17023,11908 17026,11888
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11012,13278 11085,13239
-Agnes-Zahn-Harnack-Str.: nicht ausgeschildert	CS 7795,13093 7867,13127 7938,13150
+Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CP2; 7938,13150 7867,13127
+Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CP2; 7795,13093 7867,13127
 Petrusweg: Anlieger frei	CS 15225,1553 15217,1463
 Am Rudower Waldrand: Anlieger frei	CS 15467,349 15476,332 15600,116 15707,-6
 Gertrud-Dorka-Weg: Privatstraße	CS 17848,-173 17796,-97
@@ -375,7 +377,7 @@ Centweg: Privatstraße	CS 8401,22013 8382,21991 8275,22045
 Distelweg: Privatstraße	CS 8587,21218 8484,21282
 Quantzstr. - Potsdamer Chaussee: beim Linksabbiegen kann man nicht auf dem Radweg hinter der Autobahnauffahrt gelangen; dies ist erst später möglich	CP; -3044,1578 -3113,1692 -3184,1643
 Golfweg: Privatstraße, nur für Mitglieder	CS -7975,785 -8136,700
-Eduard-Spranger-Promenade: nicht ausgeschildert	CS 4284,2626 4655,3060 4862,3363 4951,3516
+Eduard-Spranger-Promenade: nicht ausgeschildert	CS 4317,2638 4655,3060 4862,3363 4951,3516
 Kirchmeisterweg: Privatstraße	CS 4980,1870 4958,1844 5007,1718 5035,1723
 Zufahrt über Wanderparkplatz	CP2; 869,6085 866,6328
 Privatstraße	CS 6090,20570 6143,20464
@@ -495,3 +497,12 @@ Lindenschwärmerweg: Privatstraße	CS 21308,11075 21294,11097 21187,11132
 Fechinger Weg: Privatstraße	CS 21409,11941 21411,11863 21456,11825
 Wischbergweg: im Kleingartenbereich nicht ausgeschildert	CP2; 13617,18045 13733,18161
 ausgeschildert "Zur Bansiner Str."	CP2; 22896,12827 22906,12766
+Waldstr.: Privatstraße	CS 24736,8093 24768,8087
+Waldstr.: Anlieger frei	CS 24768,8087 24797,8248
+Hohenseeweg: nicht ausgeschildert	CS 22972,11066 23152,11065
+Am Vogelherd: nicht ausgeschildert	CS 25175,7953 25192,7631 25228,7462
+Südhafen: BEHALA-Betriebsgelände, nur für Anlieger	CS -2940,13169 -3008,13052 -3013,12909 -2950,12589
+Sportforumstr.: nur für Anlieger frei	CS -193,12051 -212,12095 -247,12117 -263,12125 -369,12175
+Kaiserdamm: Überquerung des Mittelstreifens wegen parkender Autos u.U. schwierig	CP; 3287,11846 3320,11583 3339,11433
+Kaiserdamm: Überquerung des Mittelstreifens wegen parkender Autos u.U. schwierig	CP; 3339,11433 3320,11583 3287,11846
+Mehringplatz - Zossener Brücke: ausgeschildert zum Senioren-Wohnhaus am Mehringplatz 5	CP2; 9668,10306 9873,10285

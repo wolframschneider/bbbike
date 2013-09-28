@@ -1,7 +1,8 @@
 #:# -*- coding: iso-8859-1 -*-
 #: title: sonstige Kommentare
-#: category_image.culdesac: ../misc/verkehrszeichen/Zeichen_357.svg:12x12=1:12000,xxx
-#: category_image.culdesac_pseudo: ../misc/verkehrszeichen/Zeichen_357.svg:8x8=1:12000,xxx
+#: line_color.busroute_N: #7f00e5
+#: line_width.busroute_N: 1,1,1,1,1,1
+#: line_dash.busroute_N: 2,4
 #
 # z.B.: path finding helper (maybe candidates for comments_path):
 #       * "ausgeschildert als"
@@ -74,6 +75,8 @@ Paralleler Uferweg an der Spree nur über zwei Treppen erreichbar	CS 10300,12587 
 # XXX gibt es noch Veranstaltungen hier? #vor der Columbiahalle: häufig Glasscherben auf dem Radweg	CS 9571,8706 9801,8683
 unter der S-Bahnbrücke: Glassplitter	CS 6184,20550 6279,20587
 Hegelstr.: Ausweichmöglichkeit auf Nebenstraße mit Kopfsteinpflaster oder grünen Mittelstreifen mit Parkweg	CS -13625,-902 -13468,-847 -13433,-831 -13231,-763 -13137,-737 -13064,-715 -13044,-709 -12877,-655
+#: note: siehe auch Eintrag in comments_danger
+Kreisverkehr	Roundabout 16355,9622 16355,9603 16376,9602 16388,9614 16389,9633 16368,9632 16355,9622
 Kreisverkehr	Roundabout 27079,15430
 Kreisverkehr	Roundabout 60197,12001
 Kreisverkehr	Roundabout 61156,11478
@@ -110,7 +113,7 @@ Sesselmannweg: Kette	CS 3264,9261 3332,9181
 Apeldorner Weg: kein Straßenname ausgeschildert; Weg verläuft westl. direkt an der BAB (104)	CS 3848,8689 3868,8759 3952,8980
 #: XXX_prog: should be superseded by a superiour BNP-like implementation
 (Wallenbergstr. - Rudolstätter Str.): Bordsteine	CP; * 4029,8482 4139,8485
-Virchowweg: Gelände der Charité	CS 8548,13577 8503,13553 8379,13457 8371,13399 8434,13310 8602,13075 8622,13042 8628,13033
+Virchowweg: Gelände der Charité	CS 8548,13577 8503,13553 8377,13463 8371,13399 8434,13310 8602,13075 8622,13042 8628,13033
 Hufelandweg: Gelände der Charité	CS 8503,13553 8554,13476 8504,13441 8538,13388 8582,13355 8618,13306 8630,13172 8632,13133 8602,13075
 Bonhoefferweg: Gelände der Charité	CS 8538,13388 8487,13351 8434,13310
 Sauerbruchweg: Gelände der Charité	CS 8487,13351 8555,13260 8605,13200 8630,13172
@@ -152,7 +155,7 @@ Seefelder Str.: Schranken, für Radler gut passierbar	CS 17341,16136 17344,16081
 #: by: Daniel Weber [AM] vvv
 # REMOVED (mittlerweile ein gemeinsamer Geh- und Radweg) --- (Malteserstr. - Hanielweg): Geschützte Grünanlage, Radfahren verboten	CS 7451,1818 7534,1818 7562,1796
 (Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6762,1226 6702,1197 6700,1184
-(Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6667,1189 6596,1198 6528,1207 6501,1207 6481,1210 6406,1218
+(Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6667,1189 6596,1198 6528,1207 6501,1207 6481,1210 6409,1218
 (Parkweg Blankenhainer Str. - Hildburghauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6578,1595 6528,1573 6517,1479 6515,1418 6479,1312 6481,1210 6487,1169 6455,1101 6467,1028
 (Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5514,580 5571,614 5671,637 5615,735 5576,800 5584,808 5571,864 5540,919
 (Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5578,936 5540,919 5358,822
@@ -162,7 +165,7 @@ Seefelder Str.: Schranken, für Radler gut passierbar	CS 17341,16136 17344,16081
 (Hildburghauser Str. - Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 6467,1028 6436,921 6421,892 6414,833 6367,825 6360,825 6352,825 6267,834 6259,835 6250,834 6172,822 6163,822 6155,821 6075,821 6066,821 6057,821 5975,821 5964,821 5954,819 5875,807 5867,807 5860,805 5781,800 5742,798 5682,767 5675,764 5615,735 5590,719
 #: by: ^^^
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20060505.1315.39412.html
-(Parkweg Schloßpark Lichterfelde): Radfahren erlaubt	CS 4601,3704 4664,3712 4699,3707 4725,3685 4754,3651 4830,3607 4874,3617 4921,3593
+(Parkweg Schloßpark Lichterfelde): Radfahren erlaubt	CS 4601,3704 4664,3712 4699,3707 4725,3685 4754,3651 4830,3607 4874,3617 4910,3599
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20060505.1315.39412.html
 (Parkweg Bäkepark): Radfahren erlaubt	CS 5337,4192 5320,4217 5246,4240 5129,4262 5100,4285 5015,4339 4957,4448 4870,4609 4848,4668 4795,4801 4760,4843 4742,4885
 #: by: Ben [AM] vvv
@@ -181,7 +184,7 @@ Gartentor, Zufahrt zum Gemeindehaus (dürfte immer offen sein)	CS 2201,43954
 #: by: Jürgen Schulze (jochen):
 Freienbrinker Saum: die Straße führt am Waldrand entlang, in der Dunkelheit ist mit Wildschweinen zu rechnen	CS 30124,4664 30254,4692 30369,4697 30478,4715 30527,4724 30588,4720 30636,4717 30686,4731 30810,4765 30857,4770 30913,4766 31011,4750 31118,4768 31209,4781 31224,4775 31311,4742 31339,4726 31364,4711 31424,4658
 #: by: Daniel (mag645):
-(Deutschhofer Allee - Unter den Birken): in der Dämmerung ist mit Wildschweinen zu rechnen	CS 21940,8158 22077,8104 22199,8028 22600,7711
+(Deutschhofer Allee - Unter den Birken): in der Dämmerung ist mit Wildschweinen zu rechnen	CS 21978,8132 22077,8104 22181,8009 22631,7692
 Petriplatz: zusätzliche Ausschilderung "Zur Brüderstr."	CS; 10460,11979 10418,12016
 DB-Gelände: bei starken Regenfällen regelmäßig eine große und tiefe Pfütze, die die Durchfahrt erschwert	CS 14107,10911 14043,10928
 Straße 77: die Straße ist nicht ausgeschildert	CS 15402,12390 15320,12375
@@ -227,959 +230,6 @@ Kreisverkehr	Roundabout 15949,-5422
 #: ignore ^^^
 #
 ######################################################################
-# cul-de-sac
-#
-# Eine Sackgasse ist hier aufgeführt, wenn die Weiterfahrt für alle
-# nicht möglich ist (als "culdesac") sowie wenn die Weiterfahrt für
-# den *Kfz-Verkehr* nicht möglich ist (als "culdesac_pseudo").
-# 
-#
-# Noch nicht ganz klar, was mit diesen Daten gemacht werden soll.
-# Zum einen kann überprüft werden, ob eine Sackgasse tatsächlich eine
-# Sackgasse ist oder nur ein Datenfehler.
-#
-#: ignore vvv
-	culdesac 19748,8517
-	culdesac_pseudo 19577,8438
-	culdesac_pseudo 19526,8458
-	culdesac 19700,9040
-	culdesac 19416,8668
-	culdesac 20293,8440
-	culdesac 20258,8413
-	culdesac 20319,8350
-	culdesac 20503,7848
-	culdesac 18949,8107
-	culdesac 19110,8105
-	culdesac 19128,8131
-	culdesac 18715,9589
-	culdesac 18354,9575
-	culdesac 18125,9676
-	culdesac 18021,9127
-	culdesac 17961,8932
-	culdesac_pseudo 17915,8900
-	culdesac 17733,8202
-	culdesac 17658,8216
-	culdesac 17597,8258
-Weiterfahrt auf der Abteiinsel möglich	culdesac_pseudo 15675,9090
-Weiterfahrt durch die Kleingartenanlage möglich, allerdings nur tagsüber während des Sommers	culdesac_pseudo 15960,17220
-	culdesac 15450,17861
-	culdesac 16109,17784
-	culdesac 16480,16873
-	culdesac 16556,16673
-	culdesac 16684,16457
-	culdesac 17342,15386
-	culdesac 17782,15389
-	culdesac 17740,15254
-	culdesac 17579,14777
-	culdesac 17629,14627
-	culdesac 17907,14904
-	culdesac 17990,14808
-	culdesac 18016,14688
-	culdesac 18119,14709
-	culdesac 18232,14753
-	culdesac 18071,15100
-	culdesac 18176,15160
-	culdesac 17400,14511
-	culdesac 16962,15440
-	culdesac 16669,14438
-	culdesac 18626,13820
-	culdesac 17698,13124
-	culdesac 15746,12209
-	culdesac_pseudo 16079,12432
-	culdesac_pseudo 16089,12522
-	culdesac_pseudo 16587,10613
-	culdesac_pseudo 15433,12686
-	culdesac_pseudo 15395,12762
-	culdesac_pseudo 15454,12519
-	culdesac_pseudo 14285,12190
-	culdesac_pseudo 15320,12375
-	culdesac 16541,12064
-	culdesac 17230,12481
-	culdesac 18766,13257
-	culdesac_pseudo 18749,12226
-	culdesac 19410,12601
-	culdesac 19431,13160
-	culdesac 19312,13211
-	culdesac 19918,13459
-	culdesac_pseudo 20037,12707
-	culdesac_pseudo 20048,12830
-	culdesac 20001,12368
-	culdesac 19909,12097
-	culdesac 19706,12086
-	culdesac 19971,11872
-	culdesac 20302,12056
-	culdesac 20448,11839
-	culdesac 20738,11915
-	culdesac 20779,11801
-	culdesac 20836,11768
-	culdesac_pseudo 20835,12200
-	culdesac 20930,13273
-	culdesac 20847,13280
-	culdesac 21362,14028
-	culdesac 20520,14570
-	culdesac_pseudo 22548,2081
-	culdesac_pseudo 22617,1925
-	culdesac 22732,1668
-	culdesac 22756,1524
-	culdesac 23068,1638
-	culdesac 23030,1414
-	culdesac 23053,1308
-	culdesac 23202,1192
-	culdesac 22958,2005
-	culdesac 23627,1835
-	culdesac 23693,2061
-	culdesac 23638,2185
-	culdesac 23706,2525
-	culdesac 24071,2990
-	culdesac 23063,2842
-	culdesac 23025,2957
-	culdesac 23098,3201
-	culdesac 22381,2834
-	culdesac 22356,3351
-	culdesac 22402,3262
-	culdesac 22233,3212
-	culdesac 22475,3187
-	culdesac 22569,3201
-	culdesac 22662,3205
-	culdesac 22820,3713
-	culdesac 22903,3691
-	culdesac 23033,3741
-	culdesac 22268,4424
-	culdesac 22252,4362
-	culdesac 22076,4422
-	culdesac 22522,4695
-	culdesac 22475,4658
-	culdesac 22806,4331
-	culdesac 23001,4382
-Weiterfahrt in Kleingartenanlage möglich	culdesac_pseudo 22858,4567
-	culdesac 21901,5117
-	culdesac 21498,5023
-	culdesac 21271,5065
-	culdesac 21203,5054
-	culdesac 21081,5096
-	culdesac 22049,6364
-	culdesac 22141,6143
-	culdesac 21993,6133
-	culdesac 22234,5921
-	culdesac 22018,5452
-	culdesac 21729,6989
-Weiterfahrt in den Innovationspark möglich	culdesac_pseudo 21284,7043
-	culdesac 21967,7048
-	culdesac 22330,6973
-	culdesac 21920,6835
-	culdesac 21815,6947
-	culdesac 22627,7516
-	culdesac 22730,7737
-	culdesac 22173,7806
-	culdesac 22279,7672
-	culdesac 22375,7643
-	culdesac 21788,8133
-	culdesac 21319,8078
-	culdesac 20977,8191
-	culdesac 21996,8716
-	culdesac 22073,8645
-	culdesac 22101,8489
-	culdesac 22165,8446
-	culdesac 22522,8506
-	culdesac 22669,8498
-	culdesac 22976,8526
-	culdesac 23086,8449
-	culdesac 23180,8379
-	culdesac 23293,8292
-	culdesac 23392,8208
-	culdesac 24768,8087
-	culdesac 24592,7778
-	culdesac 23582,9591
-	culdesac 22212,9508
-	culdesac 22862,9886
-	culdesac 21893,9902
-	culdesac 22096,10090
-	culdesac 21923,10265
-	culdesac 21907,10455
-	culdesac 21548,10329
-	culdesac 21539,10435
-	culdesac 20868,9444
-	culdesac 20535,8964
-	culdesac 20220,8976
-	culdesac 19950,9234
-	culdesac 19946,9328
-	culdesac 20091,9330
-	culdesac 20016,9914
-	culdesac 20208,9932
-	culdesac 19810,10155
-	culdesac 19487,10205
-	culdesac 19599,9747
-	culdesac 19912,10543
-	culdesac 19831,10916
-	culdesac 20279,10516
-	culdesac 19023,10088
-	culdesac 18925,10064
-	culdesac 18843,10028
-	culdesac 18598,10661
-	culdesac 18520,10913
-	culdesac 17308,9090
-	culdesac 16654,9748
-	culdesac 16479,17447
-	culdesac_pseudo 16229,17217
-	culdesac_pseudo 16146,17304
-	culdesac 15818,17083
-	culdesac 15799,17406
-	culdesac 15635,17432
-	culdesac 15540,17443
-	culdesac 15449,17426
-	culdesac 15378,17414
-	culdesac 15455,16984
-	culdesac 16429,13021
-	culdesac 9124,9262
-	culdesac 9149,8961
-	culdesac 8405,8994
-	culdesac 8979,10485
-#: XXX_osm exit=no fehlt bei osm
-	culdesac 13046,8048
-	culdesac_pseudo 8579,10030
-	culdesac 8521,10268
-	culdesac 8796,11393
-	culdesac 10111,9942
-	culdesac_pseudo 9666,10848
-	culdesac 10564,10925
-	culdesac 12615,9132
-	culdesac 13325,10565
-	culdesac 12582,11103
-	culdesac 13377,11345
-	culdesac 13730,11074
-	culdesac 14087,11467
-Zugang zur S-Bahn	culdesac_pseudo 14845,10954
-	culdesac 16337,9581
-	culdesac 15842,9891
-	culdesac 15716,10065
-	culdesac 15567,10235
-	culdesac 13659,12193
-	culdesac_pseudo 15090,11237
-	culdesac_pseudo 15411,11823
-	culdesac_pseudo 15277,11684
-	culdesac_pseudo 15393,11590
-	culdesac 13007,9347
-	culdesac_pseudo 15679,11591
-	culdesac_pseudo 15724,11680
-	culdesac 13103,9478
-	culdesac 12910,8929
-#: XXX_osm fehlt komplett
-	culdesac 12090,7865
-	culdesac 12327,8161
-	culdesac 12465,7250
-	culdesac 13070,6449
-	culdesac 13168,6444
-	culdesac 13732,6314
-	culdesac_pseudo 13883,6163
-	culdesac 14133,6187
-	culdesac 13688,6739
-Schranke zum Betriebsgelände	culdesac_pseudo 14306,6651
-	culdesac 14531,6959
-	culdesac 13654,7710
-	culdesac 13306,7765
-	culdesac 14989,8536
-	culdesac 14757,8655
-	culdesac 14327,9117
-	culdesac 14305,9213
-	culdesac 13966,9340
-	culdesac 16074,12778
-	culdesac 15231,12929
-	culdesac 15295,12234
-Zugang zum S-Bahnhof	culdesac_pseudo 15175,12180
-	culdesac 11506,11851
-	culdesac 6890,10581
-	culdesac 6877,10492
-Zugang zum Gewerbegelände	culdesac_pseudo 8139,8023
-	culdesac 8315,8189
-	culdesac 8830,8148
-	culdesac 8839,7904
-	culdesac 8263,7465
-#: XXX_prog: Ausnahme: würde zurzeit nicht automatisch als Sackgasse erkannt werden
-	culdesac 8952,7719
-	culdesac 8945,6873
-	culdesac 7973,7295
-	culdesac 6608,7306
-	culdesac 6505,7381
-	culdesac 6499,7535
-	culdesac 6499,7690
-	culdesac 6711,7846
-	culdesac 6009,8101
-	culdesac_pseudo 6386,8085
-	culdesac_pseudo 6540,8421
-	culdesac_pseudo 6559,8027
-	culdesac_pseudo 6250,10701
-	culdesac_pseudo 6192,10542
-	culdesac_pseudo 6265,10359
-	culdesac_pseudo 6377,10434
-	culdesac_pseudo 6745,10619
-	culdesac_pseudo 7215,10203
-	culdesac_pseudo 7190,10150
-	culdesac_pseudo 7947,10155
-	culdesac_pseudo 7933,9755
-	culdesac_pseudo 7614,9595
-	culdesac_pseudo 7612,9575
-	culdesac_pseudo 6670,9887
-	culdesac_pseudo 6611,9879
-	culdesac_pseudo 6463,9862
-	culdesac_pseudo 6529,9738
-	culdesac_pseudo 6647,9762
-	culdesac_pseudo 6814,9678
-	culdesac_pseudo 6109,9729
-	culdesac_pseudo 6008,9699
-	culdesac_pseudo 5965,9131
-	culdesac_pseudo 6255,9194
-	culdesac_pseudo 6359,9244
-	culdesac_pseudo 7570,9124
-	culdesac_pseudo 7490,9116
-	culdesac_pseudo 7484,9066
-	culdesac_pseudo 7708,9075
-	culdesac_pseudo 7226,7622
-	culdesac_pseudo 6807,7262
-	culdesac_pseudo 7307,7425
-	culdesac_pseudo 7563,7113
-	culdesac_pseudo 7251,6071
-	culdesac_pseudo 6878,5946
-	culdesac_pseudo 6051,6758
-	culdesac_pseudo 7242,8586
-	culdesac_pseudo 7288,8635
-	culdesac_pseudo 5684,6942
-	culdesac 5674,6834
-	culdesac_pseudo 5429,7220
-	culdesac_pseudo 5322,7180
-	culdesac_pseudo 5608,7684
-	culdesac_pseudo 5491,7836
-	culdesac 7270,12870
-	culdesac 5405,12292
-	culdesac 5300,12406
-	culdesac 5277,12551
-	culdesac 2467,12525
-	culdesac 3594,11372
-Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2405,10131
-	culdesac 2212,9755
-	culdesac 3364,9142
-	culdesac 7872,13685
-	culdesac 9153,12925
-	culdesac 9090,13009
-	culdesac 9853,13511
-	culdesac 9793,13549
-	culdesac 9399,14143
-	culdesac 10363,15933
-	culdesac 10550,15610
-	culdesac 11499,15710
-	culdesac 12367,15396
-	culdesac 12234,15151
-#: XXX_prog: Ausnahme: würde zurzeit nicht automatisch als Sackgasse erkannt werden
-	culdesac 12104,13913
-	culdesac 13299,14212
-	culdesac 14447,13507
-	culdesac 14337,13541
-	culdesac 14227,13567
-	culdesac 14263,13739
-	culdesac 5570,7939
-	culdesac 5068,7965
-	culdesac 4873,7967
-	culdesac 4087,8204
-	culdesac 5710,7820
-	culdesac 5806,7796
-	culdesac 4405,8697
-	culdesac 8814,8881
-	culdesac 8950,8954
-	culdesac 8950,9021
-	culdesac 7144,9150
-	culdesac_pseudo 6771,9458
-	culdesac 13628,10396
-	culdesac 7064,10467
-	culdesac 8382,11224
-	culdesac 8354,11230
-	culdesac 8373,11301
-	culdesac 8404,11290
-	culdesac 2422,11700
-	culdesac 2327,11659
-	culdesac 2242,11892
-	culdesac 10209,11918
-	culdesac 12997,12361
-	culdesac 11220,12277
-	culdesac 9894,12564
-	culdesac 4242,12684
-	culdesac 4421,12727
-	culdesac 10390,12842
-	culdesac 10734,12850
-	culdesac 4461,12896
-	culdesac 4495,13107
-	culdesac 7861,13203
-	culdesac 4223,13949
-	culdesac 12001,13863
-	culdesac 13824,13771
-Zugang zum Bad	culdesac_pseudo 7306,13418
-	culdesac 2439,13389
-	culdesac 10998,13382
-	culdesac 10898,13260
-	culdesac 4087,13257
-	culdesac 5650,4809
-	culdesac 5573,4851
-	culdesac 5989,22006
-	culdesac 25544,12294
-	culdesac 25468,12211
-	culdesac_pseudo 26110,12293
-	culdesac_pseudo 25956,12047
-	culdesac_pseudo 25882,11852
-	culdesac_pseudo 22991,11133
-	culdesac 23389,11390
-	culdesac 23596,11740
-	culdesac 26696,12924
-	culdesac 25979,12647
-	culdesac 26111,12644
-	culdesac 26152,12822
-	culdesac 26217,12885
-	culdesac 26259,12949
-	culdesac 26290,13006
-	culdesac 25730,13130
-	culdesac_pseudo 25814,13240
-	culdesac 24640,13149
-	culdesac 22462,11679
-	culdesac 21283,12066
-	culdesac 21273,11882
-	culdesac 6827,3676
-	culdesac 6794,3755
-	culdesac 6760,3835
-	culdesac 6717,3924
-	culdesac 5661,1375
-	culdesac 6290,2336
-	culdesac 6278,2057
-	culdesac 6322,1807
-	culdesac 2352,1267
-	culdesac 2345,1283
-	culdesac 20371,5753
-	culdesac 23574,689
-	culdesac_pseudo 22766,778
-	culdesac_pseudo 22957,812
-	culdesac_pseudo 22166,1636
-	culdesac 11525,-197
-	culdesac 11569,-219
-	culdesac 11668,-171
-	culdesac_pseudo 11712,-289
-	culdesac_pseudo 11677,-58
-	culdesac -3900,15650
-	culdesac_pseudo 24277,14747
-	culdesac 22407,12901
-	culdesac_pseudo 22043,15282
-	culdesac_pseudo 22088,15557
-	culdesac_pseudo 22092,15610
-	culdesac_pseudo 21221,11398
-	culdesac 21217,11328
-	culdesac 22001,10216
-	culdesac 25941,4971
-	culdesac 24991,4701
-	culdesac_pseudo 23808,5177
-	culdesac_pseudo 23608,5196
-	culdesac 23492,5334
-	culdesac 23469,5340
-	culdesac 23433,5197
-	culdesac_pseudo 23660,5819
-	culdesac 23600,5932
-	culdesac_pseudo 24225,5619
-	culdesac_pseudo 23681,5579
-	culdesac_pseudo 25002,5296
-	culdesac_pseudo 25009,5593
-#: note: fortgesetzter Weg fehlt bei BBBike (deshalb "pseudo")
-	culdesac_pseudo 26270,5829
-#: note: fortgesetzter Waldweg fehlt bei BBBike (deshalb "pseudo")
-	culdesac_pseudo 26351,6028
-	culdesac 24351,5696
-	culdesac 21553,10671
-	culdesac 21543,10724
-	culdesac_pseudo 21428,10691
-	culdesac_pseudo 15787,9321
-	culdesac_pseudo 14599,10039
-	culdesac_pseudo 15181,10154
-	culdesac_pseudo 15044,10297
-	culdesac_pseudo 14977,10348
-	culdesac_pseudo 14888,10385
-	culdesac_pseudo 15513,10298
-	culdesac_pseudo 15334,10528
-	culdesac_pseudo 15633,10442
-	culdesac 10889,3011
-	culdesac 9616,-186
-	culdesac 11015,-1357
-	culdesac_pseudo 11712,-289
-	culdesac_pseudo 11645,-505
-	culdesac_pseudo 11456,-498
-	culdesac 11259,-555
-	culdesac_pseudo 11619,-1459
-	culdesac 12194,-1978
-	culdesac 12222,-2101
-	culdesac 12216,-1891
-	culdesac 11545,-2724
-	culdesac 11783,-2703
-	culdesac 10954,-3211
-	culdesac 11146,-3213
-	culdesac 11274,-3126
-	culdesac 12265,-2147
-	culdesac 11940,-2693
-	culdesac 12019,-2683
-	culdesac_pseudo 10976,-1070
-	culdesac_pseudo 10979,-1093
-	culdesac_pseudo 16074,389
-	culdesac_pseudo 16135,473
-	culdesac 16116,581
-	culdesac 15881,-163
-	culdesac_pseudo 15655,-245
-	culdesac 12789,5402
-	culdesac 12726,5147
-	culdesac 12885,5699
-	culdesac 12724,5051
-	culdesac 11168,3488
-	culdesac 11191,3382
-	culdesac 10930,3365
-	culdesac 10542,2757
-	culdesac 10322,2815
-	culdesac_pseudo 1191,1944
-	culdesac 1226,453
-	culdesac 1507,301
-	culdesac 10985,2173
-	culdesac_pseudo 10661,2790
-	culdesac_pseudo 10542,3055
-	culdesac_pseudo 10533,3001
-	culdesac 11156,1463
-	culdesac 11497,1650
-	culdesac 12101,1934
-	culdesac_pseudo 11652,1959
-	culdesac 15031,1874
-	culdesac_pseudo 15550,1953
-	culdesac 15056,2096
-	culdesac_pseudo 14676,2375
-	culdesac 14454,2367
-	culdesac 14322,2449
-	culdesac_pseudo 14254,2566
-	culdesac 14092,2585
-	culdesac_pseudo 13958,8106
-	culdesac_pseudo 15384,15884
-	culdesac_pseudo 15313,15848
-	culdesac 16472,19818
-	culdesac 16550,19829
-	culdesac_pseudo 16633,20174
-	culdesac_pseudo 16384,19678
-	culdesac_pseudo 16161,18687
-	culdesac 24938,13811
-	culdesac 25051,13788
-	culdesac_pseudo 25157,13790
-	culdesac 25102,13751
-	culdesac 21361,11061
-	culdesac 15385,1241
-	culdesac 15033,1455
-	culdesac_pseudo 15016,1562
-	culdesac_pseudo 14244,2759
-	culdesac_pseudo 14180,3334
-	culdesac_pseudo 17076,-644
-	culdesac_pseudo 16931,-76
-	culdesac_pseudo 16812,30
-	culdesac_pseudo 16991,-81
-	culdesac 16346,-394
-	culdesac_pseudo 14877,3475
-	culdesac 14954,3447
-	culdesac 16227,997
-	culdesac 17205,167
-	culdesac 17597,-50
-	culdesac 17681,-178
-	culdesac 17488,-145
-	culdesac 15315,1108
-	culdesac_pseudo 8830,8148
-	culdesac_pseudo 8839,7904
-	culdesac_pseudo 8741,14928
-	culdesac_pseudo 9003,14608
-	culdesac 23426,6346
-	culdesac_pseudo 22876,6598
-	culdesac_pseudo 23585,6523
-	culdesac_pseudo 17026,11888
-	culdesac_pseudo 16326,11966
-	culdesac_pseudo 11104,13456
-	culdesac_pseudo 11079,13492
-	culdesac_pseudo 11191,13080
-	culdesac_pseudo 11379,13279
-	culdesac_pseudo 17796,-97
-	culdesac_pseudo 17042,340
-	culdesac_pseudo 17122,-41
-	culdesac 15948,-341
-	culdesac_pseudo 16567,226
-	culdesac 968,15576
-	culdesac 1083,15529
-	culdesac 20594,-4690
-	culdesac -13259,586
-	culdesac -13189,85
-	culdesac -13327,116
-	culdesac -13257,1337
-	culdesac -13343,-97
-	culdesac -13432,1
-	culdesac 8191,20622
-	culdesac_pseudo -4175,16573
-	culdesac 186,4413
-	culdesac 118,4332
-	culdesac_pseudo -1121,1605
-	culdesac_pseudo -1054,1616
-	culdesac 11200,1677
-	culdesac 12559,23569
-	culdesac 12582,23041
-	culdesac 12506,22870
-	culdesac 12699,22971
-	culdesac 12162,21743
-	culdesac 11923,20781
-	culdesac 11872,20809
-	culdesac 11347,21589
-	culdesac 13699,22834
-	culdesac 13690,23083
-	culdesac 13441,22298
-	culdesac 8374,20005
-	culdesac 8272,19908
-	culdesac 8325,19934
-	culdesac 8654,20492
-	culdesac 8275,22045
-	culdesac 8234,22024
-	culdesac 8321,22269
-	culdesac 8484,21282
-	culdesac 8439,21232
-	culdesac 8864,21488
-	culdesac 8927,21403
-	culdesac 9624,21040
-	culdesac 9141,20443
-	culdesac 9126,20515
-	culdesac 9025,20372
-	culdesac 11182,13123
-	culdesac_pseudo 9747,12584
-	culdesac_pseudo 12062,5779
-	culdesac -2784,1728
-	culdesac -2700,1517
-	culdesac -3515,3110
-	culdesac_pseudo -3983,2280
-	culdesac -6167,1333
-	culdesac_pseudo -7069,754
-	culdesac_pseudo -7225,884
-	culdesac_pseudo -7283,808
-	culdesac_pseudo -4663,13023
-	culdesac_pseudo 7183,17906
-	culdesac_pseudo 6143,20464
-	culdesac_pseudo 6090,20414
-	culdesac_pseudo 6030,20385
-	culdesac_pseudo 5970,20353
-	culdesac_pseudo 5904,20327
-	culdesac_pseudo 6184,20550
-	culdesac 5565,20822
-	culdesac 2015,26716
-	culdesac 2009,26688
-	culdesac_pseudo 2005,26495
-	culdesac 2158,26408
-	culdesac_pseudo 3205,24839
-	culdesac_pseudo 3978,23301
-	culdesac 4382,21493
-	culdesac 4366,21482
-	culdesac_pseudo 5715,19888
-	culdesac_pseudo 6106,19510
-	culdesac_pseudo 7159,17997
-	culdesac 8240,17304
-	culdesac 18650,5707
-	culdesac 19697,5835
-	culdesac 21002,5594
-	culdesac_pseudo 19177,5560
-	culdesac 18310,6223
-	culdesac -8622,13218
-	culdesac -8641,13158
-	culdesac -8830,13169
-	culdesac -8969,13324
-	culdesac -8986,13265
-	culdesac_pseudo -3974,14495
-	culdesac_pseudo -3887,14405
-	culdesac_pseudo -5535,14853
-	culdesac -5338,14798
-	culdesac -5694,14656
-	culdesac -6634,14690
-	culdesac -6621,14798
-	culdesac -7097,15074
-	culdesac_pseudo -7109,15286
-	culdesac_pseudo -7133,15287
-	culdesac_pseudo -6831,15260
-	culdesac_pseudo -6573,15254
-	culdesac -7511,15160
-	culdesac -7613,15192
-	culdesac -8471,15000
-	culdesac_pseudo -8287,14411
-	culdesac 19036,18521
-	culdesac_pseudo 5635,18736
-	culdesac 5744,18449
-	culdesac_pseudo 5713,18739
-	culdesac_pseudo 10038,15418
-	culdesac_pseudo 7062,17500
-	culdesac_pseudo 3077,22234
-	culdesac_pseudo 2319,22264
-	culdesac 2203,22749
-	culdesac_pseudo 2150,22464
-	culdesac_pseudo 3381,22273
-	culdesac_pseudo 5046,24000
-	culdesac_pseudo 4546,23930
-	culdesac_pseudo 4436,23714
-	culdesac_pseudo 4613,23060
-	culdesac_pseudo 6519,21002
-	culdesac_pseudo 6563,21425
-	culdesac 26715,-6276
-	culdesac 26710,-6404
-	culdesac 27177,-6678
-	culdesac 27184,-6794
-	culdesac_pseudo 30133,-3840
-	culdesac 9032,24700
-	culdesac 9055,24924
-	culdesac 11170,21876
-	culdesac 11503,21857
-	culdesac 11584,21688
-	culdesac 13168,13013
-	culdesac 13106,13095
-	culdesac 13103,13153
-	culdesac_pseudo 12876,13440
-	culdesac_pseudo 14839,12801
-	culdesac 7735,13626
-	culdesac_pseudo 7837,12860
-	culdesac_pseudo 7789,12764
-	culdesac 3609,16759
-	culdesac_pseudo 1663,18166
-	culdesac 1337,18427
-	culdesac_pseudo 1278,18307
-	culdesac_pseudo 2713,18851
-#: note: von beiden Seiten
-	culdesac_pseudo 1896,19801
-	culdesac 1425,20301
-	culdesac_pseudo 2469,20812
-	culdesac_pseudo 2507,20860
-	culdesac 2803,20199
-	culdesac 3485,20479
-	culdesac 3077,20864
-	culdesac 2976,20871
-	culdesac_pseudo 3065,20646
-	culdesac_pseudo 3023,20886
-	culdesac 2763,21000
-	culdesac 2969,21073
-	culdesac 3040,21091
-	culdesac 3128,21109
-	culdesac 3222,21134
-	culdesac 3089,21238
-	culdesac 3681,21999
-	culdesac_pseudo 3923,22535
-	culdesac 5615,23625
-	culdesac 5811,23855
-	culdesac 5839,24014
-#: note: explizit ausgeschildert "Radfahrer frei"
-	culdesac_pseudo 5920,22603
-	culdesac 6175,22803
-	culdesac 6115,22877
-	culdesac_pseudo 20968,11203
-	culdesac 6254,22546
-	culdesac 6353,22622
-	culdesac_pseudo 7913,18156
-	culdesac 7551,18515
-	culdesac_pseudo 5281,18996
-	culdesac_pseudo 5181,19037
-	culdesac 4647,18980
-	culdesac_pseudo 4474,18983
-	culdesac_pseudo 4352,18969
-	culdesac_pseudo 3999,20367
-	culdesac 3861,20575
-	culdesac 4367,20617
-	culdesac 4249,20312
-	culdesac_pseudo 4597,20508
-	culdesac_pseudo 5108,22156
-	culdesac_pseudo 4971,22138
-	culdesac 5192,22478
-	culdesac 5331,22525
-	culdesac 5595,22626
-	culdesac 6013,22497
-	culdesac_pseudo 6907,23067
-	culdesac 6714,23010
-	culdesac 6931,23352
-	culdesac 8511,25177
-	culdesac 11878,25627
-	culdesac 15347,22275
-	culdesac_pseudo 25789,13263
-	culdesac_pseudo 25766,13289
-	culdesac_pseudo 24861,12226
-#: note: theoretisch kann man hier viele Stufen tragen
-	culdesac 12590,13018
-	culdesac 8192,18217
-	culdesac 7150,21018
-	culdesac_pseudo 6765,21364
-	culdesac 13027,21005
-	culdesac 3195,14320
-	culdesac 3197,14450
-	culdesac 3214,14578
-	culdesac 3024,14663
-	culdesac 2988,14539
-	culdesac 3092,15000
-	culdesac -1629,16640
-	culdesac -1647,16573
-	culdesac -1661,16509
-	culdesac -1402,15592
-	culdesac -504,15092
-	culdesac -2205,17655
-	culdesac -2304,17995
-	culdesac -2529,17993
-	culdesac -3154,18183
-	culdesac -3018,18105
-	culdesac -3041,18090
-	culdesac -3206,17263
-	culdesac_pseudo -1347,15506
-	culdesac_pseudo 16041,3718
-	culdesac 16340,3517
-	culdesac_pseudo 19133,9087
-	culdesac_pseudo 21576,6644
-	culdesac_pseudo 18778,8663
-	culdesac_pseudo 17455,5355
-	culdesac 9952,12791
-	culdesac 16377,12791
-	culdesac 16313,12762
-	culdesac 17513,12465
-	culdesac 19943,8279
-	culdesac_pseudo 12741,7224
-	culdesac_pseudo 4994,6387
-	culdesac 5062,6295
-	culdesac 15010,11170
-	culdesac 18610,9569
-	culdesac 18604,9535
-	culdesac 18596,9485
-	culdesac -3673,17068
-	culdesac_pseudo -3657,16732
-	culdesac -3444,15978
-	culdesac_pseudo -3924,15915
-	culdesac_pseudo -3608,14398
-	culdesac_pseudo -8386,14882
-	culdesac_pseudo -7784,15065
-	culdesac_pseudo -7700,15009
-	culdesac -6089,15746
-	culdesac -6371,14461
-	culdesac -6332,14380
-	culdesac 7995,13537
-	culdesac_pseudo 17459,5634
-	culdesac 17592,5552
-	culdesac_pseudo 18326,5850
-	culdesac 18470,5600
-	culdesac 18695,5453
-	culdesac_pseudo 17416,5388
-	culdesac_pseudo 17297,5260
-	culdesac_pseudo 17266,5134
-	culdesac -3113,12549
-	culdesac 13518,7477
-	culdesac_pseudo 9264,3874
-	culdesac_pseudo 16669,14438
-	culdesac_pseudo 18646,17345
-	culdesac_pseudo 16757,18910
-	culdesac_pseudo 15819,16857
-	culdesac 15615,16984
-	culdesac 3193,7059
-	culdesac 3190,7047
-	culdesac 7147,16800
-	culdesac_pseudo 6956,17087
-	culdesac -13752,-2121
-	culdesac -13448,-2145
-	culdesac -14750,-3266
-	culdesac -13495,-3094
-	culdesac -13316,-3091
-	culdesac -12634,-2239
-	culdesac_pseudo -11423,-3638
-	culdesac_pseudo -10837,-4398
-	culdesac_pseudo -10824,-4434
-	culdesac_pseudo -10870,-2729
-	culdesac -13558,88
-	culdesac -15352,431
-	culdesac_pseudo -15380,689
-	culdesac -15050,268
-	culdesac -15442,159
-	culdesac_pseudo -15085,91
-	culdesac -15309,-36
-	culdesac -16120,1607
-	culdesac -16502,1650
-	culdesac -13989,545
-	culdesac_pseudo -14732,528
-	culdesac -13707,506
-	culdesac -13899,388
-	culdesac_pseudo -15553,-11
-	culdesac_pseudo -15380,689
-	culdesac -10334,-1565
-	culdesac -9792,-1525
-	culdesac_pseudo -8758,-1346
-	culdesac_pseudo -8786,-1376
-	culdesac_pseudo -9894,-896
-	culdesac_pseudo -9858,-862
-	culdesac_pseudo -9767,-619
-	culdesac -5753,998
-	culdesac 9904,17748
-	culdesac_pseudo 7594,16805
-	culdesac_pseudo 6675,15080
-	culdesac 22804,5199
-	culdesac_pseudo 22705,4874
-	culdesac_pseudo 29891,4605
-	culdesac_pseudo 31210,3873
-	culdesac_pseudo 31450,3938
-	culdesac 32067,2178
-	culdesac 4968,13060
-	culdesac_pseudo 5120,12963
-	culdesac_pseudo 4829,13089
-	culdesac_pseudo 4732,13030
-	culdesac_pseudo 4655,12953
-	culdesac_pseudo 21620,372
-	culdesac_pseudo 21703,388
-	culdesac_pseudo 21688,312
-	culdesac 21595,271
-	culdesac_pseudo 21182,436
-	culdesac_pseudo 21790,682
-	culdesac_pseudo 17874,10729
-	culdesac 17856,10961
-	culdesac 23096,10401
-	culdesac 24370,10198
-	culdesac 24314,10096
-	culdesac_pseudo 18619,11463
-	culdesac_pseudo 24671,989
-	culdesac 11713,3706
-	culdesac_pseudo 8009,9063
-	culdesac_pseudo 6106,12981
-	culdesac 9976,1042
-	culdesac 9950,985
-	culdesac_pseudo 9823,-641
-	culdesac_pseudo 9779,-605
-	culdesac_pseudo 9820,-564
-	culdesac_pseudo 16572,-666
-	culdesac_pseudo 16665,-641
-	culdesac_pseudo 8853,820
-	culdesac_pseudo 10690,-1515
-	culdesac_pseudo 18428,6123
-	culdesac_pseudo 3918,18796
-	culdesac_pseudo 3753,18889
-	culdesac_pseudo -3978,14766
-	culdesac_pseudo -3239,14641
-	culdesac -6718,15447
-	culdesac -6893,16046
-	culdesac -7098,16138
-	culdesac_pseudo -7148,16119
-	culdesac_pseudo -4678,14382
-	culdesac -4182,13691
-#: note: verschlossenes Tor
-	culdesac -3384,13091
-	culdesac_pseudo -3560,13704
-	culdesac_pseudo 19842,13765
-	culdesac_pseudo 21211,15009
-	culdesac_pseudo 21574,16547
-	culdesac 21187,11132
-	culdesac_pseudo 21326,11122
-	culdesac 21396,11242
-	culdesac_pseudo 13733,18161
-	culdesac_pseudo 13751,18180
-	culdesac_pseudo 12911,15865
-#: note: man kann via Treppe zur Landsberger Allee
-	culdesac_pseudo 18938,14768
-	culdesac_pseudo 20693,15144
-	culdesac 22568,17956
-	culdesac 22670,17916
-	culdesac 18445,4035
-	culdesac_pseudo 25053,12246
-	culdesac 26212,12449
-	culdesac 26201,12499
-	culdesac_pseudo 21190,12515
-	culdesac_pseudo 21273,12495
-#: ignore ^^^
-######################################################################
 # busroute
 #
 # Hier sind alle Busrouten enthalten, die sich nicht auf einer
@@ -1187,23 +237,31 @@ Zugang zum Bad	culdesac_pseudo 7306,13418
 # Winteroptimierung verwendet werden.
 #
 #: ignore vvv
-Bus 184	busroute_N 7949,7607 8263,7611 8267,7572 8302,7508 8376,7440 8386,7430 8429,7403 8479,7389 8604,7381 8715,7384 8806,7382 8879,7378 8971,7359 9051,7340 9107,7297 9242,7286
-Bus 106, Bus 204	busroute_N 7578,8358 7494,8364 7497,8168
+Bus 234	busroute_N -8116,6167 -8206,6072 -8262,5901 -8370,5670 -8442,5530 -8487,5445 -8553,5329 -8614,5185 -8634,5065 -8634,4921 -8642,4789 -8637,4741 -8654,4625 -8859,4624 -8865,4609 -8900,4563 -8986,4489 -9076,4382
+Bus 234	busroute_N -8634,4921 -8450,4919 -8415,4918 -8293,4915 -8098,4899 -7797,4850 -7643,4846 -7582,4850 -7529,4853 -7519,4843
+Bus 334	busroute_N -7330,7878 -7070,7984 -6986,8074 -6869,8150 -6700,8193 -6460,8223 -5658,8184 -5240,8122 -5136,8147 -4841,8235 -4682,8292 -4578,8336 -4509,8385 -4494,8428 -4504,8457 -4540,8535
+Bus 334	busroute_N -5454,6896 -5349,6836 -5123,6701 -5064,6853
+Bus 697	busroute_N -6480,5713 -6319,5606
+Bus 184, Bus 248	busroute_N 7949,7607 8263,7611
+Bus 184	busroute_N 8263,7611 8267,7572 8302,7508 8376,7440 8386,7430 8429,7403 8479,7389 8604,7381 8715,7384 8806,7382 8879,7378 8971,7359 9051,7340 9107,7297 9242,7286
+Bus 106	busroute_N 8061,5939 7980,5944 7832,5955 7730,5958 7692,5960 7607,5944
+Bus 106, Bus 204	busroute_N 7578,8358 7494,8354 7497,8168
+Bus M46, Bus 106	busroute_N 7696,7771 7774,7724
 Bus 140	busroute_N 8969,9320 9000,9509 9044,9753
 Bus 140	busroute_N 10198,9405 10306,9640 10361,9755 10408,9800
 Bus 140	busroute_N 10357,9813 10361,9755
 Bus 140	busroute_N 10776,10682 10944,10606 11100,10530 11121,10521 11145,10510 11291,10438 11393,10390
-Bus 140	busroute_N 11556,10869 11770,10774 11841,10747 11897,10887 12112,10770 12180,10903 12302,11160
+Bus 140	busroute_N 11556,10869 11770,10774 11841,10747 12052,10644 12112,10770 12180,10903 12302,11160
 Bus M29	busroute_N 12341,10218 12229,10014 12398,9938 12556,9862 12714,9792
 # REMOVED (mittlerweile über Stralauer Allee) --- Bus 347	busroute_N 13596,10722 13676,10926 13755,10896 13856,10864 13896,10851 14011,10812
 Bus 347	busroute_N 14011,10812 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
 Bus 347	busroute_N 15662,9501 15512,9680 15502,9693 15472,9720 15400,9742 15100,9831 15020,9875 14908,9939 14879,9961 14817,10031 14747,10108 14705,10149 14688,10167
 Bus 347	busroute_N 15020,9875 15071,9967 15153,10112 15090,10140 15050,10160 14993,10188 14920,10225 14844,10088 14817,10031
 Bus 140, ...	busroute_N 12551,11515 12310,11682 12208,11746
-Bus 347	busroute_N 12891,12008 12923,12043 13075,12207 13019,12316 13075,12207 13097,12166 13217,11936
+Bus 347	busroute_N 13217,11936 13097,12166 13075,12207 13019,12316 13075,12207 13097,12166 13217,11936
 # REMOVED (wegen der für Busse katatrophalen Hildegard-Jadamowitz-Str. führt die Linie nicht mehr hier entlang) --- Bus 347	busroute_N 13520,11963 13599,12253 13555,12259 13520,12264 13198,12311 13068,12332 13019,12316
 Bus 347	busroute_N 13019,12316 12985,12303 12924,12278 12908,12280 12850,12286
-Bus 265	busroute_N 11242,11720 11155,11750 11024,11789 10955,11849 10908,11908 10722,11816
+Bus 265	busroute_N 11242,11720 11155,11750 11073,11774 11024,11789 10955,11849 10908,11908 10722,11816
 Bus 265	busroute_N 11024,11789 11060,11753 11155,11750
 Bus 120	busroute_N 8450,13599 8313,13839 8200,14016 8184,14052 8152,14130 8077,14227 8054,14257 7938,14426 8246,14675
 Bus 245, Bus 247	busroute_N 9085,13919 9015,14014 9070,14058 9167,14127 9192,14145 9224,14169
@@ -1212,24 +270,28 @@ Bus 100	busroute_N 10755,13152 10706,13043 10776,13005
 Bus 247	busroute_N 10170,14905 10111,15018 10071,15096 10018,15211 9996,15400 9917,15613 9734,15579 9726,15575 9578,15500 9443,15430
 Bus 247	busroute_N 9642,15038 9432,14936 9270,14856 9108,14777 9048,14681 8953,14758 8870,14637
 Bus 247	busroute_N 8456,15235 8607,15426 8886,15799 8923,15850 9134,15953
-Bus 120	busroute_N 7759,13246 7651,13447 7643,13461 7660,13506 7655,13539 7630,13584 7327,14130 7180,14419
+Bus 123	busroute_N 7759,13246 7651,13447 7643,13461 7660,13506 7655,13539
+Bus 120, Bus 123	busroute_N 7655,13539 7630,13584 7327,14130 7180,14419
 Bus 100	busroute_N 7039,12314 7215,12295 7437,12368 7514,12387 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
-Bus 147	busroute_N 7464,14636 7263,14873 7223,14914 7192,14976 7182,14998 7131,15109 6945,15045 6739,14969 6652,15073 6626,15104
+Bus 142	busroute_N 7464,14636 7263,14873 7223,14914 7192,14976 7182,14998 7131,15109 6945,15045 6739,14969 6652,15073 6626,15104
 Bus 247	busroute_N 7198,15656 7354,15817 7436,15746
 Bus 101, Bus 106	busroute_N 5368,13406 5351,13238 5328,13019
+Bus 107	busroute_N 9855,26032 9863,26000 9879,25933 9882,25918 9900,25796 9912,25130 9900,24943 9882,24724 9797,24154 9794,23980 9774,23936 9625,23781 9415,23699
 Bus M27	busroute_N 4295,13653 4363,13336 4382,13232
 Bus M27	busroute_N 3559,13177 3587,13296 3642,13548
-Bus M27	busroute_N 3741,13558 3735,13618 3717,13743 3702,13865
-Bus M21, Bus M27	busroute_N 3005,13728 3320,13796 3702,13865
-Bus M21	busroute_N 3702,13865 3663,14137
+Bus M27	busroute_N 3739,13563 3724,13702 3713,13787 3702,13865 3695,13902
+Bus M21, Bus M27	busroute_N 3005,13728 3320,13796 3695,13902
+Bus M21	busroute_N 3695,13902 3663,14137
 Bus 123	busroute_N 3413,14721 3429,14631 3442,14562 3450,14507 3460,14432 3473,14385 3478,14352 3435,14297 3303,14304 3242,14278 3184,14265 3169,14256 3126,14216 3103,14187
 Bus 123	busroute_N 4301,14925 4172,15098 4148,15205 4148,15220 4150,15304 4080,15458 3993,15651
-Bus 123	busroute_N 2675,14744 2671,14653 2664,14470 2597,14288 2548,14248 2384,14237 2380,14392 2374,14583 2207,14576 2142,14573 2081,14570 2009,14567 1974,14565 1871,14556 1881,14425 1361,14431 1360,14375
+Bus 123	busroute_N 2673,14756 2671,14653 2657,14486 2597,14288 2548,14248 2384,14237 2380,14392 2374,14583 2207,14576 2142,14573 2081,14570 2009,14567 1974,14565 1871,14556 1881,14425 1361,14431 1361,14384
+Bus 123	busroute_N 1238,15705 1232,15804 1171,15905
 Bus 309	busroute_N 2414,12418 2397,12513 2350,12784 2295,13031 2362,13046 2455,13058 2516,13060 2546,12821 2350,12784
 Bus 245	busroute_N 4598,12501 4658,12450 4819,12338 4981,12252
 Bus 309	busroute_N 3546,10962 3827,10980 3942,11010 3975,11087
 Bus 139	busroute_N 2340,11045 2346,11147 2272,11074 2252,11037
 Bus 100, ...	busroute_N 5352,11502 5587,11397 5666,11362 5565,11147 5542,11075 5600,11114 5698,11333 5666,11362
+Bus 200	busroute_N 8005,11627 7960,11450 7975,11434 8083,11381
 Bus 282	busroute_N 3981,6850 3964,6928 3837,6926 3947,6814
 Bus 170	busroute_N 5681,5743 5581,5741 5464,5731 5280,5714 5223,5704 5141,5744 5114,5705 5054,5620 4991,5531 4911,5428 4869,5386 4821,5345
 Bus 184	busroute_N 7946,7411 7914,7364 7894,7296 7921,7288 7950,7279 7973,7295
@@ -1240,25 +302,32 @@ Bus M44	busroute_N 12340,6947 12129,6903 12115,6964 12317,7007
 Bus 277	busroute_N 12317,7007 12463,7037 12645,7087 12664,7013 12689,6905 12702,6846
 Bus 277	busroute_N 12689,6905 12649,6833
 Bus 277	busroute_N 13278,6967 13520,6583
-Bus 246	busroute_N 14803,7056 14751,7007 14620,6876 14567,6810 14724,6668 14639,6577 14564,6496 14366,6337 14396,6298 14398,6184 14784,6169 14961,6162 15146,6154 15159,6205 15190,6243 15300,6148 15332,6138
+Bus 246	busroute_N 14803,7056 14751,7007 14620,6876 14567,6810 14724,6668 14639,6577 14564,6496 14366,6337 14396,6298 14398,6184 14784,6169 14961,6162 15144,6160 15159,6205 15190,6243 15300,6148 15332,6138
+Bus 246	busroute_N 6042,6686 6089,6709 6155,6722 6303,6736 6434,6749
+Bus 246	busroute_N 6668,6815 6529,6798 6430,6787
+Bus 246	busroute_N 6439,6716 6517,6722 6546,6724 6676,6734
+Bus 246	busroute_N 5314,7217 5310,7325 5318,7424 5352,7428
 Bus 166	busroute_N 15564,7395 15696,7507 15765,7567 15920,7697
 Bus 170, Bus 265	busroute_N 16428,7144 16507,7254
-Bus 265	busroute_N 16428,7144 16507,7254 16406,7430 16136,7886 16003,8119 15869,8355 15714,8633 15591,8848
+# REMOVED (NH!) --- Bus 265	busroute_N 16507,7254 16406,7430 16136,7886 16003,8119 15869,8355 15714,8633 15591,8848
 Bus 170	busroute_N 16507,7254 16633,7434 16675,7486
 Bus 166, ...	busroute_N 15303,8343 15242,8263 15284,8214 15357,8286
 Bus 171	busroute_N 13860,8599 13687,8734 13507,8872 13335,9019 13282,9066 13190,9139 13108,9204 13047,9251 12979,9304 12897,9365
 Bus 194	busroute_N 13614,9333 13489,9456 13348,9595 13190,9750 13127,9661 13058,9572 12983,9475 12897,9365
 Bus 171, Bus 194	busroute_N 12897,9365 12871,9356 12844,9351 12764,9433 12563,9536
-Bus 396	busroute_N 17605,10199 17567,10055 17523,9886 17471,9688 17378,9715 17365,9654 17360,9629 17425,9605 17456,9594 17549,9529 18037,9195 18120,9100 18134,9080 18161,9029 18221,8978 18299,8925 18375,8874 18451,8823 18518,8778 18609,8717 18733,8633
+Bus 396	busroute_N 17605,10199 17567,10055 17534,9897 17471,9688 17378,9715 17365,9654 17360,9629 17425,9605 17456,9594 17549,9529 18037,9195 18120,9100 18134,9080 18161,9029 18221,8978 18299,8925 18375,8874 18451,8823 18518,8778 18609,8717 18733,8633
 Bus 396	busroute_N 18809,9133 18697,9153 18586,9172 18511,9185 18430,9199 18319,9218 18172,9250 18069,9289 18006,9335 17735,9533 17549,9529
+Bus 396	busroute_N 16049,10844 15903,10906 15870,10938 15674,10851 15681,10801
 Bus 296	busroute_N 18737,8686 18866,8738 18894,8749 18988,8791 19073,8828 19116,8846 19163,8867 19299,8946 19500,9043 19629,9099 19634,9192 19651,9489 19660,9681 19663,9757 19669,9876 19683,10031 19695,10196 19553,10208 19540,10044 19536,9853 19459,9842 19450,9728 19236,9710 19141,9709 19042,9708 18994,9707 18823,9708
 Bus 296	busroute_N 18742,9903 18846,9948 18881,9865 18934,9826 19005,9816 19100,9811 19144,9810 19242,9815 19398,9833 19459,9842
 Bus 296	busroute_N 19536,9853 19669,9876
 Bus 296	busroute_N 17725,11228 17734,11408 17609,11467 17341,11595 17275,11626 17208,11658 17161,11681
+Bus 296, Bus 396	busroute_N 18731,8577 18787,8540 18846,8616 18778,8663 18737,8686
 Bus 240, Bus 296	busroute_N 17161,11681 17020,11748 16977,11769 16958,11778
 Bus 194, ...	busroute_N 17848,11204 17807,11219 17725,11228 17719,11092
-Bus 193	busroute_N 16859,12613 16957,12599 17088,12617 17234,12607 17301,12585 17357,12566 17346,12490 17314,12265 17375,12255 17466,12241 17300,12173 17195,12125 17139,12100 17092,12107 16994,12122 16890,12135
-Bus 193, Bus 256	busroute_N 16820,12339 16794,12144 16764,11919 16837,11920 16870,11920 16890,12135 16794,12144
+# REMOVED (Linie wurde eingestellt) --- Bus 193	busroute_N 16859,12613 16957,12599 17088,12617 17234,12607 17301,12585 17357,12566 17346,12490 17314,12265 17375,12255 17466,12241 17300,12173 17195,12125 17139,12100 17092,12107 16994,12122 16890,12135
+Bus 256	busroute_N 16820,12339 16794,12144 16764,11919 16837,11920 16870,11920 16975,12000 17088,12069 17092,12107 17139,12100 17195,12125 17300,12173 17466,12241 17533,12222
+# REMOVED (veränderte Linienführung) --- Bus 256	busroute_N 16870,11920 16890,12135 16794,12144
 Bus 240	busroute_N 16863,13138 16426,13145 15912,13153 15715,13157 15515,13134
 Bus 256	busroute_N 16430,15168 16522,15258 16618,15356 16686,15448 16767,15549 16811,15611 16890,15828
 Bus 294	busroute_N 17488,15766 17378,15760 17238,15764 17115,15769 17061,15773 16890,15828
@@ -1268,27 +337,37 @@ Bus 156	busroute_N 15635,16833 15819,16857
 Bus 156	busroute_N 12421,15278 12327,15333 12252,15376 11941,15586
 Bus 250	busroute_N 10908,17142 11126,17140 11272,17139 11362,17139 11458,17138 11549,17154 11531,17250 11519,17316 11492,17460 11468,17586 11453,17666 11425,17817 11398,17962 11272,17930 11195,17911 11113,17895 11047,17883 11023,17878 10944,17863 10918,17892
 Bus 250	busroute_N 10897,17274 10774,17277 10499,17286 10298,17299 10252,17357 10214,17401 10207,17448 10203,17478 10179,17772
+Bus 250	busroute_N 10377,19565 10457,19670 10527,19867
+Bus 250	busroute_N 10742,19632 10614,19907 10599,19957
 Bus M27	busroute_N 10830,17985 10705,17931 10548,17817 10459,17754 10311,17764 10179,17772
 Bus M27, Bus 250	busroute_N 10179,17772 10056,17781 9835,17797 9727,17804
 Bus 250	busroute_N 9549,17625 9383,17757 9358,17798 9236,17907 9190,17932 9171,17937 9147,17941 8944,17971 8746,17827 8545,17787
 Bus 155	busroute_N 9501,18902 9876,19026
+Bus 155	busroute_N 15280,17352 15267,17349 15217,17284
 Bus 250	busroute_N 11162,19844 11229,19706 11278,19607 11437,19664 11652,19743 11695,19760 11627,19907 11563,20048 11419,20327 11269,20667
+Bus 251	busroute_N 16390,26315 16045,25907
 Bus M27	busroute_N 10819,18066 10907,18109 10938,18147 10989,18172
-Bus 126	busroute_N 7335,18257 7510,18364 7594,18427 7676,18492 7861,18333 7954,18251 8061,18159 8116,18115 8135,18028 8152,17936 8182,17746 8211,17585 8226,17479 8231,17431 8185,17352 8154,17301 8123,17255 8088,17218 8055,17179 7970,17087 7926,17050 7841,16966 7745,16889 7672,16878
+Bus 125	busroute_N 7335,18257 7510,18364 7594,18427 7676,18492 7861,18333 7954,18251 8061,18159 8116,18115 8135,18028 8152,17936 8182,17746 8211,17585 8226,17479 8231,17431 8185,17352 8154,17301 8123,17255 8088,17218 8055,17179 7970,17087
+# REMOVED --- Bus 126	busroute_N 7970,17087 7926,17050 7841,16966 7745,16889 7672,16878
 Bus 122	busroute_N 6380,17836 6383,18033 6403,18289 6418,18491 6432,18682
 Bus 122	busroute_N 5233,18069 5536,18234 5870,18387 6060,18534 6217,18619 6296,18638 6306,18673 6314,18705
+Bus 122	busroute_N 5068,17384 4914,17399 4901,17341 4891,17289 4997,17241
+Bus 124	busroute_N 488,22275 455,22285 344,22346 238,22412 21,22545 -48,22595 -130,22647 -188,22682 -264,22729 -656,23011
 Bus 125	busroute_N 4326,17801 4377,18037 4421,18243 4291,18264 4181,18284 4102,18298 4009,18322 3909,18342 3733,18376 3738,18573 3731,18601 3713,18621 3562,18712 3680,18913 3700,18965
 Bus 322	busroute_N 4240,19019 4195,19043 4137,19007 3909,19002 3810,19133 3546,19477
+Bus 327	busroute_N 8465,18365 8286,18331 8222,18375 8096,18456 7997,18524 7861,18333
 Bus 125	busroute_N 3546,19477 3343,19727 3252,19658 3167,19597 3021,19780 2854,19992 2837,20015 2814,20035 2803,20045 2726,20146 2684,20223 2645,20300 2615,20421
 Bus 133	busroute_N 2295,20358 2362,20218 2402,20126 2336,20117 2169,20095
 Bus 133	busroute_N 2109,20188 2323,20214 2362,20218
+Bus 133	busroute_N 2402,20126 2336,20117 2169,20095
+Bus 133	busroute_N 2362,20218 2402,20126 2336,20117 2169,20095 2109,20188
 Bus 139	busroute_N 931,14268 968,14263 1023,14259 1085,14250 1133,14387
 Bus 139	busroute_N -834,15053 -934,15254 -1013,15433 -1037,15482 -1095,15621 -1095,15621 -1115,15717 -1095,15865 -1409,16106 -1628,16225 -1664,16245 -1737,16283 -1821,16327
 Bus 139	busroute_N -2728,17038 -2666,17168 -2606,17272 -2517,17431 -2959,17507
 Bus 139	busroute_N -2835,17843 -2881,17857 -2897,17861 -2906,17661
 Bus 134	busroute_N -3216,15155 -3241,15118 -3349,15229 -3492,15331 -3507,15341 -3529,15358 -3555,15377 -3696,15463 -3778,15520 -3825,15551 -3881,15589 -3905,15605 -3997,15664 -4129,15732 -4254,15813 -4544,15940 -4630,15978 -4798,16050 -4900,16094 -4951,16116 -5077,16162 -5190,16203 -5292,16239 -5400,16285 -5544,16339 -5560,16345 -5660,16369 -5806,16403 -5960,16441
 Bus 337	busroute_N -3481,14523 -3598,14587 -3637,14628 -3721,14495 -3835,14668 -3880,14770 -3900,14818 -4017,15077 -4061,15164 -4084,15264 -4110,15367
-Bus M37	busroute_N -7003,16188 -6990,16321 -6982,16403 -6980,16452 -7037,16469 -7068,16471
+Bus 137	busroute_N -7003,16188 -6990,16321 -6982,16403 -6980,16452 -7037,16469 -7068,16471
 Bus M37	busroute_N -6719,16111 -6732,15998 -6766,15741 -6755,15682 -6733,15661 -6700,15653 -6629,15646 -6514,15629 -6345,15600 -6267,15585 -6182,15569 -6098,15559 -5967,15752 -5911,15877
 Bus 131	busroute_N -6098,15559 -6116,15407 -6148,15306 -6175,15261 -6214,15211 -6256,15169 -6309,15125 -6361,15054 -6405,14971
 Bus 237	busroute_N -7365,15306 -7371,15201 -7373,15154 -7387,14951 -7390,14881 -7391,14857 -7413,14561
@@ -1296,10 +375,13 @@ Bus 237	busroute_N -6861,15129 -6878,15024 -6883,14981 -6891,14891 -6896,14845 -
 Bus M32	busroute_N -7121,14711 -7115,14663 -7114,14579
 Bus M32, Bus 237	busroute_N -7114,14579 -7185,14574 -7225,14572 -7304,14567 -7413,14561
 Bus M32	busroute_N -7413,14561 -7420,14520 -7445,14392 -7457,14317 -7455,14144 -7456,14073 -7457,13957 -7464,13904 -7484,13770
-Bus 237	busroute_N -8450,15702 -8479,15609 -8363,15558 -8229,15505 -8078,15449 -7819,15342 -7867,15185 -7882,15129 -7908,14955 -7940,14690 -7952,14632 -8118,14649 -8112,14702 -8126,14740 -8213,14837 -8295,14948 -8391,15109 -8449,15189 -8363,15558
+Bus 237	busroute_N -8450,15702 -8479,15609 -8363,15558
+# REMOVED (Route wurde geändert?) --- Bus 237	busroute_N -8363,15558 -8229,15505 -8078,15449 -7819,15342 -7867,15185 -7882,15129 -7908,14955 -7940,14690 -7952,14632
+Bus 237	busroute_N -7952,14632 -8118,14649 -8112,14702 -8126,14740 -8213,14837 -8295,14948 -8391,15109 -8449,15189 -8363,15558
+Bus 237	busroute_N -7952,14632 -7757,14606 -7550,14579 -7413,14561
 Bus 135	busroute_N -4650,12257 -4412,12179
 Bus M37, Bus 131	busroute_N -5030,13017 -5234,12812 -5263,12784 -5282,12730 -5170,12690 -5146,12632 -5196,12452 -5219,12374 -5437,12440 -5513,12266
-Bus M37	busroute_N -5282,12730 -5307,12737 -5480,12793 -5594,12832 -5706,12869 -5784,12858 -5878,12845 -5975,12827 -6093,12801
+Bus 137	busroute_N -5282,12730 -5307,12737 -5480,12793 -5594,12832 -5706,12869 -5784,12858 -5878,12845 -5975,12827 -6093,12801
 Bus 318	busroute_N -7232,445 -7365,371 -7449,348 -7474,341 -7587,312 -7639,312 -7710,313 -7732,313
 Bus 112	busroute_N -3360,2917 -3452,2868 -3509,2817 -3635,2668 -3686,2579 -3692,2549 -3709,2517 -3725,2475 -3726,2457 -3742,2287 -3689,2267 -3610,2237 -3519,2180 -3568,2382 -3634,2488 -3692,2549
 Bus 115, Bus 118	busroute_N -1281,2074 -1377,2077 -1463,2080 -1537,2152 -1596,2307 -1604,2324 -1646,2434
@@ -1308,7 +390,7 @@ Bus 101	busroute_N 85,1322 150,1251 155,1228 194,1055 214,969 230,899 247,822 25
 Bus 118	busroute_N 669,3119 630,2998 589,2925 751,2860
 Bus 118	busroute_N 971,3534 923,3585 891,3828 892,3907 861,3996 806,4130 754,4220 666,4339 519,4547 418,4696 374,4779 346,4833
 Bus 285	busroute_N 922,4910 928,4996 964,5141 1000,5184 1090,5268 1114,5290 1139,5308 1212,5353
-Bus M19, ...	busroute_N 1074,8470 1043,8550 972,8626 930,8746 912,8895 936,8933 901,8969 884,8954 870,8939 912,8895
+Bus M19, Bus 186	busroute_N 1074,8470 1043,8550 972,8626 930,8746 912,8895 936,8933 901,8969 884,8954 870,8939 912,8895
 Bus 349	busroute_N 676,9104 693,9129 890,9399 1019,9573 1117,9706 1238,9869 1344,10012 1457,10168
 Bus 284, Bus 380	busroute_N 5317,2345 5406,2110 5376,2097 5431,1956 5452,1940 5396,1774 5338,1612 5304,1523 5275,1446 5221,1307 5201,1227 5178,1123 5162,1110 5162,1110 5162,1098 5187,1059 5204,1057 5204,1057
 Bus 284, Bus 380	busroute_N 5204,1057 5204,1057 5212,1074 5190,1114 5178,1123
@@ -1316,13 +398,15 @@ Bus 284, Bus 380	busroute_N 5452,1940 5474,1940 5491,1955 5489,1981 5434,2122 54
 Bus 284	busroute_N 5204,1057 5342,845 5358,822 5514,580 5584,475 5486,461 5448,455 5061,409 4948,562
 Bus 186	busroute_N 4542,1188 4605,1089 4768,840 4875,677 4948,562
 Bus 186, Bus 284	busroute_N 4948,562 4748,453 4505,465 4279,459
-Bus M85	busroute_N 4136,505 4122,421 4068,406 3912,362 3898,466 3834,502 3647,739
+Bus M85	busroute_N 4136,505 4122,421 4068,406 3912,362 3898,466 3834,502 3655,752
+Bus M85	busroute_N 7873,12923 7872,13022 7941,13014 7937,13109 7867,13106 7872,13022
 Bus M77, Bus M82	busroute_N 6977,870 6941,690 6937,671 6959,509 7007,333 7014,203 6982,88
 Bus 283	busroute_N 7234,2548 7324,2559 7517,2574 7602,2522 7667,2501 7704,2482 7777,2447 7899,2391 7923,2319 7987,2337 7983,2348 7983,2348 7899,2391
 Bus 187	busroute_N 7852,3183 7865,3354 7790,3369 7755,3376 7705,3386 7587,3411 7501,3432 7483,3440 7458,3451 7407,3473 7183,3570 7109,3635 7012,3743 6996,3761
 Bus 187	busroute_N 7755,3376 7734,3290 7719,3219 7720,3148
 Bus M77, ...	busroute_N 8495,2080 8565,2003 8607,1898
 Bus 179	busroute_N 9106,3703 9131,3571
+Bus 179	busroute_N 11791,834 11794,550
 Bus M77	busroute_N 9731,3889 9751,3769
 Bus 282	busroute_N 10185,4187 10269,4136 10355,4085 10409,4060 10586,4039 10756,4018 10978,4075 11013,4342 10879,4358 10802,4367 10715,4296 10613,4308 10526,4319 10462,4326 10371,4337 10293,4361
 Bus 181	busroute_N 14023,4475 14295,4462 14299,4383 14239,4367 14164,4271 14119,4153
@@ -1353,18 +437,27 @@ Bus 372	busroute_N 17855,1629 17871,1570 17902,1517 17962,1437 18053,1317 18093,
 Bus 371	busroute_N 17384,775 17274,705 17215,667 17168,654 17134,644 17056,643 17077,526 17129,314 17158,182 17176,90 17188,-46 17193,-109 17199,-196 17222,-426 17359,-345 17418,-305 17476,-266 17537,-226 17599,-187 17719,-107 17777,-68 17860,-15 17879,-3
 Bus 172	busroute_N 15736,2593 15779,2649 15870,2768 15911,2821 15989,2923 16096,3075 16155,3160 16221,3248 16281,3339 16504,3184 16550,3155 16689,3056 16779,2993
 Bus 160	busroute_N 17142,3393 17034,3517 16942,3579 16842,3624 16615,3734 16742,4098 16852,4105 16887,4105 17027,4090 17108,4049
-Bus 160	busroute_N 17522,3653 17762,3243 17799,3183 17910,3004 18014,2830 18017,2751
+# REMOVED (Route verlegt) --- Bus 160	busroute_N 17522,3653 17762,3243 17799,3183 17910,3004 18014,2830 18017,2751
 Bus 265	busroute_N 17520,4649 17676,4540 17797,4441
 Bus 265	busroute_N 17881,4521 17826,4730 17792,4875 17885,4912
-Bus 162	busroute_N 19251,1240 19107,1403 19061,1457 18974,1559 18916,1626 18888,1658 18839,1715 18807,1758 18804,1791 18863,1950 18881,2062
+Bus 265	busroute_N 9569,11631 9581,11523 9456,11513
+Bus 265	busroute_N 17826,4730 17868,4742 17956,4787
+Bus 263	busroute_N 22172,194 22239,166 22303,67 22312,48 22347,-19 22382,-87 22436,-168 22498,-265 22508,-281 22543,-338 22632,-480 22640,-494 22696,-579 22745,-650 22799,-728 22866,-826 22918,-903 22973,-978 23022,-1047 22830,-1125 22804,-1137 22579,-1108 22495,-1098 22442,-1093 22332,-1078 22186,-1060
+Bus 168	busroute_N 28055,-3276 27488,-5155 27233,-5979 27190,-6165 27204,-6354 27185,-6585 27292,-6641 27294,-6683 27308,-6742 27294,-6794 27285,-6861 27288,-6944 27311,-6962 27359,-6969 27458,-6806 27466,-6764 27308,-6742
+Bus 164	busroute_N 19251,1240 19107,1403 19061,1457 18974,1559 18916,1626 18888,1658 18839,1715 18807,1758 18804,1791 18863,1950 18881,2062
 Bus 160	busroute_N 18922,2238 19017,2214 19194,2157 19244,2141 19602,1989 19803,1911
-Bus 163, Bus 260	busroute_N 20277,2463 20116,2639 19978,2790 19878,2899 19746,3029 19697,3074 19581,3184
+Bus 260	busroute_N 20277,2463 20116,2639 19978,2790 19878,2899 19746,3029 19697,3074 19581,3184
 Bus 160	busroute_N 19817,1404 19843,1375 19907,1404 19981,1397 19955,1509 20226,1416 20347,1398 20365,1394 20381,1390 20539,1285 20653,1211 20694,1175 20813,1014 20836,982 20850,963 20960,819 21089,639 21116,605 21164,476 21182,436
 Bus 160, Bus 260	busroute_N 18860,248 19138,141 19297,80
 Bus 160, Bus 260	busroute_N 19679,1571 19686,1562 19725,1515 19817,1404
 Bus 160	busroute_N 18997,-351 19026,-283 19040,-250 19210,-85 19297,80
 Bus 260	busroute_N 19297,80 19398,254 19429,337 19471,448 19480,471 19510,549 19560,689 19583,752 19618,849 19653,952 19694,1074 19737,1204 19780,1311 19817,1404
 Bus 160	busroute_N 18675,-231 18906,-316 18997,-351 19105,-376 19270,-417 19348,-434 19385,-444 19451,-452 19607,-474 19674,-484 19704,-490
+Bus 161	busroute_N 29901,4264 29947,4268 30020,4273 30132,4281 30246,4287 30293,4290 30345,4293 30461,4300 30562,4306 30614,4309 30665,4312 30696,4314 30655,4186 30605,4028 30518,3753
+Bus 161	busroute_N 31447,3372 31500,3427 31528,3456 31670,3604 31724,3592 31756,3620 31745,3679 31839,3774 31905,3839 31966,3902 32081,4021
+Bus 161	busroute_N 31745,3679 31695,3690 31661,3665 31670,3604
+Bus 161	busroute_N 32829,3105 32802,2932 32790,2792 32643,2695 32512,2621 32467,2582 32316,2468 32162,2542 32115,2581 32031,2723 31999,2812 31967,2966 31978,3237
+Bus 161	busroute_N 32162,2542 32445,2716 32512,2621
 Bus 164	busroute_N 20832,3170 20772,3244 20717,3310 20644,3395 20499,3572 20451,3538 20367,3479 20301,3432 20264,3406 20238,3390 20166,3344 20064,3278
 Bus 164	busroute_N 20166,3344 20113,3408 20089,3438 20066,3466 20012,3532
 Bus 164	busroute_N 22383,4470 22372,4496 22358,4521 22324,4586 22314,4604 22284,4653 22246,4711 22240,4768 22196,4847 22175,4730 22138,4661 22133,4644 22111,4562 22093,4499
@@ -1374,6 +467,7 @@ Bus X69	busroute_N 22324,6397 22539,6258
 Bus 167, ...	busroute_N 23435,4179 23655,4205 23753,4218 23879,4233 24135,4264 24181,4270
 Bus 190	busroute_N 21025,7349 21341,7487 21475,7500
 Bus 190	busroute_N 21175,9989 20947,9999 20703,10004 20706,10047 20708,10144 20711,10230 20713,10293 20716,10434 21017,10423 21288,10431
+Bus 190	busroute_N 21025,7349 21341,7487 21475,7500
 Bus 398	busroute_N 21135,10995 21249,11042 21308,11075 21354,11101 21385,11119 21420,11150 21535,11267 21624,11379
 Bus 108	busroute_N 21124,11462 20959,11465 20828,11466 20641,11480 20623,11481 20525,11488 20549,11659 20575,11698
 Bus 192	busroute_N 18597,12162 19086,12134 19143,12078 19138,11815 19135,11713 19121,11681 19035,11671 19005,11705 19005,11767 19004,11780
@@ -1381,24 +475,47 @@ Bus 108, Bus 192	busroute_N 19389,11761 19138,11815
 Bus 108	busroute_N 19138,11815 18934,11796 18853,11780
 Bus 192	busroute_N 20656,12415 20629,12177 20627,12162 20790,12146
 Bus 191	busroute_N 19687,14469 19729,14564 19777,14673 19800,14726 19873,14884 19902,14945 20010,15142 20117,15282 20286,15382 20260,15434 20222,15519
-Bus 195	busroute_N 21599,15213 21718,15198 21809,15186 21903,15174 22059,15153 22326,15116 22419,15127 22449,15127 22578,15114 22605,15111 22726,15082 22899,15073
+# REMOVED (NH!) --- Bus 195	busroute_N 21599,15213 21718,15198 21809,15186 21903,15174 22059,15153 22326,15116 22419,15127 22449,15127 22578,15114 22605,15111 22726,15082 22899,15073
 Bus 191, ...	busroute_N 20222,15519 19962,15343 19824,15347 19768,15361 19681,15405
 Bus X54	busroute_N 18365,17382 18428,17497 18635,17649 18556,17752 18482,17847 18412,17920 18304,18071 18242,18146 18205,18256
 Bus 256	busroute_N 17003,19035 16999,18930 17044,18859 17109,18772 17117,18761 17260,18579 17502,18286 17574,18196 17678,18171 17768,18160 17843,18078
 Bus 256	busroute_N 18009,18946 18061,19097 18066,19143 18074,19227 18109,19352 18544,19722 18690,19830 18771,19892 18821,19936 18955,20050 18816,19648 18730,19672 18644,19695 18544,19722
 Bus 195	busroute_N 24968,15307 24794,15270 24651,15239 24451,15181 24281,15138 24226,15121 24232,15060 24215,15057 24139,15046 24063,15035 23960,15021
+Bus 195	busroute_N 22883,11956 23144,11963 23432,11948 23540,11943 23648,11940 23789,11907 23896,11862 24003,11821 24121,11795 24317,11754 24444,11725 24623,11684
+Bus 195	busroute_N 24317,11754 24362,11954 24491,11972 24567,11980
 Bus X69	busroute_N 28225,1009 28348,1147 28488,1307 28545,1373 28591,1421 28632,1469 28817,1679 28904,1781 28978,1864 29077,1973 29115,2015 29414,2373
 Bus 122, Bus 155	busroute_N 7672,19869 7556,19882 7333,19911 7209,19928 7205,20047 7201,20161 7231,20266 7321,20426 7577,20450 7711,20463 7809,20420 7900,20378
 Bus 221	busroute_N 5819,21057 5840,20953 5929,20882 6027,20807 6117,20738 6279,20587 6375,20579 6408,20603 6439,20632 6445,20636 6904,20692 7080,20713 7171,20729 7255,20793 7280,20895 7251,21202
+Bus 222	busroute_N -1616,18112 -1547,18110 -1478,18107 -1478,18407 -1628,18411
 Bus M21, Bus X21	busroute_N 7251,21202 7238,21431 7261,21504 7390,21608 7520,21710 7742,21867
 Bus M21	busroute_N 7742,21867 7781,21812 7959,21573 7959,21573 7991,21531 8016,21499 7852,21262
 Bus X21	busroute_N 7742,21867 7594,22068 7516,22178 7439,22306
-Bus 122	busroute_N 6962,21174 6917,21506 6928,21576 7155,21744 7244,21811 7287,21845 7347,21893 7375,21980 7331,22037 7264,22125 6683,22080 6629,22029 6618,21972 6473,21969
+Bus 122	busroute_N 6962,21174 6917,21506 6925,21558 6928,21576 7155,21744 7244,21811 7287,21845 7347,21893 7375,21980 7331,22037 7264,22125 6683,22080 6629,22029 6618,21972 6473,21969
 Bus 122, ...	busroute_N 5006,22507 5056,22389 5098,22326 5140,22342 5237,22345 5376,22350 5429,22359 5485,22396 5517,22432 5517,22487 5484,22564 5423,22685
 Bus 322	busroute_N 4810,21730 4655,21939 4613,21997 4581,22106 4456,22278
+Bus 324	busroute_N -1869,19974 -1681,19955 -1572,19899 -1419,19815
 Bus M85	busroute_N 8098,13419 8102,13304 8106,13130 8110,13042
 Bus 347	busroute_N 13541,11355 13496,11384 13427,11431 13473,11456 13496,11384
 Bus 248	busroute_N 8642,7876 8553,7795 8512,7757 8465,7699 8378,7623 8263,7611
+Bus 326	busroute_N 3022,24393 3127,24253 3216,24135 3308,24009 3487,23765 3475,23757 3563,23609 3596,23581 3621,23548
+Bus 326	busroute_N 3848,24546 3978,24561 4111,24488 4233,24459 4340,24413 4457,24400 4566,24389 4656,24379 4777,24342 4779,24321 4705,24284 4683,24275 4614,24233 4510,24170 4425,24067 4397,24033 4305,23987 4256,23985 4240,23985 4073,23980 3957,23981
+Bus 350	busroute_N 15529,22981 15310,23085 15280,23097 15141,22896
+Bus 350	busroute_N 14632,23257 14761,23453 14845,23565 14902,23655 15029,23857 15130,24012 15256,24056 15367,24118 15490,24198 15591,24137 15675,24086 15689,24045 15794,23778 15826,23723 15845,23717 15957,23635 16070,23566 16064,23547 16079,23535 16095,23539 16183,23476 16425,23323 16444,23298 16440,23283 16383,23197 16315,23094 16304,23077
+Bus 350	busroute_N 16095,23539 16094,23554 16072,23565
+Bus 353	busroute_N 16669,25373 16731,25310 17023,25014 17109,24924 17156,24786 17190,24695
+Bus 363	busroute_N 21844,238 21799,234 21712,215 21645,200 21618,193 21582,185 21537,176 21487,173 21421,158 21382,149 21354,142 21250,118
+Bus 390	busroute_N 21854,18192 21869,18227 21871,18244 21938,18370 21946,18415 21933,18521 21875,18700 21875,18717 21884,18771 21890,18821 21880,18866 21871,18887 21868,18896 21821,19021
+Bus 197, Bus 399	busroute_N 24530,12296 24434,12402 24354,12510 24316,12566 24230,12733
+Bus 197, Bus 399	busroute_N 23466,12798 23355,12732 23331,12706 23321,12673 23299,12600 23244,12417 23233,12406 23156,12327 23100,12269
+Bus 197	busroute_N 24230,12733 24150,12746 23942,12787 23806,12804 23676,12820 23569,12822 23466,12798
+Bus 399	busroute_N 24230,12733 24187,12836 24142,12943 24131,12969 24117,13043 24118,13148 24115,13320 24117,13423 24116,13470 24119,13556 24119,13658 24125,13781 24041,13795 23987,13805 23869,13830 23801,13839 23745,13830 23705,13636 23668,13408 23656,13344 23612,13178 23552,13124 23477,13084 23437,12868 23447,12841 23466,12798
+Bus 399	busroute_N 23244,12417 23385,12484 23505,12530 23528,12521 23653,12471 23774,12423 23895,12374 23994,12334 24087,12297 24096,12293 24179,12260 24266,12247 24398,12271 24530,12296
+Bus 395	busroute_N 24266,12247 24278,12130 24556,12181
+Bus 395	busroute_N 25072,12107 25109,12196 25149,12266 25318,12294 25578,12336 25602,12363 25686,12465 25774,12572 25629,12688 25534,12763 25663,12927 25706,12982 25801,13101 25872,13191 25961,13304 26120,13486 26301,13691 26464,13884 26610,14049
+Bus 395	busroute_N 26464,13884 26271,14049 26175,14088 26061,14085 25923,14081 25778,14058 25681,14049 25591,14042 25503,14085
+Bus 398	busroute_N 25138,11215 25137,11297 25193,11532 25243,11656 25258,11705 25276,11779 25287,11822 25315,11895 25556,11826 25594,11939 25617,12035 25524,12062 25455,12047 25365,12069 25286,12094 25161,12128 25072,12107
+Bus 398	busroute_N 25276,11779 25526,11703 25735,11639 25783,11759 25827,11867 25863,11965 25617,12035
+Bus 395, Bus 398	busroute_N 24578,11928 24739,11968 24727,12027 24936,12071 25072,12107
 #: ignore ^^^
 ######################################################################
 #: by: Dagmar Schilka
@@ -1700,7 +817,16 @@ in Höhe Erkelenzdamm 5 abbiegen	CP2; 11192,10629 11145,10638
 (Zobtener Str. - Fischerstr.): durch eine Kleingartenanlage	CS 16353,10207 16404,10286
 (Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Straße verläuft zwischen Bahnstrecke und Wohnhäusern	CS 17210,11950 17201,11975 17137,11969 17023,11908 17026,11888
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11012,13278 11085,13239
-Agnes-Zahn-Harnack-Str.: nicht ausgeschildert	CS 7795,13093 7867,13127 7938,13150
+#: note: nur an der Katharina-Paulus-Str. steht ein Schild vvv
+#: XXX vielleicht wird hier mal ausgeschildert werden? vvv
+#: last_checked: 2013-09-25 vvv
+#: check_frequency: 360d vvv
+Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CP2; 7938,13150 7867,13127
+Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CP2; 7795,13093 7867,13127
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
+#: note ^^^
 Petrusweg: Anlieger frei	CS 15225,1553 15217,1463
 Am Rudower Waldrand: Anlieger frei	CS 15467,349 15476,332 15600,116 15707,-6
 Gertrud-Dorka-Weg: Privatstraße	CS 17848,-173 17796,-97
@@ -1731,7 +857,7 @@ Distelweg: Privatstraße	CS 8587,21218 8484,21282
 Quantzstr. - Potsdamer Chaussee: beim Linksabbiegen kann man nicht auf dem Radweg hinter der Autobahnauffahrt gelangen; dies ist erst später möglich	CP; -3044,1578 -3113,1692 -3184,1643
 Golfweg: Privatstraße, nur für Mitglieder	CS -7975,785 -8136,700
 #: by: Kay Leonhardt: vvv
-Eduard-Spranger-Promenade: nicht ausgeschildert	CS 4284,2626 4655,3060 4862,3363 4951,3516
+Eduard-Spranger-Promenade: nicht ausgeschildert	CS 4317,2638 4655,3060 4862,3363 4951,3516
 #: note: "Zufahrt verboten (aber kein Schild nach StVO)"
 Kirchmeisterweg: Privatstraße	CS 4980,1870 4958,1844 5007,1718 5035,1723
 #: by: ^^^
@@ -1783,7 +909,7 @@ Rosenthaler Str.: Richtung Kleine Rosenthaler Str.	CP2; 10313,13493 10311,13537
 (Finsterwalder Str. - Quickborner Str.): am Bruckstückengraben, auch als "Möbelweg" bekannt	CS 6434,22244 6651,22324 6755,22331 7439,22306
 nicht ausgeschildert	CP2; 8501,25358 8584,25371
 nicht ausgeschildert	CP2; 8776,25332 8722,25296
-Waldweg (Blankenfelde): Privatstraße	CS  9757,26351 9812,26385
+Waldweg (Blankenfelde): Privatstraße	CS 9757,26351 9812,26385
 Wiesenweg (Blankenfelde): Privatstraße	CS 9776,26298 9848,26349
 Bergweg: Privatstraße	CS 9796,26244 9898,26310
 Höhenweg: Privatstraße	CS 9940,26273 9812,26186
@@ -1837,8 +963,8 @@ unter der S-Bahnbrücke	CP2; 24650,6034 24647,5981
 ausgeschildert als Weydemeyerstr. 3-18	CP2; 11805,12760 11818,12785
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file?y=2013
 #: XXX evtl. wird zur Benennung ausgeschildert werden
-#: last_checked: 2013-08-08
-#: check_frequency: 30d
+#: last_checked: 2013-09-06
+#: check_frequency: 60d
 Fromet-und-Moses-Mendelssohn-Platz: nicht ausgeschildert	CS 9797,10771 9733,10827 9682,10836 9666,10848
 Hauptstr., linker Gehweg: an der Ampel Hauptstr./Hildegard-Marcusson-Str. auf die linke Seite wechseln	CP2; 16004,10204 16018,10212
 (Otisstr. - Wackerweg): Privatgelände	CP2; 3680,18913 3753,18889
@@ -1872,3 +998,13 @@ Lindenschwärmerweg: Privatstraße	CS 21308,11075 21294,11097 21187,11132
 Fechinger Weg: Privatstraße	CS 21409,11941 21411,11863 21456,11825
 Wischbergweg: im Kleingartenbereich nicht ausgeschildert	CP2; 13617,18045 13733,18161
 ausgeschildert "Zur Bansiner Str."	CP2; 22896,12827 22906,12766
+#: note: mit Kette an der Stadtgrenze, kann aber umfahren werden
+Waldstr.: Privatstraße	CS 24736,8093 24768,8087
+Waldstr.: Anlieger frei	CS 24768,8087 24797,8248
+Hohenseeweg: nicht ausgeschildert	CS 22972,11066 23152,11065
+Am Vogelherd: nicht ausgeschildert	CS 25175,7953 25192,7631 25228,7462
+Südhafen: BEHALA-Betriebsgelände, nur für Anlieger	CS -2940,13169 -3008,13052 -3013,12909 -2950,12589
+Sportforumstr.: nur für Anlieger frei	CS -193,12051 -212,12095 -247,12117 -263,12125 -369,12175
+Kaiserdamm: Überquerung des Mittelstreifens wegen parkender Autos u.U. schwierig	CP; 3287,11846 3320,11583 3339,11433
+Kaiserdamm: Überquerung des Mittelstreifens wegen parkender Autos u.U. schwierig	CP; 3339,11433 3320,11583 3287,11846
+Mehringplatz - Zossener Brücke: ausgeschildert zum Senioren-Wohnhaus am Mehringplatz 5	CP2; 9668,10306 9873,10285

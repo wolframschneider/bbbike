@@ -15,7 +15,7 @@ package BBBikeOsmUtil;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.17;
+$VERSION = 1.18;
 
 use vars qw(%osm_layer %images @cover_grids %seen_grids $last_osm_file $defer_restacking
 	  );
@@ -394,8 +394,9 @@ sub plot_osm_files {
 
 	    if (exists $tag{name} || exists $tag{amenity}) {
 		my $uninteresting_tags = join(" ",
-					      "user=" . $node->getAttribute("user"),
-					      "timestamp=" . $node->getAttribute("timestamp"),
+					      "user=" . ($node->getAttribute("user")||"<undef>"),
+					      "timestamp=" . ($node->getAttribute("timestamp")||"<undef>"),
+					      "version=" . ($node->getAttribute("version")||"<undef>"),
 					      (map { "$_=$tag{$_}" } keys %tag)
 					     );
 		my $photo;
@@ -500,21 +501,44 @@ sub plot_osm_files {
 		}
 	    }
 
+	    if (!%item_args && !%line_item_args) {
+		# Is it interesting at all?
+		my $no_of_interesting_tags = scalar keys %tag;
+		while(my($k,$v) = each %tag) {
+		    if ($k =~ $UNINTERESTING_TAGS) {
+			$no_of_interesting_tags--;
+		    }
+		}
+		if ($no_of_interesting_tags <= 0) {
+		    # make it very, very faint
+		    $item_args{'-dash'} = '.     ';
+		    $item_args{'-width'} = 1;
+		}
+	    }
+
 	    my @coordlist = map { (split /,/, $node2ll{$_}) } @nodes;
 	    if (@coordlist < 4) {
 		warn "Not enough coords for way $tag{name}";
 	    } else {
-		my $tags = join(" ", map { "$_=$tag{$_}" } grep { $_ !~ $UNINTERESTING_TAGS } keys %tag);
-		my $uninteresting_tags = join(" ",
-					      "user=" . ($way->getAttribute("user")||"<undef>"),
-					      "timestamp=" . ($way->getAttribute("timestamp")||"<undef>"),
-					      (map { "$_=$tag{$_}" } grep { $_ =~ $UNINTERESTING_TAGS } keys %tag)
-					     );
-		my @tags = ((exists $tag{name} ? $tag{name}.' ' : '') . $tags, $uninteresting_tags, 'osm', 'osm-way-' . $id);
 		my $is_area = (exists $tag{'area'} ? $tag{'area'} eq 'yes' :
 			       exists $tag{'landuse'} ? 1 :
 			       $nodes[0] eq $nodes[-1] && ($tag{'junction'}||'') ne 'roundabout' && ($tag{'highway'}||'') eq ''
 			      );
+
+		my $tags = join(" ", map { "$_=$tag{$_}" } grep { $_ !~ $UNINTERESTING_TAGS } keys %tag);
+		if (!$is_area && $tags eq '') {
+		    # So we see a tooltip for lines without meaningful tags.
+		    # Don't do this for areas, there are areas which are very, very widespread
+		    $tags = '<empty>';
+		}
+		my $uninteresting_tags = join(" ",
+					      "user=" . ($way->getAttribute("user")||"<undef>"),
+					      "timestamp=" . ($way->getAttribute("timestamp")||"<undef>"),
+					      "version=" . ($way->getAttribute("version")||"<undef>"),
+					      (map { "$_=$tag{$_}" } grep { $_ =~ $UNINTERESTING_TAGS } keys %tag)
+					     );
+		my @tags = ((exists $tag{name} ? $tag{name}.' ' : '') . $tags, $uninteresting_tags, 'osm', 'osm-way-' . $id);
+
 		if ($is_area && exists $tag{'FIXME'}) {
 		    # FIXME areas may possibly hide interesting items,
 		    # so never draw them as areas
@@ -538,8 +562,15 @@ sub plot_osm_files {
 		    } elsif (exists $tag{'landuse'} && $tag{'landuse'} =~ m{^(?:industrial|commercial)$}) {
 			$light_color = '#b0a0b0';
 			$dark_color = '#a060a0';
-		    } elsif (exists $tag{'building'} && $tag{'building'} eq 'yes') {
-			$light_color = '#b98a68';
+		    } elsif (exists $tag{'building'}) {
+			if ($tag{'construction'} ||
+			    $tag{'building'} =~ CONSTRUCTION_RX) {
+			    $light_color = '#dddddd';
+			} elsif ($tag{'building'} =~ m{^(yes|residential|apartments)$}) {
+			    $light_color = '#b98a68';
+			} else {
+			    $light_color = '#c99a78';
+			}
 		    } elsif ((exists $tag{'amenity'} && $tag{'amenity'} eq 'parking') ||
 			     (exists $tag{'highway'})
 			    ) {

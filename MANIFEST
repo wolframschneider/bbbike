@@ -4,6 +4,7 @@ BBBikeAdvanced.pm
 BBBikeAlarm.pm
 BBBikeApacheSessionCounted.pm
 BBBikeApacheSessionCountedHandler.pm
+BBBikeCanvasUtil.pm
 BBBikeCGI/API.pm
 BBBikeCGI/Cache.pm
 BBBikeCGI/Util.pm
@@ -268,6 +269,7 @@ data/comments_path
 data/comments_route
 data/comments_scenic
 data/comments_tram
+data/culdesac
 data/deutschland
 data/faehren
 data/flaechen
@@ -481,6 +483,7 @@ html/opensearch/opensearch.html
 html/opensearch/opensearch.js
 html/pleasewait.html
 html/presse.html
+html/scrollarray.js
 html/shortfragezeichenform.html
 html/shortfragezeichenform.utf8.html
 html/sprintf.js
