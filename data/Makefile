@@ -139,7 +139,9 @@ targets-clean:
 	-rm -f .strassen.tmp
 
 fix-permissions:
-	$(READABLE) $(TARGETS) $(NON_TARGETS) temp_blockings/bbbike-temp-blockings.pl temp_blockings/*.bbd
+	for i in $(TARGETS) $(NON_TARGETS) temp_blockings/bbbike-temp-blockings.pl temp_blockings/*.bbd; do \
+	     [ -e $$i ] && $(READABLE) $$i || echo "$$i does not exist, skip fix-permission task"; \
+	done
 
 # Useful checks, but normally too slow for a quick build
 # XXX merge with sort-Berlin.coords.data rule below?
@@ -1256,6 +1258,7 @@ report-checks:
 do-checks:	.check_empty_lines \
 	.check_strassen1 .check_strassen2 .check_strassen_potsdam .check_strassen_cont .check_strassen_consecutive \
 	.check_plaetze1 .check_plaetze2 .check_strassen_plaetze_unique \
+	.check_missing_streets \
 	.check_hoehe .check_hoehe2 \
 	.check_ampeln .check_ampeln2 \
 	.check_gesperrt1 .check_gesperrt2 \
@@ -1348,6 +1351,10 @@ check-disabled:
 	    false; \
 	fi
 	@rm -f /tmp/strassen-names /tmp/plaetze-names
+	@touch $@
+
+.check_missing_streets: ${MISCSRCDIR}/missing_streets.pl strassen fragezeichen-orig Berlin.coords.data
+	${MISCSRCDIR}/missing_streets.pl
 	@touch $@
 
 .check_hoehe:	hoehe .strassen.tmp landstrassen landstrassen2 fragezeichen
@@ -1650,10 +1657,10 @@ check-line-lengths:	.check_line_lengths
 	@touch $@
 
 count-streets:
-	@echo -n "Berlin:        "; grep -v "^#" strassen | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 -d"(" | sort -u | wc -l
+	@echo -n "Berlin:        "; grep -v "^#" strassen                            | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
 	@echo -n "Landstraﬂen:   "; grep -v "^#" landstrassen landstrassen2 | ${CUT} -f1 | sort -u | wc -l
-	@echo -n "  Potsdam:     "; fgrep "(Potsdam)" landstrassen | grep -v "^(" | ${CUT} -f1 -d"(" | sort -u | wc -l
-	@echo -n "  Oranienburg: "; grep -v "^#" landstrassen | fgrep "(Oranienburg" | ${CUT} -f1 -d"(" | sort -u | wc -l
+	@echo -n "  Potsdam:     "; grep -v "^#" landstrassen | fgrep "(Potsdam)"    | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
+	@echo -n "  Oranienburg: "; grep -v "^#" landstrassen | fgrep "(Oranienburg" | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
 
 check-crossings:	check-crossings-important \
 			check-crossings-less-important

@@ -2,10 +2,9 @@
 # -*- perl -*-
 
 #
-# $Id: XXX_new_comments.pl,v 1.4 2005/03/28 22:53:36 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2004 Slaven Rezic. All rights reserved.
+# Copyright (C) 2004,2013 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -260,7 +259,7 @@ sub process_data {
 	    $ret;
 	};
 
-	my %last_attribs;
+	my %last_attribs; _ordered_hash(\%last_attribs);
 	my @new_comments;
 	for my $hop_coord_i (1 .. $#hop_coords) {
 
@@ -294,7 +293,7 @@ sub process_data {
 	    };
 
 	    my $is = $qs_net->{Net2Name}{$hop_coords[$hop_coord_i-1]}{$hop_coords[$hop_coord_i]};
-	    my %next_last_attribs;
+	    my %next_last_attribs; _ordered_hash(\%next_last_attribs);
 	    if (defined $is) {
 		for my $i (@$is) {
 		    my($r) = $qs->get($i);
@@ -347,6 +346,15 @@ sub process_data {
 			 }
 		     } keys %same_hop);
 	}
+    }
+}
+
+sub _ordered_hash {
+    my $hashref = shift;
+    if ($] >= 5.018) { # hash randomization again active, and producing random test results
+	require Tie::IxHash;
+	Tie::IxHash->VERSION("1.23"); # I am deleting while iteraring, which is fixed in 1.23, see https://rt.cpan.org/Ticket/Display.html?id=82248
+	tie %$hashref, 'Tie::IxHash';
     }
 }
 

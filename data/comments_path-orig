@@ -219,7 +219,7 @@ Theodor-Heuss-Weg: beginnt links vom Spielplatz der Kita	CP2; 9250,14658 9223,14
 zur Gustav-Heinemann-Brücke durch schmalen Durchbruch in der Böschung	CP2; 8032,12889 8053,12871
 zum Spreeufer: den Garten hinunter, am Ende ist ein Durchbruch nach rechts	CP2; 8116,12938 8053,12871
 zum Fußgängertunnel S-Bhf Jungfernheide: Über den Parkplatz zum S-Bahn-Zugang	CP2; 3320,13796 3365,13695
-Zufahrt zu den Grundstücken direkt am Bahndamm nehmen	CP2; 3717,13743 3508,13727
+Zufahrt zu den Grundstücken direkt am Bahndamm nehmen	CP2; 3713,13787 3508,13727
 Zufahrt zur Kolonie ist schwierig zu finden (enges Tor)	CP2; 10190,16930 10209,16674
 #: XXX_prog mit einer Punkt-Penalty versehen, wenn das möglich ist vvv
 Drängelgitter auf der linken Seite unter der Hochbahn	CP; 10754,16305 10997,16280 11295,16199
@@ -312,6 +312,7 @@ Theodorstr. - Alt-Mahlsdorf: ggfs. die nächste Ampel benutzen	CP; 24907,11186 24
 Alt-Mahlsdorf - Theodorstr.: frühzeitig auf den linken Gehweg wechseln	PI; 25138,11215 24893,11252 24907,11186
 Daumstr. - Glindowseestr.: bereits an der Kreuzung Daumstr./An den Rohrbruchwiesen die Straßenseite wechseln	PI; -1675,16813 -1710,16735 -1555,16696
 Glindowseestr. - Daumstr.: zunächst auf der linken Gehwegseite fahren und dann die Straßenseite wechseln	CP; -1555,16696 -1710,16735 -1746,16667
+Langer-See-Str. - Daumstr.: zunächst auf der linken Gehwegseite bis zur Ampel fahren	CP; -1857,16766 -1710,16735 -1675,16813
 #: by: Andreas Titz vvv
 # Liebigstr.
 Am Ende der Straße RECHTS neben dem Tor weiterfahren	CP; -1100,39025 -965,39065 -909,39073
@@ -379,7 +380,7 @@ Kleine Andreasstr.: Einfahrt befindet sich links von der Kaiser's-Parkplatzeinfa
 Zitadelle - Am Juliusturm: bis zur Ampel am Zitadellenweg auf dem linken Gehweg vorfahren	CP; -2668,14635 -2656,14582 -2652,14559 -2646,14525 -2597,14532
 Am Juliusturm - Zitadelle: an der Ampel "An der Spreeschanze" die Straßenseite wechseln und zurückfahren	CP; -2793,14505 -2646,14525 -2652,14559 -2656,14582 -2668,14635
 Loewenhardtdamm - Höhndorfstr.: bereits an der General-Pape-Str. auf den linken Gehweg wechseln	PI; 8306,8722 8334,8655 8438,8676
-Ausgeschildert zum Bayernring	CP2; 8531,8404 8455,8567
+Ausgeschildert zum Bayernring	CP2; 8531,8404 8454,8574
 Mehringdamm - Wilhelmshöhe: bereits an der Fidicinstr. die Straßenseite wechseln	PI; 9224,9053 9225,9111 9186,9107
 #: by: Steini (immerlocker)
 Kaiser-Wilhelm-Str. - Langkofelweg: bereits an der Ampel Edenkobener Weg die Straßenseite wechseln	PI; 6996,3761 6957,3699 6998,3596
@@ -534,3 +535,4 @@ Kyritzer Str.: nicht ausgeschildert	CP2; 22573,15552 22579,15416
 Buckower Damm - Britzer Park: bereits an der Kreuzung Mohriner Allee auf den linken Gehweg wechseln	PI; 12564,4308 12637,4014 12805,4020
 Britzer Park - Buckower Damm: linken Gehweg bis zur Ampel benutzen	CP; 12805,4020 12637,4014 12655,3882
 Magdalenenstr. - Frankfurter Allee: linken Gehweg bis zur Ampel benutzen	CP; 16158,12191 16127,11950 16207,11937
+Malchower Chaussee - Hohenschönhauser Weg: bereits an der Kreuzung Malchower Chaussee/Ortnitstr. auf den linken Radweg wechseln	PI; 15611,18603 15600,18551 15825,18385

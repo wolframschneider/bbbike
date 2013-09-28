@@ -180,7 +180,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 7563,8871
 	X 7497,8916
 	F 7315,8941
-	X 7275,8960
+	X 7268,8960
 	X 7201,8870
 #: XXX_prog nur eine Ampel: vvv
 	X 7009,8705
@@ -192,7 +192,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 # REMOVED (aufgehoben, gesehen 2009-05) --- X 7782,9115
 	X 7479,9357
 	X 7526,9791
-	X 7110,9024
+	X 7107,9030
 	X 7006,9282
 	X 7049,9833
 	X 7126,9825
@@ -363,7 +363,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5331,8012
 #: XXX_prog ^^^
 	X 5346,7860
-	X 5635,8011
+	X 5631,8011
 	X 4788,7257
 	X 4743,7212
 	X 4787,7213
@@ -512,6 +512,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9455,16609
 	X 10240,18193
 	X 10680,18380
+#: note: Anforderungsampel für Radfahrer und Fußgänger aus Richtung Neue Schönholzer Str.
 	X 10089,18180
 	X 9881,18354
 	F 9891,18444
@@ -638,7 +639,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -3255,14685
 	X -3352,14676
 	X -3355,14764
-	X -1986,11487
+	X -1994,11496
 	X -2419,13237
 	X -2706,13291
 	X -3189,13588
@@ -680,13 +681,15 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4993,9843
 	X 4151,10026
 	X 13277,8211
-#: off: except_schooltime (seen 2013-08-25 23:20)
+#: off: except_schooltime (seen 2013-08-25 23:20 (off), 2013-09-27 11:30 (on))
 	X 14758,7373
 	X 15221,7778
 	F 15557,7404
 	X 15724,6229
 	X 15058,6784
 	F 16274,6929
+#: note: Anforderungsampel
+	F 16058,6629
 	X 18245,5551
 	X 18023,5623
 	X 17960,5511
@@ -786,7 +789,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: Ampel ohne Fuß/Radquerung der Michael-Brückner-Str.
 #: XXX eventuell wird diese Einschränkung aufgehoben:
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4
-#: last_checked: 2013-06-19
+#: last_checked: 2013-08-19
 #: check_frequency: 90d
 	X 18080,5376
 	X 19904,3464
@@ -890,8 +893,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -3677,11685
 	X -4500,11937
 	X -4882,12061
-	X -2850,11423
-	X -2209,11222
+	X -2851,11417
+	X -2222,11225
 	X 9621,3155
 	X 9720,2887
 	X 10788,-172
@@ -1000,9 +1003,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2020,20327
 	X 127,17176
 	X -344,15200
-	X -283,14523
+	X -278,14532
 	X 1479,14343
-	X 1360,14375
+	X 1361,14384
 	X 2087,14078
 	X 2881,14061
 	X 3038,13612
@@ -1201,10 +1204,10 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3788,16621
 	X 3753,16638
 	X 3676,16497
-	X 2960,14746
-	X 2904,14748
+	X 2963,14752
+	X 2905,14754
 	X 3395,13605
-	X 3741,13558
+	X 3739,13563
 	X 4271,13735
 	X 6817,13862
 	X 6935,13645
@@ -1348,7 +1351,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8605,4138
 	F 6102,4726
 	X 6212,4622
-	X 7230,5696
+	X 7230,5689
 	X 5414,5939
 	X 5345,5994
 	X 6104,6258
@@ -1787,6 +1790,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: XXX_prog: lange Wartezeiten für Radfahrer (zwei Umläufe)
 	X 8241,11024
 #: XXX_indoor eigentlich zwei Fußgängerampeln in ca. 50-100m Abstand
+#: note: Anforderungsampel (aber wahrscheinlich oft genutzt)
 	F 5829,10964
 	X 12060,11323
 	X 3872,10749
@@ -1884,7 +1888,7 @@ Industriebahn	B0 -2410,13746
 # REMOVED (Baustellenampel, existiert nicht mehr, 2009-07) ---	X 10635,13207
 	F 11905,15462
 	X 7880,13315
-	X 8023,13632
+	X 8019,13650
 	X 7696,7771
 	F 12204,13719
 	X 19783,12955
@@ -1923,6 +1927,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	X 12588,6337
 	X 12597,6293
 	F 12694,2544
+#: note: Anforderungsampel
 	F 17834,11192
 	X 22724,6608
 	X 20277,2463
@@ -1949,7 +1954,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 #: note: laut Luftbild:
 #: XXX_prog: Gilt nur in Südwestrichtung!
 	B0 15799,1690
-	B0 12231,4365
+	B0 12225,4370
 	B0 12363,4175
 	B0 12673,3627
 	B0 13189,2736
@@ -2007,6 +2012,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	F 6407,7016
 #: by: thekla1707...
 #: confirmed_by: srt
+#: note: Anforderungsampel
 	F 6321,5818
 	F 14819,9462
 #: by: Jonas Laehnemann:
@@ -2202,8 +2208,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 10736,12285
 #: XXX_prog: die genaue Position ist südlich der Einmündung, aber querende Radfahrer müssen die Ampel immer nehmen
 	F 13603,11538
+#: note: Anforderungsampel
 	F 18585,10278
 	F 22455,1812
+#: note: Anforderungsampel
 	F 14519,7301
 #: XXX_prog zusammenhängend vvv
 	X 24321,14410
@@ -2378,7 +2386,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_prog: Ampel gilt nicht auf dem Radweg
 	F 13163,12382
 	X -284,14738
-	F 608,14423
+	F 609,14429
 	X 1709,14243
 	X 7979,20528
 	F 198,4580
@@ -2403,7 +2411,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
 #: last_checked: 2013-09-06 vvv
 #: next_check: 2013-12-31 vvv
-	X::inwork 9123,12500
+	X::inwork 9122,12509
 	X::inwork 9280,12883
 	X::inwork 9343,12464
 	X::inwork 9475,12365
@@ -2412,7 +2420,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX ^^^
 # 
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (südlicher Bereich) vvv
-#: last_checked: 2013-08-30 vvv
+#: last_checked: 2013-09-16 vvv
 #: next_check: 2013-12-31 vvv
 	F::inwork 9063,12051
 	F::inwork 9270,12086
@@ -2421,7 +2429,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX ^^^
 # 
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung an der Invalidenstraße) vvv
-#: last_checked: 2013-08-30 vvv
+#: last_checked: 2013-09-25 vvv
 #: next_check: 2013-12-31 vvv
 	X::inwork 8732,14098
 	X::inwork 8879,13913
@@ -2512,6 +2520,11 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 5058,8012
 #: XXX_prog die Ampelanlage umfasst auch die Einmündung Ritterstr. - sollte aber als eine Ampel gelten!
 	X 4832,2975
+	F -1099,14925
+#: note: wahrscheinlich synchronisiert geschaltet, evtl. auch mit den Ampeln an Autobahnanschlussstelle synchron vvv
+	X 9242,7286
+	X 9242,7325
+#: note ^^^
 ################################################################################
 #: note: Potsdam vvv
 #: by: http://www.potsdam.de/cms/beitrag/10067917/966975/
@@ -3102,7 +3115,7 @@ Granseer Str. Höhe Post	F -1235,41150
 Zum Bahnhof / Nordbahn	B -521,40612
 #: append_comment ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #: append_comment Oranienburg-Schmachtenhagen vvvvvvvvvvvvvvvvvvvvvvv
-Bauernmarktchaussee / nGAR	B0 5150,41018
+# REMOVED (Bahnübergang wird rückgebaut, siehe LSBB-Meldung 136502343) --- Bauernmarktchaussee / nGAR	B0 5150,41018
 Malzer Weg / nGAR	B0 4581,41115
 Schwarzer Weg / nGAR	B0 3167,41284
 #: append_comment ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

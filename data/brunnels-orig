@@ -31,7 +31,7 @@ Spreetunnel	Tu 25571,4553 25658,4619
 Grünauer Brücke	Br 22050,2736 22058,2700 22074,2666
 #: alias: Galgen
 Kaulsdorfer Brücke	Br 22688,12007 22684,12016 22669,12049 22693,12084
-Blockdammbrücke	Br 17975,8971 17996,8966 18087,9035
+Blockdammbrücke	Br 17975,8971 17996,8966 18076,9027
 Grabensprung, U-Bahnbrücke	Br 20622,10874 20641,10840
 Fußgängerbrücke Rebenweg - Erxlebenstr.	Br 19726,-32 19762,-160
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/08re.pdf/file?y=2012 (Alias)
@@ -52,7 +52,7 @@ Baumschulenbrücke	Br 15584,5946 15628,6009
 Heidekampbrücke	Br 15332,6138 15396,6125
 Brücke über den Nördlicher Heidekampgraben	Br 15070,8584 15079,8575
 #: note: Quellen sind uneinig, ob es die Brücke "Britzer Brücke" oder "Britzer-Allee-Brücke" heißt, und an der Brücke selbst gibt es kein Schild
-Britzer-Allee-Brücke	Br 15146,6054 15143,5936
+Britzer-Allee-Brücke	Br 15144,6054 15143,5936
 Späthstraßenbrücke	Br 14466,5087 14544,5123
 Hertabrücke	Br 12664,7013 12689,6905
 Hermannbrücke	Br 12348,6923 12362,6881
@@ -88,7 +88,7 @@ Hallesche-Tor-Brücke	Br 9599,10175 9593,10238
 Mehringbrücke	Br 9404,10250 9409,10226 9416,10196
 Großbeerenbrücke	Br 9145,10290 9154,10348
 Möckernbrücke	Br 8824,10366 8804,10303
-Glockenturmbrücke	Br -1888,11587 -1824,11656
+Glockenturmbrücke	Br -1875,11602 -1824,11656
 Schirwindter Brücke	Br -1505,11307 -1471,11416
 Passenheimer Brücke	Br -1327,11376 -1315,11300
 #: oldname: -19970304: Reichssportfeldbrücke
@@ -140,7 +140,7 @@ Borussenbrücke	Br -3882,2441 -3820,2479
 #: note: im Volksmund "Spinnerbrücke"
 Spanische Allee, Autobahnbrücke	Br -3861,2837 -3736,2849
 Schönerlinder Str., Autobahnbrücke	Br 11980,24276 11959,24220
-Schönerlinder Str., S-Bahnbrücke	Br 12108,24547 12136,24607
+Lindenhofbrücke	Br 12108,24547 12136,24607
 Bucher Str., Autobahnbrücke	Br 12880,23314 12913,23339
 Bucher Str., S-Bahnbrücke	Br 13012,23424 13199,23657
 Friedrichsbrücke	Br 10166,12777 10086,12725
@@ -151,7 +151,7 @@ Badstraßenbrücke	Br 9242,15843 9183,15909 9134,15953
 Swinemünder Brücke	Br 9494,15998 9623,15777
 #: alias: Behmbrücke
 Behmstraßenbrücke	Br 9811,16112 10005,16150 10045,16157
-Schwedter Steg	Br 10080,15858 10005,16150
+Schwedter Steg	Br 10062,15927 10005,16150
 Schönfließer Str., S-Bahnbrücke	Br 10593,16037 10592,15968
 Greifenhagener Str., S-Bahnbrücke	Br 11176,15958 11150,15908
 Pappelallee, S-Bahnbrücke	Br 11373,15789 11393,15823
@@ -167,7 +167,7 @@ Rhinstr., S-Bahnbrücke	Br 18216,12262 18216,12239 18215,12123
 Falkenberger Chaussee, S-Bahnbrücke	Br 17400,17790 17482,17844 17601,17922 17675,17971 17721,18001 17744,18016
 S-Bahnunterführung Wartenberg	Tu 16998,18695 17024,18674 17008,18701 17068,18736 17086,18719 17077,18744
 Gehrenseestr., S-Bahnbrücke	Br 18313,16643 18465,16761 18568,16835
-Gleimtunnel	Tu 9917,15613 9992,15625 10122,15647
+Gleimtunnel	Tu 9917,15613 9992,15625 10130,15647
 Sandkrugbrücke	Br 8268,13506 8337,13541
 Lutherbrücke	Br 7039,12314 7053,12364 7064,12419
 Gerickesteg	Br 6702,12633 6748,12669
@@ -184,17 +184,17 @@ Knobelsdorffbrücke	Br 2446,11776 2330,11762
 Goerdelersteg	Br 3663,14137 3634,14187 3625,14230 3601,14284 3595,14267
 Gotzkowskybrücke	Br 5244,12864 5287,12900 5298,12910
 Schloßbrücke	Br 3296,12719 3306,12750 3327,12818
-Weltlingerbrücke	Br 2904,14748 2960,14746
+Weltlingerbrücke	Br 2905,14754 2963,14752
 Mäckeritzbrücke	Br 1232,15804 1238,15705
 Fürstenbrunner Brücke	Br 1488,13454 1545,13418 1610,13380
 Rohrdammbrücke	Br 1175,13513 1159,13541 1124,13599
-Olympische Brücke	Br 94,12048 262,12085
+Olympische Brücke	Br 137,12056 193,12070
 Saatwinkler Steg	Br -1073,16610 -995,16701
 Gartenfelder Brücke	Br -302,15602 -302,15546
 Tegeler Brücke	Br -247,15982 -236,16043 -226,16086
 Spandauer-See-Brücke	Br -2209,16501 -1928,16423
 Wasserstadtbrücke	Br -2149,16921 -1832,16858
-Tiefwerderbrücke	Br -2761,12835 -2770,12861
+Tiefwerderbrücke	Br -2780,12858 -2788,12880
 Nennhauser Damm, S-Bahnbrücke	Br -7445,14392 -7457,14317
 Loerkesteig	Br 2925,24350 2956,24373
 Rendsburger Brücke	Br 2773,19359 3095,19203
@@ -327,7 +327,7 @@ Hinckeldeybrücke	Br 3314,15782 3257,15666
 Hinckeldeybrücke	Br 3358,15794 3299,15668 3282,15632
 Schleife am Kurt-Schumacher-Damm	Br 3328,15595 3290,15604 3282,15632
 Stößenseebrücke	Br -2476,11301 -2413,11283 -2317,11254
-Freybrücke	Br -3404,11589 -3381,11583 -3202,11532
+Freybrücke	Br -3404,11589 -3381,11583 -3173,11520
 B96a	Br 21656,989 21613,923
 Adlergestell/B96a	Br 21541,1739 21998,1239
 Putlitzbrücke	Br 6226,13951 6228,14077 6230,14184 6234,14247 6237,14309 6293,14625
@@ -482,10 +482,12 @@ Brücke über die Wuhle	Br 21650,9884 21686,9876
 Brücke über die Wuhle	Br 21608,10403 21654,10390
 Brücke über die Wuhle	Br 21914,12019 21936,12022
 Brücke über die Wuhle	Br 21935,12160 21970,12153
-Brücke über die Wuhle	Br 22419,15127 22326,15116
+Brücke über die Wuhle	Br 22441,15118 22326,15116
 Brücke über die Wuhle	Br 21571,7639 21591,7642
 Brücke über die Wuhle	Br 22084,5877 22083,5899
 Brücke über die Wuhle	Br 22474,17858 22519,17879
+Brücke über die Wuhle	Br 22839,14453 22819,14457
+Brücke über die Wuhle	Br 22788,14468 22743,14488
 Brücke über die B5	Br -15959,13732 -15979,13692
 Waldseebrücke	Br -961,3737 -935,3706
 Brücke über den Spektegraben	Br -6256,15169 -6214,15211 -6175,15261
@@ -563,6 +565,8 @@ Panoramaweg	Br 8370,12902 8424,12853
 #: confirmed_by: srt
 Burgwallsteg	Br -3352,13135 -3339,13106
 Brücke im Springpfuhlpark	Br 19567,13858 19565,13893
+Holzbohlenbrücke in Tiefwerder	Br -2914,12223 -2935,12165
+Holzbohlensteg in Tiefwerder	Br -3027,12055 -3088,12040 -3109,12021
 #: section ^^^
 #
 ## Brandenburg und weiter ####################################################

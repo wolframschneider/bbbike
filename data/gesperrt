@@ -74,8 +74,8 @@ Seestr.	1 5440,14840 5264,14671 5057,14607
 Waidmannsluster Damm	1 2144,20870 1835,21427 1882,21468 2195,20898
 Flughafen Tegel	1 2819,16141 2757,16194 2713,16286 2756,16344 2832,16343 2863,16280 2819,16141
 Jakob-Kaiser-Platz	1 2795,14161 2811,14196 2831,14219 2857,14222 2896,14187 2892,14149 2860,14118 2825,14128 2795,14161
-Kurt-Schumacher-Damm (S¸d)	1 2831,14219 2803,14288 2793,14374 2904,14748
-Kurt-Schumacher-Damm (S¸d)	1 2960,14746 2847,14356 2857,14222
+Kurt-Schumacher-Damm (S¸d)	1 2831,14219 2803,14288 2793,14374 2905,14754
+Kurt-Schumacher-Damm (S¸d)	1 2963,14752 2847,14356 2857,14222
 Kurt-Schumacher-Damm (Nord)	1 3564,16294 3643,16437 3676,16497 3753,16638 3853,16825 3940,16861
 Kurt-Schumacher-Damm (Nord)	1 3940,16861 3788,16621 3711,16481 3585,16252
 Ferdinand-Friedensburg-Platz	1 -914,14602 -1357,14533 -1392,14527 -1508,14508 -1369,14644 -1119,14659 -925,14631
@@ -107,9 +107,9 @@ Olivaer Platz	1 4239,10358 4172,10406 4157,10418
 Platz S (Hundekehlestr.)	1 2301,7698 2206,7637
 Platz S (Hundekehlestr.)	1 2161,7685 2222,7718 2277,7705
 Platz am Wilden Eber	1 2723,7029 2701,7045 2688,7067 2695,7082 2717,7093 2737,7073 2742,7056 2733,7039 2723,7029
-Wexstr.	2 6260,8011 5807,7978 5635,8011
+Wexstr.	2 6260,8011 5807,7978 5631,8011
 Wexstr.	1 6388,7999 6260,8011
-Wexstr.	1 5635,8011 5824,8035 5928,8052 6154,8070 6261,8058 6409,8026
+Wexstr.	1 5631,8011 5824,8035 5928,8052 6154,8070 6261,8058 6409,8026
 Detmolder Str. (S¸d)	1 4659,7982 4572,7936 4371,8018 4342,8093 4280,8188
 Detmolder Str. (Nord)	2 4349,8118 4469,8037 4659,7982
 Detmolder Str. (Nord)	1 4280,8188 4349,8118
@@ -121,10 +121,10 @@ Bethaniendamm	1 12060,11323 12012,11235 11950,11157 11845,11095 11750,11065 1164
 Engeldamm	1 11473,11180 11656,11106 11800,11118 11921,11185 11985,11261 12025,11346
 Pannierstr.	1 12202,8895 12242,8972
 Stolzenfelsstr.	1s 19447,8175 19400,8147 19333,8165 19171,8280 18949,8437 18787,8540 18731,8577
-Bersarinplatz	1 13730,12535 13698,12544 13678,12571 13686,12611 13695,12643 13747,12642 13767,12626 13761,12578 13730,12535
+Bersarinplatz	1 13730,12535 13698,12544 13675,12581 13681,12624 13695,12643 13747,12642 13767,12626 13761,12578 13730,12535
 Petersburger Platz	1 13470,12990 13559,12779
 Dernburgstr.	1 2498,10665 2378,10677 2333,10710 2252,11037
-Schuckertdamm	1 741,14827 1022,14898 1056,14906 1112,14918 1200,14943 1343,14972 1465,14963
+Schuckertdamm	1 741,14827 1022,14898 1056,14906 1112,14918 1200,14943 1343,14972
 Am Kleinen Wannsee	1 -5499,1349 -5485,1274 -5535,1204 -5742,1142
 Oberhofer Platz	1 5491,1955 5474,1940 5452,1940 5431,1956 5376,2097 5406,2110 5434,2122 5489,1981 5491,1955
 Scheelestr.	1 5740,1227 5697,1098 5556,984 5493,935 5424,882 5342,845
@@ -140,7 +140,7 @@ Georgenstr.	1 9434,12669 9568,12688 9659,12704 9754,12775
 Paul-Junius-Str	1 15084,13276 15082,13369 15220,13377
 Marksburgstr.	1 18319,9218 18430,9199 18511,9185 18586,9172 18697,9153 18809,9133
 Griechische Allee	1 17962,6674 18005,6681 18077,6690 18125,6694 18254,6679 18339,6660 18494,6588
-Griechische Allee	1 18494,6588 18429,6582 18273,6606 18159,6642 18080,6670 18008,6672 17962,6674
+Griechische Allee	1 18494,6588 18429,6582 18273,6606 18159,6642 18079,6678 18008,6672 17962,6674
 Hardenbergplatz	1 5542,11075 5565,11147 5666,11362 5698,11333 5600,11114 5542,11075
 (Waterloo-Ufer - Zossener Str.)	1 9858,10199 9825,10206
 Greinerstr.	1 8340,3242 8327,2975
@@ -177,7 +177,7 @@ Schildhornstr.	1 4937,6205 4984,6209 5165,6119
 Schildhornstr.	1 5137,6066 5047,6116 4937,6205
 Atzpodienstr.	1 16485,12384 16445,12193 16413,11906
 Alt-Lietzow	1 4219,12324 4101,12356 4066,12368 4079,12411 4137,12411 4250,12390
-Martin-Wagner-Ring	1 12791,3814 12895,3991 12941,4015 12995,4003 13007,3949 12913,3743
+Martin-Wagner-Ring	1 12791,3814 12895,3991 12941,4015 12995,4003 13007,3949 12910,3739
 Wilskistr.	1 -402,4012 -343,4056 -303,4086 -219,4149 -158,4236 27,4447 195,4588 301,4643 418,4696 528,4747 636,4765 798,4766
 Grazer Platz	1 6430,6787 6529,6798 6668,6815 6793,6814
 Grazer Platz	1 6801,6736 6676,6734 6546,6724 6517,6722 6439,6716
@@ -342,7 +342,7 @@ Karl-Egon-Str.	1 18375,8874 18406,9052 18430,9199 18457,9343
 Marschnerstr.	1 4629,3916 4634,4053
 Wollankstr.	1 10027,18165 10054,18210
 Kreuzstr.	1 9832,17925 9902,18180 9909,18333
-Vorbergstr.	1 7022,9211 7137,9216 7315,9156
+Vorbergstr.	1 7022,9211 7137,9216 7308,9163
 Wederstr.	1 12981,6366 12813,6334 12597,6293
 DGZ-Ring	1 12989,16921 12911,17021 12877,17039 12850,17084 12795,17151 12707,17085 12789,16977 12783,16925 12813,16884 12837,16853 12858,16825
 Herbert-Bayer-Str.	1 12911,17021 12846,16971 12898,16898 12923,16873
@@ -569,8 +569,8 @@ Bundesallee: Straﬂentunnelrampe	3nocross::ignrte 5505,8832 5515,8709 5508,8598
 Bundesallee: Absperrung auf dem Mittelstreifen	3nocross::ignrte 5515,8709 5508,8598 5472,8507 5433,8407 5399,8344
 Bundesallee (Richtungsfahrbahn)	1::igndisp 5399,8344 5427,8412 5465,8511 5502,8599 5510,8709 5505,8832
 Bundesallee (Richtungsfahrbahn)	1::igndisp 5505,8832 5515,8709 5508,8598 5472,8507 5433,8407 5399,8344
-Nonnendammallee (Richtungsfahrbahn)	1::igndisp -283,14523 -457,14536 -914,14602
-Nonnendammallee (Richtungsfahrbahn)	1::igndisp -925,14631 -283,14523
+Nonnendammallee (Richtungsfahrbahn)	1::igndisp -278,14532 -457,14536 -914,14602
+Nonnendammallee (Richtungsfahrbahn)	1::igndisp -925,14631 -278,14532
 Kˆnigsberger Str. (Richtungsfahrbahn)	1::igndisp 4348,2619 4313,2630 4224,2671 4164,2717
 Kˆnigsberger Str. (Richtungsfahrbahn)	1::igndisp 4164,2717 4233,2675 4317,2638 4348,2619
 Kˆnigsberger Str. (Mittelstreifen)	3nocross::ignrte 4348,2619 4317,2638 4233,2675 4164,2717
@@ -740,7 +740,6 @@ Leistikowstr.	1 1188,11861 1133,11664
 Am Krummen Weg	1 -7169,14849 -7026,14890
 Am Krummen Weg	1 -7169,14849 -7248,14826
 Henricistr.	1 5993,19477 5858,19437
-Breslauer Platz	1s 5810,7337 5897,7337
 Desideriusweg	1 2830,21378 2728,21336
 Am Ansitz	1 3913,21977 3855,22055
 Am Vierrutenberg etc.	1 5712,23785 5676,23971 5780,23997 5792,23943 5787,23840 5712,23785
@@ -793,9 +792,12 @@ Am Tierpark [Wohngebiet]	1 18552,10220 18534,10185 18484,10326
 (Freiherr-vom-Stein-Str. - Dominicusstr.)	1::igndisp 6477,8654 6454,8653
 Neue Jakobstr./Schulze-Delitzsch-Platz	1 11060,11753 11073,11774
 Edith-Kiss-Str.	1 12793,11132 12866,11256
+Garzauer Str.	1 21830,13688 21722,13708
+Flankenschanze	1 -3507,15341 -3534,15219
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Knoten M‰rkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
+Gˆrlitzer Park	1::igndisp 12464,10153 12504,10172
 (Wollestr. - M¸hlenstr.)	1 -10790,-1178 -10787,-1162 -10730,-1103 -10691,-1097 -10648,-1130
 Wollestr.	1s -10717,-1227 -10984,-1574
 Am Neuen Garten	1 -12166,1384 -12212,1201 -12276,831 -12297,738
@@ -827,6 +829,7 @@ nicht passierbarer Mittelstreifen	3nocross::ignrte -12045,-757 -11869,-907 -1161
 nicht passierbarer Mittelstreifen	3nocross::ignrte -13238,-1569 -13375,-1546 -13516,-1517
 Straﬂenbahntrasse	3nocross::ignrte -12758,-1654 -12730,-1681 -12659,-1700 -12567,-1817
 Mercure-Hotel -> Am Alten Markt: Straﬂenbahntrasse	3::igndisp -12681,-1726 -12659,-1700 -12643,-1694
+Mercure-Hotel -> Lange Br¸cke: Straﬂenbahntrasse	3::igndisp -12681,-1726 -12659,-1700 -12730,-1681
 Lange Br¸cke -> Mercure-Hotel: Straﬂenbahntrasse	3::igndisp -12567,-1817 -12659,-1700 -12681,-1726
 Am Alten Markt -> Mercure-Hotel: Straﬂenbahntrasse	3::igndisp -12643,-1694 -12659,-1700 -12681,-1726
 Am Alten Markt -> Lange Br¸cke: Straﬂenbahntrasse	3::igndisp -12643,-1694 -12659,-1700 -12567,-1817
@@ -842,7 +845,6 @@ Friedrich-Ebert-Str. -> Schwertfegerstr.: Straﬂenbahntrasse	3::igndisp -12780,-1
 Schwertfegerstr. -> Friedrich-Ebert-Str.: Straﬂenbahntrasse	3::igndisp -12870,-1493 -12794,-1497 -12833,-1365
 tragen (Treppe, 75 Stufen und etliche Rampenabschnitte)	0:180:-201 -13772,-623
 Br¸cke mittlerweile gesperrt	2 -19183,7299 -19150,7320
-Prof.-Dr.-Helmert-Str.: Schranke	BNP:3:-93 -7969,-1659
 (Kiezstr. - Wall am Kiez)	1 -13397,-1729 -13374,-1709
 Mittelstreifen	3nocross::ignrte -13450,-1595 -13374,-1709 -13328,-1790
 Kiezstr. -> Wall am Kiez: Mittelstreifen	3::igndisp -13328,-1790 -13374,-1709 -13397,-1729
@@ -1186,12 +1188,12 @@ Wattstr. -> Nonnendammallee: Mittelstreifen	3::igndisp 968,14263 999,14390 937,1
 Nonnendammallee -> Wattstr.: Mittelstreifen	3::igndisp 1057,14389 999,14390 968,14263
 Kapellenst. -> Nonnendammallee: Mittelstreifen	3::igndisp 938,14457 937,14391 999,14390
 Nonnendammallee -> Kapellenst.: Mittelstreifen	3::igndisp 889,14392 937,14391 938,14457
-Mittelstreifen	3nocross::ignrte 1133,14387 1182,14384 1246,14384 1305,14384 1360,14375
+Mittelstreifen	3nocross::ignrte 1133,14387 1182,14384 1246,14384 1305,14384 1361,14384
 Nonnendammallee -> Bˆdikerst.: Mittelstreifen	3::igndisp 1246,14384 1182,14384 1141,14237
 Nonnendammallee -> Voltastr.: Mittelstreifen	3::igndisp 1305,14384 1246,14384 1200,14227
 Voltastr. -> Nonnendammallee: Mittelstreifen	3::igndisp 1200,14227 1246,14384 1182,14384
-Nonnendammallee -> Wehneltst.: Mittelstreifen	3::igndisp 1360,14375 1305,14384 1256,14217
-Mittelstreifen	3nocross::ignrte 1360,14375 1420,14369 1479,14343
+Nonnendammallee -> Wehneltst.: Mittelstreifen	3::igndisp 1361,14384 1305,14384 1256,14217
+Mittelstreifen	3nocross::ignrte 1361,14384 1420,14369 1479,14343
 Siemensdamm -> Hefnerst.: Mittelstreifen	3::igndisp 1479,14343 1420,14369 1392,14287
 Straﬂenbahntrasse	3nocross::ignrte 16095,16331 16260,16282 16416,16236
 Klarastr. -> Suermondtstr.: Straﬂenbahntrasse	3::igndisp 16234,16203 16260,16282 16095,16331
@@ -1819,7 +1821,7 @@ Wolfensteindamm -> Gehweg Gelieustr.: Linksabbiegen in den Wolfensteindamm gef‰h
 Mittelstreifen	3nocross::ignrte 6687,8385 6765,8480 6912,8617 6989,8687
 Parkweg Heinrich-Lassen-Park -> Hauptstr.: Mittelstreifen	3::igndisp 6815,8691 6912,8617 6989,8687
 Hauptstr. -> Parkweg Heinrich-Lassen-Park: Mittelstreifen	3::igndisp 6765,8480 6912,8617 6815,8691
-Straﬂenbahntrasse	3nocross::ignrte 18631,10167 18585,10278 18554,10354 18446,10620
+Straﬂenbahntrasse	3nocross::ignrte 18585,10278 18554,10354 18446,10620
 Otto-Schmirgal-Str. -> Am Tierpark: Straﬂenbahntrasse	3::igndisp 18512,10337 18554,10354 18446,10620
 Am Tierpark -> Otto-Schmirgal-Str.: Straﬂenbahntrasse	3::igndisp 18585,10278 18554,10354 18512,10337
 Straﬂenbahntrasse	3nocross::ignrte 18286,11275 18268,11391 18216,11656
@@ -1976,9 +1978,6 @@ Berliner Str. -> Str. 56: Straﬂenbahntrasse	3::igndisp 12467,17814 12436,17682 1
 Mittelstreifen	3nocross::ignrte -1821,16327 -1816,16111 -1815,15976
 Uferweg -> Daumstr.: Mittelstreifen	3::igndisp -1942,16105 -1816,16111 -1821,16327
 Daumstr. -> Uferweg: Mittelstreifen	3::igndisp -1815,15976 -1816,16111 -1942,16105
-Mittelstreifen	3nocross::ignrte -1783,16533 -1765,16603 -1746,16667
-Schwielowseestr. -> Daumstr.: Mittelstreifen	3::igndisp -1872,16631 -1765,16603 -1746,16667
-Daumstr. -> Schwielowseestr.: Mittelstreifen	3::igndisp -1783,16533 -1765,16603 -1872,16631
 Straﬂenbahntrasse	3nocross::ignrte 22811,15753 22883,15740 23080,15700
 Zossener Str. -> Ludwigsfelder Str.: Straﬂenbahntrasse	3::igndisp 22811,15753 22883,15740 22888,15768
 Ludwigsfelder Str. -> Zossener Str.: Straﬂenbahntrasse	3::igndisp 22888,15768 22883,15740 23080,15700
@@ -2058,6 +2057,9 @@ Stadtpark Steglitz, Br¸ckenstr. -> Stadtpark Steglitz: Mittelstreifen	3::igndisp
 Stadtpark Steglitz, Br¸ckenstr. -> Bismarckstr.: Mittelstreifen	3::igndisp 5957,4803 6006,4852 6034,4893
 Stadtpark Steglitz, Br¸ckenstr. -> zur Albrechtstr.: Mittelstreifen	3::igndisp 5957,4803 6006,4852 5920,4976
 zur Albrechtstr. -> Bismarckstr.: Mittelstreifen	3::igndisp 5920,4976 6006,4852 6034,4893
+Mittelstreifen, parkende Autos	3nocross::ignrte 4909,7436 4874,7382 4836,7327
+S¸dwestkorso -> Liane-Berkowitz-Pl.: Mittelstreifen, parkende Autos	3::igndisp 4909,7436 4874,7382 4874,7326
+Rheingaustr. -> S¸dwestkorso: Mittelstreifen, parkende Autos	3::igndisp 4874,7326 4874,7382 4836,7327
 abgeschlossenes Tor	3 8235,20109 8237,20098 8258,19983
 abgeschlossenes Tor	3 8258,19983 8237,20098 8235,20109
 abgeschlossenes Tor	3 8288,20128 8291,20112 8315,19993
@@ -2068,11 +2070,13 @@ abgeschlossenes Tor	3 4898,22459 5083,22149 5086,22145
 abgeschlossenes Tor	3 5086,22145 5083,22149 4898,22459
 abgeschlossenes Tor	3 15313,15393 15835,15092 15867,15073
 abgeschlossenes Tor	3 15867,15073 15835,15092 15313,15393
+tragen (10+11 Stufen)	0:30:-213 -1584,11499
+tragen (ca. 45 Stufen)	0:45:-160 -3177,11507
 tragen (4 Stufen)	0:10:-233 21326,11122
 tragen (8+8 Stufen)	0:25:-183 19534,14459
 tragen (5 x 5 Stufen) bzw. steile Rampe zum Schieben benutzen	0:35:-181 19570,13833
 tragen bzw. steile Rampe benutzen	0:30:90 1523,13377
-tragen (7+9 Stufen)	0:25 -3621,13884 -3513,13800 -3503,13773
+tragen (7+9 Stufen)	0:25:-52 -3513,13800
 tragen (7 Stufen)	0:14:-84 -4744,14392
 tragen (2 Stufen)	0:5:-93 12572,14836
 tragen (3+5 Stufen)	0:15:5 9366,6150
@@ -2190,8 +2194,8 @@ tragen (zwei Treppen, je ca. 10 Stufen)	0:30:-255 8823,16877
 tragen (Treppe)	0:30:11 14390,5443
 tragen (Treppe)	0:30:-171 14325,5409
 tragen (28 Stufen)	0:30:-93 18180,12262
-tragen (S-Bhf. Marzahn)	0:30:-195 19571,15417
-tragen (S-Bhf. Marzahn)	0:30:-155 19638,15431
+tragen (Treppe S-Bhf. Marzahn)	0:30:-195 19571,15417
+tragen (Treppe S-Bhf. Marzahn)	0:30:-155 19638,15431
 tragen (13 Stufen)	0:30:-180 7923,12876
 tragen (2 x 5 Stufen)	0:30:-150 4985,6370
 tragen (Treppen zur U-Bahnbr¸cke, 2 x 3 Stufen)	0:20:-40 2301,4917
@@ -2246,7 +2250,7 @@ tragen (Treppe, 34 Stufen)	0:35:-250 8025,12859
 tragen (Treppe)	0:30:-4 8428,12859
 tragen (Treppe)	0:30:-265 8445,12755
 tragen (Treppe)	0:35:47 17026,11810
-tragen (S-Bhf. Raoul-Wallenberg-Str.)	0:30:-244 20050,16292
+tragen (Treppe S-Bhf. Raoul-Wallenberg-Str.)	0:30:-244 20050,16292
 tragen (ca. 40 Stufen)	0:59:-124 1659,3226
 tragen (Treppe)	0:30:-114 1715,3257
 tragen (Treppe)	0:30:-97 6172,12878
@@ -2273,13 +2277,17 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
 tragen (31 Stufen oder Kinderwagenrampe)	0:40:-256 13168,21706
+Dr‰ngelgitter	BNP:3:-194:trailer=10 10062,15927
+zwei weite Dr‰ngelgitter	BNP:4:64:trailer=12 10038,15418
+Schranke	BNP:3:-93 -7969,-1659
+Dr‰ngelgitter	BNP:3:-124:trailer=10 18126,9075
 Dr‰ngelgitter	BNP:3:-50:trailer=10 27115,11335
 Schranke	BNP:3:-211:trailer=10 22004,17470
 zwei Dr‰ngelgitter an der Straﬂenbahntrasse	BNP:5:-117:trailer=15 21860,18718
 Dr‰ngelgitter	BNP:3:-73:trailer=10 20703,15755
 Dr‰ngelgitter	BNP:3:-61:trailer=10 20714,15749
 2x Dr‰ngelgitter	BNP:4:-63:trailer=15 21305,16705
-Dr‰ngelgitter	BNP:5:-263:trailer=20 -5681,15113
+Dr‰ngelgitter	BNP:5:-264:trailer=20 -5681,15113
 Dr‰ngelgitter	BNP:5:-251:trailer=20 -5689,15114
 Dr‰ngelgitter	BNP:3:-173:trailer=10 -4153,16463
 Dr‰ngelgitter	BNP:3:-180:trailer=10 -4153,16562
@@ -2331,11 +2339,11 @@ Schranke	BNP:3:-66:trailer=10 3427,18467
 Schranke	BNP:3:-79:trailer=10 -4300,15295
 Schranke	BNP:3:-77:trailer=10 -4117,15255
 Schranke	BNP:3:-249:trailer=10 15090,11237
-Schranke	BNP:3:-233:trailer=10 -822,16535
 Schranke	BNP:5:21:trailer=10 10919,9804
 Dr‰ngelgitter, kann umfahren werden	BNP:3:-152:trailer=10 14969,10138
 Schwingtor	BNP:3:-252:trailer=10 14146,12921
 Schwingtor	BNP:5:-2:trailer=10 17490,13133
+Schwingtor	BNP:5:-94:trailer=10 17684,13133
 Schranke	BNP:3:-31:trailer=10 8622,13042
 Dr‰ngelgitter	BNP:3:-216:trailer=10 18788,27989
 Schranke	BNP:3:-228:trailer=10 -2162,17924
@@ -2511,7 +2519,7 @@ Dr‰ngelgitter	BNP:3:43:trailer=8 7242,8586
 Dr‰ngelgitter	BNP:3:43:trailer=8 7288,8635
 Schranke	BNP:3:61 8251,20927
 Schranke	BNP:5:-174 21297,12748
-Dr‰ngelgitter	BNP:5:7 22061,15168
+Dr‰ngelgitter	BNP:3:7:trailer=5 22061,15168
 Dr‰ngelgitter kann ohne Absteigen passiert werden	BNP:2:-199 1388,3197
 Barriere f¸r Autofahrer	BNP:2:-2 17301,7645
 Dr‰ngelgitter	BNP:5:72 11010,-378
@@ -2543,7 +2551,7 @@ Schranke	BNP:5:-102 12571,7899
 Dr‰ngelgitter	BNP:5:34:trailer=10 14453,9929
 Dr‰ngelgitter mit asphaltierer Vorbeifahrmˆglichkeit	BNP:2:39:trailer=4 14558,10082
 Dr‰ngelgitter mit asphaltierer Vorbeifahrmˆglichkeit	BNP:2:41:trailer=4 14597,10129
-Dr‰ngelgitter	BNP:3:-153:trailer=15 12904,10141
+Dr‰ngelgitter	BNP:3:-153:trailer=15 12901,10134
 Dr‰ngelgitter	BNP:1:-149:trailer=3 12833,9998
 Schranke (Privatstr.)	BNP:5:-180 25039,5304
 Schranke	BNP:2:85:trailer=4 9907,11752
@@ -2615,14 +2623,9 @@ Schiffahrtsufer, Burgwall: Bauarbeiten, komplett gesperrt	2:inwork -3451,13300 -
 wegen Bauarbeiten ist das ‹berqueren nicht mˆglich	3nocross::ignrte 9984,12426 9934,12420 9852,12409
 Unter den Linden -> Niederlagstr.: wegen Bauarbeiten ist das ‹berqueren nicht mˆglich	3::igndisp 9984,12426 9934,12420 9943,12364
 In den Florag‰rten: Baustelle	2:inwork 9895,17649 9997,17646
-Stadtpark Prenzlau: wegen LAGA gesperrt (bis Oktober 2013)	2 39867,101104 39923,101339 39884,101572
-Uckerpromenade: wegen LAGA gesperrt (bis Oktober 2013)	2 39671,100750 39474,100982 39275,101193
-Seepark: wegen LAGA gesperrt (bis Oktober 2013)	2 39754,100955 39474,100982
 Sokratesweg: Bauarbeiten, gesperrt	2:inwork 18527,9623 18520,9585
 An der Nuthestr.: wegen Bauarbeiten bis Mitte 2014 gesperrt	2:inwork -11399,-1339 -11235,-1465 -11137,-1680 -11089,-1730 -10973,-1764
 Babelsberger Park - Humboldtbr¸cke: Bauarbeiten, tempor‰r (oder sogar dauerhaft?) gesperrt	2:inwork -11407,-1086 -11460,-1098 -11538,-1138 -11615,-1094
-Sperrung am zuk¸nftigen Landtag: Bereich vor der Straﬂenbahnhaltestelle Richtung Norden gesperrt (8. April 2013 - 6. September 2013)	1:inwork -12758,-1654 -12772,-1577
-Sperrung am zuk¸nftigen Landtag: Radweg Richtung Westen gesperrt (22. April 2013 - 6. September 2013)	1::inwork -12659,-1700 -12730,-1681 -12758,-1654
 Nordufer: wegen Bauarbeiten f¸r die S21 gesperrt	2:inwork 7427,14648 7212,14738
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwork 8106,13130 8102,13304
 Helsingforser Str.: Bauarbeiten, auch der Gehweg ist nicht passierbar	2:inwork 13496,11384 13427,11431
@@ -2846,7 +2849,6 @@ tragen/schieben (40 Stufen, Rampe)	0:120:-259 -4768,11016
 Theodor-Heuss-Weg	1s 9197,14562 9128,14461 9081,14363
 tragen / schieben (Treppe 10 Stufen oder wilder Weg)	0:20:-150 9223,14608
 Tor	BNP:0:-247 3332,12742
-Herderstr. (Charlottenburg)	1 4452,11570 4434,11360
 tragen (Treppe, 14 Stufen)	0:30:81 7931,12876
 Joachim-Karnatz-Allee	1 7142,12584 7131,12615
 Joachim-Karnatz-Allee	1 7175,12630 7187,12598
@@ -2969,7 +2971,9 @@ Treskowallee -> Weg entlang der Bahnstrecke: Straﬂenbahntrasse	3::igndisp 18742,
 Weg entlang der Bahnstrecke -> Richard-Kolkwitz-Weg: Straﬂenbahntrasse	3::igndisp 18445,9887 18703,9997 18715,10003
 Weg entlang der Bahnstrecke -> Treskowallee: Straﬂenbahntrasse	3::igndisp 18445,9887 18703,9997 18694,10018
 Treskowallee -> Richard-Kolkwitz-Weg: Straﬂenbahntrasse	3::igndisp 18694,10018 18703,9997 18715,10003
-Straﬂenbahn	3nocross::ignrte 18875,9570 18865,9608 18823,9708
+Straﬂenbahn	3nocross::ignrte 18878,9517 18875,9570 18865,9608 18823,9708
+Hˆnower Str. -> Treskowallee: Straﬂenbahn	3::igndisp 18765,9426 18875,9570 18865,9608
+Treskowallee -> Hˆnower Str.: Straﬂenbahn	3::igndisp 18878,9517 18875,9570 18765,9426
 Treskowallee -> Rheinpfalzallee: Straﬂenbahn	3::igndisp 18823,9708 18865,9608 18931,9629
 Rheinpfalzallee -> Treskowallee: Straﬂenbahn	3::igndisp 18931,9629 18865,9608 18875,9570
 Straﬂenbahn	3nocross::ignrte 18807,9746 18823,9708 18865,9608

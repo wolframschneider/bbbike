@@ -203,6 +203,7 @@ use File::Basename;
 use BBBikeUtil;
 use BBBikeUtil qw(min max first clone s2hm_or_s);
 use BBBikeTkUtil qw(pack_buttonframe);
+use BBBikeCanvasUtil qw(draw_bridge draw_tunnel_entrance);
 use BBBikeVar;
 use BBBikeCalc;
 use BBBikeTrans;
@@ -480,6 +481,7 @@ $roundabout_qr = qr{^(Mini)?Roundabout$};
 # no $cat_rueck handling here
 $complex_IMG_qr = qr/^IMG:([^|]+)(?:\|ANCHOR:([^|]+))?$/;
 $viewangle_qr = qr{^View:([-+]?\d+):([-+]?\d+)}; # XXX duplicated in Strassen::Cat
+$cyclepath_opposite_qr = qr{\bRW[89]\??\b};
 
 # do not draw Steigung and Gefälle at the same time:
 $str_ignore{'comm'} = {'Gf' => 1}; # XXX with ";"???
@@ -6876,11 +6878,19 @@ EOF
 			my $line_dash_rueck;
 			my $line_capstyle_hin = (exists $layer_category_capstyle{$abk} && $layer_category_capstyle{$abk}{$cat_hin}) || $layer_line_capstyle{$abk} || $category_capstyle{$cat_hin} || $line_capstyle{$abk};
 			my $line_capstyle_rueck;
+			my($special_cyclepath_opposite_hin, $special_cyclepath_opposite_rueck);
 			if ($cat_rueck) {
 			    @std_tags_rueck = @std_tags_hin;
 			    $std_tags_rueck[2] = "$abk-$cat_rueck";
 			    $line_dash_rueck = (exists $layer_category_line_dash{$abk} && $layer_category_line_dash{$abk}{$cat_rueck}) || $layer_line_dash{$abk} || $category_dash{$cat_rueck} || $line_dash{$abk};
 			    $line_capstyle_rueck = (exists $layer_category_capstyle{$abk} && $layer_category_capstyle{$abk}{$cat_rueck}) || $layer_line_capstyle{$abk} || $category_capstyle{$cat_rueck} || $line_capstyle{$abk};
+			}
+			if ((($cat_hin||'').' '.($cat_rueck||'')) =~ $cyclepath_opposite_qr) {
+			    if ($cat_hin =~ $cyclepath_opposite_qr) {
+				$special_cyclepath_opposite_hin = 1;
+			    } else {
+				$special_cyclepath_opposite_rueck = 1;
+			    }
 			}
 			my $stipple = ($layer_category_stipple{$abk} && $layer_category_stipple{$abk}{$category}) || $layer_stipple{$abk} || $category_stipple{$category};
 			$stipple = load_stipple($stipple) if $stipple;
@@ -6889,9 +6899,13 @@ EOF
 			        if ($addinfo_hin =~ $tunnel_qr) {
 				    $line_dash_hin = $line_dash{"Tu"};
 				    $line_dash_rueck = $line_dash_hin if defined $line_dash_hin;
-				    draw_tunnel_entrance(\@coordlist, -width => $this_width_hin+4, -tags => \@std_tags_hin, -mounds => $addinfo_hin);
+				    if ($scale >= 1) { # bridges/tunnels shouldn't be drawn in small scales
+					draw_tunnel_entrance($c, \@coordlist, -width => $this_width_hin+4, -tags => \@std_tags_hin, -mounds => $addinfo_hin);
+				    }
 				} elsif ($addinfo_hin eq 'Br') {
-				    draw_bridge(\@coordlist, -width => $this_width_hin+4, -tags => \@std_tags_hin);
+				    if ($scale >= 1) { # bridges/tunnels shouldn't be drawn in small scales
+					draw_bridge($c, \@coordlist, -width => $this_width_hin+4, -tags => \@std_tags_hin);
+				    }
 				}
 			    }
 			}
@@ -6931,17 +6945,21 @@ EOF
 			    my $cat_rueck = defined $cat_rueck ? $cat_rueck: ''; # avoid warnings
 			    my $line_directed_weight = ($layer_category_line_directed_weight{$abk} && $layer_category_line_directed_weight{$abk}{$cat_hin}) || $layer_line_directed_weight{$abk};
 			    my($cl_hin,$cl_rueck);
+			    my $delta;
 			    if (!$line_directed_weight) {
-				my $delta = $this_width_hin/2; # XXX need a better rule for this
+				$delta = $this_width_hin/2; # XXX need a better rule for this
 				($cl_hin,$cl_rueck) = offset_line(\@coordlist, $delta, $cat_hin ne '', $cat_rueck ne '');
 			    }
 			    for my $dir (1, -1) {
-				my($cl, $this_color, $this_width, $cat, $std_tags, $line_dash, $line_capstyle);
+				my($cl, $this_color, $this_width, $cat, $std_tags, $line_dash, $line_capstyle, $dont_plot_line, $special_cyclepath_opposite);
 				if ($dir == 1 && $cat_hin ne '') {
+				    $special_cyclepath_opposite = $special_cyclepath_opposite_hin;
 				    if (!$cl_hin) {
 					# -0.5, to avoid occasional gaps between two directed lines
 					($cl)       = offset_line(\@coordlist, $this_width_hin/2-0.5, 1, 0);
 					$this_width = $this_width_hin;
+				    } elsif ($special_cyclepath_opposite) {
+					(undef, $cl) = offset_line(\@coordlist, $delta+$this_width_hin/2+3, 0, 1); # "3" is the default arrowshape half-width (last element from "8 10 3")
 				    } else {
 				        $cl         = $cl_hin;
 				        $this_width = $this_width_hin/2;
@@ -6951,11 +6969,15 @@ EOF
 				    $std_tags   = \@std_tags_hin;
 				    $line_dash  = $line_dash_hin;
 				    $line_capstyle = $line_capstyle_hin;
+				    $dont_plot_line = $special_cyclepath_opposite;
 				} elsif ($dir == -1 && $cat_rueck ne '') {
+				    $special_cyclepath_opposite = $special_cyclepath_opposite_rueck;
 				    if (!$cl_rueck) {
 					# -0.5: see above
 					(undef, $cl_rueck) = offset_line(\@coordlist, $this_width_rueck/2-0.5, 0, 1);
 					$this_width = $this_width_rueck;
+				    } elsif ($special_cyclepath_opposite) {
+					($cl_rueck) = offset_line(\@coordlist, $delta+$this_width_rueck/2+3, 1, 0); # "3": see above
 				    } else {
 					$this_width = $this_width_rueck/2;
 				    }
@@ -6968,36 +6990,39 @@ EOF
 				    $std_tags   = \@std_tags_rueck;
 				    $line_dash  = $line_dash_rueck;
 				    $line_capstyle = $line_capstyle_rueck;
+				    $dont_plot_line = $special_cyclepath_opposite;
 				} else {
 				    next;
 				}
 
-				my $arrow;
-				if ($line_capstyle && $line_capstyle eq 'round') {
-				    # XXX Tk problem? bad rendering with capstyle=>"round" and arrow=>something
-				    $arrow = 'none';
-				} else {
-				    $arrow = 
+				if (!$dont_plot_line) {
+				    my $arrow;
+				    if ($line_capstyle && $line_capstyle eq 'round') {
+					# XXX Tk problem? bad rendering with capstyle=>"round" and arrow=>something
+					$arrow = 'none';
+				    } else {
+					$arrow =
 EOF
 . $get_arrow_code . <<'EOF'
-			            ;
-				    if (!$arrow) {
-					$arrow = 'last';
+					;
+					if (!$arrow) {
+					    $arrow = 'last';
+					}
 				    }
-				}
 
-				$c->createLine
-				    (@$cl,
-				     -fill  => $this_color,
-				     -width => $this_width,
-				     -joinstyle => 'bevel',
-				     -tags  => [@$std_tags,
-						@extra_tags],
-				     ($line_dash ? (-dash => $line_dash) : ()),
-				     ($line_capstyle ? (-capstyle => $line_capstyle) : ()),
-				     ($stipple ? (-stipple => $stipple) : ()),
-				     -arrow => $arrow,
-				    );
+				    $c->createLine
+					(@$cl,
+					 -fill  => $this_color,
+					 -width => $this_width,
+					 -joinstyle => 'bevel',
+					 -tags  => [@$std_tags,
+						    @extra_tags],
+					 ($line_dash ? (-dash => $line_dash) : ()),
+					 ($line_capstyle ? (-capstyle => $line_capstyle) : ()),
+					 ($stipple ? (-stipple => $stipple) : ()),
+					 -arrow => $arrow,
+					);
+				}
 
 				# Draw an extra point indicating the point of action for CP/CP2 items
 				if ($cat_hin =~ m{^( CP | CP2 | PI )$}x) {
@@ -7009,9 +7034,35 @@ EOF
 				    );
 				}
 
+				if ($special_cyclepath_opposite) {
+				    my $last_draw_position;
+				    my $current_draw_position = 0;
+				    for(my $i=2; $i<=$#$cl; $i+=2) {
+					my $length = Strassen::Util::strecke([@{$cl}[$i-2,$i-1]], [@{$cl}[$i,$i+1]]);
+					$current_draw_position += $length/2;
+					if ($last_draw_position && $current_draw_position - $last_draw_position < 50) {
+					    # skip this plot, too many symbols
+					} else {
+					    my @section_cl = @{$cl}[$i-2..$i+1];
+					    line_shorten(\@section_cl, 22); # default arrowhead length is 10, so add 2 to avoid the both arrows touching
+					    $c->createLine
+						(@section_cl,
+						 -fill  => $this_color,
+						 -width => 1,
+						 -tags  => [@$std_tags, @extra_tags],
+						 -arrow => 'both',
+						);
+					    $last_draw_position = $current_draw_position;
+					}
+					$current_draw_position += $length/2;
+				    }
+				}
+
 			    }
 			} elsif ($cat_hin eq 'Br') {
-			    draw_bridge(\@coordlist, -width => $this_width_hin+4, -tags => \@std_tags_hin);
+			    if ($scale >= 1) {
+				draw_bridge($c, \@coordlist, -width => $this_width_hin+4, -tags => \@std_tags_hin);
+			    }
 			} elsif ($cat_hin =~ $roundabout_qr) {
 			    if ($edit_normal_mode) {
 				$c->createLine(@coordlist,
@@ -7026,7 +7077,9 @@ EOF
 				return;
 			    }
 			} elsif ($cat_hin =~ $tunnel_qr) {
-			    draw_tunnel_entrance(\@coordlist, -width => $this_width_hin+4, -tags => \@std_tags_hin, -mounds => $cat_hin);
+			    if ($scale >= 1) {
+				draw_tunnel_entrance($c, \@coordlist, -width => $this_width_hin+4, -tags => \@std_tags_hin, -mounds => $cat_hin);
+			    }
 			} else {
 			    my $arrow =
 EOF
@@ -8826,8 +8879,8 @@ sub enter_scale {
 		      -showvalue => 0);
     };
     my $scale = $t->$Scale
-      (-from => 1000,
-       -to => 3_000_000,
+      (-from => min(1000, $old_mapscale),
+       -to => max(3_000_000, $old_mapscale),
        %scaleargs,
        -orient => 'horiz',
        -variable => \$new_mapscale_scale,
@@ -10219,15 +10272,12 @@ sub plotstr {
 
     my $default_width = get_line_width($abk) || 4;
     if (defined $args{Width}) { $default_width = $args{Width} }
-    my %category_width; # XXX the global category_width is ignored!!! should be changed
-    {
-	my $scale = (exists $args{Canvas}
-		     ? ($show_overview_mode eq 'region'
-			? $small_scale
-			: $medium_scale)
-		     : $scale);
-	%category_width = _set_category_width($abk, $scale);
-    }
+    my $scale = (exists $args{Canvas}
+		 ? ($show_overview_mode eq 'region'
+		    ? $small_scale
+		    : $medium_scale)
+		 : $scale);
+    my %category_width = _set_category_width($abk, $scale); # XXX the global category_width is ignored!!! should be changed
 
     # current category size
     my %category_size = map {
@@ -10850,37 +10900,52 @@ sub plot_sperre {
 }
 
 sub _line_shorten {
-    my($cref, $begin, $end) = @_;
-    if (@$cref <= 2) {
+    my($cref, $begin, $end, $short_length) = @_;
+    if (@$cref < 4) {
 	warn "Coordinate list too short for shortening either begin or end\n";
 	return;
     }
-    if ($begin && $end && @$cref <= 4) {
-	warn "Coordinate list too short for shortening begin and end (@$cref)\n";
+    $short_length = 20 if !$short_length;
+
+    if ($begin && $end && @$cref == 4) {
+	# This is a special case: introduce a middle point, from where the
+	# line is plotted (shortened) to both sides. Another special case:
+        # the created line may exceed the original line length, if
+        # $short_length is larger.
+	my $len = Strassen::Util::strecke([@{$cref}[0,1]], [@{$cref}[2,3]]);
+	return if $len == 0;
+	my($middlex, $middley) = ($cref->[0] + ($cref->[2]-$cref->[0])/2,
+				  $cref->[1] + ($cref->[3]-$cref->[1])/2);
+	@$cref =
+	    (($cref->[0]-$middlex)/$len*$short_length+$middlex,
+	     ($cref->[1]-$middley)/$len*$short_length+$middley,
+	     ($cref->[-2]-$middlex)/$len*$short_length+$middlex,
+	     ($cref->[-1]-$middley)/$len*$short_length+$middley,
+	    );
 	return;
     }
 
     if ($begin) {
 	my $len1 = Strassen::Util::strecke([@{$cref}[0,1]], [@{$cref}[2,3]]);
-	my $whole_len1 = $len1 > 20 ? 20 : $len1;
+	my $used_short_length1 = $len1 > $short_length ? $short_length : $len1;
 	@{$cref}[0,1] =
-	    (($cref->[0]-$cref->[2])/$len1*$whole_len1+$cref->[2],
-	     ($cref->[1]-$cref->[3])/$len1*$whole_len1+$cref->[3],
+	    (($cref->[0]-$cref->[2])/$len1*$used_short_length1+$cref->[2],
+	     ($cref->[1]-$cref->[3])/$len1*$used_short_length1+$cref->[3],
 	    );
     }
     if ($end) {
 	my $len2 = Strassen::Util::strecke([@{$cref}[-4,-3]], [@{$cref}[-2,-1]]);
-	my $whole_len2 = $len2 > 20 ? 20 : $len2;
+	my $used_short_length2 = $len2 > $short_length ? $short_length : $len2;
 	@{$cref}[-2,-1] =
-	    (($cref->[-2]-$cref->[-4])/$len2*$whole_len2+$cref->[-4],
-	     ($cref->[-1]-$cref->[-3])/$len2*$whole_len2+$cref->[-3],
+	    (($cref->[-2]-$cref->[-4])/$len2*$used_short_length2+$cref->[-4],
+	     ($cref->[-1]-$cref->[-3])/$len2*$used_short_length2+$cref->[-3],
 	    );
     }
 }
 
-sub line_shorten_begin { _line_shorten(shift, 1, 0) }
-sub line_shorten       { _line_shorten(shift, 1, 1) }
-sub line_shorten_end   { _line_shorten(shift, 0, 1) }
+sub line_shorten_begin { _line_shorten(shift, 1, 0, shift) }
+sub line_shorten       { _line_shorten(shift, 1, 1, shift) }
+sub line_shorten_end   { _line_shorten(shift, 0, 1, shift) }
 
 sub split_by_crossings {
     my @p = @_;
@@ -10969,8 +11034,8 @@ sub activate_temp_blockings {
 	    if (defined $from && (!defined $o->{until} || $o->{until} > $from)) {
 		$do_it = 1;
 	    }
-	    if (!$do_it && ((!defined $o->{from} || $o->{from} < $now) &&
-			    (!defined $o->{until} || $o->{until} > $now))) {
+	    if (!$do_it && ((!defined $o->{from} || $o->{from} <= $now) &&
+			    (!defined $o->{until} || $o->{until} >= $now))) {
 		$do_it = 1;
 	    }
 
@@ -13334,131 +13399,6 @@ sub plotobst {
     DecBusy($top);
 }
 
-### AutoLoad Sub
-sub draw_bridge {
-    my($cl,%args) = @_;
-    my $width = $args{'-width'}||10;
-    my $color = '#808080';
-    my $thickness = 2; # make configurable XXX
-#XXX complicated code, make nicer!
-#XXX an den Enden etwas verkürzen
-    for(my $i = 0; $i < $#$cl/2-1; $i++) {
-	my($x1,$y1,$x2,$y2) = @{$cl}[$i*2..$i*2+3];
-	my $alpha = atan2($y2-$y1,$x2-$x1);
-	my $beta = $alpha - pi()/2;
-	my $delta = $width/2;
-	my($dx,$dy) = ($delta*cos($beta), $delta*sin($beta));
-	$c->createLine($x1+$dx,$y1+$dy,$x2+$dx,$y2+$dy,
-		       -width => $thickness,
-		       -tags => $args{'-tags'},
-		       -fill => $color,
-		      );
-	$c->createLine($x1-$dx,$y1-$dy,$x2-$dx,$y2-$dy,
-		       -width => $thickness,
-		       -tags => $args{'-tags'},
-		       -fill => $color,
-		      );
-    }
-    {
-	my $alpha = atan2($cl->[3]-$cl->[1],$cl->[2]-$cl->[0]);
-	my $beta  = $alpha - pi()/2;
-	my $knick = $alpha - pi()/4;
-	my $knick2 = $alpha + pi()/4;
-	my $delta = $width/2;
-	my $knick_length = $width/2;
-	my($dx, $dy) = ($delta*cos($beta), $delta*sin($beta));
-	my($kx, $ky) = ($knick_length*cos($knick), $knick_length*sin($knick));
-	my($k2x, $k2y) = ($knick_length*cos($knick2), $knick_length*sin($knick2));
-	$c->createLine($cl->[0]+$dx-$k2x, $cl->[1]+$dy-$k2y,
-		       $cl->[0]+$dx, $cl->[1]+$dy,
-		       -width => $thickness,
-		       -tags => $args{'-tags'},
-		       -fill => $color,
-		      );
-	$c->createLine(
-		       $cl->[0]-$dx, $cl->[1]-$dy,
-		       $cl->[0]-$dx-$kx, $cl->[1]-$dy-$ky,
-		       -width => $thickness,
-		       -tags => $args{'-tags'},
-		       -fill => $color,
-		      );
-    }
-
-    {
-	my $alpha = atan2($cl->[-1]-$cl->[-3],$cl->[-2]-$cl->[-4]);
-	my $beta  = $alpha - pi()/2;
-	my $knick = $alpha - pi()/4;
-	my $knick2 = $alpha + pi()/4;
-	my $delta = $width/2;
-	my $knick_length = $width/2;
-	my($dx, $dy) = ($delta*cos($beta), $delta*sin($beta));
-	my($kx, $ky) = ($knick_length*cos($knick), $knick_length*sin($knick));
-	my($k2x, $k2y) = ($knick_length*cos($knick2), $knick_length*sin($knick2));
-	$c->createLine($cl->[-2]+$dx+$kx, $cl->[-1]+$dy+$ky,
-		       $cl->[-2]+$dx, $cl->[-1]+$dy,
-		       -width => $thickness,
-		       -tags => $args{'-tags'},
-		       -fill => $color,
-		      );
-	$c->createLine(
-		       $cl->[-2]-$dx, $cl->[-1]-$dy,
-		       $cl->[-2]-$dx+$k2x, $cl->[-1]-$dy+$k2y,
-		       -width => $thickness,
-		       -tags => $args{'-tags'},
-		       -fill => $color,
-		      );
-    }
-    
-}
-
-### AutoLoad Sub
-sub draw_tunnel_entrance {
-    my($cl,%args) = @_;
-    my $width = $args{'-width'}||20;
-    my $color = '#505050';
-    my $thickness = 3;
-    my $mounds = delete $args{'-mounds'} || "Tu";
-#XXX complicated code, make nicer!
-    if ($mounds !~ m{^_}) {
-	my $alpha = atan2($cl->[3]-$cl->[1],$cl->[2]-$cl->[0]);
-	my $beta  = $alpha - pi()/2;
-	my $knick = $alpha - pi()/4;
-	my $knick2 = $alpha + pi()/4;
-	my $delta = $width/2;
-	my $knick_length = $width/3;
-	my($dx, $dy) = ($delta*cos($beta), $delta*sin($beta));
-	my($kx, $ky) = ($knick_length*cos($knick), $knick_length*sin($knick));
-	my($k2x, $k2y) = ($knick_length*cos($knick2), $knick_length*sin($knick2));
-	$c->createLine($cl->[0]+$dx-$k2x, $cl->[1]+$dy-$k2y,
-		       $cl->[0]+$dx, $cl->[1]+$dy,
-		       $cl->[0]-$dx, $cl->[1]-$dy,
-		       $cl->[0]-$dx-$kx, $cl->[1]-$dy-$ky,
-		       -width => $thickness,
-		       -tags => $args{'-tags'},
-		       -fill => $color,
-		      );
-    }
-    if ($mounds !~ m{_$}) {
-	my $alpha = atan2($cl->[-1]-$cl->[-3],$cl->[-2]-$cl->[-4]);
-	my $beta  = $alpha - pi()/2;
-	my $knick = $alpha - pi()/4;
-	my $knick2 = $alpha + pi()/4;
-	my $delta = $width/2;
-	my $knick_length = $width/3;
-	my($dx, $dy) = ($delta*cos($beta), $delta*sin($beta));
-	my($kx, $ky) = ($knick_length*cos($knick), $knick_length*sin($knick));
-	my($k2x, $k2y) = ($knick_length*cos($knick2), $knick_length*sin($knick2));
-	$c->createLine($cl->[-2]+$dx+$kx, $cl->[-1]+$dy+$ky,
-		       $cl->[-2]+$dx, $cl->[-1]+$dy,
-		       $cl->[-2]-$dx, $cl->[-1]-$dy,
-		       $cl->[-2]-$dx+$k2x, $cl->[-1]-$dy+$k2y,
-		       -width => $thickness,
-		       -tags => $args{'-tags'},
-		       -fill => $color,
-		      );
-    }
-}
-
 # Löscht alle derzeitig gezeichneten Straßen und Punkte und liefert
 # eine Subroutine zurück, mit der die gelöschten Objekte wieder
 # gezeichnet werden können.
@@ -14881,10 +14821,21 @@ EOF
 	    }
 
 	    # XXX slightly hackish: link to the OSM node/way/... browser
-	    for (@tags) {
-		if (my($type,$id) = $_ =~ m{^osm-(node|way|relation)-(\d+)$}) {
-		    push @tags, "http://www.openstreetmap.org/browse/$type/$id";
-		    last;
+	    # XXX and a tag for osm_watch
+	    {
+		my $osm_version;
+		my $osm_type;
+		my $osm_id;
+		for (@tags) {
+		    if (my($_type,$_id) = $_ =~ m{^osm-(node|way|relation)-(\d+)$}) {
+			push @tags, "http://www.openstreetmap.org/browse/$_type/$_id";
+			($osm_type, $osm_id) = ($_type, $_id);
+		    } elsif ($_ =~ m{\bversion=(\d+)}) {
+			$osm_version = $1;
+		    }
+		}
+		if ($osm_version && $osm_id && $osm_type) {
+		    push @tags, qq{#: osm_watch: $osm_type id="$osm_id" version="$osm_version"};
 		}
 	    }
 

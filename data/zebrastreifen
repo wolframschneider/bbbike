@@ -22,7 +22,8 @@ Neue Krugallee/Dammweg	Zs 15878,8338
 Neue Krugallee/Eichbuschallee	Zs 16131,7895
 Fürstenwalder Damm/Jastrower Weg	Zs 23668,5475
 Florastr. (vor S Pankow)	Zs 10721,17938
-Wilmersdorfer Str./Schillerstr.	Zs 3718,11453
+Wilmersdorfer Str./Schillerstr.	Zs 3707,11461
+Wilmersdorfer Str./Schillerstr.	Zs 3728,11465
 Adamstr./Konkordiastr.	Zs -4069,12558
 Annenstraße	Zs 10958,11500
 Adalbertstraße	Zs 11421,10509
@@ -84,8 +85,8 @@ Dürerplatz	Zs 6227,7012
 #: confirmed_by: srt
 Pistoriusstr./Woelckpromenade	Zs 13624,16308
 Pistoriusstr./Mirbachplatz	Zs 13403,16394
-#: note: Luftbild
 Haselhorster Damm/Burscheider Weg	Zs -934,15254
+Haselhorster Damm/Lüdenscheider Weg	Zs -1028,15474
 Prinzenstr./Sebastianstr.	Zs 10939,11045
 Bouchestr.	Zs 13758,9742
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-lichtenberg/presse/archiv/20070117.1505.71304.html
@@ -424,10 +425,9 @@ Frohnauer Brücke/Ludolfingerplatz	Zs 2283,25097
 Dianastraße/Fürst-Bismarck-Straße	Zs 4038,22397
 Schönwalder/Pankeweg	Zs 8266,15134
 Lehrter/Kruppstr.	Zs 7320,14143
-#: XXX genaue Position?
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20120712.1025.372492.html
 #: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=5387&options=4
-Elisabethstr./Schönwalder Str.	Zs -3387,15410
+Elisabethstr./Schönwalder Str.	Zs -3385,15408
 Britzer Str.	Zs 18352,5488
 Schwedt, Vierradener Chaussee	Zs 69009,75559
 Schwedt, Oder-Center	Zs 68077,74507
@@ -487,8 +487,8 @@ Eastgate-Parkplatz (2x)	Zs 19834,15226
 Hämmerlingstr./Wuhleweg	Zs 22084,5877
 Kiefholzstr./Siemens	Zs 14020,9117
 #: XXX bleibt dieser Zebrastreifen permanent?
-#: last_checked: 2013-08-09
-#: next_check: 2014-08-09
+#: last_checked: 2013-09-13
+#: next_check: 2014-03-13
 Lortzingstr.-Mauerpark/Baustraße	Zs 10055,15424
 Alte Hellersdorfer Str.	Zs 23109,15861
 Parkplatz Le Prom	Zs 19835,15223

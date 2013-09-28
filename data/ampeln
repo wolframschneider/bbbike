@@ -163,7 +163,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 7563,8871
 	X 7497,8916
 	F 7315,8941
-	X 7275,8960
+	X 7268,8960
 	X 7201,8870
 	X 7009,8705
 	X 6989,8687
@@ -172,7 +172,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 7647,9196
 	X 7479,9357
 	X 7526,9791
-	X 7110,9024
+	X 7107,9030
 	X 7006,9282
 	X 7049,9833
 	X 7126,9825
@@ -332,7 +332,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5357,8013
 	X 5331,8012
 	X 5346,7860
-	X 5635,8011
+	X 5631,8011
 	X 4788,7257
 	X 4743,7212
 	X 4787,7213
@@ -595,7 +595,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -3255,14685
 	X -3352,14676
 	X -3355,14764
-	X -1986,11487
+	X -1994,11496
 	X -2419,13237
 	X -2706,13291
 	X -3189,13588
@@ -643,6 +643,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 15724,6229
 	X 15058,6784
 	F 16274,6929
+	F 16058,6629
 	X 18245,5551
 	X 18023,5623
 	X 17960,5511
@@ -830,8 +831,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -3677,11685
 	X -4500,11937
 	X -4882,12061
-	X -2850,11423
-	X -2209,11222
+	X -2851,11417
+	X -2222,11225
 	X 9621,3155
 	X 9720,2887
 	X 10788,-172
@@ -935,9 +936,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2020,20327
 	X 127,17176
 	X -344,15200
-	X -283,14523
+	X -278,14532
 	X 1479,14343
-	X 1360,14375
+	X 1361,14384
 	X 2087,14078
 	X 2881,14061
 	X 3038,13612
@@ -1128,10 +1129,10 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3788,16621
 	X 3753,16638
 	X 3676,16497
-	X 2960,14746
-	X 2904,14748
+	X 2963,14752
+	X 2905,14754
 	X 3395,13605
-	X 3741,13558
+	X 3739,13563
 	X 4271,13735
 	X 6817,13862
 	X 6935,13645
@@ -1267,7 +1268,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8605,4138
 	F 6102,4726
 	X 6212,4622
-	X 7230,5696
+	X 7230,5689
 	X 5414,5939
 	X 5345,5994
 	X 6104,6258
@@ -1743,7 +1744,7 @@ Industriebahn	B0 -2410,13746
 	F 11285,14515
 	F 11905,15462
 	X 7880,13315
-	X 8023,13632
+	X 8019,13650
 	X 7696,7771
 	F 12204,13719
 	X 19783,12955
@@ -1802,7 +1803,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	B0 14224,1925
 	B0 14512,1818
 	B0 15799,1690
-	B0 12231,4365
+	B0 12225,4370
 	B0 12363,4175
 	B0 12673,3627
 	B0 13189,2736
@@ -2139,7 +2140,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 13648,13334
 	F 13163,12382
 	X -284,14738
-	F 608,14423
+	F 609,14429
 	X 1709,14243
 	X 7979,20528
 	F 198,4580
@@ -2156,7 +2157,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 10127,19992
 	F 5628,14063
 	F::inwork 9984,12426
-	X::inwork 9123,12500
+	X::inwork 9122,12509
 	X::inwork 9280,12883
 	X::inwork 9343,12464
 	X::inwork 9475,12365
@@ -2229,6 +2230,9 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 9447,5641
 	F 5058,8012
 	X 4832,2975
+	F -1099,14925
+	X 9242,7286
+	X 9242,7325
 	X -12549,-1277
 	X -13051,-3101
 	X -12839,-1342
@@ -2741,7 +2745,6 @@ S-Bf Lehnitz (Oranienburg-Lehnitz)	F 329,37254
 Chausseestr. / Zum Bahnhof (Oranienburg-Sachsenhausen)	X -882,40723
 Granseer Str. Höhe Post (Oranienburg-Sachsenhausen)	F -1235,41150
 Zum Bahnhof / Nordbahn (Oranienburg-Sachsenhausen)	B -521,40612
-Bauernmarktchaussee / nGAR (Oranienburg-Schmachtenhagen)	B0 5150,41018
 Malzer Weg / nGAR (Oranienburg-Schmachtenhagen)	B0 4581,41115
 Schwarzer Weg / nGAR (Oranienburg-Schmachtenhagen)	B0 3167,41284
 Wensickendorf (Oranienburg-Wensickendorf)	F 7836,38835

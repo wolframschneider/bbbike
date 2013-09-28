@@ -30,6 +30,7 @@ patch\.gz$
 (^|/)\.prove$
 (^|/)MYMETA\.yml$
 (^|/)MYMETA\.json$
+\.travis\.yml$
 # private common files
 \.ok2cgi$
 \.copynewer.SKIP$
@@ -246,7 +247,6 @@ BBBikePrefsWidget.pm
 cgi/bbbike_comment.cgi$
 cgi/Makefile$
 cgi/GNUmakefile$
-cgi/gridserv.cgi$
 ^data/comments_route_img/
 ^data/kneipen.yml$
 ^data/label$
@@ -260,8 +260,6 @@ cgi/gridserv.cgi$
 ^Strassen/Touratech.pm$
 ^mapserver/daemon/mapscript_daemon.pl$
 ^html/opensearch/
-^html/google2brb.html$
-^html/google2brb.js$
 # these too
 ^GDF/
 ^projects/

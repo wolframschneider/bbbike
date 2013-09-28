@@ -98,9 +98,10 @@ sub make_sperre {
 	if (grep { $_ eq 'wegfuehrung' } @{ $args{Type} }) {
 	    my %args = %args;
 	    $args{Type} = ['wegfuehrung'];
-	    my $old_wegfuehrung = $self->{Wegfuehrung};
+	    my $old_binary_wegfuehrung = delete $self->{Wegfuehrung};
 	    $self->make_sperre_1($sperre_file, %args);
-	    $self->{Wegfuehrung} = $self->convert_wegfuehrung($self->{Wegfuehrung}, $old_wegfuehrung);
+	    my $new_nonbinary_wegfuehrung = delete $self->{Wegfuehrung};
+	    $self->{Wegfuehrung} = $self->convert_wegfuehrung($new_nonbinary_wegfuehrung, $old_binary_wegfuehrung);
 	}
 	if (grep { $_ =~ /^(sperre|einbahn)$/ } @{ $args{Type} }) {
 	    my $str_obj = (UNIVERSAL::isa($sperre_file, "Strassen")

@@ -604,6 +604,9 @@ EOF
 		[Button => $do_compound->("local bbbike.cgi"),
 		 -command => sub { current_search_in_bbbike_cgi() },
 		],
+		[Button => $do_compound->("BBBike.org (Berlin)"),
+		 -command => sub { current_search_in_bbbike_org_cgi() },
+		],
 		[Button => $do_compound->("komoot"),
 		 -command => sub { current_search_in_komoot() },
 		],
@@ -1507,6 +1510,39 @@ sub current_search_in_bbbike_cgi {
     WWWBrowser::start_browser($url);
 }
 
+sub current_search_in_bbbike_org_cgi {
+    if (@main::search_route_points < 2) {
+	main::status_message("Not enough points", "die");
+    }
+    if (@main::search_route_points > 3) {
+	main::status_message("Too many points, bbbike.cgi only supports one via", "die");
+    }
+    my $inx = 0;
+    my($start, $via, $goal);
+    $start = $main::search_route_points[$inx++]->[0];
+    if (@main::search_route_points == 3) {
+	$via = $main::search_route_points[$inx++]->[0];
+    }
+    $goal = $main::search_route_points[$inx]->[0];
+
+    require Karte::Polar;
+    my $o = $Karte::Polar::obj;
+    for my $coord ($start, (defined $via ? $via : ()), $goal) {
+	$coord = join(",", $o->trim_accuracy($o->standard2map(split /,/, $coord)));
+    }
+
+    require CGI;
+    my $qs = CGI->new({ startc_wgs84 => $start,
+			($via ? (viac_wgs84 => $via) : ()),
+			zielc_wgs84 => $goal,
+			pref_seen => 1, # gelogen
+		      })->query_string;
+    my $url = "http://www.bbbike.org/Berlin/?$qs";
+    main::status_message("Der WWW-Browser wird mit der URL $url gestartet.", "info");
+    require WWWBrowser;
+    WWWBrowser::start_browser($url);
+}
+
 sub current_search_in_komoot_url {
     if (@main::search_route_points < 2) {
 	main::status_message("Not enough points", "die");
@@ -2330,18 +2366,40 @@ sub show_bbbike_suggest_toplevel {
     require Strassen::Strasse;
     require "$FindBin::RealBin/babybike/lib/BBBikeSuggest.pm";
     my $suggest = BBBikeSuggest->new;
-    my($ofh,$sorted_zipfile) = File::Temp::tempfile(SUFFIX => ".data", UNLINK => 1);
+    my($ofh,$sorted_zipfile) = File::Temp::tempfile(SUFFIX => "_bbbike_suggest.data", UNLINK => 1);
+    my $tempstreetsfile;
     my $srcfile;
     my $is_opensearch_file;
     my %alias2street;
     my $is_utf8;
     my $plz;
     for my $def (["$main::datadir/opensearch.streetnames", 1, 1],
-		 ["$main::datadir/Berlin.coords.data", 0, 0], # check for this file, but possibly use the combined cache file
+		 ["$main::datadir/strassen", 0, 1],
+		 ["$main::datadir/Berlin.coords.data", 0, 0], # usually never used --- check for this file, but possibly use the combined cache file
 		) {
 	my($try_srcfile, $try_is_opensearch_file, $try_is_utf8) = @$def;
 	if (-s $try_srcfile) {
-	    if (!$is_opensearch_file) {
+	    if ($try_srcfile =~ m{/strassen$}) {
+		require Strassen::MultiStrassen;
+		require Strassen::Core;
+		require Strassen::CoreHeavy;
+		require PLZ;
+		my @ms;
+		push @ms, Strassen->new("$main::datadir/strassen");
+		if ($main::city_obj->cityname eq 'Berlin' && -r "$main::datadir/landstrassen") {
+		    my $s = Strassen->new("$main::datadir/landstrassen");
+		    push @ms, $s->grepstreets(sub { $_->[Strassen::NAME()] =~ m{ \(Potsdam\)$} });
+		}
+		my $ms = MultiStrassen->new(@ms);
+		(my($tmpfh), $tempstreetsfile) = File::Temp::tempfile(UNLINK => 1, SUFFIX => "_bbbike_suggest0.data")
+		    or die $!;
+		binmode $tmpfh, ':encoding(utf-8)';
+		print $tmpfh PLZ->new_data_from_streets($ms);
+		close $tmpfh
+		    or die $!;
+		$plz = PLZ->new($tempstreetsfile);
+		$srcfile = $tempstreetsfile;
+	    } elsif ($try_srcfile =~ m{Berlin.coords.data}) {
 		$plz = main::make_plz();
 		$srcfile = $plz->{File};
 		main::status_message("Should never happen: Keine PLZ-Datenbank vorhanden!", 'die') if (!$plz);
@@ -2358,7 +2416,7 @@ sub show_bbbike_suggest_toplevel {
 	return;
     }
     {
-	local $ENV{LANG} = $ENV{LC_CTYPE} = $ENV{LC_ALL} = $is_utf8 ? 'en_US.utf8' : 'C';
+	local $ENV{LANG} = $ENV{LC_CTYPE} = $ENV{LC_ALL} = $is_utf8 ? 'de_DE.UTF-8' : 'de_DE.ISO8859-1'; # XXX what about other languages? what if iso-8859-1 or utf-8 locale is N/A?
 	open my $fh, "-|", 'sort', $srcfile
 	    or die "Cannot sort $srcfile: $!";
 	binmode $fh, ':utf8' if $is_utf8;
@@ -2376,6 +2434,8 @@ sub show_bbbike_suggest_toplevel {
 	}
 	close $fh
 	    or die "Cannot sort $srcfile: $!";
+	close $ofh
+	    or die "Error while writing to $sorted_zipfile: $!";
     }
     $suggest->set_zipfile($sorted_zipfile);
     my $t = main::redisplay_top($main::top, 'bbbike_suggest', -force => 1, -title => 'Search street', %args);

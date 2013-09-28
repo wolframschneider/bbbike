@@ -781,6 +781,27 @@ nördliches Sackgassenende	culdesac 24370,10198
 	culdesac_pseudo 3767,2367
 Eingang Hauptbahnhof	culdesac 7861,13203
 	culdesac 8405,8994
+#: note: Betriebsangehörige können weiter fahren
+Siemens-Werksgelände	culdesac 1929,13843
+#: note: weiter geht's in eine Kleingartenanlage
+	culdesac_pseudo 12809,19050
+#: note: Weiterfahrt in die Kleingartenkolonie ist wahrscheinlich möglich vvv
+Sackgassenende, Kleingartenkolonie	culdesac_pseudo 2795,2187
+Sackgassenende, Kleingartenkolonie	culdesac_pseudo 2271,2285
+Sackgassenende, Kleingartenkolonie	culdesac_pseudo 2361,2156
+#: note ^^^
+	culdesac -1857,16766
+#: note: Fußwegverbindungen sind in Bau vvv
+	culdesac -1671,16653
+	culdesac -1689,16584
+	culdesac -1680,16441
+#: note ^^^
+	culdesac -1897,16562
+	culdesac -1902,16493
+	culdesac_pseudo -4156,14677
+	culdesac_pseudo -4947,14873
+	culdesac -2950,12589
+	culdesac_pseudo -2345,10609
 # 
 ######################################################################
 # culdesac entries which should remain invisible
@@ -817,8 +838,8 @@ Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2387,10131
 	culdesac_pseudo 7190,10150
 	culdesac_pseudo 7947,10155
 	culdesac_pseudo 7933,9755
-	culdesac_pseudo 7614,9595
-	culdesac_pseudo 7612,9575
+	culdesac_pseudo 7614,9648
+	culdesac_pseudo 7612,9631
 	culdesac_pseudo 7242,8586
 	culdesac_pseudo 7288,8635
 	culdesac_pseudo 7490,9116
@@ -1003,4 +1024,11 @@ Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2387,10131
 	culdesac 8913,9020
 	culdesac 8914,8965
 #: note ^^^
+#: note: not invisble, because of entry in plaetze-orig
+	culdesac 2548,13796
+	culdesac_pseudo 12299,19143
+	culdesac_pseudo -4793,15369
+	culdesac_pseudo -4967,15414
+	culdesac_pseudo -1017,16184
 #: ignore ^^^
+######################################################################

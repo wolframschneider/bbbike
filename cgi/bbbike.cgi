@@ -867,7 +867,7 @@ if ($local_lang eq $selected_lang) {
 
 
 #warn "xxx: city: $datadir, lang: $lang, selected_lang: $selected_lang, local_lang: $local_lang\n";
-warn "$datadir does not exists!\n" if ! -d "../$datadir";
+warn "data $datadir does not exists!\n" if ! -d "../$datadir";
 
 #if ($config_master =~ s{^(.*)\.(en)(\.cgi)$}{$1$3}) {
 
@@ -920,6 +920,11 @@ if ($osm_data) {
 
     my $geo = get_geography_object();
     my $name = $geo->{city_names};
+
+    if (!$name) {
+	warn "Alert: No city name, reset name=$city, no osm data given?\n";
+	$name = $city;
+    }
 
     $local_city_name = select_city_name($city, $name, $lang);
     $en_city_name = select_city_name($city, $name, "en");
@@ -2354,7 +2359,9 @@ EOF
 	# Eine Addition aller aktuellen Straßen, die bei luise-berlin
 	# aufgeführt sind, ergibt als Summe 10129
 	# Da aber auch einige "unoffizielle" Wege in der DB sind, dürften es an die 11000 werden
-	my($bln_str, $all_bln_str, $pdm_str) = (10500, 11000, 420);
+	# ---> es sind aber mehr als 11000. Am besten, ich lasse $all_bln_str weg...
+        # ---> es sind doch weniger als 11000, ich runde aber trotzdem auf
+	my($bln_str, $pdm_str) = (11000, 550);
 	# XXX Use format number to get a comma in between.
 
 	my $city = ($osm_data && $datadir =~ m,data-osm/(.+),) ? $1 : 'Berlin';
@@ -3009,7 +3016,10 @@ function " . $type . "char_init() {}
 	        $slippymap_url->param( 'area', $area );
 		my @center =  exists $geo->{'center'} ? @{ $geo->{'center'} } : @{ $geo->{'bbox_wgs84'} };
 		@weather_coords = ( $center[1], $center[0] );
-	    } 
+	    } elsif (is_localhost($q)) {
+		warn "Reset weather coordinates for localhost\n";
+		@weather_coords = ( 0,0);
+ 	    } 
 
 	    elsif (exists $geo->{'center'}) {
                $slippymap_url->param( 'city_center', join(",", @{ $geo->{'center'} }) ) 
@@ -3470,6 +3480,12 @@ sub is_production {
 
     return 1 if -e "/tmp/is_production";
     return $q->virtual_host() =~ /^www\d?\.bbbike\.org$/i ? 1 : 0;
+}
+
+sub is_localhost {
+    my $q = shift;
+
+    return $q->virtual_host() =~ /^localhost$/i ? 1 : 0;
 }
 
 sub is_resultpage {
@@ -5510,8 +5526,7 @@ sub display_route {
 
 
  OUTPUT_DISPATCHER:
-    if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|json|json-short|geojson|perldump|gpx-route)$/) {
-	
+    if (defined $output_as && $output_as =~ /^(xml|yaml|yaml-short|json|json-short|geojson|geojson-short|perldump|gpx-route)$/) {
 	for my $tb (@affecting_blockings) {
 	    $tb->{longlathop} = [ map { join ",", convert_data_to_wgs84(split /,/, $_) } @{ $tb->{hop} || [] } ];
 	}
@@ -5604,13 +5619,14 @@ sub display_route {
 	    if ($cache_entry) {
 		$cache_entry->put_content($json_output, {headers => \@headers});
 	    }
-	} elsif ($output_as eq 'geojson') {
+	} elsif ($output_as =~ m{^geojson(-short)?$}) {
+	    my $is_short = !!$1;
 	    http_header
 		(-type => "application/json",
 		 @weak_cache,
 		);
 	    require BBBikeGeoJSON;
-	    print BBBikeGeoJSON::bbbikecgires_to_geojson_json($res);
+	    print BBBikeGeoJSON::bbbikecgires_to_geojson_json($res, short => $is_short);
 	} elsif ($output_as eq 'gpx-route') {
 	    require Strassen::GPX;
 	    my $filename = filename_from_route($startname, $zielname) . ".gpx";
