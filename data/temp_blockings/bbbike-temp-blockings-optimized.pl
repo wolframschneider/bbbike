@@ -2159,7 +2159,16 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_020398',
+         'until' => 1382104800,
+         'text' => 'Kopernikusstr. (Friedrichshain): Baustelle, Fahrbahn ab Warschauer Str. bis Simon-Dach-Str. gesperrt, bis Mitte September 2013',
+         'from' => 1380175440,
+         'id' => 2188,
+         'data' => 'userdel	q3::inwork; 13651,11731 13895,11663
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        undef,
@@ -2447,15 +2456,7 @@ userdel	2::night 14838,11410 14792,11391
        undef,
        undef,
        undef,
-       {
-         'until' => 1380232800,
-         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen Marathon und Deutschlandfest gesperrt',
-         'from' => 1379995200,
-         'id' => 2387,
-         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'periodic' => 1,
          'until' => 1380513600,
@@ -2639,14 +2640,13 @@ userdel	q2::inwork 5258,11285 5247,10992
        undef,
        {
          'until' => undef,
-         'text' => 'Richardstr.: Baustelle zwischen Richardplatz und Herrnhuter Weg, Fahrtrichtung gesperrt',
+         'text' => 'Richardstr.: Baustelle zwischen Kirchgasse und Berthelsdorfer Str., Fahrtrichtung gesperrt',
          'from' => undef,
          'id' => 2425,
          'data' => '#: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-08-08
+#: last_checked: 2013-09-27
 #: check_frequency: 60d
-#: XXX Straße wird asphaltiert (siehe auch Eintrag in fragezeichen-orig)
-userdel	q4::inwork; 13288,7653 13245,7742 13226,7775 13150,7845 13103,7889
+userdel	q4::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904 12870,8087
 ',
          'type' => 'handicap'
        },
@@ -2970,7 +2970,10 @@ userdel	q4::inwork 7001,8161 7250,8223
          'text' => 'Modersohnstr., Gärtnerstr.: Bauarbeiten, Einbahnstraße zwischen Revaler Str. und Wühlischstr. (offen Richtung Süden), Ende der Bauarbeiten unbekannt',
          'from' => undef,
          'id' => 2495,
-         'data' => 'userdel	q4::inwork; 14134,11272 14181,11434 14211,11552
+         'data' => '#: XXX wird die Sperrung vielleicht früher aufgehoben?
+#: last_checked: 2013-09-27
+#: next_check: 2013-10-04
+userdel	q4::inwork; 14134,11272 14181,11434 14211,11552
 ',
          'type' => 'handicap'
        }

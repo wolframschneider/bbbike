@@ -136,6 +136,11 @@ sub run_checks {
 	    $o->{from} > $o->{until}) {
 	    die "Interval mismatch: " . Dumper($o);
 	}
+	if (exists $o->{data}) {
+	    if ($o->{data} =~ m{^\s*$}) {
+		die "Empty data: " . Dumper($o);
+	    }
+	}
 
 	my $str_obj;
 	my $full_path;
@@ -150,9 +155,15 @@ sub run_checks {
 	} elsif ($o->{data}) {
 	    eval { 
 		$str_obj = Strassen->new_from_data_string($o->{data});
+		# Iterate over records for correctness check
+		$str_obj->init;
+		while(1) {
+		    my $ret = $str_obj->next;
+		    last if !@{$ret->[Strassen::COORDS]};
+		}
 	    };
 	    if ($@) {
-		warn "WARNING: Corrupt data for $o->{from} - $o->{until}\n";
+		die "ERROR: Corrupt data for " . Dumper($o) . ": $@\n";
 	    }
 	}
 
