@@ -195,3 +195,6 @@ cgi/msg/ru
 cgi/msg/zh
 .bbbike-extract-pro.rc
 .bbbike-extract.rc
+world/etc/lighttpd/test-more.conf
+world/web/data
+cgi/log.cgi
