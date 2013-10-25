@@ -169,6 +169,7 @@ sub custom_draw {
     my $name_draw = eval '\%' . $linetype . "_name_draw";
     my $coord_input;
     my $center_beginning = 0;
+    my $auto_enlarge_scrollregion = 1;
 
     $custom_draw_directory = $datadir if !defined $custom_draw_directory;
 
@@ -268,6 +269,10 @@ sub custom_draw {
 		     $f->Checkbutton(-variable => \$center_beginning),
 		     -sticky => "w");
 
+	    Tk::grid($f->Label(-text => M"Scrollregion bei Bedarf vergrößern"),
+		     $f->Checkbutton(-variable => \$auto_enlarge_scrollregion),
+		     -sticky => "w");
+
 	    $f = $t->Frame->pack(-fill => "x");
 	    Tk::grid($f->Button(Name => "ok",
 				-command => sub {
@@ -351,6 +356,8 @@ sub custom_draw {
 	delete $str_obj{$abk};
     }
     plot($linetype, $abk, %args);
+    # the freshly created object
+    my $layer_obj = ($linetype eq 'p' ? $p_obj{$abk} : $str_obj{$abk});
 
     # XXX The bindings should also be recycled if the layer is deleted!
     for (($linetype eq 'p' ? ("$abk-img", "$abk-fg") : ($abk))) {
@@ -360,6 +367,10 @@ sub custom_draw {
     if (@BBBike::ExtFile::scrollregion) {
 	set_scrollregion(@BBBike::ExtFile::scrollregion);
     }
+    if ($auto_enlarge_scrollregion) {
+	enlarge_scrollregion_for_layer($abk);
+    }
+
     if ($BBBike::ExtFile::p_attrib && $linetype eq 'p') {
 	$p_attrib{$abk} = $BBBike::ExtFile::p_attrib;
     } else {
@@ -375,12 +386,11 @@ sub custom_draw {
     if (defined $BBBike::ExtFile::center_on_coord) {
 	$coord = $BBBike::ExtFile::center_on_coord;
     } elsif ($center_beginning) {
-	my $obj = $linetype eq 'p' ? \%p_obj : \%str_obj;
-	if ($obj->{$abk}) {
-	    my $r = $obj->{$abk}->get(0);
+	if ($layer_obj) {
+	    my $r = $layer_obj->get(0);
 	    if ($r) {
 		$coord = $r->[Strassen::COORDS()]->[0];
-		my $conv = $obj->{$abk}->get_conversion; # XXX %conv_args???
+		my $conv = $layer_obj->get_conversion; # XXX %conv_args???
 		if ($conv) {
 		    $coord = $conv->($coord);
 		}
@@ -468,9 +478,23 @@ sub enlarge_scrollregion_for_layer {
     my $abk = shift;
     IncBusy($top);
     eval {
-	my(@bbox) = $c->bbox(_layer_tag_expr($abk));
-	if (@bbox) {
-	    enlarge_transposed_scrollregion(@bbox);
+	my @untransposed_bbox;
+	if ($lazy_plot) { # must get bbox of new layer, as not everything is plotted right now
+	    my $ret = main::get_layer_by_abk($abk);
+	    if ($ret && $ret->{obj}) {
+		@untransposed_bbox = $ret->{obj}->bbox;
+	    } else {
+		warn "Cannot get bbox for layer $abk, just enlarge scrollregion to the already visible parts...\n";
+	    }
+	}
+	my @transposed_bbox;
+	if (!@untransposed_bbox) { # non lazy-plot mode, or if getting bbox failed above
+	    @transposed_bbox = $c->bbox(_layer_tag_expr($abk));
+	}
+	if (@untransposed_bbox) {
+	    enlarge_scrollregion(@untransposed_bbox);
+	} elsif (@transposed_bbox) {
+	    enlarge_transposed_scrollregion(@transposed_bbox);
 	} else {
 	    die "No bbox for tag $abk: maybe the layer is empty";
 	}
@@ -614,25 +638,19 @@ sub additional_layer_dialog {
 	#$f->Label(-text => $title, -font => $font{large}, @b_opts)->pack(@pack_opts);
 	for my $i (1..MAX_LAYERS) {
 	    my $abk = "L$i";
-	    if ($str_draw{$abk}) {
-		$f->Button(-text => "Straßen $abk ($str_file{$abk})",
+	    my $ret = main::get_layer_by_abk($abk);
+	    if ($ret) {
+		my $type = $ret->{type};
+		my $full_abk = $ret->{abk};
+		my $cb = $type eq 's' ? $s_cb : $p_cb;
+		my $label = ($type eq 's' ? M"Straßen" :
+			     $type eq 'p' ? M"Punkte" :
+			     $type eq 'sperre' ? M"Sperrungen" : M"unbekannter Typ"
+			    );
+		$f->Button(-text => "$label $abk ($ret->{file})",
 			   @b_opts,
 			   -command => sub {
-			       $s_cb->($abk);
-			   })->pack(@pack_opts);
-	    }
-	    if ($p_draw{$abk}) {
-		$f->Button(-text => "Punkte $abk ($p_file{$abk})",
-			   @b_opts,
-			   -command => sub {
-			       $p_cb->($abk);
-			   })->pack(@pack_opts);
-	    }
-	    if ($p_draw{"$abk-sperre"}) {
-		$f->Button(-text => "Sperrungen $abk (" . $p_file{"$abk-sperre"} . ")",
-			   @b_opts,
-			   -command => sub {
-			       $p_cb->($abk . "-sperre");
+			       $cb->($full_abk);
 			   })->pack(@pack_opts);
 	    }
 	}

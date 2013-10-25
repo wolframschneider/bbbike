@@ -158,7 +158,7 @@ Friedrich-Engels-Str./Kastanienallee	Zs 8887,20622
 Uhlandstr./Lessingstr.	Zs 7560,20447
 Buchberger Str./Weg zum S Nˆldnerplatz	Zs 15721,11280
 Liebenwalder Straﬂe/Ecke Heilgenstadter Straﬂe	Zs 16846,14661
-Wartenberger Straﬂe/Ecke Anna-Ebermann-Straﬂe	Zs 17644,16695
+Wartenberger Straﬂe/Ecke Anna-Ebermann-Straﬂe	Zs 17645,16699
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-lichtenberg/presse/archiv/20071116.1100.89038.html vvv
 Werneuchener Straﬂe 14	Zs 16546,15059
 Ribnitzer Straﬂe/Ecke Zum Hechtgraben	Zs 16407,18257
@@ -504,3 +504,9 @@ Durlacher Str./T¸binger Str.	Zs 5505,8246
 #: last_checked: 2013-09-04
 #: check_frequency: 120d
 B‰kestr.	Zs 4550,3123
+Elsa-Br‰ndstrˆm-Str./Trelleborger Str.	Zs 11279,17142
+#: XXX genaue Position?
+#: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=4019
+Stadtrandstr./Waldkrankenhaus	Zs -6414,17079
+# REMOVED --- #: by: http://heiligensee.cdu-reinickendorf.de/Zeitung/Wir-im-Norden_12_0030_web.pdf --- #: by: http://www.berlin.de/ba-reinickendorf/bvv-online/vo020.asp?VOLFDNR=2909
+Eichelh‰herstr./Rabenstr.	Zs -1790,19650

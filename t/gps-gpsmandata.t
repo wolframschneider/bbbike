@@ -28,7 +28,7 @@ use lib (
 use BBBikeTest qw(gpxlint_string);
 use File::Temp qw(tempfile);
 
-plan tests => 36;
+plan tests => 47;
 
 use_ok 'GPS::GpsmanData';
 
@@ -71,14 +71,28 @@ EOF
 	my $gps = GPS::GpsmanMultiData->new;
 	isa_ok($gps, "GPS::GpsmanMultiData");
 	$gps->load($tmpfile);
-	my $gpx = $gps->as_gpx; # preserve comments
-	gpxlint_string($gpx);
 
-	my $root = XML::LibXML->new->parse_string($gpx)->documentElement;
-	$root->setNamespaceDeclURI(undef, undef);
-	like($root->findvalue('/gpx/wpt/cmt'), qr{26-JUL-10 11:37:07}, 'Found first comment')
-	    or diag "Please check the mapping in the bike2008 directory";
-	like($root->findvalue('/gpx/wpt/cmt'), qr{26-JUL-10 14:44:48}, 'Found second comment');
+	{
+	    my $gpx = $gps->as_gpx(autoskipcmt => 0); # preserve comments
+	    gpxlint_string($gpx);
+
+	    my $root = XML::LibXML->new->parse_string($gpx)->documentElement;
+	    $root->setNamespaceDeclURI(undef, undef);
+	    is($root->findvalue('/gpx/wpt[1]/cmt'), q{26-JUL-10 11:37:07}, 'Found first comment');
+	    is($root->findvalue('/gpx/wpt[2]/cmt'), q{26-JUL-10 14:44:48}, 'Found second comment');
+	}
+
+	{
+	    my $gpx = $gps->as_gpx; # autoskipcmt => 1, does not preserve date comments
+	    gpxlint_string($gpx);
+
+	    my $root = XML::LibXML->new->parse_string($gpx)->documentElement;
+	    $root->setNamespaceDeclURI(undef, undef);
+	    isnt($root->findvalue('/gpx/wpt[1]/cmt'), q{26-JUL-10 11:37:07}, 'Did not find datetime-like comment');
+	    is($root->findvalue('/gpx/wpt[1]/time'), q{2010-07-26T09:37:07Z}, '... but time is still set');
+	    isnt($root->findvalue('/gpx/wpt[2]/cmt'), q{26-JUL-10 14:44:48}, 'Also did not find second comment');
+	    is($root->findvalue('/gpx/wpt[2]/time'), q{2010-07-26T12:44:48Z}, '... but time is still set');
+	}
     }
 
     {
@@ -157,7 +171,9 @@ EOF
     is(scalar @{ $gps->Chunks }, 3, 'Expected number of chunks');
 
     is($gps->Chunks->[0]->TrackAttrs->{'srt:vehicle'}, 'pedes', 'Expected attribute');
+    is($gps->Chunks->[0]->Name, 'ACTIVE LOG', 'Expected first track name');
     is($gps->Chunks->[1]->TrackAttrs->{'srt:vehicle'}, 'u-bahn', 'Expected attribute in 2nd chunk');
+    is($gps->Chunks->[1]->Name, 'ACTIVE LOG 12', 'Expected track name in 2nd chunk');
 
     my @flat_wpt = $gps->flat_track;
     is(scalar(@flat_wpt), 4, 'Found four wpts in track');
@@ -166,6 +182,13 @@ EOF
 
     my $gpx = $gps->as_gpx(symtocmt => 1);
     gpxlint_string($gpx);
+
+    {
+	my $root = XML::LibXML->new->parse_string($gpx)->documentElement;
+	$root->setNamespaceDeclURI(undef, undef);
+	is($root->findvalue('/gpx/trk[1]/name'), q{ACTIVE LOG}, 'Found 1st name');
+	is($root->findvalue('/gpx/trk[2]/name'), q{ACTIVE LOG 12}, 'Found 2nd name');
+    }
 
     {
 	my($tmpfh,$tmpfile) = tempfile(UNLINK => 1, SUFFIX => '.trk')
@@ -209,6 +232,12 @@ EOF
     $gps_multi->load($tmpfile);
     my $gpx = $gps_multi->as_gpx(symtocmt => 1);
     gpxlint_string($gpx);
+
+    {
+	my $root = XML::LibXML->new->parse_string($gpx)->documentElement;
+	$root->setNamespaceDeclURI(undef, undef);
+	is($root->findvalue('/gpx/rte[1]/name'), q{Seume -  Ebe}, 'Found 1st name in route');
+    }
 }
 
 {
@@ -282,6 +311,24 @@ EOF
     $gps_multi->load($tmpfile);
     my $gpx = $gps_multi->as_gpx(symtocmt => 1);
     gpxlint_string($gpx);
+}
+
+{
+    # track + waypoint
+    my $gpsman_sample_file = <<'EOF';
+!Format: DMS 0 WGS 84
+!Creation: no
+
+!T:	1. Dessau-Wittenberg
+	12-Aug-2013 08:54:33	N51 50 24.7	E12 14 01.3	67.9
+	12-Aug-2013 08:54:39	N51 50 24.5	E12 14 01.2	68.4
+!W:
+Bauhaus Dessau		N51 50 20.8	E12 13 36.3
+EOF
+    my $gps = GPS::GpsmanMultiData->new;
+    $gps->parse($gpsman_sample_file);
+    my @track = $gps->flat_track;
+    is scalar @track, 2, 'Found two waypoints in track (waypoints ignored)';
 }
 
 sub wpts_to_string {

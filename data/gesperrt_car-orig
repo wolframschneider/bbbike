@@ -39,11 +39,11 @@ Hagelberger Str.	3 8679,9544 8774,9534 8769,9290
 Warschauer - Marchlewskistr.	3 13476,11174 13493,11217 13541,11355 13496,11384
 Holtei von S - Boxhagener	3 14575,11407 14639,11512 14577,11582
 Boxhagener von W - Holtei	3 14577,11582 14639,11512 14710,11626
-Holtei von N - Boxhagener	3 14710,11626 14639,11512 14752,11369 14771,11345
-Boxhagener von E - Holtei	3 14771,11345 14752,11369 14639,11512 14575,11407
+Holtei von N - Boxhagener	3 14710,11626 14639,11512 14752,11369
+Boxhagener von E - Holtei	3 14752,11369 14639,11512 14575,11407
 Bachstr. - 17. Juni (?)	3 5790,12026 5775,11975 5758,11895 5900,11913
 Fasanen - Hertzallee (nur für BVG frei)	3 5456,11742 5356,11512 5352,11502 5587,11397
-Fasanenstr.	1 5198,10234 5207,10399
+Fasanenstr.	1 5198,10234 5196,10398
 Naumannstr. - Kolonnenstr.	3 7713,8600 7709,8777 7642,8815
 Naumannstr. N - H	3 7707,8915 7709,8777 7713,8600
 zum Mariannenplatz	2 11950,11157 11921,11185
@@ -103,7 +103,7 @@ Koserstr.	1 2950,6141 3112,6090 3118,6140 3209,6206 3309,6270
 Offenbacher Str.	1 4506,7734 4559,7672 4785,7609 5045,7623
 Wassergasse	1 11034,11895 11024,11789
 Kienitzer Str.	1 12830,8031 12692,7996 12583,7974 12466,7946
-Alt-Mariendorf (Nord)	1 9065,3693 9106,3703 9275,3753 9410,3793 9731,3889
+Alt-Mariendorf (Nord)	1 9065,3693 9106,3703 9275,3753 9426,3797 9731,3889
 # seit November/Dezember 2007 (Bau der Ampel) nicht mehr: Modersohnstr. - B96a	3 14007,10802 13919,10583 13986,10549 14103,10489
 Almstadtstr.	1 10790,13565 10767,13443 10757,13401 10699,13173
 Schendelgasse	1 10653,13493 10703,13467 10767,13443
@@ -172,7 +172,7 @@ Hohenfriedbergstr. - Brunhildstr.	3 7707,8915 7790,8913 7782,9115
 Olga-Benario-Prestes-Str.	1 12628,14650 12473,14763
 Filandastr.	3nocross 5687,5486 5687,5586 5683,5672 5681,5743
 Gelnitzstr.	1 22882,5834 22897,5740
-Kurfürstendamm	3nocross 2770,10024 2828,10040 2963,10078
+Kurfürstendamm	3nocross 2770,10024 2828,10040 2974,10081
 Kurfürstendamm	3nocross 3111,10116 3189,10141 3289,10174 3374,10201
 Eichkatzweg	1 925,9644 794,9472
 Zikadenweg	1 703,9538 835,9707 937,9841 1046,9989 1047,10002 1159,10149
@@ -314,7 +314,7 @@ Cecilienstr.: Mittelstreifen	3nocross 21358,13909 21398,13906 21466,13903 21576,
 Daumstr.: Mittelstreifen	3nocross -1746,16667 -1710,16735 -1675,16813
 Daumstr.: Mittelstreifen	3nocross -1710,16735 -1746,16667 -1765,16603 -1783,16533 -1798,16465 -1810,16391
 Karlstr.	1 22556,4386 22458,4134
-Märkische Allee: Mittelstreifen	3nocross 21400,18817 21335,18679 21251,18508
+Märkische Allee: Mittelstreifen	3nocross 21400,18817 21335,18679 21309,18626 21251,18508
 #: note: Luftbild
 Berliner Str.: Mittelstreifen	3nocross 1214,3198 1338,3300 1415,3362
 #: note: Luftbild
@@ -423,7 +423,7 @@ Georg-Hermann-Allee (Potsdam): (teilweise) Einbahnstraße	1 -13429,1069 -13418,16
 Ruhlebener Str.: Mittelstreifen	3nocross -3002,13442 -2977,13424 -2967,13417 -2937,13399 -2706,13291
 An der Wuhlheide: Brückenauffahrt	3nocross 18492,6893 18404,6946 18225,7004 18010,7133
 #: note: Luftbild
-Müllerstr.: Mittelstreifen	3nocross 6311,16457 6208,16546 6103,16635
+Müllerstr.: Mittelstreifen	3nocross 6304,16447 6201,16538 6098,16630
 B110 nach Swinoujscie: kein Grenzübergang für Autos	2 62279,166179 62213,166173
 #: note: Luftbild
 Neuköllner Str.: Mittelstreifen	3nocross 16643,1460 16698,1392 16815,1278
@@ -436,7 +436,7 @@ Hindenburgdamm: Mittelstreifen	3nocross 4515,4760 4515,4581 4521,4484
 #: note: Luftbild
 Berliner Str./Masurenstr.: Straßenbahntrasse	3nocross 10878,17490 10880,17469 10886,17396
 #: note: Luftbild
-Müllerstr.: Mittelstreifen	3nocross 6608,16180 6450,16325 6444,16331
+Müllerstr.: Mittelstreifen	3nocross 6608,16180 6447,16321 6440,16327
 #: note: Luftbild
 Reinickendorfer Str.: Mittelstreifen	3nocross 7948,15802 7962,15633 7966,15571
 #: by: Rainer Ludwig:
@@ -571,7 +571,7 @@ Adlergestell: Mittelstreifen	3nocross 19735,3643 19676,3705 19633,3751
 #: note: Luftbild:
 Adlergestell: Mittelstreifen	3nocross 19472,3922 19587,3801 19633,3751
 Landsberger Allee: Überqueren des Mittelstreifens verboten	3nocross 18057,14549 18183,14573 18365,14607
-Indira-Gandhi-Str.: Straßenbahntrasse	3nocross 14609,15921 14597,15970 14595,15980 14576,16069 14550,16161
+Indira-Gandhi-Str.: Straßenbahntrasse	3nocross 14609,15921 14597,15970 14595,15980 14576,16069 14552,16171
 #: by: Burkard dau:
 #: confirmed_by: srt
 Lenther Steig	1 1022,14898 1037,14814 1042,14721
@@ -609,7 +609,7 @@ Krebsgang	1 14693,7168 14792,7192
 Methfesselstr.: Durchfahrt gesperrt (Schranke)	3 * 9125,9078 *
 #: note: Luftbild
 Neue Filandastr./Filandatr.	3nocross 5687,5486 5671,5389 5659,5313
-Müllerstr.: Mittelstreifen	3nocross 6019,16712 5937,16784 5900,16817 5777,16924
+Müllerstr.: Mittelstreifen	3nocross 6013,16705 5931,16777 5894,16810 5772,16919
 Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16734,9990 16539,10097 16353,10207
 Zobtener Str.: Durchfahrt gesperrt (Poller)	3 16353,10207 16539,10097 16734,9990
 Waldowallee - Am Carlsgarten: Durchfahrt gesperrt (Betonblöcke)	3 * 19509,7999 *
@@ -654,7 +654,7 @@ Wustermarker Str.:	1 -4385,14305 -4559,14341
 Berliner Str.: Mittelstreifen und Straßennbahntrasse	3nocross 10849,17848 10858,17721 10878,17490
 #: note: public imagery vvv
 Hundekehlestr.: Mittelstreifen	3nocross 2346,7684 2460,7658 2576,7634
-Lietzenburger Str.	3nocross 5047,10381 5207,10399 5329,10422
+Lietzenburger Str.	3nocross 5047,10381 5196,10398 5329,10422
 Greifswalder Str.: Straßenbahntrasse	3nocross 12228,14404 12188,14350 12177,14335 12077,14186
 Sybelstr.	1 3981,10590 3883,10585
 Giesebrechtstr.	1 3912,10699 3997,10607 4017,10585 4030,10575 4153,10453 4157,10418
@@ -680,7 +680,7 @@ Straße 201	1 9366,18669 9532,18819
 Majakowskiring	1 10373,18889 10354,18814 10203,18762 10041,18697 9985,18735 10003,18798 10055,18831 10162,18867 10184,18875 10307,18915 10373,18889
 Killisch-von-Horn-Weg: Poller	3 * 9707,17941 *
 Frauenfelder Weg - Markstr.	3 7441,17009 7647,17037 7644,17054
-Kongostr.	1 6349,16213 6450,16325
+Kongostr.	1 6349,16213 6447,16321
 Polierweg: Schranke vor dem Malersteig	3 13650,3025 13596,3039 *
 Polierweg: Schranke vor dem Malersteig	3 * 13596,3039 13650,3025
 Polierweg	1 13483,3064 13100,3159 13048,3134
@@ -699,15 +699,15 @@ Abbestr.: nur für Anlieger, herausfahrbare Poller	2 4762,12229 4683,12072
 Knesebeckstr. - Hardenbergstr.	3 4897,11354 4919,11605 4900,11626
 Sakrower Kirchweg	1 -8162,4025 -8255,3946 -8308,3902 -8401,3894 -8449,3907
 Sibeliusweg	1 -6797,4991 -6789,5052 -6787,5076 -6762,5133 -6747,5169
-Angerburger Allee	1 -1524,11108 -1608,11133 -1885,11392 -1931,11437 -1994,11496
-Sensburger Allee	1 200,11428 326,11391 439,11228
+Angerburger Allee	1 -1538,11126 -1608,11133 -1885,11392 -1931,11437 -1994,11496
+Sensburger Allee	1 200,11428 326,11391 438,11236
 Kyllburger - Darßer Str	3 16670,17454 16779,17521 16751,17560
 Am Steinberg	1 13183,17580 12998,17480
 Schäßburger Weg: Poller	3 * 7127,-248 *
 Fuchsmühler Weg: Durchfahrt gesperrt	2 7277,-77 7231,25
 Poller	3 7181,-15 7231,25 *
 Poller	3 * 7231,25 7181,-15
-Mittelstreifen	3nocross 9336,4142 9364,4011 9410,3793
+Mittelstreifen	3nocross 9346,4144 9372,4012 9426,3797
 Ontarioseestr.: Sackgasse für Autos	3 18408,10041 18339,10048 *
 Ontarioseestr.: Sackgasse für Autos	3 * 18339,10048 18408,10041
 #: by: Almuth Maasz vvv
@@ -943,3 +943,11 @@ Berliner Str.: Mittelstreifen	3nocross 5647,9022 5725,9041 5783,9060
 #: note: Überquerungsmöglichkeit für Fußgänger, allerdings keine abgesenkten Bordsteine
 Grunewaldstr.: Mittelstreifen	3nocross 6863,9254 6923,9266 7006,9282
 Herderstr. (Charlottenburg)	1 4452,11570 4434,11360
+Siemensstr.: Sperrfläche, Abbiegen nicht erlaubt	3nocross 17492,6462 17530,6496 17614,6571
+Fasanenstr. (Ahrensfelde): Poller	3 * 22031,19261 *
+#: by: http://www.berlin.de/ba-reinickendorf/bvv-online/vo020.asp?VOLFDNR=3391&date=20131021 (für Radverkehr freigegeben) vvv
+Oelder Weg	1 1967,18743 1965,18686
+#: confirmed_by: srt
+Bernhard-Lichtenberg-Platz	1 2643,18738 2731,18729 2867,18736
+#: by: ^^^
+Fasanenstr.	1 5196,10398 5215,10711

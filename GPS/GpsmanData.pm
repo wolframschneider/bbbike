@@ -150,6 +150,9 @@ use GPS::Util; # for eliminate_umlauts
 	    require POSIX;
 	    my $timexml = $xmlnode->addNewChild(undef, 'time');
 	    $timexml->appendText(POSIX::strftime("%Y-%m-%dT%H:%M:%SZ", gmtime($epoch))); # %FT%T is not portable
+	    if ($args{autoskipcmt}) { # if the comment was recognized as a datetime, then there's no need to dump it also as a comment
+		$args{skipcmt} = 1;
+	    }
 	}
 
 	my $ident = $wpt->Ident;
@@ -741,7 +744,7 @@ sub convert_DMS_to_DDD {
 sub convert_DDD_to_DDD {
     my($in) = @_;
     if ($in =~ /^([NESW]?)(\d+\.?\d*)$/) {
-	my($dir,$ddd) = ($1,$2,$3,$4);
+	my($dir,$ddd) = ($1,$2);
 	if (defined $dir && $dir =~ /[SW]/) {
 	    $ddd *= -1;
 	}
@@ -1173,12 +1176,18 @@ sub convert_to_route {
 # Options:
 #   symtocmt => $bool: hack to put symbol name into comment, for gpx
 #                      renderers not dealing the sym tag (e.g. merkaartor)
+#   skipcmt => $bool: hack to skip creation of comment elements
+#   autoskipcmt => $bool: skip creation of comment elements if recognized as
+#                         a date/time element; by default set to a true value
 sub as_gpx {
     my($self, %args) = @_;
 
     my $sym_to_cmt = delete $args{symtocmt};
     my $skip_cmt = $sym_to_cmt ? 1 : delete $args{skipcmt};
+    my $auto_skip_cmt = exists $args{autoskipcmt} ? delete $args{autoskipcmt} : 1;
     die "Unhandled arguments: " . join(" ", %args) if %args;
+
+    my @std_wpt_as_gpx_args = (symtocmt => $sym_to_cmt, skipcmt => $skip_cmt, autoskipcmt => $auto_skip_cmt);
 
     require GPS::GpsmanData::GarminGPX;
     require XML::LibXML;
@@ -1191,23 +1200,36 @@ sub as_gpx {
     $gpx->setNamespace("http://www.topografix.com/GPX/1/1");
     $gpx->setAttribute("xsi:schemaLocation", "http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd");
     for my $chunk (@{ $self->Chunks }) {
+
+	my $add_name = sub {
+	    my $elem = shift;
+	    my $name = $chunk->Name;
+	    if (defined $name && length $name) {
+		my $namexml = $elem->addNewChild(undef, 'name');
+		$namexml->appendText($name);
+	    }
+	};
+
 	if ($chunk->Type eq $chunk->TYPE_WAYPOINT) {
+	    # No name handling for waypoints, waypoints have their own idents
 	    for my $wpt (@{ $chunk->Waypoints }) {
 		my $wptxml = $gpx->addNewChild(undef, "wpt");
-		$wpt->as_gpx($wptxml, $chunk, symtocmt => $sym_to_cmt, skipcmt => $skip_cmt);
+		$wpt->as_gpx($wptxml, $chunk, @std_wpt_as_gpx_args);
 	    }
 	} elsif ($chunk->Type eq $chunk->TYPE_TRACK) {
 	    my $trkxml = $gpx->addNewChild(undef, "trk");
+	    $add_name->($trkxml);
 	    my $trksegxml = $trkxml->addNewChild(undef, "trkseg");
 	    for my $wpt (@{ $chunk->Track }) {
 		my $trkptxml = $trksegxml->addNewChild(undef, "trkpt");
-		$wpt->as_gpx($trkptxml, $chunk, symtocmt => $sym_to_cmt);
+		$wpt->as_gpx($trkptxml, $chunk, @std_wpt_as_gpx_args);
 	    }
 	} elsif ($chunk->Type eq $chunk->TYPE_ROUTE) {
 	    my $rtexml = $gpx->addNewChild(undef, 'rte');
+	    $add_name->($rtexml);
 	    for my $wpt (@{ $chunk->Track }) {
 		my $rteptxml = $rtexml->addNewChild(undef, 'rtept');
-		$wpt->as_gpx($rteptxml, $chunk, symtocmt => $sym_to_cmt);
+		$wpt->as_gpx($rteptxml, $chunk, @std_wpt_as_gpx_args);
 	    }
 	}
     }
@@ -1266,7 +1288,7 @@ sub flat_track {
     my($self) = @_;
     my @track;
     for my $chunk (@{ $self->Chunks }) {
-	for my $wpt (@{ $chunk->Track }) {
+	for my $wpt (@{ $chunk->Track || [] }) {
 	    push @track, $wpt;
 	}
     }
