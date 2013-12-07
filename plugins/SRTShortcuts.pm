@@ -25,7 +25,7 @@ BEGIN {
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.88;
+$VERSION = 1.89;
 
 use your qw(%MultiMap::images $BBBikeLazy::mode
 	    %main::line_width %main::p_width %main::str_draw %main::p_draw
@@ -184,12 +184,12 @@ sub add_button {
     my $mmf = $main::top->Subwidget("ModeMenuPluginFrame");
     return unless defined $mf;
 
-    my $b;
-    $b = $mf->Label
+    my $btn;
+    $btn = $mf->Label
 	(-text => "Srt",
 	);
-    BBBikePlugin::replace_plugin_widget($mf, $b, __PACKAGE__.'_on');
-    $main::balloon->attach($b, -msg => "SRT Shortcuts")
+    BBBikePlugin::replace_plugin_widget($mf, $btn, __PACKAGE__.'_on');
+    $main::balloon->attach($btn, -msg => "SRT Shortcuts")
 	if $main::balloon;
 
     my $rare_or_old_menu = $mmf->Menu
@@ -346,13 +346,19 @@ EOF
 				  set_layer_highlightning => 1,
 				  special_raise => 1,
 				  Width => 1),
+		'-',
+		layer_checkbutton("Add other-tracks.bbd (other people's GPS tracks)",
+				  'str', $other_tracks,
+				  set_layer_highlightning => 1,
+				  special_raise => 1,
+				  Width => 1),
+		layer_checkbutton("Add other_sites tracks.bbd",
+				  'str', "$bbbike_rootdir/misc/gps_data/other_sites/tracks.bbd",
+				  set_layer_highlightning => 1,
+				  special_raise => 1,
+				  Width => 1),
 	       ],
 	      ],
-	      layer_checkbutton([$do_compound->("Add other-tracks.bbd (other people's GPS tracks)")],
-				'str', $other_tracks,
-				set_layer_highlightning => 1,
-				special_raise => 1,
-				Width => 1),
 	      layer_checkbutton([$do_compound->("Add points-all.bbd (all GPS trackpoints)")],
 				'p', "$bbbike_rootdir/tmp/points-all.bbd",
 				oncallback => sub {
@@ -370,7 +376,7 @@ EOF
 	      [Cascade => $do_compound->('Add layer', $main::newlayer_photo), -menuitems =>
 	       [
 		layer_checkbutton([$do_compound->('hm96.bbd (Höhenpunkte)')],
-				  'p', "$bbbike_rootdir/misc/senat_b/hm96.bbd",
+				  'p', "$bbbike_auxdir/data/senat_b/hm96.bbd",
 				  oncallback  => sub { $main::top->bind("<F12>"=> \&find_nearest_hoehe) },
 				  offcallback => sub { $main::top->bind("<F12>"=> '') },
 				 ),
@@ -449,11 +455,33 @@ EOF
 		  } @acc_cat_split_streets_years,
 		 ],
 		],
-		layer_checkbutton([$do_compound->('Weighted matches')],
-				  'str', "$bbbike_rootdir/tmp/weighted-matches.bbd",
-				  above => $str_layer_level,
-				  Width => undef, # XXX weighted-matches.desc sets its own widths, but why it isn't winning?
-				 ),
+		do {
+		    my $glob = "$bbbike_rootdir/tmp/weighted/*_weighted_dir_*.bbd";
+		    require File::Glob;
+		    my @candidates = File::Glob::bsd_glob($glob);
+		    if (!@candidates) {
+			warn <<EOF;
+No candidates for a weighted bbd found
+(tried the glob $glob).
+Please create a file using $bbbike_rootdir/miscsrc/weight_bbd
+(see documentation there)
+EOF
+			();
+		    } else {
+			my($latest) = sort { $b cmp $a } @candidates;
+			my $date_desc;
+			if ($latest =~ m{/(\d{4}-\d{2})_}) {
+			    $date_desc = " (for month $1)";
+			} else {
+			    $date_desc = " (unknown month)";
+			}
+			layer_checkbutton([$do_compound->("Weighted matches$date_desc")],
+					  'str', $latest,
+					  above => $str_layer_level,
+					  Width => undef, # XXX weighted-matches.desc sets its own widths, but why it isn't winning?
+					 );
+		    }
+		},
 		[Button => $do_compound->("Abdeckung"),
 		 -command => sub {
 		     local $main::p_draw{'pp-all'} = 1;
@@ -513,6 +541,9 @@ EOF
 				    above => $str_layer_level,
 				   ),
 		 ],
+		],
+		[Button => $do_compound->("All layers for editing"),
+		 -command => sub { enable_all_layers_for_editing() },
 		],
 	       ],
 	      ],
@@ -717,7 +748,7 @@ EOF
 			       });
 	       }],
 	     ],
-	     $b,
+	     $btn,
 	     __PACKAGE__."_menu",
 	     -title => "SRT Shortcuts",
 	    );
@@ -1056,6 +1087,27 @@ sub add_todays_geocoded_images {
 	main::status_message("The command '@cmd' failed", 'die');
     }
     add_new_layer('str', $tmpfile);
+}
+
+sub enable_all_layers_for_editing {
+    # Don't include "u" here, because it usually disturbs normal editing
+    for my $str_abk (qw(s f w b r rw e qs hs nl gr)) {
+	main::plot('str', $str_abk, -draw => 1);
+    }
+    # XXX hackish. There should be an easier way to do this
+    for my $basefile (qw(zebrastreifen culdesac ortsschilder)) {
+	my $type = "p";
+	my $file = "$main::datadir/$basefile";
+	my $type_file = "$type $file";
+	if (!$layer_for_type_file{$type_file}) {
+	    toggle_new_layer($type, $file);
+	}
+    }
+    main::plot_comments_all(1);
+    # Don't include "u" here, too, see above.
+    for my $p_abk (qw(b r lsa vf sperre)) {
+	main::plot('p', $p_abk, -draw => 1);
+    }
 }
 
 ######################################################################
@@ -2374,7 +2426,7 @@ sub show_bbbike_suggest_toplevel {
     my $is_utf8;
     my $plz;
     for my $def (["$main::datadir/opensearch.streetnames", 1, 1],
-		 ["$main::datadir/strassen", 0, 1],
+		 ["$main::datadir/strassen", 0, 0],
 		 ["$main::datadir/Berlin.coords.data", 0, 0], # usually never used --- check for this file, but possibly use the combined cache file
 		) {
 	my($try_srcfile, $try_is_opensearch_file, $try_is_utf8) = @$def;
@@ -2393,7 +2445,8 @@ sub show_bbbike_suggest_toplevel {
 		my $ms = MultiStrassen->new(@ms);
 		(my($tmpfh), $tempstreetsfile) = File::Temp::tempfile(UNLINK => 1, SUFFIX => "_bbbike_suggest0.data")
 		    or die $!;
-		binmode $tmpfh, ':encoding(utf-8)';
+		## XXX PLZ.pm is not utf-8 capable, so don't use utf-8 here.
+		#binmode $tmpfh, ':encoding(utf-8)';
 		print $tmpfh PLZ->new_data_from_streets($ms);
 		close $tmpfh
 		    or die $!;

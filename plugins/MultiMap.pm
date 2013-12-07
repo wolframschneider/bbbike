@@ -540,6 +540,12 @@ sub showmap_openstreetmap_sautter {
 sub show_openstreetmap_menu {
     my(%args) = @_;
     my $lang = $Msg::lang || 'de';
+    # XXX the sautter map seems to be defect since 2012 (only googlemap visible,
+    #     no transparency effect)
+    #     see discussions in http://forum.openstreetmap.org/viewtopic.php?id=15653
+    #     the replacement mentioned in
+    #     http://forum.openstreetmap.org/viewtopic.php?id=18081 also does not work
+    use constant USE_SAUTTER_MAP => 0;
     my $w = $args{widget};
     my $menu_name = __PACKAGE__ . '_OpenStreetMap_Menu';
     if (Tk::Exists($w->{$menu_name})) {
@@ -555,10 +561,12 @@ sub show_openstreetmap_menu {
 	(-label => 'OpenStreetMap.org ' . ($lang eq 'de' ? '(ohne Marker)' : '(without marker)'),
 	 -command => sub { showmap_openstreetmap(osmmarker => 0, %args) },
 	);
-    $link_menu->command
-	(-label => 'Transparent Map Comparison',
-	 -command => sub { showmap_openstreetmap(variant => 'sautter', %args) },
-	);
+    if (USE_SAUTTER_MAP) {
+	$link_menu->command
+	    (-label => 'Transparent Map Comparison',
+	     -command => sub { showmap_openstreetmap(variant => 'sautter', %args) },
+	    );
+    }
     $link_menu->separator;
     $link_menu->command
 	(-label => ".de-Link kopieren", # XXX lang!
@@ -572,10 +580,12 @@ sub show_openstreetmap_menu {
 	(-label => ".org-Link ohne Marker kopieren", # XXX lang!
 	 -command => sub { _copy_link(showmap_url_openstreetmap(osmmarker => 0, %args)) },
 	);
-    $link_menu->command
-	(-label => "Transparent Map Comparison-Link kopieren", # XXX lang!
-	 -command => sub { _copy_link(showmap_url_openstreetmap(variant => 'sautter', %args)) },
-	);
+    if (USE_SAUTTER_MAP) {
+	$link_menu->command
+	    (-label => "Transparent Map Comparison-Link kopieren", # XXX lang!
+	     -command => sub { _copy_link(showmap_url_openstreetmap(variant => 'sautter', %args)) },
+	    );
+    }
 
     $w->{$menu_name} = $link_menu;
     my $e = $w->XEvent;
@@ -716,8 +726,12 @@ sub showmap_url_bikemapnet {
     my $px = $args{px};
     my $py = $args{py};
     my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
-    sprintf "http://www.bikemap.net/#lat=%s&lng=%s&zoom=%d&type=0",
-	$py, $px, $scale;
+    $scale = 17 if $scale > 17;
+#    sprintf "http://www.bikemap.net/#lat=%s&lng=%s&zoom=%d&type=0",
+#	$py, $px, $scale;
+    sprintf "http://www.bikemap.net/#/z%d/%s,%s/terrain",
+	$scale, $py, $px;
+
 }
 
 sub showmap_bikemapnet {
@@ -736,8 +750,10 @@ sub showmap_url_geocaching {
     my $py = $args{py};
 
     my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
-    sprintf "http://www.geocaching.com/seek/gmnearest.aspx?lat=%s&lng=%s&zm=%d&mt=m",
-	$py, $px, $scale;
+#    sprintf "http://www.geocaching.com/seek/gmnearest.aspx?lat=%s&lng=%s&zm=%d&mt=m",
+#	$py, $px, $scale;
+    sprintf "http://www.geocaching.com/map/default.aspx?lat=%s&lng=%s&zm=%d&mt=m&#?ll=%s,%s&z=%d",
+	($py, $px, $scale) x 2;
 }
 
 sub showmap_geocaching {

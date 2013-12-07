@@ -72,7 +72,7 @@ Triftstr.	Zs 12018,23005
 Hermann-Hesse-Str./Pastor-Niemöller-Platz	Zs 9801,19290
 Achillesstr. vor Grundschule	Zs 15703,24011
 Bizetstr./Smetanastr.	Zs 14067,15984
-Bizetstr./Lindenallee	Zs 14293,16066
+Bizetstr./Lindenallee	Zs 14305,16077
 Blankenburger Str./Siegfriedstr.	Zs 10758,19637
 #: confirmed_by: http://www.panoramio.com/photo/20034655
 Kissingenstr./Neumannstr.	Zs 11374,17955
@@ -272,7 +272,7 @@ Alt-Müggelheim/Sobernheimer Str.	Zs 28207,953
 Alt-Müggelheim/Sobernheimer Str.	Zs 28242,988
 Heilbronner/Katharinenstr.	Zs 2870,10460
 Paulsborner/Caspar-Theyß-Str.	Zs 2968,9387
-Allee der Kosmonauten/Beilsteiner Str.	Zs 18895,13470
+# REMOVED (durch Ampel ersetzt) --- Allee der Kosmonauten/Beilsteiner Str.	Zs 18895,13470
 Treptower/Stuttgarter	Zs 13519,8149
 Winterfeldstr./Winterfeldplatz	Zs 7058,10087
 Maiglöckchenstr./Syringeplatz	Zs 14064,14240
@@ -424,7 +424,7 @@ Welfenallee/Ludolfingerplatz	Zs 2281,25027
 Frohnauer Brücke/Ludolfingerplatz	Zs 2283,25097
 Dianastraße/Fürst-Bismarck-Straße	Zs 4038,22397
 Schönwalder/Pankeweg	Zs 8266,15134
-Lehrter/Kruppstr.	Zs 7320,14143
+Lehrter/Kruppstr.	Zs 7312,14187
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20120712.1025.372492.html
 #: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=5387&options=4
 Elisabethstr./Schönwalder Str.	Zs -3385,15408

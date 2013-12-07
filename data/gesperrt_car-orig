@@ -89,7 +89,7 @@ Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
 Hobrechtstr.	1 12011,9100 11998,8872
 L¸tzowplatz	1 7002,11034 6873,11011
 Romain-Rolland-Str. - Berliner Str.	3 12856,17825 12825,17870 12736,17998 12467,17814
-Mahlower Str.	1 11773,8231 11920,8252
+Mahlower Str.	1 11776,8253 11915,8279
 Essener Str.	1 5889,13032 5993,13064 6114,13095 6183,13083
 Belforter Str. - Heinrich-Roller-Str.	3 11299,14112 11435,14023 11607,13928
 Heinrich-Roller-Str. - Belforter Str.	3 11607,13928 11435,14023 11299,14112
@@ -194,6 +194,8 @@ Schˆnhauser Allee: U-Bahnviadukt und Straﬂenbahn	3nocross 11019,16465 11004,1636
 Prenzlauer Allee: Straﬂenbahn	3nocross 11860,15309 11877,15366 11891,15413
 Greifswalder Str.: Straﬂenbahn	3nocross 12473,14763 12422,14692 12403,14663 12371,14615
 Greifswalder Str.: Straﬂenbahntrasse	3nocross 12709,15112 12737,15154 12870,15342
+#: note: Radfahrer kˆnnen einen ‹bergang mit Dr‰ngelgitter benutzen
+Greifswalder Str.: Straﬂenbahntrasse	3nocross 12620,14979 12584,14928 12520,14833
 Landsberger Allee: Straﬂenbahn	3nocross 13543,13568 13635,13605 13702,13634
 #: note: Luftbild:
 Landsberger Allee: Straﬂenbahn	3nocross 21398,15671 21475,15705 21584,15753 21709,15808
@@ -235,8 +237,7 @@ M¸llerstr./Lindower Str.	3nocross 7929,15006 7819,15103 7754,15160 7611,15286
 Adolfstr.	1 7796,15590 7817,15418
 Mimosenweg	2 17668,2187 17657,2213
 Falkenberger/B2: Straﬂenbahntrasse	3nocross 14621,16563 14619,16672 14619,16682 14608,16772 14558,16907
-#: by: Andreas M¸hlhausen (Einbahnstraﬂe nur f¸r Autofahrer)
-Sredzkistr. (ab Parkhaus Kulturbrauerei)	1 11101,14768 10893,14705
+# REMOVED (http://taxi-weblog.de/980: seit 2013-09 keine Einbahnstraﬂe mehr) --- #: by: Andreas M¸hlhausen (Einbahnstraﬂe nur f¸r Autofahrer) --- Sredzkistr. (ab Parkhaus Kulturbrauerei)	1 11101,14768 10893,14705
 Bahn¸bergang nur f¸r Fuﬂg‰nger/Radfahrer	3 * 20624,12133 *
 Zossener Str.: Straﬂenbahntrasse	3nocross 23080,15700 23218,15671 23411,15632 23568,15603 23617,15594
 #: note: nur tempor‰r g¸ltig
@@ -265,7 +266,8 @@ Mainzer Str./Frankfurter Allee	3nocross 14381,12205 14427,12197 14488,12188
 Colbestr./Frankfurter Allee	3nocross 14488,12188 14523,12183 14621,12168
 Kinzigstr./Frankfurter Allee	3nocross 14523,12183 14621,12168 14702,12157
 Finowstr.+Weichselstr./Frankfurter Allee	3nocross 14702,12157 14854,12137 14919,12130 14994,12121
-Friedrichstr. (Straﬂenbahn)	3nocross 9225,13389 9242,13235 9250,13163 9255,13109
+Friedrichstr. (Straﬂenbahn)	3nocross 9225,13389 9246,13235 9255,13164 9262,13111
+Friedrichstr. (Straﬂenbahn)	3nocross 9262,13111 9269,13060 9279,12953
 Oranienburger Str. (Straﬂenbahnhaltestelle)	3nocross 9225,13389 9281,13374 9415,13315
 Saarstr.: Durchfahrt f¸r Autofahrer per Poller gesperrt	3nocross 5966,6747 5896,6785 5811,6833
 #: by: rjoop:
@@ -282,7 +284,7 @@ G¸rtelstr. - Greifswalder Str.: nur rechts abbiegen erlaubt	3 13409,15687 13316,
 #: by: Timo Feyerabend: vvv
 #: confirmed_by: srt
 Jochen-N¸ﬂler-Str.	1 13571,4493 13589,4681
-Parchimer Allee	3nocross 13659,4489 13571,4493 13485,4496 13394,4500
+Parchimer Allee	3nocross 13671,4490 13571,4493 13485,4496 13394,4500
 #: by: ^^^
 #: by: Thomas (bergen):
 Scharnweberstr.: Mittelstreifen	3nocross 4392,17777 4429,17763 4584,17704
@@ -451,6 +453,7 @@ Berliner Allee -> Rossinistr.	3 13432,15843 13401,15821 13456,15760
 #: note: Luftbild:
 Prenzlauer Promenade: Straﬂenbahntrasse	3nocross 12010,16774 12017,16734 12045,16574
 Karl-Marx-Allee: Mittelstreifen	3nocross 12114,12546 12134,12540 12360,12505
+Karl-Marx-Allee: Mittelstreifen	3nocross 12360,12505 12596,12472 12612,12470 12869,12425
 # REMOVED (Reorganisation des Spittelmarktes) --- Leipziger Str.: Mittelstreifen	3nocross 10240,11740 10213,11728 10128,11714 9987,11690 9981,11689
 # REMOVED (Reorganisation des Spittelmarktes) --- Niederwallstr./Spittelmarkt: nur Abbiegen nach rechts erlaubt	3 10189,11773 10205,11758 10240,11740 10320,11627
 # REMOVED (Reorganisation des Spittelmarktes) --- Niederwallstr./Spittelmarkt: nur Abbiegen nach rechts erlaubt	3 10189,11773 10205,11758 10240,11740 10299,11786
@@ -560,8 +563,8 @@ Johannes-Sasse-Ring	1 17525,3029 17465,2964 17412,2908 17199,3082 17146,3125 172
 Podbielskiallee - Englerallee	3 3641,5836 3712,5806 3732,5920
 Frieda-Seidlitz-Str.	1 12761,16862 12613,16749 12602,16727
 Suermondtstr: Straﬂenbahntrasse	3nocross 15918,16383 16099,16339 16263,16288
-Paulsborner Str.: Mittelstreifen	3nocross 3587,9905 3620,9936 3706,10039
-Paulsborner Str.: Mittelstreifen	3nocross 3620,9936 3706,10039 3747,10094 3852,10236
+Paulsborner Str.: Mittelstreifen	3nocross 3587,9905 3605,9929 3701,10047
+Paulsborner Str.: Mittelstreifen	3nocross 3605,9929 3701,10047 3741,10097 3852,10236
 Eisenhartstr.	1 -12637,-8 -12779,-294 -12821,-417
 Brandenburger Str. (Potsdam): Fuﬂg‰ngerzone	3nocross -13556,-1140 -13410,-1101 -13289,-1071 -13173,-1039 -12999,-1000 -12883,-976
 Eichhornstr. - Potsdamer: abbiegen verboten	3 8232,11414 8226,11458 8145,11438
@@ -661,7 +664,7 @@ Giesebrechtstr.	1 3912,10699 3997,10607 4017,10585 4030,10575 4153,10453 4157,10
 Clausewitzstr.	1 3971,10381 4007,10559
 #: note ^^^
 #: by: andk
-Bayerische Str.	1 4296,10004 4352,10260
+Bayerische Str.	1 4297,10008 4352,10260
 Ferdinand-Schultze-Str - Landsberger Allee	3 17794,14640 17848,14523 18057,14549
 Michelangelostr./Kniprodestr.	3 13875,15142 13854,15129 13816,15137 13823,15111
 Kurm‰rkische Str.	3 7413,10244 7429,10366 7337,10396
@@ -776,6 +779,8 @@ Landhausweg: Schranke	3 * 16464,1194 *
 Danziger/Knaack/Lychener	3nocross 11154,14985 11056,15009 10881,15047
 #: note: Radfahrer benutzen die Fuﬂg‰ngerampel
 Danziger Str.: Straﬂenbahntrasse	3nocross 13225,13620 13228,13615 13330,13468
+#: note: Radfahrer nutzen den kleinen Umweg via Ampel an der Winsstr.
+Danziger Str.: Straﬂenbahntrasse	3nocross 11864,14781 11990,14714 12025,14695
 Thaters Privatweg	1 4148,15205 4103,15137 3892,14944 3893,14911 3899,14868 3956,14750
 Heinickeweg	1 2224,14825 2210,14696 2207,14576
 Jungfernsteig	1 938,14457 862,14463
@@ -953,3 +958,12 @@ Fasanenstr.	1 5196,10398 5215,10711
 Prenzlauer Allee: Straﬂenbahntrasse	3nocross 12030,15968 12075,16144 12090,16199
 B2 - Piesporter Str.: Linksabbiegen verboten	3 15569,18492 15181,18137 15239,18063
 Ruschestr. - Schulze-Boysen-Str.: Geradeausfahren verboten	3 15879,12131 15863,11992 15836,11840
+Bizetstr. - Indira-Gandhi-Str.: nur Rechtsabbiegen erlaubt	3 14293,16073 14552,16171 14522,16260
+Linienstr. - Rosa-Luxemburg-Str.: nur Rechtsabbiegen erlaubt	3 10740,13621 10777,13614 10746,13673
+Linienstr. - Rosa-Luxemburg-Str.: nur Rechtsabbiegen erlaubt	3 10740,13621 10777,13614 10872,13570
+Ibsenstr.: Barriere	3 10549,16650 10632,16644 *
+Ibsenstr.: Barriere	3 * 10632,16644 10549,16650
+# REMOVED (realisiert) --- #: XXX wird hier die Einbahnstraﬂenregelung f¸r Radfahrer aufgehoben? --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5407 --- #: last_checked: 2013-10-14
+Paul-Junius-Str.	1 15096,12974 15090,13116
+#: by: http://www.berlin.de/ba-reinickendorf/bvv-online/vo020.asp?VOLFDNR=3729
+Schulzendorfer Str.	1 -1538,22800 -2024,22899

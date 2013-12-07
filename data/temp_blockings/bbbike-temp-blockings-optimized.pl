@@ -1,14 +1,412 @@
-$#temp_blocking = 416;
+$#temp_blocking = 35;
 push @temp_blocking,
 (
        {
-         'until' => 1386543599,
-         'text' => 'Lichtenrader Weihnachtsmarkt: Bahnhofstr. (Lichtenrade) in beiden Richtungen zwischen Steinstr. und Goltzstr gesperrt (am 7. und 8. Dezember 2013)',
-         'from' => 1386284400,
-         'id' => 417,
-         'data' => '#: by: http://www.ag-bahnhofstrasse.de/weihnachtsmarkt.html
-userdel	q4 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
+         'source_id' => 'http://partner-fuer-spandau.de/Weihnachtsmarkt-2013_604_0.html',
+         'data' => 'userdel	2::temp -3275,14407 -3231,14383 -3204,14368 -3155,14340
+userdel	2::temp -3275,14407 -3338,14333
+userdel	2::temp -3150,14631 -3185,14556 -3205,14512 -3228,14468 -3275,14407
+userdel	2::temp -3275,14407 -3350,14446 -3393,14470 -3410,14479 -3440,14498 -3481,14523
+userdel	2::temp -3227,14260 -3155,14340
+userdel	2::temp -3227,14260 -3293,14304 -3338,14333
+userdel	2::temp -3552,14082 -3457,14189 -3409,14241 -3338,14333
+userdel	2::temp -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340
+userdel	2::temp -3110,14408 -3174,14438 -3228,14468
+userdel	2::temp -3231,14383 -3293,14304
 ',
+         'periodic' => 1,
+         'until' => 1387839599,
+         'from' => 1385247600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              26,
+                              'months',
+                              11
+                            ]
+                          ],
+         'text' => 'Spandauer Weihnachtsmarkt, vom 25. November 2013 bis 23. Dezember 2013',
+         'id' => 36,
+         'type' => 'gesperrt'
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'source_id' => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/charlottenburg-wilmersdorf/971524-1323017-weihnachtsmarktanderged%C3%A4chtniskirche.html',
+         'data' => '# sowieso schon mit q4 markiert, deshalb -> 2
+userdel	2::temp 5829,10964 5782,10884
+userdel	2::temp 5656,10876 5652,11004
+',
+         'periodic' => 1,
+         'until' => 1388617199,
+         'from' => 1385247600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              26,
+                              'months',
+                              11
+                            ]
+                          ],
+         'text' => 'Weihnachtsmarkt an der Gedächtniskirche, vom 25. November 2013 bis 01. Januar 2014',
+         'id' => 394,
          'type' => 'gesperrt'
        },
        undef,
@@ -384,6 +782,55 @@ userdel	q4 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-21
        undef,
        undef,
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'source_id' => 'http://www.berliner-weihnacht.de/?y=2013',
+         'data' => 'userdel	2::temp 10008,12274 9994,12368
+# REMOVED (passierbar!) --- userdel	2::temp 9943,12364 9961,12273 9972,12184
+userdel	2::temp 10010,12259 10035,12209
+# REMOVED (2012 nicht gesperrt) --- userdel	2::temp 9852,12409 9869,12297 9875,12257 9890,12161
+userdel	2::temp 10008,12274 10058,12290
+userdel	2::temp 10091,12232 10058,12290 9996,12401
+# REMOVED (2012 nicht gesperrt) --- userdel	2::temp 9961,12273 9875,12257
+userdel	q4::temp 9994,12368 9996,12401 9984,12426
+',
+         'periodic' => 1,
+         'until' => 1388098799,
+         'from' => 1384815600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              18,
+                              'months',
+                              11
+                            ]
+                          ],
+         'text' => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: Schinkelplatz teilweise gesperrt, vom 25.11. bis 26.12.2013',
+         'id' => 790,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -1497,7 +1944,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Nestorstr.: Di und Fr 08.00-13.00 Wochenmarkt, Behinderungen möglich',
          'from' => undef,
          'id' => 1814,
-         'data' => '	q4::temp:clock 3374,10201 3359,9968 3347,9793
+         'data' => '	q4::temp:clock 3374,10201 3359,9968 3348,9806
 ',
          'type' => 'gesperrt'
        },
@@ -1848,21 +2295,47 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 11329,12497 11209,12430
+userdel	q4::temp 11209,12430 11273,12301
+userdel	2::temp 11273,12301 11355,12331
+',
+         'periodic' => 1,
+         'until' => 1388530799,
+         'from' => 1384350862,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              11,
+                              'months',
+                              11
+                            ]
+                          ],
+         'text' => 'Voltairestr. und Dircksenstr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht möglich (Voltairestr.) bzw. nur schiebend auf dem Gehweg möglich (Dircksenstr.), bis Ende Dezember 2013',
+         'type' => 'gesperrt',
+         'id' => 1988
+       },
+       {
+         'data' => 'userdel	2::temp 9536,11912 9668,11928
+userdel	2::temp 9524,12010 9656,12021
+',
+         'periodic' => 1,
+         'until' => 1388530799,
+         'from' => 1385247600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              24,
+                              'months',
+                              11
+                            ]
+                          ],
+         'text' => 'Gendarmenmarkt: Weihnachtsmarkt vom 25.11.2013 bis 31.12.2013, Durchfahrt nicht möglich (Eintritt!)',
+         'type' => 'gesperrt',
+         'id' => 1989
+       },
        undef,
        undef,
        undef,
@@ -1871,16 +2344,105 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
+         'source_id' => 'http://www.winterwelt-berlin.de/',
+         'data' => 'userdel	2::temp 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324 8280,11296 8278,11257
+#: XXX_prog "3::temp" geht nicht?
+userdel	3 8427,11365 8389,11378 8374,11479
+userdel	3 8374,11479 8389,11378 8427,11365
+',
          'periodic' => 1,
-         'until' => 1388566800,
-         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr.',
-         'from' => 1388394000,
-         'id' => 2010,
+         'until' => 1388098799,
+         'from' => 1385247600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              19,
+                              'months',
+                              11
+                            ]
+                          ],
+         'text' => 'Winterwelt am Potsdamer Platz vom 25. November 2013 bis 26. Dezember 2013',
+         'id' => 1997,
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-alt-rixdorf.html',
+         'data' => 'userdel	2::temp 13416,7712 13426,7674
+userdel	2::temp 13416,7712 13288,7653
+userdel	2::temp 13426,7674 13400,7642 13303,7622
+userdel	2::temp 12969,7610 13100,7626 13177,7644
+userdel	2::temp 13188,7590 13177,7644
+userdel	2::temp 13188,7590 13303,7622
+userdel	2::temp 13288,7653 13303,7622
+userdel	2::temp 13288,7653 13177,7644
+',
+         'periodic' => 1,
+         'until' => 1386543599,
+         'from' => 1386198000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              6,
+                              'months',
+                              12
+                            ]
+                          ],
+         'text' => 'Richardplatz (Neukölln) und die Durchfahrt aller angrenzenden Straßen Rixdorfer Weihnachtsmarkt, Straße vollständig gesperrt (vom 6. Dezember 2013 bis 8. Dezember 2013)',
+         'id' => 1998,
+         'type' => 'gesperrt'
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-deutschland.de/berlin-koepenick-weihnachtsmarkt.html',
+         'data' => 'userdel	2::temp 22111,4562 22162,4546 22214,4548
+',
+         'periodic' => 1,
+         'until' => 1387148399,
+         'from' => 1386802800,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              13,
+                              'months',
+                              12
+                            ]
+                          ],
+         'text' => 'Alt-Köpenicker Weihnachtsmarkt vom 13.12.2013 bis zum 15.12.2013',
+         'id' => 2003,
+         'type' => 'gesperrt'
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
          'data' => 'userdel	2::temp 8731,12270 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 8119,12414
 userdel	2::temp 8522,12239 8466,12197
 userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 ',
-         'type' => 'gesperrt'
+         'periodic' => 1,
+         'until' => 1388566800,
+         'from' => 1388394000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              12
+                            ]
+                          ],
+         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr.',
+         'type' => 'gesperrt',
+         'id' => 2010
        },
        undef,
        undef,
@@ -1950,7 +2512,7 @@ userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,1216
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober von 7.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Dezember von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -1978,7 +2540,8 @@ userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,1216
 (Flughafen Tempelhof - Eingang Leinestr.)	2::night 11547,7432 11558,7438
 (Flughafen Tempelhof - Eingang Oderstr.)	2::night 11598,7264 11608,7267
 (Eingang Tempelhofer Damm - südliche Landebahn)	2::night 9302,7294 9351,7241 9461,7190
-(Alter Hafen)	2::night 10204,7680 10134,7797 10076,8040 10037,8269
+(Alter Hafen)	2::night 10204,7680 10134,7797 10076,8040 10328,8102 10444,8086 10486,7972 10405,7898 10134,7797
+# REMOVED --- (Alter Hafen)	2::night 10076,8040 10037,8269
 (Südliche Landebahn - Eingang Oderstr.)	2::night 11555,7314 11596,7280 11608,7267
 (zur nördlichen Landebahn)	2::night 11470,7744 11430,7781
 '
@@ -2191,7 +2754,34 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.breadandbutter.com/winter2014/de/home/',
+         'data' => 'userdel	q4::temp 9233,8597 9321,8607 9364,8640 9395,8726
+userdel	q4::temp 9321,8607 9401,8510 9451,8548 9364,8640
+',
+         'periodic' => 1,
+         'until' => 1389895200,
+         'from' => 1389592800,
+         'text' => 'Platz der Luftbrücke (Tempelhof): Straße vollständig zwischen Tempelhofer Damm und Columbiadamm wegen einer Veranstaltung (Bread & Butter) gesperrt (14. Januar 2013 bis 16. Januar 2013)',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              14,
+                              'months',
+                              1
+                            ],
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              7
+                            ]
+                          ],
+         'id' => 2245,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -2280,6 +2870,7 @@ userdel	2::temp 18870,5833 18932,5926
 #: note: am 2013-08-14 geprüft: Fahrbahn war gesperrt
 #: note: am 2013-09-06 geprüft: Schranke, nur Straßenbahnen und Lieferverkehr werden durchgelassen
 #: note: am 2013-10-24 geprüft: Radfahrer konnten heute wohl durchfahren, aber offiziell noch immer gesperrt
+#: note: am 2013-11-05 geprüft: offiziell gesperrt, aber Durchfahrt mit Umrunden der Sperren möglich
 userdel	q3::inwork 10530,14452 10723,14772
 ',
          'type' => 'handicap'
@@ -2293,12 +2884,13 @@ userdel	q3::inwork 10530,14452 10723,14772
        undef,
        {
          'source_id' => 'INKO_111647',
-         'until' => 1387548000,
-         'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende Dezember 2013',
+         'until' => 1386583200,
+         'text' => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Mitte Dezember 2013',
          'from' => 1330902000,
          'id' => 2316,
-         'data' => '#: osm_watch: way id="23243508" version="37"
+         'data' => '#: osm_watch: way id="23243508" version="40"
 #: note: Radfahrer dürfen offiziell in Gegenrichtung fahren
+#: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20131206.0905.392490.html (neues Ende)
 userdel	q2::inwork; -1872,24336 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 ',
          'type' => 'handicap'
@@ -2411,7 +3003,7 @@ userdel	2::night 14838,11410 14792,11391
        undef,
        {
          'source_id' => 'IM_019421',
-         'until' => 1386169200,
+         'until' => 1388530799,
          'text' => 'Friedrich-Engels-Str. stadteinwärts zwischen Nordendstr. und Platananenstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 2013/Anfang 2014)',
          'from' => 1353366000,
          'id' => 2391,
@@ -2421,7 +3013,7 @@ userdel	2::night 14838,11410 14792,11391
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20130614.1020.386081.html (Vollsperrung ab Juni 2013)
 #: by: IM_019421 (allerdings hier nur bis Dezember 2013)
 # REMOVED (bei VMZ abgelaufen) --- : next_check: 2013-09-01 --- #: XXX von 22.6.2013 für 10 Wochen in _beiden_ Richtungen gesperrt --- danach wieder die alte Situation herstellen --- #: XXX vmz-Eintrag dafür: Friedrich-Engels-Str. (Niederschönhausen) in beiden Richtungen zwischen Nordendstr. und Platanenstr. Geplant ab: 22.06.2013 07 Uhr, Baustelle, Straße vollständig gesperrt eine Umleitung ist eingerichtet (bis auf weiteres)	INKO_119074 --- #: priority: #A
-#: next_check: 2013-12-04
+#: next_check: 2013-12-15
 #: XXX danach bessere Straßenqualität? Radstreifen?
 #: osm_watch: way id="24930947" version="20"
 #: source_id: IM_020259 (zusätzlich)
@@ -2553,7 +3145,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        {
          'source_id' => 'IM_019747',
          'until' => 1427727600,
-         'text' => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Straße gesperrt (bis Ende März 2014) ',
+         'text' => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende März 2015) ',
          'from' => 1366740818,
          'id' => 2422,
          'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
@@ -2566,13 +3158,14 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        {
          'until' => undef,
-         'text' => 'Richardstr.: Baustelle zwischen Kirchgasse und Berthelsdorfer Str., Fahrtrichtung gesperrt',
+         'text' => 'Richardstr.: Baustelle zwischen Jan-Hus-Weg und Berthelsdorfer Str., Fahrtrichtung gesperrt',
          'from' => undef,
          'id' => 2425,
          'data' => '#: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-09-27
+#: last_checked: 2013-11-22 (Asphaltierungsarbeiten)
 #: check_frequency: 60d
-userdel	q4::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904 12870,8087
+# REMOVED --- userdel	q4::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904
+userdel	q4::inwork; 13085,7904 12870,8087
 ',
          'type' => 'handicap'
        },
@@ -2604,11 +3197,12 @@ userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 
        undef,
        {
          'source_id' => 'INKO_115299',
-         'until' => 1383318000,
-         'text' => 'Friedrich-Krause-Ufer (Moabit) Richtung Föhrer Brücke Höhe Kraftwerk: Baustelle, Fahrtrichtung gesperrt, Ausweichen auf Gehweg, bis Anfang November 2013',
+         'until' => 1388329200,
+         'text' => 'Friedrich-Krause-Ufer (Moabit) Richtung Föhrer Brücke Höhe Kraftwerk: Baustelle, Fahrtrichtung gesperrt, Ausweichen auf Gehweg, bis Ende 2013',
          'from' => 1349931600,
          'id' => 2442,
-         'data' => '#: last_checked: 2013-10-12
+         'data' => '#: last_checked: 2013-11-12
+#: check_frequency: 70d
 userdel	q2::inwork; 6572,14639 6299,14660
 ',
          'type' => 'handicap'
@@ -2616,20 +3210,7 @@ userdel	q2::inwork; 6572,14639 6299,14660
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-spandau/presse/archiv/20130613.1320.386040.html',
-         'until' => 1385938799,
-         'text' => 'Földerichplatz: Bauarbeiten von Ende Juni bis Dezember 2013',
-         'from' => 1372456800,
-         'id' => 2446,
-         'data' => '#: XXX wie sieht die Situation nach den Bauarbeiten aus, kommen Radfahrer noch weiterhin gut durch?
-#: XXX zurzeit (2013-07-13) existiert keine Fahrbahn und keine Bürgersteige mehr, man muss auf den Parkweg ausweichen
-#: last_checked: 2013-07-13
-#: next_check: 2013-12-01
-userdel	q4::inwork -3942,12559 -3941,12545 -3941,12376
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2691,7 +3272,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
          'data' => '#: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht vvv
 #: osm_watch: way id="80221295" version="18" brb
 	2 19158,-4083 19189,-4062 19454,-3956 19524,-3843 19528,-3767 19479,-3690
-#: osm_watch: way id="83106248" version="14" brb
+#: osm_watch: way id="83106248" version="15" brb
 	2 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
 #: osm_watch: way id="60482011" version="25" brb
 #: osm_watch: way id="192153919" version="2" brb
@@ -2782,18 +3363,7 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20130910.1105.389039.html',
-         'until' => 1382738399,
-         'text' => 'Maximilankorso: Bauarbeiten zwischen Sigismundkorso und Alemannenstraße, teilweise mit Vollsperrungen, Benediktinerstr. und Artuswall werden zu Einbahnstraßen, vom 16. September 2013 bis zum 25. Oktober 2013',
-         'from' => 1379196000,
-         'id' => 2488,
-         'data' => 'userdel	q4::inwork 999,24933 1071,24974 1125,25028 1173,25114 1207,25156 1339,25251 1513,25253 1576,25249 1738,25243
-# REMOVED --- #: XXX Einbahnstraßenrichtung ist geraten
-	q4::inwork; 1211,24871 1112,24821 1041,24812 968,24815 949,24882 946,24934
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Weg im Cheruskerpark: Bauarbeiten, Durchfahrt nicht möglich',
@@ -2801,27 +3371,14 @@ userdel	2::night 17671,13132 17684,13133
          'id' => 2489,
          'data' => '#: XXX bis wann gehen die Bauarbeiten?
 #: by: http://de.wikipedia.org/wiki/Rote_Insel#Um-_und_Ausbau_2013_.28Sch.C3.B6neberger_Schleife.29 (Umbauarbeiten)
-#: last_checked: 2013-10-16
+#: last_checked: 2013-11-19
 #: check_frequency: 30d
 #: priority: #A
 userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => undef,
-         'text' => 'Torgauer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg möglich',
-         'from' => undef,
-         'id' => 2490,
-         'data' => '#: XXX bis wann gehen die Bauarbeiten?
-#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4579 (eventuell Einschränkungen bis 2018?)
-#: last_checked: 2013-10-16
-#: check_frequency: 30d
-#: priority: #A
-userdel	q4::inwork 7001,8161 7250,8223
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1396047599,
          'text' => 'Görresstr.: Bauarbeiten, Einbahnstraße, bis 28. März 2014',
@@ -2843,39 +3400,11 @@ userdel	q4::inwork 7001,8161 7250,8223
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'until' => 1383238800,
-         'text' => 'Modersohnstr., Gärtnerstr.: Bauarbeiten, Einbahnstraße zwischen Revaler Str. und Wühlischstr. (offen Richtung Süden), bis Ende Oktober 2013',
-         'from' => undef,
-         'id' => 2495,
-         'data' => 'userdel	q3::inwork; 14134,11272 14181,11434
-# REMOVED (since 2013-10-22) --- userdel	q2::inwork; 14181,11434 14211,11552
-',
-         'type' => 'handicap'
-       },
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20131010.1450.390218.html',
-         'until' => 1384642799,
-         'text' => 'Remstaler Straße: Fahrbahnflächeninstandsetzung zwischen Zerndorfer Weg und Edelhofdamm, vom 14. Oktober 2013 bis zum 16. November 2013 ',
-         'from' => 1381615200,
-         'id' => 2497,
-         'data' => 'userdel	q4::inwork 3171,25495 3141,25575 3141,25626 3154,25659
-',
-         'type' => 'handicap'
-       },
        undef,
-       {
-         'source_id' => 'IM_020486',
-         'until' => 1384185600,
-         'text' => 'Rosenthaler Str. (Mitte): Gleisbauarbeiten, Sperrung der Fahrbahn zwischen Linienstr. und Weinmeisterstr., 14.10.2013 bis 11.11.2013 ',
-         'from' => 1381633200,
-         'id' => 2499,
-         'data' => '#: by: http://www.bvg.de/index.php/de/56927/name/fahrinfo+Update+-+was+ist+neu%3F.html (Enddatum)
-userdel	q4::inwork 10350,13376 10313,13493 10286,13548 10263,13594 10220,13691
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
+       undef,
        {
          'source_id' => 'IM_020491',
          'until' => 1402758000,
@@ -2908,33 +3437,238 @@ userdel	q4::inwork 10350,13376 10313,13493 10286,13548 10263,13594 10220,13691
        },
        {
          'until' => undef,
-         'text' => 'Krügerstr. und Gudvanger Str.: Bauarbeiten im Bereich Erich-Weinert-Str., Fahrbahn gesperrt',
+         'text' => 'Gudvanger Str.: Bauarbeiten zwischen Krügerstr. und Erich-Weinert-Str., Fahrbahn gesperrt',
          'from' => undef,
          'id' => 2503,
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2013-10-20
-#: next_check: 2013-11-20
-userdel	q3::inwork 11758,16111 11684,15997 11859,16058
+#: last_checked: 2013-11-13
+#: check_frequency: 30d
+userdel	q4::inwork 11694,16034 11673,16003
 ',
          'type' => 'handicap'
        },
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'source_id' => 'IM_020548',
-         'until' => 1383055200,
-         'text' => 'Augustastr. (Steglitz): Baustelle, Fahrbahn zwischen Augustaplatz und Moltkestr. bis Ende Oktober 2013 gesperrt ',
-         'from' => 1382507820,
-         'id' => 2504,
-         'data' => 'userdel	q4::inwork 4045,4005 4234,4020
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20131029.1400.390941.html',
+         'until' => 1387234799,
+         'text' => 'Herbststr.: Bauarbeiten zwischen Provinzstr. und Kamekestr., sowie in der Sommerstr. zwischen Herbststr. und Hoppestr., Fahrbahn gesperrt, ca. vom 25. November 2013 bis zum 16. Dezember 2013 ',
+         'from' => 1385247600,
+         'id' => 2508,
+         'data' => 'userdel	q4::inwork 8482,18284 8465,18365 8627,18402
+userdel	q4::inwork 8465,18365 8286,18331
 ',
          'type' => 'handicap'
        },
+       undef,
+       undef,
+       undef,
        {
-         'source_id' => 'IM_020557',
-         'until' => 1382824740,
-         'text' => 'Oranienburger Chaussee (Frohnau) zwischen Schwarzkittelweg und Landesgrenze gesperrt, von 25.10.2013 17 Uhr bis 26.10.2013 Mitternacht',
-         'from' => 1382626800,
-         'id' => 2505,
-         'data' => 'userdel	2::inwork 2178,28067 2345,27670 2666,27009 2842,26710
+         'source_id' => 'IM_020674',
+         'until' => 1386543599,
+         'text' => 'Stralauer Str.: zwischen Mühlendamm und Jüdenstr. Richtung Jannowitzbrücke Bauarbeiten, Fahrbahn gesperrt, Dezember 2013',
+         'from' => 1384077600,
+         'id' => 2512,
+         'data' => 'userdel	q4::inwork; 10738,12364 10804,12291
+',
+         'type' => 'handicap'
+       },
+       undef,
+       undef,
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'data' => 'userdel	2::temp 9986,13412 10317,13248
+',
+         'periodic' => 1,
+         'until' => 1386543599,
+         'from' => 1386284400,
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (7.12.+8.12)',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              7,
+                              'months',
+                              12
+                            ]
+                          ],
+         'id' => 2515,
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'data' => 'userdel	2::temp 9986,13412 10317,13248
+',
+         'periodic' => 1,
+         'until' => 1387148399,
+         'from' => 1386889200,
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (14.12.+15.12.)',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              14,
+                              'months',
+                              12
+                            ]
+                          ],
+         'id' => 2516,
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'data' => 'userdel	2::temp 9986,13412 10317,13248
+',
+         'periodic' => 1,
+         'until' => 1387753199,
+         'from' => 1387494000,
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 4. Adventswochenende (21.12.+22.12.)',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              21,
+                              'months',
+                              12
+                            ]
+                          ],
+         'id' => 2517,
+         'type' => 'gesperrt'
+       },
+       undef,
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
+         'data' => 'userdel	2::temp 11317,14564 11255,14572 11163,14548
+',
+         'periodic' => 1,
+         'until' => 1386525600,
+         'from' => 1386414000,
+         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 8. Dezember 2013, 12:00 bis 19:00 Uhr',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              8,
+                              'months',
+                              12
+                            ]
+                          ],
+         'id' => 2519,
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
+         'data' => 'userdel	2::temp 11317,14564 11255,14572 11163,14548
+',
+         'periodic' => 1,
+         'until' => 1387130400,
+         'from' => 1387018800,
+         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 15. Dezember 2013, 12:00 bis 19:00 Uhr',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              15,
+                              'months',
+                              12
+                            ]
+                          ],
+         'id' => 2520,
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
+         'data' => 'userdel	2::temp 11317,14564 11255,14572 11163,14548
+',
+         'periodic' => 1,
+         'until' => 1387735200,
+         'from' => 1387623600,
+         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 22. Dezember 2013, 12:00 bis 19:00 Uhr',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              22,
+                              'months',
+                              12
+                            ]
+                          ],
+         'id' => 2521,
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_020714',
+         'until' => 1404136800,
+         'text' => 'Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, in Richtung Friedrichstr. ca. 60 Meter gesperrt, vom 18.11.2013 bis Ende Juni 2014 ',
+         'from' => 1384642800,
+         'id' => 2522,
+         'data' => 'userdel	q3::inwork; 9130,12433 9343,12464
+',
+         'type' => 'handicap'
+       },
+       undef,
+       undef,
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Weg durch den Geschichtspark Moabit nachts geschlossen, Öffnungszeiten Winter (1.10.-31.3.) 8.00-16.00, Sommer (1.4.-30.9.) 8.00-21.00',
+         'from' => undef,
+         'id' => 2525,
+         'data' => '	2::night 7811,13344 7784,13392 7767,13431 7732,13484 7696,13470
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'data' => '#: by: http://www.potsdam.de/cms/beitrag/10046424/302934/
+#: by: http://www.potsdam.de/cms/dokumente/10050614_996205/91842041/Radverkehrsfuehrung_Gro%C3%9Fveranstaltungen.pdf
+userdel	1::temp -13556,-1182 -13643,-1220
+',
+         'periodic' => 1,
+         'until' => 1388357999,
+         'from' => 1385334000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              25,
+                              'months',
+                              11
+                            ]
+                          ],
+         'text' => 'Weihnachtsmarkt am Luisenplatz: geänderte Radverkehrsführung, 25. November - 29. Dezember 2013',
+         'type' => 'gesperrt',
+         'id' => 2526
+       },
+       {
+         'source_id' => 'IM_020820',
+         'until' => 1401458400,
+         'text' => 'Zimmermannstraßenbrücke über die Wuhle: Baustelle, Straße gesperrt, 02.12.2013 bis Ende Mai 2014',
+         'from' => 1385766000,
+         'id' => 2527,
+         'data' => '#: add_fragezeichen: Ist die Zimmermannstraßenbrücke trotz der Bauarbeiten trotzdem noch für Fußgänger und Radfahrer passierbar?
+userdel	2::inwork 21385,9049 21365,9059 21351,9066
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20131202.1025.392342.html',
+         'until' => 1386561600,
+         'text' => 'Rudolf-Rühl-Allee: Fahrbahninstandsetzung zwischen Köpenicker Straße und An der Wuhlheide, Vollsperrung, vom 06.12.2013 um 16:30 Uhr bis voraussichtlich 09.12.2013 05:00 Uhr',
+         'from' => 1386257400,
+         'id' => 2528,
+         'data' => 'userdel	2::inwork 20653,7289 20609,7200 20635,7119 20722,6971 21233,6096 21303,5826
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_020883',
+         'until' => 1386525600,
+         'text' => 'Alt-Rudow zwischen Köpenicker Str. und Krokusstr.: Rudower Adventsmeile, Straße gesperrt, ab: 07.12.2013 10 Uhr bis 08.12.2013 19 Uhr ',
+         'from' => 1386198000,
+         'id' => 2529,
+         'data' => 'userdel	2::temp 16849,1437 16805,1488 16610,1715
 ',
          'type' => 'gesperrt'
        }

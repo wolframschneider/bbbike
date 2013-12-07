@@ -18,10 +18,10 @@ Sackgassenende, Kreuzberger Balkon	culdesac 12582,11103
 	culdesac 8521,10268
 Sackgassenende, Gartenbauamt	culdesac 9124,9262
 	culdesac 9149,8961
-Sackgassenende, Potsdamer Platz Arkaden	culdesac 8404,11290
-Sackgassenende, Potsdamer Platz Arkaden	culdesac 8382,11224
-Sackgassenende, Potsdamer Platz Arkaden	culdesac 8373,11301
-Sackgassenende, Potsdamer Platz Arkaden	culdesac 8354,11230
+Sackgassenende (östlicher Abschnitt), Potsdamer Platz Arkaden	culdesac 8404,11290
+Sackgassenende (östlicher Abschnitt), Potsdamer Platz Arkaden	culdesac 8382,11224
+Sackgassenende (westlicher Abschnitt), Potsdamer Platz Arkaden	culdesac 8373,11301
+Sackgassenende (westlicher Abschnitt), Potsdamer Platz Arkaden	culdesac 8354,11230
 	culdesac 8796,11393
 	culdesac 10209,11918
 	culdesac 11506,11851
@@ -32,7 +32,7 @@ Alte Nationalgalerie	culdesac 9952,12791
 	culdesac 9153,12925
 	culdesac 9090,13009
 	culdesac 10390,12842
-Fernsehturm	culdesac 10734,12850
+Fernsehturm	culdesac 10739,12844
 	culdesac 11182,13123
 	culdesac 10998,13382
 	culdesac 10898,13260
@@ -64,10 +64,10 @@ S-Bhf. Frankfurter Allee	culdesac_pseudo 15175,12180
 Ende des Bahndamms	culdesac 13966,9340
 	culdesac 14305,9213
 	culdesac 14327,9117
-	culdesac 13103,9478
-	culdesac 13007,9347
-	culdesac 12615,9132
-	culdesac 12910,8929
+nordöstliches Sackgassenende	culdesac 13103,9478
+südwestliches Sackgassenende	culdesac 13007,9347
+westliches Sackgassenende	culdesac 12615,9132
+östliches Sackgassenende	culdesac 12910,8929
 	culdesac 10111,9942
 	culdesac 12090,7865
 Sackgassenende, nördlicher Abschnitt	culdesac 13046,8048
@@ -91,7 +91,7 @@ Sackgassenende, Schulhof	culdesac 13518,7477
 	culdesac 4495,13107
 	culdesac 4461,12896
 	culdesac 4421,12727
-	culdesac 4087,13257
+	culdesac 4100,13269
 	culdesac 4242,12684
 	culdesac 4223,13949
 	culdesac 2439,13389
@@ -824,3 +824,22 @@ Sackgassenende, Eingang U-Bhf. Scharnweberstr.	culdesac 4187,17765
 	culdesac 15018,20624
 	culdesac_pseudo 15102,20723
 	culdesac 11561,21429
+	culdesac 17526,12336
+Autowaschcenter	culdesac_pseudo 17110,14187
+	culdesac 16793,3176
+	culdesac 10708,16579
+	culdesac 8243,16889
+	culdesac 8315,17079
+	culdesac 4152,9688
+	culdesac 9482,5557
+Fähranleger	culdesac_pseudo -1989,18378
+	culdesac_pseudo 9132,13187
+	culdesac 8251,14337
+	culdesac 8294,14194
+Tor	culdesac 8388,13993
+Flughafengelände	culdesac_pseudo 9300,8027
+	culdesac 7998,8317
+	culdesac 8204,9001
+Berlinische Galerie, Sackgassenende	culdesac 9966,10874
+Sackgassenende, unter der Warschauer Brücke	culdesac 13513,11351
+Spreeufer	culdesac 12441,11373

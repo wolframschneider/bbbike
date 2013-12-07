@@ -1115,8 +1115,8 @@ $detailheight = 500;
 $nice_berlinmap = 0;
 $nice_abcmap    = 0;
 
-$bbbike_start_js_version = '1.23';
-$bbbike_css_version = '1.01';
+$bbbike_start_js_version = '1.24';
+$bbbike_css_version = '1.02';
 
 use vars qw(@b_and_p_plz_multi_files %is_usable_without_strassen %same_single_point_optimization);
 @b_and_p_plz_multi_files = 
@@ -1542,6 +1542,8 @@ if ($q->param('startc') && $q->param('scvf') && $q->param('scvf') ne $q->param('
 }
 
 if (defined $q->param('begin')) {
+    # The begin=1 parameter was introduced for buggy ancient browsers
+    # (Netscape3, Solaris2?)
     $q->delete('begin');
     choose_form();
 } elsif (defined $q->param('info') || $q->path_info eq '/_info') {
@@ -2304,25 +2306,21 @@ sub choose_form {
     $header_args{-expires} = '+1d';
     http_header(%header_args);
     my @extra_headers;
-    if ($bi->{'text_browser'} && !$bi->{'mobile_device'}) {
-	push @extra_headers, -up => $BBBike::HOMEPAGE;
-    }
-    my $onloadscript = "";
 
-    if ($nice_berlinmap || $nice_abcmap) {
-	$onloadscript .= "init_hi(); window.onresize = init_hi; "
-    }
-    $onloadscript .= "focus_first(); ";
-    $onloadscript .= "check_locate_me(); ";
-
-    if ($nice_berlinmap || $nice_abcmap) {
+    if ($bi->{'can_javascript'}) {
+	my $onloadscript = "";
+	if ($nice_berlinmap || $nice_abcmap) {
+	    $onloadscript .= "init_hi(); window.onresize = init_hi; "
+	}
+	$onloadscript .= "focus_first(); ";
+	$onloadscript .= "check_locate_me(); ";
 	push @extra_headers, -onLoad => $onloadscript,
-	     -script => [{-src => $bbbike_html . "/bbbike_start.js"},
-			 ($nice_berlinmap
-			  ? {-code => qq{set_bbbike_images_dir('$bbbike_images')}}
-			  : ()
-			 ),
-			],
+	    -script => [{-src => $bbbike_html . "/bbbike_start.js?v=$bbbike_start_js_version"},
+			($nice_berlinmap
+			 ? {-code => qq{set_bbbike_images_dir('$bbbike_images')}}
+			 : ()
+			),
+		       ];
     }
 
     my $show_introduction;
@@ -4691,7 +4689,8 @@ sub search_coord {
 			    push @{ $custom_s{$type} }, $strobj_per_type;
 			}
 		    }
-		} else {
+		}
+		{
 		    my $strobj_3    = $strobj->grepstreets(sub { $_->[Strassen::CAT] eq '3' });
 		    my $strobj_non3 = $strobj->grepstreets(sub { $_->[Strassen::CAT] ne '3' });
 		    my $tb_net = $tb->{net} = StrassenNetz->new($strobj_non3);
@@ -5485,7 +5484,7 @@ sub display_route {
     }
 
     my @affecting_blockings;
-    if (@current_temp_blocking && !@custom && !$printmode) {
+    if (@current_temp_blocking && !$printmode) {
     TEMP_BLOCKING:
 	for my $tb (@current_temp_blocking) {
 	    my $net         = $tb->{net}{Net};
@@ -9189,7 +9188,7 @@ sub draw_route_from_fh {
     my $err = $@;
     unlink $file;
 
-    if ($res->{RealCoords}) {
+    if (@{ $res->{RealCoords} || [] }) {
 	$q->param('draw', 'all');
 	$q->param('scope', 'wideregion');
 	$q->param('geometry', "800x600") if !defined $q->param("geometry");

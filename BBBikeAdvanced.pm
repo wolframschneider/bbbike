@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1999-2008,2012 Slaven Rezic. All rights reserved.
+# Copyright (C) 1999-2008,2012,2013 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -49,7 +49,7 @@ sub start_ptksh {
 	    return;
 	}
     }
-    my @perldirs = $Config{'scriptdir'};
+    my @perldirs = grep { defined $_ && -x $_ } ($Config{'sitebin'}, $Config{'scriptdir'});
     push @perldirs, dirname(dirname($^X)); # for the SiePerl installation
     my $perldir;
     TRY: {
@@ -1405,6 +1405,11 @@ EOF
 		    }
 		    ($x,$y) = $Karte::Standard::obj->trim_accuracy($Karte::Polar::obj->map2standard($x,$y));
 		    push @coords, [$x, $y];
+		}
+
+		# copied from Gallery 2 Photo Properties
+		if ($s =~ m{GPS: \s+ Latitude \s+ (\d+.\d+) \s .* GPS: \s+ Longitude \s+ (\d+.\d+)}xs) {
+		    push @coords, [$Karte::Standard::obj->trim_accuracy($Karte::Polar::obj->map2standard($2, $1))];
 		}
 	    }
 	    last if (@coords); # otherwise try the other selection type
