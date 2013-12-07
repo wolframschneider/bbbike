@@ -64,7 +64,7 @@ my $sample_coords = do {
 };
 
 my $bbbike_org = $ENV{BBBIKE_TEST_ORG} ? 12 : 0;
-plan tests => 3 + $gpsman_tests * @gps_types - 29 - $bbbike_org;
+plan tests => 4 + $gpsman_tests * @gps_types - 29 - $bbbike_org;
 
 {
     my $agent = WWW::Mechanize->new();
@@ -259,6 +259,25 @@ EOF
 		$agent->back;
 	    }
 	}
+    }
+
+ XXX: 1;
+    {
+	my($tmpfh,$tmpfile) = tempfile(
+				       UNLINK => !$debug,
+				       SUFFIX => '_cgi-mechanize-upload.t.garbage',
+				      )
+	    or die $!;
+	print $tmpfh "!?#ThIs iS GaRbAge!?#\n";
+	close $tmpfh
+	    or die $!;
+
+	my $form = $agent->current_form;
+	$form->strict(1) if $form->can('strict');
+	$form->value('routefile', $tmpfile);
+	$agent->submit;
+	like $agent->content, qr{Dateiformat nicht erkannt};
+	$agent->back;
     }
 }
 

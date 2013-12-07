@@ -462,6 +462,11 @@ html/json2.js
 html/json2.min.js
 html/help.html
 html/legende.html
+html/msapp/browserconfig.tpl.xml
+html/msapp/browserconfig_bbbikelayout.xml
+html/msapp/browserconfig_cgilayout.xml
+html/msapp/srtbike_logo_128x128.png
+html/msapp/srtbike_logo_270x270.png
 html/newstreetform.html
 html/newstreetform.tpl.html
 html/newstreetform.utf8.html
@@ -1074,6 +1079,7 @@ lib/your.pm
 miscsrc/bbbike_chooser.pl
 miscsrc/bbbike.org_download.pl
 miscsrc/BBBikeDir.pm
+miscsrc/BBBikeOrgDownload.pm
 msg/bbbike/en
 msg/install/en
 plugins/AltBerlin.pm

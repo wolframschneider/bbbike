@@ -35,6 +35,7 @@ my $isodate2epoch = sub {
      { from  => $isodate2epoch->("2013-05-16 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-05-20 23:59:59"),
        periodic => 1,
+       recurrences => [['easter', 47]], # zwei Tage vor Pfingsten
        text  => 'Straßenfest rund um den Blücherplatz, 17.05.2013 bis 20.05.2013',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -57,6 +58,7 @@ EOF
      { from  => $isodate2epoch->("2013-05-18 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-05-19 23:59:59"),
        periodic => 1,
+       recurrences => [['easter', 49]], # Pfingstsonntag
        text  => 'Karneval der Kulturen, 19.5.2013',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -124,6 +126,7 @@ EOF
      { from  => $isodate2epoch->("2013-04-19 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-04-21 20:00:00"),
        periodic => 1, # erster Termin im Jahr
+       recurrences => [["yearly", days => 11, months => 4]],
        text  => "Rheinstraßenfest in der Rheinstraße zwischen Kaisereiche und Walther-Schreiber-Platz. Dauer: 20.04.2013 10:00 bis 21.04.2013 20:00",
        data  => <<EOF,
 userdel	2::temp 5644,6936 5533,6753 5424,6584 5370,6486
@@ -246,6 +249,7 @@ Florastraße zwischen Grunowstraße und Berliner Straße, Baustelle, Straße in beid
      { from  => $isodate2epoch->("2013-09-06 11:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-09-08 21:00:00"),
        periodic => 1,
+       recurrences => [['yearly', days => 6, months => 9]],
        text  => 'Bahnhofstraße, zwischen Goltzstraße und Steinstraße Wein- und Winzerfest, vom 7.9.2013 11:00 bis 8.9.2013 21:00',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -284,11 +288,13 @@ EOF
      #   #file  => 'rixdorfer_weihnachtsmarkt.bbd', # XXX do not use anymore!!!
      #   data => '', # dummy
      # },
-     { from  => 1353884400, # 2012-11-26 00:00, # 1290962654, # PERIODISCH! # früher: 1102672800, # 2004-12-10 11:00
-       until => 1356303599, # 2012-12-23 23:59, # 1293145199, # PERIODISCH! # früher: 1102805999, # 2004-12-11 23:59
-       text  => 'Spandauer Weihnachtsmarkt, vom 26. November 2012 bis 23. Dezember 2012',
+     { from  => $isodate2epoch->("2013-11-24 00:00:00"), # 1353884400, # 2012-11-26 00:00, # 1290962654, # PERIODISCH! # früher: 1102672800, # 2004-12-10 11:00
+       until => $isodate2epoch->("2013-12-23 23:59:59"), # 1356303599, # 2012-12-23 23:59, # 1293145199, # PERIODISCH! # früher: 1102805999, # 2004-12-11 23:59
+       periodic => 1,
+       recurrences => [['yearly', days => 26, months => 11]],
+       text  => 'Spandauer Weihnachtsmarkt, vom 25. November 2013 bis 23. Dezember 2013',
        type  => 'gesperrt',
-       source_id => 'http://partner-fuer-spandau.de/Weihnachtsmarkt-2012_479_0.html',
+       source_id => 'http://partner-fuer-spandau.de/Weihnachtsmarkt-2013_604_0.html',
        data  => <<EOF,
 userdel	2::temp -3275,14407 -3231,14383 -3204,14368 -3155,14340
 userdel	2::temp -3275,14407 -3338,14333
@@ -360,6 +366,7 @@ EOF
      { from  => $isodate2epoch->("2013-04-30 12:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-05-01 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 1, months => 5]],
        text  => 'MyFest 2013: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2013',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -564,6 +571,7 @@ EOF
      { from  => $isodate2epoch->("2013-06-14 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-06-16 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 14, months => 6]],
        text  => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (15.6.2013 bis 16.6.2013',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -731,7 +739,7 @@ EOF
        text  => 'Bachstraße: In beiden Richtungen Störungen durch Rohrbruch, gesperrt bis Do 12:00 ',
        type  => 'handicap',
       data  => <<EOF,
-userdel	q4 6020,12492 5951,12353 5938,12281 5874,12165 5807,12070 5790,12026
+userdel	q4 6020,12492 5951,12353 5938,12281 5870,12179 5807,12070 5790,12026
 userdel	q4 5758,11895 5775,11975 5790,12026
 EOF
      },
@@ -861,7 +869,7 @@ EOF
        data  => <<EOF,
 userdel	2 12180,7387 12158,7449 12122,7553
 userdel	2 11920,8252 11931,8206 11933,8198
-userdel	2 11920,8252 11898,8362
+userdel	2 11920,8252 11915,8279 11898,8362
 userdel	2 12041,7788 12055,7751 12075,7696
 userdel	2 11979,8014 11963,8074
 userdel	2 11979,8014 12001,7937 12025,7852
@@ -1104,6 +1112,7 @@ EOF
      { from  => $isodate2epoch->("2013-09-13 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-09-15 20:00:00"),
        periodic => 1,
+       recurrences => [['yearly', days => 13, months => 9]],
        text  => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstaltung (Herbstfest auf der Hauptstraße), Straße gesperrt (14.9.2013 10:00 - 15.9.2013 20:00)',
        type  => 'handicap',
        data  => <<EOF,
@@ -1341,11 +1350,13 @@ EOF
 userdel	q4 13225,-681 13215,-570 13176,-161 13165,-34 13124,216 13165,-34 13176,-161 13215,-570 13225,-681 13230,-712 13300,-1252
 EOF
      },
-     { from  => 1356044400, # 2012-12-21 00:00 # 1354356000, # 1292626800, # PERIODISCH, an allen Advents-Wochenenden! # früher: 1102654800, # 2004-12-10 06:00
-       until => 1356303599, # 2012-12-23 23:59 # 1354471200, # 1292799599, # PERIODISCH, an allen Advents-Wochenenden! # früher: 1102892400, # 2004-12-13 00:00
-       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt. 22.12. - 23.12.2012 ',
+     { from  => $isodate2epoch->("2013-11-29 00:00:00"), # weitere Termine unten
+       until => $isodate2epoch->("2013-12-01 23:59:59"),
+       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 1. Adventswochenende (30.11.+1.12.)',
+       periodic => 1,
+       recurrences => [['yearly', days => 29, months => 11]],
        type  => 'gesperrt',
-       source_id => 'http://www.sophienstrasse-berlin.de/?y=2012',
+       source_id => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
        data  => <<EOF,
 userdel	2::temp 9986,13412 10317,13248
 EOF
@@ -1395,7 +1406,7 @@ EOF
        text  => 'Düsseldorfer Str. in beiden Richtungen zwischen Brandenburgische Str. und Konstanzer Str. Baustelle, Straße vollständig gesperrt (bis 24.12.2004)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 4151,10026 3906,10035
+userdel	2 4152,10033 3902,10043
 EOF
      },
      { from  => undef, # 
@@ -2219,7 +2230,7 @@ EOF
        text  => 'B 168; (Lieberose-Friedland); zw. Lieberose und Abzw. Mochlitz Straßenbauarbeiten Vollsperrung 23.06.2005-07.08.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 73201,-43677 72887,-44704
+userdel	2 73168,-43677 73171,-43858 73026,-44211 72878,-44534
 EOF
      },
      { from  => 1119132000, # 2005-06-19 00:00
@@ -2406,7 +2417,7 @@ EOF
        text  => 'B 168; zw. Abzw. Mochlitz und LG in Ri. Friedland Straßenbauarbeiten Vollsperrung 30.07.2005-30.07.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 72781,-41234 71792,-39389
+userdel	2 72751,-41195 71779,-39357
 EOF
      },
      { from  => 1122501600, # 2005-07-28 00:00
@@ -2463,7 +2474,7 @@ EOF
        text  => 'B 112; (Kupferhammerstr.); Bahnübergang in OL Guben Gleisinstandhaltungsarb. Vollsperrung 20.07.2005-23.07.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 99825,-46697 99765,-46542 99702,-46376
+userdel	2 99825,-46697 99765,-46542 99770,-46280
 EOF
      },
      { from  => 1152309600, # 2006-07-08 00:00
@@ -2471,7 +2482,7 @@ EOF
        text  => 'B 112 OL Guben, Bahnübergang OL Guben, Bahnübergang zw. OT Gr. Breesen u. Bresinchen Arbeiten Deutsche Bahn Vollsperrung 09.07.2006-09.07.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 99245,-43974 99228,-44346
+userdel	2 99245,-43974 99190,-44226 99205,-44314 99223,-44380
 EOF
      },
      { from  => 1121892756, # 2005-07-20 22:52
@@ -2555,7 +2566,7 @@ EOF
        text  => 'B 112; (OU Neuzelle-OU Guben); Ber. Steinsdorf Vorwerk Bau Oder-Lausitz-Trasse Vollsperrung 29.08.2005-30.08.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 98777,-43381 98337,-41604
+userdel	2 98769,-43414 98337,-41604
 EOF
      },
      { from  => 1123103274, # 2005-08-03 23:07
@@ -3063,7 +3074,7 @@ userdel	2 12090,7651 12081,7679 12075,7696
 userdel	2 12090,7651 12122,7553
 userdel	2 12180,7387 12158,7449 12122,7553
 userdel	2 11920,8252 11931,8206 11933,8198
-userdel	2 11920,8252 11898,8362
+userdel	2 11920,8252 11915,8279 11898,8362
 userdel	2 12041,7788 12055,7751
 userdel	2 12041,7788 12025,7852
 userdel	2 12001,7937 12025,7852
@@ -3334,11 +3345,13 @@ EOF
 userdel	1 -1668,-1709 -1715,-1767 -1921,-1931 -2049,-2165
 EOF
      },
-     { from  => 1353798000, # 2012-11-25 00:00 # 1321743600, # 2011-11-20 00:00 # PERIODISCH!
-       until => 1357513199, # 2013-01-06 23:59 # 1325458800, # 2012-01-02 00:00 # PERIODISCH!
-       text  => 'Weihnachtsmarkt an der Gedächtniskirche, vom 26. November 2012 bis 06. Januar 2013',
+     { from  => $isodate2epoch->("2013-11-24 00:00:00"), # 1353798000, # 2012-11-25 00:00 # 1321743600, # 2011-11-20 00:00 # PERIODISCH!
+       until => $isodate2epoch->("2014-01-01 23:59:59"), # 1357513199, # 2013-01-06 23:59 # 1325458800, # 2012-01-02 00:00 # PERIODISCH!
+       periodic => 1,
+       recurrences => [['yearly', days => 26, months => 11]],
+       text  => 'Weihnachtsmarkt an der Gedächtniskirche, vom 25. November 2013 bis 01. Januar 2014',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/orte/weihnachtsmaerkte/weihnachtsmarkt-gedaechtniskirche/index.php?y=2012',
+       source_id => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/charlottenburg-wilmersdorf/971524-1323017-weihnachtsmarktanderged%C3%A4chtniskirche.html',
        data  => <<EOF,
 # sowieso schon mit q4 markiert, deshalb -> 2
 userdel	2::temp 5829,10964 5782,10884
@@ -3456,8 +3469,8 @@ EOF
        text  => 'K 6950 Gohlitzstr. OL Lehnin, zw. Belziger Str. u. Lindenstr. Straßenbau; Herst.Umleit.stre. Vollsperrung 11.10.2005-31.03.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -34655,-11263 -34337,-11047
-userdel	q4 -34232,-10832 -34337,-11047
+userdel	q4 -34752,-11288 -34324,-11007
+userdel	q4 -34232,-10832 -34324,-11007
 EOF
      },
      { from  => 1131836400, # 2005-11-13 00:00
@@ -3537,13 +3550,14 @@ EOF
 userdel	2::inwork -19908,17940 -18793,18169
 EOF
      },
-     { from  => $isodate2epoch->("2013-12-06 00:00:00"), # 1 Tag Vorlauf # PERIODISCH! früher (<=2012) an allen Adventssamstagen
-       until => $isodate2epoch->("2013-12-08 23:59:59"), #                 PERIODISCH! früher (<=2012) an allen Adventssamstagen
-       text  => 'Lichtenrader Weihnachtsmarkt: Bahnhofstr. (Lichtenrade) in beiden Richtungen zwischen Steinstr. und Goltzstr gesperrt (am 7. und 8. Dezember 2013)',
+     { from  => $isodate2epoch->("2013-11-30 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2013-12-01 23:59:59"), #
+       periodic => 1,
+       recurrences => [['yearly', days => 1, months => 12]],
+       text  => 'Lichtenrader Lichtermarkt: Alt-Lichtenrade, Straße vermutlich gesperrt (am 1. Dezember 2013)',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: http://www.ag-bahnhofstrasse.de/weihnachtsmarkt.html
-userdel	q4 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
+userdel	q4::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 EOF
      },
      { from  => 1134255600, # 2005-12-11 00:00
@@ -3632,7 +3646,7 @@ EOF
        text  => 'L 088 Bahnhofstr. OD Lehnin, Höhe Marktplatz Umgestaltung Marktplatz Vollsperrung 16.01.2006-17.03.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -34063,-10552 -34488,-10578
+userdel	q4 -33986,-10466 -34009,-10453 -34112,-10516 -34429,-10543 -34492,-10500
 EOF
      },
      { from  => undef, # 
@@ -4425,7 +4439,7 @@ EOF
        source_id => 'LMS_1146113785841',
        data  => <<EOF,
 userdel	2 9098,12687 9117,12705 9171,12758 9209,12795
-userdel	2 9280,12883 9209,12795
+userdel	2 9286,12886 9209,12795
 EOF
      },
      { from  => 1146693600, # 2006-05-04 00:00
@@ -5659,7 +5673,7 @@ EOF
        text  => 'B 112 Guben, OT Bresinchen Guben, OT Bresinchen, Bahnübergang Gleisbauarbeiten Vollsperrung 26.08.2006-27.08.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 99176,-43536 99245,-43974 99228,-44346
+userdel	2::inwork 99267,-43580 99311,-43692 99245,-43974 99190,-44226 99205,-44314 99223,-44380
 EOF
      },
      { from  => 1156629600, # 2006-08-27 00:00
@@ -6220,6 +6234,7 @@ EOF
      { from  => $isodate2epoch->("2013-05-31 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-06-02 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 1, months => 6]],
        text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (1.6.2013 und 2.6.2013)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -6247,6 +6262,7 @@ EOF
      { from  => $isodate2epoch->("2013-10-04 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-10-06 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 5, months => 10]],
        text  => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 5. und 6.10.2013',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -6731,11 +6747,13 @@ EOF
 userdel	2::inwork -31993,-726 -32143,-211 -32153,-176
 EOF
      },
-     { from  => 1353884400, # 1321916400, # 2011-11-22 00:00 # PERIODISCH! # früher: 1163480400, # 2006-11-14 06:00
-       until => 1356562740, # 1324940399, # 2011-12-26 23:59 # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
-       text  => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: Schinkelplatz teilweise gesperrt, vom 26.11.-26.12.2012',
+     { from  => $isodate2epoch->("2013-11-19 00:00:00"), # die Buden standen schon am 19.11.2013 # 1353884400, # 1321916400, # 2011-11-22 00:00 # PERIODISCH! # früher: 1163480400, # 2006-11-14 06:00
+       until => $isodate2epoch->("2013-12-26 23:59:59"), # 1356562740, # 1324940399, # 2011-12-26 23:59 # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
+       periodic => 1,
+       recurrences => [['yearly', days => 18, months => 11]], 
+       text  => 'Nostalgischer Weihnachtsmarkt rund um das Opernpalais: Schinkelplatz teilweise gesperrt, vom 25.11. bis 26.12.2013',
        type  => 'gesperrt',
-       source_id => 'http://www.berliner-weihnacht.de/',
+       source_id => 'http://www.berliner-weihnacht.de/?y=2013',
        data  => <<EOF,
 userdel	2::temp 10008,12274 9994,12368
 # REMOVED (passierbar!) --- userdel	2::temp 9943,12364 9961,12273 9972,12184
@@ -6895,7 +6913,7 @@ EOF
        text  => 'L 285 Günterberg-Schönermark OD Günterberg Kanal- und Straßenbau Vollsperrung 21.07.2006-18.12.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 48203,79315 47091,77570
+userdel	q4::inwork 48305,79400 48006,79147 47713,78664 47269,77634 47091,77570
 EOF
      },
      { from  => 1165952495, # 2006-12-12 20:41
@@ -7439,7 +7457,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: last_checked: 2009-08-29
-userdel	q4::inwork 9209,12795 9280,12883
+userdel	q4::inwork 9209,12795 9286,12886
 EOF
      },
      { from  => 1174068872, # 2007-03-16 19:14
@@ -7954,11 +7972,11 @@ userdel	2::inwork 9668,5733 9456,5644 9447,5641 9368,5608 9161,5535
 EOF
      },
      { from  => undef, # 
-       until => 1214463306, # undef # war, ist nicht mehr: Abbiegen in Kleine Auguststr. und Joachimstr. nicht möglich;	3 9996,13678 10085,13684 10142,13556; 	3 10142,13556 10085,13684 10220,13691
+       until => 1214463306, # undef # war, ist nicht mehr: Abbiegen in Kleine Auguststr. und Joachimstr. nicht möglich;	3 9996,13678 10085,13684 10142,13556; 	3 10142,13556 10085,13684 10220,13694
        text  => 'Linienstr.: Baustelle zwischen Koppenplatz (östliche Straße) und Rosenthaler Str., Einbahnstraße',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 10220,13691 10085,13684 9996,13678 9945,13669
+userdel	1::inwork 10220,13694 10085,13684 9996,13678 9945,13669
 EOF
      },
      { from  => 1177625221, # 
@@ -8200,6 +8218,7 @@ EOF
      { from  => $isodate2epoch->("2013-05-10 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-05-12 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 7, months => 5]],
        text  => 'Bölschestr. (Köpenick): Veranstaltung (Fest auf der "Bölsche"), Straße vollständig gesperrt (11. und 12. Mai 2013)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -8597,6 +8616,7 @@ EOF
      { from  => $isodate2epoch->("2013-08-08 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-08-11 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 9, months => 8]],
        text  => 'Treptower Hafenfest 9.8.2013 - 11.8.2013',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -8674,7 +8694,7 @@ EOF
        text  => 'B 112 Guben-Eisenhüttenstadt Bahnübergang bei Groß Breesen Gleisbauarbeiten Vollsperrung 20.06.2007-21.06.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 99176,-43536 99245,-43974 99228,-44346
+userdel	2::inwork 99267,-43580 99311,-43692 99245,-43974 99190,-44226 99205,-44314 99223,-44380
 EOF
      },
      { from  => 1181768451, # 2007-06-13 23:00
@@ -8948,6 +8968,7 @@ EOF
      { from  => $isodate2epoch->("2013-05-25 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-05-26 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 28, months => 4]], # Kann allerdings auch erst im Mai oder Juni stattfinden
        text  => 'Mehringdamm (Kreuzberg) in Richtung Tempelhof, zwischen Kreuzbergstr. und Dudenstr. Veranstaltung (Seifenkistenrennen am 26 Mai 2013), Fahrtrichtung gesperrt',
        type  => 'gesperrt',
        source_id => 'http://www.xhain.info/termine/seifenkistenrennen-mehringdamm.htm',
@@ -9103,7 +9124,7 @@ EOF
        text  => 'B 246 Ernst-Thälmann-Str. OL Belzig, Höhe Gymnasium Kanalarbeiten Vollsperrung 19.07.2007-19.07.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -44441,-30214 -44189,-30306
+userdel	q4::inwork -44481,-30188 -44189,-30306
 EOF
      },
      { from  => 1184222221, # 2007-07-12 08:37
@@ -9381,7 +9402,7 @@ EOF
        text  => 'B 169 zw. Cottbus und Klein Gaglow Deckenerneuerung halbseitig gesperrt; Einbahnstraße 01.08.2007-09.08.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 73977,-74037 73211,-74836 72657,-75488
+userdel	1::inwork 73892,-73968 73133,-74760 72657,-75488
 EOF
      },
      { from  => 1186869600, # 2007-08-12 00:00
@@ -9389,7 +9410,7 @@ EOF
        text  => 'B 169 zw. Cottbus und Klein Gaglow Deckenerneuerung halbseitig gesperrt; Einbahnstraße 13.08.2007-16.08.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 73977,-74037 73211,-74836 72657,-75488
+userdel	1::inwork 73892,-73968 73133,-74760 72657,-75488
 EOF
      },
      { from  => 1186264800, # 2007-08-05 00:00
@@ -9430,6 +9451,7 @@ EOF
      { from  => $isodate2epoch->("2013-06-01 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-06-02 21:00:00"),
        periodic => 1, # erster Termin im Sommer
+       recurrences => [['yearly', days => 2, months => 6]], # kann aber auch erst im Juli stattfinden
        text  => 'Open Air Gallery am 2. Juni 2013 auf der Oberbaumbrücke (10:00 - 21:00)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -9468,8 +9490,10 @@ EOF
 userdel	2::inwork 15805,10949 15752,11115 15708,11193 15730,11279
 EOF
      },
-     { from  => 1248386400, # 2009-07-24 00:00 PERIODISCH!
+     { from  => 1248386400, # 2009-07-24 00:00 PERIODISCH! # XXX Findet evtl. nicht mehr statt, da kein Platz am Opernpalais ist (Bauarbeiten!)
        until => 1249250399, # 2009-08-02 23:59
+       periodic => 1,
+       #recurrences => [['yearly', days => 24, months => 7, start => "2014-01-01T00:00:00"]], # XXX start parameter does not work as expected
        text  => 'Berliner Gauklerfest vom 24. Juli 2009 bis 2. August 2009, einige Straßen am Opernpalais sind vollständig gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -9540,7 +9564,7 @@ EOF
        text  => 'B 169 zw. Cottbus und Klein Gaglow Deckenerneuerung Vollsperrung 10.08.2007-12.08.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 72657,-75488 73211,-74836 73977,-74037
+userdel	2::inwork 72657,-75488 73133,-74760 73892,-73968
 EOF
      },
      { from  => 1186819867, # 2007-08-11 10:11
@@ -9767,7 +9791,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006391',
        data  => <<EOF,
-userdel	2::inwork 16852,14412 16871,14230 16881,14063
+userdel	2::inwork 16852,14412 16873,14236 16881,14063
 EOF
      },
      { from  => 1188424800, # 2007-08-30 00:00
@@ -10835,7 +10859,7 @@ EOF
        text  => 'L 085 Brück-Golzow zw. OA Golzow und OE Cammer Straßenbau Vollsperrung 19.12.2007-21.12.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -42483,-15134 -41439,-15493 -41352,-15664 -39523,-16953
+userdel	2::inwork -42591,-15106 -41553,-15466 -41188,-15843 -39570,-16890
 EOF
      },
      { from  => 1198328869, # 2007-12-22 14:07
@@ -10879,7 +10903,7 @@ EOF
        text  => 'B 246 Beelitz - Brück Bahnübergang Brück-Ausbau Gleisbauarbeiten Vollsperrung 17.01.2008-18.01.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -29244,-23127 -30149,-22937 -30811,-22899
+userdel	2::inwork -29203,-23058 -30149,-22937 -30806,-22850
 EOF
      },
      { from  => undef, # 
@@ -10972,7 +10996,7 @@ EOF
        text  => 'B 246 Beelitz - Brück Bahnübergang Brück-Ausbau Gleisbauarbeiten Vollsperrung 21.02.2008-22.02.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -30811,-22899 -30149,-22937 -29244,-23127
+userdel	2::inwork -30806,-22850 -30149,-22937 -29203,-23058
 EOF
      },
      { from  => 1203202800, # 2008-02-17 00:00
@@ -11357,7 +11381,7 @@ EOF
        text  => 'L 086 Golzow - Damsdorf OD Lehnin Fläming-Frühlingsfest Vollsperrung 27.04.2008-27.04.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::temp -34063,-10552 -33914,-10466 -33873,-10337
+userdel	q4::temp -33986,-10466 -33923,-10395 -33897,-10328 -33761,-10213
 EOF
      },
      { from  => 1209160800, # 2008-04-26 00:00
@@ -11365,7 +11389,7 @@ EOF
        text  => 'L 088 Emstal - Netzen OD Lehnin Fläming-Frühlingsfest Vollsperrung 27.04.2008-27.04.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::temp -34063,-10552 -34488,-10578
+userdel	q4::temp -33986,-10466 -34009,-10453 -34112,-10516 -34429,-10543 -34492,-10500
 EOF
      },
      { from  => 1208546772, # 2008-04-18 21:26
@@ -12231,6 +12255,7 @@ EOF
      { from  => $isodate2epoch->("2013-08-01 14:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-08-04 22:00:00"),
        periodic => 1, # manchmal/immer (?) zwei Termine im Jahr, erster Termin
+       recurrences => [['yearly', days => 1, months => 4]],
        text  => 'Müllerstr. (Wedding) in beiden Richtungen zwischen Leopoldplatz und Seestr. Veranstaltung (Stadtteilfest Müllerstraße), Straße vollständig gesperrt (2. bis 4. August 2013)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -12285,7 +12310,7 @@ EOF
        text  => 'B 168 OD Peitz, zw. Kreisverkehr und Spreewaldstr. 55. Fischerfest Vollsperrung 10.08.2008-10.08.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::temp 80426,-59644 80046,-59594
+userdel	q4::temp 80384,-59655 80215,-59539 80067,-59547 79760,-59436
 EOF
      },
      { from  => 1218319200, # 2008-08-10 00:00
@@ -12411,7 +12436,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009757',
        data  => <<EOF,
-userdel	2::temp 9385,13174 9250,13163
+userdel	2::temp 9385,13174 9255,13164
 EOF
      },
      { from  => 1219523521, # 2008-08-23 22:32
@@ -12677,7 +12702,7 @@ EOF
        text  => 'L 050 Gubener Str. OD Peitz, zw. Malxebogen und A.-Bebel-Str. Instandsetz.Durchlass, Entwä. Vollsperrung 15.09.2008-30.10.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 80426,-59644 80719,-59219
+userdel	q4::inwork 80384,-59655 80718,-59070
 EOF
      },
      { from  => 1221681660, # 2008-09-17 22:01
@@ -13100,7 +13125,7 @@ EOF
        text  => 'L 088 Bahnhofstr. OD Lehnin, zw. Friedensstr. und Kreisverkehr Gehwegbau halbseitig gesperrt; Einbahnstraße 20.10.2008-19.12.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -34488,-10578 -34063,-10552
+userdel	q4::inwork -34492,-10500 -34429,-10543 -34112,-10516 -34009,-10453 -33986,-10466
 EOF
      },
      { from  => 1224367200, # 2008-10-19 00:00
@@ -13583,7 +13608,7 @@ EOF
        text  => 'L 086 Belziger Straße OD Lehnin Kreuzungsbereich Gohlitzstraße Straßenbau Vollsperrung 23.03.2009-31.12.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -34655,-11263 -34337,-11047
+userdel	q4::inwork -34752,-11288 -34324,-11007
 EOF
      },
      { from  => 1224540000, # 2008-10-21 00:00
@@ -14000,6 +14025,7 @@ EOF
      { from  => $isodate2epoch->("2013-05-24 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-05-26 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 19, months => 5]],
        text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in der Preußenallee), beide Fahrbahnen der Straße gesperrt (25. und 26. Mai 2013)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -14512,6 +14538,7 @@ EOF
      { from  => $isodate2epoch->("2013-06-13 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-06-16 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 14, months => 6]],
        text  => 'Köpenicker Sommer: Veranstaltung, folgende Straßen sind gesperrt: Alt-Köpenick, Schlossplatz, Schlossinsel und Luisenhain (14.6.2013 bis 16.6.2013)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -15136,6 +15163,7 @@ EOF
      { from  => $isodate2epoch->("2013-06-14 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-06-16 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 15, months => 6]],
        text  => 'Badstr. (Wedding) zwischen Pankstr. und Behmstr. Veranstaltung (Seifenkistenderby), Straße vollständig gesperrt (15. und 16. Juni 2013)',
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20130604.0915.385618.html',
@@ -15489,7 +15517,7 @@ EOF
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
-	q4::temp:clock 3374,10201 3359,9968 3347,9793
+	q4::temp:clock 3374,10201 3359,9968 3348,9806
 EOF
      },
      { from  => undef, #
@@ -16328,6 +16356,7 @@ EOF
      { from  => $isodate2epoch->("2013-09-20 11:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-09-22 20:00:00"),
        periodic => 1,
+       recurrences => [['yearly', days => 21, months => 9]],
        text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbst in der Preußenallee), Straße vollständig gesperrt (21. und 22. September 2013) ',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -16503,7 +16532,7 @@ EOF
        text  => 'B 166 zw. Heinersdorf und Abzw. Passow Deckenerneuerung Vollsperrung 12.10.2009-30.10.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 64624,77291 61819,80513 61420,80705 60511,80745 60070,81164 59018,81801 58771,82019
+userdel	2::inwork 64624,77291 61819,80513 61420,80705 60923,80665 60511,80745 60070,81164 59018,81801 58771,82019
 EOF
      },
      { from  => 1254607200, # 2009-10-04 00:00
@@ -16979,17 +17008,23 @@ EOF
 userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998 24927,-87720
 EOF
      },
-     { from  => 1352934000, # 1321311600, # PERIODISCH! # früher: 1258045387, # 2009-11-12 18:03
-       until => 1356994740, # 1325372340, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
-       text  => 'Voltairestr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht oder nur schwer möglich',
+     { from  => 1384350862, # 1352934000, # 1321311600, # PERIODISCH! # früher: 1258045387, # 2009-11-12 18:03
+       until => $isodate2epoch->("2013-12-31 23:59:59"), # 1384350812, # 1352934000, # 1321311600, # PERIODISCH! # früher: 1258045387, # 2009-11-12 18:03
+       periodic => 1,
+       recurrences => [['yearly', days => 11, months => 11]],
+       text  => 'Voltairestr. und Dircksenstr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht möglich (Voltairestr.) bzw. nur schiebend auf dem Gehweg möglich (Dircksenstr.), bis Ende Dezember 2013',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 11209,12430 11329,12497
+userdel	2::temp 11329,12497 11209,12430
+userdel	q4::temp 11209,12430 11273,12301
+userdel	2::temp 11273,12301 11355,12331
 EOF
      },
-     { from  => 1352734264, # 1290960699, # PERIODISCH! # früher: 1258207217, # 2009-11-14 15:00
-       until => 1356994740, # 1293836399, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
-       text  => 'Gendarmenmarkt: Weihnachtsmarkt, Durchfahrt nicht möglich (Eintritt!)',
+     { from  => $isodate2epoch->("2013-11-24 00:00:00"), # 1352734264, # 1290960699, # PERIODISCH! # früher: 1258207217, # 2009-11-14 15:00
+       until => $isodate2epoch->("2013-12-31 23:59:59"), # 1356994740, # 1293836399, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
+       periodic => 1,
+       recurrences => [['yearly', days => 24, months => 11]],
+       text  => 'Gendarmenmarkt: Weihnachtsmarkt vom 25.11.2013 bis 31.12.2013, Durchfahrt nicht möglich (Eintritt!)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 9536,11912 9668,11928
@@ -17055,11 +17090,13 @@ EOF
 userdel	q4::inwork -4630,-36012 -4603,-35730
 EOF
      },
-     { from  => 1353279600, # 2012-11-19 00:00, # 1290380400, # PERIODISCH! # undef, # 
-       until => 1356562799, # 2012-12-26 23:59, # 1293404400, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
-       text  => 'Winterwelt am Potsdamer Platz vom 19. November 2012 bis 26. Dezember 2012',
+     { from  => $isodate2epoch->("2013-11-24 00:00:00"), # 1353279600, # 2012-11-19 00:00, # 1290380400, # PERIODISCH! # undef, # 
+       until => $isodate2epoch->("2013-12-26 23:59:59"), # 1356562799, # 2012-12-26 23:59, # 1293404400, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
+       periodic => 1,
+       recurrences => [['yearly', days => 19, months => 11]],
+       text  => 'Winterwelt am Potsdamer Platz vom 25. November 2013 bis 26. Dezember 2013',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/orte/weihnachtsmaerkte/87132_winterwelt_und_weihnachtsmarkt_potsdamer_platz/index.php',
+       source_id => 'http://www.winterwelt-berlin.de/',
        data  => <<EOF,
 userdel	2::temp 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324 8280,11296 8278,11257
 #: XXX_prog "3::temp" geht nicht?
@@ -17067,9 +17104,12 @@ userdel	3 8427,11365 8389,11378 8374,11479
 userdel	3 8374,11479 8389,11378 8427,11365
 EOF
      },
-     { from  => 1354809600, # 2012-12-06 17:00, # 1322780400, # PERIODISCH! # früher: 1259959719, # 2009-12-04 21:48
-       until => 1355079600, # 2012-12-09 20:00, # 1323039600, # PERIODISCH! # früher: 1260140400, # 2009-12-07 00:00
-       text  => 'Richardplatz (Neukölln) und die Durchfahrt aller angrenzenden Straßen Rixdorfer Weihnachtsmarkt, Straße vollständig gesperrt (vom 07.12.2012 17:00 Uhr bis 09.12.2012 20:00 Uhr)',
+     { from  => $isodate2epoch->("2013-12-05 00:00:00"), # 1354809600, # 2012-12-06 17:00, # 1322780400, # PERIODISCH! # früher: 1259959719, # 2009-12-04 21:48
+       until => $isodate2epoch->("2013-12-08 23:59:59"), # 1355079600, # 2012-12-09 20:00, # 1323039600, # PERIODISCH! # früher: 1260140400, # 2009-12-07 00:00
+       periodic => 1,
+       recurrences => [['yearly', days => 6, months => 12]],
+       source_id => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-alt-rixdorf.html',
+       text  => 'Richardplatz (Neukölln) und die Durchfahrt aller angrenzenden Straßen Rixdorfer Weihnachtsmarkt, Straße vollständig gesperrt (vom 6. Dezember 2013 bis 8. Dezember 2013)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 13416,7712 13426,7674
@@ -17114,11 +17154,13 @@ EOF
 userdel	2::inwork -2521,3637 -2396,3666 -2174,3718 -2014,3826 -1980,3872 -1974,3933 -1996,4063 -1944,4140 -1706,3971 -1624,3956 -1558,3965 -1468,3995 -1380,4108
 EOF
      },
-     { from  => 1354748400, # 2012-12-06 00:00, # 1291330800, # PERIODISCH! # früher: 1259794800, # 2009-12-03 00:00
-       until => 1355698799, # 2012-12-16 23:59, # 1292194799, # PERIODISCH! # früher: 1260745199, # 2009-12-13 23:59
-       text  => 'Alt-Köpenicker Weihnachtsmarkt vom 07.12.2012 bis zum 16.12.2012',
+     { from  => $isodate2epoch->("2013-12-12 00:00:00"), # 1354748400, # 2012-12-06 00:00, # 1291330800, # PERIODISCH! # früher: 1259794800, # 2009-12-03 00:00
+       until => $isodate2epoch->("2013-12-15 23:59:59"), # 1355698799, # 2012-12-16 23:59, # 1292194799, # PERIODISCH! # früher: 1260745199, # 2009-12-13 23:59
+       periodic => 1,
+       recurrences => [['yearly', days => 13, months => 12]],
+       text  => 'Alt-Köpenicker Weihnachtsmarkt vom 13.12.2013 bis zum 15.12.2013',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/orte/weihnachtsmaerkte/schlossplatz-koepenick/index.php?y=2012',
+       source_id => 'http://www.weihnachtsmarkt-deutschland.de/berlin-koepenick-weihnachtsmarkt.html',
        data  => <<EOF,
 userdel	2::temp 22111,4562 22162,4546 22214,4548
 EOF
@@ -17177,6 +17219,7 @@ EOF
      { from  => $isodate2epoch->("2013-12-30 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2014-01-01 10:00:00"),
        periodic => 1,
+       recurrences => [['yearly', days => 30, months => 12]],
        text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr.',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -17439,6 +17482,7 @@ EOF
      { from  => $isodate2epoch->("2013-09-27 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-09-29 23:59:59"),
        periodic => 1, # manchmal/immer (?) zwei Termine im Jahr, zweiter Termin # 2013 war es am 12./13. Oktober, nicht im September!
+       recurrences => [['yearly', days => 1, months => 8]], # kann aber auch erst im September oder sogar im Oktober sein
        text  => 'Müllerstr. (Wedding): Veranstaltung (traditionelles Müllerstraßenfest), Straße zwischen Seestr. und Leopoldplatz gesperrt, 28. und 29. September 2013',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -17632,7 +17676,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_015565',
        data  => <<EOF,
-userdel	2::temp 9262,13050 9413,13071 9559,13087
+userdel	2::temp 9269,13060 9413,13071 9559,13087
 EOF
      },
      { from  => 1272607309, # 2010-04-30 08:01
@@ -17747,7 +17791,8 @@ EOF
 (Flughafen Tempelhof - Eingang Leinestr.)	2::night 11547,7432 11558,7438
 (Flughafen Tempelhof - Eingang Oderstr.)	2::night 11598,7264 11608,7267
 (Eingang Tempelhofer Damm - südliche Landebahn)	2::night 9302,7294 9351,7241 9461,7190
-(Alter Hafen)	2::night 10204,7680 10134,7797 10076,8040 10037,8269
+(Alter Hafen)	2::night 10204,7680 10134,7797 10076,8040 10328,8102 10444,8086 10486,7972 10405,7898 10134,7797
+# REMOVED --- (Alter Hafen)	2::night 10076,8040 10037,8269
 (Südliche Landebahn - Eingang Oderstr.)	2::night 11555,7314 11596,7280 11608,7267
 (zur nördlichen Landebahn)	2::night 11470,7744 11430,7781
 EOF
@@ -17836,6 +17881,7 @@ EOF
      { from  => $isodate2epoch->("2013-05-30 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-06-01 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 15, months => 5]], # kann auch erst im September stattfinden
        text  => 'Erkner: Heimatfest, 31.5.2013 bis 2.6.2013',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -17881,6 +17927,8 @@ EOF
      { from  => $isodate2epoch->("2013-06-21 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-06-22 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 21, months => 6]],
+       source_id => 'http://www.csd-berlin.de/',
        text  => 'CSD am 22.6.2012',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -18012,6 +18060,7 @@ EOF
      { from  => $isodate2epoch->("2013-06-27 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-06-30 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 8, months => 6]],
        text  => 'Bergmannstraße (Kreuzberg): Veranstaltung (Bergmannstraßenfest), Straße vollständig zwischen Mehringdamm und Zossener Str. gesperrt (28. bis 30. Juni 2013)',
        type  => 'handicap',
        source_id => 'http://www.xhain.info/termine/bergmannstrassenfest.htm',
@@ -18269,7 +18318,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/W-SG33-P/10/410',
        data  => <<EOF,
-userdel	2::inwork -2815,-3574 -3368,-4430
+userdel	2::inwork -2815,-3574 -3170,-4140 -3368,-4430
 EOF
      },
      { from  => 1290975348, # 2010-11-28 21:15
@@ -18344,6 +18393,7 @@ EOF
      { from  => $isodate2epoch->("2013-07-12 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-07-14 23:59:59"),
        periodic => 1, # zweiter Termin im Jahr
+       recurrences => [['yearly', days => 5, months => 7]], # kann auch erst im September stattfinden
        text  => 'Rheinstraße (Friedenau): Veranstaltung (traditionelles Rheinstraßenfest), Straße vollständig zwischen Walther-Schreiber-Platz und Kaisereiche gesperrt (13. und 14. Juli 2013)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -18359,7 +18409,7 @@ EOF
 userdel	2::temp 10310,-2136 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
 EOF
      },
-     { from  => 1284091200, # 2010-09-10 06:00 # PERIODISCH!
+     { from  => 1284091200, # 2010-09-10 06:00 # periodischer Eintrag ist weiter unten
        until => 1284336000, # 2010-09-13 02:00
        text  => 'Breite Straße (Pankow): Veranstaltung, Straße vollständig gesperrt (bis 13.09.10, 2 Uhr morgens) in beiden Richtungen zwischen Mühlenstr. und Berliner Str.',
        type  => 'handicap',
@@ -18371,6 +18421,7 @@ EOF
      { from  => $isodate2epoch->("2013-08-29 14:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-09-01 22:00:00"),
        periodic => 1,
+       recurrences => [['yearly', days => 10, months => 4]], # kann auch erst im Juni oder sogar September stattfinden
        text  => 'Turmstraße (Moabit): Veranstaltung (Turmstraßenfest), Straße zwischen Stromstr. und Waldstr. vollständig gesperrt (30.08.2013 bis 01.09.2012)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -18500,7 +18551,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20101007.1035.313571.html',
        data  => <<EOF,
-userdel	q4::inwork; 3431,9763 3467,9793 3587,9905 3620,9936 3706,10039 3747,10094 3852,10236
+userdel	q4::inwork; 3427,9771 3469,9807 3587,9905 3605,9929 3701,10047 3741,10097 3852,10236
 EOF
      },
      { from  => 1287892800, # 2010-10-24 06:00
@@ -19060,7 +19111,7 @@ EOF
 userdel	2::temp 9990,-8867 10115,-8276
 EOF
      },
-     { from  => 1315519200, # 2011-09-09 00:00 # PERIODISCH!
+     { from  => 1315519200, # 2011-09-09 00:00 # war mal periodisch, zwischen 2006 bis 2011, nun nicht mehr?
        until => 1315778399, # 2011-09-11 23:59
        text  => 'Seifenkistenrennen auf dem Kaiserdamm zwischen Theodor-Heuss-Platz und Königin-Elisabeth-Straße, 10./11.09.2011',
        type  => 'gesperrt',
@@ -19071,6 +19122,7 @@ EOF
      { from  => $isodate2epoch->("2013-07-06 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-07-07 21:00:00"),
        periodic => 1, # zweiter Termin im Sommer
+       recurrences => [['yearly', days => 7, months => 7]], # kann aber auch erst im August stattfinden
        text  => 'Open Air Gallery am 7. Juli 2013 auf der Oberbaumbrücke (10:00 - 21:00)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -19080,6 +19132,7 @@ EOF
      { from  => $isodate2epoch->("2013-04-25 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-05-20 00:00:00"),
        periodic => 1,
+       recurrences => [['yearly', days => 26, months => 4]],
        text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 26.04.2013 bis 20.05.2013',
        type  => 'handicap',
        data  => <<EOF,
@@ -19447,12 +19500,14 @@ EOF
 userdel	2::temp 9656,12021 9668,11928
 EOF
      },
-     { from  => $isodate2epoch->("2013-07-01 07:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2013-07-04 19:00:00"),
-       text  => 'Platz der Luftbrücke (Tempelhof): Veranstaltung, Straße vollständig zwischen Tempelhofer Damm und Columbiadamm gesperrt (bis Donnerstag)', # Bread and Butter, 2x im Jahr?
+     { from  => $isodate2epoch->("2014-01-13 07:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2014-01-16 19:00:00"),
+       text  => 'Platz der Luftbrücke (Tempelhof): Straße vollständig zwischen Tempelhofer Damm und Columbiadamm wegen einer Veranstaltung (Bread & Butter) gesperrt (14. Januar 2013 bis 16. Januar 2013)',
        periodic => 1,
+       recurrences => [['yearly', days => 14, months => 1],
+                       ['yearly', days => 1, months => 7]],
        type  => 'gesperrt',
-       source_id => 'IM_020013',
+       source_id => 'http://www.breadandbutter.com/winter2014/de/home/',
        data  => <<EOF,
 userdel	q4::temp 9233,8597 9321,8607 9364,8640 9395,8726
 userdel	q4::temp 9321,8607 9401,8510 9451,8548 9364,8640
@@ -19610,6 +19665,7 @@ EOF
      { from  => $isodate2epoch->("2013-08-01 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-08-05 02:00:00"),
        periodic => 1, # Biermeile oder wie heißt das genau?
+       recurrences => [['yearly', days => 1, months => 8]],
        text  => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung, Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (bis 05.08.12, 02:00)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -19732,6 +19788,7 @@ EOF
      { from  => $isodate2epoch->("2013-08-08 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-08-11 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 9, months => 8]],
        text  => 'Berliner Allee (Weißensee): Veranstaltung (Blumenfest Weißensee), Fahrtrichtung gesperrt stadteinwärts vom Weißen See bis zum Antonplatz, 9.8.2013 bis 11.8.2013',
        type  => 'handicap',
        data  => <<EOF,
@@ -19786,6 +19843,7 @@ EOF
      { from  => $isodate2epoch->("2013-09-13 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-09-15 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 10, months => 9]],
        text  => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., Veranstaltung (Fest an der Panke), Straße vollständig gesperrt (14.09.2013 und 15.09.2013)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -19821,11 +19879,13 @@ EOF
 userdel	2::inwork 872,24330 873,24112 825,24068 764,24065 609,24215 237,24374 195,24389 132,24390 78,24364 -406,23934
 EOF
      },
-     { from  => 1347508800, # 2012-09-13 06:00 PERIODISCH? ca. 2. Wochenende im September
-       until => 1347832740, # 2012-09-16 23:59
-       text  => 'Hauptstr. (Rosenthal): Veranstaltung, Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 14.09.2012 06:00 Uhr bis 16.09.2012 23:59 Uhr',
+     { from  => $isodate2epoch->("2013-09-18 00:00:00"), # 1347508800, # 2012-09-13 06:00 PERIODISCH, ca. 2. Wochenende im September
+       until => $isodate2epoch->("2013-09-21 23:59:59"), # 1347832740, # 2012-09-16 23:59
+       periodic => 1,
+       recurrences => [['yearly', days => 14, months => 9]],
+       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 19.09.2013 bis 21.09.2013',
        type  => 'handicap',
-       source_id => 'IM_019184',
+       source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/',
        data  => <<EOF,
 userdel	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
 EOF
@@ -20045,6 +20105,7 @@ EOF
 #: note: am 2013-08-14 geprüft: Fahrbahn war gesperrt
 #: note: am 2013-09-06 geprüft: Schranke, nur Straßenbahnen und Lieferverkehr werden durchgelassen
 #: note: am 2013-10-24 geprüft: Radfahrer konnten heute wohl durchfahren, aber offiziell noch immer gesperrt
+#: note: am 2013-11-05 geprüft: offiziell gesperrt, aber Durchfahrt mit Umrunden der Sperren möglich
 userdel	q3::inwork 10530,14452 10723,14772
 EOF
      },
@@ -20120,13 +20181,14 @@ userdel	q4::inwork 2295,20358 2241,20487
 EOF
      },
      { from  => 1330902000, # 2012-03-05 00:00
-       until => $isodate2epoch->("2013-12-20 15:00:00"), # 1370005200, # 2013-05-31 15:00
-       text  => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Ende Dezember 2013',
+       until => $isodate2epoch->("2013-12-09 11:00:00"), # 1370005200, # 2013-05-31 15:00
+       text  => 'Neubau der Ruppiner Chaussee, Fahrbahn Richtung Tegel bis Schulzendorfer Str. gesperrt, bis Mitte Dezember 2013',
        type  => 'handicap',
        source_id => 'INKO_111647', # auch: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120228.1300.366751.html
        data  => <<EOF,
-#: osm_watch: way id="23243508" version="37"
+#: osm_watch: way id="23243508" version="40"
 #: note: Radfahrer dürfen offiziell in Gegenrichtung fahren
+#: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20131206.0905.392490.html (neues Ende)
 userdel	q2::inwork; -1872,24336 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 EOF
      },
@@ -20201,6 +20263,7 @@ EOF
      { from  => $isodate2epoch->("2013-04-26 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-04-28 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 27, months => 4]],
        text  => 'Str. des 17.Juni zwischen Yitzhak-Rabin-Str. und Platz des 18.März sowie Ebertstr. gesperrt (Nisan Kinderfest, 27.4.2013 bis 28.4.2013)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -20411,6 +20474,7 @@ EOF
      { from  => $isodate2epoch->("2013-09-12 16:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-09-15 23:59:59"),
        periodic => 1,
+       recurrences => [['yearly', days => 15, months => 6]], # kann aber auch erst im September stattfinden
        text  => 'Veranstaltung auf dem Mariannenplatz "Berlin lacht", 13.-15. September 2013',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -20684,9 +20748,8 @@ EOF
 userdel	q4::inwork 11615,15114 11595,15058
 EOF
      },
-     { from  => $isodate2epoch->("2013-07-31 00:00:00"), # 1 Tag Vorlauf
+     { from  => $isodate2epoch->("2013-07-31 00:00:00"), # 1 Tag Vorlauf # der zugehörige periodische Eintrag ist weiter oben
        until => $isodate2epoch->("2013-07-31 00:00:00"), # XXX Das Gauklerfest 2013 wurde abgesagt!!!
-       periodic => 1,
        text  => 'Gauklerfest, Straßen am Schinkelplatz gesperrt, vom 1. August bis 11. August 2013',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -20733,8 +20796,9 @@ EOF
      { from  => 1378958400, # 2013-09-12 06:00
        until => 1379268000, # 2013-09-15 20:00
        text  => 'Bergstr.: Veranstaltung (Bergstraßenfest), Straße zwischen Körnerstr. und Heesestr. gesperrt, bis 15.09.2013 20:00 Uhr ',
-       type  => 'handicap',
        periodic => 1,
+       recurring => [['yearly', days => 15, months => 9]],
+       type  => 'handicap',
        source_id => 'IM_020306',
        data  => <<EOF,
 #: note: Fest findet auf der Fahrbahn statt, man kann nur schiebend die Gehwege benutzen
@@ -20797,6 +20861,7 @@ EOF
      { from  => $isodate2epoch->("2013-09-27 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-09-30 06:00:00"),
        periodic => 1,
+       recurrences => [['yearly', days => 21, months => 9]],
        text  => 'Sperrungen wegen Veranstaltungen (Marathon, Deutschlandfest): Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Behrenstr. und Scheidemannstr., Yitzak-Rabin-Str., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, bis 30.09.2013 06:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -20835,7 +20900,7 @@ userdel	q4::inwork; -2974,13188 -2728,13269 -2706,13291
 EOF
      },
      { from  => 1353366000, # 2012-11-20 00:00
-       until => 1386169200, # 2013-12-04 16:00
+       until => $isodate2epoch->("2013-12-31 23:59:59"), # 1386169200, # 2013-12-04 16:00
        text  => 'Friedrich-Engels-Str. stadteinwärts zwischen Nordendstr. und Platananenstr. Baustelle, Fahrtrichtung gesperrt (bis Ende 2013/Anfang 2014)',
        type  => 'handicap',
        source_id => 'IM_019421',
@@ -20846,7 +20911,7 @@ EOF
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20130614.1020.386081.html (Vollsperrung ab Juni 2013)
 #: by: IM_019421 (allerdings hier nur bis Dezember 2013)
 # REMOVED (bei VMZ abgelaufen) --- : next_check: 2013-09-01 --- #: XXX von 22.6.2013 für 10 Wochen in _beiden_ Richtungen gesperrt --- danach wieder die alte Situation herstellen --- #: XXX vmz-Eintrag dafür: Friedrich-Engels-Str. (Niederschönhausen) in beiden Richtungen zwischen Nordendstr. und Platanenstr. Geplant ab: 22.06.2013 07 Uhr, Baustelle, Straße vollständig gesperrt eine Umleitung ist eingerichtet (bis auf weiteres)	INKO_119074 --- #: priority: #A
-#: next_check: 2013-12-04
+#: next_check: 2013-12-15
 #: XXX danach bessere Straßenqualität? Radstreifen?
 #: osm_watch: way id="24930947" version="20"
 #: source_id: IM_020259 (zusätzlich)
@@ -21128,6 +21193,7 @@ EOF
      { from  => $isodate2epoch->("2013-07-17 00:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2013-07-21 23:59:59"),
        periodic => 1, # XXX wahrscheinlich
+       recurrences => [['yearly', days => 18, months => 7]],
        text  => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (18.07.2013 bis 21.07.2013)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -21145,7 +21211,7 @@ EOF
      },
      { from  => 1366740818, # 2013-04-23 20:13
        until => 1427727600, # 2015-03-30 17:00
-       text  => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Straße gesperrt (bis Ende März 2014) ',
+       text  => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende März 2015) ',
        type  => 'handicap',
        source_id => 'IM_019747',
        data  => <<EOF,
@@ -21191,20 +21257,23 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Richardstr.: Baustelle zwischen Kirchgasse und Berthelsdorfer Str., Fahrtrichtung gesperrt',
+       text  => 'Richardstr.: Baustelle zwischen Jan-Hus-Weg und Berthelsdorfer Str., Fahrtrichtung gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-09-27
+#: last_checked: 2013-11-22 (Asphaltierungsarbeiten)
 #: check_frequency: 60d
-userdel	q4::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904 12870,8087
+# REMOVED --- userdel	q4::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904
+userdel	q4::inwork; 13085,7904 12870,8087
 EOF
      },
-     { from  => 1367560561, # 2013-05-03 07:56
-       until => 1367791199, # 2013-05-05 23:59
-       text  => 'Bahnhofstr. (Lichtenrade) zwischen Riedingerstr. und Goltzstr. Veranstaltung, Vollsperrung (bis Sonntag, 24:00)',
+     { from  => 1385679600, # 2013-11-29 00:00
+       until => 1385938799, # 2013-12-01 23:59
+       periodic => 1,
+       recurrences => [['yearly', days => 1, months => 12]],
+       text  => 'Bahnhofstr. (Lichtenrade): Weihnachtsmarkt zwischen Riedingerstr. und Goltzstr, Straße gesperrt, 30.11.2013 und 1.12.2013',
        type  => 'gesperrt',
-       source_id => 'IM_019787',
+       source_id => 'IM_020814',
        data  => <<EOF,
 userdel	2::temp 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
 EOF
@@ -21238,6 +21307,7 @@ EOF
      { from  => 1367560778, # 2013-05-03 07:59
        until => 1367791199, # 2013-05-05 23:59
        periodic => 1,
+       recurrences => [['yearly', days => 4, months => 5]],
        text  => 'Schöneberger Mai- und Spargelfest am 04. und 05. Mai 2013 in der Freiherr-vom-Stein-Straße',
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20130419.1210.383671.html',
@@ -21267,6 +21337,7 @@ EOF
        until => $isodate2epoch->("2013-06-02 23:59:59"),
        text  => 'Bahnhofstraße (Lichtenrade): Veranstaltung (Lichtenrader Maientanz), Straße vermutlich gesperrt (1. und 2. Juni 2013)',
        periodic => 1,
+       recurrences => [['yearly', days => 31, months => 5]],
        type  => 'handicap',
        data  => <<EOF,
 #: by: http://www.family-and-friends-ev.de/3.html
@@ -21278,6 +21349,7 @@ EOF
        until => 1377381599, # 2013-08-24 23:59
        text  => 'SUPPE&MUCKE 2013 am 24. August am Rudolfplatz',
        periodic => 1, # allerdings wechselnde Orte
+       recurrences => [['yearly', days => 24, months => 8]],
        type  => 'gesperrt',
        source_id => 'http://www.suppeundmucke.de/',
        data  => <<EOF,
@@ -21291,6 +21363,7 @@ EOF
        until => 1377986399, # 2013-08-31 23:59
        text  => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am Samstag, 31. August 2013, ab 14:00 Uhr',
        periodic => 1,
+       recurrences => [['yearly', days => 31, months => 8]],
        type  => 'gesperrt',
        source_id => 'http://www.xhain.info/termine/fiesta-kreutziga.htm',
        data  => <<EOF,
@@ -21320,6 +21393,7 @@ EOF
        until => 1370210399, # 2013-06-02 23:59
        text  => 'Internationaler Kindertag im FEZ, Veranstaltung, einige Wege und Straßen sind gesperrt, 1. und 2. Juni 2013',
        periodic => 1,
+       recurrences => [["yearly", "days" => 1, "months" => 6]],
        type  => 'gesperrt',
        source_id => 'http://www.kindertag-berlin.de/index.php?id=418',
        data  => <<EOF,
@@ -21376,12 +21450,13 @@ userdel	2::inwork 16279,5170 16209,5067 16146,4974 16004,4764 15863,4554 15843,4
 EOF
      },
      { from  => 1349931600, # 2012-10-11 07:00
-       until => 1383318000, # 2013-11-01 16:00
-       text  => 'Friedrich-Krause-Ufer (Moabit) Richtung Föhrer Brücke Höhe Kraftwerk: Baustelle, Fahrtrichtung gesperrt, Ausweichen auf Gehweg, bis Anfang November 2013',
+       until => 1388329200, # 2013-12-29 16:00
+       text  => 'Friedrich-Krause-Ufer (Moabit) Richtung Föhrer Brücke Höhe Kraftwerk: Baustelle, Fahrtrichtung gesperrt, Ausweichen auf Gehweg, bis Ende 2013',
        type  => 'handicap',
        source_id => 'INKO_115299',
        data  => <<EOF,
-#: last_checked: 2013-10-12
+#: last_checked: 2013-11-12
+#: check_frequency: 70d
 userdel	q2::inwork; 6572,14639 6299,14660
 EOF
      },
@@ -21504,6 +21579,7 @@ EOF
        until => 1372010400, # 2013-06-23 20:00
        text  => 'Britzer Rosenfest an der Britzer Dorfkirche, Backbergstr. ist gesperrt, 22. und 23. Juni 2013',
        periodic => 1,
+       recurrences => [['yearly', days => 22, months => 6]],
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 12826,4777 12836,4649
@@ -21607,7 +21683,7 @@ EOF
 #: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht vvv
 #: osm_watch: way id="80221295" version="18" brb
 	2 19158,-4083 19189,-4062 19454,-3956 19524,-3843 19528,-3767 19479,-3690
-#: osm_watch: way id="83106248" version="14" brb
+#: osm_watch: way id="83106248" version="15" brb
 	2 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
 #: osm_watch: way id="60482011" version="25" brb
 #: osm_watch: way id="192153919" version="2" brb
@@ -21827,6 +21903,7 @@ EOF
        text  => 'Koloniestr. zwischen Soldiner Str. und Osloer Str.: Soldiner Kiez Straßenfest, Straße gesperrt, am 07.09.2013 von 14 bis 18 Uhr',
        type  => 'gesperrt',
        periodic => 1,
+       recurrences => [['yearly', days => 7, months => 9]],
        source_id => 'IM_020277',
        data  => <<EOF,
 userdel	2::temp 8606,16973 8677,17154
@@ -21871,22 +21948,18 @@ EOF
        data  => <<EOF,
 #: XXX bis wann gehen die Bauarbeiten?
 #: by: http://de.wikipedia.org/wiki/Rote_Insel#Um-_und_Ausbau_2013_.28Sch.C3.B6neberger_Schleife.29 (Umbauarbeiten)
-#: last_checked: 2013-10-16
+#: last_checked: 2013-11-19
 #: check_frequency: 30d
 #: priority: #A
 userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1384864722, # undef, # XXX
        text  => 'Torgauer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf engen Gehweg möglich',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX bis wann gehen die Bauarbeiten?
-#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4579 (eventuell Einschränkungen bis 2018?)
-#: last_checked: 2013-10-16
-#: check_frequency: 30d
-#: priority: #A
+# REMOVED (beendet) --- #: XXX bis wann gehen die Bauarbeiten? --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4579 (eventuell Einschränkungen bis 2018?) --- #: last_checked: 2013-10-16 --- #: check_frequency: 30d --- #: priority: #A
 userdel	q4::inwork 7001,8161 7250,8223
 EOF
      },
@@ -21926,7 +21999,7 @@ userdel	q4::inwork 9075,11756 9000,11727
 EOF
      },
      { from  => undef, # 
-       until => 1383238800, # 2013-10-31 18:00
+       until => 1383047340, # 1383238800, # 2013-10-31 18:00
        text  => 'Modersohnstr., Gärtnerstr.: Bauarbeiten, Einbahnstraße zwischen Revaler Str. und Wühlischstr. (offen Richtung Süden), bis Ende Oktober 2013',
        type  => 'handicap',
        data  => <<EOF,
@@ -21963,13 +22036,13 @@ userdel	2::inwork 10086,12725 10166,12777
 EOF
      },
      { from  => 1381633200, # 2013-10-13 05:00
-       until => 1384185600, # 2013-11-11 17:00
-       text  => 'Rosenthaler Str. (Mitte): Gleisbauarbeiten, Sperrung der Fahrbahn zwischen Linienstr. und Weinmeisterstr., 14.10.2013 bis 11.11.2013 ',
+       until => 1383773729, # 1384704000, # 2013-11-17 17:00
+       text  => 'Rosenthaler Str. (Mitte): Gleisbauarbeiten, Sperrung der Fahrbahn zwischen Linienstr. und Weinmeisterstr., 14.10.2013 bis 17.11.2013 ',
        type  => 'handicap',
        source_id => 'IM_020486',
        data  => <<EOF,
 #: by: http://www.bvg.de/index.php/de/56927/name/fahrinfo+Update+-+was+ist+neu%3F.html (Enddatum)
-userdel	q4::inwork 10350,13376 10313,13493 10286,13548 10263,13594 10220,13691
+userdel	q4::inwork 10350,13376 10313,13493 10286,13548 10263,13594 10220,13694
 EOF
      },
      { from  => 1371198900, # 2013-06-14 10:35
@@ -22001,18 +22074,18 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Krügerstr. und Gudvanger Str.: Bauarbeiten im Bereich Erich-Weinert-Str., Fahrbahn gesperrt',
+       text  => 'Gudvanger Str.: Bauarbeiten zwischen Krügerstr. und Erich-Weinert-Str., Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2013-10-20
-#: next_check: 2013-11-20
-userdel	q3::inwork 11758,16111 11684,15997 11859,16058
+#: last_checked: 2013-11-13
+#: check_frequency: 30d
+userdel	q4::inwork 11694,16034 11673,16003
 EOF
      },
      { from  => 1382507820, # 2013-10-23 07:57
-       until => 1383055200, # 2013-10-29 15:00
-       text  => 'Augustastr. (Steglitz): Baustelle, Fahrbahn zwischen Augustaplatz und Moltkestr. bis Ende Oktober 2013 gesperrt ',
+       until => 1383314400, # 2013-11-01 15:00
+       text  => 'Augustastr. (Steglitz): Baustelle, Fahrbahn zwischen Augustaplatz und Moltkestr. bis Anfang November 2013 gesperrt ',
        type  => 'handicap',
        source_id => 'IM_020548',
        data  => <<EOF,
@@ -22026,6 +22099,242 @@ EOF
        source_id => 'IM_020557',
        data  => <<EOF,
 userdel	2::inwork 2178,28067 2345,27670 2666,27009 2842,26710
+EOF
+     },
+     { from  => 1383433200, # 2013-11-03 00:00
+       until => 1385161199, # 2013-11-22 23:59
+       text  => 'Ernststr./Schubertstr.: Bauarbeiten, Sperrung der Fahrbahn, vom 4. November 2013 bis zum 22. November 2013 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20131029.1400.390941.html',
+       data  => <<EOF,
+userdel	q4::inwork 3167,19597 3252,19658 3343,19727 3546,19477
+EOF
+     },
+     { from  => 1383433200, # 2013-11-03 00:00
+       until => 1385420399, # 2013-11-25 23:59
+       text  => 'Sommerstraße: Bauarbeiten zwischen Klemkestraße und Hoppestraße, Fahrbahn gesperrt, vom 4. November 2013 bis ca. zum 25. November 2013 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20131029.1400.390941.html',
+       data  => <<EOF,
+userdel	q4::inwork 8482,18284 8465,18365 8447,18446 8425,18542 8261,18689 8182,18761
+EOF
+     },
+     { from  => 1385247600, # 2013-11-24 00:00
+       until => 1387234799, # 2013-12-16 23:59
+       text  => 'Herbststr.: Bauarbeiten zwischen Provinzstr. und Kamekestr., sowie in der Sommerstr. zwischen Herbststr. und Hoppestr., Fahrbahn gesperrt, ca. vom 25. November 2013 bis zum 16. Dezember 2013 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20131029.1400.390941.html',
+       data  => <<EOF,
+userdel	q4::inwork 8482,18284 8465,18365 8627,18402
+userdel	q4::inwork 8465,18365 8286,18331
+EOF
+     },
+     { from  => 1383462000, # 2013-11-03 08:00
+       until => 1384268400, # 2013-11-12 16:00
+       text  => 'Behrenstr.: Baustelle zwischen Wilhelmstr. und Glinkastr., Richtung Friedrichstr. bis zum 12.11.2013 gesperrt ',
+       type  => 'handicap',
+       source_id => 'IM_020626',
+       data  => <<EOF,
+userdel	q4::inwork; 8861,12125 9054,12154 9064,12156 9164,12172
+EOF
+     },
+     { from  => 1383458400, # 2013-11-03 07:00
+       until => 1384786800, # 2013-11-18 16:00
+       text  => 'Rosenthaler Str.: zwischen Neue Schönhauser Str. und Weinmeisterstr. Baustelle, Fahrbahn Richtung Rosenthaler Platz gesperrt, bis 18.11.2013 ',
+       type  => 'handicap',
+       source_id => 'IM_020657',
+       data  => <<EOF,
+userdel	q4::inwork; 10310,13227 10317,13248 10350,13376
+EOF
+     },
+     { from  => 1384038000, # 2013-11-10 00:00
+       until => 1386361049, # $isodate2epoch->("2013-12-09 20:00:00"), # VMZ (8.12.) und reales Schild (9.12.) widersprechen sich
+       text  => 'Manfred-von-Richthofen-Str.: zwischen Werner-Voß-Damm und Wolffring in Richtung Platz der Luftbrücke Baustelle, Fahrbahn gesperrt, bis zum 9.12.2013',
+       type  => 'handicap',
+       source_id => 'IM_020670',
+       data  => <<EOF,
+#: by: http://www.berlin.de/imperia/md/content/batempelhofschoeneberg/abtfinperswibuerg/ordnungsamt/tiefbau/stra__enbauliste_stand_2013_11_08.pdf?start&ts=1383903600&file=stra__enbauliste_stand_2013_11_08.pdf (Endedatum)
+userdel	q4::inwork; 8807,8353 8776,8285 8730,8079 8731,8050 8731,8020 8731,7990 8731,7956
+EOF
+     },
+     { from  => 1384077600, # 2013-11-10 11:00
+       until => $isodate2epoch->("2013-12-08 23:59:59"), # 1386342000, # 2013-12-06 16:00
+       text  => 'Stralauer Str.: zwischen Mühlendamm und Jüdenstr. Richtung Jannowitzbrücke Bauarbeiten, Fahrbahn gesperrt, Dezember 2013',
+       type  => 'handicap',
+       source_id => 'IM_020674',
+       data  => <<EOF,
+userdel	q4::inwork; 10738,12364 10804,12291
+EOF
+     },
+     { from  => 1384124400, # 2013-11-11 00:00
+       until => 1385391600, # 2013-11-25 16:00
+       text  => 'Hosemannstr./Roelckestr.: zwischen Paul-Grasse-Str. und Lehderstr. Richtung Norden Bauarbeiten, Fahrbahn gesperrt, bis Ende November 2013',
+       type  => 'handicap',
+       source_id => 'IM_020680',
+       data  => <<EOF,
+userdel	q4::inwork; 12783,15921 12817,15985 12842,16032
+EOF
+     },
+     { from  => 1384498800, # 2013-11-15 08:00
+       until => 1384729199, # 2013-11-17 23:59
+       text  => 'Schönerlinder Straße: zwischen Str. am Posseberg und Str. am Vorwerk (unter der Autobahnbrücke) für alle Verkehrsteilnehmer komplett gesperrt, 16. November 2013 08:00 Uhr bis 17. November 2013 24:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1311/nachricht5105.html',
+       data  => <<EOF,
+userdel	2::inwork 12624,25570 12694,25696
+EOF
+     },
+     { from  => $isodate2epoch->("2013-12-06 00:00:00"),
+       until => $isodate2epoch->("2013-12-08 23:59:59"),
+       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (7.12.+8.12)',
+       periodic => 1,
+       recurrences => [['yearly', days =>  7, months => 12]],
+       type  => 'gesperrt',
+       source_id => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+       data  => <<EOF,
+userdel	2::temp 9986,13412 10317,13248
+EOF
+     },
+     { from  => $isodate2epoch->("2013-12-13 00:00:00"),
+       until => $isodate2epoch->("2013-12-15 23:59:59"),
+       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (14.12.+15.12.)',
+       periodic => 1,
+       recurrences => [['yearly', days => 14, months => 12]],
+       type  => 'gesperrt',
+       source_id => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+       data  => <<EOF,
+userdel	2::temp 9986,13412 10317,13248
+EOF
+     },
+     { from  => $isodate2epoch->("2013-12-20 00:00:00"),
+       until => $isodate2epoch->("2013-12-22 23:59:59"),
+       text  => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 4. Adventswochenende (21.12.+22.12.)',
+       periodic => 1,
+       recurrences => [['yearly', days => 21, months => 12]],
+       type  => 'gesperrt',
+       source_id => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+       data  => <<EOF,
+userdel	2::temp 9986,13412 10317,13248
+EOF
+     },
+     { from  => 1385809200, # 2013-11-30 12:00
+       until => 1385920800, # 2013-12-01 19:00
+       text  => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 1. Dezember 2013, 12:00 bis 19:00 Uhr',
+       periodic => 1,
+       recurrences => [['yearly', days => 1, months => 12]],
+       type  => 'gesperrt',
+       source_id => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
+       data  => <<EOF,
+userdel	2::temp 11317,14564 11255,14572 11163,14548
+EOF
+     },
+     { from  => $isodate2epoch->("2013-12-07 12:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2013-12-08 19:00:00"),
+       text  => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 8. Dezember 2013, 12:00 bis 19:00 Uhr',
+       periodic => 1,
+       recurrences => [['yearly', days => 8, months => 12]],
+       type  => 'gesperrt',
+       source_id => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
+       data  => <<EOF,
+userdel	2::temp 11317,14564 11255,14572 11163,14548
+EOF
+     },
+     { from  => $isodate2epoch->("2013-12-14 12:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2013-12-15 19:00:00"),
+       text  => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 15. Dezember 2013, 12:00 bis 19:00 Uhr',
+       periodic => 1,
+       recurrences => [['yearly', days => 15, months => 12]],
+       type  => 'gesperrt',
+       source_id => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
+       data  => <<EOF,
+userdel	2::temp 11317,14564 11255,14572 11163,14548
+EOF
+     },
+     { from  => $isodate2epoch->("2013-12-21 12:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2013-12-22 19:00:00"),
+       text  => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 22. Dezember 2013, 12:00 bis 19:00 Uhr',
+       periodic => 1,
+       recurrences => [['yearly', days => 22, months => 12]],
+       type  => 'gesperrt',
+       source_id => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
+       data  => <<EOF,
+userdel	2::temp 11317,14564 11255,14572 11163,14548
+EOF
+     },
+     { from  => 1384642800, # 2013-11-17 00:00
+       until => 1404136800, # 2014-06-30 16:00
+       text  => 'Mittelstr.: zwischen Neustädtische Kirchstr. und Friedrichstr. Baustelle, in Richtung Friedrichstr. ca. 60 Meter gesperrt, vom 18.11.2013 bis Ende Juni 2014 ',
+       type  => 'handicap',
+       source_id => 'IM_020714',
+       data  => <<EOF,
+userdel	q3::inwork; 9130,12433 9343,12464
+EOF
+     },
+     { from  => 1384642800, # 2013-11-17 00:00
+       until => 1386082800, # 2013-12-03 16:00
+       text  => 'Monumentenstr./Kreuzbergstr.: Bauarbeiten im Kreuzungsbereich, Fußgänger können passieren, bis Anfang Dezember 2013 ',
+       type  => 'handicap',
+       source_id => 'IM_020737',
+       data  => <<EOF,
+userdel	q3::inwork 8180,9099 8389,9087
+EOF
+     },
+     { from  => 1384897151, # 2013-11-19 22:39
+       until => 1385161200, # 2013-11-23 00:00
+       text  => 'Riemenschneiderweg zwischen Vorarlberger Damm und Peter-Vischer-Straße: Bauarbeiten, Sperrung der Fahrbahn, bis 22.11.2013 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/imperia/md/content/batempelhofschoeneberg/abtfinperswibuerg/ordnungsamt/tiefbau/stra__enbauliste_stand_2013_11_08.pdf?start&ts=1383903600&file=stra__enbauliste_stand_2013_11_08.pdf',
+       data  => <<EOF,
+userdel	q4::inwork 6820,6522 6801,6736 6793,6814 6770,7027 6762,7109
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Weg durch den Geschichtspark Moabit nachts geschlossen, Öffnungszeiten Winter (1.10.-31.3.) 8.00-16.00, Sommer (1.4.-30.9.) 8.00-21.00',
+       type  => 'gesperrt',
+       recurring => 1,
+       data  => <<EOF,
+	2::night 7811,13344 7784,13392 7767,13431 7732,13484 7696,13470
+EOF
+     },
+     { from  => 1385334000, # 2013-11-25 00:00
+       until => 1388357999, # 2013-12-29 23:59
+       periodic => 1,
+       recurrences => [['yearly', days => 25, months => 11]],
+       text  => 'Weihnachtsmarkt am Luisenplatz: geänderte Radverkehrsführung, 25. November - 29. Dezember 2013',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: http://www.potsdam.de/cms/beitrag/10046424/302934/
+#: by: http://www.potsdam.de/cms/dokumente/10050614_996205/91842041/Radverkehrsfuehrung_Gro%C3%9Fveranstaltungen.pdf
+userdel	1::temp -13556,-1182 -13643,-1220
+EOF
+     },
+     { from  => 1385766000, # 2013-11-30 00:00
+       until => 1401458400, # 2014-05-30 16:00
+       text  => 'Zimmermannstraßenbrücke über die Wuhle: Baustelle, Straße gesperrt, 02.12.2013 bis Ende Mai 2014',
+       type  => 'gesperrt',
+       source_id => 'IM_020820',
+       data  => <<EOF,
+#: add_fragezeichen: Ist die Zimmermannstraßenbrücke trotz der Bauarbeiten trotzdem noch für Fußgänger und Radfahrer passierbar?
+userdel	2::inwork 21385,9049 21365,9059 21351,9066
+EOF
+     },
+     { from  => 1386257400, # 2013-12-05 16:30
+       until => 1386561600, # 2013-12-09 05:00
+       text  => 'Rudolf-Rühl-Allee: Fahrbahninstandsetzung zwischen Köpenicker Straße und An der Wuhlheide, Vollsperrung, vom 06.12.2013 um 16:30 Uhr bis voraussichtlich 09.12.2013 05:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20131202.1025.392342.html',
+       data  => <<EOF,
+userdel	2::inwork 20653,7289 20609,7200 20635,7119 20722,6971 21233,6096 21303,5826
+EOF
+     },
+     { from  => 1386198000, # 2013-12-05 00:00
+       until => 1386525600, # 2013-12-08 19:00
+       text  => 'Alt-Rudow zwischen Köpenicker Str. und Krokusstr.: Rudower Adventsmeile, Straße gesperrt, ab: 07.12.2013 10 Uhr bis 08.12.2013 19 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'IM_020883',
+       data  => <<EOF,
+userdel	2::temp 16849,1437 16805,1488 16610,1715
 EOF
      },
     );
