@@ -581,8 +581,7 @@ sub _process {
 		    my @changed = grep(/(?:(?<=\s)|^)(?:$map_from $map_to|$map_to $map_from)\b/, @data);
 		    if (@changed) {
 			push @{$change_files[$type]}, $file;
-			push @{$change_names{$file}},
-			    map { /^([^\t]+)/ ? $1 : () } @changed;
+			push @{$change_names{$file}}, extract_bbd_names(@changed);
 			if ($operation eq 'changeline' && first { /(?:\t\S+\s(?:$map_from $map_to|$map_to $map_from)\b|\b(?:$map_from $map_to|$map_to $map_from)$)/ } @data) {
 			    push @{$change_special_flags{$file}}, "endpoint";
 			}
@@ -617,11 +616,13 @@ sub _process {
 		my $map_rx = ($current_coordsys eq '' ? 'B?' : $current_coordsys.'?');
 		# XXX verbose fehlt
 		if ($type == T_NORMAL || $type == T_TEMPBLOCK || $type == T_TEMPBLOCKMAIN || $type == T_COMMENTS || $type == T_OLD_RADWEGE || $type == T_RADWEGE || $type == T_VORFAHRT) {
-		    if (grep(/(?:(?<=\s)|^)$map_rx$map_from(\b|$)/, @data)) {
+		    my @changed = grep(/(?:(?<=\s)|^)$map_rx$map_from(\b|$)/, @data);
+		    if (@changed) {
 			push @{$change_files[$type]}, $file;
-			if (first { /\t\S+\s$map_rx$map_from$/ } @data) {
+			push @{$change_names{$file}}, extract_bbd_names(@changed);
+			if (first { /\t\S+\s$map_rx$map_from$/ } @changed) {
 			    push @{$change_special_flags{$file}}, "single-point";
-			} elsif (first { /(?:\t\S+\s$map_rx$map_from\b|\b$map_rx$map_from$)/ } @data) {
+			} elsif (first { /(?:\t\S+\s$map_rx$map_from\b|\b$map_rx$map_from$)/ } @changed) {
 			    push @{$change_special_flags{$file}}, "endpoint";
 			}
 		    }
@@ -660,6 +661,16 @@ sub _process {
     if ($report) {
 	print join("\n", _interpolate(@change_files)), "\n";
 	return RET_NOMOD;
+    }
+
+    # %change_names values are octets currently, make it into
+    # perl characters (if necessary)
+    if (%change_names) {
+	for my $file (keys %change_names) {
+	    for my $val (@{ $change_names{$file} }) {
+		$val = decode_for_file($val, $file);
+	    }
+	}
     }
 
     $dialog_text = "Betroffene Dateien:\n";
@@ -1125,6 +1136,37 @@ sub emacs_lockfile {
 	$lock_file = '.#' . $file;
     }
     $lock_file;
+}
+
+sub decode_for_file {
+    my($text, $file) = @_;
+
+    # Assume that encoding never changes for files, so we can cache it
+    our %file_to_encoding;
+
+    if (!exists $file_to_encoding{$file}) {
+	require Strassen::Core;
+	my $s = Strassen->new($file, NoRead => 1);
+	$s->read_data(ReadOnlyGlobalDirectives => 1);
+	my $encoding = $s->get_global_directive('encoding');
+	if ($encoding) {
+	    $file_to_encoding{$file} = $encoding;
+	} else {
+	    $file_to_encoding{$file} = undef;
+	}
+    }
+
+    if (my $encoding = $file_to_encoding{$file}) {
+	require Encode;
+	Encode::decode($encoding, $text);
+    } else {
+	$text;
+    }
+}
+
+sub extract_bbd_names {
+    my(@lines) = @_;
+    map { /^([^\t]+)/ ? $1 : () } @lines;
 }
 
 return 1 if caller;

@@ -260,5 +260,24 @@ EOF
 	    }
 	}
     }
+
+ XXX: 1;
+ SKIP: if (!$ENV{BBBIKE_TEST_ORG}) {
+	my($tmpfh,$tmpfile) = tempfile(
+				       UNLINK => !$debug,
+				       SUFFIX => '_cgi-mechanize-upload.t.garbage',
+				      )
+	    or die $!;
+	print $tmpfh "!?#ThIs iS GaRbAge!?#\n";
+	close $tmpfh
+	    or die $!;
+
+	my $form = $agent->current_form;
+	$form->strict(1) if $form->can('strict');
+	$form->value('routefile', $tmpfile);
+	$agent->submit;
+	like $agent->content, qr{Dateiformat nicht erkannt};
+	$agent->back;
+    }
 }
 

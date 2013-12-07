@@ -127,7 +127,7 @@ Kreisverkehr	Roundabout 11393,10390
 (Spießweg - Hermsdorfer Str.): Rad- und Fußweg	CS 4827,20862 4644,20952
 (Erbendorfer Weg - Lichterfelder Ring): markierter Radweg	CS 7131,694 7117,725 7023,694 6941,690
 Wall am Kiez: Hausdurchfahrt	CP2; -13331,-1802 -13394,-1771
-Tegeler Weg: Alternativ kann der Spreeuferweg genutzt werden	CS 3164,13067 3143,13175 3123,13274 3080,13459 3038,13612
+Tegeler Weg: Alternativ kann der Spreeuferweg genutzt werden	CS 3164,13067 3140,13174 3112,13296 3066,13514 3038,13612
 Neuwieder Str.: schöner alter Eichenbaum als Verkehrsinsel mitten auf der Straße	CS 19221,9517 19206,9243
 Hintersee - Rieth: ehemalige Bahnstrecke	CS 66282,136950 66202,137084 66069,137327 65959,137807 65703,138610 65662,138670 65539,138759 65158,138985 65012,139133 64954,139218 64942,139340 64853,139518 64530,140051 63831,141136 63825,141282 63941,141456 64137,141564 64424,141639 64605,141761 64847,142064 65056,142373 65262,142830 65493,143395 65540,143487 65592,143522
 (Lasiuszeile - Schönwalder Str., am Koeltzepark): für Radfahrer freigegeben	CS -3293,15481 -3359,15426 -3387,15410
@@ -144,7 +144,7 @@ Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52468,174931 52439,174817 52
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52263,174673 52064,174635 52129,174507
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52056,174462 52129,174507 52064,174635
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52129,174507 52064,174635 52263,174673
-als Privatstraße ausgeschildert	CP2; 49381,107993 49487,110056
+als Privatstraße ausgeschildert	CP2; 49381,107993 49289,108472
 Campingplatz an der Straße	CS 52291,179768 52335,179650 52535,179597 53229,179049 53372,178875 54418,178046 54673,177683 54840,177668 55041,177444
 rechts vom Strand einbiegen	CP2; 28853,-19212 28805,-19189
 Gotenburger Str.: zwei Schulen, also Vorsicht	CS 8847,16870 9000,16803
@@ -468,7 +468,7 @@ Richtung Kolonie Märkische Aue	CP2; 17848,11204 17893,11146
 Eingang Heerstr.	CP2; 22274,9622 22280,9629
 Eingang Eschenstr.	CP2; 22473,9530 22482,9550
 unter der S-Bahnbrücke	CP2; 24650,6034 24647,5981
-(Siegfriedstr. - Am Wasserwerk): entlang der Kolonie Weiße Taube	CS 16871,14230 16762,14237 16641,14325
+(Siegfriedstr. - Am Wasserwerk): entlang der Kolonie Weiße Taube	CS 16873,14236 16762,14237 16641,14329
 ausgeschildert als Weydemeyerstr. 3-18	CP2; 11805,12760 11818,12785
 Fromet-und-Moses-Mendelssohn-Platz: nicht ausgeschildert	CS 9797,10771 9733,10827 9682,10836 9666,10848
 Hauptstr., linker Gehweg: an der Ampel Hauptstr./Hildegard-Marcusson-Str. auf die linke Seite wechseln	CP2; 16004,10204 16018,10212
@@ -511,3 +511,5 @@ Dahmeweg: zur Unterführung S-Bhf. Poelchaustr.	CP2; 19395,14477 19290,14503
 links halten	CP2; -728,7310 -1020,7446
 ausgeschildert Richtung Saugstelle	CP2; 636,22658 667,22755
 Piesporter Str. [Wohngebietsstraße]: nicht ausgeschildert	CS 15432,16500 15381,16548 15333,16776
+ausgeschildert Richtung Leopoldsthal	CP2; 48176,84999 48745,84514
+Verlängerte Friedrich-Wilhelm-Str.: nicht ausgeschildert	CS 8266,5911 8385,5907

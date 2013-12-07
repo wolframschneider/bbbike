@@ -40,6 +40,7 @@ CHECK_COUNT=		${PERL} ${MISCSRCDIR}/check_count
 CHECK_HOUSENUMBERS=	${PERL} ${MISCSRCDIR}/check_housenumbers
 CHECK_IMAGES=		${PERL} ${MISCSRCDIR}/check_images
 CHECK_STATION_CATEGORY=	${PERL} ${MISCSRCDIR}/check_station_category
+CHECK_COMMENTS=		${PERL} ${MISCSRCDIR}/check_comments
 RESOLVE_STARS=		${PERL} ${MISCSRCDIR}/resolve_stars
 SORTBYCAT=		${PERL} ${MISCSRCDIR}/sortbycat
 SEARCH_INACCESSIBLE=	${PERL} ${MISCSRCDIR}/search_inaccessible_points
@@ -357,7 +358,7 @@ landstrassen: landstrassen-orig plaetze
 
 landstrassen2: landstrassen2-orig
 	-@$(WRITEABLE) $@
-	$(CONVERT_ORIG) -keep-directive alias landstrassen2-orig > $@~
+	$(CONVERT_ORIG) -keep-directive alias -unutf8ify landstrassen2-orig > $@~
 	mv $@~ $@
 	-rm -f landstrassen2-cooked
 	-@$(READONLY) $@
@@ -1208,7 +1209,7 @@ ${PERSISTENTTMPDIR}/osm_watch_list_brandenburg:	*-orig ${PERSISTENTTMPDIR}/bbbik
 
 # allow one error, and fail if the 2nd one is encountered
 FOREVER_INTERVAL?=	30
-FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  'open LOCK, ">", ".check_forever.lck" or die $$!; flock LOCK, LOCK_EX|LOCK_NB or die $$!; @cmd=@ARGV; while() { system(@cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; sleep $(FOREVER_INTERVAL) } unlink ".check_forever.lck"'
+FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  '@cmd=@ARGV; while() { { open my $$LOCK, ">", ".check_forever.lck" or die $$!; flock $$LOCK, LOCK_EX|LOCK_NB or die $$!; system(@cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; } unlink ".check_forever.lck"; sleep $(FOREVER_INTERVAL) }'
 .if exists($(HOME)/bin/sh/cron-wrapper)
 CRON_WRAPPER=$(HOME)/bin/sh/cron-wrapper
 .else
@@ -1516,19 +1517,8 @@ check-disabled:
 	    ${COMMENTS_PARTIAL:S/^/-data /g}
 	@touch $@
 
-.check_comments3:	$(COMMENTS_PARTIAL);
-	@$(PERL) -I../lib -I.. -MStrassen::Core -MObject::Iterate=iterate -e '\
-	for $$file (@ARGV) {\
-	    $$s=Strassen->new($$file);\
-	    iterate {\
-		$$_->[Strassen::CAT] =~ m{^CP2;} and @{$$_->[Strassen::COORDS]} != 2 and push @errors, "*** $$file ($$_->[Strassen::NAME]): CP2; != 2 coordinates";\
-		$$_->[Strassen::CAT] =~ m{^PI;} and @{$$_->[Strassen::COORDS]} < 3 and push @errors, "*** $$file ($$_->[Strassen::NAME]): PI; too few coordinates";\
-		$$_->[Strassen::CAT] =~ m{^CP(;|$$)} and @{$$_->[Strassen::COORDS]} < 3 and push @errors, "*** $$file ($$_->[Strassen::NAME]): CP; too few coordinates";\
-		$$_->[Strassen::CAT] =~ m{^P0} and push @errors, "*** $$file ($$_->[Strassen::NAME]): P0 is unsupported";\
-	    } $$s;\
-        }\
-	die join "", @errors if @errors;\
-	' $(COMMENTS_PARTIAL)
+.check_comments3:	$(COMMENTS_PARTIAL)
+	${CHECK_COMMENTS} ${COMMENTS_PARTIAL}
 	@touch $@
 
 .check_comments_ferry:	comments_ferry faehren
@@ -1614,6 +1604,10 @@ check-disabled:
 		-against strassen -against landstrassen -against landstrassen2 \
 		-against faehren
 	@rm -f /tmp/all_temp_blockings.bbd
+	@touch $@
+
+.check_recurring_temp_blockings: temp_blockings/bbbike-temp-blockings.pl .check_daily
+	${TEMP_BLOCKINGS_TASKS} --prewarn-days=30 temp_blockings/bbbike-temp-blockings.pl
 	@touch $@
 
 .check_grenzuebergaenge:	grenzuebergaenge .strassen.tmp landstrassen landstrassen2 fragezeichen deutschland
@@ -1923,11 +1917,11 @@ $(PERSISTENTTMPDIR)/bbbike-temp-blockings-recurring.bbd: $(PERSISTENTTMPDIR)/bbb
 	$(TEMP_BLOCKINGS_TASKS) yml_to_recurring_bbd $> > $@~
 	mv -f $@~ $@
 
-$(PERSISTENTTMPDIR)/sourceid-all.yml: $(PERSISTENTTMPDIR)/bbbike-temp-blockings.bbd handicap_s-orig gesperrt_s-orig fragezeichen-orig radwege-orig
+$(PERSISTENTTMPDIR)/sourceid-all.yml: $(PERSISTENTTMPDIR)/bbbike-temp-blockings.bbd handicap_s-orig gesperrt-orig fragezeichen-orig radwege-orig
 	$(MISCSRCDIR)/bbd_to_sourceid_exists $> > $@~
 	mv -f $@~ $@
 
-$(PERSISTENTTMPDIR)/sourceid-current.yml: $(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.bbd handicap_s-orig gesperrt_s-orig fragezeichen-orig radwege-orig
+$(PERSISTENTTMPDIR)/sourceid-current.yml: $(PERSISTENTTMPDIR)/bbbike-temp-blockings-optimized.bbd handicap_s-orig gesperrt-orig fragezeichen-orig radwege-orig
 	$(MISCSRCDIR)/bbd_to_sourceid_exists $> > $@~
 	mv -f $@~ $@
 

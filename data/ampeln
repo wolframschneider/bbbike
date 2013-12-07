@@ -576,7 +576,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4342,9301
 	X 4246,9406
 	X 4057,9648
-	X 4009,9465
+	X 4011,9474
 	X 3919,9085
 	X 4976,9670
 	X 3521,9059
@@ -584,7 +584,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4783,8557
 	X 6753,10446
 	X 9330,12529
-	X 9255,13109
+	X 9262,13111
 	X 8607,15426
 	X 8024,15401
 	X 8016,15085
@@ -635,7 +635,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6004,9771
 	X 4439,9983
 	X 4993,9843
-	X 4151,10026
+	X 4152,10033
 	X 13277,8211
 	X 14758,7373
 	X 15221,7778
@@ -675,9 +675,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6195,8793
 	X 5655,8828
 	X 4473,9154
-	X 3699,9613
-	X 3431,9763
-	X 3347,9793
+	X 3698,9624
+	X 3427,9771
+	X 3348,9806
 	X 3092,9886
 	X 2482,9870
 	X 2532,9911
@@ -942,7 +942,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2087,14078
 	X 2881,14061
 	X 3038,13612
-	X 3123,13274
+	X 3112,13296
 	X 3711,13202
 	X 3967,13211
 	X 4382,13232
@@ -1537,7 +1537,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 18492,6893
 	F 17919,6978
 	X 17520,4649
-	X 13659,4489
+	X 13671,4490
 	X 13305,4504
 	F 12794,5596
 	X 12841,5416
@@ -1613,7 +1613,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8775,12457
 	X 8695,11015
 	X 5223,9810
-	X 3930,9919
+	X 3927,9935
 	F 3982,9761
 	X 4513,10702
 	X 3970,11664
@@ -1764,7 +1764,7 @@ Industriebahn	B0 -2410,13746
 	F 8831,13973
 	X 8442,14456
 	F 13732,12526
-	F 9294,12765
+	F 9298,12765
 	X 9224,14169
 	Zbr 1721,20603
 nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
@@ -2071,8 +2071,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 8667,5372
 	F 5807,12070
 	F 6833,15215
-	F 3537,13182
-	X 3408,13210
+	F 3542,13203
+	X 3429,13227
 	X 7733,8023
 	X 17533,14484
 	X 18166,14277
@@ -2158,7 +2158,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 5628,14063
 	F::inwork 9984,12426
 	X::inwork 9122,12509
-	X::inwork 9280,12883
+	X::inwork 9286,12886
 	X::inwork 9343,12464
 	X::inwork 9475,12365
 	F::inwork 9063,12051
@@ -2234,6 +2234,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 9242,7286
 	X 9242,7325
 	F 2944,15880
+	X 18875,13467
 	X -12549,-1277
 	X -13051,-3101
 	X -12839,-1342
@@ -2538,7 +2539,7 @@ S-Bahn ca. alle 10 Minuten	B 10865,-4464
 	B -4990,55852
 	B -1530,45604
 	B 66499,93857
-	B 80950,110487
+	B 80941,110470
 	B 78844,105446
 	B -16849,-5673
 	B 75394,-6991

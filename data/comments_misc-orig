@@ -278,7 +278,7 @@ Bus 247	busroute_N 7198,15656 7354,15817 7436,15746
 Bus 101, Bus 106	busroute_N 5368,13406 5351,13238 5328,13019
 Bus 107	busroute_N 9855,26032 9863,26000 9879,25933 9882,25918 9900,25796 9912,25130 9900,24943 9882,24724 9797,24154 9794,23980 9774,23936 9625,23781 9415,23699
 Bus M27	busroute_N 4295,13653 4363,13336 4382,13232
-Bus M27	busroute_N 3559,13177 3587,13296 3642,13548
+Bus M27	busroute_N 3556,13200 3583,13313 3642,13548
 Bus M27	busroute_N 3739,13563 3724,13702 3713,13787 3702,13865 3695,13902
 Bus M21, Bus M27	busroute_N 3005,13728 3320,13796 3695,13902
 Bus M21	busroute_N 3695,13902 3663,14137
@@ -435,7 +435,7 @@ Bus 172	busroute_N 18111,2135 17901,2075 17860,2061 17764,2032
 Bus 172, ...	busroute_N 17764,2032 17809,1855 17824,1756 17848,1657 17855,1629
 Bus 372	busroute_N 17855,1629 17871,1570 17902,1517 17962,1437 18053,1317 18093,1263 18112,1235 18224,1077 18272,1009 18128,910 18123,906 18023,833 17928,764 17734,675 17640,626 17518,564
 Bus 371	busroute_N 17384,775 17274,705 17215,667 17168,654 17134,644 17056,643 17077,526 17129,314 17158,182 17176,90 17188,-46 17193,-109 17199,-196 17222,-426 17359,-345 17418,-305 17476,-266 17537,-226 17599,-187 17719,-107 17777,-68 17860,-15 17879,-3
-Bus 172	busroute_N 15736,2593 15779,2649 15870,2768 15911,2821 15989,2923 16096,3075 16155,3160 16221,3248 16281,3339 16504,3184 16550,3155 16689,3056 16779,2993
+Bus 172	busroute_N 15736,2593 15779,2649 15870,2768 15911,2821 15989,2923 16096,3075 16155,3160 16221,3248 16281,3339 16504,3184 16550,3155 16684,3061 16779,2993
 Bus 160	busroute_N 17142,3393 17034,3517 16942,3579 16842,3624 16615,3734 16742,4098 16852,4105 16887,4105 17027,4090 17108,4049
 # REMOVED (Route verlegt) --- Bus 160	busroute_N 17522,3653 17762,3243 17799,3183 17910,3004 18014,2830 18017,2751
 Bus 265	busroute_N 17520,4649 17676,4540 17797,4441
@@ -524,7 +524,7 @@ Bus 395, Bus 398	busroute_N 24578,11928 24739,11968 24727,12027 24936,12071 2507
 (Erbendorfer Weg - Lichterfelder Ring): markierter Radweg	CS 7131,694 7117,725 7023,694 6941,690
 Wall am Kiez: Hausdurchfahrt	CP2; -13331,-1802 -13394,-1771
 #: by: rjoop
-Tegeler Weg: Alternativ kann der Spreeuferweg genutzt werden	CS 3164,13067 3143,13175 3123,13274 3080,13459 3038,13612
+Tegeler Weg: Alternativ kann der Spreeuferweg genutzt werden	CS 3164,13067 3140,13174 3112,13296 3066,13514 3038,13612
 #: by: trixi (putsch):
 #: note: genau hier: 19221,9499
 #: XXX_indoor: gehört das nach comments_scenic? Oder hilft es bei der Orientierung hier?
@@ -551,7 +551,7 @@ Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52468,174931 52439,174817 52
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52263,174673 52064,174635 52129,174507
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52056,174462 52129,174507 52064,174635
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52129,174507 52064,174635 52263,174673
-als Privatstraße ausgeschildert	CP2; 49381,107993 49487,110056
+als Privatstraße ausgeschildert	CP2; 49381,107993 49289,108472
 Campingplatz an der Straße	CS 52291,179768 52335,179650 52535,179597 53229,179049 53372,178875 54418,178046 54673,177683 54840,177668 55041,177444
 rechts vom Strand einbiegen	CP2; 28853,-19212 28805,-19189
 #: by: Tanja Vetter:
@@ -786,7 +786,7 @@ Gaslaternen-Freilichtmuseum Berlin	CS 5903,11683 5835,11768 5858,11863 5900,1191
 #: ignore ^^^
 #: ignore vvv
 Suarezstr.: Wochenmarkt Do 9.00-15.00, aber anscheinend nur auf dem Bürgersteig	CS 2921,10928 2845,10840
-Mierendorffplatz: Wochenmarkt Mi+Sa, 8.00-13.00, zwar auf der Fahrbahn, aber der Radweg scheint weiterhin befahrbar zu sein	CS 3534,13098 3645,13189
+Mierendorffplatz: Wochenmarkt Mi+Sa, 8.00-13.00, zwar auf der Fahrbahn, aber der Radweg scheint weiterhin befahrbar zu sein	CS 3534,13098 3645,13201
 Fehrbelliner Platz: Wochenmarkt Di+Do, 11.00-16.00, sowie Kunst- und Trödelmarkt Sa+So 10.00-16.00, nur auf der Parkplatzfläche	CS 4339,9224
 Kolberger Platz: Wochenmarkt Mi+Sa, 08.00-14.00, Fahrbahn weiterhin befahrbar, nur Halteverbote	CS; 2786,7721 2751,7811 2880,7801
 Str. des 17. Juni: Kunst- und Trödelmarkt, Sa+So, 10.00-17.00, Radweg wird freigehalten	CS; 5758,11895 5565,11871 5478,11860
@@ -799,7 +799,7 @@ Schillingstr.: Wochenmarkt, Di,Do,Fr, 09.00-17.00, Gehweg ist betroffen, man kan
 Ackerstr.: Wochenmarkt, Do, 11.00-18.00, anscheinend nur Halteverbot	CS; 9048,14681 9197,14562
 Jagowstr.: Wochenmarkt, Mi+Sa, 08.00-13.00, anscheinend nur Halteverbot	CS; 5601,12756 5543,12664
 Koppenstr.: Wochenmarkt Di+Do 10.00-18.00, die Farbahn ist trotzdem befahrbar	CS 12635,12629 12596,12472
-Nettelbeckplatz: Wochenmarkt Di+Fr, 11-18 Uhr, aber anscheinend nur im "Rondellbereich" und somit keine Beeinträchtigung für Radfahrer	CS 7891,15417 7989,15412 8024,15401
+Nettelbeckplatz: Wochenmarkt Di+Fr, 11-18 Uhr, aber anscheinend nur im "Rondellbereich" und somit keine Beeinträchtigung für Radfahrer	CS 7891,15417 7974,15418 8024,15401
 #: ignore ^^^
 (Kanzlerweg - Schreiberring): Privatweg	CS 8839,8168 8861,8242
 (Kanzlerweg - Schreiberring): Tordurchfahrt	CP2; 8861,8242 8839,8168
@@ -819,7 +819,7 @@ in Höhe Erkelenzdamm 5 abbiegen	CP2; 11192,10629 11145,10638
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11012,13278 11085,13239
 #: note: nur an der Katharina-Paulus-Str. steht ein Schild vvv
 #: XXX vielleicht wird hier mal ausgeschildert werden? vvv
-#: last_checked: 2013-09-25 vvv
+#: last_checked: 2013-11-25 vvv
 #: check_frequency: 360d vvv
 Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CP2; 7938,13150 7867,13127
 Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CP2; 7795,13093 7867,13127
@@ -959,11 +959,11 @@ Richtung Kolonie Märkische Aue	CP2; 17848,11204 17893,11146
 Eingang Heerstr.	CP2; 22274,9622 22280,9629
 Eingang Eschenstr.	CP2; 22473,9530 22482,9550
 unter der S-Bahnbrücke	CP2; 24650,6034 24647,5981
-(Siegfriedstr. - Am Wasserwerk): entlang der Kolonie Weiße Taube	CS 16871,14230 16762,14237 16641,14325
+(Siegfriedstr. - Am Wasserwerk): entlang der Kolonie Weiße Taube	CS 16873,14236 16762,14237 16641,14329
 ausgeschildert als Weydemeyerstr. 3-18	CP2; 11805,12760 11818,12785
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file?y=2013
 #: XXX evtl. wird zur Benennung ausgeschildert werden
-#: last_checked: 2013-10-16
+#: last_checked: 2013-11-25
 #: check_frequency: 60d
 Fromet-und-Moses-Mendelssohn-Platz: nicht ausgeschildert	CS 9797,10771 9733,10827 9682,10836 9666,10848
 Hauptstr., linker Gehweg: an der Ampel Hauptstr./Hildegard-Marcusson-Str. auf die linke Seite wechseln	CP2; 16004,10204 16018,10212
@@ -1013,3 +1013,6 @@ Dahmeweg: zur Unterführung S-Bhf. Poelchaustr.	CP2; 19395,14477 19290,14503
 links halten	CP2; -728,7310 -1020,7446
 ausgeschildert Richtung Saugstelle	CP2; 636,22658 667,22755
 Piesporter Str. [Wohngebietsstraße]: nicht ausgeschildert	CS 15432,16500 15381,16548 15333,16776
+ausgeschildert Richtung Leopoldsthal	CP2; 48176,84999 48745,84514
+#: note: Straßenname kommt in der Datei https://www.statistik-berlin-brandenburg.de/produkte/verzeichnisse/Strassenumbenennungen.xls vor
+Verlängerte Friedrich-Wilhelm-Str.: nicht ausgeschildert	CS 8266,5911 8385,5907
