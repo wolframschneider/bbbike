@@ -64,7 +64,7 @@ my $sample_coords = do {
 };
 
 my $bbbike_org = $ENV{BBBIKE_TEST_ORG} ? 12 : 0;
-plan tests => 4 + $gpsman_tests * @gps_types - 29 - $bbbike_org;
+plan tests => 3 + $gpsman_tests * @gps_types - 29 - $bbbike_org;
 
 {
     my $agent = WWW::Mechanize->new();
@@ -262,7 +262,7 @@ EOF
     }
 
  XXX: 1;
-    {
+ SKIP: if (!$ENV{BBBIKE_TEST_ORG}) {
 	my($tmpfh,$tmpfile) = tempfile(
 				       UNLINK => !$debug,
 				       SUFFIX => '_cgi-mechanize-upload.t.garbage',
