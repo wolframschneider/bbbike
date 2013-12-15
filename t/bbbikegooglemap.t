@@ -66,7 +66,8 @@ $ua->env_proxy;
     # would escape the query string (again), leading to wrong results.
     my $uri = $resp->request->uri;
     my($new_qs) = $uri =~ m{\?(.*)};
-    is_deeply({CGI->new($new_qs)->Vars}, \%query, "Querystring unchanged");
+    is_deeply({CGI->new($new_qs)->Vars}, \%query, "Querystring unchanged")
+	or diag "Request URI is '$uri'";
 }
 
 {
@@ -177,6 +178,7 @@ EOF
 
 sub check_polyline {
     my($resp, $expected_points, $testname) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level+1;
     $testname = "Found exactly $expected_points points in polyline" if !$testname;
     my $content = $resp->content;
     if ($content !~ m{\Qvar path = [}g) {
@@ -194,6 +196,7 @@ sub check_polyline {
 
 sub check_points {
     my($resp, $expected_points, $testname) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level+1;
     $testname = "Found exactly $expected_points points" if !$testname;
     my $content = $resp->content;
     if ($content !~ m{\QBEGIN DATA}g) {

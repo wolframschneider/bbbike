@@ -21,9 +21,10 @@ BEGIN {
     }
 }
 
-use BBBikeTest qw(check_cgi_testing $cgidir);
+use BBBikeTest qw(check_cgi_testing using_bbbike_test_data $cgidir);
 
 check_cgi_testing;
+using_bbbike_test_data;
 
 my $tests = 12;
 $tests -= 2 if $ENV{BBBIKE_TEST_ORG};

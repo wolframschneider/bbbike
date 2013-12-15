@@ -5,6 +5,7 @@ use warnings;
 use FindBin;
 
 use Plack::Builder;
+use Plack::Middleware::Rewrite;
 use Plack::Middleware::Static;
 use Plack::App::WrapCGI;
 
@@ -17,16 +18,13 @@ my $cgidir = catpath $root, 'cgi';
 
 builder {
 
-    mount '/' => sub {
-	my $env = shift;
-	require Plack::Response;
-	my $res = Plack::Response->new;
-	$res->redirect("http://$env->{HTTP_HOST}/bbbike/cgi/bbbike.cgi");
-	$res->finalize;
+    enable 'Rewrite', rules => sub {
+	if (m{^/(?:\?.*)?$}) {
+	    no warnings 'uninitialized'; # $1 may be undef
+	    $_ = "/bbbike/cgi/bbbike.cgi$1";
+	    return 301;
+	}
     };
-
-    enable "Plack::Middleware::Static",
-	path => sub { s!^/BBBike/!! }, root => $root, encoding => 'iso-8859-1';
 
     enable "Plack::Middleware::Static",
 	path => sub { s!^/bbbike/(html/opensearch/)!$1! }, root => $root, encoding => 'utf-8';
@@ -36,7 +34,7 @@ builder {
 
     my $app;
     for my $cgidef (
-		    # first is the physical file and the primary URL basename, rest is aliases
+		    # first is the main file, rest is aliases via symlinks
 		    ['bbbike.cgi', 'bbbike2.cgi'],
 		    ['bbbike.en.cgi', 'bbbike2.en.cgi'],
 		    ['bbbikegooglemap.cgi', 'bbbikegooglemap2.cgi'],
@@ -51,15 +49,34 @@ builder {
 		    ['upload-track.cgi'],
 		    ['wapbbbike.cgi'],
 		   ) {
-	my $fs_file = $cgidef->[0];
-	$fs_file = catfile($root, 'cgi', $fs_file);
 	for my $cgi (@$cgidef) {
+	    my $fs_file = catfile($root, 'cgi', $cgi);
 	    $app = mount "/bbbike/cgi/$cgi" => Plack::App::WrapCGI->new(
                 script  => $fs_file,
 	        execute => 1,
 	    )->to_app;
 	}
     }
+
+    mount "/bbbike" => Plack::App::File->new(root => $root, encoding => 'iso-8859-1');
+
+    {
+	my $mapserv_cgibin;
+	if ($^O eq 'freebsd') { # needs graphics/mapserver to be installed
+	    $mapserv_cgibin = '/usr/local/www/cgi-bin/mapserv';
+	} elsif ($^O eq 'linux') { # on debian, needs cgi-mapserver to be installed
+	    $mapserv_cgibin = '/usr/lib/cgi-bin/mapserv';
+	}
+	if ($mapserv_cgibin) {
+	    $app = mount '/cgi-bin/mapserv' => Plack::App::WrapCGI->new(
+		script => $mapserv_cgibin,
+		execute => 1,
+	    )->to_app;
+	} else {
+	    warn "WARN: Don't know how to run mapserver cgi";
+	}
+    }
+
     $app;
 
 };
