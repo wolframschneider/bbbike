@@ -18,6 +18,9 @@ my $cgidir = catpath $root, 'cgi';
 
 builder {
 
+    enable 'Head';
+    enable "ConditionalGET";
+
     enable 'Rewrite', rules => sub {
 	if (m{^/(?:\?.*)?$}) {
 	    no warnings 'uninitialized'; # $1 may be undef
@@ -58,7 +61,7 @@ builder {
 	}
     }
 
-    mount "/bbbike" => Plack::App::File->new(root => $root, encoding => 'iso-8859-1');
+    $app = mount "/bbbike" => Plack::App::File->new(root => $root, encoding => 'iso-8859-1')->to_app;
 
     {
 	my $mapserv_cgibin;

@@ -44,6 +44,7 @@ use BBBikeTest qw(
 		     check_cgi_testing xmllint_string gpxlint_string kmllint_string
 		     validate_bbbikecgires_xml_string validate_bbbikecgires_json_string
 		     validate_bbbikecgires_yaml_string validate_bbbikecgires_data
+		     eq_or_diff
 		);
 
 eval { require Compress::Zlib };
@@ -303,7 +304,7 @@ for my $cgiurl (@urls) {
 	    }
 	    if ($this_test_file_cache) {
 		my ($content2, $resp2) = std_get $url, testname => "2nd fetch";
-		ok $content2 eq $content, "2nd fetch content equals ($output_as)";
+		eq_or_diff $content2, $content, "2nd fetch content equals ($output_as)";
 		is $resp2->content_type, $resp->content_type, "2nd fetch has same content-type ($output_as)";
 	    }
 	}
@@ -320,7 +321,10 @@ for my $cgiurl (@urls) {
 	    # Hardenbergplatz]" with the same coordinate is still
 	    # there.
 	    like_html $content, qr/start2.*Zoologischer Garten.*Elefantentor/, "First alternative is Zoologischer Garten Elefantentor";
-	    like_html $content, qr/start2.*\bZoo\b/, "Second alternative is just Zoo (Hardenbergplatz)";
+	    # In perls < 5.18 the response was always "Zoo". Since
+	    # perl 5.18 and hash randomization it maybe be either one
+	    # of the two names for the coordinate 5698,11333
+	    like_html $content, qr/start2.*(\bZoo\b|Zoologischer Garten.*Eingang Hardenbergplatz)/, "Second alternative is either 'Zoo' or explicitely the entrance Hardenbergplatz";
 	} else {
 	    like_html $content, qr/Start.*Zoologischer Garten/, "Start is Zoologischer Garten";
 	    unlike_html $content, qr/\bZoo\b/, "Zoo not found (same point optimization)";
