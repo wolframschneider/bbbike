@@ -1,7 +1,7 @@
 #: #: -*- coding: iso-8859-1 -*-
 #:
 als Zionskirchstr. ausgeschildert	CS 10306,14247 10389,14274
-als Zionskirchstr. ausgeschildert	CS 10306,14247 10277,14350 10315,14386 10365,14372 10389,14274
+als Zionskirchstr. ausgeschildert	CS 10306,14247 10277,14350 10311,14391 10365,14372 10389,14274
 Autobahnunterführung ist nur 2,10m hoch	CS 21306,-975 21393,-871
 Einbahnstr., aber Radweg vorhanden	CS; 23109,30968 23103,30923 23084,30893 22917,30635
 Gillweg: entlang der Autobahn	CS 2585,9653 2484,9671 2394,9714
@@ -14,11 +14,11 @@ als "Ökoweg" ausgeschildert	CS; 676,9104 383,9305
 Richtung "Friedhof" ausgeschildert	CP2; -3140,9294 -2956,9307
 Richtung Schildhorn	CP2; -1484,9175 -1588,9194
 Richtung Grunewaldturm	CP2; -1484,9175 -1658,9103
-Richtung Havelchaussee	CP2; -2235,5128 -2834,5578
+Richtung Havelchaussee	CP2; -2226,5120 -2834,5578
 Richtung Havelchaussee	CP2; -2834,5578 -3129,5798
 Richtung Havelchaussee	CP2; -3226,5870 -3275,5847
 Richtung Avus	CP2; -3226,5870 -3129,5798
-Richtung Avus	CP2; -2834,5578 -2235,5128
+Richtung Avus	CP2; -2834,5578 -2226,5120
 Richtung Teufelssee	CP2; -3226,5870 -3156,5926
 Richtung Teufelssee/Saubucht	CP2; -2668,6862 -2634,6907
 Richtung Teufelssee	CP2; -2897,8008 -2752,8018
@@ -237,7 +237,7 @@ Zufahrt zur Rampe	CP2; 18496,2471 18446,2504
 (Künnekeweg - Dankmarsteig): ausgeschildert als "zum Dankmarsteig"	CP2; 18432,1352 18556,1394
 Traberweg: hier nicht ausgeschildert	CP2; 17851,8662 17930,8567
 Rousseauweg: Privatstraße	CS 10267,20193 10286,20209 10310,20213 10327,20149 10282,20137
-Straße 101: hier nicht ausgeschildert	CP2; 9360,20152 9235,20125
+Straße 101: hier nicht ausgeschildert	CP2; 9360,20152 9226,20124
 Walhallastr.: Privatstraße, Anlieger frei	CS 8727,19746 8743,19755
 An den Zingerwiesen: Privatstraße, Anlieger frei	CS 8788,19702 8743,19755 8684,19853
 Killisch-von-Horn-Weg: Privatstraße	CS 9590,18082 9707,17941 9730,17927
@@ -513,3 +513,8 @@ ausgeschildert Richtung Saugstelle	CP2; 636,22658 667,22755
 Piesporter Str. [Wohngebietsstraße]: nicht ausgeschildert	CS 15432,16500 15381,16548 15333,16776
 ausgeschildert Richtung Leopoldsthal	CP2; 48176,84999 48745,84514
 Verlängerte Friedrich-Wilhelm-Str.: nicht ausgeschildert	CS 8266,5911 8385,5907
+Leonardo-da-Vinci-Str. (Potsdam): Privatstraße	CS -11390,72 -11609,400
+Alter Markt: nicht ausgeschildert, Platz am Potsdamer Stadtschloss	CS -12624,-1598 -12619,-1549 -12614,-1471
+Alter Markt: nicht ausgeschildert, Platz am Potsdamer Stadtschloss	CS -12583,-1552 -12619,-1549 -12677,-1536 -12728,-1539 -12786,-1556
+Friedrich-Wilhelm-Boelcke-Str.: nicht ausgeschildert	CS -12796,-2488 -12831,-2439 -12815,-2419 -12779,-2467
+Zur Königlichen Hofbrauerei: nicht ausgeschildert	CS -12815,-2419 -12781,-2376
