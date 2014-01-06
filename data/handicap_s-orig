@@ -68,7 +68,8 @@ Platz vor dem Neuen Tor: Fahrbahn gesperrt, auf Gehweg ausweichen	q4::inwork 865
 Charlottenstr.: Einbahnstraßenregelung	q4::inwork; 9475,12365 9489,12263 9496,12215
 # REMOVED --- Charlottenstr.: Bauarbeiten, Radfahrer können passieren	q2::inwork; 9475,12365 9489,12263
 # 
-#: last_checked: 2013-11-19 vvv
+#: next_check_id: STABIUDL-2014 vvv
+#: last_checked: 2014-01-04 vvv
 #: next_check: 2015-06-01 vvv
 #: by: http://www.berliner-zeitung.de/berlin/baustelle-staatsbibliothek-das-geruest-steht-und-steht-und-steht,10809148,22334074.html (Endedatum) vvv
 #: osm_watch: way id="153698394" version="3"
@@ -78,6 +79,7 @@ Universitätsstr.: Fahrbahn wegen Bauarbeiten in Richtung Süden gesperrt	q4::inwo
 #: by: ^^^
 #: next_check ^^^
 #: last_checked ^^^
+#: next_check_id ^^^
 # 
 #: source_id: INKO_093369
 #: note: ab Glinkastr. nur ungefähr die halbe Strecke bis zur Friedrichstr. gesperrt, deshalb q3
@@ -90,6 +92,7 @@ Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Frie
 # REMOVED (by osm) --- #: last_checked: 2013-06-10 (wosch) vvv --- #: osm_watch: way id="25185423" version="15"--- Gartenstr.: Einbahnstraße zwischen Invalidenstr. und Tieckstr. (Bauarbeiten)	q4::inwork; 9510,13823 9383,13978 --- #: last_checked ^^^
 # REMOVED (by wosch) --- #: osm_watch: way id="4597205" version="6" --- Tieckstr.: Einbahnstraße zwischen Borsigstr. und Gartenstr. (Bauarbeiten)	q3::inwork; 9376,13765 9510,13823 
 # 
+#: next_check_id: VOSSSTR-2014 vvv
 #: XXX Siehe auch Baustellenampel an der Wilhelmstr. vvv
 #: source_id: INKO_113363 vvv
 #: XXX laut INKO_113363 bis Ende Mai 2014 gesperrt vvv
@@ -105,17 +108,18 @@ Voßstr.: gesperrte Fahrbahn (Baustelle), Ausweichen auf Gehweg möglich, Bordstei
 #: XXX ^^^
 #: source_id ^^^
 #: XXX ^^^
+#: next_check_id ^^^
 # 
 #: XXX http://www.berlin.de/imperia/md/content/bapankow/tiefbauamt/ai_saarbr__cker_stra__e.pdf?start&ts=1373539007&file=ai_saarbr__cker_stra__e.pdf (bis Dezember 2013)
 #: last_checked: 2014-01-02
 Saarbrücker Str.: Einbahnstraßeregelung wegen Baustelle, ggfs. auf Gehweg ausweichen	q4::inwork; 11134,13820 11250,13655
 # 
+#: next_check_id: INVALIDEN-2014 vvv
 #: last_checked: 2014-01-03 vvv
 #: next_check: 2014-06-30 vvv
 #: source_id: IM_017330
 #: source_id: INKO_113944
 #: XXX siehe auch temporäre Ampel an der Chausseestr. sowie an der Luisenstr.
-#: XXX existiert teilweise schon eine Radspur?
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1207/nachricht4724.html
 Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Gartenstr. und Hessische Str. gesperrt	q4::inwork; 9383,13978 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
 # REMOVED (wieder offen ab 2013-08-29) --- Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Gartenstr. und Hessische Str. gesperrt	q4::inwork; 8690,13723 8659,13708 8626,13692 8619,13689
@@ -124,11 +128,13 @@ Schwarzer Weg: Einbahnstraßenregelung, auf Gehweg ausweichen	q3::inwork; 8426,13
 # REMOVED (wieder offen ab 2013-08-29) --- #: source_id: IM_019009 --- #: source_id: IM_018437 --- Hessische Str.: Sackgasse zur Invalidenstr.	q3::inwork 8775,13606 8690,13723
 #: next_check ^^^
 #: last_checked: ^^^
+#: next_check_id ^^^
 # 
 #: last_checked: 2013-12-27 (Bauarbeiten wegen Neubau)
 #: next_check: 2014-02-28
 Heidestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 8048,13578 8092,13467
 # 
+#: next_check_id: ERNASAMUEL-2014
 #: last_checked: 2013-11-12
 #: next_check: 2014-01-15
 Siemensstr.: Bauarbeiten, Einbahnstraße, Ausweichen auf den linken Gehweg	q4::inwork; 5299,14049 5220,14043
@@ -150,31 +156,35 @@ Margarete-Steffin-Str.: Fahrbahn wegen Bauarbeiten, Ausweichen auf Gehweg	q3::in
 #: next_check: 2014-06-01
 Bellermannstr.: Bauarbeiten der Wasserbetriebe, Ausweichen auf Gehweg für einen 70 Meter langer Abschnitt	q2::inwork 8912,16582 9107,16389
 # 
+#: next_check_id: OBERWALL-2014 vvv
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
 #: XXX siehe auch Eintrag in gesperrt-orig
 #: XXX siehe auch Einträge in fragezeichen-orig (Falkoniergasse etc.)
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0166-unter-den-linden-oberwallstrae.html
-#: last_checked: 2013-12-22 vvv
-#: next_check: 2014-03-02 vvv
+#: last_checked: 2014-01-04 vvv
+#: next_check: 2014-04-04 vvv
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9875,12257 9869,12297
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9869,12297 9852,12409
 #: next_check ^^^
 #: last_checked ^^^
+#: next_check_id ^^^
 # 
 # REMOVED --- #: last_checked: 2012-07-13 --- #: next_check: 2012-09-01 --- Kronenstr./Jerusalemer Str.: Bauarbeiten, Fahrbahn vor der Kreuzung gesperrt	q3::inwork 9692,11732 9892,11752
 # REMOVED (eigentlich gut zu befahren) --- Revaler Str.: Bauarbeiten, Kreuzung gesperrt, Gehweg kann benutzt werden	q4::inwork 14513,11075 14442,11101
 # REMOVED --- #: last_checked: 2013-06-17 --- #: next_check: 2013-06-20 --- #: priority: #A --- Bernhard-Weiß-Str.: Gleisbauarbeiten, Fahrbahn gesperrt	q3::inwork 11191,13080 11235,13143 11291,13218
 # 
+#: next_check_id: RATHAUSSTR-2014 vvv
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0175-spandauer-strae-rathausstrae.html
 #: XXX wird nach den Bauarbeiten die Fahrbahn noch bestehen bleiben?
-#: last_checked: 2013-12-23
+#: last_checked: 2014-01-04
 Rathausstr.: Fußgänger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521 10704,12595
 # 
 #: source_id: INKO_089389 (eigentlich hier nur die Spandauer Str. erwähnt)
 #: XXX siehe auch Eintrag zur Spandauer Str. in qualitaet_s-orig
-#: last_checked: 2013-12-23
+#: last_checked: 2014-01-04
 #: priority: #A
 Rathausstr.: Einbahnstraße an der Spandauer Str., Ausweichen auf Gehweg	q4::inwork; 10584,12507 10601,12521
+#: next_check_id ^^^
 # 
 # REMOVED --- #: last_checked: 2012-09-19 vvv--- #: next_check: 2012-10-19 vvv --- #: note: komplette Fertigstellung und Verkehrsfreigabe im Frühjahr 2013 --- Rathausstr. und Rathausbrücke: Behinderungen wegen Bauarbeiten möglich	q1::inwork 10285,12306 10362,12351 10422,12395 --- #: next_check: ^^^ --- #: last_checked: ^^^
 # REMOVED --- #: last_checked: 2013-03-18 --- #: next_check: 2013-04-02 --- Zimmerstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10072,11384 9945,11371 9737,11349
@@ -183,6 +193,7 @@ Rathausstr.: Einbahnstraße an der Spandauer Str., Ausweichen auf Gehweg	q4::inwo
 # REMOVED --- Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q4::inwork; 10489,11405 10437,11352
 # REMOVED (Anlieger frei, eigentlich kaum noch Behinderungen) --- #: last_checked: 2013-11-25 (Fahrbahn inoffiziell befahrbar) --- Neue Grünstr.: Bauarbeiten, Fahrbahn könnte gesperrt sein	q3::inwork 10389,11390 10446,11470
 # 
+#: next_check_id: FRIEDRICHSBRUECKE-2014 vvv
 #: last_checked: 2013-12-23 vvv
 #: next_check: 2014-01-20 vvv
 #: note: siehe auch Eintrag zur Friedrichsbrücke
@@ -190,6 +201,7 @@ Burgstraße: Bauarbeiten, Einbahnstraßenregelung	q4::inwork; 10166,12777 10132,12
 Anna-Louisa-Karsch-Str.: vor der Friedrichsbrücke auf den linken Gehweg fahren	q3::inwork; 10264,12826 10166,12777
 #: next_check ^^^
 #: last_checked ^^^
+#: next_check_id ^^^
 # 
 # REMOVED (Fahrbahn befahrbar, Autos parken schon) --- #: osm_watch: way id="131505633" version="4" --- #: last_checked: 2013-11-13 --- #: check_frequency: 30d --- Am Zirkus: Baustelle, Fahrbahn wegen Bauarbeiten gesperrt	q4::inwork 9239,12923 9167,13046 9137,13032
 # REMOVED (aufgehoben) --- #: last_checked: 2013-12-11 --- Ziegelstr.: Baustelle, Einbahnstraße	q3::inwork; 9269,13060 9413,13071
@@ -254,6 +266,7 @@ Friedelstr.: Bauarbeiten, Einbahnstraße Richtung Süden	q3::inwork; 12066,9558 12
 # 
 #: temporary ^^^
 ######################################################################
+#: next_check_id: WUHLEWANDERWEG-2014 vvv
 #: XXX es ist zu erwarten, dass hier der Wuhlewanderweg verbessert wird, siehe auch Eintrag in qualitaet_s-orig: vvv
 #: last_checked: 2013-08-21 vvv
 #: check_frequency: 300d vvv
@@ -262,6 +275,7 @@ Wuhlewanderweg: steiles Gefälle, Fußgänger	q4; 21970,12153 21998,12204
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
+#: next_check_id ^^^
 (An der Wuhle, östliches Ufer): Fußgänger	q1 21323,8481 21333,8355 21371,8289 21594,8107 21627,8024 21629,7921
 Caroline-Michaelis-Str.: Bordsteine	q3 9125,13973 9151,13941
 Pappelplatz (Mitte): gemeinsamer Fuß- und Radweg	q2 9750,14132 9679,14039
@@ -576,7 +590,8 @@ Dieffenbachstr.: Bodenschwellen	q0- 11141,9732 11346,9655
 Hoffmannstr.: Bodenschwellen (2x)	q1 14289,9870 14077,10016
 Lausitzer Platz: zahlreiche Bodenschwellen	q2 12197,10494 12172,10585
 Lausitzer Platz: zahlreiche Bodenschwellen	q2 12328,10442 12274,10612
-(Grünanlage Egon-Erwin-Kisch-Str. - Falkenberger Chaussee): Fußgänger	q2 17678,18171 17744,18016
+#: XXX_prog BS Bordstein an der Falkenberger Chausse, ansonsten q2
+(Grünanlage Egon-Erwin-Kisch-Str. - Falkenberger Chaussee): Fußgänger, Bordstein	q3 17686,18172 17721,18001
 Erich-Steinfurth-Str.: Fußgänger	q2 12645,11673 12596,11696
 Elbingeroder Weg: hohe Bordsteine	q3 13178,9062 13146,9085
 (An der Apostelkirche - Kurfürstenstr.): Fußgänger, Bordsteine	q3 7312,10505 7315,10537
@@ -791,6 +806,7 @@ Am Flutgraben: Fußgänger	q1 13371,9974 13333,9929
 (Uferweg zum Ernst-Heilmann-Steg): sanfte Rampe, Fußgänger	q2 13230,9981 13270,10030
 (Ernst-Heilmann-Steg): Fußgänger, zwei Bodenschwellen	q3 13270,10030 13306,10006 13371,9974
 Buschrosenplatz: enge Straße	q1 13002,5548 13054,5556 13075,5470
+#: next_check_id: FRIEDRICHSBRUECKE-2014
 #: XXX später vielleicht wieder "Fußgänger, q1", und evtl. nur den Brückenabschnitt so markieren
 #: XXX Bauarbeiten wahrscheinlich bis Oktober 2013
 #: by: http://www.abload.de/img/friedrichsbruecke05byk16.jpg
@@ -943,11 +959,12 @@ Fußgängerbrücke Storkower Str.: Fußgänger	q2 14481,13143 14524,13271 14530,13269
 Lemgoer Str.: Fußgänger, Bordsteine	q2 14341,17030 14331,17016 14328,17011
 (Uferweg am Kanal): gemeinsamer Rad- und Gehweg	q1 16425,6445 16275,6275 16263,6248 16098,6134 16065,6126 16049,6121
 Am Haselbusch: Radfahren verboten, ggfs. schieben	q1 17411,4979 17356,5011
-(Allmersweg - Groß-Berliner Damm): Fußgänger, Bordsteine	q3 17789,5189 17735,5170
+(Allmersweg - Groß-Berliner Damm): Fußgänger, Bordsteine	q3 17789,5189 17726,5166
 #: XXX_prog: für Anhänger q3
 Sportfliegerstr.: drei Bodenschwellen, nicht umfahrbar	q2 18157,4742 18343,4545
 Karl-Otto-Reinsch-Str.: Fußgänger	q1 19603,3207 19524,3286
 Brook-Taylor-Str.: Fußgängerzone	q1 19146,2975 19101,3028 19015,3129
+Alexander-von-Humboldt-Weg: Fußgängerzone	q1 19015,3129 18892,3256
 Heinrich-Mirbach-Str.: Fußgänger	q1 17288,4026 17244,4084
 Drosselbartstr.: enge Straße	q1 15188,6908 15024,7083 14951,7163
 Zimmermannstr.: Fußgänger	q3 4992,5868 5018,5854
@@ -1031,7 +1048,7 @@ Don-Ugoletti-Platz - Regattastr.: Fußgänger, Bordsteine	q1 22449,1569 22478,1602
 Ede-und-Unku-Weg: Fußgänger, Radfahren erlaubt	q1 15140,11811 15122,11834 15121,11899
 Chiemseestr.: enge Straße	q1 22204,1496 22334,1553
 (Königsheideweg - Am Alten Fenn): eng	q3 17037,4794 17060,4848
-(Am Alten Fenn - Südostallee): teilweise recht eng, Anhänger sollten parallelen Weg benutzen	q2 17295,5387 17300,5423 17326,5463 17366,5551
+(Am Alten Fenn - Südostallee): teilweise recht eng, Anhänger sollten parallelen Weg benutzen	q2 17295,5387 17300,5423 17326,5463 17366,5552
 (Dämeritzstr. - Dämeritzsee): Radfahren verboten	q4 32512,2621 32558,2562
 (Lindenstr. - Bahnhofstr.): gemeinsamer Rad- und Gehweg	q1 22017,5159 22046,5305 22043,5346
 Waldpromenade: eng	q2 23792,7861 23710,7940 23668,7967
@@ -1729,7 +1746,7 @@ Ahrensfelder Berge: Fußgänger	q1 22512,16542 22432,16467
 (Blumberger Damm - Karl-Holtz-Str.): Fußgänger, parkende Autos an der Karl-Holtz-Str.	q3 21574,16547 21460,16572
 (Max-Herrmann-Str. - Ludwig-Renn-Str.): einige Fußgänger	q1 21278,16685 21142,16730 21077,16710 21019,16698 21000,16706
 Springpfuhlpark: einige Fußgänger	q1 19524,14474 19534,14459 19545,14290 19523,14190 19529,14019 19565,13893 19567,13858 19570,13833 19573,13742 19593,13702 19602,13575
-#: XXX_prog BS an der Parkplatzseite (ansonsten durch Fußgänger q1 (siehe unte) ersetzen)
+#: XXX_prog BS an der Parkplatzseite (ansonsten durch Fußgänger q1 (siehe unten) ersetzen)
 (Geißenweide - Blenheimstr./Bärensteinstr.): Bordstein	q3 21128,14799 21143,14803
 (Geißenweide - Blenheimstr./Bärensteinstr.): Fußgänger	q1 21143,14803 21211,15009 21261,15153 21260,15209
 (Geißenweide - Blenheimstr./Bärensteinstr.): Fußgänger, Einkaufszeile	q2 21260,15209 21263,15291
@@ -1753,7 +1770,9 @@ Wischbergweg: sehr enger Pfad	q4 13733,18161 13751,18180
 #: XXX_prog BS, sonst entfernen
 Bordstein	q3 22004,17470 21992,17479
 (An der Margaretenhöhe - Astridstr.): schmaler Pfad	q3 16634,19839 16550,19829 16472,19818 16390,19806
-Cajamarcaplatz: viele Fußgänger	q3 17728,5756 17710,5668 17782,5698
+Cajamarcaplatz: viele Fußgänger	q4 17728,5756 17710,5668
+#: XXX_prog BS, ansonsten aber trotzdem q4
+Cajamarcaplatz: viele Fußgänger, Bordstein	q4 17710,5668 17782,5698
 (Fußgängertunnel S-Bhf. Schöneweide): viele Fußgänger, ggfs. schieben	q4 17710,5668 17639,5612
 (S-Bhf. Schöneweide - Straßenbahn-/Bushaltestelle): Fußgänger	q3 17639,5612 17675,5521
 #: XXX_prog BS, sonst entfernen
@@ -1791,7 +1810,7 @@ Am Schwanenberg: einige Fußgänger	q1 15752,9385 15793,9334
 (Kaiser's-Parkplatz): Parkplatzverkehr, Fußgänger	q2 16058,6629 16138,6548
 (Siemensstr./Deulstr. - Wilhelminenhofstr.): einige Fußgänger	q1 17842,6639 17852,6589 17826,6495
 #: XXX_prog BS nach Osten hin, ansonsten entfernen
-Straße 77: Bordstein	q1 15320,12375 15402,12390
+Straße 77: Bordstein	q1 15320,12375 15408,12394
 Wuhlebrücken: Fußgänger	q2 22843,14452 22839,14453 22819,14457 22788,14468 22743,14488 22670,14520
 (oberer Wuhlewanderweg - unterer Wuhlewanderweg): Fußgänger	q2+ 22873,14502 22843,14452
 Bootshausweg: einige Fußgänger	q1+ -1017,16184 -960,16396 -972,16553 -1016,16585 -1033,16621 -1067,16635
@@ -1834,6 +1853,8 @@ Magdeburger Platz: Bordsteine	q3 7393,10809 7414,10804
 (Fanny-Zobel-Str. - Uferweg): Fußgänger, eng	q2 14049,10164 14116,10149
 #: XXX_prog BS an der Privatstraße 10 (östliche Seite), anonsten Eintrag entfernen
 (Grünanlage): Bordsteinkante	q1 17183,17385 17006,17473
+Friedlander Str.: Bodenschwelle	q1 20574,4317 20594,4342
+(Paul-Junius-Str. - Alfred-Jung-Str.): Fußgänger	q1 15370,13508 15346,13298
 ######################### User Contributions #################################
 # 
 #: by: Michael Kiekbusch
@@ -1987,7 +2008,7 @@ Erich-Kuttner-Str.: enge Straße	q1 14590,13560 14551,13571 14439,13600 14371,136
 #: XXX_prog: BS an der südlichen Seite, allerdings existiert am Zebrastreifen eine Fahrbahnabsenkung
 (Königsheideweg - Weststr.): Weg durch den Park, Bordstein	q1 17115,4757 17129,4837 17173,4902
 #: confirmed_by: srt
-(Breiter Weg - Südostallee/Sterndamm): Fußgänger	q1 17599,5371 17538,5301
+(Breiter Weg - Südostallee/Sterndamm): Fußgänger	q1 17601,5374 17538,5301
 #: by: ^^^
 # 
 #: by: Dirk (gesch) vvv
@@ -2179,6 +2200,7 @@ An der Brauerei: Fußgänger	q1 13290,13294 13283,13311 13381,13354
 An der Brauerei: Fußgänger	q2 13283,13311 13235,13414
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12851,12602 13108,12859 13046,12956 12878,13229
 (Friedhofsweg): Fußgänger, Radfahren nicht erlaubt	q4 12773,12683 13046,12956
+#: next_check_id: RITTER-2014
 #: XXX nach den Bauarbeiten vielleicht wieder q1? Und inwork streichen
 #: XXX siehe auch Eintrag in qualitaet_s-orig
 #: last_checked: 2013-11-25
@@ -2977,7 +2999,8 @@ Spachtelweg: enge Straße	q0- 5900,20487 5970,20353
 Leuenberger Zeile: eng	q1 2821,19559 2789,19600 2684,19765
 #: by: Hartmut Schröder
 #: corrected_by: srt/policy (q3 -> q2)
-Waldstr.: Bodenschwellen vor der Schule	q2 20540,4285 20623,4227
+#: confirmed_by: srt
+Waldstr.: mehrere Bodenschwellen vor der Schule	q2 20540,4285 20623,4227
 #: by: Thomas Müller-Burdack:
 #: corrected_by: srt/policy (q2 -> q1)
 Janitzkystr.: Siedlung, eng	q1 22763,6398 22889,6428 23002,6428 23027,6425 23131,6398 23192,6362 23242,6308

@@ -840,8 +840,8 @@ Mittelstreifen	3nocross::ignrte 10779,13793 10836,13883 10895,13961
 Schönhauser Allee -> Fehrbelliner Str.: Mittelstreifen	3::igndisp 10779,13793 10836,13883 10697,13956
 Fehrbelliner Str. -> Schönhauser Allee: Mittelstreifen	3::igndisp 10697,13956 10836,13883 10895,13961
 Schönhauser Allee: Abbiegen verboten	3 10703,13832 10779,13793 10836,13883
-Straßenbahntrasse	3nocross::ignrte 21796,4517 21775,4470 21773,4440
-Rudower Str. -> Köllnischer Pl.: Straßenbahntrasse	3::igndisp 21585,4459 21775,4470 21796,4517
+Straßenbahntrasse	3nocross::ignrte 21789,4520 21775,4470 21773,4440
+Rudower Str. -> Köllnischer Pl.: Straßenbahntrasse	3::igndisp 21585,4459 21775,4470 21789,4520
 Grünauer Str. -> Rudower Str.: Straßenbahntrasse	3::igndisp 21773,4440 21775,4470 21585,4459
 Kietz	1 22279,4220 22292,4279 22312,4329 22334,4383 22339,4396 22364,4429 22383,4470
 Mittelstreifen	3nocross::ignrte 5705,13359 5857,13342 5956,13330
@@ -1194,7 +1194,7 @@ Sybelstr.	1 3981,10590 3883,10585
 Giesebrechtstr.	1 3912,10699 3997,10607 4017,10585 4030,10575 4153,10453 4157,10418
 Clausewitzstr.	1 3971,10381 4007,10559
 Bayerische Str.	1 4297,10008 4352,10260
-Ferdinand-Schultze-Str - Landsberger Allee	3 17794,14640 17848,14523 18057,14549
+Ferdinand-Schultze-Str - Landsberger Allee	3 17791,14639 17848,14523 18057,14549
 Michelangelostr./Kniprodestr.	3 13875,15142 13854,15129 13816,15137 13823,15111
 Kurmärkische Str.	3 7413,10244 7429,10366 7337,10396
 Kurmärkische Str.	3 7337,10396 7429,10366 7444,10479
@@ -1668,3 +1668,7 @@ Straßenbahnhaltestelle	3nocross::ignrte -11307,133 -11390,72 -11494,-4
 Berliner Str. (B1) -> Leonardo-da-Vinci-Str.: Straßenbahnhaltestelle	3::igndisp -11494,-4 -11390,72 -11609,400
 Leonardo-da-Vinci-Str. -> Berliner Str. (B1): Straßenbahnhaltestelle	3::igndisp -11609,400 -11390,72 -11307,133
 Hubertusstr. - Frankfurter Allee	3 16541,12071 16512,11894 16737,11866
+Ückeritzer Ring: Betonkübel	3 17405,19252 17448,19243 17447,19197
+Ückeritzer Ring: Betonkübel	3 17405,19252 17448,19243 17450,19297
+Ückeritzer Ring: Betonkübel	3 17447,19197 17448,19243 17405,19252
+Ückeritzer Ring: Betonkübel	3 17450,19297 17448,19243 17405,19252

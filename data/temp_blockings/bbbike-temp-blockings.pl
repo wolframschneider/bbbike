@@ -2689,7 +2689,7 @@ EOF
        text  => 'Buschallee (Weißensee) in Richtung Berliner Allee zwischen Elsastr. und Hansastr. Baustelle, Fahrtrichtung gesperrt (bis 23.09.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 15918,16383 15866,16393 15843,16399 15432,16500
+userdel	q4; 15918,16383 15866,16393 15843,16399 15771,16417 15432,16500
 EOF
      },
      { from  => 1124575200, # 2005-08-21 00:00
@@ -10204,7 +10204,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006820',
        data  => <<EOF,
-userdel	1::inwork 16868,5938 16993,5841 17337,5574 17366,5551 17471,5469 17599,5371
+userdel	1::inwork 16868,5938 16993,5841 17337,5574 17366,5552 17473,5471 17601,5374
 EOF
      },
      { from  => 1191708000, # 2007-10-07 00:00
@@ -21681,6 +21681,7 @@ EOF
        text  => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
        type  => 'gesperrt',
        data  => <<EOF,
+#: next_check_id: BER-20XX vvv
 #: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht vvv
 #: osm_watch: way id="80221295" version="18" brb
 	2 19158,-4083 19189,-4062 19454,-3956 19524,-3843 19528,-3767 19479,-3690
@@ -21696,6 +21697,7 @@ EOF
 #: note: hier auch, sehr wahrscheinlich
 	2 19601,-3714 19539,-3810 19460,-3818 19282,-3928
 #: XXX_osm ^^^
+#: next_check_id ^^^
 EOF
      },
      { from  => undef,
@@ -21751,6 +21753,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_020145',
        data  => <<EOF,
+#: next_check_id: STERNDAMM-2014
 userdel	2::inwork 17736,5441 17886,5587
 EOF
      },
@@ -22078,6 +22081,7 @@ EOF
        text  => 'Gudvanger Str.: Bauarbeiten zwischen Krügerstr. und Erich-Weinert-Str. sowie am Humannplatz, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
+#: next_check_id: GUDVANGER-2014 vvv
 #: XXX wann sind die Bauarbeiten beendet? vvv
 #: last_checked: 2013-12-17 vvv
 #: check_frequency: 30d vvv
@@ -22086,6 +22090,7 @@ EOF
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
+#: next_check_id ^^^
 EOF
      },
      { from  => 1382507820, # 2013-10-23 07:57

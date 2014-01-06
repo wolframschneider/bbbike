@@ -299,7 +299,7 @@ Dieffenbachstr.: Bodenschwellen	q0 11141,9732 11346,9655
 Hoffmannstr.: Bodenschwellen (2x)	q1 14289,9870 14077,10016
 Lausitzer Platz: zahlreiche Bodenschwellen	q2 12197,10494 12172,10585
 Lausitzer Platz: zahlreiche Bodenschwellen	q2 12328,10442 12274,10612
-(Grünanlage Egon-Erwin-Kisch-Str. - Falkenberger Chaussee): Fußgänger	q2 17678,18171 17744,18016
+(Grünanlage Egon-Erwin-Kisch-Str. - Falkenberger Chaussee): Fußgänger, Bordstein	q3 17686,18172 17721,18001
 Erich-Steinfurth-Str.: Fußgänger	q2 12645,11673 12596,11696
 Elbingeroder Weg: hohe Bordsteine	q3 13178,9062 13146,9085
 (An der Apostelkirche - Kurfürstenstr.): Fußgänger, Bordsteine	q3 7312,10505 7315,10537
@@ -599,10 +599,11 @@ Fußgängerbrücke Storkower Str.: Fußgänger	q2 14481,13143 14524,13271 14530,13269
 Lemgoer Str.: Fußgänger, Bordsteine	q2 14341,17030 14331,17016 14328,17011
 (Uferweg am Kanal): gemeinsamer Rad- und Gehweg	q1 16425,6445 16275,6275 16263,6248 16098,6134 16065,6126 16049,6121
 Am Haselbusch: Radfahren verboten, ggfs. schieben	q1 17411,4979 17356,5011
-(Allmersweg - Groß-Berliner Damm): Fußgänger, Bordsteine	q3 17789,5189 17735,5170
+(Allmersweg - Groß-Berliner Damm): Fußgänger, Bordsteine	q3 17789,5189 17726,5166
 Sportfliegerstr.: drei Bodenschwellen, nicht umfahrbar	q2 18157,4742 18343,4545
 Karl-Otto-Reinsch-Str.: Fußgänger	q1 19603,3207 19524,3286
 Brook-Taylor-Str.: Fußgängerzone	q1 19146,2975 19101,3028 19015,3129
+Alexander-von-Humboldt-Weg: Fußgängerzone	q1 19015,3129 18892,3256
 Heinrich-Mirbach-Str.: Fußgänger	q1 17288,4026 17244,4084
 Drosselbartstr.: enge Straße	q1 15188,6908 15024,7083 14951,7163
 Zimmermannstr.: Fußgänger	q3 4992,5868 5018,5854
@@ -677,7 +678,7 @@ Don-Ugoletti-Platz - Regattastr.: Fußgänger, Bordsteine	q1 22449,1569 22478,1602
 Ede-und-Unku-Weg: Fußgänger, Radfahren erlaubt	q1 15140,11811 15122,11834 15121,11899
 Chiemseestr.: enge Straße	q1 22204,1496 22334,1553
 (Königsheideweg - Am Alten Fenn): eng	q3 17037,4794 17060,4848
-(Am Alten Fenn - Südostallee): teilweise recht eng, Anhänger sollten parallelen Weg benutzen	q2 17295,5387 17300,5423 17326,5463 17366,5551
+(Am Alten Fenn - Südostallee): teilweise recht eng, Anhänger sollten parallelen Weg benutzen	q2 17295,5387 17300,5423 17326,5463 17366,5552
 (Dämeritzstr. - Dämeritzsee): Radfahren verboten	q4 32512,2621 32558,2562
 (Lindenstr. - Bahnhofstr.): gemeinsamer Rad- und Gehweg	q1 22017,5159 22046,5305 22043,5346
 Waldpromenade: eng	q2 23792,7861 23710,7940 23668,7967
@@ -1242,7 +1243,8 @@ Wischbergweg: sehr enger Pfad	q4 13733,18161 13751,18180
 (Scheibenbergstr. - Blenheimstr.): Fußgänger, Bordstein an der Blenheimstr.	q3 20693,15144 20689,15175
 Bordstein	q3 22004,17470 21992,17479
 (An der Margaretenhöhe - Astridstr.): schmaler Pfad	q3 16634,19839 16550,19829 16472,19818 16390,19806
-Cajamarcaplatz: viele Fußgänger	q3 17728,5756 17710,5668 17782,5698
+Cajamarcaplatz: viele Fußgänger	q4 17728,5756 17710,5668
+Cajamarcaplatz: viele Fußgänger, Bordstein	q4 17710,5668 17782,5698
 (Fußgängertunnel S-Bhf. Schöneweide): viele Fußgänger, ggfs. schieben	q4 17710,5668 17639,5612
 (S-Bhf. Schöneweide - Straßenbahn-/Bushaltestelle): Fußgänger	q3 17639,5612 17675,5521
 Wasserweg: Bordstein	q2 15680,8914 15873,8884
@@ -1271,7 +1273,7 @@ Regatta-Ufer: Fußgänger, Radfahren nicht erlaubt	q4 15682,9472 15632,9430 15741,
 Am Schwanenberg: einige Fußgänger	q1 15752,9385 15793,9334
 (Kaiser's-Parkplatz): Parkplatzverkehr, Fußgänger	q2 16058,6629 16138,6548
 (Siemensstr./Deulstr. - Wilhelminenhofstr.): einige Fußgänger	q1 17842,6639 17852,6589 17826,6495
-Straße 77: Bordstein	q1 15320,12375 15402,12390
+Straße 77: Bordstein	q1 15320,12375 15408,12394
 Wuhlebrücken: Fußgänger	q2 22843,14452 22839,14453 22819,14457 22788,14468 22743,14488 22670,14520
 (oberer Wuhlewanderweg - unterer Wuhlewanderweg): Fußgänger	q2 22873,14502 22843,14452
 Bootshausweg: einige Fußgänger	q1 -1017,16184 -960,16396 -972,16553 -1016,16585 -1033,16621 -1067,16635
@@ -1302,6 +1304,8 @@ Karl-Lade-Str.: Fußgänger	q2 14821,13674 14987,13621 15040,13602
 Magdeburger Platz: Bordsteine	q3 7393,10809 7414,10804
 (Fanny-Zobel-Str. - Uferweg): Fußgänger, eng	q2 14049,10164 14116,10149
 (Grünanlage): Bordsteinkante	q1 17183,17385 17006,17473
+Friedlander Str.: Bodenschwelle	q1 20574,4317 20594,4342
+(Paul-Junius-Str. - Alfred-Jung-Str.): Fußgänger	q1 15370,13508 15346,13298
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q3 11805,19071 11895,19183 11927,19308
 Ebersstr.: Schüler	q2 7242,8586 7288,8635
 Straße 103 (Niederschönhausen): enge Straße	q1 10914,20065 11051,19789
@@ -1370,7 +1374,7 @@ Höltermannsteig: gemeinsamer Rad- und Gehweg	q1 13999,2727 13951,2801 13948,2910
 Georg-Lehnig-Str.: enge Straße	q1 14551,13571 14527,13486 14447,13507
 Erich-Kuttner-Str.: enge Straße	q1 14590,13560 14551,13571 14439,13600 14371,13619 14324,13632 14218,13661 14184,13670 14117,13685 14088,13627
 (Königsheideweg - Weststr.): Weg durch den Park, Bordstein	q1 17115,4757 17129,4837 17173,4902
-(Breiter Weg - Südostallee/Sterndamm): Fußgänger	q1 17599,5371 17538,5301
+(Breiter Weg - Südostallee/Sterndamm): Fußgänger	q1 17601,5374 17538,5301
 Birkenwerderstr.: enge Straße mit parkenden Autos	q0 6450,20753 6930,20808
 Borgsdorfer Str.: enge Straße mit parkenden Autos	q0 6473,20858 6951,20898
 Germendorfer Str.: enge Straße mit parkenden Autos	q0 6368,20956 6494,20944 6972,20993 7079,21008 7150,21018
@@ -1878,7 +1882,7 @@ Flotowstr. (Lichterfelde): enge Straße	q1 4515,4581 4651,4638
 Pfalzgrafenweg: enge Straße	q0 25594,11939 25827,11867
 Spachtelweg: enge Straße	q0 5900,20487 5970,20353
 Leuenberger Zeile: eng	q1 2821,19559 2789,19600 2684,19765
-Waldstr.: Bodenschwellen vor der Schule	q2 20540,4285 20623,4227
+Waldstr.: mehrere Bodenschwellen vor der Schule	q2 20540,4285 20623,4227
 Janitzkystr.: Siedlung, eng	q1 22763,6398 22889,6428 23002,6428 23027,6425 23131,6398 23192,6362 23242,6308
 Kaiser-Wilhelm-Str. - Langkofelweg: Fußgänger	q2 6957,3699 6998,3596
 (Uferweg im Wröhmännerpark): Fußgänger, für Radfahrer nicht freigegeben, ggfs. schieben	q3 -3066,14718 -3030,14844 -2998,14879 -3008,14910 -3008,14992 -2965,15053 -2929,15082 -2955,15129
@@ -2176,7 +2180,9 @@ Amalienstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 13789
 Aristotelessteig: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 18496,9628 18527,9623 18660,9599
 Ella-Trebe-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 7938,13302 7938,13150
 Rosenfelder Ring: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 18140,11932 18139,11833
+(Möllendorffstr. - Paul-Junius-Str.): gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 15370,13508 15470,13509
 Walterstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 13126,6687 13099,6712
+Parkaue: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 15406,12444 15408,12394 15370,12264
 Josef-Nawrocki-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25802,4681 25802,4823
 Josef-Nawrocki-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25691,4716 25554,4758 25552,4829
 Askanischer Platz: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 8882,10905 8938,10872 8983,10846 9022,10857
@@ -2233,24 +2239,14 @@ Tempelhofer Ufer, linker Gehweg	q4::igndisp; 8804,10303 8717,10322 8661,10377
 Leipziger Str., linker Gehweg	q3::igndisp; 9896,11703 9985,11711
 zur Ampel Jerusalemer Str.	q3::igndisp; 9985,11711 9987,11690 9982,11681
 Columbiadamm, linker Gehweg	q3::igndisp; 10796,8498 10799,8504 10913,8463
-#: note: Münchener Str./Hohenstaufenstr.: von Norden nach Süden vvv
 Hohenstaufenstr., linker Gehweg bis zur Fußgängerampel	q3::igndisp; 6209,9774 6241,9772
 zur Münchener Str. auf dem linken Gehweg	q3::igndisp; 6241,9772 6209,9771
-#: note: ^^^
 Karl-Lieknecht-Str., linker Gehweg	q3::igndisp; 11082,13371 11070,13357
 Potsdamer Str., linker Gehweg	q4::igndisp; 7501,9573 7526,9791
 Landsberger Allee, Radweg auf der linken Seite	q0::igndisp; 15850,14308 15848,14325 15923,14334
 Hauptstr., linker Gehweg	q3::igndisp; 16004,10204 16018,10212 16150,10123 16195,10044 16206,10047
 Kurt-Schumacher-Damm, linker Gehweg	q2::igndisp; 2831,14219 2787,14284 2793,14374
-#: last_checked: 2013-09-04 vvv
-#: next_check: 2014-03-31 vvv
-#: source_id: INKO_095722_COPY_1 vvv
-#: XXX: nach den Bauarbeiten wird der legale Radweg wahrscheinlich entfernt, dann -> q4 vvv
 Königsberger Str., linker Gehweg	q2::igndisp; 4220,2664 4164,2717
 Königsberger Str., linker Gehweg	q2::igndisp; 4164,2717 4236,2678
-#: XXX: ^^^
-#: source_id: ^^^
-#: next_check: ^^^
-#: last_checked: ^^^
 Bornholmer Str., linker Gehweg	q3::igndisp; 10118,16561 10197,16528
 Platz der Vereinten Nationen, linker Gehweg	q3::igndisp; 11952,13095 11962,13089 11984,13081

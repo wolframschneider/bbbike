@@ -113,9 +113,11 @@
 	X 11671,10402
 	X 11949,10414
 #: XXX_prog: Ampel gilt nicht für Radfahrer
+#: note: Anforderungsampel
 	F 12274,10436
 	X 12731,10547
 #: XXX_prog: Ampel gilt nicht für Radfahrer
+#: note: Anforderungsampel
 	F 12545,10496
 	F 11130,10326
 	X 12341,10218
@@ -699,10 +701,11 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 18023,5623
 	X 17960,5511
 	X 17728,5756
+#: next_check_id: STERNDAMM-2014
 #: XXX_prog: zurzeit bis 2013-12-20 außer Betrieb (Sterndamm gesperrt) --- evtl. mit valid_...-Direktive implementieren
 	X 17886,5587
 	X 21332,4655
-	X 21796,4517
+	X 21789,4520
 	X 22093,4499
 	X 21954,5229
 	X 22123,5452
@@ -790,12 +793,12 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 15920,7697
 #: XXX_prog: zurzeit bis 2013-12-20 außer Betrieb (Sterndamm gesperrt) --- evtl. mit valid_...-Direktive implementieren
 	X 17736,5441
-	X 17645,5328
+	X 17648,5338
 #: note: Ampel ohne Fuß/Radquerung der Michael-Brückner-Str.
 #: XXX eventuell wird diese Einschränkung aufgehoben:
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4
-#: last_checked: 2013-08-19
-#: check_frequency: 90d
+#: last_checked: 2014-01-04
+#: check_frequency: 120d
 	X 18080,5376
 	X 19904,3464
 	X 20565,2754
@@ -1600,6 +1603,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 1345,184
 # REMOVED (hier existiert nichts, Stand 2010) ---	X 31447,3372
 	F 21496,3849
+#: note: Anforderungsampel
 	F 20136,3609
 	X 19251,1240
 	X 15312,2010
@@ -2040,6 +2044,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 #: confirmed_by: srt
 #: note: Anforderungsampel
 	F 6353,4895
+#: note: Anforderungsampel
 	F 17425,18997
 	X 13867,9864
 	X 13884,9882
@@ -2248,7 +2253,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 15074,12850
 	F 14667,14336
 	F 14721,14379
-	X 18050,4649
+	X 18045,4663
 	X 18445,2642
 	X 17364,3565
 	F 8053,9123
@@ -2256,6 +2261,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 5360,6642
 #: note: Anforderungsampel
 	F 7857,5519
+#: note: Anforderungsampel
 	F 15187,16185
 	F 15142,16499
 	F 11750,16354
@@ -2386,11 +2392,12 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: by: http://www.berlin.de/imperia/md/content/bapankow/tiefbauamt/wiltbergstra__e_bpu_lp4.pdf?start&ts=1358154468&file=wiltbergstra__e_bpu_lp4.pdf
 	X 16669,25373
 	F 16606,25141
-	X 17885,4912
+	X 17879,4910
 	F 730,2734
 	X 8206,12757
 	F 13999,2727
 	B0 17953,15221
+#: next_check_id: VOSSSTR-2014
 #: note: provisorische Ampel
 #: XXX Siehe auch Baustelle in der Voßstr.
 #: last_checked: 2013-12-22
@@ -2427,12 +2434,14 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 8631,18441
 	X 10127,19992
 	F 5628,14063
+#: next_check_id: ZEUGHAUS-2014
 #: XXX temporäre Ampel (wegen Arbeiten an der Staatsoper und an der U-Bahn)
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
 #: last_checked: 2013-11-19
 #: check_frequency: 90d
 	F::inwork 9984,12426
+#: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
 #: last_checked: 2013-12-11 vvv
 #: next_check: 2014-01-26 vvv
@@ -2452,11 +2461,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: next_check ^^^
 #: last_checked ^^^
 #: XXX ^^^
+#: next_check_id ^^^
 #
 #: XXX temporäre Ampel (wegen gesperrten Gehweg?), Ampel ist eigentlich etwas weiter westlich
 #: last_checked: 2013-12-27
 	F::inwork 9812,12145
 # 
+#: next_check_id: INVALIDEN-2014
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung an der Invalidenstraße) vvv
 #: last_checked: 2013-12-27 vvv
 #: next_check: 2014-06-30 vvv
@@ -3104,12 +3115,14 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	F 26300,-11864
 	F 26085,-5839
 	X 18423,-843
+#: next_check_id: BER-20XX vvv
 #: XXX: Ampel am 2012-05-06 noch ausgeschaltet, wird wahrscheinlich mit BER in Betrieb gehen vvv
 #: next_check: 2014-03-02 vvv
 	X 19909,-2863
 	F 18861,-3921
 #: XXX ^^^
 #: next_check ^^^
+#: next_check_id ^^^
 	F 18423,-4094
 	F 18480,-4374
 	X 20802,-4032
