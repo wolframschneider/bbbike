@@ -21264,8 +21264,8 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-11-22 (Asphaltierungsarbeiten)
-#: check_frequency: 60d
+#: last_checked: 2014-01-09 (Asphaltierungsarbeiten)
+#: check_frequency: 30d
 # REMOVED --- userdel	q4::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904
 userdel	q4::inwork; 13085,7904 12870,8087
 EOF
@@ -21389,6 +21389,7 @@ EOF
        source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20130531.1040.385488.html',
        data  => <<EOF,
 #: source_id: INKO_117520
+#: source_id: IM_021030
 userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 11162,19844 11312,19920 11425,19978 11563,20048
 EOF
      },
@@ -22030,12 +22031,15 @@ EOF
 userdel	q4::inwork 3171,25495 3141,25575 3141,25626 3154,25659
 EOF
      },
-     { from  => 1381651200, # 2013-10-13 10:00
-       until => 1382133600, # 2013-10-19 00:00
-       text  => 'Friedrichsbrücke: ab dem 14.10.2013 um 10.00 Uhr bis zum 18.10.2013 um 24.00 Uhr ist die Brücke für den Fuß- und Radwegverkehr voll gesperrt ',
+     { from  => $isodate2epoch->("2014-01-08 00:00:00"), # 1381651200, # 2013-10-13 10:00
+       until => $isodate2epoch->("2014-02-28 23:59:59"), # 1382133600, # 2013-10-19 00:00
+       text  => 'Friedrichsbrücke: ab dem 8.1.2014 bis zum 28.2.2014 Uhr ist die Brücke für den Fuß- und Radwegverkehr voll gesperrt',
        type  => 'gesperrt',
-       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1310/nachricht5082.html',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1401/nachricht5147.html',
        data  => <<EOF,
+#: XXX Aufhebung der Sperrung aus Witterungsgründen möglich
+#: next_check_id: FRIEDRICHSBRUECKE-2014
+#: next_check: 2013-01-23
 userdel	2::inwork 10086,12725 10166,12777
 EOF
      },
@@ -22077,20 +22081,12 @@ userdel	1::inwork 10927,17022 10862,17087
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1389126305, # undef, # XXX
        text  => 'Gudvanger Str.: Bauarbeiten zwischen Krügerstr. und Erich-Weinert-Str. sowie am Humannplatz, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: GUDVANGER-2014 vvv
-#: XXX wann sind die Bauarbeiten beendet? vvv
-#: last_checked: 2013-12-17 vvv
-#: check_frequency: 30d vvv
 	q4::inwork 11694,16034 11673,16003
 	q3::inwork 11673,16003 11567,15842
-#: check_frequency ^^^
-#: last_checked ^^^
-#: XXX ^^^
-#: next_check_id ^^^
 EOF
      },
      { from  => 1382507820, # 2013-10-23 07:57
@@ -22185,11 +22181,11 @@ EOF
 userdel	q4::inwork; 12783,15921 12817,15985 12842,16032
 EOF
      },
-     { from  => 1384498800, # 2013-11-15 08:00
-       until => 1384729199, # 2013-11-17 23:59
-       text  => 'Schönerlinder Straße: zwischen Str. am Posseberg und Str. am Vorwerk (unter der Autobahnbrücke) für alle Verkehrsteilnehmer komplett gesperrt, 16. November 2013 08:00 Uhr bis 17. November 2013 24:00 Uhr',
+     { from  => $isodate2epoch->("2014-01-10 08:00:00"), # 1384498800, # 2013-11-15 08:00
+       until => $isodate2epoch->("2014-01-11 23:59:59"), # 1384729199, # 2013-11-17 23:59
+       text  => 'Schönerlinder Straße: zwischen Str. am Posseberg und Str. am Vorwerk (unter der Autobahnbrücke) für alle Verkehrsteilnehmer komplett gesperrt, 10. Januar 2013 08:00 Uhr bis 11. Januar 2013 nachts',
        type  => 'gesperrt',
-       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1311/nachricht5105.html',
+       source_id => 'IM_021027',
        data  => <<EOF,
 userdel	2::inwork 12624,25570 12694,25696
 EOF

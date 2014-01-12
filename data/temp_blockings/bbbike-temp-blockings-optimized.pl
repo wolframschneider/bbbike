@@ -1340,8 +1340,8 @@ userdel	q2::inwork 5258,11285 5236,10994
          'from' => undef,
          'id' => 2425,
          'data' => '#: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2013-11-22 (Asphaltierungsarbeiten)
-#: check_frequency: 60d
+#: last_checked: 2014-01-09 (Asphaltierungsarbeiten)
+#: check_frequency: 30d
 # REMOVED --- userdel	q4::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904
 userdel	q4::inwork; 13085,7904 12870,8087
 ',
@@ -1363,6 +1363,7 @@ userdel	q4::inwork; 13085,7904 12870,8087
          'from' => 1370210400,
          'id' => 2435,
          'data' => '#: source_id: INKO_117520
+#: source_id: IM_021030
 userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 11162,19844 11312,19920 11425,19978 11563,20048
 ',
          'type' => 'handicap'
@@ -1564,7 +1565,19 @@ userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1401/nachricht5147.html',
+         'until' => 1393628399,
+         'text' => 'Friedrichsbrücke: ab dem 8.1.2014 bis zum 28.2.2014 Uhr ist die Brücke für den Fuß- und Radwegverkehr voll gesperrt',
+         'from' => 1389135600,
+         'id' => 2498,
+         'data' => '#: XXX Aufhebung der Sperrung aus Witterungsgründen möglich
+#: next_check_id: FRIEDRICHSBRUECKE-2014
+#: next_check: 2013-01-23
+userdel	2::inwork 10086,12725 10166,12777
+',
+         'type' => 'gesperrt'
+       },
        undef,
        {
          'source_id' => 'IM_020491',
@@ -1578,35 +1591,27 @@ userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
        },
        undef,
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'until' => undef,
-         'text' => 'Gudvanger Str.: Bauarbeiten zwischen Krügerstr. und Erich-Weinert-Str. sowie am Humannplatz, Fahrbahn gesperrt',
-         'from' => undef,
-         'id' => 2503,
-         'data' => '#: next_check_id: GUDVANGER-2014 vvv
-#: XXX wann sind die Bauarbeiten beendet? vvv
-#: last_checked: 2013-12-17 vvv
-#: check_frequency: 30d vvv
-	q4::inwork 11694,16034 11673,16003
-	q3::inwork 11673,16003 11567,15842
-#: check_frequency ^^^
-#: last_checked ^^^
-#: XXX ^^^
-#: next_check_id ^^^
+         'source_id' => 'IM_021027',
+         'until' => 1389481199,
+         'text' => 'Schönerlinder Straße: zwischen Str. am Posseberg und Str. am Vorwerk (unter der Autobahnbrücke) für alle Verkehrsteilnehmer komplett gesperrt, 10. Januar 2013 08:00 Uhr bis 11. Januar 2013 nachts',
+         'from' => 1389337200,
+         'id' => 2514,
+         'data' => 'userdel	2::inwork 12624,25570 12694,25696
 ',
-         'type' => 'handicap'
+         'type' => 'gesperrt'
        },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        undef,
        undef,
        undef,
