@@ -17,6 +17,10 @@ BEGIN {
 	print "1..0 # skip no LWP::UserAgent, Archive::Zip, and/or Test::More modules\n";
 	exit;
     }
+    if ($ENV{BBBIKE_TEST_ORG}) {
+	print "1..0 # skip bbbike.de tests\n";
+	exit;
+    }
 }
 
 use FindBin;
