@@ -898,7 +898,7 @@ ${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd:	\
 		${SOURCE_TARGETS:S|$|-orig|} \
 		${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd
 	${MISCSRCDIR}/create_fragezeichen_nextcheck.pl --preamble \
-	    --coloring '#6c0000 +1w #b05555 +1m #ec8888 +6m #f2a0a0 +1y #fcc8c8 +5y #fdd8d8'\
+	    --coloring '#6c0000 +1w #b05555 +1m #ec8888 +6m #f2a0a0 +1y #fcc8c8 +5y #fdd8d8 +100y #fde0e0'\
 	    --outdoor-mode \
 	    --fragezeichen-mode fragezeichen-orig \
 	    --no-fragezeichen-mode \
@@ -1734,7 +1734,8 @@ ${PERSISTENTTMPDIR}/crossings_gewaesser_ignore.bbd:	\
 check-urls: ${PERSISTENTTMPDIR}/url_checks.log
 
 ${PERSISTENTTMPDIR}/url_checks.log:	comments_route-orig comments_ferry-orig
-	${PERL} ${MISCSRCDIR}/url_checker.pl -v -log ${PERSISTENTTMPDIR}/url_checks.log $>
+	${PERL} ${MISCSRCDIR}/url_checker.pl -v -log ${PERSISTENTTMPDIR}/url_checks.log~ $>
+	mv ${PERSISTENTTMPDIR}/url_checks.log~ ${PERSISTENTTMPDIR}/url_checks.log
 
 ######################################################################
 # Checks for unhandled streets
