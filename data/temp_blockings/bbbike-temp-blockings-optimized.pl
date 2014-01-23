@@ -3222,46 +3222,8 @@ userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.gruen-berlin.de/parks-gaerten/tempelhofer-freiheit/?date=20140118',
-         'data' => 'userdel	2::temp 9522,7624 9362,7616 9281,7651
-userdel	2::temp 9562,7796 9372,7798 9281,7795
-userdel	2::temp 9281,7795 9281,7651 9300,7312
-userdel	2::temp 10384,8628 10360,8521
-',
-         'periodic' => 1,
-         'until' => 1390345199,
-         'from' => 1389135600,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              1
-                            ],
-                            [
-                              'yearly',
-                              'days',
-                              1,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Flughafen Tempelhof: die Nebeneingänge Columbiadamm und Peter-Strasser-Weg sind wegen einer Veranstaltung (Bread and Butter) geschlossen (bis zum 21. Januar 2014)',
-         'id' => 2447,
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'IM_021028',
-         'until' => 1390122000,
-         'text' => 'Karower Chaussee/Bucher Chaussee: Baustelle in Höhe Unterführung BAB 10, Straße gesperrt, 18. Januar 2014 18 Uhr bis 19. Januar 2014 10 Uhr',
-         'from' => 1389978000,
-         'id' => 2448,
-         'data' => 'userdel	2::inwork 16201,24354 16156,24284 16123,24232
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -3454,7 +3416,7 @@ userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
          'id' => 2498,
          'data' => '#: XXX Aufhebung der Sperrung aus Witterungsgründen möglich
 #: next_check_id: FRIEDRICHSBRUECKE-2014
-#: next_check: 2014-01-23
+#: next_check: 2014-02-01
 userdel	2::inwork 10086,12725 10166,12777
 ',
          'type' => 'gesperrt'
