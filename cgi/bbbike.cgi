@@ -8698,6 +8698,7 @@ $permalink_text
 Map data (&copy;) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap.org</a> contributors<br>
 <a href="/help.html#iphone">iphone</a> -
 <a href="/help.html#android">android</a> -
+<a href="/tools.html">desktop</a> -
 <a href="http://mc.bbbike.org/mc/">map compare</a> -
 <a href="http://extract.bbbike.org/">osm extract service</a><br/>
 
