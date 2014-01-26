@@ -134,7 +134,8 @@ bbbike-js: bbbike-js.js
 bbbike-js.js: maps3.js bbbike.js jquery/jquery-1.4.2.min.js devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete.js
 	for i in $^ ; do \
 	    jsmin < $$i; \
-	done > $@
+	done > $@.tmp
+	mv -f $@.tmp $@
 
 jsbeautifier js:
 	for i in ${BBBIKE_WORLD_JAVASCRIPT_FILES}; do \
