@@ -13,6 +13,35 @@
 # WWW:  http://www.rezic.de/eserte/
 #
 
+use strict;
+use FindBin;
+use lib "$FindBin::RealBin/..";
+use CGI;
+use BBBikeVar;
+
+my $q = CGI->new;
+
+{
+    # Don't use RealBin here
+    require FindBin;
+    $FindBin::Bin = $FindBin::Bin if 0; # cease -w
+    my $f = "$FindBin::Bin/Botchecker_BBBike.pm";
+    if (-r $f) {
+	eval {
+	    local $SIG{'__DIE__'};
+	    do $f;
+	    Botchecker_BBBike::run_bbbike_snapshot($q);
+	};
+	warn $@ if $@;
+    }
+}
+
+print $q->redirect($BBBike::BBBIKE_UPDATE_GITHUB_ARCHIVE);
+exit;
+
+# Following the old code doing an on-the-fly archive from the current
+# directory
+
 # Do not use FindBin, because it does not work with Apache::Registry
 (my $target = $0) =~ s{bbbike-snapshot.cgi}{bbbike-data.cgi};
 do $target;
