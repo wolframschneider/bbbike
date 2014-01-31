@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2009,2012,2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 2009,2012,2013,2014 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -78,8 +78,12 @@ if (!$bod) {
     warn "WARN: cannot create BBBikeOrgDownload object, no downloads from bbbike.org possible (error: $@)";
 }
 
+my $debug;
 Getopt::Long::Configure("pass_through");
-GetOptions("rootdir=s" => \$rootdir);
+GetOptions(
+	   "rootdir=s" => \$rootdir,
+	   "debug!" => \$debug,
+	  );
 
 my $mw = tkinit;
 
@@ -124,12 +128,13 @@ $mw->Label(-text => M"Choose city/region:")->pack;
 my $p = $mw->Scrolled("Pane", -sticky => 'nw', -scrollbars => 'ose')->pack(qw(-fill both));
 fill_chooser();
 
-#$mw->WidgetDump;
+$mw->WidgetDump if $debug;
+#$mw->after(1000,sub{warn "do it"; flash_city_button('Ruegen')});
 MainLoop;
 
 sub fill_chooser {
     # clean pane (for the refresh case)
-    $_->destroy for $p->Subwidget('scrolled')->Subwidget("frame")->children;
+    $_->destroy for _get_chooser_frame()->children;
 
     my $last_b;
     for my $bbbike_datadir (sort { $a->{dataset_title} cmp $b->{dataset_title} } @bbbike_datadirs) {
@@ -171,10 +176,15 @@ sub fill_chooser {
     }
 }
 
+# Return the frame which has the city buttons as children
+sub _get_chooser_frame {
+    $p->Subwidget('scrolled')->Subwidget("frame");
+}
+
 sub create_adjust_geometry_cb {
     my($p, $b) = @_;
     my $height = 400; $height = $p->screenheight - 40 if $height > $p->screenheight;
-    $p->after(50, sub { $p->GeometryRequest($b->Width+20, $height) });
+    $p->after(50, sub { $p->GeometryRequest($b->Width+22, $height) });
 }
 
 sub find_all_datadirs {
@@ -318,6 +328,39 @@ sub download_city {
     @bbbike_datadirs = find_all_datadirs();
     uniquify_titles();
     fill_chooser();
+    flash_city_button($city);
+}
+
+sub flash_city_button {
+    my $city = shift;
+    for my $b (_get_chooser_frame()->children) {
+	if (eval { $b->cget(-text) eq $city }) {
+	    flash_button($b);
+	    return;
+	}
+    }
+    warn "WARN: bbbike_chooser.pl: cannot find city '$city' in list of buttons.\n";
+}
+
+sub flash_button {
+    my $b = shift;
+    my $orig_bg = $b->cget(-background);
+    my $flash_color = 'red';
+    my $i = 6;
+    my $change_color_cb;
+    $change_color_cb = sub {
+	return if !Tk::Exists($b);
+	$i--;
+	if ($i % 2 == 0) {
+	    $b->configure(-background => $orig_bg);
+	} else {
+	    $b->configure(-background => $flash_color);
+	}
+	if ($i > 0) {
+	    $b->after(200, $change_color_cb);
+	}
+    };
+    $change_color_cb->();
 }
 
 sub usage () {

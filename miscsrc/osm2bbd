@@ -617,6 +617,14 @@ for my $osm_file (@osm_files) {
 	    die "The file '$osm_file' is not starting with a <osm> tag, probably not an osm file?"
 		if $reader->name ne 'osm';
 	    $reader->nextElement == 1 or last PARSE;
+	    # Overpass API generated osm files have a <note> element
+	    if ($reader->name eq 'note') {
+		$reader->nextElement == 1 or last PARSE;
+	    }
+	    # ... and a <meta> element
+	    if ($reader->name eq 'meta') {
+		$reader->nextElement == 1 or last PARSE;
+	    }
 	    # $reader stays now on <bounds> or <bound> or the first <node>
 	    if (DO_ASSERTS) {
 		$reader->name =~ m{^(?:bounds|bound|node)}
@@ -1339,6 +1347,18 @@ for my $osm_file (@osm_files) {
 		    } else {
 			if (!$gesperrt_seen) {
 			    push @or, ["gesperrt", 2]; $gesperrt_seen = 1;
+			}
+		    }
+		}
+
+		if (!$gesperrt_seen) {
+		    my $sac_scale = $tag{'sac_scale'};
+		    if ($sac_scale && $sac_scale ne 'hiking') {
+			push @or, ["gesperrt", '2', name => "sac_scale=$sac_scale"];
+		    } else {
+			my $path = $tag{'path'};
+			if ($path && $path eq 'climbing_access') {
+			    push @or, ["gesperrt", '2', name => "climbing_access"];
 			}
 		    }
 		}
