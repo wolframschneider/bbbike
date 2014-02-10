@@ -697,7 +697,7 @@ Hannah-Arendt-Str.: werden die Radspuren vielleicht noch verlängert?	? 8632,1191
 Ghanastr. - Kurt-Schumacher-Damm: im Zuge der RR4 könnte es hier eine neue Verbindung geben	?::projected 5255,17007 4988,17172
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20120207.1005.365838.html vvv
-#: last_checked: 2013-10-19
+#: last_checked: 2014-02-08
 #: check_frequency: 90d
 #: priority: #C
 Weitlingstr.: für 2012 geplanter Zebrastreifen? Wo genau?	?::projected 16705,11526 16730,11480 16734,11416
@@ -1055,14 +1055,19 @@ BAB100	?::inwork 14270,9710 14186,9546 14147,9383 14160,9132 14307,8805 14270,83
 # - Fragen nach genauen Routenverläufen
 # - XXX_prog- und XXX_indoor-Einträge
 # 
+zum Unfallkrankenhaus Berlin: Qualität wahrscheinlich Verbundsteinpflaster, q1 wegen Fußgängern, Beleuchtung?	? 21400,12135 21403,12230 21429,12393 21476,12590 21494,12617 21530,12778
+# 
+#: XXX_indoor: Ausschilderung nach comments_misc/path? Oder ist es zu verwirrend, weil später ein weiteres Schild Richtung Norden zeigt?
+Ausgeschildert "Unfallkrankenhaus Berlin"	? 21930,12185 21608,12320
+# 
+#: XXX_indoor: soll ich diese Verbindung mit aufnehmen? Wie soll die Straßenbezeichnung aussehen?
+Alt-Friedrichsfelde/Am Tierpark - Wohngebiet: Gehweg/flache breite Rampe, abgesenkte Bordsteine	? 18158,11631 18216,11656
+# 
 Wilhelm-Hoff-Str.: geht die Straße hier weiter? Qualität?	? 18828,3196 18710,3087 18601,2971
 # 
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3657
 #: next_check: 2014-08-01
 Sültstr.: Wird hier eine Einbahnstraße eingerichtet? Auch für Radfahrer?	? 12295,15953 12347,16039
-# 
-Alt-Friedrichsfelde [Wohngebiet]: Qualität?	? 17744,11703 17742,11633 17890,11621 17939,11655 18144,11643
-Am Tierpark [Wohngebiet]: Qualität?	? 18144,11643 18189,11594 18178,11504 18208,11376 18207,11265 18179,11278
 # 
 Lützowstr.: Vorfahrtsregelung?	? 7963,10716 8070,10680 8199,10634
 # 
@@ -1100,8 +1105,9 @@ Neubaugebiet am Dahlemer Weg: entstehen hier neue Straßen oder werden bestehende
 # REMOVED (realisiert) --- #: last_checked: 2013-10-29 (Kreidemarkierungen zu sehen) --- #: next_check: 2014-11-29 --- Seddiner Str.: anscheinend werden hier Radspuren markiert? Was passiert mit der vorhandenen Busspur?	? 18559,12105 18408,12105 18296,12115 18215,12123
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/06re.pdf/file?y=2014 (Nummerierungen, evtl. hier)
-#: last_checked: 2013-10-29
-#: next_check: 2014-03-29
+#: XXX nördlich hiervon werden weitere Häuser entstehen
+#: last_checked: 2014-02-08
+#: next_check: 2014-05-08
 Beilsteiner Str.: wird es hier für das neue Wohngebiet eine Erschließungsstraße geben?	? 18737,12753 18706,12488
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/53re.pdf/file?y=2013
@@ -1127,13 +1133,7 @@ Hildburghauser Str.: Qualität des Asphalts?	? 4806,1360 4897,1346 5056,1321 5223
 # 
 Schwarzwurzel-Park: Bordsteine? Qualität? Nachts beleuchtet?	? 20654,18336 20700,18358 20817,18344 20826,18331
 # 
-#: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5569
-#: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20140121.1245.393675.html
-#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/05re.pdf/file?y=2014
-#: XXX Benennung am 05. Februar 2014
-#: last_checked: 2013-11-17
-#: next_check: 2014-02-05
-Johannes-Fest-Platz: hier wird ein Platz benannt	? 18791,8597 18846,8616
+# REMOVED (realisiert) --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5569 --- #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20140121.1245.393675.html --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/05re.pdf/file?y=2014 --- #: XXX Benennung am 05. Februar 2014 --- #: last_checked: 2013-11-17 --- #: next_check: 2014-02-05 --- Johannes-Fest-Platz: hier wird ein Platz benannt	? 18791,8597 18846,8616
 # 
 #: XXX Ist das hier die Straße "Am Hechtgraben"? Laut http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5608 wird die Bezeichnung offiziell (Berlin.coords.data!)
 #: XXX http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/51re.pdf/file?y=2013
@@ -1754,8 +1754,8 @@ Freesienweg: geplante Straße, wo wird sie genau liegen? Qualität?	?::projected 1
 #: by: http://www.deutschepost.de//mlm.nf/dpag/images/d/datafactory/postleitdaten/dezember_2013/mtb_strassen_neu.pdf
 #: note: Nibelungenpark vvv
 #: XXX fehlen alle bei Berlin.coords.data vvv
-#: last_checked: 2013-12-20 vvv
-#: next_check: 2014-03-29 vvv
+#: last_checked: 2014-02-08 vvv
+#: next_check: 2014-05-08 vvv
 Alzeyweg: genaue Lage? Qualität? PLZ=10365	? 17376,12422 17366,12357 17365,12301
 #: XXX Eintrag in str_cont_ausnahme fehlt
 Nibelungenring: genaue Lage? Qualität? PLZ=10365	? 17474,12344 17484,12405 17432,12413 17376,12422 17337,12428
@@ -2171,9 +2171,7 @@ Fürstenberg - Steinförde: Qualität?	? -10475,85837 -10697,85804 -11029,85712 -11
 Neuglobsow - Großmenow [Berlin - Kopenhagen]: Qualität? Nur für Radfahrer?	? -14354,81575 -14387,81975 -14287,83137 -14362,83350 -15025,84150 -15000,84662 -15037,84887 -15062,85237 -14837,85562 -14762,87137
 Großmenow - Strasen [Berlin - Kopenhagen]: Qualität?	? -14762,87137 -15087,87275 -15572,87263 -15637,87287 -16250,86900 -16537,86912 -16687,87187 -16975,87387 -17212,87675 -17750,88037 -18287,88225 -18587,88437 -19075,88375
 Strasen - Wesenberg [Berlin - Kopenhagen]: Qualität? Nur für Radfahrer?	? -20312,89975 -21112,89187 -21650,89287 -21650,89125 -21962,89212 -22025,89325 -22475,89287 -22825,89075 -23012,89337 -22995,89694 -22987,90087 -22850,90312 -22825,90625 -22387,90637 -22387,90800 -22587,90875 -23175,90787 -23200,90925 -22812,91737 -22637,92025 -22625,92350 -22675,92437 -22637,92650 -22425,92650 -22050,93775 -22237,94075 -22037,94512 -21362,95487
-Zerpenschleuse - Liebenwalde: Qualität?	? 16526,50265 15603,50371 15182,50332 14649,49658 14425,49300 13850,49225 11225,49900 10313,51066 9312,51062 9097,51060
-Marienwerder, am Finowkanal: Qualität?	? 24618,48656 24202,48591 23700,48629
-Marienwerder, am Finowkanal: Qualität?	? 22500,48187 20965,48351
+Marienwerder, am Finowkanal: Qualität?	? 24618,48656 24202,48591 23668,48638
 Entlang des Wandlitzsees: Qualität?	? 14498,38870 14400,39325 13687,39975 13100,39987 12437,39475 12075,39475 11825,39650 11675,40000
 Hirschfelde - Tiefensee: Qualität?	? 36528,26746 36987,26462 37337,26575 38500,28387 39155,29093 39750,29812 39662,30500 39298,30797
 Strausberg, an der S-Bahn entlang: Qualität?	? 41396,16324 41725,16362 42262,17487 42650,17962 42837,18038
@@ -2232,8 +2230,9 @@ Albertshof, Alternative: Qualität?	? 24376,31986 24478,31918 25240,31808 25630,3
 #: XXX laut osm track
 Niederfinow - Bralitz: Qualität?	? 46094,49871 46368,49825 46909,49947 47183,50000 47511,50259 47641,50237 47999,50427 48143,50747 48237,50875
 Am Finowkanal: Qualität?	? 36364,48599 35933,48623 35742,48774
-Am Finowkanal: Qualität?	? 35659,48744 35575,48942 35377,49117 35256,49291 34926,49455 34716,49330 34630,49178 34522,49218 34478,49056 34305,48961 33957,48882 33701,49041 33526,49025 33221,48820 32696,48706 32391,48706 32162,48797 32002,48904 31820,48919 31482,49109
-Am Finowkanal: Qualität?	? 31495,49233 31320,49232 31043,49307 30654,49330 30426,49216 30296,49224 29999,49300 29375,49269 29176,49323 28895,49277 28712,49399 28634,49403 28618,49522 27508,49376 27341,49383 26945,49262 26670,49231 26450,49284 26442,49414 26594,49734 26587,49894 26693,50084 26000,50214 24583,49825 24461,49041 24393,48972
+Am Finowkanal: Qualität?	? 35659,48744 35575,48942 35377,49117 35256,49291 34926,49455 34716,49330 34630,49178 34522,49218 34478,49056 34305,48961 33957,48882 33701,49041 33526,49025 33221,48820 33208,48792 32909,48774 32715,48723 32382,48718 32162,48797 32002,48904 31820,48919 31482,49109
+Am Finowkanal: Qualität?	? 31495,49233 31320,49232 31043,49307 30654,49330 30397,49239 30296,49224 30050,49297 29787,49248 29621,49275 29449,49272 29176,49323 28895,49277 28712,49399 28634,49403 28618,49522 27493,49402 27345,49402 26913,49272 26639,49254 26415,49336 26442,49414 26551,49728 26563,49921 26685,50141
+Am Finowkanal: Qualität?	? 26427,50200 26000,50214 24565,49837 24450,49064 24371,48983
 Ützdorf - Bogensee: Qualität?	? 18337,39131 18345,39215 18503,39436 18534,39567 18733,39862 19076,40228 19213,40479 19053,40540 18784,40575 18665,40616 18519,40801 18124,40730 18048,40906 17964,40999 18022,41084 17879,41267
 Am Neuen Kanal/Trappenallee: Qualität?	? -3996,22969 -3994,23162 -3503,23811
 Dorfstr. Stolpe-Dorf: Qualität?	? -25,27812 237,28184 524,28171
