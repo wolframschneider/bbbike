@@ -1748,9 +1748,6 @@ function ${type}char_detail(Evt) { return any_detail("${type}char", Evt); }
 
 EOF
     } elsif ($nice_abc_list) {
-	print "<input type=image name=" . $type
-	  . "charimg src=\"$bbbike_images/abc.gif\" class=\"charmap\" alt=\"A..Z\">";
-    } else {
 	_zoom_hack_init();
 	print "<input type=image name=" . $type
 	  . "charimg src=\"$bbbike_images/abc.gif\" class=\"charmap\" alt=\"A..Z\"";
@@ -2954,7 +2951,7 @@ EOF
 		}
 	    }
 
-	    if ($type eq 'start' && $bi->{'can_css'}) {
+	    if ($type eq 'start' && $bi->{'can_css'} && 0) {
 		my $transpose_dot_func = "transpose_dot_func = " . overview_map()->{TransposeJS};
 		print <<EOF;
 <div id="locateme" style="visibility:hidden;">
