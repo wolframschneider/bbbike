@@ -22049,7 +22049,7 @@ EOF
 #: XXX Aufhebung der Sperrung aus Witterungsgründen möglich
 #: next_check_id: FRIEDRICHSBRUECKE-2014
 #: last_checked: 2014-02-03
-#: next_check: 2014-02-15
+#: next_check: 2014-02-28
 userdel	2::inwork 10086,12725 10166,12777
 EOF
      },
@@ -22412,6 +22412,42 @@ userdel	2::temp 21352,3599 21308,3644 21275,3607
 userdel	2::temp 21119,3572 21049,3657
 userdel	2::temp 21324,3691 21308,3644
 userdel	2::temp 20808,3374 20750,3440
+EOF
+     },
+     { from  => 1392016320, # 2014-02-10 08:12
+       until => 1393599600, # 2014-02-28 16:00
+       text  => 'Rüdersdorfer Str./Marchleweskistr.: Baustelle, Kreuzung gesperrt, langsame Umfahrung über Gehweg möglich, bis 28.02.2014 16:00 Uhr',
+       type  => 'handicap',
+       source_id => 'IM_021244',
+       data  => <<EOF,
+userdel	q3::inwork 13173,11788 13295,11792 13366,11651
+userdel	q3::inwork 13275,11830 13295,11792 13467,11778
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Wadzeckstr. - Mollstr.: Parkplatzzufahrt gesperrt, Umfahrung auf dem Gehweg der Otto-Braun-Str. langsam möglich',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX bleibt das dauerhaft gesperrt?
+#: XXX_indoor: evtl. Umfahrung über Otto-Braun-Str. definieren
+#: last_checked: 2014-02-13
+#: check_frequency: 7d
+	q4::inwork; 11406,13321 11379,13279 11326,13196
+	q3::inwork; 11326,13196 11379,13279 11406,13321
+EOF
+     },
+     { from  => 1392120000, # 2014-02-11 13:00
+       until => 1392832980, # 2014-02-19 19:03
+       text  => 'Greifswalder Str.: geplatzte Wasserleitung an der Kreuzung Heinrich-Roller-Str., Fahrbahn stadteinwärts gesperrt, langsame Umfahrung über Gehweg möglich, bis 19.02.2014 abends',
+       type  => 'handicap',
+       source_id => 'IM_021257',
+       data  => <<EOF,
+#: by: http://www.morgenpost.de/berlin-aktuell/article124783293/Geplatzte-Wasserleitung-Greifswalder-Strasse-gesperrt.html
+#: XXX laut MoPo nur bis Freitag, prüfen
+#: last_checked: 2014-02-13
+#: next_check: 2014-02-18
+userdel	q3::inwork; 11946,13993 11820,13804
 EOF
      },
     );
