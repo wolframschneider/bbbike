@@ -283,7 +283,7 @@ Wöhlertstr.	1s:q4 8442,14456 8669,14550
 Pflugstr.	1s:q4 8669,14550 8776,14364
 #: note ^^^
 Schwartzkopffstr.	1s:q4 8776,14364 8607,14253
-Strausberger Str.	1 12416,13045 12368,13031
+Strausberger Str.	1 12416,13045 12368,13031 12247,12848
 Große Präsidentenstr.	1 10105,13004 10220,13098
 Naumannstr.	1 7709,8777 7707,8915
 Gritznerstr.	1 4507,6320 4555,6403
@@ -1028,7 +1028,7 @@ Straßburger Str.	1 11270,14131 11239,14123 11236,14153
 Rykestr./Knaackstr.	1 11331,14350 11374,14363 11380,14316
 #XXX --- hmmm kann doch keine Einbahnstraßenregelung hier erkennen --- Waldowallee	1 18878,9517 18901,9499 18916,9468
 Waldowallee	1 18916,9468 18867,9464
-Alfred-Kowalke-Str.	1 18027,11244 18059,11256 18179,11278 18229,11256
+Alfred-Kowalke-Str.	1 18027,11244 18059,11256 18179,11278 18200,11269 18229,11256
 Alfred-Kowalke-Str.	1 18229,11256 18202,11253 18061,11240 18027,11244
 Wittenbergplatz	1 6171,10657 6228,10646 6292,10627 6353,10583
 Wittenbergplatz	1 6353,10583 6268,10588 6216,10614 6171,10657
@@ -1441,7 +1441,7 @@ Rudower Chaussee: Mittelstreifen	3nocross 16135,2135 16028,2261 15980,2318
 Rudower Chaussee: Mittelstreifen	3 19498,3054 19475,3074 19426,3024
 Sterndamm: Straßenbahntrasse	3nocross 17601,5090 17542,4772 17520,4649
 Sterndamm: Straßenbahntrasse	3nocross 17648,5338 17601,5090 17542,4772
-Alt-Biesdorf: unbequemes Passieren des Mittelstreifens	3nocross 21960,11269 22242,11269 22326,11266
+Alt-Biesdorf: unbequemes Passieren des Mittelstreifens	3nocross 21954,11269 22242,11269 22326,11266
 # REMOVED (es existiert ein offizieller Radweg auf der linken Seite) --- Konrad-Wolf-Str./Große-Leege-Str.: wegen Absperrgitter nicht überquerbar	3nocross 16961,16042 16917,16001 16819,15912
 Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3nocross 2975,15813 2960,15847 2944,15880
 Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3nocross 2944,15880 2913,15944 2819,16141
@@ -2321,7 +2321,7 @@ Drängelgitter kann ohne Absteigen passiert werden	BNP:2 1388,3197
 Barriere für Autofahrer	BNP:2 17301,7645
 #: by: Niels Weber
 Drängelgitter	BNP:5 11010,-378
-Drängelgitter	BNP:5 22280,11284
+Drängelgitter	BNP:5 22268,11285
 #: by: rjoop vvv
 #: confirmed_by: srt vvv
 Drängelgitter	BNP:5 -7228,15504
@@ -2456,6 +2456,12 @@ versetzte Schranke, manchmal offen	BNP:1::trailer=3 24625,20855
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: next_check_id: ZIMMERMANNSTRBR-2014
+#: last_checked: 2014-02-08
+#: next_check: 2014-05-31
+#: priority: #A
+Wuhlewanderweg an der Zimmermannstraßenbrücke: wegen Bauarbeiten gesperrt	2::inwork 21385,9049 21471,9246
+# 
 #: XXX wird hier eine wassergebundene Decke sein? handicap?
 #: last_checked: 2014-01-04
 Wilhelm-Hoff-Str.: Weg noch nicht fertig	2::inwork 19033,3397 19057,3422
@@ -2468,9 +2474,10 @@ Große Hamburger Str.: Einbahnstraße wegen Bauarbeiten	1s:q3 10077,13100 10018,13
 # 
 # REMOVED (anscheinend ist ein Viertel der Treppe zugänglich, siehe http://berlinerbaustellen.blogspot.de/2014/01/0246-gastbaustelle-potsdam-potsdamer.html) --- : last_checked: 2014-01-11 --- Alter Markt - Uferweg: Zugang höchstwahrscheinlich gesperrt	2::inwork -12608,-1715 -12625,-1703 -12643,-1694
 # 
+#: next_check_id: AMZIRKUS-2014
 #: XXX oder bleibt die Einbahnstraßenregelung permanent?
 #: XXX_prog 1s:q4:inwork geht als Kategorie nicht, falsche Übersetzung!
-#: last_checked: 2014-01-03
+#: last_checked: 2014-02-10
 Am Zirkus: Einbahnstraße	1s:q4 9118,13070 9137,13032 9167,13046 9239,12923
 # 
 #: next_check_id: STADTGARTENMOABIT-2014
@@ -2481,9 +2488,10 @@ Am Zirkus: Einbahnstraße	1s:q4 9118,13070 9137,13032 9167,13046 9239,12923
 #: last_checked: 2014-01-17
 Erna-Samuel-Str.: gesperrt bis zur kompletten Fertigstellung	2::inwork 5299,14049 5321,14088 5474,14168 5685,14215 6052,14304 6118,14289
 # 
+#: next_check_id: HELLWEG-2014
 #: XXX: vom Hellweg-Parkplatz kann man einige Meter Richtung Norden passieren
 #: XXX: "inwork" ist ein Euphemismus --- es sind keinerlei Anzeichen von Bauarbeiten zu sehen
-#: last_checked: 2013-11-19
+#: last_checked: 2014-02-05
 #: check_frequency: 100d
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): Zugang durch Bauzäune versperrt	2::inwork 8243,9766 8233,9863 8201,9869 8255,9938 8285,9956
 # 
@@ -2533,7 +2541,10 @@ Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht mögli
 #: XXX_prog ^^^
 #: next_check_id ^^^
 # 
-# REMOVED (eine direkte Umleitung entlang des Bauzauns existiert) --- #: XXX eine Umleitung existiert, ist aber von der Westseite schwierig zu finden und könnte nachts gesperrt sein --- #: last_checked: 2013-05-27 --- #: next_check: 2013-08-27 --- An der Charité: wegen Bauarbeiten gesperrt	2:inwork 8828,13434 8843,13408 8808,13377 8764,13372
+#: XXX eine Umleitung existiert, ist aber von der Westseite schwierig zu finden und könnte nachts gesperrt sein
+#: last_checked: 2014-02-04
+#: next_check: 2015-08-30
+An der Charité: wegen Bauarbeiten gesperrt	2:inwork 8764,13372 8665,13353
 # 
 #: next_check_id: FLORAGAERTEN-2014
 #: osm_watch: way id="201628184" version="3"
@@ -2662,15 +2673,13 @@ Uferweg am Tegeler Hafen: Weg wegen Bauarbeiten gesperrt	2:inwork 1761,20539 174
 #: check_frequency: 180d
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
 # 
-#: last_checked: 2014-01-07 vvv
+#: last_checked: 2014-02-06 vvv
 #: check_frequency: 60d vvv
 #: XXX wird man nach den Bauarbeiten direkt zur Eldenaer Str. fahren können (Kfz/Rad)?
 #: XXX Qualität im östlichen Abschnitt?
 #: osm_watch: way id="137941886" version="4"
-An den Eldenaer Höfen: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14509,12819 14594,12800
-#: XXX dieser Abschnitt wird wahrscheinlich offiziell eine Einbahnstraße, offen Richtung Westen sein
-#: XXX mittlerweile manchmal (oder immer?) passierbar
-Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14536,12916 14682,12874
+An den Eldenaer Höfen: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14509,12819 14560,12808
+# REMOVED (nicht mehr gesperrt) --- #: XXX dieser Abschnitt wird wahrscheinlich offiziell eine Einbahnstraße, offen Richtung Westen sein --- #: XXX mittlerweile manchmal (oder immer?) passierbar --- Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14536,12916 14588,12901 14682,12874
 #: check_frequency ^^^
 #: last_checked ^^^
 #
@@ -2678,7 +2687,7 @@ Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14536
 # REMOVED --- #: last_checked: 2011-04-08 --- Bebelplatz: Bauarbeiten, gesperrt	2:inwork 9679,12388 9702,12307 9708,12235
 # 
 #: next_check_id: STAATSOPER-2014 vvv
-#: last_checked: 2014-01-04 vvv
+#: last_checked: 2014-02-05 vvv
 #: next_check: 2014-06-01 vvv
 #: XXX siehe auch aufgehobene Einbahnstraßenregelung oben (Behrenstr./Bebelplatz)
 Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
@@ -2695,7 +2704,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 # REMOVED (Boulevard Berlin!) --- #: last_checked: 2011-12-25 --- #: next_check: 2012-01-01 --- #: XXX evenuell bleibt dieser Teil dauerhaft gesperrt, weil hier ein Einkaufszentrum entsteht? --- #: XXX auch die Ampel an der Kreuzung prüfen --- Treitschkestr.: Bauarbeiten am Kaufhaus, bis 2012	2:inwork 5219,6215 5062,6295 4997,6331 4971,6345
 # 
-#: last_checked: 2014-01-03
+#: last_checked: 2014-02-10
 #: next_check: 2014-06-30
 Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973
 # 
@@ -2705,7 +2714,7 @@ Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973
 # REMOVED (für Radfahrer ist das Abbiegen möglich) --- #: next_check: 2012-06-01 vvv --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1010/nachricht4088.html --- Mauerstr.: Einbiegen in die Behrenstr. nicht möglich	3:inwork 9076,12054 9064,12156 9054,12154 --- Mauerstr.: Einbiegen in die Behrenstr. nicht möglich	3:inwork 9076,12054 9064,12156 9164,12172 --- Behrenstr.: Einbiegen in die Mauerstr. nicht möglich	3:inwork 9054,12154 9064,12156 9076,12054 --- Behrenstr.: Einbiegen in die Mauerstr. nicht möglich	3:inwork 9164,12172 9064,12156 9076,12054 --- #: next_check: ^^^
 # 
 #: osm_watch: way id="158025179" version="1"
-#: last_checked: 2014-01-03
+#: last_checked: 2014-02-04
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 

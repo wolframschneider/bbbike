@@ -111,13 +111,14 @@ if ($plan_dir) {
 # searches per street section, which will be used for "importance"
 # sorting later.
 my $searches_weight_net;
+my $latest_weighted_bbd;
 if ($with_searches_weight) {
     require File::Glob;
     require Strassen::StrassenNetz;
     require Strassen::Core;
     my $monthly_glob = "20??-??_weighted*.bbd";
     # my $yearly_glob = "20??_weighted*.bbd";
-    my($latest_weighted_bbd) = reverse File::Glob::bsd_glob(bbbike_root . "/tmp/weighted/" . $monthly_glob);
+    ($latest_weighted_bbd) = reverse File::Glob::bsd_glob(bbbike_root . "/tmp/weighted/" . $monthly_glob);
     my $s = Strassen->new($latest_weighted_bbd);
     $searches_weight_net = StrassenNetz->new($s);
     $searches_weight_net->make_net;
@@ -387,21 +388,47 @@ if ($with_searches_weight) {
     } grep { (!defined $_->{date} || $_->{date} le $today) && $_->{searches} } @records;
 }
 
+my %monthly_stats;
+{
+    for (@records) {
+	if (defined $_->{date}) {
+	    if (my($ym) = $_->{date} =~ m{^(\d{4}-\d{2})}) {
+		$monthly_stats{$ym}++;
+	    } else {
+		warn "WARN (unexpected): Cannot parse $_->{date}";
+	    }
+	}
+    }
+}
+
 binmode STDOUT, ':utf8';
 print "fragezeichen/nextcheck\t\t\t-*- mode:org; coding:utf-8 -*-\n\n";
 
-if ($with_dist) {
-    require ReverseGeocoding;
-    require Karte::Polar;
-    require Karte::Standard;
-    my $rh = ReverseGeocoding->new;
-    if ($centerc) {
-	my($px,$py) = $Karte::Polar::obj->standard2map(split /,/, $centerc);
-	print "1st reference point for distances: ". $rh->find_closest("$px,$py", "road"), "\n";
-	if ($center2c) {
-	    my($p2x,$p2y) = $Karte::Polar::obj->standard2map(split /,/, $center2c);
-	    print "2nd reference point for distances: ". $rh->find_closest("$p2x,$p2y", "road"), "\n";
+{
+    my $has_header_explanation_lines;
+
+    if ($with_dist) {
+	require ReverseGeocoding;
+	require Karte::Polar;
+	require Karte::Standard;
+	my $rh = ReverseGeocoding->new;
+	if ($centerc) {
+	    my($px,$py) = $Karte::Polar::obj->standard2map(split /,/, $centerc);
+	    print "1st reference point for distances: ". $rh->find_closest("$px,$py", "road"), "\n";
+	    if ($center2c) {
+		my($p2x,$p2y) = $Karte::Polar::obj->standard2map(split /,/, $center2c);
+		print "2nd reference point for distances: ". $rh->find_closest("$p2x,$p2y", "road"), "\n";
+	    }
+	    $has_header_explanation_lines = 1;
 	}
+    }
+
+    if ($latest_weighted_bbd && $searches_weight_net) {
+	print "Route search numbers from $latest_weighted_bbd\n";
+	$has_header_explanation_lines = 1;
+    }
+
+    if ($has_header_explanation_lines) {
 	print "\n";
     }
 }
@@ -426,6 +453,18 @@ if (@expired_sort_by_dist_records) {
     print "* expired " . ($with_nextcheckless_records ? "and open " : "") . "records, sort by dist\n";
     for my $expired_record (@expired_sort_by_dist_records) {
 	print $expired_record->{body};
+    }
+}
+
+if (%monthly_stats) {
+    print <<'EOF';
+* monthly stats
+  :PROPERTIES:
+  :VISIBILITY: folded
+  :END:
+EOF
+    for my $date (reverse sort keys %monthly_stats) {
+	print "** $date $monthly_stats{$date}\n";
     }
 }
 
