@@ -3397,7 +3397,8 @@ userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
          'id' => 2498,
          'data' => '#: XXX Aufhebung der Sperrung aus Witterungsgründen möglich
 #: next_check_id: FRIEDRICHSBRUECKE-2014
-#: next_check: 2014-02-15
+#: last_checked: 2014-02-03
+#: next_check: 2014-02-28
 userdel	2::inwork 10086,12725 10166,12777
 ',
          'type' => 'gesperrt'
@@ -3460,10 +3461,13 @@ userdel	2::inwork 10086,12725 10166,12777
        {
          'source_id' => 'IM_020820',
          'until' => 1401458400,
-         'text' => 'Zimmermannstraßenbrücke über die Wuhle: Baustelle, Straße gesperrt, 02.12.2013 bis Ende Mai 2014',
+         'text' => 'Zimmermannstraßenbrücke über die Wuhle: Baustelle, Fahrbahn gesperrt, Fußgänger und Radfahrer können passieren, 02.12.2013 bis Ende Mai 2014',
          'from' => 1385766000,
          'id' => 2527,
-         'data' => '#: add_fragezeichen: Ist die Zimmermannstraßenbrücke trotz der Bauarbeiten trotzdem noch für Fußgänger und Radfahrer passierbar?
+         'data' => '#: next_check_id: ZIMMERMANNSTRBR-2014
+#: last_checked: 2014-02-08
+#: next_check: 2014-05-31
+# REMOVED (ja) --- #: add_fragezeichen: Ist die Zimmermannstraßenbrücke trotz der Bauarbeiten trotzdem noch für Fußgänger und Radfahrer passierbar?
 userdel	2::inwork 21385,9049 21365,9059 21351,9066
 ',
          'type' => 'gesperrt'
@@ -3512,6 +3516,46 @@ userdel	2::inwork 2219,11304 2116,11288
          'text' => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 9.5.2014 15 Uhr bis 11.5.2014 22 Uhr',
          'id' => 2533,
          'type' => 'gesperrt'
+       },
+       undef,
+       {
+         'source_id' => 'IM_021244',
+         'until' => 1393599600,
+         'text' => 'Rüdersdorfer Str./Marchleweskistr.: Baustelle, Kreuzung gesperrt, langsame Umfahrung über Gehweg möglich, bis 28.02.2014 16:00 Uhr',
+         'from' => 1392016320,
+         'id' => 2535,
+         'data' => 'userdel	q3::inwork 13173,11788 13295,11792 13366,11651
+userdel	q3::inwork 13275,11830 13295,11792 13467,11778
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Wadzeckstr. - Mollstr.: Parkplatzzufahrt gesperrt, Umfahrung auf dem Gehweg der Otto-Braun-Str. langsam möglich',
+         'from' => undef,
+         'id' => 2536,
+         'data' => '#: XXX bleibt das dauerhaft gesperrt?
+#: XXX_indoor: evtl. Umfahrung über Otto-Braun-Str. definieren
+#: last_checked: 2014-02-13
+#: check_frequency: 7d
+	q4::inwork; 11406,13321 11379,13279 11326,13196
+	q3::inwork; 11326,13196 11379,13279 11406,13321
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_021257',
+         'until' => 1392832980,
+         'text' => 'Greifswalder Str.: geplatzte Wasserleitung an der Kreuzung Heinrich-Roller-Str., Fahrbahn stadteinwärts gesperrt, langsame Umfahrung über Gehweg möglich, bis 19.02.2014 abends',
+         'from' => 1392120000,
+         'id' => 2537,
+         'data' => '#: by: http://www.morgenpost.de/berlin-aktuell/article124783293/Geplatzte-Wasserleitung-Greifswalder-Strasse-gesperrt.html
+#: XXX laut MoPo nur bis Freitag, prüfen
+#: last_checked: 2014-02-13
+#: next_check: 2014-02-18
+userdel	q3::inwork; 11946,13993 11820,13804
+',
+         'type' => 'handicap'
        }
      
 );

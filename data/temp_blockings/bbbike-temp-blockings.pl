@@ -12327,7 +12327,7 @@ EOF
        text  => 'L 031 Prenden - Zerpenschleuse Graben zw. Abzw. Marienwerder und Zerpenschleuse Brückenneubau Vollsperrung 18.08.2008-31.10.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 20048,48519 20965,48351
+userdel	2::inwork 20015,48530 20583,48418 20755,48330 20965,48351
 EOF
      },
      { from  => 1218319200, # 2008-08-10 00:00
@@ -15920,7 +15920,7 @@ EOF
        type  => 'handicap',
        # XXX URL existiert nicht mehr: source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20090813.1105.134956.html',
        data  => <<EOF,
-userdel	q4::inwork 17746,11748 17744,11703 17741,11607
+userdel	q4::inwork 17746,11748 17744,11703 17742,11636 17741,11607
 EOF
      },
      { from  => 1252228140, # 2009-09-06 11:09
@@ -16202,7 +16202,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014203',
        data  => <<EOF,
-userdel	q4::inwork; 18226,13506 18382,13492 18783,13469 18875,13467 19059,13474 19173,13478
+userdel	q4::inwork; 18226,13506 18382,13492 18783,13469 18875,13467 19059,13479 19171,13486
 EOF
      },
      { from  => undef, # 
@@ -18459,7 +18459,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016343',
        data  => <<EOF,
-userdel	q3::inwork 21027,7432 21032,7590 21037,7751
+userdel	q3::inwork 21027,7432 21029,7485 21032,7590 21037,7751
 EOF
      },
      { from  => 1288905888, # 2010-11-04 22:24
@@ -22048,7 +22048,8 @@ EOF
        data  => <<EOF,
 #: XXX Aufhebung der Sperrung aus Witterungsgründen möglich
 #: next_check_id: FRIEDRICHSBRUECKE-2014
-#: next_check: 2014-02-15
+#: last_checked: 2014-02-03
+#: next_check: 2014-02-28
 userdel	2::inwork 10086,12725 10166,12777
 EOF
      },
@@ -22326,11 +22327,14 @@ EOF
      },
      { from  => 1385766000, # 2013-11-30 00:00
        until => 1401458400, # 2014-05-30 16:00
-       text  => 'Zimmermannstraßenbrücke über die Wuhle: Baustelle, Straße gesperrt, 02.12.2013 bis Ende Mai 2014',
+       text  => 'Zimmermannstraßenbrücke über die Wuhle: Baustelle, Fahrbahn gesperrt, Fußgänger und Radfahrer können passieren, 02.12.2013 bis Ende Mai 2014',
        type  => 'gesperrt',
        source_id => 'IM_020820',
        data  => <<EOF,
-#: add_fragezeichen: Ist die Zimmermannstraßenbrücke trotz der Bauarbeiten trotzdem noch für Fußgänger und Radfahrer passierbar?
+#: next_check_id: ZIMMERMANNSTRBR-2014
+#: last_checked: 2014-02-08
+#: next_check: 2014-05-31
+# REMOVED (ja) --- #: add_fragezeichen: Ist die Zimmermannstraßenbrücke trotz der Bauarbeiten trotzdem noch für Fußgänger und Radfahrer passierbar?
 userdel	2::inwork 21385,9049 21365,9059 21351,9066
 EOF
      },
@@ -22408,6 +22412,42 @@ userdel	2::temp 21352,3599 21308,3644 21275,3607
 userdel	2::temp 21119,3572 21049,3657
 userdel	2::temp 21324,3691 21308,3644
 userdel	2::temp 20808,3374 20750,3440
+EOF
+     },
+     { from  => 1392016320, # 2014-02-10 08:12
+       until => 1393599600, # 2014-02-28 16:00
+       text  => 'Rüdersdorfer Str./Marchleweskistr.: Baustelle, Kreuzung gesperrt, langsame Umfahrung über Gehweg möglich, bis 28.02.2014 16:00 Uhr',
+       type  => 'handicap',
+       source_id => 'IM_021244',
+       data  => <<EOF,
+userdel	q3::inwork 13173,11788 13295,11792 13366,11651
+userdel	q3::inwork 13275,11830 13295,11792 13467,11778
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Wadzeckstr. - Mollstr.: Parkplatzzufahrt gesperrt, Umfahrung auf dem Gehweg der Otto-Braun-Str. langsam möglich',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX bleibt das dauerhaft gesperrt?
+#: XXX_indoor: evtl. Umfahrung über Otto-Braun-Str. definieren
+#: last_checked: 2014-02-13
+#: check_frequency: 7d
+	q4::inwork; 11406,13321 11379,13279 11326,13196
+	q3::inwork; 11326,13196 11379,13279 11406,13321
+EOF
+     },
+     { from  => 1392120000, # 2014-02-11 13:00
+       until => 1392832980, # 2014-02-19 19:03
+       text  => 'Greifswalder Str.: geplatzte Wasserleitung an der Kreuzung Heinrich-Roller-Str., Fahrbahn stadteinwärts gesperrt, langsame Umfahrung über Gehweg möglich, bis 19.02.2014 abends',
+       type  => 'handicap',
+       source_id => 'IM_021257',
+       data  => <<EOF,
+#: by: http://www.morgenpost.de/berlin-aktuell/article124783293/Geplatzte-Wasserleitung-Greifswalder-Strasse-gesperrt.html
+#: XXX laut MoPo nur bis Freitag, prüfen
+#: last_checked: 2014-02-13
+#: next_check: 2014-02-18
+userdel	q3::inwork; 11946,13993 11820,13804
 EOF
      },
     );

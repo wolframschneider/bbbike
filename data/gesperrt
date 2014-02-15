@@ -234,7 +234,7 @@ Spilstr.	1 3865,6758 3826,6656 3836,6550
 Wöhlertstr.	1s 8442,14456 8669,14550
 Pflugstr.	1s 8669,14550 8776,14364
 Schwartzkopffstr.	1s 8776,14364 8607,14253
-Strausberger Str.	1 12416,13045 12368,13031
+Strausberger Str.	1 12416,13045 12368,13031 12247,12848
 Große Präsidentenstr.	1 10105,13004 10220,13098
 Naumannstr.	1 7709,8777 7707,8915
 Gritznerstr.	1 4507,6320 4555,6403
@@ -752,7 +752,7 @@ Küsterstr.	1 -624,15494 -593,15300 -569,15167
 Straßburger Str.	1 11270,14131 11239,14123 11236,14153
 Rykestr./Knaackstr.	1 11331,14350 11374,14363 11380,14316
 Waldowallee	1 18916,9468 18867,9464
-Alfred-Kowalke-Str.	1 18027,11244 18059,11256 18179,11278 18229,11256
+Alfred-Kowalke-Str.	1 18027,11244 18059,11256 18179,11278 18200,11269 18229,11256
 Alfred-Kowalke-Str.	1 18229,11256 18202,11253 18061,11240 18027,11244
 Wittenbergplatz	1 6171,10657 6228,10646 6292,10627 6353,10583
 Wittenbergplatz	1 6353,10583 6268,10588 6216,10614 6171,10657
@@ -1313,10 +1313,10 @@ Staudenweg -> Pietschkerstr.: Straßenbahntrasse	3::igndisp 17493,5112 17601,5090
 Sterndamm -> Staudenweg: Straßenbahntrasse	3::igndisp 17542,4772 17601,5090 17493,5112
 Pietschkerstr. -> Staudenweg: Straßenbahntrasse	3::igndisp 17652,5082 17601,5090 17493,5112
 Pietschkerstr. -> Sterndamm: Straßenbahntrasse	3::igndisp 17652,5082 17601,5090 17542,4772
-unbequemes Passieren des Mittelstreifens	3nocross::ignrte 21960,11269 22242,11269 22326,11266
-Alt-Biesdorf -> Wuhlewanderweg: unbequemes Passieren des Mittelstreifens	3::igndisp 21960,11269 22242,11269 22244,11311
-Möwenweg -> Alt-Biesdorf: unbequemes Passieren des Mittelstreifens	3::igndisp 22238,11223 22242,11269 21960,11269
+unbequemes Passieren des Mittelstreifens	3nocross::ignrte 21954,11269 22242,11269 22326,11266
+Möwenweg -> Alt-Biesdorf: unbequemes Passieren des Mittelstreifens	3::igndisp 22238,11223 22242,11269 21954,11269
 Möwenweg -> Wuhlewanderweg: unbequemes Passieren des Mittelstreifens	3::igndisp 22238,11223 22242,11269 22244,11311
+Alt-Biesdorf -> Wuhlewanderweg: unbequemes Passieren des Mittelstreifens	3::igndisp 21954,11269 22242,11269 22244,11311
 Alt-Biesdorf -> Möwenweg: unbequemes Passieren des Mittelstreifens	3::igndisp 22326,11266 22242,11269 22238,11223
 Wuhlewanderweg -> Möwenweg: unbequemes Passieren des Mittelstreifens	3::igndisp 22244,11311 22242,11269 22238,11223
 Wuhlewanderweg -> Alt-Biesdorf: unbequemes Passieren des Mittelstreifens	3::igndisp 22244,11311 22242,11269 22326,11266
@@ -2084,7 +2084,7 @@ Mittelstreifen	3nocross::ignrte 1910,20548 1929,20501 1955,20435
 Uferweg am Tegeler Hafen -> Berliner Str.: Mittelstreifen	3::igndisp 1863,20478 1929,20501 1910,20548
 Berliner Str. -> Uferweg am Tegeler Hafen: Mittelstreifen	3::igndisp 1955,20435 1929,20501 1863,20478
 Mittelstreifen	3nocross::ignrte 10083,21848 10097,21809 10106,21784
-Am Nordgraben -> Dietzgenstr.: Mittelstreifen	3::igndisp 10275,21793 10097,21809 10106,21784
+Am Nordgraben -> Dietzgenstr.: Mittelstreifen	3::igndisp 10177,21802 10097,21809 10106,21784
 abgeschlossenes Tor	3 8235,20109 8237,20098 8258,19983
 abgeschlossenes Tor	3 8258,19983 8237,20098 8235,20109
 abgeschlossenes Tor	3 8288,20128 8291,20112 8315,19993
@@ -2555,7 +2555,7 @@ Drängelgitter	BNP:3:7:trailer=5 22061,15168
 Drängelgitter kann ohne Absteigen passiert werden	BNP:2:-199 1388,3197
 Barriere für Autofahrer	BNP:2:-2 17301,7645
 Drängelgitter	BNP:5:72 11010,-378
-Drängelgitter	BNP:5:-53 22280,11284
+Drängelgitter	BNP:5:-42 22268,11285
 Drängelgitter	BNP:5:66 -7228,15504
 Drängelgitter	BNP:5:-249 -7182,15524
 Drängelgitter und Schranke	BNP:5:-154:trailer=15 14285,12190
@@ -2647,6 +2647,7 @@ versetzte Schranke, manchmal offen	BNP:1:-124:trailer=3 23402,18067
 versetzte Schranke, manchmal offen	BNP:1:-195:trailer=3 24700,18981
 versetzte Schranke, manchmal offen	BNP:1:-133:trailer=3 24523,18542
 versetzte Schranke, manchmal offen	BNP:1:-171:trailer=3 24625,20855
+Wuhlewanderweg an der Zimmermannstraßenbrücke: wegen Bauarbeiten gesperrt	2::inwork 21385,9049 21471,9246
 Wilhelm-Hoff-Str.: Weg noch nicht fertig	2::inwork 19033,3397 19057,3422
 Große Hamburger Str.: Einbahnstraße wegen Bauarbeiten	1s 10077,13100 10018,13299
 Am Zirkus: Einbahnstraße	1s 9118,13070 9137,13032 9167,13046 9239,12923
@@ -2661,6 +2662,7 @@ Promenade am Teltowkanal: während der Bauarbeiten an der Emil-Schulz-Brücke gesp
 wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::ignrte 9984,12426 9934,12420 9852,12409
 Unter den Linden -> Niederlagstr.: wegen Bauarbeiten ist das Überqueren nicht möglich	3::igndisp 9984,12426 9934,12420 9943,12364
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9852,12409 9934,12420 9943,12364
+An der Charité: wegen Bauarbeiten gesperrt	2:inwork 8764,13372 8665,13353
 In den Floragärten: Baustelle	2:inwork 9895,17649 9997,17646
 An der Nuthestr.: wegen Bauarbeiten bis Mitte 2014 gesperrt	2:inwork -11399,-1339 -11235,-1465 -11137,-1680 -11089,-1730 -10973,-1764
 Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?) gesperrt	2:inwork -11407,-1086 -11460,-1098 -11538,-1138 -11615,-1094
@@ -2679,8 +2681,7 @@ Tegeler Hafen: Weg über Insel gesperrt	2 1756,20405 1736,20441 1742,20464 1762,2
 Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,20603
 Uferweg am Tegeler Hafen: Weg wegen Bauarbeiten gesperrt	2:inwork 1761,20539 1741,20571
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
-An den Eldenaer Höfen: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14509,12819 14594,12800
-Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14536,12916 14682,12874
+An den Eldenaer Höfen: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14509,12819 14560,12808
 Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
 Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9869,12297
 Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9808,12182 9801,12245 9795,12293 9780,12401
@@ -3226,6 +3227,36 @@ Treppe mit 19 Stufen (Birkenwerder)	BNP:45:55 1112,32717
 Poller (Birkenwerder)	BNP:0:-168 1306,33008
 Poller (Birkenwerder)	BNP:0:0 1207,33025
 An den Kanalwiesen (Wendisch Rietz)	1 51857,-20420 51900,-20326 51916,-20240
+Kreuzung Sewanstr./Am Tierpark	1::igndisp 18647,10172 18631,10167
+Am Tierpark, linker Gehweg	1::igndisp 18715,10003 18647,10172
+Treskowallee, linker Gehweg	1::igndisp 18748,9922 18715,10003
+Kreuzung Gregoroviusweg/Treskowallee	1::igndisp 18742,9903 18748,9922
+Alt-Friedrichsfelde, linker Gehweg	1::igndisp 18216,11656 18520,11685 18624,11712 18778,11742 19005,11767 19735,11721
+Alt-Friedrichsfelde, linker Gehweg	1::igndisp 18624,11712 18626,11742
+Landsberger Allee, linker Gehweg	1::igndisp 15430,14272 15256,14237
+Landsberger Allee, linker Gehweg	1::igndisp 13078,13330 12974,13289
+Landsberger Allee, linker Gehweg	1::igndisp 16665,14420 16590,14409
+Landsberger Allee, Fußgängerampel	1::igndisp 16590,14409 16590,14386
+Sonnenallee, linker Gehweg	1::igndisp 13457,8069 13474,8060
+Bundesallee, linker Gehweg zur Durlacher Str.	1::igndisp 5399,8344 5438,8402
+Bundesallee, linker Gehweg zur Straße Am Volkspark	1::igndisp 5419,8415 5399,8344
+Urbanstr.	1::igndisp 11861,9183 11888,9189
+Badstr., linker Gehweg	1::igndisp 8486,16425 8486,16412 8534,16355
+Tempelhofer Ufer, linker Gehweg	1::igndisp 8661,10377 8717,10322 8804,10303
+Leipziger Str., linker Gehweg	1::igndisp 9985,11711 9896,11703
+zur Ampel Jerusalemer Str.	1::igndisp 9982,11681 9987,11690 9985,11711
+Columbiadamm, linker Gehweg	1::igndisp 10913,8463 10799,8504 10796,8498
+Hohenstaufenstr., linker Gehweg bis zur Fußgängerampel	1::igndisp 6241,9772 6209,9774
+zur Münchener Str. auf dem linken Gehweg	1::igndisp 6209,9771 6241,9772
+Karl-Lieknecht-Str., linker Gehweg	1::igndisp 11070,13357 11082,13371
+Potsdamer Str., linker Gehweg	1::igndisp 7526,9791 7501,9573
+Landsberger Allee, Radweg auf der linken Seite	1::igndisp 15923,14334 15848,14325 15850,14308
+Hauptstr., linker Gehweg	1::igndisp 16206,10047 16195,10044 16150,10123 16018,10212 16004,10204
+Kurt-Schumacher-Damm, linker Gehweg	1::igndisp 2793,14374 2787,14284 2831,14219
+Königsberger Str., linker Gehweg	1::igndisp 4164,2717 4220,2664
+Königsberger Str., linker Gehweg	1::igndisp 4236,2678 4164,2717
+Bornholmer Str., linker Gehweg	1::igndisp 10197,16528 10118,16561
+Platz der Vereinten Nationen, linker Gehweg	1::igndisp 11984,13081 11962,13089 11952,13095
 Kreuzung Sewanstr./Am Tierpark	1::igndisp 18647,10172 18631,10167
 Am Tierpark, linker Gehweg	1::igndisp 18715,10003 18647,10172
 Treskowallee, linker Gehweg	1::igndisp 18748,9922 18715,10003

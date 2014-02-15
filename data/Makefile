@@ -31,6 +31,7 @@ HAFAS2HAFAS=		${PERL} ${MISCSRCDIR}/hafas2hafas -strict
 CONVERT2HAFAS=		${PERL} ${MISCSRCDIR}/convert2hafas -strict
 CONVERT_ORIG_FILE=	${MISCSRCDIR}/convert_orig_to_bbd
 CONVERT_ORIG=		${PERL} ${CONVERT_ORIG_FILE}
+CONVERT_RADWEGE=	${PERL} ${MISCSRCDIR}/convert_radwege
 CHECK_POINTS=		${PERL} ${MISCSRCDIR}/check_points
 CHECK_STR_PLZ=		${PERL} ${MISCSRCDIR}/check_str_plz
 CHECK_CONT=		${PERL} ${MISCSRCDIR}/check_cont
@@ -124,8 +125,7 @@ TODAY_DATE!=	date +'%Y%m%d'
 ######################################################################
 # META TARGETS
 
-.ORDER: targets data-images check .modified make_misc
-all:	targets data-images check .modified make_misc
+all:	targets data-images check .WAIT .modified .WAIT make_misc
 
 # Some targets have to be rebuild once a day. These should depend on
 # ".check_daily"
@@ -600,7 +600,7 @@ obst:	obst-orig
 
 radwege:	radwege-orig
 	-@$(WRITEABLE) $@
-	${PERL} ${MISCSRCDIR}/convert_radwege < radwege-orig | \
+	${CONVERT_RADWEGE} < radwege-orig | \
 	    $(COMBINE_STREETS) - > $@~
 	mv $@~ $@
 	-@$(READONLY) $@
@@ -608,9 +608,9 @@ radwege:	radwege-orig
 radwege_exact:	radwege-orig
 	-@$(WRITEABLE) $@
 ## XXX combine streets is buggy, see strassen-combine.t test!
-#	${PERL} ${MISCSRCDIR}/convert_radwege -exact < radwege-orig | \
+#	${CONVERT_RADWEGE} -exact < radwege-orig | \
 #	    $(COMBINE_STREETS) - > $@~
-	${PERL} ${MISCSRCDIR}/convert_radwege -exact < radwege-orig > $@~
+	${CONVERT_RADWEGE} -exact < radwege-orig > $@~
 	mv $@~ $@
 	-@$(READONLY) $@
 
@@ -1845,6 +1845,18 @@ ${PERSISTENTTMPDIR}/check_nearest.bbd:	strassen landstrassen landstrassen2 frage
 		-strfile faehren \
 		> $@~
 	mv $@~ $@
+
+check-nearest-ignore-remove-unconsumed:
+	${PERL} ${MISCSRCDIR}/check_nearest -ignore check_nearest_ignore \
+		-asbbd \
+		-strfile strassen \
+		-strfile landstrassen \
+		-strfile landstrassen2 \
+		-strfile fragezeichen \
+		-strfile brunnels \
+		-strfile faehren \
+		-remove-unconsumed-ignore \
+		> /dev/null
 
 do-check-nearest:	.check-do-check-nearest
 
