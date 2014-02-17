@@ -113,7 +113,34 @@ userdel	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 1199
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.myfest36.de/
+userdel	2::temp 11763,10635 11722,10533 11949,10414
+userdel	2::temp 11556,10869 11770,10774 11760,10732 11781,10696 11763,10635 11505,10744 11556,10869 11589,10947 11640,11067
+userdel	2::temp 11958,11045 11897,10887 11841,10747 11824,10708 11781,10696
+userdel	2::temp 11805,10899 11803,10857
+userdel	2::temp 11275,10723 11301,10783 11329,10785 11365,10791 11403,10782 11505,10744 11463,10642 11722,10533
+userdel	2::temp 11841,10747 11770,10774 11799,10848
+userdel	2::temp 11463,10642 11275,10723 11234,10739 11159,10769
+userdel auto	3 11258,10682 11275,10723 11253,10778
+userdel auto	3 11253,10778 11275,10723 11258,10682
+',
+         'periodic' => 1,
+         'until' => 1398981599,
+         'from' => 1398852000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'MyFest 2014: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2014',
+         'type' => 'gesperrt',
+         'id' => 45
+       },
        undef,
        undef,
        undef,
@@ -3164,7 +3191,7 @@ userdel	q2::inwork 5258,11285 5236,10994
          'from' => undef,
          'id' => 2425,
          'data' => '#: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2014-01-09 (Asphaltierungsarbeiten)
+#: last_checked: 2014-02-14 (Asphaltierungsarbeiten)
 #: check_frequency: 30d
 # REMOVED --- userdel	q4::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904
 userdel	q4::inwork; 13085,7904 12870,8087
@@ -3551,7 +3578,7 @@ userdel	q3::inwork 13275,11830 13295,11792 13467,11778
          'id' => 2537,
          'data' => '#: by: http://www.morgenpost.de/berlin-aktuell/article124783293/Geplatzte-Wasserleitung-Greifswalder-Strasse-gesperrt.html
 #: XXX laut MoPo nur bis Freitag, prüfen
-#: last_checked: 2014-02-13
+#: last_checked: 2014-02-14
 #: next_check: 2014-02-18
 userdel	q3::inwork; 11946,13993 11820,13804
 ',
