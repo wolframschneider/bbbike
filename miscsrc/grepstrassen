@@ -23,7 +23,9 @@ use Storable qw(dclone);
 use Strassen::Core;
 use Strassen::Stat;
 
-my($v, $i, $cat, $catrx, $name, $namerx, $section, $sectionrx, @directive_def, @directive, @directiverx);
+my $iso_date_qr = qr{(\d{4})\D*(\d{2})\D*(\d{2})};
+
+my($v, $i, $cat, $catrx, $name, $namerx, $section, $sectionrx, @directive_def, @directive, @directiverx, @directivecode, $valid_def);
 my($minarea, $minlength);
 my $preserveglobaldirectives;
 my $ignoreglobaldirectives;
@@ -44,6 +46,7 @@ GetOptions("v" => \$v,
 	   "section=s" => \$section,
 	   "sectionrx=s" => \$sectionrx,
 	   "directive=s" => \@directive_def,
+	   "valid=s" => \$valid_def,
 	   "special=s" => sub {
 	       my $type = $_[1];
 	       $special_init{$type} = 1;
@@ -64,6 +67,7 @@ usage: $0 [-v] [-i] [-cat category | -catrx regexp]
        [-name name | -namerx regexp]
        [-section section | -sectionrx regexp]
        [-directive key=val|key~val [-directive ...]]
+       [-valid today|YYYYMMDD]
        [-special name] [-minarea ...km²] [-minlength ...km]
        [-preserveglobaldirectives] [-ignoreglobaldirectives]
        [-ignorelocaldirectives]
@@ -109,6 +113,50 @@ for my $directive_def (@directive_def) {
     } else {
 	die "Cannot parse <$directive_def>, should be key=val or key~val";
     }
+}
+
+if ($valid_def) {
+    my $date;
+    if ($valid_def eq 'today') {
+	require POSIX;
+	$date = POSIX::strftime("%Y%m%d", localtime);
+    } else {
+	if (my($y,$m,$d) = $valid_def =~ m{^$iso_date_qr$}) {
+	    $date = sprintf "%04d%02d%02d", $y,$m,$d;
+	} else {
+	    die "Cannot parse date '$valid_def', should be in the form 'YYYY-MM-DD' or 'YYYYMMDD'";
+	}
+    }
+    my $code = sub {
+	my($all_dirs) = @_;
+	if (!$all_dirs->{'valid'}) { # no 'valid' directive -> assume it's valid
+	    return 1;
+	}
+	my $dirs = $all_dirs->{'valid'};
+	if (@$dirs != 1) {
+	    die "No support for multiple 'valid' directives (@$dirs)";
+	}
+	my $dir = $dirs->[0];
+	delete $all_dirs->{'valid'}; # note, side effect: 'valid' directive is removed for output
+	my $is_inverted = ($dir =~ s{^!}{});
+	if (my($y1,$m1,$d1, $y2,$m2,$d2) = $dir =~ m{^(?:$iso_date_qr)?-(?:$iso_date_qr)?$}) {
+	    my $from = defined $y1 ? sprintf("%04d%02d%02d", $y1, $m1, $d1): undef;
+	    my $to   = defined $y2 ? sprintf("%04d%02d%02d", $y2, $m2, $d2): undef;
+	    if (!$from && !$to) {
+		die "Please specify either from or to date, or both";
+	    }
+	    if (defined $from) {
+		return $is_inverted ? 1 : 0 if $date lt $from;
+	    }
+	    if (defined $to) {
+		return $is_inverted ? 1 : 0 if $date gt $to;
+	    }
+	    return $is_inverted ? 0 : 1;
+	} else {
+	    die "Invalid 'valid' directive '$dir', should be either YYYYMMDD-YYYYMMDD or -YYYYMMDD or YYYYMMDD-";
+	}
+    };
+    push @directivecode, $code;
 }
 
 my @datafiles = @ARGV;
@@ -189,6 +237,11 @@ LOOP_STREETS: while(1) {
 	for my $directiverx (@directiverx) {
 	    my($key, $val) = @$directiverx;
 	    if (defined $dir->{$key} && grep { /$val/ } @{ $dir->{$key} }) { next LOOP_STREETS if $v } else { next LOOP_STREETS unless $v }
+	}
+    }
+    if (@directivecode) {
+	for my $directivecode (@directivecode) {
+	    if ($directivecode->($dir)) { next LOOP_STREETS if $v } else { next LOOP_STREETS unless $v }
 	}
     }
     # Match length/area

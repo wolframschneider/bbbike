@@ -3555,34 +3555,6 @@ userdel	2::inwork 2219,11304 2116,11288
 userdel	q3::inwork 13275,11830 13295,11792 13467,11778
 ',
          'type' => 'handicap'
-       },
-       {
-         'until' => undef,
-         'text' => 'Wadzeckstr. - Mollstr.: Parkplatzzufahrt gesperrt, Umfahrung auf dem Gehweg der Otto-Braun-Str. langsam möglich',
-         'from' => undef,
-         'id' => 2536,
-         'data' => '#: XXX bleibt das dauerhaft gesperrt?
-#: XXX_indoor: evtl. Umfahrung über Otto-Braun-Str. definieren
-#: last_checked: 2014-02-13
-#: check_frequency: 7d
-	q4::inwork; 11406,13321 11379,13279 11326,13196
-	q3::inwork; 11326,13196 11379,13279 11406,13321
-',
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'IM_021257',
-         'until' => 1392832980,
-         'text' => 'Greifswalder Str.: geplatzte Wasserleitung an der Kreuzung Heinrich-Roller-Str., Fahrbahn stadteinwärts gesperrt, langsame Umfahrung über Gehweg möglich, bis 19.02.2014 abends',
-         'from' => 1392120000,
-         'id' => 2537,
-         'data' => '#: by: http://www.morgenpost.de/berlin-aktuell/article124783293/Geplatzte-Wasserleitung-Greifswalder-Strasse-gesperrt.html
-#: XXX laut MoPo nur bis Freitag, prüfen
-#: last_checked: 2014-02-14
-#: next_check: 2014-02-18
-userdel	q3::inwork; 11946,13993 11820,13804
-',
-         'type' => 'handicap'
        }
      
 );

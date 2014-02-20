@@ -57,6 +57,9 @@ for my $line (`@cmd`) {
     } elsif ($line =~ m{^diff.*? a/(\S+) b/\S+}) { # new git diff style
 	$current_file = $1;
 	$new_file_started = 1;
+    } elsif ($line =~ m{^diff.* (\S+) (\S+)$}) { # traditional diff
+	$current_file = $1;
+	$new_file_started = 1;
     }
 
     if ($new_file_started) {
@@ -111,6 +114,13 @@ Create a gif animation out of it:
     for i in /tmp/diff-2*bbd; do ./miscsrc/bbbikedraw.pl -bg '#000000' -bbox -10984,-1574,35441,32759 -datadirs $(echo $i | sed 's/.bbd//') -o $(echo $i | sed 's/.bbd/.png/'); done
     convert /tmp/diff-2*.png /tmp/diff.gif
     display /tmp/diff.gif
+
+Create diff of converted Berlin OSM data and send to bbbike (if
+started with -server mode):
+
+    cd .../bbbike
+    diff -ur "--exclude=_*" .../bbbike-old-osm-data .../bbbike-new-osm-data | (echo "#: encoding: utf-8"; echo "#: "; ./miscsrc/cvsdiffbbd --diff-file=-) >| /tmp/osm.diff.bbd
+    ./bbbikeclient /tmp/osm.diff.bbd
 
 Old outdated example with CVS repository:
 
