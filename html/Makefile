@@ -1,6 +1,7 @@
 TPAGE=	tpage
 # XXX get from elsewhere
 CGIDIR?=../cgi
+JSMIN:=	$(shell which jsmin cat | head -1)
 
 all: help
 
@@ -133,7 +134,7 @@ JAVASCRIPT_FILES= ${BBBIKE_WORLD_JAVASCRIPT_FILES}
 bbbike-js: bbbike-js.js
 bbbike-js.js: maps3.js bbbike.js jquery/jquery-1.4.2.min.js devbridge-jquery-autocomplete-1.1.2/jquery.autocomplete.js
 	for i in $^ ; do \
-	    jsmin < $$i; \
+	    ${JSMIN} < $$i; \
 	done > $@.tmp
 	mv -f $@.tmp $@
 
@@ -144,7 +145,7 @@ jsbeautifier js:
 
 # found json2.js at https://raw.github.com/douglascrockford/JSON-js/master/json2.js
 json2.min.js: json2.js
-	jsmin < $> > $@
+	${JSMIN) < $> > $@
 
 clean:
 	rm -f *.bak
