@@ -5,7 +5,7 @@
 # $Id: bbbike.cgi,v 9.30 2009/04/04 11:13:58 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998-2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2014 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -6325,7 +6325,7 @@ for my $etappe (@out_route) {
 
 	if ($printmode) {
 	    my $url = $q->url(-base => 1);
-	    print "<hr><br>", $fontstr, qq{(&copy;) 1998-2013 <a href="$url">$url</a>\n};
+	    print "<hr><br>", $fontstr, qq{(&copy;) 1998-2014 <a href="$url">$url</a>\n};
 
 	    goto END_OF_HTML;
 	}
@@ -8472,7 +8472,7 @@ sub header {
 #	 -BGCOLOR => '#ffffff',
 #	 ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 #	 -meta=>{'keywords'=>'berlin fahrrad route bike karte suche cycling route routing routenplaner routenplanung fahrradroutenplaner radroutenplaner entfernungsrechner',
-#		 'copyright'=>'(c) 1998-2013 Slaven Rezic',
+#		 'copyright'=>'(c) 1998-2014 Slaven Rezic',
 #		 ($is_m ? ('viewport'=>'width=320; initial-scale=1.0, max-scale=1.0, user-scalable=no') : ()),
 #		},
 #	 -author => $BBBike::EMAIL,
@@ -8494,7 +8494,7 @@ sub header {
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad Routen Planer kostenlos, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
-		     'copyright'=>'(c) 1998-2013 Slaven Rezic + Wolfram Schneider',
+		     'copyright'=>'(c) 1998-2014 Slaven Rezic + Wolfram Schneider',
 		     @viewport
 		    },
 	     -author => $BBBike::EMAIL,
@@ -8691,7 +8691,7 @@ $permalink_text
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
-(&copy;) 1998-2013 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
+(&copy;) 1998-2014 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data (&copy;) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap.org</a> contributors<br>
 <a href="/help.html#iphone">iphone</a> -
 <a href="/help.html#android">android</a> -
@@ -10078,7 +10078,7 @@ Slaven Rezic <slaven@rezic.de>
 
 =head1 COPYRIGHT
 
-Copyright (C) 1998-2013 Slaven Rezic. All rights reserved.
+Copyright (C) 1998-2014 Slaven Rezic. All rights reserved.
 This is free software; you can redistribute it and/or modify it under the
 terms of the GNU General Public License, see the file COPYING.
 
