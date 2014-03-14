@@ -17,7 +17,7 @@ package FahrinfoQuery;
 
 use strict;
 use vars qw($VERSION @ISA);
-$VERSION = '0.03';
+$VERSION = '0.05';
 
 use BBBikePlugin;
 push @ISA, 'BBBikePlugin';
@@ -42,6 +42,9 @@ sub _prereq_check_vbb_2012_stops ();
 sub _download_vbb_2012_stops ();
 sub _convert_vbb_2012_stops ();
 
+# Usable for 2013 and 2014/1 data
+# NOTE: "2013" applies in this file to the data format,
+# not the actual year.
 sub _provide_vbb_2013_stops ();
 sub _prereq_check_vbb_2013_stops ();
 sub _download_vbb_2013_stops ();
@@ -52,8 +55,9 @@ sub _convert_vbb_2013_stops ();
 sub M ($) { $_[0] } # XXX
 sub Mfmt { sprintf M(shift), @_ } # XXX
 
-use vars qw($LIMIT_LB);
-$LIMIT_LB = 12;
+use vars qw($LIMIT_LB %MIN_STATIONS);
+$LIMIT_LB = 15;
+%MIN_STATIONS = ('u' => 2, 's' => 2); # sum here should be smaller than $LIMIT_LB
 
 use vars qw($PEDES_MS);
 $PEDES_MS = kmh2ms(5);
@@ -71,11 +75,17 @@ my $openvbb_2012_data_url = 'http://datenfragen.de/openvbb/GTFS_VBB_Okt2012/stop
 my $openvbb_2012_local_file = "$bbbike_root/tmp/GTFS_VBB_Okt2012_stops.txt";
 my $openvbb_2012_bbd_file = "$bbbike_root/tmp/vbb_2012.bbd";
 
-my $openvbb_2013_download_size = '22MB';
-my $openvbb_2013_data_url = 'http://www.vbb.de/de/datei/GTFSOkt2013.zip';
+#my $openvbb_2013_download_size = '22MB';
+#my $openvbb_2013_data_url = 'http://www.vbb.de/de/datei/GTFSOkt2013.zip';
+#my $openvbb_2013_archive_file = "$bbbike_root/tmp/" . basename($openvbb_2013_data_url);
+#my $openvbb_2013_local_file = "$bbbike_root/tmp/" . basename($openvbb_2013_data_url, '.zip') . '_stops.txt';
+#my $openvbb_2013_bbd_file = "$bbbike_root/tmp/vbb_2013.bbd";
+
+my $openvbb_2013_download_size = '32MB';
+my $openvbb_2013_data_url = 'http://www.vbb.de/de/datei/GTF_VBB_Dez2013-Aug2014.zip';
 my $openvbb_2013_archive_file = "$bbbike_root/tmp/" . basename($openvbb_2013_data_url);
 my $openvbb_2013_local_file = "$bbbike_root/tmp/" . basename($openvbb_2013_data_url, '.zip') . '_stops.txt';
-my $openvbb_2013_bbd_file = "$bbbike_root/tmp/vbb_2013.bbd";
+my $openvbb_2013_bbd_file = "$bbbike_root/tmp/vbb_2014_1.bbd";
 
 my $search_net;
 
@@ -157,14 +167,14 @@ sub add_button {
 	       -state => 'disabled',
 	       -font => $main::font{'bold'},
 	      ],
-	      [Radiobutton => "VBB-Daten von 2013 verwenden",
+	      [Radiobutton => "VBB-Daten von 2014 verwenden",
 	       -variable => \$data_source,
 	       -value => "vbb_2013",
 	      ],
-	      [Radiobutton => "VBB-Daten von 2012 verwenden",
-	       -variable => \$data_source,
-	       -value => "vbb_2012",
-	      ],
+	      #[Radiobutton => "VBB-Daten von 2012 verwenden",
+	      # -variable => \$data_source,
+	      # -value => "vbb_2012",
+	      #],
 	      [Radiobutton => "OSM-Daten verwenden",
 	       -variable => \$data_source,
 	       -value => "osm",
@@ -374,6 +384,16 @@ sub get_nearest {
 		    my $as_the_bird_flies_dist = Strassen::Util::strecke([$x,$y], [$px,$py]);
 		    my $npxy = $search_net_strassen ? $search_net_strassen->nearest_point("$px,$py") : undef;
 		    my $search_res = $nxy && $npxy && $search_net ? $search_net->search($nxy, $npxy, AsObj => 1) : undef;
+		    if ($search_res) {
+			# add the difference from the nearest net
+			# point and the actual station point
+			if ($npxy ne "$px,$py") {
+			    $search_res->add($px,$py);
+			}
+			if ($nxy ne "$x,$y") {
+			    $search_res->prepend($x,$y);
+			}
+		    }
 		    my $line = {StreetObj => $r,
 				Dist      => $search_res ? $search_res->len : $as_the_bird_flies_dist,
 				Path      => $search_res ? $search_res->path : undef,
@@ -388,7 +408,68 @@ sub get_nearest {
 	my %seen;
 	@res = grep { !$seen{$_->{StreetObj}->[Strassen::NAME()]}++ } @res;
     }
-    @res = @res[0..$LIMIT_LB-1] if @res >= $LIMIT_LB;
+    if (@res >= $LIMIT_LB) {
+	# We need to limit the count. But also make sure that the
+	# %MIN_STATIONS constraint is satisfied.
+
+	# Return "u", "s", or undef
+	my $get_station_type = sub {
+	    my($line) = @_;
+	    my $name = $line->{StreetObj}->[Strassen::NAME];
+	    if ($name =~ m{^([US])(?:\s|-)}i) {
+		lc $1;
+	    } else {
+		undef;
+	    }
+	};
+
+	my %count_stations;
+	for my $line_i (0 .. $LIMIT_LB-1) {
+	    my $line = $res[$line_i];
+	    my $station_type = $get_station_type->($line);
+	    if (defined $station_type) {
+		$count_stations{$station_type}++;
+	    }
+	}
+	my %need_stations; # $station_type -> $need_count
+	for my $station_type (keys %MIN_STATIONS) {
+	    my $count_stations = $count_stations{$station_type} || 0;
+	    my $need_stations;
+	    if ($count_stations < $MIN_STATIONS{$station_type}) {
+		$need_stations{$station_type} = $MIN_STATIONS{$station_type} - $count_stations;
+	    }
+	}
+
+	my @add_stations;
+	for my $line_i ($LIMIT_LB .. $#res) {
+	    my $line = $res[$line_i];
+	    my $station_type = $get_station_type->($line);
+	    if (defined $station_type && $need_stations{$station_type} > 0) {
+		push @add_stations, $line;
+		$need_stations{$station_type}--;
+	    }
+	}
+
+	# limit
+	splice @res, $LIMIT_LB;
+
+	if (@add_stations) {
+	    # remove non-stations from the end
+	    my $remove_count = scalar @add_stations;
+	    for(my $line_i=$#res; $line_i>=0; $line_i--) {
+		my $line = $res[$line_i];
+		if (!defined $get_station_type->($line)) {
+		    splice @res, $line_i, 1;
+		    $remove_count--;
+		    last if ($remove_count <= 0);
+		}
+	    }
+	}
+
+	# Replace tail
+	push @res, @add_stations;
+    }
+
     @res;
 }
 

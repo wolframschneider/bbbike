@@ -162,11 +162,13 @@ sub _as_string {
 sub rueckweg {
     my $self = shift;
     @{$self->{Path}}       = reverse @{$self->{Path}};
-    @{$self->{PathCanvas}} = reverse @{$self->{PathCanvas}};
-    @{$self->{Via}}        = reverse @{$self->{Via}};
-    my $swap      = $self->{From};
-    $self->{From} = $self->{To};
-    $self->{To}   = $swap;
+    if ($self->{PathCanvas}) {
+	@{$self->{PathCanvas}} = reverse @{$self->{PathCanvas}};
+    }
+    if ($self->{Via}) {
+	@{$self->{Via}}        = reverse @{$self->{Via}};
+    }
+    ($self->{From}, $self->{To}) = ($self->{To}, $self->{From});
 }
 
 sub add {
@@ -186,6 +188,25 @@ sub add {
 	# XXX penalty fehlt
     }
     $self->{To} = _coord_as_string($xy);
+}
+
+sub prepend {
+    my($self, $x, $y, $cx, $cy, $as_via) = @_;
+    my $xy = [$x, $y];
+    unshift @{$self->{Path}}, $xy;
+    unshift @{$self->{PathCanvas}}, [$cx, $cy]
+	if defined $cx;
+    if ($as_via) {
+	unshift @{$self->{Via}}, $xy;
+    }
+    $self->{Ampeln} += 0; # XXX
+    if (!defined $self->{To}) {
+	$self->{To} = _coord_as_string($xy);
+    } else {
+	$self->{Len} += _strecke($xy, $self->{Path}[1]);
+	# XXX penalty fehlt
+    }
+    $self->{From} = _coord_as_string($xy);
 }
 
 sub dellast {

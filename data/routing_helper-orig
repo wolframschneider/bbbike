@@ -9,7 +9,7 @@ Kreuzung Gregoroviusweg/Treskowallee	q1; 18748,9922 18742,9903
 Alt-Friedrichsfelde, linker Gehweg	q2; 19735,11721 19005,11767 18778,11742 18624,11712 18520,11685 18216,11656
 Alt-Friedrichsfelde, linker Gehweg	q2; 18626,11742 18624,11712
 Landsberger Allee, linker Gehweg	q2; 15256,14237 15430,14272
-Landsberger Allee, linker Gehweg	q3; 12974,13289 13078,13330
+Landsberger Allee, linker Gehweg	q3; 12974,13289 13073,13329
 Landsberger Allee, linker Gehweg	q3; 16590,14409 16665,14420
 Landsberger Allee, Fußgängerampel	q3; 16590,14386 16590,14409
 Sonnenallee, linker Gehweg	q4; 13474,8060 13457,8069
@@ -48,3 +48,6 @@ Königsberger Str., linker Gehweg	q2; 4164,2717 4236,2678
 #: next_check_id ^^^
 Bornholmer Str., linker Gehweg	q3; 10118,16561 10197,16528
 Platz der Vereinten Nationen, linker Gehweg	q3; 11952,13095 11962,13089 11984,13081
+## XXX_indoor: ja/nein? Zurzeit nur in comments_path markiert
+#Otto-Braun-Str., linker Gehweg	q3; 11418,13303
+#Otto-Braun-Str./Mollstr., Kreuzung	q3; 11418,13303 11446,13294

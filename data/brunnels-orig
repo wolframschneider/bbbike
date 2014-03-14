@@ -168,7 +168,7 @@ Falkenberger Chaussee, S-Bahnbrücke	Br 17400,17790 17482,17844 17601,17922 17675
 S-Bahnunterführung Wartenberg	Tu 16998,18695 17024,18674 17008,18701 17068,18736 17086,18719 17077,18744
 Gehrenseestr., S-Bahnbrücke	Br 18316,16636 18490,16761 18587,16834
 Gleimtunnel	Tu 9917,15613 9992,15625 10130,15647
-Sandkrugbrücke	Br 8268,13506 8337,13541
+Sandkrugbrücke	Br 8293,13519 8337,13541
 Lutherbrücke	Br 7039,12314 7053,12364 7064,12419
 Gerickesteg	Br 6702,12633 6748,12669
 Lessingbrücke	Br 6150,12875 6157,12933 6164,12980
@@ -294,7 +294,7 @@ Dovebrücke	Br 4648,12559 4620,12527 4598,12501
 Röntgenbrücke	Br 4303,12692 4290,12569
 Caprivibrücke	Br 3741,12607 3738,12639 3734,12715
 Prenzlauer Promenade	Br 11953,19363 12003,18896
-Prenzlauer Promenade	Br 11940,19380 11980,18900
+Prenzlauer Promenade	Br 11940,19380 11958,19158 11980,18900
 Prenzlauer Promenade	Br 11965,19349 12024,18913
 Darßer Brücke	Br 15105,18040 15034,18051
 Märkische Allee, Brücke über der Wuhletalstr.	Br 20717,17516 20843,17745
@@ -315,7 +315,7 @@ Kastanienallee, U-Bahnbrücke	Br 23769,14609 23756,14696
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1105/nachricht4332.html (Name)
 Stendaler Brücken	Br 23993,14797
 Louis-Lewin-Str., U-Bahnbrücke	Br 25006,15132 25025,15062
-Allee der Kosmonauten	Br 19628,13517 19415,13503 19173,13478
+Allee der Kosmonauten	Br 19628,13517 19415,13503 19171,13486
 Märkische Allee	Br 19918,11891 19896,11688
 Gensinger Str.	Br 19135,11713 19138,11815
 Lichtenberger Brücke	Br 17037,11820 16962,11833 16803,11859 16737,11866 16512,11894
@@ -481,8 +481,8 @@ Brücke über die Wuhle	Br 21356,8267 21368,8285
 Zimmermannstraßenbrücke	Br 21351,9066 21365,9059 21385,9049
 Brücke über die Wuhle	Br 21650,9884 21686,9876
 Brücke über die Wuhle	Br 21608,10403 21654,10390
-Brücke über die Wuhle	Br 21914,12019 21936,12022
-Brücke über die Wuhle	Br 21935,12160 21970,12153
+Brücke über die Wuhle	Br 21907,12018 21936,12022
+Brücke über die Wuhle	Br 21935,12153 21970,12153
 Brücke über die Wuhle	Br 22441,15118 22326,15116
 Brücke über die Wuhle	Br 21571,7639 21591,7642
 Brücke über die Wuhle	Br 22084,5877 22083,5899
@@ -584,6 +584,7 @@ Autobahnbrücke	Br 24709,21125 24730,21184
 Autobahnbrücke	Br 23973,21919 24010,21960
 Autobahnbrücke	Br 29131,16204 29178,16259
 Autobahnbrücke	Br 38048,68993 38096,68983
+Autobahnbrücke	Br 19293,23520 19246,23441
 Brücke über den Stadtkanal	Br -13001,-1329 -13001,-1349
 	Br -9617,13368 -9549,13365
 Elbebrücke	Br -108535,-32884 -108293,-33023

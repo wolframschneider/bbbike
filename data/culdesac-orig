@@ -408,6 +408,7 @@ südliches Sackgassenende	culdesac 11668,-171
 	culdesac 23492,5334
 	culdesac 23469,5340
 	culdesac 23433,5197
+	culdesac 23327,5817
 nördliches Sackgassenende	culdesac 23600,5932
 westliches Sackgassenende	culdesac_pseudo 25002,5296
 	culdesac_pseudo 25009,5593
@@ -918,6 +919,17 @@ Sackgassenende, Zufahrt zur Kleingartenkolonie	culdesac_pseudo 9971,6114
 	culdesac 14850,7855
 	culdesac 9624,20442
 	culdesac 19667,3578
+	culdesac 12222,15306
+	culdesac 15365,22990
+Klinikumsgebäude	culdesac 17428,25235
+	culdesac 16735,25120
+	culdesac 29022,16486
+	culdesac 25234,14266
+	culdesac 22909,18581
+	culdesac 23340,19088
+	culdesac 23475,19131
+	culdesac 23508,19025
+	culdesac 22914,17893
 # 
 ######################################################################
 # culdesac entries which should remain invisible
@@ -1009,7 +1021,7 @@ Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2387,10131
 	culdesac_pseudo 9003,14608
 	culdesac_pseudo 11079,13492
 	culdesac_pseudo 11104,13456
-	culdesac_pseudo 11379,13279
+# REMOVED ---	culdesac_pseudo 11379,13279
 	culdesac_pseudo 11191,13080
 	culdesac_pseudo 9747,12584
 	culdesac_pseudo 8579,10030
@@ -1066,7 +1078,7 @@ Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2387,10131
 	culdesac_pseudo 10661,2790
 	culdesac_pseudo 11652,1959
 	culdesac_pseudo 14676,2375
-	culdesac_pseudo 15384,15884
+	culdesac_pseudo 15381,15873
 	culdesac_pseudo 15395,15852
 	culdesac_pseudo 15453,15848
 	culdesac_pseudo 15313,15848
@@ -1154,7 +1166,7 @@ Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2387,10131
 	culdesac_pseudo 13733,18161
 	culdesac_pseudo 13751,18180
 	culdesac_pseudo 25053,12246
-	culdesac_pseudo 21190,12515
+	culdesac_pseudo 21191,12516
 	culdesac_pseudo 21332,8821
 	culdesac_pseudo 21332,8840
 	culdesac_pseudo 8574,5580

@@ -2,7 +2,7 @@
 
 package Bundle::BBBike;
 
-$VERSION = sprintf("%d.%02d", q$Revision: 1.3 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '1.04'; # XXX need another solution here, not a hardcoded version
 
 1;
 
@@ -214,6 +214,18 @@ Data::Compare	- Für das Neu-Erzeugen der .bbd-Dateien in data
 HTML::FormatText	- Für VMZTool
 
 Math::Round	- Für downloadosm -round
+
+DateTime::Event::Easter	- Für Feiertagsberechnungen in temp_blockings_tasks
+
+Plack	- Basis für die PSGI-Anwendung
+
+CGI::Emulate::PSGI	- Für die CGI-Emulation mit PSGI
+
+CGI::Compile	- Für die CGI-Emulation mit PSGI
+
+Plack::Middleware::Rewrite	- Für das Plack/PSGI-Routing benötigt
+
+Starman	- Ein performanterer PSGI-Server als der Standard-Server bei Plack
 
 
 =head1 DESCRIPTION

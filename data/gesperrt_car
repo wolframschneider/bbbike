@@ -38,7 +38,7 @@ Hermannstr. - Flughafen	3 11884,8492 11898,8362 12083,8411
 Karlshorster - Nöldner	3nocross::ignrte 15279,10862 15272,10790 15261,10738
 Nöldnerstr. -> Karlshorster Str.: Karlshorster - Nöldner	3::igndisp 15388,10758 15272,10790 15261,10738
 Karlshorster Str. -> Nöldnerstr.: Karlshorster - Nöldner	3::igndisp 15279,10862 15272,10790 15388,10758
-Weydemeyerstr. - Mollstr.	3 11904,13058 11896,13075 11840,13085
+Weydemeyerstr. - Mollstr.	3 11904,13052 11896,13075 11840,13085
 Neue Schönhauser	1 10527,13257 10423,13215 10310,13227
 Hagelberger Str.	3 8777,9601 8774,9534 8679,9544
 Hagelberger Str.	3 9000,9509 8774,9534 8679,9544
@@ -211,9 +211,9 @@ Eichkatzweg	1 925,9644 794,9472
 Zikadenweg	1 703,9538 835,9707 937,9841 1046,9989 1047,10002 1159,10149
 Oberhaardter Weg	1 765,8481 911,8374
 Gustav-Freytag-Str. (Grunewald)	1 834,8273 815,8283 748,8456 765,8481
-Schumannstr.	1 8701,13058 8964,13124
-Albrechtstr. (Mitte)	1 8964,13124 9001,13039 9046,12933 9106,12795
-Charitéstr.	1 8693,12951 8628,13033
+Schumannstr.	1 8701,13058 8957,13134
+Albrechtstr. (Mitte)	1 8957,13134 9001,13039 9046,12933 9106,12795
+Charitéstr.	1 8693,12951 8632,13037
 Spandauer Str. (Mitte)	3nocross::ignrte 10738,12364 10673,12434 10644,12469 10601,12521
 Gustav-Böß-Str. -> Spandauer Str.: Spandauer Str. (Mitte)	3::igndisp 10772,12515 10673,12434 10738,12364
 Spandauer Str. -> Gustav-Böß-Str.: Spandauer Str. (Mitte)	3::igndisp 10644,12469 10673,12434 10772,12515
@@ -322,7 +322,7 @@ Danneckerstr. -> Stralauer Allee: Stralauer/Damaschkestr.	3::igndisp 13856,10864
 Skalitzer/Admiralstr.	3nocross::ignrte 11393,10390 11335,10375 11316,10372
 Skalitzer Str. -> Admiralstr.: Skalitzer/Admiralstr.	3::igndisp 11393,10390 11335,10375 11325,10317
 Admiralstr. -> Skalitzer Str.: Skalitzer/Admiralstr.	3::igndisp 11325,10317 11335,10375 11316,10372
-Gutenbergstr.	1 -12045,-757 -12219,-726
+Gutenbergstr.	1 -12045,-757 -12227,-724
 Langhoffstr.	1 19817,14371 19818,14064
 Lintruper Str.	1 10307,922 10380,757
 Edison-/Siemensstr.	3 17992,6436 17962,6674 17860,6644 17842,6639 17766,6616
@@ -369,7 +369,7 @@ Müllerstr. -> Lindower Str.: Müllerstr./Lindower Str.	3::igndisp 7611,15286 7754
 Müllerstr. -> Lynarstr.: Müllerstr./Lindower Str.	3::igndisp 7819,15103 7754,15160 7694,15125
 Adolfstr.	1 7796,15590 7817,15418
 Mimosenweg	2 17668,2187 17657,2213
-Straßenbahntrasse	3nocross::ignrte 14621,16563 14619,16672 14619,16682 14608,16772 14558,16907
+Straßenbahntrasse	3nocross::ignrte 14619,16551 14619,16672 14619,16682 14608,16772 14558,16907
 Berliner Allee -> Falkenberger Str.: Straßenbahntrasse	3::igndisp 14608,16772 14619,16682 14723,16691
 Falkenberger Str. -> Berliner Allee: Straßenbahntrasse	3::igndisp 14723,16691 14619,16682 14619,16672
 Caseler Str. -> Berliner Allee: Straßenbahntrasse	3::igndisp 14700,16790 14608,16772 14619,16682
@@ -890,7 +890,7 @@ Mittelstreifen	3nocross::ignrte 2585,5696 2556,5575 2444,5303
 Thielallee -> Kuckucksweg: Mittelstreifen	3::igndisp 2444,5303 2556,5575 2483,5575
 Kuckucksweg -> Thielallee: Mittelstreifen	3::igndisp 2483,5575 2556,5575 2585,5696
 Kleine Hamburger - Torstr.	3 9749,13582 9670,13637 9580,13600
-Kleine Hamburger - Gartenstr.	3 9749,13582 9670,13637 9531,13797
+Kleine Hamburger - Gartenstr.	3 9749,13582 9670,13637 9535,13801
 Straßenbahntrasse	3nocross::ignrte 10287,13783 10463,13747 10569,13719
 Gormannstr. -> Torstr.: Straßenbahntrasse	3::igndisp 10480,13871 10463,13747 10569,13719
 Gormannstr. -> Gormannstr.: Straßenbahntrasse	3::igndisp 10445,13675 10463,13747 10480,13871
@@ -1203,7 +1203,7 @@ Kurmärkische Str.	3 7413,10244 7429,10366 7337,10396
 Kurmärkische Str.	3 7337,10396 7429,10366 7444,10479
 Hentigstr.	1 18518,8778 18548,8942
 Hentigstr.	1 18548,8942 18586,9172 18626,9406
-Oberwallstr.	1 9852,12409 9869,12297 9875,12257 9890,12161
+Oberwallstr.	1 9858,12410 9876,12298 9882,12259 9898,12161
 Prenzlauer Promenade	3nocross::ignrte 11849,17655 11839,17738 11884,18063
 Laudaer Str. -> Prenzlauer Promenade: Prenzlauer Promenade	3::igndisp 11785,17729 11839,17738 11884,18063
 Prenzlauer Promenade -> Laudaer Str.: Prenzlauer Promenade	3::igndisp 11849,17655 11839,17738 11785,17729
@@ -1332,10 +1332,10 @@ Bohrerzeile: Poller	3 16010,23734 15979,23679 15957,23635
 Rutenzeile: Poller	3 15559,23689 15587,23739 15607,23772
 Rutenzeile: Poller	3 15607,23772 15587,23739 15559,23689
 Siedlungsstr.	1 16647,25293 16693,25292
-Oderberger Str.: Durchfahrt verboten	3 10723,14772 10870,14689 10629,14299
-Oderberger Str.: Durchfahrt verboten	3 10723,14772 10870,14689 10893,14705
-Oderberger Str.: Durchfahrt verboten	3 10629,14299 10870,14689 10723,14772
-Oderberger Str.: Durchfahrt verboten	3 10893,14705 10870,14689 10723,14772
+Oderberger Str.: Durchfahrt verboten	3 10723,14772 10864,14692 10629,14299
+Oderberger Str.: Durchfahrt verboten	3 10723,14772 10864,14692 10893,14705
+Oderberger Str.: Durchfahrt verboten	3 10629,14299 10864,14692 10723,14772
+Oderberger Str.: Durchfahrt verboten	3 10893,14705 10864,14692 10723,14772
 Straße 12 (Neukölln): gesperrt für Fahrzeuge aller Art (außer BAB-Versorgung)	2 13883,6682 13881,6634 13915,6592
 Schranke	3 10549,2257 10559,2252 10617,2226
 Schranke	3 10617,2226 10559,2252 10549,2257
@@ -1491,8 +1491,8 @@ Feldlerchenweg: Schranke	3 6956,23166 7000,23095 7109,22919
 Feldlerchenweg: Schranke	3 7109,22919 7000,23095 6956,23166
 Auswärtiges Amt	3 9961,12094 10003,12113 9972,12184
 Im Vogtland	1 6657,23334 6684,23308 6727,23287
-Überquerungsmöglichkeit nur für BVG frei	3nocross::ignrte 11557,13228 11681,13161 11723,13139
-Berolinastr. -> Mollstr.: Überquerungsmöglichkeit nur für BVG frei	3::igndisp 11656,13100 11681,13161 11557,13228
+Überquerungsmöglichkeit nur für BVG frei	3nocross::ignrte 11560,13232 11681,13161 11723,13139
+Berolinastr. -> Mollstr.: Überquerungsmöglichkeit nur für BVG frei	3::igndisp 11656,13100 11681,13161 11560,13232
 Mollstr. -> Berolinastr.: Überquerungsmöglichkeit nur für BVG frei	3::igndisp 11723,13139 11681,13161 11656,13100
 Weidenweg - Str. der Pariser Kommune: Linksabbiegen verboten (Wendemöglichkeit an der Palisadenstr.)	3 13025,12523 12891,12549 12869,12425
 Mittelstreifen	3nocross::ignrte 6422,15708 6555,15827 6661,15921
@@ -1675,3 +1675,7 @@ Hubertusstr. - Frankfurter Allee	3 16541,12071 16512,11894 16737,11866
 Ückeritzer Ring: Betonkübel	3 17405,19252 17448,19243 17450,19297
 Ückeritzer Ring: Betonkübel	3 17447,19197 17448,19243 17405,19252
 Ückeritzer Ring: Betonkübel	3 17450,19297 17448,19243 17405,19252
+Zum Langen Jammer: Poller	3 14480,12932 14411,12951 14376,12849
+Zum Langen Jammer: Poller	3 14480,12932 14411,12951 14419,12978
+Zum Langen Jammer: Einbahnstraße	1 14682,12874 14588,12901 14536,12916 14480,12932
+Hosemannstr. (Prenzlauer Berg) [Anliegerstraße zur Mandelstr.]	1 12948,15771 12762,15882

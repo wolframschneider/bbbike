@@ -134,7 +134,7 @@
 	X 13849,9310
 	X 14089,9610
 	X 14193,9746
-#: XXX_prog diese Ampel ist auch für den Radverkehr in Puschkinalle (Geradeausfahrer) relevant
+#: XXX_prog diese Ampel ist auch für den Radverkehr in Puschkinallee (Geradeausfahrer) relevant
 	F 14250,9756
 	X 13614,9333
 	X 15261,10738
@@ -149,7 +149,7 @@
 	X 18215,11690
 	X 18215,12123
 	X 18597,12162
-	X 19173,13478
+	X 19171,13486
 	X 19628,13517
 	X 20318,14402
 	X 19395,14477
@@ -316,10 +316,10 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11160,13492
 #: XXX Ampelanlange wird umgebaut (Richtung Kreuzung)
 #: by: http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20120514.1415.370100.html
-#: last_checked: 2014-01-03
-#: check_frequency: 60d
+#: last_checked: 2014-03-11
+#: next_check: 2014-08-28
 	F 10511,14418
-	X 10003,14088
+	X 10002,14092
 	X 9800,14722
 	X 10881,15047
 #: XXX_prog: Radfahrer Richtung Norden haben möglicherweise Dauergrün oder bevorzugt lange Grün
@@ -453,6 +453,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 13566,5792
 #: off: night (seen 2013-08-25 23:10)
 	X 13430,6086
+#: note: linksabbiegende Radfahrer (Neuköllnische Allee -> Grenzallee Richtung Osten) sollten die Fußgängeranforderung betätigen! (während der Sperrung der Grenzallee)
 	X 14344,7003
 	X 13761,7328
 	X 14015,7631
@@ -477,13 +478,13 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4777,8870
 	X 5493,9367
 #: related vvv
-#: note: nur für W->O relevant
+#: XXX_prog: nur für W->O relevant
 	X 12028,12519
-#: note: nur für S->N relevant
+#: XXX_prog: nur für S->N relevant
 	X 12114,12546
-#: note: nur für O->W relevant
+#: XXX_prog: nur für O->W relevant
 	X 12050,12616
-#: note: nur für N->S relevant
+#: XXX_prog: nur für N->S relevant
 	X 11976,12595
 #: related ^^^
 	X 11635,12745
@@ -544,7 +545,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9212,13471
 	F 9394,13528
 	X 8935,13844
-	X 9383,13978
+	X 9383,13986
 	X 8098,13419
 	X 8057,14876
 	X 7929,15006
@@ -703,9 +704,16 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 18023,5623
 	X 17960,5511
 	X 17728,5756
-#: next_check_id: STERNDAMM-2014
-#: XXX_prog: zurzeit bis 2013-12-20 außer Betrieb (Sterndamm gesperrt) --- evtl. mit valid_...-Direktive implementieren
+#: next_check_id: STERNDAMM-2014 vvv
+#: XXX wegen der Sperrung des Sterndamms zurzeit außer Betrieb vvv
+#: valid: 20140614- vvv
+#: next_check: 2014-06-14 vvv
 	X 17886,5587
+	X 17736,5441
+#: next_check ^^^
+#: valid ^^^
+#: XXX ^^^
+#: next_check_id ^^^
 	X 21332,4655
 	X 21789,4520
 	X 22093,4499
@@ -793,13 +801,11 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10558,9763
 	X 12025,11346
 	X 15920,7697
-#: XXX_prog: zurzeit bis 2013-12-20 außer Betrieb (Sterndamm gesperrt) --- evtl. mit valid_...-Direktive implementieren
-	X 17736,5441
 	X 17648,5338
 #: note: Ampel ohne Fuß/Radquerung der Michael-Brückner-Str.
 #: XXX eventuell wird diese Einschränkung aufgehoben:
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4
-#: last_checked: 2014-01-04
+#: last_checked: 2014-03-08
 #: check_frequency: 120d
 	X 18080,5376
 	X 19904,3464
@@ -860,7 +866,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 17418,16014
 	X 15896,13547
 	X 16852,14412
-	X 11446,13294
+	X 11451,13301
 	X 4015,17912
 	X 3930,17920
 	X 2821,18831
@@ -1049,7 +1055,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 13072,15590
 	X 13316,15758
 	X 14499,16341
-	X 14621,16563
+	X 14619,16551
 	X 14653,15738
 	X 15066,14579
 	X 11785,9437
@@ -1475,7 +1481,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12943,16214
 	X 13512,15909
 	X 14584,17224
-	X 15230,18021
+	X 15238,18020
 	X 15611,18603
 	X 16277,17830
 	X 15286,17300
@@ -1490,12 +1496,13 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 21854,18192
 #: XXX_prog ^^^
 #: XXX_prog: nur eine Ampel: vvv
+#: note: Anforderungsampel für Radfahrer in N-S-Richtung
 	X 21417,16896
 	X 21390,16903
 #: XXX_prog ^^^
 	F 21785,16273
 	X 22495,16165
-	X 20839,15978
+	X 20832,15981
 	X -8784,13321
 	X -8050,13080
 	X -6405,14971
@@ -1554,10 +1561,10 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 13644,14915
 	X 12870,15342
 #: off: night (seen 2013-05-30 0:30)
-	X 13276,12903
+	X 13273,12902
 	X 13747,13110
 	X 13844,12900
-	X 13078,13330
+	X 13073,13329
 	X 14770,14048
 	X 15912,13153
 	X 15850,14308
@@ -1654,7 +1661,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 30410,5450
 	F 25018,5756
 	X 22513,5747
-	X 22294,5777
+	X 22292,5774
 	X 22675,6498
 	X 18492,6893
 	F 17919,6978
@@ -1696,6 +1703,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 21977,9023
 	X 18676,8236
 	X 18807,9746
+#: XXX_prog gilt nicht in Fahrtrichtung Nordwest
 	X 14614,9052
 	X 5350,7554
 	X 5783,9060
@@ -2178,7 +2186,7 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	F 6440,6707
 #: XXX_prog: Richtung Osten reguläre Ampel, Richtung Westen nur Fußgängerampel
 	X 7310,7818
-# REMOVED (temporäre Ampel existiert nicht mehr) --- #: XXX existiert diese Ampel noch? --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5227&options=4 ---	F 18413,7774
+# REMOVED (temporäre Ampel existiert nicht mehr und wird auch nicht mehr eingerichtet) --- #: XXX existiert diese Ampel noch? --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5227&options=4 ---	F 18413,7774
 # REMOVED (existiert nicht mehr) ---	X 16187,10033
 #: by: Wolfhard Schleese vvv
 	X 3754,24946
@@ -2291,6 +2299,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Luftbild
 	F -4793,9970
 	F 20788,4008
+#: XXX_prog: gilt nicht in Fahrtrichtung Nordwest
 	F 14842,8809
 	F -3011,1761
 	F -2671,1988
@@ -2386,8 +2395,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 24556,12056
 #: off: Sunday
 	F 24936,4838
+#: note: Anforderungsampel für Radfahrer aus Richtung Südosten
 	X 23950,5342
 	F 11033,13086
+#: note: Anforderungsampel
 	F 16370,24600
 	F 16037,25915
 	F 16166,25767
@@ -2404,7 +2415,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: next_check_id: VOSSSTR-2014
 #: note: provisorische Ampel
 #: XXX Siehe auch Baustelle in der Voßstr.
-#: last_checked: 2014-01-17
+#: last_checked: 2014-02-21
 #: check_frequency: 60d
 	X::inwork 9000,11727
 	X 25451,14018
@@ -2442,13 +2453,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX temporäre Ampel (wegen Arbeiten an der Staatsoper und an der U-Bahn)
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
-#: last_checked: 2013-11-19
-#: check_frequency: 90d
+#: last_checked: 2014-02-28
+#: next_check: 2014-05-29
 	F::inwork 9984,12426
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2014-01-24 vvv
-#: next_check: 2014-02-26 vvv
+#: last_checked: 2014-02-10 vvv
+#: next_check: 2014-12-31 vvv
 	X::inwork 9122,12509
 	X::inwork 9286,12886
 	X::inwork 9343,12464
@@ -2456,10 +2467,9 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: next_check ^^^
 #: last_checked ^^^
 #: XXX ^^^
-# 
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (südlicher Bereich) vvv
 #: last_checked: 2013-09-16 vvv
-#: next_check: 2014-02-26 vvv
+#: next_check: 2014-12-31 vvv
 	F::inwork 9063,12051
 	F::inwork 9270,12086
 #: next_check ^^^
@@ -2468,12 +2478,12 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: next_check_id ^^^
 #
 #: XXX temporäre Ampel (wegen gesperrten Gehweg?), Ampel ist eigentlich etwas weiter westlich
-#: last_checked: 2013-12-27
+#: last_checked: 2014-02-28
 	F::inwork 9812,12145
 # 
 #: next_check_id: INVALIDEN-2014
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung an der Invalidenstraße) vvv
-#: last_checked: 2013-12-27 vvv
+#: last_checked: 2014-03-07 vvv
 #: next_check: 2014-06-30 vvv
 	X::inwork 8732,14098
 	X::inwork 8879,13913
@@ -2482,6 +2492,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X::inwork 8313,13839
 	X::inwork 8450,13599
 	X::inwork 8775,13606
+	X::inwork 9085,13919
 #: next_check ^^^
 #: last_checked ^^^
 #: XXX ^^^
@@ -2505,7 +2516,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 9540,15238
 	X 7987,6775
 	F 7155,21744
-	F 9822,14067
+	F 9821,14073
 #: XXX_prog Ampel existiert nur in Richtung Norden
 	X 5086,14504
 #: off: weekend/holiday
@@ -2576,6 +2587,24 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 16066,11960
 #: note: Anforderungsampel für linksabbiegende Radfahrer, aber evtl. ist die Anforderung immer aktiv
 	X 18878,9517
+# 
+#: next_check_id: GRENZALLEE-2014 vvv
+#: valid: 20140224-20170601 vvv
+#: next_check: 2017-06-01 vvv
+#: note: Ampel befindet sich nordwestlich der Kreuzung
+	F::inwork 14567,6810
+#: note: Extra-Umweg für Radfahrer in Richtung Südosten
+	X::inwork 14724,6668
+	X::inwork 14366,6337
+	X::inwork 14193,6556
+#: XXX noch nicht eingeschaltet
+#: last_checked: 2014-02-28
+	X0::inwork 13891,7107
+	X::inwork 13278,6967
+#: next_check ^^^
+#: valid ^^^
+#: next_check_id ^^^
+# 
 ################################################################################
 #: note: Potsdam vvv
 	X -12940,-1625
@@ -2697,7 +2726,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 18417,10738
 #: note: Anforderungsampel
 	F -12531,-781
-	F -12223,-713
+	F -12235,-713
 	B -8417,-2867
 	B -9996,-5596
 #: note: ^^^
@@ -2709,6 +2738,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -12655,-1714
 ################################################################################
 #: note: Ampeln elsewhere vvv
+#: note: Anforderungsampel
+	F 17956,25235
 #: note: zwei Drängelgitter, keine Schranke
 	B 22428,20986
 	X 22525,19420
@@ -2724,7 +2755,9 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 26020,14975
 #: note: Anforderungsampel
 	F 25788,14579
+#: note: Anforderungsampel für Radfahrer
 	X 23930,21873
+#: note: hier keine Anforderungsampel
 	X 24114,22074
 	X 23565,21396
 	X 17717,21834
@@ -3121,9 +3154,9 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	X 18423,-843
 #: next_check_id: BER-20XX vvv
 #: XXX: Ampel am 2012-05-06 noch ausgeschaltet, wird wahrscheinlich mit BER in Betrieb gehen vvv
-#: next_check: 2014-03-02 vvv
-	X 19909,-2863
-	F 18861,-3921
+#: next_check: 2015-01-01 vvv
+	X0 19909,-2863
+	F0 18861,-3921
 #: XXX ^^^
 #: next_check ^^^
 #: next_check_id ^^^

@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2009,2010,2011,2012,2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 2009,2010,2011,2012,2013,2014 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -14,13 +14,16 @@
 
 use strict;
 use FindBin;
-use lib ("$FindBin::RealBin/..",
+use lib (
+	 "$FindBin::RealBin/..",
 	 "$FindBin::RealBin/../lib",
 	);
 
 use Fcntl qw(SEEK_SET);
 use File::Temp qw(tempfile);
 use Getopt::Long;
+use Tie::IxHash ();
+
 use Geography::Berlin_DE ();
 use Karte::Polar;
 use Karte::Standard;
@@ -30,7 +33,15 @@ use Strassen::Strasse;
 use VectorUtil qw(get_polygon_center);
 
 use vars qw($VERSION);
-$VERSION = '1.00';
+$VERSION = '1.01';
+
+# Monkeypatch for performance reasons
+# See http://rt.cpan.org/Ticket/Display.html?id=39619
+if (!defined &Tie::IxHash::SCALAR) {
+    *Tie::IxHash::SCALAR = sub {
+	scalar @{ $_[0]->[1] };
+    };
+}
 
 sub usage () {
     die <<EOF;
@@ -185,12 +196,15 @@ my %cat_to_railway = ('U' => 'subway',
 
 my %cat_to_area_landuse = ('Forest'     => 'forest',
 			   'Cemetery'   => 'cemetery',
-			   'Industrial' => 'industrial',
+			   ($optimize_for != OPTIMIZE_FOR_GARMIN ? ('Industrial' => 'industrial') : ()),
 			   # 'Ae' => 'airport', # does not exist
 			   'Orchard'    => 'allotments',
 			   ($optimize_for != OPTIMIZE_FOR_MAPNIK ? ('Sport' => 'sports') : ()),
 			   'Green'      => 'village_green',
 			  );
+my %cat_to_area_bbbike_landuse = (
+				  ($optimize_for == OPTIMIZE_FOR_GARMIN ? ('Industrial' => 'industrial') : ()),
+				 );
 my %cat_to_area_leisure = ('P'          => 'park',
 			   'Pabove'     => 'park',
 			   ($optimize_for == OPTIMIZE_FOR_MAPNIK ? ('Sport' => 'sports_centre') : ()),
@@ -310,23 +324,23 @@ sub handle_blocked_node_like {
 	return;
     }
 
-    my $attribs;
+    tie my %attribs, 'Tie::IxHash';
     if ($cat eq 'BNP') {
 	if ($r->[Strassen::NAME] =~ m{drängelgitter}i) {
-	    $attribs = { barrier => 'cycle_barrier' };
+	    %attribs = (barrier => 'cycle_barrier');
 	} else {
-	    $attribs = { barrier => 'bollard' }; #  (which is a quite bold assumption)
+	    %attribs = (barrier => 'bollard'); #  (which is a quite bold assumption)
 	}
     } elsif ($cat eq '0') {
 	if ($r->[Strassen::NAME] =~ m{(\d+)\s+Stufe}) { # XXX see steps_stats.pl for more possible regexps, should go into a module!
-	    $attribs->{step_count} = $1;
+	    $attribs{step_count} = $1;
 	}
 	if ($optimize_for == OPTIMIZE_FOR_GARMIN ||
 	    $optimize_for == OPTIMIZE_FOR_MAPNIK) {
 	    if (@{$r->[Strassen::COORDS]} == 1) {
 		my @node_ids = get_node_ids($r);
 		$remember_steps{$node_ids[0]} = {
-						 $attribs->{step_count} ? (steps => $attribs->{step_count}) : (),
+						 $attribs{step_count} ? (steps => $attribs{step_count}) : (),
 						};
 		return; # handled later
 	    } else {
@@ -336,10 +350,10 @@ sub handle_blocked_node_like {
 		}
 	    }
 	}
-	$attribs->{highway} = 'steps'; # not good: steps are in osm usually lines, not nodes!
+	$attribs{highway} = 'steps'; # not good: steps are in osm usually lines, not nodes!
     }
-    if ($attribs) {
-	get_node_ids($r, $attribs); # as a side-effect, create the nodes
+    if (%attribs) {
+	get_node_ids($r, \%attribs); # as a side-effect, create the nodes
     }
 }
 
@@ -466,7 +480,10 @@ sub _handle_highway_like {
 	# Find citypart from PLZ.pm
 	my $res = $street_to_citypart->{$name};
 	if ($res) {
-	    push @cityparts, keys %$res;
+	    # XXX sorted because of hash randomization; but it would
+	    # be better to have another stable order, for example the
+	    # citypart which the biggest portion of the street
+	    push @cityparts, sort keys %$res;
 	}
     }
 
@@ -567,7 +584,7 @@ sub _handle_highway_like {
     # * addr:city => first citypart (usually there is exactly one)
     #
     # If any of these tags is set, then also set addr:country
-    my %is_in;
+    tie my %is_in, 'Tie::IxHash';
     if (defined $city) {
 	$is_in{'is_in:county'} = $city; # XXX lying for Berlin, so we have cityparts in addr:city and Berlin in is_in:county XXX should be activated only for $optimize_for=garmin
 	if (@cityparts) {
@@ -683,6 +700,7 @@ sub handle_fixme_cat_like {
     my($r, $dir) = @_;
     my $cat = $r->[Strassen::CAT];
 
+    # Make it a Tie::IxHash if more attributes are added...
     my $attribs = { 'bbbike:fixme_cat' => $cat };
 
     get_node_ids($r, $attribs); # as a side-effect, create the nodes
@@ -805,10 +823,12 @@ sub handle_comments_scenic_like {
     my $cat = $r->[Strassen::CAT];
     if ($cat =~ m{^View(?:$|:)}) {
 	my $label = shorten_label($r->[Strassen::NAME]);
-	my $attribs = { tourism => 'viewpoint',
-			name => $label,
-		      };
-	get_node_ids($r, $attribs); # as a side-effect, create the nodes
+	tie my %attribs, 'Tie::IxHash';
+	%attribs = (
+		    tourism => 'viewpoint',
+		    name => $label,
+		   );
+	get_node_ids($r, \%attribs); # as a side-effect, create the nodes
     } else {
 	return;
     }
@@ -825,13 +845,16 @@ sub handle_area_like {
     if ($rest =~ m{^\|(religion):(.*)$}) { # XXX could support more attributes here
 	$tags{$1} = $2;
     }
-    my($landuse, $leisure);
+    my($landuse, $bbbike_landuse, $leisure);
     $landuse = $cat_to_area_landuse{$cat};
     if (!defined $landuse) {
-	$leisure = $cat_to_area_leisure{$cat};
-	if (!defined $leisure) {
-	    #warn "Ignoring $cat...\n";
-	    return;
+	$bbbike_landuse = $cat_to_area_bbbike_landuse{$cat};
+	if (!defined $bbbike_landuse) {
+	    $leisure = $cat_to_area_leisure{$cat};
+	    if (!defined $leisure) {
+		#warn "Ignoring $cat...\n";
+		return;
+	    }
 	}
     }
 
@@ -848,6 +871,8 @@ sub handle_area_like {
     print $wayfh qq{  <tag k="name" v="$name" />\n} if defined $name && length $name;
     if (defined $landuse) {
 	print $wayfh qq{  <tag k="landuse" v="$landuse" />\n};
+    } elsif (defined $bbbike_landuse) {
+	print $wayfh qq{  <tag k="bbbike:landuse" v="$bbbike_landuse" />\n};
     } else {
 	print $wayfh qq{  <tag k="leisure" v="$leisure" />\n};
     }
@@ -864,42 +889,46 @@ sub handle_trafficsignals_like {
     my($r, $dir) = @_;
     my $cat = $r->[Strassen::CAT];
 
-    my $attribs;
+    tie my %attribs, 'Tie::IxHash';
     if      ($cat =~ m{^X}) {
-	$attribs = { highway => 'traffic_signals' };
+	%attribs = (highway => 'traffic_signals');
     } elsif ($cat =~ m{^F}) {
 	if ($optimize_for == OPTIMIZE_FOR_MAPNIK) {
 	    if ($optimize_for_mapnik_style == OPTIMIZE_FOR_MAPNIK_STYLE_BBBIKE) {
 		# Use a non-standard tag value here
-		$attribs = { highway => 'traffic_signals_pedestrian' };
+		%attribs = (highway => 'traffic_signals_pedestrian');
 	    } else {
 		# Treat LSA-X and LSA-F the same, otherwise LSA-F will not
 		# be rendered at all in mapnik using default or german style.
 		# This is because there's no "crossing" column in the
 		# planet database.
-		$attribs = { highway => 'traffic_signals' };
+		%attribs = (highway => 'traffic_signals');
 	    }
 	} else {
-	    $attribs = { highway => 'crossing', crossing => 'traffic_signals' };
+	    %attribs = (highway => 'crossing', crossing => 'traffic_signals');
 	}
     } elsif ($cat =~ m{^B}) {
-	$attribs = { railway => 'level_crossing',
-		     ($cat =~ m{0$} ? (disused => 'yes') : ()), # not accurate, may be also seldomly used
-		   };
+	%attribs = (
+		    railway => 'level_crossing',
+		    ($cat =~ m{0$} ? (disused => 'yes') : ()), # not accurate, may be also seldomly used
+		   );
     } else {
 	# ignore
 	return;
     }
 
-    get_node_ids($r, $attribs); # as a side-effect, create the nodes
+    get_node_ids($r, \%attribs); # as a side-effect, create the nodes
 }
 
 sub handle_zebrastreifen_like {
     my($r) = @_;
-    get_node_ids($r, { highway => 'crossing',
-		       crossing => 'uncontrolled',
-		       crossing_ref => 'zebra',
-		     });
+    tie my %attribs, 'Tie::IxHash';
+    %attribs = (
+		highway => 'crossing',
+		crossing => 'uncontrolled',
+		crossing_ref => 'zebra',
+	       );
+    get_node_ids($r, \%attribs);
 }
 
 sub handle_railway_stations_like {
@@ -916,33 +945,35 @@ sub handle_railway_stations_like {
 		: ($is_ubahn ? 'U ' : $is_sbahn ? 'S ' : '')
 	       ) . $r->[Strassen::NAME];
     ##XXX $is_construction handling for mapnik_bbbike_style is missing
-    my $attribs = { railway => ($is_construction
-				? 'construction'
-				: 'station' # no distinction between halt and station
-			       ),
-		    ($is_abandoned ? ("abandoned" => "yes") : ()),
-		    ($is_construction ? ("construction" => "station") : ()), # more construction-related attribs set later
-		    name => $name,
-		  };
+    tie my %attribs, 'Tie::IxHash';
+    %attribs = (
+		railway => ($is_construction
+			    ? 'construction'
+			    : 'station' # no distinction between halt and station
+			   ),
+		($is_abandoned ? ("abandoned" => "yes") : ()),
+		($is_construction ? ("construction" => "station") : ()), # more construction-related attribs set later
+		name => $name,
+	       );
     if      ($is_ubahn) {
 	if ($is_optimize_for_mapnik_bbbike_style) {
-	    $attribs->{railway} = 'station_subway';
+	    $attribs{railway} = 'station_subway';
 	} else {
-	    $attribs->{station} = 'subway';
+	    $attribs{station} = 'subway';
 	}
     } elsif ($is_sbahn) {
 	if ($is_optimize_for_mapnik_bbbike_style) {
-	    $attribs->{railway} = 'station_light_rail';
+	    $attribs{railway} = 'station_light_rail';
 	} else {
-	    $attribs->{station} = 'light_rail';
+	    $attribs{station} = 'light_rail';
 	}
     } elsif ($cat =~ m{^R}) {
 	# Regional/Fernbahnhof
 	if ($cat =~ m{^RP}) {
 	    if ($optimize_for_mapnik_style == OPTIMIZE_FOR_MAPNIK_STYLE_BBBIKE) {
-		$attribs->{railway} = 'station_narrow_gauge';
+		$attribs{railway} = 'station_narrow_gauge';
 	    } else {
-		$attribs->{'bbbike:station_type'} = 'RP';
+		$attribs{'bbbike:station_type'} = 'RP';
 	    }
 	}
     } else {
@@ -950,11 +981,11 @@ sub handle_railway_stations_like {
 	return;
     }
 
-    if ($is_construction && $attribs->{station}) {
-	$attribs->{'construction:station'} = delete $attribs->{station};
+    if ($is_construction && $attribs{station}) {
+	$attribs{'construction:station'} = delete $attribs{station};
     }
 
-    get_node_ids($r, $attribs);
+    get_node_ids($r, \%attribs);
 }
 
 sub handle_city_like {
@@ -970,9 +1001,12 @@ sub handle_city_like {
     } else {
 	$place = 'hamlet';
     }
-    get_node_ids($r, { name  => format_place_label($r->[Strassen::NAME]),
-		       place => $place,
-		     });
+    tie my %attribs, 'Tie::IxHash';
+    %attribs = (
+		name  => format_place_label($r->[Strassen::NAME]),
+		place => $place,
+	       );
+    get_node_ids($r, \%attribs);
 }
 
 sub handle_city_limit_like {
@@ -990,10 +1024,12 @@ sub handle_city_limit_like {
 	warn "Unhandled city-limit like category '$cat'";
 	return;
     }
-    my $attribs = { traffic_sign => $traffic_sign_name,
-		    name         => format_place_label($r->[Strassen::NAME]),
-		  };
-    get_node_ids($r, $attribs);
+    tie my %attribs, 'Tie::IxHash';
+    %attribs = (
+		traffic_sign => $traffic_sign_name,
+		name         => format_place_label($r->[Strassen::NAME]),
+	       );
+    get_node_ids($r, \%attribs);
 }
 
 sub handle_berlin_citypart_like {
@@ -1428,6 +1464,17 @@ Maximum length on Garmin devices (verified on etrex Vista HCX) is 151.
 There are some heuristics used to abbreviate some common (german)
 words. Also the function L<Strasse/short> is called with the
 abbreviation level 4.
+
+=item * C<bbbike:landuse=industrial> instead of C<landuse=industrial>
+
+The default mkgmap style file (and bbbike's adaption of the style
+file) renders industrial areas only for zoom levels 19-23. The zoom
+level 24 is dedicated for related buildings. The bbbike Berlin data
+has no building elements, so it's useful to render industrial areas
+also in level 24 (especially if the Garmin device is set to "most
+detail" rendering). To make it possible to use the same style file for
+OSM data and BBBike data, this optimization (or better, hack) makes
+the distinction by using a custom tag C<bbbike:landuse>.
 
 =back
 

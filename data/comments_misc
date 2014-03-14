@@ -1,7 +1,7 @@
 #: #: -*- coding: iso-8859-1 -*-
 #:
-als Zionskirchstr. ausgeschildert	CS 10306,14247 10389,14274
-als Zionskirchstr. ausgeschildert	CS 10306,14247 10277,14350 10311,14391 10365,14372 10389,14274
+als Zionskirchstr. ausgeschildert	CS 10304,14254 10391,14280
+als Zionskirchstr. ausgeschildert	CS 10304,14254 10277,14350 10311,14391 10365,14372 10391,14280
 Autobahnunterführung ist nur 2,10m hoch	CS 21306,-975 21393,-871
 Einbahnstr., aber Radweg vorhanden	CS; 23109,30968 23103,30923 23084,30893 22917,30635
 Gillweg: entlang der Autobahn	CS 2585,9653 2484,9671 2394,9714
@@ -58,6 +58,7 @@ Kreisverkehr	Roundabout -11822,-1874
 Kreisverkehr	Roundabout 1722,-773
 Kreisverkehr	Roundabout 1677,-582
 Kreisverkehr	Roundabout 1457,-470
+Kreisverkehr	Roundabout 34110,6164
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
 Privatstraße der DB	CS 5710,7820 6273,7849
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3347,6460 3449,6863
@@ -68,8 +69,8 @@ Sesselmannweg: Kette	CS 3264,9261 3332,9181
 Apeldorner Weg: kein Straßenname ausgeschildert; Weg verläuft westl. direkt an der BAB (104)	CS 3848,8689 3868,8759 3952,8980
 (Wallenbergstr. - Rudolstätter Str.): Bordsteine	CP; 3964,8559 4029,8482 4139,8485
 (Wallenbergstr. - Rudolstätter Str.): Bordsteine	CP; 4139,8356 4029,8482 4139,8485
-Virchowweg: Gelände der Charité	CS 8548,13577 8503,13553 8377,13463 8371,13399 8434,13310 8602,13075 8622,13042 8628,13033
-Hufelandweg: Gelände der Charité	CS 8503,13553 8554,13476 8504,13441 8538,13388 8582,13355 8618,13306 8630,13172 8632,13133 8602,13075
+Virchowweg: Gelände der Charité	CS 8548,13577 8503,13553 8377,13463 8371,13399 8434,13310 8603,13076 8623,13049 8632,13037
+Hufelandweg: Gelände der Charité	CS 8503,13553 8554,13476 8504,13441 8538,13388 8582,13355 8618,13306 8630,13172 8632,13133 8603,13076
 Bonhoefferweg: Gelände der Charité	CS 8538,13388 8487,13351 8434,13310
 Sauerbruchweg: Gelände der Charité	CS 8487,13351 8555,13260 8605,13200 8630,13172
 (Luisenstr. - Hufelandweg): Gelände der Charité	CS 8665,13353 8582,13355
@@ -160,7 +161,7 @@ ausgeschildert als "Köllnischer Platz"	CP2; 21789,4520 22071,4501
 Kambergstr. - Mauerweg: Achtung, scharfkantiges Metallteil in der Erde, Gefahr einer Reifenpanne	CS 11677,-58 11746,-62
 Moor: Achtung, schlechte Ausschilderung der Radroute! Nicht in die Sackgasse fahren!	CP; 55650,109962 55319,109799 55318,109732 55317,109697
 Zum Uferweg: als Privatweg gekennzeichnet	CP2; 4751,13245 4742,13157
-(Bleicheroder Str. - Pasewalker Str.): entlang der Straßenbahntrasse	CS 11805,19071 11895,19183 11927,19308
+(Bleicheroder Str. - Pasewalker Str.): entlang der Straßenbahntrasse	CS 11818,19089 11845,19121 11884,19169 11895,19183 11912,19279 11927,19308
 ausgeschildert zum Reichpietschufer 22	CP2; 8102,11099 8184,11160
 Gluckweg: Spazierweg längs des Bahndamms für Radfahrer befahrbar	CS 6039,3275 6171,3400
 als Potsdamer Platz ausgeschildert	CS 8602,11369 8573,11404 8542,11502
@@ -305,7 +306,7 @@ Haduweg: nur frei für Anlieger	CS 16416,23705 16510,23642
 (Ludwigpark): Privatgelände	CS 17259,26148 17385,25954 17413,25969 17435,25983 17310,26181
 Am Rundling: nur frei für Anlieger	CS 17927,3737 17927,3771 17927,3788
 (Park am Gleisdreieck): "Sprintstrecke"	CP2; 8521,9911 8579,10030
-(Biesdorfer Friedhofsweg - Wuhlewanderweg): zwischen U-Bahn und Friedhof Biesdorf	CS 21514,11796 21645,11912 21775,11989 21914,12019
+(Biesdorfer Friedhofsweg - Wuhlewanderweg): zwischen U-Bahn und Friedhof Biesdorf	CS 21514,11796 21645,11912 21775,11989 21907,12018
 (Kloster-Zinna-Str. - Braunfelsstr.): Privatstraße	CS 11712,-289 11721,-351
 Simsonweg: nicht ausgeschildert	CP2; 8354,12416 8546,12279
 Simsonweg: nicht ausgeschildert	CP2; 8546,12279 8354,12416
@@ -446,7 +447,7 @@ entlang des Marzahn-Hohenschönhauser Grenzgrabens	CS 18094,13505 18054,13477 179
 Kaskelstraße: Privatstraße	CS 15090,11237 15058,11250
 Weg am Blankensteinpark: entlang der Stadler-Halle	CS 14289,12876 14355,13109
 Barnimstr.: nicht ausgeschildert	CP2; 11881,13147 11758,13210
-Pauline-Staegemann-Str.: nicht ausgeschildert	CP2; 11589,13305 11524,13247
+Pauline-Staegemann-Str.: nicht ausgeschildert	CP2; 11589,13305 11526,13252
 Kohstallweg: nicht ausgeschildert	CS -5535,14853 -5488,14836 -5472,14925
 Heidenelkenweg: Privatstraße	CS 16112,12622 16111,12685 16073,12685 16071,12623
 Wilhelm-Kabus-Str. - Südkreuz: Privatstraße der DB	CP2; 7713,8001 7837,7899
@@ -520,3 +521,8 @@ Friedrich-Wilhelm-Boelcke-Str.: nicht ausgeschildert	CS -12796,-2488 -12831,-243
 Zur Königlichen Hofbrauerei: nicht ausgeschildert	CS -12815,-2419 -12781,-2376
 Herzbergstr. - Paul-Junius-Str.: am Roederplatz auf die gegenüberliegende Straßenseite wechseln	CP; 15626,13541 15513,13539 15470,13509
 Heinrich-Dathe-Platz: nicht ausgeschildert	CP2; 18442,10467 18471,10430
+Ahornsteig: nicht ausgeschildert	CS 7059,11978 7007,11923 6984,11859 6980,11790 6996,11661 7018,11615 7092,11593 7362,11561 7418,11566 7549,11608 7612,11597 7648,11592 7664,11597
+ausgeschildert Floraplatz	CP2; 8016,11770 8020,11937
+ausgeschildert Venusbassin	CP2; 8020,11937 8132,11910
+Überquerung der Kreuzung Neuköllnische Allee/Grenzallee nur über linken Gehweg möglich, Zeitverlust!	CP; 14567,6810 14344,7003 14196,7086
+am U-Bahn-Viadukt entlang fahren	CP2; 7906,10098 7928,10094

@@ -7,7 +7,7 @@
 # (This is a slightly modified version of the original pmake as found in
 # the FreeBSD sources)
 #
-# Debian users may use freebsd-make from the freebsd-buildutils
+# Debian users may use freebsd-make resp. fmake from the freebsd-buildutils
 # package.
 
 .ifndef HOSTNAME
@@ -27,10 +27,13 @@ NO_LOCALE=		env LANG=C LC_ALL=C LC_CTYPE=C
 SED?=			${NO_LOCALE} sed
 CUT?=			${NO_LOCALE} cut
 
+VALID_DATE?=		today
+
 HAFAS2HAFAS=		${PERL} ${MISCSRCDIR}/hafas2hafas -strict
 CONVERT2HAFAS=		${PERL} ${MISCSRCDIR}/convert2hafas -strict
 CONVERT_ORIG_FILE=	${MISCSRCDIR}/convert_orig_to_bbd
 CONVERT_ORIG=		${PERL} ${CONVERT_ORIG_FILE}
+CONVERT_RADWEGE=	${PERL} ${MISCSRCDIR}/convert_radwege
 CHECK_POINTS=		${PERL} ${MISCSRCDIR}/check_points
 CHECK_STR_PLZ=		${PERL} ${MISCSRCDIR}/check_str_plz
 CHECK_CONT=		${PERL} ${MISCSRCDIR}/check_cont
@@ -46,6 +49,7 @@ SORTBYCAT=		${PERL} ${MISCSRCDIR}/sortbycat
 SEARCH_INACCESSIBLE=	${PERL} ${MISCSRCDIR}/search_inaccessible_points
 STEIGUNG_STAT=		${PERL} ${MISCSRCDIR}/steigung_stat
 GREPSTRASSEN=		${PERL} ${MISCSRCDIR}/grepstrassen
+GREPSTRASSEN_VALID=	${GREPSTRASSEN} -valid ${VALID_DATE} -preserveglobaldirectives
 REPLACESTRASSEN=	${PERL} ${MISCSRCDIR}/replacestrassen
 GREPSTRASSEN_UTF8=	${PERL_UTF8} ${MISCSRCDIR}/grepstrassen
 COMBINE_STREETS=	${PERL} ${MISCSRCDIR}/combine_streets.pl
@@ -89,6 +93,12 @@ COMPUTED_TARGETS+=	inaccessible_strassen inaccessible_landstrassen oldnames
 # permissions
 NON_TARGETS=		upgrade_scope_hint
 
+INTERMEDIATE_TARGETS=	.strassen.tmp \
+			${PERSISTENTTMPDIR}/gesperrt-with-handicaps \
+			${PERSISTENTTMPDIR}/gesperrt-orig-valid \
+			${PERSISTENTTMPDIR}/gesperrt-without-nocross \
+			${PERSISTENTTMPDIR}/radwege-orig-valid
+
 COOKED_TARGETS=		strassen-cooked landstrassen-cooked landstrassen2-cooked
 TARGETS+=	${SOURCE_TARGETS} ${COOKED_TARGETS} ${COMPUTED_TARGETS}
 BBD_TARGETS=	${TARGETS:S/^ampelschaltung$//:S/^temp_blockings\/bbbike-temp-blockings-optimized.pl//:S/^oldnames$//}
@@ -124,8 +134,7 @@ TODAY_DATE!=	date +'%Y%m%d'
 ######################################################################
 # META TARGETS
 
-.ORDER: targets data-images check .modified make_misc
-all:	targets data-images check .modified make_misc
+all:	targets data-images check .WAIT .modified .WAIT make_misc
 
 # Some targets have to be rebuild once a day. These should depend on
 # ".check_daily"
@@ -136,8 +145,9 @@ targets:	${TARGETS}
 
 targets-clean:
 	-mkdir /tmp/old-data
+	-mkdir /tmp/old-tmp-data
+	-mv -f ${INTERMEDIATE_TARGETS} /tmp/old-tmp-data/
 	mv -f ${TARGETS} /tmp/old-data/
-	-rm -f .strassen.tmp
 
 fix-permissions:
 	for i in $(TARGETS) $(NON_TARGETS) temp_blockings/bbbike-temp-blockings.pl temp_blockings/*.bbd; do \
@@ -222,8 +232,9 @@ XXX-strassen-tmp-without-NH:
 	    ${REPLACESTRASSEN} -catexpr 's/NH/N/' > $@~
 	mv .strassen.tmp~ .strassen.tmp
 
-.strassen.tmp: strassen-orig
-	$(CONVERT_ORIG) -keep-directive alias -keep-old-name -5y strassen-orig > .strassen.tmp~
+.strassen.tmp: strassen-orig .check_daily
+	${GREPSTRASSEN_VALID} strassen-orig |\
+	    $(CONVERT_ORIG) -keep-directive alias -keep-old-name -5y > .strassen.tmp~
 	mv $@~ $@
 
 .for f in ${COOKED_TARGETS}
@@ -503,9 +514,11 @@ ortsschilder: ortsschilder-orig
 	mv ortsschilder~ ortsschilder
 	-@$(READONLY) $@
 
-ampeln:	ampeln-orig
+ampeln:	ampeln-orig .check_daily
 	-@$(WRITEABLE) $@
-	$(CONVERT_ORIG) ampeln-orig > ampeln~
+	${GREPSTRASSEN_VALID} ampeln-orig | \
+	    ${GREPSTRASSEN} -v -catrx '^[FX]0' -preserveglobaldirectives | \
+	    ${CONVERT_ORIG} > ampeln~
 	mv ampeln~ ampeln
 	-@$(READONLY) $@
 
@@ -515,21 +528,33 @@ ampelschaltung:	ampelschaltung-orig
 	mv ampelschaltung~ ampelschaltung
 	-@$(READONLY) $@
 
-gesperrt .gesperrt.tmp:	gesperrt-orig strassen landstrassen landstrassen2 comments_path routing_helper-orig
-	-@$(WRITEABLE) gesperrt
-	$(CONVERT2HAFAS) -specsperre=strassen,landstrassen,landstrassen2 \
-	    -specsperre-exceptions=comments_path gesperrt-orig |\
-	    ${RESOLVE_STARS} ${ALL_STREETS} - > .gesperrt.tmp
-	$(REPLACESTRASSEN) -catexpr 's/:q\d//' < .gesperrt.tmp > gesperrt~
+gesperrt:	${PERSISTENTTMPDIR}/gesperrt-with-handicaps comments_path routing_helper-orig
+	-@$(WRITEABLE) $@
+	$(REPLACESTRASSEN) -catexpr 's/:q\d//' < ${PERSISTENTTMPDIR}/gesperrt-with-handicaps > $@~
 	${GREPSTRASSEN} -ignoreglobaldirectives -ignorelocaldirectives -catrx ';$$' routing_helper-orig |\
-	    ${REPLACESTRASSEN} -catexpr 's/.*/1::igndisp/' -revcoords >> gesperrt~
-	mv gesperrt~ gesperrt
-	-@$(READONLY) gesperrt
+	    ${REPLACESTRASSEN} -catexpr 's/.*/1::igndisp/' -revcoords >> $@~
+	mv $@~ $@
+	-@$(READONLY) $@
 
-${PERSISTENTTMPDIR}/gesperrt-without-nocross:	gesperrt-orig strassen landstrassen landstrassen2
+${PERSISTENTTMPDIR}/gesperrt-with-handicaps:	${PERSISTENTTMPDIR}/gesperrt-orig-valid \
+						strassen landstrassen landstrassen2 comments_path
 	-@$(WRITEABLE) $@
 	$(CONVERT2HAFAS) -specsperre=strassen,landstrassen,landstrassen2 \
-	    -nonc gesperrt-orig > $@~
+	        -specsperre-exceptions=comments_path ${PERSISTENTTMPDIR}/gesperrt-orig-valid |\
+	    ${RESOLVE_STARS} ${ALL_STREETS} - > $@~
+	mv $@~ $@
+	-@$(READONLY) $@
+
+${PERSISTENTTMPDIR}/gesperrt-without-nocross:	${PERSISTENTTMPDIR}/gesperrt-orig-valid strassen landstrassen landstrassen2
+	-@$(WRITEABLE) $@
+	$(CONVERT2HAFAS) -specsperre=strassen,landstrassen,landstrassen2 \
+	    -nonc ${PERSISTENTTMPDIR}/gesperrt-orig-valid > $@~
+	mv $@~ $@
+	-@$(READONLY) $@
+
+${PERSISTENTTMPDIR}/gesperrt-orig-valid:	gesperrt-orig .check_daily
+	-@$(WRITEABLE) $@
+	${GREPSTRASSEN_VALID} gesperrt-orig > $@~
 	mv $@~ $@
 	-@$(READONLY) $@
 
@@ -598,38 +623,46 @@ obst:	obst-orig
 	mv obst~ obst
 	-@$(READONLY) $@
 
-radwege:	radwege-orig
+radwege:	${PERSISTENTTMPDIR}/radwege-orig-valid
 	-@$(WRITEABLE) $@
-	${PERL} ${MISCSRCDIR}/convert_radwege < radwege-orig | \
+	${CONVERT_RADWEGE} < ${PERSISTENTTMPDIR}/radwege-orig-valid | \
 	    $(COMBINE_STREETS) - > $@~
 	mv $@~ $@
 	-@$(READONLY) $@
 
-radwege_exact:	radwege-orig
+radwege_exact:	${PERSISTENTTMPDIR}/radwege-orig-valid
 	-@$(WRITEABLE) $@
 ## XXX combine streets is buggy, see strassen-combine.t test!
-#	${PERL} ${MISCSRCDIR}/convert_radwege -exact < radwege-orig | \
+#	${CONVERT_RADWEGE} -exact < ${PERSISTENTTMPDIR}/radwege-orig-valid | \
 #	    $(COMBINE_STREETS) - > $@~
-	${PERL} ${MISCSRCDIR}/convert_radwege -exact < radwege-orig > $@~
+	${CONVERT_RADWEGE} -exact < ${PERSISTENTTMPDIR}/radwege-orig-valid > $@~
+	mv $@~ $@
+	-@$(READONLY) $@
+
+${PERSISTENTTMPDIR}/radwege-orig-valid:	radwege-orig .check_daily
+	-@$(WRITEABLE) $@
+	${GREPSTRASSEN_VALID} radwege-orig > $@~
 	mv $@~ $@
 	-@$(READONLY) $@
 
 qualitaet_s:	qualitaet_s-orig
 	-@$(WRITEABLE) $@
-	$(CONVERT_ORIG) -strip-tendencies qualitaet_s-orig > qualitaet_s~
+	$(CONVERT_ORIG) -keep-directive valid -strip-tendencies qualitaet_s-orig |\
+	    ${GREPSTRASSEN_VALID} > qualitaet_s~
 	mv qualitaet_s~ qualitaet_s
 	-@$(READONLY) $@
 
 qualitaet_l:	qualitaet_l-orig
 	-@$(WRITEABLE) $@
-	$(CONVERT_ORIG) -strip-tendencies qualitaet_l-orig > qualitaet_l~
+	$(CONVERT_ORIG) -keep-directive valid -strip-tendencies qualitaet_l-orig  |\
+	    ${GREPSTRASSEN_VALID} > qualitaet_l~
 	mv qualitaet_l~ qualitaet_l
 	-@$(READONLY) $@
 
-handicap_s:	handicap_s-orig berlin .gesperrt.tmp routing_helper-orig
+handicap_s:	handicap_s-orig berlin ${PERSISTENTTMPDIR}/gesperrt-with-handicaps routing_helper-orig
 	-@$(WRITEABLE) $@
 	$(CONVERT_ORIG) -strip-tendencies handicap_s-orig > handicap_s~
-	$(GREPSTRASSEN) -catrx ':q\d' < .gesperrt.tmp |\
+	$(GREPSTRASSEN) -catrx ':q\d' < ${PERSISTENTTMPDIR}/gesperrt-with-handicaps |\
 	    $(GREPSTRASSEN) -inner berlin |\
 	    $(REPLACESTRASSEN) -noglobaldirectives \
 		-catexpr 's/.*:(q\d)/$$1::igndisp;/' \
@@ -640,10 +673,10 @@ handicap_s:	handicap_s-orig berlin .gesperrt.tmp routing_helper-orig
 	mv handicap_s~ handicap_s
 	-@$(READONLY) $@
 
-handicap_l:	handicap_l-orig berlin .gesperrt.tmp
+handicap_l:	handicap_l-orig berlin ${PERSISTENTTMPDIR}/gesperrt-with-handicaps
 	-@$(WRITEABLE) $@
 	$(CONVERT_ORIG) -strip-tendencies handicap_l-orig > handicap_l~
-	$(GREPSTRASSEN) -catrx ':q\d' < .gesperrt.tmp |\
+	$(GREPSTRASSEN) -catrx ':q\d' < ${PERSISTENTTMPDIR}/gesperrt-with-handicaps |\
 	    $(GREPSTRASSEN) -outer berlin |\
 	    $(REPLACESTRASSEN) -noglobaldirectives \
 		-catexpr 's/.*:(q\d)/$$1::igndisp;/' \
@@ -652,9 +685,10 @@ handicap_l:	handicap_l-orig berlin .gesperrt.tmp
 	mv handicap_l~ handicap_l
 	-@$(READONLY) $@
 
-vorfahrt:	vorfahrt-orig
+vorfahrt:	vorfahrt-orig .check_daily
 	-@$(WRITEABLE) $@
-	$(CONVERT2HAFAS) vorfahrt-orig > vorfahrt~
+	${GREPSTRASSEN_VALID} vorfahrt-orig | \
+	    ${CONVERT_ORIG} > vorfahrt~
 	mv vorfahrt~ vorfahrt
 	-@$(READONLY) $@
 
@@ -663,9 +697,9 @@ vorfahrt:	vorfahrt-orig
 # Gefaelle generation in comments_mount or not combining X;X
 # categories into X
 .for f in ${COMMENTS_PARTIAL:Ncomments_route:Ncomments_ferry:Ncomments_misc:Ncomments_cyclepath}
-${f}: ${f}-orig ${ALL_STREETS} ${PERSISTENTTMPDIR}/gesperrt-without-nocross
+${f}: ${f}-orig ${ALL_STREETS} ${PERSISTENTTMPDIR}/gesperrt-without-nocross .check_daily
 	-@$(WRITEABLE) $@
-	cat ${f}-orig | \
+	${GREPSTRASSEN_VALID} ${f}-orig | \
 	    ${GREPSTRASSEN} -v -directive 'ignore=' | \
 	    $(CONVERT2HAFAS) -basefile ${f}-orig - | \
 	    ${RESOLVE_STARS} -sperrefile ${PERSISTENTTMPDIR}/gesperrt-without-nocross \
@@ -692,9 +726,9 @@ comments_cyclepath: comments_cyclepath-orig ${ALL_STREETS} ${PERSISTENTTMPDIR}/g
 # needs special as_of handler. comments_misc, because of a bug
 # in convert2hafas
 .for f in comments_route comments_ferry comments_misc
-${f}: ${f}-orig ${ALL_STREETS} ${PERSISTENTTMPDIR}/gesperrt-without-nocross
+${f}: ${f}-orig ${ALL_STREETS} ${PERSISTENTTMPDIR}/gesperrt-without-nocross .check_daily
 	-@$(WRITEABLE) $@
-	cat ${f}-orig | \
+	${GREPSTRASSEN_VALID} ${f}-orig | \
 	    ${GREPSTRASSEN} -v -directive 'ignore=' | \
 	    $(CONVERT_ORIG) -keep-directive url -keep-directive alias -special as_of - | \
 	    ${RESOLVE_STARS} -sperrefile ${PERSISTENTTMPDIR}/gesperrt-without-nocross \
@@ -1845,6 +1879,18 @@ ${PERSISTENTTMPDIR}/check_nearest.bbd:	strassen landstrassen landstrassen2 frage
 		-strfile faehren \
 		> $@~
 	mv $@~ $@
+
+check-nearest-ignore-remove-unconsumed:
+	${PERL} ${MISCSRCDIR}/check_nearest -ignore check_nearest_ignore \
+		-asbbd \
+		-strfile strassen \
+		-strfile landstrassen \
+		-strfile landstrassen2 \
+		-strfile fragezeichen \
+		-strfile brunnels \
+		-strfile faehren \
+		-remove-unconsumed-ignore \
+		> /dev/null
 
 do-check-nearest:	.check-do-check-nearest
 

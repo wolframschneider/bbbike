@@ -78,6 +78,24 @@ userdel	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 1199
        undef,
        undef,
        undef,
+       {
+         'periodic' => 1,
+         'until' => 1397412000,
+         'text' => 'Rheinstraßenfest in der Rheinstraße zwischen Kaisereiche und Walther-Schreiber-Platz, am 12.04.2013 und 13.04.2013',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              11,
+                              'months',
+                              4
+                            ]
+                          ],
+         'from' => 1397203200,
+         'id' => 10,
+         'data' => 'userdel	2::temp 5644,6936 5533,6753 5424,6584 5370,6486
+'
+       },
        undef,
        undef,
        undef,
@@ -112,8 +130,34 @@ userdel	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 1199
        undef,
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: http://www.myfest36.de/
+userdel	2::temp 11763,10635 11722,10533 11949,10414
+userdel	2::temp 11556,10869 11770,10774 11760,10732 11781,10696 11763,10635 11505,10744 11556,10869 11589,10947 11640,11067
+userdel	2::temp 11958,11045 11897,10887 11841,10747 11824,10708 11781,10696
+userdel	2::temp 11805,10899 11803,10857
+userdel	2::temp 11275,10723 11301,10783 11329,10785 11365,10791 11403,10782 11505,10744 11463,10642 11722,10533
+userdel	2::temp 11841,10747 11770,10774 11799,10848
+userdel	2::temp 11463,10642 11275,10723 11234,10739 11159,10769
+userdel auto	3 11258,10682 11275,10723 11253,10778
+userdel auto	3 11253,10778 11275,10723 11258,10682
+',
+         'periodic' => 1,
+         'until' => 1398981599,
+         'from' => 1398852000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'MyFest 2014: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2014',
+         'type' => 'gesperrt',
+         'id' => 45
+       },
        undef,
        undef,
        undef,
@@ -1967,10 +2011,10 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'from' => undef,
          'id' => 1810,
          'data' => '(Am Neuen Palais, direkter Weg)	2::night -15810,-1274 -15820,-1146 -15854,-656
-(Am Grünen Gitter, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -13857,-1040 -14153,-1135 -14171,-1026
+(Am Grünen Gitter, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -13857,-1040 -14159,-1119 -14171,-1026
 (Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -14171,-1026 -14482,-1043 -14622,-1138 -14865,-1118 -15025,-1096 -15553,-1139 -15651,-1137 -15820,-1146
 (Lennestr. - Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -14614,-1342 -14856,-1223 -14865,-1118
-(Affengang, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -14129,-1258 -14131,-1181 -14153,-1135
+(Affengang, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -14129,-1258 -14131,-1181 -14159,-1119
 ',
          'type' => 'gesperrt'
        },
@@ -2454,7 +2498,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Februar von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März von 6.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -2508,10 +2552,10 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
 #: next_check: 2014-06-01
 #: priority: #A
 userdel	2::temp 6171,10657 6216,10614
-userdel	2::temp 6216,10614 6268,10588 6353,10583 6468,10550 6532,10529 6636,10492 6753,10446 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6985,10597 6972,10665 6918,10854 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6809,11979 6828,12031 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245 8610,12254
+userdel	2::temp 6216,10614 6268,10588 6353,10583 6468,10550 6532,10529 6636,10492 6753,10446 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6985,10597 6972,10665 6918,10854 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6809,11979 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245 8610,12254
 userdel	2::temp 6353,10583 6292,10627 6228,10646 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808
 userdel	2::temp 7033,10396 6851,10416
-userdel auto	3 7039,12314 7383,12095 7460,12054
+userdel auto	3 7039,12314 7383,12095 7429,12070
 userdel auto	3 7115,10612 6972,10665 6818,10725
 userdel auto	3 8600,12165 8538,12245 8546,12279
 userdel auto	3 8600,12165 8538,12245 8522,12187
@@ -2523,13 +2567,13 @@ userdel auto	3 7131,10331 7033,10396 7245,10499
 userdel auto	3 6380,10704 6353,10583 6302,10462
 userdel auto	3 7002,11034 6873,11011 6742,11099
 userdel auto	3 5681,10696 5782,10884 5829,10964
-userdel auto	3 7460,12054 7383,12095 7039,12314
+userdel auto	3 7429,12070 7383,12095 7039,12314
 userdel auto	3 6692,11365 6851,11346 7103,11247
-userdel auto	3 7827,12105 7816,12150 7875,12363
+userdel auto	3 7823,12120 7816,12150 7875,12363
 userdel auto	3 7103,11247 6851,11346 6692,11365
 userdel auto	3 6745,10619 6753,10446 6719,10347
 userdel auto	3 6494,10440 6532,10529 6685,10690
-userdel auto	3 6787,12099 6828,12031 6857,11992
+userdel auto	3 6787,12099 6828,12031 6884,12006
 userdel auto	3 6915,11492 6825,11486 6716,11439
 userdel auto	3 6302,10462 6353,10583 6380,10704
 userdel auto	3 7245,10499 7033,10396 7131,10331
@@ -2540,9 +2584,9 @@ userdel auto	3 6716,11439 6825,11486 6915,11492
 userdel auto	3 8048,12135 8055,12186 8119,12414
 userdel auto	3 7115,11220 6880,11110 6841,11114
 userdel auto	3 8119,12414 8055,12186 8048,12135
-userdel auto	3 6857,11992 6828,12031 6787,12099
+userdel auto	3 6884,12006 6828,12031 6787,12099
 userdel auto	3 6742,11099 6873,11011 7002,11034
-userdel auto	3 7875,12363 7816,12150 7827,12105
+userdel auto	3 7875,12363 7816,12150 7823,12120
 userdel auto	3 7060,10221 7033,10328 7131,10331
 userdel auto	3 6250,10701 6228,10646 6216,10614
 userdel auto	3 8546,12279 8538,12245 8522,12239
@@ -2558,9 +2602,9 @@ userdel auto	3 6524,11583 6809,11570 6980,11583
 userdel auto	3 6131,10939 6025,10746 5866,10492
 userdel auto	3 6719,10347 6753,10446 6745,10619
 userdel auto	3 6681,10959 6824,10904 6740,10755
-userdel auto	3 6540,11754 6778,11742 7058,11809
+userdel auto	3 6540,11754 6778,11742 6980,11790 7058,11809
 userdel auto	3 6740,10755 6824,10904 6681,10959
-userdel auto	3 7058,11809 6778,11742 6540,11754
+userdel auto	3 7058,11809 6980,11790 6778,11742 6540,11754
 userdel auto	3 6841,11114 6880,11110 7115,11220
 userdel auto	3 5829,10964 5782,10884 5681,10696
 userdel auto	3 6685,10690 6532,10529 6494,10440
@@ -3095,7 +3139,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
 ',
          'until' => undef,
          'from' => undef,
-         'text' => 'Fähren F21 und F23: fahren nur ab Karfreitag bis zum 3. Oktober, fahren nicht am Montag',
+         'text' => 'Fähren F21 und F23: fahren nur ab 5. April bis zum 2. November, fahren nicht am Montag',
          'type' => 'gesperrt',
          'id' => 2408
        },
@@ -3164,7 +3208,7 @@ userdel	q2::inwork 5258,11285 5236,10994
          'from' => undef,
          'id' => 2425,
          'data' => '#: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2014-01-09 (Asphaltierungsarbeiten)
+#: last_checked: 2014-02-14 (Asphaltierungsarbeiten)
 #: check_frequency: 30d
 # REMOVED --- userdel	q4::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904
 userdel	q4::inwork; 13085,7904 12870,8087
@@ -3299,8 +3343,8 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        {
          'source_id' => 'IM_020145',
-         'until' => 1393603200,
-         'text' => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt (auch für Radfahrer und Fußgänger), 12.8.2013 06:00 Uhr bis 28.2.2014 17:00 Uhr',
+         'until' => 1402758000,
+         'text' => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt (auch für Radfahrer und Fußgänger), 12.8.2013 06:00 Uhr bis 14.6.2014 17:00 Uhr',
          'from' => 1376193600,
          'id' => 2469,
          'data' => '#: next_check_id: STERNDAMM-2014
@@ -3335,8 +3379,7 @@ userdel	2::inwork 17736,5441 17886,5587
          'text' => 'Landschaftspark Herzberge: nachts gesperrt',
          'from' => undef,
          'id' => 2479,
-         'data' => 'userdel	2::night 13437,10992 13471,10983
-userdel	2::night 17490,13133 17489,13125
+         'data' => 'userdel	2::night 17490,13133 17489,13125
 userdel	2::night 17671,13132 17684,13133
 ',
          'type' => 'gesperrt'
@@ -3357,7 +3400,7 @@ userdel	2::night 17671,13132 17684,13133
          'id' => 2489,
          'data' => '#: XXX bis wann gehen die Bauarbeiten?
 #: by: http://de.wikipedia.org/wiki/Rote_Insel#Um-_und_Ausbau_2013_.28Sch.C3.B6neberger_Schleife.29 (Umbauarbeiten)
-#: last_checked: 2013-12-29
+#: last_checked: 2014-03-01
 #: check_frequency: 30d
 #: priority: #A
 userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
@@ -3391,13 +3434,14 @@ userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
        undef,
        {
          'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1401/nachricht5147.html',
-         'until' => 1393628399,
-         'text' => 'Friedrichsbrücke: ab dem 8.1.2014 bis zum 28.2.2014 Uhr ist die Brücke für den Fuß- und Radwegverkehr voll gesperrt',
+         'until' => undef,
+         'text' => 'Friedrichsbrücke: ab dem 8.1.2014 ist die Brücke für den Fuß- und Radwegverkehr voll gesperrt, Ende unbekannt',
          'from' => 1389135600,
          'id' => 2498,
-         'data' => '#: XXX Aufhebung der Sperrung aus Witterungsgründen möglich
+         'data' => '#: XXX wann wird die Brücke wiedereröffnet?
 #: next_check_id: FRIEDRICHSBRUECKE-2014
-#: next_check: 2014-02-15
+#: last_checked: 2014-03-11
+#: next_check: 2014-03-18
 userdel	2::inwork 10086,12725 10166,12777
 ',
          'type' => 'gesperrt'
@@ -3459,11 +3503,14 @@ userdel	2::inwork 10086,12725 10166,12777
        undef,
        {
          'source_id' => 'IM_020820',
-         'until' => 1401458400,
-         'text' => 'Zimmermannstraßenbrücke über die Wuhle: Baustelle, Straße gesperrt, 02.12.2013 bis Ende Mai 2014',
+         'until' => 1451602799,
+         'text' => 'Zimmermannstraßenbrücke über die Wuhle: Baustelle, Fahrbahn gesperrt, Fußgänger und Radfahrer können passieren, bis Ende 2015',
          'from' => 1385766000,
          'id' => 2527,
-         'data' => '#: add_fragezeichen: Ist die Zimmermannstraßenbrücke trotz der Bauarbeiten trotzdem noch für Fußgänger und Radfahrer passierbar?
+         'data' => '#: next_check_id: ZIMMERMANNSTRBR-2014
+#: last_checked: 2014-02-08
+#: next_check: 2015-12-31
+# REMOVED (ja) --- #: add_fragezeichen: Ist die Zimmermannstraßenbrücke trotz der Bauarbeiten trotzdem noch für Fußgänger und Radfahrer passierbar?
 userdel	2::inwork 21385,9049 21365,9059 21351,9066
 ',
          'type' => 'gesperrt'
@@ -3512,6 +3559,107 @@ userdel	2::inwork 2219,11304 2116,11288
          'text' => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 9.5.2014 15 Uhr bis 11.5.2014 22 Uhr',
          'id' => 2533,
          'type' => 'gesperrt'
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'source_id' => 'IM_021322',
+         'until' => 1402063200,
+         'text' => 'Langhansstr. : Baustelle, Fahrbahn Richtung Prenzlauer Promenade zwischen Heinersdorfer Str. und Prenzlauer Promenade gesperrt, bis 06.06.2014 16:00 Uhr ',
+         'from' => 1392902100,
+         'id' => 2538,
+         'data' => 'userdel	q3::inwork; 12189,16578 12045,16574
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'until' => 1496354399,
+         'text' => 'Grenzallee: vollständige Sperrung zwischen Bergiusstr. (Autobahnausfahrt) und Neuköllnische Allee, ab 24.2.2014 bis Mitte 2017',
+         'from' => 1393110000,
+         'id' => 2540,
+         'data' => 'userdel	2::inwork 14257,6895 14153,6795
+',
+         'type' => 'gesperrt'
+       },
+       undef,
+       {
+         'until' => 1397512800,
+         'text' => 'Großgörschenstr.: die Unterführung an der S-Bahn ist gesperrt, bis voraussichtlich April 2014',
+         'from' => 1393624717,
+         'id' => 2542,
+         'data' => '#: by: http://www.punkt3.de/cms/files/2014-02_punkt3.pdf
+#: by: http://www.lars-oberg.de/aus_dem_wahlkreis/6278820.html
+#: XXX prüfen, ob schon früher geöffnet wird?
+#: next_check: 2014-04-01
+userdel	2::inwork 7882,9490 7960,9466
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'text' => 'Uferweg wegen Bauarbeiten gesperrt',
+         'from' => undef,
+         'id' => 2543,
+         'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
+#: last_checked: 2014-03-01
+userdel	2::inwork -12335,-1725 -12420,-1853
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'text' => 'Wege am Ufer wegen Bauarbeiten gesperrt',
+         'from' => undef,
+         'id' => 2544,
+         'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
+#: last_checked: 2014-03-01
+userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20140305.1100.394979.html',
+         'until' => 1396648800,
+         'text' => 'Wassersportallee und Richterstr.: Sperrungen wegen Bauarbeiten an der Kreuzung Adlergestell, ggfs. auf Gehweg ausweichen, von 17.03.2014 bis 04.04.2014 ',
+         'from' => 1394924400,
+         'id' => 2545,
+         'data' => 'userdel	q4::inwork 22208,1103 22162,1067 22092,999
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_021395',
+         'until' => 1406127600,
+         'text' => 'Golzstr.: Baustelle, Fahrbahn zwischen Lichtenrader Damm und Bahnhofstr. in Richtung S-Bhf. gesperrt, 03.03.2014 08:00 Uhr bis 23.07.2014 17:00 Uhr ',
+         'from' => 1393743600,
+         'id' => 2546,
+         'data' => '#: note: laut BVG navi 03.2014 sogar bis September 2014
+userdel	q4::inwork; 11073,-2037 10983,-2116
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_021400',
+         'until' => 1396303199,
+         'text' => 'Ehrlichstr. Richtung Treskowallee zwischen Eginhardstr. und Treskowallee: Baustelle, Fahrbahn gesperrt, ab 10.03.2014 bis Ende März 2014',
+         'from' => 1394233200,
+         'id' => 2547,
+         'data' => 'userdel	q4::inwork; 18615,8269 18676,8236
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_021410',
+         'until' => 1394924399,
+         'text' => 'Friedrich-Krause-Ufer: Sperrung an der Kreuzung Fennstr., ab 10.03.2014 bis Mitte März 2014',
+         'from' => 1394233200,
+         'id' => 2548,
+         'data' => 'userdel	q4::inwork 7373,14566 7314,14599
+',
+         'type' => 'handicap'
        }
      
 );

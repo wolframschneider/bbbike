@@ -28,7 +28,7 @@ Kulmer Str./Goeben	3 7771,9479 7829,9723 7848,9814 7866,9902
 Goebenstr.: Mittelstreifen	3nocross 7631,9770 7725,9748 7829,9723
 Hermannstr. - Flughafen	3 11884,8492 11898,8362 12083,8411
 Karlshorster - Nöldner	3nocross 15279,10862 15272,10790 15261,10738
-Weydemeyerstr. - Mollstr.	3 11904,13058 11896,13075 11840,13085
+Weydemeyerstr. - Mollstr.	3 11904,13052 11896,13075 11840,13085
 Neue Schönhauser	1 10527,13257 10423,13215 10310,13227
 Hagelberger Str.	3 8777,9601 8774,9534 8679,9544
 Hagelberger Str.	3 9000,9509 8774,9534 8679,9544
@@ -178,9 +178,9 @@ Eichkatzweg	1 925,9644 794,9472
 Zikadenweg	1 703,9538 835,9707 937,9841 1046,9989 1047,10002 1159,10149
 Oberhaardter Weg	1 765,8481 911,8374
 Gustav-Freytag-Str. (Grunewald)	1 834,8273 815,8283 748,8456 765,8481
-Schumannstr.	1 8701,13058 8964,13124
-Albrechtstr. (Mitte)	1 8964,13124 9001,13039 9046,12933 9106,12795
-Charitéstr.	1 8693,12951 8628,13033
+Schumannstr.	1 8701,13058 8957,13134
+Albrechtstr. (Mitte)	1 8957,13134 9001,13039 9046,12933 9106,12795
+Charitéstr.	1 8693,12951 8632,13037
 Spandauer Str. (Mitte)	3nocross 10738,12364 10673,12434 10644,12469 10601,12521
 Siegfriedstr.	1 12340,6947 12477,6975 12664,7013 12810,7047 12843,7093 12872,7134
 Onkel-Herse-Str.	1 13680,4715 13757,4729 13836,4759 13853,4759 13939,4778
@@ -223,7 +223,7 @@ Buttmannstr.	1 8659,16327 8481,16136
 Skalitzer Str./Zeughofstr.	3nocross 12328,10442 12401,10461 12545,10496
 Stralauer/Damaschkestr.	3nocross 13678,10685 13779,10642 13919,10583
 Skalitzer/Admiralstr.	3nocross 11393,10390 11335,10375 11316,10372
-Gutenbergstr.	1 -12045,-757 -12219,-726
+Gutenbergstr.	1 -12045,-757 -12227,-724
 Langhoffstr.	1 19817,14371 19818,14064
 #: by: Thomas Hallmann:
 Lintruper Str.	1 10307,922 10380,757
@@ -236,7 +236,7 @@ Osloer Str.	3nocross 8503,16716 8721,16689 8759,16684 8939,16668
 Müllerstr./Lindower Str.	3nocross 7929,15006 7819,15103 7754,15160 7611,15286
 Adolfstr.	1 7796,15590 7817,15418
 Mimosenweg	2 17668,2187 17657,2213
-Falkenberger/B2: Straßenbahntrasse	3nocross 14621,16563 14619,16672 14619,16682 14608,16772 14558,16907
+Falkenberger/B2: Straßenbahntrasse	3nocross 14619,16551 14619,16672 14619,16682 14608,16772 14558,16907
 # REMOVED (http://taxi-weblog.de/980: seit 2013-09 keine Einbahnstraße mehr) --- #: by: Andreas Mühlhausen (Einbahnstraße nur für Autofahrer) --- Sredzkistr. (ab Parkhaus Kulturbrauerei)	1 11101,14768 10893,14705
 Bahnübergang nur für Fußgänger/Radfahrer	3 * 20624,12133 *
 Zossener Str.: Straßenbahntrasse	3nocross 23080,15700 23218,15671 23411,15632 23568,15603 23617,15594
@@ -496,7 +496,7 @@ Am Juliusturm/Zitadelle: Mittelstreifen	3nocross -2793,14505 -2646,14525 -2597,1
 #: note: Luftbild:
 Thielallee: Mittelstreifen	3nocross 2585,5696 2556,5575 2444,5303
 Kleine Hamburger - Torstr.	3 9749,13582 9670,13637 9580,13600
-Kleine Hamburger - Gartenstr.	3 9749,13582 9670,13637 9531,13797
+Kleine Hamburger - Gartenstr.	3 9749,13582 9670,13637 9535,13801
 Torstr.: Straßenbahntrasse	3nocross 10287,13783 10463,13747 10569,13719
 Torstr.: Straßenbahntrasse	3nocross 10746,13673 10898,13632 11111,13518 11160,13492
 Erlanger Str.: Barriere	3 * 12293,8494 *
@@ -673,7 +673,7 @@ Kurmärkische Str.	3 7337,10396 7429,10366 7444,10479
 Hentigstr.	1 18518,8778 18548,8942
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110309.1150.334660.html (südlicher Abschnitt confirmed)
 Hentigstr.	1 18548,8942 18586,9172 18626,9406
-Oberwallstr.	1 9852,12409 9869,12297 9875,12257 9890,12161
+Oberwallstr.	1 9858,12410 9876,12298 9882,12259 9898,12161
 Prenzlauer Promenade	3nocross 11849,17655 11839,17738 11884,18063
 #: note: keine legale Überquerungsmöglichkeit für Radfahrer, aber dennoch möglich
 Prenzlauer Promenade	3nocross 11884,18063 11894,18146 11907,18246 11914,18303 11950,18529
@@ -744,8 +744,8 @@ Hauffstr.: Poller	3 * 15567,11247 *
 Bohrerzeile: Poller	3 * 15979,23679 *
 Rutenzeile: Poller	3 * 15587,23739 *
 Siedlungsstr.	1 16647,25293 16693,25292
-Oderberger Str.: Durchfahrt verboten	3 10723,14772 10870,14689 *
-Oderberger Str.: Durchfahrt verboten	3 * 10870,14689 10723,14772
+Oderberger Str.: Durchfahrt verboten	3 10723,14772 10864,14692 *
+Oderberger Str.: Durchfahrt verboten	3 * 10864,14692 10723,14772
 #: note: aber der Uferweg muss offensichtlich für Radfahrer doch erreicht werden können...
 Straße 12 (Neukölln): gesperrt für Fahrzeuge aller Art (außer BAB-Versorgung)	2 13883,6682 13881,6634 13915,6592
 Schranke	3 * 10559,2252 *
@@ -781,6 +781,7 @@ Danziger/Knaack/Lychener	3nocross 11154,14985 11056,15009 10881,15047
 #: note: Radfahrer benutzen die Fußgängerampel
 Danziger Str.: Straßenbahntrasse	3nocross 13225,13620 13228,13615 13330,13468
 #: note: Radfahrer nutzen den kleinen Umweg via Ampel an der Winsstr.
+#: XXX_prog dieser Umweg sollte möglichst in die Routenplanung einfließen, auch die zusätzliche Ampel
 Danziger Str.: Straßenbahntrasse	3nocross 11864,14781 11990,14714 12025,14695
 Thaters Privatweg	1 4148,15205 4103,15137 3892,14944 3893,14911 3899,14868 3956,14750
 Heinickeweg	1 2224,14825 2210,14696 2207,14576
@@ -857,7 +858,7 @@ Feldlerchenweg: Schranke	3 * 7000,23095 *
 #: note ^^^
 Auswärtiges Amt	3 9961,12094 10003,12113 9972,12184
 Im Vogtland	1 6657,23334 6684,23308 6727,23287
-Mollstr.: Überquerungsmöglichkeit nur für BVG frei	3nocross 11557,13228 11681,13161 11723,13139
+Mollstr.: Überquerungsmöglichkeit nur für BVG frei	3nocross 11560,13232 11681,13161 11723,13139
 Weidenweg - Str. der Pariser Kommune: Linksabbiegen verboten (Wendemöglichkeit an der Palisadenstr.)	3 13025,12523 12891,12549 12869,12425
 Seestr.: Mittelstreifen	3nocross 6422,15708 6555,15827 6661,15921
 #: note: Öffnung für Radfahrer im Sommer 2012
@@ -975,3 +976,8 @@ Berliner Str.: Straßenbahnhaltestelle	3nocross -11307,133 -11390,72 -11494,-4
 Hubertusstr. - Frankfurter Allee	3 16541,12071 16512,11894 16737,11866
 Ückeritzer Ring: Betonkübel	3 17405,19252 17448,19243 *
 Ückeritzer Ring: Betonkübel	3 * 17448,19243 17405,19252
+Zum Langen Jammer: Poller	3 14480,12932 14411,12951 *
+#: note: wahrscheinlich auch für Radfahrer, aber die Einschränkung ist hier ziemlich sinnlos
+Zum Langen Jammer: Einbahnstraße	1 14682,12874 14588,12901 14536,12916 14480,12932
+# REMOVED (es wurde, allerdings Radfahrer frei) --- #: XXX wird hier eine Einbahnstraße eingerichtet? --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3355&options=4 (Antrag zur Einbahnstraße; Zwischenbericht) --- #: last_checked: 2013-08-14 --- #: next_check: 2014-03-14
+Hosemannstr. (Prenzlauer Berg) [Anliegerstraße zur Mandelstr.]	1 12948,15771 12762,15882

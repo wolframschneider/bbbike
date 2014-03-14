@@ -26,7 +26,7 @@ Winterfeldtplatz	Pl 7080,10098
 Hansaplatz	Pl 6178,12387
 Platz der Republik	Pl 8119,12414
 Oranienburger Tor (Mitte)	Pl 9225,13389
-Nordbahnhof	Pl 9383,13978
+Nordbahnhof	Pl 9383,13986
 Kollwitzplatz	Pl 11229,14422
 Lustgarten	Pl 10176,12506
 Molkenmarkt	Pl 10738,12364
@@ -140,7 +140,7 @@ Zietenplatz	Pl 9000,11727 9075,11756 9171,11777
 Betty-Hirsch-Platz	Pl 2206,7637
 Am Glockenturm	Pl -1398,11803
 Mathilde-Jacob-Platz	Pl 5956,13330
-Charitéplatz	Pl 8602,13075
+Charitéplatz	Pl 8603,13076
 Königin-Luise-Platz	Pl 3707,5758
 Rudolf-Mosse-Platz	Pl 3634,7601
 Leo-Blech-Platz	Pl 1606,8239
@@ -218,6 +218,8 @@ Platz des Volksaufstandes von 1953	Pl 9058,11564
 Platz A	Pl 12799,19242
 Platz des 9. November 1989	Pl 10134,16534 9998,16547
 Schindler-Platz	Pl 8855,3997
+Johannes-Fest-Platz	Pl 18778,8663
+Brandenburgplatz	Pl 23346,5723
 Kottbusser Tor	Pl 11393,10390
 Anhalter Bahnhof	Pl 8947,10956
 Flughafen Tempelhof	Pl 9884,8265
@@ -341,7 +343,7 @@ Neuer Markt (Potsdam)	Pl -12865,-1462
 Habermannplatz	Pl 4715,8977
 Birger-Forell-Platz	Pl 4788,8318
 Brabanter Platz	Pl 4473,8351
-Kulturforum	Pl 7975,11434
+Kulturforum	Pl 7970,11441
 Agathe-Lasch-Platz	Pl 3111,10116
 Bocksfeldplatz	Pl -4312,11720
 Metzer Platz	Pl -3715,13003

@@ -15,7 +15,7 @@ von der Brandenburgischen in die Paderborner: bereits an der Ampel Zähringerstr.
 zur Pasewalker Straße: bei der Ampel an der Rothenbachstr. die Straßenseite wechseln	CP2; 11950,18529 11934,18576
 abbiegender Waldweg zur Köpenicker Str. ist nicht ausgeschildert	CP2; 20869,7116 20887,7267
 abgehender Waldweg ist etwas versteckt, Bordstein muss überquert werden	CP2; 20887,7267 20869,7116
-Zugang durch Betonabsperrung	CP2; 21221,12484 21190,12515
+Zugang durch Betonabsperrung	PI; 21221,12484 21205,12489 21200,12512 21191,12516
 am Gartenbauamt abbiegen	CP2; 7658,11947 7634,11920
 Schillerstr. Richtung Ernst-Reuter-Platz: zunächst linken Gehweg bis zur Ampel am Ernst-Reuter-Platz benutzen	CP; 4574,11587 4900,11626 4838,11697
 Hardenbergstr. - Schillerstr.: bereits an der Knesebeckstraße auf den linken Gehweg wechseln	PI; 4919,11605 4900,11626 4574,11587
@@ -49,7 +49,7 @@ Klingelhöferstr. - Köbisstr.: bereits an der Ampel Stülerstr./Tiergartenstr. die
 Blissestr. - Am Volkspark: bereits an der Ampel Mecklenburgische Str. auf die linke Seite wechseln	PI; 4783,8557 4784,8508 4960,8440
 Lietzenburger Str. - Rankestr.: bereits an der Ampel Bundesallee/Lietzenburger Str. auf den linken Gehweg wechseln	PI; 5458,10443 5529,10453 5578,10529 5636,10626
 weiter links auf Uferweg	CP; 6334,14756 5972,14820 5873,14847
-An der Wuhlheide - Wuhlewanderweg: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21470,5809 21569,5730 21596,5693 21602,5685 21744,5804
+An der Wuhlheide - Wuhlewanderweg: ggfs. bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (insbesondere mit Anhänger oder mit Lastenrad wenig Platz auf dem Mittelstreifen)	PI; 21303,5826 21365,5832 21470,5809 21569,5730 21596,5693 21602,5685 21744,5804
 An der Wuhlheide - Alte Försterei: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21653,6037 21737,6068 21832,6129 21869,6190 21958,6248 22000,6245
 Wuhlewanderweg - Lindenstr.: zunächst linken Gehweg benutzen, an der Cardinalstr. oder Ampel Joachimstr. die Straßenseite wechseln	CP; 21744,5804 21602,5685 21706,5541
 Mariendorfer Damm - Am Teltowkanal: bereits an der Ullsteinstr. auf den linken Gehweg wechseln	PI; 9207,5185 9196,5272 9171,5263
@@ -88,7 +88,7 @@ als "Wiesenweg" ausgeschildert	CS; 52215,83681 52346,83150
 Richtung Bellevuestr. und Kemperplatz	CS; 8548,11571 8502,11564 8442,11555
 Ausgeschildert als Kemperplatz	CP2; 8203,11686 8209,11671
 Richtung Linkstr.	CS; 8573,11404 8554,11386 8474,11350
-Einfahrt gegenüber Waldcafe	CP2; 30041,5329 27096,5828
+Einfahrt gegenüber Waldcafe	CP2; 30038,5338 29450,5435
 Zur Hackerstr.: Hausdurchgang benutzen	CP2; 4971,6345 4985,6370
 Lützowplatz - Wichmannstr.: Fußgängerampel links benutzen	CP; 6918,10854 6824,10904 6681,10959
 Lützowplatz - Schillstr.: Fußgängerampel links benutzen	CP; 6918,10854 6824,10904 6740,10755
@@ -257,7 +257,7 @@ Loewenhardtdamm - Höhndorfstr.: bereits an der General-Pape-Str. auf den linken 
 Ausgeschildert zum Bayernring	CP2; 8531,8404 8454,8574
 Mehringdamm - Wilhelmshöhe: bereits an der Fidicinstr. die Straßenseite wechseln	PI; 9224,9053 9225,9111 9186,9107
 Kaiser-Wilhelm-Str. - Langkofelweg: bereits an der Ampel Edenkobener Weg die Straßenseite wechseln	PI; 6996,3761 6957,3699 6998,3596
-Altentreptower Str. - Wuhlgartenweg: zum Linksabbiegen frühzeitig auf die Fahrbahn oder den linken Gehweg wechseln	PI; 21573,12140 21307,12132 21282,12115
+Altentreptower Str. - Wuhlgartenweg: zum Linksabbiegen frühzeitig auf die Fahrbahn oder den linken Gehweg wechseln	PI; 21573,12140 21400,12135 21307,12132 21282,12115
 Heerstr. - Preußenallee: bereits an der Kreuzung Teufelsseestr./Heerstr. auf die linke Straßenseite wechseln	PI; 504,11243 571,11255 541,11464
 Preußenallee - Heerstr.: auf der linken Gehwegseite bis zur Ampel Länderallee vorfahren und dann die Straßenseite wechseln	CP; 541,11464 571,11255 704,11273
 Schorlemerallee - Gregor-Mendel-Str.: etwa 20 Meter vor der Kreuzung die Straßenseite wechseln	PI; 3643,6519 3664,6523 3650,6665
@@ -358,7 +358,7 @@ Am Tierpark [Nebenfahrbahn] - Am Tierpark: den linken Gehweg bis zur Ampel benut
 Salvador-Allende-Str. - Abzweig: bereits an der Ampel Fürstenwalder Damm auf den linken Gehweg wechseln	PI; 23402,5483 23403,5385 23428,5382
 Abzweig - Salvador-Allende-Str.: auf den linken Gehweg bis zur Ampel Friedrichshagener Str. fahren	CP; 23428,5382 23403,5385 23404,5325
 Michael-Brückner-Str. - Sterndamm: an der Ampel Sterndamm besteht vom Radweg aus keine Möglichkeit zum Linksabbiegen, deshalb bereits an der Ampel Hasselwerderstr. auf den linken Gehweg wechseln	PI; 17960,5511 17886,5587 17736,5441
-Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17156,6235 17056,6133 17070,6115
+Rixdorfer Str. - KGA An der Südostallee: wegen einer Leitplanke zwischen Radweg und Fahrbahn bereits 40 Meter vorher auf die Fahrbahn wechseln	CP; 17160,6239 17056,6133 17070,6115
 Indira-Gandhi-Str. - Orankeweg: bereits an der Fußgängerampel Gounodstr. auf den linken Gehweg wechseln	PI; 14597,15970 14609,15921 14720,15905
 Köthener Brücke - Gleisdreieckpark: ab der Ampel den linken Gehweg benutzen	PI; 8430,10710 8362,10779 8357,10764
 Richtung Blockdammwegbrücke fahren	PI; 17729,8850 17754,8863 17760,8853
@@ -393,6 +393,9 @@ Britzer Park - Buckower Damm: linken Gehweg bis zur Ampel benutzen	CP; 12805,402
 Magdalenenstr. - Frankfurter Allee: linken Gehweg bis zur Ampel benutzen	CP; 16158,12191 16127,11950 16207,11937
 Malchower Chaussee - Hohenschönhauser Weg: bereits an der Kreuzung Malchower Chaussee/Ortnitstr. auf den linken Radweg wechseln	PI; 15611,18603 15600,18551 15825,18385
 Bornholmer Str. - Tegnerstr.: bereits an der Ampel Schönfließer Str. auf den linken Gehweg wechseln	PI; 10620,16497 10699,16492 10708,16579
-Dietzgenstr. - (Am Nordgraben): bereits am Kräuterweg auf den linken Gehweg wechseln	PI; 10083,21848 10097,21809 10275,21793
+Dietzgenstr. - (Am Nordgraben): bereits am Kräuterweg auf den linken Gehweg wechseln	PI; 10083,21848 10097,21809 10177,21802
 Frankfurter Allee - Alte Frankfurter Allee: ggfs. schon an der Ampel Atzpodienstr. auf den linken Gehweg wechseln	PI; 16413,11906 16512,11894 16535,11920
 Frankfurter Allee - Hubertusstr.: ggfs. schon an der Ampel Atzpodienstr. auf den linken Gehweg wechseln	PI; 16413,11906 16512,11894 16541,12071
+Storkower Str.: ausgeschildert Hausnummern 134-156	CP2; 13737,14204 13639,14133
+Storkower Str.: ausgeschildert Finanzamt	CP2; 13784,13908 13715,14018
+Otto-Braun-Str: linken Gehweg benutzen, an der Kreuzung Mollstr. ggfs. die Straßenseite wechseln	CP; 11326,13196 11368,13170 11451,13301
