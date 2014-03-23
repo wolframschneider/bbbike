@@ -9,7 +9,7 @@
 # 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5898
 #: note: oder man fährt auf dem mit zahlreichen Engstellen zugestellten Radweg, muss dann aber ggfs. warten
-#: last_checked: 2014-03-07
+#: last_checked: 2014-03-21
 #: valid: -20140523
 Bergmannstr.: während der Bauarbeiten zwischen Heim- und Friesenstr. Umleitung über gepflasterte Fahrbahn	Q2 9973,9232 9880,9233 9793,9241
 # 
@@ -244,7 +244,7 @@ Alt-Tegel: Kopfsteinpflaster	Q2- 1907,20265 1753,20191 1668,20156 1529,20131
 Alt-Tegel: Kopfsteinpflaster	Q2- 1543,20060 1630,20097 1668,20156
 #: XXX wird hier vielleicht asphaltiert werden?
 #: XXX Baumaßnahme 2.22 (Realisierung nach 2011)
-#: last_checked: 2014-03-08
+#: last_checked: 2014-03-21
 #: check_frequency: 90d
 Mariannenstr: mäßiges bis gutes Kopfsteinpflaster, 25 km/h möglich	Q1- 11512,10105 11616,10288 11671,10402
 Hochstr.: Kopfsteinpflaster	Q2 9059,16038 8923,15850
@@ -6805,7 +6805,7 @@ Bebelplatz: gepflastert	Q1 9743,12239 9702,12307 9656,12386
 Bebelplatz: gepflastert	Q1 9674,12231 9702,12307 9734,12395
 (Yorckstr. - Park am Gleisdreieck): Beton	Q0 8358,9568 8357,9598 8353,9642 8350,9685 8349,9697
 (Park am Gleisdreieck, Querweg): Beton	Q0 8335,9702 8349,9697 8446,9670 8497,9654 8540,9644
-(Park am Gleisdreieck, Berlin-Leipzig): Asphalt	Q0 8341,10721 8332,10637 8328,10585 8296,10438 8278,10384 8309,10368 8315,10347 8333,10167 8360,10133 8338,9971 8335,9702 8333,9583
+(Park am Gleisdreieck, Berlin-Leipzig): Asphalt	Q0 8341,10721 8332,10637 8328,10585 8296,10438 8278,10384 8309,10368 8315,10347 8333,10167 8360,10133 8338,9971 8335,9702 8330,9610 8338,9593
 (Park am Gleisdreieck, westlicher Weg): Asphalt	Q0 8336,10829 8318,10738 8270,10613 8264,10460 8257,10440 8237,10418 8192,10354 8180,10282 8145,10090
 (Park am Gleisdreieck, Generalszug): Beton	Q0 8338,9971 8521,9911 8571,9896 8652,9870 8733,9841
 (Park am Gleisdreieck, östlicher Weg): Kopfsteinpflaster	Q2 8775,10289 8780,10248 8726,10056
@@ -8101,8 +8101,8 @@ Zu den Gosener Bergen: Asphalt	Q0 30722,-2337 30640,-2803
 (Straße zur Krampenburg - Uferweg am Langen See): Waldweg, zweispurig	Q2- 26676,-36 26479,-119
 Kuglerstr.: Asphalt	Q0- 11750,16116 11680,16151 11618,16183
 Kuglerstr.: Asphalt mit leichten Schäden	Q1+ 12030,15968 11961,16002 11899,16037
-Kuglerstr.: Asphalt	Q0- 11899,16037 11859,16058
-Kuglerstr.: Asphalt mit leichten Schäden	Q1+ 11859,16058 11750,16116
+Kuglerstr.: Asphalt	Q0- 11899,16037 11852,16061
+Kuglerstr.: Asphalt mit leichten Schäden	Q1+ 11852,16061 11750,16116
 (Schönhauser Str. - Rosenthaler Str.): Asphalt	Q0 11858,21541 11889,21543
 (Nisbléstr. - Schönhauser Str.): Asphalt	Q0 11838,21580 11858,21541
 Schützenstr. (Französisch Buchholz): Asphalt	Q0 11959,22696 11449,23088 11353,23154
@@ -8505,7 +8505,7 @@ Schneeammerweg: unbefestigte Straße	Q2 13329,20299 13420,20236
 (an der Panke - Mauerweg): Asphalt	Q0 7878,14514 7889,14519 7943,14453 7989,14478 8050,14558 8103,14582 8232,14689
 Uferweg: Asphalt mit Schäden	Q2+ 7612,14449 7561,14458 7426,14539 7373,14566
 Uferweg: wassergebundene Decke	Q1 7746,14408 7661,14398 7597,14417
-#: note: auf der Fahrbahn
+#: note: dieses kurze Stück hat auf der Fahrbahn Kopfsteinpflaster, Radwege weiterhin Verbundsteinpflaster
 Quitzowstr.: Kopfsteinpflaster	Q2 7080,14398 7104,14403
 (Goerdelersteg - Beusselstr.): Beton	Q0 3625,14230 3610,14219 3655,14237
 (Goerdelersteg - Beusselstr.): Verbundsteinpflaster mit großen Fugen, unangenehm zu fahren	Q2- 3655,14237 4616,14483
@@ -8654,7 +8654,7 @@ Treitschkestr.: Betonplatten	Q0 5062,6295 4997,6331 4971,6345 4854,6413
 An den Eldenaer Höfen: Verbundsteinpflaster	Q1+ 14449,12833 14480,12932
 An den Eldenaer Höfen: Verbundsteinpflaster	Q1+ 14509,12819 14536,12916
 An den Eldenaer Höfen: Verbundsteinpflaster	Q1+ 14588,12901 14560,12808
-An den Eldenaer Höfen: Kopfsteinpflaster	Q2 14376,12849 14449,12833 14509,12819 14560,12808 14594,12800
+An den Eldenaer Höfen: Kopfsteinpflaster	Q2 14376,12849 14449,12833 14509,12819 14560,12808 14556,12781
 (zur Pablo-Neruda-Bibliothek): Asphalt/Beton	Q0 14020,12261 14008,12181
 (an den Gebäuden der Deutschen Rentenversicherung): Asphalt	Q0 15322,11335 15273,11350 15168,11327 15058,11250
 (an den Gebäuden der Deutschen Rentenversicherung): schlechtes Kopfsteinpflaster	Q3+ 15058,11250 15010,11170
@@ -9147,7 +9147,7 @@ Lichterfelder Ring: Asphalt mit einigen Schäden	Q0- 5061,409 5448,455 5486,461 5
 Schwäbische Str.: etwas welliger Asphalt	Q1+ 6728,9457 6771,9458 6851,9365
 Schwäbische Str.: neuer Asphalt	Q0 6727,9497 6771,9458
 Krügerstr.: Kopfsteinpflaster	Q2 12013,16120 12075,16144
-Krügerstr.: Beton und Asphalt	Q0- 12013,16120 11925,16086 11859,16058 11714,16015 11694,16034
+Krügerstr.: Beton und Asphalt	Q0- 12013,16120 11926,16088 11852,16061 11714,16015 11694,16034
 Am Schwanenberg: Parkweg	Q1 15752,9385 15793,9334
 Tunnelstr.: Verbundsteinpflaster	Q1+ 15728,9415 15752,9385
 Regatta-Ufer: Parkweg	Q1 15682,9472 15632,9430 15741,9326 15778,9311 15793,9334
@@ -9261,10 +9261,10 @@ Röblingstr.: Verbundsteinpflaster	Q1 7598,5926 7607,5944
 Virchowstr.: Kopfsteinpflaster	Q2 12784,13610 12766,13621 12743,13634
 (Borussenstr. - Kronprinzessinnenweg): Verbundsteinpflaster	Q1+ -4134,1984 -4166,1941 -4180,1941
 (Rasthof Dreilinden): Asphalt	Q0 -4003,1234 -3994,1170 -3642,1199 -3577,1148
-#: next_check_id: RATHAUSSTR-2014
+#: next_check_id: SPANDAUERSTR-2014
 #: XXX wahrscheinlich wird nach den Bauarbeiten die Fahrbahn besser sein
-#: last_checked: 2014-03-11
-#: check_frequency: 30d
+#: last_checked: 2014-03-19
+#: check_frequency: 7d
 Spandauer Str.: mäßiger Asphalt im Bereich Kreuzung Rathaustr.	Q1 10431,12709 10601,12521 10644,12469
 #: next_check_id: INVALIDENSTRMOABIT-2014
 #: XXX wahrscheinlich wird nach den Bauarbeiten die Fahrbahn besser sein
@@ -9311,6 +9311,10 @@ Schwarzwurzel-Park: Gehwegplatten	Q0- 20698,18359 20814,18341 20823,18329
 (Pasewalker Str. - Vesaliusstr.): Beton	Q0 11913,19144 11904,19153 11918,19185 11896,19162 11884,19169
 (Pasewalker Str. - Vesaliusstr.): Gehwegplatten	Q0- 11884,19169 11841,19188 11763,19191
 (Bleicheroder Str. - Pasewalker Str.): Gehwegplatten	Q1 11845,19121 11884,19169 11895,19183 11912,19279 11927,19308
+(Flaschenhalspark, Weg entlang den Bahngleisen): Beton	Q0 8423,9532 8414,9366 8393,9293 8374,9291
+(Yorckstr. - Flaschenhalspark): Beton	Q0 8358,9568 8359,9537 8354,9504 8350,9461 8348,9449 8339,9448
+(Flaschenhalspark, Berlin-Leipzig): Asphalt	Q0 8339,9560 8339,9448 8374,9291 8381,9247 8334,9085 8353,9072 8367,9006 8374,9074 8389,9087
+Am Lokdepot: Asphalt	Q0 8389,9017 8389,9087
 ######################### User Contributions #################################
 #: by: anonymous vvv
 # 
@@ -10923,12 +10927,12 @@ Wriezener Str.: Kopfsteinpflaster	Q2 16597,15228 16522,15258 16354,15323 16208,1
 #: corrected_by: srt (geteert -> ...) vvv
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5230 vvv
 #: XXX werden die restlichen Abschnitte auch neu asphaltiert? vvv
-#: last_checked: 2014-03-04 (nur der Mittelteil ist neu asphaltiert) vvv
-#: next_check: 2014-05-04 vvv
+#: last_checked: 2014-03-18 (nur der Mittelteil ist neu asphaltiert) vvv
+#: check_frequency: 60d vvv
 Roedernstr.: Asphalt mit Schäden	Q1- 16208,15379 16083,15434
 Roedernstr.: Asphalt mit Schäden	Q1- 15712,15594 15552,15660
+#: check_frequency ^^^
 #: last_checked ^^^
-#: next_check ^^^
 #: XXX ^^^
 #: by ^^^
 #: corrected_by ^^^
@@ -22798,7 +22802,8 @@ Eislebender Str. (Wilmersdorf, Charlottenburg): Kopfsteinpflaster	Q2 5686,10468 
 Los-Angeles-Platz: Kopfsteinpflaster	Q1 5681,10696 5822,10609
 #: corrected_by: srt ("neues Kopfsteinpflaster" -> )
 Elisabethkirchstr.: Kleinsteinpflaster	Q1- 9936,14085 9901,14197 9856,14204 9769,14175 9750,14132
-Greifenhagener Str.: Kopfsteinpflaster	Q1 11123,15851 11150,15908
+#: corrected_by: srt (Q1 -> Q2+)
+Greifenhagener Str.: Kopfsteinpflaster	Q2+ 11123,15851 11150,15908
 #: corrected_by: srt (Q2 -> Q0, Asphalt mit Löchern und Flicken -> Asphalt)
 Gethsemanestr.: Asphalt	Q0 11158,15739 11191,15810 11123,15851
 Zehdenicker Str.: Kopfsteinpflaster	Q2 10599,13775 10480,13871

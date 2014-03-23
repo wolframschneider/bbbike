@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2005,2006,2007,2008,2009,2010,2011,2012,2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 2005,2006,2007,2008,2009,2010,2011,2012,2013,2014 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -85,7 +85,7 @@ sub run {
 
     my $filename = param("gpxfile");
     if (defined $filename) {
-	(my $ext = $filename) =~ s{^.*\.}{.};
+	(my $exts = $filename) =~ s{^.*?\.}{.}; # preserve e.g. .gpx or .trk.gz
 	require Strassen::Core;
 	require File::Temp;
 	my $fh = upload("gpxfile");
@@ -93,7 +93,7 @@ sub run {
 	    $self->{errormessageupload} = "Upload-Datei fehlt!";
 	} else {
 	    my($tmpfh,$tmpfile) = File::Temp::tempfile(UNLINK => 1,
-						       SUFFIX => $ext);
+						       SUFFIX => $exts);
 	    while (<$fh>) {
 		print $tmpfh $_;
 	    }
@@ -1418,9 +1418,7 @@ EOF
     }
     $html .= <<EOF;
   <input type="hidden" name="zoom" value="@{[ $zoom ]}" />
-  Upload einer GPX-Datei: <input type="file" name="gpxfile" />
-  <br />
-  <button>Zeigen</button>
+  Upload einer GPX-Datei: <input type="file" name="gpxfile" onchange="this.form.submit()"/>
 </form>
 
 </div>

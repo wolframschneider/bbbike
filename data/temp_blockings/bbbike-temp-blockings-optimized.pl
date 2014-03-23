@@ -1863,7 +1863,28 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 22111,4562 22093,4499 22076,4422
+userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22153,4840 22196,4847 22175,4730 22138,4661 22133,4644 22111,4562
+userdel	2::temp 22133,4644 22074,4664
+# REMOVED --- userdel	2::temp 22111,4562 22162,4546 22214,4548 22324,4586 22314,4604 22355,4660 22365,4676 22395,4678
+',
+         'periodic' => 1,
+         'until' => 1402869599,
+         'from' => 1402610400,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              14,
+                              'months',
+                              6
+                            ]
+                          ],
+         'text' => 'Köpenicker Sommer: Veranstaltung, folgende Straßen sind gesperrt: Alt-Köpenick, Schlossplatz, Schlossinsel und Luisenhain (14.6.2014 - 15.6.2014)',
+         'type' => 'gesperrt',
+         'id' => 1702
+       },
        undef,
        undef,
        undef,
@@ -3257,7 +3278,7 @@ userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Winter: 18.00 bis 6.00 Uhr',
+         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Sommer: 21.00 bis 6.00 Uhr',
          'from' => undef,
          'id' => 2454,
          'data' => 'Kleistpark	2::night 7209,9507 7275,9506 7307,9528 7351,9503 7386,9502 7414,9523 7430,9576 7416,9625 7391,9645 7347,9644 7310,9622 7277,9652 7216,9657
@@ -3435,13 +3456,12 @@ userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
        {
          'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1401/nachricht5147.html',
          'until' => undef,
-         'text' => 'Friedrichsbrücke: ab dem 8.1.2014 ist die Brücke für den Fuß- und Radwegverkehr voll gesperrt, Ende unbekannt',
+         'text' => 'Friedrichsbrücke: ab dem 8.1.2014 ist die Brücke für den Fuß- und Radwegverkehr voll gesperrt, Ende der Sperrung unbekannt',
          'from' => 1389135600,
          'id' => 2498,
          'data' => '#: XXX wann wird die Brücke wiedereröffnet?
 #: next_check_id: FRIEDRICHSBRUECKE-2014
-#: last_checked: 2014-03-11
-#: next_check: 2014-03-18
+#: last_checked: 2014-03-19
 userdel	2::inwork 10086,12725 10166,12777
 ',
          'type' => 'gesperrt'
@@ -3641,23 +3661,72 @@ userdel	q4::inwork; 11073,-2037 10983,-2116
 ',
          'type' => 'handicap'
        },
+       undef,
+       undef,
        {
-         'source_id' => 'IM_021400',
-         'until' => 1396303199,
-         'text' => 'Ehrlichstr. Richtung Treskowallee zwischen Eginhardstr. und Treskowallee: Baustelle, Fahrbahn gesperrt, ab 10.03.2014 bis Ende März 2014',
-         'from' => 1394233200,
-         'id' => 2547,
-         'data' => 'userdel	q4::inwork; 18615,8269 18676,8236
+         'source_id' => 'IM_021474',
+         'until' => 1400860800,
+         'text' => 'Scheffelstr.: Baustelle, Fahrtrichtung Richtung Osten zwischen Eldenaer Brücke und Paul-Junius-Str., gesperrt 17.03.2014 08:00 Uhr bis 23.05.2014 18:00 Uhr ',
+         'from' => 1394953200,
+         'id' => 2549,
+         'data' => 'userdel	q4::inwork; 15010,12855 15074,12850 15098,12849
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'IM_021477',
+         'until' => 1396627200,
+         'text' => 'Suermondtstr.: Baustelle, an der Kreuzung Degnerstr., Radfahrer dürfen über den Gehweg fahren, sowie Einbahnstraßenregelung in der Degnerstr. und Hedwigstr., 17.03.2014 08:00 Uhr bis 04.04.2014 18:00 Uhr ',
+         'from' => 1394953200,
+         'id' => 2551,
+         'data' => 'userdel	q2::inwork; 16520,16200 16656,16157
+userdel	q2::inwork 16656,16157 16616,16046
+userdel	q4::inwork; 16537,15827 16563,15900 16616,16046 16505,16096 16520,16200
 ',
          'type' => 'handicap'
        },
        {
-         'source_id' => 'IM_021410',
-         'until' => 1394924399,
-         'text' => 'Friedrich-Krause-Ufer: Sperrung an der Kreuzung Fennstr., ab 10.03.2014 bis Mitte März 2014',
-         'from' => 1394233200,
-         'id' => 2548,
-         'data' => 'userdel	q4::inwork 7373,14566 7314,14599
+         'until' => undef,
+         'text' => 'Siemensstr.: Umbau der Kreuzung Erna-Samuel-Str., Fahrbahn gesperrt',
+         'from' => undef,
+         'id' => 2552,
+         'data' => '#: XXX wie sieht die Kreuzungssituation danach aus?
+#: last_checked: 2014-03-12
+userdel	q4::inwork 5443,14028 5299,14049
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'until' => undef,
+         'text' => 'Gudvanger Str.: Bauarbeiten zwischen Wichertstr. und Erich-Weinert-Str., Fahrbahn gesperrt',
+         'from' => undef,
+         'id' => 2554,
+         'data' => '#: XXX bis wann?
+#: last_checked: 2014-03-21
+#: next_check: 2014-04-01
+userdel	q3::inwork 11673,16003 11567,15842
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'LS/721-E/14/010	',
+         'until' => 1405720799,
+         'text' => 'zwischen Eickstedt und Schmölln: Instandsetzung der Brücke über den Mühlenbach, Straße gesperrt, 24.03.2014 bis 18.07.2014',
+         'from' => 1395615600,
+         'id' => 2555,
+         'data' => 'userdel	2::inwork 53619,100127 54533,100204
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_021515',
+         'until' => 1395640800,
+         'text' => 'Invalidenstr.: zwischen Gartenstr. und Bergstr. Baustelle, Fahrbahn gesperrt, ab: 21.03.2014 07 Uhr bis 24.03.2014 früh ',
+         'from' => 1395183600,
+         'id' => 2556,
+         'data' => 'userdel	q4::inwork 9383,13986 9676,14046
 ',
          'type' => 'handicap'
        }

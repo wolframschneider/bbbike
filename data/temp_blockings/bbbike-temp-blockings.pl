@@ -1926,7 +1926,7 @@ EOF
        text  => 'Berliner Allee Richtung stadtauwärts, zwischen Langhanstr. und Lindenallee Baustelle, Fahrtrichtung gesperrt (bis Ende 2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 13512,15909 13623,15954 13737,15994 13826,16026 14014,16106 14045,16120 14248,16202 14371,16252
+userdel	q4; 13512,15909 13623,15954 13737,15994 13826,16026 14014,16106 14045,16120 14248,16202 14346,16241
 EOF
      },
      { from  => 1138319749, # 2006-01-27 00:55
@@ -4519,7 +4519,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_002776',
        data  => <<EOF,
-userdel	1 15388,16502 15142,16499 15134,16499 14809,16525 14619,16551
+userdel	1 15142,16499 15134,16499 14809,16525 14619,16551
 EOF
      },
      { from  => 1147721063, # 2006-05-15 21:24
@@ -5184,7 +5184,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_84063',
        data  => <<EOF,
-userdel	1::inwork 14619,16551 14809,16525 15134,16499 15142,16499 15388,16502
+userdel	1::inwork 14619,16551 14809,16525 15134,16499 15142,16499
 EOF
      },
      { from  => 1152566231, # 2006-07-10 23:17
@@ -5633,7 +5633,7 @@ EOF
        text  => 'Berlin Weißensee, Buschallee, Weißensee Richtung Ahrensfelde Zwischen Einmündung Berliner Allee und Kreuzung Hansastraße Baustelle, gesperrt bis 15.09.2006 18:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 14619,16551 14809,16525 15134,16499 15142,16499 15388,16502 15432,16500
+userdel	1::inwork 14619,16551 14809,16525 15134,16499 15142,16499 15432,16500
 EOF
      },
      { from  => 1156478400, # 2006-08-25 06:00
@@ -14537,11 +14537,11 @@ EOF
 userdel	2::inwork 26001,-6257 26057,-6241 26146,-6218
 EOF
      },
-     { from  => $isodate2epoch->("2013-06-13 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2013-06-16 23:59:59"),
+     { from  => $isodate2epoch->("2014-06-13 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2014-06-15 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 6]],
-       text  => 'Köpenicker Sommer: Veranstaltung, folgende Straßen sind gesperrt: Alt-Köpenick, Schlossplatz, Schlossinsel und Luisenhain (14.6.2013 bis 16.6.2013)',
+       text  => 'Köpenicker Sommer: Veranstaltung, folgende Straßen sind gesperrt: Alt-Köpenick, Schlossplatz, Schlossinsel und Luisenhain (14.6.2014 - 15.6.2014)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 22111,4562 22093,4499 22076,4422
@@ -19801,7 +19801,7 @@ EOF
        text  => 'Berliner Allee (Weißensee): Veranstaltung (Blumenfest Weißensee), Fahrtrichtung gesperrt stadteinwärts vom Weißen See bis zum Antonplatz, 9.8.2013 bis 11.8.2013',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::temp; 14499,16341 14371,16252 14248,16202 14045,16120 14014,16106 13826,16026 13737,15994 13623,15954 13512,15909
+userdel	q4::temp; 14499,16341 14346,16241 14248,16202 14045,16120 14014,16106 13826,16026 13737,15994 13623,15954 13512,15909
 EOF
      },
      { from  => 1313913600, # 2011-08-21 10:00
@@ -22043,14 +22043,13 @@ EOF
      },
      { from  => $isodate2epoch->("2014-01-08 00:00:00"), # 1381651200, # 2013-10-13 10:00
        until => undef, # $isodate2epoch->("2014-02-28 23:59:59"), # 1382133600, # 2013-10-19 00:00
-       text  => 'Friedrichsbrücke: ab dem 8.1.2014 ist die Brücke für den Fuß- und Radwegverkehr voll gesperrt, Ende unbekannt',
+       text  => 'Friedrichsbrücke: ab dem 8.1.2014 ist die Brücke für den Fuß- und Radwegverkehr voll gesperrt, Ende der Sperrung unbekannt',
        type  => 'gesperrt',
        source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1401/nachricht5147.html',
        data  => <<EOF,
 #: XXX wann wird die Brücke wiedereröffnet?
 #: next_check_id: FRIEDRICHSBRUECKE-2014
-#: last_checked: 2014-03-11
-#: next_check: 2014-03-18
+#: last_checked: 2014-03-19
 userdel	2::inwork 10086,12725 10166,12777
 EOF
      },
@@ -22532,7 +22531,7 @@ userdel	q4::inwork; 11073,-2037 10983,-2116
 EOF
      },
      { from  => 1394233200, # 2014-03-08 00:00
-       until => 1396303199, # 2014-03-31 23:59
+       until => 1395350761, # 1396303199, # 2014-03-31 23:59
        text  => 'Ehrlichstr. Richtung Treskowallee zwischen Eginhardstr. und Treskowallee: Baustelle, Fahrbahn gesperrt, ab 10.03.2014 bis Ende März 2014',
        type  => 'handicap',
        source_id => 'IM_021400',
@@ -22547,6 +22546,82 @@ EOF
        source_id => 'IM_021410',
        data  => <<EOF,
 userdel	q4::inwork 7373,14566 7314,14599
+EOF
+     },
+     { from  => 1394953200, # 2014-03-16 08:00
+       until => 1400860800, # 2014-05-23 18:00
+       text  => 'Scheffelstr.: Baustelle, Fahrtrichtung Richtung Osten zwischen Eldenaer Brücke und Paul-Junius-Str., gesperrt 17.03.2014 08:00 Uhr bis 23.05.2014 18:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_021474',
+       data  => <<EOF,
+userdel	q4::inwork; 15010,12855 15074,12850 15098,12849
+EOF
+     },
+     { from  => 1394604000, # 2014-03-12 07:00
+       until => 1395421200, # 2014-03-21 18:00
+       text  => 'Scharnweberstr. (Friedrichshain): Baustelle, Fahrbahn zwischen Müggelstr. und Jessnerstr. gesperrt, 13.03.2014 07:00 Uhr bis 21.03.2014 18:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_021449',
+       data  => <<EOF,
+userdel	q4::inwork 15080,11905 14965,11921
+EOF
+     },
+     { from  => 1394953200, # 2014-03-16 08:00
+       until => 1396627200, # 2014-04-04 18:00
+       text  => 'Suermondtstr.: Baustelle, an der Kreuzung Degnerstr., Radfahrer dürfen über den Gehweg fahren, sowie Einbahnstraßenregelung in der Degnerstr. und Hedwigstr., 17.03.2014 08:00 Uhr bis 04.04.2014 18:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_021477',
+       data  => <<EOF,
+userdel	q2::inwork; 16520,16200 16656,16157
+userdel	q2::inwork 16656,16157 16616,16046
+userdel	q4::inwork; 16537,15827 16563,15900 16616,16046 16505,16096 16520,16200
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Siemensstr.: Umbau der Kreuzung Erna-Samuel-Str., Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX wie sieht die Kreuzungssituation danach aus?
+#: last_checked: 2014-03-12
+userdel	q4::inwork 5443,14028 5299,14049
+EOF
+     },
+     { from  => undef, # 
+       until => 1395433768, # undef, # XXX
+       text  => 'Wühlischstr.: Bauarbeiten zwischen Gärtnerstr. und Seumestr. Richtung Osten, Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork; 14211,11552 14305,11514
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Gudvanger Str.: Bauarbeiten zwischen Wichertstr. und Erich-Weinert-Str., Fahrbahn gesperrt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX bis wann?
+#: last_checked: 2014-03-21
+#: next_check: 2014-04-01
+userdel	q3::inwork 11673,16003 11567,15842
+EOF
+     },
+     { from  => 1395615600, # 2014-03-24 00:00
+       until => 1405720799, # 2014-07-18 23:59
+       text  => 'zwischen Eickstedt und Schmölln: Instandsetzung der Brücke über den Mühlenbach, Straße gesperrt, 24.03.2014 bis 18.07.2014',
+       type  => 'gesperrt',
+       source_id => 'LS/721-E/14/010	',
+       data  => <<EOF,
+userdel	2::inwork 53619,100127 54533,100204
+EOF
+     },
+     { from  => 1395183600, # 2014-03-19 00:00
+       until => 1395640800, # 2014-03-24 07:00
+       text  => 'Invalidenstr.: zwischen Gartenstr. und Bergstr. Baustelle, Fahrbahn gesperrt, ab: 21.03.2014 07 Uhr bis 24.03.2014 früh ',
+       type  => 'handicap',
+       source_id => 'IM_021515',
+       data  => <<EOF,
+userdel	q4::inwork 9383,13986 9676,14046
 EOF
      },
     );
