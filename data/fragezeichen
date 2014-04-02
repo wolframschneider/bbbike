@@ -978,6 +978,8 @@ Theodor-Fontane-Str.: Sackgasse oder Einbahnstraßenregelung?	? -9835,6841 -9854,
 Waldweg zum Campingplatz: Qualität der Straße?	? 29208,71 29512,-619 29297,-717 28915,-1147 28565,-1339 28248,-1473 28162,-1294 28033,-1259 27845,-1324 27758,-1358
 Deilingeweg: ist der Deilingeweg ausgeschildert?	? 6259,23379 6229,23415
 (Am Grüngürtel - Weg zwischen Triftstr. und Eichborndamm): Qualität? Nachts beleuchtet?	? 4597,20508 4626,20577
+Joachim-Friedrich-Str.: existieren Radspuren in der Joachim-Friedrich-Str.?	?::projected 3067,9592 3069,9622 3083,9796 3092,9886
+Joachim-Friedrich-Str.: existieren Radspuren in der Joachim-Friedrich-Str.?	?::projected 3092,9886 3108,10069 3111,10116
 Mathilde-Vaerting-Weg: Qualität nach den Bauarbeiten? Ist die Straße verkehrsberuhigt?	? 17610,-330 17651,-393
 Rita-Maiburg-Str.: Ist die Straße bereits fertiggestellt? Qualität? Wo befindet sich die Straße (möglichst mit GPS-Track)?	?::projected 20342,-777 20782,-1199 20822,-1242 20833,-1298 20872,-1748
 Ludwig-Prandtl-Str.: ist die Straße bis zur Rita-Maiburg-Str. verlängert worden?	?::projected 20274,-845 20342,-777
@@ -1069,6 +1071,7 @@ Urselweg [Wohngebiet]: existiert hier eine Straßenanbindung? Genaue Lage? Qualit
 Poetensteig (Woltersdorf): nur für Radfahrer/Fußgänger oder auch für Autos? Geht die Straße auch Richtung Norden weiter?	? 32294,6277 32306,6216 32333,6114
 Ahornallee (Woltersdorf): Qualität im mittleren und südlichen Abschnitt?	? 32630,6179 32623,6134 32601,5936 32588,5816 32583,5779 32573,5705 32560,5574
 Rudolf-Leonhard-Str. - Blumberger Damm: Qualität des Rad/Gehweg?	? 21455,16330 21574,16547
+Am Heineberg (Potsdam): Qualität?	? -17646,1636 -17599,1890 -17597,2000 -17624,2037 -17651,2197 -17555,2301 -17292,2539
 # added from ampeln-orig
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4
 geschlossen bei Bedarf (?) (Zbr)	? 27657,-11741

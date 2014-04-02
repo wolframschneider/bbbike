@@ -272,7 +272,7 @@ Finowstr.: Kopfsteinpflaster	Q2 14622,11685 14708,11820 14783,11949 14836,12045 
 Glatzer Str.: Kopfsteinpflaster	Q2 14577,11582 14645,11670
 Wiesenweg (Lichtenberg): Kopfsteinpflaster	Q2 15477,11338 15303,11412 15220,11440 15162,11458
 Wiesenweg (Lichtenberg): Asphalt	Q0 15162,11458 15055,11505
-Wartenbergstr. (Lichtenberg): Kopfsteinpflaster	Q2 15220,11440 15300,11584
+Wartenbergstr. (Lichtenberg): schlechtes Kopfsteinpflaster	Q3+ 15220,11440 15300,11584
 Wartenbergstr. (Lichtenberg): Asphalt	Q0 15300,11584 15328,11636
 Wartenbergstr. (Lichtenberg): Beton	Q0 15328,11636 15337,11639 15423,11667
 Tasdorfer Str.: Asphalt	Q0- 15303,11412 15355,11513
@@ -1551,7 +1551,7 @@ Paul-und-Paula-Ufer: Parkweg	Q1 15261,10167 15204,10201 15134,10243 15101,10263 
 Paul-und-Paula-Ufer: Beton	Q0 14892,10411 14864,10451 14868,10467 14884,10508
 Paul-und-Paula-Ufer: Asphalt	Q0 14884,10508 14911,10587 14937,10598 14990,10581 15056,10625 15101,10640
 #: XXX dieser Abschnitt wird gerade neu gemacht
-#: last_checked: 2014-03-22
+#: last_checked: 2014-03-30
 Paul-und-Paula-Ufer: Parkweg	Q1 15101,10640 15248,10562
 Uferweg: Parkweg	Q1 15314,10121 15260,10048 15295,10022 15347,9922
 Uferweg: Beton	Q0 15347,9922 15465,9860 15545,9818 15583,9779 15626,9710
@@ -1765,7 +1765,7 @@ Ottomar-Geschke-Str.: Kopfsteinpflaster	Q2 21332,4655 21376,4748
 Ottomar-Geschke-Str.: Asphalt	Q0 21376,4748 21454,4928
 Ottomar-Geschke-Str.: Kopfsteinpflaster	Q2 21454,4928 21498,5023
 Wallotstr.: Asphalt	Q0 2065,9459 1997,9499 1933,9476 1873,9388 1783,9368 1757,9282
-Gartenufer: Parkweg	Q1 5780,11622 6239,11399 6342,11353 6346,11326
+Gartenufer: Parkweg	Q1 5776,11625 6239,11399 6342,11353 6346,11326
 (südliches Spreeufer): teils gutes Kopfsteinpflaster, teils Parkweg, teils Asphalt	Q1 5579,12231 5714,12290 5796,12372 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
 Elisabeth-Abegg-Str.: Kopfsteinpflaster mit großen Fugen	Q3+ 7936,12906 7858,12830 7789,12764
 Elisabeth-Abegg-Str.: Kopfsteinpflaster mit großen Fugen	Q3+ 7858,12830 7837,12860
@@ -2641,6 +2641,9 @@ Mauerweg: Asphalt	Q0 14433,1739 14641,1771 14676,1777 14784,1725 14876,1686 1520
 (Am Rudower Fließ): Verbundsteinpflaster	Q1 15821,26 15843,4
 (Am Rudower Fließ): wassergebundene Decke	Q1 15819,-24 15843,4 15891,53 15921,94
 (Am Rudower Fließ): wassergebundene Decke	Q1 15891,53 15949,53
+#: XXX nach den Bauarbeiten vielleicht bessere Qualität?
+#: source_id: IM_021231
+#: next_check: 2014-07-15
 Waßmannsdorfer Chaussee: asphaltiert mit Straßenschäden	Q1 16536,26 16477,-160 16431,-311 16400,-409 16373,-496 16273,-824
 (Mauerweg): Asphalt	Q0 18127,-367 18218,-325 18256,-309
 (Landschaftspark Rudow): Gehwegplatten	Q0- 18385,-173 17973,428
@@ -8887,7 +8890,7 @@ Eulenweg: Verbundsteinpflaster	Q1+ 16600,-475 16513,-510
 (Rudower Str. - Köpenicker Str.): Asphalt	Q0 18491,2128 18448,2182 18320,2195
 Dirschelweg: Gehwegpflasterung	Q1+ 10161,4380 10059,4396 9997,4398
 Finchleystr.: Beton	Q0 10690,-1515 10717,-1429 10720,-1340
-an der Tiergartenschleuse: Kleinsteinpflaster	Q1 5818,11722 5831,11697 5802,11672
+an der Tiergartenschleuse: Kleinsteinpflaster	Q1 5818,11722 5831,11697 5826,11682 5802,11677
 (Otisstr. - Wackerweg): Kleinsteinpflaster	Q1- 3680,18913 3753,18889
 (Otisstr. - Wackerweg): Gehwegplatten/Verbundsteinpflaster	Q1 3753,18889 3803,18855
 Brücke über den Nordgraben: Holzbohlen	Q1 4088,20301 4076,20268
@@ -9319,6 +9322,10 @@ Schwarzwurzel-Park: Gehwegplatten	Q0- 20698,18359 20814,18341 20823,18329
 Am Lokdepot: Asphalt	Q0 8389,9017 8389,9087
 Sewanstr. [Wohngebiet]: Beton	Q1+ 18266,9853 18210,9989
 Sewanstr. [Wohngebiet]: Asphalt	Q0 18066,9770 17997,9929
+Hardenbergplatz: Asphalt und Beton mit Rissen	Q1+ 5542,11075 5600,11114 5698,11333
+Hardenbergplatz - Schleuseninsel: Kleinsteinpflaster	Q1 5666,11362 5727,11573 5748,11610 5776,11625
+Schleuseninsel - Str. des 17. Juni: Kleinsteinpflaster	Q1 5835,11768 5858,11863 5900,11913
+(Invalidenstr. - Borsigstr.): Verbundsteinpflaster	Q1 9285,13965 9321,13882 9316,13870
 ######################### User Contributions #################################
 #: by: anonymous vvv
 # 
@@ -12751,7 +12758,7 @@ Brunhildstr.: grobes Kopfsteinpflaster	Q3 7790,8913 7707,8915 7604,8927
 Am Bäkequell: gutes Kopfsteinpflaster	Q1 4593,5235 4656,5101
 # 
 #: by: holger (hd, sav):
-Caroline-Michaelis-Str.: Asphalt	Q0 8825,14401 8992,14176 9070,14058 9125,13973
+Caroline-Michaelis-Str.: Asphalt	Q0 8825,14401 8992,14176 9070,14058 9125,13973 9151,13941
 # 
 #: by: Bertil: vvv
 #: note: er war sich nicht sicher, Bestätigung durch öffentliche Fotos
@@ -23158,7 +23165,7 @@ Am Zirkus: Asphalt	Q0 9118,13070 9137,13032
 Am Zirkus: Asphalt	Q1 9090,13009 9137,13032
 #: next_check_id: AMZIRKUS-2014
 #: XXX danach wohl Q0
-#: last_checked: 2014-03-07
+#: last_checked: 2014-03-31
 Am Zirkus: neuer Asphalt, letzte Deckschicht fehlt noch	Q1 9137,13032 9167,13046 9239,12923
 (Parkweg Spreebogenpark): Asphalt	Q0 8021,12832 8036,12855 8046,12870 8072,12902 8116,12938 8168,12945 8235,12945 8304,12938 8370,12902 8424,12853
 (Parkweg Spreebogenpark): wassergebundene Decke	Q1 8301,12758 8304,12938
@@ -23284,7 +23291,7 @@ Sesenheimer Str.: Asphalt	Q0 3866,11473 3874,11380
 Sesenheimer Str.: Kopfsteinpflaster	Q2 3874,11380 3877,11347
 Herderstr. (Charlottenburg): Asphalt	Q0 4452,11570 4434,11360
 Clara-Jaschke-Str.: Asphalt	Q0 7759,13246 7788,13202 7791,13166 7795,13093 7799,13019
-Bertha-Benz-Str.: Asphalt	Q0 7799,13019 7872,13022 7941,13014
+Bertha-Benz-Str.: Asphalt	Q0 7799,13019 7872,13022 7939,13026
 Katharina-Paulus-Str.: Asphalt	Q0 7867,13106 7872,13022 7873,12927
 Flemingstr.: Verbundsteine	Q1 7317,12751 7322,12735
 Joachim-Karnatz-Allee: Asphalt	Q0 7086,12572 7142,12584 7187,12598 7415,12590 7475,12590
@@ -23294,7 +23301,9 @@ Alice-Berend-Str.: Asphalt	Q0 7187,12598 7270,12648 7341,12709 7367,12729 7388,1
 Ingeborg-Drewitz-Allee: Asphalt	Q0 7343,12758 7367,12729 7418,12725 7538,12729
 Ingeborg-Drewitz-Allee: Asphalt	Q0 7365,12775 7388,12746 7539,12754
 Ingeborg-Drewitz-Allee: Asphalt	Q0 7538,12729 7539,12754
-(Ingeborg-Drewitz-Allee): Gehwegplatten	Q0 7538,12729 7592,12730 7781,12732
+#: note: Fahrbahn ist Kopfsteinpflaster
+(Ingeborg-Drewitz-Allee): Gehwegplatten	Q0 7538,12729 7592,12730
+(Ingeborg-Drewitz-Allee): Gehwegplatten	Q0 7592,12730 7781,12732
 (Ingeborg-Drewitz-Allee): Gehwegplatten	Q0 7539,12754 7620,12757 7649,12758 7789,12764 7849,12767
 (Ingeborg-Drewitz-Allee): Gehwegplatten	Q0 7322,12735 7341,12709
 Spenerstr.: Kopfsteinpflaster	Q2 6877,12607 6907,12777 6966,13075
