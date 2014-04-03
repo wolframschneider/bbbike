@@ -138,7 +138,7 @@ bbbike-js.js: maps3.js bbbike.js jquery/jquery-1.4.2.min.js devbridge-jquery-aut
 	done > $@.tmp
 	mv -f $@.tmp $@
 
-jsbeautifier js:
+jsbeautifier js jsb:
 	for i in ${BBBIKE_WORLD_JAVASCRIPT_FILES}; do \
 	   jsbeautifier -j $$i > $@.tmp && mv -f $@.tmp $$i; \
 	done
