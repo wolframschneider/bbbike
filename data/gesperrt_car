@@ -623,7 +623,7 @@ Richard-Wagner-Str. -> Bismarckstr.: Mittelstreifen	3::igndisp 3837,11760 3844,1
 Bismarckstr. -> Sesenheimer Str.: Mittelstreifen	3::igndisp 3898,11655 3844,11649 3866,11473
 Lenbachstr.: Einbahnstraße (genau genommen nur das östlichste Stück)	1 5888,6520 6070,6570
 Augustenburger Platz: nur für Taxen und Anlieger	2:Anlieger 6561,15041 6537,15156 6562,15177
-Zinnowitzer Str. - Friedrichstr.:	3 9015,14014 8879,13913 8935,13844
+Zinnowitzer Str. - Friedrichstr.:	3 9011,14019 8870,13926 8935,13844
 (Kastanienallee - Friedrich-Engels-Str.)	1 8789,20763 8692,20698 8717,20584
 Zimbelstr.: Poller	3 11879,20466 11924,20399 11959,20365
 Zimbelstr.: Poller	3 11959,20365 11924,20399 11879,20466
@@ -938,8 +938,8 @@ Kiautschoustr.	1 7007,14911 7192,14976
 Rochstr.: Barriere	3 10418,12922 10535,13006 10571,13034
 Rochstr.: Barriere	3 10571,13034 10535,13006 10418,12922
 Mittelstreifen	3nocross::ignrte 7936,12906 7948,12918 8039,13009
-Ella-Trebe-Str. -> Rahel-Hirsch-Str.: Mittelstreifen	3::igndisp 7941,13014 7948,12918 8039,13009
-Rahel-Hirsch-Str. -> Ella-Trebe-Str.: Mittelstreifen	3::igndisp 7936,12906 7948,12918 7941,13014
+Rahel-Hirsch-Str. -> Ella-Trebe-Str.: Mittelstreifen	3::igndisp 7936,12906 7948,12918 7939,13026
+Ella-Trebe-Str. -> Rahel-Hirsch-Str.: Mittelstreifen	3::igndisp 7939,13026 7948,12918 8039,13009
 verboten	3nocross::ignrte -12666,-1311 -12549,-1277 -12552,-1233
 Französische Str. -> Joliot-Curie-Str.: verboten	3::igndisp -12552,-1233 -12549,-1277 -12542,-1305
 Französische Str. -> Am Kanal: verboten	3::igndisp -12552,-1233 -12549,-1277 -12317,-1212

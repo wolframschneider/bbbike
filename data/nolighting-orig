@@ -264,7 +264,7 @@ Am Rummelsburger See	NL 15453,10415 15457,10342 15496,10277 15518,10234 15604,10
 # REMOVED (Weg existiert nicht mehr) --- provisorischer Weg	NL 15056,10625 14930,10646
 #: XXX wird mit der Widmung als Straﬂenland hier eine Beleuchtung eingerichtet?
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2013
-#: last_checked: 2014-02-22
+#: last_checked: 2014-03-30
 #: check_frequency: 90d
 (Rummelsburger Ufer - Hauptstr.)	NL 15248,10562 15307,10701
 Spreeufer	NL 15020,9875 15000,9820 14776,9949 14599,10039 14569,10055
@@ -304,7 +304,7 @@ Landschaftspark Johannisthal	NL 18229,2973 18228,2989 18046,3192 18027,3276 1799
 Landschaftspark Johannisthal	NL 18856,3783 18833,3781 18500,3782 18347,3947 18186,4116 18124,4072
 Landschaftspark Johannisthal	NL 18689,3465 18633,3530
 Spreeuferweg	NL 5535,12206 5579,12231 5714,12290 5796,12372 5940,12564 6001,12699 6045,12830 6123,12887 6182,12900
-Gartenufer	NL 5780,11622 6239,11399 6342,11353 6346,11326
+Gartenufer	NL 5776,11625 6239,11399 6342,11353 6346,11326
 (Weg in d. Kolonie Norderney)	NL 3596,6828 3607,6952 3582,6964
 Franz-Cornelsen-Weg	NL 3593,7176 3597,7192 3612,7335 3634,7601
 (Bad Kissingen)	NL 3634,7601 3652,7795
@@ -837,7 +837,7 @@ Straﬂe 136	NL -8050,5560 -7973,5469 -7937,5383 -7903,5302
 (Eichelmatenweg - Kladower Damm)	NL -6846,6049 -6444,5798 -6420,5771
 (Elfensteig)	NL -4772,8533 -4771,8466 -4774,8439
 (Erlkˆnigsteig)	NL -4856,8534 -4857,8462 -4857,8442
-Groﬂ-Glienicker Weg	NL -4841,8235 -5136,8147 -5240,8122 -5658,8184 -6460,8223 -6700,8193 -6869,8150 -6986,8074 -7070,7984
+Groﬂ-Glienicker Weg	NL -4841,8235 -5136,8147 -5240,8122 -5658,8184 -6460,8223 -6669,8207 -6869,8150 -6986,8074 -7070,7984
 Straﬂe 264	NL -4841,8235 -5121,8283 -5230,8301
 Annenweg	NL -5136,8147 -5121,8283
 (Perler Str. - Darﬂer Str.)	NL 15851,17722 16256,17651 16358,17627 16751,17560
@@ -1010,6 +1010,7 @@ Straﬂe 148	NL 17188,-46 17141,-41 17122,-41
 (Weg an der Trabrennbahn - Maria-Matray-Str.)	NL 19214,7515 19208,7579
 (Franz-Stimming-Weg - Weg an der Trabrennbahn)	NL 19159,7746 19132,7769 19114,7781
 #: by: Stefan Klinkusch vvv
+(Habichtsgrund)	NL -6669,8207 -6966,8520 -7024,8841 -7000,8967
 Lee-Parry-Weg	NL -5097,8448 -4998,8477 -4922,8493 -4869,8534
 (Strittweg - Straﬂe 270)	NL -5256,11142 -5312,10948
 (Maximilian-Kolbe-Str. - Straﬂe 269)	NL -6370,9802 -6417,9703 -6445,9266 -6406,8933
@@ -1086,7 +1087,7 @@ Egelpfuhlwiesen	NL -5561,12909 -5554,12929 -5493,12994 -5446,13137 -5472,13235
 (Rellstabweg - Weg zwischen Bullengraben und Lutoner Str.)	NL -5860,13283 -5788,13291
 (Springerzeile - Weg zwischen Bullengraben und Lutoner Str.)	NL -5878,13384 -5789,13398
 (Bergstr. - Brunsb¸tteler Damm)	NL -7237,13461 -7209,13529 -7234,13551 -7304,13651 -7322,13784
-Straﬂe 269	NL -5382,8880 -5657,8897 -6406,8933 -7252,8982 -7417,8988
+Straﬂe 269	NL -5382,8880 -5657,8897 -6406,8933 -7000,8967 -7252,8982 -7417,8988
 #: by: ^^^
 Mauerweg	NL 7135,20546 7270,20575 7289,20618
 (Uferweg)	NL 22433,4887 22326,4940 22310,4935 22241,4911 22204,4910 22180,4938 22146,4934 22131,4914 22153,4861 22153,4840
@@ -1237,7 +1238,7 @@ Stresemannstr. - Wilhelmstr.	NL 9210,10614 9368,10641
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.)	NL 8263,10187 8276,10079
 #: XXX Beleuchtung existiert, funktioniert aber nicht
 #: last_checked: 2013-12-02
-#: next_check: 2014-04-02
+#: next_check: 2014-04-29
 Stresemannstr. - Wilhelmstr.	NL 9250,10563 9375,10616
 (Weg an der S¸dpanke)	NL 8478,13941 8447,13983 8380,14024 8344,14133 8307,14175 8294,14194
 #: by: http://www.berlin.de/ba-reinickendorf/bvv-online/vo020.asp?VOLFDNR=3495

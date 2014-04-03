@@ -7097,15 +7097,14 @@ sub draw_route {
 	if ($q->param('imagetype') eq 'googlemaps') {
 	    $bbbikedraw_args{Module} = "BBBikeGoogleMaps";
 	    $bbbikedraw_args{BBBikeRoute} = $route;
-            if ($is_beta) {
-                if (0) { # cease -w
-                    $BBBikeDraw::BBBikeGoogleMaps::bbbike_googlemaps_url = $BBBikeDraw::BBBikeGoogleMaps::bbbike_googlemaps_url;
-                    $BBBikeDraw::BBBikeGoogleMaps::maptype = $BBBikeDraw::BBBikeGoogleMaps::maptype;
-                }
-                $BBBikeDraw::BBBikeGoogleMaps::bbbike_googlemaps_url = _bbbikegooglemap_url();
-                $BBBikeDraw::BBBikeGoogleMaps::maptype = "bbbikeorg";
-            }
-
+	    if ($is_beta) {
+		if (0) { # cease -w
+		    $BBBikeDraw::BBBikeGoogleMaps::bbbike_googlemaps_url = $BBBikeDraw::BBBikeGoogleMaps::bbbike_googlemaps_url;
+		    $BBBikeDraw::BBBikeGoogleMaps::maptype = $BBBikeDraw::BBBikeGoogleMaps::maptype;
+		}
+		$BBBikeDraw::BBBikeGoogleMaps::bbbike_googlemaps_url = _bbbikegooglemap_url();
+		$BBBikeDraw::BBBikeGoogleMaps::maptype = "BBBike";
+	    }
 	} elsif ($q->param('imagetype') eq 'googlemapsstatic') {
 	    $bbbikedraw_args{Module} = "GoogleMapsStatic";
 	    $q->param('imagetype', 'png'); # XXX hacky...

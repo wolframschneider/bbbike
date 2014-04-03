@@ -2612,7 +2612,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März von 6.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im April von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -3578,7 +3578,16 @@ userdel	2::temp 10384,8628 10360,8521
          'id' => 2447,
          'type' => 'gesperrt'
        },
-       undef,
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1403/nachricht5215.html',
+         'until' => 1396771200,
+         'text' => 'Karower Chaussee/Bucher Chaussee: Baustelle in Höhe Unterführung BAB 10, Straße vollständig gesperrt, auch für Radfahrer und Fußgänger, 5. April 2014 18 Uhr bis 6. April 2014 10 Uhr',
+         'from' => 1396627200,
+         'id' => 2448,
+         'data' => 'userdel	2::inwork 16201,24354 16156,24284 16123,24232
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3660,9 +3669,9 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
 #: osm_watch: way id="83106248" version="15" brb
 	2 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
 #: osm_watch: way id="60482011" version="25" brb
-#: osm_watch: way id="192153919" version="2" brb
-#: osm_watch: way id="192153925" version="5" brb
-#: osm_watch: way id="136089841" version="18" brb
+#: osm_watch: way id="192153919" version="3" brb
+#: osm_watch: way id="192153925" version="6" brb
+#: osm_watch: way id="136089841" version="19" brb
 	2 19479,-3690 19443,-3540 19558,-3155 19626,-3031 19808,-2953 19909,-2863 19941,-2759 19909,-2677 19575,-2358 19346,-2337 19236,-2298 19131,-2145 18866,-1674 18936,-1581
 	2 19131,-2145 19198,-2118
 	2 19909,-2863 19996,-2880
@@ -3924,19 +3933,7 @@ userdel	2::inwork 2219,11304 2116,11288
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'until' => 1397512800,
-         'text' => 'Großgörschenstr.: die Unterführung an der S-Bahn ist gesperrt, bis voraussichtlich April 2014',
-         'from' => 1393624717,
-         'id' => 2542,
-         'data' => '#: by: http://www.punkt3.de/cms/files/2014-02_punkt3.pdf
-#: by: http://www.lars-oberg.de/aus_dem_wahlkreis/6278820.html
-#: XXX prüfen, ob schon früher geöffnet wird?
-#: next_check: 2014-04-01
-userdel	2::inwork 7882,9490 7960,9466
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Uferweg wegen Bauarbeiten gesperrt',
@@ -3984,8 +3981,8 @@ userdel	q4::inwork; 11073,-2037 10983,-2116
        undef,
        {
          'source_id' => 'IM_021474',
-         'until' => 1400860800,
-         'text' => 'Scheffelstr.: Baustelle, Fahrtrichtung Richtung Osten zwischen Eldenaer Brücke und Paul-Junius-Str., gesperrt 17.03.2014 08:00 Uhr bis 23.05.2014 18:00 Uhr ',
+         'until' => 1396591200,
+         'text' => 'Scheffelstr.: Baustelle, Fahrtrichtung Richtung Osten zwischen Eldenaer Brücke und Paul-Junius-Str., gesperrt 17.03.2014 08:00 Uhr bis 04.04.2014 18:00 Uhr ',
          'from' => 1394953200,
          'id' => 2549,
          'data' => 'userdel	q4::inwork; 15010,12855 15074,12850 15098,12849
@@ -4049,6 +4046,26 @@ userdel	q3::inwork 11673,16003 11567,15842
          'data' => '#: XXX wann ist die Baustelle fertig?
 #: next_check: 2014-03-27
 userdel	q3::inwork; 13555,15596 13459,15653
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_021583',
+         'until' => 1407510000,
+         'text' => 'Mühlenstr. (Pankow) Richtung Breite Straße zwischen Masurenstr. und Dolomitenstr Baustelle, Fahrtrichtung gesperrt, 31.03.2014 07 bis Mitte August 2014 ',
+         'from' => 1396047600,
+         'id' => 2558,
+         'data' => 'userdel	q4::inwork; 10670,17458 10647,17501 10572,17573
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_021231',
+         'until' => 1405440000,
+         'text' => 'Waßmannsdorfer Chaussee: zwischen Lockenhuhnweg und Rhodeländerweg Bauarbeiten, Fahrbahn gesperrt, eventuell Behinderungen für Radfahrer, bis Mitte Juli 2014',
+         'from' => 1391682540,
+         'id' => 2559,
+         'data' => 'userdel	q4::inwork 16373,-496 16400,-409 16431,-311 16477,-160 16536,26 16590,216 16642,393
 ',
          'type' => 'handicap'
        }

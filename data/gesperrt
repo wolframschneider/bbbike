@@ -112,7 +112,7 @@ Wexstr.	1 5631,8011 5824,8035 5928,8052 6154,8070 6261,8058 6409,8026
 Detmolder Str. (S¸d)	1 4659,7982 4572,7936 4371,8018 4342,8093 4280,8188
 Detmolder Str. (Nord)	2 4349,8118 4469,8037 4659,7982
 Detmolder Str. (Nord)	1 4280,8188 4349,8118
-Gartenufer (in der Dunkelheit gesperrt)	2 6239,11399 5780,11622
+Gartenufer (in der Dunkelheit gesperrt)	2 6239,11399 5776,11625
 Steinplatz	1 5166,11343 5122,11300 5088,11322 5053,11343 5091,11406
 Am Treptower Park (Umfahrung auf Gehweg ist mˆglich)	1 14089,9610 13867,9864 13829,9905
 Amtsgerichtsplatz	1 2987,11055 3049,11015 3033,10980 2981,10892 2921,10928 2987,11055
@@ -796,6 +796,7 @@ Alt-Moabit - Invalidenstr.	1 7415,13060 7422,13012
 (Puschkinallee - Elsenstr.)	1 14244,9812 14250,9756 14270,9710
 Parkaue	1s 15406,12444 15408,12394 15370,12264
 Stahlheimer Str.	1 11727,16358 11698,16311
+Am Zirkus	1s 9167,13046 9239,12923
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Knoten M‰rkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
@@ -2655,6 +2656,10 @@ versetzte Schranke, manchmal offen	BNP:1:-124:trailer=3 23402,18067
 versetzte Schranke, manchmal offen	BNP:1:-195:trailer=3 24700,18981
 versetzte Schranke, manchmal offen	BNP:1:-133:trailer=3 24523,18542
 versetzte Schranke, manchmal offen	BNP:1:-171:trailer=3 24625,20855
+Am Nordbahnhof: Abbiegen in die Invalidenstr. nicht mˆglich	3 9011,14019 9085,13919 8935,13844
+Am Nordbahnhof: Abbiegen in die Invalidenstr. nicht mˆglich	3 9011,14019 9085,13919 9151,13941
+Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht mˆglich	3 8935,13844 9085,13919 9011,14019
+Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht mˆglich	3 9151,13941 9085,13919 9011,14019
 Schinkelplatz: Bauarbeiten, Straﬂen vollst‰ndig gesperrt	2::inwork 10008,12274 9994,12368 9996,12401
 Niederlagstr.: Bauarbeiten, Straﬂen vollst‰ndig gesperrt	2::inwork 9994,12368 9943,12364 9961,12273
 Sterndamm: Br¸ckenarbeiten, Straﬂe vollst‰ndig gesperrt (auch f¸r Radfahrer und Fuﬂg‰nger)	2::inwork 17736,5441 17886,5587
@@ -2662,7 +2667,6 @@ Grenzallee: komplette Sperrung wegen Bau des Autobahntunnels	2::inwork 14257,689
 Wuhlewanderweg an der Zimmermannstraﬂenbr¸cke: wegen Bauarbeiten gesperrt	2::inwork 21385,9049 21471,9246
 Wilhelm-Hoff-Str.: Weg noch nicht fertig	2::inwork 19033,3397 19057,3422
 Groﬂe Hamburger Str.: Einbahnstraﬂe wegen Bauarbeiten	1s 10077,13100 10018,13299
-Am Zirkus: Einbahnstraﬂe	1s 9118,13070 9137,13032 9167,13046 9239,12923
 (Weg am Stadtgarten Moabit): Bauarbeiten	2::inwork 5708,14077 5685,14215
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): Zugang durch Bauz‰une versperrt	2::inwork 8243,9766 8233,9863 8201,9869 8255,9938 8285,9956
 Rumoldstr.: Bauarbeiten, gesperrt	2::inwork 17454,12348 17366,12357
@@ -2697,7 +2701,6 @@ Bebelplatz: Bauarbeiten, vollst‰ndig gesperrt	2:inwork 9795,12293 9876,12298
 Hinter der Katholischen Kirche: Bauarbeiten, vollst‰ndig gesperrt	2:inwork 9808,12182 9801,12245 9795,12293 9780,12401
 Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12395
 Schloﬂplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
-Caroline-Michaelis-Str.: Bauarbeiten	2:inwork 9151,13941 9125,13973
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 Lˆwenbr¸cke: gesperrt	2:inwork 6406,11784 6467,11780
 Dahlemer Feld: zur Zeit eine Ziegenweide, keine Durchfahrt mˆglich	2:temp -1643,7828 -1787,7932 -1846,8129
@@ -2885,7 +2888,6 @@ Biesalskistr. -> Clayallee: Mittelstreifen	3::igndisp 1130,3930 1152,3918 1214,4
 Mittelstreifen	3nocross::ignrte 623,4902 844,4916 922,4910
 Argentinische Allee -> Zum Holzungsweg: Mittelstreifen	3::igndisp 623,4902 844,4916 755,5017
 Adele-Schreiber-Krieger-Str.	1s 8737,12757 8596,12760
-Virchowweg: schmale Toreinfahrt, Fuﬂg‰nger und Bordstein	0:10:86 8548,13577
 tragen (ca. 20 Stufen)	0:45:-98 8536,12758
 tragen (35 Stufen)	0:45:-108 8507,12873
 tragen (35 Stufen)	0:45:-57 8480,12909

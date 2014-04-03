@@ -4315,7 +4315,7 @@ EOF
        text  => 'Invalidenstraße, Prenzlauer Berg Richtung Tiergarten Zwischen Kreuzung Gartenstraße und Kreuzung Chausseestraße Baustelle, gesperrt, Dauer: 19.04.2006 09:00 Uhr bis 15:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 9383,13986 9274,13963 9203,13953
+userdel	2 9383,13986 9285,13965 9274,13963 9203,13953
 userdel	2 9151,13941 9203,13953
 userdel	2 9151,13941 9085,13919
 userdel	2 9085,13919 8935,13844
@@ -4553,7 +4553,7 @@ EOF
        text  => 'Straße am Nordbahnhof zwischen Invalidenstraße und Zinnowitzer Veranstaltung, Straße gesperrt. Dauer: 18.05.2006, 06:00 Uhr bis 21.05.2006 12:00 Uhr. ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 9085,13919 9015,14014
+userdel	2 9085,13919 9011,14019
 EOF
      },
      { from  => 1148162400, # 2006-05-21 00:00
@@ -10649,7 +10649,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_007211',
        data  => <<EOF,
-userdel	1::inwork 8935,13844 8879,13913
+userdel	1::inwork 8935,13844 8870,13926
 EOF
      },
      { from  => 1195513200, # 2007-11-20 00:00
@@ -19289,7 +19289,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_017330',
        data  => <<EOF,
-userdel	q4::inwork; 9383,13986 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
+userdel	q4::inwork; 9383,13986 9285,13965 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8690,13723
 EOF
      },
      { from  => 1308261600, # 2011-06-17 00:00
@@ -21529,11 +21529,11 @@ userdel	2::temp 9281,7795 9281,7651 9300,7312
 userdel	2::temp 10384,8628 10360,8521
 EOF
      },
-     { from  => $isodate2epoch->("2014-01-17 18:00:00"), # 1371189600, # 2013-06-14 08:00
-       until => $isodate2epoch->("2014-01-19 10:00:00"), # 1371419999, # 2013-06-16 23:59
-       text  => 'Karower Chaussee/Bucher Chaussee: Baustelle in Höhe Unterführung BAB 10, Straße gesperrt, 18. Januar 2014 18 Uhr bis 19. Januar 2014 10 Uhr',
+     { from  => $isodate2epoch->("2014-04-04 18:00:00"), # 1 Tag Vorlauf --- 1371189600, # 2013-06-14 08:00
+       until => $isodate2epoch->("2014-04-06 10:00:00"), # 1371419999, # 2013-06-16 23:59
+       text  => 'Karower Chaussee/Bucher Chaussee: Baustelle in Höhe Unterführung BAB 10, Straße vollständig gesperrt, auch für Radfahrer und Fußgänger, 5. April 2014 18 Uhr bis 6. April 2014 10 Uhr',
        type  => 'gesperrt',
-       source_id => 'IM_021028',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1403/nachricht5215.html',
        data  => <<EOF,
 userdel	2::inwork 16201,24354 16156,24284 16123,24232
 EOF
@@ -21705,9 +21705,9 @@ EOF
 #: osm_watch: way id="83106248" version="15" brb
 	2 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
 #: osm_watch: way id="60482011" version="25" brb
-#: osm_watch: way id="192153919" version="2" brb
-#: osm_watch: way id="192153925" version="5" brb
-#: osm_watch: way id="136089841" version="18" brb
+#: osm_watch: way id="192153919" version="3" brb
+#: osm_watch: way id="192153925" version="6" brb
+#: osm_watch: way id="136089841" version="19" brb
 	2 19479,-3690 19443,-3540 19558,-3155 19626,-3031 19808,-2953 19909,-2863 19941,-2759 19909,-2677 19575,-2358 19346,-2337 19236,-2298 19131,-2145 18866,-1674 18936,-1581
 	2 19131,-2145 19198,-2118
 	2 19909,-2863 19996,-2880
@@ -22485,14 +22485,13 @@ userdel	2::inwork 13797,7267 13761,7328
 EOF
      },
      { from  => 1393624717, # 2014-02-28 22:58
-       until => 1397512800, # 2014-04-15 00:00
+       until => 1396375553, # 1397512800, # 2014-04-15 00:00
        text  => 'Großgörschenstr.: die Unterführung an der S-Bahn ist gesperrt, bis voraussichtlich April 2014',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.punkt3.de/cms/files/2014-02_punkt3.pdf
 #: by: http://www.lars-oberg.de/aus_dem_wahlkreis/6278820.html
-#: XXX prüfen, ob schon früher geöffnet wird?
-#: next_check: 2014-04-01
+# REMOVED (mittlerweile passierbar) --- #: XXX prüfen, ob schon früher geöffnet wird? --- #: next_check: 2014-04-01
 userdel	2::inwork 7882,9490 7960,9466
 EOF
      },
@@ -22554,8 +22553,8 @@ userdel	q4::inwork 7373,14566 7314,14599
 EOF
      },
      { from  => 1394953200, # 2014-03-16 08:00
-       until => 1400860800, # 2014-05-23 18:00
-       text  => 'Scheffelstr.: Baustelle, Fahrtrichtung Richtung Osten zwischen Eldenaer Brücke und Paul-Junius-Str., gesperrt 17.03.2014 08:00 Uhr bis 23.05.2014 18:00 Uhr ',
+       until => $isodate2epoch->("2014-04-04 08:00:00"), # 1400860800, # 2014-05-23 18:00
+       text  => 'Scheffelstr.: Baustelle, Fahrtrichtung Richtung Osten zwischen Eldenaer Brücke und Paul-Junius-Str., gesperrt 17.03.2014 08:00 Uhr bis 04.04.2014 18:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_021474',
        data  => <<EOF,
@@ -22638,6 +22637,24 @@ EOF
 #: XXX wann ist die Baustelle fertig?
 #: next_check: 2014-03-27
 userdel	q3::inwork; 13555,15596 13459,15653
+EOF
+     },
+     { from  => 1396047600, # 2014-03-29 00:00
+       until => $isodate2epoch->("2014-08-08 17:00:00"), # XXX was 1408139999, # 2014-08-15 23:59
+       text  => 'Mühlenstr. (Pankow) Richtung Breite Straße zwischen Masurenstr. und Dolomitenstr Baustelle, Fahrtrichtung gesperrt, 31.03.2014 07 bis Mitte August 2014 ',
+       type  => 'handicap',
+       source_id => 'IM_021583',
+       data  => <<EOF,
+userdel	q4::inwork; 10670,17458 10647,17501 10572,17573
+EOF
+     },
+     { from  => 1391682540, # 2014-02-06 11:29
+       until => 1405440000, # 2014-07-15 18:00
+       text  => 'Waßmannsdorfer Chaussee: zwischen Lockenhuhnweg und Rhodeländerweg Bauarbeiten, Fahrbahn gesperrt, eventuell Behinderungen für Radfahrer, bis Mitte Juli 2014',
+       type  => 'handicap',
+       source_id => 'IM_021231',
+       data  => <<EOF,
+userdel	q4::inwork 16373,-496 16400,-409 16431,-311 16477,-160 16536,26 16590,216 16642,393
 EOF
      },
     );

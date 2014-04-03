@@ -100,7 +100,7 @@ sub run {
 	    close $fh;
 	    close $tmpfh;
 
-	    my $gpx = eval { Strassen->new_by_magic_or_suffix($tmpfile, name => "Uploaded GPX file") };
+	    my $gpx = eval { Strassen->new_by_magic_or_suffix($tmpfile, fallbackname => "Uploaded GPX file") };
 	    if (!$gpx) {
 		if (param('debug')) {
 		    warn "ERROR: gpxfile upload of file '$filename' failed. Detailed error: $@";
@@ -142,13 +142,12 @@ sub run {
     $self->{autosel} = $autosel && $autosel ne 'false' ? "true" : "false";
 
     my $maptype = param("maptype") || "";
-    $self->{maptype} = ($maptype =~ /hybrid/i ? 'G_HYBRID_MAP' :
-			$maptype =~ /normal/i ? 'G_NORMAL_MAP' :
-			$maptype =~ /osm-mapnik/i ? 'mapnik_map' :
-			#$maptype =~ /osm-tah/i    ? 'tah_map' :
-			$maptype =~ /osm-cycle/i  ? 'cycle_map' :
-			$maptype =~ /bbbike_mapnik/i  ? 'bbbike_mapnik_map' :
-			'G_SATELLITE_MAP');
+    ($self->{maptype}, $self->{maptypevar}) = ($maptype =~ /hybrid/i                   ? ('hybrid','G_HYBRID_MAP') :
+					       $maptype =~ /normal/i                   ? ('normal','G_NORMAL_MAP') :
+					       $maptype =~ /^(osm-mapnik|Mapnik)$/i    ? ('Mapnik', '"Mapnik"') :
+					       $maptype =~ /^(osm-cycle|Cycle)$/i      ? ('Cycle',  '"Cycle"') :
+					       $maptype =~ /^(bbbike_mapnik|BBBike)$/i ? ('BBBike', '"BBBike"') :
+					       ('satellite','G_SATELLITE_MAP'));
 
     my $mapmode = param("mapmode") || "";
     ($self->{initial_mapmode}) = $mapmode =~ m{^(search|addroute|browse|addwpt)$};
@@ -740,17 +739,13 @@ EOF
 	} else if ((useV3  && map.getMapTypeId() == google.maps.MapTypeId.HYBRID) ||
 		   (!useV3 && map.getCurrentMapType() == G_HYBRID_MAP)) {
 	    mapType = "hybrid";
-	} else if ((useV3  && map.getMapTypeId() == "Mapnik") ||
-		   (!useV3 && map.getCurrentMapType() == mapnik_map)) {
+	} else if (useV3) {
+	    mapType = map.getMapTypeId();
+	} else if (!useV3 && map.getCurrentMapType() == mapnik_map) {
 	    mapType = "osm-mapnik";
-	// } else if ((useV3  && map.getMapTypeId() == "T\@H") ||
-	// 	   (!useV3 && map.getCurrentMapType() == tah_map)) {
-	//     mapType = "osm-tah";
-	} else if ((useV3  && map.getMapTypeId() == "Cycle") ||
-		   (!useV3 && map.getCurrentMapType() == cycle_map)) {
+	} else if (!useV3 && map.getCurrentMapType() == cycle_map) {
 	    mapType = "osm-cycle";
-	} else if ((useV3  && map.getMapTypeId() == "BBBike") ||
-		   (!useV3 && map.getCurrentMapType() == bbbike_mapnik_map)) {
+	} else if (!useV3 && map.getCurrentMapType() == bbbike_mapnik_map) {
 	    mapType = "bbbike_mapnik";
 	} else {
 	    mapType = "satellite";
@@ -1081,7 +1076,7 @@ EOF
         var myOptions = {
             zoom: $zoom,
             center: new GLatLng($centery, $centerx),
-            mapTypeId: $self->{maptype}
+            mapTypeId: $self->{maptypevar}
         };
         var map = new google.maps.Map(document.getElementById("map"), myOptions);
 
@@ -1240,14 +1235,14 @@ EOF
 	var server = list [ parseInt( Math.random() * list.length ) ];
 
 	if (false) {
-	    return "http://" + server + ".tile.bbbike.org/osm/mapnik/"        + z + "/" + a.x + "/" + a.y + ".png";
+	    return "http://" + server + ".tile.bbbike.org/osm/mapnik/" + z + "/" + a.x + "/" + a.y + ".png";
 	} else {
-	    return "http://" + server + ".tile.bbbike.org/osm/mapnik-german/" + z + "/" + a.x + "/" + a.y + ".png";
+	    return "http://" + server + ".tile.bbbike.org/osm/bbbike/" + z + "/" + a.x + "/" + a.y + ".png";
 	}
     }
 
     if (!useV3 && GBrowserIsCompatible() ) {
-	map.setCenter(new GLatLng($centery, $centerx), $zoom, $self->{maptype});
+	map.setCenter(new GLatLng($centery, $centerx), $zoom, $self->{maptypevar});
 	new GKeyboardHandler(map);
     }
 

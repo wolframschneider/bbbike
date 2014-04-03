@@ -23,7 +23,7 @@
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
 #: osm_watch: way id="153373879" version="4"
 #: osm_watch: way id="153373877" version="4"
-#: last_checked: 2014-01-24
+#: last_checked: 2014-04-01
 #: check_frequency: 60d
 Stülerstr.	?::projected 6825,11486 6716,11439 6692,11365 6679,11319 6630,11247 6606,11222
 # 
@@ -58,12 +58,12 @@ Sömmeringstr.: Radspuren werden hier 2013 markiert	?::inwork; 3734,12715 3716,12
 # REMOVED (realisiert) --- #: XXX Baumaßnahme 4.12 (Realisierung nach 2011) --- #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4581&options=4 (Baubeginn noch nicht 2012) --- #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (vom 2013-04-10) --- #: osm_watch: way id="38523780" version="4" --- #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20130517.0940.384950.html (bis Herbst 2013) --- #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20130802.1020.387484.html --- #: last_checked: 2013-06-12 --- #: next_check: 2013-09-23 --- Lise-Meitner-Str.: Radspuren werden hier 2013 markiert	?::inwork 3711,13202 3721,13274 3732,13346 3742,13416 3741,13495 3739,13563 3724,13702 3713,13787 3702,13865 3695,13902
 # 
 #: XXX Baumaßnahme 5.11 (Realisierung nach 2011)
-#: osm_watch: way id="4609212"  version="7"
+#: osm_watch: way id="4609212"  version="8"
 #: osm_watch: way id="25113713" version="11"
-#: osm_watch: way id="4752742"  version="7"
-#: osm_watch: way id="4752743"  version="8"
+#: osm_watch: way id="4752742"  version="8"
+#: osm_watch: way id="4752743"  version="9"
 #: osm_watch: way id="8049679"  version="9"
-#: osm_watch: way id="8049678"  version="6"
+#: osm_watch: way id="8049678"  version="7"
 #: last_checked: 2013-09-19
 #: check_frequency: 180d
 Schulenburgstr./Weißenburger Str.: werden hier Radspuren markiert?	?::projected -2706,13291 -2728,13269 -2974,13188 -3159,12962 -3210,12913 -3301,12864 -3448,12834 -3650,12762
@@ -213,7 +213,7 @@ Blaschkoallee: werden hier Radwege/spuren in Richtung Osten entstehen?	?::projec
 #: by: Tagesspiegel vom 2013-03-01 vvv
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5901 (2014 passiert wahrscheinlich nichts)
-#: last_checked: 2014-03-04
+#: last_checked: 2014-04-01
 #: next_check: 2015-03-01
 Warschauer Str: Radspuren für 2013 geplant	?::projected 13588,11490 13603,11538 13651,11731 13696,11920 13745,12118
 # 
@@ -308,7 +308,7 @@ Köpenicker Landstraße: Radspuren bis 2015 geplant	?::projected; 15303,8343 15166
 #: by: ^^^
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5245
-#: last_checked: 2014-03-23
+#: last_checked: 2014-03-30
 #: next_check: 2014-05-23
 Schlichtallee: Komplettierung der Radspuren	?::projected 15880,10680 15758,10578
 # 
@@ -3455,13 +3455,12 @@ Deilingeweg: ist der Deilingeweg ausgeschildert?	? 6259,23379 6229,23415
 #: by: MoPo 2009-08-01, soll 2010 realisiert werden vvv
 #: XXX Baumaßnahme 4.22, Realisierung in 2011 vvv
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4581&options=4 (Realisierung noch nicht erfolgt, Mitte 2012) vvv
+#: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (vom 2013-04-10)
 #: osm_watch: way id="4389511" version="13"
 #: osm_watch: way id="4495273" version="17"
 #: last_checked: 2013-12-22 vvv
 #: check_frequency: 100d vvv
-Joachim-Friedrich-Str.: existieren Radspuren in der Joachim-Friedrich-Str.?	?::projected 3067,9592 3069,9622 3083,9796 3092,9886
-#: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (vom 2013-04-10)
-Joachim-Friedrich-Str.: existieren Radspuren in der Joachim-Friedrich-Str.?	?::projected 3092,9886 3108,10069 3111,10116
+Joachim-Friedrich-Str.: existieren Radspuren in der Joachim-Friedrich-Str. südlich des Kurfürstendamms?	?::projected 3067,9592 3069,9622 3083,9796 3092,9886 3108,10069 3111,10116
 # REMOVED (teilweise realisiert, siehe radwege-orig für den Rest) --- Joachim-Friedrich-Str.: existieren Radspuren in der Joachim-Friedrich-Str.?	?::projected 3111,10116 3132,10499 3114,10550 3093,10594
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -3751,3 +3750,7 @@ Poetensteig (Woltersdorf): nur für Radfahrer/Fußgänger oder auch für Autos? Geht
 Ahornallee (Woltersdorf): Qualität im mittleren und südlichen Abschnitt?	? 32630,6179 32623,6134 32601,5936 32588,5816 32583,5779 32573,5705 32560,5574
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/11re.pdf/file?y=2014 (Widmung)
 Rudolf-Leonhard-Str. - Blumberger Damm: Qualität des Rad/Gehweg?	? 21455,16330 21574,16547
+#: by: http://www.potsdam.de/sites/default/files/documents/endfassung_abl_pdmstadt_03_2014_2.pdf (Teileinziehung)
+#: XXX Straße wird demnächst teilweise für den Kfz-Verkehr gesperrt (die letzten 60 Meter im Süden)
+#: XXX fehlt wahrscheinlich in Potsdam.coords.data, PLZ=14469
+Am Heineberg (Potsdam): Qualität?	? -17646,1636 -17599,1890 -17597,2000 -17624,2037 -17651,2197 -17555,2301 -17292,2539
