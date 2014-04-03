@@ -373,12 +373,16 @@ convert3:
 	   ${XARGS} -n 1 -P ${MAX_VCPU} ${TIME} ${BBMAKE}
 
 check: 
+	@echo "In case of failure run:"
+	@echo " make check-failed"
+	@echo ""
 	${BBMAKE} test > tmp/log.check 2>&1
 	tail -n 5 tmp/log.check
 
 check-full: 
 	@echo "In case of failure run:"
 	@echo "BBBIKE_TEST_FAST=\"\" make check-failed"
+	@echo ""
 	BBBIKE_TEST_FAST="" ${BBMAKE} test > tmp/log.check-full 2>&1
 	tail -n 5 tmp/log.check-full
 
