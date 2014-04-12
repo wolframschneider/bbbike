@@ -42,14 +42,6 @@ extern "C" {
 /* INT_SQRT and !USE_HYPOT is restricted to dist of approx. 100 km */
 #define USE_HYPOT
 
-/* Check whether the longest line in the database files does not
- * overflow the buffer. Current longest:
- * wasserumland2 with 8821 bytes.
- * See rule "check-line-lengths" in data/Makefile
- */
-#define MAXBUF 12288
-#define MAXPOINTS 1024
-
 /* should be the same as in BBBikeTrans.pm */
 #define X_DELTA -200.0
 #define X_MOUNT 1
@@ -646,12 +638,11 @@ fast_plot_str(canvas, abk, fileref, ...)
 	PREINIT:
 	SV *progress = &PL_sv_undef;
 	FILE *f;
-	char buf0[MAXBUF];
+	PerlIO *fp = NULL;
+	SV *linebuf;
 	char *buf;
 	char abkcat[24];
-	struct {
-	  int x, y;
-	} point[MAXPOINTS];
+	AV *coords;
 	AV *tags, *outline_tags;
 	int count;
 	int file_count = 0;
@@ -684,6 +675,7 @@ fast_plot_str(canvas, abk, fileref, ...)
 	int has_draw_tunnel_entrance = -1;
 
 	CODE:
+	linebuf = sv_newmortal();
 	if (items > 3)
 	  progress = ST(3);
 	if (items > 4 && SvTRUE(ST(4))) {
@@ -796,7 +788,6 @@ fast_plot_str(canvas, abk, fileref, ...)
 	    data_array = (AV*)SvRV(*tmp);
 	    data_pos = 0;
 	    f = NULL;
-	    buf = NULL;
 	  } else {
 	    file = SvPV(file_or_object, PL_na);
 	    f = fopen(file, "r");
@@ -809,18 +800,20 @@ fast_plot_str(canvas, abk, fileref, ...)
 	      file_size = -1;
 	    }
 	    currpos = 0;
-	    buf = buf0;
+	    fp = PerlIO_importFILE(f, 0);
+	    if (!fp)
+	      croak("Cannot import file");
 	  }
 
 	  /*count = 0;*/
-	  while((f && !feof(f)) ||
+	  while((fp && !PerlIO_eof(fp)) ||
 		(data_array && data_pos <= av_len(data_array))) {
 	    char *p, *cat, *cat_attrib;
-	    int i, point_i;
+	    int i;
 
 	    /* get line from file or data array */
-	    if (f) {
-	      if (fgets(buf, MAXBUF, f) == NULL)
+	    if (fp) {
+	      if ((buf = sv_gets(linebuf, fp, 0)) == NULL)
 		break;
 	      currpos += strlen(buf);
 	    } else {
@@ -896,15 +889,14 @@ fast_plot_str(canvas, abk, fileref, ...)
 		    }
 		  }
 
-		  point_i = 0;
+		  coords = newAV();
 		  while(*p) {
 		    char *new_p = strchr(p, ',');
 		    if (new_p) {
-		      point[point_i].x = atoi(p);
+		      av_push(coords, TRANSPOSE_X_SCALAR(atoi(p)));
 		      p = new_p + 1;
 		      new_p = strchr(p, ' ');
-		      point[point_i].y = atoi(p);
-		      point_i++;
+		      av_push(coords, TRANSPOSE_Y_SCALAR(atoi(p)));
 		      if (new_p)
 			p = new_p + 1;
 		      else
@@ -912,11 +904,10 @@ fast_plot_str(canvas, abk, fileref, ...)
 		    }
 		  }
 
-		  if (point_i > 1) {
+		  if (av_len(coords) != -1) {
 		    int width = 1;
 		    char *fill = "white";
 		    SV* name;
-		    AV *coords;
 
 		    if (category_width) {
 		      SV** sv_sv_category_width = hv_fetch(category_width,
@@ -960,12 +951,6 @@ fast_plot_str(canvas, abk, fileref, ...)
 			fill = "white";
 			width = 2;
 		      }
-		    }
-
-		    coords = newAV();
-		    for(i = 0; i < point_i; i++) {
-		      av_push(coords, TRANSPOSE_X_SCALAR(point[i].x));
-		      av_push(coords, TRANSPOSE_Y_SCALAR(point[i].y));
 		    }
 
 		    if (outline) {
@@ -1073,10 +1058,10 @@ fast_plot_str(canvas, abk, fileref, ...)
 			}
 		      }
 		    }
-
-		    av_undef(coords);
-		    SvREFCNT_dec(coords);
 		  }
+
+		  av_undef(coords);
+		  SvREFCNT_dec(coords);
 		  count++;
 		} else {
 		  warn("Line %d of file %s is incomplete (SPACE character after category expected)\n", count+1, file ? file : "<data>");
@@ -1138,7 +1123,9 @@ fast_plot_point(canvas, abk, fileref, progress)
 
 	PREINIT:
 	FILE *f;
-	char buf[MAXBUF];
+	PerlIO *fp = NULL;
+	SV *linebuf;
+	char *buf;
 	char abkcat[24];
 	struct {
 	  int x, y;
@@ -1158,6 +1145,7 @@ fast_plot_point(canvas, abk, fileref, progress)
  /* muﬂ noch zur Serienreife verfeinert werden ... scheint aber *wesentlich*
    schneller als der perl-Part zu sein?! */
 
+	linebuf = sv_newmortal();
 	tags = newAV();
 	strcpy(abkcat, abk);
 	strcat(abkcat, "-fg");
@@ -1209,9 +1197,12 @@ fast_plot_point(canvas, abk, fileref, progress)
 	    file_size = -1;
 	  }
 	  currpos = 0;
+	  fp = PerlIO_importFILE(f, 0);
+	  if (!fp)
+	    croak("Cannot import file");
 
-	  while(!feof(f)) {
-	    if (fgets(buf, MAXBUF, f) == NULL)
+	  while(!PerlIO_eof(fp)) {
+	    if ((buf = sv_gets(linebuf, fp, 0)) == NULL)
 	      break;
 	    currpos += strlen(buf);
 #ifdef MYDEBUG
