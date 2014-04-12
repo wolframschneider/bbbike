@@ -278,8 +278,10 @@ Tasdorfer Str. - Wilhelm-Guddorf-Str.: Gehwegpflasterung	Q0- 15393,11590 15423,1
 #: note: schmale Querplatten, Unebenheiten spürbar
 (Grünes Band): Betonpflaster	Q1 15337,11639 15365,11564 15377,11555 15412,11510 15414,11487 15445,11455 15515,11416
 Kietzer Weg: sehr schlechtes Kopfsteinpflaster	Q3 15327,11724 15277,11684 15162,11458
-Revaler Str.: Kopfsteinpflaster, einzelne Stellen mit unebenen Asphalt	Q2; 14134,11272 14211,11229 14286,11186 14357,11148 14442,11101 14513,11075
-Revaler Str.: Kopfsteinpflaster	Q2; 14513,11075 14442,11101 14357,11148 14286,11186 14211,11229 14134,11272
+Revaler Str.: Asphalt	Q0 14442,11101 14513,11075
+Revaler Str.: Kopfsteinpflaster, einzelne Stellen mit unebenen Asphalt	Q2; 14286,11186 14357,11148 14442,11101
+Revaler Str.: Kopfsteinpflaster	Q2; 14442,11101 14357,11148 14286,11186
+Revaler Str.: Kopfsteinpflaster	Q2 14134,11272 14211,11229 14286,11186
 Revaler Str.: Kopfsteinpflaster	Q2; 13588,11490 13565,11492 13473,11456
 Revaler Str.: Asphalt/Kopfsteinpflaster, Straßenbahn	Q1-; 13473,11456 13565,11492 13588,11490
 Prenzlauer Berg: Asphalt	Q0 11706,13635 11545,13690 11250,13655
@@ -504,7 +506,7 @@ Simplonstr.: Kopfsteinpflaster	Q2 14531,11142 14605,11078 14639,11051 14682,1103
 Helenenhof: kleinteiliges Pflaster	Q1 14506,11275 14395,11356
 Matkowskystr.: Asphalt	Q0 14531,11142 14513,11075
 #: next_check_id: NEUEBAHNHOF-2014
-#: last_checked: 2014-04-04
+#: last_checked: 2014-04-10
 #: XXX wird die andere Fahrtrichtung auch asphaltiert?
 Neue Bahnhofstr.: Kopfsteinpflaster	Q2; 14752,11041 14811,11067 14879,11182
 Neue Bahnhofstr.: Asphalt	Q0; 14879,11182 14811,11067 14752,11041
@@ -1546,10 +1548,7 @@ Selkestr.: Kopfsteinpflaster	Q2 12685,7497 12703,7370
 Paul-und-Paula-Ufer: Kleinteiliges Kopfsteinpflaster	Q1 15314,10121 15261,10167
 Paul-und-Paula-Ufer: Parkweg	Q1 15261,10167 15204,10201 15134,10243 15101,10263 15044,10297 14977,10348 14892,10411
 Paul-und-Paula-Ufer: Beton	Q0 14892,10411 14864,10451 14868,10467 14884,10508
-Paul-und-Paula-Ufer: Asphalt	Q0 14884,10508 14911,10587 14937,10598 14990,10581 15056,10625 15101,10640
-#: XXX dieser Abschnitt wird gerade neu gemacht
-#: last_checked: 2014-03-30
-Paul-und-Paula-Ufer: Parkweg	Q1 15101,10640 15248,10562
+Paul-und-Paula-Ufer: Asphalt	Q0 14884,10508 14911,10587 14937,10598 14990,10581 15056,10625 15101,10640 15194,10591
 Uferweg: Parkweg	Q1 15314,10121 15260,10048 15295,10022 15347,9922
 Uferweg: Beton	Q0 15347,9922 15465,9860 15545,9818 15583,9779 15626,9710
 Kynaststr. [Ersatzstraße]: asphaltiert	Q0 14688,10167 14752,10246 14794,10336 14820,10473 14832,10512
@@ -1561,7 +1560,7 @@ Caroline-Tübbecke-Ufer: Parkweg	Q1 15000,9820 15043,9790 15367,9691
 (Wendenwiese): Parkweg	Q1 15367,9691 15399,9679 15465,9626 15512,9680
 (Alt-Stralau - Spreeufer): Parkweg	Q1 15020,9875 15000,9820
 Tunnelstr. - Bartholomäusufer: Parkweg	Q1 15502,9693 15583,9779
-Am Rummelsburger See: glatt gepflastert	Q0- 15248,10562 15320,10510 15453,10415
+Am Rummelsburger See: glatt gepflastert	Q0- 15194,10591 15248,10562 15320,10510 15453,10415
 (Rummelsburger Ufer - Emma-Ihrer-Str.): glatt gepflastert	Q0 15453,10415 15550,10361
 Am Rummelsburger See: Parkweg	Q1- 15453,10415 15457,10342 15496,10277 15518,10234 15604,10204 15606,10179 15645,10147 15713,10035 15786,9957 15790,9920 15828,9875 15914,9858 15931,9846
 Am Rummelsburger See: Betonweg	Q0- 15931,9846 16002,9787 16049,9749
@@ -1679,8 +1678,8 @@ Inselstr.: Kopfsteinpflaster	Q2 10869,11949 10824,11992
 Neue Grünstr.: Kopfsteinpflaster	Q2 10515,11785 10528,11729
 Parkaue: Asphalt	Q0 15535,12420 15457,12449 15406,12444
 #: XXX wird hier die Straße verbessert werden?
-#: last_checked: 2014-03-26
-#: next_check: 2014-05-14
+#: last_checked: 2014-04-07
+#: check_frequency: 60d
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=4786&date=20130524 (Beginn der Bauarbeiten: Frühjahr 2014)
 Deutschmeisterstr.: mäßiger Asphalt	Q1 15443,12222 15370,12264 15353,12280 15320,12375
 Parkaue: Asphalt	Q0 15406,12444 15408,12394 15370,12264
@@ -7340,7 +7339,7 @@ Harry-Liedtke-Pfad: Gehwegplatten	Q0- 15806,1903 15834,2024
 Harry-Liedtke-Pfad: Gehwegplatten	Q0- 15834,2024 15843,2065 15836,2113
 Senefelderstr.: Kleinsteinpflaster	Q1 11595,15058 11582,15021
 Knackstr.: Kopfsteinpflaster	Q2 11101,14768 11038,14972 11056,15009
-Ida-von-Arnim-Str.: Asphalt	Q0 8077,14227 8251,14337
+Ida-von-Arnim-Str.: Asphalt	Q0 8077,14227 8251,14337 8442,14456
 Riedemannweg: Beton	Q0 4248,15647 4389,15336
 #: note: Ausweichen auf sehr schmalen unbefestigten Gehweg möglich
 Thaters Privatweg: schlechtes Kopfsteinpflaster	Q3 3956,14750 3899,14868 3893,14911 3892,14944 4103,15137 4148,15205
@@ -8507,7 +8506,7 @@ Schneeammerweg: unbefestigte Straße	Q2 13329,20299 13420,20236
 (Park am Nordbahnhof - Caroline-Michaelis-Str./Mount Mitte): Beton	Q0 9119,14255 9081,14232 8992,14176
 (an der Panke - Mauerweg): Asphalt	Q0 7878,14514 7889,14519 7943,14453 7989,14478 8050,14558 8103,14582 8232,14689
 Uferweg: Asphalt mit Schäden	Q2+ 7612,14449 7561,14458 7426,14539 7373,14566
-Uferweg: wassergebundene Decke	Q1 7746,14408 7661,14398 7597,14417
+Uferweg: wassergebundene Decke	Q1 7740,14409 7661,14398 7634,14406 7617,14420 7597,14417
 #: note: dieses kurze Stück hat auf der Fahrbahn Kopfsteinpflaster, Radwege weiterhin Verbundsteinpflaster
 Quitzowstr.: Kopfsteinpflaster	Q2 7080,14398 7104,14403
 (Goerdelersteg - Beusselstr.): Beton	Q0 3625,14230 3610,14219 3655,14237
@@ -9249,8 +9248,7 @@ Hadburgpfad: Verbundsteinpflaster	Q1+ 17484,12405 17531,12398
 #: next_check_id: STADTGARTENMOABIT-2014
 #: XXX entsteht hier Asphalt oder eine andere Pflasterung?
 #: XXX siehe auch Eintrag in gesperrt-orig
-#: last_checked: 2014-03-07 (Bauarbeiten)
-#: check_frequency: 60d
+#: last_checked: 2014-04-08 (Bauarbeiten)
 (Weg am Stadtgarten Moabit): unbefestigter Weg	Q2- 5708,14077 5685,14215
 Helsingforser Platz: Betonpflaster	Q0- 13473,11456 13427,11431
 (Bornholmer Str. - Kolonnenweg): Asphalt	Q0 10134,16534 10118,16561 10108,16576 9954,16590
@@ -23312,10 +23310,14 @@ Döberitzer Str.: asphaltiert	Q0 7979,13733 7872,13685
 Dreysestr: Kopfsteinpflaster mit Bodenschwellen	Q2 6976,13563 6897,13551 6783,13551 6687,13545
 Bandelstr.: Kopfsteinpflaster mit Bodenschwellen	Q2 6692,13333 6687,13545 6686,13746
 Bugenhagenstr.: Asphalt mit Kopfsteinpflasterbodenschwellen	Q2 6229,13517 6104,13522 6008,13529
+#: confirmed_by: srt
 Bugenhagenstr.: Kopfsteinpflaster	Q2 6008,13529 5964,13535 5882,13548
 Waldenserstr.: Kopfsteinpflaster mit Bodenschwellen	Q2 5882,13548 5725,13566 5580,13587 5390,13616
+#: confirmed_by: srt
 Jonasstr.: Asphalt	Q0 5956,13330 5956,13433
+#: confirmed_by: srt
 Jonasstr.: Kopfsteinpflaster	Q2 5956,13433 5964,13535
+#: confirmed_by: srt
 Arminusstr.: Asphalt	Q0 5956,13433 5868,13441
 Tile-Wardenberg-Str.: Kopfsteinpflaster	Q2 5740,12419 5616,12500 5585,12518 5556,12536 5486,12581 5376,12661
 Solinger Str.: Kopfsteinpflaster	Q2 5734,12673 5673,12581 5616,12500

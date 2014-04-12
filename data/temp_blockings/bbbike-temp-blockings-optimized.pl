@@ -3154,7 +3154,17 @@ userdel	2::temp 12635,12629 12596,12472
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1404/nachricht5227.html',
+         'until' => 1398722399,
+         'text' => 'Hessische Str.: Baustelle, Zufahrt zur Invalidenstraße gesperrt; Einbahnstraße in der Invalidenstraße, 14.04.2014 bis voraussichtlich 28.04.2014',
+         'from' => 1397340000,
+         'id' => 2313,
+         'data' => 'userdel	q4::inwork 8690,13723 8775,13606
+userdel	q4::inwork; 8690,13723 8659,13708 8626,13692 8619,13689
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        undef,
@@ -3854,7 +3864,16 @@ userdel	2::inwork 21385,9049 21365,9059 21351,9066
 ',
          'type' => 'gesperrt'
        },
-       undef,
+       {
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20140407.1430.396156.html',
+         'until' => 1397771999,
+         'text' => 'Rudolf-Rühl-Allee: Fahrbahninstandsetzung zwischen Köpenicker Straße und An der Wuhlheide, Vollsperrung, vom 14. April 2014 Uhr bis voraussichtlich 17. April 2014',
+         'from' => 1397340000,
+         'id' => 2528,
+         'data' => 'userdel	2::inwork 20653,7289 20609,7200 20635,7119 20722,6971 21233,6096 21303,5826
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        {
@@ -3964,27 +3983,16 @@ userdel	q4::inwork; 11073,-2037 10983,-2116
        {
          'source_id' => 'IM_021595',
          'until' => 1400860800,
-         'text' => 'Scheffelstr.: Baustelle, Fahrtrichtung Richtung Osten zwischen Paul-Junius-Str. und Möllendorffstr., gesperrt 04.04.2014 08:00 Uhr bis Ende Mai 2014',
+         'text' => 'Scheffelstr.: Baustelle, Fahrtrichtung Richtung Osten zwischen Paul-Junius-Str. und Eberhardstr., gesperrt 04.04.2014 08:00 Uhr bis Ende Mai 2014',
          'from' => 1396519200,
          'id' => 2549,
-         'data' => '#: XXX vor Ort anschauen
-userdel	q4::inwork; 15233,12829 15357,12813
+         'data' => 'userdel	q3::inwork; 15098,12849 15233,12829
 ',
          'type' => 'handicap'
        },
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Siemensstr.: Umbau der Kreuzung Erna-Samuel-Str., Fahrbahn gesperrt',
-         'from' => undef,
-         'id' => 2552,
-         'data' => '#: XXX wie sieht die Kreuzungssituation danach aus?
-#: last_checked: 2014-03-12
-userdel	q4::inwork 5443,14028 5299,14049
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => undef,
@@ -4041,16 +4049,6 @@ userdel	q3::inwork; 13555,15596 13459,15653
          'data' => 'userdel	q4::inwork 16373,-496 16400,-409 16431,-311 16477,-160 16536,26 16590,216 16642,393
 ',
          'type' => 'handicap'
-       },
-       {
-         'source_id' => 'IM_021617',
-         'until' => 1396839600,
-         'text' => 'Yorckstr.: zwischen Mansteinstr. und Katzlerstr. gesperrt, 04.04.2014 20 Uhr bis 07.04.14 05:00 ',
-         'from' => 1396548000,
-         'id' => 2560,
-         'data' => 'userdel	2::inwork 7938,9694 8097,9650
-',
-         'type' => 'gesperrt'
        }
      
 );
