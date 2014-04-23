@@ -39,6 +39,7 @@ my $isodate2epoch = sub {
        text  => 'Straßenfest rund um den Blücherplatz, 6.6.2014 bis 9.6.2014',
        type  => 'gesperrt',
        data  => <<EOF,
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=810735
 userdel	2::temp 9521,10010 9827,10051
 userdel	2::temp 9521,10010 9448,10014
 userdel	2::temp 9599,10175 9687,10180 9825,10206
@@ -575,6 +576,7 @@ EOF
        text  => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (14.6.2014 bis 15.6.2014',
        type  => 'gesperrt',
        data  => <<EOF,
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=834793
 userdel	2::temp 6514,10088 6609,10147 6626,10155 6729,10212
 userdel	2::temp 6729,10212 6971,10346
 userdel	2::temp 6628,10318 6626,10155
@@ -2091,7 +2093,7 @@ EOF
        text  => 'L 29; (Biesenthal-Wandlitz); Bahnübergang bei Wandlitz Gleisbauarbeiten Vollsperrung 31.05.2005-02.06.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 15403,40364 14698,40345
+userdel	2 15403,40364 14701,40362
 EOF
      },
      { from  => 1117317600, # 2005-05-29 00:00
@@ -2341,7 +2343,7 @@ EOF
        text  => 'B 109; (Prenzlauer Str.); OD Basdorf, Kno. Dimitroff-/Waldheimstr. Straßen-,Geh- u.Radwegbau Vollsperrung 04.07.2005-08.08.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 12160,34668 12224,34508 12635,32221
+userdel	q4 12056,34918 12207,34503 12307,34017 12395,33537 12463,33159 12473,33109 12635,32221
 EOF
      },
      { from  => 1122415200, # 2005-07-27 00:00
@@ -7877,7 +7879,7 @@ EOF
        text  => 'B 109 zw. Stadtgrenze Berliin und Schönerlinde, Dorfstr. Deckeneinbau Vollsperrung 17.04.2007-20.04.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 13376,27572 13348,27204
+userdel	2::inwork 13356,27581 13389,27440 13378,27325 13345,27187
 EOF
      },
      { from  => 1178402400, # 2007-05-06 00:00
@@ -9456,6 +9458,7 @@ EOF
        text  => 'Open Air Gallery am 1. Juni 2014 auf der Oberbaumbrücke (10:00 - 22:00)',
        type  => 'gesperrt',
        data  => <<EOF,
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=811375
 userdel	2::temp 13178,10623 13206,10651 13305,10789 13332,10832
 EOF
      },
@@ -10162,7 +10165,7 @@ EOF
        text  => 'L 315 Prenden-Klosterfelde OD Klosterfelde grundhafter Straßenbau Vollsperrung 04.10.2007-30.06.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 14941,42957 15632,43100 15783,43227 16258,43457
+userdel	q4::inwork 14934,42934 15632,43100 15783,43227 16258,43457
 EOF
      },
      { from  => 1194082880, # 2007-10-07 00:00 1191708000
@@ -10253,7 +10256,7 @@ EOF
        text  => 'L 030 Börnicker Chaussee OD Bernau, zw. Gernotstr. und Eberswalder Str. grundhater Straßenbau Vollsperrung 16.10.2007-30.12.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 23113,30450 23368,30409 23631,30262
+userdel	2::inwork 23113,30450 23368,30409 23620,30267
 EOF
      },
      { from  => 1192312800, # 2007-10-14 00:00
@@ -10921,7 +10924,7 @@ EOF
        text  => 'L 030 Börnicker Chaussee OD Bernau, zw. Gernotstr. und Schönfelder Weg Straßenbau Vollsperrung 20.12.2007-30.04.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 23113,30450 23368,30409 23631,30262
+userdel	q4::inwork 23113,30450 23368,30409 23620,30267
 EOF
      },
      { from  => 1216405512, # 2008-07-18 20:25
@@ -12048,7 +12051,7 @@ EOF
        text  => 'L 029 Lanke - Zehlendorf nördl. Wandlitz, ab B109 in Ri. Stolzenhagen Bau Kreisverkehr Vollsperrung 17.08.2008-31.12.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 15403,40364 14698,40345
+userdel	2::inwork 15403,40364 14701,40362
 EOF
      },
      { from  => 1216674352, # 2008-07-21 23:05
@@ -12787,7 +12790,7 @@ EOF
        text  => 'L 212 Groß Schönebeck - Hammer - B167 zw. Groß Schönebeck und Böhmerheide Deckenerneuerung Vollsperrung 22.09.2008-26.09.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 15301,53802 15886,54280 17031,55218 17658,55401 17733,55423
+userdel	2::inwork 15301,53802 15886,54280 17031,55218 17671,55404 17733,55423
 EOF
      },
      { from  => undef, # 
@@ -12976,7 +12979,7 @@ EOF
        text  => 'L 315 Prenden-Klosterfelde OD Klosterfelde grundhafter Straßenbau Vollsperrung 04.10.2007-31.12.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 14941,42957 15632,43100
+userdel	q4::inwork 14934,42934 15632,43100
 EOF
      },
      { from  => 1224540000, # 2008-10-21 00:00
@@ -13169,7 +13172,7 @@ EOF
        text  => 'K 7318 Blankenburg - Potzlow Bahnübergang in der OD Seehausen Gleisbauarbeiten Vollsperrung 05.12.2008-10.12.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 41424,91331 41395,91313 41358,91294
+userdel	2::inwork 41421,91345 41388,91325 41367,91312
 EOF
      },
      { from  => 1231455600, # 2009-01-09 00:00
@@ -13177,7 +13180,7 @@ EOF
        text  => 'K 7318 Blankenburg - Potzlow Bahnübergang in der OD Seehausen Gleisbauarbeiten Vollsperrung 10.01.2009-11.01.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 41424,91331 41395,91313 41358,91294
+userdel	2::inwork 41421,91345 41388,91325 41367,91312
 EOF
      },
      { from  => 1227394800, # 2008-11-23 00:00
@@ -13185,7 +13188,7 @@ EOF
        text  => 'K 7318 Blankenburg - Potzlow Bahnübergang in der OD Seehausen Gleisbauarbeiten Vollsperrung 24.11.2008-28.11.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 41424,91331 41395,91313 41358,91294
+userdel	2::inwork 41421,91345 41388,91325 41367,91312
 EOF
      },
      { from  => 1227135600, # 2008-11-20 00:00
@@ -14028,10 +14031,11 @@ EOF
        until => $isodate2epoch->("2014-05-25 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 19, months => 5]],
-       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (24. und 25. Mai 2014)',
+       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in der Preußenallee), beide Fahrbahnen der Straße gesperrt (24. und 25. Mai 2014)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.family-and-friends-ev.de/2.html
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=859853
 userdel	2::temp 589,11953 577,11837 562,11710 560,11695 550,11607 541,11464
 EOF
      },
@@ -14965,7 +14969,7 @@ EOF
        text  => 'L 212 Groß Schönebeck - Hammer - B167 zw. Böhmerheide und Hammer Deckensanierung Vollsperrung 14.07.2009-08.08.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 12431,52894 12615,52952 13967,53380 15301,53802 15886,54280 17031,55218 17658,55401
+userdel	2::inwork 12431,52894 12615,52952 13967,53380 15301,53802 15886,54280 17031,55218 17671,55404
 EOF
      },
      { from  => 1300313794, # 2011-03-16 23:16
@@ -16533,7 +16537,7 @@ EOF
        text  => 'B 166 zw. Heinersdorf und Abzw. Passow Deckenerneuerung Vollsperrung 12.10.2009-30.10.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 64624,77291 61819,80513 61420,80705 60923,80665 60511,80745 60070,81164 59018,81801 58771,82019
+userdel	2::inwork 64624,77291 61819,80513 61420,80705 60923,80665 60511,80745 60070,81164 59776,81358 59018,81801 58771,82019
 EOF
      },
      { from  => 1254607200, # 2009-10-04 00:00
@@ -16957,7 +16961,7 @@ EOF
        text  => 'B 109 Schönwalde - Wandlitz OD Schönwalde Durchlasssanierung Vollsperrung 09.11.2009-27.11.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 12635,32221 12466,30452
+userdel	2::inwork 12635,32221 12560,31435 12466,30452
 EOF
      },
      { from  => 1257462000, # 2009-11-06 00:00
@@ -17551,7 +17555,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LSO-SG33-E10027',
        data  => <<EOF,
-userdel	2::inwork 16050,46166 16134,45616
+userdel	2::inwork 16062,46174 16118,45654
 EOF
      },
      { from  => 1271281087, # 2010-04-14 23:38
@@ -17596,7 +17600,7 @@ EOF
        type  => 'handicap',
        source_id => 'LSO-SG33-E10026',
        data  => <<EOF,
-userdel	q4::inwork 18301,50512 18022,49766 17638,49090
+userdel	q4::inwork 18287,50512 18276,50482 18230,50330 18100,49906 18022,49766 17727,49297 17694,49235 17624,49096
 EOF
      },
      { from  => 1271281409, # 2010-04-14 23:43
@@ -17935,9 +17939,10 @@ EOF
        text  => 'CSD am 21.6.2014',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX andere Route? von Alex aus?
+#: XXX andere Route: Alex -> Brandenburger Tor, wo genau?
 #: next_check: 2014-06-01
 #: priority: #A
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=803723
 userdel	2::temp 6171,10657 6216,10614
 userdel	2::temp 6216,10614 6268,10588 6353,10583 6468,10550 6532,10529 6636,10492 6753,10446 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6985,10597 6972,10665 6918,10854 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6809,11979 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245 8610,12254
 userdel	2::temp 6353,10583 6292,10627 6228,10646 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808
@@ -18109,7 +18114,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/O-SG33-E/10/041',
        data  => <<EOF,
-userdel	2::inwork 19611,43150 19578,43131 19107,43180 18720,43107 17840,43420 17394,43597 17006,43801 16258,43457 15783,43227 15632,43100 14941,42957
+userdel	2::inwork 19611,43150 19578,43131 19107,43180 18720,43107 17840,43420 17394,43597 17006,43801 16258,43457 15783,43227 15632,43100 14934,42934
 EOF
      },
      { from  => 1279836000, # 2010-07-23 00:00
@@ -21358,6 +21363,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2014
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=954647
 userdel	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
 EOF
      },
@@ -21872,13 +21878,13 @@ userdel	2::night 17490,13133 17489,13125
 userdel	2::night 17671,13132 17684,13133
 EOF
      },
-     { from  => 1377731580, # 2013-08-29 01:13
-       until => 1388530799, # 2013-12-31 23:59
-       text  => 'Alt-Lübars zwischen Quickborner Straße und Zabel-Krüger-Damm: Bauarbeiten, Fahrbahn gesperrt, bis Ende 2013',
+     { from  => $isodate2epoch->("2014-04-27 00:00:00"), # 1377731580, # 2013-08-29 01:13
+       until => $isodate2epoch->("2014-06-10 00:00:00"), # 1388530799, # 2013-12-31 23:59
+       text  => 'Alt-Lübars zwischen Quickborner Straße und Zabel-Krüger-Damm: Bauarbeiten, Fahrbahn gesperrt, 28.04.2014 bis Mitte Juni',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20130828.1240.388504.html',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20140422.1525.396516.html',
        data  => <<EOF,
-userdel	q4::inwork 6805,23554 6801,23474 6764,23396
+userdel	q3::inwork 6805,23554 6801,23474 6764,23396
 EOF
      },
      { from  => 1377665400, # 2013-08-28 06:50
