@@ -1050,7 +1050,7 @@ $require_Karte = sub {
     undef $require_Karte;
 };
 
-$VERSION = "11.003";
+$VERSION = "11.004";
 
 use vars qw($delim $font);
 $font = 'sans-serif,helvetica,verdana,arial'; # also set in bbbike.css
@@ -7970,7 +7970,8 @@ sub fix_coords {
 		}
 	    }
 
-	    warn "Can't find nearest for $$varref. Either try to enlarge search space or add some grids for nearest_coord searching";
+	    my $appid = $q->param('appid');
+	    warn "Can't find nearest for $$varref. Either try to enlarge search space or add some grids for nearest_coord searching" . (defined $appid ? " (appid=$appid)" : '');
 	}
     }
     @coords;
