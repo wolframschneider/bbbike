@@ -13320,7 +13320,7 @@ EOF
        source_id => 'IM_011081',
        data  => <<EOF,
 userdel	1::inwork 10742,19632 10439,19576 10377,19565 10331,19556 10257,19542
-userdel	1::inwork 10614,19907 10742,19632
+userdel	1::inwork 10624,19912 10742,19632
 EOF
      },
      { from  => 1229554800, # 2008-12-18 00:00
@@ -16358,11 +16358,11 @@ EOF
 userdel	2::temp 8424,12853 8309,12758 8306,12609
 EOF
      },
-     { from  => $isodate2epoch->("2013-09-20 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2013-09-22 20:00:00"),
+     { from  => $isodate2epoch->("2013-09-19 11:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2013-09-21 20:00:00"),
        periodic => 1,
-       recurrences => [['yearly', days => 21, months => 9]],
-       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbst in der Preußenallee), Straße vollständig gesperrt (21. und 22. September 2013) ',
+       recurrences => [['yearly', days => 19, months => 9]],
+       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbst in der Preußenallee), Straße vollständig gesperrt (20. und 21. September 2014) ',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
@@ -17286,7 +17286,7 @@ EOF
        source_id => 'IM_011081',
        data  => <<EOF,
 userdel	q4::inwork; 10742,19632 10439,19576 10377,19565 10331,19556 10257,19542
-userdel	q4::inwork; 10614,19907 10742,19632
+userdel	q4::inwork; 10624,19912 10742,19632
 EOF
      },
      { from  => 1265413596, # 2010-02-06 00:46
@@ -19560,7 +19560,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20110712.1215.351002.html',
        data  => <<EOF,
-userdel	q4::inwork 10599,19957 10614,19907
+userdel	q4::inwork 10599,19957 10624,19912
 EOF
      },
      { from  => 1310504724, # 2011-07-12 23:05
@@ -19768,6 +19768,9 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: by: http://www.berliner-woche.de/fileadmin/Wochenblatt-Ausgaben/2011/1122_MI.pdf
+#: XXX zieht im Oktober 2014 an den Spittelmarkt
+#: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6083
+#: next_check: 2014-10-01
 	q4::temp:clock 9925,11947 9878,11857
 EOF
      },
@@ -19947,7 +19950,7 @@ EOF
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/blankenburger-strasse2.html?date=20121116 vvv
 userdel	q4::inwork; 11148,19838 11051,19789 10948,19737 10829,19676 10742,19632
-userdel	q4::inwork; 10614,19907 10599,19957
+userdel	q4::inwork; 10624,19912 10599,19957
 #: by: ^^^
 EOF
      },
@@ -21281,7 +21284,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: RICHARDSTR-2014
 #: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2014-04-11
+#: last_checked: 2014-05-20
 #: check_frequency: 30d
 # REMOVED --- userdel	q3::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904
 userdel	q4::inwork; 13103,7889 13085,7904 12870,8087
@@ -21402,13 +21405,15 @@ userdel	2::temp 12048,10097 12229,10014
 EOF
      },
      { from  => 1370210400, # 2013-06-03 00:00
-       until => 1398895200, # 2014-05-01 00:00
+       until => $isodate2epoch->("2014-05-30 16:00:00"), # 1398895200, # 2014-05-01 00:00
        text  => 'Blankenburger Straße, Bauarbeiten von Lindenberger Straße bis Grumbkowstraße, Einbahnstraße offen Richtung Westen, ebenfalls Einbahnstraßenregelungen in der Lindenberger Straße, Karower Straße, Grumbkowstraße, ab 4. Juni 2013 bis Mitte 2014',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20130531.1040.385488.html',
        data  => <<EOF,
 #: source_id: INKO_117520
 #: source_id: IM_021030
+#: last_checked: 2014-05-21
+#: next_check: 2014-05-30
 userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 11162,19844 11312,19920 11425,19978 11563,20048
 EOF
      },
@@ -21775,12 +21780,11 @@ userdel	2::temp 5047,10381 5076,10658
 EOF
      },
      { from  => 1376193600, # 2013-08-11 06:00
-       until => $isodate2epoch->("2014-06-14 17:00:00"), # 1387555200, # 2013-12-20 17:00
+       until => 1400700160, # $isodate2epoch->("2014-06-14 17:00:00"), # 1387555200, # 2013-12-20 17:00
        text  => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt (auch für Radfahrer und Fußgänger), 12.8.2013 06:00 Uhr bis 14.6.2014 17:00 Uhr',
        type  => 'gesperrt',
        source_id => 'IM_020145',
        data  => <<EOF,
-#: next_check_id: STERNDAMM-2014
 userdel	2::inwork 17736,5441 17886,5587
 EOF
      },
@@ -22064,7 +22068,7 @@ EOF
        data  => <<EOF,
 #: XXX wann wird die Brücke wiedereröffnet?
 #: next_check_id: FRIEDRICHSBRUECKE-2014
-#: last_checked: 2014-05-06
+#: last_checked: 2014-05-20
 userdel	2::inwork 10086,12725 10166,12777
 EOF
      },
@@ -22563,7 +22567,7 @@ userdel	q4::inwork 7373,14566 7314,14599
 EOF
      },
      { from  => $isodate2epoch->("2014-04-03 12:00:00"),
-       until => $isodate2epoch->("2014-05-23 18:00:00"),
+       until => 1400781920, # $isodate2epoch->("2014-05-23 18:00:00"),
        text  => 'Scheffelstr.: Baustelle, Fahrtrichtung Richtung Osten zwischen Paul-Junius-Str. und Alfred-Jung-Str., gesperrt 04.04.2014 08:00 Uhr bis Ende Mai 2014',
        type  => 'handicap',
        source_id => 'IM_021595',
@@ -22614,7 +22618,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann?
-#: last_checked: 2014-04-26
+#: last_checked: 2014-05-21
 #: check_frequency: 30d
 userdel	q3::inwork 11673,16003 11567,15842
 EOF
@@ -22702,7 +22706,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2014-05-06
+#: last_checked: 2014-05-20
 #: check_frequency: 14d
 userdel	q4::inwork 11498,11417 11542,11342 11415,11392 11498,11417
 EOF
@@ -22764,6 +22768,53 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4::inwork; 1329,-753 1235,-714 1212,-706 1067,-699 950,-680 791,-598 758,-582 723,-580 709,-582
+EOF
+     },
+     { from  => 1400392980, # 2014-05-18 08:03
+       until => 1401073200, # 2014-05-26 05:00
+       text  => 'Seehofstr. (Zehlendorf):zwischen Dahlemer Weg und Hammerstr. Baustelle, Fahrbahn gesperrt, bis 26.05.2014 05:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_021939',
+       data  => <<EOF,
+userdel	q4::inwork 1945,2127 1812,2160
+EOF
+     },
+     { from  => 1402264800, # 2014-06-09 00:00
+       until => 1402696799, # 2014-06-13 23:59
+       text  => 'Karl-Marx-Str.: Bauarbeiten in Höhe Werbellinstr., Fahrbahn gesperrt, vom 10. Juni 2014 bis zum 13. Juni 2014 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-neukoelln/presse/archiv/20140520.1040.397353.html',
+       data  => <<EOF,
+userdel	q4::inwork 12794,8103 12753,8187 12714,8249
+EOF
+     },
+     { from  => 1400536800, # 2014-05-20 00:00
+       until => $isodate2epoch->("2014-06-30 16:00:00"), # 1404165599, # 2014-06-30 23:59
+       text  => 'Ellen-Epstein-Str. zwischen Erna-Samuel-Str. und Quitzowstr.: Baustelle, Straße gesperrt, ab: 22.05.2014 08 Uhr bis Ende Juni 2014 ',
+       type  => 'gesperrt',
+       source_id => 'IM_021961',
+       data  => <<EOF,
+#: XXX wie sieht die Situation nach den Bauarbeiten aus? Rückbau?
+#: next_check: 2014-06-30
+userdel	2::inwork 6074,14194 6074,14215 6084,14251 6118,14289
+EOF
+     },
+     { from  => 1401055200, # 2014-05-26 00:00
+       until => 1405202399, # 2014-07-12 23:59
+       text  => 'Steigerwaldstr.: Einbahnstraßenregelung, offen Richtung Norden, vom 26. Mai bis 12. Juli 2014',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-spandau/presse/archiv/20140521.1005.397374.html',
+       data  => <<EOF,
+userdel	q4::inwork; -4630,15978 -4653,15896 -4656,15839 -4655,15803 -4639,15726 -4701,15563 -4710,15530
+EOF
+     },
+     { from  => 1400863142, # 2014-05-23 18:39
+       until => 1420066800, # 2015-01-01 00:00
+       text  => 'Kremmen: B273: Neubau Brücke über den Hörstegraben Ortsdurchfahrt Schwante, 26.05.2014 bis 31.12.2014 ',
+       type  => 'gesperrt',
+       source_id => 'LS/721-E/14/035',
+       data  => <<EOF,
+userdel	2::inwork -11775,36312 -12060,36572
 EOF
      },
     );

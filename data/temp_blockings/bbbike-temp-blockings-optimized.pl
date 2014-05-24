@@ -2597,25 +2597,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 34443,1951 34250,2546
-',
-         'periodic' => 1,
-         'until' => 1400450399,
-         'from' => 1400104800,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              15,
-                              'months',
-                              5
-                            ]
-                          ],
-         'text' => 'Erkner: Heimatfest, 16.5.2014 bis 18.5.2014',
-         'type' => 'gesperrt',
-         'id' => 2078
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2913,28 +2895,7 @@ userdel	2::temp 18870,5833 18932,5926
          'type' => 'gesperrt',
          'id' => 2206
        },
-       {
-         'data' => 'userdel	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
-userdel	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
-userdel	q4::temp 11275,8387 11230,8402
-userdel	q4::temp 11333,8582 11255,8591 11193,8568 11133,8560
-',
-         'periodic' => 1,
-         'until' => 1400536799,
-         'from' => 1398290400,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              26,
-                              'months',
-                              4
-                            ]
-                          ],
-         'text' => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 25.04.2014 bis 18.05.2014',
-         'type' => 'handicap',
-         'id' => 2207
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3052,6 +3013,9 @@ userdel	2::temp 12635,12629 12596,12472
          'from' => undef,
          'id' => 2271,
          'data' => '#: by: http://www.berliner-woche.de/fileadmin/Wochenblatt-Ausgaben/2011/1122_MI.pdf
+#: XXX zieht im Oktober 2014 an den Spittelmarkt
+#: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6083
+#: next_check: 2014-10-01
 	q4::temp:clock 9925,11947 9878,11857
 ',
          'type' => 'gesperrt'
@@ -3350,7 +3314,7 @@ userdel	q2::inwork 5258,11285 5236,10994
          'id' => 2425,
          'data' => '#: next_check_id: RICHARDSTR-2014
 #: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2014-04-11
+#: last_checked: 2014-05-20
 #: check_frequency: 30d
 # REMOVED --- userdel	q3::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904
 userdel	q4::inwork; 13103,7889 13085,7904 12870,8087
@@ -3364,31 +3328,24 @@ userdel	q4::inwork 13085,7904 13117,7939 13151,7914
        undef,
        undef,
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'data' => '#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2014
-#: by: http://www.berlin.de/tickets/suche/detail.php?id=954647
-userdel	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
+         'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20130531.1040.385488.html',
+         'until' => 1401458400,
+         'text' => 'Blankenburger Straße, Bauarbeiten von Lindenberger Straße bis Grumbkowstraße, Einbahnstraße offen Richtung Westen, ebenfalls Einbahnstraßenregelungen in der Lindenberger Straße, Karower Straße, Grumbkowstraße, ab 4. Juni 2013 bis Mitte 2014',
+         'from' => 1370210400,
+         'id' => 2435,
+         'data' => '#: source_id: INKO_117520
+#: source_id: IM_021030
+#: last_checked: 2014-05-21
+#: next_check: 2014-05-30
+userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 11162,19844 11312,19920 11425,19978 11563,20048
 ',
-         'periodic' => 1,
-         'until' => 1400450399,
-         'from' => 1400191200,
-         'text' => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz), Straße rund um den Dorfteich vermutlich gesperrt (17. und 18. Mai 2014)',
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              17,
-                              'months',
-                              5
-                            ]
-                          ],
-         'type' => 'handicap',
-         'id' => 2431
+         'type' => 'handicap'
        },
-       undef,
-       undef,
-       undef,
-       undef,
        {
          'source_id' => 'http://www.kindertag-berlin.de/',
          'data' => 'userdel	2::temp 20755,5750 20716,6029 20708,6089 20623,6136 20453,6211 20464,6237
@@ -3564,17 +3521,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_020145',
-         'until' => 1402758000,
-         'text' => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt (auch für Radfahrer und Fußgänger), 12.8.2013 06:00 Uhr bis 14.6.2014 17:00 Uhr',
-         'from' => 1376193600,
-         'id' => 2469,
-         'data' => '#: next_check_id: STERNDAMM-2014
-userdel	2::inwork 17736,5441 17886,5587
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3664,7 +3611,7 @@ userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
          'id' => 2498,
          'data' => '#: XXX wann wird die Brücke wiedereröffnet?
 #: next_check_id: FRIEDRICHSBRUECKE-2014
-#: last_checked: 2014-05-06
+#: last_checked: 2014-05-20
 userdel	2::inwork 10086,12725 10166,12777
 ',
          'type' => 'gesperrt'
@@ -3835,16 +3782,7 @@ userdel	q4::inwork; 11073,-2037 10983,-2116
        },
        undef,
        undef,
-       {
-         'source_id' => 'IM_021595',
-         'until' => 1400860800,
-         'text' => 'Scheffelstr.: Baustelle, Fahrtrichtung Richtung Osten zwischen Paul-Junius-Str. und Alfred-Jung-Str., gesperrt 04.04.2014 08:00 Uhr bis Ende Mai 2014',
-         'from' => 1396519200,
-         'id' => 2549,
-         'data' => 'userdel	q3::inwork; 15098,12849 15233,12829 15357,12813
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3855,7 +3793,7 @@ userdel	q4::inwork; 11073,-2037 10983,-2116
          'from' => undef,
          'id' => 2554,
          'data' => '#: XXX bis wann?
-#: last_checked: 2014-04-26
+#: last_checked: 2014-05-21
 #: check_frequency: 30d
 userdel	q3::inwork 11673,16003 11567,15842
 ',
@@ -3925,7 +3863,7 @@ userdel	q4::inwork 10862,17087 10891,17088 10917,17088
          'from' => undef,
          'id' => 2563,
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2014-05-06
+#: last_checked: 2014-05-20
 #: check_frequency: 14d
 userdel	q4::inwork 11498,11417 11542,11342 11415,11392 11498,11417
 ',
@@ -3972,6 +3910,58 @@ userdel	2::inwork 554,23349 658,23395
          'data' => '	q4::inwork; 1329,-753 1235,-714 1212,-706 1067,-699 950,-680 791,-598 758,-582 723,-580 709,-582
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_021939',
+         'until' => 1401073200,
+         'text' => 'Seehofstr. (Zehlendorf):zwischen Dahlemer Weg und Hammerstr. Baustelle, Fahrbahn gesperrt, bis 26.05.2014 05:00 Uhr ',
+         'from' => 1400392980,
+         'id' => 2570,
+         'data' => 'userdel	q4::inwork 1945,2127 1812,2160
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-neukoelln/presse/archiv/20140520.1040.397353.html',
+         'until' => 1402696799,
+         'text' => 'Karl-Marx-Str.: Bauarbeiten in Höhe Werbellinstr., Fahrbahn gesperrt, vom 10. Juni 2014 bis zum 13. Juni 2014 ',
+         'from' => 1402264800,
+         'id' => 2571,
+         'data' => 'userdel	q4::inwork 12794,8103 12753,8187 12714,8249
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_021961',
+         'until' => 1404136800,
+         'text' => 'Ellen-Epstein-Str. zwischen Erna-Samuel-Str. und Quitzowstr.: Baustelle, Straße gesperrt, ab: 22.05.2014 08 Uhr bis Ende Juni 2014 ',
+         'from' => 1400536800,
+         'id' => 2572,
+         'data' => '#: XXX wie sieht die Situation nach den Bauarbeiten aus? Rückbau?
+#: next_check: 2014-06-30
+userdel	2::inwork 6074,14194 6074,14215 6084,14251 6118,14289
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-spandau/presse/archiv/20140521.1005.397374.html',
+         'until' => 1405202399,
+         'text' => 'Steigerwaldstr.: Einbahnstraßenregelung, offen Richtung Norden, vom 26. Mai bis 12. Juli 2014',
+         'from' => 1401055200,
+         'id' => 2573,
+         'data' => 'userdel	q4::inwork; -4630,15978 -4653,15896 -4656,15839 -4655,15803 -4639,15726 -4701,15563 -4710,15530
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'LS/721-E/14/035',
+         'until' => 1420066800,
+         'text' => 'Kremmen: B273: Neubau Brücke über den Hörstegraben Ortsdurchfahrt Schwante, 26.05.2014 bis 31.12.2014 ',
+         'from' => 1400863142,
+         'id' => 2574,
+         'data' => 'userdel	2::inwork -11775,36312 -12060,36572
+',
+         'type' => 'gesperrt'
        }
      
 );

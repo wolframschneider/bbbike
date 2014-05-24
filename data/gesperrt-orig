@@ -372,9 +372,9 @@ Parchimer Str.	1 22292,12198 22228,12274 22212,12349 22212,12422 22256,12489 222
 Ringbahnstr.	1 12934,6967 13072,7013
 #: by: Robert J. vvv
 #: corrected_by: Michael Kiekebusch (Radfahren auf breiten Gehweg möglich)
-Stiftsweg	1s:q3 11001,18528 11268,18851
+Stiftsweg	1s:q3 11001,18528 11239,18832 11263,18842
 #: note: zur Not könnte man entgegengesetzt auf dem Gehweg fahren, oder sogar auf dem für die Straßenbahn reservierten Fahrbahnteil
-Bleicheroder Str.	1 11268,18851 11439,18890 11526,18929 11622,18964 11727,19001 11762,19014 11818,19089
+Bleicheroder Str.	1 11263,18842 11439,18890 11526,18929 11622,18964 11727,19001 11762,19014 11818,19089
 #: by: ^^^
 Renée-Sintenis-Platz	1 5642,7255 5664,7244 5675,7224 5661,7202 5641,7189 5621,7204 5614,7223 5624,7244 5642,7255
 Spreepark	2 16023,8860 16161,8852
@@ -1690,6 +1690,7 @@ Südwestkorso: Mittelstreifen, parkende Autos	3nocross 4909,7436 4874,7382 4836,7
 Südwestkorso: Mittelstreifen, parkende Autos	3nocross 4125,6763 4206,6820 4237,6840
 Berliner Str.: Mittelstreifen	3nocross 1910,20548 1929,20501 1955,20435
 Dietzgenstr.: Mittelstreifen	3nocross 10083,21848 10097,21809 10106,21784
+Dietzgenstr.: Mittelstreifen	3nocross 10120,21464 10118,21510 10114,21592 10111,21667
 Rosenthaler Weg: Straßenbahntrasse	3nocross 11693,22482 11812,22523 11940,22587
 abgeschlossenes Tor	3 * 8237,20098 *
 abgeschlossenes Tor	3 * 8291,20112 *
@@ -2029,7 +2030,7 @@ Drängelgitter	BNP:3::trailer=10 10062,15927
 #: next_check_id: LORTZING-2014
 #: XXX eventuell temporär wegen der Baustraße
 #: XXX siehe auch in zebrastreifen-orig
-#: last_checked: 2014-02-26
+#: last_checked: 2014-05-21
 #: check_frequency: 120d
 zwei weite Drängelgitter	BNP:4::trailer=12 10038,15418
 Schranke	BNP:3 -7969,-1659
@@ -2520,7 +2521,7 @@ Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht möglich	3 8935,13844 9085,1
 #: next_check_id ^^^
 # 
 #: next_check_id: SCHINKELPLATZ_2014 vvv
-#: last_checked: 2014-05-14 vvv
+#: last_checked: 2014-05-20 vvv
 #: check_frequency: 90d vvv
 Schinkelplatz: Bauarbeiten, Straßen vollständig gesperrt	2::inwork 10008,12274 9994,12368 9996,12401
 Niederlagstr.: Bauarbeiten, Straßen vollständig gesperrt	2::inwork 9994,12368 9943,12364 9961,12273
@@ -2530,10 +2531,10 @@ Niederlagstr.: Bauarbeiten, Straßen vollständig gesperrt	2::inwork 9994,12368 99
 # 
 #: next_check_id: STERNDAMM-2014
 #: source_id: IM_020145
-#: valid: -20140614
+#: by: http://www.tagesspiegel.de/berlin/sperrung-am-bahnhof-schoeneweide-zwangsgeld-drohung-gegen-die-bahn/9923866.html
 #: last_checked: 2014-05-17
-#: next_check: 2014-06-14
-Sterndamm: Brückenarbeiten, Straße vollständig gesperrt (auch für Radfahrer und Fußgänger)	2::inwork 17736,5441 17886,5587
+#: next_check: 2014-07-30 (Regelung wird überprüft)
+Sterndamm: Brückenarbeiten, Einbahnstraße	1::inwork 17736,5441 17886,5587
 # 
 #: next_check_id: GRENZALLEE-2014
 #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/de/bau.shtml
@@ -2632,7 +2633,7 @@ An der Charité: wegen Bauarbeiten gesperrt	2:inwork 8764,13372 8665,13353
 #: next_check_id: FLORAGAERTEN-2014
 #: osm_watch: way id="201628184" version="3"
 #: XXX siehe auch Eintrag in qualitaet_s-orig
-#: last_checked: 2014-02-26
+#: last_checked: 2014-05-21
 #: check_frequency: 90d
 In den Floragärten: Baustelle	2:inwork 9895,17649 9997,17646
 # 
@@ -2697,7 +2698,7 @@ Rudi-Dutschke-Weg	2:inwork 2627,5095 2913,5294
 #: XXX wird auch der Asphalt hier und im südlichen Abschnitt verbessert?
 Billy-Wilder-Promenade: wegen Bauarbeiten an umliegenden Wohnhäusern gesperrt	2:inwork 2528,1501 2584,1376
 # 
-#: last_checked: 2014-05-06
+#: last_checked: 2014-05-20
 #: next_check: 2014-09-30
 Marx-Engels-Forum: wegen U-Bahn-Bauarbeiten Durchgang zur Rathausstr. nicht möglich	2:inwork 10411,12471 10422,12395
 # 
@@ -2762,8 +2763,8 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
 # REMOVED --- #: last_checked: 2011-04-08 --- Bebelplatz: Bauarbeiten, gesperrt	2:inwork 9679,12388 9702,12307 9708,12235
 # 
 #: next_check_id: STAATSOPER-2014 vvv
-#: last_checked: 2014-05-14 vvv
-#: next_check: 2014-06-01 vvv
+#: last_checked: 2014-05-20 vvv
+#: next_check: 2015-06-01 (voraussichtliche Eröffnung Oktober 2015) vvv
 #: XXX siehe auch aufgehobene Einbahnstraßenregelung oben (Behrenstr./Bebelplatz)
 Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
 Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9876,12298
@@ -2773,8 +2774,8 @@ Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12
 #: last_checked: ^^^
 #: next_check_id: ^^^
 # 
-#: last_checked: 2014-03-31
-#: next_check: 2015-03-31
+#: last_checked: 2014-05-20
+#: next_check: 2015-05-31 (Eröffnung 2019 geplant)
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 # REMOVED (Boulevard Berlin!) --- #: last_checked: 2011-12-25 --- #: next_check: 2012-01-01 --- #: XXX evenuell bleibt dieser Teil dauerhaft gesperrt, weil hier ein Einkaufszentrum entsteht? --- #: XXX auch die Ampel an der Kreuzung prüfen --- Treitschkestr.: Bauarbeiten am Kaufhaus, bis 2012	2:inwork 5219,6215 5062,6295 4997,6331 4971,6345

@@ -49,6 +49,7 @@ Stresemannstr.	Zs 9210,10614
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_0408/nachricht1643.html
 #: confirmed_by: srt
 Harzer Str.	Zs 13670,8745
+Treptower/Harzer	Zs 13871,8611
 Wilhelmstr./Reichstagufer	Zs 8766,12541
 Friedrichstr./Puttkamer Str.	Zs 9522,10979
 Südwestkorso/Laubenheimer	Zs 4437,6953
@@ -494,7 +495,7 @@ Hämmerlingstr./Wuhleweg	Zs 22084,5877
 Kiefholzstr./Siemens	Zs 14020,9117
 #: next_check_id: LORTZING-2014
 #: XXX bleibt dieser Zebrastreifen permanent?
-#: last_checked: 2014-02-26
+#: last_checked: 2014-05-21
 #: check_frequency: 120d
 Lortzingstr.-Mauerpark/Baustraße	Zs 10055,15424
 Alte Hellersdorfer Str.	Zs 23109,15861

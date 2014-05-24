@@ -29,7 +29,7 @@ BEGIN {
 	    Type Name
 	    Waypoints WaypointsHash
 	    Track CurrentConverter
-	    TimeOffset TrackAttrs
+	    TimeOffset TrackAttrs IsTrackSegment
 	    LineInfo
 	   )) {
 	my $acc = $_;
@@ -51,10 +51,6 @@ use constant TYPE_WAYPOINT => 0;
 use constant TYPE_TRACK    => 1;
 use constant TYPE_ROUTE    => 2;
 use constant TYPE_GROUP    => 3;
-
-# XXX currently hardcoded to DMS
-# XXX Note that some functions also assume hardcoded DMS (DMS_output, body_as_string)
-use constant _POSITION_FORMAT_FOR_WRITING => "DMS";
 
 use base qw(Exporter);
 @EXPORT_OK = qw(TYPE_WAYPOINT TYPE_TRACK TYPE_ROUTE TYPE_GROUP);
@@ -103,13 +99,27 @@ use GPS::Util; # for eliminate_umlauts
 	$epoch;
     }
 
-    sub DMS_output {
+    sub _coord_output {
 	my($wpt, $container) = @_;
-	$wpt->ParsedLatitude && $container->PositionFormat eq $container->_POSITION_FORMAT_FOR_WRITING
-	    ? ($wpt->ParsedLatitude, $wpt->ParsedLongitude)
-		: $wpt->Latitude
-		    ? GPS::GpsmanData::convert_lat_long_to_gpsman_DMS($wpt->Latitude, $wpt->Longitude)
-			: (undef, undef);
+	if ($container->PositionFormat eq 'DDD') {
+	    if (defined $wpt->Latitude) {
+		my $lat_prefix = $wpt->Latitude  < 0 ? 'S' : 'N';
+		my $lon_prefix = $wpt->Longitude < 0 ? 'W' : 'E';
+		($lat_prefix . $wpt->Latitude, $lon_prefix . $wpt->Longitude);
+	    } else {
+		(undef, undef);
+	    }
+	} else {
+	    if (defined $wpt->ParsedLatitude) { # XXX???
+		($wpt->ParsedLatitude, $wpt->ParsedLongitude);
+	    } else {
+		if (defined $wpt->Latitude) {
+		    GPS::GpsmanData::convert_lat_long_to_gpsman_DMS($wpt->Latitude, $wpt->Longitude)
+		} else {
+		    (undef, undef);
+		}
+	    }
+	}
     }
 
     sub DumpHiddenAttributes {
@@ -414,7 +424,7 @@ sub new {
 
     # some defaults:
     #$self->PositionFormat("DMS");
-    $self->change_position_format("DMS");
+    $self->change_position_format("DDD");
     $self->TimeOffset(0);
     $self->DatumFormat("WGS 84");
 
@@ -627,13 +637,13 @@ sub parse {
 		    if ($lineinfo) {
 			$lineinfo->add_chunk_lineinfo($self, $i);
 		    }
+		    $self->IsTrackSegment(0);
 		} else {
 		    if (defined $l[1] && $l[1] ne "") {
 			warn "Should not happen: TS with name";
-			$self->Name($l[1]);
-		    } elsif (defined $current_track_name) {
-			$self->Name($current_track_name);
 		    }
+		    $self->Name(undef);
+		    $self->IsTrackSegment(1);
 		}
 		if (@l > 2) {
 		    my %attr;
@@ -886,7 +896,7 @@ sub header_as_string {
     my $s = "% Written by $0 [" . __PACKAGE__ . "] $datetime\n\n";
     # XXX:
     $s .= "!Format: " . join(" ",
-			     $self->_POSITION_FORMAT_FOR_WRITING,
+			     ($self->PositionFormat || 'DDD'),
 			     $self->TimeOffset,
 			     $self->DatumFormat) . "
 !Creation: no
@@ -917,7 +927,7 @@ sub body_as_string {
 	    $s .= join("\t",
 		       $wpt->Ident,
 		       (defined $wpt->Comment ? $wpt->Comment : ""),
-		       $wpt->DMS_output($self),
+		       $wpt->_coord_output($self),
 		       (defined $wpt->Altitude ? "alt=".$wpt->Altitude : ()),
 		       (defined $wpt->Symbol ? "symbol=".$wpt->Symbol : ()),
 		       (defined $wpt->DisplayOpt ? "dispopt=".$wpt->DisplayOpt : ()),
@@ -926,17 +936,21 @@ sub body_as_string {
 		. "\n";
 	}
     } elsif ($self->Type == TYPE_TRACK) {
-	$s .= "!T:";
-	if (defined $self->Name) {
-	    $s .= "\t" . $self->Name;
+	if ($self->IsTrackSegment) {
+	    $s .= "!TS:\n";
+	} else {
+	    $s .= "!T:";
+	    if (defined $self->Name) {
+		$s .= "\t" . $self->Name;
+	    }
+	    $s .= $self->_track_attrs_as_string . "\n";
 	}
-	$s .= $self->_track_attrs_as_string . "\n";
 	foreach my $wpt (@{ $self->Track }) {
 	    $s .= join("\t",
 		       (defined $wpt->Ident ? $wpt->Ident : ""),
 		       (defined $wpt->DateTime ? $wpt->DateTime :
 			defined $wpt->Comment ? $wpt->Comment : ""),
-		       $wpt->DMS_output($self),
+		       $wpt->_coord_output($self),
 		       (defined $wpt->Altitude ? ($wpt->Accuracy ? '~'x$wpt->Accuracy : '') . $wpt->Altitude : ""),
 		       (defined $wpt->HiddenAttributes ? $wpt->DumpHiddenAttributes : ()),
 		      )
@@ -952,7 +966,7 @@ sub body_as_string {
 	    $s .= join("\t",
 		       $wpt->Ident,
 		       (defined $wpt->Comment ? $wpt->Comment : ""),
-		       $wpt->DMS_output($self),
+		       $wpt->_coord_output($self),
 		       (defined $wpt->Symbol ? "symbol=".$wpt->Symbol : ()),
 		       (defined $wpt->HiddenAttributes ? $wpt->DumpHiddenAttributes : ()),
 		      )
@@ -1189,6 +1203,8 @@ sub convert_to_route {
     @res;
 }
 
+use constant GPXX_NS => 'http://www.garmin.com/xmlschemas/GpxExtensions/v3';
+
 # Options:
 #   symtocmt => $bool: hack to put symbol name into comment, for gpx
 #                      renderers not dealing the sym tag (e.g. merkaartor)
@@ -1201,6 +1217,7 @@ sub as_gpx {
     my $sym_to_cmt = delete $args{symtocmt};
     my $skip_cmt = $sym_to_cmt ? 1 : delete $args{skipcmt};
     my $auto_skip_cmt = exists $args{autoskipcmt} ? delete $args{autoskipcmt} : 1;
+    my $do_gpxx = exists $args{gpxx} ? delete $args{gpxx} : 1;
     die "Unhandled arguments: " . join(" ", %args) if %args;
 
     my @std_wpt_as_gpx_args = (symtocmt => $sym_to_cmt, skipcmt => $skip_cmt, autoskipcmt => $auto_skip_cmt);
@@ -1213,8 +1230,16 @@ sub as_gpx {
     $gpx->setAttribute("version", "1.1");
     $gpx->setAttribute("creator", "GPS::GpsmanData $GPS::GpsmanData::VERSION - http://www.bbbike.de");
     $gpx->setNamespace("http://www.w3.org/2001/XMLSchema-instance","xsi");
-    $gpx->setNamespace("http://www.topografix.com/GPX/1/1");
-    $gpx->setAttribute("xsi:schemaLocation", "http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd");
+    if ($do_gpxx) {
+	$gpx->setNamespace(GPXX_NS,'gpxx');
+    }
+    $gpx->setNamespace("http://www.topografix.com/GPX/1/1"); # last namespace is the default one
+    $gpx->setAttribute("xsi:schemaLocation",
+		       "http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" .
+		       ($do_gpxx ? ' ' . GPXX_NS . ' http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd' : '')
+		      );
+
+    my $current_trk;
     for my $chunk (@{ $self->Chunks }) {
 
 	my $add_name = sub {
@@ -1233,9 +1258,26 @@ sub as_gpx {
 		$wpt->as_gpx($wptxml, $chunk, @std_wpt_as_gpx_args);
 	    }
 	} elsif ($chunk->Type eq $chunk->TYPE_TRACK) {
-	    my $trkxml = $gpx->addNewChild(undef, "trk");
-	    $add_name->($trkxml);
-	    my $trksegxml = $trkxml->addNewChild(undef, "trkseg");
+	    if ($chunk->IsTrackSegment) {
+		if (!$current_trk) {
+		    die "Invalid: track segment without a track";
+		}
+	    } else {
+		my $trkxml = $gpx->addNewChild(undef, "trk");
+		$add_name->($trkxml);
+		if ($do_gpxx) {
+		    my $trk_attrs = $chunk->TrackAttrs;
+		    if ($trk_attrs && $trk_attrs->{colour}) {
+			my $garmin_color = GPS::GpsmanData::GarminGPX::gpsman_to_garmin_color($trk_attrs->{colour});
+			my $extensionsxml = $trkxml->addNewChild(undef, 'extensions');
+			my $trackextensionxml = $extensionsxml->addNewChild(GPXX_NS, 'TrackExtension');
+			my $displaycolorxml = $trackextensionxml->addNewChild(GPXX_NS, 'DisplayColor');
+			$displaycolorxml->appendText($garmin_color);
+		    }
+		}
+		$current_trk = $trkxml;
+	    }
+	    my $trksegxml = $current_trk->addNewChild(undef, "trkseg");
 	    for my $wpt (@{ $chunk->Track }) {
 		my $trkptxml = $trksegxml->addNewChild(undef, "trkpt");
 		$wpt->as_gpx($trkptxml, $chunk, @std_wpt_as_gpx_args);

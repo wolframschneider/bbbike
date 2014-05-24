@@ -153,9 +153,16 @@ sub load_gpx {
 	    my $trk = $wpt_or_trk;
 	    my $name;
 	    my $trkseg;
+	    my $track_display_color;
+	    my $is_first_segment = 1;
 	    for my $trk_child ($trk->children) {
 		if ($trk_child->name eq 'name') {
 		    $name = $trk_child->children_text;
+		} elsif ($trk_child->name eq 'extensions') {
+		    $track_display_color = $trk_child->findvalue('./gpxx:TrackExtension/gpxx:DisplayColor');
+		    if (defined $track_display_color) {
+			$track_display_color = GPS::GpsmanData::GarminGPX::garmin_to_gpsman_color($track_display_color);
+		    }
 		} elsif ($trk_child->name eq 'trkseg') {
 		    if ($trkseg) {
 			push @{ $gpsman->{Chunks} }, $trkseg;
@@ -163,8 +170,14 @@ sub load_gpx {
 		    }
 		    $trkseg = GPS::GpsmanData->new;
 		    $trkseg->Type($trkseg->TYPE_TRACK);
-		    $trkseg->Name($name);
-		    $trkseg->TrackAttrs({});
+		    if ($is_first_segment) {
+			$trkseg->IsTrackSegment(0);
+			$trkseg->Name($name);
+			$trkseg->TrackAttrs({ (defined $track_display_color ? (colour => $track_display_color) : ()) });
+			$is_first_segment = 0;
+		    } else {
+			$trkseg->IsTrackSegment(1);
+		    }
 		    my @data;
 		    for my $trkpt ($trk_child->children) {
 			my $trkpt_name = $trkpt->name;
