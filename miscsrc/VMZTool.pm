@@ -276,10 +276,11 @@ sub parse_berlin_summary {
     my %place2rec;
 
     for my $record (@{ $summary_data->{list} }) {
-	my $type = lc basename $record->{iconId}; # something like "ROADWORKS" or "INDEFINITION"
+	my $type = $record->{iconId} ? lc basename $record->{iconId} : ''; # something like "ROADWORKS" or "INDEFINITION"
 	next if $type eq 'airport';
 
 	(my $id = $record->{pointId}) =~ s{^News_id_}{};
+	next if $id =~ m{^Airport_id_}; # e.g. Airport_id_SXF, Airport_id_TXL
 
 	my $htmltb = HTML::TreeBuilder->new;
 	my $tree = $htmltb->parse($rss_data->{$id}->{description_html});
