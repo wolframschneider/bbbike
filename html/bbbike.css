@@ -244,6 +244,8 @@ div#routing {
 	position: absolute; 
 	/* left: 0px; */
 	width: 24.5%;
+	max-width: 19em;
+	min-width: 17em;
         margin-right: 0.5em;
 	background-color: white;
 	z-index: 1000; 
