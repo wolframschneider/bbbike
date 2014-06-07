@@ -122,23 +122,42 @@ sub load_gpx {
 
     my @wpts;
 
-    my($root) = $twig->children;
+    my $root = $twig->root;
+
+    my $creator = $twig->root->{att}->{'creator'};
+    my $gps_device;
+    if (defined $creator && $creator =~ m{^etrex}i) { # heuristics: looks like a GPS device
+	$gps_device = $creator;
+    }
+
+    my $garmin_userdef_symbols_set;
+
     for my $wpt_or_trk ($root->children) {
 	if ($wpt_or_trk->name eq 'wpt') {
 	    my $wpt_in = $wpt_or_trk;
 	    my $name;
 	    my $gpsman_time;
 	    my $gpsman_symbol;
+	    my $ele;
 	    for my $wpt_child ($wpt_in->children) {
 		if ($wpt_child->name eq 'name') {
 		    $name = $wpt_child->children_text;
+		} elsif ($wpt_child->name eq 'ele') {
+		    $ele = $wpt_child->children_text;
 		} elsif ($wpt_child->name eq 'time') {
 		    my $time = $wpt_child->children_text;
 		    $gpsman_time = $gpsman_time_to_time->($time);
 		} elsif ($wpt_child->name eq 'sym') {
 		    my $sym = $wpt_child->children_text;
-		    $gpsman_symbol = GPS::GpsmanData::GarminGPX::garmin_symbol_name_to_gpsman_symbol_name($sym);
-		}		    
+		    ($gpsman_symbol, my($this_garmin_userdef_symbols_set)) = GPS::GpsmanData::GarminGPX::garmin_symbol_name_to_gpsman_symbol_name_set($sym);
+		    if ($this_garmin_userdef_symbols_set) {
+			if (!$garmin_userdef_symbols_set) {
+			    $garmin_userdef_symbols_set = $this_garmin_userdef_symbols_set;
+			} elsif ($garmin_userdef_symbols_set ne $this_garmin_userdef_symbols_set) {
+			    warn "WARNING: garmin userdef symbols from different sets used in one file, cannot deal with this situation ($garmin_userdef_symbols_set != $this_garmin_userdef_symbols_set)";
+			}
+		    }
+		}
 	    }
 	    my($lat, $lon) = $latlong2xy_twig->($wpt_in);
 	    my $wpt = GPS::Gpsman::Waypoint->new;
@@ -146,6 +165,7 @@ sub load_gpx {
 	    $wpt->Accuracy(0);
 	    $wpt->Latitude($lat);
 	    $wpt->Longitude($lon);
+	    $wpt->Altitude($ele) if defined $ele;
 	    $wpt->Comment($gpsman_time) if $gpsman_time;
 	    $wpt->Symbol($gpsman_symbol) if defined $gpsman_symbol;
 	    push @wpts, $wpt;
@@ -173,7 +193,10 @@ sub load_gpx {
 		    if ($is_first_segment) {
 			$trkseg->IsTrackSegment(0);
 			$trkseg->Name($name);
-			$trkseg->TrackAttrs({ (defined $track_display_color ? (colour => $track_display_color) : ()) });
+			$trkseg->TrackAttrs({
+					     (defined $track_display_color ? (colour => $track_display_color) : ()),
+					     (defined $gps_device ? ('srt:device' => $gps_device) : ()),
+					    });
 			$is_first_segment = 0;
 		    } else {
 			$trkseg->IsTrackSegment(1);
@@ -260,6 +283,10 @@ sub load_gpx {
 	$wpts->Type(GPS::GpsmanData::TYPE_WAYPOINT);
 	$wpts->Waypoints(\@wpts);
 	push @{ $gpsman->{Chunks} }, $wpts;
+	$wpts->TrackAttrs({
+			   (defined $garmin_userdef_symbols_set ? ('srt:garmin_userdef_symbols_set' => $garmin_userdef_symbols_set) : ()),
+			   (defined $gps_device ? ('srt:device' => $gps_device) : ()),
+			  });
     }
 
     $gpsman;
