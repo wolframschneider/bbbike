@@ -63,12 +63,13 @@ EOF
        text  => 'Karneval der Kulturen, 8.6.2014',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753 9002,9731 8777,9601 8679,9544 8595,9495 8358,9568 8192,9619
+userdel	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753
+# REMOVED --- userdel	2::temp 9044,9753 9002,9731 8777,9601 8679,9544 8595,9495 8358,9568 8192,9619
 userdel	2::temp 10713,9260 10670,9286 10639,9304 10564,9292
-userdel	3 8774,9534 8777,9601 8779,9812
-userdel	3 8779,9812 8777,9601 8774,9534
-userdel	3 9000,9509 9044,9753 9073,9915
-userdel	3 9073,9915 9044,9753 9000,9509
+# REMOVED --- userdel	3 8774,9534 8777,9601 8779,9812
+# REMOVED --- userdel	3 8779,9812 8777,9601 8774,9534
+# REMOVED --- userdel	3 9000,9509 9044,9753 9073,9915
+# REMOVED --- userdel	3 9073,9915 9044,9753 9000,9509
 userdel	3 9280,9476 9334,9670 9387,9804
 userdel	3 9387,9804 9334,9670 9280,9476
 userdel	3 9524,9426 9552,9602 9588,9827
@@ -1590,8 +1591,8 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2 14694,5230 14744,5211 14808,5202 14988,5214
-userdel	2 14988,5214 15038,5235 15183,5480
-userdel	2 15183,5480 15363,5668 15382,5687
+userdel	2 14988,5214 15038,5235 15174,5467
+userdel	2 15174,5467 15363,5668 15382,5687
 EOF
      },
      { from  => 1113429600, # 2005-04-14 00:00
@@ -10181,7 +10182,7 @@ EOF
        text  => 'L 030 Altlandsberg-B158 Seefeld zw. Krummensee und Seefeld Neubau Radweg Vollsperrung 08.10.2007-02.11.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 29835,21516 29573,21750 29537,21850 28936,23307 28753,23756 28614,23943
+userdel	2::inwork 29826,21526 29573,21750 29536,21843 28936,23307 28921,23343 28886,23429 28777,23697 28753,23756 28581,24020
 EOF
      },
      { from  => 1191880800, # 2007-10-09 00:00
@@ -10256,7 +10257,7 @@ EOF
        text  => 'L 030 Börnicker Chaussee OD Bernau, zw. Gernotstr. und Eberswalder Str. grundhater Straßenbau Vollsperrung 16.10.2007-30.12.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 23113,30450 23368,30409 23620,30267
+userdel	2::inwork 23113,30450 23179,30439 23368,30409 23392,30395 23620,30267
 EOF
      },
      { from  => 1192312800, # 2007-10-14 00:00
@@ -10924,7 +10925,7 @@ EOF
        text  => 'L 030 Börnicker Chaussee OD Bernau, zw. Gernotstr. und Schönfelder Weg Straßenbau Vollsperrung 20.12.2007-30.04.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 23113,30450 23368,30409 23620,30267
+userdel	q4::inwork 23113,30450 23179,30439 23368,30409 23392,30395 23620,30267
 EOF
      },
      { from  => 1216405512, # 2008-07-18 20:25
@@ -14760,7 +14761,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_013302',
        data  => <<EOF,
-userdel	1::inwork 15382,5687 15363,5668 15183,5480
+userdel	1::inwork 15382,5687 15363,5668 15174,5467
 EOF
      },
      { from  => undef, # 
@@ -19641,7 +19642,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_108454',
        data  => <<EOF,
-userdel	q4::inwork 15363,5668 15183,5480 15038,5235 14988,5214 14808,5202 14744,5211
+userdel	q4::inwork 15363,5668 15174,5467 15038,5235 14988,5214 14808,5202 14744,5211
 EOF
      },
      { from  => 1312063200, # 2011-07-31 00:00
@@ -19659,7 +19660,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20110727.1340.352585.html',
        data  => <<EOF,
-userdel	q4::inwork 15183,5480 15165,5506 15146,5592 15143,5705 15141,5774 15141,5800 15141,5870 15143,5936
+userdel	q4::inwork 15174,5467 15146,5592 15143,5705 15141,5774 15141,5800 15141,5870 15143,5936
 EOF
      },
      { from  => 1312526331, # 2011-08-05 08:38
@@ -22013,7 +22014,7 @@ EOF
      },
      { from  => 1380520800, # 2013-09-30 08:00
        until => 1411768800, # 2014-09-27 00:00
-       text  => 'Zwischen Birkholz und Zepernick: Neubau der Autobahnbrücke, Straße ist vorausichtlich auch für Radfahrer nicht passierbar, 01.10.2013 bis 26.09.2014 ',
+       text  => 'Zwischen Birkholz und Zepernick: Neubau der Autobahnbrücke, Straße ist auch für Radfahrer nicht passierbar, 01.10.2013 bis 26.09.2014 ',
        type  => 'gesperrt',
        source_id => '131100196',
        data  => <<EOF,
@@ -22457,8 +22458,8 @@ userdel	q3::inwork; 11946,13993 11820,13804
 EOF
      },
      { from  => 1392902100, # 2014-02-20 14:15
-       until => 1402063200, # 2014-06-06 16:00
-       text  => 'Langhansstr. : Baustelle, Fahrbahn Richtung Prenzlauer Promenade zwischen Heinersdorfer Str. und Prenzlauer Promenade gesperrt, bis 06.06.2014 16:00 Uhr ',
+       until => $isodate2epoch->("2014-06-10 16:00:00"), # 1402063200, # 2014-06-06 16:00
+       text  => 'Langhansstr. : Baustelle, Fahrbahn Richtung Prenzlauer Promenade zwischen Heinersdorfer Str. und Prenzlauer Promenade gesperrt, bis 10.06.2014 16:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_021322',
        data  => <<EOF,
@@ -22819,6 +22820,21 @@ EOF
        source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20140528.1315.397553.html',
        data  => <<EOF,
 userdel	q2::inwork 11563,20048 11419,20327
+EOF
+     },
+     { from  => 1402304400, # 2014-06-09 11:00
+       until => 1402412400, # 2014-06-10 17:00
+       text  => 'Bergstr. in Steglitz: Bombenentschärfung am 10.6.2014 zwischen 11:00 und 17:00, Sperrgebiet',
+       type  => 'gesperrt',
+       source_id => 'http://www.berliner-zeitung.de/polizei/bombenentschaerfung-in-steglitz-5000-menschen-muessen-ihre-haeuser-verlassen,10809296,27383386.html',
+       data  => <<EOF,
+userdel	2::inwork 6134,5990 6134,5894 6134,5800 6007,5785 5942,5775
+userdel	2::inwork 6134,5800 6115,5302
+userdel	2::inwork 5699,5949 5847,5961 5845,6049 5748,6051 5699,5949 5674,5901 5677,5868 5679,5853 5681,5768 5681,5743 5683,5672 5687,5586 5840,5588 5840,5679 5683,5672
+userdel	2::inwork 5681,5743 5850,5765 5851,5863 5694,5845
+userdel	2::inwork 5845,6049 6008,6067 6001,5974 5847,5961 5851,5863 5935,5874 5942,5775 5850,5765 5840,5679
+userdel	2::inwork 5993,5422 6007,5785 6007,5882 6001,5974 6134,5990 6116,6130
+userdel	2::inwork 5935,5874 6007,5882 6134,5894
 EOF
      },
     );

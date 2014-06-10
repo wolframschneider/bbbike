@@ -1,148 +1,6 @@
-$#temp_blocking = 2;
+$#temp_blocking = 73;
 push @temp_blocking,
 (
-       {
-         'data' => '#: by: http://www.berlin.de/tickets/suche/detail.php?id=810735
-userdel	2::temp 9521,10010 9827,10051
-userdel	2::temp 9521,10010 9448,10014
-userdel	2::temp 9599,10175 9687,10180 9825,10206
-userdel	2::temp 9416,10196 9599,10175
-userdel	2::temp 9579,10122 9536,10064
-userdel	2::temp 9579,10122 9631,10142 9702,10129
-userdel	2::temp 9837,10117 9827,10051
-userdel	2::temp 9837,10117 9858,10199
-userdel	2::temp 9599,10175 9579,10122
-userdel	2::temp 9702,10129 9827,10051
-userdel	2::temp 9702,10129 9816,10119
-userdel	2::temp 9599,10175 9631,10142 9687,10180
-userdel	3 9922,10010 9827,10051 9837,9856
-userdel	3 9837,9856 9827,10051 9922,10010
-',
-         'periodic' => 1,
-         'until' => 1402351199,
-         'from' => 1401919200,
-         'recurrences' => [
-                            [
-                              'easter',
-                              47
-                            ]
-                          ],
-         'text' => 'Straßenfest rund um den Blücherplatz, 6.6.2014 bis 9.6.2014',
-         'type' => 'gesperrt',
-         'id' => 3
-       },
-       {
-         'data' => 'userdel	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753 9002,9731 8777,9601 8679,9544 8595,9495 8358,9568 8192,9619
-userdel	2::temp 10713,9260 10670,9286 10639,9304 10564,9292
-userdel	3 8774,9534 8777,9601 8779,9812
-userdel	3 8779,9812 8777,9601 8774,9534
-userdel	3 9000,9509 9044,9753 9073,9915
-userdel	3 9073,9915 9044,9753 9000,9509
-userdel	3 9280,9476 9334,9670 9387,9804
-userdel	3 9387,9804 9334,9670 9280,9476
-userdel	3 9524,9426 9552,9602 9588,9827
-userdel	3 9588,9827 9552,9602 9524,9426
-userdel	3 9650,9404 9676,9564 9705,9732
-userdel	3 9705,9732 9676,9564 9650,9404
-userdel	3 9767,9386 9790,9528 9820,9718
-userdel	3 9820,9718 9790,9528 9767,9386
-userdel	3 9892,9286 9927,9487 9957,9692
-userdel	3 9957,9692 9927,9487 9892,9286
-userdel	3 10004,9268 10032,9456 10067,9667
-userdel	3 10067,9667 10032,9456 10004,9268
-userdel	3 10123,9233 10198,9405 10306,9640
-userdel	3 10306,9640 10198,9405 10123,9233
-userdel	3 10547,9233 10564,9292 10580,9361
-userdel	3 10580,9361 10564,9292 10547,9233
-userdel	3 10705,9234 10713,9260 10747,9326
-userdel	3 10747,9326 10713,9260 10705,9234
-userdel	3 11141,9107 11136,9183 11208,9345 11274,9492
-userdel	3 11274,9492 11208,9345 11136,9183 11141,9107
-userdel	3 11998,8872 11880,8955 11831,8989 11830,8917 11845,8824 11879,8672 11882,8527
-userdel	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 11998,8872
-',
-         'periodic' => 1,
-         'until' => 1402264799,
-         'from' => 1402092000,
-         'recurrences' => [
-                            [
-                              'easter',
-                              49
-                            ]
-                          ],
-         'text' => 'Karneval der Kulturen, 8.6.2014',
-         'type' => 'gesperrt',
-         'id' => 4
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
          'data' => '#: by: http://www.berlin.de/tickets/suche/detail.php?id=834793
 userdel	2::temp 6514,10088 6609,10147 6626,10155 6729,10212
@@ -3451,16 +3309,7 @@ userdel	2::night 17671,13132 17684,13133
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20140422.1525.396516.html',
-         'until' => 1402351200,
-         'text' => 'Alt-Lübars zwischen Quickborner Straße und Zabel-Krüger-Damm: Bauarbeiten, Fahrbahn gesperrt, 28.04.2014 bis Mitte Juni',
-         'from' => 1398549600,
-         'id' => 2480,
-         'data' => 'userdel	q3::inwork 6805,23554 6801,23474 6764,23396
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3489,7 +3338,7 @@ userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
        {
          'source_id' => '131100196',
          'until' => 1411768800,
-         'text' => 'Zwischen Birkholz und Zepernick: Neubau der Autobahnbrücke, Straße ist vorausichtlich auch für Radfahrer nicht passierbar, 01.10.2013 bis 26.09.2014 ',
+         'text' => 'Zwischen Birkholz und Zepernick: Neubau der Autobahnbrücke, Straße ist auch für Radfahrer nicht passierbar, 01.10.2013 bis 26.09.2014 ',
          'from' => 1380520800,
          'id' => 2493,
          'data' => 'userdel	2::inwork 21169,27133 21320,27078
@@ -3598,7 +3447,16 @@ userdel	2::inwork 21385,9049 21365,9059 21351,9066
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_021322',
+         'until' => 1402408800,
+         'text' => 'Langhansstr. : Baustelle, Fahrbahn Richtung Prenzlauer Promenade zwischen Heinersdorfer Str. und Prenzlauer Promenade gesperrt, bis 10.06.2014 16:00 Uhr ',
+         'from' => 1392902100,
+         'id' => 2538,
+         'data' => 'userdel	q3::inwork; 12189,16578 12045,16574
+',
+         'type' => 'handicap'
+       },
        undef,
        {
          'until' => 1530395999,
@@ -3811,6 +3669,22 @@ userdel	q4::inwork 6074,14194 6074,14215 6084,14251 6118,14289
          'data' => 'userdel	q2::inwork 11563,20048 11419,20327
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berliner-zeitung.de/polizei/bombenentschaerfung-in-steglitz-5000-menschen-muessen-ihre-haeuser-verlassen,10809296,27383386.html',
+         'until' => 1402412400,
+         'text' => 'Bergstr. in Steglitz: Bombenentschärfung am 10.6.2014 zwischen 11:00 und 17:00, Sperrgebiet',
+         'from' => 1402304400,
+         'id' => 2576,
+         'data' => 'userdel	2::inwork 6134,5990 6134,5894 6134,5800 6007,5785 5942,5775
+userdel	2::inwork 6134,5800 6115,5302
+userdel	2::inwork 5699,5949 5847,5961 5845,6049 5748,6051 5699,5949 5674,5901 5677,5868 5679,5853 5681,5768 5681,5743 5683,5672 5687,5586 5840,5588 5840,5679 5683,5672
+userdel	2::inwork 5681,5743 5850,5765 5851,5863 5694,5845
+userdel	2::inwork 5845,6049 6008,6067 6001,5974 5847,5961 5851,5863 5935,5874 5942,5775 5850,5765 5840,5679
+userdel	2::inwork 5993,5422 6007,5785 6007,5882 6001,5974 6134,5990 6116,6130
+userdel	2::inwork 5935,5874 6007,5882 6134,5894
+',
+         'type' => 'gesperrt'
        }
      
 );
