@@ -1323,7 +1323,9 @@ if ($show_weather || $bp_obj) {
 }
 
 $q->delete('Dummy');
-$smallform = $q->param('smallform') || $bi->{'mobile_device'} || $is_m;
+#$smallform = $q->param('smallform') || $bi->{'mobile_device'} || $is_m;
+$smallform = $is_m;
+
 $got_cookie = 0;
 %c = ();
 
