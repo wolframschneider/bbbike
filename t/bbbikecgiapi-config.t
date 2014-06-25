@@ -19,6 +19,11 @@ BEGIN {
 	print "1..0 # skip no JSON::XS, LWP::UserAgent and/or Test::More module(s)\n";
 	exit;
     }
+
+    if ($ENV{BBBIKE_TEST_NO_APACHE}) {
+        print "1..0 # skip no apache\n";
+        exit;
+    }
 }
 
 use BBBikeTest qw(check_cgi_testing $cgidir eq_or_diff);
