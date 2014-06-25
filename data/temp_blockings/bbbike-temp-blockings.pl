@@ -2202,7 +2202,7 @@ EOF
        text  => 'L 30; (Woltersdorfer Landstr.); OD Erkner Grundhafter Straßenbau Vollsperrung 08.07.2005-09.07.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 34271,3184 34486,4276
+userdel	q4 34261,3092 34258,3138 34268,3204 34291,3314 34315,3429 34359,3631 34403,3857 34486,4276
 EOF
      },
      { from  => 1118872800, # 2005-06-16 00:00
@@ -3938,7 +3938,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS_1142967727545',
        data  => <<EOF,
-userdel	q4 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 24049,5380 23950,5342
+userdel	q4 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 24049,5380 23942,5338
 userdel	q4 25012,5754 25018,5756 25121,5799
 userdel	q4 25579,5958 25179,5819 25121,5799
 EOF
@@ -7237,7 +7237,7 @@ EOF
        text  => 'Fürstenwalder Damm, für beide Richtungen nur ein Fahrstreifen abwechselnd frei, Baustelle bis 30.03.2007 (im Bereich Einmündung Mühlweg) ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 24049,5380 23950,5342
+userdel	q4::inwork 25012,5754 24871,5699 24700,5633 24471,5544 24366,5504 24285,5472 24162,5424 24049,5380 23942,5338
 EOF
      },
      { from  => 1172530621, # 2007-02-26 23:57
@@ -11748,7 +11748,7 @@ EOF
        text  => 'L 030 Bahnhofstr. Eisenbahnbrücke in der OD Erkner Brückenerneuerung Vollsperrung 09.06.2008-31.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 34326,2915 34142,2742
+userdel	2::inwork 34298,2910 34152,2749
 EOF
      },
      { from  => 1212962400, # 2008-06-09 00:00
@@ -16359,8 +16359,8 @@ EOF
 userdel	2::temp 8424,12853 8309,12758 8306,12609
 EOF
      },
-     { from  => $isodate2epoch->("2013-09-19 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2013-09-21 20:00:00"),
+     { from  => $isodate2epoch->("2014-09-19 11:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2014-09-21 20:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 19, months => 9]],
        text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbst in der Preußenallee), Straße vollständig gesperrt (20. und 21. September 2014) ',
@@ -17134,7 +17134,7 @@ EOF
        text  => 'L 030 Bahnhofstraße OL Erkner, Erneuerung Eisenbahnbrücke Vollsperrung 09.06.2008-31.01.2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 34326,2915 34142,2742
+userdel	2::inwork 34298,2910 34152,2749
 EOF
      },
      { from  => 1254952800, # 2009-10-08 00:00
@@ -17296,7 +17296,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015001',
        data  => <<EOF,
-userdel	2::inwork 34326,2915 34142,2742
+userdel	2::inwork 34298,2910 34152,2749
 EOF
      },
      { from  => 1270235299, # 2010-04-02 21:08
@@ -21170,13 +21170,16 @@ EOF
 	q3::inwork; -12881,-1092 -12961,-1105 -12973,-1106 -13187,-1150
 EOF
      },
-     { from  => 1360350803, # 2013-02-08 20:13
-       until => 1360551600, # 2013-02-11 04:00
-       text  => 'Karlshorster Str. (Rummelsburg) gesperrt (09.02.2013 00 Uhr bis 11.02.2013 04:00 Uhr)',
-       type  => 'gesperrt',
-       source_id => 'INKO_116993',
+     { from  => $isodate2epoch->("2014-06-29 00:00:00"), # ein Tag Vorlauf
+       until => $isodate2epoch->("2014-09-30 23:59:59"),
+       text  => 'Karlshorster Str.: Fahrbahn gesperrt, Fußgänger können passieren, 30.06.2014 bis September 2014',
+       type  => 'handicap',
        data  => <<EOF,
-userdel	2::inwork 15261,10738 15272,10790 15279,10862
+#: next_check_id: KARLSHORSTER-2014
+#: next_check: 2014-09-01
+#: by: http://www.berlin-straba.de/
+#: by: https://de-de.facebook.com/kaskelkiez/posts/724415817603933
+userdel	q4::inwork 15261,10738 15272,10790 15279,10862
 EOF
      },
      { from  => 1361168940, # 2013-02-18 07:29
@@ -21185,7 +21188,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_019584',
        data  => <<EOF,
-userdel	q4::inwork; 23950,5342 24049,5380 24162,5424 24285,5472 24366,5504 24471,5544 24700,5633
+userdel	q4::inwork; 23942,5338 24049,5380 24162,5424 24285,5472 24366,5504 24471,5544 24700,5633
 EOF
      },
      { from  => 1364875200, # 2013-04-02 06:00
@@ -22902,6 +22905,15 @@ EOF
 #: XXX bleibt das Kopfsteinpflaster nach den Bauarbeiten?
 #: next_check: 2014-07-17
 userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
+EOF
+     },
+     { from  => 1403992800, # 2014-06-29 00:00
+       until => 1418684400, # 2014-12-16 00:00
+       text  => 'Steinhöfel: L36: Ersatzneubau Durchlaß, geplante Vollsperrung ab 30.06.2014',
+       type  => 'gesperrt',
+       source_id => 'LS/721-F/14/087',
+       data  => <<EOF,
+userdel	2::inwork 60418,-397 58317,-1384
 EOF
      },
     );

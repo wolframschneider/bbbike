@@ -637,8 +637,8 @@ sub kmllint_string {
     }
 }
 
-sub failed_long_data {
-    my($got, $expected, $testname, $suffix) = @_;
+sub _failed_long_data {
+    my($got, $expected, $testname, $suffix, $is_negative) = @_;
     local $Test::Builder::Level = $Test::Builder::Level+1;
     require File::Temp;
     require Data::Dumper;
@@ -646,7 +646,7 @@ sub failed_long_data {
     my $dump;
     if ($suffix) {
 	$dump = $got;
-	Test::More::fail("Test <$testname> failed, <$expected> expected, see <$filename> for got contents");
+	Test::More::fail("Test <$testname> failed, <$expected> " . ($is_negative ? 'unexpected' : 'expected') . ", see <$filename> for got contents");
     } else {
 	$dump = Data::Dumper->new([$got, $expected],[qw(got expected)])->Indent(1)->Useqq(0)->Dump;
 	Test::More::fail("Test <$testname> failed, see <$filename> for more information");
@@ -666,7 +666,7 @@ sub is_long_data {
 	if ($eq) {
 	    Test::More::pass($testname);
 	} else {
-	    failed_long_data($got, $expected, $testname, $suffix);
+	    _failed_long_data($got, $expected, $testname, $suffix, 0);
 	}
     }
 }
@@ -681,7 +681,7 @@ sub like_long_data {
 	if ($matches) {
 	    Test::More::pass($testname);
 	} else {
-	    failed_long_data($got, $expected, $testname, $suffix);
+	    _failed_long_data($got, $expected, $testname, $suffix, 0);
 	}
     }
 }
@@ -696,7 +696,7 @@ sub unlike_long_data {
 	if ($matches) {
 	    Test::More::pass($testname);
 	} else {
-	    failed_long_data($got, $expected, $testname, $suffix);
+	    _failed_long_data($got, $expected, $testname, $suffix, 1);
 	}
     }
 }
@@ -724,20 +724,7 @@ if (!eval {
 
     SKIP: {
 	    Test::More::skip("simulate skips", 1) if $simulate_skips;
-	    $@ = "";
-	    eval {
-		no warnings 'numeric'; # cease Argument "2.121_08" isn't numeric in subroutine entry
-		require Data::Dumper;
-		Data::Dumper->VERSION(2.12); # Sortkeys
-	    };
-	    if ($@) {
-		Test::More::skip("Need recent Data::Dumper (2.12, Sortkeys)", 1);
-	    }
-
-	    local $Data::Dumper::Sortkeys = $Data::Dumper::Sortkeys = 1;
-	    Test::More::is(Data::Dumper->new([$a],[])->Useqq(1)->Dump,
-			   Data::Dumper->new([$b],[])->Useqq(1)->Dump,
-			   $info);
+	    Test::More::is_deeply($a, $b, $info);
 	}
     };
 }
@@ -845,8 +832,8 @@ sub image_ok ($;$) {
     SKIP: {
 	    Test::More::skip("IPC::Run needed for better image testing", 2)
 		    if !eval { require IPC::Run; 1 };
-	    Test::More::skip("Image::Info needed for better image testing", 2)
-		    if !eval { require Image::Info; 1 };
+	    Test::More::skip("Image::Info 1.31 or better needed for better image testing", 2)
+		    if !eval { require Image::Info; Image::Info->VERSION(1.31) }; # support for .ico files and better .xbm detection
 	    my $ret = Image::Info::image_type($in);
 	    if ($ret->{error} && !ref $in && $in =~ m{\.wbmp$}) { # wbmp cannot be detected by Image::Info
 		$ret = {file_type => "WBMP" };
