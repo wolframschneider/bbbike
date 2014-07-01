@@ -20854,7 +20854,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120921.1525.375622.html',
        data  => <<EOF,
-userdel	q4::inwork 18988,8791 19073,8828 19116,8846 19163,8867 19299,8946 19500,9043 19629,9099
+userdel	q4::inwork 18988,8791 19073,8828 19116,8846 19163,8867 19299,8946 19500,9043 19621,9097
 EOF
      },
      { from  => 1348376400, # 2012-09-23 07:00
@@ -21171,15 +21171,18 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2014-06-29 00:00:00"), # ein Tag Vorlauf
-       until => $isodate2epoch->("2014-09-30 23:59:59"),
-       text  => 'Karlshorster Str.: Fahrbahn gesperrt, Fußgänger können passieren, 30.06.2014 bis September 2014',
+       until => $isodate2epoch->("2014-09-22 18:00:00"),
+       text  => 'Karlshorster Str. und Marktstr. bis Schreiberhauer Str.: Fahrbahn gesperrt, langsame Umfahrung über Gehweg möglich, 30.06.2014 bis 22.09.2014',
        type  => 'handicap',
+       source_id => 'IM_022268',
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2014
-#: next_check: 2014-09-01
+#: last_checked: 2014-06-30
+#: next_check: 2014-07-14
 #: by: http://www.berlin-straba.de/
 #: by: https://de-de.facebook.com/kaskelkiez/posts/724415817603933
-userdel	q4::inwork 15261,10738 15272,10790 15279,10862
+#: by: http://www.bvg.de/index.php/de/9464/name/Verkehrsmeldungen/report/1827852.html (nur zwei Wochen)
+userdel	q4::inwork 15261,10738 15272,10790 15279,10862 15144,10905
 EOF
      },
      { from  => 1361168940, # 2013-02-18 07:29
@@ -22351,8 +22354,8 @@ EOF
        data  => <<EOF,
 #: next_check_id: ZIMMERMANNSTRBR-2014
 #: last_checked: 2014-02-08
-#: next_check: 2015-12-31
-# REMOVED (ja) --- #: add_fragezeichen: Ist die Zimmermannstraßenbrücke trotz der Bauarbeiten trotzdem noch für Fußgänger und Radfahrer passierbar?
+#: next_check: 2014-06-30 (bei VMZ entfernt!)
+#: add_fragezeichen: Sind die Bauarbeiten auf der Zimmermannstraßenbrücke und am Wuhlewanderweg mittlerweile beendet?
 userdel	2::inwork 21385,9049 21365,9059 21351,9066
 EOF
      },
@@ -22917,11 +22920,12 @@ userdel	2::inwork 60418,-397 58317,-1384
 EOF
      },
      { from  => 1403809173, # 2014-06-26 20:59
-       until => 1407189600, # 2014-08-05 00:00
-       text  => 'Warnemünder Str.: Asphaltierungsarbeiten in Richtung Norden, Fahrbahn wird nur begrenz verfügbar sein, 30.6.2014 bis 4.8.2014 ',
+       until => $isodate2epoch->("2014-08-04 16:00:00"),
+       text  => 'Warnemünder Str.: Asphaltierungsarbeiten in Richtung Norden, Fahrbahn wird nur begrenzt verfügbar sein, 30.6.2014 bis 4.8.2014 ',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140626.1220.398183.html',
        data  => <<EOF,
+#: source_id: IM_022270
 userdel	q3::inwork; 2717,7093 2731,7247 2744,7397 2750,7444 2767,7592
 EOF
      },
@@ -22950,6 +22954,25 @@ EOF
        source_id => 'http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/tiefbauamt/unterhaltungsma__nahmen_2014_1.xls?download.html',
        data  => <<EOF,
 userdel	q4::inwork; 17614,6571 17766,6616
+EOF
+     },
+     { from  => undef, # 
+       until => 1405375199, # 2014-07-14 23:59
+       text  => 'Boxhagener Str.: zwischen Neue Bahnhofstr. und Wühlischstr. Baustelle, Fahrbahn in Richtung Warschauer Str. gesperrt, voraussichtlich bin zum 14.07.2014',
+       type  => 'handicap',
+       source_id => 'IM_022280',
+       data  => <<EOF,
+userdel	q4::inwork; 14918,11249 14799,11330 14771,11345 14752,11369
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Reichenberger Str., Ohlauer Str.: Polizeiabsperrung, Durchfahrt nicht möglich',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: http://www.morgenpost.de/bin/BMBE_SChule_sv.eps%29-129571564.jpg
+#: next_check: 2014-07-07
+userdel	2::temp 12048,10097 12229,10014 12341,10218
 EOF
      },
     );
