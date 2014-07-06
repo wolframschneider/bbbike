@@ -220,9 +220,16 @@ my %bbbikequality_to_smoothness = (0 => 'excellent',    # Q0
 
 my $geo = Geography::Berlin_DE->new; # currently hardcoded for Berlin
 
-my $plz = PLZ->new;
-$plz->load;
-my $street_to_citypart = $plz->make_any_hash(PLZ::FILE_NAME, PLZ::FILE_CITYPART);
+my $street_to_citypart = do {
+    my $plz = eval { PLZ->new("$datadir/Berlin.coords.data") };
+    if (!$plz) {
+	warn "WARN: could not load PLZ file (Berlin.coords.data), continue with empty street-to-citypart mapping...\n";
+	+{};
+    } else {
+	$plz->load;
+	$plz->make_any_hash(PLZ::FILE_NAME, PLZ::FILE_CITYPART);
+    }
+};
 
 my($min_lat, $max_lat, $min_lon, $max_lon);
 
@@ -306,7 +313,9 @@ if ($single_file) {
 
 sub do_file {
     my($file, $cb) = @_;
-    $file .= "-orig" if $use_orig;
+    if ($file !~ m{/zebrastreifen$}) { # XXX exceptions: these usually don't have a -orig counterpart
+	$file .= "-orig" if $use_orig;
+    }
     eval {
 	Strassen->new_stream($file)->read_stream($cb);
     };
@@ -332,8 +341,13 @@ sub handle_blocked_node_like {
     if ($cat eq 'BNP') {
 	if ($r->[Strassen::NAME] =~ m{drängelgitter}i) {
 	    %attribs = (barrier => 'cycle_barrier');
+	} elsif ($r->[Strassen::NAME] =~ m{(schranke|\btor\b|schwingtor)}i) {
+	    %attribs = (barrier => 'gate');
+	} elsif ($r->[Strassen::NAME] =~ m{(poller|pfosten)}i) {
+	    %attribs = (barrier => 'bollard');
 	} else {
-	    %attribs = (barrier => 'bollard'); #  (which is a quite bold assumption)
+	    # fallback, probably incorrect
+	    %attribs = (barrier => 'bollard');
 	}
     } elsif ($cat eq '0') {
 	if ($r->[Strassen::NAME] =~ m{(\d+)\s+Stufe}) { # XXX see steps_stats.pl for more possible regexps, should go into a module!
@@ -762,6 +776,9 @@ sub handle_railway_like {
     my @node_ids = get_node_ids($r);
 
     my $name = $r->[Strassen::NAME];
+    if ($optimize_for == OPTIMIZE_FOR_GARMIN) {
+	$name =~ s{,(?! )}{, }g; # "S1,S2" -> "S1, S2"
+    }
     _xmlify($name);
 
     print $wayfh qq{<way id="$next_way_id" visible="true">\n};
@@ -1508,6 +1525,11 @@ also in level 24 (especially if the Garmin device is set to "most
 detail" rendering). To make it possible to use the same style file for
 OSM data and BBBike data, this optimization (or better, hack) makes
 the distinction by using a custom tag C<bbbike:landuse>.
+
+=item * add spaces in railway line number combinations
+
+Make "S1,S2,S3" into "S1, S2, S3" --- reason is that Garmin devices
+otherwise renders it as "S1,s2,s3".
 
 =back
 
