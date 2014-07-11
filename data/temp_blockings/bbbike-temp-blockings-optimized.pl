@@ -95,27 +95,7 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        undef,
-       {
-         'data' => '	q4::temp 9668,11928 9656,12021
-	2::temp 9524,12010 9656,12021
-	2::temp 9536,11912 9668,11928
-',
-         'periodic' => 1,
-         'until' => 1404936000,
-         'from' => 1404252000,
-         'text' => 'Markgrafenstr. zwischen Taubenstr.. und Jägerstr.: Fahrbahn gesperrt sowie Sperrung des Gendarmenmarkts: Classic Open Air (3.7.2014 - 7.7.2014; Sperrungen fangen schon früher an und dauern länger)',
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              2,
-                              'months',
-                              7
-                            ]
-                          ],
-         'type' => 'gesperrt',
-         'id' => 1710
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1021,34 +1001,7 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.breadandbutter.com/winter2014/de/home/',
-         'data' => 'userdel	q4::temp 9233,8597 9321,8607 9364,8640 9395,8726
-userdel	q4::temp 9321,8607 9401,8510 9451,8548 9364,8640
-',
-         'periodic' => 1,
-         'until' => 1405011600,
-         'from' => 1404709200,
-         'text' => 'Platz der Luftbrücke (Tempelhof): Straße vollständig zwischen Tempelhofer Damm und Columbiadamm wegen einer Veranstaltung (Bread & Butter) gesperrt (8. bis 10. Juli 2014)',
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              1
-                            ],
-                            [
-                              'yearly',
-                              'days',
-                              1,
-                              'months',
-                              7
-                            ]
-                          ],
-         'id' => 2245,
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1111,7 +1064,26 @@ userdel	2::temp 12635,12629 12596,12472
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.weissenseer-blumenfest.de/1_1_Aktuell_Presse-und-Highlights.html',
+         'data' => 'userdel	q4::temp; 14499,16341 14346,16241 14248,16202 14045,16120 14014,16106 13826,16026 13737,15994 13623,15954 13512,15909
+',
+         'periodic' => 1,
+         'until' => 1409522399,
+         'from' => 1409176800,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              8
+                            ]
+                          ],
+         'text' => 'Berliner Allee (Weißensee): Veranstaltung (Blumenfest Weißensee), Fahrtrichtung gesperrt stadteinwärts vom Weißen See bis zum Antonplatz, 29.8.2014 bis 31.8.2014',
+         'id' => 2275,
+         'type' => 'handicap'
+       },
        undef,
        undef,
        undef,
@@ -1303,16 +1275,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-pankow/verwaltung/tiefbau/nb_schulstr.html?date=20130814',
-         'until' => 1412114400,
-         'text' => 'Neubau der Schulstraße, Bauabschnitt zwischen Grunowstraße und Berliner Straße',
-         'from' => undef,
-         'id' => 2402,
-         'data' => 'userdel	q4::inwork 10582,18159 10755,18231
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1477,36 +1440,7 @@ userdel	q4::inwork 13085,7904 13117,7939 13151,7914
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.gruen-berlin.de/parks-gaerten/tempelhofer-freiheit/?date=20140118',
-         'data' => 'userdel	2::temp 9522,7624 9362,7616 9281,7651
-userdel	2::temp 9562,7796 9372,7798 9281,7795
-userdel	2::temp 9281,7795 9281,7651 9300,7312
-userdel	2::temp 10384,8628 10360,8521
-',
-         'periodic' => 1,
-         'until' => 1405029599,
-         'from' => 1404684000,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              1
-                            ],
-                            [
-                              'yearly',
-                              'days',
-                              1,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Flughafen Tempelhof: die Nebeneingänge Columbiadamm und Peter-Strasser-Weg sind wegen einer Veranstaltung (Bread and Butter) geschlossen (8. bis 10. Juli 2014)',
-         'id' => 2447,
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1715,10 +1649,11 @@ userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
        {
          'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20140618.0830.397974.html',
          'until' => 1406843999,
-         'text' => 'Rudolf-Rühl-Allee: Fahrbahninstandsetzung zwischen Köpenicker Straße und An der Wuhlheide, Vollsperrung, vom 17. Juli 2014 Uhr bis voraussichtlich 31. Juli 2014',
+         'text' => 'Rudolf-Rühl-Allee: Fahrbahninstandsetzung zwischen Köpenicker Straße und An der Wuhlheide, Vollsperrung, vom 17. Juli 2014 Uhr bis 31. Juli 2014',
          'from' => 1405461600,
          'id' => 2528,
-         'data' => 'userdel	2::inwork 20653,7289 20609,7200 20635,7119 20722,6971 21233,6096 21303,5826
+         'data' => '#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.145619.php
+userdel	2::inwork 20653,7289 20609,7200 20635,7119 20722,6971 21233,6096 21303,5826
 ',
          'type' => 'gesperrt'
        },
@@ -1922,9 +1857,7 @@ userdel	2::temp 8610,12254 8538,12245 8522,12187
 userdel	2::temp 8538,12245 8600,12165 8595,12066
 userdel	2::temp 8055,12186 8119,12414
 userdel auto	3 7026,12054 7031,12024 7059,11978
-userdel auto	3 6787,12099 6828,12031 6809,11979
 userdel auto	3 7059,11978 7031,12024 7026,12054
-userdel auto	3 6809,11979 6828,12031 6787,12099
 ',
          'type' => 'gesperrt'
        },
@@ -2016,8 +1949,8 @@ userdel	q4::inwork; 17614,6571 17766,6616
        },
        {
          'source_id' => 'IM_022280',
-         'until' => 1405375199,
-         'text' => 'Boxhagener Str.: zwischen Neue Bahnhofstr. und Wühlischstr. Baustelle, Fahrbahn in Richtung Warschauer Str. gesperrt, außerdem Einbahnstraßenregelung in der Weserstr., voraussichtlich bis zum 14.07.2014',
+         'until' => 1405281600,
+         'text' => 'Boxhagener Str.: zwischen Neue Bahnhofstr. und Wühlischstr. Baustelle, Fahrbahn in Richtung Warschauer Str. gesperrt, außerdem Einbahnstraßenregelung in der Weserstr., voraussichtlich bis zum 13.07.2014 22 Uhr',
          'from' => undef,
          'id' => 2588,
          'data' => 'userdel	q3::inwork; 14918,11249 14799,11330 14771,11345 14752,11369
@@ -2029,7 +1962,7 @@ userdel	q4::inwork; 17614,6571 17766,6616
        undef,
        {
          'source_id' => 'IM_022295',
-         'until' => 1405461599,
+         'until' => 1405695600,
          'text' => 'Rigaer Str. zwischen Zellestr. und Proskauer Str.: Bauarbeiten, Fahrbahn gesperrt, 02.07.2014 bis Mitte Juli 2014 ',
          'from' => 1404079200,
          'id' => 2590,
@@ -2062,14 +1995,47 @@ userdel	q4::inwork 14266,12446 14133,12482
          'type' => 'handicap'
        },
        {
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.144501.php',
-         'until' => 1407103200,
-         'text' => 'Elsenstr.: Bauarbeiten zwischen Am Treptower Park und Karl-Kunger-Str., Fahrbahn Richtung Neukölln gesperrt, vom 14.07.2014 bis 03.08.2014',
-         'from' => 1405202400,
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.144937.php',
+         'until' => 1407707999,
+         'text' => 'Elsenstr.: Bauarbeiten zwischen Am Treptower Park und Karl-Kunger-Str., Fahrbahn in beiden Richtungen gesperrt, vom 21.07.2014 bis zum 10.08.2013',
+         'from' => 1405807200,
          'id' => 2594,
          'data' => '#: note: Gehweg ist hier relativ breit
 	q3::inwork; 14089,9610 13973,9465 13923,9405
-	q4::inwork; 13923,9405 13849,9310 13760,9188
+	q4::inwork; 13923,9405 13973,9465 14089,9610
+	q4::inwork 13923,9405 13849,9310 13760,9188
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Gartenufer: nachts ab Sonnenuntergang, spätestens ab 21.00 Uhr gesperrt',
+         'from' => undef,
+         'id' => 2595,
+         'data' => 'Gartenufer	2::night 6226,11405 6067,11479 5845,11615 5790,11643
+'
+       },
+       {
+         'source_id' => 'IM_021923',
+         'until' => 1408312800,
+         'text' => 'Konrad-Wolf-Str.: Bauarbeiten zwischen Reichenberger Str. und Oberseestr., Richtung Nordosten gesperrt, bis 17.08.2014 18:00 Uhr',
+         'from' => 1405025033,
+         'id' => 2596,
+         'data' => 'userdel	q4::inwork; 15937,15134 16028,15218 16119,15302 16208,15379 16263,15427 16331,15486 16412,15559 16448,15593 16497,15636 16615,15737
+userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
+	3 16475,15659 16497,15636 16615,15737
+	3 16615,15737 16497,15636 16475,15659
+	3 16475,15659 16497,15636 16448,15593
+	3 16448,15593 16497,15636 16475,15659
+	3 16475,15659 16448,15593 16497,15636
+	3 16497,15636 16448,15593 16475,15659
+	3 16475,15659 16448,15593 16412,15559
+	3 16412,15559 16448,15593 16475,15659
+	3 16251,15629 16412,15559 16550,15503
+	3 16550,15503 16412,15559 16251,15629
+	3 15996,15620 16331,15486 16406,15452
+	3 16406,15452 16331,15486 15996,15620
 ',
          'type' => 'handicap'
        }
