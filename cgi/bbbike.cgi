@@ -863,6 +863,10 @@ if ($local_lang eq $selected_lang) {
      };
      warn "$@" if $@;
   } 
+
+  if (defined $q->param("use_heap")) {
+     $StrassenNetz::use_heap = $q->param("use_heap");
+  }
 }
 
 
@@ -892,7 +896,7 @@ eval { local $SIG{'__DIE__'};
        do "$config_master.config" };
 
 $no_berlinmap = 1 if $osm_data;
-warn "osm_data: $osm_data, show_mini_map: $show_mini_map/$show_mini_googlemap, no_berlin_map: $no_berlinmap, enable_opensearch_suggestions: $enable_opensearch_suggestions\n" if $VERBOSE; 
+warn "osm_data: $osm_data, show_mini_map: $show_mini_map/$show_mini_googlemap, no_berlin_map: $no_berlinmap, enable_opensearch_suggestions: $enable_opensearch_suggestions, use_heap: $StrassenNetz::use_heap\n" if $VERBOSE; 
 
 if ($dos_run_timeout > 0) {
     my $run_timeout = $dos_run_timeout;
@@ -8742,7 +8746,7 @@ EOF
 	$s .= "</font>\n";
     }
 
-    $s .= qq{\n<span class="real_time" city="$city_script" style="} . 
+    $s .= qq{\n<span class="real_time" city="$city_script heap:$StrassenNetz::use_heap" style="} . 
 	    ($show_real_time ? "" : 'display:none') . qq{">cycle route calculated in $real_time seconds</span>\n};
     $s;
 }
