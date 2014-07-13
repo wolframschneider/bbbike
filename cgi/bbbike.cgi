@@ -864,9 +864,6 @@ if ($local_lang eq $selected_lang) {
      warn "$@" if $@;
   } 
 
-  if (defined $q->param("use_heap")) {
-     $StrassenNetz::use_heap = $q->param("use_heap");
-  }
 }
 
 
@@ -894,6 +891,14 @@ warn "YYY: $config_master.config\n" if ! -f "$config_master.config";
 eval { local $SIG{'__DIE__'};
        #warn "$config_master.config";
        do "$config_master.config" };
+
+{
+  my $q = new CGI;
+  if (defined $q->param("use_heap")) {
+    $StrassenNetz::use_heap = $q->param("use_heap");
+  } 
+}
+
 
 $no_berlinmap = 1 if $osm_data;
 warn "osm_data: $osm_data, show_mini_map: $show_mini_map/$show_mini_googlemap, no_berlin_map: $no_berlinmap, enable_opensearch_suggestions: $enable_opensearch_suggestions, use_heap: $StrassenNetz::use_heap\n" if $VERBOSE; 
