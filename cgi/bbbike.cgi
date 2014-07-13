@@ -8742,7 +8742,7 @@ EOF
 	$s .= "</font>\n";
     }
 
-    $s .= qq{\n<span class="real_time" style="} . 
+    $s .= qq{\n<span class="real_time" city="$city_script" style="} . 
 	    ($show_real_time ? "" : 'display:none') . qq{">cycle route calculated in $real_time seconds</span>\n};
     $s;
 }
