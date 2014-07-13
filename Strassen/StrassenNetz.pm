@@ -922,6 +922,8 @@ sub build_search_code {
     if ($use_heap && !eval q{ require Array::Heap; Array::Heap->VERSION(2); import Array::Heap; 1 }) {
 	$use_heap = 0;
     }
+    #warn "StrassenNetz: use_heap: $use_heap\n";
+    
     $code .= '
 
 '; if ($use_heap) { $code .= '
