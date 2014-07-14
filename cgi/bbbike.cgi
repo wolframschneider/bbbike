@@ -895,7 +895,7 @@ eval { local $SIG{'__DIE__'};
 {
   my $q = new CGI;
   if (defined $q->param("use_heap")) {
-    $StrassenNetz::use_heap = $q->param("use_heap");
+    $StrassenNetz::use_heap = $q->param("use_heap") ? 1 : 0;
   } 
 }
 
