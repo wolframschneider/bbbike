@@ -157,6 +157,7 @@ use vars qw($VERSION $VERBOSE
 	    $use_file_cache $cache_entry
 	    $use_smart_app_banner
 	    $log_routes
+	    $route_length
 	   );
 
 $gmap_api_version = 3;
@@ -164,6 +165,8 @@ $facebook_page = 'http://www.facebook.com/BBBikeWorld';
 
 # XXX This may be removed one day
 use vars qw($use_cooked_street_data);
+
+$route_length = 0;
 
 $gmapsv3 = 1;
 
@@ -5932,6 +5935,7 @@ EOF
 	}
 	print ">\n";
 	printf "<tr><td>@{[ M('L&auml;nge') ]}:</td><td>%.2f km</td>\n", $r->len/1000;
+        $route_length = sprintf("%3.2f", $r->len/1000);
 	print
 	  "<tr><td>@{[ M('Fahrzeit') ]}:</td>";
 
@@ -8751,7 +8755,7 @@ EOF
 	$s .= "</font>\n";
     }
 
-    $s .= qq{\n<span class="real_time" city="$city_script heap:$StrassenNetz::use_heap" style="} . 
+    $s .= qq{\n<span class="real_time" city="$city_script heap:$StrassenNetz::use_heap, length: $route_length km" style="} . 
 	    ($show_real_time ? "" : 'display:none') . qq{">cycle route calculated in $real_time seconds</span>\n};
     $s;
 }
