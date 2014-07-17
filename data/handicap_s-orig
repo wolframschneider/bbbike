@@ -18,7 +18,7 @@ Revaler Str.: wegen Bauarbeiten Fahrbahn gesperrt	q3::inwork 14357,11148 14442,1
 Helmerdingstr.: wegen Bauarbeiten Fahrbahn teilweise gesperrt	q3::inwork 14442,11101 14468,11203
 #: last_checked ^^^
 # 
-#: last_checked: 2014-07-05 vvv
+#: last_checked: 2014-07-15 vvv
 #: next_check: 2014-11-30 vvv
 Rudolfstr.: Bauarbeiten an der Kreuzung Danneckerstr., auf Gehweg ausweichen	q3::inwork 14026,10869 13886,10939 13795,10995
 Danneckerstr.: Bauarbeiten an der Kreuzung Rudolfstr., auf Gehweg ausweichen	q3::inwork 13856,10864 13886,10939
@@ -55,15 +55,14 @@ M¸hsamstr.: Bauarbeiten in Hˆhe Eckertstr., 50 Meter Fahrbahn gesperrt	q3::inwor
 #: last_checked: 2014-06-19
 zur Keibelstr.: Baustraﬂe, Einbahnstraﬂe	q4::inwork; 10976,13229 11045,13183
 # 
-#: last_checked: 2014-06-18
+#: last_checked: 2014-07-15
 Seydelstr.: Bauarbeiten, Einbahnstraﬂe, gesperrt in Richtung Spittelmarkt	q3::inwork; 10446,11470 10320,11627
 # 
 # REMOVED (keine Einschr‰nkungen mehr) --- #: last_checked: 2014-06-06 --- Ohmstr.: Bauarbeiten, auf engen Gehweg ausweichen	q3::inwork 11378,11856 11324,11689
 # 
 #: XXX Ende der Bauarbeiten?
 #: XXX_prog: zu eng f¸r Anh‰nger
-#: last_checked: 2014-07-09
-#: check_frequency: 7d
+#: last_checked: 2014-07-15
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, auf engen Gehweg ausweichen	q4::inwork 9736,13061 9559,13087
 # 
 # REMOVED --- #: XXX Ende der Bauarbeiten? --- #: last_checked: 2014-02-22 --- Planckstr.: Bauarbeiten, auf Gehweg ausweichen	q4::inwork 9405,12794 9383,12915
@@ -138,7 +137,7 @@ Voﬂstr.: gesperrte Fahrbahn (Baustelle), Ausweichen auf Gehweg mˆglich	q3::inwor
 #: next_check_id ^^^
 # 
 # REMOVED (geht noch weiter) --- : XXX http://www.berlin.de/imperia/md/content/bapankow/tiefbauamt/ai_saarbr__cker_stra__e.pdf?start&ts=1373539007&file=ai_saarbr__cker_stra__e.pdf (bis Dezember 2013)
-#: last_checked: 2014-07-14
+#: last_checked: 2014-07-16
 Saarbr¸cker Str.: Einbahnstraﬂeregelung wegen Baustelle, ggfs. auf Gehweg ausweichen	q3::inwork; 11134,13820 11250,13655
 # 
 #: next_check_id: INVALIDEN-2014 vvv
@@ -196,7 +195,7 @@ Ella-Trebe-Str.: Einbahnstraﬂenregelung wegen Bauarbeiten	q3::inwork; 7939,13026
 #: check_frequency: 30d
 Margarete-Steffin-Str.: Fahrbahn wegen Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 8315,13181 8406,13127 8525,12958
 # 
-#: last_checked: 2014-06-03
+#: last_checked: 2014-07-16
 Bellermannstr.: Bauarbeiten der Wasserbetriebe, Ausweichen auf Gehweg f¸r einen 70 Meter langer Abschnitt	q2::inwork 8912,16582 9107,16389
 # 
 #: next_check_id: STAATSOPER-2014 vvv
@@ -514,7 +513,7 @@ Hermann-Stˆhr-Platz: Fuﬂg‰nger	q2 12453,11790 12409,11902
 Gotenstr./Cheruskerstr. - Kolonnenstr.: Fuﬂg‰nger	q2 7485,8777 7531,8848 7563,8871
 Nettelbeckplatz: Fuﬂg‰nger	q2 8024,15401 7974,15418 7891,15417
 Nettelbeckplatz: Fuﬂg‰nger	q2 7929,15355 7974,15418
-Nettelbeckplatz: Fuﬂg‰nger	q2 7975,15500 7974,15418
+Nettelbeckplatz: Fuﬂg‰nger	q2 7975,15500 7975,15484 7974,15418
 Volkspark Wilmersdorf: kombinierter Rad- und Fuﬂweg	q1 5919,8417 5831,8358 5806,8350 5762,8335 5660,8351 5533,8478 5472,8507
 zum Volksparksteg: kombinierter Rad- und Fuﬂweg, enge Kurven	q3 5533,8478 5531,8458
 Volksparksteg: kombinierter Rad- und Fuﬂweg	q1 5531,8458 5417,8519
@@ -749,7 +748,7 @@ Pankeweg: Fuﬂg‰nger	q1 8592,16436 8688,16533
 Pankeweg: Fuﬂg‰nger	q1 8759,16684 8776,16718 8839,16873 8904,17059 8927,17119 9009,17255 9017,17290 9034,17357 9073,17361 9136,17509 9120,17553 9110,17581 9131,17664 9089,17693 9147,17941
 Pankeweg: Fuﬂg‰nger	q1 8839,16873 8823,16877 8804,16881
 Pankeweg: Fuﬂg‰nger	q1 8721,16689 8804,16881 8866,17075
-Pankeweg: Fuﬂg‰nger	q1 8303,15298 8270,15237 8266,15134
+Pankeweg: Fuﬂg‰nger	q1 8303,15298 8260,15226 8266,15134
 Uferweg am Tegeler Hafen: Fuﬂg‰nger	q1 1259,20303 1349,20345 1534,20421 1572,20412 1617,20393 1655,20388 1756,20405 1858,20431 1863,20478
 (Uferweg am Tegeler Hafen - Berliner Str.): Fuﬂg‰nger	q1 1863,20478 1929,20501
 # REMOVED --- Uferweg am Tegeler Hafen: Fuﬂg‰nger	q1 1863,20478 1826,20492 1761,20539
@@ -828,7 +827,7 @@ Begasstr. - Riemenschneiderweg: teilweise mit Fuﬂg‰ngern zu rechnen, kurze Rampe
 Viktoriapark: Fuﬂg‰nger, kurze Rampe, Pf‰hle	q1 5013,6003 4981,5939 4954,5888
 #: note: bei Veranstaltungen (Max-Schmelling-Halle) mˆglicherweise gesperrt oder grˆﬂere Behinderungen:
 (Gaudystr. - Mauerpark): Fuﬂg‰nger, bei Veranstaltungen in der Max-Schmelling-Halle grˆﬂere Behinderungen mˆglich	q3 10456,15561 10256,15482 10192,15465
-(Kurt-Schumacher-Damm - Wasserturm Jungfernheide): Fuﬂg‰nger	q1 2934,14852 2900,14891 2685,15167 2707,15205 2695,15258 2632,15295
+(Kurt-Schumacher-Damm - Wasserturm Jungfernheide): Fuﬂg‰nger	q1 2934,14852 2900,14891 2835,14975 2685,15167 2707,15205 2695,15258 2632,15295
 (Jungfernheide): Fuﬂg‰nger	q1 2632,15295 2431,15290 2364,15321 2349,15380 2027,15380 1925,15426 1563,15294 1372,15313
 (Jungfernheide): Fuﬂg‰nger	q1 1415,15190 1459,15196 1498,15196 1535,15111 1735,15071 2039,15083 2053,15036 2376,15036 2683,14878 2784,14826 2900,14891
 (Teltowkanalpromenade am Nordufer): Fuﬂg‰nger, Radfahren offiziell nicht erlaubt	q2 3696,1445 3601,1296 3476,1169 3348,1078 3092,875
@@ -1731,7 +1730,7 @@ Gleisdreieckpark, Einfahrt L¸tzowstr.: Bordstein	q2 8236,10623 8199,10634
 # 
 #: XXX_prog BS (ansonsten entfernen)
 #: XXX wird der Bordstein noch abgesenkt?
-#: last_checked: 2014-06-27
+#: last_checked: 2014-07-15
 #: check_frequency: 100d
 Gleisdreieckpark, Einfahrt Pohlstr.: Bordstein	q2 8159,10430 8199,10424
 # 

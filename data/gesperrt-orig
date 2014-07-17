@@ -28,8 +28,8 @@ Dennewitzplatz	1 7813,10112 7906,10098
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20131011.1230.390248.html
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4679
 #: XXX Einrichtung eines offiziellen Zweirichtungradwegs, dann wird "q3" wegfallen
-#: last_checked: 2014-06-27 (Bauarbeiten)
-#: check_frequency: 14d
+#: last_checked: 2014-07-15 (Bauarbeiten)
+#: check_frequency: 7d
 Dennewitzplatz	1s:q3 7906,10098 7866,9918
 Winterfeldtplatz	1 7049,9833 7038,10087
 Winterfeldtplatz	1 7080,10098 7126,9825
@@ -1338,6 +1338,7 @@ Neue Bahnhofstr.	1s:q3 14908,11231 14918,11249
 # gesperrte Wegführung (nicht möglich zu umgehen --- wenn es eine
 # Umgehung gibt, sollte sie in comments_path-orig als PI; kommentiert sein)
 # 
+Reinickendorfer Str.: Mittelstreifen mit Zaun	3nocross 7966,15571 7975,15500 8049,15470
 #: XXX_prog unbequemes Überqueren, bessere Alternativen existieren, sollte als eine Art handicap für Punkte implementiert sein
 Spittelmarkt: unbequemes Überqueren	3nocross 10238,11741 10299,11786 10314,11804
 Am Seegraben: Mittelstreifen	3nocross 19894,-835 19996,-740 20205,-548
@@ -2017,7 +2018,7 @@ tragen (31 Stufen oder Kinderwagenrampe)	0:40 13168,21706
 # 
 Drängelgitter (lichte Breite 80cm)	BNP:5::trailer=no 10585,21759
 Drängelgitter (lichte Breite 70cm)	BNP:7::trailer=no 10752,21727
-Schranke	BNP:3::trailer=10 8377,10503
+Schranke (lichte Breite ca. 100cm)	BNP:3::trailer=10 8377,10503
 Drängelgitter	BNP:3::trailer=10 15727,1525
 Drängelgitter	BNP:3::trailer=10 15977,1422
 Schranke (Umfahrung auf dem Gehweg falls geschlossen)	BNP:5::trailer=15 17879,11378
@@ -2595,7 +2596,7 @@ Wilhelm-Hoff-Str.: asphaltierter Weg noch abgesperrt	2::inwork 19033,3397 19057,
 # 
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0186-neubau-eines-boardingwohn-und.html
 #: XXX_prog 1s:q3:inwork geht als Kategorie nicht, falsche Übersetzung!
-#: last_checked: 2014-05-08
+#: last_checked: 2014-07-15
 #: check_frequency: 180d
 Große Hamburger Str.: Einbahnstraße wegen Bauarbeiten	1s:q3 10077,13100 10018,13299
 # 

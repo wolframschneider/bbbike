@@ -1799,7 +1799,7 @@ userdel	q4::inwork 10862,17087 10891,17088 10917,17088
          'from' => undef,
          'id' => 2563,
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2014-07-07
+#: last_checked: 2014-07-15
 #: check_frequency: 14d
 userdel	q4::inwork 11498,11417 11542,11342 11415,11392 11498,11417
 ',
@@ -1907,17 +1907,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140626.1220.398183.html',
-         'until' => 1407160800,
-         'text' => 'Warnemünder Str.: Asphaltierungsarbeiten in Richtung Norden, Fahrbahn wird nur begrenzt verfügbar sein, 30.6.2014 bis 4.8.2014 ',
-         'from' => 1403809173,
-         'id' => 2584,
-         'data' => '#: source_id: IM_022270
-userdel	q3::inwork; 2717,7093 2731,7247 2744,7397 2750,7444 2767,7592
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'source_id' => 'http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/tiefbauamt/unterhaltungsma__nahmen_2014_1.xls?download.html',
