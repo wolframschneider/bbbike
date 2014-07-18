@@ -11894,7 +11894,7 @@ userdel auto	3 7444,10479 7633,10394 7744,10372
 userdel auto	3 9028,12307 9141,12320 9130,12433
 userdel auto	3 7744,10372 7633,10394 7444,10479
 userdel auto	3 7293,11519 7171,11510 6987,11487 6915,11492 6825,11486 6716,11439
-userdel auto	3 9876,12298 9858,12410 9842,12506
+userdel auto	3 9876,12298 9858,12410 9845,12506
 userdel auto	3 7849,10488 7689,10514 7478,10612
 userdel auto	3 7160,11225 7103,11247 6851,11346 6692,11365
 userdel auto	3 8102,11099 8000,11137 7828,11133
@@ -11913,7 +11913,7 @@ userdel auto	3 7384,10127 7413,10244 7429,10366
 userdel auto	3 7003,10513 7033,10396 7245,10499 7291,10506
 userdel auto	3 8232,11414 8226,11458 8172,11679
 userdel auto	3 9369,12253 9358,12351 9343,12464
-userdel auto	3 9842,12506 9858,12410 9876,12298
+userdel auto	3 9845,12506 9858,12410 9876,12298
 userdel auto	3 8205,10979 8104,11037 7980,11070 7747,11075
 userdel auto	3 6494,10440 6532,10529 6468,10550
 userdel auto	3 9343,12464 9358,12351 9369,12253
@@ -20467,6 +20467,7 @@ EOF
        source_id => 'http://www.berliner-woche.de/nachrichten/bezirk-treptow-koepenick/niederschoeneweide/artikel/45985-umleitungen-durch-angrenzende-wohngebiete/',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.144501.php
+#: source_id: IM_022364
 userdel	q4::inwork 19328,5304 19405,5284 19445,5271
 EOF
      },
@@ -20869,7 +20870,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_115461',
        data  => <<EOF,
-userdel	q4::inwork; 9277,4664 9405,4667 9494,4658 9695,4638 10010,4606
+userdel	q4::inwork; 9275,4672 9405,4667 9494,4658 9695,4638 10010,4606
 EOF
      },
      { from  => $isodate2epoch->("2013-09-24 06:00:00"), # 1 Tag Vorlauf
@@ -21183,13 +21184,14 @@ EOF
        source_id => 'IM_022268',
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2014
-#: last_checked: 2014-06-30
-#: next_check: 2014-07-14
+#: last_checked: 2014-07-14 vvv
 #: by: http://www.berlin-straba.de/
 #: by: https://de-de.facebook.com/kaskelkiez/posts/724415817603933
 #: by: http://www.bvg.de/index.php/de/9464/name/Verkehrsmeldungen/report/1827852.html (nur zwei Wochen)
 #: source_id: 2147338462
-userdel	q4::inwork 15261,10738 15272,10790 15279,10862 15144,10905
+userdel	q4::inwork 15261,10738 15272,10790 15279,10862
+userdel	q3::inwork 15279,10862 15144,10905
+#: last_checked ^^^
 EOF
      },
      { from  => 1361168940, # 2013-02-18 07:29
@@ -21295,7 +21297,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: RICHARDSTR-2014
 #: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2014-06-15
+#: last_checked: 2014-07-13
 #: check_frequency: 30d
 # REMOVED --- userdel	q3::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904
 userdel	q4::inwork; 13103,7889 13085,7904 12870,8087
@@ -21626,7 +21628,7 @@ EOF
        recurrences => [['yearly', days => 22, months => 6]],
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 12826,4777 12836,4649
+userdel	2::temp 12819,4780 12836,4649
 EOF
      },
      { from  => undef,
@@ -21994,7 +21996,7 @@ EOF
 #: next_check_id: CHERUSKERPARK-2014
 #: XXX bis wann gehen die Bauarbeiten?
 #: by: http://de.wikipedia.org/wiki/Rote_Insel#Um-_und_Ausbau_2013_.28Sch.C3.B6neberger_Schleife.29 (Umbauarbeiten)
-#: last_checked: 2014-05-24
+#: last_checked: 2014-07-17
 #: priority: #A
 userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
 EOF
@@ -22623,7 +22625,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann?
-#: last_checked: 2014-06-13
+#: last_checked: 2014-07-14
 #: check_frequency: 30d
 userdel	q3::inwork 11673,16003 11567,15842
 EOF
@@ -22712,7 +22714,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2014-07-07
+#: last_checked: 2014-07-15
 #: check_frequency: 14d
 userdel	q4::inwork 11498,11417 11542,11342 11415,11392 11498,11417
 EOF
@@ -22850,8 +22852,8 @@ userdel	2::inwork 5935,5874 6007,5882 6134,5894
 EOF
      },
      { from  => 1402264800, # 2014-06-09 00:00
-       until => 1405461600, # 2014-07-16 00:00
-       text  => 'Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Dorotheenstr. und Behrenstr.: Sperrungen wegen der Fußball-WM-Fanmeile, vom 11.06.2014 06 Uhr bis 15.07.14, 24:00',
+       until => $isodate2epoch->("2014-07-18 00:00:00"), # 1405461600, # 2014-07-16 00:00
+       text  => 'Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Dorotheenstr. und Behrenstr.: Sperrungen wegen der Fußball-WM-Fanmeile, vom 11.06.2014 06 Uhr bis zum 18.07.14',
        type  => 'gesperrt',
        source_id => 'IM_022090',
        data  => <<EOF,
@@ -22910,7 +22912,7 @@ EOF
 #: by: Angelika Weber
 #: XXX wann sind die Bauarbeiten beendet?
 #: XXX bleibt das Kopfsteinpflaster nach den Bauarbeiten?
-#: next_check: 2014-07-17
+#: last_checked: 2014-07-17
 userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
 EOF
      },
@@ -22924,8 +22926,8 @@ userdel	2::inwork 60418,-397 58317,-1384
 EOF
      },
      { from  => 1403809173, # 2014-06-26 20:59
-       until => $isodate2epoch->("2014-08-04 16:00:00"),
-       text  => 'Warnemünder Str.: Asphaltierungsarbeiten in Richtung Norden, Fahrbahn wird nur begrenzt verfügbar sein, 30.6.2014 bis 4.8.2014 ',
+       until => $isodate2epoch->("2014-07-07 05:00:00"),
+       text  => 'Warnemünder Str.: Asphaltierungsarbeiten in Richtung Norden, Fahrbahn wird nur begrenzt verfügbar sein, 30.6.2014 bis zum 17.7.2014 ',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140626.1220.398183.html',
        data  => <<EOF,
@@ -22986,13 +22988,12 @@ EOF
      },
      { from  => 1404079200, # 2014-06-30 00:00
        until => $isodate2epoch->("2014-07-18 17:00:00"), # 1405461599, # 2014-07-15 23:59
-       text  => 'Rigaer Str. zwischen Zellestr. und Proskauer Str.: Bauarbeiten, Fahrbahn gesperrt, 02.07.2014 bis Mitte Juli 2014 ',
+       text  => 'Rigaer Str.: Bauarbeiten, kurzes Stück der Fahrbahn an der Proskauer Str. gesperrt, 02.07.2014 bis Mitte Juli 2014 ',
        type  => 'handicap',
        source_id => 'IM_022295',
        data  => <<EOF,
-#: XXX evtl. wird hier asphaltiert?
-#: next_check: 2014-07-14
-userdel	q4::inwork 14266,12446 14133,12482
+# REMOVED (nein) --- : XXX evtl. wird hier asphaltiert? --- #: next_check: 2014-07-14
+userdel	q3::inwork 14266,12446 14133,12482
 EOF
      },
      { from  => $isodate2epoch->("2014-10-10 00:00:00"), # 1 Tag Vorlauf

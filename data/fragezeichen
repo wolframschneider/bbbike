@@ -1061,12 +1061,19 @@ Luzernstr. (Potsdam): Qualität?	? -13738,1387 -13707,1434 -13686,1470 -13653,152
 Gustav-Meyer-Str.: wurde die Straße schon teilweise Richtung Osten verlängert? Qualität?	? -13587,1520 -13610,1521 -13653,1522 -13731,1525 -13779,1544
 Hermann-Mattern-Promenade: wurde die Straße schon teilweise Richtung Norden verlängert? Qualität?	? -13795,1420 -13766,1469 -13745,1504 -13731,1525 -13701,1579 -13682,1614 -13671,1665 -13658,1730 -13645,1807
 Konrad-Zuse-Ring (Potsdam): Ist die Straße schon fertig gestellt? Qualität?	? -13330,2796 -13168,2836 -13105,2614 -13266,2571
-Königsheideweg -> Südostallee: welche Gaststätte ist hier ausgeschildert?	? 15642,5468 15711,5756
 Jahnpromenade (Erkner): Qualität?	? 34325,3183 34352,3189 34493,3339
 Am Uferpark (Potsdam): genaue Lage der Straße, Qualität?	? -13381,-2943 -13494,-2850
 Schiefertonweg: gibt es hier ein Drängelgitter Richtung Nordgraben?	? 10269,21718 10248,21795
 Zechsteinweg: ist der Zechsteinweg eine Sackgasse?	? 10328,21737 10319,21774
 Kieselweg: gibt es hier ein Drängelgitter Richtung Nordgraben?	? 10423,21701 10388,21801
+Weg in der Jungfernheide: Qualität des Wegs? Nachts beleuchtet? Existiert eine Ausschilderung?	? 2683,14878 2768,14923 2835,14975 2889,15033 2929,15138 2933,15270 2922,15379 3095,15495
+Uranusweg - Eichborndamm: Weg entlang Sportanlage und Autobahn, Qualität des Wegs? Nachts beleuchtet? Existiert eine Ausschilderung?	? 4287,17564 3961,17710 4015,17912
+Maienwerderweg - Sendener Weg: Qualität des Wegs? Nachts beleuchtet?	? 2210,18262 2097,18183 1928,18136 1663,18166 1375,18209 1178,18223
+Wollankstr. - Pankeweg: Qualität des Wegs? Nachts beleuchtet?	? 9240,17268 9073,17361
+Wuhlewanderweg bis zur Spreemündung: Qualität des Wegs? Nachts beleuchtet?	? 21602,5685 21507,5620
+Weg am ehem. Güteraußenring: Qualität des Wegs? Nachts beleuchtet?	? 9562,-619 9522,-530 9484,-543 9424,-614 9171,-661 8501,-759 7978,-839
+Anbindung zum Weg am Königsgraben: Qualität des Wegs? Nachts beleuchtet?	? 8501,-759 8574,-698 8626,-677
+Weg im Freizeitpark Marienfelde: Qualität des Wegs? Nachts beleuchtet?	? 7978,-839 8010,-805 8018,-489 7801,-467 7803,-387 7785,-345 7773,-344
 # added from ampeln-orig
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4
 #: last_checked: 2014-06-10 (zurzeit Bauarbeiten, evtl. wird hier was gemacht?)
@@ -1127,7 +1134,9 @@ Müncheberg, Turm (genaue Bezeichnung?)	? 60306,11906
 Tino-Schwierzina-Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert (Ist die Tino-Schwierzina-Str. zwischen Aidastr. und Romain-Rolland-Str. mittlerweile komplett asphaltiert?)	? 12736,17998 12467,17814
 Remstaler Str.: schlechtes Kopfsteinpflaster (Ist die Remstaler Str. zwischen Zernsdorfer Str. und Edelhofdamm neu asphaltiert?)	? 3154,25659 3141,25626 3141,25575
 Remstaler Str.: Asphalt mit starken Schäden (Ist die Remstaler Str. zwischen Zernsdorfer Str. und Edelhofdamm neu asphaltiert?)	? 3141,25575 3171,25495
+Stephanstr.: Kopfsteinpflaster (ist das Kopfsteinpflaster im westlichen Abschnitt der Stephanstr. eher mäßig oder eher schlecht?)	? 6360,4504 6523,4491
 Rosentreterpromenade: Asphalt mit Schäden (Ist die Qualität in der Rosentreterpromenade nach den Bauarbeiten besser geworden?)	? 4423,20848 4245,21105 4226,21133
+Seerosensteig: mäßiges Kopfsteinpflaster (liegt hier Kopfsteinpflaster oder ist hier asphaltiert?)	? 11187,3999 11271,4021 11314,4026 11374,4041 11432,4054
 Elstaler Str.: Kopfsteinpflaster (wird die Fahrbahnqualität nach den Bauarbeiten besser sein (z.B. wird die Fahrbahn asphaltiert sein)?)	? -4559,14341 -4548,14434
 Jühnsdorf: Asphalt (existiert durch Jühnsdorf ein Radweg?)	? 9792,-12090 9345,-11425 9472,-11297 9578,-10891
 Dahlwitz - Neuenhagen: teilweise nur mäßiger Asphalt (nach den Bauarbeiten (2006-10-31) vielleicht besserer Asphalt?)	? 29093,13456 29743,14143
