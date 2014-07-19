@@ -831,7 +831,10 @@ my $is_streets;
   $local_lang = &my_lang($lang, 1);
   $lang = $local_lang if $local_lang && !$selected_lang;
   $is_streets = &is_streets($q);
-  warn "lang: $lang, local_lang: $local_lang '$path', lang_parameter=$lang_parameter\n";
+  
+  my $startc = $q->param("startc") || "";
+  my $zielc = $q->param("zielc") || "";
+  warn "lang: $lang, local_lang: $local_lang '$path', lang_parameter=$lang_parameter, startc: $startc, zielc: $zielc\n";
 }
 
 # local language links redirect: /de/Berlin/ -> /Berlin/
