@@ -79,8 +79,11 @@ Neue Bahnhofstr./Boxhagener Str.: Fußgängerampel auf der linken Seite benutzen	C
 #: XXX_prog: RL:ja, GPS:nein (in der Realität kann man nicht anders fahren, aber vielleicht einen kleinen Hint wert)
 #: XXX eventuell wird es hier in Zukunft Verbesserungen geben, siehe BVV-Beschluss
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3277&options=4
+#: source_id: IM_022413
+#: XXX haben die Bauarbeiten (bis Anfang August 2014) etwas damit zu tun?
 #: last_checked: 2014-02-14
-#: check_frequency: 150d
+#: next_check: 2014-08-01
+# REMOVED --- #: check_frequency: 150d
 Rennbahnstr./Bernkasteler Str.: Fußgängerampel auf der linken Seite zum Überqueren der Berliner Allee benutzen	CP; 14528,16910 14558,16907 14673,16895
 Wisbyer Str. Richtung Dunckerstr.: bereits an der Prenzlauer Allee den linken Gehweg benutzen	PI; 12090,16199 12012,16250 11926,16088
 # REMOVED --- Stahlheimer Richtung Wisbyer Str.: Fußgängerampel auf der linken Seite zum Überqueren der Wisbyer Str. benutzen	CP; 11618,16183 11698,16311 11727,16358 11673,16367
@@ -177,7 +180,7 @@ Greifswalder Str. - Heinrich-Roller-Str.: Fußgängerfurt (Drängelgitter) benutzen
 Kietz - Kietzer Str.: zum Überqueren der Straße Fußgängerampel links benutzen	CP; 22364,4429 22383,4470 22372,4496 22358,4521
 Kietz - Müggelheimer Str.: zum Überqueren der Straße Fußgängerampel links benutzen	CP; 22364,4429 22383,4470 22341,4483
 # REMOVED (wohl nicht notwendig, mit der genaueren Karte?) --- Kietz - Amtsstr.: zum Überqueren der Straße Fußgängerampel links benutzen	CP; 22364,4429 22419,4457 22495,4523
-als "Neue Dorfstr." ausgeschildert	CS; 52490,75434 52181,75778
+als "Neue Dorfstr." ausgeschildert	CS; 52483,75441 52181,75778
 als "Wiesenweg" ausgeschildert	CS; 52215,83681 52346,83150
 # REMOVED (anscheinend gibt es hier eine direkte Überquerungsmöglichkeit für Fußgänger/Radfahrer) --- #: by: Susan Richter: vvv --- Lichtenrader Damm - Griembergweg: Überquerungsmöglichkeit nördlich der Kreuzung	PI; 10737,132 10753,83 10913,96 --- Griembergweg - Lichtenrader Damm: Überquerungsmöglichkeit nördlich der Kreuzung	CP; 10913,96 10753,83 10782,-24 --- #: by: ^^^
 Richtung Bellevuestr. und Kemperplatz	CS; 8548,11571 8502,11564 8442,11555
