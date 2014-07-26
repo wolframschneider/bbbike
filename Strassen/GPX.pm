@@ -287,6 +287,13 @@ sub bbd2gpx {
     }
     $args{xy2longlat} = $xy2longlat;
 
+    if (!exists $args{-name}) {
+	my $title = $self->get_global_directive('title');
+	if (defined $title) {
+	    $args{-name} = $title;
+	}
+    }
+
     if ($use_xml_module eq 'XML::LibXML') {
 	_require_XML_LibXML;
 	$self->_bbd2gpx_libxml(%args);
@@ -301,8 +308,8 @@ sub _bbd2gpx_libxml {
     my $xy2longlat = delete $args{xy2longlat};
     my $meta = delete $args{-meta} || {};
     my $as = delete $args{-as} || 'track';
-    my $name = delete $args{-name};
-    my $number = delete $args{-number};
+    $meta->{name} = delete $args{-name} if exists $args{-name};
+    $meta->{number} = delete $args{-number} if exists $args{-number};
     my $with_trip_extensions = delete $args{-withtripext};
 
     my $has_encode = eval { require Encode; 1 };
@@ -367,8 +374,6 @@ sub _bbd2gpx_libxml {
     if ($as eq 'route') {
 	my $rtexml = $gpx->addNewChild(undef, "rte");
 	_add_meta_attrs_libxml($rtexml, $meta);
-	$rtexml->appendTextChild('name', $name) if defined $name && $name ne '';
-	$rtexml->appendTextChild('number', $number) if defined $number && $number ne '';
 	for my $wpt_i (0 .. $#wpt) {
 	    my $wpt = $wpt[$wpt_i];
 	    my $rteptxml = $rtexml->addNewChild(undef, "rtept");
@@ -394,8 +399,6 @@ sub _bbd2gpx_libxml {
 	if (@trkseg) {
 	    my $trkxml = $gpx->addNewChild(undef, "trk");
 	    _add_meta_attrs_libxml($trkxml, $meta);
-	    $trkxml->appendTextChild('name', $name) if defined $name && $name ne '';
-	    $trkxml->appendTextChild('number', $number) if defined $number && $number ne '';
 	    for my $trkseg (@trkseg) {
 		my $trksegxml = $trkxml->addNewChild(undef, "trkseg");
 		for my $wpt (@{ $trkseg->{coords} }) {
@@ -417,6 +420,9 @@ sub _bbd2gpx_twig {
     my($self, %args) = @_;
     my $xy2longlat = delete $args{xy2longlat};
     my $meta = delete $args{-meta} || {};
+    my $as = delete $args{-as} || 'track';
+    $meta->{name} = delete $args{-name} if exists $args{-name};
+    $meta->{number} = delete $args{-number} if exists $args{-number};
     my $with_trip_extensions = delete $args{-withtripext};
 
     $self->init;
@@ -454,7 +460,7 @@ sub _bbd2gpx_twig {
 				 );
     $twig->set_root($gpx);
 
-    if ($args{-as} && $args{-as} eq 'route') {
+    if ($as eq 'route') {
 	my $rtexml = XML::Twig::Elt->new("rte");
 	$rtexml->paste(last_child => $gpx);
 	_add_meta_attrs_twig($rtexml, $meta);
@@ -600,3 +606,124 @@ sub _add_meta_attrs_twig {
 1;
 
 __END__
+
+=head1 NAME
+
+Strassen::GPX - convert between bbd and gpx formats
+
+=head1 SYNOPSIS
+
+Read a gpx file:
+
+    use Strassen::GPX;
+    my $s = Strassen::GPX->new;
+    $s->gpx2bbd("/path/to/file.gpx");
+
+Alternatively:
+
+    use Strassen::GPX;
+    my $s = Strassen::GPX->new("/path/to/file.gpx");
+
+Read a bbd file and dump it as gpx:
+
+    use Strassen::GPX;
+    my $s = Strassen->new("/path/to/file.bbd");
+    my $gpx = $s->bbd2gpx;
+
+=head1 DESCRIPTION
+
+L<Strassen::GPX> may be used to read C<.gpx> files into
+C<Strassen>-compatible objects, or to dump C<Strassen>-compatible
+objects as C<.gpx> files.
+
+=head2 bbd2gpx
+
+This method would create a gpx file where one-point bbd records are
+converted into C<< <wpt> >> (waypoint) elements, and multi-point bbd
+records are converted into C<< <trk> >> (track) elements, or C<< <rte>
+>> (route) elements if the C<-as> option is set (see below).
+
+Takes the following named parameters:
+
+=over
+
+=item C<< -meta => {...} >>
+
+A hash which can contain the following keys: C<name>, C<cmt>, C<desc>,
+C<src>, C<link>, C<number>, and C<type>. These would used for creating
+the same-named elements in C<rte> or C<trk> elements. See below for
+the C<-number> and C<-name> options, too.
+
+=item C<< -name => ... >>
+
+Set the value for the C<< <name> >> element in tracks and routes. This
+takes precedence over the definition in C<-meta>.
+
+If the name is not given, then the module uses the value of the global
+directive C<title>. If this is also not defined, then (at least for
+track files) a name will be constructed from names of the first and
+last bbd records, creating something like "Start - Goal".
+
+=item C<< -number => ... >>
+
+Set the C<< <number> >> element; takes precedence over the C<-meta>
+definition.
+
+=item C<< -as => "route" >>
+
+Instead of creating tracks, create routes.
+
+=item C<< -withtripext => $bool >>
+
+Create C<ShapingPoint> and C<ViaPoint> elements for Garmin's trip
+extensions.
+
+=back
+
+=head2 gpx2bbd
+
+Parses the given C<.gpx> file into the object. Waypoints are converted
+into one-coordinate bbd records, track and route segments are
+converted into multi-coordinate bbd records.
+
+Takes the following named parameters:
+
+=over
+
+=item C<< -name => ... >>
+
+Force the use of the given name for the created bbd records,
+overriding existing C<< <name> >> definitions in the C<.gpx> file.
+
+=item C<< -fallbackname => ... >>
+
+Use this name only if C<< <name> >> is missing for the feature in the
+C<.gpx> file.
+
+=item C<< -cat => ... >>
+
+Define the category for the created bbd records. If not given, then
+C<X> is used.
+
+=back
+
+=head2 IMPLEMENTATION NOTES
+
+L<Strassen::GPX> may use L<XML::LibXML> or L<XML::Twig> to do the XML
+parsing and creation work. By default, C<XML::LibXML> is preferred
+over C<XML::Twig>. To force an implementation, set
+C<$Strassen::GPX::use_xml_module> to one of the both XML package
+names.
+
+C<XML::Twig> running on older perls (< 5.16.0) has problems with
+larger documents and may even segfault.
+
+=head1 AUTHOR
+
+Slaven Rezic
+
+=head1 SEE ALSO
+
+L<Strassen::Core>, L<XML::LibXML>, L<XML::Twig>.
+
+=cut
