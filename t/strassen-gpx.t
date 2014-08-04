@@ -27,7 +27,7 @@ BEGIN {
     }
 }
 
-use BBBikeTest qw(gpxlint_string);
+use BBBikeTest qw(gpxlint_string eq_or_diff);
 
 use Route;
 
@@ -38,7 +38,7 @@ sub xpath_checks ($$&);
 my $v;
 my @variants = ("XML::LibXML", "XML::Twig");
 my $new_strassen_gpx_tests = 5;
-my $tests_per_variant = 126 + $new_strassen_gpx_tests;
+my $tests_per_variant = 151 + $new_strassen_gpx_tests;
 my $do_long_tests = !!$ENV{BBBIKE_LONG_TESTS};
 my $bbdfile;
 my $bbdfile_with_lines = "comments_scenic";
@@ -442,6 +442,7 @@ EOF
 Start - Goal	X 100,100 200,200 300,300
 EOF
 	    for my $def (['track', $track_data],
+			 ['multi-tracks', $track_data],
 			 ['route', $route_data],
 			) {
 		my($as, $data) = @$def;
@@ -527,6 +528,80 @@ EOF
 			is $nodes[0]->textContent, 'overriding title', 'option has precedence over global directive';
 		    };
 	    }
+	}
+
+	{
+	    # preserve WGS84 coordinates
+	    my $gpx_string = <<'EOF';
+<gpx><trk><name>Testtrk</name><trkseg><trkpt lat="52.525729" lon="13.370012" /><trkpt lat="52.525748" lon="13.370018" /><trkpt lat="52.525770" lon="13.370019" /></trkseg></trk></gpx>
+EOF
+	    my $expected_bbd_string = <<'EOF';
+#: map: polar
+#:
+Testtrk	X 13.370012,52.525729 13.370018,52.525748 13.370019,52.525770
+EOF
+
+	    {
+		my $s = Strassen::GPX->new;
+		$s->set_global_directive(map => 'polar');
+		$s->gpxdata2bbd($gpx_string);
+		eq_or_diff $s->as_string, $expected_bbd_string, 'preserve WGS84 coordinates in gpxdata2bbd';
+	    }
+
+	    {
+		my($tmpfh,$tmpfile) = tempfile(SUFFIX => '_strassen.gpx', UNLINK => 1);
+		print $tmpfh $gpx_string;
+		close $tmpfh or die $!;
+
+		my $s = Strassen::GPX->new;
+		$s->set_global_directive(map => 'polar');
+		$s->gpx2bbd($tmpfile);
+		eq_or_diff $s->as_string, $expected_bbd_string, 'preserve WGS84 coordinates in gpx2bbd';
+	    }
+	}
+
+	{
+	    # -as => "multi-tracks"
+	    my $bbd = <<'EOF';
+#: map: polar
+#:
+Track1	X 13.4,52.5 13.5,52.6
+Track2	X 13.5,52.6 13.6,52.7
+EOF
+	    my $s0 = Strassen->new_from_data_string($bbd);
+	    my $s = Strassen::GPX->new($s0);
+	    my $xml_res = $s->Strassen::GPX::bbd2gpx(-as => 'multi-tracks');
+	    xpath_checks $xml_res, 5,
+		sub {
+		    my $doc = shift;
+		    my @trks = $doc->findnodes('//*[local-name(.)="trk"]');
+		    is scalar(@trks), 2, 'created two tracks for multi-tracks';
+		    is $trks[0]->findvalue('./*[local-name(.)="name"]'), 'Track1', 'expected first track name';
+		    is $trks[1]->findvalue('./*[local-name(.)="name"]'), 'Track2', 'expected second track name';
+		    is $trks[0]->findvalue('./*[local-name(.)="trkseg"]/*[local-name(.)="trkpt" and position()=1]/@lat'), '52.5', 'expected latitude of first coordinate';
+		    is $trks[1]->findvalue('./*[local-name(.)="trkseg"]/*[local-name(.)="trkpt" and position()=2]/@lon'), '13.6', 'expected longitude of last coordinate';
+		};
+	}
+
+	{
+	    # -as => "multi-tracks" and fallback name
+	    my $bbd = <<'EOF';
+#: map: polar
+#:
+	X 13.4,52.5 13.5,52.6
+	X 13.5,52.6 13.6,52.7
+EOF
+	    my $s0 = Strassen->new_from_data_string($bbd);
+	    my $s = Strassen::GPX->new($s0);
+	    my $xml_res = $s->Strassen::GPX::bbd2gpx(-as => 'multi-tracks');
+	    xpath_checks $xml_res, 3,
+		sub {
+		    my $doc = shift;
+		    my @trks = $doc->findnodes('//*[local-name(.)="trk"]');
+		    is scalar(@trks), 2, 'created two tracks for multi-tracks';
+		    is $trks[0]->findvalue('./*[local-name(.)="name"]'), 'Track 1', 'expected 1st fallback track name';
+		    is $trks[1]->findvalue('./*[local-name(.)="name"]'), 'Track 2', 'expected 2nd fallback track name';
+		};
 	}
     }
 }

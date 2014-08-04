@@ -2960,7 +2960,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
 ',
          'until' => undef,
          'from' => undef,
-         'text' => 'Potsdamer Wassertaxi: fährt nur im Sommer an Wochenenden und Feiertagen',
+         'text' => 'Potsdamer Wassertaxi: fährt nur im Sommer, 3x bis 6x täglich',
          'type' => 'gesperrt',
          'id' => 2407
        },
@@ -2981,7 +2981,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        },
        {
          'until' => undef,
-         'text' => 'Karniner Fähre: fährt nur von Mai bis Oktober',
+         'text' => 'Karniner Fähre: fährt nur von Anfang Mai bis Ende September',
          'recurring' => 1,
          'from' => undef,
          'id' => 2409,
@@ -3202,7 +3202,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
 ',
          'until' => undef,
          'from' => undef,
-         'text' => 'Fähre Liepnitzsee: fährt nur ab Ende März bis Ende Oktober',
+         'text' => 'Fähre Liepnitzsee: fährt nur ab Anfang April bis Anfang November',
          'type' => 'gesperrt',
          'id' => 2475
        },
@@ -3231,13 +3231,15 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        {
          'until' => undef,
-         'text' => 'Weg im Cheruskerpark: Bauarbeiten, Durchfahrt nicht möglich',
+         'text' => 'Weg im Cheruskerpark: die Bauarbeiten sind möglicherweise beendet',
          'from' => undef,
          'id' => 2489,
          'data' => '#: next_check_id: CHERUSKERPARK-2014
 #: XXX bis wann gehen die Bauarbeiten?
 #: by: http://de.wikipedia.org/wiki/Rote_Insel#Um-_und_Ausbau_2013_.28Sch.C3.B6neberger_Schleife.29 (Umbauarbeiten)
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20140723.1150.398518.html (fertig?)
 #: last_checked: 2014-07-17
+#: next_check: 2014-07-23
 #: priority: #A
 userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
 ',
@@ -3329,7 +3331,16 @@ userdel	2::inwork 20653,7289 20609,7200 20635,7119 20722,6971 21233,6096 21303,5
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => '146000678',
+         'until' => 1406584799,
+         'text' => 'Niederfinow: Kabelarbeiten im Fahrbahnbereich OD Niederfinow, Hebewerkstraße Vollsperrung, 21.07.2014 bis 28.07.2014',
+         'from' => 1405807200,
+         'id' => 2539,
+         'data' => 'userdel	2::inwork 46132,49993 46390,50091
+',
+         'type' => 'gesperrt'
+       },
        {
          'until' => 1530395999,
          'text' => 'Grenzallee: vollständige Sperrung zwischen Bergiusstr. (Autobahnausfahrt) und Neuköllnische Allee, ab 24.2.2014 bis Mitte 2018',
@@ -3366,8 +3377,8 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        undef,
        {
          'source_id' => 'IM_021395',
-         'until' => 1406127600,
-         'text' => 'Golzstr.: Baustelle, Fahrbahn zwischen Lichtenrader Damm und Bahnhofstr. in Richtung S-Bhf. gesperrt, 03.03.2014 08:00 Uhr bis 23.07.2014 17:00 Uhr ',
+         'until' => 1408114800,
+         'text' => 'Golzstr.: Baustelle, Fahrbahn zwischen Lichtenrader Damm und Bahnhofstr. in Richtung S-Bhf. gesperrt, 03.03.2014 08:00 Uhr bis 15.08.2014 17:00 Uhr ',
          'from' => 1393743600,
          'id' => 2546,
          'data' => '#: note: laut BVG navi 03.2014 sogar bis September 2014
@@ -3567,18 +3578,7 @@ userdel	q4::inwork; 17614,6571 17766,6616
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-neukoelln/presse/archiv/20140707.1250.398363.html',
-         'until' => undef,
-         'text' => 'Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Einbahnstraße offen Richtung Süden, ab 21. Juli 2014',
-         'from' => 1405807200,
-         'id' => 2593,
-         'data' => '#: XXX wie sehen die Einschränkungen tatsächlich aus?
-#: next_check: 2014-07-21
-	q4::inwork; 13015,7471 12992,7545 12991,7549 12969,7610 12914,7785
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.148335.php',
          'until' => 1407686400,
@@ -3632,6 +3632,16 @@ userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
          'from' => 1406412000,
          'id' => 2597,
          'data' => 'userdel	q4::inwork 20149,3617 20301,3432
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.149073.php',
+         'until' => 1408831199,
+         'text' => 'Radenzer Straße und Heidemühler Weg: Fahrbahninstandsetzung, Fahrbahn in Abschnitten gesperrt, vom 06.08.2014 bis zum 23.08.2014',
+         'from' => 1407189600,
+         'id' => 2598,
+         'data' => 'userdel	q4::inwork 16068,6216 16105,6193 16220,6277 16304,6358 16304,6374 16192,6503
 ',
          'type' => 'handicap'
        }

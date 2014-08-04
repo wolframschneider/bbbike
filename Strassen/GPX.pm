@@ -90,35 +90,61 @@ sub new {
 sub gpx2bbd {
     my($self, $file, %args) = @_;
 
+    my $latlong2xy = $self->_get_gpx2bbd_converter;
+
     $self->{File} = $file;
 
     if ($use_xml_module eq 'XML::LibXML') {
 	_require_XML_LibXML;
 	my $p = XML::LibXML->new;
 	my $doc = $p->parse_file($file);
-	$self->_gpx2bbd_libxml($doc, %args);
+	$self->_gpx2bbd_libxml($doc, latlong2xy => $latlong2xy, %args);
     } else {
 	_require_XML_Twig;
 	my $twig = XML::Twig->new;
 	$twig->parsefile($file);
-	$self->_gpx2bbd_twig($twig, %args);
+	$self->_gpx2bbd_twig($twig, latlong2xy => $latlong2xy, %args);
     }
 }
 
 sub gpxdata2bbd {
     my($self, $data, %args) = @_;
 
+    my $latlong2xy = $self->_get_gpx2bbd_converter;
+
     if ($use_xml_module eq 'XML::LibXML') {
 	_require_XML_LibXML;
 	my $p = XML::LibXML->new;
 	my $doc = $p->parse_string($data);
-	$self->_gpx2bbd_libxml($doc, %args);
+	$self->_gpx2bbd_libxml($doc, latlong2xy => $latlong2xy, %args);
     } else {
 	_require_XML_Twig;
 	my $twig = XML::Twig->new;
 	$twig->parse($data);
-	$self->_gpx2bbd_twig($twig, %args);
+	$self->_gpx2bbd_twig($twig, latlong2xy => $latlong2xy, %args);
     }
+}
+
+sub _get_gpx2bbd_converter {
+    my($self) = @_;
+
+    my $latlong2xy;
+    my $map = $self->get_global_directive("map");
+    if ($map && $map eq 'polar') {
+	if ($use_xml_module eq 'XML::LibXML') {
+	    $latlong2xy = \&latlong2longlat;
+	} else {
+	    $latlong2xy = \&latlong2longlat_twig;
+	}
+    } else {
+	if ($use_xml_module eq 'XML::LibXML') {
+	    $latlong2xy = \&latlong2xy;
+	} else {
+	    $latlong2xy = \&latlong2xy_twig;
+	}
+    }
+
+    $latlong2xy;
 }
 
 sub _gpx2bbd_libxml {
@@ -130,6 +156,7 @@ sub _gpx2bbd_libxml {
 	$def_cat = "X";
     }
     my $fallback_name = delete $args{fallbackname};
+    my $latlong2xy = delete $args{latlong2xy};
 
     my $get_name = sub {
 	my($node) = @_;
@@ -149,7 +176,7 @@ sub _gpx2bbd_libxml {
 
     for my $wpt ($root->childNodes) {
 	next if $wpt->nodeName ne "wpt";
-	my($x, $y) = latlong2xy($wpt);
+	my($x, $y) = $latlong2xy->($wpt);
 	my $name = $get_name->($wpt);
 	$self->push([$name, ["$x,$y"], $def_cat]);
     }
@@ -161,7 +188,7 @@ sub _gpx2bbd_libxml {
 		my @c;
 		for my $trkpt ($trk_child->childNodes) {
 		    next if $trkpt->nodeName ne 'trkpt';
-		    my($x, $y) = latlong2xy($trkpt);
+		    my($x, $y) = $latlong2xy->($trkpt);
 		    #my $ele = $wpt->findvalue(q{./ele});
 		    #my $time = $wpt->findvalue(q{./time});
 		    push @c, "$x,$y";
@@ -180,7 +207,7 @@ sub _gpx2bbd_libxml {
 	my @c;
 	for my $rte_child ($rte->childNodes) {
 	    if ($rte_child->nodeName eq 'rtept') {
-		my($x, $y) = latlong2xy($rte_child);
+		my($x, $y) = $latlong2xy->($rte_child);
 		push @c, "$x,$y";
 	    }
 	}
@@ -201,6 +228,7 @@ sub _gpx2bbd_twig {
 	$def_cat = "X";
     }
     my $fallback_name = delete $args{fallbackname};
+    my $latlong2xy = delete $args{latlong2xy};
 
     my $seen_name; # used to remember the <name> element while parsing
 
@@ -225,7 +253,7 @@ sub _gpx2bbd_twig {
 	if ($wpt_or_trk->name eq 'wpt') {
 	    my $wpt = $wpt_or_trk;
 	    undef $seen_name;
-	    my($x, $y) = latlong2xy_twig($wpt);
+	    my($x, $y) = $latlong2xy->($wpt);
 	    if (!defined $def_name) {
 		for my $name_node ($wpt->children) {
 		    next if $name_node->name ne "name";
@@ -245,7 +273,7 @@ sub _gpx2bbd_twig {
 		    my @c;
 		    for my $trkpt ($trk_child->children) {
 			next if $trkpt->name ne 'trkpt';
-			my($x, $y) = latlong2xy_twig($trkpt);
+			my($x, $y) = $latlong2xy->($trkpt);
 			push @c, "$x,$y";
 		    }
 		    if (@c) {
@@ -262,7 +290,7 @@ sub _gpx2bbd_twig {
 		if ($rte_child->name eq 'name' && !defined $def_name) {
 		    $seen_name = $rte_child->children_text;
 		} elsif ($rte_child->name eq 'rtept') {
-		    my($x, $y) = latlong2xy_twig($rte_child);
+		    my($x, $y) = $latlong2xy->($rte_child);
 		    push @c, "$x,$y";
 		}
 	    }
@@ -353,10 +381,6 @@ sub _bbd2gpx_libxml {
 	}
     }
 
-    if (!defined $meta->{name} && @trkseg) {
-	$meta->{name} = make_name_from_trkseg(\@trkseg);
-    }
-
     my $dom = XML::LibXML::Document->new('1.0', 'utf-8');
     my $gpx = $dom->createElement("gpx");
     $dom->setDocumentElement($gpx);
@@ -396,16 +420,20 @@ sub _bbd2gpx_libxml {
 	    $wptxml->setAttribute("lon", $wpt->{coords}[0]);
 	    $wptxml->appendTextChild("name", $wpt->{name});
 	}
-	if (@trkseg) {
+	my $trkseg_counter = 1;
+	while (@trkseg) {
 	    my $trkxml = $gpx->addNewChild(undef, "trk");
-	    _add_meta_attrs_libxml($trkxml, $meta);
-	    for my $trkseg (@trkseg) {
+	    my $name = _get_name_for_trk(\@trkseg, $trkseg_counter, $meta, $as);
+	    _add_meta_attrs_libxml($trkxml, {%$meta, name => $name});
+	    while (@trkseg) {
+		my $trkseg = shift @trkseg; $trkseg_counter++;
 		my $trksegxml = $trkxml->addNewChild(undef, "trkseg");
 		for my $wpt (@{ $trkseg->{coords} }) {
 		    my $trkptxml = $trksegxml->addNewChild(undef, "trkpt");
 		    $trkptxml->setAttribute("lat", $wpt->[1]);
 		    $trkptxml->setAttribute("lon", $wpt->[0]);
 		}
+		last if $as eq 'multi-tracks';
 	    }
 	}
     }
@@ -445,7 +473,7 @@ sub _bbd2gpx_twig {
 	}
     }
 
-    if (!defined $meta->{name} && @trkseg) {
+    if (!defined $meta->{name} && @trkseg && $as ne 'multi-tracks') {
 	$meta->{name} = make_name_from_trkseg(\@trkseg);
     }
 
@@ -495,11 +523,14 @@ sub _bbd2gpx_twig {
 	    my $namexml = XML::Twig::Elt->new("name", {}, $wpt->{name});
 	    $namexml->paste(last_child => $wptxml);
 	}
-	if (@trkseg) {
+	my $trkseg_counter = 1;
+	while (@trkseg) {
 	    my $trkxml = XML::Twig::Elt->new("trk");
+	    my $name = _get_name_for_trk(\@trkseg, $trkseg_counter, $meta, $as);
+	    _add_meta_attrs_twig($trkxml, {%$meta, name => $name});
 	    $trkxml->paste(last_child => $gpx);
-	    _add_meta_attrs_twig($trkxml, $meta);
-	    for my $trkseg (@trkseg) {
+	    while (@trkseg) {
+		my $trkseg = shift @trkseg; $trkseg_counter++;
 		my $trksegxml = XML::Twig::Elt->new("trkseg");
 		$trksegxml->paste(last_child => $trkxml);
 		for my $wpt (@{ $trkseg->{coords} }) {
@@ -508,6 +539,7 @@ sub _bbd2gpx_twig {
 								});
 		    $trkptxml->paste(last_child => $trksegxml);
 		}
+		last if $as eq 'multi-tracks';
 	    }
 	}
     }
@@ -526,12 +558,26 @@ sub latlong2xy {
     ($x, $y);
 }
 
+sub latlong2longlat {
+    my($node) = @_;
+    my $lat = $node->getAttribute('lat');
+    my $lon = $node->getAttribute('lon');
+    ($lon, $lat);
+}
+
 sub latlong2xy_twig {
     my($node) = @_;
     my $lat = $node->att("lat");
     my $lon = $node->att("lon");
     my($x, $y) = $Karte::Standard::obj->trim_accuracy($Karte::Polar::obj->map2standard($lon, $lat));
     ($x, $y);
+}
+
+sub latlong2longlat_twig {
+    my($node) = @_;
+    my $lat = $node->att("lat");
+    my $lon = $node->att("lon");
+    ($lon, $lat);
 }
 
 sub xy2longlat {
@@ -556,6 +602,22 @@ sub make_name_from_trkseg {
 	$name .= " - $name_to";
     }
     $name;
+}
+
+sub _get_name_for_trk {
+    my($trksegs, $trkseg_counter, $meta, $as) = @_;
+    return $meta->{name} if defined $meta->{name};
+    if ($as eq 'track') {
+	make_name_from_trkseg($trksegs);
+    } elsif ($as eq 'multi-tracks') {
+	my $name = $trksegs->[0]->{name};
+	if (!$name) {
+	    $name = "Track $trkseg_counter";
+	}
+	$name;
+    } else {
+	warn "Should not happen: as=$as";
+    }
 }
 
 sub _add_meta_attrs_libxml {
@@ -659,19 +721,42 @@ the C<-number> and C<-name> options, too.
 Set the value for the C<< <name> >> element in tracks and routes. This
 takes precedence over the definition in C<-meta>.
 
-If the name is not given, then the module uses the value of the global
-directive C<title>. If this is also not defined, then (at least for
-track files) a name will be constructed from names of the first and
-last bbd records, creating something like "Start - Goal".
+If the name is not given, then the module tries a number of fallbacks:
+
+=over
+
+=item * the value of the global directive C<title>
+
+=item * for track only: the name will be constructed from names of the
+first and last bbd records, creating something like "Start - Goal"
+
+=item * for multi-tracks only: the name will be constructed from 
+"Track " and a counter starting at 1
+
+=back
 
 =item C<< -number => ... >>
 
 Set the C<< <number> >> element; takes precedence over the C<-meta>
 definition.
 
-=item C<< -as => "route" >>
+=item C<< -as => 'track' >>
+
+If creating tracks, then create a single C<< <trk> >> element with
+possibly multiple C<< <trkseg> >> elements. This is the default.
+
+One-point records are not affected by this option and are created as
+C<< <wpt> >> elements.
+
+=item C<< -as => 'route' >>
 
 Instead of creating tracks, create routes.
+
+=item C<< -as => 'multi-tracks' >>
+
+Instead of creating one C<< <trk> >> with multiple C<< <trkseg> >>
+elements, create multiple C<< <trk> >> elements with one
+C<< <trkseg> >> element each.
 
 =item C<< -withtripext => $bool >>
 

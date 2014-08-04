@@ -320,6 +320,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11160,13492
 #: XXX Ampelanlange wird umgebaut (Richtung Kreuzung)
 #: by: http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20120514.1415.370100.html
+#: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6163 (Stand der Planung?)
+#: by: http://www.berlin.de/ba-mitte/bvv-online/___tmp/tmp/45081036147184117/147184117/00116327/27-Anlagen/02/MA_1534_IV.pdf
 #: note: Anforderungsampel
 #: last_checked: 2014-04-04
 #: check_frequency: 180d
@@ -726,6 +728,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 8065,11349
 #: XXX_prog gilt nicht für Radfahrer in Richtung West->Ost
 	X 5758,11895
+#: note: Fußgängerampel ist nur für die Hauptfahrbahn gültig, die explizit für Radfahrer gesperrt ist
+#: note: Anforderungsampel
+	F0 5141,11816
 	X 14211,11552
 	X 15863,11992
 	X 12549,8616
@@ -2027,8 +2032,11 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	X 11722,10533
 	X 5219,6215
 	X 5269,6305
+#: note: Anforderungsampel
 	F 5091,5979
+#: note: Anforderungsampel
 	F 4982,5789
+#: note: keine Anforderungsampel, wahrscheinlich gleichgeschaltet mit der Ampel an der Grunewaldstr.
 	F 4900,5648
 	F 6333,7708
 #: note: am Wochenende nicht eingeschaltet
@@ -2653,6 +2661,9 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X::inwork 11269,20667
 #: note: Anforderungsampel
 	F 5357,6943
+#: by: http://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=3943
+#: note: Anforderungsampel
+	F 6153,18592
 # 
 ################################################################################
 #: note: Potsdam vvv
@@ -2785,6 +2796,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_prog: Ampelanlage gilt für die gesamte Brücke, auf der anderen Seite ist auch eine
 	X -9942,21
 	X -12655,-1714
+#: XXX_prog: wechselseitige LSA-Regelung, ca. 100m Länge, größerer Zeitverlust?
+#: last_checked: 2014-07-22
+#: check_frequency: 90d
+	X::inwork 14018,9118
 ################################################################################
 #: note: Ampeln elsewhere vvv
 	B 51798,78477
