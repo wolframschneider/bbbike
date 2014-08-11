@@ -2682,7 +2682,26 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.laubinger.de/termine/44-fest-an-der-panke/
+userdel	2::temp 10602,18382 10567,18366 10502,18338 10463,18321 10449,18315 10281,18241 10240,18193 10320,18197 10469,18262 10487,18270 10660,18345
+',
+         'periodic' => 1,
+         'until' => 1410731999,
+         'from' => 1410472800,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              10,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., Veranstaltung (Fest an der Panke), Straße vollständig gesperrt (13.09.2014 und 14.09.2014)',
+         'type' => 'gesperrt',
+         'id' => 2281
+       },
        undef,
        undef,
        undef,
@@ -2758,13 +2777,13 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        {
          'source_id' => 'http://www.berliner-woche.de/nachrichten/bezirk-treptow-koepenick/niederschoeneweide/artikel/45985-umleitungen-durch-angrenzende-wohngebiete/',
-         'until' => 1407707999,
-         'text' => 'Oberspreestr., Sperrung des Bahnübergangs, Fußgänger können passieren, Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, vom 14. Juli bis 10. August 2014',
-         'from' => 1405202400,
+         'until' => 1412442000,
+         'text' => 'Oberspreestr., Sperrung des Bahnübergangs in Richtung Westen, Fußgänger können passieren, Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, bis Anfang Oktober 2014',
+         'from' => 1407706402,
          'id' => 2344,
          'data' => '#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.144501.php
-#: source_id: IM_022364
-userdel	q3::inwork 19328,5304 19405,5284 19445,5271
+#: source_id: IM_022567
+userdel	q4::inwork; 19445,5271 19405,5284 19328,5304
 userdel	q4::inwork; 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065,5534 20348,5509 20437,5463 20781,5242
 ',
          'type' => 'handicap'
@@ -3692,26 +3711,7 @@ userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_022534',
-         'data' => 'userdel	2::temp 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186
-',
-         'periodic' => 1,
-         'until' => 1407650400,
-         'from' => 1407438000,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              1,
-                              'months',
-                              8
-                            ]
-                          ],
-         'text' => 'Str. des 17. Juni: zwischen Yitzak-Rabin-Str. und Ebertstr.: Veranstaltung (Hanfparade), Straße gesperrt, ab 08.08.2014 21 Uhr bis 10.08.2014 morgens ',
-         'id' => 2606,
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'LS/721-E/14/067',
          'until' => 1409695200,

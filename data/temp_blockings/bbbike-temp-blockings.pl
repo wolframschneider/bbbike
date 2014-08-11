@@ -17550,7 +17550,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LSO-SG33-E10030',
        data  => <<EOF,
-userdel	2::inwork 25232,18413 25686,17365
+userdel	2::inwork 25232,18413 25524,17739 25587,17593 25686,17365
 EOF
      },
      { from  => 1274300034, # 2010-05-19 22:13
@@ -19861,13 +19861,14 @@ EOF
 userdel	2::inwork -13687,-4949 -13723,-6401
 EOF
      },
-     { from  => $isodate2epoch->("2013-09-13 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2013-09-15 23:59:59"),
+     { from  => $isodate2epoch->("2014-09-12 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2014-09-14 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 10, months => 9]],
-       text  => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., Veranstaltung (Fest an der Panke), Straße vollständig gesperrt (14.09.2013 und 15.09.2013)',
+       text  => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., Veranstaltung (Fest an der Panke), Straße vollständig gesperrt (13.09.2014 und 14.09.2014)',
        type  => 'gesperrt',
        data  => <<EOF,
+#: by: http://www.laubinger.de/termine/44-fest-an-der-panke/
 userdel	2::temp 10602,18382 10567,18366 10502,18338 10463,18321 10449,18315 10281,18241 10240,18193 10320,18197 10469,18262 10487,18270 10660,18345
 EOF
      },
@@ -20463,15 +20464,15 @@ EOF
 userdel	q4::inwork; 8900,20601 9025,20611 9161,20622 9174,20623 9295,20632 9460,20644
 EOF
      },
-     { from  => $isodate2epoch->("2014-07-13 00:00:00"), # 1339099200, # 2012-06-07 22:00
-       until => $isodate2epoch->("2014-08-10 23:59:59"), # 1339437600, # 2012-06-11 20:00
-       text  => 'Oberspreestr., Sperrung des Bahnübergangs, Fußgänger können passieren, Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, vom 14. Juli bis 10. August 2014',
+     { from  => 1407706402,
+       until => $isodate2epoch->("2014-10-04 19:00:00"),
+       text  => 'Oberspreestr., Sperrung des Bahnübergangs in Richtung Westen, Fußgänger können passieren, Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, bis Anfang Oktober 2014',
        type  => 'handicap',
        source_id => 'http://www.berliner-woche.de/nachrichten/bezirk-treptow-koepenick/niederschoeneweide/artikel/45985-umleitungen-durch-angrenzende-wohngebiete/',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.144501.php
-#: source_id: IM_022364
-userdel	q3::inwork 19328,5304 19405,5284 19445,5271
+#: source_id: IM_022567
+userdel	q4::inwork; 19445,5271 19405,5284 19328,5304
 userdel	q4::inwork; 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065,5534 20348,5509 20437,5463 20781,5242
 EOF
      },
