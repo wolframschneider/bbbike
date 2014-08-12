@@ -5673,6 +5673,7 @@ sub display_route {
 	    my @headers =
 		(-type => "application/json",
 		 @weak_cache,
+		 cors_handling(),
 		);
 	    http_header(@headers);
 	    my $json_output;
@@ -5696,6 +5697,7 @@ sub display_route {
 	    http_header
 		(-type => "application/json",
 		 @weak_cache,
+		 cors_handling(),
 		);
 	    require BBBikeGeoJSON;
 	    print BBBikeGeoJSON::bbbikecgires_to_geojson_json($res, short => $is_short);
@@ -5723,13 +5725,11 @@ sub display_route {
 	} else { # xml
 	    require XML::Simple;
 	    my $filename = filename_from_route($startname, $zielname) . ".xml";
-	    my $origin = $q->http('origin');
 	    http_header
 		(-type => 'application/xml',
 		 @weak_cache,
 		 -Content_Disposition => "attachment; filename=$filename",
-		 # CORS handling - additionally allow requests from localhost, e.g. for JSCover tests
-		 ($origin && $origin =~ m{^https?://localhost(:\d+)?} ? (-Access_Control_Allow_Origin => $origin) : ()),
+		 cors_handling(),
 		);
 	    my $new_res = {};
 	    while(my($k,$v) = each %$res) {
@@ -8233,6 +8233,25 @@ sub my_lang {
     $my_lang = "en" if $my_lang  eq "";
 
     return $my_lang;
+}
+
+
+# CORS handling - additionally allow requests from localhost, e.g. for JSCover tests
+# also allow requests between bbbike.de and bbbike.org
+sub cors_handling {
+    my $origin = $q->http('origin');
+    if ($origin && $origin =~ m{^https?://
+				(?: localhost
+				|   bbbike-pps
+				|   bbbike-vmz
+				|   (?:.*\.)?bbbike\.de
+				|   (?:.*\.)?bbbike\.org
+				|   (?:.*\.)?herceg\.de
+				)(?::\d+)?$}x) {
+	(-Access_Control_Allow_Origin => $origin);
+    } else {
+	();
+    }
 }
 
 sub header {
