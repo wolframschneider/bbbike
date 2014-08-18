@@ -1111,11 +1111,11 @@ userdel	q4 21646,30961 21001,30933 20794,30899
 userdel	q4 21646,30961 21955,30976
 EOF
      },
-     { from  => $isodate2epoch->("2013-09-13 10:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2013-09-15 20:00:00"),
+     { from  => $isodate2epoch->("2014-09-12 10:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2014-09-14 20:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 13, months => 9]],
-       text  => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstaltung (Herbstfest auf der Hauptstraße), Straße gesperrt (14.9.2013 10:00 - 15.9.2013 20:00)',
+       text  => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstaltung (Herbstfest auf der Hauptstraße), Straße gesperrt (13.9.2014 10:00 - 14.9.2014 20:00)',
        type  => 'handicap',
        data  => <<EOF,
 userdel	q4; 6687,8385 6765,8480 6912,8617 6989,8687 7009,8705 7105,8788 7201,8870 7268,8960
@@ -4144,7 +4144,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_82299',
        data  => <<EOF,
-userdel	2 6281,20369 6275,20412 6267,20476
+userdel	2 6281,20369 6264,20408 6260,20472
 EOF
      },
      { from  => 1144438729, # 2006-04-07 21:38
@@ -19654,7 +19654,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110727.1340.352586.html',
        data  => <<EOF,
-userdel	q4::inwork; 4718,22384 4800,22418 4898,22459 5006,22507 4919,22658
+userdel	q4::inwork; 4718,22384 4800,22418 4898,22459 5006,22507 4917,22662
 EOF
      },
      { from  => 1313272800, # 2011-08-14 00:00
@@ -19901,11 +19901,11 @@ EOF
 userdel	2::inwork 872,24330 873,24112 825,24068 764,24065 609,24215 237,24374 195,24389 132,24390 78,24364 -406,23934
 EOF
      },
-     { from  => $isodate2epoch->("2013-09-18 00:00:00"), # 1347508800, # 2012-09-13 06:00 PERIODISCH, ca. 2. Wochenende im September
-       until => $isodate2epoch->("2013-09-21 23:59:59"), # 1347832740, # 2012-09-16 23:59
+     { from  => $isodate2epoch->("2014-09-18 00:00:00"), # 1347508800, # 2012-09-13 06:00 PERIODISCH, ca. 2. Wochenende im September
+       until => $isodate2epoch->("2014-09-21 23:59:59"), # 1347832740, # 2012-09-16 23:59
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 9]],
-       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 19.09.2013 bis 21.09.2013',
+       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 19.09.2014 bis 21.09.2014',
        type  => 'handicap',
        source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/',
        data  => <<EOF,
@@ -22084,7 +22084,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20131010.1450.390218.html',
        data  => <<EOF,
-userdel	q4::inwork 3171,25495 3141,25575 3141,25626 3154,25659
+userdel	q4::inwork 3166,25496 3145,25548 3141,25626 3154,25659
 EOF
      },
      { from  => $isodate2epoch->("2014-01-08 00:00:00"), # 1381651200, # 2013-10-13 10:00
@@ -22546,7 +22546,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: last_checked: 2014-05-11
+#: last_checked: 2014-08-09 (by http://www.deutsches-architektur-forum.de/forum/showthread.php?t=10252&page=15)
 userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
 EOF
      },
@@ -22669,7 +22669,7 @@ EOF
        source_id => 'http://www.deutsches-architektur-forum.de/forum/showthread.php?t=11143&page=4',
        data  => <<EOF,
 #: XXX wann ist die Baustelle fertig?
-#: last_checked: 2014-06-03
+#: last_checked: 2014-07-22 (by photo)
 #: check_frequency: 60d
 userdel	q3::inwork; 13555,15596 13459,15653
 EOF
@@ -22967,8 +22967,8 @@ userdel	q4::inwork; 22815,37 22697,-27 22596,-82 22436,-168
 EOF
      },
      { from  => 1406844000, # 2014-08-01 00:00
-       until => $isodate2epoch->("2014-08-15 08:00:00"), # was $isodate2epoch->("2014-08-23 23:59:59"),
-       text  => 'Siemensstraße zwischen Nalepastraße und Wattstraße: Einbahnstraße wegen Bauarbeiten, in Richtung Osten gesperrt, vom 02.08.2014 bis 15.08.2014',
+       until => $isodate2epoch->("2014-08-18 18:00:00"), # was $isodate2epoch->("2014-08-23 23:59:59"),
+       text  => 'Siemensstraße zwischen Nalepastraße und Wattstraße: Einbahnstraße wegen Bauarbeiten, in Richtung Osten gesperrt, vom 02.08.2014 bis 18.08.2014',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/tiefbauamt/unterhaltungsma__nahmen_2014_1.xls?download.html',
        data  => <<EOF,
@@ -23066,7 +23066,7 @@ Gartenufer	2::night 6226,11405 6067,11479 5845,11615 5790,11643
 EOF
      },
      { from  => 1405025033, # 2014-07-10 22:43
-       until => 1408312800, # 2014-08-18 00:00
+       until => 1408139790, # 1408312800, # 2014-08-18 00:00
        text  => 'Konrad-Wolf-Str.: Bauarbeiten zwischen Reichenberger Str. und Oberseestr., Richtung Nordosten gesperrt, bis 17.08.2014 18:00 Uhr',
        type  => 'handicap',
        source_id => 'IM_021923',
@@ -23198,12 +23198,66 @@ userdel	2::inwork 3257,26907 3358,26706 3422,26540
 EOF
      },
      { from  => 1408226400, # 2014-08-17 00:00
-       until => 1410645599, # 2014-09-13 23:59
+       until => $isodate2epoch->("2014-10-10 18:00:00"), # 1410645599, # 2014-09-13 23:59
        text  => 'Werneuchener Straße: zwischen Goeckestraße und Große-Leege-Straße in Richtung Konrad-Wolf-Straße wegen Bauarbeiten gesperrt, ab 18. August 2014 bis Mitte Oktober',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20140813.1350.398688.html',
        data  => <<EOF,
+#: source_id: IM_022620
 userdel	q4::inwork; 16514,15092 16430,15168
+EOF
+     },
+     { from  => $isodate2epoch->("2014-08-21 14:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2014-08-24 23:59:59"),
+       periodic => 1,
+       recurrences => [['yearly', days => 21, months => 8]],
+       text  => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 22.8.2014 bis 24.8.2014',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157630.php',
+       data  => <<EOF,
+userdel	2::temp 22133,4644 22111,4562 22093,4499
+userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
+EOF
+     },
+     { from  => 1409436000, # 2014-08-31 00:00
+       until => 1411768800, # 2014-09-27 00:00
+       text  => 'Fahlenbergstraße und Hubertusstraße von Wolfgang-Steinitz-Straße bis Waldstraße: Fahrbahninstandsetzung, Einbahnstraßenregelung, offen Richtung Fürstenwalder Allee, vom 01.09.2014 bis 26.09.2014',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157925.php',
+       data  => <<EOF,
+#: XXX vom 29.09.2014 bis 02.10.2014: Vollsperrung
+#: next_check: 2014-09-27
+#: priority: #A
+userdel	q4::inwork; 31967,2966 31999,2812 32031,2723 32115,2581 32162,2542
+EOF
+     },
+     { from  => 1409522400, # 2014-09-01 00:00
+       until => 1410040800, # 2014-09-07 00:00
+       text  => 'Stillerzeile von Kurzer Steig bis Jastrower Weg: Fahrbahninstandsetzung, Vollsperrung vom 02.09.2014 bis 06.09.2014',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157922.php',
+       data  => <<EOF,
+userdel	q4::inwork 24126,5521 24003,5501 23877,5503
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Köbisstr.: wegen Bauarbeiten unter Umständen gesperrt',
+       type  => 'gesperrt',
+       source_id => 'http://www.deutsches-architektur-forum.de/forum/showthread.php?t=3245&page=7',
+       data  => <<EOF,
+#: XXX vor Ort anschauen, ist die Straße tatsächlich gesperrt? Wie lange?
+userdel	2::inwork 7103,11247 6851,11346
+EOF
+     },
+     { from  => 1408173960, # 2014-08-16 09:26
+       until => 1411017000, # 2014-09-18 07:10
+       text  => 'Unter den Linden: Straße zwischen Schadowstr. und Wilhelmstr. Richtung Brandenburger Tor gesperrt, 17.08.2014 bis 18.09.2014',
+       type  => 'gesperrt',
+       source_id => 'IM_022629',
+       data  => <<EOF,
+#: by: http://www.morgenpost.de/berlin/article131305310/Panne-beim-U-Bahnbau-Unter-den-Linden-gesperrt.html
+userdel	1::inwork 9028,12307 8804,12280
 EOF
      },
     );

@@ -126,7 +126,25 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	q4; 6687,8385 6765,8480 6912,8617 6989,8687 7009,8705 7105,8788 7201,8870 7268,8960
+',
+         'periodic' => 1,
+         'until' => 1410717600,
+         'from' => 1410508800,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              13,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstaltung (Herbstfest auf der Hauptstraße), Straße gesperrt (13.9.2014 10:00 - 14.9.2014 20:00)',
+         'type' => 'handicap',
+         'id' => 137
+       },
        undef,
        undef,
        undef,
@@ -2705,7 +2723,26 @@ userdel	2::temp 10602,18382 10567,18366 10502,18338 10463,18321 10449,18315 1028
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.laubinger.de/termine/rosenthaler-herbst/',
+         'data' => 'userdel	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
+',
+         'periodic' => 1,
+         'until' => 1411336799,
+         'from' => 1410991200,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              14,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 19.09.2014 bis 21.09.2014',
+         'id' => 2285,
+         'type' => 'handicap'
+       },
        undef,
        undef,
        undef,
@@ -3386,23 +3423,13 @@ userdel	2::inwork -12363,-1742 -12457,-1857
          'from' => undef,
          'id' => 2544,
          'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: last_checked: 2014-05-11
+#: last_checked: 2014-08-09 (by http://www.deutsches-architektur-forum.de/forum/showthread.php?t=10252&page=15)
 userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
 ',
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'IM_021395',
-         'until' => 1408114800,
-         'text' => 'Golzstr.: Baustelle, Fahrbahn zwischen Lichtenrader Damm und Bahnhofstr. in Richtung S-Bhf. gesperrt, 03.03.2014 08:00 Uhr bis 15.08.2014 17:00 Uhr ',
-         'from' => 1393743600,
-         'id' => 2546,
-         'data' => '#: note: laut BVG navi 03.2014 sogar bis September 2014
-userdel	q4::inwork; 11073,-2037 10983,-2116
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3431,7 +3458,7 @@ userdel	q3::inwork 11673,16003 11567,15842
          'from' => undef,
          'id' => 2557,
          'data' => '#: XXX wann ist die Baustelle fertig?
-#: last_checked: 2014-06-03
+#: last_checked: 2014-07-22 (by photo)
 #: check_frequency: 60d
 userdel	q3::inwork; 13555,15596 13459,15653
 ',
@@ -3552,18 +3579,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/tiefbauamt/unterhaltungsma__nahmen_2014_1.xls?download.html',
-         'until' => 1408082400,
-         'text' => 'Siemensstraße zwischen Nalepastraße und Wattstraße: Einbahnstraße wegen Bauarbeiten, in Richtung Osten gesperrt, vom 02.08.2014 bis 15.08.2014',
-         'from' => 1406844000,
-         'id' => 2587,
-         'data' => '#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.140733.php
-#: source_id: IM_022482
-userdel	q4::inwork; 17614,6571 17766,6616
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3603,29 +3619,7 @@ userdel	q4::inwork; 17614,6571 17766,6616
          'data' => 'Gartenufer	2::night 6226,11405 6067,11479 5845,11615 5790,11643
 '
        },
-       {
-         'source_id' => 'IM_021923',
-         'until' => 1408312800,
-         'text' => 'Konrad-Wolf-Str.: Bauarbeiten zwischen Reichenberger Str. und Oberseestr., Richtung Nordosten gesperrt, bis 17.08.2014 18:00 Uhr',
-         'from' => 1405025033,
-         'id' => 2596,
-         'data' => 'userdel	q4::inwork; 15937,15134 16028,15218 16119,15302 16208,15379 16263,15427 16331,15486 16412,15559 16448,15593 16497,15636 16615,15737
-userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
-	3 16475,15659 16497,15636 16615,15737
-	3 16615,15737 16497,15636 16475,15659
-	3 16475,15659 16497,15636 16448,15593
-	3 16448,15593 16497,15636 16475,15659
-	3 16475,15659 16448,15593 16497,15636
-	3 16497,15636 16448,15593 16475,15659
-	3 16475,15659 16448,15593 16412,15559
-	3 16412,15559 16448,15593 16475,15659
-	3 16251,15629 16412,15559 16550,15503
-	3 16550,15503 16412,15559 16251,15629
-	3 15996,15620 16331,15486 16406,15452
-	3 16406,15452 16331,15486 15996,15620
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.148904.php',
          'until' => 1414796400,
@@ -3676,27 +3670,9 @@ userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'LS/722-C/14/091',
-         'until' => 1408312800,
-         'text' => 'Uebigau-Wahrenbrück: L60: Brückenneubau Brücke über die Schwarze Elster bei München: Vollsperrung 15.08.2014 - 17.08.2014 ',
-         'from' => 1407967200,
-         'id' => 2602,
-         'data' => 'userdel	2::inwork 6199,-89072 6681,-88922
-',
-         'type' => 'gesperrt'
-       },
        undef,
-       {
-         'source_id' => 'IM_022529',
-         'until' => 1408111200,
-         'text' => 'Nikolskoer Weg (Wannsee): Vollsperrung, 05.08.2014 14:33 Uhr bis 15.08.2014 16:00 Uhr ',
-         'from' => 1407155580,
-         'id' => 2604,
-         'data' => 'userdel	2::inwork -9085,1347 -9252,1244 -9333,1124 -9443,1035 -9500,827 -9412,546
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        {
          'source_id' => 'LS/722-C/14/213',
          'until' => 1425682800,
@@ -3730,13 +3706,80 @@ userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
        },
        {
          'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20140813.1350.398688.html',
-         'until' => 1410645599,
+         'until' => 1412956800,
          'text' => 'Werneuchener Straße: zwischen Goeckestraße und Große-Leege-Straße in Richtung Konrad-Wolf-Straße wegen Bauarbeiten gesperrt, ab 18. August 2014 bis Mitte Oktober',
          'from' => 1408226400,
          'id' => 2609,
-         'data' => 'userdel	q4::inwork; 16514,15092 16430,15168
+         'data' => '#: source_id: IM_022620
+userdel	q4::inwork; 16514,15092 16430,15168
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157630.php',
+         'data' => 'userdel	2::temp 22133,4644 22111,4562 22093,4499
+userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
+',
+         'periodic' => 1,
+         'until' => 1408917599,
+         'from' => 1408622400,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              21,
+                              'months',
+                              8
+                            ]
+                          ],
+         'text' => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 22.8.2014 bis 24.8.2014',
+         'id' => 2610,
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157925.php',
+         'until' => 1411768800,
+         'text' => 'Fahlenbergstraße und Hubertusstraße von Wolfgang-Steinitz-Straße bis Waldstraße: Fahrbahninstandsetzung, Einbahnstraßenregelung, offen Richtung Fürstenwalder Allee, vom 01.09.2014 bis 26.09.2014',
+         'from' => 1409436000,
+         'id' => 2611,
+         'data' => '#: XXX vom 29.09.2014 bis 02.10.2014: Vollsperrung
+#: next_check: 2014-09-27
+#: priority: #A
+userdel	q4::inwork; 31967,2966 31999,2812 32031,2723 32115,2581 32162,2542
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157922.php',
+         'until' => 1410040800,
+         'text' => 'Stillerzeile von Kurzer Steig bis Jastrower Weg: Fahrbahninstandsetzung, Vollsperrung vom 02.09.2014 bis 06.09.2014',
+         'from' => 1409522400,
+         'id' => 2612,
+         'data' => 'userdel	q4::inwork 24126,5521 24003,5501 23877,5503
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.deutsches-architektur-forum.de/forum/showthread.php?t=3245&page=7',
+         'until' => undef,
+         'text' => 'Köbisstr.: wegen Bauarbeiten unter Umständen gesperrt',
+         'from' => undef,
+         'id' => 2613,
+         'data' => '#: XXX vor Ort anschauen, ist die Straße tatsächlich gesperrt? Wie lange?
+userdel	2::inwork 7103,11247 6851,11346
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_022629',
+         'until' => 1411017000,
+         'text' => 'Unter den Linden: Straße zwischen Schadowstr. und Wilhelmstr. Richtung Brandenburger Tor gesperrt, 17.08.2014 bis 18.09.2014',
+         'from' => 1408173960,
+         'id' => 2614,
+         'data' => '#: by: http://www.morgenpost.de/berlin/article131305310/Panne-beim-U-Bahnbau-Unter-den-Linden-gesperrt.html
+userdel	1::inwork 9028,12307 8804,12280
+',
+         'type' => 'gesperrt'
        }
      
 );
