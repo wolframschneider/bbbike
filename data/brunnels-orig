@@ -187,7 +187,7 @@ Schloßbrücke	Br 3296,12719 3306,12750 3327,12818
 Weltlingerbrücke	Br 2905,14754 2963,14752
 Mäckeritzbrücke	Br 1232,15804 1238,15705
 Fürstenbrunner Brücke	Br 1488,13454 1545,13418 1610,13380
-Rohrdammbrücke	Br 1175,13513 1159,13541 1124,13599
+Rohrdammbrücke	Br 1170,13521 1159,13541 1124,13599
 Olympische Brücke	Br 137,12056 193,12070
 Saatwinkler Steg	Br -1073,16610 -995,16701
 Gartenfelder Brücke	Br -302,15602 -302,15546
@@ -468,7 +468,7 @@ Liesenbrücken	Br 8695,14838 8661,15022
 Ringbahnbrücke Oberspree	Br 14443,9988 14546,10124
 #: section: ^^^
 Knoten am Flughafen Tegel	Br 2953,15999 2848,15979
-Fußgängerbrücke Ostkreuz	Br 14787,10972 14764,10877
+# REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- Fußgängerbrücke Ostkreuz	Br 14787,10972 14764,10877
 Brücke über die Spektelake	Br -7228,15504 -7182,15524
 Brücke über die Wuhle	Br 22263,6185 22238,6195
 Brücke über die Wuhle	Br 22056,6613 22030,6600

@@ -2823,7 +2823,7 @@ EOF
        text  => 'B 188; westl. Rathenow, zw. Kreisel u. Abzw. Großwudicke Straßenanbindung B188n Vollsperrung 19.09.2005-07.10.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -67681,19301 -67871,19214
+userdel	2 -67603,19286 -67835,19238 -68086,19042 -68073,18984
 EOF
      },
      { from  => 1126648800, # 2005-09-14 00:00
@@ -4272,7 +4272,7 @@ EOF
        text  => 'L 010 Havelberger Str. OD Bad Wilsnack, vom OE bis An der Trift Kanal- und Straßenbau Vollsperrung 20.04.2006-31.05.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -89568,59293 -89549,58784
+userdel	q4 -89559,59310 -89598,59195
 EOF
      },
      { from  => 1145224800, # 2006-04-17 00:00
@@ -4917,7 +4917,7 @@ EOF
        text  => 'L 010 Havelberger Str. OD Bad Wilsnack, vom OE bis An der Trift Kanal- und Straßenbau Vollsperrung 01.06.2006-31.08.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -89549,58784 -89568,59293
+userdel	q4::inwork -89598,59195 -89559,59310
 EOF
      },
      { from  => 1150754400, # 2006-06-20 00:00
@@ -4925,7 +4925,7 @@ EOF
        text  => 'L 011 Große Str. OD Bad Wilsnack, Einmünd. zur Havelberger Str. Kanal- und Straßenbau Vollsperrung 21.06.2006-31.08.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -89568,59293
+userdel	q4::inwork -89559,59310
 EOF
      },
      { from  => 1151013248, # 2006-06-22 23:54
@@ -5850,7 +5850,7 @@ EOF
        text  => 'L 010 Havelberger Str. OD Bad Wilsnack Kanal- und Straßenbau halbseitig gesperrt; Einbahnstraße 04.09.2006-29.09.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork -89549,58784 -89568,59293
+userdel	1::inwork -89598,59195 -89559,59310
 EOF
      },
      { from  => 1157234400, # 2006-09-03 00:00
@@ -6324,7 +6324,7 @@ EOF
        text  => 'L 011 Wittenberger Str. OD Bad Wilsnack, zw. Karthanebrücke u. Wedenstr. Kanal- und Straßenbau Vollsperrung 11.10.2006-22.12.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -91452,59580 -89568,59293
+userdel	q4::inwork -91460,59609 -90506,59512 -89559,59310
 EOF
      },
      { from  => 1160517600, # 2006-10-11 00:00
@@ -8840,7 +8840,7 @@ EOF
 userdel	2::inwork 1971,12368 1929,12741 1892,13058
 userdel	2::inwork 1858,13231 1610,13380 1545,13418
 userdel	2::inwork 931,14268 984,14086 1053,13790 1124,13599
-userdel	2::inwork 1159,13541 1175,13513 1193,13485 1488,13454
+userdel	2::inwork 1159,13541 1170,13521 1193,13485 1488,13454
 EOF
      },
      { from  => undef, # 
@@ -12834,7 +12834,7 @@ EOF
        text  => 'B 107 Glöwen - B 5 Gumtow Durchlass vor Brücke über die Karthane bei Glöwen Durchlassneubau Vollsperrung 25.10.2008-26.10.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -80266,56143 -80074,58321
+userdel	2::inwork -80128,58278
 EOF
      },
      { from  => 1222725600, # 2008-09-30 00:00
@@ -13991,8 +13991,8 @@ EOF
        text  => 'K 6315 Nennhausen - Rhinsmühlen zw. Nennhausen und Kotzen Straßenbau Vollsperrung 04.05.2009-26.06.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -50010,23562 -50201,23411 -50255,22794 -51061,21342
-userdel	2::inwork -50149,24689 -50048,24475 -49883,24097
+userdel	2::inwork -50123,23630 -50271,23531 -50389,22734 -51061,21342
+userdel	2::inwork -50149,24689 -50048,24475 -49945,24243
 EOF
      },
      { from  => 1241647200, # 2009-05-07 00:00
@@ -15534,6 +15534,7 @@ EOF
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
+#: note: der Abbau dürfte mindestens eine weitere Stunde dauern...
 	q4::temp:clock 11543,10015 11669,9987 11880,9874
 EOF
      },
@@ -16621,7 +16622,7 @@ EOF
        text  => 'B 107 Glöwen - B 5 Gumtow Durchlass zw. Glöwen und Abzw. Klein Leppin Durchlassneubau Vollsperrung 17.10.2009-31.10.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -80266,56143 -80074,58321
+userdel	2::inwork -80128,58278
 EOF
      },
      { from  => 1255212000, # 2009-10-11 00:00
@@ -19015,7 +19016,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/W-SG33-K/11/033',
        data  => <<EOF,
-userdel	2::inwork -89568,59293 -91452,59580
+userdel	2::inwork -89559,59310 -90506,59512 -91460,59609
 EOF
      },
      { from  => 1301342447, # 2011-03-28 22:00
@@ -20836,11 +20837,11 @@ EOF
 userdel	q4::temp 5464,5731 5280,5714
 EOF
      },
-     { from  => 1347429180, # 2012-09-12 07:53
-       until => 1347832740, # 2012-09-16 23:59
-       text  => 'Spanische Allee (Zehlendorf): Baustelle, Straße unter den Bahnbrücken vollständig gesperrt (bis 16.09.12 nachts)',
+     { from  => $isodate2epoch->("2014-08-28 06:00:00"), # 1 Tag Vorlauf # 1347429180, # 2012-09-12 07:53
+       until => $isodate2epoch->("2014-08-29 20:00:00"), # 1347832740, # 2012-09-16 23:59
+       text  => 'Spanische Allee: unter den Bahnbrücken gesperrt, evtl. können auch Fußgänger/Radfahrer nicht passieren, 29.08.2014 06 Uhr bis abends',
        type  => 'gesperrt',
-       source_id => 'IM_019192',
+       source_id => 'IM_022717',
        data  => <<EOF,
 userdel	2::inwork -3736,2849 -3648,2881
 EOF
@@ -21306,14 +21307,10 @@ userdel auto	3 8522,12239 8538,12245 8522,12187
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1409078784, # -> handicap_s-orig # undef, # XXX
        text  => 'Richardstr. und Jan-Hus-Weg: Bauarbeiten, teilweise Einbahnstraßenregelungen, Fahrbahnsperrungen und andere Behinderungen',
        type  => 'handicap',
        data  => <<EOF,
-#: next_check_id: RICHARDSTR-2014
-#: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2014-07-13
-#: check_frequency: 30d
 # REMOVED --- userdel	q3::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904
 userdel	q4::inwork; 13103,7889 13085,7904 12870,8087
 userdel	q4::inwork 13150,7845 13103,7889
@@ -21810,7 +21807,7 @@ userdel	2::temp 5047,10381 5076,10658
 EOF
      },
      { from  => 1407357333, # 1403739104, # 1376193600, # 2013-08-11 06:00
-       until => $isodate2epoch->("2014-09-05 16:00:00"), # 1387555200, # 2013-12-20 17:00
+       until => 1409243320, # $isodate2epoch->("2014-09-05 16:00:00"), # 1387555200, # 2013-12-20 17:00
        text  => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt, bis 5. September 2014',
        type  => 'gesperrt',
        source_id => 'IM_022504',
@@ -22674,7 +22671,7 @@ EOF
        source_id => 'http://www.deutsches-architektur-forum.de/forum/showthread.php?t=11143&page=4',
        data  => <<EOF,
 #: XXX wann ist die Baustelle fertig?
-#: last_checked: 2014-07-22 (by photo)
+#: last_checked: 2014-08-25
 #: check_frequency: 60d
 userdel	q3::inwork; 13555,15596 13459,15653
 EOF
@@ -22716,24 +22713,22 @@ userdel	2::inwork 26395,-11699 26302,-11712
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2014-08-31 23:59:59"),
-       text  => 'Berliner Str./Mühlenstr. in Bereich U-Bhf. Vinetastr.: Bauarbeiten, Fahrbahnen gesperrt, bis Ende August 2014',
+       until => $isodate2epoch->("2014-12-31 23:59:59"),
+       text  => 'Berliner Str./Mühlenstr. in Bereich U-Bhf. Vinetastr.: Bauarbeiten, Fahrbahnen gesperrt, bis Ende Dezember 2014',
        type  => 'handicap',
        source_id => 'IM_021420',
        data  => <<EOF,
+# source_id: IM_022480	
 userdel	q3::inwork; 10908,17142 10917,17088 10927,17022
 userdel	q4::inwork; 10927,17022 10862,17087
 userdel	q4::inwork 10862,17087 10891,17088 10917,17088
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1409079031, # -> handicap_s-orig # undef, # XXX
        text  => 'Michaelkirchplatz: Bauarbeiten, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2014-08-22
-#: check_frequency: 14d
 userdel	q4::inwork 11498,11417 11542,11342 11415,11392 11498,11417
 EOF
      },
@@ -23035,17 +23030,11 @@ userdel	2::temp 18574,6401 18676,6333
 EOF
      },
      { from  => $isodate2epoch->("2014-08-05 00:00:00"),
-       until => $isodate2epoch->("2015-12-31 23:59:59"), # 1406051254, # undef,
+       until => 1409077995, # -> handicap_s-orig # $isodate2epoch->("2015-12-31 23:59:59"), # 1406051254, # undef,
        text  => "Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Einbahnstraße offen Richtung Norden, ab 5. August 2014",
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-neukoelln/presse/archiv/20140707.1250.398363.html',
        data  => <<EOF,
-#: XXX Richtung Süden kann man noch die Karl-Marx-Str. benutzen, aber die Markierungen zum Aufbrechen der Fahrbahn existieren schon
-#: XXX sollte sich die Lage stabilisieren -> in handicap_s übertragen!
-#: by: http://www.berlin.de/ba-neukoelln/presse/archiv/20140707.1250.398363.html?date=20140722 (Verzögerung)
-#: by: http://www.berlin.de/ba-neukoelln/presse/archiv/20140801.1405.398592.html
-#: source_id: IM_022515
-#: last_checked: 2014-08-07
 	q4::inwork; 12914,7785 12969,7610 12991,7549 12992,7545 13015,7471
 EOF
      },
@@ -23111,7 +23100,7 @@ userdel	q4::inwork 16068,6216 16105,6193 16220,6277 16304,6358 16304,6374 16192,
 EOF
      },
      { from  => 1407354971, # 2014-08-06 21:56
-       until => 1414796400, # 2014-11-01 00:00
+       until => 1408819563, # 1414796400, # 2014-11-01 00:00
        text  => 'Heiligengrabe: B189: Ausbau der Ortsdurchfahrt OD Heiligengrabe, Vollsperrung, 08.07.2013 bis 31.10.2014 ',
        type  => 'gesperrt',
        source_id => 'LS/723-K/13/046',
@@ -23266,7 +23255,7 @@ userdel	1::inwork 9028,12307 8804,12280
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1409241807, # undef, # XXX
        text  => 'Koppenstr.: zwischen Rüdersdorfer Str. und Karl-Marx-Allee Bauarbeiten, Fahrbahn Richtung Norden gesperrt',
        type  => 'handicap',
        data  => <<EOF,
@@ -23297,6 +23286,53 @@ EOF
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.159608.php',
        data  => <<EOF,
 userdel	q4::temp; 23252,792 23085,898 22854,1023 22821,1086 22766,1226 22655,1450
+EOF
+     },
+     { from  => 1409436000, # 2014-08-31 00:00
+       until => 1414710000, # 2014-10-31 00:00
+       text  => 'Brücke über den Oder-Havel-Kanal: Bauarbeiten, gesperrt, 01.09.2014 bis 30.10.2014 ',
+       type  => 'gesperrt',
+       source_id => '145600083',
+       data  => <<EOF,
+userdel	2::inwork 38845,51258 38476,50514
+EOF
+     },
+     { from  => 1409436000, # 2014-08-31 00:00
+       until => 1410559200, # 2014-09-13 00:00
+       text  => 'Rudolstädter Straße: zwischen Bechstedter Weg und Hohenzollerndamm Straßenbauarbeiten, Einbahnstraßenregelung, offen Richtung Hohenzollerndamm, vom Montag, dem 01.09.2014 bis ca. 12.09.2014',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140827.1305.398908.html',
+       data  => <<EOF,
+userdel	q4::inwork; 4280,8188 4220,8260 4139,8356 4029,8482 3964,8559 3928,8598 3848,8689 3775,8771 3701,8849
+EOF
+     },
+     { from  => 1409202000, # 2014-08-28 07:00
+       until => 1409349599, # 2014-08-29 23:59
+       text  => 'Birkenstr.: Straßenfest zwischen Bandelstr. und Perleberger Str., am 29.08.2014 ',
+       type  => 'handicap',
+       source_id => 'IM_022701',
+       data  => <<EOF,
+#: by: http://moabit.net/8150
+userdel	q4::temp 6686,13746 6493,13822
+EOF
+     },
+     { from  => 1409202000, # 2014-08-28 07:00
+       until => $isodate2epoch->("2014-09-01 12:00:00"), #  1409569200, # 2014-09-01 13:00
+       text  => 'Schwarzer Weg: Veranstaltung, Straße gesperrt, 29. August 2014 bis 1. September 2014 12 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_022700',
+       data  => <<EOF,
+userdel	q4::temp 8426,13909 8574,13666
+EOF
+     },
+     { from  => 1409025600, # 2014-08-26 06:00
+       until => 1409839200, # 2014-09-04 16:00
+       text  => 'Gürtelstr. und Dossestr.: Straßen zwischen Oderstr. und Scharnweberstr. vollständig gesperrt, auch für Fußgänger und Radfahrer, bis 04.09.2014 16:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'IM_022704',
+       data  => <<EOF,
+userdel	2::temp 15248,11880 15202,11789 15106,11598
+userdel	2::temp 15202,11789 15140,11811 15043,11637
 EOF
      },
     );
