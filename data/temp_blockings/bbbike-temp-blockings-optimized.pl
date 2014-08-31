@@ -1921,7 +1921,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'text' => 'Maybachufer: Di und Fr 11.00-18.30 Wochenmarkt, sowie Sa 11.00-17.00 "Neuköllner Stoff", Behinderungen möglich',
          'from' => undef,
          'id' => 1815,
-         'data' => '	q4::temp:clock 11543,10015 11669,9987 11880,9874
+         'data' => '#: note: der Abbau dürfte mindestens eine weitere Stunde dauern...
+	q4::temp:clock 11543,10015 11669,9987 11880,9874
 ',
          'type' => 'gesperrt'
        },
@@ -2605,7 +2606,7 @@ userdel	2::temp 18870,5833 18932,5926
          'text' => 'Albrecht-Thaer-Weg: Privatstraße, eventuell zeitweise gesperrt (nachts?)',
          'from' => undef,
          'id' => 2196,
-         'data' => 'Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3347,6460 3449,6863
+         'data' => 'Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6863
 ',
          'type' => 'gesperrt'
        },
@@ -3116,22 +3117,7 @@ userdel	q2::inwork 5258,11285 5236,10994
        },
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Richardstr. und Jan-Hus-Weg: Bauarbeiten, teilweise Einbahnstraßenregelungen, Fahrbahnsperrungen und andere Behinderungen',
-         'from' => undef,
-         'id' => 2425,
-         'data' => '#: next_check_id: RICHARDSTR-2014
-#: XXX bis wann ist die Baustelle fertig?
-#: last_checked: 2014-07-13
-#: check_frequency: 30d
-# REMOVED --- userdel	q3::inwork; 13245,7742 13226,7775 13150,7845 13103,7889 13085,7904
-userdel	q4::inwork; 13103,7889 13085,7904 12870,8087
-userdel	q4::inwork 13150,7845 13103,7889
-userdel	q4::inwork 13085,7904 13117,7939 13151,7914
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3246,36 +3232,8 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140820.1250.398770.html',
-         'data' => 'userdel	2::temp 5047,10381 5076,10658
-',
-         'periodic' => 1,
-         'until' => 1408910400,
-         'from' => 1408694400,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              17,
-                              'months',
-                              8
-                            ]
-                          ],
-         'text' => 'Uhlandstr.: Veranstaltung (Uhlandstraßenfest) zwischen Kurfürstendamm und Lietzenburger Str., Straße gesperrt, 23. und 24. August 2014, jeweils ab 10 Uhr',
-         'id' => 2468,
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'IM_022504',
-         'until' => 1409925600,
-         'text' => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt, bis 5. September 2014',
-         'from' => 1407357333,
-         'id' => 2469,
-         'data' => 'userdel	2::inwork 17736,5441 17886,5587
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -3337,22 +3295,7 @@ userdel	2::temp 8503,16716 8583,16914
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Weg im Cheruskerpark: die Bauarbeiten sind möglicherweise beendet',
-         'from' => undef,
-         'id' => 2489,
-         'data' => '#: next_check_id: CHERUSKERPARK-2014
-#: XXX bis wann gehen die Bauarbeiten?
-#: by: http://de.wikipedia.org/wiki/Rote_Insel#Um-_und_Ausbau_2013_.28Sch.C3.B6neberger_Schleife.29 (Umbauarbeiten)
-#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20140723.1150.398518.html (fertig?)
-#: last_checked: 2014-07-17
-#: next_check: 2014-07-23
-#: priority: #A
-userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3412,16 +3355,6 @@ userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_020924',
-         'until' => 1409320800,
-         'text' => 'Neheimer Str.: Baustelle, Fahrbahn Richtung Borsigdamm gesperrt, bis Ende August 2014',
-         'from' => 1386667020,
-         'id' => 2531,
-         'data' => 'userdel	q4::inwork; 1229,18750 1328,18878 1447,18933 1528,18971
-',
-         'type' => 'handicap'
-       },
        undef,
        undef,
        undef,
@@ -3429,16 +3362,8 @@ userdel	2::inwork 7375,8294 7332,8292 7289,8259 7282,8264
        undef,
        undef,
        undef,
-       {
-         'source_id' => '146000827',
-         'until' => 1408917600,
-         'text' => 'Niederfinow: L29: Rückbau der alten Fahrbahn und Asphalteinbau auf der neuen Trasse der L29, OD Niederfinow, Hebewerkstraße, Vollsperrung, 18.08.2014 bis 24.08.2014 ',
-         'from' => 1408226400,
-         'id' => 2539,
-         'data' => 'userdel	2::inwork 46132,49993 46390,50091
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        {
          'until' => 1530395999,
          'text' => 'Grenzallee: vollständige Sperrung zwischen Bergiusstr. (Autobahnausfahrt) und Neuköllnische Allee, ab 24.2.2014 bis Mitte 2018',
@@ -3502,7 +3427,7 @@ userdel	q3::inwork 11673,16003 11567,15842
          'from' => undef,
          'id' => 2557,
          'data' => '#: XXX wann ist die Baustelle fertig?
-#: last_checked: 2014-07-22 (by photo)
+#: last_checked: 2014-08-25
 #: check_frequency: 60d
 userdel	q3::inwork; 13555,15596 13459,15653
 ',
@@ -3523,28 +3448,18 @@ userdel	q3::inwork; 13555,15596 13459,15653
        undef,
        {
          'source_id' => 'IM_021420',
-         'until' => 1409522399,
-         'text' => 'Berliner Str./Mühlenstr. in Bereich U-Bhf. Vinetastr.: Bauarbeiten, Fahrbahnen gesperrt, bis Ende August 2014',
+         'until' => 1420066799,
+         'text' => 'Berliner Str./Mühlenstr. in Bereich U-Bhf. Vinetastr.: Bauarbeiten, Fahrbahnen gesperrt, bis Ende Dezember 2014',
          'from' => undef,
          'id' => 2562,
-         'data' => 'userdel	q3::inwork; 10908,17142 10917,17088 10927,17022
+         'data' => '# source_id: IM_022480	
+userdel	q3::inwork; 10908,17142 10917,17088 10927,17022
 userdel	q4::inwork; 10927,17022 10862,17087
 userdel	q4::inwork 10862,17087 10891,17088 10917,17088
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => undef,
-         'text' => 'Michaelkirchplatz: Bauarbeiten, Fahrbahn gesperrt',
-         'from' => undef,
-         'id' => 2563,
-         'data' => '#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2014-08-22
-#: check_frequency: 14d
-userdel	q4::inwork 11498,11417 11542,11342 11415,11392 11498,11417
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3637,22 +3552,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-neukoelln/presse/archiv/20140707.1250.398363.html',
-         'until' => 1451602799,
-         'text' => 'Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Einbahnstraße offen Richtung Norden, ab 5. August 2014',
-         'from' => 1407189600,
-         'id' => 2593,
-         'data' => '#: XXX Richtung Süden kann man noch die Karl-Marx-Str. benutzen, aber die Markierungen zum Aufbrechen der Fahrbahn existieren schon
-#: XXX sollte sich die Lage stabilisieren -> in handicap_s übertragen!
-#: by: http://www.berlin.de/ba-neukoelln/presse/archiv/20140707.1250.398363.html?date=20140722 (Verzögerung)
-#: by: http://www.berlin.de/ba-neukoelln/presse/archiv/20140801.1405.398592.html
-#: source_id: IM_022515
-#: last_checked: 2014-08-07
-	q4::inwork; 12914,7785 12969,7610 12991,7549 12992,7545 13015,7471
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => undef,
@@ -3674,26 +3574,8 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.149073.php',
-         'until' => 1408831199,
-         'text' => 'Radenzer Straße und Heidemühler Weg: Fahrbahninstandsetzung, Fahrbahn in Abschnitten gesperrt, vom 06.08.2014 bis zum 23.08.2014',
-         'from' => 1407189600,
-         'id' => 2598,
-         'data' => 'userdel	q4::inwork 16068,6216 16105,6193 16220,6277 16304,6358 16304,6374 16192,6503
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'LS/723-K/13/046',
-         'until' => 1414796400,
-         'text' => 'Heiligengrabe: B189: Ausbau der Ortsdurchfahrt OD Heiligengrabe, Vollsperrung, 08.07.2013 bis 31.10.2014 ',
-         'from' => 1407354971,
-         'id' => 2599,
-         'data' => 'userdel	2::inwork -62215,80737 -61590,80895
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        {
          'source_id' => '146600440',
          'until' => 1420066800,
@@ -3759,27 +3641,7 @@ userdel	q4::inwork; 16514,15092 16430,15168
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157630.php',
-         'data' => 'userdel	2::temp 22133,4644 22111,4562 22093,4499
-userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
-',
-         'periodic' => 1,
-         'until' => 1408917599,
-         'from' => 1408622400,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              21,
-                              'months',
-                              8
-                            ]
-                          ],
-         'text' => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 22.8.2014 bis 24.8.2014',
-         'id' => 2610,
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157925.php',
          'until' => 1411768800,
@@ -3815,43 +3677,51 @@ userdel	2::inwork 7103,11247 6851,11346
          'type' => 'gesperrt'
        },
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'until' => undef,
-         'text' => 'Koppenstr.: zwischen Rüdersdorfer Str. und Karl-Marx-Allee Bauarbeiten, Fahrbahn Richtung Norden gesperrt',
-         'from' => undef,
-         'id' => 2615,
-         'data' => 'userdel	q3::inwork; 12575,12223 12596,12472
+         'source_id' => '145600083',
+         'until' => 1414710000,
+         'text' => 'Brücke über den Oder-Havel-Kanal: Bauarbeiten, gesperrt, 01.09.2014 bis 30.10.2014 ',
+         'from' => 1409436000,
+         'id' => 2619,
+         'data' => 'userdel	2::inwork 38845,51258 38476,50514
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140827.1305.398908.html',
+         'until' => 1410559200,
+         'text' => 'Rudolstädter Straße: zwischen Bechstedter Weg und Hohenzollerndamm Straßenbauarbeiten, Einbahnstraßenregelung, offen Richtung Hohenzollerndamm, vom Montag, dem 01.09.2014 bis ca. 12.09.2014',
+         'from' => 1409436000,
+         'id' => 2620,
+         'data' => 'userdel	q4::inwork; 4280,8188 4220,8260 4139,8356 4029,8482 3964,8559 3928,8598 3848,8689 3775,8771 3701,8849
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'source_id' => 'IM_022700',
+         'until' => 1409565600,
+         'text' => 'Schwarzer Weg: Veranstaltung, Straße gesperrt, 29. August 2014 bis 1. September 2014 12 Uhr ',
+         'from' => 1409202000,
+         'id' => 2622,
+         'data' => 'userdel	q4::temp 8426,13909 8574,13666
 ',
          'type' => 'handicap'
        },
        {
-         'until' => 1408744800,
-         'text' => 'Horstwalder Straße: Fahrbahnsanierung zwischen Kirchhainer Damm und Horstwalder Str. 24, Sperrung der Fahrbahn, 30.07.2014 bis 22.08.2014',
-         'from' => 1408476026,
-         'id' => 2616,
-         'data' => 'userdel	q4::inwork 11063,-2615 11308,-2535
+         'source_id' => 'IM_022704',
+         'until' => 1409839200,
+         'text' => 'Gürtelstr. und Dossestr.: Straßen zwischen Oderstr. und Scharnweberstr. vollständig gesperrt, auch für Fußgänger und Radfahrer, bis 04.09.2014 16:00 Uhr',
+         'from' => 1409025600,
+         'id' => 2623,
+         'data' => 'userdel	2::temp 15248,11880 15202,11789 15106,11598
+userdel	2::temp 15202,11789 15140,11811 15043,11637
 ',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'http://www.berlin.de/imperia/md/content/batempelhofschoeneberg/abtfinperswibuerg/ordnungsamt/tiefbau/strassenbauliste_stand_2014_07_17.pdf?start&ts=1405676729&file=strassenbauliste_stand_2014_07_17.pdf',
-         'until' => 1408744800,
-         'text' => 'Paplitzer Straße: Fahrbahnsanierung zwischen Kirchhainer Damm und Kirchbachstraße, Sperrung der Fahrbahn, 30.07.2014 bis 22.08.2014 ',
-         'from' => 1408476129,
-         'id' => 2617,
-         'data' => 'userdel	q4::inwork 11027,-2448 11073,-2037
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.159608.php',
-         'until' => 1408899600,
-         'text' => 'Regattastr.: Einbahnstraßenregelung wegen des 21. Internationalen Motorbootrennens in Grünau, offen Richtung Karolinenhof, 23. und 24. August 2014',
-         'from' => 1408694400,
-         'id' => 2618,
-         'data' => 'userdel	q4::temp; 23252,792 23085,898 22854,1023 22821,1086 22766,1226 22655,1450
-',
-         'type' => 'handicap'
+         'type' => 'gesperrt'
        }
      
 );

@@ -29,8 +29,8 @@ Dennewitzplatz	1 7813,10112 7906,10098
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4679
 #: by: http://www.berlin.de/imperia/md/content/batempelhofschoeneberg/abtfinperswibuerg/ordnungsamt/tiefbau/strassenbauliste_stand_2014_07_17.pdf?start&ts=1405676729&file=strassenbauliste_stand_2014_07_17.pdf (Ende der Bauarbeiten)
 #: XXX Einrichtung eines offiziellen Zweirichtungradwegs, dann wird "q3" wegfallen -> gesperrt_car
-#: last_checked: 2014-07-17 (Bauarbeiten)
-#: next_check: 2014-08-28
+#: last_checked: 2014-08-30 (asphaltierte Radwege existieren bis auf die Verknüpfung zur Dennewitzstr.)
+#: check_frequency: 7d
 Dennewitzplatz	1s:q3 7906,10098 7866,9918
 Winterfeldtplatz	1 7049,9833 7038,10087
 Winterfeldtplatz	1 7080,10098 7126,9825
@@ -1069,7 +1069,7 @@ Möllendorffstr. [Wohngebiet]	1 15470,13509 15477,13268
 Oberspreestr. [Wohngebiet]	1 19614,5132 19629,5019 19679,5025 19667,5126 19614,5132
 Kornmandelweg	1 21311,13522 21345,13550
 Immortellenweg: Schulhof	2 24282,10015 24314,10096
-Walterstr.	1s:q3 13126,6687 13099,6712
+# REMOVED (Situation nach den Bauarbeiten evaluieren) --- Walterstr.	1s:q3 13126,6687 13099,6712
 Karl-Bonhoeffer-Nervenklinik	1 5187,19368 5219,19285
 Karl-Bonhoeffer-Nervenklinik	1 5219,19285 5172,19298 5150,19350
 Koppenplatz	1 9947,13674 9980,13559 9946,13550
@@ -1540,6 +1540,7 @@ Frankfurter Allee: unbequem passierbarer Mittelstreifen	3nocross 14208,12235 142
 Frankfurter Allee: unbequem passierbarer Mittelstreifen	3nocross 14381,12205 14427,12197 14488,12188
 Frankfurter Allee: unbequem passierbarer Mittelstreifen	3nocross 13785,12292 13885,12279 14020,12261
 Frankfurter Allee: Mittelstreifen mit Geländer	3nocross 16066,11960 16127,11950 16207,11937
+Frankfurter Allee: Mittelstreifen mit Geländer	3nocross 15670,12022 15717,12015 15863,11992
 Leipziger Str.: unbequem passierbarer Mittelstreifen	3nocross 9701,11656 9898,11679 9981,11689
 #Landsberger Allee: Mittelstreifen	3nocross 13089,13323 13161,13360 13241,13405 13330,13468
 Greifswalder Str.: Mittelstreifen mit Straßenbahn	3nocross 12177,14335 12188,14350 12228,14404 12266,14460 12317,14535
@@ -1671,7 +1672,7 @@ Warschauer Brücke: unbequem zu überqueren, zusätzlich Geländer am Gehweg	3nocros
 Waltersdorfer Chaussee: Mittelstreifen	3nocross 18009,-193 17946,-100 17879,-3
 Neuköllner Str.: Mittelstreifen	3nocross 16698,1392 16643,1460 16459,1680 16450,1691
 Neuköllner Str.: Mittelstreifen	3nocross 15980,2318 15804,2512 15736,2593
-Schorlemerallee: Mittelstreifen	3nocross 3306,6453 3347,6460 3459,6484
+Schorlemerallee: Mittelstreifen	3nocross 3306,6453 3350,6467 3452,6491
 Berliner Str.: Straßenbahntrasse	3nocross 12396,17514 12436,17682 12467,17814
 Daumstr.: Mittelstreifen	3nocross -1821,16327 -1816,16111 -1815,15976
 Zossener Str.: Straßenbahntrasse	3nocross 22811,15753 22883,15740 23080,15700
@@ -1887,7 +1888,7 @@ tragen (ca. 35 Stufen)	0:30 3361,15784
 tragen (4 x 8 Stufen)	0:30 1761,3208
 tragen (36 Stufen)	0:35 17759,11768
 tragen (15 Stufen)	0:30 4710,23263
-tragen (ca. 30 Stufen)	0:30 1179,13532
+tragen (ca. 30 Stufen)	0:30 1192,13518
 tragen (7 Stufen)	0:20 9762,16119
 tragen (3+20 Stufen)	0:40 -6458,14292
 #: note: Luftbild (Stufenanzahl)
@@ -1933,8 +1934,8 @@ tragen (41 Stufen) oder Aufzug (Storkower Str.)	0:40 14481,13143
 tragen (zum Uferweg an den Treptowers, 24 Stufen)	0:35 14383,10036
 #: note: die beiden Stufengruppen sind so weit entfernt, dass ein Aufsitzen nich lohnt
 tragen (1+3 Stufen)	0:30 13232,12628
-tragen (34 Stufen)	0:40 14787,10972
-tragen (33 Stufen)	0:40 14764,10877
+# REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- tragen (34 Stufen)	0:40 14787,10972
+# REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- tragen (33 Stufen)	0:40 14764,10877
 tragen oder Aufzug benutzen	0:40 14839,10853
 tragen oder Aufzug benutzen	0:40 14845,10954
 tragen (Durchgang unter der U-Bahn zur Warschauer Str., 15 Stufen)	0:20 13437,10992
@@ -2316,7 +2317,7 @@ sehr enger Pfad	BNP:0::trailer=no 13733,18161
 #: XXX_prog: "künstlicher" Eintrag, um Anhänger auszusperren, siehe auch handicap_s
 sehr enge Stelle	BNP:0::trailer=no 31909,2802
 #: XXX_prog: "künstlicher" Eintrag, um Anhänger auszusperren, siehe auch handicap_s
-sehr enge Stelle	BNP:0::trailer=no 1184,13544
+sehr enge Stelle	BNP:0::trailer=no 1186,13529
 #: XXX_prog: "künstlicher" Eintrag, um Anhänger auszusperren, siehe auch handicap_s
 sehr enger Weg	BNP:0::trailer=no 12515,22898
 #: XXX_prog: "künstlicher" Eintrag, um Anhänger auszusperren, siehe auch handicap_s
@@ -2362,6 +2363,7 @@ Schwingtor	BNP:5::trailer=10 7283,8265
 Schwingtor	BNP:5::trailer=10 7366,8390
 Schwingtor	BNP:5::trailer=10 7400,8273
 Schwingtor	BNP:5::trailer=10 7289,8259
+Schwingtor	BNP:5::trailer=10 7372,8222
 #: note: ^^^
 # 
 #: note: Fahrräder mit Anhänger könnten auf den parallelen Gehweg geführt werden
@@ -2548,7 +2550,7 @@ versetzte Schranke, manchmal offen	BNP:1::trailer=3 24625,20855
 Berolinastr., Weg zum Spielplatz: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt	2::inwork 11719,13088 11815,13045
 # 
 #: XXX laut Schild bis Dezember 2014 gesperrt
-#: last_checked: 2014-08-20
+#: last_checked: 2014-08-29
 #: next_check: 2014-12-15
 Diestelmeyerstr.: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt, auch für Fußgänger	2::inwork 12690,12769 12833,12920
 # 
@@ -2565,14 +2567,13 @@ Rad- und Gehwegverbindung Suermondtstr. - Degnerstr.	2::inwork 16476,16216 16458
 Weg zwischen S-Wartenberg und S-Hohenschönhausen: Brücke morsch und gesperrt	2::inwork 17159,18375 17235,18352
 # 
 #: last_checked: 2014-06-29 vvv
-#: osm_watch: way id="24845189" version="8"
+#: osm_watch: way id="24845189" version="9"
+#: XXX laut osm nicht mehr gesperrt?
 Viechtacher Str.: Bauarbeiten, Straße noch gesperrt	2::inwork 19657,9666 19732,9678 19801,9680 19857,9682 19893,9683
 Eisensteiner Str.: Bauarbeiten, Straße noch gesperrt	2::inwork 19732,9678 19727,9484
 #: last_checked ^^^
 # 
-#: by: http://www.tagesspiegel.de/berlin/grossbaustelle-in-berlin-bauarbeiten-am-ostkreuz-verzoegern-sich-bis-2017/8210208.html (Termin Wiederaufbau)
-#: next_check: 2018-01-01
-Fußgängerbrücke S-Ostkreuz: Abriss und Neubau	2::inwork 14794,10844 14764,10877 14787,10972 14798,10985
+# REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- #: by: http://www.tagesspiegel.de/berlin/grossbaustelle-in-berlin-bauarbeiten-am-ostkreuz-verzoegern-sich-bis-2017/8210208.html (Termin Wiederaufbau) --- #: next_check: 2018-01-01 --- Fußgängerbrücke S-Ostkreuz: Abriss und Neubau	2::inwork 14794,10844 14764,10877 14787,10972 14798,10985
 # 
 #: last_checked: 2014-05-17
 #: check_frequency: 360d
@@ -2605,7 +2606,7 @@ Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht möglich	3 8935,13844 9085,1
 #: next_check_id ^^^
 # 
 #: next_check_id: SCHINKELPLATZ_2014 vvv
-#: last_checked: 2014-06-26 vvv
+#: last_checked: 2014-08-26 vvv
 #: check_frequency: 90d vvv
 Schinkelplatz: Bauarbeiten, Straßen vollständig gesperrt	2::inwork 10008,12274 9994,12368 9996,12401
 Niederlagstr.: Bauarbeiten, Straßen vollständig gesperrt	2::inwork 9994,12368 9943,12364 9961,12273
@@ -2666,7 +2667,7 @@ Große Hamburger Str.: Einbahnstraße wegen Bauarbeiten	1s:q3 10077,13100 10018,13
 #: check_frequency: 60d
 Rumoldstr.: Bauarbeiten, gesperrt	2::inwork 17454,12348 17366,12357
 # 
-#: last_checked: 2014-06-13
+#: last_checked: 2014-08-25
 #: check_frequency: 60d
 (Antonplatz - Bizetstr.): Bauarbeiten, gesperrt	2::inwork 13487,15888 13525,15784
 # 
@@ -2695,7 +2696,7 @@ Promenade am Teltowkanal: während der Bauarbeiten an der Emil-Schulz-Brücke gesp
 #: XXX siehe auch Busspur in radwege-orig vvv
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0166-unter-den-linden-oberwallstrae.html vvv
 #: source_id: INKO_113041 vvv
-#: last_checked: 2014-06-27 vvv
+#: last_checked: 2014-08-26 vvv
 #: check_frequency: 90d vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross 9984,12426 9934,12420 9858,12410
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
@@ -2964,7 +2965,7 @@ Adolf-Scheidt-Platz	1 8731,8050 8765,8050 8783,8020 8769,7994 8731,7990
 Rumeyplan	1 8686,7726 8796,7751 8895,7797 8940,7835
 Rumeyplan	1 8959,7824 8907,7773 8812,7730 8690,7704
 Greifswalder Str.	3nocross 12422,14692 12473,14763 12528,14845
-Danziger Str.	3nocross 12621,14313 12425,14459 12317,14535
+Danziger Str.	3nocross 12621,14313 12407,14470 12317,14535
 #: note: Luftbild:
 Greifswalder Str.: Straßenbahntrasse	3nocross 13072,15590 13229,15692 13316,15758
 Dietrich-Bonhoeffer-Str.	1 12556,14230 12266,14460

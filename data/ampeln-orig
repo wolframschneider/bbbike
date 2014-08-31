@@ -165,6 +165,7 @@
 	X 13745,12118
 	X 13785,12292
 #: note: keine Anforderungsampel
+#: XXX_prog: gilt nicht auf dem Radweg
 	F 13448,12340
 Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängerampel	X 12869,12425
 	X 12497,11459
@@ -372,6 +373,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 9310,4407
 	X 5644,6936
 	X 5817,7223
+#: note: Anforderung für Radfahrer aus Richtung Schmiljanstr./Schmargendorfer Str. über die Straße Richtung Bundesallee/Wiesbadener Str.
 	X 5397,7205
 #: XXX_prog: zusammenhängende Ampelanlage vvv
 	X 5357,8013
@@ -1797,6 +1799,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: keine Anforderungsampel
 #: XXX_prog: man bekommt wohl niemals eine durchgängige Grünphase als Fußgänger
 #: XXX_prog: auch beim Überqueren der Karl-Marx-Allee im Zuge der Koppenstraße relevant
+#: XXX_prog: nicht für Radfahrer auf den Radwegen der Karl-Marx-Allee
 	F 12612,12470
 	X 14461,11738
 	X 21135,10995
@@ -1865,7 +1868,9 @@ S-Bahn und Regionalbahn	B 21562,12088
 	X 9418,11804
 	F 14619,16672
 	F 18179,16534
-	X 5314,7217
+#: corrected_by: srt (X -> F)
+	F 5294,7216
+#: XXX_prog gilt nicht für Radfahrer in Richtung Westen
 	X 5352,7184
 #: by: ^^^
 #: by: davidbest:
@@ -2373,7 +2378,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 22031,9142
 	F 15356,3759
 #: next_check_id: KARLSHORSTER-2014 vvv
-#: last_checked: 2014-08-20 vvv
+#: last_checked: 2014-08-24 vvv
 #: note: provisorische Ampel
 #: valid: 20140630-20140922 vvv
 	X::inwork 14906,10820
@@ -2495,7 +2500,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX temporäre Ampel (wegen Arbeiten an der Staatsoper und an der U-Bahn)
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
-#: last_checked: 2014-06-27
+#: last_checked: 2014-08-26
 #: check_frequency: 90d
 	F::inwork 9984,12426
 #: next_check_id: UDLU5-2014 vvv
@@ -2646,11 +2651,14 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: last_checked: 2014-06-06
 	X0::inwork 13891,7107
 	X::inwork 13278,6967
-#: last_checked: 2014-07-03
-	X::inwork 14174,7505
 #: next_check ^^^
 #: valid ^^^
 #: next_check_id ^^^
+# 
+#: next_check_id: SONNENALLEE-2014
+#: last_checked: 2014-08-24
+#: next_check: 2014-12-31
+	X::inwork 14174,7505
 # 
 #: note: Anforderungsampel
 	F 14346,16241
