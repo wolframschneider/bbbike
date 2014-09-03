@@ -2450,6 +2450,7 @@ EOF
 	    print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">classic view</a>\n};
 	    print qq{ <a class="mobile_link" href="/help.html#android">Android App</a>\n};
 	    print qq{ <a class="mobile_link" href="/help.html#iphone">iPhone App</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#windowsphone">Windows Phone</a>\n};
 
         } else {
 	    my $url = $q->url(-full=>0, -absolute => 1);
@@ -5865,6 +5866,7 @@ EOF
             print qq{<a class="mobile_link" href="$url" title="}, M("BBBike in classic view"), qq{">classic view</a>\n};
 	    print qq{ <a class="mobile_link" href="/help.html#android">Android App</a>\n};
             print qq{ <a class="mobile_link" href="/help.html#iphone">iPhone App</a>\n};
+	    print qq{ <a class="mobile_link" href="/help.html#windowsphone">Windows Phone</a>\n};
 	    print qq{</span>\n\n};
 
 	    print <<EOF;
@@ -8739,6 +8741,7 @@ $permalink_text
 Map data (&copy;) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap.org</a> contributors<br>
 <a href="/help.html#iphone">iphone</a> -
 <a href="/help.html#android">android</a> -
+<a href="/help.html#windowsphone">windows phone</a> -
 <a href="/tools.html">desktop</a> -
 <a href="http://mc.bbbike.org/mc/">map compare</a> -
 <a href="http://extract.bbbike.org/">osm extract service</a><br/>
