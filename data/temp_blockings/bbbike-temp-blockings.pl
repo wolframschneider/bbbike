@@ -22618,7 +22618,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (eigentlich relativ gut passierbar, zumindest in Richtung Osten) --- #: XXX wie sieht die Kreuzungssituation danach aus? --- #: last_checked: 2014-04-08
-userdel	q4::inwork 5443,14028 5299,14049
+userdel	q4::inwork 5443,14028 5336,14044 5306,14061
 EOF
      },
      { from  => undef, # 
@@ -23321,8 +23321,8 @@ userdel	q4::temp 8426,13909 8574,13666
 EOF
      },
      { from  => 1409025600, # 2014-08-26 06:00
-       until => 1409839200, # 2014-09-04 16:00
-       text  => 'Gürtelstr. und Dossestr.: Straßen zwischen Oderstr. und Scharnweberstr. vollständig gesperrt, auch für Fußgänger und Radfahrer, bis 04.09.2014 16:00 Uhr',
+       until => $isodate2epoch->("2014-09-05 16:00:00"), # 1409839200, # 2014-09-04 16:00
+       text  => 'Gürtelstr. und Dossestr.: Straßen zwischen Oderstr. und Scharnweberstr. vollständig gesperrt, auch für Fußgänger und Radfahrer',
        type  => 'gesperrt',
        source_id => 'IM_022704',
        data  => <<EOF,
