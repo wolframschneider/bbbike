@@ -2378,12 +2378,14 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 22031,9142
 	F 15356,3759
 #: next_check_id: KARLSHORSTER-2014 vvv
-#: last_checked: 2014-08-30 vvv
+#: last_checked: 2014-09-06 vvv
+#: next_check: 2014-09-22 vvv
 #: note: provisorische Ampel
 #: valid: 20140630-20140922 vvv
 	X::inwork 14906,10820
 	X::inwork 14805,10518
 #: valid ^^^
+#: next_check ^^^
 #: last_checked ^^^
 #: next_check_id ^^^
 	F 8667,5372
@@ -2921,7 +2923,7 @@ Bahn kommt ca. halbstündlich, mit Aufforderungsknopf zum Öffnen der Schranke	B 4
 Bahn kommt ca. halbstündlich, mit Aufforderungsknopf zum Öffnen der Schranke	B 41323,96820
 # REMOVED (mittlerweile existiert keine Schranke mehr) --- Bahn kommt ca. halbstündlich, mit Aufforderungsknopf zum Öffnen der Schranke	B 41197,98927
 Bahn kommt ca. halbstündlich	B 41840,89712
-Bahn kommt ca. halbstündlich	B 41049,87129
+Bahn kommt ca. halbstündlich	B 41055,87149
 Bahn kommt ca. halbstündlich	B 70326,-5505
 Bahn kommt ca. 4-6x täglich	B 35295,47041
 Bahn kommt ca. halbstündlich	B 47729,123756
@@ -2958,7 +2960,7 @@ UBB, halbstündlich	B 51270,179246
 	B 18326,173768
 	B 16716,174712
 #: XXX_prog: Strecke ist außer Betrieb! B0 oder was?
-	B0 32190,64659
+	B0 32187,64661
 #: XXX_prog: Strecke ist außer Betrieb! B0 oder was?
 	B0 19029,81437
 #: note: Schranke noch in Betrieb; Züge werden hinter der Straße gewendet

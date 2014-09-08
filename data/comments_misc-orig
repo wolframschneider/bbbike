@@ -594,7 +594,7 @@ ausgeschildert zum Golfplatz	CP2; 48923,171834 48859,171937
 ausgeschildert zum Golfplatz	CP2; 50181,171331 50016,171383
 #: add_fragezeichen: Heißt es tatsächlich "Luisenthal"?
 Ausschilderung nach Luisenthal (?) folgen	CS; 41134,76881 41143,76365
-ausgeschildert Richtung Campingplatz Warnitz	CP; 40653,83900 40702,84070 40703,84157 40756,84209 40743,84279 40768,84393
+ausgeschildert Richtung Campingplatz Warnitz	CP; 40652,83924 40702,84070 40703,84157 40753,84220 40736,84265 40768,84393
 ausgeschildert Richtung Werneuchen, Wegendorf	CP2; 32325,18434 32343,18775
 ausgeschildert Richtung Drense	CP2; 47333,101140 47381,101165
 ausgeschildert Richtung Grünow	CP2; 45050,101273 45080,101325
@@ -971,7 +971,7 @@ unter der S-Bahnbrücke	CP2; 24650,6034 24647,5981
 ausgeschildert als Weydemeyerstr. 3-18	CP2; 11805,12760 11818,12785
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file?y=2013
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/archiv/20140827.1410.398914.html (feierliche Benennung)
-#: last_checked: 2014-07-15
+#: last_checked: 2014-09-05
 #: next_check: 2014-09-11
 Fromet-und-Moses-Mendelssohn-Platz: nicht ausgeschildert	CS 9797,10771 9733,10827 9682,10836 9666,10848
 Hauptstr., linker Gehweg: an der Ampel Hauptstr./Hildegard-Marcusson-Str. auf die linke Seite wechseln	CP2; 16004,10204 16018,10212

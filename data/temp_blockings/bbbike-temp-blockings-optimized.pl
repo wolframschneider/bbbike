@@ -738,7 +738,26 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html
+userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
+',
+         'periodic' => 1,
+         'until' => 1412546399,
+         'from' => 1412373600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              5,
+                              'months',
+                              10
+                            ]
+                          ],
+         'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 4. und 5.10.2014',
+         'type' => 'gesperrt',
+         'id' => 731
+       },
        undef,
        undef,
        undef,
@@ -2357,26 +2376,7 @@ userdel	3 8374,11479 8389,11378 8427,11365
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.marktcom.de/veranstaltung/16203-Traditionelles-Muellerstra%C3%9Fenfest (Termin 2014)
-userdel	2::temp 6781,16026 6914,15908 6936,15888 7024,15810 7129,15717 7198,15656 7277,15586
-',
-         'periodic' => 1,
-         'until' => 1410112800,
-         'from' => 1409817600,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              1,
-                              'months',
-                              8
-                            ]
-                          ],
-         'text' => 'Müllerstr. (Wedding): Veranstaltung (traditionelles Müllerstraßenfest), Straße zwischen Seestr. und Leopoldplatz gesperrt, 5. bis 7. September 2014',
-         'type' => 'gesperrt',
-         'id' => 2039
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Anwohner haben den Uferweg am Groß Glienicker See versperrt',
@@ -3252,27 +3252,7 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_020277',
-         'data' => 'userdel	2::temp 8606,16973 8677,17154
-userdel	2::temp 8503,16716 8583,16914
-',
-         'periodic' => 1,
-         'until' => 1410019200,
-         'from' => 1409918400,
-         'text' => 'Koloniestr. zwischen Soldiner Str. und Osloer Str.: Soldiner Kiez Straßenfest, Straße gesperrt, am 06.09.2014 von 14 bis 18 Uhr',
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              5,
-                              'months',
-                              9
-                            ]
-                          ],
-         'id' => 2485,
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3416,8 +3396,8 @@ userdel	q3::inwork; 13555,15596 13459,15653
        },
        {
          'source_id' => 'IM_022477',
-         'until' => 1411135200,
-         'text' => 'Mühlenstr. (Pankow) Richtung Breite Straße zwischen Maximilianstr. und Florastr. Baustelle, Fahrtrichtung gesperrt, bis Mitte September 2014',
+         'until' => 1412258400,
+         'text' => 'Mühlenstr. (Pankow) Richtung Breite Straße zwischen Maximilianstr. und Florastr. Baustelle, Fahrtrichtung gesperrt, bis Anfang Oktober 2014',
          'from' => 1396047600,
          'id' => 2558,
          'data' => 'userdel	q4::inwork; 10774,17277 10706,17391 10690,17420 10670,17458 10647,17501 10572,17573 10510,17649 10459,17754
@@ -3582,26 +3562,8 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'LS/721-E/14/067',
-         'until' => 1409954399,
-         'text' => 'Altlandsberg: L235: Deckenerneuerung Werneuchen bis Wegendorf, Vollsperrung, 11.08.2014 08:00 Uhr bis 05.09.2014 ',
-         'from' => 1407650400,
-         'id' => 2607,
-         'data' => 'userdel	2::inwork 33953,23796 34266,22939
-',
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2014/pressemitteilung.155597.php',
-         'until' => 1409954399,
-         'text' => 'Geierpfad: Instandsetzung der Fahrbahn unter Vollsperrung, vom 18. August 2014 bis 5. September 2014 ',
-         'from' => 1408226400,
-         'id' => 2608,
-         'data' => 'userdel	2::inwork 3257,26907 3358,26706 3422,26540
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20140813.1350.398688.html',
          'until' => 1412956800,
@@ -3627,16 +3589,7 @@ userdel	q4::inwork; 31967,2966 31999,2812 32031,2723 32115,2581 32162,2542
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157922.php',
-         'until' => 1410040800,
-         'text' => 'Stillerzeile von Kurzer Steig bis Jastrower Weg: Fahrbahninstandsetzung, Vollsperrung vom 02.09.2014 bis 06.09.2014',
-         'from' => 1409522400,
-         'id' => 2612,
-         'data' => 'userdel	q4::inwork 24126,5521 24003,5501 23877,5503
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.deutsches-architektur-forum.de/forum/showthread.php?t=3245&page=7',
          'until' => undef,
@@ -3654,7 +3607,7 @@ userdel	2::inwork 7103,11247 6851,11346
        undef,
        undef,
        {
-         'source_id' => '145600083',
+         'source_id' => '145600136',
          'until' => 1414710000,
          'text' => 'Brücke über den Oder-Havel-Kanal: Bauarbeiten, gesperrt, 01.09.2014 bis 30.10.2014 ',
          'from' => 1409436000,
@@ -3676,16 +3629,37 @@ userdel	q4::inwork; 4280,8188 4220,8260 4139,8356 4029,8482 3964,8559 3928,8598 
        },
        undef,
        undef,
+       undef,
        {
-         'source_id' => 'IM_022704',
-         'until' => 1409925600,
-         'text' => 'Gürtelstr. und Dossestr.: Straßen zwischen Oderstr. und Scharnweberstr. vollständig gesperrt, auch für Fußgänger und Radfahrer',
-         'from' => 1409025600,
-         'id' => 2623,
-         'data' => 'userdel	2::temp 15248,11880 15202,11789 15106,11598
-userdel	2::temp 15202,11789 15140,11811 15043,11637
+         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140904.1220.399072.html',
+         'until' => 1418598000,
+         'text' => 'Englische Str. und Gutenbergstr.: Bauarbeiten, Einbahnstraßenregelung, ab Montag den 8.9.2014 bis Dezember 2014',
+         'from' => 1410040800,
+         'id' => 2624,
+         'data' => 'userdel	q4::inwork; 5325,12234 5518,12159 5424,11944
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.turmstrasse.de/aktuelles/veranstaltungen.html',
+         'until' => 1410624000,
+         'text' => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 13. September 2014, 13 bis 18 Uhr ',
+         'from' => 1410519600,
+         'id' => 2625,
+         'data' => '#: by: http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20140905.1415.399114.html
+userdel	2::temp 5857,13342 5868,13441 5882,13548
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_022799',
+         'until' => 1413410399,
+         'text' => 'Wilhelminenhofstr.: in Höhe Schillerpromenade Baustelle, Fahrbahn gesperrt, ab 08.09.2014 04 Uhr bis Mitte Oktober 2014 ',
+         'from' => 1409954400,
+         'id' => 2626,
+         'data' => 'userdel	q4::inwork; 18343,6318 18191,6363 17992,6436
+',
+         'type' => 'handicap'
        }
      
 );
