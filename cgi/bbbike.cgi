@@ -159,6 +159,9 @@ use vars qw($VERSION $VERBOSE
 	    $use_smart_app_banner
 	    $log_routes
 	    $route_length
+	    $default_pref_cat
+	    $default_pref_quality
+	    $default_pref_quality_de
 	   );
 
 $gmap_api_version = 3;
@@ -984,6 +987,26 @@ $BBBikeAds::enable_google_adsense_street = $enable_google_adsense_street;
 $BBBikeAds::enable_google_adsense_linkblock = $enable_google_adsense_linkblock;
 $BBBikeAds::enable_google_adsense_street_linkblock = $enable_google_adsense_street_linkblock;
 
+# set default values for street preferences
+sub default_pref {
+    my $q = shift;
+    my $lang = shift || "en";
+    
+    if (!defined $q->param("pref_cat") && defined $default_pref_cat) {
+	$q->param("pref_cat", $default_pref_cat );
+    }
+    
+    if (!defined $q->param("pref_quality")) {
+	warn "xxx: $lang";
+	
+	if ($lang eq 'de' && defined $default_pref_quality_de) {
+	    $q->param("pref_quality", $default_pref_quality_de);
+	} elsif (defined $default_pref_quality) {
+	    $q->param("pref_quality", $default_pref_quality);
+	}
+    }
+}
+
 
 sub M ($) {
     my $key = shift;
@@ -1177,6 +1200,8 @@ use vars qw(%handicap_speed);
 CGI->import('-no_xhtml');
 
 $q = new CGI;
+
+&default_pref($q, $lang);
 
 my @cgi_param = qw/startname start2 start startplz starthnr startc startort vianame via2 via viaplz viahnr viac viaort zielname ziel2 ziel zielplz zielhnr zielc zielort/;
 
