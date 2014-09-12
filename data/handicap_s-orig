@@ -13,7 +13,7 @@
 # REMOVED --- #: source_id: IM_021244 vvv --- #: valid: -20140320 vvv --- #: last_checked: 2014-04-04 vvv --- #: next_check: 2014-04-07 vvv --- # REMOVED (mittlerweile recht gut passierbar) --- Rüdersdorfer Str./Marchleweskistr.: Baustelle, Kreuzung gesperrt, langsame Umfahrung über Gehweg möglich, bis zum 30.04.2014	q3::inwork 13173,11788 13295,11792 13366,11651 --- # REMOVED (mittlerweile recht gut passierbar) --- Rüdersdorfer Str./Marchleweskistr.: Baustelle, Kreuzung gesperrt, langsame Umfahrung über Gehweg möglich, bis zum 30.04.2014	q3::inwork 13275,11830 13295,11792 --- # REMOVED (Baustelle fast verschwunden) --- Torellstr./Marchleweskistr.: Baustelle, Zufahrt zur Kreuzung gesperrt, langsame Umfahrung über Gehweg möglich, bis zum 30.04.2014	q3::inwork 13295,11792 13467,11778 --- #: next_check ^^^ --- #: last_checked ^^^ --- #: valid: ^^^ --- #: source_id ^^^
 # REMOVED (fertig) --- #: last_checked: 2014-07-06 --- #: check_frequency: 3d --- Simplonstr.: Einbahnstraße wegen Bauarbeiten	q2::inwork; 14468,11203 14531,11142
 # 
-#: last_checked: 2014-09-09 vvv
+#: last_checked: 2014-09-11 vvv
 Revaler Str.: wegen Bauarbeiten Fahrbahn gesperrt	q3::inwork 14357,11148 14442,11101
 Helmerdingstr.: wegen Bauarbeiten Fahrbahn teilweise gesperrt	q3::inwork 14442,11101 14468,11203
 #: last_checked ^^^
@@ -58,12 +58,17 @@ Gipsstr.: Bauarbeiten an der Rosenthaler Str., einige Meter Gehweg benutzen	q3::
 # REMOVED (beendet) --- #: XXX wann sind die Bauarbeiten beendet? --- #: last_checked: 2014-08-22 --- #: check_frequency: 14d --- Michaelkirchplatz: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 11487,11390 11542,11342 11415,11392 11487,11390
 # 
 #: XXX nach den Bauarbeiten bleiben wohl "einige Fußgänger" übrig, dann nur mit q1
-#: last_checked: 2014-09-09
+#: last_checked: 2014-09-11
 Linienstr.: einige Fußgänger, Baustelle	q2::inwork 10718,13625 10740,13621
 # 
 #: last_checked: 2014-07-22
 #: check_frequency: 60d
 zur Keibelstr.: Baustraße, Einbahnstraße	q4::inwork; 10976,13229 11045,13183
+# 
+#: XXX auf beiden Seiten Bordsteine
+#: last_checked: 2014-09-11
+#: check_frequency: 60d
+Wadzeckstr.: Bauarbeiten, auf Gehweg ausweichen, Bordsteine	q4::inwork; 11146,13328 11201,13289
 # 
 #: last_checked: 2014-08-26
 #: check_frequency: 60d
@@ -152,7 +157,7 @@ Voßstr.: gesperrte Fahrbahn (Baustelle), Ausweichen auf Gehweg möglich	q3::inwor
 #: last_checked: 2014-09-09
 Saarbrücker Str.: Einbahnstraßenregelung wegen Baustelle, ggfs. auf Gehweg ausweichen	q3::inwork; 11052,13870 11134,13820 11250,13655
 # 
-#: last_checked: 2014-09-09
+#: last_checked: 2014-09-12
 Christinenstr.: Einbahnstraßenregelung wegen Baustelle	q4::inwork; 10822,14179 10755,14067
 # 
 #: next_check_id: INVALIDEN-2014 vvv
@@ -322,6 +327,12 @@ Maybachufer: Bauarbeiten an der Kreuzung Friedelstr., Ausweichen über Gehweg	q3:
 Friedelstr.: Bauarbeiten, Einbahnstraße Richtung Süden	q3::inwork; 12066,9558 12074,9689 12088,9775
 # 
 ### Lichtenberg ###
+# 
+#: next_check_id: SANDINO-2014
+#: XXX Ende der Bauarbeiten?
+#: last_checked: 2014-09-12
+#: check_frequency: 45d
+Sandinostr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 15799,14674 15706,14752
 # 
 #: last_checked: 2014-08-29
 Dottistr.: Bauarbeiten, Einbahnstraße	q3::inwork; 15685,12154 15879,12131
@@ -614,8 +625,10 @@ Fuggerstr.: Gehweg	q2 6128,10319 6020,10351
 Pfalzburger Str.: Gehweg	q2 4905,10069 4910,10135
 Ludwigkirchplatz: Gehweg	q2 4905,10069 4863,10077
 (Tilla-Durieux-Park): Fußgänger	q2 8467,11125 8410,11143
-(Rad- und Wanderweg an Spree und Landwehrkanal): Fußgänger, teilweise eng	q2 3358,12718 3396,12741
-(Rad- und Wanderweg an Spree und Landwehrkanal): Fußgänger, teilweise eng	q2 3396,12741 3476,12735 3582,12704 3654,12672 3763,12624 3837,12618 3888,12618 4131,12641 4340,12578 4529,12570 4642,12491 4829,12357 5045,12243 5147,12164 5261,12004 5361,11910
+#: next_check_id: SPREERADWEGEINSTEINUFER-2014
+#: XXX Bauarbeiten, wird der Weg später breiter sein?
+#: next_check: 2015-10-15
+(Rad- und Wanderweg an Spree und Landwehrkanal): Fußgänger, teilweise eng	q2 3358,12718 3396,12741 3476,12735 3582,12704 3654,12672 3763,12624 3837,12618 3888,12618 4131,12641 4340,12578 4529,12570 4642,12491 4829,12357 5045,12243 5147,12164 5261,12004 5361,11910
 #: note: Radfahren erlaubt, Fußgänger haben Vorrang
 Spreeufer: Fußgänger, besonders an schönen Tagen	q2 10166,12777 10105,12855 9977,12912 9944,12921 9930,12947 9900,12942 9724,12992 9716,12971 9707,12974
 Spreeufer: Fußgänger	q2 9707,12974 9557,12992 9538,12993 9508,12991 9279,12953
@@ -639,7 +652,7 @@ enge Kurven	q2 33531,2772 33419,2765 33406,2738
 Kieler Str.: Fußgänger	q3 4998,5817 5052,5788
 Fontanepromenade: enger Gehweg	q2 10781,9697 10760,9646
 Südstern: Fußgänger	q3 10747,9326 10710,9309 10647,9337
-#: XXX wo genau sind die Bordsteine --- und sollte man sie als Bordsteine bezeichnen, wahrscheinlich etwas flacher als sonstwo?
+#: XXX_prog auf der südlichen Seite ist ein relativ flacher Bord, auf der nördlichen Seite eigentlich gut abgeflacht und kein Problem (ansonsten Eintrag entfernen)
 Görlitzer Ufer: Bordsteine	q3 13275,10055 13283,10069
 #: XXX_prog BS zum Tempelhofer Ufer hin, zur Ruhlsdorfer existiert eine Absenkung
 Ruhlsdorfer Str.: Bordstein	q3 9350,10176 9368,10211
@@ -719,8 +732,8 @@ Lausitzer Platz: zahlreiche Bodenschwellen	q2 12328,10442 12274,10612
 #: XXX_prog BS Bordstein an der Falkenberger Chausse, ansonsten q2
 (Grünanlage Egon-Erwin-Kisch-Str. - Falkenberger Chaussee): Fußgänger, Bordstein	q3 17686,18172 17721,18001
 Erich-Steinfurth-Str.: Fußgänger	q2 12645,11673 12596,11696
-#: XXX wo genau sind die Bordsteine, auf beiden Seiten?
-Elbingeroder Weg: hohe Bordsteine	q3 13178,9062 13146,9085
+#: XXX_prog BS auf beiden Seiten Bordsteine, außerdem noch zwei Bordsteine beim Überqueren der Bouchéstr.; ansonsten Fußgänger, q3
+Elbingeroder Weg: hohe Bordsteine	q4 13178,9062 13146,9085
 #: XXX wo genau sind die Bordsteine, auf beiden Seiten?
 (An der Apostelkirche - Kurfürstenstr.): Fußgänger, Bordsteine	q3 7312,10505 7315,10537
 Marie-Elisabeth-Lüders-Steg: eng, Fußgänger	q2 8415,12749 8593,12742 8596,12760
@@ -1018,7 +1031,7 @@ Uferweg: Fußgänger	q1 3862,12675 3938,12687 4147,12699 4206,12691 4242,12684
 # REMOVED (keine Fahrbahn mehr, nur der obere Uferweg) --- Bundesratufer: Fußgänger	q4 5938,12848 5922,12765
 Sonntagstr.: Richtung S-Bahnhof viele Fußgänger	q3 14845,10954 14798,10985 14752,11041
 #: XXX_prog: für Anhänger relevant (q1 oder so)
-Bouchéstr.: Bodenschwellen	q0 13489,9456 13352,9308
+Bouchéstr.: Bodenschwellen	q0 13489,9456 13357,9313
 #: XXX_prog: für Anhänger relevant (q1 oder so)
 Bouchéstr.: Bodenschwellen	q0 13645,9621 13867,9864
 #: XXX_prog: für Anhänger relevant (q2 oder so)
@@ -1106,7 +1119,7 @@ Riemenschneiderweg: gemeinsamer Rad- und Gehweg, eng	q1 6878,5946 6895,5873
 Harkortstr.: Bodenschwellen	q1 7570,5508 7621,5494
 (Plauener Str. - Küllstedter Str.): Fußgänger	q2 17352,14827 17363,14760
 #: XXX_prog: für Anhänger q2
-Orankeweg: einige Bodenschwellen, ohne Anhänger leicht umfahrbar	q0 14934,15860 15313,15858 15395,15852 15453,15848
+Orankeweg: einige Bodenschwellen, ohne Anhänger leicht umfahrbar	q0 14967,15885 14994,15861 15313,15858 15395,15852 15453,15848
 (Gounodstr. - Otto-Brahm-Str.): abschnittsweise eng und kurvig	q1 14435,15904 14451,15873 14383,15848 14349,15825 14365,15778
 Gounodstr.: Fußgänger	q1 14239,15810 14251,15828 14366,15877
 Seidenberger Str.: Bordstein, Geländer	q3 12391,16994 12382,17006
@@ -1814,7 +1827,7 @@ Gleisdreieckpark, Einfahrt Pohlstr.: Bordstein	q2 8159,10430 8199,10424
 Gleisdreieck: flache Bordsteine	q1 8296,10438 8237,10418
 #: XXX_prog BS zu beiden Seiten (aber flach!) (ansonsten entfernen)
 Gleisdreieck: flache Bordsteine	q1 8145,10090 8211,10083
-(Hansastr. - Gartenstr.): Fußgänger	q1 15187,16185 15102,16212 14810,16282 14665,16294
+(Hansastr. - Gartenstr.): Fußgänger	q1 15194,16186 15102,16212 14810,16282 14665,16294
 (Hansastr. - Gartenstr.): Fußgänger	q1 14810,16282 14721,16360
 (Dohnagestell - Tangastr.): Fußgänger	q2 5802,15399 5889,15457 5961,15562
 Arnimplatz: Fußgänger	q2 10606,16319 10739,16146
@@ -1864,7 +1877,7 @@ Fromet-und-Moses-Mendelssohn-Platz: einige Fußgänger	q1 9797,10771 9733,10827 96
 (Otisstr. - Wackerweg): eng	q2 3753,18889 3803,18855
 Breitkopfstr.: einige Fußgänger	q1 7789,17853 7809,17708 7828,17550
 #: XXX_prog BS (allerdings nicht, wenn man auf dem Bordsteinradweg fährt)
-Orankeweg: Bordstein	q2 14934,15860 14802,15857
+Orankeweg: Bordstein	q2 14936,15857 14769,15867
 #: XXX_prog BS am Wendehammer, ansonsten wäre es q2
 Jenneweg: einige Fußgänger, eng, Bordstein	q3 -3978,14766 -4015,14744
 #: XXX_prog BS an der Jüdenstr., ansonsten wäre es q1
