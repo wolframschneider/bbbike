@@ -314,9 +314,15 @@ div#footer {
   font-size: small;
   text-align: center; 
 }
+div#footer    { 
+  padding-top: 4px;
+  padding-left: 0.5em;
+  padding-bottom: 0px;
+}
 
 div#footer_top { text-align: left; }
 div#copyright { margin-bottom: 4px; }
+div#copyright { text-align: center; font-size: x-small; margin-top: 2px; }
 
 span#footer_community {
   position: relative;
