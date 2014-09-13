@@ -241,30 +241,6 @@ div#nomap {
 }
 
 
-div#routing { 
-	position: absolute; 
-	left: 0px;
-	width: 24.5%;
-	max-width: 18em;
-        margin-right: 0.5em;
-	background-color: white;
-	z-index: 1000; 
-}
-
-div#sidebar { 
-	position: absolute; 
-	/* left: 0px; */
-	width: 21em;
-        padding-right: 0.5em;
-	background-color: white;
-	z-index: 1000; 
-
-	/* scroll city list if to long */
-	overflow-y: auto;
-	overflow-x: auto;
-	height: 90%;
-}
-
 div#sidebar_stat {
 	position: absolute; 
 	left: 0px;
@@ -278,7 +254,7 @@ div#sidebar_stat {
 	height: 90%;
 }
 
-/* inside sidebar_stat */
+/* inside sidebar */
 div#routes, div#formats, div#search {
 	margin: 0.5em;
 }
