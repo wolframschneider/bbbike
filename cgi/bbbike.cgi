@@ -166,8 +166,6 @@ use vars qw($VERSION $VERBOSE
 	    $enable_move_map
 	   );
 
-my $init_search_result = 0;
-
 $gmap_api_version = 3;
 $facebook_page = 'http://www.facebook.com/BBBikeWorld';
 
@@ -1971,6 +1969,17 @@ sub is_forum_spam {
    return $flag;
 }
 
+
+sub sidebar_disabled {
+    return <<'EOF';
+    
+<script type="text/javascript">
+  $("#sidebar").attr("id", "sidebar_disabled");
+</script>
+
+EOF
+}
+
 sub choose_form {
 
     my $startname = Param('startname') || '';
@@ -2816,11 +2825,14 @@ EOF
 	    print "</td>" if $bi->{'can_table'};
 	} elsif (@$matchref > 1) {
 	    print "<td>" if $bi->{'can_table'};
+	    print &sidebar_disabled;
+	    
 	    if ($lang eq 'en') {
 		print "Choose exact <b>" . M("${printtype}stra&szlig;e") . "</b>:<br>\n";
 	    } else {
 		print "Genaue <b>" . M("${printtype}stra&szlig;e") . "</b> ausw&auml;hlen:<br>\n";
 	    }
+	    
 
 	    # Sort Potsdam streets to the end:
 	    @$matchref = map { $_->[1] } sort {
@@ -3792,6 +3804,7 @@ EOF
     if ((!$start_c && @start_coords != 1) ||
 	(!$ziel_c  && @ziel_coords != 1) ||
 	(@via_coords && !$via_c)) {
+	print &sidebar_disabled;
 	print M("Genaue Kreuzung angeben") . ":<p>\n";
     }
 
@@ -5904,6 +5917,7 @@ a.mobile_link { font-size: xx-large; margin-top: 3em; padding-top: 3em; }
 EOF
 	}
 
+	print &sidebar_disabled;
 	print qq{<div id="route_table">\n};
 	print "<center>" unless $printmode;
 	print qq{<table id="routehead" bgcolor="#ffcc66"};
@@ -8619,12 +8633,8 @@ sub header {
         my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
-	if ($q->param("startc") && $q->param("zielc")) {
-	    print qq{<div id="sidebar_dummy"></div>\n};
-	    print qq{<div id="sidebar_disabled">\n};
-	} else {
-	    print qq{<div id="sidebar">\n};
-	}
+	print qq{<div id="sidebar_dummy"></div>\n};
+	print qq{<div id="sidebar">\n};
 	
 	print qq{<div id="search">\n};
 	print qq{<div id="top_right">};
