@@ -8,7 +8,7 @@ body {
   font-family:sans-serif,helvetica,verdana,arial;
   margin: 0px;
 }
-/* body { width: 100%; height: 100%;z-index: 0; } */
+body { width: 100%; height: 100%;z-index: 0; } 
 
 td,th,p,h2,li,input {
   font-family:sans-serif,helvetica,verdana,arial;
@@ -317,7 +317,7 @@ div#footer {
 }
 
 div#footer_top { text-align: left; }
-div#copyright { margin-bottom: 0.5em }
+div#copyright { margin-bottom: 4px; }
 
 span#footer_community {
   position: relative;
