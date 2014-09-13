@@ -1975,6 +1975,7 @@ sub sidebar_disabled {
     
 <script type="text/javascript">
   $("#sidebar").attr("id", "sidebar_disabled");
+  $("#sidebar_dummy").show();
 </script>
 
 EOF
@@ -3911,7 +3912,8 @@ EOF
 
     hidden_smallform();
 
-
+    print &sidebar_disabled;
+    
     print "<hr><p><b>" . M("Einstellungen") . "</b>:\n";
     #reset_html();
     print "</p>";
@@ -8633,7 +8635,7 @@ sub header {
         my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
-	print qq{<div id="sidebar_dummy"></div>\n};
+	print qq{<div id="sidebar_dummy" style="display:none"></div>\n};
 	print qq{<div id="sidebar">\n};
 	
 	print qq{<div id="search">\n};
