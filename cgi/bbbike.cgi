@@ -162,6 +162,7 @@ use vars qw($VERSION $VERBOSE
 	    $default_pref_cat
 	    $default_pref_quality
 	    $default_pref_quality_de
+	    $enable_return_first_button
 	   );
 
 $gmap_api_version = 3;
@@ -2560,7 +2561,7 @@ EOF
     # Hack for browsers which use the first button, regardless whether it's
     # image or button, for firing in a <Return> event
     # XXX Does not work for Opera; Safari, Chrome and MSIE are untested...
-    if ($bi->{user_agent_name} =~ /^(konqueror|safari|chrome|opera|msie)/i) {
+    if ($enable_return_first_button && $bi->{user_agent_name} =~ /^(konqueror|safari|chrome|opera|msie)/i) {
 	print <<EOF;
 <input type="submit" value="@{[ M("Weiter") ]}" style="text-align:center;visibility:hidden"/>
 EOF
