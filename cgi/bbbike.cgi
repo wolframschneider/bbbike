@@ -163,6 +163,7 @@ use vars qw($VERSION $VERBOSE
 	    $default_pref_quality
 	    $default_pref_quality_de
 	    $enable_return_first_button
+	    $enable_move_map
 	   );
 
 $gmap_api_version = 3;
@@ -2488,9 +2489,9 @@ EOF
 	    print qq{<a class="$class logo" href="$url" title="}, M("BBBike for mobile devices"), qq{"><img class="logo" width="16" height="16" alt="" src="/images/phone.png">[}, M("mobil"), qq{]</a>\n};
 
 	    print "&nbsp;" x 10;
-	    print qq{<a style="font-size:small" title="}, M("Karte nach rechts schieben"), qq{" href="javascript:smallerMap(1.5)">&gt;&gt;</a>\n};
+	    print qq{<a style="font-size:small" title="}, M("Karte nach rechts schieben"), qq{" href="javascript:smallerMap(1.5)">&gt;&gt;</a>\n} if $enable_move_map;
 	    print qq{<img onclick='javascript:displayCurrentPosition([[8.03000,48.73000], [8.81000,49.27000]], "de");' src="/images/location-icon.png">\n};
-	    print qq{<a style="font-size:small" title="}, M("Karte nach links schieben"), qq{" href="javascript:smallerMap(-1.5)">&lt;&lt;</a>\n};
+	    print qq{<a style="font-size:small" title="}, M("Karte nach links schieben"), qq{" href="javascript:smallerMap(-1.5)">&lt;&lt;</a>\n} if $enable_move_map;
 
         }
 	print qq{</span>\n};
@@ -8613,8 +8614,6 @@ sub header {
     if ($with_lang_switch && (!defined $from || $from !~ m{^(info|map)$}) && (!&is_mobile($q) || is_resultpage($q))) {
         my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
-
-	#&headline if is_resultpage($q);
 
 	print qq{<div id="sidebar">\n};
 	print qq{<div id="search">\n};
