@@ -3154,7 +3154,7 @@ function " . $type . "char_init() {}
     print &span_debug;
     print "</div> <!-- search_head -->\n";
     print "</div> <!-- search -->\n\n";
-    print "</div> <!-- sidebar_stat -->\n";
+    print "</div> <!-- sidebar -->\n";
 	
 
 	    my $BBBikeGooglemap = 1;
@@ -8615,7 +8615,7 @@ sub header {
 
 	#&headline if is_resultpage($q);
 
-	print qq{<div id="sidebar_stat">\n};
+	print qq{<div id="sidebar">\n};
 	print qq{<div id="search">\n};
 	print qq{<div id="top_right">};
         if ($enable_current_weather) {
