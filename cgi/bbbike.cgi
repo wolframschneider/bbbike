@@ -8653,9 +8653,9 @@ EOF
 
 	}
 
-	&language_switch($bbbike_local_script_url) if &is_resultpage($q) || !&is_startpage($q);
+	#&language_switch($bbbike_local_script_url) if &is_resultpage($q) || !&is_startpage($q);
 	print qq{</div>\n};
-        &headline if &is_resultpage($q) || !&is_startpage($q);
+        #&headline if &is_resultpage($q) || !&is_startpage($q);
 
 	#&adsense_linkblock if &is_production($q) && !is_mobile($q);
     }
