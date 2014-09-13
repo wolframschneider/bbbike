@@ -3178,9 +3178,7 @@ EOF
 
 	    }
 
-	    if (0) {
-	    print qq{<iframe id="iframemap" src="$ie6hack/homemap.cgi?$smu" title="slippy map" width="680" height="420" scrolling="no">xxx</iframe>\n};
-            } elsif ($BBBikeGooglemap) {
+            if ($BBBikeGooglemap) {
 		use BBBikeGooglemap;
 
 		print qq{<div id="map_area">\n};
