@@ -6358,7 +6358,11 @@ for my $etappe (@out_route) {
 		    my $href = 'http://www.gpsies.com/map.do?url=' . BBBikeCGI::Util::my_escapeHTML($qq2->url(-full=>1, -query=>1));
 		    print qq{<a title="}, M("Route auf GPSies.com hochladen"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com (upload)</a>};
 		}
-		print qq{<a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt="" title="}, M("Facebook Fanpage"), qq{"><img class="logo" src="/images/facebook-like.png" alt="" title="}, M("Facebook Fanpage"), qq{"></a>\n};
+		if ($enable_facebook_t_link) {
+		    print qq{<a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt="" title="},
+			M("Facebook Fanpage"), qq{"><img class="logo" src="/images/facebook-like.png" alt="" title="},
+			M("Facebook Fanpage"), qq{"></a>\n};
+		}
 	        print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
 
 		if (0) { # XXX not yet
