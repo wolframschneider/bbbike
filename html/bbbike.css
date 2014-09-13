@@ -378,6 +378,10 @@ form input[type=submit] {
 }
 
 /* span#headline { text-align: center; } */
+span#headline h2 { 
+  margin-top: 0px;
+  margin-bottom: 5px;
+} 
 
 /* dynamically increase size of input fields */
 input#suggest_start, input#suggest_via, input#suggest_ziel { width: 97%; } 
