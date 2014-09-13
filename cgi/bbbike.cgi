@@ -2434,7 +2434,7 @@ sub choose_form {
     header(@extra_headers, -from => $show_introduction ? "chooseform-start" : "chooseform");
 
     print <<EOF if ($bi->{'can_table'});
-<div id="routing">
+<div id="search_head">
 @{[ &language_switch($bbbike_local_script_url) ]}
 @{[ &headline ]}
 
@@ -3152,7 +3152,9 @@ function " . $type . "char_init() {}
     print "</td></tr></table>\n" if $bi->{'can_table'};
 
     print &span_debug;
-    print "</div> <!-- routing -->\n\n";
+    print "</div> <!-- search_head -->\n";
+    print "</div> <!-- search -->\n\n";
+    print "</div> <!-- sidebar_stat -->\n";
 	
 
 	    my $BBBikeGooglemap = 1;
@@ -3181,12 +3183,10 @@ EOF
 
 		print qq{<div id="map_area">\n};
 		&BBBikeAds::adsense_linkblock if &is_production($q) && !is_mobile($q);
-		print qq{</div>\n\n};
+		print qq{</div> <!-- map_area -->\n\n};
 	        
 		print <<EOF;
 <style type="text/css">
-div#BBBikeGooglemap { top: -6.8em; }
-div#bottom { top: -6.7em; }
 </style>
 EOF
 
@@ -8615,6 +8615,8 @@ sub header {
 
 	#&headline if is_resultpage($q);
 
+	print qq{<div id="sidebar_stat">\n};
+	print qq{<div id="search">\n};
 	print qq{<div id="top_right">};
         if ($enable_current_weather) {
 	    #print qq{\n<span id="current_weather"> </span>\n};

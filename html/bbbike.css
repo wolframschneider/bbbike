@@ -241,7 +241,6 @@ div#nomap {
 }
 
 
-
 div#routing { 
 	position: absolute; 
 	left: 0px;
@@ -280,7 +279,7 @@ div#sidebar_stat {
 }
 
 /* inside sidebar_stat */
-div#routes, div#formats {
+div#routes, div#formats, div#search {
 	margin: 0.5em;
 }
 
