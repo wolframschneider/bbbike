@@ -6,7 +6,10 @@ body {
   background-color:#ffffff;
   color:#000000;
   font-family:sans-serif,helvetica,verdana,arial;
+  margin: 0px;
 }
+/* body { width: 100%; height: 100%;z-index: 0; } */
+
 td,th,p,h2,li,input {
   font-family:sans-serif,helvetica,verdana,arial;
 }
@@ -238,7 +241,6 @@ div#nomap {
 }
 
 
-/* body { width: 100%; height: 100%;z-index: 0; } */
 
 div#routing { 
 	position: absolute; 
