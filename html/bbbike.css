@@ -279,8 +279,8 @@ div#sidebar_stat {
 }
 
 /* inside sidebar_stat */
-div#routes {
-	margin: .5em;
+div#routes, div#formats {
+	margin: 0.5em;
 }
 
 div#BBBikeGooglemap { 
