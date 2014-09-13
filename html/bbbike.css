@@ -254,6 +254,12 @@ div#sidebar {
 	height: 90%;
 }
 
+div#sidebar_dummy {
+	position: absolute; 
+	left: 0px;
+	width: 6em;
+}
+
 /* inside sidebar */
 div#routes, div#formats, div#search {
 	margin: 0.5em;

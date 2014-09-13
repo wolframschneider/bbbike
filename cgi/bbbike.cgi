@@ -166,6 +166,8 @@ use vars qw($VERSION $VERBOSE
 	    $enable_move_map
 	   );
 
+my $init_search_result = 0;
+
 $gmap_api_version = 3;
 $facebook_page = 'http://www.facebook.com/BBBikeWorld';
 
@@ -8613,7 +8615,13 @@ sub header {
         my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
-	print qq{<div id="sidebar">\n};
+	if ($q->param("startc") && $q->param("zielc")) {
+	    print qq{<div id="sidebar_dummy"></div>\n};
+	    print qq{<div id="sidebar_disabled">\n};
+	} else {
+	    print qq{<div id="sidebar">\n};
+	}
+	
 	print qq{<div id="search">\n};
 	print qq{<div id="top_right">};
         if ($enable_current_weather) {
