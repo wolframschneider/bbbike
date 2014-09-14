@@ -257,7 +257,7 @@ div#sidebar {
 div#sidebar_dummy {
 	position: absolute; 
 	left: 0px;
-	width: 6em;
+	width: 3em;
 }
 
 /* inside sidebar */
