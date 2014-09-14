@@ -426,3 +426,9 @@ table.footer td {
 
 #big_donate_image { text-align:center; }
 
+div#more_cities {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    border:2px black solid;
+}
+
