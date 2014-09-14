@@ -427,9 +427,13 @@ table.footer td {
 #big_donate_image { text-align:center; }
 
 div#more_cities {
-    margin-left: 28.5em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    // border:2px black solid;
+    margin-left: 24.0em;
+}
+
+div#more_cities_inner {
+   font-size: small;
+   border:2px black dotted;
+   padding: 0.5em;
+   margin-right: 2px;
 }
 
