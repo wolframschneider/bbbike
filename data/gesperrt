@@ -499,7 +499,7 @@ Blumenstr.	1 12305,12440 12118,12462
 Friedensplatz	1 8971,6154 8994,6144 9003,6121 8996,6106 8976,6094 8952,6109 8944,6127 8955,6147 8971,6154
 Westhafenstr.: Tor kann geschlossen sein; Unbefugten ist das Betreten nicht gestattet	2 6083,14564 6025,14539 6015,14516 5997,14444 5920,14422 5205,14253
 Frank-Schweitzer-Str.	1 19350,14997 19175,14926 19113,14901 19117,14875 19255,14911
-(Schulze-Boysen-Str. - Wilhelm-Guddorf-Str.)	1 15413,11690 15482,11729 15634,11656
+(Schulze-Boysen-Str. - Wilhelm-Guddorf-Str.)	1 15413,11690 15482,11729 15639,11653
 Hufelandweg	1s 8630,13172 8618,13306 8582,13355
 Sauerbruchweg	1s 8487,13351 8555,13260 8605,13200 8630,13172
 Rahel-Hirsch-Weg	1 8586,13440 8600,13448 8581,13487 8554,13476 8586,13440
@@ -764,7 +764,6 @@ Am Kleinen Platz	1 -7248,14826 -7292,14811
 Ella-Trebe-Str.	1s 7938,13302 7938,13150
 Waldmeisterstr.	1 1736,7557 1880,7558 1930,7594
 Waldmeisterstr.	1 1956,7453 1878,7499 1722,7497
-Buolstr.	1 559,15342 429,15284
 Janischweg	1 429,15284 431,15230 453,15173 473,15169
 Köttgenstr.	1 473,15169 556,15175 613,15195
 Rosenfelder Ring	1s 18140,11932 18139,11833
@@ -2727,6 +2726,7 @@ versetzte Schranke, manchmal offen	BNP:1:-124:trailer=3 23402,18067
 versetzte Schranke, manchmal offen	BNP:1:-195:trailer=3 24700,18981
 versetzte Schranke, manchmal offen	BNP:1:-133:trailer=3 24523,18542
 versetzte Schranke, manchmal offen	BNP:1:-171:trailer=3 24625,20855
+Valeska-Gert-Str. - Am Postbahnhof: gesperrt, evtl. dauerhaft	2 12807,11287 12713,11372
 Alfred-Döblin-Platz: Bauarbeiten, Fahrbahn gesperrt	2::inwork 11162,10919 11150,11030
 Dresdener Str.: Bauarbeiten, komplett gesperrt	2::inwork 11034,11249 11000,11327
 Am Postbahnhof: Bauarbeiten, Straße gesperrt	2::inwork 12576,11375 12638,11433
@@ -2734,8 +2734,9 @@ Berolinastr., Weg zum Spielplatz: wegen Bauarbeiten der Wasserbetriebe vollständ
 Diestelmeyerstr.: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt, auch für Fußgänger	2::inwork 12690,12769 12833,12920
 Rad- und Gehwegverbindung Suermondtstr. - Degnerstr.	2::inwork 16476,16216 16458,16104 16493,15983 16559,15896
 Weg zwischen S-Wartenberg und S-Hohenschönhausen: Brücke morsch und gesperrt	2::inwork 17159,18375 17235,18352
-Viechtacher Str.: Bauarbeiten, Straße noch gesperrt	2::inwork 19657,9666 19732,9678 19801,9680 19857,9682 19893,9683
-Eisensteiner Str.: Bauarbeiten, Straße noch gesperrt	2::inwork 19732,9678 19727,9484
+Viechtacher Str.: Bauarbeiten, Zufahrt zur Zwieseler Str. noch gesperrt	2::inwork 19657,9666 19727,9672
+Viechtacher Str.: Bauarbeiten, Straße muss noch fertig gestellt werden	2::inwork 19801,9680 19857,9682 19893,9683
+Regener Str.: Bauarbeiten, noch nicht fertig gestellt	2::inwork 19790,9478 19849,9477 19890,9476
 BBI-Park: wegen Bauarbeiten gesperrt	2::inwork 20038,-1474 19717,-1549
 am Osthafen: durch Barriere versperrt	2 14259,10309 14463,10212
 Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: z.Zt. nur Baustellenzufahrt, Durchfahrt verboten	2 8251,14337 8442,14456

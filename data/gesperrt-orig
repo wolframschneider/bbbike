@@ -682,7 +682,7 @@ Friedensplatz	1 8971,6154 8994,6144 9003,6121 8996,6106 8976,6094 8952,6109 8944
 #: by: anonymous and public imagery
 Westhafenstr.: Tor kann geschlossen sein; Unbefugten ist das Betreten nicht gestattet	2 6083,14564 6025,14539 6015,14516 5997,14444 5920,14422 5205,14253
 Frank-Schweitzer-Str.	1 19350,14997 19175,14926 19113,14901 19117,14875 19255,14911
-(Schulze-Boysen-Str. - Wilhelm-Guddorf-Str.)	1 15413,11690 15482,11729 15634,11656
+(Schulze-Boysen-Str. - Wilhelm-Guddorf-Str.)	1 15413,11690 15482,11729 15639,11653
 Hufelandweg	1s:q3 8630,13172 8618,13306 8582,13355
 Sauerbruchweg	1s:q3 8487,13351 8555,13260 8605,13200 8630,13172
 Rahel-Hirsch-Weg	1 8586,13440 8600,13448 8581,13487 8554,13476 8586,13440
@@ -1047,7 +1047,6 @@ Ella-Trebe-Str.	1s:q4 7938,13302 7938,13150
 Waldmeisterstr.	1 1736,7557 1880,7558 1930,7594
 Waldmeisterstr.	1 1956,7453 1878,7499 1722,7497
 #: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=7281 vvv
-Buolstr.	1 559,15342 429,15284
 Janischweg	1 429,15284 431,15230 453,15173 473,15169
 Köttgenstr.	1 473,15169 556,15175 613,15195
 #: by: ^^^
@@ -2538,25 +2537,29 @@ versetzte Schranke, manchmal offen	BNP:1::trailer=3 24625,20855
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: last_checked: 2014-09-20
+#: check_frequency: 90d
+Valeska-Gert-Str. - Am Postbahnhof: gesperrt, evtl. dauerhaft	2 12807,11287 12713,11372
+# 
 #: last_checked: 2014-09-13
 #: next_check: 2015-03-01 (Bauzeit 2014-2015)
 Alfred-Döblin-Platz: Bauarbeiten, Fahrbahn gesperrt	2::inwork 11162,10919 11150,11030
 # 
 #: XXX werden hier die Bordsteine abgeflacht?
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/25re.pdf/file?y=2014
-#: last_checked: 2014-09-13
+#: last_checked: 2014-09-16
 Dresdener Str.: Bauarbeiten, komplett gesperrt	2::inwork 11034,11249 11000,11327
 # 
 #: last_checked: 2014-09-03
 Am Postbahnhof: Bauarbeiten, Straße gesperrt	2::inwork 12576,11375 12638,11433
 # 
 #: XXX theoretisch ist ein Trampelpfad vorbei vorhanden
-#: last_checked: 2014-08-21
+#: last_checked: 2014-09-23
 #: next_check: 2014-10-31
 Berolinastr., Weg zum Spielplatz: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt	2::inwork 11719,13088 11815,13045
 # 
 #: XXX laut Schild bis Dezember 2014 gesperrt
-#: last_checked: 2014-09-09
+#: last_checked: 2014-09-25
 #: next_check: 2014-12-15
 Diestelmeyerstr.: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt, auch für Fußgänger	2::inwork 12690,12769 12833,12920
 # 
@@ -2572,12 +2575,22 @@ Rad- und Gehwegverbindung Suermondtstr. - Degnerstr.	2::inwork 16476,16216 16458
 #: last_checked: 2014-07-10
 Weg zwischen S-Wartenberg und S-Hohenschönhausen: Brücke morsch und gesperrt	2::inwork 17159,18375 17235,18352
 # 
-#: last_checked: 2014-06-29 vvv
+#: XXX hier steht noch ein Bauzaun
+#: last_checked: 2014-09-21
+Viechtacher Str.: Bauarbeiten, Zufahrt zur Zwieseler Str. noch gesperrt	2::inwork 19657,9666 19727,9672
+# 
+#: XXX Qualität nach den Bauarbeiten?
 #: osm_watch: way id="24845189" version="11"
-#: XXX laut osm access=private
-Viechtacher Str.: Bauarbeiten, Straße noch gesperrt	2::inwork 19657,9666 19732,9678 19801,9680 19857,9682 19893,9683
-Eisensteiner Str.: Bauarbeiten, Straße noch gesperrt	2::inwork 19732,9678 19727,9484
-#: last_checked ^^^
+#: last_checked: 2014-09-21
+#: check_frequency: 60d
+Viechtacher Str.: Bauarbeiten, Straße muss noch fertig gestellt werden	2::inwork 19801,9680 19857,9682 19893,9683
+# REMOVED (offen) --- Eisensteiner Str.: Bauarbeiten, Straße noch gesperrt	2::inwork 19727,9672 19722,9483
+# 
+#: XXX Qualität nach den Bauarbeiten?
+#: osm_watch: way id="287119368" version="7"
+#: last_checked: 2014-09-21
+#: check_frequency: 60d
+Regener Str.: Bauarbeiten, noch nicht fertig gestellt	2::inwork 19790,9478 19849,9477 19890,9476
 # 
 # REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- #: by: http://www.tagesspiegel.de/berlin/grossbaustelle-in-berlin-bauarbeiten-am-ostkreuz-verzoegern-sich-bis-2017/8210208.html (Termin Wiederaufbau) --- #: next_check: 2018-01-01 --- Fußgängerbrücke S-Ostkreuz: Abriss und Neubau	2::inwork 14794,10844 14764,10877 14787,10972 14798,10985
 # 
@@ -2697,7 +2710,7 @@ Promenade am Teltowkanal: während der Bauarbeiten an der Emil-Schulz-Brücke gesp
 #: XXX siehe auch Busspur in radwege-orig vvv
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0166-unter-den-linden-oberwallstrae.html vvv
 #: source_id: INKO_113041 vvv
-#: last_checked: 2014-09-02 vvv
+#: last_checked: 2014-09-20 vvv
 #: check_frequency: 90d vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross 9984,12426 9934,12420 9858,12410
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
@@ -2757,7 +2770,7 @@ Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwor
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
 #: XXX siehe auch Eintrag in handicap_s-orig
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0194-oberwallstrae-werderscher-markt.html
-#: last_checked: 2014-08-22
+#: last_checked: 2014-09-20
 #: check_frequency: 100d
 Oberwallstr.: Bauarbeiten, komplett gesperrt	2:inwork 9898,12161 9882,12259
 # 
@@ -2783,7 +2796,7 @@ Rudi-Dutschke-Weg	2:inwork 2627,5095 2913,5294
 Billy-Wilder-Promenade: wegen Bauarbeiten an umliegenden Wohnhäusern gesperrt	2:inwork 2528,1501 2584,1376
 # 
 #: last_checked: 2014-05-20
-#: next_check: 2014-09-30
+#: next_check: 2014-11-30
 Marx-Engels-Forum: wegen U-Bahn-Bauarbeiten Durchgang zur Rathausstr. nicht möglich	2:inwork 10411,12471 10422,12395
 # 
 #: next_check_id: BER-20XX
@@ -2801,8 +2814,8 @@ B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich de
 #: by: http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20111122.1040.362894.html
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=5878
 #: XXX Sanierungstermin steht noch nicht fest
-#: last_checked: 2013-10-17
-#: next_check: 2014-10-01
+#: last_checked: 2014-09-20
+#: check_frequency: 360d
 Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
 # 
 #: XXX wo gibt es Informationen hierzu?

@@ -7,11 +7,12 @@ Revaler Str.: wegen Bauarbeiten Fahrbahn gesperrt	q3::inwork 14357,11148 14442,1
 Helmerdingstr.: wegen Bauarbeiten Fahrbahn teilweise gesperrt	q3::inwork 14442,11101 14468,11203
 Rudolfstr.: Bauarbeiten an der Kreuzung Danneckerstr., auf Gehweg ausweichen	q3::inwork 14026,10869 13886,10939 13795,10995
 Danneckerstr.: Bauarbeiten an der Kreuzung Rudolfstr., auf Gehweg ausweichen	q3::inwork 13856,10864 13886,10939
+Gubener Str.: Fahrbahn an der Warschauer Str. gesperrt, auf Gehweg ausweichen	q4::inwork 13603,11538 13568,11560
 M¸hsamstr.: Bauarbeiten in Hˆhe Eckertstr., 50 Meter Fahrbahn gesperrt	q3::inwork 13371,12694 13506,12752
 Gipsstr.: Bauarbeiten an der Rosenthaler Str., einige Meter Gehweg benutzen	q3::inwork 10199,13446 10350,13376
 Linienstr.: einige Fuﬂg‰nger, Baustelle	q2::inwork 10718,13625 10740,13621
 zur Keibelstr.: Baustraﬂe, Einbahnstraﬂe	q4::inwork; 10976,13229 11045,13183
-Wadzeckstr.: Bauarbeiten, auf Gehweg ausweichen, Bordsteine	q4::inwork; 11146,13328 11201,13289
+Wadzeckstr.: Bauarbeiten, auf Gehweg ausweichen, Bordsteine	q4::inwork 11146,13328 11201,13289
 Seydelstr.: Bauarbeiten, Einbahnstraﬂe, gesperrt in Richtung Spittelmarkt	q3::inwork; 10446,11470 10320,11627
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, auf engen Gehweg ausweichen	q4::inwork 9736,13061 9559,13087
 Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf Gehweg ausweichen	q3::inwork 9984,12426 9996,12401 10058,12290
@@ -20,8 +21,6 @@ Charlottenstr.: Einbahnstraﬂenregelung	q4::inwork; 9475,12365 9489,12263 9496,12
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraﬂe Richtung S¸den	q4::inwork; 9475,12365 9462,12481 9454,12558
 Universit‰tsstr.: Fahrbahn wegen Bauarbeiten in Richtung S¸den gesperrt	q4::inwork; 9580,12581 9601,12380
 Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Friedrichstr. gesperrt	q3::inwork; 9164,12172 9373,12197
-Voﬂstr.: gesperrte Fahrbahn (Baustelle), Ausweichen auf Gehweg mˆglich, eng	q4::inwork 8743,11663 8837,11676
-Voﬂstr.: gesperrte Fahrbahn (Baustelle), Ausweichen auf Gehweg mˆglich	q3::inwork 8837,11676 9000,11727
 Saarbr¸cker Str.: Einbahnstraﬂenregelung wegen Baustelle, ggfs. auf Gehweg ausweichen	q3::inwork; 11052,13870 11134,13820 11250,13655
 Christinenstr.: Einbahnstraﬂenregelung wegen Baustelle	q4::inwork; 10822,14179 10755,14067
 Caroline-Michaelis-Str.: Bauarbeiten, Zufahrt zur Invalidenstr. umst‰ndlich	q4::inwork; 9151,13941 9125,13973
@@ -35,16 +34,18 @@ Margarete-Steffin-Str.: Fahrbahn wegen Bauarbeiten, Ausweichen auf Gehweg	q3::in
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9882,12259 9876,12298
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9876,12298 9858,12410
 Rathausstr.: Fuﬂg‰nger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521 10704,12595
+Michaelkirchplatz: Bauarbeiten, Einbahnstraﬂe	q4::inwork; 11349,11227 11415,11392
+Leuschnerdamm: Bauarbeiten am Engelbecken, Einbahnstraﬂe	q4::inwork; 11458,11136 11421,11073
 Am Monumentenplatz: eng	q3::inwork 8338,9099 8344,9085 8358,9068
 Kˆbisstr.: wegen Bauarbeiten Ausweichen auf Gehweg	q4::inwork 7103,11247 7160,11225
 Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Richtung S¸den auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12898,7832 12914,7785 12969,7610 12991,7549 12992,7545 13015,7471 13018,7441
 Delbr¸ckstr./Walterstr.: Bauarbeiten, Fahrbahn nicht benutzbar	q4::inwork 13122,6717 13099,6712 13126,6687
+Herrfurthstr: Bauarbeiten, Fahrbahn nicht benutzbar	q4::inwork 11833,7980 11754,7964
 Wildenbruchplatz: Bauarbeiten, Fahrbahn nicht benutzbar	q4::inwork 13135,8766 13227,8692 13314,8624
 Richardplatz: Bauarbeiten auf der s¸dlichen Fahrbahn	q4::inwork 13188,7590 13303,7622 13400,7642
 Richardplatz/Richardstr.: Bauarbeiten, Umwege notwendig	q4::inwork 13288,7653 13303,7622
-Richardstr.: Bauarbeiten, Einbahnstraﬂenregelung	q3::inwork; 13103,7889 13085,7904 12870,8087
-Richardstr.: Bauarbeiten, ggfs. auf Gehweg ausweichen	q4::inwork 13150,7845 13103,7889
-Jan-Hus-Weg/Kirchgasse: Bauarbeiten	q4::inwork 13085,7904 13117,7939 13151,7914
+Richardstr.: Bauarbeiten, auf Gehweg ausweichen	q4::inwork 13103,7889 13085,7904 12870,8087
+Richardstr.: Bauarbeiten, auf Gehweg ausweichen	q3::inwork 13150,7845 13103,7889
 Maybachufer: Bauarbeiten an der Kreuzung Friedelstr., Ausweichen ¸ber Gehweg	q3::inwork 12088,9775 12250,9691
 Friedelstr.: Bauarbeiten, Einbahnstraﬂe Richtung S¸den	q3::inwork; 12066,9558 12074,9689 12088,9775
 Sandinostr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 15799,14674 15706,14752
@@ -371,6 +372,7 @@ Heinrich-Lassen-Park: Fuﬂg‰nger, Radfahren offiziell nicht erlaubt	q3 6664,8787 
 An der Malche: teilweise eng und kurvig	q1 1106,20424 1032,20580 895,20523 834,20610 625,20738
 Am Friedhof: recht enger Radweg	q1 6380,17836 6376,17687 6347,17381
 Gerlachsheimer Weg: Fuﬂg‰nger	q2 13151,7914 13240,7966
+Jan-Hus-Weg/Kirchgasse: Fuﬂg‰nger	q2 13085,7904 13117,7939 13151,7914
 Wanzlikpfad: eng und kurvig, Fuﬂg‰nger	q3 13268,7801 13309,7911
 (Tunnelstr. - Uferweg): Fuﬂg‰nger	q1 15662,9501 15749,9558
 (Fischzug - Uferweg): Spielplatz, zwei Schwinggitter	q4 15219,10079 15260,10048
@@ -465,8 +467,8 @@ Wuhlewanderweg: Fuﬂg‰nger	q1 21611,9893 21619,9993 21566,10230 21585,10289 21584
 Wuhlewanderweg: Fuﬂg‰nger	q1 22059,10782 22103,10814 22160,10834
 Heinrich-Dathe-Platz: Fuﬂg‰nger	q2 18512,10337 18484,10411 18471,10430 18442,10467
 Heinrich-Dathe-Platz: Fuﬂg‰nger	q2 18484,10411 18394,10348
-Dathepromenade: Fuﬂg‰nger	q1 18394,10348 18320,10318 18302,10289 18314,10260 18132,10183 18101,10169 18048,10169
-(Dathepromenade - Sewanstr.): Bordsteine	q3 17953,10123 17905,10122
+Dathepromenade: Fuﬂg‰nger	q1 18394,10348 18320,10318 18302,10289 18314,10260 18132,10183 18101,10169 18058,10166
+(Dathepromenade - Sewanstr.): Bordsteine	q3 17970,10132 17905,10122
 Rheingoldpark: Fuﬂg‰nger haben Vorrang	q1 19073,8828 19145,8659
 Schloﬂinsel Kˆpenick: Fuﬂg‰nger	q4 22093,4499 22076,4422
 Braunschweiger Ufer: Fuﬂg‰nger	q1 12718,5845 13077,5893 13483,5973
@@ -655,7 +657,7 @@ Cheruskerpark: Fuﬂg‰nger	q1 7439,8716 7405,8698 7382,8658 7368,8595 7352,8391 73
 (Rudolfplatz, Park): Fuﬂg‰nger, Bordsteine, Radfahren verboten, ggfs. schieben	q3 14026,10869 13896,10851
 (Hoeppnerstr. - Hessenring): eng, Fuﬂg‰nger	q3 8376,7440 8446,7524 8549,7622
 (Kolonie Z‰hringer Korso): eng	q3 8553,7795 8554,7746 8573,7710 8549,7622
-(Schulze-Boysen-Str. - Wilhelm-Guddorf-Str.): enge Straﬂe	q1 15634,11656 15482,11729 15413,11690
+(Schulze-Boysen-Str. - Wilhelm-Guddorf-Str.): enge Straﬂe	q1 15639,11653 15482,11729 15413,11690
 (Unterf¸hrung S-Bhf. Rummelsburg): Fuﬂg‰nger	q4 15379,10651 15419,10706 15433,10765
 (Unterf¸hrung Bhf. Karlshorst): Fuﬂg‰nger	q3 18875,8365 18910,8390 18949,8437
 Vereinsweg (Charlottenburg): Radfahren verboten	q4 2828,11731 2855,11752 2907,11755 2934,11747
@@ -991,6 +993,7 @@ Idealpassage: Fuﬂg‰nger, eng, Schrittgeschwindigkeit	q3 12434,8776 12578,8654
 (Am Wriezener Bahnhof - R¸dersdorfer Str.): enger Weg, Bordsteine	q2 12944,11760 13052,11867
 (Normannenstr. - Jobcenter Lichtenberg): Bordstein, Fuﬂg‰nger	q2 16056,12317 16068,12376
 (Normannenstr. - Jobcenter Lichtenberg): Fuﬂg‰nger	q1 16068,12376 16079,12432 16089,12522
+(Normannenstr. - Jobcenter Lichtenberg): teilweise auf Geweg ausweichen	q2 16089,12522 16122,12524 16132,12621
 (Parkweg): Fuﬂg‰nger, Radfahren offiziell nicht erlaubt	q2 14690,12900 14419,12978
 Zur Kreutzigerstr.: enger Hausdurchgang	q3 14291,12220 14285,12190
 (Zobtener Str. - Fischerstr.): Fuﬂg‰nger, Rampe, Bordstein	q2 16353,10207 16404,10286
@@ -1428,6 +1431,7 @@ Iranische Str.: einige Fuﬂg‰nger	q1 7843,16524 7717,16541 7707,16543 7456,16620
 (Nennhauser Damm - Am alten Gaswerk): einige Fuﬂg‰nger	q1 -8043,13464 -8136,13542
 (Mauerweg Forst Spandau): sehr eng	q4 -7032,19431 -7069,19436 -7397,19289
 (Glindowseestr. - Plauer-See-Str.): einige Fuﬂg‰nger	q1 -1652,16721 -1666,16652 -1685,16583 -1699,16513 -1715,16444 -1734,16375
+(Mall of Berlin): Einkaufszentrum, Fuﬂg‰nger	q4 8837,11676 8834,11536
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Sch¸ler	q2 7242,8586 7288,8635

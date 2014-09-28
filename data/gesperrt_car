@@ -1493,6 +1493,7 @@ Grünspechtweg: Schranke	3 7171,22942 7059,23127 6988,23244
 Feldlerchenweg: Schranke	3 6956,23166 7000,23095 7109,22919
 Feldlerchenweg: Schranke	3 7109,22919 7000,23095 6956,23166
 Auswärtiges Amt	3 9961,12094 10003,12113 9972,12184
+Auswärtiges Amt	3 10064,11953 10003,12113 9961,12094
 Im Vogtland	1 6657,23334 6684,23308 6727,23287
 Überquerungsmöglichkeit nur für BVG frei	3nocross::ignrte 11560,13232 11681,13161 11723,13139
 Mollstr. -> Berolinastr.: Überquerungsmöglichkeit nur für BVG frei	3::igndisp 11723,13139 11681,13161 11656,13100
@@ -1701,3 +1702,4 @@ Koppelweg - Britzer Damm	3 12288,4378 12547,4391 12731,4841
 Möllendorffstr. [Wohngebiet]	1 15470,13509 15479,13273 15347,13268
 Berliner Allee -> Falkenberger Str.: nur für BVG frei	3 14608,16772 14619,16682 14723,16691
 Dennewitzplatz	1 7906,10098 7866,9918
+Buolstr.	1 559,15342 429,15284

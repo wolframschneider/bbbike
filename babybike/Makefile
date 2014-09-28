@@ -17,6 +17,10 @@ DISTDEST?=		/tmp/bbbike
 BBBIKEDIR?=		..
 MISCSRCDIR?=		../miscsrc
 DATADIR?=		../data
+PERL?=			perl
+BBBIKEDRAW=		${PERL} ${MISCSRCDIR}/bbbikedraw.pl
+# Alternatively try "Mapnik" or "GD"
+BBBIKEDRAW_RENDERER?=	MapServer
 
 # BIG only useable for tiled images
 BIG_GEOMETRY=		3000x2250
@@ -114,9 +118,9 @@ image_berlin_tiles:	do-image-berlin tile-image-berlin
 
 do-image-berlin:
 	[ -d images/berlin_tiles ] || mkdir images/berlin_tiles
-	../miscsrc/bbbikedraw.pl -datadirs data \
+	${BBBIKEDRAW} -datadirs data \
 	    -outtype png \
-	    -mapserver \
+	    -module ${BBBIKEDRAW_RENDERER} \
 	    -geometry $(BIG_GEOMETRY) -ipaq -nooutline -fillimage \
 	    -drawtypes str,flaechen,wasser,faehren,ubahn,ubahnname,sbahn,sbahnname,rbahn,berlin,ort,obst \
 	    -minplacecat 0 \
@@ -134,11 +138,11 @@ cleanup-berlin-tiles:
 # Brandenburg Tiles
 image_brb_tiles:	do-image-brb tile-image-brb
 
-# -mapserver oder nicht?
 do-image-brb:
-	../miscsrc/bbbikedraw.pl -geometry $(BIG_GEOMETRY) -ipaq -nooutline\
+	-mkdir images/brb_tiles
+	${BBBIKEDRAW} -geometry $(BIG_GEOMETRY) -ipaq -nooutline\
 	    -outtype png \
-	    -mapserver \
+	    -module ${BBBIKEDRAW_RENDERER} \
 	    -minplacecat 0 \
 	    -scope region -drawtypes str,wasser,rbahn,berlin,ort \
 	    -bbox $(BRB_BBOX) \
@@ -156,8 +160,9 @@ cleanup-brb-tiles:
 # Old rules
 # keine ubahnname/sbahnname - zu kleine Karte!
 image_berlin:
-	../miscsrc/bbbikedraw.pl -datadirs data \
+	${BBBIKEDRAW} -datadirs data \
 	    -outtype png \
+	    -module ${BBBIKEDRAW_RENDERER} \
 	    -geometry $(GEOMETRY) -ipaq -nooutline -fillimage \
 	    -drawtypes str,flaechen,wasser,ubahn,sbahn,berlin,ort \
 	    -o images/berlin.png -dimfile images/berlin.dim
@@ -170,7 +175,7 @@ image_berlin:
 
 # high quality image with ImageMagick, but SLOW!!!
 image_berlin2:
-	../miscsrc/bbbikedraw.pl -imagemagick -outtype png -datadirs data \
+	${BBBIKEDRAW} -imagemagick -outtype png -datadirs data \
 	    -outtype png \
 	    -geometry $(GEOMETRY) -ipaq -nooutline -fillimage \
 	    -drawtypes str,flaechen,wasser,ubahn,sbahn,berlin,ort \
@@ -182,16 +187,18 @@ image_berlin2:
 # Should not be used ... rather draw fragezeichen as a bbd layer
 # Also, still uses ppmtoxpm instead of convert
 image_berlin_fragezeichen:
-	../miscsrc/bbbikedraw.pl -datadirs data \
+	${BBBIKEDRAW} -datadirs data \
 	    -outtype png \
+	    -module ${BBBIKEDRAW_RENDERER} \
 	    -geometry $(GEOMETRY) -ipaq -nooutline -fillimage \
 	    -drawtypes str,flaechen,wasser,berlin,ort,fragezeichen \
 	    -o images/berlin.png -dimfile images/berlin.dim
 	pngtopnm images/berlin.png | ppmtoxpm | gzip -9 > images/berlin.xpm.gz
 
 image_brb:
-	../miscsrc/bbbikedraw.pl -geometry $(GEOMETRY) -ipaq -nooutline\
+	${BBBIKEDRAW} -geometry $(GEOMETRY) -ipaq -nooutline\
 	    -outtype png \
+	    -module ${BBBIKEDRAW_RENDERER} \
 	    -minplacecat 1 \
 	    -scope region -drawtypes str,wasser,rbahn,berlin,ort \
 	    -o images/brb.png -dimfile images/brb.dim
@@ -399,7 +406,7 @@ data_koethen_gpstracks:
 	${MISCSRCDIR}/restrict_bbd_data.pl -bbox $(BBOX_KOETHEN)  -strdata ${BBBIKEDIR}/tmp/streets.bbd,${BBBIKEDIR}/misc/mps_examples/streets.bbd -o - | gzip -9f > data_koethen/gpstracks.gz
 
 image_koethen:
-	env BBBIKE_DATADIR=data_koethen ../miscsrc/bbbikedraw.pl -geometry 750x* -ipaq -nooutline\
+	env BBBIKE_DATADIR=data_koethen ${BBBIKEDRAW} -geometry 750x* -ipaq -nooutline\
 	    -outtype png -bbox $(BBOX_KOETHEN) \
 	    -scope wideregion -drawtypes str,wasser,rbahn,ort \
 	    -minplacecat 0 \
@@ -408,7 +415,7 @@ image_koethen:
 
 image_koethen_tiles:
 	-mkdir images/koethen_tiles
-	env BBBIKE_DATADIR=data_koethen ../miscsrc/bbbikedraw.pl \
+	env BBBIKE_DATADIR=data_koethen ${BBBIKEDRAW} \
 	    -outtype png -bbox $(BBOX_KOETHEN) \
 	    -geometry 2250x* -ipaq -nooutline -fillimage \
 	    -scope wideregion -drawtypes str,wasser,rbahn,ort \
@@ -447,10 +454,10 @@ data_uckermark_gpstracks:
 
 
 image_uckermark:
-	env BBBIKE_DATADIR=data_uckermark ../miscsrc/bbbikedraw.pl -geometry 900x* -ipaq -nooutline\
+	env BBBIKE_DATADIR=data_uckermark ${BBBIKEDRAW} -geometry 900x* -ipaq -nooutline\
 	    -outtype png -bbox $(BBOX_UCKERMARK) \
 	    -scope wideregion -drawtypes str,wasser,rbahn,ort \
-	    -mapserver \
+	    -module ${BBBIKEDRAW_RENDERER} \
 	    -minplacecat 0 \
 	    -o images/uckermark.png -dimfile images/uckermark.dim
 	pngtopnm images/uckermark.png | ppmtoxpm | gzip -9 > images/uckermark.xpm.gz
@@ -458,9 +465,9 @@ image_uckermark:
 # XXX evtl. cleanup uckermark_tiles
 image_uckermark_tiles:
 	-mkdir images/uckermark_tiles
-	env BBBIKE_DATADIR=data_uckermark ../miscsrc/bbbikedraw.pl \
+	env BBBIKE_DATADIR=data_uckermark ${BBBIKEDRAW} \
 	    -outtype png -bbox $(BBOX_UCKERMARK) \
-	    -mapserver \
+	    -module ${BBBIKEDRAW_RENDERER} \
 	    -geometry 2250x* -ipaq -nooutline -fillimage \
 	    -scope wideregion -drawtypes str,wasser,rbahn,ort \
 	    -minplacecat 0 \

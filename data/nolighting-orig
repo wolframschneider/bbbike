@@ -337,11 +337,11 @@ Claire-Waldoff-Weg	NL 3635,8099 3587,7560
 (Volkspark Friedrichshain)	NL 12483,13418 12586,13368
 (Volkspark Friedrichshain)	NL 12420,13370 12341,13309 12244,13240 12236,13229
 (Volkspark Friedrichshain)	NL 12369,13209 12369,13252 12341,13309 12307,13329 12206,13326 12166,13349 12141,13341
-#: note: beleuchtet am 2012-10-26, nicht beleuchtet am 2013-05-30 gegen 0:30
+#: note: beleuchtet am 2012-10-26, nicht beleuchtet am 2013-05-30 gegen 0:30 und am 2014-09-25 gegen 0:00
 (Volkspark Friedrichshain): hier stehen zwar Laternen, sind aber abends und nachts (manchmal?) nicht eingeschaltet	NL 12344,13627 12204,13609
 #: XXX werden diese Abschnitte irgendwann wieder beleuchtet werden? vvv
-#: last_checked: 2014-01-30 vvv
-#: next_check: 2014-09-23 vvv
+#: last_checked: 2014-09-25 vvv
+#: next_check: 2015-01-23 vvv
 (Volkspark Friedrichshain): hier stehen zwar Laternen, sind aber abends und nachts nicht eingeschaltet	NL 12204,13609 12169,13609 12141,13609 12012,13599
 (Volkspark Friedrichshain): hier stehen zwar Laternen, sind aber abends und nachts nicht eingeschaltet	NL 12161,13711 12145,13628 12141,13609 12129,13531 12111,13480 12060,13422
 #: next_check ^^^
@@ -984,10 +984,7 @@ Oderstr.	NL 11565,7402 11601,7362 11615,7284 11608,7267 11593,7237
 (zum Fähranleger Krughorn)	NL -10044,1567 -10055,1628
 #: by: Matthias Dörge:
 Jochen-Klepper-Weg	NL -3030,2266 -2784,2358 -2690,2385 -2372,2477
-#: XXX Beleuchtung existiert, funktioniert aber nicht
-#: last_checked: 2013-12-09
-#: next_check: 2014-09-23
-entlang der Stadtbahn	NL 12132,11788 11966,11832
+# REMOVED (Beleuchtung funktioniert wieder) --- #: XXX Beleuchtung existiert, funktioniert aber nicht --- #: last_checked: 2013-12-09 --- #: next_check: 2014-09-23 --- entlang der Stadtbahn	NL 12132,11788 11966,11832
 Krautstr.	NL 11993,11978 11966,11832
 #: note: keine direkte Beleuchtung, aber eigentlich genug indirekte
 Hermann-Stöhr-Platz	NL 12453,11790 12409,11902
@@ -1272,7 +1269,7 @@ Waltershauser Str.	NL 6534,1702 6673,1748 6844,1813
 (Weg zum Hechtgraben)	NL 16757,18910 16780,18930 16784,18955 16734,19033 16694,19042 16665,19021
 (Weg auf dem Lärmschutzwall)	NL 16665,19021 16699,19090 17197,18473 17275,18356 17564,18010 17585,17963
 (Zingster Str. - Wartenberger Weg)	NL 16358,18687 16325,18796
-Kynaststr. [ehem. Ersatzstraße]	NL 14688,10167 14752,10246 14794,10336 14820,10473 14832,10512
+# REMOVED --- Kynaststr. [ehem. Ersatzstraße]	NL 14688,10167 14752,10246 14794,10336 14820,10473 14832,10512
 #: note: zumindest an der Neidenburger Allee keine Beleuchtung gesehen
 Frauenburger Pfad	NL 475,10882 572,10876 677,10870 775,10864
 #: note: eine Beleuchtung existiert nur auf den östlichen 50 Metern
