@@ -13,7 +13,7 @@
 # REMOVED --- #: source_id: IM_021244 vvv --- #: valid: -20140320 vvv --- #: last_checked: 2014-04-04 vvv --- #: next_check: 2014-04-07 vvv --- # REMOVED (mittlerweile recht gut passierbar) --- R¸dersdorfer Str./Marchleweskistr.: Baustelle, Kreuzung gesperrt, langsame Umfahrung ¸ber Gehweg mˆglich, bis zum 30.04.2014	q3::inwork 13173,11788 13295,11792 13366,11651 --- # REMOVED (mittlerweile recht gut passierbar) --- R¸dersdorfer Str./Marchleweskistr.: Baustelle, Kreuzung gesperrt, langsame Umfahrung ¸ber Gehweg mˆglich, bis zum 30.04.2014	q3::inwork 13275,11830 13295,11792 --- # REMOVED (Baustelle fast verschwunden) --- Torellstr./Marchleweskistr.: Baustelle, Zufahrt zur Kreuzung gesperrt, langsame Umfahrung ¸ber Gehweg mˆglich, bis zum 30.04.2014	q3::inwork 13295,11792 13467,11778 --- #: next_check ^^^ --- #: last_checked ^^^ --- #: valid: ^^^ --- #: source_id ^^^
 # REMOVED (fertig) --- #: last_checked: 2014-07-06 --- #: check_frequency: 3d --- Simplonstr.: Einbahnstraﬂe wegen Bauarbeiten	q2::inwork; 14468,11203 14531,11142
 # 
-#: last_checked: 2014-09-22 vvv
+#: last_checked: 2014-09-28 vvv
 Revaler Str.: wegen Bauarbeiten Fahrbahn gesperrt	q3::inwork 14357,11148 14442,11101
 Helmerdingstr.: wegen Bauarbeiten Fahrbahn teilweise gesperrt	q3::inwork 14442,11101 14468,11203
 #: last_checked ^^^
@@ -329,8 +329,8 @@ Friedelstr.: Bauarbeiten, Einbahnstraﬂe Richtung S¸den	q3::inwork; 12066,9558 12
 # 
 #: next_check_id: SANDINO-2014
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2014-09-12
-#: check_frequency: 45d
+#: last_checked: 2014-09-27
+#: check_frequency: 21d
 Sandinostr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 15799,14674 15706,14752
 # 
 #: last_checked: 2014-09-21
@@ -594,12 +594,12 @@ Volkspark Wilmersdorf: kombinierter Rad- und Fuﬂweg	q1 5465,8511 5417,8519 5347,
 (zur Thomas-Dehler-Str.): Fuﬂg‰nger, Bordsteine	q4 6654,11460 6716,11439
 #: by: ADFC-Karte
 Ernststr.: Fuﬂg‰nger	q2 2497,19503 2700,19527
-(S-Bahnunterf¸hrung Wartenberg): Fuﬂg‰nger	q1 16936,18658 16998,18695
+(S-Bahnunterf¸hrung Wartenberg): Fuﬂg‰nger	q1 16939,18652 16998,18695
 (S-Bahnunterf¸hrung Wartenberg): Rampe	q3 16998,18695 17024,18674 17008,18701
 (S-Bahnunterf¸hrung Wartenberg): Fuﬂg‰nger	q2 17008,18701 17068,18736
 (S-Bahnunterf¸hrung Wartenberg): Rampe	q3 17068,18736 17086,18719 17077,18744
 (S-Bahnunterf¸hrung Wartenberg): Fuﬂg‰nger	q1 17077,18744 17109,18772
-(Weg zwischen S-Hohenschˆnhausen und S-Wartenberg): eng und teilweise kurvenreich	q1 17557,17999 17267,18343 17235,18352 17159,18375 17102,18490 17040,18571 17002,18578 16936,18658
+(Weg zwischen S-Hohenschˆnhausen und S-Wartenberg): eng und teilweise kurvenreich	q1 17557,17999 17267,18343 17235,18352 17159,18375 17102,18490 17040,18571 17002,18578 16939,18652
 #: note: jeweils zwei Serpentinen pro Seite, groﬂer Zeitverlust
 Bernburger Treppe: Rampen	q4 8536,11063 8512,11069 8516,11086 8484,11097 8478,11080 8454,11086
 Virchowstr. (Volkspark Friedrichshain): Fuﬂg‰nger	q1 12876,13440 12826,13526 12802,13584 12784,13610 12766,13621 12743,13634 12709,13691 12707,13706
@@ -1278,7 +1278,7 @@ Kelchstr.: enge Straﬂe	q1 7386,4692 7424,4821 7437,4855 7456,4934
 Doldenweg: Bordsteine, Fuﬂg‰nger	q2 7424,4821 7487,4802
 Kottesteig: Bordsteine, Fuﬂg‰nger	q1 6868,5262 6820,5237 6806,5230
 (Zu den Krugwiesen - Vincent-van-Gogh-Str.): Fuﬂg‰nger	q1 18646,17345 18704,17565
-(Weg durch die Falkenberger Krugwiesen): Fuﬂg‰nger	q1 18704,17565 18756,17498 18784,17525 18831,17663 18986,17786 19102,17879 19110,18015 19127,18091 19212,18205 19251,18252 19249,18351 19265,18400 19291,18456
+(Weg durch die Falkenberger Krugwiesen): Fuﬂg‰nger	q1 18704,17565 18756,17498 18784,17525 18831,17663 18937,17738 18986,17786 19102,17879 19110,18015 19127,18091 19212,18205 19251,18252 19249,18351 19265,18400 19291,18456
 (Falkenberger Krugwiesen - Falkenberger Chaussee): Fuﬂg‰nger	q1 19212,18205 18969,18448
 Stritteweg: vereinzelte Stufen und schmale Rampen	q3 -5236,11204 -5256,11142
 K¸nstlerweg: enge Straﬂe	q1 -7418,7842 -7334,7703 -7258,7735 -7340,7873
@@ -2089,7 +2089,7 @@ Engelwurzweg: eng	q2 24275,6156 24306,6210 24368,6268 24424,6296 24473,6304
 (Uferweg an der Spree): Radfahren verboten	q4 18695,5453 18608,5501 18560,5539 18506,5596 18430,5719 18413,5799 18400,5841 18334,5900 18199,5935
 (Uferweg an der Spree - Kaisersteg): Radfahren verboten	q4 18413,5799 18339,5853 18326,5850
 Insel-R¸gen-Weg: eng	q2 10967,17671 10978,17589 11064,17599
-(Weg im Wustrower Park): einige Fuﬂg‰nger, eng	q2+ 17235,18352 17159,18309 17087,18434 17102,18490 17021,18663
+(Weg im Wustrower Park): einige Fuﬂg‰nger, eng	q2+ 17235,18352 17162,18304 17087,18434 17102,18490 17021,18663
 (an den Schˆnhauser Allee Arcaden): Fuﬂg‰nger	q3 11150,15908 11070,15944 11086,15984
 (an den Schˆnhauser Allee Arcaden): Fuﬂg‰nger	q4 11086,15984 10975,16010
 #: XXX_prog falls man die Umfahrung auf dem Gehweg w‰hlt, auf der s¸dlichen Seite, ansonsten wegfallen lassen
@@ -2135,6 +2135,11 @@ Iranische Str.: einige Fuﬂg‰nger	q1 7843,16524 7717,16541 7707,16543 7456,16620
 (Mauerweg Forst Spandau): sehr eng	q4+ -7032,19431 -7069,19436 -7397,19289
 (Glindowseestr. - Plauer-See-Str.): einige Fuﬂg‰nger	q1 -1652,16721 -1666,16652 -1685,16583 -1699,16513 -1715,16444 -1734,16375
 (Mall of Berlin): Einkaufszentrum, Fuﬂg‰nger	q4 8837,11676 8834,11536
+(Hohenschˆnhauser Str. - Falkenberger Krugwiesen): einige Fuﬂg‰nger, eng	q1 19183,17444 19074,17533 19017,17609 18993,17630 18965,17675 18937,17738
+#: XXX_prog BS an der Fahrbahn der Premnitzer, ansonsten entfernen
+Premnitzer Str.: Bordstein	q4 20363,16976 20376,16970
+#: XXX_prog BS an der Wustrower Str., ansonsten evtl. das handicap des Parkwegs fortsetzen
+(Wustrower Str. - Wustrower Park): Bordstein	q3 17128,18281 17162,18304
 ######################### User Contributions #################################
 # 
 #: by: Michael Kiekbusch vvv
@@ -3417,7 +3422,7 @@ Lauxweg: enge Straﬂe	q1 8979,3347 8921,3208
 Martinstr.: enge Straﬂe	q1 4956,5121 5102,5031
 #: by: franziska (...ringleb...):
 #: corrected_by: srt/policy (q3 -> q1)
-Straﬂe 113: enge Straﬂe	q1 9931,20952 9897,21035 9852,21151
+Straﬂe 113: enge Straﬂe	q1 9924,20951 9897,21035 9852,21151
 #: by: Nikola Notz:
 Schnepfenreuther Weg: enge Straﬂe	q1 -3495,16393 -3466,16455 -3444,16576 -3426,16837 -3404,17147
 #: by: anne schotte: vvv
