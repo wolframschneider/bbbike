@@ -129,8 +129,8 @@ userdel	2 8538,12245 8610,12254
 userdel	2 8546,12279 8570,12302 8573,12325 8540,12420 
 ',
          'periodic' => 1,
-         'until' => 1412395200,
-         'from' => 1412222400,
+         'until' => 1412632799,
+         'from' => 1412049600,
          'recurrences' => [
                             [
                               'yearly',
@@ -140,7 +140,7 @@ userdel	2 8546,12279 8570,12302 8573,12325 8540,12420
                               9
                             ]
                           ],
-         'text' => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straße vollständig gesperrt (bis voraussichtlich zum 04.10.2014)',
+         'text' => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straße vollständig gesperrt (01.10.2014 bis 06.10.2014)',
          'type' => 'gesperrt',
          'id' => 127
        },
@@ -2448,7 +2448,7 @@ userdel	3 8374,11479 8389,11378 8427,11365
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober von 7.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -3213,16 +3213,7 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       {
-         'source_id' => '131100196',
-         'until' => 1412114399,
-         'text' => 'Zwischen Birkholz und Zepernick: Neubau der Autobahnbrücke, Straße ist auch für Radfahrer nicht passierbar, 01.10.2013 bis 30.09.2014 ',
-         'from' => 1380520800,
-         'id' => 2493,
-         'data' => 'userdel	2::inwork 21169,27133 21320,27078
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3577,7 +3568,8 @@ userdel	q4::inwork; 16514,15092 16430,15168
          'text' => 'Gounodstr.: Bauarbeiten zwischen von Herbert-Baum-Str. bis Borodinstr., ab Ende September 2014 bis Ende Dezember 2014',
          'from' => 1411941600,
          'id' => 2628,
-         'data' => 'userdel	q4::inwork 13645,15609 13739,15643 13939,15723
+         'data' => '#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/gounodstrasse.php
+userdel	q4::inwork 13645,15609 13739,15643 13939,15723
 ',
          'type' => 'handicap'
        },
@@ -3650,11 +3642,34 @@ userdel	2::inwork 15419,10706 15379,10651
          'text' => 'Invalidenfriedhof - Invalidestr.: Weg wegen Bauarbeiten gesperrt, bis 20.02.2015',
          'from' => 1412021931,
          'id' => 2636,
-         'data' => '#: by: Birgit Schroeer
-#: XXX vor Ort anschauen --- vielleicht wird hier asphaltiert?
+         'data' => '#: next_check_id: INVALIDENFRIEDHOF-2014
+#: by: Birgit Schroeer
+#: XXX vielleicht wird hier asphaltiert?
+#: last_checked: 2014-10-01
+#: next_check: 2015-02-14
 userdel	2::inwork 8101,13901 8248,13659 8337,13541
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/imperia/md/content/batempelhofschoeneberg/abtfinperswibuerg/ordnungsamt/tiefbau/strassenbauliste_stand_2014_09_26.pdf?start&ts=1411733076&file=strassenbauliste_stand_2014_09_26.pdf',
+         'until' => 1413410400,
+         'text' => 'Albrechtstraße: Fahrbahnsanierung zwischen Friedensplatz und Tempelhofer Damm, Sperrung der Fahrbahn, 15.09.2014 bis 15.10.2014',
+         'from' => 1410732000,
+         'id' => 2637,
+         'data' => 'userdel	q4::inwork 9003,6121 9212,6096
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/imperia/md/content/batempelhofschoeneberg/abtfinperswibuerg/ordnungsamt/tiefbau/strassenbauliste_stand_2014_09_26.pdf?start&ts=1411733076&file=strassenbauliste_stand_2014_09_26.pdf',
+         'until' => 1414710000,
+         'text' => 'Albrechtstraße: Fahrbahnsanierung zwischen Friedensplatz und Manteuffelstraße, Sperrung der Fahrbahn, 15.10.2014 bis 30.10.2014',
+         'from' => 1413237600,
+         'id' => 2638,
+         'data' => 'userdel	q4::inwork 8661,6169 8830,6145 8944,6127
+',
+         'type' => 'handicap'
        }
      
 );
