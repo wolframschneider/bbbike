@@ -257,7 +257,7 @@ div#sidebar {
 div#sidebar_dummy {
 	position: absolute; 
 	left: 0px;
-	width: 6em;
+	width: 3em;
 }
 
 /* inside sidebar */
@@ -425,4 +425,15 @@ table.footer td {
 }
 
 #big_donate_image { text-align:center; }
+
+div#more_cities {
+    margin-left: 24.0em;
+}
+
+div#more_cities_inner {
+   font-size: small;
+   border:2px black dotted;
+   padding: 0.5em;
+   margin-right: 2px;
+}
 

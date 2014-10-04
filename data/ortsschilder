@@ -357,6 +357,7 @@ Schwanebeck	OS 19790,24572
 Schwanebeck	OS 19395,24634
 Schwanebeck	OS 17895,25260
 Schwanebeck	OS 17193,24683
+Schwanebeck	OS 18108,26048
 Schwanebeck	OS 19648,26794
 Schwanebeck-West	OS 17622,24160
 Schwanebeck-West	OS 18015,25653
@@ -742,6 +743,10 @@ Klosterwalde	OS 19681,85491
 Klosterwalde	OS 19533,85103
 Birkenstein	OS 26904,13065
 Birkenstein	OS 27566,13555
+Berlin	OS -3495,20025
+Berlin	OS -6788,20819
+Berlin	OS -7168,16258
+Berlin	OS -8445,12092
 Berlin	OS 13345,27187
 Berlin	OS 25632,11132
 Berlin	OS 25005,15636
@@ -803,6 +808,7 @@ Niederfelde	OHT 66263,84195
 Dallgow-Döberitz	OS -9503,12227
 Seeburg	OS -9034,11411
 Seeburg	OS -8809,10915
+Seeburg	OS -8445,12092
 Groß Glienicke	OHT -9935,7406
 Groß Glienicke	OS -10010,6853
 Groß Glienicke	OS -10059,6832
@@ -854,3 +860,5 @@ Karlsberg	OS 58853,91488
 Karlsberg	OS 58910,91735
 Seefeld-Löhme	OS 28921,23343
 Bahnhof Schönermark	OHT 51668,78605
+Falkensee	OS -7168,16258
+Schönwalde-Siedlung	OS -6788,20819

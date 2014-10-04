@@ -325,7 +325,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: by: http://www.berlin.de/ba-mitte/bvv-online/___tmp/tmp/45081036147184117/147184117/00116327/27-Anlagen/02/MA_1534_IV.pdf
 #: note: Anforderungsampel
 #: last_checked: 2014-04-04
-#: check_frequency: 180d
+#: next_check: 2015-02-01
 	F 10511,14418
 	X 10002,14092
 	X 9800,14722
@@ -658,7 +658,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -3355,14764
 	X -1994,11496
 	X -2419,13237
-	X -2706,13291
+	X -2725,13287
 	X -3189,13588
 	X -3227,14260
 	X -3009,17090
@@ -828,7 +828,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX_prog: zurzeit eine Fußgängerampel mit Anforderung, östlich versetzt, lange Wartezeiten
 #: source_id: INKO_117292
 #: last_checked: 2014-06-02
-#: next_check: 2014-11-07
+#: next_check: 2014-09-26
 	X 4507,11728
 	X 3807,11859
 	X 3408,11849
@@ -990,7 +990,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 20575,11698
 	X 20549,11659
 	X 22771,16194
-	X -4063,11805
+	X -4076,11810
 	X -4789,11225
 	X -5392,11421
 	X -6660,9953
@@ -1501,7 +1501,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 16961,16042
 	X 16656,16157
 	X 18601,18342
-	X 17515,16215
+	X 17516,16208
 	X 17425,16165
 	X 21251,18508
 #: XXX_prog: nur eine Ampel: vvv
@@ -1714,6 +1714,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -7170,4962
 	X -7120,5076
 	X -7389,5294
+#: note: Anforderungsampel
 	X -7556,5515
 	X -8116,6167
 	X 21977,9023
@@ -1826,6 +1827,8 @@ S-Bahn und Regionalbahn	B 21562,12088
 #: XXX_prog: eigentlich zwei Ampeln (die Kreuzung mit der Mühlenstr. ist etwas versetzt), aber wahrscheinlich gleich geschaltet
 	X 11940,22587
 	X 2394,9714
+#: XXX_prog muss beim Überqueren der Kurfürstenstr. benutzt werden
+#: note: Anforderungsampel
 	F 6277,10924
 #: by: Olaf Schulz vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 	F 11310,14953
@@ -1992,7 +1995,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	X 20201,2392
 	F 6710,6342
 	B 25109,12196
-	B 14314,25193
+	B 14308,25196
 	F 9314,12652
 	F 9410,14410
 	F 9870,14759
@@ -2110,7 +2113,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	F 17675,17971
 	F 17973,17772
 #: note: Luftbild
-	X -4663,14820
+	X -4671,14818
 	X 18809,9133
 	X 21337,13470
 	X 23021,13982
@@ -2169,6 +2172,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8372,22603
 Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 #: by: Message-ID: <f7gpgb$22l$1@mobile.in-berlin.de>
 	F 1442,12480
+	F 1669,12413
 #: note: Luftbild:
 	X -4290,14025
 	X 4821,5345
@@ -2316,8 +2320,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 15142,16499
 	F 11750,16354
 	X 8901,12008
-	X 18206,13817
-#: note: Abends meist (immer?) ausgeschaltet, evtl. auch am Wochenende
+	X 18198,13816
+#: note: Abends meist (immer?) ausgeschaltet, und auch sonntags (z.B. So 2014-09-21 nachmittags) (Sa 2014-09-27 15:30 eingeschaltet)
 #: note: Anforderungsampel
 #: off: night
 	F 14802,11784
@@ -2334,8 +2338,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 5238,13714
 #: note: Luftbild
 	F -6911,13817
-#: note: Luftbild
 	F -4793,9970
+	F -4825,10560
 	F 20788,4008
 #: XXX_prog: gilt nicht in Fahrtrichtung Nordwest
 	F 14842,8809
@@ -2382,10 +2386,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 22031,9142
 	F 15356,3759
 #: next_check_id: KARLSHORSTER-2014 vvv
-#: last_checked: 2014-09-06 vvv
-#: next_check: 2014-09-22 vvv
+#: last_checked: 2014-09-17 vvv
+#: next_check: 2014-10-22 vvv
 #: note: provisorische Ampel
-#: valid: 20140630-20140922 vvv
+#: valid: 20140630-20141022 vvv
 	X::inwork 14906,10820
 	X::inwork 14805,10518
 #: valid ^^^
@@ -2455,6 +2459,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 23942,5338
 	F 11033,13086
 #: note: Anforderungsampel
+#: XXX_prog für Radfahrer zumindest in Nordrichtung nicht relevant
 	F 16370,24600
 	F 16037,25915
 	F 16166,25767
@@ -2506,7 +2511,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX temporäre Ampel (wegen Arbeiten an der Staatsoper und an der U-Bahn)
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
-#: last_checked: 2014-09-02
+#: last_checked: 2014-09-20
 #: check_frequency: 90d
 	F::inwork 9984,12426
 #: next_check_id: UDLU5-2014 vvv
@@ -2521,7 +2526,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: last_checked ^^^
 #: XXX ^^^
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (südlicher Bereich) vvv
-#: last_checked: 2014-09-02 vvv
+#: last_checked: 2014-09-20 vvv
 #: next_check: 2014-12-31 vvv
 	F::inwork 9063,12051
 	F::inwork 9270,12086
@@ -2532,12 +2537,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #
 #: XXX temporäre Ampel (wegen gesperrten Gehweg?), Ampel ist eigentlich etwas weiter westlich
 #: XXX eigentlich gibt es sogar zwei Fußgängerampeln
-#: last_checked: 2014-08-22
+#: last_checked: 2014-09-20
+#: check_frequency: 60d
 	F::inwork 9812,12145
 # 
 #: next_check_id: INVALIDEN-2014
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung an der Invalidenstraße) vvv
-#: last_checked: 2014-06-30 vvv
+#: last_checked: 2014-10-01 (an der Hessischen Str.) vvv
 #: next_check: 2015-05-31 vvv
 	X::inwork 8732,14098
 	X::inwork 8870,13926
@@ -2557,10 +2563,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F -7762,14067
 	F -4924,14535
 #: XXX Baustellenampel
-#: last_checked: 2013-08-19 (indirekt via http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=7375)
+#: last_checked: 2014-09-13
 #: check_frequency: 180d
 	X::inwork -6861,15129
-	F 20614,18481
+	F 20612,18487
 	X 5628,17631
 	X 7676,18492
 #: by: wosch
@@ -2681,6 +2687,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Anforderungsampel
 	F 6153,18592
 	F 5525,21022
+#: note: Anforderungsampel
+	F -7025,16195
+	B0 -3469,18005
+	B0 -3233,17767
+#: note: Anforderungsampel
+	F 7563,13143
+# 
 # 
 ################################################################################
 #: note: Potsdam vvv
@@ -2814,7 +2827,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -9942,21
 	X -12655,-1714
 #: XXX_prog: wechselseitige LSA-Regelung, ca. 100m Länge, größerer Zeitverlust?
-#: last_checked: 2014-08-08
+#: last_checked: 2014-09-16
 #: check_frequency: 90d
 	X::inwork 14018,9118
 ################################################################################
@@ -3230,7 +3243,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 11616,30519
 unbeschrankter Bahnübergang	B0 57683,14751
 unbeschrankter Bahnübergang	B0 56520,16826
 	B 53586,13868
-	B 57463,13977
+	B 57366,13935
 	B 58025,14188
 	F 13642,-997
 	F 13885,-775
@@ -3277,6 +3290,7 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	B -13075,-51085
 	B -12441,-53091
 	B -7578,-70067
+	B 65831,15738
 # 
 #: note: ^^^
 ################################################################################

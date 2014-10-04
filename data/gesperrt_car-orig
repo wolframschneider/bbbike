@@ -96,7 +96,7 @@ Prenzlauer Allee - Belforter Str.	3 11389,13887 11435,14023 11299,14112
 Prenzlauer Allee - Heinrich-Roller-Str.	3 11506,14230 11476,14142 11468,14121 11435,14023 11607,13928
 Heinrich-Roller-Str. - Prenzlauer Allee	3 11607,13928 11435,14023 11389,13887
 Allerstr.	1 11879,7720 12055,7751
-Hiddenseer Str.	1 11657,15271 11828,15210
+Hiddenseer Str.	1 11651,15273 11828,15210
 Koserstr.	1 2950,6141 3112,6090 3118,6140 3209,6206 3309,6270
 Offenbacher Str.	1 4506,7734 4559,7672 4785,7609 5045,7623
 Wassergasse	1 11034,11895 11024,11789
@@ -157,7 +157,7 @@ Leuthener Str.	1 7716,8356 7640,8359
 Lüdenscheider Weg	1 -1389,15285 -1037,15482
 Büsingstr.	1 5215,6643 5210,6522
 Schrammstr.	1 4960,8440 4958,8355
-Stubbenkammerstr.	1 11636,15191 11801,15132
+Stubbenkammerstr.	1 11631,15192 11801,15132
 Templiner Str.	1 10716,14195 10739,14228
 Heylstr.	1 6459,8281 6385,8274 6325,8259
 Fritz-Reuter-Str. (Schöneberg)	1 6621,8221 6779,8279
@@ -266,7 +266,7 @@ Kinzigstr./Frankfurter Allee	3nocross 14523,12183 14621,12168 14702,12157
 Finowstr.+Weichselstr./Frankfurter Allee	3nocross 14702,12157 14854,12137 14919,12130 14994,12121
 Friedrichstr. (Straßenbahn)	3nocross 9225,13389 9246,13235 9255,13164 9262,13111
 Friedrichstr. (Straßenbahn)	3nocross 9262,13111 9269,13060 9279,12953
-Oranienburger Str. (Straßenbahnhaltestelle)	3nocross 9225,13389 9281,13374 9415,13315
+Oranienburger Str. (Straßenbahnhaltestelle)	3nocross 9225,13389 9293,13366 9415,13315
 Saarstr.: Durchfahrt für Autofahrer per Poller gesperrt	3nocross 5966,6747 5896,6785 5811,6833
 #: by: rjoop:
 Putlitzstr.	1 6212,13944 6204,14220
@@ -422,7 +422,7 @@ Stuthirtenweg: Gitter	3 * 13542,1268 *
 Grunerstr.: Mittelstreifen	3nocross 10738,12364 10805,12468 10878,12560 10954,12635
 Bayernring	1 8616,8605 8454,8574 8380,8545
 Georg-Hermann-Allee (Potsdam): (teilweise) Einbahnstraße	1 -13429,1069 -13418,1668
-Ruhlebener Str.: Mittelstreifen	3nocross -3002,13442 -2977,13424 -2967,13417 -2937,13399 -2706,13291
+Ruhlebener Str.: Mittelstreifen	3nocross -3002,13442 -2977,13424 -2967,13417 -2937,13399 -2725,13287
 An der Wuhlheide: Brückenauffahrt	3nocross 18492,6893 18404,6946 18225,7004 18010,7133
 #: note: Luftbild
 Müllerstr.: Mittelstreifen	3nocross 6304,16447 6201,16538 6098,16630
@@ -856,6 +856,7 @@ Grünspechtweg: Schranke	3 * 7059,23127 *
 Feldlerchenweg: Schranke	3 * 7000,23095 *
 #: note ^^^
 Auswärtiges Amt	3 9961,12094 10003,12113 9972,12184
+Auswärtiges Amt	3 10064,11953 10003,12113 9961,12094
 Im Vogtland	1 6657,23334 6684,23308 6727,23287
 Mollstr.: Überquerungsmöglichkeit nur für BVG frei	3nocross 11560,13232 11681,13161 11723,13139
 Weidenweg - Str. der Pariser Kommune: Linksabbiegen verboten (Wendemöglichkeit an der Palisadenstr.)	3 13025,12523 12891,12549 12869,12425
@@ -1000,3 +1001,7 @@ Koppelweg - Britzer Damm	3 12288,4378 12547,4391 12731,4841
 (Möllendorffstr. - Paul-Junius-Str.)	1 15370,13508 15470,13509
 Möllendorffstr. [Wohngebiet]	1 15470,13509 15479,13273 15347,13268
 Berliner Allee -> Falkenberger Str.: nur für BVG frei	3 14608,16772 14619,16682 14723,16691
+Dennewitzplatz	1 7906,10098 7866,9918
+#: by: http://www.berlin.de/ba-spandau/presse/archiv/20140926.0925.399429.html
+#: note: ab 2014-10-01 für Radfahrer offen
+Buolstr.	1 559,15342 429,15284

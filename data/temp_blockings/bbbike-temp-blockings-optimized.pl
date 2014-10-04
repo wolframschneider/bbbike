@@ -1,26 +1,310 @@
-$#temp_blocking = 30;
+$#temp_blocking = 35;
 push @temp_blocking,
 (
        {
-         'data' => '#: by: http://www.berlin.de/tickets/suche/detail.php?id=994455
-userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
+         'source_id' => 'http://partner-fuer-spandau.de/Weihnachtsmarkt-2013_604_0.html',
+         'data' => 'userdel	2::temp -3275,14407 -3231,14383 -3204,14368 -3155,14340
+userdel	2::temp -3275,14407 -3338,14333
+userdel	2::temp -3150,14631 -3185,14556 -3205,14512 -3228,14468 -3275,14407
+userdel	2::temp -3275,14407 -3350,14446 -3393,14470 -3410,14479 -3440,14498 -3481,14523
+userdel	2::temp -3227,14260 -3155,14340
+userdel	2::temp -3227,14260 -3293,14304 -3338,14333
+userdel	2::temp -3552,14082 -3457,14189 -3409,14241 -3338,14333
+userdel	2::temp -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340
+userdel	2::temp -3110,14408 -3174,14438 -3228,14468
+userdel	2::temp -3231,14383 -3293,14304
 ',
          'periodic' => 1,
-         'until' => 1410721200,
-         'from' => 1410512400,
+         'until' => 1419375599,
+         'from' => 1416783600,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              6,
+                              26,
+                              'months',
+                              11
+                            ]
+                          ],
+         'text' => 'Spandauer Weihnachtsmarkt, vom 25.11.2014 bis 23.12.2014',
+         'id' => 36,
+         'type' => 'gesperrt'
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'data' => 'userdel	2 8055,12186 8089,12190 8214,12205
+userdel	2 8214,12205 8303,12216 8538,12245
+userdel	2 8546,12279 8538,12245
+userdel	2 8600,12165 8538,12245
+userdel	2 8538,12245 8610,12254
+userdel	2 8546,12279 8570,12302 8573,12325 8540,12420 
+',
+         'periodic' => 1,
+         'until' => 1412632799,
+         'from' => 1412049600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              29,
                               'months',
                               9
                             ]
                           ],
-         'text' => 'am Lichtenrader Dorfteich: Wein- und Winzerfest, vom 13.9.2014 11:00 bis 14.9.2014 21:00',
+         'text' => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straße vollständig gesperrt (01.10.2014 bis 06.10.2014)',
          'type' => 'gesperrt',
-         'id' => 31
+         'id' => 127
        },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -127,281 +411,27 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
        undef,
        undef,
        {
-         'data' => 'userdel	q4; 6687,8385 6765,8480 6912,8617 6989,8687 7009,8705 7105,8788 7201,8870 7268,8960
+         'source_id' => 'http://www.berlin.de/tickets/suche/detail.php?id=944291',
+         'data' => '# sowieso schon mit q4 markiert, deshalb -> 2
+userdel	2::temp 5829,10964 5782,10884
+userdel	2::temp 5656,10876 5652,11004
 ',
          'periodic' => 1,
-         'until' => 1410717600,
-         'from' => 1410508800,
+         'until' => 1420412399,
+         'from' => 1416697200,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              13,
+                              26,
                               'months',
-                              9
+                              11
                             ]
                           ],
-         'text' => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstaltung (Herbstfest auf der Hauptstraße), Straße gesperrt (13.9.2014 10:00 - 14.9.2014 20:00)',
-         'type' => 'handicap',
-         'id' => 137
+         'text' => 'Weihnachtsmarkt an der Gedächtniskirche, vom 24. November 2014 bis 04. Januar 2015',
+         'id' => 394,
+         'type' => 'gesperrt'
        },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        undef,
        undef,
        undef,
@@ -2108,16 +2138,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_022852',
-         'until' => 1410731999,
-         'text' => 'Bahnhofstr. (Lichtenrade) zwischen Goltzstr. und Steinstr. Veranstaltung, Straße gesperrt bis Sonntag Nacht',
-         'from' => 1410494400,
-         'id' => 1880,
-         'data' => 'userdel	q4::temp 10983,-2116 10747,-2129 10631,-2130 10509,-2131 10453,-2133 10310,-2136
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2176,25 +2197,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
-',
-         'periodic' => 1,
-         'until' => 1411322400,
-         'from' => 1411117200,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              19,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbst in der Preußenallee), Straße vollständig gesperrt (20. und 21. September 2014) ',
-         'type' => 'gesperrt',
-         'id' => 1910
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2310,7 +2313,27 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.berlin.de/tickets/suche/detail.php?id=962691',
+         'data' => 'userdel	2::temp 9536,11912 9668,11928
+userdel	2::temp 9524,12010 9656,12021
+',
+         'periodic' => 1,
+         'until' => 1420066799,
+         'from' => 1416697200,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              24,
+                              'months',
+                              11
+                            ]
+                          ],
+         'text' => 'Gendarmenmarkt: Weihnachtsmarkt vom 24.11.2014 bis 31.12.2014, Durchfahrt nicht möglich (Eintritt!)',
+         'id' => 1989,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -2425,7 +2448,7 @@ userdel	3 8374,11479 8389,11378 8427,11365
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober von 7.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -2716,49 +2739,11 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.laubinger.de/termine/44-fest-an-der-panke/
-userdel	2::temp 10602,18382 10567,18366 10502,18338 10463,18321 10449,18315 10281,18241 10240,18193 10320,18197 10469,18262 10487,18270 10660,18345
-',
-         'periodic' => 1,
-         'until' => 1410731999,
-         'from' => 1410472800,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              10,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., Veranstaltung (Fest an der Panke), Straße vollständig gesperrt (13.09.2014 und 14.09.2014)',
-         'type' => 'gesperrt',
-         'id' => 2281
-       },
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.laubinger.de/termine/rosenthaler-herbst/',
-         'data' => 'userdel	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
-',
-         'periodic' => 1,
-         'until' => 1411336799,
-         'from' => 1410991200,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 19.09.2014 bis 21.09.2014',
-         'id' => 2285,
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -2904,60 +2889,8 @@ userdel	2::night 14838,11410 14792,11391
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8538,12245
-',
-         'periodic' => 1,
-         'until' => 1411768800,
-         'from' => 1411617600,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              21,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen Marathon gesperrt, ab 25.9.2014',
-         'type' => 'gesperrt',
-         'id' => 2387
-       },
-       {
-         'data' => 'userdel	2::temp 8573,12325 8540,12420
-userdel	2::temp 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
-userdel	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-userdel	2::temp 8119,12414 8055,12186
-userdel	2::temp 8538,12245 8522,12239 8466,12197
-userdel	2::temp 8538,12245 8522,12187
-userdel	2::temp 8546,12279 8354,12416
-userdel	2::temp 8119,12414 8354,12416 8400,12417 8540,12420
-userdel	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
-userdel	3 7429,12070 7383,12095 7039,12314
-userdel	3 7039,12314 7383,12095 7429,12070
-userdel	3 7823,12120 7816,12150 7875,12363
-userdel	3 7875,12363 7816,12150 7823,12120
-userdel	2::temp 8119,12414 8122,12603 8207,12606 8306,12609 8348,12609 8399,12610 8485,12612
-userdel	2::temp 8207,12606 8206,12757
-userdel	3 7945,12592 8122,12603 8120,12756
-userdel	3 8120,12756 8122,12603 7945,12592
-',
-         'periodic' => 1,
-         'until' => 1412049600,
-         'from' => 1411768800,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              21,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Behrenstr. und Scheidemannstr., Yitzak-Rabin-Str., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, bis 30.09.2014 06:00 Uhr',
-         'type' => 'gesperrt',
-         'id' => 2388
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -3074,7 +3007,8 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'from' => 1403992800,
          'id' => 2416,
          'data' => '#: next_check_id: KARLSHORSTER-2014
-#: last_checked: 2014-08-20 vvv
+#: last_checked: 2014-09-21 vvv
+#: next_check: 2014-10-22 vvv
 #: by: http://www.berlin-straba.de/
 #: by: https://de-de.facebook.com/kaskelkiez/posts/724415817603933
 #: by: http://www.bvg.de/index.php/de/9464/name/Verkehrsmeldungen/report/1827852.html (nur zwei Wochen)
@@ -3082,6 +3016,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
 userdel	q4::inwork 15261,10738 15272,10790
 # REMOVED --- userdel	q4::inwork 15272,10790 15279,10862
 # REMOVED --- userdel	q3::inwork 15279,10862 15144,10905
+#: next_check ^^^
 #: last_checked ^^^
 ',
          'type' => 'handicap'
@@ -3099,7 +3034,7 @@ userdel	q4::inwork 15261,10738 15272,10790
          'id' => 2422,
          'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
-#: last_checked: 2014-08-07
+#: last_checked: 2014-09-13
 #: check_frequency: 100d
 userdel	q2::inwork 5258,11285 5236,10994
 ',
@@ -3223,7 +3158,16 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_023012',
+         'until' => 1412568000,
+         'text' => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt, 29.09.2014 06:00 Uhr bis 06.10.2014 06:00 Uhr',
+         'from' => 1411963200,
+         'id' => 2469,
+         'data' => 'userdel	2::inwork 17736,5441 17886,5587
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3269,16 +3213,7 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       {
-         'source_id' => '131100196',
-         'until' => 1412114399,
-         'text' => 'Zwischen Birkholz und Zepernick: Neubau der Autobahnbrücke, Straße ist auch für Radfahrer nicht passierbar, 01.10.2013 bis 30.09.2014 ',
-         'from' => 1380520800,
-         'id' => 2493,
-         'data' => 'userdel	2::inwork 21169,27133 21320,27078
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3350,8 +3285,8 @@ userdel	2::night 17671,13132 17684,13133
          'text' => 'Uferweg an der Havel wegen Bauarbeiten gesperrt',
          'from' => undef,
          'id' => 2543,
-         'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: last_checked: 2014-05-11
+         'data' => '#: last_checked: 2014-05-11
+#: add_fragezeichen: Sind die Bauarbeiten am Uferweg beendet? Wurde der Uferweg asphaltiert?
 userdel	2::inwork -12363,-1742 -12457,-1857
 ',
          'type' => 'gesperrt'
@@ -3376,19 +3311,7 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        undef,
        undef,
        undef,
-       {
-         'until' => 1410966000,
-         'text' => 'Gudvanger Str.: Bauarbeiten zwischen Wichertstr. und Erich-Weinert-Str., Fahrbahn gesperrt, bis zum 17. September 2014',
-         'from' => undef,
-         'id' => 2554,
-         'data' => '#: XXX bis wann?
-#: last_checked: 2014-09-12
-#: next_check: 2014-09-17
-#: by: http://www.berlin.de/ba-pankow/presse/archiv/20140908.1230.399120.html ("Fest nach Umbau")
-userdel	q3::inwork 11673,16003 11567,15842
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -3404,16 +3327,7 @@ userdel	q3::inwork; 13555,15596 13459,15653
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_022477',
-         'until' => 1412258400,
-         'text' => 'Mühlenstr. (Pankow) Richtung Breite Straße zwischen Maximilianstr. und Florastr. Baustelle, Fahrtrichtung gesperrt, bis Anfang Oktober 2014',
-         'from' => 1396047600,
-         'id' => 2558,
-         'data' => 'userdel	q4::inwork; 10774,17277 10706,17391 10690,17420 10670,17458 10647,17501 10572,17573 10510,17649 10459,17754
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3453,7 +3367,7 @@ userdel	q4::inwork 10862,17087 10891,17088 10917,17088
          'source_id' => 'LS/721-E/14/035',
          'until' => 1420066800,
          'text' => 'Kremmen: B273: Neubau Brücke über den Hörstegraben Ortsdurchfahrt Schwante, 26.05.2014 bis 31.12.2014 ',
-         'from' => 1400863142,
+         'from' => 1401055200,
          'id' => 2574,
          'data' => 'userdel	2::inwork -11775,36312 -12060,36572
 ',
@@ -3541,7 +3455,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
        {
          'source_id' => '146600440',
          'until' => 1420066800,
-         'text' => 'Lauchhammer: L60: Sanierungsarbeiten Schipkau - Lauchhammer ab 25.08.2014 Vollsperrung, Gesamtbaumaßnahme 03.07.2014 bis 31.12.2014 ',
+         'text' => 'Lauchhammer: L60: Sanierungsarbeiten Schipkau - Lauchhammer ab 25.08.2014 Vollsperrung, bis 31.12.2014 ',
          'from' => 1408996606,
          'id' => 2600,
          'data' => 'userdel	2::inwork 45536,-99326 45006,-99332
@@ -3551,7 +3465,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
        {
          'source_id' => 'LS/722-C/14/092',
          'until' => 1414796400,
-         'text' => 'Sonnewalde: L703: Instandsetzung von 2 Bauwerken mit Deckenerneuerung zw. Peterhof - Brenitz Brückeniinstandsetzung, Vollsperrung, 07.04.2014 bis 31.10.2014 ',
+         'text' => 'Sonnewalde: L703: Instandsetzung von 2 Bauwerken mit Deckenerneuerung zw. Peterhof - Brenitz Brückeniinstandsetzung, Vollsperrung, 06.08.2014 bis 31.10.2014 ',
          'from' => 1407355179,
          'id' => 2601,
          'data' => 'userdel	2::inwork 27137,-78816 27037,-78176
@@ -3564,7 +3478,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
        {
          'source_id' => 'LS/722-C/14/213',
          'until' => 1425682800,
-         'text' => 'Spremberg: B156: Brücke über die kleine Spree - Ersatzneubau OD Spremberg, Muskauer Straße, Brücke über kleiner Spree Vollsperrung, 04.08.2014 bis 06.03.2015 ',
+         'text' => 'Spremberg: B156: Brücke über die kleine Spree - Ersatzneubau OD Spremberg, Muskauer Straße, Brücke über kleiner Spree Vollsperrung, 06.08.2014 bis 06.03.2015 ',
          'from' => 1407357280,
          'id' => 2605,
          'data' => 'userdel	2::inwork 79043,-91754 79397,-92080
@@ -3572,7 +3486,16 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
          'type' => 'gesperrt'
        },
        undef,
-       undef,
+       {
+         'source_id' => 'LS/721-E/14/067',
+         'until' => 1412373599,
+         'text' => 'Altlandsberg: L235: Deckenerneuerung Werneuchen bis Wegendorf, Vollsperrung, 11.08.2014 08:00 Uhr bis 03.10.2014 ',
+         'from' => 1407650400,
+         'id' => 2607,
+         'data' => 'userdel	2::inwork 33953,23796 34266,22939
+',
+         'type' => 'gesperrt'
+       },
        undef,
        {
          'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20140813.1350.398688.html',
@@ -3586,31 +3509,9 @@ userdel	q4::inwork; 16514,15092 16430,15168
          'type' => 'handicap'
        },
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157925.php',
-         'until' => 1411768800,
-         'text' => 'Fahlenbergstraße und Hubertusstraße von Wolfgang-Steinitz-Straße bis Waldstraße: Fahrbahninstandsetzung, Einbahnstraßenregelung, offen Richtung Fürstenwalder Allee, vom 01.09.2014 bis 26.09.2014',
-         'from' => 1409436000,
-         'id' => 2611,
-         'data' => '#: XXX vom 29.09.2014 bis 02.10.2014: Vollsperrung
-#: next_check: 2014-09-27
-#: priority: #A
-userdel	q4::inwork; 31967,2966 31999,2812 32031,2723 32115,2581 32162,2542
-',
-         'type' => 'handicap'
-       },
        undef,
-       {
-         'source_id' => 'http://www.deutsches-architektur-forum.de/forum/showthread.php?t=3245&page=7',
-         'until' => undef,
-         'text' => 'Köbisstr.: wegen Bauarbeiten unter Umständen gesperrt',
-         'from' => undef,
-         'id' => 2613,
-         'data' => '#: XXX vor Ort anschauen, ist die Straße tatsächlich gesperrt? Wie lange?
-userdel	2::inwork 7103,11247 6851,11346
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -3626,17 +3527,7 @@ userdel	2::inwork 7103,11247 6851,11346
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140827.1305.398908.html',
-         'until' => 1410559200,
-         'text' => 'Rudolstädter Straße: zwischen Bechstedter Weg und Hohenzollerndamm Straßenbauarbeiten, Einbahnstraßenregelung, offen Richtung Hohenzollerndamm, vom Montag, dem 01.09.2014 bis ca. 12.09.2014',
-         'from' => 1409436000,
-         'id' => 2620,
-         'data' => '#: source_id: IM_022741
-userdel	q4::inwork; 4280,8188 4220,8260 4139,8356 4029,8482 3964,8559 3928,8598 3848,8689 3775,8771 3701,8849
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3650,24 +3541,133 @@ userdel	q4::inwork; 4280,8188 4220,8260 4139,8356 4029,8482 3964,8559 3928,8598 
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.turmstrasse.de/aktuelles/veranstaltungen.html',
-         'until' => 1410624000,
-         'text' => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 13. September 2014, 13 bis 18 Uhr ',
-         'from' => 1410519600,
-         'id' => 2625,
-         'data' => '#: by: http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20140905.1415.399114.html
-userdel	2::temp 5857,13342 5868,13441 5882,13548
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'IM_022799',
          'until' => 1412953200,
          'text' => 'Wilhelminenhofstr.: in Höhe Schillerpromenade Baustelle, Fahrbahn gesperrt, ab 08.09.2014 04 Uhr bis 10.10.2014 17 Uhr',
-         'from' => 1409954400,
+         'from' => 1410141600,
          'id' => 2626,
          'data' => 'userdel	q4::inwork; 18343,6318 18191,6363 17992,6436
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_022856',
+         'until' => 1419350400,
+         'text' => 'Fürstenwalder Damm: zwischen Bölschestr. und Am Goldmannpark Baustelle, Straße vollständig gesperrt, ab 15.09.2014 07 Uhr bis Ende Dezember 2014 ',
+         'from' => 1410559200,
+         'id' => 2627,
+         'data' => 'userdel	q4::inwork 26302,5932 26080,5946 25579,5958
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20140917.1035.399288.html',
+         'until' => 1420066799,
+         'text' => 'Gounodstr.: Bauarbeiten zwischen von Herbert-Baum-Str. bis Borodinstr., ab Ende September 2014 bis Ende Dezember 2014',
+         'from' => 1411941600,
+         'id' => 2628,
+         'data' => '#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/gounodstrasse.php
+userdel	q4::inwork 13645,15609 13739,15643 13939,15723
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'until' => undef,
+         'text' => 'Schlüterstr.: zwischen Kurfürstendamm und Lietzenburger Str. Bauarbeiten, Fahrbahn teilweise gesperrt',
+         'from' => undef,
+         'id' => 2630,
+         'data' => '#: XXX wann sind die Bauarbeiten beendet?
+#: last_checked: 2014-09-20
+#: check_frequency: 90d
+userdel	q3::inwork 4503,10497 4485,10307
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1451602800,
+         'text' => 'Unterführung Rummelsburg: südlicher Zugang gesperrt, 17.09.2014 bis ca. 08.10.2014, weitere Sperrungen bis 2016 möglich',
+         'from' => 1411312807,
+         'id' => 2631,
+         'data' => '#: XXX_prog: confirmed bis zum 8.10., danach unconfirmed
+#: last_checked: 2014-09-21
+#: next_check: 2014-10-08
+userdel	2::inwork 15419,10706 15379,10651
+',
+         'dont_check_date' => 1,
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_022945',
+         'until' => 1414159200,
+         'text' => 'Fennstr.: zwischen Schnellerstr. und Michael-Brückner-Str. Baustelle, Fahrbahn Richtung Michael-Brückner-Str. gesperrt, ab 22.09.2014 bis 24.10.2014',
+         'from' => 1411279200,
+         'id' => 2632,
+         'data' => 'userdel	q4::inwork; 18245,5551 18080,5376
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20140919.1335.399343.html',
+         'until' => 1420066800,
+         'text' => 'Schönholzer Heide: Bauarbeiten am Weg zwischen Heinrich-Mann-Str. und Friesenstr., Benutzung des Wegs ist nicht möglich, 24.09.2014 bis Dezember 2014',
+         'from' => 1411423200,
+         'id' => 2633,
+         'data' => 'userdel	2::inwork 8765,19288 8791,19249 8947,19166 9009,19045 9191,18785 9279,18724
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => 1419030000,
+         'text' => 'Genter Straße: zwischen Seestraße und Brüsseler Straße in Richtung Seestraße gesperrt, bis 19.12.2014 ',
+         'from' => 1411499642,
+         'id' => 2634,
+         'data' => 'userdel	q4::inwork; 6802,15790 6661,15921
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1414796400,
+         'text' => 'Sächsische Straße: in Höhe Darmstädter Straße Fahrbahn gesperrt, bis 31.10.2014 ',
+         'from' => 1411499720,
+         'id' => 2635,
+         'data' => 'userdel	q3::inwork 4638,10162 4623,10066 4609,9949
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1424473200,
+         'text' => 'Invalidenfriedhof - Invalidestr.: Weg wegen Bauarbeiten gesperrt, bis 20.02.2015',
+         'from' => 1412021931,
+         'id' => 2636,
+         'data' => '#: next_check_id: INVALIDENFRIEDHOF-2014
+#: by: Birgit Schroeer
+#: XXX vielleicht wird hier asphaltiert?
+#: last_checked: 2014-10-01
+#: next_check: 2015-02-14
+userdel	2::inwork 8101,13901 8248,13659 8337,13541
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/imperia/md/content/batempelhofschoeneberg/abtfinperswibuerg/ordnungsamt/tiefbau/strassenbauliste_stand_2014_09_26.pdf?start&ts=1411733076&file=strassenbauliste_stand_2014_09_26.pdf',
+         'until' => 1413410400,
+         'text' => 'Albrechtstraße: Fahrbahnsanierung zwischen Friedensplatz und Tempelhofer Damm, Sperrung der Fahrbahn, 15.09.2014 bis 15.10.2014',
+         'from' => 1410732000,
+         'id' => 2637,
+         'data' => 'userdel	q4::inwork 9003,6121 9212,6096
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/imperia/md/content/batempelhofschoeneberg/abtfinperswibuerg/ordnungsamt/tiefbau/strassenbauliste_stand_2014_09_26.pdf?start&ts=1411733076&file=strassenbauliste_stand_2014_09_26.pdf',
+         'until' => 1414710000,
+         'text' => 'Albrechtstraße: Fahrbahnsanierung zwischen Friedensplatz und Manteuffelstraße, Sperrung der Fahrbahn, 15.10.2014 bis 30.10.2014',
+         'from' => 1413237600,
+         'id' => 2638,
+         'data' => 'userdel	q4::inwork 8661,6169 8830,6145 8944,6127
 ',
          'type' => 'handicap'
        }

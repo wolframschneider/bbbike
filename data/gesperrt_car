@@ -106,7 +106,7 @@ Prenzlauer Allee - Belforter Str.	3 11389,13887 11435,14023 11299,14112
 Prenzlauer Allee - Heinrich-Roller-Str.	3 11506,14230 11476,14142 11468,14121 11435,14023 11607,13928
 Heinrich-Roller-Str. - Prenzlauer Allee	3 11607,13928 11435,14023 11389,13887
 Allerstr.	1 11879,7720 12055,7751
-Hiddenseer Str.	1 11657,15271 11828,15210
+Hiddenseer Str.	1 11651,15273 11828,15210
 Koserstr.	1 2950,6141 3112,6090 3118,6140 3209,6206 3309,6270
 Offenbacher Str.	1 4506,7734 4559,7672 4785,7609 5045,7623
 Wassergasse	1 11034,11895 11024,11789
@@ -135,13 +135,13 @@ Matternstr.	1 13798,13003 13579,12904
 Ebelingstr.	1 13707,13206 13610,13169 13487,13115
 John-Schehr-Str. - Greifswalder Str.	3 12573,14581 12422,14692 12403,14663 12371,14615 12317,14535
 Prenzlauer Allee	3nocross::ignrte 11828,15210 11801,15132 11776,15060 11709,14856
-Prenzlauer Allee -> Stubbenkammerstr.: Prenzlauer Allee	3::igndisp 11776,15060 11801,15132 11636,15191
-Prenzlauer Allee -> Raumerstr.: Prenzlauer Allee	3::igndisp 11709,14856 11776,15060 11615,15114
-Prenzlauer Allee -> Fröbelstr.: Prenzlauer Allee	3::igndisp 11801,15132 11776,15060 11870,15004
-Raumerstr. -> Prenzlauer Allee: Prenzlauer Allee	3::igndisp 11615,15114 11776,15060 11801,15132
-Raumerstr. -> Fröbelstr.: Prenzlauer Allee	3::igndisp 11615,15114 11776,15060 11870,15004
-Fröbelstr. -> Prenzlauer Allee: Prenzlauer Allee	3::igndisp 11870,15004 11776,15060 11709,14856
-Fröbelstr. -> Raumerstr.: Prenzlauer Allee	3::igndisp 11870,15004 11776,15060 11615,15114
+Prenzlauer Allee -> Stubbenkammerstr.: Prenzlauer Allee	3::igndisp 11776,15060 11801,15132 11631,15192
+Prenzlauer Allee -> Raumerstr.: Prenzlauer Allee	3::igndisp 11709,14856 11776,15060 11609,15114
+Prenzlauer Allee -> Fröbelstr.: Prenzlauer Allee	3::igndisp 11801,15132 11776,15060 11873,15010
+Raumerstr. -> Prenzlauer Allee: Prenzlauer Allee	3::igndisp 11609,15114 11776,15060 11801,15132
+Raumerstr. -> Fröbelstr.: Prenzlauer Allee	3::igndisp 11609,15114 11776,15060 11873,15010
+Fröbelstr. -> Prenzlauer Allee: Prenzlauer Allee	3::igndisp 11873,15010 11776,15060 11709,14856
+Fröbelstr. -> Raumerstr.: Prenzlauer Allee	3::igndisp 11873,15010 11776,15060 11609,15114
 Große Weinmeisterstr. (Potsdam)	1 -12557,11 -12561,35 -12582,127 -12623,308
 Stellmacherweg	1 13129,2999 13453,2930
 Hittorfstr	1 2442,4806 2469,4882 2516,4936 2587,4965
@@ -172,7 +172,7 @@ Leuthener Str.	1 7716,8356 7640,8359
 Lüdenscheider Weg	1 -1389,15285 -1037,15482
 Büsingstr.	1 5215,6643 5210,6522
 Schrammstr.	1 4960,8440 4958,8355
-Stubbenkammerstr.	1 11636,15191 11801,15132
+Stubbenkammerstr.	1 11631,15192 11801,15132
 Templiner Str.	1 10716,14195 10739,14228
 Heylstr.	1 6459,8281 6385,8274 6325,8259
 Fritz-Reuter-Str. (Schöneberg)	1 6621,8221 6779,8279
@@ -436,9 +436,9 @@ Johannisstr. -> Friedrichstr.: Friedrichstr. (Straßenbahn)	3::igndisp 9385,13174
 Friedrichstr. (Straßenbahn)	3nocross::ignrte 9262,13111 9269,13060 9279,12953
 Friedrichstr. -> Ziegelstr.: Friedrichstr. (Straßenbahn)	3::igndisp 9262,13111 9269,13060 9413,13071
 Ziegelstr. -> Friedrichstr.: Friedrichstr. (Straßenbahn)	3::igndisp 9413,13071 9269,13060 9279,12953
-Oranienburger Str. (Straßenbahnhaltestelle)	3nocross::ignrte 9225,13389 9281,13374 9415,13315
-Oranienburger Str. -> Linienstr.: Oranienburger Str. (Straßenbahnhaltestelle)	3::igndisp 9225,13389 9281,13374 9296,13397
-Linienstr. -> Oranienburger Str.: Oranienburger Str. (Straßenbahnhaltestelle)	3::igndisp 9296,13397 9281,13374 9415,13315
+Oranienburger Str. (Straßenbahnhaltestelle)	3nocross::ignrte 9225,13389 9293,13366 9415,13315
+Oranienburger Str. -> Linienstr.: Oranienburger Str. (Straßenbahnhaltestelle)	3::igndisp 9225,13389 9293,13366 9312,13388
+Linienstr. -> Oranienburger Str.: Oranienburger Str. (Straßenbahnhaltestelle)	3::igndisp 9312,13388 9293,13366 9415,13315
 Durchfahrt für Autofahrer per Poller gesperrt	3nocross::ignrte 5966,6747 5896,6785 5811,6833
 Saarstr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5811,6833 5896,6785 5957,6889
 Saarstr. -> Fregestr.: Durchfahrt für Autofahrer per Poller gesperrt	3::igndisp 5966,6747 5896,6785 5777,6628
@@ -507,11 +507,11 @@ Blumberger Damm [Nebenfahrbahn] -> Cecilienstr.: Mittelstreifen	3::igndisp 21430
 Cecilienstr. -> Blumberger Damm [Nebenfahrbahn]: Mittelstreifen	3::igndisp 21576,13898 21466,13903 21430,13602
 Mittelstreifen	3nocross::ignrte -1746,16667 -1710,16735 -1675,16813
 Daumstr. -> Langer-See-Str.: Mittelstreifen	3::igndisp -1746,16667 -1710,16735 -1857,16766
-Daumstr. -> Glindowseestr.: Mittelstreifen	3::igndisp -1675,16813 -1710,16735 -1555,16696
-Glindowseestr. -> Daumstr.: Mittelstreifen	3::igndisp -1555,16696 -1710,16735 -1746,16667
-Glindowseestr. -> Langer-See-Str.: Mittelstreifen	3::igndisp -1555,16696 -1710,16735 -1857,16766
+Daumstr. -> Glindowseestr.: Mittelstreifen	3::igndisp -1675,16813 -1710,16735 -1652,16721
+Glindowseestr. -> Daumstr.: Mittelstreifen	3::igndisp -1652,16721 -1710,16735 -1746,16667
+Glindowseestr. -> Langer-See-Str.: Mittelstreifen	3::igndisp -1652,16721 -1710,16735 -1857,16766
 Langer-See-Str. -> Daumstr.: Mittelstreifen	3::igndisp -1857,16766 -1710,16735 -1675,16813
-Langer-See-Str. -> Glindowseestr.: Mittelstreifen	3::igndisp -1857,16766 -1710,16735 -1555,16696
+Langer-See-Str. -> Glindowseestr.: Mittelstreifen	3::igndisp -1857,16766 -1710,16735 -1652,16721
 Mittelstreifen	3nocross::ignrte -1710,16735 -1746,16667 -1765,16603 -1783,16533 -1798,16465 -1810,16391
 Daumstr. -> Schwielowseestr.: Mittelstreifen	3::igndisp -1765,16603 -1746,16667 -1856,16694
 Daumstr. -> Quenzseeweg: Mittelstreifen	3::igndisp -1710,16735 -1746,16667 -1671,16653
@@ -526,7 +526,11 @@ Beetzseeweg -> Schwielowseestr.: Mittelstreifen	3::igndisp -1689,16584 -1765,166
 Schwielowseestr. -> Daumstr.: Mittelstreifen	3::igndisp -1872,16631 -1765,16603 -1746,16667
 Schwielowseestr. -> Beetzseeweg: Mittelstreifen	3::igndisp -1872,16631 -1765,16603 -1689,16584
 Daumstr. -> Zernseestr.: Mittelstreifen	3::igndisp -1798,16465 -1783,16533 -1897,16562
+Daumstr. -> Röddelinseeweg: Mittelstreifen	3::igndisp -1765,16603 -1783,16533 -1705,16515
+Röddelinseeweg -> Daumstr.: Mittelstreifen	3::igndisp -1705,16515 -1783,16533 -1798,16465
+Röddelinseeweg -> Zernseestr.: Mittelstreifen	3::igndisp -1705,16515 -1783,16533 -1897,16562
 Zernseestr. -> Daumstr.: Mittelstreifen	3::igndisp -1897,16562 -1783,16533 -1765,16603
+Zernseestr. -> Röddelinseeweg: Mittelstreifen	3::igndisp -1897,16562 -1783,16533 -1705,16515
 Daumstr. -> Templiner-See-Str.: Mittelstreifen	3::igndisp -1810,16391 -1798,16465 -1902,16493
 Templiner-See-Str. -> Daumstr.: Mittelstreifen	3::igndisp -1902,16493 -1798,16465 -1783,16533
 Karlstr.	1 22556,4386 22458,4134
@@ -754,10 +758,10 @@ Grunerstr. -> Klosterstr.: Mittelstreifen	3::igndisp 10954,12635 10878,12560 109
 Klosterstr. -> Grunerstr.: Mittelstreifen	3::igndisp 10952,12401 10878,12560 10805,12468
 Bayernring	1 8616,8605 8454,8574 8380,8545
 Georg-Hermann-Allee (Potsdam): (teilweise) Einbahnstraße	1 -13429,1069 -13418,1668
-Mittelstreifen	3nocross::ignrte -3002,13442 -2977,13424 -2967,13417 -2937,13399 -2706,13291
+Mittelstreifen	3nocross::ignrte -3002,13442 -2977,13424 -2967,13417 -2937,13399 -2725,13287
 Ruhlebener Str. -> Tiefwerderweg: Mittelstreifen	3::igndisp -2937,13399 -2967,13417 -2974,13188
 Tiefwerderweg -> Ruhlebener Str.: Mittelstreifen	3::igndisp -2974,13188 -2967,13417 -2977,13424
-Baumgartensteg -> Ruhlebener Str.: Mittelstreifen	3::igndisp -2882,13474 -2937,13399 -2706,13291
+Baumgartensteg -> Ruhlebener Str.: Mittelstreifen	3::igndisp -2882,13474 -2937,13399 -2725,13287
 Ruhlebener Str. -> Baumgartensteg: Mittelstreifen	3::igndisp -2967,13417 -2937,13399 -2882,13474
 Brückenauffahrt	3nocross::ignrte 18492,6893 18404,6946 18225,7004 18010,7133
 An der Wuhlheide -> Fontanestr.: Brückenauffahrt	3::igndisp 18404,6946 18225,7004 18240,6845
@@ -1216,9 +1220,9 @@ Pasewalker Str.	3nocross::ignrte 11984,20246 11963,20136 11931,19965
 Hans-Jürgen-Str. -> Pasewalker Str.: Pasewalker Str.	3::igndisp 11939,20140 11963,20136 11984,20246
 Pasewalker Str. -> Hans-Jürgen-Str.: Pasewalker Str.	3::igndisp 11931,19965 11963,20136 11939,20140
 Neuer Steg	3 8170,19308 8277,19210 8209,19107
-Neuer Steg	3 8334,19157 8277,19210 8209,19107
+Neuer Steg	3 8337,19160 8277,19210 8209,19107
 Neuer Steg	3 8209,19107 8277,19210 8170,19308
-Neuer Steg	3 8209,19107 8277,19210 8334,19157
+Neuer Steg	3 8209,19107 8277,19210 8337,19160
 Straße 201	1 9366,18669 9511,18785 9529,18815
 Majakowskiring	1 10373,18889 10354,18814 10203,18762 10041,18697 9985,18735 10003,18798 10055,18831 10162,18867 10184,18875 10307,18915 10373,18889
 Killisch-von-Horn-Weg: Poller	3 9590,18082 9707,17941 9730,17927
@@ -1489,6 +1493,7 @@ Grünspechtweg: Schranke	3 7171,22942 7059,23127 6988,23244
 Feldlerchenweg: Schranke	3 6956,23166 7000,23095 7109,22919
 Feldlerchenweg: Schranke	3 7109,22919 7000,23095 6956,23166
 Auswärtiges Amt	3 9961,12094 10003,12113 9972,12184
+Auswärtiges Amt	3 10064,11953 10003,12113 9961,12094
 Im Vogtland	1 6657,23334 6684,23308 6727,23287
 Überquerungsmöglichkeit nur für BVG frei	3nocross::ignrte 11560,13232 11681,13161 11723,13139
 Mollstr. -> Berolinastr.: Überquerungsmöglichkeit nur für BVG frei	3::igndisp 11723,13139 11681,13161 11656,13100
@@ -1696,3 +1701,5 @@ Koppelweg - Britzer Damm	3 12288,4378 12547,4391 12731,4841
 (Möllendorffstr. - Paul-Junius-Str.)	1 15370,13508 15470,13509
 Möllendorffstr. [Wohngebiet]	1 15470,13509 15479,13273 15347,13268
 Berliner Allee -> Falkenberger Str.: nur für BVG frei	3 14608,16772 14619,16682 14723,16691
+Dennewitzplatz	1 7906,10098 7866,9918
+Buolstr.	1 559,15342 429,15284

@@ -353,7 +353,7 @@ Schloß Charlottenburg	Pl 3034,12502
 Schloß Bellevue	Pl 7039,12314
 Schloß Schönhausen	Pl 10339,19179
 #: XXX Haupteingang ist zurzeit geschlossen
-#: next_check: 2014-10-01 (wird das Museum komplett für einige Jahre geschlossen?)
+#: next_check: 2015-10-01 (wann ist die Brücke wieder fertig?)
 Pergamonmuseum	Pl 9952,12791
 Alte Nationalgalerie	Pl 9987,12744
 Altes Museum	Pl 10094,12635
@@ -423,7 +423,7 @@ Rudolf-Virchow-Krankenhaus	Pl 6537,15156
 DRK Kliniken Berlin-Westend	Pl 1971,12368
 Klinikum Buch	Pl 17428,25235
 Urban-Krankenhaus	Pl 10783,9892
-Krankenhaus Havelhöhe	Pl -5748,6092
+Krankenhaus Havelhöhe	Pl -6032,5895
 #: alias Unfallkrankenhaus Marzahn
 Unfallkrankenhaus Berlin	Pl 21520,12741
 Waldfriedhof Zehlendorf	Pl -2671,1988
@@ -509,17 +509,13 @@ Agathe-Lasch-Platz	Pl 3111,10116
 Bocksfeldplatz	Pl -4312,11720
 Metzer Platz	Pl -3715,13003
 Wörther Platz	Pl -3392,12928
-#: next_check_id: JOACHIMSTHALER-2014
-#: XXX_indoor Straßenname bekommt in Zukunft ein "h"
-#: XXX_indoor Berlin.coords.data anpassen, _sichtbarer_ oldnames-Eintrag nicht notwendig
-#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140520.1410.397359.html (Umbenennung wurde beschlossen)
-#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/24re.pdf/file?y=2014
-#: last_checked: 2014-08-07
-#: next_check: 2014-09-15
-Joachimstaler Platz	Pl 5475,10808
+# REMOVED --- #: next_check_id: JOACHIMSTHALER-2014 --- #: XXX_indoor Straßenname bekommt in Zukunft ein "h" --- #: XXX_indoor Berlin.coords.data anpassen, _sichtbarer_ oldnames-Eintrag nicht notwendig --- #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140520.1410.397359.html (Umbenennung wurde beschlossen) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/24re.pdf/file?y=2014 --- #: last_checked: 2014-08-07 --- #: next_check: 2014-09-15
+#: oldname: -20140915: Joachimstaler Str.
+#: ignore_oldname_file: yes
+Joachimsthaler Platz	Pl 5475,10808
 Kuno-Fischer-Platz	Pl 2679,10931
 Shakespeareplatz	Pl 3898,11655
-Fröbelplatz	Pl 11870,15004
+Fröbelplatz	Pl 11873,15010
 Schierker Platz	Pl 12722,7261
 Böhmischer Platz	Pl 13553,7594
 Falkenplatz	Pl -1788,19663

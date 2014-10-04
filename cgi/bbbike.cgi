@@ -3586,7 +3586,7 @@ sub is_mobile {
 sub is_startpage {
     my $q = shift;
 
-    return ($q->param("start") || $q->param("startname") || $q->param("ziel") || $q->param("zielname")) ? 0 : 1;
+    return ($q->param("start") || $q->param("startname")) && ($q->param("ziel") || $q->param("zielname")) ? 0 : 1;
 }
 
 sub is_production {
@@ -8675,9 +8675,16 @@ EOF
 
 	}
 
-	#&language_switch($bbbike_local_script_url) if &is_resultpage($q) || !&is_startpage($q);
+	if (&is_resultpage($q) || !&is_startpage($q)) {
+	    &language_switch($bbbike_local_script_url);
+	}
+	
 	print qq{</div>\n};
-        #&headline if &is_resultpage($q) || !&is_startpage($q);
+	
+        if (&is_resultpage($q) || !&is_startpage($q)) {
+	    &headline;
+	    print "<p/>\n";
+	}
 
 	#&adsense_linkblock if &is_production($q) && !is_mobile($q);
     }

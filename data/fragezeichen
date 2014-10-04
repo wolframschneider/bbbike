@@ -11,7 +11,7 @@ Seenpromenade (Groß Glienicke): Qualität des südlichen Abschnitts?	? -9617,5086 
 Röntgental, Buchenallee: Qualität?	? 17689,27853 17896,28134 18451,29241
 Gamengrund: Qualität (teilweise war es sehr sandig!)? Geht es von der B 158 aus noch weiter in Richtung Norden?	? 39337,22638 39383,22801 39165,23131 39033,23202 39114,23766 39180,23776 39266,23984 39241,24116 39089,24279 39063,24400 38997,24431 38880,24568 38824,24812 39002,25304 39221,25518 39205,25655 39124,25812 39089,26036 39241,26229 39282,26391 39378,26508 39561,27382 39602,27382 39678,27600 39535,27808 39561,27996 39657,28154 39988,28352 40231,28753 40135,28824 40267,28951 40282,29022 40236,29621 40195,29774 40206,30002 40255,30508 40302,30617 40314,30725 40562,30941 40750,31012 40982,31319 41300,31862 41235,31914 41003,31612 40819,31252 40562,31025 40350,31083 39783,31398
 Brunow - Gamengrund: Qualität?	? 41618,36515 43362,37337 43825,37262 43922,36623 43637,36362 42975,36212 42748,35962
-Martin-Luther-Str. (Falkensee) - Radelandstr.: durchgängige Verbindung vorhanden? Qualität?	? -6977,17720 -7060,17637 -7306,17291 -7424,17303
+Martin-Luther-Str. (Falkensee) - Radelandstr.: durchgängige Verbindung vorhanden? Qualität?	? -6962,17713 -7060,17637 -7306,17291 -7396,17303
 Sacrower See - Försterei Zedlitz: Qualität (wahrscheinlich Waldweg, Q2)?	? -10783,3792 -10912,3738 -10955,3723
 Schenkenberg - Dauer: Qualität (zumindest in Schenkenberg noch asphaltiert)?	? 45454,107247 44462,109018
 Dauer - Tornow: Qualität?	? 44462,109018 45265,108797 46394,109694 46174,110110 45766,110618 46075,110850 46282,111014 46291,111162 46650,111113 46672,110980 47399,110869
@@ -79,7 +79,7 @@ Passow, Mittelstr.: Qualität?	? 56975,82627 57185,82724 57426,82901
 Altkünkendorf - Wolletz: laut "Regio-Cart" gut geeignet	? 41260,67587 41437,68012 40775,68125 40750,69175 40999,69391
 Wolletz Richtung Norden: laut "Regio-Cart" gut geeignet (zumindest in Wolletz Verbundsteinpflaster)	? 43101,69564 43250,71500 42941,72180
 Dargen - Katschow: Fahrradroute laut Kompass-Karte	? 51034,165181 50994,165390 50715,166093 50464,166650 50472,166804 50661,166901 50993,167239 51565,167859
-Oberjägerweg außerhalb Spandaus: Qualität? Für Kfz-Verkehr gesperrt?	? -4472,20411 -4053,20594 -3936,21061 -3794,21804
+Oberjägerweg außerhalb Spandaus: Qualität?	? -4053,20594 -3947,21008 -3794,21804
 Mauerweg am Griebnitzsee: Qualität (vermutlich Asphalt?)?	? -9655,-298 -9562,-325 -9454,-434 -9365,-610
 Wilhelm-Busch-Str. (Rehbrücke): Qualität?	? -9500,-6933 -9541,-6955 -9753,-7192 -9812,-7544
 Schlüterstr. (Rehbrücke): Qualität?	? -9812,-7544 -9953,-7604 -10080,-8117 -10263,-8447
@@ -799,7 +799,6 @@ Herzbergstr., Verlängerung nach Eiche: Qualität?	? -17083,624 -17098,554 -17220,
 Eichenallee (Hohen Neuendorf): Qualität?	? 1542,28700 1379,28792 1221,28876 1124,28923 1040,28973 960,29015 849,29062 655,29094 464,29099 401,29122
 Breitscheidstr. (Glienicke): Qualität östlich der Schönfließer Str.?	? 4244,25914 4292,25894 4394,25887 4579,25865 4690,25853 4795,25838 4888,25829 4985,25863 5085,25906
 Ruppiner Str. (Falkensee): Qualität nördlich der Eberswalder Str.?	? -10845,19025 -10829,19222 -10811,19428
-Uferweg Eiswerderbrücke - Nordhafen: Nachts beleuchtet?	? -2702,15517 -2662,15642 -2642,15647 -2620,15680 -2588,15739 -2523,15959 -2509,16050 -2516,16081 -2487,16223 -2505,16244 -2507,16292
 Hangelsberg - Kienbaum: Qualität?	? 45968,619 47190,2995 47806,4379 48009,5898 48070,6124
 Briesen - Fürstenwalde: Qualität?	? 69963,-5374 69483,-4393 68638,-3455 68429,-3205 68205,-2720
 Striewitzweg (Teltow): Qualität im südlichen Abschnitt der Straße: wo genau sind die Kopfsteinpflaster- und Betonabschnitte? Ist ein Abschnitt südlich der Potsdamer Str. eine Einbahnstraße?	? 281,-1433 313,-1363 385,-1205 403,-1166 457,-1051 528,-917 598,-757 590,-618
@@ -909,11 +908,6 @@ Kleinmutz - Bergsdorf: Qualität?	? 1291,60437 38,59019 41,58699 -44,58487 -285,5
 Neuhäsen - B167: Qualität?	? -5505,57159 -5163,56099
 Neuhäsen - B167: Qualität?	? -4948,55812 -4424,54552
 Neuhäsen - Gutengermendorf: Qualität?	? -5505,57159 -5795,58115 -5792,58185
-Christoph-Kolumbus-Str.: Qualität? Offen?	? -5758,6469 -5843,6524 -5952,6601 -6132,6735 -6457,6973
-Ferdinand-Magellan-Str.: Qualität? Offen?	? -5843,6524 -5773,6619
-James-Cook-Str.: Qualität? Offen?	? -5952,6601 -5994,6543 -6090,6600
-Marco-Polo-Str.: Qualität? Offen?	? -5843,6524 -6035,6273 -6191,6070
-weitere Straßen auf dem Kasernengelände: Verlauf? Straßennamen?	? -6132,6735 -6294,6479 -6175,6386 -6096,6485 -5994,6421 -6079,6306 -6035,6273
 Karl-Marx-Str. (Schulzendorf): Qualität des westlichen Abschnitts?	? 24343,-3387 24190,-3443 24080,-3471 23969,-3523 23617,-3682 23368,-3794
 Fontaneallee (Eichwalde): Qualität des südlichen Abschnitts (auch schlechtes Kopfsteinpflaster?)?	? 24632,-3458 24684,-3553 24737,-3654 24792,-3757 24842,-3849 24941,-4025 25026,-4186
 Gerhart-Hauptmann-Allee (Eichwalde): Qualität des südlichen Abschnitts (auch schlechtes Kopfsteinpflaster?)?	? 24803,-3385 24842,-3485 24886,-3587 24930,-3695 24974,-3793 25056,-3989 25121,-4102 25197,-4236
@@ -945,7 +939,6 @@ Ahlimbswalde: ist die gesamte Straße asphaltiert?	? 30962,71971 31251,71954 3166
 Vogelsangsruh: ist die gesamte Straße asphaltiert?	? 66431,84540 66638,84513
 Niederfelde: ist die gesamte Straße gepflastert?	? 66126,84243 66092,84252 66062,84129
 Auguststr. (Schwedt): Qualität des westlichen Abschnitts?	? 68135,73168 68517,73160 68591,73201 68777,73351
-Spektegrünzug: hier fehlt teilweise noch der Weg	?::inwork -4945,14883 -4827,14823 -4667,14712 -4670,14637
 Theodor-Fontane-Str.: Sackgasse oder Einbahnstraßenregelung?	? -9835,6841 -9854,6890
 Waldweg zum Campingplatz: Qualität der Straße?	? 29208,71 29512,-619 29297,-717 28915,-1147 28565,-1339 28248,-1473 28162,-1294 28033,-1259 27845,-1324 27758,-1358
 Deilingeweg: ist der Deilingeweg ausgeschildert?	? 6259,23379 6229,23415
@@ -955,10 +948,6 @@ ehem. Bahndamm zwischen L15 undf K7332 bei Hardenbeck: wurde hier ein Radweg rea
 Via Tilia: Qualität? Wo liegt die Straße genau (GPS-Track?)?	? -7518,-1175 -7548,-1097 -7487,-1056 -7271,-1102
 Neubrücker Str.: Ist die Neubrücker Str. eine Vorfahrtsstraße?	? 1364,25882 1213,25813 1135,25765 1057,25695 975,25627 885,25578 727,25504 639,25478
 Ahlimbsmühle - Templin: Qualität (Asphalt oder etwas anderes)? Ist die gesamte Straße eine Fahrradstraße?	? 23185,74265 22563,74247 21760,74489 21331,74676 20498,75268 19701,76270 19750,76354 19659,77157 19454,77284 19061,78220 18681,78317 18337,78286 18125,78413 17757,78643 17177,79071 16882,79108 16707,79192 16377,78982
-Heinz-Sielmann-Ring (Potsdam-Groß-Glienicke): Qualität?	? -8632,8641 -8192,8567
-Georg-Sigismund-von-Oppen-Weg: Qualität? Wo befindet sich die Straße?	? -8632,8641 -8569,8406 -8485,8162
-Unterführung Lange Brücke: neuer Weg entsteht hier, Qualität?	?::inwork -12363,-1742 -12377,-1743 -12663,-2039 -12759,-2066
-Uferweg von der Neuen Fahrt zum Hermannswerder: neuer Weg wird hier entstehen, Qualität?	?::inwork -12759,-2066 -12803,-2219 -12803,-2371 -12906,-2537 -13156,-2702
 Uferweg am Groß-Glienicker See: genaue Lage im südöstlichen Bereich des Sees? Qualität?	? -9766,5437 -9677,5430 -9478,5549 -9372,5532
 Am alten Dorf (Potsdam-Bornim): Qualität? Genaue Lage?	? -16800,1991 -16931,1783
 Albertshof - Rüdnitz: Qualität?	? 27662,33209 27529,33478 27432,33943 27363,34109 27324,34142 26862,34287 26720,34396 26678,34447 26312,34571 26195,34658 26086,34697 26113,34734
@@ -1000,21 +989,15 @@ Am Buchenberg - Schulzendorfer Str.: Qualität? Existiert eine Ausschilderung?	? 
 Am Buchenberg - Schulzendorfer Str.: Qualität? Existiert eine Ausschilderung?	? 554,23349 224,23440 -38,23355 -190,23187 -404,23107 -417,23034 -573,23032 -656,23011
 Stolper Weg (Kienwerder): Qualität des südöstlichen Teils?	? -4765,-3352 -4462,-3588 -4439,-3613 -4394,-3652 -4382,-3683 -4364,-3719
 Am Kienwerder (Kienwerder): Qualität?	? -4765,-3352 -4694,-3304 -4341,-3227 -4208,-3215 -4027,-3236 -3761,-3313
-Helen-Keller-Weg: wo genau liegt die Straße? Qualität? Nachts beleuchtet? Ausgeschildert?	? -3252,17758 -3376,17534 -3418,17525
 Alter Radelander Weg - Schappachstr.: Qualität? Ausgeschildert?	? 25007,-2620 25731,-1524
 Hochstr. (Schwanebeck): Qualität?	? 18942,26470 19340,26610
 Hochstr. (Schwanebeck): Qualität?	? 19715,26770 19948,26760 20051,26756 20225,26711
 Kiesstr. (Schwanebeck): Qualität?	? 20192,26621 20225,26711 20304,26861
-Humboldtstr. (Schwanebeck): Qualität des südöstlichen Abschnitts?	? 17990,24572 18122,24440 18492,24049
-Stefan-Heym-Str. (Schwanebeck): Qualität des südöstlichen Abschnitts?	? 18057,24641 18200,24498
-Einsteinstr. (Schwanebeck): Qualität des südöstlichen Abschnitts?	? 18124,24709 18280,24557
-Wolfgang-Amadeus-Mozart-Str. (Schwanebeck): Qualität des südöstlichen Abschnitts?	? 18039,24940 18122,24858 18198,24789 18355,24639
-Vierwaldstätter Str. (Schwanebeck): Qualität des südlichen Abschnitts?	? 18281,26008 18226,25889 18171,25619 18131,25316 18106,25171
 Thuner Str. (Schwanebeck): Qualität des nördlichen Abschnitts?	? 18810,25948 18929,26214
 Wilhelm-Tell-Str. (Schwanebeck): Qualität des nördlichen Abschnitts?	? 18885,25916 19000,26147
+Humboldtstr. (Schwanebeck): Qualität des südöstlichen Abschnitts?	? 18190,24368 18492,24049
 Poetensteig (Woltersdorf): nur für Radfahrer/Fußgänger oder auch für Autos? Geht die Straße auch Richtung Norden weiter?	? 32294,6277 32306,6216 32333,6114
 Ahornallee (Woltersdorf): Qualität im mittleren und südlichen Abschnitt?	? 32630,6179 32623,6134 32601,5936 32588,5816 32583,5779 32573,5705 32560,5574
-Rudolf-Leonhard-Str. - Blumberger Damm: Qualität des Rad/Gehweg?	? 21455,16330 21574,16547
 Am Heineberg (Potsdam): Qualität?	? -17646,1636 -17599,1890 -17597,2000 -17624,2037 -17651,2197 -17555,2301 -17292,2539
 Weinapfelweg - Pankeweg: existiert eine direkte Verbindung entlang der Autobahn? Qualität? Nachts beleuchtet?	? 13221,22667 13223,22558 13211,22499 13220,22387 13206,22290
 Altlandsberge - Krummensee: existiert hier ein Radweg? Wegbeschaffenheit des Radwegs? Falls es ein Zweirichtungsradweg ist: auf welcher Seite befindet er sich?	? 32325,18434 31740,18675 31546,18803 31415,19073 31267,19338 30163,20992 30031,21271 29826,21526
@@ -1053,9 +1036,6 @@ Hermann-Mattern-Promenade: wurde die Straße schon teilweise Richtung Norden verl
 Konrad-Zuse-Ring (Potsdam): Ist die Straße schon fertig gestellt? Qualität?	? -13330,2796 -13168,2836 -13105,2614 -13266,2571
 Jahnpromenade (Erkner): Qualität?	? 34325,3183 34352,3189 34493,3339
 Am Uferpark (Potsdam): genaue Lage der Straße, Qualität?	? -13381,-2943 -13494,-2850
-Schiefertonweg: gibt es hier ein Drängelgitter Richtung Nordgraben?	? 10269,21718 10248,21795
-Zechsteinweg: ist der Zechsteinweg eine Sackgasse?	? 10328,21737 10319,21774
-Kieselweg: gibt es hier ein Drängelgitter Richtung Nordgraben?	? 10423,21701 10388,21801
 Weg in der Jungfernheide: Qualität des Wegs? Nachts beleuchtet? Existiert eine Ausschilderung?	? 2683,14878 2768,14923 2835,14975 2889,15033 2929,15138 2933,15270 2922,15379 3095,15495
 Uranusweg - Eichborndamm: Weg entlang Sportanlage und Autobahn, Qualität des Wegs? Nachts beleuchtet? Existiert eine Ausschilderung?	? 4287,17564 3961,17710 4015,17912
 Maienwerderweg - Sendener Weg: Qualität des Wegs? Nachts beleuchtet?	? 2210,18262 2097,18183 1928,18136 1663,18166 1375,18209 1178,18223
@@ -1073,6 +1053,29 @@ Waldstr. (Schwanebeck): Qualität?	? 19882,26592 19935,26699 19948,26760
 Reinickendorfer Route 3: genauer Streckenverlauf? Qualität?	? 2566,23584 2272,23574 2137,23626 2114,23720 2056,23749 1980,23711 1848,23679 1702,23692 1622,23726 1607,23777 1576,23785 1433,23738 1363,23746 1304,23736 1157,23752
 Straßen in Döberitz: genaue Straßennamen, Qualität?	? -11635,13818 -11709,13476 -12032,13708 -12089,13741 -12596,13763 -12956,13814 -13017,13815 -13375,13807 -13371,13691 -13400,13622
 Fichtenstr.: existiert ein Verbindungsweg zur Heerstr.? Qualität? Nachts beleuchtet? Existiert eine Ausschilderung?	? 22212,9508 22237,9632 22274,9622
+An der Kornmühle (Potsdam): Qualität der Straße?	? -12712,-2172 -12728,-2227
+Am Speicher (Potsdam): Qualität der Straße?	? -12783,-2269 -12771,-2220 -12754,-2154
+Altstadtblick (Potsdam): Qualität der Straße?	? -12697,-2235 -12728,-2227 -12771,-2220 -12803,-2219
+Unterführung Lange Brücke: existiert der neue Weg schon, wie ist die Qualität?	? -12363,-1742 -12377,-1743 -12625,-1956 -12721,-2082
+Uferweg von der Neuen Fahrt zum Hermannswerder: existiert der Weg schon, wie ist die Qualität?	? -12721,-2082 -12754,-2154
+Rathenaustr. (Schwanebeck-West): Qualität?	? 17228,24640 17088,24538 17110,23990
+Eichenring (Schwanebeck-West): Qualität?	? 17412,24315 17358,24354 17289,24483 17229,24490 17201,24441 17266,24312 17281,24208 17351,24170 17415,24199 17434,24254 17412,24315
+Eichendorffstr. (Schwanebeck-West): Qualität?	? 17638,24756 17584,24703
+Voltastr. (Schwanebeck-West): Qualität? Ist der Straßenname Voltaweg oder Voltastr.?	? 18312,24956 18198,25001
+Linzer Str. (Schwanebeck-West): Qualität?	? 18567,24998 18432,25052 18429,25074 18549,25106
+Grazer Str. (Schwanebeck-West): Qualität?	? 18531,25161 18453,25139 18432,25260 18507,25272
+Parkstr. (Schwanebeck-West): Qualität?	? 18503,25468 18419,25468 18387,25469
+Kitzbühler Str. (Schwanebeck-West): Qualität?	? 18419,25468 18421,25371
+Kärtner Str. (Schwanebeck-West): Qualität?	? 18507,25596 18503,25468 18501,25331
+Neue Kärtner Str. (Schwanebeck-West): Qualität? Ist die Straße im südlichen Abschnitt eine Einbahnstraße?	? 18501,25331 18507,25272 18510,25252 18531,25161 18549,25106 18601,25062
+Alemannenstr. (Schwanebeck): Qualität?	? 18308,26001 18324,26017 18389,26038 18506,26079 18679,26138 18736,26158 18922,26223 18958,26234 19014,26253
+Burgunderstr. (Schwanebeck): Qualität?	? 18470,26189 18700,26264 18875,26324
+Donaustr. (Schwanebeck): Qualität?	? 18885,25916 18810,25948 18736,26158 18700,26264 18662,26377
+Andreas-Hofer-Str. (Schwanebeck): Qualität?	? 18972,25713 19144,26066
+Schwarzwälder Str. (Schwanebeck): Qualität?	? 19144,26066 19000,26147 18960,26173 18929,26214 18922,26223 18875,26324 18822,26430
+Steiermärker Str. (Schwanebeck): Qualität?	? 18958,26234 18942,26470
+Genfer Platz (Schwanebeck): Qualität? Gibt es eine Verbindung zur Zillertaler Str.?	? 18389,26038 18395,26020
+Hohenstein - Strausberg: gibt es zwischen Hohenstein und Strausberg mittlerweile einen Radweg? Ist es ein Zweirichtungsradweg? Asphaltiert?	? 48635,18552 47672,18859 46386,18523 44085,19049 43857,19113 43686,19241
 # added from ampeln-orig
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6163 (Stand der Planung?)
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4
@@ -1134,12 +1137,15 @@ Friedrich-Wilhelm-Str. (Einbahnstraße?)	? -14242,105542 -14166,105632 -14061,105
 Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
 Müncheberg, Turm (genaue Bezeichnung?)	? 60803,11559
 Müncheberg, Turm (genaue Bezeichnung?)	? 60306,11906
+(gibt es in der Stadtrandstr. Radspuren? wo genau?)	? -6719,16111 -6700,16178 -6664,16314 -6624,16466 -6577,16609 -6547,16704
 Tino-Schwierzina-Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert (Ist die Tino-Schwierzina-Str. zwischen Aidastr. und Romain-Rolland-Str. mittlerweile komplett asphaltiert?)	? 12736,17998 12467,17814
 (Rosentreterpromenade - Hermsdorfer Str.): Parkweg (hat der gesamte Weg eine wassergebundene Decke?)	? 4587,20947 4600,20972 4644,20952
 (Wanderweg an den Eichwerder Moorwiesen): unbefestigter Weg (wie ist die Qualität des Wegs?)	? 4256,23288 4288,23301 4338,23382 4373,23466 4444,23553
 (Wanderweg an den Eichwerder Moorwiesen): unbefestigter Weg (wie ist die Qualität des Wegs?)	? 4535,23922 4754,23998 4807,24011 5023,23954 5050,23984 5081,24019 5106,24105 5101,24150 5136,24201
+(Wichernstr. - Johannesstift): Kleinsteinpflaster (im nordwestlichen Abschnitt auch gepflastert?)	? -3568,18093 -3655,18177 -3699,18222 -3835,18357
+(Beetzseeweg - Zeuthener-See-Weg): Verbundsteinpflaster (liegt hier tatsächlich Verbundsteinpflaster?)	? -1689,16584 -1685,16583 -1647,16573
 Stephanstr.: Kopfsteinpflaster (ist das Kopfsteinpflaster im westlichen Abschnitt der Stephanstr. eher mäßig oder eher schlecht?)	? 6360,4504 6523,4491
-Elstaler Str.: Kopfsteinpflaster (wird die Fahrbahnqualität nach den Bauarbeiten besser sein (z.B. wird die Fahrbahn asphaltiert sein)?)	? -4559,14341 -4548,14434
+(Mauerweg am Eiskeller): asphaltiert (ist dieser Abschnitt tatsächlich asphaltiert?)	? -7990,19888 -8266,19811 -8469,19845 -8494,19713 -8448,19710 -8521,19390 -8372,19402 -8272,19086 -8206,19007 -8011,19059
 Straße 494: fester Sandweg (hat die Straße 494 einen neuen Belag (Verbundsteinpflaster? Asphalt?)?)	? 7923,23225 8119,22798
 Jühnsdorf: Asphalt (existiert durch Jühnsdorf ein Radweg?)	? 9792,-12090 9345,-11425 9472,-11297 9578,-10891
 Dahlwitz - Neuenhagen: teilweise nur mäßiger Asphalt (nach den Bauarbeiten (2006-10-31) vielleicht besserer Asphalt?)	? 29093,13456 29743,14143
@@ -1182,8 +1188,9 @@ Melzow - Warnitz: querliegende Betonplatten (Betonplatten zumindest auf der nörd
 (ist der komplette Weg ein Schotterweg? Oder teilweise nur ein unbefestigter Feldweg?)	? 17162,-6465 17910,-6981
 (ist der südliche Abschnitt der Fritz-Reuter-Str. ebenfalls gepflastert?)	? 2611,-100 2669,-187 2757,-311 2847,-431
 Ernst-Toller-Str.: unbefestigte Straße (ist der nordwestliche Abschnitt tatsächlich unbefestigt?)	? 17581,24815 17638,24756
-Ernst-Toller-Str.: Asphalt (ist der südöstliche Abschnitt tatsächlich asphaltiert?)	? 17900,24483 18010,24370
+Fritz-Reuter-Str.: unbefestigte Straße (ist der südwestliche Abschnitt tatsächlich unbefestigt?)	? 17900,24483 17990,24572 18057,24641 18124,24709
 Humboldtstr.: unbefestigte Straße (ist der nordwestliche Abschnitt tatsächlich unbefestigt?)	? 17699,24874 17728,24824
+Uhlandstr.: unbefestigte Straße (ist der nordöstliche Abchnitt tatsächlich unbefestigt?)	? 18198,25001 18236,25113
 Fontanestr.: Asphalt (ist der südöstliche Abschnitt auch asphaltiert?)	? 32365,5789 32560,5574 32725,5392
 Schillerstr.: Asphalt (ist der südliche Abschnitt auch asphaltiert?)	? 32451,6132 32479,5931
 Eichendamm: Asphalt (ist der südliche Abschnitt auch asphaltiert?)	? 32711,5797 32702,5596
@@ -1195,6 +1202,7 @@ Fuchssteig (Erkner): Asphalt (ist der nördliche Abschnitt auch asphaltiert?)	? 3
 (Steinstr. - Tschaikowskiweg): Waldweg (ist der Verbindungsweg mittlerweile asphaltiert?)	? -7996,-2293 -8024,-2468
 Reichenberg: grobes Kopfsteinpflaster (genauer Abschnitt fehlt)	? 58453,24209 58390,23910 58422,23806 58340,23653
 Rollwitz - Damerow: Kopfsteinpflaster/Feldweg (genauere Qualitätsbeschreibung fehlt)	? 46872,118656 46914,117945 47156,116507 47087,115725
+Dahme: gutes Kopfsteinpflaster (Wird die Qualität hier nach den Bauarbeiten besser werden? Wird es Radwege geben?)	? 13308,-59619 13503,-59620 13692,-59667 13859,-59831 13957,-59911
 Heckmannstr.: Kopfsteinpflaster und teilweise Sandweg (Wo genau sind die Kopfsteinpflaster- und Sandwegabschnitte?)	? -11853,16437 -11760,16401 -11662,16363 -11581,16330 -11497,16296 -11415,16263 -11326,16228 -11160,16162 -10962,16143 -10840,16133
 Schäferweg (Ueckermünde): Asphalt (tatsächlich asphaltiert?)	? 54024,148834 53734,149122
 Blankensee - Pampow: etwas welliger Asphalt (Stimmt die Qualität?)	? 69490,124121 69405,124160 69366,124195 69226,124503 68986,125150 68570,125720 68471,125796 68345,125883 68232,126057 68200,126265
@@ -1224,3 +1232,4 @@ F3.4 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.5 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from bbbike-temp-blockings-optimized
+Uferweg an der Havel wegen Bauarbeiten gesperrt userdel (Sind die Bauarbeiten am Uferweg beendet? Wurde der Uferweg asphaltiert?)	? -12363,-1742 -12457,-1857

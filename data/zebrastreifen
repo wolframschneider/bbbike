@@ -22,8 +22,10 @@ Neue Krugallee/Dammweg	Zs 15878,8338
 Neue Krugallee/Eichbuschallee	Zs 16131,7895
 # REMOVED (jetzt steht hier eine Ampel) --- Fürstenwalder Damm/Jastrower Weg	Zs 23668,5475
 Florastr. (vor S Pankow)	Zs 10721,17938
+#: XXX_prog während der Geschäftszeiten reger Fußgängerverkehr, ggfs. Zeitverlust einplanen vvv
 Wilmersdorfer Str./Schillerstr.	Zs 3707,11461
 Wilmersdorfer Str./Schillerstr.	Zs 3728,11465
+#: XXX_prog ^^^
 Adamstr./Konkordiastr.	Zs -4069,12558
 Annenstraße	Zs 10958,11500
 Adalbertstraße	Zs 11421,10509
@@ -130,6 +132,9 @@ Eisenacher Str./Wiesenpark	Zs 22059,15153
 Lützowstr./Derfflingerstr.	Zs 7226,10939
 Lützowstr./Schule	Zs 7648,10818
 Palisadenstr./Schulweg	Zs 12483,12681
+#: XXX noch in Bau
+#: last_checked: 2014-09-17
+Palisadenstr./Fürstenwalder Str.	zs 12245,12779
 Freiheit/Am Schlangengraben	Zs -2848,13849
 Buntzel/Paradiesstr.	Zs 21371,-308
 #: by: http://www.reinickendorf.de/index_7742_de.html vvv
@@ -144,8 +149,10 @@ Am Freibad/Am Vierrutenberg	Zs 5765,23457
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20070625.1140.80710.html vvv
 #: confirmed_by: srt
 Badensche Straße/Babelsberger Str.	Zs 5772,8828
-Sophie-Charlotten-Straße/Christstraße	Zs 2472,12137
-Sophie-Charlotten-Straße/Seelingstraße	Zs 2504,11990
+#: confirmed_by: srt
+Sophie-Charlotten-Straße/Christstraße	Zs 2454,12201
+#: confirmed_by: srt
+Sophie-Charlotten-Straße/Seelingstraße	Zs 2492,12046
 ## in Planung für 2007:
 #     * Franzensbader Straße/Reinerzstraße
 #     * Harbigstraße/Waldschulallee
@@ -212,7 +219,6 @@ Köpenicker Str./Dubickstr.	Zs 21080,8951
 Westerlandstr.	Zs -5036,15923
 #: note: Luftbild
 Pionierstr./Nähe Westerlandstr.	Zs -4900,16094
-#: note: Luftbild
 Stadtrandstr./Griesingerstr.	Zs -6508,16808
 Pettenkoferstr./Dolziger Str.	Zs 14922,12632
 Hausburgstr.	Zs 13795,13255
@@ -468,11 +474,11 @@ Saatwinkler Damm	Zs 4523,15538
 #: confirmed_by: srt
 Mierendorffstr.	Zs 3437,12954
 #: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=3777&options=4 (seit Juni 2012)
-#: XXX genaue Position?
-Gatower Str./Emil-Basdeck-Str.	Zs -4767,9597
+#: confirmed_by: srt
+Gatower Str./Emil-Basdeck-Str.	Zs -4768,9573
 #: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=3856&options=4 (seit 2012-05-02)
-#: XXX genaue Position?
-Kladower Damm	Zs -7082,5144
+#: confirmed_by: srt
+Kladower Damm	Zs -7027,5194
 Eldenaer Str./Liebigstr.	Zs 14088,12830
 Moritzstr./Galenstr.	Zs -3632,14615
 #: by: Tagesspiegel vom 6. Januar 2013
@@ -510,8 +516,8 @@ Durlacher Str./Tübinger Str.	Zs 5505,8246
 # REMOVED (Antwort: nein) --- #: by: http://www.berlin.de/ba-steglitz-zehlendorf/bvv-online/vo020.asp?VOLFDNR=4473 (Verlegung?) --- #: XXX wird der Zebrastreifen zur Promenade hin verlegt? --- #: last_checked: 2013-09-04 --- #: check_frequency: 120d
 Bäkestr.	Zs 4550,3123
 Elsa-Brändström-Str./Trelleborger Str.	Zs 11279,17142
-#: XXX genaue Position?
 #: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=4019
+#: confirmed_by: srt
 Stadtrandstr./Waldkrankenhaus	Zs -6414,17079
 # REMOVED --- #: by: http://heiligensee.cdu-reinickendorf.de/Zeitung/Wir-im-Norden_12_0030_web.pdf --- #: by: http://www.berlin.de/ba-reinickendorf/bvv-online/vo020.asp?VOLFDNR=2909
 Eichelhäherstr./Rabenstr.	Zs -1790,19650
@@ -531,3 +537,6 @@ Wiener Str./Glogauer Str.	Zs 12802,9973
 #: XXX noch in Bau
 #: last_checked: 2014-09-12
 Degnerstr./Oberseestr.	Zs 16537,15839
+Meiningenallee	Zs 529,12666
+Nennhauser Damm/Döberitzer Weg	Zs -8065,13332
+Zepernicker Str./Ludwigpark	Zs 17278,26158
