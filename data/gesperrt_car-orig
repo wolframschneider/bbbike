@@ -64,7 +64,7 @@ Weserstr.	1 12074,9217 12005,9211 11888,9189
 Friedenstr.	1 12325,13148 12382,13097
 Fasanenstr.	1 5223,9810 5209,9978
 Kopfstr.	1 12478,7878 12327,7847 12220,7822 12176,7811 12041,7788
-Am Treptower Park	1 15166,8489 15079,8575 15070,8584 15002,8651 14934,8717 14852,8799 14842,8809 14739,8919 14614,9052 14558,9111 14529,9141 14443,9233 14382,9299 14242,9448 14179,9515 14089,9610
+Am Treptower Park	1 15166,8489 15079,8575 15070,8584 15002,8651 14934,8717 14852,8799 14842,8809 14745,8912 14614,9052 14558,9111 14529,9141 14443,9233 14382,9299 14242,9448 14179,9515 14089,9610
 Hagelberger - Yorck	3nocross 8595,9495 8679,9544 8777,9601
 Hagelberger - Mehringdamm	3nocross 9334,9670 9280,9476 9248,9350
 Fidicin - Mehringdamm	3 9295,9047 9224,9053 9225,9038 9227,8890
@@ -73,7 +73,7 @@ Mangerstr. (Potsdam)	1 -12054,-274 -12123,-294 -12265,-418
 Rudolf-Breitscheid-Str.	1 -10429,-1944 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
 # ^^^
 Bendastr.	1 12689,6905 12702,6846
-Bendastr.	1 12793,6407 12781,6470 12759,6563 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
+Bendastr.	1 12793,6407 12782,6462 12759,6563 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
 # REMOVED (ist hier keine Einbahnstraße) --- Puschkin/Bulgarische	1 13829,9905 13884,9882 13995,9834 14193,9746
 Puschkin/Bulgarische	1 14193,9746 14270,9710 14318,9688 14780,9480 14819,9462 14883,9431 15383,9191 15442,9095 15452,9079 15561,8903 15591,8848 15378,8668 15166,8489
 Karl-Marx-Str./Schönstedt	3nocross 12500,8504 12540,8458 12562,8432 12582,8408
@@ -213,8 +213,8 @@ Martin-Luther-Str.	3nocross 6514,10088 6512,9962 6512,9866
 Hans-Otto-Str: Straßenbahntrasse	3nocross 12621,14313 12729,14227 12901,14093
 Sredzkistr./Prenzlauer Allee: Straßenbahntrasse	3nocross 11662,14695 11642,14625 11582,14448
 #: by: Christian (cm-germany): vvv
-Dankwartstr.	1 17197,12488 17163,12291
-Ortliebstr.	1 17087,12501 17197,12488
+Dankwartstr.	1 17210,12486 17184,12288
+Ortliebstr.	1 17087,12501 17210,12486
 #: by: ^^^
 #: by: Uwe Streiber:
 Buttmannstr.	1 8659,16327 8481,16136
@@ -294,7 +294,7 @@ Lilienthalstr.: Barriere für Autos	3 * 10627,8706 *
 Hellersdorfer Str.: Mittelstreifen	3nocross 23021,13982 22975,13814 22970,13798 22929,13661
 #: by: Jürgen Jacobi:
 #: confirmed_by: srt
-Onkel-Bräsig-Str.	1 13323,5222 13359,5086 13324,4784 13305,4504
+Onkel-Bräsig-Str.	1 13327,5234 13359,5086 13324,4784 13305,4504
 #: by: Jennifer (jhofmeister):
 #: confirmed_by: srt
 Krokusstr.	1 16738,2717 16739,2736 16677,2856
@@ -749,8 +749,8 @@ Oderberger Str.: Durchfahrt verboten	3 * 10864,14692 10723,14772
 Straße 12 (Neukölln): gesperrt für Fahrzeuge aller Art (außer BAB-Versorgung)	2 13883,6682 13881,6634 13915,6592
 Schranke	3 * 10559,2252 *
 Einfahrt verboten	3 * 9561,-748 9340,-829
-Tordurchfahrt nur für Radfahrer/Fußgänger	3 11721,-351 11712,-289 11231,-349
-Tordurchfahrt nur für Radfahrer/Fußgänger	3 11231,-349 11712,-289 11721,-351
+Tordurchfahrt nur für Radfahrer/Fußgänger	3 11721,-351 11712,-289 11242,-332
+Tordurchfahrt nur für Radfahrer/Fußgänger	3 11242,-332 11712,-289 11721,-351
 Sächsische Str.	1 4550,9539 4533,9400
 Legiendamm	1 11159,10769 11189,10831
 Mariendorfer Damm: Mittelstreifen	3nocross 10067,1939 10127,1778 10172,1657 10226,1515
@@ -900,7 +900,7 @@ Europaplatz	1 8015,13303 7938,13302
 #: note: die Regelung für Radfahrer ist nicht ganz eindeutig --- teilweise gibt es explizit "Radfahrer frei"-Schilder, z.B. beim Abbiegen, teilweise fehlen sie
 Am Kupfergraben	1 9754,12775 9815,12705 9870,12657
 #: note: Radfahrer benutzen den asphaltierten Parkstreifen, der entgegen der Einbahnstraßenrichtung freigegeben ist
-Am Treptower Park	1 14739,8919 14614,9052 14558,9111 14529,9141 14443,9233 14382,9299 14242,9448 14179,9515 14089,9610
+Am Treptower Park	1 14745,8912 14614,9052 14558,9111 14529,9141 14443,9233 14382,9299 14242,9448 14179,9515 14089,9610
 Czeminskistr.	1 7604,8927 7563,8871
 Berlinickestr.	1 5076,5500 5016,5401
 Sembritzkistr.: nur für Radfahrer	3 * 7199,5479 *
