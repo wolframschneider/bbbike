@@ -120,30 +120,7 @@ userdel	2::temp -3231,14383 -3293,14304
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2 8055,12186 8089,12190 8214,12205
-userdel	2 8214,12205 8303,12216 8538,12245
-userdel	2 8546,12279 8538,12245
-userdel	2 8600,12165 8538,12245
-userdel	2 8538,12245 8610,12254
-userdel	2 8546,12279 8570,12302 8573,12325 8540,12420 
-',
-         'periodic' => 1,
-         'until' => 1412632799,
-         'from' => 1412049600,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              29,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straße vollständig gesperrt (01.10.2014 bis 06.10.2014)',
-         'type' => 'gesperrt',
-         'id' => 127
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -768,26 +745,7 @@ userdel	2::temp 5656,10876 5652,11004
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html
-userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
-',
-         'periodic' => 1,
-         'until' => 1412546399,
-         'from' => 1412373600,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              5,
-                              'months',
-                              10
-                            ]
-                          ],
-         'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 4. und 5.10.2014',
-         'type' => 'gesperrt',
-         'id' => 731
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2716,20 +2674,7 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Hausvogteiplatz: Wochenmarkt Mittwoch und Freitag 9-16 Uhr, Behinderungen möglich',
-         'from' => undef,
-         'id' => 2271,
-         'data' => '#: by: http://www.berliner-woche.de/fileadmin/Wochenblatt-Ausgaben/2011/1122_MI.pdf
-#: XXX zieht im Oktober 2014 an den Spittelmarkt
-#: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6083
-#: next_check: 2014-10-01
-	q4::temp:clock 9925,11947 9878,11857
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3064,7 +3009,16 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1410/nachricht5376.html',
+         'until' => 1413151200,
+         'text' => 'Karower Chaussee/Bucher Chaussee: Baustelle in Höhe Unterführung BAB 10, Straße vollständig gesperrt, auch für Radfahrer und Fußgänger, von 11.10.2014, 8:00 Uhr bis 12.10.2014, 24:00 Uhr',
+         'from' => 1412920800,
+         'id' => 2448,
+         'data' => 'userdel	2::inwork 16201,24354 16156,24284 16123,24232
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3157,16 +3111,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_023012',
-         'until' => 1412568000,
-         'text' => 'Sterndamm: Brückenarbeiten, Straße vollständig gesperrt, 29.09.2014 06:00 Uhr bis 06.10.2014 06:00 Uhr',
-         'from' => 1411963200,
-         'id' => 2469,
-         'data' => 'userdel	2::inwork 17736,5441 17886,5587
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,

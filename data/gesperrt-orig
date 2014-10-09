@@ -2577,7 +2577,7 @@ Am Postbahnhof: Bauarbeiten, Straße gesperrt	2::inwork 12641,11288 12664,11310 1
 Berolinastr., Weg zum Spielplatz: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt	2::inwork 11719,13088 11815,13045
 # 
 #: XXX laut Schild bis Dezember 2014 gesperrt
-#: last_checked: 2014-10-01
+#: last_checked: 2014-10-07
 #: next_check: 2014-12-15
 Diestelmeyerstr.: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt, auch für Fußgänger	2::inwork 12690,12769 12833,12920
 # 
@@ -2680,14 +2680,7 @@ Große Hamburger Str.: Einbahnstraße wegen Bauarbeiten	1s:q3 10077,13100 10018,13
 # REMOVED (Einbahnstraße in "Am Zirkus" bleibt wohl permanent, Schild sieht nicht temporär aus) #: next_check_id: AMZIRKUS-2014 --- #: XXX oder bleibt die Einbahnstraßenregelung permanent? --- #: XXX_prog 1s:q4:inwork geht als Kategorie nicht, falsche Übersetzung! --- #: last_checked: 2014-03-07
 # REMOVED (offen) --- #: next_check_id: STADTGARTENMOABIT-2014 --- #: last_checked: 2014-05-24 (noch gesperrt) --- #: by: http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20140505.1005.396906.html --- (Weg am Stadtgarten Moabit): Bauarbeiten	2::inwork 5708,14077 5685,14215
 # REMOVED --- #: next_check_id: ERNASAMUEL-2014 --- #: last_checked: 2014-03-07 --- Erna-Samuel-Str.: gesperrt bis zur kompletten Fertigstellung	2::inwork 5299,14049 5321,14088 5474,14168 5685,14215 6052,14304 6118,14289
-# 
-#: next_check_id: HELLWEG-2014
-#: XXX: vom Hellweg-Parkplatz kann man einige Meter Richtung Norden passieren
-#: XXX: "inwork" ist ein Euphemismus --- es sind keinerlei Anzeichen von Bauarbeiten zu sehen
-#: last_checked: 2014-06-27
-#: check_frequency: 100d
-(Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): Zugang durch Bauzäune versperrt	2::inwork 8243,9766 8233,9863 8201,9869 8255,9938 8285,9956
-# 
+# REMOVED (Weg ist offen) --- #: next_check_id: HELLWEG-2014 --- #: XXX: vom Hellweg-Parkplatz kann man einige Meter Richtung Norden passieren --- #: XXX: "inwork" ist ein Euphemismus --- es sind keinerlei Anzeichen von Bauarbeiten zu sehen --- #: last_checked: 2014-06-27 --- #: check_frequency: 100d --- (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): Zugang durch Bauzäune versperrt	2::inwork 8243,9766 8233,9863 8208,9856 8206,9867 8289,9988
 # REMOVED (realisiert) --- #: next_check_id: GLEISDREIECKBUELOW-2014 --- #: last_checked: 2014-02-28 --- #: next_check: 2014-03-14 --- Zufahrt zum Gleisdreieck-Park: Bauarbeiten, komplett gesperrt	2::inwork 7906,10098 7928,10094 8011,10085 8013,10055
 # 
 #: last_checked: 2014-10-05
@@ -2851,6 +2844,11 @@ Vorfahrt Reichstagsgebäude: Absperrgitter, keine Durchfahrt mehr möglich	2 8400,
 # REMOVED (fertig!) --- #: last_checked: 2011-08-02 --- #: next_check: 2012-01-01 --- Sonnenkieker: Bauarbeiten	2:inwork 22600,13812 22668,13849 22692,13836
 # REMOVED (fertig, erfasst) --- #: last_checked: 2011-06-26 --- #: XXX hier muss noch der genaue Wegverlauf ermittelt werden --- Uferweg am Salzhof: ein Teilabschnitt ist noch nicht freigegeben	2:inwork -1942,16105 -1979,15994 -1923,15684
 # 
+#: osm_watch: way id="27178371" version="9"
+#: osm_watch: way id="23099023" version="8"
+#: osm_watch: way id="178742651" version="5"
+#: osm_watch: way id="23099024" version="5"
+#: osm_watch: way id="103531998" version="2"
 #: last_checked: 2013-10-24 vvv
 #: next_check: 2014-06-30 vvv
 Tegeler Hafen: Weg über Insel gesperrt	2 1756,20405 1736,20441 1742,20464 1762,20505 1761,20539
