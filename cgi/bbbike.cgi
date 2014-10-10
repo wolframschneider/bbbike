@@ -1375,7 +1375,7 @@ $got_cookie = 0;
 
 if (defined $q->param('api')) {
     require BBBikeCGI::API;
-    BBBikeCGI::API::action($q->param('api'), $q);
+    BBBikeCGI::API::action(scalar $q->param('api'), $q);
     my_exit(0);
 }
 
@@ -1480,10 +1480,10 @@ if (defined $q->param('detailmapx') and
     defined $q->param('detailmap.y')
    ) {
     _apply_hack_scalefactor("detailmap");
-    my $c = detailmap_to_coord($q->param('detailmapx'),
-			       $q->param('detailmapy'),
-			       $q->param('detailmap.x'),
-			       $q->param('detailmap.y'));
+    my $c = detailmap_to_coord(scalar $q->param('detailmapx'),
+			       scalar $q->param('detailmapy'),
+			       scalar $q->param('detailmap.x'),
+			       scalar $q->param('detailmap.y'));
     if (defined $c) {
 	$q->param($q->param('type') . 'c', $c);
     } else {
@@ -5155,7 +5155,7 @@ sub display_route {
     my @speeds = qw(10 15 20 25);
     if ($q->param('pref_speed')) {
 	if (!grep { $_ == $q->param('pref_speed') } @speeds) {
-	    push @speeds, $q->param('pref_speed');
+	    push @speeds, scalar $q->param('pref_speed');
 	    @speeds = sort { $a <=> $b } @speeds;
 	    if ($q->param('pref_speed') > 17) {
 		shift @speeds;
@@ -6644,7 +6644,7 @@ EOF
 			   route          => \@out_route,
 			   remote_ip      => $ENV{HTTP_X_FORWARDED_FOR} || $ENV{REMOTE_ADDR},
 			   user_agent     => $ENV{HTTP_USER_AGENT},
-			   prefs          => { map { ($_ => $q->param($_)) } grep { /^pref_/ } $q->param },
+			   prefs          => { map { ($_ => scalar $q->param($_)) } grep { /^pref_/ } $q->param },
 			 });
 		    close SESS;
 		}
@@ -7053,7 +7053,7 @@ sub draw_route {
     my $route; # optional Route object
 
     if (defined $q->param('coordssession')) {
-	if (my $sess = tie_session($q->param('coordssession'))) {
+	if (my $sess = tie_session(scalar $q->param('coordssession'))) {
 	    # Note: the session data specified by coordssession could
 	    # already be deleted. In this case all session data would be
 	    # empty, especially the coords. The error will happen later,
@@ -7068,7 +7068,7 @@ sub draw_route {
     }
 
     if (defined $q->param('oldcs') &&
-	(my $oldsess = tie_session($q->param('oldcs')))) {
+	(my $oldsess = tie_session(scalar $q->param('oldcs')))) {
 	$q->param(oldcoords => $oldsess->{routestringrep});
     }
 
@@ -7998,7 +7998,7 @@ sub fix_coords {
 		    last TRY;
 		} else {
 		    # Try to enlarge search region
-		    my @scopes = get_next_scopes($q->param("scope"));
+		    my @scopes = get_next_scopes(scalar $q->param("scope"));
 		    if (@scopes) {
 			for my $scope (@scopes) {
 			    $q->param("scope", $scope); # XXX "all," gets lost
@@ -8024,7 +8024,7 @@ sub fix_coords {
 	    } else {
 		# Try to enlarge search region
 		$q->param("scope", "city") if !$q->param("scope");
-		my @scopes = get_next_scopes($q->param("scope"));
+		my @scopes = get_next_scopes(scalar $q->param("scope"));
 		if (@scopes) {
 		    for my $scope (@scopes) {
 			$q->param("scope", $scope); # XXX "all," gets lost
@@ -9405,7 +9405,7 @@ sub upload_button_html {
 				     ],
 			  -linebreak => "true",
 			  -default => (defined $q->param("geometry")
-				       ? $q->param("geometry")
+				       ? scalar $q->param("geometry")
 				       : "1024x768"),
 			 ),
 	  "<p>\n",
@@ -9644,7 +9644,7 @@ sub diff_from_old_route {
     my($r) = @_;
     my $diff = { different => 1, old_session_not_found => 1 };
     return $diff if !$q->param('oldcs');
-    my $sess = tie_session($q->param('oldcs'));
+    my $sess = tie_session(scalar $q->param('oldcs'));
     return $diff if !$sess; # could not find old coords session, assume old one was different
     delete $diff->{old_session_not_found};
     my @path = $r->path_list;

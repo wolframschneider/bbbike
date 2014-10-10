@@ -36,8 +36,8 @@ sub action {
 
 sub action_revgeocode {
     my $q = shift;
-    my($lon) = $q->param('lon');
-    my($lat) = $q->param('lat');
+    my $lon = $q->param('lon');
+    my $lat = $q->param('lat');
 
     if (defined $q->param('latlon')) {
 	($lat, $lon) = split /,/, $q->param('latlon');
