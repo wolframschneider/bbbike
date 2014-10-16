@@ -846,7 +846,7 @@ Boppstr.	1s:q2 11785,9437 11560,9524
 Südstern	1 10713,9260 10625,9259 10564,9292
 Südstern	1 10564,9292 10639,9304 10670,9286 10713,9260
 Pitschener Str.	1s:q3 21769,-432 21719,-397 21637,-381
-Herrfurthstr.	1s:q3 11979,8014 11833,7980
+# REMOVED (wird wahrscheinlich nach den Bauarbeiten aufgehobe) --- Herrfurthstr.	1s:q3 11979,8014 11833,7980
 Dankratstr.	1s:q3 21105,9538 20943,9543
 #: note: ansonsten Durchfahrt verboten
 Helen-Ernst-Str., hinter der o2-Arena: bei Veranstaltungen gesperrt	2 13240,11279 13056,11329
@@ -1088,6 +1088,10 @@ Fellbacher Platz	1 3627,23246 3610,23242 3588,23256 3581,23282 3593,23297
 (Zufahrt Debis-Parkhaus)	1 8384,10507 8350,10499 8335,10518 8348,10636 8350,10662 8367,10745 8424,10703 8430,10710
 Walterstr.	1 13121,6689 13099,6712
 Gretel-Bergmann-Weg	1s:q1 -1132,12268 -1288,12178
+# REMOVED (dauerhaft) --- #: XXX wo gibt es Informationen hierzu? --- #: by: Kai Wagner (permanente Sperrung) --- #: XXX laut osm seit 2014-04-12 ohne access=private - falsch! --- #: confirmed_by: srt --- #: osm_watch: way id="4402045" version="10" --- #: last_checked: 2014-07-23 --- #: check_frequency: 180d
+Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
+# REMOVED (dauerhaft) --- #: last_checked: 2014-07-23 --- #: check_frequency: 180d --- #: XXX evtl. permanent
+Vorfahrt Reichstagsgebäude: Absperrgitter, keine Durchfahrt mehr möglich	2 8400,12417 8399,12610
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1525,7 +1529,7 @@ Klingelhöferstr: unbequem passierbarer Mittelstreifen	3nocross 6825,11486 6851,1
 Bornholmer Str.: Straßenbahn auf Mittelstreifen	3nocross 10197,16528 10134,16534 9998,16547 9883,16557 9816,16565
 Bornholmer Str.: Straßenbahn auf Mittelstreifen	3nocross 9514,16603 9617,16590 9781,16569 9816,16565
 Osloer Str.: Straßenbahntrasse	3nocross 7687,16770 7763,16779 7852,16790
-Seestr.: Straßenbahntrasse	3nocross 7417,16587 7456,16620 7606,16746
+Seestr.: Straßenbahntrasse	3nocross 7417,16587 7447,16613 7606,16746
 Seestr.: Straßenbahntrasse	3nocross 7231,16418 7051,16264 6965,16190
 Seestr.: Straßenbahntrasse	3nocross 7231,16418 7295,16477 7403,16575
 Föhrer Str.: Mittelstreifen	3nocross 6528,15000 6561,15041 6626,15104
@@ -2502,7 +2506,7 @@ Drängelgitter	BNP:5 -5890,25875
 # REMOVED (eine Hälfte der Schranke nicht mehr vorhanden) --- #: note: Anhänger sollten vielleicht den Gehweg benutzen --- Schranke, eine Seite eventuell offen	BNP:3::trailer=10 12565,9200
 #: note: ansonsten kann man ein paar Meter östlich die Bordsteinabsenkung benutzen
 Schranke, meistens offen	BNP:3::trailer=6 7843,16524
-Schranke, meistens offen	BNP:3::trailer=6 7707,16543
+# REMOVED (hmmm, hier keine Schranke?) --- Schranke, meistens offen	BNP:3::trailer=6 7707,16543
 Barriere	BNP:10 12178,7985
 #: note: Durchfahrt ist 120cm breit
 Drängelgitter	BNP:0::trailer=3 10535,13006
@@ -2594,7 +2598,7 @@ Am Postbahnhof: Bauarbeiten, Straße gesperrt	2::inwork 12641,11288 12664,11310 1
 Berolinastr., Weg zum Spielplatz: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt	2::inwork 11719,13088 11815,13045
 # 
 #: XXX laut Schild bis Dezember 2014 gesperrt
-#: last_checked: 2014-10-07
+#: last_checked: 2014-10-14
 #: next_check: 2014-12-15
 Diestelmeyerstr.: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt, auch für Fußgänger	2::inwork 12690,12769 12833,12920
 # 
@@ -2628,10 +2632,9 @@ Regener Str.: Bauarbeiten, noch nicht fertig gestellt	2::inwork 19790,9478 19849
 #: check_frequency: 360d
 BBI-Park: wegen Bauarbeiten gesperrt	2::inwork 20038,-1474 19717,-1549
 # 
-#: note: allerdings könnte man sein Fahrrad über den Betonpfeiler rübertragen
-#: last_checked: 2014-10-05
-#: check_frequency: 90d
-am Osthafen: durch Barriere versperrt	2 14259,10309 14463,10212
+#: last_checked: 2014-10-11
+#: check_frequency: 120d
+am Osthafen: Bauzaun	2::inwork 14259,10309 14463,10212
 # 
 # REMOVED --- #: last_checked: 2014-04-17 --- #: check_frequency: 14d --- Edith-Stein-Str.: Bauarbeiten könnten noch möglich sein	2::inwork 14089,13247 14035,13104
 # 
@@ -2840,20 +2843,6 @@ B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich de
 #: last_checked: 2014-09-20
 #: check_frequency: 360d
 Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
-# 
-#: XXX wo gibt es Informationen hierzu?
-#: by: Kai Wagner (permanente Sperrung)
-#: XXX laut osm seit 2014-04-12 ohne access=private - falsch!
-#: confirmed_by: srt
-#: osm_watch: way id="4402045" version="10"
-#: last_checked: 2014-07-23
-#: check_frequency: 180d
-Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
-# 
-#: last_checked: 2014-07-23
-#: check_frequency: 180d
-#: XXX evtl. permanent
-Vorfahrt Reichstagsgebäude: Absperrgitter, keine Durchfahrt mehr möglich	2 8400,12417 8399,12610
 # 
 # REMOVED --- #: last_checked: 2012-03-23 --- #: next_check: 2012-04-25 --- Spreeufer: wegen Bauarbeiten gesperrt	2:inwork 8596,12576 8495,12651 8473,12753
 # REMOVED (fertig!) --- #: last_checked: 2011-12-17 --- #: next_check: 2012-01-15 --- (Leuthener Platz - Wilhelm-Kabus-Str.): Bauzäune	2:inwork 7716,8356 7807,8354 7893,8327
