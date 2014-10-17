@@ -59,36 +59,26 @@ ${BBBIKETMPDIR}/.validate_garmin_devcap: garmin_devcap.kwalify garmin_devcap.yam
 tkbabybike-screenshot:
 	cd screenshots && $(MAKE) tkbabybike-screenshot
 
-update-from-andreasm:
-#	rm -rf /tmp/xxx /tmp/data.patch /tmp/datachange.log /tmp/data
-	@echo "Please save mail containing patch as /tmp/xxx <RETURN>"
-	@read yn
-	cd /tmp/ && metamail -w xxx
-	mkdir /tmp/data
-	cd $(HOME)/src/bbbike/data && cp Berlin.coords.data *-orig /tmp/data
-	cd $(HOME)/src/bbbike/data && rsync -av temp_blockings/ /tmp/data/temp_blockings/
-	cd /tmp/data/ && patch -p1 < ../data.patch
-	cd /tmp/data/ && tkincorporate . $(HOME)/src/bbbike/data
-	$(HOME)/src/bbbike/miscsrc/datachangelog2bbd /tmp/datachange.log > /tmp/d.bbd
-	@echo "Please merge/append datachange.log manually."
-	@echo "Are there any .rej files?"
-	cd $(HOME)/src/bbbike/data && make check all
+######################################################################
+# Upload personal.bbd
 
-#upload-personal: $(HOME)/.bbbike/personal.wpt
-#	gpsman readput GPSMan WP $(HOME)/.bbbike/personal.wpt
-#
-#$(HOME)/.bbbike/personal.wpt:	$(HOME)/.bbbike/personal.bbd
-#	${GREPSTRASSEN} -catrx ':GPS' $(HOME)/.bbbike/personal.bbd | ${MISCSRCDIR}/bbd2gpsman.pl -symbol danger > $(HOME)/.bbbike/personal.wpt
+upload-personal: upload-personal-gpi
 
-$(HOME)/.bbbike/personal.gpi:	$(HOME)/.bbbike/personal.bbd
-	${GREPSTRASSEN} -v -namerx '^OLD' $> | ${MISCSRCDIR}/bbd2gpx - | gpsbabel -i gpx -o garmin_gpi,alerts=0,category="Personal" /dev/stdin $@~
-	mv $@~ $@
-
-upload-personal: $(HOME)/.bbbike/personal.gpi
+upload-personal-gpi: $(HOME)/.bbbike/personal.gpi
 	@echo "Please execute the following as as root:"
 	@echo ""
 	@echo "    mount /mnt/garmin && cp $(HOME)/.bbbike/personal.gpi /mnt/garmin/garmin/poi/ && umount /mnt/garmin"
 	@echo ""
+
+$(HOME)/.bbbike/personal.gpi:	$(HOME)/.bbbike/personal.bbd
+	${GREPSTRASSEN} -catrx ':GPS' $> | ${MISCSRCDIR}/bbd2gpx - | gpsbabel -i gpx -o garmin_gpi,alerts=0,category="Personal" /dev/stdin $@~
+	mv $@~ $@
+
+upload-personal-gpsman: $(HOME)/.bbbike/personal.wpt
+	gpsman readput GPSMan WP $(HOME)/.bbbike/personal.wpt
+
+$(HOME)/.bbbike/personal.wpt:	$(HOME)/.bbbike/personal.bbd
+	${GREPSTRASSEN} -catrx ':GPS' $> | ${MISCSRCDIR}/bbd2gpsman.pl -symbol danger > $(HOME)/.bbbike/personal.wpt
 
 ######################################################################
 # OSM downloads
