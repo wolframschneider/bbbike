@@ -1128,7 +1128,7 @@ Weinbergstr.	1 -13519,-625 -13257,-512
 Am Kanal	1 -12839,-1342 -12718,-1327
 Am Kanal	1 -12718,-1327 -12747,-1336 -12833,-1365
 Yorckstr.	1 -12833,-1365 -12976,-1356 -13001,-1349 -13208,-1315
-Yorckstr.	1 -13206,-1294 -13001,-1329 -12839,-1342
+Yorckstr.	1 -13206,-1294 -13089,-1313 -13001,-1329 -12839,-1342
 Joliot-Curie-Str.	1 -12549,-1277 -12542,-1305 -12526,-1356 -12500,-1437
 Am Kanal, Nebenstraße	1 -12542,-1305 -12657,-1338
 Mauerstr.	1 -13433,-831 -13519,-625
@@ -2666,14 +2666,15 @@ Niederlagstr.: Bauarbeiten, Straßen vollständig gesperrt	2::inwork 9994,12368 99
 #: last_checked ^^^
 #: next_check_id ^^^
 # 
-#: XXX t/cgi-mechanize.t (ca. Zeile 673) anpassen!
-#: next_check_id: STERNDAMM-2014
-#: source_id: IM_020145
-#: by: http://www.tagesspiegel.de/berlin/sperrung-am-bahnhof-schoeneweide-zwangsgeld-drohung-gegen-die-bahn/9923866.html
-#: last_checked: 2014-06-10
-#: next_check: 2017-02-28
-#: priority: #A
-Sterndamm: Brückenarbeiten, Einbahnstraße	1::inwork 17886,5587 17736,5441
+# REMOVED --- #: XXX t/cgi-mechanize.t (ca. Zeile 673) anpassen!
+# REMOVED --- #: next_check_id: STERNDAMM-2014
+# REMOVED --- #: source_id: IM_020145
+# REMOVED --- #: by: http://www.tagesspiegel.de/berlin/sperrung-am-bahnhof-schoeneweide-zwangsgeld-drohung-gegen-die-bahn/9923866.html
+# REMOVED --- #: last_checked: 2014-06-10
+# REMOVED --- #: next_check: 2017-02-28
+# REMOVED --- #: XXX VMZ-Eintrag wurde entfernt, laut Fritz bis 2014-12-08 aktiv in beiden Richtungen
+# REMOVED --- #: priority: #A
+# REMOVED --- Sterndamm: Brückenarbeiten, Einbahnstraße	1::inwork 17886,5587 17736,5441
 # 
 #: next_check_id: GRENZALLEE-2014
 #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a100_16_ba/de/bau.shtml

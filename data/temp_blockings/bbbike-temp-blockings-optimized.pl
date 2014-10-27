@@ -159,7 +159,26 @@ userdel	2::temp -3231,14383 -3293,14304
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'data' => 'userdel	2::temp 9986,13412 10317,13248
+',
+         'periodic' => 1,
+         'until' => 1417388399,
+         'from' => 1417129200,
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 1. Adventswochenende (29.11.2014 - 30.11.2014)',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              29,
+                              'months',
+                              11
+                            ]
+                          ],
+         'id' => 166,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -2345,6 +2364,34 @@ userdel	3 8374,11479 8389,11378 8427,11365
          'id' => 1997,
          'type' => 'gesperrt'
        },
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-alt-rixdorf.html',
+         'data' => 'userdel	2::temp 13416,7712 13426,7674
+userdel	2::temp 13416,7712 13378,7695 13288,7653
+userdel	2::temp 13426,7674 13400,7642 13303,7622
+userdel	2::temp 12969,7610 13100,7626 13177,7644
+userdel	2::temp 13188,7590 13177,7644
+userdel	2::temp 13188,7590 13303,7622
+userdel	2::temp 13288,7653 13303,7622
+userdel	2::temp 13288,7653 13177,7644
+userdel	2::temp 13288,7653 13278,7673 13245,7742
+',
+         'periodic' => 1,
+         'until' => 1417993199,
+         'from' => 1417647600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              5,
+                              'months',
+                              12
+                            ]
+                          ],
+         'text' => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (05.12.2014 - 07.12.2014)',
+         'id' => 1998,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -2356,8 +2403,28 @@ userdel	3 8374,11479 8389,11378 8427,11365
        undef,
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 8731,12270 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+userdel	2::temp 8055,12186 8119,12414
+userdel	2::temp 8522,12239 8466,12197
+userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+',
+         'periodic' => 1,
+         'until' => 1420153200,
+         'from' => 1419483600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              26,
+                              'months',
+                              12
+                            ]
+                          ],
+         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr.',
+         'type' => 'gesperrt',
+         'id' => 2010
+       },
        undef,
        undef,
        undef,
@@ -2973,27 +3040,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        },
        undef,
        undef,
-       {
-         'source_id' => 'IM_022268',
-         'until' => 1413820800,
-         'text' => 'Karlshorster Str.: Fahrbahn zwischen Nöldnerstr. und Hauptstr. gesperrt, langsame Umfahrung über Fußgängerführung möglich, 30.06.2014 bis voraussichtlich 20.10.2014',
-         'from' => 1403992800,
-         'id' => 2416,
-         'data' => '#: next_check_id: KARLSHORSTER-2014
-#: last_checked: 2014-10-10 vvv
-#: next_check: 2014-10-20 vvv
-#: by: http://www.berlin-straba.de/
-#: by: https://de-de.facebook.com/kaskelkiez/posts/724415817603933
-#: by: http://www.bvg.de/index.php/de/9464/name/Verkehrsmeldungen/report/1827852.html (nur zwei Wochen)
-#: source_id: 2147338462
-userdel	q4::inwork 15261,10738 15272,10790
-# REMOVED --- userdel	q4::inwork 15272,10790 15279,10862
-# REMOVED --- userdel	q3::inwork 15279,10862 15144,10905
-#: next_check ^^^
-#: last_checked ^^^
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3131,7 +3178,16 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        undef,
        undef,
-       undef,
+       {
+         'until' => undef,
+         'text' => 'Sterndamm: Brückenarbeiten, Straße ist eventuell gesperrt',
+         'from' => undef,
+         'id' => 2469,
+         'data' => '#: XXX check!
+userdel	2::inwork 17736,5441 17886,5587
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3199,9 +3255,66 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'data' => 'userdel	2::temp 9986,13412 10317,13248
+',
+         'periodic' => 1,
+         'until' => 1417993199,
+         'from' => 1417734000,
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (6.12.2014 - 7.12.2014)',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              6,
+                              'months',
+                              12
+                            ]
+                          ],
+         'id' => 2515,
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'data' => 'userdel	2::temp 9986,13412 10317,13248
+',
+         'periodic' => 1,
+         'until' => 1418597999,
+         'from' => 1418338800,
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (13.12.2014 - 14.12.2014)',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              13,
+                              'months',
+                              12
+                            ]
+                          ],
+         'id' => 2516,
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
+         'data' => 'userdel	2::temp 9986,13412 10317,13248
+',
+         'periodic' => 1,
+         'until' => 1419202799,
+         'from' => 1418943600,
+         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 4. Adventswochenende (20.12.2014 - 21.12.2014)',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              20,
+                              'months',
+                              12
+                            ]
+                          ],
+         'id' => 2517,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3219,7 +3332,28 @@ userdel	2::night 17671,13132 17684,13133
 ',
          'type' => 'gesperrt'
        },
-       undef,
+       {
+         'data' => '#: by: http://www.potsdam.de/cms/beitrag/10046424/302934/
+#: by: http://www.potsdam.de/cms/dokumente/10050614_996205/91842041/Radverkehrsfuehrung_Gro%C3%9Fveranstaltungen.pdf
+#: by: http://www.potsdam.de/cms/ziel/302934/DE
+userdel	1::temp -13556,-1182 -13643,-1220
+',
+         'periodic' => 1,
+         'until' => 1419807599,
+         'from' => 1416697200,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              24,
+                              'months',
+                              11
+                            ]
+                          ],
+         'text' => 'Weihnachtsmarkt am Luisenplatz: vermutlich geänderte Radverkehrsführung, 24.11.2014 - 28.12.2014',
+         'type' => 'gesperrt',
+         'id' => 2526
+       },
        undef,
        undef,
        undef,
@@ -3525,16 +3659,7 @@ userdel	2::inwork 15419,10706 15379,10651
          'dont_check_date' => 1,
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_022945',
-         'until' => 1414159200,
-         'text' => 'Fennstr.: zwischen Schnellerstr. und Michael-Brückner-Str. Baustelle, Fahrbahn Richtung Michael-Brückner-Str. gesperrt, ab 22.09.2014 bis 24.10.2014',
-         'from' => 1411279200,
-         'id' => 2632,
-         'data' => 'userdel	q4::inwork; 18245,5551 18080,5376
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20140919.1335.399343.html',
          'until' => 1420066800,
@@ -3634,8 +3759,8 @@ userdel	2::inwork -3197,11554 -3075,11510 -3069,11487
        },
        {
          'source_id' => 'IM_023135',
-         'until' => 1413817200,
-         'text' => 'Mäckeritzbrücke: Vollsperrung, eventuell sogar für Fußgänger und Radfahrer, 13.10.2014 08:00 Uhr bis 20.10.2014 17:00 Uhr ',
+         'until' => 1414573200,
+         'text' => 'Mäckeritzbrücke: Vollsperrung, eventuell sogar für Fußgänger und Radfahrer, 13.10.2014 08:00 Uhr bis 29.10.2014',
          'from' => 1413093600,
          'id' => 2644,
          'data' => 'userdel	2::inwork 1232,15804 1238,15705
@@ -3657,26 +3782,8 @@ userdel	2::inwork -3197,11554 -3075,11510 -3069,11487
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_023177',
-         'until' => 1413583199,
-         'text' => 'Karlshorster Str.: zwischen Hauptstr. und Türrschmidtstr. Vollsperrung, auch Radfahrer und Fußgänger können nicht passieren, ab: 16.10.2014 04 Uhr bis 17.10.2014 nachts ',
-         'from' => 1413338400,
-         'id' => 2646,
-         'data' => 'userdel	2::inwork 15261,10738 15272,10790 15279,10862
-',
-         'type' => 'gesperrt'
-       },
-       {
-         'until' => 1413755999,
-         'text' => 'Schönerlinder Straße: komplette Sperrung wegen Abriss der alten Autobahnbrücke, von Samstag, 18.10.2014, 8 Uhr bis Sonntagnacht ',
-         'from' => 1413525600,
-         'id' => 2647,
-         'data' => '#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1410/nachricht5389.html
-userdel	2::inwork 12624,25570 12694,25696
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        {
          'source_id' => 'IM_023111',
          'until' => 1427896800,
@@ -3701,7 +3808,7 @@ userdel	q4::inwork 16502,2314 16473,2560 16461,2569
        },
        {
          'source_id' => 'IM_023211',
-         'until' => 1414882799,
+         'until' => 1414857600,
          'text' => 'Schwanebecker Chaussee: zwischen Helios-Klinikum und Alt-Buch Baustelle, gesperrt in Richtung Buch, ab 18.10.2014 07 Uhr bis Anfang 11/2014',
          'from' => 1413496800,
          'id' => 2650,
@@ -3726,6 +3833,16 @@ userdel	q4::inwork 16502,2314 16473,2560 16461,2569
          'from' => 1413669600,
          'id' => 2652,
          'data' => 'userdel	q4::inwork 1735,24738 1617,24741 1621,24798
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_023200',
+         'until' => 1415376000,
+         'text' => 'Köpenicker Str.: Baustelle, Fahrbahn zwischen Grünauer Str. und Bohnsdorfer Weg in beiden Richtungen gesperrt, 20.10.2014 08:00 Uhr bis 07.11.2014 17:00 Uhr',
+         'from' => 1413698400,
+         'id' => 2653,
+         'data' => 'userdel	q4::inwork 19679,1571 19728,1660 19771,1793
 ',
          'type' => 'handicap'
        }
