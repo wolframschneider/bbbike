@@ -180,7 +180,7 @@ Grazer Platz	1 6798,6755 6675,6740 6546,6724 6517,6722 6439,6716
 Putlitzstr.	1 6267,14184 6264,13995 6226,13951
 Langhansstr. (außer Tram)	1 12045,16574 12189,16578 12409,16475
 Triftstr. (Buchholz)	1 12023,23039 12185,23021
-Joachimstr.	1 10142,13556 10085,13684
+Joachimstr.	1s 10085,13684 10142,13556 10199,13446
 Wilhelmsaue	1 4778,8784 4918,8785 5165,8784
 Wilhelmsaue	1 5164,8740 4918,8740 4777,8731
 Friedrichsruher Str.	1 3196,9193 3333,9026
@@ -2757,7 +2757,6 @@ Invalidenfriedhof - Invalidestr.: Weg wegen Bauarbeiten gesperrt, bis 20.02.2015
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, evtl. dauerhaft	2 12807,11287 12713,11372
 Alfred-Döblin-Platz: Bauarbeiten, Fahrbahn gesperrt	2::inwork 11162,10919 11150,11030
 Dresdener Str.: Bauarbeiten, komplett gesperrt	2::inwork 11034,11249 11000,11327
-Am Postbahnhof: Bauarbeiten, Straße gesperrt	2::inwork 12641,11288 12664,11310 12713,11372
 Berolinastr., Weg zum Spielplatz: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt	2::inwork 11719,13088 11815,13045
 Diestelmeyerstr.: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt, auch für Fußgänger	2::inwork 12690,12769 12833,12920
 Weg zwischen S-Wartenberg und S-Hohenschönhausen: Brücke morsch und gesperrt	2::inwork 17159,18375 17235,18352
