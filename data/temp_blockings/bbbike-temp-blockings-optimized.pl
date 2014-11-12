@@ -2360,7 +2360,9 @@ userdel	2::temp 9524,12010 9656,12021
          'source_id' => 'http://www.winterwelt-berlin.de/',
          'data' => '#: XXX Winterwelt bereits ab 2.11.2014 (bis 4.1.2015), aber auch schon hier Einschränkungen? Weihnachtsmarkt erst ab dem 24.11.2014
 #: by: http://www.berlin.de/tickets/suche/detail.php?id=962671
-#: next_check: 2014-11-01
+#: last_checked: 2014-11-04
+#: next_check: 2014-11-24
+#: priority: #A
 userdel	2::temp 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324 8280,11296 8278,11257
 #: XXX_prog "3::temp" geht nicht?
 userdel	3 8427,11365 8389,11378 8374,11479
@@ -2847,7 +2849,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        {
-         'source_id' => 'IM_023303',
+         'source_id' => 'IM_023302',
          'until' => 1415820600,
          'text' => 'Str. des 17.Juni zwischen Yitzhak-Rabin-Str. und Platz des 18.März sowie Ebertstr. gesperrt, Veranstaltung "25 Jahre Mauerfall", vom 01.11.2014 bis 12.11.2014',
          'from' => 1414731600,
@@ -3664,16 +3666,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
        undef,
        undef,
        undef,
-       {
-         'source_id' => '145600136',
-         'until' => 1415314799,
-         'text' => 'Brücke über den Oder-Havel-Kanal: Bauarbeiten, gesperrt, 01.09.2014 bis 06.11.2014 ',
-         'from' => 1409436000,
-         'id' => 2619,
-         'data' => 'userdel	2::inwork 38845,51258 38476,50514
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3730,7 +3723,7 @@ userdel	q3::inwork 4503,10497 4485,10307
          'text' => 'Unterführung Rummelsburg: vereinzelte Sperrungen des südlichen Zugang bis 2016 möglich',
          'from' => 1411312807,
          'id' => 2631,
-         'data' => '#: last_checked: 2014-10-29 (gerade nicht gesperrt)
+         'data' => '#: last_checked: 2014-11-08 (gerade nicht gesperrt)
 userdel	2::inwork 15419,10706 15379,10651
 ',
          'dont_check_date' => 1,
@@ -3775,8 +3768,8 @@ userdel	2::inwork 8101,13901 8248,13659 8337,13541
        undef,
        {
          'source_id' => 'http://www.berliner-woche.de/nachrichten/bezirk-treptow-koepenick/niederschoeneweide/artikel/45985-umleitungen-durch-angrenzende-wohngebiete/',
-         'until' => 1415962800,
-         'text' => 'Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, bis 14. November 2014',
+         'until' => 1417449600,
+         'text' => 'Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, bis 01.12.2014',
          'from' => 1407706402,
          'id' => 2639,
          'data' => '#: source_id: IM_022377
@@ -3845,18 +3838,7 @@ userdel	2::inwork -3197,11554 -3075,11510 -3069,11487
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => undef,
-         'text' => 'Ehrenpreisweg: zwischen Kornblumenring und Stubenrauchstraße Sperrung wegen Bauarbeiten, Einschränkungen für Radfahrer unbekannt ',
-         'from' => undef,
-         'id' => 2649,
-         'data' => '#: by: fritz
-#: XXX bis wann gehen die Bauarbeiten?
-#: add_fragezeichen: existieren Einschränkungen für Radfahrer?
-userdel	q4::inwork 16502,2314 16473,2560 16461,2569
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'source_id' => '146901438',
@@ -3869,36 +3851,18 @@ userdel	q4::inwork 16502,2314 16473,2560 16461,2569
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'IM_023200',
-         'until' => 1415376000,
-         'text' => 'Köpenicker Str.: Baustelle, Fahrbahn zwischen Grünauer Str. und Bohnsdorfer Weg in beiden Richtungen gesperrt, 20.10.2014 08:00 Uhr bis 07.11.2014 17:00 Uhr',
-         'from' => 1413698400,
-         'id' => 2653,
-         'data' => 'userdel	q4::inwork 19679,1571 19728,1660 19771,1793
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_022801',
          'until' => 1419001200,
          'text' => 'John-Foster-Dulles-Allee: Baustelle zwischen Zeltenplatz und Große Querallee, Fahrbahn gesperrt, Ausweichen auf Gehweg, 08.09.2014 08:00 Uhr bis 19.12.2014 16:00 Uhr ',
          'from' => 1410069600,
          'id' => 2654,
-         'data' => 'userdel	q4::inwork 7627,12380 7821,12367 7875,12363 8017,12359
+         'data' => 'userdel	q3::inwork 7627,12380 7821,12367 7875,12363 8017,12359
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_023242',
-         'until' => 1418770799,
-         'text' => 'Schlichtallee: Bauarbeiten zwischen Zobtener Str. und Max-Taut-Schule, Einbahnstraße offen Richtung Hauptstr., Ausweichen auf Gehweg, bis zum 16.12.2014',
-         'from' => 1414624392,
-         'id' => 2655,
-         'data' => 'userdel	q3::inwork; 15758,10578 15880,10680
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2014/pressemitteilung.219976.php',
          'until' => 1419029999,
@@ -3906,6 +3870,76 @@ userdel	q4::inwork 16502,2314 16473,2560 16461,2569
          'from' => 1414882800,
          'id' => 2656,
          'data' => 'userdel	q4::inwork 2174,24783 2222,24884 2245,25016
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_023339',
+         'until' => 1416578400,
+         'text' => 'Hobrechtsfelder Chaussee: Baustelle zwischen Wiltbergstr. und Pölnitzweg, Fahrbahn stadtauswärts gesperrt, 03.11.2014 10:30 Uhr bis 21.11.2014 15:00 Uhr',
+         'from' => 1414920600,
+         'id' => 2657,
+         'data' => 'userdel	1::inwork 15230,26560 15589,27116
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => '146001411',
+         'until' => 1417388400,
+         'text' => 'Wandlitz: Vollsperrung der Straße nach Bogensee, 06.11.2014 bis 30.11.2014 ',
+         'from' => 1415142000,
+         'id' => 2658,
+         'data' => 'userdel	2::inwork 17288,40557 17544,40499 17757,40658
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-spandau/presse/archiv/20141107.1350.400054.html',
+         'until' => 1417215599,
+         'text' => 'Jungfernheideweg: Straßenbauarbeiten zwischen Popitzweg und Bahnbrücke, vom 20.11. bis zum 28.11.2014 (nur tagsüber)',
+         'from' => 1416351600,
+         'id' => 2659,
+         'data' => 'userdel	q4::inwork 1361,14431 1423,14679
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2014/pressemitteilung.221430.php',
+         'until' => 1416697199,
+         'text' => 'Veltheimstraße: Bauarbeiten zwischen Berliner Straße und Solquellstraße, Fahrbahn gesperrt, vom 5. November 2014 bis voraussichtlich 22. November 2014',
+         'from' => 1415055600,
+         'id' => 2660,
+         'data' => 'userdel	q4::inwork 4111,24488 3963,24559 3842,24556
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_023373',
+         'until' => 1442066400,
+         'text' => 'Pichelswerderstr.: Baustelle, Fahrbahn Richtung Ruhlebener Str. zwischen Freiheit und Gewerbehof gesperrt, vom 10.11.2014 bis 12.09.2015',
+         'from' => 1415487600,
+         'id' => 2661,
+         'data' => 'userdel	q4::inwork; -2576,13777 -2669,13488
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'LS/721-F/14/161',
+         'until' => 1417215600,
+         'text' => 'Neuenhagen: Bauarbeiten, 17.11.2014 bis 28.11.2014',
+         'from' => 1416092400,
+         'id' => 2662,
+         'data' => 'userdel	2::inwork 30910,13101 30982,12947
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'text' => 'Handjerystraße: zwischen Schnackenburgstraße und Sarrazinstraße Sperrung der Fahrbahn, Ende der Sperrung unbekannt ',
+         'from' => undef,
+         'id' => 2663,
+         'data' => '#: by: fritz
+userdel	q4::inwork 5635,7660 5636,7540
 ',
          'type' => 'handicap'
        }

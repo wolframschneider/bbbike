@@ -110,7 +110,6 @@ Konsumhof: Qualität?	? -9716,-2543 -9573,-2600
 Weidendamm: Qualität des südlichen Abschnitts?	? -9490,-2856 -9461,-2738 -9511,-2718
 Grünstr.: Qualität?	? -9210,-2994 -9142,-2756 -9137,-2738 -9110,-2651
 Grünstr.: Qualität?	? -9142,-2756 -9100,-2765
-Emil-Jannings-Str.: Qualität?	? -9013,-2614 -8902,-2292 -8793,-2315
 An der Sandscholle: Qualität?	? -9110,-2651 -9052,-2510 -8953,-2210 -8909,-2009 -8905,-1939
 Strausberg - Garzau: Qualität (laut "Berliner Umland" teilweise witterungsabhängige Strecke, auf Garzauer Seite anscheinend nur Feldweg)?	? 42578,15750 43666,15719 43839,15716 45536,15438 46035,15042 46421,14990
 Waldsieversdorf: laut "Berliner Umland" geeignete Strecke	? 54751,15669 55000,15887 55225,15862 55467,16024 56503,16821
@@ -1077,13 +1076,15 @@ Hohenstein - Strausberg: gibt es zwischen Hohenstein und Strausberg mittlerweile
 Hermann-Oxfort-Promenade: Ist die Hermann-Oxfort-Promenade ausgeschildert?	? -3503,13773 -3543,13691 -3556,13582 -3546,13503 -3529,13452 -3451,13300 -3441,13270 -3352,13135 -3339,13106 -3203,12895 -3202,12891
 Am Klötzebecken, nördlicher Weg: für Radfahrer befahrbar? Qualität? Nachts beleuchtet?	? 5851,22538 5920,22603 6023,22667 6207,22737 6226,22712
 Heinersdorf: Qualität? Liegt hier auch Verbundsteinpflaster?	? 63261,76791 63225,76949 63279,77202 63342,77286 63390,77441 63293,77739
+Umfahrung B5 bei Karstädt: ist das eine Kraftfahrzeugstraße?	? -102187,80033 -102492,80202 -102824,80211 -103579,80166 -104020,80374 -104246,80597 -104370,80854 -104406,81222 -104370,81603 -104546,81975
+Schwarzer Weg (Siemensstadt): Qualität des Wegs? Ist der Weg ausgeschildert und beleuchtet?	? 1423,14679 1384,14598 1235,14609
 # added from ampeln-orig
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6163 (Stand der Planung?)
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4
 geschlossen bei Bedarf (?) (Zbr)	? 27657,-11741
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?) (B)	? 40248,14503
 # added from other ../tmp/.fragezeichen-other-source
-# added from other sources: (strassen plaetze landstrassen landstrassen2 strassen_bab flaechen wasserstrassen wasserumland wasserumland2 sbahn sbahnhof rbahn rbahnhof ubahn ubahnhof faehren hoehe orte orte2 orte_city ortsschilder ampeln ampelschaltung plz potsdam deutschland grenzuebergaenge sehenswuerdigkeit obst radwege qualitaet_s qualitaet_l handicap_s handicap_l vorfahrt nolighting housenumbers green brunnels gesperrt gesperrt_car gesperrt_u gesperrt_s gesperrt_r comments_cyclepath comments_danger comments_ferry comments_misc  comments_mount comments_path comments_route  comments_tram comments_kfzverkehr comments_scenic fragezeichen exits culdesac)
+# added from other sources: (strassen plaetze landstrassen landstrassen2 strassen_bab flaechen wasserstrassen wasserumland wasserumland2 sbahn sbahnhof rbahn rbahnhof ubahn ubahnhof faehren hoehe orte orte2 orte_city ortsschilder ampeln ampelschaltung plz potsdam deutschland grenzuebergaenge sehenswuerdigkeit obst radwege qualitaet_s qualitaet_l handicap_s handicap_l vorfahrt nolighting housenumbers green brunnels gesperrt gesperrt_car gesperrt_u gesperrt_s gesperrt_r comments_cyclepath comments_danger comments_ferry comments_misc  comments_mount comments_path comments_route  comments_trafficjam comments_tram comments_kfzverkehr comments_scenic fragezeichen exits culdesac)
 (Baustraße an der Freybrücke) (Ist die Baustraße während der Bauarbeiten an der Freybrücke noch befahrbar?)	? -3069,11487 -3075,11510 -3197,11554
 B5 (Umfahrung Nauen) (ist die Umfahrung Nauen auch für Radfahrer benutzbar?)	? -24421,19803 -24681,20018 -24904,20093 -25871,20229 -26745,20437 -27095,20987 -27689,21958 -28075,22250
 Kerzendorf - B101 (ist diese Strecke asphaltiert?)	? 2406,-15008 2327,-14968 2188,-14926 2073,-14964 1915,-14960 1811,-14965 1704,-14954 1640,-14947 1541,-14947 1529,-15164 1566,-15226 1577,-15749 1448,-15955 1513,-16010
@@ -1233,4 +1234,3 @@ F3.5 (Havelland) (kompletter Verlauf fehlt!)	? -23341,-4967
 F3.6 (Havelland) (kompletter Verlauf fehlt!)	? -21112,-3787
 # added from bbbike-temp-blockings-optimized
 Uferweg an der Havel wegen Bauarbeiten gesperrt userdel (Sind die Bauarbeiten am Uferweg beendet? Wurde der Uferweg asphaltiert?)	? -12363,-1742 -12457,-1857
-Ehrenpreisweg: zwischen Kornblumenring und Stubenrauchstraße Sperrung wegen Bauarbeiten, Einschränkungen für Radfahrer unbekannt  userdel (existieren Einschränkungen für Radfahrer?)	? 16502,2314 16473,2560 16461,2569

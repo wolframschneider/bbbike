@@ -17113,7 +17113,9 @@ EOF
        data  => <<EOF,
 #: XXX Winterwelt bereits ab 2.11.2014 (bis 4.1.2015), aber auch schon hier Einschränkungen? Weihnachtsmarkt erst ab dem 24.11.2014
 #: by: http://www.berlin.de/tickets/suche/detail.php?id=962671
-#: next_check: 2014-11-01
+#: last_checked: 2014-11-04
+#: next_check: 2014-11-24
+#: priority: #A
 userdel	2::temp 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324 8280,11296 8278,11257
 #: XXX_prog "3::temp" geht nicht?
 userdel	3 8427,11365 8389,11378 8374,11479
@@ -20322,7 +20324,7 @@ EOF
        until => $isodate2epoch->("2014-11-12 20:30:00"),
        text  => 'Str. des 17.Juni zwischen Yitzhak-Rabin-Str. und Platz des 18.März sowie Ebertstr. gesperrt, Veranstaltung "25 Jahre Mauerfall", vom 01.11.2014 bis 12.11.2014',
        type  => 'gesperrt',
-       source_id => 'IM_023303',
+       source_id => 'IM_023302',
        data  => <<EOF,
 userdel	2::temp 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186
 userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165
@@ -21323,7 +21325,7 @@ EOF
      { from  => $isodate2epoch->("2013-12-13 06:00:00"), # 1385679600, # 2013-11-29 00:00 - 1 Tag Vorlauf
        until => $isodate2epoch->("2013-12-15 23:59:59"), # 1385938799, # 2013-12-01 23:59
        periodic => 1,
-       recurrences => [['yearly', days => 8, months => 12]], # zwei Termine, 1. und 3. Advent
+       recurrences => [['yearly', days => 15, months => 12]], # zwei Termine, 1. und 3. Advent
        text  => 'Bahnhofstr. (Lichtenrade): Weihnachtsmarkt zwischen Riedingerstr. und Goltzstr, Straße gesperrt, 14.12.2013 und 15.12.2013',
        type  => 'gesperrt',
        source_id => 'IM_020815',
@@ -23410,7 +23412,7 @@ EOF
        type  => 'gesperrt',
        dont_check_date => 1,
        data  => <<EOF,
-#: last_checked: 2014-10-29 (gerade nicht gesperrt)
+#: last_checked: 2014-11-08 (gerade nicht gesperrt)
 userdel	2::inwork 15419,10706 15379,10651
 EOF
      },
@@ -23480,8 +23482,8 @@ userdel	q4::inwork 8661,6169 8830,6145 8944,6127
 EOF
      },
      { from  => 1407706402,
-       until => $isodate2epoch->("2014-11-14 12:00:00"),
-       text  => 'Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, bis 14. November 2014',
+       until => $isodate2epoch->("2014-12-01 17:00:00"),
+       text  => 'Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, bis 01.12.2014',
        type  => 'handicap',
        source_id => 'http://www.berliner-woche.de/nachrichten/bezirk-treptow-koepenick/niederschoeneweide/artikel/45985-umleitungen-durch-angrenzende-wohngebiete/',
        data  => <<EOF,
@@ -23578,13 +23580,11 @@ userdel	q2::inwork; 9224,14169 9383,13986
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1415648223, # undef, # XXX
        text  => 'Ehrenpreisweg: zwischen Kornblumenring und Stubenrauchstraße Sperrung wegen Bauarbeiten, Einschränkungen für Radfahrer unbekannt ',
        type  => 'handicap',
        data  => <<EOF,
 #: by: fritz
-#: XXX bis wann gehen die Bauarbeiten?
-#: add_fragezeichen: existieren Einschränkungen für Radfahrer?
 userdel	q4::inwork 16502,2314 16473,2560 16461,2569
 EOF
      },
@@ -23630,11 +23630,11 @@ EOF
        type  => 'handicap',
        source_id => 'IM_022801',
        data  => <<EOF,
-userdel	q4::inwork 7627,12380 7821,12367 7875,12363 8017,12359
+userdel	q3::inwork 7627,12380 7821,12367 7875,12363 8017,12359
 EOF
      },
      { from  => 1414624392, # 2014-10-30 00:13
-       until => 1418770799, # 2014-12-16 23:59
+       until => 1415648027, # 1418770799, # 2014-12-16 23:59
        text  => 'Schlichtallee: Bauarbeiten zwischen Zobtener Str. und Max-Taut-Schule, Einbahnstraße offen Richtung Hauptstr., Ausweichen auf Gehweg, bis zum 16.12.2014',
        type  => 'handicap',
        source_id => 'IM_023242',
@@ -23649,6 +23649,69 @@ EOF
        source_id => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2014/pressemitteilung.219976.php',
        data  => <<EOF,
 userdel	q4::inwork 2174,24783 2222,24884 2245,25016
+EOF
+     },
+     { from  => 1414920600, # 2014-11-02 10:30
+       until => 1416578400, # 2014-11-21 15:00
+       text  => 'Hobrechtsfelder Chaussee: Baustelle zwischen Wiltbergstr. und Pölnitzweg, Fahrbahn stadtauswärts gesperrt, 03.11.2014 10:30 Uhr bis 21.11.2014 15:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'IM_023339',
+       data  => <<EOF,
+userdel	1::inwork 15230,26560 15589,27116
+EOF
+     },
+     { from  => $isodate2epoch->("2014-11-05 00:00:00"),
+       until => 1417388400, # 2014-12-01 00:00
+       text  => 'Wandlitz: Vollsperrung der Straße nach Bogensee, 06.11.2014 bis 30.11.2014 ',
+       type  => 'gesperrt',
+       source_id => '146001411',
+       data  => <<EOF,
+userdel	2::inwork 17288,40557 17544,40499 17757,40658
+EOF
+     },
+     { from  => 1416351600, # 2014-11-19 00:00
+       until => 1417215599, # 2014-11-28 23:59
+       text  => 'Jungfernheideweg: Straßenbauarbeiten zwischen Popitzweg und Bahnbrücke, vom 20.11. bis zum 28.11.2014 (nur tagsüber)',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-spandau/presse/archiv/20141107.1350.400054.html',
+       data  => <<EOF,
+userdel	q4::inwork 1361,14431 1423,14679
+EOF
+     },
+     { from  => 1415055600, # 2014-11-04 00:00
+       until => 1416697199, # 2014-11-22 23:59
+       text  => 'Veltheimstraße: Bauarbeiten zwischen Berliner Straße und Solquellstraße, Fahrbahn gesperrt, vom 5. November 2014 bis voraussichtlich 22. November 2014',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2014/pressemitteilung.221430.php',
+       data  => <<EOF,
+userdel	q4::inwork 4111,24488 3963,24559 3842,24556
+EOF
+     },
+     { from  => $isodate2epoch->("2014-11-09 00:00:00"), # 1415401200, # 2014-11-08 00:00
+       until => $isodate2epoch->("2015-09-12 16:00:00"), # 1442354399, # 2015-09-15 23:59
+       text  => 'Pichelswerderstr.: Baustelle, Fahrbahn Richtung Ruhlebener Str. zwischen Freiheit und Gewerbehof gesperrt, vom 10.11.2014 bis 12.09.2015',
+       type  => 'handicap',
+       source_id => 'IM_023373',
+       data  => <<EOF,
+userdel	q4::inwork; -2576,13777 -2669,13488
+EOF
+     },
+     { from  => $isodate2epoch->("2014-11-16 00:00:00"),
+       until => 1417215600, # 2014-11-29 00:00
+       text  => 'Neuenhagen: Bauarbeiten, 17.11.2014 bis 28.11.2014',
+       type  => 'gesperrt',
+       source_id => 'LS/721-F/14/161',
+       data  => <<EOF,
+userdel	2::inwork 30910,13101 30982,12947
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Handjerystraße: zwischen Schnackenburgstraße und Sarrazinstraße Sperrung der Fahrbahn, Ende der Sperrung unbekannt ',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: fritz
+userdel	q4::inwork 5635,7660 5636,7540
 EOF
      },
     );

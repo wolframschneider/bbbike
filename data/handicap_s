@@ -29,12 +29,12 @@ Invalidenstr. (Mitte): Baustelle, Fahrbahn in Richtung Gartenstr. zwischen Carol
 Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Caroline-Michaelis-Str. und und Hessische Str. gesperrt	q4::inwork; 9151,13941 9085,13919 8935,13844
 Invalidenstr. (Mitte) Richtung Alt-Moabit zwischen Chausseestr. und und Hessische Str.: teilweise noch Bauarbeiten auf der Fahrbahn, auf Gehweg umfahren	q4::inwork; 8935,13844 8842,13798
 Heidestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 8048,13578 8092,13467
-Ella-Trebe-Str.: Einbahnstraßenregelung wegen Bauarbeiten	q3::inwork; 7939,13026 7948,12918
-Margarete-Steffin-Str.: Fahrbahn wegen Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 8315,13181 8406,13127 8525,12958
+Margarete-Steffin-Str.: Fahrbahn wegen Bauarbeiten teilweise gesperrt (Sackgasse!), Ausweichen auf Gehweg	q3::inwork 8315,13181 8406,13127 8525,12958
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9882,12259 9876,12298
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9876,12298 9858,12410
 Rathausstr.: Fußgänger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521 10704,12595
 Michaelkirchplatz: Bauarbeiten, Einbahnstraße	q4::inwork; 11349,11227 11415,11392
+Leuschnerdamm: Bauarbeiten am Engelbecken, auf Gehweg ausweichen	q4::inwork 11365,11047 11421,11073
 Köbisstr.: wegen Bauarbeiten Ausweichen auf Gehweg	q4::inwork 7103,11247 7160,11225
 Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Richtung Süden auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12898,7832 12914,7785 12969,7610 12991,7549 12992,7545 13015,7471 13018,7441
 Herrfurthstr: Bauarbeiten, Fahrbahn nicht benutzbar	q4::inwork 11833,7980 11979,8014

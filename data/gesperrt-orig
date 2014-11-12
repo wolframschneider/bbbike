@@ -2602,12 +2602,11 @@ Dresdener Str.: Bauarbeiten, komplett gesperrt	2::inwork 11034,11249 11000,11327
 # REMOVED --- #: last_checked: 2014-10-01 --- Am Postbahnhof: Bauarbeiten, Straße gesperrt	2::inwork 12641,11288 12664,11310 12713,11372
 # 
 #: XXX theoretisch ist ein Trampelpfad vorbei vorhanden
-#: last_checked: 2014-10-10
-#: next_check: 2014-10-31
+#: last_checked: 2014-11-04
 Berolinastr., Weg zum Spielplatz: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt	2::inwork 11719,13088 11815,13045
 # 
 #: XXX laut Schild bis Dezember 2014 gesperrt
-#: last_checked: 2014-10-27
+#: last_checked: 2014-11-07
 #: next_check: 2014-12-15
 Diestelmeyerstr.: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt, auch für Fußgänger	2::inwork 12690,12769 12833,12920
 # 
@@ -2618,21 +2617,19 @@ Diestelmeyerstr.: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt, auc
 #: next_check: 2015-02-15
 Weg zwischen S-Wartenberg und S-Hohenschönhausen: Brücke morsch und gesperrt	2::inwork 17159,18375 17235,18352
 # 
-#: XXX hier steht noch ein Bauzaun
-#: last_checked: 2014-09-21
-Viechtacher Str.: Bauarbeiten, Zufahrt zur Zwieseler Str. noch gesperrt	2::inwork 19657,9666 19727,9672
+# REMOVED --- #: XXX hier steht noch ein Bauzaun --- #: last_checked: 2014-09-21 --- Viechtacher Str.: Bauarbeiten, Zufahrt zur Zwieseler Str. noch gesperrt	2::inwork 19657,9666 19727,9672
 # 
 #: XXX Qualität nach den Bauarbeiten?
 #: osm_watch: way id="24845189" version="11"
-#: last_checked: 2014-09-21
-#: check_frequency: 60d
+#: last_checked: 2014-11-08
+#: check_frequency: 90d
 Viechtacher Str.: Bauarbeiten, Straße muss noch fertig gestellt werden	2::inwork 19801,9680 19857,9682 19893,9683
 # REMOVED (offen) --- Eisensteiner Str.: Bauarbeiten, Straße noch gesperrt	2::inwork 19727,9672 19722,9483
 # 
 #: XXX Qualität nach den Bauarbeiten?
 #: osm_watch: way id="287119368" version="7"
-#: last_checked: 2014-09-21
-#: check_frequency: 60d
+#: last_checked: 2014-11-08
+#: check_frequency: 90d
 Regener Str.: Bauarbeiten, noch nicht fertig gestellt	2::inwork 19790,9478 19849,9477 19890,9476
 # 
 # REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- #: by: http://www.tagesspiegel.de/berlin/grossbaustelle-in-berlin-bauarbeiten-am-ostkreuz-verzoegern-sich-bis-2017/8210208.html (Termin Wiederaufbau) --- #: next_check: 2018-01-01 --- Fußgängerbrücke S-Ostkreuz: Abriss und Neubau	2::inwork 14794,10844 14764,10877 14787,10972 14798,10985
@@ -2871,7 +2868,7 @@ Uferweg am Tegeler Hafen: Weg wegen Bauarbeiten gesperrt	2:inwork 1761,20539 174
 # REMOVED --- laut http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a115_avus/de/bau.shtml?y=20120731 seit April schon offen! --- #: by: somebody via phone call ---#: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a115_avus/de/bau.shtml --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4396.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1110/nachricht4504.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1201/nachricht4557.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1206/nachricht4691.html---#: by: INKO_109786---#: last_checked: 2012-07-05---#: next_check: 2012-11-15---Hüttenweg: Sperrung wegen Bau an der Autobahn, wahrscheinlich bis Ende November 2012	2:inwork -739,6838 -927,6888
 # 
 #: note: abgeschlossener Zaun
-#: last_checked: 2014-10-12
+#: last_checked: 2014-11-10
 #: check_frequency: 180d
 Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
 # 
@@ -2905,7 +2902,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: osm_watch: way id="158025179" version="1"
-#: last_checked: 2014-10-28
+#: last_checked: 2014-11-07
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 
@@ -3044,7 +3041,7 @@ Kniprodestr.: schlecht zu querender Mittelstreifen (Bordsteine, Verkehr)	3nocros
 #: by: rjoop
 (Treppe zur Putlitzbrücke): tragen, 35 Stufen	0:40 6209,14245
 An der Putlitzbrücke: Mittelstreifen schlecht zu überqueren	3nocross 6226,13951 6228,14077 6230,14184 6234,14247 6237,14309
-Rathenower Str.: schwierig zu querender Mittelstreifen	3nocross 7172,13051 7187,13126 7161,13190
+Rathenower Str.: schwierig zu querender Mittelstreifen (parkende Autos und Bordsteine)	3nocross 7172,13051 7187,13126 7161,13190
 Eichkatzweg	1 1137,9921 1026,9772 925,9644
 Lärchenweg	1 1046,9989 1093,9952 1137,9921 1157,9907 1238,9869
 schieben - einzelne Stufen	0:20 1372,8011
