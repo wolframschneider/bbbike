@@ -451,10 +451,11 @@ userdel	2::temp 5656,10876 5652,11004
        undef,
        undef,
        {
-         'data' => 'userdel	q4::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
+         'data' => '#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20141113.1440.400168.html
+userdel	q4::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 ',
          'periodic' => 1,
-         'until' => 1417388399,
+         'until' => 1417374000,
          'from' => 1417215600,
          'recurrences' => [
                             [
@@ -465,7 +466,7 @@ userdel	2::temp 5656,10876 5652,11004
                               11
                             ]
                           ],
-         'text' => 'Lichtenrader Lichtermarkt: Alt-Lichtenrade, Straße vermutlich gesperrt (am 30. November 2013)',
+         'text' => 'Lichtenrader Lichtermarkt: Alt-Lichtenrade, Straße vermutlich gesperrt (am 30. November 2013 von 13 bis 19 Uhr)',
          'type' => 'gesperrt',
          'id' => 417
        },
@@ -2314,12 +2315,12 @@ userdel	2::temp 11273,12301 11355,12331
 ',
          'periodic' => 1,
          'until' => 1420066799,
-         'from' => 1416438000,
+         'from' => 1415660400,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              11,
+                              10,
                               'months',
                               11
                             ]
@@ -2848,17 +2849,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_023302',
-         'until' => 1415820600,
-         'text' => 'Str. des 17.Juni zwischen Yitzhak-Rabin-Str. und Platz des 18.März sowie Ebertstr. gesperrt, Veranstaltung "25 Jahre Mauerfall", vom 01.11.2014 bis 12.11.2014',
-         'from' => 1414731600,
-         'id' => 2327,
-         'data' => 'userdel	2::temp 8610,12254 8538,12245 8303,12216 8214,12205 8089,12190 8055,12186
-userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3862,7 +3853,16 @@ userdel	2::inwork -3197,11554 -3075,11510 -3069,11487
 ',
          'type' => 'handicap'
        },
-       undef,
+       {
+         'source_id' => 'IM_023242',
+         'until' => 1418770799,
+         'text' => 'Schlichtallee: Bauarbeiten zwischen Zobtener Str. und Max-Taut-Schule, Einbahnstraße offen Richtung Hauptstr., Ausweichen auf Gehweg, bis zum 16.12.2014',
+         'from' => 1414624392,
+         'id' => 2655,
+         'data' => 'userdel	q3::inwork; 15758,10578 15880,10680
+',
+         'type' => 'handicap'
+       },
        {
          'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2014/pressemitteilung.219976.php',
          'until' => 1419029999,
