@@ -223,6 +223,7 @@
     (define-key map "\C-c\C-j" 'bbbike-join-street)
     (define-key map "\C-cj"    'bbbike-join-street)
     (define-key map "\C-c."    'bbbike-update-now)
+    (define-key map "\C-c\C-m" 'bbbike-center-point)
     (setq bbbike-mode-map map)))
 
 (defvar bbbike-syntax-table nil "Syntax table for BBBike bbd mode.")
@@ -236,11 +237,11 @@
 
 (defun bbbike-mode ()
   (interactive)
+  (kill-all-local-variables)
   (use-local-map bbbike-mode-map)
   (setq mode-name "BBBike"
 	major-mode 'bbbike-mode)
   (set-syntax-table bbbike-syntax-table)
-  (run-hooks 'bbbike-mode-hook)
 
   (if (string-match "^2[01]\\." emacs-version)
       (progn
@@ -263,6 +264,8 @@
 
   ;; In emacs 22, tab is something else
   (local-set-key "\t" 'self-insert-command)
+
+  (run-hooks 'bbbike-mode-hook)
   )
 
 (defun bbbike-set-grep-command ()
