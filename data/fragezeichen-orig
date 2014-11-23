@@ -39,7 +39,7 @@ Danziger Str.	?::projected 11709,14856 11864,14781 11990,14714 12025,14695 12128
 # 
 #: XXX im Baumaﬂnahmenkatalog ist nur der ˆstliche Teil ab Heinrich-Heine-Str. eingezeichnet, Baumaﬂnahmen 1.46 (Realisierung in 2011)
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
-#: last_checked: 2014-10-31
+#: last_checked: 2014-11-21
 #: check_frequency: 60d
 Annenstr./Heinrich-Heine-Platz	?::projected 11349,11227 11249,11268 11091,11379 11052,11414 11039,11425 10892,11555 10815,11662
 # 
@@ -84,7 +84,7 @@ Stein/Nuthestr.: wird hier vielleicht eine Ampel hingestellt?	?::projected 10270
 # 
 #: XXX Baumaﬂnahme 2.29 (Realisierung nach 2011)
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5957 (Realisierung anscheinend ungewiss)
-#: last_checked: 2014-05-16
+#: last_checked: 2014-11-22
 #: check_frequency: 180d
 Hasenheide: werden hier vielleicht Radspuren Richtung Osten markiert oder Radwege erstellt? Was ist mit der existierenden Gegenrichtung?	?::projected 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260
 # 
@@ -224,11 +224,11 @@ Blaschkoallee: werden hier Radwege/spuren in Richtung Osten entstehen?	?::projec
 Warschauer Str: Radspuren in Bau	?::inwork 13588,11490 13603,11538 13651,11731 13696,11920 13745,12118
 # 
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
-#: osm_watch: way id="4424794" version="12"
-#: osm_watch: way id="30195541" version="7"
+#: osm_watch: way id="4424794" version="13"
+#: osm_watch: way id="30195541" version="8"
+#: XXX laut osm nun mit cycleway=lane
 #: last_checked: 2014-09-20
-#: check_frequency: 60d
-Turmstr.: Radspuren f¸r 2013 geplant	?::projected 5248,13434 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324 6377,13321
+Turmstr.: Radspuren f¸r 2013 geplant	? 5248,13434 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324 6377,13321
 # 
 # REMOVED (realisiert) --- #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015) --- #: osm_watch: way id="4884674" version="8" --- #: osm_watch: way id="8023415" version="6" --- #: last_checked: 2013-07-13 --- #: check_frequency: 180d --- Klosterbuschweg: Radspuren f¸r 2013 geplant	?::projected -6442,14535 -6438,14609 -6438,14770 -6439,14837 -6429,14879 -6405,14971
 # 
@@ -562,9 +562,11 @@ Bebauungsplan XIX-48b: neue Plan- und Privatstraﬂen werden erstellt	?::projected
 #: last_checked: 2014-05-25
 #: check_frequency: 360d
 #: XXX auﬂerdem sind schon die Zug‰nge als Straﬂenland gewidmet
-#: XXX Namensvorschlag "Claus-Dieter-Sprink-Br¸cke"
+#: XXX alter Namensvorschlag "Claus-Dieter-Sprink-Br¸cke"
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4751 (in der BVV beschlossen)
-Fuﬂg‰ngersteg ¸ber den Kietzer Graben: wann wird er errichtet, wird er auch f¸r Radfahrer befahrbar sein?	?::projected 22500,4623 22509,4595
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/48re.pdf/file?y=2014
+#: XXX Name: Kietzgrabensteg (fehlt in Berlin.coords.data)
+Kietzgrabensteg: wann wird er errichtet, wird er auch f¸r Radfahrer befahrbar sein?	?::projected 22500,4623 22509,4595
 # 
 # REMOVED (nein, nur Poller, keine Beeintr‰chtigung) --- #: last_checked: 2013-11-17 --- #: next_check: 2014-03-15 --- Siegfriedstr. - Landschaftspark Herzberge: wird es hier noch Dr‰ngelgitter geben?	?::inwork 17110,14187
 # REMOVED (aufgenommen) --- #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20131004.1210.390027.html --- #: last_checked: 2013-11-01 --- #: next_check: 2014-01-01 --- Spreeuferweg: wie sieht dieser Abschnitt nach der Sanierung aus? Wird es eine Rampe neben der Treppe geben?	?::inwork 5128,13012 5243,12903
@@ -885,7 +887,7 @@ Weitlingstr.: f¸r 2012 geplanter Zebrastreifen? Wo genau?	?::projected 16705,115
 # 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/verwaltung/org/vermessung/b-plaene/b-plaene/B-V-3.jpg
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/42re.pdf/file?y=2012
-#: last_checked: 2014-10-28
+#: last_checked: 2014-11-20
 #: check_frequency: 180d
 Planstraﬂe C: Einfahrten existieren noch, aber statt einer Straﬂe ist hier nur ein Parkplatz	?::projected 12926,11224 12848,11093
 # 
@@ -1211,6 +1213,8 @@ Buschallee: Bauarbeiten, auch f¸r Radfahrer relevant?	?::inwork; 14619,16551 148
 # - Fragen nach genauen Routenverl‰ufen
 # - XXX_prog- und XXX_indoor-Eintr‰ge
 # 
+Krautstr.: gibt es hier relevante Bauarbeiten mit Sperrung?	?::inwork 12002,12008 11993,11978
+# 
 #: XXX gibt es w‰hrend der Bauarbeiten Einschr‰nkungen bzgl. der Radwege? vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.223342.php vvv
 #: last_checked: 2014-11-15 vvv
@@ -1509,13 +1513,13 @@ Sonnenallee/Ziegrastr.: wird hier eine Ampel entstehen?	?::projected 14174,7505
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to020.asp?TOLFDNR=14708&options=8 (beschlossen durch BVV)
 #: source_id: INKO_114471
 #: XXX INKO_114471 gilt bis 2015-02-27
-#: last_checked: 2014-10-31
+#: last_checked: 2014-11-22
 #: next_check: 2015-02-15
 Thomasstr./Hermannstr.: sichere Querung, wie wird/kˆnnte die Lˆsung hier aussehen?	?::projected 12193,7412 12180,7387 12168,7368
 # 
 #: XXX wird eine andere Ampel daf¸r ausgeschaltet?
 #: by: http://www.berliner-zeitung.de/verkehr/bvg-sanierung--die-u-8-faehrt-wieder-bis-zur-hermannstrasse,10809298,28209860.html (Fertigstellung im Dezember)
-#: last_checked: 2014-10-31
+#: last_checked: 2014-11-22
 #: next_check: 2015-02-15
 Hermannstr.: Fuﬂg‰ngerampel in Bau	?::inwork 12122,7553 12137,7506
 # 
@@ -1596,18 +1600,11 @@ Sˆmmeringstraﬂe/Nordhauser Straﬂe: Planung eines Zebrastreifens f¸r 2013	?::proj
 #: by: ^^^
 # 
 # REMOVED (aufgenommen) --- #: by: http://www.berlin.de/imperia/md/content/bapankow/pressestelle/ba-beschluesse/benennungsabsicht_fuer_einen_privatweg_in_der_anlage_der_siedlungs__und_gartengemeinschaft_insel_ruegen_eg_ber.pdf?start&ts=1352885627&file=benennungsabsicht_fuer_einen_privatweg_in_der_anlage_der_siedlungs__und_gartengemeinschaft_insel_ruegen_eg_ber.pdf --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/06re.pdf/file?y=2013 --- #: XXX Privatweg --- #: XXX fehlt in Berlin.coords.data: Insel-R¸gen-Weg|Pankow|13189 --- #: XXX unklar, ob dieser Abschnitt jemals existieren wird... --- #: note: Weg in der Anlage "Insel R¸gen" eG --- #: osm_watch: way id="28997509" version="11" --- #: last_checked: 2014-06-03 --- # REMOVED (in strassen-orig) aufgenommen --- Weg wird in Insel-R¸gen-Str. benannt: Qualit‰t nach den Bauarbeiten? Genaue Lage (GPS-Koordinaten!)	?::inwork 10960,17674 10969,17587 --- Insel-R¸gen-Str.: wird hier eine Straﬂe existieren? Qualit‰t? Genaue Lage (GPS-Koordinaten!)	?::inwork 10967,17671 10978,17589 11064,17599 11228,17624 11354,17645 --- Insel-R¸gen-Str.	? 11069,17562 11064,17599 11062,17646 11218,17671 11228,17624
-# 
-#: next_check_id: RICHARDSTR-2014 vvv
-#: by: http://www.aktion-kms.de/files/120427_bauphasen_karl-marx-strasse_bau_2012-2020_kl.pdf vvv
+# REMOVED --- #: next_check_id: RICHARDSTR-2014 vvv --- #: by: http://www.aktion-kms.de/files/120427_bauphasen_karl-marx-strasse_bau_2012-2020_kl.pdf vvv
 # REMOVED (jetzt asphaltiert) --- #: by: http://www.berlin.de/ba-neukoelln/bvv-online/___tmp/tmp/4508103672955001/72955001/00032912/12-Anlagen/01/0208_XIX_Radverkehr_Neukoelln.pdf (Asphaltierung) --- Kirchhofstr.: Straﬂenbauarbeiten?	? 13003,7316 13001,7296 12909,7181 12872,7134
 # REMOVED (Bauarbeiten) --- #: by: http://www.berlin.de/ba-neukoelln/bvv-online/___tmp/tmp/4508103672955001/72955001/00032912/12-Anlagen/01/0208_XIX_Radverkehr_Neukoelln.pdf (Asphaltierung) --- Emser Str.: Straﬂenbauarbeiten?	? 12872,7134 13058,7165
 # REMOVED (realisiert) --- #: by: http://www.aktion-kms.de/projekte/umbau-richardstrasse/ --- # ("historisches Reihensteinpflaster" - noch schlechtere Qualit‰t?) --- #: last_checked: 2014-08-26 --- #: check_frequency: 30d --- Richardstr.: was wird sich nach den Straﬂenbauarbeiten hier ‰ndern? Voraussichtlich ist die Fertigestellung im November 2013, vielleicht gibt es vorher schon Einschr‰nkungen.	? 13150,7845 13103,7889
-#: last_checked: 2014-09-16
-#: check_frequency: 30d
-Richardstr.: wird sich hier noch etwas ‰ndern?	? 13103,7889 13085,7904
-#: by: ^^^
-#: next_check_id ^^^
-# 
+# REMOVED (nein) --- #: last_checked: 2014-09-16 --- #: check_frequency: 30d --- Richardstr.: wird sich hier noch etwas ‰ndern?	? 13103,7889 13085,7904
 # REMOVED (-> strassen-orig) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2012 --- Weg im Harry-Bresslau-Park: wo genau liegt der Weg? Qualit‰t? Nachts beleuchtet?	? 4997,6331 4937,6205
 # 
 Sendener Str. - Bernauer Str.: Qualit‰t des Waldweges?	? 964,18321 915,18352 625,18518 560,18494
@@ -3844,3 +3841,5 @@ Umfahrung B5 bei Karst‰dt: ist das eine Kraftfahrzeugstraﬂe?	? -102187,80033 -10
 # 
 #: XXX fehlt in Berlin.coords.data
 Schwarzer Weg (Siemensstadt): Qualit‰t des Wegs? Ist der Weg ausgeschildert und beleuchtet?	? 1423,14679 1384,14598 1235,14609
+# 
+Treseburger Ufer, Verl‰ngerung: ist der Weg beleuchtet?	? 12301,5783 12699,5909 13064,5953

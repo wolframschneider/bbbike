@@ -4088,7 +4088,7 @@ EOF
        text  => 'L 019 Schloßdamm, Ruppiner Str. OD Kremmen grundhafter Straßenbau Vollsperrung 27.03.2006-14.07.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -15961,38892 -16160,38503
+userdel	2 -15982,38992 -16160,38503
 EOF
      },
      { from  => 1163800186, # 2006-11-17 22:49
@@ -5131,7 +5131,7 @@ EOF
        text  => 'L 019 Ruppiner Chaussee OD Kremmen grundhafter Straßenbau Vollsperrung 10.07.2006-15.10.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -15770,39361 -15556,39597 -15198,39722 -15063,39954 -14975,40027 -14856,40112
+userdel	q4::inwork -15828,39372 -15751,39505 -15629,39598 -15198,39722 -15063,39954 -14975,40027 -14856,40112
 EOF
      },
      { from  => 1152396000, # 2006-07-09 00:00
@@ -17025,11 +17025,12 @@ EOF
        until => $isodate2epoch->("2014-12-31 23:59:59"), # Ende am 28.12. (voraussichtlich), Abbauzeit... # 1384350812, # 1352934000, # 1321311600, # PERIODISCH! # früher: 1258045387, # 2009-11-12 18:03
        periodic => 1,
        recurrences => [['yearly', days => 10, months => 11]],
-       text  => 'Voltairestr. und Dircksenstr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht möglich (Voltairestr.) bzw. nur schiebend auf dem Gehweg möglich (Dircksenstr.), bis Ende Dezember 2014',
+       # außerdem ist der Nordteil der Dircksenstr. Einbahnstraße offen Richtung Süden, aber nicht relevant für das Routing
+       text  => 'Voltairestr. und Dircksenstr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht möglich (Voltairestr. und Dircksenstr.), bis Ende Dezember 2014',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 11329,12497 11209,12430
-userdel	q4::temp 11209,12430 11273,12301
+userdel	2::temp 11209,12430 11273,12301
 userdel	2::temp 11273,12301 11355,12331
 EOF
      },
@@ -18514,7 +18515,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/O-SG33-E/10/086',
        data  => <<EOF,
-userdel	2::inwork -17964,36290 -17262,37425
+userdel	2::inwork -17964,36290 -17279,37449
 EOF
      },
      { from  => 1285020000, # 2010-09-21 00:00
@@ -18620,7 +18621,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/O-SG33-E/10/086',
        data  => <<EOF,
-userdel	2::inwork -17114,37670 -17262,37425
+userdel	2::inwork -17102,37691 -17279,37449
 EOF
      },
      { from  => 1288134000, # 2010-10-27 01:00
@@ -18819,7 +18820,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/O-SG33-E/10/086',
        data  => <<EOF,
-userdel	2::inwork -17114,37670 -17262,37425
+userdel	2::inwork -17102,37691 -17279,37449
 EOF
      },
      { from  => 1292831040, # 2010-12-20 08:44
@@ -23723,8 +23724,8 @@ userdel	2::temp 9494,15998 9623,15777
 EOF
      },
      { from  => 1416214740, # 2014-11-17 09:59
-       until => 1420041600, # 2014-12-31 17:00
-       text  => 'Pekrunstr.: Baustelle, Straße zwischen Fichtelbergstr. und Manksweg gesperrt, 18.11.2014 09:59 Uhr bis 31.12.2014 17:00 Uhr',
+       until => $isodate2epoch->("2015-01-16 17:00:00"), # 1420041600, # 2014-12-31 17:00
+       text  => 'Pekrunstr.: Baustelle, Straße zwischen Fichtelbergstr. und Manksweg gesperrt, 18.11.2014 09:59 Uhr bis 16.01.2015 17:00 Uhr',
        type  => 'handicap',
        source_id => 'IM_023467',
        data  => <<EOF,

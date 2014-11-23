@@ -2310,7 +2310,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'data' => 'userdel	2::temp 11329,12497 11209,12430
-userdel	q4::temp 11209,12430 11273,12301
+userdel	2::temp 11209,12430 11273,12301
 userdel	2::temp 11273,12301 11355,12331
 ',
          'periodic' => 1,
@@ -2325,7 +2325,7 @@ userdel	2::temp 11273,12301 11355,12331
                               11
                             ]
                           ],
-         'text' => 'Voltairestr. und Dircksenstr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht möglich (Voltairestr.) bzw. nur schiebend auf dem Gehweg möglich (Dircksenstr.), bis Ende Dezember 2014',
+         'text' => 'Voltairestr. und Dircksenstr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht möglich (Voltairestr. und Dircksenstr.), bis Ende Dezember 2014',
          'type' => 'gesperrt',
          'id' => 1988
        },
@@ -3883,16 +3883,7 @@ userdel	2::inwork -3197,11554 -3075,11510 -3069,11487
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'IM_023339',
-         'until' => 1416578400,
-         'text' => 'Hobrechtsfelder Chaussee: Baustelle zwischen Wiltbergstr. und Pölnitzweg, Fahrbahn stadtauswärts gesperrt, 03.11.2014 10:30 Uhr bis 21.11.2014 15:00 Uhr',
-         'from' => 1414920600,
-         'id' => 2657,
-         'data' => 'userdel	1::inwork 15230,26560 15589,27116
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => '146001411',
          'until' => 1417388400,
@@ -3953,19 +3944,11 @@ userdel	q4::inwork 5635,7660 5636,7540
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1416574800,
-         'text' => 'Swinemünder Brücke: bis zum 21.11.2014 gesperrt, evtl. auch für Radfahrer und Fußgänger',
-         'from' => 1416086295,
-         'id' => 2664,
-         'data' => 'userdel	2::temp 9494,15998 9623,15777
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'IM_023467',
-         'until' => 1420041600,
-         'text' => 'Pekrunstr.: Baustelle, Straße zwischen Fichtelbergstr. und Manksweg gesperrt, 18.11.2014 09:59 Uhr bis 31.12.2014 17:00 Uhr',
+         'until' => 1421424000,
+         'text' => 'Pekrunstr.: Baustelle, Straße zwischen Fichtelbergstr. und Manksweg gesperrt, 18.11.2014 09:59 Uhr bis 16.01.2015 17:00 Uhr',
          'from' => 1416214740,
          'id' => 2665,
          'data' => 'userdel	q4::inwork 20559,14847 20480,14874
