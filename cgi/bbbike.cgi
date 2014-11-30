@@ -806,7 +806,7 @@ $config_master = $ENV{'SCRIPT_NAME'};
 
 my $local_lang = "";
 my $selected_lang = "";
-my @supported_lang = qw/da de en es fr hr nl pl pt ru zh/;
+my @supported_lang = qw/de en es fr ru/;
 
 use Time::HiRes qw( gettimeofday tv_interval );
 #my $time_start = time;
