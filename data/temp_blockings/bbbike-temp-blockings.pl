@@ -361,7 +361,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006461',
        data  => <<EOF,
-userdel	2 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5368,13406 5248,13434
+userdel	2 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5434,13398 5368,13406 5248,13434
 EOF
      },
      { from  => $isodate2epoch->("2014-04-30 12:00:00"), # 1 Tag Vorlauf
@@ -835,7 +835,7 @@ EOF
        text  => 'Turmstraße zwischen Kreuzung Beusselstraße und Kreuzung Stromstraße sowie Thusneldaallee: Straße gesperrt (Turmstraßenfest), Dauer: 03.09.2004 02:00 Uhr bis 06.09.2004 02:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 5248,13434 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
+userdel	2 5248,13434 5368,13406 5434,13398 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 userdel	2 5975,13256 5956,13330
 EOF
      },
@@ -4954,7 +4954,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_002950',
        data  => <<EOF,
-userdel	2 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5368,13406
+userdel	2 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5434,13398 5368,13406
 EOF
      },
      { from  => 1151099435, # 2006-06-23 23:50
@@ -5670,7 +5670,7 @@ EOF
        text  => 'Turmstraßenfest vom 01.09. bis 03.09.2006 (zwischen Strom- und Waldstraße) ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
+userdel	2::temp 5368,13406 5434,13398 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 EOF
      },
      { from  => 1156456800, # 2006-08-25 00:00
@@ -12532,7 +12532,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009776',
        data  => <<EOF,
-userdel	2::temp 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5368,13406
+userdel	2::temp 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5434,13398 5368,13406
 EOF
      },
      { from  => 1219874400, # 2008-08-28 00:00
@@ -17109,16 +17109,14 @@ EOF
        until => $isodate2epoch->("2014-12-26 23:59:59"), # 1356562799, # 2012-12-26 23:59, # 1293404400, # PERIODISCH! # früher: 1262300399, # 2009-12-31 23:59
        periodic => 1,
        recurrences => [['yearly', days => 19, months => 11]],
-       text  => 'Winterwelt am Potsdamer Platz vom 24. November 2014 bis 26. Dezember 2014',
+       text  => 'Winterwelt am Potsdamer Platz, Alte Potsdamer Str. gesperrt, bis 26. Dezember 2014',
        type  => 'gesperrt',
        source_id => 'http://www.winterwelt-berlin.de/',
        data  => <<EOF,
-#: XXX Winterwelt bereits ab 2.11.2014 (bis 4.1.2015), aber auch schon hier Einschränkungen? Weihnachtsmarkt erst ab dem 24.11.2014
+#: note: Winterwelt bereits ab 2.11.2014 (bis 4.1.2015), Weihnachtsmarkt erst ab dem 24.11.2014
 #: by: http://www.berlin.de/tickets/suche/detail.php?id=962671
-#: last_checked: 2014-11-04
-#: next_check: 2014-11-24
-#: priority: #A
-userdel	2::temp 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324 8280,11296 8278,11257
+userdel	2::temp 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324
+#userdel	2::temp 8318,11324 8280,11296 8278,11257
 #: XXX_prog "3::temp" geht nicht?
 userdel	3 8427,11365 8389,11378 8374,11479
 userdel	3 8374,11479 8389,11378 8427,11365
@@ -18450,7 +18448,7 @@ EOF
        text  => 'Turmstraße (Moabit): Veranstaltung (Turmstraßenfest), Straße zwischen Stromstr. und Waldstr. vollständig gesperrt (30.08.2013 bis 01.09.2012)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 5368,13406 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
+userdel	2::temp 5368,13406 5434,13398 5560,13382 5569,13381 5705,13359 5857,13342 5956,13330 6011,13330 6105,13328 6115,13328 6228,13324
 EOF
      },
      { from  => 1284271200, # 2010-09-12 08:00
@@ -21324,11 +21322,11 @@ userdel	q4::inwork 13150,7845 13103,7889
 userdel	q4::inwork 13085,7904 13117,7939 13151,7914
 EOF
      },
-     { from  => $isodate2epoch->("2013-12-13 06:00:00"), # 1385679600, # 2013-11-29 00:00 - 1 Tag Vorlauf
-       until => $isodate2epoch->("2013-12-15 23:59:59"), # 1385938799, # 2013-12-01 23:59
+     { from  => $isodate2epoch->("2014-11-28 06:00:00"), # 1385679600, # 2013-11-29 00:00 - 1 Tag Vorlauf
+       until => $isodate2epoch->("2014-11-30 23:59:59"), # 1385938799, # 2013-12-01 23:59
        periodic => 1,
-#XXX       recurrences => [['yearly', days => 12, months => 12]], # zwei Termine, 1. und 3. Advent # XXX Achtung, wieder zurücksetzen! XXX
-       text  => 'Bahnhofstr. (Lichtenrade): Weihnachtsmarkt zwischen Riedingerstr. und Goltzstr, Straße gesperrt, 14.12.2013 und 15.12.2013',
+       recurrences => [['yearly', days => 28, months => 11]], # zwei Termine, 1. und 3. Advent
+       text  => 'Bahnhofstr. (Lichtenrade): Weihnachtsmarkt zwischen Riedingerstr. und Goltzstr, Straße gesperrt, 29.11.2014 und 30.11.2014',
        type  => 'gesperrt',
        source_id => 'IM_020815',
        data  => <<EOF,
@@ -22722,7 +22720,8 @@ EOF
        type  => 'handicap',
        source_id => 'IM_021420',
        data  => <<EOF,
-# source_id: IM_022480	
+#: source_id: IM_022480
+#: source_id: IM_023568
 userdel	q3::inwork; 10908,17142 10917,17088 10927,17022
 userdel	q4::inwork; 10927,17022 10862,17087
 userdel	q4::inwork 10862,17087 10891,17088 10917,17088
@@ -23483,8 +23482,8 @@ userdel	q4::inwork 8661,6169 8830,6145 8944,6127
 EOF
      },
      { from  => 1407706402,
-       until => $isodate2epoch->("2014-12-01 17:00:00"),
-       text  => 'Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, bis 01.12.2014',
+       until => $isodate2epoch->("2014-12-15 17:00:00"),
+       text  => 'Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, bis 15.12.2014',
        type  => 'handicap',
        source_id => 'http://www.berliner-woche.de/nachrichten/bezirk-treptow-koepenick/niederschoeneweide/artikel/45985-umleitungen-durch-angrenzende-wohngebiete/',
        data  => <<EOF,
@@ -23730,6 +23729,24 @@ EOF
        source_id => 'IM_023467',
        data  => <<EOF,
 userdel	q4::inwork 20559,14847 20480,14874
+EOF
+     },
+     { from  => 1416813420, # 2014-11-24 08:17
+       until => 1418655600, # 2014-12-15 16:00
+       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn gesperrt, 25.11.2014 08:17 Uhr bis 15.12.2014 16:00 Uhr',
+       type  => 'handicap',
+       source_id => 'IM_023529',
+       data  => <<EOF,
+userdel	q4::inwork 9373,12197 9369,12253 9358,12351
+EOF
+     },
+     { from  => 1417024800, # 2014-11-26 19:00
+       until => 1417438800, # 2014-12-01 14:00
+       text  => 'Glienicker Brücke: Filmarbeiten, Vollsperrung, Sperrung gilt auch für Fußgänger und Radfahrer, 27.11.2014 19:00 Uhr bis 01.12.2014 14:00 Uhr ',
+       type  => 'gesperrt',
+       source_id => 'IM_023523',
+       data  => <<EOF,
+userdel	2::temp -10593,476 -10715,472 -10826,469
 EOF
      },
     );

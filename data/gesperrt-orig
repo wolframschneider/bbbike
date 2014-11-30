@@ -2203,7 +2203,7 @@ Poller, lichte Breite 100cm	BNP:1::trailer=5 -7109,15286
 Schranke	BNP:1::trailer=5 -3300,14039
 weites Drängelgitter	BNP:1::trailer=5 -3437,14029
 Drängelgitter	BNP:3::trailer=10 7928,10094
-enger Eingang zum Friedrich-Ludwig-Jahn-Sportpark	BNP:30::trailer=no 10583,15208
+# REMOVED (Einschränkung existiert nicht mehr) --- enger Eingang zum Friedrich-Ludwig-Jahn-Sportpark	BNP:30::trailer=no 10583,15208
 Tor zum Friedrich-Ludwig-Jahn-Sportpark, lichte Breite 85cm	BNP:5::trailer=no 10781,15438
 #: by: Stefan Klinkusch: vvv
 Metallstange	BNP:3::trailer=10 -5070,11199
@@ -2580,7 +2580,7 @@ Bismarckstr.: Mittelstreifen während der Bauarbeiten nicht überquerbar	3nocross 
 #: next_check_id: INVALIDENFRIEDHOF-2014
 #: by: Birgit Schroeer
 #: confirmed_by: srt
-#: last_checked: 2014-10-25
+#: last_checked: 2014-11-26
 #: next_check: 2015-02-14
 #: valid: 20140925-20150214
 #: XXX danach gilt für eine Woche noch der temp_blockings-Eintrag
@@ -2602,14 +2602,10 @@ Alfred-Döblin-Platz: Bauarbeiten, Fahrbahn gesperrt	2::inwork 11162,10919 11150,
 # REMOVED --- #: last_checked: 2014-10-01 --- Am Postbahnhof: Bauarbeiten, Straße gesperrt	2::inwork 12641,11288 12664,11310 12713,11372
 # 
 #: XXX theoretisch ist ein Trampelpfad vorbei vorhanden
-#: last_checked: 2014-11-04
+#: last_checked: 2014-11-24
 Berolinastr., Weg zum Spielplatz: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt	2::inwork 11719,13088 11815,13045
 # 
-#: XXX laut Schild bis Dezember 2014 gesperrt
-#: last_checked: 2014-11-20
-#: next_check: 2014-12-15
-Diestelmeyerstr.: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt, auch für Fußgänger	2::inwork 12690,12769 12833,12920
-# 
+# REMOVED (vorzeitig fertig) --- #: XXX laut Schild bis Dezember 2014 gesperrt --- #: last_checked: 2014-11-20 --- #: next_check: 2014-12-15 --- Diestelmeyerstr.: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt, auch für Fußgänger	2::inwork 12690,12769 12833,12920
 # REMOVED (keine Bauzäune mehr) --- #: by: http://www.berlin.de/imperia/md/content/balichtenberghohenschoenhausen/bebauen/beteiligen/xxii6dreinplan.pdf?start&ts=1350454320&file=xxii6dreinplan.pdf --- #: by: http://www.berlin.de/imperia/md/content/balichtenberghohenschoenhausen/bebauen/beteiligen/xxii6dbegruendung.pdf?start&ts=1350454241&file=xxii6dbegruendung.pdf --- #: XXX evtl. ist hiermit die Position des Zebrastreifens in der Degnerstr. festgelegt? --- #: XXX vielleicht wird es auch eine Verbindung bis auf der ehem. Bahnlinie zur Hansastr. geben? --- #: XXX Fertigstellung der Mehrfamilienhäuser im Süden: Dezember 2014 --- #: last_checked: 2014-09-12 (Durchfahrt möglich, man muss an Bauzäunen vorbei) --- #: check_frequency: 21d --- Rad- und Gehwegverbindung Suermondtstr. - Degnerstr.	2::inwork 16476,16216 16458,16104 16493,15983 16559,15896
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6003 (Forderung nach Wiederherstellung)
@@ -2653,16 +2649,7 @@ am Osthafen: durch Barriere versperrt	2::inwork 14259,10309 14463,10212
 #: check_frequency: 90d
 Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: z.Zt. nur Baustellenzufahrt, Durchfahrt verboten	2 8251,14337 8442,14456
 # 
-#: next_check_id: INVALIDEN-2014 vvv
-#: last_checked: 2014-04-02 vvv
-#: next_check: 2015-05-31 vvv
-Am Nordbahnhof: Abbiegen in die Invalidenstr. nicht möglich	3 9011,14019 9085,13919 8935,13844
-Am Nordbahnhof: Abbiegen in die Invalidenstr. nicht möglich	3 9011,14019 9085,13919 9151,13941
-Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht möglich	3 9151,13941 9085,13919 9011,14019
-Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht möglich	3 8935,13844 9085,13919 9011,14019
-#: next_check ^^^
-#: last_checked ^^^
-#: next_check_id ^^^
+# REMOVED (die Baustelle ist mittlerweile auf der anderen Straßenseite) --- #: next_check_id: INVALIDEN-2014 vvv --- #: last_checked: 2014-04-02 vvv --- #: next_check: 2015-05-31 vvv --- Am Nordbahnhof: Abbiegen in die Invalidenstr. nicht möglich	3 9011,14019 9085,13919 8935,13844 --- Am Nordbahnhof: Abbiegen in die Invalidenstr. nicht möglich	3 9011,14019 9085,13919 9151,13941 --- Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht möglich	3 9151,13941 9085,13919 9011,14019 --- Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht möglich	3 8935,13844 9085,13919 9011,14019
 # 
 #: next_check_id: SCHINKELPLATZ_2014 vvv
 #: last_checked: 2014-10-30 vvv
@@ -2798,7 +2785,7 @@ Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwor
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
 #: XXX siehe auch Eintrag in handicap_s-orig
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0194-oberwallstrae-werderscher-markt.html
-#: last_checked: 2014-10-12
+#: last_checked: 2014-11-26
 #: check_frequency: 100d
 Oberwallstr.: Bauarbeiten, komplett gesperrt	2:inwork 9898,12161 9882,12259
 # 
@@ -2823,7 +2810,7 @@ Rudi-Dutschke-Weg	2:inwork 2627,5095 2913,5294
 #: XXX wird auch der Asphalt hier und im südlichen Abschnitt verbessert?
 Billy-Wilder-Promenade: wegen Bauarbeiten an umliegenden Wohnhäusern gesperrt	2:inwork 2528,1501 2584,1376
 # 
-#: last_checked: 2014-10-12
+#: last_checked: 2014-11-26
 #: check_frequency: 90d
 Marx-Engels-Forum: wegen U-Bahn-Bauarbeiten Durchgang zur Rathausstr. nicht möglich	2:inwork 10411,12471 10422,12395
 # 

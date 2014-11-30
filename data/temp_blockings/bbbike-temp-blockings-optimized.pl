@@ -2359,12 +2359,10 @@ userdel	2::temp 9524,12010 9656,12021
        undef,
        {
          'source_id' => 'http://www.winterwelt-berlin.de/',
-         'data' => '#: XXX Winterwelt bereits ab 2.11.2014 (bis 4.1.2015), aber auch schon hier Einschränkungen? Weihnachtsmarkt erst ab dem 24.11.2014
+         'data' => '#: note: Winterwelt bereits ab 2.11.2014 (bis 4.1.2015), Weihnachtsmarkt erst ab dem 24.11.2014
 #: by: http://www.berlin.de/tickets/suche/detail.php?id=962671
-#: last_checked: 2014-11-04
-#: next_check: 2014-11-24
-#: priority: #A
-userdel	2::temp 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324 8280,11296 8278,11257
+userdel	2::temp 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324
+#userdel	2::temp 8318,11324 8280,11296 8278,11257
 #: XXX_prog "3::temp" geht nicht?
 userdel	3 8427,11365 8389,11378 8374,11479
 userdel	3 8374,11479 8389,11378 8427,11365
@@ -2381,7 +2379,7 @@ userdel	3 8374,11479 8389,11378 8427,11365
                               11
                             ]
                           ],
-         'text' => 'Winterwelt am Potsdamer Platz vom 24. November 2014 bis 26. Dezember 2014',
+         'text' => 'Winterwelt am Potsdamer Platz, Alte Potsdamer Str. gesperrt, bis 26. Dezember 2014',
          'id' => 1997,
          'type' => 'gesperrt'
        },
@@ -3092,7 +3090,27 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_020815',
+         'data' => '#: by: http://www.weihnachteninberlin.de/weihnachtsmaerkte/tempelhof-schoeneberg/1001683-1328179-30weihnachtsmarktinderbahnhofstra%C3%9Felich.html ("genauer Termin steht noch nicht fest")
+userdel	2::temp 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
+',
+         'periodic' => 1,
+         'until' => 1417388399,
+         'from' => 1417150800,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              28,
+                              'months',
+                              11
+                            ]
+                          ],
+         'text' => 'Bahnhofstr. (Lichtenrade): Weihnachtsmarkt zwischen Riedingerstr. und Goltzstr, Straße gesperrt, 29.11.2014 und 30.11.2014',
+         'id' => 2426,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3531,7 +3549,8 @@ userdel	q3::inwork; 13555,15596 13459,15653
          'text' => 'Berliner Str./Mühlenstr. in Bereich U-Bhf. Vinetastr.: Bauarbeiten, Fahrbahnen gesperrt, bis Ende Dezember 2014',
          'from' => undef,
          'id' => 2562,
-         'data' => '# source_id: IM_022480	
+         'data' => '#: source_id: IM_022480
+#: source_id: IM_023568
 userdel	q3::inwork; 10908,17142 10917,17088 10927,17022
 userdel	q4::inwork; 10927,17022 10862,17087
 userdel	q4::inwork 10862,17087 10891,17088 10917,17088
@@ -3769,8 +3788,8 @@ userdel	2::inwork 8101,13901 8248,13659 8337,13541
        undef,
        {
          'source_id' => 'http://www.berliner-woche.de/nachrichten/bezirk-treptow-koepenick/niederschoeneweide/artikel/45985-umleitungen-durch-angrenzende-wohngebiete/',
-         'until' => 1417449600,
-         'text' => 'Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, bis 01.12.2014',
+         'until' => 1418659200,
+         'text' => 'Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, bis 15.12.2014',
          'from' => 1407706402,
          'id' => 2639,
          'data' => '#: source_id: IM_022377
@@ -3904,16 +3923,7 @@ userdel	2::inwork -3197,11554 -3075,11510 -3069,11487
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2014/pressemitteilung.221430.php',
-         'until' => 1416697199,
-         'text' => 'Veltheimstraße: Bauarbeiten zwischen Berliner Straße und Solquellstraße, Fahrbahn gesperrt, vom 5. November 2014 bis voraussichtlich 22. November 2014',
-         'from' => 1415055600,
-         'id' => 2660,
-         'data' => 'userdel	q4::inwork 4111,24488 3963,24559 3842,24556
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_023373',
          'until' => 1442066400,
@@ -3954,6 +3964,26 @@ userdel	q4::inwork 5635,7660 5636,7540
          'data' => 'userdel	q4::inwork 20559,14847 20480,14874
 ',
          'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_023529',
+         'until' => 1418655600,
+         'text' => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn gesperrt, 25.11.2014 08:17 Uhr bis 15.12.2014 16:00 Uhr',
+         'from' => 1416813420,
+         'id' => 2666,
+         'data' => 'userdel	q4::inwork 9373,12197 9369,12253 9358,12351
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_023523',
+         'until' => 1417438800,
+         'text' => 'Glienicker Brücke: Filmarbeiten, Vollsperrung, Sperrung gilt auch für Fußgänger und Radfahrer, 27.11.2014 19:00 Uhr bis 01.12.2014 14:00 Uhr ',
+         'from' => 1417024800,
+         'id' => 2667,
+         'data' => 'userdel	2::temp -10593,476 -10715,472 -10826,469
+',
+         'type' => 'gesperrt'
        }
      
 );
