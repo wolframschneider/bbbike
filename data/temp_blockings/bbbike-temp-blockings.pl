@@ -869,14 +869,14 @@ EOF
        text  => 'Hermannstraßenfest zwischen Flughafenstraße und Thomasstraße, Straße gesperrt, Dauer: 04.09.2004 04:00 Uhr bis 05.09.2004 23:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 12180,7387 12158,7449 12122,7553
+userdel	2 12180,7387 12158,7449 12123,7549
 userdel	2 11920,8252 11931,8206 11933,8198
 userdel	2 11920,8252 11915,8279 11898,8362
 userdel	2 12041,7788 12055,7751 12075,7696
 userdel	2 11979,8014 11963,8074
 userdel	2 11979,8014 12001,7937 12025,7852
 userdel	2 11933,8198 11963,8074
-userdel	2 12075,7696 12081,7679 12090,7651 12122,7553
+userdel	2 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549
 EOF
      },
      { from  => 1094187600, # 2004-09-03 07:00
@@ -2665,10 +2665,10 @@ userdel auto	3 5829,10964 5782,10884 5681,10696
 userdel auto	3 5236,10994 5230,10919 5215,10711 5196,10398
 userdel auto	3 5196,10398 5215,10711 5230,10919 5236,10994
 userdel auto	3 5471,10719 5475,10808 5488,10978
-userdel auto	3 5866,10492 6025,10746 6131,10939 6145,10975
+userdel auto	3 5866,10492 6025,10746 6122,10925 6145,10975
 userdel auto	3 5488,10978 5475,10808 5471,10719
 userdel auto	3 5681,10696 5782,10884 5829,10964
-userdel auto	3 6145,10975 6131,10939 6025,10746 5866,10492
+userdel auto	3 6145,10975 6122,10925 6025,10746 5866,10492
 EOF
      },
      { from  => 1124575200, # 2005-08-21 00:00
@@ -3075,8 +3075,8 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2 12090,7651 12081,7679 12075,7696
-userdel	2 12090,7651 12122,7553
-userdel	2 12180,7387 12158,7449 12122,7553
+userdel	2 12090,7651 12121,7555 12123,7549
+userdel	2 12180,7387 12158,7449 12123,7549
 userdel	2 11920,8252 11931,8206 11933,8198
 userdel	2 11920,8252 11915,8279 11898,8362
 userdel	2 12041,7788 12055,7751
@@ -4591,7 +4591,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005438',
        data  => <<EOF,
-userdel	2 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12122,7553 12158,7449 12180,7387
+userdel	2 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12180,7387
 EOF
      },
      { from  => 1148565600, # 2006-05-25 16:00
@@ -6253,7 +6253,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003771',
        data  => <<EOF,
-userdel	2::temp 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12122,7553 12158,7449 12180,7387
+userdel	2::temp 11979,8014 12001,7937 12025,7852 12041,7788 12055,7751 12075,7696 12081,7679 12090,7651 12121,7555 12123,7549 12158,7449 12180,7387
 EOF
      },
      { from  => 1160107200, # 2006-10-06 06:00
@@ -15332,7 +15332,7 @@ EOF
        text  => 'Ab 03.08.2009 muss die Fr.-Ebert-Straße in Höhe Stadthaus wegen Gleisbauarbeiten und Leitungsarbeiten für den Verkehr gesperrt werden. Die Arbeiten dauern vorausichtlich bis 24.08.2009.',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -12872,-565 -12865,-425
+userdel	q4::inwork -12872,-565 -12868,-502 -12865,-425
 EOF
      },
      { from  => 1246140000, # 2009-06-28 00:00
@@ -16680,7 +16680,7 @@ EOF
        text  => 'Vom 6.10.2009 bis 20.10.2009 ist der Königsweg zwischen Eichkampstraße und Hüttenweg wegen Straßenbauarbeiten komplett gesperrt ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -903,6923 -643,7252 -348,7641 425,8766
+userdel	2::inwork -903,6923 -643,7252 -363,7630 100,8339 425,8766
 EOF
      },
      { from  => 1255468338, # 2009-10-13 23:12
@@ -17992,10 +17992,10 @@ userdel auto	3 5681,10696 5782,10884 5829,10964
 userdel auto	3 5047,10381 5076,10658 5079,10701
 userdel auto	3 6980,11790 6778,11742 6540,11754
 userdel auto	3 7002,11034 6873,11011 6742,11099
-userdel auto	3 5866,10492 6025,10746 6131,10939
+userdel auto	3 5866,10492 6025,10746 6122,10925
 userdel auto	3 6192,10542 6216,10614 6228,10646
 userdel auto	3 6685,10690 6532,10529 6494,10440
-userdel auto	3 6131,10939 6025,10746 5866,10492
+userdel auto	3 6122,10925 6025,10746 5866,10492
 userdel auto	3 7026,12054 6828,12031 6884,12006
 userdel auto	3 4256,10583 4245,10435 4239,10358
 userdel auto	3 6216,10614 6228,10646 6250,10701
@@ -18106,7 +18106,7 @@ EOF
        text  => 'Instandsetzung des Radweges Königsweg zwischen Eichkampstraße und Hüttenweg, ab 28.06.2010 für drei Wochen komplett gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -903,6923 -643,7252 -348,7641 425,8766
+userdel	2::inwork -903,6923 -643,7252 -363,7630 100,8339 425,8766
 EOF
      },
      { from  => 1278267896, # 2010-07-04 20:24
@@ -18932,7 +18932,7 @@ EOF
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/bvv-online/vo020.asp?VOLFDNR=4355&options=4 (Endedatum bestätigt)
 #: next_check: 2013-08-31
 #: last_checked: 2013-02-02
-userdel	q4::inwork 425,8766 490,8716
+userdel	q4::inwork 425,8766 505,8702
 EOF
      },
      { from  => 1299353825, # 2011-03-05 20:37
@@ -21744,23 +21744,23 @@ EOF
        text  => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: BER-20XX vvv
-#: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht vvv
+#: add_fragezeichen: Ist das Befahren der Jürgen-Schumann-Allee für Radfahrer mittlerweile erlaubt? vvv
+#: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht - zwischenzeitlich bicycle=no, seit 2014-10-25 wieder bicycle=yes vvv
 #: osm_watch: way id="80221295" version="18" brb
 	2 19158,-4083 19189,-4062 19454,-3956 19524,-3843 19528,-3767 19479,-3690
 #: osm_watch: way id="83106248" version="15" brb
 	2 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
 #: osm_watch: way id="60482011" version="25" brb
-#: osm_watch: way id="192153919" version="3" brb
-#: osm_watch: way id="192153925" version="6" brb
-#: osm_watch: way id="136089841" version="19" brb
+#: osm_watch: way id="192153919" version="4" brb
+#: osm_watch: way id="192153925" version="7" brb
+#: osm_watch: way id="136089841" version="20" brb
 	2 19479,-3690 19443,-3540 19558,-3155 19626,-3031 19808,-2953 19909,-2863 19941,-2759 19909,-2677 19575,-2358 19346,-2337 19236,-2298 19131,-2145 18866,-1674 18936,-1581
 	2 19131,-2145 19198,-2118
 	2 19909,-2863 19996,-2880
 #: note: hier auch, sehr wahrscheinlich
 	2 19601,-3714 19539,-3810 19460,-3818 19282,-3928
 #: XXX_osm ^^^
-#: next_check_id ^^^
+#: add_fragezeichen ^^^
 EOF
      },
      { from  => undef,
@@ -21816,7 +21816,7 @@ EOF
        until => $isodate2epoch->("2014-12-15 23:59:59"),
        text  => 'Sterndamm: Eisenbahnunterführung vom 07.12.2014 bis 15.12.2014 gesperrt, auch für Radfahrer',
        type  => 'gesperrt',
-       # source_id => 'IM_023012',
+       source_id => 'IM_020145',
        data  => <<EOF,
 userdel	2::inwork 17736,5441 17886,5587
 EOF
@@ -22534,12 +22534,10 @@ userdel	2::inwork 7882,9490 7960,9466
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1417885281, # undef, # XXX
        text  => 'Uferweg an der Havel wegen Bauarbeiten gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2014-05-11
-#: add_fragezeichen: Sind die Bauarbeiten am Uferweg beendet? Wurde der Uferweg asphaltiert?
 userdel	2::inwork -12363,-1742 -12457,-1857
 EOF
      },
@@ -22549,7 +22547,8 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: last_checked: 2014-08-09 (by http://www.deutsches-architektur-forum.de/forum/showthread.php?t=10252&page=15)
+#: last_checked: 2014-12-06
+#: check_frequency: 90d
 userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
 EOF
      },
@@ -23401,7 +23400,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2014-10-12
+#: last_checked: 2014-12-06
 #: check_frequency: 90d
 userdel	q3::inwork 4503,10497 4485,10307
 EOF
@@ -23763,7 +23762,7 @@ EOF
        text  => 'Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelmarkt ist die Verbindung gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2014-12-01
+#: last_checked: 2014-12-06
 userdel	2::inwork 10308,11833 10374,11734
 EOF
      },
@@ -23775,6 +23774,24 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Können Radfahrer trotzdem passieren?
 userdel	q4::inwork 8870,12647 9056,12743
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Kronenstr.: Einbahnstraßenregelung zwischen Charlottenstr. und Markgrafenstr., gesperrt Richtung Osten, Dauer unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2014-12-06
+userdel	q4::inwork; 9559,11715 9692,11732
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Augsburger Str.: Bauarbeiten, Einbahnstraßenregelung',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2014-12-06
+userdel	q4::inwork; 5866,10492 5780,10542 5636,10626
 EOF
      },
     );

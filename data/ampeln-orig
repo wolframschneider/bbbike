@@ -2258,6 +2258,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 20150,13562
 	F -3018,16974
 	F 21150,11925
+#: note: Anforderungsampel
 	F -6053,1224
 #: note: Anforderungsampel
 	F 6522,12662
@@ -2385,6 +2386,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: keine reine Fußgängerampel: Radfahrer zwischen Knaackstr. und Lychener Str. müssen sie auch benutzen (mit Anforderung)
 	F 11056,15009
 	F 12158,7449
+	F 12121,7555
 	B 19302,-734
 	X 10231,-1086
 	X 8078,8772
@@ -2709,6 +2711,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 # 
 ################################################################################
 #: note: Potsdam vvv
+	F -12868,-502
 	X -12940,-1625
 #: by: http://www.potsdam.de/cms/beitrag/10067917/966975/
 	X -12549,-1277
@@ -2839,7 +2842,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -9942,21
 	X -12655,-1714
 #: XXX_prog: wechselseitige LSA-Regelung, ca. 100m Länge, größerer Zeitverlust?
-#: last_checked: 2014-11-22
+#: last_checked: 2014-12-05
 #: check_frequency: 90d
 	X::inwork 14018,9118
 ################################################################################
