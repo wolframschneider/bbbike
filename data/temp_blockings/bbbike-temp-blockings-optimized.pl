@@ -2345,34 +2345,7 @@ userdel	3 8374,11479 8389,11378 8427,11365
          'id' => 1997,
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-alt-rixdorf.html',
-         'data' => 'userdel	2::temp 13416,7712 13426,7674
-userdel	2::temp 13416,7712 13378,7695 13288,7653
-userdel	2::temp 13426,7674 13400,7642 13303,7622
-userdel	2::temp 12969,7610 13100,7626 13177,7644
-userdel	2::temp 13188,7590 13177,7644
-userdel	2::temp 13188,7590 13303,7622
-userdel	2::temp 13288,7653 13303,7622
-userdel	2::temp 13288,7653 13177,7644
-userdel	2::temp 13288,7653 13278,7673 13245,7742
-',
-         'periodic' => 1,
-         'until' => 1417993199,
-         'from' => 1417647600,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              5,
-                              'months',
-                              12
-                            ]
-                          ],
-         'text' => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (05.12.2014 - 07.12.2014)',
-         'id' => 1998,
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3263,26 +3236,7 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'data' => 'userdel	2::temp 9986,13412 10317,13248
-',
-         'periodic' => 1,
-         'until' => 1417993199,
-         'from' => 1417734000,
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (6.12.2014 - 7.12.2014)',
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              6,
-                              'months',
-                              12
-                            ]
-                          ],
-         'id' => 2515,
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
          'data' => 'userdel	2::temp 9986,13412 10317,13248
@@ -3324,26 +3278,7 @@ userdel	2::night 17671,13132 17684,13133
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
-         'data' => 'userdel	2::temp 11317,14564 11255,14572 11163,14548
-',
-         'periodic' => 1,
-         'until' => 1417975200,
-         'from' => 1417863600,
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 7. Dezember 2014, 12:00 bis 19:00 Uhr',
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              7,
-                              'months',
-                              12
-                            ]
-                          ],
-         'id' => 2519,
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'source_id' => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
          'data' => 'userdel	2::temp 11317,14564 11255,14572 11163,14548
@@ -3575,8 +3510,8 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
        undef,
        {
          'source_id' => '146600440',
-         'until' => 1420066800,
-         'text' => 'Lauchhammer: L60: Sanierungsarbeiten Schipkau - Lauchhammer ab 25.08.2014 Vollsperrung, bis 31.12.2014 ',
+         'until' => 1422745199,
+         'text' => 'Lauchhammer: L60: Sanierungsarbeiten Schipkau - Lauchhammer ab 25.08.2014 Vollsperrung, bis 31.01.2015',
          'from' => 1408996606,
          'id' => 2600,
          'data' => 'userdel	2::inwork 45536,-99326 45006,-99332
@@ -3904,6 +3839,15 @@ userdel	q4::inwork; 9559,11715 9692,11732
 userdel	q4::inwork; 5866,10492 5780,10542 5636,10626
 ',
          'type' => 'handicap'
+       },
+       {
+         'until' => 1418599800,
+         'text' => 'Perleberger Brücke: Sperrung vom 13.12.2014 00:30 Uhr bis 15.12.2014 00:30 Uhr',
+         'from' => 1418338800,
+         'id' => 2673,
+         'data' => 'userdel	2::inwork 7373,14566 7180,14419
+',
+         'type' => 'gesperrt'
        }
      
 );
