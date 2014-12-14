@@ -612,9 +612,7 @@ Uferweg: fester Sandweg	Q1 16627,8581 16546,8852 16459,9017 16347,9147 16266,920
 Uferweg: asphaltiert, einige Wurzelschäden	Q0- 16673,7511 16655,7572 16624,7833 16692,8166 16627,8581
 Böcklinstr.: Kopfsteinpflaster	Q2 14674,11370 14598,11245
 #: add_fragezeichen: Ist die Tino-Schwierzina-Str. zwischen Aidastr. und Romain-Rolland-Str. mittlerweile komplett asphaltiert?
-#: source_id: IM_023226
-#: last_checked: 2014-06-03
-#: next_check: 2014-11-04
+#: last_checked: 2014-12-13
 #: check_frequency: 100d
 Tino-Schwierzina-Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert	Q1- 12736,17998 12467,17814
 #: corrected_by: Hartmut Schröder (Q2 -> Q3)
@@ -666,6 +664,8 @@ Tiergarten: Parkweg	Q1 7775,12114 7772,12040
 Tiergarten: Asphalt	Q0 7772,12040 7717,11918 7706,11878 7701,11798 7649,11717 7623,11624 7612,11597
 Tiergarten: Parkweg	Q1 7514,12387 7529,12361 7544,12346 7564,12337 7587,12340 7603,12353 7627,12380
 Tiergarten: Parkweg	Q1 8571,11846 8501,11815 8244,11878 8221,11885 8132,11910 8095,11919 8020,11937
+Tiergarten: Parkweg und Mosaikpflaster	Q1 8172,11679 8210,11775 8244,11878 8327,12174 8344,12221
+Tiergarten: Mosaikpflaster	Q1 8344,12221 8391,12389 8400,12417
 Parkweg: sehr gutes Kopfsteinpflaster	Q1 14318,9688 14361,9772 14404,9847 14448,9922
 Parkweg: Verbundsteinpflaster	Q1 14448,9922 14453,9929 14558,10082 14597,10129 14626,10162 14652,10201
 #: note: mittlerweile etwas wellig
@@ -1166,7 +1166,7 @@ Miraustr.: guter Asphalt	Q0 3820,19688 4006,19443
 #: confirmed_by: srt
 Miraustr.: Asphalt	Q0 4006,19443 4170,19079 4195,19043
 #: by: ^^^
-Schaperstr.: Asphalt	Q0 5706,10216 5597,10299 5450,10338
+Schaperstr.: Asphalt	Q0 5700,10226 5597,10299 5450,10338
 Bleibtreustr.: Kopfsteinpflaster	Q2 4728,11195 4722,11030 4714,10950 4701,10837 4685,10689
 Wilhelmsaue: Kopfsteinpflaster	Q2 5164,8740 5206,8731 5228,8729 5346,8720 5510,8709
 Werderstr.: unebenes Kleinsteinpflaster	Q2- 8968,5554 8981,5692
@@ -2600,7 +2600,7 @@ Homeyerstr.: Asphalt mit Schäden	Q1- 9465,18855 9529,18815 9613,18758
 #: note: neu gemacht
 Homeyerstr.: Asphalt	Q0 9613,18758 9801,18686 9920,18636
 (Bremer Weg): Parkweg	Q1 5858,11863 5907,11874 6264,11901 6337,11887 6384,11926 6550,11954 6642,12010
-(Bremer Weg): Asphalt	Q0 6828,12031 6884,12006 7031,12024 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8122,12147 8215,12156 8466,12197 8522,12239 8538,12245
+(Bremer Weg): Asphalt	Q0 6828,12031 6884,12006 7031,12024 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8122,12147 8215,12156 8327,12174 8466,12197 8522,12239 8538,12245
 (Bremer Weg - Fasanerieallee): Parkweg, mittelfeiner Schotter	Q1 6337,11887 6379,11843 6406,11784 6452,11778 6540,11754
 (zum Rosengarten): Kleinsteinpflaster	Q1 7026,12054 7031,12024
 (zum Rosengarten): Parkweg	Q1 7031,12024 7059,11978 7108,11945 7177,11913 7200,11881
@@ -5540,8 +5540,8 @@ Fasoltstr.: Kopfsteinpflaster	Q2- 12681,18431 12749,18564 12755,18573 12794,1865
 Fasoltstr.: mäßiger Asphalt	Q1- 12794,18656 12838,18734
 Aidastr.: unbefestigte Straße	Q2 12467,17814 12517,18034
 Straße 16: Beton	Q0- 13031,17775 13034,17895
-(Kniprodestr./Michelangelostr. - Puccinistr./Gürtelstr.): Asphalt	Q0 13760,15187 13792,15238 13792,15259
-(Kniprodestr./Michelangelostr. - Puccinistr./Gürtelstr.): Beton	Q0- 13792,15259 13724,15309 13710,15352
+(Kniprodestr./Michelangelostr. - Puccinistr./Gürtelstr.): Asphalt	Q0 13760,15187 13801,15256
+(Kniprodestr./Michelangelostr. - Puccinistr./Gürtelstr.): Beton	Q0- 13801,15256 13724,15309 13710,15352
 (Kniprodestr./Michelangelostr. - Puccinistr./Gürtelstr.): Asphalt	Q0 13710,15352 13688,15393 13713,15440
 Syringenplatz/Syringenweg: Asphalt mit Schäden	Q1+ 14025,14519 14042,14249 14038,14099 13965,14018
 Straße 18: unbefestigte Straße	Q2 12942,18154 12939,18081 12902,18033
@@ -6971,7 +6971,7 @@ Nuthestr.: Beton	Q0 10239,-1849 10095,-1482 10048,-1379 9989,-1278 9925,-1106 98
 Möckernstr. - Park am Gleisdreieck: Kopfsteinpflaster	Q2 8802,10290 8775,10289 8707,10285
 Möckernstr. - Park am Gleisdreieck: Asphalt	Q0 8707,10285 8677,10224 8614,10095 8579,10030
 Pfalzburger Str.: Kleinsteinpflaster	Q1 4842,9458 4827,9304
-Simsonweg: Kleinsteinpflaster und wassergebundene Decke	Q1 8354,12416 8546,12279
+Simsonweg: Kleinsteinpflaster und wassergebundene Decke	Q1 8354,12416 8391,12389 8546,12279
 Fischzug [7B-17B]: Betonpflaster mit breiten Fugen	Q2+ 14920,10225 14977,10348
 Weg an der S-Bahn: unebener Asphalt	Q1 1802,3235 1875,3278 1961,3338
 Weg an der S-Bahn: Verbundsteinpflaster	Q1 1961,3338 2012,3356
@@ -9632,7 +9632,7 @@ Fellbacher Str.: Kopfsteinpflaster	Q2 3610,23272 3653,23305
 (Weg zum großen Bunkerberg): kleinteiliges Kopfsteinpflaster	Q1- 12307,13329 12355,13366 12391,13416 12386,13452 12305,13514 12232,13523 12197,13488 12196,13453 12235,13383 12274,13372 12327,13394 12344,13424 12307,13491 12254,13495 12232,13477 12246,13440 12278,13418 12287,13443
 Torstr. - Weydingerstr.: Verbundsteinpflaster	Q1+ 11079,13492 11111,13518
 #: XXX Wann wird hier die Fahrbahn fertig gemacht? Welche Qualität wird sie dann haben? Wird bei der Erstellung der Straße auch eine Beleuchtung eingebaut (-> nolighting-orig)?
-#: last_checked: 2014-10-28
+#: last_checked: 2014-12-10
 #: check_frequency: 90d
 Wilhelmine-Gemberg-Weg: unbefestigte Straße	Q2 11715,11522 11762,11665
 Wilhelmine-Gemberg-Weg: Feinschotter	Q1 11762,11665 11829,11727
@@ -9710,6 +9710,14 @@ Gutsmuthsweg: Asphalt	Q0 -824,12557 -746,12432 -671,12311 -583,12151 -565,12030
 Putlitzstr. (Nebenstraße): Verbundsteinpflaster	Q1+ 6212,13944 6204,14220
 (Sebastianstr./Alexandrinenstr. - Dresdener Str.): Verbundsteinpflaster	Q1+ 10824,11256 10906,11295 10956,11297 11000,11327
 Olivaer Platz: einige Aufpflasterungen mit Kleinsteinpflaster	Q0- 4279,10270 4352,10260 4478,10218
+Nizzastr.: Asphalt	Q0 12257,21079 12434,21160 12404,21217 12384,21256 12360,21303 12322,21378
+Brester Ring: Verbundsteinpflaster	Q1 12384,21256 12326,21226 12302,21275 12360,21303
+Grenobler Ring: Verbundsteinpflaster	Q1 12404,21217 12483,21255
+Grenobler Ring: Verbundsteinpflaster	Q1 12493,21212 12483,21255 12441,21341 12360,21303
+#: next_check_id: NIZZASTR-2014
+#: XXX wie wird es nach den Bauarbeiten aussehen?
+#: last_checked: 2014-12-13
+Lyonstr.: teilweise unbefestigt/Betonplattenstraße	Q2 12189,21337 12214,21332 12322,21378 12407,21415
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -11342,19 +11350,8 @@ Goeckestr.: mäßiges Kleinsteinpflaster, wellig	Q2 16128,14685 16256,14828 16361,
 Simon-Bolivar-Str.: geteert, guter Zustand	Q0 15774,14992 15856,14915 15941,14834 16035,14748 16128,14685 16284,14601
 Freienwalder Str.: Kopfsteinpflaster (einigermaßen gut)	Q2 16849,15263 16651,15345 16618,15356 16406,15452 16331,15486
 Wriezener Str.: Kopfsteinpflaster	Q2 16597,15228 16522,15258 16354,15323 16218,15386
-#: corrected_by: srt (geteert -> ...) vvv
-#: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5230 vvv
-#: XXX werden die restlichen Abschnitte auch neu asphaltiert? vvv
-#: last_checked: 2014-10-30 vvv
-#: check_frequency: 30d vvv
-Roedernstr.: Asphalt mit Schäden	Q1- 15678,15607 15552,15660
-#: check_frequency ^^^
-#: last_checked ^^^
-#: XXX ^^^
-#: by ^^^
-#: corrected_by ^^^
 #: corrected_by: srt (Asphalt mit Schäden -> ..., neu asphaltiert)
-Roedernstr.: Asphalt	Q0 16218,15386 15825,15547 15678,15607
+Roedernstr.: Asphalt	Q0 16218,15386 15825,15547 15552,15660
 Prießnitzstr.: Asphalt	Q0 11351,19169 11407,19186 11549,19258
 #: by: ^^^
 # 
@@ -12168,7 +12165,7 @@ Marienstr. (Französisch Buchholz): Asphalt	Q0 11686,21058 12095,20832
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20131119.1100.391816.html (BA-Beschluss 277/2013)
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=4928 ("in Aussicht gestellt ... 2014/2015", "... 4 m breiten asphaltierten Geh- und Radweges")
 #: osm_watch: way id="42689070" version="5"
-#: last_checked: 2014-10-30
+#: last_checked: 2014-12-13
 #: check_frequency: 60d
 Orankeweg: Sandweg im Grünzug, mäßig bis gut	Q2+ 14936,15857 14769,15867 14695,15911 14609,15921
 #: confirmed_by: srt
@@ -12189,7 +12186,7 @@ Schlieperstr.: Kopfsteinpflaster	Q2 2224,20007 2435,20032
 #: by: ^^^
 # 
 #: by: Ulfert (030):
-Kulmbacher Str.: Asphalt, leicht schadhafte Stellen	Q0- 5799,9939 5817,10173
+Kulmbacher Str.: Asphalt, leicht schadhafte Stellen	Q0- 5799,9948 5817,10173
 # 
 #: by: Jannik (Pf.):
 #: confirmed_by: srt
@@ -12737,7 +12734,7 @@ Neukirchstr.: loser Sandweg	Q2 12885,18329 12751,18401
 #: corrected_by: srt (Q2 -> Q3)
 #: XXX Asphaltierung ist geplant
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3249 (kein Termin für Asphaltierung)
-#: last_checked: 2014-09-28
+#: last_checked: 2014-12-13
 #: check_frequency: 100d
 Neukirchstr.: schlechtes Kopfsteinpflaster	Q3 12751,18401 12681,18431 12609,18470 12548,18503
 #: note: ^^^
@@ -14134,7 +14131,7 @@ Lütticher Str.: Asphalt	Q0 6640,15421 6727,15319
 # 
 #: by: Helge Martinlöwitz:
 #: confirmed_by: srt
-Börnestr.: guter Asphalt	Q0 13214,15830 13263,15930 13309,16022 13410,16214
+Börnestr.: guter Asphalt	Q0 13214,15830 13263,15930 13312,16027 13410,16214
 # 
 #: by: Jan (Groscurth):
 Am Sandwerder: guter Asphalt	Q0 -4644,1514 -4638,1579 -4469,1921 -4326,2141
@@ -18003,7 +18000,7 @@ Arnouxstr.: Asphalt	Q0 11785,22290 11583,22442 11386,22591 11188,22742
 #: corrected_by: srt (Q0 -> Q1)
 Behaimstr.: Asphalt mit Schäden	Q1 13094,15896 13140,16000
 #: confirmed_by: srt
-Behaimstr.: guter Asphalt	Q0 13140,16000 13192,16096 13286,16267 13348,16387
+Behaimstr.: guter Asphalt	Q0 13140,16000 13189,16089 13286,16267 13348,16387
 #: confirmed_by ^^^
 #: by: ^^^
 # 
@@ -19879,7 +19876,7 @@ Frauenlobstr.: guter Asphalt, einige leichte Schäden	Q0- 16043,6414 16220,6277
 # 
 #: by: Robert (klemm): vvv
 #: XXX wird hier die Straße verbessert werden? - laut Drucksache wird hier ein "Neubau" erfolgen vvv
-#: last_checked: 2014-10-30 (im südlichen Abschnitt geprüft) vvv
+#: last_checked: 2014-12-13 (im mittleren Abschnitt geprüft) vvv
 #: check_frequency: 120d vvv
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=4786&date=20130524
 #: confirmed_by: srt
@@ -23416,8 +23413,8 @@ Landhausstr.: Kopfsteinpflaster	Q2 5314,9588 5342,9559 5343,9377
 Landhausstr.: Kopfsteinpflaster	Q1 5341,8927 5343,8858
 Gasteiner Str.: grobes Kopfsteinpflaster	Q3 4920,9000 4715,8977
 Schrammstr.: grobes Kopfsteinpflaster	Q3 4960,8440 4958,8355
-Eislebender Str. (Wilmersdorf, Charlottenburg): Kopfsteinpflaster	Q2 5686,10468 5578,10529
-Los-Angeles-Platz: Kopfsteinpflaster	Q1 5681,10696 5822,10609
+Eislebender Str. (Wilmersdorf, Charlottenburg): Kopfsteinpflaster	Q2 5686,10468 5568,10535
+Los-Angeles-Platz: Kopfsteinpflaster	Q1 5669,10704 5822,10609
 #: corrected_by: srt ("neues Kopfsteinpflaster" -> )
 Elisabethkirchstr.: Kleinsteinpflaster	Q1- 9936,14085 9901,14197 9856,14204 9769,14175 9750,14132
 #: corrected_by: srt (Q1 -> Q2+)
@@ -23777,7 +23774,7 @@ Am Zirkus: Asphalt	Q0 9118,13070 9137,13032
 Am Zirkus: Asphalt	Q1 9090,13009 9137,13032
 #: next_check_id: AMZIRKUS-2014
 #: XXX danach wohl Q0
-#: last_checked: 2014-12-04
+#: last_checked: 2014-12-10
 Am Zirkus: neuer Asphalt, letzte Deckschicht fehlt noch	Q1 9137,13032 9167,13046 9212,12969 9239,12923
 (Parkweg Spreebogenpark): Asphalt	Q0 8021,12832 8036,12855 8046,12870 8072,12902 8116,12938 8168,12945 8235,12945 8304,12938 8370,12902 8424,12853
 (Parkweg Spreebogenpark): wassergebundene Decke	Q1 8301,12758 8304,12938

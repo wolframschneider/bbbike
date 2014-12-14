@@ -186,7 +186,7 @@ Anzengruberstr.	1 12865,8346 12689,8289
 #: XXX Nalepastr. wird in Zukunft wieder geöffnet
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/___tmp/tmp/45081036151900222/151900222/00081950/50-Anlagen/01/DRS0182VB.pdf (Pläne)
 #: osm_watch: way id="24869862" version="12"
-#: last_checked: 2014-06-22
+#: last_checked: 2014-11-08
 #: check_frequency: 180d
 Nalepastr. am Rundfunkgebäude	2 17065,8396 17059,8097
 Kirchstr.	1 22196,4847 22240,4768 22246,4711 22284,4653
@@ -1080,8 +1080,8 @@ Parkaue	1s:q4 15406,12444 15408,12394 15370,12264
 Stahlheimer Str.	1 11727,16358 11698,16311
 #: next_check_id: AMZIRKUS-2014
 #: XXX bleibt die Einbahnstraßenrichtung permanent? Oder nur während der Arbeiten am Schiffbauerdamm?
-#: last_checked: 2014-12-04
-Am Zirkus	1s:q4 9212,12969 9167,13046
+#: last_checked: 2014-12-10
+Am Zirkus	1s:q4 9239,12923 9212,12969 9167,13046
 DB-Werkgelände, Befahren verboten	2 1645,9862 1672,9836 1563,9769 1583,9713 1615,9675 1724,9772
 #: note implizite Fahrtrichtung
 Katharina-Boll-Dornberger-Str.	1 19086,3370 19073,3357 19033,3397 18987,3442 18998,3454 19013,3466 19057,3422 19097,3380 19086,3370
@@ -1181,6 +1181,8 @@ Ernst-von-Bergmann-Klinikum	1 -12365,-752 -12360,-772 -12351,-828
 Ernst-von-Bergmann-Klinikum	1 -12351,-828 -12374,-849 -12402,-829 -12413,-789 -12418,-764
 ###################################################################### 
 # elsewhere in Brandenburg
+#: by: rjoop
+B1/B5	2 30678,10923 29752,10895 29194,10899 27817,10875
 Hanns-Eisler-Weg	1 68794,73965 68643,73843 68594,73737 68608,73622 68694,73474
 B166	1 63418,78608 63579,78548 63634,78433
 B166	1 63559,78397 63464,78555
@@ -1489,6 +1491,7 @@ Berliner Str.: Straßenbahntrasse	3nocross 10897,17274 10892,17330 10886,17396
 Berliner Str.: Straßenbahntrasse	3nocross 10886,17396 10880,17469 10878,17490
 #: note: Luftbild:
 Berliner Str.: Straßenbahntrasse	3nocross 13737,15994 13826,16026 14014,16106
+Berliner Str.: Straßenbahntrasse	3nocross 12168,21218 12189,21337 12209,21448
 Karl-Liebknecht-Str.: Straßenbahntrasse	3nocross 10923,13156 10976,13229 11012,13278
 Riesaer Str.: Straßenbahntrasse	3nocross 24120,14526 24097,14575 24030,14717
 #: note: Luftbild:
@@ -1723,6 +1726,7 @@ Dietzgenstr.: Mittelstreifen	3nocross 10120,21464 10118,21510 10114,21592 10111,
 Rosenthaler Weg: Straßenbahntrasse	3nocross 11693,22482 11812,22523 11940,22587
 Altentreptower Str.: Mittelstreifen	3nocross 21307,12132 21400,12135 21573,12140
 Stülerstr.: Mittelstreifen	3nocross 6692,11365 6716,11439 6825,11486
+# REMOVED (leicht überquerbar) --- #: XXX Mittelstreifen vielleicht leicht überquerbar, prüfen! --- Straße des 17. Juni: Mittelstreifen	3nocross 8303,12216 8344,12221 8538,12245
 abgeschlossenes Tor	3 * 8237,20098 *
 abgeschlossenes Tor	3 * 8291,20112 *
 abgeschlossenes Tor	3 * 3796,16202 *
@@ -2573,6 +2577,13 @@ versetzte Schranke, manchmal offen	BNP:1::trailer=3 24625,20855
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: next_check_id: NIZZASTR-2014 vvv
+#: last_checked: 2014-12-13 vvv
+Grenobler Ring: teilweise noch nicht fertiggestellt	2::inwork 12360,21303 12441,21341
+Lyonstr.: noch nicht fertiggestellt, zurzeit nur Baustraße	2::inwork 12189,21337 12214,21332 12322,21378 12407,21415
+#: last_checked ^^^
+#: next_check_id ^^^
+# 
 #: XXX vmz-Eintrag: Luisenstr. (Mitte) in beiden Richtungen Höhe Charite (Berlin)  Gültig ab: 30.11.2014 12:00  Geplant ab: 01.12.2014 07 Uhr, Baustelle, Straße vollständig gesperrt (bis Ende 09/15)
 #: source_id: IM_023570
 #: source_id: IM_023615
@@ -2606,7 +2617,7 @@ Invalidenfriedhof - Invalidestr.: Weg wegen Bauarbeiten gesperrt, bis 20.02.2015
 #: check_frequency: 90d
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 # 
-#: last_checked: 2014-11-20
+#: last_checked: 2014-12-10
 #: check_frequency: 60d
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 # 
@@ -2718,8 +2729,8 @@ Große Hamburger Str.: Einbahnstraße wegen Bauarbeiten	1s:q3 10077,13100 10018,13
 #: check_frequency: 60d
 Rumoldstr.: Bauarbeiten, gesperrt	2::inwork 17454,12348 17366,12357
 # 
-#: last_checked: 2014-08-25
-#: check_frequency: 60d
+#: last_checked: 2014-12-13
+#: check_frequency: 30d
 (Antonplatz - Bizetstr.): Bauarbeiten, gesperrt	2::inwork 13487,15888 13525,15784
 # 
 #: last_checked: 2013-10-15
@@ -2906,7 +2917,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: osm_watch: way id="158025179" version="1"
-#: last_checked: 2014-12-04
+#: last_checked: 2014-12-10
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 
@@ -2984,7 +2995,7 @@ Bozener Str.	1 5900,8930 5971,8926 6049,8916
 Bozener Str.	1 5971,8926 5975,9094
 Kleiststr.: schwierig zu querender Mittelstreifen	3nocross 6532,10529 6636,10492 6753,10446
 # REMOVED (Richtungsfahrbahnen eingezeichnet) --- Bundesallee: Queren nicht möglich	3nocross 5354,8236 5363,8170 5376,8104 5357,8013
-(Los-Angeles-Platz)	1s:q3 5681,10696 5822,10609
+(Los-Angeles-Platz)	1s:q3 5669,10704 5822,10609
 Schwingtor zum Spielplatz	BNP:10 11865,13027
 Schwingtor zum Spielplatz	BNP:10 11874,13048
 Schwingtor zum Spielplatz	BNP:10 11815,13045

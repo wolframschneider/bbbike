@@ -789,7 +789,7 @@ Alt-Moabit - Invalidenstr.	1 7415,13060 7422,13012
 (Puschkinallee - Elsenstr.)	1 14244,9812 14250,9756 14270,9710
 Parkaue	1s 15406,12444 15408,12394 15370,12264
 Stahlheimer Str.	1 11727,16358 11698,16311
-Am Zirkus	1s 9212,12969 9167,13046
+Am Zirkus	1s 9239,12923 9212,12969 9167,13046
 DB-Werkgelände, Befahren verboten	2 1645,9862 1672,9836 1563,9769 1583,9713 1615,9675 1724,9772
 Katharina-Boll-Dornberger-Str.	1 19086,3370 19073,3357 19033,3397 18987,3442 18998,3454 19013,3466 19057,3422 19097,3380 19086,3370
 Tauchersteig	1 21879,2592 22011,2658 22047,2662 22058,2649
@@ -872,6 +872,7 @@ Bertolt-Brecht-Str.	1 -10202,-4669 -9998,-4865
 Bernhard-Kellermann-Str.	1 -10183,-4402 -10277,-4471 -10399,-4335 -10360,-4236
 Ernst-von-Bergmann-Klinikum	1 -12365,-752 -12360,-772 -12351,-828
 Ernst-von-Bergmann-Klinikum	1 -12351,-828 -12374,-849 -12402,-829 -12413,-789 -12418,-764
+B1/B5	2 30678,10923 29752,10895 29194,10899 27817,10875
 Hanns-Eisler-Weg	1 68794,73965 68643,73843 68594,73737 68608,73622 68694,73474
 B166	1 63418,78608 63579,78548 63634,78433
 B166	1 63559,78397 63464,78555
@@ -1372,6 +1373,7 @@ Straßenbahntrasse	3nocross::ignrte 10886,17396 10880,17469 10878,17490
 Straßenbahntrasse	3nocross::ignrte 13737,15994 13826,16026 14014,16106
 Berliner Allee -> Herbert-Baum-Str.: Straßenbahntrasse	3::igndisp 14014,16106 13826,16026 13869,15912
 Herbert-Baum-Str. -> Berliner Allee: Straßenbahntrasse	3::igndisp 13869,15912 13826,16026 13737,15994
+Straßenbahntrasse	3nocross::ignrte 12168,21218 12189,21337 12209,21448
 Straßenbahntrasse	3nocross::ignrte 10923,13156 10976,13229 11012,13278
 Karl-Liebknecht-Str. -> Keibelstr.: Straßenbahntrasse	3::igndisp 11012,13278 10976,13229 11045,13183
 Keibelstr. -> Karl-Liebknecht-Str.: Straßenbahntrasse	3::igndisp 11045,13183 10976,13229 10923,13156
@@ -1948,7 +1950,6 @@ Altheider Str. -> Adlergestell: Mittelstreifen	3::igndisp 19871,3600 19812,3561 
 Adlergestell -> Seidenbaustr.: Mittelstreifen	3::igndisp 19812,3561 19857,3514 19966,3596
 Seidenbaustr. -> Adlergestell: Mittelstreifen	3::igndisp 19966,3596 19857,3514 19904,3464
 Mittelstreifen	3nocross::ignrte 19735,3643 19676,3705 19633,3751 19587,3801
-Adlergestell -> Am Adlergestell: Mittelstreifen	3::igndisp 19633,3751 19676,3705 19755,3780
 Am Adlergestell -> Adlergestell: Mittelstreifen	3::igndisp 19755,3780 19676,3705 19735,3643
 Adlergestell -> Husstr.: Mittelstreifen	3::igndisp 19587,3801 19633,3751 19736,3858
 Husstr. -> Adlergestell: Mittelstreifen	3::igndisp 19736,3858 19633,3751 19676,3705
@@ -2749,6 +2750,8 @@ versetzte Schranke, manchmal offen	BNP:1:-124:trailer=3 23402,18067
 versetzte Schranke, manchmal offen	BNP:1:-195:trailer=3 24700,18981
 versetzte Schranke, manchmal offen	BNP:1:-133:trailer=3 24523,18542
 versetzte Schranke, manchmal offen	BNP:1:-171:trailer=3 24625,20855
+Grenobler Ring: teilweise noch nicht fertiggestellt	2::inwork 12360,21303 12441,21341
+Lyonstr.: noch nicht fertiggestellt, zurzeit nur Baustraße	2::inwork 12189,21337 12214,21332 12322,21378 12407,21415
 Luisenstr. Höhe Charité: Straße wegen Bauarbeiten komplett bis zum 30.09.2015 gesperrt, auch für Radfahrer und Fußgänger	2::inwork 8665,13353 8648,13498
 Lohmühlenplatz: Umgestaltung des Platzes, Wege ist gesperrt	2::inwork 12900,9465 12897,9365
 Mittelstreifen während der Bauarbeiten nicht überquerbar	3nocross::ignrte 3690,11629 3844,11649 3898,11655
@@ -2848,7 +2851,7 @@ Bozener Str.	1 5971,8926 5975,9094
 schwierig zu querender Mittelstreifen	3nocross::ignrte 6532,10529 6636,10492 6753,10446
 Kleiststr. -> Kalckreuthstr.: schwierig zu querender Mittelstreifen	3::igndisp 6753,10446 6636,10492 6628,10318
 Kalckreuthstr. -> Kleiststr.: schwierig zu querender Mittelstreifen	3::igndisp 6628,10318 6636,10492 6532,10529
-(Los-Angeles-Platz)	1s 5681,10696 5822,10609
+(Los-Angeles-Platz)	1s 5669,10704 5822,10609
 Schwingtor zum Spielplatz	BNP:10:-236 11865,13027
 Schwingtor zum Spielplatz	BNP:10:-156 11874,13048
 Schwingtor zum Spielplatz	BNP:10:-250 11815,13045
