@@ -157,7 +157,8 @@ EOF
     # Simulate old BBBike application
     if (!$ENV{BBBIKE_TEST_ORG}) {
 	local $TODO;
-	$TODO = "Not implemented yet for Plack" if ($ENV{TRAVIS}||'') eq 'true'; # XXX fix!
+	$TODO = "Works only with modperl" if $ENV{BBBIKE_TEST_SKIP_MODPERL}; # especially does not work with Plack
+
 	my $url = "$datadir/strassen";
 	my($resp, $content) = $basic_tests->($url,
 					     ua => $ua316,
@@ -177,8 +178,8 @@ EOF
 	    or diag <<EOF;
 Make sure that the mod_perl handler BBBikeDataDownloadCompat is activated
 in the bbbike-specific httpd.conf. If you cannot run mod_perl or even
-do not run Apache at all, then define the environment variable TRAVIS
-to skip this test (this is just a temporary hack)
+do not run Apache at all, then define the environment variable
+BBBIKE_TEST_SKIP_MODPERL to skip this test.
 EOF
     }
 }
