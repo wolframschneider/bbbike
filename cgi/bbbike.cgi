@@ -3207,7 +3207,7 @@ EOF
 
  
 	        my $maps = BBBikeGooglemap->new();
-	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'region' => $region, 'cache' =>$q->param('cache')||0, 'nomap' =>  is_mobile($q) );
+	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'region' => $region, 'cache' => scalar $q->param('cache')||0, 'nomap' =>  is_mobile($q) );
 	    }
 
 if ($enable_homemap_streets) {
@@ -3816,7 +3816,7 @@ EOF
 
     foreach my $param (qw/_start _ziel _via/) {
 	if (defined $q->param($param)) {
-	   print $q->hidden(-name=> $param, -default=> $q->param($param)), "\n";
+	   print $q->hidden(-name=> $param, -default=> scalar $q->param($param)), "\n";
 	}
     }
 
@@ -4873,7 +4873,7 @@ sub cgi_utf8 {
 	my $string = $qq->param($param);
 
 	if (!Encode::is_utf8( $string)) {
-	   $string = Encode::decode( utf8 => $qq->param($param), Encode::FB_QUIET );
+	   $string = Encode::decode( utf8 => scalar $qq->param($param), Encode::FB_QUIET );
 	   $qq->param($param, $string);
 	}
     }
@@ -6532,7 +6532,7 @@ EOF
 		} else {
 		   my $maps = BBBikeGooglemap->new();
                    $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1,
-			      'region' => $region, 'cache' => $q->param('cache') || 0, 'debug' => $debug, 'nomap' => is_mobile($qq) );
+			      'region' => $region, 'cache' => scalar $q->param('cache') || 0, 'debug' => $debug, 'nomap' => is_mobile($qq) );
 		}
 	    }
 
