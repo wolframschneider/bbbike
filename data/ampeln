@@ -516,6 +516,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6781,16026
 	X 7687,16770
 	X 7346,13022
+	X 7595,12980
+	F 7422,13012
 	X 7172,13051
 	X 6214,13225
 	X 6228,13324
@@ -2573,7 +2575,7 @@ S-Bahn ca. alle 10 Minuten	B 10865,-4464
 	B -5511,69122
 	B -6182,71661
 	B -6100,73876
-	X 6399,-1793
+	X 6349,-1745
 	X -1709,653
 	X -1661,-1714
 	X -3368,-4430

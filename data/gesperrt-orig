@@ -847,7 +847,7 @@ Südstern	1 10713,9260 10625,9259 10564,9292
 Südstern	1 10564,9292 10639,9304 10670,9286 10713,9260
 Pitschener Str.	1s:q3 21769,-432 21719,-397 21637,-381
 # XXX wird die Einbahnstraßenregelung für Radfahrer aufgehoben?
-#: last_checked: 2014-12-05
+#: last_checked: 2014-12-14
 #: check_frequency: 14d
 Herrfurthstr.	1s:q3 11979,8014 11833,7980
 Dankratstr.	1s:q3 21105,9538 20943,9543
@@ -1080,7 +1080,7 @@ Parkaue	1s:q4 15406,12444 15408,12394 15370,12264
 Stahlheimer Str.	1 11727,16358 11698,16311
 #: next_check_id: AMZIRKUS-2014
 #: XXX bleibt die Einbahnstraßenrichtung permanent? Oder nur während der Arbeiten am Schiffbauerdamm?
-#: last_checked: 2014-12-10
+#: last_checked: 2014-12-15
 Am Zirkus	1s:q4 9239,12923 9212,12969 9167,13046
 DB-Werkgelände, Befahren verboten	2 1645,9862 1672,9836 1563,9769 1583,9713 1615,9675 1724,9772
 #: note implizite Fahrtrichtung
@@ -1244,12 +1244,10 @@ Brüderstr.	1 68884,73376 68810,73316
 #: note eigentlich verlaufen hier ausgeschilderte Radrouten?!
 Dorfstr. (Pieskow)	1s:q3 56031,-14776 55983,-14721
 B96a: Mittelstreifen	3nocross 18419,-1418 18666,-1325 18777,-1298 18892,-1273
-#: XXX_indoor evtl. nach strassen_bab übetragen? vvv
-B96a: Kraftfahrzeugstraße	2 16365,-3036 16209,-3558 15991,-3877 15751,-4002 14993,-4196
-B96a: Kraftfahrzeugstraße	2 13513,-4708 13237,-4511 12807,-4353 12124,-4288
-B96: Kraftfahrzeugstraße	2 11701,-3360 12124,-4288 12321,-4750 12654,-5498
-# REMOVED (-> strassen_bab-orig) --- B96: Kraftfahrzeugstraße	2 13772,-10251 13878,-9818 14037,-9386 13972,-9073 13886,-8957 13720,-8736 13600,-8488 13584,-8205 13598,-7705 13550,-7265 13575,-7073 13638,-6738 13562,-6525 13382,-6353 12997,-6220
-#: XXX_indoor ^^^
+# REMOVED (-> strassen_bab) --- B96a: Kraftfahrzeugstraße	2 16365,-3036 16209,-3558 15991,-3877 15751,-4002 14993,-4196
+# REMOVED (-> strassen_bab) --- B96a: Kraftfahrzeugstraße	2 13513,-4708 13237,-4511 12807,-4353 12124,-4288
+# REMOVED (-> strassen_bab) --- B96: Kraftfahrzeugstraße	2 11701,-3360 12124,-4288 12321,-4750 12654,-5498
+# REMOVED (-> strassen_bab) --- B96: Kraftfahrzeugstraße	2 13772,-10251 13878,-9818 14037,-9386 13972,-9073 13886,-8957 13720,-8736 13600,-8488 13584,-8205 13598,-7705 13550,-7265 13575,-7073 13638,-6738 13562,-6525 13382,-6353 12997,-6220
 Jürgen-Schumann-Allee	1 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
 Jürgen-Schumann-Allee	1 19479,-3690 19528,-3767 19524,-3843 19454,-3956 19189,-4062 19158,-4083
 Berliner Chaussee	1 19282,-3928 19460,-3818 19539,-3810 19601,-3714
@@ -2595,7 +2593,7 @@ Luisenstr. Höhe Charité: Straße wegen Bauarbeiten komplett bis zum 30.09.2015 ge
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.153649.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.214040.php
 #: XXX falls es soweit ist -> gesperrt-orig
-#: last_checked: 2014-10-31
+#: last_checked: 2014-12-23
 #: next_check: 2015-05-01
 Lohmühlenplatz: Umgestaltung des Platzes, Wege ist gesperrt	2::inwork 12900,9465 12897,9365
 # 
@@ -2607,7 +2605,7 @@ Bismarckstr.: Mittelstreifen während der Bauarbeiten nicht überquerbar	3nocross 
 #: next_check_id: INVALIDENFRIEDHOF-2014
 #: by: Birgit Schroeer
 #: confirmed_by: srt
-#: last_checked: 2014-11-26
+#: last_checked: 2014-12-15
 #: next_check: 2015-02-14
 #: valid: 20140925-20150214
 #: XXX danach gilt für eine Woche noch der temp_blockings-Eintrag
@@ -2621,15 +2619,11 @@ Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwo
 #: check_frequency: 60d
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 # 
-#: last_checked: 2014-12-05
-#: next_check: 2015-03-01 (Bauzeit 2014-2015)
-Alfred-Döblin-Platz: Bauarbeiten, Fahrbahn gesperrt	2::inwork 11162,10919 11150,11030
-# 
 # REMOVED (weitgehend fertig) --- #: XXX werden hier die Bordsteine abgeflacht? --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/25re.pdf/file?y=2014 --- #: last_checked: 2014-10-28 --- Dresdener Str.: Bauarbeiten, komplett gesperrt	2::inwork 11034,11249 11021,11287 11000,11327
 # REMOVED --- #: last_checked: 2014-10-01 --- Am Postbahnhof: Bauarbeiten, Straße gesperrt	2::inwork 12641,11288 12664,11310 12713,11372
 # 
 #: XXX theoretisch ist ein Trampelpfad vorbei vorhanden
-#: last_checked: 2014-11-24
+#: last_checked: 2014-12-22
 Berolinastr., Weg zum Spielplatz: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt	2::inwork 11719,13088 11815,13045
 # 
 # REMOVED (vorzeitig fertig) --- #: XXX laut Schild bis Dezember 2014 gesperrt --- #: last_checked: 2014-11-20 --- #: next_check: 2014-12-15 --- Diestelmeyerstr.: wegen Bauarbeiten der Wasserbetriebe vollständig gesperrt, auch für Fußgänger	2::inwork 12690,12769 12833,12920
@@ -2714,7 +2708,7 @@ Wilhelm-Hoff-Str.: asphaltierter Weg noch abgesperrt	2::inwork 19033,3397 19057,
 # 
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0186-neubau-eines-boardingwohn-und.html
 #: XXX_prog 1s:q3:inwork geht als Kategorie nicht, falsche Übersetzung!
-#: last_checked: 2014-10-28
+#: last_checked: 2014-12-15
 #: check_frequency: 180d
 Große Hamburger Str.: Einbahnstraße wegen Bauarbeiten	1s:q3 10077,13100 10018,13299
 # 
@@ -2798,8 +2792,8 @@ Nordufer: Neubau	2:inwork 7427,14648 7212,14738
 # 
 # REMOVED (offensichtlich wieder passierbar) --- #: last_checked: 2013-06-04 --- #: next_check: 2013-08-01 --- #: XXX siehe auch Eintrag zur Friedrichsbrücke in handicap_s-orig --- Spreeufer: wegen Bauarbeiten an der Friedrichsbrücke gesperrt	2:inwork 10166,12777 10105,12855
 # 
-#: last_checked: 2014-09-03
-#: next_check: 2015-01-01
+#: last_checked: 2014-12-15
+#: next_check: 2015-04-01
 #: by: http://www.berliner-zeitung.de/verkehr/s-bahn-linie-21--baustelle-am-hauptbahnhof--ab-durch-die-mitte,10809298,20580624.html (ab 2012-10-15 für 30 Monate, also bis ca. 2015-04)
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwork 8106,13130 8102,13304
 # 
@@ -2883,9 +2877,9 @@ Uferweg am Tegeler Hafen: Weg wegen Bauarbeiten gesperrt	2:inwork 1761,20539 174
 # REMOVED --- laut http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a115_avus/de/bau.shtml?y=20120731 seit April schon offen! --- #: by: somebody via phone call ---#: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/a115_avus/de/bau.shtml --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1106/nachricht4396.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1110/nachricht4504.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1201/nachricht4557.html---#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1206/nachricht4691.html---#: by: INKO_109786---#: last_checked: 2012-07-05---#: next_check: 2012-11-15---Hüttenweg: Sperrung wegen Bau an der Autobahn, wahrscheinlich bis Ende November 2012	2:inwork -739,6838 -927,6888
 # 
 #: note: abgeschlossener Zaun
-#: last_checked: 2014-11-10
+#: last_checked: 2014-12-15
 #: check_frequency: 180d
-Helga-Hahnemann-Str.: gesperrt	2:inwork 9415,13315 9408,13282
+Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 # 
 # REMOVED (offen) --- #: last_checked: 2014-04-04 --- #: check_frequency: 7d --- #: XXX wird man nach den Bauarbeiten direkt zur Eldenaer Str. fahren können (Kfz/Rad)? --- #: XXX Qualität im östlichen Abschnitt? --- #: osm_watch: way id="137941886" version="5" --- An den Eldenaer Höfen: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14509,12819 14560,12808
 # REMOVED (nicht mehr gesperrt) --- #: XXX dieser Abschnitt wird wahrscheinlich offiziell eine Einbahnstraße, offen Richtung Westen sein --- #: XXX mittlerweile manchmal (oder immer?) passierbar --- Am Langen Jammer: westlicher Abschnitt wegen Bauarbeiten gesperrt	2:inwork 14536,12916 14588,12901 14682,12874

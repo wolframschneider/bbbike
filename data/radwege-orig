@@ -175,10 +175,6 @@ das Radwegschild steht etwa 50 Meter nach der Bossestr.	RW3; 14222,10430 14103,1
 	RW1;RW2 13332,10832 13409,11004 13454,11119
 	RW1;RW1 13454,11119 13476,11174
 	RW4;RW1 13476,11174 13493,11217
-#: next_check_id: WARSCHAUER-2014
-#: XXX während der Bauarbeiten ist die Radspur teilweise entfernt; Radfahrern wird suggeriert, den Gehweg zu benutzen (später wieder RW4 eintragen)
-#: next_check: 2015-09-30
-	RW0;RW1 13493,11217 13541,11355
 am Anfang gibt es einen Radweg von 10 Metern Länge	RW0; 11949,10414 12169,10310
 die letzten Meter sind benutzungspflichtig	RW1; 12169,10310 11949,10414
 	RW1;RW1 12169,10310 12243,10274 12341,10218
@@ -836,18 +832,10 @@ Gehweg für Radfahrer frei	RW1; 21002,5755 20880,5736 20755,5750
 	RW2; 20880,5736 21002,5755
 	RW2;RW2 14193,9746 14270,9710 14318,9688 14780,9480 14819,9462 14883,9431 15383,9191 15442,9095 15452,9079 15561,8903 15591,8848
 	RW1; 13919,7707 14015,7631 14095,7568 14174,7505 14519,7301
-#: next_check_id: SONNENALLEE-2014 vvv
-#: next_check: 2014-12-31 vvv
-#: last_checked: 2014-07-02 vvv
-#: XXX laut Tafel bis Dezember 2014
-#: source_id: IM_021662
-#: valid: -20141231
-	RW0; 14519,7301 14174,7505
-#: valid: !-20141231
+#: next_check_id: SONNENALLEE-2014
+#: XXX wie sieht die Situation zurzeit aus? Müssen Radfahrer in einer Richtung die Sonnenallee 2x überqueren?
+#: next_check: 2014-12-17 
 	RW1; 14519,7301 14174,7505
-#: last_checked ^^^
-#: next_check ^^^
-#: next_check_id ^^^
 	RW1; 14174,7505 14095,7568 14015,7631 13919,7707
 	RW2;RW1 14519,7301 14617,7243
 	RW1;RW2 14617,7243 14344,7003
@@ -1002,7 +990,7 @@ Busspur ist immer gültig	RW5;RW5 9858,12410 9780,12401 9771,12400 9734,12395 969
 #: source_id: IM_018997
 #: osm_watch: way id="24913297" version="34"
 #: last_checked: 2014-11-26
-#: next_check: 2014-12-31
+#: next_check: 2015-01-05
 Busspur ist immer gültig	RW5; 9141,12320 9358,12351 9475,12365
 # 
 #: next_check_id: STABIUDL-2014
@@ -1443,9 +1431,13 @@ die letzten 40 Meter werden als benutzungspflichtiger Radweg auf dem Gehweg gefü
 die ersten Meter werden als benutzungspflichtiger Radweg auf dem Gehweg geführt	RW4; 12126,13088 12112,12861
 	RW4;RW4 12126,13088 12163,13295
 #: next_check_id: WARSCHAUER-2014
-#: XXX Radweg ist wegen Bauarbeiten aufgehoben, danach wahrscheinlich Radspur, offiziell besteht teilweise ein gemeinsamer Rad- und Gehweg (wie soll das gehen?)
+#: XXX während der Bauarbeiten ist die Radspur teilweise entfernt; Radfahrern wird suggeriert, den Gehweg zu benutzen (später wieder RW4 eintragen)
+#: last_checked: 2014-12-23 (dieser Abschnitt könnte bald fertig sein)
+	RW0;RW1 13493,11217 13541,11355 13588,11490
+#: next_check_id: WARSCHAUER-2014
+#: XXX Radfahrern wird suggeriert, den Gehweg zu benutzen (später RW4 eintragen)
+#: last_checked: 2014-12-23
 #: next_check: 2015-09-30
-	RW0;RW1 13541,11355 13588,11490
 	RW0;RW2 13588,11490 13603,11538
 	RW4;RW4 14026,10869 14024,10861 14011,10812
 	RW1;RW1 14134,11272 14096,11134 14076,11057 14043,10928 14026,10869
@@ -1619,7 +1611,7 @@ Busspur ist immer gültig	RW5; 11160,13492 11216,13451 11270,13412 11276,13408
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1312/nachricht5141.html
 #: note: durchgezogene Linien, aber (noch?) keine Radwegschilder
 #: XXX kommen die Radwegschilder noch?
-#: last_checked: 2014-11-26
+#: last_checked: 2014-12-25
 	RW3; 8098,13419 8293,13519
 	RW2; 8293,13519 8337,13541 8362,13554
 	RW3; 8362,13554 8450,13599
@@ -2648,8 +2640,10 @@ breiter asphaltierter Gehweg für Radfahrer frei	RW1; 17973,17772 18017,17716 181
 	RW4?; 10927,17022 10917,17088 10908,17142
 #: XXX wird die Radspur wieder hergestellt? Evtl. mit dem Ende der Bauarbeiten ? -> dann RW3; oder RW4;
 #: source_id: IM_021420
+#: source_id: IM_022480
+#: source_id: IM_023568
 #: last_checked: 2014-05-21
-#: next_check: 2014-12-31
+#: next_check: 2015-02-27
 Radspur ist hier aufgehoben	RW0; 10908,17142 10917,17088 10927,17022
 	RW3; 10908,17142 10897,17274
 teilweise mit Benutzungspflicht	RW3; 10897,17274 10908,17142

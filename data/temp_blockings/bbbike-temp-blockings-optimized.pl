@@ -1,392 +1,6 @@
-$#temp_blocking = 35;
+$#temp_blocking = 393;
 push @temp_blocking,
 (
-       {
-         'source_id' => 'http://partner-fuer-spandau.de/Weihnachtsmarkt-2013_604_0.html',
-         'data' => 'userdel	2::temp -3275,14407 -3231,14383 -3204,14368 -3155,14340
-userdel	2::temp -3275,14407 -3338,14333
-userdel	2::temp -3150,14631 -3185,14556 -3205,14512 -3228,14468 -3275,14407
-userdel	2::temp -3275,14407 -3350,14446 -3393,14470 -3410,14479 -3440,14498 -3481,14523
-userdel	2::temp -3227,14260 -3155,14340
-userdel	2::temp -3227,14260 -3293,14304 -3338,14333
-userdel	2::temp -3552,14082 -3457,14189 -3409,14241 -3338,14333
-userdel	2::temp -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340
-userdel	2::temp -3110,14408 -3174,14438 -3228,14468
-userdel	2::temp -3231,14383 -3293,14304
-',
-         'periodic' => 1,
-         'until' => 1419375599,
-         'from' => 1416783600,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              26,
-                              'months',
-                              11
-                            ]
-                          ],
-         'text' => 'Spandauer Weihnachtsmarkt, vom 25.11.2014 bis 23.12.2014',
-         'id' => 36,
-         'type' => 'gesperrt'
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
          'source_id' => 'http://www.berlin.de/tickets/suche/detail.php?id=944291',
          'data' => '# sowieso schon mit q4 markiert, deshalb -> 2
@@ -2319,57 +1933,13 @@ userdel	2::temp 9524,12010 9656,12021
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.winterwelt-berlin.de/',
-         'data' => '#: note: Winterwelt bereits ab 2.11.2014 (bis 4.1.2015), Weihnachtsmarkt erst ab dem 24.11.2014
-#: by: http://www.berlin.de/tickets/suche/detail.php?id=962671
-userdel	2::temp 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324
-#userdel	2::temp 8318,11324 8280,11296 8278,11257
-#: XXX_prog "3::temp" geht nicht?
-userdel	3 8427,11365 8389,11378 8374,11479
-userdel	3 8374,11479 8389,11378 8427,11365
-',
-         'periodic' => 1,
-         'until' => 1419634799,
-         'from' => 1416697200,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              19,
-                              'months',
-                              11
-                            ]
-                          ],
-         'text' => 'Winterwelt am Potsdamer Platz, Alte Potsdamer Str. gesperrt, bis 26. Dezember 2014',
-         'id' => 1997,
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.weihnachtsmarkt-deutschland.de/berlin-koepenick-weihnachtsmarkt.html',
-         'data' => 'userdel	2::temp 22111,4562 22162,4546 22214,4548
-',
-         'periodic' => 1,
-         'until' => 1418597999,
-         'from' => 1418252400,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              11,
-                              'months',
-                              12
-                            ]
-                          ],
-         'text' => 'Alt-Köpenicker Weihnachtsmarkt vom 12.12.2014 bis zum 14.12.2014',
-         'id' => 2003,
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -2383,7 +1953,7 @@ userdel	2::temp 8522,12239 8466,12197
 userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 ',
          'periodic' => 1,
-         'until' => 1420153200,
+         'until' => 1420239599,
          'from' => 1419483600,
          'recurrences' => [
                             [
@@ -2394,7 +1964,7 @@ userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,1216
                               12
                             ]
                           ],
-         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr.',
+         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vom 26.12.2014 06:00 Uhr bis 02.01.2015 24:00 Uhr',
          'type' => 'gesperrt',
          'id' => 2010
        },
@@ -2836,16 +2406,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_023149',
-         'until' => 1419091200,
-         'text' => 'Siemensstr.: Baustelle, zwischen Wattstr. und Edisonstr. in Richtung Edisonstr. gesperrt, 13.10.2014 06:15 Uhr bis 20.12.2014 17:00 Uhr ',
-         'from' => 1413087300,
-         'id' => 2353,
-         'data' => 'userdel	q4::inwork; 17766,6616 17842,6639 17860,6644 17962,6674
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3161,11 +2722,13 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        {
          'source_id' => 'IM_020145',
-         'until' => 1418684399,
-         'text' => 'Sterndamm: Eisenbahnunterführung vom 07.12.2014 bis 15.12.2014 gesperrt, auch für Radfahrer',
+         'until' => 1421449199,
+         'text' => 'Sterndamm: Eisenbahnunterführung bis zum 16.01.2015 in Richtung Groß-Berliner Damm/Südostallee gesperrt',
          'from' => 1417820400,
          'id' => 2469,
-         'data' => 'userdel	2::inwork 17736,5441 17886,5587
+         'data' => '#: XXX bleibt der Sterndamm auch über dem 16. Januar hinaus gesperrt?
+#: next_check: 2015-01-13
+userdel	1::inwork 17886,5587 17736,5441
 ',
          'type' => 'gesperrt'
        },
@@ -3237,88 +2800,12 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'data' => 'userdel	2::temp 9986,13412 10317,13248
-',
-         'periodic' => 1,
-         'until' => 1418597999,
-         'from' => 1418338800,
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (13.12.2014 - 14.12.2014)',
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              13,
-                              'months',
-                              12
-                            ]
-                          ],
-         'id' => 2516,
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'data' => 'userdel	2::temp 9986,13412 10317,13248
-',
-         'periodic' => 1,
-         'until' => 1419202799,
-         'from' => 1418943600,
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 4. Adventswochenende (20.12.2014 - 21.12.2014)',
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              20,
-                              'months',
-                              12
-                            ]
-                          ],
-         'id' => 2517,
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
-       {
-         'source_id' => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
-         'data' => 'userdel	2::temp 11317,14564 11255,14572 11163,14548
-',
-         'periodic' => 1,
-         'until' => 1418580000,
-         'from' => 1418468400,
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 14. Dezember 2014, 12:00 bis 19:00 Uhr',
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              12
-                            ]
-                          ],
-         'id' => 2520,
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
-         'data' => 'userdel	2::temp 11317,14564 11255,14572 11163,14548
-',
-         'periodic' => 1,
-         'until' => 1419184800,
-         'from' => 1419073200,
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 21. Dezember 2014, 12:00 bis 19:00 Uhr',
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              21,
-                              'months',
-                              12
-                            ]
-                          ],
-         'id' => 2521,
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -3332,29 +2819,7 @@ userdel	2::night 17671,13132 17684,13133
 ',
          'type' => 'gesperrt'
        },
-       {
-         'data' => '#: by: http://www.potsdam.de/cms/beitrag/10046424/302934/
-#: by: http://www.potsdam.de/cms/dokumente/10050614_996205/91842041/Radverkehrsfuehrung_Gro%C3%9Fveranstaltungen.pdf
-#: by: http://www.potsdam.de/cms/ziel/302934/DE
-#: by: http://www.mobil-potsdam.de/fileadmin/user_upload/Pdf/Radverkehrsfuehrung_Grossveranstaltungen.pdf
-userdel	1::temp -13556,-1182 -13643,-1220
-',
-         'periodic' => 1,
-         'until' => 1419807599,
-         'from' => 1416697200,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              24,
-                              'months',
-                              11
-                            ]
-                          ],
-         'text' => 'Weihnachtsmarkt am Luisenplatz: geänderte Radverkehrsführung, 24.11.2014 - 28.12.2014',
-         'type' => 'gesperrt',
-         'id' => 2526
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3423,8 +2888,8 @@ userdel	q3::inwork; 13555,15596 13459,15653
        undef,
        {
          'source_id' => 'IM_021420',
-         'until' => 1420066799,
-         'text' => 'Berliner Str./Mühlenstr. in Bereich U-Bhf. Vinetastr.: Bauarbeiten, Fahrbahnen gesperrt, bis Ende Dezember 2014',
+         'until' => 1425056400,
+         'text' => 'Berliner Str./Mühlenstr. in Bereich U-Bhf. Vinetastr.: Bauarbeiten, Fahrbahnen gesperrt, bis Ende Februar 2015',
          'from' => undef,
          'id' => 2562,
          'data' => '#: source_id: IM_022480
@@ -3456,8 +2921,8 @@ userdel	q4::inwork 10862,17087 10891,17088 10917,17088
        undef,
        {
          'source_id' => 'LS/721-E/14/035',
-         'until' => 1420066800,
-         'text' => 'Kremmen: B273: Neubau Brücke über den Hörstegraben Ortsdurchfahrt Schwante, 26.05.2014 bis 31.12.2014 ',
+         'until' => 1430431199,
+         'text' => 'Kremmen: B273: Neubau Brücke über den Hörstegraben Ortsdurchfahrt Schwante, 26.05.2014 bis 30.04.2015',
          'from' => 1401055200,
          'id' => 2574,
          'data' => 'userdel	2::inwork -11775,36312 -12060,36572
@@ -3551,16 +3016,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140904.1220.399072.html',
-         'until' => 1418857199,
-         'text' => 'Englische Str. und Gutenbergstr.: Bauarbeiten, Einbahnstraßenregelung, von 08.09.2014 bis 17.12.2014',
-         'from' => 1410040800,
-         'id' => 2624,
-         'data' => 'userdel	q4::inwork; 5325,12234 5518,12159 5424,11944
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3612,15 +3068,7 @@ userdel	2::inwork 15419,10706 15379,10651
 ',
          'type' => 'gesperrt'
        },
-       {
-         'until' => 1419030000,
-         'text' => 'Genter Straße: zwischen Seestraße und Brüsseler Straße in Richtung Seestraße gesperrt, bis 19.12.2014 ',
-         'from' => 1411499642,
-         'id' => 2634,
-         'data' => 'userdel	q4::inwork; 6802,15790 6661,15921
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => 1424473200,
@@ -3638,17 +3086,7 @@ userdel	2::inwork 8101,13901 8248,13659 8337,13541
        },
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berliner-woche.de/nachrichten/bezirk-treptow-koepenick/niederschoeneweide/artikel/45985-umleitungen-durch-angrenzende-wohngebiete/',
-         'until' => 1418832000,
-         'text' => 'Bruno-Bürgel-Weg ist Einbahnstraße offen Richtung Westen, bis 17.12.2014',
-         'from' => 1407706402,
-         'id' => 2639,
-         'data' => '#: source_id: IM_022377
-userdel	q4::inwork; 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065,5534 20348,5509 20437,5463 20781,5242
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_023111',
          'until' => 1427896800,
@@ -3691,10 +3129,9 @@ userdel	2::inwork -3197,11554 -3075,11510 -3069,11487
          'data' => '#: next_check_id: TORGAUER-2014
 #: by: wosch
 #: confirmed_by: srt
-#: last_checked: 2014-10-15
-#: check_frequency: 90d
-	2::inwork 7374,8211 7250,8223
-	q3::inwork 7374,8211 7402,8208 7446,8200
+#: last_checked: 2014-12-14
+	2::inwork 7402,8208 7374,8211 7250,8223
+	q3::inwork 7402,8208 7446,8200
 ',
          'type' => 'gesperrt'
        },
@@ -3724,36 +3161,9 @@ userdel	2::inwork -3197,11554 -3075,11510 -3069,11487
        },
        undef,
        undef,
-       {
-         'source_id' => 'IM_022801',
-         'until' => 1419001200,
-         'text' => 'John-Foster-Dulles-Allee: Baustelle zwischen Zeltenplatz und Große Querallee, Fahrbahn gesperrt, Ausweichen auf Gehweg, 08.09.2014 08:00 Uhr bis 19.12.2014 16:00 Uhr ',
-         'from' => 1410069600,
-         'id' => 2654,
-         'data' => 'userdel	q3::inwork 7627,12380 7821,12367 7875,12363 8017,12359
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'IM_023242',
-         'until' => 1418770799,
-         'text' => 'Schlichtallee: Bauarbeiten zwischen Zobtener Str. und Max-Taut-Schule, Einbahnstraße offen Richtung Hauptstr., Ausweichen auf Gehweg, bis zum 16.12.2014',
-         'from' => 1414624392,
-         'id' => 2655,
-         'data' => 'userdel	q3::inwork; 15758,10578 15880,10680
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2014/pressemitteilung.219976.php',
-         'until' => 1419029999,
-         'text' => 'Karmeliterweg zwischen Ludolfinger Platz und An der Buche: Fahrbahnreparaturarbeiten, Fahrbahn gesperrt, vom 3. November 2014 bis 19. Dezember 2014',
-         'from' => 1414882800,
-         'id' => 2656,
-         'data' => 'userdel	q4::inwork 2174,24783 2222,24884 2245,25016
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -3792,8 +3202,8 @@ userdel	q4::inwork 5635,7660 5636,7540
        },
        {
          'source_id' => 'IM_023529',
-         'until' => 1418655600,
-         'text' => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn gesperrt, 25.11.2014 08:17 Uhr bis 15.12.2014 16:00 Uhr',
+         'until' => 1420470000,
+         'text' => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn gesperrt, 25.11.2014 08:17 Uhr bis 05.01.2015 16:00 Uhr',
          'from' => 1416813420,
          'id' => 2666,
          'data' => 'userdel	q4::inwork 9373,12197 9369,12253 9358,12351
@@ -3801,22 +3211,14 @@ userdel	q4::inwork 5635,7660 5636,7540
          'type' => 'handicap'
        },
        undef,
-       {
-         'source_id' => 'IM_023572',
-         'until' => 1419001200,
-         'text' => 'Pistoriusstr. Richtung Berliner Allee: zwischen Mirbachplatz und Parkstr. Baustelle, Fahrtrichtung gesperrt, bis 19.12.2014',
-         'from' => 1417327200,
-         'id' => 2668,
-         'data' => 'userdel	q4::inwork; 13400,16395 13485,16362 13544,16339 13632,16305 13679,16286 13788,16240
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelmarkt ist die Verbindung gesperrt, Ende der Bauarbeiten unbekannt',
          'from' => undef,
          'id' => 2669,
-         'data' => '#: last_checked: 2014-12-10
+         'data' => '#: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage)
+#: last_checked: 2014-12-23
 userdel	2::inwork 10308,11833 10374,11734
 ',
          'type' => 'gesperrt'
@@ -3839,25 +3241,6 @@ userdel	q4::inwork; 9559,11715 9692,11732
          'id' => 2672,
          'data' => '#: last_checked: 2014-12-12
 userdel	q4::inwork; 5866,10492 5780,10542 5627,10637
-',
-         'type' => 'handicap'
-       },
-       {
-         'until' => 1418599800,
-         'text' => 'Perleberger Brücke: Sperrung vom 13.12.2014 00:30 Uhr bis 15.12.2014 00:30 Uhr',
-         'from' => 1418338800,
-         'id' => 2673,
-         'data' => 'userdel	2::inwork 7373,14566 7180,14419
-',
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'IM_023660',
-         'until' => 1418565600,
-         'text' => 'Schönstr.: Wasserrohrbruch, Fahrbahn zwischen Rennbahnstr. und Große Seestr. gesperrt, 10.12.2014 11:00 Uhr bis 14.12.2014 15:00 Uhr ',
-         'from' => 1418119200,
-         'id' => 2674,
-         'data' => 'userdel	q4::inwork 14136,17170 14006,16961
 ',
          'type' => 'handicap'
        }

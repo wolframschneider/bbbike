@@ -935,7 +935,7 @@ Ahornstr. (Potsdam): Qualität?	? -8829,-2741 -8870,-2876
 Alter Torfweg (Potsdam): Qualität? Existieren Straßenschilder?	? -10836,-5477 -10829,-5608 -10917,-5739 -11089,-5909
 Niederstr. (Glienicke): Qualität östlich der Ottostr.?	? 3949,24718 4052,24731 4233,24772 4276,24781 4354,24803 4389,24783
 Egestorffstr. - Mauerweg: Qualität? Nachts beleuchtet?	? 9093,-1670 9083,-1991 9081,-2073
-Mauerweg - Birkholz/Diedersdorf: Qualität?	? 8412,-1979 8310,-2037 8100,-2471 8071,-3225
+Mauerweg - Birkholz/Diedersdorf: Qualität?	? 8412,-1979 8310,-2037 8100,-2471 8111,-3356
 Innerer Mauerweg: Qualität? Nachts beleuchtet?	? 9083,-1991 8412,-1979 8492,-1376
 Ahlimbswalde: ist die gesamte Straße asphaltiert?	? 30962,71971 31251,71954 31669,72016 31857,72102 32370,71986 32613,71643
 Vogelsangsruh: ist die gesamte Straße asphaltiert?	? 66431,84540 66638,84513
@@ -1090,6 +1090,8 @@ Treseburger Ufer, Verlängerung: ist der Weg beleuchtet?	? 12301,5783 12699,5909 
 Brücke über die Göröitzer Bahn: Qualität, Beleuchtung, Ausschilderung?	? 24056,-1295 24153,-1140
 Verlängerter Sandbacher Weg: Qualität (Waldweg?)	? 23504,-938 24056,-1295
 Alter Radelander Weg/Brücke - Bammelecke: Qualität (Waldweg?)	? 24153,-1140 24474,-661 24750,-256 25190,333 25297,434 25484,442
+Darguner Str.: Qualität?	? 17566,18680 17635,18591
+Gerhard-Sedlmayer-Str: Qualität? Existiert ein Radweg? Gibt es Verbindungswege zum Park?	? 18773,3873 18701,3806 18520,3812 18208,4151 18374,4307
 # added from ampeln-orig
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6163 (Stand der Planung?)
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4

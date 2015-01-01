@@ -3677,7 +3677,7 @@ EOF
        text  => 'B 096 a Brücke über DB AG zw. Glasower Str. u. Waßmannsdorfer Ch. Brückenneubau Vollsperrung * 29.01.2006-29.01.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2 13237,-4511 13513,-4708 13677,-4801
+# REMOVED (in strassen_bab-orig) ---	2 13237,-4511 13513,-4708 13677,-4801
 EOF
      },
      { from  => 1141340400, # 2006-03-03 00:00
@@ -5546,7 +5546,7 @@ EOF
        text  => 'K 7239 Diedersdorf-Birkholz OD Diedersdorf, Kno. Birkholzer Str./ Chausseestr. Bau Kreisverkehrsplatz Vollsperrung 15.08.2006-28.09.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 7547,-5739 7399,-7001
+userdel	q4::inwork 7513,-5721 7399,-7001
 EOF
      },
      { from  => 1156024800, # 2006-08-20 00:00
@@ -14400,7 +14400,7 @@ EOF
        text  => 'L 076 Mahlow - Teltow zw. Abzw. Birkholz und Abzw. Großbeeren Straßenbau Vollsperrung 02.06.2009-31.01.2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 7955,-4250 7790,-3985 6012,-3393 5394,-3053
+userdel	2::inwork 7927,-4232 7710,-3956 6972,-3721 6929,-3827 6371,-3887 6000,-3711 5810,-3604 5731,-3508 5838,-3339 5399,-3049
 EOF
      },
      { from  => 1243807200, # 2009-06-01 00:00
@@ -17236,10 +17236,10 @@ userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-879
 EOF
      },
      { from  => $isodate2epoch->("2014-12-25 06:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-01-02 00:00:00"),
+       until => $isodate2epoch->("2015-01-02 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 12]],
-       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr.',
+       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vom 26.12.2014 06:00 Uhr bis 02.01.2015 24:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 8731,12270 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
@@ -19527,7 +19527,7 @@ EOF
        until => $isodate2epoch->("2014-07-10 19:00:00"),
        text  => 'Platz der Luftbrücke (Tempelhof): Straße vollständig zwischen Tempelhofer Damm und Columbiadamm wegen einer Veranstaltung (Bread & Butter) gesperrt (8. bis 10. Juli 2014)',
        periodic => 1,
-       recurrences => [['yearly', days => 14, months => 1],
+       recurrences => [#['yearly', days => 14, months => 1], # XXX January 2015 is cancelled
                        ['yearly', days => 1, months => 7]],
        type  => 'gesperrt',
        source_id => 'http://www.breadandbutter.com/winter2014/de/home/',
@@ -21813,12 +21813,14 @@ userdel	2::temp 5047,10381 5076,10658
 EOF
      },
      { from  => $isodate2epoch->("2014-12-06 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-12-15 23:59:59"),
-       text  => 'Sterndamm: Eisenbahnunterführung vom 07.12.2014 bis 15.12.2014 gesperrt, auch für Radfahrer',
+       until => $isodate2epoch->("2015-01-16 23:59:59"),
+       text  => 'Sterndamm: Eisenbahnunterführung bis zum 16.01.2015 in Richtung Groß-Berliner Damm/Südostallee gesperrt',
        type  => 'gesperrt',
        source_id => 'IM_020145',
        data  => <<EOF,
-userdel	2::inwork 17736,5441 17886,5587
+#: XXX bleibt der Sterndamm auch über dem 16. Januar hinaus gesperrt?
+#: next_check: 2015-01-13
+userdel	1::inwork 17886,5587 17736,5441
 EOF
      },
      { from  => 1376816220, # 2013-08-18 10:57
@@ -22715,8 +22717,8 @@ userdel	2::inwork 26395,-11699 26302,-11712
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2014-12-31 23:59:59"),
-       text  => 'Berliner Str./Mühlenstr. in Bereich U-Bhf. Vinetastr.: Bauarbeiten, Fahrbahnen gesperrt, bis Ende Dezember 2014',
+       until => $isodate2epoch->("2015-02-27 18:00:00"),
+       text  => 'Berliner Str./Mühlenstr. in Bereich U-Bhf. Vinetastr.: Bauarbeiten, Fahrbahnen gesperrt, bis Ende Februar 2015',
        type  => 'handicap',
        source_id => 'IM_021420',
        data  => <<EOF,
@@ -22835,8 +22837,8 @@ userdel	q4::inwork; -4630,15978 -4653,15896 -4656,15839 -4655,15803 -4639,15726 
 EOF
      },
      { from  => $isodate2epoch->("2014-05-26 00:00:00"), # 1400863142, # 2014-05-23 18:39
-       until => 1420066800, # 2015-01-01 00:00
-       text  => 'Kremmen: B273: Neubau Brücke über den Hörstegraben Ortsdurchfahrt Schwante, 26.05.2014 bis 31.12.2014 ',
+       until => $isodate2epoch->("2015-04-30 23:59:59"), # 1420066800, # 2015-01-01 00:00
+       text  => 'Kremmen: B273: Neubau Brücke über den Hörstegraben Ortsdurchfahrt Schwante, 26.05.2014 bis 30.04.2015',
        type  => 'gesperrt',
        source_id => 'LS/721-E/14/035',
        data  => <<EOF,
@@ -23547,10 +23549,9 @@ EOF
 #: next_check_id: TORGAUER-2014
 #: by: wosch
 #: confirmed_by: srt
-#: last_checked: 2014-10-15
-#: check_frequency: 90d
-	2::inwork 7374,8211 7250,8223
-	q3::inwork 7374,8211 7402,8208 7446,8200
+#: last_checked: 2014-12-14
+	2::inwork 7402,8208 7374,8211 7250,8223
+	q3::inwork 7402,8208 7446,8200
 EOF
      },
      { from  => $isodate2epoch->("2014-10-15 04:00:00"),
@@ -23733,8 +23734,8 @@ userdel	q4::inwork 20559,14847 20480,14874
 EOF
      },
      { from  => 1416813420, # 2014-11-24 08:17
-       until => 1418655600, # 2014-12-15 16:00
-       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn gesperrt, 25.11.2014 08:17 Uhr bis 15.12.2014 16:00 Uhr',
+       until => $isodate2epoch->("2015-01-05 16:00:00"), # 1418655600, # 2014-12-15 16:00
+       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn gesperrt, 25.11.2014 08:17 Uhr bis 05.01.2015 16:00 Uhr',
        type  => 'handicap',
        source_id => 'IM_023529',
        data  => <<EOF,
@@ -23751,7 +23752,7 @@ userdel	2::temp -10593,476 -10715,472 -10826,469
 EOF
      },
      { from  => 1417327200, # 2014-11-30 07:00
-       until => $isodate2epoch->("2014-12-19 16:00:00"), # 1418684399, # 2014-12-15 23:59
+       until => 1418941505, # $isodate2epoch->("2014-12-19 16:00:00"), # 1418684399, # 2014-12-15 23:59
        text  => 'Pistoriusstr. Richtung Berliner Allee: zwischen Mirbachplatz und Parkstr. Baustelle, Fahrtrichtung gesperrt, bis 19.12.2014',
        type  => 'handicap',
        source_id => 'IM_023572',
@@ -23764,7 +23765,8 @@ EOF
        text  => 'Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelmarkt ist die Verbindung gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2014-12-10
+#: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage)
+#: last_checked: 2014-12-23
 userdel	2::inwork 10308,11833 10374,11734
 EOF
      },

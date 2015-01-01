@@ -583,6 +583,10 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6781,16026
 	X 7687,16770
 	X 7346,13022
+#: XXX_prog beim Rechtsabbiegen von Alt-Moabit in die Emma-Herwegh-Str. gibt es keine Ampel; Radfahrer aus der Lüneburger Str. Richtung Emma-Herwegh-Str. haben zumindest eine Anforderungsampel auf dem Mittelstreifen
+	X 7595,12980
+#: note: keine Anforderungsampel
+	F 7422,13012
 	X 7172,13051
 	X 6214,13225
 	X 6228,13324
@@ -2412,7 +2416,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 15356,3759
 # REMOVED --- #: next_check_id: KARLSHORSTER-2014 vvv --- #: last_checked: 2014-10-10 vvv --- #: next_check: 2014-10-20 vvv --- #: note: provisorische Ampel --- #: valid: 20140630-20141022 vvv --- ---	X::inwork 14805,10518
 #: XXX bleibt die Ampel permanent?
-#: last_checked: 2014-11-22
+#: last_checked: 2014-12-09
 #: check_frequency: 30d
 	X::inwork 14906,10820
 	F 8667,5372
@@ -2536,7 +2540,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
 #: last_checked: 2014-12-12 vvv
-#: next_check: 2014-12-31 vvv
+#: next_check: 2015-01-05 vvv
 	X::inwork 9122,12509
 	X::inwork 9286,12886
 	X::inwork 9343,12464
@@ -2546,7 +2550,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX ^^^
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (südlicher Bereich) vvv
 #: last_checked: 2014-09-20 vvv
-#: next_check: 2014-12-31 vvv
+#: next_check: 2015-01-05 vvv
 	F::inwork 9063,12051
 	F::inwork 9270,12086
 #: next_check ^^^
@@ -2690,7 +2694,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 # 
 #: next_check_id: SONNENALLEE-2014
 #: last_checked: 2014-08-24
-#: next_check: 2014-12-31
+#: next_check: 2014-12-17
 	X::inwork 14174,7505
 # 
 #: note: Anforderungsampel
@@ -3058,7 +3062,7 @@ S-Bahn ca. alle 10 Minuten	B 10865,-4464
 	B -5511,69122
 	B -6182,71661
 	B -6100,73876
-	X 6399,-1793
+	X 6349,-1745
 	X -1709,653
 	X -1661,-1714
 	X -3368,-4430
