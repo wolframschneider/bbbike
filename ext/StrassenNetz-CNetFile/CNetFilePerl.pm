@@ -1,10 +1,9 @@
 # -*- perl -*-
 
 #
-# $Id: CNetFilePerl.pm,v 1.18 2007/05/09 20:36:52 eserte Exp $
 # Author: Slaven Rezic
 #
-# Copyright (C) 2001, 2002, 2007 Slaven Rezic. All rights reserved.
+# Copyright (C) 2001, 2002, 2007, 2015 Slaven Rezic. All rights reserved.
 #
 # Mail: slaven@rezic.de
 # WWW:  http://bbbike.sourceforge.net
@@ -236,7 +235,7 @@ sub FETCH {
 	    return $neighbors[$n_i+1];
 	}
     }
-    warn "Can't find distance for $self->{Key1} - $key2!";
+    warn "Can't find distance for $self->{Key1} - $key2! Number of neighbors of $self->{Key1}: " . scalar(@neighbors)/2;
 #    warn "Try the hard way...";
 #    require Strassen::Util;
 #    int(Strassen::Util::strecke_s($self->{Key1}, $key2));
@@ -249,8 +248,13 @@ sub STORE {
 sub EXISTS {
     my($self, $key2) = @_;
     my $str_net = $self->{StrassenNetz};
-    my(undef,undef,undef,@neighbors) = $str_net->get_coord_struct($str_net->translate_pointer($str_net->{CNetCoord2Ptr}->{$self->{Key1}}));
-    my $n_ptr = $str_net->translate_pointer($str_net->{CNetCoord2Ptr}->{$key2}) - $str_net->{CNetMmap};
+    my $cnet_coord_2_ptr = $str_net->{CNetCoord2Ptr};
+    my(undef,undef,undef,@neighbors) = $str_net->get_coord_struct($str_net->translate_pointer($cnet_coord_2_ptr->{$self->{Key1}}));
+    my $v2 = $cnet_coord_2_ptr->{$key2};
+    if (!defined $v2) {
+	return 0;
+    }
+    my $n_ptr = $str_net->translate_pointer($v2) - $str_net->{CNetMmap};
     for(my $n_i = 0; $n_i < $#neighbors; $n_i += 2) {
 	if ($neighbors[$n_i] eq $n_ptr) {
 	    return 1;
