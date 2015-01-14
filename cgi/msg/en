@@ -278,5 +278,6 @@ return {
     "alter Name gültig"              => "old name valid",
     'Sackgassenende'                 => 'cul-de-sac',
     'Fehler: Sitzung ist abgelaufen' => 'Error: Session expired',
+    'Statische Karte' => 'Static Map',
+    'Interaktive Karte' => 'Dynamic Map',
 };
-
