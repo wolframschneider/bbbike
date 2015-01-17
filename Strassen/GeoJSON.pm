@@ -15,7 +15,7 @@ package Strassen::GeoJSON;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 use base qw(Strassen);
 
@@ -74,6 +74,50 @@ sub geojsonstring2bbd {
 
     my $data = JSON::XS->new->decode($string);
 
+    my $handle_geometry; $handle_geometry = sub {
+	my($geometry, $name, $cat) = @_;
+	my $type = $geometry->{type};
+	if ($type eq 'GeometryCollection') {
+	    for my $inner_geometry (@{ $geometry->{geometries} }) {
+		$handle_geometry->($inner_geometry, $name, $cat);
+	    }
+	} else {
+	    my $coordinates = $geometry->{coordinates};
+	    if ($type eq 'Point') {
+		if ($converter) { @$coordinates = $converter->(@$coordinates) }
+		$self->push([$name, [join ',', @$coordinates], $cat]);
+	    } elsif ($type eq 'LineString') {
+		if ($converter) { for (@$coordinates) { @$_ = $converter->(@$_) } }
+		$self->push([$name, [map { join ',',  @$_ } @$coordinates], $cat]);
+	    } elsif ($type eq 'Polygon') {
+		# XXX bbd has no support for interior rings/holes
+		for my $inner_coordinates (@$coordinates) {
+		    if ($converter) { for (@$inner_coordinates) { @$_ = $converter->(@$_) } }
+		    $self->push([$name, [map { join ',',  @$_ } @$inner_coordinates], 'F:'.$cat]);
+		}
+	    } elsif ($type eq 'MultiPoint') {
+		for my $inner_coordinates (@$coordinates) {
+		    if ($converter) { for (@$inner_coordinates) { @$_ = $converter->(@$_) } }
+		    $self->push([$name, [join ',', @$inner_coordinates], $cat]);
+		}
+	    } elsif ($type eq 'MultiLineString') {
+		for my $inner_coordinates (@$coordinates) {
+		    if ($converter) { for (@$inner_coordinates) { @$_ = $converter->(@$_) } }
+		    $self->push([$name, [map { join ',',  @$_ } @$inner_coordinates], $cat]);
+		}
+	    } elsif ($type eq 'MultiPolygon') {
+		for my $inner_coordinates (@$coordinates) {
+		    # XXX bbd has no support for interior rings/holes
+		    for my $inner_coordinates2 (@$inner_coordinates) {
+			if ($converter) { for (@$inner_coordinates2) { @$_ = $converter->(@$_) } }
+			$self->push([$name, [map { join ',',  @$_ } @$inner_coordinates2], 'F:'.$cat]);
+		    }
+		}
+	    } else {
+		warn "GeoJSON geometry type '$type' not supported, skipping feature...\n";
+	    }
+	}
+    };
     my $handle_feature = sub {
 	my $feature = shift;
 	my $geometry = $feature->{geometry};
@@ -82,17 +126,7 @@ sub geojsonstring2bbd {
 	}
 	my $name = $namecb->($feature);
 	my $cat = $catcb->($feature);
-	my $type = $geometry->{type};
-	my $coordinates = $geometry->{coordinates};
-	if ($type eq 'Point') {
-	    if ($converter) { @$coordinates = $converter->(@$coordinates) }
-	    $self->push([$name, [join ',', @$coordinates], $cat]);
-	} elsif ($type eq 'LineString') {
-	    if ($converter) { for (@$coordinates) { @$_ = $converter->(@$_) } }
-	    $self->push([$name, [map { join ',',  @$_ } @$coordinates], $cat]);
-	} else {
-	    warn "GeoJSON geometry type '$type' not supported, skipping feature...\n";
-	}
+	$handle_geometry->($geometry, $name, $cat);
     };
 
     if ($data->{type} eq 'FeatureCollection') {
@@ -115,6 +149,7 @@ sub bbd2geojson {
 
     my $pretty = exists $args{pretty} ? $args{pretty} : 1;
     my $utf8   = exists $args{utf8}   ? $args{utf8}   : 1;
+    my $bbbgeojsonp = $args{bbbgeojsonp};
 
     my $xy2longlat = \&xy2longlat;
     my $map = $self->get_global_directive("map");
@@ -134,7 +169,10 @@ sub bbd2geojson {
 	my $cat = $r->[Strassen::CAT];
 
 	my $geometry = (@c > 1
-			? { type => 'LineString', coordinates => [map { [$xy2longlat->($_)] } @c ] }
+			? ($cat =~ m{^F:}
+			   ? { type => 'Polygon', coordinates => [[map { [$xy2longlat->($_)] } (@c, $c[0] ne $c[-1] ? $c[-1] : ()) ]] }
+			   : { type => 'LineString', coordinates => [map { [$xy2longlat->($_)] } @c ] }
+			  )
 			: { type => 'Point',      coordinates => [$xy2longlat->($c[0])] }
 		       );
 
@@ -164,7 +202,11 @@ sub bbd2geojson {
     } else {
 	$json_xs->ascii(1);
     }
-    $json_xs->encode($to_serialize);
+    if ($bbbgeojsonp) {
+	'geoJsonResponse(' . $json_xs->encode($to_serialize) . ');';
+    } else {
+	$json_xs->encode($to_serialize);
+    }
 }
 
 sub longlat2xy {
@@ -188,3 +230,14 @@ sub xy2longlat {
 1;
 
 __END__
+
+=head2 JSONP support
+
+The GeoJSON result of the C<bbd2geojson()> call can be made into a
+JSONP-like result by specifying C<< bbbgeojsonp => 1 >>. This creates
+a resulting json string which is wrapped in a C<geoJsonResponse()>
+function call. To use this, create a javascript function like
+
+    function geoJsonResponse(geoJson) { initialGeoJSON = geoJson; }
+
+=cut
