@@ -2477,7 +2477,6 @@ EOF
 	    print qq{<span id="social">\n};
 	    print qq{<a href="$facebook_page" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="}, M("Facebook Fanpage"), qq{"></a>\n} if $enable_facebook_t_link;
 	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="}, M("Folge uns auf twitter.com/BBBikeWorld"), qq{"></a>\n} if $enable_twitter_t_link;
-	    print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png" alt=""></a><g:plusone href="http://bbbike.org" size="small" count="false"></g:plusone>\n} if $enable_google_plusone_t_link;
 	    print qq{</span>\n};
 	}
 
@@ -6381,7 +6380,6 @@ for my $etappe (@out_route) {
 			M("Facebook Fanpage"), qq{"><img class="logo" src="/images/facebook-like.png" alt="" title="},
 			M("Facebook Fanpage"), qq{"></a>\n};
 		}
-	        print qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png"></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
 
 		if (0) { # XXX not yet
 		    my $qq2 = CGI->new({});
@@ -8759,8 +8757,6 @@ $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="
 my $permalink_text = $is_streets ? "" : qq{ | <a href="#" onclick="togglePermaLinks(); return false;">$permalink_msg</a><span id="permalink_url2" style="display:none"> <a href="$permalink">$permalink</a></span>};
 $permalink_text = "" if $permalink !~ /=/;
 
-my $google_plusone = qq{<a class="gplus" onmouseover="javascript:google_plusone();" ><img src="/images/google-plusone-t.png" alt=""></a><g:plusone href="http://bbbike.org" size="standard" count="true"></g:plusone>\n} if $enable_google_plusone_t_link;
-
 my $facebook_title = M("Facebook Fanpage");
 my $donate_title = M("Spende an BBBike.org");
 my $twitter_title = M("Folge uns auf twitter.com/BBBikeWorld");
@@ -8785,7 +8781,6 @@ $permalink_text
   @{[ $enable_flattr_t_link  ? qq[<a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>] : "" ]}
   @{[ $enable_twitter_t_link  ? qq[<a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="$twitter_title" alt=""></a>] : "" ]}
   @{[ $enable_facebook_t_link ? qq[<a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="$facebook_title"></a>] : "" ]}
-  $google_plusone
   $rss_icon
 </span>
 
