@@ -7,7 +7,6 @@
 
 # Tests for the javascript function sprintf
 
-
 use strict;
 use FindBin;
 use lib (
@@ -18,7 +17,7 @@ use lib (
 
 BEGIN {
     if (!eval q{
-	use Test::MoreXXX;
+	use Test::More;
 	1;
     }) {
 	print "1..0 # skip no Test::More module\n";
