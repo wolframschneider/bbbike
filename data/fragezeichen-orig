@@ -39,7 +39,7 @@ Danziger Str.	?::projected 11709,14856 11864,14781 11990,14714 12025,14695 12128
 # 
 #: XXX im Baumaßnahmenkatalog ist nur der östliche Teil ab Heinrich-Heine-Str. eingezeichnet, Baumaßnahmen 1.46 (Realisierung in 2011)
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
-#: last_checked: 2015-01-08
+#: last_checked: 2015-01-21
 #: check_frequency: 60d
 Annenstr./Heinrich-Heine-Platz	?::projected 11349,11227 11249,11268 11091,11379 11052,11414 11039,11425 10892,11555 10815,11662
 # 
@@ -120,7 +120,7 @@ Markgrafenstr.: wird hier eine Radwegführung erstellt?	?::projected 9711,11543 9
 #: XXX im Tagesspiegel vom 2013-01-03 erwähnt
 #: osm_watch: way id="4543585" version="18"
 #: osm_watch: way id="42732291" version="9"
-#: last_checked: 2014-09-20
+#: last_checked: 2015-01-23
 #: check_frequency: 90d
 Müllerstr.: Radspuren werden 2013 markiert	?::projected 6781,16026 6914,15908 6936,15888 7024,15810 7129,15717 7198,15656 7277,15586 7396,15479 7474,15408 7611,15286 7754,15160
 # 
@@ -217,8 +217,8 @@ Warschauer Str: Radspuren in Bau	?::inwork 13588,11490 13603,11538 13651,11731 1
 # 
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
 #: XXX wird auch das letzte Stück im Westen realisiert?
-#: osm_watch: way id="4424794" version="13"
-#: osm_watch: way id="30195541" version="8"
+#: osm_watch: way id="4424794" version="14"
+#: osm_watch: way id="30195541" version="9"
 #: last_checked: 2014-11-26
 Turmstr.: Radspuren für 2013 geplant	? 5248,13434 5368,13406 5434,13398
 # 
@@ -308,6 +308,7 @@ Köpenicker Landstraße: Radspuren bis 2015 geplant	?::projected; 15303,8343 15166
 #: by: ^^^
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5245
+#: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5463
 #: source_id: IM_023242
 #: XXX Bauarbeiten sind fertig, die Markierung ist allerdings noch nicht erfolgt
 #: last_checked: 2015-01-04
@@ -377,6 +378,16 @@ Wendenschloßstr.: Radstreifen auf der westlichen Fahrbahnseite	?::projected 2266
 # - handelt es sich bei der Frage um Zebrastreifen und andere
 #   für Radfahrer eher uninteressante Dinge (-> private)
 # 
+#: XXX fehlt in Berlin.coords.data
+#: note: Privatstraße, südlicher (jetzt schon bestehender) Abschnitt bleibt öffentlich
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/03re.pdf/file?y=2015
+Zur alten Börse: Qualität, schon fertig?	? 18766,13257 18654,12255
+# 
+#: XXX fehlt in Berlin.coords.data
+#: note: "Mahlsdorfer Grünzug"
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/03re.pdf/file?y=2015
+Pfarrhufenanger: Qualität, schon befahrbar? Verkehrsberuhigt?	? 25599,13069 25427,12847 25250,12632
+# 
 # REMOVED (teilweise offiziell für Radfahrer offen) --- #: XXX Zimmerstr. (Mitte): Baustelle, Fahrtrichtung gesperrt (bis Ende 01/15) Richtung Friedrichstr. zwischen Wilhelmstr. und Friedrichstr., 04.11.2014 14:58 Uhr bis 31.01.2015 16:00 Uhr --- #: XXX wahrscheinlich für Radfahrer offen --- #: source_id: IM_023356 --- #: next_check: 2014-11-10 --- Zimmerstr.: Bauarbeiten für Radfahrer relevant?	?::inwork 9155,11283 9478,11317
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5602 (Baubeginn "in Kürze")
@@ -428,10 +439,7 @@ Fähenweg: genaue Lage, Qualität?	?::inwork 21875,2363 21803,2324
 #: by: ^^^
 #: XXX ^^^
 # 
-#: by: http://www.berlin.de/ba-pankow/presse/archiv/20140917.1035.399288.html
-#: last_checked: 2014-12-13
-#: next_check: 2014-12-31
-Gounodstr.: nach den Bauarbeiten asphaltiert	?::inwork 13645,15609 13739,15643 13939,15723
+# REMOVED --- #: by: http://www.berlin.de/ba-pankow/presse/archiv/20140917.1035.399288.html --- #: last_checked: 2014-12-13 --- #: next_check: 2014-12-31 --- Gounodstr.: nach den Bauarbeiten asphaltiert	?::inwork 13645,15609 13739,15643 13939,15723
 # 
 #: source_id: IM_022856
 Fürstenwalder Damm: existieren nach den Bauarbeiten vielleicht Radwege?	? 26302,5932 26080,5946 25579,5958
@@ -838,10 +846,9 @@ Planstraße 6 -> Teisnacher Str.: Qualität etc?	?::projected 19857,9682 19849,947
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/___tmp/tmp/450810361071832706/1071832706/00108526/26-Anlagen/02/246-2013-1Anlage1XVII-50aaB-PlanBlatt1-2.pdf vvv
 #: osm_watch: way id="290220612" version="1"
 Planstraße 8: Name vielleicht Regener Str.? Qualität?	?::projected 19869,9151 19885,9400 19890,9476
-#: osm_watch: way id="193373966" version="3"
+#: osm_watch: way id="193373966" version="4"
 Straße in Bau: genaue Lage, Name (hier auch die Regener Str.?), Qualität?	?::inwork 19626,9166 19869,9151
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5871 (Straßenname)
-#: osm_watch: way id="287122102" version="2"
 #: XXX PLZ=10318 laut DPAG-Mitteilungsblatt
 Planstraße 9: Name wahrscheinlich Patersdorfer Str.? Qualität etc?	?::projected 19700,9040 19759,9041 19869,9151
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5991 (Straßenname)
@@ -984,9 +991,11 @@ Verbindung zwischen Gleisdreieckpark und Flaschenhalspark: wann wird die Brücke 
 #: XXX evtl. wird Richtung Norden bis zur Yorckstr. verlängert, siehe folgende Drucksache:
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4411
 #: XXX culdesac-Einträge entfernen, wenn die Verlängerung erfolgt ist
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150119.0945.400904.html (Fertigstellung ist im Herbst 2015 geplant)
+#: XXX es wird noch einen parallelen Weg zwischen Monumentenstr. und Kolonnenstr. auf der Hangoberkante geben
 #: last_checked: 2014-12-14
-#: next_check: 2015-06-28
-Radweg Berlin-Leipzig, Abschnitt Monumentenstr. - Alfred-Lion-Steg: Realisierung bis 2015	?::projected 8204,9001 8200,8920 7998,8317
+#: next_check: 2015-09-01
+Radweg Berlin-Leipzig, Abschnitt Monumentenstr. - Alfred-Lion-Steg: Realisierung bis Herbst 2015	?::projected 8204,9001 8200,8920 7998,8317
 # 
 #: XXX_osm: fehlt bei osm komplett
 #: last_checked: 2014-12-06 (Straße existiert, asphaltiert, aber eventuell nur provisorisch)
@@ -1190,6 +1199,8 @@ Soldiner Str.: grundhafte Erneuerung, evtl. verschwindet das Kopfsteinpflaster d
 # - Fragen nach Zebrastreifen
 # - Fragen nach genauen Routenverläufen
 # - XXX_prog- und XXX_indoor-Einträge
+# 
+Am Bullengraben: Qualität? Unbeleuchtet?	? -6269,13472 -6197,13504 -6086,13578 -6020,13598 -5949,13600
 # 
 Neubrandenburger Str.: Qualität?	? 17401,18409 17580,18548 17635,18591 17667,18617 17678,18695
 # 
@@ -1412,7 +1423,7 @@ Kunersdorfer Str. (Potsdam): Kann die Heinrich-Mann-Allee in Höhe Kunersdorfer S
 #: osm_watch: way id="186786509" version="3"
 #: XXX culdesac-orig entfernen, sobald die Verlängerung erfolgt ist
 #: last_checked: 2014-02-10
-#: next_check: 2015-01-17
+#: next_check: 2015-04-23
 Südpankeweg, Fortsetzung zur Ida-von-Arnim-Str.: wann wird sie gebaut? Qualität? Beleuchtet?	?::projected 8294,14194 8266,14253 8251,14337
 # 
 # REMOVED (realisiert) --- #: last_checked: 2014-11-26 --- #: next_check: 2014-12-14 --- Fußgängerampel (oder Straßenbahnampel) in Bau	?::inwork 7422,13012
@@ -1506,9 +1517,9 @@ Alt-Karow: evtl. wird hier ein Schutzstreifen Richtung Süden angelegt	? 15726,23
 # REMOVED ("Apfelwege" alle aufgenommen) --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3453 --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3501 --- #: by: http://www.berlin.de/ba-pankow/bvv-online/___tmp/tmp/45081036924327063/924327063/00054997/97-Anlagen/02/Benennungvon20PrivatwegeninderAnlageGravenstei.pdf --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/20re.pdf/file?y=2013 --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/38re.pdf/file?y=2013 (Grundstücksnummerierung) --- #: XXX 13127 Berlin, Ortsteil Französisch Buchholz, fehlen alle in Berlin.coords.data vvv --- #: XXX Benennung von 20 Privatwegen in der Anlage Gravenstein: genaue Lage der Wege? Qualität? Beleuchtet? vvv --- #: last_checked: 2013-08-27 --- #: next_check: 2014-03-27
 # REMOVED --- Im Staudenhof: frühere Adresse, heute "Am alten Markt" (laut DPAG-Mitteilungsblatt 3/2013), ist es für Radfahrer irgendwie relevant?	? -12727,-1416 -12703,-1410
 # 
+#: next_check_id: SONNENALLEE-2014
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to020.asp?TOLFDNR=14709&options=8 (beschlossen durch BVV, Realisierung steht noch aus)
-#: last_checked: 2014-06-06 (zurzeit eine Baustellenampel, wird eine permanente Ampel nach den Bauarbeiten aufgestellt?)
-#: next_check: 2014-12-31
+#: last_checked: 2015-01-17 (zurzeit eine Baustellenampel, wird eine permanente Ampel nach den Bauarbeiten aufgestellt?)
 Sonnenallee/Ziegrastr.: wird hier eine Ampel entstehen?	?::projected 14174,7505
 # 
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to020.asp?TOLFDNR=14708&options=8 (beschlossen durch BVV)
