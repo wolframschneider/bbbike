@@ -133,12 +133,9 @@ use vars qw($VERSION $VERBOSE
 	    $enable_current_postion
 	    $enable_weather_forecast
 	    $enable_flattr_t_link
-	    $enable_facebook_t_link
 	    $enable_twitter_t_link
-	    $enable_google_plusone_t_link
 	    $enable_rss_feed $enable_rss_icon
 	    $gmapsv3
-	    $facebook_page
 	    $enable_google_adsense
 	    $enable_google_adsense_start
 	    $enable_google_adsense_street
@@ -167,7 +164,6 @@ use vars qw($VERSION $VERBOSE
 	   );
 
 $gmap_api_version = 3;
-$facebook_page = 'http://www.facebook.com/BBBikeWorld';
 
 # XXX This may be removed one day
 use vars qw($use_cooked_street_data);
@@ -2475,7 +2471,6 @@ EOF
 
 	sub social_link {
 	    print qq{<span id="social">\n};
-	    print qq{<a href="$facebook_page" target="_new"><img class="logo" width="16" height="16" src="/images/facebook-t.png" alt="" title="}, M("Facebook Fanpage"), qq{"></a>\n} if $enable_facebook_t_link;
 	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="}, M("Folge uns auf twitter.com/BBBikeWorld"), qq{"></a>\n} if $enable_twitter_t_link;
 	    print qq{</span>\n};
 	}
@@ -6375,11 +6370,6 @@ for my $etappe (@out_route) {
 		    my $href = 'http://www.gpsies.com/map.do?url=' . BBBikeCGI::Util::my_escapeHTML($qq2->url(-full=>1, -query=>1));
 		    print qq{<a title="}, M("Route auf GPSies.com hochladen"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com (upload)</a>};
 		}
-		if ($enable_facebook_t_link) {
-		    print qq{<a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt="" title="},
-			M("Facebook Fanpage"), qq{"><img class="logo" src="/images/facebook-like.png" alt="" title="},
-			M("Facebook Fanpage"), qq{"></a>\n};
-		}
 
 		if (0) { # XXX not yet
 		    my $qq2 = CGI->new({});
@@ -8757,7 +8747,6 @@ $rss_icon = qq{<a href="/feed/bbbike-world.xml"><img alt="" class="logo" width="
 my $permalink_text = $is_streets ? "" : qq{ | <a href="#" onclick="togglePermaLinks(); return false;">$permalink_msg</a><span id="permalink_url2" style="display:none"> <a href="$permalink">$permalink</a></span>};
 $permalink_text = "" if $permalink !~ /=/;
 
-my $facebook_title = M("Facebook Fanpage");
 my $donate_title = M("Spende an BBBike.org");
 my $twitter_title = M("Folge uns auf twitter.com/BBBikeWorld");
 my $s_copyright = <<EOF;
@@ -8780,7 +8769,6 @@ $permalink_text
   <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="$donate_title" border="0"></a>
   @{[ $enable_flattr_t_link  ? qq[<a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>] : "" ]}
   @{[ $enable_twitter_t_link  ? qq[<a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="$twitter_title" alt=""></a>] : "" ]}
-  @{[ $enable_facebook_t_link ? qq[<a href="$facebook_page" target="_new"><img class="logo" src="/images/facebook-t.png" alt=""><img class="logo" src="/images/facebook-like.png" alt="" title="$facebook_title"></a>] : "" ]}
   $rss_icon
 </span>
 

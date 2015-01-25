@@ -259,7 +259,6 @@ return {
     "GPX Route mit Waypoints fuer GPS Navigation, bis zu 256 Punkte" => "GPX route with waypoints for GPS navigation, up to 256 points",
     "PDF Ausdruck der Karte und Route"                               => "PDF hand out of map and route",
     "Route auf GPSies.com hochladen"                                 => "upload route to GPSies.com, Tracks for Vagabonds",
-    "Facebook Fanpage"                                               => "Facebook fan page",
     "drucken"                                                        => "print",
     "Spende an BBBike.org"                                           => "Donate to BBBike.org",
     "Folge uns auf twitter.com/BBBikeWorld"                          => "Follow us on twitter.com/BBBikeWorld",
