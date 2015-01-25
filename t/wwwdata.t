@@ -41,6 +41,13 @@ BEGIN {
     }
 }
 
+BEGIN {
+    if ($ENV{BBBIKE_TEST_NO_APACHE}) {
+        print "1..0 # skip no apache\n";
+        exit;
+    }
+}
+
 use Getopt::Long;
 use Image::Info qw(image_info);
 
