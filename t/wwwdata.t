@@ -212,22 +212,30 @@ sub run_test_suite {
 	}
 	$lwp_headers{'If-Modified-Since'} = time2str($last_modified);
 
-	my $t0 = Time::HiRes::time;
 	my $resp;
+	my $got_gzipped;
+	my $dt;
 	if ($ua->isa('Http')) {
 	    local $Http::user_agent = sprintf $ua_http_agent_fmt, $bbbike_version;
+	    my $t0 = Time::HiRes::time;
 	    my %ret = Http::get(url => $url, time => $last_modified);
-	    delete $ret{headers}->{'content-encoding'}; # decompression already done
+	    $dt = Time::HiRes::time - $t0;
+	    $got_gzipped = ($ret{headers}->{'content-encoding'}||'') =~ m{\bgzip\b} ? 1 : 0;
+	    delete $ret{headers}->{'content-encoding'}; # fake for HTTP::Response
 	    $resp = HTTP::Response->new($ret{error}, undef, HTTP::Headers->new(%{ $ret{headers} || {} }), $ret{content});
-	} elsif ($ua->isa('HTTP::Tiny')) {
-	    my $ret = $ua->get($url, { headers => \%lwp_headers });
-	    $resp = HTTP::Response->new($ret->{status}, $ret->{reason}, HTTP::Headers->new(%{ $ret->{headers} || {} }), $ret->{content});
 	} else {
-	    $resp = $ua->get($url, ($do_accept_gzip ? ('Accept-Encoding' => 'gzip') : ()), %lwp_headers);
+	    if ($ua->isa('HTTP::Tiny')) {
+		my $t0 = Time::HiRes::time;
+		my $ret = $ua->get($url, { headers => \%lwp_headers });
+		$dt = Time::HiRes::time - $t0;
+		$resp = HTTP::Response->new($ret->{status}, $ret->{reason}, HTTP::Headers->new(%{ $ret->{headers} || {} }), $ret->{content});
+	    } else {
+		my $t0 = Time::HiRes::time;
+		$resp = $ua->get($url, ($do_accept_gzip ? ('Accept-Encoding' => 'gzip') : ()), %lwp_headers);
+		$dt = Time::HiRes::time - $t0;
+	    }
+	    $got_gzipped = ($resp->header('content-encoding')||'') =~ m{\bgzip\b} ? 1 : 0;
 	}
-	my $dt = Time::HiRes::time - $t0;
-
-	my $got_gzipped = ($resp->header('content-encoding')||'') =~ m{\bgzip\b} ? 1 : 0;
 
 	ok((grep { $resp->code == $_ } @expect_status),
 	   "Expected status code (@expect_status) for GET $url with simulated ua $ua_label " .
@@ -304,12 +312,7 @@ sub run_test_suite {
 	my $runtime = 0;
 	for my $data_def (@data_defs) {
 	    my $file = $data_def->{file};
-	    my($resp, undef, $dt);
-	    {
-		# XXX Temporary - after first reload these tests should pass
-		local $TODO = "Needs a newer and reloaded BBBikeDataDownloadCompat" if $bbbike_version eq '3.16' && $file =~ m{/(strassen|landstrassen|landstrassen2)$};
-		($resp, undef, $dt) = $basic_tests->("$htmldir/$file", simulate_unmodified => 1);
-	    }
+	    my($resp, undef, $dt) = $basic_tests->("$htmldir/$file", simulate_unmodified => 1);
 	    $runtime += $dt;
 	}
 	push @bench_results, "Check all data files (ua=$ua_label, gzip=$do_accept_gzip): " . sprintf '%.6fs', $runtime;
