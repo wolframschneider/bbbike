@@ -2472,7 +2472,7 @@ EOF
 	sub social_link {
 	    print qq{<span id="social">\n};
 	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="}, M("Folge uns auf twitter.com/BBBikeWorld"), qq{"></a>\n} if $enable_twitter_t_link;
-	    print qq{</span>\n};
+	    print qq{</span><!-- social_link -->\n\n};
 	}
 
 	print qq{<span id="mobile_link">\n};
@@ -2500,7 +2500,7 @@ EOF
 	    print qq{<a style="font-size:small" title="}, M("Karte nach links schieben"), qq{" href="javascript:smallerMap(-1.5)">&lt;&lt;</a>\n} if $enable_move_map;
 
         }
-	print qq{</span>\n};
+	print qq{</span> <!-- mobile_link -->\n};
 
          print "<p>\n", M("Willkommen beim Radroutenplaner BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
 	    " <i title='$city'>$local_city_name</i> ",  
@@ -3163,8 +3163,8 @@ function " . $type . "char_init() {}
     print "</td></tr></table>\n" if $bi->{'can_table'};
 
     print &span_debug;
-    print "</div> <!-- search_head -->\n";
-    print "</div> <!-- search -->\n\n";
+    print "    </div> <!-- search_head -->\n";
+    print "  </div> <!-- search -->\n\n";
     print "</div> <!-- sidebar -->\n";
 	
 
@@ -3332,13 +3332,13 @@ qq{<a rel="nofollow" href="/$l$bbbike_local_script" title="switch map language t
       qq{| <a href="$bbbike_local_script" title="switch map language to },
       M($local_lang), qq{">local</a>\n}
       if $selected_lang;
-    print qq{</span>\n};
+    print qq{</span> <!-- language_switch -->\n\n};
 
     return;
 }
 
 sub headline {
-   print qq{<span id="headline">$headline</span>\n};
+   print qq{<span id="headline">$headline</span> <!-- headline -->\n\n};
    return;
 }
 
@@ -5916,6 +5916,7 @@ EOF
 	}
 
 	print &sidebar_disabled;
+
 	print qq{<div id="route_table">\n};
 	print "<center>" unless $printmode;
 	print qq{<table id="routehead" bgcolor="#ffcc66"};
@@ -6336,7 +6337,7 @@ for my $etappe (@out_route) {
 #			# with Roxen there are mysterious overflow redirects...
 #			$href .= "/route.pdb";
 #		    }
-		    print qq{<a style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">PalmDoc</a>};
+		    print qq{<a style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">PalmDoc</a>};
 		}
 	        print qq{\n<span><a class="mobile_link" target="" onclick='javascript:pdfLink();' href='#' title="}, M("PDF Ausdruck der Karte und Route"), qq{">PDF</a></span>\n};
 		if ($can_gpx) {
@@ -6344,13 +6345,13 @@ for my $etappe (@out_route) {
 		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-route");
 			my $href = $bbbike_script;
-			print qq{<a class="mobile_link" title="}, M("GPX Route mit Waypoints fuer GPS Navigation, bis zu 256 Punkte"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Route)</a>};
+			print qq{<a class="mobile_link" title="}, M("GPX Route mit Waypoints fuer GPS Navigation, bis zu 256 Punkte"), qq{" style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Route)</a>};
 		    }
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
 			$qq2->param('output_as', "gpx-track");
 			my $href = $bbbike_script;
-			print qq{<a class="mobile_link" title="}, M("GPX mit bis zu 1024 Punkten, keine Navigation"), qq{"padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Track)</a>};
+			print qq{<a class="mobile_link" title="}, M("GPX mit bis zu 1024 Punkten, keine Navigation"), qq{" style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Track)</a>};
 		    }
 		}
 		if ($can_kml) {
@@ -6358,7 +6359,7 @@ for my $etappe (@out_route) {
 		    $qq2->param('output_as', "kml-track");
 
 		    my $href = $bbbike_script;
-		    print qq{<a class="mobile_link" title="}, M("Route auf Google Earth anschauen"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href?} . $qq2->query_string . qq{">Google Earth (KML)</a>};
+		    print qq{<a class="mobile_link" title="}, M("Route auf Google Earth anschauen"), qq{" style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">Google Earth (KML)</a>};
 		}
 		if ($can_gpsies_link) {
 		    my $qq2 = cgi_utf8($use_utf8);
@@ -8625,11 +8626,10 @@ sub header {
         my $query_string = cgi_utf8($use_utf8)->query_string;
 	$query_string = '?' . $query_string if $query_string;
 
-	print qq{<div id="sidebar_dummy" style="display:none"></div>\n};
+	print qq{\n<div id="sidebar_dummy" style="display:none"></div>\n\n};
 	print qq{<div id="sidebar">\n};
-	
-	print qq{<div id="search">\n};
-	print qq{<div id="top_right">};
+	print qq{  <div id="search">\n};
+	print qq{    <div id="top_right">\n};
         if ($enable_current_weather) {
 	    #print qq{\n<span id="current_weather"> </span>\n};
 	}
@@ -8669,7 +8669,7 @@ EOF
 	    &language_switch($bbbike_local_script_url);
 	}
 	
-	print qq{</div>\n};
+	print qq{</div> <!-- top_right -->\n\n};
 	
         if (&is_resultpage($q) || !&is_startpage($q)) {
 	    &headline;
@@ -8770,7 +8770,7 @@ $permalink_text
   @{[ $enable_flattr_t_link  ? qq[<a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>] : "" ]}
   @{[ $enable_twitter_t_link  ? qq[<a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="$twitter_title" alt=""></a>] : "" ]}
   $rss_icon
-</span>
+</span> <!-- footer_community -->
 
 </div> <!-- footer_top -->
 
@@ -8822,7 +8822,7 @@ EOF
 	$s .= "</font>\n";
     }
 
-    $s .= qq{\n<span class="real_time" city="$city_script heap:$StrassenNetz::use_heap, length: $route_length km" style="} . 
+    $s .= qq{\n<span class="real_time" title="$city_script heap:$StrassenNetz::use_heap, length: $route_length km" style="} . 
 	    ($show_real_time ? "" : 'display:none') . qq{">cycle route calculated in $real_time seconds</span>\n};
     $s;
 }
