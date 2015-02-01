@@ -5916,7 +5916,10 @@ EOF
 	}
 
 	print &sidebar_disabled;
+	print "</div> <!-- search? -->\n";
+	print "</div> <!-- sidebar? -->\n";
 
+	print qq{<div id="results">\n};
 	print qq{<div id="route_table">\n};
 	print "<center>" unless $printmode;
 	print qq{<table id="routehead" bgcolor="#ffcc66"};
@@ -6926,6 +6929,7 @@ EOF
     }
 
     footer();
+    print qq{</div> <!-- results -->\n};
 
   END_OF_HTML:
     print $q->end_html;
@@ -8673,7 +8677,7 @@ EOF
 	
         if (&is_resultpage($q) || !&is_startpage($q)) {
 	    &headline;
-	    print "<p/>\n";
+	    print "<p></p>\n";
 	}
 
 	#&adsense_linkblock if &is_production($q) && !is_mobile($q);
