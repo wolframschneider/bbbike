@@ -2496,7 +2496,7 @@ EOF
 
 	    print "&nbsp;" x 10;
 	    print qq{<a style="font-size:small" title="}, M("Karte nach rechts schieben"), qq{" href="javascript:smallerMap(1.5)">&gt;&gt;</a>\n} if $enable_move_map;
-	    print qq{<img onclick='javascript:displayCurrentPosition([[8.03000,48.73000], [8.81000,49.27000]], "de");' src="/images/location-icon.png">\n};
+	    print qq{<img onclick='javascript:displayCurrentPosition([[8.03000,48.73000], [8.81000,49.27000]], "de");' alt="location" src="/images/location-icon.png">\n};
 	    print qq{<a style="font-size:small" title="}, M("Karte nach links schieben"), qq{" href="javascript:smallerMap(-1.5)">&lt;&lt;</a>\n} if $enable_move_map;
 
         }
@@ -8785,7 +8785,7 @@ Map data (&copy;) <a href="http://www.openstreetmap.org/copyright">OpenStreetMap
 <a href="/help.html#windowsphone">windows phone</a> -
 <a href="/tools.html">desktop</a> -
 <a href="http://mc.bbbike.org/mc/">map compare</a> -
-<a href="http://extract.bbbike.org/">osm extract service</a><br/>
+<a href="http://extract.bbbike.org/">osm extract service</a><br>
 
 </div> <!-- copyright -->
 
