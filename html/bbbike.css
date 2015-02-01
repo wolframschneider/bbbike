@@ -261,7 +261,7 @@ div#sidebar_dummy {
 }
 
 /* inside sidebar */
-div#routes, div#formats, div#search {
+div#routes, div#formats, div#search, div#results {
 	margin: 0.5em;
 }
 
