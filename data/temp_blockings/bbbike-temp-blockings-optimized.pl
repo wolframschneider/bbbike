@@ -723,7 +723,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Januar von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Februar von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -1394,10 +1394,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
          'text' => 'Sterndamm: Eisenbahnunterführung voraussichtlich bis zum 28.02.2015 in Richtung Groß-Berliner Damm/Südostallee gesperrt',
          'from' => 1417820400,
          'id' => 2469,
-         'data' => '#: XXX bleibt der Sterndamm auch über dem 28. Februar hinaus gesperrt?
-#: XXX laut rbbtext und fritz bis 28.2.
-#: next_check: 2015-02-28
-userdel	1::inwork 17886,5587 17736,5441
+         'data' => 'userdel	1::inwork 17886,5587 17736,5441
 ',
          'type' => 'gesperrt'
        },
@@ -1643,16 +1640,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
        undef,
        undef,
        undef,
-       {
-         'source_id' => '146600440',
-         'until' => 1422745199,
-         'text' => 'Lauchhammer: L60: Sanierungsarbeiten Schipkau - Lauchhammer ab 25.08.2014 Vollsperrung, bis 31.01.2015',
-         'from' => 1408996606,
-         'id' => 2600,
-         'data' => 'userdel	2::inwork 45536,-99326 45006,-99332
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1895,6 +1883,18 @@ userdel	q4::inwork; 5866,10492 5780,10542 5627,10637
          'data' => '#: by: user per phone
 #: XXX vor Ort anschauen! Gibt es ein Endedatum?
 userdel	2::inwork 7772,4306 7795,4242 8106,3410
+',
+         'type' => 'gesperrt'
+       },
+       undef,
+       {
+         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
+         'until' => 1443650400,
+         'text' => 'Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015',
+         'from' => 1422745200,
+         'id' => 2677,
+         'data' => '#: XXX vor Ort anschauen! ggfs. nach gesperrt-orig übetragen
+	2::inwork 7753,14528 7695,14545 7527,14644 7486,14652
 ',
          'type' => 'gesperrt'
        }

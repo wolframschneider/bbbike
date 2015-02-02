@@ -10609,7 +10609,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_007201',
        data  => <<EOF,
-userdel	2::inwork 16286,6946 16323,6998
+userdel	2::inwork 16286,6946 16328,7005
 EOF
      },
      { from  => 1195308150, # 2007-11-17 15:02
@@ -14861,7 +14861,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_013579',
        data  => <<EOF,
-userdel	2::inwork 16286,6946 16323,6998
+userdel	2::inwork 16286,6946 16328,7005
 EOF
      },
      { from  => 1247255953, # 2009-07-10 21:59
@@ -17088,7 +17088,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_014707',
        data  => <<EOF,
-userdel	2::inwork 16286,6946 16323,6998
+userdel	2::inwork 16286,6946 16328,7005
 EOF
      },
      { from  => 1259622000, # 2009-12-01 00:00
@@ -21830,9 +21830,6 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_020145',
        data  => <<EOF,
-#: XXX bleibt der Sterndamm auch über dem 28. Februar hinaus gesperrt?
-#: XXX laut rbbtext und fritz bis 28.2.
-#: next_check: 2015-02-28
 userdel	1::inwork 17886,5587 17736,5441
 EOF
      },
@@ -23854,6 +23851,16 @@ userdel auto	3 8124,12840 8120,12756 8122,12603
 userdel auto	3 8207,12606 8206,12757 8204,12816
 userdel auto	3 8204,12816 8206,12757 8207,12606
 userdel auto	3 8122,12603 8120,12756 8124,12840
+EOF
+     },
+     { from  => $isodate2epoch->("2015-02-01 00:00:00"),
+       until => $isodate2epoch->("2015-10-01 00:00:00"),
+       text  => 'Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
+       data  => <<EOF,
+#: XXX vor Ort anschauen! ggfs. nach gesperrt-orig übetragen
+	2::inwork 7753,14528 7695,14545 7527,14644 7486,14652
 EOF
      },
     );
