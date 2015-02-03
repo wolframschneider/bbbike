@@ -79,6 +79,7 @@ html/devbridge-jquery-autocomplete-1.1.2
 html/elevation.js
 html/extract-center.css
 html/extract.css
+html/extract-download.css
 html/extract.js
 html/help-16px.png
 html/indicator.gif
@@ -209,6 +210,7 @@ cgi/msg/pl
 cgi/msg/pt
 cgi/msg/ru
 cgi/msg/zh
+cgi/download.cgi
 .bbbike-extract-pro.rc
 .bbbike-extract.rc
 world/etc/lighttpd/test-more.conf
