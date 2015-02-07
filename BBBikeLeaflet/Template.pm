@@ -28,6 +28,7 @@ sub new {
     my $leaflet_ver              = delete $args{leaflet_ver};
     my $enable_upload            = delete $args{enable_upload};
     my $enable_accel             = delete $args{enable_accel};
+    my $disable_routing          = delete $args{disable_routing};
     my $use_osm_de_map           = delete $args{use_osm_de_map};
     my $coords                   = delete $args{coords};
     my $show_expired_session_msg = delete $args{show_expired_session_msg};
@@ -35,6 +36,7 @@ sub new {
     my $geojsonp_url             = delete $args{geojsonp_url};
     my $show_feature_list        = delete $args{show_feature_list};
     my $root_url                 = delete $args{root_url};
+    my $title_html               = delete $args{title_html};
 
     die 'Unhandled arguments: ' . join(', ', keys %args) if %args;
 
@@ -48,6 +50,7 @@ sub new {
 	   leaflet_ver              => $leaflet_ver,
 	   enable_upload            => $enable_upload,
 	   enable_accel             => $enable_accel,
+	   disable_routing          => $disable_routing,
 	   use_osm_de_map           => $use_osm_de_map,
 	   coords                   => $coords,
 	   show_expired_session_msg => $show_expired_session_msg,
@@ -55,6 +58,7 @@ sub new {
 	   geojsonp_url             => $geojsonp_url,
 	   show_feature_list        => $show_feature_list,
 	   root_url                 => $root_url,
+	   title_html               => $title_html,
 	  }, $class;
 }
 
@@ -64,6 +68,7 @@ sub process {
     my $htmlfile                 = $self->{htmldir} . '/bbbikeleaflet.html';
     my $enable_upload            = $self->{enable_upload};
     my $enable_accel             = $self->{enable_accel};
+    my $disable_routing          = $self->{disable_routing};
     my $leaflet_ver              = $self->{leaflet_ver};
     my $use_osm_de_map           = $self->{use_osm_de_map};
     my $coords                   = $self->{coords};
@@ -72,6 +77,7 @@ sub process {
     my $geojsonp_url             = $self->{geojsonp_url};
     my $show_feature_list        = $self->{show_feature_list};
     my $root_url                 = $self->{root_url};
+    my $title_html               = $self->{title_html};
 
     my $use_old_url_layout = $self->{use_old_url_layout};
     my($bbbike_htmlurl, $bbbike_imagesurl);
@@ -135,6 +141,10 @@ sub process {
 	    s{/leaflet-\d+\.\d+\.\d+/}{/leaflet-$leaflet_ver/};
 	}
 
+	if (defined $title_html && m{<title>.*?</title>}) {
+	    s{(<title>).*?(</title>)}{$1$title_html$2};
+	}
+
 	if (m{\Q<!-- INSERT JSONP HERE -->}) {
 	    if ($geojsonp_url) {
 		print qq{<script>function geoJsonResponse(geoJson) { initialGeojson = geoJson }</script>\n};
@@ -173,6 +183,7 @@ sub process {
 	    print $ofh "enable_accel   = " . ($enable_accel   ? 'true' : 'false') . ";\n";
 	    print $ofh "use_osm_de_map = " . ($use_osm_de_map ? 'true' : 'false') . ";\n";
 	    print $ofh "show_feature_list = " . ($show_feature_list ? 'true' : 'false') . ";\n";
+	    print $ofh "disable_routing = " . ($disable_routing ? 'true' : 'false') . ";\n";
 	}
     }
 }
