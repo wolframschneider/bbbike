@@ -270,7 +270,8 @@ Siegfried-Aufhäuser-Platz	1 13952,7497 13941,7522 13953,7548 13980,7548
 Saltykowstr.	1 12726,7887 12865,7923
 (Drorystr. - Braunschweiger Str., Schulhof)	2 13518,7477 13601,7366
 Barbarastr.	1s 6456,3038 6372,2959 6329,2916 6359,2875 6372,2856
-Leipziger Platz	1 8596,11508 8599,11474 8639,11441 8713,11448 8743,11489 8740,11524 8736,11557 8698,11589 8623,11580 8592,11541 8596,11508
+Leipziger Platz	1 8596,11508 8599,11474 8639,11441 8713,11448 8743,11489 8740,11524
+Leipziger Platz	1 8596,11508 8592,11541 8623,11580 8698,11589 8736,11557 8740,11524
 Crusemarkstr.	1 10825,18634 10712,18975
 Kavalierstr.	1 10625,18831 10721,18575
 Kattegatstr.	1 9323,17667 9475,17557
@@ -1138,11 +1139,11 @@ Straßenbahnhaltestelle	3nocross::ignrte 9225,13389 9293,13366 9415,13315
 Oranienburger Str. -> Linienstr.: Straßenbahnhaltestelle	3::igndisp 9225,13389 9293,13366 9312,13388
 Linienstr. -> Oranienburger Str.: Straßenbahnhaltestelle	3::igndisp 9312,13388 9293,13366 9415,13315
 Brauhausstr. -> Prenzlauer Promenade: Straßenbahntrasse	3 12211,16688 12017,16734 12045,16574
-Mittelstreifen	3nocross::ignrte 16720,6845 16677,6892 16568,7009
+Mittelstreifen	3nocross::ignrte 16720,6845 16677,6892 16646,6925 16563,7012
 Köpenicker Landstr. -> Güldenhofer Ufer: Mittelstreifen	3::igndisp 16720,6845 16677,6892 16630,6800
-Güldenhofer Ufer -> Köpenicker Landstr.: Mittelstreifen	3::igndisp 16630,6800 16677,6892 16568,7009
-Mittelstreifen	3nocross::ignrte 17290,6228 17216,6308 16843,6712
-Rixdorfer Str. -> Schnellerstr.: Mittelstreifen	3::igndisp 17160,6239 17216,6308 16843,6712
+Güldenhofer Ufer -> Köpenicker Landstr.: Mittelstreifen	3::igndisp 16630,6800 16677,6892 16646,6925
+Mittelstreifen	3nocross::ignrte 17290,6228 17216,6308 16886,6665 16843,6712
+Rixdorfer Str. -> Schnellerstr.: Mittelstreifen	3::igndisp 17160,6239 17216,6308 16886,6665
 Schnellerstr. -> Rixdorfer Str.: Mittelstreifen	3::igndisp 17290,6228 17216,6308 17160,6239
 Straßenbahntrasse	3nocross::ignrte 23895,15450 23913,15333 23933,15209 23952,15086
 Stendaler Str. -> Jerichower Str.: Straßenbahntrasse	3::igndisp 23895,15450 23913,15333 23960,15340
@@ -2353,6 +2354,8 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
 tragen (31 Stufen oder Kinderwagenrampe)	0:40:-256 13168,21706
+enges Drängelgitter	BNP:5:0:trailer=no 17295,7323
+Drängelgitter	BNP:3:66:trailer=no -6276,13469
 Schranke, eventuell auf Gehweg umfahren	BNP:3:-131:trailer=5 -1291,12098
 Schranke, eventuell auf Gehweg umfahren	BNP:3:-169:trailer=5 -1390,11880
 Schranke, eventuell auf Gehweg umfahren	BNP:3:56:trailer=5 -480,12428
@@ -2775,7 +2778,6 @@ Niederlagstr.: Bauarbeiten, Straßen vollständig gesperrt	2::inwork 9994,12368 99
 Grenzallee: komplette Sperrung wegen Bau des Autobahntunnels	2::inwork 14257,6895 14153,6795
 Wilhelm-Hoff-Str.: asphaltierter Weg noch abgesperrt	2::inwork 19033,3397 19057,3422
 Große Hamburger Str.: Einbahnstraße wegen Bauarbeiten	1s 10077,13100 10018,13299
-(Antonplatz - Bizetstr.): Bauarbeiten, gesperrt	2::inwork 13487,15888 13525,15784
 tragen (2 Stufen)	0:5:57 8818,13365
 Promenade am Teltowkanal: während der Bauarbeiten an der Emil-Schulz-Brücke gesperrt	2:inwork 4261,2703 4258,2693 4247,2652 4202,2622 4193,2616
 wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::ignrte 9984,12426 9934,12420 9858,12410

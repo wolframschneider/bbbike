@@ -1,7 +1,7 @@
 # -*- perl -*-
 
 #
-# Copyright (c) 1995-2003,2012,2014 Slaven Rezic. All rights reserved.
+# Copyright (c) 1995-2003,2012,2014,2015 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -26,7 +26,7 @@ use vars qw(@datadirs $OLD_AGREP $VERBOSE $STRICT $VERSION $can_strassen_storabl
 use enum qw(NAME COORDS CAT);
 use constant LAST => CAT;
 
-$VERSION = '1.97';
+$VERSION = '1.98';
 
 if (defined $ENV{BBBIKE_DATADIR}) {
     require Config;
@@ -75,7 +75,6 @@ sub AUTOLOAD {
 #   PreserveComments (currently broken, do not use)
 #   UseLocalDirectives
 #   CustomPush (only for MapInfo)
-#   Strict
 sub new {
     my($class, $filename, %args) = @_;
     if (defined $filename) {
@@ -169,6 +168,7 @@ sub new_bbd {
     my $self = { Data => [],
 		 Directives => [],
 		 GlobalDirectives => {},
+		 (exists $args{Strict} ? (Strict => delete $args{Strict}) : ()),
 	       };
     bless $self, $class;
 
@@ -207,7 +207,6 @@ sub new_bbd {
 	    $self->read_data(PreserveLineInfo   => $args{PreserveLineInfo},
 			     UseLocalDirectives => $args{UseLocalDirectives},
 			     PreserveComments   => $args{PreserveComments},
-			     Strict             => $args{Strict},
 			    );
 	}
     }
@@ -223,9 +222,15 @@ sub new_stream {
     $class->new($filename, %args);
 }
 
+sub new_data_string_stream {
+    my($class, $data_string, %args) = @_;
+    $args{NoRead} = 1;
+    $class->new_from_data_string($data_string, %args);
+}
+
 sub read_stream {
     my($self, $callback, %args) = @_;
-    my $fh = $self->open_file(%args);
+    my $fh = $self->{Fh} || $self->open_file(%args);
     $args{Callback} = $callback;
     $args{UseLocalDirectives} = 1 if !exists $args{UseLocalDirectives};
     $self->read_from_fh($fh, %args);
@@ -293,6 +298,8 @@ sub read_from_fh {
     my $preserve_line_info = $args{PreserveLineInfo} || 0;
     my $preserve_comments  = $args{PreserveComments} || 0;
     my @errors;
+
+    local $STRICT = exists $self->{Strict} ? $self->{Strict} : $STRICT;
 
     local $_;
     while (<$fh>) {
@@ -443,7 +450,10 @@ sub new_from_data_ref {
 ### AutoLoad Sub
 sub new_from_data_string {
     my($class, $string, %args) = @_;
-    my $self = { Pos => -1 };
+    my $self = {
+		Pos => -1,
+		(exists $args{Strict} ? (Strict => delete $args{Strict}) : ()),
+	       };
     bless $self, $class;
     my $fh;
     if ($] >= 5.008) {
@@ -459,7 +469,11 @@ sub new_from_data_string {
 	require IO::String; # XXX add as prereq_pm for <5.008
 	$fh = IO::String->new($string);
     }
-    $self->read_from_fh($fh, %args);
+    if ($args{NoRead}) {
+	$self->{Fh} = $fh;
+    } else {
+	$self->read_from_fh($fh, %args);
+    }
     $self;
 }
 
@@ -499,6 +513,21 @@ sub new_copy_restricted {
 
     $res;
 }
+
+sub syntax_check_on_file {
+    my($class, $file, %args) = @_;
+    my $ret = eval { $class->new_stream($file, %args, Strict => 1)->read_stream(sub {}); 1 };
+    $ret;
+}
+
+sub syntax_check_on_data_string {
+    my($class, $data_string, %args) = @_;
+    my $ret = eval { $class->new_data_string_stream($data_string, %args, Strict => 1)->read_stream(sub {}); 1 };
+    $ret;
+}
+
+######################################################################
+# METHODS and FUNCTIONS
 
 # Erzeugt aus dem Objekt eine Hash-Referenz mit erster Koordinate als Key
 # und dem Namen als Value. Ist nur für ein-Punkt-Daten geeignet.
@@ -1634,6 +1663,70 @@ See L</SYNOPSIS>.
 
 Also see the comments in the source code.
 
+=head2 CONSTRUCTORS
+
+(incomplete)
+
+=over
+
+=item new_stream($file, Strict => I<bool>)
+
+Create a new C<Strassen> object from the given file F<$file>. If
+Strict is enabled, then processsing this file later with
+L</read_stream> will cause fatal errors on invalid bbd data.
+
+=item new_data_string_stream($data_string, Strict => I<bool>)
+
+Create a new C<Strassen> object from the given string F<$data_string>.
+Please note that this string must always be in octets, not characters,
+even if utf8 encoding is used --- the encoding is only specified by
+the global directive C<#:encoding>. In Strict mode invalid bbd data
+will cause fatal errors in later processing.
+
+=back
+
+=head2 CLASS METHODS
+
+(incomplete)
+
+=over
+
+=item syntax_check_on_file($file)
+
+Do a syntax check on a bbd file and return a boolean result.
+
+=item syntax_check_on_data_string($data_string)
+
+Do a syntax check on a bbd data string and return a boolean result.
+
+=back
+
+=head2 METHODS
+
+(incomplete)
+
+=over
+
+=item read_stream($callback, %args)
+
+Read a previously opened stream (see L</new_stream> and
+L</new_data_string_stream>) and call the given I<$callback> for every
+bbd record. The callback will get the following arguments:
+
+=over
+
+=item * The bbd record arrayref with C<NAME>, C<CAT>, and C<COORDS> fields.
+
+=item * A hash with currently active local directives
+
+=item * The line number in the bbd file or data string.
+
+=back
+
+=back
+
 =head1 SEE ALSO
 
 L<BBBikeRouting>, L<bbd>.
+
+=cut

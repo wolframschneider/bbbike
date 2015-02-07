@@ -10609,7 +10609,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_007201',
        data  => <<EOF,
-userdel	2::inwork 16286,6946 16323,6998
+userdel	2::inwork 16286,6946 16328,7005
 EOF
      },
      { from  => 1195308150, # 2007-11-17 15:02
@@ -14861,7 +14861,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_013579',
        data  => <<EOF,
-userdel	2::inwork 16286,6946 16323,6998
+userdel	2::inwork 16286,6946 16328,7005
 EOF
      },
      { from  => 1247255953, # 2009-07-10 21:59
@@ -17088,7 +17088,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_014707',
        data  => <<EOF,
-userdel	2::inwork 16286,6946 16323,6998
+userdel	2::inwork 16286,6946 16328,7005
 EOF
      },
      { from  => 1259622000, # 2009-12-01 00:00
@@ -21825,13 +21825,11 @@ userdel	2::temp 5047,10381 5076,10658
 EOF
      },
      { from  => $isodate2epoch->("2014-12-06 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-01-30 23:59:59"),
-       text  => 'Sterndamm: Eisenbahnunterführung bis zum 30.01.2015 in Richtung Groß-Berliner Damm/Südostallee gesperrt',
+       until => $isodate2epoch->("2015-02-28 23:59:59"),
+       text  => 'Sterndamm: Eisenbahnunterführung voraussichtlich bis zum 28.02.2015 in Richtung Groß-Berliner Damm/Südostallee gesperrt',
        type  => 'gesperrt',
        source_id => 'IM_020145',
        data  => <<EOF,
-#: XXX bleibt der Sterndamm auch über dem 30. Januar hinaus gesperrt?
-#: next_check: 2015-01-30
 userdel	1::inwork 17886,5587 17736,5441
 EOF
      },
@@ -22687,7 +22685,7 @@ EOF
        source_id => 'http://www.deutsches-architektur-forum.de/forum/showthread.php?t=11143&page=4',
        data  => <<EOF,
 #: XXX wann ist die Baustelle fertig?
-#: last_checked: 2015-01-16
+#: last_checked: 2015-01-27
 #: check_frequency: 60d
 userdel	q3::inwork; 13555,15596 13459,15653
 EOF
@@ -23394,15 +23392,16 @@ userdel	q4::inwork 26302,5932 26080,5946 25579,5958
 EOF
      },
      { from  => 1411941600, # 2014-09-29 00:00
-       until => $isodate2epoch->("2015-01-31 00:00:00"), # 1420066799, # 2014-12-31 23:59
-       text  => 'Gounodstr.: Bauarbeiten zwischen von Herbert-Baum-Str. bis Borodinstr., ab Ende September 2014',
+       until => $isodate2epoch->("2015-02-07 00:00:00"), # 1420066799, # 2014-12-31 23:59
+       text  => 'Gounodstr./Mahlerstr.: Bauarbeiten, auf Gehweg ausweichen',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20140917.1035.399288.html',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/gounodstrasse.php
-#: last_checked: 2015-01-16
-#: check_frequency: 7d
-userdel	q4::inwork 13645,15609 13739,15643 13939,15723
+#: last_checked: 2015-01-27
+#: check_frequency: 10d
+userdel	q4::inwork 13645,15609 13739,15643
+userdel	q3::inwork 13739,15643 13776,15546
 EOF
      },
      { from  => 1411250400, # 2014-09-21 00:00
@@ -23560,14 +23559,11 @@ userdel	2::inwork 1232,15804 1238,15705
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1422208778, # undef, # XXX
        text  => 'Torgauer Str.: in Höhe Cheruskerpark wegen Bauarbeiten gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: TORGAUER-2014
-#: by: wosch
-#: confirmed_by: srt
-#: last_checked: 2014-12-14
+# REMOVED --- #: next_check_id: TORGAUER-2014 --- #: by: wosch --- #: confirmed_by: srt --- #: last_checked: 2014-12-14
 	2::inwork 7402,8208 7374,8211 7250,8223
 	q3::inwork 7402,8208 7446,8200
 EOF
@@ -23752,8 +23748,8 @@ userdel	q4::inwork 20559,14847 20480,14874
 EOF
      },
      { from  => 1416813420, # 2014-11-24 08:17
-       until => $isodate2epoch->("2015-01-26 16:00:00"), # 1418655600, # 2014-12-15 16:00
-       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn gesperrt, 25.11.2014 08:17 Uhr bis 26.01.2015 16:00 Uhr',
+       until => $isodate2epoch->("2015-02-03 16:00:00"), # 1418655600, # 2014-12-15 16:00
+       text  => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn gesperrt, 25.11.2014 08:17 Uhr bis 03.02.2015 16:00 Uhr',
        type  => 'handicap',
        source_id => 'IM_023529',
        data  => <<EOF,
@@ -23784,7 +23780,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage)
-#: last_checked: 2015-01-13
+#: last_checked: 2015-02-03
 userdel	2::inwork 10308,11833 10374,11734
 EOF
      },
@@ -23855,6 +23851,16 @@ userdel auto	3 8124,12840 8120,12756 8122,12603
 userdel auto	3 8207,12606 8206,12757 8204,12816
 userdel auto	3 8204,12816 8206,12757 8207,12606
 userdel auto	3 8122,12603 8120,12756 8124,12840
+EOF
+     },
+     { from  => $isodate2epoch->("2015-02-01 00:00:00"),
+       until => $isodate2epoch->("2015-10-01 00:00:00"),
+       text  => 'Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
+       data  => <<EOF,
+#: XXX vor Ort anschauen! ggfs. nach gesperrt-orig übetragen
+	2::inwork 7753,14528 7695,14545 7527,14644 7486,14652
 EOF
      },
     );

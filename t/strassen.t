@@ -18,7 +18,7 @@ use Getopt::Long;
 
 use Strassen;
 use BBBikeUtil qw(is_in_path);
-use BBBikeTest qw(get_std_opts $do_xxx eq_or_diff);
+use BBBikeTest qw(get_std_opts $do_xxx eq_or_diff create_temporary_content);
 
 BEGIN {
     if (!eval q{
@@ -30,6 +30,8 @@ BEGIN {
 	exit;
     }
 }
+
+sub non_streaming_loop ($);
 
 my $datadir = "$FindBin::RealBin/../data";
 my $doit; # Note that the -doit tests currently fail, because the
@@ -48,8 +50,9 @@ my $encoding_tests = 10;
 my $multistrassen_tests = 11;
 my $initless_tests = 3;
 my $global_directive_tests = 3;
+my $strict_and_syntax_tests = 12;
 
-plan tests => $basic_tests + $doit_tests + $strassen_orig_tests + $zebrastreifen_tests + $zebrastreifen2_tests + $encoding_tests + $multistrassen_tests + $initless_tests + $global_directive_tests;
+plan tests => $basic_tests + $doit_tests + $strassen_orig_tests + $zebrastreifen_tests + $zebrastreifen2_tests + $encoding_tests + $multistrassen_tests + $initless_tests + $global_directive_tests + $strict_and_syntax_tests;
 
 goto XXX if $do_xxx;
 
@@ -357,11 +360,7 @@ EOF
     my $rec = $s->next;
     is($rec->[Strassen::NAME], "\x{20ac}", "Got unicode character");
 
-    my($tmpfh,$tmpfile) = tempfile(SUFFIX => ".bbd",
-				   UNLINK => 1);
-    binmode $tmpfh, ":utf8";
-    print $tmpfh $data or die $!;
-    close $tmpfh or die $!;
+    my($tmpfh,$tmpfile) = create_temporary_content($data, SUFFIX => ".bbd");
 
     my $s2 = Strassen->new($tmpfile);
     my $global_dirs2 = $s2->get_global_directives;
@@ -460,9 +459,7 @@ EOF
     }
 
     {
-	my($tmpfh,$tmpfile) = tempfile(UNLINK => 1);
-	print $tmpfh $data;
-	close $tmpfh or die $!;
+	my($tmpfh,$tmpfile) = create_temporary_content($data);
 	my $s = Strassen->new($tmpfile);
 	my $r = $s->next;
 	is $r->[Strassen::NAME], 'Heinrich-Heine';
@@ -542,6 +539,68 @@ EOF
     $s->set_global_directive('some' => 'thing', 'else');
     is $s->get_global_directive('some'), 'thing', 'after setting multiple values';
     is_deeply $s->get_global_directives, { some => [qw(thing else)] }, 'get_global_directives';
+}
+
+{ # Strict
+    my $gooddata = <<"EOF";
+Street\tX1,2 3,4
+EOF
+    my $baddata = <<"EOF";
+Street\tX1,2 3,4
+Bad line
+EOF
+    my(undef, $goodfile) = create_temporary_content($gooddata, SUFFIX => '.bbd');
+    my(undef, $badfile) = create_temporary_content($baddata, SUFFIX => '.bbd');
+
+    # syntax check is implemented using Strict=>1 behind the scenes
+    ok(Strassen->syntax_check_on_file($goodfile), 'no syntax errors for good file');
+    ok(Strassen->syntax_check_on_data_string($gooddata), 'no syntax errors for good data string');
+
+    {
+	local $Strassen::STRICT = 1;
+
+	my $s;
+
+	$s = Strassen->new($goodfile);
+	non_streaming_loop $s;
+	pass 'strict check with global var (file, non-streaming, good data)';
+
+	$s = Strassen->new_from_data_string($gooddata);
+	non_streaming_loop $s;
+	pass 'strict check with global var (data, non-streaming, good data)';
+
+	$s = Strassen->new($badfile);
+	eval { non_streaming_loop $s };
+	like $@, qr{ERROR: Probably tab character is missing}, 'strict check with global var (file, non-streaming)';
+
+	$s = Strassen->new_from_data_string($baddata);
+	eval { non_streaming_loop $s };
+	like $@, qr{ERROR: Probably tab character is missing}, 'strict check with global var (data string, non-streaming)';
+
+	eval { Strassen->new_stream($badfile)->read_stream(sub {}) };
+	like $@, qr{ERROR: Probably tab character is missing}, 'strict check with global var (file)';
+
+	eval { Strassen->new_data_string_stream($baddata)->read_stream(sub {}) };
+	like $@, qr{ERROR: Probably tab character is missing}, 'strict check with global var (data string)';
+    }
+
+    # note: no Strict => 1 for non-streaming variants implemented
+    eval { Strassen->new_stream($badfile, Strict => 1)->read_stream(sub {}) };
+    like $@, qr{ERROR: Probably tab character is missing}, 'strict check with option (file)';
+    eval { Strassen->new_data_string_stream($baddata, Strict => 1)->read_stream(sub {}) };
+    like $@, qr{ERROR: Probably tab character is missing}, 'strict check with option (data string)';
+
+    ok !Strassen->syntax_check_on_file($badfile);
+    ok !Strassen->syntax_check_on_data_string($baddata);
+}
+
+sub non_streaming_loop ($) {
+    my $s = shift;
+    $s->init;
+    while() {
+	my $r = $s->next;
+	last if !@{ $r->[Strassen::COORDS] || [] };
+    }
 }
 
 __END__

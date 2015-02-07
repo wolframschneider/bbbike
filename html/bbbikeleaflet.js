@@ -73,7 +73,33 @@ var loadingIcon = L.icon({
     iconAnchor: new L.Point(0,0)
 });
 
+var nightIcon = L.icon({
+    iconUrl: bbbikeImagesRoot + "/night.png",
+    shadowUrl: bbbikeImagesRoot + "/px_1t.gif",
+    iconSize: new L.Point(12,14),
+    shadowSize: new L.Point(1,1),
+    iconAnchor: new L.Point(6,7)
+});
+
+var clockIcon = L.icon({
+    iconUrl: bbbikeImagesRoot + "/clock.png",
+    shadowUrl: bbbikeImagesRoot + "/px_1t.gif",
+    iconSize: new L.Point(13,13),
+    shadowSize: new L.Point(1,1),
+    iconAnchor: new L.Point(6,6)
+});
+
+var inworkIcon = L.icon({
+    iconUrl: bbbikeImagesRoot + "/inwork_12.png",
+    shadowUrl: bbbikeImagesRoot + "/px_1t.gif",
+    iconSize: new L.Point(12,11),
+    shadowSize: new L.Point(1,1),
+    iconAnchor: new L.Point(6,6)
+});
+
 var startMarker, goalMarker, loadingMarker;
+
+var id2marker;
 
 // globals
 var routeLayer;
@@ -83,6 +109,7 @@ var map;
 var routelistPopup;
 
 var defaultLatLng = [52.516224, 13.377463]; // Brandenburger Tor, good for Berlin
+var defaultZoom = 13;
 
 var devel_tile_letter = 'a'; // or 'z' or 'y'
 
@@ -253,7 +280,7 @@ function doLeaflet() {
     map = new L.Map('map',
 		    {
 			zoomAnimation:false, fadeAnimation:false, // animations may be super-slow, seen on mosor/firefox9
-			doubleClickZoom:false, // used for setting start/goal, see below for click/dblclick event
+			doubleClickZoom:disable_routing, // used for setting start/goal, see below for click/dblclick event
 			layers: [bbbikeTileLayer]
 		    }
 		   );
@@ -447,47 +474,131 @@ function doLeaflet() {
 	}
     }
 
-    map.on(//'click', //XXX has bugs, may fire on simple zooming
-        'dblclick', function(e) {
-	    if (searchState == "start") {
-		startLatLng = e.latlng;
+    if (!disable_routing) {
+	map.on(
+            'dblclick', function(e) {
+		if (searchState == "start") {
+		    startLatLng = e.latlng;
 
-		if (goalMarker) {
-		    map.removeLayer(goalMarker);
+		    if (goalMarker) {
+			map.removeLayer(goalMarker);
+		    }
+		    setStartMarker(startLatLng);
+
+		    searchState = 'goal';
+		} else if (searchState == "goal") {
+		    setGoalMarker(e.latlng);
+
+		    searchRoute(startLatLng, e.latlng);
+		} else if (searchState == "searching") {
+		    // nop
 		}
-		setStartMarker(startLatLng);
+	    });
+    }
 
-		searchState = 'goal';
-	    } else if (searchState == "goal") {
-		setGoalMarker(e.latlng);
+    var setViewLatLng;
+    var setViewZoom;
+    var setViewLayer;
 
-		searchRoute(startLatLng, e.latlng);
-	    } else if (searchState == "searching") {
-		// nop
-	    }
-	});
+    id2marker = {};
 
-    var zoom = q.get("zoom");
-    if (!zoom) { zoom = 13 }
     if (initialRouteGeojson) {
 	showRoute(initialRouteGeojson);
-	map.setView(L.GeoJSON.coordsToLatLng(initialRouteGeojson.geometry.coordinates[0]), zoom);
+	setViewLatLng = L.GeoJSON.coordsToLatLng(initialRouteGeojson.geometry.coordinates[0]);
+    } else if (initialGeojson) {
+	if (show_feature_list) { // auto-id numbering
+	    var features = initialGeojson.features;
+	    var id = 0;
+	    for(var i = 0; i < features.length; i++) {
+		features[i].properties.id = ++id;
+	    }
+	}
+	var l = L.geoJson(initialGeojson, {
+            style: function (feature) {
+		if (feature.properties.cat.match(/^(1|2|3|q\d)::(night|temp|inwork);?/)) {
+                    var attrib = RegExp.$2;
+                    var latLngs = L.GeoJSON.coordsToLatLngs(feature.geometry.coordinates);
+                    var centerLatLng = getLineStringCenter(latLngs);
+                    var l;
+                    if (attrib == 'night') {
+			l = L.marker(centerLatLng, { icon: nightIcon });
+                    } else if (attrib == 'temp') {
+			l = L.marker(centerLatLng, { icon: clockIcon });
+                    } else if (attrib == 'inwork') {
+			l = L.marker(centerLatLng, { icon: inworkIcon });
+                    }
+                    l.addTo(map);
+                    l.bindPopup(feature.properties.name);
+                    return { //dashArray: [2,2],
+			color: "#f00", weight: 5, lineCap: "butt" }
+		}
+            },
+            onEachFeature: function (feature, layer) {
+		layer.bindPopup(feature.properties.name);
+		id2marker[feature.properties.id] = layer;
+            }
+	});
+	l.addTo(map);
+	setViewLayer = l;
     } else {
+	var lat = q.get("mlat");
+	var lon = q.get("mlon");
+	if (lat && lon) {
+	    var center = new L.LatLng(lat, lon);
+	    setViewLatLng = center;
+	    setStartMarker(center);
+	}
+    }
+
+    if (!setViewLatLng) {
 	var lat = q.get("lat");
 	var lon = q.get("lon");
 	if (lat && lon) {
-	    map.setView(new L.LatLng(lat, lon), zoom);
-	} else {
-	    lat = q.get("mlat");
-	    lon = q.get("mlon");
-	    if (lat && lon) {
-		var center = new L.LatLng(lat, lon);
-		map.setView(center, zoom);
-		setStartMarker(center);
-	    } else {
-		map.setView(defaultLatLng, zoom); // Brandenburger Tor
+	    setViewLatLng = new L.LatLng(lat, lon);
+	}
+    }
+    if (setViewLayer && !setViewLatLng) {
+	map.fitBounds(setViewLayer.getBounds());
+    } else {
+	if (!setViewLatLng) {
+	    setViewLatLng = defaultLatLng;
+	}    
+	if (!setViewZoom) {
+	    setViewZoom = q.get("zoom") || defaultZoom;
+	}
+	map.setView(setViewLatLng, setViewZoom);
+    }
+
+    if (show_feature_list && initialGeojson) {
+	var listHtml = '';
+	var features = initialGeojson.features;
+	for(var i = 0; i < features.length; i++) {
+	    var featureProperties = features[i].properties
+	    if (featureProperties) {
+		listHtml += "\n" + '<a href="javascript:showMarker(' + featureProperties.id + ')">' + featureProperties.name + '</a><br><hr>';
 	    }
 	}
+
+	setFeatureListContent(listHtml);
+    }
+}
+
+function setFeatureListContent(listHtml) {
+    var listDiv = document.getElementById('list');
+    listDiv.innerHTML = listHtml;
+    listDiv.style.visibility = 'visible';
+    listDiv.style.overflowY = 'scroll';
+    listDiv.style.width = '20%';
+    listDiv.style.height = '100%';
+    listDiv.style.padding = '3px';
+}
+
+function showMarker(id) {
+    var marker = id2marker[id];
+    if (marker) {
+	marker.openPopup();
+    } else {
+	alert('Sorry, no marker with id ' + id);
     }
 }
 
@@ -520,7 +631,7 @@ function showRouteResult(request) {
 	    var json = "geojson = " + request.responseText;
 	    eval(json);
 	    showRoute(geojson);
-	    if (enable_routelist) {
+	    if (show_feature_list) {
 		populateRouteList(geojson);
 	    }
 	}
@@ -567,12 +678,10 @@ function setLoadingMarker(latLng) {
 }
 
 function populateRouteList(geojson) {
-    var routelist = document.getElementById('routelist');
     var result = geojson.properties.result;
     var route = result.Route;
 
-    var html = '<div id="routelist">'
-    html += "<div>Länge: " + sprintf("%.2f", result.Len / 1000) + " km</div>\n";
+    var html = "<div>Länge: " + sprintf("%.2f", result.Len / 1000) + " km</div>\n";
 
     var pref_speed;
     var pref_time;
@@ -589,25 +698,32 @@ function populateRouteList(geojson) {
 	html += "<div>Fahrzeit (" + pref_speed + " km/h): " + h + "h" + m + "min</div>\n";
     }
 
+    // XXX duplicated in cgi
+    var rawDirectionToArrow = {'l':  '&#x21d0;',
+			       'hl': '&#x21d6;',
+			       'hr': '&#x21d7;',
+			       'r':  '&#x21d2;',
+			       'u':  '&#x21b6;',
+			      };
     html += "<table>\n";
-    html += "<tr><th>Etappe</th><th>Richtung</th><th>Straße</th></tr>\n";
+    html += "<tr><th>Etappe</th><th></th><th>Straße</th></tr>\n";
     for(var i=0; i<route.length; i++) {
 	var elem = route[i];
 	html += "<tr>";
-	html += "<td>" + sprintf("%.2f", elem.Dist/1000) + " km</td>";
-	html += "<td>" + elem.DirectionHtml + "</td>";
+	html += "<td style='text-align:right;'>" + sprintf("%.2f", elem.Dist/1000) + " km</td>";
+	html += "<td>" + (rawDirectionToArrow[elem.Direction] || '') + "</td>";
 	var coord = L.GeoJSON.coordsToLatLng(geojson.geometry.coordinates[elem.PathIndex]);
-	html += '<td onclick="routelistPopup.setLatLng(new L.LatLng('+coord.lat+','+coord.lng+'))">' + escapeHtml(elem.Strname) + "</a></td>";
+	html += '<td onclick="showStreet(' + "'" + escapeHtml(elem.Strname) + "'" + ', '+coord.lat+','+coord.lng+')">' + escapeHtml(elem.Strname) + "</a></td>";
 	html += "</tr>\n";
     }
     html += "</table>\n";
     html += "</div>\n";
-    routelistPopup = L.popup({maxWidth: window.innerWidth<1024 ? window.innerWidth/2 : 512,
-			      maxHeight: window.innerHeight*0.8,
-			      offset: new L.Point(0, -6)})
-	.setLatLng(L.GeoJSON.coordsToLatLng(geojson.geometry.coordinates[0]))
-	.setContent(html)
-	.openOn(map);
+
+    setFeatureListContent(html);
+}
+
+function showStreet(strname, lat, lng) {
+    map.openPopup(strname, new L.LatLng(lat,lng));
 }
 
 // from https://gist.github.com/BMintern/1795519
@@ -616,6 +732,27 @@ function escapeHtml(str) {
     var div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
+}
+
+function getLineStringCenter(latLngArray) {
+    if (latLngArray.length == 1) {
+       return latLngArray[0];
+    }
+    var len = 0;
+    for(var i=1; i<latLngArray.length; i++) {
+       len += latLngArray[i].distanceTo(latLngArray[i-1]);
+    }
+    var len0 = 0;
+    for(var i=1; i<latLngArray.length; i++) {
+       len0 += latLngArray[i].distanceTo(latLngArray[i-1]);
+       if (len0 > len/2) {
+           // XXX ungenau, besser machen!
+           var newLat = (latLngArray[i].lat - latLngArray[i-1].lat)/2 + latLngArray[i-1].lat;
+           var newLng = (latLngArray[i].lng - latLngArray[i-1].lng)/2 + latLngArray[i-1].lng;
+           return L.latLng(newLat, newLng);
+       }
+    }
+    // should never be reached
 }
 
 ////////////////////////////////////////////////////////////////////////

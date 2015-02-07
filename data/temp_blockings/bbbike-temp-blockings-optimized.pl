@@ -723,7 +723,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Januar von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Februar von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -1237,28 +1237,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'id' => 2410
        },
        undef,
-       {
-         'source_id' => 'IM_019489',
-         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-',
-         'periodic' => 1,
-         'until' => 1422478800,
-         'from' => 1420534800,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              3,
-                              'months',
-                              1
-                            ]
-                          ],
-         'text' => 'Straße des 17. Juni: wegen der Fashion Week gesperrt, 07.01.2015 bis 28.01.2015',
-         'id' => 2412,
-         'type' => 'gesperrt'
-       },
+       undef,
        {
          'until' => undef,
          'recurring' => 1,
@@ -1411,13 +1390,11 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        {
          'source_id' => 'IM_020145',
-         'until' => 1422658799,
-         'text' => 'Sterndamm: Eisenbahnunterführung bis zum 30.01.2015 in Richtung Groß-Berliner Damm/Südostallee gesperrt',
+         'until' => 1425164399,
+         'text' => 'Sterndamm: Eisenbahnunterführung voraussichtlich bis zum 28.02.2015 in Richtung Groß-Berliner Damm/Südostallee gesperrt',
          'from' => 1417820400,
          'id' => 2469,
-         'data' => '#: XXX bleibt der Sterndamm auch über dem 30. Januar hinaus gesperrt?
-#: next_check: 2015-01-30
-userdel	1::inwork 17886,5587 17736,5441
+         'data' => 'userdel	1::inwork 17886,5587 17736,5441
 ',
          'type' => 'gesperrt'
        },
@@ -1565,7 +1542,7 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
          'from' => undef,
          'id' => 2557,
          'data' => '#: XXX wann ist die Baustelle fertig?
-#: last_checked: 2015-01-16
+#: last_checked: 2015-01-27
 #: check_frequency: 60d
 userdel	q3::inwork; 13555,15596 13459,15653
 ',
@@ -1663,16 +1640,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
        undef,
        undef,
        undef,
-       {
-         'source_id' => '146600440',
-         'until' => 1422745199,
-         'text' => 'Lauchhammer: L60: Sanierungsarbeiten Schipkau - Lauchhammer ab 25.08.2014 Vollsperrung, bis 31.01.2015',
-         'from' => 1408996606,
-         'id' => 2600,
-         'data' => 'userdel	2::inwork 45536,-99326 45006,-99332
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1711,14 +1679,15 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
        undef,
        {
          'source_id' => 'http://www.berlin.de/ba-pankow/presse/archiv/20140917.1035.399288.html',
-         'until' => 1422658800,
-         'text' => 'Gounodstr.: Bauarbeiten zwischen von Herbert-Baum-Str. bis Borodinstr., ab Ende September 2014',
+         'until' => 1423263600,
+         'text' => 'Gounodstr./Mahlerstr.: Bauarbeiten, auf Gehweg ausweichen',
          'from' => 1411941600,
          'id' => 2628,
          'data' => '#: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/gounodstrasse.php
-#: last_checked: 2015-01-16
-#: check_frequency: 7d
-userdel	q4::inwork 13645,15609 13739,15643 13939,15723
+#: last_checked: 2015-01-27
+#: check_frequency: 10d
+userdel	q4::inwork 13645,15609 13739,15643
+userdel	q3::inwork 13739,15643 13776,15546
 ',
          'type' => 'handicap'
        },
@@ -1803,20 +1772,7 @@ userdel	2::inwork -3197,11554 -3075,11510
 '
        },
        undef,
-       {
-         'until' => undef,
-         'text' => 'Torgauer Str.: in Höhe Cheruskerpark wegen Bauarbeiten gesperrt',
-         'from' => undef,
-         'id' => 2645,
-         'data' => '#: next_check_id: TORGAUER-2014
-#: by: wosch
-#: confirmed_by: srt
-#: last_checked: 2014-12-14
-	2::inwork 7402,8208 7374,8211 7250,8223
-	q3::inwork 7402,8208 7446,8200
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1873,16 +1829,7 @@ userdel	q4::inwork 5635,7660 5636,7540
        },
        undef,
        undef,
-       {
-         'source_id' => 'IM_023529',
-         'until' => 1422284400,
-         'text' => 'Friedrichstr.: zwischen Behrenstr. und Unter den Linden Baustelle, Fahrbahn gesperrt, 25.11.2014 08:17 Uhr bis 26.01.2015 16:00 Uhr',
-         'from' => 1416813420,
-         'id' => 2666,
-         'data' => 'userdel	q4::inwork 9373,12197 9369,12253 9358,12351
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -1891,7 +1838,7 @@ userdel	q4::inwork 5635,7660 5636,7540
          'from' => undef,
          'id' => 2669,
          'data' => '#: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage)
-#: last_checked: 2015-01-13
+#: last_checked: 2015-02-03
 userdel	2::inwork 10308,11833 10374,11734
 ',
          'type' => 'gesperrt'
@@ -1927,6 +1874,18 @@ userdel	q4::inwork; 5866,10492 5780,10542 5627,10637
          'data' => '#: by: user per phone
 #: XXX vor Ort anschauen! Gibt es ein Endedatum?
 userdel	2::inwork 7772,4306 7795,4242 8106,3410
+',
+         'type' => 'gesperrt'
+       },
+       undef,
+       {
+         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
+         'until' => 1443650400,
+         'text' => 'Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015',
+         'from' => 1422745200,
+         'id' => 2677,
+         'data' => '#: XXX vor Ort anschauen! ggfs. nach gesperrt-orig übetragen
+	2::inwork 7753,14528 7695,14545 7527,14644 7486,14652
 ',
          'type' => 'gesperrt'
        }

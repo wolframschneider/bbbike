@@ -888,7 +888,7 @@ Fähranleger	culdesac_pseudo -1989,18378
 	culdesac 8251,14337
 #: next_check_id: SUEDPANKE-2014
 #: XXX wird bei der Verlängerung des Südpankewegs aufgehoben
-#: next_check: 2015-01-17
+#: next_check: 2015-04-23
 	culdesac 8294,14194
 Tor	culdesac 8388,13993
 #: note: es gibt hier noch weiterführende Straßen
@@ -1056,6 +1056,9 @@ südwestliches Sackgassenende	culdesac -12671,1879
 ######################################################################
 # culdesac entries which should remain invisible
 #: ignore vvv
+	culdesac_pseudo 6489,7908
+	culdesac_pseudo 7402,8208
+	culdesac_pseudo 7250,8223
 	culdesac_pseudo 16796,7715
 	culdesac_pseudo 19142,9755
 	culdesac 49346,100122
