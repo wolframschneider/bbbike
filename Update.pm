@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998,2001,2003,2005,2006,2007,2012,2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998,2001,2003,2005,2006,2007,2012,2013,2015 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -84,8 +84,8 @@ sub update_http {
 	    $res = $ua->request(new HTTP::Request('GET', $src_file, $h),
 				$dest_file);
 	    $code = $res->code;
-	    $success = $res->is_success;
-	    if ($code == 200) {
+	    $success = $res->is_success && !$res->header('X-Died'); # see also https://rt.cpan.org/Ticket/Display.html?id=101990
+	    if ($code == 200 && $success) {
 		$modified = 1;
 	    }
 	} else {
@@ -124,7 +124,7 @@ sub update_http {
 	    }
 	} else {
 	    if ($ua) {
-		if ($res->is_error) {
+		if ($res->is_error || $res->header('X-Died')) {
 		    print STDERR "\n", $res->as_string;
 		    my $text = $res->error_as_HTML;
 		    eval {
@@ -241,6 +241,23 @@ sub create_modified {
     }
 }
 
+sub load_modified {
+    my $rootdir = shift;
+    my $modified_file = "$rootdir/data/.modified";
+    my(@files, %modified, %md5);
+    if (open(MOD, $modified_file)) {
+	while(<MOD>) {
+	    chomp;
+	    my($f, $t, $md5) = split(/\t/);
+	    push @files, $f;
+	    $modified{$f} = $t;
+	    $md5{$f} = $t;
+	}
+	close MOD;
+    }
+    (\@files, \%modified, \%md5);
+}
+
 sub bbbike_data_update {
     my(%args) = @_;
     my $protocol = $args{-protocol} || "best";
@@ -276,29 +293,20 @@ sub bbbike_data_update {
 	if (-e "$rootdir/data/Makefile");
 
     # assume http (or "best")
-    my(@files, %modified, %md5);
-    my $modfile = "$rootdir/data/.modified";
-    if (open(MOD, $modfile)) {
-	while(<MOD>) {
-	    chomp;
-	    my($f, $t, $md5) = split(/\t/);
-	    push @files, $f;
-	    $modified{$f} = $t;
-	    $md5{$f} = $t;
-	}
-	close MOD;
+    my($files, $modified, $md5) = load_modified($rootdir);
+    if ($files) {
 	update_http(-dest => $rootdir,
 		    -root => $BBBike::BBBIKE_UPDATE_WWW,
-		    -files => \@files,
-		    -modified => \%modified,
-		    -md5 => \%md5,
+		    -files => $files,
+		    -modified => $modified,
+		    -md5 => $md5,
 		   );
 	create_modified(-dest => $rootdir,
-			-files => \@files,
+			-files => $files,
 		       );
 	main::reload_all();
     } else {
-	main::status_message("Das Update konnte wegen einer fehlenden Datei ($modfile) nicht durchgeführt werden.", "error");
+	main::status_message("Das Update konnte wegen einer fehlenden Datei ($rootdir/data/.modified) nicht durchgeführt werden.", "error");
     }
 }
 
