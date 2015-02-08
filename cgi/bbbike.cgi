@@ -867,7 +867,7 @@ if ($local_lang eq $selected_lang) {
      eval {
 	require BSD::Resource;
 
-	my $success = setpriority(0, 0, 10);
+	my $success = setpriority(0, 0, 15);
 	die "cannot set priority: $$\n" if !$success;
      };
      warn "$@" if $@;
