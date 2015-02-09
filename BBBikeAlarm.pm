@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2000, 2006, 2008, 2009, 2012 Slaven Rezic. All rights reserved.
+# Copyright (C) 2000,2006,2008,2009,2012,2015 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -40,7 +40,7 @@ my $install_datebook_additions = 1;
 use File::Basename qw(basename);
 use Time::Local;
 
-$VERSION = sprintf("%d.%02d", q$Revision: 1.43 $ =~ /(\d+)\.(\d+)/);
+$VERSION = '1.45';
 
 # XXX S25 Termin (???)
 # XXX Terminal-Alarm unter Windows? Linux?
@@ -58,9 +58,24 @@ sub my_die ($) {
 
 sub enter_alarm {
     my($top, $time_ref, %args) = @_;
-    my $time = $$time_ref;
-    if ($time =~ /(\d+):(\d+)/) {
-	my($h,$m) = ($1,$2);
+    my $ride_time = do {
+	my $time = $$time_ref;
+	if ($time =~ /(\d+):(\d+)/) {
+	    my($h,$m) = ($1,$2);
+	    $h*3600 + $m*60;
+	} elsif ($time =~ /(\d+)\s+sec/) {
+	    $1;
+	} else {
+	    undef;
+	}
+    };
+    if (!defined $ride_time) {
+	$top->messageBox(
+			 -message => M"Keine Fahrzeit übergeben",
+			 -icon => 'error',
+			 -type => 'OK',
+			);
+    } else {
 	my $t = $top->Toplevel(-title => "Alarm");
 	$t->transient($top) if $main::transient;
 	my $do_close = 0;
@@ -81,11 +96,13 @@ sub enter_alarm {
 					     -sticky => "e");
 	my $sunset_choice;
 	my $om;
-	my $e = $t->Entry(-textvariable => \$ankunft,
-			  -width => 6,
-			 )->grid(-row => 0, -column => 1,
-				 -sticky => "w");
+
+	my $e = $t->BBBikeAlarmTimeEntry
+	    (
+	     -textvariable => \$ankunft,
+	    )->grid(-row => 0, -column => 1, -sticky => "w");
 	$e->focus;
+
 	if (defined $args{-location} && eval { require Astro::Sunrise; Astro::Sunrise->VERSION(0.85); 1 }) {
 	    my($px,$py) = (ref $args{-location} eq 'ARRAY'
 			   ? @{ $args{-location} }
@@ -100,8 +117,8 @@ sub enter_alarm {
 	    $om = $t->Optionmenu
 		(-variable => \$sunset_choice,
 		 -options => [["" => ""],
-			      ["Sonnenuntergang" => $sunset_real],
-			      ["Ende der bürgerl. Dämmerung" => $sunset_civil],
+			      [M("Sonnenuntergang") => $sunset_real],
+			      [M("Ende der bürgerl. Dämmerung") => $sunset_civil],
 			     ],
 		 -command => sub {
 		     $ankunft = $sunset_choice
@@ -117,10 +134,9 @@ sub enter_alarm {
 
 	$t->Label(-text => M("Vorbereitung").":")->grid(-row => 2, -column => 0,
 						  -sticky => "e");
-	my $vb_e = $t->Entry(-textvariable => \$vorbereitung,
-			     -width => 6,
-			    )->grid(-row => 2, -column => 1,
-				    -sticky => "w");
+	my $vb_e = $t->BBBikeAlarmTimeEntry
+	    (-textvariable => \$vorbereitung,
+	    )->grid(-row => 2, -column => 1, -sticky => "w");
 
 	$t->Label(-text => M("Alarmtext").":")->grid(-row => 3, -column => 0,
 					       -sticky => "e");
@@ -154,16 +170,15 @@ sub enter_alarm {
 	    $l[1] = $m_a;
 	    $l[2] = $h_a;
 	    $ankunft_epoch = timelocal(@l);
-	    if ($ankunft_epoch <= time) {
-		# adjust to next day
-		$ankunft_epoch+=86400; # XXX Sommerzeit
-	    }
 
-	    my $fahrzeit = $h*60*60 + $m*60;
-	    $pre_alarm_seconds = $fahrzeit + $vorbereitung_s;
-	    $abfahrt_epoch = $ankunft_epoch - $fahrzeit;
+	    $pre_alarm_seconds = $ride_time + $vorbereitung_s;
+	    if (time > $ankunft_epoch - $pre_alarm_seconds) { # too late, try next day
+		$ankunft_epoch += 86400; # XXX Sommerzeit XXX what if pre_alarm_seconds is larger?
+	    }
+	    
+	    $abfahrt_epoch = $ankunft_epoch - $ride_time;
 	    $end_zeit_epoch = $ankunft_epoch - $pre_alarm_seconds;
-	    # XXX Abzug vorbereitung?
+
 	    @l = localtime $end_zeit_epoch;
 	    my $end_zeit = sprintf("%02d%02d", $l[2], $l[1]);
 
@@ -342,10 +357,9 @@ sub enter_alarm_small_dialog {
     $t->Label(-text => "Time (HH:MM)")->grid(-column => 0, -row => $row,
 					     -sticky => "w");
     my @e;
-    push @e, $t->Entry(-textvariable => \$time,
-		       -width => 6,
-		      )->grid(-row => $row, -column => 1,
-			      -sticky => "we");
+    push @e, $t->BBBikeAlarmTimeEntry
+	(-textvariable => \$time,
+	)->grid(-row => $row, -column => 1, -sticky => "we");
     $e[0]->focus;
     $row++;
 
@@ -1400,7 +1414,87 @@ sub bg_system {
 }
 # REPO END
 
-return 1 if caller;
+{
+    package BBBikeAlarmTimeEntry;
+    use vars qw(@ISA);
+    @ISA = ('Tk::Derived', 'Tk::Entry');
+
+    # hack: needed because the modulino should be called
+    # without Tk at all
+    sub _do_construct {
+	require Tk::Entry;
+	Tk::Widget->Construct('BBBikeAlarmTimeEntry');
+    }
+
+    sub Populate {
+	my($w, $args) = @_;
+	$w->SUPER::Populate($args);
+	$w->bind('<Up>'    => ['_inc_dec_time', +1]);
+	$w->bind('<Down>'  => ['_inc_dec_time', -1]);
+	$w->bind('<Prior>' => ['_inc_dec_time', +10]);
+	$w->bind('<Next>'  => ['_inc_dec_time', -10]);
+	$w->ConfigSpecs(-width => ['SELF', 'width', 'Width', 6]);
+	$w;
+    }
+
+    sub _inc_dec_time {
+	my($w, $inc_dec) = @_;
+
+	my $val = $w->get;
+
+	my($h, $m);
+	if ($val =~ m{^(\d+):?$}) { # only hour
+	    $h = $1;
+	    $h = 0 if $h < 0;
+	    $h = 23 if $h > 23;
+	    $m = 0;
+	} elsif ($val =~ m{^(\d+):(\d+)$}) {
+	    ($h, $m) = ($1,$2);
+	    $h = 0 if $h < 0;
+	    $h = 23 if $h > 23;
+	    $m = 0 if $m < 0;
+	    $m = 59 if $m > 59;
+
+	} else { # empty or invalid
+	    (undef, $m, $h) = localtime;
+	}
+
+	# Note: works only for $inc_dec < 60 min
+	if ($inc_dec > 0) {
+	    $m += $inc_dec;
+	    if ($m > 59) {
+		$m %= 60;
+		$h++;
+		if ($h > 23) {
+		    $h = 0;
+		}
+	    }
+	} elsif ($inc_dec < 0) {
+	    $m += $inc_dec;
+	    if ($m < 0) {
+		$m %= 60;
+		$h--;
+		if ($h < 0) {
+		    $h = 23;
+		}
+	    }
+	}
+
+	$val = sprintf "%02d:%02d", $h, $m;
+
+	$w->delete(0, 'end');
+	$w->insert('end', $val);
+    }
+
+}
+
+if (caller) {
+    # Hack for having the widget definition inline
+    BBBikeAlarmTimeEntry::_do_construct();
+
+    # the modulino magic
+    return 1;
+}
 
 ######################################################################
 
@@ -1408,6 +1502,7 @@ package main;
 
 my $use_tk;
 my $time;
+my $ride_time;
 my $text;
 my $interactive;
 my $interactive_small;
@@ -1418,6 +1513,7 @@ my $encoding;
 require Getopt::Long;
 if (!Getopt::Long::GetOptions("-tk!" => \$use_tk,
 			      "-time=s" => \$time,
+			      "-ridetime=s" => \$ride_time,
 			      "-text=s" => \$text,
 			      "-interactive!" => \$interactive,
 			      "-interactive-small!" => \$interactive_small,
@@ -1426,7 +1522,7 @@ if (!Getopt::Long::GetOptions("-tk!" => \$use_tk,
 			      "showall|list" => \$show_all,
 			      "restart" => \$restart,
 			     )) {
-    die "Usage $0 [-tk [-ask]] [-time hh:mm] [-text message]
+    die "Usage $0 [-tk [-ask]] [-time hh:mm] [-ridetime hh:mm] [-text message]
 		  [-interactive | -interactive-small]
                   [-showall|-list] [-restart] [-encoding ...]
 ";
@@ -1440,15 +1536,22 @@ if (defined $text && defined $encoding) {
 
 if ($interactive || $interactive_small) {
     require Tk;
+    BBBikeAlarmTimeEntry::_do_construct();
+
     my $mw = MainWindow->new;
     $mw->withdraw;
     if ($interactive_small) {
 	BBBikeAlarm::enter_alarm_small_dialog($mw, -withtext => 1);
     } else {
-	$time = do { @_ = localtime; sprintf "%02d:%02d", $_[3], $_[2] };
-	BBBikeAlarm::enter_alarm($mw, \$time, -dialog => 1);
+	if (!$ride_time) {
+	    die "Please specify -ridetime HH:MM parameter";
+	}
+	BBBikeAlarm::enter_alarm($mw, \$ride_time, -dialog => 1);
     }
 } elsif ($use_tk) {
+    require Tk;
+    BBBikeAlarmTimeEntry::_do_construct();
+
     if ($show_all) {
 	BBBikeAlarm::tk_show_all();
     } else {
