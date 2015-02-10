@@ -1388,16 +1388,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_020145',
-         'until' => 1423461600,
-         'text' => 'Sterndamm: Eisenbahnunterführung voraussichtlich bis zum 09.02.2015 in Richtung Groß-Berliner Damm/Südostallee gesperrt',
-         'from' => 1417820400,
-         'id' => 2469,
-         'data' => 'userdel	1::inwork 17886,5587 17736,5441
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1819,17 +1810,7 @@ userdel	q4::inwork 5635,7660 5636,7540
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelmarkt ist die Verbindung gesperrt, Ende der Bauarbeiten unbekannt',
-         'from' => undef,
-         'id' => 2669,
-         'data' => '#: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage)
-#: last_checked: 2015-02-03
-userdel	2::inwork 10308,11833 10374,11734
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'until' => undef,
@@ -1871,10 +1852,19 @@ userdel	2::inwork 7772,4306 7795,4242 8106,3410
          'text' => 'Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015',
          'from' => 1422745200,
          'id' => 2677,
-         'data' => '#: XXX vor Ort anschauen! ggfs. nach gesperrt-orig übetragen
-	2::inwork 7753,14528 7695,14545 7527,14644 7486,14652
+         'data' => '	2::inwork 7653,14570 7527,14644 7486,14652
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_024084',
+         'until' => 1432904400,
+         'text' => 'Veitstr.: Baustelle, zwischen Berliner Str. und Medebacher Weg Fahrbahn Richtung Borsigdamm gesperrt, 10.02.2015 08:11 Uhr bis 29.05.2015 15:00 Uhr ',
+         'from' => 1423465860,
+         'id' => 2678,
+         'data' => 'userdel	q4::inwork; 2268,19919 2064,19874 1886,19835
+',
+         'type' => 'handicap'
        }
      
 );

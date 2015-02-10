@@ -21825,10 +21825,10 @@ userdel	2::temp 5047,10381 5076,10658
 EOF
      },
      { from  => $isodate2epoch->("2014-12-06 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-02-09 07:00:00"),
-       text  => 'Sterndamm: Eisenbahnunterführung voraussichtlich bis zum 09.02.2015 in Richtung Groß-Berliner Damm/Südostallee gesperrt',
+       until => $isodate2epoch->("2015-02-10 12:00:00"),
+       text  => 'Sterndamm: Eisenbahnunterführung voraussichtlich bis zum 10.02.2015 in Richtung Groß-Berliner Damm/Südostallee gesperrt',
        type  => 'gesperrt',
-       source_id => 'IM_020145',
+       source_id => 'IM_024071',
        data  => <<EOF,
 userdel	1::inwork 17886,5587 17736,5441
 EOF
@@ -23775,12 +23775,12 @@ userdel	q4::inwork; 13400,16395 13485,16362 13544,16339 13632,16305 13679,16286 
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1423509994, # -> gesperrt-orig
        text  => 'Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelmarkt ist die Verbindung gesperrt, Ende der Bauarbeiten unbekannt',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage)
-#: last_checked: 2015-02-03
+#: last_checked: 2015-02-09
 userdel	2::inwork 10308,11833 10374,11734
 EOF
      },
@@ -23853,14 +23853,22 @@ userdel auto	3 8204,12816 8206,12757 8207,12606
 userdel auto	3 8122,12603 8120,12756 8124,12840
 EOF
      },
-     { from  => $isodate2epoch->("2015-02-01 00:00:00"),
+     { from  => $isodate2epoch->("2015-02-01 00:00:00"), # -> auch in gesperrt-orig
        until => $isodate2epoch->("2015-10-01 00:00:00"),
        text  => 'Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015',
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
        data  => <<EOF,
-#: XXX vor Ort anschauen! ggfs. nach gesperrt-orig übetragen
-	2::inwork 7753,14528 7695,14545 7527,14644 7486,14652
+	2::inwork 7653,14570 7527,14644 7486,14652
+EOF
+     },
+     { from  => 1423465860, # 2015-02-09 08:11
+       until => 1432904400, # 2015-05-29 15:00
+       text  => 'Veitstr.: Baustelle, zwischen Berliner Str. und Medebacher Weg Fahrbahn Richtung Borsigdamm gesperrt, 10.02.2015 08:11 Uhr bis 29.05.2015 15:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_024084',
+       data  => <<EOF,
+userdel	q4::inwork; 2268,19919 2064,19874 1886,19835
 EOF
      },
     );
