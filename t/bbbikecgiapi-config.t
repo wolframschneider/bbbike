@@ -26,7 +26,7 @@ BEGIN {
     }
 }
 
-use BBBikeTest qw(check_cgi_testing $cgidir eq_or_diff);
+use BBBikeTest qw(check_cgi_testing $cgidir eq_or_diff static_url);
 
 check_cgi_testing;
 
@@ -38,6 +38,9 @@ $ua->env_proxy;
 
 my $cgiurl = "$cgidir/bbbike.cgi";
 my $cgitesturl = "$cgidir/bbbike-test.cgi";
+my $static_url = static_url;
+my $htmldir = "$static_url/html";
+my $imagesdir = "$static_url/images";
 
 {
     my $data = do_config_api_call($cgiurl);
@@ -72,6 +75,8 @@ my $cgitesturl = "$cgidir/bbbike-test.cgi";
 
     eq_or_diff $data,
 	{
+	 bbbike_html                => $htmldir,
+	 bbbike_images              => $imagesdir,
 	 bbbikedraw_pdf_module	    => undef,
 	 can_gif		    => JSON::XS::false,
 	 can_gpsies_link	    => JSON::XS::false,
