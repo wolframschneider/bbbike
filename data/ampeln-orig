@@ -332,7 +332,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6163 (Stand der Planung?)
 #: by: http://www.berlin.de/ba-mitte/bvv-online/___tmp/tmp/45081036147184117/147184117/00116327/27-Anlagen/02/MA_1534_IV.pdf
 #: note: Anforderungsampel
-#: last_checked: 2015-02-05
+#: last_checked: 2015-02-24
 	F 10511,14418
 	X 10002,14092
 	X 9800,14722
@@ -1199,6 +1199,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11308,-2535
 	F 10617,452
 	X 10226,1515
+#: XXX_prog: für linksabbiegende Radfahrer Anforderungsampel, auch Richtung Osthafengelände
 	X 14222,10430
 	X 13596,10722
 	X 9796,5790
@@ -1814,7 +1815,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note ^^^
 	X 10849,17848
 	F 5618,14981
-	F 17816,5733
+	F 17810,5736
 #: note: Anforderung für linksabbiegende Radfahrer aus der Treskowallee in den Gregoroviusweg
 	X 18742,9903
 	X 10408,9800
@@ -1878,7 +1879,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	F 8553,11630
 #: XXX_prog Ampel ist auch relevant, wenn man aus In den Ministergärten nach links in die Ebertstr. abbiegt
 	X 8571,11846
-	X 21823,4210
+	X 21829,4212
 	X 16868,5938
 #: off: weekend/night
 	X 12520,12938
@@ -2056,8 +2057,11 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	X 21392,11486
 	X 21860,11278
 	X 17829,15015
+#: XXX_prog: für linksabbiegende Radfahrer Anforderungsampel
 	X 12736,11186
+#: XXX_prog: für linksabbiegende Radfahrer Anforderungsampel
 	X 12908,11058
+#: XXX_prog: für linksabbiegende Radfahrer Anforderungsampel
 	X 13144,10921
 #: note: laut Luftbild
 	F 4717,21223
@@ -2229,6 +2233,7 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	F 4650,18817
 	X 16004,10204
 #: note: seit 2008-05-27 eingeschaltet:
+#: XXX_prog: für linksabbiegende Radfahrer Anforderungsampel
 	X 13919,10583
 	X 21115,271
 	X 17477,6031
@@ -2416,6 +2421,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F::inwork 20010,3340
 	F 3995,12173
 	F 22031,9142
+#: note: Anforderungsampel
 	F 15356,3759
 # REMOVED --- #: next_check_id: KARLSHORSTER-2014 vvv --- #: last_checked: 2014-10-10 vvv --- #: next_check: 2014-10-20 vvv --- #: note: provisorische Ampel --- #: valid: 20140630-20141022 vvv --- ---	X::inwork 14805,10518
 #: XXX bleibt die Ampel permanent?
@@ -2542,8 +2548,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F::inwork 9984,12426
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2015-01-13 vvv
-#: next_check: 2015-12-31 vvv
+#: last_checked: 2015-02-19 vvv
+#: next_check: 2015-03-09 vvv
 	X::inwork 9122,12509
 	X::inwork 9286,12886
 	X::inwork 9343,12464
@@ -2552,24 +2558,24 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: last_checked ^^^
 #: XXX ^^^
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (südlicher Bereich) vvv
-#: last_checked: 2015-01-13 vvv
-#: next_check: 2015-12-31 vvv
+#: last_checked: 2015-02-23 vvv
+#: check_frequency: 14d vvv
 	F::inwork 9063,12051
 	F::inwork 9270,12086
-#: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
 #: next_check_id ^^^
 #
 #: XXX temporäre Ampel (wegen gesperrten Gehweg?), Ampel ist eigentlich etwas weiter westlich
 #: XXX eigentlich gibt es sogar zwei Fußgängerampeln
-#: last_checked: 2015-02-09
+#: last_checked: 2015-02-17
 #: check_frequency: 60d
 	F::inwork 9812,12145
 # 
 #: next_check_id: INVALIDEN-2014
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung an der Invalidenstraße) vvv
-#: last_checked: 2015-01-29 vvv
+#: last_checked: 2015-02-18 vvv
 #: next_check: 2015-05-31 vvv
 	X::inwork 8732,14098
 	X::inwork 8870,13926
@@ -2696,7 +2702,9 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: next_check_id ^^^
 # 
 #: next_check_id: SONNENALLEE-2014 vvv
-#: last_checked: 2015-01-17 vvv
+#: osm_watch: way id="260062339" version="2"
+#: last_checked: 2015-02-21 vvv
+#: check_frequency: 90d vvv
 #: note: Radfahrer in Richtung Südosten müssen die Seite wechseln, hier Anforderungsampel
 	X::inwork 14174,7505
 #: note: Baustellenstraße kreuzt
@@ -2704,6 +2712,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Radfahrer in Richtung Südosten müssen die Seite wechseln, wahrscheinlich keine Einschränkung für Radfahrer Richtung Nordwesten
 #: note: Anforderungsampel
 	F::inwork 14451,7340
+#: check_frequency ^^^
 #: last_checked ^^^
 #: next_check_id ^^^
 # 
@@ -2732,7 +2741,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_prog eigentlich nur für Radfahrer Richtung Südosten relevant vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.223342.php vvv
 #: source_id: IM_023548 (bis Ende April 2016) vvv
-#: last_checked: 2015-02-01 vvv
+#: last_checked: 2015-02-15 vvv
 #: check_frequency: 90d vvv
 	F 17568,7753
 	F 17769,7465
@@ -2759,13 +2768,18 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note ^^^
 # 
 #: source_id: IM_024012 vvv
-#: last_checked: 2015-02-03 vvv
+#: last_checked: 2015-02-19 vvv
 #: next_check: 2015-12-20 vvv
 	F 10703,11837
 	F 10656,11887
 #: next_check ^^^
 #: last_checked ^^^
 #: source_id ^^^
+# 
+#: next_check_id: AMNORDHAFEN-2015
+#: last_checked: 2015-02-18
+#: next_check: 2015-10-01
+	F::inwork 7741,14560
 # 
 ################################################################################
 #: note: Potsdam vvv
