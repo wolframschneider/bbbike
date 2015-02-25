@@ -85,7 +85,9 @@ function parse_areas_from_links() {
         var url = $(n).attr("href");
         var obj = get_download_area(url);
 
-        obj.class_format = $(n).attr("class_format"); // polygon color by format
+        // get class format from the <td> before
+        obj.class_format = $($(n).parent().parent().find("td > span")[1]).attr("class");
+
         // plot all polygons first
         download_plot_polygon(obj);
 
@@ -101,7 +103,12 @@ function download_plot_polygon(obj) {
 
     var polygon = obj.coords ? string2coords(obj.coords) : rectangle2polygon(obj.sw_lng, obj.sw_lat, obj.ne_lng, obj.ne_lat);
 
-    OpenLayers.Feature.Vector.style['default']['fillColor'] = '#000';
+    var color = $("span." + obj.class_format).css("color");
+    // color = "#000";
+    debug("color: " + color);
+
+    OpenLayers.Feature.Vector.style['default']['fillColor'] = color;
+    OpenLayers.Feature.Vector.style['default']['strokeColor'] = color;
 
     var feature = plot_polygon(polygon);
     state.vectors.addFeatures(feature);
