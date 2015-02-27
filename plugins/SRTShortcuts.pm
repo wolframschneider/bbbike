@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2003,2004,2008,2009,2010,2011,2012,2013,2014 Slaven Rezic. All rights reserved.
+# Copyright (C) 2003,2004,2008,2009,2010,2011,2012,2013,2014,2015 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -175,6 +175,18 @@ bGo2aLG2bm1rD+7o7OruYQA5xsbTsze7r0S3f8LESQxA2yZPmTpt+oyZs2bPmTtvPlhggfjC
 RYuXOC5dtnzFSpDAqtVr1q5b77Bh46bNW7YCAKJlS6V7R7bEAAAAJXRFWHRkYXRlOmNyZWF0
 ZQAyMDEzLTAyLTE5VDIxOjQyOjUxKzAxOjAws5ftwQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAx
 Mi0wOC0xNFQxNjoyODo1MCswMjowMOv6tcMAAAAASUVORK5CYII=
+EOF
+    }
+
+    if (!defined $images{git}) {
+	# Converted with:
+	# cat ~/images/icons/git-favicon.png | perl -MMIME::Base64 -e 'print encode_base64(join("",<>))'
+	$images{git} = $main::top->Photo
+	    (-format => 'png',
+	     -data => <<'EOF');
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAADFBMVEXAAAAAgAD////////GbSb/
+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAPklEQVR4AQXBsRFAQBQFwPXmy+lIoFDxdaEDkRqEF4gY
+M3aHhkAgEKhzu57A0BCot/Ze/bi/QKZ1rhotAoEfzicL4tjT/h8AAAAASUVORK5CYII=
 EOF
     }
 }
@@ -660,6 +672,9 @@ EOF
 	      ],
 	      [Button => $do_compound->("Show recent VMZ diff"),
 	       -command => sub { show_new_vmz_diff() },
+	      ],
+	      [Button => $do_compound->('Diff since last deployment', $images{git}),
+	       -command => sub { show_diffs_since_last_deployment() },
 	      ],
 	      [Button => $do_compound->("Mark Layer"),
 	       -command => sub { mark_layer_dialog() },
@@ -1835,8 +1850,12 @@ sub street_name_experiment_preinit {
     require Strassen::Util;
     use BBBikeUtil qw(pi schnittwinkel sum);
     use VectorUtil qw(move_point_orthogonal);
+    if ($^O eq 'MSWin32') {
+	die 'Not supported for MSWin32'; # no GUI dialog here, may be called within BBBikeLazy.pm
+    }
     if ($Tk::Config::xlib !~ /-lXft\b/) {
 	if (!$street_name_experiment_preinit_already_warned) {
+	    # Nowadays XFT=1 is default on Unix platforms, so we can be loud here:
 	    main::status_message("Sorry, this experiment needs Tk with freetype support! Consider to recompile Tk with XFT=1", "die");
 	    $street_name_experiment_preinit_already_warned = 1;
 	} else {
@@ -2934,6 +2953,70 @@ sub get_mapnik_map_directory {
 	return;
     }
     return $dir;
+}
+
+######################################################################
+
+sub show_diffs_since_last_deployment {
+    require File::Temp;
+    require IPC::Run;
+    require BBBikeUtil;
+
+    my $tag = 'deployment/bbbikede/current';
+
+    my @cvsdiffbbd_cmd = ($^X, 'miscsrc/cvsdiffbbd');
+    my @temp_blockings_tasks_cmd = ($^X, 'miscsrc/temp_blockings_tasks');
+    my $bbbike_temp_blockings_bbd = 'tmp/bbbike-temp-blockings.bbd';
+
+    my $save_pwd = BBBikeUtil::save_pwd2();
+    chdir $bbbike_rootdir
+	or main::status_message("Can't chdir to $bbbike_rootdir: $!", 'die');
+
+    # read relevant bbd files from data/.modified (further filtering
+    # may happen in cvsdiffbbd itself)
+    my @files = do {
+	my @files;
+	open my $modfh, "data/.modified"
+	    or main::status_message("Can't open data/.modified: $!", 'die');
+	while(<$modfh>) {
+	    chomp;
+	    my($file) = split /\s+/;
+	    next if $file =~ m{^data/sehenswuerdigkeit_img/};
+	    next if $file =~ m{^data/*.\.coords\.data$};
+	    push @files, $file;
+	}
+	@files;
+    };
+
+    my($tmpfh,$tmpfile) = File::Temp::tempfile('bbbike_since_tag_XXXXXXXX', SUFFIX => '.bbd', TMPDIR => 1, UNLINK => 1);
+
+    IPC::Run::run(['git', 'diff', $tag, '--', @files], '|', [@cvsdiffbbd_cmd, '--add-file-label', '--diff-file=-'], '>', $tmpfile)
+	    or main::status_message("Creation of diff bbd file '$tmpfile' using 'git diff' and '@cvsdiffbbd_cmd' failed", 'die');
+
+    # Create only if missing. XXX Creating is somewhat dangerous, as
+    # there could already a "make" job be running in the background,
+    # and currently it's not possible to run multiple makes in
+    # parallel without the possibility of damaging files.
+    if (! -e $bbbike_temp_blockings_bbd) {
+	my $save_pwd2 = BBBikeUtil::save_pwd2();
+	chdir 'data'
+	    or main::status_message("Can't chdir to data: $!", 'die');
+	system('make', '../' . $bbbike_temp_blockings_bbd);
+	if (! -e $bbbike_temp_blockings_bbd) {
+	    main::status_message("Could not create '$bbbike_temp_blockings_bbd' (make failed?)", 'die');
+	}
+    }
+    IPC::Run::run(
+		  ['git', 'show', "$tag:data/temp_blockings/bbbike-temp-blockings.pl"], '|',
+		  [@temp_blockings_tasks_cmd, 'pl_to_yml', '/dev/stdin', '/dev/stdout'], '|',
+		  [@temp_blockings_tasks_cmd, 'yml_to_bbd', '/dev/stdin'], '|',
+		  ['sh', '-c', "diff -u - $bbbike_temp_blockings_bbd || true"], '|', # XXX ugly hack, because diff would exit with a non-zero status, making the whole IPC::Run::run looking like a failure
+		  [@cvsdiffbbd_cmd, '--add-fixed-label=bbbike-temp-blockings: ', '--diff-file=-'],
+		  '>>', $tmpfile
+		 )
+	    or main::status_message("Adding bbbike-temp-blockings diffs to '$tmpfile' using git, '@temp_blockings_tasks_cmd', '@cvsdiffbbd_cmd' failed", 'die');
+
+    add_new_layer('str', $tmpfile);
 }
 
 ######################################################################

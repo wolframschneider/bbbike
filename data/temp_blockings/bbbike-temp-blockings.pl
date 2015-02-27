@@ -2736,7 +2736,7 @@ EOF
        text  => 'Glienicker Straße zwischen Grünauer Straße und Nipkowstraße Richtung Adlergestell wegen Bauarbeiten gesperrt bis 15.10.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 21823,4210 21679,4059 21496,3849 21489,3841 21411,3760 21357,3705 21324,3691 21308,3644 21275,3607 21244,3571 21198,3522 21153,3484 21055,3415 20967,3343 20927,3292 20832,3170
+userdel	q4; 21829,4212 21679,4059 21496,3849 21489,3841 21411,3760 21357,3705 21324,3691 21308,3644 21275,3607 21244,3571 21198,3522 21153,3484 21055,3415 20967,3343 20927,3292 20832,3170
 EOF
      },
      { from  => 1125351382, # 2005-08-29 23:36
@@ -13219,7 +13219,7 @@ EOF
        text  => 'Sperrung des Delfter Ufers. Ab Montag, dem 17.11.2008 wird für ca. vier Wochen ein Teilstück von ca. 250 m der Grünanlage Delfter Ufer in Höhe der Rudergesellschaft Wiking e.V. bis zum rückwärtigen Firmengelände Testorp gesperrt werden. Der Rad- und Fußweg kann in dieser Zeit nicht durchgängig genutzt werden. Ein Ausweichen ist über den Schwarzen Weg, Haarlemer Straße und wieder zurück zum Delfter Ufer über den Weg der Kolonie "Zum Siedlerheim" möglich.',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 13766,6019 13971,5978 14136,5831 14241,5674
+userdel	2::inwork 13766,6019 14002,5936 14138,5818 14223,5658
 EOF
      },
      { from  => 1228340462, # 2008-12-03 22:41
@@ -21876,7 +21876,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: last_checked: 2013-09-15 (Bauzäune stehen noch, sind aber teilweise weggeschoben)
-userdel	2::inwork 12726,3870 12805,4020
+userdel	2::inwork 12726,3870 12796,4002
 EOF
      },
      { from  => undef,
@@ -22980,7 +22980,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/tiefbauamt/unterhaltungsma__nahmen_2014_1.xls?download.html',
        data  => <<EOF,
-userdel	q4::inwork; 22815,37 22697,-27 22596,-82 22436,-168
+userdel	q4::inwork; 22815,37 22697,-27 22596,-82 22440,-175
 EOF
      },
      { from  => 1406844000, # 2014-08-01 00:00
@@ -23468,15 +23468,16 @@ userdel	q3::inwork 4638,10162 4623,10066 4609,9949
 EOF
      },
      { from  => 1412021931, # 2014-09-29 22:18
-       until => 1424473200, # 2015-02-21 00:00
-       text  => 'Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 20.02.2015',
+       until => $isodate2epoch->("2015-02-28 23:59:59"), # 1424473200, # 2015-02-21 00:00
+       text  => 'Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.02.2015',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: INVALIDENFRIEDHOF-2014
 #: by: Birgit Schroeer
+#: confirmed_by: srt
 #: XXX vielleicht wird hier asphaltiert?
 #: last_checked: 2014-10-01
-#: next_check: 2015-02-18
+#: next_check: 2015-02-26
 userdel	2::inwork 8101,13901 8248,13659 8337,13541
 EOF
      },
@@ -23797,7 +23798,7 @@ EOF
        text  => 'Kronenstr.: Einbahnstraßenregelung zwischen Charlottenstr. und Markgrafenstr., gesperrt Richtung Osten, Dauer unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2015-01-13
+#: last_checked: 2015-02-17
 userdel	q4::inwork; 9559,11715 9692,11732
 EOF
      },
@@ -23866,6 +23867,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_024084',
        data  => <<EOF,
+#: by: http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.265751.php
 userdel	q4::inwork; 2268,19919 2064,19874 1886,19835
 EOF
      },
@@ -23880,5 +23882,25 @@ EOF
 #: last_checked ^^^
 #: XXX ^^^
 EOF
-     }
+     },
+     { from  => 1423980000, # 2015-02-15 07:00
+       until => 1432998000, # 2015-05-30 17:00
+       text  => 'Anhalter Str.: Baustelle, Fahrbahn zwischen Wilhelmstr. und Stresemannstr. in Richtung Westen gesperrt, bis 30.05.2015',
+       type  => 'handicap',
+       source_id => 'IM_024065',
+       data  => <<EOF,
+userdel	q4::inwork; 9234,11056 8947,10956
+EOF
+     },
+     { from  => undef, #
+       until => undef, #
+       text  => 'Max-Schmelling-Halle: bei Veranstaltungen größere Behinderungen möglich',
+       type  => 'handicap',
+       recurring => 1,
+       data  => <<EOF,
+#: note: bei Veranstaltungen möglicherweise auch gesperrt?
+#: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
+	q4::temp 10456,15561 10234,15490 10188,15474
+EOF
+     },
     );
