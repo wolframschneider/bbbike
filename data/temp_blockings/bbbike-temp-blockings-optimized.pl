@@ -723,7 +723,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Februar von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März von 6.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -1388,16 +1388,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        undef,
        undef,
-       {
-         'until' => 1425265200,
-         'text' => 'Sterndamm: Eisenbahnunterführung in Richtung Groß-Berliner Damm/Südostallee gesperrt',
-         'from' => undef,
-         'id' => 2469,
-         'data' => '#: by: fritz
-userdel	1::inwork 17886,5587 17736,5441
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1559,15 +1550,7 @@ userdel	q3::inwork; 13555,15596 13459,15653
        undef,
        undef,
        undef,
-       {
-         'until' => 1425164400,
-         'text' => 'Potsdamer Str. in Teltow: Baustelle, Einbahnstraße offen in Richtung Osten, voraussichtlich bis März 2015',
-         'from' => 1380492000,
-         'id' => 2569,
-         'data' => '	q4::inwork; 1329,-753 1235,-714 1212,-706 1067,-699 950,-680 791,-598 758,-582 723,-580 709,-582
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1634,8 +1617,8 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
        undef,
        {
          'source_id' => 'LS/722-C/14/213',
-         'until' => 1425682800,
-         'text' => 'Spremberg: B156: Brücke über die kleine Spree - Ersatzneubau OD Spremberg, Muskauer Straße, Brücke über kleiner Spree Vollsperrung, 06.08.2014 bis 06.03.2015 ',
+         'until' => 1430431199,
+         'text' => 'Spremberg: B156: Brücke über die kleine Spree - Ersatzneubau OD Spremberg, Muskauer Straße, Brücke über kleiner Spree Vollsperrung, 06.08.2014 bis 30.04.2015 ',
          'from' => 1407357280,
          'id' => 2605,
          'data' => 'userdel	2::inwork 79043,-91754 79397,-92080
@@ -1694,21 +1677,7 @@ userdel	2::inwork 15419,10706 15379,10651
        undef,
        undef,
        undef,
-       {
-         'until' => 1425164399,
-         'text' => 'Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.02.2015',
-         'from' => 1412021931,
-         'id' => 2636,
-         'data' => '#: next_check_id: INVALIDENFRIEDHOF-2014
-#: by: Birgit Schroeer
-#: confirmed_by: srt
-#: XXX vielleicht wird hier asphaltiert?
-#: last_checked: 2014-10-01
-#: next_check: 2015-02-26
-userdel	2::inwork 8101,13901 8248,13659 8337,13541
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1921,12 +1890,25 @@ userdel	2::inwork 15891,16041 15856,15924 16080,15830
          'type' => 'gesperrt'
        },
        {
-         'until' => 1425870000,
-         'text' => 'Sterndamm: Eisenbahnunterführung voll gesperrt, 02.03.2015 bis voraussichtlich 09.03.2015',
+         'source_id' => 'IM_024218',
+         'until' => 1425898800,
+         'text' => 'Sterndamm: Eisenbahnunterführung voll gesperrt, 02.03.2015 bis 09.03.2015',
          'from' => 1425178800,
          'id' => 2684,
          'data' => '#: by: fritz
 userdel	2::inwork 17886,5587 17736,5441
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_024223',
+         'until' => 1425790800,
+         'text' => 'Hohenschönhauser Str.: zwischen Dorfstr./Ahrensfelder Chaussee und Hellersdorfer Weg Baustelle, Straße gesperrt, ab 02.03.2015 08 Uhr bis 08.03.2015',
+         'from' => 1425164400,
+         'id' => 2685,
+         'data' => '#: XXX gilt die Sperrung auch für Radfahrer?
+#: XXX gibt es danach Änderungen für Radfahrer? einen neuen Radweg?
+userdel	2::inwork 19875,18182 19845,18120 19820,18091
 ',
          'type' => 'gesperrt'
        }

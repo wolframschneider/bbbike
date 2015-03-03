@@ -1008,7 +1008,7 @@ Kletterrosenweg	?::projected 21382,149 21354,289
 #: last_checked: 2014-09-13 vvv
 #: check_frequency: 90d vvv
 #: note fehlt noch bei osm vvv
-#: osm_watch: way id="57686461" version="3"
+#: osm_watch: way id="57686461" version="4"
 #: XXX ad osm_watch id referenziert die Daumstr., wegen der möglichen Zufahrten zu Wolzenseeweg, Röddelinseeweg, Quenzseeweg...
 #: XXX culdesac-Einträge!
 # REMOVED (fertig) --- Röddelinseeweg: Qualität? Straße bereits fertiggestellt?	?::projected -1783,16533 -1705,16515
@@ -1161,8 +1161,6 @@ Verlängerte Hertzallee	?::projected 5352,11502 4917,11696 4905,11785
 # - Fragen nach Zebrastreifen
 # - Fragen nach genauen Routenverläufen
 # - XXX_prog- und XXX_indoor-Einträge
-# 
-Mauerpark: existiert hier eine Beleuchtung?	? 10240,15318 10354,14987
 # 
 # REMOVED (keine Einschränkungen) --- #: XXX laut fritz bis  01.08.2015, 12:00 Uhr --- Holzmarktstr.: Bauarbeiten, auch Auswirkungen auf Radfahrer?	? 11764,12001 11619,12084 11513,12138 11388,12202 11351,12221
 # REMOVED (-> gesperrt-orig) --- #: source_id: IM_023816 --- #: XXX Bauarbeiten bis 06.03.2016 (laut anderen Quellen nur bis 6.3.2015) --- Baerwaldstr.: gibt es für Radfahrer Veränderungen?	? 10500,10081 10513,10038 10480,9949 10408,9800 10361,9755
