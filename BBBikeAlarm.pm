@@ -40,7 +40,7 @@ my $install_datebook_additions = 1;
 use File::Basename qw(basename);
 use Time::Local;
 
-$VERSION = '1.45';
+$VERSION = '1.46';
 
 # XXX S25 Termin (???)
 # XXX Terminal-Alarm unter Windows? Linux?
@@ -901,7 +901,7 @@ sub emacs_org_mode_date {
 # called from outer world
 sub tk_interface {
     my($end_time, $text, %args) = @_;
-    $text = "Leave" if $text eq "";
+    $text = M("Verlassen") if $text eq "";
     require Tk;
 ##XXX balloon geht nicht...
 #    require Tk::Balloon;
@@ -931,17 +931,31 @@ sub tk_interface {
     $top->optionAdd("*activeForeground", "white");
 
     if ($args{-ask}) {
-	if ($top->messageBox
-	    (-title => M"Alarm setzen?",
-	     -icon => "question",
-	     -message => Mfmt("Alarm auf %s setzen?", scalar localtime $end_time),
-	     -type => "YesNo") =~ /no/i) {
+	require Tk::DialogBox;
+	require POSIX;
+	my $d = $top->DialogBox(
+				-title => M"Alarm setzen?",
+				-buttons => ['Yes', 'No'],
+				-default_button => 'Yes',
+				-cancel_button => 'No',
+			       );
+	my $fmtted_time;
+	if (POSIX::strftime('%Y-%m-%d', localtime time) eq POSIX::strftime('%Y-%m-%d', localtime $end_time)) {
+	    $fmtted_time = POSIX::strftime("%H:%M:%S", localtime $end_time); # same day, keep it short
+	} else {
+	    $fmtted_time = POSIX::strftime("%Y-%m-%d %H:%M:%S", localtime $end_time);
+	}
+	$d->add('Message', -width => 640, -text => Mfmt("Alarm auf %s setzen?", $fmtted_time))->pack(-side => 'top', -fill => 'x');
+	$d->add('Entry', -textvariable => \$text)->pack(-side => 'top', -fill => 'x');
+	my $answer = $d->Show;
+	if ($answer =~ /no/i) {
 	    return;
 	}
     }
 
     my $cb =
-	$top->Button(-text => M("Verlassen"),
+	$top->Button(
+		     -text    => $text, # forces initial size of toplevel
 		     -command => sub { $top->destroy },
 		    )->pack;
 #    $balloon->attach($cb, -msg => $text);
@@ -956,11 +970,23 @@ sub tk_interface {
 
     {
 	my $ack_t = $top->Toplevel(-title => M"Alarm gesetzt");
-	my $wait = int($wait/60);
-	$ack_t->Button(-text => Mfmt("Alarm in %s %s gesetzt", $wait, $wait==1 ? M"Minute" : M"Minuten"),
+	my @alarm_args;
+	if ($wait == 1) {
+	    @alarm_args = ($wait, M"Sekunde");
+	} elsif ($wait < 60) {
+	    @alarm_args = ($wait, M"Sekunden");
+	} else {
+	    my $wait_minutes = int($wait/60);
+	    if ($wait_minutes == 1) {
+		@alarm_args = ($wait_minutes, M"Minute");
+	    } else {
+		@alarm_args = ($wait_minutes, M"Minutes");
+	    }
+	}
+	$ack_t->Button(-text => Mfmt("Alarm in %s %s gesetzt", @alarm_args),
 		       -command => sub { $ack_t->destroy },
 		      )->pack;
-	$ack_t->after(10*1000, sub { $ack_t->destroy });
+	$ack_t->after(5*1000, sub { $ack_t->destroy });
 	$ack_t->Popup;
     }
 
