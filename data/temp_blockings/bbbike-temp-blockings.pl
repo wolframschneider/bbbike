@@ -17978,7 +17978,7 @@ userdel auto	3 4381,10583 4371,10465 4360,10320
 userdel auto	3 5196,10398 5215,10711 5230,10919
 userdel auto	3 6681,10959 6824,10904 6740,10755
 userdel auto	3 6740,10755 6824,10904 6681,10959
-userdel auto	3 6818,10725 6972,10665 7115,10612
+userdel auto	3 6818,10725 6972,10665 7110,10613
 userdel auto	3 4360,10320 4371,10465 4381,10583
 userdel auto	3 7060,10221 7033,10328 7131,10331
 userdel auto	3 6915,11492 6825,11486 6716,11439
@@ -18007,7 +18007,7 @@ userdel auto	3 5900,11913 6642,12010 6550,11954
 userdel auto	3 5079,10701 5076,10658 5047,10381
 userdel auto	3 5471,10719 5475,10808 5488,10978
 userdel auto	3 4659,10335 4676,10541 4685,10689
-userdel auto	3 7115,10612 6972,10665 6818,10725
+userdel auto	3 7110,10613 6972,10665 6818,10725
 userdel auto	3 5230,10919 5215,10711 5196,10398
 userdel auto	3 6302,10462 6353,10583 6380,10704
 userdel auto	3 6550,11954 6642,12010 5900,11913
@@ -20990,7 +20990,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_114523',
        data  => <<EOF,
-userdel	q4::inwork; 7315,10537 7117,10611 7115,10612 6972,10665
+userdel	q4::inwork; 7315,10537 7117,10611 7110,10613 6972,10665
 EOF
      },
      { from  => 1352070000, # 2012-11-05 00:00
@@ -23171,8 +23171,8 @@ userdel	2::inwork -9085,1347 -9252,1244 -9333,1124 -9443,1035 -9500,827 -9412,54
 EOF
      },
      { from  => 1407357280, # 2014-08-06 22:34
-       until => 1425682800, # 2015-03-07 00:00
-       text  => 'Spremberg: B156: Brücke über die kleine Spree - Ersatzneubau OD Spremberg, Muskauer Straße, Brücke über kleiner Spree Vollsperrung, 06.08.2014 bis 06.03.2015 ',
+       until => $isodate2epoch->("2015-04-30 23:59:59"), # 1425682800, # 2015-03-07 00:00
+       text  => 'Spremberg: B156: Brücke über die kleine Spree - Ersatzneubau OD Spremberg, Muskauer Straße, Brücke über kleiner Spree Vollsperrung, 06.08.2014 bis 30.04.2015 ',
        type  => 'gesperrt',
        source_id => 'LS/722-C/14/213',
        data  => <<EOF,
@@ -23923,12 +23923,24 @@ userdel	2::inwork 15891,16041 15856,15924 16080,15830
 EOF
      },
      { from  => $isodate2epoch->("2015-03-01 04:00:00"), # ein Tag Vorlauf
-       until => $isodate2epoch->("2015-03-09 04:00:00"),
-       text  => 'Sterndamm: Eisenbahnunterführung voll gesperrt, 02.03.2015 bis voraussichtlich 09.03.2015',
+       until => $isodate2epoch->("2015-03-09 12:00:00"), # laut fritz bis 12h bzw. 4h, laut vmz bis 4h
+       text  => 'Sterndamm: Eisenbahnunterführung voll gesperrt, 02.03.2015 bis 09.03.2015',
        type  => 'gesperrt',
+       source_id => 'IM_024218',
        data  => <<EOF,
 #: by: fritz
 userdel	2::inwork 17886,5587 17736,5441
+EOF
+     },
+     { from  => 1425164400, # 2015-03-01 00:00
+       until => $isodate2epoch->("2015-03-08 06:00:00"), # 1426460399, # 2015-03-15 23:59
+       text  => 'Hohenschönhauser Str.: zwischen Dorfstr./Ahrensfelder Chaussee und Hellersdorfer Weg Baustelle, Straße gesperrt, ab 02.03.2015 08 Uhr bis 08.03.2015',
+       type  => 'gesperrt',
+       source_id => 'IM_024223',
+       data  => <<EOF,
+#: XXX gilt die Sperrung auch für Radfahrer?
+#: XXX gibt es danach Änderungen für Radfahrer? einen neuen Radweg?
+userdel	2::inwork 19875,18182 19845,18120 19820,18091
 EOF
      },
     );
