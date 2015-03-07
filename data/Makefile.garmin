@@ -305,7 +305,7 @@ ${PERSISTENTTMPDIR}/sachsen_osm.img:
 	    mv 12117010.img sachsen_osm.img )
 
 ${PERSISTENTTMPDIR}/dresden.osm:	${MISCDIR}/download/osm/sachsen.osm.bz2
-	${OSMOSIS} --rx file=${MISCDIR}/download/osm/sachsen.osm.bz2 --bb left=13.298826 bottom=50.820773 right=14.506001 top=51.301447 --wx file=${PERSISTENTTMPDIR}/dresden.osm~
+	${OSMOSIS} --fast-read-xml file=${MISCDIR}/download/osm/sachsen.osm.bz2 --bb left=13.298826 bottom=50.820773 right=14.506001 top=51.301447 --wx file=${PERSISTENTTMPDIR}/dresden.osm~
 	mv ${PERSISTENTTMPDIR}/dresden.osm~ ${PERSISTENTTMPDIR}/dresden.osm
 
 # routable
