@@ -47,6 +47,7 @@ cgi/street-coord.cgi
 cgi/weather.cgi
 cgi/streets.cgi
 cgi/area.cgi
+cgi/city.cgi
 cgi/crossing.cgi
 cgi/livesearch-extract.cgi
 cgi/extract.cgi
