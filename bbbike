@@ -12934,7 +12934,7 @@ sub choose_from_plz {
 	    die "Str ($s)/PLZ ($z)-Objekt?" if !$s || !$z;
 	    my($street, $bezirk, $plz_nr, $xy) = @$street_obj;
 
-	    if (defined $xy) {
+	    if (defined $xy && length $xy) {
 		mark_point(-coords => [[[ transpose(split /,/, $xy) ]]],
 			   -clever_center => $args{-interactive});
 	    } else {
@@ -12958,8 +12958,8 @@ sub choose_from_plz {
 			}
 		    }
 
-		    my $plz_re = $plz->make_plz_re($plz_nr);
-		    my @streets = $plz->look($plz_re, Noquote => 1);
+		    my $plz_pcre = $plz->make_plz_pcre($plz_nr);
+		    my @streets = $plz->look($plz_pcre, Noextern => 1, Noquote => 1);
 		    @pos = $s->union(\@streets, Nouniq => 1);
 		    if (!@pos) {
 			die Mfmt("Keine Straﬂen im PLZ-Gebiet %s.\n", $plz_nr);
