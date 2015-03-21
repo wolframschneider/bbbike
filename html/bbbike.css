@@ -265,7 +265,7 @@ div#routes, div#formats, div#search, div#results {
 	margin: 0.5em;
 }
 
-div#BBBikeGooglemap { 
+div#BBBikeGooglemap, div#map_wrapper { 
 	position: relative;
 	border: 0px solid #979797;z-index: 0; 
 	right: 0em;

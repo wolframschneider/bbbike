@@ -109,7 +109,7 @@ Spreestr.	1 17900,6072 17939,5968 17877,5860 17810,5736 17807,5730 17782,5698
 Buckower Chaussee	1 8742,475 8972,498 9002,471
 #: XXX evtl. wird die Einbahnstraßenregelung aufgehoben
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6025
-#: next_check: 2015-03-19
+#: last_checked: 2015-03-09
 Archibaldweg	1 15674,10851 15870,10938
 Nöldnerplatz	1 15870,10938 15903,10906 16049,10844
 Adlergestell (extra Radweg)	2 21998,1239 21541,1739 21475,1804
@@ -247,7 +247,7 @@ Sybel-/Waitzstr.	1 3883,10585 3764,10580 3731,10640 3726,10757
 Aßmannstr.	1 25012,5729 25048,5727 25039,5304 25039,5295
 Schönblicker Str.	1 31670,3604 31661,3665 31695,3690 31745,3679 31756,3620 31724,3592 31670,3604
 Knorrpromenade	1 14424,11639 14369,11489
-Herbststr.	1 7997,18524 8096,18456 8222,18375 8286,18331 8465,18365 8627,18402
+Herbststr.	1 7997,18524 8096,18456 8222,18375 8286,18331 8465,18365 8622,18402
 Ruhwaldweg: Schranke gesperrt	2 773,13375 758,13334
 Alt-Reinickendorf	1 7003,18715 6869,18721 6775,18726 6734,18728 6572,18793 6716,18788 6793,18763 6879,18737 7003,18715
 Lauterstr.	1s:q3 5817,7223 5810,7337
@@ -464,7 +464,7 @@ Lossebergplatz	1 16070,23566 16094,23554 16095,23539 16079,23535 16064,23547 160
 Spindlersfelder Str.	2 21324,3691 21215,3919 21143,4150 21130,4239 21080,4702 21075,4769 21065,4957
 #: XXX evtl. wird die Einbahnstraßenregelung aufgehoben
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6025
-#: next_check: 2015-03-19
+#: last_checked: 2015-03-15
 Rathausstr.:	1s:q4 15651,12214 15628,12246 15576,12315 15537,12367
 Alt-Marzahn	1 21112,15396 21048,15424 20967,15458 20796,15559 20903,15545 20988,15505 21051,15464 21112,15396
 #: confirmed_by: srt vvv
@@ -1339,8 +1339,6 @@ Jahnstr. (KW)	1s 26243,-12300 26028,-12312
 Seestr. (Potsdam)	1s -11581,559 -11584,452
 Tizianstr. (Potsdam)	1s -11424,542 -11480,621 -11581,559
 Spitzmühlenweg	1s 41728,17918 41668,17984 41556,18146
-#: note: Umgehung ist offiziell möglich, glaube ich
-Mangerstr. (Potsdam) (Umgehung auf Gehweg oder Uferweg möglich)	1s -12054,-274 -12123,-294 -12265,-418
 Stephanstr.	1s 6523,4491 6360,4504
 Am Poetensteig, Gramzow	1s:q1 50043,90187 50107,89717
 #: by: Juliane Bölker:
@@ -2054,6 +2052,8 @@ tragen (31 Stufen oder Kinderwagenrampe)	0:40 13168,21706
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+Drängelgitter	BNP:3::trailer=10 -12262,-393
+Drängelgitter	BNP:3::trailer=10 -4139,1976
 enges Drängelgitter	BNP:5::trailer=no 17295,7323
 #: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=7933
 Drängelgitter	BNP:3::trailer=no -6276,13469
@@ -2588,7 +2588,14 @@ versetzte Schranke, manchmal offen	BNP:1::trailer=3 24625,20855
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
-#: last_checked: 2015-02-22
+#: next_check_id: EUROPACITY-2015
+#: last_checked: 2015-03-13
+#: next_check: 2016-12-31
+(Planstraßen 2.1, 2.2, 2.3): noch gesperrt	2 7818,13993 7917,14051 7962,13977 7866,13916
+# 
+#: XXX es gibt schon permanente Sackgassenschilder
+#: last_checked: 2015-03-08
+#: check_frequency: 60d
 Wartenbergstr.: wegen Einsturzgefahr gesperrt, auch für Radfahrer und Fußgänger	2::inwork 15300,11584 15220,11440
 # 
 #: last_checked: 2015-02-14 vvv
@@ -2600,24 +2607,26 @@ Uferstr. (Niederschöneweide): abgesperrt	2::inwork 17639,6227 17843,6083
 # 
 #: XXX siehe auch aufgehobene Einbahnstraßenregelungen weiter oben vvv
 #: source_id: IM_023816 vvv
-#: last_checked: 2015-02-13 vvv
-#: next_check: 2015-03-06 (evtl. auch bis März 2016 andauernd) vvv
+#: XXX vermutlich bis März 2016 andauernd
+#: last_checked: 2015-03-17 vvv
 Baerwaldstr.: Sperrung am Carl-Herz-Ufer	2::inwork 10467,10051 10500,10081
 Carl-Herz-Ufer: Sperrung an der Baerwaldstr.	2::inwork 10469,10081 10500,10081
-#: next_check ^^^
 #: last_checked ^^^
 #: source_id ^^^
 #: XXX ^^^
 # 
 #: next_check_id: AMNORDHAFEN-2015
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php
-#: last_checked: 2015-02-10
-#: next_check: 2015-10-01
-Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015	2::inwork 7653,14570 7527,14644 7486,14652
+#: last_checked: 2015-03-13 vvv
+#: next_check: 2015-10-01 vvv
+Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015	2::inwork 7753,14528 7695,14545 7653,14570 7527,14644 7486,14652
+Zufahrt zum Uferweg: gesperrt	2::inwork 7703,14582 7696,14577 7662,14579 7653,14570
+#: next_check ^^^
+#: last_checked ^^^
 # 
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage)
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45-181-136136549415/136549415/00119959/59-Anlagen/02/GA_1805_IV.pdf (mindestens bis Ende 2016)
-#: last_checked: 2015-03-03
+#: last_checked: 2015-03-18
 #: check_frequency: 180d
 Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelmarkt ist die Verbindung gesperrt	2::inwork 10308,11833 10374,11734
 # 
@@ -2674,11 +2683,11 @@ Bismarckstr.: Mittelstreifen während der Bauarbeiten nicht überquerbar	3nocross 
 #: next_check_id: INVALIDENFRIEDHOF-2014
 #: by: Birgit Schroeer
 #: confirmed_by: srt
-#: last_checked: 2015-02-27
-#: check_frequency: 7d
+#: last_checked: 2015-03-13
+#: next_check: 2015-03-28
 #: XXX siehe auch temp_blockings-Eintrag
 #: osm_watch: way id="76212442" version="7"
-Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.02.2015	2::inwork 8101,13901 8248,13659 8337,13541
+Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.03.2015	2::inwork 8119,13912 8101,13901 8248,13659 8337,13541
 # 
 #: last_checked: 2015-02-20
 #: check_frequency: 120d
@@ -2850,15 +2859,15 @@ Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?
 #: XXX geplante Fertigstellung (als Autostraße) im Dezember 2013
 #: XXX wrote Mail about current status (2013-11-05), no response
 # REMOVED --- osm_watch: way id="183406331" version="3"
-#: last_checked: 2015-02-10
+#: last_checked: 2015-03-13
 #: check_frequency: 120d
 Nordufer: Neubau	2:inwork 7427,14648 7212,14738
 # 
 # REMOVED (offensichtlich wieder passierbar) --- #: last_checked: 2013-06-04 --- #: next_check: 2013-08-01 --- #: XXX siehe auch Eintrag zur Friedrichsbrücke in handicap_s-orig --- Spreeufer: wegen Bauarbeiten an der Friedrichsbrücke gesperrt	2:inwork 10166,12777 10105,12855
 # 
-#: by: http://www.berliner-zeitung.de/verkehr/s-bahn-linie-21--baustelle-am-hauptbahnhof--ab-durch-die-mitte,10809298,20580624.html (ab 2012-10-15 für 30 Monate, also bis ca. 2015-04)
-#: last_checked: 2015-02-18
-#: next_check: 2015-04-01
+#: by: http://www.berliner-zeitung.de/verkehr/s-bahn-linie-21--baustelle-am-hauptbahnhof--ab-durch-die-mitte,10809298,20580624.html (ab 2012-10-15 für 30 Monate, also mindestens bis ca. 2015-04)
+#: last_checked: 2015-03-13
+#: check_frequency: 30d
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwork 8106,13130 8102,13304
 # 
 # REMOVED (wieder offen) --- #: last_checked: 2013-02-04 --- #: XXX Bauzäune waren im Dezember 2012 weg, aber im Februar 2013 wurde wieder gebaut --- Am Sudhaus: Bauarbeiten, manchmal noch gesperrt	2:inwork 12134,8172 12282,8204
@@ -2975,7 +2984,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: osm_watch: way id="158025179" version="2"
-#: last_checked: 2015-03-03
+#: last_checked: 2015-03-13
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 
