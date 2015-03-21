@@ -92,7 +92,7 @@ if (!$create && !-d $expected_dir) {
 if ($create) {
     plan 'no_plan';
 } else {
-    plan tests => 174 + scalar(@approx_tests)*4;
+    plan tests => 178 + scalar(@approx_tests)*4;
 }
 
 # XXX auch Test mit ! -small
@@ -100,6 +100,8 @@ if ($create) {
 use constant STREET   => 0;
 use constant MATCHINX => 1;
 use constant NOMATCH  => 2;
+
+use constant COORD_RX => qr{^[-+]?\d+,[-+]?\d+$};
 
 my @in_str;
 if (defined $in_str) {
@@ -322,11 +324,15 @@ for my $noextern (@extern_order) {
 	is(!!(grep { $_->[PLZ::LOOK_NAME] eq 'Leibnizstr.' } @{$res[0]}), 1,
 	   "`strasse' instead of `str.', complex house number")
 	    or diag $dump->(\@res);
+	like $res[0]->[0]->[PLZ::LOOK_COORD], COORD_RX, 'looks like coordinate'
+	    or diag $dump->(\@res);
 
 	@res = $plz_multi->look_loop(PLZ::split_street("Mühlenstraße 24 - 26"),
 				     @standard_look_loop_args);
 	is(!!(grep { $_->[PLZ::LOOK_NAME] eq 'Mühlenstr.' } @{$res[0]}), 1,
 	   "`straße' instead of `str.', complex house number with whitespace")
+	    or diag $dump->(\@res);
+	like $res[0]->[0]->[PLZ::LOOK_COORD], COORD_RX, 'looks like coordinate'
 	    or diag $dump->(\@res);
 
 	@res = $plz->look_loop(PLZ::split_street("Sanderstr. 29/30"),
