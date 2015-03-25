@@ -3568,17 +3568,7 @@ userdel	q4::inwork; 5018,12322 5133,12240
 ',
          'type' => 'handicap'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20150224.1645.401231.html',
-         'until' => 1426892399,
-         'text' => 'Waldowstr./Oberseestr.: Kreuzung gesperrt, Durchfahrt ggfs. nicht möglich, vom 16. bis 20. März 2015',
-         'from' => 1426374000,
-         'id' => 2683,
-         'data' => 'userdel	2::inwork 15761,15840 15856,15924 15703,15953
-userdel	2::inwork 15891,16041 15856,15924 16080,15830
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        {
@@ -3607,18 +3597,7 @@ userdel	2::inwork 15891,16041 15856,15924 16080,15830
          'type' => 'handicap',
          'id' => 2687
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.277824.php',
-         'until' => 1427151600,
-         'text' => 'Mollstraße: zwischen Karl-Liebknecht-Str. und Otto-Braun-Str. Sperrung Richtung Osten wegen Bauarbeiten, ggfs. Einschränkungen auch für Radfahrer, vom 20.03.2015 bis 23.03.2015',
-         'from' => 1426719600,
-         'id' => 2688,
-         'data' => '#: XXX ändert sich nach den Bauarbeiten etwas an der Wegführung für Radfahrer?
-#: next_check: 2015-03-24
-userdel	q4::inwork; 11160,13492 11216,13451 11270,13412 11276,13408 11308,13389 11409,13327 11451,13301
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'LS/721-F/15/031',
          'until' => 1472594400,
@@ -3629,12 +3608,23 @@ userdel	q4::inwork; 11160,13492 11216,13451 11270,13412 11276,13408 11308,13389 
 ',
          'type' => 'handicap'
        },
+       undef,
        {
-         'until' => 1427014800,
-         'text' => 'Schönerlinder Str.: zwischen Am Posseberg und Am Vorwerk komplett gesperrt, von Samstag 18 Uhr bis Sonntagmorgen ca. 10 Uhr',
-         'from' => 1426870800,
-         'id' => 2690,
-         'data' => 'userdel	2::inwork 12694,25696 12624,25570
+         'source_id' => 'IM_024429',
+         'until' => 1428199200,
+         'text' => 'Ehrlichstr.: zwischen Lehndorffstr. und Eginhardstr. Bauarbeiten, Fahrbahn gesperrt, 21.03.2015 04:30 Uhr bis 05.04.2015 04:00 Uhr',
+         'from' => 1426822200,
+         'id' => 2691,
+         'data' => 'userdel	q4::inwork 18615,8269 18528,8331 18461,8377 18391,8425 18322,8470
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1427752800,
+         'text' => 'Pichelswerder Str.: Brücke beschädigt, Straße gesperrt, evtl. vollständig, bis 30.03.2015',
+         'from' => 1427147207,
+         'id' => 2692,
+         'data' => 'userdel	2::inwork -2576,13777 -2669,13488
 ',
          'type' => 'gesperrt'
        }
