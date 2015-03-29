@@ -1635,7 +1635,7 @@ EOF
        text  => 'Augsburger Str. (Charlottenburg) in beiden Richtungen zwischen Joachimstaler Str. und Rankestr. Baustelle, Straße vollständig gesperrt (Kranarbeiten) (bis 17.03.2005)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 5627,10637 5471,10719
+userdel	2 5627,10637 5497,10719 5471,10719
 EOF
      },
      { from  => 1110063600, # 2005-03-06 00:00
@@ -8805,7 +8805,7 @@ EOF
        text  => 'Sarrazinstr.: zurzeit Einbahnstraße (Elsastr. bis Bundesallee; Durchfahrt in dieser Richtung) wegen Baustelle',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 5352,7428 5387,7433 5422,7461 5452,7493 5492,7543
+userdel	1::inwork 5352,7428 5387,7433 5419,7464 5450,7494 5492,7543
 EOF
      },
      { from  => 1181999685, # 2007-06-16 15:14
@@ -21246,13 +21246,13 @@ EOF
 userdel	2::inwork -739,6838 -927,6888
 EOF
      },
-     { from  => $isodate2epoch->("2014-04-24 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-04-27 23:59:59"),
+     { from  => $isodate2epoch->("2015-04-23 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-04-26 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 24, months => 4]],
-       text  => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 25.4.2013 bis 27.4.2013 ',
+       recurrences => [['yearly', days => 23, months => 4]],
+       text  => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 24.4.2015 bis 26.4.2015 ',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20140324.1415.395686.html',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.287680.php',
        data  => <<EOF,
 userdel	2::temp 22133,4644 22111,4562 22093,4499
 userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
@@ -21285,7 +21285,7 @@ EOF
        data  => <<EOF,
 #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
-#: last_checked: 2014-09-13
+#: last_checked: 2015-03-28
 #: check_frequency: 100d
 userdel	q2::inwork 5258,11285 5236,10994
 EOF
@@ -22639,7 +22639,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (eigentlich relativ gut passierbar, zumindest in Richtung Osten) --- #: XXX wie sieht die Kreuzungssituation danach aus? --- #: last_checked: 2014-04-08
-userdel	q4::inwork 5443,14028 5336,14044 5306,14061
+userdel	q4::inwork 5443,14028 5322,14044 5306,14061
 EOF
      },
      { from  => undef, # 
@@ -23221,13 +23221,12 @@ EOF
 userdel	q4::inwork; 16514,15092 16430,15168
 EOF
      },
-     { from  => $isodate2epoch->("2014-08-21 14:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-08-24 23:59:59"),
+     { from  => $isodate2epoch->("2015-08-20 14:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-08-23 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 21, months => 8]],
-       text  => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 22.8.2014 bis 24.8.2014',
+       recurrences => [['yearly', days => 20, months => 8]],
+       text  => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 21.8.2015 bis 23.8.2015',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157630.php',
        data  => <<EOF,
 userdel	2::temp 22133,4644 22111,4562 22093,4499
 userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
@@ -23418,7 +23417,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2014-12-06
+#: last_checked: 2015-03-28
 #: check_frequency: 90d
 userdel	q3::inwork 4503,10497 4485,10307
 EOF
@@ -23468,16 +23467,11 @@ userdel	q3::inwork 4638,10162 4623,10066 4609,9949
 EOF
      },
      { from  => 1412021931, # 2014-09-29 22:18
-       until => $isodate2epoch->("2015-03-28 23:59:59"), # 1424473200, # 2015-02-21 00:00
+       until => 1427482278, # $isodate2epoch->("2015-03-28 23:59:59"), # 1424473200, # 2015-02-21 00:00
        text  => 'Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.03.2015',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: INVALIDENFRIEDHOF-2014
-#: by: Birgit Schroeer
-#: confirmed_by: srt
-#: XXX vielleicht wird hier asphaltiert?
-#: last_checked: 2015-03-06
-#: next_check: 2015-03-28
+# REMOVED --- #: next_check_id: INVALIDENFRIEDHOF-2014 --- #: by: Birgit Schroeer --- #: confirmed_by: srt --- #: XXX vielleicht wird hier asphaltiert? --- #: last_checked: 2015-03-06 --- #: next_check: 2015-03-28
 userdel	2::inwork 8101,13901 8248,13659 8337,13541
 EOF
      },
@@ -23510,7 +23504,7 @@ userdel	q4::inwork; 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065
 EOF
      },
      { from  => 1412481600, # 2014-10-05 06:00
-       until => 1427896800, # 2015-04-01 16:00
+       until => 1427482432, # 1427896800, # 2015-04-01 16:00
        text  => 'Gartenstr.: Baustelle zwischen Invalidenstr. und Tieckstr., Fahrbahn Richtung Torstr. gesperrt (kurzer Abschnitt), außerdem Einbahnstraßenregelung in der Tieckstr., 06.10.2014 06:00 Uhr bis 01.04.2015 16:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_023111',
@@ -23721,7 +23715,7 @@ userdel	2::inwork 30910,13101 30982,12947
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1427555693, # XXX
        text  => 'Handjerystraße: zwischen Schnackenburgstraße und Sarrazinstraße Sperrung der Fahrbahn, Ende der Sperrung unbekannt ',
        type  => 'handicap',
        data  => <<EOF,
@@ -23807,7 +23801,8 @@ EOF
        text  => 'Augsburger Str.: Bauarbeiten, Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2014-12-12
+#: last_checked: 2015-03-28
+#: next_check: 2015-06-28
 userdel	q4::inwork; 5866,10492 5780,10542 5627,10637
 EOF
      },
@@ -24005,6 +24000,44 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork -2576,13777 -2669,13488
+EOF
+     },
+     { from  => 1427484862, # 2015-03-27 20:34
+       until => 1427925600, # 2015-04-02 00:00
+       text  => 'Chausseestr. und Invalidenstr.: Sperrung der Fahrbahn wegen Bauarbeiten bis zum 01.04.2015',
+       type  => 'handicap',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5540.html',
+       data  => <<EOF,
+userdel	q3::inwork 8870,13926 8935,13844
+userdel	q2::inwork; 8935,13844 8842,13798
+EOF
+     },
+     { from  => 1427752800, # 2015-03-31 00:00
+       until => 1438380000, # 2015-08-01 00:00
+       text  => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, gesperrt Richtung Osten, ab 01.04.2015',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX wann wird die Einbahnstraßenregelung aufgehoben?
+#: next_check: 2015-07-23
+userdel	q4::inwork; 8870,13926 9011,14019
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Zillestr.: zwischen Richard-Wagner-Str. und Wilmersdorfer Str. Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten, Ende der Sperrung unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2015-03-28
+#: check_frequency: 90d
+userdel	q4::inwork; 3807,11859 3666,11855
+EOF
+     },
+     { from  => undef, # 
+       until => $isodate2epoch->("2015-12-01 00:00:00"), # undef, # XXX
+       text  => 'Dickhardstr.: Bauarbeiten an der Rheinstr., direkte Durchfahrt gesperrt, Ende der Bauarbeiten im Dezember 2015',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q3::inwork 5824,6974 5817,7223
 EOF
      },
     );
