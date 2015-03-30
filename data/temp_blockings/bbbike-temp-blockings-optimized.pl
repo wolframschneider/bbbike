@@ -2929,7 +2929,27 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.287680.php',
+         'data' => 'userdel	2::temp 22133,4644 22111,4562 22093,4499
+userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
+',
+         'periodic' => 1,
+         'until' => 1430085599,
+         'from' => 1429740000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              23,
+                              'months',
+                              4
+                            ]
+                          ],
+         'text' => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 24.4.2015 bis 26.4.2015 ',
+         'id' => 2419,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        {
@@ -2940,7 +2960,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'id' => 2422,
          'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
-#: last_checked: 2014-09-13
+#: last_checked: 2015-03-28
 #: check_frequency: 100d
 userdel	q2::inwork 5258,11285 5236,10994
 ',
@@ -3315,7 +3335,26 @@ userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 22133,4644 22111,4562 22093,4499
+userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
+',
+         'periodic' => 1,
+         'until' => 1440367199,
+         'from' => 1440072000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              20,
+                              'months',
+                              8
+                            ]
+                          ],
+         'text' => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 21.8.2015 bis 23.8.2015',
+         'type' => 'gesperrt',
+         'id' => 2610
+       },
        undef,
        undef,
        undef,
@@ -3341,7 +3380,7 @@ userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
          'from' => undef,
          'id' => 2630,
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2014-12-06
+#: last_checked: 2015-03-28
 #: check_frequency: 90d
 userdel	q3::inwork 4503,10497 4485,10307
 ',
@@ -3352,35 +3391,11 @@ userdel	q3::inwork 4503,10497 4485,10307
        undef,
        undef,
        undef,
-       {
-         'until' => 1427583599,
-         'text' => 'Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.03.2015',
-         'from' => 1412021931,
-         'id' => 2636,
-         'data' => '#: next_check_id: INVALIDENFRIEDHOF-2014
-#: by: Birgit Schroeer
-#: confirmed_by: srt
-#: XXX vielleicht wird hier asphaltiert?
-#: last_checked: 2015-03-06
-#: next_check: 2015-03-28
-userdel	2::inwork 8101,13901 8248,13659 8337,13541
-',
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_023111',
-         'until' => 1427896800,
-         'text' => 'Gartenstr.: Baustelle zwischen Invalidenstr. und Tieckstr., Fahrbahn Richtung Torstr. gesperrt (kurzer Abschnitt), außerdem Einbahnstraßenregelung in der Tieckstr., 06.10.2014 06:00 Uhr bis 01.04.2015 16:00 Uhr ',
-         'from' => 1412481600,
-         'id' => 2640,
-         'data' => '	q2::inwork; 9514,13826 9383,13986
-	q3::inwork; 9514,13826 9376,13765
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        {
          'source_id' => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/freybruecke/de/bau.shtml',
          'until' => 1448636400,
@@ -3450,16 +3465,7 @@ userdel	2::inwork -3197,11554 -3075,11510
          'type' => 'handicap'
        },
        undef,
-       {
-         'until' => undef,
-         'text' => 'Handjerystraße: zwischen Schnackenburgstraße und Sarrazinstraße Sperrung der Fahrbahn, Ende der Sperrung unbekannt ',
-         'from' => undef,
-         'id' => 2663,
-         'data' => '#: by: fritz
-userdel	q4::inwork 5635,7660 5636,7540
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3482,7 +3488,8 @@ userdel	q4::inwork; 9559,11715 9692,11732
          'text' => 'Augsburger Str.: Bauarbeiten, Einbahnstraßenregelung',
          'from' => undef,
          'id' => 2672,
-         'data' => '#: last_checked: 2014-12-12
+         'data' => '#: last_checked: 2015-03-28
+#: next_check: 2015-06-28
 userdel	q4::inwork; 5866,10492 5780,10542 5627,10637
 ',
          'type' => 'handicap'
@@ -3627,6 +3634,48 @@ userdel	q4::inwork; 5018,12322 5133,12240
          'data' => 'userdel	2::inwork -2576,13777 -2669,13488
 ',
          'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5540.html',
+         'until' => 1427925600,
+         'text' => 'Chausseestr. und Invalidenstr.: Sperrung der Fahrbahn wegen Bauarbeiten bis zum 01.04.2015',
+         'from' => 1427484862,
+         'id' => 2693,
+         'data' => 'userdel	q3::inwork 8870,13926 8935,13844
+userdel	q2::inwork; 8935,13844 8842,13798
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1438380000,
+         'text' => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, gesperrt Richtung Osten, ab 01.04.2015',
+         'from' => 1427752800,
+         'id' => 2694,
+         'data' => '#: XXX wann wird die Einbahnstraßenregelung aufgehoben?
+#: next_check: 2015-07-23
+userdel	q4::inwork; 8870,13926 9011,14019
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Zillestr.: zwischen Richard-Wagner-Str. und Wilmersdorfer Str. Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten, Ende der Sperrung unbekannt',
+         'from' => undef,
+         'id' => 2695,
+         'data' => '#: last_checked: 2015-03-28
+#: check_frequency: 90d
+userdel	q4::inwork; 3807,11859 3666,11855
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1448924400,
+         'text' => 'Dickhardstr.: Bauarbeiten an der Rheinstr., direkte Durchfahrt gesperrt, Ende der Bauarbeiten im Dezember 2015',
+         'from' => undef,
+         'id' => 2696,
+         'data' => 'userdel	q3::inwork 5824,6974 5817,7223
+',
+         'type' => 'handicap'
        }
      
 );
