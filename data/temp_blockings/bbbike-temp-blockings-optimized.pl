@@ -53,6 +53,34 @@ push @temp_blocking,
        undef,
        undef,
        undef,
+       {
+         'data' => '#: by: http://www.myfest36.de/
+userdel	2::temp 11763,10635 11722,10533 11949,10414
+userdel	2::temp 11556,10869 11770,10774 11760,10732 11781,10696 11763,10635 11505,10744 11556,10869 11589,10947 11640,11067
+userdel	2::temp 11958,11045 11897,10887 11841,10747 11824,10708 11781,10696
+userdel	2::temp 11805,10899 11803,10857
+userdel	2::temp 11275,10723 11301,10783 11329,10785 11365,10791 11403,10782 11505,10744 11463,10642 11722,10533
+userdel	2::temp 11841,10747 11770,10774 11799,10848
+userdel	2::temp 11463,10642 11275,10723 11234,10739 11159,10769
+userdel auto	3 11258,10682 11275,10723 11253,10778
+userdel auto	3 11253,10778 11275,10723 11258,10682
+',
+         'periodic' => 1,
+         'until' => 1430517599,
+         'from' => 1430388000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'MyFest: Oranienstraﬂe, Mariannenplatz und umliegende Straﬂen kˆnnen schwer passierbar sein, 1. Mai 2015',
+         'type' => 'gesperrt',
+         'id' => 45
+       },
        undef,
        undef,
        undef,
@@ -735,11 +763,49 @@ push @temp_blocking,
        undef,
        undef,
        undef,
+       {
+         'source_id' => 'http://www.ms-event-agentur.com/primavera%202013.html',
+         'data' => 'userdel	2::temp 7107,9030 7044,9163 7022,9211 7006,9282
+userdel	2::temp 6945,9142 7044,9163
+',
+         'periodic' => 1,
+         'until' => 1430690399,
+         'from' => 1430431200,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              24,
+                              'months',
+                              1
+                            ]
+                          ],
+         'text' => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straﬂe vollst‰ndig gesperrt (2.5.2015 und 3.5.2015)',
+         'id' => 728,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
-       undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20150404
+userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
+',
+         'periodic' => 1,
+         'until' => 1443995999,
+         'from' => 1443823200,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              5,
+                              'months',
+                              10
+                            ]
+                          ],
+         'text' => 'Schˆneberger K¸rbisfest, Akazienstraﬂe gesperrt, 3. und 4.10.2015',
+         'type' => 'gesperrt',
+         'id' => 731
+       },
        undef,
        undef,
        undef,
@@ -2355,7 +2421,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geˆffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tags¸ber mˆglich (im M‰rz von 6.00 bis 19.00 Uhr). Achtung: das Verlassen des Gel‰ndes nach Sonnenuntergang ist f¸r Tandems und Anh‰nger schwierig oder gar nicht mˆglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tags¸ber mˆglich (im April von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Gel‰ndes nach Sonnenuntergang ist f¸r Tandems und Anh‰nger schwierig oder gar nicht mˆglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -2954,14 +3020,13 @@ userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,464
        undef,
        {
          'source_id' => 'IM_019747',
-         'until' => 1427727600,
-         'text' => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende M‰rz 2015) ',
+         'until' => 1429714800,
+         'text' => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende April 2015) ',
          'from' => 1366740818,
          'id' => 2422,
          'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
 #: last_checked: 2015-03-28
-#: check_frequency: 100d
 userdel	q2::inwork 5258,11285 5236,10994
 ',
          'type' => 'handicap'
@@ -2971,7 +3036,26 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.ms-event-agentur.com/seite18.html',
+         'data' => 'userdel	2::temp 6244,8597 6339,8644 6454,8653
+',
+         'periodic' => 1,
+         'until' => 1431280800,
+         'from' => 1431075600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              4,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Schˆneberger Mai- und Spargelfest am 9. und 10. Mai 2015 in der Freiherr-vom-Stein-Straﬂe',
+         'id' => 2428,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3242,7 +3326,31 @@ userdel	q3::inwork; 13555,15596 13459,15653
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2977174-2970764-1-mai-kundgebung-des-dgb.html',
+         'data' => 'userdel	2::inwork 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302
+userdel	2::inwork 8573,12325 8540,12420
+userdel	2::inwork 8303,12216 8344,12221 8538,12245 8610,12254
+userdel	2::inwork 8089,12190 8214,12205
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+',
+         'periodic' => 1,
+         'until' => 1430524800,
+         'from' => 1430172000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              4
+                            ]
+                          ],
+         'text' => 'Straﬂe des 17. Juni und Ebertstraﬂe: Veranstaltung (Kundgebung und Kinderfest des DGB), am 1. Mai 2015',
+         'id' => 2565,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3291,8 +3399,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
          'text' => 'Siemensstraﬂe zwischen Wilhelminenhofstraﬂe und Edisonstraﬂe: Einbahnstraﬂe wegen Bauarbeiten, in Richtung Osten gesperrt, vom 12.03.2015 bis 16.06.2015',
          'from' => 1426057200,
          'id' => 2587,
-         'data' => '#: XXX eventuell f¸r Radfahrer nur an der Wilhelminenhofstraﬂe gesperrt, ab Wattstr. vielleicht schon offen
-userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
+         'data' => 'userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
 ',
          'type' => 'handicap'
        },
@@ -3423,16 +3530,7 @@ userdel	2::inwork -3197,11554 -3075,11510
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_023111',
-         'until' => 1427896800,
-         'text' => 'Gartenstr.: Baustelle vor der Invalidenstr., Fahrbahn in Richtung S¸den gesperrt, 06.10.2014 06:00 Uhr bis 01.04.2015 16:00 Uhr',
-         'from' => 1412481600,
-         'id' => 2648,
-         'data' => 'userdel	q2::inwork; 9224,14169 9383,13986
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -3454,16 +3552,7 @@ userdel	2::inwork -3197,11554 -3075,11510
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_023373',
-         'until' => 1442066400,
-         'text' => 'Pichelswerderstr.: Baustelle, Fahrbahn Richtung Ruhlebener Str. zwischen Freiheit und Gewerbehof gesperrt, vom 10.11.2014 bis 12.09.2015',
-         'from' => 1415487600,
-         'id' => 2661,
-         'data' => 'userdel	q4::inwork; -2576,13777 -2669,13488
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3478,7 +3567,7 @@ userdel	2::inwork -3197,11554 -3075,11510
          'text' => 'Kronenstr.: Einbahnstraﬂenregelung zwischen Charlottenstr. und Markgrafenstr., gesperrt Richtung Osten, Dauer unbekannt',
          'from' => undef,
          'id' => 2671,
-         'data' => '#: last_checked: 2015-03-13
+         'data' => '#: last_checked: 2015-04-01
 userdel	q4::inwork; 9559,11715 9692,11732
 ',
          'type' => 'handicap'
@@ -3618,8 +3707,8 @@ userdel	q4::inwork; 5018,12322 5133,12240
        undef,
        {
          'source_id' => 'IM_024429',
-         'until' => 1428199200,
-         'text' => 'Ehrlichstr.: zwischen Lehndorffstr. und Eginhardstr. Bauarbeiten, Fahrbahn gesperrt, 21.03.2015 04:30 Uhr bis 05.04.2015 04:00 Uhr',
+         'until' => 1428890400,
+         'text' => 'Ehrlichstr.: zwischen Lehndorffstr. und Eginhardstr. Bauarbeiten, Fahrbahn gesperrt, 21.03.2015 04:30 Uhr bis 13.04.2015 04:00 Uhr',
          'from' => 1426822200,
          'id' => 2691,
          'data' => 'userdel	q4::inwork 18615,8269 18528,8331 18461,8377 18391,8425 18322,8470
@@ -3627,36 +3716,18 @@ userdel	q4::inwork; 5018,12322 5133,12240
          'type' => 'handicap'
        },
        {
-         'until' => 1427752800,
-         'text' => 'Pichelswerder Str.: Br¸cke besch‰digt, Straﬂe gesperrt, evtl. vollst‰ndig, bis 30.03.2015',
+         'source_id' => 'IM_024458',
+         'until' => 1442066400,
+         'text' => 'Pichelswerder Str.: Br¸cke besch‰digt, Straﬂe gesperrt, evtl. vollst‰ndig, bis Mitte September 2015',
          'from' => 1427147207,
          'id' => 2692,
-         'data' => 'userdel	2::inwork -2576,13777 -2669,13488
+         'data' => '#: note: laut fritz nur bis Anfang Juli 2015 gesperrt
+userdel	2::inwork -2576,13777 -2669,13488
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5540.html',
-         'until' => 1427925600,
-         'text' => 'Chausseestr. und Invalidenstr.: Sperrung der Fahrbahn wegen Bauarbeiten bis zum 01.04.2015',
-         'from' => 1427484862,
-         'id' => 2693,
-         'data' => 'userdel	q3::inwork 8870,13926 8935,13844
-userdel	q2::inwork; 8935,13844 8842,13798
-',
-         'type' => 'handicap'
-       },
-       {
-         'until' => 1438380000,
-         'text' => 'Zinnowitzer Str.: Einbahnstraﬂenregelung zwischen Chausseestr. und Am Nordbahnhof, gesperrt Richtung Osten, ab 01.04.2015',
-         'from' => 1427752800,
-         'id' => 2694,
-         'data' => '#: XXX wann wird die Einbahnstraﬂenregelung aufgehoben?
-#: next_check: 2015-07-23
-userdel	q4::inwork; 8870,13926 9011,14019
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        {
          'until' => undef,
          'text' => 'Zillestr.: zwischen Richard-Wagner-Str. und Wilmersdorfer Str. Bauarbeiten, Einbahnstraﬂenregelung, offen Richtung Osten, Ende der Sperrung unbekannt',

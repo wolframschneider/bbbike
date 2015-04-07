@@ -364,11 +364,11 @@ EOF
 userdel	2 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5434,13398 5368,13406 5248,13434
 EOF
      },
-     { from  => $isodate2epoch->("2014-04-30 12:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-05-01 23:59:59"),
+     { from  => $isodate2epoch->("2015-04-30 12:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-05-01 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 1, months => 5]],
-       text  => 'MyFest 2014: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2014',
+       text  => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2015',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.myfest36.de/
@@ -6238,12 +6238,13 @@ EOF
 userdel	1::inwork 4367,11996 4345,11710
 EOF
      },
-     { from  => $isodate2epoch->("2014-05-23 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-05-25 23:59:59"),
+     { from  => $isodate2epoch->("2015-05-01 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-05-03 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 24, months => 5]],
-       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (24.5.2014 und 25.5.2014)',
+       recurrences => [['yearly', days => 24, months => 1]],
+       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (2.5.2015 und 3.5.2015)',
        type  => 'gesperrt',
+       source_id => 'http://www.ms-event-agentur.com/primavera%202013.html', # 2013 in der URL verwirrt nur, die Seite nennt das Jahr 2015
        data  => <<EOF,
 userdel	2::temp 7107,9030 7044,9163 7022,9211 7006,9282
 userdel	2::temp 6945,9142 7044,9163
@@ -6266,14 +6267,14 @@ EOF
 userdel	2::inwork 17729,8850 17879,8773 17929,8742 17997,8695 18009,8687 18086,8634 18151,8589
 EOF
      },
-     { from  => $isodate2epoch->("2014-10-04 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-10-05 23:59:59"),
+     { from  => $isodate2epoch->("2015-10-03 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-10-04 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 5, months => 10]],
-       text  => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 4. und 5.10.2014',
+       text  => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 3. und 4.10.2015',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: http://www.ms-event-agentur.com/seite22.html
+#: by: http://www.ms-event-agentur.com/seite22.html?date=20150404
 userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
 EOF
      },
@@ -6611,7 +6612,7 @@ EOF
        text  => 'Vollsperrung der Oberspreestraße zwischen Freystadter Weg und Ottomar-Geschke-Straße und Spindlersfelder Straße vom Sonnabend, den 04.11.2006, 5:00 Uhr bis Montag, den 06.11.2006, 5:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 20949,4775 20994,4761 21089,4731 21170,4706 21332,4655
+userdel	2::inwork 20949,4775 20994,4761 21108,4725 21170,4706 21332,4655
 EOF
      },
      { from  => 1163800165, # 2006-11-17 22:49
@@ -8978,7 +8979,7 @@ EOF
      { from  => $isodate2epoch->("2014-05-24 15:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2014-05-26 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 28, months => 4]], # Kann allerdings auch erst im Mai oder Juni stattfinden
+       # recurrences => [['yearly', days => 28, months => 4]], # Kann allerdings auch erst im Mai oder Juni stattfinden --- fraglich, ob es 2015 überhaupt stattfindet
        text  => 'Mehringdamm (Kreuzberg) in Richtung Tempelhof, zwischen Kreuzbergstr. und Dudenstr. Veranstaltung (Seifenkistenrennen am 26. Mai 2014), Fahrtrichtung gesperrt',
        type  => 'gesperrt',
        source_id => 'http://www.xhain.info/termine/seifenkistenrennen-mehringdamm.htm',
@@ -21278,15 +21279,14 @@ userdel	1::inwork -12655,-1714 -12730,-1681 -12758,-1654
 EOF
      },
      { from  => 1366740818, # 2013-04-23 20:13
-       until => 1427727600, # 2015-03-30 17:00
-       text  => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende März 2015) ',
+       until => $isodate2epoch->("2015-04-22 17:00:00"), # 1427727600, # 2015-03-30 17:00
+       text  => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende April 2015) ',
        type  => 'handicap',
        source_id => 'IM_019747',
        data  => <<EOF,
 #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
 #: last_checked: 2015-03-28
-#: check_frequency: 100d
 userdel	q2::inwork 5258,11285 5236,10994
 EOF
      },
@@ -21374,13 +21374,13 @@ userdel auto	3 7039,12314 7383,12095 7429,12070
 userdel auto	3 7823,12120 7816,12150 7875,12363
 EOF
      },
-     { from  => $isodate2epoch->("2014-05-09 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-05-11 20:00:00"),
+     { from  => $isodate2epoch->("2015-05-08 11:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-05-10 20:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 4, months => 5]],
-       text  => 'Schöneberger Mai- und Spargelfest am 10. und 11. Mai 2014 in der Freiherr-vom-Stein-Straße',
+       text  => 'Schöneberger Mai- und Spargelfest am 9. und 10. Mai 2015 in der Freiherr-vom-Stein-Straße',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20140429.1330.396763.html',
+       source_id => 'http://www.ms-event-agentur.com/seite18.html',
        data  => <<EOF,
 userdel	2::temp 6244,8597 6339,8644 6454,8653
 EOF
@@ -22758,13 +22758,13 @@ EOF
 userdel	2::inwork 48229,74776 48296,74641
 EOF
      },
-     { from  => 1398636000, # 2014-04-28 00:00
-       until => 1398988800, # 2014-05-02 02:00
+     { from  => $isodate2epoch->("2015-04-28 00:00:00"), # 1398636000, # 2014-04-28 00:00
+       until => $isodate2epoch->("2015-05-02 02:00:00"), # 1398988800, # 2014-05-02 02:00
        periodic => 1,
        recurrences => [['yearly', days => 30, months => 4]],
-       text  => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung und Kinderfest des DGB), am 1. Mai 2014',
+       text  => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung und Kinderfest des DGB), am 1. Mai 2015',
        type  => 'gesperrt',
-       source_id => 'IM_021803',
+       source_id => 'http://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2977174-2970764-1-mai-kundgebung-des-dgb.html',
        data  => <<EOF,
 userdel	2::inwork 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302
 userdel	2::inwork 8573,12325 8540,12420
@@ -22991,7 +22991,6 @@ EOF
        type  => 'handicap',
        source_id => 'IM_024332',
        data  => <<EOF,
-#: XXX eventuell für Radfahrer nur an der Wilhelminenhofstraße gesperrt, ab Wattstr. vielleicht schon offen
 userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
 EOF
      },
@@ -23697,7 +23696,7 @@ userdel	q4::inwork 4111,24488 3963,24559 3842,24556
 EOF
      },
      { from  => $isodate2epoch->("2014-11-09 00:00:00"), # 1415401200, # 2014-11-08 00:00
-       until => $isodate2epoch->("2015-09-12 16:00:00"), # 1442354399, # 2015-09-15 23:59
+       until => 1427741681, # -> anderer Eintrag # $isodate2epoch->("2015-09-12 16:00:00"), # 1442354399, # 2015-09-15 23:59
        text  => 'Pichelswerderstr.: Baustelle, Fahrbahn Richtung Ruhlebener Str. zwischen Freiheit und Gewerbehof gesperrt, vom 10.11.2014 bis 12.09.2015',
        type  => 'handicap',
        source_id => 'IM_023373',
@@ -23792,7 +23791,7 @@ EOF
        text  => 'Kronenstr.: Einbahnstraßenregelung zwischen Charlottenstr. und Markgrafenstr., gesperrt Richtung Osten, Dauer unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2015-03-13
+#: last_checked: 2015-04-01
 userdel	q4::inwork; 9559,11715 9692,11732
 EOF
      },
@@ -23986,8 +23985,8 @@ userdel	2::inwork 12694,25696 12624,25570
 EOF
      },
      { from  => 1426822200, # 2015-03-20 04:30
-       until => 1428199200, # 2015-04-05 04:00
-       text  => 'Ehrlichstr.: zwischen Lehndorffstr. und Eginhardstr. Bauarbeiten, Fahrbahn gesperrt, 21.03.2015 04:30 Uhr bis 05.04.2015 04:00 Uhr',
+       until => $isodate2epoch->("2015-04-13 04:00:00"), # 1428199200, # 2015-04-05 04:00
+       text  => 'Ehrlichstr.: zwischen Lehndorffstr. und Eginhardstr. Bauarbeiten, Fahrbahn gesperrt, 21.03.2015 04:30 Uhr bis 13.04.2015 04:00 Uhr',
        type  => 'handicap',
        source_id => 'IM_024429',
        data  => <<EOF,
@@ -23995,15 +23994,17 @@ userdel	q4::inwork 18615,8269 18528,8331 18461,8377 18391,8425 18322,8470
 EOF
      },
      { from  => 1427147207, # 2015-03-23 22:46
-       until => 1427752800, # 2015-03-31 00:00
-       text  => 'Pichelswerder Str.: Brücke beschädigt, Straße gesperrt, evtl. vollständig, bis 30.03.2015',
+       until => $isodate2epoch->("2015-09-12 16:00:00"), # 1427752800, # 2015-03-31 00:00
+       text  => 'Pichelswerder Str.: Brücke beschädigt, Straße gesperrt, evtl. vollständig, bis Mitte September 2015',
        type  => 'gesperrt',
+       source_id => 'IM_024458',
        data  => <<EOF,
+#: note: laut fritz nur bis Anfang Juli 2015 gesperrt
 userdel	2::inwork -2576,13777 -2669,13488
 EOF
      },
      { from  => 1427484862, # 2015-03-27 20:34
-       until => 1427925600, # 2015-04-02 00:00
+       until => 1427911348, # 1427925600, # 2015-04-02 00:00
        text  => 'Chausseestr. und Invalidenstr.: Sperrung der Fahrbahn wegen Bauarbeiten bis zum 01.04.2015',
        type  => 'handicap',
        source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5540.html',
@@ -24013,7 +24014,7 @@ userdel	q2::inwork; 8935,13844 8842,13798
 EOF
      },
      { from  => 1427752800, # 2015-03-31 00:00
-       until => 1438380000, # 2015-08-01 00:00
+       until => 1427911510, # -> handicap_s-orig # 1438380000, # 2015-08-01 00:00
        text  => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, gesperrt Richtung Osten, ab 01.04.2015',
        type  => 'handicap',
        data  => <<EOF,

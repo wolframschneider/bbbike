@@ -5,6 +5,8 @@
 Kreuzung Sewanstr./Am Tierpark	q1; 18631,10167 18647,10172
 Am Tierpark, linker Gehweg	q1; 18647,10172 18715,10003
 Treskowallee, linker Gehweg	q1; 18715,10003 18748,9922
+Treskowallee, linker Gehweg	q3; 18567,8041 18642,8169 18676,8236
+Treskowallee, linker Gehweg	q3; 18650,8111 18406,7760
 Kreuzung Gregoroviusweg/Treskowallee	q1; 18748,9922 18742,9903
 Alt-Friedrichsfelde, linker Gehweg	q2; 19735,11721 19005,11767 18778,11742 18624,11712 18520,11685 18216,11656
 Alt-Friedrichsfelde, linker Gehweg	q2; 18626,11742 18624,11712
@@ -62,6 +64,6 @@ Wilhelmsruher Damm, linker Geh/Radweg bis zur Fuﬂg‰ngerampel	q3; 5599,21025 5525
 Frankfurter Allee, linker Gehweg bis zur Ampel	q3; 15717,12010 15670,12022
 #: next_check_id: OTTOBRAUN-2015
 #: XXX Bauarbeiten, wie wird es danach aussehen?
-#: last_checked: 2015-03-05
+#: last_checked: 2015-04-01
 #: check_frequency: 90d
 Otto-Braun-Str., linker Gehweg	q3; 11352,13180 11451,13301

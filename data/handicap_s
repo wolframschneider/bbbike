@@ -26,6 +26,7 @@ Caroline-Michaelis-Str.: Bauarbeiten, Zufahrt zur Invalidenstr. umst‰ndlich	q4::
 Invalidenstr. (Mitte): Baustelle, Fahrbahn zwischen Eichendorffstr. und Gartenstr. gesperrt	q4::inwork 9383,13986 9285,13965 9274,13963 9203,13953
 Invalidenstr. (Mitte): Baustelle, Fahrbahn in Richtung Gartenstr. zwischen Caroline-Michaelis-Str. und Eichendorffstr. gesperrt	q4::inwork; 9151,13941 9203,13953
 Invalidenstr. (Mitte): Baustelle, Richtung Alt-Moabit zwischen Caroline-Michaelis-Str. und und Hessische Str. gesperrt	q4::inwork; 9151,13941 9085,13919 8935,13844
+Zinnowitzer Str.: Einbahnstraﬂenregelung zwischen Chausseestr. und Am Nordbahnhof, gesperrt Richtung Osten, bis 15. August 2015	q4::inwork; 8870,13926 9011,14019
 Heidestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 8048,13578 8092,13467
 Margarete-Steffin-Str.: Fahrbahn wegen Bauarbeiten teilweise gesperrt (Sackgasse!), Ausweichen auf Gehweg	q3::inwork 8315,13181 8406,13127
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9882,12259 9876,12298
@@ -618,7 +619,7 @@ Lemgoer Str.: Fuﬂg‰nger, Bordsteine	q2 14341,17030 14331,17016 14328,17011
 (Uferweg am Kanal): gemeinsamer Rad- und Gehweg	q1 16425,6445 16275,6275 16263,6248 16098,6134 16065,6126 16049,6121
 Am Haselbusch: Radfahren verboten, ggfs. schieben	q1 17411,4979 17356,5011
 (Allmersweg - Groﬂ-Berliner Damm): Fuﬂg‰nger, Bordsteine	q3 17789,5189 17726,5166
-Sportfliegerstr.: drei Bodenschwellen, nicht umfahrbar	q2 18157,4742 18343,4545
+Sportfliegerstr.: vier Bodenschwellen, nicht umfahrbar	q2 18157,4742 18341,4543
 Karl-Otto-Reinsch-Str.: Fuﬂg‰nger	q1 19603,3207 19524,3286
 Brook-Taylor-Str.: Fuﬂg‰ngerzone	q1 19146,2975 19101,3028 19015,3129
 Alexander-von-Humboldt-Weg: Fuﬂg‰ngerzone	q1 19015,3129 18892,3256
@@ -1397,7 +1398,7 @@ zur M¸ller-Breslau-Str.: flache Rampe	q2 5756,11618 5725,11644
 Urselweg: flache Bordsteinkante	q1 -802,2914 -775,2854 -783,2837
 (Hampstedtstr. - Schneckenbr¸cke): einige Fuﬂg‰nger	q1 1641,2914 1642,2937 1575,3054 1557,3086 1682,3168 1689,3189 1755,3229 1802,3235
 Parkplatz Einkaufszentrum: Parkplatzverkehr	q2 -2195,3564 -2173,3513 -2164,3488
-(Warener Str. - Unfallkrankenhaus Berlin): Krankenhausgel‰nde, Fuﬂg‰nger	q4 21388,12785 21401,12773 21520,12741
+(Warener Str. - Unfallkrankenhaus Berlin): Krankenhausgel‰nde, Fuﬂg‰nger	q3 21388,12785 21401,12773 21520,12741
 (Altentreptower Str. - Unfallkrankenhaus Berlin): Fuﬂg‰nger	q1 21400,12135 21401,12155 21403,12230 21435,12390 21477,12584 21489,12608 21520,12741
 (zum Freibad Plˆtzensee): Fuﬂg‰nger	q3 5321,14978 5323,15030 5310,15089 5252,15182
 (Freiheitsweg - S-Bhf. Alt-Reinickendorf): einige Fuﬂg‰nger	q1 6558,18947 6564,19064
@@ -1459,6 +1460,7 @@ Am Murellenteich: Bordstein	q3 -440,12767 -408,12766
 (Am Nordhafen - Uferweg am Nordhafen): Fuﬂg‰nger, Steigung	q2; 7653,14570 7662,14579 7696,14577 7703,14582
 Kelheimer Str.: einige Fuﬂg‰nger	q2 5894,10287 5898,10318
 W¸rzburger Str.: einige Fuﬂg‰nger, Bordstein	q3 5898,10318 5907,10347
+Wilhelm-Hoff-Str.: einige Fuﬂg‰nger, kurvig	q1 19057,3422 19033,3397
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Sch¸ler	q2 7242,8586 7288,8635
@@ -2382,6 +2384,8 @@ Seekorso: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; -8339,65
 Kreuzung Sewanstr./Am Tierpark	q1::igndisp; 18631,10167 18647,10172
 Am Tierpark, linker Gehweg	q1::igndisp; 18647,10172 18715,10003
 Treskowallee, linker Gehweg	q1::igndisp; 18715,10003 18748,9922
+Treskowallee, linker Gehweg	q3::igndisp; 18567,8041 18642,8169 18676,8236
+Treskowallee, linker Gehweg	q3::igndisp; 18650,8111 18406,7760
 Kreuzung Gregoroviusweg/Treskowallee	q1::igndisp; 18748,9922 18742,9903
 Alt-Friedrichsfelde, linker Gehweg	q2::igndisp; 19735,11721 19005,11767 18778,11742 18624,11712 18520,11685 18216,11656
 Alt-Friedrichsfelde, linker Gehweg	q2::igndisp; 18626,11742 18624,11712
