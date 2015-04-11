@@ -333,7 +333,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6163 (Stand der Planung?)
 #: by: http://www.berlin.de/ba-mitte/bvv-online/___tmp/tmp/45081036147184117/147184117/00116327/27-Anlagen/02/MA_1534_IV.pdf
 #: note: Anforderungsampel
-#: last_checked: 2015-03-13
+#: last_checked: 2015-04-09
 	F 10511,14418
 	X 10002,14092
 	X 9800,14722
@@ -663,7 +663,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8607,15426
 	X 8024,15401
 	X 8016,15085
-	X 8928,16158
+	X 8919,16154
 	X 7527,14684
 	X -3251,14741
 	X -3295,14777
@@ -858,14 +858,14 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -1523,11012
 	X -593,11119
 	X 504,11243
-	X 9134,15953
+	X 9123,15963
 	X 9864,14578
 	X 9938,14356
 	B 20170,-510
 #: XXX_prog eigentlich geht die Anlage bis zur Einmündung der Schulzendorfer
 	X 22145,208
 	X 20205,-548
-	X 19771,1793
+	X 19766,1796
 	X 18881,2062
 	X 18934,2703
 	X 16699,10611
@@ -970,7 +970,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4683,17669
 	X 4326,17801
 	X 3570,17938
-	X 3333,18034
+	X 3319,18043
 	X 2579,19345
 	X 2497,19503
 	X 2394,19697
@@ -1405,7 +1405,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: Anforderungsampel
 	F 6102,4726
 	X 6212,4622
-	X 7230,5689
+	X 7236,5685
 	X 5414,5939
 	X 5345,5994
 	X 6104,6258
@@ -1439,8 +1439,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3820,19688
 	X 3546,19477
 	X 3165,19136
-	X 3079,19045
-	X 2993,18962
+	X 3045,19032
+	X 2994,18979
 	X 2175,18740
 	X 1659,18747
 	X 4240,19019
@@ -1489,6 +1489,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4704,17101
 	X 5324,18560
 	X 5233,18069
+#: note: Kontaktschleife am Charles-Corcelle-Ring
 	X 4997,17241
 	X 6126,17448
 	X 6380,17836
@@ -1662,7 +1663,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 14126,3225
 	X 13775,3500
 	X 13526,3519
-	X 13498,2411
+	X 13501,2413
 	X 13010,2085
 	F 12547,1852
 #: note: am Wochenende ausgeschaltet (immer?)
@@ -1706,6 +1707,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 13305,4504
 	F 12794,5596
 	X 12841,5416
+#: note: Anforderungsampel
 	F 10181,4181
 	X 8968,5554
 	X 8206,6774
@@ -1977,8 +1979,11 @@ Industriebahn	B0 -2410,13746
 # REMOVED (Baustellenampel, existiert nicht mehr, 2009-07) ---	X 10635,13207
 	F 11905,15462
 	X 7880,13315
-	X 8019,13650
+# REMOVED (zurzeit ausgeschaltet) ---	X 8019,13650
 	X 7696,7771
+#: XXX später wahrscheinlich X
+#: next_check: 2016-12-31
+	F 7866,13916
 	F 12204,13719
 	X 19777,12949
 	F 18191,18557
@@ -2226,6 +2231,7 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	F 15219,16759
 	F 11775,9234
 	F 9242,7218
+#: note: Anforderungsampel
 	F 6745,4999
 	B0 14641,1771
 	F 18177,-449
@@ -2422,16 +2428,16 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 20289,3033
 #: note: provisorische Ampel
 #: osm_watch: node id="3366620137" version="2"
-#: last_checked: 2014-06-09
-#: check_frequency: 120d
-	F::inwork 20010,3340
+#: last_checked: 2015-04-10
+#: check_frequency: 180d
+	F::inwork 20002,3349
 	F 3995,12173
 	F 22031,9142
 #: note: Anforderungsampel
 	F 15356,3759
 # REMOVED --- #: next_check_id: KARLSHORSTER-2014 vvv --- #: last_checked: 2014-10-10 vvv --- #: next_check: 2014-10-20 vvv --- #: note: provisorische Ampel --- #: valid: 20140630-20141022 vvv --- ---	X::inwork 14805,10518
 #: XXX bleibt die Ampel permanent?
-#: last_checked: 2015-04-04
+#: last_checked: 2015-04-06
 #: check_frequency: 30d
 	X::inwork 14906,10820
 	F 8667,5372
@@ -2550,12 +2556,12 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX temporäre Ampel (wegen Arbeiten an der Staatsoper und an der U-Bahn)
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
-#: last_checked: 2014-09-20
+#: last_checked: 2015-04-08
 #: next_check: 2015-06-30
 	F::inwork 9984,12426
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2015-04-01 vvv
+#: last_checked: 2015-04-08 vvv
 #: check_frequency: 30d vvv
 	X::inwork 9122,12509
 	X::inwork 9286,12886
@@ -2576,7 +2582,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #
 #: XXX temporäre Ampel (wegen gesperrten Gehweg?), Ampel ist eigentlich etwas weiter westlich
 #: XXX eigentlich gibt es sogar zwei Fußgängerampeln
-#: last_checked: 2015-03-13
+#: last_checked: 2015-04-09
 #: check_frequency: 60d
 	F::inwork 9812,12145
 # 
@@ -2792,6 +2798,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: last_checked: 2015-03-13
 #: next_check: 2015-10-01
 	F::inwork 7741,14560
+#: note: Anforderungsampel
+	F 7292,17316
 # 
 ################################################################################
 #: note: Potsdam vvv
@@ -2927,7 +2935,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -12655,-1714
 #: XXX_prog: wechselseitige LSA-Regelung, ca. 100m Länge, größerer Zeitverlust?
 #: source_id: IM_023940
-#: last_checked: 2015-03-18
+#: last_checked: 2015-04-07
 #: next_check: 2015-06-30 (Ende laut VMZ)
 	X::inwork 14018,9118
 ################################################################################
