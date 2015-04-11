@@ -1038,7 +1038,26 @@ userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.laubinger.de/termine/22-boelschefest-friedrichshagen/',
+         'data' => 'userdel	2::temp 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+',
+         'periodic' => 1,
+         'until' => 1431295199,
+         'from' => 1431036000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              7,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (9. und 10. Mai 2015)',
+         'id' => 964,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -1725,7 +1744,27 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.family-and-friends-ev.de/2.html
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=859853
+userdel	2::temp 589,11953 577,11837 562,11710 560,11695 550,11607 541,11464
+',
+         'periodic' => 1,
+         'until' => 1431295199,
+         'from' => 1431036000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (09. und 10. Mai 2015)',
+         'type' => 'gesperrt',
+         'id' => 1642
+       },
        undef,
        undef,
        undef,
@@ -2774,29 +2813,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
-userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-',
-         'periodic' => 1,
-         'until' => 1430085599,
-         'from' => 1429740000,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              18,
-                              'months',
-                              4
-                            ]
-                          ],
-         'text' => 'Str. des 17. Juni zwischen Yitzhak-Rabin-Str. und Platz des 18. März sowie Ebertstr. gesperrt (Nisan Kinderfest, 25.4.2015 bis 26.4.2015)',
-         'id' => 2324,
-         'type' => 'gesperrt',
-         'prewarn_days' => 2
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3058,7 +3075,27 @@ userdel	q2::inwork 5258,11285 5236,10994
        },
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2014
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=954647
+userdel	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
+',
+         'periodic' => 1,
+         'until' => 1430690399,
+         'from' => 1430344800,
+         'text' => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz), Straße rund um den Dorfteich vermutlich gesperrt (01.05.2015 bis 03.05.2015)',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              5
+                            ]
+                          ],
+         'type' => 'handicap',
+         'id' => 2431
+       },
        undef,
        undef,
        undef,
@@ -3263,7 +3300,26 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/sonstiges/events/fest-der-nationen/',
+         'data' => 'userdel	2::temp 5661,9630 5657,9600 5630,9592 5602,9606 5595,9626
+',
+         'periodic' => 1,
+         'until' => 1433102400,
+         'from' => 1432818000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 29.5.2015 15 Uhr bis 31.5.2015 22 Uhr',
+         'id' => 2533,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3376,19 +3432,7 @@ userdel	2::inwork 8089,12190 8214,12205
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Hanstedter Weg: Bauarbeiten, Fahrbahn gesperrt',
-         'from' => undef,
-         'id' => 2582,
-         'data' => '#: by: Angelika Weber
-#: XXX wann sind die Bauarbeiten beendet?
-#: XXX bleibt das Kopfsteinpflaster nach den Bauarbeiten?
-#: last_checked: 2014-07-17
-userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3585,17 +3629,7 @@ userdel	q4::inwork; 5866,10492 5780,10542 5627,10637
        },
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Lankwitzer Damm: Weg am Bahndamm und Teltowkanal-Brücke gesperrt',
-         'from' => undef,
-         'id' => 2675,
-         'data' => '#: by: user per phone
-#: XXX vor Ort anschauen! Gibt es ein Endedatum?
-userdel	2::inwork 7772,4306 7795,4242 8106,3410
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
@@ -3625,9 +3659,11 @@ userdel	q4::inwork; 2268,19919 2064,19874 1886,19835
          'id' => 2679,
          'data' => '#: XXX "für mehrere Monate" vvv
 #: XXX evtl. bis 30. April 2015
-#: last_checked: 2015-03-15 vvv
+#: last_checked: 2015-04-06 vvv
+#: next_check: 2015-04-30 vvv
 	3 15294,11964 15361,12071 15420,12178
 	3 15117,12106 15361,12071 15420,12178
+#: next_check ^^^
 #: last_checked ^^^
 #: XXX ^^^
 '
@@ -3677,22 +3713,7 @@ userdel	q4::inwork; 5018,12322 5133,12240
 ',
          'type' => 'gesperrt'
        },
-       {
-         'data' => 'userdel	q4; 6687,8385 6765,8480 6912,8617 6989,8687 7009,8705 7105,8788 7201,8870 7268,8960
-',
-         'periodic' => 1,
-         'until' => 1428357599,
-         'from' => 1428048000,
-         'recurrences' => [
-                            [
-                              'easter',
-                              -2
-                            ]
-                          ],
-         'text' => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstaltung (Osterfest Hauptstraße), Straße gesperrt (04.04.2015 - 06.04.2015)',
-         'type' => 'handicap',
-         'id' => 2687
-       },
+       undef,
        undef,
        {
          'source_id' => 'LS/721-F/15/031',
@@ -3745,6 +3766,26 @@ userdel	q4::inwork; 3807,11859 3666,11855
          'from' => undef,
          'id' => 2696,
          'data' => 'userdel	q3::inwork 5824,6974 5817,7223
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Uranusweg - U-Bhf. Scharnweberstr.: Weg ist unter Umständen zeitweise gesperrt, zum Beispiel nachts',
+         'from' => undef,
+         'id' => 2697,
+         'data' => '	2::night 4280,17551 4243,17570 4240,17584 3959,17714 3987,17808
+'
+       },
+       {
+         'source_id' => 'IM_024612',
+         'until' => 1428894000,
+         'text' => 'Teplitzer Straße: Fahrbahnsanierung, Vollsperrung, von Freitag, dem 10.04.2015, bis Montag, dem 13.04.2015',
+         'from' => 1428530400,
+         'id' => 2698,
+         'data' => '#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.291488.php
+userdel	q4::inwork 2087,7811 2106,8075 2120,8335 2126,8426
 ',
          'type' => 'handicap'
        }
