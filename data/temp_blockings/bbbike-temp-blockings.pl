@@ -120,9 +120,9 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2 8862,16208 8788,16264
-userdel	2 8928,16158 8993,16100
-userdel	2 8993,16100 9059,16038
-userdel	2 9134,15953 9059,16038
+userdel	2 8919,16154 8986,16092
+userdel	2 8986,16092 9053,16029
+userdel	2 9123,15963 9053,16029
 EOF
      },
      { from  => $isodate2epoch->("2015-05-08 10:00:00"), # 1 Tag Vorlauf
@@ -364,11 +364,11 @@ EOF
 userdel	2 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5434,13398 5368,13406 5248,13434
 EOF
      },
-     { from  => $isodate2epoch->("2014-04-30 12:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-05-01 23:59:59"),
+     { from  => $isodate2epoch->("2015-04-30 12:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-05-01 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 1, months => 5]],
-       text  => 'MyFest 2014: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2014',
+       text  => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2015',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.myfest36.de/
@@ -1635,7 +1635,7 @@ EOF
        text  => 'Augsburger Str. (Charlottenburg) in beiden Richtungen zwischen Joachimstaler Str. und Rankestr. Baustelle, Straße vollständig gesperrt (Kranarbeiten) (bis 17.03.2005)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 5627,10637 5471,10719
+userdel	2 5627,10637 5497,10719 5471,10719
 EOF
      },
      { from  => 1110063600, # 2005-03-06 00:00
@@ -2496,7 +2496,7 @@ EOF
        text  => 'Rudower Str. (Treptow) Richtung stadteinwärts zwischen Köpenicker Str. und Wegedornstr. Baustelle, Fahrtrichtung gesperrt, Einbahnstraße in Richtung Köpenicker Str. (bis 05.08.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 19771,1793 19743,1804 19564,1871 19266,1968 19181,1996 19164,2001 19055,2037 18985,2047 18881,2062
+userdel	q4; 19766,1796 19743,1804 19564,1871 19266,1968 19181,1996 19164,2001 19055,2037 18985,2047 18881,2062
 EOF
      },
      { from  => 1122415200, # 2005-07-27 00:00
@@ -6238,12 +6238,13 @@ EOF
 userdel	1::inwork 4367,11996 4345,11710
 EOF
      },
-     { from  => $isodate2epoch->("2014-05-23 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-05-25 23:59:59"),
+     { from  => $isodate2epoch->("2015-05-01 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-05-03 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 24, months => 5]],
-       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (24.5.2014 und 25.5.2014)',
+       recurrences => [['yearly', days => 24, months => 1]],
+       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (2.5.2015 und 3.5.2015)',
        type  => 'gesperrt',
+       source_id => 'http://www.ms-event-agentur.com/primavera%202013.html', # 2013 in der URL verwirrt nur, die Seite nennt das Jahr 2015
        data  => <<EOF,
 userdel	2::temp 7107,9030 7044,9163 7022,9211 7006,9282
 userdel	2::temp 6945,9142 7044,9163
@@ -6266,14 +6267,14 @@ EOF
 userdel	2::inwork 17729,8850 17879,8773 17929,8742 17997,8695 18009,8687 18086,8634 18151,8589
 EOF
      },
-     { from  => $isodate2epoch->("2014-10-04 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-10-05 23:59:59"),
+     { from  => $isodate2epoch->("2015-10-03 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-10-04 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 5, months => 10]],
-       text  => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 4. und 5.10.2014',
+       text  => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 3. und 4.10.2015',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: http://www.ms-event-agentur.com/seite22.html
+#: by: http://www.ms-event-agentur.com/seite22.html?date=20150404
 userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
 EOF
      },
@@ -6363,7 +6364,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003833',
        data  => <<EOF,
-userdel	1::inwork 9201,11968 9208,11872
+userdel	1::inwork 9195,11972 9207,11880
 EOF
      },
      { from  => 1161032728, # 2006-10-16 23:05
@@ -6611,7 +6612,7 @@ EOF
        text  => 'Vollsperrung der Oberspreestraße zwischen Freystadter Weg und Ottomar-Geschke-Straße und Spindlersfelder Straße vom Sonnabend, den 04.11.2006, 5:00 Uhr bis Montag, den 06.11.2006, 5:00 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 20949,4775 20994,4761 21089,4731 21170,4706 21332,4655
+userdel	2::inwork 20949,4775 20994,4761 21108,4725 21170,4706 21332,4655
 EOF
      },
      { from  => 1163800165, # 2006-11-17 22:49
@@ -7720,7 +7721,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003833',
        data  => <<EOF,
-userdel	1::inwork 9201,11968 9208,11872
+userdel	1::inwork 9195,11972 9207,11880
 EOF
      },
      { from  => 1190671200, # 2007-09-25 00:00
@@ -8224,12 +8225,13 @@ EOF
 userdel	q4::temp 6178,12387 6276,12506 6314,12518 6444,12536
 EOF
      },
-     { from  => $isodate2epoch->("2014-05-09 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-05-11 23:59:59"),
+     { from  => $isodate2epoch->("2015-05-08 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-05-10 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 7, months => 5]],
-       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (10. und 11. Mai 2014)',
+       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (9. und 10. Mai 2015)',
        type  => 'gesperrt',
+       source_id => 'http://www.laubinger.de/termine/22-boelschefest-friedrichshagen/',
        data  => <<EOF,
 userdel	2::temp 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
 EOF
@@ -8309,7 +8311,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005511',
        data  => <<EOF,
-userdel	2::inwork 16376,-496 16431,-311 16477,-160 16536,26
+userdel	2::inwork 16378,-489 16431,-311 16477,-160 16536,26
 EOF
      },
      { from  => 1179698400, # 2007-05-21 00:00
@@ -8805,7 +8807,7 @@ EOF
        text  => 'Sarrazinstr.: zurzeit Einbahnstraße (Elsastr. bis Bundesallee; Durchfahrt in dieser Richtung) wegen Baustelle',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 5352,7428 5387,7433 5422,7461 5452,7493 5492,7543
+userdel	1::inwork 5352,7428 5387,7433 5419,7464 5450,7494 5492,7543
 EOF
      },
      { from  => 1181999685, # 2007-06-16 15:14
@@ -8943,7 +8945,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_013416',
        data  => <<EOF,
-userdel	2::temp 8788,16264 8862,16208 8928,16158 8993,16100 9059,16038 9134,15953
+userdel	2::temp 8788,16264 8862,16208 8919,16154 8986,16092 9053,16029 9123,15963
 EOF
      },
      { from  => 1183280005, # 2007-07-01 10:53
@@ -8978,7 +8980,7 @@ EOF
      { from  => $isodate2epoch->("2014-05-24 15:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2014-05-26 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 28, months => 4]], # Kann allerdings auch erst im Mai oder Juni stattfinden
+       # recurrences => [['yearly', days => 28, months => 4]], # Kann allerdings auch erst im Mai oder Juni stattfinden --- fraglich, ob es 2015 überhaupt stattfindet
        text  => 'Mehringdamm (Kreuzberg) in Richtung Tempelhof, zwischen Kreuzbergstr. und Dudenstr. Veranstaltung (Seifenkistenrennen am 26. Mai 2014), Fahrtrichtung gesperrt',
        type  => 'gesperrt',
        source_id => 'http://www.xhain.info/termine/seifenkistenrennen-mehringdamm.htm',
@@ -10006,8 +10008,8 @@ EOF
        source_id => 'IM_009496',
        data  => <<EOF,
 #: last_checked: 2009-05-27
-userdel	q4::inwork; 9201,11968 9208,11872
-userdel	q4::inwork; 9208,11872 9218,11793
+userdel	q4::inwork; 9195,11972 9207,11880
+userdel	q4::inwork; 9207,11880 9218,11793
 EOF
      },
      { from  => 1190237300, # 2007-09-19 23:28
@@ -10532,7 +10534,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_007023',
        data  => <<EOF,
-userdel	1::inwork 6878,17315 6995,17322 7031,17323 7104,17326 7288,17308 7379,17295 7602,17399
+userdel	1::inwork 6878,17315 6995,17322 7031,17323 7104,17326 7282,17318 7292,17316 7384,17303 7602,17399
 EOF
      },
      { from  => 1194130800, # 2007-11-04 00:00
@@ -11517,7 +11519,7 @@ EOF
        text  => 'Markgrafenstr. am Gendarmenmarkt: Einbahnstraße Richtung Norden',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 9668,11928 9679,11834
+userdel	1::inwork 9666,11935 9679,11834
 EOF
      },
      { from  => 1209754714, # 2008-05-02 20:58
@@ -12260,7 +12262,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009501',
        data  => <<EOF,
-userdel	1::inwork 9164,12172 9183,12076 9201,11968
+userdel	1::inwork 9164,12172 9183,12076 9195,11972
 EOF
      },
      { from  => $isodate2epoch->("2013-08-01 14:00:00"), # 1 Tag Vorlauf
@@ -13262,7 +13264,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_010810',
        data  => <<EOF,
-userdel	2::inwork 19803,1911 19771,1793
+userdel	2::inwork 19803,1911 19766,1796
 EOF
      },
      { from  => 1228675001, # 2008-12-07 19:36
@@ -13386,7 +13388,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009981',
        data  => <<EOF,
-userdel	1::inwork 9183,12076 9201,11968
+userdel	1::inwork 9183,12076 9195,11972
 EOF
      },
      { from  => 1235862000, # 2009-03-01 00:00
@@ -14034,11 +14036,11 @@ EOF
 userdel	q4::inwork 9098,42254 9043,42165 9032,42153
 EOF
      },
-     { from  => $isodate2epoch->("2014-05-23 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-05-25 23:59:59"),
+     { from  => $isodate2epoch->("2015-05-08 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-05-10 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 19, months => 5]],
-       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in der Preußenallee), beide Fahrbahnen der Straße gesperrt (24. und 25. Mai 2014)',
+       recurrences => [['yearly', days => 9, months => 5]],
+       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (09. und 10. Mai 2015)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.family-and-friends-ev.de/2.html
@@ -14361,7 +14363,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012764',
        data  => <<EOF,
-userdel	q4::inwork 9201,11968 9208,11872
+userdel	q4::inwork 9195,11972 9207,11880
 EOF
      },
      { from  => 1243116000, # 2009-05-24 00:00
@@ -14625,9 +14627,9 @@ EOF
        recurrences => [['yearly', days => 2, months => 7]],
        type  => 'gesperrt',
        data  => <<EOF,
-	q4::temp 9668,11928 9656,12021
+	q4::temp 9666,11935 9656,12021
 	2::temp 9524,12010 9656,12021
-	2::temp 9536,11912 9668,11928
+	2::temp 9536,11922 9666,11935
 EOF
      },
      { from  => 1246207852, # 2009-06-28 18:50
@@ -14760,7 +14762,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_013316',
        data  => <<EOF,
-userdel	2::temp 9643,12127 9656,12021 9668,11928 9679,11834
+userdel	2::temp 9643,12127 9656,12021 9666,11935 9679,11834
 EOF
      },
      { from  => 1246398785, # 2009-06-30 23:53
@@ -14811,7 +14813,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013316',
        data  => <<EOF,
-userdel	q4::inwork; 9679,11834 9668,11928 9656,12021 9643,12127
+userdel	q4::inwork; 9679,11834 9666,11935 9656,12021 9643,12127
 EOF
      },
      { from  => 1247349600, # 2009-07-12 00:00
@@ -15182,7 +15184,7 @@ EOF
        text  => 'Badstr. (Wedding) zwischen Pankstr. und Behmstr. Veranstaltung (Seifenkistenderby), Straße vollständig gesperrt (14. und 15. Juni 2014)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 9134,15953 9059,16038 8993,16100 8928,16158 8862,16208 8788,16264
+userdel	2::temp 9123,15963 9053,16029 8986,16092 8919,16154 8862,16208 8788,16264
 EOF
      },
      { from  => 1249106497, # 2009-08-01 08:01
@@ -15943,7 +15945,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014098',
        data  => <<EOF,
-userdel	q4::inwork; 4006,19443 4170,19079 4195,19043
+userdel	q4::inwork; 4006,19443 4170,19079 4190,19048
 EOF
      },
      { from  => 1252010752, # 2009-09-03 22:45
@@ -15952,7 +15954,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014062',
        data  => <<EOF,
-userdel	q4::inwork 8923,15850 9134,15953
+userdel	q4::inwork 8923,15850 9123,15963
 EOF
      },
      { from  => 1252014436, # 2009-09-04 00:00 1252015200
@@ -16216,7 +16218,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014203',
        data  => <<EOF,
-userdel	q4::inwork; 18226,13506 18382,13492 18783,13469 18875,13467 19059,13479 19171,13486
+userdel	q4::inwork; 18226,13506 18382,13492 18783,13469 18875,13467 19059,13479 19181,13485
 EOF
      },
      { from  => undef, # 
@@ -17044,7 +17046,7 @@ EOF
        text  => 'Gendarmenmarkt: Weihnachtsmarkt vom 24.11.2014 bis 31.12.2014, Durchfahrt nicht möglich (Eintritt!)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 9536,11912 9668,11928
+userdel	2::temp 9536,11922 9666,11935
 userdel	2::temp 9524,12010 9656,12021
 EOF
      },
@@ -19515,7 +19517,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_017545',
        data  => <<EOF,
-userdel	2::temp 9643,12127 9656,12021 9668,11928 9679,11834
+userdel	2::temp 9643,12127 9656,12021 9666,11935 9679,11834
 EOF
      },
      { from  => 1310016128, # 2011-07-07 07:22
@@ -19524,7 +19526,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_017544',
        data  => <<EOF,
-userdel	2::temp 9656,12021 9668,11928
+userdel	2::temp 9656,12021 9666,11935
 EOF
      },
      { from  => $isodate2epoch->("2014-07-07 07:00:00"), # 1 Tag Vorlauf
@@ -19686,7 +19688,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_108474',
        data  => <<EOF,
-userdel	2::inwork 3079,19045 2993,18962
+userdel	2::inwork 3045,19032 2994,18979
 EOF
      },
      { from  => $isodate2epoch->("2014-07-31 10:00:00"), # 1 Tag Vorlauf
@@ -20109,8 +20111,8 @@ EOF
        type  => 'handicap',
        source_id => 'IM_018211',
        data  => <<EOF,
-userdel	q4::inwork 19803,1911 19771,1793
-#XXX del: userdel	q4::inwork 19771,1793 19728,1660 19679,1571
+userdel	q4::inwork 19803,1911 19766,1796
+#XXX del: userdel	q4::inwork 19766,1796 19704,1621 19676,1577
 EOF
      },
      { from  => 1329681337, # 1320987600, # 2011-11-11 06:00
@@ -20295,12 +20297,15 @@ EOF
 userdel	q4::inwork 12817,2031 12911,1815
 EOF
      },
-     { from  => $isodate2epoch->("2015-04-23 00:00:00"), # 2 Tage Vorlauf, Aufbauten dauern länger
-       until => $isodate2epoch->("2015-04-26 23:59:59"),
+     { from  => $isodate2epoch->("2014-04-17 00:00:00"), # 2 Tage Vorlauf, Aufbauten dauern länger
+       until => $isodate2epoch->("2014-04-21 23:59:59"),
        prewarn_days => 2, # siehe oben
-       periodic => 1,
-       recurrences => [['yearly', days => 18, months => 4]],
-       text  => 'Str. des 17. Juni zwischen Yitzhak-Rabin-Str. und Platz des 18. März sowie Ebertstr. gesperrt (Nisan Kinderfest, 25.4.2015 bis 26.4.2015)',
+       # XXX 2015 abgesagt
+       # -> http://www.berliner-woche.de/mitte/kultur/nisan-kinderfest-abgesagt-d74476.html
+       # -> http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1504/nachricht5552.html
+       #periodic => 1,
+       #recurrences => [['yearly', days => 18, months => 4]],
+       text  => 'Str. des 17. Juni zwischen Yitzhak-Rabin-Str. und Platz des 18. März sowie Ebertstr. gesperrt (Nisan Kinderfest, 19.4.2014 bis 21.4.2014)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
@@ -20343,7 +20348,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/organisationseinheiten/tief/index.html',
        data  => <<EOF,
-userdel	q4::inwork 19771,1793 19898,1704
+userdel	q4::inwork 19766,1796 19898,1704
 EOF
      },
      { from  => 1336764755, # 2012-05-11 21:32
@@ -21246,13 +21251,13 @@ EOF
 userdel	2::inwork -739,6838 -927,6888
 EOF
      },
-     { from  => $isodate2epoch->("2014-04-24 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-04-27 23:59:59"),
+     { from  => $isodate2epoch->("2015-04-23 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-04-26 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 24, months => 4]],
-       text  => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 25.4.2013 bis 27.4.2013 ',
+       recurrences => [['yearly', days => 23, months => 4]],
+       text  => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 24.4.2015 bis 26.4.2015 ',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20140324.1415.395686.html',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.287680.php',
        data  => <<EOF,
 userdel	2::temp 22133,4644 22111,4562 22093,4499
 userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
@@ -21278,15 +21283,14 @@ userdel	1::inwork -12655,-1714 -12730,-1681 -12758,-1654
 EOF
      },
      { from  => 1366740818, # 2013-04-23 20:13
-       until => 1427727600, # 2015-03-30 17:00
-       text  => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende März 2015) ',
+       until => $isodate2epoch->("2015-04-22 17:00:00"), # 1427727600, # 2015-03-30 17:00
+       text  => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende April 2015) ',
        type  => 'handicap',
        source_id => 'IM_019747',
        data  => <<EOF,
 #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
-#: last_checked: 2014-09-13
-#: check_frequency: 100d
+#: last_checked: 2015-03-28
 userdel	q2::inwork 5258,11285 5236,10994
 EOF
      },
@@ -21374,13 +21378,13 @@ userdel auto	3 7039,12314 7383,12095 7429,12070
 userdel auto	3 7823,12120 7816,12150 7875,12363
 EOF
      },
-     { from  => $isodate2epoch->("2014-05-09 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-05-11 20:00:00"),
+     { from  => $isodate2epoch->("2015-05-08 11:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-05-10 20:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 4, months => 5]],
-       text  => 'Schöneberger Mai- und Spargelfest am 10. und 11. Mai 2014 in der Freiherr-vom-Stein-Straße',
+       text  => 'Schöneberger Mai- und Spargelfest am 9. und 10. Mai 2015 in der Freiherr-vom-Stein-Straße',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20140429.1330.396763.html',
+       source_id => 'http://www.ms-event-agentur.com/seite18.html',
        data  => <<EOF,
 userdel	2::temp 6244,8597 6339,8644 6454,8653
 EOF
@@ -21403,11 +21407,11 @@ EOF
 userdel	q4::inwork; 7085,15226 7131,15109
 EOF
      },
-     { from  => $isodate2epoch->("2014-05-16 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-05-18 23:59:59"),
-       text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz), Straße rund um den Dorfteich vermutlich gesperrt (17. und 18. Mai 2014)',
+     { from  => $isodate2epoch->("2015-04-30 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-05-03 23:59:59"),
+       text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz), Straße rund um den Dorfteich vermutlich gesperrt (01.05.2015 bis 03.05.2015)',
        periodic => 1,
-       recurrences => [['yearly', days => 17, months => 5]],
+       recurrences => [['yearly', days => 1, months => 5]],
        type  => 'handicap',
        data  => <<EOF,
 #: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2014
@@ -21750,7 +21754,7 @@ EOF
        text  => 'Waßmannsdorfer Straße: Bauarbeiten, Einbahnstraßenregelung, offen stadtauswärts, bis September 2013',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q2::inwork; 16376,-496 16431,-311 16477,-160 16536,26 16590,216 16642,393 16726,642
+userdel	q2::inwork; 16378,-489 16431,-311 16477,-160 16536,26 16590,216 16642,393 16726,642
 EOF
      },
      { from  => undef,
@@ -21944,11 +21948,11 @@ EOF
        type  => 'handicap',
        source_id => 'IM_020213',
        data  => <<EOF,
-userdel	q2::temp 9108,11961 9144,11866
-	3::temp 9201,11968 9108,11961 9076,12054
-	3::temp 9076,12054 9108,11961 9201,11968
-	3::temp 9201,11968 9108,11961 9144,11866
-	3::temp 9144,11866 9108,11961 9201,11968
+userdel	q2::temp 9108,11961 9138,11872
+	3::temp 9195,11972 9108,11961 9076,12054
+	3::temp 9076,12054 9108,11961 9195,11972
+	3::temp 9195,11972 9108,11961 9138,11872
+	3::temp 9138,11872 9108,11961 9195,11972
 EOF
      },
      { from  => 1377986400, # 2013-09-01 00:00
@@ -22444,13 +22448,13 @@ EOF
 userdel	2::inwork 2219,11324 2180,11318 2102,11307
 EOF
      },
-     { from  => 1399554000, # 2014-05-08 15:00 # 1 Tag Vorlauf
-       until => 1399838400, # 2014-05-11 22:00
+     { from  => $isodate2epoch->("2015-05-28 15:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-05-31 22:00:00"),
        periodic => 1, # erster Termin im Jahr
        recurrences => [["yearly", days => 9, months => 5]], # wechselnde Termine, kann auch erst Mitte September passieren
-       text  => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 9.5.2014 15 Uhr bis 11.5.2014 22 Uhr',
+       text  => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 29.5.2015 15 Uhr bis 31.5.2015 22 Uhr',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/bezirk/festdernationen.html',
+       source_id => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/sonstiges/events/fest-der-nationen/',
        data  => <<EOF,
 userdel	2::temp 5661,9630 5657,9600 5630,9592 5602,9606 5595,9626
 EOF
@@ -22639,7 +22643,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (eigentlich relativ gut passierbar, zumindest in Richtung Osten) --- #: XXX wie sieht die Kreuzungssituation danach aus? --- #: last_checked: 2014-04-08
-userdel	q4::inwork 5443,14028 5336,14044 5306,14061
+userdel	q4::inwork 5443,14028 5322,14044 5306,14061
 EOF
      },
      { from  => undef, # 
@@ -22707,7 +22711,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_021231',
        data  => <<EOF,
-userdel	q4::inwork 16376,-496 16431,-311 16477,-160 16536,26 16590,216 16642,393
+userdel	q4::inwork 16378,-489 16431,-311 16477,-160 16536,26 16590,216 16642,393
 EOF
      },
      { from  => $isodate2epoch->("2014-07-04 20:00:00"),
@@ -22758,13 +22762,13 @@ EOF
 userdel	2::inwork 48229,74776 48296,74641
 EOF
      },
-     { from  => 1398636000, # 2014-04-28 00:00
-       until => 1398988800, # 2014-05-02 02:00
+     { from  => $isodate2epoch->("2015-04-28 00:00:00"), # 1398636000, # 2014-04-28 00:00
+       until => $isodate2epoch->("2015-05-02 02:00:00"), # 1398988800, # 2014-05-02 02:00
        periodic => 1,
        recurrences => [['yearly', days => 30, months => 4]],
-       text  => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung und Kinderfest des DGB), am 1. Mai 2014',
+       text  => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung und Kinderfest des DGB), am 1. Mai 2015',
        type  => 'gesperrt',
-       source_id => 'IM_021803',
+       source_id => 'http://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2977174-2970764-1-mai-kundgebung-des-dgb.html',
        data  => <<EOF,
 userdel	2::inwork 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302
 userdel	2::inwork 8573,12325 8540,12420
@@ -22937,14 +22941,11 @@ userdel	2::inwork 46564,76483 46704,75833
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1428434351, # undef, # XXX
        text  => 'Hanstedter Weg: Bauarbeiten, Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-#: by: Angelika Weber
-#: XXX wann sind die Bauarbeiten beendet?
-#: XXX bleibt das Kopfsteinpflaster nach den Bauarbeiten?
-#: last_checked: 2014-07-17
+# REMOVED (keine Bauarbeiten mehr, weiterhin KS) --- #: by: Angelika Weber --- #: XXX wann sind die Bauarbeiten beendet? --- #: XXX bleibt das Kopfsteinpflaster nach den Bauarbeiten? --- #: last_checked: 2014-07-17
 userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
 EOF
      },
@@ -22973,7 +22974,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20140624.1400.398129.html',
        data  => <<EOF,
-userdel	2::inwork 7772,4306 7795,4242
+userdel	2::inwork 7769,4315 7795,4242
 EOF
      },
      { from  => 1404079200, # 2014-06-30 00:00
@@ -22991,7 +22992,6 @@ EOF
        type  => 'handicap',
        source_id => 'IM_024332',
        data  => <<EOF,
-#: XXX eventuell für Radfahrer nur an der Wilhelminenhofstraße gesperrt, ab Wattstr. vielleicht schon offen
 userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
 EOF
      },
@@ -23033,7 +23033,7 @@ EOF
        text  => 'Badstr.: Veranstaltung (Oktoberfest Badstraße) zwischen Pankstr. und Behmstr., von 11.10.2014 bis 12.10.2014',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 8788,16264 8862,16208 8928,16158 8993,16100 9059,16038 9134,15953
+userdel	2::temp 8788,16264 8862,16208 8919,16154 8986,16092 9053,16029 9123,15963
 EOF
      },
      { from  => 1404403879, # 2014-07-03 18:11
@@ -23221,13 +23221,12 @@ EOF
 userdel	q4::inwork; 16514,15092 16430,15168
 EOF
      },
-     { from  => $isodate2epoch->("2014-08-21 14:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-08-24 23:59:59"),
+     { from  => $isodate2epoch->("2015-08-20 14:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-08-23 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 21, months => 8]],
-       text  => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 22.8.2014 bis 24.8.2014',
+       recurrences => [['yearly', days => 20, months => 8]],
+       text  => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 21.8.2015 bis 23.8.2015',
        type  => 'gesperrt',
-       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.157630.php',
        data  => <<EOF,
 userdel	2::temp 22133,4644 22111,4562 22093,4499
 userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
@@ -23418,7 +23417,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2014-12-06
+#: last_checked: 2015-03-28
 #: check_frequency: 90d
 userdel	q3::inwork 4503,10497 4485,10307
 EOF
@@ -23468,16 +23467,11 @@ userdel	q3::inwork 4638,10162 4623,10066 4609,9949
 EOF
      },
      { from  => 1412021931, # 2014-09-29 22:18
-       until => $isodate2epoch->("2015-03-28 23:59:59"), # 1424473200, # 2015-02-21 00:00
+       until => 1427482278, # $isodate2epoch->("2015-03-28 23:59:59"), # 1424473200, # 2015-02-21 00:00
        text  => 'Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.03.2015',
        type  => 'gesperrt',
        data  => <<EOF,
-#: next_check_id: INVALIDENFRIEDHOF-2014
-#: by: Birgit Schroeer
-#: confirmed_by: srt
-#: XXX vielleicht wird hier asphaltiert?
-#: last_checked: 2015-03-06
-#: next_check: 2015-03-28
+# REMOVED --- #: next_check_id: INVALIDENFRIEDHOF-2014 --- #: by: Birgit Schroeer --- #: confirmed_by: srt --- #: XXX vielleicht wird hier asphaltiert? --- #: last_checked: 2015-03-06 --- #: next_check: 2015-03-28
 userdel	2::inwork 8101,13901 8248,13659 8337,13541
 EOF
      },
@@ -23510,7 +23504,7 @@ userdel	q4::inwork; 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065
 EOF
      },
      { from  => 1412481600, # 2014-10-05 06:00
-       until => 1427896800, # 2015-04-01 16:00
+       until => 1427482432, # 1427896800, # 2015-04-01 16:00
        text  => 'Gartenstr.: Baustelle zwischen Invalidenstr. und Tieckstr., Fahrbahn Richtung Torstr. gesperrt (kurzer Abschnitt), außerdem Einbahnstraßenregelung in der Tieckstr., 06.10.2014 06:00 Uhr bis 01.04.2015 16:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_023111',
@@ -23636,7 +23630,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_023200',
        data  => <<EOF,
-userdel	q4::inwork 19679,1571 19728,1660 19771,1793
+userdel	q4::inwork 19676,1577 19704,1621 19766,1796
 EOF
      },
      { from  => 1410069600, # 2014-09-07 08:00
@@ -23703,7 +23697,7 @@ userdel	q4::inwork 4111,24488 3963,24559 3842,24556
 EOF
      },
      { from  => $isodate2epoch->("2014-11-09 00:00:00"), # 1415401200, # 2014-11-08 00:00
-       until => $isodate2epoch->("2015-09-12 16:00:00"), # 1442354399, # 2015-09-15 23:59
+       until => 1427741681, # -> anderer Eintrag # $isodate2epoch->("2015-09-12 16:00:00"), # 1442354399, # 2015-09-15 23:59
        text  => 'Pichelswerderstr.: Baustelle, Fahrbahn Richtung Ruhlebener Str. zwischen Freiheit und Gewerbehof gesperrt, vom 10.11.2014 bis 12.09.2015',
        type  => 'handicap',
        source_id => 'IM_023373',
@@ -23721,7 +23715,7 @@ userdel	2::inwork 30910,13101 30982,12947
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1427555693, # XXX
        text  => 'Handjerystraße: zwischen Schnackenburgstraße und Sarrazinstraße Sperrung der Fahrbahn, Ende der Sperrung unbekannt ',
        type  => 'handicap',
        data  => <<EOF,
@@ -23798,7 +23792,7 @@ EOF
        text  => 'Kronenstr.: Einbahnstraßenregelung zwischen Charlottenstr. und Markgrafenstr., gesperrt Richtung Osten, Dauer unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2015-03-13
+#: last_checked: 2015-04-01
 userdel	q4::inwork; 9559,11715 9692,11732
 EOF
      },
@@ -23807,7 +23801,8 @@ EOF
        text  => 'Augsburger Str.: Bauarbeiten, Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2014-12-12
+#: last_checked: 2015-03-28
+#: next_check: 2015-06-28
 userdel	q4::inwork; 5866,10492 5780,10542 5627,10637
 EOF
      },
@@ -23829,13 +23824,12 @@ userdel	q4::inwork 14136,17170 14006,16961
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1428435671, # undef, # XXX
        text  => 'Lankwitzer Damm: Weg am Bahndamm und Teltowkanal-Brücke gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: user per phone
-#: XXX vor Ort anschauen! Gibt es ein Endedatum?
-userdel	2::inwork 7772,4306 7795,4242 8106,3410
+# REMOVED (-> gesperrt-orig) --- #: by: user per phone --- #: XXX vor Ort anschauen! Gibt es ein Endedatum?
+userdel	2::inwork 7769,4315 7795,4242 8106,3410
 EOF
      },
      { from  => 1421344800, # 2015-01-15 19:00
@@ -23877,9 +23871,11 @@ EOF
        data  => <<EOF,
 #: XXX "für mehrere Monate" vvv
 #: XXX evtl. bis 30. April 2015
-#: last_checked: 2015-03-15 vvv
+#: last_checked: 2015-04-11 vvv
+#: next_check: 2015-04-30 vvv
 	3 15294,11964 15361,12071 15420,12178
 	3 15117,12106 15361,12071 15420,12178
+#: next_check ^^^
 #: last_checked ^^^
 #: XXX ^^^
 EOF
@@ -23969,8 +23965,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.277824.php',
        data  => <<EOF,
-#: XXX ändert sich nach den Bauarbeiten etwas an der Wegführung für Radfahrer?
-#: next_check: 2015-03-24
+# REMOVED (nein) - ändert sich nach den Bauarbeiten etwas an der Wegführung für Radfahrer?
 userdel	q4::inwork; 11160,13492 11216,13451 11270,13412 11276,13408 11308,13389 11409,13327 11451,13301
 EOF
      },
@@ -23989,6 +23984,81 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork 12694,25696 12624,25570
+EOF
+     },
+     { from  => 1426822200, # 2015-03-20 04:30
+       until => $isodate2epoch->("2015-04-13 04:00:00"), # 1428199200, # 2015-04-05 04:00
+       text  => 'Ehrlichstr.: zwischen Lehndorffstr. und Eginhardstr. Bauarbeiten, Fahrbahn gesperrt, 21.03.2015 04:30 Uhr bis 13.04.2015 04:00 Uhr',
+       type  => 'handicap',
+       source_id => 'IM_024429',
+       data  => <<EOF,
+userdel	q4::inwork 18615,8269 18528,8331 18461,8377 18391,8425 18322,8470
+EOF
+     },
+     { from  => 1427147207, # 2015-03-23 22:46
+       until => $isodate2epoch->("2015-09-12 16:00:00"), # 1427752800, # 2015-03-31 00:00
+       text  => 'Pichelswerder Str.: Brücke beschädigt, Straße gesperrt, evtl. vollständig, bis Mitte September 2015',
+       type  => 'gesperrt',
+       source_id => 'IM_024458',
+       data  => <<EOF,
+#: note: laut fritz nur bis Anfang Juli 2015 gesperrt
+userdel	2::inwork -2576,13777 -2669,13488
+EOF
+     },
+     { from  => 1427484862, # 2015-03-27 20:34
+       until => 1427911348, # 1427925600, # 2015-04-02 00:00
+       text  => 'Chausseestr. und Invalidenstr.: Sperrung der Fahrbahn wegen Bauarbeiten bis zum 01.04.2015',
+       type  => 'handicap',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5540.html',
+       data  => <<EOF,
+userdel	q3::inwork 8870,13926 8935,13844
+userdel	q2::inwork; 8935,13844 8842,13798
+EOF
+     },
+     { from  => 1427752800, # 2015-03-31 00:00
+       until => 1427911510, # -> handicap_s-orig # 1438380000, # 2015-08-01 00:00
+       text  => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, gesperrt Richtung Osten, ab 01.04.2015',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX wann wird die Einbahnstraßenregelung aufgehoben?
+#: next_check: 2015-07-23
+userdel	q4::inwork; 8870,13926 9011,14019
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Zillestr.: zwischen Richard-Wagner-Str. und Wilmersdorfer Str. Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten, Ende der Sperrung unbekannt',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2015-03-28
+#: check_frequency: 90d
+userdel	q4::inwork; 3807,11859 3666,11855
+EOF
+     },
+     { from  => undef, # 
+       until => $isodate2epoch->("2015-12-01 00:00:00"), # undef, # XXX
+       text  => 'Dickhardstr.: Bauarbeiten an der Rheinstr., direkte Durchfahrt gesperrt, Ende der Bauarbeiten im Dezember 2015',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q3::inwork 5824,6974 5817,7223
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Uranusweg - U-Bhf. Scharnweberstr.: Weg ist unter Umständen zeitweise gesperrt, zum Beispiel nachts',
+       recurring => 1,
+       data  => <<EOF,
+	2::night 4280,17551 4243,17570 4240,17584 3959,17714 3987,17808
+EOF
+     },
+     { from  => 1428530400, # 2015-04-09 00:00
+       until => $isodate2epoch->("2015-04-13 05:00:00"), # 1428962399, # 2015-04-13 23:59
+       text  => 'Teplitzer Straße: Fahrbahnsanierung, Vollsperrung, von Freitag, dem 10.04.2015, bis Montag, dem 13.04.2015',
+       type  => 'handicap',
+       source_id => 'IM_024612',
+       data  => <<EOF,
+#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.291488.php
+userdel	q4::inwork 2087,7811 2106,8075 2120,8335 2126,8426
 EOF
      },
     );

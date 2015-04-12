@@ -107,10 +107,7 @@ Eichborndamm	1s:q3 4240,19019 4232,18981
 Eichborndamm	1 4232,18981 4210,18878 4163,18676 4102,18298 4059,18107 4015,17912
 Spreestr.	1 17900,6072 17939,5968 17877,5860 17810,5736 17807,5730 17782,5698
 Buckower Chaussee	1 8742,475 8972,498 9002,471
-#: XXX evtl. wird die Einbahnstraßenregelung aufgehoben
-#: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6025
-#: last_checked: 2015-03-09
-Archibaldweg	1 15674,10851 15870,10938
+# REMOVED (während der Bauarbeiten ist die Einbahnstraßenregelung aufgehoben (Sackgasse)) --- #: XXX evtl. wird die Einbahnstraßenregelung aufgehoben --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6025 --- #: last_checked: 2015-04-04 --- #: XXX ab 7. April wird hier wegen Bauarbeiten komplett gesperrt, evtl. auch für Radfahrer --- #: next_check: 2015-04-07 --- Archibaldweg	1 15674,10851 15870,10938
 Nöldnerplatz	1 15870,10938 15903,10906 16049,10844
 Adlergestell (extra Radweg)	2 21998,1239 21541,1739 21475,1804
 Richterstr.	1s:q3 22092,999 22120,886
@@ -292,7 +289,7 @@ Worpsweder Str.	1 6191,4923 6202,5163
 Wilseder Str.	1 6295,5158 6288,4906
 Dickhardtstr.	1 5817,7223 5824,6974 5826,6871 5811,6833 5752,6751 5604,6709 5533,6753
 Roennebergstr.	1 5533,6753 5357,6932
-Schmitzweg	1 5879,19352 5858,19437 5831,19547 5731,19824
+Schmitzweg	1 5879,19352 5851,19440 5823,19544 5731,19824
 Barbarossaplatz	1 6731,9559 6748,9524 6727,9497 6694,9537 6692,9546 6731,9559
 In den neuen Gärten	1 7111,3432 7318,3306 7359,3349 7409,3331 7472,3308
 Braillestr.	1 4430,5324 4477,5250 4512,5199
@@ -463,8 +460,9 @@ Kastanienallee	1 10838,14962 10881,15047
 Lossebergplatz	1 16070,23566 16094,23554 16095,23539 16079,23535 16064,23547 16070,23566
 Spindlersfelder Str.	2 21324,3691 21215,3919 21143,4150 21130,4239 21080,4702 21075,4769 21065,4957
 #: XXX evtl. wird die Einbahnstraßenregelung aufgehoben
+#: osm_watch: way id="25585951" version="9"
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6025
-#: last_checked: 2015-03-15
+#: last_checked: 2015-04-11
 Rathausstr.:	1s:q4 15651,12214 15628,12246 15576,12315 15537,12367
 Alt-Marzahn	1 21112,15396 21048,15424 20967,15458 20796,15559 20903,15545 20988,15505 21051,15464 21112,15396
 #: confirmed_by: srt vvv
@@ -574,7 +572,7 @@ Ingelheimer Str.	1 18891,8586 18951,8574 19030,8559
 Andernacher Str.	1 19030,8559 19000,8509
 Andernacher Str.	1 18949,8437 19000,8509
 Gleyeweg	1 17565,8197 17532,8125 17529,8073 17613,7989 17651,7973 17683,7958 17762,7931
-Murtzaner Ring	1 19818,14064 19770,14060 19731,14061 19692,14082 19634,14171 19599,14273 19595,14348 19593,14405 19593,14472
+Murtzaner Ring	1 19818,14064 19770,14060 19731,14061 19692,14082 19634,14171 19599,14273 19595,14348 19593,14405 19593,14452
 Murtzaner Ring	1 19818,14064 19843,14064 19921,14064 19951,14083 20051,14191 20061,14220 20056,14373 20051,14441
 Rosenstr.	1 22284,4653 22212,4655 22138,4661
 Laurenzstr.	1 22246,4711 22175,4730
@@ -661,7 +659,7 @@ Washingtonplatz	1s 8106,13130 7937,13126
 #: note: Einfahrt verboten
 Pfarrer-Lütkehaus-Platz	1 10228,-2136 10231,-2159
 Radebeuler Str.	1 19067,13818 19025,14037
-Beilsteiner Str.	1 18749,12413 18800,12838 18832,13099 18852,13269
+Beilsteiner Str.	1 18748,12399 18800,12838 18832,13099 18852,13269
 #: by: osm
 (Breite Str., Verbindung)	1s:q4 10463,18321 10487,18270
 #: by: Norbert Palzkill:
@@ -850,7 +848,7 @@ Cardinalstr.	1s:q3 21901,5728 21828,5623 21706,5541
 Fuchsbergeweg	1s:q3 20595,9558 20592,9298
 Piesporter Str. - Liebermannstr.	1 15217,17284 15267,17349 15280,17352
 (Marchlewskistr. - Gubener Str.)	1s:q3 13168,12219 13173,12202 13097,12166
-Alter Schönefelder Weg	1 19595,1546 19632,1593 19655,1670 19669,1729 19743,1804
+Alter Schönefelder Weg	1 19599,1557 19636,1609 19653,1671 19669,1729 19743,1804
 Boppstr.	1s:q2 11785,9437 11560,9524
 Südstern	1 10713,9260 10625,9259 10564,9292
 Südstern	1 10564,9292 10639,9304 10670,9286 10713,9260
@@ -858,7 +856,7 @@ Pitschener Str.	1s:q3 21769,-432 21719,-397 21637,-381
 #: XXX wird die Einbahnstraßenregelung für Radfahrer aufgehoben?
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4783
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to010.asp?SILFDNR=2578
-#: last_checked: 2015-02-21
+#: last_checked: 2015-03-25
 Herrfurthstr.	1s:q3 11979,8014 11833,7980
 Dankratstr.	1s:q3 21105,9538 20943,9543
 #: note: ansonsten Durchfahrt verboten
@@ -1018,7 +1016,7 @@ Eckertstr.	1s:q3 13598,12554 13585,12584
 Leistikowstr.	1 1188,11861 1133,11664
 Am Krummen Weg	1 -7169,14849 -7026,14890
 Am Krummen Weg	1 -7169,14849 -7248,14826
-Henricistr.	1 5993,19477 5858,19437
+Henricistr.	1 5993,19477 5851,19440
 # REMOVED (hier wird gebaut, evtl. gibt es danach keine Straße mehr) --- Breslauer Platz	1s:q3 5810,7337 5897,7337
 Desideriusweg	1 2830,21378 2728,21336
 Am Ansitz	1 3913,21977 3855,22055
@@ -1092,7 +1090,7 @@ Parkaue	1s:q4 15406,12444 15408,12394 15370,12264
 Stahlheimer Str.	1 11727,16358 11698,16311
 #: next_check_id: AMZIRKUS-2014
 #: XXX bleibt die Einbahnstraßenrichtung permanent? Oder nur während der Arbeiten am Schiffbauerdamm?
-#: last_checked: 2015-03-03
+#: last_checked: 2015-04-08
 Am Zirkus	1s:q4 9239,12923 9212,12969 9167,13046 9137,13032
 DB-Werkgelände, Befahren verboten	2 1645,9862 1672,9836 1563,9769 1583,9713 1615,9675 1724,9772
 #: note implizite Fahrtrichtung
@@ -1111,6 +1109,7 @@ Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8
 # REMOVED (dauerhaft) --- #: last_checked: 2014-07-23 --- #: check_frequency: 180d --- #: XXX evtl. permanent
 Vorfahrt Reichstagsgebäude: Absperrgitter, keine Durchfahrt mehr möglich	2 8400,12417 8399,12610
 Kriemhildstr.	1s:q3 17300,12173 17314,12265
+Sportfliegerstr.: Betriebsgelände	2 18370,4511 18423,4459
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1314,7 +1313,9 @@ Seelbuschring	1s:q3 8485,4619 8432,4712 8242,4648
 #: note: die Straßenbahn fährt hier auch lang
 Zionskirchstr.	1s:q1 10391,14280 10426,14262
 Walsroder Str.	1s:q3 6395,5154 6295,5158 6202,5163 6094,5171
-Hünensteig	1s:q3 6419,5048 6387,5057 6395,5154
+#: note: hier q4 wegen unübersichtlicher Kurve
+Hünensteig	1s:q4 6419,5048 6387,5057
+Hünensteig	1s:q3 6387,5057 6395,5154
 #: note: Radfahren auf dem Uferweg ist wohl Sitte
 Paul-Lincke-Ufer: Uferweg ist als Alternative vorhanden. Allerdings kann man aus der Lausitzer Str. nicht in den Uferweg einbiegen	1s:q2 12119,9823 11946,9913 11735,10022 11512,10105
 # REMOVED (wahrscheinlich alles nur ein Versehen) --- #: XXX Wie ist der Status der Einbahnstraße? Zurzeit ist das Einbahnstraßenschild überklebt, aber das Einfahrt-verboten-Schild nicht --- #: last_checked: 2014-12-04
@@ -1433,7 +1434,7 @@ Edisonstr.: Straßenbahn	3nocross 18010,7133 17934,7029 17919,6978
 Falkenseer Chaussee: Mittelstreifen	3nocross -5039,15618 -5153,15658 -5370,15721 -5470,15750
 Allee der Kosmonauten: Straßenbahntrasse	3nocross 20269,14256 20241,14016 20210,13776
 Allee der Kosmonauten: Straßenbahntrasse	3nocross 20822,14594 20868,14698 20944,14840
-Landsberger Allee: Mittelstreifen	3nocross 20260,15434 20532,15564 20733,15657
+Landsberger Allee: Mittelstreifen	3nocross 20260,15434 20532,15564 20580,15586
 Landsberger Allee: Mittelstreifen	3nocross 15256,14237 15430,14262 15850,14308
 Alt-Kaulsdorf: Mittelstreifen	3nocross 22484,11270 22756,11268 22937,11265
 Alt-Kaulsdorf: Mittelstreifen	3nocross 23101,11261 23362,11263 23447,11264 23648,11265
@@ -1526,7 +1527,7 @@ Lützowplatz: unbequem passierbarer Mittelstreifen	3nocross 6880,11110 6882,11061
 Brandenburgische Str.: Tunneleinfahrt Adenauerplatz	3nocross 3852,10236 3874,10153 3902,10043 3927,9935
 Treskowallee: Straßenbahntrasse	3nocross 18809,9133 18790,9018 18770,8898
 Treskowallee: Straßenbahntrasse	3nocross 18010,7133 18086,7243 18165,7371
-Treskowallee: Straßenbahntrasse	3nocross 18406,7760 18570,8025 18657,8163
+Treskowallee: Straßenbahntrasse	3nocross 18406,7760 18577,8033 18633,8126 18657,8163
 Treskowallee: Straßenbahntrasse	3nocross 18878,9517 18867,9464 18834,9256 18809,9133
 Bundesallee: unbequem passierbarer Mittelstreifen	3nocross 5463,9961 5464,9914 5467,9866
 Marzahner Kreuz: Linksabbiegen nicht möglich	3nocross 19681,15405 19664,15366 19619,15262 19604,15227 19577,15166 19516,14993 19452,14807 19425,14655
@@ -1684,7 +1685,7 @@ Ernst-Ruska-Ufer: Lärmschutzwand	3nocross 18496,2471 18656,2465 18929,2454
 Indira-Gandhi-Str.: Straßenbahntrasse	3nocross 14843,15007 14828,15050 14686,15608
 Hansastr.: Straßenbahntrasse	3nocross 16460,17214 16578,17285 16837,17440
 Groß-Berliner Damm: Mittelstreifen	3nocross 18930,3703 18884,3752 18856,3783 18826,3816
-Groß-Berliner Damm: Mittelstreifen	3nocross 18826,3816 18773,3873 18541,4125
+Groß-Berliner Damm: Mittelstreifen	3nocross 18826,3816 18779,3866 18541,4125
 Groß-Berliner Damm: Mittelstreifen	3nocross 18541,4125 18374,4307 18239,4453
 Groß-Berliner Damm: Mittelstreifen	3nocross 18930,3703 19029,3595 19125,3491
 Stromstr.: Mittelstreifen	3nocross 6228,13324 6229,13517 6230,13596
@@ -2052,6 +2053,7 @@ tragen (31 Stufen oder Kinderwagenrampe)	0:40 13168,21706
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+Drängelgitter	BNP:3::trailer=10 5029,19945
 Drängelgitter	BNP:3::trailer=10 -12262,-393
 Drängelgitter	BNP:3::trailer=10 -4139,1976
 enges Drängelgitter	BNP:5::trailer=no 17295,7323
@@ -2086,9 +2088,7 @@ Schranke (Umfahrung auf dem Gehweg falls geschlossen)	BNP:5::trailer=15 17979,11
 Drängelgitter	BNP:3::trailer=10 18613,2983
 Drängelgitter	BNP:3::trailer=10 18707,3074
 Drängelgitter	BNP:3::trailer=10 18724,3091
-#: XXX Drängelgitter noch nicht fertig montiert?
-#: last_checked: 2014-05-17
-Drängelgitter	BNP:0::trailer=0 18822,3188
+Drängelgitter	BNP:3::trailer=10 18822,3188
 Drängelgitter	BNP:3::trailer=10 19725,-51
 Drängelgitter	BNP:3::trailer=10 19774,-187
 Drängelgitter	BNP:3::trailer=10 19734,-45
@@ -2111,7 +2111,7 @@ Drängelgitter	BNP:3::trailer=10 10062,15927
 #: next_check_id: LORTZING-2014
 #: XXX eventuell temporär wegen der Baustraße
 #: XXX siehe auch in zebrastreifen-orig
-#: last_checked: 2015-02-24
+#: last_checked: 2015-04-09
 #: check_frequency: 120d
 zwei weite Drängelgitter	BNP:4::trailer=12 10038,15418
 Schranke	BNP:3 -7969,-1659
@@ -2482,13 +2482,15 @@ Drängelgitter	BNP:5 24759,11666
 Drängelgitter	BNP:5 24815,11329
 #: by: ^^^
 #: by: Christian (chrispan):
-Drängelgitter	BNP:5 7935,4466
+Drängelgitter	BNP:5 7925,4477
 Drängelgitter (lichte Breite ca. 80cm)	BNP:8::trailer=no 6526,21015
 Drängelgitter (lichte Breite ca. 80cm)	BNP:8::trailer=no 6548,21041
 Drängelgitter/Schranke	BNP:5 10012,5210
 Schranke	BNP:5 12571,7899
-# REMOVED (mittlerweile (Sommer 2014) ist ein Flügel permanent offen) --- : note: Abstand zwischen den versetzten Gittern ca. 135cm --- #: note: bei dichtem Verkehr kann die Wartezeit schon mal über 10 Sekunden betragen! --- BNP:5::trailer=10
-halbes Drängelgitter	BNP:2::trailer=4 14453,9929
+#: note: Abstand zwischen den versetzten Gittern ca. 135cm
+#: note: bei dichtem Verkehr kann die Wartezeit schon mal über 10 Sekunden betragen!
+#: note: früher (z.B. Sommer 2014) gab es hier nur ein halbes Drängelgitter
+Drängelgitter	BNP:5::trailer=10 14453,9929
 #: note: Breite der Vorbeifahrmöglichkeit >90cm
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2::trailer=4 14558,10082
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2::trailer=4 14597,10129
@@ -2588,17 +2590,49 @@ versetzte Schranke, manchmal offen	BNP:1::trailer=3 24625,20855
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: XXX Sperrungen wegen Bauarbeiten für die IGA 2017 vvv
+#: last_checked: 2015-04-11 vvv
+#: next_check: 2017-06-01 vvv
+IGA 2017-Gelände: Wege gesperrt	2 22455,14815 22417,14837 22380,14831 22331,14793 22254,14793 22199,14744 22164,14722 22108,14710 22090,14704 22071,14630 22051,14604 22026,14601 22012,14556 21985,14513 22026,14501 22061,14471 22172,14287 22414,14144 22462,14172 22639,14384 22679,14450 22670,14520
+IGA 2017-Gelände: Wege gesperrt	2 22414,14144 22407,14111 22404,13984
+#: next_check ^^^
+#: last_checked ^^^
+#: XXX ^^^
+# 
+#: XXX Rübertragen ist zur Not möglich vvv
+#: last_checked: 2015-04-10 vvv
+#: check_frequency: 90d vvv
+Alexander-von-Humboldt-Weg: Durchfahrt an der Wilhelm-Hoff-Str. durch Wasserrohr versperrt	3 19015,3129 18892,3256 18689,3465
+Alexander-von-Humboldt-Weg: Durchfahrt an der Wilhelm-Hoff-Str. durch Wasserrohr versperrt	3 18689,3465 18892,3256 19015,3129
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
+# 
+#: XXX Wie wird die Qualität danach sein? Wird man zum Hiltrud-Dudek-Weg durchfahren können? Wird die Straße verkehrsberuhigt sein?
+#: osm_watch: way id="151742436" version="5"
+#: XXX ad osm_watch: id referenziert die Jeanette-Wolff-Str., nur ein "proxy" für den neu zu bauenden Weg
+#: last_checked: 2015-04-10
+#: check_frequency: 100d
+Mathilde-Vaerting-Weg: noch in Bau	2::inwork 17610,-330 17651,-393
+# 
+#: XXX kein Endedatum
+#: osm_watch: way id="150301191" version="11"
+#: last_checked: 2015-04-07
+#: check_frequency: 120d
+Teltowkanalbrücke: bis auf Weiteres gesperrt	2::inwork  7769,4315 7795,4242
+# 
 #: next_check_id: EUROPACITY-2015
 #: last_checked: 2015-03-13
 #: next_check: 2016-12-31
 (Planstraßen 2.1, 2.2, 2.3): noch gesperrt	2 7818,13993 7917,14051 7962,13977 7866,13916
 # 
 #: XXX es gibt schon permanente Sackgassenschilder
+#: osm_watch: way id="334605047" version="2"
 #: last_checked: 2015-03-08
 #: check_frequency: 60d
 Wartenbergstr.: wegen Einsturzgefahr gesperrt, auch für Radfahrer und Fußgänger	2::inwork 15300,11584 15220,11440
 # 
-#: last_checked: 2015-02-14 vvv
+#: last_checked: 2015-04-04 vvv
 #: check_frequency: 60d vvv
 Wasserstr. (Niederschöneweide): abgesperrt	2::inwork 17477,6031 17639,6227
 Uferstr. (Niederschöneweide): abgesperrt	2::inwork 17639,6227 17843,6083
@@ -2608,7 +2642,7 @@ Uferstr. (Niederschöneweide): abgesperrt	2::inwork 17639,6227 17843,6083
 #: XXX siehe auch aufgehobene Einbahnstraßenregelungen weiter oben vvv
 #: source_id: IM_023816 vvv
 #: XXX vermutlich bis März 2016 andauernd
-#: last_checked: 2015-03-17 vvv
+#: last_checked: 2015-04-07 vvv
 Baerwaldstr.: Sperrung am Carl-Herz-Ufer	2::inwork 10467,10051 10500,10081
 Carl-Herz-Ufer: Sperrung an der Baerwaldstr.	2::inwork 10469,10081 10500,10081
 #: last_checked ^^^
@@ -2626,18 +2660,18 @@ Zufahrt zum Uferweg: gesperrt	2::inwork 7703,14582 7696,14577 7662,14579 7653,14
 # 
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage)
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45-181-136136549415/136549415/00119959/59-Anlagen/02/GA_1805_IV.pdf (mindestens bis Ende 2016)
-#: last_checked: 2015-03-18
+#: last_checked: 2015-04-08
 #: check_frequency: 180d
 Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelmarkt ist die Verbindung gesperrt	2::inwork 10308,11833 10374,11734
 # 
-#: last_checked: 2015-02-15
-#: check_frequency: 90d
+#: last_checked: 2015-04-04
+#: check_frequency: 120d
 Grenzweg: wegen Bauarbeiten für die Minna-Todenhagen-Str. teilweise gesperrt, ggfs. dauerhaft	2::inwork 17445,7434 17575,7519
 # 
 #: by: http://www.stadtentwicklung.berlin.de/verkehr/politik_planung/planfeststellungen/download/strassen_kfz/SOV-Beschluss-27022012.pdf
 #: XXX hier wird es für Autofahrer dauerhaft keine Zufahrt zur Minna-Todenhagen-Str. geben, aber vielleicht wird es für Radfahrer/Fußgänger einen Zugang geben?
-#: last_checked: 2015-01-04
-#: check_frequency: 90d
+#: last_checked: 2015-04-04
+#: check_frequency: 120d
 Wattstr.: wegen Bauarbeiten für die Minna-Todenhagen-Str. teilweise gesperrt, ggfs. dauerhaft	2::inwork 17670,7512 17681,7589
 # 
 #: XXX siehe auch temp_blockings-Eintrag vvv
@@ -2656,7 +2690,7 @@ Wattstr.: wegen Bauarbeiten für die Minna-Todenhagen-Str. teilweise gesperrt, gg
 #: next_check_id: NIZZASTR-2014 vvv
 #: last_checked: 2014-12-13 vvv
 Grenobler Ring: teilweise noch nicht fertiggestellt	2::inwork 12360,21303 12441,21341
-Lyonstr.: noch nicht fertiggestellt, zurzeit nur Baustraße	2::inwork 12189,21337 12214,21332 12322,21378 12407,21415
+Lyonstr.: noch nicht fertiggestellt, zurzeit nur Baustraße	2::inwork 12189,21337 12214,21332 12322,21378 12448,21433
 #: last_checked ^^^
 #: next_check_id ^^^
 # 
@@ -2676,18 +2710,11 @@ Luisenstr. Höhe Charité: Straße wegen Bauarbeiten komplett bis zum 30.09.2015 ge
 Lohmühlenplatz: Umgestaltung des Platzes, Wege ist gesperrt	2::inwork 12900,9465 12897,9365
 # 
 #: source_id: INKO_104519
-#: last_checked: 2014-10-12
+#: last_checked: 2015-03-28
 #: check_frequency: 90d
 Bismarckstr.: Mittelstreifen während der Bauarbeiten nicht überquerbar	3nocross 3690,11629 3844,11649 3898,11655
 # 
-#: next_check_id: INVALIDENFRIEDHOF-2014
-#: by: Birgit Schroeer
-#: confirmed_by: srt
-#: last_checked: 2015-03-13
-#: next_check: 2015-03-28
-#: XXX siehe auch temp_blockings-Eintrag
-#: osm_watch: way id="76212442" version="7"
-Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.03.2015	2::inwork 8119,13912 8101,13901 8248,13659 8337,13541
+# REMOVED --- #: next_check_id: INVALIDENFRIEDHOF-2014 --- #: by: Birgit Schroeer --- #: confirmed_by: srt --- #: last_checked: 2015-03-13 --- #: next_check: 2015-03-28 --- #: XXX siehe auch temp_blockings-Eintrag --- #: osm_watch: way id="76212442" version="7" --- Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.03.2015	2::inwork 8119,13912 8101,13901 8248,13659 8337,13541
 # 
 #: last_checked: 2015-02-20
 #: check_frequency: 120d
@@ -2704,8 +2731,9 @@ Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223
 # REMOVED (keine Bauzäune mehr) --- #: by: http://www.berlin.de/imperia/md/content/balichtenberghohenschoenhausen/bebauen/beteiligen/xxii6dreinplan.pdf?start&ts=1350454320&file=xxii6dreinplan.pdf --- #: by: http://www.berlin.de/imperia/md/content/balichtenberghohenschoenhausen/bebauen/beteiligen/xxii6dbegruendung.pdf?start&ts=1350454241&file=xxii6dbegruendung.pdf --- #: XXX evtl. ist hiermit die Position des Zebrastreifens in der Degnerstr. festgelegt? --- #: XXX vielleicht wird es auch eine Verbindung bis auf der ehem. Bahnlinie zur Hansastr. geben? --- #: XXX Fertigstellung der Mehrfamilienhäuser im Süden: Dezember 2014 --- #: last_checked: 2014-09-12 (Durchfahrt möglich, man muss an Bauzäunen vorbei) --- #: check_frequency: 21d --- Rad- und Gehwegverbindung Suermondtstr. - Degnerstr.	2::inwork 16476,16216 16458,16104 16493,15983 16559,15896
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6003 (Forderung nach Wiederherstellung)
-#: last_checked: 2014-09-27
-#: next_check: 2015-03-01
+#: XXX: Umfahrung existiert mittlerweile --- bleibt die Sperrung permanent?
+#: last_checked: 2015-04-11
+#: check_frequency: 180d
 Weg zwischen S-Wartenberg und S-Hohenschönhausen: Brücke morsch und gesperrt	2::inwork 17159,18375 17235,18352
 # 
 # REMOVED --- #: XXX hier steht noch ein Bauzaun --- #: last_checked: 2014-09-21 --- Viechtacher Str.: Bauarbeiten, Zufahrt zur Zwieseler Str. noch gesperrt	2::inwork 19657,9666 19727,9672
@@ -2752,7 +2780,7 @@ Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: z.Zt. nur Baustellenzufahrt, Du
 # REMOVED (die Baustelle ist mittlerweile auf der anderen Straßenseite) --- #: next_check_id: INVALIDEN-2014 vvv --- #: last_checked: 2014-04-02 vvv --- #: next_check: 2015-05-31 vvv --- Am Nordbahnhof: Abbiegen in die Invalidenstr. nicht möglich	3 9011,14019 9085,13919 8935,13844 --- Am Nordbahnhof: Abbiegen in die Invalidenstr. nicht möglich	3 9011,14019 9085,13919 9151,13941 --- Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht möglich	3 9151,13941 9085,13919 9011,14019 --- Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht möglich	3 8935,13844 9085,13919 9011,14019
 # 
 #: next_check_id: SCHINKELPLATZ-2014 vvv
-#: last_checked: 2015-02-23 vvv
+#: last_checked: 2015-04-08 vvv
 #: check_frequency: 90d vvv
 Schinkelplatz: Bauarbeiten, Straße gesperrt	2::inwork 10008,12274 9994,12368
 Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1s:q3 9996,12401 9994,12368 9943,12364 9961,12273
@@ -2781,16 +2809,8 @@ Grenzallee: komplette Sperrung wegen Bau des Autobahntunnels	2::inwork 14257,689
 # 
 # REMOVED (wahrscheinlich dauerhaft) --- #: last_checked: 2014-02-25 --- Wadzeckstr. - Mollstr.: Baustelle, möglicherweise wird es diese Verbindung in Zukunft nicht mehr geben	2::inwork 11326,13196 11379,13279 11409,13327
 # REMOVED (beendet) --- #: next_check_id: ZIMMERMANNSTRBR-2014 --- #: last_checked: 2014-02-08 --- #: next_check: 2014-06-30 --- #: priority: #A --- #: add_fragezeichen: Sind die Bauarbeiten auf der Zimmermannstraßenbrücke und am Wuhlewanderweg mittlerweile beendet? --- Wuhlewanderweg an der Zimmermannstraßenbrücke: wegen Bauarbeiten gesperrt	2::inwork 21385,9049 21471,9246
-# 
-#: last_checked: 2014-06-09
-Wilhelm-Hoff-Str.: asphaltierter Weg noch abgesperrt	2::inwork 19033,3397 19057,3422
-# 
-#: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0186-neubau-eines-boardingwohn-und.html
-#: XXX_prog 1s:q3:inwork geht als Kategorie nicht, falsche Übersetzung!
-#: last_checked: 2014-12-15
-#: check_frequency: 180d
-Große Hamburger Str.: Einbahnstraße wegen Bauarbeiten	1s:q3 10077,13100 10018,13299
-# 
+# REMOVED --- #: last_checked: 2014-06-09 --- Wilhelm-Hoff-Str.: asphaltierter Weg noch abgesperrt	2::inwork 19033,3397 19057,3422
+# REMOVED (by wosch) --- #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0186-neubau-eines-boardingwohn-und.html --- #: XXX_prog 1s:q3:inwork geht als Kategorie nicht, falsche Übersetzung! --- #: last_checked: 2014-12-15 --- #: check_frequency: 180d --- Große Hamburger Str.: Einbahnstraße wegen Bauarbeiten	1s:q3 10077,13100 10018,13299
 # REMOVED (anscheinend ist ein Viertel der Treppe zugänglich, siehe http://berlinerbaustellen.blogspot.de/2014/01/0246-gastbaustelle-potsdam-potsdamer.html) --- : last_checked: 2014-01-11 --- Alter Markt - Uferweg: Zugang höchstwahrscheinlich gesperrt	2::inwork -12608,-1715 -12625,-1703 -12643,-1694
 # REMOVED (Einbahnstraße in "Am Zirkus" bleibt wohl permanent, Schild sieht nicht temporär aus) #: next_check_id: AMZIRKUS-2014 --- #: XXX oder bleibt die Einbahnstraßenregelung permanent? --- #: XXX_prog 1s:q4:inwork geht als Kategorie nicht, falsche Übersetzung! --- #: last_checked: 2014-03-07
 # REMOVED (offen) --- #: next_check_id: STADTGARTENMOABIT-2014 --- #: last_checked: 2014-05-24 (noch gesperrt) --- #: by: http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20140505.1005.396906.html --- (Weg am Stadtgarten Moabit): Bauarbeiten	2::inwork 5708,14077 5685,14215
@@ -2825,7 +2845,7 @@ Promenade am Teltowkanal: während der Bauarbeiten an der Emil-Schulz-Brücke gesp
 #: XXX siehe auch Busspur in radwege-orig vvv
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0166-unter-den-linden-oberwallstrae.html vvv
 #: source_id: INKO_113041 vvv
-#: last_checked: 2015-02-23 vvv
+#: last_checked: 2015-04-08 vvv
 #: next_check: 2015-06-30 vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross 9984,12426 9934,12420 9858,12410
 # REMOVED (nach der Fahrbahn wieder erreichbar) --- Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
@@ -2859,15 +2879,15 @@ Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?
 #: XXX geplante Fertigstellung (als Autostraße) im Dezember 2013
 #: XXX wrote Mail about current status (2013-11-05), no response
 # REMOVED --- osm_watch: way id="183406331" version="3"
-#: last_checked: 2015-03-13
+#: last_checked: 2015-04-09
 #: check_frequency: 120d
 Nordufer: Neubau	2:inwork 7427,14648 7212,14738
 # 
 # REMOVED (offensichtlich wieder passierbar) --- #: last_checked: 2013-06-04 --- #: next_check: 2013-08-01 --- #: XXX siehe auch Eintrag zur Friedrichsbrücke in handicap_s-orig --- Spreeufer: wegen Bauarbeiten an der Friedrichsbrücke gesperrt	2:inwork 10166,12777 10105,12855
 # 
 #: by: http://www.berliner-zeitung.de/verkehr/s-bahn-linie-21--baustelle-am-hauptbahnhof--ab-durch-die-mitte,10809298,20580624.html (ab 2012-10-15 für 30 Monate, also mindestens bis ca. 2015-04)
-#: last_checked: 2015-03-13
-#: check_frequency: 30d
+#: last_checked: 2015-03-28
+#: check_frequency: 60d
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwork 8106,13130 8102,13304
 # 
 # REMOVED (wieder offen) --- #: last_checked: 2013-02-04 --- #: XXX Bauzäune waren im Dezember 2012 weg, aber im Februar 2013 wurde wieder gebaut --- Am Sudhaus: Bauarbeiten, manchmal noch gesperrt	2:inwork 12134,8172 12282,8204
@@ -2879,7 +2899,7 @@ Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwor
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
 #: XXX siehe auch Eintrag in handicap_s-orig
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0194-oberwallstrae-werderscher-markt.html
-#: last_checked: 2015-02-16
+#: last_checked: 2015-04-08
 #: check_frequency: 100d
 Oberwallstr.: Bauarbeiten, komplett gesperrt	2:inwork 9898,12161 9882,12259
 # 
@@ -2971,8 +2991,8 @@ Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12
 #: last_checked: ^^^
 #: next_check_id: ^^^
 # 
-#: last_checked: 2015-02-23
-#: next_check: 2015-05-31 (Eröffnung 2019 geplant)
+#: last_checked: 2015-04-08
+#: next_check: 2016-05-31 (Eröffnung 2019 geplant)
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 # REMOVED (Boulevard Berlin!) --- #: last_checked: 2011-12-25 --- #: next_check: 2012-01-01 --- #: XXX evenuell bleibt dieser Teil dauerhaft gesperrt, weil hier ein Einkaufszentrum entsteht? --- #: XXX auch die Ampel an der Kreuzung prüfen --- Treitschkestr.: Bauarbeiten am Kaufhaus, bis 2012	2:inwork 5219,6215 5062,6295 4997,6331 4971,6345
@@ -2984,7 +3004,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: osm_watch: way id="158025179" version="2"
-#: last_checked: 2015-03-13
+#: last_checked: 2015-03-27
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 

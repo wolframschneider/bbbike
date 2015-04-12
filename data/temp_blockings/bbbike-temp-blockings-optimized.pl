@@ -53,6 +53,34 @@ push @temp_blocking,
        undef,
        undef,
        undef,
+       {
+         'data' => '#: by: http://www.myfest36.de/
+userdel	2::temp 11763,10635 11722,10533 11949,10414
+userdel	2::temp 11556,10869 11770,10774 11760,10732 11781,10696 11763,10635 11505,10744 11556,10869 11589,10947 11640,11067
+userdel	2::temp 11958,11045 11897,10887 11841,10747 11824,10708 11781,10696
+userdel	2::temp 11805,10899 11803,10857
+userdel	2::temp 11275,10723 11301,10783 11329,10785 11365,10791 11403,10782 11505,10744 11463,10642 11722,10533
+userdel	2::temp 11841,10747 11770,10774 11799,10848
+userdel	2::temp 11463,10642 11275,10723 11234,10739 11159,10769
+userdel auto	3 11258,10682 11275,10723 11253,10778
+userdel auto	3 11253,10778 11275,10723 11258,10682
+',
+         'periodic' => 1,
+         'until' => 1430517599,
+         'from' => 1430388000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2015',
+         'type' => 'gesperrt',
+         'id' => 45
+       },
        undef,
        undef,
        undef,
@@ -735,8 +763,49 @@ push @temp_blocking,
        undef,
        undef,
        undef,
+       {
+         'source_id' => 'http://www.ms-event-agentur.com/primavera%202013.html',
+         'data' => 'userdel	2::temp 7107,9030 7044,9163 7022,9211 7006,9282
+userdel	2::temp 6945,9142 7044,9163
+',
+         'periodic' => 1,
+         'until' => 1430690399,
+         'from' => 1430431200,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              24,
+                              'months',
+                              1
+                            ]
+                          ],
+         'text' => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (2.5.2015 und 3.5.2015)',
+         'id' => 728,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
+       {
+         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20150404
+userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
+',
+         'periodic' => 1,
+         'until' => 1443995999,
+         'from' => 1443823200,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              5,
+                              'months',
+                              10
+                            ]
+                          ],
+         'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 3. und 4.10.2015',
+         'type' => 'gesperrt',
+         'id' => 731
+       },
        undef,
        undef,
        undef,
@@ -969,10 +1038,26 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
+       {
+         'source_id' => 'http://www.laubinger.de/termine/22-boelschefest-friedrichshagen/',
+         'data' => 'userdel	2::temp 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+',
+         'periodic' => 1,
+         'until' => 1431295199,
+         'from' => 1431036000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              7,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (9. und 10. Mai 2015)',
+         'id' => 964,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -1659,7 +1744,27 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.family-and-friends-ev.de/2.html
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=859853
+userdel	2::temp 589,11953 577,11837 562,11710 560,11695 550,11607 541,11464
+',
+         'periodic' => 1,
+         'until' => 1431295199,
+         'from' => 1431036000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (09. und 10. Mai 2015)',
+         'type' => 'gesperrt',
+         'id' => 1642
+       },
        undef,
        undef,
        undef,
@@ -2355,7 +2460,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März von 6.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im April von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -2708,29 +2813,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
-userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-',
-         'periodic' => 1,
-         'until' => 1430085599,
-         'from' => 1429740000,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              18,
-                              'months',
-                              4
-                            ]
-                          ],
-         'text' => 'Str. des 17. Juni zwischen Yitzhak-Rabin-Str. und Platz des 18. März sowie Ebertstr. gesperrt (Nisan Kinderfest, 25.4.2015 bis 26.4.2015)',
-         'id' => 2324,
-         'type' => 'gesperrt',
-         'prewarn_days' => 2
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2929,19 +3012,38 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.287680.php',
+         'data' => 'userdel	2::temp 22133,4644 22111,4562 22093,4499
+userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
+',
+         'periodic' => 1,
+         'until' => 1430085599,
+         'from' => 1429740000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              23,
+                              'months',
+                              4
+                            ]
+                          ],
+         'text' => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 24.4.2015 bis 26.4.2015 ',
+         'id' => 2419,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        {
          'source_id' => 'IM_019747',
-         'until' => 1427727600,
-         'text' => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende März 2015) ',
+         'until' => 1429714800,
+         'text' => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende April 2015) ',
          'from' => 1366740818,
          'id' => 2422,
          'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
-#: last_checked: 2014-09-13
-#: check_frequency: 100d
+#: last_checked: 2015-03-28
 userdel	q2::inwork 5258,11285 5236,10994
 ',
          'type' => 'handicap'
@@ -2951,10 +3053,49 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
+       {
+         'source_id' => 'http://www.ms-event-agentur.com/seite18.html',
+         'data' => 'userdel	2::temp 6244,8597 6339,8644 6454,8653
+',
+         'periodic' => 1,
+         'until' => 1431280800,
+         'from' => 1431075600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              4,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Schöneberger Mai- und Spargelfest am 9. und 10. Mai 2015 in der Freiherr-vom-Stein-Straße',
+         'id' => 2428,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2014
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=954647
+userdel	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
+',
+         'periodic' => 1,
+         'until' => 1430690399,
+         'from' => 1430344800,
+         'text' => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz), Straße rund um den Dorfteich vermutlich gesperrt (01.05.2015 bis 03.05.2015)',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              5
+                            ]
+                          ],
+         'type' => 'handicap',
+         'id' => 2431
+       },
        undef,
        undef,
        undef,
@@ -3159,7 +3300,26 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/sonstiges/events/fest-der-nationen/',
+         'data' => 'userdel	2::temp 5661,9630 5657,9600 5630,9592 5602,9606 5595,9626
+',
+         'periodic' => 1,
+         'until' => 1433102400,
+         'from' => 1432818000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 29.5.2015 15 Uhr bis 31.5.2015 22 Uhr',
+         'id' => 2533,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3222,7 +3382,31 @@ userdel	q3::inwork; 13555,15596 13459,15653
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2977174-2970764-1-mai-kundgebung-des-dgb.html',
+         'data' => 'userdel	2::inwork 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302
+userdel	2::inwork 8573,12325 8540,12420
+userdel	2::inwork 8303,12216 8344,12221 8538,12245 8610,12254
+userdel	2::inwork 8089,12190 8214,12205
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+',
+         'periodic' => 1,
+         'until' => 1430524800,
+         'from' => 1430172000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              4
+                            ]
+                          ],
+         'text' => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung und Kinderfest des DGB), am 1. Mai 2015',
+         'id' => 2565,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3248,19 +3432,7 @@ userdel	q3::inwork; 13555,15596 13459,15653
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Hanstedter Weg: Bauarbeiten, Fahrbahn gesperrt',
-         'from' => undef,
-         'id' => 2582,
-         'data' => '#: by: Angelika Weber
-#: XXX wann sind die Bauarbeiten beendet?
-#: XXX bleibt das Kopfsteinpflaster nach den Bauarbeiten?
-#: last_checked: 2014-07-17
-userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3271,8 +3443,7 @@ userdel	q4::inwork 6747,5010 6783,5011 6908,5053 6923,5057
          'text' => 'Siemensstraße zwischen Wilhelminenhofstraße und Edisonstraße: Einbahnstraße wegen Bauarbeiten, in Richtung Osten gesperrt, vom 12.03.2015 bis 16.06.2015',
          'from' => 1426057200,
          'id' => 2587,
-         'data' => '#: XXX eventuell für Radfahrer nur an der Wilhelminenhofstraße gesperrt, ab Wattstr. vielleicht schon offen
-userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
+         'data' => 'userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
 ',
          'type' => 'handicap'
        },
@@ -3315,7 +3486,26 @@ userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 22133,4644 22111,4562 22093,4499
+userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
+',
+         'periodic' => 1,
+         'until' => 1440367199,
+         'from' => 1440072000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              20,
+                              'months',
+                              8
+                            ]
+                          ],
+         'text' => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 21.8.2015 bis 23.8.2015',
+         'type' => 'gesperrt',
+         'id' => 2610
+       },
        undef,
        undef,
        undef,
@@ -3341,7 +3531,7 @@ userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
          'from' => undef,
          'id' => 2630,
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2014-12-06
+#: last_checked: 2015-03-28
 #: check_frequency: 90d
 userdel	q3::inwork 4503,10497 4485,10307
 ',
@@ -3352,35 +3542,11 @@ userdel	q3::inwork 4503,10497 4485,10307
        undef,
        undef,
        undef,
-       {
-         'until' => 1427583599,
-         'text' => 'Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.03.2015',
-         'from' => 1412021931,
-         'id' => 2636,
-         'data' => '#: next_check_id: INVALIDENFRIEDHOF-2014
-#: by: Birgit Schroeer
-#: confirmed_by: srt
-#: XXX vielleicht wird hier asphaltiert?
-#: last_checked: 2015-03-06
-#: next_check: 2015-03-28
-userdel	2::inwork 8101,13901 8248,13659 8337,13541
-',
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_023111',
-         'until' => 1427896800,
-         'text' => 'Gartenstr.: Baustelle zwischen Invalidenstr. und Tieckstr., Fahrbahn Richtung Torstr. gesperrt (kurzer Abschnitt), außerdem Einbahnstraßenregelung in der Tieckstr., 06.10.2014 06:00 Uhr bis 01.04.2015 16:00 Uhr ',
-         'from' => 1412481600,
-         'id' => 2640,
-         'data' => '	q2::inwork; 9514,13826 9383,13986
-	q3::inwork; 9514,13826 9376,13765
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        {
          'source_id' => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/freybruecke/de/bau.shtml',
          'until' => 1448636400,
@@ -3408,16 +3574,7 @@ userdel	2::inwork -3197,11554 -3075,11510
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_023111',
-         'until' => 1427896800,
-         'text' => 'Gartenstr.: Baustelle vor der Invalidenstr., Fahrbahn in Richtung Süden gesperrt, 06.10.2014 06:00 Uhr bis 01.04.2015 16:00 Uhr',
-         'from' => 1412481600,
-         'id' => 2648,
-         'data' => 'userdel	q2::inwork; 9224,14169 9383,13986
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        {
@@ -3439,27 +3596,9 @@ userdel	2::inwork -3197,11554 -3075,11510
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_023373',
-         'until' => 1442066400,
-         'text' => 'Pichelswerderstr.: Baustelle, Fahrbahn Richtung Ruhlebener Str. zwischen Freiheit und Gewerbehof gesperrt, vom 10.11.2014 bis 12.09.2015',
-         'from' => 1415487600,
-         'id' => 2661,
-         'data' => 'userdel	q4::inwork; -2576,13777 -2669,13488
-',
-         'type' => 'handicap'
-       },
        undef,
-       {
-         'until' => undef,
-         'text' => 'Handjerystraße: zwischen Schnackenburgstraße und Sarrazinstraße Sperrung der Fahrbahn, Ende der Sperrung unbekannt ',
-         'from' => undef,
-         'id' => 2663,
-         'data' => '#: by: fritz
-userdel	q4::inwork 5635,7660 5636,7540
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -3472,7 +3611,7 @@ userdel	q4::inwork 5635,7660 5636,7540
          'text' => 'Kronenstr.: Einbahnstraßenregelung zwischen Charlottenstr. und Markgrafenstr., gesperrt Richtung Osten, Dauer unbekannt',
          'from' => undef,
          'id' => 2671,
-         'data' => '#: last_checked: 2015-03-13
+         'data' => '#: last_checked: 2015-04-01
 userdel	q4::inwork; 9559,11715 9692,11732
 ',
          'type' => 'handicap'
@@ -3482,24 +3621,15 @@ userdel	q4::inwork; 9559,11715 9692,11732
          'text' => 'Augsburger Str.: Bauarbeiten, Einbahnstraßenregelung',
          'from' => undef,
          'id' => 2672,
-         'data' => '#: last_checked: 2014-12-12
+         'data' => '#: last_checked: 2015-03-28
+#: next_check: 2015-06-28
 userdel	q4::inwork; 5866,10492 5780,10542 5627,10637
 ',
          'type' => 'handicap'
        },
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Lankwitzer Damm: Weg am Bahndamm und Teltowkanal-Brücke gesperrt',
-         'from' => undef,
-         'id' => 2675,
-         'data' => '#: by: user per phone
-#: XXX vor Ort anschauen! Gibt es ein Endedatum?
-userdel	2::inwork 7772,4306 7795,4242 8106,3410
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
@@ -3529,9 +3659,11 @@ userdel	q4::inwork; 2268,19919 2064,19874 1886,19835
          'id' => 2679,
          'data' => '#: XXX "für mehrere Monate" vvv
 #: XXX evtl. bis 30. April 2015
-#: last_checked: 2015-03-15 vvv
+#: last_checked: 2015-04-11 vvv
+#: next_check: 2015-04-30 vvv
 	3 15294,11964 15361,12071 15420,12178
 	3 15117,12106 15361,12071 15420,12178
+#: next_check ^^^
 #: last_checked ^^^
 #: XXX ^^^
 '
@@ -3558,27 +3690,8 @@ userdel	q4::inwork; 2268,19919 2064,19874 1886,19835
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1428703200,
-         'text' => 'Salzufer: zwischen Franklin- und Margarete-Kühn-Str. in Richtung Straße des 17. Juni gesperrt, bis 10.04.2015',
-         'from' => 1424975817,
-         'id' => 2682,
-         'data' => '#: by: fritz
-userdel	q4::inwork; 5018,12322 5133,12240
-',
-         'type' => 'handicap'
-       },
-       {
-         'source_id' => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20150224.1645.401231.html',
-         'until' => 1426892399,
-         'text' => 'Waldowstr./Oberseestr.: Kreuzung gesperrt, Durchfahrt ggfs. nicht möglich, vom 16. bis 20. März 2015',
-         'from' => 1426374000,
-         'id' => 2683,
-         'data' => 'userdel	2::inwork 15761,15840 15856,15924 15703,15953
-userdel	2::inwork 15891,16041 15856,15924 16080,15830
-',
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        undef,
        undef,
        {
@@ -3591,34 +3704,8 @@ userdel	2::inwork 15891,16041 15856,15924 16080,15830
 ',
          'type' => 'gesperrt'
        },
-       {
-         'data' => 'userdel	q4; 6687,8385 6765,8480 6912,8617 6989,8687 7009,8705 7105,8788 7201,8870 7268,8960
-',
-         'periodic' => 1,
-         'until' => 1428357599,
-         'from' => 1428048000,
-         'recurrences' => [
-                            [
-                              'easter',
-                              -2
-                            ]
-                          ],
-         'text' => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstaltung (Osterfest Hauptstraße), Straße gesperrt (04.04.2015 - 06.04.2015)',
-         'type' => 'handicap',
-         'id' => 2687
-       },
-       {
-         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.277824.php',
-         'until' => 1427151600,
-         'text' => 'Mollstraße: zwischen Karl-Liebknecht-Str. und Otto-Braun-Str. Sperrung Richtung Osten wegen Bauarbeiten, ggfs. Einschränkungen auch für Radfahrer, vom 20.03.2015 bis 23.03.2015',
-         'from' => 1426719600,
-         'id' => 2688,
-         'data' => '#: XXX ändert sich nach den Bauarbeiten etwas an der Wegführung für Radfahrer?
-#: next_check: 2015-03-24
-userdel	q4::inwork; 11160,13492 11216,13451 11270,13412 11276,13408 11308,13389 11409,13327 11451,13301
-',
-         'type' => 'handicap'
-       },
+       undef,
+       undef,
        {
          'source_id' => 'LS/721-F/15/031',
          'until' => 1472594400,
@@ -3629,14 +3716,69 @@ userdel	q4::inwork; 11160,13492 11216,13451 11270,13412 11276,13408 11308,13389 
 ',
          'type' => 'handicap'
        },
+       undef,
        {
-         'until' => 1427014800,
-         'text' => 'Schönerlinder Str.: zwischen Am Posseberg und Am Vorwerk komplett gesperrt, von Samstag 18 Uhr bis Sonntagmorgen ca. 10 Uhr',
-         'from' => 1426870800,
-         'id' => 2690,
-         'data' => 'userdel	2::inwork 12694,25696 12624,25570
+         'source_id' => 'IM_024429',
+         'until' => 1428890400,
+         'text' => 'Ehrlichstr.: zwischen Lehndorffstr. und Eginhardstr. Bauarbeiten, Fahrbahn gesperrt, 21.03.2015 04:30 Uhr bis 13.04.2015 04:00 Uhr',
+         'from' => 1426822200,
+         'id' => 2691,
+         'data' => 'userdel	q4::inwork 18615,8269 18528,8331 18461,8377 18391,8425 18322,8470
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_024458',
+         'until' => 1442066400,
+         'text' => 'Pichelswerder Str.: Brücke beschädigt, Straße gesperrt, evtl. vollständig, bis Mitte September 2015',
+         'from' => 1427147207,
+         'id' => 2692,
+         'data' => '#: note: laut fritz nur bis Anfang Juli 2015 gesperrt
+userdel	2::inwork -2576,13777 -2669,13488
 ',
          'type' => 'gesperrt'
+       },
+       undef,
+       undef,
+       {
+         'until' => undef,
+         'text' => 'Zillestr.: zwischen Richard-Wagner-Str. und Wilmersdorfer Str. Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten, Ende der Sperrung unbekannt',
+         'from' => undef,
+         'id' => 2695,
+         'data' => '#: last_checked: 2015-03-28
+#: check_frequency: 90d
+userdel	q4::inwork; 3807,11859 3666,11855
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => 1448924400,
+         'text' => 'Dickhardstr.: Bauarbeiten an der Rheinstr., direkte Durchfahrt gesperrt, Ende der Bauarbeiten im Dezember 2015',
+         'from' => undef,
+         'id' => 2696,
+         'data' => 'userdel	q3::inwork 5824,6974 5817,7223
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'Uranusweg - U-Bhf. Scharnweberstr.: Weg ist unter Umständen zeitweise gesperrt, zum Beispiel nachts',
+         'from' => undef,
+         'id' => 2697,
+         'data' => '	2::night 4280,17551 4243,17570 4240,17584 3959,17714 3987,17808
+'
+       },
+       {
+         'source_id' => 'IM_024612',
+         'until' => 1428894000,
+         'text' => 'Teplitzer Straße: Fahrbahnsanierung, Vollsperrung, von Freitag, dem 10.04.2015, bis Montag, dem 13.04.2015',
+         'from' => 1428530400,
+         'id' => 2698,
+         'data' => '#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.291488.php
+userdel	q4::inwork 2087,7811 2106,8075 2120,8335 2126,8426
+',
+         'type' => 'handicap'
        }
      
 );

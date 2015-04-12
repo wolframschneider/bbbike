@@ -91,7 +91,6 @@ Eichborndamm	1s 4240,19019 4232,18981
 Eichborndamm	1 4232,18981 4210,18878 4163,18676 4102,18298 4059,18107 4015,17912
 Spreestr.	1 17900,6072 17939,5968 17877,5860 17810,5736 17807,5730 17782,5698
 Buckower Chaussee	1 8742,475 8972,498 9002,471
-Archibaldweg	1 15674,10851 15870,10938
 Nöldnerplatz	1 15870,10938 15903,10906 16049,10844
 Adlergestell (extra Radweg)	2 21998,1239 21541,1739 21475,1804
 Richterstr.	1s 22092,999 22120,886
@@ -242,7 +241,7 @@ Worpsweder Str.	1 6191,4923 6202,5163
 Wilseder Str.	1 6295,5158 6288,4906
 Dickhardtstr.	1 5817,7223 5824,6974 5826,6871 5811,6833 5752,6751 5604,6709 5533,6753
 Roennebergstr.	1 5533,6753 5357,6932
-Schmitzweg	1 5879,19352 5858,19437 5831,19547 5731,19824
+Schmitzweg	1 5879,19352 5851,19440 5823,19544 5731,19824
 Barbarossaplatz	1 6731,9559 6748,9524 6727,9497 6694,9537 6692,9546 6731,9559
 In den neuen Gärten	1 7111,3432 7318,3306 7359,3349 7409,3331 7472,3308
 Braillestr.	1 4430,5324 4477,5250 4512,5199
@@ -426,7 +425,7 @@ Ingelheimer Str.	1 18891,8586 18951,8574 19030,8559
 Andernacher Str.	1 19030,8559 19000,8509
 Andernacher Str.	1 18949,8437 19000,8509
 Gleyeweg	1 17565,8197 17532,8125 17529,8073 17613,7989 17651,7973 17683,7958 17762,7931
-Murtzaner Ring	1 19818,14064 19770,14060 19731,14061 19692,14082 19634,14171 19599,14273 19595,14348 19593,14405 19593,14472
+Murtzaner Ring	1 19818,14064 19770,14060 19731,14061 19692,14082 19634,14171 19599,14273 19595,14348 19593,14405 19593,14452
 Murtzaner Ring	1 19818,14064 19843,14064 19921,14064 19951,14083 20051,14191 20061,14220 20056,14373 20051,14441
 Rosenstr.	1 22284,4653 22212,4655 22138,4661
 Laurenzstr.	1 22246,4711 22175,4730
@@ -476,7 +475,7 @@ Washingtonplatz	1s 8106,13130 7937,13126
 (Vorfahrt HdKdW)	1 7627,12380 7654,12464 7687,12477 7778,12470 7813,12427 7821,12367
 Pfarrer-Lütkehaus-Platz	1 10228,-2136 10231,-2159
 Radebeuler Str.	1 19067,13818 19025,14037
-Beilsteiner Str.	1 18749,12413 18800,12838 18832,13099 18852,13269
+Beilsteiner Str.	1 18748,12399 18800,12838 18832,13099 18852,13269
 (Breite Str., Verbindung)	1s 10463,18321 10487,18270
 Thuner Platz	1 3251,1881 3263,1904 3286,1912 3307,1904 3317,1884 3312,1866 3297,1845
 Lappiner Str.	1 20418,12699 20545,12683
@@ -594,7 +593,7 @@ Cardinalstr.	1s 21901,5728 21828,5623 21706,5541
 Fuchsbergeweg	1s 20595,9558 20592,9298
 Piesporter Str. - Liebermannstr.	1 15217,17284 15267,17349 15280,17352
 (Marchlewskistr. - Gubener Str.)	1s 13168,12219 13173,12202 13097,12166
-Alter Schönefelder Weg	1 19595,1546 19632,1593 19655,1670 19669,1729 19743,1804
+Alter Schönefelder Weg	1 19599,1557 19636,1609 19653,1671 19669,1729 19743,1804
 Boppstr.	1s 11785,9437 11560,9524
 Südstern	1 10713,9260 10625,9259 10564,9292
 Südstern	1 10564,9292 10639,9304 10670,9286 10713,9260
@@ -732,7 +731,7 @@ Eckertstr.	1s 13598,12554 13585,12584
 Leistikowstr.	1 1188,11861 1133,11664
 Am Krummen Weg	1 -7169,14849 -7026,14890
 Am Krummen Weg	1 -7169,14849 -7248,14826
-Henricistr.	1 5993,19477 5858,19437
+Henricistr.	1 5993,19477 5851,19440
 Desideriusweg	1 2830,21378 2728,21336
 Am Ansitz	1 3913,21977 3855,22055
 Am Vierrutenberg etc.	1 5712,23785 5676,23971 5780,23997 5792,23943 5787,23840 5712,23785
@@ -803,6 +802,7 @@ Gretel-Bergmann-Weg	1s -1132,12268 -1288,12178
 Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8554,12593 8540,12420
 Vorfahrt Reichstagsgebäude: Absperrgitter, keine Durchfahrt mehr möglich	2 8400,12417 8399,12610
 Kriemhildstr.	1s 17300,12173 17314,12265
+Sportfliegerstr.: Betriebsgelände	2 18370,4511 18423,4459
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Knoten Märkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
@@ -964,7 +964,8 @@ Johanna-Spyri-Weg	1s 3211,2221 3221,2473
 Seelbuschring	1s 8485,4619 8432,4712 8242,4648
 Zionskirchstr.	1s 10391,14280 10426,14262
 Walsroder Str.	1s 6395,5154 6295,5158 6202,5163 6094,5171
-Hünensteig	1s 6419,5048 6387,5057 6395,5154
+Hünensteig	1s 6419,5048 6387,5057
+Hünensteig	1s 6387,5057 6395,5154
 Paul-Lincke-Ufer: Uferweg ist als Alternative vorhanden. Allerdings kann man aus der Lausitzer Str. nicht in den Uferweg einbiegen	1s 12119,9823 11946,9913 11735,10022 11512,10105
 Stallschreiberstr.	1s 10489,11405 10620,11244 10678,11172
 Jahnstr.	1s 11500,9116 11509,9392
@@ -1186,8 +1187,8 @@ Cecilienstr. -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 20281,14012 
 Straßenbahntrasse	3nocross::ignrte 20822,14594 20868,14698 20944,14840
 Allee der Kosmonauten -> Adersleber Weg: Straßenbahntrasse	3::igndisp 20944,14840 20868,14698 20935,14686
 Adersleber Weg -> Allee der Kosmonauten: Straßenbahntrasse	3::igndisp 20935,14686 20868,14698 20822,14594
-Mittelstreifen	3nocross::ignrte 20260,15434 20532,15564 20733,15657
-Landsberger Allee -> Rebhuhnweg: Mittelstreifen	3::igndisp 20733,15657 20532,15564 20550,15551
+Mittelstreifen	3nocross::ignrte 20260,15434 20532,15564 20580,15586
+Landsberger Allee -> Rebhuhnweg: Mittelstreifen	3::igndisp 20580,15586 20532,15564 20550,15551
 Rebhuhnweg -> Landsberger Allee: Mittelstreifen	3::igndisp 20550,15551 20532,15564 20260,15434
 Mittelstreifen	3nocross::ignrte 15256,14237 15430,14262 15850,14308
 Landsberger Allee -> Mittelstr./Altenhofer Str.: Mittelstreifen	3::igndisp 15256,14237 15430,14262 15430,14272
@@ -1478,7 +1479,10 @@ Bopparder Str. -> Treskowallee: Straßenbahntrasse	3::igndisp 18881,9002 18790,90
 Straßenbahntrasse	3nocross::ignrte 18010,7133 18086,7243 18165,7371
 Treskowallee -> Eichgestell: Straßenbahntrasse	3::igndisp 18165,7371 18086,7243 18186,7200
 Eichgestell -> Treskowallee: Straßenbahntrasse	3::igndisp 18186,7200 18086,7243 18010,7133
-Straßenbahntrasse	3nocross::ignrte 18406,7760 18570,8025 18657,8163
+Straßenbahntrasse	3nocross::ignrte 18406,7760 18577,8033 18633,8126 18657,8163
+Traberweg -> Treskowallee: Straßenbahntrasse	3::igndisp 18567,8041 18577,8033 18633,8126
+Treskowallee -> Weg an der Trabrennbahn: Straßenbahntrasse	3::igndisp 18657,8163 18633,8126 18650,8111
+Weg an der Trabrennbahn -> Treskowallee: Straßenbahntrasse	3::igndisp 18650,8111 18633,8126 18577,8033
 Straßenbahntrasse	3nocross::ignrte 18878,9517 18867,9464 18834,9256 18809,9133
 Treskowallee -> Waldowallee: Straßenbahntrasse	3::igndisp 18878,9517 18867,9464 18916,9468
 Treskowallee -> Rolandseck: Straßenbahntrasse	3::igndisp 18867,9464 18834,9256 18903,9244
@@ -2002,12 +2006,12 @@ Neuzeller Weg -> Hansastr.: Straßenbahntrasse	3::igndisp 16658,17142 16578,17285
 Mittelstreifen	3nocross::ignrte 18930,3703 18884,3752 18856,3783 18826,3816
 Landschaftspark Johannisthal -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18592,3743 18884,3752 18856,3783
 Landschaftspark Johannisthal -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18833,3781 18856,3783 18826,3816
-Mittelstreifen	3nocross::ignrte 18826,3816 18773,3873 18541,4125
-Gerhard-Sedlmayr-Str. -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18701,3806 18773,3873 18541,4125
-Groß-Berliner Damm -> Gerhard-Sedlmayr-Str.: Mittelstreifen	3::igndisp 18826,3816 18773,3873 18701,3806
+Mittelstreifen	3nocross::ignrte 18826,3816 18779,3866 18541,4125
+Gerhard-Sedlmayr-Str. -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18702,3790 18779,3866 18541,4125
+Groß-Berliner Damm -> Gerhard-Sedlmayr-Str.: Mittelstreifen	3::igndisp 18826,3816 18779,3866 18702,3790
 Mittelstreifen	3nocross::ignrte 18541,4125 18374,4307 18239,4453
-Gerhard-Sedlmayr-Str. -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18208,4151 18374,4307 18239,4453
-Groß-Berliner Damm -> Gerhard-Sedlmayr-Str.: Mittelstreifen	3::igndisp 18541,4125 18374,4307 18208,4151
+Gerhard-Sedlmayr-Str. -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18228,4168 18374,4307 18239,4453
+Groß-Berliner Damm -> Gerhard-Sedlmayr-Str.: Mittelstreifen	3::igndisp 18541,4125 18374,4307 18228,4168
 Mittelstreifen	3nocross::ignrte 18930,3703 19029,3595 19125,3491
 Groß-Berliner Damm -> Konrad-Zuse-Str.: Mittelstreifen	3::igndisp 19125,3491 19029,3595 18943,3508
 Konrad-Zuse-Str. -> Groß-Berliner Damm: Mittelstreifen	3::igndisp 18943,3508 19029,3595 18930,3703
@@ -2154,7 +2158,7 @@ tragen (2 Stufen)	0:5:-66 14823,9523
 tragen (10+11 Stufen)	0:30:-213 -1584,11499
 tragen (ca. 45 Stufen)	0:45:-160 -3177,11507
 tragen (4 Stufen)	0:10:-233 21326,11122
-tragen (8+8 Stufen)	0:25:-183 19534,14459
+tragen (8+8 Stufen)	0:25:-185 19534,14459
 tragen (5 x 5 Stufen) bzw. steile Rampe zum Schieben benutzen	0:35:-181 19570,13833
 tragen bzw. steile Rampe benutzen	0:30:90 1523,13377
 tragen (7+9 Stufen)	0:25:-52 -3513,13800
@@ -2357,6 +2361,7 @@ tragen (Treppe, ca. 20 Stufen)	0:25:-12 19160,14935
 tragen (Treppe)	0:30:70 89344,-5795
 tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
 tragen (31 Stufen oder Kinderwagenrampe)	0:40:-256 13168,21706
+Drängelgitter	BNP:3:-145:trailer=10 5029,19945
 Drängelgitter	BNP:3:-174:trailer=10 -12262,-393
 Drängelgitter	BNP:3:32:trailer=10 -4139,1976
 enges Drängelgitter	BNP:5:0:trailer=no 17295,7323
@@ -2388,7 +2393,7 @@ Schranke (Umfahrung auf dem Gehweg falls geschlossen)	BNP:5:-15:trailer=15 17979
 Drängelgitter	BNP:3:45:trailer=10 18613,2983
 Drängelgitter	BNP:3:48:trailer=10 18707,3074
 Drängelgitter	BNP:3:45:trailer=10 18724,3091
-Drängelgitter	BNP:0:36:trailer=0 18822,3188
+Drängelgitter	BNP:3:36:trailer=10 18822,3188
 Drängelgitter	BNP:3:-232:trailer=10 19725,-51
 Drängelgitter	BNP:3:-198:trailer=10 19774,-187
 Drängelgitter	BNP:3:-194:trailer=10 19734,-45
@@ -2683,12 +2688,12 @@ Schranke	BNP:3:-132 6749,15339
 Schranke	BNP:3:-130 6869,15441
 Drängelgitter	BNP:5:3 24759,11666
 Drängelgitter	BNP:5:-17 24815,11329
-Drängelgitter	BNP:5:-138 7935,4466
+Drängelgitter	BNP:5:-130 7925,4477
 Drängelgitter (lichte Breite ca. 80cm)	BNP:8:-151:trailer=no 6526,21015
 Drängelgitter (lichte Breite ca. 80cm)	BNP:8:-139:trailer=no 6548,21041
 Drängelgitter/Schranke	BNP:5:-180 10012,5210
 Schranke	BNP:5:-102 12571,7899
-halbes Drängelgitter	BNP:2:34:trailer=4 14453,9929
+Drängelgitter	BNP:5:34:trailer=10 14453,9929
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2:39:trailer=4 14558,10082
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2:41:trailer=4 14597,10129
 Drängelgitter	BNP:3:-153:trailer=15 12901,10134
@@ -2715,7 +2720,7 @@ Schranke, schwer passierbar	BNP:10:-195 7625,9376
 Schranke	BNP:5:-190 7612,9446
 Barriere	BNP:0:-88:trailer=3 3268,11847
 Drängelgitter	BNP:5:-260 -5890,25875
-Schranke, meistens offen	BNP:3:-261:trailer=6 7843,16524
+Schranke, meistens offen	BNP:3:-260:trailer=6 7843,16524
 Barriere	BNP:10:-12 12178,7985
 Drängelgitter	BNP:0:52:trailer=3 10535,13006
 Drängelgitter	BNP:10:-84 7158,9509
@@ -2753,6 +2758,12 @@ versetzte Schranke, manchmal offen	BNP:1:-124:trailer=3 23402,18067
 versetzte Schranke, manchmal offen	BNP:1:-195:trailer=3 24700,18981
 versetzte Schranke, manchmal offen	BNP:1:-133:trailer=3 24523,18542
 versetzte Schranke, manchmal offen	BNP:1:-171:trailer=3 24625,20855
+IGA 2017-Gelände: Wege gesperrt	2 22455,14815 22417,14837 22380,14831 22331,14793 22254,14793 22199,14744 22164,14722 22108,14710 22090,14704 22071,14630 22051,14604 22026,14601 22012,14556 21985,14513 22026,14501 22061,14471 22172,14287 22414,14144 22462,14172 22639,14384 22679,14450 22670,14520
+IGA 2017-Gelände: Wege gesperrt	2 22414,14144 22407,14111 22404,13984
+Alexander-von-Humboldt-Weg: Durchfahrt an der Wilhelm-Hoff-Str. durch Wasserrohr versperrt	3 19015,3129 18892,3256 18689,3465
+Alexander-von-Humboldt-Weg: Durchfahrt an der Wilhelm-Hoff-Str. durch Wasserrohr versperrt	3 18689,3465 18892,3256 19015,3129
+Mathilde-Vaerting-Weg: noch in Bau	2::inwork 17610,-330 17651,-393
+Teltowkanalbrücke: bis auf Weiteres gesperrt	2::inwork 7769,4315 7795,4242
 (Planstraßen 2.1, 2.2, 2.3): noch gesperrt	2 7818,13993 7917,14051 7962,13977 7866,13916
 Wartenbergstr.: wegen Einsturzgefahr gesperrt, auch für Radfahrer und Fußgänger	2::inwork 15300,11584 15220,11440
 Wasserstr. (Niederschöneweide): abgesperrt	2::inwork 17477,6031 17639,6227
@@ -2767,7 +2778,7 @@ Wattstr.: wegen Bauarbeiten für die Minna-Todenhagen-Str. teilweise gesperrt, gg
 (Baustraße an der Freybrücke)	2::inwork -3075,11510 -3197,11554
 (Treppe an der Freybrücke)	2::inwork -3181,11496 -3177,11507 -3173,11520
 Grenobler Ring: teilweise noch nicht fertiggestellt	2::inwork 12360,21303 12441,21341
-Lyonstr.: noch nicht fertiggestellt, zurzeit nur Baustraße	2::inwork 12189,21337 12214,21332 12322,21378 12407,21415
+Lyonstr.: noch nicht fertiggestellt, zurzeit nur Baustraße	2::inwork 12189,21337 12214,21332 12322,21378 12448,21433
 Luisenstr. Höhe Charité: Straße wegen Bauarbeiten komplett bis zum 30.09.2015 gesperrt, auch für Radfahrer und Fußgänger	2::inwork 8665,13353 8648,13498
 Lohmühlenplatz: Umgestaltung des Platzes, Wege ist gesperrt	2::inwork 12900,9465 12897,9365
 Mittelstreifen während der Bauarbeiten nicht überquerbar	3nocross::ignrte 3690,11629 3844,11649 3898,11655
@@ -2777,7 +2788,6 @@ Richard-Wagner-Str. -> Bismarckstr.: Mittelstreifen während der Bauarbeiten nich
 Richard-Wagner-Str. -> Sesenheimer Str.: Mittelstreifen während der Bauarbeiten nicht überquerbar	3::igndisp 3837,11760 3844,11649 3866,11473
 Sesenheimer Str. -> Bismarckstr.: Mittelstreifen während der Bauarbeiten nicht überquerbar	3::igndisp 3866,11473 3844,11649 3690,11629
 Sesenheimer Str. -> Richard-Wagner-Str.: Mittelstreifen während der Bauarbeiten nicht überquerbar	3::igndisp 3866,11473 3844,11649 3837,11760
-Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.03.2015	2::inwork 8119,13912 8101,13901 8248,13659 8337,13541
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 Weg zwischen S-Wartenberg und S-Hohenschönhausen: Brücke morsch und gesperrt	2::inwork 17159,18375 17235,18352
@@ -2790,8 +2800,6 @@ Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: z.Zt. nur Baustellenzufahrt, Du
 Schinkelplatz: Bauarbeiten, Straße gesperrt	2::inwork 10008,12274 9994,12368
 Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1s 9996,12401 9994,12368 9943,12364 9961,12273
 Grenzallee: komplette Sperrung wegen Bau des Autobahntunnels	2::inwork 14257,6895 14153,6795
-Wilhelm-Hoff-Str.: asphaltierter Weg noch abgesperrt	2::inwork 19033,3397 19057,3422
-Große Hamburger Str.: Einbahnstraße wegen Bauarbeiten	1s 10077,13100 10018,13299
 tragen (2 Stufen)	0:5:57 8818,13365
 Promenade am Teltowkanal: während der Bauarbeiten an der Emil-Schulz-Brücke gesperrt	2:inwork 4261,2703 4258,2693 4247,2652 4202,2622 4193,2616
 wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::ignrte 9984,12426 9934,12420 9858,12410
@@ -2900,7 +2908,7 @@ Althoffplatz	1 5687,5586 5609,5584 5573,5622 5613,5672 5683,5672
 Elisenstr.: tragen (3 Stufen)	0:15:-167 5813,5354
 tragen (9 Stufen)	0:30:-165 5822,5388
 tragen (3 x 10 Stufen)	0:90:-236 5535,4756
-tragen (8 Stufen)	0:30:-157 5466,4765
+tragen (8 Stufen)	0:30:-155 5466,4765
 tragen (Treppe)	0:20:-63 5371,4609
 tragen (16 Stufen)	0:45:-158 5469,4543
 tragen (ca. 5 x 9 Stufen)	0:120:35 13853,13712
@@ -2976,8 +2984,8 @@ Treppe zur Putlitzbrücke -> An der Putlitzbrücke: Mittelstreifen schlecht zu übe
 An der Putlitzbrücke -> Treppe zur Putlitzbrücke: Mittelstreifen schlecht zu überqueren	3::igndisp 6230,14184 6234,14247 6209,14245
 Treppe zur Putlitzbrücke -> An der Putlitzbrücke: Mittelstreifen schlecht zu überqueren	3::igndisp 6209,14245 6234,14247 6237,14309
 schwierig zu querender Mittelstreifen (parkende Autos und Bordsteine)	3nocross::ignrte 7172,13051 7187,13126 7161,13190
-Rathenower Str. -> Otto-Dix-Str.: schwierig zu querender Mittelstreifen (parkende Autos und Bordsteine)	3::igndisp 7161,13190 7187,13126 7364,13215
-Otto-Dix-Str. -> Rathenower Str.: schwierig zu querender Mittelstreifen (parkende Autos und Bordsteine)	3::igndisp 7364,13215 7187,13126 7172,13051
+Rathenower Str. -> Otto-Dix-Str.: schwierig zu querender Mittelstreifen (parkende Autos und Bordsteine)	3::igndisp 7161,13190 7187,13126 7356,13213
+Otto-Dix-Str. -> Rathenower Str.: schwierig zu querender Mittelstreifen (parkende Autos und Bordsteine)	3::igndisp 7356,13213 7187,13126 7172,13051
 Eichkatzweg	1 1137,9921 1026,9772 925,9644
 Lärchenweg	1 1046,9989 1093,9952 1137,9921 1157,9907 1238,9869
 schieben - einzelne Stufen	0:20:-147 1372,8011
@@ -3356,6 +3364,8 @@ An den Kanalwiesen (Wendisch Rietz)	1 51857,-20420 51900,-20326 51916,-20240
 Kreuzung Sewanstr./Am Tierpark	1::igndisp 18647,10172 18631,10167
 Am Tierpark, linker Gehweg	1::igndisp 18715,10003 18647,10172
 Treskowallee, linker Gehweg	1::igndisp 18748,9922 18715,10003
+Treskowallee, linker Gehweg	1::igndisp 18676,8236 18642,8169 18567,8041
+Treskowallee, linker Gehweg	1::igndisp 18406,7760 18650,8111
 Kreuzung Gregoroviusweg/Treskowallee	1::igndisp 18742,9903 18748,9922
 Alt-Friedrichsfelde, linker Gehweg	1::igndisp 18216,11656 18520,11685 18624,11712 18778,11742 19005,11767 19735,11721
 Alt-Friedrichsfelde, linker Gehweg	1::igndisp 18624,11712 18626,11742

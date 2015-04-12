@@ -86,8 +86,8 @@ Neue Bahnhofstr./Boxhagener Str.: Fußgängerampel auf der linken Seite benutzen	C
 #: XXX eventuell wird es hier in Zukunft Verbesserungen geben, siehe BVV-Beschluss
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3277&options=4
 #: source_id: IM_022413
-#: last_checked: 2014-12-13
-#: next_check: 2015-03-12
+#: last_checked: 2015-04-11
+#: check_frequency: 90d
 Rennbahnstr./Bernkasteler Str.: Fußgängerampel auf der linken Seite zum Überqueren der Berliner Allee benutzen	CP; 14528,16910 14558,16907 14673,16895
 Wisbyer Str. Richtung Dunckerstr.: bereits an der Prenzlauer Allee den linken Gehweg benutzen	PI; 12090,16199 12012,16250 11926,16088
 # REMOVED --- Stahlheimer Richtung Wisbyer Str.: Fußgängerampel auf der linken Seite zum Überqueren der Wisbyer Str. benutzen	CP; 11618,16183 11698,16311 11727,16358 11673,16367
@@ -202,8 +202,8 @@ Theaterufer: zwischen Straßentunnel und Debis-Gebäude	CP2; 8261,11015 8289,11205
 Richterstr. - Rathausstr.: zum Spielplatz einbiegen	CP2; 9277,3993 9294,3921
 Linksabbiegen in die Clayallee über Fußgängerfurt	CP; 1429,3609 1064,3743 971,3534
 Linksabbiegen in die Schlettstadter Str. über Fußgängerfurt	CP; 1136,3878 1064,3743 1429,3609
-Kehlheimer/Würzburger: Queren der Lietzenburger über Kfz-Furt möglich	CP; 5894,10287 5898,10318 5909,10353
-Kehlheimer/Würzburger: Queren der Lietzenburger über Kfz-Furt möglich	CP; 5909,10353 5898,10318 5894,10287
+Kehlheimer/Würzburger: Queren der Lietzenburger über Kfz-Furt möglich	CP; 5894,10287 5898,10318 5907,10347
+Kehlheimer/Würzburger: Queren der Lietzenburger über Kfz-Furt möglich	CP; 5907,10347 5898,10318 5894,10287
 das Portal des Anhalter Bahnhofs links liegen lassen	CP2; 8938,10872 8912,10846
 (Geßlerstr. - Monumentenstr.): Zufahrt über den Parkplatz an der Sportanlage	CP2; 7970,8886 7964,9060
 #: note: 13a-c auf der einen Straßenseite, 13d auf der anderen
@@ -435,7 +435,7 @@ Wesenberger Ring - Paster-Behrens-Str.: Durchfahrt über Parkplatz	CS; 13165,3850
 Am Britzer Garten: Gehweg links der Fahrbahn benutzen	CP2; 11153,3728 11130,3838
 An der südlichen Landebahn den oberen Weg benutzen	CP2; 11593,7314 11554,7382
 An der südlichen Landebahn den unteren Weg benutzen	CP2; 11593,7314 11543,7369
-Columbiadamm - Flughafen Tempelhof: unter Umständen schon an der Fußgängerampel die Straßenseite wechseln	PI; 10796,8498 10691,8532 10644,8363
+Columbiadamm - Flughafen Tempelhof: spätestens an der TiB-Ausfahrt abbiegen oder schon an der Fußgängerampel die Straßenseite wechseln	PI; 10796,8498 10691,8532 10644,8363
 Potsdamer Chaussee - Hohentwielsteig: bereits an der Fürstenstr. die Straßenseite wechseln	PI; -391,2914 -512,2883 -563,2862 -479,2715
 Ausgeschildert als Waldenburger Str.	CP2; 22905,10488 22783,10548
 Ausgeschildert als Striegauer Str.	CP2; 22783,10548 22905,10488
@@ -506,8 +506,8 @@ Schulzendorfer Str. - Reinickendorfer Str.: bereits an der Ampel Müllerstr./Schu
 Karl-Marx-Allee - Berolinastr.: bereits an der Kreuzung Alexanderstr./Otto-Braun-Str. auf den linken Gehweg wechseln	PI; 11226,12945 11289,12908 11367,12940
 Reußstr. - Streitstr.: auf den linken Gehweg bis zur Fußgängerampel fahren	CP; -3129,16931 -3023,16925 -3018,16974
 Streitstr. - Reußstr: bereits an der Ampel Goltzstr. auf den linken Gehweg wechseln	PI; -3029,16823 -3023,16925 -3129,16931
-Treskowallee - Traberweg: bereits an der Ampel Hegemeisterweg auf den linken Gehweg wechseln	PI; 18406,7760 18570,8025 18490,8104
-Traberweg - Treskowallee: den linken Gehweg bis zur Kreuzung Ehrlichstr. benutzen	CP; 18490,8104 18570,8025 18657,8163 18676,8236
+Treskowallee - Traberweg: bereits an der Ampel Hegemeisterweg auf den linken Gehweg wechseln	PI; 18406,7760 18577,8033 18567,8041 18490,8104
+# REMOVED (weil die Routingengine mit der doppelten Sperrung nicht zurechtkommt, eine Route Traberweg - Treskowallee - Weg an der Trabrennbahn könnte berechnet werden -> siehe routing_helper-orig-Eintrag) --- Traberweg - Treskowallee: den linken Gehweg bis zur Kreuzung Ehrlichstr. benutzen	CP; 18490,8104 18567,8041 18577,8033 18633,8126 18657,8163 18676,8236
 Columbiadamm - Straße 645: ggfs. bereits an der Ampel Columbiadamm/Fontanestr. auf den linken Gehweg wechseln	PI; 11632,8302 11512,8278 11441,8280 11419,8077
 Am Tierpark [Nebenfahrbahn] - Am Tierpark: den linken Gehweg bis zur Ampel benutzen	CP; 18306,11402 18268,11391 18286,11275
 Salvador-Allende-Str. - Abzweig: bereits an der Ampel Fürstenwalder Damm auf den linken Gehweg wechseln	PI; 23402,5483 23403,5385 23428,5382
@@ -578,3 +578,8 @@ KGA Birkholz: rechten Weg nehmen	CP2; 7766,-920 8059,-1077
 Weg im Freizeitpark Marienfelde: nicht ausgeschildert, leicht zu übersehen	CP2; 7977,-864 7978,-846
 Tauernallee - Hochspannungsweg: Radweg benutzen, um Bordstein zu umfahren	PI; 11355,1801 11343,1937 11373,1925
 Adlergestell - Am Adlergestell: bereits an der Steinbachstr. auf die linke Seite wechseln	PI; 19587,3801 19633,3751 19676,3705 19755,3780
+#: next_check_id: KOEPENICKERLANDSTR-2015
+#: last_checked: 2015-04-04
+#: check_frequency: 90d
+Rodelbergweg - Köpenicker Landstr.: ggfs. auf dem linken Gehweg bleiben, Straßenseite muss etwas später sowieso gewechselt werden	CP; 16615,7062 16563,7012 16646,6925
+Paster-Behrens-Str. - Britzer Park: links halten	CP2; 13329,4294 13270,4202

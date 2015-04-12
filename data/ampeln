@@ -133,7 +133,7 @@
 	X 18215,11690
 	X 18215,12123
 	X 18586,12151
-	X 19171,13486
+	X 19181,13485
 	X 19628,13517
 	X 20318,14402
 	X 19395,14477
@@ -218,7 +218,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5467,9866
 	X 5463,9961
 	X 5725,9846
-	X 5912,9788
+	X 5905,9795
 	X 5013,10039
 	X 5215,10711
 	X 5076,10658
@@ -591,7 +591,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8607,15426
 	X 8024,15401
 	X 8016,15085
-	X 8928,16158
+	X 8919,16154
 	X 7527,14684
 	X -3251,14741
 	X -3295,14777
@@ -758,13 +758,13 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -1523,11012
 	X -593,11119
 	X 504,11243
-	X 9134,15953
+	X 9123,15963
 	X 9864,14578
 	X 9938,14356
 	B 20170,-510
 	X 22145,208
 	X 20205,-548
-	X 19771,1793
+	X 19766,1796
 	X 18881,2062
 	X 18934,2703
 	X 16699,10611
@@ -866,7 +866,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4683,17669
 	X 4326,17801
 	X 3570,17938
-	X 3333,18034
+	X 3319,18043
 	X 2579,19345
 	X 2497,19503
 	X 2394,19697
@@ -1270,7 +1270,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8615,4151
 	F 6102,4726
 	X 6212,4622
-	X 7230,5689
+	X 7236,5685
 	X 5414,5939
 	X 5345,5994
 	X 6104,6258
@@ -1302,8 +1302,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3820,19688
 	X 3546,19477
 	X 3165,19136
-	X 3079,19045
-	X 2993,18962
+	X 3045,19032
+	X 2994,18979
 	X 2175,18740
 	X 1659,18747
 	X 4240,19019
@@ -1503,7 +1503,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 14126,3225
 	X 13775,3500
 	X 13526,3519
-	X 13498,2411
+	X 13501,2413
 	X 13010,2085
 	F 12547,1852
 	X 12643,1706
@@ -1654,7 +1654,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8690,13723
 	X 11629,9086
 	X 15681,10801
-	X 21089,4731
+	X 21108,4725
 	X 21002,5755
 	F 5413,2436
 	X 11673,16367
@@ -1749,8 +1749,8 @@ Industriebahn	B0 -2410,13746
 	F 11285,14515
 	F 11905,15462
 	X 7880,13315
-	X 8019,13650
 	X 7696,7771
+	F 7866,13916
 	F 12204,13719
 	X 19777,12949
 	F 18191,18557
@@ -2073,7 +2073,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 13068,7043
 	X 20451,2869
 	X 20289,3033
-	F::inwork 20010,3340
+	F::inwork 20002,3349
 	F 3995,12173
 	F 22031,9142
 	F 15356,3759
@@ -2275,6 +2275,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 10703,11837
 	F 10656,11887
 	F::inwork 7741,14560
+	F 7292,17316
+	X 20269,14256
 	F -12868,-502
 	X -12940,-1625
 	X -12549,-1277
