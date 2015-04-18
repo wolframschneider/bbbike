@@ -135,6 +135,7 @@ Berliner Str.	UA 5505,8963
 Blissestr.	UA 4911,8866
 Konstanzer Str.	UA 4072,9636
 Adenauerplatz	UA 3853,10396
+#: map_tube_other_link: Street:Charlottenburg
 Wilmersdorfer Str.	UA 3809,11037
 Richard-Wagner-Platz	UA 3770,12208
 Mierendorffplatz	UA 3643,13248
@@ -147,6 +148,7 @@ Paulsternstr.	UB -267,14501
 Haselhorst	UB -1288,14532
 Zitadelle	UB -2320,14423
 Altstadt Spandau	UB -3019,14499
+#: map_tube_other_link: Street:Spandau
 Rathaus Spandau	UB -3560,14235
 Hermannstr.	UA 12358,6895
 Leinestr.	UA 12126,7596

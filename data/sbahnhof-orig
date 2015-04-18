@@ -112,6 +112,7 @@ Messe Nord/ICC (Witzleben)	SA 2189,11092
 #: attrs bg
 Halensee	SA 2706,9927
 #: attrs bg
+#: map_tube_other_link: Street:Wilmersdorfer Str.
 Charlottenburg	SA 3650,10915
 #: attrs bg
 Savignyplatz	SA 4670,10930
@@ -319,6 +320,7 @@ Hennigsdorf	SC -3389,25653
 #: attrs bg
 Stresow	SB -2891,13780
 #: attrs bg
+#: map_tube_other_link: Street:Rathaus Spandau
 Spandau	SB -3663,14083
 Zehlendorf Süd	S0 -509,1987
 Düppel	S0 -1501,1486

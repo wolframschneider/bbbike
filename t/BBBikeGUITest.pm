@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2003,2006,2012 Slaven Rezic. All rights reserved.
+# Copyright (C) 2003,2006,2012,2015 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -14,23 +14,28 @@
 #
 # Usage:
 #   cd .../bbbike
-#   env BBBIKE_GUI_TEST=BBBikeGUITest perl -It ./bbbike -public
-#
+#   env BBBIKE_GUI_TEST_MODULE=BBBikeGUITest perl -It ./bbbike -public
+# or
+#   env BBBIKE_TEST_GUI=1 prove t/bbbikeguitest.t
 
 package BBBikeGUITest;
-
-use Test::More qw(no_plan);
-
-use Strassen::Util;
 
 use strict;
 use vars qw($VERSION);
 $VERSION = 2.00;
 
+use Time::HiRes ();
+use Test::More qw(no_plan);
+
+use Strassen::Util;
+use VectorUtil;
+
 my($top, $c);
+my $start_time = $ENV{BBBIKE_TEST_STARTTIME};
 
 sub start_guitest {
-    warn "Starting GUI test...\n";
+    my $end_time = Time::HiRes::time();
+    diag "Starting GUI test, start duration was " . sprintf("%.3f", $end_time-$start_time) . " seconds...\n";
 
     $top = $main::top;
     $c   = $main::c;
@@ -74,7 +79,7 @@ sub wait_for_chooser_window {
     my $chooser_window;
     $top->Walk(sub {
     		   my $w = shift;
-    		   if ($w->isa('Tk::Toplevel') && $w->title =~ m{^Stra.*en$}) { # XXX damn unicode!
+    		   if ($w->isa('Tk::Toplevel') && $w->title =~ m{^(Streets|Stra.*en)$}) { # XXX damn unicode!
     		       $chooser_window = $w;
     		   }
     	       });
@@ -87,7 +92,7 @@ sub wait_for_chooser_window {
 	    fail "Cannot find chooser window after $iteration iterations...";
 	    exit_app();
 	}
-	wait_for_chooser_window($iteration);
+	$top->after(500, sub { wait_for_chooser_window($iteration) });
     }
 }
 
@@ -104,7 +109,7 @@ sub continue_guitest_with_chooser_window {
 			      } elsif ($w->isa('Tk::Button')) {
 				  if ($w->cget('-text') eq 'Start') {
 				      $chooser_start = $w;
-				  } elsif ($w->cget('-text') eq 'Ziel') {
+				  } elsif ($w->cget('-text') =~ m{^(Ziel|Destination)$}) {
 				      $chooser_goal = $w;
 				  }
 			      }
@@ -120,7 +125,7 @@ sub continue_guitest_with_chooser_window {
     $chooser_goal->invoke;
 
     cmp_ok scalar(@main::realcoords), ">=", 10, 'More than 10 points in route';
-    cmp_ok Strassen::Util::strecke($main::realcoords[0], [8763,8780]), "<", 100, "Start is near Dudenstr.";
+    ok VectorUtil::point_in_polygon($main::realcoords[0], [[8168,8821], [8171,8752], [9262,8745], [9256,8831]]), "Start is near Dudenstr.";
     cmp_ok Strassen::Util::strecke($main::realcoords[-1], [10970,12822]), "<", 100, "Goal is near Alexanderplatz";
     #require Data::Dumper; print STDERR "Line " . __LINE__ . ", File: " . __FILE__ . "\n" . Data::Dumper->new([\@main::realcoords],[qw()])->Indent(1)->Useqq(1)->Dump; # XXX
 

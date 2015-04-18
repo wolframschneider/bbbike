@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2011,2012 Slaven Rezic. All rights reserved.
+# Copyright (C) 2011,2012,2015 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -14,27 +14,32 @@
 
 use strict;
 use FindBin;
+my $bbbikesrc_dir; BEGIN { $bbbikesrc_dir = "$FindBin::RealBin/../.." }
+use lib (
+	 $bbbikesrc_dir,
+	 "$bbbikesrc_dir/lib",
+	);
 
 use Archive::Zip qw(:ERROR_CODES :CONSTANTS);
 use Cwd qw(realpath);
 use Getopt::Long;
 
-sub save_pwd (&);
+use BBBikeUtil qw(save_pwd is_in_path);
 
 die "Sorry, mixing cygwin perl and Strawberry Perl does not work at all"
     if $^O eq 'cygwin';
 
 my $patch_exe;
 
-my $bbbikesrc_dir = "$FindBin::RealBin/../..";
-
 my $strawberry_dir;
 my $strawberry_ver;
 my $bbbikedist_dir;
+my $use_bundle; # by default, use task
 GetOptions(
 	   "strawberrydir=s" => \$strawberry_dir,
 	   "strawberryver=s" => \$strawberry_ver,
 	   "bbbikedistdir=s" => \$bbbikedist_dir,
+	   "bundle!" => \$use_bundle,
 	  )
     or usage();
 $strawberry_dir or usage();
@@ -117,14 +122,23 @@ save_pwd {
     chdir "$strawberry_dir/cpan"
 	or die "Can't chdir to $strawberry_dir/cpan: $!";
     my @cmd;
+    my $chdir;
     if (-d "prefs/.git") {
-	chdir "prefs"
-	    or die "Can't chdir to prefs subdirectory: $!";
-	@cmd = ("git", "pull");
+	$chdir = 'prefs';
+	@cmd = ("git", "pull", '--depth=10');
     } else {
-	@cmd = ("git", "clone", "git://github.com/eserte/srezic-cpan-distroprefs.git", "prefs");
+	@cmd = ("git", "clone", '--depth=10', "git://github.com/eserte/srezic-cpan-distroprefs.git", "prefs");
     }
-    system @cmd;
+    if (is_in_path('git')) {
+	if ($chdir) {
+	    chdir $chdir
+		or die "Can't chdir to subdirectory '$chdir': $!";
+	}
+	system @cmd;
+    } else {
+	(my $escaped_strawberry_dir = $strawberry_dir) =~ s{\\}{\\\\\\}g;
+	exec_cygwin_cmd('cd $(cygpath ' . $escaped_strawberry_dir . ')/cpan' . ($chdir ? "/$chdir" : '') . ' && ' . join(' ', @cmd));
+    }
     if ($? != 0) {
 	print STDERR <<EOF;
 **********************************************************************
@@ -147,9 +161,30 @@ print STDERR "Add modules from Bundle::BBBike_windist...\n";
 			    "$ENV{PATH}"
 			   );
     save_pwd {
+	my @common_cpan_cmd = (
+			       "$strawberry_dir/perl/bin/perl.exe",
+			       "-MCPAN",
+			       "-e",
+			       'CPAN::HandleConfig->load; ' .
+			       # Use srezic's CPAN distroprefs:
+			       '$CPAN::Config->{prefs_dir} = q{' . $strawberry_dir . '\\cpan\\prefs}; ' .
+			       # Keep the BBBike distribution as small as possible:
+			       '$CPAN::Config->{build_requires_install_policy} = q{no}; ' .
+			       # Too slow especially for large Bundles or Tasks, and
+			       # I don't worry about memory currently (difference is
+			       # 160MB vs. 32MB):
+			       '$CPAN::Config->{use_sqlite} => q[0]; ' . 
+			       'install shift',
+			      );
 	chdir $bbbikesrc_dir
 	    or die "Can't chdir to $bbbikesrc_dir: $!";
-	system("$strawberry_dir/perl/bin/cpan.bat", "Bundle::BBBike_windist");
+	if ($use_bundle) {
+	    system(@common_cpan_cmd, 'Bundle::BBBike_windist');
+	} else {
+	    chdir "Task/BBBike/windist"
+		or die "Can't chdir to task directory: $!";
+	    system(@common_cpan_cmd, '.');
+	}
     };
 }
 
@@ -168,6 +203,8 @@ usage: $0 --strawberrydir dir --bbbikedistdir dir strawberrydist.zip
 
 Both --strawberrydir and --bbbikedistdir directories should
 not exist yet, only the parent directories.
+
+Optional: --bundle may be specified to use Bundle instead of Task.
 EOF
 }
 
@@ -181,30 +218,11 @@ sub patch_if_needed {
     }
 }
 
-# REPO BEGIN
-# REPO NAME save_pwd /home/e/eserte/work/srezic-repository 
-# REPO MD5 0f7791cf8e3b62744d7d5cfbd9ddcb07
-
-=head2 save_pwd(sub { ... })
-
-=for category File
-
-Save the current directory and assure that outside the block the old
-directory will still be valid.
-
-=cut
-
-sub save_pwd (&) {
-    my $code = shift;
-    require Cwd;
-    my $pwd = Cwd::getcwd();
-    eval {
-	$code->();
-    };
-    my $err = $@;
-    chdir $pwd or die "Can't chdir back to $pwd: $!";
-    die $err if $err;
+sub exec_cygwin_cmd {
+    my $cmd = shift;
+    my @cygwin_cmd = ('c:/cygwin/bin/sh', '-l', '-c', $cmd);
+    system @cygwin_cmd;
+    die "Command '@cygwin_cmd' failed" if $? != 0;
 }
-# REPO END
 
 __END__

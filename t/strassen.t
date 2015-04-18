@@ -41,7 +41,7 @@ GetOptions(get_std_opts("xxx"),
 	   "doit!" => \$doit,
 	  ) or die "usage";
 
-my $basic_tests = 39;
+my $basic_tests = 45;
 my $doit_tests = 6;
 my $strassen_orig_tests = 5;
 my $zebrastreifen_tests = 4;
@@ -49,7 +49,7 @@ my $zebrastreifen2_tests = 2;
 my $encoding_tests = 10;
 my $multistrassen_tests = 11;
 my $initless_tests = 3;
-my $global_directive_tests = 3;
+my $global_directive_tests = 7;
 my $strict_and_syntax_tests = 12;
 
 plan tests => $basic_tests + $doit_tests + $strassen_orig_tests + $zebrastreifen_tests + $zebrastreifen2_tests + $encoding_tests + $multistrassen_tests + $initless_tests + $global_directive_tests + $strict_and_syntax_tests;
@@ -111,6 +111,24 @@ Mehringdamm	HH 9222,8787 9227,8890 9235,9051 9248,9350 9280,9476 9334,9670 9387,
 EOF
     my $s = Strassen->new_from_data_string($data);
     is(scalar @{$s->data}, 3, "Constructing from string data");
+}
+
+{
+    my $data =<<EOF;
+#:
+#: local_directive: yes!
+Straße A	? 6353,22515
+EOF
+    my $s = Strassen->new_from_data_string($data, UseLocalDirectives => 1);
+    isa_ok $s, 'Strassen';
+    $s->init;
+    my $r = $s->next;
+    is $r->[Strassen::NAME], 'Straße A', 'Got street name';
+    is $r->[Strassen::CAT], '?', 'Got category';
+    is_deeply $r->[Strassen::COORDS], ['6353,22515'], 'Got coordinates';
+    my $dir = $s->get_directives;
+    is_deeply $dir->{local_directive}, ['yes!'], 'Got local directive';
+    is scalar(keys %$dir), 1, 'Only one local directive';
 }
 
 {
@@ -539,6 +557,16 @@ EOF
     $s->set_global_directive('some' => 'thing', 'else');
     is $s->get_global_directive('some'), 'thing', 'after setting multiple values';
     is_deeply $s->get_global_directives, { some => [qw(thing else)] }, 'get_global_directives';
+    my $expected_string = <<'EOF';
+#: some: thing
+#: some: else
+#:
+EOF
+    is $s->global_directives_as_string, $expected_string, 'global_directives_as_string on object';
+    my $glob_dir = $s->get_global_directives;
+    is Strassen::global_directives_as_string($glob_dir), $expected_string, 'global_directives_as_string on hash';
+    ok !eval { Strassen::global_directives_as_string([]); 0 }, 'global_directives_as_string on non-hash is an error';
+    like $@, qr/Unexpected argument to global_directives_as_string/, 'error message';
 }
 
 { # Strict

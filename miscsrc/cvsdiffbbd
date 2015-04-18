@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2007,2014 Slaven Rezic. All rights reserved.
+# Copyright (C) 2007,2014,2015 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -13,13 +13,21 @@
 #
 
 use strict;
+use 5.010; # named capture groups
+use File::Basename qw(basename);
 use Getopt::Long;
+use Tie::IxHash;
 
 Getopt::Long::Configure('pass_through');
 
 my $include_orig;
 my $diff_file;
-GetOptions("include-orig!" => \$include_orig,
+my $add_file_label;
+my $add_fixed_label;
+GetOptions(
+	   "add-file-label!" => \$add_file_label,
+	   "add-fixed-label=s" => \$add_fixed_label,
+	   "include-orig!" => \$include_orig,
 	   "diff-file=s"   => \$diff_file,
 	   "help|?" => sub { show_usage() },
 	  );
@@ -40,13 +48,68 @@ use constant STAGE_SHOW => 1;
 use constant STAGE_HIDE => 2;
 my $stage = STAGE_SHOW;
 my $current_file;
+my $current_base;
 
 my $bbdrx = qr{^
-	       (?:>[ ]|\+)     # context or unified diff marker
-	       ([^\t]*)        # name
-	       \t(\S+)         # cat
-	       \s([ 0-9,.+-]+) # coords
+	       (?:>[ ]|(?<diffdir>[-+])) # context or unified diff marker (latter with both - and +)
+	       (?<name>[^\t]*)           # name
+	       \t(?<cat>\S+)             # cat
+	       \s(?<coords>[ 0-9,.+-]+)  # coords
 	       $}x;
+
+my %diffdir_records; # +/- -> {name -> [[cat, coords], [cat, coords]]}
+my $flush = sub {
+    for my $name (keys %{ $diffdir_records{'+'} }) {
+	for my $record (@{ $diffdir_records{'+'}->{$name} }) {
+	    my($cat, $coords) = @$record;
+
+	    # Maybe shorten coordinate list
+	    my @minus_records = @{ $diffdir_records{'-'}->{$name} || [] };
+	    for my $minus_record (@minus_records) {
+		my($minus_cat, $minus_coords) = @$minus_record;
+		if ($cat eq $minus_cat) {
+		    my @plus_coords = split /\s+/, $coords;
+		    my @minus_coords = split /\s+/, $minus_coords;
+
+		    my $begin_i;
+		    for($begin_i = 0; $begin_i <= $#plus_coords; $begin_i++) {
+			no warnings 'uninitialized';
+			last if $plus_coords[$begin_i] ne $minus_coords[$begin_i];
+		    }
+		    if ($begin_i > 0) { $begin_i-- }
+
+		    my($end_plus_i, $end_minus_i);
+		    for($end_plus_i = $#plus_coords, $end_minus_i = $#minus_coords;
+			$end_plus_i >= 0 && $end_minus_i >= 0;
+			$end_plus_i--, $end_minus_i--) {
+			no warnings 'uninitialized';
+			last if $plus_coords[$end_plus_i] ne $minus_coords[$end_minus_i];
+		    }
+		    if ($end_plus_i < $#plus_coords) { $end_plus_i++ }
+
+		    $coords = join(' ', @plus_coords[$begin_i..$end_plus_i]);
+		    last;
+		}
+	    }
+
+	    if ($name =~ m{^#}) {
+		print $name, "\n";
+	    } else {
+		if ($coords eq '') {
+		    # may happen if e.g. just a directive changed, but not the line itself
+		} else {
+		    if ($add_file_label) {
+			print "$current_base: ";
+		    } elsif ($add_fixed_label) {
+			print $add_fixed_label;
+		    }
+		    print "$name\t$cat $coords\n";
+		}
+	    }
+	}
+    }
+    %diffdir_records = ();
+};
 
 for my $line (`@cmd`) {
     chomp $line;
@@ -54,12 +117,14 @@ for my $line (`@cmd`) {
     if ($line =~ /^Index:\s+(.*)/) { # old CVS diff style
 	$current_file = $1;
 	$new_file_started = 1;
-    } elsif ($line =~ m{^diff.*? a/(\S+) b/\S+}) { # new git diff style
+    } elsif ($line =~ m{^diff.*? [aci]/(\S+) [bw]/\S+}) { # new git diff style (a vs. b, or with mnemonics: c vs. w resp. i vs. w)
 	$current_file = $1;
 	$new_file_started = 1;
     } elsif ($line =~ m{^diff.* (\S+) (\S+)$}) { # traditional diff
 	$current_file = $1;
 	$new_file_started = 1;
+    } elsif ($line =~ m{^\@\@}) {
+	$flush->();
     }
 
     if ($new_file_started) {
@@ -79,15 +144,23 @@ for my $line (`@cmd`) {
     }
     if ($stage == STAGE_SHOW) {
 	if ($new_file_started) {
+	    $flush->();
 	    print "# File: $current_file\n";
+	    if ($add_file_label) {
+		$current_base = basename($current_file);
+	    }
 	} elsif ($line =~ m{$bbdrx}o) {
-	    my $name   = $1;
-	    my $cat    = "#000080";
-	    my $coords = $3;
-	    print "$name\t$cat $coords\n";
+	    my $diffdir = $+{diffdir};
+	    $diffdir = '+' if !defined $diffdir;
+	    my $name = $+{name};
+	    if (!exists $diffdir_records{$diffdir}) {
+		tie %{ $diffdir_records{$diffdir} }, 'Tie::IxHash';
+	    }
+	    push @{ $diffdir_records{$diffdir}->{$name} }, ['#000080', $+{coords}];
 	}
     }
 }
+$flush->();
 
 sub show_usage {
     print STDERR <<'EOF';
@@ -129,11 +202,19 @@ started with -server mode):
     ./bbbikeclient /tmp/osm.diff.bbd
 
 Create bbd file with differences since last deployment (does not
-include temp_blockings changes):
+include temp_blockings changes, but see below):
 
     cd .../src/bbbike
     git diff deployment/bbbikede/current -- `awk '{print $1}' data/.modified` | ./miscsrc/cvsdiffbbd --diff-file=- >| /tmp/diff.bbd
     ./bbbikeclient /tmp/diff.bbd
+
+Same as above, but prepend the bbd basename to every record:
+
+    git diff deployment/bbbikede/current -- `awk '{print $1}' data/.modified` | ./miscsrc/cvsdiffbbd --add-file-label --diff-file=- >| /tmp/diff.bbd
+
+Create bbd file with difference for temp_blockings changes:
+
+    git show deployment/bbbikede/current:data/temp_blockings/bbbike-temp-blockings.pl | ./miscsrc/temp_blockings_tasks pl_to_yml /dev/stdin /dev/stdout | ./miscsrc/temp_blockings_tasks yml_to_bbd /dev/stdin | diff -u - tmp/bbbike-temp-blockings.bbd | ./miscsrc/cvsdiffbbd --add-fixed-label="bbbike-temp-blockings: " --diff-file=- >| /tmp/diff-temp-blockings.bbd
 
 Old outdated example with CVS repository:
 

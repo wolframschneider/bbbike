@@ -20,6 +20,9 @@ wrapper() {
 
 init_env_vars() {
     export BBBIKE_LONG_TESTS=1 BBBIKE_TEST_SKIP_MAPSERVER=1
+    # The default www.cpan.org may not be the fastest one, and may
+    # even cause problems if an IPv6 address is chosen...
+    export PERL_CPANM_OPT="--mirror http://cpan.cpantesters.org --mirror https://cpan.metacpan.org"
 }
 
 init_perl() {
@@ -50,11 +53,11 @@ init_apt() {
 # - agrep:                  needed as String::Approx alternative
 # - libgd2-xpm-dev:         prerequisite for GD
 # - ttf-bitstream-vera + ttf-dejavu: fonts e.g. for BBBikeDraw::GD
-# - xvfb + twm:             some optional tests require an X server
+# - xvfb + fvwm:            some optional tests require an X server
 # - rhino:                  javascript tests
 # - imagemagick:            typ2legend test
 install_non_perl_dependencies() {
-    sudo apt-get install -qq freebsd-buildutils libproj-dev proj-bin libdb-dev agrep libgd2-xpm-dev ttf-bitstream-vera ttf-dejavu gpsbabel xvfb twm rhino imagemagick
+    sudo apt-get install -qq freebsd-buildutils libproj-dev proj-bin libdb-dev agrep libgd2-xpm-dev ttf-bitstream-vera ttf-dejavu gpsbabel xvfb fvwm rhino imagemagick
 }
 
 # Some CPAN modules not mentioned in Makefile.PL, usually for testing only
@@ -83,8 +86,11 @@ install_perl_58_dependencies() {
 install_cpan_hacks() {
     if [ ! "$USE_SYSTEM_PERL" = "1" ]
     then
-	# Tk + EUMM 7.00 problems, use the current development version (https://rt.cpan.org/Ticket/Display.html?id=100044)
-	cpanm --quiet --notest SREZIC/Tk-804.032_501.tar.gz
+	# -> Currently empty, no hacks required. Was:
+	## Tk + EUMM 7.00 problems, use the current development version (https://rt.cpan.org/Ticket/Display.html?id=100044)
+	#cpanm --quiet --notest SREZIC/Tk-804.032_501.tar.gz
+	## And this is for linux sh/bash braindeadness (empty then not allowed, it seems):
+	:
     fi
 }
 
@@ -112,6 +118,10 @@ install_perl_dependencies() {
     then
 	sudo apt-get install -qq libapache-session-counted-perl libarchive-zip-perl libgd-gd2-perl libsvg-perl libobject-realize-later-perl libdb-file-lock-perl libpdf-create-perl libtext-csv-xs-perl libdbi-perl libdate-calc-perl libobject-iterate-perl libgeo-metar-perl libimage-exiftool-perl libdbd-xbase-perl libxml-libxml-perl libxml-twig-perl libgeo-distance-xs-perl libimage-info-perl libinline-perl libtemplate-perl libyaml-libyaml-perl libclass-accessor-perl libdatetime-perl libstring-approx-perl libtext-unidecode-perl libipc-run-perl libjson-xs-perl libcairo-perl libpango-perl libmime-lite-perl libpalm-palmdoc-perl libcdb-file-perl libmldbm-perl
     else
+	# XXX Tk::ExecuteCommand does not specify Tk as a prereq,
+	# so make sure to install Tk early. See
+	# https://rt.cpan.org/Ticket/Display.html?id=102434
+	cpanm --quiet --notest Tk
 	cpanm --quiet --installdeps --notest .
     fi
 }
@@ -161,7 +171,7 @@ init_webserver_environment() {
 start_xserver() {
     export DISPLAY=:123
     Xvfb $DISPLAY &
-    (sleep 10; twm) &
+    (sleep 10; fvwm) &
 }
 
 init_data() {

@@ -213,14 +213,11 @@ my @req_table =
    'Für den Zugriff auf die Hausnummerdatenbank'],
   [qw/Tie::IxHash	0	all	0|4	base/,
    'Damit Direktiven in Straßen-Daten geordnet bleiben'],
-  [qw/CDB_File		0	all	0	base/,
-   'Für die alternative A*-Optimierung in XS/C'],
+  [qw/CDB_File		0	all	0|4	base/,
+   'Für die alternative A*-Optimierung in XS/C und Cache-Dateien (grid/lazy)'],
   [qw/DB_File::Lock	0	all	0	base/,
    'Same DB_File operations, used in Strassen::Index'],
-  # NOTE: perl-GPS is broken in ActivePerl 5.8.8, because
-  # Win32::SerialPort is not specified as a dependency
-  # in the ppm and also not available in ActivePerl at all
-  [qw/GPS::Garmin	0	all	4	base/,
+  [qw/GPS::Garmin	0	all	0	base/,
    'für GPS-Upload'],
   [qw/Geo::SpaceManager 0.91	all	2	base/,
    'Intelligentere Labelplatzierung, bei der PDF-Ausgabe verwendet'],

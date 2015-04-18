@@ -75,7 +75,7 @@ Object::Iterate	- Notwendig für die bbd2-esri-Konvertierung
 
 Tie::IxHash	- Damit Direktiven in Straßen-Daten geordnet bleiben
 
-GPS::Garmin	- für GPS-Upload
+CDB_File	- Für die alternative A*-Optimierung in XS/C und Cache-Dateien (grid/lazy)
 
 Geo::METAR	- Wetterdaten im METAR-Format
 

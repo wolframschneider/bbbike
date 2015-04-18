@@ -884,7 +884,7 @@ Fähranleger	culdesac_pseudo -1989,18378
 #: next_check_id: BND-2014
 #: XXX wird bei der Verlängerung der Ida-von-Arnim-Str. aufgehoben
 #: last_checked: 2014-10-12
-#: check_frequency: 90d
+#: next_check: 2015-04-23
 	culdesac 8251,14337
 #: next_check_id: SUEDPANKE-2014
 #: XXX wird bei der Verlängerung des Südpankewegs aufgehoben
@@ -895,7 +895,7 @@ Tor	culdesac 8388,13993
 Flughafengelände	culdesac_pseudo 9300,8027
 #: next_check_id: SCHOENEBERGERSCHLEIFE-2015 vvv
 #: XXX: wird bei der Verlängerung der Schöneberger Schleife aufgehoben vvv
-#: next_check: 2015-06-28 vvv
+#: next_check: 2015-09-01 vvv
 	culdesac 7998,8317
 	culdesac 8204,9001
 #: next_check ^^^
@@ -943,7 +943,7 @@ Klinikumsgebäude	culdesac 17428,25235
 	culdesac 22914,17893
 #: next_check_id: AMLOKDEPOT-2014
 #: XXX evtl. entfernen, falls die beiden Abschnitte verbunden werden
-#: last_checked: 2014-12-14
+#: last_checked: 2015-03-17
 #: check_frequency: 90d
 Ende des nördlichen Abschnitts	culdesac 8389,9017
 Sackgassenende, Ulmenhof	culdesac 32090,3599
@@ -1052,10 +1052,53 @@ südwestliches Sackgassenende	culdesac -12671,1879
 	culdesac 17116,7241
 	culdesac 17151,11912
 	culdesac_pseudo 29960,5467
+	culdesac 18736,13080
+	culdesac 17843,6083
+	culdesac 21791,2323
+	culdesac 19949,3249
+	culdesac 19713,3124
+	culdesac 19669,3200
+	culdesac -11913,144
+	culdesac -11751,390
+südliches Sackgassenende	culdesac 12493,21212
+	culdesac_pseudo 17789,5189
+	culdesac 17771,5278
+Toreinfahrt TÜV	culdesac 18370,4511
+	culdesac 18236,4807
+	culdesac 6493,4105
+	culdesac_pseudo 12804,6377
+Kasernentor	culdesac 4897,17040
+westliches Sackgassenende	culdesac 4779,17252
+südliches Sackgassenende	culdesac_pseudo 4916,17201
+	culdesac 3123,17923
+	culdesac 3153,17975
+	culdesac 3503,17798
+	culdesac 3257,17621
+	culdesac 3080,17634
+	culdesac 3013,17755
+	culdesac_pseudo 7076,18026
+	culdesac_pseudo 7212,17756
+	culdesac 13738,2911
+	culdesac 18714,403
+	culdesac 18850,550
+	culdesac 11768,6159
+#: note: "pseudo", weil es im Gewerbepark weitere Straßenverbindungen gibt
+MEON-Gewerbepark	culdesac_pseudo 21443,13125
 # 
 ######################################################################
 # culdesac entries which should remain invisible
 #: ignore vvv
+	culdesac_pseudo 16276,-507
+	culdesac_pseudo 13270,4202
+	culdesac_pseudo 7253,17467
+	culdesac_pseudo 7222,17471
+	culdesac_pseudo 7289,17277
+	culdesac_pseudo 5894,10287
+	culdesac_pseudo 5907,10347
+	culdesac_pseudo 5997,10286
+	culdesac_pseudo 5808,10284
+	culdesac_pseudo 18317,11734
+	culdesac_pseudo 18119,14599
 	culdesac_pseudo 6489,7908
 	culdesac_pseudo 7402,8208
 	culdesac_pseudo 7250,8223
@@ -1290,7 +1333,8 @@ Weiterfahrt in den Friedhof möglich	culdesac_pseudo 2387,10131
 	culdesac_pseudo 5108,22156
 	culdesac_pseudo 24861,12226
 	culdesac_pseudo 6765,21364
-	culdesac_pseudo 16041,3718
+Sackgassenende/Melissenweg	culdesac_pseudo 16041,3718
+Sackgassenende im Wohngebiet	culdesac 16101,3727
 	culdesac_pseudo 21576,6644
 	culdesac_pseudo 18778,8663
 	culdesac_pseudo 4994,6387

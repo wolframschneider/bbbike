@@ -7,6 +7,11 @@
 /MYMETA.yml
 /Makefile
 /Makefile.old
+/Task/BBBike/*/MYMETA.json
+/Task/BBBike/*/MYMETA.yml
+/Task/BBBike/*/Makefile
+/Task/BBBike/*/blib
+/Task/BBBike/*/pm_to_blib
 /blib
 /cache/
 cover_db
@@ -42,6 +47,7 @@ cgi/street-coord.cgi
 cgi/weather.cgi
 cgi/streets.cgi
 cgi/area.cgi
+cgi/city.cgi
 cgi/crossing.cgi
 cgi/livesearch-extract.cgi
 cgi/extract.cgi
@@ -80,6 +86,7 @@ html/elevation.js
 html/extract-center.css
 html/extract.css
 html/extract-download.css
+html/extract-download.js
 html/extract.js
 html/help-16px.png
 html/indicator.gif
@@ -98,6 +105,7 @@ html/sicilia-retangle.png
 html/sicilia.png
 html/streets.css
 html/watch_ptr.gif
+html/area.js
 images/SanFrancisco-with-hills-small.png
 images/SanFrancisco-with-hills.png
 images/SanFrancisco-without-hills-small.png

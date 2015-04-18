@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2009,2013,2014 Slaven Rezic. All rights reserved.
+# Copyright (C) 2009,2013,2014,2015 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -17,7 +17,7 @@ package BBBikeCGI::API;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 use JSON::XS qw();
 
@@ -81,8 +81,9 @@ sub action_revgeocode {
 sub action_config {
     my $q = shift;
     print $q->header(-type => 'text/plain');
-    no warnings 'once';
-    my $json_bool = sub { $_[0] ? JSON::XS::true : JSON::XS::false };
+
+    require BBBikeCGI::Config;
+    my $r = BBBikeCGI::Config->the_config('json');
 
     my %modules_info;
     for my $module_name (
@@ -93,69 +94,76 @@ sub action_config {
 	$modules_info{$module_name} = _module_info($module_name);
     }
 
-    print JSON::XS->new->ascii->encode
-	(
-	 {
-	  use_apache_session         => $json_bool->($main::use_apache_session),
-	  apache_session_module      => $main::apache_session_module,
-	  detailmap_module           => $main::detailmap_module,
-	  graphic_format             => $main::graphic_format,
-	  can_gif                    => $json_bool->($main::can_gif),
-	  can_jpeg                   => $json_bool->(!$main::cannot_jpeg),
-	  can_pdf                    => $json_bool->(!$main::cannot_pdf),
-	  bbbikedraw_pdf_module      => $main::bbbikedraw_pdf_module,
-	  can_svg                    => $json_bool->(!$main::cannot_svg),
-	  can_wbmp                   => $json_bool->($main::can_wbmp),
-	  can_palmdoc                => $json_bool->($main::can_palmdoc),
-	  can_gpx                    => $json_bool->($main::can_gpx),
-	  can_kml                    => $json_bool->($main::can_kml),
-	  can_mapserver              => $json_bool->($main::can_mapserver),
-	  can_gpsies_link            => $json_bool->($main::can_gpsies_link),
-	  show_start_ziel_url        => $json_bool->($main::show_start_ziel_url),
-	  show_weather               => $json_bool->($main::show_weather),
-	  use_select                 => $json_bool->($main::use_select),
-	  use_berlinmap              => $json_bool->(!$main::no_berlinmap),
-	  use_background_image       => $json_bool->($main::use_background_image),
-	  with_comments              => $json_bool->($main::with_comments),
-	  with_cat_display           => $json_bool->($main::with_cat_display),
-	  use_coord_link             => $json_bool->($main::use_coord_link),
-	  city                       => $main::city,
-	  use_fragezeichen           => $json_bool->($main::use_fragezeichen),
-	  use_fragezeichen_routelist => $json_bool->($main::use_fragezeichen_routelist),
-	  search_algorithm           => $main::search_algorithm,
-	  use_exact_streetchooser    => $json_bool->($main::use_exact_streetchooser),
-	  use_utf8                   => $json_bool->($main::use_utf8),
-	  data_is_wgs84              => $json_bool->($main::data_is_wgs84),
-	  osm_data                   => $json_bool->($main::osm_data),
-	  modules_info               => \%modules_info,
-	 }
-	);
+    $r->{modules_info} = \%modules_info;
+    print JSON::XS->new->ascii->encode($r);
 }
 
 # Module info can contain:
-#  warning   => "...":  a warning, e.g. if Module::Metadata is not available
 #  installed => bool:   module is installed or not installed
 #  version   => string: module's stringified version
 #  version   => false:  module's version is not available
 sub _module_info {
     my $module_name = shift;
     if (eval { require Module::Metadata; 1 }) {
-	my $mod = Module::Metadata->new_from_module($module_name, collect_pod => 0);
-	if ($mod) {
-	    my $ver = $mod->version;
-	    if ($ver->can('stringify'))  {
-		return { installed => JSON::XS::true, version => $ver->stringify }; # stringify for json
-	    } else {
-		warn "Unexpected: cannot get version for '$module_name' via Module::Metadata";
-		return { installed => JSON::XS::true, version => JSON::XS::false };
-	    }
-	} else {
-	    return { installed => JSON::XS::false }
-	}
+	_module_info_via_module_metadata($module_name);
     } else {
-	return { warning => 'Module::Metadata unavailable' };
+	_module_info_via_eumm($module_name);
     }
 }
+
+sub _module_info_via_module_metadata {
+    my $module_name = shift;
+    my $mod = Module::Metadata->new_from_module($module_name, collect_pod => 0);
+    if ($mod) {
+	my $ret = { installed => JSON::XS::true };
+	my $ver = $mod->version;
+	if ($ver->can('stringify'))  {
+	    $ret->{version} = $ver->stringify; # stringify for json
+	} else {
+	    warn "Unexpected: cannot get version for '$module_name' via Module::Metadata";
+	    $ret->{version} = JSON::XS::false;
+	}
+	$ret;
+    } else {
+	+{ installed => JSON::XS::false }
+    }
+}
+
+sub _module_info_via_eumm {
+    my $module_name = shift;
+    my $file = _module_path($module_name);
+    if (defined $file) {
+	my $ret = { installed => JSON::XS::true };
+	require ExtUtils::MakeMaker;
+	my $ver = eval { MM->parse_version($file) };
+	if (defined $ver) {
+	    $ret->{version} = "$ver";
+	} else {
+	    warn "Unexpected: cannot get version for '$module_name' via EUMM, error: $@";
+	    $ret->{version} = JSON::XS::false;
+	}
+	$ret;
+    } else {
+	+{ installed => JSON::XS::false }
+    }
+}
+
+# Derived from module_exists from srezic-repository
+sub _module_path {
+    my($filename) = @_;
+    $filename =~ s{::}{/}g;
+    $filename .= ".pm";
+    return $INC{$filename} if $INC{$filename};
+    foreach my $prefix (@INC) {
+	my $realfilename = "$prefix/$filename";
+	if (-r $realfilename) {
+	    return $realfilename;
+	}
+    }
+    undef;
+}
+# REPO END
+
 
 1;
 

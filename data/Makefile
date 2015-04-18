@@ -414,7 +414,7 @@ sbahn: sbahn-orig Makefile $(CONVERT_ORIG_FILE)
 
 sbahnhof:	sbahnhof-orig
 	-@$(WRITEABLE) $@
-	$(CONVERT_ORIG) sbahnhof-orig > sbahnhof~
+	$(CONVERT_ORIG) -keep-directive map_tube_other_link sbahnhof-orig > sbahnhof~
 	mv sbahnhof~ sbahnhof
 	-@$(READONLY) $@
 
@@ -453,7 +453,7 @@ ubahn: ubahn-orig $(CONVERT_ORIG_FILE)
 
 ubahnhof:	ubahnhof-orig
 	-@$(WRITEABLE) $@
-	$(CONVERT_ORIG) ubahnhof-orig > ubahnhof~
+	$(CONVERT_ORIG) -keep-directive map_tube_other_link ubahnhof-orig > ubahnhof~
 	mv ubahnhof~ ubahnhof
 	-@$(READONLY) $@
 
@@ -1289,7 +1289,7 @@ ${BBBGEOJSONPDIR}/index.html:	${BBBGEOJSONP_TARGETS}
 
 # allow one error, and fail if the 2nd one is encountered
 FOREVER_INTERVAL?=	30
-FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  '@cmd=@ARGV; while() { { open my $$LOCK, ">", ".check_forever.lck" or die $$!; flock $$LOCK, LOCK_EX|LOCK_NB or die $$!; system(@cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; } unlink ".check_forever.lck"; sleep $(FOREVER_INTERVAL) }'
+FOREVER_TWO_ERRORS=	perl -MFcntl=:flock -e  '@cmd=@ARGV; while() { { open my $$LOCK, ">", ".check_forever.lck" or die $$!; flock $$LOCK, LOCK_EX|LOCK_NB or die $$!; print STDERR "\rrun... "; system(@cmd); exit 2 if $$? == 2; $$count = $$? == 0 ? 0 : $$count+1; exit 1 if $$count >= 2; } unlink ".check_forever.lck"; print STDERR "\rwait..."; sleep $(FOREVER_INTERVAL) }'
 .if exists($(HOME)/bin/sh/cron-wrapper)
 CRON_WRAPPER=$(HOME)/bin/sh/cron-wrapper
 .else
@@ -1935,7 +1935,7 @@ do-check-nearest:	.check-do-check-nearest
 	$(PERL) -I${BBBIKEDIR} -I${BBBIKEDIR}/lib \
 	    -MStrassen -MObject::Iterate=iterate -e \
 	    '$$s = Strassen->new($$ARGV[0]);\
-	     iterate { ($$dist) = $$_->[Strassen::NAME] =~ /^\S+\s+(\d+)/; if ( $$dist < 20 ) { system "head", "${PERSISTENTTMPDIR}/check_nearest.bbd"; die "Distance $$dist m found. Please check and add to ${.CWD}/check_nearest_ignore, if necessary."; }; } $$s' ${PERSISTENTTMPDIR}/check_nearest.bbd
+	     iterate { ($$dist) = $$_->[Strassen::NAME] =~ /^\S+\s+(\d+)/; if ( $$dist < 20 ) { system "head", "${PERSISTENTTMPDIR}/check_nearest.bbd"; die "Distance $$dist m found. Please check and add to ${.CURDIR}/check_nearest_ignore, if necessary."; }; } $$s' ${PERSISTENTTMPDIR}/check_nearest.bbd
 
 .if 0
 GNUmakefile: Makefile $(MISCRSRCDIR)/b2gmake

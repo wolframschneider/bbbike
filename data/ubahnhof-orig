@@ -232,6 +232,7 @@ Blissestr.	UA 4911,8866
 Konstanzer Str.	UA 4072,9636
 Adenauerplatz	UA 3853,10396
 #: attrs bg
+#: map_tube_other_link: Street:Charlottenburg
 Wilmersdorfer Str.	UA 3809,11037
 #: attrs bg
 Richard-Wagner-Platz	UA 3770,12208
@@ -247,6 +248,7 @@ Haselhorst	UB -1288,14532
 Zitadelle	UB -2320,14423
 Altstadt Spandau	UB -3019,14499
 #: attrs bg
+#: map_tube_other_link: Street:Spandau
 Rathaus Spandau	UB -3560,14235
 # U8
 #: attrs bg

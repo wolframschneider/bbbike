@@ -54,6 +54,17 @@ my $cgitesturl = "$cgidir/bbbike-test.cgi";
 	like $apache_session_module, qr{^Apache::Session(|::Counted)$};
     }
 
+    # following two are semi-dynamically; host name depends on $cgidir
+    my $bbbike_html = delete $data->{bbbike_html};
+    my $bbbike_images = delete $data->{bbbike_images};
+    (my $expected_bbbike_root = $cgitesturl) =~ s{/cgi(-bin)?/bbbike-test\.cgi$}{};
+    # Yes, $expected_bbbike_root is "http://$HOSTNAME" on setups with
+    # use_cgi_bin_layout, which yields to "http://$HOSTNAME/html",
+    # which does not exist. But that's the state of bbbike-test.cgi on
+    # such systems.
+    is $bbbike_html, "$expected_bbbike_root/html";
+    is $bbbike_images, "$expected_bbbike_root/images";
+
     # and modules_info is dynamically determined from system's
     # installed modules
     my $modules_info = delete $data->{modules_info};
@@ -102,6 +113,19 @@ my $cgitesturl = "$cgidir/bbbike-test.cgi";
 	 with_cat_display	    => JSON::XS::false,
 	 with_comments		    => JSON::XS::true
 	};
+}
+
+{
+    require BBBikeCGI::API;
+    my $test_mod = 'JSON::XS';
+    my $res_factory = BBBikeCGI::API::_module_info($test_mod);
+    my $res_mm      = BBBikeCGI::API::_module_info_via_module_metadata($test_mod);
+    my $res_eumm    = BBBikeCGI::API::_module_info_via_eumm($test_mod);
+    is_deeply $res_mm,   $res_factory, 'same result for _module_info and direct Module::Metadata call';
+    is_deeply $res_eumm, $res_factory, 'same result for _module_info and direct EUMM call';
+    ok $res_factory->{installed};
+    is $res_factory->{installed}, JSON::XS::true;
+    like $res_factory->{version}, qr{^\d+\.\d+$}, 'looks like a version';
 }
 
 sub do_config_api_call {

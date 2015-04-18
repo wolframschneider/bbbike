@@ -14,10 +14,6 @@
 
 package main;
 
-## Additional files for perl2exe.
-## NOTE: This list is not maintained anymore.
-#perl2exe_include Tk/Checkbutton.pm
-
 ## This works theoretically with 5.8.x, but there's a possible
 ## endless loop which is solved in 5.10.0, see rt perl #41442
 ## XXX Nope: still an endless loop with debian's perl 5.10.0
@@ -178,18 +174,11 @@ BEGIN {
     }
 }
 
-# Add ...\c\bin directory for Strawberry Perl on Windows.
-# This directory contains shared libraries e.g. libxml2.
-# Also the ...\perl\bin may be missing.
-if ($^O eq 'MSWin32' && $^X =~ m{(.*)(\\perl\\bin)\\}) {
-    my $c_bin_dir = "$1\\c\\bin";
-    my $perl_bin_dir = "$1$2";
-    if (-d $c_bin_dir) {
-	$ENV{PATH} .= ";$c_bin_dir";
-    }
-    if (-d $perl_bin_dir) {
-	$ENV{PATH} .= ";$perl_bin_dir";
-    }
+if ($^O eq 'MSWin32') {
+    require BBBikeWinUtil;
+    # call early, as required .dll libraries may
+    # be in the PATH
+    BBBikeWinUtil::adjust_path();
 }
 
 #XXX for now disabled ... still too many bugs floating around -> what bugs?
@@ -1038,7 +1027,7 @@ if (!defined $top) {
     for (qw(Browse Entry NumEntry Date*NumEntryPlain PathEntry
 	    Listbox KListbox K2Listbox
 	    TixHList HList Text ROText BrowseEntry.LabEntry SimpleHistEntry
-	    ListboxSearchAnything
+	    ListboxSearchAnything BBBikeAlarmTimeEntry
 	   )) {
 	if ($os eq 'win') {
 	    $top->optionAdd("*$_.background", "SystemWindow", "startupFile");
@@ -1430,7 +1419,6 @@ if (!defined $balloon) {
 #BEGIN{mymstat("after balloon BEGIN");} mymstat("after balloon");
 ## DEBUG_END
 
-# XXX if !perl2exe
 if (!$lowmem) {
     if (eval { require Tk::CanvasBalloon; 1 }) {
 	$c_balloon = $top->CanvasBalloon(-initwait => $c_balloon_wait,
@@ -2934,13 +2922,11 @@ unless ($skip_features{"sehenswuerdigkeiten"}) {
 		};
 	    load_last_loaded($last_loaded_layers_obj);
 	}
-	if ($Tk::platform ne 'MSWin32') {
-	    $cusm->command(-label => M"Umordnen",
-			   -accelerator => 'Shift-X',
-			   -command => sub {
-			       require BBBikeAdvanced;
-			       layer_editor() });
-	}
+	$cusm->command(-label => M"Umordnen",
+		       -accelerator => 'Shift-X',
+		       -command => sub {
+			   require BBBikeAdvanced;
+			   layer_editor() });
 	$cusm->command(-label => M"Layer lˆschen",
 		       -command => sub {
 			   require BBBikeAdvanced;
@@ -4790,10 +4776,10 @@ if ($splash_screen) {
 
 choose_streets()                            if $init_choose_street;
 
-if ($ENV{BBBIKE_GUI_TEST}) {
+if ($ENV{BBBIKE_GUI_TEST_MODULE}) {
     eval qq{
-      require $ENV{BBBIKE_GUI_TEST};
-      \$top->afterIdle(\\&$ENV{BBBIKE_GUI_TEST}::start_guitest);
+      require $ENV{BBBIKE_GUI_TEST_MODULE};
+      \$top->afterIdle(\\&$ENV{BBBIKE_GUI_TEST_MODULE}::start_guitest);
     };
     warn $@ if $@;
 }
@@ -7823,9 +7809,7 @@ sub set_bindings {
 		   $map_mode = MM_USEREDIT;
 		   set_cursor('delnet', 'X_cursor');
 	       });
-    if ($Tk::platform ne 'MSWin32') { # XXX aber auf der Win98-Maschine von Monika laeuft es gut?!
-	bind_nomod($top, "<X>" => \&layer_editor);
-    }
+    bind_nomod($top, "<X>" => \&layer_editor);
     bind_nomod($top, "<i>" => sub { show_info() });
 
     if (!$no_map) {
@@ -12950,7 +12934,7 @@ sub choose_from_plz {
 	    die "Str ($s)/PLZ ($z)-Objekt?" if !$s || !$z;
 	    my($street, $bezirk, $plz_nr, $xy) = @$street_obj;
 
-	    if (defined $xy) {
+	    if (defined $xy && length $xy) {
 		mark_point(-coords => [[[ transpose(split /,/, $xy) ]]],
 			   -clever_center => $args{-interactive});
 	    } else {
@@ -12974,8 +12958,8 @@ sub choose_from_plz {
 			}
 		    }
 
-		    my $plz_re = $plz->make_plz_re($plz_nr);
-		    my @streets = $plz->look($plz_re, Noquote => 1);
+		    my $plz_pcre = $plz->make_plz_pcre($plz_nr);
+		    my @streets = $plz->look($plz_pcre, Noextern => 1, Noquote => 1);
 		    @pos = $s->union(\@streets, Nouniq => 1);
 		    if (!@pos) {
 			die Mfmt("Keine Straﬂen im PLZ-Gebiet %s.\n", $plz_nr);

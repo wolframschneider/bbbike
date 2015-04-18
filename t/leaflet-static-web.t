@@ -14,12 +14,14 @@ use lib (
 	);
 use Getopt::Long;
 use LWP::UserAgent ();
-use Test::More 'no_plan';
+use Test::More;
 use URI ();
 
-use BBBikeTest qw(libxml_parse_html_or_skip check_cgi_testing $htmldir get_std_opts);
+use BBBikeTest qw(libxml_parse_html_or_skip check_cgi_testing static_url get_std_opts);
 
 check_cgi_testing;
+
+plan 'no_plan';
 
 use BBBikeLeaflet::Template;
 
@@ -30,12 +32,14 @@ GetOptions(get_std_opts('htmldir'),
 
 my $ua = LWP::UserAgent->new;
 
-my $blt = BBBikeLeaflet::Template->new(use_old_url_layout => 1);
+my $cgi_config = {
+		  bbbike_html   => static_url() . '/html',
+		  bbbike_images => static_url() . '/images',
+		 };
+my $blt = BBBikeLeaflet::Template->new(cgi_config => $cgi_config);
 isa_ok $blt, 'BBBikeLeaflet::Template';
 
-my $html;
-open my $ofh, ">", \$html or die $!;
-$blt->process($ofh);
+my $html = $blt->as_string;
 
 SKIP: {
     my $html_doc = libxml_parse_html_or_skip(1, $html); # as we run under no_plan we don't care about exact number of skips
@@ -47,15 +51,20 @@ SKIP: {
 
 	my $u;
 	if ($url =~ m{^https?:}) {
-	    next if !$test_all;
 	    $u = URI->new($url);
 	} else {
-	    $u = URI->new_abs($url, $htmldir);
+	    $u = URI->new_abs($url, static_url());
 	}
 	$url = $u->as_string;
-	my $resp = $ua->head($url);
-	ok $resp->is_success, "success for HEAD $url"
-	    or diag $resp->as_string;
+	ok $url, "Found URL $url";
+    SKIP: {
+	    skip 'Non-local looking URL and no --test-all switch given', 1
+		if !$test_all && $u->host !~ m{^(localhost|127\.0\.0\.1|bbbike\.cvrsnica\.herceg\.de|(www\.)?bbbike\.(de|org))$};
+
+	    my $resp = $ua->head($url);
+	    ok $resp->is_success, "success for HEAD $url"
+		or diag $resp->as_string;
+	}
     }
 }
 
