@@ -995,7 +995,7 @@ sub default_pref {
     }
     
     if (!defined $q->param("pref_quality")) {
-	warn "xxx: $lang";
+	#warn "xxx: $lang";
 	
 	if ($lang eq 'de' && defined $default_pref_quality_de) {
 	    $q->param("pref_quality", $default_pref_quality_de);
