@@ -5798,7 +5798,9 @@ sub display_route {
 		 SuppressEmpty => 1, # e.g. Trafficlights may be undefined
 		)->XMLout($new_res);
 	}
-	return;
+
+	#die "foobar"; return;
+	exit(0);
     }
 
     %persistent = get_cookie();
