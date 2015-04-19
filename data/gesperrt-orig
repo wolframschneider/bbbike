@@ -2705,7 +2705,7 @@ Luisenstr. Höhe Charité: Straße wegen Bauarbeiten komplett bis zum 30.09.2015 ge
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.153649.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.214040.php
 #: XXX falls es soweit ist -> gesperrt-orig
-#: last_checked: 2015-02-13
+#: last_checked: 2015-04-13
 #: next_check: 2015-05-01
 Lohmühlenplatz: Umgestaltung des Platzes, Wege ist gesperrt	2::inwork 12900,9465 12897,9365
 # 
@@ -2747,10 +2747,12 @@ Viechtacher Str.: Bauarbeiten, Straße muss noch fertig gestellt werden	2::inwork
 # 
 #: last_checked: 2015-02-14 vvv
 #: check_frequency: 60d vvv
-#: osm_watch: way id="287119368" version="7"
-#: osm_watch: way id="290220612" version="1"
+#: osm_watch: way id="287119368" version="8"
+#: XXX_osm laut osm (teilweise) nicht mehr gesperrt
+#: osm_watch: way id="290220612" version="3"
 Regener Str.: fertiggestellt, aber noch gesperrt	2::inwork 19790,9478 19849,9474 19890,9471 19885,9400 19869,9151
-#: osm_watch: way id="193373966" version="5"
+#: XXX_osm laut osm nicht mehr gesperrt
+#: osm_watch: way id="193373966" version="6"
 Patersdorfer Str.: fertiggestellt, aber noch gesperrt	2::inwork 19626,9171 19764,9160 19869,9151
 #: check_frequency ^^^
 #: last_checked ^^^
