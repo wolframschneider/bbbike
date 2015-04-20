@@ -9100,6 +9100,9 @@ sub choose_all_form {
     my $last = "";
     my $last_initial = "";
 
+    print "  </div> <!-- search -->\n";
+    print "</div> <!-- sidebar -->\n\n";
+
     print "<p>\n", M("Willkommen beim Radroutenplaner BBBike! Wir helfen Dir, eine schöne, sichere und kurze Fahrradroute in") .
 	    " <i title='$city'>$local_city_name</i> ",  
 	    M("und Umgebung zu finden."), "<br></p>\n";
