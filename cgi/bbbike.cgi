@@ -9100,6 +9100,7 @@ sub choose_all_form {
     my $last = "";
     my $last_initial = "";
 
+    print &sidebar_disabled;
     print "  </div> <!-- search -->\n";
     print "</div> <!-- sidebar -->\n\n";
 
