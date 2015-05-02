@@ -462,7 +462,7 @@ Spindlersfelder Str.	2 21324,3691 21215,3919 21143,4150 21130,4239 21080,4702 21
 #: XXX evtl. wird die Einbahnstraßenregelung aufgehoben
 #: osm_watch: way id="25585951" version="9"
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6025
-#: last_checked: 2015-04-11
+#: last_checked: 2015-04-26
 Rathausstr.:	1s:q4 15651,12214 15628,12246 15576,12315 15537,12367
 Alt-Marzahn	1 21112,15396 21048,15424 20967,15458 20796,15559 20903,15545 20988,15505 21051,15464 21112,15396
 #: confirmed_by: srt vvv
@@ -856,7 +856,7 @@ Pitschener Str.	1s:q3 21769,-432 21719,-397 21637,-381
 #: XXX wird die Einbahnstraßenregelung für Radfahrer aufgehoben?
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4783
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to010.asp?SILFDNR=2578
-#: last_checked: 2015-03-25
+#: last_checked: 2015-04-28
 Herrfurthstr.	1s:q3 11979,8014 11833,7980
 Dankratstr.	1s:q3 21105,9538 20943,9543
 #: note: ansonsten Durchfahrt verboten
@@ -1110,6 +1110,8 @@ Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8
 Vorfahrt Reichstagsgebäude: Absperrgitter, keine Durchfahrt mehr möglich	2 8400,12417 8399,12610
 Kriemhildstr.	1s:q3 17300,12173 17314,12265
 Sportfliegerstr.: Betriebsgelände	2 18370,4511 18423,4459
+#: by: olaf skeries
+Schillerhof	1 7069,17204 6928,17154
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -2590,6 +2592,12 @@ versetzte Schranke, manchmal offen	BNP:1::trailer=3 24625,20855
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: XXX vermutlich müssen auch Radfahrer die Umleitung nehmen
+#: source_id: IM_024686
+#: next_check: 2015-05-08
+#: priority: #A
+Rummelsburger Landstraße: zwischen Nalepastr. und Poggendorffweg wegen Baustelle gesperrt	1::inwork 17143,8565 17202,8391
+# 
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1504/nachricht5561.html
 #: next_check: 2017-04-01
 Gerickesteg: wegen Bauarbeiten gesperrt	2::inwork 6694,12627 6702,12633 6748,12669 6765,12680
@@ -2636,7 +2644,7 @@ Teltowkanalbrücke: bis auf Weiteres gesperrt	2::inwork  7769,4315 7795,4242
 # 
 #: XXX es gibt schon permanente Sackgassenschilder
 #: osm_watch: way id="334605047" version="2"
-#: last_checked: 2015-03-08
+#: last_checked: 2015-04-26
 #: check_frequency: 60d
 Wartenbergstr.: wegen Einsturzgefahr gesperrt, auch für Radfahrer und Fußgänger	2::inwork 15300,11584 15220,11440
 # 
@@ -2713,9 +2721,9 @@ Luisenstr. Höhe Charité: Straße wegen Bauarbeiten komplett bis zum 30.09.2015 ge
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.153649.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.214040.php
 #: XXX falls es soweit ist -> gesperrt-orig
-#: last_checked: 2015-04-13
-#: next_check: 2015-05-01
-Lohmühlenplatz: Umgestaltung des Platzes, Wege ist gesperrt	2::inwork 12900,9465 12897,9365
+#: last_checked: 2015-04-28
+#: check_frequency: 30d
+Lohmühlenplatz: Umgestaltung des Platzes, Weg ist gesperrt	2::inwork 12900,9465 12897,9365
 # 
 #: source_id: INKO_104519
 #: last_checked: 2015-03-28
@@ -2748,12 +2756,12 @@ Weg zwischen S-Wartenberg und S-Hohenschönhausen: Brücke morsch und gesperrt	2::
 # 
 #: XXX Qualität nach den Bauarbeiten?
 #: osm_watch: way id="24845189" version="12"
-#: last_checked: 2015-02-14
+#: last_checked: 2015-04-26
 #: check_frequency: 60d
 Viechtacher Str.: Bauarbeiten, Straße muss noch fertig gestellt werden	2::inwork 19801,9680 19857,9682 19893,9683
 # REMOVED (offen) --- Eisensteiner Str.: Bauarbeiten, Straße noch gesperrt	2::inwork 19727,9672 19722,9483
 # 
-#: last_checked: 2015-02-14 vvv
+#: last_checked: 2015-04-26 vvv
 #: check_frequency: 60d vvv
 #: osm_watch: way id="287119368" version="8"
 #: XXX_osm laut osm (teilweise) nicht mehr gesperrt

@@ -3060,7 +3060,6 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 	2::temp 27090,-2253 27420,-2067 27492,-1880 27490,-1710 27425,-1601 27374,-1573
 	2::temp 29406,3776 29367,3690 29395,3572 29297,3456 29131,3489 29084,3331 29113,3324 29195,3191 29553,2934 29569,2909 29604,2931 29797,2918 29945,3001 29959,3031
-# REMOVED (F24 wurde eingestellt) ---	2::temp 29959,3031 29968,2986
 #: XXX_prog ^^^
 ',
          'until' => undef,
@@ -3111,30 +3110,24 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        undef,
        undef,
        undef,
+       undef,
+       undef,
+       undef,
        {
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.287680.php',
-         'data' => 'userdel	2::temp 22133,4644 22111,4562 22093,4499
-userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
+         'source_id' => 'IM_019747',
+         'until' => 1492873200,
+         'text' => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende April 2017) ',
+         'from' => 1366740818,
+         'id' => 2422,
+         'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
+#: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
+#: note: laut VMZ um zwei Jahre verlängert, laut fritz/rbbtext beendet
+#: last_checked: 2015-04-26
+#: check_frequency: 90d
+userdel	q2::inwork 5258,11285 5236,10994
 ',
-         'periodic' => 1,
-         'until' => 1430085599,
-         'from' => 1429740000,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              23,
-                              'months',
-                              4
-                            ]
-                          ],
-         'text' => 'Köpenicker Winzerfrühling: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 24.4.2015 bis 26.4.2015 ',
-         'id' => 2419,
-         'type' => 'gesperrt'
+         'type' => 'handicap'
        },
-       undef,
-       undef,
-       undef,
        undef,
        undef,
        undef,
@@ -3609,7 +3602,7 @@ userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,464
          'from' => undef,
          'id' => 2630,
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2015-03-28
+#: last_checked: 2015-04-26
 #: check_frequency: 90d
 userdel	q3::inwork 4503,10497 4485,10307
 ',
@@ -3737,7 +3730,7 @@ userdel	q4::inwork; 2268,19919 2064,19874 1886,19835
          'id' => 2679,
          'data' => '#: XXX "für mehrere Monate" vvv
 #: XXX evtl. bis 30. April 2015
-#: last_checked: 2015-04-11 vvv
+#: last_checked: 2015-04-26 vvv
 #: next_check: 2015-04-30 vvv
 	3 15294,11964 15361,12071 15420,12178
 	3 15117,12106 15361,12071 15420,12178
@@ -3862,15 +3855,19 @@ userdel	2::inwork 7451,13504 7630,13584
 ',
          'type' => 'gesperrt'
        },
+       undef,
        {
-         'source_id' => '156000426',
-         'until' => 1430103600,
-         'text' => 'Niederfinow: L29: Neubau Schiffshebewerk - Transport und Einbau Tragtore OD Niederfinow, 24.04.2015 17:00 Uhr bis 27.04.2015 05:00 Uhr ',
-         'from' => 1429801200,
-         'id' => 2702,
-         'data' => 'userdel	2::inwork 46132,49993 46390,50091
+         'source_id' => 'http://www.bvg.de/de/Aktuell/Newsmeldung?newsid=612',
+         'recurring' => 1,
+         'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+	2::temp 29959,3031 29968,2986
+#: XXX_prog ^^^
 ',
-         'type' => 'gesperrt'
+         'until' => undef,
+         'from' => undef,
+         'text' => 'Ruderfähre F24: fährt nur samstags, sonntags und an Feiertagen, ab 1. Mai bis zum 3. Oktober',
+         'type' => 'gesperrt',
+         'id' => 2703
        }
      
 );
