@@ -1418,7 +1418,8 @@ Altenbraker Str.: Kopfsteinpflaster	Q2 12367,7429 12396,7312 12421,7197 12451,71
 Selkestr.: Kopfsteinpflaster	Q2 12766,7113 12751,7166 12741,7224
 Wittmannsdorfer Str.: mäßiges bis gutes Kopfsteinpflaster	Q2 12908,7305 12878,7415
 Rübelandstr.: Kopfsteinpflaster	Q2 12843,7290 12865,7192
-Bornsdorfer Str.: mäßiges bis gutes Kopfsteinpflaster	Q2 12698,7677 12775,7725 12726,7887 12709,7940 12692,7996 12668,8077
+Bornsdorfer Str.: mäßiges bis gutes Kopfsteinpflaster	Q2 12698,7677 12775,7725 12726,7887 12709,7940 12692,7996
+Bornsdorfer Str.: mäßiges Kopfsteinpflaster	Q2 12692,7996 12668,8077
 Saltykowstr.: gutes kleinteiliges Kopfsteinpflaster	Q1 12726,7887 12865,7923
 Uthmannstr.: mäßiges bis schlechtes Kopfsteinpflaster	Q3 12914,7785 13150,7845
 Herrnhuter Weg: Kopfsteinpflaster	Q2 12898,7832 13103,7889
@@ -2885,8 +2886,8 @@ Moosrosenstr.: Beton	Q0 12727,5244 12726,5147
 Moosrosenstr.: Beton	Q0 12724,5051 12715,5033 12652,5006
 Thomashöhe: Verbundsteinpflaster	Q1 12685,7497 12682,7514 12672,7561
 Thomashöhe: Asphalt	Q0 12672,7561 12647,7672
-Lessinghöhe: Parkweg	Q1 12647,7672 12602,7907
-Lessinghöhe: Asphalt	Q0 12602,7907 12583,7974
+Lessinghöhe: Parkweg	Q1 12647,7672 12643,7714 12622,7796 12625,7829
+Lessinghöhe: Verbundsteinpflaster	Q1 12625,7829 12602,7907 12583,7974
 Elli-Voigt-Str.: Asphalt	Q0 15896,13760 15831,13760 15792,13764 15698,13765
 Elli-Voigt-Str.: Asphalt	Q0 15833,13596 15831,13760
 Elli-Voigt-Str.: Asphalt	Q0 15792,13764 15794,13975 15760,14036 15758,14088
@@ -8590,10 +8591,14 @@ An der Vogelweide: Betonpflaster mit Aufpflasterungen	Q1 8725,21910 8615,21955 8
 (Brockenweg - Blankenburger Pflasterweg): wassergebundene Decke	Q1 15226,20587 15269,20508 15276,20231 15310,20176 15354,19879
 Große-Leege-Str.: Beton mit einigen Hebungen	Q0 16035,14748 15972,14681 15899,14598
 Nibelungenring: Verbundsteinpflaster	Q1 17320,12308 17359,12302 17442,12292 17454,12348
-Nibelungenring: Verbundsteinpflaster	Q1 17474,12344 17484,12405 17432,12413 17376,12422
+Nibelungenring: Verbundsteinpflaster	Q1 17466,12346 17479,12408 17382,12421 17376,12422
 Nibelungenring: unbefestigte Straße, Bauarbeiten	Q3 17376,12422 17337,12428
-Rumoldstr.: Verbundsteinpflaster	Q1 17368,12365 17454,12348 17474,12344 17526,12336
-Hadburgpfad: Verbundsteinpflaster	Q1 17484,12405 17531,12398
+Rumoldstr.: Verbundsteinpflaster	Q1 17368,12365 17454,12348 17466,12346 17526,12336
+Hadburgpfad: Verbundsteinpflaster	Q1 17479,12408 17486,12407 17531,12401
+Alzeyweg: Verbundsteinpflaster	Q1 17376,12422 17368,12365 17359,12302
+Giselhersteig: Verbundsteinpflaster	Q1 17355,12460 17386,12456 17438,12448 17491,12439 17534,12433
+(Giselhersteig - Nibelungenring): Verbundsteinpflaster	Q1 17386,12456 17382,12421
+(Giselhersteig - Hadburgpfad): Verbundsteinpflaster	Q1 17491,12439 17486,12407
 (Siegfriedstr. [Autowaschcenter] - Landschaftspark Herzberge): Asphalt	Q0 17110,14187 17224,14151 17236,14140
 (S-Bahnhof Treptower Park - Rosengarten): Asphalt	Q0 14575,9648 14627,9609 14705,9578
 (S-Bahnhof Treptower Park - Rosengarten): Beton, teilweise mit großen Fugen	Q1 14705,9578 14791,9537

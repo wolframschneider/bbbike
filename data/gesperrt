@@ -803,6 +803,7 @@ Friedrich-Ebert-Platz: permanent gesperrt, nicht nur bei Bundestagssitzungen	2 8
 Vorfahrt Reichstagsgebäude: Absperrgitter, keine Durchfahrt mehr möglich	2 8400,12417 8399,12610
 Kriemhildstr.	1s 17300,12173 17314,12265
 Sportfliegerstr.: Betriebsgelände	2 18370,4511 18423,4459
+Schillerhof	1 7069,17204 6928,17154
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Knoten Märkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
@@ -2758,6 +2759,7 @@ versetzte Schranke, manchmal offen	BNP:1:-124:trailer=3 23402,18067
 versetzte Schranke, manchmal offen	BNP:1:-195:trailer=3 24700,18981
 versetzte Schranke, manchmal offen	BNP:1:-133:trailer=3 24523,18542
 versetzte Schranke, manchmal offen	BNP:1:-171:trailer=3 24625,20855
+Rummelsburger Landstraße: zwischen Nalepastr. und Poggendorffweg wegen Baustelle gesperrt	1::inwork 17143,8565 17202,8391
 Gerickesteg: wegen Bauarbeiten gesperrt	2::inwork 6694,12627 6702,12633 6748,12669 6765,12680
 Alfred-Döblin-Platz: Bauarbeiten	2::inwork 11162,10919 11150,11030
 IGA 2017-Gelände: Wege gesperrt	2 22455,14815 22417,14837 22380,14831 22331,14793 22254,14793 22199,14744 22164,14722 22108,14710 22090,14704 22071,14630 22051,14604 22026,14601 22012,14556 21985,14513 22026,14501 22061,14471 22172,14287 22414,14144 22462,14172 22639,14384 22679,14450 22670,14520
@@ -2782,7 +2784,7 @@ Wattstr.: wegen Bauarbeiten für die Minna-Todenhagen-Str. teilweise gesperrt, gg
 Grenobler Ring: teilweise noch nicht fertiggestellt	2::inwork 12360,21303 12441,21341
 Lyonstr.: noch nicht fertiggestellt, zurzeit nur Baustraße	2::inwork 12189,21337 12214,21332 12322,21378 12448,21433
 Luisenstr. Höhe Charité: Straße wegen Bauarbeiten komplett bis zum 30.09.2015 gesperrt, auch für Radfahrer und Fußgänger	2::inwork 8665,13353 8648,13498
-Lohmühlenplatz: Umgestaltung des Platzes, Wege ist gesperrt	2::inwork 12900,9465 12897,9365
+Lohmühlenplatz: Umgestaltung des Platzes, Weg ist gesperrt	2::inwork 12900,9465 12897,9365
 Mittelstreifen während der Bauarbeiten nicht überquerbar	3nocross::ignrte 3690,11629 3844,11649 3898,11655
 Bismarckstr. -> Richard-Wagner-Str.: Mittelstreifen während der Bauarbeiten nicht überquerbar	3::igndisp 3690,11629 3844,11649 3837,11760
 Bismarckstr. -> Sesenheimer Str.: Mittelstreifen während der Bauarbeiten nicht überquerbar	3::igndisp 3898,11655 3844,11649 3866,11473
