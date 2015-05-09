@@ -133,33 +133,58 @@ userdel	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 1199
        undef,
        undef,
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'data' => '#: by: http://www.myfest36.de/
-userdel	2::temp 11763,10635 11722,10533 11949,10414
-userdel	2::temp 11556,10869 11770,10774 11760,10732 11781,10696 11763,10635 11505,10744 11556,10869 11589,10947 11640,11067
-userdel	2::temp 11958,11045 11897,10887 11841,10747 11824,10708 11781,10696
-userdel	2::temp 11805,10899 11803,10857
-userdel	2::temp 11275,10723 11301,10783 11329,10785 11365,10791 11403,10782 11505,10744 11463,10642 11722,10533
-userdel	2::temp 11841,10747 11770,10774 11799,10848
-userdel	2::temp 11463,10642 11275,10723 11234,10739 11159,10769
-userdel auto	3 11258,10682 11275,10723 11253,10778
-userdel auto	3 11253,10778 11275,10723 11258,10682
+         'data' => '#: by: http://www.berlin.de/tickets/suche/detail.php?id=1045407
+userdel	2::temp 6514,10088 6609,10147 6626,10155 6729,10212
+userdel	2::temp 6729,10212 6971,10346
+userdel	2::temp 6628,10318 6626,10155
+userdel	2::temp 6502,10273 6628,10318 6719,10347
+userdel	2::temp 6719,10347 6729,10212 6739,10120
 ',
          'periodic' => 1,
-         'until' => 1430517599,
-         'from' => 1430388000,
+         'until' => 1434923999,
+         'from' => 1434664800,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              1,
+                              14,
                               'months',
-                              5
+                              6
                             ]
                           ],
-         'text' => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2015',
+         'text' => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (20.6.2015 bis 21.6.2015',
          'type' => 'gesperrt',
-         'id' => 45
+         'id' => 74
        },
        undef,
        undef,
@@ -815,55 +840,6 @@ userdel auto	3 11253,10778 11275,10723 11258,10682
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       {
-         'source_id' => 'http://www.ms-event-agentur.com/primavera%202013.html',
-         'data' => 'userdel	2::temp 7107,9030 7044,9163 7022,9211 7006,9282
-userdel	2::temp 6945,9142 7044,9163
-',
-         'periodic' => 1,
-         'until' => 1430690399,
-         'from' => 1430431200,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              24,
-                              'months',
-                              1
-                            ]
-                          ],
-         'text' => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (2.5.2015 und 3.5.2015)',
-         'id' => 728,
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        {
@@ -1280,7 +1256,26 @@ userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.openairgallery.de/
+userdel	2::temp 13178,10623 13206,10651 13305,10789 13332,10832
+',
+         'periodic' => 1,
+         'until' => 1433707200,
+         'from' => 1433577600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              31,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Open Air Gallery am 7. Juni 2015 auf der Oberbaumbrücke (10:00 - 22:00)',
+         'type' => 'gesperrt',
+         'id' => 1107
+       },
        undef,
        undef,
        undef,
@@ -2540,7 +2535,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im April von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Mai von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -2762,7 +2757,25 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	q4::temp 13178,10623 13206,10651 13305,10789 13332,10832
+',
+         'periodic' => 1,
+         'until' => 1436299200,
+         'from' => 1436169600,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              5,
+                              'months',
+                              7
+                            ]
+                          ],
+         'text' => 'Open Air Gallery am 7. Juli 2015 auf der Oberbaumbrücke (10:00 - 22:00)',
+         'type' => 'gesperrt',
+         'id' => 2206
+       },
        {
          'data' => 'userdel	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
 userdel	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
@@ -3107,7 +3120,19 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        },
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_024846',
+         'until' => 1442851200,
+         'text' => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Hauptstr. gesperrt, langsame Umfahrung über Fußgängerführung möglich, 04.05.2015 bis 21.09.2015',
+         'from' => 1430704800,
+         'id' => 2416,
+         'data' => '#: next_check_id: KARLSHORSTER-2015
+#: last_checked: 2015-05-05
+#: next_check: 2015-09-21
+userdel	q4::inwork 15261,10738 15272,10790 15279,10862
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        undef,
@@ -3155,32 +3180,35 @@ userdel	q2::inwork 5258,11285 5236,10994
        },
        undef,
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'data' => '#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2014
-#: by: http://www.berlin.de/tickets/suche/detail.php?id=954647
-userdel	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
+         'source_id' => 'http://www.kindertag-berlin.de/?date=20150503',
+         'data' => 'userdel	2::temp 20755,5750 20716,6029 20708,6089 20623,6136 20453,6211 20464,6237
+userdel	2::temp 19976,6087 20015,6069 20293,6278 20200,6321 20106,6357
+userdel	2::temp 20200,6321 20262,6493 20225,6631
+userdel	2::temp 20716,6029 20593,6082 20428,6157 20453,6211 20293,6278
+userdel	2::temp 19976,6087 20064,6290 20106,6357
 ',
          'periodic' => 1,
-         'until' => 1430690399,
-         'from' => 1430344800,
-         'text' => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz), Straße rund um den Dorfteich vermutlich gesperrt (01.05.2015 bis 03.05.2015)',
+         'until' => 1433195999,
+         'from' => 1432850400,
+         'text' => 'Internationaler Kindertag im FEZ, Veranstaltung, einige Wege und Straßen sind gesperrt, 30. Mai 2015 bis 1. Juni 2015',
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              1,
+                              30,
                               'months',
                               5
                             ]
                           ],
-         'type' => 'handicap',
-         'id' => 2431
+         'id' => 2436,
+         'type' => 'gesperrt'
        },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        undef,
        undef,
        undef,
@@ -3442,19 +3470,6 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.deutsches-architektur-forum.de/forum/showthread.php?t=11143&page=4',
-         'until' => undef,
-         'text' => 'Gürtelstr. (Weißensee): Einbahnstraße zwischen Meyerbeerstr. und Gounodstr.',
-         'from' => undef,
-         'id' => 2557,
-         'data' => '#: XXX wann ist die Baustelle fertig?
-#: last_checked: 2015-02-13
-#: check_frequency: 60d
-userdel	q3::inwork; 13555,15596 13459,15653
-',
-         'type' => 'handicap'
-       },
        undef,
        undef,
        undef,
@@ -3462,31 +3477,8 @@ userdel	q3::inwork; 13555,15596 13459,15653
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2977174-2970764-1-mai-kundgebung-des-dgb.html',
-         'data' => 'userdel	2::inwork 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302
-userdel	2::inwork 8573,12325 8540,12420
-userdel	2::inwork 8303,12216 8344,12221 8538,12245 8610,12254
-userdel	2::inwork 8089,12190 8214,12205
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-',
-         'periodic' => 1,
-         'until' => 1430524800,
-         'from' => 1430172000,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              30,
-                              'months',
-                              4
-                            ]
-                          ],
-         'text' => 'Straße des 17. Juni und Ebertstraße: Veranstaltung (Kundgebung und Kinderfest des DGB), am 1. Mai 2015',
-         'id' => 2565,
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -3543,16 +3535,7 @@ userdel	2::inwork 8089,12190 8214,12205
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'LS/722-C/14/213',
-         'until' => 1430431199,
-         'text' => 'Spremberg: B156: Brücke über die kleine Spree - Ersatzneubau OD Spremberg, Muskauer Straße, Brücke über kleiner Spree Vollsperrung, 06.08.2014 bis 30.04.2015 ',
-         'from' => 1407357280,
-         'id' => 2605,
-         'data' => 'userdel	2::inwork 79043,-91754 79397,-92080
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3648,16 +3631,7 @@ userdel	2::inwork -3197,11554 -3075,11510
        undef,
        undef,
        undef,
-       {
-         'source_id' => '146901438',
-         'until' => 1430431200,
-         'text' => 'Stahnsdorf: K6902: Straßenbauarbeiten Schenkenhorst - KVK Güterfelde, 10.11.2014 bis 30.04.2015',
-         'from' => 1415487600,
-         'id' => 2651,
-         'data' => 'userdel	2::inwork -3068,-7423 -3462,-6437 -3616,-6170 -3851,-5870 -3877,-5370
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3682,7 +3656,7 @@ userdel	2::inwork -3197,11554 -3075,11510
          'text' => 'Kronenstr.: Einbahnstraßenregelung zwischen Charlottenstr. und Markgrafenstr., gesperrt Richtung Osten, Dauer unbekannt',
          'from' => undef,
          'id' => 2671,
-         'data' => '#: last_checked: 2015-04-01
+         'data' => '#: last_checked: 2015-04-30
 userdel	q4::inwork; 9559,11715 9692,11732
 ',
          'type' => 'handicap'
@@ -3724,19 +3698,14 @@ userdel	q4::inwork; 2268,19919 2064,19874 1886,19835
          'type' => 'handicap'
        },
        {
-         'until' => undef,
+         'source_id' => 'IM_024088',
+         'until' => 1435669200,
          'text' => 'Gürtelstr. - Möllendorffstr.: das Linksabbiegen von der Frankfurter Allee in die Möllendorffstr. und die Querung der Frankfurter Allee von der Gürtelstr. kommend ist nicht mehr direkt möglich, ggfs. Fußgängerampeln auf der westlichen Seite benutzen',
          'from' => undef,
          'id' => 2679,
-         'data' => '#: XXX "für mehrere Monate" vvv
-#: XXX evtl. bis 30. April 2015
-#: last_checked: 2015-04-26 vvv
-#: next_check: 2015-04-30 vvv
+         'data' => '# REMOVED --- #: XXX "für mehrere Monate" vvv --- #: XXX evtl. bis 30. April 2015 --- #: last_checked: 2015-04-26 vvv --- #: next_check: 2015-04-30 vvv
 	3 15294,11964 15361,12071 15420,12178
 	3 15117,12106 15361,12071 15420,12178
-#: next_check ^^^
-#: last_checked ^^^
-#: XXX ^^^
 '
        },
        {
@@ -3787,7 +3756,16 @@ userdel	q4::inwork; 2268,19919 2064,19874 1886,19835
 ',
          'type' => 'handicap'
        },
-       undef,
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1505/nachricht5590.html',
+         'until' => 1431244800,
+         'text' => 'Schönerlinder Str.: zwischen Am Posseberg und Am Vorwerk komplett gesperrt, von 9. Mai 2015, 18.00 Uhr bis 10. Mai 2015, 10.00 Uhr ',
+         'from' => 1431100800,
+         'id' => 2690,
+         'data' => 'userdel	2::inwork 12694,25696 12624,25570
+',
+         'type' => 'gesperrt'
+       },
        undef,
        {
          'source_id' => 'IM_024458',
