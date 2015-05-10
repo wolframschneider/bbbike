@@ -3190,8 +3190,8 @@ EOF
 
 	    }
 
-            if ($BBBike::Googlemap) {
-		use BBBike::Googlemap;
+            if ($BBBikeGooglemap) {
+		#use BBBike::Googlemap;
 
 		print qq{<div id="map_area">\n};
 		&BBBike::Ads::adsense_linkblock if &is_production($q) && !is_mobile($q);
