@@ -55,6 +55,7 @@ BEGIN {
     }
 }
 use lib (@extra_libs);
+use lib qw(world/lib ../world/lib ../../world/lib ../../../world/lib);
 
 use Strassen; # XXX => Core etc.?
 use Strassen::Dataset;
