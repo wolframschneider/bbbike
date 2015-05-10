@@ -1,5 +1,5 @@
 #!/usr/local/bin/perl
-# Copyright (c) June 2012-2013 Wolfram Schneider, http://bbbike.org
+# Copyright (c) June 2012-2015 Wolfram Schneider, http://bbbike.org
 #
 # tile-padding.pl - guess size based on factor of known size of osm.pbf
 
@@ -7,15 +7,14 @@ use IO::File;
 use Getopt::Long;
 use Data::Dumper;
 
-use lib 'world/bin';
-use lib '.';
-use TileSize;
+use lib qw(world/lib ../lib);
+use Extract::TileSize;
 
 use strict;
 use warnings;
 
 my $debug = 0;
-$TileSize::use_cache = 0;
+$Extract::TileSize::use_cache = 0;
 
 sub to_csv {
     my $key = shift;
@@ -94,11 +93,13 @@ die "missing format argument" . &usage if !$format;
 
 warn "tile pbf db: $database_pbf, tile padding db: $database_padding\n"
   if $debug >= 1;
-my $tile_pbf = TileSize->new( 'database' => $database_pbf, 'debug' => $debug );
+my $tile_pbf =
+  Extract::TileSize->new( 'database' => $database_pbf, 'debug' => $debug );
 my $tile_padding =
-  TileSize->new( 'database' => $database_padding, 'debug' => $debug );
+  Extract::TileSize->new( 'database' => $database_padding, 'debug' => $debug );
 
-die "unknown format '$format'" . &usage if !exists $TileSize::factor->{$format};
+die "unknown format '$format'" . &usage
+  if !exists $Extract::TileSize::factor->{$format};
 
 warn Dumper( $tile_padding->{_size} ) if $debug >= 2;
 

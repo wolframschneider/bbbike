@@ -14,13 +14,13 @@ BEGIN {
 
 use utf8;
 use Test::More;
-use lib qw(./world/lib ../lib);
-use BBBikeTest;
+use lib qw(world/lib ../lib);
+use BBBike::Test;
 
 use strict;
 use warnings;
 
-my $test      = BBBikeTest->new();
+my $test      = BBBike::Test->new();
 my @homepages = "http://www.bbbike.org"
   ;    #http://www2.bbbike.org http://dev1.bbbike.org http://dev2.bbbike.org];
 

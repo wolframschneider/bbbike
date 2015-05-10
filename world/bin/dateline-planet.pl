@@ -6,8 +6,8 @@
 use IO::File;
 use File::Basename;
 
-use lib qw(world/bin world/lib ../lib);
-use BBBikePoly;
+use lib qw(world/lib ../lib);
+use Extract::Poly;
 
 use strict;
 use warnings;
@@ -165,15 +165,15 @@ sub create_shell_commands {
 #
 
 # date line
-$BBBikePoly::area = $dateline_area;
-my $poly = new BBBikePoly( 'debug' => $debug );
+$Extract::Poly::area = $dateline_area;
+my $poly = new Extract::Poly( 'debug' => $debug );
 
 &create_shell_commands( $poly, 'dateline', $planet_osm );
 &create_shell_commands( $poly, 'dateline', $planet_osm_original );
 
 # cities / islands
-$BBBikePoly::area = $city_area;
-$poly = new BBBikePoly( 'debug' => $debug );
+$Extract::Poly::area = $city_area;
+$poly = new Extract::Poly( 'debug' => $debug );
 
 &create_shell_commands( $poly, 'cities', $planet_osm );
 &create_shell_commands( $poly, 'cities', $planet_osm_original );

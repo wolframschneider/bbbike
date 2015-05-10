@@ -55,6 +55,7 @@ BEGIN {
     }
 }
 use lib (@extra_libs);
+use lib qw(world/lib ../world/lib ../../world/lib ../../../world/lib);
 
 use Strassen; # XXX => Core etc.?
 use Strassen::Dataset;
@@ -68,10 +69,12 @@ use CGI;
 use CGI::Carp; # Nur zum Debuggen verwenden --- manche Web-Server machen bei den kleinsten Kleinigkeiten Probleme damit: qw(fatalsToBrowser);
 use BrowserInfo 1.47;
 use Encode;
-use BBBikeGooglemap;
-use BBBikeAds;
-use BBBikeElevation;
 use Data::Dumper;
+
+# BBBikeWorld
+use BBBike::Googlemap;
+use BBBike::Ads;
+use BBBike::Elevation;
 
 use strict;
 use vars qw($VERSION $VERBOSE
@@ -979,11 +982,11 @@ if ($lang ne "de") {
 my $headline = "";
 my $bbbike_local_script_url;
 
-$BBBikeAds::enable_google_adsense = $enable_google_adsense;
-$BBBikeAds::enable_google_adsense_start = $enable_google_adsense_start;
-$BBBikeAds::enable_google_adsense_street = $enable_google_adsense_street;
-$BBBikeAds::enable_google_adsense_linkblock = $enable_google_adsense_linkblock;
-$BBBikeAds::enable_google_adsense_street_linkblock = $enable_google_adsense_street_linkblock;
+$BBBike::Ads::enable_google_adsense = $enable_google_adsense;
+$BBBike::Ads::enable_google_adsense_start = $enable_google_adsense_start;
+$BBBike::Ads::enable_google_adsense_street = $enable_google_adsense_street;
+$BBBike::Ads::enable_google_adsense_linkblock = $enable_google_adsense_linkblock;
+$BBBike::Ads::enable_google_adsense_street_linkblock = $enable_google_adsense_street_linkblock;
 
 # set default values for street preferences
 sub default_pref {
@@ -3151,7 +3154,7 @@ function " . $type . "char_init() {}
             print qq{<div style="display:none" id="streetmap"></div>\n};
 
 	    print qq{<!-- use div.text() as local variable to map -->\n};
-	    &BBBikeAds::adsense_start_page if &is_production($q) && !is_mobile($q) && !$q->param("startname");
+	    &BBBike::Ads::adsense_start_page if &is_production($q) && !is_mobile($q) && !$q->param("startname");
 
             print qq{<div style="display:none" id="streetmap2"></div>\n};
             #print qq{<div style="display:none" id="streetmap3"></div>\n}; 
@@ -3188,10 +3191,10 @@ EOF
 	    }
 
             if ($BBBikeGooglemap) {
-		use BBBikeGooglemap;
+		#use BBBike::Googlemap;
 
 		print qq{<div id="map_area">\n};
-		&BBBikeAds::adsense_linkblock if &is_production($q) && !is_mobile($q);
+		&BBBike::Ads::adsense_linkblock if &is_production($q) && !is_mobile($q);
 		print qq{</div> <!-- map_area -->\n\n};
 	        
 		print <<EOF;
@@ -3200,7 +3203,7 @@ EOF
 EOF
 
  
-	        my $maps = BBBikeGooglemap->new();
+	        my $maps = BBBike::Googlemap->new();
 	        $maps->run('q' => CGI->new("$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'region' => $region, 'cache' => scalar $q->param('cache')||0, 'nomap' =>  is_mobile($q) );
 	    }
 
@@ -4439,7 +4442,7 @@ sub search_coord {
     # XXX Anzahl der Tragestellen zählen...
 
     if ($enable_elevation && $q->param("pref_elevation") ) {
-	my $elevation = new BBBikeElevation;
+	my $elevation = new BBBike::Elevation;
     	$elevation->init;
         my $extra_args = $elevation->elevation_net;
 
@@ -6524,7 +6527,7 @@ EOF
 		    print qq{<iframe name="slippymapIframe" title="slippy map" width="100%" height="800" scrolling="no"></iframe><p></p>};
 		    print qq{<script  type="text/javascript"> document.slippymapForm.submit(); </script>\n};
 		} else {
-		   my $maps = BBBikeGooglemap->new();
+		   my $maps = BBBike::Googlemap->new();
                    $maps->run('q' => CGI->new( "$smu"), 'gmap_api_version' => $gmap_api_version, 'lang' => &my_lang($lang), 'fullscreen' => 1,
 			      'region' => $region, 'cache' => scalar $q->param('cache') || 0, 'debug' => $debug, 'nomap' => is_mobile($qq) );
 		}
@@ -9109,8 +9112,8 @@ sub choose_all_form {
 	    M("und Umgebung zu finden."), "<br></p>\n";
     print qq{<p>\n}, M("Klicke auf eine Strasse oder Point of Interest (POI), um die Routensuche zu starten"), qq{:</p>\n};
 
-    &BBBikeAds::adsense_street_linkblock if &is_production($q); # && !is_mobile($q);
-    &BBBikeAds::adsense_street_page if &is_production($q); # && !is_mobile($q);
+    &BBBike::Ads::adsense_street_linkblock if &is_production($q); # && !is_mobile($q);
+    &BBBike::Ads::adsense_street_page if &is_production($q); # && !is_mobile($q);
 
     print qq{\n<div id="a_z_list">\n};
     print "<center>";

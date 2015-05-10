@@ -12,10 +12,8 @@ use JSON;
 use Data::Dumper;
 use Encode;
 
-use lib './world/bin';
-use lib '../world/bin';
-use lib '../bin';
-use BBBikeWorldDB;
+use lib qw(world/bin ../world/lib ../lib);
+use BBBike::WorldDB;
 
 use strict;
 use warnings;
@@ -51,7 +49,7 @@ sub get_bbbike_db {
     my $database = "world/etc/cities.csv";
     $database = "../$database" if -e "../$database";
 
-    my $db = BBBikeWorldDB->new( 'database' => $database, 'debug' => 0 );
+    my $db = BBBike::WorldDB->new( 'database' => $database, 'debug' => 0 );
     return $db;
 }
 

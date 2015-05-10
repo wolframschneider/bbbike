@@ -29,9 +29,9 @@ use Math::Polygon::Calc;
 use Math::Polygon::Transform;
 
 use lib qw[../world/lib ../lib];
-use BBBikeExtract;
-use BBBikeLocale;
-use BBBikeAnalytics;
+use Extract::Config;
+use BBBike::Locale;
+use BBBike::Analytics;
 
 use strict;
 use warnings;
@@ -63,8 +63,8 @@ our $option = {
     'debug'          => "2",
     'request_method' => "GET",
 
-    'supported_languages' => $BBBikeLocale::option->{"supported_languages"},
-    'language'            => $BBBikeLocale::option->{"language"},
+    'supported_languages' => $BBBike::Locale::option->{"supported_languages"},
+    'language'            => $BBBike::Locale::option->{"language"},
 
     'pro' => 0,
 
@@ -122,11 +122,11 @@ if ( defined $q->param('debug') ) {
     $debug = int( $q->param('debug') );
 }
 
-my $extract = BBBikeExtract->new( 'q' => $q, 'option' => $option );
+my $extract = Extract::Config->new( 'q' => $q, 'option' => $option );
 $extract->load_config;
 $extract->check_extract_pro;
-my $formats = $BBBikeExtract::formats;
-my $spool   = $BBBikeExtract::spool;
+my $formats = $Extract::Config::formats;
+my $spool   = $Extract::Config::spool;
 
 # spool directory. Should be at least 100GB large
 my $spool_dir = $option->{'spool_dir'} || '/var/cache/extract';
@@ -350,7 +350,7 @@ sub footer {
 
     my $analytics =
       $option->{"enable_google_analytics"}
-      ? BBBikeAnalytics->new( 'q' => $q )->google_analytics
+      ? BBBike::Analytics->new( 'q' => $q )->google_analytics
       : "";
     my $url = $q->url( -relative => 1 );
     my $error = $args{'error'} || 0;
@@ -1260,12 +1260,12 @@ sub export_osm {
 EOF
 }
 
-sub M { return BBBikeLocale::M(@_); };    # wrapper
+sub M { return BBBike::Locale::M(@_); };    # wrapper
 
 ######################################################################
 # main
 
-my $locale = BBBikeLocale->new(
+my $locale = BBBike::Locale->new(
     'q'                   => $q,
     'supported_languages' => $option->{'supported_languages'},
     'language'            => $option->{'language'}
