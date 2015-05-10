@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 2013,2015 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -11,18 +11,19 @@
 # WWW:  http://www.rezic.de/eserte/
 #
 
-# Description (en): Show weather data from OpenWeatherMap
-# Description (de): Wetterdaten vpn OpenWeatherMap anzeigen
+# Description (en): Show weather data from OpenWeatherMap (experimental)
+# Description (de): Wetterdaten vpn OpenWeatherMap anzeigen (experimentell)
 package OpenWeatherMap;
 
 use BBBikePlugin;
 push @ISA, 'BBBikePlugin';
 
 use strict;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use LWP::UserAgent ();
 use JSON::XS qw(decode_json);
+use POSIX qw(strftime);
 
 our %CURRENT_STATIONS;
 
@@ -47,9 +48,6 @@ sub add_button {
 			    [Button => "OpenWeatherMap-Daten anzeigen",
 			     -command => sub { refresh_owm_layer() },
 			    ],
-			    [Button => "XXX Raise", # XXX shouldn't be necessary if this was a proper BBBike layer
-			     -command => sub { $main::c->raise('owm-data') },
-			    ],
 			    [Button => "OpenWeatherMap-Daten löschen",
 			     -command => sub { delete_owm_layer() },
 			    ],
@@ -67,33 +65,53 @@ sub add_button {
 
 sub refresh_owm_layer {
     eval {
+	my $appid;
+	my $appid_file = "$ENV{HOME}/.openweathermap_appid";
+	if (open my $appid_fh, $appid_file) {
+	    chomp($appid = <$appid_fh>);
+	}
 	my($minx,$miny,$maxx,$maxy) = main::get_visible_map_bbox_polar();
-	my $url = "http://api.openweathermap.org/data/2.1/find/station?bbox=$minx,$miny,$maxx,$maxy,10&cluster=yes";
+	my $cx = ($maxx-$minx)/2 + $minx;
+	my $cy = ($maxy-$miny)/2 + $miny;
+	my $url = "http://api.openweathermap.org/data/2.5/station/find?lat=$cy&lon=$cx=cnt=10";
+	if (defined $appid) {
+	    warn "INFO: using API key (appid): $appid\n";
+	    $url .= "&APPID=$appid";
+	} else {
+	    warn "NOTE: no API key found, consider to apply for one and put it to $appid_file\n";
+	}
 	my $ua = main::get_user_agent();
 	my $resp = $ua->get($url);
 	if (!$resp->is_success) {
 	    die "Fetching $url failed with " . $resp->as_string;
 	}
 	my $d = decode_json($resp->decoded_content(charset => "none"));
-	if ($d->{cod} != 200) {
-	    die "The returned JSON code was not '200', but '$d->{cod}'";
-	}
-	if (!@{ $d->{list} || [] }) {
+	if (!@$d) {
 	    die "Empty list was returned, probably no weather stations here";
 	}
 	delete_owm_layer();
-	for my $entry (@{ $d->{list} }) {
-	    my $id = $entry->{id};
+	main::add_to_stack('owm-data', 'topmost');
+	for my $entry (@$d) {
+	    my $station = $entry->{station};
+	    my $id = $station->{id};
 	    if ($id) {
 		$CURRENT_STATIONS{$id} = $entry;
 	    }
+	    my $last_data = $entry->{last};
 	    my $text = '';
-	    $text .= 'Date/time: ' . scalar(localtime $entry->{dt}) . "\n";
-	    $text .= 'Name: ' . $entry->{name} . "\n";
-	    $text .= 'Temperature: ' . sprintf("%.1f", $entry->{main}->{temp} - 273.15) . "°C\n";
-	    $text .= 'Wind: ' . $entry->{wind}->{speed} . 'm/s, ' . $entry->{wind}->{deg} . "°\n";
-	    my($x,$y) = main::transpose($Karte::Polar::obj->map2standard($entry->{coord}->{lon}, $entry->{coord}->{lat})); # XXX other coord systems?
-	    $main::c->createText($x,$y, -text => $text, -tags => ['owm-data', ($id ? "owm-data-$id" : ())]);
+	    my $ago_secs = time - $last_data->{dt};
+	    my $ago = ($ago_secs > 365*86400 ? '(more than one year ago)' :
+		       $ago_secs > 31*86400  ? '(more than one month ago)' :
+		       $ago_secs > 2*86400   ? '(' . int($ago_secs/86400) . ' days ago)' :
+		       $ago_secs > 2*3600    ? '(' . int($ago_secs/3600) . ' hours ago)' :
+		       $ago_secs > 2*60      ? '(' . int($ago_secs/60) . ' minutes ago)' : 'recent');
+	    $text .= 'Date/time: ' . strftime("%Y-%m-%d %H:%M:%S", localtime($last_data->{dt})) . " $ago\n";
+	    $text .= 'Name: ' . $station->{name} . "\n";
+	    $text .= 'Temperature: ' . sprintf("%.1f", $last_data->{main}->{temp} - 273.15) . "°C\n";
+	    $text .= 'Wind: ' . $last_data->{wind}->{speed} . 'm/s, ' . $last_data->{wind}->{deg} . "°\n";
+	    my($x,$y) = main::transpose($Karte::Polar::obj->map2standard($station->{coord}->{lon}, $station->{coord}->{lat})); # XXX other coord systems?
+	    #$main::c->createText($x,$y, -text => $text, -tags => ['owm-data', ($id ? "owm-data-$id" : ())]);
+	    main::outline_text($main::c, $x, $y, -text => $text, -tags => ['owm-data', ($id ? "owm-data-$id" : ())]);
 	}
     };
     if ($@) {
@@ -114,6 +132,9 @@ __END__
 
 * use "proper" BBBike layers (so raise-ing/lower-ing works fine)
 
+  -> now we have something better than before (initial stack order is topmost),
+     but still not perfect
+
 * full data view, e.g. with tooltip or by clicking and opening a small dialog
 
 * show wind velocity + directions as a graphical element
@@ -123,5 +144,12 @@ __END__
 * does it work with a native wgs-84 map?
 
 * Msg-ize
+
+* major reasons for being experimental.
+
+  * I seldom use it
+
+  * currently the available weather data is far from usable because too old
+    (checked around Berlin, 2015-05-07)
 
 =cut

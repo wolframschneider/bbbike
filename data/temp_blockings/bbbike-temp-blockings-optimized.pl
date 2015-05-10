@@ -2608,7 +2608,28 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.kiez-und-kultur.de/bergmannstrassenfest/',
+         'data' => 'userdel	2::temp 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252
+userdel auto	3 9487,9209 9505,9306 9524,9426
+userdel auto	3 9524,9426 9505,9306 9487,9209
+',
+         'periodic' => 1,
+         'until' => 1435528799,
+         'from' => 1435183200,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              8,
+                              'months',
+                              6
+                            ]
+                          ],
+         'text' => 'Bergmannstraße (Kreuzberg): Veranstaltung (Bergmannstraßenfest), Straße vollständig zwischen Mehringdamm und Zossener Str. gesperrt (26. bis 28. Juni 2015)',
+         'id' => 2089,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3846,6 +3867,16 @@ userdel	2::inwork 7451,13504 7630,13584
          'text' => 'Ruderfähre F24: fährt nur samstags, sonntags und an Feiertagen, ab 1. Mai bis zum 3. Oktober',
          'type' => 'gesperrt',
          'id' => 2703
+       },
+       {
+         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.312630.php',
+         'until' => 1441058399,
+         'text' => 'Ernst-Liesegang-Ufer: wegen Bauarbeiten gesperrt, bis voraussichtlich Ende August 2015',
+         'from' => undef,
+         'id' => 2704,
+         'data' => 'userdel	2::inwork -6474,5144 -6361,5222 -6277,5180 -6037,5371 -5918,5610 -5853,5674 -5828,5739 -5688,5837 -5390,5941 -5264,6001 -5037,6085 -4835,6220 -4774,6514
+',
+         'type' => 'gesperrt'
        }
      
 );
