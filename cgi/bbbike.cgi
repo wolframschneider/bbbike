@@ -7080,7 +7080,7 @@ sub draw_route {
 	}
 	# draw is an array;
 	my $i = 0;
-	foreach ($q->param("draw")) {
+	foreach (BBBikeCGI::Util::my_multi_param($q, 'draw')) {	
 	    $persistent{"draw$i"} = $_;
 	    $i++;
 	}
