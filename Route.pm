@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998,2000,2001,2012,2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998,2000,2001,2012,2013,2015 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,8 +16,7 @@ package Route;
 use strict;
 #use AutoLoader 'AUTOLOAD';
 
-use vars qw($coords_ref $realcoords_ref $search_route_points_ref
-	    @EXPORT @ISA $VERSION);
+use vars qw(@EXPORT @ISA $VERSION);
 
 $VERSION = '2.00';
 
@@ -380,6 +379,12 @@ sub load_as_object {
     $class->new_from_realcoords($res->{RealCoords}, -searchroutepoints => $res->{SearchRoutePoints});
 }
 
+sub load_bbr_as_object {
+    my($class, $file) = @_;
+    my $res = Route::load_bbr($file);
+    $class->new_from_realcoords($res->{RealCoords}, -searchroutepoints => $res->{SearchRoutePoints});
+}
+
 sub save_object {
     my($self, $file) = @_;
     Route::save(
@@ -438,42 +443,7 @@ sub load {
 		       };
 		return;
 	    } elsif (!$no_do) {
-		undef $coords_ref;
-		undef $realcoords_ref;
-		undef $search_route_points_ref;
-
-		require Safe;
-		my $compartment = new Safe;
-		$compartment->share(qw($realcoords_ref
-				       $coords_ref
-				       $search_route_points_ref
-				      ));
-		# XXX Ugly hack following: somehow Devel::Cover and
-		# Safe don't play well together. So I simply turn off
-		# Safe.pm if Devel::Cover usage is detected...
-		if ($Devel::Cover::VERSION) {
-		    do $file;
-		} else {
-		    $compartment->rdo($file);
-		}
-
-		die "Die Datei <$file> enthält keine Route."
-		    if (!defined $realcoords_ref);
-
-		@realcoords = @$realcoords_ref;
-		if (defined $coords_ref) {
-		    warn "Achtung: <$file> enthält altes Routen-Format.\n".
-			"Koordinaten können verschoben sein!\n";
-		}
-		if (defined $search_route_points_ref) {
-		    @search_route_points = @$search_route_points_ref;
-		} else {
-		    @search_route_points =
-			([join(",",@{ $realcoords[0] }), POINT_MANUELL],
-			 [join(",",@{ $realcoords[-1] }), POINT_MANUELL]);
-		}
-
-		$matching_type = "bbr";
+		$ret = Route::load_bbr($file);
 	    } elsif ($no_do) {
 		die;
 	    }
@@ -510,8 +480,57 @@ sub load {
      };
 }
 
+# Like load(), but only loads bbr files
+sub load_bbr {
+    my($file) = @_;
+
+    require Safe;
+    my $compartment = new Safe;
+
+    # Safe don't play well together (error message:
+    # "Undefined subroutine &Devel::Cover::use_file called").
+    # So Safe.pm is simply turned off if Devel::Cover usage
+    # is detected...
+    my($coords_ref, $realcoords_ref, $search_route_points_ref);
+    if ($Devel::Cover::VERSION) {
+	my $contents = do { open my $fh, $file or die $!; local $/; join '', <$fh> };
+	eval $contents;
+    } else {
+	$compartment->rdo($file);
+	$realcoords_ref          = ${ $compartment->varglob('realcoords_ref') };
+	$coords_ref              = ${ $compartment->varglob('coords_ref') };
+	$search_route_points_ref = ${ $compartment->varglob('search_route_points_ref') };
+    }
+
+    die "Die Datei <$file> enthält keine Route."
+	if (!defined $realcoords_ref);
+
+    if (defined $coords_ref) {
+	warn "Achtung: <$file> enthält altes Routen-Format.\n".
+	    "Koordinaten können verschoben sein!\n";
+    }
+
+    my @search_route_points;
+    if (defined $search_route_points_ref) {
+	@search_route_points = @$search_route_points_ref;
+    } else {
+	@search_route_points =
+	    ([join(",",@{ $realcoords_ref->[0] }), POINT_MANUELL],
+	     [join(",",@{ $realcoords_ref->[-1] }), POINT_MANUELL]);
+    }
+
+    +{
+      RealCoords        => $realcoords_ref,
+      SearchRoutePoints => \@search_route_points,
+      Type              => 'bbr',
+     };
+}
+
 sub save {
     my(%args) = @_;
+
+    require Data::Dumper;
+
     my $obj = delete $args{-object}; # the same as the return value of load
     if ($obj) {
 	$args{-realcoords} = $obj->{RealCoords};
@@ -521,33 +540,17 @@ sub save {
     die "-realcoords?" if !$args{-realcoords};
     $args{-searchroutepoints} = [] if !$args{-searchroutepoints};
 
-    my $SAVE;
-    if (!open($SAVE, ">$args{-file}")) {
-	die "Die Datei <$args{-file}> kann nicht geschrieben werden ($!)\n";
-    }
+    open my $SAVE, "> $args{-file}"
+	or die "Die Datei <$args{-file}> kann nicht geschrieben werden ($!)\n";
     print $SAVE "#BBBike route\n";
-    eval {
-	require Data::Dumper;
-	$Data::Dumper::Indent = 0;
-	print $SAVE Data::Dumper->Dump([$args{-realcoords},
-				       $args{-searchroutepoints},
-				      ],
-				      ['realcoords_ref',
-				       'search_route_points_ref',
-				      ]);
-    };
-    if ($@) {
-	print $SAVE
-	    "$realcoords_ref = [",
-		join(",", map { "[".join(",", @$_)."]" }
-		          @{ $args{-realcoords} }),
-	     "];\n",
-	     "$search_route_points_ref = [",
-		 join(",", map { "[".join(",", @$_)."]" }
-		          @{ $args{-searchroutepoints} }),
-	     "];\n";
-    }
-    close $SAVE;
+    local $Data::Dumper::Indent = 0;
+    print $SAVE Data::Dumper->Dump
+	(
+	 [$args{-realcoords},     $args{-searchroutepoints}],
+	 [      'realcoords_ref',       'search_route_points_ref'],
+	);
+    close $SAVE
+	or die "Fehler beim Schreiben nach <$args{-file}> ($!)\n";
 }
 
 1;

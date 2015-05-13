@@ -39,7 +39,7 @@ Danziger Str.	?::projected 11709,14856 11864,14781 11990,14714 12025,14695 12128
 # 
 #: XXX im Baumaﬂnahmenkatalog ist nur der ˆstliche Teil ab Heinrich-Heine-Str. eingezeichnet, Baumaﬂnahmen 1.46 (Realisierung in 2011)
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
-#: last_checked: 2015-05-06
+#: last_checked: 2015-05-12
 #: check_frequency: 60d
 Annenstr./Heinrich-Heine-Platz	?::projected 11349,11227 11249,11268 11091,11379 11052,11414 11039,11425 10892,11555 10815,11662
 # 
@@ -91,7 +91,7 @@ Stein/Nuthestr.: wird hier vielleicht eine Ampel hingestellt?	?::projected 10270
 Hasenheide: werden hier vielleicht Radspuren Richtung Osten markiert oder Radwege erstellt? Was ist mit der existierenden Gegenrichtung?	?::projected 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260
 # 
 #: XXX Baumaﬂnahme 2.28 (Realisierung nach 2011) 
-#: last_checked: 2015-04-26
+#: last_checked: 2015-05-11
 #: check_frequency: 90d
 Mˆckernstr.: werden hier vielleicht Radspuren Richtung S¸den markiert oder Radwege erstellt? Was ist mit der existierenden Gegenrichtung?	?::projected 8804,10303 8802,10290 8783,10166 8780,9968 8779,9851 8779,9829 8779,9812 8777,9601
 # 
@@ -101,7 +101,7 @@ Mˆckernstr.: werden hier vielleicht Radspuren Richtung S¸den markiert oder Radwe
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5957 (Baubeginn)
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6183 (Baubeginn erst 2015)
 #: XXX Baubeginn des ersten Abschnitts: 3. Quartal 2014
-#: last_checked: 2015-04-30
+#: last_checked: 2015-05-11
 #: check_frequency: 60d
 Skalitzer/Gitschiner Str.: werden hier Radspuren markiert?	?::projected 11335,10375 11316,10372 11130,10326 11117,10326 10975,10334 10871,10322 10708,10312 10605,10312 10363,10303 10122,10294 9948,10280
 # 
@@ -141,7 +141,7 @@ T¸rkenstr.: wird hier asphaltiert werden?	? 6440,16327 6629,16538
 #: osm_watch: way id="4638315" version="16"
 #: XXX laut rbbtext und fritz Bauarbeiten
 #: last_checked: 2015-04-09 vvv
-#: next_check: 2015-05-09 vvv
+#: next_check: 2015-05-23 vvv
 # REMOVED --- #: next_check: 2014-03-15 (evtl. passiert w‰hrend der Bauarbeiten etwas?) --- #: source_id: IM_021408
 Reinickendorfer Str.: werden hier noch die restlichen Radspuren markiert?	?::projected 7672,16878 7687,16770
 Reinickendorfer Str.: werden hier noch die restlichen Radspuren markiert?	?::projected; 7713,16557 7687,16770
@@ -183,7 +183,7 @@ Wuhletalstr.: werden hier die Radspuren fortgef¸hrt?	?::projected 20895,17594 20
 Oderbruchstr./Hohenschˆnhausener Str.: werden hier Radspuren markiert?	?::projected 14990,14537 14754,14406 14721,14379 14667,14336 14650,14322 14358,14155 14298,14015 14261,13932 14218,13834
 # 
 #: XXX Baumaﬂnahme 11.12 (Realisierung nach 2011)
-#: last_checked: 2015-04-26
+#: last_checked: 2015-05-10
 #: check_frequency: 60d
 Ruschestr.: werden hier Radspuren markiert?	?::projected 15950,12886 15953,12753 15952,12679 15947,12626 15928,12483 15904,12340
 # 
@@ -390,12 +390,23 @@ Wendenschloﬂstr.: Radstreifen auf der westlichen Fahrbahnseite	?::projected 2266
 # - handelt es sich bei der Frage um Zebrastreifen und andere
 #   f¸r Radfahrer eher uninteressante Dinge (-> private)
 # 
+#: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.312877.php
+#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1505/nachricht5598.html
+#: XXX Fertigstellung der Platzgestaltung f¸r Ende 2016 vorgesehen
+Rathaus Wedding: ‰ndert sich was w‰hrend/nach der Bauarbeiten am Rathausplatz?	? 7012,15571 7129,15717
+# 
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150511.1105.401906.html
+#: XXX teilweise schon zur¸ckgebaut, Ende der Bauarbeiten im Herbst 2015
+Rixdorfer Str.: Umbau der Radwege zu Radstreifen	?::inwork 9934,3802 10181,4181 10185,4187 10221,4245 10288,4354 10412,4552
+# 
+# REMOVED (nichts zu sehen) --- #: XXX Hessische Str. (Mitte): Baustelle, Baustellenampel, Zufahrt Hannoversche Str. gesperrt (bis Ende 05/15) in beiden Richtungen in Hˆhe Hannoversche Str., 11.05.2015 08:00 Uhr bis 29.05.2015 18:00 Uhr	IM_024927 --- #: priority: #A --- Hannoversche Str.: Sperrung relevant f¸r Radfahrer?	? 8674,13593 8775,13606
+# 
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5540.html vvv
 #: source_id: IM_024548 vvv
 #: note: Dauer etwa vier Monate, also bis August 2015? vvv
 #: XXX laut rbbtext bis 15.8.2015
 #: XXX_prog grˆﬂere Behinderungen eigentlich nur, wenn die Kreuzung in voller L‰nge befahren wird, aber nicht so sehr beim Rechtsabbiegen vvv
-#: last_checked: 2015-04-21 vvv
+#: last_checked: 2015-05-12 vvv
 Kreuzung Invalidenstr./Gartenstr.: Auswirkungen der Vollsperrung hier?	? 9224,14169 9383,13986 9514,13826
 Kreuzung Invalidenstr./Gartenstr.: Auswirkungen der Vollsperrung hier?	? 9383,13986 9676,14046
 #: last_checked ^^^
@@ -885,7 +896,7 @@ Weitlingstr.: f¸r 2012 geplanter Zebrastreifen? Wo genau?	?::projected 16705,115
 # 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/verwaltung/org/vermessung/b-plaene/b-plaene/B-V-3.jpg
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/42re.pdf/file?y=2012
-#: last_checked: 2015-02-20
+#: last_checked: 2015-05-12
 #: check_frequency: 180d
 Planstraﬂe C: Einfahrten existieren noch, aber statt einer Straﬂe ist hier nur ein Parkplatz	?::projected 12926,11224 12848,11093
 # 
@@ -960,7 +971,7 @@ Buckower Damm: eventuell werden die Radwege hier asphaltiert oder neues Verbunds
 # 
 #: XXX brunnels!
 #: XXX hier wird bestimmt nicht so schnell wie bei der B-L-Strecke realisiert...
-#: last_checked: 2014-03-21
+#: last_checked: 2015-05-11
 #: check_frequency: 360d
 Verbindung zwischen Gleisdreieckpark und Flaschenhalspark: wann wird die Br¸cke ¸ber die Yorckstr. realisiert?	?::projected 8426,9572 8423,9532
 # 
@@ -1410,8 +1421,8 @@ Kunersdorfer Str. (Potsdam): Kann die Heinrich-Mann-Allee in Hˆhe Kunersdorfer S
 #: next_check_id: SUEDPANKE-2014
 #: osm_watch: way id="327596403" version="1"
 #: XXX culdesac-orig entfernen, sobald die Verl‰ngerung erfolgt ist
-#: last_checked: 2014-02-10
-#: next_check: 2015-04-23
+#: last_checked: 2015-05-12
+#: check_frequency: 360d
 S¸dpankeweg, Fortsetzung zur Ida-von-Arnim-Str.: wann wird sie gebaut? Qualit‰t? Beleuchtet?	?::projected 8294,14194 8266,14253 8251,14337
 # 
 # REMOVED (realisiert) --- #: last_checked: 2014-11-26 --- #: next_check: 2014-12-14 --- Fuﬂg‰ngerampel (oder Straﬂenbahnampel) in Bau	?::inwork 7422,13012
@@ -1497,9 +1508,9 @@ Anna-Maria-M¸ller-Str.: Planstraﬂe 7, genaue Lage, Qualit‰t?	?::projected 17712,
 #: XXX Baustart: Ende 2013, Bauende: Fr¸hjahr 2015
 #: XXX (osm_watch-Item ist ein Proxy f¸r den nicht mehr existenten Weg, Notiz existiert)
 #: osm_watch: way id="24686030" version="3"
-#: last_checked: 2015-04-11
-#: XXX_osm: bei osm bereits ohne highway=construction
-#: next_check: 2015-05-03
+#: last_checked: 2015-05-10
+#: XXX_osm: bei osm bereits ohne highway=construction -> Notiz
+#: check_frequency: 60d
 Am Gutspark: neue geplante Privatstraﬂe, Lage, Qualit‰t?	?::inwork 15747,12880 15747,12985 15808,12989
 # 
 # REMOVED (abgelehnt, siehe Schlussbericht) --- #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4458 --- #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/___tmp/tmp/45081036560602837/560602837/00092292/92-Anlagen/04/B0359SB.pdf (Schlussbericht) --- #: last_checked: 2013-06-22 --- #: check_frequency: 90d --- Brandenburgplatz: wird hier eine Fuﬂg‰ngerampel eingerichtet?	? 23363,5714 23309,5704
@@ -1566,7 +1577,7 @@ Weichselplatz: vielleicht wird hier asphaltiert?	?::projected 12851,9309 12761,9
 Alter Wiesenweg: Qualit‰t? Ausgeschildert?	? 1739,15958 1581,15919
 # 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5192&options=4 (BVV-Beschluss)
-#: last_checked: 2015-01-31
+#: last_checked: 2015-05-11
 #: check_frequency: 100d
 #: priority: #C
 Zossener Str.: wird die Vorfahrtsregelung hier aufgehoben?	? 9827,10051 9837,9856 9820,9718 9790,9528
