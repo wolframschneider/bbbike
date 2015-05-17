@@ -32,6 +32,7 @@ sub new {
     my $disable_routing          = delete $args{disable_routing};
     my $use_osm_de_map           = delete $args{use_osm_de_map};
     my $coords                   = delete $args{coords};
+    my $route_title              = delete $args{route_title};
     my $show_expired_session_msg = delete $args{show_expired_session_msg};
     my $geojson_file             = delete $args{geojson_file};
     my $geojsonp_url             = delete $args{geojsonp_url};
@@ -56,6 +57,7 @@ sub new {
 	   disable_routing          => $disable_routing,
 	   use_osm_de_map           => $use_osm_de_map,
 	   coords                   => $coords,
+	   route_title              => $route_title,
 	   show_expired_session_msg => $show_expired_session_msg,
 	   geojson_file             => $geojson_file,
 	   geojsonp_url             => $geojsonp_url,
@@ -77,6 +79,7 @@ sub process {
     my $use_osm_de_map           = $self->{use_osm_de_map};
     my $cgi_config               = $self->{cgi_config};
     my $coords                   = $self->{coords};
+    my $route_title              = $self->{route_title};
     my $show_expired_session_msg = $self->{show_expired_session_msg};
     my $geojson_file             = $self->{geojson_file};
     my $geojsonp_url             = $self->{geojsonp_url};
@@ -176,11 +179,31 @@ sub process {
 
 	if (m{\Q//--- INSERT GEOJSON HERE ---}) {
 	    if ($coords) {
-		require BBBikeGeoJSON;
-		require Route;
-		my $route = Route->new_from_cgi_string(join("!", $coords));
-		my $json = BBBikeGeoJSON::route_to_geojson_json($route);
-		print $ofh "initialRouteGeojson = $json;\n";
+		if (ref $coords eq 'ARRAY' && @$coords > 1) {
+		    require Strassen::GeoJSON;
+		    require Strassen::Core;
+		    my $bbd = Strassen::GeoJSON->new;
+		    my $name = defined $route_title ? $route_title : '';
+		    for my $coord (@$coords) {
+			$bbd->push([$name, [split /!/, $coord], 'X']);
+		    }
+		    print $ofh "initialGeojson =\n";
+		    my $json_octets = $bbd->bbd2geojson;
+		    binmode $ofh, ':raw'; # temporarily turn off utf8 layer --- we have octets, and want to dump them as octets
+		    print $ofh $json_octets;
+		    binmode $ofh, ':utf8';
+		    print $ofh ";\n";
+		} else {
+		    # This seems to be faster than Strassen::GeoJSON +
+		    # Strassen::Core, so use if for simple coordinate
+		    # lists.
+		    require BBBikeGeoJSON;
+		    require Route;
+		    ($coords) = @$coords if ref $coords eq 'ARRAY';
+		    my $route = Route->new_from_cgi_string($coords);
+		    my $json = BBBikeGeoJSON::route_to_geojson_json($route);
+		    print $ofh "initialRouteGeojson = $json;\n";
+		}
 	    } elsif ($show_expired_session_msg) {
 		# XXX English message?
 		print $ofh qq{alert("Die Session ist abgelaufen, es wird die Karte ohne Route angezeigt.");\n};

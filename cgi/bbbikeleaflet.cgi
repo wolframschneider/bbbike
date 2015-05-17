@@ -23,6 +23,7 @@ use CGI ();
 
 use BBBikeLeaflet::Template ();
 use BBBikeCGI::Config ();
+use BBBikeCGI::Util ();
 
 my $htmldir = "$FindBin::RealBin/../html";
 my $htmlfile = "$htmldir/bbbikeleaflet.html";
@@ -37,16 +38,27 @@ my $enable_upload      = $q->param('upl') || 0;
 my $enable_accel       = $q->param('accel') || 0;
 my $use_osm_de_map     = $q->param('osmdemap') || 0;
 my $devel              = $q->param('devel') || 0;
+my $route_title        = $q->param('routetitle');
 my $show_expired_session_msg;
 my $coords;
 if ($q->param('coordssession')) {
     require BBBikeApacheSessionCounted;
-    if (my $sess = BBBikeApacheSessionCounted::tie_session($q->param('coordssession'))) {
+    if (my $sess = BBBikeApacheSessionCounted::tie_session(scalar $q->param('coordssession'))) {
 	$coords = $sess->{routestringrep};
     } else {
 	$show_expired_session_msg = 1;
     }
+} elsif ($q->param('coords') || $q->param('coords_forw') || $q->param('coords_rev')) {
+    # Currently coords_forw and coords_rev are rendered the same, but
+    # it would be nice if the different directions could be
+    # visualized.
+    $coords = [
+	       BBBikeCGI::Util::my_multi_param($q, 'coords'),
+	       BBBikeCGI::Util::my_multi_param($q, 'coords_forw'),
+	       BBBikeCGI::Util::my_multi_param($q, 'coords_rev'),
+	      ];
 }
+
 my $show_feature_list;
 if ($devel) {
     $enable_upload = $show_feature_list = 1;
@@ -64,6 +76,7 @@ my $tpl = BBBikeLeaflet::Template->new
      show_expired_session_msg => $show_expired_session_msg,
      show_feature_list        => $show_feature_list,
      coords                   => $coords,
+     route_title              => $route_title,
     );
 $tpl->process(\*STDOUT);
 
