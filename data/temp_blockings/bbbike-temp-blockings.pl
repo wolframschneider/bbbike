@@ -3104,7 +3104,7 @@ EOF
        text  => 'Prenzlauer Berg: Richtung Prenzlauer Allee gesperrt (Kopfsteinpflaster wird durch Asphalt ersetzt)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1 11706,13635 11545,13690 11250,13655
+userdel	1 11706,13635 11545,13690 11282,13661 11251,13667
 EOF
      },
      { from  => undef, # 
@@ -18873,7 +18873,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016795',
        data  => <<EOF,
-userdel	q4::inwork; 11250,13655 11545,13690
+userdel	q4::inwork; 11251,13667 11282,13661 11545,13690
 EOF
      },
      { from  => 1294922580, # 2011-01-13 13:43
@@ -19022,7 +19022,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016995',
        data  => <<EOF,
-userdel	q4::inwork 11545,13690 11250,13655
+userdel	q4::inwork 11545,13690 11282,13661 11251,13667
 EOF
      },
      { from  => 1301342328, # 2011-03-28 21:58
@@ -20654,7 +20654,7 @@ EOF
        text  => 'Christburger Str.: Fahrbahn an der Prenzlauer Allee gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q3::inwork 11912,14486 11642,14625
+userdel	q3::inwork 11912,14486 11633,14631
 EOF
      },
      { from  => 1342994400, # 2012-07-23 00:00
@@ -21586,11 +21586,11 @@ userdel	2::temp 9281,7795 9281,7651 9300,7312
 userdel	2::temp 10384,8628 10360,8521
 EOF
      },
-     { from  => $isodate2epoch->("2015-03-13 18:00:00"), # 1 Tag Vorlauf --- 1371189600, # 2013-06-14 08:00
-       until => $isodate2epoch->("2015-03-15 10:00:00"), # 1371419999, # 2013-06-16 23:59
-       text  => 'Karower Chaussee/Bucher Chaussee: Baustelle in Höhe Unterführung BAB 10, Straße vollständig gesperrt, auch für Radfahrer und Fußgänger, von 14.03.2015, 18:00 Uhr bis 15.03.2015, 10:00 Uhr',
+     { from  => $isodate2epoch->("2015-05-22 18:00:00"), # 1 Tag Vorlauf --- 1371189600, # 2013-06-14 08:00
+       until => $isodate2epoch->("2015-05-24 10:00:00"), # 1371419999, # 2013-06-16 23:59
+       text  => 'Karower Chaussee/Bucher Chaussee: Baustelle in Höhe Unterführung BAB 10, Straße vollständig gesperrt, auch für Radfahrer und Fußgänger, von 23.05.2015, 18:00 Uhr bis 24.05.2015, 10:00 Uhr',
        type  => 'gesperrt',
-       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5512.html',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1505/nachricht5606.html',
        data  => <<EOF,
 userdel	2::inwork 16201,24354 16156,24284 16123,24232
 EOF
@@ -23531,8 +23531,8 @@ EOF
        text  => 'Mergenthalerring: Tor kann nachts versperrt sein',
        recurring => 1,
        data  => <<EOF,
-	3::night 14563,8243 14419,8112 14439,8050
-	3::night 14439,8050 14419,8112 14563,8243
+	3::night 14563,8243 14425,8116 14419,8112
+	3::night 14419,8112 14425,8116 14563,8243
 EOF
      },
      { from  => 1413093600, # 2014-10-12 08:00
@@ -24159,6 +24159,25 @@ EOF
 #: by: http://www.berlin.de/ba-spandau/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8094&options=4
 #: next_check: 2016-03-01
 userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Treptower Park: einige Wege im nördlichen Teil des Parks werden instand gesetzt und können gesperrt sein',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein vvv
+#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.297071.php
+#: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruen/artikel.295591.php
+#: last_checked: 2015-05-19 vvv
+#: check_frequency: 7d vvv
+userdel	2::inwork 14318,9688 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
+userdel	2::inwork 15052,9584 15174,9554 15321,9448 15432,9322 15513,9144 15527,9096 15638,9020
+userdel	2::inwork 14443,9731 14361,9772
+userdel	2::inwork 15561,8903 15630,8979 15638,9020 15778,8990
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
 EOF
      },
     );
