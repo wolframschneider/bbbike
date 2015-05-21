@@ -84,7 +84,6 @@
 				   '-mapscale', '1:6000',
 				   '-customlink', $fragezeichenformurl . '?supplied_coord=$CENTER_COORD;strname=$NAME;strname_html=$NAME_HTML Eintragen',
 				   '-noroutelistbutton',
-				   '-addleafletbutton',
 				   '-linktarget', 'int_frame',
 				  );
 			my $err;
@@ -198,6 +197,8 @@ fragezeichen-list-local:		{ "$BBBIKE_TMP_DIR/fragezeichen_list_local/index.html"
 		print "\n";
 		print "    firefox $BBBIKE_TMP_DIR/fragezeichen_list_local/index.html\n";
 		print "    firefox $BBBIKE_TMP_DIR/fragezeichen_list_local/index-sort-by-count.html\n";
+		print "    firefox http://localhost/bbbike/tmp/fragezeichen_list_local/index.html\n";
+		print "    firefox http://localhost/bbbike/tmp/fragezeichen_list_local/index-sort-by-count.html\n";
 		print "\n";
 		"";
 	}

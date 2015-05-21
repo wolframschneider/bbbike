@@ -3114,7 +3114,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'from' => 1430704800,
          'id' => 2416,
          'data' => '#: next_check_id: KARLSHORSTER-2015
-#: last_checked: 2015-05-14
+#: last_checked: 2015-05-16
 #: next_check: 2015-09-21
 userdel	q4::inwork 15261,10738 15272,10790 15279,10862
 ',
@@ -3144,39 +3144,7 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.berliner-frauenlauf.de/event/start-ziel-strecke.html',
-         'data' => 'userdel	2::temp 8055,12186 8119,12414
-userdel	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
-	2::temp 6828,12031 6884,12006
-	2::temp 6809,11979 6984,11859
-	2::temp 6778,11742 6980,11790
-	2::temp 6809,11570 6980,11583 7018,11615 7163,11738 7287,11763 7427,11731 7535,11677 7606,11629 7623,11624 7649,11717 7701,11798 7706,11878 7717,11918 7658,11947 7634,11920 7559,11888 7449,11883
-	2::temp 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8034,12093 8057,12065 8052,12033 8022,12016 8020,11937 8095,11919 8132,11910 8221,11885 8244,11878 8262,11883 8453,12099 8522,12187 8538,12245
-	2::temp 8522,12239 8466,12197
-userdel auto	3 7429,12070 7383,12095 7039,12314
-userdel auto	3 7875,12363 7816,12150 7823,12120
-userdel auto	3 7039,12314 7383,12095 7429,12070
-userdel auto	3 7823,12120 7816,12150 7875,12363
-	3 8391,12389 8344,12221 8327,12174
-	3 8327,12174 8344,12221 8391,12389
-',
-         'periodic' => 1,
-         'until' => 1431727199,
-         'from' => 1431715044,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              4,
-                              'months',
-                              5
-                            ]
-                          ],
-         'text' => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 15. Mai 2015',
-         'id' => 2427,
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3220,7 +3188,16 @@ userdel	2::temp 19976,6087 20064,6290 20106,6357
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1505/nachricht5606.html',
+         'until' => 1432454400,
+         'text' => 'Karower Chaussee/Bucher Chaussee: Baustelle in Höhe Unterführung BAB 10, Straße vollständig gesperrt, auch für Radfahrer und Fußgänger, von 23.05.2015, 18:00 Uhr bis 24.05.2015, 10:00 Uhr',
+         'from' => 1432310400,
+         'id' => 2448,
+         'data' => 'userdel	2::inwork 16201,24354 16156,24284 16123,24232
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3620,8 +3597,8 @@ userdel	2::inwork -3197,11554 -3075,11510
          'text' => 'Mergenthalerring: Tor kann nachts versperrt sein',
          'from' => undef,
          'id' => 2643,
-         'data' => '	3::night 14563,8243 14419,8112 14439,8050
-	3::night 14439,8050 14419,8112 14563,8243
+         'data' => '	3::night 14563,8243 14425,8116 14419,8112
+	3::night 14419,8112 14425,8116 14563,8243
 '
        },
        undef,
@@ -3891,6 +3868,37 @@ userdel	2::inwork 7451,13504 7630,13584
          'data' => 'userdel	q4::inwork 22145,208 21933,152 21868,139
 ',
          'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Rampe an der Großen Eiswerderbrücke gesperrt, Dauer unbekannt',
+         'from' => undef,
+         'id' => 2709,
+         'data' => '#: by: http://www.berlin.de/ba-spandau/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8094&options=4
+#: next_check: 2016-03-01
+userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'until' => undef,
+         'text' => 'Treptower Park: einige Wege im nördlichen Teil des Parks werden instand gesetzt und können gesperrt sein',
+         'from' => undef,
+         'id' => 2710,
+         'data' => '#: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein vvv
+#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.297071.php
+#: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruen/artikel.295591.php
+#: last_checked: 2015-05-19 vvv
+#: check_frequency: 7d vvv
+userdel	2::inwork 14318,9688 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
+userdel	2::inwork 15052,9584 15174,9554 15321,9448 15432,9322 15513,9144 15527,9096 15638,9020
+userdel	2::inwork 14443,9731 14361,9772
+userdel	2::inwork 15561,8903 15630,8979 15638,9020 15778,8990
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
+',
+         'type' => 'gesperrt'
        }
      
 );
