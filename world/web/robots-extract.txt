@@ -1,5 +1,10 @@
+# broken bots
+User-agent: Googlebot-Image
+Disallow: /images
+
 # general
 User-agent: *
 Disallow: /?
 Disallow: /cgi
+Disallow: /m/
 

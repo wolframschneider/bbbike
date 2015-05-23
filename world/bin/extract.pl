@@ -35,7 +35,9 @@ use LockFile::Simple;
 
 use lib qw(world/lib ../lib);
 use Extract::Config;
+use Extract::Utils;
 use Extract::Poly;
+use Extract::Planet;
 
 use strict;
 use warnings;
@@ -301,7 +303,7 @@ sub ignore_bot {
 
     warn
       "detect bot for area '$city', user agent: '@{[ $obj->{'user_agent'} ]}'\n"
-      if $debug;
+      if $debug >= 1;
 
     if (   $option->{'bots'}{'detecation'}
         && $loadavg >= $option->{'bots'}{'max_loadavg'} )
@@ -313,14 +315,14 @@ sub ignore_bot {
         {
             warn
 "accepts bot request for area '$city' for first job queue: $loadavg\n"
-              if $debug;
+              if $debug >= 1;
         }
 
         # hard ignore
         else {
             warn
 "ignore bot request for area '$city' due high load average: $loadavg\n"
-              if $debug;
+              if $debug >= 1;
             return 1;
         }
     }
@@ -343,6 +345,25 @@ sub random_user {
     return @list;
 }
 
+sub get_sub_planet {
+    my $obj = shift;
+
+    my $planet = new Extract::Planet( 'debug' => $debug );
+    my $sub_planet_file = $planet->get_smallest_planet_file(
+        'obj'        => $obj,
+        'planet_osm' => $obj->{'planet_osm'}
+    );
+
+    warn "Found sub planet '$sub_planet_file' for city ",
+      $obj->{'city'}, " lon,lat: $obj->{'sw_lng'},$obj->{'sw_lat'}",
+      " $obj->{'ne_lng'},$obj->{'ne_lat'}\n"
+      if $debug >= 1;
+
+    $obj->{"planet_osm_sub"} = $sub_planet_file;
+
+    return $sub_planet_file;
+}
+
 # fair scheduler, take one from each customer first until
 # we reach the limit
 sub parse_jobs {
@@ -356,6 +377,8 @@ sub parse_jobs {
     warn "job number is: $job_number\n" if $debug >= 1;
 
     my ( $hash, $default_planet_osm, $counter ) = parse_jobs_planet(%args);
+
+    my $sub_planet_file = "";
 
     # sort by user and date, newest first
     foreach my $email ( keys %$hash ) {
@@ -382,13 +405,18 @@ sub parse_jobs {
                 my $obj  = shift @{ $hash->{$email} };
                 my $city = $obj->{'city'};
 
-                my $length_coords = 0;
+                my $length_coords = 4;
+                if ( exists $obj->{"coords"}
+                    && scalar( @{ $obj->{"coords"} } ) )
+                {
+                    $length_coords = scalar( @{ $obj->{"coords"} } );
+                }
 
                 # do not add a large polygone to an existing list
                 if ( $length_coords > $max_coords && $counter_coords > 0 ) {
                     warn
                       "do not add a large polygone $city to an existing list\n"
-                      if $debug;
+                      if $debug >= 1;
                     next;
                 }
 
@@ -402,6 +430,23 @@ sub parse_jobs {
                       );
                 }
 
+                my $obj_sub_planet_file = get_sub_planet($obj);
+
+                # first sub-planet wins
+                if ( scalar(@list) == 0 && $obj_sub_planet_file ) {
+                    $sub_planet_file    = $obj_sub_planet_file;
+                    $default_planet_osm = $obj_sub_planet_file;
+                }
+
+                # ignore different sub-planets
+                elsif ( $sub_planet_file ne $obj_sub_planet_file ) {
+                    warn
+                      "different sub-planet file detected: '$sub_planet_file'",
+                      " <=> '$obj_sub_planet_file', ignored\n"
+                      if $debug;
+                    next;
+                }
+
                 push @list, $obj;
                 $counter_coords += $length_coords;
 
@@ -412,13 +457,13 @@ sub parse_jobs {
 
                 warn
 "coords total length: $counter_coords, city=$city, length=$length_coords\n"
-                  if $debug;
+                  if $debug >= 1;
 
                 # stop here, list is to long
                 if ( $counter_coords > $max_coords ) {
                     warn "coords counter length for $city: ",
                       "$counter_coords > $max_coords, stop after\n"
-                      if $debug;
+                      if $debug >= 1;
                     return ( \@list, $default_planet_osm );
                 }
             }
@@ -432,9 +477,21 @@ sub parse_jobs {
         pop @list;
     }
 
+    warn
+"number of different poly files detected: @{[ scalar( keys %duplicated_poly) ]}, max: $max\n"
+      if $debug >= 1;
     return ( \@list, $default_planet_osm );
 }
 
+#
+# select a planet.osm based on a given format
+# then sort the request by email
+#
+#
+# $obj -> { "foo@example.com" -> [ job1, job2, job3 ], "bar@example.com" => [ job1 ] }
+# planet.osm.pbf
+# counter=4
+#
 sub parse_jobs_planet {
     my %args = @_;
 
@@ -446,7 +503,13 @@ sub parse_jobs_planet {
     my $default_planet_osm = "";
     my $counter            = 0;
 
-    foreach my $f (@$files) {
+    my $extract_utils = new Extract::Utils;
+    my @files         = $extract_utils->random_filename_sort(@$files);
+
+    #my $planet = new Extract::Planet( 'debug' => $debug );
+    my $sub_planet_file = "";
+
+    foreach my $f (@files) {
         my $file = "$dir/$f";
 
         my $json_text = read_data($file);
@@ -472,6 +535,8 @@ sub parse_jobs_planet {
 
         # only the same planet.osm file
         if ( $json_perl->{'planet_osm'} eq $default_planet_osm ) {
+
+            #$json_perl->{"planet_osm_sub"} = $sub_planet_file;
 
             # a slot for every user
             push @{ $hash->{ $json_perl->{'email'} } }, $json_perl;
@@ -589,7 +654,8 @@ sub create_poly_files {
         return;
     }
 
-    warn "create job dir $job_dir\n" if $debug >= 1;
+    warn "create job dir $job_dir\n"             if $debug >= 1;
+    warn "checked files: @{[ scalar(@list) ]}\n" if $debug >= 1;
     mkdir($job_dir) or die "mkdir $job_dir $!\n";
 
     my %hash;
@@ -601,7 +667,7 @@ sub create_poly_files {
 
         $job->{pbf_file} = $pbf_file;
         if ( exists $hash{$file} ) {
-            warn "ignore duplicate: $file\n" if $debug;
+            warn "ignore duplicate: $file\n" if $debug >= 1;
             next;
         }
         $hash{$file} = 1;
@@ -637,12 +703,18 @@ sub create_poly_files {
         store_data( $to, $data );
         unlink($from) or die "unlink $from: $!\n";
         push @json, $to;
+
+        if ( $debug >= 1 ) {
+            warn "Running city: $job->{'city'}\n";
+            warn "Script URL: @{[ script_url($option, $job) ]}\n";
+        }
     }
 
     if ($debug) {
         warn "number of poly files: ", scalar(@poly),
           ", number of json files: ", scalar(@json), "\n";
     }
+
     return ( \@poly, \@json );
 }
 
@@ -653,7 +725,7 @@ sub touch_file {
 
     my @system = ( "touch", $file );
 
-    warn "touch $file\n" if $debug;
+    warn "touch $file\n" if $debug >= 1;
     @system = 'true' if $test_mode;
 
     system(@system) == 0
@@ -725,7 +797,7 @@ sub run_extracts_osmosis {
         if ( -e $osm ) {
             my $newer = file_mtime_diff( $osm, $planet_osm );
             if ( $newer > 0 ) {
-                warn "File $osm already exists, skip\n" if $debug;
+                warn "File $osm already exists, skip\n" if $debug >= 1;
                 link( $osm, $out ) or die "link $osm => $out: $!\n";
 
                 #&touch_file($osm);
@@ -788,7 +860,7 @@ sub run_extracts_osmconvert {
         if ( -e $osm ) {
             my $newer = file_mtime_diff( $osm, $planet_osm );
             if ( $newer > 0 ) {
-                warn "File $osm already exists, skip\n" if $debug;
+                warn "File $osm already exists, skip\n" if $debug >= 1;
                 link( $osm, $out ) or die "link $osm => $out: $!\n";
 
                 #&touch_file($osm);
@@ -821,7 +893,9 @@ sub run_extracts_osmconvert {
 
     push @data, $planet_osm;
 
-    warn "Use planet.osm file $planet_osm\n" if $debug >= 1;
+    warn
+"Use planet.osm file $planet_osm, size: @{[ file_size($planet_osm) ]} MB\n"
+      if $debug >= 1;
     warn "Run extracts: " . join( " ", @data ), "\n" if $debug >= 2;
     return ( \@data, \@fixme );
 }
@@ -908,7 +982,7 @@ sub send_email_rest {
     # Check the outcome of the response
     if ( !$res->is_success ) {
         my $err = "HTTP error: " . $res->status_line . "\n";
-        $err .= $res->content . "\n" if $debug;
+        $err .= $res->content . "\n" if $debug >= 1;
         die $err;
     }
 
@@ -1205,6 +1279,8 @@ qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
         ###################################################################
         # converted file name
         my $file = $pbf_file;
+        warn "pbf file size $pbf_file: @{[ file_size($pbf_file) ]} MB\n"
+          if $debug >= 1;
 
         # convert .pbf to .osm if requested
         my @nice = ( "nice", "-n", $nice_level_converter );
@@ -1363,7 +1439,7 @@ qq[$obj->{"sw_lng"},$obj->{"sw_lat"} x $obj->{"ne_lng"},$obj->{"ne_lat"}];
         aws_s3_put( 'file' => $to );
 
         my $file_size = file_size($to) . " MB";
-        warn "file size $to: $file_size\n" if $debug >= 1;
+        warn "generated file size $to: $file_size\n" if $debug >= 1;
 
         ###################################################################
         # copy for downloading in /download
@@ -1581,7 +1657,7 @@ sub fix_pbf {
     my @nice = ( "nice", "-n", $nice_level + 1 );
     my @system;
     if ( $option->{"pbf2pbf_postprocess"} ) {
-        warn "Run pbf2pbf post process\n" if $debug;
+        warn "Run pbf2pbf post process\n" if $debug >= 1;
 
         foreach my $pbf (@$files) {
             @system = ( @nice, $pbf2pbf, $pbf );
@@ -1749,7 +1825,7 @@ sub cleanup_jobdir {
 
     if ( $errors && $keep ) {
         my $to_dir = "$failed_dir/" . basename($job_dir);
-        warn "Keep job dir: $to_dir\n" if $debug;
+        warn "Keep job dir: $to_dir\n" if $debug >= 1;
 
         @system = ( 'rm', '-rf', $to_dir );
         system(@system) == 0
@@ -1793,7 +1869,7 @@ sub run_jobs {
     my $lockfile;
     my $lockmgr;
 
-    warn "Start job at: @{[ gmctime() ]} UTC\n" if $debug;
+    warn "Start job at: @{[ gmctime() ]} UTC\n" if $debug >= 1;
 
     #############################################################
     # semaphore for parsing the jobs
@@ -1802,7 +1878,7 @@ sub run_jobs {
     my $lockfile_extract = $spool->{'running'} . "/extract.pid";
     my $lockmgr_extract = &create_lock( 'lockfile' => $lockfile_extract )
       or die "Cannot get lockfile $lockfile_extract, give up\n";
-    warn "Use lockfile $lockfile_extract\n" if $debug;
+    warn "Use lockfile $lockfile_extract\n" if $debug >= 1;
 
     &remove_lock(
         'lockfile' => $lockfile_extract,
@@ -1831,7 +1907,7 @@ sub run_jobs {
         die "Cannot get lock for jobs 1..$max_jobs\n" . qx(uptime);
     }
 
-    warn "Use lockfile $lockfile\n" if $debug;
+    warn "Use lockfile $lockfile\n" if $debug >= 1;
 
     my ( $list, $planet_osm ) = parse_jobs(
         'files'      => \@files,
@@ -1893,11 +1969,12 @@ sub run_jobs {
     system(@system) == 0
       or die "system @system failed: $?";
 
-    warn "Running extract time: ", time() - $time, " seconds\n" if $debug;
+    warn "Running extract time: ", time() - $time, " seconds\n" if $debug >= 1;
 
     if ( !$option->{'osmconvert_enabled'} ) {
         &fix_pbf( $new_pbf_files, $test_mode );
-        warn "Running fix pbf time: ", time() - $time, " seconds\n" if $debug;
+        warn "Running fix pbf time: ", time() - $time, " seconds\n"
+          if $debug >= 1;
     }
 
     # send out mail
@@ -1914,10 +1991,10 @@ sub run_jobs {
 
     warn "Total format convert and e-mail check time: ", time() - $time,
       " seconds\n"
-      if $debug;
+      if $debug >= 1;
     warn "Total time: ", time() - $starttime,
       " seconds, for @{[ scalar(@list) ]} job(s)\n"
-      if $debug;
+      if $debug >= 1;
     warn "Number of errors: $errors\n" if $errors;
 
     # unlock pid

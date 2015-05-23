@@ -15,12 +15,23 @@ my $debug   = 1;
 my $poly    = new Extract::Poly( 'debug' => $debug );
 my @regions = $poly->list_subplanets;
 
-plan tests => scalar(@regions) * 2 + ( 1 + 2 );
+plan tests => scalar(@regions) * 2 + 7;
+
+######################################################################################
+# list of regions
+#
+my @regions2 = $poly->list_subplanets(1);
+is( scalar(@regions), scalar(@regions2), "list of regions" );
+cmp_ok( scalar(@regions), ">", 1, "more than one region" );
+isnt( join( "|", @regions ), join( "|", @regions2 ), "sorted list of regions" );
 
 foreach my $region (@regions) {
     my $size    = $poly->subplanet_size($region);
     my $size_mb = $poly->file_size_mb( $size * 1000 );
-    cmp_ok( $size, ">", 200_000, "region: $region: $size_mb MB" );
+    my $skm =
+      $poly->rectangle_km( @{ $Extract::Poly::area->{$region}->{"poly"} } );
+
+    cmp_ok( $size, ">", 200_000, "region: $region: $size_mb MB, $skm skm" );
 
     my $obj = $poly->get_job_obj($region);
     my ( $data, $counter ) = $poly->create_poly_data( 'job' => $obj );
@@ -59,6 +70,11 @@ if ( $debug >= 2 ) {
     diag "Old $berlin";
     diag "New $data";
 }
+
+my $size =
+  $poly->rectangle_km( @{ $Extract::Poly::area->{$region}->{"poly"} } );
+my $size_real = 5452;
+is( $size, $size_real, "Area size $region is $size_real" );
 
 #######################################################################################
 # check for invalid lng,lat values

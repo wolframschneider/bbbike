@@ -1,14 +1,14 @@
 #!/usr/local/bin/perl
-#
 # Copyright (c) 2012-2015 Wolfram Schneider, http://bbbike.org
 #
-# BBBikePoly.pm - polygon helper functions
+# polygon helper functions
 
 package Extract::Poly;
 
 use JSON;
-use Data::Dumper;
 use CGI qw(escapeHTML);
+use GIS::Distance::Lite;
+use Data::Dumper;
 
 use lib qw(world/lib);
 use Extract::TileSize;
@@ -20,30 +20,27 @@ use warnings;
 # config
 #
 
+our $debug = 1;
+
 our $area = {
-    'noth-america' => {
-        'poly' => [ -140.663, 6.783, -45.554, 59.745 ]
-        ,    # 'file' => foo.osm.pbf, size => 3045
-    },
-    'south-america'  => { 'poly'  => [ -97.53,  -59.13,  -28.544, 20.217 ] },
-    'africa'         => { 'poly'  => [ -23.196, -39.96,  61.949,  38.718 ] },
-    'europe'         => { 'poly'  => [ -27.472, 26.682,  50.032,  72.282 ] },
-    'central-europe' => { 'poly'  => [ 3.295,   42.571,  29.482,  60.992 ] },
-    'asia'           => { 'poly'  => [ 43.505,  -53.122, 179.99,  63.052 ] },
-    'planet'         => { 'poly2' => [ -180,    -90,     180,     90 ] },
+    'north-america'  => { 'poly'  => [ -140.663, 6.783,   -45.554, 59.745 ] },
+    'south-america'  => { 'poly'  => [ -97.53,   -59.13,  -28.544, 20.217 ] },
+    'africa'         => { 'poly'  => [ -23.196,  -39.96,  61.949,  38.718 ] },
+    'europe'         => { 'poly'  => [ -27.472,  26.682,  50.032,  72.282 ] },
+    'central-europe' => { 'poly'  => [ 3.295,    42.571,  29.482,  60.992 ] },
+    'asia'           => { 'poly'  => [ 43.505,   -53.122, 179.99,  63.052 ] },
+    'planet'         => { 'poly2' => [ -180,     -90,     180,     90 ] },
 
     # test data
     'Berlin' => { 'poly2' => [ 12.76, 52.23, 13.98, 52.82 ] },
     'Alien'  => { 'poly2' => [ 181,   91,    -300,  0 ] },
 };
 
-our $debug = 1;
-
 ##########################
 # helper functions
 #
 
-# BBBikePoly::new->('debug'=> 2, 'option' => $option)
+# Extract::Poly::new->('debug'=> 2, 'option' => $option)
 sub new {
     my $class = shift;
     my %args  = @_;
@@ -67,13 +64,48 @@ sub init {
     $self->{'database'} = "world/etc/tile/tile-pbf.csv";
 }
 
-sub list_subplanets {
+#
+# wrapper for x,y parameters
+#
+# ($lon1, $lat1 => $lon2, $lat2);
+# (sw_lng, sw_lat, ne_lng, ne_lat)
+sub rectangle_km {
     my $self = shift;
+    my ( $x1, $y1, $x2, $y2, $factor ) = @_;
+
+    return $self->square_km( $y1, $x1, $y2, $x2, $factor );
+}
+
+# ($lat1, $lon1 => $lat2, $lon2);
+sub square_km {
+    my $self = shift;
+
+    my ( $x1, $y1, $x2, $y2, $factor ) = @_;
+    $factor = 1 if !defined $factor;
+
+    my $height = GIS::Distance::Lite::distance( $x1, $y1 => $x1, $y2 ) / 1000;
+    my $width  = GIS::Distance::Lite::distance( $x1, $y1 => $x2, $y1 ) / 1000;
+
+    return int( $height * $width * $factor );
+}
+
+sub list_subplanets {
+    my $self    = shift;
+    my $sort_by = shift;
 
     # only regions with a 'poly' field
     my @list = grep { exists $area->{$_}->{'poly'} } keys %$area;
 
-    return sort @list;
+    if ($sort_by) {
+        my %hash =
+          map { $_ => $self->rectangle_km( @{ $area->{$_}->{'poly'} } ) } @list;
+        @list = sort { $hash{$a} <=> $hash{$b} } @list;
+    }
+    else {
+        @list = sort @list;
+    }
+
+    return @list;
 }
 
 # scale file size in x.y MB
@@ -110,8 +142,9 @@ sub subplanet_size {
 sub get_job_obj {
     my $self   = shift;
     my $region = shift;
+    my $poly   = shift;
 
-    my $coords = $area->{$region}->{'poly'};
+    my $coords = defined $poly ? $poly : $area->{$region}->{'poly'};
 
     my $obj = {
         "city"   => $region,
@@ -167,6 +200,28 @@ sub create_overpass_api_url {
     return $url;
 }
 
+sub get_coords {
+    my $self = shift;
+    my $obj  = shift;
+
+    my @c;
+
+    # rectangle
+    if ( !scalar( @{ $obj->{"coords"} } ) ) {
+        push @c, [ $obj->{'sw_lng'}, $obj->{'sw_lat'} ];
+        push @c, [ $obj->{'ne_lng'}, $obj->{'sw_lat'} ];
+        push @c, [ $obj->{'ne_lng'}, $obj->{'ne_lat'} ];
+        push @c, [ $obj->{'sw_lng'}, $obj->{'ne_lat'} ];
+    }
+
+    # polygon
+    else {
+        @c = @{ $obj->{coords} };
+    }
+
+    return @c;
+}
+
 #
 # create a poly file based on a rectangle or polygon coordinates
 #
@@ -188,22 +243,10 @@ sub create_poly_data {
     warn Dumper($obj) if $debug >= 2;
 
     my $data = "";
+    my @poly = ();
 
     my $counter = 0;
-    my @c;
-
-    # rectangle
-    if ( !scalar( @{ $obj->{"coords"} } ) ) {
-        push @c, [ $obj->{'sw_lng'}, $obj->{'sw_lat'} ];
-        push @c, [ $obj->{'ne_lng'}, $obj->{'sw_lat'} ];
-        push @c, [ $obj->{'ne_lng'}, $obj->{'ne_lat'} ];
-        push @c, [ $obj->{'sw_lng'}, $obj->{'ne_lat'} ];
-    }
-
-    # polygon
-    else {
-        @c = @{ $obj->{coords} };
-    }
+    my @c       = $self->get_coords($obj);
 
     # close polygone if not already closed
     if ( $c[0]->[0] ne $c[-1]->[0] || $c[0]->[1] ne $c[-1]->[1] ) {
@@ -229,6 +272,7 @@ sub create_poly_data {
         }
 
         $data .= sprintf( "   %E  %E\n", $lng, $lat );
+        push @poly, [ $lng, $lat ];
     }
 
     $data .= "END\n";
@@ -241,7 +285,7 @@ sub create_poly_data {
         return ( "", 0 );
     }
     else {
-        return ( $data, $counter );
+        return ( $data, $counter, \@poly );
     }
 }
 
