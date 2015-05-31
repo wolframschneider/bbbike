@@ -215,6 +215,8 @@ images/osm-micro.png
 images/osm.png
 images/shp-micro.png
 images/shp-small.png
+images/pbf.png
+images/o5m.png
 cgi/msg/Makefile
 cgi/msg/README
 cgi/msg/da
