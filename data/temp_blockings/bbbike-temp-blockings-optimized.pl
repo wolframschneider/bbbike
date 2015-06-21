@@ -1076,26 +1076,7 @@ userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.openairgallery.de/
-userdel	2::temp 13178,10623 13206,10651 13305,10789 13332,10832
-',
-         'periodic' => 1,
-         'until' => 1433707200,
-         'from' => 1433577600,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              31,
-                              'months',
-                              5
-                            ]
-                          ],
-         'text' => 'Open Air Gallery am 7. Juni 2015 auf der Oberbaumbrücke (10:00 - 22:00)',
-         'type' => 'gesperrt',
-         'id' => 1107
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1728,7 +1709,29 @@ userdel	2::temp 22133,4644 22074,4664
        undef,
        undef,
        undef,
-       undef,
+       {
+         'postwarn_days' => 2,
+         'data' => '	q4::temp 9666,11935 9656,12021
+	2::temp 9524,12010 9656,12021
+	2::temp 9536,11922 9666,11935
+',
+         'periodic' => 1,
+         'until' => 1436385600,
+         'from' => 1435615200,
+         'text' => 'Markgrafenstr. zwischen Taubenstr.. und Jägerstr.: Fahrbahn gesperrt sowie Sperrung des Gendarmenmarkts: Classic Open Air (2.7.2015 - 6.7.2015; Sperrungen fangen schon früher an und dauern länger)',
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              2,
+                              'months',
+                              7
+                            ]
+                          ],
+         'id' => 1710,
+         'type' => 'gesperrt',
+         'prewarn_days' => 2
+       },
        undef,
        undef,
        undef,
@@ -2399,26 +2402,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.erkner.de/271.html',
-         'data' => 'userdel	2::temp 34421,1950 34359,2165 34250,2546
-',
-         'periodic' => 1,
-         'until' => 1433714399,
-         'from' => 1433368800,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              15,
-                              'months',
-                              5
-                            ]
-                          ],
-         'text' => 'Erkner: Heimatfest, 5.6.2015 bis 7.6.2015',
-         'id' => 2078,
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2586,7 +2570,25 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 5370,6486 5424,6584 5533,6753 5644,6936
+',
+         'periodic' => 1,
+         'until' => 1436133599,
+         'from' => 1435874400,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              4,
+                              'months',
+                              7
+                            ]
+                          ],
+         'text' => 'Rheinstraße (Friedenau): Veranstaltung (Jazzfest auf der Rheinstraße), Straße vollständig zwischen Walther-Schreiber-Platz und Kaisereiche gesperrt (04.07.2015 bis 05.07.2015)',
+         'type' => 'gesperrt',
+         'id' => 2126
+       },
        undef,
        undef,
        undef,
@@ -2816,21 +2818,7 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_018330',
-         'until' => 1434059999,
-         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor sowie Ebertstr.: mehrere Veranstaltungen, Straßen vollständig gesperrt (27.05.2015 06 Uhr bis 11.06.2015)',
-         'from' => 1432609200,
-         'id' => 2310,
-         'data' => '	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-	2::temp 8538,12245 8522,12239
-	2::temp 8538,12245 8522,12187
-',
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3058,16 +3046,35 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'from' => 1430704800,
          'id' => 2416,
          'data' => '#: next_check_id: KARLSHORSTER-2015
-#: last_checked: 2015-05-16
+#: last_checked: 2015-06-06
 #: next_check: 2015-09-21
-userdel	q4::inwork 15261,10738 15272,10790 15279,10862
+userdel	q3::inwork 15261,10738 15272,10790 15279,10862
 ',
          'type' => 'handicap'
        },
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://heyevent.de/event/6yi4pyoxrrtxca/tegeler-hafenfest-2015-jetzt-freunde-einladen',
+         'data' => 'userdel	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
+',
+         'periodic' => 1,
+         'until' => 1437343199,
+         'from' => 1436911200,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              16,
+                              'months',
+                              7
+                            ]
+                          ],
+         'text' => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (16.07.2015 bis 19.07.2015)',
+         'id' => 2420,
+         'type' => 'gesperrt'
+       },
        undef,
        {
          'source_id' => 'IM_019747',
@@ -3407,16 +3414,7 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'IM_024332',
-         'until' => 1434466800,
-         'text' => 'Siemensstraße zwischen Wilhelminenhofstraße und Edisonstraße: Einbahnstraße wegen Bauarbeiten, in Richtung Osten gesperrt, vom 12.03.2015 bis 16.06.2015',
-         'from' => 1426057200,
-         'id' => 2587,
-         'data' => 'userdel	q4::inwork; 17614,6571 17766,6616 17842,6639 17860,6644 17962,6674
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3558,16 +3556,7 @@ userdel	2::inwork -3197,11554 -3075,11510
        undef,
        undef,
        undef,
-       {
-         'until' => undef,
-         'text' => 'Kronenstr.: Einbahnstraßenregelung zwischen Charlottenstr. und Markgrafenstr., gesperrt Richtung Osten, Dauer unbekannt',
-         'from' => undef,
-         'id' => 2671,
-         'data' => '#: last_checked: 2015-05-29
-userdel	q4::inwork; 9559,11715 9692,11732
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => 1448924400,
          'text' => 'Augsburger Str.: Bauarbeiten, Einbahnstraßenregelung',
@@ -3593,17 +3582,7 @@ userdel	q4::inwork; 5866,10492 5780,10542 5627,10637
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'IM_024084',
-         'until' => 1434114000,
-         'text' => 'Veitstr.: Baustelle, zwischen Berliner Str. und Medebacher Weg Fahrbahn Richtung Borsigdamm gesperrt, 10.02.2015 08:11 Uhr bis 12.06.2015 15:00 Uhr ',
-         'from' => 1423465860,
-         'id' => 2678,
-         'data' => '#: by: http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.265751.php
-userdel	q4::inwork; 2268,19919 2064,19874 1886,19835
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_024088',
          'until' => 1435669200,
@@ -3611,20 +3590,12 @@ userdel	q4::inwork; 2268,19919 2064,19874 1886,19835
          'from' => undef,
          'id' => 2679,
          'data' => '# REMOVED --- #: XXX "für mehrere Monate" vvv --- #: XXX evtl. bis 30. April 2015 --- #: last_checked: 2015-04-26 vvv --- #: next_check: 2015-04-30 vvv
+#: XXX: besteht die Einschränkung noch? Siehe auch IM_025311 (bis 15.07.)
 	3 15294,11964 15361,12071 15420,12178
 	3 15117,12106 15361,12071 15420,12178
 '
        },
-       {
-         'source_id' => 'IM_024065',
-         'until' => 1433257200,
-         'text' => 'Anhalter Str.: Baustelle, Fahrbahn zwischen Wilhelmstr. und Stresemannstr. in Richtung Westen gesperrt, bis 02.06.2015',
-         'from' => 1423980000,
-         'id' => 2680,
-         'data' => 'userdel	q4::inwork; 9234,11056 8947,10956
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'recurring' => 1,
@@ -3706,15 +3677,16 @@ userdel	q4::inwork; 3807,11859 3666,11855
          'from' => undef,
          'id' => 2700,
          'data' => '#: confirmed_by: srt
-#: last_checked: 2015-04-21
-userdel	2::inwork 7451,13504 7630,13584
+#: last_checked: 2015-06-08
+#: check_frequency: 45d
+userdel	2::inwork 7306,13418 7451,13504 7630,13584
 ',
          'type' => 'gesperrt'
        },
        {
          'source_id' => '157300093',
-         'until' => 1437429600,
-         'text' => 'Schönermark-Günterberg: Anpassung der Signal- und Bahnübergangstechnik Bahnübergang zw. Schönermark und Günterberg, gesperrt für Fahrzeuge, 22.04.2015 bis 20.07.2015 ',
+         'until' => 1436738399,
+         'text' => 'Schönermark-Günterberg: Anpassung der Signal- und Bahnübergangstechnik Bahnübergang zw. Schönermark und Günterberg, gesperrt für Fahrzeuge, 22.04.2015 bis 12.07.2015 ',
          'from' => 1429736139,
          'id' => 2701,
          'data' => 'userdel	2::inwork 51806,78469 51798,78477 51668,78605
@@ -3828,6 +3800,18 @@ userdel	2::inwork 15561,8903 15630,8979 15638,9020 15778,8990
          'from' => 1433023200,
          'id' => 2712,
          'data' => 'userdel	q4::inwork; 2320,8722 2361,8608 2423,8427 2407,8148 2370,8109
+',
+         'type' => 'handicap'
+       },
+       undef,
+       {
+         'until' => undef,
+         'text' => 'Märkisches Ufer: Sperrung der Fahrbahn vor der chinesischen Botschaft, Schieben über Gehweg',
+         'from' => undef,
+         'id' => 2714,
+         'data' => '#: XXX bis wann ist die Fahrbahn gesperrt?
+#: last_checked: 2015-06-17
+userdel	q4::inwork 11325,12021 11275,12055
 ',
          'type' => 'handicap'
        }

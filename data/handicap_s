@@ -9,6 +9,7 @@ Dˆringstr.: wegen Bauarbeiten Fahrbahn gesperrt, Bordsteine	q4::inwork 14400,112
 Rudolfstr.: Bauarbeiten an der Kreuzung Danneckerstr., auf Gehweg ausweichen	q3::inwork 14026,10869 13886,10939 13795,10995
 Danneckerstr.: Bauarbeiten an der Kreuzung Rudolfstr., auf Gehweg ausweichen	q3::inwork 13856,10864 13886,10939
 Gubener Str.: Fahrbahn an der Warschauer Str. gesperrt, auf Gehweg ausweichen	q4::inwork 13603,11538 13568,11560
+Am Zirkus: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9167,13046 9137,13032 9090,13009
 Sch¸tzenstr.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 10116,11485 9949,11470
 Melchiorstr.: Bauarbeiten, Einbahnstraﬂe	q4::inwork; 11542,11342 11726,11265 11921,11185
 Linienstr.: einige Fuﬂg‰nger, Baustelle	q2::inwork 10718,13625 10740,13621
@@ -20,7 +21,6 @@ Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und 
 Charlottenstr.: wegen Bauarbeiten eine Einbahnstraﬂe Richtung S¸den	q4::inwork; 9475,12365 9462,12481 9454,12558
 Universit‰tsstr.: Fahrbahn wegen Bauarbeiten in Richtung S¸den gesperrt	q4::inwork; 9580,12581 9601,12380
 Behrenstr. (Mitte): Fahrbahn Richtung Friedrichstr. zwischen Glinkastr. und Friedrichstr. gesperrt	q3::inwork; 9164,12172 9373,12197
-Schwedter Str.: Bauarbeiten an der Kastanienallee, Fahrbahn gesperrt	q2::inwork 10567,14337 10530,14452
 Schwedter Str.: Bauarbeiten an der Kastanienallee, Fahrbahn gesperrt	q4::inwork 10530,14452 10506,14521
 Caroline-Michaelis-Str.: Bauarbeiten, Zufahrt zur Invalidenstr. umst‰ndlich	q4::inwork; 9151,13941 9125,13973
 Invalidenstr. (Mitte): Baustelle, Fahrbahn zwischen Eichendorffstr. und Gartenstr. gesperrt	q4::inwork 9383,13986 9285,13965 9274,13963 9203,13953
@@ -33,7 +33,8 @@ Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9882,12259 9876,12298
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9876,12298 9858,12410
 Rathausstr.: Fuﬂg‰nger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521 10704,12595
 Alte Jakobstr.: Bauarbeiten, teilweise Einbahnstraﬂe	q3::inwork; 10256,11160 10437,11352
-Siemensstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Geh+Radweg	q1 5708,14077 5787,14102 5956,14168
+Dresdener Str.: Bauarbeiten wegen Tunnelzusch¸ttung, Ausweichen auf Gehweg	q4::inwork 11189,10831 11162,10919
+Siemensstr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Geh+Radweg	q2 5708,14077 5787,14102 5956,14168
 Kˆbisstr.: wegen Bauarbeiten Ausweichen auf Gehweg	q4::inwork 7103,11247 7160,11225
 Dieselstr., Umfahrung: Fuﬂg‰nger, kurvig, eng	q2::inwork 14326,8062 14344,8072 14358,8070 14364,8096 14405,8115 14419,8112 14429,8074 14471,8046
 Ganghoferstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12805,8194 12918,8232
@@ -1478,6 +1479,7 @@ Darguner Str.: enge Straﬂe	q1 17566,18680 17635,18591
 Giselhersteig: enger Weg	q2 17355,12460 17386,12456 17438,12448 17491,12439 17534,12433
 (Giselhersteig - Nibelungenring): enger Weg	q3 17386,12456 17382,12421
 (Giselhersteig - Hadburgpfad): enger Weg	q3 17491,12439 17486,12407
+(Zufahrt zum Stadtbad Tiergarten): Parkplatzverkehr	q2 7332,13367 7306,13418
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Sch¸ler	q2 7242,8586 7288,8635
@@ -1665,7 +1667,7 @@ An der Brauerei: Fuﬂg‰nger	q1 13290,13294 13283,13311 13381,13354
 An der Brauerei: Fuﬂg‰nger	q2 13283,13311 13235,13414
 (Friedhofsweg): Fuﬂg‰nger, Radfahren nicht erlaubt	q4 12851,12602 13108,12859 13046,12956 12878,13229
 (Friedhofsweg): Fuﬂg‰nger, Radfahren nicht erlaubt	q4 12773,12683 13046,12956
-Ritterstr.: Fuﬂg‰nger	q3::inwork 9763,11148 9861,11103
+Ritterstr.: Fuﬂg‰nger, Spielplatz	q2 9763,11148 9935,11067
 Elisenstr.: Fuﬂg‰nger	q2 5810,5340 5813,5354 5822,5388
 Mittelstr. (Steglitz): Fuﬂg‰nger	q2 5111,5337 5203,5278
 Goebenstr.: Fuﬂg‰nger	q1 5606,4726 5555,4743 5535,4756 5509,4773 5478,4792
@@ -2362,7 +2364,6 @@ Aristotelessteig: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 
 Ella-Trebe-Str.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 7938,13302 7938,13150
 Rosenfelder Ring: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 18140,11932 18139,11833
 Parkaue: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 15406,12444 15408,12394 15370,12264
-Am Zirkus: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp; 9239,12923 9212,12969 9167,13046 9137,13032
 Gretel-Bergmann-Weg: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q1::igndisp; -1132,12268 -1288,12178
 Kriemhildstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 17300,12173 17314,12265
 Am Krusenick: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 22751,4970 22652,4966 22667,4912 22705,4874
@@ -2400,7 +2401,6 @@ Sewanstr. - Balatonstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::ig
 Hˆnower Str. (Karlshorst) (Ausweichen auf Sandbankette mˆglich): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
 Neue Bahnhofstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 14908,11231 14918,11249
 Greifenhagener Str.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 11086,15772 11123,15851
-Dresdener Str.: Einbahnstraﬂe wegen Tunnelzusch¸ttung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 11189,10831 11162,10919
 Niederlagstr.: Bauarbeiten, Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 9996,12401 9994,12368 9943,12364 9961,12273
 (Los-Angeles-Platz): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 5669,10704 5822,10609
 Westendallee: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 461,11455 425,11455 395,11486 329,11696 323,11801

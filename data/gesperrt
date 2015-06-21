@@ -45,8 +45,8 @@ Am Großen Wannsee	1 -5869,1261 -5848,1379 -5867,1449 -5901,1562 -5929,1649 -5961
 Wilhelplatz	1 -7232,445 -7219,454 -7059,578
 Wilhelplatz	1 -7059,578 -7089,472 -7122,439 -7180,378
 Tempelhofer Weg	1 7499,7880 7268,8008 7193,7950
-Alt-Mariendorf (Nord)	1 9731,3889 9934,3802
-Alt-Mariendorf (Süd)	1 9934,3802 9751,3769 9584,3713 9455,3671 9391,3651 9215,3599 9131,3571 8955,3521
+Alt-Mariendorf (Nord)	1 9731,3889 9953,3806
+Alt-Mariendorf (Süd)	1 9953,3806 9751,3769 9584,3713 9455,3671 9391,3651 9215,3599 9131,3571 8955,3521
 Knoten Märkische Allee	1 19726,11743 19785,11760 19849,11779 19890,11830 19918,11891
 Knoten Märkische Allee	1 19918,11891 19979,11774
 Knoten Märkische Allee	1 20114,11719 20064,11687 20026,11663
@@ -789,7 +789,6 @@ Alt-Moabit - Invalidenstr.	1 7415,13060 7422,13012
 (Puschkinallee - Elsenstr.)	1 14244,9812 14250,9756 14270,9710
 Parkaue	1s 15406,12444 15408,12394 15370,12264
 Stahlheimer Str.	1 11727,16358 11698,16311
-Am Zirkus	1s 9239,12923 9212,12969 9167,13046 9137,13032
 DB-Werkgelände, Befahren verboten	2 1645,9862 1672,9836 1563,9769 1583,9713 1615,9675 1724,9772
 Katharina-Boll-Dornberger-Str.	1 19086,3370 19073,3357 19033,3397 18987,3442 18998,3454 19013,3466 19057,3422 19097,3380 19086,3370
 Tauchersteig	1 21879,2592 22011,2658 22047,2662 22058,2649
@@ -2151,6 +2150,8 @@ abgeschlossenes Tor	3 4898,22459 5083,22149 5086,22145
 abgeschlossenes Tor	3 5086,22145 5083,22149 4898,22459
 abgeschlossenes Tor	3 15313,15393 15835,15092 15867,15073
 abgeschlossenes Tor	3 15867,15073 15835,15092 15313,15393
+tragen	0:15:-58 47027,49988
+tragen	0:15:-130 47004,50002
 tragen (4+3+4 Stufen) bzw. Naturrampe benutzen	0:15:-38 4689,22058
 tragen (15 Stufen)	0:20:-120 4620,22079
 tragen (2 x 4 Stufen)	0:15:-37 2800,23966
@@ -2367,6 +2368,10 @@ tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
 tragen (31 Stufen oder Kinderwagenrampe)	0:40:-256 13168,21706
 tragen (6 Stufen)	0:15:-90 4608,63927
 Treppe	0:40:-131 1888,42795
+Drängelgitter	BNP:5:-128:trailer=10 13940,23486
+Drängelgitter	BNP:5:-128:trailer=10 13963,23505
+Tor	BNP:3:-123:trailer=5 68508,72337
+Tor	BNP:3:-108:trailer=5 68373,72348
 Barriere	BNP:5:-254:trailer=10 7422,10368
 Drängelgitter	BNP:3:-145:trailer=10 5029,19945
 Drängelgitter	BNP:3:-174:trailer=10 -12262,-393
@@ -2638,7 +2643,6 @@ Drängelgitter	BNP:2:-88:trailer=5 18018,3276
 Schranke, ggfs. auf Gehweg ausweichen	BNP:2:82:trailer=6 16368,7425
 Drängelgitter	BNP:3:-101:trailer=10 23012,3598
 Tor	BNP:3:-123:trailer=5 14425,8116
-Schranke	BNP:0:-63:trailer=3 9920,11074
 Drängelgitter	BNP:5:-164 4258,2693
 Drängelgitter	BNP:5:-123 4202,2622
 Drängelgitter (2x), für Anhänger nicht passierbar	BNP:10:-206:trailer=no 2009,3362
@@ -2765,6 +2769,7 @@ versetzte Schranke, manchmal offen	BNP:1:-124:trailer=3 23402,18067
 versetzte Schranke, manchmal offen	BNP:1:-195:trailer=3 24700,18981
 versetzte Schranke, manchmal offen	BNP:1:-133:trailer=3 24523,18542
 versetzte Schranke, manchmal offen	BNP:1:-171:trailer=3 24625,20855
+Kleiner Tiergarten: wegen Bauarbeiten gesperrt	2::inwork 6561,13151 6556,13240 6526,13327
 Märkisches Ufer - Neue Roßstr.: wegen Bauarbeiten gesperrt	3 10869,11949 10687,11853 10703,11837
 Neue Roßstr. - Märkisches Ufer: wegen Bauarbeiten gesperrt	3 10703,11837 10687,11853 10869,11949
 Märkisches Ufer - Neue Roßstr.: wegen Bauarbeiten gesperrt	3 10869,11949 10687,11853 10672,11870
@@ -2774,7 +2779,6 @@ Matthesstr., Beermannstr.: wegen Autobahnbaustelle gesperrt	2::inwork 14108,9377
 Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14439,8050 14471,8046
 Gerickesteg: wegen Bauarbeiten gesperrt	2::inwork 6694,12627 6702,12633 6748,12669 6765,12680
 Alfred-Döblin-Platz: Bauarbeiten	2::inwork 11162,10919 11150,11030
-Dresdener Str.: Einbahnstraße wegen Tunnelzuschüttung	1s 11189,10831 11162,10919
 IGA 2017-Gelände: Wege gesperrt	2 22455,14815 22417,14837 22380,14831 22331,14793 22254,14793 22199,14744 22164,14722 22108,14710 22090,14704 22071,14630 22051,14604 22026,14601 22012,14556 21985,14513 22026,14501 22061,14471 22172,14287 22414,14144 22462,14172 22639,14384 22679,14450 22670,14520
 IGA 2017-Gelände: Wege gesperrt	2 22414,14144 22407,14111 22404,13984
 Alexander-von-Humboldt-Weg: Durchfahrt an der Wilhelm-Hoff-Str. durch Wasserrohr versperrt	3 19015,3129 18892,3256 18689,3465
@@ -2815,11 +2819,11 @@ am Osthafen: durch Barriere versperrt	2::inwork 14259,10309 14463,10212
 Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: z.Zt. nur Baustellenzufahrt, Durchfahrt verboten	2 8251,14337 8442,14456
 Schinkelplatz: Bauarbeiten, Straße gesperrt	2::inwork 10008,12274 9994,12368
 Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1s 9996,12401 9994,12368 9943,12364 9961,12273
+Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1::inwork 9943,12364 9934,12420
 Grenzallee: komplette Sperrung wegen Bau des Autobahntunnels	2::inwork 14257,6895 14153,6795
 tragen (2 Stufen)	0:5:57 8818,13365
 Promenade am Teltowkanal: während der Bauarbeiten an der Emil-Schulz-Brücke gesperrt	2:inwork 4261,2703 4258,2693 4247,2652 4202,2622 4193,2616
 wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::ignrte 9984,12426 9934,12420 9858,12410
-Niederlagstr. -> Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3::igndisp 9943,12364 9934,12420 9858,12410
 Unter den Linden -> Niederlagstr.: wegen Bauarbeiten ist das Überqueren nicht möglich	3::igndisp 9984,12426 9934,12420 9943,12364
 An der Charité: wegen Bauarbeiten gesperrt	2:inwork 8833,13440 8846,13412 8835,13376 8818,13365 8808,13377 8764,13372 8665,13353
 Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?) gesperrt	2:inwork -11407,-1086 -11460,-1098 -11538,-1138 -11615,-1094

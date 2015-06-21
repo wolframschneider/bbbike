@@ -60,8 +60,8 @@ Am Großen Wannsee	1 -5869,1261 -5848,1379 -5867,1449 -5901,1562 -5929,1649 -5961
 Wilhelplatz	1 -7232,445 -7219,454 -7059,578
 Wilhelplatz	1 -7059,578 -7089,472 -7122,439 -7180,378
 Tempelhofer Weg	1 7499,7880 7268,8008 7193,7950
-Alt-Mariendorf (Nord)	1 9731,3889 9934,3802
-Alt-Mariendorf (Süd)	1 9934,3802 9751,3769 9584,3713 9455,3671 9391,3651 9215,3599 9131,3571 8955,3521
+Alt-Mariendorf (Nord)	1 9731,3889 9953,3806
+Alt-Mariendorf (Süd)	1 9953,3806 9751,3769 9584,3713 9455,3671 9391,3651 9215,3599 9131,3571 8955,3521
 Knoten Märkische Allee	1 19726,11743 19785,11760 19849,11779 19890,11830 19918,11891
 Knoten Märkische Allee	1 19918,11891 19979,11774
 Knoten Märkische Allee	1 20114,11719 20064,11687 20026,11663
@@ -151,10 +151,9 @@ An der Schillingbrücke	1 12061,11406 12060,11323
 An der Schillingbrücke	1 12025,11346 12061,11406
 Schulze-Delitzsch-Platz	1 11155,11750 11060,11753 11024,11789
 Schulze-Delitzsch-Platz	1 11024,11789 11073,11774 11155,11750
-#: note: hier stand mal ein Polizeiauto, als ich reinfahren wollte...
 #: XXX Öffnung der Einbahnstraße für Radfahrer?
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6514
-#: next_check: 2015-06-30
+#: last_checked: 2015-06-17
 Weydemeyerstr.	1s:q4 11896,13075 11904,13052 12053,12984 12054,12903
 Dorotheenstr.	1 9870,12657 9744,12601 9682,12593 9580,12581 9454,12558
 Dorotheenstr. (Straßenbahn)	1s:q2 9454,12558 9330,12529
@@ -1091,10 +1090,7 @@ Alt-Moabit - Invalidenstr.	1 7415,13060 7422,13012
 (Puschkinallee - Elsenstr.)	1 14244,9812 14250,9756 14270,9710
 Parkaue	1s:q4 15406,12444 15408,12394 15370,12264
 Stahlheimer Str.	1 11727,16358 11698,16311
-#: next_check_id: AMZIRKUS-2014
-#: XXX bleibt die Einbahnstraßenrichtung permanent? Oder nur während der Arbeiten am Schiffbauerdamm?
-#: last_checked: 2015-05-12
-Am Zirkus	1s:q4 9239,12923 9212,12969 9167,13046 9137,13032
+# REMOVED (temporär?) --- #: next_check_id: AMZIRKUS-2014 --- #: XXX bleibt die Einbahnstraßenrichtung permanent? Oder nur während der Arbeiten am Schiffbauerdamm? --- #: last_checked: 2015-05-12 --- Am Zirkus	1s:q4 9239,12923 9212,12969 9167,13046 9137,13032
 DB-Werkgelände, Befahren verboten	2 1645,9862 1672,9836 1563,9769 1583,9713 1615,9675 1724,9772
 #: note implizite Fahrtrichtung
 Katharina-Boll-Dornberger-Str.	1 19086,3370 19073,3357 19033,3397 18987,3442 18998,3454 19013,3466 19057,3422 19097,3380 19086,3370
@@ -1755,6 +1751,8 @@ abgeschlossenes Tor	3 * 15835,15092 *
 # Stellen, an denen getragen werden muß:
 # die Zahl hinter dem ":" entspricht ungefähr den verlorenen Sekunden
 # 
+tragen	0:15 47027,49988
+tragen	0:15 47004,50002
 tragen (4+3+4 Stufen) bzw. Naturrampe benutzen	0:15 4689,22058
 tragen (15 Stufen)	0:20 4620,22079
 tragen (2 x 4 Stufen)	0:15 2800,23966
@@ -2063,6 +2061,12 @@ Treppe	0:40 1888,42795
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+#: by: radzeit 2/2015 vvv
+Drängelgitter	BNP:5::trailer=10 13940,23486
+Drängelgitter	BNP:5::trailer=10 13963,23505
+#: by ^^^
+Tor	BNP:3::trailer=5 68508,72337
+Tor	BNP:3::trailer=5 68373,72348
 Barriere	BNP:5::trailer=10 7422,10368
 Drängelgitter	BNP:3::trailer=10 5029,19945
 Drängelgitter	BNP:3::trailer=10 -12262,-393
@@ -2394,7 +2398,7 @@ Drängelgitter	BNP:2::trailer=5 18018,3276
 Schranke, ggfs. auf Gehweg ausweichen	BNP:2::trailer=6 16368,7425
 Drängelgitter	BNP:3::trailer=10 23012,3598
 Tor	BNP:3::trailer=5 14425,8116
-Schranke	BNP:0::trailer=3 9920,11074
+# REMOVE (man fährt jetzt via neuen Gehweg) --- Schranke	BNP:0::trailer=3
 #: by: http://www.benno-koch.de/article09575_dumm_gelaufen_schifffahrtsamt_sperrt_teltow-route2 vvv
 Drängelgitter	BNP:5 4258,2693
 Drängelgitter	BNP:5 4202,2622
@@ -2601,6 +2605,11 @@ versetzte Schranke, manchmal offen	BNP:1::trailer=3 24625,20855
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: XXX Bauarbeiten im Park dauern bis 2016
+#: last_checked: 2015-07-08
+#: check_frequency: 60d
+Kleiner Tiergarten: wegen Bauarbeiten gesperrt	2::inwork 6561,13151 6556,13240 6526,13327
+# 
 #: next_check_id: FISCHERINSEL-2015 vvv
 #: last_checked: 2015-05-29 vvv
 #: next_check: 2015-12-20 vvv
@@ -2633,13 +2642,11 @@ Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14439,8050 144
 #: next_check: 2017-04-01
 Gerickesteg: wegen Bauarbeiten gesperrt	2::inwork 6694,12627 6702,12633 6748,12669 6765,12680
 # 
-#: last_checked: 2015-06-01 vvv
-#: next_check: 2015-07-10 vvv
+#: next_check_id: DRESDENER-2015
+#: last_checked: 2015-06-09
+#: next_check: 2015-07-14
 # REMOVED --- #: next_check: 2015-03-01 (Bauzeit 2014-2015)
 Alfred-Döblin-Platz: Bauarbeiten	2::inwork 11162,10919 11150,11030
-Dresdener Str.: Einbahnstraße wegen Tunnelzuschüttung	1s:q3 11189,10831 11162,10919
-#: next_check ^^^
-#: last_checked ^^^
 # 
 #: XXX Sperrungen wegen Bauarbeiten für die IGA 2017 vvv
 #: last_checked: 2015-04-11 vvv
@@ -2693,8 +2700,8 @@ Uferstr. (Niederschöneweide): abgesperrt	2::inwork 17639,6227 17843,6083
 #: next_check_id: BAERWALD-2015
 #: XXX siehe auch aufgehobene Einbahnstraßenregelungen weiter oben vvv
 #: source_id: IM_023816 vvv
-#: XXX vermutlich bis März 2016 andauernd
-#: last_checked: 2015-05-18 (indirekt) vvv
+#: XXX vermutlich bis März 2016 andauernd, laut Schild bis Februar 2016
+#: last_checked: 2015-06-09 vvv
 #: next_check: 2016-02-01 vvv
 Baerwaldstr.: Sperrung am Carl-Herz-Ufer	2::inwork 10467,10051 10500,10081
 Carl-Herz-Ufer: Sperrung an der Baerwaldstr.	2::inwork 10469,10081 10500,10081
@@ -2705,8 +2712,9 @@ Carl-Herz-Ufer: Sperrung an der Baerwaldstr.	2::inwork 10469,10081 10500,10081
 # 
 #: next_check_id: AMNORDHAFEN-2015
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php
-#: last_checked: 2015-03-13 vvv
-#: next_check: 2015-10-01 vvv
+#: last_checked: 2015-06-08 vvv
+#: XXX sieht schon relativ fertig aus --- vielleicht wird früher eröffnet?
+#: next_check: 2015-07-08 vvv
 Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015	2::inwork 7753,14528 7695,14545 7653,14570 7527,14644 7486,14652
 Zufahrt zum Uferweg: gesperrt	2::inwork 7703,14582 7696,14577 7662,14579 7653,14570
 #: next_check ^^^
@@ -2714,7 +2722,7 @@ Zufahrt zum Uferweg: gesperrt	2::inwork 7703,14582 7696,14577 7662,14579 7653,14
 # 
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage)
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45-181-136136549415/136549415/00119959/59-Anlagen/02/GA_1805_IV.pdf (mindestens bis Ende 2016)
-#: last_checked: 2015-05-29
+#: last_checked: 2015-06-14
 #: check_frequency: 180d
 Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelmarkt ist die Verbindung gesperrt	2::inwork 10308,11833 10374,11734
 # 
@@ -2722,7 +2730,7 @@ Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelm
 # 
 #: by: http://www.stadtentwicklung.berlin.de/verkehr/politik_planung/planfeststellungen/download/strassen_kfz/SOV-Beschluss-27022012.pdf
 #: XXX hier wird es für Autofahrer dauerhaft keine Zufahrt zur Minna-Todenhagen-Str. geben, aber vielleicht wird es für Radfahrer/Fußgänger einen Zugang geben?
-#: last_checked: 2015-05-16
+#: last_checked: 2015-06-06
 #: check_frequency: 120d
 Wattstr.: wegen Bauarbeiten für die Minna-Todenhagen-Str. teilweise gesperrt, ggfs. dauerhaft	2::inwork 17670,7512 17681,7589
 # 
@@ -2829,17 +2837,18 @@ am Osthafen: durch Barriere versperrt	2::inwork 14259,10309 14463,10212
 #: osm_watch: way id="129104626" version="4"
 #: XXX culdesac-orig entfernen, sobald die Verlängerung erfolgt ist
 #: by: http://www.rbb-online.de/politik/beitrag/2014/07/bnd-zentrale-berlin-verzoegerung-vollstaendiger-umzug-bis-2017.html
-#: last_checked: 2015-04-21
+#: last_checked: 2015-06-08
 #: check_frequency: 90d
 Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: z.Zt. nur Baustellenzufahrt, Durchfahrt verboten	2 8251,14337 8442,14456
 # 
 # REMOVED (die Baustelle ist mittlerweile auf der anderen Straßenseite) --- #: next_check_id: INVALIDEN-2014 vvv --- #: last_checked: 2014-04-02 vvv --- #: next_check: 2015-05-31 vvv --- Am Nordbahnhof: Abbiegen in die Invalidenstr. nicht möglich	3 9011,14019 9085,13919 8935,13844 --- Am Nordbahnhof: Abbiegen in die Invalidenstr. nicht möglich	3 9011,14019 9085,13919 9151,13941 --- Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht möglich	3 9151,13941 9085,13919 9011,14019 --- Am Nordbahnhof: Abbiegen aus der Invalidenstr. nicht möglich	3 8935,13844 9085,13919 9011,14019
 # 
 #: next_check_id: SCHINKELPLATZ-2014 vvv
-#: last_checked: 2015-05-12 vvv
+#: last_checked: 2015-06-10 vvv
 #: check_frequency: 90d vvv
 Schinkelplatz: Bauarbeiten, Straße gesperrt	2::inwork 10008,12274 9994,12368
 Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1s:q3 9996,12401 9994,12368 9943,12364 9961,12273
+Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1::inwork 9943,12364 9934,12420
 #: check_frequency ^^^
 #: last_checked ^^^
 #: next_check_id ^^^
@@ -2901,11 +2910,9 @@ Promenade am Teltowkanal: während der Bauarbeiten an der Emil-Schulz-Brücke gesp
 #: XXX siehe auch Busspur in radwege-orig vvv
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0166-unter-den-linden-oberwallstrae.html vvv
 #: source_id: INKO_113041 vvv
-#: last_checked: 2015-04-08 vvv
-#: next_check: 2015-06-30 vvv
+#: last_checked: 2015-06-10 vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross 9984,12426 9934,12420 9858,12410
 # REMOVED (nach der Fahrbahn wieder erreichbar) --- Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
-#: next_check ^^^
 #: last_checked ^^^
 #: source_id ^^^
 #: XXX ^^^
@@ -2935,7 +2942,7 @@ Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?
 #: XXX geplante Fertigstellung (als Autostraße) im Dezember 2013
 #: XXX wrote Mail about current status (2013-11-05), no response
 # REMOVED --- osm_watch: way id="183406331" version="3"
-#: last_checked: 2015-04-09
+#: last_checked: 2015-06-08
 #: check_frequency: 120d
 Nordufer: Neubau	2:inwork 7427,14648 7212,14738
 # 
@@ -2980,7 +2987,7 @@ Rudi-Dutschke-Weg	2:inwork 2627,5095 2913,5294
 #: XXX wird auch der Asphalt hier und im südlichen Abschnitt verbessert?
 Billy-Wilder-Promenade: wegen Bauarbeiten an umliegenden Wohnhäusern gesperrt	2:inwork 2528,1501 2584,1376
 # 
-#: last_checked: 2015-02-28
+#: last_checked: 2015-06-05
 #: check_frequency: 120d
 Marx-Engels-Forum: wegen U-Bahn-Bauarbeiten Durchgang zur Rathausstr. nicht möglich	2:inwork 10411,12471 10422,12395
 # 
@@ -3036,8 +3043,9 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 # REMOVED --- #: last_checked: 2011-04-08 --- Bebelplatz: Bauarbeiten, gesperrt	2:inwork 9679,12388 9702,12307 9708,12235
 # 
 #: next_check_id: STAATSOPER-2014 vvv
-#: last_checked: 2015-02-23 vvv
-#: next_check: 2015-06-01 (voraussichtliche Eröffnung Oktober 2015) vvv
+#: last_checked: 2015-06-02 vvv
+#: next_check: 2016-06-01 (voraussichtliche Eröffnung 2017) vvv
+#: by: http://www.welt.de/kultur/buehne-konzert/article140641614/Ausschuss-prueft-Kostenexplosion-bei-Staatsoper.html (Eröffnung)
 #: XXX siehe auch aufgehobene Einbahnstraßenregelung oben (Behrenstr./Bebelplatz)
 Behrenstr.: Bauarbeiten, vollständig gesperrt	2:inwork 9743,12239 9801,12245
 Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9876,12298
@@ -3060,7 +3068,7 @@ Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: osm_watch: way id="158025179" version="2"
-#: last_checked: 2015-05-15
+#: last_checked: 2015-06-08
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 

@@ -480,7 +480,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 14006,13761
 	X 9426,3797
 	X 9455,3671
-	X 9934,3802
+	X 9953,3806
 	X 10294,6440
 	X 10254,5921
 	X 11338,5992
@@ -2277,6 +2277,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F::inwork 7741,14560
 	F 7292,17316
 	X 20269,14256
+	X 23810,7946
 	F -12868,-502
 	X -12940,-1625
 	X -12549,-1277
@@ -2728,6 +2729,8 @@ nur Museumsbetrieb der Heidekrautbahn	B0 11616,30519
 	B 33356,-36311
 	B 39259,612
 	X 23109,30968
+	X 22888,30953
+	X 22690,30909
 	X 39873,102249
 	X 39715,101866
 	X 39682,101543
@@ -2775,12 +2778,13 @@ unbeschrankter Bahnübergang	B0 56520,16826
 Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	X 56461,82273
 	X 23015,30519
-	X 37151,48074
+	X 37150,48083
 	X 37391,48095
 	X 36581,48125
 	X 37128,48358
 	X 36937,48074
 	X 37909,48248
+	X 37711,48239
 	X 34334,48750
 	X 38022,49097
 	X 38008,48114
