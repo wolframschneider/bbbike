@@ -294,12 +294,12 @@ Winterfeldtstr. -> Winterfeldtstr.: Martin-Luther-Str.	3::igndisp 6366,9926 6512
 Winterfeldtstr. -> Martin-Luther-Str.: Martin-Luther-Str.	3::igndisp 6630,9990 6512,9962 6512,9866
 Winterfeldtstr. -> Winterfeldtstr.: Martin-Luther-Str.	3::igndisp 6630,9990 6512,9962 6366,9926
 Straßenbahntrasse	3nocross::ignrte 12621,14313 12729,14227 12901,14093
-Danziger Str. -> Hans-Otto-Str.: Straßenbahntrasse	3::igndisp 12901,14093 12729,14227 12608,14070
+Danziger Str. -> Hans-Otto-Str.: Straßenbahntrasse	3::igndisp 12901,14093 12729,14227 12601,14060
 Danziger Str. -> Hans-Otto-Str.: Straßenbahntrasse	3::igndisp 12621,14313 12729,14227 12782,14300
 Hans-Otto-Str. -> Danziger Str.: Straßenbahntrasse	3::igndisp 12782,14300 12729,14227 12901,14093
-Hans-Otto-Str. -> Hans-Otto-Str.: Straßenbahntrasse	3::igndisp 12782,14300 12729,14227 12608,14070
-Hans-Otto-Str. -> Danziger Str.: Straßenbahntrasse	3::igndisp 12608,14070 12729,14227 12621,14313
-Hans-Otto-Str. -> Hans-Otto-Str.: Straßenbahntrasse	3::igndisp 12608,14070 12729,14227 12782,14300
+Hans-Otto-Str. -> Hans-Otto-Str.: Straßenbahntrasse	3::igndisp 12782,14300 12729,14227 12601,14060
+Hans-Otto-Str. -> Danziger Str.: Straßenbahntrasse	3::igndisp 12601,14060 12729,14227 12621,14313
+Hans-Otto-Str. -> Hans-Otto-Str.: Straßenbahntrasse	3::igndisp 12601,14060 12729,14227 12782,14300
 Straßenbahntrasse	3nocross::ignrte 11655,14697 11633,14631 11572,14452
 Prenzlauer Allee -> Sredzkistr.: Straßenbahntrasse	3::igndisp 11572,14452 11633,14631 11535,14688
 Prenzlauer Allee -> Christburger Str.: Straßenbahntrasse	3::igndisp 11655,14697 11633,14631 11912,14486
@@ -1730,3 +1730,8 @@ Murtzaner Ring	1 19593,14452 19593,14472
 Invalidenstr. - Hessische Str.	3 8842,13798 8690,13723 8775,13606
 Waldeyerstr.	1 15054,12323 14997,12243
 Prenzlauer Allee -> Saarbrücker Str.	3 11160,13492 11251,13667 11134,13820
+Stolzenfelsstr.	1 19447,8175 19400,8147 19333,8165 19171,8280 18949,8437 18787,8540
+Treskowallee - Dönhoffstr.	3 18731,8577 18733,8633 18609,8717
+Straßenbahntrasse	3nocross::ignrte 15639,10469 15404,10633 15379,10651
+Hauptstr. -> Hauptstr. (Rummelsburg) [Wohngebiet]: Straßenbahntrasse	3::igndisp 15639,10469 15404,10633 15358,10562
+Hauptstr. (Rummelsburg) [Wohngebiet] -> Hauptstr.: Straßenbahntrasse	3::igndisp 15358,10562 15404,10633 15379,10651

@@ -1091,7 +1091,20 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'IM_025423',
+         'until' => 1436990400,
+         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor: Veranstaltung (Fashion Week), Straße gesperrt, bis 15.07.2015',
+         'from' => 1435356000,
+         'id' => 1771,
+         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
+userdel	3 8391,12389 8344,12221 8327,12174
+userdel	3 8327,12174 8344,12221 8391,12389
+#userdel	2::temp 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
+#userdel	2::temp 8538,12245 8600,12165 8595,12066
+',
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -1658,7 +1671,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'until' => undef,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juni von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juli von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'from' => undef,
          'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
@@ -1676,6 +1689,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
 (Südliche Landebahn - Rundkurs)	2::night 11332,7305 11438,7371 11460,7447
 (Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 10204,7680 11279,7768 11388,7777 11430,7781 11460,7802
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
+(Herrfurthstr. - Rundkurs)	2::night 11439,7894 11355,7871
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11005,8064 10909,8003
 (Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10803,8251 10644,8363 10360,8521
@@ -1706,110 +1720,13 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.csd-berlin.de/',
-         'data' => '#: by: http://www.visitberlin.de/de/event/27-06-2015/37-csd-berlin-christopher-street-day-2015
-userdel	2::temp 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6985,10597 6972,10665 6918,10854 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6685,11954 6642,12010 6653,12067 6690,12104 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936
-userdel	2::temp 6353,10583 6292,10627 6228,10646 6171,10657
-userdel	2::temp 7033,10396 6851,10416 6753,10446 6636,10492 6532,10529 6468,10550 6353,10583 6268,10588 6216,10614 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5351,10760 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435 4157,10418
-userdel auto	3 6380,10704 6353,10583 6302,10462
-userdel auto	3 6692,11365 6851,11346 7103,11247
-userdel auto	3 5488,10978 5475,10808 5471,10719
-userdel auto	3 4685,10689 4676,10541 4659,10335
-userdel auto	3 7115,11220 6880,11110 6841,11114
-userdel auto	3 6716,11439 6825,11486 6915,11492
-userdel auto	3 4239,10358 4245,10435 4256,10583
-userdel auto	3 7131,10331 7033,10396 7245,10499
-userdel auto	3 7131,10331 7033,10328 7060,10221
-userdel auto	3 4485,10307 4503,10497 4513,10702
-userdel auto	3 6980,11583 6809,11570 6524,11583
-userdel auto	3 6745,10619 6753,10446 6719,10347
-userdel auto	3 4847,10677 4847,10589 4828,10356
-userdel auto	3 4381,10583 4371,10465 4360,10320
-userdel auto	3 5196,10398 5215,10711 5230,10919
-userdel auto	3 6681,10959 6824,10904 6740,10755
-userdel auto	3 6740,10755 6824,10904 6681,10959
-userdel auto	3 6818,10725 6972,10665 7110,10613
-userdel auto	3 4360,10320 4371,10465 4381,10583
-userdel auto	3 7060,10221 7033,10328 7131,10331
-userdel auto	3 6915,11492 6825,11486 6716,11439
-userdel auto	3 6742,11099 6873,11011 7002,11034
-userdel auto	3 7245,10499 7033,10396 7131,10331
-userdel auto	3 4828,10356 4847,10589 4847,10677
-userdel auto	3 4513,10702 4503,10497 4485,10307
-userdel auto	3 6719,10347 6753,10446 6745,10619
-userdel auto	3 6841,11114 6880,11110 7115,11220
-userdel auto	3 6884,12006 6828,12031 7026,12054
-userdel auto	3 5829,10964 5782,10884 5669,10704
-userdel auto	3 6524,11583 6809,11570 6980,11583
-userdel auto	3 6540,11754 6778,11742 6980,11790
-userdel auto	3 5669,10704 5782,10884 5829,10964
-userdel auto	3 5047,10381 5076,10658 5079,10701
-userdel auto	3 6980,11790 6778,11742 6540,11754
-userdel auto	3 7002,11034 6873,11011 6742,11099
-userdel auto	3 5866,10492 6025,10746 6122,10925
-userdel auto	3 6192,10542 6216,10614 6228,10646
-userdel auto	3 6685,10690 6532,10529 6494,10440
-userdel auto	3 6122,10925 6025,10746 5866,10492
-userdel auto	3 7026,12054 6828,12031 6884,12006
-userdel auto	3 4256,10583 4245,10435 4239,10358
-userdel auto	3 6216,10614 6228,10646 6250,10701
-userdel auto	3 5900,11913 6642,12010 6550,11954
-userdel auto	3 5079,10701 5076,10658 5047,10381
-userdel auto	3 5471,10719 5475,10808 5488,10978
-userdel auto	3 4659,10335 4676,10541 4685,10689
-userdel auto	3 7110,10613 6972,10665 6818,10725
-userdel auto	3 5230,10919 5215,10711 5196,10398
-userdel auto	3 6302,10462 6353,10583 6380,10704
-userdel auto	3 6550,11954 6642,12010 5900,11913
-userdel auto	3 6494,10440 6532,10529 6685,10690
-userdel auto	3 6250,10701 6228,10646 6216,10614
-userdel auto	3 7103,11247 6851,11346 6692,11365
-userdel auto	3 6228,10646 6216,10614 6192,10542
-',
-         'periodic' => 1,
-         'until' => 1435442399,
-         'from' => 1435269600,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              20,
-                              'months',
-                              6
-                            ]
-                          ],
-         'text' => 'CSD am 27.6.2015',
-         'id' => 2083,
-         'type' => 'gesperrt'
-       },
        undef,
        undef,
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.kiez-und-kultur.de/bergmannstrassenfest/',
-         'data' => 'userdel	2::temp 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252
-userdel auto	3 9487,9209 9505,9306 9524,9426
-userdel auto	3 9524,9426 9505,9306 9487,9209
-',
-         'periodic' => 1,
-         'until' => 1435528799,
-         'from' => 1435183200,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              6
-                            ]
-                          ],
-         'text' => 'Bergmannstraße (Kreuzberg): Veranstaltung (Bergmannstraßenfest), Straße vollständig zwischen Mehringdamm und Zossener Str. gesperrt (26. bis 28. Juni 2015)',
-         'id' => 2089,
-         'type' => 'gesperrt'
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -2050,7 +1967,31 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.bierfestival-berlin.de/landkarte.html
+userdel	2::temp 12360,12505 12362,12540 12364,12589
+userdel	2::temp 12891,12549 12869,12425
+userdel	2::temp 12635,12629 12596,12472
+userdel	2::temp 13448,12340 13484,12436
+userdel	2::temp 13552,12435 13543,12326
+#zukünftig, wenn dieser Weg eingetragen ist: userdel	2::temp 13163,12382 13176,12500
+',
+         'periodic' => 1,
+         'until' => 1439078400,
+         'from' => 1438848000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              31,
+                              'months',
+                              7
+                            ]
+                          ],
+         'text' => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung (Internationales Berliner Bierfestival), Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (7.8.2015 bis 9.8.2015)',
+         'type' => 'gesperrt',
+         'id' => 2262
+       },
        undef,
        undef,
        undef,
@@ -2342,13 +2283,13 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        {
          'source_id' => 'IM_024846',
          'until' => 1442851200,
-         'text' => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Hauptstr. gesperrt, langsame Umfahrung über Fußgängerführung möglich, 04.05.2015 bis 21.09.2015',
+         'text' => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Nöldnerstr. gesperrt, langsame Umfahrung über Fußgängerführung möglich, 04.05.2015 bis 21.09.2015',
          'from' => 1430704800,
          'id' => 2416,
          'data' => '#: next_check_id: KARLSHORSTER-2015
-#: last_checked: 2015-06-06
+#: last_checked: 2015-07-02
 #: next_check: 2015-09-21
-userdel	q3::inwork 15261,10738 15272,10790 15279,10862
+userdel	q3::inwork 15272,10790 15279,10862
 ',
          'type' => 'handicap'
        },
@@ -2510,8 +2451,8 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
          'text' => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
          'from' => undef,
          'id' => 2463,
-         'data' => '#: add_fragezeichen: Ist das Befahren der Jürgen-Schumann-Allee für Radfahrer mittlerweile erlaubt? vvv
-#: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht - zwischenzeitlich bicycle=no, seit 2014-10-25 wieder bicycle=yes vvv
+         'data' => '#: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht - zwischenzeitlich bicycle=no, seit 2014-10-25 wieder bicycle=yes vvv
+#: note: Verbot bestätigt von roald dot lange at gmx (2015-06-23)
 #: osm_watch: way id="80221295" version="18" brb
 	2 19158,-4083 19189,-4062 19454,-3956 19524,-3843 19528,-3767 19479,-3690
 #: osm_watch: way id="83106248" version="15" brb
@@ -2526,7 +2467,6 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
 #: note: hier auch, sehr wahrscheinlich
 	2 19601,-3714 19539,-3810 19460,-3818 19282,-3928
 #: XXX_osm ^^^
-#: add_fragezeichen ^^^
 ',
          'type' => 'gesperrt'
        },
@@ -2741,7 +2681,28 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        undef,
        undef,
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.hanfparade.de/',
+         'data' => 'userdel	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+',
+         'periodic' => 1,
+         'until' => 1439100000,
+         'from' => 1438898400,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              8
+                            ]
+                          ],
+         'text' => 'Str. des 17. Juni: zwischen Yitzak-Rabin-Str. und Ebertstr.: Veranstaltung (Hanfparade), Straße gesperrt, ab 07.08.2015 21 Uhr bis 09.08.2015 morgens ',
+         'id' => 2606,
+         'type' => 'gesperrt'
+       },
        undef,
        undef,
        undef,
@@ -3040,16 +3001,7 @@ userdel	2::inwork 7306,13418 7451,13504 7630,13584
 ',
          'type' => 'gesperrt'
        },
-       {
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.313183.php',
-         'until' => 1435442400,
-         'text' => 'Grottewitzstr.: Fahrbahnarbeiten zwischen Buntzelstr. und Rettungsstelle Krankenhaus Hedwigshöhe, 18.05.2015 bis 27.06.2015',
-         'from' => 1431813600,
-         'id' => 2708,
-         'data' => 'userdel	q4::inwork 22145,208 21933,152 21868,139
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'until' => undef,
          'text' => 'Rampe an der Großen Eiswerderbrücke gesperrt, Dauer unbekannt',
@@ -3069,7 +3021,7 @@ userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
          'data' => '#: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.297071.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruen/artikel.295591.php
-#: last_checked: 2015-06-20 vvv
+#: last_checked: 2015-06-29 vvv
 #: check_frequency: 21d vvv
 userdel	2::inwork 14318,9688 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
 userdel	2::inwork 15052,9584 15174,9554 15321,9448 15432,9322 15513,9144 15527,9096 15638,9020
@@ -3101,6 +3053,41 @@ userdel	2::inwork 15561,8903 15630,8979 15638,9020 15778,8990
          'data' => '#: XXX bis wann ist die Fahrbahn gesperrt?
 #: last_checked: 2015-06-24
 userdel	q4::inwork 11325,12021 11275,12055
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
+         'until' => 1499983200,
+         'text' => 'Jülicher Str. und Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke, ab 14. Juli 2015 für ca. zwei Jahre',
+         'from' => 1436738400,
+         'id' => 2715,
+         'data' => '	q4::inwork; 9441,16058 9458,16180 9474,16297 9475,16307 9487,16395 9498,16480 9514,16603
+	q4::inwork; 10197,16528 10225,16436 10254,16363 10281,16263 10301,16186
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'text' => 'Singerstr.: Baustelle an der Andreasstr., Ausweichen über Gehweg, Bordsteine',
+         'from' => undef,
+         'id' => 2716,
+         'data' => '#: XXX bis wann geht die Baustelle?
+#: last_checked: 2015-07-01
+userdel	q3::inwork 12295,12197 12525,12151
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_024846',
+         'until' => 1442851200,
+         'text' => 'Karlshorster Str.: Fahrbahn zwischen Nöldnerstr. und Hauptstr. unter Umständen komplett gesperrt, auch für Fußgänger, 04.05.2015 bis 21.09.2015',
+         'from' => 1430704800,
+         'id' => 2717,
+         'data' => '#: next_check_id: KARLSHORSTER-2015
+#: last_checked: 2015-07-02
+#: next_check: 2015-09-21
+userdel	2::inwork 15261,10738 15272,10790
 ',
          'type' => 'handicap'
        }

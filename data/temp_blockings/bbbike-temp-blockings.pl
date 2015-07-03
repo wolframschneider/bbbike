@@ -4740,7 +4740,7 @@ EOF
        text  => 'Reinhardtstraße - Otto-von-Bismarck-Allee: zwischen Kreuzung Kapelleufer und Kreuzung Willy-Brandt-Straße in beiden Richtungen Veranstaltung, gesperrt, Dauer: 07.05.2006 09:00 Uhr bis 14.07.2006 23:45 Uhr ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 8120,12756 8206,12757 8301,12758 8309,12758 8424,12853 8503,12895
+userdel	2::temp 8120,12756 8206,12757 8309,12758 8424,12853 8503,12895
 EOF
      },
      { from  => 1149703449, # 2006-06-07 20:04
@@ -14622,7 +14622,7 @@ EOF
 userdel	2::inwork 7160,11225 7103,11247 6851,11346
 EOF
      },
-     { from  => $isodate2epoch->("2015-06-30 00:00:00"), # mindestens 1 Tag Vorlauf, besser zwei
+     { from  => $isodate2epoch->("2015-06-30 00:00:00"), # mindestens 1 Tag Vorlauf, besser zwei, oder sogar drei
        until => $isodate2epoch->("2015-07-08 22:00:00"), # einen Tag für den Abbau --- es wurden aber tatsächlich mindestens zwei Tage benötigt; am 10. Juli 2013 war die Fahrbahn noch gesperrt
        prewarn_days => 2,
        postwarn_days => 2,
@@ -15136,14 +15136,16 @@ EOF
 userdel	2::inwork -2997,-52781 -6384,-53390
 EOF
      },
-     { from  => $isodate2epoch->("2013-06-22 00:00:00"), # 
-       until => $isodate2epoch->("2013-07-10 22:00:00"), # XXX 1248600361, # 2009-07-26 23:59 1248645599
-       text  => 'Straße des 17. Juni (Tiergarten) zwischen Yitzhak-Rabin-Str. und Brandenburger Tor Veranstaltung (Fashion Week), Straße vollständig gesperrt',
+     { from  => $isodate2epoch->("2015-06-27 00:00:00"), # 
+       until => $isodate2epoch->("2015-07-15 22:00:00"), # XXX 1248600361, # 2009-07-26 23:59 1248645599
+       text  => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor: Veranstaltung (Fashion Week), Straße gesperrt, bis 15.07.2015',
+       source_id => 'IM_025423',
 # note: für Radfahrer befahrbar: ", außerdem gesperrt: Ebertstr. zwischen Behrenstr. und Dorotheenstr."
        type  => 'gesperrt',
-       source_id => 'IM_019981',
        data  => <<EOF,
 userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
+userdel	3 8391,12389 8344,12221 8327,12174
+userdel	3 8327,12174 8344,12221 8391,12389
 #userdel	2::temp 8538,12245 8546,12279 8570,12302 8573,12325 8540,12420
 #userdel	2::temp 8538,12245 8600,12165 8595,12066
 EOF
@@ -17511,8 +17513,9 @@ EOF
      },
      { from  => $isodate2epoch->("2014-09-04 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2014-09-07 20:00:00"),
-       periodic => 1, # manchmal/immer (?) zwei Termine im Jahr, zweiter Termin # 2013 war es am 12./13. Oktober, nicht im September!
-       recurrences => [['yearly', days => 1, months => 8]], # kann aber auch erst im September oder sogar im Oktober sein
+       ## XXX unklar, ob es das Müllerstraßenfest noch geben wird...
+       # periodic => 1, # manchmal/immer (?) zwei Termine im Jahr, zweiter Termin # 2013 war es am 12./13. Oktober, nicht im September!
+       # recurrences => [['yearly', days => 1, months => 8]], # kann aber auch erst im September oder sogar im Oktober sein
        text  => 'Müllerstr. (Wedding): Veranstaltung (traditionelles Müllerstraßenfest), Straße zwischen Seestr. und Leopoldplatz gesperrt, 5. bis 7. September 2014',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -17812,6 +17815,7 @@ EOF
 (Südliche Landebahn - Rundkurs)	2::night 11332,7305 11438,7371 11460,7447
 (Nördliche Landebahn)	2::night 9362,7616 9522,7624 9653,7635 10204,7680 11279,7768 11388,7777 11430,7781 11460,7802
 (Nördliche Landebahn - Eingang Oderstr./Herrfurthstr.)	2::night 11460,7802 11439,7894
+(Herrfurthstr. - Rundkurs)	2::night 11439,7894 11355,7871
 (Eingang Oderstr./Herrfurthstr. - Flughafen Tempelhof)	2::night 11472,7899 11458,7897 11439,7894
 (Strecke an der nordöstlichen Begrenzung - Rundkurs)	2::night 11005,8064 10909,8003
 (Strecke an der nordöstlichen Begrenzung)	2::night 11439,7894 11418,8015 11327,8007 11303,8089 11143,8139 11005,8064 10803,8251 10644,8363 10360,8521
@@ -17965,6 +17969,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.visitberlin.de/de/event/27-06-2015/37-csd-berlin-christopher-street-day-2015
+#: by: http://csd-berlin.de/csd-demo-2015-route-und-faqs/
 userdel	2::temp 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6985,10597 6972,10665 6918,10854 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6685,11954 6642,12010 6653,12067 6690,12104 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936
 userdel	2::temp 6353,10583 6292,10627 6228,10646 6171,10657
 userdel	2::temp 7033,10396 6851,10416 6753,10446 6636,10492 6532,10529 6468,10550 6353,10583 6268,10588 6216,10614 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5351,10760 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435 4157,10418
@@ -18022,6 +18027,16 @@ userdel auto	3 6494,10440 6532,10529 6685,10690
 userdel auto	3 6250,10701 6228,10646 6216,10614
 userdel auto	3 7103,11247 6851,11346 6692,11365
 userdel auto	3 6228,10646 6216,10614 6192,10542
+	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8610,12254 8731,12270
+	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+	3 7039,12314 7383,12095 7429,12070
+	3 7429,12070 7383,12095 7039,12314
+	3 7875,12363 7816,12150 7823,12120
+	3 7823,12120 7816,12150 7875,12363
+	3 8119,12414 8055,12186 8049,12140
+	3 8049,12140 8055,12186 8119,12414
+	3 8391,12389 8344,12221 8327,12174
+	3 8327,12174 8344,12221 8391,12389
 EOF
      },
      { from  => 1276783200, # 2010-06-17 16:00
@@ -19697,11 +19712,11 @@ EOF
 userdel	2::inwork 3045,19032 2994,18979
 EOF
      },
-     { from  => $isodate2epoch->("2014-07-31 10:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-08-04 02:00:00"),
+     { from  => $isodate2epoch->("2015-08-06 10:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-08-09 02:00:00"),
        periodic => 1, # Internationales Berliner Bierfestival
        recurrences => [['yearly', days => 31, months => 7]],
-       text  => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung (Internationales Berliner Bierfestival), Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (1.8.2014 bis 3.8.2014)',
+       text  => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung (Internationales Berliner Bierfestival), Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (7.8.2015 bis 9.8.2015)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.bierfestival-berlin.de/landkarte.html
@@ -21228,14 +21243,14 @@ EOF
      },
      { from  => $isodate2epoch->("2015-05-04 04:00:00"), # ein Tag Vorlauf
        until => $isodate2epoch->("2015-09-21 18:00:00"),
-       text  => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Hauptstr. gesperrt, langsame Umfahrung über Fußgängerführung möglich, 04.05.2015 bis 21.09.2015',
+       text  => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Nöldnerstr. gesperrt, langsame Umfahrung über Fußgängerführung möglich, 04.05.2015 bis 21.09.2015',
        type  => 'handicap',
        source_id => 'IM_024846',
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2015
-#: last_checked: 2015-06-06
+#: last_checked: 2015-07-02
 #: next_check: 2015-09-21
-userdel	q3::inwork 15261,10738 15272,10790 15279,10862
+userdel	q3::inwork 15272,10790 15279,10862
 EOF
      },
      { from  => 1361168940, # 2013-02-18 07:29
@@ -21769,8 +21784,8 @@ EOF
        text  => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
        type  => 'gesperrt',
        data  => <<EOF,
-#: add_fragezeichen: Ist das Befahren der Jürgen-Schumann-Allee für Radfahrer mittlerweile erlaubt? vvv
 #: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht - zwischenzeitlich bicycle=no, seit 2014-10-25 wieder bicycle=yes vvv
+#: note: Verbot bestätigt von roald dot lange at gmx (2015-06-23)
 #: osm_watch: way id="80221295" version="18" brb
 	2 19158,-4083 19189,-4062 19454,-3956 19524,-3843 19528,-3767 19479,-3690
 #: osm_watch: way id="83106248" version="15" brb
@@ -21785,7 +21800,6 @@ EOF
 #: note: hier auch, sehr wahrscheinlich
 	2 19601,-3714 19539,-3810 19460,-3818 19282,-3928
 #: XXX_osm ^^^
-#: add_fragezeichen ^^^
 EOF
      },
      { from  => undef,
@@ -23185,13 +23199,13 @@ EOF
 userdel	2::inwork 79043,-91754 79397,-92080
 EOF
      },
-     { from  => 1407438000, # 2014-08-07 21:00
-       until => 1407650400, # 2014-08-10 08:00
+     { from  => $isodate2epoch->("2015-08-07 00:00:00"), # 1407438000, # 2014-08-07 21:00
+       until => $isodate2epoch->("2015-08-09 08:00:00"), # 1407650400, # 2014-08-10 08:00
        periodic => 1,
        recurrences => [["yearly", days => 1, months => 8]], # Termin meist Anfang August, wechselnde Orte
-       text  => 'Str. des 17. Juni: zwischen Yitzak-Rabin-Str. und Ebertstr.: Veranstaltung (Hanfparade), Straße gesperrt, ab 08.08.2014 21 Uhr bis 10.08.2014 morgens ',
+       text  => 'Str. des 17. Juni: zwischen Yitzak-Rabin-Str. und Ebertstr.: Veranstaltung (Hanfparade), Straße gesperrt, ab 07.08.2015 21 Uhr bis 09.08.2015 morgens ',
        type  => 'gesperrt',
-       source_id => 'IM_022534',
+       source_id => 'http://www.hanfparade.de/',
        data  => <<EOF,
 userdel	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
 	3::temp 8391,12389 8344,12221 8327,12174
@@ -23842,7 +23856,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_023887',
        data  => <<EOF,
-userdel	2::temp 8301,12758 8206,12757 8120,12756 8030,12824
+userdel	2::temp 8206,12757 8120,12756 8030,12824
 userdel	2::temp 7936,12906 8021,12832
 userdel auto	3 8124,12840 8120,12756 8122,12603
 userdel auto	3 8207,12606 8206,12757 8204,12816
@@ -24182,7 +24196,7 @@ EOF
 #: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.297071.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruen/artikel.295591.php
-#: last_checked: 2015-06-20 vvv
+#: last_checked: 2015-06-29 vvv
 #: check_frequency: 21d vvv
 userdel	2::inwork 14318,9688 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
 userdel	2::inwork 15052,9584 15174,9554 15321,9448 15432,9322 15513,9144 15527,9096 15638,9020
@@ -24234,6 +24248,38 @@ EOF
 #: XXX bis wann ist die Fahrbahn gesperrt?
 #: last_checked: 2015-06-24
 userdel	q4::inwork 11325,12021 11275,12055
+EOF
+     },
+     { from  => 1436738400, # 2015-07-13 00:00
+       until => 1499983200, # 2017-07-14 00:00
+       text  => 'Jülicher Str. und Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke, ab 14. Juli 2015 für ca. zwei Jahre',
+       type  => 'handicap',
+       source_id => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
+       data  => <<EOF,
+	q4::inwork; 9441,16058 9458,16180 9474,16297 9475,16307 9487,16395 9498,16480 9514,16603
+	q4::inwork; 10197,16528 10225,16436 10254,16363 10281,16263 10301,16186
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Singerstr.: Baustelle an der Andreasstr., Ausweichen über Gehweg, Bordsteine',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX bis wann geht die Baustelle?
+#: last_checked: 2015-07-01
+userdel	q3::inwork 12295,12197 12525,12151
+EOF
+     },
+     { from  => $isodate2epoch->("2015-05-04 04:00:00"), # ein Tag Vorlauf
+       until => $isodate2epoch->("2015-09-21 18:00:00"),
+       text  => 'Karlshorster Str.: Fahrbahn zwischen Nöldnerstr. und Hauptstr. unter Umständen komplett gesperrt, auch für Fußgänger, 04.05.2015 bis 21.09.2015',
+       type  => 'handicap',
+       source_id => 'IM_024846',
+       data  => <<EOF,
+#: next_check_id: KARLSHORSTER-2015
+#: last_checked: 2015-07-02
+#: next_check: 2015-09-21
+userdel	2::inwork 15261,10738 15272,10790
 EOF
      },
     );
