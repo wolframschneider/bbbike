@@ -21248,7 +21248,7 @@ EOF
        source_id => 'IM_024846',
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2015
-#: last_checked: 2015-07-02
+#: last_checked: 2015-07-04
 #: next_check: 2015-09-21
 userdel	q3::inwork 15272,10790 15279,10862
 EOF
@@ -23816,12 +23816,11 @@ EOF
      },
      { from  => undef, # 
        until => $isodate2epoch->("2015-12-01 00:00:00"), # laut Schild bis Dezember 2015
-       text  => 'Augsburger Str.: Bauarbeiten, Einbahnstraßenregelung',
+       text  => 'Augsburger Str.: Bauarbeiten, Sackgasse an der Rankestr., Umfahrung über Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2015-03-28
-#: next_check: 2015-06-28
-userdel	q4::inwork; 5866,10492 5780,10542 5627,10637
+#: last_checked: 2015-07-03
+userdel	q3::inwork 5780,10542 5627,10637
 EOF
      },
      { from  => $isodate2epoch->("2014-12-12 00:00:00"), # 1 Tag Vorlauf
@@ -24045,7 +24044,7 @@ EOF
        text  => 'Zillestr.: zwischen Richard-Wagner-Str. und Wilmersdorfer Str. Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten, Ende der Sperrung unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2015-03-28
+#: last_checked: 2015-07-03
 #: check_frequency: 90d
 userdel	q4::inwork; 3807,11859 3666,11855
 EOF
@@ -24246,7 +24245,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann ist die Fahrbahn gesperrt?
-#: last_checked: 2015-06-24
+#: last_checked: 2015-07-03
 userdel	q4::inwork 11325,12021 11275,12055
 EOF
      },
@@ -24261,12 +24260,12 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
-       text  => 'Singerstr.: Baustelle an der Andreasstr., Ausweichen über Gehweg, Bordsteine',
+       until => $isodate2epoch->("2015-07-10 23:59:59"), # undef, # XXX
+       text  => 'Singerstr.: Baustelle an der Andreasstr., Ausweichen über Gehweg, Bordsteine, bis zum 10.07.2015',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann geht die Baustelle?
-#: last_checked: 2015-07-01
+#: last_checked: 2015-07-03
 userdel	q3::inwork 12295,12197 12525,12151
 EOF
      },
@@ -24277,7 +24276,7 @@ EOF
        source_id => 'IM_024846',
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2015
-#: last_checked: 2015-07-02
+#: last_checked: 2015-07-04
 #: next_check: 2015-09-21
 userdel	2::inwork 15261,10738 15272,10790
 EOF
