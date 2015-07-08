@@ -19168,11 +19168,11 @@ EOF
 userdel	1::temp 1574,11379 1625,11380 1834,11408 1960,11426 2109,11441
 EOF
      },
-     { from  => $isodate2epoch->("2015-07-06 10:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-07-07 22:00:00"),
+     { from  => $isodate2epoch->("2015-07-04 10:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-07-05 22:00:00"),
        periodic => 1, # zweiter Termin im Sommer
        recurrences => [['yearly', days => 5, months => 7]], # kann aber auch erst im August stattfinden
-       text  => 'Open Air Gallery am 7. Juli 2015 auf der Oberbaumbrücke (10:00 - 22:00)',
+       text  => 'Open Air Gallery am 5. Juli 2015 auf der Oberbaumbrücke (10:00 - 22:00)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	q4::temp 13178,10623 13206,10651 13305,10789 13332,10832
@@ -23096,26 +23096,26 @@ EOF
 Gartenufer	2::night 6226,11405 6067,11479 5845,11615 5790,11643
 EOF
      },
-     { from  => 1405025033, # 2014-07-10 22:43
-       until => 1408139790, # 1408312800, # 2014-08-18 00:00
-       text  => 'Konrad-Wolf-Str.: Bauarbeiten zwischen Reichenberger Str. und Oberseestr., Richtung Nordosten gesperrt, bis 17.08.2014 18:00 Uhr',
+     { from  => $isodate2epoch->("2015-07-06 06:00:00"), # 1405025033, # 2014-07-10 22:43
+       until => $isodate2epoch->("2015-08-09 19:00:00"), # 1408139790, # 1408312800, # 2014-08-18 00:00
+       text  => 'Konrad-Wolf-Str.: Bauarbeiten zwischen Simon-Bolivar-Str. und Gärtnerstr., Richtung Nordosten gesperrt, bis 09.08.2015',
        type  => 'handicap',
-       source_id => 'IM_021923',
+       source_id => 'IM_025547',
        data  => <<EOF,
-userdel	q4::inwork; 15937,15134 16028,15218 16119,15302 16218,15386 16263,15427 16331,15486 16412,15559 16448,15593 16497,15636 16615,15737
-userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
-	3 16475,15659 16497,15636 16615,15737
-	3 16615,15737 16497,15636 16475,15659
-	3 16475,15659 16497,15636 16448,15593
-	3 16448,15593 16497,15636 16475,15659
-	3 16475,15659 16448,15593 16497,15636
-	3 16497,15636 16448,15593 16475,15659
-	3 16475,15659 16448,15593 16412,15559
-	3 16412,15559 16448,15593 16475,15659
-	3 16251,15629 16412,15559 16550,15503
-	3 16550,15503 16412,15559 16251,15629
-	3 15996,15620 16331,15486 16406,15452
-	3 16406,15452 16331,15486 15996,15620
+userdel	q4::inwork; 15774,14992 15867,15073 15937,15134 16028,15218 16119,15302 16218,15386 16263,15427 16331,15486 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753 16819,15912
+# userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
+#	3 16475,15659 16497,15636 16615,15737
+#	3 16615,15737 16497,15636 16475,15659
+#	3 16475,15659 16497,15636 16448,15593
+#	3 16448,15593 16497,15636 16475,15659
+#	3 16475,15659 16448,15593 16497,15636
+#	3 16497,15636 16448,15593 16475,15659
+#	3 16475,15659 16448,15593 16412,15559
+#	3 16412,15559 16448,15593 16475,15659
+#	3 16251,15629 16412,15559 16550,15503
+#	3 16550,15503 16412,15559 16251,15629
+#	3 15996,15620 16331,15486 16406,15452
+#	3 16406,15452 16331,15486 15996,15620
 EOF
      },
      { from  => 1406412000, # 2014-07-27 00:00
@@ -24216,10 +24216,10 @@ userdel	2::temp 9588,9827 9552,9602
 EOF
      },
      { from  => 1433023200, # 2015-05-31 00:00
-       until => 1435960800, # 2015-07-04 00:00
-       text  => 'Franzensbader Straße: zwischen Hubertusallee und Berkaer Str. wegen Bauarbeiten in Richtung Süden gesperrt, 01.06.2015 bis voraussichtlich 03.07.2015 ',
+       until => $isodate2epoch->("2015-07-27 23:59:59"), # 1435960800, # 2015-07-04 00:00
+       text  => 'Franzensbader Straße: zwischen Hubertusallee und Berkaer Str. wegen Bauarbeiten in Richtung Süden gesperrt, 01.06.2015 bis voraussichtlich 27.07.2015 ',
        type  => 'handicap',
-       source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.320524.php',
+       source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.339753.php',
        data  => <<EOF,
 userdel	q4::inwork; 2320,8722 2361,8608 2423,8427 2407,8148 2370,8109
 EOF
@@ -24245,7 +24245,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann ist die Fahrbahn gesperrt?
-#: last_checked: 2015-07-03
+#: last_checked: 2015-07-08
 userdel	q4::inwork 11325,12021 11275,12055
 EOF
      },
@@ -24260,7 +24260,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2015-07-10 23:59:59"), # undef, # XXX
+       until => $isodate2epoch->("2015-07-07 00:00:00"), # undef, # XXX
        text  => 'Singerstr.: Baustelle an der Andreasstr., Ausweichen über Gehweg, Bordsteine, bis zum 10.07.2015',
        type  => 'handicap',
        data  => <<EOF,
@@ -24279,6 +24279,20 @@ EOF
 #: last_checked: 2015-07-04
 #: next_check: 2015-09-21
 userdel	2::inwork 15261,10738 15272,10790
+EOF
+     },
+     { from  => 1436220000, # 2015-07-07 00:00
+       until => $isodate2epoch->("2015-07-11 23:59:59"),
+       periodic => 1,
+       recurrences => [['yearly', days => 8, months => 1],
+                       ['yearly', days => 1, months => 7]],
+       text  => 'Schöneberger Str. und Luckenwalder Str.: wegen der Premium Berlin Einbahnstraßen, 08.07.2015-11.07.2015',
+       type  => 'handicap',
+       source_id => 'https://www.berlin.de/events/fashion-week/modemessen/2255617-2251352-modemesse-premium.html',
+       data  => <<EOF,
+#: note: laut fritz _Vollsperrung_ bis einschließlich _Samstag_ 
+userdel	q4::inwork; 8634,10426 8384,10507 8525,10626
+userdel	q4::inwork; 8348,10636 8335,10518 8350,10499
 EOF
      },
     );

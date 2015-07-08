@@ -1786,25 +1786,7 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 5370,6486 5424,6584 5533,6753 5644,6936
-',
-         'periodic' => 1,
-         'until' => 1436133599,
-         'from' => 1435874400,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              4,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Rheinstraße (Friedenau): Veranstaltung (Jazzfest auf der Rheinstraße), Straße vollständig zwischen Walther-Schreiber-Platz und Kaisereiche gesperrt (04.07.2015 bis 05.07.2015)',
-         'type' => 'gesperrt',
-         'id' => 2126
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1893,25 +1875,7 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	q4::temp 13178,10623 13206,10651 13305,10789 13332,10832
-',
-         'periodic' => 1,
-         'until' => 1436299200,
-         'from' => 1436169600,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              5,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Open Air Gallery am 7. Juli 2015 auf der Oberbaumbrücke (10:00 - 22:00)',
-         'type' => 'gesperrt',
-         'id' => 2206
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2381,25 +2345,7 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 12819,4780 12836,4649
-',
-         'periodic' => 1,
-         'until' => 1436133599,
-         'from' => 1435874400,
-         'text' => 'Britzer Rosenfest an der Britzer Dorfkirche, Backbergstr. ist gesperrt, 4. und 5. Juli 2015',
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              22,
-                              'months',
-                              6
-                            ]
-                          ],
-         'type' => 'gesperrt',
-         'id' => 2453
-       },
+       undef,
        {
          'until' => undef,
          'recurring' => 1,
@@ -2671,7 +2617,29 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
          'data' => 'Gartenufer	2::night 6226,11405 6067,11479 5845,11615 5790,11643
 '
        },
-       undef,
+       {
+         'source_id' => 'IM_025547',
+         'until' => 1439139600,
+         'text' => 'Konrad-Wolf-Str.: Bauarbeiten zwischen Simon-Bolivar-Str. und Gärtnerstr., Richtung Nordosten gesperrt, bis 09.08.2015',
+         'from' => 1436155200,
+         'id' => 2596,
+         'data' => 'userdel	q4::inwork; 15774,14992 15867,15073 15937,15134 16028,15218 16119,15302 16218,15386 16263,15427 16331,15486 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753 16819,15912
+# userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
+#	3 16475,15659 16497,15636 16615,15737
+#	3 16615,15737 16497,15636 16475,15659
+#	3 16475,15659 16497,15636 16448,15593
+#	3 16448,15593 16497,15636 16475,15659
+#	3 16475,15659 16448,15593 16497,15636
+#	3 16497,15636 16448,15593 16475,15659
+#	3 16475,15659 16448,15593 16412,15559
+#	3 16412,15559 16448,15593 16475,15659
+#	3 16251,15629 16412,15559 16550,15503
+#	3 16550,15503 16412,15559 16251,15629
+#	3 15996,15620 16331,15486 16406,15452
+#	3 16406,15452 16331,15486 15996,15620
+',
+         'type' => 'handicap'
+       },
        undef,
        undef,
        undef,
@@ -3033,7 +3001,16 @@ userdel	2::inwork 15561,8903 15630,8979 15638,9020 15778,8990
          'type' => 'gesperrt'
        },
        undef,
-       undef,
+       {
+         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.339753.php',
+         'until' => 1438034399,
+         'text' => 'Franzensbader Straße: zwischen Hubertusallee und Berkaer Str. wegen Bauarbeiten in Richtung Süden gesperrt, 01.06.2015 bis voraussichtlich 27.07.2015 ',
+         'from' => 1433023200,
+         'id' => 2712,
+         'data' => 'userdel	q4::inwork; 2320,8722 2361,8608 2423,8427 2407,8148 2370,8109
+',
+         'type' => 'handicap'
+       },
        undef,
        {
          'until' => undef,
@@ -3041,7 +3018,7 @@ userdel	2::inwork 15561,8903 15630,8979 15638,9020 15778,8990
          'from' => undef,
          'id' => 2714,
          'data' => '#: XXX bis wann ist die Fahrbahn gesperrt?
-#: last_checked: 2015-07-03
+#: last_checked: 2015-07-08
 userdel	q4::inwork 11325,12021 11275,12055
 ',
          'type' => 'handicap'
@@ -3057,17 +3034,7 @@ userdel	q4::inwork 11325,12021 11275,12055
 ',
          'type' => 'handicap'
        },
-       {
-         'until' => 1436565599,
-         'text' => 'Singerstr.: Baustelle an der Andreasstr., Ausweichen über Gehweg, Bordsteine, bis zum 10.07.2015',
-         'from' => undef,
-         'id' => 2716,
-         'data' => '#: XXX bis wann geht die Baustelle?
-#: last_checked: 2015-07-03
-userdel	q3::inwork 12295,12197 12525,12151
-',
-         'type' => 'handicap'
-       },
+       undef,
        {
          'source_id' => 'IM_024846',
          'until' => 1442851200,
@@ -3079,6 +3046,35 @@ userdel	q3::inwork 12295,12197 12525,12151
 #: next_check: 2015-09-21
 userdel	2::inwork 15261,10738 15272,10790
 ',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'https://www.berlin.de/events/fashion-week/modemessen/2255617-2251352-modemesse-premium.html',
+         'data' => '#: note: laut fritz _Vollsperrung_ bis einschließlich _Samstag_ 
+userdel	q4::inwork; 8634,10426 8384,10507 8525,10626
+userdel	q4::inwork; 8348,10636 8335,10518 8350,10499
+',
+         'periodic' => 1,
+         'until' => 1436651999,
+         'from' => 1436220000,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              8,
+                              'months',
+                              1
+                            ],
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              7
+                            ]
+                          ],
+         'text' => 'Schöneberger Str. und Luckenwalder Str.: wegen der Premium Berlin Einbahnstraßen, 08.07.2015-11.07.2015',
+         'id' => 2718,
          'type' => 'handicap'
        }
      
