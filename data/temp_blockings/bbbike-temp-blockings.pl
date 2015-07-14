@@ -21243,14 +21243,15 @@ EOF
      },
      { from  => $isodate2epoch->("2015-05-04 04:00:00"), # ein Tag Vorlauf
        until => $isodate2epoch->("2015-09-21 18:00:00"),
-       text  => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Nöldnerstr. gesperrt, langsame Umfahrung über Fußgängerführung möglich, 04.05.2015 bis 21.09.2015',
+       text  => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Hauptstr. gesperrt, langsame Umfahrung über Fußgängerführung möglich, 04.05.2015 bis 21.09.2015',
        type  => 'handicap',
        source_id => 'IM_024846',
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2015
-#: last_checked: 2015-07-04
+#: last_checked: 2015-07-12
 #: next_check: 2015-09-21
 userdel	q3::inwork 15272,10790 15279,10862
+userdel	q3::inwork 15261,10738 15272,10790
 EOF
      },
      { from  => 1361168940, # 2013-02-18 07:29
@@ -23098,11 +23099,14 @@ EOF
      },
      { from  => $isodate2epoch->("2015-07-06 06:00:00"), # 1405025033, # 2014-07-10 22:43
        until => $isodate2epoch->("2015-08-09 19:00:00"), # 1408139790, # 1408312800, # 2014-08-18 00:00
-       text  => 'Konrad-Wolf-Str.: Bauarbeiten zwischen Simon-Bolivar-Str. und Gärtnerstr., Richtung Nordosten gesperrt, bis 09.08.2015',
+       text  => 'Konrad-Wolf-Str.: Bauarbeiten, zwischen Simon-Bolivar-Str. und Werneuchener Str. für Radfahrer komplett gesperrt (für Autofahrer in Richtung Südwesten aber nicht!), zwischen Gärtnerstr. und Schöneicher Str. Einbahnstraße, offen Richtung Südwesten, bis 09.08.2015',
        type  => 'handicap',
        source_id => 'IM_025547',
        data  => <<EOF,
-userdel	q4::inwork; 15774,14992 15867,15073 15937,15134 16028,15218 16119,15302 16218,15386 16263,15427 16331,15486 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753 16819,15912
+#: note: außerdem Ampel an der Kreuzung Werneuchener/Große-Leege, und geänderte Vorfahrtsregelung an der Umleitungsstrecke via Große-Leege-Str.
+userdel	q4::inwork 15774,14992 15867,15073 15937,15134 16028,15218 16119,15302
+# userdel	q4::inwork; 16119,15302 16218,15386 16263,15427 16331,15486 16412,15559
+userdel	q4::inwork; 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753 16819,15912
 # userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
 #	3 16475,15659 16497,15636 16615,15737
 #	3 16615,15737 16497,15636 16475,15659
@@ -24054,6 +24058,8 @@ EOF
        text  => 'Dickhardstr.: Bauarbeiten an der Rheinstr., direkte Durchfahrt gesperrt, Ende der Bauarbeiten im Dezember 2015',
        type  => 'handicap',
        data  => <<EOF,
+#: XXX laut Fritz ist die Baustelle an der Rheinstr. bis 2015-08-03 aktuell
+#: next_check: 2015-08-03
 userdel	q3::inwork 5824,6974 5817,7223
 EOF
      },
@@ -24195,7 +24201,7 @@ EOF
 #: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.297071.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruen/artikel.295591.php
-#: last_checked: 2015-06-29 vvv
+#: last_checked: 2015-07-12 vvv
 #: check_frequency: 21d vvv
 userdel	2::inwork 14318,9688 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
 userdel	2::inwork 15052,9584 15174,9554 15321,9448 15432,9322 15513,9144 15527,9096 15638,9020
@@ -24270,14 +24276,12 @@ userdel	q3::inwork 12295,12197 12525,12151
 EOF
      },
      { from  => $isodate2epoch->("2015-05-04 04:00:00"), # ein Tag Vorlauf
-       until => $isodate2epoch->("2015-09-21 18:00:00"),
+       until => 1436706798, # $isodate2epoch->("2015-09-21 18:00:00"),
        text  => 'Karlshorster Str.: Fahrbahn zwischen Nöldnerstr. und Hauptstr. unter Umständen komplett gesperrt, auch für Fußgänger, 04.05.2015 bis 21.09.2015',
        type  => 'handicap',
        source_id => 'IM_024846',
        data  => <<EOF,
-#: next_check_id: KARLSHORSTER-2015
-#: last_checked: 2015-07-04
-#: next_check: 2015-09-21
+# REMOVED --- #: next_check_id: KARLSHORSTER-2015 --- #: last_checked: 2015-07-04 --- #: next_check: 2015-09-21
 userdel	2::inwork 15261,10738 15272,10790
 EOF
      },
