@@ -24150,10 +24150,10 @@ EOF
        data  => <<EOF,
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5511.html
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150430.1120.401849.html
-#: XXX nach den Bauarbeiten werden die Reste des Radwegs wegfallen
-#: last_checked: 2015-05-13
-#: next_check: 2015-07-13
+#: last_checked: 2015-07-14
+#: next_check: 2015-08-31
 	q4::inwork; 7033,10328 7060,10221 7080,10098
+	q4::inwork 7080,10098 7038,10087
 EOF
      },
      { from  => 1432706400, # 2015-05-27 08:00
@@ -24251,12 +24251,12 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann ist die Fahrbahn gesperrt?
-#: last_checked: 2015-07-08
+#: last_checked: 2015-07-14
 userdel	q4::inwork 11325,12021 11275,12055
 EOF
      },
      { from  => 1436738400, # 2015-07-13 00:00
-       until => 1499983200, # 2017-07-14 00:00
+       until => 1436986211, # XXX verschoben! 1499983200, # 2017-07-14 00:00
        text  => 'Jülicher Str. und Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke, ab 14. Juli 2015 für ca. zwei Jahre',
        type  => 'handicap',
        source_id => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
@@ -24297,6 +24297,25 @@ EOF
 #: note: laut fritz _Vollsperrung_ bis einschließlich _Samstag_ 
 userdel	q4::inwork; 8634,10426 8384,10507 8525,10626
 userdel	q4::inwork; 8348,10636 8335,10518 8350,10499
+EOF
+     },
+     { from  => 1436738400, # 2015-07-13 00:00
+       until => 1499983200, # 2017-07-14 00:00
+       text  => 'Treppe an der Bornholmer Str.: wegen Bauarbeiten an der Bösebrücke gesperrt, ab 14. Juli 2015 für ca. zwei Jahre',
+       type  => 'handicap',
+       source_id => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
+       data  => <<EOF,
+	2::inwork 9998,16547 9982,16527 9959,16510
+EOF
+     },
+     { from  => 1437256800, # 2015-07-19 00:00
+       until => 1438466400, # 2015-08-02 00:00
+       text  => 'Stralauer Str.: Asphaltierungsarbeiten, Fahrbahn gesperrt, vom 20.07.2015 bis 01.08.2015',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.341629.php',
+       data  => <<EOF,
+#: note: außerdem noch Bauarbeiten zwischen Kloster- und Littenstr., aber hier wird nicht voll gesperrt werden
+userdel	q4::inwork 10738,12364 10804,12291 10826,12279
 EOF
      },
     );
