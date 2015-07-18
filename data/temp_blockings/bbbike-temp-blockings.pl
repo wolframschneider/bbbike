@@ -24145,7 +24145,7 @@ EOF
      },
      { from  => undef,
        until => $isodate2epoch->("2015-09-01 00:00:00"),
-       text  => 'Maaßenstr.: Bauarbeiten, gesperrt in Richtung Winterfeldplatz, bis September 2015',
+       text  => 'Maaßenstr.: Bauarbeiten, gesperrt in Richtung Winterfeldplatz, außerdem Sperrungen in der Winterfeldtstr., bis September 2015',
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150430.1120.401849.html',
        data  => <<EOF,
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5511.html
@@ -24201,7 +24201,7 @@ EOF
 #: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.297071.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruen/artikel.295591.php
-#: last_checked: 2015-07-12 vvv
+#: last_checked: 2015-07-17 vvv
 #: check_frequency: 21d vvv
 userdel	2::inwork 14318,9688 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
 userdel	2::inwork 15052,9584 15174,9554 15321,9448 15432,9322 15513,9144 15527,9096 15638,9020
@@ -24255,9 +24255,9 @@ EOF
 userdel	q4::inwork 11325,12021 11275,12055
 EOF
      },
-     { from  => 1436738400, # 2015-07-13 00:00
-       until => 1436986211, # XXX verschoben! 1499983200, # 2017-07-14 00:00
-       text  => 'Jülicher Str. und Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke, ab 14. Juli 2015 für ca. zwei Jahre',
+     { from  => $isodate2epoch->("2015-07-22 00:00:00"), # 1436738400, # 2015-07-13 00:00
+       until => $isodate2epoch->("2017-07-14 00:00:00"),
+       text  => 'Jülicher Str. und Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke, voraussichtlich ab 23. Juli 2015 für ca. zwei Jahre',
        type  => 'handicap',
        source_id => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
        data  => <<EOF,
