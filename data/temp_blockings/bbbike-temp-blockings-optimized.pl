@@ -2062,6 +2062,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
 #: note: geprüft am So, den 2015-03-08, vormittags: offen
 #: note: geprüft am So, den 2015-05-10, nachmittags: offen
 #: note: geprüft am So, den 2015-06-21, vormittags: offen
+#: note. geprüft am So, den 2015-07-19, nachmittags: offen
 userdel	2::night 14838,11410 14792,11391
 ',
          'type' => 'gesperrt'
@@ -2207,26 +2208,7 @@ userdel	q3::inwork 15261,10738 15272,10790
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://heyevent.de/event/6yi4pyoxrrtxca/tegeler-hafenfest-2015-jetzt-freunde-einladen',
-         'data' => 'userdel	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
-',
-         'periodic' => 1,
-         'until' => 1437343199,
-         'from' => 1436911200,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              16,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (16.07.2015 bis 19.07.2015)',
-         'id' => 2420,
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'source_id' => 'IM_019747',
@@ -2766,7 +2748,7 @@ userdel	q3::inwork 5780,10542 5627,10637
          'text' => 'Wörther Str.: Wochenmarkt Donnerstag 10-20.30 Uhr',
          'from' => undef,
          'id' => 2686,
-         'data' => '	q4::temp::clock 11163,14548 11255,14572 11317,14564
+         'data' => '	q4::temp::clock 11155,14554 11255,14572 11317,14564
 ',
          'type' => 'gesperrt'
        },
@@ -2938,12 +2920,12 @@ userdel	2::inwork 15561,8903 15630,8979 15638,9020 15778,8990
        undef,
        {
          'until' => undef,
-         'text' => 'Märkisches Ufer: Sperrung der Fahrbahn vor der chinesischen Botschaft, Schieben über Gehweg',
+         'text' => 'Märkisches Ufer: Sperrung der Fahrbahn vor der chinesischen Botschaft, Ausweichen über Gehweg',
          'from' => undef,
          'id' => 2714,
          'data' => '#: XXX bis wann ist die Fahrbahn gesperrt?
-#: last_checked: 2015-07-14
-userdel	q4::inwork 11325,12021 11275,12055
+#: last_checked: 2015-07-18
+userdel	q3::inwork 11325,12021 11275,12055
 ',
          'type' => 'handicap'
        },
@@ -2971,14 +2953,45 @@ userdel	q4::inwork 11325,12021 11275,12055
 ',
          'type' => 'handicap'
        },
+       undef,
        {
-         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.341629.php',
-         'until' => 1438466400,
-         'text' => 'Stralauer Str.: Asphaltierungsarbeiten, Fahrbahn gesperrt, vom 20.07.2015 bis 01.08.2015',
-         'from' => 1437256800,
-         'id' => 2720,
-         'data' => '#: note: außerdem noch Bauarbeiten zwischen Kloster- und Littenstr., aber hier wird nicht voll gesperrt werden
-userdel	q4::inwork 10738,12364 10804,12291 10826,12279
+         'source_id' => 'IM_025047',
+         'until' => 1442062800,
+         'text' => 'Dietzgenstr.: Baustelle, Fahrtrichtung stadteinwärts gesperrt, offiziell auch für Radfahrer, bis 12.09.2015',
+         'from' => 1432616400,
+         'id' => 2721,
+         'data' => '	q4::inwork; 10127,19992 10167,19797 10195,19703 10224,19628 10257,19542
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'enger Eingang zum Friedrich-Ludwig-Jahn-Sportpark, falls Tor gesperrt ist, Anhänger können gar nicht passieren',
+         'from' => undef,
+         'id' => 2722,
+         'data' => '#: XXX_prog BNP in temp blockings wird zur Zeit weder im CGI noch in der Perl/Tk-Anwendung behandelt
+	BNP:30::trailer=no 10583,15208
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_025684',
+         'until' => 1441033200,
+         'text' => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Jordanstr. gesperrt, 20.07.2015 09:00 Uhr bis 31.08.2015 17:00 Uhr ',
+         'from' => 1437289200,
+         'id' => 2723,
+         'data' => 'userdel	q4::inwork 13357,9313 13489,9456 13606,9578 13645,9621
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_025689',
+         'until' => 1441033200,
+         'text' => 'Daimlerstr.: Baustelle, Fahrbahn zwischen Mauserstr. und Säntisstr. gesperrt, 20.07.2015 07:00 Uhr bis 31.08.2015 17:00 Uhr ',
+         'from' => 1437282000,
+         'id' => 2724,
+         'data' => 'userdel	q4::inwork 9695,1563 9626,1604 9519,1650 9493,1661 9420,1700
 ',
          'type' => 'handicap'
        }

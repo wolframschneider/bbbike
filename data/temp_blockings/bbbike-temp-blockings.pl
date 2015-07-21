@@ -20453,7 +20453,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: note: einige Meter östlich der Knaackstr. gesperrt
-userdel	q3::inwork 11101,14768 11187,14763
+userdel	q3::inwork 11094,14769 11187,14763
 EOF
      },
      { from  => 1338778800,
@@ -20796,6 +20796,7 @@ EOF
 #: note: geprüft am So, den 2015-03-08, vormittags: offen
 #: note: geprüft am So, den 2015-05-10, nachmittags: offen
 #: note: geprüft am So, den 2015-06-21, vormittags: offen
+#: note. geprüft am So, den 2015-07-19, nachmittags: offen
 userdel	2::night 14838,11410 14792,11391
 EOF
      },
@@ -21843,8 +21844,9 @@ EOF
      },
      { from  => $isodate2epoch->("2014-08-22 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2014-08-24 22:00:00"),
-       periodic => 1,
-       recurrences => [['yearly', days => 17, months => 8]],
+       ## für 2015 nicht geplant?
+       #periodic => 1,
+       #recurrences => [['yearly', days => 17, months => 8]],
        text  => 'Uhlandstr.: Veranstaltung (Uhlandstraßenfest) zwischen Kurfürstendamm und Lietzenburger Str., Straße gesperrt, 23. und 24. August 2014, jeweils ab 10 Uhr',
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/presse/archiv/20140820.1250.398770.html',
@@ -22327,7 +22329,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
        data  => <<EOF,
-userdel	2::temp 11317,14564 11255,14572 11163,14548
+userdel	2::temp 11317,14564 11255,14572 11155,14554
 EOF
      },
      { from  => $isodate2epoch->("2014-12-06 12:00:00"), # 1 Tag Vorlauf
@@ -22338,7 +22340,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
        data  => <<EOF,
-userdel	2::temp 11317,14564 11255,14572 11163,14548
+userdel	2::temp 11317,14564 11255,14572 11155,14554
 EOF
      },
      { from  => $isodate2epoch->("2014-12-13 12:00:00"), # 1 Tag Vorlauf
@@ -22349,7 +22351,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
        data  => <<EOF,
-userdel	2::temp 11317,14564 11255,14572 11163,14548
+userdel	2::temp 11317,14564 11255,14572 11155,14554
 EOF
      },
      { from  => $isodate2epoch->("2014-12-20 12:00:00"), # 1 Tag Vorlauf
@@ -22360,7 +22362,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.weihnachtsmarkt-berlin.net/advents-okomarkt-am-kollwitzplatz/',
        data  => <<EOF,
-userdel	2::temp 11317,14564 11255,14572 11163,14548
+userdel	2::temp 11317,14564 11255,14572 11155,14554
 EOF
      },
      { from  => 1384642800, # 2013-11-17 00:00
@@ -23963,7 +23965,7 @@ EOF
        type  => 'gesperrt',
        recurring => 1,
        data  => <<EOF,
-	q4::temp::clock 11163,14548 11255,14572 11317,14564
+	q4::temp::clock 11155,14554 11255,14572 11317,14564
 EOF
      },
      { from  => $isodate2epoch->("2015-04-03 10:00:00"), # 1 Tag Vorlauf
@@ -24247,12 +24249,12 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Märkisches Ufer: Sperrung der Fahrbahn vor der chinesischen Botschaft, Schieben über Gehweg',
+       text  => 'Märkisches Ufer: Sperrung der Fahrbahn vor der chinesischen Botschaft, Ausweichen über Gehweg',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann ist die Fahrbahn gesperrt?
-#: last_checked: 2015-07-14
-userdel	q4::inwork 11325,12021 11275,12055
+#: last_checked: 2015-07-18
+userdel	q3::inwork 11325,12021 11275,12055
 EOF
      },
      { from  => $isodate2epoch->("2015-07-22 00:00:00"), # 1436738400, # 2015-07-13 00:00
@@ -24309,13 +24311,50 @@ EOF
 EOF
      },
      { from  => 1437256800, # 2015-07-19 00:00
-       until => 1438466400, # 2015-08-02 00:00
+       until => 1437415645, # XXX anscheinend sind nur Fahrspuren gesperrt? --- 1438466400, # 2015-08-02 00:00
        text  => 'Stralauer Str.: Asphaltierungsarbeiten, Fahrbahn gesperrt, vom 20.07.2015 bis 01.08.2015',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.341629.php',
        data  => <<EOF,
 #: note: außerdem noch Bauarbeiten zwischen Kloster- und Littenstr., aber hier wird nicht voll gesperrt werden
 userdel	q4::inwork 10738,12364 10804,12291 10826,12279
+EOF
+     },
+     { from  => $isodate2epoch->("2015-05-26 07:00:00"),
+       until => $isodate2epoch->("2015-09-12 15:00:00"),
+       text  => 'Dietzgenstr.: Baustelle, Fahrtrichtung stadteinwärts gesperrt, offiziell auch für Radfahrer, bis 12.09.2015',
+       type  => 'handicap',
+       source_id => 'IM_025047',
+       data  => <<EOF,
+	q4::inwork; 10127,19992 10167,19797 10195,19703 10224,19628 10257,19542
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'enger Eingang zum Friedrich-Ludwig-Jahn-Sportpark, falls Tor gesperrt ist, Anhänger können gar nicht passieren',
+       type  => 'gesperrt',
+       recurring => 1,
+       data => <<EOF,
+#: XXX_prog BNP in temp blockings wird zur Zeit weder im CGI noch in der Perl/Tk-Anwendung behandelt
+	BNP:30::trailer=no 10583,15208
+EOF
+     },
+     { from  => 1437289200, # 2015-07-19 09:00
+       until => 1441033200, # 2015-08-31 17:00
+       text  => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Jordanstr. gesperrt, 20.07.2015 09:00 Uhr bis 31.08.2015 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_025684',
+       data  => <<EOF,
+userdel	q4::inwork 13357,9313 13489,9456 13606,9578 13645,9621
+EOF
+     },
+     { from  => 1437282000, # 2015-07-19 07:00
+       until => 1441033200, # 2015-08-31 17:00
+       text  => 'Daimlerstr.: Baustelle, Fahrbahn zwischen Mauserstr. und Säntisstr. gesperrt, 20.07.2015 07:00 Uhr bis 31.08.2015 17:00 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_025689',
+       data  => <<EOF,
+userdel	q4::inwork 9695,1563 9626,1604 9519,1650 9493,1661 9420,1700
 EOF
      },
     );
