@@ -235,3 +235,4 @@ cgi/download.cgi
 world/etc/lighttpd/test-more.conf
 world/web/data
 cgi/log.cgi
+world
