@@ -5,7 +5,7 @@
 
 jenkins-checkout-world:
 	if ! test -d world; then \
-  	  git clone https://github.com:wosch/bbbike-world.git world; \
+  	  git clone https://github.com/wosch/bbbike-world.git world; \
 	else \
   	  ( cd world; git pull ); \
 	fi
