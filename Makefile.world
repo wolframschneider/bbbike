@@ -1,13 +1,11 @@
 ###############################################################
 # Copyright (c) 2015 Wolfram Schneider, http://bbbike.org
 #
-# bootstrapping for bbbike-world
+# bootstrapping for bbbike-world for jenkins
 
-git_clone_opt=
-
-checkout-world:
+jenkins-checkout-world:
 	if ! test -d world; then \
-  	  git clone ${git_clone_opt} git@github.com:wosch/bbbike-world.git world; \
+  	  git clone https://github.com:wosch/bbbike-world.git world; \
 	else \
   	  ( cd world; git pull ); \
 	fi
@@ -16,5 +14,5 @@ help:
 	@echo ""
 	@echo "usage: make [ targets ... ]"
 	@echo ""
-	@echo "  [ help | checkout-world ]"
+	@echo "  [ help | jenkins-checkout-world ]"
 
