@@ -7,7 +7,7 @@ git_clone_opt="-q"
 
 checkout-world:
 	if ! test -d world; then \
-  	  git clone $git_clone_opt git@github.com:wosch/bbbike-world.git world; \
+  	  git clone ${git_clone_opt} git@github.com:wosch/bbbike-world.git world; \
 	else \
   	  ( cd world; git pull ); \
 	fi
