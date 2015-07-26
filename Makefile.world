@@ -3,7 +3,7 @@
 #
 # bootstrapping for bbbike-world
 
-git_clone_opt="-q"
+git_clone_opt=
 
 checkout-world:
 	if ! test -d world; then \
