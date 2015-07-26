@@ -9,8 +9,8 @@
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
-# Mail: eserte@users.sourceforge.net
-# WWW:  http://bbbike.sourceforge.net/
+# Mail: slaven@rezic.de
+# WWW:  http://bbbike.de
 #
 
 =head1 NAME
@@ -105,7 +105,7 @@ dort falsch interpretiert...
 
 =head1 AUTHOR
 
-Slaven Rezic <eserte@users.sourceforge.net>
+Slaven Rezic <slaven@rezic.de>
 
 =head1 COPYRIGHT
 

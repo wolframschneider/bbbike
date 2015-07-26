@@ -2062,6 +2062,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
 #: note: geprüft am So, den 2015-03-08, vormittags: offen
 #: note: geprüft am So, den 2015-05-10, nachmittags: offen
 #: note: geprüft am So, den 2015-06-21, vormittags: offen
+#: note. geprüft am So, den 2015-07-19, nachmittags: offen
 userdel	2::night 14838,11410 14792,11391
 ',
          'type' => 'gesperrt'
@@ -2197,7 +2198,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'from' => 1430704800,
          'id' => 2416,
          'data' => '#: next_check_id: KARLSHORSTER-2015
-#: last_checked: 2015-07-12
+#: last_checked: 2015-07-22
 #: next_check: 2015-09-21
 userdel	q3::inwork 15272,10790 15279,10862
 userdel	q3::inwork 15261,10738 15272,10790
@@ -2207,26 +2208,7 @@ userdel	q3::inwork 15261,10738 15272,10790
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://heyevent.de/event/6yi4pyoxrrtxca/tegeler-hafenfest-2015-jetzt-freunde-einladen',
-         'data' => 'userdel	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
-',
-         'periodic' => 1,
-         'until' => 1437343199,
-         'from' => 1436911200,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              16,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (16.07.2015 bis 19.07.2015)',
-         'id' => 2420,
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        {
          'source_id' => 'IM_019747',
@@ -2542,7 +2524,7 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
          'text' => 'Gartenufer: nachts ab Sonnenuntergang, spätestens ab 21.00 Uhr gesperrt',
          'from' => undef,
          'id' => 2595,
-         'data' => 'Gartenufer	2::night 6226,11405 6067,11479 5845,11615 5790,11643
+         'data' => 'Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 '
        },
        {
@@ -2766,7 +2748,7 @@ userdel	q3::inwork 5780,10542 5627,10637
          'text' => 'Wörther Str.: Wochenmarkt Donnerstag 10-20.30 Uhr',
          'from' => undef,
          'id' => 2686,
-         'data' => '	q4::temp::clock 11163,14548 11255,14572 11317,14564
+         'data' => '	q4::temp::clock 11155,14554 11255,14572 11317,14564
 ',
          'type' => 'gesperrt'
        },
@@ -2912,7 +2894,7 @@ userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
          'data' => '#: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.297071.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruen/artikel.295591.php
-#: last_checked: 2015-07-17 vvv
+#: last_checked: 2015-07-22 vvv
 #: check_frequency: 21d vvv
 userdel	2::inwork 14318,9688 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
 userdel	2::inwork 15052,9584 15174,9554 15321,9448 15432,9322 15513,9144 15527,9096 15638,9020
@@ -2938,12 +2920,12 @@ userdel	2::inwork 15561,8903 15630,8979 15638,9020 15778,8990
        undef,
        {
          'until' => undef,
-         'text' => 'Märkisches Ufer: Sperrung der Fahrbahn vor der chinesischen Botschaft, Schieben über Gehweg',
+         'text' => 'Märkisches Ufer: Sperrung der Fahrbahn vor der chinesischen Botschaft, Ausweichen über Gehweg',
          'from' => undef,
          'id' => 2714,
          'data' => '#: XXX bis wann ist die Fahrbahn gesperrt?
-#: last_checked: 2015-07-14
-userdel	q4::inwork 11325,12021 11275,12055
+#: last_checked: 2015-07-18
+userdel	q3::inwork 11325,12021 11275,12055
 ',
          'type' => 'handicap'
        },
@@ -2971,14 +2953,45 @@ userdel	q4::inwork 11325,12021 11275,12055
 ',
          'type' => 'handicap'
        },
+       undef,
        {
-         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.341629.php',
-         'until' => 1438466400,
-         'text' => 'Stralauer Str.: Asphaltierungsarbeiten, Fahrbahn gesperrt, vom 20.07.2015 bis 01.08.2015',
-         'from' => 1437256800,
-         'id' => 2720,
-         'data' => '#: note: außerdem noch Bauarbeiten zwischen Kloster- und Littenstr., aber hier wird nicht voll gesperrt werden
-userdel	q4::inwork 10738,12364 10804,12291 10826,12279
+         'source_id' => 'IM_025047',
+         'until' => 1442062800,
+         'text' => 'Dietzgenstr.: Baustelle, Fahrtrichtung stadteinwärts gesperrt, offiziell auch für Radfahrer, bis 12.09.2015',
+         'from' => 1432616400,
+         'id' => 2721,
+         'data' => '	q4::inwork; 10127,19992 10167,19797 10195,19703 10224,19628 10257,19542
+',
+         'type' => 'handicap'
+       },
+       {
+         'until' => undef,
+         'recurring' => 1,
+         'text' => 'enger Eingang zum Friedrich-Ludwig-Jahn-Sportpark, falls Tor gesperrt ist, Anhänger können gar nicht passieren',
+         'from' => undef,
+         'id' => 2722,
+         'data' => '#: XXX_prog BNP in temp blockings wird zur Zeit weder im CGI noch in der Perl/Tk-Anwendung behandelt
+	BNP:30::trailer=no 10583,15208
+',
+         'type' => 'gesperrt'
+       },
+       {
+         'source_id' => 'IM_025684',
+         'until' => 1441033200,
+         'text' => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Jordanstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 31.08.2015 17:00 Uhr ',
+         'from' => 1437289200,
+         'id' => 2723,
+         'data' => 'userdel	q3::inwork 13357,9313 13489,9456 13606,9578 13645,9621
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_025689',
+         'until' => 1441033200,
+         'text' => 'Daimlerstr.: Baustelle, Fahrbahn zwischen Mauserstr. und Säntisstr. gesperrt, 20.07.2015 07:00 Uhr bis 31.08.2015 17:00 Uhr ',
+         'from' => 1437282000,
+         'id' => 2724,
+         'data' => 'userdel	q4::inwork 9695,1563 9626,1604 9519,1650 9493,1661 9420,1700
 ',
          'type' => 'handicap'
        }
