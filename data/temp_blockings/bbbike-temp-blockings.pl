@@ -16327,7 +16327,7 @@ EOF
        text  => 'L 026 Brüssow - Prenzlau zw. Baumgarten und Prenzlau Grundhafter Straßenbau Vollsperrung 21.09.2009-30.12.2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 45393,105220 44963,104618 44698,104375 44487,104325 42804,104235 42306,103942 42002,103540 41700,103365
+userdel	2::inwork 45414,105210 44963,104618 44698,104375 44487,104325 42804,104235 42306,103942 42002,103540 41700,103365
 EOF
      },
      { from  => 1253397600, # 2009-09-20 00:00
@@ -16409,7 +16409,7 @@ EOF
        text  => 'B 001 zw. Manschnow und Abzw. Alt Tucheband Straßenbau Vollsperrung 28.09.2009-11.10.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 88364,18251 87135,17933 86429,17774 85640,17560
+userdel	2::inwork 88364,18235 87135,17933 86429,17774 85640,17560
 EOF
      },
      { from  => 1256857200, # 2009-10-30 00:00
@@ -18510,7 +18510,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/O-SG33-E/09/214-7',
        data  => <<EOF,
-userdel	2::inwork 46581,105900 47587,106693
+userdel	2::inwork 46615,105925 47587,106693
 EOF
      },
      { from  => 1284745737, # 2010-09-17 19:48
@@ -19111,7 +19111,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/O-SG33-E/10/214-10',
        data  => <<EOF,
-userdel	2::inwork 45393,105220 45906,105450 46581,105900 47587,106693
+userdel	2::inwork 45414,105210 45550,105305 45766,105353 45906,105450 45985,105518 46064,105570 46615,105925 47587,106693
 EOF
      },
      { from  => 1302991200, # 2011-04-17 00:00
@@ -19771,7 +19771,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/O-SG33-E/10/214-10',
        data  => <<EOF,
-userdel	2::inwork 45906,105450 46581,105900
+userdel	2::inwork 45906,105450 45985,105518 46064,105570 46615,105925
 EOF
      },
      { from  => 1313694142, # 2011-08-18 21:02
