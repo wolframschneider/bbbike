@@ -2650,8 +2650,8 @@ userdel	q3::inwork 4503,10497 4485,10307
        undef,
        {
          'source_id' => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/freybruecke/de/bau.shtml',
-         'until' => 1448636400,
-         'text' => 'Freybrücke: die Baustraße und die Treppe sind während der Bauarbeiten an der Freybrücke nicht benutzbar, bis November 2015',
+         'until' => 1451487600,
+         'text' => 'Freybrücke: die Baustraße und die Treppe sind während der Bauarbeiten an der Freybrücke nicht benutzbar, bis Dezember 2015',
          'from' => undef,
          'id' => 2641,
          'data' => '#: XXX siehe auch gesperrt-orig-Eintrag
@@ -2907,16 +2907,7 @@ userdel	2::inwork 15561,8903 15630,8979 15638,9020 15778,8990
          'type' => 'gesperrt'
        },
        undef,
-       {
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.339753.php',
-         'until' => 1438034399,
-         'text' => 'Franzensbader Straße: zwischen Hubertusallee und Berkaer Str. wegen Bauarbeiten in Richtung Süden gesperrt, 01.06.2015 bis voraussichtlich 27.07.2015 ',
-         'from' => 1433023200,
-         'id' => 2712,
-         'data' => 'userdel	q4::inwork; 2320,8722 2361,8608 2423,8427 2407,8148 2370,8109
-',
-         'type' => 'handicap'
-       },
+       undef,
        undef,
        {
          'until' => undef,
@@ -2992,6 +2983,16 @@ userdel	q3::inwork 11325,12021 11275,12055
          'from' => 1437282000,
          'id' => 2724,
          'data' => 'userdel	q4::inwork 9695,1563 9626,1604 9519,1650 9493,1661 9420,1700
+',
+         'type' => 'handicap'
+       },
+       {
+         'source_id' => 'IM_025719',
+         'until' => 1440774000,
+         'text' => 'Mehringbrücke: Fahrbahn Richtung Wilhelmstr. gesperrt, für Radfahrer umständliche Wegführung über linken Gehweg, bis 28.08.2015',
+         'from' => 1438198655,
+         'id' => 2725,
+         'data' => 'userdel	q4::inwork; 9416,10196 9409,10226 9404,10250
 ',
          'type' => 'handicap'
        }

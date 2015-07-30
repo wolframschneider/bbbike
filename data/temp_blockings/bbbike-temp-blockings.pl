@@ -1381,7 +1381,7 @@ EOF
        text  => 'B 198; zw. Althüttendorf und Joachimsthal Einbau Deckschicht Vollsperrung 26.11.2004-29.11.2004 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 34237,62950 34368,62531
+userdel	2 34268,62861 34368,62531
 EOF
      },
      { from  => 1101337200, # 2004-11-25 00:00
@@ -2581,8 +2581,8 @@ EOF
        text  => 'B96, Ortsdurchfahrt Altlüdersdorf gesperrt bis 31.08.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -5146,69565 -5209,70040
-userdel	q4 -5209,70040 -4978,71109
+userdel	q4 -5159,69646 -5207,70025
+userdel	q4 -5207,70025 -5001,70878 -4978,71109
 EOF
      },
      { from  => 1122933600, # 2005-08-02 00:00
@@ -2639,7 +2639,7 @@ EOF
        text  => 'B 96; (Gransee-Fürstenberg); zw. Gransee und Altlüdersdorf grundh. Ausbau Vollsperrung 01.08.2005-31.08.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -5575,69050 -5703,68140
+userdel	2::inwork -5575,69050 -5646,68779 -5703,68140
 EOF
      },
      { from  => 1128290400, # 2005-10-03 00:00
@@ -2909,8 +2909,8 @@ EOF
        text  => 'L 22; (Oranienburger Str.); OD Gransee grundh. Straßenbau Vollsperrung 19.09.2005-15.12.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -7696,66033 -7851,66418
-userdel	q4 -7873,66589 -7851,66418
+userdel	q4 -7749,66036 -7898,66351
+userdel	q4 -7925,66535 -7898,66351
 EOF
      },
      { from  => 1128290400, # 2005-10-03 00:00
@@ -4047,7 +4047,7 @@ EOF
        text  => 'L 220 OD Joachimsthal Bau Kreisverkehr Vollsperrung 28.03.2006-30.09.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 33787,63026 33254,63446
+userdel	q4::inwork 33733,63099 33254,63446
 EOF
      },
      { from  => 1144792800, # 2006-04-12 00:00
@@ -5599,7 +5599,7 @@ EOF
        text  => 'B 096 Strelitzer Str. OD Gransee, vom KVK in Ri Altlüdersdorf grundhafter Straßenbau Vollsperrung 21.08.2006-27.10.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -6382,67186 -7071,66471
+userdel	q4::inwork -6393,67155 -7056,66494
 EOF
      },
      { from  => 1156024800, # 2006-08-20 00:00
@@ -6581,7 +6581,7 @@ EOF
        text  => 'B 096 Strelitzer Str. OD Gransee, vom KVK in Ri Altlüdersdorf grundhafter Straßenbau Vollsperrung 21.08.2006-05.11.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -6382,67186 -7071,66471
+userdel	q4::inwork -6393,67155 -7056,66494
 EOF
      },
      { from  => 1162249200, # 2006-10-31 00:00
@@ -6589,7 +6589,7 @@ EOF
        text  => 'B 096 zw. OA Gransee und Löwenberg Deckeneinbau Vollsperrung 01.11.2006-11.11.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -7974,62020 -7906,61543 -7781,60550
+userdel	2::inwork -7981,61978 -7936,61527 -7781,60550
 EOF
      },
      { from  => 1162249200, # 2006-10-31 00:00
@@ -7673,7 +7673,7 @@ EOF
        text  => 'B 096 Höhe Krz..Buberow/ Meseberg grundhafter Straßenbau Vollsperrung 17.04.2007-21.04.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -7906,61543 -7974,62020 -7693,63274
+userdel	2::inwork -7936,61527 -7981,61978 -7693,63274
 EOF
      },
      { from  => 1176069600, # 2007-04-09 00:00
@@ -7811,7 +7811,7 @@ EOF
        text  => 'B 167 Eberswalder Str. OD Eberswalde, zw. Spechthausener Str. u. Schönholzer Str. Deckenerneuerung Vollsperrung 10.04.2007-24.04.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 32139,48523 33163,48487 34334,48750
+userdel	q4::inwork 32139,48523 33163,48487 33900,48695 34335,48744
 EOF
      },
      { from  => 1176069600, # 2007-04-09 00:00
@@ -8700,7 +8700,7 @@ EOF
        text  => 'K 6515 Blumenow-B 96 Dannenwalde zw. Blumenow und Dannenwalde Straßenbauarbeiten Vollsperrung 11.06.2007-31.08.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -5737,74650 -5525,74800 -4412,75987 -3920,76368 -1232,77061
+userdel	2::inwork -5737,74650 -5525,74800 -4541,75943 -4428,75969 -4067,76257 -1317,77071
 EOF
      },
      { from  => 1182204000, # 2007-06-19 00:00
@@ -9923,7 +9923,7 @@ EOF
        text  => 'L 214 OD Blumenow OD Blumenow Straßenbau+Kanalisationsbau Vollsperrung 10.09.2007-08.11.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -1406,77488 -1232,77061 -1123,76677
+userdel	2::inwork -1406,77488 -1317,77071 -1236,76594
 EOF
      },
      { from  => 1188424800, # 2007-08-30 00:00
@@ -10671,7 +10671,7 @@ EOF
        text  => 'B 167 Liebenberg - Löwenberg Bahnübergang in Neulöwenberg Gleisbauarbeiten Vollsperrung 21.11.2007-27.11.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -6342,54585 -5122,54564 -4424,54552 -4176,54548
+userdel	2::inwork -6342,54585 -5617,54573 -5122,54564 -4424,54552 -4170,54557
 EOF
      },
      { from  => 1195772400, # 2007-11-23 00:00
@@ -17653,7 +17653,7 @@ EOF
        text  => 'Sanierung des Bahnübergangs Bahnübergang zw. Gransee und Altlüdersdorf - vom 19.04.2010 22:00 Uhr bis 27.04.2010 06:00 Uhr Vollsperrung',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -5575,69050 -5511,69122 -5146,69565
+userdel	2::inwork -5575,69050 -5526,69101 -5191,69507 -5159,69646
 EOF
      },
      { from  => 1271829813, # 2010-04-21 08:03
@@ -19874,7 +19874,7 @@ EOF
        type  => 'gesperrt',
        source_id => '116501441',
        data  => <<EOF,
-userdel	2::inwork -5575,69050 -5511,69122 -5146,69565
+userdel	2::inwork -5575,69050 -5526,69101 -5191,69507 -5159,69646
 EOF
      },
      { from  => 1314943200, # 2011-09-02 08:00
@@ -23539,8 +23539,8 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2015-11-27 16:00:00"), # 1433109599, # 2015-05-31 23:59
-       text  => 'Freybrücke: die Baustraße und die Treppe sind während der Bauarbeiten an der Freybrücke nicht benutzbar, bis November 2015',
+       until => $isodate2epoch->("2015-12-30 16:00:00"), # 1433109599, # 2015-05-31 23:59
+       text  => 'Freybrücke: die Baustraße und die Treppe sind während der Bauarbeiten an der Freybrücke nicht benutzbar, bis Dezember 2015',
        type  => 'gesperrt',
        source_id => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/freybruecke/de/bau.shtml',
        data  => <<EOF,
@@ -24355,6 +24355,15 @@ EOF
        source_id => 'IM_025689',
        data  => <<EOF,
 userdel	q4::inwork 9695,1563 9626,1604 9519,1650 9493,1661 9420,1700
+EOF
+     },
+     { from  => 1438198655, # 2015-07-29 21:37
+       until => 1440774000, # 2015-08-28 17:00
+       text  => 'Mehringbrücke: Fahrbahn Richtung Wilhelmstr. gesperrt, für Radfahrer umständliche Wegführung über linken Gehweg, bis 28.08.2015',
+       type  => 'handicap',
+       source_id => 'IM_025719',
+       data  => <<EOF,
+userdel	q4::inwork; 9416,10196 9409,10226 9404,10250
 EOF
      },
     );
