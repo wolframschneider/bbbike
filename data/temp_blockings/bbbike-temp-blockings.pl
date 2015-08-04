@@ -249,14 +249,14 @@ Florastraße zwischen Grunowstraße und Berliner Straße, Baustelle, Straße in beid
        text  => 'Fürstenwalder Damm zwischen Bölschestraße und Hartlebenstraße Baustell stadtauswärts, Straße gesperrt, eine Umleitung ist eingerichtet, Dauer: 07.09.2003,04.00 Uhr bis 21.09.2003',
        type  => 'gesperrt',
      },
-     { from  => $isodate2epoch->("2014-09-12 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-09-14 21:00:00"),
+     { from  => $isodate2epoch->("2015-09-10 11:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-09-13 21:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 6, months => 9]],
-       text  => 'am Lichtenrader Dorfteich: Wein- und Winzerfest, vom 13.9.2014 11:00 bis 14.9.2014 21:00',
+       text  => 'am Lichtenrader Dorfteich: Wein- und Winzerfest, vom 11.9.2015 16:00 bis 13.9.2015 20:00',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: http://www.berlin.de/tickets/suche/detail.php?id=994455
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=1087093
 userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 EOF
      },
@@ -636,8 +636,8 @@ EOF
        text  => 'Hellersdorfer Straße (Hellersdorf) in beiden Richtungen zwischen Gülzower Straße und Heinrich-Grüber-Straße Straße vollständig gesperrt aufgrund eines Wasserrohrbruches.',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 22998,12453 22990,12493 22980,12545 22967,12647
-userdel	2 22998,12453 23033,12367 23100,12269
+userdel	2 23011,12416 22994,12496 22985,12550 22967,12647
+userdel	2 23011,12416 23033,12367 23100,12269
 EOF
      },
      { from  => undef,
@@ -2055,7 +2055,7 @@ EOF
        text  => 'L 15; (Fürstenberg-Rheinsberg); OD Menz Kanal-,Straßen- u. Brückenbau Vollsperrung 17.05.2005-08.07.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -15062,76937 -14623,77426
+userdel	q4 -15062,76937 -14733,77409
 EOF
      },
      { from  => 1116194400, # 2005-05-16 00:00
@@ -2737,7 +2737,7 @@ EOF
        text  => 'Glienicker Straße zwischen Grünauer Straße und Nipkowstraße Richtung Adlergestell wegen Bauarbeiten gesperrt bis 15.10.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 21829,4212 21679,4059 21496,3849 21489,3841 21411,3760 21357,3705 21324,3691 21308,3644 21275,3607 21244,3571 21198,3522 21153,3484 21055,3415 20967,3343 20927,3292 20832,3170
+userdel	q4; 21829,4212 21679,4059 21496,3849 21489,3841 21414,3757 21363,3699 21324,3691 21308,3644 21275,3607 21244,3571 21198,3522 21153,3484 21055,3415 20967,3343 20927,3292 20832,3170
 EOF
      },
      { from  => 1125351382, # 2005-08-29 23:36
@@ -6187,7 +6187,7 @@ EOF
        text  => 'L 015 Linow - Dorf Zechlin Linow - Dorf Zechlin, nördl. OE/OA Linow Ersatzneubau Durchlass Vollsperrung 02.10.2006-14.10.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -30855,77227 -30302,77196
+userdel	2::inwork -30876,77129 -30340,77066
 EOF
      },
      { from  => 1159999200, # 2006-10-05 00:00
@@ -14313,7 +14313,7 @@ EOF
        text  => 'L 015 Menz - Rheinsberg OD Menz Straßenbau Vollsperrung 25.05.2009-19.06.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -15379,77129 -17592,77812
+userdel	q4::inwork -15379,77129 -16057,77339 -17592,77812
 EOF
      },
      { from  => 1244412000, # 2009-06-08 00:00
@@ -14321,7 +14321,7 @@ EOF
        text  => 'L 015 Menz - Rheinsberg zw. Menz u. Rheinsberg Straßenbau Vollsperrung 09.06.2009-20.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -24815,76635 -23305,77059 -22937,77020 -22504,76981 -21965,77030 -21728,77161 -21621,77313 -20227,77714 -19875,77881 -19494,78080 -19300,78146 -18544,78020 -17592,77812
+userdel	2::inwork -24767,76517 -23245,76952 -22950,76882 -22392,76828 -22046,76942 -21713,77018 -21558,77171 -20227,77714 -19875,77881 -19560,77995 -19306,78208 -18903,78024 -18615,77979 -17592,77812
 EOF
      },
      { from  => 1248559200, # 2009-07-26 00:00
@@ -14917,7 +14917,7 @@ EOF
        text  => 'L 015 Rheinsberg - Dorf Zechlin zw. Abzw. Zühlen und Linow Straßenneubau, Vollsperrung 27.07.2009-11.09.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -29636,76481 -28819,76060 -28278,75780 -27371,75722
+userdel	2::inwork -29604,76391 -28840,76019 -28297,75740 -27679,75655 -27336,75747 -27175,75718
 EOF
      },
      { from  => 1252792800, # 2009-09-13 00:00
@@ -14925,7 +14925,7 @@ EOF
        text  => 'L 015 Rheinsberg - Dorf Zechlin zw. Rheinsberg und Abzw. Zühlen Straßenneubau, Vollsperrung 14.09.2009-25.09.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -26077,76116 -26509,76113 -26787,75950 -27091,75809 -27371,75722
+userdel	2::inwork -26350,76073 -26474,76051 -26746,75931 -27175,75718
 EOF
      },
      { from  => 1247349600, # 2009-07-12 00:00
@@ -15085,7 +15085,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013726',
        data  => <<EOF,
-userdel	q4::inwork; 21968,-15 21977,-8 22108,82 22145,208
+userdel	q4::inwork; 21968,-15 21977,-8 22073,59 22145,208
 EOF
      },
      { from  => 1248559200, # 2009-07-26 00:00
@@ -15267,7 +15267,7 @@ EOF
        text  => 'L 015 Schloßstr., Menzer Str. OD Rheinsberg, zw. Berliner Str. u. Kiefernweg Straßenbauarbeiten Vollsperrung 27.07.2009-18.12.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -24965,76568 -25211,76393 -25508,76444
+userdel	q4::inwork -25211,76393 -25508,76444
 EOF
      },
      { from  => 1249164000, # 2009-08-02 00:00
@@ -16376,11 +16376,11 @@ EOF
 userdel	2::temp 8424,12853 8309,12758 8306,12609
 EOF
      },
-     { from  => $isodate2epoch->("2014-09-19 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-09-21 20:00:00"),
+     { from  => $isodate2epoch->("2015-09-18 11:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-09-20 20:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 19, months => 9]],
-       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbst in der Preußenallee), Straße vollständig gesperrt (20. und 21. September 2014) ',
+       text  => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbst in Westend), Straße vollständig gesperrt (19.09.2015 bis 20.09.2015) ',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
@@ -16457,7 +16457,7 @@ EOF
        text  => 'L 015 Rheinsberg - Dorf Zechlin zw. Rheinsberg und Abzw. Zühlen Straßenneubau mit KV Vollsperrung 28.09.2009-30.10.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -26509,76113 -26787,75950 -27091,75809 -27371,75722
+userdel	2::inwork -26474,76051 -26746,75931 -27175,75718
 EOF
      },
      { from  => 1254002400, # 2009-09-27 00:00
@@ -16869,7 +16869,7 @@ EOF
        text  => 'B 122 Zechlinerhütte - Wesenberg zw. Abzw. Kleinzerlang und Prebelowbrücke Deckenerneuerung Vollsperrung 16.11.2009-18.12.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -26520,83231 -26098,84240 -26120,84667 -26316,84900
+userdel	2::inwork -26740,82997 -26137,84005 -26120,84667 -26316,84900
 EOF
      },
      { from  => 1256425200, # 2009-10-25 01:00
@@ -17609,7 +17609,7 @@ EOF
        type  => 'handicap',
        source_id => 'LSW-SG33-K10037',
        data  => <<EOF,
-userdel	q4::inwork -33491,80874 -33511,80553
+userdel	q4::inwork -33491,80874 -33489,80472
 EOF
      },
      { from  => 1271281239, # 2010-04-14 23:40
@@ -18224,7 +18224,8 @@ EOF
        recurring => 1,
        data  => <<EOF,
 #: note: allerdings keine Hinweise auf eine verbotene Durchfahrt gesehen
-(Gewerbegebiet)	2 21617,3287 21826,3129 21770,2936 21816,2919 21939,2894 21984,2897 22004,2904
+(Gewerbegebiet)	2 21617,3287 21826,3129 21770,2936
+(Gewerbegebiet)	2 21685,2964 21770,2936 21816,2919 21939,2894 21984,2897 22004,2904
 EOF
      },
      { from  => 1279577078, # 2010-07-20 00:04
@@ -21244,15 +21245,18 @@ EOF
      },
      { from  => $isodate2epoch->("2015-05-04 04:00:00"), # ein Tag Vorlauf
        until => $isodate2epoch->("2015-09-21 18:00:00"),
-       text  => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Hauptstr. gesperrt, langsame Umfahrung über Fußgängerführung möglich, 04.05.2015 bis 21.09.2015',
+       text  => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Hauptstr. zeitweise komplett gesperrt, auch für Fußgänger, 04.05.2015 bis 21.09.2015',
        type  => 'handicap',
        source_id => 'IM_024846',
        data  => <<EOF,
-#: next_check_id: KARLSHORSTER-2015
-#: last_checked: 2015-07-22
-#: next_check: 2015-09-21
-userdel	q3::inwork 15272,10790 15279,10862
-userdel	q3::inwork 15261,10738 15272,10790
+#: next_check_id: KARLSHORSTER-2015 vvv
+#: last_checked: 2015-08-02 vvv
+#: next_check: 2015-09-21 vvv
+userdel	2::inwork 15272,10790 15279,10862
+userdel	2::inwork 15261,10738 15272,10790
+#: next_check ^^^
+#: last_checked ^^^
+#: next_check_id ^^^
 EOF
      },
      { from  => 1361168940, # 2013-02-18 07:29
@@ -22491,7 +22495,7 @@ EOF
        data  => <<EOF,
 userdel	2::temp 21055,3415 21153,3484 21198,3522 21244,3571 21275,3607 21256,3640 21220,3642
 userdel	2::temp 20833,3519 20906,3433 20967,3343
-userdel	2::temp 21503,3592 21357,3705
+userdel	2::temp 21503,3592 21363,3699
 userdel	2::temp 20992,3493 20924,3577
 userdel	2::temp 21153,3484 21119,3572 20992,3493 21055,3415 20967,3343 20927,3292 20832,3170 20772,3244 20717,3310 20644,3395
 userdel	2::temp 21352,3599 21308,3644 21275,3607
@@ -24056,7 +24060,7 @@ userdel	q4::inwork; 3807,11859 3666,11855
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2015-12-01 00:00:00"), # undef, # XXX
+       until => 1438629931, # $isodate2epoch->("2015-12-01 00:00:00"), # undef, # XXX
        text  => 'Dickhardstr.: Bauarbeiten an der Rheinstr., direkte Durchfahrt gesperrt, Ende der Bauarbeiten im Dezember 2015',
        type  => 'handicap',
        data  => <<EOF,
@@ -24258,7 +24262,7 @@ userdel	q3::inwork 11325,12021 11275,12055
 EOF
      },
      { from  => $isodate2epoch->("2015-07-22 00:00:00"), # 1436738400, # 2015-07-13 00:00
-       until => $isodate2epoch->("2017-07-14 00:00:00"),
+       until => 1438715522, # XXX hat noch nicht angefangen --- $isodate2epoch->("2017-07-14 00:00:00"),
        text  => 'Jülicher Str. und Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke, voraussichtlich ab 23. Juli 2015 für ca. zwei Jahre',
        type  => 'handicap',
        source_id => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
@@ -24321,7 +24325,7 @@ userdel	q4::inwork 10738,12364 10804,12291 10826,12279
 EOF
      },
      { from  => $isodate2epoch->("2015-05-26 07:00:00"),
-       until => $isodate2epoch->("2015-09-12 15:00:00"),
+       until => 1438545929, # $isodate2epoch->("2015-09-12 15:00:00"),
        text  => 'Dietzgenstr.: Baustelle, Fahrtrichtung stadteinwärts gesperrt, offiziell auch für Radfahrer, bis 12.09.2015',
        type  => 'handicap',
        source_id => 'IM_025047',
@@ -24364,6 +24368,23 @@ EOF
        source_id => 'IM_025719',
        data  => <<EOF,
 userdel	q4::inwork; 9416,10196 9409,10226 9404,10250
+EOF
+     },
+     { from  => undef,
+       until => $isodate2epoch->("2015-08-06 23:59:59"),
+       # wegen Maccabi Games
+       text  => 'Ziegrastr.: Durchfahrt komplett gesperrt, auch für Fußgänger und Radfahrer, bis zum 6.8.2015',
+       data  => <<EOF,
+	2::temp 14233,8072 14174,7505
+EOF
+     },
+     { from  => 1438145220, # 2015-07-29 06:47
+       until => 1441044000, # 2015-08-31 20:00
+       text  => 'Gorkistr.: Vollsperrung, Schrankenstörung',
+       type  => 'gesperrt',
+       source_id => 'IM_025809',
+       data  => <<EOF,
+userdel	2::inwork 2295,20358 2358,20368 2415,20380
 EOF
      },
     );
