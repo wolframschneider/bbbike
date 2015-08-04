@@ -1,3 +1,11 @@
+
+.ifndef MISCSRCDIR
+.error "Do not use Makefile.garmin directly, use through the main Makefile!"
+.endif
+
+MKGMAP_VER?=		2310 # matches MKGMAP_VER in misc/Makefile
+MKGMAP?=		java -Xmx1024m -jar /usr/local/src/mkgmap-r${MKGMAP_VER}/mkgmap.jar
+
 ######################################################################
 # bbd2osm stuff
 
