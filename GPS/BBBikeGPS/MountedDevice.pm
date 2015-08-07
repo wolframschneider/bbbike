@@ -16,8 +16,9 @@
     require GPS;
     push @GPS::BBBikeGPS::MountedDevice::ISA, 'GPS';
 
+    use strict;
     use vars qw($VERSION);
-    $VERSION = '0.03';
+    $VERSION = '0.04';
 
     sub has_gps_settings { 1 }
 
@@ -52,13 +53,51 @@
 	}
 	my($ofh,$ofile) = File::Temp::tempfile(SUFFIX => ".gpx",
 					       UNLINK => 1);
-	main::status_message("Could not create temporary file: $!", "die") if !$ofh;
+	_status_message("Could not create temporary file: $!", "die") if !$ofh;
 	print $ofh $s->bbd2gpx(-as => "route",
 			       -name => $simplified_route->{routename},
 			       -number => $args{-routenumber},
 			       #-withtripext => 1,
 			      );
 	close $ofh;
+
+	$self->maybe_mount
+	    (sub {
+		 my($mount_point) = @_;
+
+		 my $subdir = 'Garmin/GPX'; # XXX configuration parameter, default for Garmin
+
+		 (my $safe_routename = $simplified_route->{routename}) =~ s{[^A-Za-z0-9_-]}{_}g;
+		 require POSIX;
+		 $safe_routename = POSIX::strftime("%Y%m%d_%H%M%S", localtime) . '_' . $safe_routename . '.gpx';
+
+		 require File::Copy;
+		 my $dest = "$mount_point/$subdir/$safe_routename";
+		 File::Copy::cp($ofile, $dest)
+			 or die "Failure while copying $ofile to $dest: $!";
+
+		 unlink $ofile; # as soon as possible
+
+		 +{ files => [$dest] };
+	     });
+
+    }
+
+    sub transfer { } # NOP
+
+    # maybe_mount() may also be called outside of the Perl/Tk
+    # application for scripts which have to copy from or to the
+    # mounted gps device. Simple usage example:
+    #
+    #    perl -w -Ilib -MGPS::BBBikeGPS::MountedDevice -e 'GPS::BBBikeGPS::MountedDevice->maybe_mount(sub { my $dir = shift; system("ls -al $dir"); 1 })'
+    #
+    # Currently only the internal flash card is supported, but in
+    # future this can be controlled with options.
+    sub maybe_mount {
+	my(undef, $cb, %opts) = @_;
+
+	######################################################################
+	# do the mount (maybe)
 
 	my($mount_point, $mount_device, @mount_opts);
 	# XXX configuration stuff vvv
@@ -81,7 +120,7 @@
 		}
 	    }
 	    if (!$mount_point) {
-		main::status_message("The Garmin device is not mounted --- is the device in USB mass storage mode?", 'error');
+		_status_message("The Garmin device is not mounted --- is the device in USB mass storage mode?", 'error');
 		return;
 	    }
 	} else { # e.g. linux, assume device is already mounted
@@ -97,12 +136,11 @@
 		}
 	    }
 	    if (!$mount_point) {
-		main::status_message("The Garmin device is not mounted in the expected mount points (tried @mount_point_candidates)", 'error');
+		_status_message("The Garmin device is not mounted in the expected mount points (tried @mount_point_candidates)", 'error');
 		return;
 	    }
 	}
 	# XXX configuration stuff ^^^
-	my $subdir = 'Garmin/GPX'; # XXX configuration parameter, default for Garmin
 
 	my $need_umount;
 	if (!_is_mounted($mount_point)) {
@@ -114,7 +152,7 @@
 		}
 		if (!_is_mounted($mount_point)) {
 		    # This seems to be slow, so loop for a while
-		    main::status_message("Mounting is slow, wait for a while...", "infoauto");
+		    _status_message("Mounting is slow, wait for a while...", "infoauto");
 		    my $success;
 		    eval {
 			for (1..20) {
@@ -126,28 +164,25 @@
 			}
 		    };
 		    warn $@ if $@;
-		    main::info_auto_popdown();
+		    _info_auto_popdown();
 		    if (!$success) {
 			die "Mounting using <@mount_cmd> was not successful";
 		    }
 		}
 		$need_umount = 1;
 	    } else {
-		main::status_message("Please mount the Garmin device on $mount_point manually", 'error');
+		_status_message("Please mount the Garmin device on $mount_point manually", 'error');
 		return;
 	    }
 	}
 
-	(my $safe_routename = $simplified_route->{routename}) =~ s{[^A-Za-z0-9_-]}{_}g;
-	require POSIX;
-	$safe_routename = POSIX::strftime("%Y%m%d_%H%M%S", localtime) . '_' . $safe_routename . '.gpx';
+	######################################################################
+	# call the callback
 
-	require File::Copy;
-	my $dest = "$mount_point/$subdir/$safe_routename";
-	File::Copy::cp($ofile, $dest)
-		or die "Failure while copying $ofile to $dest: $!";
+	my $info = $cb->($mount_point);
 
-	unlink $ofile; # as soon as possible
+	######################################################################
+	# do the unmount (maybe)
 
 	if ($need_umount) {
 	    system("umount", $mount_point);
@@ -158,18 +193,22 @@
 		die "$mount_point is still mounted, despite of umount call";
 	    }
 	} else {
-	    # Make sure file is really written if possible
-	    if (eval { require File::Sync; 1 }) {
-		if (open my $fh, $dest) {
-		    File::Sync::fsync($fh);
+	    # Make sure generated file(s) are really written if possible
+	    if (ref $info eq 'HASH' && $info->{files}) {
+		my @sync_files = @{ $info->{files} || [] };
+		if (eval { require File::Sync; 1 }) {
+		    for my $sync_file (@sync_files) {
+			if (open my $fh, $sync_file) {
+			    File::Sync::fsync($fh);
+			}
+		    }
+		} elsif (eval { require BBBikeUtil; 1 } && BBBikeUtil::is_in_path('fsync')) {
+		    system('fsync', @sync_files);
 		}
-	    } elsif (eval { require BBBikeUtil; 1 } && BBBikeUtil::is_in_path('fsync')) {
-		system('fsync', $dest);
 	    }
 	}
-    }
 
-    sub transfer { } # NOP
+    }
 
     sub _is_mounted { # XXX use a module?
 	if ($^O eq 'MSWin32') {
@@ -245,6 +284,20 @@
 	# XXX configuration stuff ^^^
 	warn "Cannot find garmin $garmin_disk_type /var/log/messages, use '$mount_device' as fallback...\n";
 	$mount_device;
+    }
+
+    # Logging, should work within Perl/Tk app and outside
+    sub _status_message {
+	if (defined &main::status_message) {
+	    main::status_message(@_);
+	} else {
+	    print STDERR "$_[0]\n";
+	}
+    }
+    sub _info_auto_popdown {
+	if (defined &main::info_auto_popdown) {
+	    main::info_auto_popdown();
+	} # no else
     }
 
 }
