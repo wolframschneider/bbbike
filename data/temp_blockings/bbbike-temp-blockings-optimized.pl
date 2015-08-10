@@ -5,9 +5,9 @@ push @temp_blocking,
          'data' => '#: by: http://www.berlin.de/tickets/suche/detail.php?id=1087093
 userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
 ',
-         'periodic' => 1,
-         'until' => 1442170800,
          'from' => 1441875600,
+         'id' => 31,
+         'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
@@ -19,7 +19,7 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
                           ],
          'text' => 'am Lichtenrader Dorfteich: Wein- und Winzerfest, vom 11.9.2015 16:00 bis 13.9.2015 20:00',
          'type' => 'gesperrt',
-         'id' => 31
+         'until' => 1442170800
        },
        undef,
        undef,
@@ -724,9 +724,9 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
          'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20150404
 userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
 ',
-         'periodic' => 1,
-         'until' => 1443995999,
          'from' => 1443823200,
+         'id' => 731,
+         'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
@@ -738,7 +738,7 @@ userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
                           ],
          'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 3. und 4.10.2015',
          'type' => 'gesperrt',
-         'id' => 731
+         'until' => 1443995999
        },
        undef,
        undef,
@@ -1634,14 +1634,14 @@ userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
        undef,
        undef,
        {
-         'until' => undef,
-         'text' => 'Anwohner haben den Uferweg am Griebnitzsee versperrt',
-         'from' => undef,
-         'id' => 1625,
          'data' => 'userdel	2::temp -8625,-1176 -8700,-997 -8813,-933 -8913,-813 -9103,-813 -9239,-739 -9337,-668 -9365,-610 -9454,-434 -9562,-325
 userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1625,
+         'text' => 'Anwohner haben den Uferweg am Griebnitzsee versperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -1826,11 +1826,6 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt',
-         'from' => undef,
-         'id' => 1808,
          'data' => '#: note: Sperrung bestätigt von Stefan (s.sms): vvv
 #: note: genauere Uhrzeit von Dieter Heimann
 #: confirmed_by: um 20:30 Uhr steht man vor einem geschlossenen Tor, zumindest an der Nordostseite (2012-08)
@@ -1838,14 +1833,14 @@ Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wo
 Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21475,7500 21341,7487 21025,7349
 #: note: ^^^
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1808,
+         'recurring' => 1,
+         'text' => 'Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Neuer Garten: Wege sind nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet',
-         'from' => undef,
-         'id' => 1809,
          'data' => '	2::night -11615,853 -11715,959 -11818,993 -11871,1087 -12081,1168 -12094,1273 -12133,1323
 	2::night -11650,590 -11603,721 -11615,853
 	2::night -11510,810 -11562,918 -11575,1031 -11537,1206 -11544,1262 -11580,1281 -11871,1185 -11990,1214 -12124,1359 -12135,1358
@@ -1858,184 +1853,189 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
 	2::night -12449,-186 -12440,-181 -12449,-134 -12424,-107
 (Ökonomieweg - Leistikowstr.)	2::night -12205,732 -12266,731 -12297,738
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1809,
+         'recurring' => 1,
+         'text' => 'Neuer Garten: Wege sind nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Sanssouci: Wege sind nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet',
-         'from' => undef,
-         'id' => 1810,
          'data' => '(Am Neuen Palais, direkter Weg)	2::night -15810,-1274 -15820,-1146 -15854,-656
 (Am Grünen Gitter, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -13857,-1040 -14159,-1119 -14171,-1026
 (Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -14171,-1026 -14482,-1043 -14622,-1138 -14865,-1118 -15025,-1096 -15553,-1139 -15651,-1137 -15820,-1146
 (Lennestr. - Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -14614,-1342 -14856,-1223 -14865,-1118
 (Affengang, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -14129,-1258 -14131,-1181 -14159,-1119
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1810,
+         'recurring' => 1,
+         'text' => 'Sanssouci: Wege sind nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Schloßpark Charlottenburg: bei Dunkelheit geschlossen',
-         'from' => undef,
-         'id' => 1811,
          'data' => '	2::night 3332,12742 3231,12749 3127,12793 3065,12975 3016,13315 2987,13448 2953,13489 2950,13552
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1811,
+         'recurring' => 1,
+         'text' => 'Schloßpark Charlottenburg: bei Dunkelheit geschlossen',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => '(Neue Grünstr. - Alte Jakobstr.): Der Hofdurchgang ist nachts zwischen 23 und 6 Uhr sowie an Sonn- und Feiertagen geschlossen',
-         'from' => undef,
-         'id' => 1812,
          'data' => '	2::night:weekend 10624,11548 10526,11612
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1812,
+         'recurring' => 1,
+         'text' => '(Neue Grünstr. - Alte Jakobstr.): Der Hofdurchgang ist nachts zwischen 23 und 6 Uhr sowie an Sonn- und Feiertagen geschlossen',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Eberbacher Str.: Di und Fr 08.00-13.00 wegen Wochenmarkt zwischen Binger Str und Rüdesheimer Str gesperrt',
-         'from' => undef,
-         'id' => 1813,
          'data' => '######################################################################
 # Wochenmärkte vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 	q4::temp:clock 4397,7375 4330,7375 4162,7375 4059,7375
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1813,
+         'recurring' => 1,
+         'text' => 'Eberbacher Str.: Di und Fr 08.00-13.00 wegen Wochenmarkt zwischen Binger Str und Rüdesheimer Str gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Nestorstr.: Di und Fr 08.00-13.00 Wochenmarkt, Behinderungen möglich',
-         'from' => undef,
-         'id' => 1814,
          'data' => '	q4::temp:clock 3374,10201 3359,9968 3348,9806
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1814,
+         'recurring' => 1,
+         'text' => 'Nestorstr.: Di und Fr 08.00-13.00 Wochenmarkt, Behinderungen möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Maybachufer: Di und Fr 11.00-18.30 Wochenmarkt, sowie Sa 11.00-17.00 "Neuköllner Stoff", Behinderungen möglich',
-         'from' => undef,
-         'id' => 1815,
          'data' => '#: note: der Abbau dürfte mindestens eine weitere Stunde dauern...
 	q4::temp:clock 11543,10015 11669,9987 11880,9874
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1815,
+         'recurring' => 1,
+         'text' => 'Maybachufer: Di und Fr 11.00-18.30 Wochenmarkt, sowie Sa 11.00-17.00 "Neuköllner Stoff", Behinderungen möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Friedrichstraße: zwischen Franz-Klühs-Str. und Mehringplatz, Markt Mo und Do 10.00-18.00, Behinderungen möglich',
-         'from' => undef,
-         'id' => 1816,
          'data' => '#: note: http://www.berlin.de/ba-friedrichshain-kreuzberg/wirtschaftsfoerderung/wirtschaftsstandort/maerkte.html
 # REMOVED (Montag stimmt, geprüft!) --- #: XXX Überprüfen, ob die Wochentage (Mo+Do und _nicht_ Sa) stimmen
 	q3::temp:clock 9570,10566 9587,10421
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1816,
+         'recurring' => 1,
+         'text' => 'Friedrichstraße: zwischen Franz-Klühs-Str. und Mehringplatz, Markt Mo und Do 10.00-18.00, Behinderungen möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Crellestr: Mi und Sa 10.00-15.00 Wochenmarkt, Behinderungen möglich',
-         'from' => undef,
-         'id' => 1817,
          'data' => '	q4::temp:clock 7882,9490 7836,9413 7771,9389
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1817,
+         'recurring' => 1,
+         'text' => 'Crellestr: Mi und Sa 10.00-15.00 Wochenmarkt, Behinderungen möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Charlottenbrunner Str.: Mo und Do 09.00-14.00 Wochenmarkt, Ausweichen auf Gehweg',
-         'from' => undef,
-         'id' => 1818,
          'data' => '	q4::temp:clock 3073,9020 2972,9037
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1818,
+         'recurring' => 1,
+         'text' => 'Charlottenbrunner Str.: Mo und Do 09.00-14.00 Wochenmarkt, Ausweichen auf Gehweg',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Karl-August-Platz, Weimarer Str.: Mi 08.00-13.00 und Sa 08.00-14.00 Wochenmarkt, Behinderungen möglich',
-         'from' => undef,
-         'id' => 1819,
          'data' => '	q4::temp:clock 4101,11347 4101,11233
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1819,
+         'recurring' => 1,
+         'text' => 'Karl-August-Platz, Weimarer Str.: Mi 08.00-13.00 und Sa 08.00-14.00 Wochenmarkt, Behinderungen möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Richard-Wagner-Platz: Wochenmarkt Mo und Do 08.00-13.00, Behinderungen möglich',
-         'from' => undef,
-         'id' => 1820,
          'data' => '	q4::temp:clock 3763,12279 3701,12279
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1820,
+         'recurring' => 1,
+         'text' => 'Richard-Wagner-Platz: Wochenmarkt Mo und Do 08.00-13.00, Behinderungen möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Ladiusmarkt in der Andréezeile: Wochenmarkt Samstag 08.00-13.00, Behinderungen möglich',
-         'from' => undef,
-         'id' => 1821,
          'data' => '	q4::temp:clock 1020,496 1078,443
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1821,
+         'recurring' => 1,
+         'text' => 'Ladiusmarkt in der Andréezeile: Wochenmarkt Samstag 08.00-13.00, Behinderungen möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Uferpromenade und Invalidenfriedhof nachts geschlossen, Öffnungszeiten Winter (1.10-15.3.) 7.00-18.30, Sommer (16.3.-30.9.) 7.00-21.30',
-         'from' => undef,
-         'id' => 1823,
          'data' => '#: by: Marek Bänsch:
 #: confirmed_by: srt
 	2::night 8337,13541 8248,13659 8101,13901 8119,13912 8096,13951 8011,14096
 	2::night 8096,13951 8200,14016
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1823,
+         'recurring' => 1,
+         'text' => 'Uferpromenade und Invalidenfriedhof nachts geschlossen, Öffnungszeiten Winter (1.10-15.3.) 7.00-18.30, Sommer (16.3.-30.9.) 7.00-21.30',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Park Biesdorf nachts geschlossen, Öffnungszeiten 6.00-23.00',
-         'from' => undef,
-         'id' => 1824,
          'data' => '	2::night 21150,11925 21132,11943 21100,11960 20862,12027 20810,12031
 	2::night 20862,12027 20836,11768
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1824,
+         'recurring' => 1,
+         'text' => 'Park Biesdorf nachts geschlossen, Öffnungszeiten 6.00-23.00',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Breite Gasse: nur von 9 Uhr bis zum Einschalten der Straßenbeleuchtung geöffnet',
-         'from' => undef,
-         'id' => 1825,
          'data' => '	2::night 22312,4329 22252,4362
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1825,
+         'recurring' => 1,
+         'text' => 'Breite Gasse: nur von 9 Uhr bis zum Einschalten der Straßenbeleuchtung geöffnet',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Park am Nordbahnhof: im Sommerhalbjahr zwischen 6.30 und 22.00 Uhr geöffnet, im Winterhalbjahr zwischen 7.30 und 19.00 Uhr',
-         'from' => undef,
-         'id' => 1826,
          'data' => '	2::night 8825,14401 8868,14442 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
 	2::night 8913,14485 9119,14255 9175,14193 9181,14186
 	2::night 9175,14193 9144,14169 9081,14232 8868,14442
 	2::night 9119,14255 9081,14232 8992,14176
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1826,
+         'recurring' => 1,
+         'text' => 'Park am Nordbahnhof: im Sommerhalbjahr zwischen 6.30 und 22.00 Uhr geöffnet, im Winterhalbjahr zwischen 7.30 und 19.00 Uhr',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -2095,37 +2095,37 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Breslauer Platz: Wochenmarkt Mittwoch 8-13 Uhr, Donnerstag 12-17 Uhr, Samstag 8-14 Uhr, Behinderungen möglich',
-         'from' => undef,
-         'id' => 1884,
          'data' => '# REMOVED (hier wird neu gebaut) ---	q4::temp:clock 5897,7337 5810,7337
 	q4::temp:clock 5810,7337 5817,7223
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1884,
+         'recurring' => 1,
+         'text' => 'Breslauer Platz: Wochenmarkt Mittwoch 8-13 Uhr, Donnerstag 12-17 Uhr, Samstag 8-14 Uhr, Behinderungen möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Erich-Steinfurth-Str.: Antikmarkt am Ostbahnhof, Sonntag 9-16 Uhr, nur Schieben möglich',
-         'from' => undef,
-         'id' => 1886,
          'data' => '	q4::temp:clock 12596,11696 12453,11790 12366,11808
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1886,
+         'recurring' => 1,
+         'text' => 'Erich-Steinfurth-Str.: Antikmarkt am Ostbahnhof, Sonntag 9-16 Uhr, nur Schieben möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Am Kupfergraben und am Zeughaus: Antik-, Buch- und Kunstmarkt, Samstag und Sonntag ca. 10-17 Uhr, nur Schieben möglich',
-         'from' => undef,
-         'id' => 1887,
          'data' => '	q4::temp:clock 9754,12775 9654,12882 9618,12907 9533,12925
 	q4::temp:clock 9919,12613 9956,12523 9984,12426
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1887,
+         'recurring' => 1,
+         'text' => 'Am Kupfergraben und am Zeughaus: Antik-, Buch- und Kunstmarkt, Samstag und Sonntag ca. 10-17 Uhr, nur Schieben möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -2152,9 +2152,9 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'data' => 'userdel	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
 ',
-         'periodic' => 1,
-         'until' => 1442772000,
          'from' => 1442566800,
+         'id' => 1910,
+         'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
@@ -2166,7 +2166,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
                           ],
          'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbst in Westend), Straße vollständig gesperrt (19.09.2015 bis 20.09.2015) ',
          'type' => 'gesperrt',
-         'id' => 1910
+         'until' => 1442772000
        },
        undef,
        undef,
@@ -2214,45 +2214,45 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Weg vor der Max-Schmelling-Halle: während Veranstaltungen und nachts von 22 bis 6 Uhr gesperrt',
-         'from' => undef,
-         'id' => 1956,
          'data' => '#: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
 	2::night 10456,15561 10512,15406
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1956,
+         'recurring' => 1,
+         'text' => 'Weg vor der Max-Schmelling-Halle: während Veranstaltungen und nachts von 22 bis 6 Uhr gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Luitpoldstr., Durchfahrt über Schulhof: nicht immer geöffnet!',
-         'from' => undef,
-         'id' => 1957,
          'data' => '	2::temp 6611,9879 6688,9897
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1957,
+         'recurring' => 1,
+         'text' => 'Luitpoldstr., Durchfahrt über Schulhof: nicht immer geöffnet!',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Rutherfordstr.: nicht permanent geöffnet',
-         'from' => undef,
-         'id' => 1958,
          'data' => '	2::temp 19071,2746 19136,2673 19207,2592
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1958,
+         'recurring' => 1,
+         'text' => 'Rutherfordstr.: nicht permanent geöffnet',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Uferweg am Schloß Bellevue: kann bei Staatsbesuchen gesperrt sein',
-         'from' => undef,
-         'id' => 1959,
          'data' => '	2::temp 6694,12627 7039,12314
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 1959,
+         'recurring' => 1,
+         'text' => 'Uferweg am Schloß Bellevue: kann bei Staatsbesuchen gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -2335,13 +2335,13 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
-         'until' => undef,
-         'text' => 'Anwohner haben den Uferweg am Groß Glienicker See versperrt',
-         'from' => undef,
-         'id' => 2040,
          'data' => 'userdel	2::temp -9668,6171 -9622,5804 -9640,5723 -9727,5573
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2040,
+         'text' => 'Anwohner haben den Uferweg am Groß Glienicker See versperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -2371,11 +2371,6 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im August von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
-         'from' => undef,
-         'id' => 2068,
          'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10298,8245
@@ -2406,7 +2401,12 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
 (Alter Hafen)	2::night 10076,8040 10037,8269
 (Südliche Landebahn - Eingang Oderstr.)	2::night 11555,7314 11596,7280 11608,7267
 (zur nördlichen Landebahn)	2::night 11470,7744 11430,7781
-'
+',
+         'from' => undef,
+         'id' => 2068,
+         'recurring' => 1,
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im August von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'until' => undef
        },
        undef,
        undef,
@@ -2436,34 +2436,34 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Johannes-Kraatz-Str.: Tor, Zugang könnte versperrt sein',
-         'from' => undef,
-         'id' => 2096,
          'data' => '#: note: nicht gesperrt: 2010-07-09 (Fr) gegen 22 Uhr
 #: note: nicht gesperrt: 2011-07-16 (Sa) gegen 16 Uhr
 #: note: nicht gesperrt: 2012-07-19 (Do) gegen 14 Uhr
 #: note: nicht gesperrt: 2013-09-07 (Sa) gegen 13 Uhr
 userdel	2::temp 18870,5833 18932,5926
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2096,
+         'recurring' => 1,
+         'text' => 'Johannes-Kraatz-Str.: Tor, Zugang könnte versperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Gewerbegebiet: Privatstraßen, u.U. Durchfahrt nicht gestattet',
-         'from' => undef,
-         'id' => 2101,
          'data' => '#: note: allerdings keine Hinweise auf eine verbotene Durchfahrt gesehen
 (Gewerbegebiet)	2 21617,3287 21826,3129 21770,2936
 (Gewerbegebiet)	2 21685,2964 21770,2936 21816,2919 21939,2894 21984,2897 22004,2904
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2101,
+         'recurring' => 1,
+         'text' => 'Gewerbegebiet: Privatstraßen, u.U. Durchfahrt nicht gestattet',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -2560,173 +2560,149 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Albrecht-Thaer-Weg: Privatstraße, eventuell zeitweise gesperrt (nachts?)',
-         'from' => undef,
-         'id' => 2196,
          'data' => 'Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6863
 ',
-         'type' => 'gesperrt'
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       {
-         'data' => '#: by: http://www.bierfestival-berlin.de/landkarte.html
-userdel	2::temp 12360,12505 12362,12540 12364,12589
-userdel	2::temp 12891,12549 12869,12425
-userdel	2::temp 12635,12629 12596,12472
-userdel	2::temp 13448,12340 13484,12436
-userdel	2::temp 13552,12435 13543,12326
-#zukünftig, wenn dieser Weg eingetragen ist: userdel	2::temp 13163,12382 13176,12500
-',
-         'periodic' => 1,
-         'until' => 1439078400,
-         'from' => 1438848000,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              31,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung (Internationales Berliner Bierfestival), Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (7.8.2015 bis 9.8.2015)',
-         'type' => 'gesperrt',
-         'id' => 2262
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Am Schloss Schönhausen: nachts gesperrt (im Sommer ab ca. 19 Uhr, im Winter ab Einbruch der Dunkelheit)',
          'from' => undef,
-         'id' => 2320,
+         'id' => 2196,
+         'recurring' => 1,
+         'text' => 'Albrecht-Thaer-Weg: Privatstraße, eventuell zeitweise gesperrt (nachts?)',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
          'data' => '#: by: cornelia (bayer...): vvv
 Am Schloss Schönhausen	2::night 10294,19298 10339,19179 10382,19066
 Am Schloss Schönhausen	2::night 10249,19148 10339,19179
 #: by: ^^^
-'
+',
+         'from' => undef,
+         'id' => 2320,
+         'recurring' => 1,
+         'text' => 'Am Schloss Schönhausen: nachts gesperrt (im Sommer ab ca. 19 Uhr, im Winter ab Einbruch der Dunkelheit)',
+         'until' => undef
        },
        undef,
        undef,
@@ -2757,14 +2733,14 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Földerichplatz: Wochenmarkt Dienstag und Freitag 8-13 Uhr',
-         'from' => undef,
-         'id' => 2349,
          'data' => '	q4::temp:clock -3941,12545 -3941,12376
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2349,
+         'recurring' => 1,
+         'text' => 'Földerichplatz: Wochenmarkt Dienstag und Freitag 8-13 Uhr',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -2789,21 +2765,22 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Weserstr. - Boxhagener Str.: Tor in einer Hausdurchfahrt, nachts und selten auch sonntags gesperrt',
-         'from' => undef,
-         'id' => 2372,
          'data' => '#: note: geprüft am Fr, den 2012-11-02, gegen 22:30: geschlossen
 #: note: geprüft am Do, den 2012-11-15, gegen 21:00: offen
 #: note: geprüft am So, den 2012-06-02, vormittags: geschlossen
 #: note: geprüft am So, den 2015-03-08, vormittags: offen
 #: note: geprüft am So, den 2015-05-10, nachmittags: offen
 #: note: geprüft am So, den 2015-06-21, vormittags: offen
-#: note. geprüft am So, den 2015-07-19, nachmittags: offen
+#: note: geprüft am So, den 2015-07-19, nachmittags: offen
+#: note: geprüft am So, den 2015-08-09, nachmittags: offen
 userdel	2::night 14838,11410 14792,11391
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2372,
+         'recurring' => 1,
+         'text' => 'Weserstr. - Boxhagener Str.: Tor in einer Hausdurchfahrt, nachts und selten auch sonntags gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -2829,32 +2806,32 @@ userdel	2::night 14838,11410 14792,11391
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Jüdenstr.: das Überqueren der Grunerstr. ist insbesondere außerhalb der Parkbewirtschaftungszeiten (abends, am Wochenende) sehr unbequem (eng parkende Autos)',
-         'from' => undef,
-         'id' => 2396,
          'data' => '#: by: http://www.berlin.de/ba-mitte/buergerdienste/parkraumbewirtschaftung.html (Zone 3)
 userdel	2::temp::igndisp 10805,12468 10803,12470
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2396,
+         'recurring' => 1,
+         'text' => 'Jüdenstr.: das Überqueren der Grunerstr. ist insbesondere außerhalb der Parkbewirtschaftungszeiten (abends, am Wochenende) sehr unbequem (eng parkende Autos)',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Kollwitzplatz: Wochenmarkt Samstag 9-16 Uhr',
-         'from' => undef,
-         'id' => 2400,
          'data' => '#: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3228&options=4 vvv
 	q4::temp:clock 11317,14564 11285,14515 11229,14422
 #: XXX_prog: q3, weil nur ca. 35m betroffen sind 
 	q3::temp:clock 11317,14564 11436,14741
 #: by: ^^^
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2400,
+         'recurring' => 1,
+         'text' => 'Kollwitzplatz: Wochenmarkt Samstag 9-16 Uhr',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -2863,88 +2840,89 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        undef,
        undef,
        {
-         'source_id' => 'http://www.potsdamer-wassertaxi.de/fahrplan.php?y=2012',
-         'recurring' => 1,
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 	2::temp -12149,1436 -12057,1530 -11789,1502 -11323,1330 -10320,1494 -10098,1745 -10086,1886
 	2::temp -10086,1886 -10055,1628
 #: XXX_prog ^^^
 ',
-         'until' => undef,
          'from' => undef,
+         'id' => 2407,
+         'recurring' => 1,
+         'source_id' => 'http://www.potsdamer-wassertaxi.de/fahrplan.php?y=2012',
          'text' => 'Potsdamer Wassertaxi: fährt nur im Sommer, 3x bis 6x täglich',
          'type' => 'gesperrt',
-         'id' => 2407
+         'until' => undef
        },
        {
-         'source_id' => 'http://www.bvg.de/index.php/de/3777/name/Faehrlinie+F21.html',
-         'recurring' => 1,
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 	2::temp 27090,-2253 27420,-2067 27492,-1880 27490,-1710 27425,-1601 27374,-1573
 	2::temp 29406,3776 29367,3690 29395,3572 29297,3456 29131,3489 29084,3331 29113,3324 29195,3191 29553,2934 29569,2909 29604,2931 29797,2918 29945,3001 29959,3031
 #: XXX_prog ^^^
 ',
-         'until' => undef,
          'from' => undef,
+         'id' => 2408,
+         'recurring' => 1,
+         'source_id' => 'http://www.bvg.de/index.php/de/3777/name/Faehrlinie+F21.html',
          'text' => 'Fähren F21 und F23: fahren nur ab 5. April bis zum 2. November, fahren nicht am Montag',
          'type' => 'gesperrt',
-         'id' => 2408
+         'until' => undef
        },
        {
-         'until' => undef,
-         'text' => 'Karniner Fähre: fährt nur von Anfang Mai bis Ende September',
-         'recurring' => 1,
-         'from' => undef,
-         'id' => 2409,
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 	2::temp 38674,160390 37644,160344 38049,160420 38325,160573
 #: XXX_prog ^^^
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2409,
+         'recurring' => 1,
+         'text' => 'Karniner Fähre: fährt nur von Anfang Mai bis Ende September',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'recurring' => 1,
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 	2::temp 42506,161075 42450,161090
 #: XXX_prog ^^^
 ',
-         'until' => undef,
          'from' => undef,
-         'text' => 'Westklüne - Ostklüne: keine offizielle Fähre, aber wenn man Glück hat, kann man per Ruderboot übergesetzt werden',
+         'id' => 2410,
          'permanent' => 1,
+         'recurring' => 1,
+         'text' => 'Westklüne - Ostklüne: keine offizielle Fähre, aber wenn man Glück hat, kann man per Ruderboot übergesetzt werden',
          'type' => 'gesperrt',
-         'id' => 2410
+         'until' => undef
        },
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Friedhofswege nachts gesperrt',
-         'from' => undef,
-         'id' => 2413,
          'data' => '	2::night 12851,12602 13108,12859 13046,12956 12878,13229
 	2::night 12773,12683 13046,12956
-'
+',
+         'from' => undef,
+         'id' => 2413,
+         'recurring' => 1,
+         'text' => 'Friedhofswege nachts gesperrt',
+         'until' => undef
        },
        undef,
        undef,
        {
-         'source_id' => 'IM_024846',
-         'until' => 1442851200,
-         'text' => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Hauptstr. zeitweise komplett gesperrt, auch für Fußgänger, 04.05.2015 bis 21.09.2015',
-         'from' => 1430704800,
-         'id' => 2416,
          'data' => '#: next_check_id: KARLSHORSTER-2015 vvv
-#: last_checked: 2015-08-02 vvv
+#: last_checked: 2015-08-08 vvv
 #: next_check: 2015-09-21 vvv
+#: XXX am 2015-08-08 offen für Fußgänger
 userdel	2::inwork 15272,10790 15279,10862
 userdel	2::inwork 15261,10738 15272,10790
 #: next_check ^^^
 #: last_checked ^^^
 #: next_check_id ^^^
 ',
-         'type' => 'handicap'
+         'from' => 1430704800,
+         'id' => 2416,
+         'source_id' => 'IM_024846',
+         'text' => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Hauptstr. zeitweise komplett gesperrt, auch für Fußgänger und Radfahrer, 04.05.2015 bis 21.09.2015',
+         'type' => 'handicap',
+         'until' => 1442851200
        },
        undef,
        undef,
@@ -2952,11 +2930,6 @@ userdel	2::inwork 15261,10738 15272,10790
        undef,
        undef,
        {
-         'source_id' => 'IM_019747',
-         'until' => 1492873200,
-         'text' => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende April 2017) ',
-         'from' => 1366740818,
-         'id' => 2422,
          'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
 #: note: laut VMZ um zwei Jahre verlängert, laut fritz/rbbtext beendet
@@ -2964,7 +2937,12 @@ userdel	2::inwork 15261,10738 15272,10790
 #: check_frequency: 90d
 userdel	q2::inwork 5258,11285 5236,10994
 ',
-         'type' => 'handicap'
+         'from' => 1366740818,
+         'id' => 2422,
+         'source_id' => 'IM_019747',
+         'text' => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende April 2017) ',
+         'type' => 'handicap',
+         'until' => 1492873200
        },
        undef,
        undef,
@@ -2998,56 +2976,52 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Sommer: 21.00 bis 6.00 Uhr',
-         'from' => undef,
-         'id' => 2454,
          'data' => 'Kleistpark	2::night 7209,9507 7275,9506 7307,9528 7351,9503 7386,9502 7414,9523 7430,9576 7416,9625 7391,9645 7347,9644 7310,9622 7277,9652 7216,9657
 Kleistpark	2::night 7430,9576 7501,9573 7520,9572
-'
+',
+         'from' => undef,
+         'id' => 2454,
+         'recurring' => 1,
+         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Sommer: 21.00 bis 6.00 Uhr',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Hohenzollernplatz: Wochenmarkt Mittwoch und Samstag 8-13 Uhr, Behinderungen möglich',
-         'from' => undef,
-         'id' => 2455,
          'data' => '	q4::temp:clock 5066,9645 5174,9708 5253,9754
 	q4::temp:clock 5155,9786 5174,9708
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2455,
+         'recurring' => 1,
+         'text' => 'Hohenzollernplatz: Wochenmarkt Mittwoch und Samstag 8-13 Uhr, Behinderungen möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Arkonaplatz: Wochenmarkt Freitag 12.00-19.00 Uhr sowie Trödelmarkt Sonntag 10.00-17.00, Behinderungen möglich',
-         'from' => undef,
-         'id' => 2457,
          'data' => '	q4::temp:clock 10228,14564 10189,14649
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2457,
+         'recurring' => 1,
+         'text' => 'Arkonaplatz: Wochenmarkt Freitag 12.00-19.00 Uhr sowie Trödelmarkt Sonntag 10.00-17.00, Behinderungen möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Mauerpark: Flohmarkt Sonntag 08.00-18.00 Uhr, Behinderungen möglich',
-         'from' => undef,
-         'id' => 2458,
          'data' => '	q4::temp:clock 10354,14987 10240,15318
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2458,
+         'recurring' => 1,
+         'text' => 'Mauerpark: Flohmarkt Sonntag 08.00-18.00 Uhr, Behinderungen möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
        undef,
        undef,
        {
-         'until' => undef,
-         'text' => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
-         'from' => undef,
-         'id' => 2463,
          'data' => '#: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht - zwischenzeitlich bicycle=no, seit 2014-10-25 wieder bicycle=yes vvv
 #: note: Verbot bestätigt von roald dot lange at gmx (2015-06-23)
 #: osm_watch: way id="80221295" version="18" brb
@@ -3065,19 +3039,23 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
 	2 19601,-3714 19539,-3810 19460,-3818 19282,-3928
 #: XXX_osm ^^^
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2463,
+         'text' => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'permanent' => 1,
-         'text' => 'Karl-Bonhoeffer-Nervenklinik: für Unbefugte ist das Befahren nicht erlaubt',
-         'from' => undef,
-         'id' => 2464,
          'data' => '#: note: Der Hinweis existiert nur am Nordeingang, aber nicht am Südeingang
 	2 4997,19849 5003,19833 5060,19699 5073,19656
 	2 5032,19645 5073,19656 5110,19665
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2464,
+         'permanent' => 1,
+         'text' => 'Karl-Bonhoeffer-Nervenklinik: für Unbefugte ist das Befahren nicht erlaubt',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -3090,31 +3068,31 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        undef,
        {
-         'source_id' => 'http://www.liepnitzinsel.de/faehre.php',
-         'recurring' => 1,
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 	2::temp 17391,38405 17448,38277 17692,38138
 #: XXX_prog ^^^
 ',
-         'until' => undef,
          'from' => undef,
+         'id' => 2475,
+         'recurring' => 1,
+         'source_id' => 'http://www.liepnitzinsel.de/faehre.php',
          'text' => 'Fähre Liepnitzsee: fährt nur ab Anfang April bis Anfang November',
          'type' => 'gesperrt',
-         'id' => 2475
+         'until' => undef
        },
        undef,
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Landschaftspark Herzberge: nachts gesperrt',
-         'from' => undef,
-         'id' => 2479,
          'data' => 'userdel	2::night 17490,13133 17489,13125
 userdel	2::night 17671,13132 17684,13133
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2479,
+         'recurring' => 1,
+         'text' => 'Landschaftspark Herzberge: nachts gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -3162,14 +3140,14 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Weg durch den Geschichtspark Moabit nachts geschlossen, Öffnungszeiten Winter (1.10.-31.3.) 8.00-16.00, Sommer (1.4.-30.9.) 8.00-21.00',
-         'from' => undef,
-         'id' => 2525,
          'data' => '	2::night 7811,13344 7784,13392 7767,13431 7732,13484 7696,13470
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2525,
+         'recurring' => 1,
+         'text' => 'Weg durch den Geschichtspark Moabit nachts geschlossen, Öffnungszeiten Winter (1.10.-31.3.) 8.00-16.00, Sommer (1.4.-30.9.) 8.00-21.00',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -3186,28 +3164,28 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        {
-         'until' => 1530395999,
-         'text' => 'Grenzallee: vollständige Sperrung zwischen Bergiusstr. (Autobahnausfahrt) und Neuköllnische Allee, ab 24.2.2014 bis Mitte 2018',
-         'from' => 1393110000,
-         'id' => 2540,
          'data' => 'userdel	2::inwork 14257,6895 14153,6795
 ',
-         'type' => 'gesperrt'
+         'from' => 1393110000,
+         'id' => 2540,
+         'text' => 'Grenzallee: vollständige Sperrung zwischen Bergiusstr. (Autobahnausfahrt) und Neuköllnische Allee, ab 24.2.2014 bis Mitte 2018',
+         'type' => 'gesperrt',
+         'until' => 1530395999
        },
        undef,
        undef,
        undef,
        {
-         'until' => undef,
-         'text' => 'Wege am Havelufer wegen Bauarbeiten gesperrt',
-         'from' => undef,
-         'id' => 2544,
          'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
 #: last_checked: 2014-12-06
 #: check_frequency: 90d
 userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2544,
+         'text' => 'Wege am Havelufer wegen Bauarbeiten gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
@@ -3260,20 +3238,15 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Gartenufer: nachts ab Sonnenuntergang, spätestens ab 21.00 Uhr gesperrt',
+         'data' => 'Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
+',
          'from' => undef,
          'id' => 2595,
-         'data' => 'Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
-'
+         'recurring' => 1,
+         'text' => 'Gartenufer: nachts ab Sonnenuntergang, spätestens ab 21.00 Uhr gesperrt',
+         'until' => undef
        },
        {
-         'source_id' => 'IM_025547',
-         'until' => 1439139600,
-         'text' => 'Konrad-Wolf-Str.: Bauarbeiten, zwischen Simon-Bolivar-Str. und Werneuchener Str. für Radfahrer komplett gesperrt (für Autofahrer in Richtung Südwesten aber nicht!), zwischen Gärtnerstr. und Schöneicher Str. Einbahnstraße, offen Richtung Südwesten, bis 09.08.2015',
-         'from' => 1436155200,
-         'id' => 2596,
          'data' => '#: note: außerdem Ampel an der Kreuzung Werneuchener/Große-Leege, und geänderte Vorfahrtsregelung an der Umleitungsstrecke via Große-Leege-Str.
 userdel	q4::inwork 15774,14992 15867,15073 15937,15134 16028,15218 16119,15302
 # userdel	q4::inwork; 16119,15302 16218,15386 16263,15427 16331,15486 16412,15559
@@ -3292,7 +3265,12 @@ userdel	q4::inwork; 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753 
 #	3 15996,15620 16331,15486 16406,15452
 #	3 16406,15452 16331,15486 15996,15620
 ',
-         'type' => 'handicap'
+         'from' => 1436155200,
+         'id' => 2596,
+         'source_id' => 'IM_025547',
+         'text' => 'Konrad-Wolf-Str.: Bauarbeiten, zwischen Simon-Bolivar-Str. und Werneuchener Str. für Radfahrer komplett gesperrt (für Autofahrer in Richtung Südwesten aber nicht!), zwischen Gärtnerstr. und Schöneicher Str. Einbahnstraße, offen Richtung Südwesten, bis 30.08.2015',
+         'type' => 'handicap',
+         'until' => 1440954000
        },
        undef,
        undef,
@@ -3303,28 +3281,7 @@ userdel	q4::inwork; 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753 
        undef,
        undef,
        undef,
-       {
-         'source_id' => 'http://www.hanfparade.de/',
-         'data' => 'userdel	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-',
-         'periodic' => 1,
-         'until' => 1439100000,
-         'from' => 1438898400,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              1,
-                              'months',
-                              8
-                            ]
-                          ],
-         'text' => 'Str. des 17. Juni: zwischen Yitzak-Rabin-Str. und Ebertstr.: Veranstaltung (Hanfparade), Straße gesperrt, ab 07.08.2015 21 Uhr bis 09.08.2015 morgens ',
-         'id' => 2606,
-         'type' => 'gesperrt'
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3332,9 +3289,9 @@ userdel	q4::inwork; 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753 
          'data' => 'userdel	2::temp 22133,4644 22111,4562 22093,4499
 userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
 ',
-         'periodic' => 1,
-         'until' => 1440367199,
          'from' => 1440072000,
+         'id' => 2610,
+         'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
@@ -3346,7 +3303,7 @@ userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,464
                           ],
          'text' => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 21.8.2015 bis 23.8.2015',
          'type' => 'gesperrt',
-         'id' => 2610
+         'until' => 1440367199
        },
        undef,
        undef,
@@ -3368,16 +3325,16 @@ userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,464
        undef,
        undef,
        {
-         'until' => undef,
-         'text' => 'Schlüterstr.: zwischen Kurfürstendamm und Lietzenburger Str. Bauarbeiten, Fahrbahn teilweise gesperrt',
-         'from' => undef,
-         'id' => 2630,
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
 #: last_checked: 2015-07-31
 #: check_frequency: 90d
 userdel	q3::inwork 4503,10497 4485,10307
 ',
-         'type' => 'handicap'
+         'from' => undef,
+         'id' => 2630,
+         'text' => 'Schlüterstr.: zwischen Kurfürstendamm und Lietzenburger Str. Bauarbeiten, Fahrbahn teilweise gesperrt',
+         'type' => 'handicap',
+         'until' => undef
        },
        undef,
        undef,
@@ -3390,27 +3347,47 @@ userdel	q3::inwork 4503,10497 4485,10307
        undef,
        undef,
        {
-         'source_id' => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/freybruecke/de/bau.shtml',
-         'until' => 1451487600,
-         'text' => 'Freybrücke: die Baustraße und die Treppe sind während der Bauarbeiten an der Freybrücke nicht benutzbar, bis Dezember 2015',
-         'from' => undef,
-         'id' => 2641,
          'data' => '#: XXX siehe auch gesperrt-orig-Eintrag
 userdel	2::inwork -3181,11496 -3177,11507 -3173,11520
 userdel	2::inwork -3197,11554 -3075,11510
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2641,
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/freybruecke/de/bau.shtml',
+         'text' => 'Freybrücke: die Baustraße und die Treppe sind während der Bauarbeiten an der Freybrücke nicht benutzbar, bis Dezember 2015',
+         'type' => 'gesperrt',
+         'until' => 1451487600
        },
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Mergenthalerring: Tor kann nachts versperrt sein',
-         'from' => undef,
-         'id' => 2643,
          'data' => '	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
-'
+',
+         'from' => undef,
+         'id' => 2643,
+         'recurring' => 1,
+         'text' => 'Mergenthalerring: Tor kann nachts versperrt sein',
+         'until' => undef
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'data' => 'userdel	q3::inwork 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
+',
+         'from' => 1439228125,
+         'id' => 2654,
+         'source_id' => 'IM_025870',
+         'text' => 'John-Foster-Dulles-Allee: Baustelle zwischen Zeltenplatz und Yitzak-Rabin-Str., Fahrbahn gesperrt, ggfs. auf Gehweg ausweichen, bis 04.09.2015',
+         'type' => 'handicap',
+         'until' => 1441371600
        },
        undef,
        undef,
@@ -3429,302 +3406,313 @@ userdel	2::inwork -3197,11554 -3075,11510
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
-         'until' => 1448924400,
-         'text' => 'Augsburger Str.: Bauarbeiten, Sackgasse an der Rankestr., Umfahrung über Gehweg',
-         'from' => undef,
-         'id' => 2672,
          'data' => '#: last_checked: 2015-07-31
 userdel	q3::inwork 5780,10542 5627,10637
 ',
-         'type' => 'handicap'
+         'from' => undef,
+         'id' => 2672,
+         'text' => 'Augsburger Str.: Bauarbeiten, Sackgasse an der Rankestr., Umfahrung über Gehweg',
+         'type' => 'handicap',
+         'until' => 1448924400
        },
        undef,
        undef,
        undef,
        undef,
        {
-         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
-         'until' => 1443650400,
-         'text' => 'Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015',
-         'from' => 1422745200,
-         'id' => 2677,
          'data' => '	2::inwork 7653,14570 7527,14644 7486,14652
 ',
-         'type' => 'gesperrt'
+         'from' => 1422745200,
+         'id' => 2677,
+         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
+         'text' => 'Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015',
+         'type' => 'gesperrt',
+         'until' => 1443650400
        },
        undef,
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Max-Schmelling-Halle: bei Veranstaltungen größere Behinderungen möglich',
-         'from' => undef,
-         'id' => 2681,
          'data' => '#: note: bei Veranstaltungen möglicherweise auch gesperrt?
 #: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
 	q4::temp 10456,15561 10234,15490 10188,15474
 ',
-         'type' => 'handicap'
+         'from' => undef,
+         'id' => 2681,
+         'recurring' => 1,
+         'text' => 'Max-Schmelling-Halle: bei Veranstaltungen größere Behinderungen möglich',
+         'type' => 'handicap',
+         'until' => undef
        },
        undef,
        undef,
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Wörther Str.: Wochenmarkt Donnerstag 10-20.30 Uhr',
-         'from' => undef,
-         'id' => 2686,
          'data' => '	q4::temp::clock 11155,14554 11255,14572 11317,14564
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2686,
+         'recurring' => 1,
+         'text' => 'Wörther Str.: Wochenmarkt Donnerstag 10-20.30 Uhr',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
        {
-         'source_id' => 'LS/721-F/15/031',
-         'until' => 1472594400,
-         'text' => 'Ortsdurchfahrt Fredersdorf, L30: Bauarbeiten, 16.03.2015 bis 30.08.2016',
-         'from' => 1426374000,
-         'id' => 2689,
          'data' => 'userdel	2::inwork 34707,13880 34383,14138 34276,14308 33589,15778 33016,17059
 ',
-         'type' => 'handicap'
+         'from' => 1426374000,
+         'id' => 2689,
+         'source_id' => 'LS/721-F/15/031',
+         'text' => 'Ortsdurchfahrt Fredersdorf, L30: Bauarbeiten, 16.03.2015 bis 30.08.2016',
+         'type' => 'handicap',
+         'until' => 1472594400
        },
        undef,
        undef,
        undef,
        undef,
-       undef,
        {
-         'until' => undef,
-         'text' => 'Zillestr.: zwischen Richard-Wagner-Str. und Wilmersdorfer Str. Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten, Ende der Sperrung unbekannt',
-         'from' => undef,
-         'id' => 2695,
+         'data' => 'userdel	q4::inwork 8870,13926 9011,14019
+',
+         'from' => 1427752800,
+         'id' => 2694,
+         'text' => 'Zinnowitzer Str.: Baustelle an der Chausseestr., Fahrbahn gesperrt, bis 31.08.2015',
+         'type' => 'handicap',
+         'until' => 1441033200
+       },
+       {
          'data' => '#: last_checked: 2015-07-03
 #: check_frequency: 90d
 userdel	q4::inwork; 3807,11859 3666,11855
 ',
-         'type' => 'handicap'
+         'from' => undef,
+         'id' => 2695,
+         'text' => 'Zillestr.: zwischen Richard-Wagner-Str. und Wilmersdorfer Str. Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten, Ende der Sperrung unbekannt',
+         'type' => 'handicap',
+         'until' => undef
        },
-       undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'Uranusweg - U-Bhf. Scharnweberstr.: Weg ist unter Umständen zeitweise gesperrt, zum Beispiel nachts',
+         'data' => '#: next_check: 2015-08-03
+userdel	q3::inwork 5824,6974 5817,7223
+',
+         'from' => undef,
+         'id' => 2696,
+         'source_id' => 'IM_025361',
+         'text' => 'Dickhardstr.: Bauarbeiten an der Rheinstr., direkte Durchfahrt gesperrt, voraussichtlich bis 05.10.2015',
+         'type' => 'handicap',
+         'until' => 1444050000
+       },
+       {
+         'data' => '	2::night 4280,17551 4243,17570 4240,17584 3959,17714 3987,17808
+',
          'from' => undef,
          'id' => 2697,
-         'data' => '	2::night 4280,17551 4243,17570 4240,17584 3959,17714 3987,17808
-'
+         'recurring' => 1,
+         'text' => 'Uranusweg - U-Bhf. Scharnweberstr.: Weg ist unter Umständen zeitweise gesperrt, zum Beispiel nachts',
+         'until' => undef
        },
        undef,
        undef,
        {
-         'source_id' => 'wosch',
-         'until' => undef,
-         'text' => 'Döberitzer Verbindung: wegen Bauarbeiten gesperrt',
-         'from' => undef,
-         'id' => 2700,
          'data' => '#: confirmed_by: srt
 #: last_checked: 2015-06-08
 #: check_frequency: 45d
 userdel	2::inwork 7306,13418 7451,13504 7630,13584
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2700,
+         'source_id' => 'wosch',
+         'text' => 'Döberitzer Verbindung: wegen Bauarbeiten gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
        {
-         'source_id' => 'http://www.bvg.de/de/Aktuell/Newsmeldung?newsid=612',
-         'recurring' => 1,
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
 	2::temp 29959,3031 29968,2986
 #: XXX_prog ^^^
 ',
-         'until' => undef,
          'from' => undef,
+         'id' => 2703,
+         'recurring' => 1,
+         'source_id' => 'http://www.bvg.de/de/Aktuell/Newsmeldung?newsid=612',
          'text' => 'Ruderfähre F24: fährt nur samstags, sonntags und an Feiertagen, ab 1. Mai bis zum 3. Oktober',
          'type' => 'gesperrt',
-         'id' => 2703
+         'until' => undef
        },
        {
-         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.312630.php',
-         'until' => 1441058399,
-         'text' => 'Ernst-Liesegang-Ufer: wegen Bauarbeiten gesperrt, bis voraussichtlich Ende August 2015',
-         'from' => undef,
-         'id' => 2704,
          'data' => 'userdel	2::inwork -6474,5144 -6361,5222 -6277,5180 -6037,5371 -5918,5610 -5853,5674 -5828,5739 -5688,5837 -5390,5941 -5264,6001 -5037,6085 -4835,6220 -4774,6514
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2704,
+         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.312630.php',
+         'text' => 'Ernst-Liesegang-Ufer: wegen Bauarbeiten gesperrt, bis voraussichtlich Ende August 2015',
+         'type' => 'gesperrt',
+         'until' => 1441058399
        },
        {
-         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150430.1120.401849.html',
-         'until' => 1441058400,
-         'text' => 'Maaßenstr.: Bauarbeiten, gesperrt in Richtung Winterfeldplatz, außerdem Sperrungen in der Winterfeldtstr., bis September 2015',
-         'from' => undef,
-         'id' => 2705,
          'data' => '#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5511.html
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150430.1120.401849.html
 #: last_checked: 2015-07-14
 #: next_check: 2015-08-31
 	q4::inwork; 7033,10328 7060,10221 7080,10098
 	q4::inwork 7080,10098 7038,10087
-'
+',
+         'from' => undef,
+         'id' => 2705,
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150430.1120.401849.html',
+         'text' => 'Maaßenstr.: Bauarbeiten, gesperrt in Richtung Winterfeldplatz, außerdem Sperrungen in der Winterfeldtstr., bis September 2015',
+         'until' => 1441058400
        },
        {
-         'source_id' => 'LS/721-E/15/036',
-         'until' => 1456873200,
-         'text' => 'L258: Brückenneubau bei Trebenow (Brücke über den Köhntop), Vollsperrung ab 28.05.15 bis 01.03.2016 ',
-         'from' => 1432706400,
-         'id' => 2706,
          'data' => 'userdel	2::inwork 39384,115027 39168,114713 38881,113150
 ',
-         'type' => 'gesperrt'
-       },
-       {
-         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.313774.php',
-         'until' => 1438984800,
-         'text' => 'Spreeuferweg: Sanierungsarbeiten zwischen Tucholskystr. und Monbijoustr., gesperrt vom 18.05.2015 bis voraussichtlich 07.08.2015',
-         'from' => 1431813600,
-         'id' => 2707,
-         'data' => 'userdel	2::inwork 9538,12993 9557,12992 9707,12974
-',
-         'type' => 'gesperrt'
+         'from' => 1432706400,
+         'id' => 2706,
+         'source_id' => 'LS/721-E/15/036',
+         'text' => 'L258: Brückenneubau bei Trebenow (Brücke über den Köhntop), Vollsperrung ab 28.05.15 bis 01.03.2016 ',
+         'type' => 'gesperrt',
+         'until' => 1456873200
        },
        undef,
+       undef,
        {
-         'until' => undef,
-         'text' => 'Rampe an der Großen Eiswerderbrücke gesperrt, Dauer unbekannt',
-         'from' => undef,
-         'id' => 2709,
          'data' => '#: by: http://www.berlin.de/ba-spandau/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8094&options=4
 #: next_check: 2016-03-01
 userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2709,
+         'text' => 'Rampe an der Großen Eiswerderbrücke gesperrt, Dauer unbekannt',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'until' => undef,
-         'text' => 'Treptower Park: einige Wege im nördlichen Teil des Parks werden instand gesetzt und können gesperrt sein',
-         'from' => undef,
-         'id' => 2710,
          'data' => '#: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.297071.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruen/artikel.295591.php
-#: last_checked: 2015-07-22 vvv
+#: last_checked: 2015-08-08 vvv
 #: check_frequency: 21d vvv
 userdel	2::inwork 14318,9688 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
-userdel	2::inwork 15052,9584 15174,9554 15321,9448 15432,9322 15513,9144 15527,9096 15638,9020
+userdel	2::inwork 14575,9648 14645,9710 14697,9726 14910,9643 15052,9584 15174,9554 15321,9448 15432,9322 15513,9144 15527,9096 15638,9020
 userdel	2::inwork 14443,9731 14361,9772
-userdel	2::inwork 15561,8903 15630,8979 15638,9020 15778,8990
+userdel	2::inwork 15630,8979 15638,9020 15778,8990
+userdel	2::inwork 14910,9643 14844,9513
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2710,
+         'text' => 'Treptower Park: einige Wege im nördlichen Teil des Parks werden instand gesetzt und können gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        undef,
        undef,
        undef,
        {
-         'until' => undef,
-         'text' => 'Märkisches Ufer: Sperrung der Fahrbahn vor der chinesischen Botschaft, Ausweichen über Gehweg',
-         'from' => undef,
-         'id' => 2714,
          'data' => '#: XXX bis wann ist die Fahrbahn gesperrt?
 #: last_checked: 2015-07-18
 userdel	q3::inwork 11325,12021 11275,12055
 ',
-         'type' => 'handicap'
+         'from' => undef,
+         'id' => 2714,
+         'text' => 'Märkisches Ufer: Sperrung der Fahrbahn vor der chinesischen Botschaft, Ausweichen über Gehweg',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check: 2015-08-10 vvv
+#: priority: #A vvv
+#: source_id: IM_025877	vvv
+	q4::inwork; 9441,16058 9458,16180 9474,16297 9475,16307 9487,16395 9498,16480 9514,16603
+	q4::inwork; 10197,16528 10225,16436 10254,16363 10281,16263 10301,16186
+#: source_id ^^^
+#: priority ^^^
+#: next_check ^^^
+',
+         'from' => 1439228045,
+         'id' => 2715,
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
+         'text' => 'Jülicher Str. und Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke, voraussichtlich ab 10. August 2015 für ca. zwei Jahre',
+         'type' => 'handicap',
+         'until' => 1499983200
        },
        undef,
        undef,
        undef,
-       undef,
        {
-         'source_id' => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
-         'until' => 1499983200,
-         'text' => 'Treppe an der Bornholmer Str.: wegen Bauarbeiten an der Bösebrücke gesperrt, ab 14. Juli 2015 für ca. zwei Jahre',
-         'from' => 1436738400,
-         'id' => 2719,
          'data' => '	2::inwork 9998,16547 9982,16527 9959,16510
 ',
-         'type' => 'handicap'
+         'from' => 1436738400,
+         'id' => 2719,
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
+         'text' => 'Treppe an der Bornholmer Str.: wegen Bauarbeiten an der Bösebrücke gesperrt, ab 14. Juli 2015 für ca. zwei Jahre',
+         'type' => 'handicap',
+         'until' => 1499983200
        },
        undef,
        undef,
        {
-         'until' => undef,
-         'recurring' => 1,
-         'text' => 'enger Eingang zum Friedrich-Ludwig-Jahn-Sportpark, falls Tor gesperrt ist, Anhänger können gar nicht passieren',
-         'from' => undef,
-         'id' => 2722,
          'data' => '#: XXX_prog BNP in temp blockings wird zur Zeit weder im CGI noch in der Perl/Tk-Anwendung behandelt
 	BNP:30::trailer=no 10583,15208
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2722,
+         'recurring' => 1,
+         'text' => 'enger Eingang zum Friedrich-Ludwig-Jahn-Sportpark, falls Tor gesperrt ist, Anhänger können gar nicht passieren',
+         'type' => 'gesperrt',
+         'until' => undef
        },
        {
-         'source_id' => 'IM_025684',
-         'until' => 1441033200,
-         'text' => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Jordanstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 31.08.2015 17:00 Uhr ',
-         'from' => 1437289200,
-         'id' => 2723,
          'data' => 'userdel	q3::inwork 13357,9313 13489,9456 13606,9578 13645,9621
 ',
-         'type' => 'handicap'
+         'from' => 1437289200,
+         'id' => 2723,
+         'source_id' => 'IM_025684',
+         'text' => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Jordanstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 31.08.2015 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1441033200
        },
        {
-         'source_id' => 'IM_025689',
-         'until' => 1441033200,
-         'text' => 'Daimlerstr.: Baustelle, Fahrbahn zwischen Mauserstr. und Säntisstr. gesperrt, 20.07.2015 07:00 Uhr bis 31.08.2015 17:00 Uhr ',
-         'from' => 1437282000,
-         'id' => 2724,
          'data' => 'userdel	q4::inwork 9695,1563 9626,1604 9519,1650 9493,1661 9420,1700
 ',
-         'type' => 'handicap'
+         'from' => 1437282000,
+         'id' => 2724,
+         'source_id' => 'IM_025689',
+         'text' => 'Daimlerstr.: Baustelle, Fahrbahn zwischen Mauserstr. und Säntisstr. gesperrt, 20.07.2015 07:00 Uhr bis 31.08.2015 17:00 Uhr ',
+         'type' => 'handicap',
+         'until' => 1441033200
        },
        {
-         'source_id' => 'IM_025719',
-         'until' => 1440774000,
-         'text' => 'Mehringbrücke: Fahrbahn Richtung Wilhelmstr. gesperrt, für Radfahrer umständliche Wegführung über linken Gehweg, bis 28.08.2015',
-         'from' => 1438198655,
-         'id' => 2725,
          'data' => 'userdel	q4::inwork; 9416,10196 9409,10226 9404,10250
 ',
-         'type' => 'handicap'
+         'from' => 1438198655,
+         'id' => 2725,
+         'source_id' => 'IM_025719',
+         'text' => 'Mehringbrücke: Fahrbahn Richtung Wilhelmstr. gesperrt, für Radfahrer umständliche Wegführung über linken Gehweg, bis 28.08.2015',
+         'type' => 'handicap',
+         'until' => 1440774000
        },
+       undef,
+       undef,
        {
-         'until' => 1438898399,
-         'text' => 'Ziegrastr.: Durchfahrt komplett gesperrt, auch für Fußgänger und Radfahrer, bis zum 6.8.2015',
-         'from' => undef,
-         'id' => 2726,
-         'data' => '	2::temp 14233,8072 14174,7505
-'
-       },
-       {
-         'source_id' => 'IM_025809',
-         'until' => 1441044000,
-         'text' => 'Gorkistr.: Vollsperrung, Schrankenstörung',
-         'from' => 1438145220,
-         'id' => 2727,
-         'data' => 'userdel	2::inwork 2295,20358 2358,20368 2415,20380
+         'data' => '#: XXX Wann sind die Bauarbeiten fertig?
+#: last_checked: 2015-08-10
+#: check_frequency: 60d
+userdel	q4::inwork 7799,13019 7813,12961
 ',
-         'type' => 'gesperrt'
+         'from' => undef,
+         'id' => 2728,
+         'text' => 'Weg am Moabiter Werder - Clara-Jaschke-Str.: Bauarbeiten, Ausweichen auf sehr engen Gehweg',
+         'type' => 'handicap',
+         'until' => undef
        }
      
 );

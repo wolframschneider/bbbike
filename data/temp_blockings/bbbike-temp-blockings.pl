@@ -20797,7 +20797,8 @@ EOF
 #: note: geprüft am So, den 2015-03-08, vormittags: offen
 #: note: geprüft am So, den 2015-05-10, nachmittags: offen
 #: note: geprüft am So, den 2015-06-21, vormittags: offen
-#: note. geprüft am So, den 2015-07-19, nachmittags: offen
+#: note: geprüft am So, den 2015-07-19, nachmittags: offen
+#: note: geprüft am So, den 2015-08-09, nachmittags: offen
 userdel	2::night 14838,11410 14792,11391
 EOF
      },
@@ -21245,13 +21246,14 @@ EOF
      },
      { from  => $isodate2epoch->("2015-05-04 04:00:00"), # ein Tag Vorlauf
        until => $isodate2epoch->("2015-09-21 18:00:00"),
-       text  => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Hauptstr. zeitweise komplett gesperrt, auch für Fußgänger, 04.05.2015 bis 21.09.2015',
+       text  => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Hauptstr. zeitweise komplett gesperrt, auch für Fußgänger und Radfahrer, 04.05.2015 bis 21.09.2015',
        type  => 'handicap',
        source_id => 'IM_024846',
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2015 vvv
-#: last_checked: 2015-08-02 vvv
+#: last_checked: 2015-08-08 vvv
 #: next_check: 2015-09-21 vvv
+#: XXX am 2015-08-08 offen für Fußgänger
 userdel	2::inwork 15272,10790 15279,10862
 userdel	2::inwork 15261,10738 15272,10790
 #: next_check ^^^
@@ -23104,8 +23106,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 EOF
      },
      { from  => $isodate2epoch->("2015-07-06 06:00:00"), # 1405025033, # 2014-07-10 22:43
-       until => $isodate2epoch->("2015-08-09 19:00:00"), # 1408139790, # 1408312800, # 2014-08-18 00:00
-       text  => 'Konrad-Wolf-Str.: Bauarbeiten, zwischen Simon-Bolivar-Str. und Werneuchener Str. für Radfahrer komplett gesperrt (für Autofahrer in Richtung Südwesten aber nicht!), zwischen Gärtnerstr. und Schöneicher Str. Einbahnstraße, offen Richtung Südwesten, bis 09.08.2015',
+       until => $isodate2epoch->("2015-08-30 19:00:00"), # 1408139790, # 1408312800, # 2014-08-18 00:00
+       text  => 'Konrad-Wolf-Str.: Bauarbeiten, zwischen Simon-Bolivar-Str. und Werneuchener Str. für Radfahrer komplett gesperrt (für Autofahrer in Richtung Südwesten aber nicht!), zwischen Gärtnerstr. und Schöneicher Str. Einbahnstraße, offen Richtung Südwesten, bis 30.08.2015',
        type  => 'handicap',
        source_id => 'IM_025547',
        data  => <<EOF,
@@ -23662,13 +23664,13 @@ EOF
 userdel	q4::inwork 19676,1577 19704,1621 19766,1796
 EOF
      },
-     { from  => 1410069600, # 2014-09-07 08:00
-       until => 1419001200, # 2014-12-19 16:00
-       text  => 'John-Foster-Dulles-Allee: Baustelle zwischen Zeltenplatz und Große Querallee, Fahrbahn gesperrt, Ausweichen auf Gehweg, 08.09.2014 08:00 Uhr bis 19.12.2014 16:00 Uhr ',
+     { from  => 1439228125, # 1410069600, # 2014-09-07 08:00
+       until => $isodate2epoch->("2015-09-04 15:00:00"), # 1419001200, # 2014-12-19 16:00
+       text  => 'John-Foster-Dulles-Allee: Baustelle zwischen Zeltenplatz und Yitzak-Rabin-Str., Fahrbahn gesperrt, ggfs. auf Gehweg ausweichen, bis 04.09.2015',
        type  => 'handicap',
-       source_id => 'IM_022801',
+       source_id => 'IM_025870',
        data  => <<EOF,
-userdel	q3::inwork 7627,12380 7821,12367 7875,12363 8017,12359
+userdel	q3::inwork 7627,12380 7821,12367 7875,12363 8017,12359 8070,12409 8119,12414
 EOF
      },
      { from  => 1414624392, # 2014-10-30 00:13
@@ -24040,13 +24042,11 @@ userdel	q2::inwork; 8935,13844 8842,13798
 EOF
      },
      { from  => 1427752800, # 2015-03-31 00:00
-       until => 1427911510, # -> handicap_s-orig # 1438380000, # 2015-08-01 00:00
-       text  => 'Zinnowitzer Str.: Einbahnstraßenregelung zwischen Chausseestr. und Am Nordbahnhof, gesperrt Richtung Osten, ab 01.04.2015',
+       until => $isodate2epoch->("2015-08-31 17:00:00"), # 1427911510, # -> handicap_s-orig # 1438380000, # 2015-08-01 00:00
+       text  => 'Zinnowitzer Str.: Baustelle an der Chausseestr., Fahrbahn gesperrt, bis 31.08.2015',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX wann wird die Einbahnstraßenregelung aufgehoben?
-#: next_check: 2015-07-23
-userdel	q4::inwork; 8870,13926 9011,14019
+userdel	q4::inwork 8870,13926 9011,14019
 EOF
      },
      { from  => undef, # 
@@ -24060,11 +24060,11 @@ userdel	q4::inwork; 3807,11859 3666,11855
 EOF
      },
      { from  => undef, # 
-       until => 1438629931, # $isodate2epoch->("2015-12-01 00:00:00"), # undef, # XXX
-       text  => 'Dickhardstr.: Bauarbeiten an der Rheinstr., direkte Durchfahrt gesperrt, Ende der Bauarbeiten im Dezember 2015',
+       until => $isodate2epoch->("2015-10-05 15:00:00"), # undef, # XXX
+       text  => 'Dickhardstr.: Bauarbeiten an der Rheinstr., direkte Durchfahrt gesperrt, voraussichtlich bis 05.10.2015',
+       source_id => 'IM_025361',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX laut Fritz ist die Baustelle an der Rheinstr. bis 2015-08-03 aktuell
 #: next_check: 2015-08-03
 userdel	q3::inwork 5824,6974 5817,7223
 EOF
@@ -24207,12 +24207,13 @@ EOF
 #: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.297071.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruen/artikel.295591.php
-#: last_checked: 2015-07-22 vvv
+#: last_checked: 2015-08-08 vvv
 #: check_frequency: 21d vvv
 userdel	2::inwork 14318,9688 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
-userdel	2::inwork 15052,9584 15174,9554 15321,9448 15432,9322 15513,9144 15527,9096 15638,9020
+userdel	2::inwork 14575,9648 14645,9710 14697,9726 14910,9643 15052,9584 15174,9554 15321,9448 15432,9322 15513,9144 15527,9096 15638,9020
 userdel	2::inwork 14443,9731 14361,9772
-userdel	2::inwork 15561,8903 15630,8979 15638,9020 15778,8990
+userdel	2::inwork 15630,8979 15638,9020 15778,8990
+userdel	2::inwork 14910,9643 14844,9513
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
@@ -24261,14 +24262,20 @@ EOF
 userdel	q3::inwork 11325,12021 11275,12055
 EOF
      },
-     { from  => $isodate2epoch->("2015-07-22 00:00:00"), # 1436738400, # 2015-07-13 00:00
-       until => 1438715522, # XXX hat noch nicht angefangen --- $isodate2epoch->("2017-07-14 00:00:00"),
-       text  => 'Jülicher Str. und Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke, voraussichtlich ab 23. Juli 2015 für ca. zwei Jahre',
+     { from  => 1439228045, # $isodate2epoch->("2015-07-22 00:00:00"), # 1436738400, # 2015-07-13 00:00
+       until => $isodate2epoch->("2017-07-14 00:00:00"),
+       text  => 'Jülicher Str. und Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke, voraussichtlich ab 10. August 2015 für ca. zwei Jahre',
        type  => 'handicap',
        source_id => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
        data  => <<EOF,
+#: next_check: 2015-08-10 vvv
+#: priority: #A vvv
+#: source_id: IM_025877	vvv
 	q4::inwork; 9441,16058 9458,16180 9474,16297 9475,16307 9487,16395 9498,16480 9514,16603
 	q4::inwork; 10197,16528 10225,16436 10254,16363 10281,16263 10301,16186
+#: source_id ^^^
+#: priority ^^^
+#: next_check ^^^
 EOF
      },
      { from  => undef, # 
@@ -24282,8 +24289,8 @@ userdel	q3::inwork 12295,12197 12525,12151
 EOF
      },
      { from  => $isodate2epoch->("2015-05-04 04:00:00"), # ein Tag Vorlauf
-       until => 1436706798, # $isodate2epoch->("2015-09-21 18:00:00"),
-       text  => 'Karlshorster Str.: Fahrbahn zwischen Nöldnerstr. und Hauptstr. unter Umständen komplett gesperrt, auch für Fußgänger, 04.05.2015 bis 21.09.2015',
+       until => 1436706798, # $isodate2epoch->("2015-09-21 18:00:00"), # XXX dieser Eintrag ist inaktiv, siehe oben für aktiven Eintrag
+       text  => 'Karlshorster Str.: Fahrbahn zwischen Nöldnerstr. und Hauptstr. zeitweise komplett gesperrt, auch für Fußgänger und Radfahrer, 04.05.2015 bis 21.09.2015',
        type  => 'handicap',
        source_id => 'IM_024846',
        data  => <<EOF,
@@ -24379,12 +24386,23 @@ EOF
 EOF
      },
      { from  => 1438145220, # 2015-07-29 06:47
-       until => 1441044000, # 2015-08-31 20:00
+       until => 1438971841, # 1441044000, # 2015-08-31 20:00
        text  => 'Gorkistr.: Vollsperrung, Schrankenstörung',
        type  => 'gesperrt',
        source_id => 'IM_025809',
        data  => <<EOF,
 userdel	2::inwork 2295,20358 2358,20368 2415,20380
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Weg am Moabiter Werder - Clara-Jaschke-Str.: Bauarbeiten, Ausweichen auf sehr engen Gehweg',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX Wann sind die Bauarbeiten fertig?
+#: last_checked: 2015-08-10
+#: check_frequency: 60d
+userdel	q4::inwork 7799,13019 7813,12961
 EOF
      },
     );
