@@ -1118,8 +1118,8 @@ EOF
      },
      { from  => $isodate2epoch->("2014-09-12 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2014-09-14 20:00:00"),
-       periodic => 1,
-       recurrences => [['yearly', days => 13, months => 9]],
+       # XXX findet es 2015 statt? --- periodic => 1,
+       # XXX recurrences => [['yearly', days => 13, months => 9]],
        text  => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstaltung (Herbstfest auf der Hauptstraße), Straße gesperrt (13.9.2014 10:00 - 14.9.2014 20:00)',
        type  => 'handicap',
        data  => <<EOF,
@@ -2197,8 +2197,8 @@ userdel	2 3072,12222 3091,12071
 userdel	2 3034,12502 2786,12473 2745,12467 2717,12463 2643,12453
 userdel	2 3034,12502 3189,12519 3280,12512
 userdel	2 3103,11968 3091,12071
-userdel auto	3 3358,12258 3217,12239 3072,12222 2899,12200 2895,12217
-userdel auto	3 2895,12217 2899,12200 3072,12222 3217,12239 3358,12258
+userdel auto	3 3355,12258 3217,12239 3072,12222 2899,12200 2895,12217
+userdel auto	3 2895,12217 2899,12200 3072,12222 3217,12239 3355,12258
 EOF
      },
      { from  => 1120180333, # undef 2005-07-07 00:00
@@ -6247,7 +6247,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.ms-event-agentur.com/primavera%202013.html', # 2013 in der URL verwirrt nur, die Seite nennt das Jahr 2015
        data  => <<EOF,
-userdel	2::temp 7107,9030 7044,9163 7022,9211 7006,9282
+userdel	2::temp 7107,9030 7044,9163 7022,9211 7006,9292
 userdel	2::temp 6945,9142 7044,9163
 EOF
      },
@@ -6276,7 +6276,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.ms-event-agentur.com/seite22.html?date=20150404
-userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
+userdel	2::temp 7006,9292 7022,9211 7044,9163 7107,9030
 EOF
      },
      { from  => 1160517600, # 2006-10-11 00:00
@@ -16628,7 +16628,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014394',
        data  => <<EOF,
-userdel	q4::temp 7201,8870 7107,9030 7044,9163 7022,9211 7006,9282 7130,9305 7201,9318 7418,9366 7479,9357
+userdel	q4::temp 7201,8870 7107,9030 7044,9163 7022,9211 7006,9292 7130,9316 7202,9329 7418,9366 7479,9357
 EOF
      },
      { from  => 1255644000, # 2009-10-16 00:00
@@ -19936,11 +19936,11 @@ EOF
 userdel	2::inwork 872,24330 873,24112 825,24068 764,24065 609,24215 237,24374 195,24389 132,24390 78,24364 -406,23934
 EOF
      },
-     { from  => $isodate2epoch->("2014-09-18 00:00:00"), # 1347508800, # 2012-09-13 06:00 PERIODISCH, ca. 2. Wochenende im September
-       until => $isodate2epoch->("2014-09-21 23:59:59"), # 1347832740, # 2012-09-16 23:59
+     { from  => $isodate2epoch->("2015-09-17 00:00:00"), # 1347508800, # 2012-09-13 06:00 PERIODISCH, ca. 2. Wochenende im September
+       until => $isodate2epoch->("2015-09-20 23:59:59"), # 1347832740, # 2012-09-16 23:59
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 9]],
-       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 19.09.2014 bis 21.09.2014',
+       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 18.09.2015 bis 20.09.2015',
        type  => 'handicap',
        source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/',
        data  => <<EOF,
@@ -21251,9 +21251,9 @@ EOF
        source_id => 'IM_024846',
        data  => <<EOF,
 #: next_check_id: KARLSHORSTER-2015 vvv
-#: last_checked: 2015-08-08 vvv
+#: last_checked: 2015-08-15 vvv
 #: next_check: 2015-09-21 vvv
-#: XXX am 2015-08-08 offen für Fußgänger
+#: XXX am 2015-08-15 offen für Fußgänger
 userdel	2::inwork 15272,10790 15279,10862
 userdel	2::inwork 15261,10738 15272,10790
 #: next_check ^^^
@@ -24105,7 +24105,7 @@ EOF
        source_id => 'wosch',
        data  => <<EOF,
 #: confirmed_by: srt
-#: last_checked: 2015-06-08
+#: last_checked: 2015-08-16
 #: check_frequency: 45d
 userdel	2::inwork 7306,13418 7451,13504 7630,13584
 EOF
@@ -24253,12 +24253,11 @@ userdel auto	3 5829,10964 5782,10884 5669,10704
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1439573914, # undef, # XXX
        text  => 'Märkisches Ufer: Sperrung der Fahrbahn vor der chinesischen Botschaft, Ausweichen über Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX bis wann ist die Fahrbahn gesperrt?
-#: last_checked: 2015-07-18
+# REMOVED --- #: XXX bis wann ist die Fahrbahn gesperrt? --- #: last_checked: 2015-08-14
 userdel	q3::inwork 11325,12021 11275,12055
 EOF
      },
@@ -24360,7 +24359,7 @@ userdel	q3::inwork 13357,9313 13489,9456 13606,9578 13645,9621
 EOF
      },
      { from  => 1437282000, # 2015-07-19 07:00
-       until => 1441033200, # 2015-08-31 17:00
+       until => 1439410117, # 1441033200, # 2015-08-31 17:00
        text  => 'Daimlerstr.: Baustelle, Fahrbahn zwischen Mauserstr. und Säntisstr. gesperrt, 20.07.2015 07:00 Uhr bis 31.08.2015 17:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_025689',
@@ -24403,6 +24402,23 @@ EOF
 #: last_checked: 2015-08-10
 #: check_frequency: 60d
 userdel	q4::inwork 7799,13019 7813,12961
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Weichselplatz/Fuldastr./Weigandufer: Bauarbeiten, Ausweichen auf Gehweg',
+       type  => 'handicap',
+       data  => <<EOF,
+#: by: wosch vvv
+#: confirmed_by: srt vvv
+#: XXX 30m zu jeder Seite der Kreuzung sind gesperrt; wann sind die Bauarbeiten fertig? vvv
+#: last_checked: 2015-08-14 vvv
+userdel	q3::inwork 12761,9190 12907,9073 13048,8956
+userdel	q3::inwork 12907,9073 12836,8980
+#: last_checked ^^^
+#: XXX ^^^
+#: confirmed_by ^^^
+#: by ^^^
 EOF
      },
     );

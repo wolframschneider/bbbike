@@ -722,7 +722,7 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
        undef,
        {
          'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20150404
-userdel	2::temp 7006,9282 7022,9211 7044,9163 7107,9030
+userdel	2::temp 7006,9292 7022,9211 7044,9163 7107,9030
 ',
          'from' => 1443823200,
          'id' => 731,
@@ -2676,7 +2676,26 @@ userdel	2::temp 10602,18382 10567,18366 10502,18338 10463,18321 10449,18315 1028
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
+',
+         'from' => 1442440800,
+         'id' => 2285,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              14,
+                              'months',
+                              9
+                            ]
+                          ],
+         'source_id' => 'http://www.laubinger.de/termine/rosenthaler-herbst/',
+         'text' => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 18.09.2015 bis 20.09.2015',
+         'type' => 'handicap',
+         'until' => 1442786399
+       },
        undef,
        undef,
        undef,
@@ -2927,9 +2946,9 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        undef,
        {
          'data' => '#: next_check_id: KARLSHORSTER-2015 vvv
-#: last_checked: 2015-08-08 vvv
+#: last_checked: 2015-08-15 vvv
 #: next_check: 2015-09-21 vvv
-#: XXX am 2015-08-08 offen für Fußgänger
+#: XXX am 2015-08-15 offen für Fußgänger
 userdel	2::inwork 15272,10790 15279,10862
 userdel	2::inwork 15261,10738 15272,10790
 #: next_check ^^^
@@ -3538,7 +3557,7 @@ userdel	q3::inwork 5824,6974 5817,7223
        undef,
        {
          'data' => '#: confirmed_by: srt
-#: last_checked: 2015-06-08
+#: last_checked: 2015-08-16
 #: check_frequency: 45d
 userdel	2::inwork 7306,13418 7451,13504 7630,13584
 ',
@@ -3635,17 +3654,7 @@ userdel	2::inwork 14910,9643 14844,9513
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX bis wann ist die Fahrbahn gesperrt?
-#: last_checked: 2015-07-18
-userdel	q3::inwork 11325,12021 11275,12055
-',
-         'from' => undef,
-         'id' => 2714,
-         'text' => 'Märkisches Ufer: Sperrung der Fahrbahn vor der chinesischen Botschaft, Ausweichen über Gehweg',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3683,16 +3692,7 @@ userdel	q3::inwork 11325,12021 11275,12055
          'type' => 'handicap',
          'until' => 1441033200
        },
-       {
-         'data' => 'userdel	q4::inwork 9695,1563 9626,1604 9519,1650 9493,1661 9420,1700
-',
-         'from' => 1437282000,
-         'id' => 2724,
-         'source_id' => 'IM_025689',
-         'text' => 'Daimlerstr.: Baustelle, Fahrbahn zwischen Mauserstr. und Säntisstr. gesperrt, 20.07.2015 07:00 Uhr bis 31.08.2015 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1441033200
-       },
+       undef,
        {
          'data' => 'userdel	q4::inwork; 9416,10196 9409,10226 9404,10250
 ',
@@ -3714,6 +3714,24 @@ userdel	q4::inwork 7799,13019 7813,12961
          'from' => undef,
          'id' => 2728,
          'text' => 'Weg am Moabiter Werder - Clara-Jaschke-Str.: Bauarbeiten, Ausweichen auf sehr engen Gehweg',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => '#: by: wosch vvv
+#: confirmed_by: srt vvv
+#: XXX 30m zu jeder Seite der Kreuzung sind gesperrt; wann sind die Bauarbeiten fertig? vvv
+#: last_checked: 2015-08-14 vvv
+userdel	q3::inwork 12761,9190 12907,9073 13048,8956
+userdel	q3::inwork 12907,9073 12836,8980
+#: last_checked ^^^
+#: XXX ^^^
+#: confirmed_by ^^^
+#: by ^^^
+',
+         'from' => undef,
+         'id' => 2729,
+         'text' => 'Weichselplatz/Fuldastr./Weigandufer: Bauarbeiten, Ausweichen auf Gehweg',
          'type' => 'handicap',
          'until' => undef
        }
