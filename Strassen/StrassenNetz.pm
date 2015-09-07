@@ -918,22 +918,9 @@ sub build_search_code {
     #      $f:    abgeschätzte Länge bis Ziel über Node (HEURISTIC_DIST),
     #      weitere Array-Elemente sind optional ...]
 
-    # Use Array::Heap if it's installed and it's not explicitly disabled using $use_heap=0.
-    # If $use_heap=1 is set and it's not installed, then a warning is issued.
-    # For performance reasons it's highly recommended to use Array::Heap.
-    use vars qw($use_heap);
-    my $maybe_use_heap = !defined $use_heap;
-    if (($use_heap || $maybe_use_heap)) {
-	if (!eval q{ require Array::Heap; Array::Heap->VERSION(2); import Array::Heap; 1 }) {
-	    if ($use_heap) {
-		warn "Array::Heap is not available: $@, continue without Array::Heap support";
-	    }
-	    $use_heap = 0;
-	} elsif ($maybe_use_heap) {
-	    $use_heap = 1;
-	}
-    }
-    #warn "StrassenNetz: use_heap: $use_heap\n";
+    # note: this is a local $use_heap
+    my $use_heap = use_heap();
+
     $code .= '
 
 '; if ($use_heap) { $code .= '
@@ -1130,6 +1117,31 @@ sub build_search_code {
  } # Achtung, Einrückung für make_autoload!
 ';
     return $code;
+}
+
+# Return true if Array::Heap is available and should be used
+#
+# Array::Heap is used if it's installed and it's not explicitly disabled using $use_heap=0.
+# If $use_heap=1 is set and it's not installed, then a warning is issued.
+# 
+# For performance reasons it's highly recommended to use Array::Heap.
+# 
+# The global $use_heap variable is set to 0 if Array::Heap cannot be loaded.
+sub use_heap {
+    use vars qw($use_heap);
+    if (defined $use_heap && !$use_heap) {
+	return 0;
+    } else {
+	if (!eval q{ require Array::Heap; Array::Heap->VERSION(2); import Array::Heap; 1 }) {
+	    if (defined $use_heap) {
+		warn "Array::Heap is not available: $@, continue without Array::Heap support";
+	    }
+	    $use_heap = 0;
+	    return 0;
+	} else {
+	    return 1;
+	}
+    }
 }
 
 # Sucht eine Route im Netz von $from bis $to.
