@@ -3740,9 +3740,9 @@ userdel	2::inwork 14910,9643 14844,9513
          'from' => 1437289200,
          'id' => 2723,
          'source_id' => 'IM_025684',
-         'text' => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Jordanstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 07.09.2015 17:00 Uhr ',
+         'text' => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Jordanstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 31.10.2015 17:00 Uhr ',
          'type' => 'handicap',
-         'until' => 1441638000
+         'until' => 1446307200
        },
        undef,
        {
@@ -3821,12 +3821,12 @@ userdel	q4::inwork; 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648
          'until' => 1482501600
        },
        {
-         'data' => 'userdel	q4::inwork; 11275,10723 11234,10739 11159,10769 11049,10816
+         'data' => 'userdel	q3::inwork 11275,10723 11234,10739 11159,10769 11049,10816
 ',
          'from' => 1441490400,
          'id' => 2734,
          'source_id' => 'http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2015/pressemitteilung.360026.php',
-         'text' => 'Oranienstr.: Sperrung Richtung Westen wegen Bauarbeiten am Oranienplatz, voraussichtlich 07.09.2015 bis 18.09.2015',
+         'text' => 'Oranienplatz: Sperrung der Fahrbahn wegen Bauarbeiten, Radfahrer müssen auf den Gehweg ausweichen, 07.09.2015 bis voraussichtlich 18.09.2015',
          'type' => 'handicap',
          'until' => 1442613600
        }

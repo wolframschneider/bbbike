@@ -24353,8 +24353,8 @@ EOF
 EOF
      },
      { from  => 1437289200, # 2015-07-19 09:00
-       until => $isodate2epoch->("2015-09-07 17:00:00"), # 1441033200, # 2015-08-31 17:00
-       text  => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Jordanstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 07.09.2015 17:00 Uhr ',
+       until => $isodate2epoch->("2015-10-31 17:00:00"), # 1441033200, # 2015-08-31 17:00
+       text  => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Jordanstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 31.10.2015 17:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_025684',
        data  => <<EOF,
@@ -24463,11 +24463,11 @@ EOF
      },
      { from  => 1441490400, # 2015-09-06 00:00
        until => 1442613600, # 2015-09-19 00:00
-       text  => 'Oranienstr.: Sperrung Richtung Westen wegen Bauarbeiten am Oranienplatz, voraussichtlich 07.09.2015 bis 18.09.2015',
+       text  => 'Oranienplatz: Sperrung der Fahrbahn wegen Bauarbeiten, Radfahrer müssen auf den Gehweg ausweichen, 07.09.2015 bis voraussichtlich 18.09.2015',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2015/pressemitteilung.360026.php',
        data  => <<EOF,
-userdel	q4::inwork; 11275,10723 11234,10739 11159,10769 11049,10816
+userdel	q3::inwork 11275,10723 11234,10739 11159,10769 11049,10816
 EOF
      },
     );
