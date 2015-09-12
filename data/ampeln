@@ -174,7 +174,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 7479,9357
 	X 7526,9791
 	X 7107,9030
-	X 7006,9282
+	X 7006,9292
 	X 7049,9833
 	X 7126,9825
 	X 6753,9814
@@ -389,7 +389,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 1532,11280
 	X 3006,11093
 	X 3501,11096
-	X 3830,10351
+	X 3835,10352
 	X 3813,10435
 	F 3795,11098
 	X 4289,11060
@@ -426,11 +426,11 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 19958,5950
 	X 22467,6135
 	X 7389,8837
-	X 6161,9128
-	X 6063,9106
-	X 5503,8982
+	X 6152,9136
+	X 6059,9118
+	X 5503,8986
 	X 5505,8832
-	X 5269,8897
+	X 5266,8903
 	X 4918,8872
 	X 4777,8870
 	X 5493,9367
@@ -678,7 +678,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 11142,6535
 	X 6190,8800
 	X 5655,8828
-	X 4473,9154
+	X 4462,9166
 	X 3698,9624
 	X 3427,9771
 	X 3348,9806
@@ -945,9 +945,9 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 2881,14061
 	X 3038,13612
 	X 3112,13296
-	X 3711,13202
-	X 3967,13211
-	X 4382,13232
+	X 3711,13210
+	X 3967,13218
+	X 4381,13239
 	X 5601,12756
 	X 7602,17399
 	X 7335,18257
@@ -1422,7 +1422,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X -990,13502
 	X 1465,14963
 	X 1133,14387
-	X 4547,13232
+	X 4542,13244
 	X 5705,13359
 	F 5569,13381
 	X 6299,14660
@@ -1479,7 +1479,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 404,12414
 	F 1264,11840
 	F 1775,11135
-	X 3358,12258
+	X 3355,12258
 	X 10453,-2133
 	X 10747,-2129
 	X 17879,-3
@@ -1618,7 +1618,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8695,11015
 	X 5223,9810
 	X 3927,9935
-	F 3982,9761
+	F 3974,9774
 	X 4513,10702
 	X 3970,11664
 	X 3460,11441
@@ -1735,7 +1735,7 @@ S-Bahn und Regionalbahn	B 21562,12088
 	F -6275,12498
 	F -1050,11061
 	X -82,11178
-	F 3381,12087
+	F 3376,12086
 	F 6936,15888
 	F 1205,10114
 	F 2282,11463
@@ -1937,7 +1937,7 @@ Parkhausausfahrt auf der westlichen Seite	X 11252,12644
 	F 8953,10366
 	F 5574,5819
 	F 2745,12467
-	X 20210,13776
+	X 20207,13778
 	F 20474,14442
 	F 838,14530
 	F 11367,1710
@@ -2167,7 +2167,6 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 8514,17634
 	F 8631,18441
 	X 10127,19992
-	F 5628,14063
 	F::inwork 9984,12426
 	X::inwork 9122,12509
 	X::inwork 9286,12886
@@ -2175,11 +2174,6 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X::inwork 9475,12365
 	F::inwork 9270,12086
 	F::inwork 9812,12145
-	X::inwork 8732,14098
-	X::inwork 8870,13926
-	X::inwork 8426,13909
-	X::inwork 8313,13839
-	X::inwork 8775,13606
 	X 8450,13599
 	X 9070,14058
 	F 17117,18761
@@ -2197,6 +2191,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 7987,6775
 	F 7155,21744
 	F 9821,14073
+	F 9659,14043
 	X 5086,14504
 	X 1932,14146
 	F -2866,17760
@@ -2261,7 +2256,6 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F::inwork 14451,7340
 	F 14346,16241
 	F 5155,3502
-	X::inwork 11269,20667
 	F 5357,6943
 	F 6153,18592
 	F 5525,21022
@@ -2277,11 +2271,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 10656,11887
 	F::inwork 7741,14560
 	F 7292,17316
-	X 20269,14256
+	X 20262,14255
 	X 23810,7946
 	X::inwork 21164,9960
 	X::inwork 22129,9702
 	X 24801,11261
+	F 9274,13963
+	X 9151,13941
 	F -12868,-502
 	X -12940,-1625
 	X -12549,-1277
@@ -2403,7 +2399,6 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F -12432,-226
 	X -9942,21
 	X -12655,-1714
-	X::inwork 14018,9118
 	X::inwork 14151,8967
 	X -3876,29096
 Umgehung mit Treppen existiert	Zbr 4611,63946

@@ -80,8 +80,6 @@ for my $f (@files) {
 	    if $f eq 'BBBikeDraw/SVG.pm' && !eval { require SVG };
 	myskip "$f needs GD", $tests_per_file
 	    if $f =~ m{^BBBikeDraw/GD.*\.pm$} && !eval { require GD };
-	myskip "$f needs Tk::Wizard", $tests_per_file
-	    if $f eq 'BBBikeImportWizard.pm' && !eval { require Tk::Wizard };
 	myskip "$f needs GPS::Garmin", $tests_per_file
 	    if $f =~ m{^GPS/(DirectGarmin|GpsmanConn).pm$} && !eval { require GPS::Garmin };
 	myskip "$f needs Algorithm::Permute", $tests_per_file
@@ -136,6 +134,9 @@ for my $f (@files) {
 	myskip "$f needs mod_perl2", $tests_per_file
 	    if $f =~ m{^( BBBikeDataDownloadCompat\.pm
 		      )$}x && !eval { require Apache2::Const; 1};
+	myskip "$f needs plack", $tests_per_file
+	    if $f =~ m{^( BBBikeDataDownloadCompatPlack\.pm
+		      )$}x && !eval { require Plack::Request; 1};
 	myskip "$f needs Cairo", $tests_per_file
 	    if $f =~ m{^( Route/PDF/Cairo\.pm
 		        | BBBikeDraw/PDFCairo.pm

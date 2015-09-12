@@ -403,7 +403,7 @@ südliches Sackgassenende	culdesac 11668,-171
 	culdesac -3900,15650
 	culdesac 22407,12901
 	culdesac_pseudo 22088,15557
-	culdesac 21217,11328
+	culdesac 21189,11326
 	culdesac 22001,10216
 	culdesac 25941,4971
 	culdesac 24991,4701
@@ -756,7 +756,7 @@ nördliches Sackgassenende	culdesac 24370,10198
 #: note: verschlossenes Tor
 	culdesac -3384,13091
 	culdesac_pseudo -3560,13704
-	culdesac_pseudo 19842,13765
+	culdesac_pseudo 19856,13794
 	culdesac 21187,11132
 	culdesac_pseudo 21326,11122
 	culdesac 21396,11242
@@ -897,7 +897,7 @@ Tor	culdesac 8388,13993
 Flughafengelände	culdesac_pseudo 9300,8027
 #: next_check_id: SCHOENEBERGERSCHLEIFE-2015 vvv
 #: XXX: wird bei der Verlängerung der Schöneberger Schleife aufgehoben vvv
-#: next_check: 2015-09-01 vvv
+#: next_check: 2015-09-09 vvv
 	culdesac 7998,8317
 	culdesac 8204,9001
 #: next_check ^^^
@@ -945,7 +945,7 @@ Klinikumsgebäude	culdesac 17428,25235
 	culdesac 22914,17893
 #: next_check_id: AMLOKDEPOT-2014
 #: XXX evtl. entfernen, falls die beiden Abschnitte verbunden werden
-#: last_checked: 2015-07-24
+#: last_checked: 2015-09-09
 #: check_frequency: 90d
 Ende des nördlichen Abschnitts	culdesac 8389,9017
 Sackgassenende, Ulmenhof	culdesac 32090,3599
@@ -1104,10 +1104,20 @@ westliches Sackgassenende	culdesac 17355,12460
 	culdesac 26905,-2116
 	culdesac 26254,-772
 nördliches Sackgassenende	culdesac 24716,12081
+Sackgassenende, NSG Fauler See	culdesac_pseudo 16381,16969
+westliches Sackgassenende	culdesac 20281,11341
+östliches Sackgassenende	culdesac 20413,11334
 # 
 ######################################################################
 # culdesac entries which should remain invisible
 #: ignore vvv
+	culdesac_pseudo 8224,6775
+	culdesac_pseudo 8481,6900
+	culdesac_pseudo 8092,13467
+	culdesac_pseudo 4755,9154
+	culdesac_pseudo 19921,10499
+	culdesac_pseudo 18931,9629
+	culdesac_pseudo 17764,11371
 	culdesac_pseudo 24666,436
 	culdesac_pseudo 25646,-209
 	culdesac_pseudo 27055,-2298
@@ -1180,7 +1190,7 @@ südliches Sackgassenende	culdesac_pseudo 22478,4659
 	culdesac_pseudo 14994,12064
 #: note: als Radfahrer/Fußgänger kann man über den Gehweg weiterfahren/gehen
 	culdesac_pseudo 11017,12487
-	culdesac_pseudo 3856,9687
+	culdesac_pseudo 3840,9683
 	culdesac_pseudo 7765,15417
 	culdesac_pseudo 7929,15355
 	culdesac_pseudo 10382,19066

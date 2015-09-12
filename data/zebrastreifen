@@ -342,7 +342,7 @@ Emmentaler/Thurgauer	Zs 7141,18140
 Veitstr./Medebacher Weg	Zs 1901,19842
 Malchower/Clematisweg	Zs 13173,18144
 Malchower Weg/Biesterfelder	Zs 17106,16456
-Grunewaldstr./Elﬂholzstr.	Zs 7218,9321
+Grunewaldstr./Elﬂholzstr.	Zs 7217,9331
 Feuerbachstr./Fregestr.	Zs 5597,6360
 Neumann/Vinetastr.	Zs 11575,17016
 Neumannstr./Laudaer Str.	Zs 11440,17670
@@ -502,7 +502,7 @@ H‰mmerlingstr./Wuhleweg	Zs 22084,5877
 Kiefholzstr./Siemens	Zs 14018,9118
 #: next_check_id: LORTZING-2014
 #: XXX bleibt dieser Zebrastreifen permanent?
-#: last_checked: 2015-04-09
+#: last_checked: 2015-08-11
 #: check_frequency: 120d
 Lortzingstr.-Mauerpark/Baustraﬂe	Zs 10055,15424
 Alte Hellersdorfer Str.	Zs 23109,15861
@@ -556,3 +556,4 @@ Ringstr./Kaiserstr.	Zs 8331,4288
 Pankgrafenstr./Pankeweg	Zs 13953,23497
 Baseler Str./Altdorfer Str.	Zs 3160,2474
 Normannenstr.	Zs 19962,1473
+Graefestr.	Zs 11200,9334

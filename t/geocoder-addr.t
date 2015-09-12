@@ -51,8 +51,8 @@ SKIP: {
     }
 
     # only street, titlecase and lowercase
-    for my $str ('Dudenstraße', 'dudenstraße') {
-	check_geocoding $str, qr{^Dudenstraße}, '13.370467,52.485352 13.386009,52.484715'
+    for my $street ('Dudenstraße', 'dudenstraße') {
+	check_geocoding $street, qr{^Dudenstraße}, '13.370467,52.485352 13.386009,52.484715'
     }
     {
 	my $dudenstr24_bbox = '13.381574,52.485224 13.382067,52.484818';
@@ -87,16 +87,66 @@ SKIP: {
 	check_geocoding 'Ährenweg 10', 'Ährenweg 10, 12683 Berlin', $aehrenweg10_bbox;
 	check_geocoding 'ährenweg 10', 'Ährenweg 10, 12683 Berlin', $aehrenweg10_bbox;
     }
+
+    {
+	# multiple streets with same name
+	my $bahnhofstrasse_schoeneberg_bbox = '13.338995,52.470488 13.340671,52.469699';
+	my $bahnhofstrasse_koepenick_bbox   = '13.574098,52.453420 13.575258,52.452552';
+	check_geocoding "Bahnhofstraße", "Bahnhofstraße 1, 12159 Berlin", $bahnhofstrasse_schoeneberg_bbox; # first one in list
+	check_geocoding "Bahnhofstraße, 12159 Berlin", "Bahnhofstraße 1, 12159 Berlin", $bahnhofstrasse_schoeneberg_bbox;
+	{
+	    local $TODO = "Wrong result";
+	    check_geocoding "Bahnhofstraße, 12555 Berlin", "Bahnhofstraße 1, 12555 Berlin", $bahnhofstrasse_koepenick_bbox;
+	}
+	check_geocoding "Bahnhofstraße 1, 12555 Berlin", "Bahnhofstraße 1, 12555 Berlin", $bahnhofstrasse_koepenick_bbox;
+    }
+
+    { # multiple results
+	my @results = $geocoder->geocode(location => 'Dudenstraße', limit => 5);
+	is scalar(@results), 5, 'got 5 results';
+	for my $i (0..4) {
+	    is $results[$i]->{display_name}, 'Dudenstraße ' . (10+$i) . ', 10965 Berlin', "multiple results, index $i";
+	}
+    }
+
+    { # multiple results, default limit
+	my @results = $geocoder->geocode(location => 'Dudenstraße');
+	is scalar(@results), 1, 'got one result (default)';
+	is $results[0]->{display_name}, 'Dudenstraße 10, 10965 Berlin', 'multiple results with default limit';
+    }
+
+    { # multiple results, huge limit
+	my @results = $geocoder->geocode(location => 'Dudenstraße', limit => 10000);
+	cmp_ok scalar(@results), '<', 10000, 'got less than requested';
+    }
+
+    { # multiple results, but not results
+	my @results = $geocoder->geocode(location => 'This street does not exist', limit => 10);
+	is_deeply \@results, [], 'no results in list context';
+    }
+
+    { # option incomplete
+	my @results = $geocoder->geocode(location => 'Dud', limit => 1000, incomplete => 1);
+	cmp_ok scalar(@results), '>', 10, 'got some results';
+	ok( (grep { $_->{display_name} =~ m{^Dudenstraße} } @results), 'got Dudenstraße with incomplete location' );
+    }
+
+    { # option incomplete, with house number
+	my @results = $geocoder->geocode(location => 'Dudenstraße 1', limit => 1000, incomplete => 1);
+	ok scalar(@results), 'got some results';
+	ok( (grep { $_->{display_name} =~ m{^Dudenstraße 10} } @results), 'got e.g. Dudenstraße 10 with incomplete location (street + hnr)' );
+    }
 }
 
-check_parse_string "Dudenstraße 24", { str => "Dudenstraße", hnr => "24" };
-check_parse_string "Dudenstr. 24", { str => "Dudenstraße", hnr => "24" };
-check_parse_string "Dudenstraße 24, Berlin", { str => "Dudenstraße", hnr => "24", city => "Berlin" };
-check_parse_string "Dudenstraße 24, Berlin, 10965", { str => "Dudenstraße", hnr => "24", city => "Berlin", zip => "10965" };
-check_parse_string "Dudenstraße 24, 10965 Berlin", { str => "Dudenstraße", hnr => "24", city => "Berlin", zip => "10965" };
+check_parse_string "Dudenstraße 24", { street => "Dudenstraße", hnr => "24" };
+check_parse_string "Dudenstr. 24", { street => "Dudenstraße", hnr => "24" };
+check_parse_string "Dudenstraße 24, Berlin", { street => "Dudenstraße", hnr => "24", city => "Berlin" };
+check_parse_string "Dudenstraße 24, Berlin, 10965", { street => "Dudenstraße", hnr => "24", city => "Berlin", zip => "10965" };
+check_parse_string "Dudenstraße 24, 10965 Berlin", { street => "Dudenstraße", hnr => "24", city => "Berlin", zip => "10965" };
 
 sub check_geocoding ($$$;$) {
     my($in_street, $expected_street, $bbox, $testname) = @_;
+    local $Test::Builder::Level = $Test::Builder::Level + 1;
     $testname = defined $testname ? " ($testname)" : '';
     my $res = $geocoder->geocode(location => $in_street);
     ok $res, "got a result for <$in_street>" . $testname;
@@ -156,11 +206,11 @@ sub do_complete_file {
 		next;
 	    }
 	}
-	my($str, $hnr, $plz, $city) = split /\|/, $strname;
+	my($street, $hnr, $plz, $city) = split /\|/, $strname;
 	for my $location (
-			  "$str $hnr, $plz $city",
-			  lc("$str $hnr, $plz $city"),
-			  lc("$str $hnr, $plz"),
+			  "$street $hnr, $plz $city",
+			  lc("$street $hnr, $plz $city"),
+			  lc("$street $hnr, $plz"),
 			 ) {
 	    my $res = $geocoder->geocode(location => $location);
 	    if (!$res) {
