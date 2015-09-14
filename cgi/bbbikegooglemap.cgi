@@ -1069,7 +1069,7 @@ EOF
         } else if (map.getMapTypeId() == "Mapnik" ||
                    map.getMapTypeId() == "T\@H" ||
                    map.getMapTypeId() == "Cycle") {
- 	    copyrightNode.innerHTML = 'Kartendaten &copy; $osm_copyright_year <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors';
+ 	    copyrightNode.innerHTML = 'Kartendaten &copy; $osm_copyright_year <a href="https://www.openstreetmap.org/">OpenStreetMap</a> Contributors';
         } else {
  	    copyrightNode.innerHTML = "";
         }
@@ -1157,7 +1157,7 @@ EOF
             new GLatLngBounds(new GLatLng(-90,-180), new GLatLng(90,180)), 0,
             '(<a rel="license" href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>)');
         var copyrightCollection =
-            new GCopyrightCollection('Kartendaten &copy; $osm_copyright_year <a href="http://www.openstreetmap.org/">OpenStreetMap</a> Contributors');
+            new GCopyrightCollection('Kartendaten &copy; $osm_copyright_year <a href="https://www.openstreetmap.org/">OpenStreetMap</a> Contributors');
         copyrightCollection.addCopyright(copyright);
     
         var tilelayers_mapnik = new Array();
