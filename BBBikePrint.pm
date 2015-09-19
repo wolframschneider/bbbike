@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998-2003,2006,2014 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2003,2006,2014,2015 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -26,6 +26,9 @@ BEGIN {
 }
 
 @Radwege::bbbike_category_order = @Radwege::bbbike_category_order if 0; # cease -w
+
+@BBBikePrint::route_pdf_modules = ('Route::PDF::Cairo', 'Route::PDF')
+    if !@BBBikePrint::route_pdf_modules;
 
 sub BBBikePrint::create_postscript {
     my($c, %args) = @_;
@@ -353,11 +356,24 @@ sub BBBikePrint::print_text_pdflatex {
 }
 
 sub BBBikePrint::print_route_pdf {
-    require Route::PDF;
+    my $route_pdf_module;
+    for my $try (@BBBikePrint::route_pdf_modules) {
+	if (eval qq{ require $try; 1 }) {
+	    $route_pdf_module = $try;
+	    warn "Verwende das Modul $try für BBBikePrint::print_route_pdf.\n"
+		if $verbose;
+	    last;
+	}
+    }
+    if (!$route_pdf_module) {
+	status_message("Konnte die Module @BBBikePrint::route_pdf_modules nicht laden", 'err');
+	return;
+    }
+
     my $pdffile = "$tmpdir/$progname" . "_$$.pdf";
     unlink $pdffile;
 
-    my $pdf = Route::PDF->new(-filename => $pdffile);
+    my $pdf = $route_pdf_module->new(-filename => $pdffile);
     $pdf->output(-net => $net,
 		 -route => Route->new_from_realcoords(\@realcoords),
 		);
@@ -378,7 +394,7 @@ sub BBBikePrint::view_pdf {
 	Win32Util::start_any_viewer($file);
     } else {
     TRY: {
-	    for my $prog (qw(xpdf nautilus acroread acroread5 acroread4 gv ggv)) {
+	    for my $prog (qw(xpdf nautilus acroread acroread5 acroread4 gv ggv atril)) {
 		if (is_in_path($prog)) {
 		    system("$prog $file &");
 		    last TRY;
