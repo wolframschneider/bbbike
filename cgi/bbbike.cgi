@@ -2475,7 +2475,7 @@ EOF
 
 	sub social_link {
 	    print qq{<span id="social">\n};
-	    print qq{<a href="http://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="}, M("Folge uns auf twitter.com/BBBikeWorld"), qq{"></a>\n} if $enable_twitter_t_link;
+	    print qq{<a href="https://twitter.com/BBBikeWorld" target="_new"><img class="logo" width="16" height="16" src="/images/twitter-t.png" alt="" title="}, M("Folge uns auf twitter.com/BBBikeWorld"), qq{"></a>\n} if $enable_twitter_t_link;
 	    print qq{</span><!-- social_link -->\n\n};
 	}
 
@@ -8780,7 +8780,7 @@ $permalink_text
 <span id="footer_community">
   <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="$donate_title" border="0"></a>
   @{[ $enable_flattr_t_link  ? qq[<a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>] : "" ]}
-  @{[ $enable_twitter_t_link  ? qq[<a href="http://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="$twitter_title" alt=""></a>] : "" ]}
+  @{[ $enable_twitter_t_link  ? qq[<a href="https://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="$twitter_title" alt=""></a>] : "" ]}
   $rss_icon
 </span> <!-- footer_community -->
 
