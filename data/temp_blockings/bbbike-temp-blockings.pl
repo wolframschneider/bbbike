@@ -23450,7 +23450,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2015-07-31
+#: last_checked: 2015-09-19
 #: check_frequency: 90d
 userdel	q3::inwork 4503,10497 4485,10307
 EOF
@@ -24065,7 +24065,7 @@ userdel	q4::inwork; 3807,11859 3666,11855
 EOF
      },
      { from  => undef, # 
-       until => $isodate2epoch->("2015-10-05 15:00:00"), # undef, # XXX
+       until => 1443371232, # $isodate2epoch->("2015-10-05 15:00:00"), # undef, # XXX
        text  => 'Dickhardstr.: Bauarbeiten an der Rheinstr., direkte Durchfahrt gesperrt, voraussichtlich bis 05.10.2015',
        source_id => 'IM_025361',
        type  => 'handicap',
@@ -24216,9 +24216,10 @@ EOF
 #: check_frequency: 10d vvv
 userdel	2::inwork 14318,9688 14443,9731
 # REMOVED --- userdel	2::inwork 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
-userdel	2::inwork 14575,9648 14645,9710 14697,9726 14910,9643 15052,9584 15174,9554 15321,9448 15432,9322 15453,9259 15513,9144 15527,9096 15638,9020
+userdel	2::inwork 14575,9648 14645,9710 14697,9726 14910,9643 15052,9584 15174,9554 15321,9448 15432,9322 15453,9259
+# REMOVED --- userdel	2::inwork 15453,9259 15513,9144 15527,9096 15638,9020
 # REMOVED --- userdel	2::inwork 14443,9731 14361,9772
-userdel	2::inwork 15630,8979 15638,9020 15778,8990
+# REMOVED --- userdel	2::inwork 15630,8979 15638,9020 15778,8990
 # REMOVED --- userdel	2::inwork 14910,9643 14871,9567 14844,9513
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -24501,7 +24502,7 @@ userdel	q4::inwork 4492,20214 4622,20292 4718,20341 4879,20427
 EOF
      },
      { from  => 1442120400, # 2015-09-13 07:00
-       until => 1446307200, # 2015-10-31 17:00
+       until => 1443207735, # 1446307200, # 2015-10-31 17:00
        text  => 'Müggelseedamm: zwischen Bölschetr. und Scharnweberstr. Baustelle, Fahrbahn Richtung Osten gesperrt, 14.09.2015 bis 31.10.2015 ',
        type  => 'handicap',
        source_id => 'IM_026222',
@@ -24534,8 +24535,10 @@ EOF
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.364590.php',
        data  => <<EOF,
 #: XXX Bis wann sind die Bauarbeiten fertig?
-#: next_check: 2016-03-01
-userdel	2::inwork -1303,2003 -1592,1852 -2043,1596 -2618,1281
+#: last_checked: 2015-09-27
+#: check_frequency: 30d
+userdel	2::inwork -1303,2003 -1591,1861
+# REMOVED (weitgehend fertig) --- userdel	2::inwork -1591,1861 -1650,1826 -1724,1785 -1805,1740 -1889,1693 -1950,1659 -2043,1608 -2602,1291
 EOF
      },
      { from  => 1442181600, # 2015-09-14 00:00
@@ -24554,6 +24557,15 @@ EOF
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.367062.php',
        data  => <<EOF,
 userdel	2::inwork -3339,13106 -3203,12895 -3205,12816 -3180,12719 -3142,12615
+EOF
+     },
+     { from  => 1442786400, # 2015-09-21 00:00
+       until => 1449961200, # 2015-12-13 00:00
+       text  => 'Karmeliterweg: Instandsetzungsarbeiten zwischen Welfenteich und Frohnauer Straße, Fahrbahn gesperrt, vom 22.09.2015 bis 12.12.2015',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.371808.php',
+       data  => <<EOF,
+userdel	q4::inwork 1868,24633 1924,24672 2003,24702 2120,24740
 EOF
      },
     );

@@ -2059,25 +2059,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
-',
-         'from' => 1442566800,
-         'id' => 1910,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              19,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbst in Westend), Straße vollständig gesperrt (19.09.2015 bis 20.09.2015) ',
-         'type' => 'gesperrt',
-         'until' => 1442772000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2567,26 +2549,7 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
-',
-         'from' => 1442440800,
-         'id' => 2285,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              9
-                            ]
-                          ],
-         'source_id' => 'http://www.laubinger.de/termine/rosenthaler-herbst/',
-         'text' => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 18.09.2015 bis 20.09.2015',
-         'type' => 'handicap',
-         'until' => 1442786399
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2735,27 +2698,7 @@ userdel	2::night 14838,11410 14792,11391
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
-	3::temp 8391,12389 8344,12221 8327,12174
-	3::temp 8327,12174 8344,12221 8391,12389
-',
-         'from' => 1442894400,
-         'id' => 2387,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              21,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen Marathon gesperrt, ab 24.09.2015',
-         'type' => 'gesperrt',
-         'until' => 1443132000
-       },
+       undef,
        {
          'data' => 'userdel	2::temp 8573,12325 8540,12420
 userdel	2::temp 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
@@ -2901,24 +2844,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        },
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: KARLSHORSTER-2015 vvv
-#: last_checked: 2015-09-18 vvv
-#: next_check: 2015-09-21 vvv
-#: XXX am 2015-09-06 offen für Fußgänger
-userdel	2::inwork 15272,10790 15279,10862
-userdel	2::inwork 15261,10738 15272,10790
-#: next_check ^^^
-#: last_checked ^^^
-#: next_check_id ^^^
-',
-         'from' => 1430704800,
-         'id' => 2416,
-         'source_id' => 'IM_024846',
-         'text' => 'Karlshorster Str.: Fahrbahn zwischen Türrschmidtstr. und Hauptstr. zeitweise komplett gesperrt, auch für Fußgänger und Radfahrer, 04.05.2015 bis 21.09.2015',
-         'type' => 'handicap',
-         'until' => 1442851200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3302,7 +3228,7 @@ userdel	q4::inwork; 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753 
        undef,
        {
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2015-07-31
+#: last_checked: 2015-09-19
 #: check_frequency: 90d
 userdel	q3::inwork 4503,10497 4485,10307
 ',
@@ -3456,17 +3382,7 @@ userdel	q4::inwork; 3807,11859 3666,11855
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: next_check: 2015-08-03
-userdel	q3::inwork 5824,6974 5817,7223
-',
-         'from' => undef,
-         'id' => 2696,
-         'source_id' => 'IM_025361',
-         'text' => 'Dickhardstr.: Bauarbeiten an der Rheinstr., direkte Durchfahrt gesperrt, voraussichtlich bis 05.10.2015',
-         'type' => 'handicap',
-         'until' => 1444050000
-       },
+       undef,
        {
          'data' => '	2::night 4280,17551 4243,17570 4240,17584 3959,17714 3987,17808
 ',
@@ -3552,9 +3468,10 @@ userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
 #: check_frequency: 10d vvv
 userdel	2::inwork 14318,9688 14443,9731
 # REMOVED --- userdel	2::inwork 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
-userdel	2::inwork 14575,9648 14645,9710 14697,9726 14910,9643 15052,9584 15174,9554 15321,9448 15432,9322 15453,9259 15513,9144 15527,9096 15638,9020
+userdel	2::inwork 14575,9648 14645,9710 14697,9726 14910,9643 15052,9584 15174,9554 15321,9448 15432,9322 15453,9259
+# REMOVED --- userdel	2::inwork 15453,9259 15513,9144 15527,9096 15638,9020
 # REMOVED --- userdel	2::inwork 14443,9731 14361,9772
-userdel	2::inwork 15630,8979 15638,9020 15778,8990
+# REMOVED --- userdel	2::inwork 15630,8979 15638,9020 15778,8990
 # REMOVED --- userdel	2::inwork 14910,9643 14871,9567 14844,9513
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -3608,16 +3525,7 @@ userdel	2::inwork 15630,8979 15638,9020 15778,8990
          'until' => 1446307200
        },
        undef,
-       {
-         'data' => 'userdel	q4::inwork; 9416,10196 9409,10226 9404,10250
-',
-         'from' => 1438198655,
-         'id' => 2725,
-         'source_id' => 'IM_025719',
-         'text' => 'Mehringbrücke: Fahrbahn Richtung Wilhelmstr. gesperrt, für Radfahrer umständliche Wegführung über linken Gehweg, bis 21.09.2015',
-         'type' => 'handicap',
-         'until' => 1442847600
-       },
+       undef,
        undef,
        undef,
        {
@@ -3705,16 +3613,7 @@ userdel	q4::inwork; 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648
          'type' => 'handicap',
          'until' => 1448924400
        },
-       {
-         'data' => 'userdel	q4::inwork; 25519,4830 25552,4829 25720,4832
-',
-         'from' => 1442120400,
-         'id' => 2738,
-         'source_id' => 'IM_026222',
-         'text' => 'Müggelseedamm: zwischen Bölschetr. und Scharnweberstr. Baustelle, Fahrbahn Richtung Osten gesperrt, 14.09.2015 bis 31.10.2015 ',
-         'type' => 'handicap',
-         'until' => 1446307200
-       },
+       undef,
        {
          'data' => '	q4::inwork 3216,24135 3311,24150 3483,24186 3632,24214
 ',
@@ -3737,8 +3636,10 @@ userdel	q4::inwork; 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648
        },
        {
          'data' => '#: XXX Bis wann sind die Bauarbeiten fertig?
-#: next_check: 2016-03-01
-userdel	2::inwork -1303,2003 -1592,1852 -2043,1596 -2618,1281
+#: last_checked: 2015-09-27
+#: check_frequency: 30d
+userdel	2::inwork -1303,2003 -1591,1861
+# REMOVED (weitgehend fertig) --- userdel	2::inwork -1591,1861 -1650,1826 -1724,1785 -1805,1740 -1889,1693 -1950,1659 -2043,1608 -2602,1291
 ',
          'from' => 1442700000,
          'id' => 2741,
@@ -3766,6 +3667,16 @@ userdel	2::inwork -1303,2003 -1592,1852 -2043,1596 -2618,1281
          'text' => 'Schifffahrtsufer an der Havel: Bauarbeiten im Abschnitt Burgwall - Halbinsel, Weg gesperrt, vom 22. September 2015 bis voraussichtlich Mitte Dezember 2015 ',
          'type' => 'gesperrt',
          'until' => 1450220399
+       },
+       {
+         'data' => 'userdel	q4::inwork 1868,24633 1924,24672 2003,24702 2120,24740
+',
+         'from' => 1442786400,
+         'id' => 2744,
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.371808.php',
+         'text' => 'Karmeliterweg: Instandsetzungsarbeiten zwischen Welfenteich und Frohnauer Straße, Fahrbahn gesperrt, vom 22.09.2015 bis 12.12.2015',
+         'type' => 'handicap',
+         'until' => 1449961200
        }
      
 );
