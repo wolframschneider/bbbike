@@ -2175,7 +2175,27 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 9536,11922 9666,11935
+userdel	2::temp 9524,12010 9656,12021
+',
+         'from' => 1448146800,
+         'id' => 1989,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              23,
+                              'months',
+                              11
+                            ]
+                          ],
+         'source_id' => 'http://www.berlin.de/tickets/suche/detail.php?id=1090035',
+         'text' => 'Gendarmenmarkt: Weihnachtsmarkt vom 23.11.2015 bis 31.12.2015, Durchfahrt nicht möglich (Eintritt!)',
+         'type' => 'gesperrt',
+         'until' => 1451602799
+       },
        undef,
        undef,
        undef,
@@ -2297,7 +2317,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober von 7.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3133,9 +3153,11 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        },
        {
          'data' => '#: note: außerdem Ampel an der Kreuzung Werneuchener/Große-Leege, und geänderte Vorfahrtsregelung an der Umleitungsstrecke via Große-Leege-Str.
-userdel	q4::inwork 15272,14691 15345,14736 15383,14759 15562,14869 15580,14880 15774,14992 15867,15073 15937,15134 16028,15218 16119,15302
+userdel	q4::inwork 15272,14691 15345,14736 15383,14759 15562,14869 15580,14880 15774,14992
+# userdel	q4::inwork 15774,14992 15867,15073 15937,15134 16028,15218 16119,15302
 # userdel	q4::inwork; 16119,15302 16218,15386 16263,15427 16331,15486 16412,15559
-userdel	q4::inwork; 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753 16819,15912
+# userdel	q4::inwork; 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753
+userdel	q4::inwork; 16633,15753 16819,15912 16941,16021
 # userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
 #	3 16475,15659 16497,15636 16615,15737
 #	3 16615,15737 16497,15636 16475,15659
@@ -3279,16 +3301,7 @@ userdel	2::inwork -3197,11554 -3075,11510
        undef,
        undef,
        undef,
-       {
-         'data' => '	2::inwork 7653,14570 7527,14644 7486,14652
-',
-         'from' => 1422745200,
-         'id' => 2677,
-         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
-         'text' => 'Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015',
-         'type' => 'gesperrt',
-         'until' => 1443650400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3387,20 +3400,7 @@ userdel	2::inwork 7306,13418 7451,13504 7630,13584
          'until' => undef
        },
        undef,
-       {
-         'data' => '#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5511.html
-#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150430.1120.401849.html
-#: last_checked: 2015-09-09
-	q4::inwork; 7033,10328 7060,10221 7080,10098
-# REMOVED ---	q4::inwork 7080,10098 7038,10087
-	q3::inwork 7080,10098 7167,10074
-',
-         'from' => undef,
-         'id' => 2705,
-         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150430.1120.401849.html',
-         'text' => 'Maaßenstr.: Bauarbeiten, gesperrt in Richtung Winterfeldplatz, außerdem Sperrungen in der Winterfeldtstr., bis September 2015',
-         'until' => 1443564000
-       },
+       undef,
        {
          'data' => 'userdel	2::inwork 39384,115027 39168,114713 38881,113150
 ',

@@ -1157,7 +1157,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'INKO_82',
        data  => <<EOF,
-userdel	1 12442,20805 12222,20637 12118,20557 12030,20490
+userdel	1 12442,20805 12222,20637 12116,20559 12070,20526 12037,20524
 EOF
      },
      { from  => 1098309600, # 2004-10-21 00:00
@@ -1876,7 +1876,7 @@ EOF
        text  => 'L 14; (Großderschau- Bahnhof Zernitz); Brücke über die Neue Jägelitz bei Zernitz Brückensanierung Vollsperrung 19.04.2005-28.10.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -63163,51264 -63375,50856
+userdel	2 -63197,51278 -63388,50865
 EOF
      },
      { from  => 1112652000, # 2005-04-05 00:00
@@ -2007,7 +2007,7 @@ EOF
        text  => 'Rosenfelder Straße Richtung Frankfurter Allee zwischen Skandinavische Straße und Frankfurter Allee Baustelle, Straße gesperrt, Dauer: 09.05.2005, 09.00 Uhr bis 09.06.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 17338,11969 17358,11943 17306,11866 17240,11791
+userdel	q4; 17338,11969 17358,11943 17306,11866 17251,11789
 EOF
      },
      { from  => 1116280800, # 2005-05-17 00:00
@@ -5913,7 +5913,7 @@ EOF
        text  => 'L 014 Großderschau-Kyritz Brücke über den Graben bei Babe Brückenneubau Vollsperrung 11.07.2006-21.12.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -64545,43296 -63700,42146
+userdel	2::inwork -64564,43289 -63780,42162
 EOF
      },
      { from  => 1157695483, # 2006-09-08 08:04
@@ -9494,7 +9494,7 @@ EOF
        text  => 'B 102 Brücken über den Mühlenrhin u. Büttgraben nördl.Rhinow Brückenbauarbeiten Vollsperrung 13.08.2007-25.08.2007 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -60904,38644 -60907,38811
+userdel	2::inwork -60904,38644 -60889,38876
 EOF
      },
      { from  => 1188246966, # 
@@ -10160,7 +10160,7 @@ EOF
        text  => 'L 141 Havelberger Str. OD Breddin Kanal- u. Straßenbauarbeiten Vollsperrung 04.10.2007-20.12.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -70922,51604 -70980,51154 -71053,49770
+userdel	q4::inwork -70922,51604 -70999,51147 -71005,50627 -70992,50438 -71070,50042
 EOF
      },
      { from  => 1191362400, # 2007-10-03 00:00
@@ -11027,7 +11027,7 @@ EOF
        text  => 'L 141 Havelberger Str. OD Breddin Kanal- u. Straßenbauarbeiten Vollsperrung * 11.02.2008-31.05.2008 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -70922,51604 -70980,51154 -71053,49770
+userdel	q4::inwork -70922,51604 -70999,51147 -71005,50627 -70992,50438 -71070,50042
 EOF
      },
      { from  => 1204412400, # 2008-03-02 00:00
@@ -12013,7 +12013,7 @@ EOF
        text  => 'L 141 Breddin - Kümmernitz OD Breddin Straßenneubau Wintersicherung 18.12.2008-30.04.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -70100,51862 -70753,51862 -70922,51604
+userdel	q4::inwork -70100,51862 -70780,51875 -70922,51604
 EOF
      },
      { from  => 1216405440, # 2008-07-18 20:24
@@ -14119,7 +14119,7 @@ EOF
        text  => 'B 102 Wildberg - Neustadt-Dosse zw. Bückwitz u. Neustadt-Dosse Straßenbau Vollsperrung 11.05.2009-22.07.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork -53139,50022 -54295,49682 -54769,49740 -54942,49716
+userdel	2::inwork -53139,50022 -54295,49682 -54821,49758 -54924,49750
 EOF
      },
      { from  => 1241906400, # 2009-05-10 00:00
@@ -14423,7 +14423,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_017116',
        data  => <<EOF,
-userdel	q4::inwork; 12095,20832 12076,20731 12039,20538 12030,20490 12008,20368 12000,20327 11984,20246 11963,20136 11931,19965 11907,19838 11907,19749
+userdel	q4::inwork; 12095,20832 12076,20731 12039,20538 12037,20524 12008,20368 12000,20327 11984,20246 11963,20136 11931,19965 11907,19838 11907,19749
 userdel	q4::inwork; 11883,19739 11730,19684
 EOF
      },
@@ -17044,12 +17044,12 @@ userdel	2::temp 11209,12430 11273,12301
 userdel	2::temp 11273,12301 11355,12331
 EOF
      },
-     { from  => $isodate2epoch->("2014-11-23 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2014-12-31 23:59:59"),
+     { from  => $isodate2epoch->("2015-11-22 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-12-31 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 24, months => 11]],
-       source_id => 'http://www.berlin.de/tickets/suche/detail.php?id=962691',
-       text  => 'Gendarmenmarkt: Weihnachtsmarkt vom 24.11.2014 bis 31.12.2014, Durchfahrt nicht möglich (Eintritt!)',
+       recurrences => [['yearly', days => 23, months => 11]],
+       source_id => 'http://www.berlin.de/tickets/suche/detail.php?id=1090035',
+       text  => 'Gendarmenmarkt: Weihnachtsmarkt vom 23.11.2015 bis 31.12.2015, Durchfahrt nicht möglich (Eintritt!)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 9536,11922 9666,11935
@@ -18385,7 +18385,7 @@ EOF
        type  => 'handicap',
        source_id => '106000506',
        data  => <<EOF,
-userdel	q4::inwork; 20537,29285 20704,29485 21037,29913
+userdel	q4::inwork; 20537,29285 20569,29323 20704,29485 21037,29913
 EOF
      },
      { from  => 1283457600, # 2010-09-02 22:00
@@ -23113,9 +23113,11 @@ EOF
        source_id => 'IM_025547',
        data  => <<EOF,
 #: note: außerdem Ampel an der Kreuzung Werneuchener/Große-Leege, und geänderte Vorfahrtsregelung an der Umleitungsstrecke via Große-Leege-Str.
-userdel	q4::inwork 15272,14691 15345,14736 15383,14759 15562,14869 15580,14880 15774,14992 15867,15073 15937,15134 16028,15218 16119,15302
+userdel	q4::inwork 15272,14691 15345,14736 15383,14759 15562,14869 15580,14880 15774,14992
+# userdel	q4::inwork 15774,14992 15867,15073 15937,15134 16028,15218 16119,15302
 # userdel	q4::inwork; 16119,15302 16218,15386 16263,15427 16331,15486 16412,15559
-userdel	q4::inwork; 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753 16819,15912
+# userdel	q4::inwork; 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753
+userdel	q4::inwork; 16633,15753 16819,15912 16941,16021
 # userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
 #	3 16475,15659 16497,15636 16615,15737
 #	3 16615,15737 16497,15636 16475,15659
