@@ -236,7 +236,7 @@ map { $global_directives{$_} = [] } qw/_natural _landuse _sport _leisure _touris
 
 
 # see http://www.mail-archive.com/talk@openstreetmap.org/msg06041.html
-# XXX does not match very well with the tracks around Baska Voda --- maybe grade1 should match Q1 at most?
+# and http://wiki.openstreetmap.org/wiki/Key:tracktype
 my %grade_to_Q = (1 => "Q0",
 		  2 => "Q1",
 		  3 => "Q2",

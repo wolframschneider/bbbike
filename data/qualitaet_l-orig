@@ -1475,6 +1475,7 @@ Stegelitz - Pfingstberg: Kopfsteinpflaster	Q2 39540,80721 40062,80725
 #: XXX Radwegroute B
 #: by: http://www.potsdam.de/cms/dokumente/15582776_1771576/847336e8/Amtsblatt_10_13.pdf
 #: next_check: 2014-06-01
+#: add_fragezeichen: Wurde die Lindenallee ausgebaut? Wie ist mittlerweile die Qualit‰t?
 Lindenallee: m‰ﬂiger bis guter Waldweg	Q2 -16331,-1040 -18100,-1171
 Betonplatten (Quer)	Q2 -19987,2459 -19928,2706
 Betonplatten (zweispurig, bedingt anh‰ngergeeignet)	Q2 -19928,2706 -19868,3159 -19766,3346
@@ -1795,7 +1796,8 @@ Uferpromenade im Babelsberger Park: Parkweg, kurzes St¸ck Kopfsteinpflaster	Q1 -
 Uferpromenade: ¸berwiegend guter Parkweg	Q1 -11657,-1018 -11702,-1078 -11719,-1189 -11767,-1265 -11753,-1334 -11729,-1382 -11899,-1544 -11952,-1596 -12059,-1617 -12102,-1582 -12363,-1742
 #: XXX hier mittlerweile asphaltiert?
 Uferpromenade - S-Bhf. Potsdam Hauptbahnhof: ¸berwiegend guter Parkweg	Q1 -12363,-1742 -12457,-1857
-(Unterf¸hrung Lange Br¸cke): asphaltiert	Q0 -12363,-1742 -12377,-1743 -12625,-1956
+(Unterf¸hrung Lange Br¸cke): asphaltiert	Q0 -12363,-1742 -12377,-1743 -12557,-1900
+(Uferweg): asphaltiert	Q0 -12557,-1900 -12625,-1956 -12721,-2082 -12754,-2154
 Breite Str. - Auf dem Kiewitt: gute Parkwege oder Gehwegplatten	Q1 -13764,-1460 -13865,-1618 -14009,-1678 -13979,-1842
 Auf dem Kiewitt: asphaltiert	Q0 -14069,-2227 -14060,-2187 -14019,-2122 -13975,-2098 -13981,-1915 -13977,-1870 -13979,-1842 -14115,-1678
 Auf dem Kiewitt - Zeppelinstr.: Asphalt	Q0 -14069,-2227 -14202,-2232 -14265,-2221 -14359,-2142
@@ -2276,7 +2278,7 @@ Puschkinallee: Kopfsteinpflaster	Q2- 2216,29987 2212,29907
 Puschkinallee: Beton	Q0- 2212,29907 2203,29721
 Puschkinallee: Kopfsteinpflaster	Q2- 2203,29721 2199,29639 2193,29503 2177,29194 2176,29143
 Z¸hlsdorfer Str.: unbefestigter Weg	Q1- 2267,30681 2317,30696
-Leistikowstr.: unbefestiger Weg	Q1- 2216,30983 2214,30875 2225,30811 2239,30751 2254,30707 2317,30696
+Leistikowstr.: unbefestigter Weg	Q1- 2216,30983 2214,30875 2225,30811 2239,30751 2254,30707 2317,30696
 Leistikowstr.: Asphalt, einige Aufpflasterungen	Q0- 2216,30983 2219,31171
 An der Bahn: Kopfsteinpflaster	Q2- 2126,31207 2132,31245 2120,31350
 An der Bahn: Asphalt	Q0 2120,31350 2082,31535
@@ -3056,7 +3058,7 @@ Walnussring: Asphalt	Q0 -16477,1473 -16498,1444 -16549,1350 -16509,1329 -16492,1
 Walnussring: Asphalt	Q0 -16424,1300 -16394,1369
 Walnussring: Asphalt	Q0 -16492,1335 -16446,1426
 Gersthofweg: Asphalt	Q1 -16569,1643 -16683,1437
-Gersthofweg: unbefestiger Weg	Q2 -16683,1437 -16719,1369
+Gersthofweg: unbefestigter Weg	Q2 -16683,1437 -16719,1369
 Heckenstr.: Asphalt	Q0 -16840,1639 -16939,1696
 Heckenstr.: schlechtes Kopfsteinpflaster	Q3 -16939,1696 -17248,1784
 Schr‰ger Weg: Asphalt	Q0- -16686,1716 -16644,1796
@@ -3712,6 +3714,20 @@ Sieversdorf - Babe: Asphalt	Q0 -59036,45746 -59088,45758 -59162,45754 -59250,458
 Sieversdorf - Babe: Verbundsteinpflaster, zweispurig	Q1 -61094,44769 -61654,44323 -61914,44617 -62420,44184
 Sieversdorf - Babe: Asphalt	Q0 -62420,44184 -62473,44146 -62556,44143 -62814,44046 -62807,43773 -62843,43741 -63141,43757 -63390,43810 -63572,43810 -63966,43889 -64446,43938
 Groﬂderschau - Zernitz: Asphalt	Q0 -64589,43380 -64571,43595 -64570,43624 -64446,43938 -64413,44108
+Domlinden: Kopfsteinpflaster	Q2 -46193,19 -46209,-1 -46334,-150
+M¸hlendamm: Asphalt	Q0 -46334,-150 -46340,-168 -46370,-275 -46388,-374 -46452,-519
+M¸hlendamm: Kopfsteinpflaster	Q2 -46452,-519 -46458,-636
+M¸hlendamm: Asphalt	Q0 -46458,-636 -46517,-691
+(Weg im Humboldthain): ¸berwiegend asphaltiert	Q0 -47344,-341 -47291,-415 -47157,-487 -47119,-481
+(Hammerstr. - Burgweg): Verbundsteinpflaster	Q1 -46569,-318 -46564,-270 -46550,-254
+(Hammerstr. - Burgweg): Holzbohlen	Q1 -46550,-254 -46528,-216
+(Hammerstr. - Burgweg): Verbundsteinpflaster	Q1 -46528,-216 -46499,-176 -46463,-112
+(Hammerstr. - Burgweg): wassergebundene Decke	Q1 -46463,-112 -46440,-77 -46409,0
+Burgweg: Kopfsteinpflaster mit glatter Pflasterung in Straﬂenmitte	Q1- -46409,0 -46380,2 -46304,-19
+Burgweg: Kopfsteinpflaster	Q2 -46304,-19 -46209,-1
+Burghof: Kopfsteinpflaster	Q2 -46304,-19 -46303,3
+Burghof: Pflasterung	Q1- -46303,3 -46298,88 -46302,103
+Sankt Petri: Kleinsteinpflaster	Q2+ -46304,-19 -46334,-150
 ######################### User Contributions #################################
 #: by: mopedfahrerrr:
 #: confirmed_by: anonymous:
@@ -4093,7 +4109,7 @@ Johann-Strauﬂ-Platz: Asphalt	Q0 -9410,-815 -9318,-714
 Stubenrauchstr.: Asphalt	Q0 -7518,-1175 -7895,-1464
 Rudolf-Breitscheid-Str. [Bahnhofsvorfahrt]: Asphalt	Q0 -8112,-1512 -8100,-1575 -8023,-1565 -8038,-1495
 Baumgartenbr¸ck (Geltow): rauer Asphalt mit Lˆchern	Q2 -18025,-6370 -18410,-6286 -18918,-5951
-Kolonieweg: unbefestiger holpriger Weg	Q2- -12603,1443 -12633,1484 -12928,1646
+Kolonieweg: unbefestigter holpriger Weg	Q2- -12603,1443 -12633,1484 -12928,1646
 Buch - Schwanebeck: sehr guter Asphalt	Q0 17895,25260 17956,25235 17967,25231 18111,25169 18127,25162 18236,25113 18562,24975 18583,24966 19395,24634 19658,24589
 Pinnow: asphaltiert	Q0 56231,75134 55703,74309 55649,74233 55594,74156 55501,73991
 Bahnhofstr.: Betonstraﬂe	Q0 69402,74134 69378,74082 69376,73996 69369,73845 69236,73732 69085,73607
@@ -4435,7 +4451,7 @@ Mahlsdorfer Allee (Waldesruh, Hoppegarten): sehr guter Asphalt	Q0 25280,9031 255
 #: corrected_by: srt (Asphalt -> ...)
 Mahlsdorfer Allee (Waldesruh, Hoppegarten): Kopfsteinpflaster	Q2- 25686,9071 25756,9073
 #: corrected_by: srt (Asphalt -> ...)
-Mahlsdorfer Allee (Waldesruh, Hoppegarten): unbefestige Straﬂe	Q2 25756,9073 25892,9098
+Mahlsdorfer Allee (Waldesruh, Hoppegarten): unbefestigte Straﬂe	Q2 25756,9073 25892,9098
 #: by: ^^^
 # 
 #: by: olli (bolliolli):

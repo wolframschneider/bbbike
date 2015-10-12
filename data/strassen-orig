@@ -35,6 +35,7 @@ Monumentenstr.	NH 8180,9099 8081,9120 8053,9123 8014,9126 7790,9126 7735,9121
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/41re.pdf/file?y=2013 (offizieller Name) vvv
 #: note: Privatstraße vvv
 Am Lokdepot	N 8389,8775 8390,8879
+#: XXX existiert dieses Teilstück noch?
 Am Lokdepot	N 8405,8994 8409,8904 8390,8879
 Am Lokdepot	N 8389,9017 8389,9087
 #: note ^^^
@@ -1011,7 +1012,7 @@ Alfred-Lion-Steg	NN 7932,8325 7992,8312 8086,8289 8078,8256 8088,8254
 (Radweg an der Bahnstrecke)	NN 7998,8317 7992,8300 7837,7899
 #: note: beleuchtet
 #: alias: Schöneberger Schleife
-(Bautzener Str. - Südkreuz)	NN 8185,9338 8207,9324 8204,9001
+(Bautzener Str. - Südkreuz)	NN 8185,9338 8207,9324 8204,9001 8200,8920 7998,8317
 Badener Ring	N 8482,8364 8531,8404 8570,8427 8660,8454 8715,8459 8756,8453 8851,8424
 Thuyring	N 8879,7378 8894,7481 8947,7601 8994,7639 9040,7648 9115,7645 9132,7661 9242,7658
 Kleineweg	N 9097,7469 9145,7522 9120,7600 9115,7645
@@ -8345,6 +8346,7 @@ Ideallee	N 11069,23647 10971,23838 10813,24126
 #: last_checked: 2015-10-04
 #: check_frequency: 60d
 #: XXX später neuer Name: Bambusweg (fehlt in Berlin.coords.data, PLZ=13159, Ortsteil=Blankenfelde)
+#: osm_watch: way id="26876702" version="8"
 (Fasanenplan)	N 10667,23684 10687,23684 10708,23696 10747,23718 10785,23740 10842,23773 10887,23796 10927,23816 10971,23838
 #: note ^^^
 Weg A (Blankenfelde)	N 10700,23251 10549,23550
@@ -9702,7 +9704,7 @@ Lindower Str.	N 7754,15160 7929,15355
 #: next_check_id: NORDUFER-2014
 #: XXX dieser Straßenabschnitt wird für die S21 in der Mitte unterbrochen, nachdem das neue Nordufer fertiggestellt ist
 #: by: http://weddingweiser.wordpress.com/2012/10/16/die-s-21-wird-gebaut-weddinger-strasen-werden-neu-gefuhrt/ (Projektplan)
-#: osm_watch: way id="220648313" version="1"
+#: osm_watch: way id="220648313" version="2"
 #: last_checked: 2015-10-03
 #: check_frequency: 120d
 Tegeler Str. (Wedding)	N 7464,14636 7263,14873
@@ -13438,7 +13440,7 @@ Ossastr.	N 12615,9132 12681,9083 12836,8980 12910,8929
 Hüttenroder Weg	N 13274,8945 13456,8809
 Beermannstr.	N 13973,9465 14119,9368 14157,9345
 #: XXX temporäre Hilfsstraße
-#: last_checked: 2015-09-06
+#: last_checked: 2015-10-07
 #: check_frequency: 60d
 (Beermannstr. - Matthesstr.)	N 14119,9368 14162,9381
 Matthesstr.	N 14157,9345 14162,9381 14172,9457 14185,9509

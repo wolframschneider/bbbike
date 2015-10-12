@@ -80,10 +80,13 @@ asphaltiert, aber mäßiger Zustand (Wurzelschäden), asphaltierte Nebenfahrbahn ex
 asphaltiert, aber mäßiger Zustand (Wurzelschäden)	RW1; 9233,8597 9229,8718
 	RW1;RW1 8715,7384 8806,7382 8879,7378 8971,7359 9051,7340 9107,7297 9242,7286
 	RW1;RW1 8715,7384 8716,7323 8718,7095 8717,6965 8750,6779 8735,6695
+#: by: http://www.berlin.de/imperia/md/content/batempelhofschoeneberg/abtfinperswibuerg/ordnungsamt/tiefbau/sbl_stand_2015_08_24.pdf?start&ts=1440409042&file=sbl_stand_2015_08_24.pdf
 #: XXX Radspuren in Bau, zwischenzeitlich keine Radwege mehr vvv
 #: last_checked: 2015-09-09 vvv
+#: next_check: 2015-11-30 vvv
 	RW0;RW1 8735,6695 8722,6656 8707,6537 8697,6455 8680,6322
 	RW1;RW0 8680,6322 8661,6169 8641,5998 8622,5867 8613,5745
+#: next_check ^^^
 #: last_checked ^^^
 #: XXX ^^^
 	RW1;RW3 8613,5745 8600,5580 8593,5491
@@ -550,7 +553,7 @@ Busspur ist immer gültig	RW5; 9215,3599 9391,3651 9455,3671
 altes Verbundsteinpflaster	RW1;RW1 9953,3806 10047,3794 10236,3777 10561,3748 10985,3707 11048,3700 11084,3702
 #: XXX Radweg Richtung Südwesten aufgehoben, später werden hier Radspuren eingerichtet
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150511.1105.401906.html
-#: XXX Ende der Bauarbeiten im Herbst 2015
+#: XXX komplettes Ende der Bauarbeiten 2015-11-27
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150703.0950.402227.html
 #: by: http://www.berlin.de/imperia/md/content/batempelhofschoeneberg/abtfinperswibuerg/ordnungsamt/tiefbau/stra__enbauliste_stand_2015_07_10.pdf?start&ts=1436508425&file=stra__enbauliste_stand_2015_07_10.pdf (Ende)
 #: last_checked: 2015-07-23
@@ -963,7 +966,7 @@ neues Verbundsteinpflaster	RW1; 12694,2517 12694,2544 12694,2570 12693,2746 1269
 	RW;RW 12694,2517 12703,2454
 die letzten 20 Meter werden als benutzungspflichtiger Radweg auf dem Gehweg geführt	RW3; 13745,12118 13785,12292
 #: next_check_id: WARSCHAUER-2014 vvv
-#: last_checked: 2015-10-04 vvv
+#: last_checked: 2015-10-07 vvv
 #: check_frequency: 3d vvv
 #: by: http://www.umbau-warschauer-strasse.de/images/bauinfos/Infoblatt_August_15-2.pdf
 #: XXX Radspur (RW4) ist wegen Bauarbeiten aufgehoben, später wahrscheinlich wieder hergestellt
@@ -1407,7 +1410,7 @@ Busspur gilt Mo-Fr 7-18 Uhr	RW5; 10020,11262 9984,11270 9751,11243 9615,11225 94
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: XXX Bauarbeiten, Radspuren sind größtenteils aufgehoben
 #: XXX war: RW3;RW3
-#: last_checked: 2015-09-17
+#: last_checked: 2015-10-10
 #: check_frequency: 90d
 	RW0;RW0 8732,12804 8737,12757 8752,12647
 	RW3;RW3 8752,12647 8754,12622
@@ -4484,7 +4487,7 @@ Tempo 10	RW6;RW6 13559,12779 13470,12990
 	RW4;RW3 14096,12827 14066,12836
 #: XXX wegen Bauarbeiten am Hochhaus "Upper West" sind die Radspuren aufgehoben
 #: by: http://www.tagesspiegel.de/berlin/stadtentwicklung-zwillingsturm-soll-2016-in-der-city-west-eroeffnen/7416454.html (geplante Eröffnung Mitte 2016)
-#: last_checked: 2015-09-19
+#: last_checked: 2015-10-10
 #: next_check: 2016-05-01
 #	RW3; 5488,10978 5613,10963 5652,11004
 ##: note: teilweise vor dem Hotel unterbrochen (wegen Ladezone?)
@@ -4669,3 +4672,4 @@ asphaltiert	RW1; 13565,11492 13588,11490
 	RW6;RW6 7930,23227 8032,23000 8118,22809 8130,22772
 Radweg nur aufgemalt	RW1;RW1 1248,2600 1327,2401 1373,2285 1423,2264 1493,2247 1508,2243 1603,2220 1710,2189 1812,2160 1945,2127
 Radweg ist angedeutet	RW0; 638,2637 272,2548
+Busspur gilt Mo-Fr 7-19 Uhr	RW5; 13521,8023 13474,8060
