@@ -287,7 +287,7 @@ Heilbronner/Katharinenstr.	Zs 2870,10460
 Paulsborner/Caspar-Theyß-Str.	Zs 2968,9387
 # REMOVED (durch Ampel ersetzt) --- Allee der Kosmonauten/Beilsteiner Str.	Zs 18895,13470
 Treptower/Stuttgarter	Zs 13519,8149
-Winterfeldstr./Winterfeldplatz	Zs 7058,10087
+# REMOVED (mit dem Shared Space-Umbau entfernt) --- Winterfeldstr./Winterfeldplatz	Zs 7058,10087
 Maiglöckchenstr./Syringeplatz	Zs 14064,14240
 Kiefholzstr./Friedhof	Zs 16630,6212
 Smetanastr./Gounodstr.	Zs 14135,15785
@@ -562,3 +562,5 @@ Clauertstr./Königsweg	Zs -1082,2140
 Curtiusstr.	Zs 2844,3750
 Augustastr./Moltkestr.	Zs 4222,4018
 Tino-Schwierzina-Str./Aidastr.	Zs 12462,17795
+Albertinenstr.	Zs 14087,16337
+Mittelweg	Zs 12871,7632

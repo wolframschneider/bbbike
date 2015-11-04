@@ -13,7 +13,7 @@
 # REMOVED --- #: source_id: IM_021244 vvv --- #: valid: -20140320 vvv --- #: last_checked: 2014-04-04 vvv --- #: next_check: 2014-04-07 vvv --- # REMOVED (mittlerweile recht gut passierbar) --- Rüdersdorfer Str./Marchleweskistr.: Baustelle, Kreuzung gesperrt, langsame Umfahrung über Gehweg möglich, bis zum 30.04.2014	q3::inwork 13173,11788 13295,11792 13366,11651 --- # REMOVED (mittlerweile recht gut passierbar) --- Rüdersdorfer Str./Marchleweskistr.: Baustelle, Kreuzung gesperrt, langsame Umfahrung über Gehweg möglich, bis zum 30.04.2014	q3::inwork 13275,11830 13295,11792 --- # REMOVED (Baustelle fast verschwunden) --- Torellstr./Marchleweskistr.: Baustelle, Zufahrt zur Kreuzung gesperrt, langsame Umfahrung über Gehweg möglich, bis zum 30.04.2014	q3::inwork 13295,11792 13467,11778 --- #: next_check ^^^ --- #: last_checked ^^^ --- #: valid: ^^^ --- #: source_id ^^^
 # REMOVED (fertig) --- #: last_checked: 2014-07-06 --- #: check_frequency: 3d --- Simplonstr.: Einbahnstraße wegen Bauarbeiten	q2::inwork; 14468,11203 14531,11142
 # 
-#: last_checked: 2015-10-10 vvv
+#: last_checked: 2015-11-02 vvv
 Revaler Str.: wegen Bauarbeiten Fahrbahn gesperrt	q3::inwork 14286,11186 14357,11148 14442,11101
 Helmerdingstr.: wegen Bauarbeiten Fahrbahn teilweise als Einbahnstraße ausgewiesen	q3::inwork; 14442,11101 14468,11203
 Döringstr.: wegen Bauarbeiten Fahrbahn gesperrt, Bordsteine	q4::inwork 14400,11261 14357,11148
@@ -21,14 +21,14 @@ Döringstr.: wegen Bauarbeiten Fahrbahn gesperrt, Bordsteine	q4::inwork 14400,112
 #: last_checked ^^^
 # 
 #: XXX laut Schild der Wasserbetriebe bis Oktober 2015, laut Fritz bis November 2015
-#: last_checked: 2015-10-12 vvv
+#: last_checked: 2015-11-01 vvv
 #: next_check: 2015-11-22 vvv
 Rudolfstr.: Bauarbeiten an der Kreuzung Danneckerstr., auf Gehweg ausweichen	q3::inwork 14026,10869 13886,10939 13795,10995
 Danneckerstr.: Bauarbeiten an der Kreuzung Rudolfstr., auf Gehweg ausweichen	q3::inwork 13856,10864 13886,10939
 #: next_check ^^^
 #: last_checked ^^^
 # 
-#: last_checked: 2015-10-09
+#: last_checked: 2015-10-15
 Gubener Str.: Fahrbahn an der Warschauer Str. gesperrt, auf Gehweg ausweichen	q4::inwork 13603,11538 13568,11560
 # 
 # REMOVED (fertig) --- #: XXX nach den Bauarbeiten nur das kleine Stück an der Boxhagener noch mit handicap versehen (weil Durchfahrt verboten + umständliche Ampelführung) --- #: last_checked: 2014-05-26 --- #: next_check: 2014-06-01 (wahrscheinlich abgeschlossen) --- Neue Bahnhofstr.: Einbahnstraße wegen Bauarbeiten	q3::inwork; 14752,11041 14811,11067 14879,11182 14908,11231 14918,11249
@@ -61,18 +61,18 @@ Schützenstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10116,11485 9949,11470
 # 
 #: XXX bis wann dauert die Sperrung an? vvv
 #: XXX wird die Straße danach asphaltiert sein?
-#: last_checked: 2015-10-07 vvv
+#: last_checked: 2015-11-03 vvv
 Legiendamm: Sperrung der Fahrbahn am Engelbecken	q4::inwork 11323,11164 11337,11197 11349,11227
 Michaelkirchplatz: Sperrung der Fahrbahn am Engelbecken	q2::inwork 11415,11392 11349,11227
 #: last_checked ^^^
 #: XXX ^^^
 # 
 #: XXX bis wann dauert die Sperrung an?
-#: last_checked: 2015-10-07
+#: last_checked: 2015-11-03
 Leuschnerdamm: Sperrung der Fahrbahn Richtung Michaelkirchplatz	q4::inwork; 11458,11136 11473,11180
 # 
 #: XXX nach den Bauarbeiten bessere Qualität?
-#: last_checked: 2015-10-06
+#: last_checked: 2015-11-03
 Melchiorstr.: Bauarbeiten, Einbahnstraße	q4::inwork; 11542,11342 11726,11265 11921,11185
 # 
 # REMOVED (nicht mehr gesperrt für Radfahrer) --- #: XXX nochmal genauer anschauen... --- #: last_checked: 2014-11-10 --- Gipsstr.: Bauarbeiten zwischen Rosenthaler Str. und Joachimstr., Einbahnstraße	q2::inwork; 10350,13376 10199,13446
@@ -107,11 +107,11 @@ Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und 
 # REMOVED (aufgehoben) --- #: next_check_id: UDLU5-2014 --- #: source_id: IM_020322 --- #: last_checked: 2015-02-17 --- #: next_check: 2015-02-18 --- Charlottenstr.: Einbahnstraßenregelung	q4::inwork; 9475,12365 9489,12263 9496,12215
 # REMOVED --- Charlottenstr.: Bauarbeiten, Radfahrer können passieren	q2::inwork; 9475,12365 9489,12263
 # 
-#: last_checked: 2015-10-10
+#: last_checked: 2015-10-31
 Universitätsstr.: wegen Bauarbeiten Einbahnstraße zwischen Dorotheenstr. und Georgenstr.	q3::inwork; 9568,12688 9580,12581
 # 
 #: next_check_id: STABIUDL-2014 vvv
-#: last_checked: 2015-10-10 vvv
+#: last_checked: 2015-11-02 vvv
 #: check_frequency: 60d vvv
 #: by: http://www.berliner-zeitung.de/berlin/baustelle-staatsbibliothek-das-geruest-steht-und-steht-und-steht,10809148,22334074.html (Endedatum) vvv
 #: osm_watch: way id="153698394" version="3"
@@ -196,7 +196,7 @@ Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9876,12298 9858,12410
 # 
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0175-spandauer-strae-rathausstrae.html
 #: XXX wird nach den Bauarbeiten die Fahrbahn noch bestehen bleiben?
-#: last_checked: 2015-10-02
+#: last_checked: 2015-11-02
 #: check_frequency: 30d
 Rathausstr.: Fußgänger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521 10704,12595
 # 
@@ -205,9 +205,9 @@ Rathausstr.: Fußgänger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521
 # REMOVED --- #: last_checked: 2013-03-18 --- #: next_check: 2013-04-02 --- Zimmerstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10072,11384 9945,11371 9737,11349
 # REMOVED (das Einfahrt verboten-Schild hängt noch, wurde allerdings wahrscheinlich vergessen - 2013-02-06) --- #: last_checked: 2013-01-28 --- Jerusalemer Str.: Bauarbeiten, Einbahnstraße	q3::inwork; 9949,11470 9935,11566
 # 
-#: last_checked: 2015-10-06
+#: last_checked: 2015-11-02
 Alte Jakobstr.: Bauarbeiten, teilweise Einbahnstraße	q3::inwork; 10256,11160 10437,11352
-#: last_checked: 2015-10-06
+#: last_checked: 2015-11-02
 Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q4::inwork; 10489,11405 10624,11548 10640,11564
 # 
 # REMOVED --- Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q4::inwork; 10489,11405 10437,11352
@@ -259,10 +259,9 @@ Dieselstr., Umfahrung: Fußgänger, kurvig, eng	q2-::inwork 14326,8062 14344,8072 
 #: by: http://www.berlin.de/ba-neukoelln/presse/archiv/20140707.1250.398363.html?date=20140722 (Verzögerung)
 #: by: http://www.berlin.de/ba-neukoelln/presse/archiv/20140801.1405.398592.html
 #: source_id: IM_022515
-#: last_checked: 2015-09-05
-#: next_check: 2015-12-31
-Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Richtung Süden auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12898,7832 12914,7785 12969,7610 12991,7549 12992,7545 13015,7471 13018,7441
-# 
+#: last_checked: 2015-11-03
+Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Richtung Süden auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12898,7832 12914,7785 12969,7610
+# REMOVED (fertig) --- Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Richtung Süden auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12969,7610 12991,7549 12992,7545 13015,7471 13018,7441
 # REMOVED (fertig) --- #: XXX laut Schild bis Herbst 2014 --- #: XXX wird sich nach den Bauarbeiten hier etwas ändern? Zusätzliche Asphaltierung der Delbrückstr.? Sperrung der Walterstr. für den Kfz-Verkehr? Bleibt die Einbahnstraße in der Walterstr. (ggfs. den Eintrag in gesperrt-orig wieder aktivieren) --- #: last_checked: 2014-08-26 --- #: next_check: 2014-10-15 --- Delbrückstr./Walterstr.: Bauarbeiten, Fahrbahn nicht benutzbar	q4::inwork 13122,6717 13099,6712 13126,6687
 # REMOVED (Bauarbeiten fertig) --- #: XXX wird die Einbahnstraße für Radfahrer aufgehoben? --- #: last_checked: 2014-11-22 --- #: check_frequency: 7d --- Herrfurthstr: Bauarbeiten	q3::inwork 11833,7980 11979,8014
 # REMOVED (man kann durch, obwohl noch die Verbotsschilder stehen) --- #: XXX laut Schild Bauarbeiten bis September 2014 --- #: last_checked: 2014-09-26 (fast fertig, nur die Absperrung steht noch) --- #: next_check: 2014-09-29 --- Wildenbruchplatz: Bauarbeiten, Fahrbahn nicht benutzbar	q4::inwork 13135,8766 13227,8692 13314,8624
@@ -277,10 +276,7 @@ Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Richtung Süden a
 # 
 ### Lichtenberg ###
 # 
-#: osm_watch: way id="4782474" version="12"
-#: next_check_id: DEUTSCHMEISTER-2015
-#: last_checked: 2015-09-23
-Deutschmeisterstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 15370,12264 15443,12222
+# REMOVED (laut osm beendet) --- #: osm_watch: way id="4782474" version="12" --- #: next_check_id: DEUTSCHMEISTER-2015 --- #: last_checked: 2015-09-23 --- Deutschmeisterstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 15370,12264 15443,12222
 # REMOVED --- #: next_check_id: SANDINO-2014 --- #: XXX Ende der Bauarbeiten? --- #: last_checked: 2014-09-27 --- #: check_frequency: 21d --- Sandinostr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 15799,14674 15706,14752
 # REMOVED --- #: last_checked: 2015-03-15 --- #: check_frequency: 60d --- Dottistr.: Bauarbeiten, Einbahnstraße	q3::inwork; 15685,12154 15879,12131
 # REMOVED (keine Behinderungen mehr) --- #: next_check_id: HAUPTBUCHT-2014 --- #: last_checked: 2014-10-05 (Absperrgitter existieren noch, werden aber oft von Fußgängern weggeschoben) (deshalb nur q3) --- #: check_frequency: 60d --- (Rummelsburger Ufer - Hauptstr.): Bauarbeiten, ggfs. Umweg über Norma-Parkplatz notwendig	q3::inwork 15249,10564 15307,10701
@@ -943,6 +939,7 @@ Nollendorfplatz: Gehweg oder Parkplatz Richtung Motzstr. benutzen	q3; 7033,10328
 (Blücherplatz - Waterloo-Ufer): Fußgänger, Bordsteine	q2 9631,10142 9687,10180
 Arenholzsteig: Bordsteine	q2 8481,6900 8496,6919
 #: XXX_prog: für Anhänger vielleicht q2
+#: note: hängt von den parkenden Autos ab...
 Mergenthalerring: Asphaltschwellen, können teilweise umfahren werden	q1 14425,8116 14563,8243 14422,8407
 Grazer Platz: Fußgänger, Bordsteine	q2 6546,6724 6530,6786 6529,6798
 (Vorarlberger Damm - Kleingartenkolonie): Fußgänger	q1 6817,7101 6852,7246 6841,7283
@@ -1104,7 +1101,7 @@ Harkortstr.: Bodenschwellen	q1 7570,5508 7621,5494
 (Plauener Str. - Küllstedter Str.): Fußgänger	q2 17352,14827 17363,14760
 #: XXX_prog: für Anhänger q2
 Orankeweg: einige Bodenschwellen, ohne Anhänger leicht umfahrbar	q0 14967,15885 14994,15861 15313,15858 15395,15852 15453,15848
-(Gounodstr. - Otto-Brahm-Str.): abschnittsweise eng und kurvig	q1 14435,15904 14451,15873 14383,15848 14349,15825 14365,15778
+(Gounodstr. - Otto-Brahm-Str.): abschnittsweise eng und kurvig	q1 14433,15908 14451,15873 14383,15848 14349,15825 14365,15778
 Gounodstr.: Fußgänger	q1 14239,15810 14251,15828 14366,15877
 Seidenberger Str.: Bordstein, Geländer	q3 12391,16994 12382,17006
 Mulackstr.: enge Straße	q1 10640,13471 10535,13509 10406,13543 10308,13575
@@ -1912,10 +1909,10 @@ Wischbergweg: sehr enger Pfad	q4 13733,18161 13751,18180
 #: XXX_prog BS, sonst entfernen
 Bordstein	q3 22004,17470 21992,17479
 (An der Margaretenhöhe - Astridstr.): schmaler Pfad	q3 16634,19839 16550,19829 16472,19818 16390,19806
-Cajamarcaplatz: viele Fußgänger	q4 17728,5756 17710,5668
+Cajamarcaplatz: viele Fußgänger	q4 17728,5756 17713,5728 17730,5698
 #: XXX_prog BS, ansonsten aber trotzdem q4
-Cajamarcaplatz: viele Fußgänger, Bordstein	q4 17710,5668 17782,5698
-(Fußgängertunnel S-Bhf. Schöneweide): viele Fußgänger, ggfs. schieben	q4 17710,5668 17639,5612
+Cajamarcaplatz: viele Fußgänger, Bordstein	q4 17730,5698 17782,5698
+(Fußgängertunnel S-Bhf. Schöneweide): viele Fußgänger, ggfs. schieben	q4 17730,5698 17639,5612
 (S-Bhf. Schöneweide - Straßenbahn-/Bushaltestelle): Fußgänger	q3 17639,5612 17675,5521
 #: XXX_prog BS, sonst entfernen
 Wasserweg: Bordstein	q2 15680,8914 15873,8884
@@ -2217,6 +2214,7 @@ Veilchenblütenweg: schmale Straße	q1 11534,21229 11664,21246 11757,21253
 Veilchenblütenweg: schmale Straße	q1 11664,21246 11656,21309
 #: note: teilweise nur einspurig
 (Am Marderberg): eng	q1 14977,19129 14328,19527 13477,20064
+(Verlängerte Hertzallee): Fußgänger	q2 5352,11502 5296,11529 4950,11696 4905,11785
 ######################### User Contributions #################################
 # 
 #: by: Michael Kiekbusch vvv

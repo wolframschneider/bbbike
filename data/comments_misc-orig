@@ -453,7 +453,7 @@ Bus 172, ...	busroute_N 17764,2032 17809,1855 17824,1756 17848,1657 17855,1629
 Bus 372	busroute_N 17855,1629 17871,1570 17902,1517 17962,1437 18053,1317 18093,1263 18112,1235 18224,1077 18272,1009 18128,910 18123,906 18023,833 17928,764 17734,675 17640,626 17518,564
 Bus 371	busroute_N 17384,775 17274,705 17215,667 17168,654 17134,644 17057,635 17077,526 17129,314 17158,182 17176,90 17188,-46 17193,-109 17199,-196 17222,-426 17359,-345 17418,-305 17476,-266 17537,-226 17599,-187 17719,-107 17777,-68 17860,-15 17879,-3
 Bus 172	busroute_N 15736,2593 15779,2649 15870,2768 15911,2821 15989,2923 16096,3075 16155,3160 16221,3248 16281,3339 16504,3184 16550,3155 16684,3061 16786,2989
-Bus 160	busroute_N 17142,3393 17034,3517 16942,3579 16842,3624 16615,3734 16742,4098 16852,4105 16887,4105 17027,4090 17108,4049
+Bus 160	busroute_N 17142,3393 17034,3517 16942,3579 16842,3624 16615,3734 16742,4098 16852,4105 16887,4105 17027,4090 17110,4055
 # REMOVED (Route verlegt) --- Bus 160	busroute_N 17522,3653 17762,3243 17799,3183 17910,3004 18014,2830 18017,2751
 Bus 265	busroute_N 17520,4649 17676,4540 17797,4441
 Bus 265	busroute_N 17881,4521 17826,4730 17792,4875 17879,4910
@@ -832,7 +832,7 @@ in Höhe Erkelenzdamm 5 abbiegen	CP2; 11192,10629 11145,10638
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11012,13278 11085,13239
 #: note: nur an der Katharina-Paulus-Str. steht ein Schild vvv
 #: XXX vielleicht wird hier mal ausgeschildert werden? vvv
-#: last_checked: 2015-03-28 vvv
+#: last_checked: 2015-10-14 vvv
 #: check_frequency: 360d vvv
 Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CP2; 7938,13150 7867,13127
 Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CP2; 7795,13093 7867,13127
@@ -1067,8 +1067,8 @@ ausgeschildert Zur Wiltbergstr. 29, 29A, 29G	CP2; 16121,25818 16094,25776
 #: XXX_prog: sollte eine Art handicap sein
 Tauernallee - Hochspannungsweg: Bordstein	CP; 11323,1986 11343,1937 11373,1925
 #: next_check_id: WARSCHAUER-2014
-#: last_checked: 2015-10-06
-#: check_frequency: 7d
+#: last_checked: 2015-10-31
+#: next_check: 2015-12-19
 Warschauer Str.: während der Bauarbeiten darf der Mittelstreifen zwischen Gubener Str. und Frankfurter Tor von Radfahrern benutzt werden	CS 13603,11538 13651,11731 13696,11920 13745,12118 13785,12292
 zum Freibad Plötzensee: Kassenhäuschen, Schranke	CS 5321,14978 5323,15030
 nicht den Friedhofsweg auf der rechten Seiten benutzen	CP2; 4963,15259 4624,15671
@@ -1106,9 +1106,10 @@ Darguner Str.: noch nicht ausgeschildert	CS 17566,18680 17635,18591
 ausgeschildert nach Grünow/Bietikow	CP2; 47047,99449 46429,99430
 ausgeschildert "Köpenicker Landstr."	CP2; 15303,8343 15242,8263
 #: XXX Wann wird ausgeschildert, wenn überhaupt?
-#: last_checked: 2015-10-02
+#: last_checked: 2015-10-31
 Vera-Brittain-Ufer: nicht ausgeschildert, Uferpromenade am DomAquarée	CS 10300,12587 10249,12658 10219,12701 10166,12777
 Deilingeweg: nicht ausgeschildert?	CP2; 6259,23379 6229,23415
 (Frithjofstr. - Rotkardinalweg): entlang der ehemaligen Industriebahn	CS 12696,19334 12650,19462 12543,19760 12552,19765
 Schönower Str. - An der Panke: Weg entlang Bahn und NSG "Faule Wiesen"	CS 18801,28360 18827,28385 18852,28381 19027,28536 19154,28637 19217,28681 19287,28718 19502,28812 19532,28867 19573,28968 19535,29067
 Albrechtstr. - Selerweg: an der Kreuzung Klingsorstr./Neue Filandastr. abbiegen	CP; 5527,5217 5583,5179 5633,5184
+(Verlängerte Hertzallee): TU-Gelände	CS 5352,11502 5296,11529 4950,11696 4905,11785

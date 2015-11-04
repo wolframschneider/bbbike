@@ -415,7 +415,8 @@ Begonienplatz	1 4193,4897 4132,4988
 Begonienplatz	1 4173,5013 4231,4922
 Asternplatz	1 3775,4632 3710,4728 3707,4752 3716,4764 3740,4766 3754,4755 3815,4657
 Kammgasse	1 1992,24354 2213,24393 2264,24414 2302,24451 2325,24486
-Herbert-Tschäpe-Str.	1 14358,14155 14481,14095 14510,14104 14710,14185
+Herbert-Tschäpe-Str.	1 14358,14155 14481,14095 14510,14104 14717,14188
+Herbert-Tschäpe-Str.	1 14464,14216 14510,14104
 Strausberger Platz	1 11976,12595 12005,12619 12050,12616 12099,12580 12114,12546 12083,12518 12028,12519 11988,12546 11976,12595
 Magirusstr.	1 8199,6583 7985,6598
 Egelingzeile	1 7976,6403 8194,6384
@@ -790,7 +791,7 @@ Am Zirkus	1s 9239,12923 9212,12969 9167,13046 9137,13032
 DB-Werkgelände, Befahren verboten	2 1645,9862 1672,9836 1563,9769 1583,9713 1615,9675 1724,9772
 Katharina-Boll-Dornberger-Str.	1 19086,3370 19073,3357 19033,3397 18987,3442 18998,3454 19013,3466 19057,3422 19097,3380 19086,3370
 Tauchersteig	1 21879,2592 22011,2658 22047,2662 22058,2649
-Firlstr.	1 18643,6540 18645,6511
+Firlstr.	1 18640,6542 18645,6511
 Malchower Str.	1 12838,18155 12785,18128
 Carpinusweg	1 715,5209 715,5129 825,5130 827,5201
 Fellbacher Platz	1 3627,23246 3610,23242 3588,23256 3581,23282 3593,23297
@@ -802,7 +803,7 @@ Vorfahrt Reichstagsgebäude: Absperrgitter, keine Durchfahrt mehr möglich	2 8400,
 Kriemhildstr.	1s 17300,12173 17314,12265
 Sportfliegerstr.: Betriebsgelände	2 18370,4511 18423,4459
 Schillerhof	1 7069,17204 6928,17154
-Wartenbergstr.	1s 15328,11636 15300,11584
+Wartenbergstr.	1s 15423,11667 15337,11639 15328,11636 15300,11584
 Bahnhofstr.	1 12166,21208 12202,21158
 Bahnhofstr.	1 12202,21158 12158,21166
 (Bushaltestelle und Straßenbahnwendestelle Schöneweide): Betriebsgelände	2 17675,5521 17588,5573 17578,5566
@@ -1378,8 +1379,8 @@ Straßenbahntrasse	3nocross::ignrte 10897,17274 10892,17330 10886,17396
 Berliner Str. -> Max-Lingner-Str.: Straßenbahntrasse	3::igndisp 10886,17396 10892,17330 11094,17339
 Max-Lingner-Str. -> Berliner Str.: Straßenbahntrasse	3::igndisp 11094,17339 10892,17330 10897,17274
 Straßenbahntrasse	3nocross::ignrte 10886,17396 10880,17469 10878,17490
-Straßenbahntrasse	3nocross::ignrte 13737,15994 13826,16026 14014,16106
-Berliner Allee -> Herbert-Baum-Str.: Straßenbahntrasse	3::igndisp 14014,16106 13826,16026 13869,15912
+Straßenbahntrasse	3nocross::ignrte 13737,15994 13826,16026 14015,16103
+Berliner Allee -> Herbert-Baum-Str.: Straßenbahntrasse	3::igndisp 14015,16103 13826,16026 13869,15912
 Herbert-Baum-Str. -> Berliner Allee: Straßenbahntrasse	3::igndisp 13869,15912 13826,16026 13737,15994
 Straßenbahntrasse	3nocross::ignrte 12166,21208 12188,21330 12209,21448
 Straßenbahntrasse	3nocross::ignrte 10923,13156 10976,13229 11012,13278
@@ -1966,9 +1967,9 @@ Michael-Brückner-Str. -> Hartriegelstr.: Mittelstreifen	3::igndisp 18080,5376 18
 Hartriegelstr. -> Michael-Brückner-Str.: Mittelstreifen	3::igndisp 18514,5028 18425,5032 18457,5000
 Mittelstreifen	3nocross::ignrte 17728,5756 17782,5698 17829,5648
 Michael-Brückner-Str. -> Spreestr.: Mittelstreifen	3::igndisp 17728,5756 17782,5698 17807,5730
-Michael-Brückner-Str. -> Cajamarcapl.: Mittelstreifen	3::igndisp 17829,5648 17782,5698 17710,5668
-Cajamarcapl. -> Michael-Brückner-Str.: Mittelstreifen	3::igndisp 17710,5668 17782,5698 17728,5756
-Cajamarcapl. -> Spreestr.: Mittelstreifen	3::igndisp 17710,5668 17782,5698 17807,5730
+Michael-Brückner-Str. -> Cajamarcapl.: Mittelstreifen	3::igndisp 17829,5648 17782,5698 17730,5698
+Cajamarcapl. -> Michael-Brückner-Str.: Mittelstreifen	3::igndisp 17730,5698 17782,5698 17728,5756
+Cajamarcapl. -> Spreestr.: Mittelstreifen	3::igndisp 17730,5698 17782,5698 17807,5730
 Straßenbahngleise	3nocross::ignrte 17488,15766 17532,15645 17569,15561 17626,15433 17829,15015
 Rhinstr. -> Str. 156: Straßenbahngleise	3::igndisp 17488,15766 17532,15645 17570,15658
 Str. 156 -> Rhinstr.: Straßenbahngleise	3::igndisp 17570,15658 17532,15645 17569,15561
@@ -2377,6 +2378,9 @@ tragen, langgezogene Stufen (13 Stufen)	0:25:-168 20704,1383
 tragen (31 Stufen oder Kinderwagenrampe)	0:40:-256 13168,21706
 tragen (6 Stufen)	0:15:-90 4608,63927
 Treppe	0:40:-131 1888,42795
+Schranke	BNP:3:-244:trailer=10 5296,11529
+Drängelgitter	BNP:5:-167:trailer=10 14364,8096
+Drängelgitter	BNP:5:-114:trailer=10 14405,8115
 Drängelgitter	BNP:5:-65:trailer=10 4626,20960
 Drängelgitter	BNP:5:32:trailer=10 7764,21271
 Schranke	BNP:3:-105:trailer=10 11392,10520
@@ -2791,7 +2795,6 @@ Am Theodorpark: noch gesperrt	2::inwork 24905,10955 25053,10959 25143,10961
 Theodorstr.: Bauarbeiten, gesperrt	2::inwork 24897,11083 24905,10955 24913,10884 24919,10818 24922,10785 24923,10774
 (Weg im Theodorpark)	2::inwork 24922,10785 24954,10770 25021,10768 25062,10762 25148,10769
 Pfarrhufenanger: noch in Bau, gesperrt	2::inwork 25599,13069 25441,12838 25266,12622
-Am Gutspark: Bauarbeiten	2::inwork 15747,12880 15746,12967 15826,12971
 Ziegelstr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 9736,13061 9636,13076 9559,13087
 Schwarzer Weg: wegen Straßenbau gesperrt	2::inwork 17295,7323 17295,7330 17296,7396
 Schleuse - Lindenufer: wegen Bauarbeiten gesperrt	2::inwork -2944,14652 -2922,14642 -2907,14534 -2926,14496 -2964,14478
@@ -2823,7 +2826,6 @@ Wattstr.: wegen Bauarbeiten für die Minna-Todenhagen-Str. teilweise gesperrt, gg
 Lyonstr.: noch nicht geöffnet	2::inwork 12188,21330 12204,21327 12322,21378 12443,21439
 Marseillestr.: noch nicht geöffnet	2::inwork 12402,21537 12404,21532 12411,21515 12443,21439
 Toulonstr.: noch nicht geöffnet	2::inwork 12404,21532 12480,21560
-Luisenstr. Höhe Charité: Straße wegen Bauarbeiten komplett bis zum 31.10.2015 gesperrt, auch für Radfahrer und Fußgänger	2::inwork 8665,13353 8648,13498
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 Weg zwischen S-Wartenberg und S-Hohenschönhausen: Brücke morsch und gesperrt	2::inwork 17159,18375 17235,18352

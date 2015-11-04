@@ -28,8 +28,7 @@ Alte Jakobstr.: Bauarbeiten, teilweise Einbahnstraße	q3::inwork; 10256,11160 104
 Alte Jakobstr.: Bauarbeiten, Einbahnstraße	q4::inwork; 10489,11405 10624,11548 10640,11564
 Köbisstr.: wegen Bauarbeiten Ausweichen auf Gehweg	q4::inwork 7103,11247 7160,11225
 Dieselstr., Umfahrung: Fußgänger, kurvig, eng	q2::inwork 14326,8062 14344,8072 14358,8070 14364,8096 14405,8115 14419,8112 14429,8074 14471,8046
-Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Richtung Süden auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12898,7832 12914,7785 12969,7610 12991,7549 12992,7545 13015,7471 13018,7441
-Deutschmeisterstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 15370,12264 15443,12222
+Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Richtung Süden auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12898,7832 12914,7785 12969,7610
 Jülicher Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke	q4::inwork; 9441,16058 9458,16180 9474,16297 9475,16307 9487,16395 9498,16480 9514,16603
 Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke	q4::inwork; 10197,16528 10225,16436 10254,16363 10281,16263 10301,16186
 Zimmermannstraßenbrücke: Bau einer neuen Brücke, Radfahrer müssen den Gehweg bzw. Behelfsbrücke benutzen	q4::inwork 21351,9066 21365,9059 21385,9049
@@ -633,7 +632,7 @@ Riemenschneiderweg: gemeinsamer Rad- und Gehweg, eng	q3 6878,5946 6895,5873
 Harkortstr.: Bodenschwellen	q1 7570,5508 7621,5494
 (Plauener Str. - Küllstedter Str.): Fußgänger	q2 17352,14827 17363,14760
 Orankeweg: einige Bodenschwellen, ohne Anhänger leicht umfahrbar	q0 14967,15885 14994,15861 15313,15858 15395,15852 15453,15848
-(Gounodstr. - Otto-Brahm-Str.): abschnittsweise eng und kurvig	q1 14435,15904 14451,15873 14383,15848 14349,15825 14365,15778
+(Gounodstr. - Otto-Brahm-Str.): abschnittsweise eng und kurvig	q1 14433,15908 14451,15873 14383,15848 14349,15825 14365,15778
 Gounodstr.: Fußgänger	q1 14239,15810 14251,15828 14366,15877
 Seidenberger Str.: Bordstein, Geländer	q3 12391,16994 12382,17006
 Mulackstr.: enge Straße	q1 10640,13471 10535,13509 10406,13543 10308,13575
@@ -1268,9 +1267,9 @@ Wischbergweg: sehr enger Pfad	q4 13733,18161 13751,18180
 (Scheibenbergstr. - Blenheimstr.): Fußgänger, Bordstein an der Blenheimstr.	q3 20693,15144 20689,15175
 Bordstein	q3 22004,17470 21992,17479
 (An der Margaretenhöhe - Astridstr.): schmaler Pfad	q3 16634,19839 16550,19829 16472,19818 16390,19806
-Cajamarcaplatz: viele Fußgänger	q4 17728,5756 17710,5668
-Cajamarcaplatz: viele Fußgänger, Bordstein	q4 17710,5668 17782,5698
-(Fußgängertunnel S-Bhf. Schöneweide): viele Fußgänger, ggfs. schieben	q4 17710,5668 17639,5612
+Cajamarcaplatz: viele Fußgänger	q4 17728,5756 17713,5728 17730,5698
+Cajamarcaplatz: viele Fußgänger, Bordstein	q4 17730,5698 17782,5698
+(Fußgängertunnel S-Bhf. Schöneweide): viele Fußgänger, ggfs. schieben	q4 17730,5698 17639,5612
 (S-Bhf. Schöneweide - Straßenbahn-/Bushaltestelle): Fußgänger	q3 17639,5612 17675,5521
 Wasserweg: Bordstein	q2 15680,8914 15873,8884
 (Ella-Trebe-Str. - Invalidenstr.): einige Fußgänger	q1 7938,13302 7968,13335 8003,13374
@@ -1510,6 +1509,7 @@ Birnenblütenweg: schmale Straße	q1 11437,21283 11502,21292 11656,21309 11783,213
 Veilchenblütenweg: schmale Straße	q1 11534,21229 11664,21246 11757,21253
 Veilchenblütenweg: schmale Straße	q1 11664,21246 11656,21309
 (Am Marderberg): eng	q1 14977,19129 14328,19527 13477,20064
+(Verlängerte Hertzallee): Fußgänger	q2 5352,11502 5296,11529 4950,11696 4905,11785
 (Bleicheroder Str. - Pasewalker Str.): Fußgänger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Drängelgitter an der Straßenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Schüler	q2 7242,8586 7288,8635
@@ -2395,7 +2395,7 @@ Parkaue: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 15406,124
 Am Zirkus: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 9239,12923 9212,12969 9167,13046 9137,13032
 Gretel-Bergmann-Weg: gegen die Einbahnstraßenrichtung, ggfs. schieben	q1::igndisp; -1132,12268 -1288,12178
 Kriemhildstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 17300,12173 17314,12265
-Wartenbergstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 15328,11636 15300,11584
+Wartenbergstr.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q2::igndisp; 15423,11667 15337,11639 15328,11636 15300,11584
 Am Krusenick: gegen die Einbahnstraßenrichtung, ggfs. schieben	q3::igndisp; 22751,4970 22652,4966 22667,4912 22705,4874
 Josef-Nawrocki-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25802,4681 25802,4823
 Josef-Nawrocki-Str.: gegen die Einbahnstraßenrichtung, ggfs. schieben	q4::igndisp; 25724,4706 25695,4714 25554,4758 25552,4829
