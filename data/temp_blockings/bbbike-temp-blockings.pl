@@ -17031,10 +17031,10 @@ EOF
 userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998 24927,-87720
 EOF
      },
-     { from  => $isodate2epoch->("2015-11-10 00:00:00"), # Beginn am 23.11. (voraussichtlich), Aufbauzeit 13 Tage?... # 1384350862, # 1352934000, # 1321311600, # PERIODISCH! # früher: 1258045387, # 2009-11-12 18:03
-       until => $isodate2epoch->("2015-12-30 23:59:59"), # Ende am 27.12. (voraussichtlich), Abbauzeit 3 Tage?... # 1384350812, # 1352934000, # 1321311600, # PERIODISCH! # früher: 1258045387, # 2009-11-12 18:03
+     { from  => $isodate2epoch->("2015-11-06 00:00:00"), # Beginn am 23.11. (voraussichtlich), Aufbauzeit mindestens 17 Tage... (am Anfang ist nur die Fahrbahn der Voltairestr. gesperrt, später auch die Gehwege, die Schicklerstr. ist schon früher komplett gesperrt)
+       until => $isodate2epoch->("2015-12-30 23:59:59"), # Ende am 27.12. (voraussichtlich), Abbauzeit 3 Tage?...
        periodic => 1,
-       recurrences => [['yearly', days => 10, months => 11]],
+       recurrences => [['yearly', days => 6, months => 11]],
        # außerdem ist der Nordteil der Dircksenstr. Einbahnstraße offen Richtung Süden, aber nicht relevant für das Routing
        text  => 'Voltairestr. und Dircksenstr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht möglich (Voltairestr. und Dircksenstr.), von Mitte November 2015 bis Ende Dezember 2015',
        type  => 'gesperrt',
@@ -17131,12 +17131,12 @@ userdel	3 8427,11365 8389,11378 8374,11479
 userdel	3 8374,11479 8389,11378 8427,11365
 EOF
      },
-     { from  => $isodate2epoch->("2014-12-04 00:00:00"), # 1354809600, # 2012-12-06 17:00, # 1322780400, # PERIODISCH! # früher: 1259959719, # 2009-12-04 21:48
-       until => $isodate2epoch->("2014-12-07 23:59:59"), # 1355079600, # 2012-12-09 20:00, # 1323039600, # PERIODISCH! # früher: 1260140400, # 2009-12-07 00:00
+     { from  => $isodate2epoch->("2015-12-03 00:00:00"), # 1354809600, # 2012-12-06 17:00, # 1322780400, # PERIODISCH! # früher: 1259959719, # 2009-12-04 21:48
+       until => $isodate2epoch->("2015-12-06 23:59:59"), # 1355079600, # 2012-12-09 20:00, # 1323039600, # PERIODISCH! # früher: 1260140400, # 2009-12-07 00:00
        periodic => 1,
-       recurrences => [['yearly', days => 5, months => 12]],
+       recurrences => [['yearly', days => 4, months => 12]],
        source_id => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-alt-rixdorf.html',
-       text  => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (05.12.2014 - 07.12.2014)',
+       text  => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (04.12.2015 - 06.12.2015)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 13416,7712 13426,7674
@@ -17418,7 +17418,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015285',
        data  => <<EOF,
-userdel	q4::inwork; 7855,18697 7758,18535 7676,18492
+userdel	q4::inwork; 7843,18705 7753,18542 7676,18492
 EOF
      },
      { from  => 1269727200, # 2010-03-27 23:00
@@ -17554,7 +17554,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_015512',
        data  => <<EOF,
-userdel	q4::inwork; 8182,18761 8066,18754 7886,18742 7855,18697
+userdel	q4::inwork; 8182,18761 8066,18754 7886,18742 7843,18705
 EOF
      },
      { from  => 1270987200, # 2010-04-11 14:00
@@ -18681,7 +18681,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101105.1400.317649.html',
        data  => <<EOF,
-userdel	q4::inwork; 7855,18697 7785,18730 7676,18713 7599,18705 7520,18701 7492,18699 7434,18695 7217,18681
+userdel	q4::inwork; 7843,18705 7785,18730 7676,18713 7599,18705 7520,18701 7492,18699 7434,18695 7217,18681
 EOF
      },
      { from  => 1289156455, # 2010-11-07 20:00
@@ -22173,7 +22173,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20140411.1410.396295.html',
        data  => <<EOF,
-userdel	q4::inwork; 6792,19733 6516,19775 6460,19734 6334,19507 6247,19454
+userdel	q4::inwork; 6792,19733 6516,19775 6460,19734 6334,19507 6238,19450
 EOF
      },
      { from  => 1380101700, # 2013-09-25 11:35
@@ -23293,14 +23293,13 @@ EOF
 userdel	2::inwork 7103,11247 6851,11346
 EOF
      },
-     { from  => 1408173960, # 2014-08-16 09:26
-       until => 1408469794, # 1411017000, # 2014-09-18 07:10
-       text  => 'Unter den Linden: Straße zwischen Schadowstr. und Wilhelmstr. Richtung Brandenburger Tor gesperrt, 17.08.2014 bis 18.09.2014',
-       type  => 'gesperrt',
-       source_id => 'IM_022629',
+     { from  => 1446937200, # 2015-11-08 00:00
+       until => 1448319599, # 2015-11-23 23:59
+       text  => 'Unter den Linden: zwischen Schadowstraße und Wilhelmstraße Baustelle, Fahrbahn gesperrt, vom 09.11.2015 08:00 bis voraussichtlich 23.11.2015 ',
+       type  => 'handicap',
+       source_id => '2147339441',
        data  => <<EOF,
-#: by: http://www.morgenpost.de/berlin/article131305310/Panne-beim-U-Bahnbau-Unter-den-Linden-gesperrt.html
-userdel	1::inwork 9028,12307 8804,12280
+userdel	q4::inwork; 9028,12307 8804,12280
 EOF
      },
      { from  => undef, # 
@@ -24355,11 +24354,13 @@ EOF
      },
      { from  => 1437289200, # 2015-07-19 09:00
        until => $isodate2epoch->("2015-11-21 17:00:00"), # 1441033200, # 2015-08-31 17:00
-       text  => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Jordanstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 21.11.2015 17:00 Uhr ',
+       text  => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Kiefholzstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 21.11.2015 17:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_025684',
        data  => <<EOF,
-userdel	q3::inwork 13357,9313 13489,9456 13606,9578 13645,9621
+userdel	q3::inwork 13357,9313 13489,9456
+userdel	q2::inwork 13489,9456 13606,9578
+# REMOVED (fertig) --- userdel	q3::inwork 13606,9578 13645,9621
 EOF
      },
      { from  => 1437282000, # 2015-07-19 07:00
@@ -24478,7 +24479,8 @@ EOF
        type  => 'handicap',
        source_id => 'IM_025833',
        data  => <<EOF,
-userdel	q4::inwork; 9727,17804 9835,17797 10053,17777 10179,17772 10311,17764 10459,17754
+userdel	q4::inwork; 9727,17804 9835,17797 10053,17777 10179,17772
+#userdel	q4::inwork; 10179,17772 10311,17764 10459,17754
 EOF
      },
      { from  => 1442080673, # 2015-09-12 19:57
@@ -24613,12 +24615,12 @@ userdel	q4::inwork 4681,23273 4704,23278 4744,23289 4910,23490 5006,23575
 EOF
      },
      { from  => 1445119200, # 2015-10-18 00:00
-       until => 1447542000, # 2015-11-15 00:00
+       until => 1446926697, # 1447542000, # 2015-11-15 00:00
        text  => 'Karmeliterweg: Bauarbeiten zwischen Frohnauer Str. und Alemannenstr., vom 19.10.2015 bis 14.11.2015',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.363335.php',
        data  => <<EOF,
-userdel	q4::inwork 1878,24619 1852,24593 1797,24562 1747,24549
+userdel	q4::inwork 1878,24619 1852,24593 1797,24562 1745,24546
 EOF
      },
      { from  => 1446332400, # 2015-11-01 00:00
@@ -24672,8 +24674,8 @@ userdel	q4::inwork; 19904,3464 20012,3532
 EOF
      },
      { from  => 1445405400, # 2015-10-21 07:30
-       until => 1446912000, # 2015-11-07 17:00
-       text  => 'Sterndamm: zwischen Königsheideweg und Groß-Berliner Damm Bauarbeiten, Fahrbahn in Richtung S-Bhf. Schöneweide gesperrt, Radfahrer dürfen den Gehweg benutzen, 22.10.2015 07:30 Uhr bis 07.11.2015 17:00 Uhr ',
+       until => $isodate2epoch->("2015-11-09 08:30:00"), # 1446912000, # 2015-11-07 17:00
+       text  => 'Sterndamm: zwischen Königsheideweg und Groß-Berliner Damm Bauarbeiten, Fahrbahn in Richtung S-Bhf. Schöneweide gesperrt, Radfahrer dürfen den Gehweg benutzen, 22.10.2015 07:30 Uhr bis 09.11.2015 08:30 Uhr ',
        type  => 'handicap',
        source_id => 'IM_026599',
        data  => <<EOF,
@@ -24696,6 +24698,40 @@ EOF
        source_id => 'IM_026600',
        data  => <<EOF,
 userdel	q2::inwork; 17110,4055 17244,4242
+EOF
+     },
+     { from  => 1446678000, # 2015-11-05 00:00
+       until => 1451602800, # 2016-01-01 00:00
+       text  => 'Flottwellstraße: Bauarbeiten, Fahrbahn zwischen Schöneberger Ufer und Lützowstr. in Richtung Süden gesperrt, vom 06.11.2015 bis 31.12.2015 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.396336.php',
+       data  => <<EOF,
+userdel	q4::inwork; 8336,10829 8300,10823 8281,10791 8199,10634
+EOF
+     },
+     { from  => 1446332400, # 2015-11-01 00:00
+       until => 1454281200, # 2016-02-01 00:00
+       text  => 'Großbeerenstr.: Bauarbeiten, Überqueren der Straße an der Wartenbergstr. und Obentrautstr. nicht möglich, voraussichtlich vom 02.11.2015 bis 31.01.2016 ',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2015/pressemitteilung.394109.php',
+       data  => <<EOF,
+	3 8783,10166 9108,10101 9277,10057
+	3 9277,10057 9108,10101 8783,10166
+	3 9277,10057 9108,10101 9073,9915
+	3 8783,10166 9108,10101 9145,10290
+	3 9073,9915 9108,10101 8783,10166
+	3 9145,10290 9108,10101 9277,10057
+	3 9044,9753 9073,9915 8780,9968
+	3 8780,9968 9073,9915 9108,10101
+EOF
+     },
+     { from  => 1446953400, # 2015-11-08 04:30
+       until => 1448854200, # 2015-11-30 04:30
+       text  => 'Hohenschönhauser Str./Oderbruchstr.: Baustelle, zwischen Landsberger Allee und Weißenseer Weg gesperrt, Radfahrer dürfen den Gehweg benutzen, 09.11.2015 04:30 Uhr bis 30.11.2015 04:30 Uhr ',
+       type  => 'handicap',
+       source_id => 'IM_026700',
+       data  => <<EOF,
+userdel	q3::inwork; 14218,13834 14261,13932 14298,14015 14358,14155 14464,14216 14658,14328 14667,14336 14721,14379 14754,14406 14990,14537 15066,14579
 EOF
      },
     );

@@ -897,7 +897,7 @@ Tor	culdesac 8388,13993
 Flughafengelände	culdesac_pseudo 9300,8027
 #: next_check_id: SCHOENEBERGERSCHLEIFE-2015 vvv
 #: XXX: wird bei der Verlängerung der Schöneberger Schleife aufgehoben vvv
-#: last_checked: 2015-10-05 vvv
+#: last_checked: 2015-11-06 vvv
 	culdesac 7998,8317
 	culdesac 8204,9001
 #: last_checked ^^^
@@ -1115,6 +1115,9 @@ westliches Sackgassenende	culdesac 20281,11341
 	culdesac 3049,3966
 	culdesac -785,2492
 	culdesac 12480,21560
+	culdesac_pseudo 4749,24020
+Sackgassenende, Reha-Zentrum	culdesac 3228,26728
+	culdesac_pseudo 1613,21173
 # 
 ######################################################################
 # culdesac entries which should remain invisible

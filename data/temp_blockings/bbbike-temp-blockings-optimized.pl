@@ -2313,14 +2313,14 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
 userdel	2::temp 11209,12430 11273,12301
 userdel	2::temp 11273,12301 11355,12331
 ',
-         'from' => 1447110000,
+         'from' => 1446764400,
          'id' => 1988,
          'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              10,
+                              6,
                               'months',
                               11
                             ]
@@ -2382,7 +2382,34 @@ userdel	3 8374,11479 8389,11378 8427,11365
          'type' => 'gesperrt',
          'until' => 1451257199
        },
-       undef,
+       {
+         'data' => 'userdel	2::temp 13416,7712 13426,7674
+userdel	2::temp 13416,7712 13378,7695 13288,7653
+userdel	2::temp 13426,7674 13400,7642 13303,7622
+userdel	2::temp 12969,7610 13100,7626 13177,7644
+userdel	2::temp 13188,7590 13177,7644
+userdel	2::temp 13188,7590 13303,7622
+userdel	2::temp 13288,7653 13303,7622
+userdel	2::temp 13288,7653 13177,7644
+userdel	2::temp 13288,7653 13278,7673 13245,7742
+',
+         'from' => 1449097200,
+         'id' => 1998,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              4,
+                              'months',
+                              12
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-alt-rixdorf.html',
+         'text' => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (04.12.2015 - 06.12.2015)',
+         'type' => 'gesperrt',
+         'until' => 1449442799
+       },
        undef,
        undef,
        undef,
@@ -3520,7 +3547,16 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	q4::inwork; 9028,12307 8804,12280
+',
+         'from' => 1446937200,
+         'id' => 2614,
+         'source_id' => '2147339441',
+         'text' => 'Unter den Linden: zwischen Schadowstraße und Wilhelmstraße Baustelle, Fahrbahn gesperrt, vom 09.11.2015 08:00 bis voraussichtlich 23.11.2015 ',
+         'type' => 'handicap',
+         'until' => 1448319599
+       },
        undef,
        undef,
        undef,
@@ -3781,12 +3817,14 @@ userdel	2::inwork 14674,9764 14697,9726 14910,9643 15052,9584 15174,9554 15321,9
          'until' => undef
        },
        {
-         'data' => 'userdel	q3::inwork 13357,9313 13489,9456 13606,9578 13645,9621
+         'data' => 'userdel	q3::inwork 13357,9313 13489,9456
+userdel	q2::inwork 13489,9456 13606,9578
+# REMOVED (fertig) --- userdel	q3::inwork 13606,9578 13645,9621
 ',
          'from' => 1437289200,
          'id' => 2723,
          'source_id' => 'IM_025684',
-         'text' => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Jordanstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 21.11.2015 17:00 Uhr ',
+         'text' => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Kiefholzstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 21.11.2015 17:00 Uhr ',
          'type' => 'handicap',
          'until' => 1448121600
        },
@@ -3824,7 +3862,8 @@ userdel	q4::inwork; 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648
        undef,
        undef,
        {
-         'data' => 'userdel	q4::inwork; 9727,17804 9835,17797 10053,17777 10179,17772 10311,17764 10459,17754
+         'data' => 'userdel	q4::inwork; 9727,17804 9835,17797 10053,17777 10179,17772
+#userdel	q4::inwork; 10179,17772 10311,17764 10459,17754
 ',
          'from' => 1438588200,
          'id' => 2736,
@@ -3899,16 +3938,7 @@ userdel	2::inwork -1303,2003 -1591,1861
          'type' => 'handicap',
          'until' => 1449961200
        },
-       {
-         'data' => 'userdel	q4::inwork 4779,24321 4777,24342 4656,24379 4566,24389 4457,24400 4340,24413 4233,24459 4111,24488
-',
-         'from' => 1443564000,
-         'id' => 2745,
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.378909.php',
-         'text' => 'Veltheimstraße: Bauarbeiten zwischen Solquellstraße und Schildower Straße, Fahrbahn gesperrt, voraussichtlich vom 01.10.2015 bis 06.11.2015 ',
-         'type' => 'handicap',
-         'until' => 1446850800
-       },
+       undef,
        {
          'data' => '# REMOVED (hier keine Sperrung) --- userdel	q4::inwork; 5527,5217 5416,5289 5397,5302 5382,5312
 userdel	q4::inwork; 5382,5312 5268,5386 5183,5437 5088,5495
@@ -3942,16 +3972,7 @@ userdel	q4::inwork; 5382,5312 5268,5386 5183,5437 5088,5495
          'type' => 'handicap',
          'until' => 1447455599
        },
-       {
-         'data' => 'userdel	q4::inwork 1878,24619 1852,24593 1797,24562 1747,24549
-',
-         'from' => 1445119200,
-         'id' => 2751,
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.363335.php',
-         'text' => 'Karmeliterweg: Bauarbeiten zwischen Frohnauer Str. und Alemannenstr., vom 19.10.2015 bis 14.11.2015',
-         'type' => 'handicap',
-         'until' => 1447542000
-       },
+       undef,
        {
          'data' => 'userdel	q4::inwork 20782,5206 20774,5131 20852,5106 20765,4839
 ',
@@ -3987,16 +4008,7 @@ userdel	q4::inwork; 5382,5312 5268,5386 5183,5437 5088,5495
          'until' => 1449457200
        },
        undef,
-       {
-         'data' => 'userdel	q2::inwork; 17520,4649 17542,4772 17601,5090 17648,5338
-',
-         'from' => 1445405400,
-         'id' => 2757,
-         'source_id' => 'IM_026599',
-         'text' => 'Sterndamm: zwischen Königsheideweg und Groß-Berliner Damm Bauarbeiten, Fahrbahn in Richtung S-Bhf. Schöneweide gesperrt, Radfahrer dürfen den Gehweg benutzen, 22.10.2015 07:30 Uhr bis 07.11.2015 17:00 Uhr ',
-         'type' => 'handicap',
-         'until' => 1446912000
-       },
+       undef,
        {
          'data' => 'userdel	q2::inwork; 17244,4242 17261,4267 17290,4308 17387,4446 17428,4503 17471,4570 17520,4649
 ',
@@ -4016,6 +4028,43 @@ userdel	q4::inwork; 5382,5312 5268,5386 5183,5437 5088,5495
          'text' => 'Sterndamm: zwischen Lindhorstweg und Megedestr. Bauarbeiten, Fahrbahn in Richtung S-Bhf. Schöneweide gesperrt, Radfahrer dürfen den Gehweg benutzen, 21.10.2015 08:00 Uhr bis 18.12.2015 17:00 Uhr ',
          'type' => 'handicap',
          'until' => 1450454400
+       },
+       {
+         'data' => 'userdel	q4::inwork; 8336,10829 8300,10823 8281,10791 8199,10634
+',
+         'from' => 1446678000,
+         'id' => 2760,
+         'source_id' => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.396336.php',
+         'text' => 'Flottwellstraße: Bauarbeiten, Fahrbahn zwischen Schöneberger Ufer und Lützowstr. in Richtung Süden gesperrt, vom 06.11.2015 bis 31.12.2015 ',
+         'type' => 'handicap',
+         'until' => 1451602800
+       },
+       {
+         'data' => '	3 8783,10166 9108,10101 9277,10057
+	3 9277,10057 9108,10101 8783,10166
+	3 9277,10057 9108,10101 9073,9915
+	3 8783,10166 9108,10101 9145,10290
+	3 9073,9915 9108,10101 8783,10166
+	3 9145,10290 9108,10101 9277,10057
+	3 9044,9753 9073,9915 8780,9968
+	3 8780,9968 9073,9915 9108,10101
+',
+         'from' => 1446332400,
+         'id' => 2761,
+         'source_id' => 'http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2015/pressemitteilung.394109.php',
+         'text' => 'Großbeerenstr.: Bauarbeiten, Überqueren der Straße an der Wartenbergstr. und Obentrautstr. nicht möglich, voraussichtlich vom 02.11.2015 bis 31.01.2016 ',
+         'type' => 'gesperrt',
+         'until' => 1454281200
+       },
+       {
+         'data' => 'userdel	q3::inwork; 14218,13834 14261,13932 14298,14015 14358,14155 14464,14216 14658,14328 14667,14336 14721,14379 14754,14406 14990,14537 15066,14579
+',
+         'from' => 1446953400,
+         'id' => 2762,
+         'source_id' => 'IM_026700',
+         'text' => 'Hohenschönhauser Str./Oderbruchstr.: Baustelle, zwischen Landsberger Allee und Weißenseer Weg gesperrt, Radfahrer dürfen den Gehweg benutzen, 09.11.2015 04:30 Uhr bis 30.11.2015 04:30 Uhr ',
+         'type' => 'handicap',
+         'until' => 1448854200
        }
      
 );

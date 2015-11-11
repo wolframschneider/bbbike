@@ -337,7 +337,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6163 (Stand der Planung?)
 #: by: http://www.berlin.de/ba-mitte/bvv-online/___tmp/tmp/45081036147184117/147184117/00116327/27-Anlagen/02/MA_1534_IV.pdf
 #: note: Anforderungsampel
-#: last_checked: 2015-09-29
+#: last_checked: 2015-11-06
 #: check_frequency: 7d
 	F 10511,14418
 	X 10002,14092
@@ -348,6 +348,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10884,14952
 	X 10953,15787
 	X 11019,16465
+#: Note: Anforderungsampel für Radfahrer Richtung Norden aus der Berliner Str. links in die Mühlenstr.
 	X 10927,17022
 	X 10774,17277
 	X 7480,7683
@@ -1050,7 +1051,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F -1286,23753
 	F -997,23492
 	X -656,23011
-	X 1470,21205
+	X 1461,21203
 	X 2020,20327
 	X 127,17176
 	X -344,15200
@@ -1321,10 +1322,10 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 3435,1660
 	X 6435,18839
 	X 6392,19142
-	X 6247,19454
-	X 6152,19652
-	X 5883,20202
-	X 5816,20336
+	X 6238,19450
+	X 6141,19649
+	X 5868,20198
+	X 5801,20339
 	X 5410,20822
 	X 5382,21001
 	X 5136,21738
@@ -2576,12 +2577,12 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX temporäre Ampel (wegen Arbeiten an der Staatsoper und an der U-Bahn)
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
-#: last_checked: 2015-10-31
+#: last_checked: 2015-11-08
 #: check_frequency: 45d
 	F::inwork 9984,12426
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2015-11-02 vvv
+#: last_checked: 2015-11-10 vvv
 #: check_frequency: 30d vvv
 	X::inwork 9122,12509
 	X::inwork 9286,12886
@@ -2591,7 +2592,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: last_checked ^^^
 #: XXX ^^^
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (südlicher Bereich) vvv
-#: last_checked: 2015-10-06 vvv
+#: last_checked: 2015-11-10 vvv
 #: check_frequency: 30d vvv
 # REMOVED (aufgehoben) ---	F::inwork 9063,12051
 	F::inwork 9270,12086
@@ -2602,7 +2603,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #
 #: XXX temporäre Ampel (wegen gesperrten Gehweg?), Ampel ist eigentlich etwas weiter westlich
 #: XXX eigentlich gibt es sogar zwei Fußgängerampeln
-#: last_checked: 2015-11-02
+#: last_checked: 2015-11-08
 #: check_frequency: 60d
 	F::inwork 9812,12145
 # 
@@ -2795,7 +2796,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 # 
 #: next_check_id: FISCHERINSEL-2015 vvv
 #: source_id: IM_024012 vvv
-#: last_checked: 2015-10-06 vvv
+#: last_checked: 2015-11-08 vvv
 #: next_check: 2015-12-20 vvv
 	F 10703,11837
 	F 10656,11887

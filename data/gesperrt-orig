@@ -84,7 +84,7 @@ Alt-Blankenburg	1 13576,20849 13562,20913 13909,20928
 Alt-Blankenburg	1 13909,20928 13576,20849
 Seestr.	1 5049,14675 5233,14753 5440,14840
 Seestr.	1 5440,14840 5264,14671 5057,14607
-Waidmannsluster Damm	1 2144,20870 1835,21427 1882,21468 2195,20898
+Waidmannsluster Damm	1 2144,20870 1843,21440 1870,21491 2195,20898
 Flughafen Tegel	1 2819,16141 2757,16194 2713,16286 2756,16344 2832,16343 2863,16280 2819,16141
 Jakob-Kaiser-Platz	1 2795,14161 2811,14196 2831,14219 2857,14222 2896,14187 2892,14149 2860,14118 2825,14128 2795,14161
 Kurt-Schumacher-Damm (Süd)	1 2831,14219 2803,14288 2793,14374 2905,14754
@@ -269,7 +269,7 @@ Ontarioseestr.	1 18408,10041 18387,10070
 Burgherrenstr.	1 8969,8640 9076,8783
 Travestr.	1 14835,11840 14897,11801 14981,11751
 Müggelstr.	1 14897,11801 14965,11921
-Schmollerplatz/str.	1 13244,9410 13184,9340 13209,9325
+# REMOVED (stimmt nicht (mehr?)) --- Schmollerplatz/str.	1 13231,9422 13178,9363 13206,9335
 Isarstr.	1s:q4 12349,8464 12368,8356
 Zionskirchplatz	1 10304,14254 10277,14350 10311,14391 10365,14372 10391,14280
 Ohmstr.	1 11324,11689 11378,11856
@@ -1114,6 +1114,7 @@ Bahnhofstr.	1 12202,21158 12158,21166
 Allee der Kosmonauten	1 20172,14141 20111,14140 20096,14127
 Augustaplatz	1 3936,4014 3955,4039 3986,4051 4015,4053 4034,4033 4045,4005 4042,3982 4025,3958 4000,3950 3971,3950 3946,3967 3937,3993 3936,4014
 Paul-Koenig-Str.	1 17268,16526 17312,16498 17304,16485 17293,16469 17251,16497 17268,16526
+Am Lehnshof	1s:q3 4291,22986 4264,22992 4202,23034
 ######################################################################
 # empfohlene und unechte Sperrungen
 #: by: Stefan Klinkusch vvv
@@ -1377,7 +1378,7 @@ Cecilienstr.: Mittelstreifen	3nocross 21831,13801 21853,13784 21918,13720
 Warnemünder Str.: Mittelstreifen	3nocross 2767,7592 2750,7444 2744,7397
 Schulzendorfer Str.: Gitter auf dem Mittelstreifen	3nocross 8057,14876 8091,14895 8219,14897
 #: note: auf dem Radweg gibt es noch zusätzlich Absperrgitter
-Residenzstr.: Abbiegen nicht möglich	3nocross 7602,17399 7684,17435 7902,17166
+Residenzstr.: Abbiegen nicht möglich	3nocross 7602,17399 7675,17430 7902,17166
 Residenzstr.: Mittelstreifen	3nocross 7579,17532 7572,17558 7540,17675
 Lindauer Allee: Mittelstreifen	3nocross 5550,18775 5635,18776 5713,18777
 Lindauer Allee: Mittelstreifen	3nocross 5713,18777 5791,18778 5869,18779
@@ -2067,6 +2068,7 @@ Treppe	0:40 1888,42795
 #
 # Kinderanhänger wie der Chariot Captain XL sind 87cm breit
 # 
+Schranke, kann auf Bürgersteig umfahren werden	BNP:3::trailer=5 1778,20377
 Schranke	BNP:3::trailer=10 5296,11529
 # 
 #: next_check_id: DIESEL-2015 vvv
@@ -2630,9 +2632,12 @@ Drängelgitter	BNP:3 31665,48997
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: last_checked: 2015-11-06
+E.T.A.-Hoffmann-Promenade: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 9679,10710 9777,10719
+# 
 #: next_check_id: SCHOENEBERGERSCHLEIFE-2015
-#: last_checked: 2015-10-12
-#: check_frequency: 7d
+#: last_checked: 2015-11-06
+#: check_frequency: 14d
 (Bautzener Str. - Südkreuz): in Bau	2::inwork 8204,9001 8200,8920 7998,8317
 # 
 #: next_check_id: STEGLITZPARK-2015 vvv
@@ -2701,7 +2706,7 @@ Schleuse - Lindenufer: wegen Bauarbeiten gesperrt	2::inwork -2944,14652 -2922,14
 Kleiner Tiergarten: wegen Bauarbeiten gesperrt	2::inwork 6561,13151 6556,13240 6526,13327
 # 
 #: next_check_id: FISCHERINSEL-2015 vvv
-#: last_checked: 2015-10-06 vvv
+#: last_checked: 2015-11-08 vvv
 #: next_check: 2015-12-20 vvv
 Märkisches Ufer - Neue Roßstr.: wegen Bauarbeiten gesperrt	3 10869,11949 10687,11853 10703,11837
 Neue Roßstr. - Märkisches Ufer: wegen Bauarbeiten gesperrt	3 10703,11837 10687,11853 10869,11949
@@ -2798,7 +2803,7 @@ Zufahrt zum Uferweg: gesperrt	2::inwork 7703,14582 7696,14577 7662,14579 7653,14
 # 
 #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage)
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45-181-136136549415/136549415/00119959/59-Anlagen/02/GA_1805_IV.pdf (mindestens bis Ende 2016)
-#: last_checked: 2015-11-02
+#: last_checked: 2015-11-08
 #: check_frequency: 180d
 Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelmarkt ist die Verbindung gesperrt	2::inwork 10308,11833 10374,11734
 # 
@@ -2840,11 +2845,11 @@ Toulonstr.: noch nicht geöffnet	2::inwork 12404,21532 12480,21560
 # REMOVED (wieder überquerbar) --- #: source_id: INKO_104519 --- #: last_checked: 2015-03-28 --- #: check_frequency: 90d --- Bismarckstr.: Mittelstreifen während der Bauarbeiten nicht überquerbar	3nocross 3690,11629 3844,11649 3898,11655
 # REMOVED --- #: next_check_id: INVALIDENFRIEDHOF-2014 --- #: by: Birgit Schroeer --- #: confirmed_by: srt --- #: last_checked: 2015-03-13 --- #: next_check: 2015-03-28 --- #: XXX siehe auch temp_blockings-Eintrag --- #: osm_watch: way id="76212442" version="7" --- Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.03.2015	2::inwork 8119,13912 8101,13901 8248,13659 8337,13541
 # 
-#: last_checked: 2015-10-13
+#: last_checked: 2015-11-08
 #: check_frequency: 120d
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 # 
-#: last_checked: 2015-10-13
+#: last_checked: 2015-11-08
 #: check_frequency: 90d
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 # 
@@ -2891,8 +2896,8 @@ Teisnacher Str.: fertiggestellt, aber noch gesperrt	2::inwork 19871,9680 19859,9
 BBI-Park: wegen Bauarbeiten gesperrt	2::inwork 20038,-1474 19717,-1549
 # 
 #: note: allerdings könnte man sein Fahrrad über den Betonpfeiler rübertragen
-#: last_checked: 2015-07-29
-#: check_frequency: 90d
+#: last_checked: 2015-11-04
+#: check_frequency: 120d
 am Osthafen: durch Barriere versperrt	2::inwork 14259,10309 14463,10212
 # 
 # REMOVED --- #: last_checked: 2014-04-17 --- #: check_frequency: 14d --- Edith-Stein-Str.: Bauarbeiten könnten noch möglich sein	2::inwork 14089,13247 14035,13104
@@ -2910,12 +2915,12 @@ Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: z.Zt. nur Baustellenzufahrt, Du
 # 
 #: next_check_id: SCHINKELPLATZ-2014 vvv
 #: osm_watch: way id="305153174" version="1"
-#: last_checked: 2015-10-02 vvv
+#: last_checked: 2015-11-08 vvv
 #: check_frequency: 90d vvv
 Schinkelplatz: Bauarbeiten, Straße gesperrt	2::inwork 10008,12274 9994,12368
 Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1s:q3 9996,12401 9994,12368 9943,12364
 # ReMOVED (hier aufgehobe) --- Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1s:q3 9943,12364 9961,12273
-# REMOVED --- Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1::inwork 9943,12364 9934,12420
+Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1::inwork 9943,12364 9934,12420
 #: check_frequency ^^^
 #: last_checked ^^^
 #: next_check_id ^^^
@@ -2969,8 +2974,8 @@ tragen (2 Stufen)	0:5 8818,13365
 #: source_id: INKO_113041 vvv
 #: last_checked: 2015-10-31 vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross 9984,12426 9934,12420 9858,12410
-Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
-Niederlagstr. - Unter den Linden: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9943,12364 9934,12420 9984,12426
+# REMOVED --- Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
+# REMOVED --- Niederlagstr. - Unter den Linden: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9943,12364 9934,12420 9984,12426
 #: last_checked ^^^
 #: source_id ^^^
 #: XXX ^^^
@@ -3022,7 +3027,7 @@ Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwor
 #: XXX siehe auch Eintrag in handicap_s-orig
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0194-oberwallstrae-werderscher-markt.html
 #: osm_watch: way id="66071370" version="4"
-#: last_checked: 2015-07-15
+#: last_checked: 2015-11-08
 #: check_frequency: 100d
 Oberwallstr.: Bauarbeiten, komplett gesperrt	2:inwork 9898,12161 9882,12259
 # 
@@ -3070,7 +3075,7 @@ Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552
 #: osm_watch: way id="23099023" version="9"
 #: osm_watch: way id="23099024" version="6"
 #: osm_watch: way id="103531998" version="2"
-#: last_checked: 2015-09-12 vvv
+#: last_checked: 2015-11-07 vvv
 #: check_frequency: 90d vvv
 # REMOVED (fertig) --- Tegeler Hafen: Weg über Insel gesperrt	2 1756,20405 1736,20441 1733,20470 1753,20511 1761,20539
 Tegeler Hafen: Weg gesperrt	2 1630,20731 1668,20670 1687,20645 1697,20623 1721,20603
@@ -3092,7 +3097,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 # REMOVED --- #: last_checked: 2011-04-08 --- Bebelplatz: Bauarbeiten, gesperrt	2:inwork 9679,12388 9702,12307 9708,12235
 # 
 #: next_check_id: STAATSOPER-2014 vvv
-#: last_checked: 2015-06-02 vvv
+#: last_checked: 2015-11-08 vvv
 #: next_check: 2016-06-01 (voraussichtliche Eröffnung 2017) vvv
 #: by: http://www.welt.de/kultur/buehne-konzert/article140641614/Ausschuss-prueft-Kostenexplosion-bei-Staatsoper.html (Eröffnung)
 #: XXX siehe auch aufgehobene Einbahnstraßenregelung oben (Behrenstr./Bebelplatz)
@@ -3104,7 +3109,7 @@ Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12
 #: last_checked: ^^^
 #: next_check_id: ^^^
 # 
-#: last_checked: 2015-04-08
+#: last_checked: 2015-11-08
 #: next_check: 2016-05-31 (Eröffnung 2019 geplant)
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
@@ -3430,7 +3435,7 @@ Drängelgitter	BNP:5 5684,773
 Straßenbahn	3nocross 16837,17440 16947,17506 17159,17631
 Rudolf-Reusch-Str. [Wohngebiet]	1 15732,12562 15657,12562 15657,12648 15732,12650
 #: confirmed_by: srt
-Letteallee	1 8226,17479 8110,17470 8014,17468 7845,17455 7707,17445 7684,17435
+Letteallee	1 8226,17479 8110,17470 8014,17468 7845,17455 7707,17445 7675,17430
 #: confirmed_by: srt
 Mickestr.	1 8185,17352 8134,17398 8110,17470
 Kühleweinstr.	1 8014,17468 8043,17282 8088,17218
