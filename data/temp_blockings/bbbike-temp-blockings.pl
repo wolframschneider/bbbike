@@ -23566,9 +23566,10 @@ EOF
      },
      { from  => undef,
        until => undef,
-       text  => 'Mergenthalerring: Tor kann nachts versperrt sein',
+       text  => 'Mergenthalerring: Tor kann abends und nachts versperrt sein',
        recurring => 1,
        data  => <<EOF,
+#: note: am Di, den 2015-11-17 gegen 18:30: geschlossen
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
 EOF
@@ -24204,10 +24205,10 @@ EOF
        text  => 'Treptower Park: einige Wege im nördlichen und südlichen Teil des Parks werden instand gesetzt und können gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein vvv
+#: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein, teilweise auch schlechter (wassergebundene Decke statt Asphalt) vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.297071.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruen/artikel.295591.php
-#: last_checked: 2015-11-01 vvv
+#: last_checked: 2015-11-17 vvv
 userdel	2::inwork 14318,9688 14443,9731
 # REMOVED --- userdel	2::inwork 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
 userdel	2::inwork 14575,9648 14645,9710 14697,9726
@@ -24353,8 +24354,8 @@ EOF
 EOF
      },
      { from  => 1437289200, # 2015-07-19 09:00
-       until => $isodate2epoch->("2015-11-21 17:00:00"), # 1441033200, # 2015-08-31 17:00
-       text  => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Kiefholzstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 21.11.2015 17:00 Uhr ',
+       until => $isodate2epoch->("2015-12-18 17:00:00"), # 1441033200, # 2015-08-31 17:00
+       text  => 'Bouchéstr.: Baustelle, Fahrbahn zwischen Heidelberger Str. und Kiefholzstr. gesperrt, auf Gehweg ausweichen, 20.07.2015 09:00 Uhr bis 18.12.2015 17:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_025684',
        data  => <<EOF,
@@ -24660,8 +24661,10 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4::inwork; 14887,11929 14835,11840 14802,11784 14794,11770 14710,11626 14639,11512
-	q3::inwork 14645,11670 14710,11626
-	q3::inwork 14708,11820 14794,11770
+# REMOVED ---	q3::inwork 14645,11670 14710,11626
+	q3::inwork 14710,11626 14764,11591
+# REMOVED ---	q3::inwork 14708,11820 14794,11770
+	q3::inwork 14794,11770 14856,11740
 EOF
      },
      { from  => 1445320800, # 2015-10-20 08:00
@@ -24744,6 +24747,16 @@ EOF
        data  => <<EOF,
 userdel	q3::temp 11139,13008 11064,12910 10970,12822
 userdel	q4::temp 11064,12910 11134,12793
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Rütlistr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX Wann sind die Bauarbeiten beendet? Wie weit geht die Sperrung Richtung Süden?
+#: last_checked: 2015-11-17
+userdel	q3::inwork 12620,9293 12565,9200
 EOF
      },
     );

@@ -2821,7 +2821,8 @@ Philipp-Jacob-Rauch-Str.: Verbundsteinpflaster	Q0 27615,1245 27573,1279 27516,13
 Johann-Jacob-Baeyer-Str.: Asphalt	Q0 27977,1187 27810,987
 Johann-Jacob-Baeyer-Str.: Asphalt	Q0 27863,943 27810,987 27775,1016 27568,1188
 Plutoweg: Asphalt	Q0 31082,3366 30965,3391 30811,3416 30750,3468 30608,3617 30499,3632 30366,3681
-Treptower Park: Asphalt	Q0 14318,9688 14316,9542 14347,9452 14398,9373 14485,9271 14601,9201
+Treptower Park: Asphalt	Q0 14318,9688 14316,9542 14347,9452 14398,9373
+Treptower Park: wassergebundene Decke	Q1 14398,9373 14485,9271 14601,9201
 Treptower Park: Asphalt	Q0 14398,9373 14382,9299
 Treptower Park: Asphalt, einige Wurzelschäden	Q1 14316,9542 14384,9565 14512,9528 14635,9441 14748,9420
 Treptower Park: Asphalt	Q0 14529,9141 14601,9201
@@ -8123,7 +8124,6 @@ Ritterstr.: Gehwegpflaster und Betonpflaster	Q1 9763,11148 9935,11067
 (Friedrich-List-Str. - KGA An der Südostallee): Asphalt	Q1 17459,5634 17480,5666
 (KGA An der Südostallee): teilweise nur mäßiger Asphalt, Bodenwellen	Q2 17056,6133 17070,6115 17384,5746 17480,5666 17578,5566 17592,5552
 (Südostallee - Fröbel-Kindergarten): Asphalt	Q0 17473,5471 17416,5388
-(Am Lokdepot): Asphalt	Q0 8389,8775 8390,8879
 (Schönburger Str. - Bosestr./Blumenthalstr.): Kleinsteinpflaster	Q1 8953,6492 8930,6295
 Gäßnerweg: Asphalt mit einigen Schäden	Q1 8532,6015 8541,6191 8546,6307 8546,6329 8551,6552 8553,6665
 (Prühßstr. - Rixdorfer Str.): Asphalt	Q0 9869,4271 9965,4299 10051,4295 10140,4280 10221,4245
@@ -9163,6 +9163,7 @@ Altes Gaswerk Mariendorf: Asphalt	Q0 8295,4303 8266,4221 8404,3648 8461,3410
 Im Marienpark: mäßiges bis schlechtes Kopfsteinpflaster	Q3 8404,3648 8346,3633 8178,3591 8070,3563
 Im Marienpark: mäßiges bis schlechtes Kopfsteinpflaster	Q3 8178,3591 8167,3641
 Im Marienpark: Asphalt	Q0 8167,3641 8181,3668 8326,3703 8346,3633
+(Dieselstr. - Kiefholzstr.): Asphalt	Q0 14642,8022 14832,8199
 Nachtweideweg: guter Asphalt	Q0 -3691,16553 -3779,16537 -3873,16534 -3962,16527 -4096,16525
 Straße 77 (Französisch Buchholz): Asphalt	Q0 12836,22763 12608,22943
 Straße 77 (Französisch Buchholz): asphaltiert	Q0 12608,22943 12589,22948 12526,22972
