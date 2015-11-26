@@ -3566,16 +3566,7 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	q4::inwork; 9028,12307 8804,12280
-',
-         'from' => 1446937200,
-         'id' => 2614,
-         'source_id' => '2147339441',
-         'text' => 'Unter den Linden: zwischen Schadowstraße und Wilhelmstraße Baustelle, Fahrbahn gesperrt, vom 09.11.2015 08:00 bis voraussichtlich 23.11.2015 ',
-         'type' => 'handicap',
-         'until' => 1448319599
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3888,9 +3879,9 @@ userdel	q4::inwork; 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648
          'from' => 1438588200,
          'id' => 2736,
          'source_id' => 'IM_025833',
-         'text' => 'Florastr.: Baustelle zwischen Wollankstr. und Mühlenstr., Fahrtbahn in Richtung S- und U-Bahnhof Pankow gesperrt, 04.08.2015 bis 30.11.2015 ',
+         'text' => 'Florastr.: Baustelle zwischen Wollankstr. und Mühlenstr., Fahrtbahn in Richtung S- und U-Bahnhof Pankow gesperrt, 04.08.2015 bis 01.12.2015 ',
          'type' => 'handicap',
-         'until' => 1448899200
+         'until' => 1448985600
        },
        {
          'data' => 'userdel	q4::inwork 4492,20214 4622,20292 4718,20341 4879,20427
@@ -4091,6 +4082,17 @@ userdel	q3::inwork 12620,9293 12565,9200
          'text' => 'Rütlistr.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '#: note: kein Gehweg, deshalb nicht q4;
+userdel	1::inwork 19843,7866 19927,7813 20031,7794 20077,7786
+',
+         'from' => 1448168400,
+         'id' => 2765,
+         'source_id' => 'IM_026719',
+         'text' => 'Verlängerte Waldowallee: Baustelle, Fahrbahn in Richtung Rudolf-Rühl-Allee zwischen Birkenallee und Anemonensteig gesperrt, 23.11.2015 06:00 Uhr bis 03.12.2015 17:00 Uhr ',
+         'type' => 'gesperrt',
+         'until' => 1449158400
        }
      
 );
