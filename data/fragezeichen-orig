@@ -39,7 +39,7 @@ Danziger Str.	?::projected 11709,14856 11864,14781 11990,14714 12025,14695 12128
 # 
 #: XXX im Baumaßnahmenkatalog ist nur der östliche Teil ab Heinrich-Heine-Str. eingezeichnet, Baumaßnahmen 1.46 (Realisierung in 2011)
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
-#: last_checked: 2015-11-09
+#: last_checked: 2015-11-27
 #: check_frequency: 60d
 Annenstr./Heinrich-Heine-Platz	?::projected 11349,11227 11249,11268 11091,11379 11052,11414 11039,11425 10892,11555 10815,11662
 # 
@@ -113,7 +113,7 @@ Skalitzer/Gitschiner Str.: werden hier Radspuren markiert?	?::projected 11335,10
 # REMOVED (realisiert) --- #: XXX Baumaßnahme 1.39 (Realisierung in 2011) --- #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015) --- #: last_checked: 2013-06-28 --- #: check_frequency: 60d --- Schulze-Delitzsch-Platz: werden hier Radspuren markiert?	?::projected 11242,11720 11155,11750
 # 
 #: XXX Baumaßnahme 1.17 (Realisierung in 2011)
-#: last_checked: 2015-10-14
+#: last_checked: 2015-12-02
 #: check_frequency: 90d
 Markgrafenstr.: wird hier eine Radwegführung erstellt?	?::projected 9711,11543 9737,11546 9732,11574 9707,11596 9701,11656
 # 
@@ -214,7 +214,7 @@ Blaschkoallee: werden hier Radwege/spuren in Richtung Osten entstehen?	?::projec
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5957 (Baubeginn)
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/archiv/20140728.0940.398545.html (Baubeginn 1.9.2014)
 #: by: http://www.umbau-warschauer-strasse.de/
-#: last_checked: 2015-11-06
+#: last_checked: 2015-12-01
 #: next_check: 2015-12-19
 Warschauer Str: Radspuren in Bau	?::inwork 13603,11538 13651,11731 13696,11920 13745,12118
 # 
@@ -506,7 +506,7 @@ Rummelsburger/Zacherstr.: Ampel wird verlegt (auf die Ostseite)	?::projected 178
 #: XXX einige culdesac-Einträge fehlen
 #: note: überwiegend mit Straßenbeleuchtung
 #: last_checked: 2015-10-04 vvv
-#: check_frequency: 60d vvv
+#: check_frequency: 30d vvv
 # REMOVED (aufgenommen, bereits provisorisch ausgeschildert --- Ideallee: Qualität: unbefestigte Straße (Q2); Straßenbenennung?	? 11069,23647 10971,23838 10813,24126
 Kirschlorbeerweg: Qualität: unbefestigte Straße (Q2); Straßenbenennung?	? 11069,23647 11028,23624 10927,23816
 Feuerdornweg: Qualität: unbefestigte Straße (Q2); Straßenbenennung?	? 11008,23572 10887,23796
@@ -515,7 +515,8 @@ Fingerstrauchweg: Qualität: unbefestigte Straße (Q2); Straßenbenennung?	? 10785,
 Mispelweg: Qualität: unbefestigte Straße (Q2); Straßenbenennung	? 10747,23718 10797,23620
 Lebensbaumweg: Qualität: unbefestigte Straße (Q2); Straßenbenennung	? 10708,23696 10759,23597
 # REMOVED (-> strassen) --- #: oldname: Fasanenplan --- Bambusweg: Qualität: unbefestigte Straße (Q2); Straßenbenennung	? 10667,23684 10687,23684 10708,23696 10747,23718 10785,23740 10842,23773 10887,23796 10927,23816 10971,23838
-#: osm_watch: way id="29311549" version="3"
+#: osm_watch: way id="29311549" version="4"
+#: XXX laut osm schon unbenannt
 Zypressenweg: Qualität: unbefestigte Straße (Q2); Straßenbenennung	? 10685,23707 10603,23870
 #: check_frequency ^^^
 #: last_checked ^^^
@@ -590,7 +591,8 @@ Sternbergpromenade: Umgestaltung, Havel-Radweg wird hier offiziell entlanggeführ
 #: next_check_id: NIZZASTR-2014 vvv
 #: last_checked: 2015-10-04 vvv
 #: check_frequency: 60d vvv
-#: osm_watch: way id="344108072" version="2"
+#: osm_watch: way id="344108072" version="3"
+#: XXX laut osm schon fertig gestellt
 #: XXX Planstraße A -> Marseillestraße
 Marseillestr. - Dr.-Markus-Str.: Qualität? wann ist die Fertigstellung? wird hier nur ein Fußweg sein?	?::inwork 12364,21623 12402,21537
 # REMOVED --- Marseillestr.: Qualität? wann ist die Fertigstellung? wird die Anbindung an die Dr.-Markus-Str. nur ein Fußweg sein?	?::inwork 12402,21537 12404,21532 12411,21515 12443,21439
@@ -609,6 +611,7 @@ Toulonstr.: Verkehrsberuhigt?	?::inwork 12404,21532 12480,21560
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4111
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036978486193/978486193/00069082/82-Anlagen/02/BenennungsabsichtfuereinenPrivatweggemaessBeba.pdf
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4130
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/48re.pdf/file?y=2015
 #: osm_watch: way id="344108078" version="1"
 Rennesstr.: genaue Lage, Qualität?	?::projected 12411,21515 12422,21492 12469,21507
 # REMOVED (einzelne Straßen aufgeführt) --- Bebauungsplan XIX-48b: neue Plan- und Privatstraßen werden erstellt	?::inwork 12337,20954 12459,21010 12562,21055 12547,21372 12495,21670 12172,21545 12209,21448 12189,21337 12168,21218 12255,21083 12337,20954
@@ -849,14 +852,11 @@ Rennbahnstr./Gustav-Adolf-Str.: hier wird in Zukunft eine Ampel (normal? Fußgäng
 # REMOVED (realisiert) --- #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (vom 2013-04-10) --- #: last_checked: 2013-09-27 (Markierungsarbeiten haben begonnen) --- #: next_check: 2013-10-04 --- Werbellinstr.: Radstreifen werden erstellt	?::projected; 12698,8175 12650,8164 12541,8140 12426,8115
 # 
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/___tmp/tmp/4508103672955001/72955001/00032912/12-Anlagen/01/0208_XIX_Radverkehr_Neukoelln.pdf vvv
-#: last_checked: 2015-11-14
-#: check_frequency: 14d
-#: priority: #C
-Lohmühlenbrücke: Zebrastreifen wird angelegt (oder nur eine Mittelinsel?)	?::inwork 12850,9375 12871,9356 12888,9338
+# REMOVED (nur eine Mittelinsel entstanden) --- #: last_checked: 2015-11-14 --- #: check_frequency: 14d --- #: priority: #C --- Lohmühlenbrücke: Zebrastreifen wird angelegt (oder nur eine Mittelinsel?)	?::inwork 12850,9375 12871,9356 12888,9338
 # 
 #: by: http://www.bwb.de/content/language1/html/10337.php#11671
 #: osm_watch: way id="75509950" version="11"
-#: last_checked: 2015-11-17
+#: last_checked: 2015-12-02
 #: check_frequency: 60d
 Friedelstr.: ein asphaltierter Fahrstreifen wird angelegt	?::projected 12088,9775 12074,9689 12066,9558
 #: by: ^^^
@@ -866,7 +866,7 @@ Friedelstr.: ein asphaltierter Fahrstreifen wird angelegt	?::projected 12088,977
 #: by: http://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036855186812/855186812/00055405/05-Anlagen/03/1367_XIX_Fahrradstrasse_Buerknerstrasse.pdf
 #: by: http://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5018
 #: osm_watch: way id="4068029" version="13"
-#: last_checked: 2015-11-17
+#: last_checked: 2015-12-02
 #: check_frequency: 60d
 Bürknerstr.: wird hier eine Fahrradstraße eingerichtet?	?::projected 11673,9720 11754,9735 11897,9754 12088,9775
 # 
@@ -1286,14 +1286,19 @@ Am Kirchendreieck: Lage der Straße? Qualität?	? 23922,13085 23960,13325
 # - XXX_prog- und XXX_indoor-Einträge
 # 
 # 
-#: by: fritz
-#: XXX bis 31.12.2016
-Grolmanstr.: Einbahnstraße wegen Bauarbeiten, auch für Radfahrer relevant?	? 4920,10933 4954,10876 5054,10706 5079,10701
+#: XXX Wird sich durch die Baumaßnahmen was ändern? Ende der Bauarbeiten: 30.04.2016 vvv
+#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2015/pressemitteilung.415646.php
+Görlitzer Park: Baumaßnahmen	?::inwork 12608,10294 12580,10252
+Görlitzer Park: Baumaßnahmen	?::inwork 12767,10216 12763,10207 12757,10197
+Görlitzer Park: Baumaßnahmen	?::inwork 12905,10143 12901,10134 12869,10071
+#: XXX ^^^
 # 
-#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2015
-#: XXX "Verkehrsfreigabe vorrausichtlich in KW 49"
-#: next_check: 2015-11-30
-Alex-Wedding-Str.: ändert sich durch die Widmung hier etwas?	? 11146,13328 11085,13239 11045,13183
+#: last_checked: 2015-11-29
+#: check_frequency: 7d
+Kiefholzstr.: Umfahrungsstraße in Vorbereitung	? 14151,8967 14363,8738
+# 
+# REMOVED (am nächsten Tag bei fritz entfernt) --- #: by: fritz --- #: XXX bis 31.12.2016 --- Grolmanstr.: Einbahnstraße wegen Bauarbeiten, auch für Radfahrer relevant?	? 4920,10933 4954,10876 5054,10706 5079,10701
+# REMOVED --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2015 --- #: XXX "Verkehrsfreigabe vorrausichtlich in KW 49" --- #: next_check: 2015-11-30 --- Alex-Wedding-Str.: ändert sich durch die Widmung hier etwas?	? 11146,13328 11085,13239 11045,13183
 # 
 #: by: fritz
 #: XXX was bedeutet das hier? kann die Straße auf N zurückgestuft werden? bleibt die Fußgängerampel bestehen?
@@ -1654,6 +1659,7 @@ Südpankeweg, Fortsetzung zur Ida-von-Arnim-Str.: wann wird sie gebaut? Qualität?
 # 
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3404 (Verfahren wurde eingeleitet (April 2013))
 #: last_checked: 2015-11-07 (Bauarbeiten, bald ist es soweit)
+#: next_check: 2015-11-30
 #: priority: #C
 Florastr./Görschstr.: hier entsteht vermutlich ein Zebrastreifen	? 10073,17801 10053,17777 10033,17763
 # 
@@ -1730,7 +1736,7 @@ Aronsstr.: wird hier ein Zebrastreifen entstehen?	?::projected 14562,7597 14583,
 # 
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to020.asp?TOLFDNR=14705&options=8
 #: osm_watch: way id="47155976" version="10"
-#: last_checked: 2015-11-17
+#: last_checked: 2015-12-02
 #: check_frequency: 90d
 Weichselplatz: vielleicht wird hier asphaltiert?	?::projected 12851,9309 12761,9190
 # 
@@ -1945,12 +1951,12 @@ Buschkrugallee -> Braunschweiger Ufer: Bordstein	? 13566,5792 13483,5973 13077,5
 #: XXX_prog ^^^
 # 
 #: by: http://www.berlin.de/ba-mitte/aktuell/presse/archiv/20141202.1525.400470.html
-#: last_checked: 2015-11-03
+#: last_checked: 2015-11-27
 #: check_frequency: 90d
 Sebastianstr.: Straßenumgestaltungsmaßnahme Sebastianstraße - gibt es Änderungen für Radfahrer?	?::projected 10640,11564 10818,11269 10824,11256 10911,11080
 # 
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.334355.php
-#: last_checked: 2015-11-10
+#: last_checked: 2015-12-02
 #: check_frequency: 120d
 Stallschreiberstr./Kolonnenweg: Straßenbauarbeiten geplant	?::projected 10489,11405 10620,11244 10678,11172 10818,11269
 # 
@@ -2111,6 +2117,7 @@ neue Planstraßen in Fahrland: Lage, Qualität?	? -16174,7006 -15929,6894
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20140131.0900.393992.html
 #: by: http://www.berlin.de/ba-treptow-koepenick/organisationseinheiten/stadtplverm/auslegung9-57ve.html
 #: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/bauenundstadtentwicklung/stadtplanungsamt/ag2/downloads-b-plaene/9_57ve_v41_ve_a1_2014_01_14.pdf?start&ts=1390830629&file=9_57ve_v41_ve_a1_2014_01_14.pdf
+#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.411427.php
 #: XXX wird zukünftig entstehen, evtl. entsteht noch ein Uferweg vvv
 #: last_checked: 2015-09-13 vvv
 #: check_frequency: 360d vvv
@@ -2263,11 +2270,13 @@ Benno-König-Str.: geplante Straße in Johannisthal, genaue Lage, Qualität?	?::pro
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036869488524/869488524/00108801/01-Anlagen/01/DRS1087VK.pdf vvv
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/31re.pdf/file (Straßenbenennungen) vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/4508103656581769/56581769/00111140/40-Anlagen/01/DRS1127VK.pdf
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/48re.pdf/file?y=2015 (Grundstücksnummerierungen)
 #: XXX fehlen in Berlin.coords.data, PLZ=12524 vvv
 #: next_check: 2015-09-01 vvv
 Alfonsstr.: geplante Straße in Altglienicke, genaue Lage, Qualität?	?::projected 19061,1457 19034,1441 19029,1421 19003,1325 19081,1233 19053,1159
 #: note: Privatstraße:
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5229
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/48re.pdf/file?y=2015 (Grundstücksnummerierungen)
 Traudelstr.: geplante Straße in Altglienicke, genaue Lage, Qualität?	?::projected 19029,1421 19169,1249 19143,1147
 #: next_check ^^^
 #: XXX ^^^

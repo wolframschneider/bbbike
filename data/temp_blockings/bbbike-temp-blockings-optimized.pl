@@ -159,26 +159,7 @@ userdel	2::temp -3231,14383 -3293,14304
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 9986,13412 10317,13248
-',
-         'from' => 1448578800,
-         'id' => 166,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              28,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 1. Adventswochenende (28.11.2015 - 29.11.2015)',
-         'type' => 'gesperrt',
-         'until' => 1448837999
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -450,26 +431,7 @@ userdel	2::temp 5656,10876 5652,11004
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.weihnachtsmarkt-deutschland.de/berlin-lichtenrade-lichtermarkt.html
-userdel	q4::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
-',
-         'from' => 1448665200,
-         'id' => 417,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              29,
-                              'months',
-                              11
-                            ]
-                          ],
-         'text' => 'Lichtenrader Lichtermarkt: Alt-Lichtenrade, Straße vermutlich gesperrt (am 29. November 2015 von 13 bis 18 Uhr)',
-         'type' => 'gesperrt',
-         'until' => 1448823600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2348,7 +2310,7 @@ userdel	2::temp 9524,12010 9656,12021
          'source_id' => 'http://www.berlin.de/tickets/suche/detail.php?id=1090035',
          'text' => 'Gendarmenmarkt: Weihnachtsmarkt vom 23.11.2015 bis 31.12.2015, Durchfahrt nicht möglich (Eintritt!)',
          'type' => 'gesperrt',
-         'until' => 1451602799
+         'until' => 1451689199
        },
        undef,
        undef,
@@ -2440,7 +2402,30 @@ userdel	2::temp 13288,7653 13278,7673 13245,7742
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 8731,12270 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+userdel	2::temp 8055,12186 8119,12414
+userdel	2::temp 8522,12239 8466,12197
+userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+',
+         'from' => 1451019600,
+         'id' => 2010,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              26,
+                              'months',
+                              12
+                            ]
+                          ],
+         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., voraussichtlich vom 26.12.2015 bis 02.01.2016',
+         'type' => 'gesperrt',
+         'until' => 1451775599
+       },
        undef,
        undef,
        undef,
@@ -2541,7 +2526,7 @@ userdel	2::temp 13288,7653 13278,7673 13245,7742
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im November von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Dezember von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3052,6 +3037,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        {
          'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
+#: source_id: 2147339529
 #: last_checked: 2015-10-15
 #: check_frequency: 90d
 userdel	q2::inwork 5258,11285 5236,10994
@@ -3066,27 +3052,7 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.weihnachteninberlin.de/weihnachtsmaerkte/tempelhof-schoeneberg/1001683-1328179-weihnachtsmarktinderbahnhofstra%C3%9Felichte.html
-userdel	2::temp 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
-',
-         'from' => 1448600400,
-         'id' => 2426,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              28,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'IM_020815',
-         'text' => 'Bahnhofstr. (Lichtenrade): Weihnachtsmarkt zwischen Riedingerstr. und Goltzstr, Straße gesperrt, 28.11.2015 und 29.11.2015',
-         'type' => 'gesperrt',
-         'until' => 1448837999
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3339,26 +3305,7 @@ userdel	2::night 17671,13132 17684,13133
          'type' => 'gesperrt',
          'until' => 1450652399
        },
-       {
-         'data' => 'userdel	2::temp 11317,14564 11255,14572 11155,14554
-',
-         'from' => 1448708400,
-         'id' => 2518,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              29,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarktkollwitzplatz.html',
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 29. November 2015, 12:00 bis 19:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1448820000
-       },
+       undef,
        {
          'data' => 'userdel	2::temp 11317,14564 11255,14572 11155,14554
 ',
@@ -3845,22 +3792,12 @@ userdel	q2::inwork 13489,9456 13606,9578
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX wird der Asphalt nach den Bauarbeiten besser sein? (zurzeit Q1)
-#: next_check: 2015-12-01
-userdel	2::inwork 6851,9365 6771,9458 6727,9497
-',
-         'from' => undef,
-         'id' => 2730,
-         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150820.1015.402368.html',
-         'text' => 'Alice-Salomon-Park (Barbarossaplatz - Schwäbische Str.): Bauarbeiten bis Anfang Dezember 2015, keine Durchfahrt möglich',
-         'type' => 'gesperrt',
-         'until' => 1448924400
-       },
+       undef,
        undef,
        undef,
        {
          'data' => '#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.354922.php
+#: source_id: 2147339555
 userdel	q4::inwork; 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648
 ',
          'from' => 1440910800,
@@ -3872,30 +3809,13 @@ userdel	q4::inwork; 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648
        },
        undef,
        undef,
-       {
-         'data' => 'userdel	q4::inwork; 9727,17804 9835,17797 10053,17777 10179,17772
-#userdel	q4::inwork; 10179,17772 10311,17764 10459,17754
-',
-         'from' => 1438588200,
-         'id' => 2736,
-         'source_id' => 'IM_025833',
-         'text' => 'Florastr.: Baustelle zwischen Wollankstr. und Mühlenstr., Fahrtbahn in Richtung S- und U-Bahnhof Pankow gesperrt, 04.08.2015 bis 01.12.2015 ',
-         'type' => 'handicap',
-         'until' => 1448985600
-       },
-       {
-         'data' => 'userdel	q4::inwork 4492,20214 4622,20292 4718,20341 4879,20427
-',
-         'from' => 1442080673,
-         'id' => 2737,
-         'text' => 'Am Rathauspark: Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis November 2015',
-         'type' => 'handicap',
-         'until' => 1448924400
-       },
+       undef,
+       undef,
        undef,
        undef,
        {
          'data' => '#: source_id: IM_026411
+#: source_id: 2147339562
 userdel	q4::inwork; -6861,15129 -6507,15007
 ',
          'from' => 1443650400,
@@ -3967,9 +3887,13 @@ userdel	2::inwork -1303,2003 -1591,1861
        undef,
        undef,
        {
-         'data' => '	q4::inwork; 13895,11663 13954,11647 13996,11631 14065,11605 14211,11552 14305,11514
-	q3::inwork 13954,11647 13981,11746
-	q3::inwork 14065,11605 14102,11715
+         'data' => '	q4::inwork; 13895,11663 13954,11647 13996,11631 14065,11605 14211,11552
+# REMOVED ---	q4::inwork; 14211,11552 14305,11514
+# REMOVED ---	q3::inwork 13954,11647 13981,11746
+# REMOVED ---	q3::inwork 14065,11605 14102,11715
+	q4::inwork 14065,11605 14049,11553
+	q4::inwork 13996,11631 13992,11605 14031,11569
+	q3::inwork 13954,11647 13888,11405
 ',
          'from' => undef,
          'id' => 2753,
@@ -4000,9 +3924,9 @@ userdel	2::inwork -1303,2003 -1591,1861
          'from' => 1446015600,
          'id' => 2758,
          'source_id' => 'IM_026668',
-         'text' => 'Sterndamm: zwischen Megedestr. und Königsheideweg Bauarbeiten, Fahrbahn in Richtung S-Bhf. Schöneweide gesperrt, Radfahrer dürfen den Gehweg benutzen, 29.10.2015 08:00 Uhr bis 29.11.2015 17:00 Uhr ',
+         'text' => 'Sterndamm: zwischen Megedestr. und Königsheideweg Bauarbeiten, Fahrbahn in Richtung S-Bhf. Schöneweide gesperrt, Radfahrer dürfen den Gehweg benutzen, 29.10.2015 bis 04.12.2015',
          'type' => 'handicap',
-         'until' => 1448812800
+         'until' => 1449248400
        },
        {
          'data' => 'userdel	q2::inwork; 17110,4055 17244,4242
@@ -4047,9 +3971,9 @@ userdel	2::inwork -1303,2003 -1591,1861
          'from' => 1446953400,
          'id' => 2762,
          'source_id' => 'IM_026700',
-         'text' => 'Hohenschönhauser Str./Oderbruchstr.: Baustelle, zwischen Landsberger Allee und Weißenseer Weg gesperrt, Radfahrer dürfen den Gehweg benutzen, 09.11.2015 04:30 Uhr bis 30.11.2015 04:30 Uhr ',
+         'text' => 'Hohenschönhauser Str./Oderbruchstr.: Baustelle, zwischen Landsberger Allee und Weißenseer Weg gesperrt, Radfahrer dürfen den Gehweg benutzen, 09.11.2015 04:30 Uhr bis 07.12.2015 04:30 Uhr ',
          'type' => 'handicap',
-         'until' => 1448854200
+         'until' => 1449459000
        },
        {
          'data' => 'userdel	q3::temp 11139,13008 11064,12910 10970,12822

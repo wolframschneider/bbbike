@@ -17045,7 +17045,7 @@ userdel	2::temp 11273,12301 11355,12331
 EOF
      },
      { from  => $isodate2epoch->("2015-11-22 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-12-31 23:59:59"),
+       until => $isodate2epoch->("2016-01-01 23:59:59"), # 1 Tag (mindestens) für den Abbau
        periodic => 1,
        recurrences => [['yearly', days => 23, months => 11]],
        source_id => 'http://www.berlin.de/tickets/suche/detail.php?id=1090035',
@@ -17244,11 +17244,11 @@ EOF
 userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998
 EOF
      },
-     { from  => $isodate2epoch->("2014-12-25 06:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-01-02 23:59:59"),
+     { from  => $isodate2epoch->("2015-12-25 06:00:00"),
+       until => $isodate2epoch->("2016-01-02 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 12]],
-       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vom 26.12.2014 06:00 Uhr bis 02.01.2015 24:00 Uhr',
+       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., voraussichtlich vom 26.12.2015 bis 02.01.2016',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 8731,12270 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
@@ -18717,7 +18717,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_103995',
        data  => <<EOF,
-userdel	q4::inwork 10511,14418 10426,14262 10370,14158
+userdel	q4::inwork 10497,14391 10426,14262 10370,14158
 EOF
      },
      { from  => 1289373844, # 2010-11-10 08:24
@@ -21319,6 +21319,7 @@ EOF
        data  => <<EOF,
 #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
+#: source_id: 2147339529
 #: last_checked: 2015-10-15
 #: check_frequency: 90d
 userdel	q2::inwork 5258,11285 5236,10994
@@ -23883,7 +23884,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
        data  => <<EOF,
-	2::inwork 7653,14570 7527,14644 7486,14652
+	2::inwork 7653,14570 7605,14600 7527,14644 7486,14652
 EOF
      },
      { from  => 1423465860, # 2015-02-09 08:11
@@ -24434,7 +24435,7 @@ EOF
        text  => 'Kastanienallee: zwischen Schwedter Str. und Zionskirchplatz Sperrung der Fahrbahn, Gleisbauarbeiten, bis 14.09.2015',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q3::inwork 10511,14418 10426,14262
+userdel	q3::inwork 10497,14391 10426,14262
 EOF
      },
      { from  => 1440972146, # 2015-08-31 00:02
@@ -24452,6 +24453,7 @@ EOF
        source_id => 'IM_026066',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.354922.php
+#: source_id: 2147339555
 userdel	q4::inwork; 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648
 EOF
      },
@@ -24517,6 +24519,7 @@ EOF
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.367070.php',
        data  => <<EOF,
 #: source_id: IM_026411
+#: source_id: 2147339562
 userdel	q4::inwork; -6861,15129 -6507,15007
 EOF
      },
@@ -24639,9 +24642,13 @@ EOF
        type  => 'handicap',
        source_id => 'IM_026644',
        data  => <<EOF,
-	q4::inwork; 13895,11663 13954,11647 13996,11631 14065,11605 14211,11552 14305,11514
-	q3::inwork 13954,11647 13981,11746
-	q3::inwork 14065,11605 14102,11715
+	q4::inwork; 13895,11663 13954,11647 13996,11631 14065,11605 14211,11552
+# REMOVED ---	q4::inwork; 14211,11552 14305,11514
+# REMOVED ---	q3::inwork 13954,11647 13981,11746
+# REMOVED ---	q3::inwork 14065,11605 14102,11715
+	q4::inwork 14065,11605 14049,11553
+	q4::inwork 13996,11631 13992,11605 14031,11569
+	q3::inwork 13954,11647 13888,11405
 EOF
      },
      { from  => 1445148000, # 2015-10-18 08:00
@@ -24686,8 +24693,8 @@ userdel	q2::inwork; 17520,4649 17542,4772 17601,5090 17648,5338
 EOF
      },
      { from  => 1446015600, # 2015-10-28 08:00
-       until => 1448812800, # 2015-11-29 17:00
-       text  => 'Sterndamm: zwischen Megedestr. und Königsheideweg Bauarbeiten, Fahrbahn in Richtung S-Bhf. Schöneweide gesperrt, Radfahrer dürfen den Gehweg benutzen, 29.10.2015 08:00 Uhr bis 29.11.2015 17:00 Uhr ',
+       until => $isodate2epoch->("2015-12-04 18:00:00"), # 1448812800, # 2015-11-29 17:00
+       text  => 'Sterndamm: zwischen Megedestr. und Königsheideweg Bauarbeiten, Fahrbahn in Richtung S-Bhf. Schöneweide gesperrt, Radfahrer dürfen den Gehweg benutzen, 29.10.2015 bis 04.12.2015',
        type  => 'handicap',
        source_id => 'IM_026668',
        data  => <<EOF,
@@ -24729,8 +24736,8 @@ EOF
 EOF
      },
      { from  => 1446953400, # 2015-11-08 04:30
-       until => 1448854200, # 2015-11-30 04:30
-       text  => 'Hohenschönhauser Str./Oderbruchstr.: Baustelle, zwischen Landsberger Allee und Weißenseer Weg gesperrt, Radfahrer dürfen den Gehweg benutzen, 09.11.2015 04:30 Uhr bis 30.11.2015 04:30 Uhr ',
+       until => $isodate2epoch->("2015-12-07 04:30:00"), # 1448854200, # 2015-11-30 04:30
+       text  => 'Hohenschönhauser Str./Oderbruchstr.: Baustelle, zwischen Landsberger Allee und Weißenseer Weg gesperrt, Radfahrer dürfen den Gehweg benutzen, 09.11.2015 04:30 Uhr bis 07.12.2015 04:30 Uhr ',
        type  => 'handicap',
        source_id => 'IM_026700',
        data  => <<EOF,

@@ -1080,8 +1080,6 @@ Birkenweg (Havelberg): Qualität?	? -78908,46280 -79030,46209 -79197,46187 -79505
 (Am Wuhlebogen - Kaulsdorfer Str.): ist die Verbindung schon fertiggestellt? Straßenname? Qualität?	?::inwork 21639,8105 21686,8110
 Domstrengbrücke und Verbindung zum Grillendamm: Qualität?	? -46302,103 -46305,130 -46339,191 -46379,281
 # added from ampeln-orig
-#: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6163 (Stand der Planung?)
-#: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4237&options=4
 geschlossen bei Bedarf (?) (Zbr)	? 27657,-11741
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?) (B)	? 40248,14503
 # added from strassen
@@ -1141,6 +1139,7 @@ Marienstr. (Einbahnstraße?)	? -14166,105632 -13960,105679
 Müncheberg, Turm (genaue Bezeichnung?)	? 60803,11559
 Müncheberg, Turm (genaue Bezeichnung?)	? 60306,11906
 # added from radwege
+(Existieren bereits Radspuren in der Rixdorfer Str.?)	? 9953,3806 10181,4181 10185,4187 10221,4245 10288,4354 10412,4552
 (gibt es in der Stadtrandstr. Radspuren? wo genau?)	? -6719,16111 -6700,16178 -6664,16314 -6624,16466 -6577,16609 -6547,16704
 # added from qualitaet_s
 Hobrechtsfelder Chaussee (bis Kurve): OK (ist hier asphaltiert oder betoniert?)	? 15589,27116 15230,26560 14859,26029 14472,25449 14434,25388 14308,25196 14217,24999
