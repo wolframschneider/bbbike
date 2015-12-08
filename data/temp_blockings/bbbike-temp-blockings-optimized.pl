@@ -2101,7 +2101,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
-         'data' => '# REMOVED (hier wird neu gebaut) ---	q4::temp:clock 5897,7337 5810,7337
+         'data' => '	q4::temp:clock 5897,7337 5810,7337
 	q4::temp:clock 5810,7337 5817,7223
 ',
          'from' => undef,
@@ -2344,34 +2344,7 @@ userdel	3 8374,11479 8389,11378 8427,11365
          'type' => 'gesperrt',
          'until' => 1451257199
        },
-       {
-         'data' => 'userdel	2::temp 13416,7712 13426,7674
-userdel	2::temp 13416,7712 13378,7695 13288,7653
-userdel	2::temp 13426,7674 13400,7642 13303,7622
-userdel	2::temp 12969,7610 13100,7626 13177,7644
-userdel	2::temp 13188,7590 13177,7644
-userdel	2::temp 13188,7590 13303,7622
-userdel	2::temp 13288,7653 13303,7622
-userdel	2::temp 13288,7653 13177,7644
-userdel	2::temp 13288,7653 13278,7673 13245,7742
-',
-         'from' => 1449097200,
-         'id' => 1998,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              4,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-alt-rixdorf.html',
-         'text' => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (04.12.2015 - 06.12.2015)',
-         'type' => 'gesperrt',
-         'until' => 1449442799
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3015,7 +2988,28 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'until' => undef
        },
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+',
+         'from' => 1452985200,
+         'id' => 2412,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              3,
+                              'months',
+                              1
+                            ]
+                          ],
+         'source_id' => 'IM_019489',
+         'text' => 'Straße des 17. Juni: voraussichtlich wegen der Fashion Week gesperrt, 18.01.2016 bis 22.01.2016',
+         'type' => 'gesperrt',
+         'until' => 1453503539
+       },
        {
          'data' => '	2::night 12851,12602 13108,12859 13046,12956 12878,13229
 	2::night 12773,12683 13046,12956
@@ -3038,7 +3032,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
 #: source_id: 2147339529
-#: last_checked: 2015-10-15
+#: last_checked: 2015-12-04
 #: check_frequency: 90d
 userdel	q2::inwork 5258,11285 5236,10994
 ',
@@ -3168,6 +3162,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        {
          'data' => '#: by: fritz
+#: source_id: 2147339574
 #: confirmed_by: srt
 userdel	1::inwork 17886,5587 17736,5441
 ',
@@ -3245,26 +3240,7 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 9986,13412 10317,13248
-',
-         'from' => 1449270000,
-         'id' => 2515,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              6,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 2. Adventswochenende (5.12.2015 - 6.12.2015)',
-         'type' => 'gesperrt',
-         'until' => 1449442799
-       },
+       undef,
        {
          'data' => 'userdel	2::temp 9986,13412 10317,13248
 ',
@@ -3306,26 +3282,7 @@ userdel	2::night 17671,13132 17684,13133
          'until' => 1450652399
        },
        undef,
-       {
-         'data' => 'userdel	2::temp 11317,14564 11255,14572 11155,14554
-',
-         'from' => 1449313200,
-         'id' => 2519,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              6,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarktkollwitzplatz.html',
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 6. Dezember 2015, 12:00 bis 19:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1449424800
-       },
+       undef,
        {
          'data' => 'userdel	2::temp 11317,14564 11255,14572 11155,14554
 ',
@@ -3426,7 +3383,7 @@ userdel	1::temp -13556,-1182 -13643,-1220
        undef,
        {
          'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
-#: last_checked: 2014-12-06
+#: last_checked: 2015-12-05
 #: check_frequency: 90d
 userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
 ',
@@ -3656,7 +3613,7 @@ userdel	2::inwork -3197,11554 -3075,11510
        undef,
        undef,
        {
-         'data' => '#: last_checked: 2015-07-03
+         'data' => '#: last_checked: 2015-12-04
 #: check_frequency: 90d
 userdel	q4::inwork; 3807,11859 3666,11855
 ',
@@ -3723,7 +3680,7 @@ userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
          'data' => '#: XXX die Qualität wird nach den Bauarbeiten vermutlich besser sein, teilweise auch schlechter (wassergebundene Decke statt Asphalt) vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2015/pressemitteilung.297071.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruen/artikel.295591.php
-#: last_checked: 2015-11-17 vvv
+#: last_checked: 2015-12-07 vvv
 userdel	2::inwork 14318,9688 14443,9731
 # REMOVED --- userdel	2::inwork 14443,9731 14496,9705 14575,9648 14627,9609 14705,9578
 userdel	2::inwork 14575,9648 14645,9710 14697,9726
@@ -3827,15 +3784,15 @@ userdel	q4::inwork; -6861,15129 -6507,15007
        },
        {
          'data' => '#: XXX Bis wann sind die Bauarbeiten fertig?
-#: last_checked: 2015-09-27
+#: last_checked: 2015-12-05
 #: check_frequency: 30d
-userdel	2::inwork -1303,2003 -1591,1861
+userdel	2::inwork -1298,2017 -1082,2140
 # REMOVED (weitgehend fertig) --- userdel	2::inwork -1591,1861 -1650,1826 -1724,1785 -1805,1740 -1889,1693 -1950,1659 -2043,1608 -2602,1291
 ',
          'from' => 1442700000,
          'id' => 2741,
          'source_id' => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.364590.php',
-         'text' => 'Königsweg: Bauarbeiten zwischen Am Waldhaus und Lindenthaler Allee, zeitweilige Sperrungen möglich, voraussichtlich ab 21. September 2015',
+         'text' => 'Königsweg: Bauarbeiten zwischen Lindenthaler Allee und Clauertstr., zeitweilige Sperrungen möglich',
          'type' => 'gesperrt',
          'until' => undef
        },
@@ -3886,50 +3843,15 @@ userdel	2::inwork -1303,2003 -1591,1861
        undef,
        undef,
        undef,
-       {
-         'data' => '	q4::inwork; 13895,11663 13954,11647 13996,11631 14065,11605 14211,11552
-# REMOVED ---	q4::inwork; 14211,11552 14305,11514
-# REMOVED ---	q3::inwork 13954,11647 13981,11746
-# REMOVED ---	q3::inwork 14065,11605 14102,11715
-	q4::inwork 14065,11605 14049,11553
-	q4::inwork 13996,11631 13992,11605 14031,11569
-	q3::inwork 13954,11647 13888,11405
-',
-         'from' => undef,
-         'id' => 2753,
-         'source_id' => 'IM_026644',
-         'text' => 'Wühlischstr.: Fahrbahn zwischen Libauer Str. und Seumestr. in Richtung Osten gesperrt, auch ist das Überqueren der Fahrbahn teilweise nicht möglich, bis 07.12.2015',
-         'type' => 'handicap',
-         'until' => 1449457200
-       },
        undef,
-       {
-         'data' => '	q4::inwork; 14887,11929 14835,11840 14802,11784 14794,11770 14710,11626 14639,11512
-# REMOVED ---	q3::inwork 14645,11670 14710,11626
-	q3::inwork 14710,11626 14764,11591
-# REMOVED ---	q3::inwork 14708,11820 14794,11770
-	q3::inwork 14794,11770 14856,11740
-',
-         'from' => 1446303841,
-         'id' => 2755,
-         'text' => 'Weichselstr./Holteistr.: Bauarbeiten, Fahrbahn Richtung Süden gesperrt, auch ist das Überqueren der Fahrbahn teilweise nicht möglich, bis 07.12.2015',
-         'type' => 'handicap',
-         'until' => 1449457200
-       },
+       undef,
+       undef,
+       undef,
        undef,
        undef,
        {
-         'data' => 'userdel	q2::inwork; 17244,4242 17261,4267 17290,4308 17387,4446 17428,4503 17471,4570 17520,4649
-',
-         'from' => 1446015600,
-         'id' => 2758,
-         'source_id' => 'IM_026668',
-         'text' => 'Sterndamm: zwischen Megedestr. und Königsheideweg Bauarbeiten, Fahrbahn in Richtung S-Bhf. Schöneweide gesperrt, Radfahrer dürfen den Gehweg benutzen, 29.10.2015 bis 04.12.2015',
-         'type' => 'handicap',
-         'until' => 1449248400
-       },
-       {
-         'data' => 'userdel	q2::inwork; 17110,4055 17244,4242
+         'data' => '#: source_id: 2147339571
+userdel	q2::inwork; 17110,4055 17244,4242
 ',
          'from' => 1445320800,
          'id' => 2759,
@@ -3939,7 +3861,8 @@ userdel	2::inwork -1303,2003 -1591,1861
          'until' => 1450454400
        },
        {
-         'data' => 'userdel	q4::inwork; 8336,10829 8300,10823 8281,10791 8199,10634
+         'data' => '#: source_id: 2147339576
+userdel	q4::inwork; 8336,10829 8300,10823 8281,10791 8199,10634
 ',
          'from' => 1446678000,
          'id' => 2760,
@@ -3949,7 +3872,8 @@ userdel	2::inwork -1303,2003 -1591,1861
          'until' => 1451602800
        },
        {
-         'data' => '	3 8783,10166 9108,10101 9277,10057
+         'data' => '#: source_id: 2147339588
+	3 8783,10166 9108,10101 9277,10057
 	3 9277,10057 9108,10101 8783,10166
 	3 9277,10057 9108,10101 9073,9915
 	3 8783,10166 9108,10101 9145,10290
@@ -3965,16 +3889,7 @@ userdel	2::inwork -1303,2003 -1591,1861
          'type' => 'gesperrt',
          'until' => 1454281200
        },
-       {
-         'data' => 'userdel	q3::inwork; 14218,13834 14261,13932 14298,14015 14358,14155 14464,14216 14658,14328 14667,14336 14721,14379 14754,14406 14990,14537 15066,14579
-',
-         'from' => 1446953400,
-         'id' => 2762,
-         'source_id' => 'IM_026700',
-         'text' => 'Hohenschönhauser Str./Oderbruchstr.: Baustelle, zwischen Landsberger Allee und Weißenseer Weg gesperrt, Radfahrer dürfen den Gehweg benutzen, 09.11.2015 04:30 Uhr bis 07.12.2015 04:30 Uhr ',
-         'type' => 'handicap',
-         'until' => 1449459000
-       },
+       undef,
        {
          'data' => 'userdel	q3::temp 11139,13008 11064,12910 10970,12822
 userdel	q4::temp 11064,12910 11134,12793
@@ -4007,16 +3922,16 @@ userdel	q3::inwork 12620,9293 12565,9200
          'type' => 'handicap',
          'until' => undef
        },
+       undef,
        {
-         'data' => '#: note: kein Gehweg, deshalb nicht q4;
-userdel	1::inwork 19843,7866 19927,7813 20031,7794 20077,7786
+         'data' => 'userdel	2::inwork 20635,7119 20722,6971
 ',
-         'from' => 1448168400,
-         'id' => 2765,
-         'source_id' => 'IM_026719',
-         'text' => 'Verlängerte Waldowallee: Baustelle, Fahrbahn in Richtung Rudolf-Rühl-Allee zwischen Birkenallee und Anemonensteig gesperrt, 23.11.2015 06:00 Uhr bis 03.12.2015 17:00 Uhr ',
+         'from' => 1449097200,
+         'id' => 2766,
+         'source_id' => '128113',
+         'text' => 'Rudolf-Rühl-Allee: zwischen An der Wuhlheide und Köpenicker Straße am Bahnübergang wegen Bauarbeiten gesperrt, bis 21. Dezember 2015',
          'type' => 'gesperrt',
-         'until' => 1449158400
+         'until' => 1450695600
        }
      
 );
