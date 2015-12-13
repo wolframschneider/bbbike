@@ -153,7 +153,7 @@ Ebersstr.: Kopfsteinpflaster	Q2 7395,8761 7313,8661 7288,8635
 Ebersstr.: Kopfsteinpflaster	Q2 7242,8586 7166,8487
 Gleditschstr.: Kopfsteinpflaster, OK	Q1 7126,9825 7080,10098
 Gleditschstr.: mäßiges Kopfsteinpflaster, mäßige Radwege	Q1 7126,9825 7128,9512 7130,9316
-Winterfeldtplatz: Kopfsteinpflaster, OK	Q1 7038,10087 7049,9833
+Winterfeldtplatz: Kopfsteinpflaster, OK	Q1 7038,10088 7049,9833
 Corneliusstr.: mäßiges Kopfsteinpflaster	Q2 6880,11110 6841,11114 6630,11247 6476,11325
 Kopernikusstr.: mäßiges Kopfsteinpflaster	Q2 13467,11778 13651,11731
 Torellstr.: mäßiges Kopfsteinpflaster	Q2 13295,11792 13467,11778
@@ -2280,8 +2280,8 @@ nördliches Spreeufer: Asphalt	Q0 6102,12960 6180,12972
 Bäumerplan: Asphalt	Q0 8553,7795 8527,7939
 Jungfernheideweg: Kopfsteinpflaster	Q2- 1238,15705 1280,15591
 (Kurt-Schumacher-Damm - Wasserturm Jungfernheide): Parkweg	Q1 2934,14852 2900,14891 2840,14982 2685,15167 2707,15205 2695,15258 2632,15295
-(Jungfernheide): Parkweg	Q1 2632,15295 2431,15290 2364,15321 2349,15380 2027,15380 1925,15426 1563,15294 1372,15313
-(Jungfernheide): Verbundsteinpflaster	Q1 1415,15190 1459,15196 1498,15196
+(Jungfernheide): Parkweg	Q1 2632,15295 2431,15290 2364,15321 2349,15380 2027,15380 1925,15426 1563,15294 1374,15314
+(Jungfernheide): Verbundsteinpflaster	Q1 1416,15190 1459,15196 1498,15196
 (Jungfernheide): Parkweg	Q1 1498,15196 1535,15111 1735,15071 2039,15083 2053,15036 2376,15036 2683,14878 2784,14826 2900,14891
 (TR4 durch den Volkspark Jungfernheide): Parkweg, einige Stellen mit Schotter	Q1- 1459,15196 1510,15067 1568,15021 1733,14974 2040,14948 2371,14863 2530,14854 2683,14878 2673,14756
 (Jungfernheide, östlicher Weg): Parkweg, einige Stellen mit Schotter	Q1- 2683,14878 2768,14923 2840,14982 2889,15033 2929,15138 2933,15270 2926,15381 2902,15444 2861,15506
@@ -2673,7 +2673,7 @@ Donaustr: Beton	Q0 12649,8535 12771,8439
 Straße 645: Asphalt	Q0 11441,8280 11419,8077 11450,7921 11472,7899
 Oderstr.: Asphalt	Q0 11472,7899 11498,7750 11516,7654 11540,7534 11558,7438 11565,7402 11601,7362 11615,7284 11608,7267 11593,7237 11607,7145
 Jollenseglerstr.: Verbundsteinpflaster	Q0- 14921,10047 14879,9961
-Am Jüdischen Museum: wassergebundene Decke	Q1 9770,10590 9991,10626
+Am Jüdischen Museum: wassergebundene Decke	Q1 9770,10590 9992,10626
 (Zufahrtstraße zu Oberlandgarten/Germaniagarten): Asphalt	Q0 11148,6381 11162,6379 11200,6372 11205,6358 11240,6350 11266,6347 11278,6359 11339,6351
 (Zufahrtstraße zu Oberlandgarten/Germaniagarten): Asphalt	Q0 11278,6359 11272,6374 11244,6379 11211,6384 11200,6372
 Oberlandgarten: Beton	Q0- 11244,6379 11246,6403 11264,6409 11269,6466 11253,6473 11238,6470 11230,6413 11246,6403
@@ -6947,7 +6947,7 @@ Bebelplatz: gepflastert	Q1 9674,12231 9702,12307 9734,12395
 (Park am Gleisdreieck, Eingang Kurfürstenstr.): Beton	Q0 8058,10306 8180,10282 8253,10265
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): wassergebundene Decke	Q1 8263,10187 8276,10079
 #: next_check_id: HELLWEG-2014 vvv
-#: last_checked: 2015-10-05 vvv
+#: last_checked: 2015-12-11 vvv
 #: check_frequency: 100d vvv
 #: XXX wird hier noch eine wassergebundene Decke erstellt?
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): unbefestigt	Q2 8276,10079 8289,9988
@@ -8917,7 +8917,7 @@ An der Filmfabrik: Verbundsteinpflaster	Q1+ 22872,5018 22856,5245 22851,5321
 Am Werksgarten: Kopfsteinpflaster	Q2 22856,5245 22803,5241
 Am Werksgarten: Kopfsteinpflaster	Q2 22803,5278 22737,5278
 Am Filmlager: Kopfsteinpflaster	Q2 22802,5325 22803,5278 22803,5241 22804,5199
-#: osm_watch: way id="150937168" version="3"
+#: osm_watch: way id="150937168" version="4"
 #: XXX wird die Straße hier verbessert (asphaltiert)?
 #: last_checked: 2015-08-15
 #: check_frequency: 100d
@@ -9286,6 +9286,8 @@ Ellen-Widmann-Pfad [Nebenweg]: Verbundsteinpflaster	Q1 3813,2368 3894,2368
 Koloniestr.: Verbundsteinpflaster	Q1 5097,988 5051,959
 Scheelestr.: Asphalt	Q0 5139,696 5242,776 5342,845
 Lichterfelder Ring: Asphalt mit einigen Schäden	Q0- 5061,409 5448,455 5486,461 5584,475
+#: XXX ist der Asphalt jetzt besser geworden (Q0)?
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/pressemitteilung.420100.php
 Schwäbische Str.: etwas welliger Asphalt	Q1+ 6728,9457 6771,9458 6851,9365
 Schwäbische Str.: neuer Asphalt	Q0 6727,9497 6771,9458
 Krügerstr.: Kopfsteinpflaster	Q2 12013,16120 12075,16144
@@ -11125,7 +11127,7 @@ Stockholmer Str.: schlechtes Kopfsteinpflaster	Q3 8759,16684 8783,16710 8847,168
 # 
 #: by: Gerhard M. vvv
 #: confirmed_by: srt vvv
-Habsburgerstr.: Asphalt	Q0 6920,9838 6912,9956 6904,10052
+Habsburgerstr.: Asphalt	Q0 6920,9838 6912,9956 6903,10056
 Kyffhäuserstr.: Asphalt	Q0 6860,9526 6891,9678 6920,9838
 #: confirmed_by ^^^
 #: by: ^^^
@@ -18499,7 +18501,7 @@ Harriesstr.: Kopfsteinpflaster	Q2 525,15435 659,15469 768,15486
 Rapsstr.: Kopfsteinpflaster	Q2 755,15123 702,15274 693,15335 665,15414 659,15469
 Dihlmannstr.: Fahrbahn Kopfsteinpflaster, paralleler Radweg glatt gepflastert	Q1 1065,15229 976,15195 957,15189 851,15155 755,15123 651,15091
 #: corrected_by: srt (glatt gepflasterter Weg -> ...)
-(Dihlmannstr. - Jungfernheideweg): wassergebundene Decke	Q1 1065,15229 1179,15260 1372,15313
+(Dihlmannstr. - Jungfernheideweg): wassergebundene Decke	Q1 1065,15229 1179,15260 1374,15314
 #: by: ^^^
 # 
 #: by: Ines Junge: vvv
@@ -20437,7 +20439,7 @@ Am Hellespont: guter Beton	Q0 10879,4360 10869,4233
 # 
 #: by: Jacqueline Franz:
 #: confirmed_by: srt (westlicher Abschnitt)
-Jeanette-Wolff-Str.: asphaltiert	Q0 17551,-373 17563,-364 17610,-330 17669,-290 17726,-251 17789,-211 17848,-173 17928,-120
+Jeanette-Wolff-Str.: asphaltiert	Q0 17551,-373 17563,-364 17611,-330 17669,-290 17726,-251 17789,-211 17848,-173 17928,-120
 # 
 #: by: Claudia Schulz-Rosenbach:
 Helene-Nathan-Weg: guter Asphalt	Q0 17681,-178 17726,-251
