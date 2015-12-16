@@ -24703,7 +24703,7 @@ userdel	q2::inwork; 17244,4242 17261,4267 17290,4308 17387,4446 17428,4503 17471
 EOF
      },
      { from  => 1445320800, # 2015-10-20 08:00
-       until => 1450454400, # 2015-12-18 17:00
+       until => 1449954619, # 1450454400, # 2015-12-18 17:00
        text  => 'Sterndamm: zwischen Lindhorstweg und Megedestr. Bauarbeiten, Fahrbahn in Richtung S-Bhf. Schöneweide gesperrt, Radfahrer dürfen den Gehweg benutzen, 21.10.2015 08:00 Uhr bis 18.12.2015 17:00 Uhr ',
        type  => 'handicap',
        source_id => 'IM_026600',
@@ -24713,7 +24713,7 @@ userdel	q2::inwork; 17110,4055 17244,4242
 EOF
      },
      { from  => 1446678000, # 2015-11-05 00:00
-       until => 1451602800, # 2016-01-01 00:00
+       until => 1450132811, # für Radfahrer frei --- 1451602800, # 2016-01-01 00:00
        text  => 'Flottwellstraße: Bauarbeiten, Fahrbahn zwischen Schöneberger Ufer und Lützowstr. in Richtung Süden gesperrt, vom 06.11.2015 bis 31.12.2015 ',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.396336.php',
@@ -24728,6 +24728,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2015/pressemitteilung.394109.php',
        data  => <<EOF,
+#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7120
 #: source_id: 2147339588
 	3 8783,10166 9108,10101 9277,10057
 	3 9277,10057 9108,10101 8783,10166

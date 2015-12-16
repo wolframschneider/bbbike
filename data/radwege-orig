@@ -971,8 +971,7 @@ die letzten 20 Meter werden als benutzungspflichtiger Radweg auf dem Gehweg gefü
 	RW3; 13785,12292 13745,12118
 #: next_check_id: WARSCHAUER-2014
 #: source_id: 2147339535
-#: last_checked: 2015-12-08
-#: next_check: 2015-12-19
+#: last_checked: 2015-12-13
 #: by: http://www.umbau-warschauer-strasse.de/images/bauinfos/Infoblatt_August_15-2.pdf
 #: XXX Radweg wegen Bauarbeiten aufgehoben
 	RW0; 13745,12118 13696,11920 13651,11731
@@ -1491,7 +1490,7 @@ die ersten Meter werden als benutzungspflichtiger Radweg auf dem Gehweg geführt	
 	RW3;RW1 13541,11355 13588,11490
 #: next_check_id: WARSCHAUER-2014
 #: XXX für kurze Zeit hat eine Markierung existiert, ist aber wieder weg
-#: last_checked: 2015-12-09
+#: last_checked: 2015-12-13
 	RW0; 13651,11731 13603,11538
 	RW3;RW2 13588,11490 13603,11538
 #: note: provisorischer Radstreifen
@@ -1504,7 +1503,7 @@ die letzten 20 Meter werden auf dem Gehweg geführt	RW3; 14608,10409 14558,10264
 	RW3;RW2 14672,10760 14674,10811
 #: next_check_id: HAUPTSTR-2015
 #: XXX wegen Bauarbeiten aufgehoben, früher RW4;RW4
-#: last_checked: 2015-11-14
+#: last_checked: 2015-12-15
 #: check_frequency: 30d
 	RW0;RW0 14674,10811 14717,10855
 	RW1;RW1 14652,10201 14688,10167 14705,10149 14747,10108 14817,10031
@@ -2460,7 +2459,8 @@ Gehweg für Radfahrer frei	RW1; 4810,21730 4887,21944
 Gehweg für Radfahrer frei	RW1; 4887,21944 4810,21730
 Gehweg für Radfahrer frei	RW1;RW1 4887,21944 4925,22022
 	RW1;RW1 9516,17595 9475,17557 9465,17549 9399,17496 9349,17451 9228,17274 9170,17161 9144,17108 9082,16982 9028,16864 9024,16855 9000,16803 8939,16668
-Verbundsteinpflaster	RW2;RW1 10354,14987 10366,14992 10515,15045 10618,15076 10881,15047
+Verbundsteinpflaster	RW2;RW2 10354,14987 10366,14992 10515,15045 10618,15076
+Verbundsteinpflaster	RW2;RW1 10618,15076 10881,15047
 #: by: laut bln.verkehr-Artikel und Joern (js):
 #: confirmed_by: srt
 	RW4;RW4 11251,13667 11160,13492
