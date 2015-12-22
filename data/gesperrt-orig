@@ -2541,9 +2541,7 @@ Drängelgitter	BNP:5::trailer=10 14453,9929
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2::trailer=4 14558,10082
 Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2::trailer=4 14597,10129
 # XXX während der Bauarbeiten entfernt (2010-10) --- wird es jemals wieder eingesetzt? --- Drängelgitter mit asphaltierer Vorbeifahrmöglichkeit	BNP:2::trailer=4 14626,10162
-#: note: 90cm Öffnung, 90cm zum versetzten Gitter -> 63cm lichte Breite
-#: note: hmmm, heute (2012-10-16) habe ich einen Radfahrer mit Croozer da durchfahren gesehen -> trailer=no -> trailer=15
-Drängelgitter	BNP:3::trailer=15 12901,10134
+# REMOVED (entfernt) --- #: note: 90cm Öffnung, 90cm zum versetzten Gitter -> 63cm lichte Breite --- #: note: hmmm, heute (2012-10-16) habe ich einen Radfahrer mit Croozer da durchfahren gesehen -> trailer=no -> trailer=15 --- Drängelgitter	BNP:3::trailer=15 12901,10134
 #: note: relativ großzügige Öffnung
 Drängelgitter	BNP:1::trailer=3 12833,9998
 Schranke (Privatstr.)	BNP:5 25039,5304
@@ -2576,8 +2574,13 @@ Schranke, schwer passierbar	BNP:10 7625,9376
 Schranke	BNP:5 7612,9446
 Barriere	BNP:0::trailer=3 3268,11847
 Drängelgitter	BNP:5 -5890,25875
-# REMOVED (keine Behinderungen) --- #: note: Anhänger sollten vielleicht den Gehweg benutzen --- Schranke, eine Seite eventuell offen	BNP:3::trailer=10 12490,9056
-# REMOVED (eine Hälfte der Schranke nicht mehr vorhanden) --- #: note: Anhänger sollten vielleicht den Gehweg benutzen --- Schranke, eine Seite eventuell offen	BNP:3::trailer=10 12565,9200
+#: note: abends beide Seiten zu (seen 2015-12-17 gegen 18:30)
+Schranke, eine Seite eventuell offen	BNP:3::trailer=10 12490,9056
+#: note: abends beide Seiten zu (seen 2015-12-17 gegen 18:30)
+#: note: Anhänger sollten vielleicht den Gehweg benutzen
+Schranke, eine Seite eventuell offen	BNP:3::trailer=10 12565,9200
+weites Drängelgitter	BNP:0::trailer=3 12552,9165
+Barriere, Umfahrung über Gehweg mit Bordsteinen	BNP:5::trailer=15 12615,9132
 #: note: ansonsten kann man ein paar Meter östlich die Bordsteinabsenkung benutzen
 Schranke, meistens offen	BNP:3::trailer=6 7843,16524
 # REMOVED (hmmm, hier keine Schranke?) --- Schranke, meistens offen	BNP:3::trailer=6 7707,16543
@@ -2643,8 +2646,10 @@ Drängelgitter	BNP:3 31665,48997
 E.T.A.-Hoffmann-Promenade: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 9679,10710 9777,10719
 # 
 #: next_check_id: SCHOENEBERGERSCHLEIFE-2015
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2015/pressemitteilung.424946.php
 #: last_checked: 2015-12-11
-#: check_frequency: 14d
+#: next_check: 2015-12-22
+#: priority: #A
 (Bautzener Str. - Südkreuz): in Bau	2::inwork 8204,9001 8200,8920 7998,8317
 # 
 #: next_check_id: STEGLITZPARK-2015 vvv
@@ -2714,6 +2719,7 @@ Kleiner Tiergarten: wegen Bauarbeiten gesperrt	2::inwork 6561,13151 6556,13240 6
 # 
 #: next_check_id: FISCHERINSEL-2015 vvv
 #: source_id: 2147339543 vvv
+#: XXX vermutlich bis 31.07.2016 (laut fritz)
 #: last_checked: 2015-12-07 vvv
 #: next_check: 2015-12-20 vvv
 Märkisches Ufer - Neue Roßstr.: wegen Bauarbeiten gesperrt	3 10869,11949 10687,11853 10703,11837
@@ -2805,13 +2811,7 @@ Carl-Herz-Ufer: Sperrung an der Baerwaldstr.	2::inwork 10469,10081 10500,10081
 #: XXX ^^^
 # 
 # REMOVED (fertig) --- #: next_check_id: AMNORDHAFEN-2015 --- #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php --- #: last_checked: 2015-10-14 vvv --- #: XXX sieht schon relativ fertig aus --- vielleicht wird früher eröffnet? Aber laut Baustellenschild gehen die Bauarbeiten bis Mai 2016 --- Am Nordhafen: Sperrung des Uferwegs zwischen Fennstr. und Sellerstr., vom 1. Februar 2015 bis voraussichtlich Oktober 2015	2::inwork 7753,14528 7695,14545 7653,14570 7605,14600 7527,14644 7486,14652 --- Zufahrt zum Uferweg: gesperrt	2::inwork 7703,14582 7696,14577 7662,14579 7653,14570 --- #: last_checked ^^^
-# 
-#: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage)
-#: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45-181-136136549415/136549415/00119959/59-Anlagen/02/GA_1805_IV.pdf (mindestens bis Ende 2016)
-#: last_checked: 2015-12-07
-#: check_frequency: 14d
-Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelmarkt ist die Verbindung gesperrt	2::inwork 10308,11833 10374,11734
-# 
+# REMOVED (offen) --- #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6433 (Anfrage) --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45-181-136136549415/136549415/00119959/59-Anlagen/02/GA_1805_IV.pdf (mindestens bis Ende 2016) --- #: last_checked: 2015-12-07 --- #: check_frequency: 14d --- Unterführung Gertraudenbrücke - Wallstr.: wegen Bauarbeiten beim U-Bhf. Spittelmarkt ist die Verbindung gesperrt	2::inwork 10308,11833 10374,11734
 # REMOVED (Straße entfernt) --- #: last_checked: 2015-04-04 --- #: check_frequency: 120d --- Grenzweg: wegen Bauarbeiten für die Minna-Todenhagen-Str. teilweise gesperrt, ggfs. dauerhaft	2::inwork 17445,7434 17575,7519
 # 
 #: by: http://www.stadtentwicklung.berlin.de/verkehr/politik_planung/planfeststellungen/download/strassen_kfz/SOV-Beschluss-27022012.pdf
@@ -2851,11 +2851,11 @@ Toulonstr.: noch nicht geöffnet	2::inwork 12404,21532 12480,21560
 # REMOVED (wieder überquerbar) --- #: source_id: INKO_104519 --- #: last_checked: 2015-03-28 --- #: check_frequency: 90d --- Bismarckstr.: Mittelstreifen während der Bauarbeiten nicht überquerbar	3nocross 3690,11629 3844,11649 3898,11655
 # REMOVED --- #: next_check_id: INVALIDENFRIEDHOF-2014 --- #: by: Birgit Schroeer --- #: confirmed_by: srt --- #: last_checked: 2015-03-13 --- #: next_check: 2015-03-28 --- #: XXX siehe auch temp_blockings-Eintrag --- #: osm_watch: way id="76212442" version="7" --- Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, bis 28.03.2015	2::inwork 8119,13912 8101,13901 8248,13659 8337,13541
 # 
-#: last_checked: 2015-11-08
+#: last_checked: 2015-12-16
 #: check_frequency: 120d
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 # 
-#: last_checked: 2015-11-08
+#: last_checked: 2015-12-16
 #: check_frequency: 90d
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 # 
