@@ -6,6 +6,7 @@
 # Die Sammlung hier ist bei weiten nicht vollständig und wird
 # nicht im BBBike-Routing verwendet.
 Weitlingstraße/Münsterlandplatz	Zs 16575,11028
+Weitlingstraße/Margaretenstraße	Zs 16731,11484
 Grünberger Str. am Boxhagener Platz	Zs 14253,11779
 # REMOVED --- #: XXX im Luftbild aber nicht zu sehen: --- am U-Bhf. Friedrichsfelde is IMHO auch noch einer	Zs 17737,11384
 S Grünau, auf der Bohnsdorfer Seite	Zs 22093,996
@@ -183,9 +184,12 @@ Gärtnerstraße/Ecke Große-Leege-Straße	Zs 16904,15821
 Gensinger Straße 103	Zs 19146,11913
 #: confirmed_by: srt
 Vincent-van-Gogh-Straße/Ecke Randowstraße	Zs 18424,17908
+#: confirmed_by: srt
 Volkradstraße/Ecke Moldaustraße	Zs 17510,10568
+#: confirmed_by: srt
 Volkradstraße, nördlicher Zebrastreifen	Zs 17595,10879
-Rummelsburger Straße/Höhe Eggersdorfer Straße/Delbrückstr.	Zs 17180,10845
+#: confirmed_by: srt
+Rummelsburger Straße/Delbrückstr.	Zs 17152,10835
 #: by: ^^^
 Fritz-Reuter-Allee/Britzer Park	Zs 13463,3854
 #: note: Luftbild

@@ -6239,13 +6239,13 @@ EOF
 userdel	1::inwork 4367,11996 4345,11710
 EOF
      },
-     { from  => $isodate2epoch->("2015-05-01 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-05-03 23:59:59"),
+     { from  => $isodate2epoch->("2015-05-06 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2015-05-08 23:59:59"),
        periodic => 1,
-       recurrences => [['yearly', days => 24, months => 1]],
-       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (2.5.2015 und 3.5.2015)',
+       recurrences => [['yearly', days => 24, months => 4]],
+       text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (7.5.2016 und 8.5.2016)',
        type  => 'gesperrt',
-       source_id => 'http://www.ms-event-agentur.com/primavera%202013.html', # 2013 in der URL verwirrt nur, die Seite nennt das Jahr 2015
+       source_id => 'http://www.popula.de/veranstaltung/12105833_primavera-2016-akazienstrasse-berlin',
        data  => <<EOF,
 userdel	2::temp 7107,9030 7044,9163 7022,9211 7006,9292
 userdel	2::temp 6945,9142 7044,9163
@@ -10094,7 +10094,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006787',
        data  => <<EOF,
-userdel	2::inwork 17902,17074 17839,16987 17796,16926 17634,16681 17512,16495 17446,16393
+userdel	2::inwork 17902,17074 17839,16987 17796,16926 17638,16686 17512,16495 17446,16393
 EOF
      },
      { from  => 1186524000, # 2007-08-08 00:00
@@ -20919,7 +20919,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-lichtenberg/presse/archiv/20120921.1525.375622.html',
        data  => <<EOF,
-userdel	q4::inwork 18988,8791 19073,8828 19116,8846 19163,8867 19299,8946 19500,9043 19621,9097
+userdel	q4::inwork 18988,8792 19073,8828 19116,8846 19163,8867 19299,8946 19500,9043 19621,9097
 EOF
      },
      { from  => 1348376400, # 2012-09-23 07:00
@@ -23148,7 +23148,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.149073.php',
        data  => <<EOF,
-userdel	q4::inwork 16068,6216 16105,6193 16220,6277 16304,6358 16304,6374 16192,6503
+userdel	q4::inwork 16068,6216 16105,6193 16220,6277 16304,6358 16304,6374 16195,6506
 EOF
      },
      { from  => 1407354971, # 2014-08-06 21:56
@@ -24204,7 +24204,7 @@ userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1451249158, # undef, # XXX
        text  => 'Treptower Park: einige Wege im nördlichen und südlichen Teil des Parks werden instand gesetzt und können gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,

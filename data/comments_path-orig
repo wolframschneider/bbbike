@@ -414,8 +414,8 @@ Bremer Weg: die Einfahrt in den Parkweg befindet sich auf der linken Seite	CP2; 
 # REMOVED (Schloßplatz ist dauerhaft gesperrt) --- #: last_checked: 2010-06-03 --- Werderscher Markt - Schloßplatz: bereits hinter der Schleusenbrücke auf den linken Gehweg wechseln	PI; 10109,12238 10170,12261 10063,12438
 Lindenstr. - Breitestr.: auf dem linken Geh/Radweg bis zur Dortustr. fahren und dort die Straßenseite wechseln	CP; -13366,-1499 -13375,-1546 -13238,-1569
 Breitestr. - Lindenstr.: bereits an der Kreuzung "Wall am Kiez" auf die linke Straßenseite wechseln	PI; -13516,-1517 -13375,-1546 -13366,-1499
-Frankfurter Allee - Buchberger Str.: bereits an der Ampel Atzpodienstr. auf die linke Straßenseite wechseln	PI; 16413,11906 16368,11912 16242,11533
-Buchberger Str. - Frankfurter Allee: zum Überqueren der Frankfurter Allee entweder Ampel an der Atzpodienstr. (rechts) oder Alfredstr. (links) benutzen	CP; 16242,11533 16368,11912 16317,11920
+# REMOVED (nicht mehr notwendig) --- Frankfurter Allee - Buchberger Str.: bereits an der Ampel Atzpodienstr. auf die linke Straßenseite wechseln	PI; 16413,11906 16368,11912 16242,11533
+# REMOVED (reguläres Abbiegen mittlerweile möglich) --- Buchberger Str. - Frankfurter Allee: zum Überqueren der Frankfurter Allee entweder Ampel an der Atzpodienstr. (rechts) oder Alfredstr. (links) benutzen	CP; 16242,11533 16368,11912 16317,11920
 Holzmarktstr. - Schillingstr.: bereits an der Kreuzung Stralauer Allee/Alexanderstr. auf die linke Straßenseite wechseln	PI; 11351,12221 11388,12202 11452,12318
 #: XXX_prog: Zeitverlust durch Umweg; Ampel wird nicht in der Berechnung verwendet!
 Schillingstr. - Holzmarktstr.: zum Linksabbiegen die Ampel an der Kreuzung Alexanderstr. benutzen	CP; 11452,12318 11388,12202 11513,12138
@@ -583,7 +583,7 @@ Weg im Freizeitpark Marienfelde: nicht ausgeschildert, leicht zu übersehen	CP2; 
 Tauernallee - Hochspannungsweg: Radweg benutzen, um Bordstein zu umfahren	PI; 11355,1801 11343,1937 11373,1925
 Adlergestell - Am Adlergestell: bereits an der Steinbachstr. auf die linke Seite wechseln	PI; 19587,3801 19633,3751 19676,3705 19755,3780
 #: next_check_id: KOEPENICKERLANDSTR-2015
-#: last_checked: 2015-09-26
+#: last_checked: 2015-12-28
 #: check_frequency: 90d
 Rodelbergweg - Köpenicker Landstr.: ggfs. auf dem linken Gehweg bleiben, Straßenseite muss etwas später sowieso gewechselt werden	CP; 16615,7062 16563,7012 16646,6925
 Paster-Behrens-Str. - Britzer Park: links halten	CP2; 13329,4294 13270,4202
