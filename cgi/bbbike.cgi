@@ -8590,7 +8590,7 @@ sub header {
 	     #-BGCOLOR => '#ffffff',
 	     ($use_background_image && !$printmode ? (-BACKGROUND => "$bbbike_images/bg.jpg") : ()),
 	     -meta=>{'keywords'=>'Fahrrad Route, Routenplaner, Routenplanung, Fahrradkarte, Fahrrad Routen Planer kostenlos, Radroutenplaner, Fahrrad-Navi, cycle route planner, bicycle, cycling routes, routing, bicycle navigation, Velo, Rad, Karte, map, Fahrradwege, cycle paths, cycle route' . join (", ", "", $en_city_name, @$other_names),
-		     'copyright'=>'(c) 1998-2015 Slaven Rezic + Wolfram Schneider',
+		     'copyright'=>'(c) 1998-2016 Slaven Rezic + Wolfram Schneider',
 		     @viewport
 		    },
 	     -author => $BBBike::EMAIL,
@@ -8790,7 +8790,7 @@ $permalink_text
 
 <div id="copyright" style="text-align: center; font-size: x-small; margin-top: 1em;" >
 <hr>
-(&copy;) 1998-2015 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
+(&copy;) 1998-2016 <a href="http://CycleRoutePlanner.org">BBBike.org</a> by <a href="http://wolfram.schneider.org">Wolfram Schneider</a> &amp; <a href="http://www.rezic.de/eserte">Slaven Rezi&#x107;</a>  //
 Map data (&copy;) <a href="https://www.openstreetmap.org/copyright">OpenStreetMap.org</a> contributors<br>
 <a href="/help.html#iphone">iphone</a> -
 <a href="/help.html#android">android</a> -
