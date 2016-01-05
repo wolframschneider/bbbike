@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 2013,2015 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -14,7 +14,7 @@
 package GPS::GpsmanData::TkViewer;
 use strict;
 use vars qw($VERSION);
-$VERSION = '1.02';
+$VERSION = '1.03';
 
 use FindBin;
 
@@ -26,7 +26,7 @@ use Karte::Polar;
 use Tk::PathEntry;
 
 # These are global and intentionally shared within a process.
-our($gps_data_viewer_file, $gps_data_dir, $include_associated_wpt_file);
+our($gps_data_viewer_file, $last_loaded_gps_data_viewer_file, $gps_data_dir, $include_associated_wpt_file);
 
 sub gps_data_viewer {
     my($class, $parent, %opts) = @_;
@@ -60,7 +60,9 @@ sub gps_data_viewer {
 		    $wpt_gps->load($wpt_file);
 		}
 	    }
-	    $gps_view->associate_object($gps, $wpt_gps);
+	    my $keep_list_position = defined $last_loaded_gps_data_viewer_file && $last_loaded_gps_data_viewer_file eq $gps_data_viewer_file;
+	    $gps_view->associate_object($gps, $wpt_gps, -keeplistposition => $keep_list_position);
+	    $last_loaded_gps_data_viewer_file = $gps_data_viewer_file;
 	}
     };
     my $unplot_file = sub {
@@ -148,6 +150,7 @@ sub gps_data_viewer {
 
     {
 	my $f = $t->Frame->pack(qw(-fill x));
+	if (0) {
 	$f->Button(-text => "Select premature points",
 		   -command => sub {
 		       require GPS::GpsmanData::Analyzer;
@@ -182,6 +185,16 @@ sub gps_data_viewer {
 			   }
 		       }
 		   })->pack(-side => "left");
+        }
+	$f->Button(-text => 'Select max. velocity',
+		   -command => sub {
+		       my $item = $gps_view->find_item_with_max_velocity;
+		       if (defined $item) {
+			   $gps_view->show_item($item);
+		       } else {
+			   $t->messageBox(-message => 'No item with maximum velocity found', -type => 'Ok');
+		       }
+		   })->pack(-side => 'left');
 	$f->Button(-text => "Set accuracy for selection",
 		   -command => sub {
 		       my @sel_items = $gps_view->get_selected_items;
@@ -211,15 +224,6 @@ sub gps_data_viewer {
 		       $edit->set_accuracies(\@lines, $new_accuracy);
 		       $gps_view->reload;
 		   })->pack(-side => "left");
-	$f->Button(-text => 'Select max. velocity',
-		   -command => sub {
-		       my $item = $gps_view->find_item_with_max_velocity;
-		       if (defined $item) {
-			   $gps_view->show_item($item);
-		       } else {
-			   $t->messageBox(-message => 'No item with maximum velocity found', -type => 'Ok');
-		       }
-		   })->pack(-side => 'left');
 	$f->Button(-text => 'Statistics',
 		   -command => sub {
 		       require GPS::GpsmanData::Stats;

@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2008,2014 Slaven Rezic. All rights reserved.
+# Copyright (C) 2008,2014,2016 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -15,7 +15,7 @@ package GPS::GpsmanData::Any;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '1.09';
+$VERSION = '1.10';
 
 use GPS::GpsmanData;
 
@@ -152,7 +152,14 @@ sub load_gpx {
 
     my $creator = $twig->root->{att}->{'creator'};
     my $gps_device;
-    if (defined $creator && $creator =~ m{^etrex}i) { # heuristics: looks like a GPS device
+    if (defined $creator && $creator =~ m{^( etrex
+					  |  montana
+					  |  oregon
+					  |  monterra
+					  |  dakota
+					  |  colorado
+					  |  gpsmap
+					  )}ix) { # heuristics: looks like a GPS device (see also: https://en.wikipedia.org/wiki/List_of_Garmin_products)
 	$gps_device = $creator;
     }
 
@@ -197,7 +204,10 @@ sub load_gpx {
 	    $wpt->Longitude($lon);
 	    $wpt->Altitude($ele) if defined $ele;
 	    $wpt->unixtime_to_DateTime($epoch, $timeoffset) if $epoch;
-	    $wpt->Comment($comment) if defined $comment;
+	    if (defined $comment) {
+		$comment =~ s{\n}{ }g;
+		$wpt->Comment($comment);
+	    }
 	    $wpt->Symbol($gpsman_symbol) if defined $gpsman_symbol;
 	    push @wpts, $wpt;
 	} elsif ($wpt_or_trk->name eq 'trk') {
@@ -377,6 +387,25 @@ formats are recognized:
 =back
 
 Other files are treated as GPSMan files.
+
+=head2 GPX FILES
+
+GPX files can also be converted directly (without checking the
+filename suffix) using the C<load_gpx> method:
+
+    $gps = GPS::GpsmanData::Any->load_gpx($gpx_file);
+
+Optional argument is C<timeoffset>, which may be set to a number for
+the time offset to UTC in hours, or to C<automatic>, for automatically
+determining the time offset using L<Time::Zone::By4D>.
+
+Currently there's support for waypoint (C<< <wpt> >>), track (C<<
+<trk> >>), and route (C<< <rte> >>) elements.
+
+The C<creator> attribute is handled specially: if the creator is
+recognized as a GPS device (currently there's a hardcoded list of
+Garmin devices), then this one is transformed into a pseudo GPSMan
+attribute C<srt:device>.
 
 =head1 AUTHOR
 
