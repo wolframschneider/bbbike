@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2003,2004,2008,2009,2010,2011,2012,2013,2014,2015 Slaven Rezic. All rights reserved.
+# Copyright (C) 2003,2004,2008,2009,2010,2011,2012,2013,2014,2015,2016 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -2704,16 +2704,27 @@ sub do_winter_optimization {
 	    for my $dir ("$bbbike_rootdir/tmp", @Strassen::datadirs) {
 		my $f = "$dir/winter_optimization.$winter_hardness.json";
 		if (-r $f && -s $f) {
-		    my $json = do { open my $fh, $f or die $!; local $/; <$fh> };
-		    $penalty = JSON::XS->new->decode($json);
-		    #$penalty = Storable::retrieve($f);
-		    last;
+		    my $uptodate = 1;
+		    for my $check (qw(strassen brunnels qualitaet_s radwege_exact comments_kfzverkehr comments_tram)) {
+			if (-M $f > -M "$bbbike_rootdir/data/$check") {
+			    main::status_message("$f is not up-to-date wrt $check, need to rebuild...", "info");
+			    $uptodate = 0;
+			    last;
+			}
+		    }
+		    if ($uptodate) {
+			my $json = do { open my $fh, $f or die $!; local $/; <$fh> };
+			$penalty = JSON::XS->new->decode($json);
+			#$penalty = Storable::retrieve($f);
+			last;
+		    }
 		}
 	    }
 	    if (!$penalty) {
 		if ($try == 2) {
 		    die "Can't find winter_optimization.$winter_hardness.json in @Strassen::datadirs and cannot build...";
 		} else {
+		    main::status_message("Rebuilding winter optimization files for $winter_hardness...", "info");
 		    my @cmd = ($^X, "$bbbike_rootdir/miscsrc/winter_optimization.pl", "-as-json", "-winter-hardness", $winter_hardness, "-one-instance");
 		    main::IncBusy($main::top);
 		    eval {
@@ -2729,6 +2740,8 @@ sub do_winter_optimization {
 			delete $main::penalty_subs{'winteroptimization'};
 			$want_winter_optimization = '';
 			main::status_message($err, "die");
+		    } else {
+			main::status_message("... done", "info");
 		    }
 		}
 	    } else {
