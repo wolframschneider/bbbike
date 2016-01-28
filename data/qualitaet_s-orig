@@ -81,7 +81,7 @@ Hobrechtsfelder Chaussee (bis Kurve): OK	Q0 15589,27116 15230,26560 14859,26029 
 Hobrechtsfelder Chaussee (ab Kurve): OK	Q0 15589,27116 15711,27928 15777,28037
 Wisbyer Str.: Asphalt	Q0 11019,16465 11289,16423 11397,16405 11448,16398 11470,16394 11542,16384 11632,16373 11673,16367 11727,16358 11750,16354 11808,16343 11829,16339 11889,16328 11936,16302 12012,16250 12090,16199
 Weserstr.: asphaltiert, schmale Verbundsteinpflaster-Radwege	Q0 11888,9189 12005,9211 12074,9217 12148,9209 12180,9193 12322,9124
-Weserstr.: Kopfsteinpflaster, schmale Verbundsteinpflaster-Radwege	Q1 12322,9124 12402,9080 12480,9037 12531,9009 12590,8977 12740,8862 12881,8750 13029,8632 13124,8562 13217,8493 13384,8354 13566,8212 13724,8090
+Weserstr.: Kopfsteinpflaster, schmale Verbundsteinpflaster-Radwege	Q1- 12322,9124 12402,9080 12480,9037 12531,9009 12590,8977 12740,8862 12881,8750 13029,8632 13124,8562 13217,8493 13384,8354 13566,8212 13724,8090
 Jessnerstr.: Asphalt mit Aufpflasterungen	Q0 15080,11905 14981,11751 14946,11697 14849,11539
 Stuttgarter Str.: m‰ﬂiger Asphalt	Q1 13663,8011 13510,8138 13331,8283
 Stuttgarter Str.: Kopfsteinpflaster	Q2 13331,8283 13166,8423
@@ -12115,9 +12115,9 @@ Mˆrikestr.: guter Asphalt	Q0 16060,6850 15946,6722 15830,6579
 Heidekampweg: Asphalt mit leichten Wellen	Q0- 15724,6229 15740,6261 15715,6394 15696,6507
 #: corrected_by: srt (Q2 -> Q1-)
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20151009
-#: XXX die Bauarbeiten sind erst im M‰rz 2016 fertig
+#: XXX voraussichtliche Dauer: April 2016
 #: last_checked: 2015-12-28
-#: next_check: 2016-03-01
+#: next_check: 2016-04-01
 Heidekampweg: holpriger Asphalt	Q1- 15696,6507 15672,6663
 #: by: ^^^
 # 
@@ -22855,6 +22855,7 @@ Pansfelder Weg: guter Asphalt	Q0 7297,-519 7384,-387 7536,-139
 #: XXX Instandsetzungsarbeiten Fahrbahn
 #: by: http://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassenbau/artikel.129276.php?date=20151009
 #: by: http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2016/pressemitteilung.432036.php (erster Bauabschnitt (fertig?))
+#: by: http://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassenbau/artikel.129276.php?date=20160124 (Baueende 2016-06-30)
 #: next_check: 2016-01-01
 Beyschlagstr.: m‰ﬂiger Asphalt	Q1- 408,22184 184,22257 5,22384 21,22545
 # 
