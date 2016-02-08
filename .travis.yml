@@ -18,6 +18,7 @@ before_install:
   - . ./world/etc/env/dot.bbbikerc 
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./world/travis/travis-init.sh; fi
   - sudo apt-get install -y openjdk-7-jre
+  - update-alternatives --list java
   - java -version
   #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y libdata-random-perl; fi # ????
   #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y bbbike-world; fi
