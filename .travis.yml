@@ -1,4 +1,4 @@
-language: perl
+language: c
 sudo: required
 matrix:
   include:
@@ -14,7 +14,7 @@ addons:
    - make
 
 before_install:
-  #- git clone --depth=50 --branch=world https://github.com/wosch/bbbike-world.git world
+  - git clone --depth=50 --branch=world https://github.com/wosch/bbbike-world.git world
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./world/travis/travis-init.sh; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y bbbike-world; fi
 
