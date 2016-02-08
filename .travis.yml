@@ -19,8 +19,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./world/travis/travis-init.sh; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y libdata-random-perl; fi # ????
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y bbbike-world; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java; fi
-  - cat /proc/cpuinfo
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java; fi # downgrade to java7
 
 before_script:
  - true
@@ -29,5 +28,6 @@ script:
  - make -f world/Makefile.osm create-bbbike-web-symlinks
  - make deb-bootstrap-dir
  - make update-files
+ - world/t/stale-symlinks.t 
  - make travis
 
