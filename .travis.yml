@@ -25,7 +25,7 @@ before_script:
 
 script:
  - make -f world/Makefile.osm create-bbbike-web-symlinks
- - make deb-opt-dir-version
+ - make deb-bootstrap-dir
  - make update-files
  - make travis
 
