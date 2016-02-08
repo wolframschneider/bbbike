@@ -26,5 +26,5 @@ script:
  - make -f world/Makefile.osm create-bbbike-web-symlinks
  - make deb-opt-dir-version
  - make update-files
- - make check
+ - make travis
 
