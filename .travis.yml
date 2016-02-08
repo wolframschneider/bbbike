@@ -16,15 +16,14 @@ addons:
 before_install:
   - git clone --depth=50 --branch=world https://github.com/wosch/bbbike-world.git world
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./world/travis/travis-init.sh; fi
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y libdata-random-perl; fi
-  #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y bbbike-world-debian-meta; fi
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y libdata-random-perl; fi # ????
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y bbbike-world; fi
 
 before_script:
  - true
 
 script:
- - make -f world/Makefile.osm create-perl-symlink create-bbbike-web-symlinks
+ - make -f world/Makefile.osm create-bbbike-web-symlinks
  - make update-files
  - make check
 
