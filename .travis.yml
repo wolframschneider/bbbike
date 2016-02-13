@@ -29,5 +29,6 @@ script:
  - make debian-bootstrap
  - make update-files
  - world/t/stale-symlinks.t 
+ - world/t/convert.t
  #- make travis
 
