@@ -28,4 +28,5 @@ script:
  - make -f world/Makefile.osm create-bbbike-web-symlinks
  - make debian-bootstrap
  - make update-files
- - make travis
+ - world/t/svg.t 
+ #- make travis
