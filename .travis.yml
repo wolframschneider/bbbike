@@ -32,5 +32,5 @@ script:
  - make -f world/Makefile.osm create-bbbike-web-symlinks
  - make debian-bootstrap
  - make update-files
- - world/t/svg.t 
+ - BBBIKE_MAPERITIVE_DISABLED=1 world/t/svg.t 
  #- make travis
