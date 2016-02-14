@@ -6501,7 +6501,7 @@ EOF
 	    print $q->hidden(-name => 'outputtarget', -value => "print" ), "\n";
 
 	    foreach my $name (qw/imagetype startname zielname draw coords/) {
-		print $q->hidden(-name => $name, -default =>  [ $pdf_url->param($name) ] ), "\n";
+		print $q->hidden(-name => $name, -default =>  [ scalar $pdf_url->param($name) ] ), "\n";
 	    }
 
 	    print $q->end_form;
