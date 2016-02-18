@@ -1,6 +1,6 @@
 ;;; bbbike.el --- editing BBBike .bbd files in GNU Emacs
 
-;; Copyright (C) 1997-2013 Slaven Rezic
+;; Copyright (C) 1997-2014,2016 Slaven Rezic
 
 ;; To use this major mode, put something like:
 ;;
@@ -142,9 +142,7 @@
 
 (defun bbbike-search-x-selection ()
   (interactive)
-  (let* ((sel (if (fboundp 'w32-get-clipboard-data)
-		  (w32-get-clipboard-data)
-		(x-selection)))
+  (let* ((sel (bbbike--get-x-selection))
 	 (rx  sel))
     (if sel
 	(let ((search-state 'begin)
@@ -177,6 +175,11 @@
 	    ))
       (error "No X selection"))))
 
+(defun bbbike--get-x-selection ()
+  (if (fboundp 'w32-get-clipboard-data)
+      (w32-get-clipboard-data)
+    (x-selection)))
+
 (defun bbbike-toggle-tabular-view ()
   (interactive)
   (if truncate-lines
@@ -200,9 +203,7 @@
       (search-backward-regexp " ")
       (setq begin-coord-pos (1+ (match-beginning 0))))
     (setq coord (buffer-substring begin-coord-pos end-coord-pos))
-    (string-match "^\\(.*\\)/[^/]+/[^/]+$" bbbike-el-file-name)
-    (setq bbbikeclient-path (concat (substring bbbike-el-file-name (match-beginning 1) (match-end 1))
-				    "/bbbikeclient"))
+    (setq bbbikeclient-path (concat (bbbike-rootdir) "/bbbikeclient"))
     (setq bbbikeclient-command (concat bbbikeclient-path
 				       "  -centerc "
 				       coord
@@ -210,6 +211,11 @@
     (message bbbikeclient-command)
     (shell-command bbbikeclient-command nil nil)
     ))
+
+(defun bbbike-rootdir ()
+  (string-match "^\\(.*\\)/[^/]+/[^/]+$" bbbike-el-file-name)
+  (substring bbbike-el-file-name (match-beginning 1) (match-end 1))
+  )
 
 (defvar bbbike-mode-map nil "Keymap for BBBike bbd mode.")
 (if bbbike-mode-map
@@ -375,5 +381,44 @@
 	(error (concat "This does not look like a http/https URL "
 		       (buffer-substring begin-url-pos end-url-pos))))
     (substring current-line (match-beginning 1) (match-end 1))))
+
+(defun bbbike-update-osm-watch ()
+  (interactive)
+  (let ((sel (bbbike--get-x-selection)))
+    (if (string-match "\\(way\\|node\\|relation\\).* id=\"\\([0-9]+\\)\".* version=\"\\([0-9]+\\)\"" sel)
+	(let* ((elemtype (substring sel (match-beginning 1) (match-end 1)))
+	       (elemid (substring sel (match-beginning 2) (match-end 2)))
+	       (elemversion (substring sel (match-beginning 3) (match-end 3)))
+	       (bbbike-datadir (concat (bbbike-rootdir) "/data"))
+	       (grepcmd (concat "cd " bbbike-datadir " && grep -ns '^#: osm_watch: " elemtype " id=\"" elemid "\"' *-orig temp_blockings/bbbike-temp-blockings.pl"))
+	       (tempbuf "*bbbike update osm watch*"))
+	  (condition-case nil
+	      (kill-buffer tempbuf)
+	    (error ""))
+	  (if (> (call-process "/bin/sh" nil tempbuf nil "-c" grepcmd) 0)
+	      (error "Command %s failed" grepcmd)
+	    (set-buffer tempbuf)
+	    (goto-char (point-min))
+	    (if (not (search-forward-regexp "^\\([^:]+\\):\\([0-9]+\\)"))
+		(error "Strange: can't find a grep result in " tempbuf)
+	      (let ((file (buffer-substring (match-beginning 1) (match-end 1)))
+		    (line (string-to-int (buffer-substring (match-beginning 2) (match-end 2)))))
+		(find-file (concat bbbike-datadir "/" file))
+		(goto-line line)
+		(if (not (search-forward-regexp "version=\"" (line-end-position)))
+		    (error "Cannot find osm watch item in file")
+		  (let ((answer (read-char (format "Set version to %s? (y/n) " elemversion))))
+		    (if (not (string= (char-to-string answer) "y"))
+			(error "OK, won't change version")
+		      (let ((beg-of-version (point))
+			    (end-of-version (save-excursion
+					      (search-forward-regexp "[^0-9]" (line-end-position) nil)
+					      (1- (point)))))
+			(delete-region beg-of-version end-of-version)
+			(insert elemversion)
+			))))))
+	    )
+	  )
+      (error "No X selection or X selection does not contain a way/node/relation line"))))
 
 (provide 'bbbike-mode)
