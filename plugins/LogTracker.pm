@@ -6,7 +6,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2003,2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 2003,2013,2016 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -31,7 +31,7 @@ use vars qw($VERSION $lastcoords
 	    $do_search_route %show
 	    $error_checks $ua $safe
             $remoteuser $remotehost $logfile $ssh_cmd $tracking $tail_pid $bbbike_cgi
-	    $last_parselog_call $session_dir_prefix
+	    $last_parselog_call $session_dir_prefix $coordssession_dir
 	   );
 $VERSION = '1.24';
 
@@ -56,6 +56,8 @@ $ssh_cmd = "ssh"
     if !defined $ssh_cmd;
 $session_dir_prefix = "/tmp/bbbike-sessions-1000-"
     if !defined $session_dir_prefix;
+$coordssession_dir = '/tmp/coordssession';
+#$coordssession_dir = '/var/tmp/coordssession';
 
 @types = qw(routes mapserver);
 
@@ -1013,7 +1015,7 @@ $SETUP_NEW_ONLINE_TRACKING_TEST=0;
 
 sub setup_new_online_tracking {
     if ($LOG_TRACKER_SSH) {
-	stop_online_tracking();
+	stop_new_online_tracking();
     }
     if (!eval {
 	require Net::OpenSSH;
@@ -1021,12 +1023,13 @@ sub setup_new_online_tracking {
 					     $SETUP_NEW_ONLINE_TRACKING_TEST ? 'localhost' : 'live-bbbike',
 					     master_stdout_discard => 1, # does not work together with ptksh
 					     master_stderr_discard => 1,
+					     batch_mode => 1,
 					    );
 	$LOG_TRACKER_SSH->error
-	    and die "Couldn't establish SSH connection: " . $LOG_TRACKER_SSH->error;
+	    and die "Couldn't establish SSH connection (maybe ssh config is missing the live-bbbike entry? maybe ssh agent is not running?): " . $LOG_TRACKER_SSH->error;
 	($LOG_TRACKER_FH, my($pid)) = $LOG_TRACKER_SSH->pipe_out($SETUP_NEW_ONLINE_TRACKING_TEST
-								 ? 'echo "/tmp/coordssession/ CLOSE_WRITE,CLOSE 01000000_0aa6e7661e8cfe43"'
-								 : 'inotifywait -m -e close_write /tmp/coordssession'
+								 ? 'echo "'.$coordssession_dir.'/ CLOSE_WRITE,CLOSE 01000000_0aa6e7661e8cfe43"'
+								 : 'inotifywait -m -e close_write '.$coordssession_dir
 								)
 	    or die "pipe out failed: " . $LOG_TRACKER_SSH->error;
     }) {
@@ -1053,7 +1056,7 @@ sub new_online_tracking {
     }
     chomp(my $inotify_line = <$fh>);
     my(undef,undef,$session_file) = split /\s+/, $inotify_line, 3;
-    $ssh->scp_get({}, "/tmp/coordssession/$session_file", "/tmp/remote_session_file");
+    $ssh->scp_get({}, "$coordssession_dir/$session_file", "/tmp/remote_session_file");
     open my $ifh, "-|", "$FindBin::RealBin/miscsrc/coordssession2bbd", "-allow-test", "/tmp/remote_session_file"
 	or die $!;
     open my $ofh, ">>", '/tmp/LogTracker2.bbd'
@@ -1097,7 +1100,7 @@ sub replay_accesslog {
     while(<$fh>) {
 	if (m{coordssession=([^& ]+)}) {
 	    my $session_id = uri_unescape($1);
-	    print $ofh "/tmp/coordssession/ CLOSE_WRITE,CLOSE $session_id\n";
+	    print $ofh "$coordssession_dir/ CLOSE_WRITE,CLOSE $session_id\n";
 	    $found_lines++;
 	}
     }
