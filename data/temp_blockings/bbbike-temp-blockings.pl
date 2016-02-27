@@ -23984,7 +23984,7 @@ EOF
      { from  => $isodate2epoch->("2015-04-03 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2015-04-06 23:59:59"),
        periodic => 1,
-       recurrences => [['easter', -2]], # Karfreitag
+# findet es 2016 überhaupt statt? #       recurrences => [['easter', -2]], # Karfreitag
        text  => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstaltung (Osterfest Hauptstraße), Straße gesperrt (04.04.2015 - 06.04.2015)',
        type  => 'handicap',
        data  => <<EOF,
@@ -24767,12 +24767,12 @@ userdel	q4::temp 11064,12910 11134,12793
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1456263063, # undef, # XXX -> gesperrt_orig
        text  => 'Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX Wann sind die Bauarbeiten beendet? Wie weit geht die Sperrung Richtung Süden?
-#: last_checked: 2016-01-26
+# REMOVED --- : XXX Wann sind die Bauarbeiten beendet? Wie weit geht die Sperrung Richtung Süden?
+# REMOVED --- : last_checked: 2016-02-23
 userdel	2::inwork 12620,9293 12565,9200 12548,9167
 EOF
      },
