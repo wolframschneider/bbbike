@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2014,2015 Slaven Rezic. All rights reserved.
+# Copyright (C) 2014,2015,2016 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -82,14 +82,6 @@
 
     sub transfer { } # NOP
 
-    # maybe_mount() may also be called outside of the Perl/Tk
-    # application for scripts which have to copy from or to the
-    # mounted gps device. Simple usage example:
-    #
-    #    perl -w -Ilib -MGPS::BBBikeGPS::MountedDevice -e 'GPS::BBBikeGPS::MountedDevice->maybe_mount(sub { my $dir = shift; system("ls -al $dir"); 1 })'
-    #
-    # Currently only the internal flash card is supported, but in
-    # future this can be controlled with options.
     sub maybe_mount {
 	my(undef, $cb, %opts) = @_;
 
@@ -207,6 +199,28 @@
 
     }
 
+    sub get_gps_device_status {
+	my(undef, $disk_type, $inforef) = @_;
+	if ($^O eq 'freebsd') {
+	    my $halinfo;
+	    my $mount_device = _guess_garmin_mount_device_via_hal($disk_type, \$halinfo);
+	    if (!$mount_device) {
+		if ($halinfo =~ m{^disk not found}) {
+		    $$inforef = $halinfo if $inforef;
+		    return 'unattached';
+		} else {
+		    $$inforef = $halinfo if $inforef;
+		    return 'unknown';
+		}
+	    } else {
+		$$inforef = "device is $mount_device" if $inforef;
+		return 'attached';
+	    }
+	} else {
+	    die "NYI for OS $^O";
+	}
+    }
+
     sub _is_mounted { # XXX use a module?
 	if ($^O eq 'MSWin32') {
 	    # at this point we assume that the device is already ready
@@ -225,9 +239,12 @@
 
     # no fallback, return undef if lshal operation not possible
     sub _guess_garmin_mount_device_via_hal {
-	my($garmin_disk_type) = @_;
+	my($garmin_disk_type, $inforef) = @_;
 
-	return unless eval { require BBBikeUtil; 1 } && BBBikeUtil::is_in_path('lshal');
+	if (!eval { require BBBikeUtil; 1 } && BBBikeUtil::is_in_path('lshal')) {
+	    $$inforef = 'cannot detect: lshal unavailable' if $inforef;
+	    return;
+	}
 
 	# XXX Is this true for all garmin devices? What about other
 	# GPS devices?
@@ -240,6 +257,7 @@
 	open my $fh, '-|', @cmd
 	    or do {
 		warn "Error running @cmd: $!";
+		$$inforef = "cannot detect: error running lshal: $!" if $inforef;
 		return;
 	    };
 	while(<$fh>) {
@@ -248,6 +266,7 @@
 	    }
 	}
 
+	$$inforef = 'disk not found' if $inforef;
 	return;
     }
 
@@ -357,5 +376,59 @@ to F</etc/sysctl.conf>. Reload the settings:
 Currently by default route uploads happen to the internal flash, not
 to an external SD card. This is hardcoded in the source code (search
 for C<< my $garmin_disk_type = 'flash'; >>).
+
+=head2 FUNCTIONS
+
+The following functions may be used outside BBBike's GPS transfer
+system:
+
+=over
+
+=item C<maybe_mount(I<coderef>)>
+
+C<maybe_mount()> may also be called outside of the Perl/Tk application
+for scripts which have to make sure that the Garmin device is mounted,
+e.g. to copy from or to the mounted gps device. Simple usage example:
+
+    perl -w -Ilib -MGPS::BBBikeGPS::MountedDevice -e 'GPS::BBBikeGPS::MountedDevice->maybe_mount(sub { my $dir = shift; system("ls -al $dir"); 1 })'
+
+Currently only the internal flash card is supported, but in future
+this can be controlled with options.
+
+=item C<get_gps_device_status(I<disk_type>, I<inforef>)>
+
+Return an availability status about the given gps device. Currently
+only Garmin devices are supported, and there's only detection support
+for FreeBSD systems.
+
+The I<disk_type> parameter may be C<flash> (the internal GPS memory)
+or C<card> (the optional SD card). The optional parameter I<inforef>
+should be a reference to a scalar and will hold more textual
+information (error messages, device information).
+
+Possible return values are:
+
+=over
+
+=item * attached
+
+The device is already attached and is ready for mounting.
+
+=item * unattached
+
+The device is not attached.
+
+=item * unknown
+
+We cannot get the device status, probably because of missing
+prerequisites (e.g. L<lshal(1)> is missing).
+
+=back
+
+The following sample oneliner waits until the device is available:
+
+    perl -w -Ilib -MGPS::BBBikeGPS::MountedDevice -e 'while () { $status = GPS::BBBikeGPS::MountedDevice->get_gps_device_status("flash", \$info); if ($status eq "unknown") { die "We cannot detect the gps device status: $info" } exit if $status eq "attached"; sleep 1 }'
+
+=back
 
 =cut
