@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2006,2007,2010,2011,2012,2014 Slaven Rezic. All rights reserved.
+# Copyright (C) 2006,2007,2010,2011,2012,2014,2016 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -20,7 +20,7 @@ push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.23;
+$VERSION = 1.25;
 
 use vars qw(%images);
 
@@ -32,21 +32,17 @@ sub register {
     my $is_berlin = $main::city_obj && $main::city_obj->cityname eq 'Berlin';
     # this order will be reflected in show_info
     if ($is_berlin) {
-	$main::info_plugins{__PACKAGE__ . "_DeinPlan"} =
-	    { name => "Pharus (dein-plan)",
-	      callback => sub { showmap_deinplan(@_) },
-	      callback_3_std => sub { showmap_url_deinplan(@_) },
+	$main::info_plugins{__PACKAGE__ . "_DeinPlan_Leaflet"} =
+	    { name => "Pharus (dein-plan, Leaflet)",
+	      callback => sub { showmap_deinplan_leaflet(@_) },
+	      callback_3_std => sub { showmap_url_deinplan_leaflet(@_) },
 	      ($images{Pharus} ? (icon => $images{Pharus}) : ()),
 	    };
-    }
-    if (0) {
-	# 2010-09-30: website still exists, but map does not work with
-	# three browsers (Seamonkey 1, Firefox 3, Chrome)
-	$main::info_plugins{__PACKAGE__ . "_GoYellow"} =
-	    { name => "GoYellow",
-	      callback => sub { showmap_goyellow(@_) },
-	      callback_3_std => sub { showmap_url_goyellow(@_) },
-	      ($images{GoYellow} ? (icon => $images{GoYellow}) : ()),
+	$main::info_plugins{__PACKAGE__ . "_DeinPlan_Web"} =
+	    { name => "Pharus (dein-plan, Web)",
+	      callback => sub { showmap_deinplan_web(@_) },
+	      callback_3_std => sub { showmap_url_deinplan_web(@_) },
+	      ($images{Pharus} ? (icon => $images{Pharus}) : ()),
 	    };
     }
     $main::info_plugins{__PACKAGE__ . "_WikiMapia"} =
@@ -55,19 +51,6 @@ sub register {
 	  callback_3_std => sub { showmap_url_wikimapia(@_) },
 	  ($images{WikiMapia} ? (icon => $images{WikiMapia}) : ()),
 	};
-    if (0) {
-	# From the homepage (2010-09-30):
-	# "2010-02-05
-	# Sorry, because of a hardware failure, this site is currently disabled.
-	# As soon as i have time i will bring it back to live. For further questions, use the feedback form."
-	# So probably permanently down
-	$main::info_plugins{__PACKAGE__ . "_ClickRoute"} =
-	    { name => "ClickRoute",
-	      callback => sub { showmap_clickroute(@_) },
-	      callback_3_std => sub { showmap_url_clickroute(@_) },
-	      ($images{ClickRoute} ? (icon => $images{ClickRoute}) : ()),
-	    };
-    }
     $main::info_plugins{__PACKAGE__ . '_OpenStreetMap'} =
 	{ name => 'OpenStreetMap',
 	  callback => sub { showmap_openstreetmap(osmmarker => 0, @_) },
@@ -88,24 +71,13 @@ sub register {
 	      ($images{Geofabrik} ? (icon => $images{Geofabrik}) : ()),
 	    };
     }
-    ## Not permalinkable anymore
-    # if ($is_berlin) {
-    # 	$main::info_plugins{__PACKAGE__ . "_BvgStadtplan"} =
-    # 	    { name => "BVG-Stadtplan",
-    # 	      callback => sub { showmap_bvgstadtplan(@_) },
-    # 	      callback_3_std => sub { showmap_url_bvgstadtplan(@_) },
-    # 	      ($images{BvgStadtplan} ? (icon => $images{BvgStadtplan}) : ()),
-    # 	    };
-    # }
-    if (0) {
-	# Does not work anymore: URL gets redirected to
-	# http://intl.local.live.com/ page.
-	$main::info_plugins{__PACKAGE__ . "_LiveCom"} =
-	    { name => "maps.live.com",
-	      callback => sub { showmap_livecom(@_) },
-	      callback_3_std => sub { showmap_url_livecom(@_) },
-	      ($images{LiveCom} ? (icon => $images{LiveCom}) : ()),
-	    };
+    if ($is_berlin) {
+     	$main::info_plugins{__PACKAGE__ . "_BvgStadtplan"} =
+     	    { name => "BVG-Stadtplan",
+     	      callback => sub { showmap_bvgstadtplan(@_) },
+     	      callback_3_std => sub { showmap_url_bvgstadtplan(@_) },
+     	      ($images{BvgStadtplan} ? (icon => $images{BvgStadtplan}) : ()),
+     	    };
     }
     $main::info_plugins{__PACKAGE__ . "_BikeMapNet"} =
 	{ name => "bikemap.net",
@@ -150,26 +122,6 @@ sub register {
 }
 
 sub _create_images {
-    if (!defined $images{GoYellow}) {
-	# Got from: http://www.goyellow.de/favicon.ico
-	$images{GoYellow} = $main::top->Photo
-	    (-format => 'gif',
-	     -data => <<EOF);
-R0lGODlhEAAQAPYAAAAASgAAWgAEWgAMUgAIWgAMWggMUggMWggQUggQWggUWhAUUhAUWhAY
-WhAcWhgcWgAQYwgQYxAcYxgcYxggWhggYxggcxgocyEkUiEgWikoUikoWiksWjEsUjEwUjk0
-Ujk4UiEkYyEoYyksYykwazE0azk8a0I8QkI4SkI8a2tZOUpBQkpBSlJFQlJJQlJNWkJBY1pR
-Y1pVY1JRe1pVc1pZc2NVQmtdWmthUmtha2Nhc3Ntc3ttc3txYzE4hFJZjFphjHtxhHN1lGNp
-pYxtKYxxKZR1KbV5AIx5UoR5c5R9a62GGLWKGLWOGL2OGL2SGL2WKYyCe7WWQqWSY6WWa62a
-a6WSc7Wie9aWAMaeKd6mCN6qCOeuAOeqCO+yAPe6AMaue86yc9a+e966c+fLc+fPe+/Pe+/T
-e/fXc/fXe/fbc/fbe//Xc/rUeP/Xe//bc//fe4yOrbWutda+hN7HhN7TpffXhP/7nPfnrf/n
-rc7P3ufjzv//1v//58zMzAAAACH5BAEAAH4ALAAAAAAQABAAAAfVgG6Cg4SFR3ltiG1ZKigg
-LkZbX5OHiHlICBUTDhQUHU+UljgSP0IzIZ0UGaCVUgBAe3x4URINCQ0dW4dtDBR1fXpyQRAD
-GLdGh1AAPXdxQz4RD1RpVRQrh0UGY3MWF0kyU2ApcDkYh0QObFYBAmdKZCIAbzvmeUsJYWgL
-L2sxahs37JA4cUiLAhhpyojhkeCKGTo1CiDL84VIghE0ShAoUEGHiQIanBz6wqVFgo0NHigg
-cOCByJFfuqhIlYpDkyMiKU7ywsTGBw8sioh8mQeL0aNIkwYCADs=
-EOF
-    }
-
     if (!defined $images{WikiMapia}) {
 	# Got from: http://wikimapia.org/favicon.ico
 	# and used only 32 colors
@@ -198,8 +150,6 @@ jbVTav81AGEEw9W3wYU1jMABeuoxoyJ5t4S3Ez5tjHjhDRwoKByF0W3YABsYynhECTYKJ6SQ
 VNCA4YUhAAA7
 EOF
     }
-
-    # XXX no image for clickroute.de yet
 
     if (!defined $images{OpenStreetMap}) {
 	# Fetched http://www.openstreetmap.org/images/mag_map.svg
@@ -256,8 +206,6 @@ DDQELSkBDPjgQMFIhBL5SAyYoGCHDgASlMQwQMFADCtPgJwwgUPKEhg0rCyRIUKFEitTSuVL
 SerUsieNAgEAOw==
 EOF
 	}
-
-    # XXX missing: LiveCom image
 
     if (!defined $images{Pharus}) {
 	# Fetched http://www.pharus-plan.de/px/head_kopf.jpg
@@ -424,25 +372,6 @@ EOF
 }
 
 ######################################################################
-# GoYellow
-
-sub showmap_url_goyellow {
-    my(%args) = @_;
-
-    my $px = $args{px};
-    my $py = $args{py};
-    my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
-    sprintf "http://www.goyellow.de/map?lat=%f&lon=%f&z=%d&mt=1",
-	$py, $px, $scale;
-}
-
-sub showmap_goyellow {
-    my(%args) = @_;
-    my $url = showmap_url_goyellow(%args);
-    start_browser($url);
-}
-
-######################################################################
 # WikiMapia
 
 sub showmap_url_wikimapia {
@@ -467,26 +396,6 @@ sub showmap_url_wikimapia {
 sub showmap_wikimapia {
     my(%args) = @_;
     my $url = showmap_url_wikimapia(%args);
-    start_browser($url);
-}
-
-######################################################################
-# ClickRoute
-
-sub showmap_url_clickroute {
-    my(%args) = @_;
-
-    my $px = $args{px};
-    my $py = $args{py};
-
-    my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
-    sprintf "http://clickroute.de/?center_lat=%s&center_lng=%s&zoom=%d&maptype=hybrid",
-	$py, $px, $scale;
-}
-
-sub showmap_clickroute {
-    my(%args) = @_;
-    my $url = showmap_url_clickroute(%args);
     start_browser($url);
 }
 
@@ -540,12 +449,7 @@ sub showmap_openstreetmap_sautter {
 sub show_openstreetmap_menu {
     my(%args) = @_;
     my $lang = $Msg::lang || 'de';
-    # XXX the sautter map seems to be defect since 2012 (only googlemap visible,
-    #     no transparency effect)
-    #     see discussions in http://forum.openstreetmap.org/viewtopic.php?id=15653
-    #     the replacement mentioned in
-    #     http://forum.openstreetmap.org/viewtopic.php?id=18081 also does not work
-    use constant USE_SAUTTER_MAP => 0;
+    use constant USE_SAUTTER_MAP => 1;
     my $w = $args{widget};
     my $menu_name = __PACKAGE__ . '_OpenStreetMap_Menu';
     if (Tk::Exists($w->{$menu_name})) {
@@ -634,57 +538,35 @@ sub showmap_url_mapcompare {
 
 sub showmap_mapcompare { start_browser(showmap_url_mapcompare(@_)) }
 
-## XXX del? not permalinkable anymore...
-#######################################################################
-## BVG-Stadtplan
-#
-#sub showmap_url_bvgstadtplan {
-#    my(%args) = @_;
-#
-#    my $px = $args{px};
-#    my $py = $args{py};
-#    my $scale = $args{mapscale_scale};
-#
-#    my $map_zoom;
-#    if    ($scale < 18000) { $map_zoom = 4 } # best is 12000
-#    elsif ($scale > 37000) { $map_zoom = 3 } # best is 50000
-#    else                   { $map_zoom = 2 } # best is 25000
-#    sprintf "http://www.fahrinfo-berlin.de/Stadtplan/index?language=d&client=fahrinfo&mode=show&zoom=%d&ld=0.1&seqnr=1&location=,,WGS84,%s,%s&label=", $map_zoom, $px, $py
-#}
-#
-#sub showmap_bvgstadtplan {
-#    my(%args) = @_;
-#    my $url = showmap_url_bvgstadtplan(%args);
-#    start_browser($url);
-#}
-
 ######################################################################
-# maps.live.com
-# Seems to not work on seamonkey, but linux-firefox is OK
+# BVG-Stadtplan (via mc.bbbike.org)
 
-sub showmap_url_livecom {
+sub showmap_url_bvgstadtplan {
     my(%args) = @_;
 
     my $px = $args{px};
     my $py = $args{py};
-    my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
-    if ($scale > 13) {
-	$scale = 13; # schlechte Auflösung in Berlin und Umgebung
-    }
-    sprintf "http://maps.live.com/default.aspx?v=2&cp=%f~%f&style=h&lvl=%d&tilt=-90&dir=0&alt=-1000&encType=1",
-	$py, $px, $scale;
+    my $scale = int(17 - log(($args{mapscale_scale})/3000)/log(2) + 0.5);
+    sprintf "http://mc.bbbike.org/mc/?lon=%s&lat=%s&zoom=%d&num=1&mt0=bvg", $px, $py, $scale;
 }
 
-sub showmap_livecom {
+sub showmap_bvgstadtplan {
     my(%args) = @_;
-    my $url = showmap_url_livecom(%args);
-    start_browser_no_mozilla($url);
+    my $url = showmap_url_bvgstadtplan(%args);
+    start_browser($url);
 }
 
 ######################################################################
 # dein-plan, Pharus
 
-sub showmap_url_deinplan {
+sub showmap_url_deinplan_leaflet {
+    my(%args) = @_;
+    my $scale = int(17 - log(($args{mapscale_scale})/2863)/log(2) + 0.5);
+    if ($scale > 17) { $scale = 17 }
+    'http://m.deinplan.de/map.php#' . $scale . '/' . $args{py} . '/' . $args{px};
+}
+
+sub showmap_url_deinplan_web {
     my(%args) = @_;
     if (1) {
 	require Karte::Deinplan;
@@ -713,9 +595,15 @@ sub showmap_url_deinplan {
     }
 }
     
-sub showmap_deinplan {
+sub showmap_deinplan_leaflet {
     my(%args) = @_;
-    my $url = showmap_url_deinplan(%args);
+    my $url = showmap_url_deinplan_leaflet(%args);
+    start_browser($url);
+}
+
+sub showmap_deinplan_web {
+    my(%args) = @_;
+    my $url = showmap_url_deinplan_web(%args);
     start_browser($url);
 }
 

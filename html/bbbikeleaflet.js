@@ -279,11 +279,67 @@ function doLeaflet() {
     
     map = new L.Map('map',
 		    {
+			zoomControl:false,
 			zoomAnimation:true, fadeAnimation:false, // animations may be super-slow, seen on mosor/firefox9 - but see https://github.com/Leaflet/Leaflet/issues/1922
 			doubleClickZoom:disable_routing, // used for setting start/goal, see below for click/dblclick event
 			layers: [bbbikeTileLayer]
 		    }
 		   );
+
+    var speedControl;
+    if (show_speedometer) {
+	var SpeedoMeter = L.Control.extend({
+	    options: {
+		position: 'topleft'
+	    },
+
+	    onAdd: function(map) {
+		var container = L.DomUtil.create('div', 'my-speedometer');
+		container.innerHTML = "&#8199;&#8199;.&#8199;"; // figure space
+		container.align = 'right';
+		container.style.background = 'white';
+		container.style.padding = '3px';
+		container.style.margin = '10px';
+		container.style.border = '3px black solid ';
+		container.style.borderRadius = '5px';
+		container.style.font = '42px sans-serif';
+		//container.style.width = '2.5em';
+		return container;
+	    }
+	});
+	speedControl = new SpeedoMeter();
+	map.addControl(speedControl);
+    }
+
+    var clockControl;
+    if (show_speedometer) {
+	var Clock = L.Control.extend({
+	    options: {
+		position: 'topright'
+	    },
+
+	    onAdd: function(map) {
+		var container = L.DomUtil.create('div', 'my-clock');
+		container.innerHTML = '&#8199;&#8199;:&#8199;&#8199;:&#8199;&#8199;';
+		container.align = 'center';
+		container.style.background = 'white';
+		container.style.padding = '3px';
+		container.style.margin = '10px';
+		container.style.border = '3px black solid ';
+		container.style.borderRadius = '5px';
+		container.style.font = '42px sans-serif';
+		window.setInterval(function() {
+		    var now = new Date();
+		    container.innerHTML = sprintf("%02d:%02d:%02d", now.getHours(), now.getMinutes(), now.getSeconds());
+		}, 1000);
+		return container;
+	    }
+	});
+	clockControl = new Clock();
+	map.addControl(clockControl);
+    }
+
+    map.addControl(new L.control.zoom());
 
     var overlayDefs = [
 	{label:M("Qualit\u00e4t"),   layer:bbbikeSmoothnessTileLayer, abbrev:'Q'},
@@ -453,6 +509,22 @@ function doLeaflet() {
 		    map.removeLayer(trackPolyline);
 		}
 		trackPolyline = L.multiPolyline(trackSegs.polyline, {color:'#f00', weight:2, opacity:0.7}).addTo(map);
+		if (speedControl) {
+		    var kmh = trackSegs.lastKmH(5);
+		    if (kmh == null) {
+			speedControl.getContainer().innerHTML = '\u20070.0';
+		    } else {
+			var before = Math.floor(kmh);
+			var after = Math.floor(10*(kmh-before));
+			var pad = function(number) {
+			    if (number < 10) {
+				return "\u2007" + number;
+			    }
+			    return number;
+			}
+			speedControl.getContainer().innerHTML = pad(before) + "." + after;
+		    }
+		}
 	    }
 	} else {
 	    removeLocation();
@@ -580,6 +652,34 @@ function doLeaflet() {
 	}
 
 	setFeatureListContent(listHtml);
+    }
+
+    if (replayTrkJson) {
+	// XXX hack, so TrackSegs.lastKmH works XXX
+	enable_upload = true;
+
+	var replayTrkSegIndex = 0;
+	var replayTrkWptIndex = 0;
+	var showNextWpt = function() {
+	    var wpt = replayTrkJson.trackSegs[replayTrkSegIndex][replayTrkWptIndex];
+	    var latlng = L.latLng(Number.parseFloat(wpt.lat), Number.parseFloat(wpt.lng));
+	    var thisTime = Number.parseInt(wpt.time);
+	    var e = {"latlng":latlng, "pos":{"timestamp":thisTime,"coords":{"accuracy":Number.parseFloat(wpt.acc)}}};
+	    locationFoundOrNot('locationfound', e);
+	    replayTrkWptIndex++;
+	    if (replayTrkWptIndex >= replayTrkJson.trackSegs[replayTrkSegIndex].length) {
+		replayTrkSegIndex++;
+		replayTrkWptIndex = 0;
+		if (replayTrkSegIndex >= replayTrkJson.trackSegs.length) {
+		    // we're done
+		    return;
+		}
+	    }
+	    var nextWpt = replayTrkJson.trackSegs[replayTrkSegIndex][replayTrkWptIndex];
+	    var nextTime = Number.parseInt(nextWpt.time);
+	    window.setTimeout(function() { showNextWpt() }, nextTime - thisTime);
+	};
+	showNextWpt();
     }
 }
 
@@ -878,4 +978,27 @@ TrackSegs.prototype.addGap = function(e) {
 };
 TrackSegs.prototype._trimDigits = function(num,digits) {
     return num.toString().replace(new RegExp("(\\.\\d{" + digits + "}).*"), "$1");
+};
+TrackSegs.prototype.lastKmH = function(smooth) {
+    if (!smooth || smooth < 2) {
+	smooth = 2;
+    }
+    // XXX this.upload is only available with enable_upload!!!
+    if (this.upload.length >= 1) {
+	var lastSeg = this.upload[this.upload.length-1];
+	if (lastSeg.length >= smooth) {
+	    var prelastUpl = lastSeg[lastSeg.length-smooth];
+	    var lastUpl    = lastSeg[lastSeg.length-1];
+	    var timedelta = lastUpl.time - prelastUpl.time;
+	    if (timedelta <= 0) {
+		return null;
+	    }
+	    var lastPolySeg = this.polyline[this.polyline.length-1];
+	    var prelastPoly = lastPolySeg[lastPolySeg.length-smooth];
+	    var lastPoly    = lastPolySeg[lastPolySeg.length-1];
+	    var metersdelta = lastPoly.distanceTo(prelastPoly);
+	    return 3.6 * metersdelta / (timedelta / 1000); // m/s -> km/h
+	}
+    }
+    return null;
 };

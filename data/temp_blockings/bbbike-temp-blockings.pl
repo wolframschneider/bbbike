@@ -130,6 +130,7 @@ EOF
        until => $isodate2epoch->("2015-05-10 20:00:00"),
        periodic => 1, # erster Termin im Jahr
        recurrences => [["yearly", days => 11, months => 4]],
+       recurrence_prewarn_days => 21,
        text  => "Rheinstraßenfest in der Rheinstraße zwischen Kaisereiche und Walther-Schreiber-Platz, am 09.05.2015 und 10.05.2015",
        data  => <<EOF,
 userdel	2::temp 5644,6936 5533,6753 5424,6584 5370,6486
@@ -6414,7 +6415,7 @@ EOF
        text  => 'Ringbahnstraße zwischen Manteuffelstraße und Schöneberger Straße gesperrt, Fahrbahnarbeiten bis 31.10.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 8717,6965 8447,6964
+userdel	2::inwork 8723,6958 8460,6959
 EOF
      },
      { from  => 1161036000, # 2006-10-17 00:00
@@ -10291,7 +10292,7 @@ EOF
        text  => 'L 161 B 5 Bredow - Paaren Kreisverkehr westl. AS Falkensee in Ri. Paaren Straaßenbau, Umbau KVK Vollsperrung 16.10.2007-08.11.2007 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -18577,24383 -19282,23081
+userdel	q4::inwork -18577,24383 -19320,23087
 EOF
      },
      { from  => 1192310001, # 2007-10-13 23:13
@@ -11379,7 +11380,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_008378',
        data  => <<EOF,
-userdel	q4::inwork 7497,5610 7599,5553 7669,5536 7816,5519 7857,5519 8038,5521
+userdel	q4::inwork 7497,5610 7599,5553 7669,5536 7816,5519 7857,5519 8038,5514
 EOF
      },
      { from  => 1208546801, # 2008-04-18 21:26
@@ -11640,7 +11641,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_008845',
        data  => <<EOF,
-userdel	1::inwork 8496,4331 8618,4187 8615,4151
+userdel	1::inwork 8511,4336 8631,4183 8615,4151
 EOF
      },
      { from  => 1212098400, # 2008-05-30 00:00
@@ -11691,7 +11692,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009134',
        data  => <<EOF,
-userdel	2::inwork 8318,4558 8418,4432 8496,4331
+userdel	2::inwork 8318,4566 8427,4435 8511,4336
 EOF
      },
      { from  => 1215452791, # 
@@ -18252,7 +18253,7 @@ EOF
        type  => 'gesperrt',
        source_id => '101100060',
        data  => <<EOF,
-userdel	2::inwork -19282,23081 -17931,23152
+userdel	2::inwork -19320,23087 -18020,23180
 EOF
      },
      { from  => 1280677738, # 2010-08-01 17:48
@@ -21321,7 +21322,7 @@ EOF
 #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
 #: source_id: 2147339529
-#: last_checked: 2016-03-03
+#: last_checked: 2016-03-10
 #: check_frequency: 90d
 userdel	q2::inwork 5258,11285 5236,10994
 EOF
@@ -23984,7 +23985,8 @@ EOF
      { from  => $isodate2epoch->("2015-04-03 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2015-04-06 23:59:59"),
        periodic => 1,
-# findet es 2016 überhaupt statt? #       recurrences => [['easter', -2]], # Karfreitag
+       recurrences => [['easter', -2]], # Karfreitag
+       recurrence_prewarn_days => 3, # # findet es 2016 überhaupt statt?
        text  => 'Hauptstraße, zwischen Kreuzung Dominicusstr. und Kreuzung Kaiser-Wilhelm-Platz Veranstaltung (Osterfest Hauptstraße), Straße gesperrt (04.04.2015 - 06.04.2015)',
        type  => 'handicap',
        data  => <<EOF,

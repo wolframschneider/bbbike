@@ -36,6 +36,7 @@ my $enable_accel       = $q->param('accel') || 0;
 my $use_osm_de_map     = $q->param('osmdemap') || 0;
 my $devel              = $q->param('devel') || 0;
 my $route_title        = $q->param('routetitle');
+my $replay_trk         = $q->param('replaytrk');
 my $show_expired_session_msg;
 my $coords;
 if ($q->param('coordssession')) {
@@ -57,8 +58,9 @@ if ($q->param('coordssession')) {
 }
 
 my $show_feature_list;
+my $show_speedometer;
 if ($devel) {
-    $enable_upload = $show_feature_list = 1;
+    $enable_upload = $show_feature_list = $show_speedometer = 1;
     # $enable_accel = 1; # XXX not yet
     $leaflet_ver = '0.7.3' if !defined $leaflet_ver;
 }
@@ -72,8 +74,10 @@ my $tpl = BBBikeLeaflet::Template->new
      cgi_config               => $cgi_config,
      show_expired_session_msg => $show_expired_session_msg,
      show_feature_list        => $show_feature_list,
+     show_speedometer         => $show_speedometer,
      coords                   => $coords,
      route_title              => $route_title,
+     replay_trk               => $replay_trk,
     );
 $tpl->process(\*STDOUT);
 
