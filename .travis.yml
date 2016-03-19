@@ -33,4 +33,4 @@ script:
  - make debian-bootstrap
  - make update-files
  #- BBBIKE_MAPERITIVE_DISABLED=1 world/t/svg.t 
- - make travis
+ - BBBIKE_MAPERITIVE_DISABLED=1 make travis
