@@ -818,7 +818,27 @@ userdel	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 1199
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 7107,9030 7044,9163 7022,9211 7006,9292
+userdel	2::temp 6945,9142 7044,9163
+',
+         'from' => 1462485600,
+         'id' => 728,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              24,
+                              'months',
+                              4
+                            ]
+                          ],
+         'source_id' => 'http://www.popula.de/veranstaltung/12105833_primavera-2016-akazienstrasse-berlin',
+         'text' => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (7.5.2016 und 8.5.2016)',
+         'type' => 'gesperrt',
+         'until' => 1462744799
+       },
        undef,
        undef,
        undef,
@@ -2703,7 +2723,29 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
+userdel	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
+userdel	q4::temp 11275,8387 11230,8402
+userdel	q4::temp 11333,8582 11255,8591 11193,8568 11133,8560
+',
+         'from' => 1461794400,
+         'id' => 2207,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              26,
+                              'months',
+                              4
+                            ]
+                          ],
+         'source_id' => 'http://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2983315-2970764-48-neukoellner-maientage.html',
+         'text' => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 29.04.2016 bis 25.05.2016',
+         'type' => 'handicap',
+         'until' => 1464299999
+       },
        undef,
        undef,
        undef,
@@ -3189,20 +3231,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: fritz
-#: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20160124
-#: source_id: 2147339574
-#: confirmed_by: srt
-userdel	1::inwork 17886,5587 17736,5441
-',
-         'from' => undef,
-         'id' => 2469,
-         'source_id' => 'IM_026665',
-         'text' => 'Sterndamm: Eisenbahnunterführung in Richtung Groß-Berliner Damm/Südostallee gesperrt',
-         'type' => 'gesperrt',
-         'until' => 1464040799
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3467,7 +3496,7 @@ userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,464
        undef,
        {
          'data' => '#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2015-10-31
+#: last_checked: 2016-03-26
 #: check_frequency: 90d
 userdel	q3::inwork 4503,10497 4485,10307
 ',
@@ -3582,7 +3611,7 @@ userdel	q3::inwork 4503,10497 4485,10307
        undef,
        undef,
        {
-         'data' => '#: last_checked: 2015-12-04
+         'data' => '#: last_checked: 2016-03-26
 #: check_frequency: 90d
 userdel	q4::inwork; 3807,11859 3666,11855
 ',
@@ -3691,12 +3720,14 @@ userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
          'data' => '#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.354922.php
 #: source_id: 2147339555
 userdel	q4::inwork; 4239,10358 4219,10279 4183,10144 4152,10033
+	3 4279,10270 4219,10279 3852,10236
+	3 3852,10236 4219,10279 4279,10270
 # REMOVED was: 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648
 ',
          'from' => 1440910800,
          'id' => 2733,
          'source_id' => 'IM_026066',
-         'text' => 'Konstanzer Str.: zwischen Olivaer Platz und Düsseldorfer Str. und Baustelle, Fahrbahn Richtung Brandenburgische Str. gesperrt, bis August 2016',
+         'text' => 'Konstanzer Str.: zwischen Olivaer Platz und Düsseldorfer Str. und Baustelle, Fahrbahn Richtung Brandenburgische Str. gesperrt, Überqueren im Zuge der Xantener Str. nicht möglich, bis August 2016',
          'type' => 'handicap',
          'until' => 1470002400
        },
@@ -3743,30 +3774,29 @@ userdel	q4::inwork; -6861,15129 -6507,15007
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
-         'data' => '#: XXX wann werden die Bauarbeiten beendet?
-#: next_check: 2016-03-29
-userdel	q4::inwork 5223,5704 5115,5551 5076,5500
+         'data' => 'userdel	q3::inwork; 17648,5338 17601,5090 17542,4772 17520,4649
 ',
-         'from' => undef,
-         'id' => 2770,
-         'text' => 'Robert-Lück-Str.: Fahrbahn zwischen Albrechtstr. und Bergstr. gesperrt ',
+         'from' => 1459634400,
+         'id' => 2757,
+         'source_id' => 'IM_026599',
+         'text' => 'Sterndamm: zwischen Südostallee und Königsheideweg Richtung Süden Bauarbeiten, Fahrbahn gesperrt, ggfs. Gehweg benutzen, 04.04.2016 bis 06.05.2016',
          'type' => 'handicap',
-         'until' => undef
+         'until' => 1462571999
        },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'data' => 'userdel	q4::inwork 19031,5316 18999,5237 18942,5236 18820,5275 18659,5330
 ',
@@ -3776,6 +3806,30 @@ userdel	q4::inwork 5223,5704 5115,5551 5076,5500
          'text' => 'Köllnischen Str.: zwischen Rudower Str. und Schnellerstr. Bauarbeiten, Einbahnstraßenregelung, vom 21.03.2016 bis 30.05.2016 ',
          'type' => 'handicap',
          'until' => 1464645600
+       },
+       {
+         'data' => '#: last_checked: 2016-03-28
+#: priority: #A
+userdel	2::inwork 16066,3799 15892,3932
+',
+         'from' => undef,
+         'id' => 2772,
+         'text' => 'Am Teltowkanal: Bauarbeiten zwischen Fenchelweg und Trollblumenweg, Durchfahrt nicht möglich',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '	3 8186,9380 8192,9619 8201,9647
+	3 8201,9647 8192,9619 8186,9380
+	3 8186,9380 8192,9619 8097,9650
+	3 8097,9650 8192,9619 8201,9647
+',
+         'from' => 1458194400,
+         'id' => 2773,
+         'source_id' => 'INKO_2147339838',
+         'text' => 'Yorckstr./Bautzener Str.: Bauarbeiten, Überqueren der Yorckstr. nicht möglich (Ersatzampel steht 100m weiter), bis zum 11.04.2016 17:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1460412000
        }
      
 );

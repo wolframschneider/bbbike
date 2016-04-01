@@ -885,7 +885,7 @@ Tullaweg - An der Heilandsweide	NL 8464,990 8492,1050
 (Fortsetzung der Waldsassener Str.)	NL 6705,-61 6543,98
 (Malteserstr. - Kamenzer Damm)	NL 7437,1859 7592,1892 7612,1918 7646,2019 7645,2110 7636,2161 7634,2267 7665,2357 7704,2482 7779,2722 7783,2730 7798,2765 7807,2961 7837,2957 7852,3183
 (Hanielweg - Parkweg)	NL 7562,1796 7565,1806 7592,1892
-(Kamenzer Damm - Wunsiedeler Weg)	NL 7776,3163 7769,3264 7790,3369 7800,3435 7788,3551 7737,3598 7694,3623 7555,3632
+(Kamenzer Damm - Wunsiedeler Weg)	NL 7776,3163 7769,3264 7784,3369 7800,3435 7788,3551 7737,3598 7694,3623 7555,3632
 Alter Radelander Weg	NL 25007,-2620 24224,-1271 24158,-1153 23457,35
 Rabindranath-Tagore-Str	NL 23540,591 23457,35
 (M¸ggelheimer Damm - Teufelssee)	NL 25570,2407 25820,2021 25848,1858
@@ -965,7 +965,7 @@ Lindenberger Weg (Blankenburg, Stadtrandsiedlung Malchow)	NL 15158,21049 15605,2
 Britzer Hafensteg	NL 13993,6221 13949,6192 13883,6163
 Straﬂe 12	NL 13915,6592 13881,6634 13883,6682
 Wildspitzweg [Nebenstraﬂe]	NL 10914,3147 10889,3011
-(Carl-Steffeck-Str. - Nahariyastr.)	NL 11494,-1468 11564,-1460 11619,-1459
+# REMOVED (mittlerweile beleuchtet) --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.464404.php --- (Carl-Steffeck-Str. - Nahariyastr.)	NL 11494,-1468 11564,-1460 11619,-1459
 (Kloster-Zinna-Str. - Mauerweg)	NL 11712,-289 11819,-286
 (Am Rudower Flieﬂ)	NL 15640,-149 15733,-69 15821,26 15909,118 16020,263 16035,298 16071,335 16098,371 16122,403 16130,420 16148,458 16169,458 16200,464 16271,609 16235,632 16230,655 16269,732 16327,834 16360,900 16365,935
 (Am Rudower Flieﬂ)	NL 16148,458 16135,473
@@ -1584,3 +1584,4 @@ zur Straﬂe B¸rgersruh	NL 8054,22688 8070,22693 8130,22772
 #: note: teilweise etwas indirekte Beleuchtung durch Leuchttafeln
 (Dieselstr. - Kiefholzstr.)	NL 14642,8022 14832,8199 14841,8207
 (Weg am CleanTech Business Park)	NL 19647,16633 19601,16679 19631,16704 19749,17028 19788,17076 19845,17235 19907,17429
+(Pankower Str. - Breitkopfstr.)	NL 7820,17549 7809,17708 7789,17853

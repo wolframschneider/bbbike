@@ -856,7 +856,7 @@ EOF
        text  => 'Leibnizstraße (Charlottenburg) zwischen Bismarckstr. und Otto-Suhr-Allee in Richtung Kantstr. Baustelle, Fahrtrichtung gesperrt bis 5.9.2004, 20:00 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1 4367,11996 4345,11710
+userdel	1 4367,11996 4337,11721
 EOF
      },
      { from  => 1094508000, # 2004-09-07 00:00
@@ -1630,7 +1630,7 @@ EOF
        text  => 'Ringstr. (Steglitz) Richtung Finkensteinallee zwischen Drakestr. und Finckensteinallee Baustelle, Fahrtrichtung gesperrt (bis 12.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 3507,3635 3375,3544 3228,3455 3184,3427 3050,3333 3011,3303 2781,3122 2701,3064 2661,3021 2637,2973 2638,2843
+userdel	q4; 3507,3635 3375,3544 3228,3455 3184,3427 3050,3333 3011,3303 2781,3122 2701,3064 2661,3021 2637,2973 2626,2844
 EOF
      },
      { from  => 1110917391, # 2005-03-15 21:09
@@ -5313,7 +5313,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003129',
        data  => <<EOF,
-userdel	1::inwork 2661,3021 2637,2973 2638,2843
+userdel	1::inwork 2661,3021 2637,2973 2626,2844
 EOF
      },
      { from  => 1160591740, # 2006-10-11 20:35
@@ -5716,7 +5716,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003108',
        data  => <<EOF,
-userdel	1::inwork 4367,11996 4345,11710
+userdel	1::inwork 4367,11996 4337,11721
 EOF
      },
      { from  => 1156793020, # 2006-08-28 21:23
@@ -6109,7 +6109,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003701',
        data  => <<EOF,
-userdel	2::temp 7579,17532 7572,17558 7540,17675 7491,17793 7477,17832 7453,17899 7432,17964 7426,17981 7405,18047 7335,18257 7291,18392 7269,18460 7233,18562 7198,18575
+userdel	2::temp 7579,17532 7572,17558 7533,17673 7491,17793 7477,17832 7453,17899 7432,17964 7426,17981 7405,18047 7335,18257 7291,18392 7269,18460 7233,18562 7198,18575
 EOF
      },
      { from  => 1221024854, #  undef
@@ -6238,11 +6238,11 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003744',
        data  => <<EOF,
-userdel	1::inwork 4367,11996 4345,11710
+userdel	1::inwork 4367,11996 4337,11721
 EOF
      },
-     { from  => $isodate2epoch->("2015-05-06 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-05-08 23:59:59"),
+     { from  => $isodate2epoch->("2016-05-06 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2016-05-08 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 24, months => 4]],
        text  => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (7.5.2016 und 8.5.2016)',
@@ -6867,7 +6867,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004242',
        data  => <<EOF,
-userdel	1::inwork 8211,17585 8095,17574 7998,17564 7915,17557 7841,17551 7828,17550 7675,17538 7579,17532
+userdel	1::inwork 8211,17585 8095,17574 7998,17564 7915,17557 7841,17551 7820,17549 7675,17538 7579,17532
 EOF
      },
      { from  => 1165266184, # 2006-12-04 22:03
@@ -9040,7 +9040,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004242',
        data  => <<EOF,
-userdel	1::inwork 8211,17585 8095,17574 7998,17564 7915,17557 7841,17551 7828,17550 7675,17538 7579,17532
+userdel	1::inwork 8211,17585 8095,17574 7998,17564 7915,17557 7841,17551 7820,17549 7675,17538 7579,17532
 EOF
      },
      { from  => undef, # 
@@ -10311,7 +10311,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006852',
        data  => <<EOF,
-userdel	2::temp 7335,18257 7405,18047 7426,17981 7432,17964 7453,17899 7477,17832 7491,17793 7540,17675 7572,17558 7579,17532
+userdel	2::temp 7335,18257 7405,18047 7426,17981 7432,17964 7453,17899 7477,17832 7491,17793 7533,17673 7572,17558 7579,17532
 EOF
      },
      { from  => 1192489272, # 2007-10-16 01:01
@@ -14786,7 +14786,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_013407',
        data  => <<EOF,
-userdel	2::temp 7579,17532 7572,17558 7540,17675 7491,17793 7477,17832 7453,17899 7432,17964 7426,17981 7405,18047 7335,18257
+userdel	2::temp 7579,17532 7572,17558 7533,17673 7491,17793 7477,17832 7453,17899 7432,17964 7426,17981 7405,18047 7335,18257
 EOF
      },
      { from  => 1246831200, # 2009-07-06 00:00
@@ -19181,12 +19181,13 @@ EOF
 userdel	q4::temp 13178,10623 13206,10651 13305,10789 13332,10832
 EOF
      },
-     { from  => $isodate2epoch->("2015-04-28 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-05-26 23:59:59"), # 1 Tag Nachlauf
+     { from  => $isodate2epoch->("2016-04-28 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2016-05-26 23:59:59"), # 1 Tag Nachlauf
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 4]],
-       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 29.04.2015 bis 25.05.2015',
+       text  => 'Neuköllner Maientage im Volkspark Hasenheide, Behinderungen möglich, 29.04.2016 bis 25.05.2016',
        type  => 'handicap',
+       source_id => 'http://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2983315-2970764-48-neukoellner-maientage.html',
        data  => <<EOF,
 userdel	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
 userdel	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
@@ -21864,7 +21865,7 @@ userdel	2::temp 5047,10381 5076,10658
 EOF
      },
      { from  => undef, # $isodate2epoch->("2014-12-06 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2016-05-23 23:59:59"),
+       until => 1459176633, # -> gesperrt-orig - $isodate2epoch->("2016-05-23 23:59:59"),
        text  => 'Sterndamm: Eisenbahnunterführung in Richtung Groß-Berliner Damm/Südostallee gesperrt',
        type  => 'gesperrt',
        source_id => 'IM_026665',
@@ -22078,7 +22079,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED (beendet) --- #: XXX bis wann gehen die Bauarbeiten? --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4579 (eventuell Einschränkungen bis 2018?) --- #: last_checked: 2013-10-16 --- #: check_frequency: 30d --- #: priority: #A
-userdel	q4::inwork 7001,8161 7250,8223
+userdel	q4::inwork 7001,8161 7158,8208 7250,8223
 EOF
      },
      { from  => 1379328680, # 2013-09-16 12:51
@@ -23455,7 +23456,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2015-10-31
+#: last_checked: 2016-03-26
 #: check_frequency: 90d
 userdel	q3::inwork 4503,10497 4485,10307
 EOF
@@ -24066,7 +24067,7 @@ EOF
        text  => 'Zillestr.: zwischen Richard-Wagner-Str. und Wilmersdorfer Str. Bauarbeiten, Einbahnstraßenregelung, offen Richtung Osten, Ende der Sperrung unbekannt',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2015-12-04
+#: last_checked: 2016-03-26
 #: check_frequency: 90d
 userdel	q4::inwork; 3807,11859 3666,11855
 EOF
@@ -24454,13 +24455,15 @@ EOF
      },
      { from  => 1440910800, # 2015-08-30 07:00
        until => $isodate2epoch->("2016-08-01 00:00:00"), # 1482501600, # 2016-12-23 15:00 # laut rbbtext bis 30.12.2016, laut fritz nur 31.07.2016, laut vmz bis August 2016
-       text  => 'Konstanzer Str.: zwischen Olivaer Platz und Düsseldorfer Str. und Baustelle, Fahrbahn Richtung Brandenburgische Str. gesperrt, bis August 2016',
+       text  => 'Konstanzer Str.: zwischen Olivaer Platz und Düsseldorfer Str. und Baustelle, Fahrbahn Richtung Brandenburgische Str. gesperrt, Überqueren im Zuge der Xantener Str. nicht möglich, bis August 2016',
        type  => 'handicap',
        source_id => 'IM_026066',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.354922.php
 #: source_id: 2147339555
 userdel	q4::inwork; 4239,10358 4219,10279 4183,10144 4152,10033
+	3 4279,10270 4219,10279 3852,10236
+	3 3852,10236 4219,10279 4279,10270
 # REMOVED was: 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648
 EOF
      },
@@ -24688,13 +24691,13 @@ EOF
 userdel	q4::inwork; 19904,3464 20012,3532
 EOF
      },
-     { from  => 1445405400, # 2015-10-21 07:30
-       until => $isodate2epoch->("2015-11-09 08:30:00"), # 1446912000, # 2015-11-07 17:00
-       text  => 'Sterndamm: zwischen Königsheideweg und Groß-Berliner Damm Bauarbeiten, Fahrbahn in Richtung S-Bhf. Schöneweide gesperrt, Radfahrer dürfen den Gehweg benutzen, 22.10.2015 07:30 Uhr bis 09.11.2015 08:30 Uhr ',
+     { from  => $isodate2epoch->("2016-04-03 00:00:00"), # 1 Tag Vorlauf # 1445405400, # 2015-10-21 07:30
+       until => $isodate2epoch->("2016-05-06 23:59:59"), # 1446912000, # 2015-11-07 17:00
+       text  => 'Sterndamm: zwischen Südostallee und Königsheideweg Richtung Süden Bauarbeiten, Fahrbahn gesperrt, ggfs. Gehweg benutzen, 04.04.2016 bis 06.05.2016',
        type  => 'handicap',
-       source_id => 'IM_026599',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.463657.php',
        data  => <<EOF,
-userdel	q2::inwork; 17520,4649 17542,4772 17601,5090 17648,5338
+userdel	q3::inwork; 17648,5338 17601,5090 17542,4772 17520,4649
 EOF
      },
      { from  => 1446015600, # 2015-10-28 08:00
@@ -24858,12 +24861,11 @@ userdel auto	3 5565,11147 5542,11075 5600,11114
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1459111015, # undef, # XXX --- seit 2016-03-01 nicht mehr bei fritz gelistet...
        text  => 'Robert-Lück-Str.: Fahrbahn zwischen Albrechtstr. und Bergstr. gesperrt ',
        type  => 'handicap',
        data  => <<EOF,
-#: XXX wann werden die Bauarbeiten beendet?
-#: next_check: 2016-03-29
+# REMOVED --- #: XXX wann werden die Bauarbeiten beendet? --- #: next_check: 2016-03-29
 userdel	q4::inwork 5223,5704 5115,5551 5076,5500
 EOF
      },
@@ -24874,6 +24876,28 @@ EOF
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.450655.php',
        data  => <<EOF,
 userdel	q4::inwork 19031,5316 18999,5237 18942,5236 18820,5275 18659,5330
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Am Teltowkanal: Bauarbeiten zwischen Fenchelweg und Trollblumenweg, Durchfahrt nicht möglich',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: last_checked: 2016-03-28
+#: priority: #A
+userdel	2::inwork 16066,3799 15892,3932
+EOF
+     },
+     { from  => 1458194400, # 2016-03-17 07:00
+       until => 1460412000, # 2016-04-12 00:00
+       text  => 'Yorckstr./Bautzener Str.: Bauarbeiten, Überqueren der Yorckstr. nicht möglich (Ersatzampel steht 100m weiter), bis zum 11.04.2016 17:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'INKO_2147339838',
+       data  => <<EOF,
+	3 8186,9380 8192,9619 8201,9647
+	3 8201,9647 8192,9619 8186,9380
+	3 8186,9380 8192,9619 8097,9650
+	3 8097,9650 8192,9619 8201,9647
 EOF
      },
     );
