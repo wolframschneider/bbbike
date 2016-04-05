@@ -135,7 +135,34 @@ userdel	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 1199
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.myfest36.de/
+userdel	2::temp 11763,10635 11722,10533 11949,10414
+userdel	2::temp 11556,10869 11770,10774 11760,10732 11781,10696 11763,10635 11505,10744 11556,10869 11589,10947 11640,11067
+userdel	2::temp 11958,11045 11897,10887 11841,10747 11824,10708 11781,10696
+userdel	2::temp 11805,10899 11803,10857
+userdel	2::temp 11275,10723 11301,10783 11329,10785 11365,10791 11403,10782 11505,10744 11463,10642 11722,10533
+userdel	2::temp 11841,10747 11770,10774 11799,10848
+userdel	2::temp 11463,10642 11275,10723 11234,10739 11159,10769
+userdel auto	3 11258,10682 11275,10723 11253,10778
+userdel auto	3 11253,10778 11275,10723 11258,10682
+',
+         'from' => 1462010400,
+         'id' => 45,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2016',
+         'type' => 'gesperrt',
+         'until' => 1462139999
+       },
        undef,
        undef,
        undef,
@@ -2549,7 +2576,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März von 6.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im April von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3118,11 +3145,82 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
+       {
+         'data' => 'userdel	2::temp 8055,12186 8119,12414
+userdel	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	2::temp 6828,12031 6884,12006
+	2::temp 6809,11979 6984,11859
+	2::temp 6778,11742 6980,11790
+	2::temp 6809,11570 6869,11567 7018,11615 7163,11738 7287,11763 7427,11731 7535,11677 7606,11629 7623,11624 7649,11717 7701,11798 7706,11878 7717,11918 7658,11947 7634,11920 7559,11888 7449,11883
+	2::temp 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8034,12093 8057,12065 8052,12033 8022,12016 8020,11937 8095,11919 8132,11910 8221,11885 8244,11878 8262,11883 8453,12099 8522,12187 8538,12245
+	2::temp 8522,12239 8466,12197
+userdel auto	3 7429,12070 7383,12095 7039,12314
+userdel auto	3 7875,12363 7816,12150 7823,12120
+userdel auto	3 7039,12314 7383,12095 7429,12070
+userdel auto	3 7823,12120 7816,12150 7875,12363
+	3 8391,12389 8344,12221 8327,12174
+	3 8327,12174 8344,12221 8391,12389
+',
+         'from' => 1463695200,
+         'id' => 2427,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              4,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'http://www.berliner-frauenlauf.de/?year=2016',
+         'text' => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 20. Mai 2016',
+         'type' => 'gesperrt',
+         'until' => 1463867999
+       },
+       {
+         'data' => 'userdel	2::temp 6244,8597 6339,8644 6454,8653
+',
+         'from' => 1463734800,
+         'id' => 2428,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              4,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'http://www.freizeittipp.com/pages/veranstaltungen/detail-1792910-Sch%C3%B6neberger-Mai-und-Spargelfest-2016-Berlin.php',
+         'text' => 'Schöneberger Mai- und Spargelfest am 21. und 22. Mai 2016 in der Freiherr-vom-Stein-Straße',
+         'type' => 'gesperrt',
+         'until' => 1463940000
+       },
        undef,
        undef,
-       undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2016
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=954647
+userdel	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
+',
+         'from' => 1461794400,
+         'id' => 2431,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              29,
+                              'months',
+                              4
+                            ]
+                          ],
+         'text' => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (29.04.2016 bis 01.05.2016)',
+         'type' => 'handicap',
+         'until' => 1462139999
+       },
        undef,
        undef,
        undef,
@@ -3521,13 +3619,14 @@ userdel	q3::inwork 4503,10497 4485,10307
        {
          'data' => '#: note: am Di, den 2015-11-17 gegen 18:30: geschlossen
 #: note: am Mi, den 2016-02-03 gegen 19:30: geschlossen
+#: note: am Di, den 2016-04-05 gegen 08:45: geschlossen
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
 ',
          'from' => undef,
          'id' => 2643,
          'recurring' => 1,
-         'text' => 'Mergenthalerring: Tor kann abends und nachts versperrt sein',
+         'text' => 'Mergenthalerring/Dieselstr.: Tor kann vormittags, abends und nachts versperrt sein',
          'until' => undef
        },
        undef,
@@ -3651,16 +3750,7 @@ userdel	q4::inwork; 3807,11859 3666,11855
        },
        undef,
        undef,
-       {
-         'data' => 'userdel	2::inwork 39384,115027 39168,114713 38881,113150
-',
-         'from' => 1432706400,
-         'id' => 2706,
-         'source_id' => 'LS/721-E/15/036',
-         'text' => 'L258: Brückenneubau bei Trebenow (Brücke über den Köhntop), Vollsperrung ab 28.05.15 bis 03.04.2016 ',
-         'type' => 'gesperrt',
-         'until' => 1459720799
-       },
+       undef,
        undef,
        undef,
        {
@@ -3775,12 +3865,13 @@ userdel	q4::inwork; -6861,15129 -6507,15007
        undef,
        undef,
        {
-         'data' => 'userdel	q3::inwork; 17648,5338 17601,5090 17542,4772 17520,4649
+         'data' => '#: source_id: 2147339908
+userdel	q3::inwork; 17648,5338 17601,5090 17542,4772 17520,4649
 ',
          'from' => 1459634400,
          'id' => 2757,
-         'source_id' => 'IM_026599',
-         'text' => 'Sterndamm: zwischen Südostallee und Königsheideweg Richtung Süden Bauarbeiten, Fahrbahn gesperrt, ggfs. Gehweg benutzen, 04.04.2016 bis 06.05.2016',
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.463657.php',
+         'text' => 'Sterndamm: zwischen Südostallee und Königsheideweg Richtung Süden Bauarbeiten, Fahrbahn vermutlich gesperrt, ggfs. Gehweg benutzen, 04.04.2016 bis 06.05.2016',
          'type' => 'handicap',
          'until' => 1462571999
        },
@@ -3830,6 +3921,37 @@ userdel	2::inwork 16066,3799 15892,3932
          'text' => 'Yorckstr./Bautzener Str.: Bauarbeiten, Überqueren der Yorckstr. nicht möglich (Ersatzampel steht 100m weiter), bis zum 11.04.2016 17:00 Uhr',
          'type' => 'gesperrt',
          'until' => 1460412000
+       },
+       {
+         'data' => 'userdel	q4::inwork; 4981,12252 5128,12149 5229,12001 5361,11910
+',
+         'from' => 1459634400,
+         'id' => 2774,
+         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.464628.php',
+         'text' => 'Einsteinufer: Bauarbeiten zwischen Marchbrücke und Straße des 17. Juni, Einbahnstraßenregelung, vom 04.04.2016 bis 15.04.2016',
+         'type' => 'handicap',
+         'until' => 1460757600
+       },
+       {
+         'data' => '#: note: am Di, den 2016-04-05 gegen 08:45: geschlossen
+	3::night 14700,8368 14688,8355 14563,8243
+	3::night 14563,8243 14688,8355 14700,8368
+',
+         'from' => undef,
+         'id' => 2775,
+         'recurring' => 1,
+         'text' => 'Mergenthalerring/Kiefholzstr.: Tor kann versperrt sein, auch tagsüber',
+         'until' => undef
+       },
+       {
+         'data' => 'userdel	q4::inwork 4542,1188 4634,1245 4706,1293 4806,1360 4897,1350 5059,1337
+',
+         'from' => 1459720800,
+         'id' => 2776,
+         'source_id' => '2147339913',
+         'text' => 'Hildburghauser Straße/Blankertzweg: Bauarbeiten zwischen Am Pfarracker und Osdorfer Str., ggfs. auch Behinderungen für den Radverkehr, 04.04.2016 bis 13.01.2017 ',
+         'type' => 'handicap',
+         'until' => 1484348400
        }
      
 );

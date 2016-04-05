@@ -367,11 +367,11 @@ EOF
 userdel	2 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359 5569,13381 5560,13382 5434,13398 5368,13406 5248,13434
 EOF
      },
-     { from  => $isodate2epoch->("2015-04-30 12:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-05-01 23:59:59"),
+     { from  => $isodate2epoch->("2016-04-30 12:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2016-05-01 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 1, months => 5]],
-       text  => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2015',
+       text  => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2016',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.myfest36.de/
@@ -21387,13 +21387,13 @@ EOF
 userdel	2::temp 10453,-2133 10509,-2131 10631,-2130 10747,-2129 10983,-2116
 EOF
      },
-     { from  => 1431715044, # 1367560678, # 2013-05-03 07:57
-       until => $isodate2epoch->("2015-05-16 23:59:59"), # 1367704799, # 2013-05-04 23:59
+     { from  => $isodate2epoch->("2016-05-20 00:00:00"), # 1431715044, # 1367560678, # 2013-05-03 07:57
+       until => $isodate2epoch->("2016-05-21 23:59:59"), # 1367704799, # 2013-05-04 23:59
        periodic => 1,
        recurrences => [['yearly', days => 4, months => 5]],
-       text  => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 16. Mai 2015',
+       text  => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 20. Mai 2016',
        type  => 'gesperrt',
-       source_id => 'http://www.berliner-frauenlauf.de/event/start-ziel-strecke.html',
+       source_id => 'http://www.berliner-frauenlauf.de/?year=2016',
        data  => <<EOF,
 userdel	2::temp 8055,12186 8119,12414
 userdel	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
@@ -21411,13 +21411,13 @@ userdel auto	3 7823,12120 7816,12150 7875,12363
 	3 8327,12174 8344,12221 8391,12389
 EOF
      },
-     { from  => $isodate2epoch->("2015-05-08 11:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-05-10 20:00:00"),
+     { from  => $isodate2epoch->("2016-05-20 11:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2016-05-22 20:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 4, months => 5]],
-       text  => 'Schöneberger Mai- und Spargelfest am 9. und 10. Mai 2015 in der Freiherr-vom-Stein-Straße',
+       text  => 'Schöneberger Mai- und Spargelfest am 21. und 22. Mai 2016 in der Freiherr-vom-Stein-Straße',
        type  => 'gesperrt',
-       source_id => 'http://www.ms-event-agentur.com/seite18.html',
+       source_id => 'http://www.freizeittipp.com/pages/veranstaltungen/detail-1792910-Sch%C3%B6neberger-Mai-und-Spargelfest-2016-Berlin.php',
        data  => <<EOF,
 userdel	2::temp 6244,8597 6339,8644 6454,8653
 EOF
@@ -21440,14 +21440,14 @@ EOF
 userdel	q4::inwork; 7085,15226 7131,15109
 EOF
      },
-     { from  => $isodate2epoch->("2015-04-30 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-05-03 23:59:59"),
-       text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz), Straße rund um den Dorfteich vermutlich gesperrt (01.05.2015 bis 03.05.2015)',
+     { from  => $isodate2epoch->("2016-04-28 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2016-05-01 23:59:59"),
+       text  => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (29.04.2016 bis 01.05.2016)',
        periodic => 1,
-       recurrences => [['yearly', days => 1, months => 5]],
+       recurrences => [['yearly', days => 29, months => 4]],
        type  => 'handicap',
        data  => <<EOF,
-#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2014
+#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2016
 #: by: http://www.berlin.de/tickets/suche/detail.php?id=954647
 userdel	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
 EOF
@@ -23574,11 +23574,12 @@ EOF
      },
      { from  => undef,
        until => undef,
-       text  => 'Mergenthalerring: Tor kann abends und nachts versperrt sein',
+       text  => 'Mergenthalerring/Dieselstr.: Tor kann vormittags, abends und nachts versperrt sein',
        recurring => 1,
        data  => <<EOF,
 #: note: am Di, den 2015-11-17 gegen 18:30: geschlossen
 #: note: am Mi, den 2016-02-03 gegen 19:30: geschlossen
+#: note: am Di, den 2016-04-05 gegen 08:45: geschlossen
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
 EOF
@@ -24693,10 +24694,11 @@ EOF
      },
      { from  => $isodate2epoch->("2016-04-03 00:00:00"), # 1 Tag Vorlauf # 1445405400, # 2015-10-21 07:30
        until => $isodate2epoch->("2016-05-06 23:59:59"), # 1446912000, # 2015-11-07 17:00
-       text  => 'Sterndamm: zwischen Südostallee und Königsheideweg Richtung Süden Bauarbeiten, Fahrbahn gesperrt, ggfs. Gehweg benutzen, 04.04.2016 bis 06.05.2016',
+       text  => 'Sterndamm: zwischen Südostallee und Königsheideweg Richtung Süden Bauarbeiten, Fahrbahn vermutlich gesperrt, ggfs. Gehweg benutzen, 04.04.2016 bis 06.05.2016',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.463657.php',
        data  => <<EOF,
+#: source_id: 2147339908
 userdel	q3::inwork; 17648,5338 17601,5090 17542,4772 17520,4649
 EOF
      },
@@ -24898,6 +24900,34 @@ EOF
 	3 8201,9647 8192,9619 8186,9380
 	3 8186,9380 8192,9619 8097,9650
 	3 8097,9650 8192,9619 8201,9647
+EOF
+     },
+     { from  => 1459634400, # 2016-04-03 00:00
+       until => 1460757600, # 2016-04-16 00:00
+       text  => 'Einsteinufer: Bauarbeiten zwischen Marchbrücke und Straße des 17. Juni, Einbahnstraßenregelung, vom 04.04.2016 bis 15.04.2016',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.464628.php',
+       data  => <<EOF,
+userdel	q4::inwork; 4981,12252 5128,12149 5229,12001 5361,11910
+EOF
+     },
+     { from  => undef,
+       until => undef,
+       text  => 'Mergenthalerring/Kiefholzstr.: Tor kann versperrt sein, auch tagsüber',
+       recurring => 1,
+       data  => <<EOF,
+#: note: am Di, den 2016-04-05 gegen 08:45: geschlossen
+	3::night 14700,8368 14688,8355 14563,8243
+	3::night 14563,8243 14688,8355 14700,8368
+EOF
+     },
+     { from  => 1459720800, # 2016-04-04 00:00
+       until => 1484348400, # 2017-01-14 00:00
+       text  => 'Hildburghauser Straße/Blankertzweg: Bauarbeiten zwischen Am Pfarracker und Osdorfer Str., ggfs. auch Behinderungen für den Radverkehr, 04.04.2016 bis 13.01.2017 ',
+       type  => 'handicap',
+       source_id => '2147339913',
+       data  => <<EOF,
+userdel	q4::inwork 4542,1188 4634,1245 4706,1293 4806,1360 4897,1350 5059,1337
 EOF
      },
     );
