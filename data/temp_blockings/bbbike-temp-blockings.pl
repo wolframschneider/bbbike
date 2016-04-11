@@ -8228,13 +8228,13 @@ EOF
 userdel	q4::temp 6178,12387 6276,12506 6314,12518 6444,12536
 EOF
      },
-     { from  => $isodate2epoch->("2015-05-08 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-05-10 23:59:59"),
+     { from  => $isodate2epoch->("2016-05-06 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2016-05-08 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 7, months => 5]],
-       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (9. und 10. Mai 2015)',
+       text  => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (7. und 8. Mai 2016)',
        type  => 'gesperrt',
-       source_id => 'http://www.laubinger.de/termine/22-boelschefest-friedrichshagen/',
+       source_id => 'http://www.laubinger.de/termine/22-boelschefest-friedrichshagen/?date=20160407',
        data  => <<EOF,
 userdel	2::temp 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
 EOF
@@ -22483,11 +22483,11 @@ EOF
 userdel	2::inwork 2219,11324 2180,11318 2102,11307
 EOF
      },
-     { from  => $isodate2epoch->("2015-05-28 15:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-05-31 22:00:00"),
+     { from  => $isodate2epoch->("2016-09-08 15:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2016-09-11 22:00:00"),
        periodic => 1, # erster Termin im Jahr
        recurrences => [["yearly", days => 9, months => 5]], # wechselnde Termine, kann auch erst Mitte September passieren
-       text  => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 29.5.2015 15 Uhr bis 31.5.2015 22 Uhr',
+       text  => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 9.9.2016 15 Uhr bis 11.9.2016 22 Uhr',
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/sonstiges/events/fest-der-nationen/',
        data  => <<EOF,
@@ -23580,6 +23580,7 @@ EOF
 #: note: am Di, den 2015-11-17 gegen 18:30: geschlossen
 #: note: am Mi, den 2016-02-03 gegen 19:30: geschlossen
 #: note: am Di, den 2016-04-05 gegen 08:45: geschlossen
+#: note: am Mo, den 2016-04-11 gegen 18:20: geschlossen
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
 EOF
@@ -24891,7 +24892,7 @@ userdel	2::inwork 16066,3799 15892,3932
 EOF
      },
      { from  => 1458194400, # 2016-03-17 07:00
-       until => 1460412000, # 2016-04-12 00:00
+       until => 1460394472, # 1460412000, # 2016-04-12 00:00
        text  => 'Yorckstr./Bautzener Str.: Bauarbeiten, Überqueren der Yorckstr. nicht möglich (Ersatzampel steht 100m weiter), bis zum 11.04.2016 17:00 Uhr',
        type  => 'gesperrt',
        source_id => 'INKO_2147339838',
@@ -24904,7 +24905,7 @@ EOF
      },
      { from  => 1459634400, # 2016-04-03 00:00
        until => 1460757600, # 2016-04-16 00:00
-       text  => 'Einsteinufer: Bauarbeiten zwischen Marchbrücke und Straße des 17. Juni, Einbahnstraßenregelung, vom 04.04.2016 bis 15.04.2016',
+       text  => 'Einsteinufer: Bauarbeiten zwischen Marchbrücke und Straße des 17. Juni, Einbahnstraßenregelung, vom 04.04.2016 bis 15.04.2016 (vielleicht bereits schon aufgehoben)',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.464628.php',
        data  => <<EOF,
@@ -24928,6 +24929,24 @@ EOF
        source_id => '2147339913',
        data  => <<EOF,
 userdel	q4::inwork 4542,1188 4634,1245 4706,1293 4806,1360 4897,1350 5059,1337
+EOF
+     },
+     { from  => 1460584800, # 2016-04-14 00:00
+       until => 1475272799, # 2016-09-30 23:59
+       text  => 'Schifffahrtsufer: Bauarbeiten zwischen Bullengraben und Stabholzgraben, komplett gesperrt, von Mitte April 2016 bis voraussichtlich Ende September 2016',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2016/pressemitteilung.466174.php',
+       data  => <<EOF,
+userdel	2::inwork -3529,13452 -3546,13503 -3556,13582 -3543,13691 -3503,13773 -3385,13937 -3345,13994
+EOF
+     },
+     { from  => 1459980000, # 2016-04-07 00:00
+       until => $isodate2epoch->("2016-05-30 23:59:59"), # 1464731999, # 2016-05-31 23:59
+       text  => 'Wassersportallee: Richtung Dahme zwischen Walchenseestr. und Regattastr. Baustelle, Fahrtrichtung gesperrt, vom 08.04.2016 bis 30.05.2016',
+       type  => 'handicap',
+       source_id => '2147339935',
+       data  => <<EOF,
+userdel	q4::inwork; 22453,1294 22493,1325 22560,1377 22655,1450
 EOF
      },
     );

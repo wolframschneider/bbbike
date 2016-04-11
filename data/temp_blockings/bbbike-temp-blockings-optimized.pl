@@ -1101,7 +1101,26 @@ userdel	2::temp 6945,9142 7044,9163
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+',
+         'from' => 1462485600,
+         'id' => 964,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              7,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'http://www.laubinger.de/termine/22-boelschefest-friedrichshagen/?date=20160407',
+         'text' => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (7. und 8. Mai 2016)',
+         'type' => 'gesperrt',
+         'until' => 1462744799
+       },
        undef,
        undef,
        undef,
@@ -3424,7 +3443,26 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 5661,9630 5657,9600 5630,9592 5602,9606 5595,9626
+',
+         'from' => 1473339600,
+         'id' => 2533,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/sonstiges/events/fest-der-nationen/',
+         'text' => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 9.9.2016 15 Uhr bis 11.9.2016 22 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1473624000
+       },
        undef,
        undef,
        undef,
@@ -3620,6 +3658,7 @@ userdel	q3::inwork 4503,10497 4485,10307
          'data' => '#: note: am Di, den 2015-11-17 gegen 18:30: geschlossen
 #: note: am Mi, den 2016-02-03 gegen 19:30: geschlossen
 #: note: am Di, den 2016-04-05 gegen 08:45: geschlossen
+#: note: am Mo, den 2016-04-11 gegen 18:20: geschlossen
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
 ',
@@ -3909,26 +3948,14 @@ userdel	2::inwork 16066,3799 15892,3932
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '	3 8186,9380 8192,9619 8201,9647
-	3 8201,9647 8192,9619 8186,9380
-	3 8186,9380 8192,9619 8097,9650
-	3 8097,9650 8192,9619 8201,9647
-',
-         'from' => 1458194400,
-         'id' => 2773,
-         'source_id' => 'INKO_2147339838',
-         'text' => 'Yorckstr./Bautzener Str.: Bauarbeiten, Überqueren der Yorckstr. nicht möglich (Ersatzampel steht 100m weiter), bis zum 11.04.2016 17:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1460412000
-       },
+       undef,
        {
          'data' => 'userdel	q4::inwork; 4981,12252 5128,12149 5229,12001 5361,11910
 ',
          'from' => 1459634400,
          'id' => 2774,
          'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.464628.php',
-         'text' => 'Einsteinufer: Bauarbeiten zwischen Marchbrücke und Straße des 17. Juni, Einbahnstraßenregelung, vom 04.04.2016 bis 15.04.2016',
+         'text' => 'Einsteinufer: Bauarbeiten zwischen Marchbrücke und Straße des 17. Juni, Einbahnstraßenregelung, vom 04.04.2016 bis 15.04.2016 (vielleicht bereits schon aufgehoben)',
          'type' => 'handicap',
          'until' => 1460757600
        },
@@ -3952,6 +3979,26 @@ userdel	2::inwork 16066,3799 15892,3932
          'text' => 'Hildburghauser Straße/Blankertzweg: Bauarbeiten zwischen Am Pfarracker und Osdorfer Str., ggfs. auch Behinderungen für den Radverkehr, 04.04.2016 bis 13.01.2017 ',
          'type' => 'handicap',
          'until' => 1484348400
+       },
+       {
+         'data' => 'userdel	2::inwork -3529,13452 -3546,13503 -3556,13582 -3543,13691 -3503,13773 -3385,13937 -3345,13994
+',
+         'from' => 1460584800,
+         'id' => 2777,
+         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2016/pressemitteilung.466174.php',
+         'text' => 'Schifffahrtsufer: Bauarbeiten zwischen Bullengraben und Stabholzgraben, komplett gesperrt, von Mitte April 2016 bis voraussichtlich Ende September 2016',
+         'type' => 'gesperrt',
+         'until' => 1475272799
+       },
+       {
+         'data' => 'userdel	q4::inwork; 22453,1294 22493,1325 22560,1377 22655,1450
+',
+         'from' => 1459980000,
+         'id' => 2778,
+         'source_id' => '2147339935',
+         'text' => 'Wassersportallee: Richtung Dahme zwischen Walchenseestr. und Regattastr. Baustelle, Fahrtrichtung gesperrt, vom 08.04.2016 bis 30.05.2016',
+         'type' => 'handicap',
+         'until' => 1464645599
        }
      
 );
