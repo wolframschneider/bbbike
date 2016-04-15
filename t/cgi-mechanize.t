@@ -936,8 +936,8 @@ for my $browser (@browsers) {
 	$agent->field("strname", "TEST IGNORE");
 	$agent->field("author",  "TEST IGNORE");
     SKIP: {
-	    skip("URL is hardcoded and not valid on bbbike.hosteurope.herceg.de or radzeit.herceg.de", 2)
-		if $cgiurl =~ /(bbbike.hosteurope|radzeit).herceg.de/;
+	    skip("URL is hardcoded and not valid on bbbike.hosteurope.herceg.de", 2)
+		if $cgiurl =~ /bbbike.hosteurope.herceg.de/;
 	    $agent->submit;
 	    my_tidy_check($agent);
 
@@ -957,8 +957,8 @@ for my $browser (@browsers) {
 	$agent->field("comments", "TEST IGNORE with umlauts äöüß");
 	$agent->field("author",   "TEST IGNORE");
     SKIP: {
-	    skip("URL is hardcoded and not valid on bbbike.hosteurope.herceg.de or radzeit.herceg.de", 2)
-		if $cgiurl =~ /(bbbike.hosteurope|radzeit).herceg.de/;
+	    skip("URL is hardcoded and not valid on bbbike.hosteurope.herceg.de", 2)
+		if $cgiurl =~ /bbbike.hosteurope.herceg.de/;
 	    $agent->submit;
 	    my_tidy_check($agent);
 
@@ -978,8 +978,8 @@ for my $browser (@browsers) {
 	$agent->field("comments", "TEST IGNORE with umlauts äöüß");
 	$agent->field("author",   "TEST IGNORE");
     SKIP: {
-	    skip("URL is hardcoded and not valid on bbbike.hosteurope.herceg.de or radzeit.herceg.de", 2)
-		if $cgiurl =~ /(bbbike.hosteurope|radzeit).herceg.de/;
+	    skip("URL is hardcoded and not valid on bbbike.hosteurope.herceg.de", 2)
+		if $cgiurl =~ /bbbike.hosteurope.herceg.de/;
 	    $agent->submit;
 	    my_tidy_check($agent);
 

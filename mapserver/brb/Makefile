@@ -75,6 +75,7 @@ BBBIKE_IMAGES_RELURL?=	/bbbike/images
 MAPSERVER_DIR=		$(LOCAL_BBBIKE_DIR)/mapserver/brb
 IMAGE_DIR=		$(LOCAL_BBBIKE_DIR)/images
 IMAGE_SUFFIX=		png
+MAPSERVER_DRIVER!=	perl -e '`shp2img -v` =~ m/SUPPORTS=AGG/ ? print "AGG" : print "GD"'
 .if exists(/etc/debian_version)
 FONTS_LIST?=		fonts-debian.list
 .else
@@ -82,13 +83,7 @@ FONTS_LIST?=		fonts-biokovo.list
 .endif
 .endif
 
-.if ${TARGET} == "radzeit.herceg.de"
-
-RADZEIT_HOST=		radzeit.herceg.de
-RADZEIT_APACHE_DIR=	$(RADZEIT_APACHE_DIR_LOCAL)
-BBBIKE_MAPSERVER_URL=	http://$(RADZEIT_HOST)/cgi-bin/mapserv
-
-.elif ${TARGET} == "bbbike.hosteurope.herceg.de"
+.if ${TARGET} == "bbbike.hosteurope.herceg.de"
 
 RADZEIT_HOST=		bbbike.hosteurope.herceg.de
 RADZEIT_APACHE_DIR_LOCAL=	$(BBBIKE_PROJECTS_DIR)/bbbike.de-hosteurope
@@ -122,7 +117,7 @@ MAPSERVER_PROG_RELURL?=	/cgi/mapserv.cgi				# ***
 MAPSERVER_URL=		http://$(HOST)$(MAPSERVER_RELURL)
 MAPSERVER_PROG_URL?=	http://$(HOST)$(MAPSERVER_PROG_RELURL)
 MAPSERVER_VERSION!=	perl -e '`shp2img -v` =~ m/mapserver version (\S+)/i and print $$1'
-#XXX enable some day: MAPSERVER_DRIVER!=	perl -e '`shp2img -v` =~ m/SUPPORTS=AGG/ ? print "AGG" : print "GD"'
+MAPSERVER_DRIVER!=	perl -e '`shp2img -v` =~ m/SUPPORTS=AGG/ ? print "AGG" : print "GD"'
 # Filesystem path of the mapserv binary:
 MAPSERVER_PROG_FSPATH?=	/home/e/eserte/www/cgi/mapserv.cgi		# ***
 IMAGE_DIR=		$(LOCAL_BBBIKE_DIR)/images
@@ -134,7 +129,7 @@ BBBIKECGI_CONFIG=	$(ABS_LOCAL_BBBIKE_DIR)/cgi/bbbike.cgi.config
 BBBIKECGI_CONFIG_LOCAL=	$(BBBIKECGI_CONFIG)
 BBBIKE_URL=		http://$(HOST)$(BBBIKE_CGI_RELURL)/bbbike.cgi
 # Which kind of images should be generated:
-IMAGE_SUFFIX=		gif # was: png					# ***
+IMAGE_SUFFIX=		png						# ***
 # File with the font mapping for this host:
 .if exists(/etc/debian_version)
 FONTS_LIST?=		fonts-debian.list
@@ -143,41 +138,6 @@ FONTS_LIST?=		fonts-biokovo.list				# ***
 .endif
 # The unix user of the webserver process:
 WWW_USER=		eserte						# ***
-
-.elif ${TARGET} == "radzeit" || ${TARGET} == "radzeit.herceg.de"
-
-HOST=			$(RADZEIT_HOST)
-HTDOCS=			public
-MAPSERVER_DIR=		$(RADZEIT_APACHE_DIR)/$(HTDOCS)/mapserver/brb
-MAPSERVER_RELURL=	/mapserver/brb
-MAPSERVER_URL=		http://$(HOST)$(MAPSERVER_RELURL)
-#MAPSERVER_PROG_RELURL=	/cgi-bin/mapserv
-#MAPSERVER_PROG_URL=	http://$(HOST)$(MAPSERVER_PROG_RELURL)
-BBBIKECGI_CONFIG=	$(RADZEIT_APACHE_DIR)/cgi-bin/bbbike.cgi.config
-BBBIKECGI_CONFIG_LOCAL=	$(RADZEIT_APACHE_DIR_LOCAL)/cgi-bin/bbbike.cgi.config
-MAPSERVER_PROG_RELURL=	$(BBBIKE_MAPSERVER_URL:C/^http:\/\/[^\/]+//)
-MAPSERVER_PROG_URL=	$(BBBIKE_MAPSERVER_URL)
-MAPSERVER_VERSION=	3.6.6
-IMAGE_DIR=		$(RADZEIT_APACHE_DIR)/BBBike/images
-BBBIKE_HTML_RELURL=	/BBBike/html
-BBBIKE_CGI_RELURL=	/cgi-bin
-BBBIKE_IMAGES_RELURL=	/BBBike/images
-BBBIKE_URL=		http://$(HOST)$(BBBIKE_CGI_RELURL)/bbbike.cgi
-IMAGE_SUFFIX=		gif
-
-.if ${TARGET} == "radzeit"
-WWW_USER=		www
-.elif ${TARGET} == "radzeit.herceg.de"
-WWW_USER=		eserte
-.endif
-
-.if ${TARGET} == "radzeit"
-FONTS_LIST=		fonts-radzeit.list
-.elif ${TARGET} == "radzeit.herceg.de" && exists(/etc/debian_version)
-FONTS_LIST=		fonts-debian.list
-.elif ${TARGET} == "radzeit.herceg.de"
-FONTS_LIST=		fonts-biokovo.list
-.endif
 
 .elif ${TARGET} == "hosteurope" || ${TARGET} == "bbbike.hosteurope.herceg.de" || ${TARGET} == "bbbike-pps"
 

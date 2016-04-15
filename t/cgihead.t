@@ -60,7 +60,7 @@ if (!$ENV{BBBIKE_TEST_NO_MAPSERVER}) {
 		);
 }
 
-if ($cgi_dir !~ m{(bbbike.hosteurope|radzeit)\Q.herceg.de}) {
+if ($cgi_dir !~ m{\Qbbbike.hosteurope.herceg.de}) {
     push @prog, "bbbikegooglemap2.cgi" if !$ENV{BBBIKE_TEST_NO_MAPSERVER};
 }
 if ($ENV{BBBIKE_LONG_TESTS}) {
