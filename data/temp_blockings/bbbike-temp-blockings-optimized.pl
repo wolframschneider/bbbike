@@ -81,26 +81,7 @@ userdel	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 1199
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 5644,6936 5533,6753 5424,6584 5370,6486
-',
-         'from' => 1460707200,
-         'id' => 10,
-         'periodic' => 1,
-         'recurrence_prewarn_days' => 21,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              11,
-                              'months',
-                              4
-                            ]
-                          ],
-         'source_id' => 'http://nareyka.events/news-events/mehr/artikel/44-fruehlingsfest-rheinstrasse.html',
-         'text' => 'Rheinstraßenfest in der Rheinstraße zwischen Kaisereiche und Walther-Schreiber-Platz, am 16.04.2016 und 17.04.2016',
-         'until' => 1460930399
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3968,16 +3949,7 @@ userdel	2::inwork 16066,3799 15892,3932
          'until' => undef
        },
        undef,
-       {
-         'data' => 'userdel	q4::inwork; 4981,12252 5128,12149 5229,12001 5361,11910
-',
-         'from' => 1459634400,
-         'id' => 2774,
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.464628.php',
-         'text' => 'Einsteinufer: Bauarbeiten zwischen Marchbrücke und Straße des 17. Juni, Einbahnstraßenregelung, vom 04.04.2016 bis 15.04.2016',
-         'type' => 'handicap',
-         'until' => 1460757600
-       },
+       undef,
        {
          'data' => '#: note: am Di, den 2016-04-05 gegen 08:45: geschlossen
 	3::night 14700,8368 14688,8355 14563,8243
@@ -4018,6 +3990,17 @@ userdel	2::inwork 16066,3799 15892,3932
          'text' => 'Wassersportallee: Richtung Dahme zwischen Walchenseestr. und Regattastr. Baustelle, Fahrtrichtung gesperrt, vom 08.04.2016 bis 30.05.2016',
          'type' => 'handicap',
          'until' => 1464645599
+       },
+       {
+         'data' => '#: note: am So 2016-04-17 gegen 15 Uhr offen
+userdel	2::night 16196,18364 16315,18208
+',
+         'from' => undef,
+         'id' => 2779,
+         'recurring' => 1,
+         'text' => 'Doberaner Str.: Durchfahrt unter Umständen nicht möglich',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );
