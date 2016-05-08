@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 2013,2016 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -15,7 +15,7 @@ package BBBikeOrgDownload;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = '0.01';
+$VERSION = '0.03';
 
 use File::Basename qw(basename);
 use File::Temp qw(tempdir);
@@ -42,21 +42,27 @@ sub new {
 	   ua           => $ua,
 	   download_dir => $download_dir,
 	   root_url     => $root_url,
-	   debug        => 0,
+	   debug        => $debug,
 	  }, $class;
 }
 
 sub listing {
     my($self) = @_;
+
     my $url = $self->{root_url} . '/';
+    my $debug = $self->{debug};
+    my $ua = $self->{ua};
 
     require XML::LibXML;
     my $p = XML::LibXML->new;
 
-    my $ua = $self->{ua};
+    print STDERR "Downloading listing from $url...\n" if $debug;
+
     my $resp = $ua->get($url);
     die "Can't get $url: " . $resp->status_line
 	if !$resp->is_success;
+
+    print STDERR "Parsing listing using XML::LibXML...\n" if $debug;
 
     my $root = $p->parse_html_string($resp->decoded_content)->documentElement;
 
@@ -67,6 +73,8 @@ sub listing {
 	$href =~ s{\.tbz$}{};
 	push @cities, $href;
     }
+
+    print STDERR "Parsing done, found " . scalar(@cities) . " cities.\n" if $debug;
 
     @cities;
 }
