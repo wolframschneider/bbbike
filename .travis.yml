@@ -32,4 +32,7 @@ script:
  - make -f world/Makefile.osm create-bbbike-web-symlinks
  - make bbbike-bootstrap
  - make update-files
+ - world/t/stale-symlinks.t
  - BBBIKE_MAPERITIVE_DISABLED=1 make travis
+ - world/t/stale-symlinks.t
+ 
