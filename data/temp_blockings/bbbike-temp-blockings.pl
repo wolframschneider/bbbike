@@ -8637,7 +8637,7 @@ EOF
        data  => <<EOF,
 #: by: http://www.berliner-zeitung.de/berlin/volksfest--treptow-in-flammen--organisiertes-besaeufnis-im-treptower-park-faellt-aus,10809148,26239080.html (fällt 2014 aus)
 userdel	2::temp 14464,9927 14465,9900 14500,9856 14635,9786 14807,9704 14889,9660 14909,9649
-userdel	2::temp 14500,9856 14483,9843
+userdel	2::temp 14500,9856 14488,9848
 EOF
      },
      { from  => 1189968907, # 
@@ -25017,6 +25017,25 @@ userdel auto	3 11709,12601 12006,12464 12118,12462
 	3 12112,12861 12064,12673 12146,12628
 	3 12039,12675 12064,12673 12112,12861
 	3 12112,12861 12064,12673 12039,12675
+EOF
+     },
+     { from  => 1462992861, # 2016-05-11 20:54
+       until => 1463954399, # 2016-05-22 23:59
+       text  => 'Karl-Marx-Allee - Berolinastr.: Zugang wegen Vorbereitungen zum Formel-E-Rennen nicht möglich, bis mindestens 21.05.2016',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp 11601,12858 11589,12768
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Alexanderufer - Charité: Tor kann verschlossen sein',
+       recurring => 1,
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: note: gesehen 2016-05-11 gegen 9 Uhr
+userdel	2::temp 8362,13466 8369,13465 8377,13463
+userdel	2::temp 8371,13399 8363,13402 8356,13404
 EOF
      },
     );

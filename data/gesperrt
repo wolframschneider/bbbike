@@ -2096,6 +2096,9 @@ Zimmerstr. -> Wilhelmstr.: Mittelstreifen	3::igndisp -3942,12957 -3962,12973 -39
 Straßenbahntrasse	3nocross::ignrte 10431,12709 10387,12760 10360,12793
 Spandauer Str. -> Spreegasse: Straßenbahntrasse	3::igndisp 10431,12709 10387,12760 10309,12700
 Spreegasse -> Spandauer Str.: Straßenbahntrasse	3::igndisp 10309,12700 10387,12760 10360,12793
+Straßenbahntrasse	3nocross::ignrte 8337,13541 8293,13519 8098,13419
+Invalidenstr. -> am Hamburger Bhf.: Straßenbahntrasse	3::igndisp 8098,13419 8293,13519 8282,13535
+am Hamburger Bhf. -> Invalidenstr.: Straßenbahntrasse	3::igndisp 8282,13535 8293,13519 8337,13541
 Mittelstreifen	3nocross::ignrte 7816,13276 7842,13292 7880,13315
 Invalidenstr. -> Weg durch den Geschichtspark: Mittelstreifen	3::igndisp 7816,13276 7842,13292 7822,13323
 Weg durch den Geschichtspark -> Invalidenstr.: Mittelstreifen	3::igndisp 7822,13323 7842,13292 7880,13315
@@ -2808,17 +2811,14 @@ Drängelgitter	BNP:3:-240 31665,48997
 Haasestr.: Bauarbeiten, keine Durchfahrt möglich	2::inwork 14328,11320 14286,11186
 Weichselplatz: Bauarbeiten, keine Durchfahrt möglich	3 12844,9351 12851,9309 12907,9073
 Weichselplatz: Bauarbeiten, keine Durchfahrt möglich	3 12907,9073 12851,9309 12844,9351
-Keibelstr.: Bauarbeiten, Durchfahrt nicht möglich	3 11201,13289 11108,13142 11045,13183
-Keibelstr.: Bauarbeiten, Durchfahrt nicht möglich	3 11201,13289 11108,13142 11167,13107
-Keibelstr.: Bauarbeiten, Durchfahrt nicht möglich	3 11045,13183 11108,13142 11201,13289
-Keibelstr.: Bauarbeiten, Durchfahrt nicht möglich	3 11167,13107 11108,13142 11201,13289
+Keibelstr.: Bauarbeiten, Durchfahrt nicht möglich	2::inwork 11108,13142 11201,13289
 Lutterbacher Str.: noch Baustelle	2::inwork 2094,3231 1993,3170 2072,3034 2163,3092
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12620,9293 12565,9200 12548,9167
 Am Nordhafen: Bauarbeiten, Straße wird zurückgebaut	2::inwork 7703,14582 7527,14684
 Treptower Park: Bauarbeiten, Weg abgesperrt	2::inwork 14443,9731 14361,9772
-Treptower Park: Bauarbeiten, Weg abgesperrt	2::inwork 14361,9772 14436,9784 14460,9814 14483,9843 14500,9856
+Treptower Park: Bauarbeiten, Weg abgesperrt	2::inwork 14361,9772 14436,9784 14460,9814 14488,9848
 Treptower Park: Bauarbeiten	2::inwork 14695,9587 14705,9578 14791,9537
-Treptower Park: Bauarbeiten, Weg abgesperrt	2::inwork 14448,9922 14460,9871 14483,9843
+Treptower Park: Bauarbeiten, Weg abgesperrt	2::inwork 14448,9922 14460,9871 14466,9861
 Clara-Immerwahr-Str.: Bauzäune	2::inwork 19202,17471 19546,17351 19798,17263 19845,17235 19914,17203
 E.T.A.-Hoffmann-Promenade: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 9679,10710 9777,10719
 SteglitzPark: Bauarbeiten, Straßen gesperrt	2::inwork 2408,1144 2352,1267
@@ -3455,3 +3455,4 @@ Altentreptower Str., linker Gehweg	1::igndisp 21573,12140 21401,12155
 Wilhelmsruher Damm, linker Geh/Radweg bis zur Fußgängerampel	1::igndisp 5525,21022 5599,21025
 Frankfurter Allee, linker Gehweg bis zur Ampel	1::igndisp 15670,12022 15717,12010
 Otto-Braun-Str., linker Gehweg	1::igndisp 11451,13301 11352,13180
+Invalidenstr., linker Gehweg	1::igndisp 8337,13541 8282,13535
