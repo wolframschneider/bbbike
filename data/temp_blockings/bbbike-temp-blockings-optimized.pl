@@ -145,7 +145,30 @@ userdel	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 1199
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.stadtfest.berlin/de/index.html
+userdel	2::temp 6514,10088 6609,10147 6626,10155 6729,10212
+userdel	2::temp 6729,10212 6971,10346
+userdel	2::temp 6628,10318 6626,10155
+userdel	2::temp 6502,10273 6628,10318 6719,10347
+userdel	2::temp 6719,10347 6729,10212 6739,10120
+',
+         'from' => 1468533600,
+         'id' => 74,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              14,
+                              'months',
+                              6
+                            ]
+                          ],
+         'text' => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (16.7.2016 bis 17.7.2016)',
+         'type' => 'gesperrt',
+         'until' => 1468792799
+       },
        undef,
        undef,
        undef,
@@ -2978,6 +3001,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
 #: note: geprüft am So, den 2015-07-19, nachmittags: offen
 #: note: geprüft am So, den 2015-08-09, nachmittags: offen
 #: note: geprüft am So, den 2015-08-30, vormittags: offen
+#: note: geprüft am So, den 2016-05-15, vormittags: offen
 userdel	2::night 14838,11410 14792,11391
 ',
          'from' => undef,
@@ -3907,9 +3931,11 @@ userdel	q3::inwork; 17648,5338 17601,5090 17542,4772 17520,4649
          'until' => 1464645600
        },
        {
-         'data' => '#: last_checked: 2016-03-28
+         'data' => '#: last_checked: 2016-05-13 vvv
 #: priority: #A
-userdel	2::inwork 16066,3799 15892,3932
+	2::inwork 16066,3799 15892,3932 15861,3942 15678,4083 15594,4152
+	2::inwork 15892,3932 15872,3888
+#: last_checked ^^^
 ',
          'from' => undef,
          'id' => 2772,
@@ -4029,6 +4055,16 @@ userdel	2::temp 8371,13399 8363,13402 8356,13404
          'id' => 2785,
          'recurring' => 1,
          'text' => 'Alexanderufer - Charité: Tor kann verschlossen sein',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: last_checked: 2016-05-13
+	2::inwork 16041,3718 16003,3652
+',
+         'from' => undef,
+         'id' => 2786,
+         'text' => 'Melissenweg: Bauarbeiten, Weg komplett gesperrt',
          'type' => 'gesperrt',
          'until' => undef
        }

@@ -572,14 +572,14 @@ EOF
        source_id => 'IM_015896',
        file  => 'badstr.bbd',
      },
-     { from  => $isodate2epoch->("2015-06-19 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2015-06-21 23:59:59"),
+     { from  => $isodate2epoch->("2016-07-15 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2016-07-17 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 6]],
-       text  => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (20.6.2015 bis 21.6.2015',
+       text  => 'Bereich Nollendorfplatz Veranstaltung (Lesbisch-schwules Stadtfest), möglicherweise gesperrte Straßen: Motzstraße/Eisenacher Straße/Fuggerstraße/Kalckreuthstraße/Nollendorfplatz (16.7.2016 bis 17.7.2016)',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: http://www.berlin.de/tickets/suche/detail.php?id=1045407
+#: by: http://www.stadtfest.berlin/de/index.html
 userdel	2::temp 6514,10088 6609,10147 6626,10155 6729,10212
 userdel	2::temp 6729,10212 6971,10346
 userdel	2::temp 6628,10318 6626,10155
@@ -20803,6 +20803,7 @@ EOF
 #: note: geprüft am So, den 2015-07-19, nachmittags: offen
 #: note: geprüft am So, den 2015-08-09, nachmittags: offen
 #: note: geprüft am So, den 2015-08-30, vormittags: offen
+#: note: geprüft am So, den 2016-05-15, vormittags: offen
 userdel	2::night 14838,11410 14792,11391
 EOF
      },
@@ -24889,9 +24890,11 @@ EOF
        text  => 'Am Teltowkanal: Bauarbeiten zwischen Fenchelweg und Trollblumenweg, Durchfahrt nicht möglich',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2016-03-28
+#: last_checked: 2016-05-13 vvv
 #: priority: #A
-userdel	2::inwork 16066,3799 15892,3932
+	2::inwork 16066,3799 15892,3932 15861,3942 15678,4083 15594,4152
+	2::inwork 15892,3932 15872,3888
+#: last_checked ^^^
 EOF
      },
      { from  => 1458194400, # 2016-03-17 07:00
@@ -25036,6 +25039,15 @@ EOF
 #: note: gesehen 2016-05-11 gegen 9 Uhr
 userdel	2::temp 8362,13466 8369,13465 8377,13463
 userdel	2::temp 8371,13399 8363,13402 8356,13404
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Melissenweg: Bauarbeiten, Weg komplett gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: last_checked: 2016-05-13
+	2::inwork 16041,3718 16003,3652
 EOF
      },
     );

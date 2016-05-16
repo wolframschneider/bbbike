@@ -105,6 +105,7 @@ sub new_with_removed_points {
 # NoStringApprox: do not use String::Approx, even if available
 # ErrorDef: Angabe der Reihenfolge (match begin, match errors)
 # Agrep: maximale Anzahl von erlaubten Fehlern
+# UseTreAgrep: use tre-agrep instead of agrep
 # Return value: Array with matched street names
 ### AutoLoad Sub
 
@@ -177,7 +178,10 @@ sub _agrep {
 
     my $grep_type;
     my @data;
-    if (!$OLD_AGREP && is_in_path('agrep')) {
+    if ($arg{UseTreAgrep}) {
+	$grep_type = 'tre-agrep';
+	$pattern = quotemeta $pattern;
+    } elsif (!$OLD_AGREP && is_in_path('agrep')) {
 	$grep_type = 'agrep';
 	# agrep does not cope with utf-8, so convert to octets
 	if (defined $file_encoding) {
@@ -234,16 +238,17 @@ sub _agrep {
 	if (grep($_ eq 'strasse', @extra)) {
             next if ($grep_pattern !~ s/(s)traße$/$1tr./i);
 	}
-	if ($grep_type eq 'agrep') {
+	if ($grep_type eq 'agrep' || $grep_type eq 'tre-agrep') {
 	    my @args = '-i';
 	    $grep_pattern = ($begin ? "^$grep_pattern" : $grep_pattern);
 	    if ($err > 0) { CORE::push(@args, "-$err") }
-
-	    warn "AGREP: ", join " ", 'agrep', @args, $grep_pattern, @paths, "\n" if $debug;
-	    open(AGREP, "-|") or
-	      exec 'agrep', @args, $grep_pattern, @paths or
-		die "Can't exec program: $!";
-
+	    my @cmd = ($grep_type, @args, $grep_pattern, @paths);
+	    open(AGREP, "-|") or do {
+		# See https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=598168
+		local $ENV{LC_ALL} = $grep_type eq 'tre-agrep' ? 'C' : $ENV{LC_ALL};
+		exec @cmd or
+		    die "Can't exec '@cmd': $!";
+	    };
 	    if (defined $file_encoding) {
 		switch_encoding(\*AGREP, $file_encoding);
 	    }
