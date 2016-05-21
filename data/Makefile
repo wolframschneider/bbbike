@@ -10,9 +10,7 @@
 # Debian users may use freebsd-make resp. fmake from the freebsd-buildutils
 # package.
 
-.ifndef HOSTNAME
-HOSTNAME	!= hostname
-.endif
+UNAME!=	uname
 
 BBBIKEDIR=		..
 MISCDIR=		$(BBBIKEDIR)/misc
@@ -27,6 +25,11 @@ PERL_UTF8?=		${PERL}
 NO_LOCALE=		env LANG=C LC_ALL=C LC_CTYPE=C
 SED?=			${NO_LOCALE} sed
 CUT?=			${NO_LOCALE} cut
+.if ${UNAME} == Darwin
+ECHO_N=			/bin/echo -n
+.else
+ECHO_N=			echo -n
+.endif
 
 VALID_DATE?=		today
 
@@ -122,7 +125,7 @@ READABLE=	chmod ugo+r
 
 # The locale was named de_DE.ISO_8859-1 in FreeBSD 4.x, but now with
 # an underline less.
-.ifdef .FreeBSD
+.if ${UNAME} == FreeBSD
 GERMAN_LOCALE=de_DE.ISO8859-1
 .else
 # e.g. debian
@@ -971,7 +974,7 @@ ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd:	\
 		${PERSISTENTTMPDIR}/bbbike-temp-blockings-optimized.bbd \
 		${PERSISTENTTMPDIR}/XXX-indoor.bbd \
 		${PERSISTENTTMPDIR}/XXX-outdoor.bbd
-	echo -n > ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
+	${ECHO_N} > ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
 	echo "#: line_dash: 8, 5" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
 	echo "#: line_width: 5" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
 	echo "#:" >> ${PERSISTENTTMPDIR}/fragezeichen-nextcheck.bbd~
@@ -1038,7 +1041,7 @@ ${PERSISTENTTMPDIR}/unpaved.bbd:	qualitaet_s
 .for xxxtype in ${XXX_TARGETS:C/^/XXX-/}
 ${PERSISTENTTMPDIR}/${xxxtype}.bbd:	${SOURCE_TARGETS:S|^|${PERSISTENTTMPDIR}/.${xxxtype}-|} \
 					handicap_s-orig gesperrt-orig
-	echo -n > $@~
+	${ECHO_N} > $@~
 	echo "#: line_dash: 8, 5" >> $@~
 	echo "#:" >> $@~
 .for i in ${SOURCE_TARGETS}
@@ -1099,9 +1102,7 @@ ${PERSISTENTTMPDIR}/Potsdam.coords.bbd: Potsdam.coords.data
 
 OPENGEODB_D_ORTE_FILE=		DE.tab
 OPENGEODB_D_ORTE_DISTURL=	http://fa-technik.adfc.de/Codierung/opengeodb/DE.tab
-.if ${HOSTNAME} == "mom.herceg.de"
-OPENGEODB_DIR=		/amd/vran/root/usr/ports/distfiles/opengeodb
-.elif exists(/usr/ports/distfiles/opengeodb)
+.if exists(/usr/ports/distfiles/opengeodb)
 OPENGEODB_DIR=		/usr/ports/distfiles/opengeodb
 .else
 OPENGEODB_DIR=		${PERSISTENTTMPDIR}
@@ -1117,14 +1118,14 @@ fetch-opengeodb:	${OPENGEODB_D_ORTE_PATH}
 # NOTE: This will only fetch one version. To fetch a newer one, remove
 # the old first.
 ${OPENGEODB_D_ORTE_PATH}:
-	@echo -n "Should I fetch ${OPENGEODB_D_ORTE_DISTURL} to ${OPENGEODB_D_ORTE_PATH}? (CTRL-C to abort) "
+	@${ECHO_N} "Should I fetch ${OPENGEODB_D_ORTE_DISTURL} to ${OPENGEODB_D_ORTE_PATH}? (CTRL-C to abort) "
 # && true only for bugs in old pmake
 	@read yn && true
 	wget -O ${OPENGEODB_D_ORTE_PATH}~ ${OPENGEODB_D_ORTE_DISTURL}
 	mv ${OPENGEODB_D_ORTE_PATH}~ ${OPENGEODB_D_ORTE_PATH}
 
 ${OPENGEODB_D_PLZ_PATH}:
-	@echo -n "Should I fetch ${OPENGEODB_D_PLZ_DISTURL} to ${OPENGEODB_D_PLZ_PATH}? (CTRL-C to abort) "
+	@${ECHO_N} "Should I fetch ${OPENGEODB_D_PLZ_DISTURL} to ${OPENGEODB_D_PLZ_PATH}? (CTRL-C to abort) "
 # && true only for bugs in old pmake
 	@read yn && true
 	wget -O ${OPENGEODB_D_PLZ_PATH}~ ${OPENGEODB_D_PLZ_DISTURL}
@@ -1418,9 +1419,9 @@ check-disabled:
 	@touch $@
 
 .check_strassen_plaetze_unique:	strassen-orig plaetze-orig
-	${CUT} -d"	" -f1 strassen-orig | sort -u > /tmp/strassen-names
-	${CUT} -d"	" -f1 plaetze-orig  | sort -u > /tmp/plaetze-names
-	duplicates=`sort /tmp/strassen-names /tmp/plaetze-names | grep -v '^#' | $(NO_LOCALE) uniq -d`; \
+	${CUT} -d"	" -f1 strassen-orig | ${SORT_NO_LOCALE} -u > /tmp/strassen-names
+	${CUT} -d"	" -f1 plaetze-orig  | ${SORT_NO_LOCALE} -u > /tmp/plaetze-names
+	duplicates=`${SORT_NO_LOCALE} /tmp/strassen-names /tmp/plaetze-names | grep -v '^#' | $(NO_LOCALE) uniq -d`; \
 	if [ "$$duplicates" != "" ]; then \
 	    echo "Found duplicates:"; \
 	    echo "$$duplicates"; \
@@ -1522,11 +1523,11 @@ check-disabled:
 
 .for i in u s
 .check_$(i)bahnhof2:	$(i)bahnhof Berlin.coords.data
-	grep -i '	$(i)[AB] ' $(i)bahnhof |\
+	${NO_LOCALE} grep -i '	$(i)[AB] ' $(i)bahnhof |\
 	    $(SED) -e 's/ *(.*)//' -e 's/	.*//' -e 's/bhf\./bahnhof/' -e 's/Bhf\./Bahnhof/' |\
 	    $(SORT_GERMAN_LOCALE) -u > /tmp/$(i)bahnhof1
-	grep -i '^$(i)-Bhf' Berlin.coords.data |\
-	    egrep -v 'S-Bhf (F¸rstenbrunn)' |\
+	${NO_LOCALE} grep -i '^$(i)-Bhf' Berlin.coords.data |\
+	    ${NO_LOCALE} egrep -v 'S-Bhf (F¸rstenbrunn)' |\
 	    $(SED) -e 's/ *(.*)//' -e 's/S-Bhf //' -e 's/U-Bhf //' -e 's/|.*//' |\
 	    $(SORT_GERMAN_LOCALE) -u > /tmp/$(i)bahnhof2
 	diff /tmp/$(i)bahnhof1 /tmp/$(i)bahnhof2
@@ -1727,10 +1728,10 @@ ${CHECK_RECURRING_TEMP_BLOCKINGS_TARGET}: temp_blockings/bbbike-temp-blockings.p
 	@touch $@
 
 count-streets:
-	@echo -n "Berlin:        "; grep -v "^#" strassen                            | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
-	@echo -n "Landstraﬂen:   "; grep -v "^#" landstrassen landstrassen2 | ${CUT} -f1 | sort -u | wc -l
-	@echo -n "  Potsdam:     "; grep -v "^#" landstrassen | fgrep "(Potsdam)"    | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
-	@echo -n "  Oranienburg: "; grep -v "^#" landstrassen | fgrep "(Oranienburg" | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
+	@${ECHO_N} "Berlin:        "; grep -v "^#" strassen                            | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
+	@${ECHO_N} "Landstraﬂen:   "; grep -v "^#" landstrassen landstrassen2 | ${CUT} -f1 | sort -u | wc -l
+	@${ECHO_N} "  Potsdam:     "; grep -v "^#" landstrassen | fgrep "(Potsdam)"    | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
+	@${ECHO_N} "  Oranienburg: "; grep -v "^#" landstrassen | fgrep "(Oranienburg" | grep -v "^(" | grep -v '\[.*\]' | ${CUT} -f1 | sort -u | wc -l
 
 check-crossings:	check-crossings-important \
 			check-crossings-less-important
@@ -1838,7 +1839,7 @@ ${PERSISTENTTMPDIR}/unhandled_streets_$(plz)XXX.bbd:	${PERSISTENTTMPDIR}/Berlin$
 
 ######################################################################
 
-.ifdef .FreeBSD
+.if ${UNAME} == FreeBSD
 check-coords.data:	check-Berlin.coords.data check-Potsdam.coords.data
 .else
 check-coords.data:
