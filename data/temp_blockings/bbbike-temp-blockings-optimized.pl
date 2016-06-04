@@ -1709,7 +1709,29 @@ userdel	2::temp 22133,4644 22074,4664
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	q4::temp 9666,11935 9656,12021
+	2::temp 9524,12010 9656,12021
+	2::temp 9536,11922 9666,11935
+',
+         'from' => 1468792800,
+         'id' => 1710,
+         'periodic' => 1,
+         'postwarn_days' => 2,
+         'prewarn_days' => 3,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              2,
+                              'months',
+                              7
+                            ]
+                          ],
+         'text' => 'Markgrafenstr. zwischen Taubenstr.. und Jägerstr.: Fahrbahn gesperrt sowie Sperrung des Gendarmenmarkts: Classic Open Air (21.7.2016 - 25.7.2016; Sperrungen fangen schon früher an und dauern länger)',
+         'type' => 'gesperrt',
+         'until' => 1469649600
+       },
        undef,
        undef,
        undef,
@@ -2388,7 +2410,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Mai von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juni von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2418,7 +2440,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'source_id' => 'http://www.erkner.de/271.html?date=20160415',
          'text' => 'Erkner: Heimatfest, 3.6.2016 bis 5.6.2016',
          'type' => 'gesperrt',
-         'until' => 1465163999
+         'until' => 1465178400
        },
        undef,
        undef,
@@ -3067,36 +3089,51 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
        {
-         'data' => 'userdel	2::temp 20755,5750 20716,6029 20707,6098 20623,6136 20453,6211 20464,6237
-userdel	2::temp 19976,6087 20015,6069 20293,6278 20200,6321 20106,6357
-userdel	2::temp 20200,6321 20262,6493 20225,6631
-userdel	2::temp 20716,6029 20593,6082 20428,6157 20453,6211 20293,6278
-userdel	2::temp 19976,6087 20064,6290 20106,6357
+         'data' => 'userdel	2::temp 14161,11930 14285,12190
 ',
-         'from' => 1464559200,
-         'id' => 2436,
+         'from' => 1464951600,
+         'id' => 2433,
          'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              30,
+                              3,
                               'months',
-                              5
+                              6
                             ]
                           ],
-         'source_id' => 'http://fez-berlin.de/nc/programm/detailansicht/internationales-kindertagsfest-303/',
-         'text' => 'Internationaler Kindertag im FEZ, einige Wege und Straßen können gesperrt sein, 1. Juni 2016',
+         'source_id' => 'http://www.xhain.info/termine/fiesta-kreutziga.htm',
+         'text' => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 04.06.2016',
          'type' => 'gesperrt',
-         'until' => 1464818399
+         'until' => 1465077599
        },
        undef,
        undef,
        undef,
+       undef,
+       undef,
+       {
+         'data' => 'userdel	q4::temp 5475,10808 5351,10760 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435
+',
+         'from' => 1464832800,
+         'id' => 2439,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              2,
+                              'months',
+                              6
+                            ]
+                          ],
+         'source_id' => 'IM_025248',
+         'text' => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 03.06.2016 bis 06.06.2016 früh',
+         'type' => 'handicap',
+         'until' => 1465178400
+       },
        undef,
        undef,
        undef,
@@ -3643,7 +3680,34 @@ userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	q4::inwork 8634,10426 8384,10507 8525,10626
+userdel	q4::inwork 8348,10636 8335,10518 8350,10499
+',
+         'from' => 1466978400,
+         'id' => 2718,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              8,
+                              'months',
+                              1
+                            ],
+                            [
+                              'yearly',
+                              'days',
+                              27,
+                              'months',
+                              6
+                            ]
+                          ],
+         'source_id' => '2147339708',
+         'text' => 'Schöneberger Str. und Luckenwalder Str.: Sperrungen wegen der Fashion Week, 28.06.2016-30.06.2016',
+         'type' => 'handicap',
+         'until' => 1467323999
+       },
        {
          'data' => '	2::inwork 9998,16547 9982,16527 9959,16510
 ',
@@ -3749,16 +3813,7 @@ userdel	q4::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	q4::inwork 19031,5316 18999,5237 18942,5236 18820,5275 18659,5330
-',
-         'from' => 1458428400,
-         'id' => 2771,
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.450655.php',
-         'text' => 'Köllnischen Str.: zwischen Rudower Str. und Schnellerstr. Bauarbeiten, Einbahnstraßenregelung, vom 21.03.2016 bis 30.05.2016 ',
-         'type' => 'handicap',
-         'until' => 1464645600
-       },
+       undef,
        {
          'data' => '#: last_checked: 2016-05-13 vvv
 #: priority: #A
@@ -3808,16 +3863,7 @@ userdel	2::inwork -3503,13773 -3385,13937 -3345,13994
          'type' => 'gesperrt',
          'until' => 1475272799
        },
-       {
-         'data' => 'userdel	q4::inwork; 22453,1294 22493,1325 22560,1377 22655,1450
-',
-         'from' => 1459980000,
-         'id' => 2778,
-         'source_id' => '2147339935',
-         'text' => 'Wassersportallee: Richtung Dahme zwischen Walchenseestr. und Regattastr. Baustelle, Fahrtrichtung gesperrt, vom 08.04.2016 bis 30.05.2016',
-         'type' => 'handicap',
-         'until' => 1464645599
-       },
+       undef,
        {
          'data' => '#: note: am So 2016-04-17 gegen 15 Uhr offen
 userdel	2::night 16196,18364 16315,18208
