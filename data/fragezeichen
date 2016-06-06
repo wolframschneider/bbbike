@@ -32,7 +32,6 @@ Lübbenau - Lübben durch den Spreewald: Wegführung? Qualität (wahrscheinlich Asph
 Lübbenau - Lübben durch den Spreewald: Wegführung? Qualität?	? 49325,-59250 49125,-58625 49223,-58598 49216,-58360 49253,-58348 49226,-58180 49354,-58046 49274,-57748 49265,-57617 49076,-57489 49003,-57346 48826,-57257 48732,-57245 48714,-57160 48479,-56870 48379,-56651
 Unterspreewald, Schlepzig - Lübben: genaue Wegführung? Qualität?	? 44543,-41337 44549,-41553 44478,-41627 44463,-41919 44241,-42026 44299,-42288 44223,-42592 44125,-42711 44265,-42973 43927,-43336 43735,-43272 43528,-43308 43534,-43510 43762,-43625 43823,-43912 43759,-44076 43808,-44341 43988,-44549 44046,-44875 44165,-45353 44235,-45399 44475,-45429 44619,-45304 44741,-45521 44646,-45597 44609,-45743 44658,-45767 44896,-45719 44945,-45810 44887,-46121 44936,-46310 44914,-46465 44619,-46815 44832,-47117 45201,-47690 45347,-47562 45560,-47531 45557,-47760 45676,-47888 45490,-48220 45304,-48339 45353,-48714 45429,-48884 45368,-49110 45499,-49582 45475,-49759 45420,-50118 45642,-50359 45874,-50837 45914,-51087
 Zachow - Trebelsee: Qualität (Betonplatten?)?	? -31583,7939 -31087,7275
-Gutenpaaren - Trebelsee: Qualität?	? -32804,7332 -32587,6112 -32200,5825
 Am Trebelsee: Deich, Qualität?	? -32200,5825 -31812,6387 -31525,6962 -31087,7275
 Steinhöfel - Poratz - Ringenwalde: Qualität?	? 37482,74476 37025,74400 36800,74137 36612,74162 35775,73750 35469,73594 35097,73563 33687,73037 33018,72768 32782,72789 32556,73083 31981,73174 30883,72827 30731,72711 30287,72823
 Lindenallee: Qualität? laut "Berliner Umland" witterungsabhängige Strecke; laut "mobil-potsdam.de" teils eine "Promenade", teils betoniert	? -15169,1741 -15132,1992 -15182,2309 -15290,2665 -15459,2946
@@ -492,7 +491,7 @@ Zum Bahnübergang (Marquardt): Qualität?	? -18385,4346 -18620,4569
 Garz - Korswandt: Qualität? Sind Teile der Strecke für Autos gesperrt?	? 59381,165027 59305,165173 59262,165310 59177,165487 59174,165716 59208,165863
 Trassenheide - Zinnowitz: Qualität? Für Autos befahrbar? Straßennamen?	? 38457,187932 38487,187914 38526,187844 39424,187218 39495,187106 39521,187015 39609,186946 39753,186914 39896,186840 39981,186689 40036,186630 40207,186576 40254,186586 40249,186550 40243,186524 40204,186453 40262,186387 40489,186067 40530,185990 40621,185903 40685,185758 40751,185719
 Döberitzer Str., Fahrland: Qualität?	? -16182,6673 -16165,6692 -16244,7050 -16270,7417 -16400,7733
-Kietzer Str. (Potsdam-Fahrland): Qualität?	? -16101,6287 -16196,6572 -16147,6611
+Kietzer Str. (Potsdam-Fahrland): Qualität?	? -16104,6299 -16196,6572 -16147,6611
 Gartenstr. (Potsdam-Fahrland): Qualität?	? -15472,6477 -15533,6563 -15562,6678 -15603,6771 -15712,6866 -15853,6997 -15924,7041 -16009,7063 -16107,7073 -16244,7050
 Von-Stechow-Str. (Potsdam-Fahrland): Qualität?	? -15594,6231 -15503,6422 -15472,6477 -15442,6529 -15390,6584 -15336,6619 -15285,6630 -15180,6622 -15088,6612 -14999,6624 -14959,6643 -14930,6668 -14916,6699 -14913,6732
 Mühlenring (Potsdam-Fahrland): Qualität?	? -15325,6461 -15372,6486 -15442,6529 -15485,6598 -15502,6664 -15433,6678 -15416,6621 -15390,6584 -15348,6547 -15372,6486
@@ -781,10 +780,6 @@ Briesen - Fürstenwalde: Qualität?	? 69963,-5374 69483,-4393 68638,-3455 68429,-3
 Striewitzweg (Teltow): Qualität im südlichen Abschnitt der Straße: wo genau sind die Kopfsteinpflaster- und Betonabschnitte? Ist ein Abschnitt südlich der Potsdamer Str. eine Einbahnstraße?	? 281,-1433 313,-1363 385,-1205 403,-1166 457,-1051 528,-917 598,-757 590,-618
 Striewitzweg (Teltow): Qualität im nördlichen Abschnitt? Ist die Straße hier verkehrsberuhigt?	? 577,-543 550,-396 525,-347
 Altdöbern - Calau: Qualität?	? 55259,-83091 55388,-83077 55768,-82862 54521,-79452 54572,-78865 54600,-77483 53827,-76082
-Seidenschwanzstr.: Qualität? Wo wird die Straße genau liegen?	?::projected 26651,12941 26576,12848 26540,12804 26511,12768 26472,12720 26328,12845
-Wildkatzenweg: Qualität? Wo wird die Straße genau liegen?	?::projected 26511,12768 26362,12887
-Ringeltaubenweg: Qualität? Wo wird die Straße genau liegen?	?::projected 26540,12804 26394,12927
-Mauswieselweg: Qualität? Wo wird die Straße genau liegen?	?::projected 26576,12848 26427,12967
 Börnicke - Staffelde: existieren Radwege zwischen Börnicke und Staffelde?	? -21772,30661 -20747,31713 -19914,32444 -19361,33130 -19129,33814 -18939,34241 -18555,34920 -18212,35362
 Kramnitzer Weg: Qualität der Verlängerung nach Westen hin? Existiert eine Ausschilderung	? -9353,5012 -9395,5025 -9537,5083 -9617,5086
 Radwegbau in Golmer Chaussee und Wublitzstr.	?::inwork -17646,1636 -18091,1642 -18350,1540 -18688,1177 -18718,1243 -18673,1785 -18728,2153 -18989,2236 -19233,2251 -19422,2220 -19656,2362 -19721,2368
@@ -837,7 +832,7 @@ Kossätenweg (Potsdam-Golm) (PLZ=14476): Qualität?	? -19247,-20 -18785,-77
 Thomas-Müntzer-Str. (Potsdam-Golm): Qualität?	? -18889,-591 -18882,-573 -18833,-562 -18822,-430 -18804,-345 -18785,-247 -18785,-77
 Thomas-Müntzer-Str. (Potsdam-Golm): Qualität?	? -18804,-345 -19183,-364
 Falknerstr. (Potsdam-Golm): Qualität?	? -18889,-591 -18889,-641 -18939,-739
-Paarener Dorfstraße (Potsdam-Uetz-Paaren): Qualität?	? -21443,8306 -21412,8481 -21390,8578 -21226,8822 -20996,8861 -20405,9004
+Paarener Dorfstraße (Potsdam-Uetz-Paaren): Qualität?	? -21464,8331 -21412,8481 -21390,8578 -21226,8822 -20996,8861 -20405,9004
 Paarener Mühlenweg (Potsdam-Uetz-Paaren): Qualität?	? -21412,8481 -21200,8474 -20914,8535 -20337,8664 -20176,8678 -20040,8625 -19994,8571 -19854,8696 -19818,8664 -19686,8675 -19635,8657 -19549,8761 -19202,8786 -19186,8685
 Kirschweg (Potsdam-Uetz-Paaren): Qualität?	? -20914,8535 -20996,8861
 Laubenweg (Potsdam-Grube): Qualität?	? -19987,2459 -19891,2447
@@ -1088,7 +1083,6 @@ geschlossen bei Bedarf (?) (Zbr)	? 27657,-11741
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?) (B)	? 40248,14503
 # added from strassen
 Abtweiler Str. (heißt die Straße "Abtweilerstraße" oder "Abtweiler Str."?)	? 29188,1086 29098,1148 29060,1179
-Bisamstr. (wie ist die Fahrbahnbeschaffenheit der Bisamstr.? Kann man von Spitzmausweg und Waschbärweg direkt zur Bisamstr. gelangen?)	? 26468,13021 26427,12967 26394,12927 26362,12887 26328,12845 26195,12682 26315,12618 26201,12499
 Harry-Glaß-Str. (Ist der Straßenname "Harry-Glas-Str." oder "Harry-Glaß-Str."?)	? 17552,16461 17603,16415 17611,16396 17643,16322
 # added from landstrassen
 B5 (Umfahrung Nauen) (ist die Umfahrung Nauen auch für Radfahrer benutzbar?)	? -24421,19803 -24681,20018 -24904,20093 -25871,20229 -26745,20437 -27095,20987 -27689,21958 -28075,22250
@@ -1168,13 +1162,11 @@ Bamihlstr.: sehr gute Qualität (liegt hier Asphalt oder Beton?)	? -2602,16809 -2
 Badeweg: guter Belag (liegt hier Asphalt oder Beton?)	? -4188,2674 -4292,2762
 Badeweg: guter Belag (liegt hier Asphalt oder Beton?)	? -4292,2762 -4471,2917
 Eberbacher Str.: sehr gute Qualität (liegt hier Asphalt oder Beton?)	? 4397,7375 4330,7375 4162,7375 4059,7375 3961,7375
-Marchwitzastr.: gute Qualität (liegt hier Asphalt oder Beton?)	? 20141,13071 20072,13070 19940,13128 19934,13318 20163,13318
 Dörfelweg: Asphalt oder Beton (liegt hier Asphalt oder Beton?)	? 9730,-33 9578,-92 9500,-115
 (Mauerweg am Eiskeller): asphaltiert (ist dieser Abschnitt tatsächlich asphaltiert?)	? -7990,19888 -8266,19811 -8469,19845 -8494,19713 -8448,19710 -8521,19390 -8372,19402 -8272,19086 -8206,19007 -8011,19059
 Baluschekweg: Asphalt (Qualität? Asphalt oder Verbundsteinpflaster oder etwas anderes?)	? -5877,13375 -5860,13283 -5859,13270 -5822,13088 -5784,12858
 Karmeliterweg: Kleinpflastersteine (Ist die Qualität nach den Bauarbeiten gleich geblieben? Liegen hier noch immer Kleinpflastersteine?)	? 1868,24633 1924,24672 2003,24702 2120,24740
 Rustweg: OK (ist hier asphaltiert oder betoniert?)	? -2827,18639 -2673,18634 -2594,18630 -2523,18627 -2454,18624
-Finsterberger Str.: fester Sandweg (Ist die Finsterberger Str. mittlerweile asphaltiert? Existiert eine Einbahnstraßenregelung für Radfahrer?)	? 23233,12406 23129,12496 23084,12573
 Am Bogen: Asphalt (Qualität? Liegt hier Asphalt oder Beton?)	? -6607,15816 -6510,15804 -6497,15817 -6485,15915 -6476,15944 -6449,15965 -6419,15965 -6322,15936
 (Falkenseer Chaussee - Am Bogen): Asphalt (Qualität? Liegt hier Asphalt oder Beton?)	? -6313,15996 -6322,15936
 (Verlängerte Waldallee): vermutlich Asphalt (liegt hier tatsächlich Asphalt?)	? -8917,5986 -8929,5984 -9031,5984 -9054,5984

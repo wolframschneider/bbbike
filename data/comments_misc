@@ -27,7 +27,7 @@ Richtung Teufelssee	CP2; 425,8766 297,8894
 Richtung S-Bhf. Nikolassee	CP2; -2834,5578 -3605,4520
 Richtung S-Bhf. Grunewald	CP2; -2834,5578 -1925,6790
 Richtung S-Bhf.	CP2; -4001,2858 -3956,2787
-Richtung Teufelssee/Saubucht	CP2; -3475,6780 -3418,6747
+Richtung Teufelssee/Saubucht	CP2; -3483,6789 -3418,6747
 ausgeschildert Richtung Breitenbachplatz	CP2; 3346,7369 3397,7333
 als Ganghoferstr. ausgeschildert	CP2; 12960,8246 12918,8232
 Sredzkistr. - Christburger Str.: Dr‰ngelgitter auf dem Mittelstreifen	CP 11535,14688 11633,14631 11912,14486
@@ -65,6 +65,8 @@ Kreisverkehr	Roundabout -556,-1402
 Kreisverkehr	Roundabout -5463,-3467
 Kreisverkehr	Roundabout -10673,-2128
 Kreisverkehr	Roundabout -80179,46546
+Kreisverkehr	Roundabout -18722,5775
+Kreisverkehr	Roundabout -18598,5444
 (Waldweg ¸ber den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
 Privatstraﬂe der DB	CS 5710,7820 6273,7849
 Albrecht-Thaer-Weg: Privatstraﬂe, Tore bei den Einfahrten	CS 3350,6467 3449,6863
@@ -291,7 +293,8 @@ Ausgeschildert als "Sittener Zeile"	CP2; 3443,2138 3513,2135
 Ausgeschildert als "Reinacher Zeile"	CP2; 3513,2135 3443,2138
 Seddinpromenade: Umfahrung der Treppe	CS 27761,-3165 27749,-3120
 Ausgeschildert zum "Haus Sonneneck"	CP2; 23297,14772 23318,14847
-Sonnenkieker: Privatstraﬂe	CS 22527,13708 22518,13740 22600,13812 22668,13849 22692,13836
+Sonnenkieker: Privatstraﬂe	CS 22527,13708 22518,13740 22600,13812 22668,13849
+Sonnenkieker: Privatstraﬂe	CS 22670,13902 22658,13898 22652,13895 22668,13849 22671,13839 22692,13836
 (Clara-Zetkin-Platz - Bansiner Str.): ausgeschildert als "Bansiner Str."	CP2; 22612,12966 22623,12944
 Ausgeschildert als "zur Carola-Neher-Str."	CP2; 23458,14439 23476,14409
 Kaiserkronenweg: Privatstraﬂe, nur frei f¸r Anlieger	CS 20183,14645 20030,14731 20012,14756 19966,14783

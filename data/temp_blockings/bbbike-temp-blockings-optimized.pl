@@ -1057,26 +1057,7 @@ userdel	2::temp 6719,10347 6729,10212 6739,10120
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.openairgallery.de/index.html?y=2016
-userdel	2::temp 13178,10623 13206,10651 13305,10789 13332,10832
-',
-         'from' => 1465027200,
-         'id' => 1107,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              31,
-                              'months',
-                              5
-                            ]
-                          ],
-         'text' => 'Open Air Gallery am 5. Juni 2016 auf der Oberbaumbrücke (10:00 - 20:00)',
-         'type' => 'gesperrt',
-         'until' => 1465156800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2621,7 +2602,25 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 5370,6486 5424,6584 5533,6753 5644,6936
+',
+         'from' => 1467928800,
+         'id' => 2126,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              4,
+                              'months',
+                              7
+                            ]
+                          ],
+         'text' => 'Rheinstraße (Friedenau): Veranstaltung (Jazzfest auf der Rheinstraße), Straße vollständig zwischen Walther-Schreiber-Platz und Kaisereiche gesperrt (09.07.2016 bis 10.07.2016)',
+         'type' => 'gesperrt',
+         'until' => 1468187999
+       },
        undef,
        undef,
        undef,
@@ -2720,7 +2719,7 @@ userdel	2::temp 18870,5833 18932,5926
                             [
                               'yearly',
                               'days',
-                              5,
+                              2,
                               'months',
                               7
                             ]
@@ -3089,26 +3088,7 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 14161,11930 14285,12190
-',
-         'from' => 1464951600,
-         'id' => 2433,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              3,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => 'http://www.xhain.info/termine/fiesta-kreutziga.htm',
-         'text' => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 04.06.2016',
-         'type' => 'gesperrt',
-         'until' => 1465077599
-       },
+       undef,
        undef,
        undef,
        undef,
