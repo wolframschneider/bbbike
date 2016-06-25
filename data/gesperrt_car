@@ -74,7 +74,7 @@ Mangerstr. (Potsdam)	1 -12054,-274 -12123,-294 -12265,-418
 Rudolf-Breitscheid-Str.	1 -10429,-1944 -10360,-1934 -10235,-1916 -9986,-1882 -9735,-1845
 Bendastr.	1 12689,6905 12702,6846
 Bendastr.	1 12794,6407 12782,6462 12759,6563 12743,6645 12726,6727 12722,6748 12715,6775 12702,6846
-Puschkin/Bulgarische	1 14193,9746 14270,9710 14318,9688 14556,9581 14809,9466 14883,9431 15383,9191 15442,9095 15452,9079 15561,8903 15591,8848 15558,8820 15378,8668 15166,8489
+Puschkin/Bulgarische	1 14193,9746 14270,9710 14318,9688 14556,9581 14809,9466 14883,9431 15383,9191 15442,9095 15452,9079 15591,8848 15558,8820 15378,8668 15166,8489
 Karl-Marx-Str./Schönstedt	3nocross::ignrte 12500,8504 12540,8458 12562,8432 12582,8408
 Karl-Marx-Str. -> Schönstedtstr.: Karl-Marx-Str./Schönstedt	3::igndisp 12500,8504 12540,8458 12649,8535
 Schönstedtstr. -> Karl-Marx-Str.: Karl-Marx-Str./Schönstedt	3::igndisp 12649,8535 12540,8458 12562,8432
@@ -323,7 +323,7 @@ Admiralstr. -> Skalitzer Str.: Skalitzer/Admiralstr.	3::igndisp 11325,10317 1133
 Gutenbergstr.	1 -12045,-757 -12227,-724
 Langhoffstr.	1 19817,14371 19818,14064
 Lintruper Str.	1 10307,922 10380,757
-Edison-/Siemensstr.	3 17992,6436 17962,6674 17860,6644 17842,6639 17766,6616
+Edison-/Siemensstr.	3 17992,6436 17962,6674 17860,6644
 Edisonstr.	1 17962,6674 17992,6436
 Brückenstr./Edisonstr.	1 17992,6436 17952,6246 17930,6175 17900,6072
 Müggelheimer Str.	3nocross::ignrte 22674,4309 22556,4386 22451,4441 22419,4457 22383,4470
@@ -825,11 +825,11 @@ Karl-Marx-Allee -> Krautstr./Blumenstr.: Mittelstreifen	3::igndisp 12360,12505 1
 Krautstr./Blumenstr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 12125,12490 12134,12540 12114,12546
 Mittelstreifen	3nocross::ignrte 12360,12505 12596,12472 12612,12470 12869,12425
 Karl-Marx-Allee -> Koppenstr.: Mittelstreifen	3::igndisp 12612,12470 12596,12472 12575,12223
-Karl-Marx-Allee -> Koppenstr.: Mittelstreifen	3::igndisp 12360,12505 12596,12472 12635,12629
-Koppenstr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 12635,12629 12596,12472 12612,12470
-Koppenstr. -> Koppenstr.: Mittelstreifen	3::igndisp 12635,12629 12596,12472 12575,12223
+Karl-Marx-Allee -> Koppenstr.: Mittelstreifen	3::igndisp 12360,12505 12596,12472 12632,12630
+Koppenstr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 12632,12630 12596,12472 12612,12470
+Koppenstr. -> Koppenstr.: Mittelstreifen	3::igndisp 12632,12630 12596,12472 12575,12223
 Koppenstr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 12575,12223 12596,12472 12360,12505
-Koppenstr. -> Koppenstr.: Mittelstreifen	3::igndisp 12575,12223 12596,12472 12635,12629
+Koppenstr. -> Koppenstr.: Mittelstreifen	3::igndisp 12575,12223 12596,12472 12632,12630
 Kleineweg: nur für Anlieger	2:Anlieger 9130,8029 9130,7810 9132,7661
 Kleineweg: nur für Anlieger	2:Anlieger 9115,7645 9120,7600 9145,7522 9097,7469
 Peter-Strasser-Weg: nur für Anlieger	2:Anlieger 9240,7811 9130,7810
@@ -1650,9 +1650,9 @@ Mittelstreifen	3nocross::ignrte 6861,9263 6917,9274 7006,9292
 Grunewaldstr. -> Schwäbische Str.: Mittelstreifen	3::igndisp 6861,9263 6917,9274 6851,9365
 Schwäbische Str. -> Grunewaldstr.: Mittelstreifen	3::igndisp 6851,9365 6917,9274 7006,9292
 Herderstr. (Charlottenburg)	1 4452,11570 4434,11360
-Sperrfläche, Abbiegen nicht erlaubt	3nocross::ignrte 17492,6462 17530,6496 17614,6571
-Siemensstr. -> Tabbertstr.: Sperrfläche, Abbiegen nicht erlaubt	3::igndisp 17492,6462 17530,6496 17418,6702
-Tabbertstr. -> Siemensstr.: Sperrfläche, Abbiegen nicht erlaubt	3::igndisp 17418,6702 17530,6496 17614,6571
+Sperrfläche, Abbiegen nicht erlaubt	3nocross::ignrte 17492,6462 17528,6502 17614,6571
+Siemensstr. -> Tabbertstr.: Sperrfläche, Abbiegen nicht erlaubt	3::igndisp 17492,6462 17528,6502 17418,6702
+Tabbertstr. -> Siemensstr.: Sperrfläche, Abbiegen nicht erlaubt	3::igndisp 17418,6702 17528,6502 17614,6571
 Fasanenstr. (Ahrensfelde): Poller	3 21895,19198 22031,19261 22012,19308
 Fasanenstr. (Ahrensfelde): Poller	3 21895,19198 22031,19261 22049,19268
 Fasanenstr. (Ahrensfelde): Poller	3 21895,19198 22031,19261 22092,19121
@@ -1773,6 +1773,9 @@ Askanischer Platz -> Stresemannstr.	3 8865,10974 8901,11011 8747,11194
 Mittelinsel	3nocross::ignrte 13034,7319 13043,7234 13051,7157
 Karl-Marx-Str. -> Braunschweiger Str.: Mittelinsel	3::igndisp 13034,7319 13043,7234 13150,7254
 Braunschweiger Str. -> Karl-Marx-Str.: Mittelinsel	3::igndisp 13150,7254 13043,7234 13051,7157
+Mittelinsel	3nocross::ignrte 12969,7610 12991,7549 13015,7471
+Karl-Marx-Str. -> Karl-Marx-Pl.: Mittelinsel	3::igndisp 12969,7610 12991,7549 13100,7626
+Karl-Marx-Pl. -> Karl-Marx-Str.: Mittelinsel	3::igndisp 13100,7626 12991,7549 13015,7471
 Berliner Str - Bernstorffstr.: nur für BVG-Busse erlaubt	3 1955,20435 2020,20327 2131,20406
 Waidmannsluster Damm	3nocross::ignrte 3216,21431 3238,21448 3280,21477
 Waidmannsluster Damm -> Schollenhof: Waidmannsluster Damm	3::igndisp 3216,21431 3238,21448 3155,21572
@@ -1806,3 +1809,4 @@ Biesheimring - Brittendorfer Weg: Poller	3 1987,3166 1946,3142 1884,3106
 Brittendorfer Weg - Biesheimring: Poller	3 1884,3106 1946,3142 1987,3166
 Andernacher Str.	1 18949,8437 19000,8509
 Pfarrhufenweg	1 25599,13069 25684,13172
+Andernacher Str.	1 19030,8559 19000,8509

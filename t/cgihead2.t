@@ -102,7 +102,6 @@ plan tests => 1 + 3 * (scalar(map { @$_ } values %url));
 my $ua = LWP::UserAgent->new(keep_alive => 10);
 $ua->agent('BBBike-Test/1.0');
 $ua->env_proxy;
-$ua->timeout(10);
 
 # seems to be necessary (for my system? for the freebsd server?)
 $ENV{FTP_PASSIVE} = 1;
@@ -142,6 +141,12 @@ for my $var (@var) {
 	   ) {
 	    $TODO = TODO_CS_TU_BERLIN_UNREACHABLE;
 	}
+
+	my $timeout = 10;
+	if ($url =~ m{^\Qhttp://sourceforge.net/projects/bbbike/files}) {
+	    $timeout = 60; # yes: even a HEAD on (some?) sf mirrors can take many, many seconds
+	}
+	$ua->timeout($timeout);
 
 	check_url($url, $var);
     }

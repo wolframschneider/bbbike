@@ -1661,28 +1661,7 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 22111,4562 22093,4499 22076,4422
-userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22153,4840 22196,4847 22175,4730 22138,4661 22133,4644 22111,4562
-userdel	2::temp 22133,4644 22074,4664
-# REMOVED --- userdel	2::temp 22111,4562 22162,4546 22214,4548 22324,4586 22314,4604 22355,4660 22365,4676 22395,4678
-',
-         'from' => 1466028000,
-         'id' => 1702,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              6
-                            ]
-                          ],
-         'text' => 'Köpenicker Sommer: Veranstaltung, folgende Straßen sind gesperrt: Alt-Köpenick, Schlossplatz, Schlossinsel und Luisenhain (17.06.2016 - 19.06.2016)',
-         'type' => 'gesperrt',
-         'until' => 1466373599
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2472,8 +2451,8 @@ userdel auto	3 6228,10646 6216,10614 6192,10542
 	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 	3 7039,12314 7383,12095 7429,12070
 	3 7429,12070 7383,12095 7039,12314
-	3 7875,12363 7816,12150 7823,12120
-	3 7823,12120 7816,12150 7875,12363
+	3 7875,12363 7822,12201 7816,12150 7823,12120
+	3 7823,12120 7816,12150 7822,12201 7875,12363
 	3 8119,12414 8055,12186 8049,12140
 	3 8049,12140 8055,12186 8119,12414
 	3 8391,12389 8344,12221 8327,12174
@@ -2777,7 +2756,26 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	q4::temp; 14499,16341 14346,16241 14248,16202 14056,16120 14015,16103 13826,16026 13737,15994 13623,15954 13512,15909
+',
+         'from' => 1468447200,
+         'id' => 2275,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              7
+                            ]
+                          ],
+         'source_id' => 'http://www.weissenseer-blumenfest.de/',
+         'text' => 'Berliner Allee (Weißensee): Veranstaltung (Weißenseer Blumenfest), Fahrtrichtung gesperrt stadteinwärts vom Weißen See bis zum Antonplatz, 15.7.2016 bis 17.7.2016',
+         'type' => 'handicap',
+         'until' => 1468792799
+       },
        undef,
        undef,
        undef,
@@ -3042,7 +3040,26 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
+',
+         'from' => 1468360800,
+         'id' => 2420,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              13,
+                              'months',
+                              7
+                            ]
+                          ],
+         'source_id' => 'http://www.gratis-in-berlin.de/festivals/item/2024942-hafenfest-tegel-2016-mit-programm-und-feuerwerk',
+         'text' => 'Hafenfest Alt-Tegel, Greenwichpromenade, Behinderungen möglich (14.07.2016 bis 17.07.2016)',
+         'type' => 'gesperrt',
+         'until' => 1468792799
+       },
        undef,
        {
          'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
@@ -3265,7 +3282,18 @@ userdel	2::night 17671,13132 17684,13133
          'until' => undef
        },
        undef,
-       undef,
+       {
+         'data' => '#: next_check_id: ZIMMERMANNSTRBR-2015
+# REMOVED (keine Bauarbeiten mehr) --- #: next_check_id: ZIMMERMANNSTRBR-2014 --- #: last_checked: 2014-02-08 --- #: next_check: 2014-06-30 (bei VMZ entfernt!) --- #: add_fragezeichen: Sind die Bauarbeiten auf der Zimmermannstraßenbrücke und am Wuhlewanderweg mittlerweile beendet?
+# REMOVED userdel	2::inwork 21385,9049 21365,9059 21351,9066
+	2::inwork 21467,9236 21385,9049
+',
+         'from' => undef,
+         'id' => 2527,
+         'text' => 'Wuhlewanderweg: an der Zimmermannstraßenbrücke wegen Bauarbeiten gesperrt',
+         'type' => 'gesperrt',
+         'until' => 1473890400
+       },
        undef,
        undef,
        undef,
@@ -3365,12 +3393,12 @@ userdel	2::temp 8055,12186 8119,12414
 userdel auto	3 7026,12054 7031,12024 7059,11978
 userdel auto	3 7059,11978 7031,12024 7026,12054
 ',
-         'from' => 1465423200,
+         'from' => 1465336800,
          'id' => 2577,
-         'source_id' => 'IM_022090',
-         'text' => 'Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Dorotheenstr. und Behrenstr.: Sperrungen wegen der Fußball-EM-Fanmeile, vom 10.06.2016 bis zum 10.07.2016',
+         'source_id' => '2147340174',
+         'text' => 'Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Dorotheenstr. und Behrenstr.: Sperrungen wegen der Fußball-EM-Fanmeile, Radfahrer dürfen den Bereich in der spielfreien Zeit passieren, vom 09.06.2016 bis zum 12.07.2016',
          'type' => 'gesperrt',
-         'until' => 1468274399
+         'until' => 1468360799
        },
        undef,
        undef,
@@ -3470,6 +3498,7 @@ userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,464
 #: note: am Mi, den 2016-02-03 gegen 19:30: geschlossen
 #: note: am Di, den 2016-04-05 gegen 08:45: geschlossen
 #: note: am Mo, den 2016-04-11 gegen 18:20: geschlossen
+#: note: am So, den 2016-06-12 gegen 12:30: offen
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
 ',
@@ -3834,7 +3863,9 @@ userdel	q4::inwork; 25010,4807 25171,4757 25228,4745 25248,4752 25369,4790 25434
        undef,
        {
          'data' => '#: note: gesehen 2016-05-11 gegen 9 Uhr
+#: note: offen am 2016-06-16 gegen 9:30 Uhr
 userdel	2::temp 8362,13466 8369,13465 8377,13463
+#: note: geschlossen am 2016-06-16 gegen 9:30 Uhr
 userdel	2::temp 8371,13399 8363,13402 8356,13404
 ',
          'from' => undef,
@@ -3878,7 +3909,16 @@ userdel	q4::inwork 20381,1390 20405,1460
          'type' => 'handicap',
          'until' => 1475272799
        },
-       undef,
+       {
+         'data' => '#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2016/pressemitteilung.490470.php
+userdel	q4::inwork; 13651,11731 13696,11920 13745,12118 13785,12292
+',
+         'from' => 1466632800,
+         'id' => 2789,
+         'text' => 'Warschauer Str.: Fahrbahn zwischen Kopernikusstr. und Frankfurter Allee wegen Bauarbeiten gesperrt, 24.06.2016 bis 26.06.2016',
+         'type' => 'handicap',
+         'until' => 1466978399
+       },
        {
          'data' => 'userdel	2::inwork 63500,89978 63789,89450 63797,89389 63814,89247 63826,89135 63928,88223 64007,87773 64113,87461
 ',
@@ -3889,26 +3929,126 @@ userdel	q4::inwork 20381,1390 20405,1460
          'type' => 'gesperrt',
          'until' => 1467324000
        },
+       undef,
+       undef,
        {
-         'data' => '#: note: laut fritz sogar Vollsperrung
-userdel	q4::inwork; 17003,19035 17068,19016 17183,19007 17256,19002 17343,19000 17425,18997 17440,18997 17600,18994 17697,18989
+         'data' => '	q4::inwork; 6454,8653 6461,8463 6459,8281
+	3 6534,8467 6461,8463 6377,8460
+	3 6377,8460 6461,8463 6534,8467
 ',
-         'from' => 1465077600,
-         'id' => 2791,
-         'source_id' => '2147340170',
-         'text' => 'Wartenberger Weg: Richtung Dorfstraße zwischen Egon-Erwin-Kisch-Straße und Dorfstraße Baustelle, Fahrtrichtung gesperrt, ab 06.06.2016 06:00 bis zum 11.06.2016',
+         'from' => 1465682400,
+         'id' => 2793,
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.485790.php',
+         'text' => 'Martin-Luther-Str.: Bauarbeiten zwischen Freiherr-vom-Stein-Str. und Heylstr., 13.6.2016 bis 8.7.2016',
          'type' => 'handicap',
-         'until' => 1465682399
+         'until' => 1468015200
        },
        {
-         'data' => 'userdel	q4::inwork; 14211,11552 14305,11514 14369,11489
+         'data' => '	q4::inwork; 6459,8281 6461,8463 6454,8653
+	3 6534,8467 6461,8463 6377,8460
+	3 6377,8460 6461,8463 6534,8467
 ',
-         'from' => 1465077600,
-         'id' => 2792,
-         'source_id' => '2147340169',
-         'text' => 'Wühlischstr.: Richtung Boxhagener Str. zwischen Gärtnerstr. und Knorrpromenade Baustelle, Fahrtrichtung gesperrt, bis zum 27.06.2016',
+         'from' => 1468101600,
+         'id' => 2794,
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.485790.php',
+         'text' => 'Martin-Luther-Str.: Bauarbeiten zwischen Heylstr. und Freiherr-vom-Stein-Str., 11.7.2016 bis 8.8.2016',
          'type' => 'handicap',
-         'until' => 1467064799
+         'until' => 1470693599
+       },
+       {
+         'data' => 'userdel	q4::inwork; 16314,15223 16119,15302
+',
+         'from' => 1465682400,
+         'id' => 2795,
+         'source_id' => '2147340189',
+         'text' => 'Werneuchener Str.: Richtung Konrad-Wolf-Str. ab Küstriner Str. Baustelle, Fahrtrichtung gesperrt, 13.06.2016 bis 02.09.2016',
+         'type' => 'handicap',
+         'until' => 1472853599
+       },
+       {
+         'data' => '#: by: Kai Pauldrach
+#: XXX Bis wann sind die Bauarbeiten beendet? Ändert sich danach etwas an der Qualität?
+#: next_check: 2016-07-13
+userdel	2::inwork 3472,24709 3481,24686 3492,24667 3535,24626
+',
+         'from' => undef,
+         'id' => 2796,
+         'text' => 'Am Rosenanger - Am Sandkrug, Entenschnabel: wegen Bauarbeiten komplett gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => 'userdel	q4::inwork 15576,12315 15537,12367
+',
+         'from' => 1466015432,
+         'id' => 2797,
+         'source_id' => 'http://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2016/pressemitteilung.488270.php',
+         'text' => 'Rathausstr. (Lichtenberg): Bauarbeiten, Fahrbahn vor dem Rathaus gesperrt, bis zum 5. Juli 2016',
+         'type' => 'handicap',
+         'until' => 1467755999
+       },
+       {
+         'data' => 'userdel	q4::inwork 15628,12246 15651,12214 15685,12154
+',
+         'from' => 1467583200,
+         'id' => 2798,
+         'source_id' => 'http://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2016/pressemitteilung.488270.php',
+         'text' => 'Rathausstr. (Lichtenberg): Bauarbeiten in Höhe Rudolf-Reusch-Str., Fahrbahn gesperrt, 5. Juli 2016 bis 30. Juli 2016',
+         'type' => 'handicap',
+         'until' => 1469915999
+       },
+       {
+         'data' => '#: by: http://www.friedrichshagen.net/baustelle-friedrichshagen/
+#: last_checked: 2016-06-19
+#: check_frequency: 60d
+userdel	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
+',
+         'from' => undef,
+         'id' => 2799,
+         'text' => 'Bahnbrücke an der Erpe: wegen Bauarbeiten ist der Weg unter Umständen nicht passierbar',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: last_checked: 2016-06-19
+	2::inwork 24897,11083 24899,11044 24905,10955 24913,10884 24919,10818 24922,10785 24923,10774
+',
+         'from' => undef,
+         'id' => 2800,
+         'text' => 'Theodorstr.: Bauarbeiten, Straße kann gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => 'userdel	q4::inwork; 16629,13532 16866,13532
+',
+         'from' => 1466287200,
+         'id' => 2801,
+         'source_id' => '2147340236',
+         'text' => 'Herzbergstr. Richtung Krankenhaus: zwischen Am Wasserwerk und Siegfriedstr. Baustelle, Fahrtrichtung gesperrt, bis Anfang Juli 2016 ',
+         'type' => 'handicap',
+         'until' => 1467410399
+       },
+       {
+         'data' => '#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1606/nachricht6081.html (Radfahrer _dürfen_ passieren)
+userdel	q4::inwork 8389,9087 8180,9099
+',
+         'from' => 1466444819,
+         'id' => 2802,
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.489591.php',
+         'text' => 'Monumentenbrücke: Bauarbeiten bis zum 6. August 2016, Radfahrer dürfen unter Umständen nicht passieren',
+         'type' => 'handicap',
+         'until' => 1470520799
+       },
+       {
+         'data' => 'userdel	2::inwork -2955,15129 -2929,15082 -2965,15053 -3008,14992 -3008,14910 -2998,14879 -3030,14844 -3066,14718
+',
+         'from' => 1467151200,
+         'id' => 2803,
+         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2016/pressemitteilung.490082.php',
+         'text' => 'Wröhmännerpark: Bauarbeiten, Weg für Fußgänger und Radfahrer gesperrt, von Ende Juni 2016 bis voraussichtlich Ende September 2016',
+         'type' => 'gesperrt',
+         'until' => 1475272799
        }
      
 );

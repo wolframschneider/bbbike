@@ -669,11 +669,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8024,15401
 	X 8016,15085
 	X 8919,16154
-#: next_check_id: AMNORDHAFEN-2016
-#: XXX bleibt diese Ampel noch bestehen?
-#: osm_watch: node id="3777205508" version="1"
-#: last_checked: 2016-03-26
-#: check_frequency: 60d
+# REMOVED --- #: next_check_id: AMNORDHAFEN-2016 --- #: XXX bleibt diese Ampel noch bestehen? --- #: osm_watch: node id="3777205508" version="1" --- #: last_checked: 2016-03-26 --- #: check_frequency: 60d
 	X 7527,14684
 	X -3251,14741
 	X -3295,14777
@@ -1345,7 +1341,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F 14595,15980
 #: note: beim Überqueren der Straße Alt-Friedrichsfelde muss die Fußgängerampel auf der östlichen Seite benutzt werden, keine Anforderungsampel (Stand 2012-11-03)
 	X 17251,11789
-	X 22484,11270
+	X 22483,11261
 	X 23402,5483
 	X 23404,5325
 	X 21303,5826
@@ -2083,9 +2079,9 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
 	F 1892,13058
 	F 9474,16297
 	F 12990,11006
-	X 21624,11379
+	X 21628,11384
 	X 21392,11486
-	X 21860,11278
+	X 21863,11289
 	X 17829,15015
 #: XXX_prog: für linksabbiegende Radfahrer Anforderungsampel
 	X 12736,11186
@@ -2319,7 +2315,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Luftbild:
 	X 4775,21522
 	X 4074,6681
-	X 4107,6718
+	X 4103,6716
 #: note: Anforderungsampel
 	F 11148,19838
 	F 14633,2145
@@ -2401,7 +2397,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Abends meist (immer?) ausgeschaltet, und auch sonntags (Sa 2014-09-27 15:30 eingeschaltet; Sa 2015-09-12 17:30 eingeschaltet; Sa 2016-02-13 14 und 16 Uhr eingeschaltet, Sa 2016-06-04 gegen 17 Uhr eingeschaltet)
 #: note: Anforderungsampel
 #: off: night
-#: off: Sunday (seen 2014-09-21 afternoon, 2015-03-15 afternoon, 2015-05-10 afternoon, 2015-08-09 afternoon, 2016-05-29 afternoon)
+#: off: Sunday (seen 2014-09-21 afternoon, 2015-03-15 afternoon, 2015-05-10 afternoon, 2015-08-09 afternoon, 2016-05-29 afternoon, 2016-06-16 noon)
 	F 14802,11784
 	X -1810,16391
 	X -1675,16813
@@ -2600,7 +2596,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F::inwork 9984,12426
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2016-05-26 vvv
+#: last_checked: 2016-06-20 vvv
 #: check_frequency: 30d vvv
 	X::inwork 9122,12509
 	X::inwork 9286,12886
@@ -2612,7 +2608,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: next_check_id ^^^
 #
 #: XXX temporäre Ampel vvv
-#: last_checked: 2016-05-09 vvv
+#: last_checked: 2016-06-20 vvv
 #: check_frequency: 30d vvv
 	F::inwork 9270,12086
 #: check_frequency ^^^
@@ -2709,6 +2705,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -3892,13960
 	X 3005,13728
 	X 23657,5467
+#: note: Anforderungsampel
+#: XXX_prog gilt (vermutlich) nicht für Radfahrer auf dem Radweg
 	F 18165,7371
 #: off: night (seen 2013-08-25 22:30)
 	F 11579,-3093
@@ -2735,8 +2733,10 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: valid: 20140224-20180630 vvv
 #: next_check: 2018-06-30 vvv
 #: note: Ampel befindet sich nordwestlich der Kreuzung
+#: last_checked: 2016-06-12
 	F::inwork 14567,6810
-#: note: Extra-Umweg für Radfahrer in Richtung Südosten
+#: note: Extra-Umweg für Radfahrer in Richtung Südosten, Anforderungsampel in dieser Richtung
+#: last_checked: 2016-06-12
 	X::inwork 14724,6668
 	X::inwork 14366,6337
 	X::inwork 14193,6556
@@ -2751,7 +2751,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 # 
 #: next_check_id: SONNENALLEE-2014 vvv
 #: osm_watch: way id="260062339" version="7"
-#: last_checked: 2016-04-11 vvv
+#: last_checked: 2016-06-12 vvv
 #: check_frequency: 90d vvv
 #: note: Radfahrer in Richtung Südosten müssen die Seite wechseln, hier Anforderungsampel
 	X::inwork 14174,7505
@@ -2819,8 +2819,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: source_id: 2147339543 vvv
 #: XXX laut rbbtext bis 30.06.2016
 #: XXX laut fritz bis 31.07.2016
-#: last_checked: 2016-05-26 vvv
-#: next_check: 2016-06-30 vvv
+#: last_checked: 2016-06-21 vvv
+#: next_check: 2016-07-30 vvv
 	F::inwork 10703,11837
 	F::inwork 10656,11887
 #: next_check ^^^
@@ -2839,11 +2839,11 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 23810,7946
 #: next_check_id: ZIMMERMANNSTRBR-2015 vvv
 #: XXX temporäre Ampeln vvv
-#: last_checked: 2015-08-02 vvv
-#: next_check: 2016-07-01 vvv
+#: last_checked: 2016-06-19 vvv
+#: check_frequency: 60d vvv
 	X::inwork 21164,9960
 	X::inwork 22129,9702
-#: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
 #: next_check_id ^^^
@@ -2855,7 +2855,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Anforderungsampel
 	F 10461,3757
 #: XXX Baustellenampel
-#: last_checked: 2016-05-11
+#: last_checked: 2016-06-16
 #: check_frequency: 60d
 	F::inwork 8853,13539
 #: next_check_id: HEERSTR-2016
@@ -2863,6 +2863,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: last_checked: 2016-05-16
 #: check_frequency: 90d
 	X::inwork -3069,11487
+#: note: Zufahrt zu Obi
+	X 24426,11265
 # 
 ################################################################################
 #: note: Potsdam vvv
@@ -3000,7 +3002,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -12655,-1714
 # REMOVED --- #: XXX_prog: wechselseitige LSA-Regelung, ca. 100m Länge, größerer Zeitverlust? --- #: XXX zurzeit auch nur in Richtung Südosten Zeitverlust --- #: source_id: IM_023940 --- #: last_checked: 2015-08-10 --- #: check_frequency: 14d ---	X::inwork 14018,9118
 #: next_check_id: KIEFHOLZ-2015 vvv
-#: last_checked: 2016-05-13 vvv
+#: last_checked: 2016-06-23 vvv
 #: check_frequency: 90d vvv
 	X::inwork 14151,8967
 	X::inwork 14363,8738
