@@ -938,11 +938,8 @@ Klinikumsgebäude	culdesac 17428,25235
 	culdesac 23475,19131
 	culdesac 23508,19025
 	culdesac 22914,17893
-#: next_check_id: AMLOKDEPOT-2014
-#: XXX evtl. entfernen, falls die beiden Abschnitte verbunden werden, oder verschieben, wenn die Straße nur länger wird
-#: last_checked: 2016-03-26
-#: check_frequency: 90d
-Ende des nördlichen Abschnitts	culdesac 8389,9017
+# REMOVED --- #: next_check_id: AMLOKDEPOT-2014 --- #: XXX evtl. entfernen, falls die beiden Abschnitte verbunden werden, oder verschieben, wenn die Straße nur länger wird --- #: last_checked: 2016-03-26 --- #: check_frequency: 90d
+	culdesac 8383,8862
 Sackgassenende, Ulmenhof	culdesac 32090,3599
 	culdesac_pseudo 32230,3770
 	culdesac_pseudo 32224,3889
@@ -1173,10 +1170,17 @@ südliches Sackgassenende	culdesac 24186,10035
 	culdesac 23382,11760
 	culdesac 25664,11460
 	culdesac 25678,9821
+	culdesac 21135,-274
+	culdesac 24977,-2753
+	culdesac 24705,-3053
+	culdesac 24598,-3108
+	culdesac 24506,-3205
+	culdesac 24868,-2739
 # 
 ######################################################################
 # culdesac entries which should remain invisible
 #: ignore vvv
+	culdesac_pseudo 15294,7001
 	culdesac_pseudo 25771,11626
 	culdesac_pseudo 23865,5895
 	culdesac_pseudo 21400,8322

@@ -1,14 +1,17 @@
 #
 # This Makefile is only usable with a modern version of BSD make (also known
-# as "pmake"). The source for pmake can be found at
+# as "pmake").
+#
+# Debian users may use fmake from the freebsd-buildutils package. On
+# older Debian versions (wheezy?) the executable is named
+# freebsd-make.
+#
+# For other systems: the source for pmake can be found at
 #
 #   http://www.sourceforge.net/projects/srezic
 #
 # (This is a slightly modified version of the original pmake as found in
 # the FreeBSD sources)
-#
-# Debian users may use freebsd-make resp. fmake from the freebsd-buildutils
-# package.
 
 UNAME!=	uname
 
@@ -132,7 +135,7 @@ GERMAN_LOCALE=de_DE.ISO8859-1
 GERMAN_LOCALE=de_DE.ISO-8859-1
 .endif
 SORT_GERMAN_LOCALE=	env LANG=${GERMAN_LOCALE} LC_CTYPE=${GERMAN_LOCALE} LC_ALL=${GERMAN_LOCALE} sort
-SORT_NO_LOCALE=		env ${NO_LOCALE} sort
+SORT_NO_LOCALE=		${NO_LOCALE} sort
 
 ## This seems to generate better results:
 COORDS_DATA_SORT_OPTS=	-f -t "|" -k 1,3
@@ -591,6 +594,8 @@ gesperrt_car:	gesperrt_car-orig strassen landstrassen landstrassen2 ${PERSISTENT
 	mv gesperrt_car~ gesperrt_car
 	-@$(READONLY) $@
 
+# prevent parallel build of multiple targets by using .ORDER
+.ORDER:	plz berlin
 plz berlin:	plz-orig
 	-@$(WRITEABLE) plz berlin
 	cat plz-orig | \
@@ -890,6 +895,7 @@ fragezeichen-cooked:	fragezeichen strassen landstrassen landstrassen2
 	        ${GREPSTRASSEN} -v -directive 'ignore=' |\
 	        ${GREPSTRASSEN} -special filternextcheck |\
 	    ${CONVERT_ORIG} > $@~
+	[ -s $@~ ]
 	@echo "# added from ampeln-orig" >> $@~
 	grep '?' ${DATADIR}/ampeln-orig | \
 	    $(SED) -e 's/	\([^ ]*\)/ (\1)	?/' | \
@@ -1964,17 +1970,23 @@ show-used-directives:
 
 sort-coords.data:	sort-Berlin.coords.data sort-Potsdam.coords.data
 
-# XXX It is considered to use a platform-independent approach to
-# do the sorting. A favorite approach is using Unicode::Collate, a
-# core perl module. But some problems:
-# - the diff is huge, mainly due to a bug in FreeBSD's "sort -f" implementation
-# - Unicode::Collate is significantly slower
+# The sort result is the same like running this with FreeBSD's sort
+# with a German locale --- with the bug that "ß" is not handled correctly.
+# This is reflected in the perl script below (no substitution for "ß").
+#
+# Maybe in future this could be reimplemented to use Unicode::Collate,
+# but Unicode::Collate is significantly slower
 .for city in Berlin Potsdam
 sort-$(city).coords.data:
-	[ "`uname`" = FreeBSD ] && true || (echo "Sorting probably not correct on `uname`"; false)
 	-@$(WRITEABLE) $(city).coords.data~
 	mv $(city).coords.data $(city).coords.data~
-	$(SORT_GERMAN_LOCALE) ${COORDS_DATA_SORT_OPTS} < $(city).coords.data~ > $(city).coords.data
+	${PERL} -F'\|' -nale '\
+	    $$srtkey = lc join("|", @F[0..2]);\
+	    $$srtkey =~ tr/äöüÄÖÜáéè/aouaouaee/;\
+	    push @data, [$$srtkey, $$_];\
+	    END {\
+		print join("\n", map { $$_->[1] } sort { $$a->[0] cmp $$b->[0] } @data);\
+	    }' < $(city).coords.data~ > $(city).coords.data
 	@$(READABLE) $(city).coords.data
 	touch .check_$(city)_coords_data
 .endfor
