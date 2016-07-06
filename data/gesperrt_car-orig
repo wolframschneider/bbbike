@@ -516,7 +516,7 @@ Rochstr.: Barriere	3 * 10535,13006 *
 Rahel-Hirsch-Str.: Mittelstreifen	3nocross 7936,12906 7948,12918 8039,13009
 Am Kanal -> Französische Str.: verboten	3nocross -12666,-1311 -12549,-1277 -12552,-1233
 Mittelstr. (Potsdam)	1 -12884,-769 -12697,-729
-Emma-Herwegh-Str.	1 7791,13166 7595,12980
+Emma-Herwegh-Str.	1 7795,13168 7595,12980
 Margarete-Kühn-Str.: Poller am Salzufer	3 5203,12387 5133,12240 *
 Margarete-Kühn-Str.: Poller am Salzufer	3 * 5133,12240 5203,12387
 Eberswalder Str. (Bernau)	1 23109,30968 23103,30923 23084,30893 22917,30635
@@ -1076,3 +1076,5 @@ Pfarrhufenweg	1 25599,13069 25684,13172
 Andernacher Str.	1 19030,8559 19000,8509
 Groß-Berliner Damm: Mittelstreifen	3nocross 18541,4125 18374,4307 18239,4453
 Fahlandgasse	1 7675,17430 7675,17475 7675,17538
+Heidestr.: Mittelstreifen	3nocross 7818,13993 7866,13916 7973,13743
+Heidestr.: Mittelstreifen	3nocross 7651,14260 7697,14187 7732,14131
