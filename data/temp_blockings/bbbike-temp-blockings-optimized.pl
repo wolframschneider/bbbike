@@ -2541,25 +2541,7 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 5370,6486 5424,6584 5533,6753 5644,6936
-',
-         'from' => 1467928800,
-         'id' => 2126,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              4,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Rheinstraße (Friedenau): Veranstaltung (Jazzfest auf der Rheinstraße), Straße vollständig zwischen Walther-Schreiber-Platz und Kaisereiche gesperrt (09.07.2016 bis 10.07.2016)',
-         'type' => 'gesperrt',
-         'until' => 1468187999
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3366,25 +3348,7 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 7429,12070 7383,12095 7816,12150 7823,12120 8018,12135 8049,12140
-userdel	2::temp 7816,12150 8055,12186 8049,12140 8122,12147 8215,12156 8327,12174 8466,12197 8522,12239
-userdel	2::temp 7383,12095 7026,12054 6828,12031 6884,12006 7031,12024 7429,12070 7775,12114 7823,12120
-userdel	2::temp 8055,12186 8089,12190 8214,12205
-userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8215,12156
-userdel	2::temp 8610,12254 8538,12245 8522,12187
-userdel	2::temp 8538,12245 8600,12165 8595,12066
-userdel	2::temp 8055,12186 8119,12414
-userdel auto	3 7026,12054 7031,12024 7059,11978
-userdel auto	3 7059,11978 7031,12024 7026,12054
-',
-         'from' => 1465336800,
-         'id' => 2577,
-         'source_id' => '2147340174',
-         'text' => 'Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Dorotheenstr. und Behrenstr.: Sperrungen wegen der Fußball-EM-Fanmeile, Radfahrer dürfen den Bereich in der spielfreien Zeit passieren, vom 09.06.2016 bis zum 12.07.2016',
-         'type' => 'gesperrt',
-         'until' => 1468360799
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3821,12 +3785,14 @@ userdel	q4::inwork; 25010,4807 25171,4757 25228,4745 25248,4752 25369,4790 25434
        undef,
        undef,
        {
-         'data' => '#: note: gesehen 2016-05-11 gegen 9 Uhr
+         'data' => '#: note: verschlossen 2016-05-11 gegen 9 Uhr
 #: note: offen am 2016-06-16 gegen 9:30 Uhr
 #: note: offen am 2016-07-01 gegen 18:15 Uhr
+#: note: geschlossen am 2016-07-11 gegen 18:00 Uhr
 userdel	2::temp 8362,13466 8369,13465 8377,13463
-#: note: geschlossen am 2016-06-16 gegen 9:30 Uhr
-#: note: geschlossen am 2016-07-01 gegen 18:15 Uhr
+#: note: verschlossen am 2016-06-16 gegen 9:30 Uhr
+#: note: verschlossen am 2016-07-01 gegen 18:15 Uhr
+#: note: verschlossen am 2016-07-11 gegen 18:00 Uhr
 userdel	2::temp 8371,13399 8363,13402 8356,13404
 ',
          'from' => undef,
@@ -3874,27 +3840,16 @@ userdel	q4::inwork 20381,1390 20405,1460
        undef,
        undef,
        undef,
+       undef,
        {
-         'data' => '	q4::inwork; 6454,8653 6461,8463 6459,8281
-	3 6534,8467 6461,8463 6377,8460
-	3 6377,8460 6461,8463 6534,8467
-',
-         'from' => 1465682400,
-         'id' => 2793,
-         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.485790.php',
-         'text' => 'Martin-Luther-Str.: Bauarbeiten zwischen Freiherr-vom-Stein-Str. und Heylstr., 13.6.2016 bis 8.7.2016',
-         'type' => 'handicap',
-         'until' => 1468015200
-       },
-       {
-         'data' => '	q4::inwork; 6459,8281 6461,8463 6454,8653
+         'data' => '	q3::inwork; 6459,8281 6461,8463 6454,8653
 	3 6534,8467 6461,8463 6377,8460
 	3 6377,8460 6461,8463 6534,8467
 ',
          'from' => 1468101600,
          'id' => 2794,
          'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.485790.php',
-         'text' => 'Martin-Luther-Str.: Bauarbeiten zwischen Heylstr. und Freiherr-vom-Stein-Str., 11.7.2016 bis 8.8.2016',
+         'text' => 'Martin-Luther-Str.: Bauarbeiten zwischen Heylstr. und Freiherr-vom-Stein-Str., Gehweg für Radfahrer frei, 11.7.2016 bis 8.8.2016',
          'type' => 'handicap',
          'until' => 1470693599
        },
@@ -3920,16 +3875,7 @@ userdel	2::inwork 3472,24709 3481,24686 3492,24667 3535,24626
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => 'userdel	q4::inwork 15576,12315 15537,12367
-',
-         'from' => 1466015432,
-         'id' => 2797,
-         'source_id' => 'http://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2016/pressemitteilung.488270.php',
-         'text' => 'Rathausstr. (Lichtenberg): Bauarbeiten, Fahrbahn vor dem Rathaus gesperrt, bis zum 5. Juli 2016',
-         'type' => 'handicap',
-         'until' => 1467755999
-       },
+       undef,
        {
          'data' => 'userdel	q4::inwork 15628,12246 15651,12214 15685,12154
 ',
@@ -4026,7 +3972,8 @@ userdel	q4::inwork; 5866,10492 6025,10746
          'until' => 1471298399
        },
        {
-         'data' => 'userdel	q4::inwork 19676,1577 19704,1621 19766,1796
+         'data' => '#: source_id: 2147340278
+userdel	q4::inwork 19676,1577 19704,1621 19766,1796
 ',
          'from' => 1468101600,
          'id' => 2807,
@@ -4036,12 +3983,13 @@ userdel	q4::inwork; 5866,10492 6025,10746
          'until' => 1471816800
        },
        {
-         'data' => 'userdel	q4::inwork 12938,1348 12940,1547 12911,1815 12817,2031
+         'data' => '# REMOVED ("Verkürzung" laut fritz) --- userdel	q4::inwork 12938,1348 12940,1547 12911,1815
+userdel	q4::inwork 12911,1815 12817,2031
 ',
          'from' => 1467661160,
          'id' => 2808,
          'source_id' => '2147340272',
-         'text' => 'Buckower Damm: Baustelle zwischen Alt-Buckow und Ringslebenstr., evtl. auch Einschränkungen für Radfahrer, bis 24.02.2017',
+         'text' => 'Buckower Damm: Baustelle zwischen Alt-Buckow und An den Achterhöfen, evtl. auch Einschränkungen für Radfahrer, bis 24.02.2017',
          'type' => 'handicap',
          'until' => 1487977200
        },

@@ -1633,7 +1633,7 @@ EOF
        text  => 'Ringstr. (Steglitz) Richtung Finkensteinallee zwischen Drakestr. und Finckensteinallee Baustelle, Fahrtrichtung gesperrt (bis 12.2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 3507,3635 3375,3544 3228,3455 3184,3427 3050,3333 3011,3303 2781,3122 2701,3064 2661,3021 2637,2973 2626,2844
+userdel	q4; 3507,3635 3375,3544 3228,3455 3184,3427 3050,3333 3011,3303 2781,3122 2701,3064 2661,3021 2637,2973 2625,2850
 EOF
      },
      { from  => 1110917391, # 2005-03-15 21:09
@@ -5316,7 +5316,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003129',
        data  => <<EOF,
-userdel	1::inwork 2661,3021 2637,2973 2626,2844
+userdel	1::inwork 2661,3021 2637,2973 2625,2850
 EOF
      },
      { from  => 1160591740, # 2006-10-11 20:35
@@ -9335,7 +9335,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006194',
        data  => <<EOF,
-userdel	1::inwork 10138,20840 10119,20731 10115,20714 10063,20493
+userdel	1::inwork 10138,20840 10118,20731 10115,20714 10088,20570 10066,20494
 EOF
      },
      { from  => 1185833817, # 2007-07-31 00:16
@@ -14497,7 +14497,7 @@ EOF
        text  => 'B 167 Löwenberg - Grieben OD Löwenberg Deckeneinbau Vollsperrung 06.06.2009-06.06.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -7665,54237 -7918,54138 -8307,53883
+userdel	q4::inwork -7665,54237 -7918,54138 -8018,54024 -8370,53873
 EOF
      },
      { from  => 1244584599, # 2009-06-09 23:56
@@ -15273,7 +15273,7 @@ EOF
        text  => 'L 015 Schloßstr., Menzer Str. OD Rheinsberg, zw. Berliner Str. u. Kiefernweg Straßenbauarbeiten Vollsperrung 27.07.2009-18.12.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -25211,76393 -25508,76444
+userdel	q4::inwork -25211,76393 -25376,76422 -25508,76444
 EOF
      },
      { from  => 1249164000, # 2009-08-02 00:00
@@ -17716,7 +17716,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_015565',
        data  => <<EOF,
-userdel	2::temp 9269,13060 9413,13071 9559,13087
+userdel	2::temp 9269,13060 9401,13072 9559,13087
 EOF
      },
      { from  => 1272607309, # 2010-04-30 08:01
@@ -22929,7 +22929,7 @@ userdel	2::inwork 6134,5800 6115,5302
 userdel	2::inwork 5699,5949 5847,5961 5845,6049 5748,6051 5699,5949 5674,5901 5677,5868 5679,5853 5681,5768 5681,5743 5683,5672 5687,5586 5840,5588 5840,5679 5683,5672
 userdel	2::inwork 5681,5743 5850,5765 5851,5863 5694,5845
 userdel	2::inwork 5845,6049 6008,6067 6001,5974 5847,5961 5851,5863 5935,5874 5942,5775 5850,5765 5840,5679
-userdel	2::inwork 5993,5422 6007,5785 6007,5882 6001,5974 6134,5986 6116,6130
+userdel	2::inwork 5993,5422 6009,5691 6007,5785 6007,5882 6001,5974 6134,5986 6116,6130
 userdel	2::inwork 5935,5874 6007,5882 6134,5894
 EOF
      },
@@ -24363,7 +24363,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_025047',
        data  => <<EOF,
-	q4::inwork; 10127,19992 10167,19797 10195,19703 10224,19628 10257,19542
+	q4::inwork; 10132,19993 10167,19797 10195,19703 10224,19628 10257,19542
 EOF
      },
      { from  => undef,
@@ -24555,7 +24555,7 @@ EOF
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.364590.php',
        data  => <<EOF,
 # REMOVED (laut osm fertig) --- #: XXX Bis wann sind die Bauarbeiten fertig? --- #: last_checked: 2015-12-05 --- #: check_frequency: 30d
-userdel	2::inwork -1298,2017 -1082,2140
+userdel	2::inwork -1296,2025 -1278,2034 -1082,2140
 # REMOVED (weitgehend fertig) --- userdel	2::inwork -1591,1861 -1650,1826 -1724,1785 -1805,1740 -1889,1693 -1950,1659 -2043,1608 -2602,1291
 EOF
      },
@@ -25052,12 +25052,14 @@ EOF
        recurring => 1,
        type  => 'gesperrt',
        data  => <<EOF,
-#: note: gesehen 2016-05-11 gegen 9 Uhr
+#: note: verschlossen 2016-05-11 gegen 9 Uhr
 #: note: offen am 2016-06-16 gegen 9:30 Uhr
 #: note: offen am 2016-07-01 gegen 18:15 Uhr
+#: note: geschlossen am 2016-07-11 gegen 18:00 Uhr
 userdel	2::temp 8362,13466 8369,13465 8377,13463
-#: note: geschlossen am 2016-06-16 gegen 9:30 Uhr
-#: note: geschlossen am 2016-07-01 gegen 18:15 Uhr
+#: note: verschlossen am 2016-06-16 gegen 9:30 Uhr
+#: note: verschlossen am 2016-07-01 gegen 18:15 Uhr
+#: note: verschlossen am 2016-07-11 gegen 18:00 Uhr
 userdel	2::temp 8371,13399 8363,13402 8356,13404
 EOF
      },
@@ -25147,11 +25149,11 @@ EOF
      },
      { from  => $isodate2epoch->("2016-07-10 00:00:00"),
        until => $isodate2epoch->("2016-08-08 23:59:59"),
-       text  => 'Martin-Luther-Str.: Bauarbeiten zwischen Heylstr. und Freiherr-vom-Stein-Str., 11.7.2016 bis 8.8.2016',
+       text  => 'Martin-Luther-Str.: Bauarbeiten zwischen Heylstr. und Freiherr-vom-Stein-Str., Gehweg für Radfahrer frei, 11.7.2016 bis 8.8.2016',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.485790.php',
        data  => <<EOF,
-	q4::inwork; 6459,8281 6461,8463 6454,8653
+	q3::inwork; 6459,8281 6461,8463 6454,8653
 	3 6534,8467 6461,8463 6377,8460
 	3 6377,8460 6461,8463 6534,8467
 EOF
@@ -25286,16 +25288,18 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.493537.php',
        data  => <<EOF,
+#: source_id: 2147340278
 userdel	q4::inwork 19676,1577 19704,1621 19766,1796
 EOF
      },
      { from  => 1467661160, # 2016-07-04 21:39
        until => 1487977200, # 2017-02-25 00:00
-       text  => 'Buckower Damm: Baustelle zwischen Alt-Buckow und Ringslebenstr., evtl. auch Einschränkungen für Radfahrer, bis 24.02.2017',
+       text  => 'Buckower Damm: Baustelle zwischen Alt-Buckow und An den Achterhöfen, evtl. auch Einschränkungen für Radfahrer, bis 24.02.2017',
        type  => 'handicap',
        source_id => '2147340272',
        data  => <<EOF,
-userdel	q4::inwork 12938,1348 12940,1547 12911,1815 12817,2031
+# REMOVED ("Verkürzung" laut fritz) --- userdel	q4::inwork 12938,1348 12940,1547 12911,1815
+userdel	q4::inwork 12911,1815 12817,2031
 EOF
      },
      { from  => 1466978400, # 2016-06-27 00:00

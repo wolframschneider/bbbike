@@ -367,7 +367,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 151,4736
 	F -288,4333
 	X 1552,3460
-	X 1038,3094
+	X 1025,3091
 	X 820,3081
 	X 669,3119
 	X -1102,3345
@@ -592,7 +592,6 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8024,15401
 	X 8016,15085
 	X 8919,16154
-	X 7527,14684
 	X -3251,14741
 	X -3295,14777
 	X -3255,14685
@@ -1172,7 +1171,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4411,3180
 	X 4170,2727
 	X 4011,2942
-	X 2626,2844
+	X 2625,2850
 	X 2123,2803
 	X 2000,2748
 	X 1248,2600
@@ -1325,7 +1324,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 6594,21134
 	X 8277,21257
 	X 5533,19811
-	X 10063,20493
+	X 10066,20494
 	X 10257,19542
 	X 10018,19429
 	X 9859,19283
@@ -2167,7 +2166,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 13879,13967
 	X 8514,17634
 	F 8631,18441
-	X 10127,19992
+	X 10132,19993
 	F::inwork 9984,12426
 	X::inwork 9122,12509
 	X::inwork 9286,12886
@@ -2281,6 +2280,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X::inwork -3069,11487
 	X 24426,11265
 	F::inwork 10038,15418
+	X::inwork 12442,20805
 	F -12868,-502
 	X -12940,-1625
 	X -12549,-1277
@@ -2643,7 +2643,6 @@ S-Bahn ca. alle 10 Minuten	B 10865,-4464
 	B 42804,-13910
 	B 36666,14172
 	B -14667,54977
-	B -15335,54980
 	B 48692,-75633
 	B 49606,-74713
 	B -5417,30402
@@ -2686,16 +2685,16 @@ S-Bahn ca. alle 10 Minuten	B 10865,-4464
 	B0 24754,77507
 	B -54891,-35326
 	B 24165,-103467
-	B -21066,67757
 	B -19695,59899
+	B -21066,67757
 	B -19996,46176
 	B -14975,40027
 	B -11386,36243
 	B -9783,34896
 	B -7346,32440
 	B -24804,49561
-	B -20907,55639
-	B -27809,58912
+	B0 -20907,55639
+	B0 -27809,58912
 	B -7352,54661
 	B 3476,63906
 	B0 29542,69987
@@ -2822,6 +2821,12 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	F 38512,2600
 	F 39280,1505
 	B0 70973,75028
+	B 5359,28848
+	B -19552,55097
+	B -23007,72916
+	X -25508,76444
+	F -25355,76171
+	B -19408,63188
 Aderluch (Oranienburg)	F -435,39823
 André-Pican-Str. / Bernauer Str. (Oranienburg)	X -292,39051
 André-Pican-Str. / Saarlandstr. / Lehnitzstr. (Oranienburg)	X -234,37510
@@ -2848,7 +2853,7 @@ Am Gutsplatz (Oranienburg-Lehnitz)	X 129,37231
 S-Bf Lehnitz (Oranienburg-Lehnitz)	F 329,37254
 Chausseestr. / Zum Bahnhof (Oranienburg-Sachsenhausen)	X -882,40723
 Granseer Str. Höhe Post (Oranienburg-Sachsenhausen)	F -1235,41150
-Zum Bahnhof / Nordbahn (Oranienburg-Sachsenhausen)	B -521,40612
+Zum Bahnhof / Nordbahn (Oranienburg-Sachsenhausen)	B -533,40617
 Malzer Weg / nGAR (Oranienburg-Schmachtenhagen)	B0 4581,41115
 Schwarzer Weg / nGAR (Oranienburg-Schmachtenhagen)	B0 3167,41284
 Wensickendorf (Oranienburg-Wensickendorf)	F 7836,38835
