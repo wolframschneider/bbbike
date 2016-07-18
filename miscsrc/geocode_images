@@ -9,17 +9,15 @@
 #
 
 use strict;
-our $VERSION = 1.33;
+our $VERSION = 1.34;
 
 use Cwd qw(realpath);
 use File::Spec;
 use File::Basename;
 use Getopt::Long;
-eval 'use Image::Info qw(image_info);';
 use Image::ExifTool qw(ImageInfo);
 eval 'use Digest::MD5 qw(md5_hex);';
 use Time::Local qw(timelocal);
-use GD;
 use DB_File;
 use FindBin;
 
@@ -141,20 +139,22 @@ if ($converter eq 'best') {
     push @converter, 'Image::GD::Thumbnail', 'ImageMagick+exiftool', 'ImageMagick';
 } else {
     @converter = $converter;
+    undef $converter;
 }
+
 for my $try_converter (@converter) {
     if ($try_converter eq 'Image::GD::Thumbnail') {
-	if (eval { require Image::GD::Thumbnail; 1 }) {
+	if (eval { require GD; require Image::GD::Thumbnail; 1 }) {
 	    $converter = $try_converter;
 	    last;
 	}
     } elsif ($try_converter eq 'ImageMagick') {
-	if (is_in_path("convert")) {
+	if (is_in_path("convert") && $^O ne 'MSWin32') {
 	    $converter = $try_converter;
 	    last;
 	}
     } elsif ($try_converter eq 'ImageMagick+exiftool') {
-	if (is_in_path("convert") && is_in_path("exiftool")) {
+	if (is_in_path("convert") && $^O ne 'MSWin32' && is_in_path("exiftool")) {
 	    $converter = $try_converter;
 	    last;
 	}
@@ -228,6 +228,7 @@ sub get_image_location {
 		my $lat = Karte::Polar::dms2ddd($lat_deg, $lat_min, $lat_sec);
 		my $lon = Karte::Polar::dms2ddd($lon_deg, $lon_min, $lon_sec);
 		my $iso_date = $exif->{DateTimeOriginal} || $exif->{CreateDate}; # XXX GPSDateTime is nonsense in the N95
+		$iso_date =~ s{^(\d+):(\d+):(\d+)}{$1-$2-$3};
 		$iso_date =~ s{ }{T}; # -> iso date sep
 		my $ret = { Longitude => $lon,
 			    Latitude  => $lat,
@@ -248,10 +249,10 @@ sub get_image_location {
 
     return if !defined $gps_data_dir;
 
-    if (!defined $y && defined &image_info) {
+    if (!defined $y) {
 	# Nokia 7650 hack
-	my $info = image_info($file);
-	if (my $error = $info->{error}) {
+	my $info = ImageInfo($file);
+	if (my $error = $info->{Error}) {
 	    if ($file =~ m{(?:^|/)\.(?:xvpics|thumbs)/}) {
 		# expected error, be quiet
 	    } else {
@@ -272,7 +273,7 @@ sub get_image_location {
 	    }
 	    ($y,$m,$d) = ($3,$2,$1);
 
-	    if (!defined $date || $time !~ m{^(\d+)[:\.](\d+)[:\.](\d+)$}) {
+	    if (!defined $time || $time !~ m{^(\d+)[:\.](\d+)[:\.](\d+)$}) {
 		local $^W = 0;
 		warn "Can't parse time <$time> in file <$file>, cannot geolocate, skipping...\n";
 		return;
@@ -433,6 +434,11 @@ if ($do_update) {
     if (!defined $out_file) {
 	die "-update switch only works together with -o\n";
     }
+    if (!-e $out_file) {
+	# assume first-time operation, touch the output file
+	open my $fh, '>', $out_file
+	    or die "Can't touch $out_file: $!";
+    }
     require Strassen::Core;
     my $s = Strassen->new_stream($out_file);
     my $image_qr = qr{^Image: "([^"]+)"};
@@ -573,14 +579,20 @@ sub create_thumbnail {
     warn "Create thumbnail for $file...\n" if $v;
 
     if ($converter eq 'Image::GD::Thumbnail') {
-	return create_thumbnail_Image_GD_Thumbnail($file, $dest);
+	$dest = create_thumbnail_Image_GD_Thumbnail($file, $dest);
     } elsif ($converter eq 'ImageMagick') {
-	return create_thumbnail_ImageMagick($file, $dest);
+	$dest = create_thumbnail_ImageMagick($file, $dest);
     } elsif ($converter eq 'ImageMagick+exiftool') {
-	return create_thumbnail_ImageMagick_exiftool($file, $dest);
+	$dest = create_thumbnail_ImageMagick_exiftool($file, $dest);
     } else {
 	die "Unknown converter $converter";
     }
+
+    if (defined $dest) {
+	maybe_correct_orientation($file, $dest);
+    }
+
+    $dest;
 }
 
 sub create_thumbnail_Image_GD_Thumbnail {
@@ -611,28 +623,35 @@ sub create_thumbnail_Image_GD_Thumbnail {
 sub create_thumbnail_ImageMagick_exiftool {
     my($file, $dest) = @_;
     require File::Temp;
-    my(undef,$smallfile) = File::Temp::tempfile(SUFFIX => "_geocode_images.jpg", UNLINK => 1);
+    my(undef,$tmpfile) = File::Temp::tempfile(SUFFIX => "_geocode_images.jpg", UNLINK => 1);
     for my $cmd (["exiftool", "-ThumbnailImage", "-b", $file],
 		 ["exiftool", "-PreviewImage",   "-b", $file],
 		) {
 	my @cmd = @$cmd;
-	warn "@$cmd > $smallfile\n" if $v;
+	warn "@$cmd > $tmpfile\n" if $v;
 	open my $fh, "-|", @cmd
 	    or die "Cannot execute @cmd: $!";
-	open my $ofh, ">", $smallfile
-	    or die "Cannot write to $smallfile: $!";
+	open my $ofh, ">", $tmpfile
+	    or die "Cannot write to $tmpfile: $!";
 	local $/ = \8192;
 	while(<$fh>) {
 	    print $ofh $_;
 	}
 	close $ofh;
 	close $fh;
-	last if (!-z $smallfile);
+	last if (!-z $tmpfile);
     }
-    if (-z $smallfile) {
+    my $smallfile;
+    if (-s $tmpfile) {
+	$smallfile = $tmpfile
+    } else {
 	$smallfile = $file;
     }
-    create_thumbnail_ImageMagick($smallfile, $dest);
+    $dest = create_thumbnail_ImageMagick($smallfile, $dest);
+    if (defined $tmpfile) {
+	unlink $tmpfile; # delete as soon as possible
+    }
+    $dest;
 }
 
 sub create_thumbnail_ImageMagick {
@@ -646,14 +665,20 @@ sub create_thumbnail_ImageMagick {
 	warn "@cmd failed: $?";
 	return undef;
     } else {
-	maybe_correct_orientation($file, $dest);
 	return $dest;
     }
 }
 
+{
+my $no_jpegtran_warned;
 sub maybe_correct_orientation {
     my($orig, $thumbnail) = @_;
-    return if !is_in_path('jpegtran'); # XXX should fallback to Image::JpegTran if available
+    if (!is_in_path('jpegtran')) { # XXX should fallback to Image::JpegTran if available
+	if (!$no_jpegtran_warned++) {
+	    warn "jpegtran not available, cannot correct orientation...\n";
+	}
+	return;
+    }
     my $info = ImageInfo($orig, ["Orientation"],{PrintConv => 1});
     if ($info && defined $info->{Orientation}) {
 	my $rotated_file;
@@ -675,27 +700,20 @@ sub maybe_correct_orientation {
 	}
     }
 }
+}
 
 sub _run_jpegtran {
     my($args, $file) = @_;
-    my @cmd = ("jpegtran", @$args, $file);
-    warn "Running @cmd...\n" if $v;
-    open my $ifh, "-|", @cmd
-	or die "While running @cmd: $!";
-    binmode $ifh;
     my $dest = "$file.$$";
-    open my $ofh, ">", $dest
-	or die "While writing $dest: $!";
-    binmode $ofh;
-    local $/ = \4096;
-    while(<$ifh>) {
-	print $ofh $_;
+    my @cmd = ("jpegtran", @$args, '-outfile', $dest, $file);
+    warn "Running @cmd...\n" if $v;
+    system @cmd;
+    if ($? != 0) {
+	die "Running '@cmd' failed";
     }
-    close $ofh
-	or die "While writing to $dest: $!";
-    close $ifh
-	or die "While running @cmd: $!";
-
+    if (-z $dest) {
+	die "Destination file $dest is empty";
+    }
     $dest;
 }
 

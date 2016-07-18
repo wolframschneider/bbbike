@@ -131,7 +131,7 @@ WWW_GROUP?=	www-data
 TODAY!=		date +%Y%m%d
 
 OSNAME!=	uname
-.if ${OSNAME} == "linux"
+.if ${OSNAME} == "Linux"
 OS_LINUX=	yes
 .else
 OS_LINUX=
@@ -632,7 +632,7 @@ prepare-mapserver-dist-post:
 .if exists(/usr/share/fonts/truetype/ttf-xfree86-nonfree/luxisr.ttf)
 	cp -pf /usr/share/fonts/truetype/ttf-xfree86-nonfree/luxisr.ttf \
 	    ${CURDIR}/$(HTDOCS)/mapserver/brb/fonts
-.else
+.elif exists(/usr/local/lib/X11/fonts/TTF/luxisr.ttf)
 	cp -pf /usr/local/lib/X11/fonts/TTF/luxisr.ttf \
 	    ${CURDIR}/$(HTDOCS)/mapserver/brb/fonts
 .endif
