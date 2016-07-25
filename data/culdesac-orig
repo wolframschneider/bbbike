@@ -213,7 +213,10 @@ Sackgassenende, Weg am Moabiter Werder	culdesac_pseudo 7837,12860
 	culdesac 17342,15386
 	culdesac 17782,15389
 	culdesac 17740,15254
-	culdesac 17579,14777
+#: note: kurvige Weiterfahrt durch Grünanlage möglich, 2x Bordsteine vvv
+	culdesac_pseudo 17579,14777
+	culdesac_pseudo 17558,14840
+#: note ^^^
 	culdesac 17629,14627
 Sackgassenende im östlichen Abschnitt	culdesac 17907,14904
 	culdesac 17990,14808
@@ -886,7 +889,7 @@ Fähranleger	culdesac_pseudo -1989,18378
 	culdesac_pseudo 9132,13187
 #: next_check_id: BND-2014
 #: XXX wird bei der Verlängerung der Ida-von-Arnim-Str. aufgehoben
-#: last_checked: 2016-06-16
+#: last_checked: 2016-07-21
 #: check_frequency: 90d
 	culdesac 8251,14337
 #: next_check_id: SUEDPANKE-2014
@@ -1184,10 +1187,18 @@ südliches Sackgassenende	culdesac 24186,10035
 	culdesac 23173,2315
 	culdesac 23275,2334
 	culdesac 23623,2392
+	culdesac 8994,703
+	culdesac 7013,2146
+	culdesac 7597,2647
+	culdesac 7425,2461
+	culdesac 8063,2092
+	culdesac 21748,746
 # 
 ######################################################################
 # culdesac entries which should remain invisible
 #: ignore vvv
+	culdesac_pseudo 6443,2915
+	culdesac_pseudo 6492,2947
 	culdesac_pseudo 10493,16960
 	culdesac_pseudo -3720,1464
 	culdesac_pseudo 15294,7001
@@ -1314,7 +1325,7 @@ südliches Sackgassenende	culdesac_pseudo 22478,4659
 	culdesac_pseudo 10294,19298
 	culdesac_pseudo 15946,14702
 	culdesac_pseudo 15278,17152
-	culdesac_pseudo 15439,17698
+	culdesac_pseudo 15441,17705
 	culdesac_pseudo 15548,17684
 	culdesac_pseudo 10086,12725
 	culdesac_pseudo 19133,9087

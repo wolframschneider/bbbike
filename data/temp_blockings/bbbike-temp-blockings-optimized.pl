@@ -813,94 +813,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://csd-berlin.de/event-info-en/
-#: by: https://www.berlin.de/en/events/2096878-2842498-csd-christopher-street-day.en.html
-userdel	2::temp 6851,10416 6937,10363 6971,10346 7033,10328 7033,10396 7003,10513 6985,10597 6972,10665 6929,10852 6918,10858 6824,10904 6873,11011 6882,11061 6880,11110 6851,11346 6825,11486 6809,11570 6778,11742 6744,11936 6685,11954 6642,12010 6656,12075 6690,12104 6725,12113 6754,12108 6787,12099 6828,12031 6809,11979 6744,11936
-userdel	2::temp 6353,10583 6292,10627 6228,10646 6171,10657
-userdel	2::temp 7033,10396 6851,10416 6753,10446 6636,10492 6532,10529 6468,10550 6353,10583 6268,10588 6216,10614 6171,10657 6133,10679 6025,10746 5942,10803 5907,10821 5782,10884 5725,10892 5656,10876 5475,10808 5351,10760 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435 4157,10418
-userdel auto	3 6380,10704 6353,10583 6302,10462
-userdel auto	3 6692,11365 6851,11346 7103,11247
-userdel auto	3 5488,10978 5475,10808 5471,10719
-userdel auto	3 4685,10689 4676,10541 4659,10335
-userdel auto	3 7115,11220 6880,11110 6841,11114
-userdel auto	3 6716,11439 6825,11486 6915,11492
-userdel auto	3 4239,10358 4245,10435 4256,10583
-userdel auto	3 7131,10331 7033,10396 7245,10499
-userdel auto	3 7131,10331 7033,10328 7060,10221
-userdel auto	3 4485,10307 4503,10497 4513,10702
-userdel auto	3 6869,11567 6809,11570 6512,11608
-userdel auto	3 6745,10619 6753,10446 6719,10347
-userdel auto	3 4847,10677 4847,10589 4828,10356
-userdel auto	3 4381,10583 4371,10465 4360,10320
-userdel auto	3 5196,10398 5215,10711 5230,10919
-userdel auto	3 6681,10959 6824,10904 6740,10755
-userdel auto	3 6740,10755 6824,10904 6681,10959
-userdel auto	3 6818,10725 6972,10665 7110,10613
-userdel auto	3 4360,10320 4371,10465 4381,10583
-userdel auto	3 7060,10221 7033,10328 7131,10331
-userdel auto	3 6915,11492 6825,11486 6716,11439
-userdel auto	3 6742,11099 6873,11011 7002,11034
-userdel auto	3 7245,10499 7033,10396 7131,10331
-userdel auto	3 4828,10356 4847,10589 4847,10677
-userdel auto	3 4513,10702 4503,10497 4485,10307
-userdel auto	3 6719,10347 6753,10446 6745,10619
-userdel auto	3 6841,11114 6880,11110 7115,11220
-userdel auto	3 6884,12006 6828,12031 7026,12054
-userdel auto	3 5829,10964 5782,10884 5669,10704
-userdel auto	3 6512,11608 6809,11570 6869,11567
-userdel auto	3 6540,11754 6778,11742 6980,11790
-userdel auto	3 5669,10704 5782,10884 5829,10964
-userdel auto	3 5047,10381 5076,10658 5079,10701
-userdel auto	3 6980,11790 6778,11742 6540,11754
-userdel auto	3 7002,11034 6873,11011 6742,11099
-userdel auto	3 5866,10492 6025,10746 6122,10925
-userdel auto	3 6192,10542 6216,10614 6228,10646
-userdel auto	3 6685,10690 6532,10529 6494,10440
-userdel auto	3 6122,10925 6025,10746 5866,10492
-userdel auto	3 7026,12054 6828,12031 6884,12006
-userdel auto	3 4256,10583 4245,10435 4239,10358
-userdel auto	3 6216,10614 6228,10646 6250,10701
-userdel auto	3 5900,11913 6642,12010 6550,11954
-userdel auto	3 5079,10701 5076,10658 5047,10381
-userdel auto	3 5471,10719 5475,10808 5488,10978
-userdel auto	3 4659,10335 4676,10541 4685,10689
-userdel auto	3 7110,10613 6972,10665 6818,10725
-userdel auto	3 5230,10919 5215,10711 5196,10398
-userdel auto	3 6302,10462 6353,10583 6380,10704
-userdel auto	3 6550,11954 6642,12010 5900,11913
-userdel auto	3 6494,10440 6532,10529 6685,10690
-userdel auto	3 6250,10701 6228,10646 6216,10614
-userdel auto	3 7103,11247 6851,11346 6692,11365
-userdel auto	3 6228,10646 6216,10614 6192,10542
-	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8610,12254 8731,12270
-	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-	3 7039,12314 7383,12095 7429,12070
-	3 7429,12070 7383,12095 7039,12314
-	3 7875,12363 7822,12201 7816,12150 7823,12120
-	3 7823,12120 7816,12150 7822,12201 7875,12363
-	3 8119,12414 8055,12186 8049,12140
-	3 8049,12140 8055,12186 8119,12414
-	3 8391,12389 8344,12221 8327,12174
-	3 8327,12174 8344,12221 8391,12389
-',
-         'from' => 1469138400,
-         'id' => 2083,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              20,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => 'http://www.csd-berlin.de/',
-         'text' => 'CSD am 23.7.2016',
-         'type' => 'gesperrt',
-         'until' => 1469311199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -1278,6 +1191,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
 #: note: geprüft am So, den 2015-08-30, vormittags: offen
 #: note: geprüft am So, den 2016-05-15, vormittags: offen
 #: note: geprüft am So, den 2016-07-17, vormittags und mittags: offen
+#: note: geprüft am So, den 2016-07-23, mittags: offen
 userdel	2::night 14838,11410 14792,11391
 ',
          'from' => undef,
@@ -1779,8 +1693,8 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        undef,
        undef,
        {
-         'data' => 'userdel	2::temp 22133,4644 22111,4562 22093,4499
-userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22133,4644 22138,4661 22175,4730 22196,4847 22153,4840 22074,4664
+         'data' => 'userdel	2::temp 22138,4642 22111,4562 22093,4499
+userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,4642 22144,4660 22175,4730 22198,4800 22196,4847 22153,4840 22074,4664
 ',
          'from' => 1471521600,
          'id' => 2610,
@@ -2023,21 +1937,7 @@ userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.354922.php
-#: source_id: 2147339555
-userdel	q4::inwork; 4239,10358 4219,10279 4183,10144 4152,10033
-	3 4279,10270 4219,10279 3852,10236
-	3 3852,10236 4219,10279 4279,10270
-# REMOVED was: 4152,10033 4126,9932 4099,9820 4067,9686 4057,9648
-',
-         'from' => 1440910800,
-         'id' => 2733,
-         'source_id' => 'IM_026066',
-         'text' => 'Konstanzer Str.: zwischen Olivaer Platz und Düsseldorfer Str. und Baustelle, Fahrbahn Richtung Brandenburgische Str. gesperrt, Überqueren im Zuge der Xantener Str. nicht möglich, bis August 2016',
-         'type' => 'handicap',
-         'until' => 1470002400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2124,12 +2024,12 @@ userdel	q4::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
          'until' => undef
        },
        {
-         'data' => 'userdel	q4::inwork 4542,1188 4634,1245 4706,1293 4806,1360 4897,1350 5059,1337
+         'data' => 'userdel	q3::inwork 4542,1188 4634,1245 4706,1293 4806,1360 4897,1350 5059,1337
 ',
          'from' => 1459720800,
          'id' => 2776,
          'source_id' => '2147339913',
-         'text' => 'Hildburghauser Straße/Blankertzweg: Bauarbeiten zwischen Am Pfarracker und Osdorfer Str., ggfs. auch Behinderungen für den Radverkehr, 04.04.2016 bis 13.01.2017 ',
+         'text' => 'Hildburghauser Straße/Blankertzweg: Bauarbeiten zwischen Am Pfarracker und Osdorfer Str., Radfahrer können auf dem schmalen Gehweg fahren, 04.04.2016 bis 13.01.2017 ',
          'type' => 'handicap',
          'until' => 1484348400
        },
@@ -2178,10 +2078,12 @@ userdel	q4::inwork; 25010,4807 25171,4757 25228,4745 25248,4752 25369,4790 25434
 #: note: offen am 2016-06-16 gegen 9:30 Uhr
 #: note: offen am 2016-07-01 gegen 18:15 Uhr
 #: note: geschlossen am 2016-07-11 gegen 18:00 Uhr
+#: note: geschlossen am 2016-07-21 gegen 19:30 Uhr
 userdel	2::temp 8362,13466 8369,13465 8377,13463
 #: note: verschlossen am 2016-06-16 gegen 9:30 Uhr
 #: note: verschlossen am 2016-07-01 gegen 18:15 Uhr
 #: note: verschlossen am 2016-07-11 gegen 18:00 Uhr
+#: note: verschlossen am 2016-07-21 gegen 19:30 Uhr
 userdel	2::temp 8371,13399 8363,13402 8356,13404
 ',
          'from' => undef,
@@ -2393,6 +2295,16 @@ userdel	2::inwork 22084,5877 21846,5856 21744,5804 21602,5685
          'text' => 'Wuhleweg: Bauarbeiten zwischen Lindenstr. und Hämmerlingstr., für Radfahrer und Fußgänger gesperrt, bis voraussichtlich Ende Juli 2016',
          'type' => 'gesperrt',
          'until' => 1470002399
+       },
+       {
+         'data' => 'userdel	q3::inwork 6984,1540 6881,1743
+',
+         'from' => 1469052000,
+         'id' => 2810,
+         'source_id' => '2147340348',
+         'text' => 'Tautenburger Str.: zwischen Blankenhainer Str. und Brotteroder Str. Baustelle, Sperrung der Fahrbahn, Radfahrer dürfen den Gehweg benutzen, bis Ende August 2016',
+         'type' => 'handicap',
+         'until' => 1472680799
        }
      
 );
