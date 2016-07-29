@@ -142,37 +142,46 @@
 
 (defun bbbike-search-x-selection ()
   (interactive)
-  (let* ((sel (bbbike--get-x-selection))
-	 (rx  sel))
+  (let ((sel (bbbike--get-x-selection)))
     (if sel
-	(let ((search-state 'begin)
-	      (end-length)
-	      (start-pos))
-	  (if (string-match " " rx)
-	      (progn
-		(setq rev-rx-list (reverse (split-string rx " ")))
-		(setq rev-rx (pop rev-rx-list))
-		(while rev-rx-list
-		  (setq rev-rx (concat rev-rx " " (pop rev-rx-list))))
-		(setq rx (concat "\\(" rx "\\|" rev-rx "\\)"))
-		)
-	    (setq rx (concat "\\(" rx "\\)")))
+	(let ((rx sel)
+	      is-coords)
+	  (if (string-match "^\\(CHANGED\\|NEW\\|REMOVED\\)\t.*\t\\([^\t]+\\)\t\\(INUSE\\)?$" rx)
+	      (setq rx (concat "#:[ ]*source_id:?[ ]*" (substring rx (match-beginning 2) (match-end 2))))
+	    (if (string-match " " rx)
+		(progn
+		  (setq rev-rx-list (reverse (split-string rx " ")))
+		  (setq rev-rx (pop rev-rx-list))
+		  (while rev-rx-list
+		    (setq rev-rx (concat rev-rx " " (pop rev-rx-list))))
+		  (setq rx (concat "\\(" rx "\\|" rev-rx "\\)"))
+		  )
+	      (setq rx (concat "\\(" rx "\\)")))
+	    (setq rx (concat "\\(\t\\| \\)" rx "\\( \\|$\\)"))
+	    (setq is-coords t)
+	    )
 	  (message rx)
-	  (while (not (eq search-state 'found))
-	    (if (eq search-state 'again)
-		(goto-char (point-min)))
-	    (if (not (search-forward-regexp (concat "\\(\t\\| \\)" rx "\\( \\|$\\)")
-					    nil
-					    (eq search-state 'begin)))
-		(setq search-state 'again)
-	      (setq search-state 'found)
-	      (setq start-pos (- (point) (length sel)
-				 (- (match-end 3) (match-beginning 3))
-				 ))
-	      (set-mark (+ start-pos (length sel)))
-	      (goto-char start-pos)
-	      )
-	    ))
+
+	  (let ((search-state 'begin)
+		(end-length)
+		(start-pos))
+	    (while (not (eq search-state 'found))
+	      (if (eq search-state 'again)
+		  (goto-char (point-min)))
+	      (if (not (search-forward-regexp rx
+					      nil
+					      (eq search-state 'begin)))
+		  (setq search-state 'again)
+		(setq search-state 'found)
+		(if is-coords
+		    (progn
+		      (setq start-pos (- (point) (length sel)
+					 (- (match-end 3) (match-beginning 3))
+					 ))
+		      (set-mark (+ start-pos (length sel)))
+		      (goto-char start-pos)))
+		)
+	      )))
       (error "No X selection"))))
 
 (defun bbbike--get-x-selection ()
@@ -331,7 +340,8 @@
   (interactive)
   (let ((now-iso-date (format-time-string "%Y-%m-%d" (current-time)))
 	begin-iso-date-pos
-	end-iso-date-pos)
+	end-iso-date-pos
+	(currpos (point)))
     (save-excursion
       (search-backward-regexp "\\(^\\| \\)")
       (setq begin-iso-date-pos (1+ (match-beginning 0)))
@@ -346,6 +356,8 @@
       (goto-char begin-iso-date-pos)
       (delete-region begin-iso-date-pos end-iso-date-pos)
       (insert now-iso-date))
+
+    (goto-char currpos) ; this works because the length of a ISO date is constant (at least for a long time ;-)
     )
   )
 

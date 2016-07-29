@@ -1774,7 +1774,7 @@ EOF
        text  => 'L 291; (Oderberger Str.); OD Eberswalde, Einm. Breite Str. Straßenbauarbeiten Vollsperrung 24.03.2005-30.04.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 38022,49097 37914,48720 37906,48495 37898,48413 37900,48350 37909,48248
+userdel	q4 38022,49097 38018,49083 37914,48720 37906,48495 37898,48413 37900,48350 37909,48248
 EOF
      },
      { from  => 1111960800, # 2005-03-28 00:00
@@ -16553,7 +16553,7 @@ EOF
        text  => 'L 085 Treuenbrietzen - Brück zw. Treuenbrietzen und Nichel Straßenbau am BÜ Vollsperrung 09.10.2009-10.10.2009 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork -25920,-35115 -26873,-34493 -27632,-34000
+userdel	q4::inwork -25920,-35115 -26879,-34486 -27632,-34000
 EOF
      },
      { from  => 1255212000, # 2009-10-11 00:00
@@ -25230,12 +25230,13 @@ userdel	q4::inwork; 16629,13532 16866,13532
 EOF
      },
      { from  => 1466444819, # 2016-06-20 19:46
-       until => 1470520799, # 2016-08-06 23:59
+       until => $isodate2epoch->("2016-08-06 06:00:00"),
        text  => 'Monumentenbrücke: Bauarbeiten bis zum 6. August 2016, langsameres Passieren möglich',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.489591.php',
        data  => <<EOF,
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1606/nachricht6081.html (Radfahrer _dürfen_ passieren)
+#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1607/nachricht6133.html
 userdel	q3::inwork 8389,9087 8180,9099
 EOF
      },
@@ -25324,6 +25325,43 @@ EOF
        source_id => '2147340348',
        data  => <<EOF,
 userdel	q3::inwork 6984,1540 6881,1743
+EOF
+     },
+     { from  => 1469311200, # 2016-07-24 00:00
+       until => $isodate2epoch->("2016-08-26 23:59:59"), # 1472680799, # 2016-08-31 23:59
+       text  => 'Elsenstr.: Baustelle zwischen Kressenweg und Hultschiner Damm, Fahrbahn gesperrt, bis Ende August 2016 ',
+       type  => 'gesperrt',
+       source_id => '2147340370',
+       data  => <<EOF,
+userdel	2::inwork 23792,10926 24203,10848 24229,10843
+EOF
+     },
+     { from  => 1469570400, # 2016-07-27 00:00
+       until => 1470189600, # 2016-08-03 04:00
+       dont_check_date => 1,
+       text  => 'Spreetunnel: Vollsperrung an den folgenden Tagen jeweils von 20.00 Uhr bis 04.00 Uhr: 28.07.2016 - 29.07.2016, 01.08.2016 - 02.08.2016, 02.08.2016 - 03.08.2016',
+       type  => 'gesperrt',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1607/nachricht6127.html',
+       data  => <<EOF,
+userdel	2::inwork 25571,4553 25658,4619
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Gleimtunnel: Sperrung, unter Umständen können auch Radfahrer und Fußgänger nicht passieren',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::inwork 10130,15647 9991,15629 9907,15618
+EOF
+     },
+     { from  => 1470175200, # 2016-08-03 00:00
+       until => 1472853600, # 2016-09-03 00:00
+       text  => 'Tile-Brügge-Weg und An der Oberrealschule: Fahrbahn gesperrt, Bauarbeiten, vom 04.08.2016 bis zum 02.09.2016 ',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2016/pressemitteilung.504154.php',
+       data  => <<EOF,
+userdel	q4::inwork 2380,20465 2473,20486 2595,20514
+userdel	q4::inwork 2473,20486 2448,20592
 EOF
      },
     );
