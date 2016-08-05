@@ -2467,11 +2467,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Anforderungsampel
 	F 15356,3759
 # REMOVED --- #: next_check_id: KARLSHORSTER-2015 --- #: last_checked: 2015-09-18 --- #: next_check: 2015-09-21 --- #: note: provisorische Ampel --- #: XXX nicht immer eingeschaltet, z.B. 2015-08-08 (Sa) gegen 10 Uhr off --- valid: -20150921 ---	X::inwork 14805,10518
-#: XXX bleibt die Ampel permanent?
-#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1509/nachricht5759.html (ja, es wird eine neue Ampel errichtet)
-#: last_checked: 2016-08-01
-#: check_frequency: 60d
-	X::inwork 14906,10820
+# REMOVED (ja) --- #: XXX bleibt die Ampel permanent? --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1509/nachricht5759.html (ja, es wird eine neue Ampel errichtet) --- #: last_checked: 2016-08-01 --- #: check_frequency: 60d
+	X 14906,10820
 	F 8667,5372
 	F 5807,12070
 	F 6833,15215
@@ -2599,7 +2596,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F::inwork 9984,12426
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2016-07-05 vvv
+#: last_checked: 2016-08-02 vvv
 #: check_frequency: 30d vvv
 	X::inwork 9122,12509
 	X::inwork 9286,12886
@@ -2611,7 +2608,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: next_check_id ^^^
 #
 #: XXX temporäre Ampel vvv
-#: last_checked: 2016-07-01 vvv
+#: last_checked: 2016-08-02 vvv
 #: check_frequency: 30d vvv
 	F::inwork 9270,12086
 #: check_frequency ^^^
