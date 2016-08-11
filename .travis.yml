@@ -22,7 +22,7 @@ before_install:
   # downgrade to java7
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java; fi
   # mono stuff
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y mono-devel xvfb x11-apps; fi
+  #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y mono-devel xvfb x11-apps; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo world/etc/init.d/xvfb start; fi
 
 before_script:
@@ -32,6 +32,7 @@ script:
  - make -f world/Makefile.osm create-bbbike-web-symlinks
  - make bbbike-bootstrap
  - make update-files
- - rm -f ./HEADER.txt
- - BBBIKE_MAPERITIVE_DISABLED=1 make travis
+ - world/t/runtime.t 
+ - world/t/convert.t 
+ #- BBBIKE_MAPERITIVE_DISABLED=1 make travis
  
