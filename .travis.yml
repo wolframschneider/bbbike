@@ -31,8 +31,8 @@ before_script:
 script:
  - make -f world/Makefile.osm create-bbbike-web-symlinks
  - make bbbike-bootstrap
- - ls -l /usr/local/bin
- - world/t/runtime.t 
- - world/t/convert.t 
+ - ls -lR /usr/local/bin
+ #- world/t/runtime.t 
+ #- world/t/convert.t 
  #- BBBIKE_MAPERITIVE_DISABLED=1 make travis
  
