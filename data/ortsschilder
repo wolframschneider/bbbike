@@ -23,6 +23,9 @@ Damme|(Uckermark)	OS 48244,99579
 Damme|(Uckermark)	OS 50486,101008
 Eickstedt	OS 52207,99132
 Eickstedt	OS 51862,100638
+Eickstedt/Ausbau	OHT 52388,101604
+Eickstedt/Ausbau	OHT 53079,102229
+Rollberg	OHT 53523,102594
 Wallmow	OS 54800,105519
 Wallmow	OS 55375,105118
 Wallmow	OS 54729,104731
@@ -63,7 +66,7 @@ Storkow|(bei Penkun)	OS 68196,101164
 Storkow|(bei Penkun)	OS 67711,101930
 Frauenhagen	OS 58529,109432
 Frauenhagen	OS 59055,109122
-Sommersdorf	OS 61004,98682
+Sommersdorf	OS 60988,98694
 Sommersdorf	OS 61380,98335
 Wartin	OS 60084,95438
 Wartin	OS 60118,94772
@@ -248,7 +251,7 @@ Krohnhorst	OS 25925,83573
 Henkinshain	OHT 25786,82784
 Henkinshain	OHT 25695,82276
 Bietikow	OS 45515,97197
-Bietikow	OS 44607,96890
+Bietikow	OS 44588,96894
 Bietikow	OS 44778,96200
 Bietikow	OS 44769,96942
 Seelübbe	OS 42925,96685
@@ -694,6 +697,7 @@ Schönwalde	OS 32111,6229
 Schöneiche	OS 29168,7350
 Schöneiche	OS 30309,6841
 Groß Glienicke	OS -9316,7393
+Groß Glienicke	OS -9104,7290
 Frankfurt|(Oder)	OS 85173,-3363
 Booßen	OS 84494,-2625
 Booßen	OS 82854,-2278
@@ -737,7 +741,7 @@ Schönefeld	OS 19662,-511
 Schönefeld	OS 17236,-602
 Schönefeld	OS 19618,-1021
 Schönefeld	OS 19650,-732
-Schönefeld	OS 19769,-495
+Schönefeld	OS 19787,-494
 Schönefeld	OS 19674,-484
 Schönefeld	OS 17181,-2257
 Schönefeld	OS 18853,-1656
@@ -766,12 +770,16 @@ Prenden	OS 19662,43583
 Berghausen|bei Seehausen	OHT 41984,92683
 Temmen	OS 32853,77078
 Temmen	OS 33491,77322
-Afrika	OHT 37564,79307
 Stegelitz	OS 38872,80620
 Stegelitz	OS 39704,81752
 Kleinow|(Falkenwalde)	OS 51170,97266
+Fergitz	OS 38295,87097
+Fergitz	OS 38748,86791
+Suckow	OS 38973,84368
+Suckow	OS 39152,83627
 Potzlow	OS 38992,90586
 Potzlow	OS 38091,90857
+Potzlow	OS 38140,90535
 Potzlow/Ausbau	OS 36302,90671
 Potzlow/Ausbau	OS 35410,90541
 Pinnow|bei Gerswalde	OS 35410,90541
@@ -795,6 +803,7 @@ Klosterwalde	OS 19681,85491
 Klosterwalde	OS 19533,85103
 Birkenstein	OS 26904,13065
 Birkenstein	OS 27566,13555
+Berlin	OS 15395,409
 Berlin	OS 26931,-2871
 Berlin	OS -3495,20025
 Berlin	OS -6788,20819
@@ -813,6 +822,7 @@ Berlin	OS 1464,-367
 Berlin	OS 18597,20898
 Berlin	OS 21868,18896
 Berlin	OS 21442,18880
+Berlin	OS -8825,3783
 Mehrow	OS 25327,19421
 Mehrow	OS 24484,18569
 Mehrow	OS 28467,19470
@@ -901,8 +911,9 @@ Hohenselchow	OS 68169,88963
 Groß Pinnow	OS 68287,88029
 Albrechtshof	OHT 57250,104791
 Albrechtshof	OHT 57244,104460
-Landin	OS 57957,76869
+Landin	OS 57963,76871
 Landin	OS 57906,77201
+Landin	OS 57644,77773
 Herrenhof	OS 59280,80363
 Stendell	OS 60330,81769
 Stendell	OS 60675,83382
@@ -912,6 +923,7 @@ Schönow|(Uckermark)	OS 60206,86603
 Schönow|(Uckermark)	OS 59766,87273
 Blumberg	OS 59744,89598
 Blumberg	OS 59503,90395
+Blumberg	OS 60170,90017
 Karlsberg	OS 58853,91488
 Karlsberg	OS 58910,91735
 Seefeld-Löhme	OS 28921,23343
@@ -967,3 +979,24 @@ Wöplitz	OS -78049,45716
 Glöwen	OS -80152,53342
 Havelberg	OS -80177,46753
 Damerow	OS -70588,43981
+Klein Kreutz	OS -42891,2144
+Klein Kreutz	OS -41955,2965
+Weseram	OS -39433,5400
+Weseram	OS -38722,5511
+Roskow	OS -36995,7072
+Roskow	OS -35558,6667
+Zachow	OS -31342,7956
+Zachow	OS -33384,7061
+Brückenkopf	OS -28724,8191
+Brückenkopf	OS -29867,8452
+Ketzin	OS -27441,8070
+Ketzin	OS -26899,7966
+Falkenrehde	OS -22456,9379
+Falkenrehde	OS -21872,8784
+Paaren	OS -21305,8159
+Paaren	OS -21513,8387
+Fahrland	OS -16349,5934
+Fahrland	OS -15355,6142
+Krampnitz	OHT -14769,5741
+Krampnitz	OHT -14268,5197
+Krampnitz	OHT -13736,4956

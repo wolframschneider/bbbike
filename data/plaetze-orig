@@ -28,7 +28,7 @@ Frankfurter Tor	Pl 13785,12292
 John-F.-Kennedy-Platz	Pl 6460,8688
 Leuthener Platz	Pl 7716,8356
 Winterfeldtplatz	Pl 7080,10098
-Hansaplatz	Pl 6178,12387
+Hansaplatz	Pl 6173,12396
 Platz der Republik	Pl 8119,12414
 Oranienburger Tor (Mitte)	Pl 9225,13389
 Nordbahnhof	Pl 9383,13986
@@ -135,7 +135,6 @@ Langenbeckplatz	Pl 25030,9626
 Wilhelmplatz (Wannsee)	Pl -7232,445
 Wilhelmplatz (Wannsee)	Pl -7180,378
 Zwirngrabendreieck	Pl 10286,13084
-Andreas-Hofer-Platz	Pl 10655,16904
 #: oldname: -20100728: Lenbachplatz
 #: by: http://www.cdu-fraktion-tk.de/image/inhalte/file/Amtsblatt_Nr__32_pdf.pdf
 Annemirl-Bauer-Platz	Pl 14669,11152
@@ -254,7 +253,7 @@ Oberseeplatz	Pl 15891,16041
 Durlacher Platz	Pl 23887,9463
 Werner-Düttmann-Platz	Pl 11378,9305
 Sandbacher Platz	Pl 22720,-1255
-Victor-Klemperer-Platz	Pl 20731,15864
+Victor-Klemperer-Platz	Pl 20732,15868
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20101104.1040.317413.html
 Eugen-Gerstenmaier-Platz	Pl 3839,4577
 Joe-May-Platz	Pl 14346,17224
@@ -320,8 +319,7 @@ Nöldnerplatz	Pl 15870,10938
 #: oldname: -20140807: <namenslos>
 #: note: erstreckt sich von Boyenallee bis Soldauer Allee
 Martha-Jacob-Platz	Pl 480,11204
-#: note: nicht ausgeschildert
-Monumentenplatz	Pl 8344,9085
+# REMOVED (-> strassen) --- #: note: nicht ausgeschildert --- Monumentenplatz	Pl 8344,9085
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/buergerhaushalt/biesdorf/errichtung-eines-spielplatzes-auf-dem-walslebener-platz
 Walslebener Platz	Pl 20272,10448
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6922
@@ -335,8 +333,9 @@ Hanna-Renate-Laurien-Platz	Pl 6489,3578
 Minna-Flake-Platz	Pl 11673,16003
 Kirsten-Heisig-Platz	Pl 12872,7134
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/15re.pdf/file?y=2016
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/27re.pdf/file?y=2016 (Berichtigung)
 #: note: Wirksamkeit der Benennung: ab 2016-06-21
-Selma- und Paul-Latte-Platz	Pl 10786,20272
+Selma-und-Paul-Latte-Platz	Pl 10786,20272
 ######################################################################
 #: section faked_plaetze vvv
 # Keine offiziellen Straßennamen, sondern
@@ -418,7 +417,7 @@ Wannseehafen	Pl -4905,1514
 Tegel-Center	Pl 2295,20358
 Nikolskoe	Pl -8881,1668
 Schäferberg	Pl -8169,760
-Moorlake	Pl -9606,1389
+Moorlake	Pl -9620,1407
 #: alias: Teufelssee
 Ökowerk Teufelssee	Pl -977,9425
 #: note: der Punkt ist der gegenüberliegende auf dem Festland

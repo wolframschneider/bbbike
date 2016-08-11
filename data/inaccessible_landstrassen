@@ -11,8 +11,8 @@ Detmolder Str.	X 4469,8037
 Wexstr.	X 5807,7978
 Hinter der Katholischen Kirche	X 9801,12245
 Hinter der Katholischen Kirche	X 9795,12293
-(Planstraßen 2.1, 2.2, 2.3)	X 7917,14051
-(Planstraßen 2.1, 2.2, 2.3)	X 7962,13977
+(Lydia-Rabinowitsch-Str.; Planstraßen 2.1, 2.2, 2.3)	X 7930,14060
+(Lydia-Rabinowitsch-Str.; Planstraßen 2.1, 2.2, 2.3)	X 7973,13991
 Adlergestell	X 21541,1739
 (Hans-Baluschek-Park - Schöneberger Südgelände, Fußgängerbrücke)	X 7621,7105
 (Hans-Baluschek-Park - Schöneberger Südgelände, Fußgängerbrücke)	X 7655,7096
@@ -24,7 +24,6 @@ Werkstättenweg	X 1615,9675
 Cordesstr.	X 1583,9713
 Cordesstr.	X 1563,9769
 Cordesstr.	X 1672,9836
-(Kleiner Tiergarten)	X 6556,13240
 Lutterbacher Str.	X 1993,3170
 Lutterbacher Str.	X 2072,3034
 Lutterbacher Str.	X 2163,3092
@@ -38,9 +37,9 @@ Sportfliegerstr.	X 18423,4459
 (Blumberger Damm - Wuhle)	X 22061,14471
 (Blumberger Damm - Wuhle)	X 22172,14287
 (Blumberger Damm - Wuhle)	X 22414,14144
-(Zufahrt ehem. Einkaufszentrum)	X 17060,14255
-(Zufahrt ehem. Einkaufszentrum)	X 17221,14268
 Schwarzer Weg (Oberschöneweide)	X 17295,7330
+Minna-Todenhagen-Str.	X 17082,7189
+Minna-Todenhagen-Str.	X 16954,7096
 Spindlersfelder Str.	X 21075,4769
 Spindlersfelder Str.	X 21080,4702
 Spindlersfelder Str.	X 21130,4239
@@ -69,19 +68,17 @@ Märkische Allee	X 19999,11612
 (B96a)	X 21829,1351
 (B96a)	X 21862,1532
 (B96a)	X 21819,1595
+Nordufer	X 7427,14648
 Krumpuhler Weg	X 1302,18398
 (Tegeler Hafen - An der Mühle)	X 1697,20623
 (Tegeler Hafen - An der Mühle)	X 1687,20645
 (Tegeler Hafen - An der Mühle)	X 1668,20670
 Feldstr. (Bohnsdorf)	X 21055,-723
 Feldstr. (Bohnsdorf)	X 21209,-734
-Patersdorfer Str.	X 19764,9160
-Patersdorfer Str.	X 19874,9151
-Regener Str.	X 19859,9473
-Regener Str.	X 19894,9470
-Regener Str.	X 19889,9400
-Viechtacher Str.	X 19871,9680
+Kirchdorfer Str.	X 19858,9775
+Kirchdorfer Str.	X 19871,9680
 Viechtacher Str.	X 19923,9682
+Alfonsstr.	X 19034,1441
 (am ehem. Osthafen)	X 14463,10212
 Dieselstr.	X 14439,8050
 Ingwerweg	X 9282,21589
@@ -103,11 +100,6 @@ Gartenstr. (Biesdorf)	X 21217,11328
 (westlicher Wuhlewanderweg)	X 22462,14172
 (westlicher Wuhlewanderweg)	X 22639,14384
 (westlicher Wuhlewanderweg)	X 22679,14450
-(mittlerer Weg - Rosengarten)	X 14705,9578
-(S-Bahnhof - Treptower Hafen)	X 14436,9784
-(S-Bahnhof - Treptower Hafen)	X 14460,9814
-(S-Bahnhof - Treptower Hafen)	X 14483,9843
-(Uferweg - Parkweg)	X 14460,9871
 EUREF-Campus	X 7149,8249
 EUREF-Campus	X 7316,8509
 Paddlerweg	X -3625,11250
@@ -120,13 +112,6 @@ Rütlistr. (Neukölln)	X 12565,9200
 Gerickesteg	X 6702,12633
 Gerickesteg	X 6748,12669
 Am Konsulat	X 9990,19644
-Am Theodorpark	X 24905,10955
-Am Theodorpark	X 25053,10959
-(Weg im Theodorpark)	X 24922,10785
-(Weg im Theodorpark)	X 24954,10770
-(Weg im Theodorpark)	X 25021,10768
-(Weg im Theodorpark)	X 25062,10762
-Theodorstr. (Mahlsdorf)	X 24913,10884
 Heimstättenweg	X 4323,6131
 Fünf Morgen	X 1483,5161
 (Westhafenstr. - Beusselstr.)	X 6025,14539
@@ -192,7 +177,7 @@ Nuthestr. (Potsdam)	X -6119,-3907
 Nuthestr. (Potsdam)	X -5722,-3669
 Nuthestr. (Potsdam)	X -5490,-3666
 (Rudolf-Moos-Str. - Nuthestr.) (Potsdam)	X -10281,-2690
-(Am Babelsberger Park - Humboldtbrücke) (Potsdam)	X -11460,-1098
+(Park Babelsberg - Humboldtbrücke) (Potsdam)	X -11460,-1098
 B96a - Flughafen Berlin-Brandenburg	X 18680,-1506
 B96a - Flughafen Berlin-Brandenburg	X 18798,-1581
 B96a - Flughafen Berlin-Brandenburg	X 18853,-1656

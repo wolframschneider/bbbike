@@ -27,7 +27,7 @@ Richtung Teufelssee	CP2; 425,8766 297,8894
 Richtung S-Bhf. Nikolassee	CP2; -2834,5578 -3605,4520
 Richtung S-Bhf. Grunewald	CP2; -2834,5578 -1925,6790
 Richtung S-Bhf.	CP2; -4001,2858 -3956,2787
-Richtung Teufelssee/Saubucht	CP2; -3475,6780 -3418,6747
+Richtung Teufelssee/Saubucht	CP2; -3483,6789 -3418,6747
 ausgeschildert Richtung Breitenbachplatz	CP2; 3346,7369 3397,7333
 als Ganghoferstr. ausgeschildert	CP2; 12960,8246 12918,8232
 Sredzkistr. - Christburger Str.: Drängelgitter auf dem Mittelstreifen	CP 11535,14688 11633,14631 11912,14486
@@ -65,6 +65,8 @@ Kreisverkehr	Roundabout -556,-1402
 Kreisverkehr	Roundabout -5463,-3467
 Kreisverkehr	Roundabout -10673,-2128
 Kreisverkehr	Roundabout -80179,46546
+Kreisverkehr	Roundabout -18722,5775
+Kreisverkehr	Roundabout -18598,5444
 (Waldweg über den Beyschlagtunnel): bei Regen Rutschgefahr	CS 355,22344 393,22408 421,22528 636,22658
 Privatstraße der DB	CS 5710,7820 6273,7849
 Albrecht-Thaer-Weg: Privatstraße, Tore bei den Einfahrten	CS 3350,6467 3449,6863
@@ -89,7 +91,7 @@ Wilhelmstr.: Fahrbahn vor der britischen Botschaft für Autos gesperrt, passierba
 (Weg in Kolonie Bodenreform): entlang des Teltowkanals	CS 20939,2413 20810,2398
 (Weg in Kolonie Bodenreform): entlang des Teltowkanals	CS 20810,2398 20510,2321 20490,2276 20234,2254 20128,2271
 (Alt-Lankwitz - Kamenzer Damm): Rampe für Radfahrer	CS 8026,3298 8036,3253
-als Puschkinallee 6c, 6d ausgeschildert	CP2; 13995,9834 14077,10016
+als Puschkinallee 6c, 6d ausgeschildert	CP2; 13999,9842 14077,10016
 Durch Toreinfahrt (immer offen)	CP2; 14043,10928 14107,10911
 als Sackgasse ausgeschildert	CP2; 14672,10760 14566,10783
 Radfahren durch den Park erlaubt	CS 6534,1702 6673,1748 6844,1813
@@ -140,7 +142,7 @@ Tordurchfahrt	CS 9341,6163 9367,6160
 (Am Nuthetal - Wetzlarer Str.): Weg entlang der Straßenbahntrasse	CS -9544,-3913 -9531,-3917 -9461,-3879 -9440,-3872 -9391,-3864 -9328,-3871 -9276,-3891 -9240,-3912 -9217,-3897 -9186,-3853 -9157,-3842 -9134,-3851 -9114,-3846 -9064,-3866 -9047,-3889
 (Wetzlarer Str. - Stern-Center): Weg entlang der Schnellstraße	CS -8970,-3923 -8975,-3946 -8708,-4025 -8687,-4015 -8634,-4035 -8579,-4074 -8448,-4098 -8324,-4087 -8096,-4106 -8038,-4093
 Pfähle und hohe Bordsteine	CP2 2211,4280 2254,4376
-Uferweg am Plötzensee	CS 5618,14981 5455,15245 5391,15331 5306,15387 5073,15611 5040,15606 5015,15564 5051,15508 5084,15415 5075,15354 5005,15213
+Uferweg am Plötzensee	CS 5618,14981 5455,15245 5391,15331 5306,15387 5134,15565 5073,15611 5040,15606 5015,15564 5051,15508 5084,15415 5075,15354 5005,15213
 (Im Schäferfeld - Wetzlarer Str.): am Baggersee entlang	CS -8563,-3805 -8562,-3849 -8661,-3971 -8982,-3860 -9002,-3896 -8970,-3923
 (Eichborndamm - General-Woyna-Str.): Weg parallel zur S-Bahn-Trasse	CS 4232,18981 4285,18983 4353,18986 4475,18998 4577,19009
 Paul-Francke-Str.: Privatstraße durch die Genossenschaftssiedlung des Beamtenwohnungsvereins	CS 9901,18522 10006,18502 10013,18545 9994,18595 9916,18610
@@ -227,7 +229,7 @@ Kirchhofweg: nicht ausgeschildert	CS 11608,7267 11687,7284 12180,7387
 Weidenweg (Altglienicke) [21B-21K]: Privatweg	CS 19879,-378 20050,-386 20248,-397 20300,-416
 Steffenstr.: nicht ausgeschildert, Zufahrt zum Sportforum	CP2; 15580,14880 15568,14901
 Hohenschönhauser Str.: ausgeschildert "Zu den Sport- und Tennisplätzen"	CP2; 14754,14406 14682,14572
-An den Feldtmanngärten: Privatstraße	CS 15810,17512 15802,17446 15537,17484 15271,17439
+An den Feldtmanngärten: Privatstraße	CS 15810,17512 15802,17446 15537,17484 15264,17438
 Segitzdamm: als Oranienplatz ausgeschildert	CP2; 11159,10769 11133,10704
 Legiendamm: als Oranienplatz ausgeschildert	CP2; 11275,10723 11301,10783
 Im Gartenheim: offiziell Einfahrt verboten; an beiden Eingängen Tore, aber ohne Schloss	CS 5707,4777 5690,4744 5659,4761 5677,4794
@@ -291,13 +293,14 @@ Ausgeschildert als "Sittener Zeile"	CP2; 3443,2138 3513,2135
 Ausgeschildert als "Reinacher Zeile"	CP2; 3513,2135 3443,2138
 Seddinpromenade: Umfahrung der Treppe	CS 27761,-3165 27749,-3120
 Ausgeschildert zum "Haus Sonneneck"	CP2; 23297,14772 23318,14847
-Sonnenkieker: Privatstraße	CS 22527,13708 22518,13740 22600,13812 22668,13849 22692,13836
+Sonnenkieker: Privatstraße	CS 22527,13708 22518,13740 22600,13812 22668,13849
+Sonnenkieker: Privatstraße	CS 22670,13902 22658,13898 22652,13895 22668,13849 22671,13839 22692,13836
 (Clara-Zetkin-Platz - Bansiner Str.): ausgeschildert als "Bansiner Str."	CP2; 22612,12966 22623,12944
 Ausgeschildert als "zur Carola-Neher-Str."	CP2; 23458,14439 23476,14409
 Kaiserkronenweg: Privatstraße, nur frei für Anlieger	CS 20183,14645 20030,14731 20012,14756 19966,14783
 Biesdorfer Blumenwiese: Privatstraße	CS 20609,14343 20597,14291 20543,14293 20540,14249
 Biesdorfer Blumenwiese: Privatstraße	CS 20494,14246 20540,14249 20583,14241 20584,14211
-(Fortsetzung der Mieltschiner Str.): Privatstraße	CS 22051,10201 22001,10216
+(Fortsetzung der Mieltschiner Str.): Privatstraße	CS 22047,10202 22001,10216
 Sternallee: Privatstraße	CS 23651,5435 23590,5436 23595,5394 23658,5423
 Stillerzeile [89-95]: Privatgrundstück, kein öffentlicher Durchgang	CS 24285,5472 24236,5594
 Apfelwicklerstr.: Privatstraße	CS 21434,10678 21543,10724
@@ -495,7 +498,7 @@ Am Rosengarten: nicht ausgeschildert	CP2; 18654,12255 18707,12225
 Weg ist schwierig zu erkennen	CP2; 18445,9887 18436,9842
 #: url: http://www.wuhlheide.de/de/programm/
 An einigen Tagen im Sommer ist das Eichgestell vor der Freilichtbühne wegen Veranstaltungen gesperrt, in diesem Fall die Freilichtbühne nördlich umfahren	CS 19995,6406 20106,6357 20200,6321
-Am Bahnhof Wuhlheide: nicht ausgeschildert	CP2; 20635,7119 20654,7136
+Am Bahnhof Wuhlheide: nicht ausgeschildert	CP2; 20640,7122 20654,7136
 Lindenschwärmerweg: Privatstraße	CS 21308,11075 21294,11097 21187,11132
 Fechinger Weg: Privatstraße	CS 21409,11941 21411,11863 21456,11825
 Wischbergweg: im Kleingartenbereich nicht ausgeschildert	CP2; 13617,18045 13733,18161
@@ -543,7 +546,6 @@ Goldfasanenweg: Privatstraße	CS 20864,15264 20861,15352 20906,15352
 ausgeschildert Zur Wiltbergstr. 29, 29A, 29G	CP2; 16121,25818 16094,25776
 (S-Bahndamm - Hobrechtsfelder Chaussee): für THW frei	CS 15469,24813 15339,24861 14434,25388
 Tauernallee - Hochspannungsweg: Bordstein	CP; 11323,1986 11343,1937 11373,1925
-Warschauer Str.: während der Bauarbeiten darf der Mittelstreifen zwischen Gubener Str. und Frankfurter Tor von Radfahrern benutzt werden	CS 13651,11731 13696,11920 13745,12118 13785,12292
 zum Freibad Plötzensee: Kassenhäuschen, Schranke	CS 5321,14978 5323,15030
 nicht den Friedhofsweg auf der rechten Seiten benutzen	CP2; 4963,15259 4624,15671
 ausgeschildert Kolonie Spreegrund	CP2; 1110,13462 1111,13514
@@ -569,3 +571,14 @@ Str. 156: nicht ausgeschildert	CP2; 17532,15645 17570,15658
 Wasserstr. und Uferstr.: noch nicht ausgeschildert	CS 17483,6024 17681,6212 17843,6083
 Unterführung kann unter Wasser stehen	CS 13617,21819 13644,21808
 nicht ausgeschildert	CP2; 16104,19165 16158,19049
+nicht ausgeschildert	CP2; 16633,7434 16620,7574
+Helga-Haase-Str.: nicht ausgeschildert	CS 17465,16340 17508,16356 17611,16396 17673,16420 17792,16465
+Jutta-Langenau-Str.: nicht ausgeschildert	CS 17615,16310 17643,16322 17818,16397 17857,16414 17877,16423
+Gerhard-Schulz-Str.: nicht ausgeschildert	CS 17508,16356 17497,16385 17552,16461
+Harry-Glaß-Str.: nicht ausgeschildert	CS 17552,16461 17603,16415 17611,16396 17643,16322
+Erich-Hagen-Str.: nicht ausgeschildert	CS 17673,16420 17657,16464 17712,16549
+Joachim-Böhmer-Str.: nicht ausgeschildert	CS 17818,16397 17792,16465 17776,16504 17712,16549 17673,16577
+Anna-Maria-Müller-Str.: nicht ausgeschildert	CS 17857,16414 17814,16534 17734,16587 17704,16607
+Anna-Maria-Müller-Str.: nicht ausgeschildert	CS 17734,16587 17712,16549
+Möwenweg: nicht ausgeschildert	CP2; 22108,10970 22195,10993
+ausgeschildert "Unfallkrankenhaus Berlin"	CP2; 21930,12185 21608,12320

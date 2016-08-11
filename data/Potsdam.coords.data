@@ -22,7 +22,6 @@ Am Alten Friedhof|Potsdam||-11772,-2677
 Am Alten Markt|Potsdam|14467|-12684,-1428
 Am Alten Mörtelwerk|Potsdam||-17186,-451
 Am Angelhaken|Potsdam||
-Am Babelsberger Park|Potsdam||-11090,-1506
 Am Bahnhof|Potsdam||-18808,2241
 Am Bassin|Potsdam||-12863,-921
 Am Blinker|Potsdam||-19661,4436
@@ -31,6 +30,7 @@ Am Breiten Gestell|Potsdam||
 Am Brunnen|Potsdam||-11769,-3277
 Am Buchhorst|Potsdam||-9692,-5937
 Am Bürohochhaus|Potsdam||-9395,-5020
+Am Denkmal|Potsdam||-9531,6901
 Am Drachenberg|Potsdam||-15802,-300
 Am Eichenhain|Potsdam||-17759,-682
 Am Fenn|Potsdam||-10079,-4378
@@ -99,7 +99,6 @@ An den Windmühlen|Potsdam||-9987,-2587
 An der Alten Brauerei|Potsdam||-11014,-1643
 An der Alten Zauche|Potsdam||-10651,-3878
 An der Brauerei|Potsdam||-9396,-5776
-An der Einsiedelei|Potsdam||-13807,-208
 An der Fährwiese|Potsdam||-14182,-2679
 An der Havel|Potsdam||
 An der Kornmühle|Potsdam|14473|-12712,-2172
@@ -228,6 +227,7 @@ Eichelkamp|Potsdam||-14593,2923
 Eichenallee|Potsdam|14469|-15693,-275
 Eichenring|Potsdam||-17627,-13
 Eichenweg|Potsdam||-9569,-2401
+Einsiedelei|Potsdam|14469|-13807,-208
 Eisenhartstr.|Potsdam||-12852,-331
 Eleonore-Prochaska-Str.|Potsdam||-7960,-5070
 Eltesterstr.|Potsdam||-12060,-1383
@@ -279,6 +279,7 @@ Friedrich-List-Str.|Potsdam||-11822,-1959
 Friedrich-W.-Murnau-Str.|Potsdam||-7165,-4288
 Friedrich-Wilhelm-Boelcke-Str.|Potsdam|14473|-12831,-2439
 Friedrich-Wolf-Str.|Potsdam||-10324,-4749
+Friedrichspark|Potsdam-Marquardt|14476|-19591,6980
 Friesenstr.|Potsdam||-10707,-2223
 Fritz-Encke-Str.|Potsdam||-13905,1491
 Fritz-Lang-Str.|Potsdam||-7192,-4322
@@ -614,7 +615,7 @@ Pannenbergstr.|Potsdam||-16446,1426
 Pappelallee|Potsdam||-14651,344
 Pappelhof|Potsdam||-10170,-3780
 Parallelweg|Potsdam||-8627,-3072
-Park Babelsberg|Potsdam||-10624,-310
+Park Babelsberg|Potsdam|14482|-11090,-1506
 Park Charlottenhof|Potsdam||-15231,-1478
 Park Sanssouci|Potsdam||-15275,-1312
 Parkbrücke|Potsdam||-9966,-107

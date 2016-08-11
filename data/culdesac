@@ -194,7 +194,8 @@ Sackgassenende, Weg am Moabiter Werder	culdesac_pseudo 7837,12860
 	culdesac 17342,15386
 	culdesac 17782,15389
 	culdesac 17740,15254
-	culdesac 17579,14777
+	culdesac_pseudo 17579,14777
+	culdesac_pseudo 17558,14840
 	culdesac 17629,14627
 Sackgassenende im östlichen Abschnitt	culdesac 17907,14904
 	culdesac 17990,14808
@@ -544,7 +545,7 @@ südliches Sackgassenende	culdesac -8641,13158
 	culdesac -8830,13169
 nördliches Sackgassenende	culdesac -8969,13324
 südliches Sackgassenende	culdesac -8986,13265
-Sackgassenende, zum Ramin-Park	culdesac_pseudo -3974,14495
+Sackgassenende, zum Ramin-Park	culdesac_pseudo -3964,14507
 Sackgassenende, zum Ramin-Park	culdesac_pseudo -3887,14405
 	culdesac -5338,14798
 	culdesac -5694,14656
@@ -731,7 +732,7 @@ nördliches Sackgassenende	culdesac 24370,10198
 	culdesac -7098,16138
 	culdesac -4182,13691
 	culdesac -3384,13091
-	culdesac_pseudo -3560,13704
+	culdesac_pseudo -3563,13700
 	culdesac_pseudo 19856,13794
 	culdesac 21187,11132
 	culdesac_pseudo 21326,11122
@@ -772,9 +773,10 @@ Sackgassenende, Kleingartenkolonie	culdesac_pseudo 2361,2156
 	culdesac -1897,16562
 	culdesac -1902,16493
 	culdesac_pseudo -4156,14677
-	culdesac_pseudo -4947,14873
+	culdesac_pseudo -4961,14828
 	culdesac -2950,12589
 	culdesac_pseudo -2345,10609
+	culdesac_pseudo -2970,10748
 	culdesac 18172,16664
 	culdesac 22752,20427
 	culdesac_pseudo 22886,20514
@@ -882,7 +884,7 @@ Klinikumsgebäude	culdesac 17428,25235
 	culdesac 23475,19131
 	culdesac 23508,19025
 	culdesac 22914,17893
-Ende des nördlichen Abschnitts	culdesac 8389,9017
+	culdesac 8383,8862
 Sackgassenende, Ulmenhof	culdesac 32090,3599
 	culdesac_pseudo 32230,3770
 	culdesac_pseudo 32224,3889
@@ -932,8 +934,7 @@ Tor an der Hiddenseestr.	culdesac 10967,17671
 	culdesac 9410,21535
 	culdesac 9298,21455
 	culdesac 9275,21441
-	culdesac 26183,12670
-	culdesac 26247,12643
+	culdesac 26386,12651
 Strandbad Plötzensee	culdesac 5252,15182
 	culdesac_pseudo 4376,21170
 	culdesac 4768,23045
@@ -1086,3 +1087,50 @@ Sackgassenende, am Bahndamm	culdesac 14219,8260
 	culdesac_pseudo 14138,21233
 	culdesac 14580,21146
 	culdesac 14484,20832
+	culdesac -2961,14200
+	culdesac -2923,14108
+	culdesac -6425,13347
+	culdesac -3221,12925
+	culdesac -3618,13588
+	culdesac_pseudo -3550,13811
+	culdesac 24786,13680
+	culdesac 25325,13543
+	culdesac 21950,10863
+	culdesac 25388,10447
+	culdesac 25361,10321
+	culdesac 24747,10806
+	culdesac 25080,10899
+	culdesac 25076,11040
+	culdesac 24439,10688
+südliches Sackgassenende	culdesac 24186,10035
+	culdesac 24026,12729
+	culdesac 24018,12541
+	culdesac 23971,12037
+	culdesac 23382,11760
+	culdesac 25664,11460
+	culdesac 25678,9821
+	culdesac 21135,-274
+	culdesac 24977,-2753
+	culdesac 24705,-3053
+	culdesac 24598,-3108
+	culdesac 24506,-3205
+	culdesac 24868,-2739
+	culdesac 10603,23870
+	culdesac 10759,23597
+	culdesac 10797,23620
+	culdesac 10839,23640
+	culdesac 25473,4786
+	culdesac 23173,2315
+	culdesac 23275,2334
+	culdesac 23623,2392
+	culdesac 8994,703
+	culdesac 7013,2146
+	culdesac 7597,2647
+	culdesac 7425,2461
+	culdesac 8063,2092
+	culdesac 21748,746
+	culdesac 5458,16946
+	culdesac 5406,16702
+	culdesac -9556,5445
+	culdesac -9475,5500
+	culdesac -9398,5495

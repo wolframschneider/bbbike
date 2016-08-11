@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (c) 1995-2015 Slaven Rezic. All rights reserved.
+# Copyright (c) 1995-2016 Slaven Rezic. All rights reserved.
 # This is free software; you can redistribute it and/or modify it under the
 # terms of the GNU General Public License, see the file COPYING.
 #
@@ -5437,6 +5437,9 @@ speicherplatzsparender.",
 	  var => \$texteditor,
 	  longhelp => M"Mögliche Werte sind vi (automatisch in einem xterm gestartet), emacsclient, gnuclient",
 	 ],
+	 ['f8editor','=s','internal',
+	  choices => [qw(internal external)],
+	  label => M"Editor with F8", var => \$f8_editor],
 	 ['stderr','!',0,
 	  label => M"Fehlerausgabe auf stderr", var => \$stderr],
 	 ['stderrwindow','!',undef,
@@ -7462,8 +7465,27 @@ EOF
     ;
 }
 
+# operates on argument
+{
+    my $gpsman_rc_directory;
+    sub expand_variables_in_image_filenames ($) {
+	$_[0] =~ s{\$BBBIKEDIR}{$FindBin::RealBin}g;
+	$_[0] =~ s{\$GPSMANDIR}{
+	    if (!defined $gpsman_rc_directory) {
+	        require GPS::Symbols::Garmin;
+	        $gpsman_rc_directory = GPS::Symbols::Garmin::gpsman_rc_directory();
+		if (!defined $gpsman_rc_directory) {
+		    $gpsman_rc_directory = '$GPSMANDIR'; # will fail later
+		}
+	    }
+	    $gpsman_rc_directory;
+	}eg;
+    }
+}
+
 sub maybe_expand_image_file {
     my($imgfile, $datafile, $subdir) = @_;
+    expand_variables_in_image_filenames $imgfile;
     if (file_name_is_absolute($imgfile)) {
 	return try_image_suffix($imgfile);
     }
@@ -22193,6 +22215,7 @@ sub get_image_for_any {
     if (!$p) {
 	eval {
 	    my $abs_realfile;
+	    expand_variables_in_image_filenames $realfile;
 	    if ($realfile =~ m{^/}) {
 		$abs_realfile = $realfile;
 	    } else {

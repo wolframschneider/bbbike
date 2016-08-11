@@ -147,7 +147,7 @@ Hexenberg	0 85245,-1595
 Wüste Kunersdorf	0 86180,1116
 Rheinsberg	3 -25801,76494
 Zechow	0 -24687,71412
-Kramnitz	0 -21237,64885
+Kramnitz	0 -21214,64933
 #: alias: Baruth/Mark
 Baruth	3 18138,-39957
 Brück	3 -32506,-24024
@@ -252,7 +252,7 @@ Liebenberg	0 -417,53951
 Falkenthal	1 2034,55227
 Grieben	1 -14254,54584
 Teschendorf	1 -6042,49596
-Linde	0 -9214,53797
+Linde	0 -9135,53863
 Bergsdorf	1 -285,58256
 Kleinmutz	1 1284,62083
 Häsen	0 -3471,59514
@@ -268,10 +268,10 @@ Rauschendorf	0 -10466,69247
 Sonnenberg	1 -12156,67931
 Wolfsruh	1 -12442,72017
 Schulzendorf	1 -14963,69696
-Heinrichsdorf	1 -21380,70629
-Hindenberg	1 -17877,70303
+Heinrichsdorf	1 -21327,70569
+Hindenberg	1 -17941,70276
 Dierberg	1 -20060,68241
-Banzendorf	1 -18228,67652
+Banzendorf	1 -18287,67361
 Dollgow	1 -17298,74359
 Linow	1 -29946,76473
 Zühlen	1 -30702,73617
@@ -488,10 +488,10 @@ Grube	1 -20009,2396
 Bornim	0 -16905,1503
 #: XXX_prog: zugehörige Großgemeinde: Uetz-Paaren
 Uetz	0 -21057,6524
-Paaren	1 -21480,8422
+Paaren	1 -21464,8331
 Göttin|(Töplitz)	0 -24100,4331
 Falkenrehde	1 -22215,9500
-Neu Falkenrehde	0 -24319,9296
+Neu Falkenrehde	0 -24358,9272
 Kartzow	0 -18251,9125
 Priort	1 -19323,11087
 Buchow	1 -21489,11565
@@ -714,7 +714,7 @@ Bagow	0 -37418,11168
 Ketzür	1 -42106,9056
 Lünow	1 -40050,8153
 Roskow	1 -36048,6447
-Weserarm	1 -38831,5331
+Weseram	1 -38839,5374
 Klein Kreutz	1 -42382,2340
 Brielow	1 -48417,5162
 Radewege	1 -45950,7013
@@ -744,7 +744,7 @@ Deetz|(Havel)	1 -32448,3678
 Phöben	1 -24894,1733
 Krielow	1 -30298,479
 Schmergow	1 -29389,4787
-Zachow	1 -31328,7955
+Zachow	1 -31846,7839
 Gutenpaaren	0 -32804,7332
 Paretz	0 -25537,6616
 Brückenkopf	0 -29594,8467

@@ -223,7 +223,7 @@ Köpenicker Str./Dubickstr.	Zs 21080,8951
 Westerlandstr.	Zs -5036,15923
 #: note: Luftbild
 Pionierstr./Nähe Westerlandstr.	Zs -4900,16094
-Stadtrandstr./Griesingerstr.	Zs -6508,16808
+Stadtrandstr./Griesingerstr.	Zs -6512,16810
 Pettenkoferstr./Dolziger Str.	Zs 14922,12632
 Hausburgstr.	Zs 13795,13255
 Pilgramer Str.	Zs 25150,10555
@@ -377,6 +377,7 @@ Große-Leege-Str./Schöneicher	Zs 16686,15441
 Oranienstr./Prinzessinnenstr.	Zs 10950,10852
 Gartenstr./Feldstr.	Zs 8959,14522
 Gartenstr.	Zs 8720,14877
+Scheringstr./Gartenstr.	Zs 8710,14964
 Ruppiner Chaussee/Stolpmünder Weg	Zs -1635,24113
 Hönower Weg	Zs 26885,13135
 Monumentenstr./Hohenfriedbergstr.	Zs 7766,9122
@@ -506,11 +507,7 @@ Cecilienstr./Hannaweg	Zs 20926,13952
 Eastgate-Parkplatz (2x)	Zs 19834,15226
 Hämmerlingstr./Wuhleweg	Zs 22084,5877
 Kiefholzstr./Siemens	Zs 14018,9118
-#: next_check_id: LORTZING-2014
-#: XXX bleibt dieser Zebrastreifen permanent?
-#: last_checked: 2016-02-19
-#: check_frequency: 120d
-Lortzingstr.-Mauerpark/Baustraße	Zs 10055,15424
+# REMOVED (jetzt eine Ampel) --- #: next_check_id: LORTZING-2014 --- #: XXX bleibt dieser Zebrastreifen permanent? --- #: last_checked: 2016-02-19 --- #: check_frequency: 120d --- Lortzingstr.-Mauerpark/Baustraße	Zs 10055,15424
 Alte Hellersdorfer Str.	Zs 23109,15861
 Parkplatz Le Prom	Zs 19835,15223
 Parkplatz Le Prom	Zs 19830,15238
@@ -523,6 +520,7 @@ Durlacher Str./Tübinger Str.	Zs 5505,8246
 # REMOVED (Antwort: nein) --- #: by: http://www.berlin.de/ba-steglitz-zehlendorf/bvv-online/vo020.asp?VOLFDNR=4473 (Verlegung?) --- #: XXX wird der Zebrastreifen zur Promenade hin verlegt? --- #: last_checked: 2013-09-04 --- #: check_frequency: 120d
 Bäkestr.	Zs 4550,3123
 Elsa-Brändström-Str./Trelleborger Str.	Zs 11279,17142
+Vinetastr./Trelleborger Str.	Zs 11272,17030
 #: by: http://www.berlin.de/ba-spandau/bvv-online/vo020.asp?VOLFDNR=4019
 #: confirmed_by: srt
 Stadtrandstr./Waldkrankenhaus	Zs -6414,17079
@@ -583,3 +581,13 @@ Bruchwitzstr./Mühlenstr.	Zs 7029,3286
 Mühlenstr./Bruchwitzstr.	Zs 7044,3292
 Thomasstr./Selkestr.	Zs 12674,7492
 Thaerstr./Erich-Nehlhans-Str.	Zs 13992,13258
+Finkenkruger Weg/Torweg	Zs -7420,14557
+Messegände/CityCube Berlin	Zs 1479,10378
+Olbersstr./Jungfernheide	Zs 3287,13627
+Havelchaussee/Am Postfenn	Zs -2789,10331
+Chemnitzer/Anton-von-Werner-Str.	Zs 22270,10475
+Reginhardstr./Kühleweinstr.	Zs 8079,17207
+Buntzel/Advokatensteig	Zs 22162,452
+Rigaer Str./Libauer Str.	Zs 14000,12518
+Lindenthaler Allee/Königsweg	Zs -1296,2025
+Clauertstr./Königsweg	Zs -1077,2138

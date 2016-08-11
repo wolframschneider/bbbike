@@ -23,7 +23,7 @@ Frankfurter Tor	Pl 13785,12292
 John-F.-Kennedy-Platz	Pl 6460,8688
 Leuthener Platz	Pl 7716,8356
 Winterfeldtplatz	Pl 7080,10098
-Hansaplatz	Pl 6178,12387
+Hansaplatz	Pl 6173,12396
 Platz der Republik	Pl 8119,12414
 Oranienburger Tor (Mitte)	Pl 9225,13389
 Nordbahnhof	Pl 9383,13986
@@ -124,7 +124,6 @@ Langenbeckplatz	Pl 25030,9626
 Wilhelmplatz (Wannsee)	Pl -7232,445
 Wilhelmplatz (Wannsee)	Pl -7180,378
 Zwirngrabendreieck	Pl 10286,13084
-Andreas-Hofer-Platz	Pl 10655,16904
 Annemirl-Bauer-Platz	Pl 14669,11152
 Boddinplatz	Pl 12104,8299
 Kläre-Bloch-Platz	Pl 2953,11830
@@ -206,7 +205,7 @@ Oberseeplatz	Pl 15891,16041
 Durlacher Platz	Pl 23887,9463
 Werner-Düttmann-Platz	Pl 11378,9305
 Sandbacher Platz	Pl 22720,-1255
-Victor-Klemperer-Platz	Pl 20731,15864
+Victor-Klemperer-Platz	Pl 20732,15868
 Eugen-Gerstenmaier-Platz	Pl 3839,4577
 Joe-May-Platz	Pl 14346,17224
 Jürgen-Fuchs-Platz	Pl 3355,5655
@@ -243,13 +242,12 @@ Johannes-Fest-Platz	Pl 18778,8663
 Brandenburgplatz	Pl 23346,5723
 Nöldnerplatz	Pl 15870,10938
 Martha-Jacob-Platz	Pl 480,11204
-Monumentenplatz	Pl 8344,9085
 Walslebener Platz	Pl 20272,10448
 Forum an der Museumsinsel	Pl 9636,13076
 Hanna-Renate-Laurien-Platz	Pl 6489,3578
 Minna-Flake-Platz	Pl 11673,16003
 Kirsten-Heisig-Platz	Pl 12872,7134
-Selma- und Paul-Latte-Platz	Pl 10786,20272
+Selma-und-Paul-Latte-Platz	Pl 10786,20272
 Kottbusser Tor	Pl 11393,10390
 Anhalter Bahnhof	Pl 8947,10956
 Flughafen Tempelhof	Pl 9884,8265
@@ -310,7 +308,7 @@ Wannseehafen	Pl -4905,1514
 Tegel-Center	Pl 2295,20358
 Nikolskoe	Pl -8881,1668
 Schäferberg	Pl -8169,760
-Moorlake	Pl -9606,1389
+Moorlake	Pl -9620,1407
 Ökowerk Teufelssee	Pl -977,9425
 Pfaueninsel	Pl -8564,2276
 Museumsinsel	Pl 9948,12631

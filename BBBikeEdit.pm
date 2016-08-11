@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998,2002,2003,2004,2009,2015 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998,2002,2003,2004,2009,2015,2016 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -2048,7 +2048,12 @@ sub click {
 	$file = $o->datadir . "/" . $click_info->basefile . "-orig";
     }
     if (!$main::edit_mode_flag || !-e $file) {
-	warn "Fallback to non-orig file";
+	if ($file !~ m{(   # The following files do not have "-orig" counterparts (so don't warn):
+			   /tmp/fragezeichen.*\.bbd-orig
+		       |   /data/temp_blockings/bbbike-temp-blockings.pl-orig
+		       )$}x) {
+	    warn "$file does not exist, fallback to non-orig file";
+	}
 	$file =~ s{-orig$}{};
     }
     if (!-r $file) {
@@ -2071,15 +2076,6 @@ sub click {
 	$readonly = 1;
     }
 
-    if ($readonly) {
-	if ($Tk::VERSION >= 804) {
-	    @entry_args = (-state => "readonly");
-	} else {
-	    @entry_args = (-state => "disabled");
-	}
-	@button_args = (-state => "disabled");
-    }
-
     my @rec;
     if (eval { require DB_File; 1 }) {
 	if (!tie @rec, 'DB_File', $file, ($readonly ? O_RDONLY : O_RDWR), 0644, $DB_File::DB_RECNO) {
@@ -2093,6 +2089,69 @@ sub click {
     } else {
 	# XXX vielleicht sollte es einen fallback mit open und read geben
 	main::status_message("Kann die Funktion nicht durchführen: entweder Tie::File oder DB_File fehlt", "die");
+    }
+
+    my $edit_with_external_editor = sub {
+	if ($click_info->filetype eq "temp_blockings") {
+	    $o->edit_temp_blockings($click_info);
+	    return 1;
+	}
+
+	# XXX don't duplicate code, see below
+	# XXX ufff... this is also in  BBBikeAdvanced::find_canvas_item_file for the F9 key :-(
+	my $count = 0;
+	my $rec_count = 0;
+	my $source_file;
+	my $source_line;
+	foreach (@rec) {
+	    if (m{^#:\s*source_(line|file):?\s*(.*)}) {
+		my($type, $val) = ($1, $2);
+		if ($type eq 'line') {
+		    $source_line = $val;
+		} else {
+		    $source_file = $val;
+		}
+	    } elsif (!/^\#/) {
+		if ($count == $click_info->line) {
+		    if (defined $source_file && defined $source_line) {
+			my $abs_source_file;
+			if ($source_file !~ m{^/}) {
+			    for (@Strassen::datadirs) {
+				if (-f "$_/$source_file") {
+				    $abs_source_file = "$_/$source_file";
+				    last;
+				}
+			    }
+			}
+			if (!defined $abs_source_file) {
+			    main::status_message("Cannot find '$source_file' in @Strassen::datadirs", 'die');
+			}
+			start_editor($abs_source_file, $source_line);
+		    } else {
+			start_editor($file, $rec_count+1);
+		    }
+		    return 1;
+		}
+		$count++;
+	    }
+	    $rec_count++;
+	}
+	return 0;
+    };
+
+    if (($main::f8_editor||'') eq 'external') {
+	my $success = $edit_with_external_editor->();
+	main::status_message("Cannot find line " . $click_info->line, "die") if !$success;
+	return;
+    }
+
+    if ($readonly) {
+	if ($Tk::VERSION >= 804) {
+	    @entry_args = (-state => "readonly");
+	} else {
+	    @entry_args = (-state => "disabled");
+	}
+	@button_args = (-state => "disabled");
     }
 
     require Tk::Ruler;
@@ -2140,28 +2199,8 @@ sub click {
 		       my $do_popdown = ($name eq $initial_name &&
 					 $cat eq $initial_cat &&
 					 $coords eq $initial_coords);
-		   SEARCH: {
-			   if ($click_info->filetype eq "temp_blockings") {
-			       $o->edit_temp_blockings($click_info);
-			       last SEARCH;
-			   } else {
-			       # XXX don't duplicate code, see below
-			       # XXX ufff... this is also in  BBBikeAdvanced::find_canvas_item_file for the F9 key :-(
-			       my $count = 0;
-			       my $rec_count = 0;
-			       foreach (@rec) {
-				   if (!/^\#/) {
-				       if ($count == $click_info->line) {
-					   start_editor($file, $rec_count+1);
-					   last SEARCH;
-				       }
-				       $count++;
-				   }
-				   $rec_count++;
-			       }
-			       main::status_message("Cannot find line " . $click_info->line, "die");
-			   }
-		       }
+		       my $success = $edit_with_external_editor->();
+		       main::status_message("Cannot find line " . $click_info->line, "die") if !$success;
 		       $t->destroy if $do_popdown;
 		   })->pack(-side => "left");
     }
@@ -2281,15 +2320,14 @@ sub edit_temp_blockings {
 	$click_info = $o->click_info;
     }
 
-    open TEMP_BLOCKINGS, $click_info->basefile
+    open my $TEMP_BLOCKINGS, $click_info->basefile
 	or main::status_message("Can't open " . $click_info->basefile . ": $!", "die");
     my $line = $main::temp_blocking_inx_mapping{ $click_info->line };
     my $record = 0;
     my $linenumber = 1;
-    while(<TEMP_BLOCKINGS>) {
-	if (m<^\s*\{>) {
+    while(<$TEMP_BLOCKINGS>) {
+	if (m<^\s*\{> || m<^\s*undef,>) {
 	    if ($record == $line) {
-		close TEMP_BLOCKINGS;
 		start_editor($click_info->basefile, $linenumber);
 		return;
 	    }
@@ -2297,7 +2335,6 @@ sub edit_temp_blockings {
 	}
 	$linenumber++;
     }
-    close TEMP_BLOCKINGS;
     main::status_message("Can't find record number " . $click_info->line . " in " . $click_info->basefile, "die");
 }
 
