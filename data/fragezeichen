@@ -894,6 +894,7 @@ Havelwelle: genaue Lage der Straße? Qualität?	? -14725,-2389 -14618,-2295 -14585
 Müllerweg (Potsdam-Fahrland): Qualität? Genauer Verlauf?	? -15503,6422 -15392,6371
 Am Kaniswall: Privatstraße, wo genau? Qualität?	? 32854,-201 32970,320
 Alter Fischerweg (Gosen): Qualität?	? 32778,-1044 33013,-790 33117,-767 33140,-703 33061,-636 33046,-551 32842,-509 32889,-402 32854,-201
+Fritz-Erler-Allee: werden die Radwege asphaltiert oder saniert?	? 14392,2979 14274,3129 14205,3187 14126,3225
 Ahornstr. (Potsdam): Qualität?	? -8829,-2741 -8870,-2876
 Alter Torfweg (Potsdam): Qualität? Existieren Straßenschilder?	? -10836,-5477 -10829,-5608 -10917,-5739 -11089,-5909
 Niederstr. (Glienicke): Qualität östlich der Ottostr.?	? 3949,24718 4052,24731 4233,24772 4276,24781 4354,24803 4389,24783
@@ -906,6 +907,7 @@ Niederfelde: ist die gesamte Straße gepflastert?	? 66126,84243 66092,84252 66062
 Auguststr. (Schwedt): Qualität des westlichen Abschnitts?	? 68135,73168 68517,73160 68591,73201 68777,73351
 Theodor-Fontane-Str.: Sackgasse oder Einbahnstraßenregelung?	? -9835,6841 -9854,6890
 Waldweg zum Campingplatz: Qualität der Straße?	? 29208,71 29512,-619 29297,-717 28915,-1147 28565,-1339 28248,-1473 28162,-1294 28033,-1259 27845,-1324 27758,-1358
+Am Orangeriepark: Ist die Straße bereits fertiggestellt? Qualität? Wo befindet sich die Straße (möglichst mit GPS-Track)?	?::inwork 10271,19361 10421,19410
 Rita-Maiburg-Str.: Ist die Straße bereits fertiggestellt? Qualität? Wo befindet sich die Straße (möglichst mit GPS-Track)?	?::projected 20342,-777 20782,-1199 20822,-1242 20833,-1298 20872,-1748
 Ludwig-Prandtl-Str.: ist die Straße bis zur Rita-Maiburg-Str. verlängert worden?	?::projected 20274,-845 20342,-777
 ehem. Bahndamm zwischen L15 undf K7332 bei Hardenbeck: wurde hier ein Radweg realisiert? Ist der Radweg durchgängig asphaltiert? Wo genau befindet sich der Radweg (GPS-Track)?	? 16377,90072 15782,90862 15728,90935 15398,92093 15661,93732 15688,93829 15748,93928 15841,94009 16435,94298 17677,94900 17796,95008 17912,95192
@@ -1137,7 +1139,6 @@ Müncheberg, Turm (genaue Bezeichnung?)	? 60306,11906
 Hobrechtsfelder Chaussee (bis Kurve): OK (ist hier asphaltiert oder betoniert?)	? 15589,27116 15230,26560 14859,26029 14472,25449 14434,25388 14308,25196 14217,24999
 Hobrechtsfelder Chaussee (ab Kurve): OK (ist hier asphaltiert oder betoniert?)	? 15589,27116 15711,27928 15777,28037
 Tino-Schwierzina-Str.: außen Kopfsteinpflaster, Straßenbahntrasse asphaltiert (Ist die Tino-Schwierzina-Str. zwischen Aidastr. und Romain-Rolland-Str. mittlerweile komplett asphaltiert?)	? 12736,17998 12467,17814
-Rüdigerstr. (Lichtenberg): Kopfsteinpflaster (ist hier das Kopfsteinpflaster geblieben?)	? 17375,12255 17466,12241
 (Bucher Teiche - Schönerlinder Chaussee): vermutlich unbefestigter Weg (wie ist die Qualität hier? vermutlich unbefestigter Weg?)	? 14017,25491 14141,25659 14216,25760 14302,26021 14352,26100 14366,26234 14538,26558 14497,26727
 Seebadstr.: Asphalt mit einigen Schäden (Ist die Qualität des Asphalts in der Seebadstraße nach den Bauarbeiten besser geworden?)	? 4681,23273 4704,23278 4744,23289 4910,23490 5006,23575
 (Wichernstr. - Johannesstift): Kleinsteinpflaster (im nordwestlichen Abschnitt auch gepflastert?)	? -3568,18093 -3655,18177 -3699,18222 -3835,18357
