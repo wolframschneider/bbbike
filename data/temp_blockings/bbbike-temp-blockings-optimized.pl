@@ -3232,7 +3232,7 @@ userdel	2::night 17671,13132 17684,13133
 ',
          'from' => undef,
          'id' => 2527,
-         'text' => 'Wuhlewanderweg: an der Zimmermannstraßenbrücke wegen Bauarbeiten gesperrt',
+         'text' => 'Wuhlewanderweg: an der Zimmermannstraßenbrücke wegen Bauarbeiten gesperrt, vermutlich bis Mitte September 2016',
          'type' => 'gesperrt',
          'until' => 1473890400
        },
@@ -3585,7 +3585,20 @@ userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: next_check_id: KARLSHORSTER-2016
+#: by: http://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2016/pressemitteilung.511369.php
+#: XXX ist vielleicht nur der südliche Abschnitt betroffen? Und außerdem: Einbahnstraßenregelung in der Hirschberger Str. auch für Radfahrer?
+#: last_checked: 2016-08-25
+#: next_check: 2016-08-29
+userdel	2::inwork 15261,10738 15272,10790 15279,10862
+',
+         'from' => 1472335200,
+         'id' => 2717,
+         'text' => 'Karlshorster Str.: Fahrbahn komplett gesperrt, während der Arbeitszeiten auch für Fußgänger und Radfahrer, 29.08.2016 bis 31.10.2016',
+         'type' => 'gesperrt',
+         'until' => 1477954799
+       },
        undef,
        {
          'data' => '	2::inwork 9998,16547 9982,16527 9959,16510
@@ -3877,7 +3890,10 @@ userdel	2::inwork 16532,26174 16222,25829
          'until' => 1475359199
        },
        {
-         'data' => '#: by: http://lolp2.de.c3cdn.com/wp/wp-content/uploads/2016/02/Lollapalooza2016_Treptower-Park_Festivalmap_2000x1414_RZ.png
+         'data' => '#: XXX gibt es schon die ersten Sperrungen im Park? vvv
+#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.511653.php
+#: next_check: 2016-08-27 vvv
+#: by: http://lolp2.de.c3cdn.com/wp/wp-content/uploads/2016/02/Lollapalooza2016_Treptower-Park_Festivalmap_2000x1414_RZ.png
 userdel	2::temp 15383,9191 14879,9433 14809,9466
 userdel	2::temp 14909,9649 14867,9573 14837,9517 14809,9466
 userdel	2::temp 14577,9641 14627,9609 14695,9587 14792,9599 14867,9573 14918,9545 15025,9461 15133,9396 15184,9373 15268,9374
@@ -3887,6 +3903,8 @@ userdel	2::temp 15133,9396 15184,9373 15268,9374
 userdel	2::temp 14316,9542 14384,9565
 userdel	2::temp 14809,9466 14556,9581
 userdel	2::temp 14588,9473 14635,9441
+#: next_check ^^^
+#: XXX ^^^
 ',
          'from' => 1473372000,
          'id' => 2805,
@@ -3931,14 +3949,15 @@ userdel	q3::inwork 7130,1253 7081,1346 6984,1540 6881,1743
          'until' => 1472803200
        },
        {
-         'data' => 'userdel	2::inwork 23792,10926 24203,10848 24229,10843
+         'data' => '#: next_check_id: ELSENSTR-2016
+userdel	2::inwork 23792,10926 24203,10848 24229,10843
 ',
          'from' => 1469311200,
          'id' => 2811,
          'source_id' => '2147340370',
-         'text' => 'Elsenstr.: Baustelle zwischen Kressenweg und Hultschiner Damm, Fahrbahn gesperrt, bis Ende August 2016 ',
+         'text' => 'Elsenstr.: Baustelle zwischen Kressenweg und Hultschiner Damm, Fahrbahn gesperrt, bis 09.09.2016',
          'type' => 'gesperrt',
-         'until' => 1472248799
+         'until' => 1473458399
        },
        undef,
        undef,
@@ -3987,13 +4006,14 @@ userdel	q4::inwork; -4731,13135 -4634,13173 -4299,13304 -4011,13407
        },
        {
          'data' => '#: note: by fritz
+#: source_id: 2147340467
 userdel	2::inwork 19666,7988 19843,7866 19927,7813 20031,7794 20077,7786 20139,7775 20280,7749
 ',
          'from' => 1471816800,
          'id' => 2818,
-         'text' => 'Verlängerte Waldowallee: Sperrung zwischen Kiefernallee und Rudolf-Rühl-Allee, vom 23. August 2016 bis voraussichtlich 06. September 2016',
+         'text' => 'Verlängerte Waldowallee: Sperrung zwischen Kiefernallee und Rudolf-Rühl-Allee, vom 23. August 2016 bis 02. September 2016',
          'type' => 'gesperrt',
-         'until' => 1473199199
+         'until' => 1472832000
        },
        {
          'data' => '#: note: by fritz
@@ -4004,6 +4024,16 @@ userdel	q4::inwork 6587,16199 6484,16085
          'text' => 'Kameruner Str.: Fahrbahn zwischen Müllerstr. und Lüderitzstr. gesperrt, bis 08.12.2016',
          'type' => 'handicap',
          'until' => 1481238000
+       },
+       {
+         'data' => 'userdel	2::inwork 25571,4553 25658,4619
+',
+         'from' => 1472356800,
+         'id' => 2820,
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.512129.php',
+         'text' => 'Spreetunnel Friedrichshagen: vom 29. August 2016, 6 Uhr bis 3. September 2016, 20 Uhr, für Fußgänger und Radfahrer voll gesperrt',
+         'type' => 'gesperrt',
+         'until' => 1472925600
        }
      
 );

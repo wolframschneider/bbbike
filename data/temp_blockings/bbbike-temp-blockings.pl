@@ -3354,7 +3354,7 @@ EOF
        text  => 'Stahnsdorf, Lindenstraße, Baustelle bis 30.04.2006, Der Verkehr wird an der Baustelle durch eine Lichtzeichenanlage halbseitig vorbeigeführt. ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1 -1661,-1714 -1715,-1767 -1921,-1931 -2049,-2165
+userdel	1 -1664,-1720 -1715,-1767 -1921,-1931 -2049,-2165
 EOF
      },
      { from  => $isodate2epoch->("2015-11-22 00:00:00"), # 1 Tag Vorlauf
@@ -19753,7 +19753,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_107049',
        data  => <<EOF,
-userdel	q4::inwork 16104,19165 16011,19158 15642,19179
+userdel	q4::inwork 16104,19165 16074,19162 16011,19158 15642,19179
 EOF
      },
      { from  => 1332272539, # 2012-03-20 20:42
@@ -21966,7 +21966,7 @@ EOF
        text  => 'Höhndorfstr.: Bauarbeiten, Fahrbahn gesperrt, vom 09.09.2013 bis zum 30.09.2013',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 8425,8775 8438,8676 8454,8574
+userdel	q4::inwork 8434,8775 8438,8676 8454,8574
 EOF
      },
      { from  => $isodate2epoch->("2013-09-04 00:00:00"),
@@ -22444,7 +22444,7 @@ EOF
      },
      { from  => undef, # 1385766000, # 2013-11-30 00:00
        until => $isodate2epoch->("2016-09-15 00:00:00"), # 1404667175, # $isodate2epoch->("2015-12-31 23:59:59"), # 1401458400, # 2014-05-30 16:00
-       text  => 'Wuhlewanderweg: an der Zimmermannstraßenbrücke wegen Bauarbeiten gesperrt',
+       text  => 'Wuhlewanderweg: an der Zimmermannstraßenbrücke wegen Bauarbeiten gesperrt, vermutlich bis Mitte September 2016',
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: ZIMMERMANNSTRBR-2015
@@ -22861,7 +22861,7 @@ EOF
        text  => 'Potsdamer Str. in Teltow: Baustelle, Einbahnstraße offen in Richtung Osten, voraussichtlich bis März 2015',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork; 1329,-753 1235,-714 1212,-706 1067,-699 950,-680 791,-598 758,-582 723,-580 709,-582
+	q4::inwork; 1329,-753 1235,-714 1212,-706 1067,-699 948,-684 791,-598 757,-587 731,-585 685,-591
 EOF
      },
      { from  => 1400392980, # 2014-05-18 08:03
@@ -24322,14 +24322,17 @@ EOF
 userdel	q3::inwork 12295,12197 12525,12151
 EOF
      },
-     { from  => $isodate2epoch->("2015-05-04 04:00:00"), # ein Tag Vorlauf
-       until => 1436706798, # $isodate2epoch->("2015-09-21 18:00:00"), # XXX dieser Eintrag ist inaktiv, siehe oben für aktiven Eintrag
-       text  => 'Karlshorster Str.: Fahrbahn zwischen Nöldnerstr. und Hauptstr. zeitweise komplett gesperrt, auch für Fußgänger und Radfahrer, 04.05.2015 bis 21.09.2015',
-       type  => 'handicap',
-       source_id => 'IM_024846',
+     { from  => $isodate2epoch->("2016-08-28 00:00:00"), # ein Tag Vorlauf
+       until => $isodate2epoch->("2016-10-31 23:59:59"),
+       text  => 'Karlshorster Str.: Fahrbahn komplett gesperrt, während der Arbeitszeiten auch für Fußgänger und Radfahrer, 29.08.2016 bis 31.10.2016',
+       type  => 'gesperrt',
        data  => <<EOF,
-# REMOVED --- #: next_check_id: KARLSHORSTER-2015 --- #: last_checked: 2015-07-04 --- #: next_check: 2015-09-21
-userdel	2::inwork 15261,10738 15272,10790
+#: next_check_id: KARLSHORSTER-2016
+#: by: http://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2016/pressemitteilung.511369.php
+#: XXX ist vielleicht nur der südliche Abschnitt betroffen? Und außerdem: Einbahnstraßenregelung in der Hirschberger Str. auch für Radfahrer?
+#: last_checked: 2016-08-25
+#: next_check: 2016-08-29
+userdel	2::inwork 15261,10738 15272,10790 15279,10862
 EOF
      },
      { from  => $isodate2epoch->("2016-06-27 00:00:00"), # 1 Tag Vorlauf
@@ -25271,6 +25274,9 @@ EOF
        text  => 'Lollapalooza 2016 im Treptower Park: gesperrte Wege und Straßen, 10.09.2016 und 11.09.2016',
        type  => 'gesperrt',
        data  => <<EOF,
+#: XXX gibt es schon die ersten Sperrungen im Park? vvv
+#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.511653.php
+#: next_check: 2016-08-27 vvv
 #: by: http://lolp2.de.c3cdn.com/wp/wp-content/uploads/2016/02/Lollapalooza2016_Treptower-Park_Festivalmap_2000x1414_RZ.png
 userdel	2::temp 15383,9191 14879,9433 14809,9466
 userdel	2::temp 14909,9649 14867,9573 14837,9517 14809,9466
@@ -25281,6 +25287,8 @@ userdel	2::temp 15133,9396 15184,9373 15268,9374
 userdel	2::temp 14316,9542 14384,9565
 userdel	2::temp 14809,9466 14556,9581
 userdel	2::temp 14588,9473 14635,9441
+#: next_check ^^^
+#: XXX ^^^
 EOF
      },
      { from  => 1467496800, # 2016-07-03 00:00
@@ -25336,11 +25344,12 @@ userdel	q3::inwork 7130,1253 7081,1346 6984,1540 6881,1743
 EOF
      },
      { from  => 1469311200, # 2016-07-24 00:00
-       until => $isodate2epoch->("2016-08-26 23:59:59"), # 1472680799, # 2016-08-31 23:59
-       text  => 'Elsenstr.: Baustelle zwischen Kressenweg und Hultschiner Damm, Fahrbahn gesperrt, bis Ende August 2016 ',
+       until => $isodate2epoch->("2016-09-09 23:59:59"), # 1472680799, # 2016-08-31 23:59
+       text  => 'Elsenstr.: Baustelle zwischen Kressenweg und Hultschiner Damm, Fahrbahn gesperrt, bis 09.09.2016',
        type  => 'gesperrt',
        source_id => '2147340370',
        data  => <<EOF,
+#: next_check_id: ELSENSTR-2016
 userdel	2::inwork 23792,10926 24203,10848 24229,10843
 EOF
      },
@@ -25404,11 +25413,12 @@ userdel	q4::inwork; 12564,16399 12399,16479
 EOF
      },
      { from  => 1471816800, # 2016-08-22 00:00
-       until => 1473199199, # 2016-09-06 23:59
-       text  => 'Verlängerte Waldowallee: Sperrung zwischen Kiefernallee und Rudolf-Rühl-Allee, vom 23. August 2016 bis voraussichtlich 06. September 2016',
+       until => $isodate2epoch->("2016-09-02 18:00:00"), # 1473199199, # 2016-09-06 23:59
+       text  => 'Verlängerte Waldowallee: Sperrung zwischen Kiefernallee und Rudolf-Rühl-Allee, vom 23. August 2016 bis 02. September 2016',
        type  => 'gesperrt',
        data  => <<EOF,
 #: note: by fritz
+#: source_id: 2147340467
 userdel	2::inwork 19666,7988 19843,7866 19927,7813 20031,7794 20077,7786 20139,7775 20280,7749
 EOF
      },
@@ -25419,6 +25429,15 @@ EOF
        data  => <<EOF,
 #: note: by fritz
 userdel	q4::inwork 6587,16199 6484,16085
+EOF
+     },
+     { from  => 1472356800, # 2016-08-28 06:00
+       until => 1472925600, # 2016-09-03 20:00
+       text  => 'Spreetunnel Friedrichshagen: vom 29. August 2016, 6 Uhr bis 3. September 2016, 20 Uhr, für Fußgänger und Radfahrer voll gesperrt',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.512129.php',
+       data  => <<EOF,
+userdel	2::inwork 25571,4553 25658,4619
 EOF
      },
     );

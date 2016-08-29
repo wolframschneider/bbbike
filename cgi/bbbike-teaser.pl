@@ -11,9 +11,15 @@
 # WWW:  http://bbbike.de
 #
 
+use strict;
+use vars qw($lang $bbbike_url $bbbike_images $bbbike_script $bbbike_html $can_mapserver $mapserver_init_url $is_beta $fake_time);
+
 sub _teaser_beta_html (;$);
 sub _teaser_new_html (;$);
 sub _teaser_is_current ($);
+
+my $today;
+my $year;
 
 ######################################################################
 #
@@ -22,6 +28,13 @@ sub _teaser_is_current ($);
 sub teaser {
     my %teasers_optional;
     my %teasers_mandatory;
+
+    local $fake_time = $fake_time || time;
+    {
+	my @l = localtime($fake_time); $l[4]++; $l[5]+=1900;
+	$year = $l[5];
+	$today = sprintf "%04d%02d%02d", $l[5], $l[4], $l[3];
+    }
 
     $teasers_optional{"de"}  = [
 				'teaser_link',
@@ -83,9 +96,6 @@ sub teaser {
 }
 
 sub teaser_sternfahrt_adfc {
-    my $year = (localtime)[5]+1900;
-    my @l = localtime; $l[4]++;$l[5]+=1900;
-    my $today = sprintf "%04d%02d%02d", $l[5], $l[4], $l[3];
     my $out_of_date = $today gt "20160605";
     if (!$out_of_date) {
 	my $url = "http://adfc-berlin.de/aktiv-werden/bei-demonstrationen/sternfahrt/334-sternfahrt-2016-fahr-rad-in-berlin.html";
@@ -98,15 +108,12 @@ EOF
 }
 
 sub teaser_kreisfahrt_adfc {
-    my $year = (localtime)[5]+1900;
-    my @l = localtime; $l[4]++;$l[5]+=1900;
-    my $today = sprintf "%04d%02d%02d", $l[5], $l[4], $l[3];
-    my $out_of_date = $today lt "20150905" || $today gt "20150919";
+    my $out_of_date = $today lt "20160903" || $today gt "20160917";
     if (!$out_of_date) {
-	my $adfc_url    = "http://adfc-berlin.de/aktiv-werden/bei-demonstrationen/kreisfahrt/263-adfc-kreisfahrt-2015.html";
+	my $adfc_url    = "http://adfc-berlin.de/aktiv-werden/bei-demonstrationen/kreisfahrt/376-adfc-kreisfahrt-2016.html";
 	my $kreisfahrt_img = "/BBBike/misc/kreisfahrt_anyyear/kreisfahrt_anyyear.png";
 	<<EOF
-<div class="teaser"><a style="text-decoration:none;" href="$adfc_url"><img src="$kreisfahrt_img" alt="ADFC-Kreisfahrt ${year}" border="0"" /></a> am 19. September $year</div>
+<div class="teaser"><a style="text-decoration:none;" href="$adfc_url"><img src="$kreisfahrt_img" alt="ADFC-Kreisfahrt ${year}" border="0"" /></a> am 17. September $year</div>
 EOF
     } else {
 	();
@@ -114,8 +121,6 @@ EOF
 }
 
 sub teaser_marathon {
-    my @l = localtime; $l[4]++;$l[5]+=1900;
-    my $today = sprintf "%04d%02d%02d", $l[5], $l[4], $l[3];
     my $out_of_date = $today lt "20150924" || $today gt "20150927";
     if (!$out_of_date) {
 	my $marathon_map_url = 'http://www.bmw-berlin-marathon.com/veranstaltungswoche/interaktive-karte.html';
@@ -129,8 +134,6 @@ EOF
 }
 
 sub teaser_halbmarathon {
-    my @l = localtime; $l[4]++;$l[5]+=1900;
-    my $today = sprintf "%04d%02d%02d", $l[5], $l[4], $l[3];
     my $out_of_date = $today gt "20150329";
     if (!$out_of_date) {
 	my $halbmarathon_map_url = 'http://www.berliner-halbmarathon.de/event/streckesperrungen.html';
@@ -151,8 +154,6 @@ EOF
 }
 
 sub teaser_velothon {
-    my @l = localtime; $l[4]++;$l[5]+=1900;
-    my $today = sprintf "%04d%02d%02d", $l[5], $l[4], $l[3];
     my $out_of_date = $today gt "20160619";
     if (!$out_of_date) {
 	my $velothon_map_url = "http://events.lagardere-unlimited.de/velothon/maps/sperr.php";
@@ -195,6 +196,7 @@ EOF
 sub teaser_none { "" }
 
 sub teaser_collecting_tracks {
+    $BBBike::EMAIL = $BBBike::EMAIL if 0; # cease -w
     <<EOF;
 <div class="teaser">Ich sammele GPS-Tracks von Berlin und Brandenburg. Bitte per Mail an <a target="_top" href="mailto:@{[ CGI::escapeHTML($BBBike::EMAIL) ]}?subject=BBBike-GPS">Slaven Rezic</a> schicken.</div>
 EOF
