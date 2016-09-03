@@ -1025,11 +1025,11 @@ userdel	q4 49039,44131 48924,44216 48724,44248 48523,44467
 userdel	q4 49039,44131 49691,43812
 EOF
      },
-     { from  => $isodate2epoch->("2015-09-29 06:00:00"), # 1 Tag Vorlauf # 1096578452, # 2004-09-30 23:07
-       until => $isodate2epoch->("2015-10-06 23:59:59"), # 1096862400, # 2004-10-04 06:00
+     { from  => $isodate2epoch->("2016-09-29 06:00:00"), # 1 Tag Vorlauf # 1096578452, # 2004-09-30 23:07
+       until => $isodate2epoch->("2016-10-06 23:59:59"), # 1096862400, # 2004-10-04 06:00
        periodic => 1,
        recurrences => [['yearly', days => 29, months => 9]],
-       text  => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen vollständig gesperrt (bis 06.10.2015)',
+       text  => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen voraussichtlich gesperrt (bis 06.10.2016)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2 8055,12186 8089,12190 8214,12205
@@ -13706,7 +13706,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012112',
        data  => <<EOF,
-userdel	q4::inwork; 7373,14566 7180,14419 7123,14367 6992,14251 6818,14102 6730,14021 6646,13951 6493,13822 6366,13716 6230,13596
+userdel	q4::inwork; 7368,14573 7180,14419 7123,14367 6992,14251 6818,14102 6730,14021 6646,13951 6493,13822 6366,13716 6230,13596
 EOF
      },
      { from  => 1238450400, # 2009-03-31 00:00
@@ -22657,7 +22657,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_021410',
        data  => <<EOF,
-userdel	q4::inwork 7373,14566 7314,14599
+userdel	q4::inwork 7368,14573 7314,14599
 EOF
      },
      { from  => $isodate2epoch->("2014-04-03 12:00:00"),
@@ -23873,7 +23873,7 @@ EOF
        text  => 'Perleberger Brücke: Sperrung vom 13.12.2014 00:30 Uhr bis 15.12.2014 00:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 7373,14566 7180,14419
+userdel	2::inwork 7368,14573 7180,14419
 EOF
      },
      { from  => 1418119200, # 2014-12-09 11:00
@@ -23891,7 +23891,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 # REMOVED (-> gesperrt-orig) --- #: by: user per phone --- #: XXX vor Ort anschauen! Gibt es ein Endedatum?
-userdel	2::inwork 7769,4315 7795,4242 8106,3410
+userdel	2::inwork 7769,4315 7795,4242 8016,3651 8106,3410
 EOF
      },
      { from  => 1421344800, # 2015-01-15 19:00
@@ -23914,7 +23914,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.256386.php',
        data  => <<EOF,
-	2::inwork 7653,14570 7605,14600 7527,14644 7486,14652
+	2::inwork 7653,14570 7605,14600 7527,14644 7480,14660
 EOF
      },
      { from  => 1423465860, # 2015-02-09 08:11
@@ -25174,7 +25174,7 @@ EOF
 EOF
      },
      { from  => 1465682400, # 2016-06-12 00:00
-       until => $isodate2epoch->("2016-09-02 23:59:59"),
+       until => 1472760879, # $isodate2epoch->("2016-09-02 23:59:59"),
        text  => 'Werneuchener Str.: Richtung Konrad-Wolf-Str. ab Küstriner Str. Baustelle, Fahrtrichtung gesperrt, 13.06.2016 bis 02.09.2016',
        type  => 'handicap',
        source_id => '2147340189',
@@ -25274,26 +25274,10 @@ EOF
      },
      { from  => 1473372000, # 2016-09-09 00:00
        until => 1473631200, # 2016-09-12 00:00
-       text  => 'Lollapalooza 2016 im Treptower Park: gesperrte Wege und Straßen, 10.09.2016 und 11.09.2016',
+       text  => 'Lollapalooza 2016 im Treptower Park: Puschkinallee gesperrt, 10.09.2016 und 11.09.2016',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX gibt es schon die ersten Sperrungen im Park? die Sperrungen werden vermutlich umfangreicher sein! vvv
-#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.511653.php
-#: last_checked: 2016-08-29 vvv
-#: check_frequency: 4d vvv
-#: by: http://lolp2.de.c3cdn.com/wp/wp-content/uploads/2016/02/Lollapalooza2016_Treptower-Park_Festivalmap_2000x1414_RZ.png
-userdel	2::temp 15383,9191 14879,9433 14809,9466
-userdel	2::temp 14909,9649 14867,9573 14837,9517 14809,9466
-userdel	2::temp 14577,9641 14627,9609 14695,9587 14792,9599 14867,9573 14918,9545 15025,9461 15133,9396 15184,9373 15268,9374
-userdel	2::temp 14695,9587 14705,9578 14791,9537
-userdel	2::temp 14879,9433 14898,9364 14955,9294
-userdel	2::temp 15133,9396 15184,9373 15268,9374
-userdel	2::temp 14316,9542 14384,9565
-userdel	2::temp 14809,9466 14556,9581
-userdel	2::temp 14588,9473 14635,9441
-#: check_frequency ^^^
-#: last_checked ^^^
-#: XXX ^^^
+	2::temp 15383,9191 14879,9433 14809,9466 14556,9581
 EOF
      },
      { from  => 1467496800, # 2016-07-03 00:00
@@ -25339,7 +25323,7 @@ userdel	2::inwork 22084,5877 21846,5856 21744,5804 21602,5685
 EOF
      },
      { from  => 1469052000, # 2016-07-21 00:00
-       until => $isodate2epoch->("2016-09-02 10:00:00"), # 1472680799, # 2016-08-31 23:59
+       until => 1472760891, # $isodate2epoch->("2016-09-02 10:00:00"), # 1472680799, # 2016-08-31 23:59
        text  => 'Tautenburger Str.: zwischen Blankenhainer Str. und Brotteroder Str. und später zwischen Brotteroder Str. und Maximilian-Kaller-Str. Baustelle, Sperrung der Fahrbahn, Radfahrer dürfen den Gehweg benutzen, bis Anfang September 2016',
        type  => 'handicap',
        source_id => '2147340348',
@@ -25410,8 +25394,8 @@ userdel	q4::inwork 1732,24798 1730,24860 1750,24942 1775,25019 1767,25098 1738,2
 EOF
      },
      { from  => 1469916000, # 2016-07-31 00:00
-       until => 1472767199, # 2016-09-01 23:59
-       text  => 'Langhansstr.: zwischen Goethestr. und Gustav-Adolf-Str. Baustelle, Fahrtrichtung Prenzlauer Promenade gesperrt, bis Anfang September 2016 ',
+       until => $isodate2epoch->("2016-09-15 12:00:00"), # 1472767199, # 2016-09-01 23:59
+       text  => 'Langhansstr.: zwischen Goethestr. und Gustav-Adolf-Str. Baustelle, Fahrtrichtung Prenzlauer Promenade gesperrt, bis Mitte September 2016 ',
        type  => 'handicap',
        source_id => '2147340382',
        data  => <<EOF,
@@ -25419,7 +25403,7 @@ userdel	q4::inwork; 12564,16399 12399,16479
 EOF
      },
      { from  => 1471816800, # 2016-08-22 00:00
-       until => $isodate2epoch->("2016-09-02 18:00:00"), # 1473199199, # 2016-09-06 23:59
+       until => 1472583170, # $isodate2epoch->("2016-09-02 18:00:00"), # 1473199199, # 2016-09-06 23:59
        text  => 'Verlängerte Waldowallee: Sperrung zwischen Kiefernallee und Rudolf-Rühl-Allee, vom 23. August 2016 bis 02. September 2016',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -25447,12 +25431,40 @@ userdel	2::inwork 25571,4553 25658,4619
 EOF
      },
      { from  => 1472495093, # 2016-08-29 20:24
-       until => 1472853599, # 2016-09-02 23:59
+       until => 1472843584, # 1472853599, # 2016-09-02 23:59
        text  => 'Kaulsdorfer Straße: zwischen Falkstätter Straße und Deutschhofer Allee Bauarbeiten, Fahrbahn gesperrt, voraussichtlich bis 2. September 2016',
        type  => 'gesperrt',
        source_id => '2147340477',
        data  => <<EOF,
 userdel	2::inwork 21867,8752 21680,8400
+EOF
+     },
+     { from  => 1472799600, # 2016-09-02 09:00
+       until => 1472939999, # 2016-09-03 23:59
+       text  => 'Mierendorffplatz: Insel-Kiezfest, Straße zwischen Osnabrücker Str. und Mindener Str. gesperrt, am 03.09.2016',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.512648.php',
+       data  => <<EOF,
+userdel	q4::temp 3556,13200 3534,13098 3523,13076
+EOF
+     },
+     { from  => $isodate2epoch->("2016-08-29 00:00:00"), # 1473372000, # 2016-09-09 00:00
+       until => 1473631200, # 2016-09-12 00:00
+       text  => 'Lollapalooza 2016 im Treptower Park: Vorbereitungen, viele Wege sind bereits gesperrt, mindestens bis 11.09.2016',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.511653.php
+#: by: http://lolp2.de.c3cdn.com/wp/wp-content/uploads/2016/02/Lollapalooza2016_Treptower-Park_Festivalmap_2000x1414_RZ.png
+	2::temp 14909,9649 14867,9573 14837,9517 14809,9466
+	2::temp 14361,9772 14443,9731 14495,9710 14577,9641 14627,9609 14695,9587 14792,9599 14867,9573 14918,9545 15025,9461 15133,9396 15184,9373 15268,9374 15325,9354 15453,9259
+	2::temp 15184,9373 15249,9337
+	2::temp 14577,9641 14604,9674 14645,9710 14697,9726 14853,9655 14909,9649 15052,9584 15186,9550 15304,9464 15432,9322 15453,9259
+	2::temp 14695,9587 14705,9578 14791,9537
+	2::temp 14879,9433 14898,9364 14955,9294
+	2::temp 14316,9542 14384,9565 14478,9545 14507,9529 14588,9473 14635,9441 14789,9401
+	2::temp 14588,9473 14556,9581
+	2::temp 14318,9688 14371,9726 14443,9731
+	2::temp 14318,9688 14316,9542 14347,9452 14398,9373 14485,9271 14531,9244 14655,9311 14673,9353 14669,9389 14635,9441
 EOF
      },
     );
