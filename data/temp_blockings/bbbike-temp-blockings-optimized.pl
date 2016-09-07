@@ -745,7 +745,28 @@ userdel	2 8546,12279 8570,12302 8573,12325 8540,12420
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20160903
+	2::temp 7006,9292 7022,9211 7044,9163 7107,9030
+	2::temp 6945,9142 7044,9163
+	2::temp 6975,8944 7107,9030 7308,9163
+',
+         'from' => 1475226000,
+         'id' => 731,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 01.10.2016 bis 02.10.2016',
+         'type' => 'gesperrt',
+         'until' => 1475445599
+       },
        undef,
        undef,
        undef,
@@ -3947,28 +3968,9 @@ userdel	2::inwork 23792,10926 24203,10848 24229,10843
        },
        undef,
        undef,
-       {
-         'data' => 'userdel	q4::inwork 2380,20465 2473,20486 2595,20514
-userdel	q4::inwork 2473,20486 2448,20592
-',
-         'from' => 1470175200,
-         'id' => 2814,
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2016/pressemitteilung.504154.php',
-         'text' => 'Tile-Brügge-Weg und An der Oberrealschule: Fahrbahn gesperrt, Bauarbeiten, vom 04.08.2016 bis zum 02.09.2016 ',
-         'type' => 'handicap',
-         'until' => 1472853600
-       },
        undef,
-       {
-         'data' => 'userdel	q4::inwork 1732,24798 1730,24860 1750,24942 1775,25019 1767,25098 1738,25243
-',
-         'from' => 1470520800,
-         'id' => 2816,
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2016/pressemitteilung.504849.php',
-         'text' => 'Alemannenstr.: Bauarbeiten zwischen Maximiliankorso und Sigismundkorso, Fahrbahn gesperrt, vom 8. August 2016 bis 2. September 2016',
-         'type' => 'handicap',
-         'until' => 1472853599
-       },
+       undef,
+       undef,
        {
          'data' => 'userdel	q4::inwork; 12564,16399 12399,16479
 ',
@@ -3990,27 +3992,9 @@ userdel	q4::inwork 6587,16199 6484,16085
          'type' => 'handicap',
          'until' => 1481238000
        },
-       {
-         'data' => 'userdel	2::inwork 25571,4553 25658,4619
-',
-         'from' => 1472356800,
-         'id' => 2820,
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.512129.php',
-         'text' => 'Spreetunnel Friedrichshagen: vom 29. August 2016, 6 Uhr bis 3. September 2016, 20 Uhr, für Fußgänger und Radfahrer voll gesperrt',
-         'type' => 'gesperrt',
-         'until' => 1472925600
-       },
        undef,
-       {
-         'data' => 'userdel	q4::temp 3556,13200 3534,13098 3523,13076
-',
-         'from' => 1472799600,
-         'id' => 2822,
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.512648.php',
-         'text' => 'Mierendorffplatz: Insel-Kiezfest, Straße zwischen Osnabrücker Str. und Mindener Str. gesperrt, am 03.09.2016',
-         'type' => 'handicap',
-         'until' => 1472939999
-       },
+       undef,
+       undef,
        {
          'data' => '#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.511653.php
 #: by: http://lolp2.de.c3cdn.com/wp/wp-content/uploads/2016/02/Lollapalooza2016_Treptower-Park_Festivalmap_2000x1414_RZ.png
@@ -4030,6 +4014,21 @@ userdel	q4::inwork 6587,16199 6484,16085
          'text' => 'Lollapalooza 2016 im Treptower Park: Vorbereitungen, viele Wege sind bereits gesperrt, mindestens bis 11.09.2016',
          'type' => 'gesperrt',
          'until' => 1473631200
+       },
+       {
+         'data' => '#: XXX wann im November sind die Bauarbeiten fertig? vvv
+#: next_check: 2016-11-01 vvv
+userdel	q4::inwork; 8730,8079 8776,8285 8807,8353
+userdel	q4::inwork; 8642,7876 8731,7956
+#: next_check ^^^
+#: XXX ^^^
+',
+         'from' => 1474149600,
+         'id' => 2824,
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.514646.php',
+         'text' => 'Werner-Voß-Damm und Manfred-von-Richthofen-Str.: Bauarbeiten, Fahrbahn gesperrt (zwischen Boelckestr. und Manfred-von-Richthofen-Str. sowie zwischen Loewenhardtdamm und Wolffring), vom 19. September 2016 bis November 2016',
+         'type' => 'handicap',
+         'until' => 1480546799
        }
      
 );
