@@ -208,7 +208,7 @@ Sackgassenende im östlichen Abschnitt	culdesac 18232,14753
 	culdesac 16962,15440
 	culdesac 18626,13820
 Sackgassenende, Landschaftpark Herzberge	culdesac_pseudo 17698,13124
-Sackgassenende, Hans-Zoschke-Stadion	culdesac_pseudo 16079,12432
+Sackgassenende, Hans-Zoschke-Stadion	culdesac_pseudo 16080,12441
 	culdesac 17249,12478
 	culdesac 18766,13257
 	culdesac 19410,12601
@@ -1134,3 +1134,16 @@ südliches Sackgassenende	culdesac 24186,10035
 	culdesac -9556,5445
 	culdesac -9475,5500
 	culdesac -9398,5495
+	culdesac_pseudo 24759,12401
+	culdesac 25519,11493
+Ende der öffentlichen Straße	culdesac_pseudo 24831,10730
+Ende der privaten Straße	culdesac 24760,10790
+	culdesac_pseudo 24528,10696
+	culdesac 18766,2525
+	culdesac 4605,1633
+	culdesac 5136,2235
+	culdesac 17626,19367
+	culdesac -7720,-2300
+Sackgassenende im westlichen Potsdamer Abschnitt	culdesac -8060,-2228
+Sackgassenende in Steinstücken	culdesac -8095,-2219
+	culdesac -4232,-3572

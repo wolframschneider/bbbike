@@ -116,6 +116,32 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
        undef,
        undef,
        undef,
+       {
+         'data' => 'userdel	2 8055,12186 8089,12190 8214,12205
+userdel	2 8214,12205 8303,12216 8344,12221 8538,12245
+userdel	2 8546,12279 8538,12245
+userdel	2 8600,12165 8538,12245
+userdel	2 8538,12245 8610,12254
+userdel	2 8546,12279 8570,12302 8573,12325 8540,12420 
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+',
+         'from' => 1475121600,
+         'id' => 127,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              29,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen voraussichtlich gesperrt (bis 06.10.2016)',
+         'type' => 'gesperrt',
+         'until' => 1475791199
+       },
        undef,
        undef,
        undef,
@@ -719,8 +745,28 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
        undef,
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20160903
+	2::temp 7006,9292 7022,9211 7044,9163 7107,9030
+	2::temp 6945,9142 7044,9163
+	2::temp 6975,8944 7107,9030 7308,9163
+',
+         'from' => 1475226000,
+         'id' => 731,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 01.10.2016 bis 02.10.2016',
+         'type' => 'gesperrt',
+         'until' => 1475445599
+       },
        undef,
        undef,
        undef,
@@ -2140,7 +2186,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
                             [
                               'yearly',
                               'days',
-                              19,
+                              16,
                               'months',
                               9
                             ]
@@ -2216,7 +2262,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	2::temp 19071,2746 19136,2673 19207,2592
+         'data' => '	2::temp 19071,2746 19136,2673 19204,2603
 ',
          'from' => undef,
          'id' => 1958,
@@ -2397,7 +2443,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im August von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2645,11 +2691,49 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
+       {
+         'data' => '#: by: http://www.laubinger.de/termine/47-fest-an-der-panke/
+userdel	2::temp 10602,18382 10567,18366 10502,18338 10463,18321 10449,18315 10281,18241 10240,18193 10320,18197 10469,18262 10487,18270 10660,18345
+',
+         'from' => 1473372000,
+         'id' => 2281,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              10,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., Veranstaltung (Fest an der Panke), Straße vollständig gesperrt (10.09.2016-11.09.2016)',
+         'type' => 'gesperrt',
+         'until' => 1473631199
+       },
        undef,
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => 'userdel	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
+',
+         'from' => 1473890400,
+         'id' => 2285,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              14,
+                              'months',
+                              9
+                            ]
+                          ],
+         'source_id' => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2016',
+         'text' => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 16.09.2016 bis 18.09.2016',
+         'type' => 'handicap',
+         'until' => 1474235999
+       },
        undef,
        undef,
        undef,
@@ -2769,6 +2853,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
 #: note: geprüft am So, den 2016-05-15, vormittags: offen
 #: note: geprüft am So, den 2016-07-17, vormittags und mittags: offen
 #: note: geprüft am So, den 2016-07-23, mittags: offen
+#: note: geprüft am Sa, den 2016-09-20, vormittags: offen
 userdel	2::night 14838,11410 14792,11391
 ',
          'from' => undef,
@@ -2792,8 +2877,64 @@ userdel	2::night 14838,11410 14792,11391
        undef,
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+',
+         'from' => 1474430400,
+         'id' => 2387,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              21,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen Marathon gesperrt, vermutlich ab 22.09.2016',
+         'type' => 'gesperrt',
+         'until' => 1474581600
+       },
+       {
+         'data' => 'userdel	2::temp 8573,12325 8540,12420
+userdel	2::temp 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+userdel	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+userdel	2::temp 8119,12414 8055,12186
+userdel	2::temp 8538,12245 8522,12239 8466,12197
+userdel	2::temp 8538,12245 8522,12187
+userdel	2::temp 8546,12279 8391,12389 8354,12416
+userdel	2::temp 8119,12414 8354,12416 8400,12417 8540,12420
+userdel	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
+userdel	3 7429,12070 7383,12095 7039,12314
+userdel	3 7039,12314 7383,12095 7429,12070
+userdel	3 7823,12120 7816,12150 7822,12201 7875,12363
+userdel	3 7875,12363 7822,12201 7816,12150 7823,12120
+userdel	2::temp 8119,12414 8122,12603 8207,12606 8306,12609 8348,12609 8399,12610 8485,12612
+userdel	2::temp 8207,12606 8206,12757
+userdel	3 7945,12592 8122,12603 8120,12756
+userdel	3 8120,12756 8122,12603 7945,12592
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+',
+         'from' => 1474581600,
+         'id' => 2388,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              21,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Behrenstr. und Scheidemannstr., Yitzak-Rabin-Str., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, vermutlich bis 26.09.2016',
+         'type' => 'gesperrt',
+         'until' => 1474905600
+       },
        undef,
        undef,
        undef,
@@ -3137,7 +3278,7 @@ userdel	2::night 17671,13132 17684,13133
 ',
          'from' => undef,
          'id' => 2527,
-         'text' => 'Wuhlewanderweg: an der Zimmermannstraßenbrücke wegen Bauarbeiten gesperrt',
+         'text' => 'Wuhlewanderweg: an der Zimmermannstraßenbrücke wegen Bauarbeiten gesperrt, vermutlich bis Mitte September 2016',
          'type' => 'gesperrt',
          'until' => 1473890400
        },
@@ -3269,26 +3410,40 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        undef,
        undef,
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'data' => 'userdel	2::temp 22138,4642 22111,4562 22093,4499
-userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,4642 22144,4660 22175,4730 22198,4800 22196,4847 22153,4840 22074,4664
+         'data' => 'userdel	2::temp 5857,13342 5868,13441 5882,13548
 ',
-         'from' => 1471521600,
-         'id' => 2610,
+         'from' => 1473372000,
+         'id' => 2625,
          'periodic' => 1,
          'recurrences' => [
                             [
                               'yearly',
                               'days',
-                              18,
+                              9,
                               'months',
-                              8
+                              9
                             ]
                           ],
-         'source_id' => 'http://www.weinfeste-in-deutschland.de/winzerfest-in-berlin-koepenick.html',
-         'text' => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 19.8.2016 bis 21.8.2016',
+         'source_id' => 'http://www.quartiersmanagement-berlin.de/veranstaltungen/moabit-west-beusselstrasse/termin/calendar/2016/09/10/event/tx_cal_phpicalendar/moabiter_kiezfest_2016/print.html',
+         'text' => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 10. September 2016, 14 bis 18 Uhr ',
          'type' => 'gesperrt',
-         'until' => 1471816799
+         'until' => 1473544799
        },
        undef,
        undef,
@@ -3300,22 +3455,19 @@ userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,464
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
+       {
+         'data' => '#: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2016/pressemitteilung.510363.php
+#: XXX hier wird asphaltiert
+#: next_check: 2016-10-07
+#: priority: #A
+userdel	2::inwork 8101,13901 8248,13659 8337,13541
+',
+         'from' => 1471730400,
+         'id' => 2636,
+         'text' => 'Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten gesperrt, 22.08.2016 bis 07.10.2016',
+         'type' => 'gesperrt',
+         'until' => 1475856000
+       },
        undef,
        undef,
        undef,
@@ -3402,16 +3554,7 @@ userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,464
        },
        undef,
        undef,
-       {
-         'data' => 'userdel	2::inwork 34707,13880 34383,14138 34276,14308 33589,15778 33016,17059
-',
-         'from' => 1426374000,
-         'id' => 2689,
-         'source_id' => 'LS/721-F/15/031',
-         'text' => 'Ortsdurchfahrt Fredersdorf, L30: Bauarbeiten, 16.03.2015 bis 30.08.2016',
-         'type' => 'handicap',
-         'until' => 1472594400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3479,7 +3622,23 @@ userdel	2::inwork -2453,15476 -2454,15472 -2465,15471
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: next_check_id: KARLSHORSTER-2016
+#: by: http://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2016/pressemitteilung.511369.php
+#: source_id: 2147340474
+#: XXX periodisch prüfen
+#: last_checked: 2016-08-29
+#: check_frequency: 14d
+	2::inwork 15261,10738 15272,10790
+	q4; 15279,10862 15272,10790 15388,10758 15433,10765
+	q4; 15205,11080 15102,11120 15021,11152 14988,11130
+',
+         'from' => 1472335200,
+         'id' => 2717,
+         'text' => 'Karlshorster Str.: zwischen Haupstr. und Nöldnerstr. Fahrbahn komplett gesperrt, während der Arbeitszeiten auch für Fußgänger und Radfahrer, Einbahnstraßenregelung in der Nöldnerstr. und Hirschberger Str., 29.08.2016 bis 31.10.2016',
+         'type' => 'gesperrt',
+         'until' => 1477954799
+       },
        undef,
        {
          'data' => '	2::inwork 9998,16547 9982,16527 9959,16510
@@ -3698,28 +3857,8 @@ userdel	q4::inwork 20381,1390 20405,1460
        undef,
        undef,
        undef,
-       {
-         'data' => '	q3::inwork; 6459,8281 6461,8463 6454,8653
-	3 6534,8467 6461,8463 6377,8460
-	3 6377,8460 6461,8463 6534,8467
-',
-         'from' => 1468101600,
-         'id' => 2794,
-         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.485790.php',
-         'text' => 'Martin-Luther-Str.: Bauarbeiten zwischen Heylstr. und Freiherr-vom-Stein-Str., Gehweg für Radfahrer frei, 11.7.2016 bis 8.8.2016',
-         'type' => 'handicap',
-         'until' => 1470693599
-       },
-       {
-         'data' => 'userdel	q4::inwork; 16314,15223 16119,15302
-',
-         'from' => 1465682400,
-         'id' => 2795,
-         'source_id' => '2147340189',
-         'text' => 'Werneuchener Str.: Richtung Konrad-Wolf-Str. ab Küstriner Str. Baustelle, Fahrtrichtung gesperrt, 13.06.2016 bis 02.09.2016',
-         'type' => 'handicap',
-         'until' => 1472853599
-       },
+       undef,
+       undef,
        {
          'data' => '#: by: Kai Pauldrach
 #: XXX Bis wann sind die Bauarbeiten beendet? Ändert sich danach etwas an der Qualität?
@@ -3748,7 +3887,7 @@ userdel	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
          'until' => 1483225199
        },
        {
-         'data' => '#: last_checked: 2016-06-19
+         'data' => '#: last_checked: 2016-08-20
 	2::inwork 24897,11083 24899,11044 24905,10955 24913,10884 24919,10818 24922,10785 24923,10774
 ',
          'from' => undef,
@@ -3782,44 +3921,26 @@ userdel	2::inwork 16532,26174 16222,25829
          'until' => 1475359199
        },
        {
-         'data' => '#: by: http://lolp2.de.c3cdn.com/wp/wp-content/uploads/2016/02/Lollapalooza2016_Treptower-Park_Festivalmap_2000x1414_RZ.png
-userdel	2::temp 15383,9191 14879,9433 14809,9466
-userdel	2::temp 14909,9649 14867,9573 14837,9517 14809,9466
-userdel	2::temp 14577,9641 14627,9609 14695,9587 14792,9599 14867,9573 14918,9545 15025,9461 15133,9396 15184,9373 15268,9374
-userdel	2::temp 14695,9587 14705,9578 14791,9537
-userdel	2::temp 14879,9433 14898,9364 14955,9294
-userdel	2::temp 15133,9396 15184,9373 15268,9374
-userdel	2::temp 14316,9542 14384,9565
-userdel	2::temp 14809,9466 14556,9581
-userdel	2::temp 14588,9473 14635,9441
+         'data' => '	2::temp 15383,9191 14879,9433 14809,9466 14556,9581
 ',
          'from' => 1473372000,
          'id' => 2805,
-         'text' => 'Lollapalooza 2016 im Treptower Park: gesperrte Wege und Straßen, 10.09.2016 und 11.09.2016',
+         'text' => 'Lollapalooza 2016 im Treptower Park: Puschkinallee gesperrt, 10.09.2016 und 11.09.2016',
          'type' => 'gesperrt',
          'until' => 1473631200
        },
-       {
-         'data' => '#: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.491926.php
-#: source_id: 2147340266
-userdel	q4::inwork; 5866,10492 6025,10746
-',
-         'from' => 1467496800,
-         'id' => 2806,
-         'text' => 'Nürnberger Str.: Einbahnstraßenregelung zwischen Tauentzienstr. und Augsburger Str., offen Richtung Lietzenburger Str., vom 04.07.2016 bis voraussichtlich Mitte August 2016',
-         'type' => 'handicap',
-         'until' => 1471298399
-       },
+       undef,
        {
          'data' => '#: source_id: 2147340278
+#: source_id: 2147340486
 userdel	q4::inwork 19676,1577 19704,1621 19766,1796
 ',
          'from' => 1468101600,
          'id' => 2807,
          'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.493537.php',
-         'text' => 'Köpenicker Str.: Bauarbeiten zwischen Rudower Str. und Schönefelder Chaussee, Fahrbahn voraussichtlich gesperrt, vom 11.07.2016 bis zum 21.08.2016',
+         'text' => 'Köpenicker Str.: Bauarbeiten zwischen Rudower Str. und Schönefelder Chaussee, Fahrbahn gesperrt, bis Mitte September 2016',
          'type' => 'handicap',
-         'until' => 1471816800
+         'until' => 1473847200
        },
        {
          'data' => '# REMOVED ("Verkürzung" laut fritz) --- userdel	q4::inwork 12938,1348 12940,1547 12911,1815
@@ -3833,66 +3954,99 @@ userdel	q4::inwork 12911,1815 12817,2031
          'until' => 1487977200
        },
        undef,
+       undef,
        {
-         'data' => 'userdel	q3::inwork 7130,1253 7081,1346 6984,1540 6881,1743
-',
-         'from' => 1469052000,
-         'id' => 2810,
-         'source_id' => '2147340348',
-         'text' => 'Tautenburger Str.: zwischen Blankenhainer Str. und Brotteroder Str. und später zwischen Brotteroder Str. und Maximilian-Kaller-Str. Baustelle, Sperrung der Fahrbahn, Radfahrer dürfen den Gehweg benutzen, bis Anfang September 2016',
-         'type' => 'handicap',
-         'until' => 1472803200
-       },
-       {
-         'data' => 'userdel	2::inwork 23792,10926 24203,10848 24229,10843
+         'data' => '#: next_check_id: ELSENSTR-2016
+userdel	2::inwork 23792,10926 24203,10848 24229,10843
 ',
          'from' => 1469311200,
          'id' => 2811,
          'source_id' => '2147340370',
-         'text' => 'Elsenstr.: Baustelle zwischen Kressenweg und Hultschiner Damm, Fahrbahn gesperrt, bis Ende August 2016 ',
+         'text' => 'Elsenstr.: Baustelle zwischen Kressenweg und Hultschiner Damm, Fahrbahn gesperrt, bis 09.09.2016',
          'type' => 'gesperrt',
-         'until' => 1472248799
+         'until' => 1473458399
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'data' => 'userdel	q4::inwork; 12564,16399 12399,16479
+',
+         'from' => 1469916000,
+         'id' => 2817,
+         'source_id' => '2147340382',
+         'text' => 'Langhansstr.: zwischen Goethestr. und Gustav-Adolf-Str. Baustelle, Fahrtrichtung Prenzlauer Promenade gesperrt, bis Mitte September 2016 ',
+         'type' => 'handicap',
+         'until' => 1473933600
        },
        undef,
        {
-         'data' => 'userdel	2::inwork 10130,15647 9991,15629 9907,15618
+         'data' => '#: note: by fritz
+userdel	q4::inwork 6587,16199 6484,16085
+',
+         'from' => 1471893583,
+         'id' => 2819,
+         'text' => 'Kameruner Str.: Fahrbahn zwischen Müllerstr. und Lüderitzstr. gesperrt, bis 08.12.2016',
+         'type' => 'handicap',
+         'until' => 1481238000
+       },
+       undef,
+       undef,
+       undef,
+       {
+         'data' => '#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.511653.php
+#: by: http://lolp2.de.c3cdn.com/wp/wp-content/uploads/2016/02/Lollapalooza2016_Treptower-Park_Festivalmap_2000x1414_RZ.png
+	2::temp 14909,9649 14867,9573 14837,9517 14809,9466
+	2::temp 14361,9772 14443,9731 14495,9710 14577,9641 14627,9609 14695,9587 14792,9599 14867,9573 14918,9545 15025,9461 15133,9396 15184,9373 15268,9374 15325,9354 15453,9259
+	2::temp 15184,9373 15249,9337
+	2::temp 14577,9641 14604,9674 14645,9710 14697,9726 14853,9655 14909,9649 15052,9584 15186,9550 15304,9464 15432,9322 15453,9259
+	2::temp 14695,9587 14705,9578 14791,9537
+	2::temp 14879,9433 14898,9364 14955,9294
+	2::temp 14316,9542 14384,9565 14478,9545 14507,9529 14588,9473 14635,9441 14789,9401
+	2::temp 14588,9473 14556,9581
+	2::temp 14318,9688 14371,9726 14443,9731
+	2::temp 14318,9688 14316,9542 14347,9452 14398,9373 14485,9271 14531,9244 14655,9311 14673,9353 14669,9389 14635,9441
+',
+         'from' => 1472421600,
+         'id' => 2823,
+         'text' => 'Lollapalooza 2016 im Treptower Park: Vorbereitungen, viele Wege sind bereits gesperrt, mindestens bis 11.09.2016',
+         'type' => 'gesperrt',
+         'until' => 1473631200
+       },
+       {
+         'data' => '#: XXX wann im November sind die Bauarbeiten fertig? vvv
+#: next_check: 2016-11-01 vvv
+userdel	q4::inwork; 8730,8079 8776,8285 8807,8353
+userdel	q4::inwork; 8642,7876 8731,7956
+#: next_check ^^^
+#: XXX ^^^
+',
+         'from' => 1474149600,
+         'id' => 2824,
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.514646.php',
+         'text' => 'Werner-Voß-Damm und Manfred-von-Richthofen-Str.: Bauarbeiten, Fahrbahn gesperrt (zwischen Boelckestr. und Manfred-von-Richthofen-Str. sowie zwischen Loewenhardtdamm und Wolffring), vom 19. September 2016 bis November 2016',
+         'type' => 'handicap',
+         'until' => 1480546799
+       },
+       {
+         'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
+#: last_checked: 2016-09-07 vvv
+#: check_frequency: 14d vvv
+	q4::inwork 10954,12635 11059,12450 11084,12395 11092,12375
+	2::inwork 11032,12439 11059,12450
+	2::inwork 11049,12386 11084,12395
+	q2::inwork; 11092,12375 11209,12430
+#: check_frequency ^^^
+#: last_checked ^^^
+#: XXX ^^^
 ',
          'from' => undef,
-         'id' => 2813,
-         'text' => 'Gleimtunnel: Sperrung, unter Umständen können auch Radfahrer und Fußgänger nicht passieren',
-         'type' => 'gesperrt',
-         'until' => 1470816000
-       },
-       {
-         'data' => 'userdel	q4::inwork 2380,20465 2473,20486 2595,20514
-userdel	q4::inwork 2473,20486 2448,20592
-',
-         'from' => 1470175200,
-         'id' => 2814,
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2016/pressemitteilung.504154.php',
-         'text' => 'Tile-Brügge-Weg und An der Oberrealschule: Fahrbahn gesperrt, Bauarbeiten, vom 04.08.2016 bis zum 02.09.2016 ',
+         'id' => 2825,
+         'text' => 'Littenstr.: Bauarbeiten, Fahrbahn gesperrt, Zufahrt von der Waisenstr. nicht möglich, Einbahnstraßenregelung in der Voltairestr.',
          'type' => 'handicap',
-         'until' => 1472853600
-       },
-       {
-         'data' => 'userdel	q4::inwork; -4011,13407 -4299,13304 -4634,13173 -4731,13135
-',
-         'from' => 1470520800,
-         'id' => 2815,
-         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2016/pressemitteilung.504895.php',
-         'text' => 'Seeburger Str.: Einbahnstraßenregelung zwischen Elsflether Weg und Päwesiner Weg, offen Richtung Osten, vom 08.08.2016 bis voraussichtlich 04.09.2016',
-         'type' => 'handicap',
-         'until' => 1473026400
-       },
-       {
-         'data' => 'userdel	q4::inwork 1732,24798 1730,24860 1750,24942 1775,25019 1767,25098 1738,25243
-',
-         'from' => 1470520800,
-         'id' => 2816,
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2016/pressemitteilung.504849.php',
-         'text' => 'Alemannenstr.: Bauarbeiten zwischen Maximiliankorso und Sigismundkorso, Fahrbahn gesperrt, vom 8. August 2016 bis 2. September 2016',
-         'type' => 'handicap',
-         'until' => 1472853599
+         'until' => undef
        }
      
 );

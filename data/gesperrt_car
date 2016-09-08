@@ -146,7 +146,7 @@ Stellmacherweg	1 13129,2999 13453,2930
 Hittorfstr	1 2442,4806 2469,4882 2516,4936 2587,4965
 Lefèvrestr.	1 5360,6642 5215,6643
 Kühlebornweg	1 5165,4667 5075,4600 5004,4709
-Gartenstr.	1 22467,3889 22281,4033 22263,4120 22279,4220
+Gartenstr.	1 22456,3889 22281,4033 22263,4120 22279,4220
 Wichmannstr.	1 6477,11045 6555,11012 6681,10959 6824,10904
 Lützowufer	1 6873,11011 6742,11099 6626,11178 6582,11202
 Mulackstr.	1 10308,13575 10406,13543 10535,13509 10640,13471
@@ -323,9 +323,9 @@ Admiralstr. -> Skalitzer Str.: Skalitzer/Admiralstr.	3::igndisp 11325,10317 1133
 Gutenbergstr.	1 -12045,-757 -12227,-724
 Langhoffstr.	1 19817,14371 19818,14064
 Lintruper Str.	1 10307,922 10380,757
-Edison-/Siemensstr.	3 17992,6436 17962,6674 17860,6644
-Edisonstr.	1 17962,6674 17992,6436
-Brückenstr./Edisonstr.	1 17992,6436 17952,6246 17930,6175 17900,6072
+Edison-/Siemensstr.	3 17991,6431 17962,6674 17860,6644
+Edisonstr.	1 17962,6674 17991,6431
+Brückenstr./Edisonstr.	1 17991,6431 17952,6246 17930,6175 17900,6072
 Müggelheimer Str.	3nocross::ignrte 22674,4309 22556,4386 22451,4441 22419,4457 22383,4470
 Karlstr. -> Müggelheimer Str.: Müggelheimer Str.	3::igndisp 22458,4134 22556,4386 22451,4441
 Müggelheimer Str. -> Spitzerstr.: Müggelheimer Str.	3::igndisp 22556,4386 22451,4441 22425,4370
@@ -358,13 +358,13 @@ Pankeweg, teilweise als Walter-Nicklitz-Promenade gekennzeichnet -> Osloer Str.:
 Pankeweg, teilweise als Walter-Nicklitz-Promenade gekennzeichnet -> Stockholmer Str.: Osloer Str.	3::igndisp 8776,16718 8759,16684 8783,16710
 Pankeweg, teilweise als Walter-Nicklitz-Promenade gekennzeichnet -> Travemünder Str.: Osloer Str.	3::igndisp 8776,16718 8759,16684 8688,16533
 Pankeweg, teilweise als Walter-Nicklitz-Promenade gekennzeichnet -> Travemünder Str.: Osloer Str.	3::igndisp 8776,16718 8759,16684 8759,16665
-Müllerstr./Lindower Str.	3nocross::ignrte 7929,15006 7819,15103 7754,15160 7611,15286
-Müllerstr. -> Lynarstr.: Müllerstr./Lindower Str.	3::igndisp 7819,15103 7754,15160 7694,15125
-Müllerstr. -> Lindower Str.: Müllerstr./Lindower Str.	3::igndisp 7611,15286 7754,15160 7929,15355
-Lynarstr. -> Müllerstr.: Müllerstr./Lindower Str.	3::igndisp 7694,15125 7754,15160 7611,15286
-Lynarstr. -> Lindower Str.: Müllerstr./Lindower Str.	3::igndisp 7694,15125 7754,15160 7929,15355
-Lindower Str. -> Müllerstr.: Müllerstr./Lindower Str.	3::igndisp 7929,15355 7754,15160 7819,15103
-Lindower Str. -> Lynarstr.: Müllerstr./Lindower Str.	3::igndisp 7929,15355 7754,15160 7694,15125
+Müllerstr./Lindower Str.	3nocross::ignrte 7911,15008 7811,15096 7745,15160 7607,15282
+Müllerstr. -> Lynarstr.: Müllerstr./Lindower Str.	3::igndisp 7811,15096 7745,15160 7694,15125
+Müllerstr. -> Lindower Str.: Müllerstr./Lindower Str.	3::igndisp 7607,15282 7745,15160 7929,15355
+Lynarstr. -> Müllerstr.: Müllerstr./Lindower Str.	3::igndisp 7694,15125 7745,15160 7607,15282
+Lynarstr. -> Lindower Str.: Müllerstr./Lindower Str.	3::igndisp 7694,15125 7745,15160 7929,15355
+Lindower Str. -> Müllerstr.: Müllerstr./Lindower Str.	3::igndisp 7929,15355 7745,15160 7811,15096
+Lindower Str. -> Lynarstr.: Müllerstr./Lindower Str.	3::igndisp 7929,15355 7745,15160 7694,15125
 Adolfstr.	1 7796,15590 7817,15418
 Mimosenweg	2 17668,2187 17657,2213
 Straßenbahntrasse	3nocross::ignrte 14619,16551 14619,16672 14619,16682 14608,16772 14558,16907
@@ -830,9 +830,6 @@ Koppenstr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 12632,12630 12596,12472
 Koppenstr. -> Koppenstr.: Mittelstreifen	3::igndisp 12632,12630 12596,12472 12575,12223
 Koppenstr. -> Karl-Marx-Allee: Mittelstreifen	3::igndisp 12575,12223 12596,12472 12360,12505
 Koppenstr. -> Koppenstr.: Mittelstreifen	3::igndisp 12575,12223 12596,12472 12632,12630
-Kleineweg: nur für Anlieger	2:Anlieger 9130,8029 9130,7810 9132,7661
-Kleineweg: nur für Anlieger	2:Anlieger 9115,7645 9120,7600 9145,7522 9097,7469
-Peter-Strasser-Weg: nur für Anlieger	2:Anlieger 9240,7811 9130,7810
 Friedrich-Wilhelm-Str.: In die andere Richtung nur für Anlieger	1 8385,5907 8266,5911
 Parkstr.: Durchfahrt gesperrt	3 9143,6415 9184,6413 9250,6414
 Parkstr.: Durchfahrt gesperrt	3 9250,6414 9184,6413 9143,6415
@@ -864,7 +861,7 @@ Straßenbahntrasse	3nocross::ignrte 10933,22179 10997,22203 11067,22232
 Rosenthaler Weg -> Guyotstr.: Straßenbahntrasse	3::igndisp 11067,22232 10997,22203 11056,21978
 Guyotstr. -> Rosenthaler Weg: Straßenbahntrasse	3::igndisp 11056,21978 10997,22203 10933,22179
 Elisabethstr.	1 -3387,15410 -3451,15372 -3492,15331
-Eisenacher Str.	1 22899,15073 23116,15111
+Eisenacher Str.	1 22899,15073 23113,15110
 Mittelstreifen	3nocross::ignrte -3009,17090 -3017,16984 -3018,16974
 Streitstr. -> Chamissostr.: Mittelstreifen	3::igndisp -3009,17090 -3017,16984 -2838,16951
 Chamissostr. -> Streitstr.: Mittelstreifen	3::igndisp -2838,16951 -3017,16984 -3018,16974
@@ -1000,7 +997,7 @@ Gustav-Freytag-Str. -> Feurigstr.: Überqueren verboten	3::igndisp 6779,8279 6807
 Gustav-Freytag-Str. -> Dominicusstr.: Überqueren verboten	3::igndisp 6779,8279 6807,8309 6687,8385
 Schranke	3 8992,14176 8825,14401 8776,14364
 Schranke	3 8776,14364 8825,14401 8992,14176
-Plonzstr.	1 16227,12280 16252,12411
+Plonzstr.	1 16227,12280 16259,12419
 Seddiner -> Hohenschönhausener Weg: Poller	3 18296,12115 18411,12100 18420,11864
 Seddiner -> Hohenschönhausener Weg: Poller	3 18555,12101 18411,12100 18420,11864
 Hohenschönhausener Weg -> Seddiner: Poller	3 18420,11864 18411,12100 18296,12115
@@ -1017,8 +1014,8 @@ Soonwaldstr.	1 13990,17122 13832,17232
 Mittelstreifen/Straßenbahntrasse	3nocross::ignrte 19324,2939 19417,3015 19426,3024 19475,3074
 Erich-Thilo-Str. -> Rudower Chaussee: Mittelstreifen/Straßenbahntrasse	3::igndisp 19331,3098 19417,3015 19426,3024
 Rudower Chaussee -> Erich-Thilo-Str.: Mittelstreifen/Straßenbahntrasse	3::igndisp 19324,2939 19417,3015 19331,3098
-Rudower Chaussee -> Volmerstr.: Mittelstreifen/Straßenbahntrasse	3::igndisp 19475,3074 19426,3024 19538,2899
-Volmerstr. -> Rudower Chaussee: Mittelstreifen/Straßenbahntrasse	3::igndisp 19538,2899 19426,3024 19417,3015
+Rudower Chaussee -> Volmerstr.: Mittelstreifen/Straßenbahntrasse	3::igndisp 19475,3074 19426,3024 19534,2905
+Volmerstr. -> Rudower Chaussee: Mittelstreifen/Straßenbahntrasse	3::igndisp 19534,2905 19426,3024 19417,3015
 Max-Born-Str./Ludwig-Boltzmann-Str.	3nocross::ignrte 19053,2890 19064,2867 19111,2777
 Ludwig-Boltzmann-Str. -> Max-Born-Str.: Max-Born-Str./Ludwig-Boltzmann-Str.	3::igndisp 18944,2816 19064,2867 19053,2890
 Max-Born-Str. -> Ludwig-Boltzmann-Str.: Max-Born-Str./Ludwig-Boltzmann-Str.	3::igndisp 19111,2777 19064,2867 18944,2816
@@ -1321,8 +1318,8 @@ Adlergestell -> Otto-Franke-Str.: Mittelstreifen	3::igndisp 20207,3115 20289,303
 Otto-Franke-Str. -> Adlergestell: Mittelstreifen	3::igndisp 20388,3100 20289,3033 20451,2869
 Adlergestell -> Büchnerweg: Mittelstreifen	3::igndisp 20064,3278 20207,3115 20315,3181
 Büchnerweg -> Adlergestell: Mittelstreifen	3::igndisp 20315,3181 20207,3115 20289,3033
-Straßenbahntrasse	3nocross::ignrte 22708,15794 22811,15753 22883,15740
-Michendorfer Str. -> Zossener Str.: Straßenbahntrasse	3::igndisp 22787,15639 22811,15753 22708,15794
+Straßenbahntrasse	3nocross::ignrte 22698,15788 22811,15753 22883,15740
+Michendorfer Str. -> Zossener Str.: Straßenbahntrasse	3::igndisp 22787,15639 22811,15753 22698,15788
 Zossener Str. -> Michendorfer Str.: Straßenbahntrasse	3::igndisp 22883,15740 22811,15753 22787,15639
 Straßenbahntrasse	3nocross::ignrte 23933,15209 23952,15086 23960,15021
 Stendaler Str. -> Henny-Porten-Str.: Straßenbahntrasse	3::igndisp 23960,15021 23952,15086 23833,15066
@@ -1467,9 +1464,9 @@ Krumme Str.	1 4029,12158 3999,12050 3976,11869
 Kirchplatz: gesperrt für Fahrzeuge aller Art	2 -7221,14692 -7196,14746 -7140,14749
 Eylauer Str.: Einfahrt gesperrt	3 8389,9087 8480,9080 8472,8776
 Eylauer Str.: Einfahrt gesperrt	3 8598,9074 8480,9080 8472,8776
-Scharnhorststr.: Poller	3 7883,14508 7801,14450 7780,14431
-Scharnhorststr.: Poller	3 7883,14508 7801,14450 7787,14473
-Scharnhorststr.: Poller	3 7883,14508 7801,14450 7807,14441
+Scharnhorststr.: Poller	3 7877,14504 7804,14445 7780,14431
+Scharnhorststr.: Poller	3 7877,14504 7804,14445 7787,14473
+Scharnhorststr.: Poller	3 7877,14504 7804,14445 7973,14195
 Mittelstreifen	3nocross::ignrte 5635,18776 5713,18777 5791,18778
 Lindauer Allee -> Rundpfuhlweg: Mittelstreifen	3::igndisp 5791,18778 5713,18777 5713,18739
 Rundpfuhlweg -> Lindauer Allee: Mittelstreifen	3::igndisp 5713,18739 5713,18777 5635,18776
@@ -1683,6 +1680,8 @@ Immanuelkirchstr. -> Prenzlauer Allee: Straßenbahntrasse	3::igndisp 11713,14118 
 Immanuelkirchstr. -> Knaackstr.: Straßenbahntrasse	3::igndisp 11713,14118 11498,14234 11418,14290
 B2 - Piesporter Str.: Linksabbiegen verboten	3 15569,18492 15181,18137 15239,18063
 Ruschestr. - Schulze-Boysen-Str.: Geradeausfahren verboten	3 15879,12131 15863,11992 15836,11840
+Schulze-Boysen-Str. - Ruschestr.: Geradeausfahren verboten	3 15836,11840 15863,11992 15879,12131
+Schulze-Boysen-Str. - Frankfurter Allee: Linksabbiegen verboten	3 15836,11840 15863,11992 15717,12015
 Bizetstr. - Indira-Gandhi-Str.: nur Rechtsabbiegen erlaubt	3 14293,16073 14552,16171 14522,16260
 Linienstr. - Rosa-Luxemburg-Str.: nur Rechtsabbiegen erlaubt	3 10740,13621 10777,13614 10746,13673
 Linienstr. - Rosa-Luxemburg-Str.: nur Rechtsabbiegen erlaubt	3 10740,13621 10777,13614 10872,13570
@@ -1719,7 +1718,7 @@ BMW-Niederlassung: Poller	3 2282,11463 2219,11324 2180,11318
 Straße 206	1 13247,17262 13321,17318 13406,17382
 Poller	3 27568,1188 27775,1016 27810,987
 Poller	3 27810,987 27775,1016 27568,1188
-Marzahner Chaussee [Wohngebiet] nur für Anlieger	2:Anlieger 18417,11854 18500,11847 18580,11874
+Marzahner Chaussee [Wohngebiet] nur für Anlieger	2:Anlieger 18417,11854 18482,11849 18578,11881
 Alberichstr.: Barriere	3 20932,8956 20936,9156 20937,9229
 Alberichstr.: Barriere	3 20937,9229 20936,9156 20932,8956
 Koppelweg - Britzer Damm	3 12288,4378 12547,4391 12731,4841
@@ -1831,3 +1830,4 @@ Mittelstreifen	3nocross::ignrte 7651,14260 7697,14187 7732,14131
 Mittelstreifen	3nocross::ignrte -3789,13519 -3764,13613 -3716,13724
 Klosterstr. -> Diedenhofener Str.: Mittelstreifen	3::igndisp -3716,13724 -3764,13613 -3672,13597
 Diedenhofener Str. -> Klosterstr.: Mittelstreifen	3::igndisp -3672,13597 -3764,13613 -3789,13519
+Karl-Marx-Platz	1 12969,7610 13100,7626

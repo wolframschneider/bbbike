@@ -8,7 +8,7 @@
 Rostock	5 -79160,185302
 Warnemünde	0 -83112,195145
 Schwerin	5 -127134,133359
-Wismar	4 -124516,162827
+Wismar	4 -124529,162833
 Dorf Mecklenburg	2 -124041,157272
 Bad Doberan	4 -95364,186923
 Ostseebad Heiligendamm	0 -99712,191131
@@ -377,7 +377,7 @@ Mahlendorf	0 12245,91459
 Neuthymen	0 -5359,89929
 Penzlin	3 -13583,121711
 Boizenburg|/Elbe	3 -173946,104334
-Pritzier	1 -149676,105337
+Pritzier	1 -149642,105383
 Röbel	3 -45801,107049
 Bütow	1 -53843,103585
 Waren|(Müritz)	4 -41163,123047
@@ -529,7 +529,7 @@ Tribsees	3 -37079,186986
 Dassow	3 -157242,164522
 Travemünde	0 -164551,170069
 Neustadt|i. Holstein	3 -168532,185715
-Lübeck	6 -177268,158951
+Lübeck	6 -177533,159233
 Burg|a. Fehmarn	4 -141926,222560
 Puttgarden	0 -140707,228954
 Landkirchen|a. Fehmarn	3 -145249,223995
@@ -713,7 +713,7 @@ Eutzsch	1 -40094,-66390
 Jessen	3 -18480,-68985
 Bernsdorf	3 58390,-113738
 Niedergörsdorf	1 -17070,-48181
-Damsdorf|(Niederer Fläming)	0 13763,-49203
+Damsdorf|(Niederer Fläming)	0 13855,-49200
 Buckow|(Niederer Fläming)	1 11088,-51107
 Petkus	1 8361,-46371
 Groß Ziescht	1 17332,-46325
@@ -1101,7 +1101,7 @@ Klasdorf	1 21661,-42175
 Radeland	1 21448,-38755
 Dornswalde	1 24749,-39659
 Mückendorf	1 17021,-36490
-Kemlitz	0 15912,-43922
+Kemlitz	0 15970,-43912
 Hohenfelde	1 68613,82098
 Blumenhagen	0 69388,79825
 Kunow	1 66943,82495
