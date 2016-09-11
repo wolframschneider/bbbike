@@ -72,6 +72,10 @@ my $git_id = "";
 my %experiments;
 my %known_experiments = map {($_,1)} qw(add_postal_code coastline_hack polar_coord_hack handle_relations);
 
+# 1.1m = 10_000 default bbbike
+# 1.1cm = 100   default planet.osm
+my $granularity = 10_000;
+
 sub usage () {
     <<EOF;
 usage: $0 [-v] [-f] [-encoding enc] [-center lon,lat] [-map bbbike [-centerdelta lon,lat]] [-country country] -o directory osmfile ...
@@ -103,6 +107,7 @@ osmfile ...       Files downloaded by downloadosm,
                   or directory containing .osm files
 -no-create	  do not store create date and cwd
 --git-id=gitid	  store gid id in bbd output files
+--granularity=<100|10_000>	  granularity
 EOF
 }
 
@@ -115,6 +120,7 @@ GetOptions("o=s" => \$o,
 	   "v" => \$v,
 	   "no-create" => \$no_create,
 	   "git-id=s" => \$git_id,
+	   "granularity=i" => \$granularity,
 	   "debug=i" => \$debug,
 	   "map=s" => \$map,
 	   "height-db=s" => \$height_db_file,
@@ -158,6 +164,10 @@ script) or raw wget, for example
 Note that the bbox must not be too large, otherwise you get a 400 bad request
 error.
 EOF
+}
+
+if (!($granularity == 100 || $granularity == 10_000)) {
+    die "Invalid value for granularity '$granularity'\n"; 
 }
 
 my $newest_mtime = max map { (stat($_))[9] } @osm_files;
@@ -487,10 +497,28 @@ my $do_unhandled = sub {
 }
 
 # Conversion function
-my $conv = sub {
+my $conv;
+
+# 1.1cm -> 1.1m
+if ($granularity == 100) {
+
+$conv = sub {
     my($lon,$lat) = @_;
-    "$lon,$lat";
+
+    # cut, don't round
+   return (int($lon * 100_000)/100_000) . "," .  (int($lat * 100_000)/100_000);
+}
+
+} else { # 10_000
+
+$conv = sub {
+    my($lon,$lat) = @_;
+
+    return "$lon,$lat";
 };
+
+}
+
 if (!$experiments{'polar_coord_hack'}) {
     die "Should never happen: -o is missing?" if !$o;
     if (-e "$o/Karte/Polar.pm") {
