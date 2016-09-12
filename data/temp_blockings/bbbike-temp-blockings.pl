@@ -19910,11 +19910,12 @@ EOF
        until => $isodate2epoch->("2016-09-11 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 10, months => 9]],
-       text  => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., Veranstaltung (Fest an der Panke), Straße vollständig gesperrt (10.09.2016-11.09.2016)',
+       text  => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., sowie Ossietzkystr. bis Pestalozzistr.: Veranstaltung (Fest an der Panke), Straßen gesperrt (10.09.2016-11.09.2016)',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.laubinger.de/termine/47-fest-an-der-panke/
-userdel	2::temp 10602,18382 10567,18366 10502,18338 10463,18321 10449,18315 10281,18241 10240,18193 10320,18197 10469,18262 10487,18270 10660,18345
+	2::temp 10602,18382 10567,18366 10502,18338 10463,18321 10449,18315 10281,18241 10240,18193 10320,18197 10469,18262 10487,18270 10660,18345
+	2::temp 10602,18382 10562,18506 10532,18601
 EOF
      },
      { from  => 1315040400, # 2011-09-03 11:00
@@ -21335,8 +21336,8 @@ EOF
 #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
 #: source_id: 2147339529
-#: last_checked: 2016-05-27
-#: check_frequency: 90d
+#: last_checked: 2016-09-12
+#: next_check: 2016-12-01
 userdel	q2::inwork 5258,11285 5236,10994
 EOF
      },
@@ -25264,13 +25265,12 @@ userdel	2::inwork -2955,15129 -2929,15082 -2965,15053 -3008,14992 -3008,14910 -2
 EOF
      },
      { from  => 1467237600, # 2016-06-30 00:00
-       until => 1475359199, # 2016-10-01 23:59
+       until => 1473446141, # 1475359199, # 2016-10-01 23:59
        text  => 'Röntgentaler Weg: Bauarbeiten, Weg wird für Radfahrer und Fußgänger gesperrt sein, voraussichtlich Anfang Juli 2016 bis Anfang Oktober 2016',
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2016/pressemitteilung.491050.php',
        data  => <<EOF,
-#: XXX danach enthält der Weg einen "Bitumenbelag"
-#: next_check: 2016-10-01
+# REMOVED --- #: XXX danach enthält der Weg einen "Bitumenbelag" --- #: next_check: 2016-10-01
 userdel	2::inwork 16532,26174 16222,25829
 EOF
      },
@@ -25336,7 +25336,7 @@ userdel	q3::inwork 7130,1253 7081,1346 6984,1540 6881,1743
 EOF
      },
      { from  => 1469311200, # 2016-07-24 00:00
-       until => $isodate2epoch->("2016-09-09 23:59:59"), # 1472680799, # 2016-08-31 23:59
+       until => 1473447309, # $isodate2epoch->("2016-09-09 23:59:59"), # 1472680799, # 2016-08-31 23:59
        text  => 'Elsenstr.: Baustelle zwischen Kressenweg und Hultschiner Damm, Fahrbahn gesperrt, bis 09.09.2016',
        type  => 'gesperrt',
        source_id => '2147340370',
@@ -25396,7 +25396,7 @@ userdel	q4::inwork 1732,24798 1730,24860 1750,24942 1775,25019 1767,25098 1738,2
 EOF
      },
      { from  => 1469916000, # 2016-07-31 00:00
-       until => $isodate2epoch->("2016-09-15 12:00:00"), # 1472767199, # 2016-09-01 23:59
+       until => 1473619562, # $isodate2epoch->("2016-09-15 12:00:00"), # 1472767199, # 2016-09-01 23:59
        text  => 'Langhansstr.: zwischen Goethestr. und Gustav-Adolf-Str. Baustelle, Fahrtrichtung Prenzlauer Promenade gesperrt, bis Mitte September 2016 ',
        type  => 'handicap',
        source_id => '2147340382',
@@ -25451,8 +25451,8 @@ userdel	q4::temp 3556,13200 3534,13098 3523,13076
 EOF
      },
      { from  => $isodate2epoch->("2016-08-29 00:00:00"),
-       until => $isodate2epoch->("2016-09-12 23:59:59"),
-       text  => 'Lollapalooza 2016 im Treptower Park: viele Parkwege sind gesperrt, mindestens bis 12.09.2016',
+       until => $isodate2epoch->("2016-09-15 12:00:00"),
+       text  => 'Lollapalooza 2016 im Treptower Park: viele Parkwege sind gesperrt, evtl. bis Donnerstag, 15.09.2016',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.511653.php
@@ -25510,9 +25510,10 @@ userdel	q4::inwork; -2517,17431 -2606,17272 -2666,17168 -2728,17038
 EOF
      },
      { from  => 1473285600, # 2016-09-08 00:00
-       until => 1473674400, # 2016-09-12 12:00
+       until => $isodate2epoch->("2016-09-12 09:00:00"), # 1473674400, # 2016-09-12 12:00b
        text  => 'Straße des 17. Juni und Ebertstr.: Sperrungen wegen der Sportveranstaltung "Berlin fliegt", ab 09.09.2016 bis 12.09.2016',
        type  => 'gesperrt',
+       source_id => '2147339672',
        data  => <<EOF,
 userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
 userdel	2::temp 8600,12165 8538,12245 8610,12254
@@ -25520,6 +25521,24 @@ userdel auto	3 8522,12239 8538,12245 8522,12187
 userdel auto	3 8522,12187 8538,12245 8522,12239
 userdel auto	3 8391,12389 8344,12221 8327,12174
 userdel auto	3 8327,12174 8344,12221 8391,12389
+EOF
+     },
+     { from  => 1473704824, # 2016-09-12 20:27
+       until => 1475272800, # 2016-10-01 00:00
+       text  => 'Borussiastraße/Fuhrmannstraße: Bauarbeiten, Fahrbahn gesperrt, bis 30.09.2016 ',
+       type  => 'handicap',
+       data  => <<EOF,
+#: note: by fritz
+userdel	q3::inwork 9706,6802 9511,6797 9245,6791
+EOF
+     },
+     { from  => 1473704924, # 2016-09-12 20:28
+       until => 1475272800, # 2016-10-01 00:00
+       text  => 'Wiesendamm: Bauarbeiten, RIchtung Spandauer Damm Fahrbahn gesperrt, bis 30.09.2016',
+       type  => 'handicap',
+       data  => <<EOF,
+#: source_id: 2147340518
+userdel	q3::inwork; -795,13437 -729,13415 -346,13349 -309,13268 -264,13009
 EOF
      },
     );
