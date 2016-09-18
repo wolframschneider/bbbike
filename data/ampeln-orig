@@ -2187,7 +2187,7 @@ nur Museumsbetrieb der Heidekrautbahn	B0 8372,22603
 #: note: Luftbild
 	F 4592,3762
 	F -306,1700
-	X 20959,11465
+	X 20959,11472
 	F 21137,11294
 	X 7481,19400
 #: note: Luftbild
@@ -2468,7 +2468,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: note: Anforderungsampel
 	F 15356,3759
 #: next_check_id: KARLSHORSTER-2016
-#: last_checked: 2016-08-30
+#: last_checked: 2016-09-14
 #: next_check: 2016-10-31
 #: note: provisorische Ampel
 # REMOVED --- : XXX nicht immer eingeschaltet, z.B. 2015-08-08 (Sa) gegen 10 Uhr off
@@ -2604,7 +2604,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F::inwork 9984,12426
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2016-09-04 vvv
+#: last_checked: 2016-09-12 vvv
 #: check_frequency: 30d vvv
 	X::inwork 9122,12509
 	X::inwork 9286,12886
@@ -2616,7 +2616,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: next_check_id ^^^
 #
 #: XXX temporäre Ampel vvv
-#: last_checked: 2016-08-02 vvv
+#: last_checked: 2016-09-12 vvv
 #: check_frequency: 30d vvv
 	F::inwork 9270,12086
 #: check_frequency ^^^
@@ -2740,9 +2740,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X::inwork 14724,6668
 	X::inwork 14366,6337
 	X::inwork 14193,6556
-#: XXX wurde von der Niemetzstr. verlegt, prüfen!
-#: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr.)
-#: last_checked: 2016-04-11
+#: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4674 (Ampel an der Niemetzstr., wurde aber verlegt)
+#: last_checked: 2016-09-09
 	X::inwork 13627,7047
 	X::inwork 13278,6967
 #: next_check ^^^
@@ -2802,7 +2801,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.223342.php vvv
 #: source_id: IM_023532 (Gesamtmaßnahme bis Ende Juni 2016) vvv
 #: source_id: 2147339539 vvv
-#: last_checked: 2016-08-20 vvv
+#: last_checked: 2016-09-11 vvv
 #: check_frequency: 90d vvv
 	F::inwork 16909,6628
 	F::inwork 16646,6925
@@ -2817,7 +2816,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: next_check_id: FISCHERINSEL-2015 vvv
 #: source_id: IM_024012 vvv
 #: source_id: 2147339543 vvv
-#: last_checked: 2016-09-07 vvv
+#: last_checked: 2016-09-13 vvv
 #: next_check: 2016-10-31 vvv
 	F::inwork 10703,11837
 	F::inwork 10656,11887
@@ -3018,7 +3017,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -12655,-1714
 # REMOVED --- #: XXX_prog: wechselseitige LSA-Regelung, ca. 100m Länge, größerer Zeitverlust? --- #: XXX zurzeit auch nur in Richtung Südosten Zeitverlust --- #: source_id: IM_023940 --- #: last_checked: 2015-08-10 --- #: check_frequency: 14d ---	X::inwork 14018,9118
 #: next_check_id: KIEFHOLZ-2015 vvv
-#: last_checked: 2016-08-28 vvv
+#: last_checked: 2016-09-09 vvv
 #: check_frequency: 90d vvv
 	X::inwork 14151,8967
 	X::inwork 14363,8738

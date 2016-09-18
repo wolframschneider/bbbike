@@ -1052,7 +1052,7 @@ Sackgassenende, Reha-Zentrum	culdesac 3228,26728
 	culdesac_pseudo 16285,3616
 	culdesac_pseudo 16227,3660
 	culdesac_pseudo 16167,3702
-	culdesac 8070,3563
+	culdesac_pseudo 8070,3563
 	culdesac -6125,838
 	culdesac -9481,85
 	culdesac -11418,334
@@ -1147,3 +1147,4 @@ Ende der privaten Straße	culdesac 24760,10790
 Sackgassenende im westlichen Potsdamer Abschnitt	culdesac -8060,-2228
 Sackgassenende in Steinstücken	culdesac -8095,-2219
 	culdesac -4232,-3572
+	culdesac 11899,13750
