@@ -29,7 +29,6 @@ Stallschreiberstr., Alexandrinenstr.: Einbahnstraßenregelung	q4::inwork; 10794,1
 S-Bhf. Friedrichshagen: Bauarbeiten	q2::inwork 25579,5958 25584,6029
 Dieselstr., Umfahrung: Fußgänger, kurvig, eng	q2::inwork 14326,8062 14344,8072 14358,8070 14364,8096 14405,8115 14419,8112 14429,8074 14471,8046
 Karl-Marx-Str.: Bauarbeiten zwischen Werbellinstr. und Thomasstr., Richtung Süden auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12753,8187 12794,8103 12830,8031 12865,7923 12898,7832 12914,7785 12969,7610
-Akazienstr.: Bauarbeiten, Fahrbahn zwischen Apostel-Paulus-Str. und Hauptstr. gesperrt	q4::inwork 7201,8870 7107,9030 7044,9163
 Jülicher Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke	q4::inwork; 9441,16058 9458,16180 9474,16297 9475,16307 9487,16395 9498,16480 9514,16603
 Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke	q4::inwork; 10197,16528 10225,16436 10254,16363 10281,16263 10301,16186
 Wuhlewanderweg: steiler Anstieg, Fußgänger	q4; 21998,12204 21970,12153
@@ -2542,5 +2541,5 @@ Altentreptower Str., linker Gehweg	q2::igndisp; 21401,12155 21573,12140
 Wilhelmsruher Damm, linker Geh/Radweg bis zur Fußgängerampel	q3::igndisp; 5599,21025 5525,21022
 Frankfurter Allee, linker Gehweg bis zur Ampel	q3::igndisp; 15717,12010 15670,12022
 Otto-Braun-Str., linker Gehweg	q4::igndisp; 11352,13180 11451,13301
-Invalidenstr., linker Gehweg	q4::igndisp; 8282,13535 8337,13541
+Invalidenstr., linker Gehweg	q4::igndisp; 8183,13482 8337,13541
 Lichtenberger Brücke, linker Gehweg	q1::igndisp; 16818,11878 16978,11852
