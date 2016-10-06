@@ -2,16 +2,16 @@ $#temp_blocking = 35;
 push @temp_blocking,
 (
        {
-         'data' => 'userdel	2::temp -3275,14407 -3231,14383 -3204,14368 -3155,14340
-userdel	2::temp -3275,14407 -3338,14333
-userdel	2::temp -3150,14631 -3185,14556 -3205,14512 -3228,14468 -3275,14407
-userdel	2::temp -3275,14407 -3350,14446 -3393,14470 -3410,14479 -3440,14498 -3481,14523
-userdel	2::temp -3227,14260 -3155,14340
-userdel	2::temp -3227,14260 -3293,14304 -3338,14333
-userdel	2::temp -3552,14082 -3457,14189 -3409,14241 -3338,14333
-userdel	2::temp -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340
-userdel	2::temp -3110,14408 -3174,14438 -3228,14468
-userdel	2::temp -3231,14383 -3293,14304
+         'data' => 'userdel	2::xmas -3275,14407 -3231,14383 -3204,14368 -3155,14340
+userdel	2::xmas -3275,14407 -3338,14333
+userdel	2::xmas -3150,14631 -3185,14556 -3205,14512 -3228,14468 -3275,14407
+userdel	2::xmas -3275,14407 -3350,14446 -3393,14470 -3410,14479 -3440,14498 -3481,14523
+userdel	2::xmas -3227,14260 -3155,14340
+userdel	2::xmas -3227,14260 -3293,14304 -3338,14333
+userdel	2::xmas -3552,14082 -3457,14189 -3409,14241 -3338,14333
+userdel	2::xmas -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340
+userdel	2::xmas -3110,14408 -3174,14438 -3228,14468
+userdel	2::xmas -3231,14383 -3293,14304
 ',
          'from' => 1479769200,
          'id' => 36,
@@ -185,7 +185,7 @@ userdel	2 8546,12279 8570,12302 8573,12325 8540,12420
        undef,
        undef,
        {
-         'data' => 'userdel	2::temp 9986,13412 10317,13248
+         'data' => 'userdel	2::xmas 9986,13412 10317,13248
 ',
          'from' => 1480028400,
          'id' => 166,
@@ -433,8 +433,8 @@ userdel	2 8546,12279 8570,12302 8573,12325 8540,12420
        undef,
        {
          'data' => '# sowieso schon mit q4 markiert, deshalb -> 2
-userdel	2::temp 5829,10964 5782,10884
-userdel	2::temp 5656,10876 5652,11004
+userdel	2::xmas 5829,10964 5782,10884
+userdel	2::xmas 5656,10876 5652,11004
 ',
          'from' => 1479596400,
          'id' => 394,
@@ -789,28 +789,7 @@ userdel	2::temp 5656,10876 5652,11004
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20160903
-	2::temp 7006,9292 7022,9211 7044,9163 7107,9030
-	2::temp 6945,9142 7044,9163
-	2::temp 6975,8944 7107,9030 7308,9163
-',
-         'from' => 1475226000,
-         'id' => 731,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              30,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 01.10.2016 bis 02.10.2016',
-         'type' => 'gesperrt',
-         'until' => 1475445599
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2336,9 +2315,9 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
-         'data' => 'userdel	2::temp 11329,12497 11209,12430
-userdel	2::temp 11209,12430 11273,12301
-userdel	2::temp 11273,12301 11355,12331
+         'data' => 'userdel	2::xmas 11329,12497 11209,12430
+userdel	2::xmas 11209,12430 11273,12301
+userdel	2::xmas 11273,12301 11355,12331
 ',
          'from' => 1478214000,
          'id' => 1988,
@@ -2358,8 +2337,8 @@ userdel	2::temp 11273,12301 11355,12331
        },
        {
          'data' => '#: note "WeihnachtsZauber auf dem Gendarmenmarkt"
-userdel	2::temp 9536,11922 9666,11935
-userdel	2::temp 9524,12010 9656,12021
+userdel	2::xmas 9536,11922 9666,11935
+userdel	2::xmas 9524,12010 9656,12021
 ',
          'from' => 1479596400,
          'id' => 1989,
@@ -2392,7 +2371,7 @@ userdel	2::temp 9524,12010 9656,12021
        undef,
        undef,
        {
-         'data' => 'userdel	2::temp 22111,4562 22162,4546 22214,4548
+         'data' => 'userdel	2::xmas 22111,4562 22162,4546 22214,4548
 ',
          'from' => 1481151600,
          'id' => 2003,
@@ -3223,7 +3202,7 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        {
-         'data' => 'userdel	2::temp 9986,13412 10317,13248
+         'data' => 'userdel	2::xmas 9986,13412 10317,13248
 ',
          'from' => 1480633200,
          'id' => 2515,
@@ -3243,7 +3222,7 @@ userdel	2::night 17671,13132 17684,13133
          'until' => 1480892399
        },
        {
-         'data' => 'userdel	2::temp 9986,13412 10317,13248
+         'data' => 'userdel	2::xmas 9986,13412 10317,13248
 ',
          'from' => 1481238000,
          'id' => 2516,
@@ -3263,7 +3242,7 @@ userdel	2::night 17671,13132 17684,13133
          'until' => 1481497199
        },
        {
-         'data' => 'userdel	2::temp 9986,13412 10317,13248
+         'data' => 'userdel	2::xmas 9986,13412 10317,13248
 ',
          'from' => 1481842800,
          'id' => 2517,
@@ -3439,6 +3418,7 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
        {
          'data' => '#: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2016/pressemitteilung.510363.php
 #: XXX hier wird asphaltiert
+#: osm_watch: way id="33912929" version="12"
 #: last_checked: 2016-09-21
 #: next_check: 2016-10-07
 #: priority: #A
@@ -3697,8 +3677,8 @@ userdel	q4::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
        undef,
        undef,
        {
-         'data' => 'userdel	q3::temp 11139,13008 11064,12910 10970,12822
-userdel	q4::temp 11064,12910 11134,12793
+         'data' => 'userdel	q3::xmas 11139,13008 11064,12910 10970,12822
+userdel	q4::xmas 11064,12910 11134,12793
 ',
          'from' => 1479596400,
          'id' => 2763,
@@ -3940,16 +3920,7 @@ userdel	q4::inwork; 8642,7876 8731,7956
        },
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147340518
-userdel	q3::inwork; -795,13437 -729,13415 -346,13349 -309,13268 -264,13009
-',
-         'from' => 1473704924,
-         'id' => 2829,
-         'text' => 'Wiesendamm: Bauarbeiten, RIchtung Spandauer Damm Fahrbahn gesperrt, bis 04.10.2016',
-         'type' => 'handicap',
-         'until' => 1475575200
-       },
+       undef,
        {
          'data' => '#: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität danach besser sein? vvv
 #: last_checked: 2016-09-18 vvv
