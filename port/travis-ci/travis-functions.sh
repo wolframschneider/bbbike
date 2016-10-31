@@ -22,7 +22,7 @@ init_env_vars() {
     export BBBIKE_LONG_TESTS=1 BBBIKE_TEST_SKIP_MAPSERVER=1
     # The default www.cpan.org may not be the fastest one, and may
     # even cause problems if an IPv6 address is chosen...
-    export PERL_CPANM_OPT="--mirror http://cpan.cpantesters.org --mirror https://cpan.metacpan.org"
+    export PERL_CPANM_OPT="--mirror https://cpan.metacpan.org --mirror http://cpan.cpantesters.org"
 }
 
 init_perl() {
@@ -135,7 +135,19 @@ install_perl_dependencies() {
 		cpanm --quiet --notest CGI
 		;;
 	esac
-	cpanm --quiet --installdeps --notest .
+	if true
+	then
+	    # install cpm; and install also https support for LWP because of
+	    # https://github.com/miyagawa/cpanminus/issues/519
+	    cpanm --quiet --notest App::cpm LWP::Protocol::https
+	    perl Makefile.PL
+	    mymeta-cpanfile > cpanfile~ && mv cpanfile~ cpanfile
+	    # problem with optional core modules: https://github.com/skaji/cpm/issues/42
+	    cpm install -g -v DB_File
+	    cpm install -g -v
+	else
+	    cpanm --quiet --installdeps --notest .
+	fi
     fi
 }
 

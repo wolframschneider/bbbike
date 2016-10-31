@@ -497,7 +497,7 @@ Sackgassenende, zum Schneehuhnweg	culdesac_pseudo 16991,-81
 	culdesac 17488,-145
 	culdesac 15315,1108
 	culdesac 23426,6346
-	culdesac_pseudo 17026,11888
+	culdesac_pseudo 17022,11890
 	culdesac_pseudo 17796,-97
 	culdesac_pseudo 17042,340
 	culdesac_pseudo 17122,-41
@@ -889,7 +889,7 @@ Fähranleger	culdesac_pseudo -1989,18378
 	culdesac_pseudo 9132,13187
 #: next_check_id: BND-2014
 #: XXX wird bei der Verlängerung der Ida-von-Arnim-Str. aufgehoben
-#: last_checked: 2016-09-21
+#: last_checked: 2016-10-25
 #: check_frequency: 90d
 	culdesac 8251,14337
 #: next_check_id: SUEDPANKE-2014

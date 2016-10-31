@@ -42,10 +42,10 @@ Annenstr./Heinrich-Heine-Platz	?::projected 11161,11330 11094,11377 11052,11414 
 #: XXX Baumaßnahme 5.11 (Realisierung nach 2011)
 #: osm_watch: way id="4609212"  version="9"
 #: osm_watch: way id="25113713" version="12"
-#: osm_watch: way id="4752742"  version="8"
+#: osm_watch: way id="4752742"  version="9"
 #: osm_watch: way id="4752743"  version="10"
-#: osm_watch: way id="8049679"  version="11"
-#: osm_watch: way id="8049678"  version="7"
+#: osm_watch: way id="8049679"  version="12"
+#: osm_watch: way id="8049678"  version="8"
 #: last_checked: 2016-08-07
 #: check_frequency: 180d
 Schulenburgstr./Weißenburger Str.: werden hier Radspuren markiert?	?::projected -2725,13287 -2798,13257 -2940,13221 -2974,13188 -3159,12962 -3210,12913 -3246,12890 -3301,12864 -3448,12834 -3650,12762
@@ -155,7 +155,7 @@ Reinickendorfer Str.: werden hier noch die restlichen Radspuren markiert?	?::pro
 #: last_checked: 2015-09-12
 #: check_frequency: 100d
 #: osm_watch: way id="82449630" version="8"
-#: osm_watch: way id="32426064" version="6"
+#: osm_watch: way id="32426064" version="7"
 Quickborner Str.: werden hier Radspuren markiert?	?::projected 7991,21531 7966,21563 7959,21573 7781,21812 7742,21867 7594,22068 7516,22178 7439,22306 7416,22349
 # 
 #: XXX Baumaßnahme B3.4 (Realisierung nach 2011)
@@ -290,7 +290,7 @@ Schöneberger Str.: Radspuren bis 2015 geplant	?::projected 8739,6701 8653,6781 8
 # 
 #: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/bvv/mdv_vii_19.pdf?start&ts=1368606374&file=mdv_vii_19.pdf (Seite 79)
 #: osm_watch: way id="28961260" version="13"
-#: last_checked: 2016-09-12
+#: last_checked: 2016-10-30
 #: check_frequency: 120d
 Köpenicker Landstraße: Radspuren bis 2015 geplant	?::projected; 15303,8343 15166,8489
 #: by: ^^^
@@ -559,6 +559,7 @@ Bohnsdorfer Kreisel: Einbahnstraße wird aufgehoben	?::projected 21977,988 21894,
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/36re.pdf/file?y=2015
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/07re.pdf/file?y=2016 (Grundstücksnummerierungen)
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2016 (Grundstücksnummerierungen)
 #: XXX in beiden Amtsblättern ohne Bindestriche --- ist das richtig?
 #: XXX fehlt in Berlin.coords.data, PLZ=14195
 #: note: Privatstraße
@@ -885,7 +886,7 @@ Straße 6 (Mariendorf): wird in Zukunft vielleicht entstehen	? 9099,4204 9079,437
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/4508103656581769/56581769/00054831/31-Anlagen/06/B0522ZB3.pdf
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5308 (Namensvorschlag: Jan Czochralski)
 #: osm_watch: way id="199532117" version="1"
-#: last_checked: 2016-08-20
+#: last_checked: 2016-10-30
 #: check_frequency: 180d
 Uferweg: wird verlängert, wann?	?::projected 18650,5707 18604,5898 18420,6009
 # 
@@ -1007,8 +1008,8 @@ Tempelhofer Damm: wird der Radweg Richtung Norden erneuert?	?::projected; 9242,7
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5871 (Straßenname)
 #: XXX PLZ=10318 laut DPAG-Mitteilungsblatt
 #: XXX es existiert eine Baustraße, Tor ist aber gesperrt
-#: last_checked: 2016-07-23
-#: next_check: 2017-04-01
+#: last_checked: 2016-10-30
+#: check_frequency: 180d
 Planstraße 9: evtl. Fortsetzung der Regener Str.? Qualität etc?	?::projected 19700,9040 19809,9040 19870,9079 19874,9151
 # REMOVED --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5991 (Straßenname) --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/___tmp/tmp/45081036397475695/397475695/00115094/94-Anlagen/02/Anlage1329.pdf --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2014 --- #: note: Privatstraße --- #: XXX PLZ=10318 laut DPAG-Mitteilungsblatt und LOR, bereits eingetragen --- Zachenberger Str.: (Planstraße 11) Qualität?	?::projected 19889,9400 19780,9409
 #: by: ^^^
@@ -1048,7 +1049,7 @@ Planstraße C: Einfahrten existieren noch, aber statt einer Straße ist hier nur e
 #: XXX liegt die Straße tatsächlich hier?
 #: XXX die Reinickendorfer Pressemeldungsschreiber sind fleißig, höchstwahrscheinlich wird es dort erscheinen, falls hier was passiert
 #: XXX fehlt in Berlin.coords.data, PLZ=13507 -> Humboldtinsel|Tegel|13507|X,Y
-#: osm_watch: way id="228172653" version="4"
+#: osm_watch: way id="228172653" version="5"
 #: last_checked: 2016-10-03 (Bauarbeiten)
 #: check_frequency: 150d
 Humboldtinsel: liegt die Straße hier? ausgeschildert? Qualität?	?::inwork 1687,20645 1635,20607 1587,20534 1403,20440
@@ -1175,7 +1176,7 @@ Kletterrosenweg	?::projected 21382,149 21354,289
 #: last_checked: 2014-09-13 vvv
 #: check_frequency: 90d vvv
 #: note fehlt noch bei osm vvv
-#: osm_watch: way id="57686461" version="5"
+#: osm_watch: way id="57686461" version="6"
 #: XXX ad osm_watch id referenziert die Daumstr., wegen der möglichen Zufahrten zu Wolzenseeweg, Röddelinseeweg, Quenzseeweg...
 #: XXX_osm: fehlt bei osm als "planned"/"proposed"
 #: XXX culdesac-Einträge!
@@ -1195,7 +1196,7 @@ Wolzenseeweg: Qualität? Straße bereits fertiggestellt? Wird es eine Überquerungs
 Mauerweg (Potsdam-Sacrow): evtl. existiert hier bereits ein geschotterter Radweg parallel zur Straße	? -9064,3667 -9156,3451 -9399,3297 -9530,3165 -9999,2615 -10105,2458
 # 
 #: next_check_id: OBERWALL-2014 vvv
-#: last_checked: 2016-09-30 vvv
+#: last_checked: 2016-10-28 vvv
 #: check_frequency: 90d vvv
 #: by: http://www.berliner-zeitung.de/berlin/baumangel-der-boden-hat-nachgegeben,10809148,21701554.html (Fertigestellung Ende 2014)
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2015 (Grundstücksnummerierungen)
@@ -1267,8 +1268,8 @@ Segelfliegerdamm (Zernsdorf - Niederlehme): in Planung/Bau	?::inwork 29192,-1063
 #: by: www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20160916 (fertig im Januar 2018)
 #: XXX Asphaltierung der Fahrbahn von Rummelsburger Landstr. bis Schwarzer Weg fertig
 #: XXX Radwege werden vermutlich asphaltiert sein
-#: last_checked: 2016-09-16
-#: next_check: 2016-12-01
+#: last_checked: 2016-10-30
+#: next_check: 2017-01-01
 Minna-Todenhagen-Str.: Brücke über die Spree und Straßenverbindung zwischen Rummelsburger Landstraße und Köpenicker Landstraße	?::inwork 17681,7589 17585,7525 17082,7189 16954,7096 16720,6845
 # 
 #: by: http://www.stadtentwicklung.berlin.de/verkehr/politik_planung/planfeststellungen/download/oepnv/treskowallee/Band_1/UL_3_Lageplaene/
@@ -1277,7 +1278,7 @@ Minna-Todenhagen-Str.: Brücke über die Spree und Straßenverbindung zwischen Rumm
 #: XXX laut ersten Plänen wird der nach Norden führende Radweg schon an der Stolzenfelsstr. aufhören
 #: XXX Gestaltung der Ampelanlagen wird sich ebenfalls ändern (Godesberger Str., Ehrenfelsstr., Dönhoffstr.)
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5758 (Bauarbeiten beginnen erst 2019)
-#: last_checked: 2016-07-16
+#: last_checked: 2016-10-30
 #: next_check: 2019-03-01
 Treskowallee: Bau von Radwegen	?::projected 18733,8633 18731,8577 18709,8423
 # 
@@ -1489,6 +1490,13 @@ Weg an der Wuhle: evtl. entsteht auch ein Weg hier --- wird es auch eine Anbindu
 # - Fragen nach genauen Routenverläufen
 # - XXX_prog- und XXX_indoor-Einträge
 # 
+#: XXX Enddatum unbekannt
+Pettenkoferstr.: Sperrung für Radfahrer relevant?	? 14935,12596 14858,12775
+# 
+#: next_check: 2016-11-04
+#: priority: #A
+Weihnachtsmarkt am Alexa: wird die Voltairestr. wieder gesperrt?	? 11209,12430 11329,12497
+# 
 # REMOVED --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1610/nachricht6208.html vvv
 # REMOVED (realisiert) --- Beusselstr.: Markierung von neuen Busspuren?	? 5220,14043 5231,13843 5248,13434
 # REMOVED (realisiert) --- Invalidenstr.: Markierung von neuen Busspuren?	? 7415,13060 7433,13070 7563,13143 7573,13149 7714,13223 7759,13246
@@ -1637,7 +1645,7 @@ Anforderungsampel, X	?::inwork 7651,14260
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/25re.pdf/file?y=2016
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/46re.pdf/file?y=2016 (Grundstücksnummerierungen)
 #: XXX Berlin.coords.data-Eintrag fehlt
-#: last_checked: 2016-10-08
+#: last_checked: 2016-10-28
 Forum an der Museumsinsel: wird hier der (private) Platz liegen? Ausschilderung?	? 9636,13076
 # 
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2016/pressemitteilung.490082.php
@@ -1656,7 +1664,7 @@ Wröhmännerpark: nach den Bauarbeiten "gelber Farbasphalt", vermutlich für Radfah
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036827265989/827265989/00127185/85-Anlagen/02/Koggebrunnen.pdf vvv
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/28re.pdf/file?y=2016
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/38re.pdf/file?y=2016 (Grundstücksnummerierungen)
-#: last_checked: 2016-08-21 vvv
+#: last_checked: 2016-10-30 vvv
 #: check_frequency: 60d vvv
 Im Achterkastell: neue Straße	?::projected 18730,11833 18732,11885 18887,11880 18888,11910
 Alt-Friedrichsfelde [Wohngebiet]: neue Straße	?::projected 18730,11833 18730,11833 18899,11824
@@ -1733,10 +1741,10 @@ Neue Krugallee/Lakegrund	? 16401,7400 16406,7430 16409,7464
 # 
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4755 vvv
 #: source_id: 2147339938
-#: last_checked: 2016-10-10
-#: next_check: 2016-10-31
+#: last_checked: 2016-10-30
+#: check_frequency: 90d
 Köpenicker Landstraße: bleibt die Radwegbenutzungspflicht?	?; 15166,8489 15303,8343 15357,8286 15557,8077
-#: last_checked: 2016-09-11
+#: last_checked: 2016-10-30
 #: check_frequency: 90d
 Köpenicker Landstraße: bleibt die Radwegbenutzungspflicht?	?; 15920,7697 16195,7398 16353,7226 16428,7144
 #: by ^^^
@@ -2658,6 +2666,7 @@ Campus am Jungfernsee: neue Straßen, wo genau?	? -13116,2533 -12975,2508 -13008,
 #: by: http://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/entwurf_des_bebauungsplans_9-34__.pdf
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5377
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/29re.pdf/file?y=2016 (Grundstücksnummerierungen)
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2016 (Straßenlandwidmung)
 #: XXX Straßennamen fehlen alle in Berlin.coords.data vvv
 #: last_checked: 2016-06-26 vvv
 #: check_frequency: 360d vvv
@@ -2731,10 +2740,11 @@ Benno-König-Str.: geplante Straße in Johannisthal, genaue Lage, Qualität?	?::pro
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/48re.pdf/file?y=2015 (Grundstücksnummerierungen)
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/39re.pdf/file?y=2016
 #: XXX vermutlich Verbundsteinpflaster
-#: osm_watch: way id="380935416" version="3"
+#: osm_watch: way id="380935416" version="4"
+#: XXX laut osm fertig
 #: last_checked: 2016-06-26
 #: check_frequency: 60d
-Traudelstr.: geplante Straße in Altglienicke, genaue Lage, Qualität?	?::projected 19027,1427 19169,1249 19143,1147
+Traudelstr.: genaue Lage, Qualität?	? 19027,1427 19169,1249 19143,1147
 #: XXX ^^^
 #: by: ^^^
 #: by: ^^^
@@ -2945,6 +2955,21 @@ Bebauungsplan 3-59: geplante Straßen und Wege	?::projected 12512,21482 12783,214
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.516563.php
 #: next_check: 2018-09-01
 S-Bahnhof Marzahn: Verlängerung der nördlichen Brücke + Bau von Rampen, auch für Radfahrer interessant?	?::projected 19762,15475 19642,15534
+# 
+#: XXX Bebauungsplan 5-91 zwischen Brunsbütteler Damm und Nennhauser Damm vvv
+#: by: https://www.berlin.de/ba-spandau/_assets/politik-und-verwaltung/aemter/stadtentwicklungsamt/dokumente/bebauungsplaene/bebauungsplan_5-91.pdf
+Privatstraße A und Planstraße A: Namen, genauer Verlauf, Qualität? Was passiert mit dem Fuß/Radweg am Brunsbütteler Damm?	? -8064,13534 -8088,13594 -7984,13649 -7926,13709 -7897,13762 -7885,13818 -7896,13899 -7928,13967 -8023,14032 -8150,14064 -8220,14038 -8243,14183
+Privatstraße B: Name, genauer Verlauf, Qualität?	? -7885,13818 -7730,13857
+#: XXX ^^^
+# 
+#: XXX Bebauungsplan VIII-354, Hamburger Str./Seegefelder Str. vvv
+#: by: https://www.berlin.de/ba-spandau/_assets/politik-und-verwaltung/aemter/stadtentwicklungsamt/dokumente/bebauungsplaene/viii-354_planzeichnung.pdf
+#: by: https://www.berlin.de/ba-spandau/_assets/politik-und-verwaltung/aemter/stadtentwicklungsamt/dokumente/bebauungsplaene/viii-354_begruendung.pdf
+#: XXX Straßennamen sind wohl: Künzelsauer Weg, Öhringer Weg, Hohenloher Weg, Ingelfinger Weg; fehlen alle in Berlin.coords.data
+#: XXX vermutlich (teilweise?) Privatstraßen
+Neue Straßen entstehen: Qualität, genaue Lage, Straßennamen?	?::inwork -8153,15852 -8223,15879 -8312,15914 -8377,15756 -8285,15718 -8274,15743 -8223,15879
+Neue Straßen entstehen: Qualität, genaue Lage, Straßennamen?	?::inwork -8274,15743 -8184,15717
+#: XXX ^^^
 # 
 #: ignore ^^^
 #: section ^^^
@@ -3593,7 +3618,7 @@ Demnitz - Altwigshagen: Qualität?	? 35047,144242 35170,144280 35505,144226 35871
 Flaeming-Skate, RK3: genaue Wegführung? Qualität (wahrscheinlich asphaltierte Radwege)	? -11258,-44256 -11846,-43656 -12023,-43430 -11968,-42909 -11928,-42617 -10865,-42209 -10612,-42017 -10274,-42032 -10021,-42071 -10009,-42157 -9811,-42202 -9622,-42397 -9088,-42717 -8988,-42742 -9082,-43110 -9037,-43211 -8936,-43318
 Flaeming-Skate, RK2: genaue Wegführung? Qualität (wahrscheinlich asphaltierte Radwege)	? -5082,-38726 -5149,-38403 -4942,-37087 -4768,-36337 -3794,-36334
 Löpten - Halbe (West): Qualität?	? 30295,-28418 29920,-28522 29923,-28702 30082,-29064 30094,-29360 29778,-30065 29704,-30237 29881,-30578 29850,-30776 30079,-31267 30024,-31526 30201,-31788 29936,-32373
-# REMOVED (siehe qualitaet_s/l) --- #: XXX: Aber Bauarbeiten, die bis Ende Mai 2008 (2008-05-31) fertig werden... dann besser geeignet? (siehe http://www.berlin.de/ba-spandau/presse/archiv/20080325.1455.96926.html) --- Hamburger Str.: Qualität (laut ADFC-Karte mäßig geeignet)?	? -8010,16486 -8080,16150 -8197,15622
+# REMOVED (siehe qualitaet_s/l) --- #: XXX: Aber Bauarbeiten, die bis Ende Mai 2008 (2008-05-31) fertig werden... dann besser geeignet? (siehe http://www.berlin.de/ba-spandau/presse/archiv/20080325.1455.96926.html) --- Hamburger Str.: Qualität (laut ADFC-Karte mäßig geeignet)?	? -8010,16486 -8080,16150 -8198,15648
 Barkhausenstr.: Qualität?	? -10530,16281 -10744,16241
 Barkhausenstr.: Qualität?	? -10853,16230 -10970,16232 -11136,16247 -11296,16308 -11549,16413 -11783,16506
 #: next_check: 2009-06-01
@@ -4835,3 +4860,4 @@ Germanenplatz: ist nach der Fahrbahninstandsetzung die Qualität besser geworden?
 #: next_check ^^^
 #: last_checked ^^^
 # 
+Philipp-Gerlach-Weg - Brunsbütteler Damm: existiert hier für Radfahrer eine Verbindung? Qualität? Nachts beleuchtet?	? -7801,13697 -7730,13857

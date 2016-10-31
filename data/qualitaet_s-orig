@@ -36,7 +36,7 @@ Eiswerderstr.: Asphalt	Q0 -2883,15571 -2783,15538 -2702,15517 -2675,15513
 #: XXX Baumaßnahme 6.9 (Realisierung bis 2010)
 #: osm_watch: way id="23044831" version="11"
 Neue Kreisstr.: Kopfsteinpflaster	Q2 -7191,-1023 -7271,-1102 -7376,-1226 -7498,-1355 -7592,-1402
-Markgrafendamm: Asphalt	Q0 14558,10264 14608,10409 14641,10552 14675,10693 14672,10760 14674,10811
+Markgrafendamm: Asphalt	Q0 14558,10264 14608,10409 14641,10552 14675,10693 14671,10751 14674,10811
 Markgrafendamm/Hauptstr.: asphaltiert	Q0 14674,10811 14717,10855 14794,10844 14906,10820
 # REMOVED --- #: next_check_id: HAUPTSTR-2015 vvv --- #: XXX nach den Bauarbeiten vermutlich asphaltiert mit Radwegen oder -spuren vvv --- #: source_id: 2147339565 vvv --- #: last_checked: 2016-08-25 vvv --- #: next_check: 2016-08-29 vvv
 Hauptstr.: Asphalt	Q0 14906,10820 15261,10738
@@ -274,7 +274,7 @@ Alt-Tegel: Kopfsteinpflaster	Q2- 1543,20060 1630,20097 1668,20156
 #: XXX ggfs. Bauarbeiten bis Mitte September 2016 (laut rbbtext)
 #: source_id: INKO_2147340291_COPY_1
 #: source_id: 2147340291
-#: last_checked: 2016-10-27
+#: last_checked: 2016-10-28
 Mariannenstr: mäßiges bis gutes Kopfsteinpflaster, 25 km/h möglich	Q1- 11512,10105 11616,10288 11671,10402
 Hochstr.: Kopfsteinpflaster	Q2 9053,16029 8923,15850
 Böttgerstr.: Asphalt	Q0 9123,15963 8923,15850
@@ -1968,7 +1968,7 @@ Auguste-Hauschner-Str.: asphaltiert	Q0 8438,11753 8473,11638 8502,11564
 Cora-Berliner-Str.: asphaltiert	Q0 8737,12098 8783,11959
 Gertrud-Kolmar-Str.: asphaltiert	Q0 8837,11676 8825,11773 8813,11825 8783,11959
 Am Johannistisch: Verbundsteinpflaster	Q1 10029,9989 10111,9942
-(Markgrafendamm - Modersohnstr.; über das DB-Gelände): asphaltiert	Q0 14672,10760 14566,10783
+(Markgrafendamm - Modersohnstr.; über das DB-Gelände): asphaltiert	Q0 14671,10751 14566,10783
 (Markgrafendamm - Modersohnstr.; über das DB-Gelände): Beton	Q0 14566,10783 14558,10819
 (Markgrafendamm - Modersohnstr.; über das DB-Gelände): mäßiges bis schlechtes Kopfsteinpflaster	Q3+ 14558,10819 14141,10931 14107,10911 14043,10928
 Mehringplatz: Verbundsteinpflaster	Q0 9592,10263 9547,10278 9517,10332 9527,10389 9587,10421 9646,10404 9675,10351 9668,10306 9646,10279 9606,10263 9592,10263
@@ -2363,7 +2363,7 @@ Brücke über Spektelake: unebene Holzbohlen	Q2 -7228,15504 -7182,15524
 (An der Felgenlake - Finkenkruger Weg): Asphalt	Q0 -7228,15504 -7360,15447
 (An der Felgenlake - Finkenkruger Weg): wassergebundene Decke	Q1 -7119,15501 -7182,15524
 #: note: laut anonymen Eintrag Schlaglöcher, Q2, laut ADFC-Karte ist der nördliche Abschnitt "gut geeignet"
-Luchweg: Asphalt	Q0 -7841,15503 -7747,15842 -7734,15988
+Luchweg: Asphalt	Q0 -7840,15503 -7747,15842 -7734,15988
 Eichholzbahn: Asphalt	Q0 -7559,14379 -7664,14389 -7779,14401 -7872,14409 -7978,14419 -8316,14460 -8334,14461 -8682,14489
 Hauptstr.: Asphalt	Q0 -7550,13528 -7469,13478
 Hauptstr.: unangenehmes Kopfsteinpflaster	Q3 -7469,13478 -7360,13409
@@ -3429,8 +3429,8 @@ Am Rosengarten: Beton	Q1 18654,12255 18707,12225 18749,12226
 (Am Rosengarten - Lütztalweg): unbefestigter Weg	Q2 18749,12226 18834,12228
 (Am Rosengarten - Lütztalweg): wassergebundene Decke	Q1 18834,12228 18867,12265 18917,12271
 Hohenschönhauser Weg: mäßiger Asphalt	Q1 18420,11864 18411,12100
-Rosenfelder Ring: Kopfsteinpflaster	Q2+ 17466,11960 17384,11976
-Rosenfelder Ring: Beton	Q1+ 18014,11837 18004,12010 17978,12084 17917,12106 17846,12102 17487,12012 17466,11960
+Rosenfelder Ring: Kopfsteinpflaster	Q2+ 17460,11961 17384,11976
+Rosenfelder Ring: Beton	Q1+ 18014,11837 18004,12010 17978,12084 17917,12106 17846,12102 17511,12019 17480,12003 17460,11961
 Rosenfelder Ring: Beton	Q0- 17477,11893 17772,11862 18014,11837
 #: note: aus der S-Bahn gesehen:
 Seebeckstr.: Kopfsteinpflaster	Q2+ 8495,18566 8425,18542
@@ -5871,7 +5871,7 @@ Bohrauer Pfad: Beton	Q0- 20981,4628 20827,4655 20716,4691
 (Gartenweg [Kolonie Wendenheide]): unbefestigte Straße, zweispurig	Q2 20850,4225 20716,4549 20684,4596
 Alice-Archenhold-Weg: Beton	Q1 19696,5456 19715,5403
 Verbindungsweg Carlsgarten - Wasserwerk Wuhlheide: wassergebundene Decke	Q1 19456,7956 19468,7918 19495,7874 19540,7842 19602,7753
-#: osm_watch: way id="156650954" version="5"
+#: osm_watch: way id="156650954" version="6"
 #: XXX wird hier auch eine wassergebundene Decke entstehen?
 #: last_checked: 2016-05-21
 #: check_frequency: 180d
@@ -7461,16 +7461,16 @@ Hermann-Stöhr-Platz: wassergebundene Decke, holprig	Q2+ 12453,11790 12409,11902
 (Zur Alten Flussbadeanstalt - Bolleufer): Beton, teilweise Verbundsteinpflaster	Q0- 16268,9670 16182,9591 16120,9653 16123,9692
 (Normannenstr. - Jobcenter Lichtenberg): Verbundsteinpflaster, Asphalt	Q1 16056,12317 16068,12376 16080,12441 16089,12522
 (Normannenstr. - Jobcenter Lichtenberg): Beton	Q1 16089,12522 16122,12524 16132,12621
-Kaskelstr.: Asphalt	Q0 15245,11178 15090,11237 15058,11250
+Kaskelstr.: Asphalt	Q0 15251,11175 15090,11237 15058,11250
 (Zobtener Str. - Fischerstr.): unbefestigter Weg, etwas Schotter	Q2+ 16353,10207 16404,10286
 (Fischerstr. - Lückstr.): unbefestigter Weg, etwas Schotter	Q2+ 16404,10286 16488,10381 16516,10448
 (Fischerstr. - Lückstr.): Beton mit Schäden	Q2+ 16516,10448 16501,10460 16572,10613 16587,10613
 (Fischerstr. - Lückstr.): Beton mit Schäden	Q1- 16587,10613 16601,10650
 #: XXX wird hier saniert werden?
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6721
-#: last_checked: 2016-06-19
+#: last_checked: 2016-10-30
 #: check_frequency: 120d
-(Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Asphalt mit einigen Schäden	Q1- 17210,11950 17201,11975 17137,11969 17023,11908 17026,11888
+(Skandinavische Str. - Lichtenberger Brücke/Monimbóplatz): Asphalt mit einigen Schäden	Q1- 17210,11950 17201,11975 17137,11969 17035,11909 17022,11890
 Rüdersdorfer Str. [Rückseite]: Beton	Q0- 12923,12043 13014,11955 13040,11921 13088,11945 13050,11979 13014,11955
 Neue Jakobstr. [Wohngebiet]: Beton, Kopfsteinpflasterabschnitt	Q1 11131,11579 11017,11658
 Neue Jakobstr. [Wohngebiet]: Beton	Q1 11017,11658 10963,11695
@@ -10246,6 +10246,8 @@ Am Lübarser Feld: Verbundsteinpflaster	Q1+ 5901,22710 5777,22852
 Mahnkopfweg: Kleinsteinpflaster	Q2 -3404,11589 -3342,11700 -3317,11706
 (Schwarzer Weg): schlechter Asphalt	Q2 1235,14609 1386,14605
 Siegfriedstr.: Beton, einzelne Hebungen	Q1+ 11664,6796 11935,6848 12122,6886 12305,6928 12342,6936
+Löwenberger Str.: Beton	Q0- 17440,11774 17477,11893 17460,11961
+Rosenfelder Str./Ring: Beton	Q1+ 17384,11976 17429,12030 17480,12003
 # 
 ######################### User Contributions #################################
 #: by: anonymous vvv
@@ -12434,7 +12436,7 @@ Seestr. (Rahnsdorf): Asphalt	Q0 29850,4288 29609,4049 29591,4035 29350,3862
 #: corrected_by: Stefan Klinkusch (Asphalt -> ...)
 Schulstr. (Staaken): mäßiges Kopfsteinpflaster	Q2 -7584,13421 -7769,13468 -7828,13468
 #: confirmed_by: Stefan Klinkusch
-Schulstr. (Staaken): Asphalt	Q0 -7828,13468 -7931,13469 -8043,13464 -8111,13458 -8180,13453
+Schulstr. (Staaken): Asphalt	Q0 -7828,13468 -7971,13467 -8043,13464 -8111,13458 -8180,13453
 #: corrected_by ^^^
 # 
 #: by: Michael Ebert: vvv
@@ -18204,7 +18206,7 @@ Weg P: schlechter Sandweg	Q3 28512,704 28651,859 28689,886
 Mudrastr.: Beton	Q0- 7489,2787 7384,2763 7308,2734 7289,2699 7324,2559 7370,2400
 # 
 #: by: (URL existiert nicht mehr) http://www.berlin.de/ba-spandau/presse/archiv/20071018.1430.87166.html
-Alfons-Loewe-Str.: befestigte Fahrbahn	Q0 -8072,15582 -7975,15904
+Alfons-Loewe-Str.: befestigte Fahrbahn	Q0 -8066,15595 -7975,15904
 # 
 #: by: Patrick Hund:
 Rödelstr.: schlechtes Kopfsteinpflaster	Q3 18007,8377 17813,8508
@@ -23804,7 +23806,7 @@ Wittfeldstr.: Kopfsteinpflaster	Q2 -6276,14820 -6299,14828
 #: corrected_by: srt (guter Asphalt -> )
 Wittfeldstr.: unbefestigte Straße, holprig	Q2- -6299,14828 -6429,14879
 Beim Pfarrhof: guter Asphalt	Q0 -7304,14567 -7292,14811
-Hamburger Str.: Asphalt	Q0 -8197,15622 -8080,16150
+Hamburger Str.: Asphalt	Q0 -8198,15648 -8080,16150
 #: confirmed_by: srt
 Hochhausweg: Beton	Q0- -6755,15682 -6890,15692
 #: confirmed_by: srt
@@ -23921,7 +23923,7 @@ Klingenhofer Steig: mäßiger Asphalt	Q2 -3554,16849 -3564,17007 -3567,17137
 (Winterweg, KGA Gartenfreunde): sehr gutes Verbundsteinpflaster	Q0- 3420,18470 3427,18467 3531,18418 3538,18379 3539,18357 3512,18324
 (KGA Gartenfreunde - Zobeltitzstr.): sehr gutes Gehwegpflaster	Q0 3538,18379 3674,18372
 Hauptstr. (Staaken): überasphaltiertes Kopfsteinpflaster, teilweise ist der Asphalt löchrig oder fehlt völlig	Q2 -7550,13528 -7851,13606 -7891,13616
-Gummiweg: fester Sandweg	Q1 -7891,13616 -7931,13469
+Gummiweg: fester Sandweg	Q1 -7891,13616 -7917,13505 -7971,13467
 Egelpfuhlstr.: Beton	Q0 -5472,13235 -5510,13326 -5559,13438 -5592,13534 -5612,13586 -5621,13613 -5595,13916
 Lazarusstr.: Beton	Q0 -5592,13534 -5493,13569 -5278,13606 -5170,13628 -5056,13624 -4922,13609
 #: note: "auf der Straße wird beidseitig geparkt. Weiterhin ist dort beidseitig mäßiger Verkehr und dadurch einiges Gefährdungspotential."
@@ -24653,12 +24655,12 @@ Am Zirkus: Asphalt	Q0 9090,13009 9137,13032 9167,13046 9212,12969 9239,12923
 Gustav-Heinemann-Brücke: Holzbohlen mit Fugen	Q1 8116,12938 8110,13042
 # REMOVED (hier asphaltiert) --- #: XXX Qualität der wassergebundenen Decke prüfen --- #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6285
 (Willy-Brandt-Str. - Rahel-Hirsch-Str.): Asphalt	Q0 8120,12756 8124,12840 8116,12938
-# REMOVED (erstmal komplett entfernt; nach den Bauarbeiten wird es vermutlich ganz anders aussehen) --- #: next_check_id: CHARITE-2014 --- #: XXX wie wird die Situation nach den Bauarbeiten aussehen? --- #: by: http://www.charite.de/charite/organisation/baumassnahmen/campus_charite_mitte/ (Dauer: 3 Jahre ab Herbst 2013) --- #: by: http://infocenter.charite.de/ --- #: last_checked: 2015-11-27 --- #: check_frequency: 90d --- (entlang der Baustelle an der Charité): teilweise Schotter	Q2 8833,13440 8846,13412 8835,13376 8818,13365 8808,13377 8764,13372
-(Parkplatz Charité): Asphalt	Q1 8764,13372 8665,13353
+# REMOVED (erstmal komplett entfernt; nach den Bauarbeiten wird es vermutlich ganz anders aussehen) --- #: next_check_id: CHARITE-2014 --- #: XXX wie wird die Situation nach den Bauarbeiten aussehen? --- #: by: http://www.charite.de/charite/organisation/baumassnahmen/campus_charite_mitte/ (Dauer: 3 Jahre ab Herbst 2013) --- #: by: http://infocenter.charite.de/ --- #: last_checked: 2015-11-27 --- #: check_frequency: 90d --- (entlang der Baustelle an der Charité): teilweise Schotter	Q2 8833,13440 8836,13396 8835,13376 8818,13365 8808,13377
+(an der Notfallaufnahme Charité): Steinplatten	Q0 8665,13353 8806,13384 8836,13396
+(an der Notfallaufnahme Charité): Kleinsteinpflaster	Q1 8836,13396 8833,13440
 Platz vor dem Neuen Tor: Kopfsteinpflaster	Q2 8674,13593 8668,13645 8662,13688
 Platz vor dem Neuen Tor: Kopfsteinpflaster	Q2 8668,13645 8626,13641
-#: XXX Qualität überprüfen!
-Kleine Hamburger Str.: Asphalt mit Löchern und Ausbesserungen	Q1 9670,13637 9749,13582 9793,13549
+Kleine Hamburger Str.: Asphalt mit leichten Unebenheiten	Q0- 9670,13637 9749,13582 9793,13549
 Helga-Hahnemann-Str.: Schotter, bei Regen große Pfützen	Q2 9415,13315 9408,13282 9385,13174
 Blasewitzer Ring: Asphalt	Q0 -5437,12440 -5219,12374 -5196,12452 -5146,12632 -5170,12690 -5282,12730
 Gruberzeile: Beton	Q0 -6013,12009 -5881,11902 -5847,11876 -5789,11831 -5735,11793 -5674,11800 -5618,11884
@@ -26487,7 +26489,7 @@ Gemeinschaftsstr.: mäßiges Kopfsteinpflaster	Q2 20067,4054 20109,4087
 #: by: ^^^
 # 
 #: by: Torsten Sørensen [AM]
-Löwenstammstr.: Asphalt	Q1 -7965,15546 -7865,15867
+Löwenstammstr.: Asphalt	Q1 -7961,15552 -7865,15867
 # 
 #: by: Jan [AM]
 #: corrected_by: srt (Q1 -> Q2)

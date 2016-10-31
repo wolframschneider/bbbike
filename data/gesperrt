@@ -824,6 +824,7 @@ Markgrafenstr.	1 9807,10788 9799,10846
 Markgrafenstr.	1 9799,10846 9834,10840
 Morgensternstr.	1 5212,2360 5229,2395
 Gotenburger Str.: Einfahrt verboten	1s 9000,16803 8847,16870
+Rosenfelder Str./Ring	1 17480,12003 17429,12030 17384,11976
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Knoten Märkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
@@ -2544,7 +2545,7 @@ Tor, sollte geschlossen gehalten werden	BNP:10:1:trailer=15 -6943,14262
 Schranke	BNP:3:-66:trailer=10 3427,18467
 Schranke	BNP:3:-79:trailer=10 -4300,15295
 Schranke	BNP:3:-77:trailer=10 -4117,15255
-Schranke	BNP:3:-249:trailer=10 15090,11237
+Schranke	BNP:3:-248:trailer=10 15090,11237
 Schranke	BNP:5:22:trailer=10 10919,9804
 Drängelgitter, kann umfahren werden	BNP:3:-152:trailer=10 14969,10138
 Schwingtor	BNP:3:-252:trailer=10 14146,12921
@@ -2843,8 +2844,8 @@ Corinthstr.: Baustelle, Einbahnstraßenregelung	1s 14447,10491 14270,10584
 Mariannenstr.: Baustelle, Einbahnstraßenregelung	1s 11512,10105 11616,10288
 Mariannenstr.: Baustelle, Einbahnstraßenregelung	1s 11671,10402 11616,10288
 Minna-Todenhagen-Str.: wird noch gebaut	2::inwork 17585,7525 17082,7189 16954,7096 16720,6845
-Alfonsstr.: Bauzäune	2::inwork 19027,1427 19034,1441 19061,1457
 Haasestr.: Bauarbeiten, keine Durchfahrt möglich	2::inwork 14328,11320 14286,11186
+Döringstr.: Bauarbeiten, keine Durchfahrt möglich	2::inwork 14400,11261 14357,11148
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12620,9293 12565,9200 12548,9167
 Am Nordhafen: Bauarbeiten, Straße wird zurückgebaut	2::inwork 7741,14560 7518,14689
 Clara-Immerwahr-Str.: Bauzäune, Fußgänger können aber u.U. passieren	2::inwork 19202,17471 19546,17351 19798,17263 19845,17235 19914,17203
@@ -2869,7 +2870,7 @@ Alexander-von-Humboldt-Weg: Durchfahrt an der Wilhelm-Hoff-Str. durch Wasserrohr
 Wilhelm-Hoff-Str.: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 18892,3256 18953,3318
 Mathilde-Vaerting-Weg: noch in Bau	2::inwork 17611,-330 17651,-393
 (Planstraßen 2.1, 2.2, 2.3): noch gesperrt	2 7820,13994 7930,14060 7973,13991 7865,13924
-Wattstr.: wegen Bauarbeiten für die Minna-Todenhagen-Str. teilweise gesperrt, ggfs. dauerhaft	2::inwork 17670,7512 17681,7589
+Wattstr.: wegen Bauarbeiten für die Minna-Todenhagen-Str. teilweise gesperrt, für Autos dauerhaft	2::inwork 17670,7512 17681,7589
 (Treppe an der Freybrücke)	2::inwork -3181,11496 -3177,11507 -3173,11520
 Weg nach Tiefwerder: kein Zugang wegen der Ersatzbrücke	2::inwork -3179,11763 -3217,11570
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
@@ -2883,7 +2884,7 @@ Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1s 9996,12401 9994,12368 9943
 Schinkelplatz: Bauarbeiten, Straße gesperrt	2::inwork 10008,12274 9994,12368
 Niederlagstr.: Bauarbeiten, keine Zufahrt von Unter den Linden möglich	2::inwork 9943,12364 9934,12420
 Grenzallee: komplette Sperrung wegen Bau des Autobahntunnels	2::inwork 14257,6895 14153,6795
-An der Charité: wegen Bauarbeiten gesperrt	2:inwork 8833,13440 8846,13412 8835,13376 8818,13365 8808,13377 8764,13372 8665,13353
+An der Charité: wegen Bauarbeiten gesperrt	2:inwork 8665,13353 8806,13384
 Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?) gesperrt	2:inwork -11407,-1086 -11460,-1098 -11538,-1138 -11615,-1094
 Nordufer: Neubau	2:inwork 7458,14643 7427,14648 7212,14738
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwork 8106,13130 8102,13304
