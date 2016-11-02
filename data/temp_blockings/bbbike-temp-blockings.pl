@@ -16232,7 +16232,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014203',
        data  => <<EOF,
-userdel	q4::inwork; 18226,13506 18382,13492 18783,13469 18875,13467 18946,13472 19181,13485
+userdel	q4::inwork; 18226,13506 18382,13492 18590,13480 18652,13476 18783,13469 18875,13467 18946,13472 19181,13485
 EOF
      },
      { from  => undef, # 
@@ -25611,7 +25611,7 @@ EOF
        text  => 'Rüdersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2016-10-28
+#: last_checked: 2016-10-31
 #: check_frequency: 14d
 userdel	q3::inwork 13295,11792 13173,11788 13066,11854
 EOF
@@ -25652,6 +25652,16 @@ EOF
        data  => <<EOF,
 #: note: by fritz
 userdel	q4::inwork 4646,6875 4767,6717
+EOF
+     },
+     { from  => 1477989030, # 2016-11-01 09:30
+       until => 1478088000, # 2016-11-02 13:00
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am Mittwoch ab 09:30',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp -2834,5578 -1925,6790 -2080,6897
+userdel	2::temp -2226,5120 -927,6888
+userdel	2::temp -1925,6790 -1851,6887
 EOF
      },
     );
