@@ -1452,7 +1452,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::xmas 9898,12161 9882,12259 9876,12298 9858,12410
-userdel	2::xmas 9801,12245 9795,12293 9780,12401
+userdel	2::xmas 9798,12267 9795,12293 9780,12401
 EOF
      },
      { from  => undef, # # note: gibt es nicht mehr
@@ -2184,9 +2184,9 @@ EOF
        text  => 'Französische Str. ab Markgrafenstr., Werderscher Markt, Breite Str. gesperrt. Dauer: bis 29.06.2005, 20:00 Uhr. (Beachvolleyball) ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 9643,12127 9756,12139 9812,12145
+userdel	2 9645,12133 9755,12144 9812,12150
 userdel	2 10091,12232 10029,12208 9972,12184
-userdel	2 9812,12145 9898,12161
+userdel	2 9812,12150 9898,12161
 userdel	2 9898,12161 9972,12184
 userdel	2 10174,12284 10109,12238
 userdel	2 10174,12284 10199,12251 10285,12306
@@ -4541,7 +4541,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_002765',
        data  => <<EOF,
-userdel	q4; 9611,13517 9312,13388 9293,13366
+userdel	q4; 9609,13522 9312,13388 9293,13366
 EOF
      },
      { from  => 1147989600, # 2006-05-19 00:00
@@ -7277,7 +7277,7 @@ EOF
        text  => 'Linienstr. zwischen Tucholskystr. und Kleine Hamburger Str. gesperrt wegen Straßenbauarbeiten. Dauer: 01.03.2007 07.00 Uhr bis 02.03.2007 18:00 Uhr. ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 9749,13582 9611,13517
+userdel	2::inwork 9744,13584 9609,13522
 EOF
      },
      { from  => 1172962800, # 2007-03-04 00:00
@@ -7990,11 +7990,11 @@ userdel	2::inwork 9668,5733 9456,5644 9447,5641 9368,5608 9161,5535
 EOF
      },
      { from  => undef, # 
-       until => 1214463306, # undef # war, ist nicht mehr: Abbiegen in Kleine Auguststr. und Joachimstr. nicht möglich;	3 9996,13678 10085,13684 10142,13556; 	3 10142,13556 10085,13684 10220,13694
+       until => 1214463306, # undef # war, ist nicht mehr: Abbiegen in Kleine Auguststr. und Joachimstr. nicht möglich;	3 9993,13682 10082,13686 10142,13556; 	3 10142,13556 10082,13686 10220,13694
        text  => 'Linienstr.: Baustelle zwischen Koppenplatz (östliche Straße) und Rosenthaler Str., Einbahnstraße',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 10220,13694 10085,13684 9996,13678 9947,13674
+userdel	1::inwork 10220,13694 10082,13686 9993,13682 9947,13674
 EOF
      },
      { from  => 1177625221, # 
@@ -12477,7 +12477,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009745',
        data  => <<EOF,
-userdel	2::temp 8574,13666 8426,13909
+userdel	2::temp 8572,13671 8426,13909
 EOF
      },
      { from  => 1219879557, # 2008-08-28 01:25
@@ -14508,7 +14508,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012983',
        data  => <<EOF,
-userdel	q4::inwork 9524,12010 9510,12113
+userdel	q4::inwork 9523,12019 9509,12117
 EOF
      },
      { from  => 1244785956, # 2009-06-12 07:52
@@ -14639,8 +14639,8 @@ EOF
        recurrences => [['yearly', days => 2, months => 7]],
        type  => 'gesperrt',
        data  => <<EOF,
-	q4::temp 9666,11935 9656,12021
-	2::temp 9524,12010 9656,12021
+	q4::temp 9666,11935 9656,12031
+	2::temp 9523,12019 9656,12031
 	2::temp 9536,11922 9666,11935
 EOF
      },
@@ -14774,7 +14774,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_013316',
        data  => <<EOF,
-userdel	2::temp 9643,12127 9656,12021 9666,11935 9679,11834
+userdel	2::temp 9645,12133 9656,12031 9666,11935 9679,11834
 EOF
      },
      { from  => 1246398785, # 2009-06-30 23:53
@@ -14825,7 +14825,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013316',
        data  => <<EOF,
-userdel	q4::inwork; 9679,11834 9666,11935 9656,12021 9643,12127
+userdel	q4::inwork; 9679,11834 9666,11935 9656,12031 9645,12133
 EOF
      },
      { from  => 1247349600, # 2009-07-12 00:00
@@ -15636,7 +15636,7 @@ EOF
        data  => <<EOF,
 #: by: Marek Bänsch:
 #: confirmed_by: srt
-	2::night 8337,13541 8248,13659 8101,13901 8119,13912 8096,13951 8011,14096
+	2::night 8332,13548 8248,13659 8101,13901 8119,13912 8096,13951 8011,14096
 	2::night 8096,13951 8200,14016
 EOF
      },
@@ -16970,7 +16970,7 @@ EOF
        source_id => 'IM_014608',
        data  => <<EOF,
 userdel	2::temp 9943,12364 9961,12273 9972,12184
-userdel	2::temp 9780,12401 9795,12293 9801,12245 9808,12182 9812,12145
+userdel	2::temp 9780,12401 9795,12293 9798,12267 9808,12182 9812,12150
 userdel	2::temp 9858,12410 9876,12298 9882,12259 9898,12161
 EOF
      },
@@ -17039,7 +17039,7 @@ EOF
 userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998 24927,-87720
 EOF
      },
-     { from  => $isodate2epoch->("2016-12-04 00:00:00"), # XXX $isodate2epoch->("2016-11-04 00:00:00"), # Aufbauzeit mindestens 17 Tage... (am Anfang ist nur die Fahrbahn der Voltairestr. gesperrt, später auch die Gehwege, die Schicklerstr. ist schon früher komplett gesperrt)
+     { from  => $isodate2epoch->("2016-11-04 00:00:00"), # XXX $isodate2epoch->("2016-11-04 00:00:00"), # Aufbauzeit mindestens 17 Tage... (am Anfang ist nur die Fahrbahn der Voltairestr. gesperrt, später auch die Gehwege, die Schicklerstr. ist schon früher komplett gesperrt)
        until => $isodate2epoch->("2016-12-26 23:59:59"), # Abbauzeit ca. 3 Tage?...
        periodic => 1,
        recurrences => [['yearly', days => 4, months => 11]],
@@ -17049,7 +17049,7 @@ EOF
        data  => <<EOF,
 userdel	2::xmas 11329,12497 11209,12430
 userdel	2::xmas 11209,12430 11273,12301
-userdel	2::xmas 11273,12301 11355,12331
+# REMOVED (hier (noch?) nicht gesperrt) --- userdel	2::xmas 11273,12301 11355,12331
 EOF
      },
      { from  => $isodate2epoch->("2016-11-20 00:00:00"), # 1 Tag Vorlauf
@@ -17062,7 +17062,7 @@ EOF
        data  => <<EOF,
 #: note "WeihnachtsZauber auf dem Gendarmenmarkt"
 userdel	2::xmas 9536,11922 9666,11935
-userdel	2::xmas 9524,12010 9656,12021
+userdel	2::xmas 9523,12019 9656,12031
 EOF
      },
      { from  => 1262990710, #  undef
@@ -17140,12 +17140,12 @@ userdel	3 8427,11365 8389,11378 8374,11479
 userdel	3 8374,11479 8389,11378 8427,11365
 EOF
      },
-     { from  => $isodate2epoch->("2015-12-03 00:00:00"), # 1354809600, # 2012-12-06 17:00, # 1322780400, # PERIODISCH! # früher: 1259959719, # 2009-12-04 21:48
-       until => $isodate2epoch->("2015-12-06 23:59:59"), # 1355079600, # 2012-12-09 20:00, # 1323039600, # PERIODISCH! # früher: 1260140400, # 2009-12-07 00:00
+     { from  => $isodate2epoch->("2016-12-01 00:00:00"), # 1354809600, # 2012-12-06 17:00, # 1322780400, # PERIODISCH! # früher: 1259959719, # 2009-12-04 21:48
+       until => $isodate2epoch->("2016-12-04 23:59:59"), # 1355079600, # 2012-12-09 20:00, # 1323039600, # PERIODISCH! # früher: 1260140400, # 2009-12-07 00:00
        periodic => 1,
-       recurrences => [['yearly', days => 4, months => 12]],
+       recurrences => [['yearly', days => 1, months => 12]],
        source_id => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-alt-rixdorf.html',
-       text  => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (04.12.2015 - 06.12.2015)',
+       text  => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (02.12.2016 - 04.12.2016)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::xmas 13416,7712 13426,7674
@@ -19342,7 +19342,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_017330',
        data  => <<EOF,
-userdel	q4::inwork; 9383,13986 9285,13965 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8842,13798 8690,13723
+userdel	q4::inwork; 9383,13986 9285,13965 9274,13963 9203,13953 9151,13941 9085,13919 8935,13844 8841,13800 8685,13728
 EOF
      },
      { from  => 1308261600, # 2011-06-17 00:00
@@ -19549,7 +19549,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_017545',
        data  => <<EOF,
-userdel	2::temp 9643,12127 9656,12021 9666,11935 9679,11834
+userdel	2::temp 9645,12133 9656,12031 9666,11935 9679,11834
 EOF
      },
      { from  => 1310016128, # 2011-07-07 07:22
@@ -19558,7 +19558,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_017544',
        data  => <<EOF,
-userdel	2::temp 9656,12021 9666,11935
+userdel	2::temp 9656,12031 9666,11935
 EOF
      },
      { from  => $isodate2epoch->("2014-07-07 07:00:00"), # 1 Tag Vorlauf
@@ -19792,7 +19792,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_017698',
        data  => <<EOF,
-userdel	2::temp 8426,13909 8574,13666
+userdel	2::temp 8426,13909 8572,13671
 EOF
      },
      { from  => 1313553600, # 2011-08-17 06:00
@@ -20155,7 +20155,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_018151',
        data  => <<EOF,
-userdel	q4::inwork 8634,13588 8626,13641 8619,13689
+userdel	q4::inwork 8638,13588 8633,13629 8622,13696
 EOF
      },
      { from  => 1348076973, # 1314604800, # 2011-08-29 10:00
@@ -20234,8 +20234,8 @@ EOF
        source_id => 'IM_021675',
        data  => <<EOF,
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1404/nachricht5227.html
-userdel	q4::inwork 8690,13723 8775,13606
-userdel	q4::inwork; 8690,13723 8659,13708 8619,13689
+userdel	q4::inwork 8685,13728 8775,13606
+userdel	q4::inwork; 8685,13728 8661,13715 8622,13696
 EOF
      },
      { from  => 1330026300, # 2012-02-23 20:45
@@ -21650,34 +21650,31 @@ EOF
 userdel	2::inwork 16201,24354 16156,24284 16123,24232
 EOF
      },
-     { from  => 1371528000, # 2013-06-18 06:00
-       until => 1371664800, # 2013-06-19 20:00
-       text  => 'Pariser Platz und weite Umgebung: umfangreiche Sperrungen wegen des Obama-Besuchs, 19. Juni 2003 von 6 bis 20 Uhr',
+     { from  => $isodate2epoch->("2016-11-15 16:00:00"), # 1371528000, # 2013-06-18 06:00
+       until => $isodate2epoch->("2016-11-18 14:00:00"), # 1371664800, # 2013-06-19 20:00
+       text  => 'Pariser Platz und weite Umgebung: umfangreiche Sperrungen im Regierungsviertel wegen des Obama-Besuchs, 16. November 2016, 16 Uhr bis 18. November 2016, 14 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/26re.pdf/file?y=2013
-userdel	2::temp 9141,12320 9130,12433 9122,12509 9007,12499 8904,12489 8775,12457 8540,12420 8400,12417 8354,12416 8391,12389 8546,12279 8570,12302 8573,12325 8540,12420
-userdel	2::temp 8596,11508 8592,11541 8623,11580 8698,11589 8736,11557 8740,11524
-userdel	2::temp 9054,12154 8861,12125 8743,12099
-userdel	2::temp 9130,12433 9016,12416 9028,12307 9141,12320 9164,12172 9064,12156 9076,12054 9183,12076 9164,12172
-userdel	2::temp 8965,11825 8901,12008 8861,12125 8804,12280 8775,12457
-userdel	2::temp 8553,11630 8548,11571 8502,11564 8442,11555 8209,11671 8203,11686
-userdel	2::temp 8502,11564 8473,11638 8387,11637
-userdel	2::temp 8354,12416 8119,12414 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8610,12254 8731,12270 8804,12280 9028,12307
-userdel	2::temp 8322,11715 8438,11753 8489,11782 8571,11846 8577,11896
-userdel	2::temp 8358,11477 8301,11469 8226,11458
-userdel	2::temp 8214,12205 8215,12156 8327,12174 8466,12197 8522,12239
-userdel	2::temp 8548,11571 8542,11502 8479,11493 8374,11479
-userdel	2::temp 8049,12140 8122,12147 8107,12068 8099,12058 8102,12043 8099,12022 8091,12023 8091,12011 8091,11992 8104,11984 8095,11919
-userdel	2::temp 8132,11910 8167,11865
-userdel	2::temp 8595,12066 8577,11896 8632,11912 8783,11959 8901,12008
-userdel	2::temp 8210,11775 8221,11876 8244,11878 8262,11883 8453,12099 8522,12187 8538,12245 8600,12165 8595,12066 8737,12098 8783,11959 8813,11825
-userdel	2::temp 8122,12147 8215,12156 8221,11885 8221,11876 8167,11865 8140,11850
-userdel	2::temp 8210,11775 8203,11686 8322,11715 8387,11637 8442,11555 8542,11502 8596,11508 8740,11524 8834,11536 9058,11564 9000,11727 8969,11814 8825,11773 8813,11825 8567,11799
-userdel	2::temp 8538,12245 8546,12279
-userdel	2::temp 9016,12416 9007,12499
-userdel	2::temp 8825,11773 8837,11676 8743,11663 8553,11638
-userdel	2::temp 8438,11753 8473,11638 8553,11638 8567,11799 8571,11846
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/49re.pdf/file?y=2016
+	2::temp 7873,12927 7930,12912 8021,12832 8030,12824 8120,12756 8206,12757 8309,12758 8424,12853 8503,12895
+	2::temp 8119,12414 8122,12603 8120,12756 8124,12840 8116,12938 8110,13042
+	2::temp 8030,12824 8124,12840 8168,12848 8204,12816 8206,12757 8207,12606
+	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8348,12609 8399,12610 8485,12612 8554,12593 8596,12576
+	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
+	2::temp 8304,12938 8309,12758 8306,12609
+	2::temp 8309,12758 8415,12749 8593,12742 8596,12760
+	2::temp 8424,12853 8370,12902 8304,12938 8235,12945 8168,12945 8116,12938 8072,12902 8046,12870 8036,12855 8021,12832
+	2::temp 7946,12932 7930,12912 7923,12876 7923,12872 7931,12876 7945,12878
+	2::temp 8119,12414 8354,12416 8400,12417 8540,12420 8775,12457
+	2::temp 8775,12457 8804,12280 8861,12125
+	2::temp 9141,12320 9028,12307 8804,12280 8731,12270 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205
+	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066 8577,11896 8571,11846
+	2::temp 8595,12066 8737,12098 8743,12099 8861,12125
+	2::temp 8354,12416 8391,12389 8546,12279
+	2::temp 8577,11896 8632,11912 8783,11959 8737,12098
+	2::temp 8503,12895 8488,12920
+	2::temp 8348,12609 8354,12416
 EOF
      },
      { from  => 1371549600, # 2013-06-18 12:00
@@ -22371,7 +22368,7 @@ EOF
        until => $isodate2epoch->("2016-12-04 19:00:00"),
        text  => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 4. Dezember 2016, 12:00 bis 19:00 Uhr',
        periodic => 1,
-       recurrences => [['yearly', days => 6, months => 12]],
+       recurrences => [['yearly', days => 3, months => 12]],
        type  => 'gesperrt',
        source_id => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarktkollwitzplatz.html',
        data  => <<EOF,
@@ -22382,7 +22379,7 @@ EOF
        until => $isodate2epoch->("2016-12-11 19:00:00"),
        text  => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 11. Dezember 2016, 12:00 bis 19:00 Uhr',
        periodic => 1,
-       recurrences => [['yearly', days => 13, months => 12]],
+       recurrences => [['yearly', days => 10, months => 12]],
        type  => 'gesperrt',
        source_id => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarktkollwitzplatz.html',
        data  => <<EOF,
@@ -22393,7 +22390,7 @@ EOF
        until => $isodate2epoch->("2016-12-18 19:00:00"),
        text  => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 18. Dezember 2016, 12:00 bis 19:00 Uhr',
        periodic => 1,
-       recurrences => [['yearly', days => 20, months => 12]],
+       recurrences => [['yearly', days => 17, months => 12]],
        type  => 'gesperrt',
        source_id => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarktkollwitzplatz.html',
        data  => <<EOF,
@@ -23402,7 +23399,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_022700',
        data  => <<EOF,
-userdel	q4::temp 8426,13909 8574,13666
+userdel	q4::temp 8426,13909 8572,13671
 EOF
      },
      { from  => 1409025600, # 2014-08-26 06:00
@@ -23538,7 +23535,7 @@ EOF
 #: last_checked: 2016-10-30
 #: check_frequency: 14d
 #: priority: #A
-userdel	2::inwork 8101,13901 8248,13659 8337,13541
+userdel	2::inwork 8101,13901 8248,13659 8332,13548
 EOF
      },
      { from  => 1410732000, # 2014-09-15 00:00
@@ -24081,7 +24078,7 @@ EOF
        source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5540.html',
        data  => <<EOF,
 userdel	q3::inwork 8870,13926 8935,13844
-userdel	q2::inwork; 8935,13844 8842,13798
+userdel	q2::inwork; 8935,13844 8841,13800
 EOF
      },
      { from  => 1427752800, # 2015-03-31 00:00
@@ -24962,11 +24959,11 @@ EOF
      },
      { from  => 1459720800, # 2016-04-04 00:00
        until => 1484348400, # 2017-01-14 00:00
-       text  => 'Hildburghauser Straße/Blankertzweg: Bauarbeiten zwischen Am Pfarracker und Osdorfer Str., Radfahrer können auf dem schmalen Gehweg fahren, 04.04.2016 bis 13.01.2017 ',
+       text  => 'Blankertzweg/Hildburghauser Straße: Bauarbeiten zwischen Osdorfer Str. und Woltmannweg, Einbahnstraße, Radfahrer können auf dem schmalen Gehweg fahren, 04.04.2016 bis 13.01.2017 ',
        type  => 'handicap',
        source_id => '2147339913',
        data  => <<EOF,
-userdel	q3::inwork 4542,1188 4634,1245 4706,1293 4806,1360 4897,1350 5059,1337
+userdel	q3::inwork; 4542,1188 4634,1245 4706,1293 4806,1360 4897,1350 5059,1337
 EOF
      },
      { from  => 1460584800, # 2016-04-14 00:00
@@ -25081,6 +25078,7 @@ EOF
 #: note: geschlossen am 2016-07-11 gegen 18:00 Uhr
 #: note: geschlossen am 2016-07-21 gegen 19:30 Uhr
 #: note: offen am 2016-09-21 gegen 18:15 Uhr
+#: note: offen am 2016-11-11 gegen 18:40 Uhr
 userdel	2::temp 8362,13466 8369,13465 8377,13463
 #: note: verschlossen am 2016-06-16 gegen 9:30 Uhr
 #: note: verschlossen am 2016-07-01 gegen 18:15 Uhr
@@ -25479,7 +25477,7 @@ EOF
 EOF
      },
      { from  => 1474149600, # 2016-09-18 00:00
-       until => $isodate2epoch->("2016-11-12 12:00:00"), # 1480546799, # 2016-11-30 23:59
+       until => 1478720572, # $isodate2epoch->("2016-11-12 12:00:00"), # 1480546799, # 2016-11-30 23:59
        text  => 'Manfred-von-Richthofen-Str.: Bauarbeiten, Fahrbahn gesperrt (zwischen Loewenhardtdamm und Wolffring), bis 12. November 2016',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.514646.php',
@@ -25495,21 +25493,21 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2016-10-28 vvv
+#: last_checked: 2016-11-04 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
 #	2::inwork 11032,12439 11059,12450
 #	2::inwork 11049,12386 11084,12395
-	q2::inwork; 11092,12375 11209,12430
+# REMOVED (eh' nur teilweise) --- q2::inwork; 11092,12375 11209,12430
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
 EOF
      },
      { from  => 1472680800, # 2016-09-01 00:00
-       until => $isodate2epoch->("2016-11-05 16:00:00"),
-       text  => 'Goltzstr.: Richtung Süden zwischen Mertensstr. und Rauchstr. Baustelle, Fahrtrichtung gesperrt, 02.09.2016 bis 05.11.2016',
+       until => $isodate2epoch->("2016-11-11 16:00:00"),
+       text  => 'Goltzstr.: Richtung Süden zwischen Mertensstr. und Rauchstr. Baustelle, Fahrtrichtung gesperrt, 02.09.2016 bis Mitte 11.11.2016',
        type  => 'handicap',
        source_id => '2147340513',
        data  => <<EOF,
@@ -25588,7 +25586,7 @@ userdel	q3::inwork 4564,3457 4800,3391 4862,3363 5022,3318
 EOF
      },
      { from  => 1475964000, # 2016-10-09 00:00
-       until => 1479250799, # 2016-11-15 23:59
+       until => 1478635433, # 1479250799, # 2016-11-15 23:59
        text  => 'Uhlandstr.: Bauarbeiten zwischen Lietzenburger Str. und Pariser Str., Einbahnstraßenregelung, offen Richtung Hohenzollerndamm, von 10.10.2016 bis etwa Mitte November 2016',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.522495.php',
@@ -25597,7 +25595,7 @@ EOF
 userdel	q4::inwork; 5013,10039 5026,10151 5047,10381
 EOF
      },
-     { from  => 1479078000, # 2016-11-14 00:00
+     { from  => 1478635433, # 1479078000, # 2016-11-14 00:00
        until => 1483225199, # 2016-12-31 23:59
        text  => 'Uhlandstr.: Bauarbeiten zwischen Pariser Str. und Hohenzollerndamm, Einbahnstraßenregelung, offen Richtung Hohenzollerndamm, von ca. Mitte November 2016 bis Dezember 2016',
        type  => 'handicap',
@@ -25611,7 +25609,7 @@ EOF
        text  => 'Rüdersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2016-10-31
+#: last_checked: 2016-11-03
 #: check_frequency: 14d
 userdel	q3::inwork 13295,11792 13173,11788 13066,11854
 EOF
@@ -25662,6 +25660,15 @@ EOF
 userdel	2::temp -2834,5578 -1925,6790 -2080,6897
 userdel	2::temp -2226,5120 -927,6888
 userdel	2::temp -1925,6790 -1851,6887
+EOF
+     },
+     { from  => 1478412000, # 2016-11-06 07:00
+       until => 1478646000, # 2016-11-09 00:00
+       text  => 'Kiefholzstr.: Sperrung zwischen Treptower Str. und Puderstr. (Einbau von Hilfsbrücken), vom 07.11.2016, 07:00 Uhr bis zum 08.11.2016, 24:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1611/nachricht6250.html',
+       data  => <<EOF,
+userdel	2::inwork 14363,8738 14335,8771 14327,8856 14290,8907 14211,8909 14151,8967
 EOF
      },
     );

@@ -2037,7 +2037,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'data' => '#: by: Marek Bänsch:
 #: confirmed_by: srt
-	2::night 8337,13541 8248,13659 8101,13901 8119,13912 8096,13951 8011,14096
+	2::night 8332,13548 8248,13659 8101,13901 8119,13912 8096,13951 8011,14096
 	2::night 8096,13951 8200,14016
 ',
          'from' => undef,
@@ -2311,9 +2311,9 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'data' => 'userdel	2::xmas 11329,12497 11209,12430
 userdel	2::xmas 11209,12430 11273,12301
-userdel	2::xmas 11273,12301 11355,12331
+# REMOVED (hier (noch?) nicht gesperrt) --- userdel	2::xmas 11273,12301 11355,12331
 ',
-         'from' => 1480806000,
+         'from' => 1478214000,
          'id' => 1988,
          'periodic' => 1,
          'recurrences' => [
@@ -2332,7 +2332,7 @@ userdel	2::xmas 11273,12301 11355,12331
        {
          'data' => '#: note "WeihnachtsZauber auf dem Gendarmenmarkt"
 userdel	2::xmas 9536,11922 9666,11935
-userdel	2::xmas 9524,12010 9656,12021
+userdel	2::xmas 9523,12019 9656,12031
 ',
          'from' => 1479596400,
          'id' => 1989,
@@ -2383,7 +2383,34 @@ userdel	3 8374,11479 8389,11378 8427,11365
          'type' => 'gesperrt',
          'until' => 1482879599
        },
-       undef,
+       {
+         'data' => 'userdel	2::xmas 13416,7712 13426,7674
+userdel	2::xmas 13416,7712 13378,7695 13288,7653
+userdel	2::xmas 13426,7674 13400,7642 13303,7622
+userdel	2::xmas 12969,7610 13100,7626 13177,7644
+userdel	2::xmas 13188,7590 13177,7644
+userdel	2::xmas 13188,7590 13303,7622
+userdel	2::xmas 13288,7653 13303,7622
+userdel	2::xmas 13288,7653 13177,7644
+userdel	2::xmas 13288,7653 13278,7673 13245,7742
+',
+         'from' => 1480546800,
+         'id' => 1998,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              12
+                            ]
+                          ],
+         'source_id' => 'http://www.weihnachtsmarkt-deutschland.de/weihnachtsmarkt-berlin-alt-rixdorf.html',
+         'text' => 'Richardplatz (Neukölln) und angrenzende Straßen: Alt-Rixdorfer Weihnachtsmarkt, Straßen vollständig gesperrt (02.12.2016 - 04.12.2016)',
+         'type' => 'gesperrt',
+         'until' => 1480892399
+       },
        undef,
        undef,
        undef,
@@ -3060,7 +3087,34 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/26re.pdf/file?y=2013
+#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/49re.pdf/file?y=2016
+	2::temp 7873,12927 7930,12912 8021,12832 8030,12824 8120,12756 8206,12757 8309,12758 8424,12853 8503,12895
+	2::temp 8119,12414 8122,12603 8120,12756 8124,12840 8116,12938 8110,13042
+	2::temp 8030,12824 8124,12840 8168,12848 8204,12816 8206,12757 8207,12606
+	2::temp 7710,12585 7741,12586 7851,12590 7945,12592 8122,12603 8207,12606 8306,12609 8348,12609 8399,12610 8485,12612 8554,12593 8596,12576
+	2::temp 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8495,12651 8596,12576 8667,12555 8766,12541
+	2::temp 8304,12938 8309,12758 8306,12609
+	2::temp 8309,12758 8415,12749 8593,12742 8596,12760
+	2::temp 8424,12853 8370,12902 8304,12938 8235,12945 8168,12945 8116,12938 8072,12902 8046,12870 8036,12855 8021,12832
+	2::temp 7946,12932 7930,12912 7923,12876 7923,12872 7931,12876 7945,12878
+	2::temp 8119,12414 8354,12416 8400,12417 8540,12420 8775,12457
+	2::temp 8775,12457 8804,12280 8861,12125
+	2::temp 9141,12320 9028,12307 8804,12280 8731,12270 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205
+	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066 8577,11896 8571,11846
+	2::temp 8595,12066 8737,12098 8743,12099 8861,12125
+	2::temp 8354,12416 8391,12389 8546,12279
+	2::temp 8577,11896 8632,11912 8783,11959 8737,12098
+	2::temp 8503,12895 8488,12920
+	2::temp 8348,12609 8354,12416
+',
+         'from' => 1479222000,
+         'id' => 2449,
+         'text' => 'Pariser Platz und weite Umgebung: umfangreiche Sperrungen im Regierungsviertel wegen des Obama-Besuchs, 16. November 2016, 16 Uhr bis 18. November 2016, 14 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1479474000
+       },
        undef,
        undef,
        undef,
@@ -3309,7 +3363,7 @@ userdel	2::night 17671,13132 17684,13133
                             [
                               'yearly',
                               'days',
-                              6,
+                              3,
                               'months',
                               12
                             ]
@@ -3329,7 +3383,7 @@ userdel	2::night 17671,13132 17684,13133
                             [
                               'yearly',
                               'days',
-                              13,
+                              10,
                               'months',
                               12
                             ]
@@ -3349,7 +3403,7 @@ userdel	2::night 17671,13132 17684,13133
                             [
                               'yearly',
                               'days',
-                              20,
+                              17,
                               'months',
                               12
                             ]
@@ -3536,7 +3590,7 @@ userdel	2::inwork -12583,-1552 -12485,-1482 -12608,-1715
 #: last_checked: 2016-10-30
 #: check_frequency: 14d
 #: priority: #A
-userdel	2::inwork 8101,13901 8248,13659 8337,13541
+userdel	2::inwork 8101,13901 8248,13659 8332,13548
 ',
          'from' => 1471730400,
          'id' => 2636,
@@ -3809,12 +3863,12 @@ userdel	q4::xmas 11064,12910 11134,12793
          'until' => undef
        },
        {
-         'data' => 'userdel	q3::inwork 4542,1188 4634,1245 4706,1293 4806,1360 4897,1350 5059,1337
+         'data' => 'userdel	q3::inwork; 4542,1188 4634,1245 4706,1293 4806,1360 4897,1350 5059,1337
 ',
          'from' => 1459720800,
          'id' => 2776,
          'source_id' => '2147339913',
-         'text' => 'Hildburghauser Straße/Blankertzweg: Bauarbeiten zwischen Am Pfarracker und Osdorfer Str., Radfahrer können auf dem schmalen Gehweg fahren, 04.04.2016 bis 13.01.2017 ',
+         'text' => 'Blankertzweg/Hildburghauser Straße: Bauarbeiten zwischen Osdorfer Str. und Woltmannweg, Einbahnstraße, Radfahrer können auf dem schmalen Gehweg fahren, 04.04.2016 bis 13.01.2017 ',
          'type' => 'handicap',
          'until' => 1484348400
        },
@@ -3853,6 +3907,7 @@ userdel	q4::inwork; 25010,4807 25171,4757 25228,4745 25248,4752 25369,4790 25434
 #: note: geschlossen am 2016-07-11 gegen 18:00 Uhr
 #: note: geschlossen am 2016-07-21 gegen 19:30 Uhr
 #: note: offen am 2016-09-21 gegen 18:15 Uhr
+#: note: offen am 2016-11-11 gegen 18:40 Uhr
 userdel	2::temp 8362,13466 8369,13465 8377,13463
 #: note: verschlossen am 2016-06-16 gegen 9:30 Uhr
 #: note: verschlossen am 2016-07-01 gegen 18:15 Uhr
@@ -3966,27 +4021,16 @@ userdel	q4::inwork 6587,16199 6484,16085
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147340586
-userdel	q4::inwork; 8730,8079 8776,8285 8807,8353
-# REMOVED --- userdel	q4::inwork; 8642,7876 8731,7956
-',
-         'from' => 1474149600,
-         'id' => 2824,
-         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.514646.php',
-         'text' => 'Manfred-von-Richthofen-Str.: Bauarbeiten, Fahrbahn gesperrt (zwischen Loewenhardtdamm und Wolffring), bis 12. November 2016',
-         'type' => 'handicap',
-         'until' => 1478948400
-       },
+       undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2016-10-28 vvv
+#: last_checked: 2016-11-04 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
 #	2::inwork 11032,12439 11059,12450
 #	2::inwork 11049,12386 11084,12395
-	q2::inwork; 11092,12375 11209,12430
+# REMOVED (eh\' nur teilweise) --- q2::inwork; 11092,12375 11209,12430
 #: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
@@ -3997,16 +4041,7 @@ userdel	q4::inwork; 8730,8079 8776,8285 8807,8353
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => 'userdel	q4::inwork; -2517,17431 -2606,17272 -2666,17168 -2728,17038
-',
-         'from' => 1472680800,
-         'id' => 2826,
-         'source_id' => '2147340513',
-         'text' => 'Goltzstr.: Richtung Süden zwischen Mertensstr. und Rauchstr. Baustelle, Fahrtrichtung gesperrt, 02.09.2016 bis 05.11.2016',
-         'type' => 'handicap',
-         'until' => 1478358000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4052,21 +4087,11 @@ userdel	q3::inwork 4564,3457 4800,3391 4862,3363 5022,3318
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: 2147340654
-userdel	q4::inwork; 5013,10039 5026,10151 5047,10381
-',
-         'from' => 1475964000,
-         'id' => 2833,
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.522495.php',
-         'text' => 'Uhlandstr.: Bauarbeiten zwischen Lietzenburger Str. und Pariser Str., Einbahnstraßenregelung, offen Richtung Hohenzollerndamm, von 10.10.2016 bis etwa Mitte November 2016',
-         'type' => 'handicap',
-         'until' => 1479250799
-       },
+       undef,
        {
          'data' => 'userdel	q4::inwork; 4976,9670 4982,9729 4993,9843 5013,10039
 ',
-         'from' => 1479078000,
+         'from' => 1478635433,
          'id' => 2834,
          'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.522495.php',
          'text' => 'Uhlandstr.: Bauarbeiten zwischen Pariser Str. und Hohenzollerndamm, Einbahnstraßenregelung, offen Richtung Hohenzollerndamm, von ca. Mitte November 2016 bis Dezember 2016',
@@ -4074,7 +4099,7 @@ userdel	q4::inwork; 5013,10039 5026,10151 5047,10381
          'until' => 1483225199
        },
        {
-         'data' => '#: last_checked: 2016-10-31
+         'data' => '#: last_checked: 2016-11-03
 #: check_frequency: 14d
 userdel	q3::inwork 13295,11792 13173,11788 13066,11854
 ',
@@ -4125,17 +4150,6 @@ userdel	q4::inwork 4646,6875 4767,6717
          'text' => 'Geisenheimer Str.: zwischen Rauenthaler Straße und Gritznerstraße Tiefbauarbeiten, Fahrbahn gesperrt, bis 09.12.2016',
          'type' => 'handicap',
          'until' => 1481324400
-       },
-       {
-         'data' => 'userdel	2::temp -2834,5578 -1925,6790 -2080,6897
-userdel	2::temp -2226,5120 -927,6888
-userdel	2::temp -1925,6790 -1851,6887
-',
-         'from' => 1477989030,
-         'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am Mittwoch ab 09:30',
-         'type' => 'gesperrt',
-         'until' => 1478088000
        }
      
 );
