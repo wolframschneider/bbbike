@@ -49,8 +49,8 @@
 	X 9154,10348
 	X 8804,10303
 	X 8824,10366
-	X 8525,10626
-	X 8578,10672
+	X 8527,10621
+	X 8581,10663
 	X 8336,10829
 	X 7980,11070
 #: XXX_prog: in Ost-West-Richtung lange Wartezeiten, weil auf zwei Ampeln gewartet werden muss (bei Beachten der Benutzungsplicht)
@@ -664,7 +664,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4280,8188
 	X 4783,8557
 	X 6753,10446
-	X 9330,12529
+	X 9330,12538
 	X 9262,13111
 	X 8607,15426
 	X 8024,15401
@@ -808,7 +808,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 12025,7852
 	F 11931,8206
 	F 11882,8519
-	X 5074,7207
+	X 5059,7216
 	X 2746,5537
 	X 2027,4792
 	X 1074,8470
@@ -2032,6 +2032,7 @@ Industriebahn	B0 -2410,13746
 	X 9224,14169
 	Zbr 1721,20603
 nur Museumsbetrieb der Heidekrautbahn	B0 8632,23442
+#: note: Anforderungsampel
 	F 5051,7631
 #: note: laut Luftbild:
 	X 3805,2196
@@ -2604,7 +2605,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
 #: last_checked: 2016-11-11 vvv
 #: check_frequency: 30d vvv
-	X::inwork 9122,12509
+	X::inwork 9121,12514
 	X::inwork 9286,12886
 # REMOVED (nicht mehr gesehen) --- X::inwork 9343,12464
 	X::inwork 9475,12365
@@ -2659,7 +2660,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 1932,14146
 	F -2866,17760
 	X -2728,17038
-	F 8769,10818
+	F 8772,10814
 #: XXX_prog Ampel würde man auch beim Linksabbiegen aus der Greifswalder benutzen
 #: XXX_prog die beiden Überquerungen sind unabhängig voneinander geschaltet, typischerweise verlängert das die Wartezeiten
 #: note: Anforderungsampel
@@ -2894,6 +2895,14 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: source_id ^^^
 #: next_check_id ^^^
 # 
+#: next_check_id: HAUPTSTR-2015 vvv
+#: note etwas weiter südlich gelegen
+#: last_checked: 2016-11-23
+	F::inwork 14674,10811
+#: last_checked: 2016-11-23
+	F::inwork 14794,10844
+#: next_check_id ^^^
+# 
 ################################################################################
 #: note: Potsdam vvv
 	F -12868,-502
@@ -3040,7 +3049,6 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: off: Pfingstmontag 2016-05-16 gegen 13 Uhr
 	F -7554,13514
 # 
-# REMOVED --- #: next_check_id: HAUPTSTR-2015 --- #: last_checked: 2016-09-30 ---	F::inwork 14672,10760
 ################################################################################
 #: note: Ampeln elsewhere vvv
 	F -2691,-1112

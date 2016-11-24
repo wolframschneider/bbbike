@@ -2275,8 +2275,8 @@ EOF
        text  => 'Dorotheenstr. Richtung Osten zwischen Wilhelmstr. und Schadowstr. sowie Schadowstr. Richtung Unter den Linden gesperrt (bis Ende 2005)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4; 8775,12457 8904,12489 9007,12499
-userdel	q4; 9007,12499 9016,12416 9028,12307
+userdel	q4; 8775,12457 8904,12489 8999,12498
+userdel	q4; 8999,12498 9011,12423 9028,12307
 EOF
      },
      { from  => 1119909600, # 2005-06-28 00:00
@@ -11907,7 +11907,7 @@ userdel auto	3 7429,10366 7413,10244 7384,10127
 userdel auto	3 6719,10347 6753,10446 6745,10619
 userdel auto	3 8172,11679 8226,11458 8232,11414
 userdel auto	3 7444,10479 7633,10394 7744,10372
-userdel auto	3 9028,12307 9141,12320 9130,12433
+userdel auto	3 9028,12307 9141,12320 9131,12438
 userdel auto	3 7744,10372 7633,10394 7444,10479
 userdel auto	3 7293,11519 7171,11510 6987,11487 6915,11492 6825,11486 6716,11439
 userdel auto	3 9876,12298 9858,12410 9845,12506
@@ -11934,7 +11934,7 @@ userdel auto	3 8205,10979 8104,11037 7980,11070 7747,11075
 userdel auto	3 6494,10440 6532,10529 6468,10550
 userdel auto	3 9343,12464 9358,12351 9369,12253
 userdel auto	3 7002,11034 6873,11011 6742,11099
-userdel auto	3 9130,12433 9141,12320 9028,12307
+userdel auto	3 9131,12438 9141,12320 9028,12307
 userdel auto	3 6716,11439 6825,11486 6915,11492 6987,11487 7171,11510 7293,11519
 userdel auto	3 8804,12280 8861,12125 8901,12008
 userdel auto	3 7281,10510 7245,10499 7033,10396 7003,10513
@@ -13992,7 +13992,7 @@ EOF
        data  => <<EOF,
 #userdel	q4::inwork; 8804,12280 8775,12457
 #: last_checked: 2009-05-21
-userdel	q4::inwork; 9016,12416 9028,12307
+userdel	q4::inwork; 9011,12423 9028,12307
 EOF
      },
      { from  => 1241301600, # 2009-05-03 00:00
@@ -14346,7 +14346,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: last_checked: 2009-05-21
-userdel	q4::inwork 9130,12433 9343,12464
+userdel	q4::inwork 9131,12438 9343,12464
 EOF
      },
      { from  => 1243370925, # 2009-05-26 22:48
@@ -16372,7 +16372,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_014281',
        data  => <<EOF,
-userdel	2::temp 9570,10566 9559,10656
+userdel	2::temp 9570,10566 9556,10666
 EOF
      },
      { from  => 1253965727, # 2009-09-26 13:48
@@ -16603,7 +16603,7 @@ EOF
        text  => 'L 060 zw. Finsterwalde u. Hennersdorf Deckeneinbau Vollsperrung 08.10.2009-10.10.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 31829,-85450 31240,-85488 30463,-85655 29077,-85475 27831,-85375
+userdel	2::inwork 31829,-85450 31240,-85488 30463,-85655 29042,-85545 27854,-85429
 EOF
      },
      { from  => 1254952800, # 2009-10-08 00:00
@@ -16688,9 +16688,9 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014421',
        data  => <<EOF,
-userdel	2::inwork; 9122,12509 9130,12433
-Kein Durchgang von Mittelstr. zur Neustädtischen Kirchstr., auch nicht für Fußgänger	2::inwork 9343,12464 9130,12433
-userdel	q4::inwork; 9130,12433 9141,12320
+userdel	2::inwork; 9121,12514 9131,12438
+Kein Durchgang von Mittelstr. zur Neustädtischen Kirchstr., auch nicht für Fußgänger	2::inwork 9343,12464 9131,12438
+userdel	q4::inwork; 9131,12438 9141,12320
 EOF
      },
      { from  => 1255467829, # 2009-10-13 23:03
@@ -16829,7 +16829,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_014503',
        data  => <<EOF,
-userdel	q4::inwork; 9330,12529 9314,12652
+userdel	q4::inwork; 9330,12538 9314,12652
 EOF
      },
      { from  => 1255212000, # 2009-10-11 00:00
@@ -18541,7 +18541,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_016372',
        data  => <<EOF,
-userdel	q4::inwork; 9330,12529 9314,12652
+userdel	q4::inwork; 9330,12538 9314,12652
 EOF
      },
      { from  => 1285014030, # 2010-09-20 22:20
@@ -19228,7 +19228,7 @@ EOF
        source_id => 'INKO_093372',
        data  => <<EOF,
 #: last_checked: 2012-04-28
-userdel	q4::inwork 9028,12307 9016,12416 9007,12499
+userdel	q4::inwork 9028,12307 9011,12423 8999,12498
 EOF
      },
      { from  => 1305746527, # 2011-05-18 21:22
@@ -19370,7 +19370,7 @@ EOF
        source_id => 'INKO_093371',
        data  => <<EOF,
 #: last_checked: 2012-04-20
-userdel	q4::inwork; 8775,12457 8904,12489 9007,12499
+userdel	q4::inwork; 8775,12457 8904,12489 8999,12498
 EOF
      },
      { from  => 1307600160, # 2011-06-09 08:16
@@ -21392,7 +21392,7 @@ EOF
        until => $isodate2epoch->("2016-12-11 21:00:00"), #
        periodic => 1,
        recurrences => [['yearly', days => 9, months => 12]],
-       text  => 'Kunsthandwerklicher Weihnachtsmarkt in Lichtenrade: Alt-Lichtenrade, Straße vermutlich gesperrt (10. November 2016 bis 11. November 2016, jeweils 11-20 Uhr)',
+       text  => 'Kunsthandwerklicher Weihnachtsmarkt in Lichtenrade: Alt-Lichtenrade, Straße vermutlich gesperrt (10. Dezember 2016 bis 11. Dezember 2016, jeweils 11-20 Uhr)',
        type  => 'handicap',
        data  => <<EOF,
 #: note: früher in der Bahnhofstr.
@@ -21813,7 +21813,7 @@ EOF
        text  => 'Das Befahren der Jürgen-Schumann-Allee (Verbindung zwischen der B96a und BER) ist für Radfahrer offiziell verboten',
        type  => 'gesperrt',
        data  => <<EOF,
-#: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht - zwischenzeitlich bicycle=no, seit 2014-10-25 wieder bicycle=yes vvv
+#: XXX_osm bei osm jetzt mit bicycle=yes getaggt, aber laut R. Herzog stimmt das nicht - zwischenzeitlich bicycle=no, seit 2014-10-25 wieder bicycle=yes, 2016 wieder bicycle=no vvv
 #: note: Verbot bestätigt von roald dot lange at gmx (2015-06-23)
 #: osm_watch: way id="80221295" version="18" brb
 	2 19158,-4083 19189,-4062 19454,-3956 19524,-3843 19528,-3767 19479,-3690
@@ -21821,8 +21821,8 @@ EOF
 	2 19105,-3940 19164,-3980 19282,-3928 19464,-3780 19479,-3690
 #: osm_watch: way id="60482011" version="25" brb
 #: osm_watch: way id="192153919" version="4" brb
-#: osm_watch: way id="192153925" version="8" brb
-#: osm_watch: way id="136089841" version="21" brb
+#: osm_watch: way id="192153925" version="9" brb
+#: osm_watch: way id="136089841" version="22" brb
 	2 19479,-3690 19443,-3540 19558,-3155 19626,-3031 19808,-2953 19909,-2863 19941,-2759 19909,-2677 19575,-2358 19346,-2337 19236,-2298 19131,-2145 18866,-1674 18936,-1581
 	2 19131,-2145 19198,-2118
 	2 19909,-2863 19996,-2880
@@ -22104,7 +22104,7 @@ EOF
        text  => 'Görresstr.: Bauarbeiten, Einbahnstraße, bis 28. März 2014',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork; 5352,7428 5318,7424 5272,7458 5188,7536 5067,7652
+userdel	q4::inwork; 5352,7428 5318,7424 5272,7458 5188,7536 5073,7660
 EOF
      },
      { from  => 1379149200, # 2013-09-14 11:00
@@ -22402,7 +22402,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_020714',
        data  => <<EOF,
-userdel	q3::inwork; 9130,12433 9343,12464
+userdel	q3::inwork; 9131,12438 9343,12464
 EOF
      },
      { from  => 1384642800, # 2013-11-17 00:00
@@ -23531,7 +23531,7 @@ EOF
 #: XXX hier wird asphaltiert
 #: XXX ursprüngliches Enddatum wurde nicht eingehalten
 #: osm_watch: way id="33912929" version="12"
-#: last_checked: 2016-11-11
+#: last_checked: 2016-11-22
 #: check_frequency: 14d
 #: priority: #A
 userdel	2::inwork 8101,13901 8248,13659 8332,13548
@@ -24352,7 +24352,7 @@ EOF
        type  => 'handicap',
        source_id => '2147339708',
        data  => <<EOF,
-userdel	q4::inwork 8634,10426 8384,10507 8525,10626
+userdel	q4::inwork 8634,10426 8384,10507 8527,10621
 userdel	q4::inwork 8348,10636 8335,10518 8350,10499
 EOF
      },
@@ -25079,12 +25079,14 @@ EOF
 #: note: geschlossen am 2016-07-21 gegen 19:30 Uhr
 #: note: offen am 2016-09-21 gegen 18:15 Uhr
 #: note: offen am 2016-11-11 gegen 18:40 Uhr
+#: note: offen am 2016-11-22 gegen 18:30 Uhr
 userdel	2::temp 8362,13466 8369,13465 8377,13463
 #: note: verschlossen am 2016-06-16 gegen 9:30 Uhr
 #: note: verschlossen am 2016-07-01 gegen 18:15 Uhr
 #: note: verschlossen am 2016-07-11 gegen 18:00 Uhr
 #: note: verschlossen am 2016-07-21 gegen 19:30 Uhr
 #: note: verschlossen am 2016-09-21 gegen 18:15 Uhr
+#: note: verschlossen am 2016-11-22 gegen 18:30 Uhr
 userdel	2::temp 8371,13399 8363,13402 8356,13404
 EOF
      },
@@ -25493,7 +25495,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2016-11-04 vvv
+#: last_checked: 2016-11-22 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -25596,8 +25598,8 @@ userdel	q4::inwork; 5013,10039 5026,10151 5047,10381
 EOF
      },
      { from  => 1478635433, # 1479078000, # 2016-11-14 00:00
-       until => 1483225199, # 2016-12-31 23:59
-       text  => 'Uhlandstr.: Bauarbeiten zwischen Pariser Str. und Hohenzollerndamm, Einbahnstraßenregelung, offen Richtung Hohenzollerndamm, von ca. Mitte November 2016 bis Dezember 2016',
+       until => $isodate2epoch->("2016-12-16 14:00:00"), # 1483225199, # 2016-12-31 23:59
+       text  => 'Uhlandstr.: Bauarbeiten zwischen Pariser Str. und Hohenzollerndamm, Einbahnstraßenregelung, offen Richtung Hohenzollerndamm, von ca. Mitte November 2016 bis Mitte Dezember 2016',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.522495.php',
        data  => <<EOF,
@@ -25609,7 +25611,8 @@ EOF
        text  => 'Rüdersdorfer Str.: Bauarbeiten, Fahrbahn gesperrt, Ausweichen auf Gehweg',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2016-11-11
+#: next_check_id: RUEDERSDORFER-2016
+#: last_checked: 2016-11-22
 #: check_frequency: 14d
 userdel	q3::inwork 13295,11792 13173,11788 13066,11854
 EOF
