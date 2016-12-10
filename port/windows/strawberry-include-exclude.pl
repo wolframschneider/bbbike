@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2011,2012,2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 2011,2012,2013,2016 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -70,12 +70,15 @@ my %exclude;
 my $ie = Algorithm::IncludeExclude->new;
 $ie->include;
 $ie->exclude('c');
-$ie->include(qw(c bin libxml2-2_.dll));
-$ie->include(qw(c bin libiconv-2_.dll));
-$ie->include(qw(c bin libz_.dll));
 $ie->include(qw(c bin libexpat-1_.dll));
-$ie->include(qw(c bin libpng15-15_.dll)); # probably needed by Tk
-$ie->include(qw(c bin libjpeg-8_.dll));   # dito
+$ie->include(qw(c bin libiconv-2_.dll));
+$ie->include(qw(c bin libjpeg-8_.dll));   # probably needed by Tk, version in 5.14.x
+$ie->include(qw(c bin libjpeg-9_.dll));   #                        version in 5.24.x
+$ie->include(qw(c bin libpng15-15_.dll)); # probably needed by Tk, version in 5.14.x
+$ie->include(qw(c bin libpng16-16_.dll)); #                        version in 5.24.x
+$ie->include(qw(c bin libxml2-2_.dll));
+$ie->include(qw(c bin libz_.dll));        #                        version in 5.14.x
+$ie->include(qw(c bin zlib1_.dll));       #                        version in 5.24.x
 $ie->exclude('cpan');
 $ie->exclude('cpanplus');
 $ie->exclude('data');
@@ -198,30 +201,30 @@ $ie->exclude(qw(perl site lib Tk pTk), qr{\.[hmt]$});
 $ie->exclude(qw(perl site lib Tk pTk compat));
 #
 if ($src) {
+    # Vendor modules not needed for the BBBike distribution.
+    # Note that not all Strawberry versions have all of these
+    # installed (therefore the eval).
     for my $mod (qw(
 		       Alien::Tidyp
 		       BerkeleyDB
-		       Compress::Bzip2 Compress::Raw::Lzma Compress::unLZMA CPAN CPAN::SQLite
+		       Compress::Bzip2 Compress::Raw::Lzma Compress::unLZMA
+		       CPAN CPAN::SQLite
 		       DBI Data::Random DBM::Deep DBIx::Simple
 		       FCGI
-		       Imager
+		       Image::Info Imager
 		       Math::Pari
+		       Object::Realize::Later
 		       PAR
 		       SOAP::Lite
+		       Test::Pod
 		       XML::LibXSLT
 		  )) {
-	add_packlist_to_exclude($mod);
-    }
-
-    # Following are not part of Strawberry, but may be
-    # installed later to help testing
-    for my $mod (qw(
-		       Image::Info
-		       Object::Realize::Later
-		       Test::Pod
-		  )) {
 	eval { add_packlist_to_exclude($mod) };
-	warn "No exclude for $mod needed, probably not installed...\n" if $@;
+	if ($@) {
+	    warn "INFO: $mod is not installed.\n";
+	} else {
+	    warn "INFO: $mod was removed.\n";
+	}
     }
 }
 
