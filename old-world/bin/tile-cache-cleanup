@@ -1,9 +1,0 @@
-#!/bin/sh
-# Copyright (c) 2009-2013 Wolfram Schneider, http://bbbike.org
-
-set -e
-cd /var/lib/mod_tile
-du -hs
-
-sudo rm -rf /var/lib/mod_tile/[a-z]*
-
