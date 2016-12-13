@@ -2370,26 +2370,7 @@ userdel	3 8374,11479 8389,11378 8427,11365
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::xmas 22111,4562 22162,4546 22214,4548
-',
-         'from' => 1481151600,
-         'id' => 2003,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-deutschland.de/berlin-koepenick-weihnachtsmarkt.html',
-         'text' => 'Alt-Köpenicker Weihnachtsmarkt vom 09.12.2016 bis zum 11.12.2016',
-         'type' => 'gesperrt',
-         'until' => 1481497199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3043,27 +3024,7 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: früher in der Bahnhofstr.
-#: by: http://www.weihnachteninberlin.de/weihnachtsmaerkte/tempelhof-schoeneberg/1001683-1328179-kunsthandwerklicher-weihnachtsmarkt-in-l.html
-	q4::xmas 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
-',
-         'from' => 1481274000,
-         'id' => 2426,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              9,
-                              'months',
-                              12
-                            ]
-                          ],
-         'text' => 'Kunsthandwerklicher Weihnachtsmarkt in Lichtenrade: Alt-Lichtenrade, Straße vermutlich gesperrt (10. Dezember 2016 bis 11. Dezember 2016, jeweils 11-20 Uhr)',
-         'type' => 'handicap',
-         'until' => 1481486400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3246,26 +3207,7 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::xmas 9986,13412 10317,13248
-',
-         'from' => 1481238000,
-         'id' => 2516,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              9,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 3. Adventswochenende (10.12.2016 - 11.12.2016)',
-         'type' => 'gesperrt',
-         'until' => 1481497199
-       },
+       undef,
        {
          'data' => 'userdel	2::xmas 9986,13412 10317,13248
 ',
@@ -3288,26 +3230,7 @@ userdel	2::night 17671,13132 17684,13133
        },
        undef,
        undef,
-       {
-         'data' => 'userdel	2::xmas 11317,14564 11255,14572 11155,14554
-',
-         'from' => 1481367600,
-         'id' => 2520,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              10,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarktkollwitzplatz.html',
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 11. Dezember 2016, 12:00 bis 19:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1481479200
-       },
+       undef,
        {
          'data' => 'userdel	2::xmas 11317,14564 11255,14572 11155,14554
 ',
@@ -3498,22 +3421,7 @@ userdel	2::inwork -12583,-1552 -12485,-1482
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2016/pressemitteilung.510363.php
-#: XXX hier wird asphaltiert
-#: XXX ursprüngliches Enddatum wurde nicht eingehalten
-#: osm_watch: way id="33912929" version="12"
-#: last_checked: 2016-11-22
-#: check_frequency: 14d
-#: priority: #A
-userdel	2::inwork 8101,13901 8248,13659 8332,13548
-',
-         'from' => 1471730400,
-         'id' => 2636,
-         'text' => 'Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten bis November 2016 gesperrt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3527,13 +3435,14 @@ userdel	2::inwork 8101,13901 8248,13659 8332,13548
 #: note: am Mo, den 2016-04-11 gegen 18:20: geschlossen
 #: note: am So, den 2016-06-12 gegen 12:30: offen
 #: note: am Mo, den 2016-10-10 gegen 17:50: offen
+#: note: am Sa, den 2016-12-10 gegen 13:00: geschlossen
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
 ',
          'from' => undef,
          'id' => 2643,
          'recurring' => 1,
-         'text' => 'Mergenthalerring/Dieselstr.: Tor kann vormittags, abends und nachts versperrt sein',
+         'text' => 'Mergenthalerring/Dieselstr.: Tor kann versperrt sein',
          'until' => undef
        },
        undef,
@@ -3660,7 +3569,34 @@ userdel	q4::inwork; 3807,11859 3666,11855
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	q4::inwork 8634,10426 8384,10507 8527,10621
+userdel	q4::inwork 8348,10636 8335,10518 8350,10499
+',
+         'from' => 1484521200,
+         'id' => 2718,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              8,
+                              'months',
+                              1
+                            ],
+                            [
+                              'yearly',
+                              'days',
+                              27,
+                              'months',
+                              6
+                            ]
+                          ],
+         'source_id' => '2147339708',
+         'text' => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 17.01.2017-19.01.2017',
+         'type' => 'handicap',
+         'until' => 1484866799
+       },
        {
          'data' => '	2::inwork 9998,16547 9983,16561 9955,16578
 ',
@@ -3704,7 +3640,8 @@ userdel	q4::inwork; 3807,11859 3666,11855
        {
          'data' => '#: source_id: IM_026411
 #: source_id: 2147339562
-userdel	q4::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
+#: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
+userdel	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
 ',
          'from' => 1443650400,
          'id' => 2740,
@@ -3843,6 +3780,7 @@ userdel	2::night 16196,18364 16315,18208
 #: note: offen am 2016-11-11 gegen 18:40 Uhr
 #: note: offen am 2016-11-22 gegen 18:30 Uhr
 #: note: offen am 2016-12-07 gegen 19:00 Uhr
+#: note: offen am 2016-12-12 gegen 09:45 Uhr
 userdel	2::temp 8362,13466 8369,13465 8377,13463
 #: note: verschlossen am 2016-06-16 gegen 9:30 Uhr
 #: note: verschlossen am 2016-07-01 gegen 18:15 Uhr
@@ -3851,6 +3789,7 @@ userdel	2::temp 8362,13466 8369,13465 8377,13463
 #: note: verschlossen am 2016-09-21 gegen 18:15 Uhr
 #: note: verschlossen am 2016-11-22 gegen 18:30 Uhr
 #: note: verschlossen am 2016-12-07 gegen 19:00 Uhr
+#: note: verschlossen am 2016-12-12 gegen 09:45 Uhr
 userdel	2::temp 8371,13399 8363,13402 8356,13404
 ',
          'from' => undef,
@@ -3944,16 +3883,7 @@ userdel	q4::inwork 12911,1815 12817,2031
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: by fritz
-userdel	q4::inwork 6587,16199 6484,16085
-',
-         'from' => 1471893583,
-         'id' => 2819,
-         'text' => 'Kameruner Str.: Fahrbahn zwischen Müllerstr. und Lüderitzstr. gesperrt, bis 08.12.2016',
-         'type' => 'handicap',
-         'until' => 1481238000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3984,6 +3914,7 @@ userdel	q4::inwork 6587,16199 6484,16085
        undef,
        {
          'data' => '#: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität danach besser sein? vvv
+#: osm_watch way id="136814135" version="14" vvv
 #: last_checked: 2016-09-18 vvv
 #: check_frequency: 60d vvv
 userdel	2::inwork 3332,12742 3396,12741 3358,12718
@@ -3991,6 +3922,7 @@ userdel	2::inwork 3396,12741 3476,12735 3582,12704 3654,12672 3763,12624 3837,12
 userdel	2::inwork 3741,12607 3654,12672
 #: check_frequency ^^^
 #: last_checked ^^^
+#: osm_watch ^^^
 #: XXX ^^^
 ',
          'from' => undef,
@@ -4050,16 +3982,7 @@ userdel	q4::inwork 20302,1613 20443,1595 20653,1528 20668,1524 20817,1475 20917,
        },
        undef,
        undef,
-       {
-         'data' => '#: note: by fritz
-userdel	q4::inwork 4646,6875 4767,6717
-',
-         'from' => 1477603388,
-         'id' => 2839,
-         'text' => 'Geisenheimer Str.: zwischen Rauenthaler Straße und Gritznerstraße Tiefbauarbeiten, Fahrbahn gesperrt, bis 09.12.2016',
-         'type' => 'handicap',
-         'until' => 1481324400
-       },
+       undef,
        undef,
        undef,
        {
@@ -4072,6 +3995,18 @@ userdel	q4::inwork 4646,6875 4767,6717
          'text' => 'Freundschaftsinsel: nur zwischen 7 Uhr und Einbruch der Dunkelheit offen',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '#: XXX vor Ort prüfen!
+#: osm_watch: way id="454003207" version="1"
+userdel	q4::inwork 5230,10919 5215,10711
+',
+         'from' => 1479769200,
+         'id' => 2843,
+         'source_id' => 'LMS-BR_r_LMS-BR_83962',
+         'text' => 'Fasanenstr.: Baustelle zwischen Kantstr. und Kurfürstendamm, Fahrbahn gesperrt, vom 23.11.2016 bis 31.12.2016',
+         'type' => 'handicap',
+         'until' => 1483225200
        }
      
 );

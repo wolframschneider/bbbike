@@ -126,9 +126,6 @@ install_perl_dependencies() {
 	# so make sure to install Tk early. See
 	# https://rt.cpan.org/Ticket/Display.html?id=102434
 	cpanm --quiet --notest Tk
-	# XXX DBD-mysql-4.034 fails to specify DBI::DBD as a prereq
-	# https://rt.cpan.org/Ticket/Display.html?id=115167
-	cpanm --quiet --notest DBI::DBD
 	# Upgrade CGI.pm to avoid "CGI will be removed from the Perl core distribution" warnings
 	case "$PERLBREW_PERL" in
 	    5.20*)
@@ -139,14 +136,16 @@ install_perl_dependencies() {
 	then
 	    # install cpm; and install also https support for LWP because of
 	    # https://github.com/miyagawa/cpanminus/issues/519
-	    cpanm --quiet --notest App::cpm LWP::Protocol::https
+	    #
+	    # 0.293 needed for
+	    # * better diagnostics
+	    # * https://github.com/skaji/cpm/issues/42 (optional core modules)
+	    cpanm --quiet --notest 'App::cpm~>=0.293' LWP::Protocol::https
 	    perl Makefile.PL
 	    mymeta-cpanfile > cpanfile~ && mv cpanfile~ cpanfile
-	    # problem with optional core modules: https://github.com/skaji/cpm/issues/42
-	    cpm install -g -v DB_File
 	    # implement suggestion for more diagnostics in case of failures
 	    # https://github.com/skaji/cpm/issues/51#issuecomment-261754382
-	    if ! cpm install -g -v; then cat `ls -t $HOME/.perl-cpm/build.* | head -1`; false; fi
+	    if ! cpm install -g -v; then cat ~/.perl-cpm/build.log; false; fi
 	else
 	    cpanm --quiet --installdeps --notest .
 	fi

@@ -583,6 +583,7 @@ Bruchwitzstr./Mühlenstr.	Zs 7029,3286
 Mühlenstr./Bruchwitzstr.	Zs 7044,3292
 Thomasstr./Selkestr.	Zs 12674,7492
 Thaerstr./Erich-Nehlhans-Str.	Zs 13992,13258
+Thaerstr./Hausburgstr.	Zs 13907,13044
 Finkenkruger Weg/Torweg	Zs -7420,14557
 Messegände/CityCube Berlin	Zs 1479,10378
 Olbersstr./Jungfernheide	Zs 3287,13627
@@ -599,3 +600,8 @@ Oberhofer Weg/Oberhofer Platz	Zs 5403,2118
 Dorfstr. (Falkenberg)	Zs 19738,18233
 Bhf. Wuhletal	Zs 21970,12153
 Jean-Jaurés-Straße/Nimrodstraße	Zs 4590,22096
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.501190.php
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2016/pressemitteilung.515161.php (Fertigstellung)
+#: by: osm
+Barnetstr./Nuthestr.	Zs 9869,-841
+Münzstr./Rochstr.	Zs 10622,13215

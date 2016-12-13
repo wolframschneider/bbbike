@@ -23518,17 +23518,11 @@ userdel	q3::inwork 4638,10162 4623,10066 4609,9949
 EOF
      },
      { from  => $isodate2epoch->("2016-08-21 00:00:00"), # 1412021931, # 2014-09-29 22:18
-       until => undef, # $isodate2epoch->("2016-10-07 18:00:00"), # 1427482278, # $isodate2epoch->("2015-03-28 23:59:59"), # 1424473200, # 2015-02-21 00:00
+       until => 1481400382, # undef, # $isodate2epoch->("2016-10-07 18:00:00"), # 1427482278, # $isodate2epoch->("2015-03-28 23:59:59"), # 1424473200, # 2015-02-21 00:00
        text  => 'Invalidenfriedhof - Invalidenstr.: Weg wegen Bauarbeiten bis November 2016 gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2016/pressemitteilung.510363.php
-#: XXX hier wird asphaltiert
-#: XXX ursprüngliches Enddatum wurde nicht eingehalten
-#: osm_watch: way id="33912929" version="12"
-#: last_checked: 2016-11-22
-#: check_frequency: 14d
-#: priority: #A
+# REMOVED --- #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2016/pressemitteilung.510363.php --- #: XXX hier wird asphaltiert --- #: XXX ursprüngliches Enddatum wurde nicht eingehalten --- #: XXX laut osm wieder offen --- aber weiterhin smoothness=intermediate --- #: osm_watch: way id="33912929" version="13" --- #: last_checked: 2016-11-22 --- #: check_frequency: 14d --- #: priority: #A
 userdel	2::inwork 8101,13901 8248,13659 8332,13548
 EOF
      },
@@ -23592,7 +23586,7 @@ EOF
      },
      { from  => undef,
        until => undef,
-       text  => 'Mergenthalerring/Dieselstr.: Tor kann vormittags, abends und nachts versperrt sein',
+       text  => 'Mergenthalerring/Dieselstr.: Tor kann versperrt sein',
        recurring => 1,
        data  => <<EOF,
 #: note: am Di, den 2015-11-17 gegen 18:30: geschlossen
@@ -23601,6 +23595,7 @@ EOF
 #: note: am Mo, den 2016-04-11 gegen 18:20: geschlossen
 #: note: am So, den 2016-06-12 gegen 12:30: offen
 #: note: am Mo, den 2016-10-10 gegen 17:50: offen
+#: note: am Sa, den 2016-12-10 gegen 13:00: geschlossen
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
 EOF
@@ -24338,12 +24333,12 @@ EOF
 	q4; 15205,11080 15102,11120 15021,11152 14988,11130
 EOF
      },
-     { from  => $isodate2epoch->("2016-06-27 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2016-06-30 23:59:59"),
+     { from  => $isodate2epoch->("2017-01-16 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2017-01-19 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1],
                        ['yearly', days => 27, months => 6]],
-       text  => 'Schöneberger Str. und Luckenwalder Str.: Sperrungen wegen der Fashion Week, 28.06.2016-30.06.2016',
+       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 17.01.2017-19.01.2017',
        type  => 'handicap',
        source_id => '2147339708',
        data  => <<EOF,
@@ -24558,7 +24553,8 @@ EOF
        data  => <<EOF,
 #: source_id: IM_026411
 #: source_id: 2147339562
-userdel	q4::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
+#: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
+userdel	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
 EOF
      },
      { from  => 1442700000, # 2015-09-20 00:00
@@ -25076,6 +25072,7 @@ EOF
 #: note: offen am 2016-11-11 gegen 18:40 Uhr
 #: note: offen am 2016-11-22 gegen 18:30 Uhr
 #: note: offen am 2016-12-07 gegen 19:00 Uhr
+#: note: offen am 2016-12-12 gegen 09:45 Uhr
 userdel	2::temp 8362,13466 8369,13465 8377,13463
 #: note: verschlossen am 2016-06-16 gegen 9:30 Uhr
 #: note: verschlossen am 2016-07-01 gegen 18:15 Uhr
@@ -25084,6 +25081,7 @@ userdel	2::temp 8362,13466 8369,13465 8377,13463
 #: note: verschlossen am 2016-09-21 gegen 18:15 Uhr
 #: note: verschlossen am 2016-11-22 gegen 18:30 Uhr
 #: note: verschlossen am 2016-12-07 gegen 19:00 Uhr
+#: note: verschlossen am 2016-12-12 gegen 09:45 Uhr
 userdel	2::temp 8371,13399 8363,13402 8356,13404
 EOF
      },
@@ -25552,6 +25550,7 @@ EOF
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.515606.php',
        data  => <<EOF,
 #: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität danach besser sein? vvv
+#: osm_watch way id="136814135" version="14" vvv
 #: last_checked: 2016-09-18 vvv
 #: check_frequency: 60d vvv
 userdel	2::inwork 3332,12742 3396,12741 3358,12718
@@ -25559,6 +25558,7 @@ userdel	2::inwork 3396,12741 3476,12735 3582,12704 3654,12672 3763,12624 3837,12
 userdel	2::inwork 3741,12607 3654,12672
 #: check_frequency ^^^
 #: last_checked ^^^
+#: osm_watch ^^^
 #: XXX ^^^
 EOF
      },
@@ -25632,7 +25632,7 @@ EOF
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_81037',
        data  => <<EOF,
-userdel	q4::inwork 4897,11354 4919,11605
+userdel	q4::inwork 4897,11354 4903,11580 4922,11600
 EOF
      },
      { from  => 1477602762, # 2016-10-27 23:12
@@ -25680,6 +25680,17 @@ EOF
        source_id => 'http://www.potsdam.de/content/freundschaftsinsel-2',
        data  => <<EOF,
 	2::night -12544,-1799 -12396,-1681 -12253,-1589 -12260,-1503 -12256,-1456
+EOF
+     },
+     { from  => 1479769200, # 2016-11-22 00:00
+       until => 1483225200, # 2017-01-01 00:00
+       text  => 'Fasanenstr.: Baustelle zwischen Kantstr. und Kurfürstendamm, Fahrbahn gesperrt, vom 23.11.2016 bis 31.12.2016',
+       type  => 'handicap',
+       source_id => 'LMS-BR_r_LMS-BR_83962',
+       data  => <<EOF,
+#: XXX vor Ort prüfen!
+#: osm_watch: way id="454003207" version="1"
+userdel	q4::inwork 5230,10919 5215,10711
 EOF
      },
     );
