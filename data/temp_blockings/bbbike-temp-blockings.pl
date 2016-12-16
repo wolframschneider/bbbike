@@ -16393,7 +16393,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_014250',
        data  => <<EOF,
-userdel	2::temp 9388,10393 9250,10563
+userdel	2::temp 9388,10393 9353,10421 9249,10562
 EOF
      },
      { from  => 1253965870, # 2009-09-26 13:51
@@ -24546,14 +24546,16 @@ EOF
 EOF
      },
      { from  => 1443650400, # 2015-10-01 00:00
-       until => 1483225199, # 2016-12-31 23:59
-       text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Klosterbuschweg und Finkenkruger Weg, stadteinwärts gesperrt, voraussichtlich ab Oktober 2015 bis Ende 2016',
+       until => undef, # 1483225199, # 2016-12-31 23:59
+       text  => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Klosterbuschweg und Finkenkruger Weg, stadteinwärts gesperrt, Ende unbekannt',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.367070.php',
        data  => <<EOF,
+#: next_check_id: SEEGEFELDERWEG-2016
 #: source_id: IM_026411
 #: source_id: 2147339562
 #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
+#: next_check: 2017-04-01
 userdel	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
 EOF
      },
@@ -25491,7 +25493,7 @@ EOF
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
 #: last_checked: 2016-12-05 vvv
-#: check_frequency: 14d vvv
+#: check_frequency: 21d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
 #	2::inwork 11032,12439 11059,12450

@@ -108,6 +108,18 @@ sub get_city {
 
     print STDERR "Extracting data to $data_osm_directory...\n" if $debug;
     if (eval { require Archive::Tar; Archive::Tar->has_bzip2_support }) {
+	# Workaround for pbzip2-compressed tarballs, see
+	# https://rt.cpan.org/Ticket/Display.html?id=119262
+	no warnings 'redefine';
+	local *Archive::Tar::_get_handle = sub {
+	    my($self, $file) = @_;
+	    no warnings 'once';
+	    my $fh = IO::Uncompress::Bunzip2->new( $file, MultiStream => 1 ) ||
+		$self->_error( qq[Could not read '$file': ] .
+			       $IO::Uncompress::Bunzip2::Bunzip2Error
+			     );
+	    $fh;
+	};
 	my $success = Archive::Tar->extract_archive($tmpfile);
 	# Can't check just for $success, see
 	# https://rt.cpan.org/Ticket/Display.html?id=118850
@@ -126,21 +138,3 @@ sub get_city {
 1;
 
 __END__
-
-=for org TODO
-
-* Download location
-  Where exactly to download? Maybe: if bbbike is uninstalled, then
-  under .../bbbike/data-osm. If bbbike is installed, then in a user
-  directory, e.g. ~/.bbbike/data-osm.
-  -> need a function which determines the install type.
-     Does something like this exist already?
-* tar bzip2 under Windows
-  Probably done with a module. Is it already in Strawberry?
-  -> Archive::Tar & ...::Bzip is available, just try it out
-* LWP UserAgent operation: mask as a BBBike UA
-  Find my standard UA. Don't forget version, git id etc.
-  (BBBikeHeavy::get_user_agent is problematic, because it expects to be run within bbbike, see above)
-* Updating
-  Do I need to care about things? Or just overwrite existing stuff?
-

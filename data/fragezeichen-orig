@@ -98,7 +98,7 @@ Möckernstr.: werden hier vielleicht Radspuren Richtung Süden markiert oder Radwe
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6183 (Baubeginn erst 2015)
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2016/pressemitteilung.521884.php (Baubeginn, Fertigstellung der Gesamtmaßnahme August 2018)
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2016/pressemitteilung.532371.php (Fertigstellung des Teilabschnittes am 17.01.2017)
-#: last_checked: 2016-12-09 vvv
+#: last_checked: 2016-12-14 vvv
 #: next_check: 2017-01-17 vvv
 Skalitzer/Gitschiner Str.: Markierung von Radspuren	?::projected 11335,10375 11316,10372 11130,10326 11117,10326 10975,10334 10871,10322 10708,10312 10605,10312 10363,10303 10122,10294 9948,10280
 Skalitzer/Gitschiner Str.: Markierung von Radspuren	?::projected; 9865,10227 9948,10280 9873,10285
@@ -432,8 +432,8 @@ Mellowpark: geplanter Uferweg	?::projected 21569,5730 21463,5640 21355,5679 2124
 Holzmarktstr.: Neubau, Komplettierung der Radstreifen	? 11347,12223 11388,12202 11513,12138 11619,12084 11764,12001
 # 
 #: by: http://www.aktion-kms.de/files/2015-07-13_flyer_isarneckar_final.pdf
-#: last_checked: 2016-11-07
-#: check_frequency: 45d
+#: last_checked: 2016-12-15
+#: check_frequency: 30d
 Neckarstr./Isarstr.: Umgestaltung, danach verkehrsberuhigter Bereich; ändert sich am Fahrbahnbelag etwas?	?::inwork 12368,8356 12384,8284 12639,8344
 # 
 #: next_check: 2017-01-01
@@ -1021,7 +1021,7 @@ Friedelstr.: ein asphaltierter Fahrstreifen wird angelegt	?::projected 12085,977
 #: by: http://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036855186812/855186812/00055405/05-Anlagen/03/1367_XIX_Fahrradstrasse_Buerknerstrasse.pdf
 #: by: http://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5018
 #: osm_watch: way id="4068029" version="13"
-#: last_checked: 2016-12-02
+#: last_checked: 2016-12-15
 #: check_frequency: 60d
 Bürknerstr.: wird hier eine Fahrradstraße eingerichtet?	?::projected 11673,9720 11754,9735 11897,9754 12085,9778
 # 
@@ -1247,7 +1247,7 @@ Wolzenseeweg: Qualität? Straße bereits fertiggestellt? Wird es eine Überquerungs
 Mauerweg (Potsdam-Sacrow): evtl. existiert hier bereits ein geschotterter Radweg parallel zur Straße	? -9064,3667 -9156,3451 -9399,3297 -9530,3165 -9999,2615 -10105,2458
 # 
 #: next_check_id: OBERWALL-2014 vvv
-#: last_checked: 2016-12-07 vvv
+#: last_checked: 2016-12-14 vvv
 #: check_frequency: 90d vvv
 #: by: http://www.berliner-zeitung.de/berlin/baumangel-der-boden-hat-nachgegeben,10809148,21701554.html (Fertigestellung Ende 2014)
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2015 (Grundstücksnummerierungen)
@@ -1351,7 +1351,7 @@ Radweg von Penkow nach Malchow: beidseitig, asphaltiert, 2,25m breit, 2008-08-01
 #: XXX -> strassen_bab-orig, wenn fertig
 #: XXX weitere Änderungen: Matthesstr. wird aufgehoben, Teile des Mergenthalerrings wahrscheinlich auch
 #: next_check: 2022-01-01
-BAB100	?::inwork 14185,9509 14147,9383 14160,9132 14307,8805 14270,8379 14421,8032 14451,7774 14356,7365 14219,6838 14180,6755 14106,6663
+BAB100	?::inwork 14185,9509 14147,9383 14160,9132 14270,8885 14307,8729 14270,8379 14421,8032 14451,7774 14435,7624 14346,7377 14219,6838 14180,6755 14106,6663
 # 
 #: last_checked: 2014-05-10
 #: check_frequency: 100d
@@ -1405,9 +1405,6 @@ geplanter Uferweg	?::projected 8292,13530 8171,13703 8128,13767 8044,13929 7989,
 #: XXX vermutlich diese Brücke wird "Golda-Meir-Steg" heißen (Berlin.coords.data-Eintrag fehlt)
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/28re.pdf/file?y=2016
 Otto-Weidt-Platz: Fußgängerbereich zur Heidestraße, Qualität?	?::projected 7912,14160 7767,14077
-#: osm_watch: way id="237716438" version="6"
-#: XXX hinterer Bereich wird verkehrsberuhigt sein
-Clara-von-Simson-Str. (Ziffer 4); Planstraßen 1.1, 1.2, 1.3: asphaltiert; wird der Straßenname stimmen?	?::inwork 7651,14260 7762,14319 7802,14250 7697,14187
 Planstraße 1.3 - Uferweg: Fußgängerbereich	?::projected 7802,14250 7843,14275
 #: XXX wird es auch eine Brücke zum Invalidenfriedhof geben?
 #: osm_watch: way id="237716430" version="6"
@@ -1611,7 +1608,7 @@ Otto-Dibelius-Str.: dieser Abschnitt wird vermutlich für den Kfz-Verkehr gesperr
 Lutterbacher Str.: Straße ist offen, prüfen!	? 2094,3231 1993,3170 2072,3034 2163,3092
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/39re.pdf/file?y=2016
-#: last_checked: 2016-11-15
+#: last_checked: 2016-12-14
 #: check_frequency: 120d
 Mehringplatz: Widmung von Straßenland - ändert sich hier etwas?	? 9587,10421 9592,10263
 # 
@@ -1664,7 +1661,7 @@ Elsbeerenweg.: Qualität? Genaue Lage? Existiert die Straße schon?	? -6378,5877 -
 # 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2016/beschluss_929_16.pdf
 #: osm_watch: way id="295627704" version="4"
-#: last_checked: 2016-11-29
+#: last_checked: 2016-12-13
 #: check_frequency: 60d
 Liebigstr.: Einrichtung einer Spielstraße, wo genau?	? 14229,12311 14166,12323 14147,12344 14091,12355 14074,12343 13927,12370 13905,12374 13991,12522 14058,12709
 # 
@@ -1673,7 +1670,7 @@ Liebigstr.: Einrichtung einer Spielstraße, wo genau?	? 14229,12311 14166,12323 1
 #: XXX Bauarbeiten zwischen Thaerstr. und Hübnerstr.
 #: XXX NEW	Eldenaer Str. (Friedrichshain) In beiden Richtungen Kreuzung Proskauer Str. (Berlin)  Gültig ab: 24.11.2016 06:15  Baustelle, Vollsperrung (bis vsl. Ende 11/16)	2147340785
 #: XXX -> ist die Vollsperrung für Radfahrer relevant? -> am Abend schon wieder aufgehoben?
-#: last_checked: 2016-12-09 vvv
+#: last_checked: 2016-12-13 vvv
 #: check_frequency: 3d
 Eldenaer Str.: in Richtung Westen schon markierte Radspuren, aber zugeparkt, in Richtung Osten in Arbeit	?::inwork 14355,12752 14096,12827
 #: check_frequency: 7d
@@ -1943,12 +1940,14 @@ Schulzendorfer Str.: Radverkehrsanlangen? (vermutlich asphaltiert, vermutlich nu
 # REMOVED (hier nicht, oben) --- #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.367062.php --- #: by: http://www.gruen-berlin.de/in-realisation/havelradweg/?L=.htewrap&PHPSESSID=bc0eb92d1c0f3ab3c89fe427b9f45c1a --- #: osm_watch: way id="25332831" version="2" --- #: osm_watch: way id="60219319" version="4" --- #: osm_watch: way id="117818805" version="4" --- #: osm_watch: way id="24613443" version="8" --- #: next_check: 2015-12-15 --- Haveluferweg: bessere Qualität nach den Bauarbeiten?	?::inwork -4546,9381 -4506,9395 -4460,9456 -4442,9625 -4536,9800 -4585,9836 -4619,9867 -4631,10046 -4625,10139 -4645,10192 -4592,10184 -4510,10208 -4445,10379 -4387,10496 -4323,10570 -4230,10679 -4254,10810 -4251,11112
 # REMOVED --- #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.367062.php --- #: by: http://www.gruen-berlin.de/in-realisation/havelradweg/?L=.htewrap&PHPSESSID=bc0eb92d1c0f3ab3c89fe427b9f45c1a --- #: next_check: 2015-12-15 --- Schifffahrtsufer an der Havel: bessere Qualität nach den Bauarbeiten?	?::inwork -3337,13111 -3230,12938 -3228,12920 -3208,12889 -3211,12868 -3211,12784 -3170,12603 --- Schifffahrtsufer an der Havel: bessere Qualität nach den Bauarbeiten?	?::inwork -3221,12925 -3199,12888 -3205,12816 -3180,12719 -3142,12615
 # 
+#: next_check_id: SEEGEFELDERWEG-2016
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.367070.php
+#: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2016/pressemitteilung.541819.php
 #: osm_watch: way id="5000155" version="14"
 #: osm_watch: way id="313302635" version="4"
 #: osm_watch: way id="57401090" version="8"
-#: next_check: 2016-12-31
-Seegefelder Weg: Bau von Radspuren	?::projected -6507,15007 -6861,15129
+#: next_check: 2017-04-01
+Seegefelder Weg: Bau von Radspuren	?::inwork -6507,15007 -6861,15129
 # 
 # REMOVED --- Chausseestr.: wie weit geht hier noch die Radspur?	? 8442,14456 8527,14352
 # REMOVED --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/36re.pdf/file?y=2015 --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/46re.pdf/file?y=2015 (Grundstücksnummerierungen) --- #: note: Privatstraße, aber ausdrücklich "öffentlich zugänglich" --- #: XXX fehlt in Berlin.coords.data, PLZ=10829 --- #: XXX Wirksamkeit der Benennung: 2015-10-10 --- #: last_checked: 2016-03-26 (sieht noch privat aus) --- EUREF-Campus: Innenfläche wird benannt; genaue Wegführung, Qualität?	? 7158,8208 7149,8249 7316,8509
@@ -2489,7 +2488,7 @@ Buschkrugallee -> Braunschweiger Ufer: Bordstein	? 13566,5792 13483,5973 13077,5
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7482
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/verbindliche-bauleitplanung/i-14a_bebauungsplan.pdf
 #: XXX parallel zur Stallschreiberstr. wird im Block ein öffentlich zugänglicher Geh/Radweg gebaut
-#: last_checked: 2016-12-12
+#: last_checked: 2016-12-14
 #: check_frequency: 90d
 Stallschreiberstr./Kolonnenweg: Straßenbauarbeiten geplant	?::projected 10489,11405 10620,11244 10678,11172
 # REMOVED (->handicap) --- Stallschreiberstr./Kolonnenweg: Straßenbauarbeiten geplant	?::projected 10678,11172 10818,11269
@@ -4219,7 +4218,7 @@ Altdöbern - Calau: Qualität?	? 55259,-83091 55388,-83077 55768,-82862 54521,-794
 # 
 #: XXX fehlen alle in Berlin.coords.data, PLZ=12623 vvv
 #: last_checked: 2016-06-04 vvv
-#: check_frequency: 180d vvv
+#: check_frequency: 270d vvv
 #: osm_watch: way id="338546084" version="6"
 #: by: http://www.cdu-fraktion-tk.de/image/inhalte/file/Amtsblatt_Nr__21_vom_28__Mai_2010.pdf
 #: by: https://www.google.de/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&ved=0ahUKEwjn5uqLgY_NAhVHsBQKHcfIAEEQFggvMAE&url=https%3A%2F%2Fwww.berlin.de%2Fba-marzahn-hellersdorf%2Fpolitik-und-verwaltung%2Faemter%2Fstadtentwicklungsamt%2Fstadtplanung%2Fmdb-bamarzahnhellersdorf-stadtplanung-festgesetb-xxiii_15b_1_abzeichnung.pdf&usg=AFQjCNHD5t6sh5hLTtunUdcS4SG222H6xw&cad=rja
