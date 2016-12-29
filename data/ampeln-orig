@@ -764,7 +764,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10446,6414
 	X 10505,6417
 	X 11142,6535
-	X 6190,8800
+	X 6181,8801
 	X 5655,8828
 	X 4462,9166
 	X 3698,9624
@@ -2599,11 +2599,11 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
 #: XXX laut fritz bis 05.05.2016
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
-#: last_checked: 2016-11-30
+#: last_checked: 2016-12-23
 	F::inwork 9984,12426
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2016-12-12 vvv
+#: last_checked: 2016-12-23 vvv
 #: check_frequency: 30d vvv
 	X::inwork 9121,12514
 	X::inwork 9286,12886
@@ -2750,7 +2750,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 # 
 #: next_check_id: SONNENALLEE-2014 vvv
 #: osm_watch: way id="260062339" version="8"
-#: last_checked: 2016-12-04 vvv
+#: last_checked: 2016-12-27 vvv
 #: check_frequency: 90d vvv
 #: note: Radfahrer in Richtung Südosten müssen die Seite wechseln, hier Anforderungsampel
 	X::inwork 14174,7505
@@ -2815,19 +2815,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX_prog ^^^
 #: note ^^^
 # 
-#: next_check_id: FISCHERINSEL-2015 vvv
-#: source_id: IM_024012 vvv
-#: source_id: 2147339543 vvv
-#: last_checked: 2016-10-28 vvv
-#: next_check: 2016-12-22 vvv
-	F::inwork 10703,11837
-	F::inwork 10656,11887
-#: next_check ^^^
-#: last_checked ^^^
-#: source_id ^^^
-#: source_id ^^^
-#: next_check_id ^^^
-# 
+# REMOVED --- #: next_check_id: FISCHERINSEL-2015 vvv --- #: source_id: IM_024012 vvv --- #: source_id: 2147339543 vvv --- #: last_checked: 2016-12-16 vvv --- #: next_check: 2016-12-22 vvv ---	F::inwork ---	F::inwork
 # REMOVED --- #: next_check_id: AMNORDHAFEN-2015 --- #: source_id: 2147339542 --- #: last_checked: 2015-11-27 ---	F::inwork 7741,14560
 #: note: Anforderungsampel
 	F 7292,17316
@@ -2844,18 +2832,12 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X 9151,13941
 #: note: Anforderungsampel
 	F 10462,3765
-#: XXX Baustellenampel
-#: XXX zurzeit wird hier wechselseitig gefahren, also insgesamt zwei Ampeln
-#: XXX hier wird eine Fußgängerampel gebaut
-#: source_id: 2147340713
-#: osm_watch: note 814294 1
-#: last_checked: 2016-12-12
-#: next_check: 2016-12-16
-	F::inwork 8853,13539
+#: note: Anforderungsampel
+	F 8853,13539
 #: next_check_id: HEERSTR-2016
 #: XXX Baustellenampel; eigentlich sind hier zwei Ampeln: einmal für die Straße runter zur Havel, und dann etwas weiter für die Radfahrer zum Wechseln auf die andere Straßenseite
 #: last_checked: 2016-10-08
-#: next_check: 2016-12-31
+#: next_check: 2017-06-01
 	X::inwork -3069,11487
 #: note: Zufahrt zu Obi
 	X 24426,11265
@@ -3048,7 +3030,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	X -12653,-1723
 # REMOVED --- #: XXX_prog: wechselseitige LSA-Regelung, ca. 100m Länge, größerer Zeitverlust? --- #: XXX zurzeit auch nur in Richtung Südosten Zeitverlust --- #: source_id: IM_023940 --- #: last_checked: 2015-08-10 --- #: check_frequency: 14d ---	X::inwork 14018,9118
 #: next_check_id: KIEFHOLZ-2015 vvv
-#: last_checked: 2016-12-10 vvv
+#: last_checked: 2016-12-27 vvv
 #: check_frequency: 90d vvv
 	X::inwork 14151,8967
 	X::inwork 14363,8738
@@ -3182,7 +3164,7 @@ geschlossen bei Bedarf (?)	Zbr 27657,-11741
 	B 13412,-20513
 	B 13528,-21855
 	B 16379,-29446
-	B 16630,-30953
+# REMOVED ---	B 16827,-30948
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?)	B 40248,14503
 Bahn kommt ca. halbstündlich	B 43081,77252
 Bahn kommt ca. halbstündlich	B 41388,91325
@@ -3528,7 +3510,7 @@ Doppelte Bettelampel (beim Überqueren der Pudagla-Straße)	X 52868,176203
 	X 18423,-843
 #: next_check_id: BER-20XX vvv
 #: XXX: Ampel am 2012-05-06 noch ausgeschaltet, wird wahrscheinlich mit BER in Betrieb gehen vvv
-#: next_check: 2017-01-01 vvv
+#: next_check: 2017-11-01 vvv
 	X0 19909,-2863
 	F0 18861,-3921
 #: XXX ^^^

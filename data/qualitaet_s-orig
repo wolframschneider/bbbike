@@ -153,7 +153,7 @@ Kopernikusstr.: mäßiges Kopfsteinpflaster	Q2 13467,11778 13651,11731
 Torellstr.: mäßiges Kopfsteinpflaster	Q2 13295,11792 13467,11778
 #: next_check_id: RUEDERSDORFER-2016
 #: XXX Bauarbeiten, danach vielleicht teilweise bessere Qualität?
-#: last_checked: 2016-12-14
+#: last_checked: 2016-12-22
 #: check_frequency: 60d
 Rüdersdorfer Str.: Asphalt mit Schäden	Q1- 13295,11792 13173,11788 13066,11854
 Kaskelstr.: relative glattes Kopfsteinpflaster	Q1- 15359,11115 15434,11086 15509,11058 15586,11030 15756,10966
@@ -241,7 +241,7 @@ Lohmühlenbrücke: Asphalt	Q0 12871,9356 12897,9365
 #: XXX wird die Kiefholzstr. asphaltiert?
 #: XXX Baumaßnahme: 9.9 (Realisierung nach 2011)
 #: osm_watch: way id="4686083" version="19"
-#: last_checked: 2016-11-21
+#: last_checked: 2016-12-20
 #: check_frequency: 90d
 Kiefholzstr.: Kopfsteinpflaster	Q2 13602,9581 13455,9711 13251,9829
 Hirschberger Str.: Kopfsteinpflaster	Q2+ 14988,11130 15021,11152 15102,11120
@@ -271,13 +271,15 @@ Alt-Lübars: schlechtes Kopfsteinpflaster	Q3 7111,23873 7051,23924 6879,23816
 Alt-Tegel: Kopfsteinpflaster	Q2- 1907,20265 1753,20191 1668,20156 1529,20131
 Alt-Tegel: Kopfsteinpflaster	Q2- 1543,20060 1630,20097 1668,20156
 #: next_check_id: MARIANNEN-2016
-#: XXX wird hier vielleicht asphaltiert werden?
+#: XXX wird hier vielleicht auch asphaltiert werden?
 #: XXX Baumaßnahme 2.22 (Realisierung nach 2011)
 #: XXX ggfs. Bauarbeiten bis Mitte September 2016 (laut rbbtext)
 #: source_id: INKO_2147340291_COPY_1
 #: source_id: 2147340291
-#: last_checked: 2016-12-14
-Mariannenstr: mäßiges bis gutes Kopfsteinpflaster, 25 km/h möglich	Q1- 11512,10105 11616,10288 11671,10402
+#: last_checked: 2016-12-20
+#: check_frequency: 60d
+Mariannenstr: mäßiges bis gutes Kopfsteinpflaster, 25 km/h möglich	Q1- 11512,10105 11616,10288
+Mariannenstr: Asphalt	Q0 11616,10288 11671,10402
 Hochstr.: Kopfsteinpflaster	Q2 9053,16029 8923,15850
 Böttgerstr.: Asphalt	Q0 9123,15963 8923,15850
 Böttgerstr.: Kopfsteinpflaster	Q2 8923,15850 8720,15914 8655,15979 8582,16052
@@ -589,7 +591,7 @@ Brixener Str.: Kopfsteinpflaster	Q2 10507,17400 10502,17419 10466,17464
 Helmerdingstr.: Kopfsteinpflaster	Q2 14442,11101 14468,11203
 # REMOVED (Asphalt ist kaum von Vorteil hier) --- Helmerdingstr.: Asphalt/Kopfsteinpflaster	Q2+; 14468,11203 14442,11101
 Haasestr.: Kopfsteinpflaster	Q2 14328,11320 14286,11186
-Döringstr.: Beton	Q1 14400,11261 14357,11148
+Döringstr.: Verbundsteinpflaster	Q1 14400,11261 14357,11148
 Calvinstr.: Kopfsteinpflaster	Q2 6776,12668 6802,12797 6860,13093
 Alt-Pichelsdorf: schlechtes Kopfsteinpflaster	Q3+ -3688,11688 -3657,11631 -3606,11532 -3445,11505
 Alt-Pichelsdorf: Kopfsteinpflaster	Q2 -3445,11505 -3405,11498
@@ -1183,7 +1185,7 @@ Maxstr.: mäßiges Kopfsteinpflaster	Q2 7622,15946 7543,16016 7474,16086
 Genter Str.: Asphalt	Q0 7270,15307 7138,15437 7012,15571
 Genter Str.: mäßiges Kopfsteinpflaster	Q2 7012,15571 6919,15666 6802,15790 6661,15921
 Am Walde: Asphalt	Q0 17771,7880 17678,7850 17590,7828 17527,7812
-Prager Platz: gutes Kopfsteinpflaster	Q1 5661,9630 5657,9600 5630,9592 5602,9606 5595,9626
+Prager Platz: gutes Kopfsteinpflaster	Q1 5648,9642 5642,9613 5618,9607 5598,9612 5578,9629
 Normannenstr.: Kopfsteinpflaster	Q2 16159,12301 16227,12280 16276,12273
 Rüdigerstr. (Lichtenberg): Asphalt	Q0 17466,12241 17314,12265 17218,12281 17184,12288 17122,12295 17056,12304 17020,12309 16918,12325 16820,12339
 Barbarossastr.: Kopfsteinpflaster	Q2 7128,9512 7007,9522
@@ -2196,7 +2198,7 @@ Straße 8: Asphalt	Q0 19227,20270 19261,20344 19354,20607
 (Am Tierheim): glatte wassergebundene Decke	Q1+ 19579,18933 19974,18799
 (Dorfstr. - Köthener Str.): Parkweg	Q1 19875,18182 19968,18144 20542,17911 20746,17848 20804,17848
 (Hohenschönhauser Str. - Eichenallee): wassergebundene Decke	Q1 19845,18120 19868,18107 19968,18144
-Innsbrucker Str.: Verbundsteinpflaster	Q1 6244,8597 6263,8456
+Innsbrucker Str.: Verbundsteinpflaster	Q1 6230,8602 6263,8456
 Im Dol: Fahrbahn gutes Kopfsteinpflaster, Radwege	Q1 3216,6393 3147,6384 3077,6375
 Im Dol: Asphalt	Q0 1757,5976 1811,5973 1912,6024 1946,6042 2191,6217 2204,6226 2367,6336 2499,6428 2562,6473 2611,6495 2659,6499 2742,6488 2934,6385 3077,6375
 #: note: MichaelM meint "Beton"
@@ -10239,7 +10241,8 @@ Am Hamburger Bahnhof: Kopfsteinpflaster	Q2 8189,13468 8183,13482 8141,13580 8120
 (Vorfahrt Petruskirche): Kopfsteinpflaster	Q2 5393,2053 5452,2077
 #: next_check_id: ANDERNEUMARK-2016
 #: XXX wann und wie wird die Straße befestigt?
-#: osm_watch: way id="438655143" version="1"
+#: osm_watch: way id="438655143" version="2"
+#: XXX laut osm: surface=sett
 #: last_checked: 2016-09-30
 #: check_frequency: 60d
 An der Neumark: unbefestigte Baustraße	Q2 11283,3774 11300,3709 11357,3720 11378,3626 11332,3615
@@ -12258,10 +12261,10 @@ Schwarzspechtweg: Beton	Q1 -2173,19357 -2231,19360 -2250,19361
 #: corrected_by: srt (Asphalt -> Verbundsteinpflaster)
 Schwarzspechtweg: Verbundsteinpflaster	Q1 -2173,19357 -2184,19143
 #: confirmed_by: srt
-Rallenweg: asphaltiert	Q0 -2360,20965 -1978,20928
+Rallenweg: asphaltiert	Q0 -2360,20965 -2043,20968
 #: note: die ADFC-Karte meint hier "mäßig geeignet"
-Mühlenweg: Waldweg	Q1 -1978,20928 -1843,20925 -1700,20971 -1559,20931 -1040,20962 -843,20940 -750,20878 -329,20685 -64,20583 65,20594 462,20694 601,20709
-Försterweg: Waldweg, etwas holprig	Q2 -1978,20928 -1968,20850 -1400,20615 -1253,20546 -1243,20471 -1050,20281 -871,20225 -842,20200
+Mühlenweg: Waldweg	Q1 -2043,20968 -1895,20953 -1760,20985 -1590,20948 -1082,20996 -889,20979 -750,20878 -329,20685 -64,20583 65,20594 462,20694 601,20709
+Försterweg: Waldweg, etwas holprig	Q2 -2043,20968 -2101,20891 -1811,20818 -1292,20572 -1243,20471 -1050,20281 -871,20225 -842,20200
 #: by: ^^^
 # 
 #: by: hoffmannbeck:
@@ -12828,7 +12831,8 @@ Schlieperstr.: Kopfsteinpflaster	Q2 2224,20007 2435,20032
 #: by: ^^^
 # 
 #: by: Ulfert (030):
-Kulmbacher Str.: Asphalt, leicht schadhafte Stellen	Q0- 5799,9948 5817,10173
+#: confirmed_by: srt
+Kulmbacher Str.: Asphalt, leicht schadhafte Stellen	Q0- 5814,9948 5833,10170
 # 
 #: by: Jannik (Pf.):
 #: confirmed_by: srt
@@ -19428,6 +19432,10 @@ Pfeddersheimer Weg: guter Asphalt	Q0 -2308,2276 -2440,2218 -2603,2162 -2674,2133
 Sabinensteig: mäßiges Kopfsteinpflaster	Q2 16442,15926 16395,16099 16416,16236
 # 
 #: by: S. Pelz:
+#: XXX wird "neu befestigt" (danach vermutlich asphaltiert)
+#: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.540836.php
+#: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/161118_tut_schnitt-aa.pdf
+#: next_check: 2017-05-01
 Tuttlinger Weg: gutes Kopfsteinpflaster	Q1 7143,4350 7100,4341 7046,4354
 # 
 #: by: Andre Grohmann:
@@ -24672,7 +24680,8 @@ Gustav-Heinemann-Brücke: Holzbohlen mit Fugen	Q1 8116,12938 8110,13042
 # REMOVED (hier asphaltiert) --- #: XXX Qualität der wassergebundenen Decke prüfen --- #: by: http://www.berlin.de/ba-mitte/bvv-online/vo020.asp?VOLFDNR=6285
 (Willy-Brandt-Str. - Rahel-Hirsch-Str.): Asphalt	Q0 8120,12756 8124,12840 8116,12938
 # REMOVED (erstmal komplett entfernt; nach den Bauarbeiten wird es vermutlich ganz anders aussehen) --- #: next_check_id: CHARITE-2014 --- #: XXX wie wird die Situation nach den Bauarbeiten aussehen? --- #: by: http://www.charite.de/charite/organisation/baumassnahmen/campus_charite_mitte/ (Dauer: 3 Jahre ab Herbst 2013) --- #: by: http://infocenter.charite.de/ --- #: last_checked: 2015-11-27 --- #: check_frequency: 90d --- (entlang der Baustelle an der Charité): teilweise Schotter	Q2 8833,13440 8836,13396 8835,13376 8818,13365 8808,13377
-(an der Notfallaufnahme Charité): Steinplatten	Q0 8665,13353 8806,13384 8836,13396
+(an der Notfallaufnahme Charité): Asphalt	Q0 8665,13353 8736,13369
+(an der Notfallaufnahme Charité): Steinplatten	Q0 8736,13369 8806,13384 8836,13396
 (an der Notfallaufnahme Charité): Kleinsteinpflaster	Q1 8836,13396 8833,13440
 Platz vor dem Neuen Tor: Kopfsteinpflaster	Q2 8674,13593 8670,13633 8664,13688
 Platz vor dem Neuen Tor: Kopfsteinpflaster	Q2 8670,13633 8633,13629 8594,13625

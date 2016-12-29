@@ -2,15 +2,19 @@
 
 use strict;
 use warnings;
+use FindBin;
+use lib $FindBin::RealBin;
 
 use Getopt::Long;
 use URI ();
 use URI::QueryParam ();
 use Test::More;
 
+use BBBikeTest qw($mapserverstaticurl selenium_diag);
+
 my $doit;
 my $debug;
-my $root_url = "http://localhost/bbbike/mapserver/brb/radroute.html";
+my $root_url = "$mapserverstaticurl/brb/radroute.html";
 # To test on bbbike-pps call with:
 #
 #    perl t/radrouten-selenium.t -doit -rooturl http://bbbike-pps/mapserver/brb/radroute.html
@@ -42,11 +46,7 @@ my $sel = eval {
 			    );
 };
 if (!$sel || $@) {
-    diag <<EOF;
-ERROR: Please remember to start the Selenium server first, e.g.
-java -jar /usr/ports/distfiles/selenium-server-standalone-2.39.0.jar
-
-EOF
+    selenium_diag;
     fail $@;
     exit 1;
 }

@@ -676,7 +676,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 10446,6414
 	X 10505,6417
 	X 11142,6535
-	X 6190,8800
+	X 6181,8801
 	X 5655,8828
 	X 4462,9166
 	X 3698,9624
@@ -2265,8 +2265,6 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F::inwork 17527,7812
 	F::inwork 16909,6628
 	F::inwork 16646,6925
-	F::inwork 10703,11837
-	F::inwork 10656,11887
 	F 7292,17316
 	X 20262,14255
 	X 23810,7946
@@ -2274,7 +2272,7 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 9274,13963
 	X 9151,13941
 	F 10462,3765
-	F::inwork 8853,13539
+	F 8853,13539
 	X::inwork -3069,11487
 	X 24426,11265
 	F::inwork 10038,15418
@@ -2525,7 +2523,6 @@ geschlossen bei Bedarf (?)	Zbr 27657,-11741
 	B 13412,-20513
 	B 13528,-21855
 	B 16379,-29446
-	B 16630,-30953
 S-Bahn alle 20 Minuten, Regionalbahn halbstündlich (?)	B 40248,14503
 Bahn kommt ca. halbstündlich	B 43081,77252
 Bahn kommt ca. halbstündlich	B 41388,91325

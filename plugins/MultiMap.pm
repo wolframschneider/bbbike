@@ -50,12 +50,14 @@ sub register {
 	  callback => sub { showmap_wikimapia(@_) },
 	  callback_3_std => sub { showmap_url_wikimapia(@_) },
 	  ($images{WikiMapia} ? (icon => $images{WikiMapia}) : ()),
+	  order => 8000,
 	};
     $main::info_plugins{__PACKAGE__ . '_OpenStreetMap'} =
 	{ name => 'OpenStreetMap',
 	  callback => sub { showmap_openstreetmap(osmmarker => 0, @_) },
 	  callback_3 => sub { show_openstreetmap_menu(@_) },
 	  ($images{OpenStreetMap} ? (icon => $images{OpenStreetMap}) : ()),
+	  order => 'first',
 	};
     $main::info_plugins{__PACKAGE__ . "_MapCompare"} =
 	{ name => "Map Compare (Google/OSM)",
@@ -90,18 +92,14 @@ sub register {
 	  callback => sub { showmap_geocaching(@_) },
 	  callback_3_std => sub { showmap_url_geocaching(@_) },
 	  ($images{Geocaching} ? (icon => $images{Geocaching}) : ()),
-	};
-    $main::info_plugins{__PACKAGE__ . "_Panoramio"} =
-	{ name => "panoramio.com",
-	  callback => sub { showmap_panoramio(@_) },
-	  callback_3_std => sub { showmap_url_panoramio(@_) },
-	  ($images{Panoramio} ? (icon => $images{Panoramio}) : ()),
+	  order => 8800,
 	};
     $main::info_plugins{__PACKAGE__ . "_YahooDe"} =
 	{ name => "yahoo.de",
 	  callback => sub { showmap_yahoo_de(@_) },
 	  callback_3_std => sub { showmap_url_yahoo_de(@_) },
 	  ($images{YahooDe} ? (icon => $images{YahooDe}) : ()),
+	  order => 8900,
 	};
     $main::info_plugins{__PACKAGE__ . "_Bing_Birdseye"} =
 	{ name => "bing (Bird's eye)",
@@ -118,6 +116,7 @@ sub register {
     $main::info_plugins{__PACKAGE__ . '_AllMaps'} =
 	{ name => 'All Maps',
 	  callback => sub { show_links_to_all_maps(@_) },
+	  order => 9000,
 	};
 }
 
@@ -152,35 +151,34 @@ EOF
     }
 
     if (!defined $images{OpenStreetMap}) {
-	# Fetched http://www.openstreetmap.org/images/mag_map.svg
-	# and converted using
-	#   convert -geometry 16x16 mag_map.svg mag_map_16x16.gif
-	#   mmencode -b /tmp/mag_map_16x16.gif
+	# Created with
+	#   lwp-request http://www.openstreetmap.org/assets/favicon-16x16-b5e4abe84fb615809252921d52099ede3236d1b7112ea86065a8e37e421c610b.png | base64
 	$images{OpenStreetMap} = $main::top->Photo
-	    (-format => 'gif',
+	    (-format => 'png',
 	     -data => <<EOF);
-R0lGODlhEAAQAPcAACs/GzIzMDM1Mjw/OEk+MDZRJThSIj9eJzxDNEdCNEBJOkRkK0lkM01q
-Ok9tOE1vOVFmPlR6NzdMQDpXRTJLVT5ZakhJRkpTQE5XQ1RfR19aRlBRT0xcWl1RVlVZUEtt
-R1ZvRl1hS1lkTVxlTlltSFxpTVhxQll5Ql18RFt7SltoUVxqUW1lUWFvVWJuVWNxV2RyWWZz
-XmZ2XG10XnxyWENfdVhxbG17YG5+Y2R4anF3Ymd/dmKBWXmeV3SQW3eNY3aDa3mGa3qJa3uN
-aXmIbnuObn6HdH6Odn+Sco2EZouHc4aOdIOUdYufd4OVeoyceZ+XdYajbI3HXafeeJGMi5eZ
-iJOjhZCmhJ+hg5qkjZmpiJ+vjZunkJ6pkbKziqWimKOpnKSqnaSrn6ampqysrKezpbGxsbq7
-t7q8uMaqhcqpkM28kM+9ktK8kOOoiOO4jqDBgbPbjq3Cla/Blq3DnbjEnbXLnbvMnbjRnrfP
-obzPorPDqcjBl8HNndbCldTFmObEl+LNn9XKptfOqMrUoM/Uo8DZo8HZpsfap8PUq8HZqcPc
-rdTXpdDYp9jQqtDdqsHbsMLbssbfsd7esObQoOnTo+ferMPjoMjgrMzkr9Hhrczyp87xq8ni
-s83lsMvltM/osc7otNPmsdDptNDptd/pst7stdjqvdf0td7wudz2vd75v+Xir+TmsePntOHs
-tuLwuc7OztLS0tTU09fX19bxwNvywtr2xN36wd/7weH7wevq6+zs7O/v8PHw8f38/QAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAAIf4yIENyZWF0ZWQgd2l0aCBJbmtz
-Y2FwZSAoaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvKSAALAAAAAAQABAAAAj+AHnR6vWr4C9e
-smTtikVmjJmERrp8OYOmjJUoQTwIsLAhwABeXUz5sTMnzhQ4LjIoWEFixIVfYERVckVqkxQG
-GW7gOOGjyZNfZ/K0YhUKVQ8DDyCAePDiCJNfaOb8eXTIkAkACwoUWNBAxo1fYhhZwoUJT4qs
-FCZEQOFChi8upSi9ynSJB4IPNSqkQDGEyKwtuGABIsTpCocdOWwU+YHkiCwtngqt6aNpjgoM
-IlS0uAGECK8stlK1SaOmChARCETICNLiBUxJumDpodLBoogEGlSEIACVTq1bkfYoWeIEio4Z
-LGgkgTrnkydFi/hUqdNmkR4veDKB9aRLFaJGgmwcZQp0ShcmUqt8dcGlSxejN24GJRpUSpcn
-VboCAgA7
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+AAAA3QAAAN0BcFOiBwAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAddEVY
+dFRpdGxlAE9wZW5TdHJlZXRNYXAgbG9nbyAyMDExsFqqrQAAABN0RVh0QXV0aG9yAEtlbiBWZXJt
+ZXR0ZXA2QEoAAAA5dEVYdERlc2NyaXB0aW9uAFJlcGxhY2VtZW50IGxvZ28gZm9yIE9wZW5TdHJl
+ZXRNYXAgRm91bmRhdGlvbrV+75QAAAAYdEVYdENyZWF0aW9uIFRpbWUAQXByaWwgMjAxMWGrJ9IA
+AABJdEVYdFNvdXJjZQBodHRwOi8vd2lraS5vcGVuc3RyZWV0bWFwLm9yZy93aWtpL0ZpbGU6UHVi
+bGljLWltYWdlcy1vc21fbG9nby5zdmd1KgF5AAAAUnRFWHRDb3B5cmlnaHQAQ0MgQXR0cmlidXRp
+b24tU2hhcmVBbGlrZSBodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS1zYS8z
+LjAvXoNavAAAAzJJREFUOI1900tvVGUcgPHnfc+ZczrXTqe0IhUyNtIK1jYKKSkQRBcu1BhXYmL8
+ArrzG7jQlRvQYDS6IaGJVhZK0oUxxGgqTXqhLQKxUBMKrWWm7XRmzsy5zvt3ZWJY+Fs/20ctbX83
+niAXEW7EiblczPZtiOF0I2i8v7H38Hmt5W5/rnRBW9aPOat0FlHnUnbqmeHiy6MASkTU3Pa3dzAM
+04rpKpYwRlFp1fCjFnFNGOg9TgqL2CS0I4OttujtdSee6391VgNiDFdFBBMktOo1JAmxTAev4nLk
+qTM8USyxr6+HQneWTFpT9zOs/VX5AEArpVTUkIprZdDFHLqjCI1P5LU50DNIJp3GWKDRZN0s0pWg
+3AQrdfAtAC0i0l0ovOLYGVydJu3kqDR3WX3gUcwPYEkB4iKRX6TdztIODVZGkRjfGRs71a/hI43N
+yY5ERHFAK2rQMC1yHCAMu2kGijCyaIYdqnXBMT0oBW7WtodGB4/Y17cOH9SmXnBSLh3PJ8512G8N
+8GfTIwgj3IyHskO8djeCjeu2gTQ61dW+e/PmvD755LsPwzjZbLWbGIlQiU3a7mOwPM7P01fw/A6J
+tMnkt8gXN0m7NuVcmcjTt0UEDVD5e3tJWRolEAYaE/ZQqzf4Y/ZXpqeukiSCIKQsix4psFndZce7
+9ZmVz3drEen4Df9enMTsiUM6dpi+9A27y9+j3YBMocLtlVX2HiVsPwqZuTXP/QcruK7/4o0gqNoA
+g08fPey4BbKOz9RXP7Dy+zrLusFr75xj9IU+7JLN5voctfouSUlzqDTIyszWOgsLiQbodKmzgsfk
++SvMXbtLkuxw9MSzjI7vJ7IP0WVshgbKFMsFbFeohPflwudfXhYRsRdqU91BJ05PfjrN8uwaju1z
++s0JXjoxgi7apmBXteftI53fob7nYaVsUlYq2FzcrAJYI2PDpaDdGrvz22p5b6+iTr0x0cr3ZpZ/
+ubZ0/ouPL33SkXgj5ehcYiIdeP5Wfat5/afJmQ/ffv29tX9nYmRkJHfmuPP1zLKqGu1cdFV8b35+
+PuY/lFI5EfF4jBIRlFJq6Nix3qwxanFxsfp49H/+AUEPkL9IoET7AAAAAElFTkSuQmCC
 EOF
 	}
 
@@ -208,32 +206,19 @@ EOF
 	}
 
     if (!defined $images{Pharus}) {
-	# Fetched http://www.pharus-plan.de/px/head_kopf.jpg
-	# and converted using Gimp (cropped manually and scaled to 16px width)
-	# mmencode the result
+	# This is the favicon of www.berliner-stadtplan.com, run through "base64"
 	$images{Pharus} = $main::top->Photo
-	    (-format => 'gif',
+	    (-format => 'png',
 	     -data => <<EOF);
-R0lGODlhDQAQAOfOADg4NDs7OEFBPUVEQlBHPVJKSU1OSFZOSmBRRl5RTGBUTVpYTFNcTWFa
-NGhYQRmMAxiNAhqMAhqMAx+ICxuMARuMAx6KBxuNARuNAh+LAhiPABqOAHNbHxqOARqOAhuO
-ABuOAR2NARuOAiCLBx+MBk9oR3RdKiOMDWheT3ReL11iW2RgWGVeYGpdWieNEVBtUlhqTimO
-FWphVyaREH9iH1NwT35jJ25iWC2SFy+RGXVkW35qLnRmX2huW3RqXzuTI21sbXlqYXlrXD2W
-J3duY29xbn5uY2GDVWeAW3R3amp/X3d2c4R0XYRzZ29+akSfMIJ0bnt3c3x2d2yCaoJ5X0ef
-OIF3dHGBbYR6X4V4aYd2cEyfOnl+cYZ4bnaAcUqiNIJ7bop4aoN7bU6gOXt9fIh6bH99dox6
-aGSSVol+Y32AfY16cl+YT2KWU4t/ZlCmQmyTZVWmQVqjTm2XW3+IfH6LdYiEhVunRFumS3eS
-a16lSmyaX1+lTXWVZ3eTb2KjU4SKfnaVapSGa5aFa5OEeWmiWoyKg2WlXmmnWYGVenKhZG6l
-W3idb3ifaXaga4uRhJCPiJGRj5WPj5KRj5GTiZGUhJSUkoCldJ+SjaiSd5iWkpqalZebmKeZ
-gK+Xdp6alrCce6mekaCin7KggqOko6SnqKamqK+mnqSvobGpqaysp8Gtj664qMaxkLW2r8q0
-icG5m7i5vbe8sM63j8u7kcHBuL/Aw8XBusHEwMHDx9fBn9fDn8XHvcLJw9bGqMnJxszLxc3M
-xNzPr+nLosjVy9LS0dfVydXY0NnZ2drb2Nzf2d7f3+Lg4OXi4///////////////////////
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-/////////////////////////////////yH+FUNyZWF0ZWQgd2l0aCBUaGUgR0lNUAAh+QQB
-CgD/ACwAAAAADQAQAAAI7QAzfBDhIg4bNG345IBw4QIGCkMU1TH0SVKSRmMqgJDwgxEvYK7I
-qKklK8+XCCQWsQomypYpS0VIHbuE44kfZZyW9SKGClckZI/w/AHUrFQxSpAqxcr1S5UjOHaY
-NeBgw8QOGilSbUqkJEoyIlSwCHLDxIExTVymALlFyJcnXaBWnTk1iQ6SJaHWDBo269UuBFqk
-OJljpkyTNK0yjerkI4iVQHd6ZAmDAhYtYWBu6FhQKMYRAC26EBCjgAeUAjCqPHhTw8AKGUKM
-HAjAANEIDxbklBDAAlOCAS8OzaCwIcSELXuuqPDSR8+JDhoCAgA7
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAASFBMVEXEtrz8+vzMusQTkyWU
+joz88mQA8gqknqS0qqykmpzM2uTMyrTsRjR0moyUknzMunzMyszUymzc5lzk1mx0tnzc7vT06lz/
+//8oqzT8AAAAAWJLR0QXC9aYjwAAAAd0SU1FB+AMEQ0THxP6s+0AAACbSURBVBjTJY7bAsIgDEMT
+2jDYHG6K/v+n2iIvTS+cBACLGegyI9ajWd0IVbOWfbNaKwmPYh3w6M32xsNSPRDFGuP2pEIactzL
+YMdTqeOPRJRjpwYuLqNbrwK8lY4OsrMptjqdHqyCPc6GpDnnFagE8QNI91zQtMVGqetve61gTQ0r
+2AxoRteXK7qEIMYqLD3vh+DwZiYcMR+R5AdYUAS1NmdRiQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAx
+Ni0xMi0xN1QxNDoxOToyMSswMTowMF/HH4gAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTAtMTEtMDhU
+MTE6NDQ6NTUrMDE6MDCRfW6PAAAAAElFTkSuQmCC
 EOF
     }
 
@@ -280,36 +265,6 @@ Z3lsMRckjWVWClRODU6JjDIji2VFDGFnUVC7ODkYCDU4ZUAOYmXSxzgsAi04d3BednfefHpu
 4mtbaW5fWlVcX+x4e2/w8W8qIgAaKvhydEtJRv5IS1SgWAABnwp9S14cSPBAR0AVHEAYRLgj
 QAQfSx7i6yDhQ5x9PzwQyahxRQYDA8zsG2KDpEZ8Jja02adkBhOSMHLqhDGnzpMnQn7+DAQA
 Ow==
-EOF
-    }
-
-    if (!defined $images{Panoramio} && eval { require Tk::PNG; 1 }) {
-	# Fetched logo:
-	#   wget http://www.panoramio.com/favicon.v1.ico
-	# Converted:
-	#   convert 'favicon.v1.ico[0]' favicon.png
-	# Created base64:
-	#   mmencode -b favicon.png
-	$images{Panoramio} = $main::top->Photo
-	    (-format => 'png',
-	     -data => <<EOF);
-iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAA
-CXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAAQAAAAEABcxq3DAAAC7klEQVQ4y22Tf2jU
-dRjHX5/P93s3d+M2GLrF3Ji3mbVK591Wa0ambM4CaXptERH1jwUVhP2RKExhiEQkqJM0xPK/
-EdXl0tb+8ERF8tfa5Z2sWOfG5m21I/Viv9zte9/v0x+D4bW9/3p4ePN+Ht7P81YsgSM/RSUc
-HWUwOQGAr8jL5mdW8sl2v/o/N6vxRc9taeu8SWo6vZQu3lwX+1trs4QWio++uiId3bfRStEU
-KCdYv5qq0kIUEBn6h3D0Lt29Q9iOsLOxilMfbFZZkwkel/y3Tsnpy4NyN5WW8Yk5uTdlyemL
-f8qZ3hEZ/Tct31wblsJ3vhaCx+WzMxEB0ABtnTfRSnH03U00rS/Fm2OQv8zA41YcPvsbLg3e
-HINNT5fw5fsNmIbmwHd9AOiO7pikptM0+ctpWFeGx2WQ59bkujQ9kRFiI/exLJs8t8bj1rxQ
-9RjNdZVMzVocDPWJeSE2CsDLNav4NT6OS4PjONiOcPD7CAACGFqxzNTMZYSWDasJXY1zPprA
-vDM+f6pq3wrio/c5eu4W/YkHWe4fPhelwONm41MlmFpRVVaIVoqh5MS8BwCGgmB9Jb2ftxDa
-vRW/b/mCwJU//qax/Swv7esiHEss9EXA9BV76U88YGAsxRMlBWilCdZVMD2b4e2OCzy/ppjd
-2/0A2I6gtSI2fA9HhIrifHTjulIAuq4PMmcL6YxgO4LbnF9uX2sNO+p8ND/n45WaVdQ/WcLP
-fcMANKwtRe/aVq0KPG56IsNc7h9jxnKYthy01gQqVrCluoyMIzy0HGbmbG7Ek4R+iZPrNtn/
-eq3SAO1vPIvjCB+euMil/r+YStsIil2vrmfGEiZmbSbTNlcHkuw8FsayHfbs8Ge/8nsnLsnJ
-879jaEVzXSVbA+UEKoswlGJgLEXX9UFC1+6QsR3efPFxOj/eohaF6dCPt6T9214mH1pLhikv
-x2TvawHaWmoXh+lRfPpDRMLRBEPJSQTBV5RPw9qVtLXWLuL/B6D3MZolV9/dAAAAAElFTkSu
-QmCC
 EOF
     }
 
@@ -568,7 +523,7 @@ sub showmap_bvgstadtplan {
 sub showmap_url_deinplan_leaflet {
     my(%args) = @_;
     my $scale = int(17 - log(($args{mapscale_scale})/2863)/log(2) + 0.5);
-    if ($scale > 17) { $scale = 17 }
+    if ($scale > 16) { $scale = 16 }
     'http://m.deinplan.de/map.php#' . $scale . '/' . $args{py} . '/' . $args{px};
 }
 
@@ -619,13 +574,14 @@ sub showmap_deinplan_web {
 sub showmap_url_bikemapnet {
     my(%args) = @_;
 
+    my $lang = $Msg::lang || 'de';
+    $lang = 'en' if $lang !~ m{^(de|en)$}; # what are the supported languages?
+
     my $px = $args{px};
     my $py = $args{py};
     my $scale = 17 - log(($args{mapscale_scale})/3000)/log(2);
     $scale = 17 if $scale > 17;
-#    sprintf "http://www.bikemap.net/#lat=%s&lng=%s&zoom=%d&type=0",
-#	$py, $px, $scale;
-    sprintf "http://www.bikemap.net/#/z%d/%s,%s/terrain",
+    sprintf "https://www.bikemap.net/en/search/?zoom=%d&center=%s%2C%s",
 	$scale, $py, $px;
 
 }
@@ -655,26 +611,6 @@ sub showmap_url_geocaching {
 sub showmap_geocaching {
     my(%args) = @_;
     my $url = showmap_url_geocaching(%args);
-    start_browser($url);
-}
-
-######################################################################
-# panoramio
-
-sub showmap_url_panoramio {
-    my(%args) = @_;
-
-    my $px = $args{px};
-    my $py = $args{py};
-
-    my $scale = log(($args{mapscale_scale})/3000)/log(2);
-    sprintf "http://www.panoramio.com/map/#lt=%s&ln=%s&z=%d&k=2",
-	$py, $px, $scale
-}
-
-sub showmap_panoramio {
-    my(%args) = @_;
-    my $url = showmap_url_panoramio(%args);
     start_browser($url);
 }
 

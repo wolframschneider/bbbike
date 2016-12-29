@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2004,2006,2008,2012,2013,2014,2015 Slaven Rezic. All rights reserved.
+# Copyright (C) 2004,2006,2008,2012,2013,2014,2015,2016 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -16,7 +16,7 @@ package BBBikeTest;
 use vars qw(@opt_vars);
 BEGIN {
     @opt_vars = qw($logfile $do_xxx $do_display $pdf_prog $debug
-		   $cgiurl $cgidir $htmldir $mapserverurl $wapurl
+		   $cgiurl $cgidir $htmldir $mapserverurl $mapserverstaticurl $wapurl
 		   $simulate_skips
 		  );
 }
@@ -30,6 +30,7 @@ use vars qw($BBBIKE_TEST_CGIDIR
 	    $BBBIKE_TEST_CGIURL
 	    $BBBIKE_TEST_HTMLDIR
 	    $BBBIKE_TEST_MAPSERVERURL
+	    $BBBIKE_TEST_MAPSERVERSTATICURL
 	    $BBBIKE_TEST_WAPURL
 	  );
 
@@ -57,7 +58,7 @@ use BBBikeUtil qw(bbbike_root is_in_path);
 	      eq_or_diff is_long_data like_long_data unlike_long_data
 	      like_html unlike_html is_float using_bbbike_test_cgi using_bbbike_test_data check_cgi_testing check_gui_testing on_author_system
 	      get_pmake image_ok zip_ok create_temporary_content static_url
-	      get_cgi_config
+	      get_cgi_config selenium_diag
 	    ),
 	   @opt_vars);
 
@@ -104,6 +105,18 @@ if ($BBBIKE_TEST_MAPSERVERURL) {
     $mapserverurl = $ENV{BBBIKE_TEST_MAPSERVERURL};
 } else {
     $mapserverurl = "http://localhost/cgi-bin/mapserv";
+}
+
+if ($BBBIKE_TEST_MAPSERVERSTATICURL) {
+    $mapserverstaticurl = $BBBIKE_TEST_MAPSERVERSTATICURL;
+} elsif (defined $ENV{BBBIKE_TEST_MAPSERVERSTATICURL}) {
+    $mapserverstaticurl = $ENV{BBBIKE_TEST_MAPSERVERSTATICURL};
+} else {
+    if ($htmldir =~ m{/bbbike$}) {
+	$mapserverstaticurl = "$htmldir/mapserver";
+    } else {
+	$mapserverstaticurl = dirname($htmldir) . '/mapserver'; # typically -> http://$HOSTNAME/mapserver
+    }
 }
 
 if ($BBBIKE_TEST_WAPURL) {
@@ -992,6 +1005,24 @@ sub get_cgi_config (;@) {
     my $resp = $ua->get($url);
     my $data = JSON::XS::decode_json($resp->decoded_content(charset => 'none'));
     $data;
+}
+
+sub selenium_diag () {
+    Test::More::diag(<<EOF);
+
+ERROR: Please remember to start the Selenium server first, e.g.
+
+    java -jar ~/Downloads/selenium-server-standalone-3.0.1.jar
+
+or an older version (selenium 3 requires java 8):
+
+    java -jar ~/Downloads/selenium-server-standalone-2.53.1.jar
+
+To download selenium check
+
+    http://www.seleniumhq.org/download/
+
+EOF
 }
 
 1;

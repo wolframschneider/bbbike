@@ -70,7 +70,7 @@ Alt-Blankenburg	1 13909,20928 13576,20849
 Seestr.	1 5043,14671 5246,14758 5311,14786 5440,14840
 Seestr.	1 5440,14840 5331,14735 5293,14699 5264,14671 5051,14606
 Waidmannsluster Damm	1 2146,20887 1843,21440 1870,21491 2188,20910
-Flughafen Tegel	1 2819,16141 2757,16194 2713,16286 2756,16344 2832,16343 2863,16280 2819,16141
+Flughafen Tegel	1 2809,16143 2757,16194 2696,16271 2720,16353 2800,16368 2839,16337 2853,16293 2809,16143
 Jakob-Kaiser-Platz	1 2795,14161 2811,14196 2831,14219 2857,14222 2896,14187 2892,14149 2860,14118 2825,14128 2795,14161
 Kurt-Schumacher-Damm (Süd)	1 2831,14219 2803,14288 2793,14374 2905,14754
 Kurt-Schumacher-Damm (Süd)	1 2963,14752 2847,14356 2857,14222
@@ -182,9 +182,7 @@ Triftstr. (Buchholz)	1s 12023,23039 12185,23021
 Joachimstr.	1s 10082,13686 10142,13556 10199,13446
 Wilhelmsaue	1 4778,8784 4918,8785 5165,8784
 Wilhelmsaue	1 5164,8740 4918,8740 4777,8731
-Friedrichsruher Str.	1 3196,9193 3333,9026
 Schweidnitzer Str	1 3220,9598 3225,9844
-Mansfelder Str.	1 4096,9175 4158,9109 4228,9093 4325,9082
 Johann-Georg-Str.	1 3108,10069 3170,10041 3348,9806
 Damaschkestr.	1 3132,10499 3013,10553
 Lietzenseeufer	1 2871,11211 2806,11241 2748,11206 2621,11190 2621,11065
@@ -826,6 +824,8 @@ Morgensternstr.	1 5212,2360 5229,2395
 Gotenburger Str.: Einfahrt verboten	1s 9000,16803 8847,16870
 Rosenfelder Str./Ring	1 17480,12003 17429,12030 17384,11976
 Fritz-Werner-Str.	1s 9099,2780 9072,2589
+Kraftwerk Reuter West	2 -447,14338 -495,14311 -650,14355 -792,14258 -1002,14162 -1020,14084
+Bechstedter Weg	1 3467,9045 3661,8815 3701,8849
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Knoten Märkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
@@ -1394,7 +1394,7 @@ Mittelstreifen nicht passierbar	3nocross::ignrte 2975,15813 2960,15847 2944,1588
 Zum Flughafen Tegel -> Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2944,15880 2960,15847 2996,15930
 Knoten am Flughafen Tegel -> Zum Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2880,15884 2960,15847 2944,15880
 Knoten am Flughafen Tegel -> Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2880,15884 2960,15847 2996,15930
-Mittelstreifen nicht passierbar	3nocross::ignrte 2944,15880 2913,15944 2819,16141
+Mittelstreifen nicht passierbar	3nocross::ignrte 2944,15880 2913,15944 2809,16143
 Zum Flughafen Tegel -> Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2944,15880 2913,15944 2880,15908
 Knoten am Flughafen Tegel -> Zum Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2949,15922 2913,15944 2944,15880
 Knoten am Flughafen Tegel -> Knoten am Flughafen Tegel: Mittelstreifen nicht passierbar	3::igndisp 2949,15922 2913,15944 2880,15908
@@ -2852,11 +2852,7 @@ Weichselplatz: Uferweg wegen Bauarbeiten gesperrt	2::inwork 12851,9309 12907,907
 Sülzhayner Str.: komplett gesperrt wegen Bauarbeiten, vielleicht dauerhaft	2::inwork 13420,9259 13403,9236
 Marzahner Str. - Gensinger Str.: wegen Bauarbeiten gesperrt	2::inwork 18702,11921 18888,11910 18913,11909
 Corinthstr.: Baustelle, Einbahnstraßenregelung	1s 14447,10491 14270,10584
-Mariannenstr.: Baustelle, Einbahnstraßenregelung	1s 11512,10105 11616,10288
-Mariannenstr.: Baustelle, Fahrbahn gesperrt	2s 11671,10402 11616,10288
 Minna-Todenhagen-Str.: wird noch gebaut	2::inwork 17585,7525 17453,7451 17295,7344 17211,7280 17091,7175 16971,7058 16720,6845
-Haasestr.: Bauarbeiten, keine Durchfahrt möglich	2::inwork 14328,11320 14286,11186
-Döringstr.: Bauarbeiten, keine Durchfahrt möglich	2::inwork 14400,11261 14357,11148
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12620,9293 12565,9200 12548,9167
 Am Nordhafen: Bauarbeiten, Straße wird zurückgebaut	2::inwork 7741,14560 7518,14689
 E.T.A.-Hoffmann-Promenade: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 9679,10710 9777,10719
@@ -2866,10 +2862,6 @@ Fünf Morgen: Bauarbeiten, gesperrt. Wird es eine Anbindung an den Hüttenweg gebe
 Gartenstr.: Baustelle	2::inwork 21189,11326 21217,11328
 Ziegelstr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 9736,13061 9636,13076 9559,13087
 Schwarzer Weg: wegen Straßenbau gesperrt	2::inwork 17295,7323 17295,7330 17295,7344 17296,7401
-Märkisches Ufer - Neue Roßstr.: wegen Bauarbeiten gesperrt	3 10869,11949 10687,11853 10703,11837
-Neue Roßstr. - Märkisches Ufer: wegen Bauarbeiten gesperrt	3 10703,11837 10687,11853 10869,11949
-Märkisches Ufer - Neue Roßstr.: wegen Bauarbeiten gesperrt	3 10869,11949 10687,11853 10672,11870
-Neue Roßstr. - Märkisches Ufer: wegen Bauarbeiten gesperrt	3 10672,11870 10687,11853 10869,11949
 Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14439,8050 14471,8046
 Gerickesteg: wegen Bauarbeiten gesperrt	2::inwork 6694,12627 6702,12633 6748,12669 6765,12680
 IGA 2017-Gelände: Wege gesperrt	2 22455,14815 22417,14837 22380,14831 22331,14793 22254,14793 22199,14744 22164,14722 22108,14710 22090,14704 22071,14630 22051,14604 22026,14601 22012,14556 21985,14513 22026,14501 22061,14471 22172,14287 22414,14144 22462,14172 22639,14384 22679,14450 22670,14520
@@ -2882,7 +2874,6 @@ Mathilde-Vaerting-Weg: noch in Bau	2::inwork 17611,-330 17651,-393
 Lydia-Rabinowitsch-Str.: noch gesperrt	2 7820,13994 7930,14060 7973,13991 7865,13924
 Clara-von-Simson-Str.: noch gesperrt	2 7651,14260 7757,14318 7802,14250 7697,14187
 Wattstr.: wegen Bauarbeiten für die Minna-Todenhagen-Str. teilweise gesperrt, für Autos dauerhaft	2::inwork 17670,7512 17681,7589
-(Treppe an der Freybrücke)	2::inwork -3181,11496 -3177,11507 -3173,11520
 Weg nach Tiefwerder: kein Zugang wegen der Ersatzbrücke	2::inwork -3179,11763 -3217,11570
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
@@ -2896,11 +2887,9 @@ wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::ignrte 9984,12426 9
 Niederlagstr. -> Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3::igndisp 9943,12364 9934,12420 9858,12410
 Unter den Linden -> Niederlagstr.: wegen Bauarbeiten ist das Überqueren nicht möglich	3::igndisp 9984,12426 9934,12420 9943,12364
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
-An der Charité: wegen Bauarbeiten gesperrt	2:inwork 8665,13353 8806,13384
 Babelsberger Park - Humboldtbrücke: Bauarbeiten, temporär (oder sogar dauerhaft?) gesperrt	2:inwork -11407,-1086 -11460,-1098 -11538,-1138 -11615,-1094
 Nordufer: Neubau	2:inwork 7458,14643 7427,14648 7212,14738
 Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwork 8106,13130 8102,13304
-Oberwallstr.: Bauarbeiten, komplett gesperrt	2:inwork 9898,12161 9882,12259
 Marx-Engels-Forum: wegen U-Bahn-Bauarbeiten Durchgang zur Rathausstr. nicht möglich	2:inwork 10411,12471 10416,12394
 B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich des alten Flughafens	2:inwork 18578,-1538 18680,-1506 18798,-1581 18853,-1656 18866,-1674
 Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
@@ -3044,7 +3033,6 @@ Hoffmann-von-Fallersleben-Pl. -> Hohenzollerndamm: unbequem passierbarer Mittels
 Hohenzollerndamm -> Bielefelder Str.: unbequem passierbarer Mittelstreifen	3::igndisp 3741,9051 3816,9052 3814,9304
 Bielefelder Str. -> Hohenzollerndamm: unbequem passierbarer Mittelstreifen	3::igndisp 3814,9304 3816,9052 3831,9052
 unpassierbarer Mittelstreifen	3nocross::ignrte 3427,9010 3467,9045 3521,9059
-Hohenzollerndamm -> Bechstedter Weg: unpassierbarer Mittelstreifen	3::igndisp 3521,9059 3467,9045 3661,8815
 Bechstedter Weg -> Hohenzollerndamm: unpassierbarer Mittelstreifen	3::igndisp 3661,8815 3467,9045 3427,9010
 Kette	BNP:5:-131 3370,9215
 Kette	BNP:5:-220 3264,9261
@@ -3154,10 +3142,7 @@ Sensburger Allee -> Teufelsseestr.: Heerstr.	3::igndisp 326,11391 438,11236 454,
 Heerstr. -> Teufelsseestr.: Heerstr.	3::igndisp 504,11243 438,11236 454,11159
 Heerstr. -> Sensburger Allee: Heerstr.	3::igndisp 229,11213 438,11236 326,11391
 tragen (20 Stufen)	0:30:-186 23,11137
-Oldenburgallee	1 454,11670 461,11455
 Westendallee	1s 461,11455 425,11455 395,11486 329,11696 323,11801
-Brixplatz	1 419,12397 335,12343 208,12305
-Brixplatz	1 179,12434 269,12462 329,12503
 Lerschpfad	1 2181,12276 2152,12389
 Gottfried-Keller-Str.	1 1697,11911 1792,11889
 tragen (5 Stufen)	0:20:-169 3829,13572
@@ -3185,9 +3170,6 @@ Mittelstreifen, unbequemes Überqueren	3nocross::ignrte 3479,11238 3467,11373 346
 tragen, schieben (3 x 9 Stufen, schmale Rampe)	0:30:-263 6190,12978
 tragen (30 Stufen)	0:45:26 5890,12602
 tragen (12 Stufen)	0:20:41 5683,12342
-Karolingerplatz	1 1278,11087 1181,11136
-Karolingerplatz	1 1209,11212 1315,11179
-Ubierstr.	1 1315,11179 1278,11087
 tragen (11 Stufen)	0:20:-52 2228,11317
 tragen (8 Stufen)	0:40:-70 2300,11292
 Thüringerallee: Privatstr.	2 1454,11164 1342,11020

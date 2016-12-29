@@ -25,7 +25,7 @@ BEGIN {
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 1.89;
+$VERSION = 1.90;
 
 use your qw(%MultiMap::images $BBBikeLazy::mode
 	    %main::line_width %main::p_width %main::str_draw %main::p_draw
@@ -1329,7 +1329,11 @@ sub show_new_vmz_diff {
 	main::plot('str','sBAB', -draw => 1);
 	main::make_net();
     }
-    if (defined $version) { $version = ".$version" }
+    if (defined $version) {
+	$version = ".$version";
+    } else {
+	$version = '';
+    }
     show_any_diff("$vmz_lbvs_directory/diffnewvmz.bbd$version", "newvmz");
 }
 
@@ -1660,13 +1664,14 @@ sub current_search_in_bbbike_cgi {
     }
     $goal = $main::search_route_points[$inx]->[0];
 
-    require CGI;
-    my $qs = CGI->new({ startc => $start,
-			($via ? (viac => $via) : ()),
-			zielc => $goal,
-			pref_seen => 1, # gelogen
-		      })->query_string;
-    my $url = "http://localhost/bbbike/cgi/bbbike.cgi?$qs";
+    require BBBikeUtil;
+    my $url = BBBikeUtil::uri_with_query
+	("http://localhost/bbbike/cgi/bbbike.cgi",
+	 [ startc => $start,
+	   ($via ? (viac => $via) : ()),
+	   zielc => $goal,
+	   pref_seen => 1, # gelogen
+	 ]);
     main::status_message("Der WWW-Browser wird mit der URL $url gestartet.", "info");
     require WWWBrowser;
     WWWBrowser::start_browser($url);
@@ -1693,13 +1698,14 @@ sub current_search_in_bbbike_org_cgi {
 	$coord = join(",", $o->trim_accuracy($o->standard2map(split /,/, $coord)));
     }
 
-    require CGI;
-    my $qs = CGI->new({ startc_wgs84 => $start,
-			($via ? (viac_wgs84 => $via) : ()),
-			zielc_wgs84 => $goal,
-			pref_seen => 1, # gelogen
-		      })->query_string;
-    my $url = "http://www.bbbike.org/Berlin/?$qs";
+    require BBBikeUtil;
+    my $url = BBBikeUtil::uri_with_query
+	("http://www.bbbike.org/Berlin/",
+	 [ startc_wgs84 => $start,
+	   ($via ? (viac_wgs84 => $via) : ()),
+	   zielc_wgs84 => $goal,
+	   pref_seen => 1, # gelogen
+	 ]);
     main::status_message("Der WWW-Browser wird mit der URL $url gestartet.", "info");
     require WWWBrowser;
     WWWBrowser::start_browser($url);

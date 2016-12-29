@@ -1,392 +1,6 @@
-$#temp_blocking = 35;
+$#temp_blocking = 393;
 push @temp_blocking,
 (
-       {
-         'data' => 'userdel	2::xmas -3275,14407 -3231,14383 -3204,14368 -3155,14340
-userdel	2::xmas -3275,14407 -3338,14333
-userdel	2::xmas -3150,14631 -3185,14556 -3205,14512 -3228,14468 -3275,14407
-userdel	2::xmas -3275,14407 -3350,14446 -3393,14470 -3410,14479 -3440,14498 -3481,14523
-userdel	2::xmas -3227,14260 -3155,14340
-userdel	2::xmas -3227,14260 -3293,14304 -3338,14333
-userdel	2::xmas -3552,14082 -3457,14189 -3409,14241 -3338,14333
-userdel	2::xmas -3039,14522 -3054,14498 -3089,14440 -3110,14408 -3142,14358 -3155,14340
-userdel	2::xmas -3110,14408 -3174,14438 -3228,14468
-userdel	2::xmas -3231,14383 -3293,14304
-',
-         'from' => 1479769200,
-         'id' => 36,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              22,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'http://www.partner-fuer-spandau.de/Weihnachtsmarkt-2014_683_0.html',
-         'text' => 'Spandauer Weihnachtsmarkt, vom 23.11.2016 bis 23.12.2016',
-         'type' => 'gesperrt',
-         'until' => 1482620399
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
          'data' => '# sowieso schon mit q4 markiert, deshalb -> 2
 userdel	2::xmas 5829,10964 5782,10884
@@ -804,27 +418,7 @@ userdel	2::xmas 5656,10876 5652,11004
        undef,
        undef,
        undef,
-       {
-         'data' => '	2::xmas 9743,12239 9798,12267
-	q4::xmas 9743,12239 9747,12205 9771,12190 9775,12178 9808,12182
-',
-         'from' => 1479942000,
-         'id' => 790,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              18,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/mitte/971793-1328132-weihnachtsmarktamopernpalais.html',
-         'text' => 'Nostalgischer Weihnachtsmarkt Opernpalais: Wege und Straßen rund um die Hedwigs-Kathedrale teilweise nicht passierbar, teilweise reger Fußgängerverkehr, vom 25.11. bis 26.12.2016',
-         'type' => 'gesperrt',
-         'until' => 1482793199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2290,27 +1884,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::xmas 11329,12497 11209,12430
-userdel	2::xmas 11209,12430 11273,12301
-# REMOVED (hier (noch?) nicht gesperrt) --- userdel	2::xmas 11273,12301 11355,12331
-',
-         'from' => 1478214000,
-         'id' => 1988,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              4,
-                              'months',
-                              11
-                            ]
-                          ],
-         'text' => 'Voltairestr. und Dircksenstr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht möglich (Voltairestr. und Dircksenstr.), von Anfang November 2016 bis Ende Dezember 2016',
-         'type' => 'gesperrt',
-         'until' => 1482793199
-       },
+       undef,
        {
          'data' => '#: note "WeihnachtsZauber auf dem Gendarmenmarkt"
 userdel	2::xmas 9536,11922 9666,11935
@@ -2379,14 +1953,16 @@ userdel	3 8374,11479 8389,11378 8427,11365
        undef,
        {
          'data' => '#: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1512/nachricht5886.html
-userdel	2::temp 8731,12270 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
-userdel	2::temp 8055,12186 8119,12414
-userdel	2::temp 8522,12239 8466,12197
-userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+#: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1612/nachricht6280.html
+	2::temp 8595,12066 8737,12098 8743,12099 8861,12125
+	2::temp 8731,12270 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	2::temp 8055,12186 8119,12414
+	2::temp 8522,12239 8466,12197
+	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 	3::temp 8391,12389 8344,12221 8327,12174
 	3::temp 8327,12174 8344,12221 8391,12389
 ',
-         'from' => 1482814800,
+         'from' => 1482642000,
          'id' => 2010,
          'periodic' => 1,
          'recurrences' => [
@@ -2398,7 +1974,7 @@ userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,1216
                               12
                             ]
                           ],
-         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vom 28.12.2016 bis 02.01.2017',
+         'text' => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vom 26.12.2016 bis 02.01.2017',
          'type' => 'gesperrt',
          'until' => 1483397999
        },
@@ -3010,8 +2586,8 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
          'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
 #: source_id: 2147339529
-#: last_checked: 2016-11-26
-#: next_check: 2016-12-16
+#: last_checked: 2016-12-16
+#: next_check: 2017-03-01
 userdel	q2::inwork 5258,11285 5236,10994
 ',
          'from' => 1366740818,
@@ -3208,49 +2784,11 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::xmas 9986,13412 10317,13248
-',
-         'from' => 1481842800,
-         'id' => 2517,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              16,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachtsmarkt-sophienstrasse.de/',
-         'text' => 'Umwelt- und Weihnachtsmarkt: Sophienstraße zwischen Große Hamburger Straße und Rosenthaler Straße gesperrt, 4. Adventswochenende (17.12.2016 - 18.12.2016)',
-         'type' => 'gesperrt',
-         'until' => 1482101999
-       },
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::xmas 11317,14564 11255,14572 11155,14554
-',
-         'from' => 1481972400,
-         'id' => 2521,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              17,
-                              'months',
-                              12
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/971805-955635-adventsmarktkollwitzplatz.html',
-         'text' => 'Advents-Ökomarkt am Kollwitzplatz: Wörther Str. zwischen Kollwitz- bis Knaackstraße gesperrt, 18. Dezember 2016, 12:00 bis 19:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1482084000
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -3674,32 +3212,13 @@ userdel	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	q3::xmas 11139,13008 11064,12910 10970,12822
-userdel	q4::xmas 11064,12910 11134,12793
-',
-         'from' => 1479596400,
-         'id' => 2763,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              20,
-                              'months',
-                              11
-                            ]
-                          ],
-         'source_id' => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/mitte/1304487-1328132-weihnachtsmarktaufdemalexanderplatz.html',
-         'text' => 'Alexanderplatz: Weihnachtsmarkt, langsameres Durchkommen, vom 21. November 2016 bis 26. Dezember 2016',
-         'type' => 'handicap',
-         'until' => 1482793199
-       },
+       undef,
        undef,
        undef,
        undef,
        {
-         'data' => 'userdel	2::temp 8485,12612 8399,12610 8348,12609 8306,12609 8207,12606 8122,12603 8119,12414 8354,12416 8400,12417 8540,12420
+         'data' => '	2::temp 8540,12420 8775,12457
+userdel	2::temp 8485,12612 8399,12610 8348,12609 8306,12609 8207,12606 8122,12603 8119,12414 8354,12416 8400,12417 8540,12420
 userdel	2::temp 8348,12609 8354,12416
 	2::temp 8207,12606 8206,12757
 userdel auto	3 7945,12592 8122,12603 8120,12756
@@ -3847,16 +3366,7 @@ userdel	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
          'type' => 'gesperrt',
          'until' => 1483225199
        },
-       {
-         'data' => '#: last_checked: 2016-08-20
-	2::inwork 24897,11083 24899,11044 24905,10955 24913,10884 24919,10818 24922,10785 24923,10774
-',
-         'from' => undef,
-         'id' => 2800,
-         'text' => 'Theodorstr.: Bauarbeiten, Straße kann gesperrt sein',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3893,7 +3403,7 @@ userdel	q4::inwork 12911,1815 12817,2031
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2016-12-05 vvv
+#: last_checked: 2016-12-23 vvv
 #: check_frequency: 21d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -3959,16 +3469,7 @@ userdel	q3::inwork 4564,3457 4800,3391 4862,3363 5022,3318
          'until' => undef
        },
        undef,
-       {
-         'data' => 'userdel	q4::inwork; 4976,9670 4982,9729 4993,9843 5013,10039
-',
-         'from' => 1478635433,
-         'id' => 2834,
-         'source_id' => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.522495.php',
-         'text' => 'Uhlandstr.: Bauarbeiten zwischen Pariser Str. und Hohenzollerndamm, Einbahnstraßenregelung, offen Richtung Hohenzollerndamm, von ca. Mitte November 2016 bis Mitte Dezember 2016',
-         'type' => 'handicap',
-         'until' => 1481893200
-       },
+       undef,
        undef,
        {
          'data' => '#: note: laut vmz bis Mitte August 2018 und nur bis zur Bahnbrücke, laut fritz bis 1.7.2018
@@ -3997,18 +3498,6 @@ userdel	q4::inwork 20302,1613 20443,1595 20653,1528 20668,1524 20817,1475 20917,
          'text' => 'Freundschaftsinsel: nur zwischen 7 Uhr und Einbruch der Dunkelheit offen',
          'type' => 'gesperrt',
          'until' => undef
-       },
-       {
-         'data' => '#: XXX vor Ort prüfen!
-#: osm_watch: way id="454003207" version="1"
-userdel	q4::inwork 5230,10919 5215,10711
-',
-         'from' => 1479769200,
-         'id' => 2843,
-         'source_id' => 'LMS-BR_r_LMS-BR_83962',
-         'text' => 'Fasanenstr.: Baustelle zwischen Kantstr. und Kurfürstendamm, Fahrbahn gesperrt, vom 23.11.2016 bis 31.12.2016',
-         'type' => 'handicap',
-         'until' => 1483225200
        }
      
 );

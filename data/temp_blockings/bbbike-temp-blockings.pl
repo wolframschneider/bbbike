@@ -17246,18 +17246,20 @@ EOF
 userdel	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998
 EOF
      },
-     { from  => $isodate2epoch->("2016-12-27 06:00:00"), # siehe auch anderen Eintrag mit weiteren Sperrungen am 31. und 1.
+     { from  => $isodate2epoch->("2016-12-25 06:00:00"), # siehe auch anderen Eintrag mit weiteren Sperrungen am 31. und 1.
        until => $isodate2epoch->("2017-01-02 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 12]],
-       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vom 28.12.2016 bis 02.01.2017',
+       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vom 26.12.2016 bis 02.01.2017',
        type  => 'gesperrt',
        data  => <<EOF,
 #: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1512/nachricht5886.html
-userdel	2::temp 8731,12270 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
-userdel	2::temp 8055,12186 8119,12414
-userdel	2::temp 8522,12239 8466,12197
-userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+#: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1612/nachricht6280.html
+	2::temp 8595,12066 8737,12098 8743,12099 8861,12125
+	2::temp 8731,12270 8610,12254 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	2::temp 8055,12186 8119,12414
+	2::temp 8522,12239 8466,12197
+	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
 	3::temp 8391,12389 8344,12221 8327,12174
 	3::temp 8327,12174 8344,12221 8391,12389
 EOF
@@ -21331,8 +21333,8 @@ EOF
 #: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
 #: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
 #: source_id: 2147339529
-#: last_checked: 2016-11-26
-#: next_check: 2016-12-16
+#: last_checked: 2016-12-16
+#: next_check: 2017-03-01
 userdel	q2::inwork 5258,11285 5236,10994
 EOF
      },
@@ -21426,7 +21428,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.freizeittipp.com/pages/veranstaltungen/detail-1792910-Sch%C3%B6neberger-Mai-und-Spargelfest-2016-Berlin.php',
        data  => <<EOF,
-userdel	2::temp 6244,8597 6339,8644 6454,8653
+userdel	2::temp 6230,8602 6313,8638 6454,8653
 EOF
      },
      { from  => 1368334800, # 2013-05-12 07:00
@@ -22503,7 +22505,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/sonstiges/events/fest-der-nationen/',
        data  => <<EOF,
-userdel	2::temp 5661,9630 5657,9600 5630,9592 5602,9606 5595,9626
+userdel	2::temp 5648,9642 5642,9613 5618,9607 5598,9612 5578,9629
 EOF
      },
      { from  => 1390086000, # 2014-01-19 00:00
@@ -22933,12 +22935,12 @@ userdel	2::inwork 5993,5422 6009,5691 6007,5785 6007,5882 6001,5974 6134,5986 61
 userdel	2::inwork 5935,5874 6007,5882 6134,5894
 EOF
      },
-     { from  => $isodate2epoch->("2016-06-08 00:00:00"), # ein Tag Vorlauf (zu wenig?)
-       until => $isodate2epoch->("2016-07-12 23:59:59"), # ein Tag Nachlauf (zu wenig?)
-       text  => 'Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Dorotheenstr. und Behrenstr.: Sperrungen wegen der Fußball-EM-Fanmeile, Radfahrer dürfen den Bereich in der spielfreien Zeit passieren, vom 09.06.2016 bis zum 12.07.2016',
+     { from  => 1482440059,
+       until => $isodate2epoch->("2016-12-26 06:00:00"),
+       text  => 'Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Ebertstr. zwischen Dorotheenstr. und Behrenstr.: Veranstaltung, gesperrt, ab 23.12.2016',
        type  => 'gesperrt',
-       source_id => '2147340174',
        data  => <<EOF,
+#: note: Together Berlin
 userdel	2::temp 7429,12070 7383,12095 7816,12150 7823,12120 8018,12135 8049,12140
 userdel	2::temp 7816,12150 8055,12186 8049,12140 8122,12147 8215,12156 8327,12174 8466,12197 8522,12239
 userdel	2::temp 7383,12095 7026,12054 6828,12031 6884,12006 7031,12024 7429,12070 7775,12114 7823,12120
@@ -22949,6 +22951,8 @@ userdel	2::temp 8538,12245 8600,12165 8595,12066
 userdel	2::temp 8055,12186 8119,12414
 userdel auto	3 7026,12054 7031,12024 7059,11978
 userdel auto	3 7059,11978 7031,12024 7026,12054
+	3 8327,12174 8344,12221 8391,12389
+	3 8391,12389 8344,12221 8327,12174
 EOF
      },
      { from  => 1402524000, # 2014-06-12 00:00
@@ -24837,6 +24841,7 @@ EOF
        type  => 'gesperrt',
        source_id => '2147339665',
        data  => <<EOF,
+	2::temp 8540,12420 8775,12457
 userdel	2::temp 8485,12612 8399,12610 8348,12609 8306,12609 8207,12606 8122,12603 8119,12414 8354,12416 8400,12417 8540,12420
 userdel	2::temp 8348,12609 8354,12416
 	2::temp 8207,12606 8206,12757
@@ -25233,11 +25238,11 @@ userdel	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1482170631, # undef, # XXX
        text  => 'Theodorstr.: Bauarbeiten, Straße kann gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2016-08-20
+# REMOVED (laut osm mittlerweile offen) --- : last_checked: 2016-08-20
 	2::inwork 24897,11083 24899,11044 24905,10955 24913,10884 24919,10818 24922,10785 24923,10774
 EOF
      },
@@ -25492,7 +25497,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2016-12-05 vvv
+#: last_checked: 2016-12-23 vvv
 #: check_frequency: 21d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -25685,14 +25690,14 @@ EOF
 EOF
      },
      { from  => 1479769200, # 2016-11-22 00:00
-       until => 1483225200, # 2017-01-01 00:00
+       until => 1482518311, # 1483225200, # 2017-01-01 00:00
        text  => 'Fasanenstr.: Baustelle zwischen Kantstr. und Kurfürstendamm, Fahrbahn gesperrt, vom 23.11.2016 bis 31.12.2016',
        type  => 'handicap',
        source_id => 'LMS-BR_r_LMS-BR_83962',
        data  => <<EOF,
-#: XXX vor Ort prüfen!
 #: osm_watch: way id="454003207" version="1"
-userdel	q4::inwork 5230,10919 5215,10711
+#: last_checked: 2016-12-16
+userdel	q4::inwork 5236,10994 5230,10919
 EOF
      },
     );
