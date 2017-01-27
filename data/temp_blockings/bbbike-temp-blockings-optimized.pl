@@ -2083,6 +2083,26 @@ userdel	q4::inwork 20302,1613 20443,1595 20653,1528 20668,1524 20817,1475 20917,
          'text' => 'Avenue Charles de Gaulle: Sperrung in Höhe des ehemaligen Einkaufs- und Gemeindezentrums der Cité Foch, bis voraussichtlich zum 28.02.2017',
          'type' => 'gesperrt',
          'until' => 1488322799
+       },
+       undef,
+       {
+         'data' => 'userdel	q4::inwork 5059,7216 5064,7160 5081,7112
+',
+         'from' => 1485206028,
+         'id' => 2847,
+         'text' => 'Stubenrauchstr.: zwischen Wiesbadener Str. und Rotdornstr. Bauarbeiten, Fahrbahn gesperrt, bis 02.06.2017 ',
+         'type' => 'handicap',
+         'until' => 1496440800
+       },
+       {
+         'data' => 'userdel	2::inwork 12254,24857 12136,24607
+userdel	2::inwork 12108,24547 11980,24276
+',
+         'from' => 1485385200,
+         'id' => 2848,
+         'text' => 'Schönerlinder Str.: Sperrung zwischen A114 und Am Vorwerk, von 27.01.2017 abends bis 29.01.2017 nachts',
+         'type' => 'gesperrt',
+         'until' => 1485730800
        }
      
 );
