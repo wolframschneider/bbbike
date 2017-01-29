@@ -138,6 +138,16 @@ for my $static (@static) {
     $java_ua->requests_redirectable([]);
     { # Redirect on start page
 	my $resp = $java_ua->get("$cgi_dir/bbbike.cgi");
+	
+	diag "Running web server version: ", $resp->header('Server');
+	
+	local $TODO;
+	
+	# CGI local redirect not implemented correctly
+	# https://redmine.lighttpd.net/issues/2108
+	# starts at lighttpd version 1.4.40 (?)
+	$TODO = "lighttpd bug ..." if $resp->code == 200 && $resp->header('Server') =~ m,^lighttpd/1.4.4\d-,;
+	
 	is($resp->code, 302, 'Found redirect for Java bot');
 	like($resp->header('location'), qr{/html/bbbike_small});
     }
