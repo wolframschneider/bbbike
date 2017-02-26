@@ -6384,7 +6384,7 @@ for my $etappe (@out_route) {
 		    if ($bbbike_script =~ m{^https?://[^.]+/}) { # local hostname?
 			$bbbike_script = $BBBike::BBBIKE_DIRECT_WWW;
 		    }
-		    my $href = 'http://www.gpsies.com/map.do?url=' . BBBikeCGI::Util::my_escapeHTML($qq2->url(-full=>1, -query=>1));
+		    my $href = 'https://www.gpsies.com/map.do?url=' . BBBikeCGI::Util::my_escapeHTML($qq2->url(-full=>1, -query=>1));
 		    print qq{<a title="}, M("Route auf GPSies.com hochladen"), qq{" style="padding:0 0.5cm 0 0.5cm;" href="$href">GPSies.com (upload)</a>};
 		}
 

@@ -437,7 +437,7 @@ Eine Liste von Geocoding- und Reverse-Geocoding-Diensten.
 
 =over
 
-=item L<http://www.gpsies.com>
+=item L<https://www.gpsies.com>
 
 GPS-Tracks von Fußgängern und Radfahrern auf der ganzen Welt, schöne
 Darstellung und Auswahl per OSM-Karte, verschiedene Download-Formate,

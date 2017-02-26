@@ -166,8 +166,8 @@ sub compare_responses {
 	$content =~ s{\Qhttp://www.bbbike.de/cgi-bin/\E(mapserver_address.cgi)}{$1}g;
 	$content =~ s{\Q/bbbike/cgi/\E(mapserver_address.cgi)}{$1}g;
 	# XXX this too
-	$content =~ s{\Qhttp://www.gpsies.com/map.do?url=/cgi-bin/bbbike.cgi}{http://www.gpsies.com/map.do?url=http://bbbike.de/cgi-bin/bbbike.cgi}g;
-	$content =~ s{\Qhttp://www.gpsies.com/map.do?url=/cgi-bin/bbbike.en.cgi}{http://www.gpsies.com/map.do?url=http://bbbike.de/cgi-bin/bbbike.cgi}g;
+	$content =~ s{\Qhttps://www.gpsies.com/map.do?url=/cgi-bin/bbbike.cgi}{https://www.gpsies.com/map.do?url=http://bbbike.de/cgi-bin/bbbike.cgi}g;
+	$content =~ s{\Qhttps://www.gpsies.com/map.do?url=/cgi-bin/bbbike.en.cgi}{https://www.gpsies.com/map.do?url=http://bbbike.de/cgi-bin/bbbike.cgi}g;
         # XXX and this
 	$content =~ s{\Q/cgi-bin/bbbike.cgi?tmp=/}{/BBBike/tmp/}g;
 	# normalize session ids (coordssession, oldcs, Session in json/xml/...)
