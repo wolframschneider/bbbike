@@ -19,8 +19,6 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then ./world/travis/bbbike-init.sh; fi
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y libdata-random-perl; fi # ????
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y bbbike-world; fi
-  # downgrade to java7
-  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo update-alternatives --set java /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java; fi
   ## mono stuff
   #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -y mono-devel xvfb x11-apps; fi
   #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo world/etc/init.d/xvfb start; fi
