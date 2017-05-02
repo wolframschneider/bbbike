@@ -22,9 +22,9 @@
 #: XXX Baumaßnahme 3.32 (Realisierung nach 2011)
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (vom 2013-04-10)
 #: source_id: 2147340987
-#: last_checked: 2017-03-12
+#: last_checked: 2017-05-01
 #: check_frequency: 45d
-Danziger Str.	?::projected 11709,14856 11864,14781 11990,14714 12025,14695 12128,14640 12317,14535 12407,14470 12621,14313 12729,14227 12901,14093 12975,13990 13037,13897 13100,13803 13166,13707 13225,13620 13228,13615 13330,13468
+Danziger Str.	?::projected 11709,14856 11864,14781 11990,14714 12025,14695 12123,14643 12317,14535 12407,14470 12621,14313 12729,14227 12901,14093 12975,13990 13037,13897 13100,13803 13166,13707 13225,13620 13228,13615 13330,13468
 # 
 # REMOVED (wahrscheinlich passiert hier nichts weiter, Busspur existiert) --- #: last_checked: 2012-10-12 vvv --- #: next_check: 2012-10-17 vvv --- Kniprodestr./Am Friedrichshain: wird die andere Richtung auch Radspuren bekommen?	?; 12640,13814 12695,13864 12766,13942 12856,14042 12901,14093 --- #: next_check ^^^ --- #: last_checked ^^^
 # REMOVED (realisiert) --- #: last_checked: 2012-11-11 vvv --- #: next_check: 2013-02-15 vvv --- #: XXX Baumaßnahme 3.33 (Realisierung in 2011) vvv --- #: XXX werden hier auch Radspuren entstehen? vvv --- d --- Germanenstr.	?::projected; 8304,19475 8311,19458 8359,19162 8406,19081 --- Germanenstr.	?::projected 8304,19475 8268,19558 8234,19634 8233,19695 8231,19806 8242,19869 8234,19936 --- #: XXX ^^^ --- #: XXX ^^^ --- #: next_check ^^^ --- #: last_checked ^^^ ---
@@ -33,7 +33,7 @@ Danziger Str.	?::projected 11709,14856 11864,14781 11990,14714 12025,14695 12128
 #: XXX im Baumaßnahmenkatalog ist nur der östliche Teil ab Heinrich-Heine-Str. eingezeichnet, Baumaßnahmen 1.46 (Realisierung in 2011)
 #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (Realisierung bis 2015)
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7466
-#: last_checked: 2017-02-17
+#: last_checked: 2017-04-28
 #: check_frequency: 60d
 Annenstr./Heinrich-Heine-Platz	?::projected 11161,11330 11094,11377 11052,11414 11039,11425 10892,11555 10815,11662
 # 
@@ -44,7 +44,7 @@ Annenstr./Heinrich-Heine-Platz	?::projected 11161,11330 11094,11377 11052,11414 
 #: osm_watch: way id="4609212"  version="9"
 #: osm_watch: way id="25113713" version="12"
 #: osm_watch: way id="4752742"  version="9"
-#: osm_watch: way id="4752743"  version="10"
+#: osm_watch: way id="4752743"  version="11"
 #: osm_watch: way id="8049679"  version="12"
 #: osm_watch: way id="8049678"  version="8"
 #: last_checked: 2016-08-07
@@ -61,11 +61,11 @@ Schulenburgstr./Weißenburger Str.: werden hier Radspuren markiert?	?::projected 
 Hubertusallee/Teplitzer Str.: hier werden Radspuren markiert	?::inwork 2322,8857 2320,8722 2295,8678 2273,8640 2190,8528 2126,8426 2120,8335 2112,8074 2092,7810
 # 
 #: XXX Baumaßnahmen GR6.20, GR6.19 (Realisierung nach 2011)
-#: osm_watch: way id="4323788" version="17"
-#: osm_watch: way id="23109081" version="8"
-#: osm_watch: way id="41108858" version="6"
+#: osm_watch: way id="4323788" version="18"
+#: osm_watch: way id="23109081" version="9"
+#: osm_watch: way id="41108858" version="7"
 #: source_id: IM_026443	
-#: last_checked: 2016-11-26
+#: last_checked: 2017-03-18
 #: check_frequency: 90d
 Kronprinzessinnenweg: werden hier Radspuren markiert?	?::projected -4001,2858 -4188,2674 -4280,2539 -4290,2304 -4181,2062 -4164,1993 -4180,1941 -4256,1831 -4368,1731 -4492,1624 -4587,1542 -4644,1514 -4744,1466 -4827,1433 -4944,1298
 # 
@@ -73,6 +73,8 @@ Kronprinzessinnenweg: werden hier Radspuren markiert?	?::projected -4001,2858 -4
 #: osm_watch: way id="29435079" version="14"
 #: osm_watch: way id="30198295" version="15"
 #: osm_watch: way id="211549617" version="7"
+#: source_id: 2147341149
+#: source_id: LMS-BR_r_LMS-BR_93467
 #: last_checked: 2016-07-23
 #: check_frequency: 360d
 Großziethener - Barnetstr.: werden hier die bestehenden Radwege verbessert oder durch Radspuren ersetzt?	?::projected 12078,-1170 12023,-1174 11953,-1181 11858,-1189 11761,-1199 11717,-1204 11666,-1209 11578,-1220 11548,-1223 11240,-1262 11149,-1274 11003,-1303 10844,-1335 10720,-1340 10583,-1311 10492,-1266 10379,-1194 10231,-1086 10143,-1026 10082,-986 9888,-853 9815,-805 9780,-788 9693,-815
@@ -86,12 +88,12 @@ Stein/Nuthestr.: wird hier vielleicht eine Ampel hingestellt?	?::projected 10270
 #: XXX Baumaßnahme 2.29 (Realisierung nach 2011)
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=5957 (Realisierung anscheinend ungewiss)
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7877
-#: last_checked: 2017-02-24
+#: last_checked: 2017-03-27
 #: check_frequency: 180d
 Hasenheide: werden hier vielleicht Radspuren Richtung Osten markiert oder Radwege erstellt? Was ist mit der existierenden Gegenrichtung?	?::projected 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260
 # 
 #: XXX Baumaßnahme 2.28 (Realisierung nach 2011) 
-#: last_checked: 2017-02-24
+#: last_checked: 2017-04-25
 #: check_frequency: 90d
 Möckernstr.: werden hier vielleicht Radspuren Richtung Süden markiert oder Radwege erstellt? Was ist mit der existierenden Gegenrichtung?	?::projected 8804,10303 8802,10290 8783,10166 8780,9968 8779,9851 8779,9829 8779,9812 8777,9601
 # 
@@ -105,11 +107,12 @@ Möckernstr.: werden hier vielleicht Radspuren Richtung Süden markiert oder Radwe
 #: XXX laut fritz dauern die Bauarbeiten zwischen Böcklerstraße und Alexandrinenstraße bis 2017-10-13
 #: source_id: 2147340884
 #: source_id: 2147340970
-#: last_checked: 2017-03-04 vvv
-#: next_check: 2017-03-27 vvv
+#: source_id: LMS-BR_r_LMS-BR_90638
+#: last_checked: 2017-04-28 vvv
+#: check_frequency: 21d vvv
 Skalitzer/Gitschiner Str.: Markierung von Radspuren	?::projected 11335,10375 11316,10372 11130,10326 11117,10326 10975,10334 10871,10322 10708,10312 10605,10312 10363,10303 10122,10294 9948,10280
 Skalitzer/Gitschiner Str.: Markierung von Radspuren	?::projected; 9865,10227 9948,10280 9873,10285
-#: next_check ^^^
+#: check_frequency ^^^
 #: last_checked ^^^
 # 
 # REMOVED --- #: XXX Baumaßnahme 2.23 (Realisierung nach 2011) vvv
@@ -129,14 +132,14 @@ Markgrafenstr.: wird hier eine Radwegführung erstellt?	?::projected 9711,11543 9
 #: XXX im Tagesspiegel vom 2013-01-03 erwähnt
 #: osm_watch: way id="4543585" version="22"
 #: osm_watch: way id="42732291" version="14"
-#: last_checked: 2017-02-04
+#: last_checked: 2017-05-01
 #: check_frequency: 90d
 Müllerstr.: Radspuren werden 2013 markiert	?::projected 6781,16026 6914,15908 6936,15888 7024,15810 7129,15717 7198,15656 7277,15586 7393,15476 7464,15409 7607,15282 7745,15160 7811,15096 7911,15008
 # 
 #: XXX Baumaßnahme 1.23 (Realisierung nach 2011)
 #: XXX wenn hier, dann vielleicht auch in der Kongostraße?
 #: osm_watch: way id="4581787" version="8"
-#: last_checked: 2016-07-28
+#: last_checked: 2017-05-01
 #: check_frequency: 120d
 Türkenstr.: wird hier asphaltiert werden?	? 6440,16327 6629,16538
 # 
@@ -161,7 +164,7 @@ Reinickendorfer Str.: werden hier noch die restlichen Radspuren markiert?	?::pro
 # REMOVED (wahrscheinlich passiert hier nichts bevor das Pankower Tor realisiert wird) --- #: XXX Baumaßnahme 3.39 (Realisierung nach 2011) --- #: by: http://www.tagesspiegel.de/berlin/berlin-soll-fahrradfreundlicher-werden-die-liste-der-geplanten-radfahrspuren/8041918-2.html (vom 2013-04-10) --- #: XXX evtl. wird erst etwas mit Realisierung des Stadtquartiers "Pankower Tor" entstehen --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3701 --- #: osm_watch: way id="144945039" version="4" --- #: last_checked: 2013-10-25 (Richtung Nordosten fertig) --- #: next_check: 2014-01-25 --- Granitzstr.: wird auch etwas in der anderen Richtung gemacht?	? 11253,18168 11320,18218 11395,18274 11492,18347 11578,18406 11645,18440 11696,18454 11796,18482
 # 
 #: XXX Baumaßnahme 12.15 (Realisierung nach 2011)
-#: last_checked: 2015-09-12
+#: last_checked: 2017-05-01
 #: check_frequency: 100d
 #: osm_watch: way id="82449630" version="10"
 #: osm_watch: way id="32426064" version="8"
@@ -171,9 +174,9 @@ Quickborner Str.: werden hier Radspuren markiert?	?::projected 7991,21531 7966,2
 #: XXX vermutlich nicht vor dem Bau der Ersatzbrücke
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1504/nachricht5566.html
 #: osm_watch: way id="4484357" version="12"
-#: last_checked: 2014-09-28
-#: next_check: 2015-12-01
-Schönerlinder Str.: entstehen hier bessere Radwege oder Radspuren?	?::projected 11929,23946 11959,24220 11980,24276 12108,24547 12136,24607 12254,24857 12395,25143 12461,25270 12543,25423 12624,25570 12694,25696 12944,26163 13192,26628 13256,26863 13345,27187
+#: last_checked: 2017-04-09
+#: check_frequency: 360d
+Schönerlinder Str.: entstehen hier bessere Radwege oder Radspuren?	?::projected 11929,23946 11959,24220 11980,24276 12108,24547 12136,24607 12254,24857 12395,25143 12461,25270 12543,25423 12624,25570 12697,25704 12944,26163 13192,26628 13256,26863 13345,27187
 #
 # REMOVED (realisiert (Einbahnstraße offen)) --- #: XXX Baumaßnahme 3.35 (Realisierung in 2011) --- #: last_checked: 2013-04-30 --- #: next_check: 2013-07-30 --- Pasedagplatz: wird hier eine Ampel entstehen? Oder die Einbahnstraßenregelung für Radfahrer aufgehoben?	?::projected 14174,17226 14144,17165
 # 
@@ -188,15 +191,15 @@ Wuhletalstr.: werden hier die Radspuren fortgeführt?	?::projected 20895,17594 20
 # REMOVED (realisiert) --- #: XXX Baumaßnahme 10.19 (Realisierung nach 2011) --- #: by: http://www.berlin.de/ba-marzahn-hellersdorf/bvv-online/vo020.asp?VOLFDNR=4797&options=4 --- Hänflingsteig: wird dieser Abschnitt asphaltiert?	?::projected 20093,14591 20147,14570
 # 
 #: XXX Baumaßnahme 11.34 (Realisierung nach 2011)
-#: osm_watch: way id="182782708" version="5"
-#: osm_watch: way id="168307255" version="5"
-#: osm_watch: way id="4687243" version="23"
-#: last_checked: 2017-03-12
+#: osm_watch: way id="182782708" version="6"
+#: osm_watch: way id="168307255" version="6"
+#: osm_watch: way id="4687243" version="24"
+#: last_checked: 2017-04-09
 #: check_frequency: 45d
 Oderbruchstr./Hohenschönhausener Str.: werden hier Radspuren markiert?	?::projected 14990,14537 14754,14406 14721,14379 14667,14336 14658,14328 14465,14210 14361,14145 14298,14015 14261,13932 14218,13834
 # 
 #: XXX Baumaßnahme 11.12 (Realisierung nach 2011)
-#: last_checked: 2017-02-25
+#: last_checked: 2017-04-30
 #: check_frequency: 90d
 Ruschestr.: werden hier Radspuren markiert?	?::projected 15950,12886 15953,12753 15952,12679 15947,12626 15928,12483 15904,12340
 # 
@@ -207,7 +210,7 @@ Ruschestr.: werden hier Radspuren markiert?	?::projected 15950,12886 15953,12753
 # 
 #: XXX Baumaßnahme 9.16 (Realisierung nach 2011) (auch im Maßnahmenkatalog Treptow-Köpenick, Bsw.7)
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5154
-#: last_checked: 2016-12-10
+#: last_checked: 2017-04-07
 #: check_frequency: 90d
 Kiefholzstr.: werden hier Radspuren markiert?	?::projected 15221,7778 15553,7408 15560,7400 15609,7347 15695,7254 15928,6996 15977,6942 16060,6850 16146,6755 16273,6609 16280,6601 16333,6544 16425,6445
 # 
@@ -234,7 +237,7 @@ Blaschkoallee: werden hier Radwege/spuren in Richtung Osten entstehen?	?::projec
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7421
 #: osm_watch: way id="25219757" version="11"
 #: osm_watch: way id="4600236" version="15"
-#: last_checked: 2017-02-04
+#: last_checked: 2017-03-25
 #: check_frequency: 90d
 Stromstr., Westseite: Radspuren bis 2015 geplant	?::projected; 6230,13596 6229,13517 6228,13324
 # 
@@ -245,7 +248,7 @@ Stromstr., Westseite: Radspuren bis 2015 geplant	?::projected; 6230,13596 6229,1
 # REMOVED (realisiert) --- #: by: http://www.berlin.de/ba-pankow/presse/archiv/20140627.1145.398202.html (Bauarbeiten, letzter Abschnitt) --- #: next_check_id: BLANKENBURGER-2014 --- #: last_checked: 2015-07-19 --- #: next_check: 2015-12-31 --- Blankenburger Str.: Radspuren bis 2015 geplant	?::projected 11563,20048 11632,20086 11690,20127 11799,20224 11959,20365 12008,20368
 # 
 #: osm_watch: way id="33836252" version="14"
-#: last_checked: 2016-09-23
+#: last_checked: 2017-04-09
 #: check_frequency: 120d
 Pasewalker Str.: Radspuren bis 2015 geplant	?::projected 11907,19749 11909,19706 11911,19667 11915,19580 11927,19308 11937,19175
 # 
@@ -259,7 +262,7 @@ Alt-Gatow: Radspuren bis 2015 geplant	?::projected; -4760,9343 -4751,9259 -4757,
 # 
 #: by: http://www.berlin.de/ba-spandau/presse/archiv/20130529.1355.385410.html (Bauarbeiten in der Wilhelmstraße, existieren dann die Radspuren?)
 #: XXX vermutlich später als 2015, ggfs. bis August 2016
-#: osm_watch: way id="24033655" version="31"
+#: osm_watch: way id="24033655" version="32"
 #: last_checked: 2016-08-07
 Kladower Damm: Radpuren bis 2015 geplant	?::projected; -5097,7361 -5046,7442 -4967,7567 -4906,7666 -4819,7833
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.563697.php
@@ -282,16 +285,7 @@ Zeppelinstr.: Radspuren bis 2015 geplant	?::projected -4670,14637 -4667,14712 -4
 #: osm_watch ^^^
 # 
 # REMOVED --- #: by: http://www.berlin.de/ba-spandau/presse/archiv/20130529.1355.385411.html (Bauarbeiten in der Wilhelmstraße, existieren dann die Radspuren?) --- #: osm_watch: way id="24406521" version="15" --- Wilhelmstr.: Radspuren bis 2015 geplant	?::projected; -5501,11251 -5455,11321 -5392,11421
-# 
-#: XXX zurzeit Bauarbeiten bis Mitte Dezember 2015 (laut vmz) bzw. Mitte Juni 2016 (laut Stadtentwicklungsseite), danach existieren Radspuren
-#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5508.html
-#: source_id: IM_024325
-#: osm_watch: way id="4472041" version="12"
-#: last_checked: 2017-03-04
-#: check_frequency: 21d
-# REMOVED (realisiert) --- Feuerbachstr.: Radspuren bis 2015 geplant	?::inwork 5582,6360 5701,6386
-Feuerbachstr.: Radspuren bis 2015 geplant	?::inwork 5701,6386 5781,6404 5823,6413
-# 
+# REMOVED --- #: XXX zurzeit Bauarbeiten bis Mitte Dezember 2015 (laut vmz) bzw. Mitte Juni 2016 (laut Stadtentwicklungsseite), danach existieren Radspuren --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1503/nachricht5508.html --- #: source_id: IM_024325 --- #: osm_watch: way id="4472041" version="12" --- #: last_checked: 2017-03-04 --- #: check_frequency: 21d --- # REMOVED (realisiert) --- Feuerbachstr.: Radspuren bis 2015 geplant	?::inwork 5582,6360 5701,6386 --- Feuerbachstr.: Radspuren bis 2015 geplant	?::inwork 5701,6386 5781,6404 5823,6413
 # REMOVED (realisiert) --- #: last_checked: 2013-05-10 --- #: check_frequency: 90d --- Königstr.: Radspuren bis 2015 geplant	?::projected -9412,546 -9730,514 -9969,519 -10052,521 -10269,445 -10593,476
 # REMOVED (realisiert) --- #: last_checked: 2013-07-06 --- #: next_check: 2013-10-13 --- Kamenzer Damm: Radspuren bis 2015 geplant	?::projected; 7487,3089 7115,3003
 # REMOVED (realisiert) --- #: osm_watch: way id="151617776" version="11" --- #: last_checked: 2015-10-31 --- #: check_frequency: 90d --- Kaiserstr.: Radspuren bis 2015 geplant	?::projected 9310,4407 9192,4389 9079,4376
@@ -305,7 +299,10 @@ Schöneberger Str.: Radspuren bis 2015 geplant	?::projected 8739,6701 8653,6781 8
 #: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/bvv/mdv_vii_19.pdf?start&ts=1368606374&file=mdv_vii_19.pdf (Seite 79)
 #: osm_watch: way id="28961260" version="13"
 #: source_id: 2147339938
-#: last_checked: 2017-03-01
+#: source_id: LMS-BR_r_LMS-BR_91391
+#: XXX laut fritz bis Ende Oktober 2017
+#: last_checked: 2017-04-07
+#: next_check: 2017-09-30
 Köpenicker Landstraße: Radspuren bis 2015 geplant	?::projected; 15303,8343 15166,8489
 #: by: ^^^
 # 
@@ -315,13 +312,14 @@ Köpenicker Landstraße: Radspuren bis 2015 geplant	?::projected; 15303,8343 15166
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3225
 #: XXX mittelfristig Realisierung von Radstreifen
 #: osm_watch: way id="340337649" version="2"
-#: last_checked: 2016-10-03
+#: last_checked: 2017-05-01
 #: check_frequency: 150d
 Hauptstr. (Wilhelmsruh): werden hier Radstreifen realisiert?	?::projected 7672,19869 7711,19956 7748,20040 7790,20132 7832,20219
 # 
 #: by: http://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=3233 vvv
 #: XXX "Durchführung der Maßnahme in 2015"
-# REMOVED (teilweise fertig) --- #: osm_watch: way id="205989870" version="7" --- #: osm_watch: way id="205989877" version="11" --- #: last_checked: 2015-09-12 --- #: check_frequency: 90d --- Eichborndamm: Ersetzung der vorhandenen Radwege durch Radstreifen?	?::projected 4780,20116 4766,20084 4728,20003 4611,19769 4497,19539 4357,19261 4284,19106 4240,19019
+# REMOVED (teilweise fertig) --- #: osm_watch: way id="205989870" version="7" --- #: osm_watch: way id="205989877" version="11" --- #: last_checked: 2015-09-12 --- #: check_frequency: 90d --- Eichborndamm: Ersetzung der vorhandenen Radwege durch Radstreifen?	?::projected 4780,20116 4766,20084 4728,20003 4611,19769 4497,19539 4357,19261 4284,19106 4228,19024
+# REMOVED (ja) --- Eichborndamm: existieren die Radstreifen schon ab der Kreuzung Waldstr.?	? 4210,18878 4232,18981 4228,19024
 # REMOVED (keine Änderung bei der Radroutenführung) --- #: next_check: 2015-09-01 (noch keine konkrete Planung) --- Tornower Weg - Wilhelmsruher Damm: "Lückenschluss" der Radwegführung, in welcher Form?	?::projected 6519,21002 6565,21004 6560,21055 6596,21062 6594,21134
 #: XXX noch keine konkrete Planung
 #: last_checked: 2016-10-03
@@ -335,11 +333,11 @@ Ernststr.: Verbesserung für den Radverkehr, evtl. Entfernung des Kopfsteinpflast
 # REMOVED (realisiert) --- #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2015/pressemitteilung.328462.php --- #: XXX_osm meint schon cycleway=lane, aber bezieht sich nur auf die Pressemitteilung --- #: next_check: 2015-10-16 --- Gaußstr.: Radspuren werden errichtet	?::inwork 3739,13563 3833,13590 4098,13664 4187,13704
 # 
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.491926.php vvv
-#: last_checked: 2016-12-16 vvv
-#: check_frequency: 90d vvv
+#: last_checked: 2017-03-25 vvv
+#: check_frequency: 100d vvv
 # REMOVED --- #: osm_watch: way id="4491994" version="14" --- Nürnberger Str.: Radspuren entstehen	?::projected 5764,10322 5808,10396 5866,10492 --- Nürnberger Str.: Radspuren entstehen	?::projected 5866,10492 5866,10492
 #: XXX hier sieht es eigentlich nicht so aus, als ob Radspuren vorgesehen sind...
-#: osm_watch: way id="4491980" version="10"
+#: osm_watch: way id="4491980" version="11"
 Nürnberger Str.: Radspuren entstehen	?::projected 5866,10492 6025,10746
 # REMOVED --- #: osm_watch: way id="151526149" version="3" --- Nürnberger Str.: Radspuren entstehen	?::projected 6025,10746 6122,10925 6145,10975
 #: check_frequency ^^^
@@ -348,22 +346,25 @@ Nürnberger Str.: Radspuren entstehen	?::projected 5866,10492 6025,10746
 # 
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4247 vvv
 #: XXX "Ausführung frühestens 2018"
+#: last_checked: 2017-05-01
 #: next_check: 2018-05-01
 Kastanienallee: Radverkehrsanlagen sind vorgesehen	?::projected 9460,20644 9551,20662 9622,20677 9676,20700 9740,20719 9839,20749 9895,20766 9982,20793 10138,20840
 # 
 #: XXX "ab 2017"
-#: next_check: 2017-05-01
+#: last_checked: 2017-04-09
+#: check_frequency: 60d
 Pasewalker Str.: Schutzstreifen werden erstellt, außerdem eine Ampel an der Kreuzung Bahnhofstr.	?::projected 12121,20969 12158,21166 12166,21208 12188,21330 12209,21448 12172,21545 12042,21886
 # 
+#: last_checked: 2017-04-09
 #: next_check: 2018-05-01
 Triftstr.: Planung von Radverkehrsanlagen	?::projected 11940,22587 11959,22696 11979,22801 11995,22884 12023,23039 12027,23057 12039,23125 12058,23227 12067,23241
 # 
-#: last_checked: 2017-03-12
+#: last_checked: 2017-04-09
 #: check_frequency: 60d
 Neumannstr.: Planung von Radverkehrsanlagen	?::projected 11390,17962 11412,17823 11442,17664 11457,17585 11482,17459 11508,17315 11522,17248 11541,17153 11570,17028 11598,16878 11621,16749 11630,16623 11655,16486 11659,16457 11673,16367
 # 
-#: last_checked: 2016-12-09
-#: check_frequency: 60d
+#: last_checked: 2017-04-10
+#: check_frequency: 90d
 Berliner Allee/Tassostr.: Bau einer Ampel	?::projected 13591,15969 13623,15954 13653,15938
 #: by: ^^^
 # 
@@ -372,9 +373,6 @@ Berliner Allee/Tassostr.: Bau einer Ampel	?::projected 13591,15969 13623,15954 1
 #: last_checked: 2016-09-30
 #: next_check: 2017-05-01
 Munsterdamm: bei der Fahrbahnsanierung entstehen Radspuren	?::projected 6651,4843 6744,4983 6746,4999 6747,5010 6767,5233
-# 
-#: XXX laut osm asphaltiert
-(Richterstr. - Rathausstr./Alt-Mariendorf): existiert hier ein Radweg? Qualität? Nachts beleuchtet?	? 9115,3959 9117,3898
 # 
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/gremien-und-ansprechpartner/fahrrat/2016-07-28-prot-fahrratsitzung3.pdf vvv
 #: osm_watch: way id="25415937" version="25"
@@ -387,7 +385,13 @@ Mariendorfer Allee: Projektplanung für Schutzstreifen	?::projected 8579,2265 855
 #: osm_watch: way id="169753565" version="5"
 #: osm_watch: way id="111325187" version="13"
 #: osm_watch: way id="111325188" version="15"
-#: last_checked: 2017-03-06
+#: source_id: 2147341157
+#: source_id: 2147341182
+#: source_id:LMS-BR_r_LMS-BR_93889
+#: source_id: 2147341183
+#: XXX Ende laut rbbtext: 19. April, laut fritz: 22. April (beide: in Höhe Bayernring), laut vmz: Ende April (Gesamtmaßnahme), am 2017-04-25 ist aber noch nichts passiert
+#: last_checked: 2017-04-25
+#: check_frequency: 14d
 Boelckestr.: Planung für Radverkehrsanlagen (vermutlich Schutzstreifen oder Radspuren)	?::projected 8594,8777 8601,8724 8616,8605 8660,8454 8670,8370 8666,8305 8632,8174 8620,8095 8623,8018 8627,7941 8642,7876 8686,7726 8690,7704 8704,7603 8706,7585 8715,7384 8716,7323
 #: by: ^^^
 # 
@@ -433,11 +437,12 @@ Treptower Park: neuer Weg?	?::projected 15217,9137 15410,9147 15442,9095
 # REMOVED (nur ein paar Meter Einbahnstraße, wie schon vorher) --- #: XXX NEW¦Auerstraße zwischen Richard-Sorge-Straße und Löwestraße Friedrichshain (Berlin)  Gültig ab: 07.01.2017 07:00  beide Fahrtrichtungen gesperrt, Baustelle¦LMS-BR_r_LMS-BR_87313¦¦ --- #: XXX laut fritz bis 30.04.2017, bei vmz mittlerweile schon entfernt --- Auerstr.: Bauarbeiten für Radfahrer relevant?	? 13273,12902 13202,12790
 # 
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_04_0325_0472_online.pdf
+#: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_15_1637_1712_online.pdf (Grundstücksnummerierungen)
 #: XXX fehlt bei Berlin.coords.data
 #: osm_watch: way id="475965723" version="1"
 #: note: Privatstraße
 #: XXX eine Baustraße existiert schon
-#: last_checked: 2017-02-25
+#: last_checked: 2017-04-30
 #: check_frequency: 60d
 Am Herzbergteich: wann ist die Straße fertig? Qualität? Genaue Lage?	? 17945,13501 17942,13568
 # 
@@ -454,8 +459,8 @@ Mellowpark: geplanter Uferweg	?::projected 21569,5730 21463,5640 21355,5679 2124
 #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/holzmarktstrasse/index.shtml
 #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/holzmarktstrasse/download/LP_01.pdf
 #: source_id: 2147340618
-#: last_checked: 2017-03-04
-#: next_check: 2017-04-01
+#: source_id: LMS-BR_r_LMS-BR_81616
+#: last_checked: 2017-04-21
 Holzmarktstr.: Neubau, Komplettierung der Radstreifen	? 11347,12223 11388,12202 11513,12138 11619,12084 11764,12001
 # 
 # REMOVED (realisiert) --- #: by: http://www.aktion-kms.de/files/2015-07-13_flyer_isarneckar_final.pdf --- #: last_checked: 2016-12-15 --- #: check_frequency: 30d --- Neckarstr./Isarstr.: Umgestaltung, danach verkehrsberuhigter Bereich; ändert sich am Fahrbahnbelag etwas?	?::inwork 12368,8356 12382,8292 12509,8318 12639,8344
@@ -478,22 +483,23 @@ Holzmarktstr.: Neubau, Komplettierung der Radstreifen	? 11347,12223 11388,12202 
 #: next_check: 2016-09-19
 Am Carolinenhof: existiert die Straße schon? Qualität? Genaue Lage?	? -8113,4000 -8146,3916 -8154,3863
 # 
-#: XXX http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4316
+#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4316
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036209836611/209836611/00129192/92-Anlagen/02/BenennungsabsichtfuereineneueprivateErschliess.pdf
 #: XXX too late: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/33re.pdf/file?y=2016 (Grundstücksnummerierungen)
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4367
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/50re.pdf/file?y=2016 (Benennung)
 #: XXX fehlt bei Berlin.coords.data, PLZ=13156
 #: XXX Privatstraße
-#: last_checked: 2016-09-23
+#: osm_watch: note 789602 2
+#: last_checked: 2017-04-09
 #: check_frequency: 180d
-Karlinekenweg: neue Straße in Planung, Qualität, genaue Lage?	?::projected 11419,20327 11371,20295 11485,20064 11544,20079 11563,20048
+Karlinekenweg: neue Straße in Planung, Qualität, genaue Lage?	?::projected 11359,20297 11409,20191 11431,20202 11498,20068 11541,20090
 # 
 # REMOVED (noch keine Bauarbeiten) --- #: XXX Zwischen Bosse- und Bödikerstraße Sperrung stadtauswärts. (Bis 08.09.2016 17:00 Uhr) --- Corinthstr.: Bauarbeiten auch für Radfahrer relevant?	?::inwork; 14312,10657 14490,10610
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5550
 #: XXX Umsetzung bis 2017
-#: last_checked: 2017-02-25
+#: last_checked: 2017-04-09
 #: check_frequency: 90d
 Landsberger Allee: Ausbau der Radwege	? 18057,14549 17848,14523 17533,14484 17254,14451 17055,14432 16852,14412 16632,14390 16590,14386 16314,14361 16010,14326 15925,14316 15850,14308 15430,14262 15256,14237 14964,14123 14954,14119 14871,14087 14771,14048 14218,13834
 # 
@@ -506,6 +512,7 @@ Baumarkt (?) wird gebaut: wird es eine Durchfahrmöglichkeit geben?	?::inwork 170
 # 
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2016/pressemitteilung.466174.php
 #: by: http://www.berlin.de/ba-spandau/_assets/ueber-den-bezirk/16-04-07-havel-radweg-schifffahrtsufer-umleitung.jpg
+#: XXX heißt dieser Abschnitt auch Hermann-Oxfort-Promenade?
 #: last_checked: 2016-10-08
 Schifffahrtsufer: wird dieser Abschnitt nach den Bauarbeiten asphaltiert sein?	?::inwork -3529,13452 -3546,13503 -3556,13582 -3543,13691 -3503,13773
 # REMOVED (hier ja) --- Schifffahrtsufer: wird dieser Abschnitt nach den Bauarbeiten asphaltiert sein?	?::inwork -3503,13773 -3460,13828 -3459,13846 -3390,13940 -3345,13994
@@ -521,7 +528,8 @@ Christoph-Ruden-Straße - Buckower Damm: Herstellung eines öffentlichen Rad- und 
 #: by: http://www.stadtentwicklung.berlin.de/planen/b-planverfahren/de/oeffauslegung/1-35a/index.shtml
 #: by: http://www.stadtentwicklung.berlin.de/planen/b-planverfahren/de/oeffauslegung/1-35a/download/15099800_BBP_1-35a_Planzeichnung.pdf
 #: XXX Bebauungsplan 1-35a (Kulturforum)
-#: next_check: 2017-07-01
+#: last_checked: 2017-04-29
+#: check_frequency: 180d
 Kulturforum: Umwandlung in verkehrsberuhigte bzw. Fußgängerbereiche	?::projected 8083,11381 7970,11441 7954,11399 7965,11380 7934,11275
 # 
 # REMOVED --- #: XXX während der Bauarbeiten Einbahnstraßenregelungen -> siehe temp_blockings --- #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.450655.php --- #: last_checked: 2016-04-30 --- #: next_check: 2016-05-30 --- Köllnische Str.: Bauarbeiten, danach vermutlich asphaltiert	?::inwork 18659,5330 18820,5275 18942,5236 18999,5237 19031,5316
@@ -558,7 +566,7 @@ Wuhlewanderweg: wird hier ein Weg auf der östlichen Uferseite errichtet?	?::proj
 #: XXX "Der gesamte Straßenzug von der Danziger Straße bis zur Wisbyer Straße soll bis Ende 2017 fertig gestellt werden."
 #: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2016/pressemitteilung.544145.php
 #: XXX "bis voraussichtlich 2018"
-#: last_checked: 2017-03-12 vvv
+#: last_checked: 2017-05-01 vvv
 #: check_frequency: 45d vvv
 Pappelallee/Stahlheimer Str.: Radspuren entstehen	?::inwork 10881,15047 11112,15387
 # REMOVED (realisiert) --- Pappelallee/Stahlheimer Str.: Radspuren entstehen	?::inwork 11112,15387 11176,15489
@@ -594,23 +602,24 @@ Jungfernstieg: in der Fahrbahnmitte ein 4m breiter Asphaltstreifen geplant	?::pr
 # 
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/beschreibung-dahlemer-weg.pdf
 #: osm_watch: way id="14477524" version="42"
-#: last_checked: 2016-07-07
-#: check_frequency: 60d
+#: last_checked: 2017-03-26
+#: check_frequency: 90d
 Dahlemer Weg: Radwege werden durch Radspuren ersetzt	?::projected 2152,2912 2198,3169 2203,3213 2253,3505 2287,3702
 # 
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20151009
 #: by: http://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/tiefbau-und-landschaftsplanung/tief/pdf/entwurfsplanung_bohnsdorfer_kreisel_geschuetzt.pdf
 #: by: http://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/tiefbau-und-landschaftsplanung/tief/pdf/voraussichtliche-verkehrsfuehrung-bohnsdorfer-kreisel.pdf
 #: by: http://www.bohnsdorfer-kreisel.de/?date=20161211 (Blog)
+#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.580282.php
 #: XXX außerdem: zwei Zebrastreifen werden eingerichtet, an der Kreuzung Richterstr. wird eine Ampel eingerichtet (statt des jetzigen Zebrastreifens)
 #: XXX außerdem: Vorfahrtsregelung werden geändert (zum Am Falkenberg) oder spezifiziert (zur Buntzelstr.)
 #: XXX komplettes Bauende 2018
 #: osm_watch: way id="147717029" version="6"
 #: osm_watch: way id="151627031" version="9"
 #: last_checked: 2016-07-23 vvv
-#: next_check: 2017-04-15 vvv
+#: next_check: 2017-04-30 vvv
 Bohnsdorfer Kreisel: Bau von Radspuren in beiden Richtungen; Aufhebung der Einbahnstraßenregelung	?::projected 22007,711 22062,773 22120,886 22092,999 22044,1018 21977,988
-#: osm_watch: way id="185511108" version="8"
+#: osm_watch: way id="410955359" version="2"
 Bohnsdorfer Kreisel: Einbahnstraße wird aufgehoben	?::projected 21977,988 21894,881 21862,807 22007,711
 #: next_check ^^^
 #: last_checked ^^^
@@ -637,8 +646,8 @@ Oskar Helene Park: Wann sind die Bauarbeiten beendet? genaue Straßenführung? Qua
 # 
 #: XXX Baumaßnahme GR9.24 (Realisierung nach 2011)
 #: XXX wird hier asphaltiert werden? Was ist mit dem Schlenker am Spreepark?
-#: osm_watch: way id="207761374" version="2"
-#: last_checked: 2016-10-10
+#: osm_watch: way id="207761374" version="3"
+#: last_checked: 2017-04-07
 #: check_frequency: 180d
 Wasserweg: wird hier asphaltiert werden? Was ist mit dem "Schlenker" am Spreepark-Eingang?	?::projected 15680,8914 15873,8884 16023,8860 16161,8852 16201,8860
 # 
@@ -648,6 +657,7 @@ Wasserweg: wird hier asphaltiert werden? Was ist mit dem "Schlenker" am Spreepar
 # REMOVED --- #: next_check: 2015-08-15 --- Knobelsdorffstr.: Einbau von drei Moabiter Kissen; gibt es für Radfahrer danach Beeinträchtigungen?	? 2547,11788 2728,11805 2953,11830
 # REMOVED (nein) --- Sterndamm: Status der Bauarbeiten hier? Gibt es Sperrungen für Radfahrer?	? 17886,5587 17736,5441
 # 
+#: next_check_id: RATHAUSWEDDING-2017
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2015/pressemitteilung.312877.php
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1505/nachricht5598.html
 #: XXX Fertigstellung der Platzgestaltung für Ende 2016 vorgesehen
@@ -656,8 +666,8 @@ Wasserweg: wird hier asphaltiert werden? Was ist mit dem "Schlenker" am Spreepar
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7231
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7807
 #: osm_watch: way id="23175110" version="6"
-#: last_checked: 2016-07-28
-#: check_frequency: 90d
+#: last_checked: 2017-05-01
+#: check_frequency: 60d
 Rathaus Wedding: ändert sich was während/nach der Bauarbeiten am Rathausplatz?	? 7012,15571 7129,15717
 # 
 # REMOVED (-> radwege-orig) --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20150511.1105.401906.html --- #: XXX teilweise schon zurückgebaut, Ende der Bauarbeiten im Herbst 2015 --- Rixdorfer Str.: Umbau der Radwege zu Radstreifen	?::inwork 9953,3806 10181,4181 10185,4187 10221,4245 10288,4354 10412,4552
@@ -756,7 +766,7 @@ Sternbergpromenade: der Havel-Radweg wird hier offiziell entlanggeführt	?::proje
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2014/mdb-bapankow-pressestelle-ba-beschluesse-2014-13.05.14_genehmigung_von_20_bauvorhaben_gem________33_abs_1_baugb_im_geltungsbereich_des_bebauungsplanentwurfs_xix_48b_f__r_das_gel__nde_zwischen_dr_markus_stra__e__pankgaben_...pdf
 #: XXX Öffentliche Straßen:
 #: next_check_id: NIZZASTR-2014 vvv
-#: last_checked: 2016-09-23 vvv
+#: last_checked: 2017-04-09 vvv
 #: check_frequency: 60d vvv
 #: XXX Planstraße A -> Marseillestraße
 #: XXX zurzeit eine Baustraße
@@ -770,10 +780,7 @@ Marseillestr. - Dr.-Markus-Str.: Qualität? wann ist die Fertigstellung? wird hie
 # REMOVED --- : XXX Privatstraße III und IV -> Brester Ring -> Brester Ring|Französisch Buchholz|13127
 # REMOVED --- : XXX Privatstraßen V, VI, VII -> Grenobler Ring -> Grenobler Ring|Französisch Buchholz|13127
 # REMOVED --- : XXX Privatstraße X -> Bordeauxstraße --- #: osm_watch: way id="344108063" version="1" --- Bordeauxstr.: genaue Lage? Qualität (vermutlich Verbundsteinpflaster)? Verkehrsberuhigt? Sackgasse? wann ist die Fertigstellung?	?::inwork 12323,21479 12411,21515
-#: XXX Privatstraße XIV -> Toulonstraße
-#: osm_watch: way id="344108080" version="2"
-#: XXX_osm bei osm schon als verkehrsberuhigt eingetragen, die Schilder fehlen aber in der Realität
-Toulonstr.: wird hier noch verkehrsberuhigt?	? 12404,21532 12480,21560
+# REMOVED (ja) --- #: XXX Privatstraße XIV -> Toulonstraße --- #: osm_watch: way id="344108080" version="2" --- #: XXX_osm bei osm schon als verkehrsberuhigt eingetragen, die Schilder fehlen aber in der Realität --- Toulonstr.: wird hier noch verkehrsberuhigt?	? 12404,21532 12480,21560
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4111
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036978486193/978486193/00069082/82-Anlagen/02/BenennungsabsichtfuereinenPrivatweggemaessBeba.pdf
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4130
@@ -782,13 +789,13 @@ Toulonstr.: wird hier noch verkehrsberuhigt?	? 12404,21532 12480,21560
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/01re.pdf/file?y=2016 (Grundstücksnummerierungen)
 #: osm_watch: way id="344108078" version="3"
 #: XXX PLZ=13127
-#: XXX laut osm living_street
-Rennesstr.: genaue Lage, Qualität?	?::projected 12411,21515 12422,21492 12467,21515
+#: XXX_osm laut osm living_street, die Schilder fehlen aber in der Realität
+Rennesstr.: wird hier nocht verkehrsberuhigt?	? 12411,21515 12422,21492 12472,21510
 # REMOVED (einzelne Straßen aufgeführt) --- Bebauungsplan XIX-48b: neue Plan- und Privatstraßen werden erstellt	?::inwork 12337,20954 12459,21010 12562,21055 12547,21372 12495,21670 12172,21545 12209,21448 12189,21337 12168,21218 12255,21083 12337,20954
-# REMOVED (realisiert) --- Nizzastr.: bereits fertiggestellt? Qualität? Genaue Lage?	?::inwork 12257,21079 12434,21160 12404,21217 12384,21256 12360,21303 12322,21378
+# REMOVED (realisiert) --- Nizzastr.: bereits fertiggestellt? Qualität? Genaue Lage?	?::inwork 12257,21079 12434,21160 12404,21217 12384,21256 12360,21303 12319,21382
 # REMOVED (realisiert) --- Brester Ring: bereits fertiggestellt? Qualität? Genaue Lage?	?::inwork 12384,21256 12326,21226 12302,21275 12360,21303
 # REMOVED (teilweise realisiert) --- Grenobler Ring: bereits fertiggestellt? Qualität? Genaue Lage?	?::inwork 12404,21217 12483,21255 12441,21341 12360,21303
-# REMOVED (Trassenführung schon in strassen-orig) --- Lyonstr.: bereits fertiggestellt? Qualität? Genaue Lage?	?::inwork 12189,21337 12214,21332 12322,21378 12443,21439
+# REMOVED (Trassenführung schon in strassen-orig) --- Lyonstr.: bereits fertiggestellt? Qualität? Genaue Lage?	?::inwork 12189,21337 12214,21332 12319,21382 12443,21439
 #: osm_watch: way id="344108077" version="2"
 Nizzastr. - Dr.-Markus-Str.: Gehweg, für Radfahrer frei ausgeschildert, der Weg existiert aber noch nicht. Genaue Lage? Qualität? Nachts beleuchtet?	?::inwork 12434,21160 12522,21208 12535,21282 12507,21391 12497,21468 12515,21581 12495,21670
 #: check_frequency ^^^
@@ -812,19 +819,7 @@ Mauerweg Rudow: wann wird der fehlende Abschnitt gebaut?	?::projected 16997,-663
 # REMOVED (2014-06-06 in Realisierung) --- #: priority: #C --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/bvv-online/vo020.asp?VOLFDNR=6008 --- #: next_check: 2014-06-20 --- Manteuffelstr./Wrangelstr.: Zebrastreifen wird realisiert	?::projected 12148,10897 12180,10903 12218,10915
 # REMOVED (Zebrastreifen realisiert, keine Aufpflasterung) --- #: next_check_id: GUDVANGER-2014 vvv --- #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/gudvanger_strasse.html (aktuelle Infos) vvv--- #: by: http://www.berlin.de/imperia/md/content/bapankow/tiefbauamt/kreuzung_gudvanger_kr__ger_e._weinert_stra__e.pdf?start&ts=1365760997&file=kreuzung_gudvanger_kr__ger_e._weinert_stra__e.pdf vvv --- #: by: http://www.berlin.de/ba-pankow/presse/archiv/20130910.1250.389055.html (Baubeginn 38. KW) vvv --- #: last_checked: 2013-12-17 vvv --- #: check_frequency: 30d vvv --- #: priority: #C --- Erich-Weinert-Str.: Zebrastreifen in Planung	?::projected 11676,15986 11688,16006 --- Gudvanger Str.: im Bereich der Schule ist eine Aufpflasterung geplant	?::projected 11567,15842 11673,16003 --- #: check_frequency ^^^ --- #: last_checked ^^^ --- #: by: ^^^ --- #: by: ^^^ --- #: by: ^^^ --- #: next_check_id ^^^
 # REMOVED (aufgenommen) --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3594 --- #: by: http://www.berlin.de/ba-pankow/bvv-online/___tmp/tmp/45081036373765264/373765264/00056582/82-Anlagen/02/BenennungsabsichtfuerdenPlatzanderBornhomerBru.pdf (Lage) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/43re.pdf/file?y=2013 (Benennung am 11.11.2013 wirksam) --- #: by: http://www.berlin.de/ba-pankow/presse/archiv/20131104.1110.391159.html --- #: XXX fehlt in Berlin.coords.data --- #: XXX außerdem: "barrierefreie Anbindung" zum Mauerweg --- #: next_check: 2013-11-09 --- Platz des 9. November 1989: geplante Benennung	?::projected 9998,16547 10134,16534 10197,16528
-# 
-#: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3437
-#: by: http://www.berlin.de/ba-pankow/bvv-online/___tmp/tmp/45-181-136478427199/478427199/00053086/86-Anlagen/03/3_Version_vom_13_08_2013.doc (angeordnet, aber keine finanziellen Mittel)
-#: XXX Baustellenampel existiert, aber noch nocht eingeschaltet
-#: XXX evtl. hat die Baustellenampel auch mit den Bauarbeiten an der BAB114 zu tun (Umleitungsstrecken)
-#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4306
-#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4305
-#: XXX wurde die Baustellenampel abgebaut?
-#: source_id: 2147340304
-#: osm_watch: node id="30558158" version="7"
-#: last_checked: 2016-10-27
-Bahnhofstr./Blankenburger Weg/Pankstr.: Ampel geplant	?::projected 12442,20805
-# 
+# REMOVED (-> ampeln_orig) --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3437 --- #: by: http://www.berlin.de/ba-pankow/bvv-online/___tmp/tmp/45-181-136478427199/478427199/00053086/86-Anlagen/03/3_Version_vom_13_08_2013.doc (angeordnet, aber keine finanziellen Mittel) --- #: XXX Baustellenampel existiert, aber noch nocht eingeschaltet --- #: XXX evtl. hat die Baustellenampel auch mit den Bauarbeiten an der BAB114 zu tun (Umleitungsstrecken) --- #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4306 --- #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4305 --- #: XXX wurde die Baustellenampel abgebaut? ---#: source_id: 2147340304 --- #: osm_watch: node id="30558158" version="7" --- #: last_checked: 2016-10-27 --- Bahnhofstr./Blankenburger Weg/Pankstr.: Ampel geplant	?::projected 12442,20805
 # REMOVED --- #: by: http://www.berlin.de/ba-reinickendorf/bvv-online/vo020.asp?VOLFDNR=3129 --- #: by: http://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4353 --- #: by: http://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=3906 (Umsetzung 2016) --- #: by: http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2016/pressemitteilung.459697.php --- #: last_checked: 2015-11-07 --- #: check_frequency: 90d --- #: priority: #C --- Jean-Jaurés-Straße/Nimrodstraße: befindet sich hier der Zebrastreifen?	? 4575,22089 4584,22107 4582,22122
 # REMOVED (aufgenommen) --- #: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2015/pressemitteilung.263369.php --- #: next_check: 2015-02-12 --- Hadlichstraße: gibt es hier einen Zebrastreifen?	? 11087,18344 11123,18343 11147,18333
 # REMOVED (aufgenommen, Radweg) --- #: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20130730.0800.387345.html --- #: source_id: INKO_120069 (hier aber nur bis Ende September) --- #: next_check: 2013-10-05 --- Ruppiner Chaussee: Fahrradstreifen nach den Bauarbeiten?	?::inwork -1872,24336 -1953,24435 -1982,24514
@@ -954,8 +949,8 @@ Bebauungsplan XV-71 (Mittelweg), Ortsteil Altglienicke: hier werden vermutlich e
 #: by: http://fbinter.stadt-berlin.de/ScansBPlan/07_tem_sch/B-Plaene/Bebauungsplan/Mariendorf/102/UeberXIII-102.htm
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/___tmp/tmp/45081036573567460/573567460/00038455/55-Anlagen/03/3_Version_vom_05_12_2012.pdf
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/___tmp/tmp/45081036623219836/623219836/00063059/59-Anlagen/07/BA_Anlage5_DurchfuehrungsvertragEndfassung2507.pdf
-#: last_checked: 2016-03-13
-#: check_frequency: 240d
+#: last_checked: 2017-03-26
+#: check_frequency: 360d
 Straße 6 (Mariendorf): wird in Zukunft vielleicht entstehen	? 9099,4204 9079,4376
 # 
 #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/___tmp/tmp/45081036151900222/151900222/00079726/26-Anlagen/01/DRS0047VK.pdf (Bebauungsplan 9 - 47)
@@ -1007,10 +1002,7 @@ Alt-Wittenau/Techowpromenade: wird hier ein Zebrastreifen angelegt?	?::projected
 #: last_checked: 2015-11-07
 #: check_frequency: 90d
 Heinsestraße südlich Fellbacher Platz: wird hier ein Zebrastreifen angelegt?	?::projected 3621,23223 3627,23246 3655,23244
-#: last_checked: 2016-10-03
-#: check_frequency: 60d
-#: priority: #C
-Eichborndamm/Rotbuchenweg: wird hier ein Zebrastreifen angelegt?	?::projected 4566,19735 4584,19713 4611,19769
+# REMOVED (realisiert) --- #: last_checked: 2016-10-03 --- #: check_frequency: 60d --- #: priority: #C --- Eichborndamm/Rotbuchenweg: wird hier ein Zebrastreifen angelegt?	?::projected 4566,19735 4584,19713 4611,19769
 # REMOVED (existiert) --- #: by: http://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=3906 (Umsetzung 2016) --- #: last_checked: 2016-03-26 --- #: check_frequency: 30d --- Reginhardstr.: Zebrastreifen in Bau	?::inwork 8056,17208 8055,17179 8091,17194
 #: priority ^^^
 #: by: ^^^
@@ -1032,10 +1024,13 @@ Rennbahnstr./Gustav-Adolf-Str.: hier wird in Zukunft eine Ampel (normal? Fußgäng
 # REMOVED (nur eine Mittelinsel entstanden) --- #: last_checked: 2015-11-14 --- #: check_frequency: 14d --- #: priority: #C --- Lohmühlenbrücke: Zebrastreifen wird angelegt (oder nur eine Mittelinsel?)	?::inwork 12850,9375 12871,9356 12888,9338
 # 
 #: by: http://www.bwb.de/content/language1/html/10337.php#11671
+#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2018-2022)
+#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/170315_radverkehrsmassnahmen-nkn-bis-2022.jpg (Übersichtskarte)
+#: XXX Ausbau des Kopfsteinpflasters, Bau einer Asphaltfahrbahn
 #: osm_watch: way id="75509950" version="11"
-#: last_checked: 2017-03-13
-#: check_frequency: 60d
-Friedelstr.: ein asphaltierter Fahrstreifen wird angelegt	?::projected 12085,9778 12074,9689 12066,9558
+#: last_checked: 2017-04-27
+#: next_check: 2018-03-01
+Friedelstr.: Asphaltierung	?::projected 12085,9778 12074,9689 12066,9558 12047,9429 12074,9217
 #: by: ^^^
 # 
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to020.asp?TOLFDNR=13496&options=4
@@ -1043,9 +1038,19 @@ Friedelstr.: ein asphaltierter Fahrstreifen wird angelegt	?::projected 12085,977
 #: by: http://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036855186812/855186812/00055405/05-Anlagen/03/1367_XIX_Fahrradstrasse_Buerknerstrasse.pdf
 #: by: http://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5018
 #: osm_watch: way id="4068029" version="13"
-#: last_checked: 2017-03-13
+#: last_checked: 2017-04-27
 #: check_frequency: 60d
 Bürknerstr.: wird hier eine Fahrradstraße eingerichtet?	?::projected 11673,9720 11754,9735 11897,9754 12085,9778
+# 
+#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2018-2022)
+#: last_checked: 2017-03-27
+#: next_check: 2018-09-01
+Karl-Marx-Str.: Markierung von Schutzstreifen	?::projected 12753,8187 12714,8249 12689,8289 12639,8344 12598,8390 12582,8408 12562,8432 12540,8458 12500,8504 12330,8636
+# 
+#: XXX vermutlich Aufhebung des Zweirichtungsradwegs
+#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2019-2022)
+#: next_check: 2019-04-01
+Kanalstr.: Bau eines Geh- und Radwegs	?::projected 18111,2135 18101,2164 17928,2248 17772,2331 17541,2454 17284,2636 16786,2989
 # 
 #: XXX laut Tsp vom 2010-03-26 wird der Radweg gerade erneuert (Richtung Norden)
 #: last_checked: 2016-12-27
@@ -1080,9 +1085,9 @@ Tempelhofer Damm: wird der Radweg Richtung Norden erneuert?	?::projected; 9242,7
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5871 (Straßenname)
 #: XXX PLZ=10318 laut DPAG-Mitteilungsblatt
 #: XXX es existiert eine Baustraße, Tor ist aber gesperrt
-#: last_checked: 2016-12-10
+#: last_checked: 2017-04-14
 #: check_frequency: 180d
-Planstraße 9: evtl. Fortsetzung der Regener Str.? Qualität etc?	?::projected 19700,9040 19809,9040 19870,9079 19874,9151
+Planstraße 9: evtl. Fortsetzung der Regener Str.? Qualität etc?	?::projected 19705,9039 19806,9040 19863,9073 19870,9079 19874,9151
 # REMOVED --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5991 (Straßenname) --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/___tmp/tmp/45081036397475695/397475695/00115094/94-Anlagen/02/Anlage1329.pdf --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2014 --- #: note: Privatstraße --- #: XXX PLZ=10318 laut DPAG-Mitteilungsblatt und LOR, bereits eingetragen --- Zachenberger Str.: (Planstraße 11) Qualität?	?::projected 19889,9400 19780,9409
 #: by: ^^^
 #: by: ^^^
@@ -1092,12 +1097,12 @@ Planstraße 9: evtl. Fortsetzung der Regener Str.? Qualität etc?	?::projected 197
 # REMOVED (weitgehend realisiert) --- #: by: http://www.moz.de/artikel-ansicht/dg/0/1/288137 --- #: by: http://de.wikipedia.org/wiki/Autobahndreieck_Schwanebeck --- #: by: http://upload.wikimedia.org/wikipedia/commons/4/4c/Map_Comparision_AD_Schwanebeck_AK_Barnim.svg --- #: by: http://www.ls.brandenburg.de/sixcms/detail.php/bb1.c.257283.de?template=ls_artikel_special_nav_d&nav_level=3 --- #: next_check: 2013-09-01 --- Umbau zum Kreuz Barnim: damit auch Verschenkung der B2 direkt zur Autobahn; die jetzige B2 durch Schwanebeck wird wahrscheinlich zur Landesstraße	?::inwork 20788,23350 20281,23156 19363,23247 19043,23084
 # 
 #: osm_watch: way id="168928174" version="8"
-#: last_checked: 2017-01-16
+#: last_checked: 2017-04-11
 #: check_frequency: 120d
 Hannah-Arendt-Str.: werden die Radspuren vielleicht noch verlängert?	? 8632,11912 8783,11959
 # 
 #: XXX Baumaßnahme 1.16 (Realisierung nach 2011)
-#: last_checked: 2016-07-28 (keinerlei Anzeichen für Bauarbeiten zu erkennen)
+#: last_checked: 2017-05-01 (keinerlei Anzeichen für Bauarbeiten zu erkennen)
 #: check_frequency: 360d
 Ghanastr. - Kurt-Schumacher-Damm: im Zuge der RR4 könnte es hier eine neue Verbindung geben	?::projected 5255,17007 4988,17172
 # 
@@ -1108,9 +1113,10 @@ Ghanastr. - Kurt-Schumacher-Damm: im Zuge der RR4 könnte es hier eine neue Verbi
 # 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/verwaltung/org/vermessung/b-plaene/b-plaene/B-V-3.jpg
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/42re.pdf/file?y=2012
-#: last_checked: 2017-01-19
-#: check_frequency: 180d
-Planstraße C: Einfahrten existieren noch, aber statt einer Straße ist hier nur ein Parkplatz	?::projected 12926,11224 12848,11093
+#: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_14_1521_1636_online.pdf (Widmung)
+#: last_checked: 2017-04-04
+#: check_frequency: 45d
+Planstraße C: neue Straße entsteht	?::projected 12926,11224 12848,11093
 # 
 # REMOVED (-> strassen-orig) --- #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4359&options=4 vvv --- #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/___tmp/tmp/45081036167532448/167532448/00083455/55-Anlagen/01/DRS0260VB.pdf vvv --- #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20140214.0600.394386.html vvv --- #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.232673.php (Startschuss) --- #: XXX fehlen in Berlin.coords.data, PLZ=12439 --- #: osm_watch: way id="185792044" version="3" --- #: last_checked: 2014-11-15 (Trasse schon sichtbar) vvv --- #: check_frequency: 90d vvv --- Wasserstr.: geplante Straße in Niederschöneweide	?::projected 17477,6031 17681,6212 --- Uferstr.: geplante Straße in Niederschöneweide	?::projected 17681,6212 17843,6083
 # 
@@ -1122,7 +1128,7 @@ Planstraße C: Einfahrten existieren noch, aber statt einer Straße ist hier nur e
 #: XXX die Reinickendorfer Pressemeldungsschreiber sind fleißig, höchstwahrscheinlich wird es dort erscheinen, falls hier was passiert
 #: XXX fehlt in Berlin.coords.data, PLZ=13507 -> Humboldtinsel|Tegel|13507|X,Y
 #: osm_watch: way id="228172653" version="6"
-#: last_checked: 2016-10-03 (Bauarbeiten)
+#: last_checked: 2017-05-01 (Bauarbeiten)
 #: check_frequency: 150d
 Humboldtinsel: liegt die Straße hier? ausgeschildert? Qualität?	?::inwork 1687,20645 1635,20607 1587,20534 1403,20440
 # 
@@ -1164,19 +1170,27 @@ Flughafen Berlin-Brandenburg - Business Park Berlin: Schotterweg, bleibt das so?
 #: XXX Radwegesanierung in Neukölln, geplant für 2013 und später vvv
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/___tmp/tmp/4508103672955001/72955001/00032912/12-Anlagen/01/0208_XIX_Radverkehr_Neukoelln.pdf (Asphalt-Radstreifen, Realisierung ab 2013)
 #: osm_watch: way id="155605301" version="9"
-#: last_checked: 2016-11-07
+#: last_checked: 2017-03-16
 #: check_frequency: 120d
 Herrfurthplatz: eventuell wird hier auch asphaltiert?	?::projected 11647,7940 11671,7904 11713,7899 11748,7922 11754,7964 11731,7998 11689,8006 11653,7982 11647,7940
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/___tmp/tmp/4508103672955001/72955001/00032912/12-Anlagen/01/0208_XIX_Radverkehr_Neukoelln.pdf (Realisierung ab 2014)
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/vo020.asp?VOLFDNR=4757 (Vorschlag: Führungsschienen für den Elsensteg)
+#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2017: Ausbau des Kopfsteinpflasters, Bau einer Asphaltfahrbahn)
+#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.573131.php
+#: XXX zunächst Arbeiten der Wasserbetriebe (gibt es da schon Einschränungen?), ab Juni 2017 Straßenbauarbeiten
 #: osm_watch: way id="182693863" version="1"
-#: last_checked: 2017-02-10
-#: check_frequency: 180d
-Innstr.: eventuell wird hier asphaltiert, vielleicht auch der Zugang zum Elsensteg erleichtert?	?::projected 13107,8343 13166,8423 13217,8493 13262,8554 13301,8606 13314,8624 13366,8694
+#: last_checked: 2017-04-07
+#: next_check: 2017-06-01
+Innstr.: hier wird ein Asphaltstreifen entstehen, vielleicht auch der Zugang zum Elsensteg erleichtert?	?::projected 13107,8343 13166,8423 13217,8493 13262,8554 13301,8606 13314,8624 13366,8694
 # REMOVED (VS realisiert) --- #: by: http://www.berlin.de/ba-neukoelln/bvv-online/___tmp/tmp/4508103672955001/72955001/00032912/12-Anlagen/01/0208_XIX_Radverkehr_Neukoelln.pdf (in Bau, Stand 2012-04) --- Buckower Damm: eventuell werden die Radwege hier asphaltiert oder neues Verbundsteinpflaster verlegt?	? 12673,3619 12684,3406 12687,3319 12701,2955 12695,2789 12693,2746 12694,2570 12694,2544 12694,2517
 # REMOVED (realisiert) --- #: by: http://www.berlin.de/ba-neukoelln/bvv-online/___tmp/tmp/4508103672955001/72955001/00032912/12-Anlagen/01/0208_XIX_Radverkehr_Neukoelln.pdf (in Planung, Stand 2012-04) --- #: by: http://www.berlin.de/ba-neukoelln/presse/archiv/20130429.1340.384123.html (Beginn: 2013-05-06) --- #: last_checked: 2013-08-26 --- #: next_check: 2013-11-01 --- Marienfelder Chaussee: eventuell werden die Radwege hier asphaltiert oder neues Verbundsteinpflaster verlegt?	?::projected; 12207,1704 11865,1564 11765,1522 11476,1398 11216,1293 11157,1269 11012,1210 10829,1135 10769,1111 10664,1068 10425,971
 #: XXX ^^^
 #: by: ^^^
+# 
+#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2017)
+#: last_checked: 2017-04-27
+#: check_frequency: 100d
+Weigandufer (und Pflügerstr.?): Fahrradstraße geplant	?::projected 13939,8228 13875,8282 13716,8410 13641,8470 13539,8552 13450,8625 13366,8694 13191,8838 13048,8956 12907,9073 12761,9190 12620,9293 12480,9394
 # 
 # REMOVED (realisiert) --- #: XXX brunnels! --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1403/nachricht5207.html ("nahe Zukunft") --- #: XXX laut Tagesspiegel vom 8. April 2014 soll die Realisierung noch im April passieren --- #: by: http://www.tagesspiegel.de/berlin/schnelle-reaktion-des-senats-auf-tagesspiegel-bericht-noch-im-april-soll-die-bruecke-ueber-die-yorckstrasse-fertig-sein/9724886.html --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1404/nachricht5229.html --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1404/nachricht5235.html (provisorische Eröffnung) --- #: priority: #A --- #: last_checked: 2014-03-21 --- #: next_check: 2014-04-28 --- Radweg Berlin-Leipzig, Abschnitt Yorckstr. - Monumentenstr., Brücke über die Yorckstr.: wann wird hier realisiert?	?::projected 8338,9593 8339,9560
 # 
@@ -1186,8 +1200,8 @@ Innstr.: eventuell wird hier asphaltiert, vielleicht auch der Zugang zum Elsenst
 #: by: http://www.tagesspiegel.de/berlin/berlin-schoeneberg-die-yorckbruecken-werden-erst-naechstes-jahr-fertig/14015884.html
 #: by: http://gleisdreieck-blog.de/2016/08/17/die-sanierung-der-yorckbruecken-in-frage-gestellt/
 #: osm_watch: way id="19741755" version="11"
-#: last_checked: 2017-03-04
-#: check_frequency: 90d
+#: last_checked: 2017-04-25
+#: check_frequency: 120d
 Verbindung zwischen Gleisdreieckpark und Flaschenhalspark: wann wird die Brücke über die Yorckstr. realisiert?	?::projected 8426,9572 8423,9532
 # 
 # REMOVED --- #: next_check_id: MONUMENTENPLATZ-2014 --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20140411.1235.396289.html --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20141126.1150.400360.html --- #: XXX zumindest den "Platznamen" aufnehmen --- wird es hier ein Schild geben? --- #: last_checked: 2014-10-15 --- #: next_check: 2014-12-04 --- Monumentenplatz	?::inwork 8344,9085 8332,9059
@@ -1201,6 +1215,7 @@ Verbindung zwischen Gleisdreieckpark und Flaschenhalspark: wann wird die Brücke 
 # 
 #: XXX diese Straßen existieren noch nicht
 #: XXX teilweise fehlen sie auch in Berlin.coords.data
+#: osm_watch: way id="451344723" version="2"
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6425
 #: last_checked: 2016-10-02 vvv
 #: check_frequency: 360d vvv
@@ -1208,8 +1223,6 @@ An den Auen: Qualität?	?::projected 21194,19054 21248,19007 21285,18950 21310,18
 Markus-Herz-Weg: Qualität?	?::projected 20701,18634 20910,18719 21123,18813
 David-Friedländer-Weg: Qualität?	?::projected 20727,18726 20901,18793 21038,18851 21024,18915 20995,18988
 Dohmweg: Qualität?	?::projected 20760,18812 20894,18861 21024,18915
-#: osm_watch: way id="163492498" version="5"
-#: XXX_osm referenzierter Track wird vermutlich entfernt
 Georg-Förster-Allee: Qualität?	?::projected 20922,18613 20910,18719 20901,18793 20894,18861 20889,18943 20883,19045
 Löffleranger: Qualität?	?::projected 20995,18988 20978,19009 20964,19026 20917,19017 20918,18987 20978,19009
 Weidenröschenweg: Qualität?	?::projected 21123,18813 21310,18889
@@ -1269,20 +1282,14 @@ Wolzenseeweg: Qualität? Straße bereits fertiggestellt? Wird es eine Überquerungs
 Mauerweg (Potsdam-Sacrow): evtl. existiert hier bereits ein geschotterter Radweg parallel zur Straße	? -9064,3667 -9156,3451 -9399,3297 -9530,3165 -9999,2615 -10105,2458
 # 
 #: next_check_id: OBERWALL-2014 vvv
-#: last_checked: 2017-02-27 vvv
-#: check_frequency: 90d vvv
+#: last_checked: 2017-04-28 vvv
 #: by: http://www.berliner-zeitung.de/berlin/baumangel-der-boden-hat-nachgegeben,10809148,21701554.html (Fertigestellung Ende 2014)
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/47re.pdf/file?y=2015 (Grundstücksnummerierungen)
 #: XXX siehe auch gesperrt-orig-Eintrag zur Oberwallstr.
 #: XXX Eintrag in Berlin.coords.data fehlt: PLZ=10117
 #: XXX_osm: fehlt bei osm als "planned"/"proposed"
 Falkoniergasse: Genaue Lage? Qualität?	?::inwork 9945,12180 9915,12259
-#: XXX Eintrag in Berlin.coords.data fehlt: PLZ=10117
-#: XXX_osm: fehlt bei osm als "planned"/"proposed"
-#: by: http://www.dafmap.de/d/berlin.html?id=3520&mt=0&zoom=16
-#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/36re.pdf/file?y=2016 (Widmung)
-Prinzengasse: Genaue Lage? Qualität?	?::inwork 9973,12292 9997,12295
-#: check_frequency ^^^
+# REMOVD --- #: XXX Eintrag in Berlin.coords.data fehlt: PLZ=10117 --- #: XXX_osm: fehlt bei osm als "planned"/"proposed" --- #: XXX existiert und ist ausgeschildert --- #: by: http://www.dafmap.de/d/berlin.html?id=3520&mt=0&zoom=16 --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/36re.pdf/file?y=2016 (Widmung) --- Prinzengasse: Genaue Lage? Qualität?	?::inwork 9956,12297 10004,12302
 #: last_checked ^^^
 #: next_check_id ^^^
 # 
@@ -1309,20 +1316,21 @@ Prinzengasse: Genaue Lage? Qualität?	?::inwork 9973,12292 9997,12295
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.95087.php (Beginn im Jahr 2014)
 #: osm_watch: way id="148035923" version="6"
 #: source_id: 2147339913
-#: XXX zurzeit Bauarbeiten (laut fritz bis 13.01.2017), gibt es Einschränkungen für Radfahrer?
-#: last_checked: 2016-07-23
-#: next_check: 2017-01-31
-Blanckertzweg: Radfahrstreifen in Planung (ebenso östlicher Teil der Hildburghauser Str.)	?::inwork 4806,1360 4706,1293 4634,1245 4542,1188
+#: source_id: LMS-BR_r_LMS-BR_82723
+#: XXX zurzeit Bauarbeiten (laut fritz bis 30.06.2018), gibt es Einschränkungen für Radfahrer?
+#: last_checked: 2017-03-26
+#: check_frequency: 180d
+Blanckertzweg: Radfahrstreifen in Planung (ebenso östlicher Teil der Hildburghauser Str.)	?::inwork 4795,1362 4702,1298 4631,1249 4542,1188
 # 
 #: XXX nach dem Straßenausbau besserer Asphalt, Radwege wird es nur bis zur Zerbster Str. in Westrichtung und ab Stadtilmer Weg in Ostrichtung geben
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/presse/archiv/20131129.0640.392180.html (Straßenausbau geplant)
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.95087.php?date=20160124 (Beginn im Jahr 2016)
 #: source_id: 2147339913
 #: XXX zurzeit Bauarbeiten (laut fritz bis bis 13.01.2017), gibt es Einschränkungen für Radfahrer?
-#: last_checked: 2016-07-23
-#: next_check: 2017-01-31
-Hildburghauser Str.: Ausbau der Straße, bessere Qualität des Asphalts?	? 4806,1360 4897,1350 5059,1337
-#: last_checked: 2016-07-23
+#: last_checked: 2017-03-26
+#: check_frequency: 90d
+Hildburghauser Str.: Ausbau der Straße, wie werden die Radwege später aussehen?	?::inwork 4795,1362 4897,1352 5059,1337
+#: last_checked: 2017-03-26
 #: check_frequency: 360d
 Hildburghauser Str.: Ausbau der Straße, bessere Qualität des Asphalts?	? 5059,1337 5223,1318 5414,1304 5585,1275 5741,1231 5794,1215 5866,1195 5914,1181 6006,1155 6106,1133 6145,1119 6199,1104 6276,1083 6294,1078 6386,1051 6467,1028 6515,1010 6631,968
 # 
@@ -1344,8 +1352,8 @@ Segelfliegerdamm (Zernsdorf - Niederlehme): in Planung/Bau	?::inwork 29192,-1063
 #: by: http://www.dafmap.de/d/berlin.html?id=5213&mt=0&zoom=16 (Geplanter Projektabschluss: 2017-12-31)
 #: XXX Asphaltierung der Fahrbahn von Rummelsburger Landstr. bis Schwarzer Weg fertig
 #: XXX Radwege werden vermutlich asphaltiert sein
-#: last_checked: 2017-01-28
-#: next_check: 2017-04-01
+#: last_checked: 2017-04-14
+#: next_check: 2017-07-01
 Minna-Todenhagen-Str.: Brücke über die Spree und Straßenverbindung zwischen Rummelsburger Landstraße und Köpenicker Landstraße	?::inwork 17681,7589 17585,7525 17453,7451 17295,7344 17211,7280 17091,7175 16971,7058 16720,6845
 # 
 #: by: http://www.stadtentwicklung.berlin.de/verkehr/politik_planung/planfeststellungen/download/oepnv/treskowallee/Band_1/UL_3_Lageplaene/
@@ -1356,9 +1364,9 @@ Minna-Todenhagen-Str.: Brücke über die Spree und Straßenverbindung zwischen Rumm
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5758 (Bauarbeiten beginnen erst 2019)
 #: osm_watch: way id="46039447" version="14"
 #: osm_watch: way id="456120288" version="2"
-#: last_checked: 2016-10-30
+#: last_checked: 2017-04-14
 #: next_check: 2019-03-01
-Treskowallee: Bau von Radwegen	?::projected; 18709,8423 18731,8577 18733,8633
+Treskowallee: Bau von Radwegen	?::projected; 18704,8427 18731,8577 18733,8633
 # 
 # REMOVED (laut http://www.berlin.lsvd.de/cms/index.php?option=com_content&task=view&id=184&Itemid=175 (URL existiert nicht mehr) sowie laut http://de.wikipedia.org/wiki/Kanzleramtssteg nicht mehr in Planung) --- Magnus-Hirschfeld-Steg: laut Tsp geplant	? 7360,12430 7437,12368
 # 
@@ -1421,11 +1429,10 @@ Soldiner Str.: grundhafte Erneuerung, evtl. verschwindet das Kopfsteinpflaster d
 #: XXX Ziffer 1 - George-Stephenson-Str.
 #: XXX Ziffer 5 - Lydia-Rabinowitsch-Kempner-Str. --- abgelehnt, neuer Namensvorschlag: Lydia-Rabinowitsch-Str.
 #: XXX Ziffer 6 - Annemarie-Renger-Str.
-#: last_checked: 2017-01-20 vvv
+#: last_checked: 2017-04-07 vvv
 #: check_frequency: 60d vvv
 Kieler Brücke - Heidestraße, Rad/Gehweg	?::projected 7740,14409 7621,14341
 #: osm_watch: way id="237716440" version="3"
-#: last_checked: 2017-02-04
 geplanter Uferweg	?::projected 8292,13530 8171,13703 8128,13767 8044,13929 7989,14035 7912,14160 7843,14275 7824,14305 7740,14409
 #: XXX wird es auch eine Brücke zur Kieler Str. geben?
 #: XXX vermutlich diese Brücke wird "Golda-Meir-Steg" heißen (Berlin.coords.data-Eintrag fehlt)
@@ -1493,8 +1500,8 @@ Drakestr./Holbeinstr.: Zebrastreifen in Planung	?::projected 3625,3446 3626,3465
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/fussgaengerueberweg-gallwitzallee.pdf
 #: priority: #C
 #: XXX evtl. zu Ende der Bauarbeiten eingerichtet?
-#: last_checked: 2016-07-23
-#: next_check: 2016-09-02
+#: last_checked: 2017-03-26
+#: check_frequency: 120d
 Gallwitzallee/Krankenhaus: Zebrastreifen in Planung	?::projected 6768,1999 6799,1922 6804,2004
 # 
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20160319 vvv
@@ -1531,8 +1538,8 @@ Schwarzer Weg (Schmöckwitz): Fahrbahnerneuerung in Planung	?::projected 27892,-3
 #: by: https://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplanung/bebauungsplaene-im-verfahren/b-plan-7-66ve/b_plan7_66ve_plan.pdf
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5795
 #: by: http://www.dafmap.de/d/berlin.html?id=3703&mt=0&zoom=16
-#: osm_watch: way id="268088020" version="5"
-#: last_checked: 2017-03-04 vvv
+#: osm_watch: way id="268088020" version="6"
+#: last_checked: 2017-04-25 vvv
 #: check_frequency: 360d vvv
 Bautzener Brache: Radwegführung und Brücke in Planung	?::projected 8207,9223 8240,9276 8240,9364 8242,9571 8221,9582 8255,9698 8256,9778 8233,9863
 Bautzener Brache - Großgörschenstr.: Weg in Planung	?::projected 8240,9364 8186,9380
@@ -1555,6 +1562,7 @@ Bebauungsplan 3-48 VE: Planstraße B in Planung	?::projected 13368,18674 13222,18
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplanung/artikel.472246.php
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplanung/bebauungsplaene-im-verfahren/b-plan-7-65ve/vorhabenbezogener_bebauungsplan.pdf
 #: by: http://www.dafmap.de/d/berlin.html?id=4281&mt=0&zoom=18
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5961
 #: last_checked: 2017-03-04
 #: check_frequency: 360d
 Bebauungsplan 7-65: Weg in Planung	?::projected 7960,6059 7697,6059 7630,6016 7607,5944
@@ -1598,6 +1606,12 @@ Bebauungsplanverfahren XXI-41b: ändert sich hier an den Wegen etwas?	?::projecte
 #: next_check: 2017-08-01
 Kurpromenade: wird die Fahrbahn hier erneuert?	?::projected -8862,6375 -8860,6439 -8859,6540 -8868,6798 -8804,6818 -8732,6840 -8656,6864 -8567,6893
 # 
+#: XXX Zweirichtungsradweg? Auf welcher Seite?
+#: source_id: LS/721-E/16/109
+#: source_id: BIBER_id_234607
+#: next_check: 2017-11-03
+B2: Radweg wird gebaut	?::inwork 20835,26335 21019,26756 21071,26891 21169,27133 21326,27505
+# 
 #: section ^^^
 #: ignore ^^^
 #
@@ -1616,18 +1630,28 @@ Kurpromenade: wird die Fahrbahn hier erneuert?	?::projected -8862,6375 -8860,643
 # - Fragen nach genauen Routenverläufen
 # - XXX_prog- und XXX_indoor-Einträge
 # 
-#: last_checked: 2017-03-12
-#: check_frequency: 21d
-Richard-Sorge-Str./Weidenweg: Bau von zwei Zebrastreifen oder einer Ampel	?::inwork 13467,12521 13463,12507 13476,12501
+#: XXX während der Bauarbeiten wird ein Zweirichtungsradweg erstellt --- Zeitverlust?
+#: XXX Abschluss der Arbeiten: Juli 2017
+#: by: http://www.berlin.de/ba-lichtenberg/aktuelles/pressemitteilungen/2017/pressemitteilung.586635.php
+#: next_check: 2017-05-03
+Möllendorffstr.: Radspur Richtung Süden entsteht	?; 15420,12178 15361,12071
 # 
-#: osm_watch: note 914657 1
-Reglinstr.: ist dieser Abschnitt auch eine Spielstraße?	? 7659,5735 7771,5723
+#: XXX nach den Bauarbeiten wird die Straße zur Einbahnstraße. Auch für Radfahrer? Ende der Bauarbeiten: Oktober 2017
+#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.586667.php
+Kiehlufer: gibt es während der Bauarbeiten Einschränkungen?	? 12897,9365 12950,9132
 # 
-#: XXX laut fritz von 2017-02-27 bis 2017-03-10, laut vmz bis Ende März 2017
-#: source_id: 2147340962
-#: last_checked: 2017-02-27
-#: check_frequency: 3d
-Gartenstr.: Sperrung zw. Invalidenstr. und Bernauer Str. auch für Radfahrer relevant?	?; 9383,13986 9224,14169
+#: by: http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.580100.php
+#: last_checked: 2017-05-01
+#: next_check: 2017-06-30
+Berliner Str.: Markierung von Radspuren	? 3866,24451 3842,24556
+# 
+# REMOVED (nicht relevant) --- #: source_id: 2147341140 --- #: XXX laut vmz bis Mitte April 2017, laut rbb bis 24. April 2017, laut fritz bis 21. April 2017 --- Fraenkelufer: Vollsperrung auch für Radfahrer relevant?	? 11199,9993 11082,9992 10979,10017 10967,10092
+# 
+#: last_checked: 2017-03-26
+#: check_frequency: 180d
+Lutterbacher Str. - Dahlemer Weg: wird es hier eine weitere Verbindung geben?	? 2151,3126 2183,3126
+# 
+# REMOVED (noch immer nichts) --- #: XXX laut fritz von 2017-02-27 bis 2017-03-10, laut vmz bis Ende März 2017 --- #: source_id: 2147340962 --- #: last_checked: 2017-02-27 --- #: check_frequency: 3d --- Gartenstr.: Sperrung zw. Invalidenstr. und Bernauer Str. auch für Radfahrer relevant?	?; 9383,13986 9224,14169
 # 
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6946
 #: next_check: 2017-05-01
@@ -1637,7 +1661,9 @@ Hultschiner Damm/Rahnsdorfer Str.: wird es hier eine Ampel geben?	? 24628,10569 
 Seebadstr. - Alt-Hermsdorf: Widmung einer Straße	? 4564,23048 4498,23161 4471,23147
 # 
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_07_0741_0860_online.pdf
-#: next_check: 2017-03-15
+#: osm_watch: way id="316695242" version="1"
+#: last_checked: 2017-03-25
+#: check_frequency: 100d
 (Neues Ufer - Kaiserin-Augusta-Allee): ändert sich durch die Einziehung der Grünanlage etwas?	? 4561,13244 4547,13139 4576,13115
 # 
 #: XXX Instandsetzung 2017, danach vielleicht bessere Qualität
@@ -1670,37 +1696,26 @@ An der Wuhlheide: werden hier Schutzstreifen entstehen?	? 18492,6893 18404,6946 
 # REMOVED (Verbindung existiert nun) --- #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6864 (unbeleuchtet) --- Gutspark Lichtenberg: existiert eine Verbindung für Radfahrer? Qualität?	? 15746,12967 15749,12995 15717,13001 15612,13069 15526,13056
 # REMOVED (parallelen Weg eingetragen) ---- Bolle-Gelände/Alte Meierei: Weg eintragen? Wie ist die Qualität hier? Gibt es Bordsteine o.ä.?	? 6439,13163 6402,12975
 # 
-#: XXX wo genau?
 #: by: http://www.berlin.de/ba-neukoelln/_assets/dokumente/ba-beschluesse/ba-beschluss-206-16.pdf
-#: last_checked: 2017-02-24
-Weserstr.: Fahrradstraße wird eingerichtet	? 11888,9189 12005,9211 12074,9217 12148,9209 12180,9193 12322,9124
+#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2017)
+#: last_checked: 2017-04-06
+Weserstr.: Fahrradstraße wird eingerichtet	? 11888,9189 12005,9211 12074,9217 12148,9209
 # 
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2016/15-11-2016_mehr-fahrradstrassen-fuer-pankow.pdf
 #: XXX unklar, ob auch die Route Dunckerstr. - Kollwitzstr. ebenso Fahrradstraße werden könnte
-#: last_checked: 2017-03-12
-#: next_check: 2017-05-01
+#: last_checked: 2017-05-01
+#: check_frequency: 30d
 Stargarder Str.: eventuell wird hier eine Fahrradstraße eingerichtet	? 10953,15787 11086,15772 11158,15739 11290,15669 11418,15587 11502,15527 11595,15460 11682,15397 11852,15281
 # 
-(Tuttlinger Weg - Crailsheimer Str.): Privatstraße existiert hier, Qualität, für alle befahrbar?	? 7046,4354 7071,4431 7127,4441
-# 
 # REMOVED (Protokoll von 2014, geprüft 2017 --- nichts passiert) --- #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/verwaltung/aemter/ordnungsamt/content/protokoll_der_12._sitzung_fahr_rat.pdf --- Goslaer Ufer: wurde der Gehweg für Radfahrer freigegeben?	?; 4295,13234 4187,13704
-# 
-Nikolsburger Platz: wurde die Situation für Radfahrer verbessert (Bordsteine?)?	? 5374,9619 5307,9664
-#: XXX bei osm: bicycle=yes
-Nikolsburger Platz: existiert auf der westlichen Seite eine Verbindung für Radfarer?	? 5307,9664 5314,9588
-# 
+# REMOVED --- Nikolsburger Platz: wurde die Situation für Radfahrer verbessert (Bordsteine?)?	? 5374,9619 5291,9675 --- #: XXX bei osm: bicycle=yes --- Nikolsburger Platz: existiert auf der westlichen Seite eine Verbindung für Radfarer?	? 5291,9675 5297,9579
 # REMOVED --- #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/fahr-rat-18-sitzung.pdf vvv
 # REMOVED (hier noch immer) --- Spichernstr.: besteht die Radwegbenutzungspflicht noch?	?; 5700,10226 5764,10322
 # REMOVED (hier nicht mehr) --- Spichernstr.: besteht die Radwegbenutzungspflicht noch?	?; 5700,10226 5463,9961
 # REMOVED (teilweise aufgelöst) --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5792 --- #: next_check: 2017-01-01 --- Dominicusstr./Sachsendamm: bleibt die Radwegbenutzungspflicht?	? 6460,8688 6477,8654 6523,8567 6575,8469 6687,8385 6807,8309
 # REMOVED --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5759 --- Schwäbische Str.: Umfahrungen prüfen	? 6917,9274 6851,9365 6771,9458
-# 
 # REMOVED (-> temp blockings) --- #: XXX NEW	Fasanenstraße (Charlottenburg) zwischen Kantstraße und Kurfürstendamm (Berlin)  Gültig ab: 23.11.2016 13:12  Vollsperrung, Baustelle (bis 31.12.16)	LMS-BR_r_LMS-BR_83962 --- Fasanenstr.: Sperrung auch für Radfahrer relevant?	? 5236,10994 5230,10919 5215,10711
 # REMOVED (zurzeit kann man ganz gut vorbeifahren) --- #: XXX NEW	Scharnweberstraße (Friedrichshain) Richtung Gürtelstraße zwischen Jessnerstraße und Gürtelstraße (Berlin)  Gültig ab: 22.11.2016 07:00  Baustelle, Fahrtrichtung gesperrt (bis Mitte 12/16)	2147340779 --- Scharnweberstr.: Sperrung auch für Radfahrer relevant?	?; 15080,11905 15121,11899 15248,11880
-# 
-#: XXX vermutlich schlechtes Kopfsteinpflaster, vermutlich Einbahnstraße im südlichen Abschnitt; str_cont_ausnahme-Eintrag notwendig
-Hauptstr.: Qualität, Einbahnstraßenregelung...	? 12205,22696 12205,22696 12230,22689 12248,22577 12231,22460 12205,22367 12205,22367
-# 
 # REMOVED (notiert in ampeln-orig) --- #: XXX NEW	Hannoversche Str. (Mitte) Höhe HU Mensa (Berlin)  Gültig ab: 31.10.2016 11:00  Baustelle, in beiden Richtungen abwechselnd nur ein Fahrstreifen frei (Baustellenampel) (bis Mitte 12/16)	2147340713 --- #: XXX laut fritz bis 16.12.2016 --- Hannoversche Str.: auch für Radfahrer relevant?	?::inwork 8892,13498 8853,13539
 # REMOVED (hier ist (noch?) nichts) ---  #: XXX Enddatum unbekannt --- Pettenkoferstr.: Sperrung für Radfahrer relevant?	? 14935,12596 14858,12775
 # REMOVED (ja) --- #: last_checked: 2016-11-02 --- #: next_check: 2016-11-04 --- #: priority: #A --- Weihnachtsmarkt am Alexa: wird die Voltairestr. wieder gesperrt?	? 11209,12430 11329,12497
@@ -1714,11 +1729,6 @@ Grünfließer Gang: hat sich hier etwas nach den Bauarbeiten geändert/verbessert?	
 # 
 # REMOVED (realisiert) --- #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/mdb-bapankow-tiefbauamt-g__hrener_raumer.pdf --- Göhrener Str.: wird dieser Abschnitt auch verkehrsberuhigt?	? 11505,15065 11505,15150
 # REMOVED (keine Vorfahrt) --- Rüdickenstr.: Vorfahrtsregelung?	? 17233,17490 17264,17489 17257,17464
-# 
-Schulstr. - Paul-Schneider-Str.: Unterführung auch für Radfahrer benutzbar? Ist die Paul-Schneider-Str. überquerbar?	? 6698,3336 6651,3288 6613,3320
-# 
-In den Leonorengärten: Qualität?	? 6493,4105 6517,4051 6452,4024 6428,4076
-# 
 # REMOVED (nein) --- Alex-Wedding-Str.: ist hier auch eine Einbahnstraßenregelegung?	? 11085,13239 11146,13328
 # 
 #: by: http://www.berlin.de/ba-charlottenburg-wilmersdorf/verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplanverfahren/artikel.520066.php
@@ -1728,15 +1738,10 @@ In den Leonorengärten: Qualität?	? 6493,4105 6517,4051 6452,4024 6428,4076
 #: next_check: 2017-09-26
 Otto-Dibelius-Str.: dieser Abschnitt wird vermutlich für den Kfz-Verkehr gesperrt	? 5243,12303 5299,12420
 # 
-#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/24re.pdf/file?y=2015
-#: by: http://www.dafmap.de/d/berlin.html?id=3903&mt=0&zoom=15 (Geplanter Projektabschluss: 2017-06-30)
-#: osm_watch: way id="156817982" version="14"
-#: last_checked: 2016-07-07
-#: next_check: 2016-09-25
-Lutterbacher Str.: Straße ist offen, prüfen!	? 2094,3231 1993,3170 2072,3034 2163,3092
+# REMOVED --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/24re.pdf/file?y=2015 --- #: by: http://www.dafmap.de/d/berlin.html?id=3903&mt=0&zoom=15 (Geplanter Projektabschluss: 2017-06-30) --- #: osm_watch: way id="156817982" version="14" --- #: last_checked: 2016-07-07 --- #: next_check: 2016-09-25 --- Lutterbacher Str.: Straße ist offen, prüfen!	? 2094,3231 2064,3214 1999,3177 2066,3072 2127,3111 2151,3126
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/39re.pdf/file?y=2016
-#: last_checked: 2017-02-04
+#: last_checked: 2017-04-24
 #: check_frequency: 120d
 Mehringplatz: Widmung von Straßenland - ändert sich hier etwas?	? 9587,10421 9592,10263
 # 
@@ -1795,7 +1800,7 @@ Elsbeerenweg.: Qualität? Genaue Lage? Existiert die Straße schon?	? -6378,5877 -
 # 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksamt/sitzungen/2016/beschluss_929_16.pdf
 #: osm_watch: way id="295627704" version="4"
-#: last_checked: 2017-03-12
+#: last_checked: 2017-04-10
 #: check_frequency: 60d
 Liebigstr.: Einrichtung einer Spielstraße, wo genau?	? 14229,12311 14166,12323 14147,12344 14091,12355 14074,12343 13927,12370 13905,12374 13991,12522 14058,12709
 # 
@@ -1804,8 +1809,8 @@ Liebigstr.: Einrichtung einer Spielstraße, wo genau?	? 14229,12311 14166,12323 1
 #: XXX Bauarbeiten zwischen Thaerstr. und Hübnerstr.
 #: XXX NEW	Eldenaer Str. (Friedrichshain) In beiden Richtungen Kreuzung Proskauer Str. (Berlin)  Gültig ab: 24.11.2016 06:15  Baustelle, Vollsperrung (bis vsl. Ende 11/16)	2147340785
 #: XXX -> ist die Vollsperrung für Radfahrer relevant? -> am Abend schon wieder aufgehoben?
-#: last_checked: 2017-03-12 vvv
-#: check_frequency: 30d
+#: last_checked: 2017-04-29 vvv
+#: check_frequency: 14d
 Eldenaer Str.: in Richtung Osten sind noch Bauarbeiten, vermutlich werden die Radspuren danach markiert	?::inwork; 14096,12827 14355,12752
 #: check_frequency: 14d
 Eldenaer Str.: in Richtung Osten noch keine Radspuren markiert	?::projected; 13844,12900 13960,12866 13979,12861 14066,12836
@@ -1829,15 +1834,7 @@ Betriebsbahnhof Schöneweide --> Adlershof-Johannisthal	X 18682,4714
 #: check_frequency: 90d
 Monumentenstr. 13d: wird hier ein verkehrsberuhigter Bereich ausgewiesen?	? 8014,9126 8009,9063
 # 
-#: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/tunnel-adenauerplatz/
-#: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/tunnel-adenauerplatz/download/bauphase2.pdf
-#: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/tunnel-adenauerplatz/download/bauphase3.pdf
-#: XXX Richtung Norden: Beginn: voraussichtlich im I. Quartal 2017. Die Dauer der Bauphase beträgt ca. zwei Monate.
-#: XXX Richtung Süden: Beginn: voraussichtlich im II. Quartal 2017. Die Dauer der Bauphase beträgt ca. zwei Monate.
-#: source_id: 2147340386
-#: next_check: 2017-02-28
-Adenauerplatz: Behinderungen für Radfahrer während der Bauarbeiten	?::projected 3813,10435 3777,10513 3744,10577 3644,10759
-# 
+# REMOVED (keine Einschränkungen) --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/tunnel-adenauerplatz/ --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/tunnel-adenauerplatz/download/bauphase2.pdf --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/tunnel-adenauerplatz/download/bauphase3.pdf --- #: XXX Richtung Norden: Beginn: voraussichtlich im I. Quartal 2017. Die Dauer der Bauphase beträgt ca. zwei Monate. --- #: XXX Richtung Süden: Beginn: voraussichtlich im II. Quartal 2017. Die Dauer der Bauphase beträgt ca. zwei Monate. --- #: source_id: 2147340386 --- #: next_check: 2017-02-28 --- Adenauerplatz: Behinderungen für Radfahrer während der Bauarbeiten	?::projected 3813,10435 3777,10513 3744,10577 3644,10759
 # REMOVED (ja --- aber ich habe keine Möglichkeit, das darzustellen) --- #: XXX NEW	Lückstr. (Rummelsburg) in beiden Richtungen zwischen Weitlingstr. und Rummelsburger Str. (Berlin)  Gültig ab: 14.07.2016 15:00  Baustelle, für beide Richtungen abwechselnd nur ein Fahrstreifen / Baustellenampel (bis Mitte 09/16)	2147340309 --- #: XXX laut fritz bis 09.09.2016 --- Lückstr.: abwechselnd freie Fahrspur, Behinderungen für Radfahrer?	? 16601,10650 16647,10632
 # REMOVED (-> handicap) --- #: XXX NEW	Straße der Pariser Kommune (Friedrichshain) in beiden Richtungen zwischen Stralauer Platz und An der Ostbahn (Berlin)  Gültig ab: 14.07.2016 05:23  Wasserrohrbruch, Vollsperrung (bis vsl. Ende 07/16)	LMS-BR_r_LMS-BR_73434 --- #: XXX laut fritz bis 28.07. ---
 # REMOVED --- :XXX NEW	Straße der Pariser Kommune (Friedrichshain) in beiden Richtungen zwischen An der Ostbahn und Stralauer Platz (Berlin)  Gültig ab: 13.09.2016 15:55  Vollsperrung, Baustelle (bis Mitte Oktober)	LMS-BR_r_LMS-BR_78589 --- Straße der Pariser Kommune: Wasserrohrbruch, Behinderungen für Radfahrer? (schon wieder/noch immer?)	? 12497,11459 12551,11515 12645,11673
@@ -1856,7 +1853,7 @@ Spektegrünzug: parallel zum Spekteweg existiert ein Rad/Gehweg	? -4671,14818 -47
 # 
 #: next_check_id: HEIDESTR-2016 vvv
 #: XXX Ampeln in der Heidestr. vvv
-#: last_checked: 2017-02-04 vvv
+#: last_checked: 2017-04-07 vvv
 #: check_frequency: 60d vvv
 #: osm_watch: node id="4308915647" version="1"
 Anforderungsampel, X	?::inwork 7820,13994
@@ -1873,7 +1870,7 @@ Anforderungsampel, X	?::inwork 7652,14257
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/25re.pdf/file?y=2016
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/46re.pdf/file?y=2016 (Grundstücksnummerierungen)
 #: XXX Berlin.coords.data-Eintrag fehlt
-#: last_checked: 2017-03-14
+#: last_checked: 2017-04-11
 Forum an der Museumsinsel: wird hier der (private) Platz liegen? Ausschilderung?	? 9636,13076
 # 
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2016/pressemitteilung.490082.php
@@ -1930,38 +1927,33 @@ Kollwitzstr.: hat die Einziehung von Straßenland hier Auswirkungen?	? 11229,1442
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2016/pressemitteilung.477625.php
 #: osm_watch: way id="436261317" version="1"
 #: XXX passiert auf dem letzten Teilstück noch was?
-#: last_checked: 2016-09-30
+#: last_checked: 2017-03-26
 #: check_frequency: 120d
 Paul-Schwarz-Promenade: Erneuerung und teilweise Asphaltierung	? 4815,3382 4822,3431 4910,3599 5018,3810
 # REMOVED (realisiert) Paul-Schwarz-Promenade: Erneuerung und teilweise Asphaltierung	?::inwork 5018,3810 5074,3900 5139,3997 5225,4095 5282,4145 5337,4192
 # REMOVED (realisiert --- ist das vielleicht schon alles?) --- Paul-Schwarz-Promenade: Erneuerung und teilweise Asphaltierung	?::inwork 5337,4192 5387,4214 5523,4285 5546,4302
 # REMOVED --- #: XXX B1, B5 Berlin, Karl-Marx-Allee zwischen Alexanderstraße und Kreisverkehr Strausberger Platz Gültig ab: 11.05.2016 20:00  gesperrt	LMS-BR_r_LMS-BR_67424 --- #: XXX Karl-Marx-Allee (Mitte) stadtauswärts zwischen Otto-Braun-Straße und Petersburger Platz (Berlin)  Gültig ab: 11.05.2016 20:00  Vollsperrung, Aufbauarbeiten zur Formula-E (bis ca. 24:00 Uhr)	2147340063 --- #: priority: #A --- Karl-Marx-Allee: bereits wegen der Vorbereitungen für das Rennen gesperrt, auch für Radfahrer?	?; 11226,12945 11289,12908 11589,12768 11635,12745 11683,12725 11976,12595
-# REMOVED (ja) --- #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6661 --- #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6661&date=20161204 --- #: XXX bei der letzten Überprüfung nicht zu erkennen --- #: source_id: 2147340565 --- #: last_checked: 2016-09-11 --- #: next_check: 2017-02-01 --- Treskowallee: wird die zu erstellende provisorische Fahrbahn eine Radspur Richtung Süden erhalten?	?; 18733,8633 18731,8577 18709,8423
+# REMOVED (ja) --- #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6661 --- #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6661&date=20161204 --- #: XXX bei der letzten Überprüfung nicht zu erkennen --- #: source_id: 2147340565 --- #: last_checked: 2016-09-11 --- #: next_check: 2017-02-01 --- Treskowallee: wird die zu erstellende provisorische Fahrbahn eine Radspur Richtung Süden erhalten?	?; 18733,8633 18731,8577 18704,8427
 # REMOVED (ja, wegen Straßenschäden; RW6-Eintrag lohnt aber nicht, denke ich) --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7438 --- Waldemarstr.: existieren hier Tempo-10-Schilder?	? 11150,11030 11290,10972
 # REMOVED (-> radwege) --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7470 --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2016/pressemitteilung.501167.php --- #: last_checked: 2016-08-27 --- #: next_checked: 2016-09-16 --- Mehringdamm: Radspuren entstehen	?::projected; 9248,9350 9225,9111 9224,9053 9225,9038 9227,8890 --- 9229 --- 8785
 # 
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7478
 #: XXX "noch 2016"
-#: last_checked: 2017-03-02 vvv
-#: check_frequency: 21d vvv
+#: last_checked: 2017-04-29 vvv
+#: check_frequency: 14d vvv
 #: priority: #C vvv
-#: osm_watch: note 814292 1
-Waldemar/Dresdener: Zebrastreifen in Bau	?::inwork 11153,11028 11150,11030
 #: osm_watch: note 824350 1
 Sebastian/Luckauer: Zebrastreifen in Bau	?::inwork 11113,10943 11109,10935
 #: priority ^^^
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
-#: last_checked: 2017-03-02
 #: check_frequency: 14d
 #: osm_watch: note 851907 1
+#: last_checked: 2017-04-24
 Oranienplatz: Zebrastreifen in Bau	?::inwork 11233,10672 11258,10682 11262,10655
 # 
-#: next_check_id: BAERWALDSTR-2017
-#: last_checked: 2017-03-04
-#: check_frequency: 14d
-Baerwaldstr.: Zebrastreifen in Bau	?::inwork 10402,9941 10424,9958 10430,9937
+# REMOVED (provisorischer Zebrastreifen existiert schon) --- #: next_check_id: BAERWALDSTR-2017 --- #: last_checked: 2017-03-04 --- #: check_frequency: 14d --- Baerwaldstr.: Zebrastreifen in Bau	?::inwork 10402,9941 10424,9958 10430,9937
 # 
 #: XXX wird hier ein Zebrastreifen entstehen?
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5452
@@ -1971,16 +1963,16 @@ Porzer Str./Coloniaallee	? 19948,-14 19972,-19 19998,-21
 # 
 #: XXX wird hier ein Zebrastreifen entstehen?
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4693
-#: last_checked: 2016-08-27
-#: next_check: 2016-11-10
+#: last_checked: 2017-03-27
+#: check_frequency: 180d
 #: priority: #C
 Neue Krugallee/Lakegrund	? 16401,7400 16406,7430 16409,7464
 # 
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4755 vvv
 #: source_id: 2147339938
-#: last_checked: 2017-03-01
+#: last_checked: 2017-04-07
 Köpenicker Landstraße: bleibt die Radwegbenutzungspflicht?	?; 15166,8489 15303,8343 15357,8286 15557,8077
-#: last_checked: 2016-10-30
+#: last_checked: 2017-03-27
 #: check_frequency: 90d
 Köpenicker Landstraße: bleibt die Radwegbenutzungspflicht?	?; 15920,7697 16195,7398 16353,7226 16428,7144
 #: by ^^^
@@ -1990,7 +1982,7 @@ Köpenicker Landstraße: bleibt die Radwegbenutzungspflicht?	?; 15920,7697 16195,7
 # REMOVED (Radfahrer können/dürfen auch in Südost-Richtung fahren) --- #: XXX +Kiefholzstra<DF>e: (Treptow): Vollsperrung zwischen Eichbuschallee und Baumschulenstra<DF>e, bis 6.6. --- #: XXX laut fritz bis 10. Juni, in beiden Richtungen --- Kiefholzstr.: Baustelle, gibt es Einschränkungen für Radfahrer?	? 15560,7400 15609,7347 15695,7254 15928,6996 15977,6942 16060,6850 16146,6755
 # 
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4129
-#: last_checked: 2016-10-03
+#: last_checked: 2017-05-01
 #: check_frequency: 90d
 #: priority: #C
 Hauptstr./Goethestr.: vorhandene Überquerungshilfe soll zu einem Zebrastreifen ausgebaut werden	?::projected 7787,20166 7790,20132 7823,20149
@@ -2003,11 +1995,11 @@ Seehausener Str.: vielleicht Bau eines Zebrastreifens	?::projected 18520,17525 1
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6391
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6616
 #: XXX Baubeginn Ende 2016, mittlerweile ab April 2018
-#: osm_watch: way id="4068148" version="15"
+#: osm_watch: way id="4068148" version="16"
 #: osm_watch: way id="27942935" version="9"
-#: osm_watch: way id="11663312" version="13"
-#: osm_watch: way id="4689343" version="13"
-#: last_checked: 2016-06-16
+#: osm_watch: way id="11663312" version="14"
+#: osm_watch: way id="4689343" version="14"
+#: last_checked: 2017-04-14
 #: next_check: 2018-04-01
 Rhinstr.: Planung eines Radfahrstreifens	?::projected; 18216,12262 18216,12239 18215,12123
 # 
@@ -2032,7 +2024,12 @@ Schleuse - Lindenufer: führt der Havelradweg hier entlang?	? -2942,14666 -2928,1
 # REMOVED (bereits aufgenommen) --- #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4203 --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/15re.pdf/file?y=2016 --- #: XXX ggfs. auch als Grünfläche in flaechen-orig eintragen --- #: next_check: 2016-05-01 --- Selma- und Paul-Latte-Platz: Benennungsabsicht eines Platzes	? 10843,20301 10786,20272 10802,20240 10843,20301
 # REMOVED --- #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036470336375/470336375/00071821/21-Anlagen/02/_15-BenennungsabsichtfuerdieoeffentlicheStrass.pdf --- Straße 46: ist hier bereits die Mittelstr.?	? 14320,20580 14482,20547
 # REMOVED --- Robert-Koch-Platz: genaue Ausschilderung anschauen	? 8648,13498 8634,13588 8626,13641 8619,13689 --- Robert-Koch-Platz: genaue Ausschilderung anschauen	? 8601,13584 8634,13588 8674,13593
-# REMOVED (dieses Jahr nicht geschafft) --- #: XXX dieses Jahr (2016) vom 27.05.2016 bis zum 12.06.2016 --- #: next_check: 2016-05-27 --- #: priority: #A --- Steglitzer Festwoche im Bäkepark: gibt es während der Festwoche Einschränkungen für Radfahrer? Wenn ja, wo genau?	? 4742,4885 4760,4843 4795,4801 4848,4668 4870,4609 4957,4448 5015,4339 5090,4291 5129,4262 5246,4240 5320,4217 5337,4192
+# 
+#: XXX dieses Jahr (2016) vom 25.05.2017 bis zum 11.06.2017
+#: next_check: 2017-05-25
+#: priority: #A
+Steglitzer Festwoche im Bäkepark: gibt es während der Festwoche Einschränkungen für Radfahrer? Wenn ja, wo genau?	? 4742,4885 4760,4843 4795,4801 4848,4668 4870,4609 4957,4448 5015,4339 5090,4291 5129,4262 5246,4240 5320,4217 5337,4192
+# 
 # REMOVED (keine Einschränkungen) --- #: by: fritz --- #: source_id: 2147339783 --- Sellerstr.: Bauarbeiten zwischen Nordhafen und Müllerstr., gibt es für Radfahrer Einschränkungen?	? 7741,14560 7968,14787 8057,14876
 # REMOVED (ja, ja) --- #: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5616&options=4 --- Finckensteinallee: gibt es hier Bordsteine oder Handicaps durch Fußgängerverkehr?	? 4115,2726 4140,2706 4170,2727
 # 
@@ -2040,7 +2037,7 @@ Schleuse - Lindenufer: führt der Havelradweg hier entlang?	? -2942,14666 -2928,1
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/14re.pdf/file?y=2016
 #: XXX ggfs. culdesac- und str_cont_ausnahme-Einträge erstellen
 #: osm_watch: way id="25008069" version="6"
-#: last_checked: 2017-01-05
+#: last_checked: 2017-03-18
 #: check_frequency: 90d
 Mehlbeerenweg: Teilstück wird eingezogen	? 11940,11982 11923,11881
 # 
@@ -2089,10 +2086,11 @@ Schulzendorfer Str.: Radverkehrsanlangen? (vermutlich asphaltiert, vermutlich nu
 #: next_check_id: SEEGEFELDERWEG-2016
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.367070.php
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2016/pressemitteilung.541819.php
+#: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php
 #: osm_watch: way id="5000155" version="14"
 #: osm_watch: way id="313302635" version="4"
 #: osm_watch: way id="57401090" version="8"
-#: next_check: 2017-04-01
+#: next_check: 2017-11-01
 Seegefelder Weg: Bau von Radspuren	?::inwork -6507,15007 -6861,15129
 # 
 # REMOVED --- Chausseestr.: wie weit geht hier noch die Radspur?	? 8442,14456 8527,14352
@@ -2131,13 +2129,16 @@ Mauerweg im Spandauer Forst: Erneuerung	?::projected -3497,20003 -3652,20100 -42
 # 
 #: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2015/pressemitteilung.331578.php
 #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.205748.php
+#: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2017/pressemitteilung.570782.php
 #: XXX Wiltbergstr. (Buch): Baustelle, Fahrtrichtung gesperrt (Gesamtmaßnahme bis 2018) Richtung Schönerlinder Chaussee zwischen Alt-Buch und Hobrechtsfelder Chaussee, 06.07.2015 06:00 Uhr bis 30.09.2015 18:00 Uhr
 #: source_id: IM_025572
 #: source_id: 2147339182
 #: XXX "Die geplante Bauzeit beträgt vier Jahre"
 #: XXX nach den Bauarbeiten werden Radspuren existieren
-#: next_check: 2015-07-10
-Wiltbergstr.: wird es für Radfahrer Einschränkungen während der Bauarbeiten geben?	? 16669,25373 16583,25440 16475,25526 16414,25575 16294,25683 16220,25716 16166,25767 16121,25818 16045,25907 16037,25915 16017,25938
+#: last_checked: 2017-04-09
+#: check_frequency: 360d
+Wiltbergstr.: wird es für Radfahrer Einschränkungen während der Bauarbeiten geben?	? 16669,25373 16583,25440 16475,25526 16414,25575 16294,25683 16220,25716 16166,25767
+# REMOVED (Bauarbeiten beendet) --- Wiltbergstr.: wird es für Radfahrer Einschränkungen während der Bauarbeiten geben?	? 16166,25767 16121,25818 16043,25898 16039,25903 16011,25934
 # 
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6272
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036788094107/788094107/00079308/08-Anlagen/02/vzbbvv1018_IV_Radwegekonzept.pdf
@@ -2169,7 +2170,7 @@ Paster-Behrens-Str. - Britzer Park: wegen Bordstein muss man zur östlichen Seite
 # REMOVED (eingetragen) --- Neubrandenburger Str.: Qualität?	? 17401,18409 17580,18548 17635,18591 17667,18617 17680,18700
 # REMOVED (-> gesperrt-orig) --- #: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/presse/archiv/20141127.1230.400389.html --- #: priority: #A --- Am Kienberg: sind die Wege bereits gesperrt?	? 22670,14520 22679,14450 22639,14384 22462,14172 22414,14144 22172,14287 22061,14471 22026,14501 21985,14513
 # REMOVED (-> ampeln-orig) --- #: XXX gibt es während der Bauarbeiten Einschränkungen bzgl. der Radwege? vvv --- #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2014/pressemitteilung.223342.php vvv --- #: XXX -> Köpenicker Landstr. (Baumschulenweg): Baustelle, linker Fahrstreifen in jeder Richtung gesperrt (bis Anfang 12/14, Gesamtmaßnahme bis 2016) in beiden Richtungen zwischen Neue Krugallee und Schnellerstr., 25.11.2014 13:08 Uhr bis 03.12.2014 16:00 Uhr	IM_023532 --- #: last_checked: 2014-11-15 vvv --- #: check_frequency: 7d vvv
-# REMOVED (-> ampeln-orig) --- Rummelsburger Str.	? 17527,7812 17568,7753 17681,7589 17769,7465 17839,7365
+# REMOVED (-> ampeln-orig) --- Rummelsburger Str.	? 17527,7812 17568,7753 17619,7679 17681,7589 17769,7465 17839,7365
 # REMOVED (-> ampeln-orig) --- Köpenicker Landstr.	? 16843,6712 16720,6845 16677,6892
 # REMOVED (ja) --- Bremer Weg: im östlichen Abschnitt beleuchtet?	? 8215,12156 8327,12174 8466,12197 8522,12239 8538,12245
 # REMOVED (nein) --- Esplanade/Grüntaler: unbeleuchtet?	? 10013,16972 9980,16973 9880,16994 9846,16981 9778,16915
@@ -2223,8 +2224,8 @@ Kastanienallee (Potsdam): teilweise Entwidmung für den Kfzverkehr	? -14758,-2460
 Fanny-Zobel-Str.	? 13975,10187 14049,10164
 # 
 # REMOVED (realisiert) --- #: XXX wahrscheinlich nach den Bauarbeiten? --- #: osm_watch: way id="4687118" version="11" --- #: last_checked: 2013-12-20 --- Parkaue: wann wird hier die Einbahnstraße ausgeschildert, wird sie tatsächlich für Radfahrer nicht offen sein?	? 15406,12444 15408,12394 15370,12264
-# REMOVED (-> strassen & gesperrt) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/24re.pdf/file?y=2015 vvv --- #: last_checked: 2015-09-27 vvv --- #: check_frequency: 90d vvv --- #: XXX ggfs. Sackgassen aufheben --- #: XXX PLZ=14167 --- #: osm_watch: way id="156817982" version="10" --- Lutterbacher Str.: genaue Lage? Qualität? Fertigstellung?	? 2183,3101 2074,3032 1993,3170 2094,3231
-# REMOVED (fertig) --- #: XXX "Biesheimring" im DPAG-Mitteilungsblatt, im Amtsblatt "Biesheimer Ring", auf dem Straßenschild "Biesheimring" --- #: XXX laut osm kein access=no mehr --- also fertig? --- #: osm_watch: way id="4706348" version="18" --- Biesheimring: genaue Lage? Straße wird asphaltiert sein. Fertigstellung?	? 2028,3008 2074,3032 1993,3170 1946,3142
+# REMOVED (-> strassen & gesperrt) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/24re.pdf/file?y=2015 vvv --- #: last_checked: 2015-09-27 vvv --- #: check_frequency: 90d vvv --- #: XXX ggfs. Sackgassen aufheben --- #: XXX PLZ=14167 --- #: osm_watch: way id="156817982" version="10" --- Lutterbacher Str.: genaue Lage? Qualität? Fertigstellung?	? 2183,3101 2074,3032 1999,3177 2064,3214 2094,3231
+# REMOVED (fertig) --- #: XXX "Biesheimring" im DPAG-Mitteilungsblatt, im Amtsblatt "Biesheimer Ring", auf dem Straßenschild "Biesheimring" --- #: XXX laut osm kein access=no mehr --- also fertig? --- #: osm_watch: way id="4706348" version="18" --- Biesheimring: genaue Lage? Straße wird asphaltiert sein. Fertigstellung?	? 2028,3008 2074,3032 1999,3177 1946,3142
 # REMOVED (realisiert) --- #: last_checked: 2013-10-29 (Kreidemarkierungen zu sehen) --- #: next_check: 2014-11-29 --- Seddiner Str.: anscheinend werden hier Radspuren markiert? Was passiert mit der vorhandenen Busspur?	? 18555,12101 18408,12105 18296,12115 18215,12123
 # REMOVED (nein, es gibt nur senkrechte Stichstraßen zu den einzelnen Häusern in der zweiten Reihe) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/06re.pdf/file?y=2014 (Nummerierungen, evtl. hier) --- #: XXX nördlich hiervon werden weitere Häuser entstehen --- #: last_checked: 2014-02-08 --- #: next_check: 2014-05-08 --- Beilsteiner Str.: wird es hier für das neue Wohngebiet eine Erschließungsstraße geben?	? 18737,12753 18706,12488
 # REMOVED (existiert) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/53re.pdf/file?y=2013 --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/28re.pdf/file?y=2014 (Grundstücksnummerierungen) --- #: XXX Privatstraße --- #: last_checked: 2014-04-27 --- #: next_check: 2015-03-15 --- In den Leonorengärten: existiert die Straße schon? Genaue Lage? Qualität?	?::inwork 6294,4021 6493,4105
@@ -2234,7 +2235,7 @@ Fanny-Zobel-Str.	? 13975,10187 14049,10164
 # 
 #: by: http://gruene-xhain.de/news/single-view/artikel/vorfahrt-fuer-den-radverkehr.html
 #: by: http://www.berlin.de/imperia/md/content/bafriedrichshain-kreuzberg/abtstadtpg/bzbm-buero/bezirksamtssitzungen/02-07-13/beschluss_265_13.pdf?start&ts=1372853813&file=beschluss_265_13.pdf
-#: last_checked: 2017-03-06
+#: last_checked: 2017-03-27
 #: check_frequency: 120d
 #: priority: #C
 Bergmannstr./Heimstr.: wird hier die Vorfahrtsregelung zugunsten des Radwegs geändert?	? 9880,9233 9973,9232 10001,9234
@@ -2327,7 +2328,7 @@ Kunersdorfer Str. (Potsdam): Kann die Heinrich-Mann-Allee in Höhe Kunersdorfer S
 #: next_check_id: SUEDPANKE-2014
 #: osm_watch: way id="327596411" version="1"
 #: XXX culdesac-orig entfernen, sobald die Verlängerung erfolgt ist
-#: last_checked: 2016-06-16
+#: last_checked: 2017-03-24
 #: check_frequency: 360d
 Südpankeweg, Fortsetzung zur Ida-von-Arnim-Str.: wann wird sie gebaut? Qualität? Beleuchtet?	?::projected 8294,14194 8266,14253 8251,14337
 # 
@@ -2354,23 +2355,14 @@ Südpankeweg, Fortsetzung zur Ida-von-Arnim-Str.: wann wird sie gebaut? Qualität?
 # REMOVED (-> strassen+gesperrt) --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5696 (Straßenname) --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/___tmp/tmp/45081036439860180/439860180/00109962/62-Anlagen/02/LageplanDS1034.pdf (grober Lageplan) --- #: by: http://w6898n4pa.homepage.t-online.de/Lage.pdf (Lageplan) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/17re.pdf/file?y=2014 (Grundstücksnummerierungen) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/22re.pdf/file?y=2014 (Benennung) --- #: XXX Baustart: Ende 2013, Bauende: Frühjahr 2015 --- #: XXX Verbundsteinpflaster --- #: last_checked: 2015-05-10 --- #: check_frequency: 60d --- Am Gutspark: neue geplante Privatstraße, Lage, Qualität?	?::inwork 15747,12880 15746,12967 15826,12971
 # REMOVED (abgelehnt, siehe Schlussbericht) --- #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/vo020.asp?VOLFDNR=4458 --- #: by: http://www.berlin.de/ba-treptow-koepenick/bvv-online/___tmp/tmp/45081036560602837/560602837/00092292/92-Anlagen/04/B0359SB.pdf (Schlussbericht) --- #: last_checked: 2013-06-22 --- #: check_frequency: 90d --- Brandenburgplatz: wird hier eine Fußgängerampel eingerichtet?	? 23363,5714 23309,5704
 # REMOVED (realisiert) --- #: next_check_id: GREIFENHAGENER-2015 --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=2656 --- #: by: http://www.berlin.de/ba-pankow/verwaltung/tiefbau/helmholtzplatz.php --- #: by: http://www.berlin.de/imperia/md/content/bapankow/tiefbauamt/pr__sentation_sanierungsgebiet_helmholtzplatz.pdf?start&ts=1399614747&file=pr__sentation_sanierungsgebiet_helmholtzplatz.pdf --- #: last_checked: 2015-06-30 --- #: check_frequency: 30d --- Greifenhagener Str.: hier wird eine Fußgängerzone entstehen sowie asphaltiert werden; außerdem wird es eine Einbahnstraßenregelung für Autofahrer geben	? 11123,15851 11150,15908
-# 
-#: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3385
-#: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3385&date=20140201 (noch nichts passiert)
-#: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3385&date=20140221 (Maßnahme beschlossen, kein Realisierungszeitraum genannt)
-#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4247 (Schutzstreifen wurde markiert)
-#: osm_watch: way id="145485550" version="4"
-#: last_checked: 2014-09-28
-#: check_frequency: 120d
-Alt-Karow: evtl. wird hier ein Schutzstreifen Richtung Süden angelegt	? 15726,23475 15637,23251 15547,23024 15529,22981 15428,22736
-# 
+# REMOVED (realisiert) --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3385 --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3385&date=20140201 (noch nichts passiert) --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3385&date=20140221 (Maßnahme beschlossen, kein Realisierungszeitraum genannt) --- #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4247 (Schutzstreifen wurde markiert) --- #: osm_watch: way id="145485550" version="7" --- #: last_checked: 2014-09-28 --- #: check_frequency: 120d --- Alt-Karow: evtl. wird hier ein Schutzstreifen Richtung Süden angelegt	? 15726,23475 15713,23442 15637,23251 15547,23024 15529,22981 15428,22736
 # REMOVED ("Apfelwege" alle aufgenommen) --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3453 --- #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3501 --- #: by: http://www.berlin.de/ba-pankow/bvv-online/___tmp/tmp/45081036924327063/924327063/00054997/97-Anlagen/02/Benennungvon20PrivatwegeninderAnlageGravenstei.pdf --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/20re.pdf/file?y=2013 --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/38re.pdf/file?y=2013 (Grundstücksnummerierung) --- #: XXX 13127 Berlin, Ortsteil Französisch Buchholz, fehlen alle in Berlin.coords.data vvv --- #: XXX Benennung von 20 Privatwegen in der Anlage Gravenstein: genaue Lage der Wege? Qualität? Beleuchtet? vvv --- #: last_checked: 2013-08-27 --- #: next_check: 2014-03-27
 # REMOVED --- Im Staudenhof: frühere Adresse, heute "Am alten Markt" (laut DPAG-Mitteilungsblatt 3/2013), ist es für Radfahrer irgendwie relevant?	? -12727,-1416 -12703,-1410
 # 
 #: next_check_id: SONNENALLEE-2014
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to020.asp?TOLFDNR=14709&options=8 (beschlossen durch BVV, Realisierung steht noch aus)
-#: last_checked: 2017-03-01 (zurzeit eine Baustellenampel, wird eine permanente Ampel nach den Bauarbeiten aufgestellt?)
-#: check_frequency: 90d
+#: last_checked: 2017-03-27 (zurzeit eine Baustellenampel, wird eine permanente Ampel nach den Bauarbeiten aufgestellt?)
+#: next_check: 2017-06-15
 Sonnenallee/Ziegrastr.: wird hier eine permanente Ampel entstehen?	?::projected 14174,7505
 # 
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to020.asp?TOLFDNR=14708&options=8 (beschlossen durch BVV)
@@ -2382,7 +2374,7 @@ Thomasstr./Hermannstr.: sichere Querung, wie wird/könnte die Lösung hier aussehe
 # REMOVED (realisiert) --- #: XXX wird eine andere Ampel dafür ausgeschaltet? --- #: by: http://www.berliner-zeitung.de/verkehr/bvg-sanierung--die-u-8-faehrt-wieder-bis-zur-hermannstrasse,10809298,28209860.html (Fertigstellung im Dezember) --- #: last_checked: 2014-11-22 --- #: next_check: 2015-02-15 --- Hermannstr.: Fußgängerampel in Bau	?::inwork 12123,7549 12137,7506
 # 
 #: by: http://www.berlin.de/ba-neukoelln/bvv-online/to020.asp?TOLFDNR=14706&options=8
-#: last_checked: 2016-12-10
+#: last_checked: 2017-04-07
 #: check_frequency: 150d
 #: priority: #C
 Aronsstr.: wird hier ein Zebrastreifen entstehen?	?::projected 14562,7597 14583,7623 14614,7614
@@ -2407,9 +2399,11 @@ Aronsstr.: wird hier ein Zebrastreifen entstehen?	?::projected 14562,7597 14583,
 Schöneberger Str.: eventuell wird hier eine (Fußgänger-)Ampel entstehen	?::projected 8640,6770 8653,6781 8655,6796
 # 
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4106&options=4 (Konzeptphase)
-#: osm_watch: way id="338316875" version="4"
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5984
+#: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4106
+#: osm_watch: way id="338316875" version="5"
 #: last_checked: 2017-03-04
-#: check_frequency: 100d
+#: next_check: 2018-03-01
 Kolonnenstr.: werden hier Radstreifen errichtet?	?::projected; 7709,8777 7795,8765 8008,8771 8014,8771 8078,8772
 # 
 # REMOVED (Annahme: hier passiert nichts mehr) --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=4744 --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20140610.1005.397765.html --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/bvv-online/vo020.asp?VOLFDNR=5027 --- #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/presse/archiv/20151113.1355.402692.html --- #: XXX mittlerweile schon als verkehrsberuhigte Zone gekennzeichnet --- #: osm_watch: way id="25396414" version="7" --- #: last_checked: 2016-09-18 --- #: check_frequency: 90d --- Lauterstr.: wird die Straße am Breslauer Platz komplett für Autofahrer/Radfahrer gesperrt?	?::projected 5810,7337 5817,7223
@@ -2491,7 +2485,7 @@ Dörpfeldstr.: evtl. Einrichtung von Radverkehrsanlagen	?::projected 20834,4035 2
 # 
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/bvv-online/vo020.asp?VOLFDNR=4353&options=4 (Prüfung der Maßnahme)
 #: osm_watch: way id="46907545" version="6"
-#: last_checked: 2016-09-30
+#: last_checked: 2017-03-26
 #: check_frequency: 180d
 Birkbuschstr.: werden hier Radspuren oder Busspuren angelegt?	? 5546,4302 5483,4359 5416,4411 5329,4485 5271,4547 5165,4667 5132,4704 5076,4762 5070,4770 5048,4798 4985,4884 4951,4920 4879,5017
 # 
@@ -2646,6 +2640,10 @@ Planstraße B	?::projected 7729,19649 7744,19622 7797,19580
 Planstraße C	?::projected 7744,19622 7687,19488
 #: next_check ^^^
 #: XXX ^^^
+# 
+Wanderweg entlang des Grenzstreifens: Qualität?	? 5264,24186 5304,24244 5327,24311 5513,24308 5678,24407 5608,24610
+# 
+Alte Hellersdorfer Str. - Hellersdorfer Str.: existiert hier eine neue Abkürzung für Radfahrer?	? 23084,14472 23049,14066
 # 
 #: ignore ^^^
 # 
@@ -2923,10 +2921,7 @@ Radweg: Qualität? Beleuchtet?	? -13122,2849 -13168,2836
 Planstraße 1     -> Ankerweg, PLZ=12527	?::projected 22118,2559 22153,2582 22195,2610
 Planstraße 2     -> Am Ruderverein, PLZ=12527	?::projected 22153,2482 22208,2514 22270,2549
 Planstraße 3     -> Relingstr., PLZ=12527	?::projected 22195,2390 22276,2426 22358,2460
-#: XXX diese Straße ist bereits fertiggestellt laut Amtsblatt
-#: osm_watch: way id="353948100" version="2"
-#: next_check: 2016-12-15
-Planstraße 4,5,7 -> Teichmummelring, PLZ=12527	?::projected 22246,2272 22418,2390 22454,2342 22271,2214
+# REMOVED (-> strassen) --- #: XXX diese Straße ist bereits fertiggestellt laut Amtsblatt --- #: next_check: 2016-12-15 --- Planstraße 4,5,7 -> Teichmummelring, PLZ=12527	?::projected 22246,2272 22418,2390 22454,2342 22271,2214
 #: XXX im Plan "Privatstraße", im Amtsblatt "Planstraße"
 Planstraße 6     -> An der Dahme, PLZ=12527	?::projected 22195,2610 22270,2549 22358,2460
 Privatstraße 1   -> An der Brücke (evtl. mit Gehweg zur Regattastr.), PLZ=12527	?::projected 22195,2610 22109,2636
@@ -2953,9 +2948,9 @@ Hüfnerweg (Groß Glienicke): genaue Lage, Qualität?	? -9801,6988 -9795,7066
 # REMOVED (eingetragen) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/54re.pdf/file?y=2014 vvv --- #: XXX fehlen alle in Berlin.coords.data, Ortsteil Lübars vvv --- #: XXX Am Lübarser Feld PLZ=13469 --- #: XXX Zum Klötzbecken PLZ=13469 --- #: XXX Zum Klötzhain PLZ=13469 --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/18re.pdf/file?y=2015 (Grundstücksnummerierungen) --- #: XXX wo liegen die Straßen genau? --- #: last_checked: 2015-11-07 --- #: check_frequency: 270d --- Privatstraßen in Lübars	? 5958,22642 5901,22711 5801,22832
 # 
 #: osm_watch: way id="474904443" version="1"
-#: last_checked: 2016-10-03
-#: check_frequency:60d
-Parkweg: Bauarbeiten, Qualität? Beleuchtung? Verbindung zum Weg am Klötzbecken?	?::inwork 5777,22852 5815,22870 5926,22738 6003,22642 6063,22675
+#: last_checked: 2017-05-01
+#: check_frequency: 60d
+Parkweg: Bauarbeiten, Qualität? Beleuchtung? Verbindung zum Weg am Klötzbecken?	?::inwork 5815,22870 5926,22738 6003,22642
 # 
 # REMOVED --- #: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2015/pressemitteilung.262920.php --- #: next_check: 2016-03-01 (Fertigstellung im Frühjahr 2016) --- Karower Damm, Treseburger Straße: neues Wohngebiet und Grünanlage entsteht, und neue Wegverbindungen	? 14181,21374 14321,21165
 # 
@@ -3020,7 +3015,7 @@ Bebauungsplan 10-77: werden hier neue Straßen entstehen?	?::projected 21483,1652
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/31re.pdf/file?y=2016
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/38re.pdf/file?y=2016 (Grundstücksnummerierungen)
 #: XXX Privatstraßen
-#: last_checked: 2016-07-24 vvv
+#: last_checked: 2017-02-25 vvv
 #: check_frequency: 270d vvv
 Agnethaweg	?::projected 17221,15181 17245,15182 17314,15186 17336,15187
 Anni-Frid-Weg	?::projected 17227,15054 17258,15054 17323,15055 17346,15055
@@ -3047,20 +3042,14 @@ Hanoier Str.	?::projected 20730,11462 20723,11374
 #: check_frequency: 360d
 Bebauungsplan XXI-34a: evtl. entstehen hier neue Straßen	?::projected 20649,11628 20641,11496 21099,11478 21091,11601 20650,11627
 # 
-#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4189
-#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036554746315/554746315/00071216/16-Dateien/image001.png
-#: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7240
-#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4237
-#: XXX_indoor bei http://fbinter.stadt-berlin.de/fb/index.jsp?Szenario=light auf der Karte "Ortsteile von Berlin" nachschauen
-#: next_check: 2017-03-31
-Wedding/Prenzlauer Berg: Bezirksgrenzen werden verändert	?::projected 10271,14950 10208,14922 10053,15214 10031,15395 9976,15546 9941,15627 10042,15640
-# 
+# REMOVED (eingetragen) --- #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4189 --- #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036554746315/554746315/00071216/16-Dateien/image001.png --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7240 --- #: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4237 --- #: by: https://www.berlin.de/rbmskzl/aktuelles/pressemitteilungen/2017/pressemitteilung.563291.php --- #: XXX_indoor bei http://fbinter.stadt-berlin.de/fb/index.jsp?Szenario=light auf der Karte "Ortsteile von Berlin" nachschauen --- #: next_check: 2017-03-31 --- Wedding/Prenzlauer Berg: Bezirksgrenzen werden verändert	?::projected 10271,14950 10208,14922 10053,15214 10031,15395 9976,15546 9941,15627 10042,15640
 # REMOVED --- #: XXX wird erst im April eröffnet --- #: by: http://mybahnpage.de.tl/Fahrplanwechsel.htm?date=20160213 --- #: note: category RB --- #: next_check: 2016-04-01 --- Berlin-Schöneweide	? 17722,5573
 # 
 #: XXX im Zuge des Bebauungsplans 1-67VE
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7205
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/450810361070618957/1070618957/00129770/70-Anlagen/08/1482-2016-Anlage-7-1-67_VE_FEST_02_Abzeichnung.pdf
-#: next_check: 2017-03-01
+#: last_checked: 2017-03-24
+#: check_frequency: 180d
 Rad- und Gehweg geplant: Qualität, genaue Lage?	?::projected 7459,13912 7562,13968
 # 
 #: XXX im Zuge des Bebauungsplans 1-67VE
@@ -3068,7 +3057,8 @@ Rad- und Gehweg geplant: Qualität, genaue Lage?	?::projected 7459,13912 7562,139
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7408
 #: by: http://www.dafmap.de/d/berlin.html?id=3706&mt=0&zoom=16 (Geplanter Projektabschluss: 2018-07-31)
 #: XXX Privatstraße, Eintrag in Berlin.coords.data fehlt
-#: next_check: 2017-09-01
+#: last_checked: 2017-03-24
+#: check_frequency: 180d
 Klara-Franke-Str.: geplant	?::projected 7377,14080 7464,14133 7562,13968 7662,13784 7564,13735
 # 
 #: by: http://www.berlin.de/rbmskzl/aktuelles/pressemitteilungen/2016/pressemitteilung.445338.php
@@ -3104,11 +3094,7 @@ Brunnenallee (Potsdam):genaue Lage? Qualität? Existiert die Straße schon?	?::pro
 #: XXX Bebauungsplan Nr. 146
 Uferweg (Potsdam): wird es hier Änderungen/Verbesserung geben, z.B. hinsichtlich der Qualität?	?::projected -13375,2950 -13287,2924 -13227,2920 -13194,2909 -13153,2884 -13122,2849 -13004,2755 -12999,2661 -12956,2619 -12913,2597 -12811,2576 -12736,2523 -12711,2471 -12656,2431 -12636,2398 -12586,2373 -12460,2288
 # 
-#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/10re.pdf/file?y=2016 (Benennung einer Straße)
-#: XXX fehlt in Berlin.coords.data
-#: last_checked: 2016-10-03
-#: check_frequency: 120d
-Zur Lübarser Bahn: genaue Lage? Qualität? Nachts beleuchtet?	? 6250,22401 6325,22281 6412,22546 6550,22371
+# REMOVED (aufgenommen) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/10re.pdf/file?y=2016 (Benennung einer Straße) --- #: XXX fehlt in Berlin.coords.data --- #: last_checked: 2016-10-03 --- #: check_frequency: 120d --- Zur Lübarser Bahn: genaue Lage? Qualität? Nachts beleuchtet?	? 6250,22401 6325,22281 6412,22546 6550,22371
 # 
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplanung/bebauungsplan-7-68-457761.php
 #: by: http://www.berlin.de/ba-tempelhof-schoeneberg/_assets/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung/bebauungsplanung/bebauungsplaene-im-verfahren/b-plan-7-68/b-plan7-68_karte.pdf
@@ -3138,7 +3124,7 @@ Johannes-Guthmann-Weg: neue Straße entsteht, vermutlich hier? Qualität?	?::inwor
 #: by: http://www.dafmap.de/d/berlin.html?id=3692&mt=0&zoom=16 (Projektabschluss: 2017-12-31)
 #: XXX eventuell entstehen hier weitere Straßen/Wege
 #: XXX Alternativer Namensvorschlag: Am Humboldthafen
-#: last_checked: 2017-01-20
+#: last_checked: 2017-04-07
 #: next_check: 2017-12-01
 (Am Humboldthafen): Straße soll nach Hilda Geiringer benannt werden --- wo genau wird die Straße liegen?	?::projected 8243,13469 8245,13396
 # 
@@ -3156,7 +3142,7 @@ Lili-Grün-Weg und Lin-Jaldati-Weg: wo genau werden die Straßen liegen? Qualität?
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036827265989/827265989/00127188/88-Anlagen/02/AnlageDS2043VIIWege.pdf vvv
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_04_0325_0472_online.pdf
 #: XXX Namensvorschläge
-#: last_checked: 2017-03-12 vvv
+#: last_checked: 2017-04-09 vvv
 #: check_frequency: 60d vvv
 Zum Hechtgraben: Benennung zu Malchower Teichweg	? 16163,18780 16158,19049 16104,19165
 Zum Hechtgraben, Verlängerung: Benennung zu Malchower Teichweg	? 16074,19162 16078,19436 16081,19656 16082,19754 15617,19775
@@ -3201,7 +3187,7 @@ Lichterfelde Süd: neue Straßen im Zuge des Bebauungsplans 6-30?	?::projected 406
 # 
 #: by: http://www.berliner-zeitung.de/berlin/umbau-so-soll-der-mauerpark-kuenftig-aussehen--24304152
 #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1606/nachricht6096.html
-#: last_checked: 2017-02-04
+#: last_checked: 2017-04-07
 Mauerpark: Umbauarbeiten, gibt es schon Einschränkungen oder Veränderungen?	?::projected 9999,15594 10168,15624 10372,15028 10222,14969 9999,15594
 # 
 #: by: http://www.karlshorst-west.de/b-plan-11-47b/aktueller-planungsstand
@@ -3214,17 +3200,31 @@ Karlshorst-West: neues Wohngebiet wird entstehen, auch neue Straßen	?::projected
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6932
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/4508103674626797/74626797/00211748/48-Dateien/image001.png
-#: XXX neue Straßen entstehen, Bebauungsplan XVII-50ab:
-#: XXX Planstraße 2: Arnbrucker Str.
-#: XXX Planstraße 3: Bischofsmaiser Str.
-#: XXX Planstraße 4: Langdorfer Str.
-#: XXX Planstraße 5: Osserweg
-#: XXX Planstraße 6: Rachelweg
-#: XXX Planstraße 7: Ruhmannsfelder Str.
-#: XXX Planstraße 8: Prackenbacher Str.
-#: XXX Die kleine Verbindungsstraße zwischen Langdorfer Straße und Prackenbacher Straße: Lusenpfad
-#: XXX der Stadtplatz an der Arnbrucker Straße: Arberlandplatz
-Gartenstadt Karlshost II: neue Straßen werden entstehen	?::projected 19657,9119 19596,9007 19905,8446 20023,8483 19931,9128 19657,9119
+#: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6932&date=20170317
+#: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_17_1769_1956_online.pdf (Benennung von Verkehrsanlagen + Karte)
+#: XXX neue Straßen entstehen, Bebauungsplan XVII-50ab --- Gartenstadt Karlshost II
+#: last_checked: 2017-04-14 vvv
+#: check_frequency: 360d vvv
+#: XXX Planstraße 2:
+Arnbrucker Str.	? 19610,8933 19667,8965 19728,8998
+#: XXX Planstraße 3:
+Bischofsmaiser Str.	? 19667,8965 19755,8806 19840,8649
+#: XXX Planstraße 4:
+Langdorfer Str.	? 19705,9039 19728,8998 19816,8842 19903,8684 19956,8587 19977,8566 20037,8508
+#: XXX Planstraße 5:
+Osserweg	? 19806,9040 19891,8887 19980,8727 20012,8670
+#: XXX Planstraße 6:
+Rachelweg	? 19863,9073 19949,8920 19983,8861
+#: XXX Planstraße 7: 
+Ruhmannsfeldener Str.	? 19840,8649 19855,8657 19903,8684 19980,8727 20001,8738
+#: XXX Planstraße 8:
+Prackenbacher Str.	? 19855,8657 19937,8533 19962,8486
+#: XXX Die kleine Verbindungsstraße zwischen Langdorfer Straße und Prackenbacher Straße:
+Lusenpfad	? 19937,8533 19977,8566
+#: XXX der Stadtplatz an der Arnbrucker Straße:
+Arberlandplatz	? 19705,9039 19728,8998
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 #: by: http://s522689958.online.de/wp-content/uploads/2016/02/XV-37d-Paradiesstra%C3%9Fe.png vvv
 #: by: http://www.berlin.de/ba-treptow-koepenick/_assets/aemter-und-se/stadtentwicklung/stadtplanung/pdf/xv-37d-bebauungsplan.pdf
@@ -3268,7 +3268,8 @@ Lilienweg (Potsdam): genaue Lage? Qualität?	? -18312,7674 -18395,7365
 #: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2016/pressemitteilung.533236.php
 #: XXX auch eintragen: die Grünanlage
 #: XXX wo entsteht die geplante Fußgängerbrücke?
-#: next_check: 2017-06-01
+#: last_checked: 2017-05-01
+#: check_frequency: 90d
 Kreuzgraben: Weg von der Dietzgenstr. aus wird erstellt	?::projected 10106,20093 10251,20218 10525,20392
 # 
 #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/51re.pdf/file?y=2016
@@ -3282,7 +3283,7 @@ Alt-Mahlsdorf: entsteht hier eine Ampel? Wird sie für Radfahrer relevant sein?	?
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2016/5_2016_anlage2_b_plan_1_43a_erneuter_beschluss.pdf
 #: by: http://www.dafmap.de/d/berlin.html?id=3220&mt=0&zoom=16
 #: by: http://www.dafmap.de/d/berlin.html?id=3730&mt=0&zoom=16
-#: last_checked: 2017-03-04
+#: last_checked: 2017-04-28
 #: next_check: 2018-01-01
 Bebauungsplanentwurf I-43a "Südliche Alexanderstraße": entsteht hier eine Planstraße?	? 11243,12386 11328,12424
 # 
@@ -3296,7 +3297,9 @@ Lichtenrade: Sanierung von Pflasterstraßen	?::projected 10381,-2457 11914,-2137 
 Cimbernstr.: Stichstraße eintragen, Qualität?	? -3532,2009 -3614,1880
 # 
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6933
+#: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_16_1713_1768_online.pdf (Benennung)
 #: XXX fehlt in Berlin.coords.data
+#: XXX Privatstraße
 #: last_checked: 2017-02-25
 #: check_frequency: 90d
 Im Lichtenhain: neue geplante Straße, Qualität, genaue Lage?	?::projected 16494,10669 16462,10571
@@ -3306,6 +3309,15 @@ Im Lichtenhain: neue geplante Straße, Qualität, genaue Lage?	?::projected 16494,
 #: next_check: 2018-03-01
 Bebauungsplan XVI-81: neue Straßen werden entstehen	?::projected 33532,2877 33523,2784 33408,2778 33394,2748 33115,2798 33158,3030 33532,2877
 # 
+#: by: http://www.berlin.de/ba-steglitz-zehlendorf/politik-und-verwaltung/aemter/stadtentwicklungsamt/stadtplanung-und-denkmalschutz/stadtplanung/bebauungsplanung/oeffentlichkeits-beteiligungen/vorhabenbezogener-b-planentwurf-6-24ve.pdf
+#: next_check: 2018-03-01
+Bebauungsplan 6-24 VE: entsteht hier eine neue Privatstraße? entsteht eine Parallelstraße zur Plüschowstr.?	?::projected 89,3443 132,3505 227,3519 194,3753
+# 
+#: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_15_1637_1712_online.pdf
+#: XXX vielleicht entsteht hier auch eine Abkürzung für den B-K-Radweg?
+#: next_check: 2018-04-01
+geplante Grünanlage	?::projected 4084,15859 4055,15795 4041,15786 4224,15779 4216,15799 4295,15852 4084,15859
+# 
 #: ignore ^^^
 #: section ^^^
 # 
@@ -3313,6 +3325,13 @@ Bebauungsplan XVI-81: neue Straßen werden entstehen	?::projected 33532,2877 3352
 #
 #  ÖFFENTLICHE FRAGEZEICHEN
 # 
+#: XXX_osm: laut osm cobblestone
+#: by: https://www.potsdam.de/sites/default/files/documents/17118_amtsblatt_maerz17_dsjs_korr5_0.pdf
+#: XXX laut Amtsblatt heißt der südliche Teil der Straße "Plattenweg"
+Am Schlänitzsee (Potsdam-Marquardt): Qualität? Wie ist die genaue Lage der Straße?	? -19356,5480 -19454,5465 -19461,5517 -19370,5535
+#: XXX_osm: laut osm paved
+#: by: https://www.potsdam.de/sites/default/files/documents/17118_amtsblatt_maerz17_dsjs_korr5_0.pdf
+An der Obstplantage (Potsdam-Marquardt): Qualität?	? -19427,5736 -19517,5712 -19543,5849 -19463,5860
 Neuenhagen, Richtung Schöneiche: existiert hier ein Radweg (wahrscheinlich ab 2006-12-31)?	? 31148,12804 31043,12392 31021,12174
 #REMOVED (ja!) --- Buch - Schwanebeck: existiert hier ein Radweg (wahrscheinlich ab 2006-09-30)?	? 18562,24975 18583,24966 19395,24634
 Biegen - Müllrose: existiert hier ein Radweg (wahrscheinlich ab 2006-10-31)	? 79768,-15263 78364,-14355
@@ -3322,7 +3341,7 @@ B246: existiert ein Radweg bei Nächst Neuendorf (wahrscheinlich ab 2006-11-15)?	
 Stolper Weg: Qualität? Bis wo (vom Europarc aus) ist Autoverkehr vorhanden? Radwege? Genaue Straßennamen?	? -4709,-728 -5233,-902 -5380,-990 -5799,-1108 -5901,-1257 -6051,-1169 -6411,-868
 (Albrechts Teerofen - Stopler Weg): Qualität?	? -5364,-1204 -5380,-990
 Seenpromenade (Groß Glienicke): Qualität des südlichen Abschnitts?	? -9615,5069 -9678,4874
-Röntgental, Buchenallee: Qualität?	? 17689,27853 17896,28134 18451,29241
+Röntgental, Buchenallee: Qualität?	? 17896,28134 18451,29241
 Gamengrund: Qualität (teilweise war es sehr sandig!)? Geht es von der B 158 aus noch weiter in Richtung Norden?	? 39337,22638 39383,22801 39165,23131 39033,23202 39114,23766 39180,23776 39266,23984 39241,24116 39089,24279 39063,24400 38997,24431 38880,24568 38824,24812 39002,25304 39221,25518 39205,25655 39124,25812 39089,26036 39241,26229 39282,26391 39378,26508 39561,27382 39602,27382 39678,27600 39535,27808 39561,27996 39657,28154 39988,28352 40231,28753 40135,28824 40267,28951 40282,29022 40236,29621 40195,29774 40206,30002 40255,30508 40302,30617 40314,30725 40562,30941 40750,31012 40982,31319 41300,31862 41235,31914 41003,31612 40819,31252 40562,31025 40350,31083 39783,31398
 Brunow - Gamengrund: Qualität?	? 41618,36515 43362,37337 43825,37262 43922,36623 43637,36362 42975,36212 42748,35962
 Martin-Luther-Str. (Falkensee) - Radelandstr.: durchgängige Verbindung vorhanden? Qualität?	? -6962,17713 -7060,17637 -7306,17291 -7396,17303
@@ -4375,9 +4394,6 @@ Ungerstr. (Potsdam): Qualität?	? -15805,-2868 -15914,-2906 -15861,-3092 -15744,-
 Immenseestr. (Potsdam): Qualität?	? -15768,-2741 -15703,-2944 -15673,-3049
 Sonnenlandstr. (Potsdam): Qualität?	? -15562,-2727 -15673,-3049 -15685,-3096 -15723,-3119
 Knobelsdorffstr. (Potsdam): Qualität?	? -15408,-2774 -15390,-2678 -15341,-2557 -15281,-2487 -15243,-2459 -15185,-2444 -15087,-2424 -14973,-2405 -14859,-2384
-Schönerlinder Dorfstr.: Qualität Richtung Bahnhof?	? 12151,27606 11856,27418
-Schönerlinder Bahnhofstr.: Qualität? Ist der Bahnübergang beschrankt?	? 11856,27418 11312,27124
-Industriestr. (Schönerlinde): Qualität?	? 12126,26016 11655,26469 11621,26746 11530,26931 11360,27051 11312,27124
 #: XXX im Bereich der Gutsstr./Verlängerung Beton, und teilweise Rasengittersteine
 Kirschallee - Rückertstr.: Qualität der Wege? Unbeleuchtet?	? -13944,1764 -14171,1878 -14205,1864 -14588,1918 -15132,1992 -15560,2052 -15671,1990 -15875,2079 -15942,2110 -16004,2136 -16034,2150 -16396,2310
 Grenzallee - Birnenweg: Qualität des Wegs? Unbeleuchtet?	? -14100,2144 -14205,1864 -14288,1707 -14379,1551 -14349,1505
@@ -4771,14 +4787,7 @@ Waldweg zum Campingplatz: Qualität der Straße?	? 29208,71 29512,-619 29297,-717 
 # REMOVED --- #  --- #: XXX eine Straße (eine Aldi-Zufahrt oder so) existiert hier, und laut 1:5K und gmaps ist es die Waadter Zeile, aber... --- #: XXX_osm: bei osm ohne Straßennamen --- Waadter Zeile (Zufahrt am Supermarkt): existieren an dieser Straße Straßenschilder? Qualität?	? 3746,2108 3723,2118 3726,2209
 # REMOVED (es gibt nur einen Gehweg, ohne Radweg, aber siehe auch Kommentar in radwege-orig) --- #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20120302.1240.366909.html --- #: by: http://www.berlin.de/ba-treptow-koepenick/organisationseinheiten/tief/index.html?date=20120505 --- #: next_check: 2012-07-13 --- #: XXX es gab hier Geh- und Radwegarbeiten --- Königsheideweg: Gibt es hier Radwege oder Radspuren? Einseitig oder auf beiden Seiten? Zwischen welchen Kreuzungen?	?::inwork 16784,4913 16554,5022 16362,5112 16279,5170
 # REMOVED (realisiert) --- #: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20120727.1045.372992.html --- #: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20130610.1230.385879.html --- #: XXX Bauarbeiten, der Weg bekommt eine neue Asphaltdecke -> Asphalt, Q0 --- #: next_check: 2013-07-10 (evtl. automatisch ändern?) --- #: priority: #A --- Kolonie Frühauf: Radfahrverbindung wird saniert	? 3632,19934 4076,20268 4088,20301
-# 
-#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/31re.pdf/file
-#: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/45re.pdf/file?y=2011
-#: by: http://www.dafmap.de/d/berlin.html?id=4376&mt=0&zoom=16
-#: last_checked: 2016-09-25
-#: check_frequency: 120d
-Am Orangeriepark: Ist die Straße bereits fertiggestellt? Qualität? Wo befindet sich die Straße (möglichst mit GPS-Track)?	?::inwork 10271,19361 10421,19410
-# 
+# REMOVED (realisiert) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/31re.pdf/file --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/45re.pdf/file?y=2011 --- #: by: http://www.dafmap.de/d/berlin.html?id=4376&mt=0&zoom=16 --- #: last_checked: 2016-09-25 --- #: check_frequency: 120d --- Am Orangeriepark: Ist die Straße bereits fertiggestellt? Qualität? Wo befindet sich die Straße (möglichst mit GPS-Track)?	?::inwork 10271,19361 10281,19364 10330,19384 10321,19410 10389,19438
 # REMOVED (realisiert) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/20re.pdf/file?y=2012 ("geplanter Straßenname") --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/37re.pdf/file?y=2012 (Lage) --- #: XXX fehlt auch in Berlin.coords.data PLZ=12683 --- #: last_checked: 2012-09-16 --- #: next_check: 2013-08-01 --- #: osm_watch: way id="189453405" version="1" --- Fechinger Weg: Ist die Straße bereits fertiggestellt? Qualität? Wo befindet sich die Straße (möglichst mit GPS-Track)?	?::inwork 21409,11941 21411,11863 21456,11825
 # 
 #: last_checked: 2015-08-01 (noch keine Anzeichen) vvv
@@ -4950,10 +4959,11 @@ Ibsenstr. (Mahlow): Qualität? Existiert ein Radweg?	? 12340,-4833 12307,-4851 12
 # REMOVED (Qualität aufgenommen, nicht verkehrsberuhigt) --- #: osm_watch: way id="117879323" version="4" vvv --- #: XXX auch culdesac-Einträge vornehmen vvv --- Am Dominikusteich: Qualität? vielleicht verkehrsberuhigt?	? 2636,23915 2759,23966 2790,23979 --- Am Dominikusteich: Qualität? vielleicht verkehrsberuhigt?	? 2759,23966 2784,23929
 # REMOVED (aufgenommen) --- #: by: http://www.berlin.de/ba-spandau/presse/archiv/20130919.1210.389478.html --- #: XXX Fußweg. Fehlt noch in Berlin.coords.data. --- Lee-Parry-Weg: wo genau liegt die Straße? Qualität?	? -5093,8398 -5088,8449 -5008,8475 -4999,8465
 # 
-#: XXX wahrscheinlich Waldweg, wahrscheinlich unbeleuchtet, green2 vvv
+#: XXX wahrscheinlich Waldweg (Q1- oder Q2+?), wahrscheinlich unbeleuchtet, green2 vvv
 #: next_check: 2014-03-15 (im Herbst/Winter sind Waldwege schwierig zu überprüfen) vvv
-Ehrenpfortensteig, Verlängerung: Qualität? Existiert eine Ausschilderung?	? 2203,22749 2088,22798 1897,22781 1760,22839 1661,22851 1563,22850 1518,22874 1460,22874
-Am Buchenberg - Schulzendorfer Str.: Qualität? Existiert eine Ausschilderung?	? 2827,23132 2773,23164 2458,23272 1794,23255 1479,23355 1050,23447 894,23477 737,23442
+# REMOVED --- (Tegeler Forst - Ehrenpfortensteig): Qualität? Existiert eine Ausschilderung?	? 1661,22851 1760,22839 1897,22781 2088,22798 2155,22771
+# REMOVED (steiler Abschnitt, für Radfahrer nicht geeignet) --- Ehrenpfortensteig, Verlängerung: Qualität? Existiert eine Ausschilderung?	? 1661,22851 1563,22850 1518,22874 1460,22874
+# REMOVED (aufgenommen) --- Am Buchenberg - Schulzendorfer Str.: Qualität? Existiert eine Ausschilderung?	? 2818,23125 2743,23165 2480,23264 1794,23255 1479,23355 1050,23447 894,23477 737,23442
 Am Buchenberg - Schulzendorfer Str.: Qualität? Existiert eine Ausschilderung?	? 554,23349 224,23440 -38,23355 -190,23187 -404,23107 -417,23034 -573,23032 -656,23011
 #: next_check ^^^
 #: XXX ^^^
@@ -4964,11 +4974,6 @@ Alte Feldmark (Kienwerder): Qualität? Im nördlichen Abschnitt auch unbefestigt?	
 # REMOVED (laut Schlußbericht passiert hier eher nichts, jedenfalls nicht vom Bezirk her) --- #: XXX Baumaßnahme 1.23 (Realisierung nach 2011) --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5428 --- #: XXX laut osm ist die Kongostraße mittlerweile asphaltiert - stimmt aber nicht (korrigiert)! --- #: osm_watch: way id="5117259" version="11" --- #: last_checked: 2015-09-12 --- #: check_frequency: 90d --- Kongostr.: ist die Kongostr. mittlerweile asphaltiert?	? 6244,16096 6258,16111 6349,16213 6447,16321
 # REMOVED (eingetragen) --- #: XXX http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/06re.pdf/file?y=2014 --- #: XXX fehlt in Berlin.coords.data --- #: XXX Helen-Keller-Weg|Hakenfelde|13587 --- Helen-Keller-Weg: wo genau liegt die Straße? Qualität? Nachts beleuchtet? Ausgeschildert?	? -3226,17772 -3233,17767 -3243,17763 --- Helen-Keller-Weg: wo genau liegt die Straße? Qualität? Nachts beleuchtet? Ausgeschildert?	? -3243,17763 -3270,17728 -3276,17669 -3325,17629 -3385,17513
 # 
-Hochstr. (Schwanebeck): Qualität?	? 18942,26470 19340,26610
-Hochstr. (Schwanebeck): Qualität?	? 19715,26770 19948,26760 20051,26756 20225,26711
-Kiesstr. (Schwanebeck): Qualität?	? 20192,26621 20225,26711 20304,26861
-Thuner Str. (Schwanebeck): Qualität des nördlichen Abschnitts?	? 18810,25948 18929,26214
-Wilhelm-Tell-Str. (Schwanebeck): Qualität des nördlichen Abschnitts?	? 18885,25916 19000,26147
 Humboldtstr. (Schwanebeck): Qualität des südöstlichen Abschnitts?	? 18190,24368 18492,24049
 # 
 # REMOVED (realisiert) --- #: next_check_id: CASSINOHOF-2014 --- #: XXX Benennung wahrscheinlich Cassinohof --- #: XXX culdesac_pseudo-Eintrag am Urselweg entfernen --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/16re.pdf/file?y=2014 --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/28re.pdf/file?y=2014 (Grundstücksnummerierungen) --- #: last_checked: 2014-08-07 --- #: check_frequency: 120d --- Cassinohof: existiert hier eine Straßenanbindung? Genaue Lage? Qualität? Ausschilderung?	? -802,2914 -765,2929 -685,2966 -786,3032 -799,3006 -765,2929
@@ -5020,20 +5025,13 @@ Peter-Behrens-Str. (Potsdam): Qualität? Existiert die Straße schon? Existiert ei
 #: XXX laut osm surface=asphalt
 Konrad-Wachsmann-Str. (Potsdam): Qualität? Existiert die Straße schon?	? -14114,580 -14254,659
 # 
-#: last_checked: 2013-05-10 vvv
-#: next_check: 2013-09-10 vvv
-#: XXX laut osm schon fertig vvv
-#: by: http://www.potsdam.de/sites/default/files/documents/amtsblatt_nr._9_2016_neu_0.pdf ("straßenrechtliche Widmung") vvv
-Hermann-Kasack-Str. (Potsdam): Ist die Straße bereits fertig gestellt? Qualität?	? -13432,782 -13220,728
-Reinhold-Schneider-Str. (Potsdam): Ist die Straße bereits fertig gestellt? Qualität?	? -13433,693 -13243,645
-#: by ^^^
-#: XXX ^^^
-#: next_check ^^^
-#: last_checked ^^^
+# REMOVED --- #: last_checked: 2013-05-10 vvv --- #: next_check: 2013-09-10 vvv --- #: XXX laut osm schon fertig vvv --- #: by: http://www.potsdam.de/sites/default/files/documents/amtsblatt_nr._9_2016_neu_0.pdf ("straßenrechtliche Widmung") vvv
+# REMOVED --- Hermann-Kasack-Str. (Potsdam): Ist die Straße bereits fertig gestellt? Qualität?	? -13432,782 -13220,728
+# REMOVED --- Reinhold-Schneider-Str. (Potsdam): Ist die Straße bereits fertig gestellt? Qualität?	? -13433,693 -13243,645
 # 
 #: XXX PLZ fehlt in Potsdam.coords.data
 #: by: http://www.potsdam.de/sites/default/files/documents/amtsblatt_nr._9_2016_neu_0.pdf ("straßenrechtliche Widmung")
-Gertrud-Feiertag-Str. (Potsdam): Existiert hier schon eine Straße? Qualität?	? -13259,586 -13243,645 -13220,728
+Gertrud-Feiertag-Str. (Potsdam): wurde die Straße bereits fertiggestellt? Qualität?	? -13259,586 -13243,645 -13220,728
 # 
 #: XXX neu geplante Namen, fehlen in Potsdam.coords.data: vvv
 #: XXX (Planstr. 1+2) PLZ=14469 (in DPAG-Mitteilungsblatt 6/2014)
@@ -5069,11 +5067,10 @@ Luisenhof (Potsdam): genaue Lage der Straße, Qualität?	? -13481,-2956 -13629,-28
 # REMOVED (ja) --- Zechsteinweg: ist der Zechsteinweg eine Sackgasse?	? 10328,21737 10319,21774
 # REMOVED (nein) --- Kieselweg: gibt es hier ein Drängelgitter Richtung Nordgraben?	? 10423,21701 10388,21801
 # REMOVED (lohnt nicht --- teilweise nur ein sehr enger und bewachsener Pfad) --- Maienwerderweg - Sendener Weg: Qualität des Wegs? Nachts beleuchtet?	? 1661,18161 1375,18209 1186,18242
-Mühlenstr. (Zepernick): Qualität?	? 19737,27037 19698,27205 19730,27276
-Waldstr. (Schwanebeck): Qualität?	? 19882,26592 19935,26699 19948,26760
 # REMOVED (Beleuchtung existiert) --- #: by: http://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=3913 (geplante Beleuchtung bis 2014-11) --- (Senftenberger Ring - Mittelfeldbecken): Qualität des Wegs? Nachts beleuchtet? Existiert eine Ausschilderung?	? 6977,22118 6989,21975 6999,21908
-(Am Eichendamm - Rote Chaussee): Waldweg, Qualität, Ausschilderung?	? 872,24330 757,24342 485,24474 362,24491 203,24405 132,24390
-(Rote Chaussee - Mauerweg): Waldweg, Qualität, verläuft hier die Reinickendorfer Radroute 3?	? 132,24390 -119,24350 -245,24377 -325,24454 -392,24467 -458,24445 -595,24441 -667,24463 -802,24541
+# REMOVED --- (Am Eichendamm - Rote Chaussee): Waldweg, Qualität, Ausschilderung?	? 872,24330 757,24342 644,24394 485,24474 362,24491 203,24405 132,24390
+(Rote Chaussee - Mauerweg): Waldweg, Qualität?	? 132,24390 -119,24350 -245,24377 -325,24454 -392,24467 -458,24445 -595,24441 -667,24463 -802,24541
+(Berliner Forst Tegel - Mauerweg): vermutlich ein Waldweg, Qualität?	? 644,24394 618,24445 615,24532 575,24601
 (Weg an Eschengraben, Haselgraben): Qualität? Verläuft hier die Reinickendorfer Radroute 3?	? -2165,22794 -2162,22855 -2125,22882 -2083,22982 -2271,23138
 (Weg am Wiesengraben): Qualität? Nachts beleuchtet? Verläuft hier eine Reinickendorfer Radroute? Gibt es Verbindungen zu allen anliegenden Straßen?	? -2165,22794 -2164,22629 -2245,22372 -1700,22223 -1679,22127 -1654,22119
 #: XXX_indoor: Verbindungspunkte fehlen!
@@ -5111,23 +5108,6 @@ Altstadtblick (Potsdam): Qualität der Straße?	? -12697,-2235 -12728,-2227 -12771
 # 
 # REMOVED (existiert) --- #: by: http://www.potsdam.de/cms/dokumente/10098106_1471008/11eddb87/ENDFASSUNG10_12.pdf vvv --- #: XXX wahrscheinlich wird zumindest in der Speicherstadt kein direkter Weg am Wasser sein; laut osm schon realisiert vvv --- #: by: http://www.grothgruppe.de/site/179/Speicherstadt_Potsdam.html (-> Galerie) --- #: by: http://berlinerbaustellen.blogspot.de/2014/01/0249-gastbaustelle-potsdam-lange-brucke.html (Unterführung) --- #: last_checked: 2014-05-11 vvv --- #: next_check: 2014-09-16 vvv --- Unterführung Lange Brücke: existiert der neue Weg schon, wie ist die Qualität?	? -12557,-1900 -12625,-1956 -12721,-2082 --- Uferweg von der Neuen Fahrt zum Hermannswerder: existiert der Weg schon, wie ist die Qualität?	? -12721,-2082 -12754,-2154
 # 
-Rathenaustr. (Schwanebeck-West): Qualität?	? 17228,24640 17088,24538 17110,23990
-Eichenring (Schwanebeck-West): Qualität?	? 17412,24315 17358,24354 17289,24483 17229,24490 17201,24441 17266,24312 17281,24208 17351,24170 17415,24199 17434,24254 17412,24315
-Eichendorffstr. (Schwanebeck-West): Qualität?	? 17638,24756 17584,24703
-Voltastr. (Schwanebeck-West): Qualität? Ist der Straßenname Voltaweg oder Voltastr.?	? 18312,24956 18198,25001
-Linzer Str. (Schwanebeck-West): Qualität?	? 18567,24998 18432,25052 18429,25074 18549,25106
-Grazer Str. (Schwanebeck-West): Qualität?	? 18531,25161 18453,25139 18432,25260 18507,25272
-Parkstr. (Schwanebeck-West): Qualität?	? 18503,25468 18419,25468 18387,25469
-Kitzbühler Str. (Schwanebeck-West): Qualität?	? 18419,25468 18421,25371
-Kärtner Str. (Schwanebeck-West): Qualität?	? 18507,25596 18503,25468 18501,25331
-Neue Kärtner Str. (Schwanebeck-West): Qualität? Ist die Straße im südlichen Abschnitt eine Einbahnstraße?	? 18501,25331 18507,25272 18510,25252 18531,25161 18549,25106 18601,25062
-Alemannenstr. (Schwanebeck): Qualität?	? 18308,26001 18324,26017 18389,26038 18506,26079 18679,26138 18736,26158 18922,26223 18958,26234 19014,26253
-Burgunderstr. (Schwanebeck): Qualität?	? 18470,26189 18700,26264 18875,26324
-Donaustr. (Schwanebeck): Qualität?	? 18885,25916 18810,25948 18736,26158 18700,26264 18662,26377
-Andreas-Hofer-Str. (Schwanebeck): Qualität?	? 18972,25713 19144,26066
-Schwarzwälder Str. (Schwanebeck): Qualität?	? 19144,26066 19000,26147 18960,26173 18929,26214 18922,26223 18875,26324 18822,26430
-Steiermärker Str. (Schwanebeck): Qualität?	? 18958,26234 18942,26470
-Genfer Platz (Schwanebeck): Qualität? Gibt es eine Verbindung zur Zillertaler Str.?	? 18389,26038 18395,26020
 #: source_id: 146400332	
 Hohenstein - Strausberg: gibt es zwischen Hohenstein und Strausberg mittlerweile einen Radweg? Ist es ein Zweirichtungsradweg? Asphaltiert?	? 48635,18552 47672,18859 46386,18523 44085,19049 43857,19113 43686,19241
 # REMOVED --- #: by: http://www.berlin.de/ba-spandau/presse/archiv/20141013.1250.399643.html --- #: XXX ggfs. in Berlin.coords.data aufnehmen --- #: XXX außerdem: ist der südliche Teil bis zur Schulenburgbrücke mittlerweile gepflastert/asphaltiert? --- #: osm_watch: way id="24975319" version="8" --- #: osm_watch: way id="325928221" version="1" --- #: next_check: 2014-10-21 --- Hermann-Oxfort-Promenade: Ist die Hermann-Oxfort-Promenade ausgeschildert?	? -3503,13773 -3543,13691 -3556,13582 -3546,13503 -3529,13452 -3451,13300 -3441,13270 -3352,13135 -3337,13111 -3221,12925 -3199,12888 -3202,12891
@@ -5242,9 +5222,9 @@ Blumenstr. - Am Krongut: existiert hier eine Verbindung für Radfahrer? Qualität?
 # 
 # REMOVED (aufgenommen) --- #: by: http://www.potsdam.de/sites/default/files/documents/amtsblatt_nr._9_2016_neu_0.pdf --- Hebbelstr. - Charlottenstr.: existiert hier ein Geh/Radweg?	? -12512,-911 -12493,-914 -12488,-999
 # 
-Leonorenstr. - Edenkobener Weg: existiert hier eine Verbindung für Radfahrer? Qualität? Nachts beleuchtet?	? 6315,3974 6323,3952 6417,3991 6530,4017 6600,4185 6618,4191
-# 
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/verwaltung/aemter/ordnungsamt/content/protokoll_der_12._sitzung_fahr_rat.pdf
 Mäckeritzbrücke: gibt es hier noch Radwege? Wenn ja, sind sie benutzungspflichtig?	? 1238,15705 1232,15804
 # 
 Christophstr.: existiert an dieser Stelle nur ein Fußweg? Qualität?	? 17938,16672 17923,16686
+# 
+Parkweg Eiswerder: Qualität? Nachts beleuchtet?	? -2427,15493 -2421,15547 -2430,15589 -2448,15612 -2441,15666 -2178,15797 -2150,15740

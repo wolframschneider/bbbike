@@ -83,7 +83,7 @@ Neue Bahnhofstr./Boxhagener Str.: Fußgängerampel auf der linken Seite benutzen	C
 #: XXX eventuell wird es hier in Zukunft Verbesserungen geben, siehe BVV-Beschluss
 #: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3277&options=4
 #: source_id: IM_022413
-#: last_checked: 2017-03-12
+#: last_checked: 2017-04-09
 #: check_frequency: 90d
 Rennbahnstr./Bernkasteler Str.: Fußgängerampel auf der linken Seite zum Überqueren der Berliner Allee benutzen	CP; 14528,16910 14558,16907 14673,16895
 Wisbyer Str. Richtung Dunckerstr.: bereits an der Prenzlauer Allee den linken Gehweg benutzen	PI; 12090,16199 12012,16250 11926,16088
@@ -196,7 +196,7 @@ Ausschilderung: Alter Markt	CP2; -11851,-954 -11926,-909
 (Weg in d. Kolonie Norderney): durchs Tor	CP2; 3596,6828 3607,6952
 Theaterufer: zwischen Wasserbecken und Debis-Gebäude	CP2; 8289,11205 8261,11015
 Theaterufer: zwischen Straßentunnel und Debis-Gebäude	CP2; 8261,11015 8289,11205
-Richterstr. - Rathausstr.: zum Spielplatz einbiegen	CP2; 9277,3993 9294,3921
+Richterstr. - Rathausstr.: zum Spielplatz einbiegen	CP2; 9276,3997 9294,3921
 Linksabbiegen in die Clayallee über Fußgängerfurt	CP; 1429,3609 1064,3743 971,3534
 Linksabbiegen in die Schlettstadter Str. über Fußgängerfurt	CP; 1136,3878 1064,3743 1429,3609
 Kehlheimer/Würzburger: Queren der Lietzenburger über Kfz-Furt möglich	CP; 5894,10287 5898,10318 5907,10347
@@ -359,7 +359,7 @@ Masurenstr. - Berliner Str.: zunächst auf dem linken Gehweg bis zur Höhe Binzstr
 #Nollendorfplatz: Richtung Einemstr. fahren	CP2; 6971,10346 7033,10328 7033,10396
 #Nollendorfplatz: Richtung Maaßenstr. fahren	CP2; 7131,10331 7033,10396 7033,10328
 #Nollendorfplatz: Richtung Maaßenstr. fahren	CP2; 7291,10506 7033,10396 7033,10328
-Eichborndamm - Weg parallel zur S-Bahn: bereits an der Ampel Miraustr. auf den linken Gehweg des Eichborndamms wechseln	PI; 4240,19019 4232,18981 4285,18983 4353,18986
+Eichborndamm - Weg parallel zur S-Bahn: bereits an der Ampel Miraustr. auf den linken Gehweg des Eichborndamms wechseln	PI; 4228,19024 4223,18982 4285,18983 4353,18986
 Prenzlauer Promenade - Brauhausstr.: bereits an der Ampel Thulestr./Am Steinberg auf den linken Gehweg wechseln	PI; 12010,16774 12017,16734 12211,16688
 Karl-Marx-Allee - Krautstr.: bereits an der Ampel Andreasstr. auf den linken Gehweg wechseln oder am Strausberger Platz die Karl-Marx-Allee überqueren und einige Meter zurückfahren	PI; 12360,12505 12134,12540 12125,12490
 Krautstr. - Karl-Marx-Allee: auf dem linken Gehweg bis zur Ampel am Strausberger Platz fahren und ggfs. die Straßenseite wechseln	CP; 12125,12490 12134,12540 12114,12546
@@ -596,3 +596,4 @@ Siemensstr. - Mozartstr.: an der Ampel Siemensstr./Birkbuschstr. auf den linken 
 Attilastr. - Am Bahndamm: an der Ampel Ringstr. auf die linke Seite wechseln	PI; 7690,4563 7667,4549 7692,4464
 Attilastr. - Am Bahndamm: bereits an der Kreuzung Reutlinger Str./Steglitzer Damm auf den rechten Gehweg wechseln	PI; 7597,4499 7628,4521 7667,4549 7692,4464
 Lindenstr. - Markgrafenstr.: bereits in Höhe Jüdisches Museum auf den linken Gehweg wechseln, oder in Höhe "Am Berlin Museum" die Lindenstr. überqueren	PI; 9777,10719 9797,10771 9807,10788 9829,10830 9834,10840 9799,10846
+Osdorfer Str. - Schwatlostr.: ggfs. schon an der Ampel Osdorfer Str./Hildburghauser Str. auf die linke Seite wechseln	PI; 4393,1400 4365,1440 4343,1424

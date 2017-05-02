@@ -57,7 +57,7 @@ Adolfstr.|Wedding|13347|7856,15688
 Adolfstr.|Zehlendorf|14165|640,1267
 Adorfer Str.|Hellersdorf|12627|24098,14347
 Advokatensteig|Bohnsdorf|12526|22250,481
-AEG-Siedlung Heimat (Siedlung)|Lübars|13469|6242,22764
+AEG-Siedlung Heimat|Lübars|13469|6301,22581
 AEG-Siedlung I, II (Siedlung)|Lübars|13469|6098,22775
 AEG-Str.|Lübars|13469|6083,22772
 Aegirstr.|Reinickendorf|13409|8316,17222
@@ -8950,6 +8950,7 @@ Prinz-Heinrich-Str.|Lichtenrade|12307|9843,-1973
 Prinzenallee|Gesundbrunnen|13357|9285,16967
 Prinzenallee|Gesundbrunnen|13359|9285,16967
 Prinzenapfelweg|Französisch Buchholz|13127|13088,22646
+Prinzengasse|Mitte|10117|9956,12297
 Prinzenstr.|Kreuzberg|10969|10926,10943
 Prinzenstr.|Lichterfelde|12207|4978,2157
 Prinzenstr.|Mariendorf|12105|9240,4227
@@ -9225,6 +9226,7 @@ Renée-Sintenis-Platz|Friedenau|12159|5657,7227
 Renettenweg|Altglienicke|12524|19438,258
 Rennbahn (Kolonie)|Weißensee|13088|13532,17513
 Rennbahnstr.|Weißensee|13086|13532,17513
+Rennesstr.|Französisch Buchholz|13127|12472,21510
 Rennsteig|Lichtenrade|12309|11512,-987
 Renschweg|Buckow|12353|13253,1854
 Reppener Zeile|Borsigwalde|13509|2905,19641
@@ -11082,9 +11084,7 @@ Straße 182|Niederschönhausen|13127|11611,20507
 Straße 182|Rudow|12355|16987,-325
 Straße 183|Rudow|12355|16950,-61
 Straße 184|Rudow|12355|16942,-481
-Straße 188|Lübars|13469|6301,22581
 Straße 188|Rudow|12355|15861,1139
-Straße 189|Lübars|13469|6361,22511
 Straße 18a|Französisch Buchholz|13127|11383,21506
 Straße 18|Blankenburg|13129|13382,21026
 Straße 18|Heinersdorf|13089|12946,18095
@@ -11476,6 +11476,7 @@ Tegnerstr.|Prenzlauer Berg|10439|10702,16535
 Teichbergstr.|Karow|13125|15610,23763
 Teichgräberzeile|Charlottenburg-Nord|13627|3258,14571
 Teichhuhnsteig|Bohnsdorf|12526|22522,-1252
+Teichmummelring|Grünau|12527|22418,2390
 Teichrohrweg|Altglienicke|12524|18844,1867
 Teichrosenpfad|Britz|12347|11320,4207
 Teichsängerweg|Mahlsdorf|12623|26111,12644
@@ -12534,7 +12535,7 @@ Werkzeugmacherweg|Rudow|12355|16181,1543
 Werlseestr.|Friedrichshagen|12587|26260,5508
 Wermuthweg|Gropiusstadt|12353|13760,2318
 Werner-Düttmann-Platz|Kreuzberg|10967|11378,9305
-Werner-Klemke-Platz|Weißensee|13086|13848,16721
+Werner-Klemke-Park (Park)|Weißensee|13086|13848,16721
 Werner-Kube-Str.|Prenzlauer Berg|10407|12969,14432
 Werner-Loebermann-Weg|Tempelhof|12101|9268,8029
 Werner-Sylten-Weg|Zehlendorf|14165|1132,792
@@ -13139,6 +13140,7 @@ Zur Haveldüne|Wilhelmstadt|13595|-4511,10602
 Zur Holzoper|Adlershof|12489|20005,4235
 Zur Innung|Prenzlauer Berg|10247|14086,13090
 Zur Linde (Kolonie)|Baumschulenweg|12437|15805,7309
+Zur Lübarser Bahn|Lübars|13469|6406,22550
 Zur Marktflagge|Prenzlauer Berg|10247|14086,13090
 Zur Nachtheide|Köpenick|12557|23184,2537
 Zur Pappel (Kolonie)|Wittenau|13435|5995,21836

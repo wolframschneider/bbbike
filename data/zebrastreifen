@@ -139,7 +139,7 @@ Buntzel/Paradiesstr.	Zs 21371,-308
 #: by: http://www.reinickendorf.de/index_7742_de.html vvv
 Finsterwalder Straße/Ulrichsteiner Weg	Zs 6093,21648
 Heiligenseestraße/Am Dachsbau	Zs -1654,22119
-Gorkistraße/Miraustraße	Zs 3321,20545
+Gorkistraße/Miraustraße	Zs 3336,20549
 #: confirmed_by: srt
 Am Freibad/Am Vierrutenberg	Zs 5765,23457
 ## in Planung für 2007:
@@ -240,7 +240,6 @@ Karl-Kunger/Bouchestr.	Zs 13471,9474
 Heinsestr./S Hermsdorf	Zs 3594,23305
 Luisenstr./Charite	Zs 8663,13375
 Altentreptower Str./Wuhletal	Zs 22129,12158
-#: note: Luftbild
 Am Nordgraben	Zs 3819,20393
 Rudolf-Breitscheid-Str./Straßenbahnhaltestelle (Potsdam)	Zs -9348,-1741
 Pölnitzweg/Röbellweg	Zs 16380,26325
@@ -303,7 +302,7 @@ Hamburger Platz/Gustav-Adolf-Str. (Nord)	Zs 12713,16711
 Hamburger Platz/Pistoriusstr. (West)	Zs 12661,16705
 Grünberger/Simon-Dach-Str.	Zs 13995,11844
 Ludwigkirchstr./Pfalzburger Str.	Zs 4892,10132
-Uhlandstr./Ludwigkirchstr.	Zs 5027,10162
+Uhlandstr./Ludwigkirchstr.	Zs 5018,10162
 Koenigsallee/Wallotstr.	Zs 2069,9465
 Koenigsallee/Herbertstr.	Zs 2046,9435
 Möckernstr./Hagelberger Str.	Zs 8773,9516
@@ -337,7 +336,6 @@ Waltersdorfer/Krumme Str.	Zs 22264,-476
 Schloßstr./Knobelsdorffstr.	Zs 3120,11820
 Schloßstr./Neufertstr.	Zs 3058,12322
 Ulmenstr./Eichenstr.	Zs 22483,9045
-#: note: Luftbild
 Teltower Damm	Zs 852,2128
 Friesenstr.	Zs 9800,8935
 #: note: public imagery vvv
@@ -368,7 +366,7 @@ Schirwindter Allee/Dickensweg	Zs -1532,11176
 Josef-Orlopp-Str.	Zs 15747,13152
 Ribnitzer Str./Zum Hechtgraben	Zs 16408,18259
 Grünberger/Gubener	Zs 13382,11996
-Elisabethstr./Oberfeldstr.	Zs 20923,14461
+Elisabethstr./Oberfeldstr.	Zs 20932,14461
 #: note: public imagery
 Hochstr./Humboldtsteg	Zs 8871,15769
 Müggelheimer Damm/Rübezahl	Zs 25911,2306
@@ -616,3 +614,11 @@ Sigismundkorso	Zs 1501,24804
 #: by: http://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4765
 Frohnauer Str.	Zs 2469,24391
 Richard-Sorge-Str./Kochhannstr.	Zs 13161,13139
+Baerwaldstr./Wilmsstr.	Zs 10421,9952
+Baerwaldstr./Wilmsstr.	Zs 10478,9944
+Pfalzburger/Düsseldorfer Str.	Zs 4874,9885
+Richard-Sorge-Str./Weidenweg	Zs 13454,12510
+Weidenweg/Richard-Sorge-Str.	Zs 13472,12509
+Zillertaler Str. (Schwanebeck)	Zs 18875,25796
+Waldemar/Dresdener	Zs 11152,11029
+Eichborndamm/Rotbuchenweg	Zs 4584,19713

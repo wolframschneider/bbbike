@@ -16,7 +16,7 @@ use FindBin;
 use lib "$FindBin::RealBin/..";
 
 use vars qw($VERSION);
-$VERSION = '0.21';
+$VERSION = '0.22';
 
 use Cwd qw(getcwd realpath);
 use Data::Dumper;
@@ -967,6 +967,8 @@ for my $osm_file (@osm_files) {
 		push @or, ['sehenswuerdigkeit', 'SW|IMG:airport'];
 	    } elsif (exists $tag{'power'}) {
 		add_underline(\@or, "_power", "X");
+	    } elsif (exists $tag{'aerialway'} && $tag{'aerialway'} eq 'station') {
+		push @or, ['rbahnhof', 'Ropeway'];
 	    }
 
 	    if (defined $height && $height =~ m{^[+-]?\d+}) {
@@ -1751,6 +1753,8 @@ for my $osm_file (@osm_files) {
 		    $name = ($name ? $name.": " : "") . $tag{'operator'};
 		}
 		add_underline(\@or, "_power", "X");
+	    } elsif (exists $tag{'aerialway'} && $tag{'aerialway'} =~ m{^(cable_car|gondola|chair_lift|mixed_lift)$}) { # currently only handling non-ski lift types
+		push @or, ['rbahn', 'Ropeway'];
 	    }
 
 	    my $ignore_unhandled = $ignore_unhandled;

@@ -19,6 +19,7 @@ use Config;
 use strict;
 use BBBikeGlobalVars;
 use BBBikeProcUtil qw(double_fork);
+use Strassen::Cat ();
 
 use your qw($BBBike::Menubar::option_menu
 	    $BBBike::check_bbbike_temp_blockings::temp_blockings_pl
@@ -1297,6 +1298,20 @@ EOF
 		    }
 		}
 	    } else {
+		# OpenStreetMap URL
+		while ($s =~ m{map=\d+/([-+]?[0-9\.]+)/([-+]?[0-9\.]+)}g) {
+		    my($y,$x) = ($1,$2);
+		    ($x,$y) = $Karte::Standard::obj->trim_accuracy($Karte::Polar::obj->map2standard($x,$y));
+		    push @coords, [$x,$y];
+		}
+
+		# Geo URI
+		while ($s =~ /geo:([-+]?[0-9\.]+),([-+]?[0-9\.]+)/g) {
+		    my($y,$x) = ($1,$2);
+		    ($x,$y) = $Karte::Standard::obj->trim_accuracy($Karte::Polar::obj->map2standard($x,$y));
+		    push @coords, [$x,$y];
+		}
+
 		# DDD or BBBike coordinates
 		while ($s =~ /([-+]?[0-9\.]+),([-+]?[0-9\.]+)/g) {
 		    my($x,$y) = ($1,$2);
@@ -3608,6 +3623,7 @@ sub search_anything {
 		    } @$matches;
 		} elsif ($sort eq 'cat') {
 		    my $cat_stack_mapping = Strassen->default_cat_stack_mapping();
+		    no warnings 'uninitialized';
 		    @sorted_matches = sort {
 			my $cmp = $cat_stack_mapping->{$b->[Strassen::CAT()]} <=> $cat_stack_mapping->{$a->[Strassen::CAT()]};
 			if ($cmp == 0) {
@@ -3627,25 +3643,32 @@ sub search_anything {
 			} @$matches;
 		}
 
+		my $symbol_rx = "(" . join("|", map { quotemeta } keys %Strassen::Cat::symbol_attrib) . ")";
+		$symbol_rx = qr{$symbol_rx};
+
 		my $last_name;
 		my $last_cat;
 		foreach my $match (@sorted_matches) {
 		    if (defined $last_name && $last_name eq $match->[0]) {
 			push @{ $inx2match[-1]->[3] }, $match->[1];
 		    } else {
-			my $this_cat = $match->[Strassen::CAT()];
-			if ($sort eq 'cat' &&
-			    $file !~ /^PLZ-Datenbank/ &&
-			    (!defined $last_cat || $last_cat ne $this_cat)) {
-			    my $cat_name = $category_attrib{$this_cat}->[ATTRIB_PLURAL];
-			    if (!defined $cat_name) {
-				$cat_name = $this_cat;
+			if ($sort eq 'cat' && $file !~ /^PLZ-Datenbank/) {
+			    (my $this_cat = $match->[Strassen::CAT()]) =~ s/^F://;
+			    if ($this_cat =~ m{\|IMG:$symbol_rx$}) {
+				$this_cat = $1;
+			    } else {
+				$this_cat =~s/\|.*//;
 			    }
-			    $lb->insert("end", "  " . $cat_name);
-			    $lb->itemconfigure("end", -foreground => "#000060")
-				if $lb->Subwidget("scrolled")->can("itemconfigure");
-			    $last_cat = $this_cat;
-			    push @inx2match, "";
+			    if (!defined $last_cat || $last_cat ne $this_cat) {
+				my $cat_name = $category_attrib{$this_cat}->[ATTRIB_PLURAL] || $Strassen::Cat::symbol_attrib{$this_cat}->[ATTRIB_PLURAL] ||
+				               $category_attrib{$this_cat}->[ATTRIB_SINGULAR] || $Strassen::Cat::symbol_attrib{$this_cat}->[ATTRIB_SINGULAR] ||
+					       $this_cat;
+				$lb->insert("end", "  " . $cat_name);
+				$lb->itemconfigure("end", -foreground => "#000060")
+				    if $lb->Subwidget("scrolled")->can("itemconfigure");
+				$last_cat = $this_cat;
+				push @inx2match, "";
+			    }
 			}
 			$lb->insert("end", $indent . $match->[0]);
 			push @inx2match, $match;
@@ -3986,7 +4009,7 @@ sub gps_animation {
 	($curr_speed) = $name1 =~ m|(\d+)\s*km/h|;
 	($curr_dist)  = $name1 =~ m|dist=([\d\.]+)|;
 
-	my @abstime = $name1 =~ /abstime=(\d+):(\d+):(\d+)/;
+	my @abstime = $name1 =~ /abstime=(?:\d{4}-\d{2}-\d{2} )?(\d+):(\d+):(\d+)/;
 	$curr_abs_time = sprintf "%02d:%02d:%02d", @abstime;
 
 	my $other_tag1;

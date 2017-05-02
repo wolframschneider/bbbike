@@ -65,7 +65,7 @@ my %versioned_file_to_cat;
      "orte"	      => [qw(0 1 2 3 4 5 6)],
      "qualitaet"      => [qw(Q0 Q1 Q2 Q3)],
      "radwege"	      => [qw(RW0 RW1 RW2 RW3 RW4 RW5 RW6 RW7 RW8 RW9 RW10 RW)],
-     "rbahn"	      => [sub { /^R(?:|0|A|B|C|Bau|G|P)(?:::(?:_?Tu_?|Br))?$/ }],
+     "rbahn"	      => [sub { /^(R(?:|0|A|B|C|Bau|G|P)(?:::(?:_?Tu_?|Br))?|Ropeway)$/ }],
      "sbahn"	      => [sub { /^S(?:0|A|B|C|Bau)(?:::(?:_?Tu_?|Br))?$/ }],
      "sehenswuerdigkeit" => [qw(F:SW SW F:Shop Shop),
 			     sub {
@@ -343,6 +343,21 @@ sub change_bnp_penalty_for_special_vehicle {
 	}
     }
 }
+
+# XXX Preliminary, for use in BBBikeAdvanced.pm
+# XXX should have Msg.pm support (English!)
+# For use in extended SW categories
+# Same structure as %category_attrib
+use vars qw(%symbol_attrib);
+%symbol_attrib = (
+		  "church"    => ["Kirche", "Kirchen"],
+		  "synagogue" => ["Synagoge", "Synagogen"],
+		  "mosque"    => ["Moschee", "Moscheen"],
+		  "monument"  => ["Denkmal, Mahnmal", "Denkmäler, Mahnmale"],
+		  "museum"    => ["Museum", "Museen"],
+		  "theater"   => ["Theater", "Theater"],
+		  "hospital"  => ["Krankenhaus", "Krankenhäuser"],
+		 );
 
 1;
 

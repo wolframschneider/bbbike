@@ -189,14 +189,14 @@ Sackgassenende, Schwarzer Weg	culdesac_pseudo 13958,8106
 Sackgassenende, AGB	culdesac_pseudo 9702,10129
 Sackgassenende, Am Schwanenberg	culdesac_pseudo 15752,9385
 Sackgassenende, Rummelsburger Bucht	culdesac_pseudo 15334,10528
-	culdesac_pseudo 15181,10154
+	culdesac_pseudo 15165,10144
 	culdesac_pseudo 15393,11590
 	culdesac_pseudo 15411,11823
 	culdesac_pseudo 13375,12062
 	culdesac_pseudo 14285,12190
 Sackgassenende, Weg am Moabiter Werder	culdesac_pseudo 7837,12860
 	culdesac 19748,8517
-	culdesac 19700,9040
+	culdesac 19705,9039
 	culdesac 19416,8668
 	culdesac 20293,8440
 	culdesac 20258,8413
@@ -390,8 +390,8 @@ nördliches Sackgassenende	culdesac 6290,2336
 südliches Sackgassenende	culdesac 6477,2058
 	culdesac 6278,2057
 	culdesac 6322,1807
-	culdesac 2352,1267
-	culdesac 2345,1283
+Sackgasse im südlichen Abschnitt	culdesac 2352,1267
+Sackgasse im nördlichen Abschnitt	culdesac 2345,1283
 Sackgassenende, Spreeufer	culdesac 20371,5753
 	culdesac 23574,689
 	culdesac_pseudo 22766,778
@@ -586,7 +586,7 @@ Sackgassenende, zur Unterführung	culdesac_pseudo -8287,14411
 	culdesac_pseudo 7062,17500
 Sackgassenende, zur Egidystr.	culdesac_pseudo 3077,22234
 	culdesac_pseudo 2319,22264
-	culdesac 2203,22749
+	culdesac 2155,22771
 Sackgassenende, zum Tegeler Fließ	culdesac_pseudo 3381,22273
 	culdesac_pseudo 5046,24000
 	culdesac_pseudo 4534,23938
@@ -1210,7 +1210,6 @@ Sackgassenende in Steinstücken	culdesac -8095,-2219
 	culdesac 11899,13750
 nördliches Sackgassenende, BSR-Recyclinghof	culdesac_pseudo 3969,13341
 	culdesac 6635,3520
-	culdesac_pseudo 6698,3336
 	culdesac 6078,22551
 	culdesac 5956,22648
 	culdesac_pseudo 2544,20304
@@ -1227,7 +1226,6 @@ nördliches Sackgassenende, BSR-Recyclinghof	culdesac_pseudo 3969,13341
 	culdesac 8637,4980
 	culdesac_pseudo 5808,10284
 	culdesac -2396,14245
-	culdesac 7046,4354
 #: note: ein Weg mit Stufen zum Ufer scheint zu existieren
 	culdesac_pseudo 6965,4219
 	culdesac 13397,9234
@@ -1236,16 +1234,23 @@ nördliches Sackgassenende, BSR-Recyclinghof	culdesac_pseudo 3969,13341
 	culdesac 17709,16614
 	culdesac 17676,16582
 	culdesac 14671,17735
+	culdesac 4342,1173
+	culdesac 4401,1232
+	culdesac 12472,21510
+	culdesac 10389,19438
+	culdesac_pseudo 5484,17312
 # 
 ######################################################################
 # culdesac entries which should remain invisible
 #: ignore vvv
+	culdesac_pseudo 5182,24183
+	culdesac_pseudo 6692,3334
 	culdesac_pseudo 9814,15312
 	culdesac_pseudo 9898,15354
 	culdesac_pseudo 9887,15153
 	culdesac_pseudo 9969,15191
 	culdesac_pseudo 4182,11831
-	culdesac_pseudo 5307,9664
+	culdesac_pseudo 5291,9675
 	culdesac_pseudo 7414,10804
 	culdesac_pseudo 7487,10643
 	culdesac_pseudo 19145,8659

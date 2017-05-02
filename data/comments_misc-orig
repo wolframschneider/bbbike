@@ -165,7 +165,7 @@ Seefelder Str.: Schranken, für Radler gut passierbar	CS 17341,16136 17344,16081
 # REMOVED (mittlerweile ein gemeinsamer Geh- und Radweg) --- (Malteserstr. - Hanielweg): Geschützte Grünanlage, Radfahren verboten	CS 7451,1818 7534,1818 7562,1796
 (Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6762,1226 6702,1197 6700,1184
 (Parkweg Trippsteinstr. - Sondershauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6667,1189 6596,1198 6528,1207 6501,1207 6481,1210 6409,1218
-(Parkweg Blankenhainer Str. - Hildburghauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6578,1595 6554,1564 6539,1476 6515,1418 6479,1312 6481,1210 6487,1169 6455,1101 6467,1028
+(Parkweg Blankenhainer Str. - Hildburghauser Str.): Geschützte Grünanlage, Radfahren verboten	CS 6572,1601 6554,1564 6539,1476 6515,1418 6479,1312 6481,1210 6487,1169 6455,1101 6467,1028
 (Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5514,580 5571,614 5671,637 5632,755 5587,816 5571,864 5540,919
 (Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5578,936 5540,919 5358,822
 (Lilienthalpark): Geschützte Grünanlage, Radfahren verboten	CS 5533,663 5485,751 5503,783 5531,779 5590,719 5593,679 5575,660 5533,663
@@ -276,8 +276,8 @@ Bus 140	busroute_N 11556,10869 11770,10774 11841,10747 12052,10644 12112,10770 1
 Bus M29	busroute_N 12341,10218 12229,10014 12398,9938 12556,9862 12714,9792
 # REMOVED (mittlerweile über Stralauer Allee) --- Bus 347	busroute_N 13596,10722 13676,10926 13755,10896 13856,10864 13896,10851 14011,10812
 Bus 347	busroute_N 14011,10812 14170,10675 14199,10685 14312,10657 14490,10610 14641,10552
-Bus 347	busroute_N 15662,9501 15512,9680 15502,9693 15472,9720 15400,9742 15100,9831 15020,9875 14908,9939 14879,9961 14817,10031 14747,10108 14705,10149 14688,10167
-Bus 347	busroute_N 15020,9875 15071,9967 15153,10112 15090,10140 15050,10160 14993,10188 14920,10225 14844,10088 14817,10031
+Bus 347	busroute_N 15662,9501 15505,9688 15472,9720 15400,9742 15100,9831 15020,9875 14908,9939 14879,9961 14817,10031 14747,10108 14705,10149 14688,10167
+Bus 347	busroute_N 15020,9875 15071,9967 15148,10111 15090,10140 15050,10160 14993,10188 14920,10225 14844,10088 14817,10031
 Bus 140, ...	busroute_N 12551,11515 12310,11682 12208,11746
 Bus 347	busroute_N 13541,11355 13496,11384 13473,11456 13366,11651 13295,11792 13275,11830 13217,11936 13097,12166 13075,12207 13019,12316
 # REMOVED (wegen der für Busse katatrophalen Hildegard-Jadamowitz-Str. führt die Linie nicht mehr hier entlang) --- Bus 347	busroute_N 13520,11963 13599,12253 13555,12259 13520,12264 13198,12311 13068,12332 13019,12316
@@ -365,8 +365,8 @@ Bus M27, Bus 250	busroute_N 10179,17772 10053,17777 9835,17797 9727,17804
 Bus 250	busroute_N 9549,17625 9383,17757 9358,17798 9236,17907 9190,17932 9171,17937 9147,17941 8944,17971 8746,17827 8536,17786
 Bus 155	busroute_N 9501,18902 9876,19026
 Bus 155	busroute_N 15278,17352 15267,17349 15217,17284
-Bus 250	busroute_N 11162,19844 11229,19706 11278,19607 11437,19664 11652,19743 11695,19760 11627,19907 11563,20048 11419,20327 11269,20667
-Bus 251	busroute_N 16390,26315 16045,25907
+Bus 250	busroute_N 11162,19844 11229,19706 11278,19607 11437,19664 11652,19743 11695,19760 11627,19907 11563,20048 11541,20090 11419,20327 11269,20667
+Bus 251	busroute_N 16390,26315 16043,25898
 Bus M27	busroute_N 10815,18074 10900,18113 10970,18164 10993,18203
 Bus 125	busroute_N 7335,18257 7510,18364 7594,18427 7676,18492 7861,18333 7954,18251 8061,18159 8116,18115 8135,18028 8152,17936 8182,17746 8211,17585 8226,17479 8231,17431 8185,17352 8154,17301 8123,17255 8088,17218 8055,17179 7970,17087
 # REMOVED --- Bus 126	busroute_N 7970,17087 7926,17050 7841,16966 7745,16889 7672,16878
@@ -375,7 +375,7 @@ Bus 122	busroute_N 5233,18069 5536,18234 5870,18387 6060,18534 6153,18592 6217,1
 Bus 122	busroute_N 5068,17384 4914,17399 4901,17341 4891,17289 4997,17241
 Bus 124	busroute_N 488,22275 455,22285 355,22344 238,22412 21,22545 -48,22595 -130,22647 -188,22682 -264,22729 -440,22841 -656,23011
 Bus 125	busroute_N 4326,17801 4377,18037 4421,18243 4291,18264 4181,18284 4102,18298 4009,18322 3909,18342 3733,18376 3738,18573 3731,18601 3713,18621 3562,18712 3680,18913 3700,18965
-Bus 322	busroute_N 4240,19019 4190,19048 4138,19015 3909,19002 3810,19133 3546,19477
+Bus 322	busroute_N 4228,19024 4190,19048 4138,19015 3909,19002 3810,19133 3546,19477
 Bus 327	busroute_N 8465,18365 8286,18331 8222,18375 8096,18456 7997,18524 7861,18333
 Bus 125	busroute_N 3546,19477 3343,19727 3252,19658 3167,19597 3021,19780 2854,19992 2835,20013 2814,20035 2803,20045 2726,20146 2684,20223 2645,20300 2615,20421
 Bus 133	busroute_N 2295,20358 2356,20216 2395,20126 2336,20117 2169,20095
@@ -561,7 +561,7 @@ Pfähle und hohe Bordsteine	CP2 2211,4280 2254,4376
 Uferweg am Plötzensee	CS 5618,14981 5455,15245 5391,15331 5306,15387 5134,15565 5073,15611 5040,15606 5015,15564 5051,15508 5084,15415 5075,15354 5005,15213
 # REMOVED (komischer Kommentar) --- (Wintgensstr. - General-Pape-Str.): eine mögliche Route über das ehem. Werksgelände	CS 7950,7840 8140,7845 8140,7906 8207,7909
 (Im Schäferfeld - Wetzlarer Str.): am Baggersee entlang	CS -8563,-3805 -8562,-3849 -8661,-3971 -8982,-3860 -9002,-3896 -8970,-3923
-(Eichborndamm - General-Woyna-Str.): Weg parallel zur S-Bahn-Trasse	CS 4232,18981 4285,18983 4353,18986 4475,18998 4577,19009
+(Eichborndamm - General-Woyna-Str.): Weg parallel zur S-Bahn-Trasse	CS 4223,18982 4285,18983 4353,18986 4475,18998 4577,19009
 #: by: Tom Urig
 Paul-Francke-Str.: Privatstraße durch die Genossenschaftssiedlung des Beamtenwohnungsvereins	CS 9901,18522 10006,18502 10013,18545 9994,18595 9916,18610
 Pudagla: empfohlene Fahrtrichtung für Radfahrer	CP; 52468,174931 52439,174817 52407,174744 52263,174673
@@ -764,7 +764,7 @@ Apfelwicklerstr.: Privatstraße	CS 21434,10678 21543,10724
 Apfelwicklerstr.: Privatstraße	CS 21456,10631 21553,10671
 Hentzeweg: nur frei für Anlieger	CS 16505,23044 16566,23007
 Haduweg: nur frei für Anlieger	CS 16416,23705 16510,23642
-(KGA "Steintal"): Privatstraße	CS 16471,24338 16478,24303 16890,24029 17007,23994 17028,23968 17052,23958
+(KGA "Steintal"): Privatstraße	CS 16479,24331 16481,24299 16890,24029 17007,23994 17028,23968 17052,23958
 (Ludwigpark): Privatgelände	CS 17446,25914 17413,25969
 (Ludwigpark): Privatgelände	CS 17259,26148 17385,25954 17413,25969 17435,25983 17310,26181
 Am Rundling: nur frei für Anlieger	CS 17927,3737 17927,3771 17927,3788
@@ -839,7 +839,7 @@ in Höhe Erkelenzdamm 5 abbiegen	CP2; 11192,10629 11145,10638
 (Alex-Wedding-Str. - Karl-Liebknecht-Str.): Privatstraße	CS 11012,13278 11085,13239
 #: note: nur an der Katharina-Paulus-Str. steht ein Schild vvv
 #: XXX vielleicht wird hier mal ausgeschildert werden? vvv
-#: last_checked: 2016-07-05 vvv
+#: last_checked: 2017-03-24 vvv
 #: check_frequency: 360d vvv
 Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CP2; 7938,13150 7867,13127
 Agnes-von-Zahn-Harnack-Str.: nicht ausgeschildert	CP2; 7795,13093 7867,13127
@@ -901,7 +901,7 @@ Place Molière: Schulgelände	CS 4366,21482 4330,21464 4307,21506
 #: by: Stefan Klinkusch:
 gegenüber vom Bauhaus-Baumarkt abbiegen, Weg ist mit einem Schild "TOR 8" gekennzeichnet	CP2; -5173,13951 -5187,13707
 (Azaleenstr. - Uferweg): Privatstraße	CS 23874,4929 23901,4982 23962,5031
-Zufahrt zur Trabrennbahn Karlshorst: Durchfahrt durch ehemalige Kassenhäuschen	CP2; 18709,8423 18748,8363
+Zufahrt zur Trabrennbahn Karlshorst: Durchfahrt durch ehemalige Kassenhäuschen	CP2; 18704,8427 18748,8363
 #: by: Stefan Klinkusch: vvv
 Mühlendorfstr.: private Wohnstraße	CS -7637,13822 -7630,13889 -7595,13963
 Mühlenbachring: private Wohnstraße	CS -7534,13936 -7556,13894 -7564,13817 -7637,13822 -7674,13827 -7665,13945 -7647,13985
@@ -926,7 +926,7 @@ Creienfelder Weg: Privatstraße	CS 6817,23167 6712,23252
 Rosenthaler Str.: Richtung Kleine Rosenthaler Str.	CP2; 10313,13493 10311,13537
 (Schlitzer Str. - Welzower Steig): ausgeschildert als "Welzower Steig"	CP2; 6162,21938 6257,22005
 #: by: schlafauto ("Möbelweg")
-(Finsterwalder Str. - Quickborner Str.): am Bruckstückengraben, auch als "Möbelweg" bekannt	CS 6434,22244 6651,22324 6755,22331 7439,22306
+(Finsterwalder Str. - Quickborner Str.): am Bruckstückengraben, auch als "Möbelweg" bekannt	CS 6434,22244 6593,22302 6651,22324 6755,22331 7439,22306
 nicht ausgeschildert	CP2; 8501,25358 8584,25371
 nicht ausgeschildert	CP2; 8776,25332 8722,25296
 Waldweg (Blankenfelde): Privatstraße	CS 9757,26351 9812,26385
@@ -1126,3 +1126,6 @@ Mariendorfer-Hafen-Weg: nicht ausgeschildert	CP2; 7769,4315 7692,4464
 Mariendorfer-Hafen-Weg: ausgeschildert als Rad-/Gehweg zum Marienpark	CP2; 7667,4549 7692,4464
 zum Marienpark: ausgeschildert "Stone Brewing"	CP2; 8016,3651 8035,3657
 Zossener Str.: Richtung Luckenwalder Str. abbiegen	CP2; 22698,15788 22636,15752
+entlang der Sportstätten	CS 6324,3953 6383,3977 6417,3991 6495,4001 6530,4023 6558,4088 6602,4189 6618,4191
+nicht ausgeschildert	CP2; 5546,4302 5738,4361
+ausgeschildert Richtung Gorinsee	CP2; 15589,27116 15970,27596

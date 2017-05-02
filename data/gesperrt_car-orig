@@ -55,14 +55,14 @@ zum Mariannenplatz	2 11950,11157 11921,11185
 # REMOVED (gemeldet von andk, 2013-02-08) --- Großgörschen/Kulmer	3 7882,9490 7771,9479 7609,9463
 # REMOVED (gemeldet von andk, 2013-02-08) --- Großgörschen/Kulmer	3 7609,9463 7771,9479 7829,9723
 # REMOVED (gemeldet von andk, 2013-02-08) --- Großgörschen/Kulmer	3 7771,9389 7771,9479 7829,9723
-Herbartstr.	1 2340,11056 2372,10941 2476,10790 2498,10665
+Herbartstr.	1 2340,11056 2357,10962 2461,10796 2493,10675
 Breite Str. Pankow	1 10602,18382 10680,18380
 Gormannstr.	1 10463,13747 10445,13675 10406,13543 10390,13493
 Reichenberger Str.	1 11291,10438 11393,10390
 Weserstr.	1 12074,9217 12005,9211 11888,9189
 # XXX oder komplett gesperrt?
 Friedenstr.	1 12325,13148 12382,13097
-Fasanenstr.	1 5223,9810 5209,9978
+Fasanenstr.	1 5219,9808 5203,9840 5194,9985
 Kopfstr.	1 12478,7878 12327,7847 12220,7822 12176,7811 12041,7788
 Hagelberger - Yorck	3nocross 8595,9495 8679,9544 8777,9601
 Hagelberger - Mehringdamm	3nocross 9334,9670 9280,9476 9248,9350
@@ -200,7 +200,7 @@ Schönhauser Allee	3nocross 10902,15422 10917,15525 10941,15697
 Am Kupfergraben	1 9754,12775 9815,12705 9870,12657 9900,12643 9919,12613
 Uthmannstr.	1 13150,7845 12914,7785
 Herrnhuter Str.	1 12898,7832 13103,7889
-Ganghoferstr.	1 12779,8188 12805,8194 12918,8232
+Ganghoferstr.	1 12779,8188 12805,8194 12873,8217 12918,8232
 Richardstr.	1 12870,8087 12797,8168 12779,8188
 Kirchblick	1 -2014,3564 -1972,3418 -1981,3353
 Forddamm	1 9128,3580 9106,3703
@@ -238,7 +238,7 @@ Falkenberger/B2: Straßenbahntrasse	3nocross 14619,16551 14619,16672 14619,16682 
 Bahnübergang nur für Fußgänger/Radfahrer	3 * 20624,12133 *
 Zossener Str.: Straßenbahntrasse	3nocross 23080,15700 23218,15671 23411,15632 23568,15603 23617,15594
 #: note: nur temporär gültig
-Kleinmachnower Weg: Sa und So ist die Schranke an der Kreuzung Sachlebenstraße zu, für Kfz-Verkehr demnach gesperrt	2 269,-41 665,85 941,125 1345,184
+Kleinmachnower Weg: Sa und So ist die Schranke an der Kreuzung Sachlebenstraße zu, für Kfz-Verkehr demnach gesperrt	2 283,-35 354,-13 665,85 934,130 970,135 1168,161 1345,184
 #: by: Omi2006@... [AM]
 Hentigstr.	1 18518,8778 18548,8942 18586,9172 18626,9406
 #: by: Hubertus Fürther [AM]
@@ -343,7 +343,7 @@ Osloer Str.: Straßenbahntrasse	3nocross 9442,16610 9331,16624 9210,16638 8939,16
 Osloer Str.: Straßenbahntrasse	3nocross 8249,16741 8161,16752 8144,16754 7852,16790 7763,16779
 Seestr.: Straßenbahntrasse	3nocross 7606,16746 7447,16613 7417,16587 7403,16575 7295,16477 7231,16418
 Bismarckstr.: Mittelstreifen	3nocross 3689,11637 3843,11659 3897,11666
-Lenbachstr.: Einbahnstraße (genau genommen nur das östlichste Stück)	1 5888,6520 6071,6559
+Lenbachstr.: Einbahnstraße (genau genommen nur das östlichste Stück)	1 5883,6519 6071,6559
 Augustenburger Platz: nur für Taxen und Anlieger	2:Anlieger 6561,15041 6537,15156 6562,15177
 Zinnowitzer Str. - Friedrichstr.:	3 9011,14019 8870,13926 8935,13844
 #: by: Wolfhard Schleese
@@ -581,7 +581,7 @@ Indira-Gandhi-Str.: Straßenbahntrasse	3nocross 14609,15921 14597,15970 14595,159
 Lenther Steig	1 1022,14898 1037,14814 1042,14721
 Hauptstr./Wielandstr.: Mittelstreifen	3nocross 6144,7677 6082,7594 5955,7420
 Fehmarner Str.	1 6709,14782 6528,15000
-Kaiserdamm: Mittelstreifen	3nocross 1960,11426 1834,11408 1625,11380
+Kaiserdamm: Mittelstreifen	3nocross 1960,11426 1821,11408 1625,11380
 #: by: Roland Mohrbacher vvv
 Paplitzer Str.	1 11027,-2448 11073,-2037
 Steinträgerweg: Poller	3 * 12963,2365 *
@@ -677,9 +677,9 @@ Frobenstr.: offen nur für BVG und Radfahrer	1 7444,10479 7429,10366 7413,10244
 Hentigstr.	1 18518,8778 18548,8942
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20110309.1150.334660.html (südlicher Abschnitt confirmed)
 Hentigstr.	1 18548,8942 18586,9172 18626,9406
-Oberwallstr.	1 9858,12410 9876,12298 9882,12259 9898,12161
+Oberwallstr.	1 9858,12410 9876,12298 9883,12251 9898,12161
 Prenzlauer Promenade	3nocross 11849,17655 11839,17738 11884,18063
-#: note: keine legale Überquerungsmöglichkeit für Radfahrer, aber dennoch möglich
+#: note: teilweise keine legale Überquerungsmöglichkeit für Radfahrer, aber dennoch möglich
 Prenzlauer Promenade	3nocross 11884,18063 11894,18146 11907,18246 11914,18303 11950,18529
 Pasewalker Str.	3nocross 11984,20246 11963,20136 11931,19965
 Neuer Steg	3 * 8277,19210 8209,19107
@@ -717,7 +717,7 @@ Schäßburger Weg: Poller	3 * 7127,-248 *
 Fuchsmühler Weg: Durchfahrt gesperrt	2 7277,-77 7231,25
 Poller	3 7181,-15 7231,25 *
 Poller	3 * 7231,25 7181,-15
-Mittelstreifen	3nocross 9346,4144 9372,4012 9426,3797
+Mittelstreifen	3nocross 9346,4144 9375,4022 9426,3797
 Ontarioseestr.: Sackgasse für Autos	3 18408,10041 18339,10048 *
 Ontarioseestr.: Sackgasse für Autos	3 * 18339,10048 18408,10041
 #: by: Almuth Maasz
@@ -800,7 +800,7 @@ Handjerystr./Schmiljanstr.	3 5494,6960 5574,7018 5569,7022
 # REMOVED (glaube ich) --- Straßenbahntrasse	3nocross -13456,500 -13436,595 -13433,693
 Straßenbahntrasse, Drängelgitter für Radfahrer/Fußgänger	3nocross -13433,693 -13432,782 -13429,1069
 Kutscherweg: Poller	3 * -13700,-106 *
-Dresdner Str.: Einfahrt vom Oranienplatz gesperrt	3 * 11189,10831 11162,10919
+# REMOVED (wurde aufgehoben) --- Dresdner Str.: Einfahrt vom Oranienplatz gesperrt	3 * 11189,10831 11162,10919
 #: note: könnte auch die andere Richtung gesperrt sein
 Sebastianstr.: Einfahrt gesperrt	3 11162,10919 11113,10943 *
 Rennbahnstr. -> Bernkastler	3 14528,16910 14558,16907 14673,16895
@@ -890,7 +890,7 @@ Pasedagplatz: nur für Straßenbahnen	2 14170,17249 14150,17255 14099,17195
 Suermondtstr: Straßenbahntrasse	3nocross 16416,16236 16476,16216 16520,16200 16656,16157
 Kohlfurter Str.: provisorisch, Anlieger frei	1:Anlieger 11464,10102 11274,10184 11094,10261
 #: by: http://www.flickr.com/photos/79200003@N05/8050610558/in/pool-gwb
-Friedbergstr.:	3 2812,10753 2766,10750 *
+Friedbergstr.:	3 2793,10752 2766,10750 *
 # 
 #: by: http://www.potsdam.de/cms/beitrag/10093238/1463075 vvv
 Wilhelm-Staab-Str. (Potsdam)	1 -13001,-1329 -12988,-1265 -12981,-1222 -12961,-1105
@@ -1137,3 +1137,12 @@ Friedrichsruher Str.	1 3196,9193 3333,9026
 #: by: https://www.berlin.de/ba-pankow/politik-und-verwaltung/gremien/beiraete/bestaetigtes-protokoll-sitzung-fahrrat-am-01-09-15.pdf
 #: by: osm
 Vesaliusstr.	1 11818,19089 11763,19191 11748,19235 11698,19489
+Leistikowstr.	1 1188,11861 1133,11664
+In den Leonorengärten - Leonorenstr.	3 6363,4047 6295,4017 6315,3974
+In den Leonorengärten - Calandrellistr.	3 6363,4047 6295,4017 6141,3948
+Kleinmachnower Weg: Absperrung	3 283,-35 354,-13 665,85
+Kleinmachnower Weg: Absperrung	3 665,85 354,-13 283,-35
+Novalisstr. - Torstr.: Abbiegen verboten	3 9275,13720 9353,13521 9391,13535
+Borkumstr.: für Kfz gesperrt	2 11335,17807 11412,17823
+Zeiler Weg	1 11835,18301 11914,18303
+Neue Kärtner Str. (Schwanebeck-West)	1 18601,25062 18549,25106 18531,25161 18510,25252

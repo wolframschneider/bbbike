@@ -1,6 +1,1812 @@
-$#temp_blocking = 1624;
+$#temp_blocking = 2;
 push @temp_blocking,
 (
+       {
+         'data' => '#: by: http://www.berlin.de/tickets/suche/detail.php?id=810735
+userdel	2::temp 9521,10010 9827,10051
+userdel	2::temp 9521,10010 9448,10014
+userdel	2::temp 9599,10175 9687,10180 9825,10206
+userdel	2::temp 9416,10196 9599,10175
+userdel	2::temp 9579,10122 9536,10064
+userdel	2::temp 9579,10122 9631,10142 9702,10129
+userdel	2::temp 9837,10117 9827,10051
+userdel	2::temp 9837,10117 9858,10199
+userdel	2::temp 9599,10175 9579,10122
+userdel	2::temp 9702,10129 9827,10051
+userdel	2::temp 9702,10129 9816,10119
+userdel	2::temp 9599,10175 9631,10142 9687,10180
+	2::temp 9825,10206 9865,10227 9948,10280
+	2::temp 9873,10285 9865,10227 9858,10199
+	2::temp 9825,10206 9858,10199
+userdel	3 9922,10010 9827,10051 9837,9856
+userdel	3 9837,9856 9827,10051 9922,10010
+',
+         'from' => 1496268000,
+         'id' => 3,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'easter',
+                              47
+                            ]
+                          ],
+         'text' => 'Straßenfest rund um den Blücherplatz, 02.06.2017 bis 05.06.2017',
+         'type' => 'gesperrt',
+         'until' => 1496699999
+       },
+       {
+         'data' => 'userdel	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753
+# REMOVED --- userdel	2::temp 9044,9753 9002,9731 8777,9601 8679,9544 8595,9495 8358,9568 8192,9619
+userdel	2::temp 10713,9260 10670,9286 10639,9304 10564,9292
+# REMOVED --- userdel	3 8774,9534 8777,9601 8779,9812
+# REMOVED --- userdel	3 8779,9812 8777,9601 8774,9534
+# REMOVED --- userdel	3 9000,9509 9044,9753 9073,9915
+# REMOVED --- userdel	3 9073,9915 9044,9753 9000,9509
+userdel	3 9280,9476 9334,9670 9387,9804
+userdel	3 9387,9804 9334,9670 9280,9476
+userdel	3 9524,9426 9552,9602 9588,9827
+userdel	3 9588,9827 9552,9602 9524,9426
+userdel	3 9650,9404 9676,9564 9705,9732
+userdel	3 9705,9732 9676,9564 9650,9404
+userdel	3 9767,9386 9790,9528 9820,9718
+userdel	3 9820,9718 9790,9528 9767,9386
+userdel	3 9892,9286 9927,9487 9957,9692
+userdel	3 9957,9692 9927,9487 9892,9286
+userdel	3 10004,9268 10032,9456 10067,9667
+userdel	3 10067,9667 10032,9456 10004,9268
+userdel	3 10123,9233 10198,9405 10306,9640
+userdel	3 10306,9640 10198,9405 10123,9233
+userdel	3 10547,9233 10564,9292 10580,9361
+userdel	3 10580,9361 10564,9292 10547,9233
+userdel	3 10705,9234 10713,9260 10749,9342
+userdel	3 10749,9342 10713,9260 10705,9234
+userdel	3 11141,9107 11136,9183 11208,9345 11274,9492
+userdel	3 11274,9492 11208,9345 11136,9183 11141,9107
+userdel	3 11998,8872 11880,8955 11831,8989 11830,8917 11845,8824 11879,8672 11882,8527
+userdel	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 11998,8872
+',
+         'from' => 1496440800,
+         'id' => 4,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'easter',
+                              49
+                            ]
+                          ],
+         'source_id' => 'http://www.karneval-berlin.de/de/',
+         'text' => 'Karneval der Kulturen, 04.06.2016',
+         'type' => 'gesperrt',
+         'until' => 1496613599
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'data' => '#: tempex: YYYY0431T1200-YYYY05020000 vvv
+#: by: https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2971249-2970764-myfest-berlin.html
+userdel	2::temp 11763,10635 11722,10533 11949,10414
+userdel	2::temp 11556,10869 11770,10774 11760,10732 11781,10696 11763,10635 11505,10744 11556,10869 11589,10947 11640,11067
+userdel	2::temp 11958,11045 11897,10887 11841,10747 11824,10708 11781,10696
+userdel	2::temp 11805,10899 11803,10857
+userdel	2::temp 11275,10723 11301,10783 11329,10785 11365,10791 11403,10782 11505,10744 11463,10642 11722,10533
+userdel	2::temp 11841,10747 11770,10774 11799,10848
+userdel	2::temp 11463,10642 11275,10723 11234,10739 11159,10769
+userdel auto	3 11258,10682 11275,10723 11253,10778
+userdel auto	3 11253,10778 11275,10723 11258,10682
+#: tempex ^^^
+',
+         'from' => 1493546400,
+         'id' => 45,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              1,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'MyFest: Oranienstraße, Mariannenplatz und umliegende Straßen können schwer passierbar sein, 1. Mai 2017',
+         'type' => 'gesperrt',
+         'until' => 1493675999
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'data' => 'userdel	2::temp 7107,9030 7044,9163 7022,9211 7006,9292
+userdel	2::temp 6945,9142 7044,9163
+',
+         'from' => 1494540000,
+         'id' => 728,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              24,
+                              'months',
+                              4
+                            ]
+                          ],
+         'source_id' => 'http://www.ms-event-agentur.com/primavera%202013.html?date=20170325',
+         'text' => 'Akazienstr. zwischen Apostel-Paulus-Str. und Grunewaldstr. sowie Apostel-Paulus-Str.: Veranstaltung (Primavera), Straße vollständig gesperrt (13.5.2017 und 14.5.2017)',
+         'type' => 'gesperrt',
+         'until' => 1494799199
+       },
+       undef,
+       undef,
+       {
+         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20170325
+	2::temp 7006,9292 7022,9211 7044,9163 7107,9030
+	2::temp 6945,9142 7044,9163
+	2::temp 6975,8944 7107,9030 7308,9163
+',
+         'from' => 1506675600,
+         'id' => 731,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 30.09.2017 bis 01.10.2017',
+         'type' => 'gesperrt',
+         'until' => 1506895199
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'data' => 'userdel	2::temp 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+',
+         'from' => 1494540000,
+         'id' => 964,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              7,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'http://www.laubinger.de/termine/26-boelschefest-friedrichshagen/',
+         'text' => 'Bölschestr. (Köpenick): Veranstaltung (Bölschefest Friedrichshagen), Straße vollständig gesperrt (13. und 14. Mai 2017)',
+         'type' => 'gesperrt',
+         'until' => 1494799199
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'data' => '#: by: http://www.openairgallery.de/?y=2017
+userdel	2::temp 13178,10623 13206,10651 13305,10789 13332,10832
+',
+         'from' => 1496476800,
+         'id' => 1107,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              31,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Open Air Gallery am 4. Juni 2017 auf der Oberbaumbrücke (10:00 - 20:00)',
+         'type' => 'gesperrt',
+         'until' => 1496606400
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
          'data' => 'userdel	2::temp -8625,-1176 -8700,-997 -8813,-933 -8913,-813 -9103,-813 -9239,-739 -9337,-668 -9365,-610 -9454,-434 -9562,-325
 userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
@@ -27,7 +1833,26 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.family-and-friends-ev.de/termine.html
+userdel	2::temp 589,11953 577,11837 562,11710 560,11695 550,11607 541,11464
+',
+         'from' => 1494540000,
+         'id' => 1642,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              5
+                            ]
+                          ],
+         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Badenallee Veranstaltung (Frühling in Westend), beide Fahrbahnen der Straße gesperrt (13. und 14. Mai 2017)',
+         'type' => 'gesperrt',
+         'until' => 1494799199
+       },
        undef,
        undef,
        undef,
@@ -197,8 +2022,10 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
          'data' => '#: note: Sperrung bestätigt von Stefan (s.sms): vvv
 #: note: genauere Uhrzeit von Dieter Heimann
 #: confirmed_by: um 20:30 Uhr steht man vor einem geschlossenen Tor, zumindest an der Nordostseite (2012-08)
+#: tempex: sa,su,holiday,(mo-fr T20:00-sunrise) vvv
 Am Wuhleufer, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21683,6946 21498,7153 21475,7500 21497,7597 21546,7635
 Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am Wochenende gesperrt	2::night:weekend 21475,7500 21341,7487 21025,7349
+#: tempex ^^^
 #: note: ^^^
 ',
          'from' => undef,
@@ -209,7 +2036,8 @@ Straße am Wald, Innovationspark Köpenick: Privatstraße, nachts ab 20 Uhr und am 
          'until' => undef
        },
        {
-         'data' => '	2::night -11615,853 -11715,959 -11818,993 -11871,1087 -12081,1168 -12094,1273 -12133,1323
+         'data' => '#: tempex: sunset-T06 vvv
+	2::night -11615,853 -11715,959 -11818,993 -11871,1087 -12081,1168 -12094,1273 -12133,1323
 	2::night -11650,590 -11603,721 -11615,853
 	2::night -11510,810 -11562,918 -11575,1031 -11537,1206 -11544,1262 -11580,1281 -11871,1185 -11990,1214 -12124,1359 -12135,1358
 	2::night -11615,853 -11510,810 -11412,784 -11392,762 -11231,696
@@ -220,6 +2048,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
 	2::night -12263,-403 -12280,-385 -12306,-378 -12357,-307 -12371,-284 -12396,-298
 	2::night -12449,-186 -12440,-181 -12449,-134 -12424,-107
 (Ökonomieweg - Leistikowstr.)	2::night -12205,732 -12266,731 -12297,738
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 1809,
@@ -229,11 +2058,13 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '(Am Neuen Palais, direkter Weg)	2::night -15810,-1274 -15820,-1146 -15854,-656
+         'data' => '#: tempex: sunset-T06 vvv
+(Am Neuen Palais, direkter Weg)	2::night -15810,-1274 -15820,-1146 -15854,-656
 (Am Grünen Gitter, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -13857,-1040 -14159,-1119 -14171,-1026
 (Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -14171,-1026 -14482,-1043 -14622,-1138 -14865,-1118 -15025,-1096 -15553,-1139 -15651,-1137 -15820,-1146
 (Lennestr. - Ökonomieweg, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -14614,-1342 -14856,-1223 -14865,-1118
 (Affengang, Sanssouci): Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffnet	2::night -14129,-1258 -14131,-1181 -14159,-1119
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 1810,
@@ -243,7 +2074,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	2::night 3332,12742 3231,12749 3127,12793 3065,12975 3016,13315 2987,13448 2953,13489 2950,13552
+         'data' => '#: tempex: night
+	2::night 3332,12742 3231,12749 3127,12793 3065,12975 3016,13315 2987,13448 2953,13489 2950,13552
 ',
          'from' => undef,
          'id' => 1811,
@@ -253,7 +2085,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	2::night:weekend 10624,11548 10526,11612
+         'data' => '#: tempex: so,holiday,(mo-sa T23-T06)
+	2::night:weekend 10624,11548 10526,11612
 ',
          'from' => undef,
          'id' => 1812,
@@ -265,6 +2098,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'data' => '######################################################################
 # Wochenmärkte vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+#: tempex: (tu,fr) T08-T13
 	q4::temp:clock 4397,7380 4330,7382 4161,7388 4064,7396
 ',
          'from' => undef,
@@ -275,7 +2109,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	q4::temp:clock 3374,10201 3359,9968 3348,9806
+         'data' => '#: tempex: (tu,fr) T08-T13
+	q4::temp:clock 3374,10201 3359,9968 3348,9806
 ',
          'from' => undef,
          'id' => 1814,
@@ -285,7 +2120,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '#: note: der Abbau dürfte mindestens eine weitere Stunde dauern...
+         'data' => '#: note: der Auf/Abbau dürfte mindestens eine weitere Stunde dauern, in tempex eingerechnet
+#: tempex: (tu,fr) T10:00-T19:30, sa T10:00-T18:00
 	q4::temp:clock 11543,10015 11669,9987 11880,9874
 ',
          'from' => undef,
@@ -298,6 +2134,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'data' => '#: note: http://www.berlin.de/ba-friedrichshain-kreuzberg/wirtschaftsfoerderung/wirtschaftsstandort/maerkte.html
 # REMOVED (Montag stimmt, geprüft!) --- #: XXX Überprüfen, ob die Wochentage (Mo+Do und _nicht_ Sa) stimmen
+#: tempex: (mo,th) T10-T18
 	q3::temp:clock 9570,10566 9587,10421
 ',
          'from' => undef,
@@ -308,7 +2145,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	q4::temp:clock 7882,9490 7836,9413 7771,9389
+         'data' => '#: tempex: (we, sa) T10-T15
+	q4::temp:clock 7882,9490 7836,9413 7771,9389
 ',
          'from' => undef,
          'id' => 1817,
@@ -318,7 +2156,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	q4::temp:clock 3073,9020 2972,9037
+         'data' => '#: tempex: (mo, th) T09-T14
+	q4::temp:clock 3073,9020 2972,9037
 ',
          'from' => undef,
          'id' => 1818,
@@ -328,7 +2167,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	q4::temp:clock 4101,11347 4101,11233
+         'data' => '#: tempex: we T08-T13, sa T08-T14
+	q4::temp:clock 4101,11347 4101,11233
 ',
          'from' => undef,
          'id' => 1819,
@@ -338,7 +2178,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	q4::temp:clock 3763,12279 3701,12279
+         'data' => '#: tempex: (mo,th) T08-T13
+	q4::temp:clock 3763,12279 3701,12279
 ',
          'from' => undef,
          'id' => 1820,
@@ -348,7 +2189,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	q4::temp:clock 1020,496 1078,443
+         'data' => '#: tempex: sa T08-T13
+	q4::temp:clock 1020,496 1078,443
 ',
          'from' => undef,
          'id' => 1821,
@@ -361,8 +2203,10 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        {
          'data' => '#: by: Marek Bänsch:
 #: confirmed_by: srt
+#: tempex: YYYY1001-YYYY0315 T18:30-T07:00, YYYY0316-YYYY0930 T21:30-T07:00 vvv
 	2::night 8332,13548 8248,13659 8101,13901 8119,13912 8096,13951 8011,14096
 	2::night 8096,13951 8200,14016
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 1823,
@@ -372,8 +2216,10 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	2::night 21150,11925 21132,11943 21100,11960 20862,12027 20810,12031
+         'data' => '#: tempex: T23:00-T06:00 vvv
+	2::night 21150,11925 21132,11943 21100,11960 20862,12027 20810,12031
 	2::night 20862,12027 20836,11768
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 1824,
@@ -383,7 +2229,9 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	2::night 22312,4329 22252,4362
+         'data' => '#: note: Approximation; Straßenbeleuchtung muss nicht genau zum Sonnenuntergang eingeschaltet werden
+#: tempex: sunset-T09:00
+	2::night 22312,4329 22252,4362
 ',
          'from' => undef,
          'id' => 1825,
@@ -393,10 +2241,12 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	2::night 8825,14401 8868,14442 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
+         'data' => '#: tempex: summer T22:00-T06:30, winter T19:00-T07:30 vvv
+	2::night 8825,14401 8868,14442 8913,14485 8839,14635 8848,14638 8938,14521 8953,14528
 	2::night 8913,14485 9119,14255 9175,14193 9181,14186
 	2::night 9175,14193 9144,14169 9081,14232 8868,14442
 	2::night 9119,14255 9081,14232 8992,14176
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 1826,
@@ -463,8 +2313,10 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
-         'data' => '	q4::temp:clock 5897,7337 5810,7337
+         'data' => '#: tempex: we T08-T13, th T12-T17, sa T08-T14 vvv
+	q4::temp:clock 5897,7337 5810,7337
 	q4::temp:clock 5810,7337 5817,7223
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 1884,
@@ -475,7 +2327,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        undef,
        {
-         'data' => '	q4::temp:clock 12596,11696 12453,11790 12366,11808
+         'data' => '#: tempex: su T09-T16
+	q4::temp:clock 12596,11696 12453,11790 12366,11808
 ',
          'from' => undef,
          'id' => 1886,
@@ -485,8 +2338,10 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	q4::temp:clock 9754,12775 9654,12882 9618,12907 9533,12925
+         'data' => '#: tempex: (sa,su) T10-T17 vvv
+	q4::temp:clock 9754,12775 9654,12882 9618,12907 9533,12925
 	q4::temp:clock 9919,12613 9956,12523 9984,12426
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 1887,
@@ -517,7 +2372,26 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: http://www.family-and-friends-ev.de/termine.html
+userdel	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
+',
+         'from' => 1505466000,
+         'id' => 1910,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              15,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (16.09.2017 bis 17.09.2017) ',
+         'type' => 'gesperrt',
+         'until' => 1505671200
+       },
        undef,
        undef,
        undef,
@@ -565,6 +2439,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        {
          'data' => '#: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
+#: tempex: volatile, T22-T06
 	2::night 10456,15561 10512,15406
 ',
          'from' => undef,
@@ -575,7 +2450,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	2::temp 6611,9879 6688,9897
+         'data' => '#: tempex: volatile
+	2::temp 6611,9879 6688,9897
 ',
          'from' => undef,
          'id' => 1957,
@@ -585,7 +2461,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	2::temp 19071,2746 19136,2673 19204,2603
+         'data' => '#: tempex: volatile
+	2::temp 19071,2746 19136,2673 19204,2603
 ',
          'from' => undef,
          'id' => 1958,
@@ -595,7 +2472,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'until' => undef
        },
        {
-         'data' => '	2::temp 6694,12627 7039,12314
+         'data' => '#: tempex: volatile
+	2::temp 6694,12627 7039,12314
 ',
          'from' => undef,
          'id' => 1959,
@@ -713,7 +2591,8 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        {
-         'data' => '(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
+         'data' => '#: tempex: (YYYY01,YYYY12) T17:00-T07:30, (YYYY02,YYYY11) T18-T07, (YYYY03,YYYY10) T19-T06, (YYYY04,YYYY09) T20:30-T06:00, (YYYY05,YYYY08) T21:30-T06:00, (YYYY06,YYYY07) T22:30-T06:00 vvv
+(Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10691,8532 10644,8363 10598,8270 10575,8218
 (Eingang Columbiadamm - Rundkurs auf dem Flughafen Tempelhof)	2::night 10598,8270 10729,8152
 (Eingang Columbiadamm/Golßener Str. - Rundkurs auf dem Flughafen Tempelhof)	2::night 10384,8628 10360,8521 10298,8245
 (Rundkurs auf dem Flughafen Tempelhof)	2::night 11460,7802 11470,7744 11543,7369 11593,7314 11596,7280 11598,7264 11407,7198 11310,7071 11128,6967 10944,6790 10746,6693 10558,6661 10282,6692 10023,6806 9792,6964 9681,7075 9509,7195 9545,7426 9525,7558
@@ -743,11 +2622,12 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
 (Alter Hafen)	2::night 10076,8040 10037,8269
 (Südliche Landebahn - Eingang Oderstr.)	2::night 11555,7314 11596,7280 11608,7267
 (zur nördlichen Landebahn)	2::night 11470,7744 11430,7781
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im März von 6.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Mai von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -759,7 +2639,26 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 34421,1950 34359,2165 34250,2546
+',
+         'from' => 1495058400,
+         'id' => 2078,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              15,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'http://www.erkner.de/271.html?date=20170415',
+         'text' => 'Erkner: Heimatfest, 19.5.2017 bis 21.5.2017',
+         'type' => 'gesperrt',
+         'until' => 1495418400
+       },
        undef,
        undef,
        undef,
@@ -782,6 +2681,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
 #: note: nicht gesperrt: 2011-07-16 (Sa) gegen 16 Uhr
 #: note: nicht gesperrt: 2012-07-19 (Do) gegen 14 Uhr
 #: note: nicht gesperrt: 2013-09-07 (Sa) gegen 13 Uhr
+#: tempex: volatile
 userdel	2::temp 18870,5833 18932,5926
 ',
          'from' => undef,
@@ -797,8 +2697,10 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        {
          'data' => '#: note: allerdings keine Hinweise auf eine verbotene Durchfahrt gesehen
+#: tempex: volatile vvv
 (Gewerbegebiet)	2 21617,3287 21826,3129 21770,2936
 (Gewerbegebiet)	2 21685,2964 21770,2936 21816,2919 21939,2894 21984,2897 22004,2904
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 2101,
@@ -902,7 +2804,8 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        {
-         'data' => 'Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6863
+         'data' => '#: tempex: volatile & night
+Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6863
 ',
          'from' => undef,
          'id' => 2196,
@@ -920,12 +2823,32 @@ userdel	2::temp 18870,5833 18932,5926
        undef,
        undef,
        undef,
-       undef,
        {
-         'data' => 'userdel	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
+         'data' => 'userdel	q4::temp 13178,10623 13206,10651 13305,10789 13332,10832
+',
+         'from' => 1504339200,
+         'id' => 2206,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              2,
+                              'months',
+                              7
+                            ]
+                          ],
+         'text' => 'Open Air Gallery am 3. September 2017 auf der Oberbaumbrücke (10:00 - 20:00)',
+         'type' => 'gesperrt',
+         'until' => 1504468800
+       },
+       {
+         'data' => '#: tempex: 20170428-T20170519 vvv
+userdel	q4::temp 11182,8983 11255,8591 11279,8489 11282,8428 11275,8387 11266,8336
 userdel	q4::temp 11225,8350 11230,8402 11235,8454 11193,8568 11137,8738
 userdel	q4::temp 11275,8387 11230,8402
 userdel	q4::temp 11333,8582 11255,8591 11193,8568 11133,8560
+#: tempex ^^^
 ',
          'from' => 1493244000,
          'id' => 2207,
@@ -1058,8 +2981,10 @@ userdel	q4::temp 11333,8582 11255,8591 11193,8568 11133,8560
        undef,
        {
          'data' => '#: by: cornelia (bayer...): vvv
+#: tempex: min(sunset,T19)-sunrise vvv
 Am Schloss Schönhausen	2::night 10294,19298 10339,19179 10382,19066
 Am Schloss Schönhausen	2::night 10249,19148 10339,19179
+#: tempex ^^^
 #: by: ^^^
 ',
          'from' => undef,
@@ -1097,7 +3022,8 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
        undef,
        undef,
        {
-         'data' => '	q4::temp:clock -3942,12559 -3941,12376
+         'data' => '#: tempex: (tu,fr) T08-t13
+	q4::temp:clock -3942,12559 -3941,12376
 ',
          'from' => undef,
          'id' => 2349,
@@ -1142,6 +3068,7 @@ Am Schloss Schönhausen	2::night 10249,19148 10339,19179
 #: note: geprüft am So, den 2016-07-17, vormittags und mittags: offen
 #: note: geprüft am So, den 2016-07-23, mittags: offen
 #: note: geprüft am Sa, den 2016-09-20, vormittags: offen
+#: tempex: volatile
 userdel	2::night 14838,11410 14792,11391
 ',
          'from' => undef,
@@ -1176,6 +3103,7 @@ userdel	2::night 14838,11410 14792,11391
        undef,
        {
          'data' => '#: by: http://www.berlin.de/ba-mitte/buergerdienste/parkraumbewirtschaftung.html (Zone 3)
+#: XXX_prog: tempex-Ausdruck?
 userdel	2::temp::igndisp 10805,12468 10803,12470
 ',
          'from' => undef,
@@ -1190,9 +3118,11 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        undef,
        {
          'data' => '#: by: http://www.berlin.de/ba-pankow/bvv-online/vo020.asp?VOLFDNR=3228&options=4 vvv
+#: tempex: sa T09-t16 vvv
 	q4::temp:clock 11317,14564 11285,14515 11229,14422
 #: XXX_prog: q3, weil nur ca. 35m betroffen sind 
 	q3::temp:clock 11317,14564 11436,14741
+#: tempex ^^^
 #: by: ^^^
 ',
          'from' => undef,
@@ -1210,8 +3140,10 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        undef,
        {
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+#: tempex: (20170325-20170409 & (sa,su,holiday) | 20170414-20171016 & (th-su,holiday) | 20171021-20171029 & (sa,su,holiday)) & T10-T17 vvv
 	2::temp -12149,1436 -12057,1530 -11789,1502 -11323,1330 -10320,1494 -10098,1745 -10086,1886
 	2::temp -10086,1886 -10053,1640
+#: tempex ^^^
 #: XXX_prog ^^^
 ',
          'from' => undef,
@@ -1224,8 +3156,10 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        },
        {
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+#: tempex: ((min(good_friday,YYYY04 sa1)-YYYY1030) & (tu-su, holiday)) & T10-T19 vvv
 	2::temp 27090,-2253 27420,-2067 27492,-1880 27490,-1710 27425,-1601 27374,-1573
 	2::temp 29406,3776 29367,3690 29395,3572 29297,3456 29131,3489 29084,3331 29113,3324 29195,3191 29553,2934 29569,2909 29604,2931 29797,2918 29945,3001 29959,3031
+#: tempex ^^^
 #: XXX_prog ^^^
 ',
          'from' => undef,
@@ -1238,6 +3172,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        },
        {
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+#: tempex: 20170414-20170417 T12, 20170429-20170909 T11-T17, 20170910-20171003 T11-T14
 	2::temp 38674,160390 37644,160344 38049,160420 38325,160573
 #: XXX_prog ^^^
 ',
@@ -1250,6 +3185,7 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        },
        {
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+#: tempex: volatile
 	2::temp 42506,161075 42450,161090
 #: XXX_prog ^^^
 ',
@@ -1264,8 +3200,10 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        undef,
        undef,
        {
-         'data' => '	2::night 12851,12602 13108,12859 13046,12956 12878,13229
+         'data' => '#: tempex: night vvv
+	2::night 12851,12602 13108,12859 13046,12956 12878,13229
 	2::night 12773,12683 13046,12956
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 2413,
@@ -1281,20 +3219,121 @@ userdel	2::temp::igndisp 10805,12468 10803,12470
        undef,
        undef,
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'data' => '#: by: http://www.ihk-berlin.de/servicemarken/Zentrale_Dateien/829038/Anfahrt_zur_IHK_Berlin.html;jsessionid=1F11D2F501D14347C6E58B1211A79DC4.repl1 (confirmation)
-#: note: nur einige Meter an der Hardenbergstr. scheinen gesperrt zu sein
-#: source_id: 2147339529
-#: last_checked: 2017-02-04
-#: next_check: 2017-03-01
-userdel	q2::inwork 5258,11285 5236,10994
+         'data' => '#: tempex: 20170520 vvv
+userdel	2::temp 8055,12186 8119,12414
+userdel	2::temp 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+	2::temp 6828,12031 6884,12006
+	2::temp 6809,11979 6984,11859
+	2::temp 6778,11742 6980,11790
+	2::temp 6809,11570 6869,11567 7018,11615 7163,11738 7287,11763 7427,11731 7535,11677 7606,11629 7623,11624 7649,11717 7701,11798 7706,11878 7717,11918 7658,11947 7634,11920 7559,11888 7449,11883
+	2::temp 7429,12070 7775,12114 7823,12120 8018,12135 8049,12140 8034,12093 8057,12065 8052,12033 8022,12016 8020,11937 8095,11919 8132,11910 8221,11885 8244,11878 8262,11883 8453,12099 8522,12187 8538,12245
+	2::temp 8522,12239 8466,12197
+userdel auto	3 7429,12070 7383,12095 7039,12314
+userdel auto	3 7875,12363 7822,12201 7816,12150 7823,12120
+userdel auto	3 7039,12314 7383,12095 7429,12070
+userdel auto	3 7823,12120 7816,12150 7822,12201 7875,12363
+	3 8391,12389 8344,12221 8327,12174
+	3 8327,12174 8344,12221 8391,12389
+#: tempex ^^^
 ',
-         'from' => 1366740818,
-         'id' => 2422,
-         'source_id' => 'IM_019747',
-         'text' => 'Fasanenstr. zwischen Hardenbergstr. und Kantstr. Baustelle, Fahrbahn gesperrt (bis Ende April 2017) ',
+         'from' => 1495144800,
+         'id' => 2427,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              4,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'http://www.berliner-frauenlauf.de/?year=2016',
+         'text' => 'Straße des 17. Juni: wegen des Berliner Frauenlaufs zwischen Großer Stern und Brandenburger Tor gesperrt; einige Wege im Tiergarten können auch gesperrt sein, 20. Mai 2017',
+         'type' => 'gesperrt',
+         'until' => 1495317599
+       },
+       {
+         'data' => '#: tempex: 20170527-20170528
+userdel	2::temp 6230,8602 6313,8638 6454,8653
+',
+         'from' => 1495789200,
+         'id' => 2428,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              4,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'http://www.ms-event-agentur.com/seite18.html?date=20170325',
+         'text' => 'Schöneberger Mai- und Spargelfest am 27. und 28. Mai 2017 in der Freiherr-vom-Stein-Straße',
+         'type' => 'gesperrt',
+         'until' => 1495994400
+       },
+       undef,
+       undef,
+       {
+         'data' => '#: by: http://www.ag-bahnhofstrasse.de/maientanz.html?y=2016
+#: by: http://www.berlin.de/tickets/suche/detail.php?id=954647
+#: by: http://www.volksfeste-in-deutschland.de/kunst-wein-in-lichtenrade.html
+#: tempex: YYYY0429-YYYY0501
+userdel	2::temp 11064,-1597 11043,-1653 11055,-1741 11070,-1853 11095,-1846 11129,-1772 11174,-1719 11174,-1669 11151,-1612 11064,-1597
+',
+         'from' => 1493330400,
+         'id' => 2431,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              29,
+                              'months',
+                              4
+                            ]
+                          ],
+         'text' => 'Alt-Lichtenrade: Veranstaltung (Lichtenrader Maientanz, Kunst trifft Wein), Straße rund um den Dorfteich vermutlich gesperrt (29.04.2017 bis 01.05.2017)',
          'type' => 'handicap',
-         'until' => 1492873200
+         'until' => 1493675999
+       },
+       undef,
+       undef,
+       undef,
+       undef,
+       {
+         'data' => '#: tempex: YYYY0530-YYYY0601 vvv
+userdel	2::temp 20755,5750 20716,6029 20707,6098 20623,6136 20453,6211 20464,6237
+userdel	2::temp 19976,6087 20015,6069 20293,6278 20200,6321 20106,6357
+userdel	2::temp 20200,6321 20262,6493 20225,6631
+userdel	2::temp 20716,6029 20593,6082 20428,6157 20453,6211 20293,6278
+userdel	2::temp 19976,6087 20064,6290 20106,6357
+#: tempex ^^^
+',
+         'from' => 1496095200,
+         'id' => 2436,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              30,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'https://familienfez.fez-berlin.de/programm/kindertagsfest/',
+         'text' => 'Internationaler Kindertag im FEZ, einige Wege und Straßen können gesperrt sein, 1. Juni 2017',
+         'type' => 'gesperrt',
+         'until' => 1496354399
        },
        undef,
        undef,
@@ -1313,33 +3352,23 @@ userdel	q2::inwork 5258,11285 5236,10994
        undef,
        undef,
        undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
-         'data' => 'Kleistpark	2::night 7209,9507 7275,9506 7307,9528 7351,9503 7386,9502 7414,9523 7430,9576 7416,9625 7391,9645 7347,9644 7310,9622 7277,9652 7216,9657
+         'data' => '#: tempex: YYYY0316-YYYY1014 T21-T06, YYYY1015-YYYY0315 T18-T06 vvv
+Kleistpark	2::night 7209,9507 7275,9506 7307,9528 7351,9503 7386,9502 7414,9523 7430,9576 7416,9625 7391,9645 7347,9644 7310,9622 7277,9652 7216,9657
 Kleistpark	2::night 7430,9576 7501,9573 7520,9572
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 2454,
          'recurring' => 1,
-         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Winter: 18.00 bis 6.00 Uhr',
+         'text' => 'Kleistpark: nachts geschlossen. Schließzeiten im Sommer: 21.00 bis 6.00 Uhr',
          'until' => undef
        },
        {
-         'data' => '	q4::temp:clock 5066,9645 5174,9708 5253,9754
-	q4::temp:clock 5155,9786 5174,9708
+         'data' => '#: tempex (we, sa) T08-T13 vvv
+	q4::temp:clock 5066,9645 5174,9708 5248,9750
+	q4::temp:clock 5139,9777 5174,9708
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 2455,
@@ -1350,7 +3379,8 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        },
        undef,
        {
-         'data' => '	q4::temp:clock 10228,14564 10189,14649
+         'data' => '#: tempex: fr T12-T19, su T10-T17
+	q4::temp:clock 10228,14564 10189,14649
 ',
          'from' => undef,
          'id' => 2457,
@@ -1360,7 +3390,8 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
          'until' => undef
        },
        {
-         'data' => '	q4::temp:clock 10354,14987 10240,15318
+         'data' => '#: tempex: su T08-T18
+	q4::temp:clock 10354,14987 10240,15318
 ',
          'from' => undef,
          'id' => 2458,
@@ -1421,6 +3452,7 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        {
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+#: tempex: ((20170325, 20170326) & T10-T17), (20170331-20171031 & T10-before(sunset,1h))
 	2::temp 17391,38405 17448,38277 17692,38138
 #: XXX_prog ^^^
 ',
@@ -1436,8 +3468,10 @@ Kleistpark	2::night 7430,9576 7501,9573 7520,9572
        undef,
        undef,
        {
-         'data' => 'userdel	2::night 17490,13133 17489,13125
+         'data' => '#: tempex: night vvv
+userdel	2::night 17490,13133 17489,13125
 userdel	2::night 17671,13132 17684,13133
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 2479,
@@ -1492,7 +3526,8 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        {
-         'data' => '	2::night 7811,13344 7784,13392 7767,13431 7732,13484 7696,13470
+         'data' => '#: tempex: (YYYY1001-YYYY0331 & T16:00-T08:00), (YYYY0401-YYYY0930 & T21:00-T08:00)
+	2::night 7811,13344 7784,13392 7767,13431 7732,13484 7696,13470
 ',
          'from' => undef,
          'id' => 2525,
@@ -1508,7 +3543,27 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: note: kein tempex-Ausdruck möglich
+userdel	2::temp 5648,9642 5642,9613 5618,9607 5598,9612 5578,9629
+',
+         'from' => 1504789200,
+         'id' => 2533,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              9,
+                              'months',
+                              5
+                            ]
+                          ],
+         'source_id' => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/sonstiges/events/fest-der-nationen/?date=20170409',
+         'text' => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 8.9.2017 15 Uhr bis 10.9.2017 22 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1505073600
+       },
        undef,
        undef,
        undef,
@@ -1530,7 +3585,7 @@ userdel	2::night 17671,13132 17684,13133
        {
          'data' => '#: XXX Wann sind die Bauarbeiten fertig? Wird sich die Qualität danach ändern (z.B. Asphaltierung?)?
 #: osm_watch: way id="43141418" version="7" brb
-#: last_checked: 2016-11-26
+#: last_checked: 2017-03-18
 userdel	2::inwork -12583,-1552 -12485,-1482
 # REMOVED --- userdel	2::inwork -12485,-1482 -12474,-1559 -12596,-1701
 ',
@@ -1561,12 +3616,14 @@ userdel	2::inwork -12583,-1552 -12485,-1482
        undef,
        undef,
        {
-         'data' => 'userdel	2::inwork 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302
+         'data' => '#: tempex: YYYY0428T0000 - YYYY0502T0200 vvv
+userdel	2::inwork 8595,12066 8600,12165 8538,12245 8546,12279 8570,12302
 userdel	2::inwork 8573,12325 8540,12420
 userdel	2::inwork 8303,12216 8344,12221 8538,12245 8610,12254
 userdel	2::inwork 8089,12190 8214,12205
 	3::temp 8391,12389 8344,12221 8327,12174
 	3::temp 8327,12174 8344,12221 8391,12389
+#: tempex ^^^
 ',
          'from' => 1493330400,
          'id' => 2565,
@@ -1615,7 +3672,8 @@ userdel	2::inwork 8089,12190 8214,12205
        undef,
        undef,
        {
-         'data' => 'Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
+         'data' => '#: tempex: min(sunset,T21:00)-sunrise
+Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 ',
          'from' => undef,
          'id' => 2595,
@@ -1637,7 +3695,29 @@ userdel	2::inwork 8089,12190 8214,12205
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: tempex: (YYYY08 & fr-2) - +2d vvv
+userdel	2::temp 22138,4642 22111,4562 22093,4499
+userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,4642 22144,4660 22175,4730 22198,4800 22196,4847 22153,4840 22074,4664
+#: tempex ^^^
+',
+         'from' => 1502971200,
+         'id' => 2610,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              18,
+                              'months',
+                              8
+                            ]
+                          ],
+         'source_id' => 'http://www.winzerfest-köpenick.de/',
+         'text' => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 18.8.2017 bis 20.8.2017',
+         'type' => 'gesperrt',
+         'until' => 1503266399
+       },
        undef,
        undef,
        undef,
@@ -1679,8 +3759,11 @@ userdel	2::inwork 8089,12190 8214,12205
 #: note: am Mo, den 2016-10-10 gegen 17:50: offen
 #: note: am Sa, den 2016-12-10 gegen 13:00: geschlossen
 #: note: am Fr, den 2017-02-10 gegen 18:30: offen
+#: note: am Fr, den 2017-04-07 gegen 09:30: offen
+#: tempex: volatile vvv
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 2643,
@@ -1728,6 +3811,7 @@ userdel	2::inwork 8089,12190 8214,12205
        {
          'data' => '#: note: bei Veranstaltungen möglicherweise auch gesperrt?
 #: XXX_prog: die "Veranstaltungen" sollten auch mit einer Kategorie bedacht werden
+#: tempex: volatile
 	q4::temp 10456,15561 10234,15490 10188,15474
 ',
          'from' => undef,
@@ -1742,7 +3826,8 @@ userdel	2::inwork 8089,12190 8214,12205
        undef,
        undef,
        {
-         'data' => '	q4::temp::clock 11155,14554 11247,14578 11317,14564
+         'data' => '#: tempex: th & T10:00-T20:30
+	q4::temp::clock 11155,14554 11247,14578 11317,14564
 ',
          'from' => undef,
          'id' => 2686,
@@ -1762,7 +3847,8 @@ userdel	2::inwork 8089,12190 8214,12205
        undef,
        undef,
        {
-         'data' => '	2::night 4280,17551 4243,17570 4240,17584 3959,17714 3987,17808
+         'data' => '#: tempex: night, volatile
+	2::night 4280,17551 4243,17570 4240,17584 3959,17714 3987,17808
 ',
          'from' => undef,
          'id' => 2697,
@@ -1777,6 +3863,7 @@ userdel	2::inwork 8089,12190 8214,12205
        undef,
        {
          'data' => '#: XXX_prog temporäre Lösung für saisonale Fähren vvv
+#: tempex: (20170430|YYYY0501)-YYYY1003 & (sa|su|holiday) & T11-T19
 	2::temp 29959,3031 29968,2986
 #: XXX_prog ^^^
 ',
@@ -1817,6 +3904,7 @@ userdel	2::inwork 8089,12190 8214,12205
        undef,
        {
          'data' => '#: XXX_prog BNP in temp blockings wird zur Zeit weder im CGI noch in der Perl/Tk-Anwendung behandelt
+#: tempex: volatile
 	BNP:20::trailer=no 10583,15208
 ',
          'from' => undef,
@@ -1847,16 +3935,18 @@ userdel	2::inwork 8089,12190 8214,12205
          'data' => '#: next_check_id: SEEGEFELDERWEG-2016
 #: source_id: IM_026411
 #: source_id: 2147339562
+#: source_id: LMS-BR_r_LMS-BR_51041
 #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
-#: next_check: 2017-04-01
-userdel	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
+#: next_check: 2017-11-01
+# REMOVED --- userdel	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129
+userdel	q3::inwork; -6861,15129 -6507,15007
 ',
          'from' => 1443650400,
          'id' => 2740,
-         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2015/pressemitteilung.367070.php',
-         'text' => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Klosterbuschweg und Finkenkruger Weg, stadteinwärts gesperrt, bis voraussichtlich Ende März 2017',
+         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.571631.php',
+         'text' => 'Seegefelder Weg: wegen Bauarbeiten Einbahnstraßenregelung zwischen Klosterbuschweg und Hackbuschstr., stadteinwärts gesperrt, Bauarbeiten bis voraussichtlich November 2017',
          'type' => 'handicap',
-         'until' => 1490954400
+         'until' => 1509534000
        },
        undef,
        undef,
@@ -1894,8 +3984,10 @@ userdel	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
        undef,
        {
          'data' => '#: note: am Di, den 2016-04-05 gegen 08:45: geschlossen
+#: tempex: volatile vvv
 	3::night 14700,8368 14688,8355 14563,8243
 	3::night 14563,8243 14688,8355 14700,8368
+#: tempex ^^^
 ',
          'from' => undef,
          'id' => 2775,
@@ -1903,11 +3995,21 @@ userdel	q3::inwork; -7365,15306 -7155,15233 -6888,15139 -6861,15129 -6507,15007
          'text' => 'Mergenthalerring/Kiefholzstr.: Tor kann versperrt sein, auch tagsüber',
          'until' => undef
        },
-       undef,
+       {
+         'data' => 'userdel	q3::inwork; 4542,1188 4631,1249 4702,1298 4795,1362 4897,1352 5059,1337
+',
+         'from' => 1459720800,
+         'id' => 2776,
+         'source_id' => '2147339913',
+         'text' => 'Blankertzweg/Hildburghauser Straße: Bauarbeiten zwischen Osdorfer Str. und Woltmannweg, Einbahnstraße, Radfahrer können auf dem schmalen Gehweg fahren, bis Mitte 2018',
+         'type' => 'handicap',
+         'until' => 1530352800
+       },
        undef,
        undef,
        {
          'data' => '#: note: am So 2016-04-17 gegen 15 Uhr offen
+#: tempex: volatile
 userdel	2::night 16196,18364 16315,18208
 ',
          'from' => undef,
@@ -1942,30 +4044,29 @@ userdel	2::night 16196,18364 16315,18208
        undef,
        undef,
        undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
+       undef,
        {
-         'data' => '#: by: Kai Pauldrach
-#: XXX Bis wann sind die Bauarbeiten beendet? Ändert sich danach etwas an der Qualität?
-#: next_check: 2016-07-13
-userdel	2::inwork 3472,24709 3481,24686 3492,24667 3535,24626
+         'data' => '# REMOVED ("Verkürzung" laut fritz) --- userdel	q4::inwork 12938,1348 12940,1547 12911,1815
+userdel	q4::inwork 12911,1815 12817,2031
 ',
-         'from' => undef,
-         'id' => 2796,
-         'text' => 'Am Rosenanger - Am Sandkrug, Entenschnabel: wegen Bauarbeiten komplett gesperrt',
-         'type' => 'gesperrt',
-         'until' => undef
+         'from' => 1467661160,
+         'id' => 2808,
+         'source_id' => '2147340272',
+         'text' => 'Buckower Damm: Baustelle zwischen Alt-Buckow und An den Achterhöfen, evtl. auch Einschränkungen für Radfahrer, bis 02.05.2017',
+         'type' => 'handicap',
+         'until' => 1493740800
        },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        undef,
        undef,
        undef,
@@ -1984,7 +4085,7 @@ userdel	2::inwork 3472,24709 3481,24686 3492,24667 3535,24626
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-03-03 vvv
+#: last_checked: 2017-04-28 vvv
 #: check_frequency: 21d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -2009,7 +4110,7 @@ userdel	2::inwork 3472,24709 3481,24686 3492,24667 3535,24626
        {
          'data' => '#: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität danach besser sein? vvv
 #: osm_watch: way id="136814135" version="15" vvv
-#: last_checked: 2017-02-04 vvv
+#: last_checked: 2017-03-25 vvv
 #: check_frequency: 60d vvv
 userdel	2::inwork 3332,12742 3396,12741 3358,12718
 userdel	2::inwork 3396,12741 3476,12735 3582,12704 3654,12672 3763,12624 3837,12618
@@ -2027,8 +4128,8 @@ userdel	2::inwork 3741,12607 3654,12672
          'until' => undef
        },
        {
-         'data' => '#: XXX wann wird wieder geöffnet?
-#: last_checked: 2016-09-30
+         'data' => '#: add_fragezeichen: wann wird die Unterführung wieder geöffnet?
+#: last_checked: 2017-03-26
 #: check_frequency: 60d
 userdel	2::inwork 4778,3352 4815,3382 4822,3431
 ',
@@ -2039,8 +4140,8 @@ userdel	2::inwork 4778,3352 4815,3382 4822,3431
          'until' => undef
        },
        {
-         'data' => '#: XXX wann sind die Bauarbeiten beendet?
-#: last_checked: 2016-09-30
+         'data' => '#: add_fragezeichen: wann sind die Bauarbeiten beendet?
+#: last_checked: 2017-03-26
 #: check_frequency: 60d
 userdel	q3::inwork 4564,3457 4800,3391 4862,3363 5022,3318
 ',
@@ -2056,6 +4157,7 @@ userdel	q3::inwork 4564,3457 4800,3391 4862,3363 5022,3318
        {
          'data' => '#: note: laut vmz bis Mitte August 2018 und nur bis zur Bahnbrücke, laut fritz bis 1.7.2018
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/4508103689945674/89945674/00251862/62-Anlagen/02/DRS0098.pdf
+#: source_id: LMS-BR_r_LMS-BR_81077
 #: XXX Behinderungen für Radfahrer?
 userdel	q4::inwork 20302,1613 20443,1595 20653,1528 20668,1524 20817,1475 20917,1416 21127,1307 21169,1279
 ',
@@ -2072,7 +4174,8 @@ userdel	q4::inwork 20302,1613 20443,1595 20653,1528 20668,1524 20817,1475 20917,
        undef,
        undef,
        {
-         'data' => '	2::night -12544,-1799 -12396,-1681 -12253,-1589 -12260,-1503 -12256,-1456
+         'data' => '#: tempex: sunset-T07
+	2::night -12544,-1799 -12396,-1681 -12253,-1589 -12260,-1503 -12256,-1456
 ',
          'from' => undef,
          'id' => 2842,
@@ -2083,20 +4186,12 @@ userdel	q4::inwork 20302,1613 20443,1595 20653,1528 20668,1524 20817,1475 20917,
          'until' => undef
        },
        undef,
-       {
-         'data' => 'userdel	2::inwork -14107,-2278 -14081,-2516
-',
-         'from' => undef,
-         'id' => 2844,
-         'source_id' => 'http://www.swp-potsdam.de/swp/media/05-verkehr_1/fahrplaene_pdf/fahrplanwechsel_2016/faehre_1/vip_16_folder_faehre_161128_ansicht.pdf',
-         'text' => 'Fähre F1: kein Verkehr bis Ostern 2017',
-         'type' => 'gesperrt',
-         'until' => 1492164000
-       },
+       undef,
        undef,
        undef,
        {
-         'data' => 'userdel	q4::inwork 5059,7216 5064,7160 5081,7112
+         'data' => '#: source_id: LMS-BR_r_LMS-BR_88478
+userdel	q4::inwork 5059,7216 5064,7160 5081,7112
 ',
          'from' => 1485206028,
          'id' => 2847,
@@ -2106,14 +4201,117 @@ userdel	q4::inwork 20302,1613 20443,1595 20653,1528 20668,1524 20817,1475 20917,
        },
        undef,
        undef,
+       undef,
        {
-         'data' => 'userdel	q3::inwork; 8385,6034 8532,6015
+         'data' => '#: source_id: LMS-BR_r_LMS-BR_121
+userdel	q4::inwork; 5488,10978 5613,10963 5652,11004
 ',
-         'from' => 1488649671,
-         'id' => 2850,
-         'text' => 'Kaiserin-Augusta-Str.: Bauarbeiten, Einbahnstraße, bis Mai 2017',
+         'from' => 1488236400,
+         'id' => 2851,
+         'source_id' => '2147341048',
+         'text' => 'Kantstr.: Richtung Budapester Str. ab Joachimsthaler Str. gesperrt, voraussichtlich bis Mitte Juni 2017',
          'type' => 'handicap',
-         'until' => 1493589600
+         'until' => 1497456000
+       },
+       undef,
+       {
+         'data' => '#: note: laut vmz nur bis Ende Juli 2017
+#: by: http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.579822.php (weiterhin bis September 2017)
+#: source_id: 2147341144
+userdel	q4::inwork; 5583,5179 5527,5217 5416,5289 5397,5302 5382,5312
+',
+         'from' => 1491170400,
+         'id' => 2853,
+         'source_id' => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.576875.php',
+         'text' => 'Albrechtstr.: Bauarbeiten zwischen Neue Filandastr. und Breite Str., Einbahnstraße offen Richtung Osten, vom 4. April 2017 bis Anfang September 2017',
+         'type' => 'handicap',
+         'until' => 1504303199
+       },
+       {
+         'data' => '#: XXX Ende am 2017-05-08 scheint nicht realistisch zu sein, gibt es Infos dazu?
+#: next_check: 2017-05-08
+#: priority: #A
+userdel	q4::inwork 854,24387 1033,24429 1156,24494 1250,24533
+',
+         'from' => 1492380000,
+         'id' => 2854,
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.580104.php',
+         'text' => 'Karmeliterweg: Bauarbeiten zwischen Am Eichenhain und Artuswall, Fahrbahn gesperrt, voraussichtlich vom 18.04.2017 bis zum 08.05.2017',
+         'type' => 'handicap',
+         'until' => 1494280800
+       },
+       {
+         'data' => 'userdel	q4::inwork 1458,24561 1410,24562 1330,24553 1250,24533 1156,24494
+',
+         'from' => 1494194400,
+         'id' => 2855,
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.580104.php',
+         'text' => 'Karmeliterweg: Bauarbeiten zwischen Olwenstr. und Donnersmarckallee, voraussichtlich vom 09.05.2017 bis zum 26.05.2017',
+         'type' => 'handicap',
+         'until' => 1495836000
+       },
+       {
+         'data' => 'userdel	q3::inwork 13384,8354 13217,8493
+userdel	q3::inwork; 13217,8493 13262,8554 13301,8606
+',
+         'from' => 1491498639,
+         'id' => 2856,
+         'text' => 'Innstr.: Bauarbeiten, Einbahnstraßenregelung, außerdem Sperrung an der Kreuzung Weserstr., bis Juni 2017',
+         'type' => 'handicap',
+         'until' => 1496268000
+       },
+       {
+         'data' => '#: source_id: LMS-BR_r_LMS-BR_93359
+userdel	q3::inwork; 14060,17221 14099,17195 14136,17170 14235,17103 14341,17030 14528,16910 14558,16907
+',
+         'from' => undef,
+         'id' => 2857,
+         'source_id' => '2147341139',
+         'text' => 'Rennbahnstr.: ab Hunsrückstr. bis Berliner Allee Bauarbeiten, Fahrtrichtung gesperrt ',
+         'type' => 'handicap',
+         'until' => 1495641600
+       },
+       {
+         'data' => 'userdel	q4::inwork 18009,18946 17900,18972 17890,18973 17799,19000 17697,18989 17600,18994
+',
+         'from' => 1491854162,
+         'id' => 2858,
+         'source_id' => '2147341173',
+         'text' => 'Ernst-Barlach-Str./Dorfstr.: Bauarbeiten zwischen Woldegker Str. und Lindenberger Str., Fahrbahn ggfs. gesperrt, bis Ende August 2017 ',
+         'type' => 'handicap',
+         'until' => 1504195200
+       },
+       {
+         'data' => '	q4::inwork 15458,11306 15477,11338
+	q3::inwork; 15055,11505 15162,11458 15220,11440 15303,11412 15477,11338
+',
+         'from' => 1492466400,
+         'id' => 2859,
+         'source_id' => '2147341208',
+         'text' => 'Pfarrstr. zwischen Wiesenweg und Hauffstr.: Brückenarbeiten, langsames Passieren für Radfahrer möglich; außerdem Einbahnstraßenregelung im Wiesenweg, bis 10. Mai 2017',
+         'type' => 'handicap',
+         'until' => 1494432000
+       },
+       {
+         'data' => '#: last_checked: 2017-04-28
+#: check_frequency: 14d
+userdel	q4::inwork; 7201,8870 7107,9030
+',
+         'from' => undef,
+         'id' => 2860,
+         'text' => 'Akazienstr.: Bauarbeiten, Einbahnstraßenregelung',
+         'type' => 'handicap',
+         'until' => undef
+       },
+       {
+         'data' => 'userdel	q4::inwork 3957,23981 4073,23980 4240,23985 4256,23985 4316,23995 4397,24033 4425,24067
+',
+         'from' => 1493652218,
+         'id' => 2861,
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.579605.php',
+         'text' => 'Hermsdorfer Damm: Bauarbeiten, Fahrbahn gesperrt, bis voraussichtlich Mitte Oktober 2017',
+         'type' => 'handicap',
+         'until' => 1508104799
        }
      
 );

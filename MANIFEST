@@ -46,6 +46,7 @@ BBBikeMapserver/MkRouteMap.pm
 BBBikeMenubar.pm
 BBBikePalm.pm
 BBBikePersonal.pm
+BBBikePlist.pm
 BBBikePlugin.pm
 BBBikePluginLister.pm
 BBBikePrint.pm
@@ -834,6 +835,9 @@ images/redcross.png
 images/redcross.xpm
 images/reddot.gif
 images/reddot.png
+images/ropeway.png
+images/ropeway_klein.png
+images/ropeway_mini.png
 images/rueckweg.gif
 images/rueckweg.xpm
 images/salesman.gif
@@ -1094,7 +1098,6 @@ lib/click.au
 lib/click.wav
 lib/enum.pm
 lib/myclassstruct.pm
-lib/parse_wetterkarte
 lib/savevars.pm
 lib/wettermeldung2
 lib/your.pm
