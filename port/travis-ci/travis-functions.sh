@@ -56,8 +56,10 @@ init_apt() {
 # - xvfb + fvwm:            some optional tests require an X server
 # - rhino:                  javascript tests
 # - imagemagick:            typ2legend test
+# - libpango1.0-dev:        prerequisite for Pango
+# - libxml2-utils:          xmllint
 install_non_perl_dependencies() {
-    sudo apt-get install -qq freebsd-buildutils libproj-dev proj-bin libdb-dev agrep tre-agrep libgd2-xpm-dev ttf-bitstream-vera ttf-dejavu gpsbabel xvfb fvwm rhino imagemagick
+    sudo apt-get install -qq freebsd-buildutils libproj-dev proj-bin libdb-dev agrep tre-agrep libgd2-xpm-dev ttf-bitstream-vera ttf-dejavu gpsbabel xvfb fvwm rhino imagemagick libpango1.0-dev libxml2-utils
 }
 
 # Some CPAN modules not mentioned in Makefile.PL, usually for testing only
@@ -122,7 +124,7 @@ install_webserver_dependencies() {
 install_perl_dependencies() {
     if [ "$USE_SYSTEM_PERL" = "1" ]
     then
-	sudo apt-get install -qq libapache-session-counted-perl libarchive-zip-perl libgd-gd2-perl libsvg-perl libobject-realize-later-perl libdb-file-lock-perl libpdf-create-perl libtext-csv-xs-perl libdbi-perl libdate-calc-perl libobject-iterate-perl libgeo-metar-perl libimage-exiftool-perl libdbd-xbase-perl libxml-libxml-perl libxml2-utils libxml-twig-perl libgeo-distance-xs-perl libimage-info-perl libinline-perl libtemplate-perl libyaml-libyaml-perl libclass-accessor-perl libdatetime-perl libstring-approx-perl libtext-unidecode-perl libipc-run-perl libjson-xs-perl libcairo-perl libpango-perl libmime-lite-perl libpalm-palmdoc-perl libcdb-file-perl libmldbm-perl
+	sudo apt-get install -qq libapache-session-counted-perl libarchive-zip-perl libgd-gd2-perl libsvg-perl libobject-realize-later-perl libdb-file-lock-perl libpdf-create-perl libtext-csv-xs-perl libdbi-perl libdate-calc-perl libobject-iterate-perl libgeo-metar-perl libimage-exiftool-perl libdbd-xbase-perl libxml-libxml-perl libxml2-utils libxml-twig-perl libxml-simple-perl libgeo-distance-xs-perl libimage-info-perl libinline-perl libtemplate-perl libyaml-libyaml-perl libclass-accessor-perl libdatetime-perl libstring-approx-perl libtext-unidecode-perl libipc-run-perl libjson-xs-perl libcairo-perl libpango-perl libmime-lite-perl libcdb-file-perl libmldbm-perl libpalm-palmdoc-perl
     else
 	# XXX Tk::ExecuteCommand does not specify Tk as a prereq,
 	# so make sure to install Tk early. See
@@ -173,13 +175,18 @@ fix_cgis() {
 init_webserver_config() {
     if [ "$USE_MODPERL" = "1" ]
     then
+	chmod 755 $HOME
 	(cd cgi && make httpd.conf)
 	if [ ! -e /etc/apache2/sites-available/bbbike.conf -a ! -h /etc/apache2/sites-available/bbbike.conf ]
 	then
 	    sudo ln -s $TRAVIS_BUILD_DIR/cgi/httpd.conf /etc/apache2/sites-available/bbbike.conf
 	fi
 	sudo a2ensite bbbike.conf
-	sudo a2enmod headers
+	if "$(lsb_release -c -s)" != "precise"
+	then
+	    sudo a2enmod remoteip
+	fi
+	sudo a2enmod headers cgi
     fi
 }
 
@@ -193,7 +200,9 @@ start_webserver() {
 }
 
 init_webserver_environment() {
-    (sleep 5; lwp-request -m GET "http://localhost/bbbike/cgi/bbbike.cgi?init_environment=1")
+    (sleep 5; lwp-request -m GET "http://localhost/bbbike/cgi/bbbike.cgi?init_environment=1" || \
+	(grep --with-filename . /etc/apache2/sites-enabled/*; false)
+    )
 }
 
 start_xserver() {
