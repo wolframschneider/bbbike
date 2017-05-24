@@ -380,13 +380,14 @@ EOF
        data  => <<EOF,
 #: tempex: YYYY0431T1200-YYYY05020000 vvv
 #: by: https://www.berlin.de/kultur-und-tickets/tipps/maifeiertag/2971249-2970764-myfest-berlin.html
-userdel	2::temp 11763,10635 11722,10533 11949,10414
+userdel	2::temp 11763,10635 11734,10563 11721,10530 11754,10516 11949,10414
 userdel	2::temp 11556,10869 11770,10774 11760,10732 11781,10696 11763,10635 11505,10744 11556,10869 11589,10947 11640,11067
 userdel	2::temp 11958,11045 11897,10887 11841,10747 11824,10708 11781,10696
 userdel	2::temp 11805,10899 11803,10857
-userdel	2::temp 11275,10723 11301,10783 11329,10785 11365,10791 11403,10782 11505,10744 11463,10642 11722,10533
+userdel	2::temp 11275,10723 11301,10783 11329,10785 11365,10791 11403,10782 11505,10744 11463,10642 11690,10543 11721,10530
 userdel	2::temp 11841,10747 11770,10774 11799,10848
 userdel	2::temp 11463,10642 11275,10723 11234,10739 11159,10769
+	2::temp 11708,10497 11690,10543 11734,10563 11754,10516 11708,10497
 userdel auto	3 11258,10682 11275,10723 11253,10778
 userdel auto	3 11253,10778 11275,10723 11258,10682
 #: tempex ^^^
@@ -8132,12 +8133,12 @@ EOF
 userdel	2::temp 6228,13324 6115,13328 6105,13328 6011,13330 5956,13330 5857,13342 5705,13359
 EOF
      },
-     { from  => 1304632800, # 1178379282, # 2007-05-05 17:34 # erster Termin im Jahr
-       until => 1304892000, # 1178488800, # 2007-05-07 00:00
-       text  => 'Alt-Rudow (Rudow) in beiden Richtungen zwischen Köpenicker Str. und Krokusstr. Veranstaltung, Straße vollständig gesperrt (7. und 8. Mai 2011)',
+     { from  => $isodate2epoch->("2017-05-18 00:00:00"), # ein Tag Vorlauf
+       until => $isodate2epoch->("2017-05-20 23:59:59"),
+       text  => 'Alt-Rudow: Frühlingsfest, Straße zwischen Bildhauerweg und Krokusstr. gesperrt (19. und 20. Mai 2017)',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::temp 16849,1437 16805,1488 16610,1715
+userdel	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
 EOF
      },
      { from  => 1178564497, # 2007-05-07 21:01
@@ -10148,7 +10149,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_006795',
        data  => <<EOF,
-userdel	2::inwork 9207,5185 9076,5160 8934,5095 8813,5004
+userdel	2::inwork 9206,5193 9076,5160 8934,5095 8813,5004
 EOF
      },
      { from  => 1192312800, # 2007-10-14 00:00
@@ -18465,7 +18466,7 @@ EOF
        text  => 'Mariannenstr. zwischen Skalitzer Str. und Heinrichplatz: Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 11722,10533 11671,10402
+userdel	q4::inwork 11721,10530 11708,10497 11671,10402
 EOF
      },
      { from  => 1283623066, # 2010-09-04 19:57
@@ -25250,9 +25251,9 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.480057.php',
        data  => <<EOF,
-userdel	q4::inwork 20302,1613 20369,1476 20347,1398
-userdel	q4::inwork 20580,1406 20405,1460 20369,1476
-userdel	q4::inwork 20381,1390 20405,1460
+userdel	q4::inwork 20302,1613 20366,1479 20347,1398
+userdel	q4::inwork 20580,1406 20406,1465 20366,1479
+userdel	q4::inwork 20381,1390 20406,1465
 EOF
      },
      { from  => $isodate2epoch->("2016-06-23 00:00:00"), # 1464298923, # 2016-05-26 23:42
@@ -25628,7 +25629,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-04-28 vvv
+#: last_checked: 2017-05-15 vvv
 #: check_frequency: 21d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -25755,7 +25756,7 @@ userdel	q3::inwork 13173,11788 13066,11854
 EOF
      },
      { from  => 1476655200, # 2016-10-17 00:00
-       until => $isodate2epoch->("2018-07-01 12:00:00"), # 1534370399, # 2018-08-15 23:59
+       until => 1495377590, # frei für Anlieger, keine Behinderungen für Radfahrer --- $isodate2epoch->("2018-07-01 12:00:00"), # 1534370399, # 2018-08-15 23:59
        text  => 'Grünauer Straße/Am Falkenberg: zwischen Keltensteig und Drössestr. Baustelle, Fahrbahn gesperrt, ab 18.10.2016 bis Sommer 2018 ',
        type  => 'handicap',
        source_id => '2147340679',
@@ -25763,7 +25764,6 @@ EOF
 #: note: laut vmz bis Mitte August 2018 und nur bis zur Bahnbrücke, laut fritz bis 1.7.2018
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/4508103689945674/89945674/00251862/62-Anlagen/02/DRS0098.pdf
 #: source_id: LMS-BR_r_LMS-BR_81077
-#: XXX Behinderungen für Radfahrer?
 userdel	q4::inwork 20302,1613 20443,1595 20653,1528 20668,1524 20817,1475 20917,1416 21127,1307 21169,1279
 EOF
      },
@@ -25929,12 +25929,12 @@ userdel	q4::inwork; 9183,12076 9164,12172
 EOF
      },
      { from  => 1491170400, # 2017-04-03 00:00
-       until => 1504303199, # 2017-09-01 23:59
-       text  => 'Albrechtstr.: Bauarbeiten zwischen Neue Filandastr. und Breite Str., Einbahnstraße offen Richtung Osten, vom 4. April 2017 bis Anfang September 2017',
+       until => $isodate2epoch->("2017-08-15 18:00:00"), # 1504303199, # 2017-09-01 23:59
+       text  => 'Albrechtstr.: Bauarbeiten zwischen Neue Filandastr. und Breite Str., Einbahnstraße offen Richtung Osten, vom 4. April 2017 bis Mitte August 2017',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.576875.php',
        data  => <<EOF,
-#: note: laut vmz nur bis Ende Juli 2017
+#: note: laut vmz nur bis Ende Juli 2017, dann Mitte August 2017
 #: by: http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.579822.php (weiterhin bis September 2017)
 #: source_id: 2147341144
 userdel	q4::inwork; 5583,5179 5527,5217 5416,5289 5397,5302 5382,5312
@@ -26004,7 +26004,7 @@ EOF
        text  => 'Akazienstr.: Bauarbeiten, Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2017-04-28
+#: last_checked: 2017-05-19
 #: check_frequency: 14d
 userdel	q4::inwork; 7201,8870 7107,9030
 EOF
@@ -26016,6 +26016,57 @@ EOF
        source_id => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.579605.php',
        data  => <<EOF,
 userdel	q4::inwork 3957,23981 4073,23980 4240,23985 4256,23985 4316,23995 4397,24033 4425,24067
+EOF
+     },
+     { from  => 1494777600, # 2017-05-14 18:00
+       until => 1495519200, # 2017-05-23 08:00
+       text  => 'Wollankstraße: Bauarbeiten für eine neue Bahnbrücke, Sperrung auch für Radfahrer, vom 15. Mai 2017 bis 23. Mai 2017',
+       type  => 'gesperrt',
+       source_id => '2147341281',
+       data  => <<EOF,
+userdel	2::inwork 9549,17625 9590,17662
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Schiffbauerdamm: Bauarbeiten, Einbahnstraße, offen Richtung Westen',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX bis wann gehen die Bauarbeiten?
+#: last_checked: 2017-05-17
+userdel	q3::inwork; 8752,12647 8870,12647
+EOF
+     },
+     { from  => 1494442386, # 2017-05-10 20:53
+       until => 1496267999, # 2017-05-31 23:59
+       text  => 'Rosenthaler Str.: Straßenbauarbeiten in Höhe Neue Schönhauser Str.. Fahrbahn gesperrt, bis 31. Mai 2017',
+       type  => 'handicap',
+       source_id => '2147341279',
+       data  => <<EOF,
+userdel	q3::inwork 10264,13097 10310,13227 10317,13248
+EOF
+     },
+     { from  => 1495473890, # 2017-05-22 19:24
+       until => $isodate2epoch->("2017-05-27 23:59:59"), # 1495663199, # 2017-05-24 23:59
+       text  => 'Brandenburger Tor: vermutlich Sperrungen zum Kirchentag, 24. Mai 2017 bis 27. Mai 2017',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp 8522,12187 8538,12245 8600,12165
+userdel	2::temp 8344,12221 8538,12245 8592,12252 8637,12258 8643,12208 8728,12220 8722,12268 8637,12258 8630,12307 8714,12319 8722,12268 8804,12280
+userdel	2::temp 8522,12239 8538,12245 8546,12279
+EOF
+     },
+     { from  => 1495473982, # 2017-05-22 19:26
+       until => 1495663199, # 2017-05-24 23:59
+       text  => 'Gendarmenmarkt: vermutlich Sperrungen zum Kirchentag, 24. Mai 2017',
+       type  => 'gesperrt',
+       data  => <<EOF,
+userdel	2::temp 9536,11922 9666,11935 9656,12031 9523,12019
+userdel auto	3 9645,12133 9656,12031 9913,12068
+userdel auto	3 9820,11951 9666,11935 9679,11834
+userdel auto	3 9679,11834 9666,11935 9820,11951
+userdel auto	3 9913,12068 9656,12031 9645,12133
+	2::temp 9523,12019 9536,11922
 EOF
      },
     );
