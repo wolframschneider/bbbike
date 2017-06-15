@@ -13,6 +13,7 @@ Treptower Brücke	Br 13333,9929 13371,9974
 Ernst-Heilmann-Steg	Br 13270,10030 13306,10006
 #: by: http://www.stadtentwicklung.berlin.de/download/bruecken/Brueckeninstandstandsetzungen2016.pdf
 #: XXX ändert sich nach den geplanten Bauarbeiten hier etwas?
+#: last_checked: 2017-06-11
 #: next_check: 2018-12-31
 Schmöckwitzwerdersteg	Br 30534,-3105 30546,-3072
 Schmöckwitzer Brücke	Br 27633,-3118 27721,-3164
@@ -21,6 +22,7 @@ Russenbrücke	Br 32121,1850 32155,1863
 Triglawbrücke	Br 32207,2001 32224,2067 32248,2125
 #: alias: Gosener Kanalbrücke
 Neue Fahlenbergbrücke	Br 31009,19 31080,-19
+Gosener Brücke	Br 31608,-476 31624,-496
 Lange Brücke	Br 21789,4520 22071,4501
 Kietzer Brücke	Br 22269,4494 22341,4483
 Kietzer Str., Brücke	Br 22358,4521 22372,4496
@@ -259,7 +261,7 @@ Emil-Schulz-Brücke	Br 4224,2671 4313,2630
 Emil-Schulz-Brücke	Br 4317,2638 4233,2675
 Eugen-Kleine-Brücke	Br 3698,1450 3766,1389
 Bäkebrücke	Br 4587,3097 4659,3065
-Krahmersteg	Br 4800,3391 4862,3363
+Krahmersteg	Br 4800,3391 4866,3371
 Prinzregent-Ludwig-Brücke	Br 5541,4305 5588,4210
 Hannemannbrücke	Br 6007,4340 6002,4298 6002,4278
 Siemensbrücke	Br 6162,4264 6210,4325
@@ -333,7 +335,7 @@ Louis-Lewin-Str., U-Bahnbrücke	Br 25006,15132 25025,15062
 Allee der Kosmonauten	Br 19503,13509 19415,13503 19360,13499
 Allee der Kosmonauten	Br 18590,13480 18652,13476
 Märkische Allee	Br 19918,11891 19896,11688
-Gensinger Brücke	Br 19135,11713 19138,11815
+Gensinger Brücke	Br 19135,11713 19136,11739 19138,11815
 Skandinavische Brücke	Br 17037,11820 16962,11833
 Lichtenberger Brücke	Br 16962,11833 16803,11859 16737,11866 16512,11894
 Über den Britzer Damm	Br 12637,6309 12630,6326 12605,6322 12619,6310 12567,6302 12557,6288

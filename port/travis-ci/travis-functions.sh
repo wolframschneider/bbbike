@@ -58,17 +58,18 @@ init_apt() {
 # - imagemagick:            typ2legend test
 # - libpango1.0-dev:        prerequisite for Pango
 # - libxml2-utils:          xmllint
+# - libzbar-dev:            prerequisite for Barcode::ZBar
 install_non_perl_dependencies() {
-    sudo apt-get install -qq freebsd-buildutils libproj-dev proj-bin libdb-dev agrep tre-agrep libgd2-xpm-dev ttf-bitstream-vera ttf-dejavu gpsbabel xvfb fvwm rhino imagemagick libpango1.0-dev libxml2-utils
+    sudo apt-get install -qq freebsd-buildutils libproj-dev proj-bin libdb-dev agrep tre-agrep libgd2-xpm-dev ttf-bitstream-vera ttf-dejavu gpsbabel xvfb fvwm rhino imagemagick libpango1.0-dev libxml2-utils libzbar-dev
 }
 
 # Some CPAN modules not mentioned in Makefile.PL, usually for testing only
 install_perl_testonly_dependencies() {
     if [ "$USE_SYSTEM_PERL" = "1" ]
     then
-	sudo apt-get install -qq libemail-mime-perl libhtml-treebuilder-xpath-perl
+	sudo apt-get install -qq libemail-mime-perl libhtml-treebuilder-xpath-perl libbarcode-zbar-perl
     else
-	cpanm --quiet --notest Email::MIME HTML::TreeBuilder::XPath
+	cpanm --quiet --notest Email::MIME HTML::TreeBuilder::XPath Barcode::ZBar
     fi
 }
 
@@ -130,7 +131,7 @@ install_webserver_dependencies() {
 install_perl_dependencies() {
     if [ "$USE_SYSTEM_PERL" = "1" ]
     then
-	sudo apt-get install -qq libapache-session-counted-perl libarchive-zip-perl libgd-gd2-perl libsvg-perl libobject-realize-later-perl libdb-file-lock-perl libpdf-create-perl libtext-csv-xs-perl libdbi-perl libdate-calc-perl libobject-iterate-perl libgeo-metar-perl libimage-exiftool-perl libdbd-xbase-perl libxml-libxml-perl libxml2-utils libxml-twig-perl libxml-simple-perl libgeo-distance-xs-perl libimage-info-perl libinline-perl libtemplate-perl libyaml-libyaml-perl libclass-accessor-perl libdatetime-perl libstring-approx-perl libtext-unidecode-perl libipc-run-perl libjson-xs-perl libcairo-perl libpango-perl libmime-lite-perl libcdb-file-perl libmldbm-perl libpalm-palmdoc-perl
+	sudo apt-get install -qq libapache-session-counted-perl libarchive-zip-perl libgd-gd2-perl libsvg-perl libobject-realize-later-perl libdb-file-lock-perl libpdf-create-perl libtext-csv-xs-perl libdbi-perl libdate-calc-perl libobject-iterate-perl libgeo-metar-perl libimage-exiftool-perl libdbd-xbase-perl libxml-libxml-perl libxml2-utils libxml-twig-perl libxml-simple-perl libgeo-distance-xs-perl libimage-info-perl libinline-perl libtemplate-perl libyaml-libyaml-perl libclass-accessor-perl libdatetime-perl libstring-approx-perl libtext-unidecode-perl libipc-run-perl libjson-xs-perl libcairo-perl libpango-perl libmime-lite-perl libcdb-file-perl libmldbm-perl libpalm-palmdoc-perl libimager-qrcode-perl
     else
 	# XXX Tk::ExecuteCommand does not specify Tk as a prereq,
 	# so make sure to install Tk early. See
@@ -150,7 +151,11 @@ install_perl_dependencies() {
 	    # 0.293 needed for
 	    # * better diagnostics
 	    # * https://github.com/skaji/cpm/issues/42 (optional core modules)
-	    cpanm --quiet --notest 'App::cpm~>=0.293' LWP::Protocol::https
+	    #
+	    # In the process EUMM would be upgraded, but the current latest stable
+	    # is broken (see https://rt.cpan.org/Ticket/Display.html?id=121924), so
+	    # use another one.
+	    cpanm --quiet --notest 'ExtUtils::MakeMaker~!=7.26' 'App::cpm~>=0.293' LWP::Protocol::https
 	    perl Makefile.PL
 	    mymeta-cpanfile > cpanfile~ && mv cpanfile~ cpanfile
 	    # implement suggestion for more diagnostics in case of failures

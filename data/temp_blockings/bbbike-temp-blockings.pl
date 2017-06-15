@@ -57,6 +57,8 @@ userdel	2::temp 9599,10175 9631,10142 9687,10180
 	2::temp 9825,10206 9858,10199
 userdel	3 9922,10010 9827,10051 9837,9856
 userdel	3 9837,9856 9827,10051 9922,10010
+	2::temp 9827,10051 9837,9856
+	2::temp 9837,9856 9723,9842 9588,9827 9387,9804
 EOF
      },
      { from  => $isodate2epoch->("2017-06-03 00:00:00"), # 1 Tag Vorlauf
@@ -587,10 +589,10 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: by: http://www.stadtfest.berlin/de/index.html
-userdel	2::temp 6514,10088 6609,10147 6626,10155 6729,10212
+userdel	2::temp 6499,10086 6609,10147 6626,10155 6729,10212
 userdel	2::temp 6729,10212 6971,10346
 userdel	2::temp 6628,10318 6626,10155
-userdel	2::temp 6502,10273 6628,10318 6719,10347
+userdel	2::temp 6487,10277 6628,10318 6719,10347
 userdel	2::temp 6719,10347 6729,10212 6739,10120
 EOF
      },
@@ -1282,7 +1284,7 @@ EOF
        text  => 'L 401; (Lindenallee, Fontaneallee); OL Zeuthen, zw. Forstweg und Fährstr. grundhafter Straßenbau Vollsperrung 01.11.2004-12.08.2005 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 26609,-7136 26506,-6931 26146,-6218
+userdel	q4 26609,-7136 26506,-6931 26135,-6206
 EOF
      },
      { from  => 1089496800, # 2004-07-11 00:00
@@ -3284,7 +3286,7 @@ EOF
        text  => 'L 402; (Forstweg); Bahnübergang in OL Zeuthen Gleisbauarbeiten Vollsperrung 29.10.2005-02.11.2005 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 26001,-6257 26057,-6241 26146,-6218
+userdel	2 25997,-6245 26040,-6233 26135,-6206
 EOF
      },
      { from  => 1130715720, # 2005-10-31 00:42
@@ -8757,7 +8759,7 @@ EOF
        source_id => 'LMS_1766426574',
        data  => <<EOF,
 userdel	2::temp 6628,10318 6626,10155 6729,10212 6739,10120
-userdel	2::temp 6609,10147 6514,10088
+userdel	2::temp 6609,10147 6499,10086
 userdel	2::temp 6971,10346 6729,10212 6719,10347
 EOF
      },
@@ -14553,7 +14555,7 @@ EOF
        text  => 'L 402 Zeuthen - Schulzendorf Bahnübergang Forstweg in Zeuthen Gleisbauarbeiten Vollsperrung 10.06.2009-11.06.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 26001,-6257 26057,-6241 26146,-6218
+userdel	2::inwork 25997,-6245 26040,-6233 26135,-6206
 EOF
      },
      { from  => $isodate2epoch->("2017-06-15 00:00:00"), # 1 Tag Vorlauf
@@ -18498,6 +18500,7 @@ EOF
        until => $isodate2epoch->("2016-07-10 23:59:59"),
        periodic => 1, # zweiter Termin im Jahr
        recurrences => [['yearly', days => 4, months => 7]], # kann auch erst im September stattfinden
+       recurrence_prewarn_days => 14, # XXX noch keine Infos dazu...
        text  => 'Rheinstraße (Friedenau): Veranstaltung (Jazzfest auf der Rheinstraße), Straße vollständig zwischen Walther-Schreiber-Platz und Kaisereiche gesperrt (09.07.2016 bis 10.07.2016)',
        type  => 'gesperrt',
        data  => <<EOF,
@@ -19475,14 +19478,14 @@ EOF
 userdel	q4::inwork 11796,18482 11696,18454
 EOF
      },
-     { from  => 1308592800, # 2011-06-20 20:00
-       until => 1308974400, # 2011-06-25 06:00
-       text  => 'John-Foster-Dulles-Allee (Tiergarten): Sportveranstaltung, Straße vollständig gesperrt (bis 25.06., 06:00) in beiden Richtungen, 21.06.2011 20:00 Uhr bis 25.06.2011 06:00 Uhr ',
-       type  => 'handicap',
-       source_id => 'IM_017472',
+     { from  => 1497465143, # 1308592800, # 2011-06-20 20:00
+       until => $isodate2epoch->("2017-06-17 09:00:00"), # 1308974400, # 2011-06-25 06:00
+       text  => 'John-Foster-Dulles-Allee: Sportveranstaltung, Fahrbahn gesperrt, bis 17.06.2017 09:00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'LMS-BR_r_LMS-BR_99873_LMS-BR_72',
        data  => <<EOF,
-userdel	q4::temp 7215,12295 7437,12368
-userdel	q4::temp 7875,12363 7821,12367 7627,12380 7514,12387
+#: note: laut vmz bis 18.6. nachts, go with fritz
+userdel	2::temp 8070,12409 8017,12359 7875,12363 7821,12367 7627,12380 7514,12387 7437,12368
 EOF
      },
      { from  => 1308466800, # 2011-06-19 09:00
@@ -20134,7 +20137,7 @@ EOF
        text  => 'Alt-Friedrichsfelde - Weißenhöher Straße: Bauarbeiten, Durchfahrt könnte gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 19735,11721 19830,11677 19879,11595 19881,11591
+userdel	2::inwork 19735,11721 19830,11677 19881,11591
 EOF
      },
      { from  => 1325955689, # 
@@ -22312,7 +22315,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 	q4::inwork 11694,16034 11673,16003
-	q3::inwork 11673,16003 11567,15842
+	q3::inwork 11673,16003 11641,15955 11614,15914 11567,15842
 EOF
      },
      { from  => 1382507820, # 2013-10-23 07:57
@@ -22778,13 +22781,15 @@ EOF
 userdel	q3::inwork; 15098,12849 15233,12829 15357,12813
 EOF
      },
-     { from  => 1394604000, # 2014-03-12 07:00
-       until => 1395421200, # 2014-03-21 18:00
-       text  => 'Scharnweberstr. (Friedrichshain): Baustelle, Fahrbahn zwischen Müggelstr. und Jessnerstr. gesperrt, 13.03.2014 07:00 Uhr bis 21.03.2014 18:00 Uhr ',
+     { from  => $isodate2epoch->("2017-06-05 08:00:00"), # 1394604000, # 2014-03-12 07:00
+       until => $isodate2epoch->("2017-06-25 12:00:00"), # undef, # 1395421200, # 2014-03-21 18:00
+       text  => 'Scharnweberstr.: Baustelle, Fahrbahn zwischen Jessnerstr. und Gürtelstr. gesperrt, ab 06.06.2017 bis 25.06.2017',
        type  => 'handicap',
-       source_id => 'IM_021449',
+       source_id => '2147341388',
        data  => <<EOF,
-userdel	q4::inwork 15080,11905 14965,11921
+#: by: fritz
+#: note: laut vmz "Gesamtbaumaßnahme" bis Mitte Juli 2017
+userdel	q4::inwork; 15080,11905 15121,11899 15248,11880
 EOF
      },
      { from  => 1394953200, # 2014-03-16 08:00
@@ -22824,7 +22829,7 @@ EOF
 #: last_checked: 2014-09-12
 #: next_check: 2014-09-17
 #: by: http://www.berlin.de/ba-pankow/presse/archiv/20140908.1230.399120.html ("Fest nach Umbau")
-userdel	q3::inwork 11673,16003 11567,15842
+userdel	q3::inwork 11673,16003 11641,15955 11614,15914 11567,15842
 EOF
      },
      { from  => 1395615600, # 2014-03-24 00:00
@@ -23673,7 +23678,7 @@ EOF
        source_id => 'http://www.berliner-woche.de/nachrichten/bezirk-treptow-koepenick/niederschoeneweide/artikel/45985-umleitungen-durch-angrenzende-wohngebiete/',
        data  => <<EOF,
 #: source_id: IM_022377
-userdel	q4::inwork; 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065,5534 20348,5509 20437,5463 20781,5242
+userdel	q4::inwork; 19328,5304 19386,5335 19588,5385 19696,5456 19814,5512 20065,5534 20348,5509 20435,5460 20740,5273 20782,5257
 EOF
      },
      { from  => 1412481600, # 2014-10-05 06:00
@@ -25251,7 +25256,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.480057.php',
        data  => <<EOF,
-userdel	q4::inwork 20302,1613 20366,1479 20347,1398
+userdel	q4::inwork 20302,1613 20366,1479 20340,1401
 userdel	q4::inwork 20580,1406 20406,1465 20366,1479
 userdel	q4::inwork 20381,1390 20406,1465
 EOF
@@ -25629,7 +25634,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-05-15 vvv
+#: last_checked: 2017-06-11 vvv
 #: check_frequency: 21d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -25691,8 +25696,8 @@ EOF
        data  => <<EOF,
 #: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität danach besser sein? vvv
 #: osm_watch: way id="136814135" version="15" vvv
-#: last_checked: 2017-03-25 vvv
-#: check_frequency: 60d vvv
+#: last_checked: 2017-06-08 vvv
+#: check_frequency: 30d vvv
 userdel	2::inwork 3332,12742 3396,12741 3358,12718
 userdel	2::inwork 3396,12741 3476,12735 3582,12704 3654,12672 3763,12624 3837,12618
 userdel	2::inwork 3741,12607 3654,12672
@@ -25703,25 +25708,21 @@ userdel	2::inwork 3741,12607 3654,12672
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1496778229, # undef, # XXX
        text  => 'Unterführung Krahmersteg: gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-#: add_fragezeichen: wann wird die Unterführung wieder geöffnet?
-#: last_checked: 2017-03-26
-#: check_frequency: 60d
+# REMOVED --- #: add_fragezeichen: wann wird die Unterführung wieder geöffnet? --- #: last_checked: 2017-03-26 --- #: check_frequency: 60d
 userdel	2::inwork 4778,3352 4815,3382 4822,3431
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1496778250, # undef, # XXX
        text  => 'Krahmerstr.: Bauarbeiten, einige Engstellen',
        type  => 'handicap',
        data  => <<EOF,
-#: add_fragezeichen: wann sind die Bauarbeiten beendet?
-#: last_checked: 2017-05-06
-#: check_frequency: 60d
-userdel	q3::inwork 4564,3457 4800,3391 4862,3363 5018,3320
+# REMOVED --- #: add_fragezeichen: wann sind die Bauarbeiten beendet? --- #: last_checked: 2017-05-06 --- #: check_frequency: 60d
+userdel	q3::inwork 4566,3461 4765,3401 4800,3391 4866,3371 5018,3320
 EOF
      },
      { from  => 1475964000, # 2016-10-09 00:00
@@ -25871,8 +25872,8 @@ userdel auto	3 10584,12507 10601,12521 10431,12709
 EOF
      },
      { from  => 1485206028, # 2017-01-23 22:13
-       until => 1496440800, # 2017-06-03 00:00
-       text  => 'Stubenrauchstr.: zwischen Wiesbadener Str. und Rotdornstr. Bauarbeiten, Fahrbahn gesperrt, bis 02.06.2017 ',
+       until => $isodate2epoch->("2017-06-30 12:00:00"), # 1496440800, # 2017-06-03 00:00
+       text  => 'Stubenrauchstr.: zwischen Wiesbadener Str. und Rotdornstr. Bauarbeiten, Fahrbahn gesperrt, bis 30. Juni 2017',
        type  => 'handicap',
        data  => <<EOF,
 #: source_id: LMS-BR_r_LMS-BR_88478
@@ -25909,11 +25910,12 @@ userdel	q3::inwork; 8385,6034 8532,6015
 EOF
      },
      { from  => 1488236400, # 2017-02-28 00:00
-       until => $isodate2epoch->("2017-06-16 18:00:00"), # 1493589599, # 2017-04-30 23:59
-       text  => 'Kantstr.: Richtung Budapester Str. ab Joachimsthaler Str. gesperrt, voraussichtlich bis 16. Juni 2017',
+       until => $isodate2epoch->("2017-07-14 18:00:00"), # 1493589599, # 2017-04-30 23:59
+       text  => 'Kantstr.: Richtung Budapester Str. ab Joachimsthaler Str. gesperrt, voraussichtlich bis 14. Juli 2017',
        type  => 'handicap',
        source_id => '2147341048',
        data  => <<EOF,
+#: next_check_id: KANTSTR-2017
 #: source_id: LMS-BR_r_LMS-BR_121
 userdel	q4::inwork; 5488,10978 5613,10963 5652,11004
 EOF
@@ -25962,17 +25964,24 @@ userdel	q4::inwork 1458,24561 1410,24562 1330,24553 1250,24533 1156,24494
 EOF
      },
      { from  => 1491498639, # 2017-04-06 19:10
-       until => 1496268000, # 2017-06-01 00:00
-       text  => 'Innstr.: Bauarbeiten, Einbahnstraßenregelung, außerdem Sperrung an der Kreuzung Weserstr., bis Juni 2017',
+       until => undef, # was: 1496268000, # 2017-06-01 00:00
+       text  => 'Innstr.: Bauarbeiten, Einbahnstraßenregelung, außerdem Sperrung an der Kreuzung Weserstr.',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q3::inwork 13384,8354 13217,8493
-userdel	q3::inwork; 13217,8493 13262,8554 13301,8606
+#: XXX wann sind die Bauarbeiten beendet? laut Schild der Wasserbetriebe bis September oder Oktober
+#: last_checked: 2017-06-14 vvv
+#: next_check: 2017-08-14 vvv
+	q3::inwork 13384,8354 13217,8493
+# REMOVED userdel	q3::inwork; 13217,8493 13262,8554
+	q3::inwork; 13262,8554 13301,8606 13314,8624
+	q4::inwork 13366,8694 13314,8624
+#: next_check ^^^
+#: last_checked ^^^
 EOF
      },
      { from  => undef, # 
-       until => 1495641600, # 2017-05-24 18:00
-       text  => 'Rennbahnstr.: ab Hunsrückstr. bis Berliner Allee Bauarbeiten, Fahrtrichtung gesperrt ',
+       until => $isodate2epoch->("2017-06-23 12:00:00"), # 1495641600, # 2017-05-24 18:00
+       text  => 'Rennbahnstr.: ab Hunsrückstr. bis Berliner Allee Bauarbeiten, Fahrtrichtung gesperrt, bis 23. Juni 2017',
        type  => 'handicap',
        source_id => '2147341139',
        data  => <<EOF,
@@ -26004,7 +26013,7 @@ EOF
        text  => 'Akazienstr.: Bauarbeiten, Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2017-05-19
+#: last_checked: 2017-06-06
 #: check_frequency: 14d
 userdel	q4::inwork; 7201,8870 7107,9030
 EOF
@@ -26033,17 +26042,17 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX bis wann gehen die Bauarbeiten?
-#: last_checked: 2017-05-17
+#: last_checked: 2017-06-04
 userdel	q3::inwork; 8752,12647 8870,12647
 EOF
      },
      { from  => 1494442386, # 2017-05-10 20:53
-       until => 1496267999, # 2017-05-31 23:59
-       text  => 'Rosenthaler Str.: Straßenbauarbeiten in Höhe Neue Schönhauser Str.. Fahrbahn gesperrt, bis 31. Mai 2017',
+       until => $isodate2epoch->("2017-07-05 12:00:00"), # 1496267999, # 2017-05-31 23:59
+       text  => 'Rosenthaler Str.: Straßenbauarbeiten in Höhe Neue Schönhauser Str.. Fahrbahn gesperrt, bis 5. Juli 2017',
        type  => 'handicap',
        source_id => '2147341279',
        data  => <<EOF,
-userdel	q3::inwork 10264,13097 10310,13227 10317,13248
+userdel	q4::inwork; 10350,13376 10313,13493
 EOF
      },
      { from  => 1495473890, # 2017-05-22 19:24
@@ -26057,8 +26066,8 @@ userdel	2::temp 8522,12239 8538,12245 8546,12279
 EOF
      },
      { from  => 1495473982, # 2017-05-22 19:26
-       until => 1495663199, # 2017-05-24 23:59
-       text  => 'Gendarmenmarkt: vermutlich Sperrungen zum Kirchentag, 24. Mai 2017',
+       until => $isodate2epoch->("2017-05-28 18:00:00"), # 1495663199, # 2017-05-24 23:59
+       text  => 'Gendarmenmarkt: vermutlich Sperrungen zum Kirchentag, bis zum 28. Mai 2017 18 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 9536,11922 9666,11935 9656,12031 9523,12019
@@ -26067,6 +26076,27 @@ userdel auto	3 9820,11951 9666,11935 9679,11834
 userdel auto	3 9679,11834 9666,11935 9820,11951
 userdel auto	3 9913,12068 9656,12031 9645,12133
 	2::temp 9523,12019 9536,11922
+EOF
+     },
+     { from  => 1495918329, # 2017-05-27 22:52
+       until => $isodate2epoch->("2017-10-21 08:00:00"),
+       text  => 'Bölschestr.: Bauarbeiten, Einbahnstraße Richtung Süden, 22.05. bis 21.10.2017',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.595041.php',
+       data  => <<EOF,
+#: note: laut fritz bis 21.10.2017 08:00 Uhr
+#: by: http://werbegemeinschaft-friedrichshagen.de/wp-content/uploads/2017/05/2017-05_Boelschestr_Anwohnerflyer_web.pdf
+userdel	q4::inwork; 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Am Wiesenweg: Bauarbeiten, Weg komplett gesperrt (auch für Fußgänger), Ende unbekannt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: XXX wann sind die Bauarbeiten beendet?
+#: last_checked: 2017-06-11
+userdel	2::inwork 21685,916 21708,937 21857,989 21977,988
 EOF
      },
     );

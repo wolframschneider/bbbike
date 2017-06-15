@@ -105,7 +105,7 @@ Fußgängerampel links benutzen	CP; 14723,16691 14619,16682 14619,16672
 # REMOVED (gelöst durch split der Hohenstaufenstr) --- #: XXX_prog: RL:ja, GPS:ja (da es doch immerhin 30 Meter bis zur Kreuzung sind) --- Hohenstaufenstr. zur Münchener Str.: frühzeitig Fußgängerampel nach links benutzen	PI; 6241,9772 6209,9773 6210,9753 6224,9544
 # REMOVED (gelöst durch split der Hohenstaufenstr) --- #: XXX_prog: RL:ja, GPS:ja (da es doch immerhin 30 Meter bis zur Ampel sind und Radfahrer evtl. nach links fahren würden) --- Münchener Str. zur Nachodstr.: Fußgängerampel auf der rechten Seite benutzen	CP; 6224,9544 6210,9753 6209,9772 6108,9772
 Fußgängerampel östlich der Münchener Str. zum Überqueren benutzen	CP; 6209,9772 6241,9772 6209,9773
-an der Fußgängerampel vor der Münchener Str. auf den linken Gehweg wechseln	CP; 6502,9782 6241,9772 6209,9771
+an der Fußgängerampel vor der Münchener Str. auf den linken Gehweg wechseln	CP; 6492,9782 6241,9772 6209,9771
 Thomas-Dehler-Str. - Stülerstr.: nach dem Abbiegen zunächst auf dem linken Gehweg bleiben	CP; 6657,11467 6716,11439 6825,11486
 Gervinusstr./Lewishamstr.: linken Gehweg bis zur Ampel an der Mommsenstr. benutzen	CP; 3835,10915 3623,10800 3644,10759
 #: XXX_prog: RL:ja, GPS:nein
@@ -118,7 +118,7 @@ Blissestr. - Am Volkspark: bereits an der Ampel Mecklenburgische Str. auf die li
 Lietzenburger Str. - Rankestr.: bereits an der Ampel Bundesallee/Lietzenburger Str. auf den linken Gehweg wechseln	PI; 5458,10443 5520,10453 5568,10535 5627,10637
 Nordufer: bereits an der Ampel Föhrer Str. auf den linken Zweirichtungsradweg wechseln	PI; 6334,14756 5972,14820 5873,14847
 #: note: unbequemes Überqueren, aber (mittlerweile?) möglich; 
-An der Wuhlheide - Wuhlewanderweg: ggfs. bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (insbesondere mit Anhänger oder mit Lastenrad wenig Platz auf dem Mittelstreifen)	PI; 21303,5826 21365,5832 21470,5809 21569,5730 21596,5693 21602,5685 21744,5804
+An der Wuhlheide - Wuhlewanderweg: ggfs. bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (insbesondere mit Anhänger oder mit Lastenrad wenig Platz auf dem Mittelstreifen)	PI; 21303,5826 21365,5832 21470,5809 21522,5771 21569,5730 21596,5693 21602,5685 21744,5804
 #: XXX_prog: RL:ja, GPS:nein
 An der Wuhlheide - Alte Försterei: bereits an der Ampel Köpenicker Allee die Straßenseite wechseln (Straßenbahn auf Mittelstreifen)	PI; 21303,5826 21365,5832 21653,6037 21737,6068 21832,6129 21869,6190 21958,6248 22000,6245
 Wuhlewanderweg - Lindenstr.: zunächst linken Gehweg benutzen, an der Cardinalstr. oder Ampel Joachimstr. die Straßenseite wechseln	CP; 21744,5804 21602,5685 21706,5541
@@ -280,7 +280,7 @@ Ellerbeker Str. - Behmstr.: links entlang des Sportplatzes fahren	CP2; 9727,1618
 Roonstr./Flotowstr.: Hindenburgdamm kann über Fußgängerfurt gequert werden	CP; 4265,4484 4515,4581 4651,4638
 Flotowstr./Roonstr.: Hindenburgdamm kann über Fußgängerfurt gequert werden	CP; 4651,4638 4515,4581 4265,4484
 #: by: ^^^
-Hausdurchfahrt benutzen	CP2; 6502,9782 6529,9738
+Hausdurchfahrt benutzen	CP2; 6492,9782 6529,9738
 #: XXX_prog: Ist das hier CS; oder CP; ?
 Nach dem Steg kann man zunächst nur in der Mitte direkt am Ufer fahren, da Leitplanken das Übequeren verhindern, erst auf Höhe der Genthiner Str. kann man die Straße überquert werden	CS; 7252,11188 7248,11143 7461,11051
 Lützowufer - Hiroshimasteg: frühzeitig auf den linken Gehweg wechseln, Leitplanken verhindern das Überqueren	PI; 7002,11034 7248,11143 7252,11188
@@ -414,7 +414,7 @@ Breitestr. - Lindenstr.: bereits an der Kreuzung "Wall am Kiez" auf die linke St
 Holzmarktstr. - Schillingstr.: bereits an der Kreuzung Stralauer Allee/Alexanderstr. auf die linke Straßenseite wechseln	PI; 11347,12223 11388,12202 11452,12318
 #: XXX_prog: Zeitverlust durch Umweg; Ampel wird nicht in der Berechnung verwendet!
 Schillingstr. - Holzmarktstr.: zum Linksabbiegen die Ampel an der Kreuzung Alexanderstr. benutzen	CP; 11452,12318 11388,12202 11513,12138
-Frankfurter Allee - Bürgerheimstr.: bereits an der Ampel Alfredstr. auf die linke Straßenseite wechseln	PI; 16207,11937 16317,11920 16326,11966
+Frankfurter Allee - Bürgerheimstr.: bereits an der Ampel Alfredstr. auf die linke Straßenseite wechseln, oder an der Ampel Buchberger Str. die Straßenseite wechseln	PI; 16207,11937 16317,11920 16326,11966
 Bürgerheimstr. - Frankfurter Allee: auf dem linken Gehweg bis zur Atzpodienstr. fahren und dort die Straßenseite wechseln	CP; 16326,11966 16317,11920 16368,11912
 Gradestr. - Moosrosenstr.: entweder schon an der Holzmindener Str. die Straßenseite wechseln oder am Busbahnhof umdrehen	PI; 12773,5248 12727,5244 12726,5147
 Moosrosenstr. - Gradestr.: auf dem linken Gehweg bis Höhe Busbahnhof fahren und dort die Straßenseite wechseln	CP; 12726,5147 12727,5244 12582,5232
@@ -597,3 +597,4 @@ Attilastr. - Am Bahndamm: an der Ampel Ringstr. auf die linke Seite wechseln	PI;
 Attilastr. - Am Bahndamm: bereits an der Kreuzung Reutlinger Str./Steglitzer Damm auf den rechten Gehweg wechseln	PI; 7597,4499 7628,4521 7667,4549 7692,4464
 Lindenstr. - Markgrafenstr.: bereits in Höhe Jüdisches Museum auf den linken Gehweg wechseln, oder in Höhe "Am Berlin Museum" die Lindenstr. überqueren	PI; 9777,10719 9797,10771 9807,10788 9829,10830 9834,10840 9799,10846
 Osdorfer Str. - Schwatlostr.: ggfs. schon an der Ampel Osdorfer Str./Hildburghauser Str. auf die linke Seite wechseln	PI; 4393,1400 4365,1440 4343,1424
+Skandinavische Str. - Monimbóplatz: ggfs. schon an der Ampel Einbecker Str./Skandinavische Str. auf den linken Gehweg wechseln	PI; 16958,11778 17013,11849 16998,11861

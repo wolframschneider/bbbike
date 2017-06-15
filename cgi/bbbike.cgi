@@ -98,7 +98,7 @@ use vars qw($VERSION $VERBOSE
 	    $graphic_format $use_mysql_db $use_exact_streetchooser
 	    $use_module
 	    $cannot_jpeg $cannot_pdf $cannot_svg $can_gif
-	    $can_wbmp $can_palmdoc $can_gpx $can_kml
+	    $can_wbmp $can_palmdoc $can_qrcode $can_gpx $can_kml
 	    $can_google_maps $can_gpsies_link
 	    $can_mapserver $mapserver_address_url
 	    $bbbikedraw_pdf_module
@@ -1640,7 +1640,7 @@ if (defined $q->param('begin')) {
     (my $local_route_file = $q->param('localroutefilelist')) =~ s/[^A-Za-z0-9._-]//g;
     $local_route_file = "$local_route_dir/$local_route_file";
     show_routelist_from_file($local_route_file);
-} elsif (defined $q->param('coords') || defined $q->param('coordssession')) {
+} elsif (defined $q->param('coords') || defined $q->param('coordssession') || $q->param('gple')) {
     if ($q->param('showroutelist')) {
 	# XXX note: coordssession+showroutelist is not implemented
 	show_routelist_from_coords();
@@ -6359,24 +6359,42 @@ for my $etappe (@out_route) {
 		if ($can_gpx) {
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
-			$qq2->param('output_as', "gpx-route");
-			my $href = $bbbike_script;
-			print qq{<a class="mobile_link" title="}, M("GPX Route mit Waypoints fuer GPS Navigation, bis zu 256 Punkte"), qq{" style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Route)</a>};
+                $qq2->param('output_as', "gpx-route");
+                my $href = $bbbike_script;
+                print qq{<a class="mobile_link" title="}, M("GPX Route mit Waypoints fuer GPS Navigation, bis zu 256 Punkte"), qq{" style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Route)</a>};
+            
+                if ($can_qrcode) {
+                    my $qrcode_href = add_qrcode_cgi($href);
+                    print qq{<a href="$qrcode_href" title="QR Code - GPX Route"><img style="vertical-align:bottom; padding-left:2px;" src="$bbbike_images/QR_icon_16x16.png" width="16" height="16" border="0" alt="QR Code - GPX Route"></a>};
+                }
 		    }
+            
 		    {
 		        my $qq2 = cgi_utf8($use_utf8);
-			$qq2->param('output_as', "gpx-track");
-			my $href = $bbbike_script;
-			print qq{<a class="mobile_link" title="}, M("GPX mit bis zu 1024 Punkten, keine Navigation"), qq{" style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Track)</a>};
+                $qq2->param('output_as', "gpx-track");
+                my $href = $bbbike_script;
+                print qq{<a class="mobile_link" title="}, M("GPX mit bis zu 1024 Punkten, keine Navigation"), qq{" style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">GPS (Track)</a>};
+                
+                if ($can_qrcode) {
+                    my $qrcode_href = add_qrcode_cgi($href);
+                    print qq{<a href="$qrcode_href" title="QR Code - GPX Track"><img style="vertical-align:bottom; padding-left:2px;" src="$bbbike_images/QR_icon_16x16.png" width="16" height="16" border="0" alt="QR Code - GPX Track"></a>};
+               }
 		    }
 		}
+        
 		if ($can_kml) {
 		    my $qq2 = cgi_utf8($use_utf8);
 		    $qq2->param('output_as', "kml-track");
 
 		    my $href = $bbbike_script;
 		    print qq{<a class="mobile_link" title="}, M("Route auf Google Earth anschauen"), qq{" style="padding:0cm 0.5cm 0cm 0.5cm;" href="$href?} . $qq2->query_string . qq{">Google Earth (KML)</a>};
+           
+            if ($can_qrcode) {
+                my $qrcode_href = add_qrcode_cgi($href);
+                print qq{<a href="$qrcode_href" title="QR Code - KML"><img style="vertical-align:bottom; padding-left:2px;" src="$bbbike_images/QR_icon_16x16.png" width="16" height="16" border="0" alt="QR Code - KML"></a>};
+            } 
 		}
+        
 		if ($can_gpsies_link) {
 		    my $qq2 = cgi_utf8($use_utf8);
 		    $qq2->param('output_as', "gpx-track");
@@ -7078,6 +7096,13 @@ sub draw_route {
     if (defined $q->param('oldcs') &&
 	(my $oldsess = tie_session(scalar $q->param('oldcs')))) {
 	$q->param(oldcoords => $oldsess->{routestringrep});
+    }
+
+    if (defined $q->param('gple')) {
+	require Algorithm::GooglePolylineEncoding;
+	my @polyline = Algorithm::GooglePolylineEncoding::decode_polyline(scalar $q->param('gple'));
+	my @coords = map { join ',', convert_wgs84_to_data($_->{lon}, $_->{lat}) } @polyline;
+	$q->param(coords => join("!", @coords));
     }
 
     my $cookie;
@@ -10190,6 +10215,12 @@ EOF
     } else {
 	"";
     }
+}
+
+sub add_qrcode_cgi {
+    my $url = shift;
+    $url =~ s{(/cgi(-bin)?/)}{$1qrcode.cgi/};
+    $url;
 }
 
 

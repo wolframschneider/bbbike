@@ -4,7 +4,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998,2000,2003,2004,2006,2010,2011,2012,2013 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998,2000,2003,2004,2006,2010,2011,2012,2013,2017 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -167,7 +167,7 @@ my $file_cache_tests_per_format = 3;
 my $file_cache_tests_formats = scalar grep { $_->{can_file_cache} } (@output_as_defs, @imagetype_defs);
 my $bbbike_org = $ENV{BBBIKE_TEST_ORG_LATER} ? -5 : 0;
 
-plan tests => (259 + $bbbike_org + ($test_file_cache ? $file_cache_tests_formats*$file_cache_tests_per_format : 0)) * scalar @urls;
+plan tests => (264 + ($test_file_cache ? $file_cache_tests_formats*$file_cache_tests_per_format : 0)) * scalar @urls;
 
 my $default_hdrs;
 if (defined &Compress::Zlib::memGunzip && $do_accept_gzip) {
@@ -867,6 +867,23 @@ Consider to upgrade to at least CGI.pm 3.47.
 EOF
 	    }
 	}
+    }
+
+    if (!$ENV{BBBIKE_TEST_ORG_LATER}) {
+	# gple (GooglePolylineEncoding) - pdf
+	my(undef, $resp) = std_get $cgiurl . '?gple=gap_I%7BsspAI_DIcCM%7BFSqF&imagetype=pdf-auto&draw=str&draw=sbahn&draw=ubahn&draw=wasser&draw=flaechen&draw=ampel';
+	is $resp->content_type, 'application/pdf', "gple input - pdf output";
+	display($resp);
+    }
+
+    if (!$ENV{BBBIKE_TEST_ORG_LATER}) {
+	# gple (GooglePolylineEncoding) - gif
+	my $url = $cgiurl . '?gple=gap_I%7BsspAI_DIcCM%7BFSqF&imagetype=gif&draw=str&draw=sbahn&draw=ubahn&draw=wasser&draw=flaechen&draw=ampel';
+	my($content, $resp) = std_get $url;
+	is $resp->content_type, 'image/gif', "gple input - gif output";
+	BBBikeTest::like_long_data($content, qr/^GIF8/, "Really a GIF image")
+		or diag "Not a gif: $url";
+	display($resp);
     }
 
     if (!$ENV{BBBIKE_TEST_ORG_LATER}) {

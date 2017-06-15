@@ -172,6 +172,7 @@ README.english
 Radwege.pm
 Route.pm
 Route/Descr.pm
+Route/GPLE.pm
 Route/Heavy.pm
 Route/PDF.pm
 Route/PDF/Cairo.pm
@@ -256,6 +257,7 @@ cgi/mapserver_comment.cgi
 cgi/mapserver_setcoord.cgi
 cgi/mksymlinks
 cgi/msg/en
+cgi/qrcode.cgi
 cgi/redirect-bbbike.cgi
 cgi/runbbbikecgi
 cgi/tinyhttpd			experimentell (fuer Win32)
@@ -506,6 +508,7 @@ html/shortfragezeichenform.html
 html/shortfragezeichenform.utf8.html
 html/sprintf.js
 images/PoweredByPerl.gif
+images/QR_icon_16x16.png
 images/abc.gif
 images/abc.xpm
 images/abc_hi.gif

@@ -792,8 +792,9 @@ EOF
 	document.googlemap.zoom.value = map.getZoom();
     }
 
-    function setZoomInUploadForm() {
+    function setValuesInUploadForm() {
 	document.upload.zoom.value = map.getZoom();
+	document.upload.maptype.value = mapTypeToString();
     }
 
     function waitMode() {
@@ -1405,7 +1406,7 @@ EOF
  </table>
 </form>
 
-<form name="upload" onsubmit='setZoomInUploadForm()' class="boxed" style="margin-top:0.3cm; " method="post" enctype="multipart/form-data">
+<form name="upload" onsubmit='setValuesInUploadForm();' class="boxed" style="margin-top:0.3cm; " method="post" enctype="multipart/form-data">
 EOF
     if ($self->{errormessageupload}) {
 	my $errormessageupload_html = escapeHTML($self->{errormessageupload});
@@ -1416,7 +1417,8 @@ EOF
     }
     $html .= <<EOF;
   <input type="hidden" name="zoom" value="@{[ $zoom ]}" />
-  Upload einer GPX-Datei: <input type="file" name="gpxfile" onchange="this.form.submit()"/>
+  <input type="hidden" name="maptype" value="" />
+  Upload einer GPX-Datei: <input type="file" name="gpxfile" onchange="setValuesInUploadForm(); this.form.submit()"/>
 </form>
 
 </div>

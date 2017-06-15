@@ -1121,7 +1121,7 @@ südliches Sackgassenende	culdesac 24186,10035
 	culdesac 25473,4786
 	culdesac 23173,2315
 	culdesac 23275,2334
-	culdesac 23623,2392
+	culdesac 23648,2374
 	culdesac 8994,703
 	culdesac 7013,2146
 	culdesac 7597,2647
@@ -1180,3 +1180,6 @@ nördliches Sackgassenende, BSR-Recyclinghof	culdesac_pseudo 3969,13341
 	culdesac 11332,3615
 	culdesac 20186,1522
 	culdesac 19051,1878
+	culdesac_pseudo 15898,22296
+Sackgasse nördlich der Minna-Todenhagen-Str.	culdesac_pseudo 17295,7358
+	culdesac 21637,1324

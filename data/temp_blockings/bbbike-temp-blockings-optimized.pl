@@ -1,110 +1,6 @@
-$#temp_blocking = 2;
+$#temp_blocking = 30;
 push @temp_blocking,
 (
-       {
-         'data' => '#: by: http://www.berlin.de/tickets/suche/detail.php?id=810735
-userdel	2::temp 9521,10010 9827,10051
-userdel	2::temp 9521,10010 9448,10014
-userdel	2::temp 9599,10175 9687,10180 9825,10206
-userdel	2::temp 9416,10196 9599,10175
-userdel	2::temp 9579,10122 9536,10064
-userdel	2::temp 9579,10122 9631,10142 9702,10129
-userdel	2::temp 9837,10117 9827,10051
-userdel	2::temp 9837,10117 9858,10199
-userdel	2::temp 9599,10175 9579,10122
-userdel	2::temp 9702,10129 9827,10051
-userdel	2::temp 9702,10129 9816,10119
-userdel	2::temp 9599,10175 9631,10142 9687,10180
-	2::temp 9825,10206 9865,10227 9948,10280
-	2::temp 9873,10285 9865,10227 9858,10199
-	2::temp 9825,10206 9858,10199
-userdel	3 9922,10010 9827,10051 9837,9856
-userdel	3 9837,9856 9827,10051 9922,10010
-',
-         'from' => 1496268000,
-         'id' => 3,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'easter',
-                              47
-                            ]
-                          ],
-         'text' => 'Straßenfest rund um den Blücherplatz, 02.06.2017 bis 05.06.2017',
-         'type' => 'gesperrt',
-         'until' => 1496699999
-       },
-       {
-         'data' => 'userdel	2::temp 11909,9155 11831,8989 11767,9026 11629,9086 11550,9104 11500,9116 11449,9125 11136,9183 11108,9187 10713,9260 10625,9259 10564,9292 10198,9405 10032,9456 9937,9484 9927,9487 9790,9528 9676,9564 9552,9602 9451,9634 9334,9670 9243,9696 9044,9753
-# REMOVED --- userdel	2::temp 9044,9753 9002,9731 8777,9601 8679,9544 8595,9495 8358,9568 8192,9619
-userdel	2::temp 10713,9260 10670,9286 10639,9304 10564,9292
-# REMOVED --- userdel	3 8774,9534 8777,9601 8779,9812
-# REMOVED --- userdel	3 8779,9812 8777,9601 8774,9534
-# REMOVED --- userdel	3 9000,9509 9044,9753 9073,9915
-# REMOVED --- userdel	3 9073,9915 9044,9753 9000,9509
-userdel	3 9280,9476 9334,9670 9387,9804
-userdel	3 9387,9804 9334,9670 9280,9476
-userdel	3 9524,9426 9552,9602 9588,9827
-userdel	3 9588,9827 9552,9602 9524,9426
-userdel	3 9650,9404 9676,9564 9705,9732
-userdel	3 9705,9732 9676,9564 9650,9404
-userdel	3 9767,9386 9790,9528 9820,9718
-userdel	3 9820,9718 9790,9528 9767,9386
-userdel	3 9892,9286 9927,9487 9957,9692
-userdel	3 9957,9692 9927,9487 9892,9286
-userdel	3 10004,9268 10032,9456 10067,9667
-userdel	3 10067,9667 10032,9456 10004,9268
-userdel	3 10123,9233 10198,9405 10306,9640
-userdel	3 10306,9640 10198,9405 10123,9233
-userdel	3 10547,9233 10564,9292 10580,9361
-userdel	3 10580,9361 10564,9292 10547,9233
-userdel	3 10705,9234 10713,9260 10749,9342
-userdel	3 10749,9342 10713,9260 10705,9234
-userdel	3 11141,9107 11136,9183 11208,9345 11274,9492
-userdel	3 11274,9492 11208,9345 11136,9183 11141,9107
-userdel	3 11998,8872 11880,8955 11831,8989 11830,8917 11845,8824 11879,8672 11882,8527
-userdel	3 11882,8527 11879,8672 11845,8824 11830,8917 11831,8989 11880,8955 11998,8872
-',
-         'from' => 1496440800,
-         'id' => 4,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'easter',
-                              49
-                            ]
-                          ],
-         'source_id' => 'http://www.karneval-berlin.de/de/',
-         'text' => 'Karneval der Kulturen, 04.06.2016',
-         'type' => 'gesperrt',
-         'until' => 1496613599
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
          'data' => '#: by: http://www.weinfeste-in-deutschland.de/wein-und-winzerfest-in-berlin-lichtenrade.html
 userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
@@ -169,10 +65,10 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
        undef,
        {
          'data' => '#: by: http://www.stadtfest.berlin/de/index.html
-userdel	2::temp 6514,10088 6609,10147 6626,10155 6729,10212
+userdel	2::temp 6499,10086 6609,10147 6626,10155 6729,10212
 userdel	2::temp 6729,10212 6971,10346
 userdel	2::temp 6628,10318 6626,10155
-userdel	2::temp 6502,10273 6628,10318 6719,10347
+userdel	2::temp 6487,10277 6628,10318 6719,10347
 userdel	2::temp 6719,10347 6729,10212 6739,10120
 ',
          'from' => 1499983200,
@@ -1244,26 +1140,7 @@ userdel	2::temp 6719,10347 6729,10212 6739,10120
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.openairgallery.de/?y=2017
-userdel	2::temp 13178,10623 13206,10651 13305,10789 13332,10832
-',
-         'from' => 1496476800,
-         'id' => 1107,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              31,
-                              'months',
-                              5
-                            ]
-                          ],
-         'text' => 'Open Air Gallery am 4. Juni 2017 auf der Oberbaumbrücke (10:00 - 20:00)',
-         'type' => 'gesperrt',
-         'until' => 1496606400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2626,7 +2503,7 @@ userdel	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Mai von 6.00 bis 21.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juni von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2954,7 +2831,17 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: note: laut vmz bis 18.6. nachts, go with fritz
+userdel	2::temp 8070,12409 8017,12359 7875,12363 7821,12367 7627,12380 7514,12387 7437,12368
+',
+         'from' => 1497465143,
+         'id' => 2231,
+         'source_id' => 'LMS-BR_r_LMS-BR_99873_LMS-BR_72',
+         'text' => 'John-Foster-Dulles-Allee: Sportveranstaltung, Fahrbahn gesperrt, bis 17.06.2017 09:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1497682800
+       },
        undef,
        undef,
        undef,
@@ -3354,27 +3241,7 @@ userdel	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: 20170527-20170528
-userdel	2::temp 6230,8602 6313,8638 6454,8653
-',
-         'from' => 1495789200,
-         'id' => 2428,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              4,
-                              'months',
-                              5
-                            ]
-                          ],
-         'source_id' => 'http://www.ms-event-agentur.com/seite18.html?date=20170325',
-         'text' => 'Schöneberger Mai- und Spargelfest am 27. und 28. Mai 2017 in der Freiherr-vom-Stein-Straße',
-         'type' => 'gesperrt',
-         'until' => 1495994400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3402,32 +3269,7 @@ userdel	2::temp 14161,11930 14285,12190
        },
        undef,
        undef,
-       {
-         'data' => '#: tempex: YYYY0530-YYYY0601 vvv
-userdel	2::temp 20755,5750 20716,6029 20707,6098 20623,6136 20453,6211 20464,6237
-userdel	2::temp 19976,6087 20015,6069 20293,6278 20200,6321 20106,6357
-userdel	2::temp 20200,6321 20262,6493 20225,6631
-userdel	2::temp 20716,6029 20593,6082 20428,6157 20453,6211 20293,6278
-userdel	2::temp 19976,6087 20064,6290 20106,6357
-#: tempex ^^^
-',
-         'from' => 1496095200,
-         'id' => 2436,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              30,
-                              'months',
-                              5
-                            ]
-                          ],
-         'source_id' => 'https://familienfez.fez-berlin.de/programm/kindertagsfest/',
-         'text' => 'Internationaler Kindertag im FEZ, einige Wege und Straßen können gesperrt sein, 1. Juni 2017',
-         'type' => 'gesperrt',
-         'until' => 1496354399
-       },
+       undef,
        undef,
        undef,
        {
@@ -3715,7 +3557,18 @@ userdel	2::inwork -12583,-1552 -12485,-1482
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: fritz
+#: note: laut vmz "Gesamtbaumaßnahme" bis Mitte Juli 2017
+userdel	q4::inwork; 15080,11905 15121,11899 15248,11880
+',
+         'from' => 1496642400,
+         'id' => 2550,
+         'source_id' => '2147341388',
+         'text' => 'Scharnweberstr.: Baustelle, Fahrbahn zwischen Jessnerstr. und Gürtelstr. gesperrt, ab 06.06.2017 bis 25.06.2017',
+         'type' => 'handicap',
+         'until' => 1498384800
+       },
        undef,
        undef,
        undef,
@@ -4224,7 +4077,7 @@ userdel	q4::inwork 12911,1815 12817,2031
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-05-15 vvv
+#: last_checked: 2017-06-11 vvv
 #: check_frequency: 21d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -4249,8 +4102,8 @@ userdel	q4::inwork 12911,1815 12817,2031
        {
          'data' => '#: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität danach besser sein? vvv
 #: osm_watch: way id="136814135" version="15" vvv
-#: last_checked: 2017-03-25 vvv
-#: check_frequency: 60d vvv
+#: last_checked: 2017-06-08 vvv
+#: check_frequency: 30d vvv
 userdel	2::inwork 3332,12742 3396,12741 3358,12718
 userdel	2::inwork 3396,12741 3476,12735 3582,12704 3654,12672 3763,12624 3837,12618
 userdel	2::inwork 3741,12607 3654,12672
@@ -4266,30 +4119,8 @@ userdel	2::inwork 3741,12607 3654,12672
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: add_fragezeichen: wann wird die Unterführung wieder geöffnet?
-#: last_checked: 2017-03-26
-#: check_frequency: 60d
-userdel	2::inwork 4778,3352 4815,3382 4822,3431
-',
-         'from' => undef,
-         'id' => 2831,
-         'text' => 'Unterführung Krahmersteg: gesperrt',
-         'type' => 'gesperrt',
-         'until' => undef
-       },
-       {
-         'data' => '#: add_fragezeichen: wann sind die Bauarbeiten beendet?
-#: last_checked: 2017-05-06
-#: check_frequency: 60d
-userdel	q3::inwork 4564,3457 4800,3391 4862,3363 5018,3320
-',
-         'from' => undef,
-         'id' => 2832,
-         'text' => 'Krahmerstr.: Bauarbeiten, einige Engstellen',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -4321,23 +4152,24 @@ userdel	q4::inwork 5059,7216 5064,7160 5081,7112
 ',
          'from' => 1485206028,
          'id' => 2847,
-         'text' => 'Stubenrauchstr.: zwischen Wiesbadener Str. und Rotdornstr. Bauarbeiten, Fahrbahn gesperrt, bis 02.06.2017 ',
+         'text' => 'Stubenrauchstr.: zwischen Wiesbadener Str. und Rotdornstr. Bauarbeiten, Fahrbahn gesperrt, bis 30. Juni 2017',
          'type' => 'handicap',
-         'until' => 1496440800
+         'until' => 1498816800
        },
        undef,
        undef,
        undef,
        {
-         'data' => '#: source_id: LMS-BR_r_LMS-BR_121
+         'data' => '#: next_check_id: KANTSTR-2017
+#: source_id: LMS-BR_r_LMS-BR_121
 userdel	q4::inwork; 5488,10978 5613,10963 5652,11004
 ',
          'from' => 1488236400,
          'id' => 2851,
          'source_id' => '2147341048',
-         'text' => 'Kantstr.: Richtung Budapester Str. ab Joachimsthaler Str. gesperrt, voraussichtlich bis 16. Juni 2017',
+         'text' => 'Kantstr.: Richtung Budapester Str. ab Joachimsthaler Str. gesperrt, voraussichtlich bis 14. Juli 2017',
          'type' => 'handicap',
-         'until' => 1497628800
+         'until' => 1500048000
        },
        undef,
        {
@@ -4354,25 +4186,23 @@ userdel	q4::inwork; 5583,5179 5527,5217 5416,5289 5397,5302 5382,5312
          'until' => 1502812800
        },
        undef,
+       undef,
        {
-         'data' => 'userdel	q4::inwork 1458,24561 1410,24562 1330,24553 1250,24533 1156,24494
-',
-         'from' => 1494194400,
-         'id' => 2855,
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.580104.php',
-         'text' => 'Karmeliterweg: Bauarbeiten zwischen Olwenstr. und Donnersmarckallee, voraussichtlich vom 09.05.2017 bis zum 26.05.2017',
-         'type' => 'handicap',
-         'until' => 1495836000
-       },
-       {
-         'data' => 'userdel	q3::inwork 13384,8354 13217,8493
-userdel	q3::inwork; 13217,8493 13262,8554 13301,8606
+         'data' => '#: XXX wann sind die Bauarbeiten beendet? laut Schild der Wasserbetriebe bis September oder Oktober
+#: last_checked: 2017-06-14 vvv
+#: next_check: 2017-08-14 vvv
+	q3::inwork 13384,8354 13217,8493
+# REMOVED userdel	q3::inwork; 13217,8493 13262,8554
+	q3::inwork; 13262,8554 13301,8606 13314,8624
+	q4::inwork 13366,8694 13314,8624
+#: next_check ^^^
+#: last_checked ^^^
 ',
          'from' => 1491498639,
          'id' => 2856,
-         'text' => 'Innstr.: Bauarbeiten, Einbahnstraßenregelung, außerdem Sperrung an der Kreuzung Weserstr., bis Juni 2017',
+         'text' => 'Innstr.: Bauarbeiten, Einbahnstraßenregelung, außerdem Sperrung an der Kreuzung Weserstr.',
          'type' => 'handicap',
-         'until' => 1496268000
+         'until' => undef
        },
        {
          'data' => '#: source_id: LMS-BR_r_LMS-BR_93359
@@ -4381,9 +4211,9 @@ userdel	q3::inwork; 14060,17221 14099,17195 14136,17170 14235,17103 14341,17030 
          'from' => undef,
          'id' => 2857,
          'source_id' => '2147341139',
-         'text' => 'Rennbahnstr.: ab Hunsrückstr. bis Berliner Allee Bauarbeiten, Fahrtrichtung gesperrt ',
+         'text' => 'Rennbahnstr.: ab Hunsrückstr. bis Berliner Allee Bauarbeiten, Fahrtrichtung gesperrt, bis 23. Juni 2017',
          'type' => 'handicap',
-         'until' => 1495641600
+         'until' => 1498212000
        },
        {
          'data' => 'userdel	q4::inwork 18009,18946 17900,18972 17890,18973 17799,19000 17697,18989 17600,18994
@@ -4397,7 +4227,7 @@ userdel	q3::inwork; 14060,17221 14099,17195 14136,17170 14235,17103 14341,17030 
        },
        undef,
        {
-         'data' => '#: last_checked: 2017-05-19
+         'data' => '#: last_checked: 2017-06-06
 #: check_frequency: 14d
 userdel	q4::inwork; 7201,8870 7107,9030
 ',
@@ -4420,7 +4250,7 @@ userdel	q4::inwork; 7201,8870 7107,9030
        undef,
        {
          'data' => '#: XXX bis wann gehen die Bauarbeiten?
-#: last_checked: 2017-05-17
+#: last_checked: 2017-06-04
 userdel	q3::inwork; 8752,12647 8870,12647
 ',
          'from' => undef,
@@ -4430,39 +4260,39 @@ userdel	q3::inwork; 8752,12647 8870,12647
          'until' => undef
        },
        {
-         'data' => 'userdel	q3::inwork 10264,13097 10310,13227 10317,13248
+         'data' => 'userdel	q4::inwork; 10350,13376 10313,13493
 ',
          'from' => 1494442386,
          'id' => 2864,
          'source_id' => '2147341279',
-         'text' => 'Rosenthaler Str.: Straßenbauarbeiten in Höhe Neue Schönhauser Str.. Fahrbahn gesperrt, bis 31. Mai 2017',
+         'text' => 'Rosenthaler Str.: Straßenbauarbeiten in Höhe Neue Schönhauser Str.. Fahrbahn gesperrt, bis 5. Juli 2017',
          'type' => 'handicap',
-         'until' => 1496267999
+         'until' => 1499248800
+       },
+       undef,
+       undef,
+       {
+         'data' => '#: note: laut fritz bis 21.10.2017 08:00 Uhr
+#: by: http://werbegemeinschaft-friedrichshagen.de/wp-content/uploads/2017/05/2017-05_Boelschestr_Anwohnerflyer_web.pdf
+userdel	q4::inwork; 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
+',
+         'from' => 1495918329,
+         'id' => 2867,
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.595041.php',
+         'text' => 'Bölschestr.: Bauarbeiten, Einbahnstraße Richtung Süden, 22.05. bis 21.10.2017',
+         'type' => 'handicap',
+         'until' => 1508565600
        },
        {
-         'data' => 'userdel	2::temp 8522,12187 8538,12245 8600,12165
-userdel	2::temp 8344,12221 8538,12245 8592,12252 8637,12258 8643,12208 8728,12220 8722,12268 8637,12258 8630,12307 8714,12319 8722,12268 8804,12280
-userdel	2::temp 8522,12239 8538,12245 8546,12279
+         'data' => '#: XXX wann sind die Bauarbeiten beendet?
+#: last_checked: 2017-06-11
+userdel	2::inwork 21685,916 21708,937 21857,989 21977,988
 ',
-         'from' => 1495473890,
-         'id' => 2865,
-         'text' => 'Brandenburger Tor: vermutlich Sperrungen zum Kirchentag, 24. Mai 2017 bis 27. Mai 2017',
+         'from' => undef,
+         'id' => 2868,
+         'text' => 'Am Wiesenweg: Bauarbeiten, Weg komplett gesperrt (auch für Fußgänger), Ende unbekannt',
          'type' => 'gesperrt',
-         'until' => 1495922399
-       },
-       {
-         'data' => 'userdel	2::temp 9536,11922 9666,11935 9656,12031 9523,12019
-userdel auto	3 9645,12133 9656,12031 9913,12068
-userdel auto	3 9820,11951 9666,11935 9679,11834
-userdel auto	3 9679,11834 9666,11935 9820,11951
-userdel auto	3 9913,12068 9656,12031 9645,12133
-	2::temp 9523,12019 9536,11922
-',
-         'from' => 1495473982,
-         'id' => 2866,
-         'text' => 'Gendarmenmarkt: vermutlich Sperrungen zum Kirchentag, 24. Mai 2017',
-         'type' => 'gesperrt',
-         'until' => 1495663199
+         'until' => undef
        }
      
 );

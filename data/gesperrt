@@ -363,8 +363,8 @@ Heiligental	1 5803,19874 5858,19761 5897,19668 5929,19574
 Kuhligkshofstr.	1 4821,5345 4869,5386 4911,5428
 Bänschstr.	1 14591,12555 14319,12629
 Bänschstr.	1 14325,12648 14596,12573
-Bänschstr.	1 15009,12441 14798,12502 14681,12534 14661,12523 14588,12542
-Bänschstr.	1 14599,12584 14672,12565 14686,12549 14801,12517 14999,12462
+Bänschstr.	1 15005,12443 14798,12502 14681,12534 14661,12523 14588,12542
+Bänschstr.	1 14599,12584 14672,12565 14686,12549 14801,12517 14996,12462
 Rossitter Platz - Machandelweg: verschlossene Türen	2 -107,12220 -76,12236 -45,12243
 Stockholmer Str.	1 8950,17219 8866,17075
 Schulenburgstr. (Reinickendorf)	1 5345,18675 5547,18665
@@ -1463,10 +1463,10 @@ Andersenstr. -> Bornholmer Str.: Straßenbahntrasse	3::igndisp 10295,16667 10282,
 Straßenbahntrasse	3nocross::ignrte 10525,12789 10695,12933 10733,12967
 Karl-Liebknecht-Str. -> Rosa-Luxemburg-Str.: Straßenbahntrasse	3::igndisp 10525,12789 10695,12933 10685,12966
 Rosa-Luxemburg-Str. -> Karl-Liebknecht-Str.: Straßenbahntrasse	3::igndisp 10685,12966 10695,12933 10733,12967
-Mittelstreifen	3nocross::ignrte 6502,9782 6447,9661 6445,9538
-Martin-Luther-Str. -> Traunsteiner Str.: Mittelstreifen	3::igndisp 6502,9782 6447,9661 6553,9600
+Mittelstreifen	3nocross::ignrte 6492,9782 6447,9661 6445,9538
+Martin-Luther-Str. -> Traunsteiner Str.: Mittelstreifen	3::igndisp 6492,9782 6447,9661 6553,9600
 Martin-Luther-Str. -> Speyerer Str.: Mittelstreifen	3::igndisp 6445,9538 6447,9661 6348,9535
-Speyerer Str. -> Martin-Luther-Str.: Mittelstreifen	3::igndisp 6348,9535 6447,9661 6502,9782
+Speyerer Str. -> Martin-Luther-Str.: Mittelstreifen	3::igndisp 6348,9535 6447,9661 6492,9782
 Speyerer Str. -> Traunsteiner Str.: Mittelstreifen	3::igndisp 6348,9535 6447,9661 6553,9600
 Traunsteiner Str. -> Martin-Luther-Str.: Mittelstreifen	3::igndisp 6553,9600 6447,9661 6445,9538
 Traunsteiner Str. -> Speyerer Str.: Mittelstreifen	3::igndisp 6553,9600 6447,9661 6348,9535
@@ -1590,11 +1590,13 @@ Robert-Uhrig-Str. -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::i
 Robert-Uhrig-Str. -> Fußgängerbrücke: nicht passierbarer Mittelstreifen	3::igndisp 17744,11703 17746,11748 17746,11767
 Fußgängerbrücke -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 17746,11767 17746,11748 17963,11723
 Fußgängerbrücke -> Robert-Uhrig-Str.: nicht passierbarer Mittelstreifen	3::igndisp 17746,11767 17746,11748 17744,11703
-nicht passierbarer Mittelstreifen	3nocross::ignrte 18626,11742 18853,11780 19004,11780 19389,11761 19661,11746 19726,11743 19907,11734 19985,11727 20114,11719 20161,11715 20375,11694
+nicht passierbarer Mittelstreifen	3nocross::ignrte 18626,11742 18853,11780 19004,11780 19092,11776 19389,11761 19661,11746 19726,11743 19907,11734 19985,11727 20114,11719 20161,11715 20375,11694
 Gensinger Str. -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 18934,11796 18853,11780 19004,11780
-Alt-Friedrichsfelde -> Gensinger Str.: nicht passierbarer Mittelstreifen	3::igndisp 19389,11761 19004,11780 19005,11767
+Alt-Friedrichsfelde -> Gensinger Str.: nicht passierbarer Mittelstreifen	3::igndisp 19092,11776 19004,11780 19005,11767
 Gensinger Str. -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 19005,11767 19004,11780 18853,11780
-Alt-Friedrichsfelde -> Gensinger Str.: nicht passierbarer Mittelstreifen	3::igndisp 19004,11780 19389,11761 19138,11815
+Alt-Friedrichsfelde -> Gensinger Str.: nicht passierbarer Mittelstreifen	3::igndisp 19389,11761 19092,11776 19110,11705
+Gensinger Str. -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 19110,11705 19092,11776 19004,11780
+Alt-Friedrichsfelde -> Gensinger Str.: nicht passierbarer Mittelstreifen	3::igndisp 19092,11776 19389,11761 19138,11815
 Alt-Friedrichsfelde -> Waldbacher Weg: nicht passierbarer Mittelstreifen	3::igndisp 19389,11761 19661,11746 19631,11899
 Waldbacher Weg -> Alt-Friedrichsfelde: nicht passierbarer Mittelstreifen	3::igndisp 19631,11899 19661,11746 19726,11743
 Alt-Friedrichsfelde -> Weißenhöher Str.: nicht passierbarer Mittelstreifen	3::igndisp 19907,11734 19726,11743 19735,11721
@@ -2188,6 +2190,8 @@ abgeschlossenes Tor	3 4898,22459 5083,22149 5086,22145
 abgeschlossenes Tor	3 5086,22145 5083,22149 4898,22459
 abgeschlossenes Tor	3 15313,15393 15835,15092 15867,15073
 abgeschlossenes Tor	3 15867,15073 15835,15092 15313,15393
+Tor	BNP:3:-8:trailer=10 20829,5418
+Schranke	BNP:3:-7:trailer=10 20849,5266
 tragen (20 Stufen)	0:30:-90 22624,13901
 tragen (8 weite Stufen) bzw. Naturrampe benutzen	0:15:-175 -6004,15050
 tragen	0:30:-162 -3138,14171
@@ -2230,6 +2234,7 @@ tragen (viele weite Stufen)	0:60:49 -735,4407
 tragen (20 Stufen)	0:30:-255 13644,21808
 tragen (17 Stufen)	0:30:-247 13617,21819
 tragen (3 x 3 Stufen) oder steile Rampen benutzen	0:15:-129 21979,274
+tragen (7 Stufen) bzw. Rampe zum Schieben benutzen	0:12:-184 12380,13120
 tragen (9 Stufen)	0:12:-100 21963,261
 tragen (5 Stufen)	0:10:-229 19132,7769
 tragen (9 Stufen)	0:12:-84 9816,10119
@@ -2369,7 +2374,7 @@ tragen (41 Stufen)	0:45:-226 9983,16561
 tragen (Treppe)	0:45:38 9982,16527
 tragen (Treppe, 6+7 Stufen)	0:30:-69 3762,12599
 tragen (Treppe, 3 Stufen)	0:10:-91 3810,12600
-tragen (Treppe)	0:30:87 4334,12551
+tragen (Treppe, 18 Stufen)	0:30:-265 4321,12566
 tragen (Jungfernbrücke, 10 Stufen)	0:15:53 10212,12002
 tragen (Jungfernbrücke, 4 Stufen)	0:10:53 10223,12010
 tragen (Treppe, 26 Stufen)	0:30:-248 10591,12203
@@ -2413,6 +2418,9 @@ tragen (31 Stufen oder Kinderwagenrampe)	0:40:-256 13168,21706
 tragen (6 Stufen)	0:15:-90 4608,63927
 Treppe	0:40:-131 1888,42795
 tragen (mehrere Treppen mit insgesamt 45 Stufen und Kinderwagenrampe)	0:90:-44 3514,24652
+tragen (Treppe, 18 Stufen)	0:25:-66 25902,-6006
+tragen (Treppe, 19 Stufen)	0:25:-194 25928,-5990
+Drängelgitter	BNP:3:-2:trailer=10 22237,6211
 weites Drängelgitter	BNP:2:33:trailer=7 5628,23977
 weites Drängelgitter	BNP:2:-264:trailer=7 5867,24056
 weites Drängelgitter	BNP:1:0:trailer=3 15289,10092
@@ -2453,7 +2461,6 @@ Barriere	BNP:5:-254:trailer=10 7422,10368
 Drängelgitter	BNP:3:-145:trailer=10 5029,19945
 Drängelgitter	BNP:3:-174:trailer=10 -12262,-393
 Drängelgitter	BNP:3:32:trailer=10 -4139,1976
-enges Drängelgitter	BNP:5:0:trailer=no 17295,7323
 Drängelgitter	BNP:2:90:trailer=5 -6287,13472
 Drängelgitter	BNP:2:66:trailer=5 -6265,13475
 Schranke, eventuell auf Gehweg umfahren	BNP:3:-131:trailer=5 -1291,12098
@@ -2577,8 +2584,6 @@ hohes Drängelgitter	BNP:3:31:trailer=10 12782,20191
 Drängelgitter	BNP:3:-24:trailer=10 6928,23021
 Drängelgitter	BNP:3:-221:trailer=10 6509,23198
 enges Drängelgitter, kann umfahren werden	BNP:3:-214:trailer=10 6278,22615
-Schranke	BNP:3:-22:trailer=10 19735,11721
-Schranke	BNP:3:-30:trailer=10 19879,11595
 Drängelgitter	BNP:3:-220:trailer=10 5394,23172
 Drängelgitter	BNP:3:-93:trailer=10 3816,22602
 Drängelgitter	BNP:3:-68:trailer=10 3869,22581
@@ -2788,7 +2793,7 @@ Schranke	BNP:3:40:trailer=10 10114,11789
 Schranke	BNP:3:89:trailer=6 9698,10348
 Drängelgitter	BNP:3:-12:trailer=6 12682,7514
 Barriere	BNP:5:0 17301,7645
-Drängelgitter	BNP:3:-70:trailer=10 24398,4842
+Drängelgitter	BNP:3:-70:trailer=10 24378,4847
 Drängelgitter	BNP:5:-96 11995,19759
 Drängelgitter	BNP:3:-257:trailer=6 9884,10192
 Barriere	BNP:5:-247:trailer=10 12316,9477
@@ -2849,11 +2854,15 @@ versetzte Schranke, manchmal offen	BNP:1:-171:trailer=3 24625,20855
 Drängelgitter	BNP:3:-240 31665,48997
 Schranke	BNP:3:-59:trailer=10 8041,-3322
 Schranke	BNP:3:-64:trailer=10 6876,-2731
+Schranke	BNP:3:-78:trailer=10 17215,12485
+Bauarbeiten, Überqueren des Mittelstreifens nicht möglich	3nocross::ignrte 10122,10294 10363,10303 10605,10312
+Gitschiner Str. -> Lobeckstr.: Bauarbeiten, Überqueren des Mittelstreifens nicht möglich	3::igndisp 10122,10294 10363,10303 10433,10456
+Lobeckstr. -> Gitschiner Str.: Bauarbeiten, Überqueren des Mittelstreifens nicht möglich	3::igndisp 10433,10456 10363,10303 10605,10312
 Traudelstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19169,1249 19143,1147
 Schinkelplatz: Einbahnstraße	1s 9994,12368 10002,12305 10008,12274 10010,12259 10029,12208
 Limburger Str.: Bauarbeiten am Rathaus Wedding, komplett gesperrt	2::inwork 7129,15717 7012,15571
 Karower Str.: temporäre Einbahnstraßenregelung	1s 16593,25640 16632,25512 16669,25373
-Mauerweg: Bauarbeiten, gesperrt	2::inwork 7926,14439 7939,14447 7889,14519
+Mauerweg: Bauarbeiten, gesperrt	2::inwork 7939,14447 7889,14519
 Voltairestr.: Baustelle, Fahrtrichtung gesperrt	1s 11329,12497 11209,12430
 Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtung gesperrt	1s 5192,10234 5196,10398
 DB-Werkstraße: Zufahrt zur DB-Werkstraße ist wegen Bauarbeiten gesperrt	2::inwork 14043,10928 14107,10911
@@ -2864,7 +2873,6 @@ Mengerzeile: Baustelle, Einbahnstraßenregelung	1s 13176,9302 13100,9210
 Heidelberger Str.: Baustelle, Einbahnstraßenregelung	1s 13489,9199 13420,9259 13357,9313
 Chausseestr.: Baustelle, Einbahnstraßenregelung	1s 8732,14098 8654,14194
 Chausseestr.: Baustelle, Einbahnstraßenregelung	1s 8654,14194 8607,14253 8527,14352 8442,14456
-(Unterführung S-Bhf. Rummelsburg): Bauarbeiten, komplett gesperrt	2::inwork 15433,10765 15409,10709 15372,10655
 Nöldnerstr.: Bauarbeiten, Einbahnstraße	1s 15272,10790 15388,10758 15433,10765
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s 9042,11839 8969,11814
 Nordhafenpark West: während der Umgestaltung gesperrt	2::inwork 7636,14414 7612,14449 7561,14458 7426,14539 7368,14573
@@ -2876,8 +2884,6 @@ Am Nordhafen: Bauarbeiten, Straße wird zurückgebaut	2::inwork 7741,14560 7518,14
 E.T.A.-Hoffmann-Promenade: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 9679,10710 9777,10719
 Fünf Morgen: Bauarbeiten, gesperrt	2::inwork 1437,5015 1486,5175
 Gartenstr.: Baustelle	2::inwork 21189,11326 21217,11328
-Ziegelstr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 9736,13061 9636,13076
-Schwarzer Weg: wegen Straßenbau gesperrt	2::inwork 17295,7323 17295,7330 17295,7344 17296,7401
 Nalepastr.: wegen Straßenbau gesperrt	2::inwork 17190,7306 17211,7280 17219,7268 17286,7173
 Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14439,8050 14471,8046
 Gerickesteg: wegen Bauarbeiten gesperrt	2::inwork 6694,12627 6702,12633 6748,12669 6765,12680
@@ -3255,7 +3261,7 @@ nicht passierbarer Mittelstreifen	3nocross::ignrte 11950,18529 11984,18771 12003
 Mittelstreifen, Bordsteine	3nocross::ignrte 11849,17655 11872,17522 11893,17397
 Mittelstreifen	3nocross::ignrte 11849,17655 11839,17738 11884,18063
 Hindenburgdamm	1 4454,3260 4467,3332 4523,3482 4546,3527 4585,3575
-Hindenburgdamm	1 4585,3575 4580,3514 4564,3457 4514,3329 4454,3260
+Hindenburgdamm	1 4585,3575 4580,3514 4566,3461 4514,3329 4454,3260
 tragen (insgesamt 16 Stufen, auf vier Gruppen verteilt)	0:40:-256 14581,16529
 Blumenweg	1 -9445,-2389 -9343,-2087
 Golliner Str.	1 22217,17989 22276,18107 22191,18150
