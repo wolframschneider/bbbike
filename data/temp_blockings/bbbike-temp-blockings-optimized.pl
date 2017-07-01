@@ -1744,29 +1744,7 @@ userdel	2::temp -8087,-1453 -8151,-1470 -8306,-1454
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: https://www.berlin.de/ba-treptow-koepenick/aktuelles/veranstaltungen/koepenicker-sommer-323856.php
-userdel	2::temp 22111,4562 22093,4499 22076,4422
-userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22153,4840 22196,4847 22198,4800 22175,4730 22144,4660 22138,4642 22111,4562
-userdel	2::temp 22138,4642 22074,4664
-# REMOVED --- userdel	2::temp 22111,4562 22162,4546 22214,4548 22324,4586 22314,4604 22355,4660 22365,4676 22395,4678
-',
-         'from' => 1497477600,
-         'id' => 1702,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              6
-                            ]
-                          ],
-         'text' => 'Köpenicker Sommer: Veranstaltung, folgende Straßen sind gesperrt: Alt-Köpenick, Schlossplatz, Schlossinsel und Luisenhain (16.06.2017 - 18.06.2017)',
-         'type' => 'gesperrt',
-         'until' => 1497823199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2831,17 +2809,7 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: laut vmz bis 18.6. nachts, go with fritz
-userdel	2::temp 8070,12409 8017,12359 7875,12363 7821,12367 7627,12380 7514,12387 7437,12368
-',
-         'from' => 1497465143,
-         'id' => 2231,
-         'source_id' => 'LMS-BR_r_LMS-BR_99873_LMS-BR_72',
-         'text' => 'John-Foster-Dulles-Allee: Sportveranstaltung, Fahrbahn gesperrt, bis 17.06.2017 09:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1497682800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3272,29 +3240,7 @@ userdel	2::temp 14161,11930 14285,12190
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.die-classic-days-berlin.de/programm-2/
-#: note: kann im Juni oder Juli stattfinden
-#: tempex: 20170616T0400-20170619T0400
-userdel	q4::temp 5475,10808 5341,10756 5215,10711 5076,10658 4847,10589 4676,10541 4503,10497 4371,10465 4245,10435
-',
-         'from' => 1497492000,
-         'id' => 2439,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              2,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => 'IM_025248',
-         'text' => 'Classic Days Berlin, Kurfürstendamm zwischen Olivaer Platz und Joachimsthaler Straße, Straße eventuell nicht befahrbar, vom 16.06.2017 bis 19.06.2017 früh',
-         'type' => 'handicap',
-         'until' => 1497837600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3558,16 +3504,14 @@ userdel	2::inwork -12583,-1552 -12485,-1482
        undef,
        undef,
        {
-         'data' => '#: by: fritz
-#: note: laut vmz "Gesamtbaumaßnahme" bis Mitte Juli 2017
-userdel	q4::inwork; 15080,11905 15121,11899 15248,11880
+         'data' => 'userdel	q4::inwork; 15080,11905 14965,11921
 ',
          'from' => 1496642400,
          'id' => 2550,
          'source_id' => '2147341388',
-         'text' => 'Scharnweberstr.: Baustelle, Fahrbahn zwischen Jessnerstr. und Gürtelstr. gesperrt, ab 06.06.2017 bis 25.06.2017',
+         'text' => 'Scharnweberstr.: Baustelle, Fahrbahn zwischen Jessnerstr. und Müggelstr. gesperrt, bis 3. Juli 2017',
          'type' => 'handicap',
-         'until' => 1498384800
+         'until' => 1499076000
        },
        undef,
        undef,
@@ -4077,7 +4021,7 @@ userdel	q4::inwork 12911,1815 12817,2031
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-06-11 vvv
+#: last_checked: 2017-06-17 vvv
 #: check_frequency: 21d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -4152,9 +4096,9 @@ userdel	q4::inwork 5059,7216 5064,7160 5081,7112
 ',
          'from' => 1485206028,
          'id' => 2847,
-         'text' => 'Stubenrauchstr.: zwischen Wiesbadener Str. und Rotdornstr. Bauarbeiten, Fahrbahn gesperrt, bis 30. Juni 2017',
+         'text' => 'Stubenrauchstr.: zwischen Wiesbadener Str. und Rotdornstr. Bauarbeiten, Fahrbahn gesperrt, bis 31. Juli 2017',
          'type' => 'handicap',
-         'until' => 1498816800
+         'until' => 1501495200
        },
        undef,
        undef,
@@ -4211,9 +4155,9 @@ userdel	q3::inwork; 14060,17221 14099,17195 14136,17170 14235,17103 14341,17030 
          'from' => undef,
          'id' => 2857,
          'source_id' => '2147341139',
-         'text' => 'Rennbahnstr.: ab Hunsrückstr. bis Berliner Allee Bauarbeiten, Fahrtrichtung gesperrt, bis 23. Juni 2017',
+         'text' => 'Rennbahnstr.: ab Hunsrückstr. bis Berliner Allee Bauarbeiten, Fahrtrichtung gesperrt, bis 14. Juli 2017',
          'type' => 'handicap',
-         'until' => 1498212000
+         'until' => 1500026400
        },
        {
          'data' => 'userdel	q4::inwork 18009,18946 17900,18972 17890,18973 17799,19000 17697,18989 17600,18994
@@ -4227,7 +4171,7 @@ userdel	q3::inwork; 14060,17221 14099,17195 14136,17170 14235,17103 14341,17030 
        },
        undef,
        {
-         'data' => '#: last_checked: 2017-06-06
+         'data' => '#: last_checked: 2017-06-17
 #: check_frequency: 14d
 userdel	q4::inwork; 7201,8870 7107,9030
 ',
@@ -4250,7 +4194,7 @@ userdel	q4::inwork; 7201,8870 7107,9030
        undef,
        {
          'data' => '#: XXX bis wann gehen die Bauarbeiten?
-#: last_checked: 2017-06-04
+#: last_checked: 2017-06-19
 userdel	q3::inwork; 8752,12647 8870,12647
 ',
          'from' => undef,
@@ -4293,6 +4237,105 @@ userdel	2::inwork 21685,916 21708,937 21857,989 21977,988
          'text' => 'Am Wiesenweg: Bauarbeiten, Weg komplett gesperrt (auch für Fußgänger), Ende unbekannt',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => 'userdel	2::inwork 11980,24276 11959,24220
+',
+         'from' => 1497556689,
+         'id' => 2869,
+         'source_id' => '2147341179',
+         'text' => 'Schönerlinder Str.: Autobahnbrücke gesperrt, unklar, ob Radfahrer und Fußgänger trotzdem passieren können, bis 31.08.2017',
+         'type' => 'gesperrt',
+         'until' => 1504216800
+       },
+       {
+         'data' => '#: XXX Baumaßnahme ist Ende 2018 fertig; Vollsperrung nur für 2-3 Wochen
+#: XXX wird es vielleicht Änderungen bei der Wegbeschaffenheit geben?
+#: next_check: 2017-09-01
+userdel	2::inwork 6815,8691 6912,8617
+',
+         'from' => 1498214515,
+         'id' => 2870,
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2017/pressemitteilung.604116.php',
+         'text' => 'Heinrich-Lassen-Park: Bauarbeiten, temporäre Vollsperrung möglich',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: last_checked: 2017-06-30
+#: check_frequency: 7d
+userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
+',
+         'from' => undef,
+         'id' => 2871,
+         'text' => 'DB-Werkstraße (Markgrafendamm): wegen Bauarbeiten kann die Fahrbahn gesperrt sein',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => 'userdel	2::temp 8044,12989 8110,13042 8116,12938 8053,12871 8032,12889
+userdel	2::temp 8277,13032 8317,13015 8401,12973 8464,12919 8480,12909 8503,12895 8424,12853 8309,12758 8206,12757 8120,12756 8030,12824 8124,12840
+userdel	2::temp 8168,12945 8235,12945 8304,12938 8370,12902
+userdel	2::temp 8116,12938 8124,12840 8120,12756 8122,12603 8119,12414
+userdel	2::temp 8464,12919 8498,12870
+userdel	2::temp 8306,12609 8348,12609 8399,12610 8485,12612 8554,12593
+userdel	2::temp 8160,13053 8159,13042 8159,13032 8044,12989 7966,12913
+userdel	2::temp 8072,12902 8046,12870
+userdel	2::temp 8168,12848 8204,12816 8206,12757 8207,12606 8306,12609 8309,12758
+userdel	2::temp 8036,12855 8021,12832 7930,12912
+userdel	2::temp 8207,12606 8122,12603 7945,12592 7875,12363
+userdel	2::temp 8348,12609 8354,12416
+userdel	2::temp 7945,12592 7851,12590 7741,12586 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8445,12755 8415,12749 8309,12758 8304,12938
+',
+         'from' => 1499148000,
+         'id' => 2872,
+         'source_id' => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
+         'text' => 'Straßen rund um das Bundeskanzleramt: wegen eines Staatsbesuchs Sperrungen möglich, 5. Juli 2017 von 8 Uhr bis 15 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1499259600
+       },
+       {
+         'data' => 'userdel	2::temp 7215,12295 7039,12314 7053,12364 7064,12419 7086,12572
+userdel	2::temp 6754,12108 6725,12113 6690,12104 6656,12075 6642,12010 6685,11954 6744,11936 6809,11979 6828,12031 6787,12099 7039,12314 7383,12095
+userdel	2::temp 6694,12627 7039,12314
+	3 7139,12376 7064,12419 6808,12604
+	3 6808,12604 7064,12419 7139,12376
+',
+         'from' => 1499148000,
+         'id' => 2873,
+         'source_id' => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
+         'text' => 'Straßen am Schloss Bellevue: wegen eines Staatsbesuchs Sperrungen möglich, 5. Juli 2017 von 08:00 bis 23:00',
+         'type' => 'gesperrt',
+         'until' => 1499288400
+       },
+       {
+         'data' => 'userdel	2::temp 6476,11325 6630,11247 6606,11222 6582,11202 6447,11144
+userdel	2::temp 6841,11114 6630,11247 6679,11319 6692,11365 6716,11439 6825,11486
+userdel	2::temp 5986,10976 6058,10988 6145,10975 6168,11042 6447,11144 6452,11118 6477,11045
+userdel	2::temp 6626,11178 6582,11202 6495,11251 6350,11301 6346,11326 6337,11365 6200,11417
+	3 6851,11346 6692,11365 6481,11400
+	3 6481,11400 6692,11365 6851,11346
+	3 6272,10926 6145,10975 6122,10925
+	3 6122,10925 6145,10975 6272,10926
+',
+         'from' => 1499090400,
+         'id' => 2874,
+         'source_id' => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
+         'text' => 'Budapester Str. und Umgebung: wegen eines Staatsbesuchs Sperrungen möglich, vom 4. Juli 2017 16:00 Uhr bis 6. Juli 2017 10:00 Uhr ',
+         'type' => 'gesperrt',
+         'until' => 1499328000
+       },
+       {
+         'data' => 'userdel	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
+userdel	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
+userdel	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,11188 7218,11181 7140,11156
+',
+         'from' => 1500458400,
+         'id' => 2875,
+         'source_id' => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
+         'text' => 'Straßen rund um das Verteidigungsministerium: Straßensperrungen wegen einer Veranstaltung möglich, 20. Juli 2017 von 12:00 bis 21:00 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1500577200
        }
      
 );

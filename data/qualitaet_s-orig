@@ -21,7 +21,7 @@ Dieselstr., Umfahrung: unbefestigt	Q2 14429,8074 14471,8046
 #: next_check_id ^^^
 # 
 #: next_check_id: SONNENALLEE-2014
-#: last_checked: 2017-06-08
+#: last_checked: 2017-06-22
 Sonnenallee: unebener, provisorischer Asphalt auf dem Radweg	Q2+ 14174,7505 14334,7395 14369,7376 14519,7301
 # 
 #: temporary ^^^
@@ -409,7 +409,7 @@ Kiehlufer: Asphalt	Q0 13311,8813 13225,8880
 Kiehlufer: Kopfsteinpflaster	Q2- 13225,8880 13078,8992 12950,9132 12897,9365
 Spreewaldplatz: Kopfsteinpflaster, OK	Q1 12243,10274 12292,10374 12274,10436
 Spreewaldplatz: Kopfsteinpflaster, OK	Q1 12341,10218 12292,10374
-Am Nordhafen: Kopfsteinpflaster	Q2 7741,14560 7518,14689
+# REMOVED --- Am Nordhafen: Kopfsteinpflaster	Q2 7733,14570
 Schubertstr.: Asphalt	Q0 21807,6535 21825,6440 21856,6390 21984,6317
 #: by: http://www.berlin.de/ba-treptow-koepenick/presse/archiv/20061128.1350.51122.html
 Pablo-Neruda-Str: asphaltiert	Q0 22965,4124 23435,4179
@@ -964,7 +964,7 @@ Wuhlewanderweg: guter Asphalt	Q0 22030,6600 22097,6414 22146,6338 22214,6271 222
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4258
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/4508103656581769/56581769/00081671/71-Anlagen/06/B0159ZB3.pdf (Planung 2016)
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2016/pressemitteilung.494722.php
-#: last_checked: 2017-05-28 vvv
+#: last_checked: 2017-06-21 vvv
 #: check_frequency: 60d vvv
 #: osm_watch: way id="317233618" version="3"
 Wuhlewanderweg: guter Verbundsteinbelag	Q0 22246,6133 22204,6016 22162,5919 22122,5884 22084,5877
@@ -1870,7 +1870,7 @@ Nalepastr.: fester enger Sandweg	Q2 17043,7512 17047,7619
 Nalepastr.: Beton, Eisenbahnschienen	Q1+ 17043,7512 17135,7377 17190,7306 17211,7280 17219,7268
 Nalepastr.: sehr guter Asphalt	Q0 17219,7268 17286,7173 17352,7051 17459,6854 17514,6754 17555,6680 17614,6571
 Ernst-Grube-Str.: Asphalt	Q0 21364,5430 21363,5336 21362,5289 21345,5157 21343,5140 21324,4986
-Ernst-Grube-Str.: Kopfsteinpflaster	Q2 21324,4986 21306,4876 21300,4837 21264,4809 21332,4655
+Ernst-Grube-Str.: Kopfsteinpflaster	Q2 21324,4986 21306,4876 21300,4837 21264,4809 21287,4757 21332,4655
 Eiselenweg: Asphalt	Q0 21206,5420 21364,5430 21447,5414
 Ahornallee: asphaltiert	Q0 21324,4986 21375,4974 21454,4928 21509,4900
 Ahornallee: Kopfsteinpflaster	Q2 21509,4900 21607,4850 21684,4814
@@ -1883,7 +1883,8 @@ Gartenstr.: Asphalt	Q0 22456,3889 22281,4033 22263,4120 22279,4220
 Kietz: m‰ﬂiges Kopfsteinpflaster	Q2 22279,4220 22292,4279 22312,4329 22334,4383 22339,4396 22364,4429 22383,4470
 Gartenstr.: Kopfsteinpflaster	Q2 22279,4220 22302,4255
 Gartenstr.: welliges Verbundsteinpflaster	Q1- 22302,4255 22362,4331 22382,4361 22419,4457
-Spitzerstr.: Beton	Q0 22319,4197 22358,4282 22425,4370 22451,4441
+Spitzerstr.: Beton	Q0- 22319,4197 22358,4282 22385,4317
+Spitzerstr.: Asphalt	Q0 22385,4317 22425,4370 22451,4441
 Gr¸nstr.: Kopfsteinpflaster	Q2 22111,4562 22162,4546 22214,4548 22324,4586
 Bˆttcherstr.: Kopfsteinpflaster	Q2 22214,4548 22212,4655
 Rosenstr.: Kopfsteinpflaster	Q2 22144,4660 22212,4655 22284,4653
@@ -1967,7 +1968,7 @@ Eiselenweg - Uferweg: etwas sandig	Q2 21447,5414 21487,5425
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=3240
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036544636457/544636457/00064312/12-Anlagen/10/B1072ZB7.pdf
 #: XXX "Die Herstellung des Uferweges ist zum 31.12.2016 in Planung."
-#: last_checked: 2017-06-09
+#: last_checked: 2017-06-21
 #: check_frequency: 90d
 (Uferweg, Mentzelpark): Schotterweg	Q1- 21487,5425 21512,5404 21600,5221 21696,5053
 (Uferweg, Mentzelpark): Asphalt	Q0 21696,5053 21740,5004 21761,4979
@@ -1996,6 +1997,10 @@ Soldiner Str.: Asphalt	Q0 8677,17154 8866,17075 8904,17059 9082,16982
 Soldiner Str.: m‰ﬂiges Kopfsteinpflaster	Q2 9082,16982 9299,16889 9435,16832 9579,16770 9611,16741
 Gr¸ntaler Str. - Esplanade: Asphalt	Q0 9778,16915 9846,16981 9880,16994 9980,16973 10013,16972
 Kolonie: Gehwegplatten	Q1 10190,16930 10209,16674
+#: XXX Asphaltierung geplant
+#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/planung/artikel.602784.php
+#: last_checked: 2017-06-28
+#: next_check: 2017-09-15
 Erich-Weinert-Str.: Kopfsteinpflaster	Q2 10997,16280 11295,16199 11404,16140 11542,16070
 Fritz-Riedel-Str.: Asphalt	Q0 13385,13992 13449,13892 13519,13785 13635,13605
 Hausburgstr.: Asphalt	Q0 13635,13605 13706,13460 13742,13376
@@ -3751,9 +3756,7 @@ Spinozastr.: Asphalt	Q0 3926,6409 3930,6481 3974,6511 4050,6506
 (Rudolfplatz, Park): wassergebundene Decke	Q1 14026,10869 13896,10851
 (Hoeppnerstr. - Hessenring): Verbundsteinpflaster	Q1 8376,7440 8446,7524 8549,7622
 (Kolonie Z‰hringer Korso): wassergebundene Decke	Q1 8553,7795 8554,7746 8573,7710 8549,7622
-Sauerbruchweg: Asphalt	Q0 8487,13351 8555,13260
-Sauerbruchweg: Gehwegplatten	Q1 8555,13260 8605,13200
-Sauerbruchweg: Asphalt	Q0 8605,13200 8630,13172
+Sauerbruchweg: Asphalt	Q0 8487,13351 8630,13172
 (Verl‰ngerung der Scharnhorststr.): Asphalt	Q0 7938,14423 7926,14439 7877,14504
 (Boyenstr. - Promenade am Schiffahrtskanal): Asphalt	Q0 7877,14504 7804,14445
 Vereinsweg (Charlottenburg): Kleinkopfsteinpflaster	Q1 2828,11731 2855,11752 2907,11755 2934,11747
@@ -6972,6 +6975,9 @@ Karower Chaussee [Siedlungsgebiet]: Beton	Q0- 16352,24455 16456,24384
 Karower Chaussee [Siedlungsgebiet]: Beton	Q0- 16557,24530 16456,24384 16441,24357 16410,24311
 (KGA "Steintal"): Beton	Q0- 16441,24357 16479,24331
 (KGA "Steintal"): unbefestigte Straﬂe	Q2+ 16479,24331 16481,24299 16890,24029 17007,23994 17028,23968 17052,23958
+#: XXX Straﬂe wird umbenannt: Alpenberger Weg
+#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=4549 (Benennungsabsicht)
+#: by: http://www.berlin.de/ba-pankow/politik-und-verwaltung/bezirksverordnetenversammlung/online/___tmp/tmp/45081036750280094/750280094/00146312/12-Anlagen/02/BenennungsabsichtfuerdieNummernstrasseStrasse4.pdf
 Straﬂe 4 (Buch): Asphalt	Q0 17856,25959 18015,25653
 (Ludwigpark): Kopfsteinpflaster, wegen Schranke am besten auf Gehweg ausweichen	Q2 17446,25914 17413,25969
 (Ludwigpark): Asphalt	Q0 17259,26148 17385,25954 17413,25969 17435,25983 17310,26181
@@ -7076,7 +7082,7 @@ Bebelplatz: gepflastert	Q1 9674,12231 9702,12307 9734,12395
 (Park am Gleisdreieck, Eingang Kurf¸rstenstr.): Beton	Q0 8058,10306 8180,10282 8253,10265
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): wassergebundene Decke	Q1 8263,10187 8276,10079
 #: next_check_id: HELLWEG-2014 vvv
-#: last_checked: 2017-06-04 vvv
+#: last_checked: 2017-06-22 vvv
 #: check_frequency: 100d vvv
 #: XXX wird hier noch eine wassergebundene Decke erstellt?
 (Park am Gleisdreieck - Hellweg-Parkplatz/Yorckstr.): unbefestigt	Q2 8276,10079 8289,9988
@@ -7668,6 +7674,9 @@ Schwalbenweg (Altglienicke): Beton	Q1 19773,-837 19754,-786 19724,-703
 Feldstr. (Bohnsdorf): Beton	Q2 20829,-773 21055,-723 21209,-734
 Gehwegplatten	Q0 21844,238 21963,261 21979,274 21991,273 22008,262
 # REMOVED (ich glaube, hier bessert sich nichts...) --- #: XXX wird hier die Qualit‰t noch nachgebessert? --- #: last_checked: 2012-05-06 --- #: next_check: 2013-01-01
+#: XXX wird hier die Qualit‰t verbessert?
+#: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5672
+#: next_check: 2017-09-30
 Unterf¸hrung unter Adlergestell und Bahn: teilweise sehr sandig	Q3 20939,2413 20810,2398
 (Hartriegelstr. - Michael-Br¸ckner-Str.): Verbundsteinpflaster	Q1+ 18695,5076 18622,5049 18514,5028 18425,5032
 (Bersarinplatz - Thaerstr.): unbefestigter Weg	Q1- 13747,12642 13761,12690
@@ -8787,7 +8796,7 @@ Schneeammerweg: unbefestigte Straﬂe	Q2 13329,20299 13420,20236
 (an der Panke - Mauerweg): Asphalt	Q0 7872,14510 7889,14519 7939,14447
 (an der Panke - Mauerweg): Asphalt	Q0 7926,14439 7939,14447 7989,14478 8050,14558 8103,14582 8232,14689
 Uferweg: Asphalt mit Sch‰den	Q2+ 7612,14449 7561,14458 7426,14539 7368,14573
-Uferweg: wassergebundene Decke	Q1 7740,14409 7661,14398 7634,14406 7617,14420 7570,14392
+Uferweg: wassergebundene Decke	Q1 7740,14409 7661,14398 7634,14406 7617,14420 7566,14404
 #: note: dieses kurze St¸ck hat auf der Fahrbahn Kopfsteinpflaster, Radwege weiterhin Verbundsteinpflaster
 Quitzowstr.: Kopfsteinpflaster	Q2 7080,14398 7104,14403
 (Goerdelersteg - Beusselstr.): Beton	Q0 3625,14230 3610,14219 3655,14237
@@ -9866,11 +9875,10 @@ Fellbacher Str.: Kopfsteinpflaster	Q2 3610,23272 3653,23305
 (Cyclopstr. - Blomberger Weg): Verbundsteinpflaster	Q1 5099,21410 5041,21343 4968,21322
 (Weg zum groﬂen Bunkerberg): kleinteiliges Kopfsteinpflaster	Q1- 12307,13329 12355,13366 12391,13416 12386,13452 12305,13514 12232,13523 12197,13488 12196,13453 12235,13383 12274,13372 12327,13394 12344,13424 12307,13491 12254,13495 12232,13477 12246,13440 12278,13418 12287,13443
 Torstr. - Weydingerstr.: Verbundsteinpflaster	Q1+ 11079,13492 11111,13518
-#: XXX Wird die Fahrbahn nochmal ge‰ndert? Wird bei der Erstellung der Straﬂe auch eine Beleuchtung eingebaut (-> nolighting-orig)?
-#: last_checked: 2017-06-13
-#: check_frequency: 14d
-Wilhelmine-Gemberg-Weg: provisorischer Asphalt	Q0 11715,11522 11762,11665
-Wilhelmine-Gemberg-Weg: Feinschotter	Q1 11762,11665 11829,11727
+Wilhelmine-Gemberg-Weg: Steinpflaster	Q0- 11715,11522 11767,11662
+#: XXX Wird die Fahrbahn nochmal ge‰ndert?
+#: last_checked: 2017-06-30
+Wilhelmine-Gemberg-Weg: Feinschotter	Q1 11767,11662 11829,11727
 Alexanderplatz: Pflasterung mit Sch‰den	Q1- 11055,12717 11030,12741 11007,12773 10970,12822
 Alexanderplatz: Pflasterung mit Sch‰den	Q1- 11030,12741 11087,12780
 (Zufahrt Debis-Parkhaus): Asphalt	Q0 8430,10710 8424,10703 8367,10745 8350,10662 8348,10636 8335,10518 8350,10499 8384,10507
@@ -9963,7 +9971,8 @@ Marseillestr.: Asphalt	Q0 12402,21537 12404,21532 12411,21515 12443,21439
 (Heerstr. - Tiefwerder): Schotterweg	Q2+ -3070,11712 -3087,11728 -3179,11763
 Alter Fischerweg: unbefestigte Straﬂe	Q2 29960,5467 30001,5460
 Alter Fischerweg: Kopfsteinpflaster	Q2- 30001,5460 30090,5446
-(Am Nordhafen - Uferweg am Nordhafen): Asphalt	Q0 7741,14560 7696,14577 7662,14579 7653,14570
+(Am Nordhafen - Uferweg am Nordhafen): Asphalt	Q0 7733,14570 7696,14577 7662,14579 7653,14570
+(Nordhafenpark): asphalt‰hnlicher Belag	Q0 7696,14577 7635,14628 7560,14670 7533,14702
 (Uferweg am Nordhafen - Am Nordhafen/Fennstr.): Asphalt	Q0 7605,14600 7589,14627 7549,14664 7514,14686
 Bergstr.: Kleinsteinpflaster	Q1 9118,14306 9135,14317
 Bergstr.: Asphalt	Q0 9135,14317 9182,14281 9272,14208
