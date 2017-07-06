@@ -745,8 +745,8 @@ userdel	2::temp 6719,10347 6729,10212 6739,10120
        undef,
        {
          'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20170325
-	2::temp 7006,9292 7022,9211 7044,9163 7107,9030
-	2::temp 6945,9142 7044,9163
+	2::temp 7001,9291 7012,9222 7035,9161 7107,9030
+	2::temp 6945,9142 7035,9161
 	2::temp 6975,8944 7107,9030 7308,9163
 ',
          'from' => 1506675600,
@@ -2481,7 +2481,7 @@ userdel	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juni von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Juli von 6.00 bis 22.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2591,28 +2591,7 @@ userdel auto	3 6228,10646 6216,10614 6192,10542
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 9248,9350 9309,9347 9489,9309 9505,9306 9632,9280 9689,9266 9753,9252
-userdel auto	3 9487,9209 9505,9306 9524,9426
-userdel auto	3 9524,9426 9505,9306 9487,9209
-',
-         'from' => 1498687200,
-         'id' => 2089,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => 'https://www.berlin.de/events/1934675-2229501-bergmannstrassenfest.html',
-         'text' => 'Bergmannstraße (Kreuzberg): Veranstaltung (Bergmannstraßenfest), Straße vollständig zwischen Mehringdamm und Zossener Str. gesperrt (30. Juni 2017 bis 02. Juli 2016)',
-         'type' => 'gesperrt',
-         'until' => 1499032799
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3214,27 +3193,7 @@ userdel	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: 20170630T2000-20170701T2359
-userdel	2::temp 14161,11930 14285,12190
-',
-         'from' => 1498845600,
-         'id' => 2433,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              3,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => 'https://www.facebook.com/events/1813020918951796/',
-         'text' => 'Fiesta Kreutziga - Straßenfest Kreutziger Straße - Friedrichshain, am 30.06.2017 bis 01.07.2017',
-         'type' => 'gesperrt',
-         'until' => 1498953600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3503,16 +3462,7 @@ userdel	2::inwork -12583,-1552 -12485,-1482
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	q4::inwork; 15080,11905 14965,11921
-',
-         'from' => 1496642400,
-         'id' => 2550,
-         'source_id' => '2147341388',
-         'text' => 'Scharnweberstr.: Baustelle, Fahrbahn zwischen Jessnerstr. und Müggelstr. gesperrt, bis 3. Juli 2017',
-         'type' => 'handicap',
-         'until' => 1499076000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4021,7 +3971,7 @@ userdel	q4::inwork 12911,1815 12817,2031
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-06-17 vvv
+#: last_checked: 2017-07-04 vvv
 #: check_frequency: 21d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -4103,18 +4053,7 @@ userdel	q4::inwork 5059,7216 5064,7160 5081,7112
        undef,
        undef,
        undef,
-       {
-         'data' => '#: next_check_id: KANTSTR-2017
-#: source_id: LMS-BR_r_LMS-BR_121
-userdel	q4::inwork; 5488,10978 5613,10963 5652,11004
-',
-         'from' => 1488236400,
-         'id' => 2851,
-         'source_id' => '2147341048',
-         'text' => 'Kantstr.: Richtung Budapester Str. ab Joachimsthaler Str. gesperrt, voraussichtlich bis 14. Juli 2017',
-         'type' => 'handicap',
-         'until' => 1500048000
-       },
+       undef,
        undef,
        {
          'data' => '#: note: laut vmz nur bis Ende Juli 2017, dann Mitte August 2017
@@ -4171,7 +4110,7 @@ userdel	q3::inwork; 14060,17221 14099,17195 14136,17170 14235,17103 14341,17030 
        },
        undef,
        {
-         'data' => '#: last_checked: 2017-06-17
+         'data' => '#: last_checked: 2017-07-03
 #: check_frequency: 14d
 userdel	q4::inwork; 7201,8870 7107,9030
 ',
@@ -4203,16 +4142,7 @@ userdel	q3::inwork; 8752,12647 8870,12647
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => 'userdel	q4::inwork; 10350,13376 10313,13493
-',
-         'from' => 1494442386,
-         'id' => 2864,
-         'source_id' => '2147341279',
-         'text' => 'Rosenthaler Str.: Straßenbauarbeiten in Höhe Neue Schönhauser Str.. Fahrbahn gesperrt, bis 5. Juli 2017',
-         'type' => 'handicap',
-         'until' => 1499248800
-       },
+       undef,
        undef,
        undef,
        {
@@ -4262,7 +4192,7 @@ userdel	2::inwork 6815,8691 6912,8617
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2017-06-30
+         'data' => '#: last_checked: 2017-07-01
 #: check_frequency: 7d
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 ',
@@ -4272,28 +4202,7 @@ userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => 'userdel	2::temp 8044,12989 8110,13042 8116,12938 8053,12871 8032,12889
-userdel	2::temp 8277,13032 8317,13015 8401,12973 8464,12919 8480,12909 8503,12895 8424,12853 8309,12758 8206,12757 8120,12756 8030,12824 8124,12840
-userdel	2::temp 8168,12945 8235,12945 8304,12938 8370,12902
-userdel	2::temp 8116,12938 8124,12840 8120,12756 8122,12603 8119,12414
-userdel	2::temp 8464,12919 8498,12870
-userdel	2::temp 8306,12609 8348,12609 8399,12610 8485,12612 8554,12593
-userdel	2::temp 8160,13053 8159,13042 8159,13032 8044,12989 7966,12913
-userdel	2::temp 8072,12902 8046,12870
-userdel	2::temp 8168,12848 8204,12816 8206,12757 8207,12606 8306,12609 8309,12758
-userdel	2::temp 8036,12855 8021,12832 7930,12912
-userdel	2::temp 8207,12606 8122,12603 7945,12592 7875,12363
-userdel	2::temp 8348,12609 8354,12416
-userdel	2::temp 7945,12592 7851,12590 7741,12586 7710,12585 7745,12603 7782,12623 7934,12734 8006,12853 8032,12889 8056,12921 8099,12953 8169,12963 8235,12969 8310,12947 8361,12925 8427,12871 8462,12824 8473,12753 8445,12755 8415,12749 8309,12758 8304,12938
-',
-         'from' => 1499148000,
-         'id' => 2872,
-         'source_id' => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
-         'text' => 'Straßen rund um das Bundeskanzleramt: wegen eines Staatsbesuchs Sperrungen möglich, 5. Juli 2017 von 8 Uhr bis 15 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1499259600
-       },
+       undef,
        {
          'data' => 'userdel	2::temp 7215,12295 7039,12314 7053,12364 7064,12419 7086,12572
 userdel	2::temp 6754,12108 6725,12113 6690,12104 6656,12075 6642,12010 6685,11954 6744,11936 6809,11979 6828,12031 6787,12099 7039,12314 7383,12095
@@ -4336,6 +4245,81 @@ userdel	2::temp 7160,11225 7253,11208 7252,11202 7235,11203 7233,11189 7252,1118
          'text' => 'Straßen rund um das Verteidigungsministerium: Straßensperrungen wegen einer Veranstaltung möglich, 20. Juli 2017 von 12:00 bis 21:00 Uhr',
          'type' => 'gesperrt',
          'until' => 1500577200
+       },
+       undef,
+       {
+         'data' => '#: XXX wird sich die Qualität vielleicht bessern?
+#: next_check: 2017-09-01
+userdel	2::inwork 8234,4660 8575,4980 8598,4985 8618,5019 8784,5095
+',
+         'from' => undef,
+         'id' => 2877,
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2017/pressemitteilung.608925.php',
+         'text' => 'Teltowkanal von der Rathausstraße bis Gersdorfstraße: Sanierung Fuß- und Radweg, Wege können gesperrt sein, Zeitraum unbekannt',
+         'type' => 'gesperrt',
+         'until' => 1506852000
+       },
+       {
+         'data' => '#: XXX wird sich die Qualität vielleicht bessern?
+#: next_check: 2017-09-01
+userdel	2::inwork 7231,236 7501,83
+',
+         'from' => undef,
+         'id' => 2878,
+         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2017/pressemitteilung.608925.php',
+         'text' => 'Poppenreuther Weg: Wegesanierung, Sperrung möglich, Zeitraum unbekannt ',
+         'type' => 'gesperrt',
+         'until' => 1506852000
+       },
+       {
+         'data' => 'userdel	2::inwork 13415,21442 13371,21462
+',
+         'from' => 1499279870,
+         'id' => 2879,
+         'source_id' => 'http://www.pankow.live/2017/04/21/erneutes-chaos-zwischen-blankenburg-und-bernau-vorprogrammiert/',
+         'text' => 'Brückendurchfahrt Rhönstraße: Sperrung, Radfahrer und Fußgänger können die Brücken bis auf kurzzeitige Einschränkungen passieren, bis voraussichtlich Februar 2018',
+         'type' => 'gesperrt',
+         'until' => 1519858800
+       },
+       {
+         'data' => 'userdel	2::temp 13617,21819 13644,21808
+',
+         'from' => undef,
+         'id' => 2880,
+         'text' => 'Fußgängertunnel Freischützenstraße: kann nach Regenfällen unter Wasser stehen und unpasierbar sein',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => 'userdel	2::inwork 14338,22885 14276,22914
+',
+         'from' => 1499280235,
+         'id' => 2881,
+         'source_id' => 'http://www.pankow.live/2017/04/21/erneutes-chaos-zwischen-blankenburg-und-bernau-vorprogrammiert/',
+         'text' => 'Brückendurchfahrt Schräger Weg: Sperrung, Radfahrer und Fußgänger können die Brücken bis auf kurzzeitige Einschränkungen passieren, bis voraussichtlich Oktober 2018',
+         'type' => 'gesperrt',
+         'until' => 1541026800
+       },
+       {
+         'data' => 'userdel	2::inwork 20533,29069 20537,29285
+',
+         'from' => 1504044000,
+         'id' => 2882,
+         'source_id' => 'http://www.pankow.live/2017/04/21/erneutes-chaos-zwischen-blankenburg-und-bernau-vorprogrammiert/',
+         'text' => 'Zepernicker Chaussee: Sperrung an der Eisenbahnbrücke, 1. bis 4. September 2017',
+         'type' => 'gesperrt',
+         'until' => 1504562399
+       },
+       {
+         'data' => 'userdel	2::inwork 20533,29069 20537,29285
+',
+         'from' => 1506549600,
+         'id' => 2883,
+         'recurring' => 1,
+         'source_id' => 'http://www.pankow.live/2017/04/21/erneutes-chaos-zwischen-blankenburg-und-bernau-vorprogrammiert/',
+         'text' => 'Zepernicker Chaussee: Sperrung an der Eisenbahnbrücke, 29. September 2017 bis 20. August 2018',
+         'type' => 'gesperrt',
+         'until' => 1534802399
        }
      
 );

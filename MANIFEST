@@ -182,6 +182,7 @@ Strassen.pm
 Strassen/Build.pm
 Strassen/CDB.pm
 Strassen/Cat.pm
+Strassen/CatUtil.pm
 Strassen/Combine.pm
 Strassen/Core.pm
 Strassen/CoreHeavy.pm
@@ -286,6 +287,7 @@ data/comments_trafficjam
 data/comments_tram
 data/culdesac
 data/deutschland
+data/doit.pl
 data/faehren
 data/flaechen
 data/fragezeichen
@@ -1028,6 +1030,7 @@ lib/BikePower/upright.xpm
 lib/BrowserInfo.pm
 lib/BrowserInfo/UAProf.pm
 lib/Devel/WidgetDump.pm
+lib/Doit.pm
 lib/GD/Convert.pm
 lib/Http.pm
 lib/KDEUtil.pm

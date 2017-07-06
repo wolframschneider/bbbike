@@ -7,7 +7,8 @@ Revaler Str.: Bauarbeiten, unter Umst‰nden Ausweichen auf Gehweg notwendig	q3::i
 Niemannstr.: Bauarbeiten, einige Meter Fahrbahn sind gesperrt	q3 14254,11377 14211,11229
 Haasestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 14328,11320 14286,11186
 Lange Str.: Bauarbeiten, Einbahnstraﬂenregelung	q2::inwork; 12409,11902 12238,11931
-Auerstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 13273,12902 13202,12790
+BouchÈstr.: Bauarbeiten an der Heidelberger Str., Fahrbahn gesperrt	q3::inwork 13489,9456 13357,9313
+Voltairestr.: Baustellenverkehr	q2 11329,12497 11209,12430
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q4::inwork 9736,13061 9636,13076
 Kommandantenstr.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 10330,11422 10136,11529
 Beuthstr.: Bauarbeiten, Einbahnstraﬂe	q3::inwork; 10201,11631 10235,11610 10330,11422
@@ -29,6 +30,8 @@ Rathausstr.: Fuﬂg‰nger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521
 Bˆckhstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 11640,9710 11411,9810
 Erkelenzdamm: Bauarbeiten zwischen Bˆcklerstr. und Kohlfurter Str., Fahrbahn gesperrt, Bordsteine	q3::inwork 10967,10092 11038,10247 11094,10261
 Mˆckernstr.: Bauarbeiten, Einbahnstraﬂe, ehemaliger Radweg kann benutzt werden	q2::inwork; 9022,10857 8941,10663 8926,10626
+Englische Str.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 5424,11944 5518,12159
+Schleswiger Ufer: wegen Bauarbeiten sehr schmal, Fuﬂg‰nger	q3 5894,12480 5944,12548
 Kiehlufer: Bauarbeiten, Fahrbahn gesperrt, Bordsteine beim Ausweichen auf dem Gehweg	q3::inwork 12897,9365 12950,9132
 Nansenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12412,9610 12374,9542
 Dieselstr., Umfahrung: Fuﬂg‰nger, kurvig, eng	q2::inwork 14326,8062 14344,8072 14358,8070 14364,8096 14405,8115 14419,8112 14429,8074 14471,8046
@@ -470,7 +473,7 @@ S-Bhf. Raoul-Wallenberg-Str.: lange Rampe	q3 20109,16264 20116,16303
 (Kinderbad Platsch - Max-Herrmann-Str.): Fuﬂg‰nger	q1 21102,16415 21177,16499 21238,16627
 (oberer Wuhlewanderweg - Alte Hellersdorfer Str.): einige Fuﬂg‰nger	q1 22851,14603 22876,14594 23057,14582
 Wuhlewanderweg: Fuﬂg‰nger	q1 22771,16194 22717,16142 22670,16063 22623,15959 22554,15780 22539,15729 22515,15620 22518,15510 22518,15417 22516,15399 22507,15373 22400,15321 22393,15292 22396,15254 22413,15187 22441,15118
-Wuhlewanderweg: Fuﬂg‰nger	q1 22441,15118 22573,15043 22741,14761 22806,14631 22836,14520 22843,14452 22827,14356 22839,14149 22825,14109 22611,13901 22562,13855 22462,13726 22457,13713 22447,13690 22359,13599 22295,13530
+Wuhlewanderweg: Fuﬂg‰nger	q1 22441,15118 22573,15043 22741,14761 22806,14631 22840,14494 22843,14452 22827,14356 22839,14149 22825,14109 22611,13901 22562,13855 22462,13726 22457,13713 22447,13690 22359,13599 22295,13530
 Wuhlewanderweg: enge Unterf¸hrung	q3 22359,13599 22259,13508
 Wuhlewanderweg: Fuﬂg‰nger	q1 22295,13530 22259,13508 22191,13414 22187,13304 22211,13040 22196,12961 22036,12367 21998,12204
 Wuhlewanderweg: Fuﬂg‰nger	q1 22242,11269 22244,11311 22073,11581 22009,11636 21882,11859 21885,11949 21907,12018 21936,12022
@@ -589,7 +592,6 @@ Uferweg: Fuﬂg‰nger, Biergarten	q3 3747,12679 3862,12675
 Uferweg: Fuﬂg‰nger	q1 3862,12675 3938,12687 4147,12699 4206,12691 4242,12684
 (Neues Ufer - Kaiserin-Augusta-Allee): Fuﬂg‰nger	q1 4456,12918 4514,12936 4581,13066 4576,13115 4547,13139 4561,13244
 (provisorischer Zugang zum Bahnhof Ostkreuz): Richtung S-Bahnhof viele Fuﬂg‰nger	q3 14712,11039 14727,11005 14810,10977 14845,10954
-BouchÈstr.: Bodenschwellen	q0 13489,9456 13357,9313
 BouchÈstr.: Bodenschwellen	q0 13642,9624 13865,9866
 Radenzer Str.: zwei Bodenschwellen	q1 16220,6277 16304,6358
 Dornbrunner Str.: zwei Bodenschwellen	q1 16147,6545 16043,6414
@@ -1311,7 +1313,7 @@ Wasserweg: Bordstein	q2 15680,8914 15873,8884
 (Ella-Trebe-Str. - Invalidenstr.): einige Fuﬂg‰nger	q1 7938,13302 7968,13335 8003,13374
 Europaplatz: einige Fuﬂg‰nger	q1 7880,13315 7938,13302
 Wuhlestr. [Wohngebiet]: Fuﬂg‰nger	q1 21580,13583 21430,13602
-(oberer Wuhlewanderweg): einige Fuﬂg‰nger	q1 22317,13521 22472,13698 22479,13734 22550,13821 22638,13902 22783,14034 22855,14114 22872,14175 22872,14233 22860,14440 22873,14502 22864,14556
+(oberer Wuhlewanderweg): einige Fuﬂg‰nger	q1 22317,13521 22472,13698 22479,13734 22550,13821 22638,13902 22783,14034 22855,14114 22872,14175 22872,14233 22860,14440 22868,14477 22873,14498 22864,14556
 (oberer Wuhlewanderweg): Fuﬂg‰nger, Kinderspielpl‰tze	q1 22864,14556 22851,14603 22756,14787 22599,15030 22577,15109
 Unterbaumstr.: Bordsteine	q2 8488,12920 8502,12935
 (Hofackerzeile - Kurt-Schumacher-Damm): einige Fuﬂg‰nger	q1 2769,14482 2793,14374
@@ -1336,7 +1338,7 @@ Am Schwanenberg: einige Fuﬂg‰nger	q1 15752,9385 15793,9334
 (Siemensstr./Deulstr. - Wilhelminenhofstr.): einige Fuﬂg‰nger	q1 17842,6639 17852,6589 17826,6495
 Straﬂe 77: Bordstein	q1 15320,12375 15408,12394
 Wuhlebr¸cken: Fuﬂg‰nger	q2 22843,14452 22839,14453 22819,14457 22788,14468 22743,14488 22670,14520
-(oberer Wuhlewanderweg - unterer Wuhlewanderweg): Fuﬂg‰nger	q2 22873,14502 22848,14460 22843,14452
+(oberer Wuhlewanderweg - unterer Wuhlewanderweg): Rampe, einige Fuﬂg‰nger	q2 22873,14498 22849,14449 22847,14488 22840,14494
 Bootshausweg: einige Fuﬂg‰nger	q1 -1017,16184 -960,16396 -972,16553 -1016,16585 -1033,16621 -1067,16635
 Bootshausweg: einige Fuﬂg‰nger	q1 -1016,16585 -1058,16611 -1096,16597
 (Rauchstr. - Sigmund-Bergmann-Str.): einige Fuﬂg‰nger	q1 -2414,16975 -2371,16776
@@ -1586,7 +1588,6 @@ Imchenallee: Fuﬂg‰nger, besonders an schˆnen Tagen	q1 -7714,4279 -7687,4233 -756
 Uferweg: Fuﬂg‰nger	q1 -4774,6514 -4734,6531 -4678,6625 -4664,6746 -4579,6913 -4460,7071 -4438,7169 -4488,7200
 Uferweg: Fuﬂg‰nger	q1 -4546,9381 -4506,9395 -4460,9456 -4442,9625 -4536,9800 -4585,9836
 Rudolf-Filter-Weg: Fuﬂg‰nger, Bordstein	q3 20988,15505 21009,15539 21040,15589
-(Hellersdorfer Str. - Feldberger Ring): Fuﬂg‰nger	q2 23021,13982 22978,13967
 Kuschelweg: einige Fuﬂg‰nger	q1 23355,12732 23349,12760 23408,13100 23474,13449 23499,13593 23550,13863 23552,13878 23553,13885 23560,13936 23603,13956 23631,13935 23680,13924 23738,13925 24050,13855 24130,13842 24255,13816 24291,13828 24402,13805 24437,13786 24494,13785
 (Melanchthonstr. - Weg an der S-Bahn): einige Fuﬂg‰nger	q1 24759,12401 24756,12277 24711,12150
 (Parlerstr. - Elsenstr.): enger Pfad	q3 24528,10696 24571,10736 24593,10775
@@ -1636,7 +1637,10 @@ An der Neumark: laut Schild "Schrittgeschwindigkeit"	q2 11283,3774 11300,3709 11
 (Gehweg an der zuk¸nftigen Minna-Todenhagen-Str.): einige Fuﬂg‰nger	q2 17681,7589 17470,7473 17295,7358
 Dalandweg: schmale und kurvenreiche Straﬂe	q1 5120,4318 5226,4259 5250,4298 5311,4270 5356,4249 5385,4236 5541,4305
 (Spreeuferweg): einige Fuﬂg‰nger	q1 21090,5417 21085,5451 20827,5431
-(KGA Am Freibad Oberspree): einige Freibad	q1 20827,5431 20829,5418 20849,5266 20851,5255
+(KGA Am Freibad Oberspree): einige Fuﬂg‰nger	q1 20827,5431 20829,5418 20849,5266 20851,5255
+(Zufahrt zum Gewerbegebiet): Parkplatzverkehr	q1 25312,11186 25298,11118 25298,10966 25297,10892
+(Pilgramer Str. - Gewerbegebiet): Parkplatzverkehr	q1 25168,10963 25298,10966 25337,10967
+(Alte Hellersdorfer Str. - Hellersdorfer Str.): viele Fuﬂg‰nger (IGA-Eingang)	q3 23084,14472 23081,14418 23021,13982
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Sch¸ler	q2 7242,8586 7288,8635
@@ -1890,7 +1894,7 @@ Sesenheimer Str.: Fuﬂg‰nger, Bordsteine	q2 3866,11473 3874,11380
 (Kucharskistr. - s¸dliches Spreeufer): Fuﬂg‰nger	q2 4829,13089 4822,13109
 (Clara-von-Simson-Str. - s¸dliches Spreeufer): Fuﬂg‰nger	q2 4732,13030 4710,13069
 (Carnotstr. - s¸dliches Spreeufer): Fuﬂg‰nger	q2 4655,12953 4619,12975
-Schleswiger Ufer: schmal, Fuﬂg‰nger	q2 5858,12425 5894,12480 5944,12548
+Schleswiger Ufer: schmal, Fuﬂg‰nger	q2 5858,12425 5894,12480
 Cuxhavener Str.: Wohngebiet, Fuﬂg‰nger	q2 5894,12480 5919,12423
 (Zufahrt Parkpl‰tze Bartningallee): schmal, un¸bersichtlich, Fuﬂg‰nger	q3 6179,12513 6149,12454
 (Altonaer Str. - Flensburger Str.): Einkaufszentrum, Fuﬂg‰nger	q2 6173,12396 6149,12454 6137,12532 6160,12681
@@ -2559,9 +2563,9 @@ Ludolfinger Platz: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4::igndisp;
 Sewanstr. - Balatonstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 17705,10232 17741,10386
 Hˆnower Str. (Karlshorst) (Ausweichen auf Sandbankette mˆglich): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
 Neue Bahnhofstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 14908,11231 14918,11249
+Wegelystr.: Einbahnstraﬂe wegen Bauarbeiten: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 5518,12159 5627,12105
 Schinkelplatz: Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 9994,12368 10002,12305 10008,12274 10010,12259 10029,12208
 Karower Str.: tempor‰re Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 16593,25640 16632,25512 16669,25373
-Voltairestr.: Baustelle, Fahrtrichtung gesperrt: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 11329,12497 11209,12430
 Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtung gesperrt: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 5192,10234 5196,10398
 BouchÈstr.: Baustelle, Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 13298,9252 13190,9139
 Mengerzeile: Baustelle, Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 13176,9302 13100,9210
