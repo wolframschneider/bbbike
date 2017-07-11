@@ -3680,7 +3680,17 @@ userdel	2::temp 5857,13342 5868,13441 5882,13548
        },
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: fritz
+userdel	2::inwork 17886,5587 17736,5441
+',
+         'from' => 1499392800,
+         'id' => 2684,
+         'source_id' => '2147341514',
+         'text' => 'Sterndamm: Eisenbahnunterführung voll gesperrt, 08.07.2017 bis 17.07.2017, danach Einbahnstraßenregelung',
+         'type' => 'gesperrt',
+         'until' => 1500271200
+       },
        undef,
        {
          'data' => '#: tempex: th & T10:00-T20:30
@@ -3746,36 +3756,7 @@ userdel	2::temp 5857,13342 5868,13441 5882,13548
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
-userdel	q4::inwork 8634,10426 8384,10507 8527,10621
-userdel	q4::inwork 8348,10636 8335,10518 8350,10499
-#: tempex ^^^
-',
-         'from' => 1499032800,
-         'id' => 2718,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              1
-                            ],
-                            [
-                              'yearly',
-                              'days',
-                              27,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => '2147339708',
-         'text' => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 04.07.2017-06.07.2017',
-         'type' => 'handicap',
-         'until' => 1499378399
-       },
+       undef,
        {
          'data' => '	2::inwork 9998,16547 9983,16561 9955,16578
 ',
@@ -3942,17 +3923,7 @@ userdel	2::night 16196,18364 16315,18208
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED ("Verkürzung" laut fritz) --- userdel	q4::inwork 12938,1348 12940,1547 12911,1815
-userdel	q4::inwork 12911,1815 12817,2031
-',
-         'from' => 1467661160,
-         'id' => 2808,
-         'source_id' => '2147340272',
-         'text' => 'Buckower Damm: Baustelle zwischen Alt-Buckow und An den Achterhöfen, evtl. auch Einschränkungen für Radfahrer, bis 09.07.2017',
-         'type' => 'handicap',
-         'until' => 1499616000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4203,37 +4174,8 @@ userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14
          'until' => undef
        },
        undef,
-       {
-         'data' => 'userdel	2::temp 7215,12295 7039,12314 7053,12364 7064,12419 7086,12572
-userdel	2::temp 6754,12108 6725,12113 6690,12104 6656,12075 6642,12010 6685,11954 6744,11936 6809,11979 6828,12031 6787,12099 7039,12314 7383,12095
-userdel	2::temp 6694,12627 7039,12314
-	3 7139,12376 7064,12419 6808,12604
-	3 6808,12604 7064,12419 7139,12376
-',
-         'from' => 1499148000,
-         'id' => 2873,
-         'source_id' => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
-         'text' => 'Straßen am Schloss Bellevue: wegen eines Staatsbesuchs Sperrungen möglich, 5. Juli 2017 von 08:00 bis 23:00',
-         'type' => 'gesperrt',
-         'until' => 1499288400
-       },
-       {
-         'data' => 'userdel	2::temp 6476,11325 6630,11247 6606,11222 6582,11202 6447,11144
-userdel	2::temp 6841,11114 6630,11247 6679,11319 6692,11365 6716,11439 6825,11486
-userdel	2::temp 5986,10976 6058,10988 6145,10975 6168,11042 6447,11144 6452,11118 6477,11045
-userdel	2::temp 6626,11178 6582,11202 6495,11251 6350,11301 6346,11326 6337,11365 6200,11417
-	3 6851,11346 6692,11365 6481,11400
-	3 6481,11400 6692,11365 6851,11346
-	3 6272,10926 6145,10975 6122,10925
-	3 6122,10925 6145,10975 6272,10926
-',
-         'from' => 1499090400,
-         'id' => 2874,
-         'source_id' => 'http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_27_3021_3144_online.pdf',
-         'text' => 'Budapester Str. und Umgebung: wegen eines Staatsbesuchs Sperrungen möglich, vom 4. Juli 2017 16:00 Uhr bis 6. Juli 2017 10:00 Uhr ',
-         'type' => 'gesperrt',
-         'until' => 1499328000
-       },
+       undef,
+       undef,
        {
          'data' => 'userdel	2::temp 7322,11177 7419,11137 7492,11111 7595,11086 7575,11076 7252,11188 7248,11143 7461,11051 7579,11032 7595,11086 7665,11353
 userdel	2::temp 7435,11514 7322,11177 7253,11208 7356,11517
