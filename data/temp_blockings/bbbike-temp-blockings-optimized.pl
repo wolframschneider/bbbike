@@ -65,11 +65,12 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
        undef,
        {
          'data' => '#: by: http://www.stadtfest.berlin/de/index.html
-userdel	2::temp 6499,10086 6609,10147 6626,10155 6729,10212
-userdel	2::temp 6729,10212 6971,10346
-userdel	2::temp 6628,10318 6626,10155
-userdel	2::temp 6487,10277 6628,10318 6719,10347
-userdel	2::temp 6719,10347 6729,10212 6739,10120
+	2::temp 6499,10086 6609,10147 6626,10155 6729,10212
+	2::temp 6729,10212 6971,10346
+	2::temp 6628,10318 6626,10155
+	2::temp 6487,10277 6628,10318 6719,10347
+	2::temp 6719,10347 6729,10212 6739,10120
+	2::temp 6609,10147 6630,9990
 ',
          'from' => 1499983200,
          'id' => 74,
@@ -2033,7 +2034,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'data' => '#: tempex: (mo,th) T08-T13
-	q4::temp:clock 3763,12279 3701,12279
+	q4::temp:clock 3761,12298 3726,12273 3699,12290
 ',
          'from' => undef,
          'id' => 1820,
@@ -2327,7 +2328,7 @@ userdel	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,
        },
        {
          'data' => '#: tempex: volatile
-	2::temp 6694,12627 7039,12314
+	2::temp 6694,12627 7031,12320
 ',
          'from' => undef,
          'id' => 1959,
@@ -2560,8 +2561,8 @@ userdel auto	3 7103,11247 6851,11346 6692,11365
 userdel auto	3 6228,10646 6216,10614 6192,10542
 	2::temp 6828,12031 7026,12054 7383,12095 7816,12150 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252 8637,12258 8722,12268
 	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
-	3 7039,12314 7383,12095 7429,12070
-	3 7429,12070 7383,12095 7039,12314
+	3 7031,12320 7383,12095 7429,12070
+	3 7429,12070 7383,12095 7031,12320
 	3 7875,12363 7822,12201 7816,12150 7823,12120
 	3 7823,12120 7816,12150 7822,12201 7875,12363
 	3 8119,12414 8055,12186 8049,12140
@@ -2771,7 +2772,22 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245 8592,12252
+userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+userdel	2::temp 8542,11502 8548,11571
+	3 8391,12389 8344,12221 8327,12174
+	3 8327,12174 8344,12221 8391,12389
+	3 8522,12239 8538,12245
+	3 8538,12245 8522,12187
+',
+         'from' => 1500051359,
+         'id' => 2214,
+         'source_id' => '2147341578',
+         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str und Brandenburger Tor gesperrt, auch Ebertstr. zwischen Behrenstr. und Dorotheenstr., Veranstaltung (bis 17.07.2016 ca. 12:00 Uhr)',
+         'type' => 'gesperrt',
+         'until' => 1500285600
+       },
        undef,
        undef,
        undef,
@@ -3217,7 +3233,7 @@ userdel	2::temp 1557,19765 1397,20125 1340,20209 1269,20271
        {
          'data' => '#: tempex: YYYY0316-YYYY1014 T21-T06, YYYY1015-YYYY0315 T18-T06 vvv
 Kleistpark	2::night 7209,9507 7275,9506 7307,9528 7351,9503 7386,9502 7414,9523 7430,9576 7416,9625 7391,9645 7347,9644 7310,9622 7277,9652 7216,9657
-Kleistpark	2::night 7430,9576 7501,9573 7520,9572
+Kleistpark	2::night 7430,9576 7501,9573 7512,9572
 #: tempex ^^^
 ',
          'from' => undef,
@@ -3757,16 +3773,7 @@ userdel	2::inwork 17886,5587 17736,5441
        undef,
        undef,
        undef,
-       {
-         'data' => '	2::inwork 9998,16547 9983,16561 9955,16578
-',
-         'from' => 1436738400,
-         'id' => 2719,
-         'source_id' => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
-         'text' => 'nördliche Treppe an der Bornholmer Str.: wegen Bauarbeiten an der Bösebrücke gesperrt, bis ca. Juli 2017',
-         'type' => 'handicap',
-         'until' => 1499983200
-       },
+       undef,
        undef,
        undef,
        {
@@ -3923,7 +3930,17 @@ userdel	2::night 16196,18364 16315,18208
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '# note: laut fritz bis 2017-09-15, laut vmz bis 2018
+userdel	q4::inwork 12911,1815 12817,2031
+',
+         'from' => 1467661160,
+         'id' => 2808,
+         'source_id' => '2147341551',
+         'text' => 'Buckower Damm: Baustelle zwischen Alt-Buckow und An den Achterhöfen, evtl. auch Einschränkungen für Radfahrer, bis zum 15.9.2017, eventuell auch länger',
+         'type' => 'handicap',
+         'until' => 1505455200
+       },
        undef,
        undef,
        undef,
@@ -3942,7 +3959,7 @@ userdel	2::night 16196,18364 16315,18208
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-07-04 vvv
+#: last_checked: 2017-07-11 vvv
 #: check_frequency: 21d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -3967,9 +3984,10 @@ userdel	2::night 16196,18364 16315,18208
        {
          'data' => '#: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität danach besser sein? vvv
 #: osm_watch: way id="136814135" version="15" vvv
-#: last_checked: 2017-06-08 vvv
-#: check_frequency: 30d vvv
-userdel	2::inwork 3332,12742 3396,12741 3358,12718
+#: last_checked: 2017-07-15 vvv
+#: check_frequency: 14d vvv
+# REMOVED (hier nicht) --- userdel	2::inwork 3332,12742 3396,12741
+# REMOVED (hier nicht) --- userdel	2::inwork 3396,12741 3358,12718
 userdel	2::inwork 3396,12741 3476,12735 3582,12704 3654,12672 3763,12624 3837,12618
 userdel	2::inwork 3741,12607 3654,12672
 #: check_frequency ^^^
@@ -4058,17 +4076,7 @@ userdel	q4::inwork; 5583,5179 5527,5217 5416,5289 5397,5302 5382,5312
          'type' => 'handicap',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: LMS-BR_r_LMS-BR_93359
-userdel	q3::inwork; 14060,17221 14099,17195 14136,17170 14235,17103 14341,17030 14528,16910 14558,16907
-',
-         'from' => undef,
-         'id' => 2857,
-         'source_id' => '2147341139',
-         'text' => 'Rennbahnstr.: ab Hunsrückstr. bis Berliner Allee Bauarbeiten, Fahrtrichtung gesperrt, bis 14. Juli 2017',
-         'type' => 'handicap',
-         'until' => 1500026400
-       },
+       undef,
        {
          'data' => 'userdel	q4::inwork 18009,18946 17900,18972 17890,18973 17799,19000 17697,18989 17600,18994
 ',
@@ -4081,7 +4089,7 @@ userdel	q3::inwork; 14060,17221 14099,17195 14136,17170 14235,17103 14341,17030 
        },
        undef,
        {
-         'data' => '#: last_checked: 2017-07-03
+         'data' => '#: last_checked: 2017-07-13
 #: check_frequency: 14d
 userdel	q4::inwork; 7201,8870 7107,9030
 ',
@@ -4102,17 +4110,7 @@ userdel	q4::inwork; 7201,8870 7107,9030
          'until' => 1508104799
        },
        undef,
-       {
-         'data' => '#: XXX bis wann gehen die Bauarbeiten?
-#: last_checked: 2017-06-19
-userdel	q3::inwork; 8752,12647 8870,12647
-',
-         'from' => undef,
-         'id' => 2863,
-         'text' => 'Schiffbauerdamm: Bauarbeiten, Einbahnstraße, offen Richtung Westen',
-         'type' => 'handicap',
-         'until' => undef
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -4163,8 +4161,8 @@ userdel	2::inwork 6815,8691 6912,8617
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2017-07-01
-#: check_frequency: 7d
+         'data' => '#: last_checked: 2017-07-15
+#: check_frequency: 14d
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 ',
          'from' => undef,
@@ -4262,6 +4260,30 @@ userdel	2::inwork 7231,236 7501,83
          'text' => 'Zepernicker Chaussee: Sperrung an der Eisenbahnbrücke, 29. September 2017 bis 20. August 2018',
          'type' => 'gesperrt',
          'until' => 1534802399
+       },
+       {
+         'data' => '#: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_07_0741_0860_online.pdf
+#: XXX Grünanlage wird eingezogen
+#: osm_watch: way id="316695242" version="1"
+#: last_checked: 2017-07-11
+#: check_frequency: 120d
+userdel	2::inwork 4561,13244 4547,13139 4576,13115
+',
+         'from' => undef,
+         'id' => 2884,
+         'text' => 'Kaiserin-Augusta-Allee - Neues Ufer: Bauarbeiten, Weg ist komplett gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => 'userdel	q4::inwork 854,24387 836,24440 813,24497 790,24556 784,24612 790,24698 808,24790 811,24833 793,24943 785,24968
+',
+         'from' => 1500156000,
+         'id' => 2885,
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.611086.php',
+         'text' => 'Am Eichenhain: Bauarbeiten zwischen Sigismundkorso und Karmeliterweg, Fahrbahn gesperrt, vom 17.07.2017 bis 20.11.2017',
+         'type' => 'handicap',
+         'until' => 1511218800
        }
      
 );
