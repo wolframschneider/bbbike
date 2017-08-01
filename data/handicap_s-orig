@@ -20,11 +20,11 @@
 # REMOVED (fertig) --- #: last_checked: 2014-07-06 --- #: check_frequency: 3d --- Simplonstr.: Einbahnstraﬂe wegen Bauarbeiten	q2::inwork; 14468,11203 14531,11142
 # REMOVED (fertig) --- #: XXX zurzeit Bauarbeiten bis 2017-06-13 --- evtl. wird die Qualit‰t danach besser? -> qualitaet_s-orig --- #: last_checked: 2017-06-07 --- #: next_check: 2017-06-13 --- Kinzigstr.: Bauarbeiten, Fahrbahn ist nicht befahrbar	q3::inwork 14589,11975 14471,11782
 # 
-#: last_checked: 2017-07-28
+#: last_checked: 2017-07-31
 Revaler Str.: Bauarbeiten, unter Umst‰nden Ausweichen auf Gehweg notwendig	q3::inwork 14211,11229 14286,11186
 # 
 #: XXX wenn beendet -> Eintrag in gesperrt-orig wieder aktivieren
-#: last_checked: 2017-07-28
+#: last_checked: 2017-07-31
 Niemannstr.: Bauarbeiten, einige Meter Fahrbahn sind gesperrt	q3 14254,11377 14211,11229
 # 
 #: last_checked: 2017-07-20
@@ -283,10 +283,10 @@ Rathausstr.: Fuﬂg‰nger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521
 Bˆckhstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 11640,9710 11411,9810
 # 
 #: source_id: 2147341140
-#: XXX laut fritz bis 31.07.2017, laut vmz bis Ende Juli 2017
-#: last_checked: 2017-06-09
-#: next_check: 2017-07-31
-#: valid: -20170915
+#: XXX laut fritz bis 07.09.2017, laut vmz bis Ende Oktober 2017
+#: last_checked: 2017-07-31
+#: next_check: 2017-09-07
+#: valid: -20171031
 Erkelenzdamm: Bauarbeiten zwischen Bˆcklerstr. und Kohlfurter Str., Fahrbahn gesperrt, Bordsteine	q3::inwork 10967,10092 11038,10247 11094,10261
 # 
 #: source_id: 2147341145
@@ -339,7 +339,7 @@ Englische Str.: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 5424,11944 5518,1
 #: XXX nach Abschluss wieder den alten Eintrag (siehe unten) aktivieren
 #: by: http://www.dafmap.de/d/berlin.html?id=3027&mt=0&zoom=17
 #: XXX geplanter Projektabschluss laut dafmap: 2018-07-31
-#: last_checked: 2017-07-03
+#: last_checked: 2017-07-31
 #: next_check: 2018-06-30
 Schleswiger Ufer: wegen Bauarbeiten sehr schmal, Fuﬂg‰nger	q3 5894,12480 5944,12548
 # 
@@ -362,7 +362,7 @@ Kiehlufer: Bauarbeiten, Fahrbahn gesperrt, Bordsteine beim Ausweichen auf dem Ge
 Nansenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12412,9610 12374,9542
 # 
 #: next_check_id: DIESEL-2015
-#: last_checked: 2017-06-03
+#: last_checked: 2017-07-31
 #: check_frequency: 60d
 Dieselstr., Umfahrung: Fuﬂg‰nger, kurvig, eng	q2-::inwork 14326,8062 14344,8072 14358,8070 14364,8096 14405,8115 14419,8112 14429,8074 14471,8046
 # 
@@ -396,7 +396,7 @@ Karl-Marx-Str.: Bauarbeiten zwischen Werbellinstr. und Thomasstr., Richtung S¸de
 #: next_check_id: MOELLENDORFFSTR-2017
 #: XXX_prog abgesch‰tzter Zeitverlust durch 2x Ampeln, explizite "Radfahren verboten"-Schilder
 #: XXX laut fritz bis 1. August 2017
-#: last_checked: 2017-07-01
+#: last_checked: 2017-07-29
 #: next_check: 2017-08-01
 #: valid: -20170801
 Mˆllendorffstr.: Bauarbeiten, Radfahrer m¸ssen auf die gegen¸berliegende Seite wechseln	q4::inwork; 15420,12178 15361,12071
@@ -416,7 +416,7 @@ Mˆllendorffstr.: Bauarbeiten, Radfahrer m¸ssen auf die gegen¸berliegende Seite w
 # 
 ### Hohenschˆnhausen ###
 # 
-# REMOVED --- #: source_id: INKO_111447 --- #: source_id: LMS_1290313357 --- #: last_checked: 2013-04-20 --- #: next_check: 2013-06-30 (Ende: 1.7.2013) --- Malchower Weg: Einbahnstraﬂe wegen Bauarbeiten (bis zum Anfang Juli), Ausweichen auf dem Gehweg	q3::inwork; 17014,16724 17059,16560 17102,16464 17170,16365 17220,16320 17271,16280 17383,16197
+# REMOVED --- #: source_id: INKO_111447 --- #: source_id: LMS_1290313357 --- #: last_checked: 2013-04-20 --- #: next_check: 2013-06-30 (Ende: 1.7.2013) --- Malchower Weg: Einbahnstraﬂe wegen Bauarbeiten (bis zum Anfang Juli), Ausweichen auf dem Gehweg	q3::inwork; 17014,16724 17059,16560 17102,16464 17171,16372 17220,16320 17271,16280 17383,16197
 # 
 ### Schˆneberg ###
 # 
@@ -431,21 +431,9 @@ Mˆllendorffstr.: Bauarbeiten, Radfahrer m¸ssen auf die gegen¸berliegende Seite w
 # 
 ### Prenzlauer Berg ###
 # 
-#: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml vvv
-#: source_id: IM_025877 vvv
-#: source_id: 2147339245 vvv
-#: last_checked: 2017-06-28 vvv
-#: next_check: 2017-08-01 vvv
-J¸licher Str.: Einbahnstraﬂenregelung wegen Bauarbeiten an der Bˆsebr¸cke	q4::inwork; 9441,16058 9458,16180 9474,16297 9475,16307 9487,16395 9498,16480 9514,16603
-Malmˆer Str.: Einbahnstraﬂenregelung wegen Bauarbeiten an der Bˆsebr¸cke	q4::inwork; 10197,16528 10225,16436 10254,16363 10281,16263 10301,16186
-#: next_check ^^^
-#: last_checked ^^^
-#: source_id ^^^
-#: source_id ^^^
-#: by ^^^
+# REMOVED (-> wieder temp_blocking) --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml vvv --- #: source_id: IM_025877 vvv --- #: source_id: 2147339245 vvv --- #: source_id: 2147339553 vvv --- #: last_checked: 2017-06-28 vvv --- #: next_check: 2017-08-02 vvv --- J¸licher Str.: Einbahnstraﬂenregelung wegen Bauarbeiten an der Bˆsebr¸cke	q4::inwork; 9441,16058 9458,16180 9474,16297 9475,16307 9487,16395 9498,16480 9514,16603 --- Malmˆer Str.: Einbahnstraﬂenregelung wegen Bauarbeiten an der Bˆsebr¸cke	q4::inwork; 10197,16528 10225,16436 10254,16363 10281,16263 10301,16186
 # 
-#: XXX nach den Bauarbeiten eventuell asphaltiert
-#: last_checked: 2017-07-06
+#: last_checked: 2017-07-30
 #: check_frequency: 14d
 F¸rstenberger Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 10320,14608 10472,14632
 # 
@@ -762,9 +750,10 @@ Ludwigkirchplatz: Gehweg	q2 4905,10069 4863,10077
 #: next_check_id: SPREERADWEGEINSTEINUFER-2014
 #: XXX Bauarbeiten, wird der Weg sp‰ter breiter sein?
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/fahr_rat_20_sitzung.pdf (Verbreiterungen)
-#: last_checked: 2017-07-11
+#: last_checked: 2017-07-31
 #: check_frequency: 14d
-(Rad- und Wanderweg an Spree und Landwehrkanal): Fuﬂg‰nger, teilweise eng	q2 3358,12718 3396,12741 3476,12735 3582,12704 3654,12672 3763,12624 3837,12618 3888,12618 4131,12641 4340,12578 4529,12570 4642,12491
+(Rad- und Wanderweg an Spree und Landwehrkanal): Fuﬂg‰nger, teilweise eng	q2 3358,12718 3396,12741 3476,12735 3582,12704 3654,12672 3763,12624 3837,12618
+(Rad- und Wanderweg an Spree und Landwehrkanal): Fuﬂg‰nger, teilweise eng	q2 3837,12618 3888,12618 4131,12641 4340,12578 4529,12570 4642,12491
 (Rad- und Wanderweg an Spree und Landwehrkanal): einige Fuﬂg‰nger	q1 4642,12491 4817,12366 5045,12243 5147,12164 5261,12004 5361,11910
 #: note: Radfahren erlaubt, Fuﬂg‰nger haben Vorrang
 Spreeufer: Fuﬂg‰nger, besonders an schˆnen Tagen	q2 10166,12777 10105,12855 9977,12912 9944,12921 9930,12947 9900,12942 9724,12992 9716,12971 9707,12974
@@ -922,7 +911,7 @@ Beruner Str.: Rampen, Fuﬂg‰nger, U-Bahn-Ausgang	q3 20143,10731 20215,10554
 (Parkweg Spreebogenpark): besonders an Wochenenden tags¸ber sehr viele Fuﬂg‰nger	q2 8021,12832 8036,12855 8046,12870 8072,12902 8116,12938 8168,12945 8235,12945 8304,12938 8370,12902 8424,12853
 Spreeuferweg: besonders an Wochenenden tags¸ber viele Fuﬂg‰nger	q1 7908,12804 7945,12878 7966,12913 8044,12989 8159,13032
 #: note: Radfahren erlaubt:
-Spreeuferweg: besonders an Wochenenden tags¸ber viele Fuﬂg‰nger	q1 8257,13037 8277,13032 8317,13015 8401,12973 8464,12919 8498,12870 8529,12757 8566,12661 8587,12642 8635,12629 8754,12622
+Spreeuferweg: besonders an Wochenenden tags¸ber viele Fuﬂg‰nger	q1 8257,13037 8277,13032 8317,13015 8408,12968 8464,12919 8498,12870 8529,12757 8538,12710 8574,12662 8635,12629 8754,12622
 Spreeuferweg: besonders an Wochenenden tags¸ber viele Fuﬂg‰nger	q1 8635,12629 8709,12605 8756,12608
 Helenenhof: enge Tore, Fuﬂg‰nger	q3 14506,11275 14395,11356
 F‰rberstr. - Uferweg: sehr eng	q2 21662,4974 21665,5035 21696,5053
@@ -959,7 +948,7 @@ Langhoffstr.: enge Straﬂe, Gegenverkehr	q1 19817,14371 19818,14064
 #: by: http://www.berlin.de/ba-lichtenberg/presse/archiv/20140603.1435.397678.html (Vorlage 096/2014)
 #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=5651&date=20140610 (Umgestaltung der Alten Frankfurter Allee)
 #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6543
-#: last_checked: 2017-07-01
+#: last_checked: 2017-07-29
 #: check_frequency: 90d
 (Frankfurter Allee, Nebenfahrbahn zur Hauptfahrbahn): Bordsteinabsenkung, aber eng	q3 16535,11920 16512,11894
 Zum Schlachtensee: wegen der groﬂen Steigung/Gef‰lles nur Schrittgeschwindigkeit mˆglich	q4 -1663,4218 -1592,4268
@@ -1553,7 +1542,7 @@ Rehauer Pfad: enge Straﬂe	q1 7587,3411 7626,3554
 Appelbacher Weg: Rampe	q2 27780,893 27804,878
 Hallgarter Steig: eng und kurvig	q1 27890,373 27961,321 28042,304 28046,268 28058,155 28068,148 28071,112 28086,101 28070,22 28083,-34 28065,-114 28042,-152
 Grottewitzwanderweg: eng, kurvig	q2 28042,-152 27852,-279 27825,-371 27703,-406 27624,-480 27605,-661 27573,-757 27603,-906 27562,-1043 27578,-1153 27539,-1337
-Papendickstr.: enge Straﬂe	q0- 17071,16174 17073,16222 17135,16334 17170,16365
+Papendickstr.: enge Straﬂe	q0- 17071,16174 17073,16222 17135,16334 17171,16372
 Am Wiesenweg: Fuﬂg‰nger	q1 21977,988 21857,989 21708,937 21685,916
 Grasm¸ckenweg: Fuﬂg‰nger, eng	q2 14877,3475 14822,3409
 (Scharnweberstr. - Berenhorststr.): Fuﬂg‰nger	q1 4801,17623 4816,17712
@@ -2474,7 +2463,7 @@ Rudolf-Filter-Weg: Fuﬂg‰nger, Bordstein	q3 20988,15505 21009,15539 21040,15589
 Kuschelweg: einige Fuﬂg‰nger	q1 23355,12732 23349,12760 23408,13100 23474,13449 23499,13593 23550,13863 23552,13878 23553,13885 23560,13936 23603,13956 23631,13935 23680,13924 23738,13925 24050,13855 24130,13842 24255,13816 24291,13828 24402,13805 24437,13786 24494,13785
 (Melanchthonstr. - Weg an der S-Bahn): einige Fuﬂg‰nger	q1 24759,12401 24756,12277 24711,12150
 (Parlerstr. - Elsenstr.): enger Pfad	q3 24528,10696 24571,10736 24593,10775
-(Alt-Friedrichsfelde - Gensinger Str.): einige Fuﬂg‰nger	q1+ 18719,11821 18825,11816 18910,11826 19048,11815 19138,11815
+(Alt-Friedrichsfelde - Gensinger Str.): einige Fuﬂg‰nger	q1+ 18717,11821 18825,11816 18896,11824 18910,11826 19048,11815 19138,11815
 an der Kieler Br¸cke: einige Fuﬂg‰nger	q1 7804,14445 7780,14431 7740,14409 7661,14398 7634,14406 7617,14420 7566,14404
 Schw‰bische Str.: einige Fuﬂg‰nger	q1 6529,9738 6492,9782
 (Kommandantenstr. - Oranienstr.): einige Fuﬂg‰nger	q3 10593,11120 10633,11051
@@ -2550,6 +2539,7 @@ Goldl‰rchenweg: schmal, einige Fuﬂg‰nger	q1 -6314,6104 -6301,6126 -6385,6185
 Mascha-KalÈko-Weg: enger Pfad	q3 -6449,5282 -6474,5216 -6474,5144
 (Rellstabweg - Weg zwischen Bullengraben und Lutoner Str.): Fuﬂg‰nger	q2 -5860,13283 -5788,13291
 (Springerzeile - Weg zwischen Bullengraben und Lutoner Str.): Fuﬂg‰nger	q2 -5878,13384 -5789,13398
+L¸dtgeweg: einige Fuﬂg‰nger	q1 4136,12494 4129,12619
 ######################### User Contributions #################################
 # 
 #: by: Michael Kiekbusch vvv
@@ -3131,8 +3121,13 @@ Steinbockstr.: enge Straﬂe	q1 14775,7385 14840,7307 14848,7288 14878,7211
 #: corrected_by: srt (q2 -> q1)
 Steinbockstr.: enge Straﬂe	q1 14840,7307 14861,7316 14868,7297 14848,7288
 #: by: ^^^
-#: by: Kay-Uwe Ludwig [AM]
-Seefelder Str. (Fuﬂweg): Fuﬂg‰nger, schmal	q2 17273,16187 17371,16194 17383,16197
+#: by: Kay-Uwe Ludwig [AM] vvv
+#: corrected_by: srt (neu gemacht, nicht mehr so eng, added Bordstein) vvv
+Seefelder Str. (Fuﬂweg): Fuﬂg‰nger	q1 17325,16189 17362,16189
+#: XXX_prog BS, allerdings nur, wenn von der Malchower Str. von S¸dosten kommt
+Seefelder Str. (Fuﬂweg): Fuﬂg‰nger, Bordstein	q3 17362,16189 17383,16197
+#: corrected_by ^^^
+#: by: ^^^
 #: by: Daniel Weber [AM] vvv
 (Malteserstr. - Hanielweg): Fuﬂg‰nger	q1 7451,1818 7534,1818 7562,1796
 (An der Kol. Kˆnigsgraben, nˆrdl. Parkweg): Fuﬂg‰nger	q1 7189,1942 7390,2021
@@ -3195,9 +3190,10 @@ Lotte-Lenya-Bogen: Fuﬂg‰ngerzone, schieben	q4 5230,10919 5264,10921 5348,10960 5
 (Krahmerstr. - Stockweg): Queren des Hindenburgdamms un¸bersichtlich, starker Autoverkehr	q4 4566,3461 4523,3482
 #: by: ^^^
 (Amalienstr. - Uferweg): Fuﬂg‰nger	q2 14124,16544 14183,16547
+(Blechenstr. - Uferweg): Fuﬂg‰nger	q2 14014,16722 14187,16639
 (Groﬂe Seestr. - Uferweg): Fuﬂg‰nger	q2 14184,16889 14189,16793 14232,16716
 (Berliner Allee - Uferweg): Fuﬂg‰nger	q2 14485,16362 14449,16394
-Uferweg am Weiﬂen See: Fuﬂg‰nger	q2 14463,16735 14423,16749 14299,16740 14232,16716 14198,16651 14183,16547 14188,16501 14276,16411 14406,16379 14449,16394 14480,16449 14510,16549 14521,16599
+Uferweg am Weiﬂen See: Fuﬂg‰nger	q2 14463,16735 14423,16749 14299,16740 14232,16716 14187,16639 14183,16547 14188,16501 14276,16411 14406,16379 14449,16394 14480,16449 14510,16549 14521,16599
 Berliner Allee - Uferweg: enge Rampe oder 6 Stufen	q4+ 14499,16341 14485,16362
 Seeweg (Weiﬂensee): Fuﬂg‰nger	q2 14485,16362 14480,16449
 Seeweg (Weiﬂensee): Fuﬂg‰nger	q1 14610,16522 14581,16529 14510,16549

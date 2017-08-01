@@ -3436,6 +3436,7 @@ userdel	2::temp 5857,13342 5868,13441 5882,13548
 #: note: am Sa, den 2016-12-10 gegen 13:00: geschlossen
 #: note: am Fr, den 2017-02-10 gegen 18:30: offen
 #: note: am Fr, den 2017-04-07 gegen 09:30: offen
+#: note: am Mo, den 2017-07-31 gegen 09:00: offen
 #: tempex: volatile vvv
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
@@ -3562,20 +3563,21 @@ userdel	2::temp 5857,13342 5868,13441 5882,13548
        undef,
        undef,
        undef,
-       undef,
-       undef,
        {
-         'data' => '#: by: fritz
-	2::inwork 15261,10738 15272,10790 15279,10862
-#	q4; 15279,10862 15272,10790 15388,10758 15433,10765
-	q4; 15205,11080 15102,11120 15021,11152 14988,11130
+         'data' => '#: source_id: IM_025877	vvv
+	q4::inwork; 9441,16058 9458,16180 9474,16297 9475,16307 9487,16395 9498,16480 9514,16603
+	q4::inwork; 10197,16528 10225,16436 10254,16363 10281,16263 10301,16186
+#: source_id ^^^
 ',
-         'from' => 1501195781,
-         'id' => 2717,
-         'text' => 'Karlshorster Str.: zwischen Haupstr. und Nöldnerstr. Fahrbahn komplett gesperrt, eventuell auch für Fußgänger und Radfahrer, vermutlich Einbahnstraßenregelung in der Hirschberger Str., 28.07.2017 bis 31.07.2017 04:00 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1501466400
+         'from' => 1501525982,
+         'id' => 2715,
+         'source_id' => 'http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml',
+         'text' => 'Jülicher Str. und Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke, voraussichtlich bis 9. August 2017',
+         'type' => 'handicap',
+         'until' => 1502272800
        },
+       undef,
+       undef,
        undef,
        undef,
        undef,
@@ -3712,7 +3714,16 @@ userdel	2::night 16196,18364 16315,18208
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '#: by: fritz
+userdel	q3::inwork 16768,14849 16610,15000 16514,15092
+',
+         'from' => 1501526175,
+         'id' => 2795,
+         'text' => 'Werneuchener Str.: zwischen Genslerstr. und Goeckestr. Bauarbeiten, gesperrt bis Mitte September 2017',
+         'type' => 'handicap',
+         'until' => 1505469600
+       },
        undef,
        undef,
        undef,
@@ -3728,14 +3739,16 @@ userdel	2::night 16196,18364 16315,18208
        {
          'data' => '#: note: laut fritz bis 2017-09-15, laut vmz bis 2018
 #: by: http://www.berliner-woche.de/buckow/verkehr/der-lange-weg-zur-sanierten-strasse-bauarbeiten-am-buckower-damm-anwohner-aergern-sich-ueber-lkw-im-wohngebiet-d126968.html
-userdel	q4::inwork 12911,1815 12817,2031
+#: note: die Baustelle ist gewandert
+#: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
+userdel	q4::inwork 12911,1815 12940,1547
 ',
          'from' => 1467661160,
          'id' => 2808,
          'source_id' => '2147341551',
-         'text' => 'Buckower Damm: Baustelle zwischen Alt-Buckow und An den Achterhöfen, evtl. auch Einschränkungen für Radfahrer, bis zum 15.9.2017, eventuell auch länger',
+         'text' => 'Buckower Damm: Baustelle zwischen An den Achterhöfen und Mollnerweg, evtl. auch Einschränkungen für Radfahrer, bis Ende 2017',
          'type' => 'handicap',
-         'until' => 1505455200
+         'until' => 1514718000
        },
        undef,
        undef,
@@ -3780,7 +3793,7 @@ userdel	q4::inwork 12911,1815 12817,2031
        {
          'data' => '#: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität danach besser sein? vvv
 #: osm_watch: way id="136814135" version="15" vvv
-#: last_checked: 2017-07-15 vvv
+#: last_checked: 2017-07-31 vvv
 #: check_frequency: 14d vvv
 # REMOVED (hier nicht) --- userdel	2::inwork 3332,12742 3396,12741
 # REMOVED (hier nicht) --- userdel	2::inwork 3396,12741 3358,12718
@@ -3831,9 +3844,9 @@ userdel	q4::inwork 5059,7216 5064,7160 5081,7112
 ',
          'from' => 1485206028,
          'id' => 2847,
-         'text' => 'Stubenrauchstr.: zwischen Wiesbadener Str. und Rotdornstr. Bauarbeiten, Fahrbahn gesperrt, bis 31. Juli 2017',
+         'text' => 'Stubenrauchstr.: zwischen Wiesbadener Str. und Rotdornstr. Bauarbeiten, Fahrbahn gesperrt, bis 04. August 2017',
          'type' => 'handicap',
-         'until' => 1501495200
+         'until' => 1501840800
        },
        undef,
        undef,
@@ -3856,9 +3869,10 @@ userdel	q4::inwork; 5583,5179 5527,5217 5416,5289 5397,5302 5382,5312
        undef,
        undef,
        {
-         'data' => '#: XXX wann sind die Bauarbeiten beendet? laut Schild der Wasserbetriebe bis September oder Oktober
+         'data' => '#: XXX wann sind die Bauarbeiten beendet? laut Schild der Wasserbetriebe bis September oder Oktober; laut Pressemitteilung bis Ende 2017
+#: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
 #: last_checked: 2017-07-24 vvv
-#: next_check: 2017-08-24 vvv
+#: next_check: 2017-10-01 vvv
 	q3::inwork 13384,8354 13217,8493
 # REMOVED userdel	q3::inwork; 13217,8493 13262,8554
 	q3::inwork; 13262,8554 13301,8606 13314,8624
@@ -3958,7 +3972,7 @@ userdel	2::inwork 6815,8691 6912,8617
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2017-07-26
+         'data' => '#: last_checked: 2017-07-31
 #: check_frequency: 14d
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 ',
@@ -4110,9 +4124,9 @@ userdel	2::inwork -4098,13201 -4046,13177 -4017,13167
          'data' => '#: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2017/pressemitteilung.616643.php
 userdel	2::temp 10638,19149 10600,19225 10584,19132 10529,19055 10509,18981 10497,18883 10513,18854 10518,18750
 userdel	2::temp 10569,19395 10575,19327 10636,19289 10600,19225 10589,19275 10636,19289 10857,19379 11081,19456 11236,19509 11273,19521 11328,19413 11364,19313
-userdel	2::temp 10249,19148 10339,19179 10382,19066 10434,18907
+#userdel	2::temp 10249,19148 10339,19179 10382,19066 10434,18907
 userdel	2::temp 10575,19327 10503,19371
-userdel	2::temp 10294,19298 10339,19179
+#userdel	2::temp 10294,19298 10339,19179
 ',
          'from' => 1501272725,
          'id' => 2889,
@@ -4120,6 +4134,17 @@ userdel	2::temp 10294,19298 10339,19179
          'text' => 'Schlosspark Schönhausen: komplett gesperrt, voraussichtlich bis Mitte August 2017',
          'type' => 'gesperrt',
          'until' => 1502834399
+       },
+       {
+         'data' => '#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.617043.php
+userdel	q4::inwork 17734,675 17928,764 18023,833
+',
+         'from' => 1501439878,
+         'id' => 2890,
+         'source_id' => 'https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730',
+         'text' => 'Ostburger Weg: Bauarbeiten zwischen Will-Meisel-Weg und Am Espenpfuhl, Fahrbahn gesperrt, ab Ende Juli bis Mitte Dezember 2017',
+         'type' => 'handicap',
+         'until' => 1513378799
        }
      
 );
