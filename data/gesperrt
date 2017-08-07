@@ -136,7 +136,7 @@ Hardenbergplatz	1 5542,11075 5565,11147 5666,11362 5698,11333 5600,11114 5542,11
 (Waterloo-Ufer - Zossener Str.)	1 9858,10199 9825,10206
 Greinerstr.	1 8340,3242 8327,2987
 Dederingstr.	1 8455,2977 8476,3367
-Weserstr. (Friedrichshain)	1 14416,11815 14471,11782
+Weserstr. (Friedrichshain)	1 14416,11815 14475,11778
 Quickborner Str.	1 8016,21499 8162,21302
 Berliner Str. (Blankenfelde)	1 9490,23531 9437,23680 9415,23699
 Molkenmarkt - zur Stralauer Str.	1 10804,12291 10772,12288 10736,12285 10675,12280
@@ -159,7 +159,7 @@ Kirchstr.	1 22196,4847 22240,4768 22246,4711 22284,4653
 Kirchstr.	1s 22314,4604 22284,4653
 Kietzer Str.	1s 22372,4496 22383,4470
 Ontarioseestr.	1 18585,10024 18408,10041
-Degnerstr. (außer Tram)	1 16448,15593 16475,15659
+Degnerstr. (außer Tram)	1 16448,15593 16469,15659
 Henriette-Herz-Platz	1 10371,13006 10312,12982 10255,12959
 Savignyplatz	1 4921,11017 4920,10933 4868,10934 4817,10943 4827,11025 4835,11092 4880,11088 4926,11081 4921,11017
 Dresdener Str./Oranienplatz	1 11258,10682 11234,10739
@@ -251,7 +251,7 @@ Florapromenade	1 10207,17448 10284,17458 10320,17487 10311,17764
 Takustr.	1 3321,5212 3209,5214 3079,5411 2953,5606 2909,5674
 Schönerlinder Str.	1 21799,4319 21633,4355
 Mentzelstr.	1 21579,4579 21546,4457
-Amalienstr.	1 13794,16773 13722,16843 13653,16907 13589,16965
+Amalienstr.	1 13794,16773 13722,16843 13653,16907 13581,16968
 Cosimaplatz	1 5490,7651 5458,7683 5493,7717 5528,7683 5490,7651
 Reiherbeize	1 444,4498 593,4262
 Mendelssohnstr.	1 11598,13598 11550,13642 11545,13690
@@ -696,7 +696,7 @@ Hefnersteig	1 1364,14191 1392,14287 1420,14369
 Bödikersteig	1 1141,14237 1182,14384
 Dorfstr. (Rahnsdorf)	1 29998,3170 29921,3079 29902,3104 29998,3170
 Grunerstr. - Gustav-Böß-Str.	1 10772,12515 10953,12638
-Grumbkowstr.	1 11563,20048 11627,19907 11695,19760
+Grumbkowstr.	1 11555,20051 11627,19907 11695,19760
 Hardangerstr.	1 11725,16630 11720,16752
 (Weg)	2 14432,20188 14463,20160
 Caseler Str.	1s 14732,16770 14700,16790 14608,16772
@@ -743,7 +743,7 @@ Alfred-Kowalke-Str.	1 18027,11244 18059,11256 18179,11278 18200,11269 18229,1125
 Alfred-Kowalke-Str.	1 18229,11256 18202,11253 18061,11240 18027,11244
 Wittenbergplatz	1 6171,10657 6228,10646 6292,10627 6353,10583
 Wittenbergplatz	1 6353,10583 6268,10588 6216,10614 6171,10657
-Amalienstr.	1s 13794,16773 13722,16843 13653,16907 13589,16965
+Amalienstr.	1s 13794,16773 13722,16843 13653,16907 13581,16968
 Pasedagplatz	1 14099,17195 14150,17255 14170,17249
 (Vorfahrt am Bahnhof Friedrichstr.)	1 9303,12718 9171,12758
 Aristotelessteig	1s 18496,9628 18527,9623 18660,9599
@@ -830,6 +830,7 @@ Hundsfelder Str.	1 21898,-303 21811,-409 21700,-537 21688,-589
 Joachim-Karnatz-Allee	1 7175,12630 7184,12602 7418,12601
 Joachim-Karnatz-Allee	1 7419,12584 7144,12580 7139,12589 7131,12615
 Waldkraiburger Str.: Betriebsgelände	2 12283,4971 12468,5000
+(Falkenberger Chaussee - Darßer Str.)	1 16785,17524 16825,17537 16848,17530 16947,17506
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Knoten Märkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
@@ -1721,9 +1722,9 @@ Stubbenkammerstr. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn, aber Ampe
 Mittelstreifen mit Straßenbahn, hier aber Fußgängerfurt vorhanden	3nocross::ignrte 11709,14856 11682,14777 11655,14697
 Prenzlauer Allee -> Chodowieckistr.: Mittelstreifen mit Straßenbahn, hier aber Fußgängerfurt vorhanden	3::igndisp 11709,14856 11682,14777 11982,14614
 Chodowieckistr. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn, hier aber Fußgängerfurt vorhanden	3::igndisp 11982,14614 11682,14777 11655,14697
-Mittelstreifen mit Straßenbahn	3nocross::ignrte 12075,16144 12030,15968 11995,15827
+Mittelstreifen mit Straßenbahn	3nocross::ignrte 12075,16144 12061,16091 12030,15968 11995,15827
 Kuglerstr. -> Prenzlauer Allee [Wohngebiet]: Mittelstreifen mit Straßenbahn	3::igndisp 11961,16002 12030,15968 12154,15902
-Kuglerstr. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn	3::igndisp 11961,16002 12030,15968 12075,16144
+Kuglerstr. -> Prenzlauer Allee: Mittelstreifen mit Straßenbahn	3::igndisp 11961,16002 12030,15968 12061,16091
 Prenzlauer Allee -> Kuglerstr.: Mittelstreifen mit Straßenbahn	3::igndisp 11995,15827 12030,15968 11961,16002
 Straßenbahntrasse	3nocross::ignrte 11941,15586 11967,15700 11995,15827
 Zelterstr. -> Küselstr.: Straßenbahntrasse	3::igndisp 11852,15765 11967,15700 12058,15621
@@ -1795,6 +1796,9 @@ Mittelstreifen	3nocross::ignrte 19896,11688 19918,11891 19928,11978 19940,12076 
 Alt-Biesdorf -> Alt-Friedrichsfelde: Mittelstreifen	3::igndisp 19979,11774 19918,11891 19890,11830
 Haydnstr. -> Märkische Allee: Mittelstreifen	3::igndisp 20006,12128 19947,12140 19944,12115
 Märkische Allee -> Haydnstr.: Mittelstreifen	3::igndisp 19953,12177 19947,12140 20006,12128
+Straßenbahntrasse	3nocross::ignrte 18196,18254 18530,18327 18601,18342
+Falkenberger Chaussee -> Falkenberger Fußst.: Straßenbahntrasse	3::igndisp 18196,18254 18530,18327 18521,18347
+Falkenberger Fußst. -> Falkenberger Chaussee: Straßenbahntrasse	3::igndisp 18521,18347 18530,18327 18601,18342
 unbequemes Abbiegen	3nocross::ignrte 13332,10832 13389,10808 13496,10763 13596,10722
 Warschauer Pl. -> Stralauer Allee: unbequemes Abbiegen	3::igndisp 13471,10983 13389,10808 13496,10763
 Stralauer Allee -> Naglerstr.: unbequemes Abbiegen	3::igndisp 13389,10808 13496,10763 13575,10963
@@ -2178,6 +2182,15 @@ Garystr. -> Saargemünder Str.: Mittelstreifen	3::igndisp 1736,4774 1747,4829 147
 Mittelstreifen	3nocross::ignrte 5758,11895 5810,11902 5900,11913
 Tiergartenufer -> Str. des 17. Juni: Mittelstreifen	3::igndisp 5813,11886 5810,11902 5758,11895
 Str. des 17. Juni -> Tiergartenufer: Mittelstreifen	3::igndisp 5900,11913 5810,11902 5813,11886
+Mittelstreifen	3nocross::ignrte 9251,23578 9307,23456 9528,23240
+Mönchmühler Str. -> Blankenfelder Chaussee: Mittelstreifen	3::igndisp 9152,23410 9307,23456 9251,23578
+Blankenfelder Chaussee -> Mönchmühler Str.: Mittelstreifen	3::igndisp 9528,23240 9307,23456 9152,23410
+Mittelstreifen	3nocross::ignrte 9307,23456 9528,23240 9747,22694
+Blankenfelder Chaussee -> Berliner Str.: Mittelstreifen	3::igndisp 9307,23456 9528,23240 9490,23531
+Berliner Str. -> Blankenfelder Chaussee: Mittelstreifen	3::igndisp 9490,23531 9528,23240 9747,22694
+Mittelstreifen	3nocross::ignrte 9528,23240 9747,22694 9973,22133
+Blankenfelder Chaussee -> Blankenfelder Chaussee: Mittelstreifen	3::igndisp 9469,22606 9747,22694 9528,23240
+Blankenfelder Chaussee -> Blankenfelder Chaussee: Mittelstreifen	3::igndisp 9973,22133 9747,22694 9469,22606
 Geländer am Gehweg	3nocross::ignrte 7628,4521 7667,4549 7690,4563
 Mariendorfer-Hafen-Weg -> Attilastr.: Geländer am Gehweg	3::igndisp 7692,4464 7667,4549 7628,4521
 unbequemes Überqueren	3nocross::ignrte 6613,3320 6647,3292 6712,3237
@@ -2511,7 +2524,6 @@ Poller	BNP:1:11:trailer=6 8350,10662
 Drängelgitter	BNP:3:-194:trailer=10 10062,15927
 zwei Drängelgitter	BNP:6:64:trailer=15 10038,15418
 Schranke	BNP:3:-93 -7969,-1659
-Drängelgitter	BNP:3:-124:trailer=10 18126,9075
 Drängelgitter	BNP:3:-50:trailer=10 27115,11335
 Schranke	BNP:3:-211:trailer=10 22004,17470
 zwei Drängelgitter an der Straßenbahntrasse	BNP:5:-117:trailer=15 21860,18718
@@ -2857,6 +2869,10 @@ Drängelgitter	BNP:3:-240 31665,48997
 Schranke	BNP:3:-59:trailer=10 8041,-3322
 Schranke	BNP:3:-64:trailer=10 6876,-2731
 Schranke	BNP:3:-78:trailer=10 17215,12485
+Schranke	BNP:10:-182:trailer=20 15334,16718
+Drängelgitter	BNP:3:0:trailer=10 3783,-2079
+(entlang der Erpe): Bauarbeiten der DB	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
+(Marseillestr. - Straße 160): wegen Bauarbeiten gesperrt	2::inwork 12495,21397 12507,21391 12547,21372
 Rigaer Str.: Komplettsperrung zwischen Schreinerstr. und Voigtstr.	2::inwork 14538,12371 14748,12314
 Gutspark Neukladow: Bauarbeiten, Weg komplett gesperrt	2::inwork -6366,5215 -6198,5357
 Amberbaumallee: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork -6410,6549 -6556,6663 -6661,6743
@@ -2883,12 +2899,11 @@ Mengerzeile: Baustelle, Einbahnstraßenregelung	1s 13176,9302 13100,9210
 Heidelberger Str.: Baustelle, Einbahnstraßenregelung	1s 13489,9199 13420,9259 13357,9313
 Chausseestr.: Baustelle, Einbahnstraßenregelung	1s 8732,14098 8654,14194
 Chausseestr.: Baustelle, Einbahnstraßenregelung	1s 8654,14194 8607,14253 8527,14352 8442,14456
-Türrschmidtstr.: Bauarbeiten, Einbahnstraße	1s 15541,10892 15649,10922 15756,10966
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s 9042,11839 8969,11814
 Nordhafenpark West: während der Umgestaltung gesperrt	2::inwork 7636,14414 7612,14449 7561,14458 7426,14539 7368,14573
 Marzahner Str. - Gensinger Str.: wegen Bauarbeiten gesperrt	2::inwork 18702,11921 18888,11910 18913,11909
 Corinthstr.: Baustelle, Einbahnstraßenregelung	1s 14447,10491 14270,10584
-Minna-Todenhagen-Str.: wird noch gebaut	2::inwork 17585,7525 17453,7451 17295,7344 17211,7280 17091,7175 16971,7058 16720,6845
+Minna-Todenhagen-Str.: wird noch gebaut	2::inwork 17585,7525 17453,7451 17295,7344 17211,7280 17091,7175 16971,7058 16747,6813
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12620,9293 12565,9200 12548,9167
 E.T.A.-Hoffmann-Promenade: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 9679,10710 9777,10719
 Fünf Morgen: Bauarbeiten, gesperrt	2::inwork 1437,5015 1486,5175
@@ -3290,7 +3305,9 @@ Drängelgitter	BNP:5:74 5860,805
 Drängelgitter	BNP:5:66 5684,773
 Straßenbahn	3nocross::ignrte 16837,17440 16947,17506 17159,17631
 Falkenberger Chaussee -> Rüdickenstr.: Straßenbahn	3::igndisp 17159,17631 16947,17506 16992,17472
+Falkenberger Chaussee -> Darßer Str.: Straßenbahn	3::igndisp 16837,17440 16947,17506 16848,17530
 Rüdickenstr. -> Falkenberger Chaussee: Straßenbahn	3::igndisp 16992,17472 16947,17506 16837,17440
+Rüdickenstr. -> Darßer Str.: Straßenbahn	3::igndisp 16992,17472 16947,17506 16848,17530
 Rudolf-Reusch-Str. [Wohngebiet]	1 15732,12562 15657,12562 15657,12648 15732,12650
 Letteallee	1 8226,17479 8110,17470 8014,17468 7845,17455 7707,17445 7675,17430
 Mickestr.	1 8185,17352 8134,17398 8110,17470
@@ -3500,3 +3517,4 @@ Alexanderstr., linker Gehweg	1::igndisp 11353,12436 11329,12497
 Straße des 17. Juni, linker Geh/Radweg	1::igndisp 5758,11895 5813,11886
 Paul-Schneider-Str., linker Gehweg	1::igndisp 6712,3237 6653,3297 6613,3320
 Rummelsburger Str., linker Geh/Radweg	1::igndisp 17769,7465 17833,7351
+Falkenberger Chaussee, linker Geh/Radweg	1::igndisp 18601,18342 18521,18347

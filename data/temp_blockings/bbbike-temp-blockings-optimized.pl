@@ -2687,33 +2687,7 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.bierfestival-berlin.de/?y=2017
-#: tempex 20170804-20170806 vvv
-userdel	2::temp 12360,12505 12362,12540 12364,12589
-userdel	2::temp 12891,12549 12869,12425
-userdel	2::temp 12632,12630 12596,12472
-userdel	2::temp 13448,12340 13484,12436
-userdel	2::temp 13552,12435 13543,12326
-#zukünftig, wenn dieser Weg eingetragen ist: userdel	2::temp 13163,12382 13176,12500
-#: tempex ^^^
-',
-         'from' => 1501747200,
-         'id' => 2262,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              31,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Lebuser Str., Koppenstr. und Str. der Pariser Kommune (Friedrichshain): Veranstaltung (Internationales Berliner Bierfestival), Straßen nördlich der Karl-Marx-Allee vollständig gesperrt (4.8.2017 bis 6.8.2017)',
-         'type' => 'gesperrt',
-         'until' => 1502064000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3791,7 +3765,7 @@ userdel	q4::inwork 12911,1815 12940,1547
        undef,
        undef,
        {
-         'data' => '#: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität danach besser sein? vvv
+         'data' => '#: add_fragezeichen: Sind die Bauarbeiten beendet und der Weg freigegeben? vvv
 #: osm_watch: way id="136814135" version="15" vvv
 #: last_checked: 2017-07-31 vvv
 #: check_frequency: 14d vvv
@@ -3802,7 +3776,7 @@ userdel	2::inwork 3741,12607 3654,12672
 #: check_frequency ^^^
 #: last_checked ^^^
 #: osm_watch ^^^
-#: XXX ^^^
+#: add_fragezeichen ^^^
 ',
          'from' => undef,
          'id' => 2830,
@@ -3838,16 +3812,7 @@ userdel	2::inwork 3741,12607 3654,12672
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: LMS-BR_r_LMS-BR_88478
-userdel	q4::inwork 5059,7216 5064,7160 5081,7112
-',
-         'from' => 1485206028,
-         'id' => 2847,
-         'text' => 'Stubenrauchstr.: zwischen Wiesbadener Str. und Rotdornstr. Bauarbeiten, Fahrbahn gesperrt, bis 04. August 2017',
-         'type' => 'handicap',
-         'until' => 1501840800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3953,7 +3918,7 @@ userdel	2::inwork 21685,916 21708,937 21857,989 21977,988
          'from' => 1497556689,
          'id' => 2869,
          'source_id' => '2147341179',
-         'text' => 'Schönerlinder Str.: Autobahnbrücke gesperrt, unklar, ob Radfahrer und Fußgänger trotzdem passieren können, bis 31.08.2017',
+         'text' => 'Schönerlinder Str.: Autobahnbrücke gesperrt, Radfahrer und Fußgänger können unter Umständen trotzdem passieren, bis 31.08.2017',
          'type' => 'gesperrt',
          'until' => 1504216800
        },
@@ -3972,7 +3937,7 @@ userdel	2::inwork 6815,8691 6912,8617
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2017-07-31
+         'data' => '#: last_checked: 2017-08-05
 #: check_frequency: 14d
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 ',
@@ -4122,18 +4087,20 @@ userdel	2::inwork -4098,13201 -4046,13177 -4017,13167
        },
        {
          'data' => '#: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2017/pressemitteilung.616643.php
-userdel	2::temp 10638,19149 10600,19225 10584,19132 10529,19055 10509,18981 10497,18883 10513,18854 10518,18750
-userdel	2::temp 10569,19395 10575,19327 10636,19289 10600,19225 10589,19275 10636,19289 10857,19379 11081,19456 11236,19509 11273,19521 11328,19413 11364,19313
-#userdel	2::temp 10249,19148 10339,19179 10382,19066 10434,18907
-userdel	2::temp 10575,19327 10503,19371
-#userdel	2::temp 10294,19298 10339,19179
+# REMOVED --- userdel	2::temp 10638,19149 10600,19225 10584,19132 10529,19055 10509,18981 10497,18883 10513,18854 10518,18750
+# REMOVED --- userdel	2::temp 10569,19395 10575,19327 10636,19289 10600,19225 10589,19275 10636,19289 10857,19379 11081,19456 11236,19509 11273,19521 11328,19413 11364,19313
+# REMOVED --- userdel	2::temp 10249,19148 10339,19179 10382,19066 10434,18907
+# REMOVED --- userdel	2::temp 10575,19327 10503,19371
+# REMOVED --- userdel	2::temp 10294,19298 10339,19179
+#: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2017/pressemitteilung.619226.php
+	2::temp 10636,19289 10857,19379 11081,19456 11236,19509 11273,19521
 ',
          'from' => 1501272725,
          'id' => 2889,
          'source_id' => 'http://www.berliner-zeitung.de/berlin/pankow-lebensgefahr-fuer-besucher--schlosspark-schoenhausen-gesperrt-28080750',
-         'text' => 'Schlosspark Schönhausen: komplett gesperrt, voraussichtlich bis Mitte August 2017',
+         'text' => 'Schlosspark Schönhausen: Schloßallee ist gesperrt, voraussichtlich bis Mitte August 2017',
          'type' => 'gesperrt',
-         'until' => 1502834399
+         'until' => 1502488799
        },
        {
          'data' => '#: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.617043.php
@@ -4147,8 +4114,7 @@ userdel	q4::inwork 17734,675 17928,764 18023,833
          'until' => 1513378799
        },
        {
-         'data' => '#: XXX Beeinträchtigung für Radfahrer feststellen...
-userdel	q4::inwork 13716,8410 13648,8321 13566,8212 13510,8138
+         'data' => 'userdel	q3::inwork 13716,8410 13648,8321 13566,8212 13510,8138
 ',
          'from' => 1501618467,
          'id' => 2891,
@@ -4156,6 +4122,36 @@ userdel	q4::inwork 13716,8410 13648,8321 13566,8212 13510,8138
          'text' => 'Treptower Str.: zwischen Weigandufer und Stuttgarter Str. Bauarbeiten, Fahrbahn gesperrt, bis 18.08.2017',
          'type' => 'handicap',
          'until' => 1503093600
+       },
+       {
+         'data' => 'userdel	q4::inwork 23102,1637 23185,1649
+',
+         'from' => 1503784800,
+         'id' => 2892,
+         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.619071.php',
+         'text' => 'Müggelbergallee: Bauarbeiten, Fahrbahn gesperrt, vom 28.08.2017 bis 02.10.2017',
+         'type' => 'handicap',
+         'until' => 1506981600
+       },
+       {
+         'data' => '#: source_id: LMS-BR_r_LMS-BR_104443_LMS-BR_72
+userdel	q4::inwork 2636,23915 2663,23875
+',
+         'from' => 1501870668,
+         'id' => 2893,
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.619229.php',
+         'text' => 'Frohnauer Str.: Bauarbeiten zwischen Klosterheider Weg und Am Dominikusteich, Fahrbahn gesperrt, bis 11. August 2017',
+         'type' => 'handicap',
+         'until' => 1502445600
+       },
+       {
+         'data' => 'userdel	q4::inwork 3069,11551 2924,11309
+',
+         'from' => 1501870960,
+         'id' => 2894,
+         'text' => 'Witzlebenstr.: zwischen Steifensandstr. und Kaiserdamm gesperrt, eventuell sind auch Radfahrer betroffen, bis 30.09.2017',
+         'type' => 'handicap',
+         'until' => 1506808800
        }
      
 );

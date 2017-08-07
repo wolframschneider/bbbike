@@ -5562,7 +5562,7 @@ EOF
        text  => 'K 7239 Diedersdorf-Birkholz OD Diedersdorf, Kno. Birkholzer Str./ Chausseestr. Bau Kreisverkehrsplatz Vollsperrung 15.08.2006-28.09.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 7513,-5721 7399,-7001
+userdel	q4::inwork 7513,-5721 7356,-6995
 EOF
      },
      { from  => 1156024800, # 2006-08-20 00:00
@@ -5910,7 +5910,7 @@ EOF
        text  => 'L 030 Spreebordstraße OL Neu Zittau Deckeneinbau Vollsperrung 06.10.2006-08.10.2006 ',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork 33839,-1057 33773,-1116 33628,-1509
+userdel	q4::inwork 33839,-1057 33743,-1143 33742,-1197 33638,-1495
 EOF
      },
      { from  => 1140303600, # 2006-02-19 00:00
@@ -6011,7 +6011,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003679',
        data  => <<EOF,
-userdel	1::inwork 19529,17902 19202,17471 19183,17444 19108,17347 18738,16957
+userdel	1::inwork 19529,17902 19197,17464 19183,17444 19108,17347 18738,16957
 EOF
      },
      { from  => 1159207506, # 2006-09-25 20:05
@@ -11831,7 +11831,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_009192',
        data  => <<EOF,
-userdel	1::inwork 11563,20048 11541,20090 11419,20327 11269,20667
+userdel	1::inwork 11555,20051 11535,20092 11419,20327 11269,20667
 EOF
      },
      { from  => 1214257459, # 2008-06-23 23:44
@@ -12769,7 +12769,7 @@ EOF
        text  => 'L 030 Neu Zittauer Str. OD Erkner Straßenbauarbeiten halbseitig gesperrt; Einbahnstraße 12.09.2008-17.09.2008 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	1::inwork 34232,888 34449,1689 34421,1950
+userdel	1::inwork 34232,888 34374,1414 34438,1662 34421,1950
 EOF
      },
      { from  => 1221602400, # 2008-09-17 00:00
@@ -13966,7 +13966,7 @@ EOF
        text  => 'L 075 Mahlow - Großziethen zw. Kreuzg. B96A u. Kleinziethen Deckeninstandsetzung Vollsperrung 27.04.2009-15.05.2009 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 13506,-2809 13393,-3084 13373,-3234 13321,-3678 13302,-4314 13301,-4355 13237,-4511 13215,-4564 13289,-4660
+userdel	2::inwork 13506,-2809 13393,-3084 13373,-3234 13321,-3678 13302,-4314 13301,-4355 13237,-4511 13215,-4564 13288,-4644
 EOF
      },
      { from  => 1240783200, # 2009-04-27 00:00
@@ -14413,7 +14413,7 @@ EOF
        text  => 'L 076 Mahlow - Teltow zw. Abzw. Birkholz und Abzw. Großbeeren Straßenbau Vollsperrung 02.06.2009-31.01.2010 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2::inwork 7927,-4232 7710,-3956 6972,-3721 6929,-3827 6371,-3887 6000,-3711 5810,-3604 5731,-3508 5838,-3339 5399,-3049
+userdel	2::inwork 7924,-4240 7727,-3982 7646,-3929 6972,-3713 6929,-3827 6371,-3887 6013,-3717 5810,-3604 5731,-3508 5810,-3457 5838,-3339 5623,-3182 5399,-3049
 EOF
      },
      { from  => 1243807200, # 2009-06-01 00:00
@@ -21063,7 +21063,7 @@ EOF
        type  => 'handicap',
        source_id => 'INKO_115090',
        data  => <<EOF,
-userdel	q4::inwork 13589,16965 13754,17133 13812,17206 13832,17232 13904,17325
+userdel	q4::inwork 13581,16968 13754,17133 13812,17206 13832,17232 13904,17325
 EOF
      },
      { from  => 1348981200, # 2012-09-30 07:00
@@ -21601,7 +21601,7 @@ EOF
 #: source_id: IM_021030
 #: last_checked: 2014-05-21
 #: next_check: 2014-06-30
-userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 11162,19844 11312,19920 11425,19978 11563,20048
+userdel	q4::inwork; 11695,19760 11652,19743 11437,19664 11278,19607 11229,19706 11162,19844 11309,19923 11423,19982 11555,20051
 EOF
      },
      { from  => $isodate2epoch->("2017-05-30 00:00:00"), # 1 Tag Vorlauf
@@ -23040,7 +23040,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-pankow/presse/archiv/20140528.1315.397553.html',
        data  => <<EOF,
-userdel	q2::inwork 11563,20048 11541,20090 11419,20327
+userdel	q2::inwork 11555,20051 11535,20092 11419,20327
 EOF
      },
      { from  => 1402304400, # 2014-06-09 11:00
@@ -23264,14 +23264,14 @@ userdel	q4::inwork 15272,14691 15345,14736 15383,14759 15562,14869 15580,14880 1
 # userdel	q4::inwork; 16412,15559 16448,15593 16497,15636 16615,15737 16633,15753
 userdel	q4::inwork; 16633,15753 16819,15912 16941,16021
 # userdel	q4::inwork; 15937,15134 16075,15069 16123,15025
-#	3 16475,15659 16497,15636 16615,15737
-#	3 16615,15737 16497,15636 16475,15659
-#	3 16475,15659 16497,15636 16448,15593
-#	3 16448,15593 16497,15636 16475,15659
-#	3 16475,15659 16448,15593 16497,15636
-#	3 16497,15636 16448,15593 16475,15659
-#	3 16475,15659 16448,15593 16412,15559
-#	3 16412,15559 16448,15593 16475,15659
+#	3 16469,15659 16497,15636 16615,15737
+#	3 16615,15737 16497,15636 16469,15659
+#	3 16469,15659 16497,15636 16448,15593
+#	3 16448,15593 16497,15636 16469,15659
+#	3 16469,15659 16448,15593 16497,15636
+#	3 16497,15636 16448,15593 16469,15659
+#	3 16469,15659 16448,15593 16412,15559
+#	3 16412,15559 16448,15593 16469,15659
 #	3 16251,15629 16412,15559 16550,15503
 #	3 16550,15503 16412,15559 16251,15629
 #	3 15996,15620 16331,15486 16406,15452
@@ -25699,7 +25699,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-charlottenburg-wilmersdorf/aktuelles/pressemitteilungen/2016/pressemitteilung.515606.php',
        data  => <<EOF,
-#: XXX Wann sind die Bauarbeiten beendet? Wird die Qualität danach besser sein? vvv
+#: add_fragezeichen: Sind die Bauarbeiten beendet und der Weg freigegeben? vvv
 #: osm_watch: way id="136814135" version="15" vvv
 #: last_checked: 2017-07-31 vvv
 #: check_frequency: 14d vvv
@@ -25710,7 +25710,7 @@ userdel	2::inwork 3741,12607 3654,12672
 #: check_frequency ^^^
 #: last_checked ^^^
 #: osm_watch ^^^
-#: XXX ^^^
+#: add_fragezeichen ^^^
 EOF
      },
      { from  => undef, # 
@@ -26107,7 +26107,7 @@ EOF
      },
      { from  => 1497556689, # 2017-06-15 21:58
        until => 1504216800, # 2017-09-01 00:00
-       text  => 'Schönerlinder Str.: Autobahnbrücke gesperrt, unklar, ob Radfahrer und Fußgänger trotzdem passieren können, bis 31.08.2017',
+       text  => 'Schönerlinder Str.: Autobahnbrücke gesperrt, Radfahrer und Fußgänger können unter Umständen trotzdem passieren, bis 31.08.2017',
        type  => 'gesperrt',
        source_id => '2147341179',
        data  => <<EOF,
@@ -26132,7 +26132,7 @@ EOF
        text  => 'DB-Werkstraße (Markgrafendamm): wegen Bauarbeiten kann die Fahrbahn gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2017-07-31
+#: last_checked: 2017-08-05
 #: check_frequency: 14d
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 EOF
@@ -26328,17 +26328,19 @@ userdel	2::inwork 14538,12371 14748,12314
 EOF
      },
      { from  => 1501272725, # 2017-07-28 22:12
-       until => 1502834399, # 2017-08-15 23:59
-       text  => 'Schlosspark Schönhausen: komplett gesperrt, voraussichtlich bis Mitte August 2017',
+       until => $isodate2epoch->("2017-08-11 23:59:59"), # 1502834399, # 2017-08-15 23:59
+       text  => 'Schlosspark Schönhausen: Schloßallee ist gesperrt, voraussichtlich bis Mitte August 2017',
        type  => 'gesperrt',
        source_id => 'http://www.berliner-zeitung.de/berlin/pankow-lebensgefahr-fuer-besucher--schlosspark-schoenhausen-gesperrt-28080750',
        data  => <<EOF,
 #: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2017/pressemitteilung.616643.php
-userdel	2::temp 10638,19149 10600,19225 10584,19132 10529,19055 10509,18981 10497,18883 10513,18854 10518,18750
-userdel	2::temp 10569,19395 10575,19327 10636,19289 10600,19225 10589,19275 10636,19289 10857,19379 11081,19456 11236,19509 11273,19521 11328,19413 11364,19313
-#userdel	2::temp 10249,19148 10339,19179 10382,19066 10434,18907
-userdel	2::temp 10575,19327 10503,19371
-#userdel	2::temp 10294,19298 10339,19179
+# REMOVED --- userdel	2::temp 10638,19149 10600,19225 10584,19132 10529,19055 10509,18981 10497,18883 10513,18854 10518,18750
+# REMOVED --- userdel	2::temp 10569,19395 10575,19327 10636,19289 10600,19225 10589,19275 10636,19289 10857,19379 11081,19456 11236,19509 11273,19521 11328,19413 11364,19313
+# REMOVED --- userdel	2::temp 10249,19148 10339,19179 10382,19066 10434,18907
+# REMOVED --- userdel	2::temp 10575,19327 10503,19371
+# REMOVED --- userdel	2::temp 10294,19298 10339,19179
+#: by: http://www.berlin.de/ba-pankow/aktuelles/pressemitteilungen/2017/pressemitteilung.619226.php
+	2::temp 10636,19289 10857,19379 11081,19456 11236,19509 11273,19521
 EOF
      },
      { from  => 1501439878, # 2017-07-30 20:37
@@ -26357,8 +26359,34 @@ EOF
        type  => 'handicap',
        source_id => '2147341662',
        data  => <<EOF,
-#: XXX Beeinträchtigung für Radfahrer feststellen...
-userdel	q4::inwork 13716,8410 13648,8321 13566,8212 13510,8138
+userdel	q3::inwork 13716,8410 13648,8321 13566,8212 13510,8138
+EOF
+     },
+     { from  => 1503784800, # 2017-08-27 00:00
+       until => 1506981600, # 2017-10-03 00:00
+       text  => 'Müggelbergallee: Bauarbeiten, Fahrbahn gesperrt, vom 28.08.2017 bis 02.10.2017',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.619071.php',
+       data  => <<EOF,
+userdel	q4::inwork 23102,1637 23185,1649
+EOF
+     },
+     { from  => 1501870668, # 2017-08-04 20:17
+       until => $isodate2epoch->("2017-08-11 12:00:00"), # 1502834399, # 2017-08-15 23:59
+       text  => 'Frohnauer Str.: Bauarbeiten zwischen Klosterheider Weg und Am Dominikusteich, Fahrbahn gesperrt, bis 11. August 2017',
+       type  => 'handicap',
+       source_id => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.619229.php',
+       data  => <<EOF,
+#: source_id: LMS-BR_r_LMS-BR_104443_LMS-BR_72
+userdel	q4::inwork 2636,23915 2663,23875
+EOF
+     },
+     { from  => 1501870960, # 2017-08-04 20:22
+       until => 1506808800, # 2017-10-01 00:00
+       text  => 'Witzlebenstr.: zwischen Steifensandstr. und Kaiserdamm gesperrt, eventuell sind auch Radfahrer betroffen, bis 30.09.2017',
+       type  => 'handicap',
+       data  => <<EOF,
+userdel	q4::inwork 3069,11551 2924,11309
 EOF
      },
     );
