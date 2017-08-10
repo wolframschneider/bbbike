@@ -6171,8 +6171,8 @@ sub define_item_attribs {
     %outline_color =
 	('s' => 'grey70',
 	 'l' => 'grey70',
-	 'w' => 'blue4',
-	 'i' => 'blue4',
+	 'w' => '#3d8ff7',
+	 'i' => '#3d8ff7',
 	);
     %str_file =
 	(# "primary"
@@ -19932,7 +19932,7 @@ sub status_message {
 	    $status_message_toplevel->raise;
 	    $l = $status_message_toplevel->Subwidget("Text");
 	} else {
-	    $status_message_toplevel = $top->Toplevel;
+	    $status_message_toplevel = $top->Toplevel(-title => M"Mitteilung");
 	    set_as_toolwindow($status_message_toplevel);
 	    $status_message_toplevel->geometry('+30+30'); # XXX better geometry
 	}
