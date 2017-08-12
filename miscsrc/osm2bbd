@@ -16,7 +16,7 @@ use FindBin;
 use lib "$FindBin::RealBin/..";
 
 use vars qw($VERSION);
-$VERSION = '0.22';
+$VERSION = '0.24';
 
 use Cwd qw(getcwd realpath);
 use Data::Dumper;
@@ -78,6 +78,7 @@ my $height_db_file;
 my $use_height_db = 0;
 my $no_create;
 my $git_id = "";
+my $handle_relations = 1;
 
 my %experiments;
 my %known_experiments = map {($_,1)} qw(add_postal_code coastline_hack polar_coord_hack handle_relations);
@@ -118,6 +119,8 @@ osmfile ...       Files downloaded by downloadosm,
 -no-create	  do not store create date and cwd
 --git-id=gitid	  store gid id in bbd output files
 --granularity=<100|10_000>	  granularity
+-no-handle-relations Skip parsing and handling relations
+                     (e.g. for memory reasons)
 EOF
 }
 
@@ -146,12 +149,14 @@ GetOptions("o=s" => \$o,
 	   "ignore-unhandled!" => \$ignore_unhandled,
 	   "ignore-underline!" => \$ignore_underline,
 	   "ignore-underline-noname!" => \$ignore_underline_noname,
+	   "handle-relations!" => \$handle_relations,
 	   'experiment=s@' => sub {
 	       my $exp = $_[1];
 	       if (!$known_experiments{$exp}) {
 		   die <<EOF;
 Unknown experiment '$exp'. Known experiments are:
 @{[ sort keys %known_experiments ]}
+(handle_relations is actually set on by default)
 EOF
 	       }
 	       $experiments{$exp}++;
@@ -220,7 +225,6 @@ my %resolve_node_later;
 my @bbox_wgs84;
 my %global_directives;
 my %place_to_population;
-my $handle_relations = $experiments{'handle_relations'};
 my %additional_data_per_file;
 my %addr;
 tie %addr, 'Tie::IxHash' if SORTED_ELEMENTS;
@@ -564,13 +568,18 @@ if ($experiments{'polar_coord_hack'}) {
 	my $osm_download_file_qr = qr{/download_(-?\d+\.\d+),(-?\d+\.\d+),(-?\d+\.\d+),(-?\d+\.\d+)\.osm(?:\.gz|\.bz2|\.pbf)?$};
 	# XXX it would be better to read the bboxes of all XML files
 	for my $osm_file (@osm_files) {
+	    my($this_min_lat, $this_max_lat);
 	    if ($osm_file =~ $osm_download_file_qr) {
-		if (!defined $min_lat || $2 < $min_lat) {
-		    $min_lat = $2;
-		}
-		if (!defined $max_lat || $4 > $max_lat) {
-		    $max_lat = $4;
-		}
+		($this_min_lat, $this_max_lat) = ($2, $4);
+	    } else {
+		(undef, $this_min_lat, undef, $this_max_lat) = eval { get_bounds_from_osm_file($osm_file) };
+		warn "WARNING: cannot get bounds from $osm_file: $@" if $@;
+	    }
+	    if (defined $this_min_lat && (!defined $min_lat || $this_min_lat < $min_lat)) {
+		$min_lat = $this_min_lat;
+	    }
+	    if (defined $this_max_lat && (!defined $max_lat || $this_max_lat > $max_lat)) {
+		$max_lat = $this_max_lat;
 	    }
 	}
 	if (defined $min_lat && defined $max_lat) {
@@ -580,8 +589,8 @@ if ($experiments{'polar_coord_hack'}) {
     if (!defined $lat) {
 	die <<EOF;
 Cannot apply polar_coord_hack experiment, because the center could not
-apply polar_coorbe determined. Most commonly this happens because the
-osm file does not have a <bound> tag (e.g. because it was created
+be determined. Most commonly this happens because the
+osm file does not have a <bounds> tag (e.g. because it was created
 using osmosis). To fix this, set manually the -center option.
 EOF
 	# XXX should read the bboxes of all files
@@ -1268,6 +1277,12 @@ for my $osm_file (@osm_files) {
 		}
 	    };
 
+	    my $adjust_bab_name = sub {
+		if ($country eq 'de') {
+		    $name =~ s{\bA\s*(\d+)}{BAB$1};
+		}
+	    };
+
 	    if (exists $tag{'highway'}) {
 		my $highway_cat = $tag{'highway'};
 		my $is_motorway = 0;
@@ -1302,9 +1317,7 @@ for my $osm_file (@osm_files) {
 		}
 
 		if      ($highway_cat =~ HIGHWAY_BAB_RX || $is_motorroad) {
-		    if ($country eq 'de') {
-			$name =~ s{\bA\s*(\d+)}{BAB$1};
-		    }
+		    $adjust_bab_name->();
 		    push @or, ["strassen_bab", "BAB".$addcat];
 		    $is_motorway = 1;
 		} elsif ($highway_cat =~ HIGHWAY_HH_RX) {
@@ -1389,6 +1402,7 @@ for my $osm_file (@osm_files) {
 		} elsif ($highway_cat =~ CONSTRUCTION_RX) {
 		    my $construction = $tag{'construction'} || ""; # what will the type of street be?
 		    if      ($construction =~ HIGHWAY_BAB_RX) {
+			$adjust_bab_name->();
 			push @or, ["strassen_bab", "BAB::inwork"];
 		    } elsif ($construction =~ HIGHWAY_HH_RX) {
 			push @or, ['strassen', 'HH'];
@@ -2549,6 +2563,31 @@ sub epoch2isodatez (;$) {
     sprintf("%04d%02d%02d%02d%02d%02dZ",
 	    $l[5]+1900, $l[4]+1, $l[3],
 	    $l[2],      $l[1],   $l[0]);
+}
+
+# Return (minlot,minlat,maxlon,maxlat)
+# Only works if XML::LibXML::Reader is available,
+# and the <bounds> tag comes right after the <osm> tag
+# (which is the case for osmconvert-generated files)
+sub get_bounds_from_osm_file {
+    my $file = shift;
+    my(undef, $reader) = open_osm($file);
+    if (!$reader) {
+	die "Cannot get bounds with XML::LibXML::Reader";
+    }
+    $reader->nextElement;
+    die "Expected <osm> tag" if $reader->name ne 'osm';
+    $reader->nextElement;
+    if ($reader->name ne 'bounds') {
+	die "Expected <bounds>, but got <" . $reader->name . ">";
+    }
+    my @bbox = (
+		$reader->getAttribute("minlon"),
+		$reader->getAttribute("minlat"),
+		$reader->getAttribute("maxlon"),
+		$reader->getAttribute("maxlat"),
+	       );
+    @bbox;
 }
 
 # REPO BEGIN

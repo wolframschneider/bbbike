@@ -198,7 +198,8 @@ persistent-tmp:	fragezeichen-outdoor \
 		${PERSISTENTTMPDIR}/plz-b.bbd \
 		${PERSISTENTTMPDIR}/berlin-fragezeichen-poi.gpx \
 		${PERSISTENTTMPDIR}/.check_data_test_mount \
-		osm-watch-lists
+		osm-watch-lists \
+		doit
 
 rare-persistent-tmp:	\
 		${PERSISTENTTMPDIR}/all-upload-fragezeichen.wpt \
@@ -218,6 +219,9 @@ fragezeichen-outdoor:		${PERSISTENTTMPDIR}/fragezeichen-outdoor.bbd
 
 osm-watch-lists:	${PERSISTENTTMPDIR}/osm_watch_list \
 			${PERSISTENTTMPDIR}/osm_watch_list_brandenburg
+
+doit:
+	${PERL} doit.pl
 
 .for i in $(XXX_TARGETS)
 persistent-tmp:	${PERSISTENTTMPDIR}/XXX-$(i).bbd
@@ -696,13 +700,13 @@ handicap_s:	handicap_s-orig berlin ${PERSISTENTTMPDIR}/gesperrt-with-handicaps r
 	$(GREPSTRASSEN) -catrx '1s?:q\d' < ${PERSISTENTTMPDIR}/gesperrt-with-handicaps |\
 	    $(GREPSTRASSEN) -inner berlin |\
 	    $(REPLACESTRASSEN) -noglobaldirectives \
-		-catexpr 's/.*:(q\d)/$$1::igndisp;/' \
+		-catexpr 's/.*:(q\d.*)/$$1::igndisp;/' \
 		-nameexpr 's/(.*)/$$1: gegen die Einbahnstraßenrichtung, ggfs. schieben/' \
 		>> $@~
 	$(GREPSTRASSEN) -catrx '2s?:q\d' < ${PERSISTENTTMPDIR}/gesperrt-with-handicaps |\
 	    $(GREPSTRASSEN) -inner berlin |\
 	    $(REPLACESTRASSEN) -noglobaldirectives \
-		-catexpr 's/.*:(q\d)/$$1::igndisp/' \
+		-catexpr 's/.*:(q\d.*)/$$1::igndisp/' \
 		-nameexpr 's/(.*)/$$1: gesperrt, ggfs. schieben/' \
 		>> $@~
 	${GREPSTRASSEN} -ignoreglobaldirectives -ignorelocaldirectives -catrx '^q\d+;$$' routing_helper-orig |\
@@ -718,13 +722,13 @@ handicap_l:	handicap_l-orig berlin ${PERSISTENTTMPDIR}/gesperrt-with-handicaps
 	$(GREPSTRASSEN) -catrx '1s?:q\d' < ${PERSISTENTTMPDIR}/gesperrt-with-handicaps |\
 	    $(GREPSTRASSEN) -outer berlin |\
 	    $(REPLACESTRASSEN) -noglobaldirectives \
-		-catexpr 's/.*:(q\d)/$$1::igndisp;/' \
+		-catexpr 's/.*:(q\d.*)/$$1::igndisp;/' \
 		-nameexpr 's/(.*)/$$1: gegen die Einbahnstraßenrichtung, ggfs. schieben/' \
 		>> $@~
 	$(GREPSTRASSEN) -catrx '2s?:q\d' < ${PERSISTENTTMPDIR}/gesperrt-with-handicaps |\
 	    $(GREPSTRASSEN) -outer berlin |\
 	    $(REPLACESTRASSEN) -noglobaldirectives \
-		-catexpr 's/.*:(q\d)/$$1::igndisp/' \
+		-catexpr 's/.*:(q\d.*)/$$1::igndisp/' \
 		-nameexpr 's/(.*)/$$1: gesperrt, ggfs. schieben/' \
 		>> $@~
 	mv $@~ $@
