@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2007,2008,2010,2011,2013,2014,2015,2016 Slaven Rezic. All rights reserved.
+# Copyright (C) 2007,2008,2010,2011,2013,2014,2015,2016,2017 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -20,7 +20,7 @@ push @ISA, 'BBBikePlugin';
 
 use strict;
 use vars qw($VERSION $geocoder_toplevel);
-$VERSION = 3.06;
+$VERSION = 3.07;
 
 BEGIN {
     if (!eval '
@@ -115,7 +115,7 @@ sub geocoder_dialog {
     }
 
     my $get_loc = sub {
-	# It seems that Yahoo and OSM can deal better with the
+	# It seems that OSM can deal better with the
 	# city/place at the end. Google and Bing are fine with both.
 	join(', ', grep { defined && length } ($street, $place));
     };
@@ -277,9 +277,23 @@ sub geocoder_dialog {
 		 'require' => sub {
 		     local @INC = (@INC, bbbike_root."/miscsrc");
 		     require GeocoderAddr;
-		     GeocoderAddr->new_berlin_addr->check_availability or die "local _addr is not available";
+		     if ($main::city_obj->is_osm_source) {
+			 my $ga = GeocoderAddr->new_osm_addr;
+			 $ga->check_availability
+			     or die "A suitable _addr (path $ga->{File}) is not available. Maybe osm2bbd-postprocess --only-addr was not run?";
+		     } else {
+			 my $ga = GeocoderAddr->new_berlin_addr;
+			 $ga->check_availability
+			     or die "local _addr (path $ga->{File}) is not available. Please use osm2bbd and osm2bbd-postprocess to create this file.";
+		     }
 		 },
-		 'new' => sub { GeocoderAddr->new_berlin_addr },
+		 'new' => sub {
+		     if ($main::city_obj->is_osm_source) {
+			 GeocoderAddr->new_osm_addr;
+		     } else {
+			 GeocoderAddr->new_berlin_addr;
+		     }
+		 },
 		 'extract_addr' => sub {
 		     my $loc = shift;
 		     $loc->{display_name};
@@ -300,35 +314,6 @@ sub geocoder_dialog {
 		     }
 		 },
 		},
-
-		## XXX DEL module and API do not work anymore
-		#'Yahoo PlaceFinder' =>
-		#{
-		# 'label' => 'Yahoo PlaceFinder (needs app id)',
-		# 'short_label' => 'Yahoo PlaceFinder',
-		# 'devel_only' => 1,
-		#
-		# 'require' => sub { require Geo::Coder::PlaceFinder },
-		# 'new' => sub {
-		#     my $apikey = do {
-		#	 my $file = "$ENV{HOME}/.yahooapikey";
-		#	 open my $fh, $file
-		#	     or main::status_message("Cannot get key from $file: $!", "die");
-		#	 local $_ = <$fh>;
-		#	 chomp;
-		#	 $_;
-		#     };
-		#     Geo::Coder::PlaceFinder->new(appid => $apikey);
-		# },
-		# 'extract_addr' => sub {
-		#     my $location = shift;
-		#     join(", ", grep { defined && length } @{$location}{qw(line1 line2 line3 line4)});
-		# },
-		# 'extract_loc' => sub {
-		#     my $location = shift;
-		#     ($location->{longitude}, $location->{latitude});
-		# },
-		#},
 	       );
     $apis{Google_v3}->{$_} = $apis{My_Google_v3}->{$_} for (qw(extract_loc extract_addr extract_short_addr));
 
