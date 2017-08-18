@@ -288,7 +288,7 @@ Fontanepromenade: enger Gehweg	q2 10781,9697 10760,9646
 S¸dstern: Fuﬂg‰nger	q3 10749,9342 10741,9344 10695,9315 10647,9337
 Gˆrlitzer Ufer: Bordsteine	q3 13275,10055 13283,10069
 Ruhlsdorfer Str.: Bordstein	q3 9350,10176 9368,10211
-(Olivaer Platz, Wielandstr. - Bayerische Str.): Fuﬂg‰nger	q2 4360,10320 4352,10260
+(Olivaer Platz, Wielandstr. - Bayerische Str.): Fuﬂg‰nger, Bordstein	q3 4360,10320 4352,10260
 (G¸ntzelstr. - Pommersche Str.): Fuﬂg‰nger	q3 4708,9498 4550,9539
 Naunynstr.: Fuﬂg‰nger	q1 11365,10791 11329,10785
 Spreepromenade am DomAquarÈe: Fuﬂg‰nger, CafÈs	q3 10300,12587 10249,12658 10219,12701 10166,12777
@@ -1647,6 +1647,7 @@ Mascha-KalÈko-Weg: enger Pfad	q3 -6449,5282 -6474,5216 -6474,5144
 L¸dtgeweg: einige Fuﬂg‰nger	q1 4136,12494 4129,12619
 (Falkenberger Str. - Piesporter Str., Wohngebietsstraﬂe): einige Fuﬂg‰nger	q1 15370,16781 15362,16742 15350,16729
 (Falkenberger Fuﬂsteig - Falkenberger Chaussee): einige Fuﬂg‰nger	q1 18507,18541 18483,18433 18521,18347 18530,18327
+Pirolstr.: Bordstein	q2 19789,10091 19819,10090
 (Bleicheroder Str. - Pasewalker Str.): Fuﬂg‰nger	q2 11845,19121 11884,19169 11895,19183 11912,19279
 (Bleicheroder Str. - Pasewalker Str.): Dr‰ngelgitter an der Straﬂenbahnquerung	q4 11912,19279 11927,19308
 Ebersstr.: Sch¸ler	q2 7242,8586 7288,8635
@@ -2298,7 +2299,7 @@ Renatenweg: Fuﬂg‰nger	q2 6463,2724 6529,2642
 Weinbrennerweg: enge Straﬂe	q0 6003,19461 6106,19510
 Grammestr.: enge Straﬂe	q1 1057,14389 1023,14259
 Hirschsprung: enger Weg	q2 23865,5895 23874,5876
-Wiesenpromenade: enge Straﬂe	q1 23660,5819 23675,5823 23758,5846 23874,5876 23910,5884 23919,5908 23951,5923 23931,5992
+Wiesenpromenade: enge Straﬂe	q1 23660,5819 23675,5823 23755,5850 23874,5876 23910,5884 23919,5908 23951,5923 23931,5992
 Lenther Steig: enge Straﬂe	q1 1022,14898 1037,14814 1042,14721 1037,14515
 (Klothildestr - Schloﬂallee): Fuﬂg‰nger	q1 11068,19494 11081,19456
 Eschenallee (Rosenthal): enge Straﬂe	q0 9460,20644 9479,20535 9498,20435
@@ -2572,7 +2573,6 @@ Sewanstr. - Balatonstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::ig
 Hˆnower Str. (Karlshorst) (Ausweichen auf Sandbankette mˆglich): gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q2::igndisp; 18377,9366 18490,9387
 Neue Bahnhofstr.: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3::igndisp; 14908,11231 14918,11249
 Mauerstr.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9108,11961 9138,11872
-Charlottenstr.: Bauarbeiten, Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q4:inwork::igndisp; 9509,12117 9496,12215
 Wegelystr.: Einbahnstraﬂe wegen Bauarbeiten: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 5518,12159 5627,12105
 Schinkelplatz: Einbahnstraﬂe: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 9994,12368 10002,12305 10008,12274 10010,12259 10029,12208
 Karower Str.: tempor‰re Einbahnstraﬂenregelung: gegen die Einbahnstraﬂenrichtung, ggfs. schieben	q3:inwork::igndisp; 16593,25640 16632,25512 16669,25373

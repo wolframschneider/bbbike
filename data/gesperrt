@@ -831,6 +831,7 @@ Joachim-Karnatz-Allee	1 7175,12630 7184,12602 7418,12601
 Joachim-Karnatz-Allee	1 7419,12584 7144,12580 7139,12589 7131,12615
 Waldkraiburger Str.: Betriebsgel‰nde	2 12283,4971 12468,5000
 (Falkenberger Chaussee - Darﬂer Str.)	1 16785,17524 16825,17537 16848,17530 16947,17506
+Dankratweg - Am Waldberg: Betriebsgel‰nde	2 20460,9593 20408,9604 20338,9718 20335,9866
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Knoten M‰rkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
@@ -1988,8 +1989,7 @@ Adlergestell -> Altheider Str.: Mittelstreifen	3::igndisp 19735,3643 19812,3561 
 Altheider Str. -> Adlergestell: Mittelstreifen	3::igndisp 19871,3600 19812,3561 19857,3514
 Adlergestell -> Seidenbaustr.: Mittelstreifen	3::igndisp 19812,3561 19857,3514 19966,3596
 Seidenbaustr. -> Adlergestell: Mittelstreifen	3::igndisp 19966,3596 19857,3514 19904,3464
-Mittelstreifen	3nocross::ignrte 19735,3643 19676,3705 19633,3751 19587,3801
-Am Adlergestell -> Adlergestell: Mittelstreifen	3::igndisp 19755,3780 19676,3705 19735,3643
+Mittelstreifen	3nocross::ignrte 19676,3705 19633,3751 19587,3801
 Adlergestell -> Husstr.: Mittelstreifen	3::igndisp 19587,3801 19633,3751 19736,3858
 Husstr. -> Adlergestell: Mittelstreifen	3::igndisp 19736,3858 19633,3751 19676,3705
 Silberberger -> Adlergestell: Abbiegen verboten	3 19804,3697 19735,3643 19812,3561
@@ -2209,6 +2209,8 @@ abgeschlossenes Tor	3 15313,15393 15835,15092 15867,15073
 abgeschlossenes Tor	3 15867,15073 15835,15092 15313,15393
 abgeschlossenes Tor	3 10014,1123 10000,1131 9906,1166
 abgeschlossenes Tor	3 9906,1166 10000,1131 10014,1123
+Tor, kann geschlossen sein	BNP:10:-180:trailer=15 20682,9834
+Tor, kann geschlossen sein	BNP:10:-180:trailer=15 20683,9558
 Tor	BNP:3:-8:trailer=10 20829,5418
 Schranke	BNP:3:-7:trailer=10 20849,5266
 tragen (20 Stufen)	0:30:-90 22624,13901
@@ -2873,8 +2875,8 @@ Schranke	BNP:3:-64:trailer=10 6876,-2731
 Schranke	BNP:3:-78:trailer=10 17215,12485
 Schranke	BNP:10:-182:trailer=20 15334,16718
 Dr‰ngelgitter	BNP:3:0:trailer=10 3783,-2079
+Merlitzstr.: Bauarbeiten, Straﬂe komplett gesperrt	2::inwork 19661,3421 19524,3286
 Mauerstr.: Bauarbeiten, Einbahnstraﬂe	1s:inwork 9108,11961 9138,11872
-Charlottenstr.: Bauarbeiten, Einbahnstraﬂe	1s:inwork 9509,12117 9496,12215
 (Christoph-Ruden-Str. - Buckower Damm): letzte Bauarbeiten	2::inwork 12725,1429 12939,1469
 (entlang der Erpe): Bauarbeiten der DB	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
 (Marseillestr. - Straﬂe 160): wegen Bauarbeiten gesperrt	2::inwork 12495,21397 12507,21391 12547,21372
@@ -2896,6 +2898,7 @@ Traudelstr.: Bauarbeiten, Straﬂe komplett gesperrt	2::inwork 19169,1249 19140,11
 Schinkelplatz: Einbahnstraﬂe	1s:inwork 9994,12368 10002,12305 10008,12274 10010,12259 10029,12208
 Limburger Str.: Bauarbeiten am Rathaus Wedding, komplett gesperrt	2::inwork 7129,15717 7012,15571
 Karower Str.: tempor‰re Einbahnstraﬂenregelung	1s:inwork 16593,25640 16632,25512 16669,25373
+Mauerweg: Bauarbeiten, gesperrt	2::inwork 7926,14439 7939,14447
 Mauerweg: Bauarbeiten, gesperrt	2::inwork 7939,14447 7889,14519
 Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtung gesperrt	1s:inwork 5192,10234 5196,10398
 (Verl‰ngerte Hertzallee): Bauarbeiten, komplett gesperrt	2::inwork 5352,11502 5296,11529 4950,11696 4905,11785
@@ -2929,8 +2932,8 @@ Wattstr.: wegen Bauarbeiten f¸r die Minna-Todenhagen-Str. teilweise gesperrt, f¸
 Weg nach Tiefwerder: kein Zugang wegen der Ersatzbr¸cke	2::inwork -3179,11763 -3217,11570
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 Rummelsburger Platz: zur H‰lfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
-Frauenauer Str.: Straﬂe fertig, aber noch gesperrt	2::inwork 19663,9757 19858,9775
-Kirchdorfer Str.: Straﬂe fertig, aber noch gesperrt	2::inwork 19842,9895 19858,9775 19871,9680
+Frauenauer Str.: Straﬂe fertig, aber noch gesperrt	2::inwork 19663,9757 19858,9784
+Kirchdorfer Str.: Straﬂe fertig, aber noch gesperrt	2::inwork 19842,9895 19858,9784 19871,9680
 BBI-Park: wegen Bauarbeiten gesperrt	2::inwork 20038,-1474 19717,-1549
 am Osthafen: Bauarbeiten, gesperrt	2::inwork 14348,10266 14463,10212
 Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: Durchfahrt noch nicht zuverl‰ssig offen	2::inwork 8251,14337 8442,14456

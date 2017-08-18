@@ -20,14 +20,14 @@
 # REMOVED (fertig) --- #: last_checked: 2014-07-06 --- #: check_frequency: 3d --- Simplonstr.: Einbahnstraﬂe wegen Bauarbeiten	q2::inwork; 14468,11203 14531,11142
 # REMOVED (fertig) --- #: XXX zurzeit Bauarbeiten bis 2017-06-13 --- evtl. wird die Qualit‰t danach besser? -> qualitaet_s-orig --- #: last_checked: 2017-06-07 --- #: next_check: 2017-06-13 --- Kinzigstr.: Bauarbeiten, Fahrbahn ist nicht befahrbar	q3::inwork 14589,11975 14471,11782
 # 
-#: last_checked: 2017-08-12
+#: last_checked: 2017-08-16
 Revaler Str.: Bauarbeiten, unter Umst‰nden Ausweichen auf Gehweg notwendig	q3::inwork 14211,11229 14286,11186
 # 
 #: XXX wenn beendet -> Eintrag in gesperrt-orig wieder aktivieren
-#: last_checked: 2017-08-12
+#: last_checked: 2017-08-16
 Niemannstr.: Bauarbeiten, einige Meter Fahrbahn sind gesperrt	q3 14254,11377 14211,11229
 # 
-#: last_checked: 2017-08-11
+#: last_checked: 2017-08-15
 Haasestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 14328,11320 14286,11186
 # 
 #: last_checked: 2017-08-03
@@ -150,7 +150,7 @@ Alexandrinenstr.: direkter Zugang zur Sebastianstr. nicht mehr mˆglich, stattdes
 # REMOVED --- #: XXX Ende der Bauarbeiten? --- #: last_checked: 2014-02-22 --- Planckstr.: Bauarbeiten, auf Gehweg ausweichen	q4::inwork 9405,12794 9383,12915
 # REMOVED --- #: XXX nach den Bauarbeiten wahrscheinlich bessere Fahrbahnqualit‰t -> qualitaet_s-orig-Eintrag revidieren --- #: last_checked: 2013-11-21 --- Zolastr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10898,13632 10872,13570
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2017-07-20 vvv
+#: last_checked: 2017-08-16 vvv
 #: check_frequency: 90d vvv
 Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9984,12426 9996,12401 10058,12290
 Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 10008,12274 10058,12290
@@ -171,7 +171,7 @@ Prinzengasse: einige Fuﬂg‰nger, parkende Autos	q3::inwork 9955,12300 10002,12305
 # REMOVED (Einbahnstraﬂenregelung existiert zwar noch, aber die Baustelle ist komplett weg) --- #: last_checked: 2015-12-02 --- Universit‰tsstr.: wegen Bauarbeiten Einbahnstraﬂe zwischen Dorotheenstr. und Georgenstr.	q3::inwork; 9568,12688 9581,12588
 # 
 #: next_check_id: STABIUDL-2014 vvv
-#: last_checked: 2017-07-11 vvv
+#: last_checked: 2017-08-15 vvv
 #: check_frequency: 60d vvv
 #: by: http://www.berliner-zeitung.de/berlin/baustelle-staatsbibliothek-das-geruest-steht-und-steht-und-steht,10809148,22334074.html (Endedatum) vvv
 #: osm_watch: way id="153698394" version="5"
@@ -231,14 +231,14 @@ Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364
 #: next_check_id: STAATSOPER-2014 vvv
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0166-unter-den-linden-oberwallstrae.html
-#: last_checked: 2017-08-12 vvv
+#: last_checked: 2017-08-16 vvv
 #: check_frequency: 30d vvv
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9883,12251 9876,12298
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9876,12298 9858,12410
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
-#: last_checked: 2017-07-20
+#: last_checked: 2017-08-16
 Werdersche Rosenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9883,12251 9909,12261 9959,12281
 # 
 #: next_check_id: OBERWALL-2014
@@ -246,7 +246,7 @@ Werdersche Rosenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9883,12251 9909,
 #: XXX siehe auch Eintrag in handicap_s-orig
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0194-oberwallstrae-werderscher-markt.html
 #: osm_watch: way id="66071370" version="4"
-#: last_checked: 2017-08-12
+#: last_checked: 2017-08-16
 #: check_frequency: 14d
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9898,12161 9883,12251
 # 
@@ -758,7 +758,7 @@ Ludwigkirchplatz: Gehweg	q2 4905,10069 4863,10077
 #: next_check_id: SPREERADWEGEINSTEINUFER-2014
 #: XXX Bauarbeiten, wird der Weg sp‰ter breiter sein?
 #: by: https://www.berlin.de/ba-charlottenburg-wilmersdorf/politik/gremien/fahr-rat/fahr_rat_20_sitzung.pdf (Verbreiterungen)
-#: last_checked: 2017-07-31
+#: last_checked: 2017-08-16
 #: check_frequency: 14d
 (Rad- und Wanderweg an Spree und Landwehrkanal): Fuﬂg‰nger, teilweise eng	q2 3358,12718 3396,12741 3476,12735 3582,12704 3654,12672 3763,12624 3837,12618
 (Rad- und Wanderweg an Spree und Landwehrkanal): Fuﬂg‰nger, teilweise eng	q2 3837,12618 3888,12618 4131,12641 4340,12578 4529,12570 4642,12491
@@ -791,7 +791,8 @@ S¸dstern: Fuﬂg‰nger	q3 10749,9342 10741,9344 10695,9315 10647,9337
 Gˆrlitzer Ufer: Bordsteine	q3 13275,10055 13283,10069
 #: XXX_prog BS zum Tempelhofer Ufer hin, zur Ruhlsdorfer existiert eine Absenkung
 Ruhlsdorfer Str.: Bordstein	q3 9350,10176 9368,10211
-(Olivaer Platz, Wielandstr. - Bayerische Str.): Fuﬂg‰nger	q2 4360,10320 4352,10260
+#: XXX_prog BS am s¸dlichen Ende, ansonsten q2
+(Olivaer Platz, Wielandstr. - Bayerische Str.): Fuﬂg‰nger, Bordstein	q3 4360,10320 4352,10260
 (G¸ntzelstr. - Pommersche Str.): Fuﬂg‰nger	q3 4708,9498 4550,9539
 Naunynstr.: Fuﬂg‰nger	q1 11365,10791 11329,10785
 # REMOVED (Fahrbahn darf jetzt benutzt werden) --- Hermannplatz: oft Fuﬂg‰nger auf dem Radweg	q1 11831,8989 11909,9155
@@ -2548,6 +2549,8 @@ Mascha-KalÈko-Weg: enger Pfad	q3 -6449,5282 -6474,5216 -6474,5144
 L¸dtgeweg: einige Fuﬂg‰nger	q1 4136,12494 4129,12619
 (Falkenberger Str. - Piesporter Str., Wohngebietsstraﬂe): einige Fuﬂg‰nger	q1 15370,16781 15362,16742 15350,16729
 (Falkenberger Fuﬂsteig - Falkenberger Chaussee): einige Fuﬂg‰nger	q1 18507,18541 18483,18433 18521,18347 18530,18327
+#: XXX_prog BS am Wendehammer, ansonsten entfernen
+Pirolstr.: Bordstein	q2 19789,10091 19819,10090
 ######################### User Contributions #################################
 # 
 #: by: Michael Kiekbusch vvv
@@ -3930,7 +3933,7 @@ Grammestr.: enge Straﬂe	q1 1057,14389 1023,14259
 #: confirmed_by: srt
 Hirschsprung: enger Weg	q2 23865,5895 23874,5876
 #: confirmed_by: srt
-Wiesenpromenade: enge Straﬂe	q1 23660,5819 23675,5823 23758,5846 23874,5876 23910,5884 23919,5908 23951,5923 23931,5992
+Wiesenpromenade: enge Straﬂe	q1 23660,5819 23675,5823 23755,5850 23874,5876 23910,5884 23919,5908 23951,5923 23931,5992
 #: by: ^^^
 #: by: Burkard dau:
 Lenther Steig: enge Straﬂe	q1 1022,14898 1037,14814 1042,14721 1037,14515

@@ -1128,7 +1128,7 @@ Sportfliegerstr.: Betriebsgelände	2 18370,4511 18423,4459
 #: by: olaf skeries
 Schillerhof	1 7069,17204 6928,17154
 #: XXX wird aufgehoben, sobald das einsturzgefährdete Haus abgerissen wird vvv
-#: last_checked: 2017-06-18 vvv
+#: last_checked: 2017-08-17 vvv
 #: check_frequency: 60d vvv
 Wartenbergstr.	1s:q2 15423,11667 15337,11639 15328,11636 15300,11584
 #: check_frequency ^^^
@@ -1182,6 +1182,7 @@ Joachim-Karnatz-Allee	1 7175,12630 7184,12602 7418,12601
 Joachim-Karnatz-Allee	1 7419,12584 7144,12580 7139,12589 7131,12615
 Waldkraiburger Str.: Betriebsgelände	2 12283,4971 12468,5000
 (Falkenberger Chaussee - Darßer Str.)	1 16785,17524 16825,17537 16848,17530 16947,17506
+Dankratweg - Am Waldberg: Betriebsgelände	2 20460,9593 20408,9604 20338,9718 20335,9866
 # 
 ######################################################################
 # empfohlene und unechte Sperrungen
@@ -1766,7 +1767,7 @@ Max-Born-Str.: Straßenbahntrasse	3nocross 19053,2890 19021,2946 18946,3077
 Ostseestr.: Mittelstreifen	3nocross 12216,16120 12232,16110 12347,16039
 # REMOVED (Fahrbahnen getrennt) --- Schildhornstreifen: Mittelstreifen vor dem Autobahnanschluss	3nocross 4338,6528 4423,6477
 Adlergestell: Mittelstreifen	3nocross 19735,3643 19812,3561 19857,3514 19904,3464
-Adlergestell: Mittelstreifen	3nocross 19735,3643 19676,3705 19633,3751 19587,3801
+Adlergestell: Mittelstreifen	3nocross 19676,3705 19633,3751 19587,3801
 Silberberger -> Adlergestell: Abbiegen verboten	3 19804,3697 19735,3643 19812,3561
 Michael-Brückner-Str.: Mittelstreifen	3nocross 18457,5000 18425,5032 18080,5376
 Michael-Brückner-Str.: Mittelstreifen	3nocross 17728,5756 17782,5698 17829,5648
@@ -1857,6 +1858,8 @@ abgeschlossenes Tor	3 * 10000,1131 *
 # Stellen, an denen getragen werden muß:
 # die Zahl hinter dem ":" entspricht ungefähr den verlorenen Sekunden
 # 
+Tor, kann geschlossen sein	BNP:10::trailer=15 20682,9834
+Tor, kann geschlossen sein	BNP:10::trailer=15 20683,9558
 Tor	BNP:3::trailer=10 20829,5418
 Schranke	BNP:3::trailer=10 20849,5266
 tragen (20 Stufen)	0:30 22624,13901
@@ -2798,12 +2801,17 @@ Drängelgitter	BNP:3::trailer=10 3783,-2079
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
-#: last_checked: 2017-08-12
+#: by: http://www.dafmap.de/d/berlin.html?center=52.434534+13.536709&zoom=18# (Projektabschluss: 2019-04-30)
+#: osm_watch: way id="448097237" version="1"
+#: last_checked: 2017-08-17
+#: next_check: 2018-03-01
+Merlitzstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19661,3421 19524,3286
+# 
+#: last_checked: 2017-08-16
 #: check_frequency: 14d
 Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9108,11961 9138,11872
 # 
-#: last_checked: 2017-08-12
-Charlottenstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9509,12117 9496,12215
+# REMOVED --- #: last_checked: 2017-08-12 --- Charlottenstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9509,12117 9496,12215
 # 
 #: by: http://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamtes/artikel.434089.php
 #: XXX Bezirksamtsbeschluss 48/16
@@ -2860,7 +2868,7 @@ Parkrosenweg: Bauarbeiten	2::inwork -6530,6699 -6381,6587
 #: XXX (Geplanter) Projektabschluss laut dafmap: 2019-06-01
 #: osm_watch: way id="392904879" version="1" vvv
 #: osm_watch: way id="392904880" version="3" vvv
-#: last_checked: 2017-07-03 vvv
+#: last_checked: 2017-08-15 vvv
 #: check_frequency: 360d vvv
 Spreeufer - Englische Str.: Uferweg wegen Bauarbeiten gesperrt	2::inwork 5714,12290 5579,12231 5535,12206 5518,12159
 Wegelystr.: Einbahnstraße wegen Bauarbeiten	1s:q3:inwork 5518,12159 5627,12105
@@ -2912,7 +2920,7 @@ Traudelstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19169,1249 19140,11
 Schinkelplatz: Einbahnstraße	1s:q3:inwork 9994,12368 10002,12305 10008,12274 10010,12259 10029,12208
 # 
 #: next_check_id: RATHAUSWEDDING-2017
-#: last_checked: 2017-07-31
+#: last_checked: 2017-08-16
 #: check_frequency: 30d
 Limburger Str.: Bauarbeiten am Rathaus Wedding, komplett gesperrt	2::inwork 7129,15717 7012,15571
 # 
@@ -2922,13 +2930,15 @@ Limburger Str.: Bauarbeiten am Rathaus Wedding, komplett gesperrt	2::inwork 7129
 #: valid: -20181231
 Karower Str.: temporäre Einbahnstraßenregelung	1s:q3:inwork 16593,25640 16632,25512 16669,25373
 # 
-#: last_checked: 2017-07-14
-#: check_frequency: 30d
-# REMOVED (hier wieder offen) --- Mauerweg: Bauarbeiten, gesperrt	2::inwork 7926,14439 7939,14447
+#: last_checked: 2017-08-16 vvv
+#: check_frequency: 30d vvv
+Mauerweg: Bauarbeiten, gesperrt	2::inwork 7926,14439 7939,14447
 Mauerweg: Bauarbeiten, gesperrt	2::inwork 7939,14447 7889,14519
+#: check_frequency ^^^
+#: last_checked ^^^
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3192&mt=0&zoom=16 (Geplanter Projektabschluss: 2018-03-31)
-#: last_checked: 2017-07-15
+#: last_checked: 2017-08-16
 #: check_frequency: 120d
 Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtung gesperrt	1s:q3:inwork 5192,10234 5196,10398
 # 
@@ -3082,7 +3092,7 @@ Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14439,8050 144
 #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/gerickesteg/index.shtml (20 Monate Bauzeit)
 #: XXX laut http://www.stadtentwicklung.berlin.de/bauen/strassenbau/ bis "II. Quartal 2017"
 #: osm_watch: way id="27250334" version="7"
-#: last_checked: 2017-07-31
+#: last_checked: 2017-08-15
 #: check_frequency: 60d
 Gerickesteg: wegen Bauarbeiten gesperrt	2::inwork 6694,12627 6702,12633 6748,12669 6765,12680
 # 
@@ -3164,14 +3174,12 @@ Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223
 # REMOVED (Aufschüttung statt Brücke) --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6003 (Forderung nach Wiederherstellung) --- #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6003&date=20151213 (Abriss der Brücke) --- #: XXX: Umfahrung existiert mittlerweile --- bleibt die Sperrung permanent? --- #: XXX: sobald die Brücke abgerissen wurde -> aus den Daten entfernen --- #: last_checked: 2015-10-04 --- #: check_frequency: 180d --- Weg zwischen S-Wartenberg und S-Hohenschönhausen: Brücke morsch und gesperrt	2::inwork 17159,18375 17235,18352
 # 
 #: osm_watch: way id="193373934" version="8"
-#: last_checked: 2017-07-28
-#: next_check: 2017-08-09
-Frauenauer Str.: Straße fertig, aber noch gesperrt	2::inwork 19663,9757 19858,9775
+#: last_checked: 2017-08-17
+Frauenauer Str.: Straße fertig, aber noch gesperrt	2::inwork 19663,9757 19858,9784
 # 
 #: osm_watch: way id="290255259" version="5"
-#: last_checked: 2017-07-28
-#: next_check: 2017-08-09
-Kirchdorfer Str.: Straße fertig, aber noch gesperrt	2::inwork 19842,9895 19858,9775 19871,9680
+#: last_checked: 2017-08-17
+Kirchdorfer Str.: Straße fertig, aber noch gesperrt	2::inwork 19842,9895 19858,9784 19871,9680
 # 
 # REMOVED --- #: osm_watch: way id="24845189" version="13" --- #: last_checked: 2016-09-11 --- #: check_frequency: 60d --- Viechtacher Str.: Straße fertig, aber noch gesperrt	2::inwork 19801,9680 19871,9680 19923,9682
 # REMOVED --- #: last_checked: 2016-07-23 vvv --- #: check_frequency: 60d vvv
@@ -3197,7 +3205,7 @@ am Osthafen: Bauarbeiten, gesperrt	2::inwork 14348,10266 14463,10212
 #: by: http://www.rbb-online.de/politik/beitrag/2014/07/bnd-zentrale-berlin-verzoegerung-vollstaendiger-umzug-bis-2017.html
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7441
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2016/1767-2016-bav-zu-ds-2814-iv-durchwegung_scharnhorst-chaussestrasse_sb.pdf
-#: last_checked: 2017-07-31
+#: last_checked: 2017-08-16
 Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: Durchfahrt noch nicht zuverlässig offen	2::inwork 8251,14337 8442,14456
 # 
 #: next_check_id: SCHINKELPLATZ-2014 vvv
@@ -3289,7 +3297,7 @@ B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich de
 #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7641
 #: by: https://www.berlin.de/ba-mitte/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/gruenflaechen/artikel.563115.php
 #: osm_watch: way id="501191631" version="1"
-#: last_checked: 2017-07-31
+#: last_checked: 2017-08-16
 #: check_frequency: 360d
 Wikingerufer: wegen Beschädigungen an der Ufermauer gesperrt	2:inwork 5354,12552 5366,12665 5362,12787 5346,12845 5298,12910
 # 
@@ -3324,13 +3332,13 @@ Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9743,12239 9702,12307 9734,12
 # 
 #: XXX Eröffnung 2019 geplant
 #: by: http://www.dafmap.de/d/berlin.html?id=3598&mt=0&zoom=16
-#: last_checked: 2017-07-20
+#: last_checked: 2017-08-16
 #: check_frequency: 120d
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: osm_watch: way id="158025179" version="2"
-#: last_checked: 2017-08-12
+#: last_checked: 2017-08-13
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 

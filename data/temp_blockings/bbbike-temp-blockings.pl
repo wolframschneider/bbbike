@@ -993,7 +993,7 @@ EOF
        text  => 'L 17; (Königshorst-Warsow); zw. Jahnberge und Warsow Straßenbauarbeiten Vollsperrung 22.09.2004-30.11.2004 ',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 -40025,34118 -41261,33257
+userdel	2 -40025,34118 -40756,33632 -41150,33295
 userdel	2 -40025,34118 -39143,34187
 userdel	2 -38293,34081 -39143,34187
 EOF
@@ -7494,7 +7494,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004990',
        data  => <<EOF,
-userdel	2::inwork 22428,6063 22467,6135
+userdel	2::inwork 22431,6068 22467,6135
 EOF
      },
      { from  => 1174518000, # 2007-03-22 00:00
@@ -7569,7 +7569,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_004990',
        data  => <<EOF,
-userdel	2::inwork 22428,6063 22467,6135
+userdel	2::inwork 22431,6068 22467,6135
 EOF
      },
      { from  => 1176328800, # 2007-04-12 00:00
@@ -15309,7 +15309,7 @@ EOF
        text  => 'Bellevuestraße und Seelenbinderstraße von Bahnhofstraße bis Bellevuestraße: Einbahnstraße in Richtung Fürstenwalder Damm vom 27.7. bis zum 10.8.2009',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4::inwork; 22292,5774 22513,5747 22608,5732 22696,5728 22798,5731 22897,5740 23106,5758 23333,5710 23402,5483
+userdel	q4::inwork; 22292,5774 22513,5747 22608,5732 22696,5728 22798,5731 22900,5740 23106,5758 23333,5710 23402,5483
 EOF
      },
      { from  => 1249768800, # 2009-08-09 00:00
@@ -15318,7 +15318,7 @@ EOF
        type  => 'handicap',
        # XXX URL existiert nicht mehr: source_id => 'http://www.berlin.de/ba-treptow-koepenick/presse/archiv/',
        data  => <<EOF,
-userdel	q4::inwork; 22292,5774 22513,5747 22608,5732 22696,5728 22798,5731 22897,5740 23106,5758 23333,5710 23402,5483
+userdel	q4::inwork; 22292,5774 22513,5747 22608,5732 22696,5728 22798,5731 22900,5740 23106,5758 23333,5710 23402,5483
 EOF
      },
      { from  => 1252879200, # 2009-09-14 00:00
@@ -19591,13 +19591,13 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::inwork 22365,6149 22467,6135 22539,6258
-userdel	2::inwork 22358,5918 22428,6063 22467,6135 22603,6141
-userdel	2::inwork 22478,6041 22544,6037
+userdel	2::inwork 22358,5918 22431,6068 22467,6135 22603,6141
+userdel	2::inwork 22478,6048 22538,6046
 userdel	2::inwork 22325,6385 22365,6149 22296,6170
 userdel	2::inwork 22513,5747 22531,5871 22358,5918 22292,5774
 userdel	2::inwork 22777,6151 22603,6141
-userdel	2::inwork 22608,5732 22631,5866 22531,5871 22539,5956 22730,5944
-userdel	2::inwork 22639,6062 22544,6037 22539,5956
+userdel	2::inwork 22608,5732 22631,5866 22531,5871 22535,5971 22731,5953
+userdel	2::inwork 22624,6044 22538,6046 22535,5971
 EOF
      },
      { from  => 1309903200, # 2011-07-06 00:00
@@ -20008,13 +20008,13 @@ EOF
 userdel	2::inwork 872,24330 865,24114 793,24070 736,24068 601,24192 237,24374 195,24389 132,24390 78,24364 -406,23934
 EOF
      },
-     { from  => $isodate2epoch->("2016-09-15 00:00:00"), # 1347508800, # 2012-09-13 06:00 PERIODISCH, ca. 2. Wochenende im September
-       until => $isodate2epoch->("2016-09-18 23:59:59"), # 1347832740, # 2012-09-16 23:59
+     { from  => $isodate2epoch->("2017-09-14 00:00:00"), # PERIODISCH, ca. 2. Wochenende im September
+       until => $isodate2epoch->("2017-09-17 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 14, months => 9]],
-       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 16.09.2016 bis 18.09.2016',
+       text  => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 15.09.2017 bis 17.09.2017',
        type  => 'handicap',
-       source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2016',
+       source_id => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2017',
        data  => <<EOF,
 userdel	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
 EOF
@@ -22789,7 +22789,7 @@ userdel	q3::inwork; 15098,12849 15233,12829 15357,12813
 EOF
      },
      { from  => 1502056800, # 2017-08-07 00:00
-       until => $isodate2epoch->("2017-08-18 12:00:00"), # 1502834399, # 2017-08-15 23:59
+       until => 1502894902, # $isodate2epoch->("2017-08-18 12:00:00"), # 1502834399, # 2017-08-15 23:59
        text  => 'Weichselstr.: Bauarbeiten zwischen Oderstr. und Scharnweberstr. Richtung Norden, Fahrbahn gesperrt, bis Mitte August 2017',
        type  => 'handicap',
        source_id => '2147341689',
@@ -25329,12 +25329,12 @@ EOF
 EOF
      },
      { from  => 1501526175, # 1465682400, # 2016-06-12 00:00
-       until => $isodate2epoch->("2017-09-15 12:00:00"),
-       text  => 'Werneuchener Str.: zwischen Genslerstr. und Goeckestr. Bauarbeiten, gesperrt bis Mitte September 2017',
+       until => $isodate2epoch->("2017-08-31 12:00:00"),
+       text  => 'Werneuchener Str.: zwischen Genslerstr. und Goeckestr. Richtung Konrad-Wolf-Str. Bauarbeiten, gesperrt bis Ende August 2017',
        type  => 'handicap',
        data  => <<EOF,
 #: by: fritz
-userdel	q3::inwork 16768,14849 16610,15000 16514,15092
+userdel	q3::inwork; 16768,14849 16610,15000 16514,15092
 EOF
      },
      { from  => undef, # 
@@ -25702,7 +25702,7 @@ EOF
        data  => <<EOF,
 #: add_fragezeichen: Sind die Bauarbeiten beendet und der Weg freigegeben? vvv
 #: osm_watch: way id="136814135" version="15" vvv
-#: last_checked: 2017-07-31 vvv
+#: last_checked: 2017-08-16 vvv
 #: check_frequency: 14d vvv
 # REMOVED (hier nicht) --- userdel	2::inwork 3332,12742 3396,12741
 # REMOVED (hier nicht) --- userdel	2::inwork 3396,12741 3358,12718
@@ -26354,8 +26354,8 @@ userdel	q4::inwork 17734,675 17928,764 18023,833
 EOF
      },
      { from  => 1501618467, # 2017-08-01 22:14
-       until => 1503093600, # 2017-08-19 00:00
-       text  => 'Treptower Str.: zwischen Weigandufer und Stuttgarter Str. Bauarbeiten, Fahrbahn gesperrt, bis 18.08.2017',
+       until => $isodate2epoch->("2017-08-31 12:00:00"), # 1503093600, # 2017-08-19 00:00
+       text  => 'Treptower Str.: zwischen Weigandufer und Stuttgarter Str. Bauarbeiten, Fahrbahn gesperrt, bis Ende August 2017',
        type  => 'handicap',
        source_id => '2147341662',
        data  => <<EOF,
@@ -26422,6 +26422,15 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2::temp 10601,12521 10431,12709
+EOF
+     },
+     { from  => 1502994466, # 2017-08-17 20:27
+       until => 1503673200, # 2017-08-25 17:00
+       text  => 'Jessnerstr.: Sperrung an der Scharnweberstr., bis 25.08.2017',
+       type  => 'handicap',
+       source_id => '2147341716',
+       data  => <<EOF,
+userdel	q2::inwork 14981,11751 15080,11905
 EOF
      },
     );

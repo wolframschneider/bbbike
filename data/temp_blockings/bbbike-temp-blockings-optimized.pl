@@ -2730,7 +2730,26 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
+',
+         'from' => 1505340000,
+         'id' => 2285,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              14,
+                              'months',
+                              9
+                            ]
+                          ],
+         'source_id' => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2017',
+         'text' => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 15.09.2017 bis 17.09.2017',
+         'type' => 'handicap',
+         'until' => 1505685599
+       },
        undef,
        undef,
        undef,
@@ -3275,16 +3294,7 @@ userdel	2::inwork -12583,-1552 -12485,-1482
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	q4::inwork; 14794,11770 14802,11784 14835,11840 14887,11929
-',
-         'from' => 1502056800,
-         'id' => 2550,
-         'source_id' => '2147341689',
-         'text' => 'Weichselstr.: Bauarbeiten zwischen Oderstr. und Scharnweberstr. Richtung Norden, Fahrbahn gesperrt, bis Mitte August 2017',
-         'type' => 'handicap',
-         'until' => 1503050400
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3698,13 +3708,13 @@ userdel	2::night 16196,18364 16315,18208
        undef,
        {
          'data' => '#: by: fritz
-userdel	q3::inwork 16768,14849 16610,15000 16514,15092
+userdel	q3::inwork; 16768,14849 16610,15000 16514,15092
 ',
          'from' => 1501526175,
          'id' => 2795,
-         'text' => 'Werneuchener Str.: zwischen Genslerstr. und Goeckestr. Bauarbeiten, gesperrt bis Mitte September 2017',
+         'text' => 'Werneuchener Str.: zwischen Genslerstr. und Goeckestr. Richtung Konrad-Wolf-Str. Bauarbeiten, gesperrt bis Ende August 2017',
          'type' => 'handicap',
-         'until' => 1505469600
+         'until' => 1504173600
        },
        undef,
        undef,
@@ -3775,7 +3785,7 @@ userdel	q4::inwork 12911,1815 12940,1547
        {
          'data' => '#: add_fragezeichen: Sind die Bauarbeiten beendet und der Weg freigegeben? vvv
 #: osm_watch: way id="136814135" version="15" vvv
-#: last_checked: 2017-07-31 vvv
+#: last_checked: 2017-08-16 vvv
 #: check_frequency: 14d vvv
 # REMOVED (hier nicht) --- userdel	2::inwork 3332,12742 3396,12741
 # REMOVED (hier nicht) --- userdel	2::inwork 3396,12741 3358,12718
@@ -3826,19 +3836,7 @@ userdel	2::inwork 3741,12607 3654,12672
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: laut vmz nur bis Ende Juli 2017, dann Mitte August 2017
-#: by: http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.579822.php (weiterhin bis September 2017)
-#: source_id: 2147341144
-userdel	q4::inwork; 5583,5179 5527,5217 5416,5289 5397,5302 5382,5312
-',
-         'from' => 1491170400,
-         'id' => 2853,
-         'source_id' => 'http://www.berlin.de/ba-steglitz-zehlendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.576875.php',
-         'text' => 'Albrechtstr.: Bauarbeiten zwischen Neue Filandastr. und Breite Str., Einbahnstraße offen Richtung Osten, vom 4. April 2017 bis Mitte August 2017',
-         'type' => 'handicap',
-         'until' => 1502812800
-       },
+       undef,
        undef,
        undef,
        {
@@ -4101,9 +4099,9 @@ userdel	q4::inwork 17734,675 17928,764 18023,833
          'from' => 1501618467,
          'id' => 2891,
          'source_id' => '2147341662',
-         'text' => 'Treptower Str.: zwischen Weigandufer und Stuttgarter Str. Bauarbeiten, Fahrbahn gesperrt, bis 18.08.2017',
+         'text' => 'Treptower Str.: zwischen Weigandufer und Stuttgarter Str. Bauarbeiten, Fahrbahn gesperrt, bis Ende August 2017',
          'type' => 'handicap',
-         'until' => 1503093600
+         'until' => 1504173600
        },
        {
          'data' => 'userdel	q4::inwork 23102,1637 23185,1649
@@ -4155,14 +4153,16 @@ userdel	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
          'type' => 'handicap',
          'until' => 1512082799
        },
+       undef,
        {
-         'data' => 'userdel	2::temp 10601,12521 10431,12709
+         'data' => 'userdel	q2::inwork 14981,11751 15080,11905
 ',
-         'from' => 1502483236,
-         'id' => 2898,
-         'text' => 'Spandauer Str.: zwischen Rathausstr. und Karl-Liebknecht-Str. wegen einer Veranstaltung bis 13.08.2017 6 Uhr früh gesperrt',
-         'type' => 'gesperrt',
-         'until' => 1502596800
+         'from' => 1502994466,
+         'id' => 2899,
+         'source_id' => '2147341716',
+         'text' => 'Jessnerstr.: Sperrung an der Scharnweberstr., bis 25.08.2017',
+         'type' => 'handicap',
+         'until' => 1503673200
        }
      
 );
