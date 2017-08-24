@@ -1105,7 +1105,7 @@ EOF
        text  => 'Ruppiner Chaussee (Hennigsdorf) Kreuzung Hennigsdorfer Straße wegen Bauarbeiten gesperrt (bis 17.10.2004)',
        type  => 'handicap',
        data  => <<EOF,
-userdel	q4 -1872,24336 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746
+userdel	q4 -1872,24336 -1746,24219 -1627,24105 -1373,23844 -1286,23753 -1281,23746
 userdel	q4 -1872,24336 -1896,24275 -1940,24176
 userdel	q4 -1872,24336 -1953,24435
 EOF
@@ -3736,7 +3736,7 @@ EOF
        text  => 'Berlin-Lübars: Am Freibad in beiden Richtungen Wasser auf der Fahrbahn, gesperrt',
        type  => 'gesperrt',
        data  => <<EOF,
-userdel	2 5727,23485 5316,23661
+userdel	2 5727,23485 5312,23653
 EOF
      },
      { from  => undef, # 
@@ -18742,7 +18742,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20101105.1400.317649.html',
        data  => <<EOF,
-userdel	q4::inwork; 7843,18705 7785,18730 7676,18713 7599,18705 7520,18701 7492,18699 7434,18695 7217,18681
+userdel	q4::inwork; 7843,18705 7785,18730 7676,18713 7599,18705 7520,18701 7492,18699 7434,18695 7209,18682
 EOF
      },
      { from  => 1289156455, # 2010-11-07 20:00
@@ -20005,7 +20005,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berlin.de/ba-reinickendorf/presse/archiv/20110929.0810.360313.html',
        data  => <<EOF,
-userdel	2::inwork 872,24330 865,24114 793,24070 736,24068 601,24192 237,24374 195,24389 132,24390 78,24364 -406,23934
+userdel	2::inwork 872,24330 865,24114 793,24070 736,24068 601,24192 237,24374 195,24389 160,24390 132,24390 78,24364 -406,23934
 EOF
      },
      { from  => $isodate2epoch->("2017-09-14 00:00:00"), # PERIODISCH, ca. 2. Wochenende im September
@@ -20326,7 +20326,7 @@ EOF
 #: osm_watch: way id="23243508" version="40"
 #: note: Radfahrer dürfen offiziell in Gegenrichtung fahren
 #: by: http://www.berlin.de/ba-reinickendorf/presse/archiv/20131206.0905.392490.html (neues Ende)
-userdel	q2::inwork; -1872,24336 -1746,24219 -1627,24105 -1367,23853 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
+userdel	q2::inwork; -1872,24336 -1746,24219 -1627,24105 -1373,23844 -1286,23753 -1281,23746 -1084,23564 -997,23492 -984,23480 -903,23406 -783,23190 -656,23011
 EOF
      },
      { from  => undef, # 1329631200, # 2012-02-19 07:00
@@ -21013,11 +21013,11 @@ EOF
 userdel	q4::inwork; 9275,4672 9405,4667 9494,4658 9695,4638 10010,4606
 EOF
      },
-     { from  => $isodate2epoch->("2016-09-19 06:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2016-09-22 12:00:00"), #
+     { from  => $isodate2epoch->("2017-09-18 06:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2017-09-20 06:00:00"), #
        periodic => 1,
        recurrences => [['yearly', days => 19, months => 9]],
-       text  => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen Marathon gesperrt, ab 20.09.2016',
+       text  => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen Marathon gesperrt, voraussichtlich ab 19.09.2017',
        type  => 'gesperrt',
        data  => <<EOF,
 #: tempex: 20160920T0600-20160922T0600 vvv
@@ -21027,11 +21027,11 @@ userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,1224
 #: tempex ^^^
 EOF
      },
-     { from  => $isodate2epoch->("2016-09-21 06:00:00"),
-       until => $isodate2epoch->("2016-09-26 06:00:00"),
+     { from  => $isodate2epoch->("2017-09-20 06:00:00"),
+       until => $isodate2epoch->("2017-09-25 06:00:00"),
        periodic => 1,
        recurrences => [['yearly', days => 19, months => 9]],
-       text  => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, bis 26.09.2016',
+       text  => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, voraussichtlich bis 25.09.2017',
        type  => 'gesperrt',
        data  => <<EOF,
 #: tempex: 20160922T0600-T20160926T0600 vvv
@@ -22965,7 +22965,7 @@ EOF
        source_id => 'http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1404/nachricht5249.html',
        data  => <<EOF,
 #: XXX eigentlich falsch positioniert, aber temp_blockings auf fragezeichen-Strecken geht wohl nicht (ungetestet)
-userdel	2::inwork 554,23349 664,23416
+userdel	2::inwork 558,23359 664,23416
 EOF
      },
      { from  => 1399586400, # 2014-05-09 00:00
@@ -24786,7 +24786,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2015/pressemitteilung.385612.php',
        data  => <<EOF,
-userdel	q4::inwork 4681,23273 4704,23278 4744,23289 4910,23490 5006,23575
+userdel	q4::inwork 4681,23273 4704,23278 4744,23289 4910,23490 4963,23541
 EOF
      },
      { from  => 1445119200, # 2015-10-18 00:00
@@ -25972,14 +25972,14 @@ EOF
      },
      { from  => 1491498639, # 2017-04-06 19:10
        until => undef, # was: 1496268000, # 2017-06-01 00:00
-       text  => 'Innstr.: Bauarbeiten, Einbahnstraßenregelung, außerdem Sperrung an der Kreuzung Weserstr.',
+       text  => 'Innstr.: Bauarbeiten, Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet? laut Schild der Wasserbetriebe bis September oder Oktober; laut Pressemitteilung bis Ende 2017
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
-#: last_checked: 2017-07-24 vvv
+#: last_checked: 2017-08-22 vvv
 #: next_check: 2017-10-01 vvv
-	q3::inwork 13384,8354 13217,8493
+# REMOVED (weitgehend fertig) ---	q3::inwork 13384,8354 13217,8493
 # REMOVED userdel	q3::inwork; 13217,8493 13262,8554
 	q3::inwork; 13262,8554 13301,8606 13314,8624
 	q4::inwork 13366,8694 13314,8624
@@ -26018,12 +26018,12 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Akazienstr.: Bauarbeiten, Einbahnstraßenregelung',
+       text  => 'Akazienstr.: Bauarbeiten im Kreuzungsbereich Belziger Str., Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2017-08-10
-#: check_frequency: 7d
-userdel	q4::inwork; 7201,8870 7107,9030
+#: last_checked: 2017-08-22
+#: check_frequency: 14d
+userdel	q3::inwork; 7201,8870 7107,9030 7035,9161
 EOF
      },
      { from  => 1493652218, # 2017-05-01 17:23
@@ -26106,7 +26106,7 @@ userdel	2::inwork 21685,916 21724,954 21856,996 21977,988
 EOF
      },
      { from  => 1497556689, # 2017-06-15 21:58
-       until => 1504216800, # 2017-09-01 00:00
+       until => 1503082020, # 1504216800, # 2017-09-01 00:00
        text  => 'Schönerlinder Str.: Autobahnbrücke gesperrt, Radfahrer und Fußgänger können unter Umständen trotzdem passieren, bis 31.08.2017',
        type  => 'gesperrt',
        source_id => '2147341179',
@@ -26132,7 +26132,7 @@ EOF
        text  => 'DB-Werkstraße (Markgrafendamm): wegen Bauarbeiten kann die Fahrbahn gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2017-08-10
+#: last_checked: 2017-08-22
 #: check_frequency: 14d
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 EOF
@@ -26354,7 +26354,7 @@ userdel	q4::inwork 17734,675 17928,764 18023,833
 EOF
      },
      { from  => 1501618467, # 2017-08-01 22:14
-       until => $isodate2epoch->("2017-08-31 12:00:00"), # 1503093600, # 2017-08-19 00:00
+       until => 1503430097, # vorzeitig fertig --- $isodate2epoch->("2017-08-31 12:00:00"), # 1503093600, # 2017-08-19 00:00
        text  => 'Treptower Str.: zwischen Weigandufer und Stuttgarter Str. Bauarbeiten, Fahrbahn gesperrt, bis Ende August 2017',
        type  => 'handicap',
        source_id => '2147341662',
@@ -26431,6 +26431,36 @@ EOF
        source_id => '2147341716',
        data  => <<EOF,
 userdel	q2::inwork 14981,11751 15080,11905
+EOF
+     },
+     { from  => 1503081615, # 2017-08-18 20:40
+       until => 1508191199, # 2017-10-16 23:59
+       text  => 'Palisadenstr.: Bauarbeiten, Einbahnstraße zwischen Friedenstr. und Koppenstr., offen in Richtung Osten, bis zum 16. Oktober 2017',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2017-08-20
+userdel	q3::inwork; 12866,12582 12843,12567 12632,12630
+EOF
+     },
+     { from  => 1503155608, # 2017-08-19 17:13
+       until => 1519858799, # 2018-02-28 23:59
+       text  => 'Cyclopstr.: Einbahnstraße während der Bauarbeiten in der Oranienburger Str., voraussichtlich bis 28. Februar 2018',
+       type  => 'handicap',
+       source_id => '2147341699',
+       data  => <<EOF,
+userdel	q4::inwork; 5349,21198 5297,21243
+userdel	q4::inwork; 5053,21452 5000,21488 4810,21730
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'S-Bahn-Unterführung gesperrt',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: osm_watch: way id="463642095" version="2"
+#: last_checked: 2017-08-19
+#: next_check: 2017-12-31
+userdel	2::inwork 4117,22722 4176,22764
 EOF
      },
     );

@@ -2887,8 +2887,68 @@ userdel	2::night 14838,11410 14792,11391
        undef,
        undef,
        undef,
-       undef,
-       undef,
+       {
+         'data' => '#: tempex: 20160920T0600-20160922T0600 vvv
+userdel	2::temp 8055,12186 8089,12190 8214,12205 8303,12216 8344,12221 8538,12245
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+#: tempex ^^^
+',
+         'from' => 1505707200,
+         'id' => 2387,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              19,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Straße des 17. Juni zwischen Yitzhak-Rabin-Str. und Brandenburger Tor wegen Marathon gesperrt, voraussichtlich ab 19.09.2017',
+         'type' => 'gesperrt',
+         'until' => 1505880000
+       },
+       {
+         'data' => '#: tempex: 20160922T0600-T20160926T0600 vvv
+userdel	2::temp 8573,12325 8540,12420
+userdel	2::temp 8592,12252 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186 7816,12150 7383,12095 7026,12054 6828,12031
+userdel	2::temp 8570,12302 8546,12279 8538,12245 8600,12165 8595,12066
+userdel	2::temp 8119,12414 8055,12186
+userdel	2::temp 8538,12245 8522,12239 8466,12197
+userdel	2::temp 8538,12245 8522,12187
+userdel	2::temp 8546,12279 8391,12389 8354,12416
+userdel	2::temp 8119,12414 8354,12416 8400,12417 8540,12420
+userdel	2::temp 7875,12363 8017,12359 8070,12409 8119,12414
+userdel	3 7429,12070 7383,12095 7031,12320
+userdel	3 7031,12320 7383,12095 7429,12070
+userdel	3 7823,12120 7816,12150 7822,12201 7875,12363
+userdel	3 7875,12363 7822,12201 7816,12150 7823,12120
+userdel	2::temp 8119,12414 8122,12603 8207,12606 8306,12609 8348,12609 8399,12610 8485,12612
+userdel	2::temp 8207,12606 8206,12757
+userdel	3 7945,12592 8122,12603 8120,12756
+userdel	3 8120,12756 8122,12603 7945,12592
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+#: tempex ^^^
+',
+         'from' => 1505880000,
+         'id' => 2388,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              19,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Sperrungen wegen des Marathons: Straße des 17. Juni zwischen Großer Stern und Brandenburger Tor, Yitzak-Rabin-Str., ab Freitag auch Ebertstr. zwischen Behrenstr. und Scheidemannstr., Scheidemannstr., Heinrich-von-Gagern-Str., Paul-Löbe-Allee, voraussichtlich bis 25.09.2017',
+         'type' => 'gesperrt',
+         'until' => 1506312000
+       },
        undef,
        undef,
        undef,
@@ -3363,29 +3423,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: (YYYY08 & fr-2) - +2d vvv
-userdel	2::temp 22138,4642 22111,4562 22093,4499
-userdel	2::temp 22071,4501 22057,4531 22043,4562 22057,4618 22074,4664 22138,4642 22144,4660 22175,4730 22198,4800 22196,4847 22153,4840 22074,4664
-#: tempex ^^^
-',
-         'from' => 1502971200,
-         'id' => 2610,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              18,
-                              'months',
-                              8
-                            ]
-                          ],
-         'source_id' => 'http://www.winzerfest-köpenick.de/',
-         'text' => 'Köpenicker Winzersommer: Altstadt Köpenick, Luisenhain, Schlossinsel, Behinderungen möglich, 18.8.2017 bis 20.8.2017',
-         'type' => 'gesperrt',
-         'until' => 1503266399
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3842,9 +3880,9 @@ userdel	2::inwork 3741,12607 3654,12672
        {
          'data' => '#: XXX wann sind die Bauarbeiten beendet? laut Schild der Wasserbetriebe bis September oder Oktober; laut Pressemitteilung bis Ende 2017
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
-#: last_checked: 2017-07-24 vvv
+#: last_checked: 2017-08-22 vvv
 #: next_check: 2017-10-01 vvv
-	q3::inwork 13384,8354 13217,8493
+# REMOVED (weitgehend fertig) ---	q3::inwork 13384,8354 13217,8493
 # REMOVED userdel	q3::inwork; 13217,8493 13262,8554
 	q3::inwork; 13262,8554 13301,8606 13314,8624
 	q4::inwork 13366,8694 13314,8624
@@ -3853,7 +3891,7 @@ userdel	2::inwork 3741,12607 3654,12672
 ',
          'from' => 1491498639,
          'id' => 2856,
-         'text' => 'Innstr.: Bauarbeiten, Einbahnstraßenregelung, außerdem Sperrung an der Kreuzung Weserstr.',
+         'text' => 'Innstr.: Bauarbeiten, Einbahnstraßenregelung',
          'type' => 'handicap',
          'until' => undef
        },
@@ -3870,13 +3908,13 @@ userdel	2::inwork 3741,12607 3654,12672
        },
        undef,
        {
-         'data' => '#: last_checked: 2017-08-10
-#: check_frequency: 7d
-userdel	q4::inwork; 7201,8870 7107,9030
+         'data' => '#: last_checked: 2017-08-22
+#: check_frequency: 14d
+userdel	q3::inwork; 7201,8870 7107,9030 7035,9161
 ',
          'from' => undef,
          'id' => 2860,
-         'text' => 'Akazienstr.: Bauarbeiten, Einbahnstraßenregelung',
+         'text' => 'Akazienstr.: Bauarbeiten im Kreuzungsbereich Belziger Str., Einbahnstraßenregelung',
          'type' => 'handicap',
          'until' => undef
        },
@@ -3908,16 +3946,7 @@ userdel	q4::inwork; 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548
          'until' => 1508565600
        },
        undef,
-       {
-         'data' => 'userdel	2::inwork 11980,24276 11959,24220
-',
-         'from' => 1497556689,
-         'id' => 2869,
-         'source_id' => '2147341179',
-         'text' => 'Schönerlinder Str.: Autobahnbrücke gesperrt, Radfahrer und Fußgänger können unter Umständen trotzdem passieren, bis 31.08.2017',
-         'type' => 'gesperrt',
-         'until' => 1504216800
-       },
+       undef,
        {
          'data' => '#: XXX Baumaßnahme ist Ende 2018 fertig; Vollsperrung nur für 2-3 Wochen
 #: XXX wird es vielleicht Änderungen bei der Wegbeschaffenheit geben?
@@ -3933,7 +3962,7 @@ userdel	2::inwork 6815,8691 6912,8617
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2017-08-10
+         'data' => '#: last_checked: 2017-08-22
 #: check_frequency: 14d
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 ',
@@ -4093,16 +4122,7 @@ userdel	q4::inwork 17734,675 17928,764 18023,833
          'type' => 'handicap',
          'until' => 1513378799
        },
-       {
-         'data' => 'userdel	q3::inwork 13716,8410 13648,8321 13566,8212 13510,8138
-',
-         'from' => 1501618467,
-         'id' => 2891,
-         'source_id' => '2147341662',
-         'text' => 'Treptower Str.: zwischen Weigandufer und Stuttgarter Str. Bauarbeiten, Fahrbahn gesperrt, bis Ende August 2017',
-         'type' => 'handicap',
-         'until' => 1504173600
-       },
+       undef,
        {
          'data' => 'userdel	q4::inwork 23102,1637 23185,1649
 ',
@@ -4163,6 +4183,39 @@ userdel	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
          'text' => 'Jessnerstr.: Sperrung an der Scharnweberstr., bis 25.08.2017',
          'type' => 'handicap',
          'until' => 1503673200
+       },
+       {
+         'data' => '#: last_checked: 2017-08-20
+userdel	q3::inwork; 12866,12582 12843,12567 12632,12630
+',
+         'from' => 1503081615,
+         'id' => 2900,
+         'text' => 'Palisadenstr.: Bauarbeiten, Einbahnstraße zwischen Friedenstr. und Koppenstr., offen in Richtung Osten, bis zum 16. Oktober 2017',
+         'type' => 'handicap',
+         'until' => 1508191199
+       },
+       {
+         'data' => 'userdel	q4::inwork; 5349,21198 5297,21243
+userdel	q4::inwork; 5053,21452 5000,21488 4810,21730
+',
+         'from' => 1503155608,
+         'id' => 2901,
+         'source_id' => '2147341699',
+         'text' => 'Cyclopstr.: Einbahnstraße während der Bauarbeiten in der Oranienburger Str., voraussichtlich bis 28. Februar 2018',
+         'type' => 'handicap',
+         'until' => 1519858799
+       },
+       {
+         'data' => '#: osm_watch: way id="463642095" version="2"
+#: last_checked: 2017-08-19
+#: next_check: 2017-12-31
+userdel	2::inwork 4117,22722 4176,22764
+',
+         'from' => undef,
+         'id' => 2902,
+         'text' => 'S-Bahn-Unterführung gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
        }
      
 );

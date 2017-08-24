@@ -20,17 +20,17 @@
 # REMOVED (fertig) --- #: last_checked: 2014-07-06 --- #: check_frequency: 3d --- Simplonstr.: Einbahnstraﬂe wegen Bauarbeiten	q2::inwork; 14468,11203 14531,11142
 # REMOVED (fertig) --- #: XXX zurzeit Bauarbeiten bis 2017-06-13 --- evtl. wird die Qualit‰t danach besser? -> qualitaet_s-orig --- #: last_checked: 2017-06-07 --- #: next_check: 2017-06-13 --- Kinzigstr.: Bauarbeiten, Fahrbahn ist nicht befahrbar	q3::inwork 14589,11975 14471,11782
 # 
-#: last_checked: 2017-08-16
-Revaler Str.: Bauarbeiten, unter Umst‰nden Ausweichen auf Gehweg notwendig	q3::inwork 14211,11229 14286,11186
-# 
 #: XXX wenn beendet -> Eintrag in gesperrt-orig wieder aktivieren
-#: last_checked: 2017-08-16
+#: last_checked: 2017-08-22
 Niemannstr.: Bauarbeiten, einige Meter Fahrbahn sind gesperrt	q3 14254,11377 14211,11229
 # 
-#: last_checked: 2017-08-15
+#: last_checked: 2017-08-22
+Revaler Str.: Bauarbeiten, unter Umst‰nden Ausweichen auf Gehweg notwendig	q3::inwork 14211,11229 14286,11186
+# 
+#: last_checked: 2017-08-20
 Haasestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 14328,11320 14286,11186
 # 
-#: last_checked: 2017-08-03
+#: last_checked: 2017-08-22
 Lange Str.: Bauarbeiten, Einbahnstraﬂenregelung	q2::inwork; 12409,11902 12238,11931
 # 
 # REMOVED (bei fritz entfernt) --- #: last_checked: 2017-06-14 --- #: next_check: 2017-06-30 --- #: valid: -20170630 --- Auerstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 13273,12902 13202,12790
@@ -75,7 +75,7 @@ Lange Str.: Bauarbeiten, Einbahnstraﬂenregelung	q2::inwork; 12409,11902 12238,11
 # 
 #: XXX laut Schild gehen die Bauarbeiten bis 10.2017
 #: XXX nach Beendigung der Bauarbeiten wieder den alten Eintrag ("Bodenschwellen") aktivieren
-#: last_checked: 2017-08-01
+#: last_checked: 2017-08-21
 #: next_check: 2017-09-15
 BouchÈstr.: Bauarbeiten an der Heidelberger Str., Fahrbahn gesperrt	q3::inwork 13489,9456 13357,9313
 # 
@@ -291,15 +291,10 @@ Rathausstr.: Fuﬂg‰nger, enge Stelle vor dem Roten Rathaus	q3::inwork 10601,12521
 # 
 #: XXX laut fritz bis "auf weiteres", Einbahnstraﬂe --- effektiv ist aber die gesamte Fahrbahn gesperrt
 #: XXX ‰ndert sich an der Fahrbahnbeschaffenheit etwas?
-#: last_checked: 2017-08-01
+#: last_checked: 2017-08-21
 Bˆckhstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 11640,9710 11411,9810
 # 
-#: source_id: 2147341140
-#: XXX laut fritz bis 31.10.2017, laut vmz bis Ende Oktober 2017
-#: last_checked: 2017-07-31
-#: next_check: 2017-10-31
-#: valid: -20171031
-Erkelenzdamm: Bauarbeiten zwischen Bˆcklerstr. und Kohlfurter Str., Fahrbahn gesperrt, Bordsteine	q3::inwork 10967,10092 11038,10247 11094,10261
+# REMOVED (man kommt mittlerweile durch) --- #: source_id: 2147341140 --- #: XXX laut fritz bis 31.10.2017, laut vmz bis Ende Oktober 2017 --- #: last_checked: 2017-07-31 --- #: next_check: 2017-10-31 --- #: valid: -20171031 --- Erkelenzdamm: Bauarbeiten zwischen Bˆcklerstr. und Kohlfurter Str., Fahrbahn gesperrt, Bordsteine	q3::inwork 10967,10092 11038,10247 11094,10261
 # 
 #: source_id: 2147341145
 #: source_id: LMS-BR_r_LMS-BR_93387
@@ -362,7 +357,7 @@ Schleswiger Ufer: wegen Bauarbeiten sehr schmal, Fuﬂg‰nger	q3 5894,12480 5944,12
 # 
 #: XXX nach den Bauarbeiten wird die Straﬂe zur Einbahnstraﬂe. Auch f¸r Radfahrer? Ende der Bauarbeiten: Oktober 2017
 #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.586667.php
-#: last_checked: 2017-08-01
+#: last_checked: 2017-08-21
 #: next_check: 2017-10-01
 Kiehlufer: Bauarbeiten, Fahrbahn gesperrt, Bordsteine beim Ausweichen auf dem Gehweg	q3::inwork 12897,9365 12950,9132
 # 
@@ -387,7 +382,7 @@ Dieselstr., Umfahrung: Fuﬂg‰nger, kurvig, eng	q2-::inwork 14326,8062 14344,8072 
 #: source_id: IM_022515
 #: source_id: 2147338550
 #: source_id: LMS-BR_r_LMS-BR_19252
-#: last_checked: 2017-07-24
+#: last_checked: 2017-08-22
 #: next_check: 2018-01-01
 Karl-Marx-Str.: Bauarbeiten zwischen Werbellinstr. und Thomasstr., Richtung S¸den auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12753,8187 12794,8103 12830,8031 12865,7923 12898,7832 12914,7785 12969,7610
 # REMOVED (fertig) --- Karl-Marx-Str.: Bauarbeiten zwischen Jonasstr. und Uthmannstr., Richtung S¸den auf Gehweg ausweichen, ggfs. schieben	q4::inwork; 12969,7610 12991,7549 12992,7545 13015,7471 13018,7441
@@ -445,7 +440,7 @@ Mˆllendorffstr.: Bauarbeiten, Radfahrer m¸ssen auf die gegen¸berliegende Seite w
 # 
 # REMOVED (-> wieder temp_blocking) --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml vvv --- #: source_id: IM_025877 vvv --- #: source_id: 2147339245 vvv --- #: source_id: 2147339553 vvv --- #: last_checked: 2017-06-28 vvv --- #: next_check: 2017-08-02 vvv --- J¸licher Str.: Einbahnstraﬂenregelung wegen Bauarbeiten an der Bˆsebr¸cke	q4::inwork; 9441,16058 9458,16180 9474,16297 9475,16307 9487,16395 9498,16480 9514,16603 --- Malmˆer Str.: Einbahnstraﬂenregelung wegen Bauarbeiten an der Bˆsebr¸cke	q4::inwork; 10197,16528 10225,16436 10254,16363 10281,16263 10301,16186
 # 
-#: last_checked: 2017-08-12
+#: last_checked: 2017-08-19
 #: check_frequency: 14d
 F¸rstenberger Str.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 10320,14608 10472,14632
 # 
@@ -636,7 +631,7 @@ Am Stichkanal: Fuﬂg‰nger	q1 22832,4491 22814,4505 22797,4518 22702,4592 22585,46
 Am Stichkanal: Fuﬂg‰nger	q1 22759,4430 22797,4518
 Schwedter Str. (Mauerpark): Park, Fuﬂg‰nger	q2 10354,14987 10240,15318 10188,15474 10185,15487 10130,15647
 (Fuﬂweg am Griesinger-Krankenhaus): Fuﬂg‰nger	q1 21935,12153 21930,12185 21608,12320 21435,12390 21346,12427 21265,12468 21221,12484
-# REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- (Fuﬂg‰ngerbr¸cke Ostkreuz): Fuﬂg‰nger	q3 14810,10977 14787,10972 14764,10877 14794,10844
+# REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- (Fuﬂg‰ngerbr¸cke Ostkreuz): Fuﬂg‰nger	q3 14808,10978 14787,10972 14764,10877 14794,10844
 (Ringbahnsteig Ostkreuz): Fuﬂg‰nger	q4 14794,10844 14839,10853 14862,10942 14845,10954
 Marheinekeplatz: Fuﬂg‰nger, Brunnen	q3 9892,9286 9880,9233
 #: note: zumindest auf der westlichen Seite existiert kein explizites Verbotsschild f¸r Radfahrer
@@ -986,7 +981,7 @@ Egidysteg: eng, Fuﬂg‰nger	q3 3094,22216 3134,22153
 (Weg am Tegeler Flieﬂ): Fuﬂg‰nger	q1 3772,22482 3715,22399 3674,22396 3631,22417 3556,22404 3498,22333 3390,22264 3355,22230 3271,22321
 (Tegeler Flieﬂ - M¸hlenfeldstr.): Fuﬂg‰nger	q1 3740,22520 3758,22511 3772,22482
 (Weg am Tegeler Flieﬂ): Fuﬂg‰nger, unterhalb der S-Bahnbr¸cke eng	q2 4222,22854 4176,22764 4117,22722 4106,22731 4022,22691
-(Weg am Tegeler Flieﬂ): Fuﬂg‰nger	q1 5621,23966 5409,23816 5350,23717 5316,23661 5214,23420 5242,23156 5232,23139 5206,23103 5100,23045 5037,23036 4993,23020 4944,22978 4876,22955 4824,22907 4750,22915 4697,22901 4613,22928
+(Weg am Tegeler Flieﬂ): Fuﬂg‰nger	q1 5621,23966 5409,23816 5350,23717 5312,23653 5214,23420 5242,23156 5232,23139 5206,23103 5100,23045 5037,23036 4993,23020 4944,22978 4876,22955 4824,22907 4750,22915 4697,22901 4613,22928
 (Weg am Tegeler Flieﬂ): Fuﬂg‰nger	q1 4596,22955 4543,22964 4459,22931 4407,22897 4332,22916 4309,22922 4158,22896
 (Weg am Tegeler Flieﬂ): Fuﬂg‰nger, eng, Radfahren nicht erlaubt	q3 5867,24056 5818,24058 5690,24031 5647,24006 5628,23977 5621,23966
 #: note: unklar, ob Radfahren ¸berhaupt erlaubt ist
@@ -1184,8 +1179,9 @@ Uferweg: Fuﬂg‰nger, Biergarten	q3 3747,12679 3862,12675
 Uferweg: Fuﬂg‰nger	q1 3862,12675 3938,12687 4147,12699 4206,12691 4242,12684
 (Neues Ufer - Kaiserin-Augusta-Allee): Fuﬂg‰nger	q1 4456,12918 4514,12936 4581,13066 4576,13115 4547,13139 4561,13244
 # REMOVED (keine Fahrbahn mehr, nur der obere Uferweg) --- Bundesratufer: Fuﬂg‰nger	q4 5938,12848 5922,12765
-# REMOVED --- Sonntagstr.: Richtung S-Bahnhof viele Fuﬂg‰nger	q3 14845,10954 14810,10977 14752,11041
-(provisorischer Zugang zum Bahnhof Ostkreuz): Richtung S-Bahnhof viele Fuﬂg‰nger	q3 14712,11039 14727,11005 14810,10977 14845,10954
+# REMOVED --- Sonntagstr.: Richtung S-Bahnhof viele Fuﬂg‰nger	q3 14845,10954 14808,10978 14752,11041
+(provisorischer Zugang zum Bahnhof Ostkreuz): Richtung S-Bahnhof viele Fuﬂg‰nger	q3 14712,11039 14727,11005 14808,10978 14845,10954
+(provisorischer Zugang zum Bahnhof Ostkreuz): Richtung S-Bahnhof viele Fuﬂg‰nger	q3 14811,11067 14808,10978
 # zeitweise entfernt --- #: XXX_prog: f¸r Anh‰nger relevant (q1 oder so) --- BouchÈstr.: Bodenschwellen	q0 13489,9456 13357,9313
 #: XXX_prog: f¸r Anh‰nger relevant (q1 oder so)
 BouchÈstr.: Bodenschwellen	q0 13642,9624 13865,9866
@@ -2551,6 +2547,13 @@ L¸dtgeweg: einige Fuﬂg‰nger	q1 4136,12494 4129,12619
 (Falkenberger Fuﬂsteig - Falkenberger Chaussee): einige Fuﬂg‰nger	q1 18507,18541 18483,18433 18521,18347 18530,18327
 #: XXX_prog BS am Wendehammer, ansonsten entfernen
 Pirolstr.: Bordstein	q2 19789,10091 19819,10090
+(Weg am Erlengraben): einige Fuﬂg‰nger	q1 -1821,23794 -1998,23819 -2019,23781 -2047,23708 -2082,23630 -2119,23545 -2143,23464 -2180,23384 -2241,23288 -2249,23230 -2269,23147 -2268,23122 -2293,23072 -2274,23035
+(Weg am Eschengraben): einige Fuﬂg‰nger	q1 -2165,22794 -2162,22855 -2125,22882 -2076,22988 -2040,23061
+(Weg am Haselgraben): einige Fuﬂg‰nger	q1 -2076,22988 -2142,23030 -2269,23147
+(Weg am Wiesengraben): einige Fuﬂg‰nger	q1 -2165,22794 -2165,22641 -2239,22442 -2246,22354
+(Weg am Wiesengraben): einige Fuﬂg‰nger	q1 -2194,22343 -2173,22351 -2052,22330 -1924,22282 -1792,22250 -1700,22223 -1679,22127
+(Oraniendamm - Dianastr.): Fuﬂg‰nger	q1 4176,22764 4155,22707
+Tornower Weg - Wilhelmsruher Damm: Spielplatz	q4 6519,21002 6526,21015 6548,21041 6560,21055
 ######################### User Contributions #################################
 # 
 #: by: Michael Kiekbusch vvv
@@ -3290,8 +3293,7 @@ Rue Marin la MeslÈe: enge Straﬂe	q0- 3213,17858 3123,17923
 #: note: Wohngebietsstraﬂe, wird von Kfz nur zum Ein- und Ausladen befahren
 Max-Koska-Str.: Fuﬂg‰nger	q2 11829,16339 11846,16438 11842,16493
 # 
-#: by: Axel Stojenthin:
-Schulzendorfer Str.: Gehweg	q2 -2176,22789 -2263,22748 -2348,22704 -2377,22689 -2504,22626
+# REMOVED (man darf die Fahrbahn benutzen) --- #: by: Axel Stojenthin: --- Schulzendorfer Str.: Gehweg	q2 -2176,22789 -2263,22748 -2348,22704 -2377,22689 -2504,22626
 # 
 #: by: Holger Schulze:
 William-H.-Tunner-Str.: enge Straﬂe	q0 2364,1049 2336,1111 2163,1499
@@ -3344,7 +3346,7 @@ Biesentaler Str.: Aufpflasterungen, leicht zu umfahren	q0- 9024,16855 9245,16758
 Tassostr.: enge Straﬂe	q1 13623,15954 13614,15984 13625,16054 13642,16118 13654,16152 13645,16192 13679,16286
 # 
 #: by: Nicole Weber:
-An der Wildbahn: viele parkende Autos in enger Straﬂe	q1 -1581,22553 -1447,22522 -1333,22495 -1267,22480 -1221,22468 -996,22416 -926,22399 -725,22355 -489,22295 -313,22233
+An der Wildbahn: viele parkende Autos in enger Straﬂe	q1 -1581,22553 -1447,22522 -1333,22495 -1270,22480 -1221,22468 -996,22416 -926,22399 -725,22355 -489,22295 -313,22233
 # 
 #: by: anonymous
 Wolmirstedter Weg: enge Straﬂe	q1 -4143,15639 -4216,15635 -4283,15639
@@ -3525,7 +3527,9 @@ Sandhofweg: Fuﬂg‰nger	q1 5688,402 5644,381
 # 
 #: by: Moritz (acros): vvv
 Calvinstr.: Bordsteinkante, Fuﬂg‰nger	q2 2982,22893 2942,22914
-Melanchthonstr.: Bordsteinkante, Fuﬂg‰nger	q2 2889,22741 2857,22756
+#: XXX_prog BS am Hermsdorfer Damm, ansonsten q1
+#: confirmed_by: srt
+Melanchthonstr.: Bordsteinkante, Fuﬂg‰nger	q2 2875,22747 2857,22756
 #: by: ^^^
 # 
 #: by: Jens Gieseke:
