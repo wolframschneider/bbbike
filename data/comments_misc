@@ -285,7 +285,7 @@ Straße 366: Privatstraße, 10 km/h	CS -3145,22004 -3281,22011
 Straße 367: Privatstraße, 10 km/h	CS -3256,22134 -3281,22011 -3281,21894
 Straße 368: Privatstraße, 10 km/h	CS -3310,21892 -3281,21894 -3240,21896
 Adelheidallee: Privat, kein öffentlicher Zugang	CS 1687,20782 1527,20840
-(Hauffallee - Blankenburger Pflasterweg): nicht ausgeschildert	CS 14284,19451 14328,19527 14364,19613 14374,19728 14338,19830 14348,19861
+(Hauffallee - Blankenburger Pflasterweg): nicht ausgeschildert	CS 14284,19451 14328,19527 14366,19602 14374,19728 14338,19830 14348,19861
 Steffenshagener Str.: Privatstraße	CS 22983,11098 23159,11097
 Münsterberger Weg: nicht ausgeschildert	CP2; 24029,11363 24173,11328
 Püttlinger Str.: Privatstraße	CS 21275,11942 21273,11882
@@ -488,7 +488,7 @@ ausgeschildert Kolonie Grünlandtal	CP2; 3604,20603 3852,20415
 Friedrichsgracht: nicht ausgeschildert	CP2; 10109,12238 10207,12055
 Hanns-Eisler-Str.: nicht ausgeschildert	CP2; 13186,15518 13151,15462
 Pieskower Weg: nicht ausgeschildert	CP2; 12931,15300 12864,15185
-ausgeschildert Hohenzollernring 15	CP2; -3880,14770 -3799,14806
+ausgeschildert Hohenzollernring 14-16	CP2; -3880,14770 -3824,14794
 Mögeldorfer Weg: nicht ausgeschildert	CP2; -3245,16826 -3327,16832
 Gaismannshofer Weg: Achtung, Schule	CS -3657,16732 -3593,16736 -3595,16849
 (Radelandstr. - Hubertusstr.): entlang der Kleingartenanlage	CS -4155,16445 -4153,16463 -4153,16562 -4154,16572 -4152,16580 -4149,16670 -4150,16676 -4149,16682 -4151,16772 -4152,16779 -4151,16787 -4150,16849 -4151,16857 -4150,16864 -4149,16929 -4154,16947
@@ -618,3 +618,5 @@ ausgeschildert als Marie-Elisabeth-von-Humboldt-Str.	CP2; 20855,19299 20904,1928
 Lin-Jaldati-Weg: nicht ausgeschildert	CS 23762,14009 23751,14031 23724,14086
 Malevkeweg: nicht ausgeschildert	CS 24878,10861 24875,10919
 (Welzower Steig - Senftenberger Ring): entlang des Packereigrabens	CS 6525,21630 6625,21600 6753,21542
+(Gundelfinger Str. - Römerweg): Treskow-Höfe	CS 18735,9421 18738,9467 18754,9584 18772,9694
+(Aristotelessteig - Treskowallee): Treskow-Höfe	CS 18715,9589 18754,9584 18835,9572 18865,9608

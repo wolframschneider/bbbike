@@ -116,7 +116,32 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => 'userdel	2 8055,12186 8089,12190 8214,12205
+userdel	2 8214,12205 8303,12216 8344,12221 8538,12245
+userdel	2 8546,12279 8538,12245
+userdel	2 8600,12165 8538,12245
+userdel	2 8538,12245 8592,12252
+userdel	2 8546,12279 8570,12302 8573,12325 8540,12420 
+	3::temp 8391,12389 8344,12221 8327,12174
+	3::temp 8327,12174 8344,12221 8391,12389
+',
+         'from' => 1506657600,
+         'id' => 127,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              29,
+                              'months',
+                              9
+                            ]
+                          ],
+         'text' => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen voraussichtlich gesperrt (bis 04.10.2017)',
+         'type' => 'gesperrt',
+         'until' => 1507154399
+       },
        undef,
        undef,
        undef,
@@ -3681,7 +3706,15 @@ userdel	q3::inwork; -6861,15129 -6507,15007
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	q4::inwork; 14575,11407 14434,11465
+',
+         'from' => 1503943766,
+         'id' => 2755,
+         'text' => 'Wühlischstr.: Gleisarbeiten, Fahrbahn Richtung Warschauer Str. gesperrt, bis zum 8.9.2017',
+         'type' => 'handicap',
+         'until' => 1504864800
+       },
        undef,
        undef,
        undef,
@@ -3746,13 +3779,14 @@ userdel	2::night 16196,18364 16315,18208
        undef,
        {
          'data' => '#: by: fritz
+#: source_id: 2147341721
 userdel	q3::inwork; 16768,14849 16610,15000 16514,15092
 ',
          'from' => 1501526175,
          'id' => 2795,
-         'text' => 'Werneuchener Str.: zwischen Genslerstr. und Goeckestr. Richtung Konrad-Wolf-Str. Bauarbeiten, gesperrt bis Ende August 2017',
+         'text' => 'Werneuchener Str.: zwischen Genslerstr. und Goeckestr. Richtung Konrad-Wolf-Str. Bauarbeiten, gesperrt bis Anfang Oktober 2017',
          'type' => 'handicap',
-         'until' => 1504173600
+         'until' => 1506852000
        },
        undef,
        undef,
@@ -3798,8 +3832,8 @@ userdel	q4::inwork 12911,1815 12940,1547
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-08-11 vvv
-#: check_frequency: 21d vvv
+#: last_checked: 2017-08-26 vvv
+#: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
 	q2::inwork; 11139,12243 11092,12375
@@ -3817,7 +3851,21 @@ userdel	q4::inwork 12911,1815 12940,1547
          'until' => undef
        },
        undef,
-       undef,
+       {
+         'data' => 'userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
+userdel	2::temp 8600,12165 8538,12245 8592,12252
+userdel auto	3 8522,12239 8538,12245 8522,12187
+userdel auto	3 8522,12187 8538,12245 8522,12239
+userdel auto	3 8391,12389 8344,12221 8327,12174
+userdel auto	3 8327,12174 8344,12221 8391,12389
+',
+         'from' => 1504201168,
+         'id' => 2827,
+         'source_id' => '2147339672',
+         'text' => 'Straße des 17. Juni und Ebertstr.: Sperrungen wegen der Sportveranstaltung "Berlin fliegt", bis 03.09.2017 20 Uhr',
+         'type' => 'gesperrt',
+         'until' => 1504461600
+       },
        undef,
        undef,
        {
@@ -3896,19 +3944,10 @@ userdel	2::inwork 3741,12607 3654,12672
          'until' => undef
        },
        undef,
-       {
-         'data' => 'userdel	q4::inwork 18009,18946 17900,18972 17890,18973 17799,19000 17697,18989 17600,18994
-',
-         'from' => 1491854162,
-         'id' => 2858,
-         'source_id' => '2147341173',
-         'text' => 'Ernst-Barlach-Str./Dorfstr.: Bauarbeiten zwischen Woldegker Str. und Lindenberger Str., Fahrbahn ggfs. gesperrt, bis Ende August 2017 ',
-         'type' => 'handicap',
-         'until' => 1504195200
-       },
+       undef,
        undef,
        {
-         'data' => '#: last_checked: 2017-08-22
+         'data' => '#: last_checked: 2017-08-28
 #: check_frequency: 14d
 userdel	q3::inwork; 7201,8870 7107,9030 7035,9161
 ',
@@ -3950,8 +3989,8 @@ userdel	q4::inwork; 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548
        {
          'data' => '#: XXX Baumaßnahme ist Ende 2018 fertig; Vollsperrung nur für 2-3 Wochen
 #: XXX wird es vielleicht Änderungen bei der Wegbeschaffenheit geben?
-#: last_checked: 2017-07-24
-#: next_check: 2017-09-01
+#: last_checked: 2017-08-28 (der Eingangsbereich ist zurzeit gesperrt, Umgehung existiert)
+#: next_check: 2017-09-15
 userdel	2::inwork 6815,8691 6912,8617
 ',
          'from' => 1498214515,
@@ -3962,7 +4001,7 @@ userdel	2::inwork 6815,8691 6912,8617
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2017-08-22
+         'data' => '#: last_checked: 2017-08-29
 #: check_frequency: 14d
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 ',
@@ -3979,8 +4018,11 @@ userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14
        undef,
        {
          'data' => '#: XXX wird sich die Qualität vielleicht bessern?
-#: next_check: 2017-09-01
-userdel	2::inwork 8234,4660 8575,4980 8598,4985 8618,5019 8784,5095
+#: last_checked: 2017-08-28 vvv
+userdel	2::inwork 8234,4660 8575,4980 8598,4985
+#: XXX hier sind gerade Bauarbeiten --- Verbundsteinpflaster bleibt wohl, der wassergebundene Teil sind besser aus
+userdel	2::inwork 8598,4985 8618,5019 8784,5095
+#: last_checked ^^^
 ',
          'from' => undef,
          'id' => 2877,
@@ -4067,15 +4109,16 @@ userdel	2::inwork 4561,13244 4547,13139 4576,13115
        },
        {
          'data' => '#: source_id: 2147341585
-#: note: laut vmz bis Ende 08/17, laut fritz bis 2017-08-25
+#: note: laut vmz bis Mitte 10/2017, laut fritz bis 2017-10-20
+#: next_check: 2017-10-20
 userdel	q4::inwork 854,24387 836,24440 813,24497 790,24556 784,24612 790,24698 808,24790 811,24833 793,24943 785,24968
 ',
          'from' => 1500156000,
          'id' => 2885,
          'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.611086.php',
-         'text' => 'Am Eichenhain: Bauarbeiten zwischen Sigismundkorso und Karmeliterweg, Fahrbahn gesperrt, vom 17.07.2017 bis 20.11.2017',
+         'text' => 'Am Eichenhain: Bauarbeiten zwischen Sigismundkorso und Karmeliterweg, Fahrbahn gesperrt, bis voraussichtlich Mitte Oktober 2017',
          'type' => 'handicap',
-         'until' => 1511218800
+         'until' => 1508493600
        },
        {
          'data' => '#: by: http://www.tagesspiegel.de/berlin/bezirke/spandau/berlin-spandau-ein-wochenmarkt-schliesst-ein-anderer-oeffnet/19717792.html#
@@ -4164,7 +4207,8 @@ userdel	q4::inwork 17734,675 17928,764 18023,833
          'until' => 1508191200
        },
        {
-         'data' => 'userdel	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
+         'data' => '#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?bvgid=BVG131679 ("gültig bis: auf Weiteres")
+userdel	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 userdel	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
 ',
          'from' => 1502386525,
@@ -4174,26 +4218,8 @@ userdel	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
          'until' => 1512082799
        },
        undef,
-       {
-         'data' => 'userdel	q2::inwork 14981,11751 15080,11905
-',
-         'from' => 1502994466,
-         'id' => 2899,
-         'source_id' => '2147341716',
-         'text' => 'Jessnerstr.: Sperrung an der Scharnweberstr., bis 25.08.2017',
-         'type' => 'handicap',
-         'until' => 1503673200
-       },
-       {
-         'data' => '#: last_checked: 2017-08-20
-userdel	q3::inwork; 12866,12582 12843,12567 12632,12630
-',
-         'from' => 1503081615,
-         'id' => 2900,
-         'text' => 'Palisadenstr.: Bauarbeiten, Einbahnstraße zwischen Friedenstr. und Koppenstr., offen in Richtung Osten, bis zum 16. Oktober 2017',
-         'type' => 'handicap',
-         'until' => 1508191199
-       },
+       undef,
+       undef,
        {
          'data' => 'userdel	q4::inwork; 5349,21198 5297,21243
 userdel	q4::inwork; 5053,21452 5000,21488 4810,21730
@@ -4214,6 +4240,18 @@ userdel	2::inwork 4117,22722 4176,22764
          'from' => undef,
          'id' => 2902,
          'text' => 'S-Bahn-Unterführung gesperrt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: next_check_id: MINNATODENHAGENSTR-2016
+#: XXX siehe auch handicap_s-orig-Eintrag
+#: last_checked: 2017-08-27
+userdel	2::inwork 17681,7589 17676,7555
+',
+         'from' => undef,
+         'id' => 2903,
+         'text' => 'Wattstr.: Zugang kann durch Bauzäune versperrt sein, meistens aber offen',
          'type' => 'gesperrt',
          'until' => undef
        }

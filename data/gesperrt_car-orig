@@ -132,7 +132,7 @@ Lefèvrestr.	1 5360,6642 5215,6643
 #: by: N. H. Sassi (Einbahnstraße nicht für Radfahrer)
 Kühlebornweg	1 5165,4667 5075,4600 5004,4709
 Gartenstr.	1 22456,3889 22281,4033 22263,4120 22279,4220
-Wichmannstr.	1 6477,11045 6555,11012 6681,10959 6824,10904
+Wichmannstr.	1 6472,11049 6549,11015 6681,10959 6824,10904
 Lützowufer	1 6873,11011 6742,11099 6626,11178 6582,11202
 Mulackstr.	1 10308,13575 10406,13543 10535,13509 10640,13471
 Kirchhofstr.	1 13188,7590 13117,7471 13029,7353
@@ -910,7 +910,7 @@ Am Treptower Park	1 14745,8912 14614,9052 14558,9111 14475,9199 14443,9233 14382
 Am Treptower Park	1 15166,8489 15079,8575 15070,8584 15002,8651 14934,8717 14852,8799 14842,8809 14745,8912
 Am Treptower Park - Elsenstr.	3 14185,9509 14089,9610 13973,9465
 Czeminskistr.	1 7604,8927 7563,8871
-Berlinickestr.	1 5076,5500 5016,5401
+Berlinickestr.	1 5080,5498 5016,5401
 Sembritzkistr.: nur für Radfahrer	3 * 7199,5479 *
 Egon-Erwin-Kisch-Str. [Wohngebiet]: Schranke (für Autofahrer)	3 * 17067,19004 *
 Am Tierpark: Straßenbahntrasse	3nocross 18417,10738 18446,10620 18554,10354
@@ -1059,7 +1059,7 @@ Anhaltinerstr.	1 682,2660 720,2718
 Askanischer Platz -> Stresemannstr.	3 8865,10974 8901,11011 8747,11194
 Karl-Marx-Str./Braunschweiger Str.: Mittelinsel	3nocross 13034,7319 13043,7234 13051,7157
 Karl-Marx-Str./Karl-Marx-Platz: Mittelinsel	3nocross 12969,7610 12991,7549 13015,7471
-Berliner Str - Bernstorffstr.: nur für BVG-Busse erlaubt	3 1955,20435 2020,20327 2131,20406
+Berliner Str - Bernstorffstr.: nur für BVG-Busse erlaubt	3 1955,20435 2015,20336 2133,20413
 Waidmannsluster Damm	3nocross 3216,21431 3238,21448 3280,21477
 # REMOVED (ein "Radfahrer frei"-Schild existiert schon, zwei müssen noch folgen --- mittlerweile existieren schon fast alle) --- #: XXX Öffnung der Einbahnstraße für Radfahrer? --- #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6514 --- #: last_checked: 2015-11-16
 Weydemeyerstr.	1 11896,13075 11904,13052 12053,12984 12054,12903
@@ -1167,3 +1167,7 @@ Beyschlagstr.	1 21,22545 5,22384 184,22257
 Beyschlagstr.	1 408,22184 184,22257
 #: corrected_by ^^^
 #: confirmed_by ^^^
+Petriplatz -> Gertraudenstr.: Abbiegen verboten	3 10418,12016 10460,11979 10512,12039
+#: by: Marco (mar-bet):
+#: corrected_by: srt (mittlerweile für Radfahrer frei, verschoben nach gesperrt_car)
+Schmohlstr.	1 13239,17269 13196,17223 13159,17196 13057,17120

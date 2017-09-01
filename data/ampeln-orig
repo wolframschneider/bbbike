@@ -230,12 +230,12 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: XXX_prog: Richtung Süden zwei Ampeln, Zeitverlust!
 	X 6494,10440
 	X 6532,10529
-	X 6484,10847
+	X 6471,10851
 	X 6740,10755
 	X 6972,10665
 #: note: Anforderungsampel
 	F 6918,10858
-	X 7010,11002
+	X 6998,11003
 	X 6873,11011
 #: XXX_prog beim Überqueren der Schillstr. über die Fußgängerampel 2x Anforderungen; auf den Radwegen beim Rechtsabbiegen aus dem Lützowplatz und beim Linksabbiegen in den Lützowplatz müssen Radfahrer Schleifen überfahren
 	X 6824,10904
@@ -409,7 +409,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 5137,6066
 	X 4784,6280
 	X 2823,5672
-	X 2771,5678
+	X 2771,5674
 #: related vvv
 	X 3710,4728
 	X 3754,4755
@@ -579,7 +579,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 8939,16668
 	X 7198,18575
 	X 7209,18682
-	X 5114,17500
+	X 5109,17507
 	X 5490,17173
 	X 6304,16447
 	X 6239,15553
@@ -901,8 +901,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 15896,13547
 	X 16852,14412
 	X 11451,13301
-	X 4015,17912
-	X 3930,17920
+	X 4016,17918
+	X 3930,17923
 	X 2821,18831
 	X 1840,20761
 	X 9222,3602
@@ -1051,7 +1051,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	F -997,23492
 	X -656,23011
 	X 1461,21203
-	X 2020,20327
+	X 2015,20336
 	X 130,17187
 	X -344,15200
 	X -278,14532
@@ -1391,11 +1391,8 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 14266,12446
 	X 5271,4547
 	X 5671,3987
-#: by: http://www.tagesspiegel.de/berlin/verkehr-in-berlin-drei-unfallschwerpunkte-sollen-kurzfristig-entschaerft-werden/19800156.html
-#: XXX hier wird umgestaltet, dann vermutlich eine normale Kreuzung; die Einträge in gesperrt-orig sowie diese XXX_prog-Direktive können dann entfallen
-#: source_id: 2147341195
-#: next_check: 2017-07-31
-#: XXX_prog: keine Ampel aus Richtung Birkbuschstr.
+# REMOVED --- #: by: http://www.tagesspiegel.de/berlin/verkehr-in-berlin-drei-unfallschwerpunkte-sollen-kurzfristig-entschaerft-werden/19800156.html --- #: XXX hier wird umgestaltet, dann vermutlich eine normale Kreuzung; die Einträge in gesperrt-orig sowie diese XXX_prog-Direktive können dann entfallen --- #: source_id: 2147341195 --- #: next_check: 2017-07-31 --- #: XXX_prog: keine Ampel aus Richtung Birkbuschstr.
+#: XXX_prog keine Ampel für Radfahrer aus der Birkbuschstr. nach Norden
 	X 4807,5131
 	X 25519,4830
 	X 984,14086
@@ -1420,7 +1417,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 #: note: Anforderungsampel
 	F 5482,4965
 	F 6115,5302
-	X 6134,5800
+	X 6123,5798
 	X 8318,4566
 	X 8511,4336
 	X 8615,4151
@@ -1511,7 +1508,7 @@ Etwa 40 Meter nördlich in der Straße der Pariser Kommune eine weitere Fußgängera
 	X 4009,18322
 	X 4704,17101
 	X 5324,18560
-	X 5233,18069
+	X 5225,18070
 #: note: Kontaktschleife am Charles-Corcelle-Ring
 	X 4997,17241
 	X 6126,17448
@@ -2609,14 +2606,13 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 #: XXX temporäre Ampel (wegen Arbeiten an der Staatsoper und an der U-Bahn)
 #: XXX_prog Anforderungsampel
 #: XXX_indoor: Ampel ist eigentlich 30 Meter nach Osten versetzt
-#: XXX laut fritz bis 05.05.2016
 #: XXX siehe auch Eintrag in gesperrt-orig zur Niederlagstr.
-#: last_checked: 2017-08-16
+#: last_checked: 2017-08-24
 #: check_frequency: 90d
 	F::inwork 9984,12426
 #: next_check_id: UDLU5-2014 vvv
 #: XXX möglicherweise temporäre Ampeln (wegen der Umleitung Unter den Linden) (nördlicher Bereich) vvv
-#: last_checked: 2017-08-15 vvv
+#: last_checked: 2017-08-29 vvv
 #: check_frequency: 30d vvv
 #: osm_watch: node id="2959830776" version="3"
 	X::inwork 9121,12514
@@ -2886,8 +2882,8 @@ provisorische Ampel, die es schon ewig gibt	F 12414,8112
 	F 3273,14738
 #: next_check_id: CHAUSSEESTR-2016 vvv
 #: source_id: 2147340715 vvv
-#: last_checked: 2017-08-16 vvv
-#: next_check: 2017-08-30 vvv
+#: last_checked: 2017-08-26 vvv
+#: next_check: 2017-12-31 vvv
 	X::inwork 8250,14672
 	F::inwork 8732,14098
 #: next_check ^^^

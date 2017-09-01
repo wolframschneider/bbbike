@@ -548,12 +548,6 @@ $map_mode = MM_SEARCH;
 # Default ist rot, weil das Orange von power oder wind schlecht zu erkennen ist
 $mark_color    = 'red'; # Farbe der Markierung in mark_street et al.
 $mark_color_overview = 'blue'; # better than red because it does not conflict with Bundesstraßen
-$gps_waypoints = 50;
-$gps_waypointlength = 10;
-$gps_waypointcharset = 'ascii';
-$gps_needuniqueroutenumber = 0;
-$gps_routenamelength = 13;
-$gps_transfer = 'BBBikeGPS::MountedDevice';
 
 ### Fonts
 $standard_height = 12;
@@ -5361,24 +5355,25 @@ dazu verwendet wird",
 	  label => M"Minimalwinkel bei Route-Vereinfachung",
 	  longhelp => M"Minimalwinkel in Grad bei der Vereinfachung von Routen\n",
 	  var => \$export_txt_min_angle],
-	 ['gpswaypoints','=i',50,
+	 ['gpswaypoints','=i',250,
 	  choices => [20,50,100,250],
 	  label => M"Maximale Anzahl der GPS-Waypoints",
 	  longhelp => M"Moderne Garmin-Geräte wie der eTrex Vista HCx können 250 Waypoints pro Route verwenden,\netwas ältere wie der eTrex Vista 50 Waypoints,\nwährend noch ältere nur 20 Waypoints laden können\n",
 	  var => \$gps_waypoints,
 	 ],
-	 ['gpswaypointlength','=i',10,
+	 ['gpswaypointlength','=i',20,
 	  choices => [10, 14, 20],
 	  label => M"Maximale Länge von GPS-Waypoint-Namen",
 	  longhelp => M"Typischerweise 10 bei älteren Garmin-Geräten, aber neuere Geräte können längere Namen verwenden (eTrex Vista HCx z.B. offiziell 14 Zeichen, tatsächlich sogar 20 Zeichen)",
 	  var => \$gps_waypointlength,
 	 ],
-	 ['gpswaypointcharset','=s','simpleascii',
+	 ['gpswaypointcharset','=s','latin1+simplearrow',
 	  label => M("Zeichensatz für Waypoints"),
 	  strict => 1,
 	  choices => [[M("Nur Großbuchstaben") => 'simpleascii'],
 		      [M("Groß/Kleinbuchstaben") => 'ascii'],
 		      [M("Groß/Kleinbuchstaben, Umlaute") => 'latin1'],
+		      [M("Groß/Kleinbuchstaben, Umlaute, Pfeile") => 'latin1+simplearrow'],
 		     ],
 	  var => \$gps_waypointcharset,
 	 ],
@@ -5392,7 +5387,7 @@ dazu verwendet wird",
 	  longhelp => M"Laut Garmin-Spezifikationen müssen übetragene Routen mit einer eindeutigen Routennummer versehen werden.\nExperimente haben aber gezeigt, dass die meisten (oder alle?) Garmin-Geräte dieses nicht benötigen.",
 	  var => \$gps_needuniqueroutenumber,
 	 ],
-	 ['gpsroutenamelength','=i',13,
+	 ['gpsroutenamelength','=i',36,
 	  choices => [13,20,30,36],
 	  label => M"Maximale Länge von GPS-Route-Namen",
 	  longhelp => M"Typischerweise 13 bei älteren Garmin-Geräten, aber neuere Geräte können längere Namen verwenden (etrex 30 z.B. 36 Zeichen)",
@@ -10838,6 +10833,38 @@ sub plot_sperre {
 	    if (!$edit_normal_mode) { # we want to see everything in edit mode
 	        next if $addinfo{'igndisp'};
 	    }
+
+	    my $plot_additional_icon = sub ($$$) {
+		my($xm,$ym,$tags) = @_;
+
+		my @anchors = qw(nw sw ne se);
+
+		# Add an additional icon
+		for my $check (['inwork', $use_inwork_photo],
+			       ['night',  $night_photo],
+			       ['clock',  $clock_photo],
+			       ['tempmaybe', $cal_questionmark_photo],
+			       ['temp',   $cal_photo], # should be last
+			       ['xmas',   $xmas_photo],
+			      ) {
+		    my($addinfo, $photo) = @$check;
+		    if ($addinfo{$addinfo} && $photo) {
+			$c->createImage($xm,$ym,
+					-anchor => shift(@anchors),
+					-image => $photo,
+					-tags => [@$tags,"attrib-$addinfo"]);
+			last; # XXX hmmm: allow multiple icons or not?
+		    }
+		}
+
+		if ($is_car && $car_photo) {
+		    $c->createImage($xm, $ym,
+				    -image => $car_photo,
+				    -anchor => shift(@anchors),
+				    -tags => [$abk, $sub_cat,$ret->[Strassen::NAME], $abk.'-'.$pos]);
+		}
+	    };
+
 	    if ($cat eq StrassenNetz::BLOCKED_CARRY) {
 		if ($width0) { # größer 0
 		    $sub_cat = 'sperre0';
@@ -10937,6 +10964,9 @@ sub plot_sperre {
 		    }
 		}
 
+		my $tags = [$abk, $sub_cat,
+			    $ret->[Strassen::NAME], $abk.'-'.$pos];
+
 		$c->createLine
 		    (@c,
 		     -width => (!$is_nocross ? $width3 : $width3_nocross),
@@ -10949,10 +10979,10 @@ sub plot_sperre {
 				     )
 		     ),
 		     ($Tk::VERSION >= 800.016 ? (-dash => $line_dash{sperre3}) : ()),
-		     -tags => [$abk, $sub_cat,
-			       $ret->[Strassen::NAME], $abk.'-'.$pos],
+		     -tags => $tags,
 		    );
-		($icon_x, $icon_y, $icon_anchor) = ($c[0], $c[1], 'n');
+		my($xm, $ym) = $is_nocross ? ($c[2], $c[3]) : ($c[0], $c[1]);
+		$plot_additional_icon->($xm, $ym, $tags);
 	    } else {
 		$sub_cat = $type2cat{$cat};
 		if ($cat eq StrassenNetz::BLOCKED_COMPLETE && $#kreuzungen == 0) {
@@ -10999,32 +11029,7 @@ sub plot_sperre {
 				       -tags => $tags);
 		    }
 
-		    my @anchors = qw(nw sw ne se);
-
-		    # Add an additional icon
-		    for my $check (['inwork', $use_inwork_photo],
-				   ['night',  $night_photo],
-				   ['clock',  $clock_photo],
-				   ['tempmaybe', $cal_questionmark_photo],
-				   ['temp',   $cal_photo], # should be last
-				   ['xmas',   $xmas_photo],
-				  ) {
-			my($addinfo, $photo) = @$check;
-			if ($addinfo{$addinfo} && $photo) {
-			    $c->createImage($xm,$ym,
-					    -anchor => shift(@anchors),
-					    -image => $photo,
-					    -tags => [@$tags,"attrib-$addinfo"]);
-			    last;
-			}
-		    }
-
-		    if ($is_car && $car_photo) {
-			$c->createImage($xm, $ym,
-					-image => $car_photo,
-					-anchor => shift(@anchors),
-					-tags => [$abk, $sub_cat,$ret->[Strassen::NAME], $abk.'-'.$pos]);
-		    }
+		    $plot_additional_icon->($xm,$ym,$tags);
 		};
 
 		if ($advanced) { # XXX decide one day if this should be the default

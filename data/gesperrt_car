@@ -147,7 +147,7 @@ Hittorfstr	1 2442,4806 2469,4882 2516,4936 2587,4965
 Lefèvrestr.	1 5360,6642 5215,6643
 Kühlebornweg	1 5165,4667 5075,4600 5004,4709
 Gartenstr.	1 22456,3889 22281,4033 22263,4120 22279,4220
-Wichmannstr.	1 6477,11045 6555,11012 6681,10959 6824,10904
+Wichmannstr.	1 6472,11049 6549,11015 6681,10959 6824,10904
 Lützowufer	1 6873,11011 6742,11099 6626,11178 6582,11202
 Mulackstr.	1 10308,13575 10406,13543 10535,13509 10640,13471
 Kirchhofstr.	1 13188,7590 13117,7471 13029,7353
@@ -536,7 +536,11 @@ Röddelinseeweg -> Zernseestr.: Mittelstreifen	3::igndisp -1705,16515 -1783,16533
 Zernseestr. -> Daumstr.: Mittelstreifen	3::igndisp -1897,16562 -1783,16533 -1765,16603
 Zernseestr. -> Röddelinseeweg: Mittelstreifen	3::igndisp -1897,16562 -1783,16533 -1705,16515
 Daumstr. -> Templiner-See-Str.: Mittelstreifen	3::igndisp -1810,16391 -1798,16465 -1902,16493
+Daumstr. -> Wolzenseeweg: Mittelstreifen	3::igndisp -1783,16533 -1798,16465 -1721,16448
+Wolzenseeweg -> Daumstr.: Mittelstreifen	3::igndisp -1721,16448 -1798,16465 -1810,16391
+Wolzenseeweg -> Templiner-See-Str.: Mittelstreifen	3::igndisp -1721,16448 -1798,16465 -1902,16493
 Templiner-See-Str. -> Daumstr.: Mittelstreifen	3::igndisp -1902,16493 -1798,16465 -1783,16533
+Templiner-See-Str. -> Wolzenseeweg: Mittelstreifen	3::igndisp -1902,16493 -1798,16465 -1721,16448
 Karlstr.	1 22556,4386 22458,4134
 Mittelstreifen	3nocross::ignrte 21400,18817 21335,18679 21309,18626 21251,18508
 Märkische Allee -> Klandorfer Str.: Mittelstreifen	3::igndisp 21400,18817 21335,18679 21377,18663
@@ -1571,7 +1575,7 @@ Am Treptower Park	1 14745,8912 14614,9052 14558,9111 14475,9199 14443,9233 14382
 Am Treptower Park	1 15166,8489 15079,8575 15070,8584 15002,8651 14934,8717 14852,8799 14842,8809 14745,8912
 Am Treptower Park - Elsenstr.	3 14185,9509 14089,9610 13973,9465
 Czeminskistr.	1 7604,8927 7563,8871
-Berlinickestr.	1 5076,5500 5016,5401
+Berlinickestr.	1 5080,5498 5016,5401
 Sembritzkistr.: nur für Radfahrer	3 7157,5418 7199,5479 7245,5568
 Sembritzkistr.: nur für Radfahrer	3 7245,5568 7199,5479 7157,5418
 Egon-Erwin-Kisch-Str. [Wohngebiet]: Schranke (für Autofahrer)	3 17053,18879 17067,19004 17068,19016
@@ -1786,7 +1790,7 @@ Braunschweiger Str. -> Karl-Marx-Str.: Mittelinsel	3::igndisp 13150,7254 13043,7
 Mittelinsel	3nocross::ignrte 12969,7610 12991,7549 13015,7471
 Karl-Marx-Str. -> Karl-Marx-Pl.: Mittelinsel	3::igndisp 12969,7610 12991,7549 13100,7626
 Karl-Marx-Pl. -> Karl-Marx-Str.: Mittelinsel	3::igndisp 13100,7626 12991,7549 13015,7471
-Berliner Str - Bernstorffstr.: nur für BVG-Busse erlaubt	3 1955,20435 2020,20327 2131,20406
+Berliner Str - Bernstorffstr.: nur für BVG-Busse erlaubt	3 1955,20435 2015,20336 2133,20413
 Waidmannsluster Damm	3nocross::ignrte 3216,21431 3238,21448 3280,21477
 Waidmannsluster Damm -> Schollenhof: Waidmannsluster Damm	3::igndisp 3216,21431 3238,21448 3155,21572
 Schollenhof -> Waidmannsluster Damm: Waidmannsluster Damm	3::igndisp 3155,21572 3238,21448 3280,21477
@@ -1895,3 +1899,5 @@ Egelingzeile	1 7980,6403 8194,6384
 Im Waldwinkel	1 184,22257 231,22418
 Beyschlagstr.	1 21,22545 5,22384 184,22257
 Beyschlagstr.	1 408,22184 184,22257
+Petriplatz -> Gertraudenstr.: Abbiegen verboten	3 10418,12016 10460,11979 10512,12039
+Schmohlstr.	1 13239,17269 13196,17223 13159,17196 13057,17120

@@ -1032,11 +1032,11 @@ userdel	q4 49039,44131 48924,44216 48724,44248 48523,44467
 userdel	q4 49039,44131 49691,43812
 EOF
      },
-     { from  => $isodate2epoch->("2016-09-29 06:00:00"), # 1 Tag Vorlauf # 1096578452, # 2004-09-30 23:07
-       until => $isodate2epoch->("2016-10-04 23:59:59"), # 1096862400, # 2004-10-04 06:00
+     { from  => $isodate2epoch->("2017-09-29 06:00:00"), # 1 Tag Vorlauf # 1096578452, # 2004-09-30 23:07
+       until => $isodate2epoch->("2017-10-04 23:59:59"), # 1096862400, # 2004-10-04 06:00
        periodic => 1,
        recurrences => [['yearly', days => 29, months => 9]],
-       text  => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen voraussichtlich gesperrt (bis 04.10.2016)',
+       text  => 'Str. des 17. Juni/Ebertstr.: Veranstaltung (Fest zum Tag der Deutschen Einheit), Straßen voraussichtlich gesperrt (bis 04.10.2017)',
        type  => 'gesperrt',
        data  => <<EOF,
 userdel	2 8055,12186 8089,12190 8214,12205
@@ -4210,7 +4210,7 @@ EOF
 userdel	q4::temp 4392,17777 4429,17763 4584,17704
 userdel	q4::temp 4392,17777 4326,17801
 userdel	q4::temp 4584,17704 4683,17669
-userdel	q4::temp 4326,17801 4200,17848 4096,17890 4015,17912
+userdel	q4::temp 4326,17801 4200,17848 4096,17890 4016,17918
 EOF
      },
      { from  => 1144706400, # 2006-04-11 00:00
@@ -5249,7 +5249,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_003395',
        data  => <<EOF,
-userdel	2::inwork 7002,11034 7010,11002 6966,10931 6929,10852
+userdel	2::inwork 7002,11034 6998,11003 6966,10931 6929,10852
 EOF
      },
      { from  => 1153739453, # 2006-07-24 13:10
@@ -7611,7 +7611,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005044',
        data  => <<EOF,
-userdel	2::temp 2823,5672 2771,5678 2654,5678
+userdel	2::temp 2823,5672 2771,5674 2654,5678
 EOF
      },
      { from  => 1174773600, # 2007-03-24 23:00
@@ -8554,7 +8554,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'IM_005680',
        data  => <<EOF,
-userdel	1::inwork 2020,20327 2131,20406 2241,20487
+userdel	1::inwork 2015,20336 2133,20413 2241,20487
 EOF
      },
      { from  => 1431286193, # 1181165074, # undef
@@ -13774,7 +13774,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_012136',
        data  => <<EOF,
-userdel	q4::inwork; 2241,20487 2131,20406 2020,20327
+userdel	q4::inwork; 2241,20487 2133,20413 2015,20336
 EOF
      },
      { from  => 1239660000, # 2009-04-14 00:00
@@ -14894,7 +14894,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_013510',
        data  => <<EOF,
-userdel	q4::inwork -1787,19341 -1826,19541 -1788,19663
+userdel	q4::inwork -1787,19341 -1839,19495 -1826,19541 -1788,19663
 EOF
      },
      { from  => 1247090400, # 2009-07-09 00:00
@@ -19678,7 +19678,7 @@ EOF
 #: XXX Weiterbau zwischen Gorkistr. und Bernstorffstraße ab März 2012 vorgesehen
 #: next_check: 2012-03-01
 userdel	q4::inwork 2358,20368 2295,20358 2241,20487
-userdel	q4::inwork 2295,20358 2356,20216 2395,20126
+userdel	q4::inwork 2295,20358 2352,20224 2381,20157 2395,20126
 EOF
      },
      { from  => 1311832800, # 2011-07-28 08:00
@@ -23049,13 +23049,13 @@ EOF
        type  => 'gesperrt',
        source_id => 'http://www.berliner-zeitung.de/polizei/bombenentschaerfung-in-steglitz-5000-menschen-muessen-ihre-haeuser-verlassen,10809296,27383386.html',
        data  => <<EOF,
-userdel	2::inwork 6134,5986 6134,5894 6134,5800 6007,5785 5942,5775
-userdel	2::inwork 6134,5800 6115,5302
+userdel	2::inwork 6124,5983 6124,5894 6123,5798 6007,5785 5942,5775
+userdel	2::inwork 6123,5798 6115,5302
 userdel	2::inwork 5699,5949 5847,5961 5845,6049 5748,6051 5699,5949 5674,5901 5677,5868 5679,5853 5681,5768 5681,5743 5683,5672 5687,5586 5840,5588 5840,5679 5683,5672
 userdel	2::inwork 5681,5743 5850,5765 5851,5863 5694,5845
 userdel	2::inwork 5845,6049 6008,6067 6001,5974 5847,5961 5851,5863 5935,5874 5942,5775 5850,5765 5840,5679
-userdel	2::inwork 5993,5422 6009,5691 6007,5785 6007,5882 6001,5974 6134,5986 6116,6130
-userdel	2::inwork 5935,5874 6007,5882 6134,5894
+userdel	2::inwork 5993,5422 6009,5691 6007,5785 6007,5882 6001,5974 6124,5983 6116,6130
+userdel	2::inwork 5935,5874 6007,5882 6124,5894
 EOF
      },
      { from  => 1482440059,
@@ -24833,16 +24833,12 @@ userdel	q4::inwork 10105,13004 10117,12973 10132,12941
 userdel	q3::inwork 9932,13109 10105,13004
 EOF
      },
-     { from  => 1446303841, # 2015-10-31 16:04
-       until => $isodate2epoch->("2015-12-07 04:00:00"),
-       text  => 'Weichselstr./Holteistr.: Bauarbeiten, Fahrbahn Richtung Süden gesperrt, auch ist das Überqueren der Fahrbahn teilweise nicht möglich, bis 07.12.2015',
+     { from  => 1503943766,
+       until => $isodate2epoch->("2017-09-08 12:00:00"),
+       text  => 'Wühlischstr.: Gleisarbeiten, Fahrbahn Richtung Warschauer Str. gesperrt, bis zum 8.9.2017',
        type  => 'handicap',
        data  => <<EOF,
-	q4::inwork; 14887,11929 14835,11840 14802,11784 14794,11770 14710,11626 14639,11512
-# REMOVED ---	q3::inwork 14645,11670 14710,11626
-	q3::inwork 14710,11626 14764,11591
-# REMOVED ---	q3::inwork 14708,11820 14794,11770
-	q3::inwork 14794,11770 14856,11740
+	q4::inwork; 14575,11407 14434,11465
 EOF
      },
      { from  => 1445320800, # 2015-10-20 08:00
@@ -25035,7 +25031,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 # REMOVED --- #: XXX wann werden die Bauarbeiten beendet? --- #: next_check: 2016-03-29
-userdel	q4::inwork 5223,5704 5115,5551 5076,5500
+userdel	q4::inwork 5223,5704 5115,5551 5080,5498
 EOF
      },
      { from  => 1458428400, # 2016-03-20 00:00
@@ -25329,11 +25325,12 @@ EOF
 EOF
      },
      { from  => 1501526175, # 1465682400, # 2016-06-12 00:00
-       until => $isodate2epoch->("2017-08-31 12:00:00"),
-       text  => 'Werneuchener Str.: zwischen Genslerstr. und Goeckestr. Richtung Konrad-Wolf-Str. Bauarbeiten, gesperrt bis Ende August 2017',
+       until => $isodate2epoch->("2017-10-01 12:00:00"),
+       text  => 'Werneuchener Str.: zwischen Genslerstr. und Goeckestr. Richtung Konrad-Wolf-Str. Bauarbeiten, gesperrt bis Anfang Oktober 2017',
        type  => 'handicap',
        data  => <<EOF,
 #: by: fritz
+#: source_id: 2147341721
 userdel	q3::inwork; 16768,14849 16610,15000 16514,15092
 EOF
      },
@@ -25640,8 +25637,8 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-08-11 vvv
-#: check_frequency: 21d vvv
+#: last_checked: 2017-08-26 vvv
+#: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
 	q2::inwork; 11139,12243 11092,12375
@@ -25662,9 +25659,9 @@ EOF
 userdel	q4::inwork; -2517,17431 -2606,17272 -2666,17168 -2728,17038
 EOF
      },
-     { from  => 1473285600, # 2016-09-08 00:00
-       until => $isodate2epoch->("2016-09-12 09:00:00"), # 1473674400, # 2016-09-12 12:00b
-       text  => 'Straße des 17. Juni und Ebertstr.: Sperrungen wegen der Sportveranstaltung "Berlin fliegt", ab 09.09.2016 bis 12.09.2016',
+     { from  => 1504201168, # 1473285600, # 2016-09-08 00:00
+       until => $isodate2epoch->("2017-09-03 20:00:00"),
+       text  => 'Straße des 17. Juni und Ebertstr.: Sperrungen wegen der Sportveranstaltung "Berlin fliegt", bis 03.09.2017 20 Uhr',
        type  => 'gesperrt',
        source_id => '2147339672',
        data  => <<EOF,
@@ -25998,12 +25995,12 @@ userdel	q3::inwork; 14060,17221 14099,17195 14136,17170 14235,17103 14341,17030 
 EOF
      },
      { from  => 1491854162, # 2017-04-10 21:56
-       until => 1504195200, # 2017-08-31 18:00
+       until => 1503854993, # 1504195200, # 2017-08-31 18:00
        text  => 'Ernst-Barlach-Str./Dorfstr.: Bauarbeiten zwischen Woldegker Str. und Lindenberger Str., Fahrbahn ggfs. gesperrt, bis Ende August 2017 ',
        type  => 'handicap',
        source_id => '2147341173',
        data  => <<EOF,
-userdel	q4::inwork 18009,18946 17900,18972 17890,18973 17799,19000 17697,18989 17600,18994
+userdel	q4::inwork 18007,18938 17980,18947 17900,18972 17887,18975 17799,19000 17697,18989 17600,18994
 EOF
      },
      { from  => 1492466400, # 2017-04-18 00:00
@@ -26021,7 +26018,7 @@ EOF
        text  => 'Akazienstr.: Bauarbeiten im Kreuzungsbereich Belziger Str., Einbahnstraßenregelung',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2017-08-22
+#: last_checked: 2017-08-28
 #: check_frequency: 14d
 userdel	q3::inwork; 7201,8870 7107,9030 7035,9161
 EOF
@@ -26122,8 +26119,8 @@ EOF
        data  => <<EOF,
 #: XXX Baumaßnahme ist Ende 2018 fertig; Vollsperrung nur für 2-3 Wochen
 #: XXX wird es vielleicht Änderungen bei der Wegbeschaffenheit geben?
-#: last_checked: 2017-07-24
-#: next_check: 2017-09-01
+#: last_checked: 2017-08-28 (der Eingangsbereich ist zurzeit gesperrt, Umgehung existiert)
+#: next_check: 2017-09-15
 userdel	2::inwork 6815,8691 6912,8617
 EOF
      },
@@ -26132,7 +26129,7 @@ EOF
        text  => 'DB-Werkstraße (Markgrafendamm): wegen Bauarbeiten kann die Fahrbahn gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2017-08-22
+#: last_checked: 2017-08-29
 #: check_frequency: 14d
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 EOF
@@ -26179,12 +26176,12 @@ EOF
        data  => <<EOF,
 userdel	2::temp 6476,11325 6630,11247 6606,11222 6582,11202 6447,11144
 userdel	2::temp 6841,11114 6630,11247 6679,11319 6692,11365 6716,11439 6825,11486
-userdel	2::temp 5986,10976 6058,10988 6145,10975 6168,11042 6447,11144 6452,11118 6477,11045
+userdel	2::temp 5986,10976 6058,10988 6145,10975 6168,11042 6447,11144 6452,11118 6472,11049
 userdel	2::temp 6626,11178 6582,11202 6495,11251 6350,11301 6346,11326 6337,11365 6200,11417
 	3 6851,11346 6692,11365 6481,11400
 	3 6481,11400 6692,11365 6851,11346
-	3 6272,10926 6145,10975 6122,10925
-	3 6122,10925 6145,10975 6272,10926
+	3 6266,10927 6145,10975 6122,10925
+	3 6122,10925 6145,10975 6266,10927
 EOF
      },
      { from  => $isodate2epoch->("2017-07-19 12:00:00"),
@@ -26213,8 +26210,11 @@ EOF
        source_id => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2017/pressemitteilung.608925.php',
        data  => <<EOF,
 #: XXX wird sich die Qualität vielleicht bessern?
-#: next_check: 2017-09-01
-userdel	2::inwork 8234,4660 8575,4980 8598,4985 8618,5019 8784,5095
+#: last_checked: 2017-08-28 vvv
+userdel	2::inwork 8234,4660 8575,4980 8598,4985
+#: XXX hier sind gerade Bauarbeiten --- Verbundsteinpflaster bleibt wohl, der wassergebundene Teil sind besser aus
+userdel	2::inwork 8598,4985 8618,5019 8784,5095
+#: last_checked ^^^
 EOF
      },
      { from  => undef, # 
@@ -26287,13 +26287,14 @@ userdel	2::inwork 4561,13244 4547,13139 4576,13115
 EOF
      },
      { from  => 1500156000, # 2017-07-16 00:00
-       until => 1511218800, # 2017-11-21 00:00
-       text  => 'Am Eichenhain: Bauarbeiten zwischen Sigismundkorso und Karmeliterweg, Fahrbahn gesperrt, vom 17.07.2017 bis 20.11.2017',
+       until => $isodate2epoch->("2017-10-20 12:00:00"), # 1511218800, # 2017-11-21 00:00
+       text  => 'Am Eichenhain: Bauarbeiten zwischen Sigismundkorso und Karmeliterweg, Fahrbahn gesperrt, bis voraussichtlich Mitte Oktober 2017',
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.611086.php',
        data  => <<EOF,
 #: source_id: 2147341585
-#: note: laut vmz bis Ende 08/17, laut fritz bis 2017-08-25
+#: note: laut vmz bis Mitte 10/2017, laut fritz bis 2017-10-20
+#: next_check: 2017-10-20
 userdel	q4::inwork 854,24387 836,24440 813,24497 790,24556 784,24612 790,24698 808,24790 811,24833 793,24943 785,24968
 EOF
      },
@@ -26412,6 +26413,7 @@ EOF
        text  => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Baseler Str. offen Richtung Norden), eventuell bis Ende November 2017',
        type  => 'handicap',
        data  => <<EOF,
+#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?bvgid=BVG131679 ("gültig bis: auf Weiteres")
 userdel	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 userdel	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
 EOF
@@ -26434,11 +26436,10 @@ userdel	q2::inwork 14981,11751 15080,11905
 EOF
      },
      { from  => 1503081615, # 2017-08-18 20:40
-       until => 1508191199, # 2017-10-16 23:59
+       until => 1503768204, # -> handicap_s-orig --- 1508191199, # 2017-10-16 23:59
        text  => 'Palisadenstr.: Bauarbeiten, Einbahnstraße zwischen Friedenstr. und Koppenstr., offen in Richtung Osten, bis zum 16. Oktober 2017',
        type  => 'handicap',
        data  => <<EOF,
-#: last_checked: 2017-08-20
 userdel	q3::inwork; 12866,12582 12843,12567 12632,12630
 EOF
      },
@@ -26461,6 +26462,17 @@ EOF
 #: last_checked: 2017-08-19
 #: next_check: 2017-12-31
 userdel	2::inwork 4117,22722 4176,22764
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Wattstr.: Zugang kann durch Bauzäune versperrt sein, meistens aber offen',
+       type  => 'gesperrt',
+       data  => <<EOF,
+#: next_check_id: MINNATODENHAGENSTR-2016
+#: XXX siehe auch handicap_s-orig-Eintrag
+#: last_checked: 2017-08-27
+userdel	2::inwork 17681,7589 17676,7555
 EOF
      },
     );

@@ -118,7 +118,7 @@ Clayallee, U-Bahnbrücke	Br 1462,4802 1450,4766
 Brümmerstr., U-Bahnbrücke	Br 2027,4792 2079,4769
 Thielalleebrücke	Br 2499,5144 2523,5114
 Fabeckstr., U-Bahnbrücke	Br 2717,5578 2746,5537
-Königin-Luise-Str., U-Bahnbrücke	Br 2771,5678 2823,5672
+Königin-Luise-Str., U-Bahnbrücke	Br 2771,5674 2823,5672
 U-Bahnbrücke	Br 1736,4774 1730,4743
 Dahlemer Weg, S-Bahnbrücke	Br 2253,3505 2266,3580
 Tietzenweg, S-Bahnbrücke	Br 3557,4355 3587,4312
@@ -199,7 +199,7 @@ Rohrdammbrücke	Br 1170,13521 1159,13541 1124,13599
 Olympische Brücke	Br 137,12056 193,12070
 Saatwinkler Steg	Br -1073,16610 -995,16701
 Gartenfelder Brücke	Br -302,15602 -302,15546
-Tegeler Brücke	Br -247,15982 -236,16043 -226,16086
+Tegeler Brücke	Br -242,15982 -236,16043 -226,16086
 Spandauer-See-Brücke	Br -2209,16501 -1928,16423
 Wasserstadtbrücke	Br -2149,16921 -1832,16858
 Tiefwerderbrücke	Br -2780,12858 -2788,12880
@@ -614,6 +614,10 @@ Unterführung Am Alten Gaswerk	Tu -8251,14440 -8256,14418
 Unterführung am S-Bhf. Kaulsdorf	Tu 22857,12014 22859,12059
 Unterführung Ilsenburgstr.	Tu 13617,21819 13644,21808
 Wuhlesteg	Br 22503,14104 22783,14034
+#: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_36_3997_4156_online.pdf vvv
+Hatun-Sürücü-Brücke	Br 14334,7395 14369,7376
+Magarethe-Kubicka-Brücke	Br 14384,8056 14425,8052
+#: by ^^^
 #: section ^^^
 #
 ## Brandenburg und weiter ####################################################
