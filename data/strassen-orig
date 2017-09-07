@@ -1470,18 +1470,18 @@ Heidestr. (Moabit)	N 8092,13467 8059,13551 8048,13578 8019,13650
 Heidestr. (Moabit)	HH 8019,13650 7979,13733 7973,13743 7906,13855 7865,13924 7820,13994 7767,14077 7732,14131 7697,14187 7652,14257 7566,14404 7532,14446 7487,14472 7401,14526 7368,14573
 # 
 #: next_check_id: EUROPACITY-2015 vvv
-#: last_checked: 2017-07-14 vvv
-#: check_frequency: 45d vvv
+#: last_checked: 2017-09-04 vvv
 #: XXX werden die Straßennamen tatsächlich so lauten? Fehlen in Berlin.coords.data vvv
 #: XXX Planstraßen 2.1, 2.2, 2.3
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_19_2029_2164_online.pdf ("Benennung einer Erschließungsanlage")
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_31_3489_3616_online.pdf ("Grundstücksnummerierungen")
+#: check_frequency: 45d
 (Lydia-Rabinowitsch-Str.)	N 7820,13994 7930,14060 7973,13991 7865,13924
 #: XXX Planstraßen 1.1, 1.2, 1.3
 #: XXX wobei es bereits eine Clara-von-Simson-Str. in Berlin gibt (Mail an die BVV Mitte geschickt)
+#: check_frequency: 60d
 (Clara-von-Simson-Str.)	N 7652,14257 7757,14318 7802,14250 7697,14187
 #: XXX ^^^
-#: check_frequency ^^^
 #: last_checked ^^^
 #: next_check_id ^^^
 # 
@@ -6865,6 +6865,8 @@ Tile-Brügge-Weg	N 3214,20629 3287,20739 3306,20773
 (Tile-Brügge-Weg - Weg am Nordgraben)	NN 3306,20773 3312,20789
 Myrtenweg	N 3052,20743 2944,20710
 Am Brunnen	N 3052,20743 3023,20886
+#: XXX besteht diese Wegverbindung noch?
+#: by: http://www.berlin.de/ba-reinickendorf/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=5190
 (Am Brunnen - Weg am Nordgraben)	NN 3023,20886 3028,20894 3032,20930
 Am Rosensteg	N 3052,20743 3056,20713 3065,20646
 (Am Rosensteg - An der Heide)	NN 3065,20646 3101,20649 3109,20650
@@ -7764,7 +7766,8 @@ Teltower Weg	NN -903,6923 -1020,7446 -1112,7891 -1317,8836 -1336,9001 -1435,9168
 Teltower Weg	NN -739,6838 -813,6755 -439,6255 -359,6181 -288,6101 -174,5941 -107,5880
 #: note: nicht ausgeschildert
 (Parforceweg)	NN -643,7252 -728,7310 -1020,7446 -1328,7597 -1643,7828 -1787,7932 -1846,8129 -1852,8155 -2038,8304 -2161,8354 -2388,8437
-(Teufelsseestr - Grunewaldturm)	NN -1484,9175 -1658,9103 -2085,8772 -2341,8539 -2388,8437 -2386,8282 -2417,8196 -2561,8110 -2752,8018 -2897,8008 -3212,8024 -3536,7856
+(Teufelsseestr - Grunewaldturm)	NN -1484,9175 -1658,9103 -2085,8772 -2341,8539 -2388,8437 -2386,8282 -2417,8196 -2561,8110 -2752,8018 -2897,8008 -3212,8024 -3442,7935 -3536,7856 -3603,7798
+(Grunewaldturm)	N -3496,7677 -3603,7798 -3567,8031
 (Schwarzer Weg - Saubucht/Pechsee)	NN -2677,7696 -2617,8025 -2561,8110
 Forsthausallee	N 15396,6125 15694,6160 15723,6151
 Neudecker Weg	H 18396,1990 18361,1926 18198,1814 18044,1716 17855,1629 17526,1540 17211,1469 17120,1394 16975,1262 16908,1217
@@ -11421,7 +11424,7 @@ Am Buschfeld	N 14171,1634 14124,1857
 #: XXX ändert sich durch die (teilweise?) Straßenlandwidmung etwas?
 #: osm_watch: way id="156346093" version="2"
 #: osm_watch: way id="23106203" version="10"
-#: osm_watch: way id="457087739" version="11"
+#: osm_watch: way id="457087739" version="13"
 #: last_checked: 2017-08-10
 #: check_frequency: 120d
 Stuthirtenweg	NN 12984,1011 13040,1021 13113,1046 13181,1082 13241,1113

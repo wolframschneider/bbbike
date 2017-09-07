@@ -101,25 +101,7 @@ userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 1117
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	2::temp 16849,1437 16805,1488 16610,1715 16549,1758
-',
-         'from' => 1504191600,
-         'id' => 112,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              31,
-                              'months',
-                              8
-                            ]
-                          ],
-         'text' => 'Alt-Rudow: zwischen Bildhauerweg und Köpenicker Str. Veranstaltung (Rudower Meilenfest), Straße vollständig gesperrt (01.09.2017 bis 03.09.2017)',
-         'type' => 'gesperrt',
-         'until' => 1504475999
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2656,25 +2638,7 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	q4::temp 13178,10623 13206,10651 13305,10789 13332,10832
-',
-         'from' => 1504339200,
-         'id' => 2206,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              2,
-                              'months',
-                              7
-                            ]
-                          ],
-         'text' => 'Open Air Gallery am 3. September 2017 auf der Oberbaumbrücke (10:00 - 20:00)',
-         'type' => 'gesperrt',
-         'until' => 1504468800
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3850,7 +3814,7 @@ userdel	q4::inwork 12911,1815 12940,1547
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-08-26 vvv
+#: last_checked: 2017-09-02 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -3869,21 +3833,7 @@ userdel	q4::inwork 12911,1815 12940,1547
          'until' => undef
        },
        undef,
-       {
-         'data' => 'userdel	2::temp 8540,12420 8573,12325 8570,12302 8546,12279 8538,12245 8344,12221 8303,12216 8214,12205 8089,12190 8055,12186
-userdel	2::temp 8600,12165 8538,12245 8592,12252
-userdel auto	3 8522,12239 8538,12245 8522,12187
-userdel auto	3 8522,12187 8538,12245 8522,12239
-userdel auto	3 8391,12389 8344,12221 8327,12174
-userdel auto	3 8327,12174 8344,12221 8391,12389
-',
-         'from' => 1504201168,
-         'id' => 2827,
-         'source_id' => '2147339672',
-         'text' => 'Straße des 17. Juni und Ebertstr.: Sperrungen wegen der Sportveranstaltung "Berlin fliegt", bis 03.09.2017 20 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1504461600
-       },
+       undef,
        undef,
        undef,
        {
@@ -4019,8 +3969,7 @@ userdel	2::inwork 6815,8691 6912,8617
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2017-08-29
-#: check_frequency: 14d
+         'data' => '#: last_checked: 2017-09-04
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 ',
          'from' => undef,
@@ -4090,16 +4039,7 @@ userdel	2::inwork 7231,236 7501,83
          'type' => 'gesperrt',
          'until' => 1541026800
        },
-       {
-         'data' => 'userdel	2::inwork 20533,29069 20537,29285
-',
-         'from' => 1504044000,
-         'id' => 2882,
-         'source_id' => 'http://www.pankow.live/2017/04/21/erneutes-chaos-zwischen-blankenburg-und-bernau-vorprogrammiert/',
-         'text' => 'Zepernicker Chaussee: Sperrung an der Eisenbahnbrücke, 1. bis 4. September 2017',
-         'type' => 'gesperrt',
-         'until' => 1504562399
-       },
+       undef,
        {
          'data' => 'userdel	2::inwork 20533,29069 20537,29285
 ',
@@ -4272,6 +4212,16 @@ userdel	2::inwork 17681,7589 17676,7555
          'text' => 'Wattstr.: Zugang kann durch Bauzäune versperrt sein, meistens aber offen',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => 'userdel	q3::inwork; 14926,12129 14887,11929
+',
+         'from' => 1504719478,
+         'id' => 2904,
+         'source_id' => '2147341770',
+         'text' => 'Weichselstr.: Einbahnstraßenregelung während der Bauarbeiten an der Kreuzung Frankfurter Allee/Möllendorffstr., voraussichtlich bis zum 24. September 2017',
+         'type' => 'handicap',
+         'until' => 1506290399
        }
      
 );
