@@ -1,121 +1,6 @@
-$#temp_blocking = 30;
+$#temp_blocking = 126;
 push @temp_blocking,
 (
-       {
-         'data' => '#: by: http://www.weinfeste-in-deutschland.de/wein-und-winzerfest-in-berlin-lichtenrade.html
-userdel	2::temp 11070,-1853 11055,-1741 11043,-1653 11064,-1597 11151,-1612 11174,-1669 11174,-1719 11129,-1772 11095,-1846 11070,-1853
-',
-         'from' => 1504774800,
-         'id' => 31,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              6,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'am Lichtenrader Dorfteich: Wein- und Winzerfest, vom 08.09.2017 16:00 bis 10.09.2017 20:00',
-         'type' => 'gesperrt',
-         'until' => 1505070000
-       },
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
-       undef,
        {
          'data' => 'userdel	2 8055,12186 8089,12190 8214,12205
 userdel	2 8214,12205 8303,12216 8344,12221 8538,12245
@@ -2713,27 +2598,7 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.laubinger.de/termine/48-fest-an-der-panke/
-	2::temp 10602,18382 10567,18366 10502,18338 10463,18321 10449,18315 10281,18241 10240,18193 10320,18197 10469,18262 10487,18270 10660,18345
-	2::temp 10602,18382 10562,18506 10532,18601
-',
-         'from' => 1504821600,
-         'id' => 2281,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Breite Str. (Pankow) in beiden Richtungen zwischen Mühlenstr. und Ossietzkystr., sowie Ossietzkystr. bis Pestalozzistr.: Veranstaltung (Fest an der Panke), Straßen gesperrt (8.09.2017-10.09.2017)',
-         'type' => 'gesperrt',
-         'until' => 1505080799
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3304,27 +3169,7 @@ userdel	2::night 17671,13132 17684,13133
        undef,
        undef,
        undef,
-       {
-         'data' => '#: note: kein tempex-Ausdruck möglich
-userdel	2::temp 5648,9642 5642,9613 5618,9607 5598,9612 5578,9629
-',
-         'from' => 1504789200,
-         'id' => 2533,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              9,
-                              'months',
-                              5
-                            ]
-                          ],
-         'source_id' => 'https://www.berlin.de/ba-charlottenburg-wilmersdorf/ueber-den-bezirk/sonstiges/events/fest-der-nationen/?date=20170409',
-         'text' => 'Prager Platz: Veranstaltung "Fest der Nationen", Durchfahrt nicht möglich, vom 8.9.2017 15 Uhr bis 10.9.2017 22 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1505073600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3462,7 +3307,7 @@ userdel	2::temp 5857,13342 5868,13441 5882,13548
                               9
                             ]
                           ],
-         'source_id' => 'https://misch-mit.net/strassenfest-ums-rathaus-moabit-10-sept-2016-2/',
+         'source_id' => 'https://misch-mit.net/moabiter-kiezfest2017/',
          'text' => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 16. September 2017, 14 bis 18 Uhr ',
          'type' => 'gesperrt',
          'until' => 1505599199
@@ -3693,9 +3538,9 @@ userdel	q3::inwork; -6861,15129 -6507,15007
 ',
          'from' => 1503943766,
          'id' => 2755,
-         'text' => 'Wühlischstr.: Gleisarbeiten, Fahrbahn Richtung Warschauer Str. gesperrt, bis zum 8.9.2017',
+         'text' => 'Wühlischstr.: Gleisarbeiten, Fahrbahn Richtung Warschauer Str. gesperrt, bis Ende September 2017',
          'type' => 'handicap',
-         'until' => 1504864800
+         'until' => 1506765600
        },
        undef,
        undef,
@@ -3814,7 +3659,7 @@ userdel	q4::inwork 12911,1815 12940,1547
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-09-02 vvv
+#: last_checked: 2017-09-10 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -3969,7 +3814,7 @@ userdel	2::inwork 6815,8691 6912,8617
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2017-09-04
+         'data' => '#: last_checked: 2017-09-11
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 ',
          'from' => undef,
@@ -4222,6 +4067,36 @@ userdel	2::inwork 17681,7589 17676,7555
          'text' => 'Weichselstr.: Einbahnstraßenregelung während der Bauarbeiten an der Kreuzung Frankfurter Allee/Möllendorffstr., voraussichtlich bis zum 24. September 2017',
          'type' => 'handicap',
          'until' => 1506290399
+       },
+       {
+         'data' => 'userdel	q4::inwork; 10167,19797 10195,19703 10224,19628 10257,19542
+',
+         'from' => 1504896268,
+         'id' => 2905,
+         'source_id' => '2147341767',
+         'text' => 'Dietzgenstr.: Bauarbeiten ab Kuckhoffstr. Richtung Süden, auch Radfahrer sind betroffen, voraussichtlich bis MItte Oktober 2017',
+         'type' => 'handicap',
+         'until' => 1508104799
+       },
+       {
+         'data' => '#: last_checked: 2017-09-11
+userdel	2::inwork 14652,10201 14569,10055
+',
+         'from' => undef,
+         'id' => 2906,
+         'text' => 'Alt-Stralau - Spreeufer: Verbindung gesperrt, Ende unbekannt',
+         'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => 'userdel	q4::inwork -1869,19974 -1806,19806 -1794,19681 -1788,19663
+',
+         'from' => 1505599200,
+         'id' => 2907,
+         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.629207.php',
+         'text' => 'Sandhauser Str./Falkenplatz: Bauarbeiten, Sperrung der Fahrbahn zwischen Sperberstr. und Falkenhorststr., vom 18.09.2017 bis 31.10.2017',
+         'type' => 'handicap',
+         'until' => 1509490800
        }
      
 );
