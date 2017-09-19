@@ -25476,7 +25476,7 @@ EOF
        data  => <<EOF,
 #: XXX zweiter Bauabschnitt ab Ende August bis ca. 23.09.
 #: next_check: 2016-07-31
-userdel	2::inwork 22084,5877 21846,5856 21744,5804 21602,5685
+userdel	2::inwork 22084,5877 22070,5876 21846,5856 21744,5804 21618,5699 21602,5685
 EOF
      },
      { from  => 1469052000, # 2016-07-21 00:00
@@ -26126,7 +26126,7 @@ EOF
        text  => 'DB-Werkstraße (Markgrafendamm): wegen Bauarbeiten kann die Fahrbahn gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-#: last_checked: 2017-09-13
+#: last_checked: 2017-09-18
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 EOF
      },
@@ -26467,7 +26467,7 @@ EOF
        data  => <<EOF,
 #: next_check_id: MINNATODENHAGENSTR-2016
 #: XXX siehe auch handicap_s-orig-Eintrag
-#: last_checked: 2017-08-27
+#: last_checked: 2017-09-19
 userdel	2::inwork 17681,7589 17676,7555
 EOF
      },
@@ -26504,6 +26504,7 @@ EOF
        type  => 'handicap',
        source_id => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.629207.php',
        data  => <<EOF,
+#: source_id: 2147341831
 userdel	q4::inwork -1869,19974 -1806,19806 -1794,19681 -1788,19663
 EOF
      },

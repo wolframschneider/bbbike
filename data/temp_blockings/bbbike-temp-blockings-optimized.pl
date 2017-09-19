@@ -2091,26 +2091,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.family-and-friends-ev.de/termine.html
-userdel	2::temp 571,11255 541,11464 550,11607 560,11695 562,11710 577,11837 589,11953
-',
-         'from' => 1505466000,
-         'id' => 1910,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              15,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Preußenallee (Charlottenburg) zwischen Marathonallee und Heerstr. Veranstaltung (Herbstzauber in Westend), Straße vollständig gesperrt (16.09.2017 bis 17.09.2017) ',
-         'type' => 'gesperrt',
-         'until' => 1505671200
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2602,26 +2583,7 @@ Albrecht-Thaer-Weg: Privatstraße, evtl. nicht geöffnet	2::night 3350,6467 3449,6
        undef,
        undef,
        undef,
-       {
-         'data' => 'userdel	q4::temp 8556,21918 8568,21863 8473,21633 8460,21602
-',
-         'from' => 1505340000,
-         'id' => 2285,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              14,
-                              'months',
-                              9
-                            ]
-                          ],
-         'source_id' => 'http://www.laubinger.de/termine/rosenthaler-herbst/?y=2017',
-         'text' => 'Hauptstr. (Rosenthal): Veranstaltung (Rosenthaler Herbst), Straße vollständig gesperrt zwischen Schönhauser Str. und An der Vogelweide, 15.09.2017 bis 17.09.2017',
-         'type' => 'handicap',
-         'until' => 1505685599
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3290,28 +3252,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '# REMOVED --- : tempex YYYY09 & sa2 & T14-T18
-#: tempex YYYY09 & sa3 & T14-T18
-userdel	2::temp 5857,13342 5868,13441 5882,13548
-',
-         'from' => 1505426400,
-         'id' => 2625,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              9,
-                              'months',
-                              9
-                            ]
-                          ],
-         'source_id' => 'https://misch-mit.net/moabiter-kiezfest2017/',
-         'text' => 'Bremer Str.: Moabiter Kiezfest, evtl. ist die Fahrbahn gesperrt, 16. September 2017, 14 bis 18 Uhr ',
-         'type' => 'gesperrt',
-         'until' => 1505599199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3786,7 +3727,7 @@ userdel	2::inwork 6815,8691 6912,8617
          'until' => undef
        },
        {
-         'data' => '#: last_checked: 2017-09-13
+         'data' => '#: last_checked: 2017-09-18
 userdel	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 ',
          'from' => undef,
@@ -4021,7 +3962,7 @@ userdel	2::inwork 4117,22722 4176,22764
        {
          'data' => '#: next_check_id: MINNATODENHAGENSTR-2016
 #: XXX siehe auch handicap_s-orig-Eintrag
-#: last_checked: 2017-08-27
+#: last_checked: 2017-09-19
 userdel	2::inwork 17681,7589 17676,7555
 ',
          'from' => undef,
@@ -4061,7 +4002,8 @@ userdel	2::inwork 14652,10201 14569,10055
          'until' => undef
        },
        {
-         'data' => 'userdel	q4::inwork -1869,19974 -1806,19806 -1794,19681 -1788,19663
+         'data' => '#: source_id: 2147341831
+userdel	q4::inwork -1869,19974 -1806,19806 -1794,19681 -1788,19663
 ',
          'from' => 1505599200,
          'id' => 2907,
