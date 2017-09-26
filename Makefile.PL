@@ -23,6 +23,7 @@ BEGIN {
 }
 
 use BBBikeVar;
+use BBBikeBuildUtil qw(module_path);
 
 my $action;
 GetOptions('action=s' => \$action)
@@ -325,6 +326,18 @@ for (@req_table) {
     }
 }
 
+my %prereq_version_fixups =
+    (
+     'PDF::Create' =>
+     [
+      {
+       version_check   => sub ($) { my $ver = shift; ($ver >= 1.36 && $ver < 1.41) || $ver == 1.42 },
+       version_fix     => '1.43',
+       also_for_bundle => sub ($) { my $bundle_filename = shift; $bundle_filename =~ m{BBBike_windist} },
+      },
+     ],
+    );
+
 # EXE corequisites ####################################################
 # standard Unix: uname, who, tee, at, diff, zcat, ping
 # BSD Unix:      leave (very optional)
@@ -385,6 +398,20 @@ if ($make_bundle) {
     exit make_psgi_bundle()    if $make_bundle eq 'psgi';
     exit make_windist_bundle() if $make_bundle eq 'windist';
     die "Should not happen: unhandled value <$make_bundle>";
+}
+
+# Fixup PREREQ_PM versions (*after* Bundle creation)
+for my $mod (keys %prereq_version_fixups) {
+    my $modpath = module_path($mod);
+    if ($modpath) {
+	my $current_version = MM->parse_version($modpath);
+	for my $fixup (@{ $prereq_version_fixups{$mod} }) {
+	    if ($fixup->{version_check}->($current_version)) {
+		$prereq{$mod} = $fixup->{version_fix};
+		warn "INFO: $mod $current_version problematic, increase prereq version to $prereq{$mod}.\n";
+	    }
+	}
+    }
 }
 
 my $fileref = ExtUtils::Manifest::maniread();
@@ -470,10 +497,25 @@ sub make_general_bundle {
 	if ($type != 0) {
 	    next if ($prereq->[REQTABLE_REQ] & $type) == 0;
 	}
+
 	$modules_string .= $prereq->[REQTABLE_MODNAME];
+
+	my $min_version;
 	if ($prereq->[REQTABLE_VERSION]) {
-	    $modules_string .= " " . $prereq->[REQTABLE_VERSION];
+	    $min_version = $prereq->[REQTABLE_VERSION];
 	}
+	if (my $fixups = $prereq_version_fixups{$prereq->[REQTABLE_MODNAME]}) {
+	    for my $fixup (@$fixups) {
+		if ($fixup->{also_for_bundle} && $fixup->{also_for_bundle}->($file)) {
+		    $min_version = $fixup->{version_fix};
+		    last;
+		}
+	    }
+	}
+	if ($min_version) {
+	    $modules_string .= " " . $min_version;
+	}
+
 	if (defined $prereq->[REQTABLE_LONGDESC]) {
 	    my $msg;
 	    # XXX some day, allow building german OR english
@@ -770,4 +812,3 @@ sub MY::postamble {
     }
     $bbbike_makefile_admin;
 }
-

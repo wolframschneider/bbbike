@@ -235,7 +235,7 @@ sub usage {
 # ImageMagick support is experimental and incomplete anyway, so do not
 # depend on this
 if (!eval { require Image::Magick; 1 }) {
-    for my $module_def (find_matching_mods qr{^MapServer}) {
+    for my $module_def (find_matching_mods qr{^ImageMagick}) {
 	$module_def->{skip} = 'Skipped because Image::Magick not available, do not test ImageMagick-related drawtypes...';
     }
 }
@@ -349,16 +349,18 @@ if ($do_display_all) {
 }
 
 my $image_info_tests = 3;
+my $additional_pdf_tests = 2;
 my $tests_per_module = 1 + $image_info_tests;
 
-plan tests => scalar @module_defs * $tests_per_module;
+my $total_additional_pdf_tests = $additional_pdf_tests * grep { $_->{mod} =~ /pdf/i } @module_defs;
+plan tests => $total_additional_pdf_tests + scalar @module_defs * $tests_per_module;
 
 for my $module_def (@module_defs) {
  SKIP: {
 	my $skip = $module_def->{skip};
-	skip $skip, $tests_per_module
-	    if $skip;
 	my $module = $module_def->{mod};
+	skip $skip, $tests_per_module + ($module =~ /pdf/i ? $additional_pdf_tests : 0)
+	    if $skip;
 	eval {
 	    draw_map($module);
 	};
@@ -498,17 +500,33 @@ sub draw_map {
     if ($imagetype =~ /^pdf$/) {
 	my $fh;
 	ok(open($fh, $filename), "File $filename opened");
-	local $/ = undef;
-	my $pdf_content = <$fh>;
+	my $pdf_content = do {
+	    local $/ = undef;
+	    <$fh>;
+	};
 
 	ok($pdf_content =~ m{^%PDF-1\.\d+}, "Looks like a PDF document");
 
+	my $TODO_cairo = ($module eq 'PDFCairo' || ($module eq 'MapServer' && $mapserver_with_cairo)
+			  ? 'Cairo has no support for Create, Author... in pdfs'
+			  : undef);
+
 	{
-	    local $TODO;
-	    if ($module eq 'PDFCairo' || ($module eq 'MapServer' && $mapserver_with_cairo)) {
-		$TODO = 'Cairo has no support for Create, Author... in pdfs';
-	    }
+	    local $TODO = $TODO_cairo;
 	    ok($pdf_content =~ m{Creator.*(BBBikeDraw|MapServer)}i, "Found Creator");
+	}
+
+	my $info = pdfinfo $filename;
+    SKIP: {
+	    skip "pdfinfo not available", $additional_pdf_tests
+		if !$info;
+	    if ($module eq 'PDF') {
+		like $info->{Creator}, qr{^BBBikeDraw::PDF version \d+\.\d+}, 'expected creator';
+		like $info->{Producer}, qr{^PDF::Create version \d+\.\d+}, 'expected producer';
+	    } else {
+		like $info->{Creator}, qr{^cairo \d+\.\d+\.\d+}, 'expected creator';
+		like $info->{Producer}, qr{^cairo \d+\.\d+\.\d+}, 'expected producer';
+	    }
 	}
     } else {
     SKIP: {

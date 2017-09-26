@@ -212,7 +212,7 @@ Martin-Luther-Str.	3nocross 6499,10086 6504,9961 6504,9865
 Hans-Otto-Str: Straßenbahntrasse	3nocross 12621,14313 12729,14227 12901,14093
 Sredzkistr./Prenzlauer Allee: Straßenbahntrasse	3nocross 11655,14697 11633,14631 11572,14452
 #: by: Christian (cm-germany): vvv
-Dankwartstr.	1 17210,12486 17184,12288
+Dankwartstr.	1 17210,12486 17184,12286
 Ortliebstr.	1 17087,12501 17210,12486
 #: by: ^^^
 #: by: Uwe Streiber:
@@ -1172,3 +1172,9 @@ Petriplatz -> Gertraudenstr.: Abbiegen verboten	3 10418,12016 10460,11979 10512,
 #: by: Marco (mar-bet):
 #: corrected_by: srt (mittlerweile für Radfahrer frei, verschoben nach gesperrt_car)
 Schmohlstr.	1 13239,17269 13196,17223 13159,17196 13057,17120
+Kiehlufer	1 12913,9353 12901,9340 12895,9323
+# 
+#: osm_watch: way id="454034985" version="3"
+#: next_check_id: DIESEL-2015
+#: last_checked: 2017-09-22
+Dieselstr.: Sperrung wegen Autobahnbaustelle	2::inwork 14326,8062 14366,8058 14384,8056 14425,8052 14471,8046

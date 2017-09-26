@@ -293,7 +293,7 @@ Gehweg für Radfahrer frei	RW9;RW1 571,11255 541,11464
 #: by: Benno Koch (Linienstraßen-Mail) "gibt es schon"
 #: by: Eva Kruell widerspricht (2010-01-11):
 #: by: http://fahrrad.wikia.com/wiki/Teufelsseechaussee
-#: confirmed: srt
+#: confirmed_by: srt
 	RW7;RW7 -938,9394 -886,9447 -817,9533 -697,9598 -471,9647 -324,9701 -232,9768 -153,9854 -103,9934 -75,10017 -57,10103 -1,10327 41,10501 96,10701 194,10846 225,10885
 	RW2;RW8 454,11159 480,11204 504,11243
 	RW2;RW1 4741,5309 4677,5274 4593,5235 4512,5199
@@ -532,8 +532,9 @@ neu asphaltiert	RW2; -3692,11681 -3708,11686 -3820,11721 -4033,11786 -4078,11800
 	RW2; -4078,11800 -4033,11786 -3820,11721 -3708,11686 -3692,11681
 	RW2;RW -4412,12179 -4503,11930
 #: by: Stefan Klinkusch (Benutzungspflicht):
+#: confirmed_by: mapillary
 	RW;RW2 -4503,11930 -4590,11709 -4621,11631
-	RW;RW -4621,11631 -4648,11560 -4679,11489
+	RW;RW1 -4621,11631 -4648,11560 -4679,11489
 	RW;RW1 -4679,11489 -4798,11231
 	RW1;RW1 -4798,11231 -4836,11138 -4843,11123 -4859,11080 -4855,11031 -4806,10717
 asphaltierter Gehweg für Radfahrer frei	RW1; -4806,10717 -4825,10560 -4851,10356
@@ -906,17 +907,12 @@ Gehweg für Radfahrer frei	RW1; 21002,5755 20880,5736 20755,5750
 	RW1; 13919,7707 14015,7631
 	RW2; 14015,7631 14095,7568 14174,7505
 	RW1; 14174,7505 14095,7568 14015,7631
-#: next_check_id: SONNENALLEE-2014 vvv
+#: next_check_id: SONNENALLEE-2014
 #: XXX laut fritz "geänderte Straßenführung" bis 31.12.2016, laut vmz bis Ende Dezember 2017
 #: source_id: IM_023718
 #: source_id: 2147339540
-#: last_checked: 2017-08-22 vvv
-#: next_check: 2017-09-30
-# REMOVED, siehe unten ---	RW1; 14174,7505 14334,7395 14369,7376
-# REMOVED --- RW2; 14519,7301 --- #: note: vermutlich: --- RW2; 14519,7301
+#: last_checked: 2017-09-22
 	RW8;RW2 14519,7301 14369,7376 14334,7395 14174,7505
-#: last_checked ^^^
-#: next_check_id ^^^
 	RW1; 14015,7631 13919,7707
 	RW2;RW1 14519,7301 14617,7243
 	RW1;RW2 14617,7243 14344,7003
@@ -1145,7 +1141,7 @@ neu asphaltiert	RW1; 17527,7812 17619,7679 17681,7589 17769,7465
 neu asphaltiert	RW1; 17769,7465 17681,7589 17619,7679
 #: XXX wie sieht es nach der Fahrbahnverschwenkung (dauert vermutlich bis Ende Oktober 2017 (vmz) oder Mitte Oktober 2017 (fritz)) aus? vvv
 #: source_id: 2147341340
-#: last_checked: 2017-09-19 vvv
+#: last_checked: 2017-09-23 vvv
 #: next_check: 2017-10-15 vvv
 	RW0; 17619,7679 17527,7812
 provisorischer schmaler Radstreifen	RW3; 17527,7812 17299,8140 17202,8391
@@ -4231,7 +4227,7 @@ Radwegschild steht etwa 60 Meter weiter	RW4; 9123,15963 8923,15850
 #: by: ^^^
 	RW4;RW4 10257,19542 10331,19556
 	RW4;RW3 10331,19556 10377,19565
-	RW3;RW3 10377,19565 10439,19576 10742,19632
+	RW3;RW3 10377,19565 10439,19576 10525,19592 10742,19632
 	RW3;RW4 10742,19632 10829,19676 10948,19737 11051,19789 11148,19838 11162,19844
 #: by: wosch (Nordrichtung)
 	RW2; 12008,20368 12000,20327 11984,20246 11963,20136
@@ -4604,15 +4600,7 @@ Verbundsteinpflaster	RW1; 19405,5284 19445,5271
 	RW6;RW6 11797,20601 11828,20625 11874,20656 11915,20686 11919,20745 11923,20781
 	RW6;RW6 11874,20656 11826,20722
 	RW1; 11650,21498 11696,21493 11831,21469
-#: XXX Löffelbrücke: Gehweg während der Bauarbeiten gesperrt
-#: by: http://www.morgenpost.de/berlin/article210334009/Im-Berliner-Norden-droht-ein-neuer-Strassenengpass.html
-#: by: http://www.prenzlberger-stimme.de/?p=111198
-#: by: http://www.berlin.de/sen/uvk/presse/pressemitteilungen/2017/pressemitteilung.583882.php
-#: source_id: 2147341170
-#: last_checked: 2017-08-06
-#: next_check: 2017-12-31
-#gemeinsamer Rad- und Gehweg	RW2; 11915,19580 11911,19667 11909,19706 11907,19749
-	RW0; 11915,19580 11911,19667 11909,19706 11907,19749
+# REMOVED (siehe fragezeichen-Eintrag zur Pasewalker Str.) --- #: XXX Löffelbrücke: Gehweg während der Bauarbeiten gesperrt ---#: by: http://www.morgenpost.de/berlin/article210334009/Im-Berliner-Norden-droht-ein-neuer-Strassenengpass.html ---#: by: http://www.prenzlberger-stimme.de/?p=111198 ---#: by: http://www.berlin.de/sen/uvk/presse/pressemitteilungen/2017/pressemitteilung.583882.php --- #: source_id: 2147341170 --- #: last_checked: 2017-08-06 --- #: next_check: 2017-12-31 --- #gemeinsamer Rad- und Gehweg	RW2; 11915,19580 11911,19667 11909,19706 11907,19749 ---	RW0; 11915,19580 11911,19667 11909,19706 11907,19749
 Gehweg für Radfahrer frei	RW1; 13204,21203 13165,21144
 	RW6;RW6 8235,20109 8237,20098 8258,19983 8272,19908
 	RW6;RW6 8288,20128 8291,20112 8315,19993 8325,19934
@@ -4965,7 +4953,8 @@ Gehweg für Radfahrer frei	RW1;RW1 17360,9629 17425,9605 17456,9594 17549,9529 18
 	RW6;RW6 7557,17809 7659,17826 7789,17853
 	RW6;RW6 5199,13247 5351,13238
 	RW6;RW6 5547,13227 5694,13219
-#: add_fragezeichen: existiert auch auf der Spreeseite der Uferstr. ein Radweg?
+#: XXX: auf der anderen Seite existiert auch ein asphaltierter Radweg, allerdings ist er noch durch Bauzäune abgesperrt
+#: last_checked: 2017-09-23
 asphaltiert	RW1; 17681,6212 17843,6083
 	RW3;RW3 17681,6212 17483,6024
 	RW6;RW6 2028,3008 2067,3031 2048,3062 1987,3166 1946,3142
@@ -5053,3 +5042,7 @@ asphaltiert	RW9;RW1 12325,13148 12382,13097
 	RW6;RW6 -3655,18177 -3847,17978 -3914,17913 -3953,17941 -4002,17993 -4038,18030 -3898,18187
 	RW6;RW6 18738,9467 18754,9584 18772,9694
 Gehweg für Radfahrer frei	RW1; 20474,14442 20611,14445 20657,14446 20727,14467 20756,14486
+	RW6;RW6 19650,9413 19669,9418 19692,9416 19743,9412 19780,9409 19824,9405
+	RW6;RW6 19692,9416 19688,9365 19680,9291 19679,9214 19728,9214
+	RW6;RW6 19743,9412 19739,9362 19738,9343 19730,9233 19728,9214 19728,9181
+	RW6;RW6 19634,9292 19680,9291
