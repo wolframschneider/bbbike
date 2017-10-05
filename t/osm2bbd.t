@@ -17,9 +17,21 @@ use Getopt::Long;
 use Test::More 'no_plan';
 
 use BBBikeYAML;
+use Geography::FromMeta;
 use Strassen::Core;
 
-my $osm2bbd = "$FindBin::RealBin/../miscsrc/osm2bbd";
+sub my_system (@) {
+    my(@args) = @_;
+    if ($^O eq 'MSWin32') {
+	require Win32Util;
+	Win32Util::win32_system(@args);
+    } else {
+	system @args;
+    }
+}
+
+my $osm2bbd             = "$FindBin::RealBin/../miscsrc/osm2bbd";
+my $osm2bbd_postprocess = "$FindBin::RealBin/../miscsrc/osm2bbd-postprocess";
 
 my $keep;
 GetOptions("keep" => \$keep)
@@ -133,12 +145,20 @@ EOF
     system @cmd;
     is $?, 0, "<@cmd> works";
 
-    my $meta = BBBikeYAML::LoadFile("$destdir/meta.yml");
-    is $meta->{source}, 'osm';
-    like $meta->{created}, qr{^2\d{7}\d{6}}, 'looks like an ISO date';
-    is $meta->{coordsys}, 'wgs84';
-    like "@{ $meta->{commandline} }", qr{osm2bbd};
-    is $meta->{country}, 'DE', 'country heuristics';
+    my $meta;
+    {
+	$meta = BBBikeYAML::LoadFile("$destdir/meta.yml");
+	is $meta->{source}, 'osm';
+	like $meta->{created}, qr{^2\d{7}\d{6}}, 'looks like an ISO date';
+	is $meta->{coordsys}, 'wgs84';
+	like "@{ $meta->{commandline} }", qr{osm2bbd};
+	is $meta->{country}, 'DE', 'country heuristics';
+    }
+
+    {
+	my $meta_dd = Geography::FromMeta->load_meta("$destdir/meta.dd");
+	is_deeply $meta_dd, $meta, 'meta.dd and meta.yml have the same contents';
+    }
 
     {
 	my $strassen = Strassen->new("$destdir/strassen");
@@ -206,6 +226,65 @@ EOF
 	ok $gesperrt, 'orte could be loaded';
 	is $gesperrt->data->[0], "Berlin\t6 13.3888599,52.5170365\n";
     }
+
+    {
+	my @cmd = ($^X, $osm2bbd_postprocess, "--debug=0", "--only-title-for-dataset", $destdir);
+	system @cmd;
+	is $?, 0, "<@cmd> works";
+
+	my $meta_new = BBBikeYAML::LoadFile("$destdir/meta.yml");
+	my $dataset_title = delete $meta_new->{dataset_title}; # and manipulate $meta_new
+	is $dataset_title, 'Berlin', 'added dataset_title by osm2bbd-postprocess';
+	is_deeply $meta_new, $meta, 'meta.yml is otherwise unchanged by osm2bbd-postprocess';
+    }
+
+ SKIP: {
+	skip "Need IPC::Run for stderr capturing", 1
+	    if !eval { require IPC::Run; 1 };
+
+	my $succ = IPC::Run::run([$^X, $osm2bbd_postprocess, "--only-title-for-dataset", $destdir], '>', \my $stdout, '2>', \my $stderr);
+	ok $succ, 'Running osm2bbd-postprocess twice is OK';
+	is $stdout, '', 'STDOUT is empty';
+	is $stderr, "Running target title_for_dataset ... dataset_title already set in meta.yml, do not overwrite, skipping\n", 'Skipping target on 2nd run';
+
+	my $meta_new = BBBikeYAML::LoadFile("$destdir/meta.yml");
+	my $dataset_title = delete $meta_new->{dataset_title}; # and manipulate $meta_new
+	is $dataset_title, 'Berlin', 'dataset_title is still unchanged';
+	is_deeply $meta_new, $meta, 'meta.yml is otherwise still unchanged by osm2bbd-postprocess';
+    }
+
+    {
+	my $local_language = 'de';
+	my $city_names = 'Bärlin';
+	my $neighbours = '["some data structure"]';
+	my $other_names = "Potsdam,Bernau";
+	my $region = "\x{20ac}urope";
+	my @add_args = map { Encode::encode_utf8($_) }
+	    (
+	     '--local-language', $local_language,
+	     '--city-names', $city_names,
+	     '--neighbours', $neighbours,
+	     '--other-names', $other_names,
+	     '--region', $region,
+	    );
+	my @cmd = (
+		   $^X, $osm2bbd_postprocess, "--debug=0", "--only-write-meta",
+		   @add_args,
+		   $destdir
+		  );
+	my_system @cmd;
+	is $?, 0, "<@cmd> works";
+
+	my $meta_new = BBBikeYAML::LoadFile("$destdir/meta.yml");
+	is $meta_new->{local_language}, $local_language;
+	is $meta_new->{city_names}, $city_names, 'option with unicode in latin1 range';
+	is_deeply $meta_new->{neighbours}, ["some data structure"], q{eval'ed option};
+	is $meta_new->{other_names}, $other_names;
+	is $meta_new->{region}, $region, 'option with unicode > 0xff';
+
+	my $meta_dd = Geography::FromMeta->load_meta("$destdir/meta.dd");
+	is_deeply $meta_dd, $meta_new, 'meta.dd and meta.yml have the same contents';
+    }
 }
 
 # Following is actually checking two things:
@@ -261,7 +340,34 @@ EOF
 	is $got, "13.651456,52.403097\n", "expected translation for 0,0 (trimmed)";
 	is $stderr, "Using corrected Karte::Polar for latitude 53.538...\n", "expected diagnostics"; # may be removed some day?
     }
+
+    my $meta = BBBikeYAML::LoadFile("$destdir/meta.yml");
+    is $meta->{coordsys}, 'wgs84';
+
+    {
+	my $dataset_title = qq{a "strange" d\x{e4}taset title \x{20ac}};
+	require Encode;
+	my $dataset_title_octets = Encode::encode_utf8($dataset_title);
+	my @cmd = ($^X, $osm2bbd_postprocess, "--debug=0", "--only-title-for-dataset", "--dataset-title", $dataset_title_octets, $destdir);
+	my_system @cmd;
+	is $?, 0, "<@cmd> works";
+
+	my $meta_new = BBBikeYAML::LoadFile("$destdir/meta.yml");
+	is $meta_new->{dataset_title}, $dataset_title, 'Custom --dataset-title, correctly encoded';
+
+	my $meta_new_dd = Geography::FromMeta->load_meta("$destdir/meta.dd");
+	is_deeply $meta_new_dd, $meta_new, 'meta.dd and meta.yml have the same contents';
+    }
+
 }
 
+SKIP: {
+    skip 'Requires IPC::Run for -version test', 1
+	if !eval { require IPC::Run; 1 };
+    my $succ = IPC::Run::run([$^X, $osm2bbd, '-version'], '>', \my $stdout, '2>', \my $stderr);
+    ok $succ, '-version call is successful';
+    is $stderr, '', 'nothing on stderr';
+    like $stdout, qr{\Aosm2bbd \d+\.\d+\n\z}, 'looks like a version';
+}
 
 __END__

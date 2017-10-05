@@ -55,7 +55,7 @@ use BBBikeUtil qw(bbbike_root);
 use Http;
 use Strassen::Core;
 
-use BBBikeTest qw(check_cgi_testing);
+use BBBikeTest qw(check_cgi_testing checkpoint_apache_errorlogs output_apache_errorslogs);
 
 check_cgi_testing;
 
@@ -215,6 +215,7 @@ sub run_test_suite {
 	my $resp;
 	my $got_gzipped;
 	my $dt;
+	checkpoint_apache_errorlogs if $is_local_server;
 	if ($ua->isa('Http')) {
 	    local $Http::user_agent = sprintf $ua_http_agent_fmt, $bbbike_version;
 	    my $t0 = Time::HiRes::time;
@@ -242,7 +243,10 @@ sub run_test_suite {
 	   ($do_accept_gzip ? "(accept gzipped)" : "(accept uncompressed)") . " " .
 	   ($got_gzipped    ? "(got gzipped)"    : "(got uncompressed)")
 	  )
-	    or diag $resp->status_line;
+	    or do {
+		diag $resp->status_line;
+		output_apache_errorslogs if $is_local_server;
+	    };
 
 	my($content_type) = $resp->content_type; # list context!
 	my $content;

@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -w
+#!/usr/bin/perl -w
 # -*- perl -*-
 
 #
@@ -21,14 +21,12 @@ use lib (
 	);
 
 use vars qw($VERSION);
-$VERSION = 0.17;
+$VERSION = 0.18;
 
 use Cwd            qw(realpath);
-use File::Basename qw(dirname);
+use File::Basename qw(dirname basename);
 use File::Temp     qw(tempfile);
 use Getopt::Long;
-
-binmode \*STDERR, ":utf8";
 
 my @targets = ('wasserstrassen_lowres',
 	       'largest_city_is_center',
@@ -46,6 +44,7 @@ my @targets = ('wasserstrassen_lowres',
 	       'zip_points', # dependency: addr_sort
 	       'cityparts',
 	       'addr_suburbs',
+	       'write_meta',
 	      );
 # Targets run by default (exclude obscure ones here)
 my @run_targets =
@@ -58,54 +57,56 @@ my @run_targets =
 	      |   zip_points            # experimental
 	      |   cityparts             # to be decided
 	      |   addr_suburbs          # experimental and very slow
+	      |   write_meta            # only needed if just additional meta options need to be written
 	      )$}x
 	  }
     @targets;
 
-my %skip_target;
-my %only_target;
-
-# unix time command
-my $time = 'time'; 
+my %skip_target; # skip default targets
+my %only_target; # run only the listed targets
+my %add_target;  # add more targets to the default ones
 
 sub usage (;$) {
     my $msg = shift;
     warn $msg, "\n" if $msg;
     die "usage: $0 [--debug=0..3] [-force]\n" . join(" ", map {
 	(my $optname = $_) =~ s{_}{-}g;
-	"\t[-skip-$optname | -only-$optname]\n"
-    } @targets) . "\tdatadir\n";
+	"\t[-skip-$optname | -only-$optname | -add-$optname]\n"
+    } @targets) . "\tdatadir\n\nDefault targets are:\n@run_targets\n";
 }
 
-my $set_dataset_title;
+my $set_dataset_title_octets;
 # XXX should be generalized, or not be necessary
 my $coastline_hack_anchor;
 
 my $debug = 1;
 my $force;
-my $local_language = "";
-my $city_names = "";
-my $neighbours = [];
-my $region = "";
-my $other_names = "";
+my %add_meta;
 GetOptions(
 	   (map {
 	       (my $optname = $_) =~ s{_}{-}g;
-	       ("skip-$optname" => \$skip_target{$_},
+	       (
+		"skip-$optname" => \$skip_target{$_},
 		"only-$optname" => \$only_target{$_},
+		"add-$optname"  => \$add_target{$_},
 	       );
 	   } @targets),
 	   "debug=i" => \$debug,
-	   "local-language=s" => \$local_language,
-	   "city-names=s" => \$city_names,
-	   "neighbours=s" => \$neighbours,
-	   "other-names:s" => \$other_names,
-	   "region=s" => \$region,
+	   "local-language=s" => \$add_meta{local_language},
+	   "city-names=s"     => \$add_meta{city_names},
+	   'neighbours=s'     => \$add_meta{neighbours},
+	   "other-names:s"    => \$add_meta{other_names},
+	   "region=s"         => \$add_meta{region},
 	   "force!" => \$force,
 	   # targets with additional arguments
-	   "dataset-title=s" => \$set_dataset_title,
+	   "dataset-title=s" => \$set_dataset_title_octets,
 	   # XXX
 	   "coastline-hack-anchor=s" => \$coastline_hack_anchor,
+	   "h|help" => sub { usage },
+	   "v|version" => sub {
+	       print basename($0) . " $VERSION\n";
+	       exit 0;
+	   },
 	  )
     or usage;
 
@@ -115,11 +116,20 @@ my $datadir = shift or usage "Please specify data directory";
 $datadir = realpath $datadir;
 chdir $datadir or die "Can't chdir to $datadir: $!";
 
+my $set_dataset_title;
+if (defined $set_dataset_title_octets) {
+    require Encode;
+    $set_dataset_title = Encode::decode_utf8($set_dataset_title_octets);
+}
+
 if (grep { $_ } values %only_target) {
     @run_targets = grep { $only_target{$_} } @targets;
 }
 
 my %targets_to_run = map { ($_, 1) } grep { !$skip_target{$_} } @run_targets;
+for my $target (keys %add_target) {
+    $targets_to_run{$_} = 1 if $add_target{$target};
+}
 
 for my $target (@run_targets) {
     if ($skip_target{$target}) {
@@ -301,7 +311,7 @@ sub target_largest_city_is_center {
     }
     my $max = _get_largest_city();
     if (defined $max) {
-	print STDERR "setting $max->[Strassen::NAME()] ($max->[Strassen::COORDS()][0]) as center\n";
+	print STDERR "setting $max->[Strassen::NAME()] ($max->[Strassen::COORDS()][0]) as center ";
 	$meta->{center} = [ split /,/, $max->[Strassen::COORDS()][0] ];
 	$meta->{center_name} = $max->[Strassen::NAME()];
 	_write_meta($meta);
@@ -327,11 +337,11 @@ sub target_title_for_dataset {
 	if (defined $max) {
 	    $set_dataset_title = $max->[Strassen::NAME()];
 	} else {
-	    print STDERR "Cannot guess dataset title, no largest city found.\n";
+	    print STDERR "Cannot guess dataset title, no largest city found.\n" if $debug;
 	    return;
 	}
     }
-    print STDERR "setting $set_dataset_title as title for dataset ";
+    print STDERR "setting $set_dataset_title as title for dataset " if $debug;
     $meta->{dataset_title} = $set_dataset_title;
     _write_meta($meta);
 }
@@ -684,6 +694,26 @@ sub target_cityparts {
     chmod((0666 &~ umask), "$datadir/cityparts");
 }
 
+sub target_write_meta {
+    require Encode;
+
+    my $meta = eval { _load_meta() };
+
+    for my $key (keys %add_meta) {
+	my $val = $add_meta{$key};
+	if (defined $val) {
+	    $val = Encode::decode_utf8($val);
+	    if ($key eq 'neighbours') { # special handling
+		$val = eval $val;
+		die qq{Error while eval'ing "$val": $@} if $@;
+	    }
+	    $meta->{$key} = $val;
+	}
+    }
+
+    _write_meta($meta);
+}
+
 ######################################################################
 
 sub _load_meta {
@@ -708,32 +738,12 @@ sub _load_meta {
 sub _write_meta {
     my $meta = shift;
 
-    use Data::Dumper;
-    $meta->{"local_language"} = $local_language;
-
-    if (!Encode::is_utf8($city_names)) { 
-	$city_names = Encode::decode("utf-8", $city_names); 
-    }
-
-    if (!Encode::is_utf8($neighbours)) { 
-	$neighbours = Encode::decode("utf-8", $neighbours); 
-    }
-    $neighbours = eval $neighbours;
-    if (!Encode::is_utf8($other_names)) { 
-	$other_names = Encode::decode("utf-8", $other_names); 
-    }
-
-    $meta->{"city_names"} = $city_names;
-    $meta->{"neighbours"} = $neighbours;
-    $meta->{"region"} = $region;
-    $meta->{"other_names"} = [ split /\s*;\s*/, $other_names ];
+    require Data::Dumper;
 
     DumpFile("meta.yml~", $meta);
 
     open my $ofh, ">", "meta.dd~"
 	or die "Cannot write to meta.dd~: $!";
-    binmode $ofh, ":utf8";
-
     print $ofh Data::Dumper->new([$meta],['meta'])->Sortkeys(1)->Useqq(1)->Dump;
     close $ofh
 	or die "While closing meta.dd~: $!";
@@ -792,6 +802,42 @@ tasks.
 The C<coastline-hack> task needs the additional option
 C<-coastline-hack-anchor> with any cardinal direction (e.g. C<n>,
 C<nw> etc.) for the direction of the "open sea".
+
+The C<title_for_dataset> task can be given an option C<--dataset-title
+I<title>>, which should be an utf8-encoded name for the dataset. If
+not given, then the task would choose the name of the largest city in
+the area as the dataset title.
+
+The C<write_meta> task has to be called (e.g with C<--add-write-meta>
+or C<--only-write-meta> switch) if any of the following options is
+set:
+
+=over
+
+=item C<-local-language>
+
+Sets the C<local_language> field in the meta file.
+
+=item C<-city-names>
+
+Sets the C<city_names> field in the meta file.
+
+=item C<-neighbours>
+
+Sets the C<neighbours> field in the meta file. The value is expected
+to be a perl data structure which will be eval'ed.
+
+=item C<-other-names>
+
+Sets the C<other_names> field in the meta file.
+
+=item C<-region>
+
+Sets the C<region> field in the meta file.
+
+=back
+
+All of these expect values encoded as utf-8.
 
 =head1 AUTHOR
 

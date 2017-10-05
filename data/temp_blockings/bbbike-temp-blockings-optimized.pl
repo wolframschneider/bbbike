@@ -630,28 +630,7 @@ push @temp_blocking,
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: http://www.ms-event-agentur.com/seite22.html?date=20170325
-	2::temp 7001,9291 7012,9222 7035,9161 7107,9030
-	2::temp 6945,9142 7035,9161
-	2::temp 6975,8944 7107,9030 7308,9163
-',
-         'from' => 1506675600,
-         'id' => 731,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              30,
-                              'months',
-                              9
-                            ]
-                          ],
-         'text' => 'Schöneberger Kürbisfest, Akazienstraße gesperrt, 30.09.2017 bis 01.10.2017',
-         'type' => 'gesperrt',
-         'until' => 1506895199
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2328,7 +2307,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im September von 6.00 bis 20.30 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Oktober von 7.00 bis 19.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -3479,17 +3458,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: by: fritz
-#: source_id: 2147341721
-	q3::inwork; 16768,14849 16610,15000 16514,15092
-',
-         'from' => 1501526175,
-         'id' => 2795,
-         'text' => 'Werneuchener Str.: zwischen Genslerstr. und Goeckestr. Richtung Konrad-Wolf-Str. Bauarbeiten, gesperrt bis Anfang Oktober 2017',
-         'type' => 'handicap',
-         'until' => 1506852000
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -3507,6 +3476,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: http://www.berliner-woche.de/buckow/verkehr/der-lange-weg-zur-sanierten-strasse-bauarbeiten-am-buckower-damm-anwohner-aergern-sich-ueber-lkw-im-wohngebiet-d126968.html
 #: note: die Baustelle ist gewandert
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
+#: source_id: LMS-BR_r_LMS-BR_72519
 	q4::inwork 12911,1815 12940,1547
 ',
          'from' => 1467661160,
@@ -3534,7 +3504,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-09-22 vvv
+#: last_checked: 2017-10-04 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -3646,6 +3616,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut fritz bis 21.10.2017 08:00 Uhr
 #: by: http://werbegemeinschaft-friedrichshagen.de/wp-content/uploads/2017/05/2017-05_Boelschestr_Anwohnerflyer_web.pdf
+#: source_id: LMS-BR_r_LMS-BR_97860
 	q4::inwork; 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
 ',
          'from' => 1495918329,
@@ -3686,33 +3657,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX wird sich die Qualität vielleicht bessern?
-#: XXX hier sind gerade Bauarbeiten --- Verbundsteinpflaster bleibt wohl, der wassergebundene Teil sind besser aus
-#: last_checked: 2017-09-29 vvv
-	2::inwork 8234,4660 8575,4980 8598,4985
-	2::inwork 8598,4985 8618,5019 8784,5095
-#: last_checked ^^^
-',
-         'from' => undef,
-         'id' => 2877,
-         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2017/pressemitteilung.608925.php',
-         'text' => 'Teltowkanal von der Rathausstraße bis Gersdorfstraße: Sanierung Fuß- und Radweg, Wege können gesperrt sein, Zeitraum unbekannt',
-         'type' => 'gesperrt',
-         'until' => 1506852000
-       },
-       {
-         'data' => '#: XXX wird sich die Qualität vielleicht bessern?
-#: next_check: 2017-09-01
-	2::inwork 7231,236 7501,83
-',
-         'from' => undef,
-         'id' => 2878,
-         'source_id' => 'http://www.berlin.de/ba-tempelhof-schoeneberg/aktuelles/pressemitteilungen/2017/pressemitteilung.608925.php',
-         'text' => 'Poppenreuther Weg: Wegesanierung, Sperrung möglich, Zeitraum unbekannt ',
-         'type' => 'gesperrt',
-         'until' => 1506852000
-       },
+       undef,
+       undef,
        {
          'data' => '	2::inwork 13415,21442 13371,21462
 ',
@@ -3770,6 +3716,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: source_id: 2147341585
+#: source_id: LMS-BR_r_LMS-BR_103462_LMS-BR_72
 #: note: laut vmz bis Mitte 10/2017, laut fritz bis 2017-10-20
 #: next_check: 2017-10-20
 	q4::inwork 854,24387 836,24440 813,24497 790,24556 784,24612 790,24698 808,24790 811,24833 793,24943 785,24968
@@ -3793,17 +3740,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '	2::inwork -4299,13304 -4123,13214
-	2::inwork -4098,13201 -4046,13177 -4017,13167
-',
-         'from' => 1500818823,
-         'id' => 2887,
-         'source_id' => 'http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.614506.php',
-         'text' => 'Seecktstr.: Sperrung wegen Bauarbeiten, 24.07.2017 bis 30.09.2017 ',
-         'type' => 'gesperrt',
-         'until' => 1506808800
-       },
+       undef,
        {
          'data' => '	2::inwork 14538,12371 14748,12314
 ',
@@ -3827,19 +3764,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1513378799
        },
        undef,
-       {
-         'data' => '	q4::inwork 23102,1637 23185,1649
-',
-         'from' => 1503784800,
-         'id' => 2892,
-         'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.619071.php',
-         'text' => 'Müggelbergallee: Bauarbeiten, Fahrbahn gesperrt, vom 28.08.2017 bis 02.10.2017',
-         'type' => 'handicap',
-         'until' => 1506981600
-       },
+       undef,
        undef,
        {
-         'data' => '	q4::inwork 3069,11551 2924,11309
+         'data' => '#: source_id: LMS-BR_r_LMS-BR_104863_LMS-BR_72
+	q4::inwork 3069,11551 2924,11309
 ',
          'from' => 1501870960,
          'id' => 2894,
@@ -3939,6 +3868,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: source_id: 2147341831
+#: source_id: LMS-BR_r_LMS-BR_109608_LMS-BR_72
 	q4::inwork -1869,19974 -1806,19806 -1794,19681 -1788,19663
 ',
          'from' => 1505599200,
@@ -3959,7 +3889,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1522576800
        },
        {
-         'data' => '	q3::inwork; 10167,19797 10132,19993 10117,20065 10106,20093 10068,20188 10066,20323 10064,20437 10066,20494
+         'data' => '#: source_id: LMS-BR_r_LMS-BR_108061_LMS-BR_72
+	q3::inwork; 10167,19797 10132,19993 10117,20065 10106,20093 10068,20188 10066,20323 10064,20437 10066,20494
 ',
          'from' => 1504896268,
          'id' => 2909,
