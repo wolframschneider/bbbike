@@ -17082,8 +17082,9 @@ EOF
      },
      { from  => $isodate2epoch->("2016-11-04 00:00:00"), # XXX $isodate2epoch->("2016-11-04 00:00:00"), # Aufbauzeit mindestens 17 Tage... (am Anfang ist nur die Fahrbahn der Voltairestr. gesperrt, später auch die Gehwege, die Schicklerstr. ist schon früher komplett gesperrt)
        until => $isodate2epoch->("2016-12-26 23:59:59"), # Abbauzeit ca. 3 Tage?...
-       periodic => 1,
-       recurrences => [['yearly', days => 4, months => 11]],
+       ## 2016 war das letzte Mal
+       #periodic => 1,
+       #recurrences => [['yearly', days => 4, months => 11]],
        # außerdem ist der Nordteil der Dircksenstr. Einbahnstraße offen Richtung Süden, aber nicht relevant für das Routing
        text  => 'Voltairestr. und Dircksenstr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht möglich (Voltairestr. und Dircksenstr.), von Anfang November 2016 bis Ende Dezember 2016',
        type  => 'gesperrt',
@@ -25294,18 +25295,14 @@ EOF
 	q4::inwork; 17003,19035 17068,19016 17183,19007 17256,19002 17343,19000 17425,18997 17440,18997 17600,18994 17697,18989
 EOF
      },
-     { from  => 1465077600, # 2016-06-05 00:00
-       until => 1466016161, # Fahrbahn mittlerweile wieder befahrbar --- $isodate2epoch->("2016-06-27 23:59:59"),
-       text  => 'Wühlischstr.: Richtung Boxhagener Str. zwischen Gärtnerstr. und Knorrpromenade Baustelle, Fahrtrichtung gesperrt, ggfs. auf Gehweg ausweichen, bis zum 27.06.2016',
+     { from  => 1507571138,
+       until => $isodate2epoch->("2017-10-25 16:00:00"),
+       text  => 'Wühlischstr.: Fahrbahn zwischen Gryphiusstr. und Knorrpromenade wg. Baustelle gesperrt, ggfs. auf Gehweg ausweichen',
        type  => 'handicap',
        source_id => '2147340169',
        data  => <<EOF,
-#: note: Gehweg ist offiziell für Radfahrer befahrbar
-	q4::inwork; 14211,11552 14305,11514 14369,11489
-	3 14254,11377 14305,11514 14211,11552
-	3 14254,11377 14305,11514 14358,11656
-	3 14358,11656 14305,11514 14254,11377
-	3 14369,11489 14305,11514 14254,11377
+	q4::inwork 14369,11489 14434,11465
+# REMOVED --- #: note: Gehweg ist offiziell für Radfahrer befahrbar --- q4::inwork; 14211,11552 14305,11514 14369,11489 --- 3 14254,11377 14305,11514 14211,11552 --- 3 14254,11377 14305,11514 14358,11656 --- 3 14358,11656 14305,11514 14254,11377 --- 3 14369,11489 14305,11514 14254,11377
 EOF
      },
      { from  => 1465682400, # 2016-06-12 00:00
@@ -25799,13 +25796,16 @@ EOF
 	q4::inwork 4646,6875 4767,6717
 EOF
      },
-     { from  => 1477989030, # 2016-11-01 09:30
-       until => 1478088000, # 2016-11-02 13:00
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am Mittwoch ab 09:30',
+     { from  => $isodate2epoch->("2017-10-10 07:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2017-10-11 11:00:00"),
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 11. Oktober 2017 gegen 10 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::temp -2825,5588 -1925,6790 -2080,6897
+#: XXX weitere Sperrungen: 18. Oktober sowie 8., 15., 22. und 29. November
+#: next_check: 2017-10-12
+#: priority: #A
 	2::temp -2218,5133 -927,6888
+	2::temp -2825,5588 -1925,6790 -2080,6897
 	2::temp -1925,6790 -1851,6887
 EOF
      },
@@ -26021,9 +26021,10 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: add_fragezeichen: Wann sind die Bauarbeiten beendet?
-#: last_checked: 2017-09-26
-#: check_frequency: 5d
-	q3::inwork; 7201,8870 7107,9030 7035,9161
+#: last_checked: 2017-10-08
+#: check_frequency: 14d
+# REMOVED ---	q3::inwork; 7201,8870 7107,9030
+	q3::inwork; 7107,9030 7035,9161
 EOF
      },
      { from  => 1493652218, # 2017-05-01 17:23
@@ -26133,7 +26134,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2017
-#: last_checked: 2017-09-26
+#: last_checked: 2017-10-08
 	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 EOF
      },
