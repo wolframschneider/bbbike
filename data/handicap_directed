@@ -6,6 +6,8 @@
 #: line_do_offset: 1
 #: line_width: 2
 #:
+Friedenstr. -> Weidenweg: direktes Linksabbiegen nicht möglich	DH:t=10 12866,12582 12891,12549 13025,12523
+Weidenweg -> Str. der Pariser Kommune: direktes Linksabbiegen nicht möglich	DH:t=10 13025,12523 12891,12549 12869,12425
 Gürtelstr. -> Möllendorffstr.: Umweg zur Ampel	DH:len=70 15294,11964 15361,12071 15420,12178
 Frankfurter Allee -> Möllendorffstr.: Umweg zur Ampel	DH:len=70 15117,12106 15361,12071 15420,12178
 Schinkelplatz -> Am Zeughaus: Umweg zur Ampel	DH:len=50 9996,12401 9984,12426 9956,12523
@@ -58,7 +60,7 @@ Ladenbergstr. -> Altensteinstr.: Fußgängerampel auf der linken Seite benutzen	DH
 Ladenbergstr. -> Habelschwerdter Allee: Fußgängerampel auf der linken Seite benutzen	DH:t=10 2858,4372 2997,4378 2857,4578
 Alemannenallee -> Badenallee: Fußgängerampel	DH:len=90:t=15 1065,11216 943,11302 743,11462
 Alemannenallee -> Heerstr.: Fußgängerampel	DH:len=70:t=15 1065,11216 943,11302 704,11273
-Badenallee -> Alemannenallee: Fußgängerampel	DH:len=90:t=15 743,11462 943,11302 1065,11216
+Badenallee -> Alemannenallee: Fußgängerampel, linker Gehweg	DH:len=90:t=15:h=q3,85 743,11462 943,11302 1065,11216
 Heerstr. -> Badenallee: Fußgängerampel	DH:len=200:t=15 704,11273 943,11302 743,11462
 Bundesallee/Spichernstr.: zusätzliche Ampel	DH:t=15 5464,9914 5463,9961 5450,10338
 Gregor-Mendel-Str. -> Schorlemerallee: Umweg zur Überquerungsmöglichkeit	DH:len=40 3650,6665 3664,6523 3836,6550
