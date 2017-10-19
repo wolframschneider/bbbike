@@ -7,18 +7,34 @@
 #: line_width: 2
 #:
 # 
-# DH:t=...: bei Ampeln sollte hier die zur normalen durchschnittlichen
-#           Wartezeit (~15s) die *zusätzliche* durchschnittliche Wartezeit
-#           aufgeführt werden
-# 
-#           Rechnung bei Anforderungsampeln:
-#           - eingebettet in einen Zyklus mit möglicher sofortiger Grünschaltung:
-#             Zykluszeit/2 - normale durchschnittliche Wartezeit
+# DH:tl: Ampeln, die nicht im normalen Ampel-Netz erreicht werden,
+#        ohne spezielle durchschnittliche Wartezeit
+#
+# DH:tl=$time: wie oben, aber mit höherer/niedrigerer durchschnittlicher Wartezeit
+#              Rechnung bei Anforderungsampeln:
+#              - eingebettet in einen Zyklus mit möglicher sofortiger Grünschaltung:
+#                Zykluszeit/2
+#
+# DH:qX,$len: ein in bbbike übliche Handicap-Eintrag, gültig für die angegebene Länge
+#
+# DH:t=...: zusätzliche verlorene Zeit (z.B. an Ampeln, die im normalen Ampel-Netz
+#           erreicht werden)
 # 
 # DH:len=...:t=...: wenn len+t kombiniert wird, dann sollte der Zeitverlust
 #                   durch die Streckenverlängerung nicht in den t-Wert
 #                   einfließen. Als Richtgeschwindigkeit für das Ermitteln
-#                   des Zeitverlusts sollte man 20km/h annehmen.
+#                   des Zeitverlusts sollte man 20km/h annehmen. Aber
+#                   generell ist es besser, mit qX,$len zu arbeiten.
+# 
+#: next_check_id: KARLMARXSTR-2016
+#: last_checked: 2017-10-13 vvv
+#: next_check: 2018-01-01 vvv
+Karl-Marx-Str. -> Kienitzer Str.: wegen Bauarbeiten auf linken Gehweg ausweichen	DH:h=q4,110 12865,7923 12830,8031 12692,7996
+Kienitzer Str. -> Karl-Marx-Str.: wegen Bauarbeiten zunächst den linken Gehweg benutzen	DH:h=q4,170 12692,7996 12830,8031 12794,8103 12753,8187
+Karl-Marx-Str. -> Briesestr.: wegen Bauarbeiten auf linken Gehweg ausweichen	DH:h=q4,190 12865,7923 12830,8031 12794,8103 12668,8077
+Briesestr. -> Karl-Marx-Str.: wegen Bauarbeiten zunächst den linken Gehweg benutzen	DH:h=q4,90 12668,8077 12794,8103 12753,8187
+#: next_check ^^^
+#: last_checked ^^^
 # 
 #: last_checked: 2017-10-11 vvv
 #: check_frequency: 21d vvv
@@ -28,10 +44,14 @@ Weidenweg -> Str. der Pariser Kommune: direktes Linksabbiegen nicht möglich	DH:t
 #: last_checked ^^^
 # 
 #: next_check_id: MOELLENDORFFSTR-2017 vvv
-#: last_checked: 2017-10-09 vvv
-#: next_check: 2017-10-15 vvv
+#: last_checked: 2017-10-17 vvv
+#: next_check: 2017-11-30 vvv
 Gürtelstr. -> Möllendorffstr.: Umweg zur Ampel	DH:len=70 15294,11964 15361,12071 15420,12178
-Frankfurter Allee -> Möllendorffstr.: Umweg zur Ampel	DH:len=70 15117,12106 15361,12071 15420,12178
+Gürtelstr. -> links in die Frankfurter Allee: Umweg zur Ampel	DH:len=70 15294,11964 15361,12071 15117,12106
+Frankfurter Allee -> links in die Möllendorffstr.: Umweg bis Wilhelm-Guddorf-Str., Fußgänger	DH:len=270:h=q2-,270 15117,12106 15361,12071 15420,12178
+Frankfurter Allee geradeaus: Umweg bis Wilhelm-Guddorf-Str., Fußgänger	DH:len=200:h=q2-,200 15117,12106 15361,12071 15670,12022
+Möllendorffstr. -> links in die Frankfurter Allee: Umweg bis Wilhelm-Guddorf-Str., Fußgänger	DH:len=250:h=q2-,250 15420,12178 15361,12071 15670,12022
+Frankfurter Allee -> Gürtelstr.: kleiner Umweg zur Ampel	DH:len=30:h=q3,30 15670,12022 15361,12071 15294,11964
 #: next_check ^^^
 #: last_checked ^^^
 #: next_check_id ^^^
@@ -74,42 +94,30 @@ Zehlendorfer Kreuz: Radfahrer müssen auf den gegenüberliegenden Radweg wechseln	
 Zehlendorfer Kreuz: Radfahrer müssen auf die rechte Seite zurück wechseln	DH:len=30:t=20 -3890,1249 -4003,1234 -4497,1165
 #: next_check ^^^
 # 
-#: XXX_prog als Ampel markieren vvv
-Koppenstr./Karl-Marx-Allee: Fußgängerampel	DH:len=20:t=15 12573,12227 12596,12472 12632,12630
-Koppenstr./Karl-Marx-Allee: Fußgängerampel	DH:len=20:t=15 12632,12630 12596,12472 12573,12227
-Koppenstr./Karl-Marx-Allee: Fußgängerampel	DH:len=20:t=15 12573,12227 12596,12472 12360,12505
-Koppenstr./Karl-Marx-Allee: Fußgängerampel	DH:len=20:t=15 12360,12505 12596,12472 12632,12630
-#: XXX_prog ^^^
+Koppenstr./Karl-Marx-Allee: Fußgängerampel	DH:len=20:tl 12573,12227 12596,12472 12632,12630
+Koppenstr./Karl-Marx-Allee: Fußgängerampel	DH:len=20:tl 12632,12630 12596,12472 12573,12227
+Koppenstr./Karl-Marx-Allee: Fußgängerampel	DH:len=20:tl 12573,12227 12596,12472 12360,12505
+Koppenstr./Karl-Marx-Allee: Fußgängerampel	DH:len=20:tl 12360,12505 12596,12472 12632,12630
 # 
-#: XXX_prog als Ampel markieren
-Jerusalemer Str./Leipziger Str.: Fußgängerampel	DH:len=10:t=15 9982,11681 9981,11689 9898,11679
+Jerusalemer Str./Leipziger Str.: Fußgängerampel	DH:len=10:tl 9982,11681 9981,11689 9898,11679
 # 
-#: XXX_prog als Ampel markieren
-Puschkinallee/Elsenstr.: Fußgängerampel	DH:len=10:t=15 14318,9688 14271,9712 14196,9749
+Puschkinallee/Elsenstr.: Fußgängerampel	DH:len=10:tl 14318,9688 14271,9712 14196,9749
 # 
-#: XXX_prog als Ampel markieren
-Mollstr./Keibelstr.: Fußgängerampel	DH:len=10:t=15 11308,13389 11276,13408 11201,13289
+Mollstr./Keibelstr.: Fußgängerampel	DH:len=10:tl 11308,13389 11276,13408 11201,13289
 # 
-#: XXX_prog als Ampel markieren
-Kanzowstr./Prenzlauer Allee: Fußgängerampel	DH:len=50:t=15 11689,15639 11916,15500 11941,15586
+Kanzowstr./Prenzlauer Allee: Fußgängerampel	DH:len=50:tl 11689,15639 11916,15500 11941,15586
 # 
 Käthe-Niederkirchner-Str/Greifswalder Str.: Straßenbahntrasse	DH:len=100 12148,13961 11991,14060 11952,14002
 # 
-#: XXX_prog als Ampel markieren
-Osloer Str./Heinz-Galinski-Str.: Fußgängerampel	DH:len=35:t=15 8249,16741 8161,16752 8082,16483
+Osloer Str./Heinz-Galinski-Str.: Fußgängerampel	DH:len=35:tl 8249,16741 8161,16752 8082,16483
 # 
-#: XXX_prog als Ampel markieren vvv
-Türkenstr./Müllerstr.: Fußgängerampel	DH:len=30:t=15 6629,16538 6440,16327 6447,16321
-Müllerstr./Kongostr.: Fußgängerampel	DH:len=50:t=15 6572,16212 6447,16321 6349,16213
-#: XXX_prog ^^^
+Türkenstr./Müllerstr.: Fußgängerampel	DH:len=30:tl 6629,16538 6440,16327 6447,16321
+Müllerstr./Kongostr.: Fußgängerampel	DH:len=50:tl 6572,16212 6447,16321 6349,16213
 # 
-#: XXX_prog als Ampel markieren
-Georg-Wilhelm-Str./Kurfürstendamm: Fußgängerampel	DH:len=15:t=15 2687,10053 2702,10006 2770,10024
+Georg-Wilhelm-Str./Kurfürstendamm: Fußgängerampel	DH:len=15:tl 2687,10053 2702,10006 2770,10024
 # 
-#: XXX_prog als Ampel markieren vvv
-Nassauische Str./Berliner Str.: Fußgängerampel	DH:len=25:t=15 5189,8983 5195,8880 5266,8903
-Mehlitzstr./Berliner Str.: Fußgängerampel	DH:len=20:t=15 5165,8784 5172,8880 5022,8879
-#: XXX_prog ^^^
+Nassauische Str./Berliner Str.: Fußgängerampel	DH:len=25:tl 5189,8983 5195,8880 5266,8903
+Mehlitzstr./Berliner Str.: Fußgängerampel	DH:len=20:tl 5165,8784 5172,8880 5022,8879
 # 
 #: XXX_prog BS vvv
 Schwäbische Str./Grunewaldstr.: Bordsteine beim Überqueren der Grunewaldstr.	DH:t=5 6851,9365 6917,9274 7001,9291
@@ -120,46 +128,37 @@ Kulmer Str./Goebenstr.: Ampel auf der linken Seite benutzen	DH:t=15 7771,9479 78
 # 
 Sonnenallee/Anzengruberstr.: an der Finowstr. überqueren	DH:len=35 13107,8343 13042,8395 12865,8346
 # 
-#: XXX_prog als Ampel markieren
-Mariendorfer Damm/Göllweg: Fußgängerampel	DH:len=70:t=15 10276,1383 10239,1481 10119,1435
+Mariendorfer Damm/Göllweg: Fußgängerampel	DH:len=70:tl 10276,1383 10239,1481 10119,1435
 # 
-#: XXX_prog als Ampel markieren vvv
-Hochspannungsweg/Buckower Damm: Fußgängerampel	DH:len=50:t=15 12593,2472 12694,2517 12825,2573
-Hochspannungsweg/Buckower Damm: Fußgängerampel	DH:len=50:t=15 12825,2573 12694,2517 12593,2472
-Hochspannungsweg/Buckower Damm: Fußgängerampel	DH:len=50:t=15 12825,2573 12694,2517 12703,2454
-Hochspannungsweg/Buckower Damm: Fußgängerampel	DH:len=50:t=15 12703,2454 12694,2517 12593,2472
-#: XXX_prog ^^^
+Hochspannungsweg/Buckower Damm: Fußgängerampel	DH:len=50:tl 12593,2472 12694,2517 12825,2573
+Hochspannungsweg/Buckower Damm: Fußgängerampel	DH:len=50:tl 12825,2573 12694,2517 12593,2472
+Hochspannungsweg/Buckower Damm: Fußgängerampel	DH:len=50:tl 12825,2573 12694,2517 12703,2454
+Hochspannungsweg/Buckower Damm: Fußgängerampel	DH:len=50:tl 12703,2454 12694,2517 12593,2472
 # 
 Am Faulen See -> Hedwigstr.: Fußgängerfurt	DH:len=20 16551,16307 16520,16200 16505,16096
 Hedwigstr. -> Am Faulen See: Fußgängerfurt	DH:len=20 16505,16096 16520,16200 16551,16307
 Hedwigstr. -> Suermondtstr.: Fußgängerfurt	DH:len=20 16505,16096 16520,16200 16476,16216
 Suermondtstr. -> Am Faulen See: Fußgängerfurt	DH:len=20 16476,16216 16520,16200 16551,16307
 # 
-#: XXX_prog als Ampel markieren
-Am Juliusturm -> Zitadelle: Ampel	DH:len=100:t=15 -2794,14511 -2647,14532 -2652,14559
+Am Juliusturm -> Zitadelle: Ampel	DH:len=100:tl -2794,14511 -2647,14532 -2652,14559
 # 
 Berliner Str. -> Masurenstr.: Mittelstreifen	DH:len=40 10886,17396 10880,17469 10670,17458
 # 
-#: XXX_prog als Ampel markieren
-Karl-Marx-Allee -> Krautstr.: am Strausberger Platz (Ampel) die Karl-Marx-Allee überqueren und einige Meter zurückfahren	DH:len=40:t=15 12360,12505 12134,12540 12125,12490
+Karl-Marx-Allee -> Krautstr.: am Strausberger Platz (Ampel) die Karl-Marx-Allee überqueren und einige Meter zurückfahren	DH:len=40:tl 12360,12505 12134,12540 12125,12490
 # 
-#: XXX_prog als Ampel markieren
-Ilsensteinweg -> B1: Ampel	DH:t=15 -1724,2743 -1626,2441 -1340,2554
+Ilsensteinweg -> B1: Ampel	DH:tl -1724,2743 -1626,2441 -1340,2554
 # 
 #: XXX_indoor genauere Verlustzeit ausrechnen vvv
 Ladenbergstr. -> Altensteinstr.: Fußgängerampel auf der linken Seite benutzen	DH:t=20 2858,4372 2997,4378 3037,4500
 Ladenbergstr. -> Habelschwerdter Allee: Fußgängerampel auf der linken Seite benutzen	DH:t=10 2858,4372 2997,4378 2857,4578
 #: XXX_indoor ^^^
 # 
-#: XXX_prog als Ampel markieren vvv
-Alemannenallee -> Badenallee: Fußgängerampel	DH:len=90:t=15 1065,11216 943,11302 743,11462
-Alemannenallee -> Heerstr.: Fußgängerampel	DH:len=70:t=15 1065,11216 943,11302 704,11273
-Badenallee -> Alemannenallee: Fußgängerampel, linker Gehweg	DH:len=90:t=15:h=q3,85 743,11462 943,11302 1065,11216
-Heerstr. -> Badenallee: Fußgängerampel	DH:len=200:t=15 704,11273 943,11302 743,11462
-#: XXX_prog ^^^
+Alemannenallee -> Badenallee: Fußgängerampel	DH:len=90:tl 1065,11216 943,11302 743,11462
+Alemannenallee -> Heerstr.: Fußgängerampel	DH:len=70:tl 1065,11216 943,11302 704,11273
+Badenallee -> Alemannenallee: Fußgängerampel, linker Gehweg	DH:len=90:tl:h=q3,85 743,11462 943,11302 1065,11216
+Heerstr. -> Badenallee: Fußgängerampel	DH:len=200:tl 704,11273 943,11302 743,11462
 # 
-#: XXX_prog als Ampel markieren
-Bundesallee/Spichernstr.: zusätzliche Ampel	DH:t=15 5464,9914 5463,9961 5450,10338
+Bundesallee/Spichernstr.: zusätzliche Ampel	DH:tl 5464,9914 5463,9961 5450,10338
 # 
 Gregor-Mendel-Str. -> Schorlemerallee: Umweg zur Überquerungsmöglichkeit	DH:len=40 3650,6665 3664,6523 3836,6550
 # 
@@ -170,18 +169,23 @@ Lützowplatz -> Wichmannstr.: Fußgängerampel auf der linken Seite benutzen	DH:t=1
 Lützowplatz -> Schillstr.: Fußgängerampel auf der linken Seite benutzen	DH:t=10 6918,10858 6824,10904 6740,10755
 #: XXX_indoor ^^^
 # 
-#: XXX_prog als Ampel markieren
-Am Karlsbad -> Potsdamer Str.: Fußgängerampel	DH:len=50:t=15 8011,11014 7968,11048 7912,10945
+Am Karlsbad -> Potsdamer Str.: Fußgängerampel	DH:len=50:tl 8011,11014 7968,11048 7912,10945
 # 
 Picardieweg -> Blaubeerweg: Umweg wegen Straßenbahngleisen	DH:len=40 10993,21948 10935,22174 10910,22245
 Blaubeerweg -> Picardieweg: Umweg wegen Straßenbahngleisen	DH:len=40 10910,22245 10935,22174 10993,21948
 Rosenthaler Weg -> Picardieweg: Umweg wegen Straßenbahngleisen	DH:len=40 10999,22195 10935,22174 10993,21948
 Blaubeerweg -> Rosenthaler Weg: Umweg wegen Straßenbahngleisen	DH:len=40 10910,22245 10935,22174 10999,22195
 # 
-#: XXX_prog als Ampel markieren vvv
-Zeppelinstr. -> Helmholtzstr.: Fußgängerampel	DH:len=20:t=15 18041,6924 17919,6968 17845,6986
-Helmholtzstr. -> Zeppelinstr.: Fußgängerampel	DH:len=20:t=15 17845,6986 17919,6968 18041,6924
-Edisonstr. -> Helmholtzstr.: Fußgängerampel	DH:len=20:t=15 17962,6674 17919,6968 17845,6986
-Zeppelinstr. -> Edisonstr.: Fußgängerampel	DH:len=20:t=15 18041,6924 17919,6968 17962,6674
-#: XXX_prog ^^^
+Zeppelinstr. -> Helmholtzstr.: Fußgängerampel	DH:len=20:tl 18041,6924 17919,6968 17845,6986
+Helmholtzstr. -> Zeppelinstr.: Fußgängerampel	DH:len=20:tl 17845,6986 17919,6968 18041,6924
+Edisonstr. -> Helmholtzstr.: Fußgängerampel	DH:len=20:tl 17962,6674 17919,6968 17845,6986
+Zeppelinstr. -> Edisonstr.: Fußgängerampel	DH:len=20:tl 18041,6924 17919,6968 17962,6674
 # 
+#: next_check_id: HOLZMARKT-2017
+#: XXX hier wird noch eine zusätzliche Ampel entstehen
+#: last_checked: 2017-10-14 vvv
+#: next_check: 2018-04-01 vvv
+Schillingstr. -> Holzmarktstr.: Ampel	DH:len=90:tl 11452,12318 11388,12202 11513,12138
+Holzmarktstr. -> Schillingstr.: linker Gehweg	DH:h=q2,45 11347,12223 11388,12202 11452,12318
+#: next_check ^^^
+#: last_checked ^^^
