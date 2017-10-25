@@ -900,9 +900,9 @@ gemeinsamer Rad- und Gehweg	RW2; 22431,6068 22467,6135
 	RW2;RW2 21002,5755 21303,5826
 	RW1; 19958,5950 20057,5923
 	RW1; 20057,5923 20173,5892 20352,5877 20428,5841 20536,5789 20755,5750
-	RW3; 20755,5750 20536,5789 20428,5841 20352,5877 20173,5892 20057,5923 19958,5950
+	RW3; 20880,5736 20755,5750 20536,5789 20428,5841 20352,5877 20173,5892 20057,5923 19958,5950
 	RW1; 20755,5750 20880,5736
-Gehweg für Radfahrer frei	RW1; 21002,5755 20880,5736 20755,5750
+Gehweg für Radfahrer frei	RW1; 21002,5755 20880,5736
 # REMOVED --- #: XXX Wurde die Benutzungspflicht aufgehoben? -> nein! --- #: by: http://www.berlin.de/imperia/md/content/batreptowkoepenick/verwaltungbzbm/mdv_vii_10_reduziert.pdf?start&ts=1342111378&file=mdv_vii_10_reduziert.pdf (Aufhebung? Seite 41-42)
 	RW2; 20880,5736 21002,5755
 	RW2;RW2 14196,9749 14271,9712 14318,9688 14495,9609
@@ -913,6 +913,7 @@ Gehweg für Radfahrer frei	RW1; 21002,5755 20880,5736 20755,5750
 	RW1; 14174,7505 14095,7568 14015,7631
 #: next_check_id: SONNENALLEE-2014
 #: XXX laut fritz "geänderte Straßenführung" bis 31.12.2016, laut vmz bis Ende Dezember 2017
+#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=22111
 #: source_id: IM_023718
 #: source_id: 2147339540
 #: last_checked: 2017-09-22
@@ -1065,6 +1066,7 @@ Busspur gilt Mo-Fr 7-19 Uhr	RW5;RW5 5459,11135 5258,11285
 #: XXX Busspur wegen Bauarbeiten größtenteils aufgehoben (bis auf ein paar Meter am Steinplatz)
 #: XXX früher: Busspur gilt Mo-Fr 7-19 Uhr	RW5;RW5
 #: XXX bis Ende 2016, laut rbbtext bis 16.12.2016, laut VMZ nun bis Ende 2017
+#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29825
 #: source_id: 2147339533
 #: last_checked: 2017-10-08
 #: check_frequency: 21d
@@ -1148,10 +1150,10 @@ neu asphaltiert	RW1; 17769,7465 17681,7589 17619,7679
 #: source_id: 2147341340
 #: source_id: LMS-BR_r_LMS-BR_98104
 #: last_checked: 2017-10-16 vvv
-#: check_frequency: 60d vvv
+#: next_check: 2017-11-23 vvv
 	RW0; 17619,7679 17527,7812
 provisorischer schmaler Radstreifen	RW3; 17527,7812 17299,8140 17202,8391
-#: check_frequency ^^^
+#: next_check ^^^
 #: last_checked ^^^
 #: XXX ^^^
 	RW1; 17202,8391 17143,8565 17105,8666
@@ -4791,9 +4793,8 @@ Gehweg für Radfahrer frei	RW1; -7484,13770 -7522,13651 -7550,13528 -7554,13514 -
 an der Straßenbahnhaltestelle einige Meter mit Radverkehrsanlage	RW3;RW3 10838,14962 10723,14772
 an der Straßenbahnhaltestelle 50 Meter mit benutzungspflichtiger Radverkehrsanlage	RW3; 10530,14452 10723,14772
 an der Straßenbahnhaltestelle 50 Meter mit benutzungspflichtiger Radverkehrsanlage	RW3; 10723,14772 10530,14452
-an der Straßenbahnhaltestelle einige Meter mit Radverkehrsanlage	RW3; 11176,15489 11112,15387
-mit asphaltierten Straßenbahncaps	RW3; 10881,15047 11112,15387 11176,15489 11290,15669 11367,15793 11387,15827 11445,15920
-mit asphaltierten Straßenbahncaps	RW3; 11445,15920 11387,15827 11367,15793 11290,15669 11176,15489
+mit asphaltierten Straßenbahncaps	RW3; 11176,15489 11112,15387 10881,15047
+mit asphaltierten Straßenbahncaps	RW3; 10881,15047 11112,15387 11176,15489 11290,15669 11367,15793 11387,15827 11445,15920 11387,15827 11367,15793 11290,15669 11176,15489
 	RW3;RW3 10530,14452 10497,14391
 	RW6;RW6 22872,5018 22856,5245 22851,5321
 	RW6;RW6 22856,5245 22803,5241

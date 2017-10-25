@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2003,2006,2012,2015 Slaven Rezic. All rights reserved.
+# Copyright (C) 2003,2006,2012,2015,2017 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -14,9 +14,9 @@
 #
 # Usage:
 #   cd .../bbbike
-#   env BBBIKE_GUI_TEST_MODULE=BBBikeGUITest perl -It ./bbbike -public
+#   env LANG=en_US.UTF-8 BBBIKE_GUI_TEST_MODULE=BBBikeGUITest perl -It ./bbbike -public
 # or
-#   env BBBIKE_TEST_GUI=1 prove t/bbbikeguitest.t
+#   env BBBIKE_TEST_GUI=1 prove t/bbbikeguitest-de.t
 
 package BBBikeGUITest;
 
@@ -27,11 +27,27 @@ $VERSION = 2.00;
 use Time::HiRes ();
 use Test::More qw(no_plan);
 
+use BBBikeUtil qw(first);
 use Strassen::Util;
 use VectorUtil;
 
 my($top, $c);
 my $start_time = $ENV{BBBIKE_TEST_STARTTIME};
+
+my %qr = %{
+           {
+	    'en_US.UTF-8' => +{
+			       streets => qr{^Streets$},
+			       start   => qr{^Start$},
+			       dest    => qr{^Destination$},
+			      },
+	    'de_DE.UTF-8' => +{
+			       streets => qr{^Stra.*en$}, # XXX damn unicode!
+			       start   => qr{^Start$},
+			       dest    => qr{^Ziel$},
+			      },
+	   }->{$ENV{LANG}}
+          };
 
 sub start_guitest {
     my $end_time = Time::HiRes::time();
@@ -77,10 +93,16 @@ sub wait_for_chooser_window {
     my($iteration) = @_;
 
     my $chooser_window;
+    my %seen_toplevels;
     $top->Walk(sub {
     		   my $w = shift;
-    		   if ($w->isa('Tk::Toplevel') && $w->title =~ m{^(Streets|Stra.*en)$}) { # XXX damn unicode!
-    		       $chooser_window = $w;
+    		   if ($w->isa('Tk::Toplevel')) {
+		       my $title = $w->title;
+		       if ($title =~ $qr{streets}) {
+			   $chooser_window = $w;
+		       } else {
+			   $seen_toplevels{$title}++;
+		       }
     		   }
     	       });
     if ($chooser_window) {
@@ -88,8 +110,8 @@ sub wait_for_chooser_window {
 	continue_guitest_with_chooser_window($chooser_window);
     } else {
 	$iteration++;
-	if ($iteration > 20) {
-	    fail "Cannot find chooser window after $iteration iterations...";
+	if ($iteration > 50) { # on a typical desktop system, BBBike should start withing 2-3 seconds. On travis-ci it's slower, up to 10 seconds.
+	    fail "Cannot find chooser window after $iteration iterations. Current toplevels: " . join("\n", sort keys %seen_toplevels);
 	    exit_app();
 	}
 	$top->after(500, sub { wait_for_chooser_window($iteration) });
@@ -107,9 +129,9 @@ sub continue_guitest_with_chooser_window {
 			      if ($w->isa('Tk::Entry')) {
 				  $chooser_entry = $w;
 			      } elsif ($w->isa('Tk::Button')) {
-				  if ($w->cget('-text') eq 'Start') {
+				  if ($w->cget('-text') =~ $qr{start}) {
 				      $chooser_start = $w;
-				  } elsif ($w->cget('-text') =~ m{^(Ziel|Destination)$}) {
+				  } elsif ($w->cget('-text') =~ $qr{dest}) {
 				      $chooser_goal = $w;
 				  }
 			      }
@@ -128,6 +150,74 @@ sub continue_guitest_with_chooser_window {
     ok VectorUtil::point_in_polygon($main::realcoords[0], [[8168,8821], [8171,8752], [9262,8745], [9256,8831]]), "Start is near Dudenstr.";
     cmp_ok Strassen::Util::strecke($main::realcoords[-1], [10970,12822]), "<", 100, "Goal is near Alexanderplatz";
     #require Data::Dumper; print STDERR "Line " . __LINE__ . ", File: " . __FILE__ . "\n" . Data::Dumper->new([\@main::realcoords],[qw()])->Indent(1)->Useqq(1)->Dump; # XXX
+
+    {
+	# The following code tries to find the relevant labels and
+	# buttons in the grid next to the km frame and does checks
+	# on them
+
+	my $km_button; # reference "point": the km title (which is a button)
+	$top->Walk(sub {
+		       return if $km_button;
+		       my $w = shift;
+		       if ($w->isa('Tk::Button') && $w->cget('-text') eq 'km') {
+			   $km_button = $w;
+		       }
+		   });
+	if (!$km_button) {
+	    fail "Cannot find km button";
+	} else {
+	    my $km_frame = $km_button->parent;
+	    my $dist_info_frame = $km_frame->parent;
+	    # Get all children starting from the km_frame and following
+	    my @dist_info_children = $dist_info_frame->children;
+	    while (@dist_info_children && $dist_info_children[0] != $km_frame) {
+		shift @dist_info_children;
+	    }
+	    if (!@dist_info_children) {
+		fail "Strange: cannot find $km_frame in children";
+	    } else {
+		my @w_table; # "table" of widgets, starting at km and ending at the second power
+		for my $x (0..5) {
+		    my $f = $dist_info_children[$x];
+		    if (!$f) {
+			fail "Cannot find frame index $x";
+		    } elsif (!$f->isa('Tk::Frame')) {
+			fail "Widget index $x is not a frame, but a $f";
+		    } else {
+			for my $cw ($f->children) {
+			    next if !$cw->isa('Tk::Label') && !$cw->isa('Tk::Button');
+			    push @{ $w_table[$x] }, $cw->cget('-text');
+			    last if @{ $w_table[$x] } >= 2;
+			}
+		    }
+		}
+
+		is $w_table[0][0], 'km';
+		like $w_table[0][1], qr{^\d+\.\d+$}, 'km looks like a float';
+		cmp_ok $w_table[0][1], '>=', 5, 'expected min distance'; # should be ca. 5.3 km
+		cmp_ok $w_table[0][1], '<=', 7, 'expected max distance';
+
+		is $w_table[1][0], '%';
+		like $w_table[1][1], qr{^\d+$}, '% looks like an integer';
+		cmp_ok $w_table[1][1], '>=', 10, 'expected min percentage'; # should be ca. 13 %
+		cmp_ok $w_table[1][1], '<=', 30, 'expected max percentage';
+
+		is $w_table[2][0], '15 km/h';
+		like $w_table[2][1], qr{^\d+:\d+ h$}, 'looks like a time'; # should be 0:19 h or so
+
+		is $w_table[3][0], '20 km/h';
+		like $w_table[3][1], qr{^\d+:\d+ h$}, 'looks like a time';
+
+		like $w_table[4][0], qr{^\d+ W$}, 'looks like a power spec'; # should be 30 W or so
+		like $w_table[4][1], qr{^\d+:\d+ h$}, 'looks like a time';
+
+		like $w_table[5][0], qr{^\d+ W$}, 'looks like a power spec';
+		like $w_table[5][1], qr{^\d+:\d+ h$}, 'looks like a time';
+
+	    }
+	}
+    }
 
     remove_streets_layer();
     exit_app();

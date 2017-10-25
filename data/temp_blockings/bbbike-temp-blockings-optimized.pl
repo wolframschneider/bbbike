@@ -675,7 +675,30 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        undef,
        undef,
        undef,
-       undef,
+       {
+         'data' => '	2::xmas 8479,11493 8481,11447 8389,11378 8375,11368 8318,11324
+#	2::temp 8318,11324 8280,11296 8278,11257
+#: XXX_prog "3::temp" oder "3::xmas" geht nicht?
+	3 8427,11365 8389,11378 8374,11479
+	3 8374,11479 8389,11378 8427,11365
+',
+         'from' => 1511650800,
+         'id' => 1997,
+         'periodic' => 1,
+         'recurrences' => [
+                            [
+                              'yearly',
+                              'days',
+                              19,
+                              'months',
+                              11
+                            ]
+                          ],
+         'source_id' => 'https://www.weihnachteninberlin.de/weihnachtsmaerkte/mitte/971680-1328132-winterweltampotsdamerplatz.html',
+         'text' => 'Weihnachtsmarkt am Potsdamer Platz, Alte Potsdamer Str. gesperrt, 27. November 2017 bis 26. Dezember 2017',
+         'type' => 'gesperrt',
+         'until' => 1514329199
+       },
        undef,
        undef,
        undef,
@@ -1964,6 +1987,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: by: http://www.berliner-woche.de/buckow/verkehr/der-lange-weg-zur-sanierten-strasse-bauarbeiten-am-buckower-damm-anwohner-aergern-sich-ueber-lkw-im-wohngebiet-d126968.html
 #: note: die Baustelle ist gewandert
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
+#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=20802
 #: source_id: LMS-BR_r_LMS-BR_72519
 	q4::inwork 12911,1815 12940,1547
 ',
@@ -1992,7 +2016,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-10-04 vvv
+#: last_checked: 2017-10-20 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -2024,20 +2048,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: XXX weitere Sperrungen: 18. Oktober sowie 8., 15., 22. und 29. November
-#: next_check: 2017-10-19
-#: priority: #A
-	2::temp -2218,5133 -927,6888
-	2::temp -2825,5588 -1925,6790 -2080,6897
-	2::temp -1925,6790 -1851,6887
-',
-         'from' => 1508216400,
-         'id' => 2840,
-         'text' => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 18. Oktober 2017 ab ca. 9:45 Uhr',
-         'type' => 'gesperrt',
-         'until' => 1508317200
-       },
+       undef,
        undef,
        {
          'data' => '#: tempex: sunset-T07
@@ -2110,15 +2121,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: note: laut fritz bis 21.10.2017 08:00 Uhr
 #: by: http://werbegemeinschaft-friedrichshagen.de/wp-content/uploads/2017/05/2017-05_Boelschestr_Anwohnerflyer_web.pdf
+#: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.641756.php
 #: source_id: LMS-BR_r_LMS-BR_97860
 	q4::inwork; 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
 ',
          'from' => 1495918329,
          'id' => 2867,
          'source_id' => 'http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.595041.php',
-         'text' => 'Bölschestr.: Bauarbeiten, Einbahnstraße Richtung Süden, 22.05. bis 21.10.2017',
+         'text' => 'Bölschestr.: Bauarbeiten, Einbahnstraße Richtung Süden, 22.05. bis Ende Oktober 2017',
          'type' => 'handicap',
-         'until' => 1508565600
+         'until' => 1509184800
        },
        undef,
        undef,
@@ -2222,20 +2234,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'type' => 'gesperrt',
          'until' => undef
        },
-       {
-         'data' => '#: source_id: 2147341585
-#: source_id: LMS-BR_r_LMS-BR_103462_LMS-BR_72
-#: note: laut vmz bis Mitte 10/2017, laut fritz bis 2017-10-20
-#: next_check: 2017-10-20
-	q4::inwork 854,24387 836,24440 813,24497 790,24556 784,24612 790,24698 808,24790 811,24833 793,24943 785,24968
-',
-         'from' => 1500156000,
-         'id' => 2885,
-         'source_id' => 'http://www.berlin.de/ba-reinickendorf/aktuelles/pressemitteilungen/2017/pressemitteilung.611086.php',
-         'text' => 'Am Eichenhain: Bauarbeiten zwischen Sigismundkorso und Karmeliterweg, Fahrbahn gesperrt, bis voraussichtlich Mitte Oktober 2017',
-         'type' => 'handicap',
-         'until' => 1508493600
-       },
+       undef,
        {
          'data' => '#: by: http://www.tagesspiegel.de/berlin/bezirke/spandau/berlin-spandau-ein-wochenmarkt-schliesst-ein-anderer-oeffnet/19717792.html#
 	q4::temp:clock 1184,14515 1262,14510
@@ -2274,16 +2273,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: LMS-BR_r_LMS-BR_104863_LMS-BR_72
-	q4::inwork 3069,11551 2924,11309
-',
-         'from' => 1501870960,
-         'id' => 2894,
-         'text' => 'Witzlebenstr.: zwischen Steifensandstr. und Kaiserdamm gesperrt, eventuell sind auch Radfahrer betroffen, bis 20.10.2017',
-         'type' => 'handicap',
-         'until' => 1508493600
-       },
+       undef,
        {
          'data' => '	2::inwork -586,22064 -735,22103 -786,22110 -973,22117 -827,22039 -629,21975
 ',
@@ -2299,12 +2289,13 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'data' => '#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?bvgid=BVG131679 ("gültig bis: auf Weiteres")
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=30361
 #: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=29479
+#: by: mapillary (Gehweg für Radfahrer frei)
 	q3::inwork; 3044,1890 2992,2018 2951,2112 2896,2229 2880,2265 2848,2340 2826,2390 2805,2438 2781,2493
 	q3::inwork; 3161,2482 3151,2224 3150,2113 3148,1888
 ',
          'from' => 1502386525,
          'id' => 2897,
-         'text' => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Baseler Str. offen Richtung Norden), eventuell bis Ende November 2017',
+         'text' => 'Carstennstr. und Baseler Str.: Einbahnstraßenregelung (Carstennstr. offen Richtung Süden, Richtung Norden ist der Gehweg für Radfahrer frei; Baseler Str. offen Richtung Norden), eventuell bis Ende November 2017',
          'type' => 'handicap',
          'until' => 1512082799
        },
@@ -2358,14 +2349,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1512039600
        },
        {
-         'data' => '	q3::inwork; 10066,20494 10064,20437 10066,20323 10068,20188 10106,20093 10117,20065 10132,19993 10167,19797
+         'data' => '#: note: vmz meint Ende November 2017
+#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=35015 (bis 6.11.2017)
+	q3::inwork; 10066,20494 10064,20437 10066,20323 10068,20188 10106,20093 10117,20065 10132,19993 10167,19797
 ',
          'from' => 1504896268,
          'id' => 2905,
          'source_id' => '2147341767',
-         'text' => 'Dietzgenstr.: Bauarbeiten zwischen Schillerstr. und Kuckhoffstr., Fahrbahn Richtung Süden gesperrt, voraussichtlich bis 20. Oktober 2017',
+         'text' => 'Dietzgenstr.: Bauarbeiten zwischen Schillerstr. und Kuckhoffstr., Fahrbahn Richtung Süden gesperrt, voraussichtlich bis 18. Dezember 2017',
          'type' => 'handicap',
-         'until' => 1508493600
+         'until' => 1513594800
        },
        {
          'data' => '#: last_checked: 2017-10-10
@@ -2400,15 +2393,18 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1522576800
        },
        {
-         'data' => '#: source_id: LMS-BR_r_LMS-BR_108061_LMS-BR_72
+         'data' => '#: note: vmz meint nur Ende November 2017
+#: by: http://www.bvg.de/de/Fahrinfo/Verkehrsmeldungen/Verkehrsmeldung-Detail?id=35015 (bis 6.11.2017)
+#: source_id: LMS-BR_r_LMS-BR_108061_LMS-BR_72
+#: source_id: 2147341767
 	q3::inwork; 10167,19797 10132,19993 10117,20065 10106,20093 10068,20188 10066,20323 10064,20437 10066,20494
 ',
          'from' => 1504896268,
          'id' => 2909,
          'source_id' => '2147341767',
-         'text' => 'Dietzgenstr.: zwischen Kuckhoffstr. und Schillerstr. ist die Fahrbahn Richtung Norden für Radfahrer offiziell gesperrt, voraussichtlich bis 20. Oktober 2017',
+         'text' => 'Dietzgenstr.: zwischen Kuckhoffstr. und Schillerstr. ist die Fahrbahn Richtung Norden für Radfahrer offiziell gesperrt, voraussichtlich bis 18. Dezember 2017',
          'type' => 'handicap',
-         'until' => 1508493600
+         'until' => 1513594800
        },
        {
          'data' => '#: last_checked: 2017-09-23
@@ -2472,14 +2468,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => undef
        },
        {
-         'data' => '	q4::inwork 10178,20525 10309,20562 10409,20592
+         'data' => '#: note: fritz meint 18.12.2017
+#: source_id: 2147341767
+	q4::inwork 10178,20525 10309,20562 10409,20592
 ',
          'from' => 1508005269,
          'id' => 2916,
          'source_id' => 'LMS-BR_r_LMS-BR_112957_LMS-BR_72',
-         'text' => 'Schillerstr.: zwischen Heinrich-Böll- und Waldemarstr. gesperrte Fahrbahn, bis 20.10.2017',
+         'text' => 'Schillerstr.: zwischen Heinrich-Böll- und Waldemarstr. gesperrte Fahrbahn, voraussichtlich bis zum 17.12.2017',
          'type' => 'handicap',
-         'until' => 1508536800
+         'until' => 1513508400
        },
        {
          'data' => '	q4::inwork 8541,6191 8546,6307
