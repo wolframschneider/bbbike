@@ -135,7 +135,6 @@ use vars qw($VERSION $VERBOSE
 	    $gmap_api_version
 	    $enable_current_postion
 	    $enable_weather_forecast
-	    $enable_flattr_t_link
 	    $enable_twitter_t_link
 	    $enable_rss_feed $enable_rss_icon
 	    $gmapsv3
@@ -8827,7 +8826,6 @@ $permalink_text
 
 <span id="footer_community">
   <a href="$community_link"><img class="logo" height="19" width="64" src="/images/donate.png" alt="Flattr this" title="$donate_title" border="0"></a>
-  @{[ $enable_flattr_t_link  ? qq[<a href="$community_link"><img class="logo" src="/images/flattr-compact.png" alt="Flattr this" title="Flattr this" border="0"></a>] : "" ]}
   @{[ $enable_twitter_t_link  ? qq[<a href="https://twitter.com/BBBikeWorld"><img class="logo" src="/images/twitter-b.png" title="$twitter_title" alt=""></a>] : "" ]}
   $rss_icon
 </span> <!-- footer_community -->
