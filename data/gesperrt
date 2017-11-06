@@ -73,7 +73,7 @@ Waidmannsluster Damm	1 2146,20887 1843,21440 1870,21491 2188,20910
 Flughafen Tegel	1 2809,16143 2757,16194 2696,16271 2720,16353 2800,16368 2839,16337 2853,16293 2809,16143
 Jakob-Kaiser-Platz	1 2795,14161 2811,14196 2831,14219 2857,14222 2896,14187 2892,14149 2860,14118 2825,14128 2795,14161
 Kurt-Schumacher-Damm (S¸d)	1 2831,14219 2803,14288 2793,14374 2905,14754
-Kurt-Schumacher-Damm (S¸d)	1 2963,14752 2847,14356 2857,14222
+Kurt-Schumacher-Damm (S¸d)	1 2956,14752 2846,14373 2857,14222
 Kurt-Schumacher-Damm (Nord)	1 3564,16294 3643,16437 3676,16497 3753,16638 3853,16825 3940,16861
 Kurt-Schumacher-Damm (Nord)	1 3940,16861 3788,16621 3711,16481 3585,16252
 Ferdinand-Friedensburg-Platz	1 -914,14602 -1357,14533 -1392,14527 -1484,14513 -1369,14644 -1119,14659 -925,14631
@@ -734,7 +734,7 @@ Akazienweg	1s -3112,18000 -3136,17976 -3155,17925
 Buchenweg	1s -2968,18038 -3028,18027 -3083,18010
 Eschenweg	1s -3306,17989 -3285,17968 -3224,17943
 Lindenweg	1s -3111,18105 -3076,18053 -3038,18063
-K¸sterstr.	1 -624,15494 -593,15300 -569,15167
+K¸sterstr.	1 -622,15502 -593,15300 -569,15167
 Straﬂburger Str.	1 11270,14131 11239,14123 11236,14153
 Rykestr./Knaackstr.	1 11331,14350 11374,14363 11380,14316
 Waldowallee	1 18916,9468 18867,9464
@@ -832,6 +832,9 @@ Waldkraiburger Str.: Betriebsgel‰nde	2 12283,4971 12468,5000
 Dankratweg - Am Waldberg: Betriebsgel‰nde	2 20460,9593 20408,9604 20338,9718 20335,9866
 (Vorfahrt S-Bhf. Tegel)	1s 2352,20224 2371,20225 2384,20196 2398,20166 2381,20157
 (Guerickestr. - Einsteinufer)	1s 4658,12450 4618,12340 4593,12322
+Wilhelmstr. (Wilhelmstadt)	1::igndisp -4406,12468 -4300,12571
+(Messedamm - S-Bhf. Westkreuz)	1 2117,10495 2090,10576 2033,10613
+Halenseestr.	2::igndisp 2086,10552 1961,10646 1928,10728
 Heerstr.	1::igndisp -6675,12632 -7294,12833
 Potsdamer Chaussee	2::igndisp -6660,9953 -6891,9706 -7417,8988 -7783,8524
 Knoten M‰rkische Allee	2::igndisp 19918,11891 19896,11688 19908,11637 19936,11608 19999,11612 20026,11663
@@ -1743,8 +1746,8 @@ Mittelstreifen mit Straﬂenbahn	3nocross::ignrte 11709,14856 11609,14881 11535,14
 Danziger Str. -> Rykestr.: Mittelstreifen mit Straﬂenbahn	3::igndisp 11709,14856 11609,14881 11535,14688
 Rykestr. -> Danziger Str.: Mittelstreifen mit Straﬂenbahn	3::igndisp 11535,14688 11609,14881 11535,14900
 Mittelstreifen mit Straﬂenbahn	3nocross::ignrte 12317,14535 12123,14643 12025,14695
-Danziger Str. -> Lilli-Henoch-Str.: Mittelstreifen mit Straﬂenbahn	3::igndisp 12025,14695 12123,14643 12193,14775
-Lilli-Henoch-Str. -> Danziger Str.: Mittelstreifen mit Straﬂenbahn	3::igndisp 12193,14775 12123,14643 12317,14535
+Danziger Str. -> Lilli-Henoch-Str.: Mittelstreifen mit Straﬂenbahn	3::igndisp 12025,14695 12123,14643 12186,14762
+Lilli-Henoch-Str. -> Danziger Str.: Mittelstreifen mit Straﬂenbahn	3::igndisp 12186,14762 12123,14643 12317,14535
 Mittelstreifen mit Straﬂenbahn	3nocross::ignrte 10741,13685 10645,13711 10572,13731 10459,13760
 Torstr. -> Angerm¸nder Str.: Mittelstreifen mit Straﬂenbahn	3::igndisp 10572,13731 10645,13711 10703,13832
 Angerm¸nder Str. -> Torstr.: Mittelstreifen mit Straﬂenbahn	3::igndisp 10703,13832 10645,13711 10741,13685
@@ -2113,8 +2116,8 @@ Mittelstreifen	3nocross::ignrte -3803,13464 -3789,13519 -3764,13613
 Klosterstr. -> Ziegelhof, Gr¸nanlage: Mittelstreifen	3::igndisp -3764,13613 -3789,13519 -3689,13513
 Ziegelhof, Gr¸nanlage -> Klosterstr.: Mittelstreifen	3::igndisp -3689,13513 -3789,13519 -3803,13464
 Mittelstreifen	3nocross::ignrte -3625,13889 -3678,13801 -3690,13776 -3716,13724
-Klosterstr. -> Borkumer Str.: Mittelstreifen	3::igndisp -3690,13776 -3678,13801 -3849,13848
-Borkumer Str. -> Klosterstr.: Mittelstreifen	3::igndisp -3849,13848 -3678,13801 -3625,13889
+Klosterstr. -> Borkumer Str.: Mittelstreifen	3::igndisp -3690,13776 -3678,13801 -3851,13849
+Borkumer Str. -> Klosterstr.: Mittelstreifen	3::igndisp -3851,13849 -3678,13801 -3625,13889
 Klosterstr. -> Sedanstr.: Mittelstreifen	3::igndisp -3678,13801 -3690,13776 -3614,13724
 Sedanstr. -> Klosterstr.: Mittelstreifen	3::igndisp -3614,13724 -3690,13776 -3716,13724
 Mittelstreifen	3nocross::ignrte -4239,12626 -4180,12690 -4119,12763 -4063,12842
@@ -2222,7 +2225,7 @@ Tor	BNP:3:-8:trailer=10 20829,5418
 Schranke	BNP:3:-7:trailer=10 20849,5266
 tragen (20 Stufen)	0:30:-90 22624,13901
 tragen (8 weite Stufen) bzw. Naturrampe benutzen	0:15:-175 -6004,15050
-tragen	0:30:-162 -3138,14171
+tragen (25 Stufen)	0:30:-113 -3144,14170
 tragen (5 Stufen)	0:10:-132 14832,8199
 tragen (Schienen der stillgelegten Heidekrautbahn)	0:20:-39 7316,20623
 tragen	0:15:-58 47027,49988
@@ -2475,8 +2478,8 @@ Dr‰ngelgitter	BNP:2:-76:trailer=6 7886,8335
 Dr‰ngelgitter	BNP:2:-75:trailer=6 7911,8329
 Schranke, kann auf B¸rgersteig umfahren werden	BNP:3:-217:trailer=5 1778,20377
 Schranke	BNP:3:-244:trailer=10 5296,11529
-Dr‰ngelgitter	BNP:5:-263:trailer=10 14366,8058
-Dr‰ngelgitter	BNP:7:-262:trailer=15 14425,8052
+Dr‰ngelgitter	BNP:3:-263:trailer=8 14366,8058
+Dr‰ngelgitter	BNP:5:-262:trailer=10 14425,8052
 Dr‰ngelgitter	BNP:5:-65:trailer=10 4626,20960
 Dr‰ngelgitter	BNP:5:32:trailer=10 7764,21271
 Schranke	BNP:3:-105:trailer=10 11392,10520
@@ -2761,7 +2764,7 @@ Schwingtor	BNP:5:-85:trailer=10 7366,8390
 Schwingtor	BNP:5:-49:trailer=10 7400,8273
 Schwingtor	BNP:5:-54:trailer=10 7289,8259
 Schwingtor	BNP:5:-190:trailer=10 7372,8222
-Schranke, sehr enge Durchfahrt, nicht anh‰ngertauglich	BNP:5:-135:trailer=no 14658,7513
+Schranke, sehr enge Durchfahrt, nicht anh‰ngertauglich	BNP:5:-148:trailer=no 14658,7513
 Dr‰ngelgitter an der Straﬂenbahntrasse	BNP:6:-167 14989,13630
 Schranke	BNP:3:-90 -3646,15717
 Dr‰ngelgitter am Bahn¸bergang	BNP:3:-21 11612,5253
@@ -2886,6 +2889,7 @@ Dr‰ngelgitter	BNP:3:0:trailer=10 3783,-2079
 Dr‰ngelgitter	BNP:3:50:trailer=10 21618,5699
 Dr‰ngelgitter	BNP:3:85:trailer=10 22070,5876
 Dr‰ngelgitter	BNP:3:78:trailer=10 22097,5879
+Planstraﬂe C: gesperrt, Privatstraﬂe	2 12926,11224 12848,11093
 Wartenbergstr.	1s:inwork 15423,11667 15337,11639 15328,11636 15300,11584
 Im Lichtenhain: neue Straﬂe, zurzeit Bauarbeiten; Qualit‰t, genaue Lage?	2::inwork 16497,10685 16462,10571
 Lichtburgring: Baustelle, Betreten verboten	2::inwork 10004,15636 9933,15815
@@ -2898,7 +2902,6 @@ Mauerstr.: Bauarbeiten, Einbahnstraﬂe	1s:inwork 9108,11961 9138,11872
 (entlang der Erpe): Bauarbeiten der DB	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
 (Marseillestr. - Straﬂe 160): wegen Bauarbeiten gesperrt	2::inwork 12495,21397 12507,21391 12547,21372
 Rigaer Str.: Komplettsperrung zwischen Schreinerstr. und Voigtstr.	2::inwork 14538,12371 14748,12314
-Gutspark Neukladow: Bauarbeiten, Weg komplett gesperrt	2::inwork -6366,5215 -6198,5357
 Amberbaumallee: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork -6410,6549 -6556,6663 -6661,6743
 An den Parkb‰umen: Bauarbeiten, Fahrbahn gesperrt	2::inwork -6530,6699 -6556,6663
 Parkrosenweg: Bauarbeiten	2::inwork -6530,6699 -6381,6587

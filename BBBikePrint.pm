@@ -3,7 +3,7 @@
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 1998-2003,2006,2014,2015 Slaven Rezic. All rights reserved.
+# Copyright (C) 1998-2003,2006,2014,2015,2017 Slaven Rezic. All rights reserved.
 # This package is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -637,7 +637,6 @@ sub draw_legend {
 		      'b'  => 'S',
 		      'p'  => 'U', # XXX falsche Farbe
 		      'o'  => 'U', # XXX "
-		      'pp' => 'S', # XXX "
 		     );
     foreach my $abk (keys %p_draw) {
 	next unless $p_draw{$abk};
@@ -745,9 +744,12 @@ sub draw_legend {
 	    $skip_height_add = 1;
 	} else {
 	    my $p_cat = $p_category{$abk} || '';
-	    my $color = (defined $category_color{$p_cat}
-			 ? $category_color{$p_cat}
-			 : $p_color{$abk});
+	    my $color = ($abk eq 'pp' ? $main::pp_color
+			 : (defined $category_color{$p_cat}
+			    ? $category_color{$p_cat}
+			    : $p_color{$abk}
+			   )
+			);
 	    ($x, $y) = ($left+$start_symbol, $top+$height);
 	    my $item = $c->createLine($x+4, $y+3,
 				      $x+4, $y+3,
@@ -918,7 +920,8 @@ sub show_legend {
     if ($geometry_height + 30 > $t->screenheight) {
 	$geometry_height = $t->screenheight - 30;
     }
-    $t->geometry(int($width+$left*2) . "x" . int($geometry_height));
+    my $scrollbar_width = 25;
+    $t->geometry(int($width+$left*2+$scrollbar_width) . "x" . int($geometry_height));
 
 }
 
