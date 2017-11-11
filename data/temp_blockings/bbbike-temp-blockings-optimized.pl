@@ -3757,6 +3757,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: source_id: IM_026411
 #: source_id: 2147339562
 #: source_id: LMS-BR_r_LMS-BR_51041
+#: source_id: 2147342003
 #: XXX laut osm "Rad fahren möglich", deshalb q4 -> q3
 #: by: http://www.berlin.de/ba-spandau/aktuelles/pressemitteilungen/2017/pressemitteilung.639561.php (Ende 2018 oder Mitte 2019)
 #: next_check: 2018-12-31
@@ -3916,7 +3917,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-10-20 vvv
+#: last_checked: 2017-11-06 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -3991,7 +3992,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: XXX wann sind die Bauarbeiten beendet? laut Schild der Wasserbetriebe bis September oder Oktober; laut Pressemitteilung bis Ende 2017
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
-#: last_checked: 2017-11-03 vvv
+#: last_checked: 2017-11-07 vvv
 # REMOVED (weitgehend fertig) ---	q3::inwork 13384,8354 13217,8493
 # REMOVED	q3::inwork; 13217,8493 13262,8554
 # REMOVED	q3::inwork; 13262,8554 13301,8606 13314,8624
@@ -4029,21 +4030,22 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        {
-         'data' => '#: note: (alte Meldung) laut fritz bis 21.10.2017 08:00 Uhr, laut VMZ bis Anfang November 2017
+         'data' => '#: note: laut fritz bis 8.12.2017, laut VMZ bis Mitte Dezember 2017
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.595041.php
 #: by: http://werbegemeinschaft-friedrichshagen.de/wp-content/uploads/2017/05/2017-05_Boelschestr_Anwohnerflyer_web.pdf
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.641756.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.643825.php
 #: by: http://www.berlin.de/ba-treptow-koepenick/aktuelles/pressemitteilungen/2017/pressemitteilung.645164.php
 #: source_id: LMS-BR_r_LMS-BR_97860
+#: source_id: 2147341992
 # REMOVED ---	q4::inwork; 25519,4830 25524,5011 25539,5237 25544,5326 25546,5359 25548,5398 25553,5486 25567,5749 25571,5829 25579,5958
 	q4::inwork; 25539,5237 25524,5011 25519,4830
 ',
          'from' => 1509836400,
          'id' => 2867,
-         'text' => 'Bölschestr.: Bauarbeiten, zwischen Aßmannstr. und Müggelseedamm Richtung Süden gesperrt, ab 06. November 2017',
+         'text' => 'Bölschestr.: Bauarbeiten, zwischen Aßmannstr. und Müggelseedamm Richtung Süden gesperrt, ab 06. November 2017 bis 08. Dezember 2017',
          'type' => 'handicap',
-         'until' => undef
+         'until' => 1512730800
        },
        undef,
        undef,
@@ -4062,7 +4064,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2017
-#: last_checked: 2017-11-03
+#: last_checked: 2017-11-07
 	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 ',
          'from' => undef,
@@ -4265,7 +4267,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1513594800
        },
        {
-         'data' => '#: last_checked: 2017-10-10
+         'data' => '#: last_checked: 2017-11-07
 	2::inwork 14652,10201 14569,10055
 ',
          'from' => undef,
@@ -4385,6 +4387,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Uferweg Plötzensee: wegen Unterspülung gesperrt, Umfahrung über enge Pfade möglich',
          'type' => 'gesperrt',
          'until' => undef
+       },
+       {
+         'data' => '#: by: fritz
+	2::inwork 15055,11505 15162,11458
+',
+         'from' => 1510034400,
+         'id' => 2919,
+         'text' => 'Wiesenweg: wegen Brückenarbeiten zwischen Gürtelstr. und Kietzer Weg gesperrt, eventuell auch für Fußgänger und Radfahrer, von 08.11.2017 7:00 Uhr bis 10.11.2017 17:00 Uhr ',
+         'type' => 'gesperrt',
+         'until' => 1510329600
        }
      
 );
