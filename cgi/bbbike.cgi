@@ -163,6 +163,7 @@ use vars qw($VERSION $VERBOSE
 	    $default_pref_quality_de
 	    $enable_return_first_button
 	    $enable_move_map
+        $use_local_lang
 	   );
 
 $gmap_api_version = 3;
@@ -842,7 +843,7 @@ my $is_streets;
 }
 
 # local language links redirect: /de/Berlin/ -> /Berlin/
-if ($local_lang eq $selected_lang) {
+if ($use_local_lang && $local_lang eq $selected_lang) {
     my $q= new CGI;
     $q->delete('all');
 
