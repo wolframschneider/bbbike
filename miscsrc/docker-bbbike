@@ -38,7 +38,7 @@ EOF
 
 sub usage_travis_ci (;$) {
     die((defined $_[0] ? $_[0]."\n\n" : '') . <<EOF);
-usage: $0 [--dry-run] travis-ci [--dist debian|ubuntu|...] [--distver stretch|...] [--src local|github] [--branch ...]
+usage: $0 [--dry-run] travis-ci [--dist debian|ubuntu|...] [--distver stretch|...] [--src local|github] [--env KEY=VAL ...] [--branch ...]
 EOF
 }
 
@@ -312,9 +312,7 @@ EOF
 	$doit->run([qw(docker build --tag), $tag,
 		    qw(.),
 		   ]);
-	$doit->run(['docker', 'run', '-ti',
-		    $tag,
-		   ]);
+	$doit->run(['docker', 'run', $tag]);
     } $docker_context_dir;
 }
 
@@ -357,7 +355,7 @@ if ($subcmd =~ m{^(gui|perl[-_]?tk)$}) {
 	       "distver|distversion=s",
 	       "src=s",
 	       'branch=s',
-	       'env=s%'
+	       'env=s%',
 	      )
 	or usage_travis_ci;
     travis_ci($doit, %opt);

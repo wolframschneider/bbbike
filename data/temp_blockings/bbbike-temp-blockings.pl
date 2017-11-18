@@ -4747,7 +4747,7 @@ EOF
        text  => 'B 156 OL Spremberg, Muskauer Straße OL Spremberg, Muskauer Str., Bahnübergang Sanierung BÜ u. Tiefbau Vollsperrung 12.06.2006-24.06.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 80783,-91972 80236,-92007
+	2::inwork 80783,-91972 80446,-92008
 EOF
      },
      { from  => 1146898800, # 2006-05-06 09:00
@@ -4913,7 +4913,7 @@ EOF
        text  => 'B 156 Muskauer Straße Bahnübergang in der OL Spremberg Sanierung BÜ u. Tiefbau Vollsperrung 12.06.2006-29.06.2006 ',
        type  => 'gesperrt',
        data  => <<EOF,
-	2::inwork 80783,-91972 80236,-92007
+	2::inwork 80783,-91972 80446,-92008
 EOF
      },
      { from  => 1150840800, # 2006-06-21 00:00
@@ -23368,7 +23368,7 @@ EOF
        type  => 'gesperrt',
        source_id => 'LS/722-C/14/213',
        data  => <<EOF,
-	2::inwork 79043,-91754 79397,-92080
+	2::inwork 78993,-91693 79400,-92057
 EOF
      },
      { from  => $isodate2epoch->("2015-08-07 00:00:00"), # 1407438000, # 2014-08-07 21:00
@@ -26686,6 +26686,18 @@ EOF
 #: by: fritz
 #: source_id: 2147342009
 	2::inwork 15055,11505 15162,11458
+EOF
+     },
+     { from  => 1510939800, # 2017-11-17 18:30
+       until => 1511146800, # 2017-11-20 04:00
+       dont_check_date => 1,
+       text  => ' Roßstraßenbrücke: Bauarbeiten, Brücke nur für Fußgänger offen, außerdem Komplettsperrung der Uferwege (Fischerinsel und Märkisches Ufer), 18.11.2017, 18.30 Uhr - 18.11.2017, 24.00 Uhr sowie 19.11.2017, 07.00 Uhr - 20.11.2017, 04.00 Uhr',
+       type  => 'gesperrt',
+       source_id => 'http://www.berlin.de/sen/uvk/presse/pressemitteilungen/2017/pressemitteilung.649670.php',
+       data  => <<EOF,
+	q4::inwork 10722,11816 10687,11853 10672,11870 10604,11941
+	2::inwork 10776,11942 10672,11870
+	2::inwork 10687,11853 10869,11949
 EOF
      },
     );
