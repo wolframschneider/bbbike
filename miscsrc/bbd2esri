@@ -1,10 +1,10 @@
-#!/usr/bin/perl -w
+#!/usr/bin/env perl
 # -*- perl -*-
 
 #
 # Author: Slaven Rezic
 #
-# Copyright (C) 2002,2003,2009,2016 Slaven Rezic. All rights reserved.
+# Copyright (C) 2002,2003,2009,2016,2017 Slaven Rezic. All rights reserved.
 # This program is free software; you can redistribute it and/or
 # modify it under the same terms as Perl itself.
 #
@@ -15,6 +15,7 @@
 # quick hack
 
 use strict;
+use warnings;
 use FindBin;
 use lib ("$FindBin::RealBin/..",
 	 "$FindBin::RealBin/../lib",
@@ -46,18 +47,6 @@ my $polar;
 
 my $city;
 my $country;
-
-# Generated with M-x occur --append in landstrassen-orig
-# and some hand-editing... # XXX automate!
-my @stadt_strassen = (qw(Potsdam Erkner Schönefeld
-Dahlwitz-Hoppegarten Kleinmachnow Stahnsdorf Teltow Gosen Mahlow
-Mahlow-Waldblick Brandenburg Frankfurt Cottbus), 'Hohen Neuendorf',
-qw(Borgsdorf Oranienburg Rheinsberg Woltersdorf Rüdersdorf Schöneiche
-Strausberg Lindenberg Falkensee Dallgow-Döberitz Werder), 'Königs
-Wusterhausen', qw(Eberswalde Bernau Fürstenwalde Lübbenau Luckenwalde
-Neuruppin Mittenwalde));
-my $stadt_strassen_rx0 = "\\((?:" . join("|", map { quotemeta } @stadt_strassen) . ")\\)";
-my $stadt_strassen_rx = qr/$stadt_strassen_rx0/;
 
 use constant Strassen_SHORTCAT => Strassen::LAST + 1;
 
@@ -98,6 +87,8 @@ my @files = @ARGV;
 if (!@files) {
     die "No files specified";
 }
+
+my $stadt_strassen_rx = get_stadt_strassen_rx();
 
 if ($polar) {
     require Karte::Standard;
@@ -400,6 +391,7 @@ sub create_dbf_record {
     }
     if (exists $args{-type}) {
 	if ($args{-type} eq 'street-l') {
+	    my $stadt_strassen_rx = get_stadt_strassen_rx();
 	    if ($s_rec->[Strassen::NAME] =~ $stadt_strassen_rx) {
 		($displayname = $s_rec->[Strassen::NAME]) =~ s/\s*$stadt_strassen_rx//;
 	    } else {
@@ -564,6 +556,29 @@ sub do_encode {
     }
 }
 
+{
+    my $stadt_strassen_rx;
+    sub get_stadt_strassen_rx {
+	if (!defined $stadt_strassen_rx) {
+	    my %stadt;
+	    for my $basefile (qw(landstrassen-orig landstrassen2-orig)) {
+		my $file = "$FindBin::RealBin/../data/$basefile";
+		my $s = Strassen->new_stream($file);
+		$s->read_stream(sub {
+				    my $dir = $_[1];
+				    if ($dir->{append_comment}) {
+					$stadt{$dir->{append_comment}->[0]} = 1;
+				    }
+				});
+	    }
+	    my @stadt_strassen = sort keys %stadt;
+	    my $stadt_strassen_rx0 = "\\((?:" . join("|", map { quotemeta } @stadt_strassen) . ")\\)";
+	    $stadt_strassen_rx = qr/$stadt_strassen_rx0/;
+	}
+	$stadt_strassen_rx;
+    }
+}
+
 # REPO BEGIN
 # REPO NAME unidecode_any /home/e/eserte/work/srezic-repository 
 # REPO MD5 59f056efd990dc126e49f5e846eee797
@@ -598,7 +613,7 @@ sub unidecode_any {
     my $res = "";
 
     if (!eval {
-	local $^W = undef;
+	no warnings;
 	Encode->VERSION(2.12); # need v2.12 to support coderef
 	$res = Encode::encode($encoding, $text,
 			      sub {
