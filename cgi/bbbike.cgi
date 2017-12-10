@@ -4610,7 +4610,8 @@ sub search_coord {
 	    my $q_cat = "q$q";
 	    $penalty->{$q_cat} = 1 if !exists $penalty->{$q_cat} || $penalty->{$q_cat} < 1;
 	}
-
+	require Strassen::CatUtil;
+	Strassen::CatUtil::apply_tendencies_in_penalty($penalty, quiet => 1); # quiet because of the ferry category entry ("Q")
 	$extra_args{Handicap} =
 	    {Net => $handicap_net,
 	     Penalty => $penalty,
@@ -4651,6 +4652,9 @@ sub search_coord {
 			   Q2 => $velocity_kmh / 18,
 			   Q3 => $velocity_kmh / 13 );
 	}
+	require Strassen::CatUtil;
+	Strassen::CatUtil::apply_tendencies_in_penalty(\%penalty);
+	Strassen::CatUtil::apply_tendencies_in_speed(\%max_limit);
 	my $min_limit = $velocity_kmh / 5;
 	for my $q (keys %max_limit) {
 	    if ($penalty{$q} < $max_limit{$q}) {

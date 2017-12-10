@@ -2219,8 +2219,8 @@ Schranke, kann auf Bürgersteig umfahren werden	BNP:3::trailer=5 1778,20377
 Schranke	BNP:3::trailer=10 5296,11529
 # 
 #: next_check_id: DIESEL-2015 vvv
-#: note: mittlerweile gibt es hier auch zwei Baustellenampeln mit Anforderung, allerdings wird relativ schnell auf grün geschaltet vvv
-#: last_checked: 2017-10-27 vvv
+#: note: mittlerweile gibt es hier auch zwei Baustellenampeln mit Anforderung, allerdings wird relativ schnell auf grün geschaltet --- jetzt (2017-12) nur noch eine vvv
+#: last_checked: 2017-12-04 vvv
 Drängelgitter	BNP:3::trailer=8 14366,8058
 Drängelgitter	BNP:5::trailer=10 14425,8052
 #: note ^^^
@@ -2804,7 +2804,7 @@ Drängelgitter	BNP:3::trailer=10 22097,5879
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
 #: XXX bleibt die Straße für den öffentlichen Verkehr gesperrt?
-#: last_checked: 2017-11-23
+#: last_checked: 2017-11-30
 Planstraße C: gesperrt, Privatstraße	2 12926,11224 12848,11093
 # 
 #: XXX wird aufgehoben, sobald das einsturzgefährdete Haus abgerissen wird
@@ -2834,8 +2834,9 @@ Bärbel-Bohley-Ring: Baustelle, Betreten verboten	2::inwork 9933,15815 9744,15793
 # REMOVED --- #: last_checked: 2017-09-22 --- Oberwallstr.: Bauarbeiten, Einbahnstraße	1s:q3:inwork 9898,12161 9913,12068
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=4055&mt=0&zoom=16
-#: osm_watch: way id="523614486" version="2"
-#: osm_watch: way id="5134092" version="19"
+#: osm_watch: way id="523614484" version="2"
+# REMOVED (wurde gelöscht) --- #: osm_watch: way id="523614486" version="3"
+# REMOVED (wurde gelöscht) --- #: osm_watch: way id="5134092" version="20"
 #: last_checked: 2017-10-27
 #: check_frequency: 90d
 Zufahrt Parkhaus: Abrissarbeiten, Straße komplett gesperrt	2::inwork 8367,10745 8350,10662 8348,10636 8335,10518 8350,10499 8384,10507
@@ -2883,7 +2884,8 @@ Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9108,11961 9138,11872
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.616518.php
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.616795.php
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.633456.php (Öffnung für Fußgänger)
-#: last_checked: 2017-10-26 (mapillary)
+#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8329
+#: last_checked: 2017-12-08
 #: valid: 20170801-20190228
 #: priority: #A
 Rigaer Str.: Komplettsperrung zwischen Schreinerstr. und Voigtstr.	2::inwork 14538,12371 14748,12314
@@ -2959,7 +2961,7 @@ Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20623,11485 20631,1162
 Traudelstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19169,1249 19140,1137
 # 
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2017-11-13
+#: last_checked: 2017-11-28
 #: check_frequency: 90d
 Schinkelplatz: Einbahnstraße	1s:q3:inwork 9994,12368 10002,12305 10008,12274 10010,12259 10029,12208
 # 
@@ -3001,15 +3003,15 @@ Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtun
 # 
 #: osm_watch: way id="466318949" version="3"
 #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31)
-#: last_checked: 2017-11-08
+#: last_checked: 2017-11-30
 Bouchéstr.: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 13298,9252 13190,9139
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31)
-#: last_checked: 2017-11-08
+#: last_checked: 2017-11-30
 Mengerzeile: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 13176,9302 13100,9210
 # 
 #: next_check_id: HEIDELBERGER-2017
-#: last_checked: 2017-11-18
+#: last_checked: 2017-11-30
 #: check_frequency: 60d
 Heidelberger Str.: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 13489,9199 13420,9259 13357,9313
 # 
@@ -3024,7 +3026,7 @@ Heidelberger Str.: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 13489,9199 134
 #: by: http://www.tagesspiegel.de/downloads/19754816/1/liste-rad-infrastruktur.pdf (evtl. gibt's hier später Radstreifen)
 #: source_id: 2147340715 vvv
 #: source_id: LMS-BR_r_LMS-BR_82028
-#: osm_watch: way id="42091230" version="21"
+#: osm_watch: way id="42091230" version="23"
 #: last_checked: 2017-09-28 vvv
 # REMOVED (temporary) --- #: next_check: 2017-12-31 (vermutlich wird nur auf die neue Fahrbahnhälfte gewechselt werden) vvv
 #: next_check: 2017-12-31 vvv
@@ -3056,13 +3058,11 @@ Nordhafenpark West: während der Umgestaltung gesperrt	2::inwork 7636,14414 7612,
 # REMOVED (Baugrube) --- #: by: http://www.kulturbuch-verlag.de/Service/amtsblatt-fur-berlin/kostenloser-lese-service/pdfl/18re.pdf/file?y=2016 --- #: osm_watch: note 848012 1 --- #: last_checked: 2016-12-15 --- #: check_frequency: 180d --- Sülzhayner Str.: komplett gesperrt wegen Bauarbeiten, vielleicht dauerhaft	2::inwork 13420,9259 13397,9234
 # 
 #: next_check_id: ACHTERKASTELL-2016
-#: last_checked: 2017-09-23
+#: last_checked: 2017-12-03
 #: check_frequency: 60d
 Marzahner Str. - Gensinger Str.: wegen Bauarbeiten gesperrt	2::inwork 18702,11921 18888,11910 18913,11909
 # 
-#: last_checked: 2017-11-20
-Corinthstr.: Baustelle, Einbahnstraßenregelung	1s:q2:inwork 14447,10491 14270,10584
-# 
+# REMOVED (volle Fahrbahnbreite steht wieder zur Verfügung) --- #: last_checked: 2017-11-20 --- Corinthstr.: Baustelle, Einbahnstraßenregelung	1s:q2:inwork 14447,10491 14270,10584
 # REMOVED (mittlerweile schon passierbar) --- #: next_check_id: MARIANNEN-2016 vvv --- #: source_id: INKO_2147340291_COPY_1 vvv --- #: source_id: 2147340291 vvv --- #: source_id: 2147340768 vvv --- # REMOVED (aufgehoben) --- #: priority: #A vvv --- #: XXX laut fritz bis 16.12.2016 --- #: last_checked: 2016-12-15 vvv --- #: next_check: 2017-01-10 vvv --- Mariannenstr.: Baustelle, Einbahnstraßenregelung	1s:q2 11512,10105 11616,10288 --- #: source_id: 2147340777 --- #: XXX laut fritz bis 10.01.2017 --- #: priority: #A --- #: last_checked: 2016-12-15 --- #: check_frequency: 7d --- Mariannenstr.: Baustelle, Fahrbahn gesperrt	2s:q3 11671,10402 11616,10288
 # 
 #: next_check_id: MINNATODENHAGENSTR-2016
@@ -3083,7 +3083,7 @@ Minna-Todenhagen-Str.: wird noch gebaut	2::inwork 17585,7525 17453,7451 17295,73
 #: XXX Bauarbeiten (Erweiterung des Rütli-Campus?)
 #: XXX Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="137084083" version="7"
-#: last_checked: 2017-10-10
+#: last_checked: 2017-12-04
 #: check_frequency: 60d
 Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12620,9293 12565,9200 12548,9167
 # 
@@ -3124,14 +3124,7 @@ Nalepastr.: wegen Straßenbau gesperrt	2::inwork 17190,7306 17211,7280 17219,7268
 # 
 # REMOVED (fertig) --- #: XXX Bauarbeiten im Park dauern bis 2016 --- #: last_checked: 2016-02-05 --- #: check_frequency: 60d --- Kleiner Tiergarten: wegen Bauarbeiten gesperrt	2::inwork 6573,13149 6564,13260 6535,13327
 # REMOVED (fertig) --- #: next_check_id: FISCHERINSEL-2015 vvv --- #: source_id: 2147339543 vvv --- #: last_checked: 2016-12-16 vvv --- #: next_check: 2016-12-22 vvv --- Märkisches Ufer - Neue Roßstr.: wegen Bauarbeiten gesperrt	3 10869,11949 10687,11853 --- Neue Roßstr. - Märkisches Ufer: wegen Bauarbeiten gesperrt	3 10687,11853 10869,11949 --- Märkisches Ufer - Neue Roßstr.: wegen Bauarbeiten gesperrt	3 10869,11949 10687,11853 10672,11870 --- Neue Roßstr. - Märkisches Ufer: wegen Bauarbeiten gesperrt	3 10672,11870 10687,11853 10869,11949
-# 
-#: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1504/nachricht5561.html
-#: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/gerickesteg/index.shtml (20 Monate Bauzeit)
-#: XXX laut http://www.stadtentwicklung.berlin.de/bauen/strassenbau/ bis "II. Quartal 2017"
-#: osm_watch: way id="27250334" version="7"
-#: last_checked: 2017-09-09
-#: check_frequency: 45d
-Gerickesteg: wegen Bauarbeiten gesperrt	2::inwork 6694,12627 6702,12633 6748,12669 6765,12680
+# REMOVED (fertig) --- #: by: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1504/nachricht5561.html --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/gerickesteg/index.shtml (20 Monate Bauzeit) --- #: XXX laut http://www.stadtentwicklung.berlin.de/bauen/strassenbau/ bis "II. Quartal 2017" --- #: osm_watch: way id="27250334" version="7" --- #: last_checked: 2017-09-09 --- #: check_frequency: 45d --- Gerickesteg: wegen Bauarbeiten gesperrt	2::inwork 6694,12627 6702,12633 6748,12669 6765,12680
 # 
 #: XXX Sperrungen wegen der IGA 2017 vvv
 #: by: http://www.berlin.de/ba-marzahn-hellersdorf/aktuelles/pressemitteilungen/2017/pressemitteilung.640770.php (Wiedereröffnung evtl. am 31. März 2018)
@@ -3195,24 +3188,24 @@ Weg nach Tiefwerder: kein Zugang wegen der Ersatzbrücke	2::inwork -3179,11763 -3
 #: next_check_id ^^^
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2017-11-23
+#: last_checked: 2017-11-30
 #: check_frequency: 120d
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2017-11-23
+#: last_checked: 2017-11-30
 #: check_frequency: 90d
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 # 
 # REMOVED (Aufschüttung statt Brücke) --- #: by: http://www.berlin.de/ba-lichtenberg/bvv-online/vo020.asp?VOLFDNR=6003 (Forderung nach Wiederherstellung) --- #: by: http://www.berlin.de/ba-lichtenberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=6003&date=20151213 (Abriss der Brücke) --- #: XXX: Umfahrung existiert mittlerweile --- bleibt die Sperrung permanent? --- #: XXX: sobald die Brücke abgerissen wurde -> aus den Daten entfernen --- #: last_checked: 2015-10-04 --- #: check_frequency: 180d --- Weg zwischen S-Wartenberg und S-Hohenschönhausen: Brücke morsch und gesperrt	2::inwork 17159,18375 17235,18352
 # 
 #: osm_watch: way id="193373934" version="10"
-#: last_checked: 2017-11-05
+#: last_checked: 2017-12-03
 Frauenauer Str.: Straße fertig, aber noch gesperrt	2::inwork 19663,9757 19858,9784
 # 
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_44_4909_5120_online.pdf (Widmung von Straßenland)
 #: osm_watch: way id="290255259" version="5"
-#: last_checked: 2017-11-05
+#: last_checked: 2017-12-03
 Kirchdorfer Str.: Straße fertig, aber noch gesperrt	2::inwork 19842,9895 19858,9784 19871,9680
 # 
 # REMOVED --- #: osm_watch: way id="24845189" version="13" --- #: last_checked: 2016-09-11 --- #: check_frequency: 60d --- Viechtacher Str.: Straße fertig, aber noch gesperrt	2::inwork 19801,9680 19871,9680 19923,9682
@@ -3232,20 +3225,13 @@ BBI-Park: wegen Bauarbeiten gesperrt	2::inwork 20038,-1474 19717,-1549
 am Osthafen: Bauarbeiten, gesperrt	2::inwork 14348,10266 14463,10212
 # 
 # REMOVED --- #: next_check_id: BND-2014 --- #: osm_watch: way id="129104626" version="5" --- #: osm_watch: node id="1975210030" version="4" --- # REMOVED (schon gemacht) --- : XXX culdesac-orig entfernen, sobald die Verlängerung erfolgt ist --- #: by: http://www.rbb-online.de/politik/beitrag/2014/07/bnd-zentrale-berlin-verzoegerung-vollstaendiger-umzug-bis-2017.html --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7441 --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2016/1767-2016-bav-zu-ds-2814-iv-durchwegung_scharnhorst-chaussestrasse_sb.pdf --- #: last_checked: 2017-09-04 --- Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: Durchfahrt noch nicht zuverlässig offen	2::inwork 8251,14337 8442,14456
-# 
-#: next_check_id: SCHINKELPLATZ-2014 vvv
-#: osm_watch: way id="305153174" version="1"
-#: last_checked: 2016-11-30 vvv
-#: check_frequency: 14d vvv
+# REMOVED --- #: next_check_id: SCHINKELPLATZ-2014 vvv --- #: osm_watch: way id="305153174" version="1" --- #: last_checked: 2016-11-30 vvv --- #: check_frequency: 14d vvv
 # REMOVED Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1s:q3 9996,12401 9994,12368 9943,12364
-#: REMOVED --- Niederlagstr.: Bauarbeiten, Passieren auch für Fußgänger nicht möglich	2:inwork 9994,12368 9996,12401
+# REMOVED --- Niederlagstr.: Bauarbeiten, Passieren auch für Fußgänger nicht möglich	2:inwork 9994,12368 9996,12401
 # REMOVED --- Schinkelplatz: Bauarbeiten, Straße gesperrt	2::inwork 10008,12274 9994,12368
 # REMOVED (hier aufgehoben, temporär?) --- Niederlagstr.: Bauarbeiten, Einbahnstraßenregelung	1s:q3 9943,12364 9955,12300 9961,12273
 # REMOVED --- #: XXX eigentlich für Fußgänger passierbar, aber UdL nur in Richtung Osten
 # REMOVED --- Niederlagstr.: Bauarbeiten, keine Zufahrt von Unter den Linden möglich	2::inwork 9943,12364 9934,12420
-#: check_frequency ^^^
-#: last_checked ^^^
-#: next_check_id ^^^
 # 
 # REMOVED --- #: next_check_id: STERNDAMM-2016 --- #: by: fritz --- #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20160124 --- #: source_id: 2147339574 --- #: source_id: IM_026665 --- #: source_id: 2147340122 --- #: source_id: LMS-BR_r_LMS-BR_68908 --- #: last_checked: 2016-06-26 --- #: check_frequency: 90d --- #: priority: #A --- #: XXX Gesamtmaßnahme bis 2018 (oder 2017?) --- 
 #: next_check_id: STERNDAMM-2016
@@ -3274,7 +3260,7 @@ Grenzallee: komplette Sperrung wegen Bau des Autobahntunnels	2::inwork 14257,689
 #: source_id: LMS-BR_r_LMS-BR_44
 #: XXX_prog: ":inwork" kann als Attribut nicht genutzt werden! vvv
 #: XXX laut fritz bis 09.01.2018
-#: last_checked: 2017-11-13 vvv
+#: last_checked: 2017-11-28 vvv
 #: check_frequency: 90d vvv
 Unter den Linden: wegen Bauarbeiten ist das Überqueren nicht möglich	3nocross::inwork 9984,12426 9934,12420 9858,12410
 Unter den Linden - Niederlagstr.: wegen Bauarbeiten ist das Abbiegen nicht möglich	3 9858,12410 9934,12420 9943,12364
@@ -3344,7 +3330,7 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: http://www.dafmap.de/d/berlin.html?id=3588&mt=0&zoom=16
 #: by: http://www.welt.de/kultur/buehne-konzert/article140641614/Ausschuss-prueft-Kostenexplosion-bei-Staatsoper.html (Eröffnung)
 #: XXX Spielbetrieb wird im Dezember 2017 aufgenommen
-#: last_checked: 2017-11-13 vvv
+#: last_checked: 2017-11-28 vvv
 #: next_check: 2017-12-01 vvv
 Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9876,12298
 Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9798,12267 9795,12293 9780,12401
@@ -3357,13 +3343,13 @@ Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9798,
 # 
 #: XXX Eröffnung 2019 geplant
 #: by: http://www.dafmap.de/d/berlin.html?id=3598&mt=0&zoom=16
-#: last_checked: 2017-11-09
+#: last_checked: 2017-11-28
 #: check_frequency: 120d
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 
 #: next_check_id: ADELESCHREIBERKRIEGER-2014
 #: osm_watch: way id="158025179" version="2"
-#: last_checked: 2017-10-13
+#: last_checked: 2017-12-09
 #: check_frequency: 90d
 Adele-Schreiber-Krieger-Str.: Bauarbeiten, gesperrt	2:inwork 8737,12757 8596,12760
 # 
@@ -3377,6 +3363,12 @@ Löwenbrücke: gesperrt	2:inwork 6406,11784 6452,11778
 #: last_checked: 2013-10-22
 #: next_check: 2015-03-01
 Dahlemer Feld: zur Zeit eine Ziegenweide, keine Durchfahrt möglich	2:temp -1643,7828 -1787,7932 -1846,8129
+# 
+#: XXX temporär oder dauerhaft gesperrt?
+#: osm_watch: way id="4615233" version="6"
+#: last_checked: 2017-09-23 (mapillary)
+#: check_frequency: 180d
+(Güterbahnhof Greifswalder Str.): Brücke gesperrt	2 12602,15006 12649,14977
 # 
 #: section ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 #: section in Brandenburg vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv

@@ -1643,7 +1643,7 @@ zur Mühsamstr.	NL 13067,12583 13091,12563 13232,12628
 # 
 #: next_check_id: DBWERKSTRASSE-2017
 #: XXX eventuell nur während der Bauarbeiten keine Beleuchtung mehr vvv
-#: last_checked: 2017-11-23 vvv
+#: last_checked: 2017-12-05 vvv
 Werkstraße	NL 14043,10928 14107,10911 14224,10878 14231,10907
 Werkstraße	NL 14107,10911 14141,10931 14231,10907
 #: last_checked ^^^
@@ -1697,5 +1697,5 @@ Tegeler Forst	NL 605,20714 462,20694 65,20594 -105,20611 -329,20685 -750,20878 -
 (Nizzastr. - Dr.-Markus-Str.)	NL 12434,21160 12522,21208 12535,21282 12507,21391 12498,21450
 (Wiesenweg - Waldweg)	NL 9940,26273 9898,26310 9848,26349 9812,26385
 #: XXX wird die existierende Beleuchtung wieder hergestellt?
-#: last_checked: 2017-11-14
+#: last_checked: 2017-11-28
 Marx-Engels-Forum	NL 10416,12394 10411,12471 10355,12551 10300,12587

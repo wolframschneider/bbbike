@@ -6774,17 +6774,16 @@ EOF
 	2::inwork -31993,-726 -32143,-211 -32153,-176
 EOF
      },
-     { from  => $isodate2epoch->("2016-11-24 00:00:00"), # die Buden standen schon am 19.11.2013 # 1353884400, # 1321916400, # 2011-11-22 00:00 # PERIODISCH! # früher: 1163480400, # 2006-11-14 06:00
-       until => $isodate2epoch->("2016-12-26 23:59:59"), # 1356562740, # 1324940399, # 2011-12-26 23:59 # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
-       ## ab 2017 wieder am Opernpalais --- gibt's hier Einschränkungen?
-       #periodic => 1,
-       #recurrences => [['yearly', days => 18, months => 11]],
-       text  => 'Nostalgischer Weihnachtsmarkt Opernpalais: Wege und Straßen rund um die Hedwigs-Kathedrale teilweise nicht passierbar, teilweise reger Fußgängerverkehr, vom 25.11. bis 26.12.2016',
+     { from  => $isodate2epoch->("2017-11-28 00:00:00"), # die Buden standen schon am 19.11.2013 # 1353884400, # 1321916400, # 2011-11-22 00:00 # PERIODISCH! # früher: 1163480400, # 2006-11-14 06:00
+       until => $isodate2epoch->("2017-12-30 23:59:59"), # 1356562740, # 1324940399, # 2011-12-26 23:59 # PERIODISCH! # früher: 1167433200, # 2006-12-30 00:00
+       periodic => 1,
+       recurrences => [['yearly', days => 18, months => 11]],
+       text  => 'Nostalgischer Weihnachtsmarkt Opernpalais: Wege rund um die Hedwigs-Kathedrale nicht passierbar, vom 29.11. bis 30.12.2017',
        type  => 'gesperrt',
        source_id => 'http://www.weihnachteninberlin.de/weihnachtsmaerkte/mitte/971793-1328132-weihnachtsmarktamopernpalais.html',
        data  => <<EOF,
-	2::xmas 9737,12238 9798,12267
-	q4::xmas 9737,12238 9747,12205 9771,12190 9775,12178 9808,12182
+# REMOVED	2::xmas 9737,12238 9798,12267
+	2::xmas 9737,12238 9747,12205 9771,12190 9775,12178 9808,12182
 EOF
      },
      { from  => 1163718000, # 2006-11-17 00:00
@@ -17082,18 +17081,16 @@ EOF
 	2::inwork 28028,-88225 26392,-88322 25763,-88254 25470,-88145 24969,-87998 24927,-87720
 EOF
      },
-     { from  => $isodate2epoch->("2016-11-04 00:00:00"), # XXX $isodate2epoch->("2016-11-04 00:00:00"), # Aufbauzeit mindestens 17 Tage... (am Anfang ist nur die Fahrbahn der Voltairestr. gesperrt, später auch die Gehwege, die Schicklerstr. ist schon früher komplett gesperrt)
-       until => $isodate2epoch->("2016-12-26 23:59:59"), # Abbauzeit ca. 3 Tage?...
-       ## 2016 war das letzte Mal
-       #periodic => 1,
-       #recurrences => [['yearly', days => 4, months => 11]],
+     { from  => 1511897631, # $isodate2epoch->("2016-11-04 00:00:00"), # XXX $isodate2epoch->("2016-11-04 00:00:00"), # Aufbauzeit mindestens 17 Tage... (am Anfang ist nur die Fahrbahn der Voltairestr. gesperrt, später auch die Gehwege, die Schicklerstr. ist schon früher komplett gesperrt)
+       until => $isodate2epoch->("2017-12-26 23:59:59"), # Abbauzeit ca. 3 Tage?...
+       periodic => 1,
+       recurrences => [['yearly', days => 14, months => 11]],
        # außerdem ist der Nordteil der Dircksenstr. Einbahnstraße offen Richtung Süden, aber nicht relevant für das Routing
-       text  => 'Voltairestr. und Dircksenstr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht möglich (Voltairestr. und Dircksenstr.), von Anfang November 2016 bis Ende Dezember 2016',
+       text  => 'Voltairestr. und Dircksenstr.: Durchfahrt wegen des Weihnachtsmarkts am Einkaufszentrum Alexa nicht möglich (Voltairestr. ist gesperrt; Dircksenstr. ist Einbahnstraße), bis Ende Dezember 2017',
        type  => 'gesperrt',
        data  => <<EOF,
 	2::xmas 11329,12497 11209,12430
-	2::xmas 11209,12430 11273,12301
-# REMOVED (hier (noch?) nicht gesperrt) ---	2::xmas 11273,12301 11355,12331
+	1::xmas 11209,12430 11273,12301
 EOF
      },
      { from  => $isodate2epoch->("2017-11-26 00:00:00"), # 1 Tag Vorlauf
@@ -21484,9 +21481,10 @@ EOF
      },
      { from  => $isodate2epoch->("2016-12-09 10:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2016-12-11 21:00:00"), #
-       periodic => 1,
-       recurrences => [['yearly', days => 9, months => 12]],
-       recurrence_prewarn_days => 7, # 2017 stand der Termin zwei Wochen vorher noch nicht fest
+## findet 2017 nicht statt
+#       periodic => 1,
+#       recurrences => [['yearly', days => 9, months => 12]],
+#       recurrence_prewarn_days => 7, # 2017 stand der Termin zwei Wochen vorher noch nicht fest
        text  => 'Kunsthandwerklicher Weihnachtsmarkt in Lichtenrade: Alt-Lichtenrade, Straße vermutlich gesperrt (10. Dezember 2016 bis 11. Dezember 2016, jeweils 11-20 Uhr)',
        type  => 'handicap',
        data  => <<EOF,
@@ -22252,13 +22250,13 @@ EOF
 	q4::inwork 9075,11756 9000,11727
 EOF
      },
-     { from  => undef, # 
-       until => 1383047340, # 1383238800, # 2013-10-31 18:00
-       text  => 'Modersohnstr., Gärtnerstr.: Bauarbeiten, Einbahnstraße zwischen Revaler Str. und Wühlischstr. (offen Richtung Süden), bis Ende Oktober 2013',
+     { from  => 1511898358,
+       until => 1512504042, # $isodate2epoch->("2017-12-22 16:00:00"), # 1383047340, # 1383238800, # 2013-10-31 18:00
+       text  => 'Gärtnerstr.: Bauarbeiten, Einbahnstraße zwischen Simplonstr. und Wühlischstr. (offen Richtung Norden), voraussichtlich bis 22.12.2017',
        type  => 'handicap',
        data  => <<EOF,
-	q3::inwork; 14134,11272 14181,11434
-# REMOVED (since 2013-10-22) ---	q2::inwork; 14181,11434 14211,11552
+#: source_id: 2147342105
+	q3::inwork; 14181,11434 14211,11552
 EOF
      },
      { from  => 1382220000, # 2013-10-20 00:00
@@ -22799,13 +22797,13 @@ EOF
 	q3::inwork; 15098,12849 15233,12829 15357,12813
 EOF
      },
-     { from  => 1502056800, # 2017-08-07 00:00
-       until => 1502894902, # $isodate2epoch->("2017-08-18 12:00:00"), # 1502834399, # 2017-08-15 23:59
-       text  => 'Weichselstr.: Bauarbeiten zwischen Oderstr. und Scharnweberstr. Richtung Norden, Fahrbahn gesperrt, bis Mitte August 2017',
+     { from  => undef, # 1502056800, # 2017-08-07 00:00
+       until => $isodate2epoch->("2017-12-15 18:00:00"), # 1502894902, # $isodate2epoch->("2017-08-18 12:00:00"), # 1502834399, # 2017-08-15 23:59
+       text  => 'Scharnweberstr.: zwischen Gürtelstr. und Jessnerstr. Richtung Weichselstr. Bauarbeiten, Fahrbahn gesperrt, bis Mitte Dezember 2017',
        type  => 'handicap',
-       source_id => '2147341689',
+       source_id => '2147342112',
        data  => <<EOF,
-	q4::inwork; 14794,11770 14802,11784 14835,11840 14887,11929
+	q3::inwork; 15248,11880 15121,11899
 EOF
      },
      { from  => 1394953200, # 2014-03-16 08:00
@@ -23744,6 +23742,7 @@ EOF
 #: note: am Fr, den 2017-04-07 gegen 09:30: offen
 #: note: am Mo, den 2017-07-31 gegen 09:00: offen
 #: note: am Fr, den 2017-09-22 gegen 18:20: offen
+#: note: am Mo, den 2017-12-04 gegen 18:45: geschlossen
 #: tempex: volatile vvv
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
@@ -24477,12 +24476,12 @@ EOF
 	q4; 15205,11080 15102,11120 15021,11152 14988,11130
 EOF
      },
-     { from  => $isodate2epoch->("2017-07-03 00:00:00"), # 1 Tag Vorlauf
-       until => $isodate2epoch->("2017-07-06 23:59:59"),
+     { from  => $isodate2epoch->("2018-01-15 00:00:00"), # 1 Tag Vorlauf
+       until => $isodate2epoch->("2018-01-18 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 8, months => 1],
                        ['yearly', days => 27, months => 6]],
-       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 04.07.2017-06.07.2017',
+       text  => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 16.01.2018-18.01.2018',
        type  => 'handicap',
        source_id => '2147339708',
        data  => <<EOF,
@@ -25649,7 +25648,7 @@ EOF
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2017-11-09 vvv
+#: last_checked: 2017-12-09 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -25806,7 +25805,7 @@ EOF
      },
      { from  => $isodate2epoch->("2017-11-28 07:00:00"), # 1 Tag Vorlauf
        until => $isodate2epoch->("2017-11-29 11:00:00"),
-       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 29. November 2017 ab ca. 10:00 Uhr',
+       text  => 'Kronprinzessinenweg: wegen Sprengarbeiten zeitweise Sperrungen am 29. November 2017 ab ca. 09:30 Uhr',
        type  => 'gesperrt',
        data  => <<EOF,
 #: XXX weitere Sperrungen: 18. Oktober sowie 8., 15., 22. und 29. November
@@ -25982,7 +25981,7 @@ EOF
        data  => <<EOF,
 #: XXX wann sind die Bauarbeiten beendet? laut Schild der Wasserbetriebe bis September oder Oktober; laut Pressemitteilung bis Ende 2017
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
-#: last_checked: 2017-11-07 vvv
+#: last_checked: 2017-12-04 vvv
 # REMOVED (weitgehend fertig) ---	q3::inwork 13384,8354 13217,8493
 # REMOVED	q3::inwork; 13217,8493 13262,8554
 # REMOVED	q3::inwork; 13262,8554 13301,8606 13314,8624
@@ -26093,8 +26092,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2017-11-05 00:00:00"), # 1495918329, # 2017-05-27 22:52
-       until => $isodate2epoch->("2017-12-08 12:00:00"),
-       text  => 'Bölschestr.: Bauarbeiten, zwischen Aßmannstr. und Müggelseedamm Richtung Süden gesperrt, ab 06. November 2017 bis 08. Dezember 2017',
+       until => $isodate2epoch->("2017-12-18 12:00:00"),
+       text  => 'Bölschestr.: Bauarbeiten, zwischen Aßmannstr. und Müggelseedamm Richtung Süden gesperrt, ab 06. November 2017 bis 18. Dezember 2017',
        type  => 'handicap',
        data  => <<EOF,
 #: note: laut fritz bis 8.12.2017, laut VMZ bis Mitte Dezember 2017
@@ -26145,7 +26144,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2017
-#: last_checked: 2017-11-23
+#: last_checked: 2017-12-09
 	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 EOF
      },
@@ -26523,7 +26522,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2017-11-07
+#: last_checked: 2017-12-04
 	2::inwork 14652,10201 14569,10055
 EOF
      },
@@ -26699,6 +26698,16 @@ EOF
 	q4::inwork 10722,11816 10687,11853 10672,11870 10604,11941
 	2::inwork 10776,11942 10672,11870
 	2::inwork 10687,11853 10869,11949
+EOF
+     },
+     { from  => 1511737200, # 2017-11-27 00:00
+       until => $isodate2epoch->("2017-12-07 16:00:00"), # 1513378799, # 2017-12-15 23:59
+       text  => 'Ungarnstr.: Sperrung an der Kreuzung Müllerstr., ab 28.11.2017 08:00 bis 07.12.2017',
+       type  => 'handicap',
+       source_id => '2147342100',
+       data  => <<EOF,
+# REMOVED --- #: XXX laut fritz nur Richtung Westen gesperrt
+	q3::inwork 6659,16133 6843,16346
 EOF
      },
     );
