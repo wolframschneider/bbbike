@@ -11635,7 +11635,7 @@ EOF
        text  => 'Untere Kynaststr.: Restbauarbeiten, Straße könnte u.U. bis zum 2.6.2008 gesperrt sein',
        type  => 'gesperrt',
        data  => <<EOF,
-# REMOVED ---	2::inwork 14688,10167 14752,10246 14794,10336 14820,10473 14832,10512 14828,10561 14843,10621 14882,10732 14906,10820
+# REMOVED ---	2::inwork 14688,10167 14752,10246 14794,10336 14820,10473 14832,10512 14828,10561 14843,10621 14882,10732 14904,10812
 EOF
      },
      { from  => undef, # 
@@ -11712,7 +11712,7 @@ EOF
        type  => 'handicap',
        source_id => 'IM_009127',
        data  => <<EOF,
-	q4::inwork 14906,10820 14794,10844
+	q4::inwork 14904,10812 14810,10832
 EOF
      },
      { from  => 1213737230, # 2008-06-17 23:13
@@ -17299,7 +17299,7 @@ EOF
        until => $isodate2epoch->("2018-01-02 23:59:59"),
        periodic => 1,
        recurrences => [['yearly', days => 26, months => 12]],
-       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., vermutlich vom 26.12.2017 bis 02.01.2018',
+       text  => 'Straße des 17. Juni (Tiergarten) zwischen Großer Stern und Brandenburger Tor Veranstaltung (Silvesterparty), Straße vollständig gesperrt, ebenfalls gesperrt Yitzhak-Rabin-Str. und Ebertstr. zwischen Behrenstr. und Scheidemannstr., ab 26.12.2017 bis 02.01.2018',
        type  => 'gesperrt',
        data  => <<EOF,
 #: source_id: http://www.stadtentwicklung.berlin.de/aktuell/pressebox/archiv_volltext.shtml?arch_1512/nachricht5886.html
@@ -22251,7 +22251,7 @@ EOF
 EOF
      },
      { from  => 1511898358,
-       until => $isodate2epoch->("2017-12-22 16:00:00"), # 1383047340, # 1383238800, # 2013-10-31 18:00
+       until => 1513622255, # $isodate2epoch->("2017-12-22 16:00:00"), # 1383047340, # 1383238800, # 2013-10-31 18:00
        text  => 'Gärtnerstr.: Bauarbeiten, Einbahnstraße zwischen Simplonstr. und Wühlischstr. (offen Richtung Norden), voraussichtlich bis 22.12.2017',
        type  => 'handicap',
        data  => <<EOF,
@@ -22798,8 +22798,8 @@ EOF
 EOF
      },
      { from  => undef, # 1502056800, # 2017-08-07 00:00
-       until => $isodate2epoch->("2017-12-15 18:00:00"), # 1502894902, # $isodate2epoch->("2017-08-18 12:00:00"), # 1502834399, # 2017-08-15 23:59
-       text  => 'Scharnweberstr.: zwischen Gürtelstr. und Jessnerstr. Richtung Weichselstr. Bauarbeiten, Fahrbahn gesperrt, bis Mitte Dezember 2017',
+       until => 1513533594, # kaum noch Beeinträchtigungen --- $isodate2epoch->("2017-12-19 18:00:00"), # 1502894902, # $isodate2epoch->("2017-08-18 12:00:00"), # 1502834399, # 2017-08-15 23:59
+       text  => 'Scharnweberstr.: zwischen Gürtelstr. und Jessnerstr. Richtung Weichselstr. Bauarbeiten, Fahrbahn gesperrt, bis 19. Dezember 2017',
        type  => 'handicap',
        source_id => '2147342112',
        data  => <<EOF,
@@ -25461,12 +25461,12 @@ EOF
 EOF
      },
      { from  => 1467661160, # 2016-07-04 21:39
-       until => $isodate2epoch->("2017-12-23 12:00:00"),
-       text  => 'Buckower Damm: Baustelle zwischen An den Achterhöfen und Mollnerweg, evtl. auch Einschränkungen für Radfahrer, bis Ende 2017',
+       until => $isodate2epoch->("2018-03-30 12:00:00"),
+       text  => 'Buckower Damm: Baustelle zwischen An den Achterhöfen und Mollnerweg, evtl. auch Einschränkungen für Radfahrer, voraussichtlich bis März 2018',
        type  => 'handicap',
        source_id => '2147341551',
        data  => <<EOF,
-#: note: laut fritz bis 2017-12-23, laut vmz bis 2018
+#: note: laut fritz bis 2018-03-30, laut vmz bis März 2018
 #: by: http://www.berliner-woche.de/buckow/verkehr/der-lange-weg-zur-sanierten-strasse-bauarbeiten-am-buckower-damm-anwohner-aergern-sich-ueber-lkw-im-wohngebiet-d126968.html
 #: note: die Baustelle ist gewandert
 #: by: https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20170730
@@ -26092,8 +26092,8 @@ EOF
 EOF
      },
      { from  => $isodate2epoch->("2017-11-05 00:00:00"), # 1495918329, # 2017-05-27 22:52
-       until => $isodate2epoch->("2017-12-18 12:00:00"),
-       text  => 'Bölschestr.: Bauarbeiten, zwischen Aßmannstr. und Müggelseedamm Richtung Süden gesperrt, ab 06. November 2017 bis 18. Dezember 2017',
+       until => $isodate2epoch->("2018-03-23 12:00:00"),
+       text  => 'Bölschestr.: Bauarbeiten, zwischen Aßmannstr. und Müggelseedamm Richtung Süden gesperrt, bis Ende März 2018',
        type  => 'handicap',
        data  => <<EOF,
 #: note: laut fritz bis 8.12.2017, laut VMZ bis Mitte Dezember 2017
@@ -26144,7 +26144,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2017
-#: last_checked: 2017-12-09
+#: last_checked: 2017-12-14
 	2::inwork 14231,10907 14141,10931 14107,10911 14224,10878 14231,10907 14558,10819
 EOF
      },
@@ -26294,8 +26294,8 @@ EOF
        data  => <<EOF,
 #: by: http://www.berlin.de/b-intern.de/wb/landesverwaltungsamt/_assets/aufgabenbereiche/amtsblatt-archiv/abl-2017/abl_2017_07_0741_0860_online.pdf
 #: XXX Grünanlage wird eingezogen
-#: osm_watch: way id="316695242" version="1"
-#: last_checked: 2017-07-11
+#: osm_watch: way id="316695242" version="2"
+#: last_checked: 2017-12-17 (osm)
 #: check_frequency: 120d
 	2::inwork 4561,13244 4547,13139 4576,13115
 EOF
@@ -26506,7 +26506,7 @@ EOF
 EOF
      },
      { from  => 1504896268, # 2017-09-08 20:44
-       until => $isodate2epoch->("2017-12-18 12:00:00"), # 1508104799, # 2017-10-15 23:59
+       until => 1513533722, # $isodate2epoch->("2017-12-18 12:00:00"), # 1508104799, # 2017-10-15 23:59
        text  => 'Dietzgenstr.: Bauarbeiten zwischen Schillerstr. und Kuckhoffstr., Fahrbahn Richtung Süden gesperrt, voraussichtlich bis 18. Dezember 2017',
        type  => 'handicap',
        source_id => '2147341767',
@@ -26547,7 +26547,7 @@ EOF
 EOF
      },
      { from  => 1504896268, # 2017-09-08 20:44
-       until => $isodate2epoch->("2017-12-18 12:00:00"), # 1508104799, # 2017-10-15 23:59
+       until => 1513533703, # $isodate2epoch->("2017-12-18 12:00:00"), # 1508104799, # 2017-10-15 23:59
        text  => 'Dietzgenstr.: zwischen Kuckhoffstr. und Schillerstr. ist die Fahrbahn Richtung Norden für Radfahrer offiziell gesperrt, voraussichtlich bis 18. Dezember 2017',
        type  => 'handicap',
        source_id => '2147341767',
@@ -26578,7 +26578,7 @@ EOF
 EOF
      },
      { from  => undef, # 
-       until => undef, # XXX
+       until => 1513622356, # undef, # XXX
        text  => 'Karl-Marx-Platz/Richardplatz: Bauarbeiten an der Kirchhofstr., Fahrbahn gesperrt',
        type  => 'handicap',
        data  => <<EOF,
@@ -26708,6 +26708,48 @@ EOF
        data  => <<EOF,
 # REMOVED --- #: XXX laut fritz nur Richtung Westen gesperrt
 	q3::inwork 6659,16133 6843,16346
+EOF
+     },
+     { from  => undef, # 
+       until => undef, # XXX
+       text  => 'Dorotheenstr./Schadowstr.: Bauarbeiten, Einbahnstraßenregelung',
+       type  => 'handicap',
+       data  => <<EOF,
+#: XXX Ende der Bauarbeiten?
+#: last_checked: 2017-12-18 vvv
+	q2::inwork; 8775,12457 8904,12489
+	q4::inwork; 8904,12489 8999,12498 9011,12423
+#: last_checked ^^^
+EOF
+     },
+     { from  => 1513622933, # 2017-12-18 19:48
+       until => 1513897200, # 2017-12-22 00:00
+       text  => 'Oranienburger Str.: Richtung Friedrichstraße am Hackeschen Markt Baustelle, voraussichtlich bis 21.12.2017',
+       type  => 'handicap',
+       source_id => '2147342123',
+       data  => <<EOF,
+	q4::inwork; 10264,13097 10220,13098
+EOF
+     },
+     { from  => 1513623514, # 2017-12-18 19:58
+       until => 1513724399, # 2017-12-19 23:59
+       text  => 'Rund um den Breitscheidplatz: Gedenkveranstaltung, umliegende Straßen werden gesperrt, am 19.12.2017',
+       type  => 'gesperrt',
+       data  => <<EOF,
+	2::temp 5652,11004 5613,10963
+	2::temp 5907,10821 5782,10884 5829,10964
+	2::temp 5475,10808 5656,10876 5652,11004 5716,10978 5829,10964 5986,10976
+	2::temp 5656,10876 5725,10892 5782,10884
+EOF
+     },
+     { from  => 1513713476, # 2017-12-19 20:57
+       until => 1517439600, # 2018-02-01 00:00
+       text  => 'Alte Schönhauser Str.:Bauarbeiten zwischen Schendelgasse und Weinmeisterstr., voraussichtlich bis 31.01.2018',
+       type  => 'handicap',
+       source_id => '2147342108',
+       data  => <<EOF,
+#: XXX vor Ort prüfen
+	q3::inwork; 10653,13493 10640,13471 10603,13395 10527,13257
 EOF
      },
     );

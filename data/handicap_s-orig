@@ -21,10 +21,10 @@
 # REMOVED (fertig) --- #: XXX zurzeit Bauarbeiten bis 2017-06-13 --- evtl. wird die Qualität danach besser? -> qualitaet_s-orig --- #: last_checked: 2017-06-07 --- #: next_check: 2017-06-13 --- Kinzigstr.: Bauarbeiten, Fahrbahn ist nicht befahrbar	q3::inwork 14589,11975 14471,11782
 # 
 #: XXX wenn beendet -> Eintrag in gesperrt-orig wieder aktivieren
-#: last_checked: 2017-12-11
+#: last_checked: 2017-12-16
 Niemannstr.: Bauarbeiten, einige Meter Fahrbahn sind gesperrt	q3::inwork 14254,11377 14211,11229
 # 
-#: last_checked: 2017-12-11
+#: last_checked: 2017-12-16
 Revaler Str.: Bauarbeiten, unter Umständen Ausweichen auf Gehweg notwendig	q3::inwork 14211,11229 14286,11186
 # 
 #: last_checked: 2017-12-09
@@ -35,7 +35,7 @@ Haasestr.: Bauarbeiten, Ausweichen auf Gehweg	q3::inwork 14328,11320 14286,11186
 #: check_frequency: 90d
 Döringstr.: Bauarbeiten, Ausweichen auf Gehweg, Bordstein	q3::inwork 14400,11261 14357,11148
 # 
-#: last_checked: 2017-12-12
+#: last_checked: 2017-12-13
 Lange Str.: Bauarbeiten, Einbahnstraßenregelung	q2::inwork; 12409,11902 12238,11931
 # 
 # REMOVED --- #: by: fritz --- #: last_checked: 2017-09-28 --- #: check_frequency: 10d --- # REMOVED --- #: valid: -20170927 --- Krautstr.: Fahrbahn abschnittsweise gesperrt, Ausweichen auf Gehweg notwendig	q3::inwork 11966,11832 11993,11978
@@ -85,12 +85,7 @@ Palisadenstr.: Bauarbeiten, teilweise Einbahnstraße, offen Richtung Osten	q2::in
 # REMOVED (mittlerweile wieder offen) --- #: by: http://www.dafmap.de/d/berlin.html?id=4505&mt=0&zoom=17 --- #: last_checked: 2017-03-20 --- #: check_frequency: 14d --- Kiefholzstr.: Bauarbeiten, Fahrbahn gesperrt	q2::inwork 13821,9340 13715,9455
 # REMOVED (aber vielleicht nur am Wochenende offen?) --- #: last_checked: 2016-12-20 vvv --- #: check_frequency: 21d vvv --- Schmollerplatz: Bauarbeiten, Fahrbahn gesperrt	q2::inwork 13203,9450 13124,9375 --- Schmollerplatz: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 13124,9375 13111,9361 13126,9347 --- #: check_frequency ^^^ --- #: last_checked ^^^
 # REMOVED --- #: XXX siehe auch valid-Eintrag weiter unten --- #: source_id: 2147340178 --- #: last_checked: 2016-10-05 --- #: valid: -20161115 --- Bouchéstr.: Bauarbeiten, Radfahrer müssen auf dem Gehweg fahren	q2::inwork 13642,9624 13865,9866 13890,9894 -- # REMOVED (wahrscheinlich aufgehoben) --- #: last_checked: 2013-11-22 --- #: check_frequency: 60d --- Beermannstr.: Bauarbeiten, Fahrbahn in Richtung Elsenstr. gesperrt	q4; 13973,9465 14157,9345
-# 
-#: XXX laut Schild gehen die Bauarbeiten bis 10.2017
-#: XXX nach Beendigung der Bauarbeiten wieder den alten handicap-Eintrag ("Bodenschwellen") aktivieren
-#: last_checked: 2017-11-30
-#: check_frequency: 14d
-Bouchéstr.: Bauarbeiten an der Heidelberger Str.	q3::inwork; 13489,9456 13357,9313
+# REMOVED (Bauarbeiten beendet) --- #: XXX laut Schild gehen die Bauarbeiten bis 10.2017 --- #: XXX nach Beendigung der Bauarbeiten wieder den alten handicap-Eintrag ("Bodenschwellen") aktivieren --- #: last_checked: 2017-11-30 --- #: check_frequency: 14d --- Bouchéstr.: Bauarbeiten an der Heidelberger Str.	q3::inwork; 13489,9456 13357,9313
 # 
 ### Wedding ###
 # 
@@ -111,22 +106,22 @@ Burgsdorfstr.: Sperrung der Fahrbahn vor Hausnummer 1	q3::inwork 7525,15186 7607
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3731&mt=0&zoom=18
 #: XXX Richtung Westen eigentlich wg. Einbahnstraße gesperrt, aber man kann auf dem südlichen Gehweg (relativ breit, wenig Menschen) ausweichen; Richtung Osten manchmal (werktags?) ein Schild "Durchfahrt verboten"
-#: last_checked: 2017-11-21
+#: last_checked: 2017-12-15
 Voltairestr.: Baustellenverkehr	q2 11329,12497 11209,12430
 # 
 #: next_check_id: ZIEGELSTR-2016
 #: XXX Ende der Bauarbeiten?
 #: way id="507023458" version="1"
 #: by: http://www.dafmap.de/d/berlin.html?id=3204&mt=0&zoom=16
-#: last_checked: 2017-11-29
+#: last_checked: 2017-12-18
 #: check_frequency: 21d
 Ziegelstr.: Bauarbeiten, Fahrbahn gesperrt, Gehweg frei	q3::inwork 9736,13061 9636,13076
 # 
 # REMOVED --- #: by: http://www.dafmap.de/d/berlin.html?id=3339&mt=0&zoom=16 (Projektabschluss: 2017-03-31) --- #: last_checked: 2017-10-27 --- Kommandantenstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10330,11422 10136,11529
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3339&mt=0&zoom=16 (Projektabschluss: 2017-03-31)
-#: last_checked: 2017-11-28
-#: check_frequency: 7d
+#: last_checked: 2017-12-13
+#: check_frequency: 14d
 Beuthstr.: Bauarbeiten, Einbahnstraße	q3::inwork; 10201,11631 10235,11610 10330,11422
 # 
 # REMOVED --- #: last_checked: 2017-04-19 --- #: next_check: 2017-04-28 --- Sebastianstr.: Bauarbeiten, auf Gehweg ausweichen	q3::inwork 10640,11564 10818,11269
@@ -144,7 +139,7 @@ Schützenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9936,11469 10116,11485
 # REMOVED --- #: last_checked: 2017-03-14 vvv --- Krausenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9990,11571 9925,11565 --- Krausenstr.: Bauarbeiten, Fahrbahn gesperrt	q2-::inwork 9925,11565 9737,11546 --- #: last_checked ^^^
 # 
 # REMOVED --- : osm_watch: note 814191 1
-#: last_checked: 2017-11-28
+#: last_checked: 2017-12-13
 #: check_frequency: 30d
 Alexandrinenstr.: direkter Zugang zur Sebastianstr. nicht mehr möglich, stattdessen Trampelpfad benutzen, Bordsteine	q3::inwork 10818,11269 10678,11172
 # 
@@ -165,7 +160,7 @@ Alexandrinenstr.: direkter Zugang zur Sebastianstr. nicht mehr möglich, stattdes
 # REMOVED --- #: XXX Ende der Bauarbeiten? --- #: last_checked: 2014-02-22 --- Planckstr.: Bauarbeiten, auf Gehweg ausweichen	q4::inwork 9405,12794 9383,12915
 # REMOVED --- #: XXX nach den Bauarbeiten wahrscheinlich bessere Fahrbahnqualität -> qualitaet_s-orig-Eintrag revidieren --- #: last_checked: 2013-11-21 --- Zolastr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 10898,13632 10872,13570
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2017-11-28 vvv
+#: last_checked: 2017-12-13 vvv
 #: check_frequency: 90d vvv
 Am Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt, auf gemeinsamen Geh- und Radweg ausweichen	q3::inwork 9984,12426 9996,12401 10058,12290
 Schinkelplatz: Fahrbahn wegen Bauarbeiten gesperrt	q3::inwork 10008,12274 10058,12290
@@ -240,14 +235,14 @@ Niederlagstr./Unter den Linden: Gehweg muss benutzt werden	q3::inwork 9943,12364
 #: next_check_id: STAATSOPER-2014 vvv
 #: XXX nach den Bauarbeiten vielleicht besserer Asphalt? -> qualitaet_s-orig
 #: XXX siehe auch http://berlinerbaustellen.blogspot.de/2013/12/0166-unter-den-linden-oberwallstrae.html
-#: last_checked: 2017-11-28 vvv
+#: last_checked: 2017-12-13 vvv
 #: check_frequency: 30d vvv
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 9883,12251 9876,12298
 Oberwallstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9876,12298 9858,12410
 #: check_frequency ^^^
 #: last_checked ^^^
 # 
-#: last_checked: 2017-11-28
+#: last_checked: 2017-12-13
 #: check_frequency: 14d
 Werdersche Rosenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9883,12251 9909,12261 9959,12281
 #: next_check_id ^^^
@@ -263,7 +258,7 @@ Werdersche Rosenstr.: Bauarbeiten, Fahrbahn gesperrt	q3::inwork 9883,12251 9909,
 #: XXX wird nach den Bauarbeiten die Fahrbahn noch bestehen bleiben?
 #: source_id: LMS-BR_r_LMS-BR_197
 #: osm_watch: way id="194962375" version="7"
-#: last_checked: 2017-12-04 (mapillary)
+#: last_checked: 2017-12-13
 #: check_frequency: 14d
 Rathausstr.: Fußgänger, enge Stelle vor dem Roten Rathaus	q4::inwork 10601,12521 10704,12595
 # 
@@ -362,7 +357,7 @@ Schleswiger Ufer: wegen Bauarbeiten sehr schmal, Fußgänger	q3 5894,12480 5944,12
 # REMOVED --- #: next_check_id: WEICHSELPLATZ-2016 --- #: last_checked: 2016-07-26 vvv --- #: check_frequency: 7d vvv --- Weichselplatz: Bauarbeiten, Gehweg benutzen	q3::inwork 12761,9190 12851,9309 12844,9351 --- Weichselplatz: Bauarbeiten, Gehweg benutzen	q3::inwork 12907,9073 12761,9190 --- #: check_frequency ^^^ --- #: last_checked ^^^
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=4952&mt=0&zoom=17
-#: last_checked: 2017-12-04
+#: last_checked: 2017-12-15
 #: next_check: 2018-06-01
 Nansenstr.: Bauarbeiten, Fahrbahn gesperrt	q4::inwork 12412,9610 12374,9542
 # 
@@ -437,7 +432,7 @@ Wattstr.: Bauzäune	q3::inwork 17681,7589 17676,7555
 # REMOVED (-> wieder temp_blocking) --- #: by: http://www.stadtentwicklung.berlin.de/bauen/strassenbau/boesebruecke/de/verkehrsfuehrung.shtml vvv --- #: source_id: IM_025877 vvv --- #: source_id: 2147339245 vvv --- #: source_id: 2147339553 vvv --- #: last_checked: 2017-06-28 vvv --- #: next_check: 2017-08-02 vvv --- Jülicher Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke	q4::inwork; 9441,16058 9458,16180 9474,16297 9475,16307 9487,16395 9498,16480 9514,16603 --- Malmöer Str.: Einbahnstraßenregelung wegen Bauarbeiten an der Bösebrücke	q4::inwork; 10197,16528 10225,16436 10254,16363 10281,16263 10301,16186
 # 
 #: XXX mittlerweile bis zur Hälfte offen
-#: last_checked: 2017-11-17
+#: last_checked: 2017-12-15
 #: check_frequency: 14d
 Fürstenberger Str.: Bauarbeiten, Fahrbahn gesperrt	q2::inwork 10320,14608 10472,14632
 # 
@@ -624,8 +619,8 @@ Am Stichkanal: Fußgänger	q1 22832,4491 22814,4505 22797,4518 22702,4592 22585,46
 Am Stichkanal: Fußgänger	q1 22759,4430 22797,4518
 Schwedter Str. (Mauerpark): Park, Fußgänger	q2 10354,14987 10240,15318 10188,15474 10185,15487 10130,15647
 (Fußweg am Griesinger-Krankenhaus): Fußgänger	q1 21935,12153 21930,12185 21608,12320 21435,12390 21346,12427 21265,12468 21221,12484
-# REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- (Fußgängerbrücke Ostkreuz): Fußgänger	q3 14808,10978 14787,10972 14764,10877 14794,10844
-(Ringbahnsteig Ostkreuz): Fußgänger	q4 14794,10844 14839,10853 14862,10942 14845,10954
+# REMOVED (die Nicht-Existenz sollte auch durch Nicht-Existenz auf der Karte reflektiert werden) --- (Fußgängerbrücke Ostkreuz): Fußgänger	q3 14808,10978 14787,10972 14764,10877 14810,10832
+(Ringbahnsteig Ostkreuz): Fußgänger	q4 14810,10832 14839,10853 14862,10942 14845,10954
 Marheinekeplatz: Fußgänger, Brunnen	q3 9892,9286 9880,9233
 #: note: zumindest auf der westlichen Seite existiert kein explizites Verbotsschild für Radfahrer
 (Uferweg am Urbanhafen): Fußgänger	q1 11160,9932 11142,9939 10914,9925 10602,10006 10522,10056 10500,10081
@@ -1175,7 +1170,6 @@ Uferweg: Fußgänger	q1 3862,12675 3938,12687 4147,12699 4206,12691 4242,12684
 # REMOVED --- Sonntagstr.: Richtung S-Bahnhof viele Fußgänger	q3 14845,10954 14808,10978 14752,11041
 # REMOVED --- (provisorischer Zugang zum Bahnhof Ostkreuz): Richtung S-Bahnhof viele Fußgänger	q3 14712,11039 14727,11005 14808,10978
 (provisorischer Zugang zum Bahnhof Ostkreuz): Richtung S-Bahnhof viele Fußgänger	q3 14811,11067 14808,10978 14845,10954
-# zeitweise entfernt --- #: XXX_prog: für Anhänger relevant (q1 oder so) --- Bouchéstr.: Bodenschwellen	q0 13489,9456 13357,9313
 #: XXX_prog: für Anhänger relevant (q1 oder so)
 Bouchéstr.: Bodenschwellen	q0 13642,9624 13865,9866
 #: XXX_prog: für Anhänger relevant (q2 oder so)
@@ -2524,7 +2518,7 @@ An der Neumark: laut Schild "Schrittgeschwindigkeit"	q2 11283,3774 11300,3709 11
 #: next_check_id: MINNATODENHAGENSTR-2016
 #: XXX entfernen, sobald die eigentliche Straße offen ist
 #: last_checked: 2017-11-05
-#: next_check: 2018-01-30
+#: next_check: 2017-12-21
 (Gehweg an der zukünftigen Minna-Todenhagen-Str.): einige Fußgänger	q2 17681,7589 17470,7473 17295,7358
 Dalandweg: schmale und kurvenreiche Straße	q1 5120,4318 5226,4259 5250,4298 5311,4270 5356,4249 5385,4236 5541,4305
 (Spreeuferweg): einige Fußgänger	q1 21090,5417 21085,5451 20827,5431

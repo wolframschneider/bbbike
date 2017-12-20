@@ -2803,6 +2803,12 @@ Drängelgitter	BNP:3::trailer=10 22097,5879
 #: temporary: vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 #: section in Berlin vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
 # 
+#: next_check_id: OTTOBRAUN-2015
+#: XXX noch Restbauarbeiten, danach vielleicht wieder eine offizielle Radwegverbindung?
+#: last_checked: 2017-12-15
+#: check_frequency: 14d
+(Wadzeckstr. - Mollstr.)	2::inwork 11326,13196 11409,13327
+# 
 #: XXX bleibt die Straße für den öffentlichen Verkehr gesperrt?
 #: last_checked: 2017-11-30
 Planstraße C: gesperrt, Privatstraße	2 12926,11224 12848,11093
@@ -2823,10 +2829,12 @@ Im Lichtenhain: neue Straße, zurzeit Bauarbeiten; Qualität, genaue Lage?	2::inwo
 # 
 #: next_check_id: LICHTBURGRING-2017 vvv
 #: XXX wie wird die endgültige Fahrbahnbeschaffenheit sein? Asphalt? vvv
-#: osm_watch: way id="437684188" version="2"
+#: osm_watch: way id="437684188" version="3"
 #: last_checked: 2017-11-17 vvv
+#: check_frequency: 90d vvv
 Lichtburgring: Baustelle, Betreten verboten	2::inwork 10004,15636 9933,15815
 Bärbel-Bohley-Ring: Baustelle, Betreten verboten	2::inwork 9933,15815 9744,15793
+#: check_frequency ^^^
 #: last_checked ^^^
 #: XXX ^^^
 #: next_check_id ^^^
@@ -2856,19 +2864,11 @@ Am Herzbergteich: noch wegen Bauarbeiten gesperrt; wann ist die Straße fertig?	2
 #: next_check: 2018-03-01
 Merlitzstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19661,3421 19524,3286
 # 
-#: last_checked: 2017-11-09
+#: last_checked: 2017-12-18
 #: check_frequency: 21d
 Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9108,11961 9138,11872
 # 
 # REMOVED --- #: last_checked: 2017-08-12 --- Charlottenstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9509,12117 9496,12215
-# 
-#: by: http://www.berlin.de/ba-neukoelln/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamtes/artikel.434089.php
-#: XXX Bezirksamtsbeschluss 48/16
-#: by: http://www.berlin.de/ba-neukoelln/_assets/dokumente/ba-beschluesse/ba-beschluss-115-15.pdf
-#: osm_watch: note 1099044 1
-#: last_checked: 2017-08-10
-#: check_frequency: 14d
-(Christoph-Ruden-Str. - Buckower Damm): letzte Bauarbeiten	2::inwork 12725,1429 12939,1469
 # 
 #: XXX vielleicht wird hier nach den Bauarbeiten kein Weg mehr existieren; die S-Bahnbrücke ist sehr niedrig geworden...
 #: last_checked: 2017-08-07
@@ -2885,6 +2885,7 @@ Mauerstr.: Bauarbeiten, Einbahnstraße	1s:q4:inwork 9108,11961 9138,11872
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.616795.php
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/aktuelles/pressemitteilungen/2017/pressemitteilung.633456.php (Öffnung für Fußgänger)
 #: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8329
+#: by: http://www.berlin.de/ba-friedrichshain-kreuzberg/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=8383
 #: last_checked: 2017-12-08
 #: valid: 20170801-20190228
 #: priority: #A
@@ -2961,7 +2962,7 @@ Stawesdamm: wegen Bauarbeiten komplett gesperrt	2::inwork 20623,11485 20631,1162
 Traudelstr.: Bauarbeiten, Straße komplett gesperrt	2::inwork 19169,1249 19140,1137
 # 
 #: next_check_id: SCHINKELPLATZ-2014
-#: last_checked: 2017-11-28
+#: last_checked: 2017-12-13
 #: check_frequency: 90d
 Schinkelplatz: Einbahnstraße	1s:q3:inwork 9994,12368 10002,12305 10008,12274 10010,12259 10029,12208
 # 
@@ -3003,7 +3004,7 @@ Fasanenstr.: zwischen Fasanenstr. und Lietzenburger Str. Baustelle, Fahrtrichtun
 # 
 #: osm_watch: way id="466318949" version="3"
 #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31)
-#: last_checked: 2017-11-30
+#: last_checked: 2017-12-15
 Bouchéstr.: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 13298,9252 13190,9139
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=4327&mt=0&zoom=16 (Projektabschluss: Projektabschluss: 2017-03-31)
@@ -3011,7 +3012,7 @@ Bouchéstr.: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 13298,9252 13190,9139
 Mengerzeile: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 13176,9302 13100,9210
 # 
 #: next_check_id: HEIDELBERGER-2017
-#: last_checked: 2017-11-30
+#: last_checked: 2017-12-15
 #: check_frequency: 60d
 Heidelberger Str.: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 13489,9199 13420,9259 13357,9313
 # 
@@ -3029,7 +3030,7 @@ Heidelberger Str.: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 13489,9199 134
 #: osm_watch: way id="42091230" version="23"
 #: last_checked: 2017-09-28 vvv
 # REMOVED (temporary) --- #: next_check: 2017-12-31 (vermutlich wird nur auf die neue Fahrbahnhälfte gewechselt werden) vvv
-#: next_check: 2017-12-31 vvv
+#: next_check: 2018-04-30 vvv
 Chausseestr.: Baustelle, Einbahnstraßenregelung	1s:q3:inwork 8732,14098 8654,14194
 Chausseestr.: Baustelle, Einbahnstraßenregelung	1s:q4:inwork 8654,14194 8607,14253 8570,14299 8442,14456
 #: next_check ^^^
@@ -3043,7 +3044,7 @@ Chausseestr.: Baustelle, Einbahnstraßenregelung	1s:q4:inwork 8654,14194 8607,142
 # REMOVED (nur der östliche Abschnitt ist geblieben, aber relativ breit und relativ wenig Verkehr) --- #: XXX Bauarbeiten der Berliner Wasserbetriebe bis Dezember 2017 --- #: last_checked: 2017-07-23 --- #: next_check: 2017-12-01 --- #: valid: -20171231 --- Türrschmidtstr.: Bauarbeiten, Einbahnstraße	1s:q3 15541,10892 15649,10922 15756,10966
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3853&mt=0&zoom=16
-#: last_checked: 2017-11-09
+#: last_checked: 2017-12-18
 Wilhelmstr. - Mohrenstr.: kurze Einbahnstraßenregelung	1s:q3:inwork 9042,11839 8969,11814
 # 
 #: XXX danach könnte die Qualität der Wege besser sein
@@ -3069,7 +3070,7 @@ Marzahner Str. - Gensinger Str.: wegen Bauarbeiten gesperrt	2::inwork 18702,1192
 #: note: siehe auch http://www.detlefzabel.de/spreebruecke-neubau/
 #: by: http://www.berlin.de/ba-treptow-koepenick/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/tiefbau/artikel.118918.php?date=20170829
 #: last_checked: 2017-11-05
-#: next_check: 2018-01-30
+#: next_check: 2017-12-21
 Minna-Todenhagen-Str.: wird noch gebaut	2::inwork 17585,7525 17453,7451 17295,7344 17211,7280 17091,7175 16971,7058 16747,6813
 # 
 # REMOVED (laut osm nicht mehr highway=construction) --- #: osm_watch: way id="291810047" version="7" --- #: last_checked: 2016-07-23 --- Alfonsstr.: Bauzäune	2::inwork 19027,1427 19034,1441 19061,1457
@@ -3099,7 +3100,7 @@ Rütlistr.: Bauarbeiten, Fahrbahn und Gehweg gesperrt	2::inwork 12620,9293 12565,
 # REMOVED --- #: XXX evtl. kann man hier als Fußgänger irgendwie vorbei --- #: last_checked: 2016-07-26 vvv --- #: check_frequency: 3d --- Treptower Park: Bauarbeiten, Weg abgesperrt	2::inwork 14448,9922 14467,9880 14500,9863 --- #: last_checked ^^^
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=4160&mt=0&zoom=16
-#: last_checked: 2017-11-07
+#: last_checked: 2017-12-18
 #: osm_watch: way id="57852078" version="4"
 E.T.A.-Hoffmann-Promenade: wegen Bauarbeiten komplett gesperrt, auch für Fußgänger	2::inwork 9679,10710 9777,10719
 # 
@@ -3174,12 +3175,10 @@ Clara-von-Simson-Str.: noch gesperrt	2 7652,14257 7757,14318 7802,14250 7697,141
 #: source_id: INKO_118000 vvv
 #: osm_watch: way id="25115001" version="8" vvv
 #: last_checked: 2017-11-04 vvv
-#: check_frequency: 60d vvv
 # REMOVED (doch benutzbar) --- (Baustraße an der Freybrücke)	2::inwork -3075,11510 -3197,11554
 # REMOVED (vermutlich nun benutzbar?) --- (Treppe an der Freybrücke)	2::inwork -3181,11496 -3177,11507 -3173,11520
 #: XXX Ersatzbrücke muss demontiert werden; vermutlich weiterhin keinen Zugang
 Weg nach Tiefwerder: kein Zugang wegen der Ersatzbrücke	2::inwork -3179,11763 -3217,11570
-#: check_frequency ^^^
 #: last_checked ^^^
 #: osm_watch ^^^
 #: source_id ^^^
@@ -3193,7 +3192,7 @@ Weg nach Tiefwerder: kein Zugang wegen der Ersatzbrücke	2::inwork -3179,11763 -3
 Valeska-Gert-Str. - Am Postbahnhof: gesperrt, vielleicht sogar dauerhaft	2::inwork 12807,11287 12713,11372
 # 
 #: by: http://www.dafmap.de/d/berlin.html?id=3739&mt=0&zoom=16
-#: last_checked: 2017-11-30
+#: last_checked: 2017-12-13
 #: check_frequency: 90d
 Rummelsburger Platz: zur Hälfte wegen Bauarbeiten gesperrt	2::inwork 12766,11223 12664,11310
 # 
@@ -3221,7 +3220,7 @@ BBI-Park: wegen Bauarbeiten gesperrt	2::inwork 20038,-1474 19717,-1549
 # 
 #: by: http://www.dafmap.de/d/berlin.html?center=52.497318+13.462016&zoom=17#
 #: last_checked: 2017-11-19
-#: check_frequency: 120d
+#: next_check: 2017-12-18
 am Osthafen: Bauarbeiten, gesperrt	2::inwork 14348,10266 14463,10212
 # 
 # REMOVED --- #: next_check_id: BND-2014 --- #: osm_watch: way id="129104626" version="5" --- #: osm_watch: node id="1975210030" version="4" --- # REMOVED (schon gemacht) --- : XXX culdesac-orig entfernen, sobald die Verlängerung erfolgt ist --- #: by: http://www.rbb-online.de/politik/beitrag/2014/07/bnd-zentrale-berlin-verzoegerung-vollstaendiger-umzug-bis-2017.html --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksverordnetenversammlung/online/vo020.asp?VOLFDNR=7441 --- #: by: http://www.berlin.de/ba-mitte/politik-und-verwaltung/bezirksamt/beschluesse-des-bezirksamts/2016/1767-2016-bav-zu-ds-2814-iv-durchwegung_scharnhorst-chaussestrasse_sb.pdf --- #: last_checked: 2017-09-04 --- Ida-von-Arnim-Str, Fortsetzung zur Chausseestr.: Durchfahrt noch nicht zuverlässig offen	2::inwork 8251,14337 8442,14456
@@ -3297,7 +3296,7 @@ Friedrich-List-Str.: Baustelle, Fahrbahn wegen S-Bahn-Tunnelbau gesperrt	2:inwor
 # 
 #: next_check_id: BER-20XX
 #: last_checked: 2012-05-06
-#: next_check: 2017-11-01
+#: next_check: 2020-08-15
 #: osm_watch: way id="127091100" version="9" brb
 #: osm_watch: way id="54500456" version="11" brb
 B96a - Flughafen Berlin-Brandenburg: Abschnitt führt durch Sicherheitsbereich des alten Flughafens	2:inwork 18578,-1538 18680,-1506 18798,-1581 18853,-1656 18866,-1674
@@ -3330,12 +3329,12 @@ Helga-Hahnemann-Str.: gesperrt	2:inwork 9385,13174 9408,13282 9415,13315
 #: by: http://www.dafmap.de/d/berlin.html?id=3588&mt=0&zoom=16
 #: by: http://www.welt.de/kultur/buehne-konzert/article140641614/Ausschuss-prueft-Kostenexplosion-bei-Staatsoper.html (Eröffnung)
 #: XXX Spielbetrieb wird im Dezember 2017 aufgenommen
-#: last_checked: 2017-11-28 vvv
-#: next_check: 2017-12-01 vvv
+#: last_checked: 2017-12-13 vvv
+#: check_frequency: 21d vvv
 Bebelplatz: Bauarbeiten, vollständig gesperrt	2:inwork 9795,12293 9876,12298
 Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9798,12267 9795,12293 9780,12401
 # REMOVED (mittlerweile offen) --- Bebelplatz: Bauarbeiten an der Staatsoper	2:inwork 9737,12238 9702,12307 9734,12395
-#: next_check ^^^
+#: check_frequency ^^^
 #: last_checked: ^^^
 #: next_check_id: ^^^
 # 
@@ -3343,7 +3342,7 @@ Hinter der Katholischen Kirche: Bauarbeiten, vollständig gesperrt	2:inwork 9798,
 # 
 #: XXX Eröffnung 2019 geplant
 #: by: http://www.dafmap.de/d/berlin.html?id=3598&mt=0&zoom=16
-#: last_checked: 2017-11-28
+#: last_checked: 2017-12-13
 #: check_frequency: 120d
 Schloßplatz: Bauarbeiten, gesperrt	2:inwork 10174,12284 10063,12438
 # 

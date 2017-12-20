@@ -2399,7 +2399,7 @@ tragen (31 Stufen) oder Aufzug (Storkower Str.)	0:30:-71 14530,13269
 tragen (41 Stufen) oder Aufzug (Storkower Str.)	0:40:-107 14481,13143
 tragen (zum Uferweg an den Treptowers, 24 Stufen)	0:35:-45 14383,10036
 tragen (1+3 Stufen)	0:30:-114 13232,12628
-tragen oder Aufzug benutzen	0:40:-101 14839,10853
+tragen oder Aufzug benutzen	0:40:-125 14839,10853
 tragen oder Aufzug benutzen	0:40:-57 14845,10954
 tragen (Durchgang unter der U-Bahn zur Warschauer Str., 15 Stufen)	0:20:-255 13437,10992
 tragen (Treppe, 12 Stufen)	0:20:-87 7370,6451
@@ -2898,6 +2898,7 @@ Dr‰ngelgitter	BNP:3:0:trailer=10 3783,-2079
 Dr‰ngelgitter	BNP:3:50:trailer=10 21618,5699
 Dr‰ngelgitter	BNP:3:85:trailer=10 22070,5876
 Dr‰ngelgitter	BNP:3:78:trailer=10 22097,5879
+(Wadzeckstr. - Mollstr.)	2::inwork 11326,13196 11409,13327
 Planstraﬂe C: gesperrt, Privatstraﬂe	2 12926,11224 12848,11093
 Wartenbergstr.	1s:inwork 15423,11667 15337,11639 15328,11636 15300,11584
 Im Lichtenhain: neue Straﬂe, zurzeit Bauarbeiten; Qualit‰t, genaue Lage?	2::inwork 16497,10685 16462,10571
@@ -2907,7 +2908,6 @@ Zufahrt Parkhaus: Abrissarbeiten, Straﬂe komplett gesperrt	2::inwork 8367,10745 
 Am Herzbergteich: noch wegen Bauarbeiten gesperrt; wann ist die Straﬂe fertig?	2::inwork 17945,13493 17942,13568
 Merlitzstr.: Bauarbeiten, Straﬂe komplett gesperrt	2::inwork 19661,3421 19524,3286
 Mauerstr.: Bauarbeiten, Einbahnstraﬂe	1s:inwork 9108,11961 9138,11872
-(Christoph-Ruden-Str. - Buckower Damm): letzte Bauarbeiten	2::inwork 12725,1429 12939,1469
 (entlang der Erpe): Bauarbeiten der DB	2::inwork 24650,6034 24647,5981 24637,5960 24584,5914
 (Marseillestr. - Straﬂe 160): wegen Bauarbeiten gesperrt	2::inwork 12495,21397 12507,21391 12547,21372
 Rigaer Str.: Komplettsperrung zwischen Schreinerstr. und Voigtstr.	2::inwork 14538,12371 14748,12314

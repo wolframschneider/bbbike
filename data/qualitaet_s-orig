@@ -37,9 +37,9 @@ Eiswerderstr.: Asphalt	Q0 -2883,15571 -2783,15538 -2702,15517 -2675,15513
 #: osm_watch: way id="23044831" version="12"
 Neue Kreisstr.: Kopfsteinpflaster	Q2 -7191,-1023 -7271,-1102 -7376,-1226 -7498,-1355 -7592,-1402
 Markgrafendamm: Asphalt	Q0 14558,10264 14608,10409 14641,10552 14675,10693 14671,10751 14674,10811
-Markgrafendamm/Hauptstr.: asphaltiert	Q0 14674,10811 14717,10855 14794,10844 14906,10820
+Markgrafendamm/Hauptstr.: asphaltiert	Q0 14674,10811 14717,10855 14810,10832 14904,10812
 # REMOVED --- #: next_check_id: HAUPTSTR-2015 vvv --- #: XXX nach den Bauarbeiten vermutlich asphaltiert mit Radwegen oder -spuren vvv --- #: source_id: 2147339565 vvv --- #: last_checked: 2016-08-25 vvv --- #: next_check: 2016-08-29 vvv
-Hauptstr.: Asphalt	Q0 14906,10820 15261,10738
+Hauptstr.: Asphalt	Q0 14904,10812 15261,10738
 Karlshorster Str.: Asphalt	Q0 15279,10862 15272,10790 15261,10738
 Cordesstr.: schlechtes Kopfsteinpflaster	Q3 1672,9836 1645,9862 1515,10002 1477,10073 1395,10122 1318,10031
 Werkstättenweg: mäßiges Kopfsteinpflaster	Q2- 2110,10101 1843,9867
@@ -247,7 +247,7 @@ Lohmühlenbrücke: Asphalt	Q0 12871,9356 12897,9365
 #: XXX wird die Kiefholzstr. asphaltiert?
 #: XXX Baumaßnahme: 9.9 (Realisierung nach 2011)
 #: osm_watch: way id="4686083" version="19"
-#: last_checked: 2017-11-30
+#: last_checked: 2017-12-15
 #: check_frequency: 90d
 Kiefholzstr.: Kopfsteinpflaster	Q2 13602,9581 13455,9711 13251,9829
 Hirschberger Str.: Kopfsteinpflaster	Q2+ 14988,11130 15021,11152 15102,11120
@@ -283,7 +283,7 @@ Alt-Tegel: Kopfsteinpflaster	Q2- 1543,20060 1630,20097 1668,20156
 #: by: http://www.tagesspiegel.de/downloads/19754816/1/liste-rad-infrastruktur.pdf (hier wird auch eine Einbahnstraßenregelung erwähnt, hoffentlich nur für Autos! -> realisiert)
 #: source_id: INKO_2147340291_COPY_1
 #: source_id: 2147340291
-#: last_checked: 2017-11-30
+#: last_checked: 2017-12-18
 #: check_frequency: 120d
 Mariannenstr: mäßiges bis gutes Kopfsteinpflaster, 25 km/h möglich	Q1- 11512,10105 11616,10288
 Mariannenstr: Asphalt	Q0 11616,10288 11671,10402
@@ -479,7 +479,8 @@ Mittelweg: Kopfsteinpflaster	Q3 12176,7811 12224,7799 12335,7770
 # REMOVED (Fahrbahnverbesserung wurde realisiert, sort-of) --- #: XXX hier wird die Fahrbahn ausgebessert (2017), später (2018-2022) Radfahrstreifen oder "Protected Bike-Lane" --- #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.571489.php (Realisierung 2017) --- #: by: http://www.berlin.de/ba-neukoelln/aktuelles/pressemitteilungen/2017/pressemitteilung.626855.php (Radstreifen: Frühjahr 2018) --- #: last_checked: 2017-09-13 --- #: next_check: 2017-10-15
 Karl-Marx-Str.: Asphalt	Q0 11831,8989 11880,8955 11998,8872 12063,8826 12156,8760 12330,8636
 Karl-Marx-Str.: Asphalt mit Schäden	Q0- 12330,8636 12500,8504
-Karl-Marx-Platz: Kopfsteinpflaster	Q2- 12969,7610 13100,7626 13177,7644
+Karl-Marx-Platz: Kopfsteinpflaster	Q2- 12969,7610 13100,7626
+Karl-Marx-Platz: Kopfsteinpflaster	Q2 13100,7626 13177,7644
 Richardplatz: Kopfsteinpflaster	Q2 13177,7644 13288,7653
 Richardplatz: Kopfsteinpflaster, OK	Q1- 13288,7653 13378,7695
 Karl-Marx-Platz: Kopfsteinpflaster	Q2- 12991,7549 13100,7626
@@ -1702,7 +1703,7 @@ Paul-und-Paula-Ufer: Asphalt	Q0 14884,10508 14911,10587 14937,10598 14990,10581 
 Uferweg: Parkweg	Q1 15311,10127 15289,10097 15289,10092 15283,10087 15260,10048 15295,10022 15347,9922
 Uferweg: Beton	Q0 15347,9922 15465,9860 15561,9809 15626,9710
 # REMOVED --- Kynaststr. [Ersatzstraße]: asphaltiert	Q0 14688,10167 14752,10246 14794,10336 14820,10473 14832,10512
-Untere Kynaststr.: asphaltiert	Q0 14805,10518 14832,10512 14828,10561 14843,10621 14882,10732 14906,10820
+Untere Kynaststr.: asphaltiert	Q0 14805,10518 14832,10512 14828,10561 14843,10621 14882,10732 14904,10812
 (Rummelsburger Ufer - Hauptstr.): glattes Pflaster	Q0 15249,10564 15307,10701
 (Alt-Stralau - Spreeufer): asphaltiert, einige Wurzelschäden	Q1+ 14652,10201 14569,10055
 (Spreeufer): Parkweg	Q1 14569,10055 14599,10039 14776,9949 15000,9820
@@ -9939,10 +9940,10 @@ Fellbacher Str.: Kopfsteinpflaster	Q2 3610,23272 3653,23305
 (Weg zum großen Bunkerberg): kleinteiliges Kopfsteinpflaster	Q1- 12307,13329 12355,13366 12391,13416 12386,13452 12305,13514 12232,13523 12197,13488 12196,13453 12235,13383 12274,13372 12327,13394 12344,13424 12307,13491 12254,13495 12232,13477 12246,13440 12278,13418 12287,13443
 Torstr. - Weydingerstr.: Verbundsteinpflaster	Q1+ 11079,13492 11111,13518
 Wilhelmine-Gemberg-Weg: Steinpflaster	Q1+ 11715,11522 11767,11662
-#: XXX Wird die Fahrbahn nochmal geändert?
 #: by: http://www.berlin.de/ba-mitte/aktuelles/pressemitteilungen/2017/pressemitteilung.635538.php
-#: last_checked: 2017-09-01
-#: next_check: 2018-03-01
+#: XXX Die Fahrbahn wird gerade gepflastert
+#: last_checked: 2017-12-13
+#: check_frequency: 14d
 Wilhelmine-Gemberg-Weg: Feinschotter	Q1 11767,11662 11829,11727
 Alexanderplatz: Pflasterung mit Schäden	Q1- 11055,12717 11030,12741 11007,12773 10970,12822
 Alexanderplatz: Pflasterung mit Schäden	Q1- 11030,12741 11087,12780
