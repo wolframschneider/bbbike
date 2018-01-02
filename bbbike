@@ -14020,6 +14020,33 @@ sub find_below_rx {
     undef;
 }
 
+# Similar to find_below and find_below_rx, but
+# offer only a list of forbidden item ids
+sub find_below_3 {
+    my($c, $forbidden_item_ids, %args) = @_;
+    my $cxy = delete $args{-cxy};
+    die "ERROR: Unhandled args: " . join(" ", %args) if %args;
+
+    my($cx,$cy);
+    if ($cxy) {
+	($cx, $cy) = @$cxy;
+    } else {
+	my $e = $c->XEvent;
+	($cx, $cy) = ($c->canvasx($e->x), $c->canvasy($e->y));
+    }
+
+    my(@items) = $c->find(overlapping => $cx-1, $cy-1, $cx+1, $cy+1);
+    # Now using "reverse", so top-most items are preferred
+ ITEM: for my $item (reverse @items) {
+	for my $forbidden_item_id (@$forbidden_item_ids) {
+	    next ITEM if ($item == $forbidden_item_id);
+	}
+	my(@tags) = $c->gettags($item);
+	return ($item, @tags);
+    }
+    undef;
+}
+
 # Doc pending XXX
 # tag list imcomplete, should be roughly the same like in set_bindings XXX
 sub show_below_str {
@@ -14064,13 +14091,15 @@ sub show_info {
 
     my $in_2nd_pass = 0;
     my $recursion_breaker=0;#XXX
+    my @above_tags;
     while (1) {
-	if($recursion_breaker++>10){die}#XXX
+	if($recursion_breaker++>10){die "recursion breaker in show_info"}#XXX
 	$base_tag = $tags[0];
 	@tags = grep { $_ ne "current" } @tags;
 	$is_p = ($base_tag =~ /-(?:[fb]g|img)$/);
 	$base_tag =~ s/-(?:[fb]g|img)$//;
 	last unless !exists $p_file{$base_tag} and !$str_file{$base_tag};
+	@above_tags = @tags;
 	my($below_item, @below_tags) = find_below($c, qw/s l u b r f w o v v-fg fz/);
 	if (!defined $below_item) {
 	    # 2nd pass: check for markers etc.
@@ -15038,6 +15067,10 @@ EOF
 
     if (@internal_canvas_tags) {
 	unshift @internal_canvas_tags, M("Interne Canvas-Tags").":\n", "bold";
+    }
+    if (@above_tags) {
+	push @internal_canvas_tags, "\n".M("Oben liegende interne Canvas-Tags").":\n", "bold";
+	push @internal_canvas_tags, join("\n", @above_tags), undef;
     }
     if (@info_txt_and_tag) {
 	unshift @info_txt_and_tag, M("Info").":\n", "bold";
