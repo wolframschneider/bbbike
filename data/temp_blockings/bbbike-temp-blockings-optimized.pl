@@ -1681,6 +1681,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
 #: note: am Mo, den 2017-07-31 gegen 09:00: offen
 #: note: am Fr, den 2017-09-22 gegen 18:20: offen
 #: note: am Mo, den 2017-12-04 gegen 18:45: geschlossen
+#: note: am Mi, den 2018-01-24 gegen 18:45: offen
 #: tempex: volatile vvv
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
@@ -1810,36 +1811,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: tempex: (YYYY01 & tu3) - +2d, (YYYY07 & tu1) - +2d vvv
-	q4::inwork 8634,10426 8384,10507 8527,10621
-	q4::inwork 8348,10636 8335,10518 8350,10499
-#: tempex ^^^
-',
-         'from' => 1515970800,
-         'id' => 2718,
-         'periodic' => 1,
-         'recurrences' => [
-                            [
-                              'yearly',
-                              'days',
-                              8,
-                              'months',
-                              1
-                            ],
-                            [
-                              'yearly',
-                              'days',
-                              27,
-                              'months',
-                              6
-                            ]
-                          ],
-         'source_id' => '2147339708',
-         'text' => 'Schöneberger Str. und Luckenwalder Str.: mögliche Sperrungen wegen der Fashion Week, 16.01.2018-18.01.2018',
-         'type' => 'handicap',
-         'until' => 1516316399
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2177,7 +2149,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2017
-#: last_checked: 2018-01-17
+#: last_checked: 2018-01-24
 	2::inwork 14231,10907 14141,10931 14076,10949
 	2::inwork 14141,10931 14107,10911
 # REMOVED ---	2::inwork 14107,10911 14224,10878 14231,10907
@@ -2331,7 +2303,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-01-06
+#: last_checked: 2018-01-19
 	2::inwork 14652,10201 14569,10055
 ',
          'from' => undef,
@@ -2399,14 +2371,15 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Ende der Bauarbeiten?
-#: last_checked: 2017-12-18 vvv
+#: last_checked: 2018-01-19 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
+	q3::inwork 9011,12423 9131,12438
 #: last_checked ^^^
 ',
          'from' => undef,
          'id' => 2922,
-         'text' => 'Dorotheenstr./Schadowstr.: Bauarbeiten, Einbahnstraßenregelung',
+         'text' => 'Dorotheenstr./Schadowstr./Mittelstr.: Bauarbeiten, Einbahnstraßenregelung bzw. Fahrbahn teilweise gesperrt',
          'type' => 'handicap',
          'until' => undef
        },
@@ -2434,8 +2407,11 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'until' => 1517439600
        },
        {
-         'data' => '#: tempex: (sa) T10-T16
-	q4::temp:clock 11647,7940 11671,7904 11713,7899 11748,7922 11754,7964 11731,7998 11689,8006 11653,7982 11647,7940
+         'data' => '#: note: Parkverbot ist länger, ca. 6 bis 20 Uhr
+#: tempex: (sa) T10-T16
+	q4::temp:clock 11647,7940 11671,7904 11713,7899 11748,7922 11754,7964
+#: XXX prüfen: findet auch auf der Nordseite ein Markt statt? Sind hier auch Halteverbotsschilder?
+	q4::temp:clock 11754,7964 11731,7998 11689,8006 11653,7982 11647,7940
 ',
          'from' => undef,
          'id' => 2927,
@@ -2469,6 +2445,21 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'id' => 2929,
          'text' => 'Nordhafenpark West: Uferwege können wegen Bauarbeiten gesperrt sein',
          'type' => 'gesperrt',
+         'until' => undef
+       },
+       {
+         'data' => '#: last_checked: 2018-01-19 vvv
+#: check_frequency: 14d vvv
+	q3::inwork 10277,14691 10320,14608
+	q2::inwork 10320,14608 10399,14429
+	q3::inwork 10228,14564 10320,14608 10472,14632
+#: check_frequency ^^^
+#: last_checked ^^^
+',
+         'from' => 1516308007,
+         'id' => 2930,
+         'text' => 'Wolliner Str./Granseer Str./Fürstenberger Str.: Bauarbeiten, Kreuzung muss umständlich umfahren werden, Bordsteine',
+         'type' => 'handicap',
          'until' => undef
        }
      

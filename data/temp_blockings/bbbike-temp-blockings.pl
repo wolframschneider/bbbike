@@ -23743,6 +23743,7 @@ EOF
 #: note: am Mo, den 2017-07-31 gegen 09:00: offen
 #: note: am Fr, den 2017-09-22 gegen 18:20: offen
 #: note: am Mo, den 2017-12-04 gegen 18:45: geschlossen
+#: note: am Mi, den 2018-01-24 gegen 18:45: offen
 #: tempex: volatile vvv
 	3::night 14563,8243 14425,8116 14419,8112
 	3::night 14419,8112 14425,8116 14563,8243
@@ -25628,8 +25629,8 @@ EOF
 	2::temp 15184,9373 15249,9337
 	2::temp 14577,9641 14604,9674 14645,9710 14697,9726 14853,9655 14909,9649 15052,9584 15186,9550 15304,9464 15432,9322 15453,9259
 	2::temp 14695,9587 14705,9578 14791,9537
-	2::temp 14879,9433 14888,9385 14898,9364 14955,9294
-	2::temp 14316,9542 14384,9565 14478,9545 14507,9529 14588,9473 14635,9441 14719,9419 14789,9401
+	2::temp 14879,9433 14889,9381 14898,9364 14955,9294
+	2::temp 14316,9542 14384,9565 14478,9545 14507,9529 14588,9473 14635,9441 14719,9419 14797,9396 14824,9390 14889,9381
 	2::temp 14588,9473 14556,9581
 	2::temp 14318,9688 14371,9726 14443,9731
 	2::temp 14318,9688 14316,9542 14347,9452 14398,9373 14485,9271 14531,9244 14655,9311 14673,9353 14669,9389 14635,9441
@@ -26151,7 +26152,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: next_check_id: DBWERKSTRASSE-2017
-#: last_checked: 2018-01-17
+#: last_checked: 2018-01-24
 	2::inwork 14231,10907 14141,10931 14076,10949
 	2::inwork 14141,10931 14107,10911
 # REMOVED ---	2::inwork 14107,10911 14224,10878 14231,10907
@@ -26535,7 +26536,7 @@ EOF
        type  => 'gesperrt',
        data  => <<EOF,
 #: osm_watch: way id="541556560" version="1"
-#: last_checked: 2018-01-06
+#: last_checked: 2018-01-19
 	2::inwork 14652,10201 14569,10055
 EOF
      },
@@ -26724,13 +26725,14 @@ EOF
      },
      { from  => undef, # 
        until => undef, # XXX
-       text  => 'Dorotheenstr./Schadowstr.: Bauarbeiten, Einbahnstraßenregelung',
+       text  => 'Dorotheenstr./Schadowstr./Mittelstr.: Bauarbeiten, Einbahnstraßenregelung bzw. Fahrbahn teilweise gesperrt',
        type  => 'handicap',
        data  => <<EOF,
 #: XXX Ende der Bauarbeiten?
-#: last_checked: 2017-12-18 vvv
+#: last_checked: 2018-01-19 vvv
 	q2::inwork; 8775,12457 8904,12489
 	q4::inwork; 8904,12489 8999,12498 9011,12423
+	q3::inwork 9011,12423 9131,12438
 #: last_checked ^^^
 EOF
      },
@@ -26779,8 +26781,11 @@ EOF
        type  => 'gesperrt',
        recurring => 1,
        data => <<EOF,
+#: note: Parkverbot ist länger, ca. 6 bis 20 Uhr
 #: tempex: (sa) T10-T16
-	q4::temp:clock 11647,7940 11671,7904 11713,7899 11748,7922 11754,7964 11731,7998 11689,8006 11653,7982 11647,7940
+	q4::temp:clock 11647,7940 11671,7904 11713,7899 11748,7922 11754,7964
+#: XXX prüfen: findet auch auf der Nordseite ein Markt statt? Sind hier auch Halteverbotsschilder?
+	q4::temp:clock 11754,7964 11731,7998 11689,8006 11653,7982 11647,7940
 EOF
      },
      { from  => undef, # 
@@ -26806,6 +26811,20 @@ EOF
 #: next_check_id: NORDHAFENPARKWEST-2018
 #: last_checked: 2018-01-14
 	2::inwork 7551,14464 7426,14539
+EOF
+     },
+     { from  => 1516308007, # 2018-01-18 21:40
+       until => undef,
+       text  => 'Wolliner Str./Granseer Str./Fürstenberger Str.: Bauarbeiten, Kreuzung muss umständlich umfahren werden, Bordsteine',
+       type  => 'handicap',
+       data  => <<EOF,
+#: last_checked: 2018-01-19 vvv
+#: check_frequency: 14d vvv
+	q3::inwork 10277,14691 10320,14608
+	q2::inwork 10320,14608 10399,14429
+	q3::inwork 10228,14564 10320,14608 10472,14632
+#: check_frequency ^^^
+#: last_checked ^^^
 EOF
      },
     );
