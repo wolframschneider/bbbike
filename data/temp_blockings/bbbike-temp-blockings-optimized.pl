@@ -321,7 +321,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
        },
        {
          'data' => '#: tempex: (we, sa) T10-T15
-	q4::temp:clock 7882,9490 7836,9413 7771,9389
+	q4::temp:clock 7882,9490 7836,9413 7770,9395
 ',
          'from' => undef,
          'id' => 1817,
@@ -784,7 +784,7 @@ Neuer Garten: Weg ist nur zwischen 6 Uhr bis zum Einbruch der Dunkelheit geöffne
          'from' => undef,
          'id' => 2068,
          'recurring' => 1,
-         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Januar von 7.30 bis 17.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
+         'text' => 'Ehemaliger Flughafen Tempelhof: das Befahren ist nur tagsüber möglich (im Februar von 7.00 bis 18.00 Uhr). Achtung: das Verlassen des Geländes nach Sonnenuntergang ist für Tandems und Anhänger schwierig oder gar nicht möglich.',
          'until' => undef
        },
        undef,
@@ -2020,7 +2020,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        {
          'data' => '#: XXX Wann werden die Bauarbeiten aufgehoben? vvv
-#: last_checked: 2018-01-04 vvv
+#: last_checked: 2018-02-01 vvv
 #: check_frequency: 14d vvv
 	q2::inwork 10954,12635 11059,12450
 	q3::inwork 11059,12450 11084,12395 11092,12375
@@ -2071,19 +2071,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        undef,
        undef,
        undef,
-       {
-         'data' => '#: source_id: 2147342176
-#: source_id: 2147341532
-# REMOVED --- 2::inwork 12254,24857 12136,24607
-# REMOVED --- 2::inwork 12108,24547 11980,24276
-	2::inwork 11980,24276 12108,24547 12136,24607 12254,24857 12395,25143 12461,25270 12543,25423 12624,25570
-',
-         'from' => 1516217169,
-         'id' => 2848,
-         'text' => 'Schönerlinder Str.: Sperrung zwischen A114 und A10, evtl. sind auch Radfahrer betroffen, bis 20.03.2018',
-         'type' => 'gesperrt',
-         'until' => 1521543600
-       },
+       undef,
        undef,
        undef,
        undef,
@@ -2114,14 +2102,14 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: add_fragezeichen: Wann sind die Bauarbeiten beendet?
 #: osm_watch: way id="548612558" version="1"
-#: last_checked: 2017-12-30
+#: last_checked: 2018-02-02
 #: check_frequency: 14d
 # REMOVED ---	q3::inwork; 7201,8870 7101,9027
-	q3::inwork; 7101,9027 7035,9161
+	q3::inwork; 7101,9027 7035,9161 7012,9222
 ',
          'from' => undef,
          'id' => 2860,
-         'text' => 'Akazienstr.: Bauarbeiten im Kreuzungsbereich Belziger Str., Einbahnstraßenregelung',
+         'text' => 'Akazienstr.: Einbahnstraßenregelung',
          'type' => 'handicap',
          'until' => undef
        },
@@ -2137,8 +2125,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        {
          'data' => '#: XXX Baumaßnahme ist Ende 2018 fertig; Vollsperrung nur für 2-3 Wochen
 #: XXX außerdem wird der Weg gerade neu gemacht --- teilweise schon gut gepflastert, der Rest wird es vermutlich auch sein
-#: last_checked: 2017-12-30 (Umgehung für Bauarbeiten im Mittelbereich existiert)
-	2::inwork 6815,8691 6912,8617
+#: last_checked: 2018-02-02 (Umgehung für Bauarbeiten im Mittelbereich existiert)
+	2::inwork 6818,8697 6912,8617
 ',
          'from' => 1498214515,
          'id' => 2870,
@@ -2149,7 +2137,7 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        {
          'data' => '#: next_check_id: DBWERKSTRASSE-2017
-#: last_checked: 2018-01-26
+#: last_checked: 2018-02-02
 	2::inwork 14231,10907 14141,10931 14076,10949
 	2::inwork 14141,10931 14107,10911
 # REMOVED ---	2::inwork 14107,10911 14224,10878 14231,10907
@@ -2385,27 +2373,8 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
        },
        undef,
        undef,
-       {
-         'data' => '#: source_id: LMS-BR_r_LMS-BR_118136_LMS-BR_72
-# REMOVED (zurzeit nur an der Kreuzung Beeinträchtigungen) --- #: XXX vor Ort prüfen
-	q2::inwork; 10596,13398 10527,13257
-',
-         'from' => 1513713476,
-         'id' => 2925,
-         'source_id' => '2147342108',
-         'text' => 'Alte Schönhauser Str.:Bauarbeiten zwischen Schendelgasse und Weinmeisterstr., voraussichtlich bis 31.01.2018',
-         'type' => 'handicap',
-         'until' => 1517439600
-       },
-       {
-         'data' => '	q4::inwork 8546,6307 8388,6322
-',
-         'from' => 1514396333,
-         'id' => 2926,
-         'text' => 'Bosestr.: Fahrbahn zwischen Wittekindstr. und Gäßnerweg wegen Bauarbeiten gesperrt, bis 31.01.2018',
-         'type' => 'handicap',
-         'until' => 1517439600
-       },
+       undef,
+       undef,
        {
          'data' => '#: note: Parkverbot ist länger, ca. 6 bis 20 Uhr
 #: tempex: (sa) T10-T16
@@ -2461,6 +2430,16 @@ Gartenufer	2::night 6200,11417 6067,11479 5845,11615 5790,11643
          'text' => 'Wolliner Str./Granseer Str./Fürstenberger Str.: Bauarbeiten, Kreuzung muss umständlich umfahren werden, Bordsteine',
          'type' => 'handicap',
          'until' => undef
+       },
+       {
+         'data' => '	2::inwork 18023,833 17928,764 17734,675
+',
+         'from' => 1517602202,
+         'id' => 2931,
+         'source_id' => 'https://www.berlin.de/ba-neukoelln/politik-und-verwaltung/aemter/strassen-und-gruenflaechenamt/strassen-und-verwaltung/strassenneubau/artikel.274070.php?date=20180202',
+         'text' => 'Ostburger Weg: Bauarbeiten zwischen Will-Meisel-Weg und Am Espenpfuhl, Fahrbahn gesperrt, bis Ende April 2018 ',
+         'type' => 'gesperrt',
+         'until' => 1525125599
        }
      
 );
